@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2002/05/05 16:57:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/06/22 21:31:30 jlam Exp $
+bin/findsmb
 bin/make_printerdef
 bin/make_smbcodepage
 bin/make_unicodemap
@@ -46,7 +47,6 @@ man/man8/smbspool.8
 man/man8/smbumount.8
 man/man8/swat.8
 man/man8/winbindd.8
-sbin/convert_smbpasswd
 sbin/mksmbpasswd
 sbin/nmbd
 sbin/smbd
@@ -95,7 +95,6 @@ share/doc/samba/RoutedNetworks.txt
 share/doc/samba/SCO.txt
 share/doc/samba/SMBTAR.notes
 share/doc/samba/Samba-OpenSSL.txt
-share/doc/samba/Solaris-Winbind-HOWTO.txt
 share/doc/samba/Speed.txt
 share/doc/samba/Speed2.txt
 share/doc/samba/Tracing.txt
@@ -114,9 +113,7 @@ share/doc/samba/announce
 share/doc/samba/cifsntdomain.txt
 share/doc/samba/security_level.txt
 share/examples/samba/LDAP/README
-share/examples/samba/LDAP/export2_smbpasswd.pl
 share/examples/samba/LDAP/export_smbpasswd.pl
-share/examples/samba/LDAP/import2_smbpasswd.pl
 share/examples/samba/LDAP/import_smbpasswd.pl
 share/examples/samba/LDAP/ldapchpasswd
 share/examples/samba/LDAP/ldapsync.pl
@@ -124,26 +121,43 @@ share/examples/samba/LDAP/samba-schema-netscapeds4.x
 share/examples/samba/LDAP/samba-schema-netscapeds5.x
 share/examples/samba/LDAP/samba-schema.IBMSecureWay
 share/examples/samba/LDAP/samba.schema
+share/examples/samba/LDAP/smbldap-tools/AUTHORS
+share/examples/samba/LDAP/smbldap-tools/CONTRIBUTORS
+share/examples/samba/LDAP/smbldap-tools/COPYING
+share/examples/samba/LDAP/smbldap-tools/ChangeLog
+share/examples/samba/LDAP/smbldap-tools/FILES
+share/examples/samba/LDAP/smbldap-tools/INFRASTRUCTURE
+share/examples/samba/LDAP/smbldap-tools/INSTALL
+share/examples/samba/LDAP/smbldap-tools/Makefile
+share/examples/samba/LDAP/smbldap-tools/NEWS
+share/examples/samba/LDAP/smbldap-tools/README
+share/examples/samba/LDAP/smbldap-tools/TODO
+share/examples/samba/LDAP/smbldap-tools/cgi/README
+share/examples/samba/LDAP/smbldap-tools/cgi/ldappass.cgi
+share/examples/samba/LDAP/smbldap-tools/mkntpwd/Makefile
+share/examples/samba/LDAP/smbldap-tools/mkntpwd/getopt.c
+share/examples/samba/LDAP/smbldap-tools/mkntpwd/getopt.h
+share/examples/samba/LDAP/smbldap-tools/mkntpwd/md4.c
+share/examples/samba/LDAP/smbldap-tools/mkntpwd/mkntpwd.c
+share/examples/samba/LDAP/smbldap-tools/mkntpwd/mkntpwd.h
+share/examples/samba/LDAP/smbldap-tools/mkntpwd/smbdes.c
+share/examples/samba/LDAP/smbldap-tools/smbldap-groupadd.pl
+share/examples/samba/LDAP/smbldap-tools/smbldap-groupdel.pl
+share/examples/samba/LDAP/smbldap-tools/smbldap-groupmod.pl
+share/examples/samba/LDAP/smbldap-tools/smbldap-groupshow.pl
+share/examples/samba/LDAP/smbldap-tools/smbldap-migrate-accounts.pl
+share/examples/samba/LDAP/smbldap-tools/smbldap-migrate-groups.pl
+share/examples/samba/LDAP/smbldap-tools/smbldap-passwd.pl
+share/examples/samba/LDAP/smbldap-tools/smbldap-populate.pl
+share/examples/samba/LDAP/smbldap-tools/smbldap-tools.spec
+share/examples/samba/LDAP/smbldap-tools/smbldap-useradd.pl
+share/examples/samba/LDAP/smbldap-tools/smbldap-userdel.pl
+share/examples/samba/LDAP/smbldap-tools/smbldap-usermod.pl
+share/examples/samba/LDAP/smbldap-tools/smbldap-usershow.pl
+share/examples/samba/LDAP/smbldap-tools/smbldap_conf.pm
+share/examples/samba/LDAP/smbldap-tools/smbldap_tools.pm
 share/examples/samba/README
-share/examples/samba/VFS/Makefile
-share/examples/samba/VFS/README
-share/examples/samba/VFS/audit.c
-share/examples/samba/VFS/block/Makefile
-share/examples/samba/VFS/block/block.c
-share/examples/samba/VFS/block/samba-block.conf
-share/examples/samba/VFS/block/smb.conf
-share/examples/samba/VFS/recycle.c
-share/examples/samba/VFS/skel.c
-share/examples/samba/appliance/Makefile
-share/examples/samba/appliance/README
-share/examples/samba/appliance/appliance.spec
-share/examples/samba/appliance/build.sh
-share/examples/samba/appliance/smb.conf-appliance
-share/examples/samba/autofs/auto.a
-share/examples/samba/dce-dfs/README
-share/examples/samba/dce-dfs/smb.conf
-share/examples/samba/libsmbclient/testsmbc.c
-share/examples/samba/libsmbclient/tree.c
+share/examples/samba/misc/convert_smbpasswd
 share/examples/samba/misc/extra_smbstatus
 share/examples/samba/misc/modify_samba_config.pl
 share/examples/samba/misc/swat.pl
@@ -162,9 +176,6 @@ share/examples/samba/printing/smbprint.sysv
 share/examples/samba/simple/README
 share/examples/samba/simple/smb.conf
 share/examples/samba/smb.conf.default
-share/examples/samba/smb.conf.sample
-share/examples/samba/svr4-startup/README
-share/examples/samba/svr4-startup/samba.server
 share/examples/samba/thoralf/smb.conf
 share/examples/samba/tridge/README
 share/examples/samba/tridge/smb.conf
@@ -223,6 +234,7 @@ share/samba/swat/help/Samba-HOWTO-Collection.html
 share/samba/swat/help/Samba-LDAP-HOWTO.html
 share/samba/swat/help/Samba-PDC-HOWTO.html
 share/samba/swat/help/UNIX_INSTALL.html
+share/samba/swat/help/cups.html
 share/samba/swat/help/findsmb.1.html
 share/samba/swat/help/lmhosts.5.html
 share/samba/swat/help/make_smbcodepage.1.html
@@ -426,7 +438,11 @@ share/samba/swat/using_samba/licenseinfo.html
 share/samba/swat/using_samba/this_edition.html
 @dirrm share/doc/html/samba
 @dirrm share/doc/samba
+@dirrm share/examples/samba/LDAP/smbldap-tools/mkntpwd
+@dirrm share/examples/samba/LDAP/smbldap-tools/cgi
+@dirrm share/examples/samba/LDAP/smbldap-tools
 @dirrm share/examples/samba/LDAP
+@dirrm share/examples/samba/VFS/recycle
 @dirrm share/examples/samba/VFS/block
 @dirrm share/examples/samba/VFS
 @dirrm share/examples/samba/appliance
