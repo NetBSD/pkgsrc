@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.936 2002/12/28 22:50:03 jmmv Exp $
+$NetBSD: CHANGES,v 1.937 2002/12/29 04:38:40 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4303,3 +4303,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated lyx to 1.2.1nb1 [jschauma 2002-12-28]
 	Updated xldlas to 0.85nb2 [jschauma 2002-12-28]
 	Updated gimp-base to 1.2.3nb4 [jmmv 2002-12-28]
+	Deleted agqt [hubertf 2002-12-29]
