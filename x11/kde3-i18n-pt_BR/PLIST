@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/09/18 01:42:49 markd Exp $
 share/doc/kde/HTML/pt_BR/kate-plugins/common
 share/doc/kde/HTML/pt_BR/kate-plugins/htmltools.docbook
 share/doc/kde/HTML/pt_BR/kate-plugins/index.cache.bz2
@@ -337,6 +337,7 @@ share/kde/locale/pt_BR/LC_MESSAGES/desktop_kdesdk.mo
 share/kde/locale/pt_BR/LC_MESSAGES/desktop_kdetoys.mo
 share/kde/locale/pt_BR/LC_MESSAGES/desktop_kdeutils.mo
 share/kde/locale/pt_BR/LC_MESSAGES/dirfilterplugin.mo
+share/kde/locale/pt_BR/LC_MESSAGES/dockbarextension.mo
 share/kde/locale/pt_BR/LC_MESSAGES/domtreeviewer.mo
 share/kde/locale/pt_BR/LC_MESSAGES/drkonqi.mo
 share/kde/locale/pt_BR/LC_MESSAGES/dub.mo
@@ -421,7 +422,6 @@ share/kde/locale/pt_BR/LC_MESSAGES/kcmkeys.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kcmkicker.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kcmkio.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kcmkmix.mo
-share/kde/locale/pt_BR/LC_MESSAGES/kcmkmrml.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kcmkonq.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kcmkonqhtml.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kcmkonsole.mo
@@ -532,6 +532,7 @@ share/kde/locale/pt_BR/LC_MESSAGES/kiconedit.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kio_audiocd.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kio_devices.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kio_finger.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kio_fish.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kio_floppy.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kio_imap4.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kio_lan.mo
