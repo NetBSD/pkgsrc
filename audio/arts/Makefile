@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2002/06/03 14:40:16 skrll Exp $
+# $NetBSD: Makefile,v 1.3 2002/07/17 07:54:03 skrll Exp $
 
-DISTNAME=	arts-1.0.1
+DISTNAME=	arts-1.0.2
 CATEGORIES=	audio
 COMMENT=	Analog Real-Time Synthesizer
 

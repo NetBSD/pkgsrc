@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:42:33 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/17 07:54:06 skrll Exp $
 
-DISTNAME=	kdeutils-3.0.1
+DISTNAME=	kdeutils-3.0.2
 COMMENT=	Utilities for the KDE integrated X11 desktop
 
 .include "../../x11/kde3/Makefile.kde3"

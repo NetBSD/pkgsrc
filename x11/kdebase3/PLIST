@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/25 22:14:10 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/07/17 07:54:07 skrll Exp $
 bin/appletproxy
 bin/chooser
 bin/conttest
@@ -348,6 +348,9 @@ lib/kde3/kio_tar.so
 lib/kde3/kio_thumbnail.a
 lib/kde3/kio_thumbnail.la
 lib/kde3/kio_thumbnail.so
+lib/kde3/klipper_panelapplet.a
+lib/kde3/klipper_panelapplet.la
+lib/kde3/klipper_panelapplet.so
 lib/kde3/konq_aboutpage.a
 lib/kde3/konq_aboutpage.la
 lib/kde3/konq_aboutpage.so
@@ -699,7 +702,6 @@ lib/libtaskmanager.so.1.0
 share/autostart/kdesktop.desktop
 share/autostart/khotkeys.desktop
 share/autostart/klipper.desktop
-share/autostart/kpersonalizer.desktop
 share/autostart/ktip.desktop
 share/autostart/kwrited.desktop
 share/autostart/panel.desktop
@@ -2422,6 +2424,8 @@ share/kde/icons/locolor/32x32/apps/kcmfontinst.png
 share/kde/locale/en_US/entry.desktop
 share/kde/locale/l10n/C/entry.desktop
 share/kde/locale/l10n/C/flag.png
+share/kde/locale/l10n/ae/entry.desktop
+share/kde/locale/l10n/ae/flag.png
 share/kde/locale/l10n/africa.desktop
 share/kde/locale/l10n/ag/entry.desktop
 share/kde/locale/l10n/ag/flag.png
@@ -2444,6 +2448,8 @@ share/kde/locale/l10n/be/entry.desktop
 share/kde/locale/l10n/be/flag.png
 share/kde/locale/l10n/bg/entry.desktop
 share/kde/locale/l10n/bg/flag.png
+share/kde/locale/l10n/bh/entry.desktop
+share/kde/locale/l10n/bh/flag.png
 share/kde/locale/l10n/bo/entry.desktop
 share/kde/locale/l10n/bo/flag.png
 share/kde/locale/l10n/br/entry.desktop
@@ -2466,10 +2472,14 @@ share/kde/locale/l10n/cz/entry.desktop
 share/kde/locale/l10n/cz/flag.png
 share/kde/locale/l10n/de/entry.desktop
 share/kde/locale/l10n/de/flag.png
+share/kde/locale/l10n/dj/entry.desktop
+share/kde/locale/l10n/dj/flag.png
 share/kde/locale/l10n/dk/entry.desktop
 share/kde/locale/l10n/dk/flag.png
 share/kde/locale/l10n/do/entry.desktop
 share/kde/locale/l10n/do/flag.png
+share/kde/locale/l10n/dz/entry.desktop
+share/kde/locale/l10n/dz/flag.png
 share/kde/locale/l10n/easteurope.desktop
 share/kde/locale/l10n/ec/entry.desktop
 share/kde/locale/l10n/ec/flag.png
@@ -2523,6 +2533,8 @@ share/kde/locale/l10n/kp/entry.desktop
 share/kde/locale/l10n/kp/flag.png
 share/kde/locale/l10n/kr/entry.desktop
 share/kde/locale/l10n/kr/flag.png
+share/kde/locale/l10n/lb/entry.desktop
+share/kde/locale/l10n/lb/flag.png
 share/kde/locale/l10n/lc/entry.desktop
 share/kde/locale/l10n/lc/flag.png
 share/kde/locale/l10n/lt/entry.desktop
@@ -2531,6 +2543,8 @@ share/kde/locale/l10n/lu/entry.desktop
 share/kde/locale/l10n/lu/flag.png
 share/kde/locale/l10n/lv/entry.desktop
 share/kde/locale/l10n/lv/flag.png
+share/kde/locale/l10n/ly/entry.desktop
+share/kde/locale/l10n/ly/flag.png
 share/kde/locale/l10n/mk/entry.desktop
 share/kde/locale/l10n/mk/flag.png
 share/kde/locale/l10n/mt/entry.desktop
@@ -2545,20 +2559,28 @@ share/kde/locale/l10n/northamerica.desktop
 share/kde/locale/l10n/northeurope.desktop
 share/kde/locale/l10n/nz/entry.desktop
 share/kde/locale/l10n/nz/flag.png
+share/kde/locale/l10n/om/entry.desktop
+share/kde/locale/l10n/om/flag.png
 share/kde/locale/l10n/pa/entry.desktop
 share/kde/locale/l10n/pa/flag.png
 share/kde/locale/l10n/pe/entry.desktop
 share/kde/locale/l10n/pe/flag.png
 share/kde/locale/l10n/pl/entry.desktop
 share/kde/locale/l10n/pl/flag.png
+share/kde/locale/l10n/ps/entry.desktop
+share/kde/locale/l10n/ps/flag.png
 share/kde/locale/l10n/pt/entry.desktop
 share/kde/locale/l10n/pt/flag.png
 share/kde/locale/l10n/py/entry.desktop
 share/kde/locale/l10n/py/flag.png
+share/kde/locale/l10n/qa/entry.desktop
+share/kde/locale/l10n/qa/flag.png
 share/kde/locale/l10n/ro/entry.desktop
 share/kde/locale/l10n/ro/flag.png
 share/kde/locale/l10n/ru/entry.desktop
 share/kde/locale/l10n/ru/flag.png
+share/kde/locale/l10n/sa/entry.desktop
+share/kde/locale/l10n/sa/flag.png
 share/kde/locale/l10n/sd/entry.desktop
 share/kde/locale/l10n/sd/flag.png
 share/kde/locale/l10n/se/entry.desktop
@@ -2573,6 +2595,8 @@ share/kde/locale/l10n/sr/entry.desktop
 share/kde/locale/l10n/sr/flag.png
 share/kde/locale/l10n/sv/entry.desktop
 share/kde/locale/l10n/sv/flag.png
+share/kde/locale/l10n/sy/entry.desktop
+share/kde/locale/l10n/sy/flag.png
 share/kde/locale/l10n/th/entry.desktop
 share/kde/locale/l10n/th/flag.png
 share/kde/locale/l10n/tr/entry.desktop
@@ -2594,6 +2618,8 @@ share/kde/locale/l10n/ve/flag.png
 share/kde/locale/l10n/vn/entry.desktop
 share/kde/locale/l10n/vn/flag.png
 share/kde/locale/l10n/westeurope.desktop
+share/kde/locale/l10n/ye/entry.desktop
+share/kde/locale/l10n/ye/flag.png
 share/kde/locale/l10n/za/entry.desktop
 share/kde/locale/l10n/za/flag.png
 share/kde/mimelnk/application/x-konsole.desktop
@@ -2803,6 +2829,7 @@ share/kde/wallpapers/triplegears.jpg
 @comment dirrm share/kde/mimelnk/application
 @comment dirrm share/kde/mimelnk
 @dirrm share/kde/locale/l10n/za
+@dirrm share/kde/locale/l10n/ye
 @dirrm share/kde/locale/l10n/vn
 @dirrm share/kde/locale/l10n/ve
 @dirrm share/kde/locale/l10n/vc
@@ -2813,29 +2840,36 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/locale/l10n/tt
 @dirrm share/kde/locale/l10n/tr
 @dirrm share/kde/locale/l10n/th
+@dirrm share/kde/locale/l10n/sy
 @dirrm share/kde/locale/l10n/sv
 @dirrm share/kde/locale/l10n/sr
 @dirrm share/kde/locale/l10n/sk
 @dirrm share/kde/locale/l10n/si
 @dirrm share/kde/locale/l10n/se
 @dirrm share/kde/locale/l10n/sd
+@dirrm share/kde/locale/l10n/sa
 @dirrm share/kde/locale/l10n/ru
 @dirrm share/kde/locale/l10n/ro
+@dirrm share/kde/locale/l10n/qa
 @dirrm share/kde/locale/l10n/py
 @dirrm share/kde/locale/l10n/pt
+@dirrm share/kde/locale/l10n/ps
 @dirrm share/kde/locale/l10n/pl
 @dirrm share/kde/locale/l10n/pe
 @dirrm share/kde/locale/l10n/pa
+@dirrm share/kde/locale/l10n/om
 @dirrm share/kde/locale/l10n/nz
 @dirrm share/kde/locale/l10n/no
 @dirrm share/kde/locale/l10n/nl
 @dirrm share/kde/locale/l10n/mx
 @dirrm share/kde/locale/l10n/mt
 @dirrm share/kde/locale/l10n/mk
+@dirrm share/kde/locale/l10n/ly
 @dirrm share/kde/locale/l10n/lv
 @dirrm share/kde/locale/l10n/lu
 @dirrm share/kde/locale/l10n/lt
 @dirrm share/kde/locale/l10n/lc
+@dirrm share/kde/locale/l10n/lb
 @dirrm share/kde/locale/l10n/kr
 @dirrm share/kde/locale/l10n/kp
 @dirrm share/kde/locale/l10n/kn
@@ -2862,8 +2896,10 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/locale/l10n/eg
 @dirrm share/kde/locale/l10n/ee
 @dirrm share/kde/locale/l10n/ec
+@dirrm share/kde/locale/l10n/dz
 @dirrm share/kde/locale/l10n/do
 @dirrm share/kde/locale/l10n/dk
+@dirrm share/kde/locale/l10n/dj
 @dirrm share/kde/locale/l10n/de
 @dirrm share/kde/locale/l10n/cz
 @dirrm share/kde/locale/l10n/co
@@ -2874,6 +2910,7 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/locale/l10n/by
 @dirrm share/kde/locale/l10n/br
 @dirrm share/kde/locale/l10n/bo
+@dirrm share/kde/locale/l10n/bh
 @dirrm share/kde/locale/l10n/bg
 @dirrm share/kde/locale/l10n/be
 @dirrm share/kde/locale/l10n/bd
@@ -2884,6 +2921,7 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/locale/l10n/at
 @dirrm share/kde/locale/l10n/ar
 @dirrm share/kde/locale/l10n/ag
+@dirrm share/kde/locale/l10n/ae
 @dirrm share/kde/locale/l10n/C
 @dirrm share/kde/locale/l10n
 @dirrm share/kde/locale/en_US
