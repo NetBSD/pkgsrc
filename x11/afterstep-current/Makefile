@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/08/21 15:16:55 fredb Exp $
+# $NetBSD: Makefile,v 1.6 1999/08/24 10:16:38 fredb Exp $
 
 DISTNAME=		AfterStep-1.7.126
 PKGNAME=		afterstep-1.7.137
@@ -46,9 +46,10 @@ CONFLICTS=		ascp-1.0.2
 DIST_SUBDIR=		AfterStep
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
+USE_LIBTOOL=		yes
 USE_X11BASE=		yes
 
-CONFIGURE_ARGS+=	--with-helpcommand="xpman" \
+CONFIGURE_ARGS+=	--disable-staticlibs --with-helpcommand="xpman" \
 			--with-png-includes=${LOCALBASE}/include \
 			--with-png-lib=${LOCALBASE}/lib \
 			--with-jpeg-includes=${LOCALBASE}/include \
@@ -59,6 +60,10 @@ MESSAGE_FILE=		${WRKDIR}/MESSAGE
 
 post-build:
 	${SED} 's#@PREFIX@#${PREFIX}#g' < ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
+
+post-configure:
+	@(cd ${WRKSRC} ; ${GMAKE} config)
+	${MAKE} do-configure
 
 post-patch:
 	cd ${WRKSRC} ; \

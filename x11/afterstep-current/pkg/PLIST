@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/31 10:36:46 fredb Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/24 10:16:40 fredb Exp $
 bin/ASSound
 bin/Animate
 bin/Audio
@@ -21,6 +21,14 @@ bin/afterstep
 bin/afterstepdoc
 bin/ascommand.pl
 bin/asetroot
+lib/libafterstep.a
+lib/libafterstep.so.1.5
+lib/libasConfig.a
+lib/libasConfig.so.1.0
+lib/libasimage.a
+lib/libasimage.so.1.9
+lib/libWidgets.a
+lib/libWidgets.so.1.5
 man/man1/Animate.1
 man/man1/Audio.1
 man/man1/Auto.1
