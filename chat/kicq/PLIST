@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/15 00:36:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 19:47:11 zuntum Exp $
 bin/kicq-upgrade
 bin/kicq
 share/kde/apps/kicq/pics/search.gif
