@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2724 2004/12/17 23:33:24 wiz Exp $
+$NetBSD: TODO,v 1.2725 2004/12/18 13:01:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -537,6 +537,7 @@ Suggested package updates
 	o gnome-vfsmm26-2.8.0?
 	o gnopernicus-0.9.17
 	o gnucash-1.8.10
+	o gnumeric-1.4.1
 	o gnumeric0-0.76
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.39
@@ -746,7 +747,7 @@ Suggested package updates
 	o nsca-1.2.0
 	o nsd-2.1.5
 	o nslint-2.1a3
-	o nut-10.12
+	o nut-10.13
 	o obexftp-0.10.6
 	o objc-3.2.6
 	o ocaml-3.08
@@ -1008,7 +1009,7 @@ Suggested package updates
 	o rblcheck-1.5
 	o rc-1.7.1
 	o rdp-1.6
-	o realplayer-10.0
+	o realplayer-10.0.2
 	o rep-gtk-0.18
 	o resize_image-0.7
 	o rio500-0.8.1
