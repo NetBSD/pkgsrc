@@ -1,5 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/01 20:13:04 schmonz Exp $
-bin/dnscache-showctl
-bin/tinydns-showctl
+@comment $NetBSD: PLIST,v 1.2 2004/12/29 16:35:41 schmonz Exp $
 share/doc/djbdns-run/README.pkgsrc
 @dirrm share/doc/djbdns-run
