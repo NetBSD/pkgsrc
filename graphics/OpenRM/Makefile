@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/02/10 10:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/19 05:54:45 garbled Exp $
 #
 
-DISTNAME=		openrm-devel-1.5.1
-PKGNAME=		OpenRM-1.5.1
+DISTNAME=		openrm-devel-1.5.2
+PKGNAME=		OpenRM-1.5.2
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openrm/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.openrm.org/
 COMMENT=		The OpenRM Scene Graph API
 
 USE_X11=		yes
-WRKSRC=			${WRKDIR}/rm151
+WRKSRC=			${WRKDIR}/rm152
 ALL_TARGET=		freebsd docs
 USE_BUILDLINK3=		yes
 MAKE_ENV+=		AR=${AR} RM=${RM} CP=${CP} LN=${LN} ECHO_CMD=${ECHO} \
