@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/08/29 12:43:42 tron Exp $
+# $NetBSD: Makefile,v 1.26 2000/08/31 02:35:26 hubertf Exp $
 
 DISTNAME=		mtv-1.1.4
 CATEGORIES=		graphics
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
 DIST_SUBDIR=		mtv
 LICENSE=		fee-based-commercial-use
 MANCOMPRESSED=
-LDD=			/emul/linux/usr/bin/ldd
+CHECK_SHLIBS=		no
 
 RESTRICTED=		"Commercial software."
 NO_SRC_ON_FTP=		${RESTRICTED}
