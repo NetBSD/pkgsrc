@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.9 2002/09/28 03:49:19 hubertf Exp $
+$NetBSD: patch-aa,v 1.10 2002/10/05 17:11:45 wiz Exp $
 
---- configure.orig	Sun Sep 15 00:28:06 2002
-+++ configure
-@@ -10798,8 +10798,6 @@
- fi
- rm -f conftest.$ac_objext conftest.$ac_ext
- 
--CFLAGS="$CFLAGS -I/usr/local/include -I/opt/include -I\$(top_srcdir)"
--
- # Check whether --enable-distrib or --disable-distrib was given.
- if test "${enable_distrib+set}" = set; then
-   enableval="$enable_distrib"
+--- src/Makefile.in.orig	Sat Oct  5 07:07:29 2002
++++ src/Makefile.in
+@@ -150,7 +150,7 @@ SUBDIRS = protocols
+ @GNOMEAPPLET_TRUE@gaim_applet_SOURCES = about.c 			aim.c 			applet.c 			away.c 			browser.c 			buddy.c 			buddy_chat.c 			conversation.c 			core.c 			dialogs.c 			gaimrc.c 			gtkimhtml.c 			gtkspell.c 			gtkticker.c 			html.c 			idle.c 			list.c 			md5.c 			module.c 			multi.c 			perl.c 			plugins.c 			prefs.c 			proxy.c 			prpl.c 			server.c 			sound.c 			ticker.c 			util.c
+ @GNOMEAPPLET_TRUE@gaim_applet_DEPENDENCIES = @LIBOBJS@ $(STATIC_LINK_LIBS)
+ @GNOMEAPPLET_TRUE@gaim_applet_LDFLAGS = -export-dynamic
+-@GNOMEAPPLET_TRUE@gaim_applet_LDADD = @LDADD@ @LIBOBJS@
++@GNOMEAPPLET_TRUE@gaim_applet_LDADD = @LDADD@ @LIBOBJS@ -liconv
+ @GNOMEAPPLET_FALSE@gaim_SOURCES = about.c 		aim.c 		applet.c 		away.c 		browser.c 		buddy.c 		buddy_chat.c 		conversation.c 		core.c 		dialogs.c 		gaimrc.c 		gtkimhtml.c 		gtkspell.c 		gtkticker.c 		html.c 		idle.c 		list.c 		md5.c 		module.c 		multi.c 		perl.c 		plugins.c 		prefs.c 		proxy.c 		prpl.c 		server.c 		sound.c 		ticker.c 		util.c
+ @GNOMEAPPLET_FALSE@gaim_DEPENDENCIES = @LIBOBJS@ $(STATIC_LINK_LIBS)
+ @GNOMEAPPLET_FALSE@gaim_LDFLAGS = -export-dynamic
