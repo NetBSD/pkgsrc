@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 1998/09/08 22:16:29 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/08/18 20:37:28 hubertf Exp $
 libexec/qpopper
 bin/qpopauth
 man/man8/qpopper.8
 man/man8/qpopauth.8
+share/doc/qpopper.License
