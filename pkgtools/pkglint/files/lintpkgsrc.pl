@@ -1,8 +1,8 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.4 1999/06/24 23:40:13 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.5 1999/08/01 18:34:41 abs Exp $
 
-# (Somewhat quickly) Written by David Brownlee <abs@anim.dreamworks.com>.
+# (Somewhat quickly) Written by David Brownlee <abs@netbsd.org>.
 # Caveats:
 #	The 'Makefile parsing' algorithym used to obtain package versions
 #	and DEPENDS information is geared towards speed rather than perfection.
@@ -14,10 +14,10 @@ require 'getopts.pl';
 $^W=1;
 use strict;
 use File::Find;
-use vars qw($opt_d $opt_h $opt_i $opt_l $opt_m $opt_o $opt_p $opt_r);
+use vars qw($opt_P $opt_d $opt_h $opt_i $opt_l $opt_m $opt_o $opt_p $opt_r);
 my(%pkg2dir,@oldprebuiltpackages);
 
-if (! &Getopts('dhilmopr') || $opt_h ||
+if (! &Getopts('P:dhilmopr') || $opt_h ||
 	! ( defined($opt_d) || defined($opt_i) || defined($opt_l) ||
 	    defined($opt_m) || defined($opt_o) || defined($opt_p) ||
 	    defined($opt_r) ))
@@ -30,7 +30,10 @@ $|=1;
     my($pkgsrcdir,$pkglint_flags);
 
     $pkglint_flags='-a -b -c -v';
-    $pkgsrcdir=&set_pkgsrcdir;  # Parse /etc/mk.conf (if present) for PKGSRCDIR
+    if ($opt_P)
+	{ $pkgsrcdir=$opt_P; } # Check /etc/mk.conf for PKGSRCDIR
+    else
+	{ $pkgsrcdir=&set_pkgsrcdir; } # Check /etc/mk.conf for PKGSRCDIR
 
     if ($opt_r && !$opt_o && !$opt_m && !$opt_p)
 	{ $opt_o=$opt_m=$opt_p=1; }
