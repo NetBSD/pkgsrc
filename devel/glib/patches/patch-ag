@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.4 2003/09/05 16:54:50 xtraeme Exp $
+
+--- gmodule/gmodule-dl.c.orig	2003-09-04 22:41:48.000000000 +0200
++++ gmodule/gmodule-dl.c	2003-09-04 22:42:43.000000000 +0200
+@@ -100,6 +100,7 @@
+ static gpointer
+ _g_module_self (void)
+ {
++#ifndef __FreeBSD__
+   gpointer handle;
+   
+   /* to query symbols from the program itself, special link options
+@@ -111,6 +112,9 @@
+     g_module_set_error (fetch_dlerror ());
+   
+   return handle;
++#else
++  return RTLD_DEFAULT;
++#endif
+ }
+ 
+ static void
