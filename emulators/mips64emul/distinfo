@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2004/11/04 12:18:54 xtraeme Exp $
+$NetBSD: distinfo,v 1.8 2004/12/20 23:14:59 xtraeme Exp $
 
-SHA1 (mips64emul-0.2.2.tar.gz) = 3329bffe9b1fd5887c6d713449db805557fc2d48
-Size (mips64emul-0.2.2.tar.gz) = 729050 bytes
+SHA1 (mips64emul-0.2.3.tar.gz) = 6c2f2c9e7a57da12d9786bfe9fe71339021dddbe
+Size (mips64emul-0.2.3.tar.gz) = 795082 bytes
