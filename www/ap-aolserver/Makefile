@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/16 17:04:01 cjones Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/27 10:47:04 wiz Exp $
 #
 
 DISTNAME=		mod_aolserver-1.1
@@ -10,7 +10,7 @@ MAINTAINER=		cjones@netbsd.org
 HOMEPAGE=		http://www.arsdigita.com/acs-repository/one-version?version_id=601
 COMMENT=		Module that emulates AOLServer in Apache
 
-DEPENDS+=		postgresql-lib>=7:../../databases/postgresql-lib
+DEPENDS+=		postgresql-lib>=7.0:../../databases/postgresql-lib
 DEPENDS+=		libmm>=1.1.3:../../devel/libmm
 DEPENDS+=		tcl>=8.3:../../lang/tcl
 DEPENDS+=		apache{,6}-1.3.*:../../www/apache
