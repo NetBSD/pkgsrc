@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/12/31 15:44:29 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/02 18:28:42 jmmv Exp $
 #
 
 DISTNAME=	xnap-2.0
@@ -10,6 +10,13 @@ HOMEPAGE=	http://xnap.sourceforge.net/
 COMMENT=	Java filesharing client with support for OpenNap
 
 NO_BUILD=       yes
+
+post-extract:
+	cd ${WRKSRC} && ${MV} xnap.sh xnap.sh.in
+
+pre-configure:
+	cd ${WRKSRC} && ${SED} \
+		-e 's|@PREFIX@|${PREFIX}|g' < xnap.sh.in > xnap.sh
 
 do-install:
 	${CP} ${WRKSRC}/xnap.sh ${PREFIX}/bin/xnap
