@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1999/03/06 23:18:51 kim Exp $
+# $NetBSD: Makefile,v 1.25 1999/03/07 01:16:25 kim Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -45,6 +45,13 @@ DOCDIR=		share/doc/nmh
 # to regenerate header input files with 'autoheader' by Makefile.
 post-patch:
 	${TOUCH} ${WRKSRC}/stamp-h.in
+
+.if defined(NMH_HASH_BACKUP) && (${NMH_HASH_BACKUP} == yes)
+post-configure:
+	${MV} ${WRKSRC}/config.h ${WRKSRC}/config.h.bak
+	${SED} -e 's/^\(#define  *BACKUP_PREFIX\)  *.*/\1 "#"/' \
+	    < ${WRKSRC}/config.h.bak > ${WRKSRC}/config.h
+.endif
 
 post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
