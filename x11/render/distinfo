@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/02/14 00:07:29 snj Exp $
+$NetBSD: distinfo,v 1.4 2004/11/11 13:32:06 sketch Exp $
 
 SHA1 (render-0.8.tar.gz) = 73b88307fd318e0a1a7ed50c7cf7808d550cca99
 Size (render-0.8.tar.gz) = 51478 bytes
-SHA1 (patch-aa) = 13be7fd54c3da074711f1ea11cb8b32695e0b9bc
