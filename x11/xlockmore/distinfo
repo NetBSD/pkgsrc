@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2002/08/27 16:33:25 hubertf Exp $
+$NetBSD: distinfo,v 1.8 2002/12/05 00:45:53 hubertf Exp $
 
-SHA1 (xlockmore-5.05.tar.bz2) = 5734d5a55e6ef9938fdd85995804412aff5feeea
-Size (xlockmore-5.05.tar.bz2) = 1499501 bytes
-SHA1 (patch-aa) = 88ba89782704f03552a02a917ab68be2e7875d2b
+SHA1 (xlockmore-5.06.tar.bz2) = d48db3ef2a94222525ab5f753ecb7cfbb77dcb29
+Size (xlockmore-5.06.tar.bz2) = 1538481 bytes
+SHA1 (patch-aa) = 2d533dab923e0de20838c96e9b6e455fb2d724f8
 SHA1 (patch-ab) = 3f4006969c2ae1427606e8e451295350fdffda90
