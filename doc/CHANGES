@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5291 2004/03/22 11:49:42 wiz Exp $
+$NetBSD: CHANGES,v 1.5292 2004/03/22 12:28:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1508,3 +1508,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xpmroot to 2.4.18 [martti 2004-03-22]
 	Updated fvwm2 to 2.4.18 [martti 2004-03-22]
 	Updated xvile to 9.4 [wiz 2004-03-22]
+	Updated p5-Tk to 804.026 [wiz 2004-03-22]
