@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/30 11:13:18 agc Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/22 16:25:11 wiz Exp $
 
 --- Makefile.in.orig	Sun Mar  4 06:16:31 2001
 +++ Makefile.in
@@ -11,7 +11,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/30 11:13:18 agc Exp $
  FB_OBJS = @FB_OBJS@ @JOY@ @SOUND@
  FB_LIBS = 
  
-@@ -37,13 +39,13 @@
+@@ -30,20 +32,20 @@
+ SDL_CFLAGS = @SDL_CFLAGS@
+ 
+ X11_OBJS = sys/x11/xlib.o sys/x11/keymap.o @JOY@ @SOUND@
+-X11_LIBS = @XLIBS@ -lX11 -lXext
++X11_LIBS = -Wl,-R${X11BASE}/lib @XLIBS@ -lX11 -lXext
+ 
+ all: $(TARGETS)
+ 
  include Rules
  
  fbgnuboy: $(OBJS) $(SYS_OBJS) $(FB_OBJS)
