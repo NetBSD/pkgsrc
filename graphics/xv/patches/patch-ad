@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.5 1998/09/12 17:48:56 garbled Exp $
---- Imakefile.orig	Wed Sep  9 09:33:20 1998
-+++ Imakefile	Sat Sep 12 10:09:26 1998
+$NetBSD: patch-ad,v 1.6 1998/10/28 02:21:24 garbled Exp $
+--- Imakefile.orig	Tue Oct 27 00:45:53 1998
++++ Imakefile	Tue Oct 27 01:13:26 1998
 @@ -6,13 +6,15 @@
  /* if, for whatever reason, you're unable to get the JPEG library to compile
   * on your machine, *COMMENT OUT* the following line
@@ -29,7 +29,7 @@ $NetBSD: patch-ad,v 1.5 1998/09/12 17:48:56 garbled Exp $
  
 +#ifdef UseInstalledJpeg
 +JPEG = -DDOJPEG
-+LIBJPEG = -L$(LOCALBASE)/lib -ljpeg
++LIBJPEG = $(LDFLAGS) -L$(LOCALBASE)/lib -ljpeg
 +JPEGINCLUDE = -I$(LOCALBASE)/include
 +#endif
 +
