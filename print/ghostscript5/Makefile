@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.47 2000/02/15 09:26:23 agc Exp $
+# $NetBSD: Makefile,v 1.48 2000/02/24 00:47:25 tron Exp $
 #
 
 DISTNAME=	ghostscript-5.50
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.cs.wisc.edu/ghost/aladdin/gs550/ \
 		ftp://ftp.cs.wisc.edu/ghost/aladdin/fonts/ \
-		http://www.erdw.ethz.ch/~bonk/ftp/gs-driver-distrib/ \
 		http://www.ozemail.com.au/~geoffk/pdfencrypt/ \
 		ftp://ftp.sbs.de/pub/graphics/ghostscript/pcl3/
 DISTFILES=	${GS_SOURCES} ${GS_FONTS_STD} ${GS_FONTS_OTHER} \
