@@ -1,0 +1,40 @@
+$NetBSD: patch-ah,v 1.1.1.1 2002/09/29 08:01:02 lukem Exp $
+
+--- cdda2wav/setuid.c.orig	Thu Mar 21 08:29:21 2002
++++ cdda2wav/setuid.c
+@@ -91,7 +91,7 @@ void needroot(necessary)
+ 
+     if (geteuid() == 0) return; /* nothing to do */
+ 
+-#if defined _POSIX_SAVED_IDS && defined (HAVE_SETEUID)
++#if defined (HAVE_SETEUID)
+     if (seteuid(effective_uid)) {
+ 	perror("seteuid in needroot()");
+ 	exit(1);
+@@ -125,7 +125,7 @@ void dontneedroot()
+ 	return;
+     if (geteuid() != 0) return; /* nothing to do */
+ 
+-#if defined _POSIX_SAVED_IDS && defined (HAVE_SETEUID)
++#if defined (HAVE_SETEUID)
+     if (seteuid(real_uid)) {
+ 	perror("seteuid in dontneedroot()");
+ 	exit(1);
+@@ -185,7 +185,7 @@ void needgroup(necessary)
+ 
+     if (getegid() == effective_gid) return; /* nothing to do */
+ 
+-#if defined _POSIX_SAVED_IDS && defined (HAVE_SETEGID)
++#if defined (HAVE_SETEGID)
+     if (setegid(effective_gid)) {
+ 	perror("setegid in needgroup()");
+ 	exit(1);
+@@ -216,7 +216,7 @@ void dontneedgroup()
+ 	exit(1);
+     }
+     if (getegid() != effective_gid) return; /* nothing to do */
+-#if defined _POSIX_SAVED_IDS && defined (HAVE_SETEGID)
++#if defined (HAVE_SETEGID)
+     if (setegid(real_gid)) {
+ 	perror("setegid in dontneedgroup()");
+ 	exit(1);
