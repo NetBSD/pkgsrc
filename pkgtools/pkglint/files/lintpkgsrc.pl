@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.8 1999/12/16 11:59:14 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.9 1999/12/16 14:04:20 abs Exp $
 
 # (Somewhat quickly) Written by David Brownlee <abs@netbsd.org>.
 # Caveats:
@@ -18,13 +18,26 @@ my($pkgsrcdir, %pkgver2dir, %pkg2ver, %opt, @oldprebuiltpackages);
 
 $ENV{PATH} .= ':/usr/sbin';
 
-if (! &getopts('P:dhilmopr', \%opt) || $opt{'h'} ||
+if (! &getopts('DP:dhilmopr', \%opt) || $opt{'h'} ||
 	! ( defined($opt{'d'}) || defined($opt{'i'}) || defined($opt{'l'}) ||
 	    defined($opt{'m'}) || defined($opt{'o'}) || defined($opt{'p'}) ||
-	    defined($opt{'r'}) ))
+	    defined($opt{'r'}) || defined($opt{'D'}) ))
     { &usage_and_exit; }
 $| = 1;
 
+if ($opt{'D'})
+    {
+    my ($file, $pkgname, %vars);
+    foreach $file (@ARGV)
+	{
+	if ( -d $file)
+	    { $file .= "/Makefile"; }
+	($pkgname, %vars) = &parse_makefile($file);
+	print "$file -> $pkgname\n";
+	foreach ( sort keys %vars )
+	    { print "\t$_ = $vars{$_}\n"; }
+	}
+    }
 
 # main
     {
@@ -198,9 +211,15 @@ sub parse_makefile
     @data = <FILE>;
     close(FILE);
 
+    # Some Makefiles depend on these being set
+    $vars{'EXTRACT_SUFX'} = 'tar.gz';
+    $vars{'OBJECT_FMT'} = '';
+
     while( $_ = shift(@data) )
 	{
 	s/#.*//;
+	while ( substr($_,-2) eq "\\\n" )
+	    { substr($_,-2) = shift @data; }
 	if ( m#^\.include "([^"]+)"# )
 	    {
 	    $_ = $1;
@@ -221,41 +240,73 @@ sub parse_makefile
 	    next;
 	    }
 
-	if (/^\s*(\w+)([+?]?)=\s*(\S*)/)
+	if (/^\s*(\w+)([+?]?)=\s*(\S.*)/)
 	    {
 	    $key = $1;
 	    $plus = $2;
 	    $value = $3;
-	    if ($plus eq '+')
-		{ $vars{$key} .= "\n$value"; }
+	    if ($plus eq '+' && defined($vars{$key}) )
+		{ $vars{$key} .= " $value"; }
 	    elsif ($plus ne '?' || !defined($vars{$key}) )
 		{ $vars{$key} = $value; }
 	    } 
 	}
-    foreach $key ( keys %vars, keys %vars)
-	{
-	foreach $value ( keys %vars )
-	    {
-	    if ($vars{$key} =~ m#\${(\w+):S/([^/]+)/([^/]*)/}#)
-		{
-		my($var, $from, $to) = ($1, $2, $3);
 
-		if (defined($vars{$var}))
-		    {
-		    $_ = $vars{$var};
-		    s/$from/$to/;
-		    $vars{$key} =~ s#\${$var:S/$from/$to/}#$_#;
-		    }
+    # Handle simple variable substitutions FRED = a-${FRED}-b
+    # Must be before next block to handle FRED = a-${JIM:S/-/-${SHELIA}-/}
+    #
+    my($loop);
+    for ($loop = 1 ; $loop ;)
+	{
+	$loop = 0;
+	foreach $key ( keys %vars )
+	    {
+	    foreach $value ( keys %vars )
+		{
+		($key eq $value) && next;
+		if ($vars{$key} =~ s/\$\{$value\}/$vars{$value}/g)
+		    { $loop = 1; }
 		}
-	    $vars{$key} =~ s/\$\{$value\}/$vars{$value}/g;
 	    }
 	}
+
+    # Handle more complex variable substitutions FRED = a-${JIM:S/-/-b-/}
+    #
+    for ($loop = 1 ; $loop ;)
+	{
+	$loop = 0;
+	foreach $key ( keys %vars )
+	    {
+	    foreach $value ( keys %vars )
+		{
+		if ($vars{$key} =~ m#\${(\w+):[CS]/([^/]+)/([^/]*)/(g?)}#)
+		    {
+		    my($var, $from, $to, $glob) = ($1, $2, $3, $4);
+
+		    if (defined($vars{$var}))
+			{
+			$to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
+			$_ = $vars{$var};
+			eval "s/$from/$to/$glob";
+			if ($vars{$key} =~
+					s#\${$var:[CS]/[^/]+/[^/]*/$glob}#$_#)
+			    { $loop = 1; }
+			}
+		    }
+		}
+	    }
+	}
+
     if (defined($vars{'PKGNAME'}))
 	{ $pkgname = $vars{'PKGNAME'}; }
     elsif (defined($vars{'DISTNAME'}))
 	{ $pkgname = $vars{'DISTNAME'}; }
     if (defined($pkgname))
-	{ return($pkgname, %vars); }
+	{
+	if ( $pkgname =~ /\$/ )
+	    { print "\rBogus: $pkgname (from $file)\n"; }
+	return($pkgname, %vars);
+	}
     else
 	{ return(undef); }
     }
@@ -317,27 +368,26 @@ sub scan_pkgsrc_makefiles
 
     @categories = &list_pkgsrc_categories($pkgsrcdir);
     &verbose("Scanning pkgsrc Makefiles: ".'_'x@categories."\b"x@categories);
-    # foreach $cat ( 'misc' ) # XXX
+
+    # @categories = qw( cross mail );
+    # @categories = qw( archivers audio benchmarks biology cad comms converters
+    # corba databases devel graphics lang mail ); # XXX
+    # corba cross databases devel graphics lang mail ); # XXX
+
     foreach $cat ( sort @categories )
 	{
 	if (! opendir(CAT, "$pkgsrcdir/$cat"))
 	    { die("Unable to opendir($pkgsrcdir/$cat): $!"); }
 	foreach $pkg ( grep(substr($_, 0, 1) ne '.', readdir(CAT) ) )
-	# foreach $pkg ( 'staroffice' ) # XXX
 	    {
 	    my(%vars);
 	    ($pkgname, %vars) =
 			    &parse_makefile("$pkgsrcdir/$cat/$pkg/Makefile");
 	    if ($pkgname)
 		{
-		if ( $pkgname =~ /\$/ )
-		    { print "\rBogus: $pkgname $cat/$pkg\n"; }
-		else
-		    {
-		    $_ = $pkgname;
-		    s/-\d.*//;
-		    $pkg2ver{$_} = $pkgname;
-		    }
+		$_ = $pkgname;
+		s/-\d.*//;
+		$pkg2ver{$_} = $pkgname;
 		$pkgver2dir{$pkgname} = "$cat/$pkg";
 		if (defined($vars{'DEPENDS'}))
 		    { $depends{$pkgname} = $vars{'DEPENDS'}; }
@@ -473,6 +523,7 @@ sub usage_and_exit
     {
     print "Usage: lintpkgsrc [opts]
 opts:	-d : Check each Makefile's 'DEPENDS' matches current pkgsrc versions.
+	-D [paths] : Parse Makefiles and output contents (For debugging)
 	-h : This help.
 	-i : Check versions of installed packages against pkgsrc.
 	-l : Run pkglint on every package in pkgsrc.
