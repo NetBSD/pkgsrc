@@ -1,0 +1,22 @@
+#!/bin/sh
+# $NetBSD: pre-install,v 1.1.1.1 1999/05/18 21:22:27 hwr Exp $
+
+cd ${WRKSRC}
+cd dist
+for i in disptmpl.h lber.h     ldap.h     srchpref.h
+do
+	cp public/ldap/$i ${LOCALBASE}/include
+done
+#
+# XXX kludge
+#
+cd NetB*
+cp lib/libldap.a ${LOCALBASE}/lib/
+cp lib/liblber.a ${LOCALBASE}/lib/
+cp bin/libldap.so.1.0 ${LOCALBASE}/lib/
+cp bin/liblber.so.1.0 ${LOCALBASE}/lib/
+cp etc/ldapfilter.conf          ${LOCALBASE}/etc/
+cp etc/ldapsearchprefs.conf	${LOCALBASE}/etc/
+cp etc/ldapfriendly             ${LOCALBASE}/etc/
+cp etc/ldaptemplates.conf	${LOCALBASE}/etc/
+
