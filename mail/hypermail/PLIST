@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/26 05:52:05 grant Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.4.1 2003/03/08 12:27:50 grant Exp $
 bin/hypermail
 bin/msg2archive
 bin/rdmsg
@@ -6,7 +6,8 @@ man/man1/hypermail.1
 man/man4/hmrc.4
 share/doc/html/hypermail/customizing.html
 share/doc/html/hypermail/hmrc.html
-share/doc/html/hypermail/hr.yellow.gif
-share/doc/html/hypermail/hypermail.gif
 share/doc/html/hypermail/hypermail.html
+share/doc/html/hypermail/images/hr.yellow.gif
+share/doc/html/hypermail/images/hypermail.gif
+@dirrm share/doc/html/hypermail/images
 @dirrm share/doc/html/hypermail
