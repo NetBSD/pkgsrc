@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8233 2004/12/03 15:12:53 uebayasi Exp $
+$NetBSD: CHANGES,v 1.8234 2004/12/03 15:18:37 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5731,3 +5731,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated timidity to 2.13.2nb1 [ben 2004-12-03]
 	Updated guspatches to 1.0nb2 [ben 2004-12-03]
 	Updated eawpatches to 12nb1 [ben 2004-12-03]
+	Updated arcem to 1.00 [skrll 2004-12-03]
