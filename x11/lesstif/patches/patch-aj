@@ -1,0 +1,10 @@
+--- include/Motif-1.2/XmI/DragDropI.h-orig	Tue Mar 25 03:34:21 1997
++++ include/Motif-1.2/XmI/DragDropI.h	Thu Jun 25 22:21:50 1998
+@@ -241,6 +241,7 @@
+ typedef struct {
+     CARD32			atom;
+     CARD16			namelen;
++    CARD16			pad;		/* Align to 64 bits */
+ } XmDndAtomPair;
+ 
+ typedef struct {
