@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.46 2005/03/30 20:21:07 kristerw Exp $
+# $NetBSD: pre-build,v 1.47 2005/03/31 23:36:15 reed Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -261,6 +261,8 @@ for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
 		done
 	fi
 done
+
+cd ${USR_PKGSRC}
 
 # on non-NetBSD, we don't want these to build as they overwrite
 # bootstrap-pkgsrc generated files and thus would break the following builds.
