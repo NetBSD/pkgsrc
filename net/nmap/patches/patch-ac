@@ -1,0 +1,7 @@
+$NetBSD: patch-ac,v 1.1 2000/10/08 15:06:09 hubertf Exp $
+--- configure-	Sun Oct  8 23:15:09 2000
++++ configure	Sun Oct  8 23:15:35 2000
+@@ -1509,2 +1509,3 @@
+   int major, minor;
++  exit(0);	/*fool it*/
+   sscanf(pcap_version,"%d.%d", &major, &minor);

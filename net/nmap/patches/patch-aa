@@ -1,22 +1,21 @@
-$NetBSD: patch-aa,v 1.4 2000/05/10 12:04:25 hubertf Exp $
-
---- Makefile.in.orig	Sat May  6 12:33:36 2000
-+++ Makefile.in	Sat May  6 12:34:09 2000
-@@ -36,7 +36,7 @@
- 
- DEPS = nmap.h error.h targets.h osscan.h tcpip.h utils.h global_structures.h charpool.h services.h rpc.h portlist.h
+$NetBSD: patch-aa,v 1.5 2000/10/08 15:06:09 hubertf Exp $
+--- Makefile.in.orig	Tue May  9 15:25:42 2000
++++ Makefile.in	Sun Oct  8 23:18:41 2000
+@@ -14,4 +14,5 @@
+ CCOPT = 
+-LIBPCAPDIR = @libpcapdir@
+-INCLS = -I. -I$(LIBPCAPDIR)
++#LIBPCAPDIR = @libpcapdir@
++INCLS = -I.
++#INCLS += -I$(LIBPCAPDIR)
+ DEFS = @DEFS@ -DNMAP_VERSION=\"$(NMAP_VERSION)\" -DNMAP_NAME=\"$(NMAP_NAME)\" -DNMAP_URL=\"$(NMAP_URL)\" -DNMAPDATADIR=\"$(nmapdatadir)\"
+@@ -38,3 +39,3 @@
  
 -all: $(TARGET) nmapfe/nmapfe
 +all: $(TARGET)
  
- $(TARGET): $(DEPS) @PCAP_DEPENDS@ $(OBJS)
- 	@echo Compiling nmap
-@@ -141,7 +141,7 @@
- 	$(MAKEDEPEND) $(INCLS) -s "# DO NOT DELETE" -- $(DEFS) -- $(SRCS)
- 
+@@ -142,3 +143,3 @@
  install: $(TARGET)
 -	$(SHTOOL) mkdir -f -p -m 755 $(bindir) $(mandir)/man1 $(nmapdatadir) $(deskdir)
 +	$(SHTOOL) mkdir -f -p -m 755 $(bindir) $(mandir)/man1 $(nmapdatadir)
  	$(INSTALL) -c -m 755 nmap $(bindir)/nmap
- 	@echo "If the next command fails -- you cannot use the X front end"
- 	-test -f nmapfe/nmapfe && $(INSTALL) -c -m 755 nmapfe/nmapfe $(bindir)/nmapfe && $(SHTOOL) mkln -f -s $(bindir)/nmapfe $(bindir)/xnmap && $(INSTALL) -c -m 644 nmapfe.desktop $(deskdir)/nmapfe.desktop && $(INSTALL) -c -m 644 docs/nmapfe.1 $(mandir)/man1/nmapfe.1 && $(INSTALL) -c -m 644 docs/xnmap.1 $(mandir)/man1/xnmap.1
