@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2001/12/02 06:56:45 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2001/12/26 21:20:27 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -50,15 +50,18 @@ IGNORE=			"IPv6 only build"
 PKG_SYSCONFSUBDIR?=	httpd
 
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
-APACHE_USER?=		www
-APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs
-SUEXEC_PATH=		/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
-CONFIGURE_ARGS+=	--enable-suexec 				\
-			--suexec-caller=${APACHE_USER}			\
-			--suexec-safepath='${SUEXEC_PATH}'		\
+APACHE_SUEXEC_USER?=	www
+APACHE_SUEXEC_DOCROOT?=	${PREFIX}/share/httpd/htdocs
+APACHE_SUEXEC_PATH=	/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
+APACHE_SUEXEC_CONFIGURE_ARGS+=						\
+			--suexec-caller=${APACHE_SUEXEC_USER}		\
+			--suexec-safepath='${APACHE_SUEXEC_PATH}'	\
 			--suexec-docroot=${APACHE_SUEXEC_DOCROOT}
+CONFIGURE_ARGS+=	--enable-suexec 				\
+			${APACHE_SUEXEC_CONFIGURE_ARGS:M--suexec-*}
 PLIST_SRC=		${PKGDIR}/PLIST.suexec
-BUILD_DEFS+=		APACHE_USER APACHE_SUEXEC_DOCROOT
+PKG_USERS=		${APACHE_SUEXEC_USER}:nogroup::Apache\\ suEXEC\\ user
+BUILD_DEFS+=		APACHE_SUEXEC_CONFIGURE_ARGS
 .endif
 
 # Note that there is NO static compile module hook here.  This is intentional.
@@ -136,12 +139,12 @@ post-patch:
 		> ${WRKSRC}/conf/httpd.conf-dist
 
 pre-configure:
-	${SED} ${FILES_SUBST_SED}					\
+	@${SED} ${FILES_SUBST_SED}					\
 		${FILESDIR}/config.layout > ${WRKDIR}/config.layout
 
 pre-install:
 	${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
 
 post-install:
 .if !defined(NOPIC)
