@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.35 2002/12/03 19:17:34 agc Exp $
+# $NetBSD: defs.Darwin.mk,v 1.36 2002/12/03 19:24:27 agc Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -84,6 +84,7 @@ _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
 _OPSYS_LIBTOOL_REQD=	1.4.20010614nb9 # base version of libtool required
 _OPSYS_RPATH_NAME=		# no name of symbol in rpath directive to linker 
+_PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG=	-V simple -b -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
 _USE_GNU_GETTEXT=	no	# Don't use GNU gettext

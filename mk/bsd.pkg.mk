@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1097 2002/12/03 19:17:33 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1098 2002/12/03 19:24:26 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -401,7 +401,7 @@ PATCH_DIST_ARGS?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP}
 PATCH_ARGS+=		--batch
 PATCH_DIST_ARGS+=	--batch
 .endif
-.if ${OPSYS} != "IRIX"
+.if ${_PATCH_CAN_BACKUP} == "yes"
 PATCH_ARGS+=		${_PATCH_BACKUP_ARG} .orig
 PATCH_DIST_ARGS+=	${_PATCH_BACKUP_ARG} .orig
 .endif
