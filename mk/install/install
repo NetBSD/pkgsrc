@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.2 2001/11/19 23:33:53 jlam Exp $
+# $NetBSD: install,v 1.3 2001/11/21 15:43:01 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -125,8 +125,9 @@ POST-INSTALL)
 	set -- ${RCD_SCRIPTS}
 	while [ $# -gt 0 ]
 	do
-		samplefile="$1"; file="$2"
-		shift; shift
+		samplefile="${PKG_PREFIX}/etc/rc.d/$1"
+		file="${RCD_SCRIPTS_DIR}/$1"
+		shift
 
 		if [ -e ${file} ]
 		then
