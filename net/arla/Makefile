@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/09/23 14:37:18 wennmach Exp $
-#
+# $NetBSD: Makefile,v 1.26 2002/09/25 00:06:34 jlam Exp $
 
 DISTNAME=		arla-0.35.9
 PKGREVISION=		1
@@ -10,88 +9,63 @@ MAINTAINER=		wennmach@netbsd.org
 HOMEPAGE=		http://www.stacken.kth.se/project/arla/
 COMMENT=		Free AFS implementation from KTH
 
-.if exists(/usr/lib/libroken.a)
-CONFIGURE_ARGS+=	--with-krb4-lib=/usr
-CONFIGURE_ARGS+=	--with-krb4-include=/usr/include/kerberosIV
-CONFIGURE_ARGS+=	--with-roken=/usr
-CONFIGURE_ARGS+=	--with-roken-include=/usr/include/krb5
-.else
-.include "../../security/kth-krb4/buildlink.mk"
-USE_BUILDLINK_ONLY=	# defined
-CONFIGURE_ARGS+=	--with-krb4-lib=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-krb4-include=${BUILDLINK_DIR}/include
-CONFIGURE_ARGS+=	--with-roken=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-roken-include=${BUILDLINK_DIR}/include/kerberosIV
-.endif
-
-# for "amon":
-.include "../../mk/x11.buildlink.mk"
-
 CONFLICTS+=		lwp-[0-9]*
 CONFLICTS+=		rx-[0-9]*
 
 OSVERSION_SPECIFIC=	yes
-GNU_CONFIGURE=		yes
 INFO_FILES=		arla.info
+
+USE_BUILDLINK2=		# defined
+USE_X11=		# defined
+GNU_CONFIGURE=		# defined
+
+.if exists(/usr/lib/libroken.a)
+CONFIGURE_ARGS+=	--with-krb4-lib=/usr/lib
+CONFIGURE_ARGS+=	--with-krb4-include=/usr/include/kerberosIV
+CONFIGURE_ARGS+=	--with-roken=/usr
+CONFIGURE_ARGS+=	--with-roken-include=/usr/include/krb5
+.else
+.  include "../../security/kth-krb4/buildlink2.mk"
+USE_BUILDLINK_ONLY=	# defined
+CONFIGURE_ARGS+=	--with-krb4-lib=${BUILDLINK_PREFIX.kth-krb4}
+CONFIGURE_ARGS+=	--with-krb4-include=${BUILDLINK_PREFIX.kth-krb4}/include
+CONFIGURE_ARGS+=	--with-roken=${BUILDLINK_PREFIX.kth-krb4}
+CONFIGURE_ARGS+=	--with-roken-include=${BUILDLINK_PREFIX.kth-krb4}/include/kerberosIV
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
 .if !exists(/sys/lib/libkern/libkern.h)
-.if exists(${BSDSRCDIR}/sys/lib/libkern/libkern.h)
+.  if exists(${BSDSRCDIR}/sys/lib/libkern/libkern.h)
 CONFIGURE_ARGS+=	--with-sys=${BSDSRCDIR}/sys
-.else
+.  else
 IGNORE=			"${PKGNAME} requires kernel sources available under \$$BSDSRCDIR/sys (or /sys)"
-.endif
+.  endif
 .endif
 
-.if defined(ARLA_CACHE)
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-arlacachedir=${ARLA_CACHE}
-.endif
+MESSAGE_SUBST+=		ARLA_CACHE=${ARLA_CACHE}
+PLIST_SUBST+=		ARLA_CACHE=${ARLA_CACHE}
+FILES_SUBST+=		ARLA_CACHE=${ARLA_CACHE}
 
-.if defined(ARLA_CACHE)
-CACHEDIR=		${ARLA_CACHE}
-.else
-CACHEDIR=		${LOCALBASE}/cache
-.endif
-MESSAGE_SUBST+=		ARLA_CACHE=${CACHEDIR}
-PLIST_SUBST+=		ARLA_CACHE=${CACHEDIR}
+EGDIR=		${PREFIX}/share/examples/arla
+RCD_SCRIPTS=	arlad
 
-do-configure:
-# *Sometimes* it's bad to try to be too smart:
-# pkgsrc's LDFLAGS choice is completely inadequate for arla, since
-# arla's configure uses $LDFLAGS as flags for $LD, whereas
-# pkgsrc's LDFLAGS are conceived to be used with $CC
-# So, basically, bsd.pkg.mk sets LDFLAGS=-Wl,-R${LOCALBASE}
-# while arla expects LDFLAGS=-R${LOCALBASE}
-	@(LDFLAGS= ; cd ${WRKSRC}; ./configure ${CONFIGURE_ARGS})
+CONF_FILES=	${EGDIR}/CellServDB ${PKG_SYSCONFDIR}/CellServDB
+CONF_FILES+=	${EGDIR}/SuidCells ${PKG_SYSCONFDIR}/SuidCells
+CONF_FILES+=	${EGDIR}/ThisCell ${PKG_SYSCONFDIR}/ThisCell
+CONF_FILES+=	${EGDIR}/arla.conf ${PKG_SYSCONFDIR}/arla.conf
+OWN_DIRS_PERMS=	${ARLA_CACHE} ${ROOT_USER} ${ROOT_GROUP} 0700
 
 post-install:
-	@${ECHO} " "
-	@if [ -e ${CACHEDIR} ]; then                                          \
-		${ECHO} "Arla cache dir (${CACHEDIR}) already exists";        \
-	else                                                                  \
-		${ECHO} "Creating arla cache directory ${CACHEDIR}";          \
-		${INSTALL_DATA_DIR} ${CACHEDIR};                              \
-		${CHMOD} 700 ${CACHEDIR};                                     \
-		${CHOWN} ${ROOT_USER} ${CACHEDIR};                            \
-	fi
-	@if [ -e /sbin/mount_xfs ]; then                                      \
-		${ECHO} "/sbin/mount_xfs already exists";                     \
-	else                                                                  \
-		${ECHO} "Creating /sbin/mount_xfs";                           \
-		${LN} -s ${PREFIX}/sbin/mount_xfs /sbin/mount_xfs;            \
-	fi
-	@-${INSTALL_DATA_DIR} ${PREFIX}/share/examples/arla
-	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
-		< ${FILESDIR}/lkm.conf                                        \
-		> ${PREFIX}/share/examples/arla/lkm.conf
-	@${INSTALL_DATA}                                                      \
-		${FILESDIR}/services ${PREFIX}/share/examples/arla
-	@${INSTALL_DATA}                                                      \
-		 ${FILESDIR}/fstab ${PREFIX}/share/examples/arla
-	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${FILESDIR}/arlad                  \
-		> ${PREFIX}/etc/rc.d/arlad
-	@${ECHO} " "
+	${RM} -f ${EGDIR}/*.default
+	${SED}	${FILES_SUBST_SED}					\
+		< ${FILESDIR}/lkm.conf > ${WRKDIR}/lkm.conf
+	${INSTALL_DATA} ${WRKDIR}/lkm.conf ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/services ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/fstab ${EGDIR}
 
 .include "../../mk/texinfo.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
