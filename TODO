@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17 2001/05/08 00:26:17 wiz Exp $
+$NetBSD: TODO,v 1.18 2001/05/08 05:01:26 zuntum Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -32,7 +32,6 @@ packages TODO (Suggested new packages)
 
 	sp
 	very simple divx player, it depends on graphics/avifile
-	http://zuntum.net/sp.tar.gz
 	zuntum will take care of that.
 
 	squirm
@@ -60,6 +59,7 @@ package update TODO (Suggested package updates)
 	o update sysutils/gkrellm to 1.0.8
 		(zuntum will do that)
 	o update sysutils/lsof to 4.56 [atatat has new version ready]
+	o update time/devtodo to 0.1.6
 	o update www/php4 and assorted php4 module packages to 4.0.5
 		(jlam has a new package ready, will update after freeze)
 	o update x11/xfce to 3.8.3
