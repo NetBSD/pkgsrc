@@ -1,0 +1,63 @@
+$NetBSD: patch-ai,v 1.1 2000/10/31 17:06:18 itojun Exp $
+
+use already-installed libintl, not in-tree libintl
+
+--- src/Makefile.in.orig	Fri May  1 15:47:25 1998
++++ src/Makefile.in	Wed Nov  1 01:25:11 2000
+@@ -108,7 +108,7 @@
+ 
+ INCLUDES = -I$(srcdir) -I.. -I$(top_srcdir)/lib -I../intl -I$(top_srcdir)/intl
+ DEFS = -DLOCALEDIR=\"$(localedir)\" @DEFS@
+-LDADD = ../lib/libnlsut.a ../intl/libintl.$la
++LDADD = ../lib/libnlsut.a 
+ 
+ SED = sed
+ YACC = @YACC@
+@@ -136,39 +136,39 @@
+ 
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lintl
+ gettext_OBJECTS =  gettextp.o
+ gettext_LDADD = $(LDADD)
+-gettext_DEPENDENCIES =  ../lib/libnlsut.a ../intl/libintl.$la
++gettext_DEPENDENCIES =  ../lib/libnlsut.a 
+ gettext_LDFLAGS = 
+ msgcmp_OBJECTS =  message.o msgcmp.o open-po.o po-gram.gen.o \
+ po-hash.gen.o po-lex.o po.o str-list.o dir-list.o
+ msgcmp_LDADD = $(LDADD)
+-msgcmp_DEPENDENCIES =  ../lib/libnlsut.a ../intl/libintl.$la
++msgcmp_DEPENDENCIES =  ../lib/libnlsut.a 
+ msgcmp_LDFLAGS = 
+ msgfmt_OBJECTS =  msgfmt.o open-po.o po-gram.gen.o po-hash.gen.o \
+ po-lex.o po.o str-list.o message.o dir-list.o
+ msgfmt_LDADD = $(LDADD)
+-msgfmt_DEPENDENCIES =  ../lib/libnlsut.a ../intl/libintl.$la
++msgfmt_DEPENDENCIES =  ../lib/libnlsut.a 
+ msgfmt_LDFLAGS = 
+ msgmerge_OBJECTS =  message.o msgmerge.o open-po.o po-gram.gen.o \
+ po-hash.gen.o po-lex.o po.o str-list.o dir-list.o
+ msgmerge_LDADD = $(LDADD)
+-msgmerge_DEPENDENCIES =  ../lib/libnlsut.a ../intl/libintl.$la
++msgmerge_DEPENDENCIES =  ../lib/libnlsut.a 
+ msgmerge_LDFLAGS = 
+ msgunfmt_OBJECTS =  message.o msgunfmt.o str-list.o
+ msgunfmt_LDADD = $(LDADD)
+-msgunfmt_DEPENDENCIES =  ../lib/libnlsut.a ../intl/libintl.$la
++msgunfmt_DEPENDENCIES =  ../lib/libnlsut.a 
+ msgunfmt_LDFLAGS = 
+ xgettext_OBJECTS =  message.o open-po.o po-gram.gen.o po-hash.gen.o \
+ po-lex.o po.o str-list.o xget-lex.o xgettext.o dir-list.o
+ xgettext_LDADD = $(LDADD)
+-xgettext_DEPENDENCIES =  ../lib/libnlsut.a ../intl/libintl.$la
++xgettext_DEPENDENCIES =  ../lib/libnlsut.a 
+ xgettext_LDFLAGS = 
+ msgcomm_OBJECTS =  msgcomm.o message.o po-gram.gen.o po-hash.gen.o \
+ po-lex.o open-po.o po.o str-list.o dir-list.o
+ msgcomm_LDADD = $(LDADD)
+-msgcomm_DEPENDENCIES =  ../lib/libnlsut.a ../intl/libintl.$la
++msgcomm_DEPENDENCIES =  ../lib/libnlsut.a 
+ msgcomm_LDFLAGS = 
+ CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
