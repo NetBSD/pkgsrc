@@ -1,17 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/03/22 14:17:47 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2003/01/06 00:06:09 rh Exp $
 
---- Makefile.in.orig	Thu Feb 14 20:29:17 2002
+--- Makefile.in.orig	Tue Dec 17 17:00:27 2002
 +++ Makefile.in
-@@ -155,7 +155,7 @@
- 	doc launcher plugins scripts
- 
- 
--anjutadocdir = ${prefix}/doc/anjuta
-+anjutadocdir = ${prefix}/share/doc/anjuta
- anjutadoc_DATA = \
- 	README\
- 	COPYING\
-@@ -165,7 +165,8 @@
+@@ -187,7 +187,8 @@ anjutadoc_DATA = \
  	NEWS\
  	TODO\
  	ABOUT-NLS\
@@ -20,4 +11,4 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/03/22 14:17:47 wiz Exp $
 +	THANKS
  
  
- EXTRA_DIST = \
+ anjuta_datadir = $(prefix)/@NO_PREFIX_PACKAGE_DATA_DIR@
