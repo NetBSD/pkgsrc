@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.22 2004/02/12 09:38:43 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.23 2004/03/26 02:22:38 wiz Exp $
 
 .if !defined(OPENSSL_BUILDLINK2_MK)
 OPENSSL_BUILDLINK2_MK=	# defined
@@ -8,9 +8,9 @@ OPENSSL_BUILDLINK2_MK=	# defined
 # This is the ${PKGNAME} of the version of the OpenSSL package installed
 # by pkgsrc.
 #
-_OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.6l
+_OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.6m
 
-BUILDLINK_DEPENDS.openssl?=	openssl>=0.9.6l
+BUILDLINK_DEPENDS.openssl?=	openssl>=0.9.6m
 BUILDLINK_PKGSRCDIR.openssl?=	../../security/openssl
 
 BUILDLINK_CHECK_BUILTIN.openssl?=	NO
