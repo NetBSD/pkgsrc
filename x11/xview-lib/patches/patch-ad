@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 1999/12/15 23:51:04 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.6 2000/06/16 14:16:54 pooka Exp $
 
 diff -rc ../old/xview3.2p1-X11R6/lib/libxview/attr/attr_copy.c ./lib/libxview/attr/attr_copy.c
 *** ../old/xview3.2p1-X11R6/lib/libxview/attr/attr_copy.c	Tue Jun 29 01:14:35 1993
@@ -116,33 +116,6 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/base/xv_debug.h ./lib/libxview/bas
   #endif FILE
   #include <xview/pkg.h>		/* needed to get definition of Xv_private */
     /* 
-diff -rc ../old/xview3.2p1-X11R6/lib/libxview/base/xv_error.c ./lib/libxview/base/xv_error.c
-*** ../old/xview3.2p1-X11R6/lib/libxview/base/xv_error.c	Tue Jun 29 01:14:42 1993
---- ./lib/libxview/base/xv_error.c	Sun Nov 20 13:39:00 1994
-***************
-*** 11,16 ****
---- 11,17 ----
-   */
-  
-  #include <stdio.h>
-+ #include <sys/param.h>
-  #include <xview/pkg_public.h>
-  #include <X11/Xlib.h>
-  #include <xview_private/i18n_impl.h>
-***************
-*** 18,24 ****
---- 19,29 ----
-  
-  /* Unix system error variables */
-  extern int      sys_nerr;
-+ #if (defined(BSD) && (BSD >= 199306))
-+ extern const char *const sys_errlist[];
-+ #else
-  extern char    *sys_errlist[];
-+ #endif
-  extern int      errno;
-  
-  Xv_private_data char *xv_app_name;
 diff -rc ../old/xview3.2p1-X11R6/lib/libxview/dnd/dnd.c ./lib/libxview/dnd/dnd.c
 *** ../old/xview3.2p1-X11R6/lib/libxview/dnd/dnd.c	Tue Jun 29 01:15:57 1993
 --- ./lib/libxview/dnd/dnd.c	Sun Nov 20 13:39:00 1994
