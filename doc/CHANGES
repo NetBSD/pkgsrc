@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.648 2002/11/30 15:52:11 jmmv Exp $
+$NetBSD: CHANGES,v 1.649 2002/12/01 06:27:38 sjg Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3776,3 +3776,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated buildtool to 0.7 [jmmv 2002-11-30]
 	Updated php4-mbstring to 4.2.3nb1 [taca 2002-11-30]
 	Updated sysbuild to 1.1 [jmmv 2002-11-30]
+	Updated bmake to 3.1.15 [sjg 2002-11-30]
