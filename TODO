@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24 2001/05/10 00:55:10 itojun Exp $
+$NetBSD: TODO,v 1.25 2001/05/10 14:04:55 zuntum Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -68,6 +68,7 @@ package update TODO (Suggested package updates)
 	o update editors/vim because of security problems
 	o update IPv6 patch in mail/postfix to 20010510a
 	o update IPv6 patch in net/wget to 20010508b
+	o update print/a2ps to 4.13 [pkgsrc version was released on 1999-02-10, whee]
 	o update sysutils/gkrellm to 1.0.8
 		(zuntum will do that)
 	o update sysutils/lsof to 4.56 [atatat has new version ready]
