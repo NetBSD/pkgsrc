@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2003/08/09 11:08:54 seb Exp $
+# $NetBSD: Makefile,v 1.54 2003/08/18 13:17:51 minoura Exp $
 
 DISTNAME=	mew-2.3
 CATEGORIES=	mail
@@ -12,7 +12,7 @@ CONFLICTS=+	mew-xemacs-*
 
 INFO_FILES=	mew.info
 
-EMACS_VERSION_ACCEPTED=	emacs21 emacs20
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20
 
 MEW_CONTRIB_DIR=${EMACS_LISPPREFIX}/mew/contrib
 
