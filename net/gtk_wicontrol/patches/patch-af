@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1 2001/07/30 10:28:44 wiz Exp $
+
+--- src/callbacks.c.orig	Tue Mar  6 03:52:38 2001
++++ src/callbacks.c
+@@ -28,12 +28,12 @@
+ #endif
+ #endif
+  
+-#ifdef HAVE_DEV_PCMCIA_IF_WI_IEEE_H
++#if defined(HAVE_DEV_PCMCIA_IF_WI_IEEE_H)
+ #include <dev/pcmcia/if_wi_ieee.h>
+-#else
+-#ifdef HAVE_MACHINE_IF_WAVELAN_IEEE_H
++#elif defined(HAVE_MACHINE_IF_WAVELAN_IEEE_H)
+ #include <machine/if_wavelan_ieee.h>      
+-#endif
++#elif defined(HAVE_DEV_IC_WI_IEEE_H)
++#include <dev/ic/wi_ieee.h>
+ #endif
+ 
+ #include "callbacks.h"

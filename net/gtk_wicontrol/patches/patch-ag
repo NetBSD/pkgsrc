@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.1 2001/07/30 10:28:44 wiz Exp $
+
+--- src/main.c.orig	Sat Dec  2 03:49:05 2000
++++ src/main.c
+@@ -27,13 +27,13 @@
+ #include <net/ethernet.h>
+ #endif
+ #endif
+-
+-#ifdef HAVE_DEV_PCMCIA_IF_WI_IEEE_H
++ 
++#if defined(HAVE_DEV_PCMCIA_IF_WI_IEEE_H)
+ #include <dev/pcmcia/if_wi_ieee.h>
+-#else
+-#ifdef HAVE_MACHINE_IF_WAVELAN_IEEE_H
+-#include <machine/if_wavelan_ieee.h>
+-#endif
++#elif defined(HAVE_MACHINE_IF_WAVELAN_IEEE_H)
++#include <machine/if_wavelan_ieee.h>      
++#elif defined(HAVE_DEV_IC_WI_IEEE_H)
++#include <dev/ic/wi_ieee.h>
+ #endif
+ 
+ #include "interface.h"

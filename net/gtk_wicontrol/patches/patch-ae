@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2001/07/30 10:28:44 wiz Exp $
+
+--- configure.in.orig	Tue Mar  6 03:55:59 2001
++++ configure.in
+@@ -13,7 +13,7 @@
+ AC_CHECK_HEADERS(sys/ioctl.h unistd.h)
+ AC_CHECK_HEADER(net/if_var.h)
+ AC_CHECK_HEADERS(net/if_ether.h net/ethernet.h)
+-AC_CHECK_HEADERS(dev/pcmcia/if_wi_ieee.h machine/if_wavelan_ieee.h)
++AC_CHECK_HEADERS(dev/pcmcia/if_wi_ieee.h machine/if_wavelan_ieee.h dev/ic/wi_ieee.h)
+ 
+ dnl Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST
