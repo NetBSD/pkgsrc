@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/07 12:14:59 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/14 16:27:09 drochner Exp $
+bin/xmlproc_parse
+bin/xmlproc_val
 PYSITELIB/_xmlplus/__init__.py
 PYSITELIB/_xmlplus/__init__.pyc
 PYSITELIB/_xmlplus/_checkversion.py
@@ -202,6 +204,8 @@ PYSITELIB/_xmlplus/dom/javadom.py
 PYSITELIB/_xmlplus/dom/javadom.pyc
 PYSITELIB/_xmlplus/dom/minidom.py
 PYSITELIB/_xmlplus/dom/minidom.pyc
+PYSITELIB/_xmlplus/dom/minitraversal.py
+PYSITELIB/_xmlplus/dom/minitraversal.pyc
 PYSITELIB/_xmlplus/dom/pulldom.py
 PYSITELIB/_xmlplus/dom/pulldom.pyc
 PYSITELIB/_xmlplus/marshal/__init__.py
@@ -222,6 +226,8 @@ PYSITELIB/_xmlplus/parsers/sgmllib.pyc
 PYSITELIB/_xmlplus/parsers/sgmlop.so
 PYSITELIB/_xmlplus/parsers/xmlproc/__init__.py
 PYSITELIB/_xmlplus/parsers/xmlproc/__init__.pyc
+PYSITELIB/_xmlplus/parsers/xmlproc/_outputters.py
+PYSITELIB/_xmlplus/parsers/xmlproc/_outputters.pyc
 PYSITELIB/_xmlplus/parsers/xmlproc/catalog.py
 PYSITELIB/_xmlplus/parsers/xmlproc/catalog.pyc
 PYSITELIB/_xmlplus/parsers/xmlproc/charconv.py
@@ -306,6 +312,7 @@ PYSITELIB/_xmlplus/unicode/utf8_iso.py
 PYSITELIB/_xmlplus/unicode/utf8_iso.pyc
 PYSITELIB/_xmlplus/utils/__init__.py
 PYSITELIB/_xmlplus/utils/__init__.pyc
+PYSITELIB/_xmlplus/utils/boolean.so
 PYSITELIB/_xmlplus/utils/iso8601.py
 PYSITELIB/_xmlplus/utils/iso8601.pyc
 PYSITELIB/_xmlplus/utils/qp_xml.py
