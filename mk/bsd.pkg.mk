@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.901 2002/01/11 14:41:42 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.902 2002/01/15 00:32:12 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1435,9 +1435,9 @@ EXTRACT_CMD.lha?=	${EXTRACT_CMD.lzh}
 # was written with a buggy version of GNU tar.
 #
 .if defined(EXTRACT_USING_PAX)
-EXTRACT_CMD?=		{ ${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -r ${EXTRACT_ELEMENTS}
+_DFLT_EXTRACT_CMD?=	{ ${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -r ${EXTRACT_ELEMENTS}
 .else
-EXTRACT_CMD?=		${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
+_DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
 .endif
 
 .for __suffix__ in ${_EXTRACT_SUFFICES}
@@ -1463,8 +1463,15 @@ do-extract:
 		${ECHO} "${WRKDIR_BASENAME} -> ${WRKDIR}";		\
 	fi
 .  endif # WRKOBJDIR
-.  for __file__ in ${EXTRACT_ONLY}
-.    for __suffix__ in ${_EXTRACT_SUFFICES}
+.  if defined(EXTRACT_CMD) && !empty(EXTRACT_CMD)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for file in "" ${EXTRACT_ONLY}; do				\
+		if [ "X$$file" = X"" ]; then continue; fi;		\
+		{ cd ${WRKDIR} && ${EXTRACT_CMD}; };			\
+	done                                                                    
+.  else
+.    for __file__ in ${EXTRACT_ONLY}
+.      for __suffix__ in ${_EXTRACT_SUFFICES}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -f ${WRKDIR}/.extracted ]; then				\
 		case "${__file__}" in					\
@@ -1475,15 +1482,16 @@ do-extract:
 			;;						\
 		esac;							\
 	fi
-.    endfor
+.      endfor	# __suffix__
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -f ${WRKDIR}/.extracted ]; then				\
 		file="${__file__}";					\
-		{ cd ${WRKDIR} && ${EXTRACT_CMD}; };			\
-	else								\
-		${RM} -f ${WRKDIR}/.extracted;				\
+		{ cd ${WRKDIR} && ${_DFLT_EXTRACT_CMD}; };		\
+		${ECHO} "$$file" > ${WRKDIR}/.extracted;		\
 	fi
-.  endfor
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR}/.extracted
+.    endfor	# __file__
+.  endif	# defined(EXTRACT_CMD)
 .endif
 
 # Patch
