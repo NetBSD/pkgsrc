@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.2 2003/09/02 07:00:03 jlam Exp $
+# $NetBSD: wrapper.sh,v 1.3 2003/09/08 21:10:26 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -57,7 +57,35 @@ while $test $# -gt 0; do
 	case $cachehit in
 	no)	. $logic ;;
 	esac
-	cmd="$cmd $arg"
+	#
+	# Reduce command length by not appending options that we've
+	# already seen to the command.
+	#
+	case $arg in
+	-[DILR]*|-Wl,-R*|-Wl,-*,/*)
+		#
+		# These options are only ever useful the first time
+		# they're given.  All other instances are redundant.
+		#
+		case "$cmd" in
+		*" "$arg|*" "$arg" "*)	;;
+		*)	cmd="$cmd $arg" ;;
+		esac
+		;;
+	-l*)
+		#
+		# Extra libraries are suppressed only if they're
+		# repeated, e.g. "-lm -lm -lm -lm" -> "-lm".
+		#
+		case "$cmd" in
+		*" "$arg)	;;
+		*)	cmd="$cmd $arg" ;;
+		esac
+		;;
+	*)
+		cmd="$cmd $arg"
+		;;
+	esac
 done
 
 @_BLNK_WRAP_ENV@
