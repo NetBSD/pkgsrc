@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7305 2004/10/01 08:46:26 wiz Exp $
+$NetBSD: CHANGES,v 1.7306 2004/10/01 09:16:14 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4503,3 +4503,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added sun-jdk15-5.0 [rh 2004-10-01]
 	Updated dosbox to 0.62 [xtraeme 2004-10-01]
 	Updated libntlm to 0.3.6 [wiz 2004-10-01]
+	Updated xpmroot to 2.4.19 [martti 2004-10-01]
+	Updated fvwm2 to 2.4.19 [martti 2004-10-01]
