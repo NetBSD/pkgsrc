@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/24 22:53:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/06 22:52:12 jmmv Exp $
 
-DISTNAME=	gnome-base-2.4.1
+DISTNAME=	gnome-base-2.4.2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,13 +10,13 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for basic components of the GNOME desktop
 
 DEPENDS+=	gdm>=2.4.4.7:../../x11/gdm
-DEPENDS+=	gnome-panel>=2.4.1:../../x11/gnome-panel
-DEPENDS+=	gnome-session>=2.4.1:../../x11/gnome-session
+DEPENDS+=	gnome-panel>=2.4.2:../../x11/gnome-panel
+DEPENDS+=	gnome-session>=2.4.2:../../x11/gnome-session
 DEPENDS+=	gnome2-control-center>=2.4.0:../../x11/gnome2-control-center
-DEPENDS+=	gnome2-terminal>=2.4.1:../../x11/gnome2-terminal
-DEPENDS+=	gnome-vfs2>=2.4.1:../../sysutils/gnome-vfs2
+DEPENDS+=	gnome2-terminal>=2.4.2:../../x11/gnome2-terminal
+DEPENDS+=	gnome-vfs2>=2.4.2:../../sysutils/gnome-vfs2
 DEPENDS+=	metacity>=2.6.3:../../wm/metacity
-DEPENDS+=	nautilus>=2.4.1:../../sysutils/nautilus
+DEPENDS+=	nautilus>=2.4.2:../../sysutils/nautilus
 DEPENDS+=	xscreensaver>=4.14nb1:../../x11/xscreensaver
 DEPENDS+=	yelp>=2.4.2:../../misc/yelp
 
