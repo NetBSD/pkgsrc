@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2001/10/27 21:29:49 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2001/12/14 09:19:21 toshii Exp $
 
---- Makefile.in.orig	Thu Oct 18 19:47:29 2001
-+++ Makefile.in
-@@ -139,7 +139,7 @@
- INCLUDES = -Ilibmad -I$(srcdir)/libid3 -Iintl  			-DLOCALEDIR=\"$(localedir)\"
+--- Makefile.in.orig	Fri Nov  9 16:02:44 2001
++++ Makefile.in	Fri Dec 14 17:37:18 2001
+@@ -144,7 +144,7 @@
+ ldadd_libmad = $(depend_libmad)
+ ldadd_libid3tag = $(depend_libid3tag) $(ldadd_libz)
  
+-depend = @LIBOBJS@ @INTLLIBS@
++depend = @LIBOBJS@
+ ldadd = $(depend)
  
--LDADD = @LIBOBJS@ libmad/libmad.la @INTLLIBS@
-+LDADD = @LIBOBJS@ libmad/libmad.la
- 
- madplay_DEPENDENCIES = $(AUDIO) $(LDADD) libid3/libid3.la
- madplay_LDADD = $(AUDIO) $(LDADD) libid3/libid3.la $(ldadd_libz) -lz
+ DEPENDENCIES = $(depend) $(depend_libmad)
