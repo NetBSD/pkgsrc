@@ -1,21 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/10/13 19:08:29 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2000/02/25 17:58:01 jlam Exp $
 
---- bin/egtkbuild.in.orig	Sat Aug 28 20:10:24 1999
-+++ bin/egtkbuild.in	Wed Oct 13 02:55:32 1999
+--- bin/egtkbuild.in.orig	Tue Nov 30 22:57:02 1999
++++ bin/egtkbuild.in	Fri Feb 25 12:31:59 2000
 @@ -14,7 +14,7 @@
  #
  # .egtkbuild.rc should set the following variables, if necessary (the
  # default value is shown), which will override the default settings:
--#   COMPILE=compile
+-#   COMPILE=compile_to_c
 +#   COMPILE="smalleiffel compile"
- #   SE_OPTS="-no_strip -no_style_warning"
+ #   SE_OPTS="-no_strip -no_style_warning -case_insensitive"
  #   DEBUG=-g
  #   OPTIMISE=-O
 @@ -22,7 +22,7 @@
  #
  # It may also set these variables, which will be prepended to the default
  # options (therefore do not repeat the default options):
--#   CECIL      (default: "-cecil ${EIFFEL_GTK}/C/se/cecil.se")
+-#   CECIL      (default: "-cecil ${EGTK}/C/se/cecil.se")
 +#   CECIL      (default: "-cecil @PREFIX@/share/egtk/se/cecil.se")
  #   INCFLAGS   (default: "-I. `gtk-config --cflags`")
  #   LIBS       (default: "`gtk-config --libs`")
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/10/13 19:08:29 jlam Exp $
  then
  	echo "Current settings:
  	SmallEiffel = $SmallEiffel
--	EIFFEL_GTK  = $EIFFEL_GTK
+-	EGTK  = $EGTK
  "
  fi
  
@@ -34,7 +34,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/10/13 19:08:29 jlam Exp $
  OPTIMISE=-O
  SE_OPTS="-no_strip -no_style_warning"
  EXTERNAL=
--STATICLIB=${EIFFEL_GTK}/C/se/eif_gtk.a
+-STATICLIB=${EGTK}/C/se/eif_gtk.a
 +STATICLIB=@PREFIX@/lib/libegtk_se.a
  GTKLIBS=`gtk-config --libs`
  
@@ -43,11 +43,11 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/10/13 19:08:29 jlam Exp $
  	fi
  fi
  
--INCFLAGS="$INCFLAGS -I. -I${EIFFEL_GTK}/C/se `gtk-config --cflags`"
+-INCFLAGS="$INCFLAGS -I. -I${EGTK}/C/se `gtk-config --cflags`"
 +INCFLAGS="$INCFLAGS -I. `gtk-config --cflags`"
  LIBS="$LIBS ${STATICLIB} ${GTKLIBS}"
--CECIL="$CECIL -cecil ${EIFFEL_GTK}/C/se/cecil.se"
--EXTERNAL="${EIFFEL_GTK}/C/se/eif_gtk_se.c $EXTERNAL"
+-CECIL="$CECIL -cecil ${EGTK}/C/se/cecil.se"
+-EXTERNAL="${EGTK}/C/se/eif_gtk_se.c $EXTERNAL"
 -
 -if [ ! -r ${STATICLIB} ]
 -then
