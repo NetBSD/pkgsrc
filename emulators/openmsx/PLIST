@@ -1,11 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/05 17:26:55 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/10/25 08:06:04 xtraeme Exp $
 bin/openmsx
-openmsx/Contrib/README.cbios
-openmsx/Contrib/cbios/CB_MAIN.BIN
-openmsx/Contrib/cbios/CB_SH.BIN
-openmsx/Contrib/cbios/CB_SUB.BIN
-openmsx/Contrib/cbios/cbios.en.txt
-openmsx/Contrib/cbios/cbios.txt
 openmsx/bin/openmsx
 openmsx/doc/AUTHORS
 openmsx/doc/GPL
@@ -13,7 +7,9 @@ openmsx/doc/README
 openmsx/doc/after-bussum-FAQ.txt
 openmsx/doc/commands.txt
 openmsx/doc/exampleconfigs.xml
+openmsx/doc/manual/cartnotfound.png
 openmsx/doc/manual/compile.html
+openmsx/doc/manual/faq.html
 openmsx/doc/manual/index.html
 openmsx/doc/manual/manual-minty.css
 openmsx/doc/manual/manual-purple.css
@@ -22,6 +18,18 @@ openmsx/doc/manual/setup.html
 openmsx/doc/manual/user.html
 openmsx/doc/release-history.txt
 openmsx/doc/release-notes.txt
+openmsx/share/Contrib/README.cbios
+openmsx/share/Contrib/cbios/CB_MAIN.BIN
+openmsx/share/Contrib/cbios/CB_SH.BIN
+openmsx/share/Contrib/cbios/CB_SUB.BIN
+openmsx/share/Contrib/cbios/cbios.en.txt
+openmsx/share/Contrib/cbios/cbios.rom
+openmsx/share/Contrib/cbios/cbios.txt
+openmsx/share/Contrib/cbios/cbios_sub.rom
+openmsx/share/extensions/Konami_EC-702/hardwareconfig.xml
+openmsx/share/extensions/Konami_EC-702/roms/SHA1SUMS
+openmsx/share/extensions/Konami_SD-Snatcher_Sound_Cartridge/hardwareconfig.xml
+openmsx/share/extensions/Konami_Snatcher_Sound_Cartridge/hardwareconfig.xml
 openmsx/share/extensions/Panasonic_FS-CA1/hardwareconfig.xml
 openmsx/share/extensions/Panasonic_FS-CA1/roms/SHA1SUMS
 openmsx/share/extensions/Philips_NMS_1205/hardwareconfig.xml
@@ -56,7 +64,7 @@ openmsx/share/extensions/rs232/hardwareconfig.xml
 openmsx/share/extensions/rs232/roms/SHA1SUMS
 openmsx/share/extensions/scc+/hardwareconfig.xml
 openmsx/share/extensions/scc/hardwareconfig.xml
-openmsx/share/hardwareconfig.dtd
+openmsx/share/extensions/slotexpander/hardwareconfig.xml
 openmsx/share/init.tcl
 openmsx/share/keymaps/keymap.default
 openmsx/share/keymaps/keymap.rus2eng
@@ -191,6 +199,8 @@ openmsx/share/machines/msx2plus
 openmsx/share/machines/turbor
 openmsx/share/romdb.dtd
 openmsx/share/romdb.xml
+openmsx/share/scripts/convert_hardwareconfig.py
+openmsx/share/scripts/cycle.tcl
 openmsx/share/scripts/multi_screenshot.tcl
 openmsx/share/scripts/save_debuggable.tcl
 openmsx/share/settings.xml
@@ -204,6 +214,9 @@ openmsx/share/skins/ConsoleFont.png
 openmsx/share/skins/ConsoleFont1.png
 openmsx/share/skins/ConsoleFontRave.png
 openmsx/share/skins/ConsoleFontRaveL.png
+openmsx/share/systemroms/.cvsignore
+openmsx/share/systemroms/README
+@dirrm openmsx/share/systemroms
 @dirrm openmsx/share/skins
 @dirrm openmsx/share/scripts
 @dirrm openmsx/share/machines/cbios-msx2
@@ -331,6 +344,7 @@ openmsx/share/skins/ConsoleFontRaveL.png
 @dirrm openmsx/share/machines/Boosted_MSX2_EN
 @dirrm openmsx/share/machines
 @dirrm openmsx/share/keymaps
+@dirrm openmsx/share/extensions/slotexpander
 @dirrm openmsx/share/extensions/scc+
 @dirrm openmsx/share/extensions/scc
 @dirrm openmsx/share/extensions/rs232/roms
@@ -365,11 +379,15 @@ openmsx/share/skins/ConsoleFontRaveL.png
 @dirrm openmsx/share/extensions/Philips_NMS_1205
 @dirrm openmsx/share/extensions/Panasonic_FS-CA1/roms
 @dirrm openmsx/share/extensions/Panasonic_FS-CA1
+@dirrm openmsx/share/extensions/Konami_Snatcher_Sound_Cartridge
+@dirrm openmsx/share/extensions/Konami_SD-Snatcher_Sound_Cartridge
+@dirrm openmsx/share/extensions/Konami_EC-702/roms
+@dirrm openmsx/share/extensions/Konami_EC-702
 @dirrm openmsx/share/extensions
+@dirrm openmsx/share/Contrib/cbios
+@dirrm openmsx/share/Contrib
 @dirrm openmsx/share
 @dirrm openmsx/doc/manual
 @dirrm openmsx/doc
 @dirrm openmsx/bin
-@dirrm openmsx/Contrib/cbios
-@dirrm openmsx/Contrib
 @dirrm openmsx
