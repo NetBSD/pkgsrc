@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/08/02 12:14:00 agc Exp $
+# $NetBSD: Makefile,v 1.16 1999/08/17 23:10:55 tron Exp $
 
 DISTNAME=	squid-2.2.STABLE4-src
 PKGNAME=	squid-2.2s4
@@ -67,6 +67,6 @@ pre-install:
 post-install:
 	cd ${WRKSRC}/src; ${MAKE} install-pinger
 	${INSTALL_SCRIPT} ${WRKDIR}/squid.sh ${PREFIX}/etc/rc.d/squid.sh
-	@${SETENV} ${MAKE_ENV} ${SH} ${PKGDIR}/INSTALL ${PKGNAME} POST-INSTALL
+	@${SETENV} ${MAKE_ENV} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include <../../mk/bsd.pkg.mk>
