@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.IRIX,v 1.1 2005/03/04 03:59:32 jschauma Exp $
+lib/zsh/${PKGVERSION}/zsh/terminfo.so
