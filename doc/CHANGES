@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7652 2004/11/02 00:23:53 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7653 2004/11/02 11:39:27 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5019,4 +5019,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nessus-plugins to 2.2.0 [adrianp 2004-11-01]
 	Updated libnasl to 2.2.0 [adrianp 2004-11-01]
 	Updated gtk-send-pr to 0.3.5 [xtraeme 2004-11-01]
+	Updated netatalk to 2.0.1 [markd 2004-11-02]
 
