@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9193 2005/02/18 19:41:12 reed Exp $
+$NetBSD: CHANGES,v 1.9194 2005/02/18 22:14:56 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -937,3 +937,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated curl to 7.13.0 [wiz 2005-02-18]
 	Updated scmxx to 0.7.5 [wiz 2005-02-18]
 	Updated file to 4.13 [reed 2005-02-18]
+	Updated courier-authlib to 0.54 [jlam 2005-02-18]
+	Updated courier-maildir to 0.48.2 [jlam 2005-02-18]
+	Updated maildrop to 1.8.0 [jlam 2005-02-18]
+	Updated courier-imap to 4.0.1 [jlam 2005-02-18]
+	Updated sqwebmail to 5.0.0 [jlam 2005-02-18]
