@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/01/28 00:32:14 heinz Exp $
+# $NetBSD: Makefile,v 1.34 2004/04/24 22:09:22 wiz Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
@@ -17,7 +17,7 @@ COMMENT=	Toolkit and library for raster image processing
 EXTRACT_ONLY=	urt-3.1b.tar.Z
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 USE_X11=	yes
 CONFIGURE_SCRIPT=./Configure
@@ -39,5 +39,5 @@ post-install:
 	    ${FIND} . -type d -exec ${CHMOD} 755 '{}' \; ; \
 	    ${FIND} . -type f -exec ${CHMOD} 644 '{}' \;)
 
-.include "../../graphics/netpbm/buildlink2.mk"
+.include "../../graphics/netpbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
