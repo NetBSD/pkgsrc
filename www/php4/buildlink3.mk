@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/10/31 18:20:02 jdolecek Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/11/27 14:00:08 jdolecek Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PHP_BUILDLINK3_MK:=	${PHP_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	php
 
 .if !empty(PHP_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.php+=		php-4.3.*
-BUILDLINK_RECOMMENDED.php+=	php>=4.3.9nb1
+BUILDLINK_RECOMMENDED.php+=	php>=4.3.9nb2
 BUILDLINK_PKGSRCDIR.php?=	../../www/php4
 
 # Use full dependency for extension and pear modules
