@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/11/12 01:31:48 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/12/14 19:53:11 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use libgsf.
 #
@@ -9,7 +9,7 @@
 LIBGSF_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libgsf
-BUILDLINK_DEPENDS.libgsf?=		libgsf>=1.8.2nb1
+BUILDLINK_DEPENDS.libgsf?=		libgsf>=1.8.2nb3
 BUILDLINK_PKGSRCDIR.libgsf?=		../../devel/libgsf
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libgsf=libgsf
@@ -18,8 +18,6 @@ BUILDLINK_FILES.libgsf+=	include/libgsf-1/gsf-gnome/*
 BUILDLINK_FILES.libgsf+=	include/libgsf-1/gsf/*
 BUILDLINK_FILES.libgsf+=	lib/libgsf-1.*
 BUILDLINK_FILES.libgsf+=	lib/libgsf-gnome-1.*
-BUILDLINK_FILES.libgsf+=	lib/pkgconfig/libgsf-1.pc
-BUILDLINK_FILES.libgsf+=	lib/pkgconfig/libgsf-gnome-1.pc
 
 .include "../../archivers/bzip2/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
