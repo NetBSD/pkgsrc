@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/05/30 22:14:29 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/29 12:54:57 seb Exp $
 bin/edit-pr
 bin/getclose
 bin/install-sid
@@ -7,16 +7,12 @@ bin/nquery-pr
 bin/query-pr
 bin/send-pr
 bin/sub-type
-@unexec ${INSTALL_INFO} --delete %D/info/gnats.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/send-pr.info %D/info/dir
 info/gnats.info
 info/gnats.info-1
 info/gnats.info-2
 info/gnats.info-3
 info/gnats.info-4
 info/send-pr.info
-@exec ${INSTALL_INFO} %D/info/gnats.info %D/info/dir
-@exec ${INSTALL_INFO} %D/info/send-pr.info %D/info/dir
 libexec/gnats/at-pr
 libexec/gnats/check-db
 libexec/gnats/delete-pr

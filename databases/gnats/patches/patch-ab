@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/10/11 11:42:26 martti Exp $
+$NetBSD: patch-ab,v 1.2 2003/06/29 12:54:58 seb Exp $
 
---- gnats/Makefile.in.orig	Tue Sep 21 16:18:39 1999
-+++ gnats/Makefile.in	Fri Jan 21 10:06:19 2000
-@@ -465,7 +465,7 @@
+--- gnats/Makefile.in.orig	2001-05-08 17:23:36.000000000 +0000
++++ gnats/Makefile.in
+@@ -127,7 +127,6 @@ LIBS = @LIBS@
+ KRBINCLUDE = @KRBINCLUDE@
+ 
+ M4 = @M4@
+-MAKEINFO = makeinfo
+ TEXI2DVI = texi2dvi
+ 
+ # Where to find texinfo.tex to format docs with TeX
+@@ -465,7 +464,7 @@ gnats.elc: gnats.el $(srcdir)/../send-pr
  
  getdate.c: getdate.y
  	@echo expect 10 shift/reduce conflicts
@@ -11,7 +19,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/10/11 11:42:26 martti Exp $
  
  config-send-pr:
  	@if [ ! -d ../send-pr ]; then \
-@@ -496,7 +496,7 @@
+@@ -496,7 +495,7 @@ install-tools-arch-indep: all-tools
  	  echo "*** Warning: Must chown $(GNATS_USER) $(datadir)/gnats" ; \
  	fi
  	$(INSTALL_DATA) gnats.el $(lispdir)/gnats.el
