@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6841 2004/08/10 14:30:06 taya Exp $
+$NetBSD: CHANGES,v 1.6842 2004/08/10 15:14:16 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3782,3 +3782,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cfengine2 to 2.1.9 [ben 2004-08-10]
 	Updated thunderbird to 0.7.3 [taya 2004-08-10]
 	Updated thunderbird-gtk2 to 0.7.3 [taya 2004-08-10]
+	Updated cvsgraph to 1.4.1 [adrianp 2004-08-10]
