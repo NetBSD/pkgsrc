@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6858 2004/08/13 03:22:22 minskim Exp $
+$NetBSD: CHANGES,v 1.6859 2004/08/13 04:39:03 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3806,3 +3806,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated opera7 to 7.54 [jdolecek 2004-08-13]
 	Updated alee-ttf to 1.3 [minskim 2004-08-13]
 	Updated baekmuk-ttf to 2.2 [minskim 2004-08-13]
+	Updated libnbcompat to 20040813 [jlam 2004-08-13]
