@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/02/12 21:32:59 tron Exp $
+# $NetBSD: Makefile,v 1.16 1999/04/27 22:27:14 tron Exp $
 
 DISTNAME=	vim-5.3
 CATEGORIES=	editors
@@ -13,9 +13,10 @@ HOMEPAGE=	http://www.vim.org/
 
 DEPENDS=	ncurses-1.9.9g:../../devel/ncurses
 
+GNU_CONFIGURE=		yes
+USE_X11=		yes
+CONFIGURE_ARGS+=	--enable-gui=athena --with-tlib=ncurses
 LDFLAGS+=		"-L${LOCALBASE}/lib"
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-gui=athena --with-tlib=ncurses
 
 .include "../../mk/bsd.pkg.mk"
