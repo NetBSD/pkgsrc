@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/11 08:51:37 uebayasi Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/12 02:02:49 uebayasi Exp $
 #
 
 DISTNAME=       jde-2.3.2
@@ -19,7 +19,7 @@ DEPENDS+=       elib>=1.0:../../devel/elib
 .include "../../mk/emacs.mk"
 
 # XEmacs has its own JDE package
-EMACS_VERSIONS_ACCEPTED=emacs21 emacs20
+EMACS_VERSIONS_ACCEPTED=emacs21		# XXX Won't compile with emacs20...
 
 BUILD_ENV+=     EMACS=${EMACS}
 MAKE_ENV+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX}
