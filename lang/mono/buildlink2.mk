@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/09/25 16:05:21 recht Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/10/02 08:41:42 recht Exp $
 
 .if !defined(MONO_BUILDLINK2_MK)
 MONO_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			mono
-BUILDLINK_DEPENDS.mono?=		mono>=0.26
+BUILDLINK_DEPENDS.mono?=		mono>=0.28
 BUILDLINK_PKGSRCDIR.mono?=		../../lang/mono
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.mono=mono
@@ -71,7 +71,6 @@ BUILDLINK_FILES.mono+=	lib/System.dll
 BUILDLINK_FILES.mono+=	lib/corlib.dll
 BUILDLINK_FILES.mono+=	lib/libmono-profiler-cov.*
 BUILDLINK_FILES.mono+=	lib/libmono.*
-BUILDLINK_FILES.mono+=	lib/libmonogc.*
 BUILDLINK_FILES.mono+=	lib/pkgconfig/mono.pc
 
 .include "../../devel/glib2/buildlink2.mk"
