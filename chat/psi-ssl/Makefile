@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/08/12 08:08:33 jdolecek Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/12 10:38:03 cjep Exp $
 
-PKGNAME=	psi-ssl-2.0
 DISTNAME=	qssl-2.0
+PKGNAME=	psi-ssl-2.0
 PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORCE:=psi/}
@@ -18,7 +18,7 @@ USE_X11=	yes
 
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake qssl.pro
-	$(SED) 's:\(-module.*\):\1 $(QTDIR)/lib:' ${WRKSRC}/Makefile > ${WRKSRC}/Makefile.new && mv ${WRKSRC}/Makefile.new ${WRKSRC}/Makefile
+	$(SED) 's:\(-module.*\):\1 $(QTDIR)/lib:' ${WRKSRC}/Makefile > ${WRKSRC}/Makefile.new && ${MV} ${WRKSRC}/Makefile.new ${WRKSRC}/Makefile
 
 do-install:
 	cd ${WRKSRC} && libtool --mode=install ${INSTALL_PROGRAM} libqssl.la ${QTDIR}/lib
