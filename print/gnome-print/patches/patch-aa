@@ -1,24 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2000/03/14 21:36:47 tron Exp $
+$NetBSD: patch-aa,v 1.4 2000/04/07 08:43:01 rh Exp $
 
---- configure.orig	Tue Feb 22 05:29:44 2000
-+++ configure	Tue Mar 14 22:26:12 2000
-@@ -1700,6 +1700,7 @@
- fi
- 
- 
-+if false; then
- # Check for any special flags to pass to ltconfig.
- #
- # the following will cause an existing older ltconfig to fail, so
-@@ -1862,6 +1863,7 @@
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
- exec 5>>./config.log
-+fi
- 
- ALL_LINGUAS="da de el es et fi fr gl hu it ja ko nl no pl pt_BR ru sv uk"
- 
-@@ -2896,7 +2898,7 @@
+--- configure.orig	Tue Mar 28 00:22:43 2000
++++ configure	Fri Apr  7 10:36:22 2000
+@@ -2896,7 +2896,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
@@ -27,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2000/03/14 21:36:47 tron Exp $
  cat > conftest.$ac_ext <<EOF
  #line 2902 "configure"
  #include "confdefs.h"
-@@ -2926,7 +2928,8 @@
+@@ -2926,7 +2926,8 @@
    echo "$ac_t""yes" 1>&6
    
  		
@@ -37,7 +21,7 @@ $NetBSD: patch-aa,v 1.3 2000/03/14 21:36:47 tron Exp $
  	
  else
    echo "$ac_t""no" 1>&6
-@@ -5080,10 +5083,12 @@
+@@ -5080,10 +5081,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
