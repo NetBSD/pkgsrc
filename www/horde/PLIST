@@ -1,172 +1,25 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/01 22:41:16 bouyer Exp $
-share/doc/horde/COPYING
-share/doc/horde/README
-share/doc/horde/CHANGES
-share/doc/horde/CODING_STANDARDS
-share/doc/horde/CONTRIBUTING
-share/doc/horde/CREDITS
-share/doc/horde/HACKING
-share/doc/horde/INSTALL
-share/examples/horde/horde.conf
-share/horde/locale/it_IT/LC_MESSAGES/horde.mo
-share/horde/locale/zh_TW/LC_MESSAGES/horde.mo
-share/horde/locale/de_DE/LC_MESSAGES/horde.mo
-share/horde/locale/el_GR/LC_MESSAGES/horde.mo
-share/horde/locale/en_US/help.xml
-share/horde/locale/es_ES/LC_MESSAGES/horde.mo
-share/horde/locale/fi_FI/LC_MESSAGES/horde.mo
-share/horde/locale/fr_FR/LC_MESSAGES/horde.mo
-share/horde/locale/zh_CN/LC_MESSAGES/horde.mo
-share/horde/locale/cs_CZ/LC_MESSAGES/horde.mo
-share/horde/locale/nl_NL/LC_MESSAGES/horde.mo
-share/horde/locale/no_BOK/LC_MESSAGES/horde.mo
-share/horde/locale/pl_PL/LC_MESSAGES/horde.mo
-share/horde/locale/pt_BR/LC_MESSAGES/horde.mo
-share/horde/locale/ru_koi/LC_MESSAGES/horde.mo
-share/horde/locale/ru_win/LC_MESSAGES/horde.mo
-share/horde/locale/sv_SE/LC_MESSAGES/horde.mo
-share/horde/locale/ko_KR/LC_MESSAGES/horde.mo
-share/horde/templates/help/footer.inc
-share/horde/templates/help/header.inc
-share/horde/templates/help/index.inc
-share/horde/templates/help/menu.inc
-share/horde/templates/wml/login/login.inc
-share/horde/templates/wml/login/user.inc
-share/horde/templates/wml/common-footer.inc
-share/horde/templates/wml/common-header.inc
-share/horde/templates/wml/doctype.inc
-share/horde/templates/problem/javascript.inc
-share/horde/templates/problem/problem.inc
-share/horde/templates/prefs/textarea.inc
-share/horde/templates/prefs/checkbox.inc
-share/horde/templates/prefs/end.inc
-share/horde/templates/prefs/enum.inc
-share/horde/templates/prefs/link.inc
-share/horde/templates/prefs/number.inc
-share/horde/templates/prefs/overview.inc
-share/horde/templates/prefs/select.inc
-share/horde/templates/prefs/text.inc
-share/horde/templates/prefs/begin.inc
-share/horde/templates/data/csvmap.inc
-share/horde/templates/data/datemap.inc
-share/horde/templates/maintenance/confirm_bottom.inc
-share/horde/templates/maintenance/confirm_middle.inc
-share/horde/templates/maintenance/confirm_top.inc
-share/horde/templates/maintenance/javascript.inc
-share/horde/templates/horde/modules.inc
-share/horde/templates/admin/user/add.inc
-share/horde/templates/admin/user/list.inc
-share/horde/templates/admin/user/noadd.inc
-share/horde/templates/admin/user/nolist.inc
-share/horde/templates/javascript/open_help_win.js
-share/horde/templates/login/login.inc
-share/horde/templates/login/user.inc
-share/horde/templates/index/css.inc
-share/horde/templates/index/floating_index.inc
-share/horde/templates/index/frames_index.inc
-share/horde/templates/index/notconfigured.inc
-share/horde/templates/index/wap.inc
-share/horde/templates/common-header.inc
-share/horde/templates/common-footer.inc
-share/horde/scripts/db/prefs.sql
-share/horde/scripts/db/README
-share/horde/scripts/db/category.sql
-share/horde/scripts/db/mysql_create.sql
-share/horde/scripts/db/mysql_drop.sql
-share/horde/scripts/db/pgsql_create.sql
-share/horde/scripts/db/pgsql_drop.sql
-share/horde/scripts/db/auth.sql
-share/horde/scripts/mime_mapping/Makefile
-share/horde/scripts/mime_mapping/convert.pl
-share/horde/scripts/mime_mapping/mime.types
-share/horde/scripts/mime_mapping
-share/horde/scripts/SCRIPTS
-share/horde/scripts/horde-rsync.sh
-share/horde/scripts/set_perms.sh
-share/horde/po/zh_TW.po
-share/horde/po/Makefile
-share/horde/po/README
-share/horde/po/README.WinToKoi
-share/horde/po/WinToKoi.pl
-share/horde/po/cs_CZ.po
-share/horde/po/de_DE.po
-share/horde/po/el_GR.po
-share/horde/po/es_ES.po
-share/horde/po/extract.pl
-share/horde/po/fi_FI.po
-share/horde/po/fr_FR.po
-share/horde/po/it_IT.po
-share/horde/po/ko_KR.po
-share/horde/po/nl_NL.po
-share/horde/po/no_BOK.po
-share/horde/po/pl_PL.po
-share/horde/po/pt_BR.po
-share/horde/po/ru_koi.po
-share/horde/po/ru_win.po
-share/horde/po/shtool
-share/horde/po/sv_SE.po
-share/horde/po/xgettext.sh
-share/horde/po/zh_CN.po
-share/horde/util/special_characters.php
-share/horde/lib/Cache/file.php
-share/horde/lib/Auth/ftp.php
-share/horde/lib/Auth/imap.php
-share/horde/lib/Auth/ldap.php
-share/horde/lib/Auth/mcal.php
-share/horde/lib/Auth/sql.php
-share/horde/lib/Prefs/ldap.php
-share/horde/lib/Prefs/session.php
-share/horde/lib/Prefs/sql.php
-share/horde/lib/Perms/sql.php
-share/horde/lib/MIME/Viewer/zip.php
-share/horde/lib/MIME/Viewer/default.php
-share/horde/lib/MIME/Viewer/enscript.php
-share/horde/lib/MIME/Viewer/msexcel.php
-share/horde/lib/MIME/Viewer/mspowerpoint.php
-share/horde/lib/MIME/Viewer/msword.php
-share/horde/lib/MIME/Viewer/php.php
-share/horde/lib/MIME/Viewer/rar.php
-share/horde/lib/MIME/Viewer/rpm.php
-share/horde/lib/MIME/Viewer/tgz.php
-share/horde/lib/MIME/Viewer/vcard.php
-share/horde/lib/MIME/Viewer/deb.php
-share/horde/lib/MIME/Viewer
-share/horde/lib/MIME/Magic.php
-share/horde/lib/MIME/Message.php
-share/horde/lib/MIME/Part.php
-share/horde/lib/MIME/Structure.php
-share/horde/lib/MIME/Viewer.php
-share/horde/lib/Category/sql.php
-share/horde/lib/Token/file.php
-share/horde/lib/Token/sql.php
-share/horde/lib/Help.php
-share/horde/lib/Horde.php
-share/horde/lib/Identity.php
-share/horde/lib/Lang.php
-share/horde/lib/MIME.php
-share/horde/lib/Maintenance.php
-share/horde/lib/Menu.php
-share/horde/lib/Perms.php
-share/horde/lib/Prefs.php
-share/horde/lib/Registry.php
-share/horde/lib/Secret.php
-share/horde/lib/Serialize.php
-share/horde/lib/SessionCache.php
-share/horde/lib/Text.php
-share/horde/lib/Token.php
-share/horde/lib/base.php
-share/horde/lib/version.php
-share/horde/lib/Data.php
-share/horde/lib/Category.php
-share/horde/lib/Cache.php
-share/horde/lib/Browser.php
-share/horde/lib/Auth.php
-share/horde/lib/Group.php
+@comment $NetBSD: PLIST,v 1.3.6.1 2003/03/17 17:44:26 bouyer Exp $
+share/horde/config/horde.php.dist
+share/horde/config/html.php.dist
+share/horde/config/lang.php.dist
+share/horde/config/mime_drivers.php.dist
+share/horde/config/mime_mapping.php.dist
+share/horde/config/motd.php.dist
+share/horde/config/prefs.php.dist
+share/horde/config/registry.php.dist
+share/horde/css.php
 share/horde/graphics/alerts/error.gif
 share/horde/graphics/alerts/message.gif
 share/horde/graphics/alerts/success.gif
 share/horde/graphics/alerts/warning.gif
-share/horde/graphics/mime/vcard.gif
+share/horde/graphics/data.gif
+share/horde/graphics/favicon.ico
+share/horde/graphics/help.gif
+share/horde/graphics/home.gif
+share/horde/graphics/keyboard.gif
+share/horde/graphics/login.gif
+share/horde/graphics/logout.gif
+share/horde/graphics/mime/audio.gif
 share/horde/graphics/mime/binary.gif
 share/horde/graphics/mime/compressed.gif
 share/horde/graphics/mime/csv.gif
@@ -188,8 +41,8 @@ share/horde/graphics/mime/php.gif
 share/horde/graphics/mime/readme.gif
 share/horde/graphics/mime/rpm.gif
 share/horde/graphics/mime/script-asa.gif
-share/horde/graphics/mime/xml.gif
 share/horde/graphics/mime/script-asp.gif
+share/horde/graphics/mime/script-js.gif
 share/horde/graphics/mime/setup.gif
 share/horde/graphics/mime/signed.gif
 share/horde/graphics/mime/source-c.gif
@@ -197,138 +50,359 @@ share/horde/graphics/mime/source-h.gif
 share/horde/graphics/mime/source-java.gif
 share/horde/graphics/mime/text.gif
 share/horde/graphics/mime/unknown.gif
-share/horde/graphics/mime/audio.gif
-share/horde/graphics/administration.gif
-share/horde/graphics/help.gif
-share/horde/graphics/home.gif
-share/horde/graphics/keyboard.gif
-share/horde/graphics/login.gif
-share/horde/graphics/logout.gif
+share/horde/graphics/mime/vcard.gif
+share/horde/graphics/mime/video.gif
+share/horde/graphics/mime/xml.gif
 share/horde/graphics/prefs.gif
 share/horde/graphics/problem.gif
-share/horde/graphics/data.gif
-share/horde/admin/css/graphics/color_picker.gif
-share/horde/admin/css/templates/colorpicker/thumbT.gif
-share/horde/admin/css/templates/colorpicker/blue.gif
-share/horde/admin/css/templates/colorpicker/boxbevel.gif
-share/horde/admin/css/templates/colorpicker/colorspace.js
-share/horde/admin/css/templates/colorpicker/colorthumb.gif
-share/horde/admin/css/templates/colorpicker/getcolor.js
-share/horde/admin/css/templates/colorpicker/green.gif
-share/horde/admin/css/templates/colorpicker/grey3.gif
-share/horde/admin/css/templates/colorpicker/grey4.gif
-share/horde/admin/css/templates/colorpicker/grey5.gif
-share/horde/admin/css/templates/colorpicker/hls.jpg
-share/horde/admin/css/templates/colorpicker/hls_sat.jpg
-share/horde/admin/css/templates/colorpicker/openit.js
-share/horde/admin/css/templates/colorpicker/picker_two.html
-share/horde/admin/css/templates/colorpicker/red.gif
-share/horde/admin/css/templates/colorpicker/rgb.gif
-share/horde/admin/css/templates/colorpicker/spectrum.gif
-share/horde/admin/css/templates/colorpicker/spectrum.jpg
-share/horde/admin/css/templates/colorpicker/tabHLS.gif
-share/horde/admin/css/templates/colorpicker/tabHSB.gif
-share/horde/admin/css/templates/colorpicker/tabRGB.gif
-share/horde/admin/css/templates/colorpicker/thumb.gif
-share/horde/admin/css/templates/colorpicker/thumbB.gif
-share/horde/admin/css/templates/colorpicker/thumbC.gif
-share/horde/admin/css/templates/colorpicker/thumbG.gif
-share/horde/admin/css/templates/colorpicker/thumbL.gif
-share/horde/admin/css/templates/colorpicker/thumbR.gif
-share/horde/admin/css/templates/colorpicker/thumbS.gif
-share/horde/admin/css/templates/colorpicker/behavior.js
-share/horde/admin/css/find.php
-share/horde/admin/css/index.php
-share/horde/admin/user.php
-share/horde/config/horde.php.dist
-share/horde/config/html.php.dist
-share/horde/config/lang.php.dist
-share/horde/config/mime_drivers.php.dist
-share/horde/config/mime_mapping.php.dist
-share/horde/config/motd.php.dist
-share/horde/config/registry.php.dist
-share/horde/css.php
+share/horde/graphics/tree/blank.gif
+share/horde/graphics/tree/join.gif
+share/horde/graphics/tree/joinbottom.gif
+share/horde/graphics/tree/line.gif
+share/horde/graphics/tree/minus.gif
+share/horde/graphics/tree/minusbottom.gif
+share/horde/graphics/tree/minusonly.gif
+share/horde/graphics/tree/minustop.gif
+share/horde/graphics/tree/plus.gif
+share/horde/graphics/tree/plusbottom.gif
+share/horde/graphics/tree/plusonly.gif
+share/horde/graphics/tree/plustop.gif
 share/horde/help.php
 share/horde/index.php
 share/horde/javascript.php
+share/horde/lib/Auth.php
+share/horde/lib/Auth/auto.php
+share/horde/lib/Auth/ftp.php
+share/horde/lib/Auth/imap.php
+share/horde/lib/Auth/krb5.php
+share/horde/lib/Auth/ldap.php
+share/horde/lib/Auth/mcal.php
+share/horde/lib/Auth/sql.php
+share/horde/lib/Browser.php
+share/horde/lib/Cache.php
+share/horde/lib/Cache/file.php
+share/horde/lib/Category.php
+share/horde/lib/Category/sql.php
+share/horde/lib/CategoryTree.php
+share/horde/lib/Cipher.php
+share/horde/lib/Cipher/BlockMode.php
+share/horde/lib/Cipher/BlockMode/ecb.php
+share/horde/lib/Cipher/BlockMode/ofb64.php
+share/horde/lib/Cipher/BlockMode/cfb64.php
+share/horde/lib/Cipher/BlockMode/cbc.php
+share/horde/lib/Cipher/blowfish.php
+share/horde/lib/Cipher/cast128.php
+share/horde/lib/Cipher/rc2.php
+share/horde/lib/Data.php
+share/horde/lib/Group.php
+share/horde/lib/Help.php
+share/horde/lib/Horde.php
+share/horde/lib/Identity.php
+share/horde/lib/Lang.php
+share/horde/lib/MIME.php
+share/horde/lib/MIME/Magic.php
+share/horde/lib/MIME/Message.php
+share/horde/lib/MIME/Part.php
+share/horde/lib/MIME/Structure.php
+share/horde/lib/MIME/Viewer.php
+share/horde/lib/MIME/Viewer/deb.php
+share/horde/lib/MIME/Viewer/default.php
+share/horde/lib/MIME/Viewer/enriched.php
+share/horde/lib/MIME/Viewer/enscript.php
+share/horde/lib/MIME/Viewer/images.php
+share/horde/lib/MIME/Viewer/msexcel.php
+share/horde/lib/MIME/Viewer/mspowerpoint.php
+share/horde/lib/MIME/Viewer/msword.php
+share/horde/lib/MIME/Viewer/php.php
+share/horde/lib/MIME/Viewer/rar.php
+share/horde/lib/MIME/Viewer/rpm.php
+share/horde/lib/MIME/Viewer/tgz.php
+share/horde/lib/MIME/Viewer/vcard.php
+share/horde/lib/MIME/Viewer/zip.php
+share/horde/lib/Maintenance.php
+share/horde/lib/Menu.php
+share/horde/lib/Notification.php
+share/horde/lib/Notification/status.php
+share/horde/lib/Perms.php
+share/horde/lib/Prefs.php
+share/horde/lib/Prefs/ldap.php
+share/horde/lib/Prefs/session.php
+share/horde/lib/Prefs/sql.php
+share/horde/lib/PrefsUI.php
+share/horde/lib/Registry.php
+share/horde/lib/SQL.php
+share/horde/lib/Secret.php
+share/horde/lib/Serialize.php
+share/horde/lib/SessionCache.php
+share/horde/lib/SessionHandler.php
+share/horde/lib/SessionHandler/dbm.php
+share/horde/lib/SessionHandler/sapdb.php
+share/horde/lib/SessionHandler/sql.php
+share/horde/lib/SessionHandler/pgsql.php
+share/horde/lib/SessionHandler/mysql.php
+share/horde/lib/Text.php
+share/horde/lib/Token.php
+share/horde/lib/Token/file.php
+share/horde/lib/Token/sql.php
+share/horde/lib/VFS.php
+share/horde/lib/VFS/sql.php
+share/horde/lib/VFS/Object.php
+share/horde/lib/VFS/file.php
+share/horde/lib/VFS/ListItem.php
+share/horde/lib/VFS/musql.php
+share/horde/lib/VFS/ftp.php
+share/horde/lib/VFS/sql_file.php
+share/horde/lib/base.php
+share/horde/lib/version.php
+share/horde/locale/bg_BG/LC_MESSAGES/horde.mo
+share/horde/locale/cs_CZ/LC_MESSAGES/horde.mo
+share/horde/locale/da_DK/LC_MESSAGES/horde.mo
+share/horde/locale/de_DE/LC_MESSAGES/horde.mo
+share/horde/locale/el_GR/LC_MESSAGES/horde.mo
+share/horde/locale/en_US/help.xml
+share/horde/locale/es_ES/LC_MESSAGES/horde.mo
+share/horde/locale/et_EE/LC_MESSAGES/horde.mo
+share/horde/locale/fi_FI/LC_MESSAGES/horde.mo
+share/horde/locale/fi_FI/help.xml
+share/horde/locale/fr_FR/LC_MESSAGES/horde.mo
+share/horde/locale/hu_HU/LC_MESSAGES/horde.mo
+share/horde/locale/it_IT/LC_MESSAGES/horde.mo
+share/horde/locale/ja_JP/LC_MESSAGES/horde.mo
+share/horde/locale/ko_KR/LC_MESSAGES/horde.mo
+share/horde/locale/lt_LT/LC_MESSAGES/horde.mo
+share/horde/locale/lv_LV/LC_MESSAGES/horde.mo
+share/horde/locale/nb_NO/LC_MESSAGES/horde.mo
+share/horde/locale/nl_NL/LC_MESSAGES/horde.mo
+share/horde/locale/nn_NO/LC_MESSAGES/horde.mo
+share/horde/locale/pl_PL/LC_MESSAGES/horde.mo
+share/horde/locale/pt_BR/LC_MESSAGES/horde.mo
+share/horde/locale/pt_PT/LC_MESSAGES/horde.mo
+share/horde/locale/ro_RO/LC_MESSAGES/horde.mo
+share/horde/locale/ru_RU.KOI8-R/LC_MESSAGES/horde.mo
+share/horde/locale/ru_RU/LC_MESSAGES/horde.mo
+share/horde/locale/sk_SK/LC_MESSAGES/horde.mo
+share/horde/locale/sl_SI/LC_MESSAGES/horde.mo
+share/horde/locale/sv_SE/LC_MESSAGES/horde.mo
+share/horde/locale/uk_UA/LC_MESSAGES/horde.mo
+share/horde/locale/zh_CN/LC_MESSAGES/horde.mo
+share/horde/locale/zh_TW/LC_MESSAGES/horde.mo
 share/horde/login.php
 share/horde/maintenance.php
 share/horde/menu.php
+share/horde/po/Makefile
+share/horde/po/README
+share/horde/po/bg_BG.po
+share/horde/po/cs_CZ.po
+share/horde/po/da_DK.po
+share/horde/po/de_DE.po
+share/horde/po/el_GR.po
+share/horde/po/es_ES.po
+share/horde/po/et_EE.po
+share/horde/po/extract.pl
+share/horde/po/fi_FI.po
+share/horde/po/fr_FR.po
+share/horde/po/horde.pot
+share/horde/po/hu_HU.po
+share/horde/po/it_IT.po
+share/horde/po/ja_JP.po
+share/horde/po/ko_KR.po
+share/horde/po/lt_LT.po
+share/horde/po/lv_LV.po
+share/horde/po/nb_NO.po
+share/horde/po/nl_NL.po
+share/horde/po/nn_NO.po
+share/horde/po/pl_PL.po
+share/horde/po/pt_BR.po
+share/horde/po/pt_PT.po
+share/horde/po/ro_RO.po
+share/horde/po/ru_RU.KOI8-R.po
+share/horde/po/ru_RU.po
+share/horde/po/shtool
+share/horde/po/sk_SK.po
+share/horde/po/sl_SI.po
+share/horde/po/sv_SE.po
+share/horde/po/translation.php
+share/horde/po/uk_UA.po
+share/horde/po/wintokoi.pl
+share/horde/po/xgettext.sh
+share/horde/po/zh_CN.po
+share/horde/po/zh_TW.po
+share/horde/prefs.php
 share/horde/problem.php
+share/horde/scripts/SCRIPTS
+share/horde/scripts/db/README
+share/horde/scripts/db/auth.sql
+share/horde/scripts/db/category.sql
+share/horde/scripts/db/category_mysql.sql
+share/horde/scripts/db/mysql_create.sql
+share/horde/scripts/db/mysql_drop.sql
+share/horde/scripts/db/pgsql_create.sql
+share/horde/scripts/db/pgsql_drop.sql
+share/horde/scripts/db/prefs.sql
+share/horde/scripts/db/sessionhandler_sapdb.sql
+share/horde/scripts/db/sessionhandler.sql
+share/horde/scripts/horde-rsync.sh
+share/horde/scripts/ldap/horde.schema
+share/horde/scripts/mime_mapping/Makefile
+share/horde/scripts/mime_mapping/convert.pl
+share/horde/scripts/mime_mapping/mime.types
+share/horde/scripts/set_perms.sh
 share/horde/status.php
+share/horde/templates/categorytree/rowend.inc
+share/horde/templates/categorytree/rowstart.inc
+share/horde/templates/categorytree/tablefoot.inc
+share/horde/templates/categorytree/tablehead.inc
+share/horde/templates/common-footer.inc
+share/horde/templates/common-header.inc
+share/horde/templates/data/csvmap.inc
+share/horde/templates/data/datemap.inc
+share/horde/templates/help/footer.inc
+share/horde/templates/help/header.inc
+share/horde/templates/help/index.inc
+share/horde/templates/help/menu.inc
+share/horde/templates/horde/modules.inc
+share/horde/templates/index/css.inc
+share/horde/templates/index/floating_index.inc
+share/horde/templates/index/frames_index.inc
+share/horde/templates/index/notconfigured.inc
+share/horde/templates/index/wap.inc
+share/horde/templates/javascript/open_help_win.js
+share/horde/templates/login/login.inc
+share/horde/templates/login/user.inc
+share/horde/templates/maintenance/confirm_bottom.inc
+share/horde/templates/maintenance/confirm_middle.inc
+share/horde/templates/maintenance/confirm_top.inc
+share/horde/templates/maintenance/javascript.inc
+share/horde/templates/prefs/begin.inc
+share/horde/templates/prefs/checkbox.inc
+share/horde/templates/prefs/end.inc
+share/horde/templates/prefs/enum.inc
+share/horde/templates/prefs/link.inc
+share/horde/templates/prefs/number.inc
+share/horde/templates/prefs/overview.inc
+share/horde/templates/prefs/select.inc
+share/horde/templates/prefs/text.inc
+share/horde/templates/prefs/textarea.inc
+share/horde/templates/problem/javascript.inc
+share/horde/templates/problem/problem.inc
+share/horde/templates/wml/common-footer.inc
+share/horde/templates/wml/common-header.inc
+share/horde/templates/wml/doctype.inc
+share/horde/templates/wml/login/login.inc
+share/horde/templates/wml/login/user.inc
 share/horde/test.php
+share/horde/util/css2horde.php
+share/horde/util/special_characters.php
+share/doc/horde/COPYING
+share/doc/horde/README
+share/doc/horde/CHANGES
+share/doc/horde/CODING_STANDARDS
+share/doc/horde/CONTRIBUTING
+share/doc/horde/CREDITS
+share/doc/horde/HACKING
+share/doc/horde/INSTALL
+share/doc/horde/TRANSLATIONS
+share/examples/horde/horde.conf
 
-@dirrm share/doc/horde
-@dirrm share/examples/horde
-@dirrm share/horde/locale/it_IT/LC_MESSAGES
-@dirrm share/horde/locale/it_IT
-@dirrm share/horde/locale/zh_TW/LC_MESSAGES
-@dirrm share/horde/locale/zh_TW
-@dirrm share/horde/locale/de_DE/LC_MESSAGES
-@dirrm share/horde/locale/de_DE
-@dirrm share/horde/locale/el_GR/LC_MESSAGES
-@dirrm share/horde/locale/el_GR
-@dirrm share/horde/locale/en_US
-@dirrm share/horde/locale/es_ES/LC_MESSAGES
-@dirrm share/horde/locale/es_ES
-@dirrm share/horde/locale/fi_FI/LC_MESSAGES
-@dirrm share/horde/locale/fi_FI
-@dirrm share/horde/locale/fr_FR/LC_MESSAGES
-@dirrm share/horde/locale/fr_FR
-@dirrm share/horde/locale/zh_CN/LC_MESSAGES
-@dirrm share/horde/locale/zh_CN
-@dirrm share/horde/locale/cs_CZ/LC_MESSAGES
-@dirrm share/horde/locale/cs_CZ
-@dirrm share/horde/locale/nl_NL/LC_MESSAGES
-@dirrm share/horde/locale/nl_NL
-@dirrm share/horde/locale/no_BOK/LC_MESSAGES
-@dirrm share/horde/locale/no_BOK
-@dirrm share/horde/locale/pl_PL/LC_MESSAGES
-@dirrm share/horde/locale/pl_PL
-@dirrm share/horde/locale/pt_BR/LC_MESSAGES
-@dirrm share/horde/locale/pt_BR
-@dirrm share/horde/locale/ru_koi/LC_MESSAGES
-@dirrm share/horde/locale/ru_koi
-@dirrm share/horde/locale/ru_win/LC_MESSAGES
-@dirrm share/horde/locale/ru_win
-@dirrm share/horde/locale/sv_SE/LC_MESSAGES
-@dirrm share/horde/locale/sv_SE
-@dirrm share/horde/locale/ko_KR/LC_MESSAGES
-@dirrm share/horde/locale/ko_KR
-@dirrm share/horde/locale
-@dirrm share/horde/templates/help
+@dirrm share/horde/util
 @dirrm share/horde/templates/wml/login
 @dirrm share/horde/templates/wml
 @dirrm share/horde/templates/problem
 @dirrm share/horde/templates/prefs
-@dirrm share/horde/templates/data
 @dirrm share/horde/templates/maintenance
-@dirrm share/horde/templates/horde
-@dirrm share/horde/templates/admin/user
-@dirrm share/horde/templates/admin
-@dirrm share/horde/templates/javascript
 @dirrm share/horde/templates/login
+@dirrm share/horde/templates/javascript
 @dirrm share/horde/templates/index
+@dirrm share/horde/templates/horde
+@dirrm share/horde/templates/help
+@dirrm share/horde/templates/data
+@dirrm share/horde/templates/categorytree
 @dirrm share/horde/templates
+@dirrm share/horde/scripts/mime_mapping
+@dirrm share/horde/scripts/ldap
 @dirrm share/horde/scripts/db
 @dirrm share/horde/scripts
 @dirrm share/horde/po
-@dirrm share/horde/util
+@dirrm share/horde/locale/zh_TW/LC_MESSAGES
+@dirrm share/horde/locale/zh_TW
+@dirrm share/horde/locale/zh_CN/LC_MESSAGES
+@dirrm share/horde/locale/zh_CN
+@dirrm share/horde/locale/uk_UA/LC_MESSAGES
+@dirrm share/horde/locale/uk_UA
+@dirrm share/horde/locale/sv_SE/LC_MESSAGES
+@dirrm share/horde/locale/sv_SE
+@dirrm share/horde/locale/sl_SI/LC_MESSAGES
+@dirrm share/horde/locale/sl_SI
+@dirrm share/horde/locale/sk_SK/LC_MESSAGES
+@dirrm share/horde/locale/sk_SK
+@dirrm share/horde/locale/ru_RU/LC_MESSAGES
+@dirrm share/horde/locale/ru_RU.KOI8-R/LC_MESSAGES
+@dirrm share/horde/locale/ru_RU.KOI8-R
+@dirrm share/horde/locale/ru_RU
+@dirrm share/horde/locale/ro_RO/LC_MESSAGES
+@dirrm share/horde/locale/ro_RO
+@dirrm share/horde/locale/pt_PT/LC_MESSAGES
+@dirrm share/horde/locale/pt_PT
+@dirrm share/horde/locale/pt_BR/LC_MESSAGES
+@dirrm share/horde/locale/pt_BR
+@dirrm share/horde/locale/pl_PL/LC_MESSAGES
+@dirrm share/horde/locale/pl_PL
+@dirrm share/horde/locale/nn_NO/LC_MESSAGES
+@dirrm share/horde/locale/nn_NO
+@dirrm share/horde/locale/nl_NL/LC_MESSAGES
+@dirrm share/horde/locale/nl_NL
+@dirrm share/horde/locale/nb_NO/LC_MESSAGES
+@dirrm share/horde/locale/nb_NO
+@dirrm share/horde/locale/lv_LV/LC_MESSAGES
+@dirrm share/horde/locale/lv_LV
+@dirrm share/horde/locale/lt_LT/LC_MESSAGES
+@dirrm share/horde/locale/lt_LT
+@dirrm share/horde/locale/ko_KR/LC_MESSAGES
+@dirrm share/horde/locale/ko_KR
+@dirrm share/horde/locale/ja_JP/LC_MESSAGES
+@dirrm share/horde/locale/ja_JP
+@dirrm share/horde/locale/it_IT/LC_MESSAGES
+@dirrm share/horde/locale/it_IT
+@dirrm share/horde/locale/hu_HU/LC_MESSAGES
+@dirrm share/horde/locale/hu_HU
+@dirrm share/horde/locale/fr_FR/LC_MESSAGES
+@dirrm share/horde/locale/fr_FR
+@dirrm share/horde/locale/fi_FI/LC_MESSAGES
+@dirrm share/horde/locale/fi_FI
+@dirrm share/horde/locale/et_EE/LC_MESSAGES
+@dirrm share/horde/locale/et_EE
+@dirrm share/horde/locale/es_ES/LC_MESSAGES
+@dirrm share/horde/locale/es_ES
+@dirrm share/horde/locale/en_US
+@dirrm share/horde/locale/el_GR/LC_MESSAGES
+@dirrm share/horde/locale/el_GR
+@dirrm share/horde/locale/de_DE/LC_MESSAGES
+@dirrm share/horde/locale/de_DE
+@dirrm share/horde/locale/da_DK/LC_MESSAGES
+@dirrm share/horde/locale/da_DK
+@dirrm share/horde/locale/cs_CZ/LC_MESSAGES
+@dirrm share/horde/locale/cs_CZ
+@dirrm share/horde/locale/bg_BG/LC_MESSAGES
+@dirrm share/horde/locale/bg_BG
+@dirrm share/horde/locale
+@dirrm share/horde/lib/VFS
+@dirrm share/horde/lib/Token
+@dirrm share/horde/lib/SessionHandler
+@dirrm share/horde/lib/Prefs
+@dirrm share/horde/lib/Notification
+@dirrm share/horde/lib/MIME/Viewer
+@dirrm share/horde/lib/MIME
+@dirrm share/horde/lib/Cipher/BlockMode
+@dirrm share/horde/lib/Cipher
+@dirrm share/horde/lib/Category
 @dirrm share/horde/lib/Cache
 @dirrm share/horde/lib/Auth
-@dirrm share/horde/lib/Prefs
-@dirrm share/horde/lib/Perms
-@dirrm share/horde/lib/MIME
-@dirrm share/horde/lib/Category
-@dirrm share/horde/lib/Token
 @dirrm share/horde/lib
-@dirrm share/horde/graphics/alerts
+@dirrm share/horde/graphics/tree
 @dirrm share/horde/graphics/mime
+@dirrm share/horde/graphics/alerts
 @dirrm share/horde/graphics
-@dirrm share/horde/admin/css/graphics
-@dirrm share/horde/admin/css/templates/colorpicker
-@dirrm share/horde/admin/css/templates
-@dirrm share/horde/admin/css
-@dirrm share/horde/admin
 @dirrm share/horde/config
 @dirrm share/horde
+@dirrm share/doc/horde
+@dirrm share/examples/horde
