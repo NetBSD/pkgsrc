@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2002/08/30 08:19:12 drochner Exp $
+$NetBSD: patch-ad,v 1.2 2004/05/29 08:05:08 dillo Exp $
 
---- dao/GenericMMC.cc.orig	Thu Aug 15 17:54:49 2002
-+++ dao/GenericMMC.cc	Thu Aug 15 17:57:53 2002
-@@ -1693,6 +1693,7 @@
+--- dao/GenericMMC.cc.orig	2004-02-12 02:13:30.000000000 +0100
++++ dao/GenericMMC.cc
+@@ -2011,6 +2011,7 @@ CdRawToc *GenericMMC::getRawToc(int sess
    }
  
    dataLen = ((reqData[0] << 8) | reqData[1]) + 2;
