@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.506 2000/07/15 20:39:21 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.507 2000/07/15 21:36:22 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1185,7 +1185,7 @@ show-downlevel:
 .if defined(EVAL_PREFIX)
 .for def in ${EVAL_PREFIX}
 .if !defined(${def:C/=.*//})
-${def:C/=.*//} != (${ECHO} -n "${X11PREFIX} "; ${PKG_INFO} -qp ${def:C/.*=//} 2>/dev/null) | ${AWK} '{ print $$NF }'
+${def:C/=.*//} != (${PKG_INFO} -qp ${def:C/.*=//} 2>/dev/null; ${ECHO} " @cwd ${X11PREFIX}") | ${AWK} '{ print $$2; exit }'
 .endif
 .endfor
 .endif
