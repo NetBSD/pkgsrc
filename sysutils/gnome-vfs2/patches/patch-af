@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.6 2004/11/09 16:04:52 sketch Exp $
+$NetBSD: patch-af,v 1.7 2005/03/22 15:56:41 jmmv Exp $
 
---- libgnomevfs/gnome-vfs-cdrom.c.orig	Sun Oct 24 16:56:46 2004
-+++ libgnomevfs/gnome-vfs-cdrom.c	Sun Oct 24 16:56:17 2004
+--- libgnomevfs/gnome-vfs-cdrom.c.orig	2005-02-10 11:00:21.000000000 +0100
++++ libgnomevfs/gnome-vfs-cdrom.c
 @@ -37,6 +37,8 @@
  
  #ifdef __linux__
@@ -11,19 +11,7 @@ $NetBSD: patch-af,v 1.6 2004/11/09 16:04:52 sketch Exp $
  #endif
  
  #ifdef HAVE_SYS_CDIO_H
-@@ -87,8 +89,9 @@
- 	}
- 
- 	return type;
--#elif defined(HAVE_SYS_MNTCTL_H)
--	return CDS_NO_INFO;
-+#elif defined(__linux__)
-+	*fd = open (vol_dev_path, O_RDONLY|O_NONBLOCK);
-+	return ioctl (*fd, CDROM_DISC_STATUS, CDSL_CURRENT);
- #elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
- 	struct ioc_toc_header header;
- #if defined(__FreeBSD__) || defined(__DragonFly__)
-@@ -143,6 +146,7 @@
+@@ -143,6 +145,7 @@ _gnome_vfs_get_cdrom_type (const char *v
  #endif /* defined(__FreeBSD__) */
  	return type;
  #else
@@ -31,7 +19,7 @@ $NetBSD: patch-af,v 1.6 2004/11/09 16:04:52 sketch Exp $
  	*fd = open (vol_dev_path, O_RDONLY|O_NONBLOCK);
  	if (*fd  < 0) {
  		return -1;
-@@ -153,6 +157,7 @@
+@@ -153,6 +156,7 @@ _gnome_vfs_get_cdrom_type (const char *v
  		return -1;
  	}
  	return ioctl (*fd, CDROM_DISC_STATUS, CDSL_CURRENT);
