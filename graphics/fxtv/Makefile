@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2002/10/08 13:09:51 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2002/12/21 11:09:59 wiz Exp $
 
 DISTNAME=	fxtv-1.03
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tgz
@@ -39,6 +39,7 @@ post-patch:
 		${MV} -f $${file}.fixed $${file};			\
 	done
 
+.include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/xaw.buildlink2.mk"
