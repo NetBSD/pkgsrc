@@ -1,0 +1,30 @@
+$NetBSD: patch-ba,v 1.1 1998/07/11 20:33:15 tsarna Exp $
+
+Use -fPIC so things don't break if they get too big (like py-Numeric on
+sparc). This setting is inherited by most py-* packages via the Python
+module-building system.
+
+Sent to GvR <guido@cnri.reston.va.us>
+
+--- configure.orig	Fri Jul 10 19:40:07 1998
++++ configure	Fri Jul 10 19:45:52 1998
+@@ -1861,7 +1861,7 @@
+ 		 else CCSHARED="+z";
+ 		 fi;;
+ 	Linux*) CCSHARED="-fpic";;
+-	FreeBSD*|NetBSD*|OpenBSD*) CCSHARED="-fpic";;
++	FreeBSD*|NetBSD*|OpenBSD*) CCSHARED="-fPIC";;
+ 	SCO_SV*) CCSHARED="-KPIC -dy -Bdynamic";;
+ 	IRIX*/6*)  case $CC in
+ 		   *gcc*) CCSHARED="-shared";;
+--- configure.in.orig	Fri Jul 10 22:58:44 1998
++++ configure.in	Fri Jul 10 22:59:04 1998
+@@ -310,7 +310,7 @@
+ 		 else CCSHARED="+z";
+ 		 fi;;
+ 	Linux*) CCSHARED="-fpic";;
+-	FreeBSD*|NetBSD*|OpenBSD*) CCSHARED="-fpic";;
++	FreeBSD*|NetBSD*|OpenBSD*) CCSHARED="-fPIC";;
+ 	SCO_SV*) CCSHARED="-KPIC -dy -Bdynamic";;
+ 	IRIX*/6*)  case $CC in
+ 		   *gcc*) CCSHARED="-shared";;
