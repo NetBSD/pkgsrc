@@ -1,19 +1,12 @@
-$NetBSD: patch-ab,v 1.2 2003/08/23 15:02:27 drochner Exp $
+$NetBSD: patch-ab,v 1.3 2004/05/09 17:06:07 recht Exp $
 
---- sip/qtmod.sip.orig	2003-08-17 14:27:46.000000000 +0200
-+++ sip/qtmod.sip	2003-08-22 18:32:46.000000000 +0200
-@@ -248,12 +248,12 @@
+--- pyuic3/pyuic.sbf.orig	2004-05-09 02:45:24.000000000 +0200
++++ pyuic3/pyuic.sbf	2004-05-09 02:45:49.000000000 +0200
+@@ -19,6 +19,6 @@
+ # PyQt; see the file LICENSE.  If not, write to the Free Software Foundation,
+ # Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  
- TEMPLATE = lib
- TARGET = @BL_TARGET@
--DESTDIR = @BL_DESTDIR@
-+#DESTDIR = @BL_DESTDIR@
- CONFIG += qt warn_off @BL_DEBUG@ @BL_SIP@ @BL_DLL@ @BL_THREAD@
- INCLUDEPATH = @BL_INCLUDEPATH@
- DEFINES = @BL_DEFINES@
- 
--sip3:unix:LIBS += @BL_QASSISTANTCLIENT@ -L@BL_SIPMODDIR@ -lsip
-+sip3:unix:LIBS += @BL_QASSISTANTCLIENT@ -L@BL_SIPMODDIR@ -Wl,-R@BL_SIPMODDIR@ -lsip
- sip3:win32:LIBS += @BL_QASSISTANTCLIENT@ @BL_SIPMODDIR@\libsip.lib @BL_PYLIB@
- 
- sip4:unix:LIBS += @BL_QASSISTANTCLIENT@
+-target = pyuic
++target = pyuic@PYVERSSUFFIX@
+ sources = main.cpp uic.cpp form.cpp object.cpp subclassing.cpp embed.cpp widgetdatabase.cpp domtool.cpp parser.cpp
+ headers = domtool.h globaldefs.h parser.h uic.h widgetdatabase.h widgetinterface.h

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 15:30:33 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/09 17:06:07 recht Exp $
 #
 
-DISTNAME=		PyQt-x11-gpl-3.8
-PKGNAME=		${PYPKGPREFIX}-qt3-qscintilla-3.8
+DISTNAME=		PyQt-x11-gpl-3.11
+PKGNAME=		${PYPKGPREFIX}-qt3-qscintilla-3.11
 CATEGORIES=		x11
 MASTER_SITES=		http://www.river-bank.demon.co.uk/download/PyQt/
 
@@ -10,42 +10,29 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.riverbankcomputing.co.uk/pyqt/
 COMMENT=		Python binding for qt3
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make
+USE_LANGUAGES=		c c++
 
-CONFIGURE_ARGS=		-q ${QTDIR} -m ${GMAKE} -p ${SIPBIN}
+CONFIGURE_ARGS=		-b ${PREFIX}/bin
+CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}
+CONFIGURE_ARGS+=	-v ${PREFIX}/share/sip${PYVERSSUFFIX}
+CONFIGURE_ARGS+=	-n ${QTDIR}/include
+CONFIGURE_ARGS+=	-o ${QTDIR}/lib
 
-PYTHON_VERSIONS_ACCEPTED=	22pth 23pth 21pth
+PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
 PY_PATCHPLIST=	yes
-QTLIBDIR=	${QTDIR:S/${BUILDLINK_PREFIX.qt3-libs}\///}/lib
-PLIST_SUBST+=	QTLIBDIR=${QTLIBDIR}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-MAKE_ENV+=	QTPREFIX=${QTDIR}
+INSTALL_DIRS=	${WRKSRC}/qtext
 
 do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${PYTHONBIN} build.py ${CONFIGURE_ARGS})
-
-PYQTMODULES=	qtext
-
-# XXX - hack. Shouldn't need the symlinks as qmake should let us build
-# proper libraries that install outside of QTDIR more easily.
-do-install:
-	(for f in ${PYQTMODULES}; do \
-		(cd ${WRKSRC}/$${f} && ( \
-			${INSTALL_DATA} $${f}.py ${PREFIX}/${PYSITELIB}; \
-			${LIBTOOL} --mode=install ${INSTALL_DATA} \
-				lib$${f}cmodule.la ${PREFIX}/${PYSITELIB} \
-			) \
-		); \
-	 done)
-	(cd ${PREFIX}/${PYSITELIB}; for i in libqtextcmodule.*; do \
-		${LN} -sf ${PREFIX}/${PYSITELIB}/$$i \
-			${PREFIX}/${QTLIBDIR}/$$i; done)
+		${PYTHONBIN} configure.py ${CONFIGURE_ARGS})
 
 .include "../../lang/python/extension.mk"
-.include "../../x11/py-qt3-base/buildlink2.mk"
-.include "../../x11/qt3-qscintilla/buildlink2.mk"
+.include "../../x11/py-qt3-base/buildlink3.mk"
+.include "../../x11/qt3-qscintilla/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
