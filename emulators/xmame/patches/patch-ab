@@ -1,0 +1,158 @@
+$NetBSD: patch-ab,v 1.15 2002/12/08 13:09:46 kristerw Exp $
+--- src/unix/video.c.orig	2002-12-01 11:26:42.000000000 -0700
++++ src/unix/video.c	2002-12-07 15:08:00.000000000 -0700
+@@ -48,6 +48,10 @@
+ static int video_ror = 0;
+ static int video_rol = 0;
+ 
++static int video_width;
++static int video_height;
++static int video_depth;
++
+ static struct mame_bitmap *adjusted_bitmap = NULL;
+ 
+ 
+@@ -351,7 +355,7 @@
+ 		options.use_artwork = ARTWORK_USE_NONE;
+ }
+ 
+-void orient_rect(struct rectangle *rect, struct mame_bitmap *bitmap)
++void orient_rect(struct rectangle *rect)
+ {
+ 	int temp;
+ 
+@@ -370,16 +374,16 @@
+ 	/* apply X flip */
+ 	if (blit_flipx)
+ 	{
+-		temp = bitmap->width - rect->min_x - 1;
+-		rect->min_x = bitmap->width - rect->max_x - 1;
++		temp = video_width - rect->min_x - 1;
++		rect->min_x = video_width - rect->max_x - 1;
+ 		rect->max_x = temp;
+ 	}
+ 
+ 	/* apply Y flip */
+ 	if (blit_flipy)
+ 	{
+-		temp = bitmap->height - rect->min_y - 1;
+-		rect->min_y = bitmap->height - rect->max_y - 1;
++		temp = video_height - rect->min_y - 1;
++		rect->min_y = video_height - rect->max_y - 1;
+ 		rect->max_y = temp;
+ 	}
+ }
+@@ -417,17 +421,18 @@
+ 				normal_widthscale *= 2;
+ 		}
+ 	}
+-  
++
+ 	if (blit_swapxy)
+ 	{
+-		visual_width	= params->height;
+-		visual_height	= params->width;
++		visual_width	= video_width	= params->height;
++		visual_height	= video_height	= params->width;
+ 	}
+ 	else
+ 	{
+-		visual_width	= params->width;
+-		visual_height	= params->height;
++		visual_width	= video_width	= params->width;
++		visual_height	= video_height	= params->height;
+ 	}
++	video_depth = params->depth;
+ 
+ 	if (!blit_swapxy)
+ 		aspect_ratio = (double)params->aspect_x 
+@@ -524,9 +529,8 @@
+ 
+ 	if (blit_flipx || blit_flipy || blit_swapxy)
+ 	{
+-		bitmap_free(adjusted_bitmap);
+-		adjusted_bitmap = bitmap_alloc_depth(visual_width, 
+-				visual_height, params->depth);
++		adjusted_bitmap = bitmap_alloc_depth(video_width,
++					video_height, video_depth);
+ 		if (!adjusted_bitmap)
+ 			return -1;
+ 	}
+@@ -626,21 +630,21 @@
+ 
+ static void update_visible_area(struct mame_display *display)
+ {
++	normal_visual = display->game_visible_area;
++
+ 	if (blit_swapxy)
+ 	{
+-		normal_visual.min_x = display->game_visible_area.min_y;
+-		normal_visual.max_x = display->game_visible_area.max_y;
+-		normal_visual.min_y = display->game_visible_area.min_x;
+-		normal_visual.max_y = display->game_visible_area.max_x;
++		video_width = display->game_bitmap->height;
++		video_height = display->game_bitmap->width;
+ 	}
+ 	else
+ 	{
+-		normal_visual.min_x = display->game_visible_area.min_x;
+-		normal_visual.max_x = display->game_visible_area.max_x;
+-		normal_visual.min_y = display->game_visible_area.min_y;
+-		normal_visual.max_y = display->game_visible_area.max_y;
++		video_width = display->game_bitmap->width;
++		video_height = display->game_bitmap->height;
+ 	}
+ 
++	orient_rect(&normal_visual);
++
+ 	/* 
+ 	 * round to 8, since the new dirty code works with 8x8 blocks,
+ 	 * and we need to round to sizeof(long) for the long copies anyway
+@@ -656,6 +660,17 @@
+ 			display->game_visible_area.min_y,
+ 			display->game_visible_area.max_x,
+ 			display->game_visible_area.max_y);
++
++	/*
++	 * Allocate a new destination bitmap for the code that handles 
++	 * rotation/flipping.
++	 */
++	if (blit_flipx || blit_flipy || blit_swapxy)
++	{
++		bitmap_free(adjusted_bitmap);
++		adjusted_bitmap = bitmap_alloc_depth(video_width,
++				video_height, video_depth);
++	}	
+ }
+ 
+ static void update_palette(struct mame_display *display, int force_dirty)
+@@ -692,7 +707,6 @@
+ static void update_debug_display(struct mame_display *display)
+ {
+ 	struct sysdep_palette_struct *backup_palette = current_palette;
+-	struct rectangle backup_updatebounds = updatebounds;
+ 
+ 	if (!debug_palette)
+ 	{
+@@ -714,10 +728,8 @@
+ 	}
+ 
+ 	current_palette = debug_palette;
+-	updatebounds = debug_visual;
+ 	sysdep_update_display(display->debug_bitmap);
+ 	current_palette = backup_palette;
+-	updatebounds = backup_updatebounds;
+ }
+ 
+ static void osd_free_colors(void)
+@@ -988,8 +1000,8 @@
+ {
+ 	int x, y;
+ 	int bx1, bx2, by1, by2;
+-	
+-	orient_rect(&bounds, destbitmap);
++
++	orient_rect(&bounds);
+ 
+ 	bx1 = bounds.min_x;
+ 	bx2 = bounds.max_x;
