@@ -1,8 +1,6 @@
-$NetBSD: md5,v 1.8 1999/08/13 21:24:12 abs Exp $
+$NetBSD: md5,v 1.9 2000/01/05 15:43:36 abs Exp $
 
-MD5 (communicator-v461-export.alpha-dec-osf4.0.tar.gz) = b431d2de9d6340779f8bc82e7a5ceb82
-MD5 (communicator-v461-export.sparc-sun-solaris2.5.1.tar.gz) = da9ccf8189d7cd4ab0960c944c2179b6
-MD5 (communicator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = 26d2944a58d6fa8c73ff5a4a2f3d7258
-MD5 (communicator-v461-export.x86-unknown-linuxglibc2.0.tar.gz) = 2716a95847687cdb1cda0a52c0cbb1ff
-MD5 (communicator-v461-us.alpha-dec-osf4.0.tar.gz) = af72f7a77ee590ab550a1623f0879c99
-MD5 (communicator-v461-us.x86-unknown-linuxglibc2.0.tar.gz) = 4081666aff1bb73c28f8c87dbc4b2d7b
+MD5 (netscape/communicator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = 26d2944a58d6fa8c73ff5a4a2f3d7258
+MD5 (netscape/communicator-v47-export.alpha-dec-osf4.0.tar.gz) = 649fcbb91589553599bc707caff35a9e
+MD5 (netscape/communicator-v47-export.sparc-sun-solaris2.5.1.tar.gz) = 1e3cf250174b97aaf4091b96c4648c40
+MD5 (netscape/communicator-v47-export.x86-unknown-linuxglibc2.0.tar.gz) = b4c1de5f30ceb158021805cc201b4121
