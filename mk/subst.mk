@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.5 2003/12/27 03:02:11 grant Exp $
+# $NetBSD: subst.mk,v 1.6 2003/12/27 03:05:53 grant Exp $
 #
 # This Makefile fragment implements a general text replacement facility
 # for different classes of files in ${WRKSRC}.  For each class of files,
@@ -69,7 +69,7 @@ ${_SUBST_COOKIE.${_class_}}:
 	case "$$files" in						\
 	"")	;;							\
 	*)	for file in $${files}; do				\
-			${MV} -f $$file $$file.subst.sav;		\
+			${MV} -f $$file $$file.subst.sav || exit 1;	\
 			${CAT} $$file.subst.sav 			\
 				| ${SUBST_FILTER_CMD.${_class_}}	\
 				> $$file;				\
