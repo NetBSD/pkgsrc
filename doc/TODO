@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2460 2004/11/25 19:27:26 snj Exp $
+$NetBSD: TODO,v 1.2461 2004/11/25 19:28:06 minskim Exp $
 
 Suggested new packages
 ======================
@@ -333,7 +333,7 @@ Suggested package updates
 	o beecrypt-4.1.1
 	o benchfft-3.1
 	o bibparse-1.06
-	o bibtex2html-1.74
+	o bibtex2html-1.74 [requires ocaml>=3.07]
 	o binkd-098
 	o bins-1.1.27
 	o bioperl-1.4
