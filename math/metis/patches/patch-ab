@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/02/10 04:18:37 jtb Exp $
+
+--- Lib/Makefile.orig	Wed Feb  7 21:14:38 2001
++++ Lib/Makefile
+@@ -2,7 +2,7 @@
+ 
+ INCLUDES = -I.
+ 
+-CFLAGS = $(COPTIONS) $(OPTFLAGS) $(INCLUDES)
++CFLAGS += $(COPTIONS) $(OPTFLAGS) $(INCLUDES)
+ LD = $(CC) -L. 
+ 
+ 
+@@ -21,7 +21,7 @@
+ 	$(CC) $(CFLAGS) -c $*.c
+ 
+ ../libmetis.a: $(OBJS)
+-	$(AR) $@ $(OBJS)
++	$(AR) rv $@ $(OBJS)
+ 	$(RANLIB) $@
+ 
+ clean:
