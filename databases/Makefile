@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2004/04/05 14:17:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.127 2004/04/09 11:34:10 grant Exp $
 #
 
 COMMENT=	Databases
@@ -49,6 +49,7 @@ SUBDIR+=	oraedit
 SUBDIR+=	p5-AddressBook
 SUBDIR+=	p5-Apache-DBI
 SUBDIR+=	p5-DBD-CSV
+SUBDIR+=	p5-DBD-Google
 SUBDIR+=	p5-DBD-SQLite
 SUBDIR+=	p5-DBD-Sybase
 SUBDIR+=	p5-DBD-XBase
