@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2004/03/29 05:12:01 ben Exp $
+$NetBSD: distinfo,v 1.4 2004/06/15 04:11:15 minskim Exp $
 
 SHA1 (xmill-0.9.1.tar.gz) = 491e44ea9a66293af6837db4dc54ed63065c0d67
 Size (xmill-0.9.1.tar.gz) = 1021363 bytes
+SHA1 (patch-aa) = b4f10f11906bdcc927214823f93ef597c0d4b750
