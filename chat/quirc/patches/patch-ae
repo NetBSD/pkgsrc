@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2003/10/25 23:37:26 kristerw Exp $
+
+--- tcltk.h.in.orig	Sun Oct 26 01:25:54 2003
++++ tcltk.h.in	Sun Oct 26 01:26:20 2003
+@@ -12,8 +12,8 @@
+ #define TT_ARGS TT_Interp,__FILE__,__LINE__
+ #define TT_PROC_ARGS ClientData clientData, Tcl_Interp *interp, int argc, char *argv[]
+ #define TT_PROC_OBJS ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST objv[]
+-#define TT_Install_Command(x) Tcl_CreateCommand(TT_Interp,TT_Fix_Name(#x),TT_Proc_##x##,0,0); free(TT_Temp)
+-#define TT_Install_ObjCommand(x) Tcl_CreateObjCommand(TT_Interp,TT_Fix_Name(#x),TT_Proc_##x##,0,0); free(TT_Temp)
++#define TT_Install_Command(x) Tcl_CreateCommand(TT_Interp,TT_Fix_Name(#x),TT_Proc_##x,0,0); free(TT_Temp)
++#define TT_Install_ObjCommand(x) Tcl_CreateObjCommand(TT_Interp,TT_Fix_Name(#x),TT_Proc_##x,0,0); free(TT_Temp)
+ #define ARGV(x) Tcl_GetStringFromObj(objv[x],NULL)
+ 
+ char *TT_Fix_Name(char *name);
