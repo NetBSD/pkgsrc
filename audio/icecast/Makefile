@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 13:30:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/22 10:58:30 wiz Exp $
 #
 
-DISTNAME=	icecast-1.3.7
+DISTNAME=	icecast-1.3.10
 CATEGORIES=	audio
 MASTER_SITES=	http://www.icecast.org/releases/
 
