@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9259 2005/02/22 01:09:44 minskim Exp $
+$NetBSD: CHANGES,v 1.9260 2005/02/22 10:51:06 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1026,3 +1026,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Test-Warn-0.08 [wiz 2005-02-22]
 	Updated p5-IPC-Run to 0.79 [wiz 2005-02-22]
 	Updated xchm to 0.9.8 [minskim 2005-02-22]
+	Updated skkserv to 3.9.4nb4 [hira 2005-02-22]
