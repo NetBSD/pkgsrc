@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/10/05 22:09:23 tv Exp $
+@comment $NetBSD: PLIST,v 1.16 2004/10/14 14:32:32 jschauma Exp $
 bin/sun14-java
 bin/sun14-keytool
 bin/sun14-orbd
@@ -91,6 +91,7 @@ java/sun-1.4/lib/font.properties.zh_TW_UTF8.Sun
 java/sun-1.4/lib/font.properties.zh_TW_UTF8.Sun2003
 java/sun-1.4/lib/font.properties.Redhat6.1.default
 java/sun-1.4/lib/font.properties.ja.default
+java/sun-1.4/lib/font.properties.ja.Redhat3
 java/sun-1.4/lib/font.properties.ja.Redhat6.1.default
 java/sun-1.4/lib/font.properties.ja.Redhat6.2.default
 java/sun-1.4/lib/font.properties.Redhat8.0
@@ -99,9 +100,11 @@ java/sun-1.4/lib/font.properties.ja.Redhat7.2
 java/sun-1.4/lib/font.properties.ja.Redhat7.3
 java/sun-1.4/lib/font.properties.ja.Redhat8.0
 java/sun-1.4/lib/font.properties.ko.Redhat
+java/sun-1.4/lib/font.properties.ko.Redhat2.1
 java/sun-1.4/lib/font.properties.zh_CN.Redhat
 java/sun-1.4/lib/font.properties.zh_CN.Redhat2.1
 java/sun-1.4/lib/font.properties.zh_TW.Redhat
+java/sun-1.4/lib/font.properties.zh_TW.Redhat2.1
 java/sun-1.4/lib/font.properties.ja.Turbo.default
 java/sun-1.4/lib/font.properties.ja.Turbo6.0.default
 java/sun-1.4/lib/font.properties.zh.Turbo.default
