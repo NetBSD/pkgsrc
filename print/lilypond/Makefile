@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2005/01/07 07:44:37 rh Exp $
+# $NetBSD: Makefile,v 1.30 2005/02/02 14:38:12 jmmv Exp $
 #
 
 DISTNAME=	lilypond-2.4.3
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://lilypond.org/download/v2.4/
 
@@ -23,6 +24,7 @@ MAKEFILE=		GNUmakefile
 
 USE_MAKEINFO=	YES
 TEXINFO_REQD=	4.7
+INFO_DIR=	info/lilypond
 INFO_FILES=	lilypond.info lilypond-internals.info music-glossary.info
 
 CONFIGURE_ARGS+=--disable-optimising
@@ -30,7 +32,7 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PYTHON_VERSIONS_ACCEPTED= 21 23
 # 22 has some regular expression problem
 
-SCRIPTS_DIR=	share/lilypond/${PKGVERSION}/scripts
+SCRIPTS_DIR=	share/lilypond/${PKGVERSION:S/nb${PKGREVISION}//}/scripts
 PLIST_SUBST+=	SCRIPTS_DIR=${SCRIPTS_DIR}
 MESSAGE_SUBST+=	SCRIPTS_DIR=${SCRIPTS_DIR}
 
@@ -43,6 +45,7 @@ post-install:
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/emacs.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
