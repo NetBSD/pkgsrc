@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/20 16:06:22 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2004/04/25 04:01:14 reed Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -180,8 +180,8 @@ lib/libgphoto2_port.so
 lib/libgphoto2_port.so.5
 lib/libgphoto2_port.so.5.1
 lib/pkgconfig/libgphoto2.pc
-man/man3/libgphoto2.3
-man/man3/libgphoto2_port.3
+${PKGMANDIR}/man3/libgphoto2.3
+${PKGMANDIR}/man3/libgphoto2_port.3
 share/doc/libgphoto2/AUTHORS
 share/doc/libgphoto2/CHANGES
 share/doc/libgphoto2/COPYING
@@ -223,15 +223,3 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libgphoto2-2.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libgphoto2_port-0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgphoto2-2.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgphoto2_port-0.mo
-@dirrm share/libgphoto2/${PKGVERSION}/konica
-@dirrm share/libgphoto2/${PKGVERSION}
-@dirrm share/libgphoto2
-@dirrm share/doc/libgphoto2_port
-@exec ${MKDIR} %D/share/doc/libgphoto2/linux-hotplug
-@dirrm share/doc/libgphoto2/linux-hotplug
-@dirrm share/doc/libgphoto2
-@dirrm lib/gphoto2_port/0.5.1
-@dirrm lib/gphoto2_port
-@dirrm lib/gphoto2/${PKGVERSION}
-@dirrm lib/gphoto2
-@dirrm include/gphoto2
