@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2002/05/31 10:09:35 tron Exp $
+# $NetBSD: Makefile,v 1.28 2002/07/27 15:20:05 jschauma Exp $
 
 DISTNAME=	gdm-2.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/gdm/} \
 		${MASTER_SITE_LOCAL}
