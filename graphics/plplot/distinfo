@@ -1,16 +1,10 @@
-$NetBSD: distinfo,v 1.3 2001/06/20 12:55:11 jtb Exp $
+$NetBSD: distinfo,v 1.4 2003/07/10 08:55:04 jtb Exp $
 
-SHA1 (plplot-5.0.4.tar.gz) = 9d9d28b271d4c75a2d5e04ea43f85f78ca0892d4
-Size (plplot-5.0.4.tar.gz) = 2967518 bytes
-SHA1 (patch-aa) = 5fe9e2c82d187ef2dfd38f11d37f712e43928e13
+SHA1 (plplot-5.2.1.tar.gz) = e69c4e2a22409f23e0c9f40f7d5cac7dda5d4ec2
+Size (plplot-5.2.1.tar.gz) = 4625477 bytes
+SHA1 (patch-aa) = cdc22b1371b42364d03adaf0f338267d9d724689
 SHA1 (patch-ab) = 9edefeed3f64d1ae01b85009af289de59e281a44
-SHA1 (patch-ac) = 16372142dcb28277fff66c1b33fa620b53da3ebb
+SHA1 (patch-ac) = 718ed2e4e2f2e7de7b512b416f125ee77222f4dc
 SHA1 (patch-ad) = 2b2ab27e59c0ab884e055edbfa778acecb3b9f41
-SHA1 (patch-ae) = 8dee61b5cebbeff4ad291ba9f09d79c47c9f680d
-SHA1 (patch-af) = db7974b44e6d0d5c653c77d6e69dffe89b6f92e5
-SHA1 (patch-ag) = e2599c588c8b2c9fff0f9a6214abca2dc06e87dc
-SHA1 (patch-ah) = d209fe090477a4f4dcae31af579912fdfea8bc6f
-SHA1 (patch-ai) = 71242436e7557705c9786f7edbe2d0a35931a37a
-SHA1 (patch-aj) = 2251cf39fd6bedad3a2f670074cb6dae46c74ec1
-SHA1 (patch-ak) = fa9890a6e468b772f23beef4663d96ffffd074b6
-SHA1 (patch-al) = ef35ffd9a8675d8137fb3f376dd134d824a89499
+SHA1 (patch-ae) = 19d970e496817ae909cbc1be241373e41aa1a3c9
+SHA1 (patch-af) = 84c799efdabf5a1ba2e92f4089635c966a3e7006
