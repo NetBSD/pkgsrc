@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.4 2003/11/14 00:42:18 jschauma Exp $
+$NetBSD: patch-aa,v 1.5 2004/02/08 13:44:12 grant Exp $
 
---- Makefile.orig	2000-11-11 22:01:25.000000000 +0000
-+++ Makefile	2003-09-17 23:03:22.000000000 +0000
+--- Makefile.orig	2000-11-12 09:01:25.000000000 +1100
++++ Makefile
 @@ -1,28 +1,15 @@
 +PROG=	sslwrap
 +SRCS=	s_server.c s_socket.c s_cb.c
-+LDADD=	-lssl -lcrypto
++LDADD+=	-lssl -lcrypto
 +MAN=
 +
 +.if defined(PREFIX)
