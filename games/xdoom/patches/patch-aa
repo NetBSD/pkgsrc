@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 1998/08/28 12:53:04 garbled Exp $
---- Makefile.orig	Mon Dec 22 12:55:36 1997
-+++ Makefile	Fri Aug 28 05:16:43 1998
+$NetBSD: patch-aa,v 1.2 1998/09/06 16:37:44 hubertf Exp $
+--- linuxdoom-1.10/Makefile.orig	Mon Dec 22 12:55:36 1997
++++ linuxdoom-1.10/Makefile	Fri Aug 28 05:16:43 1998
 @@ -6,9 +6,10 @@
  #
  CC=  gcc  # gcc or g++
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.1 1998/08/28 12:53:04 garbled Exp $
 -CFLAGS=-g -Wall -DNORMALUNIX -DLINUX # -DUSEASM 
 -LDFLAGS=-L/usr/X11R6/lib
 -LIBS=-lXext -lX11 -lnsl -lm
-+CFLAGS=-g -Wall -DNORMALUNIX # -DUSEASM 
++CFLAGS=-g -Wall -DNORMALUNIX -DSNDSRV # -DUSEASM 
 +CFLAGS+= -I$(X11BASE)/include
 +LDFLAGS=-Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib
 +LIBS=-lXext -lX11 -lm
