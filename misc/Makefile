@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2002/06/19 11:20:48 agc Exp $
+# $NetBSD: Makefile,v 1.132 2002/06/20 19:18:45 jschauma Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -59,6 +59,7 @@ SUBDIR+=	kdeutils2
 SUBDIR+=	kdeutils3
 SUBDIR+=	kdrill
 SUBDIR+=	koffice
+SUBDIR+=	koffice3
 SUBDIR+=	kp
 SUBDIR+=	kstars
 SUBDIR+=	ktail
