@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/08/27 15:14:59 kim Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/16 04:01:31 kim Exp $
 #
 
 DISTNAME=	mstream-1.0
@@ -10,6 +10,7 @@ HOMEPAGE=	http://kimmo.suominen.com/gwradio/
 COMMENT=	Mserv player package to queue tracks to IceS
 
 DEPENDS+=	ices-mp3>=0.3:../../audio/ices-mp3
+DEPENDS+=	p5-MP3-Info>=1.0:../../audio/p5-MP3-Info
 
 NO_CONFIGURE=	# defined
 USE_PERL5=	# defined
