@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2003/12/04 19:37:52 xtraeme Exp $
+$NetBSD: patch-ab,v 1.4 2004/08/26 20:21:58 recht Exp $
 
---- loaders/Makefile.in.orig	2003-09-07 21:12:29.000000000 -0500
-+++ loaders/Makefile.in
-@@ -99,7 +99,7 @@ AUTOMAKE_OPTIONS = 1.4 foreign
+--- loaders/Makefile.in.orig	2004-07-30 05:06:54.000000000 +0200
++++ loaders/Makefile.in	2004-08-26 20:29:16.000000000 +0200
+@@ -113,7 +113,7 @@
  # A list of all the files in the current directory which can be regenerated
  MAINTAINERCLEANFILES = Makefile.in
  
 -LDFLAGS = -L$(top_builddir)/src -L$(top_builddir)/src/.libs -L/usr/X11R6/lib 
 +LDFLAGS = -L$(top_builddir)/src -L$(top_builddir)/src/.libs @LDFLAGS@
- INCLUDES = -I. -I$(top_srcdir) -I$(top_srcdir)/src \
-                        -I$(top_srcdir)/loaders -I$(top_srcdir)/libltdl \
-                        -I/usr/X11R6/include $(X_CFLAGS) \
+ INCLUDES = -I. -I$(top_srcdir) -I$(top_srcdir)/src                        -I$(top_srcdir)/loaders -I$(top_srcdir)/libltdl                        -I/usr/X11R6/include $(X_CFLAGS)                        -I$(prefix)/include -I$(includedir)
+ 
+ 
