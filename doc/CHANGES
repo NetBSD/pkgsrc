@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7503 2004/10/20 22:17:31 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7504 2004/10/20 22:59:40 manu Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4794,3 +4794,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated getmail to 4.2.2 [schmonz 2004-10-20]
 	Updated checkpassword-pam to 0.99 [schmonz 2004-10-20]
 	Updated wistumbler2 to 2.00-pre9 [xtraeme 2004-10-20] 
+	Added libradius-20040827 [manu 2004-10-21]
