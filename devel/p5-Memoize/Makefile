@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/10/13 22:22:46 seb Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/03 11:03:29 mjl Exp $
 #
 
-DISTNAME=	Memoize-0.65
+DISTNAME=	Memoize-1.01
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5mem
 CATEGORIES=	devel perl5
