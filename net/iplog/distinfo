@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2003/07/30 15:41:51 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2003/12/23 11:09:17 agc Exp $
 
 SHA1 (iplog-2.2.3.tar.gz) = ce257d13ceb54bacb5cfe97570603868c7463cb2
 Size (iplog-2.2.3.tar.gz) = 133639 bytes
 SHA1 (patch-aa) = 11c5892a83d9f764246994098663732b30784d6a
+SHA1 (patch-ab) = 590018211ac1cbec15bac5fb3343494887a9b01a
