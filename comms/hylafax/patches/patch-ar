@@ -1,8 +1,8 @@
-$NetBSD: patch-ar,v 1.4 2001/04/23 15:06:20 abs Exp $
+$NetBSD: patch-ar,v 1.5 2001/07/08 13:32:15 bad Exp $
 
---- util/typerules.orig	Mon Sep  4 06:57:44 2000
-+++ util/typerules
-@@ -129,6 +129,11 @@
+--- util/typerules.orig	Sun Apr 15 06:58:06 2001
++++ util/typerules	Sun Jul  8 00:48:02 2001
+@@ -134,6 +134,11 @@
  >15     string          ascii		ps	%F/textfmt -B -f Courier-Bold\
  						-Ml=0.4in -p 11 -s %s >%o <%i
  #
