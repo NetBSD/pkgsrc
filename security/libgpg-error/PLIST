@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/05 23:24:31 xtraeme Exp $
+bin/gpg-error-config
+include/gpg-error.h
+lib/libgpg-error.a
+lib/libgpg-error.la
+lib/libgpg-error.so
+lib/libgpg-error.so.1
+lib/libgpg-error.so.1.1
+share/aclocal/gpg-error.m4
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgpg-error.mo
