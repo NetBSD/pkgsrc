@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:10 zuntum Exp $
-bin/ddclient
-etc/ddclient.conf-example
+@comment $NetBSD: PLIST,v 1.2 2001/12/09 19:55:35 jlam Exp $
+etc/rc.d/ddclient
+sbin/ddclient
 share/doc/ddclient/COPYING
 share/doc/ddclient/COPYRIGHT
 share/doc/ddclient/README
-share/doc/ddclient/sample-etc_cron.d_ddclient
-share/doc/ddclient/sample-etc_dhcpc_dhcpcd-eth0.exe
-share/doc/ddclient/sample-etc_ppp_ip-up.local
-share/doc/ddclient/contrib/ddupdate
-@dirrm share/doc/ddclient/contrib
+share/doc/ddclient/README.cisco
+share/examples/ddclient/sample-etc_cron.d_ddclient
+share/examples/ddclient/sample-etc_ddclient.conf
+share/examples/ddclient/sample-etc_dhclient-enter-hooks
+share/examples/ddclient/sample-etc_dhcpc_dhcpcd-eth0.exe
+share/examples/ddclient/sample-etc_ppp_ip-up.local
+share/examples/ddclient/sample-etc_rc.d_init.d_ddclient
+share/examples/ddclient/sample-etc_rc.d_init.d_ddclient.redhat
+@dirrm share/examples/ddclient
 @dirrm share/doc/ddclient
