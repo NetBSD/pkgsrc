@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1045 2002/09/12 10:34:29 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1046 2002/09/15 11:58:22 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -150,23 +150,6 @@ SCRIPTS_ENV+=		JAVA_HOME=${JAVA_HOME}
 MAKE_ENV+=		CLASSPATH=${CLASSPATH}
 CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH}
 SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH}
-.endif
-
-# Set X11PREFIX to reflect the install directory of X11 packages.
-# Set XMKMF_CMD properly if xpkgwedge is installed.
-#
-# The check for the existence of ${X11BASE}/lib/X11/config/xpkgwedge.def
-# is to catch users of xpkgwedge<1.0.
-#
-XMKMF?=			${XMKMF_CMD} ${XMKMF_FLAGS} -a
-XMKMF_FLAGS?=		# empty
-.if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
-    exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
-X11PREFIX=		${LOCALBASE}
-XMKMF_CMD?=		${X11PREFIX}/bin/pkgxmkmf
-.else
-X11PREFIX=		${X11BASE}
-XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
 .endif
 
 # Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
