@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1305.2.1 2003/12/12 11:35:20 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1305.2.2 2004/01/09 22:26:27 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -4597,7 +4597,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	Mach-O)	bins=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^(bin|sbin|libexec)\// { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
 		libs=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^lib\/lib.*\.dylib/ { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
 		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then 	\
-			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} 'NF > 1 { print $$1 }' | ${SORT} -u`; \
+			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '/compatibility version/ { print $$1 }' | ${SORT} -u`; \
 		fi;							\
 		;;							\
 	esac;								\
