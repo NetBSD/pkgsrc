@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2510 2004/11/27 02:15:32 lukem Exp $
+$NetBSD: TODO,v 1.2511 2004/11/27 02:52:24 dmcmahill Exp $
 
 Suggested new packages
 ======================
@@ -1275,7 +1275,6 @@ Suggested package updates
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
 	o vera-1.14
-	o verilog-current-20041004
 	o vfu-4.03
 	o vifm-0.2
 	o vipec-3.2.0
