@@ -1,7 +1,7 @@
-$NetBSD: patch-az,v 1.6 1999/12/28 14:09:14 tron Exp $
+$NetBSD: patch-az,v 1.7 2000/02/18 23:55:15 mycroft Exp $
 
---- src/unexelf.c.orig	Fri Dec 17 15:48:53 1999
-+++ src/unexelf.c	Fri Dec 17 15:55:21 1999
+--- src/unexelf.c.orig	Fri Dec  3 04:09:21 1999
++++ src/unexelf.c	Fri Feb 18 18:23:34 2000
 @@ -478,6 +478,13 @@
  # endif
  # include <sys/exec_elf.h>
@@ -110,7 +110,7 @@ $NetBSD: patch-az,v 1.6 1999/12/28 14:09:14 tron Exp $
    if (n < 0)
      fatal ("Couldn't find segment next to .bss in %s\n", old_name, 0);
  
-+#ifdef HAVE_MIPS_SBSS
++#ifdef HAVE_MIPS_SBSSxxx
 +  bss_phdr_index = n;
 +#endif
 +
@@ -122,7 +122,7 @@ $NetBSD: patch-az,v 1.6 1999/12/28 14:09:14 tron Exp $
  	  NEW_SECTION_H (nn).sh_addralign = OLD_SECTION_H (nn).sh_addralign;
  	  NEW_SECTION_H (nn).sh_size = 0;
 +
-+#ifdef HAVE_MIPS_SBSS
++#ifdef HAVE_MIPS_SBSSxxx
 +	  /* On ELF mips,  the new data section replaces both .sbss and .bss
 +	     (we have, after all, written to them.).  Adding new_data2_size
 +	     to the sh_addr and sh_offset of sbss puts sbss at the end of
