@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/26 17:33:26 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/06/26 17:46:11 jlam Exp $
 #
 # This Makefile fragment is included by packages that use qt2-designer.
 #
@@ -24,6 +24,9 @@ BUILDLINK_FILES.qt2-designer=	qt2/bin/uic
 BUILDLINK_FILES.qt2-designer+=	qt2/lib/libqutil.*
 
 .include "../../x11/qt2-libs/buildlink.mk"
+
+CONFIGURE_ENV+=			UIC="${BUILDLINK_QTDIR}/bin/uic"
+MAKE_ENV+=			UIC="${BUILDLINK_QTDIR}/bin/uic"
 
 BUILDLINK_TARGETS.qt2-designer=	qt2-designer-buildlink
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.qt2-designer}
