@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.17 2002/03/19 15:34:32 wiz Exp $
+$NetBSD: patch-aa,v 1.18 2002/04/05 11:25:54 skrll Exp $
 
---- configure.orig	Tue Mar 19 00:42:35 2002
+--- configure.orig	Mon Mar 18 23:42:35 2002
 +++ configure
 @@ -1638,7 +1638,7 @@
  # implement the "install-strip" target properly (strip executables,
@@ -11,6 +11,15 @@ $NetBSD: patch-aa,v 1.17 2002/03/19 15:34:32 wiz Exp $
  
  # random libc stuff
  echo $ac_n "checking for ANSI C header files""... $ac_c" 1>&6
+@@ -6095,7 +6095,7 @@
+   if test "$have_kerberos5" = yes ; then
+     # from Matt Knopp <mhat@infocalypse.netlag.com>
+     # (who got it from amu@mit.edu)
+-    PASSWD_LIBS="$PASSWD_LIBS -lkrb4 -ldes425 -lkrb5 -lk5crypto -lcrypt -lcom_err"
++    PASSWD_LIBS="$PASSWD_LIBS -lkrb5 -lasn1 -lkrb -lcrypto -lroken -lcom_err -lcrypt"
+   elif test "$have_kerberos" = yes ; then
+     # from Tim Showalter <tjs@psaux.com> for FreeBSD 4.2
+     PASSWD_LIBS="$PASSWD_LIBS -lkrb -ldes -lcom_err"
 @@ -7584,7 +7584,7 @@
      /*)
       echo $ac_n "checking for XML headers""... $ac_c" 1>&6
