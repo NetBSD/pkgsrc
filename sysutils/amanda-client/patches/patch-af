@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 1999/09/06 18:03:43 bad Exp $
+
+--- client-src/sendsize.c.orig	Wed Nov 18 02:07:20 1998
++++ client-src/sendsize.c	Fri Sep  3 19:53:30 1999
+@@ -574,7 +574,7 @@
+     {"Total bytes listed: [0-9][0-9]*", 1},		     /* Samba client */
+ #endif
+ 
+-#ifdef HAVE_DUMP_ESTIMATE
++#if defined(HAVE_DUMP_ESTIMATE) && !defined(__NetBSD__)
+ # ifdef SAMBA_CLIENT
+     /* On DU 4.0, dump -E prints a line that matches an output line of
+        smbclient.  So, even if both are enabled by configure, dump
+@@ -689,7 +689,7 @@
+ # else							/* } { */
+ 	dumpkeys = vstralloc(level_str,
+ #  ifdef HAVE_DUMP_ESTIMATE				/* { */
+-			     "E",
++			     HAVE_DUMP_ESTIMATE
+ #  endif						/* } */
+ #  ifdef HAVE_HONOR_NODUMP				/* { */
+ 			     "h",
