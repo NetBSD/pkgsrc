@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2004/01/26 13:03:38 jmmv Exp $
+
+--- include/xine.h.orig	2003-08-02 13:51:35.000000000 +0000
++++ include/xine.h
+@@ -1677,7 +1677,7 @@ void        xine_osd_get_palette   (xine
+ 
+ typedef enum {
+ 	XINE_TVSYSTEM_PAL    = 0,
+-	XINE_TVSYSTEM_NTSC   = 1,
++	XINE_TVSYSTEM_NTSC   = 1
+ } xine_tvsystem;
+ 
+ /* connect to nvtvd server and save current TV and X settings */
