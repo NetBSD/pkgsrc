@@ -1,7 +1,18 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
+$NetBSD: patch-ad,v 1.2 2000/09/02 19:24:34 wiz Exp $
 
 --- src/Makefile.in.orig	Fri Dec 17 14:07:03 1999
-+++ src/Makefile.in	Mon Dec 20 03:38:38 1999
++++ src/Makefile.in
+@@ -62,8 +62,8 @@
+ #
+ # if your X11R6 libraries don't need X_LOCALE, remove -DX_LOCALE
+ #
+-XLIBS = -L/usr/X11R6/lib -lX11
+-WMLIBS = -L/usr/X11R6/lib -lXpm -lX11 -lXext
++XLIBS = -Wl,-R/usr/X11R6/lib -L/usr/X11R6/lib -lX11
++WMLIBS = -Wl,-R/usr/X11R6/lib -L/usr/X11R6/lib -lXpm -lX11 -lXext
+ GTKLIBS = @GTK_LIBS@
+ GTKFLAGS = @GTK_CFLAGS@
+ XMESSAGE = @XMESSAGE@
 @@ -88,37 +88,37 @@
  	$(CC) -m486 -Wall -c sci.c
  
