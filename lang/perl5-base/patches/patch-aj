@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 2001/01/11 17:51:29 jlam Exp $
+
+--- installman.orig	Sun Jan  9 16:45:04 2000
++++ installman	Thu Jan 11 11:47:26 2001
+@@ -69,7 +69,6 @@
+ runpod2man('utils', $man1dir, $man1ext, 'perlbug');
+ runpod2man('utils', $man1dir, $man1ext, 'pl2pm');
+ runpod2man('utils', $man1dir, $man1ext, 'splain');
+-runpod2man('utils', $man1dir, $man1ext, 'dprofpp');
+ runpod2man('x2p', $man1dir, $man1ext, 's2p');
+ runpod2man('x2p', $man1dir, $man1ext, 'a2p.pod');
+ runpod2man('x2p', $man1dir, $man1ext, 'find2perl');
