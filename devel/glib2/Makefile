@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/11/30 14:28:07 grant Exp $
+# $NetBSD: Makefile,v 1.14 2002/11/30 21:08:23 salo Exp $
 #
 
 DISTNAME=		glib-2.0.7
@@ -15,6 +15,7 @@ COMMENT=		Some useful routines for C programming
 
 BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
 USE_PERL5=		yes
 
@@ -26,7 +27,7 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/gobject-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gthread-2.0.pc.in
 
 GNU_CONFIGURE=		# defined
-USE_PKGLOCALEDIR=	# defined
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 
 .include "../../mk/bsd.prefs.mk"
