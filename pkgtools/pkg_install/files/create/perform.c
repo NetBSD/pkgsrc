@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.1.1.1 2002/12/20 18:14:10 schmonz Exp $	*/
+/*	$NetBSD: perform.c,v 1.2 2003/01/14 15:18:34 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.1.1.1 2002/12/20 18:14:10 schmonz Exp $");
+__RCSID("$NetBSD: perform.c,v 1.2 2003/01/14 15:18:34 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -146,6 +146,9 @@ make_dist(const char *home, const char *pkg, const char *suffix, const package_t
 	}
 	if (SizeAll) {
 		(void) fprintf(totar, "%s\n", SIZE_ALL_FNAME);
+	}
+	if (Preserve) {
+		(void) fprintf(totar, "%s\n", PRESERVE_FNAME);
 	}
 
 	for (p = plist->head; p; p = p->next) {
@@ -390,6 +393,11 @@ pkg_perform(lpkg_head_t *pkgs)
 		copy_file(Home, SizeAll, SIZE_ALL_FNAME);
 		add_plist(&plist, PLIST_IGNORE, NULL);
 		add_plist(&plist, PLIST_FILE, SIZE_ALL_FNAME);
+	}
+	if (Preserve) {
+		copy_file(Home, Preserve, PRESERVE_FNAME);
+		add_plist(&plist, PLIST_IGNORE, NULL);
+		add_plist(&plist, PLIST_FILE, PRESERVE_FNAME);
 	}
 
 	/* Finally, write out the packing list */
