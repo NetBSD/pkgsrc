@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2002/11/19 07:13:55 cjep Exp $
+# $NetBSD: Makefile,v 1.168 2002/11/25 12:32:14 wiz Exp $
 
 COMMENT=	System utilities
 
@@ -127,6 +127,7 @@ SUBDIR+=	ups-nut-cgi
 SUBDIR+=	usbutil
 SUBDIR+=	user
 SUBDIR+=	vcdimager
+SUBDIR+=	vcdimager-devel
 SUBDIR+=	vidc-tools
 SUBDIR+=	whowatch
 SUBDIR+=	wmcpuload
