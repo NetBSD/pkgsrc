@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/26 02:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/05/23 15:09:06 heinz Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -52,9 +52,9 @@ FILES_SUBST+=		WRKDIR_=${WRKDIR_}
 FILES_SUBST+=		PATCH=${PATCH}
 
 pre-extract:
-	if [ ! -e ${WRKSRC} ]; then \
+	if [ ! -r ${WRKSRC} ]; then \
 		cd ../../print/teTeX-bin && ${MAKE} patch; \
-	elif [ ! -e ${WRKSRC_PTEX} ]; then \
+	elif [ ! -r ${WRKSRC_PTEX} ]; then \
 		cd ../../print/teTeX-bin && ${MAKE} clean; ${MAKE} patch; \
 	fi;
 
