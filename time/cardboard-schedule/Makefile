@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/09/19 23:08:27 dent Exp $
+# $NetBSD: Makefile,v 1.11 2005/02/11 03:13:19 erh Exp $
 #
 
 DISTNAME=	cs113ins
@@ -13,7 +13,6 @@ COMMENT=	Project and resource management software implemented in Java/Swing
 
 USE_X11BASE=	yes
 DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
-DEPENDS+=	swing-[0-9]*:../../x11/swing
 
 RESTRICTED=	"License prohibits redistribution on CDROM"
 NO_SRC_ON_CDROM=	${RESTRICTED}
