@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/06/18 10:06:45 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2001/07/14 03:21:17 jlam Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/06/13 20:00:47 max Exp
 #
 
@@ -11,13 +11,12 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/make/make.html
 COMMENT=	GNU version of 'make' utility
 
-USE_GTEXINFO=	YES
-#USE_LIBINTL=	YES
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--program-prefix="g"
-CONFIGURE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
-
-MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
+USE_GTEXINFO=		YES
+#USE_LIBINTL=		YES
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--program-prefix="g"
+CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 .include "../../devel/gettext-lib/buildlink.mk"
 
