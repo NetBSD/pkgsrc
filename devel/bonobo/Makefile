@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/03/13 17:36:46 fredb Exp $
+# $NetBSD: Makefile,v 1.24 2002/03/26 07:29:34 rh Exp $
 #
 
 DISTNAME=		bonobo-1.0.18
@@ -28,6 +28,7 @@ LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
+.include "../../graphics/freetype2/buildlink.mk"
 .include "../../print/gnome-print/buildlink.mk"
 .include "../../textproc/libxml/buildlink.mk"
 .include "../../devel/popt/buildlink.mk"
