@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/04/12 14:45:08 martti Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/07/21 12:41:13 martti Exp $
 bin/bins
 bin/bins_cleanupgallery
 bin/bins_edit
@@ -81,6 +81,7 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bins.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/zh/LC_MESSAGES/bins.mo
