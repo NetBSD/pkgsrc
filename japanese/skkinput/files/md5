@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/12/24 03:23:50 itohy Exp $
+$NetBSD: md5,v 1.2 2000/01/20 07:10:54 itohy Exp $
 
-MD5 (skkinput-2.01.tar.gz) = 69d74efaa25ca94884b702f2a53428da
+MD5 (skkinput-2.03.tar.gz) = 74c08620e8e916a3d56f3bb3e85a5d62
