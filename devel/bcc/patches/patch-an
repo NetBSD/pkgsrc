@@ -1,3 +1,5 @@
+$NetBSD: patch-an,v 1.2 1998/08/07 10:40:22 agc Exp $
+
 --- bcc/bcc.c.orig	Sat Jul 17 07:49:49 1993
 +++ bcc/bcc.c	Thu Jul 16 22:45:40 1998
 @@ -27,20 +27,20 @@

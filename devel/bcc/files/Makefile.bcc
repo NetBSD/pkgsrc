@@ -1,3 +1,6 @@
+# $NetBSD: Makefile.bcc,v 1.2 1998/08/07 10:40:20 agc Exp $
+#
+
 .include "../Makefile.inc"
 
 .PATH:	../bcc-cc1

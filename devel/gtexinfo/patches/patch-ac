@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.4 1998/08/07 10:40:24 agc Exp $
+
 --- info/filesys.h.orig	Mon Aug  4 22:21:35 1997
 +++ info/filesys.h	Wed May  6 23:00:23 1998
 @@ -71,7 +71,7 @@

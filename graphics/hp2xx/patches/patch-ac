@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:40:48 agc Exp $
+
 --- sources/picbuf.c.orig	Thu Jul  9 11:36:03 1998
 +++ sources/picbuf.c	Thu Jul  9 11:36:56 1998
 @@ -44,4 +44,5 @@

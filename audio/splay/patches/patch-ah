@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 10:36:14 agc Exp $
+
 --- mpegsound/mpeglayer3.cc-orig	Sat May 24 11:34:12 1997
 +++ mpegsound/mpeglayer3.cc	Tue May 12 13:10:28 1998
 @@ -40,7 +40,7 @@

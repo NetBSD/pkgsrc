@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 10:35:53 agc Exp $
+
 *** guicontrol.c~	Sat Aug 23 07:30:51 1997
 --- guicontrol.c	Thu Mar  5 21:31:06 1998
 ***************

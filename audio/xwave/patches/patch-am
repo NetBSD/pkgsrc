@@ -1,3 +1,5 @@
+$NetBSD: patch-am,v 1.2 1998/08/07 10:36:25 agc Exp $
+
 --- src/Imakefile.distrib.BAK	Sat Feb 21 20:59:35 1998
 +++ src/Imakefile.distrib	Sat Feb 21 20:59:43 1998
 @@ -17,6 +17,8 @@

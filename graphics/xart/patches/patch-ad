@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 10:40:54 agc Exp $
+
 Fix PR 5746 by Benjamin Lorenz <lorenz@ps.uni-sb.de>.
 
 --- misc.h.BAK	Sun Jul 12 17:00:39 1998

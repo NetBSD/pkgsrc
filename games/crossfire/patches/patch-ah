@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 10:40:39 agc Exp $
+
 --- server/sounds.c.orig	Fri Feb 20 03:46:30 1998
 +++ server/sounds.c	Fri Feb 20 03:46:30 1998
 @@ -23,3 +23,3 @@

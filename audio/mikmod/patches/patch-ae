@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.4 1998/08/07 10:35:58 agc Exp $
+
 --- playercode/unix_drv/drv_sun.c.orig	Wed Jan 14 15:33:36 1998
 +++ playercode/unix_drv/drv_sun.c	Sat Jul  4 02:14:56 1998
 @@ -33,7 +33,7 @@

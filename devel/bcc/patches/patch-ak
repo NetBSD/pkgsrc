@@ -1,3 +1,5 @@
+$NetBSD: patch-ak,v 1.2 1998/08/07 10:40:21 agc Exp $
+
 --- as/mops.c.orig	Thu Jul 16 20:03:35 1998
 +++ as/mops.c	Thu Jul 16 20:05:45 1998
 @@ -547,7 +547,7 @@

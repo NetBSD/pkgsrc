@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:52 agc Exp $
+
 *** Pixmap.h~	Fri May 13 04:03:29 1994
 --- Pixmap.h	Sun Feb 19 03:35:48 1995
 ***************

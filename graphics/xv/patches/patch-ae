@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 10:40:56 agc Exp $
+
 --- xvimage.c~	Fri Jan 13 18:11:36 1995
 +++ xvimage.c	Tue Oct 15 16:41:47 1996
 @@ -46,6 +46,274 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:40:53 agc Exp $
+
 --- ./Imakefile.org	Fri May 13 04:04:38 1994
 +++ ./Imakefile	Mon Feb 27 16:31:46 1995
 @@ -27,10 +27,9 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.3 1998/08/07 10:35:54 agc Exp $
+
 diff -u ../../work/cam-1.02/cam.h ./cam.h
 --- ../../work/cam-1.02/cam.h	Wed Oct 29 18:59:27 1997
 +++ ./cam.h	Wed Oct 29 18:43:33 1997

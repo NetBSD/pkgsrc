@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:40:20 agc Exp $
+
 --- standards.texi.orig	Fri Oct 11 11:32:48 1996
 +++ standards.texi	Fri Jun 13 16:26:11 1997
 @@ -4,12 +4,13 @@

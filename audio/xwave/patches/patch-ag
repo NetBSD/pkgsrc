@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1998/08/07 10:36:23 agc Exp $
+
 --- orig/xwave/src/endian.h	Mon Nov 25 13:25:15 1996
 +++ src/endian.h	Sat Sep 13 04:22:54 1997
 @@ -16,7 +16,7 @@

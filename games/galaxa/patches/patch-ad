@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 10:40:41 agc Exp $
+
 --- setup.h.orig	Fri Jul 24 03:35:59 1998
 +++ setup.h	Fri Jul 24 03:51:24 1998
 @@ -100,6 +100,6 @@

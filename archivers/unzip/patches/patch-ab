@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:35:52 agc Exp $
+
 --- unix/Makefile.orig	Wed Nov 19 18:47:29 1997
 +++ unix/Makefile	Wed Nov 19 18:47:43 1997
 @@ -560,7 +560,7 @@

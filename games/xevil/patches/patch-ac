@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:40:44 agc Exp $
+
 --- game.C.orig	Thu Jul 30 05:20:22 1998
 +++ game.C	Thu Jul 30 05:21:16 1998
 @@ -388,3 +388,3 @@

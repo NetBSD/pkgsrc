@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:35:55 agc Exp $
+
 --- cddbd.c.orig	Sun Jun 14 06:42:12 1998
 +++ cddbd.c	Sun Jun 14 06:42:50 1998
 @@ -191,14 +191,14 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.6 1998/08/07 10:40:33 agc Exp $
+
 --- pico/makefile.neb.orig	Mon Jun 29 18:23:50 1998
 +++ pico/makefile.neb	Sat Jul 18 23:21:15 1998
 @@ -30,18 +30,13 @@

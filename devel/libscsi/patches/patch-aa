@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:25 agc Exp $
+
 --- scsi.3.orig	Wed Feb 18 15:43:00 1998
 +++ scsi.3	Sat May  2 20:42:48 1998
 @@ -75,7 +75,7 @@

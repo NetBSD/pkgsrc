@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 10:40:43 agc Exp $
+
 --- server/motd.c.orig	Sat Apr 11 18:34:29 1998
 +++ server/motd.c	Fri Jul 31 03:47:57 1998
 @@ -31,3 +31,3 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:44 agc Exp $
+
 --- xbomber.c.orig	Fri Jun 19 19:09:35 1998
 +++ xbomber.c	Thu Jul 23 07:41:03 1998
 @@ -1601,3 +1601,3 @@

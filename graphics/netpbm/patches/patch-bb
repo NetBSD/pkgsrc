@@ -1,3 +1,5 @@
+$NetBSD: patch-bb,v 1.2 1998/08/07 10:40:50 agc Exp $
+
 --- ./pbm/libpbm1.c.orig	Mon Jan 10 12:37:22 1994
 +++ ./pbm/libpbm1.c	Sun Aug 13 00:03:56 1995
 @@ -132,7 +132,7 @@
