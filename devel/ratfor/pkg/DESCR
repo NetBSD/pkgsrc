@@ -1,0 +1,9 @@
+Ratfor is a preprocessor for Fortran code that allows the use C-like
+flow expressions.  Ratfor was invented by Brian Kernigham.  Statements
+on a line may be separated by a ";". Statements may be grouped
+together with braces }.  Do loops do not require statement numbers
+because {} defines the range, etc.  The Fortran relational operators
+.gt.,.ge,.ne., etc. may be written >,<=,!=,etc.  All of these are
+translated into Fortran 77 by Ratfor.  Ratfor also frees you from
+Fortran's strict indentation rules.  Anything from a # to the end of
+the line is a comment.

@@ -1,0 +1,140 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/02/10 04:36:53 jtb Exp $
+
+--- ratfor.man.orig	Sun Feb 14 02:05:24 1999
++++ ratfor.man
+@@ -1,21 +1,29 @@
+-NAME
+-  ratfor77 - ratfor preprocessor for fortran77
+-
+-SYNOPSIS
+- ratfor [-l n] [-C] [-o output] input
+-
+-PARAMETERS
+- -l n        user sets strating label n
+- -o output   specify output file, otherwise it is stdout 
+- -C          keep comments in (useful for compiler directives)
+-
+-
+-DESCRIPTION
++.Dd February 1, 2001
++.Dt RATFOR 1
++.Os
++.Sh NAME
++.Nm ratfor
++.Nd a public domain Ratfor preprocessor for Fortran 77
++.Sh SYNOPSIS
++.Nm
++.Op Fl l Ar n
++.Op Fl C
++.Op Fl o Ar output
++.Ar input
++.Sh PARAMETERS
++.Bl -tag -width Ar
++.It Fl l Ar n
++user sets starting label n
++.It Fl o Ar output
++specify output file, otherwise it is stdout
++.It Fl C
++keep comments in (useful for compiler directives)
++.Sh DESCRIPTION
+ Ratfor has the following syntax:
+-
++.Pp
+ prog:   stat
+         prog stat
+-
++.Pp
+ stat:   if (...) stat
+         if (...) stat else stat
+         while (...) stat
+@@ -30,11 +38,11 @@
+         digits stat
+         { prog }  or  [ prog ]  or  $( prog $)
+         anything unrecognizable
+-
++.Pp
+ where stat is any Fortran or Ratfor statement, and intexpr is an
+ expression that resolves into an integer value.  A statement is
+-terminated by an end-of-line or a semicolon.  The following translations
+-are also performed.
++terminated by an end-of-line or a semicolon.  The following
++translations are also performed.
+ 
+         <       .lt.    <=      .le.
+         ==      .eq.
+@@ -42,39 +50,55 @@
+         >=      .ge.    >       .gt.
+         |       .or.    &       .and.
+         !       .not.   ^       .not.   ~       .not.
+-
++.Pp
+ Integer constants in bases other that decimal may be specified as
+ n%dddd...  where n is a decimal number indicating the base and dddd...
+ are digits in that base.  For bases > 10, letters are used for digits
+ above 9.  Examples:  8%77, 16%2ff, 2%0010011.  The number is converted
+ the equivalent decimal value using multiplication; this may cause sign
+ problems if the number has too many digits.
+-
++.Pp
+ String literals ("..." or '...') can be continued across line boundaries
+ by ending the line to be continued with an underline.  The underline is
+ not included as part of the literal.  Leading blanks and tabs on the
+ next line are ignored; this facilitates consistent indentation.
+-
++.Pp
+         include file
+-
++.Pp
+ will include the named file in the input.
+-
++.Pp
+         define (name,value)     or
+         define name value
+-
+-defines name as a symbolic parameter with the indicated value.  Names of
+-symbolic parameters may contain letters, digits, periods, and underline
+-character but must begin with a letter (e.g.  B.FLAG).  Upper case is
+-not equivalent to lower case in parameter names.
+-
++.Pp
++defines name as a symbolic parameter with the indicated value.  Names
++of symbolic parameters may contain letters, digits, periods, and
++underline character but must begin with a letter (e.g.  B.FLAG).
++Upper case is not equivalent to lower case in parameter names.
++.Pp
+         string name "character string"          or
+         string name(size) "character string"
+-
+-defines name to be an integer array long enough to accomodate the ascii
+-codes for the given character string, one per word.  The last word of
+-name is initialized to the symbolic parameter EOS, and indicates the end
+-of string.
+-
+-KEYWORDS
+-ratfor fortran preprocessor fortran77 ratfor77 spp
+-
++.Pp
++defines name to be an integer array long enough to accomodate the
++ASCII codes for the given character string, one per word. The last
++word of name is initialized to the symbolic parameter EOS, and
++indicates the end of string.
++.Pp
++.Sh SEE ALSO
++.Xr f77 1 ,
++.Pp
++.Sh HISTORY
++Derived from a preprocessor distributed by the University of Arizona
++(not derived from AT&T code). Closely corresponds to the preprocessor
++described in the "SOFTWARE TOOLS" book.
++.Pp
++.Sh BUGS
++The switch statment switches on an integer valued expression.  It
++should switch on an integer variable.  The reason is that "implicit
++undefined" "implicit null" is unusable because the switch is done on a
++new variable that is not declared or declarable by the programmer who
++cannot guess its name. (This is not really a bug but a design error in
++both AT&T ratfor and this public domain ratfor).
++.Pp
++.Sh COPYING
++This code is in the public domain. In other words, all rights
++are granted to all recipients, "public" at large.

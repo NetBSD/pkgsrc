@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/10 04:36:52 jtb Exp $
+
+--- Makefile.orig	Fri Feb  2 03:38:11 2001
++++ Makefile
+@@ -15,7 +15,7 @@
+ 
+ 
+ SIGNED_CHAR="char"
+-CC=cc
++#CC=cc
+ 
+ 
+ # we don't want the standard SEP flags so override them
+@@ -34,8 +34,7 @@
+ 	$(RM) $(SEPBINDIR)/ratfor77
+ #
+ ratfor77:	rat4.o lookup.o getopt.o 
+-	cc  rat4.o lookup.o getopt.o  -o ratfor77
++	$(CC) $(CFLAGS) rat4.o lookup.o getopt.o  -o ratfor77
+ 
+-%.o:	%.c
+-	${CC}	${OCDEFINES} $*.c -o$*.o
+-	
++.c.o:
++	${CC} $(CFLAGS) ${OCDEFINES} $*.c -o$*.o
