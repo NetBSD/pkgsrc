@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2003/08/31 21:15:05 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.10.2.1 2003/12/30 23:12:28 agc Exp $
 bin/icehelp
 bin/icesh
 bin/icewm
+bin/icewm-session
 bin/icewmbg
 bin/icewmhint
 bin/icewmtray
