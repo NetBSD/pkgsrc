@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/11 04:23:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/08/13 03:29:54 jschauma Exp $
 README.html
 bin/HtmlConverter
 bin/appletviewer
@@ -154,6 +154,7 @@ demo/applets/JumpingBox/JumpingBox.java
 demo/applets/JumpingBox/example1.html
 demo/applets/JumpingBox/sounds/adapt-or-die.au
 demo/applets/JumpingBox/sounds/cannot.be.completed.au
+demo/applets/JumpingBox/sounds/danger.au
 demo/applets/JumpingBox/sounds/ip.au
 demo/applets/JumpingBox/sounds/that.hurts.au
 demo/applets/JumpingBox/sounds/thin.bell.au
@@ -198,11 +199,6 @@ demo/applets/SpreadSheet/SpreadSheet.class
 demo/applets/SpreadSheet/SpreadSheet.java
 demo/applets/SpreadSheet/SpreadSheetInput.class
 demo/applets/SpreadSheet/example1.html
-demo/applets/SymbolTest/SymbolCanvas.class
-demo/applets/SymbolTest/SymbolTest$MyAdapter.class
-demo/applets/SymbolTest/SymbolTest.class
-demo/applets/SymbolTest/SymbolTest.java
-demo/applets/SymbolTest/example1.html
 demo/applets/TicTacToe/TicTacToe.class
 demo/applets/TicTacToe/TicTacToe.java
 demo/applets/TicTacToe/audio/beep.au
@@ -582,6 +578,7 @@ demo/plugin/applets/JumpingBox/JumpingBox.java
 demo/plugin/applets/JumpingBox/example1.html
 demo/plugin/applets/JumpingBox/sounds/adapt-or-die.au
 demo/plugin/applets/JumpingBox/sounds/cannot.be.completed.au
+demo/plugin/applets/JumpingBox/sounds/danger.au
 demo/plugin/applets/JumpingBox/sounds/ip.au
 demo/plugin/applets/JumpingBox/sounds/that.hurts.au
 demo/plugin/applets/JumpingBox/sounds/thin.bell.au
@@ -626,11 +623,6 @@ demo/plugin/applets/SpreadSheet/SpreadSheet.class
 demo/plugin/applets/SpreadSheet/SpreadSheet.java
 demo/plugin/applets/SpreadSheet/SpreadSheetInput.class
 demo/plugin/applets/SpreadSheet/example1.html
-demo/plugin/applets/SymbolTest/SymbolCanvas.class
-demo/plugin/applets/SymbolTest/SymbolTest$MyAdapter.class
-demo/plugin/applets/SymbolTest/SymbolTest.class
-demo/plugin/applets/SymbolTest/SymbolTest.java
-demo/plugin/applets/SymbolTest/example1.html
 demo/plugin/applets/TicTacToe/TicTacToe.class
 demo/plugin/applets/TicTacToe/TicTacToe.java
 demo/plugin/applets/TicTacToe/audio/beep.au
@@ -655,6 +647,7 @@ demo/plugin/applets/WireFrame/models/cube.obj
 demo/plugin/applets/WireFrame/models/dinasaur.obj
 demo/plugin/applets/WireFrame/models/hughes_500.obj
 demo/plugin/applets/WireFrame/models/knoxS.obj
+demo/plugin/applets.html
 demo/plugin/jfc/FileChooserDemo/FileChooserDemo.jar
 demo/plugin/jfc/FileChooserDemo/README.txt
 demo/plugin/jfc/FileChooserDemo/images/gifIcon.gif
@@ -957,7 +950,6 @@ src.zip
 @dirrm demo/plugin/applets/TicTacToe/images
 @dirrm demo/plugin/applets/TicTacToe/audio
 @dirrm demo/plugin/applets/TicTacToe
-@dirrm demo/plugin/applets/SymbolTest
 @dirrm demo/plugin/applets/SpreadSheet
 @dirrm demo/plugin/applets/SortDemo
 @dirrm demo/plugin/applets/SimpleGraph
@@ -1033,7 +1025,6 @@ src.zip
 @dirrm demo/applets/TicTacToe/images
 @dirrm demo/applets/TicTacToe/audio
 @dirrm demo/applets/TicTacToe
-@dirrm demo/applets/SymbolTest
 @dirrm demo/applets/SpreadSheet
 @dirrm demo/applets/SortDemo
 @dirrm demo/applets/SimpleGraph
