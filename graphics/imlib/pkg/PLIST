@@ -1,18 +1,20 @@
-@comment $NetBSD: PLIST,v 1.6 1999/10/24 16:49:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 1999/10/28 00:23:12 jlam Exp $
 bin/imlib_config
 bin/imlib-config
 etc/imrc
 etc/im_palette.pal
+etc/im_palette-small.pal
+etc/im_palette-tiny.pal
 include/gdk_imlib.h
 include/gdk_imlib_private.h
 include/gdk_imlib_types.h
 include/Imlib.h
 include/Imlib_private.h
 include/Imlib_types.h
-lib/libImlib.so.10.7
+lib/libImlib.so.10.8
 lib/libImlib.a
 lib/libgdk_imlib.a
-lib/libgdk_imlib.so.10.7
+lib/libgdk_imlib.so.10.8
 share/aclocal/imlib.m4
 share/doc/imlib/bg.gif
 share/doc/imlib/border_diag.gif
