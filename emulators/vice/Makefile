@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/09/21 12:37:12 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2002/11/30 23:36:33 salo Exp $
 #
 
 DISTNAME=		vice-1.10
@@ -15,6 +15,8 @@ MAINTAINER=		kristerw@netbsd.org
 HOMEPAGE=		http://viceteam.bei.t-online.de/
 COMMENT=		Emulator for C64, C128, CBM-II, PET, and VIC20
 
+BUILD_USES_MSGFMT=	YES
+
 RESTRICTED=		"ROM image copyright is questionable"
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -23,8 +25,8 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
-BUILD_USES_MSGFMT=	YES
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
