@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/12/22 21:17:25 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/22 13:36:13 minskim Exp $
 
---- makefile.orig	Sat Apr  3 15:42:49 1999
+--- makefile.orig	1999-04-03 07:42:49.000000000 -0600
 +++ makefile
 @@ -1,10 +1,10 @@
  OBJECTS=card.o freecell.o option.o stack.o subwindows.o undo.o util.o gnmanager.o random.o
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/12/22 21:17:25 hubertf Exp $
  
  all: $(OBJECTS) lib
  	$(CC) -o xfreecell $(CFLAGS) $(OBJECTS) $(LIBS)
-@@ -25,13 +25,13 @@
+@@ -25,13 +25,13 @@ static-release: static
  
  clean:
  	rm -f *~ *.o a.out xfreecell libns.a
@@ -34,4 +34,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/12/22 21:17:25 hubertf Exp $
 +	install xfreecell.6 $(DESTDIR)${PREFIX}/man/man6
  #	install -d $(LIBDIR)
 -#	install ms-compatible/MSNumbers $(DESTDIR)/usr/local/lib/xfreecell
+\ No newline at end of file
 +#	install ms-compatible/MSNumbers $(DESTDIR)${PREFIX}/lib/xfreecell
