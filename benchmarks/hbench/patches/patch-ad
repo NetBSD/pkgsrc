@@ -1,19 +1,19 @@
-$NetBSD: patch-ad,v 1.1 1998/09/05 22:02:19 garbled Exp $
+$NetBSD: patch-ad,v 1.2 1998/09/23 16:56:00 agc Exp $
 --- scripts/create-all-summaries.orig	Sat Sep  5 09:15:35 1998
 +++ scripts/create-all-summaries	Sat Sep  5 09:16:09 1998
 @@ -31,13 +31,10 @@
  #
- # $Id: patch-ad,v 1.1 1998/09/05 22:02:19 garbled Exp $
+ # $Id: patch-ad,v 1.2 1998/09/23 16:56:00 agc Exp $
  
 -# Step 1: Discover hbench root path
 -HBENCHROOT=`(cd \`dirname $0\`/.. ; pwd)`
 -
 -for dir in */*
-+for dir in XXXPREFIXXXX/share/hbench/*/*
++for dir in @PREFIX@/share/hbench/*/*
  do
      if [ -d $dir ]; then
  	echo Creating summary for $dir...
 -	${HBENCHROOT}/scripts/gen-summary $dir > ${dir}/summary
-+	XXXPREFIXXXX/bin/hbench/gen-summary $dir > ${dir}/summary
++	@PREFIX@/bin/hbench/gen-summary $dir > ${dir}/summary
      fi
  done

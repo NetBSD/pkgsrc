@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 1998/09/05 22:02:20 garbled Exp $
+$NetBSD: patch-ai,v 1.2 1998/09/23 16:56:01 agc Exp $
 --- Results/Makefile.orig	Sat Sep  5 09:35:16 1998
 +++ Results/Makefile	Sat Sep  5 09:36:22 1998
 @@ -41,8 +41,8 @@
@@ -7,8 +7,8 @@ $NetBSD: patch-ai,v 1.1 1998/09/05 22:02:20 garbled Exp $
  SHELL=/bin/sh
 -ARCH=`$(SHELL) ../scripts/config.guess | sed 's/-.*-.*$$//'`
 -OS=`$(SHELL) ../scripts/config.guess | sed 's/^.*-.*-//'`
-+ARCH=`$(SHELL) XXXPREFIXXXX/bin/hbench/config.guess | sed 's/-.*-.*$$//'`
-+OS=`$(SHELL) XXXPREFIXXXX/bin/hbench/config.guess | sed 's/^.*-.*-//'`
++ARCH=`$(SHELL) @PREFIX@/bin/hbench/config.guess | sed 's/-.*-.*$$//'`
++OS=`$(SHELL) @PREFIX@/bin/hbench/config.guess | sed 's/^.*-.*-//'`
  
  default:
  	@echo "Select one of the following targets:"
@@ -17,12 +17,12 @@ $NetBSD: patch-ai,v 1.1 1998/09/05 22:02:20 garbled Exp $
  
  summaries:
 -	$(SHELL) ../scripts/create-all-summaries
-+	$(SHELL) XXXPREFIXXXX/bin/hbench/create-all-summaries
++	$(SHELL) @PREFIX@/bin/hbench/create-all-summaries
  
  analyses:
 -	$(SHELL) ../scripts/create-all-analyses
-+	$(SHELL) XXXPREFIXXXX/bin/hbench/create-all-analyses
++	$(SHELL) @PREFIX@/bin/hbench/create-all-analyses
  
  latencygraphs:
 -	$(SHELL) ../scripts/create-all-latgraphs
-+	$(SHELL) XXXPREFIXXXX/bin/hbench/create-all-latgraphs
++	$(SHELL) @PREFIX@/bin/hbench/create-all-latgraphs
