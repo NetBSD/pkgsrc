@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3008 2003/08/08 12:31:17 jmmv Exp $
+$NetBSD: CHANGES,v 1.3009 2003/08/08 12:45:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3218,3 +3218,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated 6to4 to 1.4 [grant 2003-08-08]
 	Updated xterset to 0.5.2 [hubertf 2003-08-08]
 	Updated kopete to 0.7 [jmmv 2003-08-08]
+	Updated trn to 4.76 [wiz 2003-08-08]
