@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2002/10/14 11:49:54 skrll Exp $
+# $NetBSD: Makefile,v 1.50 2002/10/18 19:22:09 jlam Exp $
 #
 
 DISTNAME=		pth-1.4.1
@@ -29,10 +29,13 @@ PLIST_SUBST+=		PTH_MAJOR=${PTH_MAJOR} PTH_MINOR=${PTH_MINOR}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-.  if ${MACHINE_ARCH} == "m68k" && (${OS_VERSION:M1.5.[12]*} || ${OS_VERSION:M1.[0-4]*})
-@${ECHO} Building without --enable-syscall-hard. lib/18644 needs fixing.
-.  else
+.  if ${MACHINE_ARCH} == "m68k"
+.    if !empty(OS_VERSION:M1.5.[12]*) || !empty(OS_VERSION:M1.[0-4]*)
+pre-configure:
+	@${ECHO} Building without --enable-syscall-hard. lib/18644 needs fixing.
+.    else
 CONFIGURE_ARGS+=	--enable-syscall-hard
+.    endif
 .  endif
 .endif
 
