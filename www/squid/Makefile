@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.120.2.9 2005/02/17 15:37:00 salo Exp $
+# $NetBSD: Makefile,v 1.120.2.10 2005/02/21 00:29:40 salo Exp $
 
 DISTNAME=	squid-2.5.STABLE8
 PKGNAME=	squid-2.5.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -13,7 +13,9 @@ PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
 PATCHFILES=	squid-2.5.STABLE8-dns_assert.patch \
 		squid-2.5.STABLE8-format_fixes.patch \
 		squid-2.5.STABLE8-html_high_chars.patch \
-		squid-2.5.STABLE8-ftp_cleanup.patch
+		squid-2.5.STABLE8-ftp_cleanup.patch \
+		squid-2.5.STABLE8-relaxed_header_parser.patch \
+		squid-2.5.STABLE8-gcc4.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
@@ -29,7 +31,7 @@ DATADIR=	${VARBASE}/squid
 
 # Update this time stamp pattern if any of official distfiles has changed.
 #
-DIST_STAMP=	2005021100
+DIST_STAMP=	2005022000
 
 DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
 
