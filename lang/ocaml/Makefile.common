@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.5 2005/03/24 11:32:50 adam Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/03/26 16:20:35 adam Exp $
 
 DISTNAME=	ocaml-3.08.3
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-3.08/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://caml.inria.fr/ocaml/
 COMMENT=	The latest implementation of the Caml dialect of ML
 
