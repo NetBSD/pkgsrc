@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2504 2003/06/14 09:29:30 shell Exp $
+$NetBSD: CHANGES,v 1.2505 2003/06/14 11:24:01 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2457,3 +2457,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Net to 1.15 [shell 2003-06-14]
 	Updated p5-SSLeay to 0.51 [shell 2003-06-14]
 	Updated p5-Net-SSLeay to 1.23 [shell 2003-06-14]
+	Updated pekwm to 0.1.3 [jmmv 2003-06-14]
