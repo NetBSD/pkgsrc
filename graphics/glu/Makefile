@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/10 23:10:38 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/11 02:03:41 jlam Exp $
 #
 
 PKGNAME=	${DISTNAME:C/MesaLib/glu/}
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
-_MESA_REQD=		${MESA_VERSION}
+MESA_REQD+=		${MESA_VERSION}
 
 INSTLIBS=	${WRKSRC}/src/glu/sgi/libGLU.la
 
