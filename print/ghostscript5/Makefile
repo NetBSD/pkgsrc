@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1998/11/08 11:04:50 frueauf Exp $
+# $NetBSD: Makefile,v 1.28 1998/11/11 11:58:55 frueauf Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -55,11 +55,7 @@ BUILD_ROOT=	${PKGSRCDIR}
 PAPERSIZE_DEF=	-DA4
 .endif
 
-.if defined(BATCH)
 SCRIPT_SUFFIX=	.batch
-.else
-BUILD_DEPENDS+=	${PREFIX}/bin/dialog:../../misc/dialog
-.endif
 
 post-extract:
 	${LN} -s ${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ${WRKSRC}/jpeg
