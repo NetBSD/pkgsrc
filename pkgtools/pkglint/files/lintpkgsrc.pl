@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.51 2001/05/30 16:44:46 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.52 2001/05/31 17:37:25 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -247,7 +247,6 @@ if ($opt{'D'} && @ARGV)
     }
 exit;
 
-
 # Could speed up by building a cache of package names to paths, then processing
 # each package name once against the tests.
 sub check_prebuilt_packages
@@ -269,6 +268,7 @@ sub check_prebuilt_packages
 		    {
 		    print "$File::Find::dir/$_\n";
 		    push(@matched_prebuiltpackages, "$File::Find::dir/$_");
+		    last;
 		    }
 		}
 	    }
@@ -365,7 +365,6 @@ sub get_default_makefile_vars
     if (! $default_vars->{'MACHINE_ARCH'})
 	{ $default_vars->{'MACHINE_ARCH'} = $default_vars->{'MACHINE'}; }
 
-    $default_vars->{'LINTPKGSRC'} = 'YES';
     $default_vars->{'EXTRACT_SUFX'} = 'tar.gz';
     $default_vars->{'OBJECT_FMT'} = 'x';
     $default_vars->{'LOWER_OPSYS'} = lc($default_vars->{'OPSYS'});
@@ -685,8 +684,11 @@ sub parse_makefile_vars
     close(FILE);
 
     # Some Makefiles depend on these being set
-    if ($file ne '/etc/mk.conf')
+    if ($file eq '/etc/mk.conf')
+	{ $vars{'LINTPKGSRC'} = 'YES'; }
+    else
 	{ %vars = %{$default_vars}; }
+
     if ($file =~ m#(.*)/#)
 	{ $vars{'.CURDIR'} = $1; }
     if ($opt{'L'})
