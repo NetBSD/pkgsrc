@@ -1,38 +1,22 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/09/17 08:18:34 tron Exp $
+$NetBSD: patch-ab,v 1.2 1999/11/16 00:00:27 hubertf Exp $
 
-*** DEFAULTS/Defaults.netbsd.orig	Wed Nov 12 23:52:33 1997
---- DEFAULTS/Defaults.netbsd	Wed Nov 12 23:55:30 1997
-***************
-*** 19,25 ****
-  CWARNOPTS=
-  
-  DEFINCDIRS=	$(SRCROOT)/include
-! LDPATH=		-L/opt/schily/lib
-  #RUNPATH=	-R /opt/schily/lib -R $(OLIBSDIR)	Will probably not work
-  
-  ###########################################################################
---- 19,25 ----
-  CWARNOPTS=
-  
-  DEFINCDIRS=	$(SRCROOT)/include
-! LDPATH=		-L$(SRCROOT)/lib
-  #RUNPATH=	-R /opt/schily/lib -R $(OLIBSDIR)	Will probably not work
-  
-  ###########################################################################
-***************
-*** 27,33 ****
-  # Installation config stuff
-  #
-  ###########################################################################
-! INS_BASE=	/opt/schily
-  INS_KBASE=	/
-  #
-  DEFUMASK=	002
---- 27,33 ----
-  # Installation config stuff
-  #
-  ###########################################################################
-! INS_BASE=	$(PREFIX)
-  INS_KBASE=	/
-  #
-  DEFUMASK=	002
+--- DEFAULTS/Defaults.netbsd.orig	Tue Nov  2 12:41:03 1999
++++ DEFAULTS/Defaults.netbsd	Mon Nov 15 20:29:31 1999
+@@ -19,7 +19,7 @@
+ CWARNOPTS=
+ 
+ DEFINCDIRS=	$(SRCROOT)/include
+-LDPATH=		-L/opt/schily/lib
++LDPATH=		-L$(SRCROOT)/lib
+ #RUNPATH=	-R $(INS_BASE)/lib -R /opt/schily/lib -R $(OLIBSDIR)	Will probably not work
+ 
+ ###########################################################################
+@@ -27,7 +27,7 @@
+ # Installation config stuff
+ #
+ ###########################################################################
+-INS_BASE=	/opt/schily
++INS_BASE=	$(PREFIX)
+ INS_KBASE=	/
+ #
+ DEFUMASK=	002
