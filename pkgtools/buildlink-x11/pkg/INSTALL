@@ -1,11 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 2001/08/08 07:23:28 jlam Exp $
+# $NetBSD: INSTALL,v 1.3 2001/08/19 16:22:26 tron Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 CP="@CP@"
+ECHO="@ECHO@"
 GREP="@GREP@"
 LN="@LN@"
 MV="@MV@"
@@ -36,21 +37,21 @@ POST-INSTALL)
 
 	if [ ${PKG_PREFIX} = ${X11BASE} -o -f ${HOSTDEF} ]
 	then
-		echo -n "Updating ${HOSTDEF}..."
+		${ECHO} -n "Updating ${HOSTDEF}..."
 		${CP} -f ${HOSTDEF} ${HOSTDEF}.bak
 	else
-		echo -n "Creating ${HOSTDEF}..."
+		${ECHO} -n "Creating ${HOSTDEF}..."
 		${CP} -f ${X11_HOSTDEF} ${HOSTDEF}.bak
 	fi
 	( ${GREP} -v buildlinkX11 ${HOSTDEF}.bak;			\
-	  echo '#include <buildlinkX11.def>';				\
+	  ${ECHO} '#include <buildlinkX11.def>';			\
 	) > ${HOSTDEF}
 	${RM} -f ${HOSTDEF}.bak
-	echo "done."
+	${ECHO} "done."
 	;;
 
 *)
-	echo "Unexpected argument: ${STAGE}"
+	${ECHO} "Unexpected argument: ${STAGE}"
 	exit 1
 	;;
 esac

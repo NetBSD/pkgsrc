@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/08/08 07:23:28 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/08/19 16:22:25 tron Exp $
 
 DISTNAME=	buildlink-x11-0.7
 CATEGORIES=	pkgtools devel x11
@@ -23,6 +23,7 @@ FILES_SUBST=		X11BASE=${X11BASE}
 FILES_SUBST+=		PREFIX=${PREFIX}
 FILES_SUBST+=		CMP=${CMP:Q}
 FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		ECHO=${ECHO:Q}
 FILES_SUBST+=		GREP=${GREP:Q}
 FILES_SUBST+=		LN=${LN:Q}
 FILES_SUBST+=		MV=${MV:Q}
