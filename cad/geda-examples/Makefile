@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/22 07:21:54 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/23 04:02:55 dmcmahill Exp $
 #
 
 DISTNAME=	geda-examples-${PKGVERSION}
@@ -14,8 +14,7 @@ COMMENT=	Examples for gEDA
 
 CONFLICTS+=	gEDA<19991011
 
-DIST_SUBDIR=	geda
-PKGVERSION=	20030901
+.include "../../cad/geda/Makefile.common"
 
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
