@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/04/20 14:08:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/08/21 15:08:06 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -10,6 +10,7 @@ bin/create_makefiles
 bin/cvs-clean
 bin/cvs2dist
 bin/cvsaskpass
+bin/cvsbackport
 bin/cvsblame
 bin/cvscheck
 bin/cvslastchange
@@ -18,10 +19,13 @@ bin/cvsrevertlast
 bin/cvsservice
 bin/cvsversion
 bin/cxxmetric
+bin/dprof2calltree
 bin/extend_dmalloc
 bin/extractrc
 bin/findmissingcrystal
 bin/fixkdeincludes
+bin/fixuifiles
+bin/hotshot2calltree
 bin/includemocs
 bin/kapptemplate
 bin/kbabel
@@ -32,12 +36,18 @@ bin/kde-build
 bin/kdedoc
 bin/kdekillall
 bin/kdelnk2desktop.py
+bin/kdemangen.pl
 bin/kompare
 bin/kuiviewer
 bin/licensecheck
 bin/makeobj
+bin/memprof2calltree
 bin/noncvslist
+bin/op2calltree
+bin/package_crystalsvg
+bin/png2mng.pl
 bin/po2xml
+bin/pprof2calltree
 bin/pruneemptydirs
 bin/qtdoc
 bin/split2po
@@ -61,8 +71,11 @@ include/kbabel/itempart.h
 include/kbabel/kbabeldatatool.h
 include/kbabel/kbabeldictbox.h
 include/kbabel/kbabeldictiface.h
+include/kbabel/kbproject.h
+include/kbabel/kbprojectmanager.h
 include/kbabel/msgfmt.h
 include/kbabel/poinfo.h
+include/kbabel/projectsettings.h
 include/kbabel/regexpextractor.h
 include/kbabel/searchengine.h
 include/kbabel/tagextractor.h
@@ -119,6 +132,10 @@ lib/kde3/kfile_ts.la
 lib/kde3/kfile_ts.so
 lib/kde3/libcervisiapart.la
 lib/kde3/libcervisiapart.so
+lib/kde3/libdialogpages.la
+lib/kde3/libdialogpages.so
+lib/kde3/libdialogpages.so.0
+lib/kde3/libdialogpages.so.0.0
 lib/kde3/libkomparenavtreepart.la
 lib/kde3/libkomparenavtreepart.so
 lib/kde3/libkomparepart.la
@@ -178,6 +195,9 @@ share/doc/kde/HTML/en/cervisia/index.cache.bz2
 share/doc/kde/HTML/en/cervisia/index.docbook
 share/doc/kde/HTML/en/cervisia/logtree.png
 share/doc/kde/HTML/en/cervisia/mainview.png
+share/doc/kde/HTML/en/cervisia/patch.png
+share/doc/kde/HTML/en/cervisia/popup.png
+share/doc/kde/HTML/en/cervisia/repositories.png
 share/doc/kde/HTML/en/cervisia/resolve.png
 share/doc/kde/HTML/en/cervisia/updatetag.png
 share/doc/kde/HTML/en/kbabel/TODO
@@ -240,33 +260,33 @@ share/doc/kde/HTML/en/kcachegrind/index.docbook
 share/doc/kde/HTML/en/kompare/common
 share/doc/kde/HTML/en/kompare/index.cache.bz2
 share/doc/kde/HTML/en/kompare/index.docbook
+share/doc/kde/HTML/en/umbrello/activity-diagram.png
+share/doc/kde/HTML/en/umbrello/add-remove-languages.png
+share/doc/kde/HTML/en/umbrello/aggregation.png
+share/doc/kde/HTML/en/umbrello/association.png
 share/doc/kde/HTML/en/umbrello/authors.docbook
+share/doc/kde/HTML/en/umbrello/class-diagram.png
+share/doc/kde/HTML/en/umbrello/class.png
+share/doc/kde/HTML/en/umbrello/code-import.png
 share/doc/kde/HTML/en/umbrello/code_import_and_generation.docbook
+share/doc/kde/HTML/en/umbrello/collaboration-diagram.png
 share/doc/kde/HTML/en/umbrello/common
+share/doc/kde/HTML/en/umbrello/composition.png
 share/doc/kde/HTML/en/umbrello/credits.docbook
+share/doc/kde/HTML/en/umbrello/folders.png
+share/doc/kde/HTML/en/umbrello/generalization.png
+share/doc/kde/HTML/en/umbrello/generation-options.png
 share/doc/kde/HTML/en/umbrello/index.cache.bz2
 share/doc/kde/HTML/en/umbrello/index.docbook
 share/doc/kde/HTML/en/umbrello/introduction.docbook
 share/doc/kde/HTML/en/umbrello/other_features.docbook
-share/doc/kde/HTML/en/umbrello/pics/activity-diagram.png
-share/doc/kde/HTML/en/umbrello/pics/add-remove-languages.png
-share/doc/kde/HTML/en/umbrello/pics/aggregation.png
-share/doc/kde/HTML/en/umbrello/pics/association.png
-share/doc/kde/HTML/en/umbrello/pics/class-diagram.png
-share/doc/kde/HTML/en/umbrello/pics/class.png
-share/doc/kde/HTML/en/umbrello/pics/code-import.png
-share/doc/kde/HTML/en/umbrello/pics/collaboration-diagram.png
-share/doc/kde/HTML/en/umbrello/pics/composition.png
-share/doc/kde/HTML/en/umbrello/pics/folders.png
-share/doc/kde/HTML/en/umbrello/pics/generalization.png
-share/doc/kde/HTML/en/umbrello/pics/generation-options.png
-share/doc/kde/HTML/en/umbrello/pics/sequence-diagram.png
-share/doc/kde/HTML/en/umbrello/pics/state-diagram.png
-share/doc/kde/HTML/en/umbrello/pics/umbrello-main-screen.png
-share/doc/kde/HTML/en/umbrello/pics/umbrello-ui-clean.png
-share/doc/kde/HTML/en/umbrello/pics/umbrello-ui.png
-share/doc/kde/HTML/en/umbrello/pics/use-case-diagram.png
+share/doc/kde/HTML/en/umbrello/sequence-diagram.png
+share/doc/kde/HTML/en/umbrello/state-diagram.png
+share/doc/kde/HTML/en/umbrello/umbrello-main-screen.png
+share/doc/kde/HTML/en/umbrello/umbrello-ui-clean.png
+share/doc/kde/HTML/en/umbrello/umbrello-ui.png
 share/doc/kde/HTML/en/umbrello/uml_basics.docbook
+share/doc/kde/HTML/en/umbrello/use-case-diagram.png
 share/doc/kde/HTML/en/umbrello/working_with_umbrello.docbook
 share/kde/apps/catalogmanager/catalogmanagerui.rc
 share/kde/apps/cervisia/cervisiashellui.rc
@@ -541,18 +561,15 @@ share/kde/apps/kcachegrind/kcachegrindui.rc
 share/kde/apps/kcachegrind/tips
 share/kde/apps/kconf_update/cervisia.upd
 share/kde/apps/kconf_update/change_colors.pl
+share/kde/apps/kconf_update/kbabel-project.upd
 share/kde/apps/kconf_update/move_repositories.pl
-share/kde/apps/kompare/icons/crystalsvg/128x128/apps/kompare.png
-share/kde/apps/kompare/icons/crystalsvg/16x16/apps/kompare.png
-share/kde/apps/kompare/icons/crystalsvg/32x32/apps/kompare.png
-share/kde/apps/kompare/icons/crystalsvg/48x48/apps/kompare.png
-share/kde/apps/kompare/icons/locolor/16x16/apps/kompare.png
-share/kde/apps/kompare/icons/locolor/32x32/apps/kompare.png
+share/kde/apps/kompare/komparepartui.rc
 share/kde/apps/kompare/kompareui.rc
-share/kde/apps/komparepart/komparepartui.rc
 share/kde/apps/kstyle/themes/scheck.themerc
 share/kde/apps/kuiviewer/kuiviewer.rc
 share/kde/apps/kuiviewerpart/kuiviewer_part.rc
+share/kde/apps/umbrello/headings/heading.adb
+share/kde/apps/umbrello/headings/heading.ads
 share/kde/apps/umbrello/headings/heading.as
 share/kde/apps/umbrello/headings/heading.cpp
 share/kde/apps/umbrello/headings/heading.cs
@@ -581,84 +598,91 @@ share/kde/apps/umbrello/pics/CVpublic_signal.png
 share/kde/apps/umbrello/pics/CVpublic_slot.png
 share/kde/apps/umbrello/pics/CVpublic_var.png
 share/kde/apps/umbrello/pics/CVstruct.png
-share/kde/apps/umbrello/pics/actor.xpm
-share/kde/apps/umbrello/pics/aggregation.xpm
-share/kde/apps/umbrello/pics/anchor.xpm
+share/kde/apps/umbrello/pics/actor.png
+share/kde/apps/umbrello/pics/aggregation.png
+share/kde/apps/umbrello/pics/align_bottom.png
+share/kde/apps/umbrello/pics/align_hori_middle.png
+share/kde/apps/umbrello/pics/align_left.png
+share/kde/apps/umbrello/pics/align_right.png
+share/kde/apps/umbrello/pics/align_top.png
+share/kde/apps/umbrello/pics/align_vert_middle.png
+share/kde/apps/umbrello/pics/anchor.png
 share/kde/apps/umbrello/pics/arrow.png
-share/kde/apps/umbrello/pics/artifact.xpm
-share/kde/apps/umbrello/pics/association.xpm
-share/kde/apps/umbrello/pics/box.xpm
-share/kde/apps/umbrello/pics/branch.xpm
-share/kde/apps/umbrello/pics/broom.xpm
-share/kde/apps/umbrello/pics/case.xpm
-share/kde/apps/umbrello/pics/component.xpm
-share/kde/apps/umbrello/pics/composition.xpm
-share/kde/apps/umbrello/pics/constraint.xpm
-share/kde/apps/umbrello/pics/cursor-actor.xpm
-share/kde/apps/umbrello/pics/cursor-aggregation.xpm
-share/kde/apps/umbrello/pics/cursor-anchor.xpm
-share/kde/apps/umbrello/pics/cursor-artifact.xpm
-share/kde/apps/umbrello/pics/cursor-association.xpm
-share/kde/apps/umbrello/pics/cursor-box.xpm
-share/kde/apps/umbrello/pics/cursor-branch.xpm
-share/kde/apps/umbrello/pics/cursor-case.xpm
-share/kde/apps/umbrello/pics/cursor-component.xpm
-share/kde/apps/umbrello/pics/cursor-composition.xpm
-share/kde/apps/umbrello/pics/cursor-datatype.xpm
-share/kde/apps/umbrello/pics/cursor-dependency.xpm
-share/kde/apps/umbrello/pics/cursor-end-state.xpm
-share/kde/apps/umbrello/pics/cursor-enum.xpm
-share/kde/apps/umbrello/pics/cursor-fork.xpm
-share/kde/apps/umbrello/pics/cursor-generalisation.xpm
-share/kde/apps/umbrello/pics/cursor-initial-state.xpm
-share/kde/apps/umbrello/pics/cursor-interface.xpm
-share/kde/apps/umbrello/pics/cursor-message-asynchronous.xpm
-share/kde/apps/umbrello/pics/cursor-message-synchronous.xpm
-share/kde/apps/umbrello/pics/cursor-node.xpm
-share/kde/apps/umbrello/pics/cursor-note.xpm
-share/kde/apps/umbrello/pics/cursor-object.xpm
-share/kde/apps/umbrello/pics/cursor-package.xpm
-share/kde/apps/umbrello/pics/cursor-text.xpm
-share/kde/apps/umbrello/pics/cursor-umlclass.xpm
-share/kde/apps/umbrello/pics/cursor-uniassoc.xpm
-share/kde/apps/umbrello/pics/datatype.xpm
-share/kde/apps/umbrello/pics/dependency.xpm
-share/kde/apps/umbrello/pics/end_state.xpm
-share/kde/apps/umbrello/pics/enum.xpm
-share/kde/apps/umbrello/pics/fork.xpm
-share/kde/apps/umbrello/pics/generalization.xpm
-share/kde/apps/umbrello/pics/hline.xpm
-share/kde/apps/umbrello/pics/implements.xpm
-share/kde/apps/umbrello/pics/initial_state.xpm
-share/kde/apps/umbrello/pics/interface.xpm
-share/kde/apps/umbrello/pics/largepackage.xpm
-share/kde/apps/umbrello/pics/lifeline.xpm
-share/kde/apps/umbrello/pics/line.xpm
-share/kde/apps/umbrello/pics/message-asynchronous.xpm
-share/kde/apps/umbrello/pics/message-synchronous.xpm
-share/kde/apps/umbrello/pics/node.xpm
-share/kde/apps/umbrello/pics/note.xpm
-share/kde/apps/umbrello/pics/object.xpm
-share/kde/apps/umbrello/pics/output_win.xpm
-share/kde/apps/umbrello/pics/package.xpm
-share/kde/apps/umbrello/pics/private.png
-share/kde/apps/umbrello/pics/protected.png
-share/kde/apps/umbrello/pics/public.png
-share/kde/apps/umbrello/pics/realizes.xpm
-share/kde/apps/umbrello/pics/smallpackage.xpm
-share/kde/apps/umbrello/pics/snapshot.xpm
+share/kde/apps/umbrello/pics/artifact.png
+share/kde/apps/umbrello/pics/association.png
+share/kde/apps/umbrello/pics/box.png
+share/kde/apps/umbrello/pics/branch.png
+share/kde/apps/umbrello/pics/class.png
+share/kde/apps/umbrello/pics/component.png
+share/kde/apps/umbrello/pics/composition.png
+share/kde/apps/umbrello/pics/containment.png
+share/kde/apps/umbrello/pics/cursor-actor.png
+share/kde/apps/umbrello/pics/cursor-aggregation.png
+share/kde/apps/umbrello/pics/cursor-anchor.png
+share/kde/apps/umbrello/pics/cursor-artifact.png
+share/kde/apps/umbrello/pics/cursor-association.png
+share/kde/apps/umbrello/pics/cursor-box.png
+share/kde/apps/umbrello/pics/cursor-branch.png
+share/kde/apps/umbrello/pics/cursor-class.png
+share/kde/apps/umbrello/pics/cursor-component.png
+share/kde/apps/umbrello/pics/cursor-composition.png
+share/kde/apps/umbrello/pics/cursor-containment.png
+share/kde/apps/umbrello/pics/cursor-datatype.png
+share/kde/apps/umbrello/pics/cursor-dependency.png
+share/kde/apps/umbrello/pics/cursor-end-state.png
+share/kde/apps/umbrello/pics/cursor-enum.png
+share/kde/apps/umbrello/pics/cursor-fork.png
+share/kde/apps/umbrello/pics/cursor-generalisation.png
+share/kde/apps/umbrello/pics/cursor-initial-state.png
+share/kde/apps/umbrello/pics/cursor-interface.png
+share/kde/apps/umbrello/pics/cursor-message-asynchronous.png
+share/kde/apps/umbrello/pics/cursor-message-synchronous.png
+share/kde/apps/umbrello/pics/cursor-node.png
+share/kde/apps/umbrello/pics/cursor-note.png
+share/kde/apps/umbrello/pics/cursor-object.png
+share/kde/apps/umbrello/pics/cursor-package.png
+share/kde/apps/umbrello/pics/cursor-text.png
+share/kde/apps/umbrello/pics/cursor-uniassociation.png
+share/kde/apps/umbrello/pics/cursor-usecase.png
+share/kde/apps/umbrello/pics/datatype.png
+share/kde/apps/umbrello/pics/dependency.png
+share/kde/apps/umbrello/pics/end_state.png
+share/kde/apps/umbrello/pics/enum.png
+share/kde/apps/umbrello/pics/fork.png
+share/kde/apps/umbrello/pics/generalisation.png
+share/kde/apps/umbrello/pics/initial_state.png
+share/kde/apps/umbrello/pics/interface.png
+share/kde/apps/umbrello/pics/message-asynchronous.png
+share/kde/apps/umbrello/pics/message-synchronous.png
+share/kde/apps/umbrello/pics/node.png
+share/kde/apps/umbrello/pics/note.png
+share/kde/apps/umbrello/pics/object.png
+share/kde/apps/umbrello/pics/package.png
 share/kde/apps/umbrello/pics/startlogo.png
-share/kde/apps/umbrello/pics/text.xpm
-share/kde/apps/umbrello/pics/umlclass.xpm
-share/kde/apps/umbrello/pics/umlclass_template.xpm
-share/kde/apps/umbrello/pics/uniassoc.xpm
-share/kde/apps/umbrello/pics/usecaserelation.xpm
-share/kde/apps/umbrello/pics/vline.xpm
+share/kde/apps/umbrello/pics/template.png
+share/kde/apps/umbrello/pics/text.png
+share/kde/apps/umbrello/pics/uniassociation.png
+share/kde/apps/umbrello/pics/usecase.png
 share/kde/apps/umbrello/tips
 share/kde/apps/umbrello/umbrelloui.rc
+share/kde/config.kcfg/cervisiapart.kcfg
+share/kde/config.kcfg/kbabel.kcfg
 share/kde/icons/crystalsvg/128x128/apps/kompare.png
 share/kde/icons/crystalsvg/128x128/apps/umbrello.png
 share/kde/icons/crystalsvg/128x128/mimetypes/umbrellofile.png
+share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_activity.png
+share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_class.png
+share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_collaboration.png
+share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_component.png
+share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_deployment.png
+share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_sequence.png
+share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_state.png
+share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_usecase.png
+share/kde/icons/crystalsvg/16x16/actions/vcs_add.png
+share/kde/icons/crystalsvg/16x16/actions/vcs_commit.png
+share/kde/icons/crystalsvg/16x16/actions/vcs_remove.png
+share/kde/icons/crystalsvg/16x16/actions/vcs_status.png
+share/kde/icons/crystalsvg/16x16/actions/vcs_update.png
 share/kde/icons/crystalsvg/16x16/apps/catalogmanager.png
 share/kde/icons/crystalsvg/16x16/apps/cervisia.png
 share/kde/icons/crystalsvg/16x16/apps/kbabel.png
@@ -667,9 +691,28 @@ share/kde/icons/crystalsvg/16x16/apps/kbugbuster.png
 share/kde/icons/crystalsvg/16x16/apps/kompare.png
 share/kde/icons/crystalsvg/16x16/apps/umbrello.png
 share/kde/icons/crystalsvg/16x16/mimetypes/umbrellofile.png
+share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_activity.png
+share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_class.png
+share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_collaboration.png
+share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_component.png
+share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_deployment.png
+share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_sequence.png
+share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_state.png
+share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_usecase.png
+share/kde/icons/crystalsvg/22x22/actions/vcs_add.png
+share/kde/icons/crystalsvg/22x22/actions/vcs_commit.png
+share/kde/icons/crystalsvg/22x22/actions/vcs_remove.png
+share/kde/icons/crystalsvg/22x22/actions/vcs_status.png
+share/kde/icons/crystalsvg/22x22/actions/vcs_update.png
+share/kde/icons/crystalsvg/22x22/apps/catalogmanager.png
 share/kde/icons/crystalsvg/22x22/apps/cervisia.png
 share/kde/icons/crystalsvg/22x22/apps/umbrello.png
 share/kde/icons/crystalsvg/22x22/mimetypes/umbrellofile.png
+share/kde/icons/crystalsvg/32x32/actions/vcs_add.png
+share/kde/icons/crystalsvg/32x32/actions/vcs_commit.png
+share/kde/icons/crystalsvg/32x32/actions/vcs_remove.png
+share/kde/icons/crystalsvg/32x32/actions/vcs_status.png
+share/kde/icons/crystalsvg/32x32/actions/vcs_update.png
 share/kde/icons/crystalsvg/32x32/apps/catalogmanager.png
 share/kde/icons/crystalsvg/32x32/apps/cervisia.png
 share/kde/icons/crystalsvg/32x32/apps/kbabel.png
@@ -678,6 +721,11 @@ share/kde/icons/crystalsvg/32x32/apps/kbugbuster.png
 share/kde/icons/crystalsvg/32x32/apps/kompare.png
 share/kde/icons/crystalsvg/32x32/apps/umbrello.png
 share/kde/icons/crystalsvg/32x32/mimetypes/umbrellofile.png
+share/kde/icons/crystalsvg/48x48/actions/vcs_add.png
+share/kde/icons/crystalsvg/48x48/actions/vcs_commit.png
+share/kde/icons/crystalsvg/48x48/actions/vcs_remove.png
+share/kde/icons/crystalsvg/48x48/actions/vcs_status.png
+share/kde/icons/crystalsvg/48x48/actions/vcs_update.png
 share/kde/icons/crystalsvg/48x48/apps/catalogmanager.png
 share/kde/icons/crystalsvg/48x48/apps/cervisia.png
 share/kde/icons/crystalsvg/48x48/apps/kbabel.png
@@ -688,6 +736,12 @@ share/kde/icons/crystalsvg/48x48/apps/umbrello.png
 share/kde/icons/crystalsvg/48x48/mimetypes/umbrellofile.png
 share/kde/icons/crystalsvg/64x64/apps/umbrello.png
 share/kde/icons/crystalsvg/64x64/mimetypes/umbrellofile.png
+share/kde/icons/crystalsvg/scalable/actions/vcs_add.svgz
+share/kde/icons/crystalsvg/scalable/actions/vcs_commit.svgz
+share/kde/icons/crystalsvg/scalable/actions/vcs_remove.svgz
+share/kde/icons/crystalsvg/scalable/actions/vcs_status.svgz
+share/kde/icons/crystalsvg/scalable/actions/vcs_update.svgz
+share/kde/icons/crystalsvg/scalable/apps/kompare.svgz
 share/kde/icons/crystalsvg/scalable/apps/umbrello.svgz
 share/kde/icons/crystalsvg/scalable/mimetypes/umbrellofile.svgz
 share/kde/icons/hicolor/16x16/apps/kuiviewer.png
@@ -704,7 +758,6 @@ share/kde/icons/locolor/16x16/apps/kbabel.png
 share/kde/icons/locolor/16x16/apps/kbabeldict.png
 share/kde/icons/locolor/16x16/apps/kbugbuster.png
 share/kde/icons/locolor/16x16/apps/kcachegrind.png
-share/kde/icons/locolor/16x16/apps/kompare.png
 share/kde/icons/locolor/16x16/apps/kuiviewer.png
 share/kde/icons/locolor/16x16/apps/umbrello.png
 share/kde/icons/locolor/16x16/mimetypes/umbrellofile.png
@@ -713,7 +766,6 @@ share/kde/icons/locolor/32x32/apps/kbabel.png
 share/kde/icons/locolor/32x32/apps/kbabeldict.png
 share/kde/icons/locolor/32x32/apps/kbugbuster.png
 share/kde/icons/locolor/32x32/apps/kcachegrind.png
-share/kde/icons/locolor/32x32/apps/kompare.png
 share/kde/icons/locolor/32x32/apps/kuiviewer.png
 share/kde/icons/locolor/32x32/apps/umbrello.png
 share/kde/icons/locolor/32x32/mimetypes/umbrellofile.png
@@ -767,33 +819,32 @@ share/kde/servicetypes/kompareviewpart.desktop
 @comment dirrm share/kde/icons/hicolor/32x32/apps
 @comment dirrm share/kde/icons/hicolor/16x16/mimetypes
 @comment dirrm share/kde/icons/hicolor/16x16/apps
+@comment dirrm share/kde/icons/crystalsvg/scalable/mimetypes
+@comment dirrm share/kde/icons/crystalsvg/scalable/apps
+@comment dirrm share/kde/icons/crystalsvg/scalable/actions
+@comment dirrm share/kde/icons/crystalsvg/64x64/mimetypes
+@comment dirrm share/kde/icons/crystalsvg/64x64/apps
+@comment dirrm share/kde/icons/crystalsvg/48x48/mimetypes
 @comment dirrm share/kde/icons/crystalsvg/48x48/apps
+@comment dirrm share/kde/icons/crystalsvg/48x48/actions
+@comment dirrm share/kde/icons/crystalsvg/32x32/mimetypes
 @comment dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment dirrm share/kde/icons/crystalsvg/32x32/actions
+@comment dirrm share/kde/icons/crystalsvg/22x22/mimetypes
 @comment dirrm share/kde/icons/crystalsvg/22x22/apps
+@comment dirrm share/kde/icons/crystalsvg/22x22/actions
+@comment dirrm share/kde/icons/crystalsvg/16x16/mimetypes
 @comment dirrm share/kde/icons/crystalsvg/16x16/apps
+@comment dirrm share/kde/icons/crystalsvg/16x16/actions
+@comment dirrm share/kde/icons/crystalsvg/128x128/mimetypes
 @comment dirrm share/kde/icons/crystalsvg/128x128/apps
+@comment dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/umbrello/pics
 @dirrm share/kde/apps/umbrello/headings
 @dirrm share/kde/apps/umbrello
 @dirrm share/kde/apps/kuiviewerpart
 @dirrm share/kde/apps/kuiviewer
 @dirrm share/kde/apps/kstyle/themes
-@dirrm share/kde/apps/komparepart
-@dirrm share/kde/apps/kompare/icons/locolor/32x32/apps
-@dirrm share/kde/apps/kompare/icons/locolor/32x32
-@dirrm share/kde/apps/kompare/icons/locolor/16x16/apps
-@dirrm share/kde/apps/kompare/icons/locolor/16x16
-@dirrm share/kde/apps/kompare/icons/locolor
-@dirrm share/kde/apps/kompare/icons/crystalsvg/48x48/apps
-@dirrm share/kde/apps/kompare/icons/crystalsvg/48x48
-@dirrm share/kde/apps/kompare/icons/crystalsvg/32x32/apps
-@dirrm share/kde/apps/kompare/icons/crystalsvg/32x32
-@dirrm share/kde/apps/kompare/icons/crystalsvg/16x16/apps
-@dirrm share/kde/apps/kompare/icons/crystalsvg/16x16
-@dirrm share/kde/apps/kompare/icons/crystalsvg/128x128/apps
-@dirrm share/kde/apps/kompare/icons/crystalsvg/128x128
-@dirrm share/kde/apps/kompare/icons/crystalsvg
-@dirrm share/kde/apps/kompare/icons
 @dirrm share/kde/apps/kompare
 @comment dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kcachegrind/icons/hicolor/32x32/actions
@@ -842,8 +893,6 @@ share/kde/servicetypes/kompareviewpart.desktop
 @dirrm share/kde/apps/cervisia
 @dirrm share/kde/apps/catalogmanager
 @comment dirrm share/kde/apps
-@comment dirrm share/kde/applnk/Development
-@dirrm share/doc/kde/HTML/en/umbrello/pics
 @dirrm share/doc/kde/HTML/en/umbrello
 @dirrm share/doc/kde/HTML/en/kompare
 @dirrm share/doc/kde/HTML/en/kcachegrind
@@ -852,7 +901,6 @@ share/kde/servicetypes/kompareviewpart.desktop
 @dirrm share/doc/kde/HTML/en/cervisia
 @comment dirrm share/doc/kde/HTML/en
 @comment dirrm share/applications/kde
-@comment dirrm share/applications
 @comment dirrm lib/kde3/plugins/styles
 @comment dirrm lib/kde3
 @dirrm include/kbabel
