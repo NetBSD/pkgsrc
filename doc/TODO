@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1590 2004/04/08 13:03:09 ben Exp $
+$NetBSD: TODO,v 1.1591 2004/04/09 00:06:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -204,7 +204,7 @@ Suggested package updates
 	o gnustep-1.9.1
 	o gnutls-1.0.10
 	o gpsim-0.21.0 [bouyer]
-	o gqmpeg-0.91.0
+	o gqmpeg-0.91.1
 	o grepmail-5.23
 	o grhino-0.10.0
 	o gsasl-0.0.14
@@ -229,7 +229,6 @@ Suggested package updates
 	o leafnode-1.9.52
 	o lftp-3.0.1
 	o libcaca-0.9
-	o libcdaudio-0.99.10
 	o libesmtp-1.0.2
 	o libevent-0.8
 	o libidn-0.4.2
@@ -320,7 +319,6 @@ Suggested package updates
 	o snd-7.4
 	o snes9x-1.42
 	o snort-2.1.2 [pkg/25029]
-	o snownews-1.5.1
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
