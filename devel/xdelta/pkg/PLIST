@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 1998/08/22 13:40:39 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/08/14 18:08:21 wiz Exp $
 bin/xdelta
-man/man1/xdelta.1
+include/fakeglib.h
 include/xdelta.h
 include/xdeltaconfig.h
-include/fakeglib.h
-lib/libxdelta.so.0.22.0
 lib/libxdelta.a
+lib/libxdelta.la
+lib/libxdelta.so.0.22.0
+man/man1/xdelta.1
