@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/11/26 06:09:18 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/12/15 20:25:36 agc Exp $
 
 DISTNAME=		ImageMagick-5.3.9
 PKGNAME=		p5-PerlMagick-5.3.9
@@ -16,7 +16,7 @@ DEPENDS+=		${DISTNAME}:../../${MAGICK}
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 MAGICK=			graphics/ImageMagick
-MAGICKDIR=		${PKGSRCDIR}/${MAGICK}
+MAGICKDIR=		${_PKGSRCDIR}/${MAGICK}
 DISTINFO_FILE=		${MAGICKDIR}/distinfo
 FILESDIR=		${MAGICKDIR}/files
 PATCHDIR=		${MAGICKDIR}/patches

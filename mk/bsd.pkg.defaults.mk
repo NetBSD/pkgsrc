@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.24 2001/12/10 12:43:58 martti Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.25 2001/12/15 20:25:37 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -75,7 +75,7 @@ X11BASE?=	/usr/X11R6
 # Possible: any path
 # Default: ${X11PREFIX} or where lesstif12 is installed
 
-DISTDIR?=	${PKGSRCDIR}/distfiles
+DISTDIR?=	${_PKGSRCDIR}/distfiles
 # Directory where original distribution
 # files are stored.
 # Possible: any path you like
@@ -93,7 +93,7 @@ DISTDIR?=	${PKGSRCDIR}/distfiles
 # Possible:  any directories
 # Default: none
 
-PACKAGES?=       ${PKGSRCDIR}/packages
+PACKAGES?=       ${_PKGSRCDIR}/packages
 # Store generated packages on a per-architecture base
 # Possible: any path you like
 # Default: /usr/pkgsrc/packages

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/10/17 23:23:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/12/15 20:25:37 agc Exp $
 #
 
 DISTNAME=	tclX8.2.0
@@ -21,8 +21,8 @@ CONFIGURE_ARGS+=	--enable-shared --with-tcl=${PREFIX}/lib \
 			--with-tk=${PREFIX}/lib
 
 CONFIGURE_ENV+=		\
-	PKGSRC_TCL_SRC_DIR="${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.2" \
-	PKGSRC_TK_SRC_DIR="${PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.3.2"
+	PKGSRC_TCL_SRC_DIR="${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.2" \
+	PKGSRC_TK_SRC_DIR="${_PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.3.2"
 
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
@@ -35,10 +35,10 @@ PATCHDIR=	${.CURDIR}/../../lang/tcl-tclX/patches
 
 post-extract:
 	${MV} ${WRKSRC}/../doc/Memory.n ${WRKSRC}/../doc/TclXMemory.n
-	@if [ ! -e ${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.2 ]; then	\
+	@if [ ! -e ${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.2 ]; then	\
 		cd ../../lang/tcl && ${MAKE} extract;			\
 	fi
-	@if [ ! -e ${PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.3.2 ]; then	\
+	@if [ ! -e ${_PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.3.2 ]; then	\
 		cd ../../x11/tk && ${MAKE} extract;			\
 	fi
 

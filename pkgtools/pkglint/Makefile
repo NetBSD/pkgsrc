@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2001/12/03 21:55:48 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2001/12/15 20:25:39 agc Exp $
 #
 
 DISTNAME=	pkglint-3.16
@@ -20,8 +20,7 @@ NO_CHECKSUM=	yes
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
 
-PKGSRCDIR?=	${.CURDIR}/../..
-MAKE_ENV=	PKGSRCDIR=${PKGSRCDIR}
+MAKE_ENV=	PKGSRCDIR=${_PKGSRCDIR}
 
 DISTVER=	${DISTNAME:S/pkglint-//}
 
@@ -38,14 +37,14 @@ NROFF=		nroff -mandoc
 do-build:
 .for FILE in pkglint lintpkgsrc plist-clash
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
-		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
+		-e 's|@PORTSDIR@|${_PKGSRCDIR}|g'	\
 		-e 's|@DISTVER@|${DISTVER}|g'		\
 		< ${FILESDIR}/${FILE}.pl 		\
 		> ${WRKSRC}/${FILE}
 .endfor
 .for FILE in pkglint lintpkgsrc
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
-		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
+		-e 's|@PORTSDIR@|${_PKGSRCDIR}|g'	\
 		< ${FILESDIR}/${FILE}.1			\
 		> ${WRKSRC}/${FILE}.1
 	${NROFF} ${WRKSRC}/${FILE}.1 >${WRKSRC}/${FILE}.0

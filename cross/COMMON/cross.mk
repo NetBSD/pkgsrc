@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.22 2001/03/28 06:28:16 toshii Exp $
+#	$NetBSD: cross.mk,v 1.23 2001/12/15 20:25:35 agc Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -10,7 +10,7 @@ PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 HOMEPAGE?=		http://egcs.cygnus.com/
 
 TARGET_DIR=		${PREFIX}/${TARGET_ARCH}
-COMMON_DIR=		${PKGSRCDIR}/cross/COMMON
+COMMON_DIR=		${_PKGSRCDIR}/cross/COMMON
 PLIST_PRE?=		${PKGDIR}/PLIST
 MESSAGE_SUBST+=		CROSSBASE=${CROSSBASE}
 
