@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2004/03/08 19:40:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.25 2004/04/02 16:08:21 jmmv Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim-remote/remote-socket.h
@@ -138,6 +138,7 @@ share/pixmaps/gaim/dialogs/gaim_question.png
 share/pixmaps/gaim/dialogs/gaim_warning.png
 share/pixmaps/gaim/icons/away.png
 share/pixmaps/gaim/icons/connect.png
+share/pixmaps/gaim/icons/info.png
 share/pixmaps/gaim/icons/msgpend.png
 share/pixmaps/gaim/icons/msgunread.png
 share/pixmaps/gaim/icons/offline.png
@@ -338,6 +339,7 @@ share/pixmaps/gaim/status/default/secure.png
 share/pixmaps/gaim/status/default/trepia.png
 share/pixmaps/gaim/status/default/wireless.png
 share/pixmaps/gaim/status/default/yahoo.png
+share/pixmaps/gaim/status/default/zephyr.png
 share/pixmaps/gaim/tb_drag_arrow_down.xpm
 share/pixmaps/gaim/tb_drag_arrow_left.xpm
 share/pixmaps/gaim/tb_drag_arrow_right.xpm
@@ -350,6 +352,7 @@ share/sounds/gaim/receive.wav
 share/sounds/gaim/redalert.wav
 share/sounds/gaim/send.wav
 @dirrm share/sounds/gaim
+@comment in xdg-dirs: @dirrm share/sounds
 @dirrm share/pixmaps/gaim/status/default
 @dirrm share/pixmaps/gaim/status
 @dirrm share/pixmaps/gaim/smileys/default
@@ -358,6 +361,7 @@ share/sounds/gaim/send.wav
 @dirrm share/pixmaps/gaim/dialogs
 @dirrm share/pixmaps/gaim/buttons
 @dirrm share/pixmaps/gaim
-@comment in gnome2-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/gaim
 @dirrm include/gaim-remote
