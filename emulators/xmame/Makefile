@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2001/12/04 05:52:22 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2001/12/17 07:10:15 tron Exp $
 #
 
 DISTNAME=		xmame-0.56.1
@@ -107,6 +107,12 @@ post-configure:
 	${SED}	-e "s|@ROMPATH@|${ROMPATH}|g"				\
 		-e "s|@SPOOLDIR@|${SPOOLDIR}|g"				\
 		${TARGET}rc.dist > ${TARGET}rc
+.if ${MAKE_FLAGS:M*USB*} != ""
+	${LN} -fs /usr/include/usb.h ${BUILDLINK_DIR}/include
+	for FILE in /usr/lib/libusb*; do				\
+	  ${LN} -fs $$FILE ${BUILDLINK_DIR}/lib;			\
+	done
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${TARGET}.${MAME_DISP_METHOD}	\
