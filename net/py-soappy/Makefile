@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/16 16:54:26 recht Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/24 10:20:34 recht Exp $
 #
 
 DISTNAME=	SOAPpy-0.10.2
@@ -14,6 +14,8 @@ USE_BUILDLINK2=	YES
 
 PYDISTUTILSPKG=	YES
 PY_PATCHPLIST=	YES
+
+PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
 
 post-install:
 	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py \
