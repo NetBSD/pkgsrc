@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/01/02 12:21:47 salo Exp $
+$NetBSD: patch-aa,v 1.3 2003/01/15 00:27:11 salo Exp $
 
 --- Makefile.orig	Mon Dec 23 18:25:39 2002
-+++ Makefile	Thu Jan  2 12:47:18 2003
-@@ -1,27 +1,25 @@
++++ Makefile	Wed Jan 15 00:53:08 2003
+@@ -1,27 +1,24 @@
 -PREFIX=/usr
 -
  ASPELLDATA=${PREFIX}/share/aspell
@@ -25,7 +25,6 @@ $NetBSD: patch-aa,v 1.2 2003/01/02 12:21:47 salo Exp $
  	$(ASPELL) --lang=slovak create master ./slovak-master < slovak-master.raw
  	$(ASPELL) --lang=slovak create master ./slovak-extend < slovak-extend.raw
 -	echo $(ASPELLDICT) > sk-slovak-aspell.pwli
-+	${ECHO} $(ASPELLDICT) > sk-slovak-aspell.pwli
  
  decompress: aspell.dat
  	$(WORD_LIST_COMPRESS) decompress < aspell.dat > slovak-master.raw
@@ -36,7 +35,7 @@ $NetBSD: patch-aa,v 1.2 2003/01/02 12:21:47 salo Exp $
  
  install: install-data install-doc
  
-@@ -29,17 +27,18 @@
+@@ -29,17 +26,18 @@
  	${INSTALL_DATA} slovak.dat $(ASPELLDATA)
  	${INSTALL_DATA} slovak_phonet.dat $(ASPELLDATA)
  	${INSTALL_DATA} sk-slovak-aspell.pwli $(PSPELLDATA)
