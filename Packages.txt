@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.338 2004/06/06 12:46:37 grant Exp $
+# $NetBSD: Packages.txt,v 1.339 2004/07/04 17:35:41 jmmv Exp $
 ###########################################################################
 
 			==========================
@@ -2872,6 +2872,79 @@ lines into /etc/mk.conf:
 
 Pkgviews is tightly integrated with buildlink. You can find a
 pkgviews User's Guide in pkgsrc/mk/buildlink3/PKGVIEWS_UG.
+
+
+ 10.45 How do I handle common shared directories?
+ ================================================
+
+A "shared directory" is a directory where multiple (and unrelated)
+packages install files.  These directories are problematic because you
+have to add special tricks in the PLIST to conditionally remove them,
+or have some centralized package handle them.
+
+Within pkgsrc, you'll find both approaches mixed.  If a directory is shared
+by few unrelated packages, it's often not worth to add an extra package to
+remove it.  Therefore, one simply does:
+
+    @unexec ${RMDIR} %D/path/to/shared/package 2>/dev/null || ${TRUE}
+
+in the PLISTs of all packages affected, instead of the regular "@dirrm" line.
+
+However, if the directory is shared across many packages, two different
+solutions are available:
+
+1) If the packages have a common dependency, the directory can be removed
+   from it.  For example, see textproc/scrollkeeper, which removes the
+   shared directory share/omf.
+
+2) If the packages using the directory are not related at all (they have no
+   common dependencies), a *-dirs package is used.
+  
+From now on, we'll discuss the second solution.  To get an idea of the
+*-dirs packages available, issue:
+
+    % cd .../pkgsrc
+    % ls -d */*-dirs
+
+Their use from other packages is very simple.  The USE_DIRS variable takes
+a list of package names (without the -dirs part) together with the required
+version number (always pick the latest one when writting new packages).
+
+For example, if a package installs files under share/applications, it should
+have the following line in it:
+
+    USE_DIRS+= xdg-1.1
+
+After regenerating the PLIST, using 'make print-PLIST', you should get the
+right (commented out) lines.
+
+Note that, even if your package is using X11BASE, it must not depend on
+the *-x11-dirs packages.  Just specify the name without that part and pkgsrc
+(specially, mk/dirs.mk) will take care of it.
+
+
+ 10.46 How can I tweak 'make print-PLIST' output?
+ ================================================
+
+If you have used any of the *-dirs packages, as explained in 10.45, you
+may have noticed that 'make print-PLIST' outputs a set of @comment's,
+instead of real @dirrm lines.  You can also do this for specific directories
+and files, so that the results of that command are very close to reality.
+This helps _a lot_ during the update of packages.
+
+The PRINT_PLIST_AWK variable takes a set of AWK patters and actions that
+are used to filter the output of print-PLIST.  You can _append_ any chunk
+of AWK scripting you like to it, but be careful with quoting.
+
+For example, to get all files inside the libdata/foo directory removed from
+the resulting PLIST:
+
+    PRINT_PLIST_AWK+= /^libdata\/foo/ { next; }
+
+And to get all the @dirrm lines referring to a specific (shared) directory
+converted to @comment's:
+
+    PRINT_PLIST_AWK+= /^@dirrm share\/special/ { print "@comment " $$0; next; }
 
 
  11 Submitting & Committing
