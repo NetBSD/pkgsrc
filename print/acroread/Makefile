@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/09/08 02:11:00 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2000/10/14 22:59:01 lukem Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
 
 PKGNAME=	acroread-4.05
@@ -72,7 +72,7 @@ post-install:
 	@cd ${PREFIX}/Acrobat4/bin && \
 	  ${PATCH} --quiet < ${FILESDIR}/acroread.diff && \
 	  ${INSTALL_SCRIPT} ${PREFIX}/Acrobat4/bin/acroread \
-	     ${PREFIX}/bin/acroread && ${RM} acroread.orig
+	     ${PREFIX}/bin/acroread && ${RM} -f acroread.orig
 	${CHMOD} +x ${PREFIX}/bin/acroread
 	${LN} -f ${PREFIX}/bin/acroread ${PREFIX}/bin/acroread4
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
