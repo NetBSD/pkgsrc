@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1553 2005/01/10 08:30:43 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1554 2005/01/10 18:34:48 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -3162,6 +3162,22 @@ ${TOOLS_COOKIE}:
 ${WRAPPER_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-wrapper PKG_PHASE=wrapper
 
+PKG_ERROR_CLASSES+=	configure
+PKG_ERROR_MSG.configure=						\
+	""								\
+	"There was an error during the \`\`configure'' phase."		\
+	"Please investigate the following for more information:"
+.if defined(GNU_CONFIGURE)
+PKG_ERROR_MSG.configure+=						\
+	"     * config.log"						\
+	"     * ${WRKLOG}"						\
+	""
+.else
+PKG_ERROR_MSG.configure+=						\
+	"     * log of the build"					\
+	"     * ${WRKLOG}"						\
+	""
+.endif
 ${CONFIGURE_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
 	@${ECHO} "*** The configuration stage of this package requires user interaction"
@@ -3169,9 +3185,17 @@ ${CONFIGURE_COOKIE}:
 	@${TOUCH} ${INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-configure PKG_PHASE=configure
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-configure PKG_PHASE=configure || ${PKG_ERROR_HANDLER.configure}
 .endif
 
+PKG_ERROR_CLASSES+=	build
+PKG_ERROR_MSG.build=	\
+	""								\
+	"There was an error during the \`\`build'' phase."		\
+	"Please investigate the following for more information:"	\
+	"     * log of the build"					\
+	"     * ${WRKLOG}"						\
+	""
 ${BUILD_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mbuild} == "build" && defined(BATCH)
 	@${ECHO} "*** The build stage of this package requires user interaction"
@@ -3179,7 +3203,7 @@ ${BUILD_COOKIE}:
 	@${TOUCH} ${INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-build PKG_PHASE=build
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-build PKG_PHASE=build || ${PKG_ERROR_HANDLER.build}
 .endif
 
 ${TEST_COOKIE}:
@@ -5145,3 +5169,17 @@ ${DESCR}: ${DESCR_SRC}
 .if defined(BATCH)
 .  include "../../mk/bulk/bsd.bulk-pkg.mk"
 .endif
+
+# Create a PKG_ERROR_HANDLER shell command for each class listed in
+# PKG_ERROR_CLASSES.  The error handler is meant to be invoked within
+# a make target.
+#
+.for _class_ in ${PKG_ERROR_CLASSES}
+PKG_ERROR_HANDLER.${_class_}?=	{					\
+		ec=$$?;							\
+		for str in ${PKG_ERROR_MSG.${_class_}}; do		\
+			${ECHO} "${_PKGSRC_IN}> $$str";			\
+		done;							\
+		exit $$ec;						\
+	}
+.endfor
