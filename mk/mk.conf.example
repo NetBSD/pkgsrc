@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.185 2001/03/20 12:02:03 wiz Exp $
+# $NetBSD: mk.conf.example,v 1.186 2001/03/20 19:08:14 wiz Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -129,6 +129,11 @@
 #ACCEPTABLE_LICENSES+=	adobe-acrobat-license
 # Enable it if you accept the usage policy for Adobe Acrobat
 # and would like to build it.  see pkgsrc/print/acroread.
+#ACCEPTABLE_LICENSES+=	citrix_ica-license
+# Enable it if you accept the license proposed at
+# http://www.citrix.com/download/unix-downloads.htm
+# when you try to download the corresponding client to download and build
+# the package.
 #ACCEPTABLE_LICENSES+=	csound-license
 # Enable it if you accept the redistribution/use license for csound and would
 # like to build csound.  see pkgsrc/licenses/csound-license
