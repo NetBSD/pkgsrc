@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.349 2004/10/20 18:12:05 adrianp Exp $
+# $NetBSD: Makefile,v 1.350 2004/10/28 21:07:11 cube Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -36,6 +36,7 @@ SUBDIR+=	ap-throttle
 SUBDIR+=	ap-xslt
 SUBDIR+=	ap2-auth-mysql
 SUBDIR+=	ap2-auth-pgsql
+SUBDIR+=	ap2-fastcgi
 SUBDIR+=	ap2-perl
 SUBDIR+=	ap2-python
 SUBDIR+=	ap2-ruby
