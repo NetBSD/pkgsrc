@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/03/14 19:32:40 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/20 05:42:35 snj Exp $
 
 DISTNAME=		db-4.2.52
 PKGNAME=		${DISTNAME:S/db/db4/}
@@ -28,8 +28,7 @@ CONFIGURE_ARGS+=	--program-transform-name=s,db_,db4_,
 
 # NetBSD-sparc64-1.6*'s f77 makes configure failing and as f77 is not
 # needed for this package the following does no harm on other platform.
-FC=     ${FALSE}
-F77=    ${FALSE}
+CONFIGURE_ENV+=		F77=${FALSE}
 
 .if ${MACHINE_ARCH} == "powerpc"
 .  include "../../mk/compiler.mk"
