@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/10/10 10:10:26 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:27 agc Exp $
 
 SHA1 (POE-0.29.tar.gz) = e7d3518ed5ef3b76dfb702104368d94d0a098692
+RMD160 (POE-0.29.tar.gz) = 5f994f61efd81079ee28d3af675dbc0c8dd1e801
 Size (POE-0.29.tar.gz) = 360228 bytes

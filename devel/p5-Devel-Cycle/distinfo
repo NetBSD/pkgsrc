@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/19 12:18:20 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:24 agc Exp $
 
 SHA1 (Devel-Cycle-1.03.tar.gz) = 756708ae37296a57f8c78cc2a588fcb464d88ab5
+RMD160 (Devel-Cycle-1.03.tar.gz) = 15fa341ab96ec62911ccd67d53a55e093f662563
 Size (Devel-Cycle-1.03.tar.gz) = 4514 bytes

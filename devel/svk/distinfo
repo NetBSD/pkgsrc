@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/02/02 03:05:16 epg Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 22:24:34 agc Exp $
 
 SHA1 (SVK-0.29.tar.gz) = 67f5610c71616cf4df5cab08e57ceb980e0e63bc
+RMD160 (SVK-0.29.tar.gz) = 342040e8ac72f08b5977036204823ec7319984ed
 Size (SVK-0.29.tar.gz) = 206378 bytes

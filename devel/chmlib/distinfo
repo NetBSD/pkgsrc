@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2004/12/19 04:53:08 jlam Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 22:24:11 agc Exp $
 
 SHA1 (chmlib-0.35.tbz) = 645bd23e1e8b2e930b971524b1f3561c02ae1609
+RMD160 (chmlib-0.35.tbz) = 63f86fbb439557199acc883142dc12e409c41388
 Size (chmlib-0.35.tbz) = 264006 bytes
 SHA1 (patch-aa) = aeabc1b95b7925cd8e39ba6dd484428b7832e85a

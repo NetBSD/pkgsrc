@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/05/24 00:24:30 kristerw Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:17 agc Exp $
 
 SHA1 (libbegemot-1.9.tar.gz) = f43b9ca4b41e1d6048538c5e0eba7aadbe66ba55
+RMD160 (libbegemot-1.9.tar.gz) = 39ab5ef644775dd686e82fa0a10d0454c52d39fe
 Size (libbegemot-1.9.tar.gz) = 116847 bytes
 SHA1 (patch-aa) = 684a2949302b0fd12475a99dc4a73824ed57377d
 SHA1 (patch-ab) = 168a8be52cb00f392303acca5bfdfbe9c29165c1

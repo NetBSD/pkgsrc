@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/03 19:00:56 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:22 agc Exp $
 
 SHA1 (ode-0.039.tgz) = c3ed55fa81d3d95458fa233f7e64f6c7ab0f556d
+RMD160 (ode-0.039.tgz) = 767cc6c4aeba18b8b5522abddab46fa09ae9ae81
 Size (ode-0.039.tgz) = 1114315 bytes
