@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2002/02/02 10:58:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2002/03/03 23:49:49 hubertf Exp $
 
-DISTNAME=		silc-server-0.7.9
+DISTNAME=		silc-server-0.8
 CATEGORIES=		chat
-MASTER_SITES=		http://silcnet.org/download/server/sources/ \
+MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
-			http://www.planetmirror.com/pub/silcnet/server/sources/ \
+			http://www.fi.silcnet.org/download/server/sources/ \
 			ftp://ftp.au.silcnet.org/pub/silcnet/server/sources/ \
-			http://munitions.vipul.net/software/mirrors/silc/server/sources/ \
+			http://www.us.silcnet.org/download/server/sources/ \
 			ftp://ftp.no.silcnet.org/pub/silc/server/sources/ \
-			http://the.wiretapped.net/security/network-security/silc/server/sources/ \
-			ftp://ftp.wiretapped.net/pub/security/network-security/silc/server/sources/
+			http://www.at.silcnet.org/download/server/sources/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		salo@silcnet.org
@@ -31,12 +30,14 @@ PKG_USERS=		${SILCD_USER}:${SILCD_GROUP}::SILC\\ Server\\ user
 PKG_SYSCONFSUBDIR?=	silcd
 
 CONF_FILES_MODE=	0600
-CONF_FILES=		${PREFIX}/share/doc/silcd/silcd.conf.default \
+CONF_FILES+=		${PREFIX}/share/doc/silcd/silcd.conf.default \
 			${PKG_SYSCONFDIR}/silcd.conf
-CONF_FILES_PERMS=	${PREFIX}/share/doc/silcd/motd.txt.default \
+CONF_FILES+=		${PREFIX}/share/doc/silcd/silcalgs.conf.default \
+			${PKG_SYSCONFDIR}/silcalgs.conf
+CONF_FILES_PERMS+=	${PREFIX}/share/doc/silcd/motd.txt.default \
 			${PKG_SYSCONFDIR}/motd.txt \
 			${ROOT_USER} ${ROOT_GROUP} 0644
-SUPPORT_FILES_PERMS=	${PREFIX}/share/doc/silcd/silcd.default \
+SUPPORT_FILES_PERMS+=	${PREFIX}/share/doc/silcd/silcd.default \
 			${PREFIX}/etc/rc.d/silcd \
 			${ROOT_USER} ${ROOT_GROUP} 0555
 
@@ -55,6 +56,10 @@ CONFIGURE_ARGS+=	--with-silcd-pid-file=/var/run/silcd.pid
 CONFIGURE_ARGS+=	--with-logsdir=/var/log/silcd
 CONFIGURE_ARGS+=	--without-ncurses
 
+# If you want to debug silc-server, uncomment this
+#
+#CONFIGURE_ARGS+=       --enable-debug
+
 .if (${MACHINE_ARCH} != "i386")
 CONFIGURE_ARGS+=	--disable-asm
 .endif
@@ -66,6 +71,5 @@ post-install:
 		> ${PREFIX}/share/doc/silcd/motd.txt.default
 
 .include "../../devel/glib/buildlink.mk"
-.include "../../devel/pth/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
