@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5482 2004/04/08 01:15:33 fredb Exp $
+$NetBSD: CHANGES,v 1.5483 2004/04/08 13:03:09 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1843,3 +1843,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated uulib to 0.5.20 [fredb 2004-04-08]
 	Updated uudeview to 0.5.20 [fredb 2004-04-08]
 	Updated xdeview to 0.5.20 [fredb 2004-04-08]
+	Updated memtest86 to 3.1a [ben 2004-04-08]
