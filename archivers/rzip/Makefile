@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/23 06:43:01 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/18 22:01:52 tv Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp
 #
 
@@ -22,9 +22,7 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Interix"
-# need an asprintf(3) implementation
-.  include "../../devel/libiberty/buildlink3.mk"
-LIBS+=		-liberty
+.  include "../../devel/libiberty/application.mk" # need asprintf(3)
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
