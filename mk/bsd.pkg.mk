@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1447 2004/04/23 01:21:12 danw Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1448 2004/04/23 02:03:18 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -371,7 +371,7 @@ CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
-MAKE_FLAGS+=		mkdir_p="${INSTALL_DATA_DIR}"
+CONFIGURE_ENV+=		install_sh=${INSTALL:Q}
 .endif
 
 .if defined(_OPSYS_LIBTOOL_REQD)

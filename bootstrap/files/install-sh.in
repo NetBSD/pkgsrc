@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: install-sh,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+# $NetBSD: install-sh.in,v 1.1 2004/04/23 02:03:18 tv Exp $
 # This script now also installs multiple files, but might choke on installing
 # multiple files with spaces in the file names.
 #
@@ -46,7 +46,7 @@ mkdirprog="${MKDIRPROG-mkdir}"
 transformbasename=""
 transform_arg=""
 instcmd="$mvprog"
-chmodcmd="$chmodprog 0755"
+chmodcmd="$chmodprog @DEFAULT_INSTALL_MODE@"
 chowncmd=""
 chgrpcmd=""
 stripcmd=""
