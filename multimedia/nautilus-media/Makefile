@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/07 00:29:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/09 18:47:38 jmmv Exp $
 #
 
 DISTNAME=	nautilus-media-0.3.3.1
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/nautilus-media/0.3/}
 

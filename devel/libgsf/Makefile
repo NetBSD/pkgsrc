@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/01/23 21:50:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/09 18:47:37 jmmv Exp $
 #
 
 DISTNAME=	libgsf-1.8.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgsf/1.8/}
 EXTRACT_SUFX=	.tar.bz2
