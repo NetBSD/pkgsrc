@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.14 2002/10/09 11:11:51 jlam Exp $
+# $NetBSD: pyversion.mk,v 1.15 2002/10/25 10:52:24 drochner Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -13,6 +13,7 @@ BUILDLINK_DEPENDS.python20?=		python20>=2.0
 BUILDLINK_DEPENDS.python21?=		python21>=2.1
 BUILDLINK_DEPENDS.python21-pth?=	python21-pth>=2.1
 BUILDLINK_DEPENDS.python22?=		python22>=2.2
+BUILDLINK_DEPENDS.python22-pth?=	python22-pth>=2.2
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
@@ -22,6 +23,9 @@ _PYTHON_VERSION_${pv}_OK=	yes
 # check what is installed
 .if exists(${LOCALBASE}/bin/python2.2)
 _PYTHON_VERSION_22_INSTALLED=	yes
+.endif
+.if exists(${LOCALBASE}/bin/python2p2)
+_PYTHON_VERSION_22pth_INSTALLED=yes
 .endif
 .if exists(${LOCALBASE}/bin/python2.1)
 _PYTHON_VERSION_21_INSTALLED=	yes
@@ -87,6 +91,17 @@ PYDEPENDENCY=	${BUILDLINK_DEPENDS.python22}:${PYPKGSRCDIR}
 PYPACKAGE=	python22
 PYVERSSUFFIX=	2.2
 PYPKGPREFIX=	py22
+.elif ${_PYTHON_VERSION} == "22pth"
+PYPKGSRCDIR=	../../lang/python22-pth
+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python22-pth}:${PYPKGSRCDIR}
+PYPACKAGE=	python22-pth
+PYVERSSUFFIX=	2p2
+PYPKGPREFIX=	py22pth
+.  if defined(USE_BUILDLINK2)
+.    include "../../devel/pth/buildlink2.mk"
+.  else
+.    include "../../devel/pth/buildlink.mk"
+.  endif
 .elif ${_PYTHON_VERSION} == "21"
 PYPKGSRCDIR=	../../lang/python21
 PYPACKAGE=	python21
