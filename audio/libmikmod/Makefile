@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/06/09 07:53:02 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/10/13 19:29:34 fredb Exp $
 
 DISTNAME=		libmikmod-3.1.9
 CATEGORIES=		audio
@@ -13,6 +13,8 @@ USE_GMAKE=		# defined
 USE_GTEXINFO=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
+
+CONFIGURE_ARGS+=	--disable-threads
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 pre-build:
