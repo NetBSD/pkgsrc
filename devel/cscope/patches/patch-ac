@@ -1,0 +1,10 @@
+--- common/display.c.orig	Thu Apr 20 13:05:36 2000
++++ common/display.c	Thu Apr 20 13:06:32 2000
+@@ -515,7 +515,6 @@
+ 	static	long	start;
+ 	long	now;
+ 	char	msg[MSGLEN + 1];
+-	long	time();
+ 
+ 	/* save the start time */
+ 	if (searchcount == 0) {
