@@ -1,0 +1,44 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/06/18 12:27:36 rh Exp $
+
+--- src/main.cpp.orig	Wed May  9 06:43:01 2001
++++ src/main.cpp	Thu Jun 14 23:25:55 2001
+@@ -78,6 +78,10 @@
+ 	return NULL;
+ }
+ 
++gint pth_nbschedule(gint no_need_this) {
++	pthread_yield_np();
++	return 1;
++}
+ 
+ void initialize_objects () {
+ 
+@@ -145,7 +149,9 @@
+ 
+ 
+ 	pthread_attr_t thread_attr;
++#if !defined(_POSIX_THREAD_IS_GNU_PTH) || defined(_POSIX_THREAD_PRIORITY_SCHEDULING)
+         sched_param thread_sched_param;
++#endif
+ 
+ 	int tmperror,counter=0;
+ 	char * filename;
+@@ -182,9 +188,18 @@
+ 	quit_player=false;
+ 
+ 	pthread_attr_init(&thread_attr);
++#if !defined(_POSIX_THREAD_IS_GNU_PTH) || defined(_POSIX_THREAD_PRIORITY_SCHEDULING)
+ 	thread_sched_param.sched_priority=0;
+         pthread_attr_setschedparam (&thread_attr,&thread_sched_param);
++#endif
+ 	pthread_create(&player_thread,&thread_attr,&player_thread_callback,NULL);
++
++#ifdef _POSIX_THREAD_IS_GNU_PTH
++	SigC::Slot0<gint> my_slot = SigC::bind(
++		SigC::slot(pth_nbschedule),
++		0);
++	Gtk::Connection conn = Gtk::Main::timeout.connect(my_slot, 150);
++#endif
+ 
+ 	begin_threads=true;
+ 
