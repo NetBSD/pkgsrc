@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1328 2003/12/25 16:18:48 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1329 2003/12/26 17:43:24 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -4419,25 +4419,34 @@ print-pkg-size-depends:
 ###  - make print-PLIST | brain >PLIST
 ###
 
-SUBST_PLIST_REPLACEMENT1=						\
-		-e  's@${OPSYS}@\$${OPSYS}@' 				\
-		-e  's@${OS_VERSION:S/./\./g}@\$${OS_VERSION}@'		\
-		-e  's@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@' \
-		-e  's@${MACHINE_ARCH}@\$${MACHINE_ARCH}@' 		\
-		-e  's@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@'	\
-		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
-		-e  's@${LOWER_OS_VERSION:S/./\./g}@\$${LOWER_OS_VERSION}@' \
-		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@'
-SUBST_PLIST_REPLACEMENT2=						\
-		-e  's@${PKGNAME_NOREV:S/./\./g}@\$${PKGNAME}@'		\
-		-e  's@${PKGVERSION:S/./\./g}@\$${PKGVERSION}@'		\
-		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@'
+_PRINT_PLIST_AWK_SUBST={						\
+	gsub(/${OPSYS}/, "$${OPSYS}");					\
+	gsub(/${OS_VERSION:S/./\./g}/, "$${OS_VERSION}");		\
+	gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}");	\
+	gsub(/${MACHINE_ARCH}/, "$${MACHINE_ARCH}");			\
+	gsub(/${MACHINE_GNU_ARCH}/, "$${MACHINE_GNU_ARCH}");
+.if !empty(LOWER_VENDOR)
+_PRINT_PLIST_AWK_SUBST+=	gsub(/${LOWER_VENDOR}/, "$${LOWER_VENDOR}");
+.endif
+_PRINT_PLIST_AWK_SUBST+=						\
+	gsub(/${LOWER_OS_VERSION:S/./\./g}/, "$${LOWER_OS_VERSION}");	\
+	gsub(/${LOWER_OPSYS}/, "$${LOWER_OPSYS}");			\
+	gsub(/${PKGNAME_NOREV}/, "$${PKGNAME}");			\
+	gsub(/${PKGVERSION:S/./\./g:C/nb[0-9]*$$//}/, "$${PKGVERSION}");\
+	gsub(/${PKGLOCALEDIR}\/locale/, "$${PKGLOCALEDIR}/locale");	\
+}
+
+_PRINT_PLIST_AWK_IGNORE=	($$0 ~ /emul\/linux\/proc/)
+_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^info\/dir$$/)
+.if defined(INFO_DIR) && empty(INFO_DIR:Minfo)
+_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^${INFO_DIR:S|/|\\/|g}\/dir$$/)
+.endif
 
 # Common (system) directories not to generate @dirrm statements for
-# Reads MTREE_FILE and generate an awk script that will
+# Reads MTREE_FILE and generate awk statements that will
 # sort out which directories NOT to include into the PLIST @dirrm list
 .if make(print-PLIST)
-COMMON_DIRS!= 	${AWK} 'BEGIN  { 					\
+_PRINT_PLIST_COMMON_DIRS!= 	${AWK} 'BEGIN  {			\
 			i=0; 						\
 			stack[i]="${PREFIX}" ; 				\
 			cwd=""; 					\
@@ -4480,11 +4489,11 @@ print-PLIST:
 	*)		genlinks=0 ;;					\
 	esac;								\
 	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} \! -type d	\
-	 | ( ${GREP} -v emul/linux/proc || ${TRUE} )			\
 	 | ${SORT}							\
-	 | ${SED} -e 's@${PREFIX}/./@@' ${SUBST_PLIST_REPLACEMENT1}	\
-	 | ${SED} ${SUBST_PLIST_REPLACEMENT2}				\
 	 | ${AWK} '							\
+		{ sub("${PREFIX}/\\./", ""); }				\
+		${_PRINT_PLIST_AWK_IGNORE} { next; } 			\
+		${_PRINT_PLIST_AWK_SUBST}				\
 		/^@/ { print $$0; next }				\
 		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { 	\
 			print $$0;					\
@@ -4504,27 +4513,22 @@ print-PLIST:
 			if ('$$genlinks') print $$0;			\
 			next;						\
 		}							\
-		{ 							\
-		  if (!/^info\/dir$$/) {				\
-		    print $$0;						\
-		  }							\
-		}'
+		{ print $$0; }'
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	for i in `${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} -type d	\
-		        | ( ${GREP} -v emul/linux/proc || ${TRUE} )	\
-			| ${SED}					\
-				-e 's@${PREFIX}/./@@'			\
-				-e '/^${PREFIX:S/\//\\\//g}\/.$$/d'	\
-			| ${SORT} -r | ${AWK} '${COMMON_DIRS}'` ;	\
+			| ${SORT} -r					\
+			| ${AWK} '					\
+				/emul\/linux\/proc/ { next; }		\
+				/${PREFIX:S|/|\\/|g}\/\.$$/ { next; }	\
+				{ sub("${PREFIX}/\\\\./", ""); }	\
+				${_PRINT_PLIST_COMMON_DIRS}'` ;		\
 	do								\
 		if [ `${LS} -la ${PREFIX}/$$i | ${WC} -l` = 3 ]; then	\
 			${ECHO} @exec \$${MKDIR} %D/$$i ;		\
 		fi ;							\
 		${ECHO} @dirrm $$i ;					\
 	done								\
-	| ( ${GREP} -v emul/linux/proc || ${TRUE} )			\
-	| ${SED} ${SUBST_PLIST_REPLACEMENT1}				\
-	| ${SED} ${SUBST_PLIST_REPLACEMENT2}
+	| ${AWK} '${_PRINT_PLIST_AWK_SUBST} { print $$0; }'
 .endif # target(print-PLIST)
 
 # By default, all packages attempt to link into the views.
