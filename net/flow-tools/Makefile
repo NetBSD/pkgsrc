@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/10/29 05:59:24 jdolecek Exp $
+# $NetBSD: Makefile,v 1.12 2005/02/18 10:08:33 seb Exp $
 
 DISTNAME=	flow-tools-0.67
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.eng.oar.net/pub/flow-tools/
 
