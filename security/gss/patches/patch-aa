@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2004/02/10 00:14:41 jlam Exp $
+
+--- lib/gss.h.in.orig	Tue Aug 12 15:16:49 2003
++++ lib/gss.h.in	Mon Feb  9 18:34:47 2004
+@@ -33,7 +33,6 @@
+ 
+ #include <gss/api.h>
+ #include <gss/ext.h>
+-#include <gss/krb5.h>
+ 
+ #ifdef __cplusplus
+ }
