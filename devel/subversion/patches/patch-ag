@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.5 2004/11/27 02:35:53 epg Exp $
+
+--- subversion/bindings/swig/perl/native/Makefile.PL.in.orig	2004-09-14 12:32:08.000000000 -0400
++++ subversion/bindings/swig/perl/native/Makefile.PL.in
+@@ -103,7 +103,6 @@ sub MY::postamble {
+ 
+    my $swig_modules_command = join ('',
+                               map {"\nsvn_$_.c : $swig_srcdir/svn_$_.i ".
+-                                   "$svnlib_builddir/libsvn_$_/libsvn_$_-1.la ".
+                                    "ra_plugin.hi ra_reporter.hi ".
+                                    "delta_editor.hi\n" .
+                                    "\t$swig_command".

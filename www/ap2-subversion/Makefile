@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/10/23 06:11:10 epg Exp $
+# $NetBSD: Makefile,v 1.17 2004/11/27 02:35:53 epg Exp $
 
 PKGNAME=	ap2-subversion-${SVNVER}
 COMMENT=	WebDAV server (Apache module) for Subversion
@@ -14,6 +14,10 @@ ALL_TARGET=		apache-mod
 INSTALL_TARGET=		install-mods-shared
 
 BUILDLINK_DEPENDS.apache?=	apache>=2.0.48
+
+post-patch:
+	${RM} ${WRKSRC}/build-outputs.mk
+	${CP} ${FILESDIR}/build-outputs.mk ${WRKSRC}/build-outputs.mk
 
 .include "../../devel/subversion/buildlink3.mk"
 .include "../../www/apache2/buildlink3.mk"
