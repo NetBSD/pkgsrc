@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/11/04 18:38:55 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/12/17 07:36:13 jdolecek Exp $
 #
 
 DISTNAME?=		php-${PHP_BASE_VERS}
@@ -7,7 +7,6 @@ MASTER_SITES?=		http://www.php.net/distributions/ \
 			http://php3.de/distributions/ \
 			ftp://ftp.php.net/pub/distributions/
 EXTRACT_SUFX?=		.tar.bz2
-DISTINFO_FILE=		${.CURDIR}/../../lang/php5/distinfo
 
 MAINTAINER?=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.php.net/
