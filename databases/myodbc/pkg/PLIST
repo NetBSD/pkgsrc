@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/04 12:58:43 agc Exp $
+lib/libmyodbc-2.50.36.so
+lib/libmyodbc.so
+lib/libmyodbc.la
+lib/libmyodbc.a
