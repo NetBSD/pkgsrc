@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 1998/08/07 11:11:14 agc Exp $
+$NetBSD: patch-aa,v 1.6 2000/07/20 11:12:07 agc Exp $
 
 --- libtext/Makefile.orig	Thu Jun  2 03:01:19 1994
 +++ libtext/Makefile	Fri Sep 26 16:44:27 1997
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.5 1998/08/07 11:11:14 agc Exp $
  #	if your compiler supports posix-compatible compilation
 -OS=-DSOLARIS
 +OS=-DSUNOS -O2
-+SAMDIR=${PKGSRCDIR}/plan9/sam/${WRKDIR:T}
++SAMDIR=${PKGSRCDIR}/editors/sam/${WRKDIR:T}
  
  #	add -Iincludedir for any include directories that need to be searched
  #	for posix header files
