@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.54 2001/07/17 10:11:32 abs Exp $
+# $NetBSD: bsd.prefs.mk,v 1.55 2001/07/26 08:33:02 hubertf Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -282,7 +282,7 @@ PKG_TOOLS_BIN?=		/usr/sbin
 	@echo "- If you have an existing pkgsrc installation & wish to continue"
 	@echo "  using /usr/local, append LOCALBASE=/usr/local to /etc/mk.conf."
 	@echo "- Otherwise set LOCALBASE=/usr/pkg in your environment for the"
-	@echo "  first package install.
+	@echo "  first package install."
 	@false
 .endif
 # end of migration aid
