@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7482 2004/10/20 09:30:20 jmmv Exp $
+$NetBSD: CHANGES,v 1.7483 2004/10/20 09:44:09 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4773,3 +4773,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Mail-ClamAV to 0.12 [grant 2004-10-20]
 	Updated gaim to 1.0.2 [jmmv 2004-10-20]
 	Updated evolution to 2.0.2nb2 [jmmv 2004-10-20]
+	Updated p5-Net-IRC to 0.75 [adrianp 2004-10-20]
