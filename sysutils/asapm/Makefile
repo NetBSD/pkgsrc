@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/04/24 22:46:11 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/25 03:21:16 snj Exp $
 #
 
 DISTNAME=		asapm-2.11
@@ -15,7 +15,7 @@ COMMENT=		Laptop battery status display for X11
 PKG_SKIP_REASON=	"APM is not available for ${MACHINE_PLATFORM}"
 .endif
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-jpeg	# there actually is no JPEG support
@@ -23,5 +23,5 @@ CONFIGURE_ARGS+=	--with-xpm
 CONFIGURE_ARGS+=	--with-xpm-includes=${BUILDLINK_PREFIX.xpm}/include
 CONFIGURE_ARGS+=	--with-xpm-library=${BUILDLINK_PREFIX.xpm}/lib
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
