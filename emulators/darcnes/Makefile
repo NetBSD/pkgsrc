@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/13 23:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/14 01:42:25 wiz Exp $
 
 DISTNAME=	dn9a0212
 PKGNAME=	darcnes-20000212
@@ -18,7 +18,7 @@ do-configure:
 	cd ${WRKSRC} && ${GMAKE}
 
 do-install:
-	${INSTALL_{PROGRAM} ${WRKSRC}/darcnes ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/darcnes ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/darcnes
 	${INSTALL_MAN} ${WRKSRC}/readme ${PREFIX}/share/doc/darcnes
 
