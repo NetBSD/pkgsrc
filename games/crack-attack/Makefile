@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/03/07 05:39:38 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:14:43 tv Exp $
 #
 
 DISTNAME=	crack-attack-1.1.10
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://aluminumangel.org/cgi-bin/download_counter.cgi?attack_linux+attack/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/07/23 20:04:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:17:57 tv Exp $
 
 DISTNAME=		openntpd-20040719p
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		http://www.openntpd.org/dist/portable/
 

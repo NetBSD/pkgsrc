@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:37 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:12:53 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FACES_BUILDLINK3_MK:=	${FACES_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	faces
 
 .if !empty(FACES_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.faces+=	faces>=1.6.1nb1
+BUILDLINK_RECOMMENDED.faces+=	faces>=1.6.1nb3
 BUILDLINK_PKGSRCDIR.faces?=	../../mail/faces
 .endif	# FACES_BUILDLINK3_MK
 

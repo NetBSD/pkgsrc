@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/01/23 11:53:13 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/03 00:18:25 tv Exp $
 #
 
 DISTNAME=	cgilib-0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.infodrom.north.de/pub/people/joey/cgilib/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2004/04/18 07:41:53 snj Exp $
+# $NetBSD: Makefile,v 1.16 2004/10/03 00:18:40 tv Exp $
 
 DISTNAME=	xteddy-2.0.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11 games
 MASTER_SITES=	http://www.ITN.LiU.SE/~stegu/xteddy/
 

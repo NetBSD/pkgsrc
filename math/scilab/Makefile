@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.55 2004/08/27 06:29:08 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2004/10/03 00:12:57 tv Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
 PKGNAME=	${SCIBASE}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Scilab/distributions/
 

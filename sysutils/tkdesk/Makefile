@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/05/12 23:41:48 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/03 00:18:16 tv Exp $
 #
 
 DISTNAME=	tkdesk-1.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://tkdesk.sourceforge.net/dist/
 

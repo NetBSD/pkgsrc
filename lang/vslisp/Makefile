@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:19:18 agc Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/03 00:15:03 tv Exp $
 
 DISTNAME=		vslisp-4.0-1
 PKGNAME=		vslisp-4.0.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		ftp://vslisp.sourceforge.net/pub/vslisp/
 

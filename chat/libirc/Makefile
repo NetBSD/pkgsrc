@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/04/11 05:55:45 snj Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/03 00:13:15 tv Exp $
 #
 
 DISTNAME=		libirc-0.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		chat
 MASTER_SITES=		http://www.cs.kau.se/~jorgen/software/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/03/18 09:12:11 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/10/03 00:13:32 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 POPT_BUILDLINK3_MK:=	${POPT_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	popt
 
 .if !empty(POPT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.popt+=	popt>=1.7nb3
+BUILDLINK_RECOMMENDED.popt+=	popt>=1.7nb5
 BUILDLINK_PKGSRCDIR.popt?=	../../devel/popt
 .endif	# POPT_BUILDLINK3_MK
 

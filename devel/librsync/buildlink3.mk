@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/18 23:31:34 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:30 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBRSYNC_BUILDLINK3_MK:=	${LIBRSYNC_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	librsync
 
 .if !empty(LIBRSYNC_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.librsync+=	librsync>=0.9.6nb2
+BUILDLINK_RECOMMENDED.librsync+=	librsync>=0.9.6nb3
 BUILDLINK_PKGSRCDIR.librsync?=	../../devel/librsync
 .endif	# LIBRSYNC_BUILDLINK3_MK
 

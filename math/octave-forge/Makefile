@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/09/03 11:58:48 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/03 00:12:57 tv Exp $
 #
 
 DISTNAME=	octave-forge-2004.07.07
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=octave/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/03/12 19:44:59 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/10/03 00:18:37 tv Exp $
 #
 
 DISTNAME=		paragui-1.0.4
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11
 MASTER_SITES=		http://savannah.nongnu.org/download/paragui/
 

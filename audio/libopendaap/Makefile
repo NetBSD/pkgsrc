@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/06 08:02:49 agc Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:07 tv Exp $
 #
 
 DISTNAME=		libopendaap-0.2.1
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://crazney.net/programs/itunes/files/
 EXTRACT_SUFX=		.tar.bz2

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2004/09/30 12:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2004/10/03 00:12:57 tv Exp $
 #
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGNAME=	octave-current-${OCTAVE_VER}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/bleeding-edge/ \
 		ftp://ftp.eos.hokudai.ac.jp/pub/GNU/misc/octave/bleeding-edge/ \

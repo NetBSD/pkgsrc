@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/04/19 18:36:02 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:14:50 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FREEGLUT_BUILDLINK3_MK:=	${FREEGLUT_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	freeglut
 
 .if !empty(FREEGLUT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.freeglut+=	freeglut>=2.2.0
+BUILDLINK_RECOMMENDED.freeglut+=	freeglut>=2.2.0nb2
 BUILDLINK_PKGSRCDIR.freeglut?=	../../graphics/freeglut
 .endif	# FREEGLUT_BUILDLINK3_MK
 

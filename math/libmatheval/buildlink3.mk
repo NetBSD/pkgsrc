@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/08/24 12:36:29 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:12:56 tv Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -22,6 +22,7 @@ BUILDLINK_PACKAGES+=	libmatheval
 
 .if !empty(LIBMATHEVAL_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libmatheval+=	libmatheval>=1.1.0
+BUILDLINK_RECOMMENDED.libmatheval+=	libmatheval>=1.1.1nb1
 BUILDLINK_PKGSRCDIR.libmatheval?=	../../math/libmatheval
 .endif	# LIBMATHEVAL_BUILDLINK3_MK
 

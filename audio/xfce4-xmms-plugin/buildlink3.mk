@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/18 09:12:08 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:13:10 tv Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_XMMS_PLUGIN_BUILDLINK3_MK:=	${XFCE4_XMMS_PLUGIN_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-xmms-plugin
 
 .if !empty(XFCE4_XMMS_PLUGIN_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.xfce4-xmms-plugin+=	xfce4-xmms-plugin>=0.1.1nb4
+BUILDLINK_RECOMMENDED.xfce4-xmms-plugin+=	xfce4-xmms-plugin>=0.1.1nb5
 BUILDLINK_PKGSRCDIR.xfce4-xmms-plugin?=	../../audio/xfce4-xmms-plugin
 .endif	# XFCE4_XMMS_PLUGIN_BUILDLINK3_MK
 

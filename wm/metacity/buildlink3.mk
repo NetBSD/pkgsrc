@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/09/21 16:55:39 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/10/03 00:18:23 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 METACITY_BUILDLINK3_MK:=	${METACITY_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	metacity
 
 .if !empty(METACITY_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.metacity+=	metacity>=2.8.5
+BUILDLINK_RECOMMENDED.metacity+=	metacity>=2.8.5nb1
 BUILDLINK_PKGSRCDIR.metacity?=	../../wm/metacity
 
 dirs!=	${GREP} "^@dirrm share/themes" ${.CURDIR}/../../wm/metacity/PLIST | \

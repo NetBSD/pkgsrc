@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2004/02/14 17:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/03 00:13:30 tv Exp $
 #
 
 DISTNAME=	mm-1.2.2
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.ossp.org/pkg/lib/mm/
 

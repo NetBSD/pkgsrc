@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.8 2004/09/01 17:01:31 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/10/03 00:13:02 tv Exp $
 #
 
 DISTNAME=		gst-plugins-0.8.4
+PKGREVISION=		1
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gst-plugins/0.8/} \
 			http://gstreamer.freedesktop.org/src/gst-plugins/

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/03 20:49:33 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:28 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTL_BUILDLINK3_MK:=	${GTL_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	gtl
 
 .if !empty(GTL_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gtl+=	gtl>=0.3.3
+BUILDLINK_RECOMMENDED.gtl+=	gtl>=0.3.3nb1
 BUILDLINK_PKGSRCDIR.gtl?=	../../devel/gtl
 .endif	# GTL_BUILDLINK3_MK
 

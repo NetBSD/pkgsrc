@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/07/30 21:05:41 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2004/10/03 00:13:22 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENLDAP_BUILDLINK3_MK:=	${OPENLDAP_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	openldap
 
 .if !empty(OPENLDAP_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.openldap+=		openldap>=2.1.22
-BUILDLINK_RECOMMENDED.openldap?=	openldap>=2.2.13
+BUILDLINK_RECOMMENDED.openldap+=	openldap>=2.2.13nb2
 BUILDLINK_PKGSRCDIR.openldap?=		../../databases/openldap
 .endif	# OPENLDAP_BUILDLINK3_MK
 

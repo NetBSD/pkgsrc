@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.12 2004/04/22 14:40:29 tv Exp $
+$NetBSD: patch-ac,v 1.13 2004/10/03 00:13:31 tv Exp $
 
---- ltmain.sh.orig	Sun Apr 11 01:44:45 2004
+--- ltmain.sh.orig	2004-09-19 08:34:44.000000000 -0400
 +++ ltmain.sh
-@@ -192,10 +192,26 @@ func_infer_tag () {
+@@ -197,10 +197,26 @@ func_infer_tag () {
        case $@ in
        # Blanks in the command may have been stripped by the calling shell,
        # but not from the CC environment variable when configure was run.
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.12 2004/04/22 14:40:29 tv Exp $
  	for z in $available_tags; do
  	  if grep "^# ### BEGIN LIBTOOL TAG CONFIG: $z$" < "$progpath" > /dev/null; then
  	    # Evaluate the configuration.
-@@ -231,8 +247,6 @@ func_infer_tag () {
+@@ -236,8 +252,6 @@ func_infer_tag () {
  #        else
  #          $echo "$modename: using $tagname tagged configuration"
  	fi
@@ -38,8 +38,8 @@ $NetBSD: patch-ac,v 1.12 2004/04/22 14:40:29 tv Exp $
 -      esac
      fi
  }
- # End of Shell function definitions
-@@ -401,7 +415,7 @@ if test -z "$show_help"; then
+ 
+@@ -522,7 +536,7 @@ if test -z "$show_help"; then
      $echo "*** Warning: inferring the mode of operation is deprecated." 1>&2
      $echo "*** Future versions of Libtool will require -mode=MODE be specified." 1>&2
      case $nonopt in
@@ -48,7 +48,7 @@ $NetBSD: patch-ac,v 1.12 2004/04/22 14:40:29 tv Exp $
        mode=link
        for arg
        do
-@@ -1185,6 +1199,13 @@ EOF
+@@ -1306,6 +1320,13 @@ EOF
  	    exit $EXIT_FAILURE
  	    ;;
  	  esac
@@ -62,18 +62,15 @@ $NetBSD: patch-ac,v 1.12 2004/04/22 14:40:29 tv Exp $
  	  if test "$prev" = rpath; then
  	    case "$rpath " in
  	    *" $arg "*) ;;
-@@ -2983,8 +3004,8 @@ EOF
- 	darwin)
- 	  # Like Linux, but with the current version available in
- 	  # verstring for coding it into the library header
--	  major=.`expr $current - $age`
--	  versuffix="$major.$age.$revision"
-+	  major=".$current"
-+	  versuffix=".$current.$revision"
- 	  # Darwin ld doesn't like 0 for these options...
- 	  minor_current=`expr $current + 1`
- 	  verstring="-compatibility_version $minor_current -current_version $minor_current.$revision"
-@@ -5384,8 +5405,16 @@ relink_command=\"$relink_command\""
+@@ -3168,6 +3189,7 @@ EOF
+ 	linux)
+ 	  major=.`expr $current - $age`
+ 	  versuffix="$major.$age.$revision"
++	  versuffix2="$major.$age"
+ 	  ;;
+ 
+ 	osf)
+@@ -5364,8 +5386,16 @@ relink_command=\"$relink_command\""
        exit $EXIT_FAILURE
      fi
  

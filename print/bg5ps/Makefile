@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/05/05 04:03:19 snj Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/03 00:18:04 tv Exp $
 
 DISTNAME=	bg5ps-1.3.0
+PKGREVISION=	1
 CATEGORIES=	print converters
 MASTER_SITES=	ftp://ftp.shellhung.org/pub/OpenBSD/packages/chinese/bg5ps/ \
 		ftp://freebsd.sinica.edu.tw/pub/keith/

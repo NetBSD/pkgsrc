@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2004/05/31 16:47:48 minskim Exp $
+# $NetBSD: Makefile,v 1.58 2004/10/03 00:18:26 tv Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		www devel
 MASTER_SITES=		http://www.w3.org/Library/Distribution/ \
 			ftp://ftp.uni-hannover.de/pub/mirror/info-systems/WWW/libwww/

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/05/05 02:26:42 snj Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:18:05 tv Exp $
 
 DISTNAME=	ijs-0.34
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://www.linuxprinting.org/ijs/download/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2004/03/16 11:23:43 tron Exp $
+# $NetBSD: Makefile,v 1.37 2004/10/03 00:13:16 tv Exp $
 
 .include "../../comms/pilot-link/Makefile.common"
 
-PKGREVISION=		2
+PKGREVISION=		3
 
 COMMENT=		Tools to talk to the 3Com Pilot PDA
 

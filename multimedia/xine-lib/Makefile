@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2004/08/10 11:24:46 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/03 00:13:03 tv Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 .if ${MACHINE_ARCH} == "i386"
 DEPENDS+=       	win32-codecs>=011227:../../multimedia/win32-codecs

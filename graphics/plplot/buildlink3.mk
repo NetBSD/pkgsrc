@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/09 00:45:45 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:14:56 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PLPLOT_BUILDLINK3_MK:=	${PLPLOT_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	plplot
 
 .if !empty(PLPLOT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.plplot+=	plplot>=5.2.1
+BUILDLINK_RECOMMENDED.plplot+=	plplot>=5.2.1nb2
 BUILDLINK_PKGSRCDIR.plplot?=	../../graphics/plplot
 .endif	# PLPLOT_BUILDLINK3_MK
 

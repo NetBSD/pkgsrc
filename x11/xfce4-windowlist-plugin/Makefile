@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/21 06:19:46 martti Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:18:39 tv Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 XFCE4_VERSION=	0.1.0
 
 DISTNAME=	xfce4-windowlist-plugin-${XFCE4_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://download.berlios.de/xfce-goodies/
 COMMENT=	XFce4 window list plugin

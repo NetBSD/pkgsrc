@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/02/19 11:28:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/03 00:13:24 tv Exp $
 #
 
 DISTNAME=	tdb-1.0.6
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tdb/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/09/10 11:21:24 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/03 00:14:58 tv Exp $
 #
 
 PKGNAME=	vtk-python-${VTKDIST_VERSION}
+PKGREVISION=	1
 
 COMMENT=	Python wrapper libraries for vtk; see vtk package for details
 

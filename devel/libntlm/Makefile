@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/10/01 08:46:26 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/10/03 00:13:30 tv Exp $
 #
 
 DISTNAME=		libntlm-0.3.6
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://josefsson.org/libntlm/releases/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/05/07 01:14:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/03 00:13:32 tv Exp $
 #
 
 DISTNAME=	Glib-${DIST_VERSION}
 PKGNAME=	p5-glib2-${DIST_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 

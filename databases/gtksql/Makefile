@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2004/08/13 09:03:40 recht Exp $
+# $NetBSD: Makefile,v 1.31 2004/10/03 00:13:18 tv Exp $
 #
 
 DISTNAME=		gtksql-0.3
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		databases
 MASTER_SITES=		http://www.multimania.com/bbrox/GtkSQL/ \
 			${MASTER_SITE_SUNSITE:=X11/gtkbuffet/apps/gtksql/} \

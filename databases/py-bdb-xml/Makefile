@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/07/22 09:16:01 recht Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/03 00:13:23 tv Exp $
 
 DISTNAME=	dbxml-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/db/bdb-/}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
 

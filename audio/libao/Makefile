@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2004/04/22 12:29:35 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2004/10/03 00:13:06 tv Exp $
 
+PKGREVISION=	1
 PKG_INSTALLATION_TYPES=	overwrite
 
 .include "Makefile.common"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/03/06 20:28:20 snj Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/03 00:14:47 tv Exp $
 
 DISTNAME=		zombies-1.0
+PKGREVISION=	1
 CATEGORIES=		games
 MASTER_SITES=		http://www.thistledown.com.au/software/ \
 			ftp://melanoma.cs.rmit.edu.au/pub/simonb/

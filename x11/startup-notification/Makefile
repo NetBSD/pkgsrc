@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/09/03 12:53:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:18:38 tv Exp $
 
 DISTNAME=		startup-notification-0.7
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/startup-notification/0.7/}
 EXTRACT_SUFX=		.tar.bz2

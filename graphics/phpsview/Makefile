@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/04/25 00:27:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/03 00:14:56 tv Exp $
 #
 
 DISTNAME=	pwc-8.12
 PKGNAME=	phpsview-1.02
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://www.smcc.demon.nl/webcam/
 

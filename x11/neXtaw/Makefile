@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2004/07/03 16:34:59 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/10/03 00:18:36 tv Exp $
 
 DISTNAME=	neXtaw-0.15.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://siag.nu/pub/neXtaw/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/07/16 01:30:47 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:30 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBOSIP2_BUILDLINK3_MK:=	${LIBOSIP2_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libosip2
 
 .if !empty(LIBOSIP2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libosip2+=	libosip2>=2.0.9
+BUILDLINK_RECOMMENDED.libosip2+=	libosip2>=2.0.9nb1
 BUILDLINK_PKGSRCDIR.libosip2?=	../../devel/libosip
 .endif	# LIBOSIP2_BUILDLINK3_MK
 

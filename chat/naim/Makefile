@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2004/07/23 04:50:47 snj Exp $
+# $NetBSD: Makefile,v 1.37 2004/10/03 00:13:15 tv Exp $
 
 DISTNAME=	naim-0.11.7.2
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://shell.n.ml.org/n/naim/
 EXTRACT_SUFX=	.tar.bz2

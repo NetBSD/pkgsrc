@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/03/26 02:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:12:58 tv Exp $
 #
 
 DISTNAME=	gkrellflynn-0.8
 PKGNAME=	${DISTNAME:S/gkrell/gkrellm-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://horus.comlab.uni-rostock.de/flynn/
 

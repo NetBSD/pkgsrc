@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/07/25 22:01:15 salo Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/03 00:14:46 tv Exp $
 #
 
 DISTNAME=	powermanga
 PKGNAME=	${DISTNAME}-0.78
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.tlk.fr/lesjeux/
 

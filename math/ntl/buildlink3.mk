@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/14 00:00:19 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:12:57 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NTL_BUILDLINK3_MK:=	${NTL_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	ntl
 
 .if !empty(NTL_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.ntl+=	ntl>=5.3.1
+BUILDLINK_RECOMMENDED.ntl+=	ntl>=5.3.1nb1
 BUILDLINK_PKGSRCDIR.ntl?=	../../math/ntl
 .endif	# NTL_BUILDLINK3_MK
 

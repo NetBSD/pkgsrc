@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/07/28 02:50:22 kim Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/03 00:13:17 tv Exp $
 #
 
 DISTNAME=	abook-0.5.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=abook/}
 

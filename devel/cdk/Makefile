@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2004/04/26 05:12:37 snj Exp $
+# $NetBSD: Makefile,v 1.25 2004/10/03 00:13:25 tv Exp $
 #
 
 DISTNAME=		latestCDK
 PKGNAME=		cdk-4.9.9
-PKGREVISION=				1
+PKGREVISION=				2
 CATEGORIES=		devel
 MASTER_SITES=		http://www.vexus.ca/release/
 EXTRACT_SUFX=		.tgz

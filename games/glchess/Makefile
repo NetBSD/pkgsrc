@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/03/08 02:36:37 snj Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/03 00:14:44 tv Exp $
 #
 
 DISTNAME=	glchess-0.4.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=glchess/}
 

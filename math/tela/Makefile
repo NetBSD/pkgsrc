@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2004/04/27 21:26:09 snj Exp $
+# $NetBSD: Makefile,v 1.16 2004/10/03 00:12:57 tv Exp $
 
 DISTNAME=		tela-1.34
+PKGREVISION=	1
 CATEGORIES=		math
 MASTER_SITES=		ftp://ftp.funet.fi/pub/sci/math/tela/ \
 			ftp://sumppu.fmi.fi/pub/tela/

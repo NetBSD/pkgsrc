@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/07 01:17:12 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:25 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CHMLIB_BUILDLINK3_MK:=	${CHMLIB_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	chmlib
 
 .if !empty(CHMLIB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.chmlib+=	chmlib>=0.31
+BUILDLINK_RECOMMENDED.chmlib+=	chmlib>=0.31nb1
 BUILDLINK_PKGSRCDIR.chmlib?=	../../devel/chmlib
 .endif	# CHMLIB_BUILDLINK3_MK
 

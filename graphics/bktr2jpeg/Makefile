@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/06/15 12:45:00 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/03 00:14:48 tv Exp $
 #
 
 DISTNAME=	bktr2jpeg-1.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://core.de/~coto/projects/bktr2jpeg/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/04/11 08:33:10 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/03 00:14:40 tv Exp $
 #
 
 DISTNAME=	yudit-2.7.6
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://yudit.org/download/
 

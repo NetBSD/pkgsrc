@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/04/12 21:39:41 snj Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:17:54 tv Exp $
 #
 
 DISTNAME=	live.2003.04.04
 PKGNAME=	lib${DISTNAME:S/./-/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.live.com/liveMedia/public/
 

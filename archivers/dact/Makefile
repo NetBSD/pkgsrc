@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2004/05/10 18:05:49 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2004/10/03 00:13:04 tv Exp $
 #
 
 DISTNAME=	dact-0.8.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.rkeene.org/devel/
 

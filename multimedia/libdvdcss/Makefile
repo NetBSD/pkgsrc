@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/05 17:57:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:02 tv Exp $
 #
 # Unfortunately, some reading of the United States law (DMCA) means
 # that we are not able to provide pointers to the source or homepage
@@ -8,6 +8,7 @@
 # or MASTER_SITES definitions in this Makefile.
 
 DISTNAME=	libdvdcss-1.2.8
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${LIBDVDCSS_MASTER_SITES}/${DISTNAME:S/libdvdcss-//}/
 EXTRACT_SUFX=	.tar.bz2

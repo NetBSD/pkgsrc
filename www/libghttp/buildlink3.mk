@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:41 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:18:26 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGHTTP_BUILDLINK3_MK:=	${LIBGHTTP_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libghttp
 
 .if !empty(LIBGHTTP_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libghttp+=	libghttp>=1.0.9
+BUILDLINK_RECOMMENDED.libghttp+=	libghttp>=1.0.9nb1
 BUILDLINK_PKGSRCDIR.libghttp?=	../../www/libghttp
 .endif	# LIBGHTTP_BUILDLINK3_MK
 

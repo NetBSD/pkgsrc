@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:09 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:13:18 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GDBM_BUILDLINK3_MK:=	${GDBM_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	gdbm
 
 .if !empty(GDBM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gdbm+=	gdbm>=1.8.3
+BUILDLINK_RECOMMENDED.gdbm+=	gdbm>=1.8.3nb1
 BUILDLINK_PKGSRCDIR.gdbm?=	../../databases/gdbm
 .endif	# GDBM_BUILDLINK3_MK
 

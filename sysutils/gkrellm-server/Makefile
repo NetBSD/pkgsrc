@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/07/27 14:57:23 cube Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/03 00:18:15 tv Exp $
 .include "../../sysutils/gkrellm/Makefile.common"
 
-PKGREVISION=		# empty
+PKGREVISION=		# empty1
 
 GKRELLM_PKGBASE=	gkrellm-server
 COMMENT=		Monitoring daemon remotely accessible by a GKrellM client

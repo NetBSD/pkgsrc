@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/24 23:29:23 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:10 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMCRYPT_BUILDLINK3_MK:=	${LIBMCRYPT_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libmcrypt
 
 .if !empty(LIBMCRYPT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libmcrypt+=	libmcrypt>=2.5.6
+BUILDLINK_RECOMMENDED.libmcrypt+=	libmcrypt>=2.5.7nb1
 BUILDLINK_PKGSRCDIR.libmcrypt?=	../../security/libmcrypt
 .endif	# LIBMCRYPT_BUILDLINK3_MK
 

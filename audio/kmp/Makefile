@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/07/28 07:01:27 agc Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/03 00:13:06 tv Exp $
 
 DISTNAME=		kmp-0.01
+PKGREVISION=	1
 CATEGORIES=		audio
 MASTER_SITES=		http://www.threadbox.net/files/KMP/
 EXTRACT_SUFX=		.tar.bz2

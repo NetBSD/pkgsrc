@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/03/18 09:12:08 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/10/03 00:13:07 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBCDDB_BUILDLINK3_MK:=	${LIBCDDB_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libcddb
 
 .if !empty(LIBCDDB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libcddb+=	libcddb>=0.9.4
+BUILDLINK_RECOMMENDED.libcddb+=	libcddb>=0.9.5nb1
 BUILDLINK_PKGSRCDIR.libcddb?=	../../audio/libcddb
 .endif	# LIBCDDB_BUILDLINK3_MK
 

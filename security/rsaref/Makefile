@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2004/01/20 12:25:34 agc Exp $
+# $NetBSD: Makefile,v 1.31 2004/10/03 00:18:13 tv Exp $
 #
 
 DISTNAME=		rsaref
 PKGNAME=		rsaref-2.0p3
+PKGREVISION=	1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.spinnaker.com/pub/crypt/rsaref/
 EXTRACT_SUFX=		.tar.Z

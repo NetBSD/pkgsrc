@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/07/22 09:16:00 recht Exp $
+# $NetBSD: Makefile,v 1.15 2004/10/03 00:13:23 tv Exp $
 
 DISTNAME=	MySQL-python-0.9.2
 PKGNAME=	${PYPKGPREFIX}-mysqldb-0.9.2
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mysql-python/}
 

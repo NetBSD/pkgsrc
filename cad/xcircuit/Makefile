@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2004/03/11 06:54:50 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2004/10/03 00:13:13 tv Exp $
 
 DISTNAME=	xcircuit-3.1.19
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad graphics
 MASTER_SITES=	http://bach.ece.jhu.edu/~tim/programs/xcircuit/archive/
 EXTRACT_SUFX=	.tar.bz2

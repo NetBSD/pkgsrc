@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/06/16 12:46:14 dillo Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/03 00:14:46 tv Exp $
 #
 
 DISTNAME=	tads23-unix
 PKGNAME=	tads-3.0.5
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.tads.org/t3dl
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:10:49 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:17:55 tv Exp $
 #
 
 DISTNAME=	sscript-lib2.0
 PKGNAME=	libsscript-2.0
+PKGREVISION=	1
 CATEGORIES=	net devel
 MASTER_SITES=	http://www.linuxave.net/~drow/SocketScript/
 EXTRACT_SUFX=	.tar

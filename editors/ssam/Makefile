@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/04/12 11:19:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/03 00:14:39 tv Exp $
 #
 
 DISTNAME=	ssam-1.9
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.westley.demon.co.uk/src/
 

@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2003/04/10 01:28:23 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/03 00:18:05 tv Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	ja-vflib-lib-${VFLIB_VERSION}
+PKGREVISION=	1
+
 COMMENT=	Japanese Vector font library
 
 CONFIGURE_ARGS+=	--without-x

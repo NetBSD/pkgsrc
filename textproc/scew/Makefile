@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/16 01:19:45 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:18:21 tv Exp $
 #
 
 DISTNAME=	scew-0.3.1
+PKGREVISION=	1
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://www.ccd.uab.es/~aleix/scew/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/02/11 04:35:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/03 00:18:18 tv Exp $
 
 DISTNAME=	aspell-gaeilge-2.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=   http://borel.slu.edu/~kps/ispell/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/04/18 23:01:23 snj Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/03 00:18:16 tv Exp $
 #
 
 DISTNAME=	vobcopy-0.5.13
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://lpn.rnbhq.org/download/
 

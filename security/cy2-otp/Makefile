@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/13 18:14:19 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:18:08 tv Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-otp/}
+PKGREVISION=	1
 COMMENT=	Cyrus SASL OTP authentication plugin
 SASL_PLUGIN=	yes
 

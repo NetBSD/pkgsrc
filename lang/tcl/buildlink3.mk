@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2004/06/22 18:34:09 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2004/10/03 00:15:03 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TCL_BUILDLINK3_MK:=	${TCL_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	tcl
 
 .if !empty(TCL_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.tcl+=		tcl>=8.4.6nb1
+BUILDLINK_RECOMMENDED.tcl+=	tcl>=8.4.7nb1
 BUILDLINK_PKGSRCDIR.tcl?=	../../lang/tcl
 
 BUILDLINK_FILES.tcl=	bin/tclsh*

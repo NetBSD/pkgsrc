@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2004/06/02 15:43:09 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2004/10/03 00:18:28 tv Exp $
 #
 
 DISTNAME=	aterm-0.4.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aterm/}
 

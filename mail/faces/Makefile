@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2004/02/14 18:22:56 minskim Exp $
+# $NetBSD: Makefile,v 1.38 2004/10/03 00:12:52 tv Exp $
 
 DISTNAME=	faces-1.6.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/faces/faces/faces-1.6.1/
 EXTRACT_SUFX=	.tar.Z

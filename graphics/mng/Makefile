@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2004/08/09 07:29:00 adam Exp $
+# $NetBSD: Makefile,v 1.18 2004/10/03 00:14:56 tv Exp $
 
 DISTNAME=	libmng-1.0.8
 PKGNAME=	${DISTNAME:S/lib//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES= 	${MASTER_SITE_SOURCEFORGE:=libmng/} \
 		http://www.3-t.com/libmng/download/ \

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/12 20:50:27 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:07 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BEECRYPT_BUILDLINK3_MK:=	${BEECRYPT_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	beecrypt
 
 .if !empty(BEECRYPT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.beecrypt+=	beecrypt>=3.0.0
+BUILDLINK_RECOMMENDED.beecrypt+=	beecrypt>=3.0.0nb1
 BUILDLINK_PKGSRCDIR.beecrypt?=	../../security/beecrypt
 .endif	# BEECRYPT_BUILDLINK3_MK
 

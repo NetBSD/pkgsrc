@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/10/03 00:17:53 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GNET_BUILDLINK3_MK:=	${GNET_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	gnet
 
 .if !empty(GNET_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gnet+=	gnet>=2.0.3nb1
+BUILDLINK_RECOMMENDED.gnet+=	gnet>=2.0.5nb1
 BUILDLINK_PKGSRCDIR.gnet?=	../../net/gnet
 .endif	# GNET_BUILDLINK3_MK
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2004/09/24 13:49:13 adam Exp $
+# $NetBSD: Makefile,v 1.18 2004/10/03 00:13:24 tv Exp $
 
 DISTNAME=	SDL_gfx-2.0.12
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ferzkopp.net/~aschiffler/Software/SDL_gfx-2.0/
 

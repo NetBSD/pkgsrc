@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/18 09:12:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:18:17 tv Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_MINICMD_PLUGIN_BUILDLINK3_MK:=	${XFCE4_MINICMD_PLUGIN_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-minicmd-plugin
 
 .if !empty(XFCE4_MINICMD_PLUGIN_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.xfce4-minicmd-plugin+=	xfce4-minicmd-plugin>=0.2.0nb4
+BUILDLINK_RECOMMENDED.xfce4-minicmd-plugin+=	xfce4-minicmd-plugin>=0.2.0nb5
 BUILDLINK_PKGSRCDIR.xfce4-minicmd-plugin?=	../../sysutils/xfce4-minicmd-plugin
 .endif	# XFCE4_MINICMD_PLUGIN_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/08/27 18:53:58 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:18:36 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NEXTAW_BUILDLINK3_MK:=	${NEXTAW_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	neXtaw
 
 .if !empty(NEXTAW_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.neXtaw+=	neXtaw>=0.15.1
+BUILDLINK_RECOMMENDED.neXtaw+=	neXtaw>=0.15.1nb1
 BUILDLINK_PKGSRCDIR.neXtaw?=	../../x11/neXtaw
 .endif	# NEXTAW_BUILDLINK3_MK
 

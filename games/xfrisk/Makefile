@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/05/02 13:51:21 sketch Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/03 00:14:47 tv Exp $
 #
 
 DISTNAME=	xfrisk-1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://www.tuxick.net/xfrisk/files/
 

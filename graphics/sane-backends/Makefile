@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2004/06/15 13:32:53 markd Exp $
+# $NetBSD: Makefile,v 1.20 2004/10/03 00:14:57 tv Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digitals camera, frame grabbers etc.
 
 DISTNAME=       sane-backends-${SANE_VERSION}
+PKGREVISION=	1
 
 BUILD_USES_MSGFMT=	YES
 USE_PKGLOCALEDIR=	YES

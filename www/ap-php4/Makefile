@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2004/04/24 23:03:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.38 2004/10/03 00:18:24 tv Exp $
 #
 
 PKGNAME=		ap-php-${PHP_BASE_VERS}
-PKGREVISION=		# empty
 COMMENT=		Apache (${PKG_APACHE}) module for PHP4
 
 USE_BUILDLINK3=		YES

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/05/04 19:03:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2004/10/03 00:13:06 tv Exp $
 
 DISTNAME=	id3v2-0.1.10
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=id3v2/}
 

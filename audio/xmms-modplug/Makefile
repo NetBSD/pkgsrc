@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/04/14 15:11:52 ben Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:11 tv Exp $
 #
 
 DISTNAME=		modplugxmms-2.05
 PKGNAME=		xmms-modplug-2.05
+PKGREVISION=	1
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=modplug-xmms/}
 

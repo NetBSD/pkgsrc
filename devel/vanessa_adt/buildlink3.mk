@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/09/25 00:06:19 grant Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:34 tv Exp $
 #
 # This file was created automatically using createbuildlink-3.5.
 
@@ -14,6 +14,7 @@ BUILDLINK_PACKAGES+=	vanessa_adt
 
 .if !empty(VANESSA_ADT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.vanessa_adt+=	vanessa_adt>=0.0.6
+BUILDLINK_RECOMMENDED.vanessa_adt+=	vanessa_adt>=0.0.6nb1
 BUILDLINK_PKGSRCDIR.vanessa_adt?=	../../devel/vanessa_adt
 .endif	# VANESSA_ADT_BUILDLINK3_MK
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/23 16:07:15 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:14:46 tv Exp $
 #
 
 DISTNAME=		orbital_eunuchs_sniper-1.29
+PKGREVISION=	1
 CATEGORIES=		games
 MASTER_SITES=		http://filesingularity.timedoctor.org/
 

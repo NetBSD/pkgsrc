@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2004/08/17 19:19:53 adrianp Exp $
+# $NetBSD: Makefile,v 1.25 2004/10/03 00:18:00 tv Exp $
 #
 
 DISTNAME=	tcptrace-6.6.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.tcptrace.org/download/
 
