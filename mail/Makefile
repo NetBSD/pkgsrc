@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2001/05/29 05:47:24 tron Exp $
+# $NetBSD: Makefile,v 1.83 2001/06/03 06:53:50 tron Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -36,7 +36,7 @@ SUBDIR+=	mew
 SUBDIR+=	mhonarc
 SUBDIR+=	mush
 SUBDIR+=	mutt
-SUBDIR+=	mutt-unstable
+SUBDIR+=	mutt-devel
 SUBDIR+=	nmh
 SUBDIR+=	p5-IMAP-Admin
 SUBDIR+=	p5-MIME-tools
