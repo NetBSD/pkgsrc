@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/21 15:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/01 13:49:39 salo Exp $
 
 DISTNAME=		eog-0.6
 PKGREVISION=		1
@@ -13,6 +13,7 @@ GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 
 .include "../../devel/bonobo/buildlink2.mk"
 .include "../../devel/GConf/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/19 10:54:52 rh Exp $
+# $NetBSD: Makefile,v 1.11 2002/12/01 13:49:38 salo Exp $
 
 DISTNAME=		dia-0.90
 # PKGREVISION=		1
@@ -11,13 +11,14 @@ COMMENT=		program for creating diagrams of all kinds
 
 BUILD_DEPENDS+=		bison>=1.35:../../devel/bison
 
-USE_X11=	yes
-USE_GMAKE=	yes
-USE_LIBTOOL=	YES
-USE_BUILDLINK2=	YES
+USE_X11=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-gnome
 
 BROKEN=			segfaults on start-up
