@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.3 2004/11/10 16:38:51 adam Exp $
+
+--- configure.orig	2004-08-23 07:15:43.000000000 +0000
++++ configure
+@@ -14591,8 +14591,8 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
+ 
+ 
+ CELESTIA_CPPFLAGS=""
+-CELESTIA_CFLAGS="-O2 -Wall -ffast-math -fexpensive-optimizations"
+-CELESTIA_CXXFLAGS="-O2 -Wall -ffast-math -fexpensive-optimizations"
++CELESTIA_CFLAGS="-Wall -ffast-math -fexpensive-optimizations"
++CELESTIA_CXXFLAGS="-Wall -ffast-math -fexpensive-optimizations"
+ 
+ 
+ echo "$as_me:$LINENO: checking whether to include debugging code" >&5
