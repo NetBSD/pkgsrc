@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/09/30 14:43:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/09/30 14:57:25 jmmv Exp $
 #
 
 DISTNAME=	icecast-1.3.12
@@ -19,7 +19,8 @@ PKG_SYSCONFSUBDIR=	icecast
 
 CONFIGURE_ARGS+=	--with-readline \
 			--with-libwrap \
-			--with-python
+			--with-python \
+			--sysconfdir=${PKG_SYSCONFDIR}
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.readline}/include/readline
 CPPFLAGS+=		${BUILDLINK_CPPFLAGS.${PYPACKAGE}}
 CFLAGS+=		${PTHREAD_CFLAGS}
