@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4395 2004/01/08 19:41:31 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4396 2004/01/08 20:52:15 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -119,4 +119,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated openmortal to 0.4 [xtraeme 2004-01-08]
 	Updated dlcompat to 20030629 [adam 2004-01-08]
 	Added fragroute-1.2 [agc 2004-01-08]
-	Added icecast2-2.0.0 [xtraeme 2004-01-08]
+	Updated icecast to 2.0.0 [xtraeme 2004-01-08]
+	Moved icecast to icecast1 [xtraeme 2004-01-08]
