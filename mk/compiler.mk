@@ -1,10 +1,10 @@
-# $NetBSD: compiler.mk,v 1.14 2003/09/28 09:48:00 grant Exp $
+# $NetBSD: compiler.mk,v 1.15 2003/09/28 09:53:56 grant Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
 #
 # This file should NOT be included from pkg Makefiles, as it is
-# automatically included by bsd.pkg.mk.
+# automatically included by bsd.prefs.mk.
 #
 # The following variables are used:
 #
@@ -23,12 +23,12 @@
 #	register a runtime dependency on the compiler package.
 #
 # USE_GCC2
-#	Use pkgsrc gcc2 from lang/gcc. This overrides any GCC_REQD
-#	setting.
+#	Always use pkgsrc gcc2 from lang/gcc. This overrides any
+#	GCC_REQD setting. Must NOT be set in package Makefiles.
 #
 # USE_GCC3
-#	Use pkgsrc gcc3 from lang/gcc3. This overrides any GCC_REQD
-#	setting.
+#	Always use pkgsrc gcc3 from lang/gcc3. This overrides any
+#	GCC_REQD setting. Must NOT be set in package Makefiles.
 #
 # USE_PKGSRC_GCC
 #	Use the appropriate version of GCC from pkgsrc based on
@@ -40,6 +40,20 @@
 #
 # USE_MIPSPRO
 #	Use the Silicon Graphics, Inc. MIPSpro compiler.
+#
+# The following variables are defined, and available for testing in
+# package Makefiles:
+#
+# CC_VERSION
+#	The compiler and version being used. For gcc, this is
+#	'gcc-<version>' and (currently) empty for other compilers.
+#
+#	e.g.
+#		.include "../../mk/bsd.prefs.mk"
+#
+#		.if !empty(CC_VERSION:Mgcc-3*)
+#		...
+#		.endif
 #
 
 .if !defined(COMPILER_MK)
