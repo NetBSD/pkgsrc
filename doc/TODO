@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.639 2003/06/12 13:30:22 wiz Exp $
+$NetBSD: TODO,v 1.640 2003/06/12 13:39:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -245,7 +245,6 @@ Suggested package updates
 	o t1lib-5.0.0
 	o tcl/tk-8.4.3
 	o tcpreplay-1.4.3
-	o texinfo-4.6
 	o tightvnc-1.2.8
 	o tkman-2.2
 	o top-3.5b12.3
