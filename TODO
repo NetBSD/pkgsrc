@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14 2001/05/06 14:51:50 kei Exp $
+$NetBSD: TODO,v 1.15 2001/05/07 11:34:13 zuntum Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -42,11 +42,6 @@ packages TODO (Suggested new packages)
 	cvsup.nogui
 	cvsup daemon and client
 	Split cvsup packages to cvsup and cvsup.nogui, per pkg/12531
-
-	cheetah
-	GTK+ based light-weight web browser - very experimental
-	http://cheetah.sourceforge.net/
-	pkg ready, http://zuntum.net/pkgsrc/cheetah.tar.gz. will import after freeze
 
 
 package update TODO (Suggested package updates)
