@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1519 2004/03/20 16:37:40 taca Exp $
+$NetBSD: TODO,v 1.1520 2004/03/21 05:50:18 jlam Exp $
 
 Suggested new packages
 ======================
@@ -341,6 +341,7 @@ Suggested package updates
 	o treecc-0.2.8
 	o ttf2pt1-3.4.3
 	o txt2html-2.20 [wennmach]
+	o uvscan-4.3.2 [jlam]
 	o vba-1.7.1
 	o vfu-4.03
 	o vim-kde-6.2.14 [pkg/23681|24592]
