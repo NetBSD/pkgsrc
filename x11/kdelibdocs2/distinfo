@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/01 08:57:36 skrll Exp $
+$NetBSD: distinfo,v 1.2 2001/12/04 12:36:53 skrll Exp $
 
-SHA1 (kdelibdocs_kdoc2-1.1.tar.gz) = d070eaa0e993254b0e52294bbd76d082cffa9488
-Size (kdelibdocs_kdoc2-1.1.tar.gz) = 794877 bytes
-SHA1 (patch-aa) = ad28bf46d69e8afef1730d7eb53e079b81a8f520
+SHA1 (kdelibs-2.2.2.tar.bz2) = 6ae1096ffb547f317adca6b29cb9ce9dcaf1863c
+Size (kdelibs-2.2.2.tar.bz2) = 5955592 bytes
