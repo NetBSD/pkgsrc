@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1784 2003/03/27 14:15:30 atatat Exp $
+$NetBSD: CHANGES,v 1.1785 2003/03/27 16:16:18 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1326,3 +1326,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated polsms to 1.9.1h [zuntum 2003-03-27]
 	Updated mined to 2000.6 [agc 2003-03-27]
 	Updated lsof to 4.67 [atatat 2003-03-27]
+	Updated rxvt to 2.7.10nb1 [salo 2003-03-27]
