@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2001/02/16 15:51:51 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2001/02/19 07:48:07 jun Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -17,6 +17,7 @@ SUBDIR+=	exmh
 SUBDIR+=	faces
 SUBDIR+=	fetchmail
 SUBDIR+=	fetchmailconf
+SUBDIR+=	flim
 SUBDIR+=	fromto
 SUBDIR+=	grepmail
 SUBDIR+=	imap-uw
@@ -44,6 +45,7 @@ SUBDIR+=	postfix-current
 SUBDIR+=	procmail
 SUBDIR+=	qpopper
 SUBDIR+=	rblcheck
+SUBDIR+=	semi
 SUBDIR+=	sendmail
 SUBDIR+=	sendmail88
 SUBDIR+=	smtpfeed
@@ -52,6 +54,7 @@ SUBDIR+=	squirrelmail
 SUBDIR+=	sylpheed
 SUBDIR+=	tnef
 SUBDIR+=	vm
+SUBDIR+=	wl
 SUBDIR+=	wmmail
 SUBDIR+=	xbuffy
 SUBDIR+=	xfmail
