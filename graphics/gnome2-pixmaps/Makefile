@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/12/14 22:10:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/11 04:40:49 xtraeme Exp $
 #
 
 DISTNAME=		gnome-desktop-2.4.1.1
@@ -20,7 +20,7 @@ CONFLICTS+=		gnome-pixmaps-[0-9]*
 CONFLICTS+=		gnome-pixmaps-2.0.8
 .endif
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
