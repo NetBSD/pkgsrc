@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/07 04:10:03 gson Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/21 01:44:00 gson Exp $
 #
 
-DISTNAME=	XML-Twig-3.10
+DISTNAME=	XML-Twig-3.13
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5xtw
 CATEGORIES=	textproc perl5
