@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/07/17 20:59:41 tv Exp $
+# $NetBSD: Makefile,v 1.12 1998/07/24 01:56:59 tv Exp $
 #
 
 DISTNAME=	pilot-link.0.8.13
@@ -8,12 +8,10 @@ MASTER_SITES=	ftp://ryeham.ee.ryerson.ca/pub/PalmOS/
 
 MAINTAINER=	sommerfeld@alum.mit.edu
 
-BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
-
 USE_PERL5=	yes
+USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	LIBTOOL=${PREFIX}/bin/libtool \
-		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
+CONFIGURE_ENV=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_DATA="${INSTALL_DATA}"
 MAKE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
