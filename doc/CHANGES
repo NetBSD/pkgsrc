@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7016 2004/08/27 11:05:33 gavan Exp $
+$NetBSD: CHANGES,v 1.7017 2004/08/27 15:16:00 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4068,4 +4068,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated exim to 4.42 [abs 2004-08-27]
 	Updated exim-exiscan to 4.42_27 [abs 2004-08-27]
 	Updated gaim to 0.82.1 [gavan 2004-08-27]
-
+	Updated mstream to 1.0 [kim 2004-08-27]
