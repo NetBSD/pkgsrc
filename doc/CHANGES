@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6138 2004/06/05 11:16:24 salo Exp $
+$NetBSD: CHANGES,v 1.6139 2004/06/05 12:02:23 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2791,3 +2791,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtk2-engines-bluecurve to 1.0nb1 [jmmv 2004-06-05]
 	Updated mkvtoolnix to 0.9.0 [salo 2004-06-05]
 	Updated mmg to 0.9.0 [salo 2004-06-05]
+	Updated stella to 1.3 [dillo 2004-06-05]
+	Added stella-sdl-1.3 [dillo 2004-06-05]
