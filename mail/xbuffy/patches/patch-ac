@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/05 02:04:49 wiz Exp $
+
+--- libdyn/dyn_create.c.orig	Fri Dec 10 20:56:02 1993
++++ libdyn/dyn_create.c
+@@ -12,6 +12,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ #include "dynP.h"
+ 
