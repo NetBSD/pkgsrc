@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2001/10/11 16:21:31 abs Exp $
+@comment $NetBSD: PLIST,v 1.11 2001/10/26 16:02:01 taya Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
@@ -174,14 +174,25 @@ share/galeon/themes/MozillaModern/Print.png
 share/galeon/themes/MozillaModern/Refresh.png
 share/galeon/themes/MozillaModern/Stop.png
 share/galeon/themes/MozillaModern/Up.png
+share/galeon/themes/MozillaModern/default.xpm
+share/galeon/themes/MozillaModern/default_open.xpm
+share/galeon/themes/MozillaModern/dir.xpm
+share/galeon/themes/MozillaModern/dir_open.xpm
+share/galeon/themes/MozillaModern/i-bookmark.xpm
 share/galeon/themes/MozillaModernSmall/Back.png
 share/galeon/themes/MozillaModernSmall/Forward.png
 share/galeon/themes/MozillaModernSmall/Go.png
 share/galeon/themes/MozillaModernSmall/Home.png
+share/galeon/themes/MozillaModernSmall/New.png
 share/galeon/themes/MozillaModernSmall/Print.png
 share/galeon/themes/MozillaModernSmall/Refresh.png
 share/galeon/themes/MozillaModernSmall/Stop.png
 share/galeon/themes/MozillaModernSmall/Up.png
+share/galeon/themes/MozillaModernSmall/default.xpm
+share/galeon/themes/MozillaModernSmall/default_open.xpm
+share/galeon/themes/MozillaModernSmall/dir.xpm
+share/galeon/themes/MozillaModernSmall/dir_open.xpm
+share/galeon/themes/MozillaModernSmall/i-bookmark.xpm
 share/galeon/themes/Netscape/Back.png
 share/galeon/themes/Netscape/Forward.png
 share/galeon/themes/Netscape/Home.png
@@ -303,6 +314,7 @@ share/locale/ru/LC_MESSAGES/galeon.mo
 share/locale/sk/LC_MESSAGES/galeon.mo
 share/locale/sl/LC_MESSAGES/galeon.mo
 share/locale/sv/LC_MESSAGES/galeon.mo
+share/locale/ta/LC_MESSAGES/galeon.mo
 share/locale/tr/LC_MESSAGES/galeon.mo
 share/locale/uk/LC_MESSAGES/galeon.mo
 share/locale/wa/LC_MESSAGES/galeon.mo
