@@ -1,0 +1,4 @@
+PGCC stands for Pentium GCC. The PGCC is a version of the GNU C compiler
+(GCC) that provides the feature-set in similarly numbered versions of GCC,
+and in addition, provides special optimizations for the Intel Pentium and
+Pentium-compatible processors.

@@ -1,0 +1,4 @@
+$NetBSD: md5,v 1.1.1.1 2001/02/20 23:39:18 jlam Exp $
+
+MD5 (gcc-2.95.2.tar.gz) = 0e36957d734286e242e9697fd2806c4f
+MD5 (gcc-2.95.2.1-pgcc-2.95.2.1.diff.gz) = e25608592a02aae0a12941044e7b212e
