@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/06/30 00:42:33 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/12/22 08:14:26 uebayasi Exp $
 lib/xemacs/xemacs-packages/etc/BABYL
 lib/xemacs/xemacs-packages/etc/app-defaults/de/Emacs
 lib/xemacs/xemacs-packages/etc/app-defaults/fr/Emacs
@@ -371,7 +371,9 @@ lib/xemacs/xemacs-packages/etc/hm--html-menus/idd/drop
 lib/xemacs/xemacs-packages/etc/hm--html-menus/idd/dropmsk
 lib/xemacs/xemacs-packages/etc/hm--html-menus/templates/command-description.html.tmpl
 lib/xemacs/xemacs-packages/etc/hm--html-menus/templates/frame.html.tmpl
+lib/xemacs/xemacs-packages/etc/hyperbole/hypb-mouse.txt
 lib/xemacs/xemacs-packages/etc/idlwave/CHANGES
+lib/xemacs/xemacs-packages/etc/idlwave/idlwave_catalog
 lib/xemacs/xemacs-packages/etc/ilisp/ilisp-icon.bmp
 lib/xemacs/xemacs-packages/etc/ilisp/ilisp-icon.ppm
 lib/xemacs/xemacs-packages/etc/jde/doc/ReleaseNotes.txt
@@ -1395,166 +1397,69 @@ lib/xemacs/xemacs-packages/info/auctex.info-1
 lib/xemacs/xemacs-packages/info/auctex.info-2
 lib/xemacs/xemacs-packages/info/auctex.info-3
 lib/xemacs/xemacs-packages/info/bbdb.info
-lib/xemacs/xemacs-packages/info/bbdb.info-1
-lib/xemacs/xemacs-packages/info/bbdb.info-2
-lib/xemacs/xemacs-packages/info/bbdb.info-3
-lib/xemacs/xemacs-packages/info/bbdb.info-4
 lib/xemacs/xemacs-packages/info/build.info
 lib/xemacs/xemacs-packages/info/calc.info
 lib/xemacs/xemacs-packages/info/calc.info-1
-lib/xemacs/xemacs-packages/info/calc.info-10
-lib/xemacs/xemacs-packages/info/calc.info-11
-lib/xemacs/xemacs-packages/info/calc.info-12
-lib/xemacs/xemacs-packages/info/calc.info-13
-lib/xemacs/xemacs-packages/info/calc.info-14
-lib/xemacs/xemacs-packages/info/calc.info-15
-lib/xemacs/xemacs-packages/info/calc.info-16
-lib/xemacs/xemacs-packages/info/calc.info-17
-lib/xemacs/xemacs-packages/info/calc.info-18
-lib/xemacs/xemacs-packages/info/calc.info-19
 lib/xemacs/xemacs-packages/info/calc.info-2
-lib/xemacs/xemacs-packages/info/calc.info-20
-lib/xemacs/xemacs-packages/info/calc.info-21
-lib/xemacs/xemacs-packages/info/calc.info-22
-lib/xemacs/xemacs-packages/info/calc.info-23
-lib/xemacs/xemacs-packages/info/calc.info-24
-lib/xemacs/xemacs-packages/info/calc.info-25
-lib/xemacs/xemacs-packages/info/calc.info-26
-lib/xemacs/xemacs-packages/info/calc.info-27
 lib/xemacs/xemacs-packages/info/calc.info-3
 lib/xemacs/xemacs-packages/info/calc.info-4
 lib/xemacs/xemacs-packages/info/calc.info-5
-lib/xemacs/xemacs-packages/info/calc.info-6
-lib/xemacs/xemacs-packages/info/calc.info-7
-lib/xemacs/xemacs-packages/info/calc.info-8
-lib/xemacs/xemacs-packages/info/calc.info-9
 lib/xemacs/xemacs-packages/info/cc-mode.info
-lib/xemacs/xemacs-packages/info/cc-mode.info-1
-lib/xemacs/xemacs-packages/info/cc-mode.info-2
-lib/xemacs/xemacs-packages/info/cc-mode.info-3
-lib/xemacs/xemacs-packages/info/cc-mode.info-4
 lib/xemacs/xemacs-packages/info/clearcase.info
 lib/xemacs/xemacs-packages/info/ecb.info
 lib/xemacs/xemacs-packages/info/ecb.info-1
 lib/xemacs/xemacs-packages/info/ecb.info-2
-lib/xemacs/xemacs-packages/info/ecb.info-3
-lib/xemacs/xemacs-packages/info/ecb.info-4
-lib/xemacs/xemacs-packages/info/ecb.info-5
-lib/xemacs/xemacs-packages/info/ecb.info-6
-lib/xemacs/xemacs-packages/info/ecb.info-7
-lib/xemacs/xemacs-packages/info/ecb.info-8
 lib/xemacs/xemacs-packages/info/ediff.info
-lib/xemacs/xemacs-packages/info/ediff.info-1
-lib/xemacs/xemacs-packages/info/ediff.info-2
-lib/xemacs/xemacs-packages/info/ediff.info-3
 lib/xemacs/xemacs-packages/info/edit-utils.info
 lib/xemacs/xemacs-packages/info/efs.info
 lib/xemacs/xemacs-packages/info/eieio.info
 lib/xemacs/xemacs-packages/info/elib.info
-lib/xemacs/xemacs-packages/info/elib.info-1
-lib/xemacs/xemacs-packages/info/elib.info-2
 lib/xemacs/xemacs-packages/info/emacs-mime.info
 lib/xemacs/xemacs-packages/info/eshell.info
 lib/xemacs/xemacs-packages/info/ess.info
-lib/xemacs/xemacs-packages/info/ess.info-1
-lib/xemacs/xemacs-packages/info/ess.info-2
-lib/xemacs/xemacs-packages/info/ess.info-3
-lib/xemacs/xemacs-packages/info/ess.info-4
 lib/xemacs/xemacs-packages/info/eudc.info
 lib/xemacs/xemacs-packages/info/forms.info
 lib/xemacs/xemacs-packages/info/gnats.info
-lib/xemacs/xemacs-packages/info/gnats.info-1
-lib/xemacs/xemacs-packages/info/gnats.info-2
-lib/xemacs/xemacs-packages/info/gnats.info-3
-lib/xemacs/xemacs-packages/info/gnats.info-4
 lib/xemacs/xemacs-packages/info/gnus-mime-en.info
 lib/xemacs/xemacs-packages/info/gnus-mime-ja.info
 lib/xemacs/xemacs-packages/info/gnus.info
 lib/xemacs/xemacs-packages/info/gnus.info-1
-lib/xemacs/xemacs-packages/info/gnus.info-10
-lib/xemacs/xemacs-packages/info/gnus.info-11
-lib/xemacs/xemacs-packages/info/gnus.info-12
-lib/xemacs/xemacs-packages/info/gnus.info-13
-lib/xemacs/xemacs-packages/info/gnus.info-14
-lib/xemacs/xemacs-packages/info/gnus.info-15
-lib/xemacs/xemacs-packages/info/gnus.info-16
-lib/xemacs/xemacs-packages/info/gnus.info-17
-lib/xemacs/xemacs-packages/info/gnus.info-18
-lib/xemacs/xemacs-packages/info/gnus.info-19
 lib/xemacs/xemacs-packages/info/gnus.info-2
-lib/xemacs/xemacs-packages/info/gnus.info-20
-lib/xemacs/xemacs-packages/info/gnus.info-21
-lib/xemacs/xemacs-packages/info/gnus.info-22
 lib/xemacs/xemacs-packages/info/gnus.info-3
 lib/xemacs/xemacs-packages/info/gnus.info-4
-lib/xemacs/xemacs-packages/info/gnus.info-5
-lib/xemacs/xemacs-packages/info/gnus.info-6
-lib/xemacs/xemacs-packages/info/gnus.info-7
-lib/xemacs/xemacs-packages/info/gnus.info-8
-lib/xemacs/xemacs-packages/info/gnus.info-9
 lib/xemacs/xemacs-packages/info/hm--html-mode.info
-lib/xemacs/xemacs-packages/info/hm--html-mode.info-1
-lib/xemacs/xemacs-packages/info/hm--html-mode.info-2
-lib/xemacs/xemacs-packages/info/hm--html-mode.info-3
+lib/xemacs/xemacs-packages/info/hyperbole.info
 lib/xemacs/xemacs-packages/info/idlwave.info
-lib/xemacs/xemacs-packages/info/idlwave.info-1
-lib/xemacs/xemacs-packages/info/idlwave.info-2
-lib/xemacs/xemacs-packages/info/idlwave.info-3
-lib/xemacs/xemacs-packages/info/idlwave.info-4
 lib/xemacs/xemacs-packages/info/ilisp.info
-lib/xemacs/xemacs-packages/info/ilisp.info-1
-lib/xemacs/xemacs-packages/info/ilisp.info-2
-lib/xemacs/xemacs-packages/info/ilisp.info-3
 lib/xemacs/xemacs-packages/info/ispell.info
 lib/xemacs/xemacs-packages/info/latin-unity.info
 lib/xemacs/xemacs-packages/info/liece.info
+lib/xemacs/xemacs-packages/info/lookup-guide.info
 lib/xemacs/xemacs-packages/info/lookup.info
 lib/xemacs/xemacs-packages/info/lookup.info-1
 lib/xemacs/xemacs-packages/info/lookup.info-2
 lib/xemacs/xemacs-packages/info/mailcrypt.info
-lib/xemacs/xemacs-packages/info/mailcrypt.info-1
-lib/xemacs/xemacs-packages/info/mailcrypt.info-2
 lib/xemacs/xemacs-packages/info/message.info
-lib/xemacs/xemacs-packages/info/message.info-1
-lib/xemacs/xemacs-packages/info/message.info-2
+lib/xemacs/xemacs-packages/info/mew-ja.info
+lib/xemacs/xemacs-packages/info/mew-ja.info-1
+lib/xemacs/xemacs-packages/info/mew-ja.info-2
 lib/xemacs/xemacs-packages/info/mew.info
-lib/xemacs/xemacs-packages/info/mew.info-1
-lib/xemacs/xemacs-packages/info/mew.info-2
-lib/xemacs/xemacs-packages/info/mew.info-3
-lib/xemacs/xemacs-packages/info/mew.jis.info
-lib/xemacs/xemacs-packages/info/mew.jis.info-1
-lib/xemacs/xemacs-packages/info/mew.jis.info-2
 lib/xemacs/xemacs-packages/info/mh-e.info
-lib/xemacs/xemacs-packages/info/mh-e.info-1
-lib/xemacs/xemacs-packages/info/mh-e.info-2
-lib/xemacs/xemacs-packages/info/mh-e.info-3
-lib/xemacs/xemacs-packages/info/mh-e.info-4
 lib/xemacs/xemacs-packages/info/mmm.info
-lib/xemacs/xemacs-packages/info/mmm.info-1
-lib/xemacs/xemacs-packages/info/mmm.info-2
 lib/xemacs/xemacs-packages/info/mule-ucs.info
+lib/xemacs/xemacs-packages/info/oo-browser.info
+lib/xemacs/xemacs-packages/info/os-utils.info
 lib/xemacs/xemacs-packages/info/patcher.info
-lib/xemacs/xemacs-packages/info/patcher.info-1
-lib/xemacs/xemacs-packages/info/patcher.info-2
 lib/xemacs/xemacs-packages/info/pcl-cvs.info
-lib/xemacs/xemacs-packages/info/pcl-cvs.info-1
-lib/xemacs/xemacs-packages/info/pcl-cvs.info-2
 lib/xemacs/xemacs-packages/info/pgg.info
+lib/xemacs/xemacs-packages/info/prog-modes.info
 lib/xemacs/xemacs-packages/info/psgml-api.info
 lib/xemacs/xemacs-packages/info/psgml.info
 lib/xemacs/xemacs-packages/info/reftex.info
-lib/xemacs/xemacs-packages/info/reftex.info-1
-lib/xemacs/xemacs-packages/info/reftex.info-2
-lib/xemacs/xemacs-packages/info/reftex.info-3
-lib/xemacs/xemacs-packages/info/reftex.info-4
-lib/xemacs/xemacs-packages/info/reftex.info-5
+lib/xemacs/xemacs-packages/info/riece-ja.info
 lib/xemacs/xemacs-packages/info/rmail.info
 lib/xemacs/xemacs-packages/info/sasl.info
 lib/xemacs/xemacs-packages/info/semantic.info
-lib/xemacs/xemacs-packages/info/semantic.info-1
-lib/xemacs/xemacs-packages/info/semantic.info-2
-lib/xemacs/xemacs-packages/info/semantic.info-3
-lib/xemacs/xemacs-packages/info/semantic.info-4
 lib/xemacs/xemacs-packages/info/send-pr.info
 lib/xemacs/xemacs-packages/info/sieve.info
 lib/xemacs/xemacs-packages/info/skk.info
@@ -1566,9 +1471,6 @@ lib/xemacs/xemacs-packages/info/sml-mode.info
 lib/xemacs/xemacs-packages/info/smtpmail.info
 lib/xemacs/xemacs-packages/info/speedbar.info
 lib/xemacs/xemacs-packages/info/supercite.info
-lib/xemacs/xemacs-packages/info/supercite.info-1
-lib/xemacs/xemacs-packages/info/supercite.info-2
-lib/xemacs/xemacs-packages/info/supercite.info-3
 lib/xemacs/xemacs-packages/info/tempo.info
 lib/xemacs/xemacs-packages/info/tm-edit-en.info
 lib/xemacs/xemacs-packages/info/tm-edit-ja.info
@@ -1580,35 +1482,14 @@ lib/xemacs/xemacs-packages/info/tm-view-en.info
 lib/xemacs/xemacs-packages/info/tm-view-ja.info
 lib/xemacs/xemacs-packages/info/tm-vm-en.info
 lib/xemacs/xemacs-packages/info/tramp.info
-lib/xemacs/xemacs-packages/info/tramp.info-1
-lib/xemacs/xemacs-packages/info/tramp.info-2
 lib/xemacs/xemacs-packages/info/tramp_ja.info
 lib/xemacs/xemacs-packages/info/vhdl-mode.info
 lib/xemacs/xemacs-packages/info/viper.info
-lib/xemacs/xemacs-packages/info/viper.info-1
-lib/xemacs/xemacs-packages/info/viper.info-2
-lib/xemacs/xemacs-packages/info/viper.info-3
-lib/xemacs/xemacs-packages/info/viper.info-4
-lib/xemacs/xemacs-packages/info/viper.info-5
 lib/xemacs/xemacs-packages/info/vm.info
-lib/xemacs/xemacs-packages/info/vm.info-1
-lib/xemacs/xemacs-packages/info/vm.info-2
-lib/xemacs/xemacs-packages/info/vm.info-3
-lib/xemacs/xemacs-packages/info/vm.info-4
 lib/xemacs/xemacs-packages/info/w3-faq.info
 lib/xemacs/xemacs-packages/info/w3.info
-lib/xemacs/xemacs-packages/info/w3.info-1
-lib/xemacs/xemacs-packages/info/w3.info-2
-lib/xemacs/xemacs-packages/info/w3.info-3
-lib/xemacs/xemacs-packages/info/w3.info-4
 lib/xemacs/xemacs-packages/info/x-symbol.info
 lib/xemacs/xemacs-packages/info/x-symbol.info-1
-lib/xemacs/xemacs-packages/info/x-symbol.info-2
-lib/xemacs/xemacs-packages/info/x-symbol.info-3
-lib/xemacs/xemacs-packages/info/x-symbol.info-4
-lib/xemacs/xemacs-packages/info/x-symbol.info-5
-lib/xemacs/xemacs-packages/info/x-symbol.info-6
-lib/xemacs/xemacs-packages/info/x-symbol.info-7
 lib/xemacs/xemacs-packages/info/xslt-process.info
 lib/xemacs/xemacs-packages/info/zenirc.info
 lib/xemacs/xemacs-packages/lib-src/install-sid
@@ -1626,6 +1507,8 @@ lib/xemacs/xemacs-packages/lisp/Sun/ChangeLog
 lib/xemacs/xemacs-packages/lisp/Sun/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/Sun/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/Sun/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/Sun/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/Sun/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/Sun/eos.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/Sun/eos.elc
 lib/xemacs/xemacs-packages/lisp/Sun/sccs.el${ELSUFX}
@@ -1944,6 +1827,8 @@ lib/xemacs/xemacs-packages/lisp/calc/calc-yank.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/calc/calc-yank.elc
 lib/xemacs/xemacs-packages/lisp/calc/calc.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/calc/calc.elc
+lib/xemacs/xemacs-packages/lisp/calc/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/calc/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/calc/macedit.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/calc/macedit.elc
 lib/xemacs/xemacs-packages/lisp/calendar/ChangeLog
@@ -2000,6 +1885,8 @@ lib/xemacs/xemacs-packages/lisp/cc-mode/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/cc-mode/auto-autoloads.elc
 lib/xemacs/xemacs-packages/lisp/cc-mode/cc-align.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/cc-mode/cc-align.elc
+lib/xemacs/xemacs-packages/lisp/cc-mode/cc-awk.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/cc-mode/cc-awk.elc
 lib/xemacs/xemacs-packages/lisp/cc-mode/cc-bytecomp.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/cc-mode/cc-bytecomp.elc
 lib/xemacs/xemacs-packages/lisp/cc-mode/cc-cmds.el${ELSUFX}
@@ -2010,6 +1897,10 @@ lib/xemacs/xemacs-packages/lisp/cc-mode/cc-defs.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/cc-mode/cc-defs.elc
 lib/xemacs/xemacs-packages/lisp/cc-mode/cc-engine.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/cc-mode/cc-engine.elc
+lib/xemacs/xemacs-packages/lisp/cc-mode/cc-fix.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/cc-mode/cc-fix.elc
+lib/xemacs/xemacs-packages/lisp/cc-mode/cc-fonts.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/cc-mode/cc-fonts.elc
 lib/xemacs/xemacs-packages/lisp/cc-mode/cc-guess.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/cc-mode/cc-guess.elc
 lib/xemacs/xemacs-packages/lisp/cc-mode/cc-langs.el${ELSUFX}
@@ -2040,6 +1931,8 @@ lib/xemacs/xemacs-packages/lisp/cookie/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/cookie/auto-autoloads.elc
 lib/xemacs/xemacs-packages/lisp/cookie/cookie1.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/cookie/cookie1.elc
+lib/xemacs/xemacs-packages/lisp/cookie/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/cookie/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/cookie/spook.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/cookie/spook.elc
 lib/xemacs/xemacs-packages/lisp/cookie/yow.el${ELSUFX}
@@ -2058,6 +1951,8 @@ lib/xemacs/xemacs-packages/lisp/debug/ChangeLog
 lib/xemacs/xemacs-packages/lisp/debug/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/debug/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/debug/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/debug/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/debug/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/debug/dbx.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/debug/dbx.elc
 lib/xemacs/xemacs-packages/lisp/debug/debug-toolbar.el${ELSUFX}
@@ -2092,6 +1987,8 @@ lib/xemacs/xemacs-packages/lisp/dired/ChangeLog
 lib/xemacs/xemacs-packages/lisp/dired/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/dired/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/dired/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/dired/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/dired/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/dired/diff.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/dired/diff.elc
 lib/xemacs/xemacs-packages/lisp/dired/dired-cmpr.el${ELSUFX}
@@ -2189,6 +2086,8 @@ lib/xemacs/xemacs-packages/lisp/ecb/ecb-upgrade.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-upgrade.elc
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-util.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-util.elc
+lib/xemacs/xemacs-packages/lisp/ecb/ecb-winman-support.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/ecb/ecb-winman-support.elc
 lib/xemacs/xemacs-packages/lisp/ecb/ecb.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecb/ecb.elc
 lib/xemacs/xemacs-packages/lisp/ecb/silentcomp.el${ELSUFX}
@@ -2315,12 +2214,18 @@ lib/xemacs/xemacs-packages/lisp/edit-utils/abbrevlist.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/abbrevlist.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/after-save-commands.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/after-save-commands.elc
+lib/xemacs/xemacs-packages/lisp/edit-utils/align.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/edit-utils/align.elc
+lib/xemacs/xemacs-packages/lisp/edit-utils/allout.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/edit-utils/allout.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/array.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/array.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/atomic-extents.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/atomic-extents.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/edit-utils/autorevert.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/edit-utils/autorevert.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/avoid.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/avoid.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/backup-dir.el${ELSUFX}
@@ -2363,6 +2268,8 @@ lib/xemacs/xemacs-packages/lisp/edit-utils/foldout.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/foldout.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/func-menu.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/func-menu.elc
+lib/xemacs/xemacs-packages/lisp/edit-utils/highline.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/edit-utils/highline.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/hippie-exp.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/hippie-exp.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/icomplete.el${ELSUFX}
@@ -2389,6 +2296,8 @@ lib/xemacs/xemacs-packages/lisp/edit-utils/mic-paren.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/mic-paren.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/mode-motion+.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/mode-motion+.elc
+lib/xemacs/xemacs-packages/lisp/edit-utils/narrow-stack.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/edit-utils/narrow-stack.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/outl-mouse.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/outl-mouse.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/page-ext.el${ELSUFX}
@@ -2443,6 +2352,8 @@ lib/xemacs/xemacs-packages/lisp/edt/ChangeLog
 lib/xemacs/xemacs-packages/lisp/edt/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edt/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edt/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/edt/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/edt/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/edt/edt-lk201.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edt/edt-lk201.elc
 lib/xemacs/xemacs-packages/lisp/edt/edt-mapper.el${ELSUFX}
@@ -2537,6 +2448,8 @@ lib/xemacs/xemacs-packages/lisp/egg-its/ChangeLog
 lib/xemacs/xemacs-packages/lisp/egg-its/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/egg-its/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/egg-its/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/egg-its/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/egg-its/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/egg-its/egg-busyu.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/egg-its/egg-busyu.elc
 lib/xemacs/xemacs-packages/lisp/egg-its/egg-cwnn-leim.el${ELSUFX}
@@ -2626,6 +2539,8 @@ lib/xemacs/xemacs-packages/lisp/elib/bintree.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/elib/bintree.elc
 lib/xemacs/xemacs-packages/lisp/elib/cookie.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/elib/cookie.elc
+lib/xemacs/xemacs-packages/lisp/elib/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/elib/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/elib/dll-debug.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/elib/dll-debug.elc
 lib/xemacs/xemacs-packages/lisp/elib/dll.el${ELSUFX}
@@ -2648,6 +2563,8 @@ lib/xemacs/xemacs-packages/lisp/emerge/ChangeLog
 lib/xemacs/xemacs-packages/lisp/emerge/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/emerge/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/emerge/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/emerge/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/emerge/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/emerge/emerge.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/emerge/emerge.elc
 lib/xemacs/xemacs-packages/lisp/eshell/ChangeLog
@@ -2903,6 +2820,8 @@ lib/xemacs/xemacs-packages/lisp/forms/ChangeLog
 lib/xemacs/xemacs-packages/lisp/forms/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/forms/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/forms/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/forms/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/forms/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/forms/forms-d2.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/forms/forms-d2.elc
 lib/xemacs/xemacs-packages/lisp/forms/forms-pass.el${ELSUFX}
@@ -2925,6 +2844,8 @@ lib/xemacs/xemacs-packages/lisp/frame-icon/ChangeLog
 lib/xemacs/xemacs-packages/lisp/frame-icon/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/frame-icon/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/frame-icon/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/frame-icon/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/frame-icon/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/frame-icon/frame-icon.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/frame-icon/frame-icon.elc
 lib/xemacs/xemacs-packages/lisp/fsf-compat/ChangeLog
@@ -2932,6 +2853,8 @@ lib/xemacs/xemacs-packages/lisp/fsf-compat/README
 lib/xemacs/xemacs-packages/lisp/fsf-compat/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/fsf-compat/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/fsf-compat/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/fsf-compat/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/fsf-compat/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/fsf-compat/goto-addr.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/fsf-compat/goto-addr.elc
 lib/xemacs/xemacs-packages/lisp/fsf-compat/overlay.el${ELSUFX}
@@ -2956,10 +2879,18 @@ lib/xemacs/xemacs-packages/lisp/games/sokoban.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/games/sokoban.elc
 lib/xemacs/xemacs-packages/lisp/games/tetris.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/games/tetris.elc
+lib/xemacs/xemacs-packages/lisp/general-docs/ChangeLog
+lib/xemacs/xemacs-packages/lisp/general-docs/_pkg.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/general-docs/auto-autoloads.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/general-docs/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/general-docs/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/general-docs/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/gnats/ChangeLog
 lib/xemacs/xemacs-packages/lisp/gnats/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnats/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnats/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/gnats/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/gnats/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/gnats/gnats-admin.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnats/gnats-admin.elc
 lib/xemacs/xemacs-packages/lisp/gnats/gnats.el${ELSUFX}
@@ -2984,10 +2915,6 @@ lib/xemacs/xemacs-packages/lisp/gnus/custom-load.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/gnus/deuglify.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/deuglify.elc
-lib/xemacs/xemacs-packages/lisp/gnus/dgnushack.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/gnus/dgnushack.elc
-lib/xemacs/xemacs-packages/lisp/gnus/drums.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/gnus/drums.elc
 lib/xemacs/xemacs-packages/lisp/gnus/earcon.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/earcon.elc
 lib/xemacs/xemacs-packages/lisp/gnus/flow-fill.el${ELSUFX}
@@ -3038,8 +2965,6 @@ lib/xemacs/xemacs-packages/lisp/gnus/gnus-int.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/gnus-int.elc
 lib/xemacs/xemacs-packages/lisp/gnus/gnus-kill.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/gnus-kill.elc
-lib/xemacs/xemacs-packages/lisp/gnus/gnus-load.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/gnus/gnus-load.elc
 lib/xemacs/xemacs-packages/lisp/gnus/gnus-logic.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/gnus-logic.elc
 lib/xemacs/xemacs-packages/lisp/gnus/gnus-mh.el${ELSUFX}
@@ -3106,8 +3031,6 @@ lib/xemacs/xemacs-packages/lisp/gnus/ietf-drums.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/ietf-drums.elc
 lib/xemacs/xemacs-packages/lisp/gnus/imap.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/imap.elc
-lib/xemacs/xemacs-packages/lisp/gnus/lpath.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/gnus/lpath.elc
 lib/xemacs/xemacs-packages/lisp/gnus/mail-parse.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/mail-parse.elc
 lib/xemacs/xemacs-packages/lisp/gnus/mail-prsvr.el${ELSUFX}
@@ -3116,7 +3039,6 @@ lib/xemacs/xemacs-packages/lisp/gnus/mail-source.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/mail-source.elc
 lib/xemacs/xemacs-packages/lisp/gnus/mailcap.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/mailcap.elc
-lib/xemacs/xemacs-packages/lisp/gnus/md5.el.upstream
 lib/xemacs/xemacs-packages/lisp/gnus/message.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/message.elc
 lib/xemacs/xemacs-packages/lisp/gnus/messagexmas.el${ELSUFX}
@@ -3221,8 +3143,6 @@ lib/xemacs/xemacs-packages/lisp/gnus/qp.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/qp.elc
 lib/xemacs/xemacs-packages/lisp/gnus/rfc1843.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/rfc1843.elc
-lib/xemacs/xemacs-packages/lisp/gnus/rfc2015.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/gnus/rfc2015.elc
 lib/xemacs/xemacs-packages/lisp/gnus/rfc2045.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/rfc2045.elc
 lib/xemacs/xemacs-packages/lisp/gnus/rfc2047.el${ELSUFX}
@@ -3231,8 +3151,6 @@ lib/xemacs/xemacs-packages/lisp/gnus/rfc2231.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/rfc2231.elc
 lib/xemacs/xemacs-packages/lisp/gnus/score-mode.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/score-mode.elc
-lib/xemacs/xemacs-packages/lisp/gnus/smiley-ems.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/gnus/smiley-ems.elc
 lib/xemacs/xemacs-packages/lisp/gnus/smiley.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/smiley.el.upstream
 lib/xemacs/xemacs-packages/lisp/gnus/smiley.elc
@@ -3310,6 +3228,146 @@ lib/xemacs/xemacs-packages/lisp/hm--html-menus/internal-drag-and-drop.el${ELSUFX
 lib/xemacs/xemacs-packages/lisp/hm--html-menus/internal-drag-and-drop.elc
 lib/xemacs/xemacs-packages/lisp/hm--html-menus/tmpl-minor-mode.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/hm--html-menus/tmpl-minor-mode.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/.hypb
+lib/xemacs/xemacs-packages/lisp/hyperbole/ChangeLog
+lib/xemacs/xemacs-packages/lisp/hyperbole/DEMO
+lib/xemacs/xemacs-packages/lisp/hyperbole/GNUmakefile.id
+lib/xemacs/xemacs-packages/lisp/hyperbole/HY-ABOUT
+lib/xemacs/xemacs-packages/lisp/hyperbole/HY-COPY
+lib/xemacs/xemacs-packages/lisp/hyperbole/HY-NEWS
+lib/xemacs/xemacs-packages/lisp/hyperbole/HY-README
+lib/xemacs/xemacs-packages/lisp/hyperbole/MANIFEST
+lib/xemacs/xemacs-packages/lisp/hyperbole/_hypb
+lib/xemacs/xemacs-packages/lisp/hyperbole/_pkg.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/auto-autoloads.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/custom-load.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/file-newer
+lib/xemacs/xemacs-packages/lisp/hyperbole/h-skip-bytec.lsp
+lib/xemacs/xemacs-packages/lisp/hyperbole/hact.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hact.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hactypes.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hactypes.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hargs.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hargs.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hbdata.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hbdata.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hbmap.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hbmap.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hbut.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hbut.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hgnus.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hgnus.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hhist.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hhist.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hib-doc-id.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hib-doc-id.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hib-kbd.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hib-kbd.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hibtypes.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hibtypes.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hinit.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hinit.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hlvar.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hlvar.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmail.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmail.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmh.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmh.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmoccur.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmoccur.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmous-info.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmous-info.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmouse-drv.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmouse-drv.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmouse-key.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmouse-key.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmouse-mod.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmouse-mod.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmouse-reg.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmouse-reg.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmouse-sh.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmouse-sh.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmouse-tag.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hmouse-tag.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hpath.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hpath.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hrmail.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hrmail.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hsite.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hsite.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hsmail.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hsmail.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hsys-w3.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hsys-w3.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hsys-wais.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hsys-wais.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/htz.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/htz.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui-em19-b.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui-ep-but.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui-epV4-b.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui-menu.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui-menu.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui-mini.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui-mini.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui-mouse.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui-mouse.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui-window.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui-window.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui-xe-but.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hui.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hvar.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hvar.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hversion.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hversion.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hvm.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hvm.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hypb.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hypb.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/hyperbole.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/hyperbole.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/EXAMPLE.kotl
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/MANIFEST
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kfile.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kfile.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kfill.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kfill.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kimport.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kimport.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/klabel.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/klabel.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/klink.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/klink.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kmenu.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kmenu.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/knode.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/knode.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kotl-mode.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kotl-mode.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kotl.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kotl.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kprop-xe.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kprop-xe.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kproperty.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kproperty.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kview.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kview.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kvspec.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/kotl/kvspec.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/set.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/set.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/smart-clib-sym
+lib/xemacs/xemacs-packages/lisp/hyperbole/wconfig.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/wconfig.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/wrolo-logic.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/wrolo-logic.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/wrolo-menu.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/wrolo-menu.elc
+lib/xemacs/xemacs-packages/lisp/hyperbole/wrolo.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/hyperbole/wrolo.elc
 lib/xemacs/xemacs-packages/lisp/ibuffer/ChangeLog
 lib/xemacs/xemacs-packages/lisp/ibuffer/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ibuffer/auto-autoloads.el${ELSUFX}
@@ -3326,8 +3384,12 @@ lib/xemacs/xemacs-packages/lisp/idlwave/ChangeLog
 lib/xemacs/xemacs-packages/lisp/idlwave/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/idlwave/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/idlwave/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/idlwave/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/idlwave/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/idlwave/idlw-complete-structtag.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/idlwave/idlw-complete-structtag.elc
+lib/xemacs/xemacs-packages/lisp/idlwave/idlw-help.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/idlwave/idlw-help.elc
 lib/xemacs/xemacs-packages/lisp/idlwave/idlw-rinfo.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/idlwave/idlw-rinfo.elc
 lib/xemacs/xemacs-packages/lisp/idlwave/idlw-shell.el${ELSUFX}
@@ -3340,6 +3402,8 @@ lib/xemacs/xemacs-packages/lisp/igrep/ChangeLog
 lib/xemacs/xemacs-packages/lisp/igrep/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/igrep/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/igrep/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/igrep/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/igrep/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/igrep/igrep.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/igrep/igrep.elc
 lib/xemacs/xemacs-packages/lisp/ilisp/COPYING
@@ -3582,7 +3646,6 @@ lib/xemacs/xemacs-packages/lisp/latin-unity/latin-unity-latin8.elc
 lib/xemacs/xemacs-packages/lisp/latin-unity/latin-unity-latin9.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/latin-unity/latin-unity-latin9.elc
 lib/xemacs/xemacs-packages/lisp/latin-unity/latin-unity-tables.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/latin-unity/latin-unity-tables.elc
 lib/xemacs/xemacs-packages/lisp/latin-unity/latin-unity-tests.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/latin-unity/latin-unity-utils.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/latin-unity/latin-unity-utils.elc
@@ -3594,6 +3657,8 @@ lib/xemacs/xemacs-packages/lisp/leim/ChangeLog
 lib/xemacs/xemacs-packages/lisp/leim/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/leim/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/leim/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/leim/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/leim/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/leim/leim-list.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/leim/leim-list.elc
 lib/xemacs/xemacs-packages/lisp/leim/quail.el${ELSUFX}
@@ -3756,6 +3821,8 @@ lib/xemacs/xemacs-packages/lisp/locale/ChangeLog
 lib/xemacs/xemacs-packages/lisp/locale/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/locale/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/locale/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/locale/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/locale/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/lookup/ChangeLog
 lib/xemacs/xemacs-packages/lisp/lookup/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/lookup/auto-autoloads.el${ELSUFX}
@@ -3872,6 +3939,8 @@ lib/xemacs/xemacs-packages/lisp/mailcrypt/WARNINGS
 lib/xemacs/xemacs-packages/lisp/mailcrypt/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mailcrypt/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mailcrypt/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/mailcrypt/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/mailcrypt/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/mailcrypt/expect.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mailcrypt/expect.elc
 lib/xemacs/xemacs-packages/lisp/mailcrypt/mailcrypt.el${ELSUFX}
@@ -3892,6 +3961,8 @@ lib/xemacs/xemacs-packages/lisp/mew/ChangeLog
 lib/xemacs/xemacs-packages/lisp/mew/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mew/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mew/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/mew/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/mew/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/mew/mew-addrbook.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mew/mew-addrbook.elc
 lib/xemacs/xemacs-packages/lisp/mew/mew-attach.el${ELSUFX}
@@ -3970,7 +4041,6 @@ lib/xemacs/xemacs-packages/lisp/mh-e/ChangeLog.upstream
 lib/xemacs/xemacs-packages/lisp/mh-e/MH-E-NEWS
 lib/xemacs/xemacs-packages/lisp/mh-e/README
 lib/xemacs/xemacs-packages/lisp/mh-e/_pkg.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/mh-e/_pkg.elc
 lib/xemacs/xemacs-packages/lisp/mh-e/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mh-e/auto-autoloads.elc
 lib/xemacs/xemacs-packages/lisp/mh-e/custom-load.el${ELSUFX}
@@ -3985,6 +4055,7 @@ lib/xemacs/xemacs-packages/lisp/mh-e/mh-e.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-e.elc
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-funcs.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-funcs.elc
+lib/xemacs/xemacs-packages/lisp/mh-e/mh-gnus.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-identity.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-identity.elc
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-inc.el${ELSUFX}
@@ -3994,7 +4065,6 @@ lib/xemacs/xemacs-packages/lisp/mh-e/mh-index.elc
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-junk.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-junk.elc
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-loaddefs.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/mh-e/mh-loaddefs.elc
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-mime.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-mime.elc
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-pick.el${ELSUFX}
@@ -4004,7 +4074,6 @@ lib/xemacs/xemacs-packages/lisp/mh-e/mh-seq.elc
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-speed.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-speed.elc
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-unit.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/mh-e/mh-unit.elc
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-utils.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-utils.elc
 lib/xemacs/xemacs-packages/lisp/mh-e/mh-xemacs-compat.el${ELSUFX}
@@ -4031,6 +4100,8 @@ lib/xemacs/xemacs-packages/lisp/misc-games/blackbox.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/misc-games/blackbox.elc
 lib/xemacs/xemacs-packages/lisp/misc-games/conx.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/misc-games/conx.elc
+lib/xemacs/xemacs-packages/lisp/misc-games/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/misc-games/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/misc-games/decipher.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/misc-games/decipher.elc
 lib/xemacs/xemacs-packages/lisp/misc-games/dissociate.el${ELSUFX}
@@ -4134,6 +4205,8 @@ lib/xemacs/xemacs-packages/lisp/mule-ucs/ChangeLog
 lib/xemacs/xemacs-packages/lisp/mule-ucs/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mule-ucs/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mule-ucs/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/mule-ucs/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/mule-ucs/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/mule-ucs/mccl-font.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/mule-ucs/mccl-font.elc
 lib/xemacs/xemacs-packages/lisp/mule-ucs/mucs-ccl.el${ELSUFX}
@@ -4215,8 +4288,105 @@ lib/xemacs/xemacs-packages/lisp/ocaml/caml.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ocaml/caml.elc
 lib/xemacs/xemacs-packages/lisp/ocaml/camldebug.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ocaml/camldebug.elc
+lib/xemacs/xemacs-packages/lisp/ocaml/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/ocaml/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/ocaml/inf-caml.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ocaml/inf-caml.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/BR-COPY
+lib/xemacs/xemacs-packages/lisp/oo-browser/BR-FEATURES
+lib/xemacs/xemacs-packages/lisp/oo-browser/BR-README
+lib/xemacs/xemacs-packages/lisp/oo-browser/BR-RELEASE
+lib/xemacs/xemacs-packages/lisp/oo-browser/BR-VERSION
+lib/xemacs/xemacs-packages/lisp/oo-browser/ChangeLog
+lib/xemacs/xemacs-packages/lisp/oo-browser/Make-Env
+lib/xemacs/xemacs-packages/lisp/oo-browser/Makefile
+lib/xemacs/xemacs-packages/lisp/oo-browser/_pkg.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/auto-autoloads.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-c++-ft.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-c++-ft.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-c++.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-c++.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-c-ft.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-c-ft.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-c-tags
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-clos-ft.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-clos-ft.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-clos.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-clos.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-compl.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-compl.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-eif-ft.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-eif-ft.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-eif.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-eif.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-env.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-env.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-ftr.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-ftr.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-help
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-help-ms
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-info.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-info.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-init.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-init.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-java-ft.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-java-ft.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-java.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-java.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-lib.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-lib.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-menu.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-menu.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-name.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-name.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-objc-ft.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-objc-ft.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-objc.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-objc.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-python-ft.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-python-ft.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-python.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-python.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-site.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-site.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-smt.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-smt.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-start.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-start.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-tree.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-tree.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-vers.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br-vers.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/br.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/br.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/c++-browse.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/c++-browse.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/clos-brows.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/clos-brows.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/custom-load.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/eif-browse.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/eif-browse.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/eif-calls.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/eif-calls.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/eif-ise-er.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/eif-ise-er.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/hasht.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/hasht.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/hmouse-br.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/hmouse-br.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/info-brows.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/info-brows.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/java-brows.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/java-brows.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/objc-brows.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/objc-brows.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/oo-browser.texi
+lib/xemacs/xemacs-packages/lisp/oo-browser/pyth-brows.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/pyth-brows.elc
+lib/xemacs/xemacs-packages/lisp/oo-browser/smt-browse.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/oo-browser/smt-browse.elc
 lib/xemacs/xemacs-packages/lisp/os-utils/ChangeLog
 lib/xemacs/xemacs-packages/lisp/os-utils/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/os-utils/arc-mode.el${ELSUFX}
@@ -4402,6 +4572,8 @@ lib/xemacs/xemacs-packages/lisp/prog-modes/tcl.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/prog-modes/tcl.elc
 lib/xemacs/xemacs-packages/lisp/prog-modes/teco.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/prog-modes/teco.elc
+lib/xemacs/xemacs-packages/lisp/prog-modes/uil-mode.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/prog-modes/uil-mode.elc
 lib/xemacs/xemacs-packages/lisp/prog-modes/verilog-mode.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/prog-modes/verilog-mode.elc
 lib/xemacs/xemacs-packages/lisp/prog-modes/vrml-mode.el${ELSUFX}
@@ -4427,6 +4599,8 @@ lib/xemacs/xemacs-packages/lisp/psgml-dtds/ChangeLog
 lib/xemacs/xemacs-packages/lisp/psgml-dtds/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/psgml-dtds/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/psgml-dtds/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/psgml-dtds/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/psgml-dtds/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/psgml/ChangeLog
 lib/xemacs/xemacs-packages/lisp/psgml/ChangeLog.upstream
 lib/xemacs/xemacs-packages/lisp/psgml/_pkg.el${ELSUFX}
@@ -4476,6 +4650,8 @@ lib/xemacs/xemacs-packages/lisp/reftex/ChangeLog
 lib/xemacs/xemacs-packages/lisp/reftex/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/reftex/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/reftex/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/reftex/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/reftex/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/reftex/reftex-auc.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/reftex/reftex-auc.elc
 lib/xemacs/xemacs-packages/lisp/reftex/reftex-cite.el${ELSUFX}
@@ -4498,10 +4674,101 @@ lib/xemacs/xemacs-packages/lisp/reftex/reftex-vars.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/reftex/reftex-vars.elc
 lib/xemacs/xemacs-packages/lisp/reftex/reftex.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/reftex/reftex.elc
+lib/xemacs/xemacs-packages/lisp/riece/ChangeLog
+lib/xemacs/xemacs-packages/lisp/riece/_pkg.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/auto-autoloads.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/riece/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/custom-load.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-000.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-000.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-200.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-200.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-300.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-300.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-400.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-400.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-500.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-500.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-alias.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-alias.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-button.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-button.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-channel.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-channel.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-coding.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-coding.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-commands.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-commands.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-compat.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-compat.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-complete.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-complete.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-ctcp.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-ctcp.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-display.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-display.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-doctor.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-doctor.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-emacs.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-filter.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-filter.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-globals.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-globals.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-guess.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-guess.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-handle.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-handle.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-highlight.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-highlight.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-history.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-history.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-icon.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-icon.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-identity.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-identity.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-keyword.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-keyword.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-layout.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-layout.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-log.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-log.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-menu.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-menu.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-message.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-message.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-mini.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-mini.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-misc.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-misc.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-naming.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-naming.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-options.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-options.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-rdcc.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-rdcc.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-server.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-server.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-skk-kakutei.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-skk-kakutei.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-unread.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-unread.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-url.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-url.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-user.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-user.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-version.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-version.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-xemacs.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-xemacs.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece.elc
 lib/xemacs/xemacs-packages/lisp/rmail/ChangeLog
 lib/xemacs/xemacs-packages/lisp/rmail/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/rmail/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/rmail/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/rmail/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/rmail/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/rmail/rmail-kill.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/rmail/rmail-kill.elc
 lib/xemacs/xemacs-packages/lisp/rmail/rmail-xemacs.el${ELSUFX}
@@ -4647,6 +4914,8 @@ lib/xemacs/xemacs-packages/lisp/sgml/ChangeLog
 lib/xemacs/xemacs-packages/lisp/sgml/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/sgml/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/sgml/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/sgml/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/sgml/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/sgml/linuxdoc-sgml.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/sgml/linuxdoc-sgml.elc
 lib/xemacs/xemacs-packages/lisp/sgml/sgml-mode.el${ELSUFX}
@@ -4721,6 +4990,8 @@ lib/xemacs/xemacs-packages/lisp/slider/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/slider/auto-autoloads.elc
 lib/xemacs/xemacs-packages/lisp/slider/color-selector.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/slider/color-selector.elc
+lib/xemacs/xemacs-packages/lisp/slider/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/slider/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/slider/slider.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/slider/slider.elc
 lib/xemacs/xemacs-packages/lisp/sml-mode/BUGS
@@ -4753,10 +5024,14 @@ lib/xemacs/xemacs-packages/lisp/sounds-au/ChangeLog
 lib/xemacs/xemacs-packages/lisp/sounds-au/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/sounds-au/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/sounds-au/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/sounds-au/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/sounds-au/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/sounds-wav/ChangeLog
 lib/xemacs/xemacs-packages/lisp/sounds-wav/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/sounds-wav/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/sounds-wav/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/sounds-wav/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/sounds-wav/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/speedbar/ChangeLog
 lib/xemacs/xemacs-packages/lisp/speedbar/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/speedbar/auto-autoloads.el${ELSUFX}
@@ -4866,6 +5141,8 @@ lib/xemacs/xemacs-packages/lisp/text-modes/css-mode.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/text-modes/css-mode.elc
 lib/xemacs/xemacs-packages/lisp/text-modes/custom-load.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/text-modes/custom-load.elc
+lib/xemacs/xemacs-packages/lisp/text-modes/desktop-entry-mode.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/text-modes/desktop-entry-mode.elc
 lib/xemacs/xemacs-packages/lisp/text-modes/filladapt.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/text-modes/filladapt.elc
 lib/xemacs/xemacs-packages/lisp/text-modes/flyspell.el${ELSUFX}
@@ -4922,6 +5199,8 @@ lib/xemacs/xemacs-packages/lisp/textools/bib-mode.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/textools/bib-mode.elc
 lib/xemacs/xemacs-packages/lisp/textools/bibtex.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/textools/bibtex.elc
+lib/xemacs/xemacs-packages/lisp/textools/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/textools/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/textools/doctex.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/textools/doctex.elc
 lib/xemacs/xemacs-packages/lisp/textools/refbib.el${ELSUFX}
@@ -5048,6 +5327,8 @@ lib/xemacs/xemacs-packages/lisp/tooltalk/ChangeLog
 lib/xemacs/xemacs-packages/lisp/tooltalk/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/tooltalk/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/tooltalk/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/tooltalk/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/tooltalk/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/tooltalk/tooltalk-init.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/tooltalk/tooltalk-init.elc
 lib/xemacs/xemacs-packages/lisp/tooltalk/tooltalk-macros.el${ELSUFX}
@@ -5058,6 +5339,8 @@ lib/xemacs/xemacs-packages/lisp/tpu/ChangeLog
 lib/xemacs/xemacs-packages/lisp/tpu/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/tpu/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/tpu/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/tpu/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/tpu/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/tpu/tpu-doc.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/tpu/tpu-doc.elc
 lib/xemacs/xemacs-packages/lisp/tpu/tpu-edt.el${ELSUFX}
@@ -5095,6 +5378,8 @@ lib/xemacs/xemacs-packages/lisp/vc-cc/ChangeLog
 lib/xemacs/xemacs-packages/lisp/vc-cc/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/vc-cc/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/vc-cc/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/vc-cc/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/vc-cc/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/vc-cc/vc-cc-hooks.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/vc-cc/vc-cc-hooks.elc
 lib/xemacs/xemacs-packages/lisp/vc-cc/vc-cc.el${ELSUFX}
@@ -5103,6 +5388,8 @@ lib/xemacs/xemacs-packages/lisp/vc/ChangeLog
 lib/xemacs/xemacs-packages/lisp/vc/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/vc/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/vc/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/vc/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/vc/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/vc/vc-hooks.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/vc/vc-hooks.elc
 lib/xemacs/xemacs-packages/lisp/vc/vc.el${ELSUFX}
@@ -5119,6 +5406,8 @@ lib/xemacs/xemacs-packages/lisp/view-process/ChangeLog
 lib/xemacs/xemacs-packages/lisp/view-process/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/view-process/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/view-process/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/view-process/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/view-process/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/view-process/view-process-mode.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/view-process/view-process-mode.elc
 lib/xemacs/xemacs-packages/lisp/view-process/view-process-system-specific.el${ELSUFX}
@@ -5521,7 +5810,6 @@ lib/xemacs/xemacs-packages/lisp/xemacs-devel/reposition.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/xemacs-devel/reposition.elc
 lib/xemacs/xemacs-packages/lisp/xemacs-devel/trace.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/xemacs-devel/trace.elc
-lib/xemacs/xemacs-packages/lisp/xslide/CHANGELOG.TXT
 lib/xemacs/xemacs-packages/lisp/xslide/ChangeLog
 lib/xemacs/xemacs-packages/lisp/xslide/ChangeLog.upstream
 lib/xemacs/xemacs-packages/lisp/xslide/Makefile.upstream
@@ -5562,6 +5850,8 @@ lib/xemacs/xemacs-packages/lisp/zenirc/TODO
 lib/xemacs/xemacs-packages/lisp/zenirc/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/zenirc/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/zenirc/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/zenirc/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/zenirc/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/zenirc/zenirc-18.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/zenirc/zenirc-18.elc
 lib/xemacs/xemacs-packages/lisp/zenirc/zenirc-8ball.el${ELSUFX}
@@ -5686,6 +5976,7 @@ lib/xemacs/xemacs-packages/man/gnus/gnus.texi
 lib/xemacs/xemacs-packages/man/gnus/message.texi
 lib/xemacs/xemacs-packages/man/hm--html-menus/hm--html-mode.texi
 lib/xemacs/xemacs-packages/man/hm--html-menus/umlaute.texi
+lib/xemacs/xemacs-packages/man/hyperbole/hyperbole.texi
 lib/xemacs/xemacs-packages/man/idlwave/idlwave.texi
 lib/xemacs/xemacs-packages/man/ilisp/Makefile
 lib/xemacs/xemacs-packages/man/ilisp/README
@@ -5699,17 +5990,22 @@ lib/xemacs/xemacs-packages/man/lookup/lookup-guide.texi
 lib/xemacs/xemacs-packages/man/lookup/lookup.texi
 lib/xemacs/xemacs-packages/man/mail-lib/smtpmail.texi
 lib/xemacs/xemacs-packages/man/mailcrypt/mailcrypt.texi
+lib/xemacs/xemacs-packages/man/mew/mew-ja.texi
 lib/xemacs/xemacs-packages/man/mew/mew.texi
 lib/xemacs/xemacs-packages/man/mh-e/mh-e.texi
 lib/xemacs/xemacs-packages/man/mmm-mode/mmm.texinfo
 lib/xemacs/xemacs-packages/man/mmm-mode/texinfo.tex
 lib/xemacs/xemacs-packages/man/mmm-mode/version.texi
 lib/xemacs/xemacs-packages/man/mule-ucs/mule-ucs.texi
+lib/xemacs/xemacs-packages/man/oo-browser/oo-browser.texi
+lib/xemacs/xemacs-packages/man/os-utils/os-utils.texi
 lib/xemacs/xemacs-packages/man/pcl-cvs/pcl-cvs.texi
 lib/xemacs/xemacs-packages/man/pgg/pgg.texi
+lib/xemacs/xemacs-packages/man/prog-modes/prog-modes.texi
 lib/xemacs/xemacs-packages/man/psgml/psgml-api.texi
 lib/xemacs/xemacs-packages/man/psgml/psgml.texi
 lib/xemacs/xemacs-packages/man/reftex/reftex.texi
+lib/xemacs/xemacs-packages/man/riece/riece-ja.texi
 lib/xemacs/xemacs-packages/man/rmail/rmail.texi
 lib/xemacs/xemacs-packages/man/sasl/sasl.texi
 lib/xemacs/xemacs-packages/man/semantic/semantic.texi
@@ -5785,10 +6081,12 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.fortran-modes
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.frame-icon
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.fsf-compat
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.games
+lib/xemacs/xemacs-packages/pkginfo/MANIFEST.general-docs
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.gnats
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.gnus
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.haskell-mode
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.hm--html-menus
+lib/xemacs/xemacs-packages/pkginfo/MANIFEST.hyperbole
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.ibuffer
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.idlwave
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.igrep
@@ -5811,6 +6109,7 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.mule-base
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.mule-ucs
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.net-utils
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.ocaml
+lib/xemacs/xemacs-packages/pkginfo/MANIFEST.oo-browser
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.os-utils
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.pc
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.pcl-cvs
@@ -5823,6 +6122,7 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.psgml
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.psgml-dtds
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.python-modes
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.reftex
+lib/xemacs/xemacs-packages/pkginfo/MANIFEST.riece
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.rmail
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.ruby-modes
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.sasl
@@ -5879,10 +6179,14 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.zenirc
 @dirrm lib/xemacs/xemacs-packages/man/semantic
 @dirrm lib/xemacs/xemacs-packages/man/sasl
 @dirrm lib/xemacs/xemacs-packages/man/rmail
+@dirrm lib/xemacs/xemacs-packages/man/riece
 @dirrm lib/xemacs/xemacs-packages/man/reftex
 @dirrm lib/xemacs/xemacs-packages/man/psgml
+@dirrm lib/xemacs/xemacs-packages/man/prog-modes
 @dirrm lib/xemacs/xemacs-packages/man/pgg
 @dirrm lib/xemacs/xemacs-packages/man/pcl-cvs
+@dirrm lib/xemacs/xemacs-packages/man/os-utils
+@dirrm lib/xemacs/xemacs-packages/man/oo-browser
 @dirrm lib/xemacs/xemacs-packages/man/mule-ucs
 @dirrm lib/xemacs/xemacs-packages/man/mmm-mode
 @dirrm lib/xemacs/xemacs-packages/man/mh-e
@@ -5895,6 +6199,7 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.zenirc
 @dirrm lib/xemacs/xemacs-packages/man/ispell
 @dirrm lib/xemacs/xemacs-packages/man/ilisp
 @dirrm lib/xemacs/xemacs-packages/man/idlwave
+@dirrm lib/xemacs/xemacs-packages/man/hyperbole
 @dirrm lib/xemacs/xemacs-packages/man/hm--html-menus
 @dirrm lib/xemacs/xemacs-packages/man/gnus
 @dirrm lib/xemacs/xemacs-packages/man/gnats
@@ -5952,6 +6257,7 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.zenirc
 @dirrm lib/xemacs/xemacs-packages/lisp/sasl
 @dirrm lib/xemacs/xemacs-packages/lisp/ruby-modes
 @dirrm lib/xemacs/xemacs-packages/lisp/rmail
+@dirrm lib/xemacs/xemacs-packages/lisp/riece
 @dirrm lib/xemacs/xemacs-packages/lisp/reftex
 @dirrm lib/xemacs/xemacs-packages/lisp/python-modes
 @dirrm lib/xemacs/xemacs-packages/lisp/psgml-dtds
@@ -5964,6 +6270,7 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.zenirc
 @dirrm lib/xemacs/xemacs-packages/lisp/pcl-cvs
 @dirrm lib/xemacs/xemacs-packages/lisp/pc
 @dirrm lib/xemacs/xemacs-packages/lisp/os-utils
+@dirrm lib/xemacs/xemacs-packages/lisp/oo-browser
 @dirrm lib/xemacs/xemacs-packages/lisp/ocaml
 @dirrm lib/xemacs/xemacs-packages/lisp/net-utils
 @dirrm lib/xemacs/xemacs-packages/lisp/mule-ucs
@@ -5988,10 +6295,13 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.zenirc
 @dirrm lib/xemacs/xemacs-packages/lisp/igrep
 @dirrm lib/xemacs/xemacs-packages/lisp/idlwave
 @dirrm lib/xemacs/xemacs-packages/lisp/ibuffer
+@dirrm lib/xemacs/xemacs-packages/lisp/hyperbole/kotl
+@dirrm lib/xemacs/xemacs-packages/lisp/hyperbole
 @dirrm lib/xemacs/xemacs-packages/lisp/hm--html-menus
 @dirrm lib/xemacs/xemacs-packages/lisp/haskell-mode
 @dirrm lib/xemacs/xemacs-packages/lisp/gnus
 @dirrm lib/xemacs/xemacs-packages/lisp/gnats
+@dirrm lib/xemacs/xemacs-packages/lisp/general-docs
 @dirrm lib/xemacs/xemacs-packages/lisp/games
 @dirrm lib/xemacs/xemacs-packages/lisp/fsf-compat
 @dirrm lib/xemacs/xemacs-packages/lisp/frame-icon
@@ -6110,6 +6420,7 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.zenirc
 @dirrm lib/xemacs/xemacs-packages/etc/jde
 @dirrm lib/xemacs/xemacs-packages/etc/ilisp
 @dirrm lib/xemacs/xemacs-packages/etc/idlwave
+@dirrm lib/xemacs/xemacs-packages/etc/hyperbole
 @dirrm lib/xemacs/xemacs-packages/etc/hm--html-menus/templates
 @dirrm lib/xemacs/xemacs-packages/etc/hm--html-menus/idd
 @dirrm lib/xemacs/xemacs-packages/etc/hm--html-menus
