@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:13:24 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/08 15:18:39 wiz Exp $
 #
 
 DISTNAME=	allegro-4.1.14
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=alleg/}
 
@@ -33,6 +33,9 @@ BUILD_DEFS+=	USE_ESOUND
 .if !empty(USE_ESOUND:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-esddigi
 .include "../../audio/esound/buildlink3.mk"
+PLIST_SUBST+=		ESOUND=""
+.else
+PLIST_SUBST+=		ESOUND="@comment "
 .endif
 
 SUBST_CLASSES=		oss
