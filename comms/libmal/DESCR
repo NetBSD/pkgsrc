@@ -1,0 +1,2 @@
+libmal is simply a convenience library of the object files contained in Tom
+Whittaker's malsync distribution, along with a few wrapper functions.
