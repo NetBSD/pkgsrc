@@ -29,3 +29,6 @@ man/man8/amflush.8.gz
 man/man8/amlabel.8.gz
 man/man8/amrestore.8.gz
 man/man8/amtape.8.gz
+share/examples/amanda/disklist
+share/examples/amanda/chg-generic.conf
+share/examples/amanda/amanda.conf
