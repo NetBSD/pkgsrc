@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/03/08 11:05:22 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/05/20 18:30:27 tron Exp $
 
 DISTNAME=		mpich
 PKGNAME=		mpich-1.1.1
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.mcs.anl.gov/pub/mpi/
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.mcs.anl.gov/mpi/mpich/index.html
 
-DEPENDS+=		ssh-1.2.26:../../security/ssh
+DEPENDS+=		ssh-1.2.27:../../security/ssh
 
 WRKSRC=			${WRKDIR}/mpich
 ALL_TARGET=		ALL
