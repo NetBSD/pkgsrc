@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.3 2005/03/23 22:07:08 markd Exp $
+
+--- kresources/kolab/kcal/resourcekolab.cpp.orig	2005-02-04 12:12:14.000000000 +1300
++++ kresources/kolab/kcal/resourcekolab.cpp
+@@ -68,7 +68,7 @@ ResourceKolab::ResourceKolab( const KCon
+   : ResourceCalendar( config ), ResourceKolabBase( "ResourceKolab-libkcal" ),
+     mOpen( false )
+ {
+-  setType( "kolab" );
++  setType( "imap" );
+   connect( &mResourceChangedTimer, SIGNAL( timeout() ),
+            this, SLOT( slotEmitResourceChanged() ) );
+ }

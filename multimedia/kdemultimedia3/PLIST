@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/03/06 13:02:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/03/23 21:59:47 markd Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -23,6 +23,8 @@ include/akode/akodelib.h
 include/akode/audiobuffer.h
 include/akode/audioconfiguration.h
 include/akode/audioframe.h
+include/akode/auto_sink.h
+include/akode/converter.h
 include/akode/crossfader.h
 include/akode/decoder.h
 include/akode/encoder.h
@@ -31,12 +33,15 @@ include/akode/file.h
 include/akode/framedecoder.h
 include/akode/frametostream_decoder.h
 include/akode/localfile.h
+include/akode/magic.h
 include/akode/mmapfile.h
+include/akode/player.h
 include/akode/pluginhandler.h
 include/akode/resampler.h
 include/akode/sink.h
 include/akode/streamdecoder.h
 include/akode/streamtoframe_decoder.h
+include/akode/volumefilter.h
 include/akode/wav_decoder.h
 include/arts/artsbuilder.h
 include/arts/artsbuilder.idl
@@ -221,6 +226,7 @@ lib/kde3/videothumbnail.la
 lib/libakode.la
 lib/libakode_mpc_decoder.la
 lib/libakode_mpeg_decoder.la
+lib/libakode_oss_sink.la
 lib/libakode_xiph_decoder.la
 lib/libarts_akode.la
 lib/libarts_mpeglib.la
@@ -307,6 +313,7 @@ lib/mcop/Arts/Synth_COMPRESSOR.mcopclass
 lib/mcop/Arts/Synth_DATA.mcopclass
 lib/mcop/Arts/Synth_DEBUG.mcopclass
 lib/mcop/Arts/Synth_DELAY.mcopclass
+lib/mcop/Arts/Synth_DIV.mcopclass
 lib/mcop/Arts/Synth_ENVELOPE_ADSR.mcopclass
 lib/mcop/Arts/Synth_FM_SOURCE.mcopclass
 lib/mcop/Arts/Synth_FREEVERB.mcopclass
@@ -440,6 +447,7 @@ share/doc/kde/HTML/en/artsbuilder/images/Synth_CDELAY.png
 share/doc/kde/HTML/en/artsbuilder/images/Synth_COMPRESSOR.png
 share/doc/kde/HTML/en/artsbuilder/images/Synth_DEBUG.png
 share/doc/kde/HTML/en/artsbuilder/images/Synth_DELAY.png
+share/doc/kde/HTML/en/artsbuilder/images/Synth_DIV.png
 share/doc/kde/HTML/en/artsbuilder/images/Synth_ENVELOPE_ADSR.png
 share/doc/kde/HTML/en/artsbuilder/images/Synth_FILEPLAY.png
 share/doc/kde/HTML/en/artsbuilder/images/Synth_FM_SOURCE.png
@@ -493,12 +501,16 @@ share/doc/kde/HTML/en/kaboodle/index.docbook
 share/doc/kde/HTML/en/kcontrol/kmixcfg/common
 share/doc/kde/HTML/en/kcontrol/kmixcfg/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/kmixcfg/index.docbook
+share/doc/kde/HTML/en/kio_audiocd/audiocd.docbook
 share/doc/kde/HTML/en/kmid/common
 share/doc/kde/HTML/en/kmid/index.cache.bz2
 share/doc/kde/HTML/en/kmid/index.docbook
 share/doc/kde/HTML/en/kmix/common
 share/doc/kde/HTML/en/kmix/index.cache.bz2
 share/doc/kde/HTML/en/kmix/index.docbook
+share/doc/kde/HTML/en/kmix/kmix-channel-playback.png
+share/doc/kde/HTML/en/kmix/kmix-channel-record.png
+share/doc/kde/HTML/en/kmix/kmix-window.png
 share/doc/kde/HTML/en/krec/common
 share/doc/kde/HTML/en/krec/index.cache.bz2
 share/doc/kde/HTML/en/krec/index.docbook
@@ -596,6 +608,7 @@ share/kde/apps/artsbuilder/pics/Synth_ATAN_SATURATE.xpm
 share/kde/apps/artsbuilder/pics/Synth_BUS_DOWNLINK.xpm
 share/kde/apps/artsbuilder/pics/Synth_BUS_UPLINK.xpm
 share/kde/apps/artsbuilder/pics/Synth_DEBUG.xpm
+share/kde/apps/artsbuilder/pics/Synth_DIV.xpm
 share/kde/apps/artsbuilder/pics/Synth_ENVELOPE_ADSR.xpm
 share/kde/apps/artsbuilder/pics/Synth_FILEPLAY.xpm
 share/kde/apps/artsbuilder/pics/Synth_MIDI_DEBUG.xpm
@@ -647,6 +660,7 @@ share/kde/apps/kaudiocreator/pics/check.png
 share/kde/apps/kconf_update/audiocd.upd
 share/kde/apps/kconf_update/kaudiocreator-libkcddb.upd
 share/kde/apps/kconf_update/kaudiocreator-meta.upd
+share/kde/apps/kconf_update/kcmcddb-emailsettings.upd
 share/kde/apps/kconf_update/noatun.upd
 share/kde/apps/kconf_update/noatun20update
 share/kde/apps/kconf_update/upgrade-kaudiocreator-metadata.sh
@@ -701,6 +715,7 @@ share/kde/apps/kmix/pics/mix_treble.png
 share/kde/apps/kmix/pics/mix_unknown.png
 share/kde/apps/kmix/pics/mix_video.png
 share/kde/apps/kmix/pics/mix_volume.png
+share/kde/apps/konqueror/servicemenus/audiocd_play.desktop
 share/kde/apps/konqueror/servicemenus/jukservicemenu.desktop
 share/kde/apps/krec/icons/crystalsvg/16x16/actions/krec_record.png
 share/kde/apps/krec/icons/crystalsvg/22x22/actions/krec_record.png
@@ -766,6 +781,7 @@ share/kde/apps/noatun/monoscope.plugin
 share/kde/apps/noatun/net.plugin
 share/kde/apps/noatun/noatunui.plugin
 share/kde/apps/noatun/simple.plugin
+share/kde/apps/noatun/simpleui.rc
 share/kde/apps/noatun/skins/kaiman/car-preset/btn_exit.png
 share/kde/apps/noatun/skins/kaiman/car-preset/btn_iconify.png
 share/kde/apps/noatun/skins/kaiman/car-preset/btn_list.png
@@ -950,6 +966,7 @@ share/kde/apps/noatun/systray.plugin
 share/kde/apps/noatun/systrayui.rc
 share/kde/apps/noatun/voiceprint.plugin
 share/kde/apps/noatun/winskin.plugin
+share/kde/apps/noatun/yhconfig.kcfg
 share/kde/apps/profiles/kscd.profile.xml
 share/kde/apps/videothumbnail/sprocket-large.png
 share/kde/apps/videothumbnail/sprocket-medium.png
@@ -1044,6 +1061,7 @@ share/kde/icons/crystalsvg/scalable/actions/artsenvironment.svg
 share/kde/icons/crystalsvg/scalable/actions/artsfftscope.svg
 share/kde/icons/crystalsvg/scalable/actions/artsmediatypes.svg
 share/kde/icons/crystalsvg/scalable/actions/artsmidimanager.svg
+share/kde/icons/crystalsvg/scalable/apps/artsbuilder.svgz
 share/kde/icons/crystalsvg/scalable/apps/artscontrol.svg
 share/kde/icons/locolor/16x16/apps/kaudiocreator.png
 share/kde/icons/locolor/32x32/apps/kaudiocreator.png
@@ -1182,6 +1200,7 @@ share/kde/servicetypes/krec_exportitem.desktop
 @dirrm share/doc/kde/HTML/en/krec
 @dirrm share/doc/kde/HTML/en/kmix
 @dirrm share/doc/kde/HTML/en/kmid
+@dirrm share/doc/kde/HTML/en/kio_audiocd
 @dirrm share/doc/kde/HTML/en/kcontrol/kmixcfg
 @comment in kde: @dirrm share/doc/kde/HTML/en/kcontrol
 @dirrm share/doc/kde/HTML/en/kaboodle

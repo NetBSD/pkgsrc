@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/01/18 03:35:08 minskim Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/03/23 22:02:35 markd Exp $
 bin/ark
 bin/irkick
 bin/kcalc
@@ -43,6 +43,7 @@ lib/kde3/kcm_thinkpad.la
 lib/kde3/kded_klaptopdaemon.la
 lib/kde3/kded_kmilod.la
 lib/kde3/kedit.la
+lib/kde3/kmilo_asus.la
 lib/kde3/kmilo_generic.la
 lib/kde3/kmilo_thinkpad.la
 lib/kde3/ksim_cpu.la
@@ -53,12 +54,14 @@ lib/kde3/ksim_panelextension.la
 lib/kde3/ksim_sensors.la
 lib/kde3/libarkpart.la
 lib/kde3/libkbyteseditwidget.la
+lib/kde3/libkhexedit2part.la
 lib/kde3/libkregexpeditorgui.la
 lib/libkcmlaptop.la
 lib/libkdeinit_ark.la
 lib/libkdeinit_irkick.la
 lib/libkdeinit_kcalc.la
 lib/libkdeinit_kedit.la
+lib/libkhexeditcommon.la
 lib/libkmilo.la
 lib/libkregexpeditorcommon.la
 lib/libksimcore.la
@@ -78,6 +81,7 @@ share/applications/kde/kregexpeditor.desktop
 share/applications/kde/ksim.desktop
 share/applications/kde/ktimer.desktop
 share/applications/kde/kwalletconfig.desktop
+share/applications/kde/kwalletmanager-kwalletd.desktop
 share/applications/kde/kwalletmanager.desktop
 share/applications/kde/kwikdisk.desktop
 share/applications/kde/laptop.desktop
@@ -215,6 +219,7 @@ share/kde/apps/irkick/icons/hicolor/32x32/actions/ledpurple.png
 share/kde/apps/irkick/icons/hicolor/32x32/actions/ledred.png
 share/kde/apps/irkick/icons/hicolor/32x32/actions/ledyellow.png
 share/kde/apps/kcalc/kcalcui.rc
+share/kde/apps/kcharselect/kcharselectui.rc
 share/kde/apps/kconf_update/kcalcrc.upd
 share/kde/apps/kconf_update/kcharselect.upd
 share/kde/apps/kdf/kdfui.rc
@@ -247,6 +252,7 @@ share/kde/apps/khexedit/khexeditui.rc
 share/kde/apps/khexedit/pics/hexdrag.png
 share/kde/apps/khexedit/pics/hexmask.png
 share/kde/apps/khexedit/pics/hexwrite.png
+share/kde/apps/khexedit2part/khexedit2partui.rc
 share/kde/apps/kicker/applets/kcharselectapplet.desktop
 share/kde/apps/kicker/extensions/ksim.desktop
 share/kde/apps/kjots/kjotsui.rc
@@ -354,7 +360,6 @@ share/kde/icons/crystalsvg/16x16/apps/kfloppy.png
 share/kde/icons/crystalsvg/16x16/apps/kgpg.png
 share/kde/icons/crystalsvg/16x16/apps/khexedit.png
 share/kde/icons/crystalsvg/16x16/apps/kjots.png
-share/kde/icons/crystalsvg/16x16/apps/klaptopdaemon.png
 share/kde/icons/crystalsvg/16x16/apps/kregexpeditor.png
 share/kde/icons/crystalsvg/16x16/apps/ksim.png
 share/kde/icons/crystalsvg/16x16/apps/ktimer.png
@@ -365,6 +370,7 @@ share/kde/icons/crystalsvg/16x16/apps/laptop_pcmcia.png
 share/kde/icons/crystalsvg/16x16/devices/ksim_cpu.png
 share/kde/icons/crystalsvg/22x22/apps/kgpg.png
 share/kde/icons/crystalsvg/22x22/apps/kwalletmanager.png
+share/kde/icons/crystalsvg/22x22/apps/kwikdisk.png
 share/kde/icons/crystalsvg/32x32/apps/ark.png
 share/kde/icons/crystalsvg/32x32/apps/kcalc.png
 share/kde/icons/crystalsvg/32x32/apps/kcmdf.png
@@ -407,6 +413,9 @@ share/kde/icons/crystalsvg/64x64/apps/kregexpeditor.png
 share/kde/icons/crystalsvg/64x64/apps/kwalletmanager.png
 share/kde/icons/crystalsvg/64x64/apps/kwikdisk.png
 share/kde/icons/crystalsvg/64x64/apps/laptop_battery.png
+share/kde/icons/crystalsvg/scalable/apps/ark.svgz
+share/kde/icons/crystalsvg/scalable/apps/kcalc.svgz
+share/kde/icons/crystalsvg/scalable/apps/laptop_battery.svgz
 share/kde/icons/hicolor/16x16/apps/irkick.png
 share/kde/icons/hicolor/22x22/apps/irkick.png
 share/kde/icons/hicolor/32x32/apps/irkick.png
@@ -416,6 +425,8 @@ share/kde/services/ark_part.desktop
 share/kde/services/kbyteseditwidget.desktop
 share/kde/services/kded/klaptopdaemon.desktop
 share/kde/services/kded/kmilod.desktop
+share/kde/services/khexedit2part.desktop
+share/kde/services/kmilo/kmilo_asus.desktop
 share/kde/services/kmilo/kmilo_generic.desktop
 share/kde/services/kmilo/kmilo_thinkpad.desktop
 share/kde/services/kregexpeditorgui.desktop
@@ -432,6 +443,7 @@ share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
 @comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
@@ -462,7 +474,6 @@ share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
 @dirrm share/kde/apps/kregexpeditor/pics
 @dirrm share/kde/apps/kregexpeditor
 @comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
-@comment in kde: @dirrm share/kde/apps/konqueror
 @dirrm share/kde/apps/klaptopdaemon/icons/crystalsvg/32x32/actions
 @dirrm share/kde/apps/klaptopdaemon/icons/crystalsvg/32x32
 @dirrm share/kde/apps/klaptopdaemon/icons/crystalsvg/22x22/actions
@@ -476,6 +487,7 @@ share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
 @dirrm share/kde/apps/kjots
 @comment in kde: @dirrm share/kde/apps/kicker/extensions
 @comment in kde: @dirrm share/kde/apps/kicker/applets
+@dirrm share/kde/apps/khexedit2part
 @dirrm share/kde/apps/khexedit/pics
 @dirrm share/kde/apps/khexedit
 @dirrm share/kde/apps/kgpg/pics
@@ -490,6 +502,7 @@ share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
 @dirrm share/kde/apps/kdf/pics
 @dirrm share/kde/apps/kdf
 @comment in kde: @dirrm share/kde/apps/kconf_update
+@dirrm share/kde/apps/kcharselect
 @dirrm share/kde/apps/kcalc
 @dirrm share/kde/apps/irkick/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/irkick/icons/hicolor/32x32
