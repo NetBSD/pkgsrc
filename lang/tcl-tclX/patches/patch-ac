@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2004/05/13 22:06:04 minskim Exp $
+$NetBSD: patch-ac,v 1.5 2004/05/16 18:52:11 minskim Exp $
 
 --- configure.orig	2002-11-01 20:48:14.000000000 -0600
 +++ configure
@@ -18,6 +18,28 @@ $NetBSD: patch-ac,v 1.4 2004/05/13 22:06:04 minskim Exp $
  
  
  # These are substituted into the run scripts
+@@ -1894,7 +1896,7 @@ fi
+ 	    DL_LIBS=""
+ 	    LDFLAGS="-Wl,-D,08000000"
+ 	    LD_SEARCH_FLAGS='-L${LIB_RUNTIME_DIR}'
+-	    SHARED_LIB_SUFFIX='${VERSION}\$\{DBGX\}.a'
++	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
+ 	    ;;
+ 	IRIX-5.*|IRIX-6.*|IRIX64-6.5*)
+ 	    SHLIB_CFLAGS=""
+@@ -2541,10 +2543,10 @@ fi
+     fi
+ 
+     if test "$SHARED_LIB_SUFFIX" = "" ; then
+-	SHARED_LIB_SUFFIX='${VERSION}\$\{DBGX\}${SHLIB_SUFFIX}'
++	SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}${SHLIB_SUFFIX}'
+     fi
+     if test "$UNSHARED_LIB_SUFFIX" = "" ; then
+-	UNSHARED_LIB_SUFFIX='${VERSION}\$\{DBGX\}.a'
++	UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
+     fi
+ 
+     
 @@ -2630,11 +2632,7 @@ eval "TKX_SHLIB_NAME=${TKX_SHLIB_NAME}"
  #
  # Determine suffix to use for the object files for the shared library.
