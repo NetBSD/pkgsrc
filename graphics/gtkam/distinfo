@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/08 01:48:38 garbled Exp $
+$NetBSD: distinfo,v 1.2 2002/02/28 14:52:19 martti Exp $
 
-SHA1 (gtkam-20010707.tar.gz) = 2761940cb3909714911a8aa49ab130bf13805994
-Size (gtkam-20010707.tar.gz) = 156161 bytes
-SHA1 (patch-aa) = 42b2a1868282b1201997bdda8179b13829294373
+SHA1 (gtkam-0.1.2.tar.gz) = 8a0ad7c4c83158240edeb11c3087de75971fcccc
+Size (gtkam-0.1.2.tar.gz) = 536588 bytes
+SHA1 (patch-aa) = 09c7938c8164c6902025b2a94eaf54675a58f2ec
