@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2002/03/10 10:37:27 mrg Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/03/21 15:29:51 mrg Exp $
 bin/irc
-bin/irc-20020310
+bin/irc-20020321
 bin/ircbug
 bin/ircflush
 bin/ircio
@@ -295,6 +295,7 @@ share/irc/help/on/wallop@.GZ@
 share/irc/help/on/who@.GZ@
 share/irc/help/on/window@.GZ@
 share/irc/help/on/window_kill@.GZ@
+share/irc/help/on/window_list@.GZ@
 share/irc/help/on/window_swap@.GZ@
 share/irc/help/on/icb_status@.GZ@
 share/irc/help/on/icb_error@.GZ@
@@ -337,6 +338,7 @@ share/irc/help/set/ctcp_reply_flood_size@.GZ@
 share/irc/help/set/ctcp_reply_ignore_seconds@.GZ@
 share/irc/help/set/dcc_block_size@.GZ@
 share/irc/help/set/debug@.GZ@
+share/irc/help/set/decrypt_program@.GZ@
 share/irc/help/set/display@.GZ@
 share/irc/help/set/eight_bit_characters@.GZ@
 share/irc/help/set/encrypt_program@.GZ@
@@ -364,6 +366,7 @@ share/irc/help/set/input_protection@.GZ@
 share/irc/help/set/insert_mode@.GZ@
 share/irc/help/set/inverse_video@.GZ@
 share/irc/help/set/irchost@.GZ@
+share/irc/help/set/iso2022_support@.GZ@
 share/irc/help/set/lastlog@.GZ@
 share/irc/help/set/lastlog_level@.GZ@
 share/irc/help/set/load_path@.GZ@
@@ -382,7 +385,6 @@ share/irc/help/set/notify_level@.GZ@
 share/irc/help/set/notify_on_termination@.GZ@
 share/irc/help/set/novice@.GZ@
 share/irc/help/set/old_encrypt_program@.GZ@
-share/irc/help/set/pause_after_motd@.GZ@
 share/irc/help/set/realname@.GZ@
 share/irc/help/set/same_window_only@.GZ@
 share/irc/help/set/scroll@.GZ@
@@ -396,6 +398,7 @@ share/irc/help/set/show_away_once@.GZ@
 share/irc/help/set/show_channel_names@.GZ@
 share/irc/help/set/show_end_of_msgs@.GZ@
 share/irc/help/set/show_numerics@.GZ@
+share/irc/help/set/show_stars@.GZ@
 share/irc/help/set/show_status_all@.GZ@
 share/irc/help/set/show_who_hopcount@.GZ@
 share/irc/help/set/star_prefix@.GZ@
@@ -403,7 +406,6 @@ share/irc/help/set/status_away@.GZ@
 share/irc/help/set/status_channel@.GZ@
 share/irc/help/set/status_chanop@.GZ@
 share/irc/help/set/status_clock@.GZ@
-share/irc/help/set/status_dquery@.GZ@
 share/irc/help/set/status_format@.GZ@
 share/irc/help/set/status_hold@.GZ@
 share/irc/help/set/status_hold_lines@.GZ@
@@ -420,6 +422,7 @@ share/irc/help/set/status_user@.GZ@
 share/irc/help/set/status_voice@.GZ@
 share/irc/help/set/status_window@.GZ@
 share/irc/help/set/suppress_server_motd@.GZ@
+share/irc/help/set/tab@.GZ@
 share/irc/help/set/tab_max@.GZ@
 share/irc/help/set/translation@.GZ@
 share/irc/help/set/underline_video@.GZ@
