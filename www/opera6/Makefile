@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/04/01 14:18:37 jdolecek Exp $
+# $NetBSD: Makefile,v 1.6 2002/04/04 11:56:47 tron Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 CATEGORIES=	www
@@ -28,10 +28,10 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 OPERA_PKG_VERSION=             6.0
 
 .if (${MACHINE_ARCH} == i386)
-DEPENDS+=	suse_compat>=6.3:../../emulators/suse_compat
-DEPENDS+=	suse_libjpeg>=6.4:../../emulators/suse_libjpeg
-DEPENDS+=	suse_libpng>=6.4:../../emulators/suse_libpng
-DEPENDS+=	suse_x11>=6.3:../../emulators/suse_x11
+DEPENDS+=	suse_compat>=6.3:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=	suse_libjpeg>=6.4:../../emulators/${SUSE_DIR_PREFIX}_libjpeg
+DEPENDS+=	suse_libpng>=6.4:../../emulators/${SUSE_DIR_PREFIX}_libpng
+DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 OPERA_ARCH=		i386
 OPERA_DIR=		600/beta1
@@ -48,7 +48,7 @@ do-build:
 post-install: post-install-manpage
 	${INSTALL_SCRIPT} ${WRKDIR}/opera ${PREFIX}/bin
 
-.include "../../emulators/suse_linux/Makefile.common"
+.include "../../emulators/suse_linux/Makefile.application"
 
 post-install-manpage:
 # The SuSE common makefile defines "MANCOMPRESSED".
