@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/04/30 17:05:21 tv Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/05/01 00:41:47 tv Exp $
 etc/httpd/httpd.conf.modperl
 lib/httpd/mod_perl.so
 lib/perl5/man/man3/Apache.3
@@ -90,7 +90,7 @@ lib/perl5/site_perl/mod_perl_tuning.pod
 share/httpd/htdocs/manual/mod/mod_perl.html
 @dirrm lib/perl5/site_perl/Apache/Constants
 @dirrm lib/perl5/site_perl/Apache
-@dirrm lib/perl5/site_perl/Bundle
+@unexec rmdir %D/lib/perl5/site_perl/Bundle 2>/dev/null || true
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Leak
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Symbol
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache
