@@ -1,38 +1,22 @@
-$NetBSD: patch-ah,v 1.4 2000/09/28 11:28:24 toshii Exp $
+$NetBSD: patch-ah,v 1.5 2001/02/20 13:04:31 tron Exp $
 
---- src/unexelf.c.orig	Sat Dec  4 13:13:06 1999
-+++ src/unexelf.c
-@@ -482,6 +482,7 @@
- # endif
- # include <sys/exec_elf.h>
- 
-+# ifndef PT_LOAD
- # define PT_LOAD	Elf_pt_load
- # define SHT_SYMTAB	Elf_sht_symtab
- # define SHT_DYNSYM	Elf_sht_dynsym
-@@ -493,6 +494,7 @@
- # define SHN_UNDEF	Elf_eshn_undefined
- # define SHN_ABS	Elf_eshn_absolute
- # define SHN_COMMON	Elf_eshn_common
-+# endif
- 
- # ifdef __alpha__
- #  include <sys/exec_ecoff.h>
-@@ -511,10 +513,18 @@
+--- src/unexelf.c.orig	Tue Jan  9 04:27:56 2001
++++ src/unexelf.c	Tue Feb 20 11:48:04 2001
+@@ -481,10 +481,18 @@
  
  #ifndef ElfW
  # ifdef __STDC__
 -#  define ElfW(type)	Elf32_##type
 +#  define ElfBitsW(bits, type) Elf##bits##_##type
-+# else
-+#  define ElfBitsW(bits, type) Elf/**/bits/**/_/**/type
-+# endif
-+# if defined (_LP64) || defined(__alpha__)
-+#  define ELFSIZE 64
  # else
 -#  define ElfW(type)	Elf32_/**/type
-+#  define ELFSIZE 32
++#  define ElfBitsW(bits, type) Elf/**/bits/**/_/**/type
  # endif
++# if defined (_LP64) || defined(__alpha__)
++#  define ELFSIZE 64
++# else
++#  define ELFSIZE 32
++# endif
 +  /* This macro expands `bits' before invoking ElfBitsW.  */
 +# define ElfExpandBitsW(bits, type) ElfBitsW (bits, type)
 +# define ElfW(type) ElfExpandBitsW (ELFSIZE, type)
