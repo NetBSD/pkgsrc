@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1084 2002/11/12 13:42:50 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1085 2002/11/17 11:58:49 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -310,7 +310,12 @@ CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 .endif
 
+# FreeBSD shared library naming was fixed in libtool nb10.
+.if ${OPSYS} == "FreeBSD"
+LIBTOOL_REQD=		1.4.20010614nb10
+.else
 LIBTOOL_REQD=		1.4.20010614nb9
+.endif
 LIBTOOL=		${LOCALBASE}/bin/libtool
 .if defined(USE_LIBTOOL)
 PKGLIBTOOL=		${LIBTOOL}
