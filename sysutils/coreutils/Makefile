@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/17 00:14:14 recht Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/11 23:12:50 jmmv Exp $
 
 DISTNAME=	coreutils-5.0
 PKGREVISION=	4
@@ -12,7 +12,7 @@ COMMENT=	GNU basic file, shell and text manipulation utilities
 
 BUILD_USES_MSGFMT=	YES
 
-CONFLICTS=	sh-utils-* fileutils-* textutils-*
+CONFLICTS=	fileutils-* linuxls-* sh-utils-* textutils-*
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
