@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/11/09 13:05:34 xtraeme Exp $
+
+--- vmdk2raw.c.orig	2004-07-10 21:20:09.000000000 +0300
++++ vmdk2raw.c
+@@ -84,7 +84,9 @@ static size_t copy_virtual(struct vmdk_p
+     unsigned int granule_offset;
+     unsigned int grain_index;
+     unsigned int sector_map_idx;
+-    
++   
++    const char nil = 0;
++
+     granule_offset = offset % granule_size;
+     length = MIN(length, granule_size - granule_offset);
+     length = MIN(length, disk_limit - offset);
+@@ -132,7 +134,6 @@ zero_fill:
+         if (lseek64(out_fd, length-1, SEEK_CUR) == (off_t)-1)
+             perror("lseek");
+         /* write the last NULL byte instead of seeking */
+-        const char nil = 0;
+         write(out_fd, &nil, 1);
+     } else {
+         if (lseek64(out_fd, length, SEEK_CUR) == (off_t)-1)
+@@ -185,13 +186,14 @@ static int open_vmdk3(int fd)
+ 
+ static int open_vmdk(const char *filename)
+ {
++    char magic[4];
++
+     int fd = open(filename, O_RDONLY | O_LARGEFILE);
+     if (fd == -1) {
+         perror(filename);
+         return -1;
+     }
+ 
+-    char magic[4];
+     if (read(fd, &magic, sizeof(magic)) != sizeof(magic)) {
+         perror("read from disk");
+         return -1;

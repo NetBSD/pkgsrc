@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/09 13:05:33 xtraeme Exp $
+bin/qemu
+bin/qemu-mkcow
+bin/qemu-system-ppc
+bin/vmdk2raw
+man/man1/qemu-mkcow.1
+man/man1/qemu.1
+share/doc/qemu/qemu-doc.html
+share/doc/qemu/qemu-tech.html
+share/qemu/bios.bin
+share/qemu/linux_boot.bin
+share/qemu/ppc_rom.bin
+share/qemu/vgabios-cirrus.bin
+share/qemu/vgabios.bin
+@dirrm share/qemu
+@dirrm share/doc/qemu
