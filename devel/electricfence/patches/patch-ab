@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/10/27 04:04:11 garbled Exp $
+--- page.c.orig	Mon Oct 26 00:21:10 1998
++++ page.c	Mon Oct 26 00:21:34 1998
+@@ -29,7 +29,7 @@
+ 
+ static caddr_t	startAddr = (caddr_t) 0;
+ 
+-#if ( !defined(sgi) && !defined(_AIX) )
++#if ( !defined(sgi) && !defined(_AIX) && !defined(__NetBSD__))
+ extern int	sys_nerr;
+ extern char *	sys_errlist[];
+ #endif
