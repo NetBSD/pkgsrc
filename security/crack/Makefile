@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/10/04 17:36:55 bouyer Exp $
+# $NetBSD: Makefile,v 1.6 2000/02/05 04:53:17 wiz Exp $
 # FreeBSD Id: ports/security/crack/Makefile,v 1.11 1999/09/04 19:24:50 obrien Exp
 
 DISTNAME=	crack5.0
@@ -24,8 +24,8 @@ pre-build:
 		${ECHO_MSG} "You may want to install the dict distribution into /usr/share/dict" ; \
 		${ECHO_MSG} "to increase the size of the cracking dictionary." ; \
 	fi)
-	@sed 's|@@PREFIX@@|${PREFIX}|g' < ${WRKSRC}/Crack > ${WRKSRC}/Crack.new
-	@rm -f ${WRKSRC}/Crack && mv ${WRKSRC}/Crack.new ${WRKSRC}/Crack
+	@${SED} 's|@@PREFIX@@|${PREFIX}|g' < ${WRKSRC}/Crack > ${WRKSRC}/Crack.new
+	@${RM} -f ${WRKSRC}/Crack && ${MV} ${WRKSRC}/Crack.new ${WRKSRC}/Crack
 	@${CHMOD} a+rx ${WRKSRC}/Crack
 
 do-build:
@@ -34,7 +34,7 @@ do-build:
 do-install:
 	@${MKDIR} ${PREFIX}/libexec/crack
 	@${CHMOD} go-rwx ${PREFIX}/libexec/crack
-	@${MKDIR} ${PREFIX}/share/crack/conf 
+	@${MKDIR} ${PREFIX}/share/crack/conf
 	@${CHMOD} go-rwx ${PREFIX}/share/crack
 	@${MKDIR} ${PREFIX}/share/crack/dict
 	@${MKDIR} ${PREFIX}/share/doc/crack
@@ -45,7 +45,7 @@ do-install:
 	@${MKDIR} ${PREFIX}/share/crack/run
 	@${MKDIR} ${PREFIX}/crack/run/dict
 	${INSTALL_SCRIPT} ${WRKSRC}/Crack ${PREFIX}/sbin
-	@sed 's|@@PREFIX@@|${PREFIX}|g' < ${WRKSRC}/Reporter > \
+	@${SED} 's|@@PREFIX@@|${PREFIX}|g' < ${WRKSRC}/Reporter > \
 	    ${PREFIX}/sbin/Reporter
 	@${CHMOD} 700 ${PREFIX}/sbin/Crack ${PREFIX}/sbin/Reporter
 	${INSTALL_DATA} ${WRKSRC}/LICENCE ${PREFIX}/share/doc/crack/
@@ -141,7 +141,7 @@ do-install:
 		extra/Makefile \
 		extra/brute.c ;\
 	do \
-		echo ${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/crack/$$i ;\
+		${ECHO} ${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/crack/$$i ;\
 		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/crack/$$i ;\
 	done
 	@for i in \
@@ -155,7 +155,7 @@ do-install:
 		gui.txt \
 		humour.txt; \
 	do \
-		echo ${INSTALL_DATA} ${WRKSRC}/doc/$$i \
+		${ECHO} ${INSTALL_DATA} ${WRKSRC}/doc/$$i \
 		    ${PREFIX}/share/doc/crack/$$i ;\
 		${INSTALL_DATA} ${WRKSRC}/doc/$$i \
 		    ${PREFIX}/share/doc/crack/$$i ;\
@@ -190,7 +190,7 @@ do-install:
 		extra/b64decode \
 		extra/Dictstats.pl; \
 	do \
-		echo ${INSTALL_SCRIPT} ${WRKSRC}/$$i \
+		${ECHO} ${INSTALL_SCRIPT} ${WRKSRC}/$$i \
 		    ${PREFIX}/share/crack/$$i ;\
 		${INSTALL_SCRIPT} ${WRKSRC}/$$i ${PREFIX}/share/crack/$$i ;\
 	done
@@ -201,7 +201,7 @@ do-install:
 		dictfilt \
 		kickdict; \
 	do \
-		echo ${INSTALL_PROGRAM} ${WRKSRC}/run/bin/$$i \
+		${ECHO} ${INSTALL_PROGRAM} ${WRKSRC}/run/bin/$$i \
 		    ${PREFIX}/libexec/crack/$$i ;\
 		${INSTALL_PROGRAM} ${WRKSRC}/run/bin/$$i \
 		    ${PREFIX}/libexec/crack/$$i ;\
