@@ -1,9 +1,14 @@
-$NetBSD: patch-ac,v 1.12 2000/10/14 09:24:46 martin Exp $
+$NetBSD: patch-ac,v 1.13 2000/10/30 17:03:38 mycroft Exp $
 
-diff -ru /usr/local/src/mozilla/nsprpub/config/NetBSD.mk ./nsprpub/config/NetBSD.mk
---- /usr/local/src/mozilla/nsprpub/config/NetBSD.mk	Fri Jul  7 06:04:45 2000
-+++ ./nsprpub/config/NetBSD.mk	Fri Oct 13 11:23:07 2000
-@@ -56,12 +56,17 @@
+--- nsprpub/config/NetBSD.mk.orig	Thu Jul  6 21:04:45 2000
++++ nsprpub/config/NetBSD.mk	Mon Oct 30 17:01:51 2000
+@@ -52,16 +52,23 @@
+ DLL_SUFFIX		= so
+ else
+ DLL_SUFFIX		= so.1.0
++# XXX work around a bug in the a.out ld(1).
++OS_LIBS			=
+ endif
  
  DSO_CFLAGS		= -fPIC -DPIC
  DSO_LDFLAGS		=
