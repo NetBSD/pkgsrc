@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/08/29 14:39:40 agc Exp $
+# $NetBSD: Makefile,v 1.35 2002/10/16 15:18:56 jlam Exp $
 #
 
 DISTNAME=		unproven-pthreads-0.17
@@ -13,6 +13,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-m68k NetBSD-*-powerpc NetBSD-*-sparc
 CONFLICTS+=		mit-pthreads-[0-9]*
 
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/pthreads
 MAKE_ENV+=		NOLINT=1 NOPROFILE=1 OBJECT_FMT=${OBJECT_FMT} USETOOLS=no
@@ -20,11 +21,25 @@ MAKE_ENV+=		NOLINT=1 NOPROFILE=1 OBJECT_FMT=${OBJECT_FMT} USETOOLS=no
 CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config/config.guess
 CONFIG_SUB_OVERRIDE=	${WRKSRC}/config/config.sub
 
+# Remove environment variables with special meaning from the shell
+# environment before executing ${MAKE_PROGRAM} in the do-configure,
+# do-build and do-install targets.
+#
+CLEAN_ENV_CMD+=		unset MAKEOBJDIR MAKEOBJDIRPREFIX || ${TRUE} ;
+
 post-extract:
 	@${RM} ${WRKSRC}/include/pthread/unistd.h
 
+do-build:
+	@${CLEAN_ENV_CMD}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/pthreads
+
+do-install:
+	@${CLEAN_ENV_CMD}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 
 post-install:
 	@${RM} -f ${PREFIX}/pthreads/lib/libpthread_pic.a
@@ -34,5 +49,3 @@ post-install:
 	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/pthreads/include
 
 .include "../../mk/bsd.pkg.mk"
-
-SETENV:=	unset MAKEOBJDIRPREFIX; ${SETENV}
