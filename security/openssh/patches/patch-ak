@@ -1,0 +1,36 @@
+$NetBSD: patch-ak,v 1.4 2004/08/04 06:43:52 minskim Exp $
+
+--- sshconnect.c.orig	Tue Jan 27 04:21:27 2004
++++ sshconnect.c
+@@ -728,6 +728,7 @@ check_host_key(char *host, struct sockad
+ 			/* The default */
+ 			fp = key_fingerprint(host_key, SSH_FP_MD5, SSH_FP_HEX);
+ 			msg2[0] = '\0';
++#ifndef __INTERIX
+ 			if (options.verify_host_key_dns) {
+ 				if (matching_host_key_dns)
+ 					snprintf(msg2, sizeof(msg2),
+@@ -738,6 +739,7 @@ check_host_key(char *host, struct sockad
+ 					    "No matching host key fingerprint"
+ 					    " found in DNS.\n");
+ 			}
++#endif /* __INTERIX */
+ 			snprintf(msg, sizeof(msg),
+ 			    "The authenticity of host '%.200s (%s)' can't be "
+ 			    "established%s\n"
+@@ -895,6 +897,7 @@ verify_host_key(char *host, struct socka
+ 	struct stat st;
+ 	int flags = 0;
+ 
++#ifndef __INTERIX
+ 	if (options.verify_host_key_dns &&
+ 	    verify_host_key_dns(host, hostaddr, host_key, &flags) == 0) {
+ 
+@@ -914,6 +917,7 @@ verify_host_key(char *host, struct socka
+ 			}
+ 		}
+ 	}
++#endif /* !defined(__INTERIX) */
+ 
+ 	/* return ok if the key can be found in an old keyfile */
+ 	if (stat(options.system_hostfile2, &st) == 0 ||
