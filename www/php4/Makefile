@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/02/21 05:39:03 lukem Exp $
+# $NetBSD: Makefile,v 1.33 2003/06/29 16:30:32 grant Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 PKGREVISION=		2
@@ -23,9 +23,8 @@ EGDIR=			${PREFIX}/share/examples/php
 # "-Wl," to force all of the flags to be passed down to the linker through
 # libtool without change.
 #
-.if (${OPSYS} == "NetBSD") && (${OBJECT_FMT} == "ELF")
-LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -Wl,-lgcc -Wl,--no-whole-archive
-MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
+.if ${OPSYS} == "NetBSD" && ${OBJECT_FMT} == "ELF"
+MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_ALL_LIBGCC_HACK}"
 .endif
 
 # Ensure we export symbols in the linked shared object.
