@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST-md.static,v 1.1.1.1 1999/05/18 16:13:38 bad Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XML/Parser/Expat/Expat.a
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XML/Parser/Expat/extralibs.ld
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XML/Parser/Expat
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XML/Parser
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XML
