@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/03/13 17:43:38 fredb Exp $
+# $NetBSD: Makefile,v 1.40 2002/05/16 03:00:02 grant Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		ftp://swrinde.nde.swri.edu/pub/png/src/ \
 		ftp://ftp.simplesystems.org/pub/libpng/src/ \
 		ftp://ftp.fu-berlin.de/unix/graphics/png/src/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.libpng.org/pub/png/
