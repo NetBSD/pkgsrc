@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:10:44 martti Exp $
+# $NetBSD: Makefile,v 1.7 2003/10/11 14:23:04 grant Exp $
 
 DISTNAME=	host_991529
 PKGNAME=	host-991529
 WRKSRC=		${WRKDIR}
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.nikhef.nl/pub/network/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nikhef.nl/user/e07/
 COMMENT=	Powerful DNS query and testing tool
+
+CONFLICTS+=	bind-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
