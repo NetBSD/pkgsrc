@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/03/24 19:40:33 magick Exp $
+$NetBSD: patch-aa,v 1.2 2003/01/18 05:45:43 uebayasi Exp $
 
---- Makefile.in.in.orig	Thu Dec 20 07:08:09 2001
+--- Makefile.in.in.orig	Sat Jan 18 12:23:29 2003
 +++ Makefile.in.in
-@@ -470,8 +470,12 @@
+@@ -477,8 +477,12 @@
  	fi
  	cd ${srcdir}/etc && \
  	  for page in xemacs etags ctags gnuserv gnuclient gnuattach gnudoit; do \

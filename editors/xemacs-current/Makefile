@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2002/11/01 16:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/01/18 05:45:42 uebayasi Exp $
 
-DISTNAME=	xemacs-21.5.9
-PKGREVISION=	1
+DISTNAME=	xemacs-21.5.10
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/xemacs-21.5/ \
 		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/xemacs-21.5/ \
@@ -14,8 +13,8 @@ COMMENT=	*BETA* XEmacs text editor version 21.5.9
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 
-PLIST_SUBST+=	EMACSVER=xemacs-21.5-b9
-MESSAGE_SUBST+=	EMACSVER=xemacs-21.5-b9
+PLIST_SUBST+=	EMACSVER=xemacs-21.5-b10
+MESSAGE_SUBST+=	EMACSVER=xemacs-21.5-b10
 
 .if (${MACHINE_ARCH} == "arm32")
 .  include "../../lang/gcc/buildlink2.mk"
