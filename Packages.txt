@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.252 2002/06/25 21:21:44 agc Exp $
+# $NetBSD: Packages.txt,v 1.253 2002/06/27 09:50:42 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -395,16 +395,7 @@ policy:
     BATCH=                  yes               # required for bulk builds 
     FAILOVER_FETCH=         yes               # insist on the correct checksum
     PKG_DEVELOPER?=         yes
-    ACCEPTABLE_LICENSES=    shareware \
-                            fee-based-commercial-use \
-			    mosaic-license \
-                            no-profit \
-                            no-commercial-use \
-                            non-commercial-use \
-                            limited-redistribution \
-			    kermit-license \
-			    sun-swing-license \
-			    sun-jsdk20-license
+    _ACCEPTABLE_LICENSES=   yes               # XXX
 
 If you wish to use xpkgwedge for the entire build, then add:
 
@@ -540,15 +531,26 @@ After extracting all the sets from a NetBSD installation or doing a
 "make distribution DESTDIR=/usr/sandbox" in src/etc, make sure the following
 items are present and properly configures:
 
- * kernel (/netbsd)
- * /dev/* (cd /usr/sandbox/dev ; sh MAKEDEV all)
- * /etc/resolv.conf (for security/snmpd and mail)
- * working(!) mail config (hostname, sendmail.cf)
- * /etc/localtime (for security/snmpd)
- * /usr/src (system sources, for sysutils/aperture, net/ppp-mppe)
- * create /var/db/pkg (not part of default install)
+ * kernel:
+   cp /netbsd /usr/sandbox
+ * /dev/*:
+   cd /usr/sandbox/dev ; sh MAKEDEV all
+ * /etc/resolv.conf (for security/snmpd and mail):
+   cp /etc/resolv.conf /usr/sandbox/etc
+ * working(!) mail config (hostname, sendmail.cf):
+   cp /etc/mail/sendmail.cf /usr/sandbox/etc/mail
+ * /etc/localtime (for security/snmpd):
+   ln -sf /usr/share/zoneinfo/GMT /usr/sandbox/etc/localtime
+ * /usr/src (system sources, for sysutils/aperture, net/ppp-mppe):
+   ln -s ../disk1/cvs .
+   ln -s cvs/src-1.6 src
+   ln -s cvs/pkgsrc .
+ * create /var/db/pkg (not part of default install):
+   mkdir /usr/sandbox/var/db/pkg
  * create /usr/pkg (not part of default install)
+   mkdir /usr/sandbox/usr/pkg
  * checkout pkgsrc from cvs, into /usr/sandbox/usr/pkgsrc
+   cvs -d cvs.netbsd.org:/cvsroot co pkgsrc
  * /usr/pkgsrc/packages & .../distfiles (point outside of sandbox)
  * /etc/mk.conf, see 3.2.1.1
  * adjust .../mk/bulk/build.conf
