@@ -1,0 +1,33 @@
+$NetBSD: patch-ah,v 1.1 1999/08/30 02:35:10 simonb Exp $
+--- source/misc1.c.orig	Fri Jul 22 11:47:28 1994
++++ source/misc1.c	Sun Aug 29 09:29:19 1999
+@@ -29,7 +29,7 @@
+ #endif
+ 
+ #if !defined(ATARIST_MWC) && !defined(MAC) && !defined(VMS) && !defined(AMIGA)
+-long time();
++time_t time();
+ #endif
+ struct tm *localtime();
+ 
+@@ -48,7 +48,7 @@
+ #ifdef MAC
+     clock_var = time((time_t *)0);
+ #else
+-    clock_var = time((long *)0);
++    clock_var = time((time_t *)0);
+ #endif
+   else
+     clock_var = seed;
+@@ -95,9 +95,9 @@
+ #ifdef MAC
+   clock_var = time((time_t *)0);
+ #else
+-  clock_var = time((long *)0);
++  clock_var = time((time_t *)0);
+ #endif
+-  tp = localtime(&clock_var);
++  tp = localtime((time_t *)&clock_var);
+   if (days[tp->tm_wday][tp->tm_hour+4] == 'X')
+     return TRUE;
+   else

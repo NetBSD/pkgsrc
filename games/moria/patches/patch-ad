@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/01/23 17:00:15 simonb Exp $
+$NetBSD: patch-ad,v 1.2 1999/08/30 02:35:10 simonb Exp $
 --- source/io.c.orig	Fri Jul 22 11:47:26 1994
-+++ source/io.c	Wed Dec  2 11:35:27 1998
++++ source/io.c	Sun Aug 29 09:08:13 1999
 @@ -90,6 +90,10 @@
  #include <sys/types.h>
  #endif
@@ -12,6 +12,15 @@ $NetBSD: patch-ad,v 1.1.1.1 1999/01/23 17:00:15 simonb Exp $
  #ifdef USG
  #ifndef ATARI_ST
  #include <string.h>
+@@ -245,7 +249,7 @@
+   struct ltchars lcbuf;
+   struct tchars cbuf;
+   int lbuf;
+-  long time();
++  time_t time();
+ 
+   py.misc.male |= 2;
+   (void) ioctl(0, TIOCGETP, (char *)&tbuf);
 @@ -331,7 +335,7 @@
  #if defined(atarist) && defined(__GNUC__)
    (void) signal (SIGTSTP, (__Sigfunc)suspend);
