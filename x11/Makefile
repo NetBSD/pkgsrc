@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.347 2004/04/19 17:29:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.348 2004/04/20 09:59:11 xtraeme Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -66,7 +66,6 @@ SUBDIR+=	gtk+extra
 SUBDIR+=	gtk--
 SUBDIR+=	gtk-engines
 SUBDIR+=	gtk-thinice-engine
-SUBDIR+=	gtk10
 SUBDIR+=	gtk2
 SUBDIR+=	gtk2-engines
 SUBDIR+=	gtk2-engines-bluecurve
