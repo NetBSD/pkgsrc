@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/09/30 01:20:02 jschauma Exp $
+# $NetBSD: Makefile,v 1.20 2003/09/30 01:57:35 jschauma Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -9,6 +9,7 @@ SUBDIR+=	clustalw
 SUBDIR+=	coalesce
 SUBDIR+=	fastDNAml
 SUBDIR+=	fluctuate
+SUBDIR+=	genesplicer
 SUBDIR+=	gp
 SUBDIR+=	hmmer
 SUBDIR+=	mummer
