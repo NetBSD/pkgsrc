@@ -1,4 +1,4 @@
-$NetBSD: STATUS,v 1.20 2003/07/30 14:46:18 grant Exp $
+$NetBSD: STATUS,v 1.21 2003/10/12 04:56:34 grant Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -84,7 +84,7 @@ IRIX/lynx: only builds without "--enable-nls"
 ---------------------------------------------------------------------------
 Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris 
 ---------------------------------------------------------------------------
-audio/xmms                                          Y                  Y
+audio/xmms                          Y               Y                  Y
 devel/gdb                                    Y      Y                  Y
 editors/abiword
 graphics/mplayer                                                       N
