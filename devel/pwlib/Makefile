@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/08/01 05:48:10 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/09 10:29:24 jlam Exp $
 #
 
 DISTNAME=		pwlib_min_1.1pl17
@@ -18,14 +18,13 @@ BUILD_DEPENDS=		bison-[0-9]*:../../devel/bison
 
 WRKSRC=			${WRKDIR}/pwlib
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 PTHREAD_OPTS+=		native
 
 MAKE_ENV+=		PWLIBDIR=${WRKSRC}
-MAKE_ENV+=		CC="${CC}"
-MAKE_ENV+=		CPLUS="${CXX}"
+MAKE_ENV+=		CC="${PGCC}" CPLUS="${PGXX}"
 ALL_TARGET=		opt
 
 do-configure:
@@ -48,10 +47,10 @@ post-install:
 		${INSTALL_DATA} $$f ${PREFIX}/share/pwlib/make;		\
 	done
 
-.include "../../mk/pthread.buildlink.mk"
+.include "../../mk/pthread.buildlink2.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-.  include "../../devel/unproven-pthreads/buildlink.mk"
+.  include "../../devel/unproven-pthreads/buildlink2.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
