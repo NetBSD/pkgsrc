@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2003/04/10 09:44:46 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2003/07/11 23:43:54 wiz Exp $
 
---- libexslt/Makefile.in.orig	Tue Apr  1 15:39:25 2003
+--- libexslt/Makefile.in.orig	Mon Jul  7 00:00:12 2003
 +++ libexslt/Makefile.in
-@@ -152,8 +152,8 @@ libexslt_la_SOURCES = \
+@@ -153,8 +153,8 @@ libexslt_la_SOURCES = \
  
  # The following DOES NOT WORK reliably. Sorry no prelinking to uninstalled
  # yet libraries.
@@ -12,4 +12,4 @@ $NetBSD: patch-aa,v 1.7 2003/04/10 09:44:46 wiz Exp $
 +# libexslt_la_LIBADD = $(INSTALLED_XSLT_LIB) $(EXTRA_LIBS)
  libexslt_la_LDFLAGS = -version-info @LIBEXSLT_VERSION_INFO@
  
- man_MANS = libexslt.4
+ man_MANS = libexslt.3
