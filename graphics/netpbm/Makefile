@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2000/07/10 11:12:09 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2000/08/10 10:44:09 wiz Exp $
 
 DISTNAME=	netpbm-${VERS}
 CATEGORIES=	graphics
@@ -17,7 +17,7 @@ USE_LIBTOOL=	yes
 INSTALL_TARGET=	install-dev install
 MAKEFILE=	GNUmakefile
 
-VERS=		9.5
+VERS=		9.7
 PLIST_SUBST+=	VERS=${VERS}
 
 .include "../../mk/bsd.prefs.mk"

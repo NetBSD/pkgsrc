@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2000/07/10 11:12:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2000/08/10 10:44:10 wiz Exp $
 bin/anytopnm
 bin/asciitopgm
 bin/atktopbm
@@ -7,6 +7,7 @@ bin/bmptoppm
 bin/brushtopbm
 bin/cmuwmtopbm
 bin/eyuvtoppm
+bin/fiascotopnm
 bin/fitstopnm
 bin/fstopgm
 bin/g3topbm
@@ -27,6 +28,8 @@ bin/macptopbm
 bin/mdatopbm
 bin/mgrtopbm
 bin/mtvtoppm
+bin/pamcut
+bin/pamtopnm
 bin/pbmclean
 bin/pbmlife
 bin/pbmmake
@@ -111,6 +114,7 @@ bin/pnmnlfilt
 bin/pnmnoraw
 bin/pnmpad
 bin/pnmpaste
+bin/pnmpsnr
 bin/pnmrotate
 bin/pnmscale
 bin/pnmshear
@@ -118,6 +122,7 @@ bin/pnmsplit
 bin/pnmsmooth
 bin/pnmtile
 bin/pnmtoddif
+bin/pnmtofiasco
 bin/pnmtofits
 bin/pnmtojbig
 bin/pnmtoplainpnm
@@ -218,13 +223,13 @@ include/ppmcmap.h
 include/shhopt.h
 lib/libpbm.a
 lib/libpbm.la
-lib/libpbm.so.${VERS}
+lib/libpbm.so.9.5
 lib/libpgm.a
 lib/libpgm.la
 lib/libpgm.so.${VERS}
 lib/libpnm.a
 lib/libpnm.la
-lib/libpnm.so.${VERS}
+lib/libpnm.so.9.5
 lib/libppm.a
 lib/libppm.la
 lib/libppm.so.${VERS}
@@ -236,6 +241,7 @@ man/man1/bmptoppm.1
 man/man1/brushtopbm.1
 man/man1/cmuwmtopbm.1
 man/man1/eyuvtoppm.1
+man/man1/fiascotopnm.1
 man/man1/fitstopnm.1
 man/man1/fstopgm.1
 man/man1/g3topbm.1
@@ -255,6 +261,8 @@ man/man1/macptopbm.1
 man/man1/mdatopbm.1
 man/man1/mgrtopbm.1
 man/man1/mtvtoppm.1
+man/man1/pamcut.1
+man/man1/pamtopnm.1
 man/man1/pbmclean.1
 man/man1/pbmlife.1
 man/man1/pbmmake.1
@@ -338,6 +346,7 @@ man/man1/pnmmargin.1
 man/man1/pnmnlfilt.1
 man/man1/pnmpad.1
 man/man1/pnmpaste.1
+man/man1/pnmpsnr.1
 man/man1/pnmrotate.1
 man/man1/pnmscale.1
 man/man1/pnmshear.1
@@ -345,6 +354,7 @@ man/man1/pnmsmooth.1
 man/man1/pnmsplit.1
 man/man1/pnmtile.1
 man/man1/pnmtoddif.1
+man/man1/pnmtofiasco.1
 man/man1/pnmtofits.1
 man/man1/pnmtojbig.1
 man/man1/pnmtoplainpnm.1
@@ -441,6 +451,7 @@ man/man3/libpbm.3
 man/man3/libpgm.3
 man/man3/libpnm.3
 man/man3/libppm.3
+man/man5/pam.5
 man/man5/pbm.5
 man/man5/pgm.5
 man/man5/pnm.5
