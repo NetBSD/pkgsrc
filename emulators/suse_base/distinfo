@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2001/09/19 13:41:30 skrll Exp $
+$NetBSD: distinfo,v 1.4 2002/02/21 17:27:06 martti Exp $
 
 SHA1 (suse64/aaa_dir.rpm) = 3a4af536ea05f76310d6194b8fd9968779efc00e
 Size (suse64/aaa_dir.rpm) = 19509 bytes
-SHA1 (suse64/shlibs-2.1.3-155.i386.rpm) = e5f34095855d63c8f05a3899bb0f41ca71b1f6b6
-Size (suse64/shlibs-2.1.3-155.i386.rpm) = 6617193 bytes
+SHA1 (suse64/shlibs-2.1.3-204.i386.rpm) = 448bc2fd055603acfebe7b21a2aa27f09331b75d
+Size (suse64/shlibs-2.1.3-204.i386.rpm) = 6616459 bytes
 SHA1 (suse64/libz.rpm) = 2e9cc100a495043319e8a32c1d4572d70faf2c60
 Size (suse64/libz.rpm) = 90451 bytes
 SHA1 (suse64/bash.rpm) = 3c2b9bf7169cde8e9c2b9a930097b0abfc98e134
