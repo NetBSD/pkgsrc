@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/03 14:42:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/02/03 16:45:35 jlam Exp $
 
 DISTNAME=		ghostscript-fonts-6.0
 CATEGORIES=		fonts
@@ -30,9 +30,10 @@ NO_BUILD=		# defined
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/ghostscript
-	cd ${PREFIX}/share/ghostscript; \
-		${PAX} -zrf ${_DISTDIR}/${GS_FONTS_STD}; \
-		${PAX} -zrf ${_DISTDIR}/${GS_FONTS_OTHER}
+	cd ${PREFIX}/share/ghostscript;					\
+	for file in ${GS_FONTS_STD} ${GS_FONTS_OTHER}; do		\
+		${EXTRACT_CMD.tar.gz};					\
+	done
 	${INSTALL_DATA} ${FILESDIR}/fonts.alias \
 		${PREFIX}/share/ghostscript/fonts/
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/ghostscript
