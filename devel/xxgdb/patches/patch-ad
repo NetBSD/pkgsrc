@@ -1,0 +1,52 @@
+$NetBSD: patch-ad,v 1.1 2001/11/22 14:37:27 tron Exp $
+
+--- calldbx.c.orig	Tue Jun 20 00:11:00 1995
++++ calldbx.c	Thu Nov 22 15:27:44 2001
+@@ -74,10 +74,6 @@
+ #include <string.h>
+ #include <fcntl.h>
+ #include "global.h"
+-#if !(defined(OLDSUNOS) || defined(BSD))
+-#include <termio.h>
+-#else
+-#include <sgtty.h>
+-#endif
++#include <termios.h>
+ 
+ #ifdef CREATE_IO_WINDOW
+@@ -243,14 +240,7 @@
+ int argc;
+ char *argv[];
+ {
+-/*
+- * (JBL)10MAY91 : use sgttyb if generic BSD
+- */
+-#if !(defined(OLDSUNOS) || defined(BSD))
+-    struct termio Termio;
+-#else
+-    struct sgttyb Termio;
+-#endif
++    struct termios Termio;
+     int  	  master;		/* file descriptor of master pty */
+     int  	  slave; 		/* file descriptor of slave pty */
+ #ifdef OLDBSD
+@@ -355,17 +345,10 @@
+ 	/*
+ 	 * (JBL)10MAY91 : use sgttyb if OLDSUN or generic BSD
+ 	 */ 
+-#if !(defined(OLDSUNOS) || defined(BSD))
+-	ioctl(slave, TCGETA, &Termio);
++	(void)tcgetattr(slave, &Termio);
+ 	Termio.c_lflag &= ~ECHO;	/* No echo */
+ 	Termio.c_oflag &= ~ONLCR;	/* Do not map NL to CR-NL on output */
+-	ioctl(slave, TCSETA, &Termio);
+-#else
+-	ioctl(slave, TIOCGETP, &Termio);
+-	Termio.sg_flags &= ~ECHO;	/* No echo */
+-	Termio.sg_flags &= ~CRMOD;	/* Do not map NL to CR-NL on output */
+-	ioctl(slave, TIOCSETP, &Termio);
+-#endif
++	(void)tcsetattr(slave, TCSANOW, &Termio);
+ 
+ 	dup2(slave, 0);
+ 	dup2(slave, 1);
