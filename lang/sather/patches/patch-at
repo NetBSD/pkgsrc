@@ -1,0 +1,10 @@
+$NetBSD: patch-at,v 1.1.1.1 2002/05/04 00:45:37 jtb Exp $
+
+--- Browser/Web/ps2gif.orig	Thu Jul 22 18:56:01 1999
++++ Browser/Web/ps2gif	Thu May  2 19:27:58 2002
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/bin/env perl
+ # ps2gif.pl
+ #
+ # THIS FILE IS COPYRIGHT 1994 BY TELENOR RESEARCH, NORWAY
