@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.30 2003/12/19 22:45:14 grant Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.31 2004/01/14 08:58:41 grant Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -477,14 +477,14 @@ long long strtoll(const char *, char **, int);
 #  if defined(LONG_LONG_MAX)
 #   define LLONG_MAX	LONG_LONG_MAX
 #  else
-#   define LLONG_MAX	(0x7fffffffffffffffL)
+#   define LLONG_MAX	(0x7fffffffffffffffLL)
 #  endif
 # endif
 # if ! defined(LLONG_MIN)
 #  if defined(LONG_LONG_MIN)
 #   define LLONG_MIN	LONG_LONG_MIN
 #  else
-#   define LLONG_MIN	(-0x7fffffffffffffffL-1)
+#   define LLONG_MIN	(-0x7fffffffffffffffLL-1)
 #  endif
 # endif
 #else	/* ! HAVE_WORKING_LONG_LONG */
