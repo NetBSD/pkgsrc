@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2002/02/18 15:14:28 seb Exp $
+$NetBSD: patch-aa,v 1.5 2002/05/04 02:32:07 jtb Exp $
 
---- Makefile.orig	Sun Oct 28 02:35:41 2001
-+++ Makefile
+--- Makefile.orig	Sat May  4 03:21:17 2002
++++ Makefile	Sat May  4 03:22:54 2002
 @@ -2,24 +2,24 @@
  # prior to 19.14 for XEmacs are unsupported.
  
@@ -40,5 +40,5 @@ $NetBSD: patch-aa,v 1.4 2002/02/18 15:14:28 seb Exp $
 -	@$(EMACS) $(BATCHFLAGS) -insert vm.texinfo -l texinfmt -f texinfo-format-buffer -f save-buffer
 +	$(MAKEINFO) vm.texinfo
  
- vm-autoload.elc:	$(SOURCES)
- 	@echo scanning sources to build autoload definitions...
+ # We use tr -d because Emacs under Cygwin apparently outputs CRLF
+ # under Windows.  We remove the CRs.
