@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4744 2004/02/09 11:08:41 markd Exp $
+$NetBSD: CHANGES,v 1.4745 2004/02/09 11:49:04 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -722,3 +722,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added firefox-gtk2-bin-0.8 [grant 2004-02-09]
 	Deleted MozillaFirebird-gtk2-bin [grant 2004-02-09]
 	Updated kile to 1.6.1 [markd 2004-02-09]
+	Updated kbiff to 3.7 [markd 2004-02-09]
