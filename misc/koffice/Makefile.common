@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2002/06/20 19:13:50 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/09/04 14:47:38 agc Exp $
 
 CATEGORIES=	misc kde
 VERSION=	1.1.1
@@ -11,9 +11,10 @@ USE_BUILDLINK_ONLY=	YES
 
 REPLACE_PERL=		kpresenter/kprconverter.pl
 
-.if ${OPSYS} == "NetBSD"
-LIBS+=			-Wl,--export-dynamic
+# Ensure we export symbols in the linked shared object.
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
+.if ${OPSYS} == "NetBSD"
 # On egcs-1.1.2, the C++ compiler system isn't quite ISO-compliant.  It lacks
 # a std::auto_ptr implementation in <memory>, doesn't handle static inline
 # functions in headers properly (although that concept, in itself, is quite
