@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.19 2003/03/06 11:43:28 is Exp $
+# $NetBSD: Makefile,v 1.20 2003/05/07 09:51:20 grant Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
@@ -27,7 +27,7 @@ USE_PKGINSTALL=	yes
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
-PLIST_SRC=		${PKGDIR}/PLIST-Linux
+PLIST_SRC=	${PKGDIR}/PLIST-Linux
 .endif
 
 .if ${OPSYS} == "SunOS"
