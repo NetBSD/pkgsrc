@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2000/12/09 18:25:41 wiz Exp $
-# FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
+# $NetBSD: Makefile,v 1.106 2000/12/12 01:30:48 wiz Exp $
 #
 
     SUBDIR += abuse

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2000/12/08 23:44:25 jtb Exp $
-# FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
+# $NetBSD: Makefile,v 1.158 2000/12/12 01:30:46 wiz Exp $
 #
 
     SUBDIR += GConf

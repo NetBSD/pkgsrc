@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/07/20 19:47:21 wiz Exp $
-# FreeBSD Id: Makefile,v 1.18 1997/05/16 01:42:31 asami Exp 
+# $NetBSD: Makefile,v 1.26 2000/12/12 01:30:36 wiz Exp $
 #
 
     SUBDIR += arc

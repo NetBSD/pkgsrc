@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2000/11/10 02:29:19 wiz Exp $
-# FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
+# $NetBSD: Makefile,v 1.64 2000/12/12 01:31:05 wiz Exp $
 #
 
     SUBDIR += antiword

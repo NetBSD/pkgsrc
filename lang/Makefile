@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2000/12/10 11:10:16 jtb Exp $
-# FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
+# $NetBSD: Makefile,v 1.85 2000/12/12 01:30:49 wiz Exp $
 #
 
     SUBDIR += STk

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/11/14 21:20:09 itojun Exp $
-# FreeBSD Id: Makefile,v 1.8 1997/11/16 22:45:25 jseger Exp
+# $NetBSD: Makefile,v 1.22 2000/12/12 01:30:45 wiz Exp $
 #
 
     SUBDIR += base64

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2000/12/11 02:25:35 kei Exp $
-# FreeBSD Id: Makefile,v 1.45 1997/08/13 18:35:22 andreas Exp 
+# $NetBSD: Makefile,v 1.57 2000/12/12 01:30:52 wiz Exp $
 #
 
     SUBDIR += balsa

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2000/11/29 11:31:55 rh Exp $
-# FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
+# $NetBSD: Makefile,v 1.53 2000/12/12 01:31:03 wiz Exp $
 #
 
     SUBDIR += PAM
