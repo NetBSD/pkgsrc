@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/11 11:33:46 jmmv Exp $
+etc/rc.d/anacron
+man/man5/anacrontab.5
+man/man8/anacron.8
+sbin/anacron
+share/examples/anacron/anacrontab.FreeBSD
+share/examples/anacron/anacrontab.NetBSD
+@dirrm share/examples/anacron
