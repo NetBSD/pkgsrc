@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/14 17:34:27 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2004/04/01 18:12:58 jmmv Exp $
 
-SHA1 (libxklavier-0.97.tar.gz) = 022f61d5b4719ee1e090a65d39d43f1adbb88ca8
-Size (libxklavier-0.97.tar.gz) = 408636 bytes
+SHA1 (libxklavier-1.00.tar.gz) = 0cdd0a562bedc45bbf9647a3e617ffc98f23a3de
+Size (libxklavier-1.00.tar.gz) = 408974 bytes
