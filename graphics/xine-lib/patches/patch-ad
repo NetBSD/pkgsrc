@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/04/06 11:06:02 rh Exp $
+
+--- src/input/libdvdnav/vm.c.orig	Sun Mar 23 04:25:40 2003
++++ src/input/libdvdnav/vm.c
+@@ -35,6 +35,7 @@
+ #include <assert.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <sys/param.h>
+ #include <fcntl.h>
+ 
+ #include "ifo_types.h"
+@@ -125,9 +126,10 @@ static void vm_print_current_domain_stat
+ 
+ void dvd_read_name( vm_t *this, const char *devname) {
+     int fd, i;
+-#ifndef __FreeBSD__
++#ifndef BSD
+     off64_t off;
+ #else
++#define lseek64 lseek
+     off_t off;
+ #endif
+     uint8_t data[DVD_VIDEO_LB_LEN];

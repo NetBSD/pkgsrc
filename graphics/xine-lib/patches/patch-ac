@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/04/06 11:06:02 rh Exp $
+
+--- src/audio_out/audio_sun_out.c.orig	Sat Mar  8 08:27:29 2003
++++ src/audio_out/audio_sun_out.c
+@@ -41,6 +41,11 @@
+ #ifdef	__svr4__
+ #include <stropts.h>
+ #endif
++#include <sys/param.h>
++
++#if (defined(BSD) && BSD >= 199306)
++typedef unsigned uint_t;
++#endif
+ 
+ #include "xine_internal.h"
+ #include "xineutils.h"
