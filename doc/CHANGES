@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1506 2003/03/01 02:14:30 jlam Exp $
+$NetBSD: CHANGES,v 1.1507 2003/03/01 03:53:42 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -863,3 +863,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libiconv to 1.8nb1 [grant 2003-02-28]
 	Updated xv to 3.10anb5 [grant 2003-02-28]
 	Updated centericq to 4.9.2nb1 [jlam 2003-03-01]
+	Updated auctex to 11.13nb1 [uebayasi 2003-03-01]
