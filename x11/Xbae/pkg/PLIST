@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/03 19:41:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/02/12 03:59:10 wiz Exp $
 include/Xbae/Matrix.h
 include/Xbae/Input.h
 include/Xbae/Caption.h
@@ -15,3 +15,6 @@ man/man3/XbaeInput.3
 man/man3/XbaeMatrix.3
 share/aclocal/ac_find_xbae.m4
 @dirrm include/Xbae
+@exec test %D = ${LOCALBASE} || ln -fs %D/share/aclocal/ac_find_xbae.m4 ${LOCALBASE}/share/aclocal/ac_find_xbae.m4
+@unexec test %D = ${LOCALBASE} || rm ${LOCALBASE}/share/aclocal/ac_find_xbae.m4
+@unexec rmdir %D/share/aclocal 2>/dev/null || true
