@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2001/05/21 18:42:21 abs Exp $
+$NetBSD: patch-ag,v 1.5 2001/05/24 17:00:58 abs Exp $
 
 --- etc/afpd/status.c.orig	Wed Dec 16 18:38:38 1998
 +++ etc/afpd/status.c
