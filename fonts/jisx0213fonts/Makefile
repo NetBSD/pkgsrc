@@ -1,40 +1,40 @@
-# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/26 08:37:24 uebayasi Exp $
 #
 
 DISTNAME=	jisx0213fonts-0.0
 CATEGORIES=	fonts x11 japanese
 MASTER_SITES=	ftp://ftp.m17n.org/pub/character/fonts/imamura/jisx0213/
-DISTFILES=	${BDF:C/bdf$/bdf.gz/}
+DISTFILES=	${FONTS:C/$/.bdf.gz/}
 
-MAINTAINER=	itojun@itojun.org
+MAINTAINER=	itojun@itojun.org, uebayasi@NetBSD.org
 HOMEPAGE=	ftp://ftp.m17n.org/pub/character/fonts/imamura/jisx0213/
-COMMENT=	X11 fonts for JIS X0213 standard
+COMMENT=	X11 bitmap fonts for JIS X 0213
 
 USE_X11BASE=	yes
 
-BDF=	K14-1.bdf K14-2.bdf jiskan16-2000-1.bdf jiskan16-2000-2.bdf
-PCF=	${BDF:C/bdf$/pcf/}
-PCFGZ=	${BDF:C/bdf$/pcf.gz/}
-FONTDIR=${PREFIX}/lib/X11/fonts/local
+FONTS=		K14-1 K14-2 jiskan16-2000-1 jiskan16-2000-2
+FONTDIR=	${PREFIX}/lib/X11/fonts/local
+FONTS_X11_DIRS=	${FONTDIR}
+
+WRKSRC=	${WRKDIR}
 
 do-extract:
-	${MKDIR} ${WRKSRC}
-	for i in ${BDF}; do \
-		${CP} ${DISTDIR}/$$i.gz ${WRKSRC}; \
-		${GUNZIP_CMD} ${WRKSRC}/$$i.gz; \
+	@for f in ${FONTS}; do \
+		${GUNZIP_CMD} ${DISTDIR}/$${f}.bdf.gz >${WRKSRC}/$${f}.bdf; \
 	done
 
 do-build:
-	(cd ${WRKSRC}; for i in ${BDF}; do \
-		bdftopcf -o `echo $$i | ${SED} -e 's/bdf$$/pcf/'` $$i; \
-		${GZIP_CMD} `echo $$i | ${SED} -e 's/bdf$$/pcf/'`; \
-	done)
+	@cd ${WRKSRC}; \
+	for f in ${FONTS}; do \
+		${X11BASE}/bin/bdftopcf $${f}.bdf | \
+		${GZIP_CMD} -c >$${f}.pcf.gz; \
+	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${FONTDIR}
-	for i in ${PCFGZ}; do \
-		${INSTALL_DATA} ${WRKSRC}/$$i ${FONTDIR}; \
+	@${INSTALL_DATA_DIR} ${FONTDIR}
+	@for f in ${FONTS}; do \
+		${INSTALL_DATA} ${WRKSRC}/$${f}.pcf.gz ${FONTDIR}; \
 	done
-	(cd ${FONTDIR}; mkfontdir)
 
+.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
