@@ -1,6 +1,6 @@
---- plist-clash.pl-orig	Sat Apr 25 13:37:01 1998
-+++ plist-clash.pl	Sat Apr 25 13:35:13 1998
-@@ -0,0 +1,97 @@
+--- plist-clash.pl.orig	Sat Apr 25 15:32:11 1998
++++ plist-clash.pl	Sat Apr 25 15:33:16 1998
+@@ -0,0 +1,96 @@
 +#!@PREFIX@/bin/perl
 +#
 +# Scan all ports and look for filenames used by more than one port.
