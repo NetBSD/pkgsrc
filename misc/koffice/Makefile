@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48.2.1 2004/12/30 22:24:47 snj Exp $
+# $NetBSD: Makefile,v 1.48.2.2 2005/01/23 16:06:36 salo Exp $
 
 DISTNAME=	koffice-1.3.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc kde
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.3.5/src/ \
 		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.3.5/src/ \
@@ -23,7 +23,7 @@ GCC_REQD+=		2.95.3
 
 PTHREAD_OPTS+=		require
 
-PYTHON_VERSIONS_ACCEPTED=	23 23pth # needs shared library
+PYTHON_VERSIONS_ACCEPTED=	24pth 24 23pth 23 # needs shared library
 CONFIGURE_ENV+=			PYTHONDIR="${LOCALBASE}"
 CONFIGURE_ENV+=			PYVERSSUFFIX="${PYVERSSUFFIX}"
 
