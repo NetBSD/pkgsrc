@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/12/16 00:53:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/01/24 11:09:59 tsutsui Exp $
 lib/ldscripts/armnbsd.x
 lib/ldscripts/armnbsd.xbn
 lib/ldscripts/armnbsd.xn
@@ -10,12 +10,12 @@ lib/ldscripts/elf32_sparc.xn
 lib/ldscripts/elf32_sparc.xr
 lib/ldscripts/elf32_sparc.xs
 lib/ldscripts/elf32_sparc.xu
-lib/ldscripts/elf32ebmip.x
-lib/ldscripts/elf32ebmip.xbn
-lib/ldscripts/elf32ebmip.xn
-lib/ldscripts/elf32ebmip.xr
-lib/ldscripts/elf32ebmip.xs
-lib/ldscripts/elf32ebmip.xu
+lib/ldscripts/elf32bmip.x
+lib/ldscripts/elf32bmip.xbn
+lib/ldscripts/elf32bmip.xn
+lib/ldscripts/elf32bmip.xr
+lib/ldscripts/elf32bmip.xs
+lib/ldscripts/elf32bmip.xu
 lib/ldscripts/elf32lmip.x
 lib/ldscripts/elf32lmip.xbn
 lib/ldscripts/elf32lmip.xn
