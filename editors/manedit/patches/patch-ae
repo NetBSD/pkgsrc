@@ -1,0 +1,54 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/01/21 18:18:04 fredb Exp $
+
+--- help/manpage_writing_procedures.orig	Sat Jan 20 05:39:30 2001
++++ help/manpage_writing_procedures	Sun Jan 21 11:29:24 2001
+@@ -120,7 +120,7 @@
+ \fBSYMREP\fR).
+ .LP 
+ For a list of tags and symbolic representations see
+-manpage_xml_referance(5).
++manpage_xml_reference(7).
+ .LP 
+ The following sections deal with using XML tags to create
+ common styles and formats seen in most manual pages.
+@@ -162,7 +162,7 @@
+ the right amount of line spacing.
+ .LP 
+ However in XML you need to use XML tags to control line
+-spacing. To ensure that a sentance in a paragraph
++spacing. To ensure that a sentence in a paragraph
+ starts on a new line, you need to use the tag
+ \fB<br>\fR. For instance:
+ .LP 
+@@ -176,13 +176,13 @@
+ Create a section with the above text and click on the
+ preview button. You will notice that after the
+ \fB<br>\fR
+-the sentance will be placed on a new line.
++the sentence will be placed on a new line.
+ .LP 
+ One draw back is that multiple uses of \fB<br>\fR
+ does not produce multiple lines. So incase you would have
+ to ensure that there is an empty line between two
+-sentances, you would have to use \fB<LP>\fR.
+-That would effectivly separate the two sentances as two
++sentences, you would have to use \fB<LP>\fR.
++That would effectivly separate the two sentences as two
+ paragraphs.
+ .SH "STYLES"
+ .LP 
+@@ -273,7 +273,7 @@
+ .LP 
+ Which would produce a \fB<\fR character.
+ Complete list of symbolic representations
+-are in page_xml_referance(5).
++are in page_xml_reference(7).
+ .LP 
+ One last important symbolic representation to point out
+ is the \fB&\fR character. Its symbolic representation
+@@ -281,4 +281,4 @@
+ .LP 
+         \fB&amp;\fR
+ .SH "SEE ALSO"
+-manpage_xml_referance(5)
++manpage_xml_reference(7)
