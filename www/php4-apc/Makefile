@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/12/31 23:54:49 jlam Exp $
-
-.include "../../www/php4/Makefile.module"
+# $NetBSD: Makefile,v 1.3 2002/02/28 06:13:20 jlam Exp $
 
 DISTNAME=	apc-1.1.0pl1
 PKGNAME=	php-apc-1.1.0.1
@@ -16,6 +14,9 @@ EXTRACT_ELEMENTS=	# empty
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
 USE_BUILDLINK_ONLY=	YES
+
+.include "../../www/php4/Makefile.module"
+
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 
 PLIST_SRC+=		${.CURDIR}/PLIST.extras
