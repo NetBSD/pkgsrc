@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2548 2003/06/23 07:11:52 uebayasi Exp $
+$NetBSD: CHANGES,v 1.2549 2003/06/23 07:40:39 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2507,3 +2507,10 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated zsh to 4.0.7 [uebayasi 2003-06-20]
 	Updated opencm to 0.1.2rc6 [jmmv 2003-06-20]
 	Updated check to 0.8.4nb1 [uebayasi 2003-06-23]
+	Added toolame-02l [mrg 2003-06-23]
+	Added mjpegtools-1.6.1 [mrg 2003-06-23]
+	Added transcode-0.6.6 [mrg 2003-06-23]
+	Added gocr-0.37 [mrg 2003-06-23]
+	Added subtitleripper-0.3-1 [mrg 2003-06-23]
+	Added p5-Gdk-Pixbuf-0.7008 [mrg 2003-06-23]
+	Added dvdrip-0.50.13 [mrg 2003-06-23]
