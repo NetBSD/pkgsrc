@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2004/12/10 06:02:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2004/12/14 10:58:30 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -4511,22 +4511,22 @@ share/kde/servicetypes/renamedlgplugin.desktop
 share/kde/servicetypes/scriptinterface.desktop
 ${PKGLOCALEDIR}/locale/all_languages
 @comment in xmlcatmgr: share/sgml/catalog
-@comment in kde: @dirrm share/kde/servicetypes
-@comment in kde: @dirrm share/kde/services/kresources/kabc
-@comment in kde: @dirrm share/kde/services/kresources
-@comment in kde: @dirrm share/kde/services/kded
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/mimelnk/video
-@comment in kde: @dirrm share/kde/mimelnk/text
-@comment in kde: @dirrm share/kde/mimelnk/multipart
-@comment in kde: @dirrm share/kde/mimelnk/model
-@comment in kde: @dirrm share/kde/mimelnk/message
-@comment in kde: @dirrm share/kde/mimelnk/inode
-@comment in kde: @dirrm share/kde/mimelnk/image
-@comment in kde: @dirrm share/kde/mimelnk/audio
-@comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/mimelnk/all
-@comment in kde: @dirrm share/kde/mimelnk
+@dirrm share/kde/servicetypes
+@dirrm share/kde/services/kresources/kabc
+@dirrm share/kde/services/kresources
+@dirrm share/kde/services/kded
+@dirrm share/kde/services
+@dirrm share/kde/mimelnk/video
+@dirrm share/kde/mimelnk/text
+@dirrm share/kde/mimelnk/multipart
+@dirrm share/kde/mimelnk/model
+@dirrm share/kde/mimelnk/message
+@dirrm share/kde/mimelnk/inode
+@dirrm share/kde/mimelnk/image
+@dirrm share/kde/mimelnk/audio
+@dirrm share/kde/mimelnk/application
+@dirrm share/kde/mimelnk/all
+@dirrm share/kde/mimelnk
 @comment in kde: @dirrm share/kde/icons/locolor/64x64/mimetypes
 @comment in kde: @dirrm share/kde/icons/locolor/64x64/filesystems
 @comment in kde: @dirrm share/kde/icons/locolor/64x64/devices
@@ -4631,17 +4631,17 @@ ${PKGLOCALEDIR}/locale/all_languages
 @comment in kde: @dirrm share/kde/icons
 @dirrm share/kde/config/ui
 @dirrm share/kde/config/colors
-@comment in kde: @dirrm share/kde/config
-@comment in kde: @dirrm share/kde/autostart
+@dirrm share/kde/config
+@dirrm share/kde/autostart
 @dirrm share/kde/apps/proxyscout
 @dirrm share/kde/apps/ktexteditor_kdatatool
 @dirrm share/kde/apps/ktexteditor_isearch
 @dirrm share/kde/apps/ktexteditor_insertfile
 @dirrm share/kde/apps/ktexteditor_docwordcompletion
-@comment in kde: @dirrm share/kde/apps/kstyle/themes
+@dirrm share/kde/apps/kstyle/themes
 @dirrm share/kde/apps/kstyle/pixmaps/riscos
 @dirrm share/kde/apps/kstyle/pixmaps
-@comment in kde: @dirrm share/kde/apps/kstyle
+@dirrm share/kde/apps/kstyle
 @dirrm share/kde/apps/kssl
 @dirrm share/kde/apps/ksgmltools2/docbook/xsl/tools/profile
 @dirrm share/kde/apps/ksgmltools2/docbook/xsl/tools/olink
@@ -4765,7 +4765,7 @@ ${PKGLOCALEDIR}/locale/all_languages
 @dirrm share/kde/apps/khtml/icons/crystalsvg
 @dirrm share/kde/apps/khtml/icons
 @dirrm share/kde/apps/khtml/css
-@comment in kde: @dirrm share/kde/apps/khtml
+@dirrm share/kde/apps/khtml
 @dirrm share/kde/apps/kdewidgets/pics
 @dirrm share/kde/apps/kdewidgets
 @dirrm share/kde/apps/kdeui/pics
@@ -4789,17 +4789,18 @@ ${PKGLOCALEDIR}/locale/all_languages
 @dirrm share/kde/apps/kdeprint/icons/crystalsvg
 @dirrm share/kde/apps/kdeprint/icons
 @dirrm share/kde/apps/kdeprint/filters
-@comment in kde: @dirrm share/kde/apps/kdeprint
-@comment in kde: @dirrm share/kde/apps/kconf_update
-@comment in kde: @dirrm share/kde/apps/kcm_componentchooser
+@dirrm share/kde/apps/kdeprint
+@dirrm share/kde/apps/kconf_update
+@dirrm share/kde/apps/kcm_componentchooser
 @dirrm share/kde/apps/kcertpart
-@comment in kde: @dirrm share/kde/apps/katepart/syntax
-@comment in kde: @dirrm share/kde/apps/katepart
-@comment in kde: @dirrm share/kde/apps/kabc/formats
-@comment in kde: @dirrm share/kde/apps/kabc
+@dirrm share/kde/apps/katepart/syntax
+@dirrm share/kde/apps/katepart
+@dirrm share/kde/apps/kabc/formats
+@dirrm share/kde/apps/kabc
 @dirrm share/kde/apps/dcopidlng
 @dirrm share/kde/apps/LICENSES
-@comment in kde: @dirrm share/kde/apps
+@dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
 @dirrm share/doc/kde/HTML/en/kspell
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
@@ -4859,13 +4860,15 @@ ${PKGLOCALEDIR}/locale/all_languages
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/arts/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/arts
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs
-@comment in kde: @dirrm share/doc/kde/HTML/en/common
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3/plugins/styles
-@comment in kde: @dirrm lib/kde3/plugins/designer
-@comment in kde: @dirrm lib/kde3/plugins
-@comment in kde: @dirrm lib/kde3
+@dirrm share/doc/kde/HTML/en/common
+@dirrm share/doc/kde/HTML/en
+@dirrm share/doc/kde/HTML
+@dirrm share/doc/kde
+@dirrm share/applications/kde
+@dirrm lib/kde3/plugins/styles
+@dirrm lib/kde3/plugins/designer
+@dirrm lib/kde3/plugins
+@dirrm lib/kde3
 @dirrm include/libkmid
 @dirrm include/ktexteditor
 @dirrm include/kspell2
@@ -4880,8 +4883,8 @@ ${PKGLOCALEDIR}/locale/all_languages
 @dirrm include/kdesu
 @dirrm include/kdeprint/lpr
 @dirrm include/kdeprint
-@comment in kde: @dirrm include/kate
-@comment in kde: @dirrm include/kabc
-@comment in kde: @dirrm include/dom
+@dirrm include/kate
+@dirrm include/kabc
+@dirrm include/dom
 @comment in arts: @dirrm include/arts
 @comment dirrm etc/xdg/menus
