@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3876 2003/11/28 10:02:52 junyoung Exp $
+$NetBSD: CHANGES,v 1.3877 2003/11/28 18:43:19 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4667,3 +4667,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mozilla-stable to 1.4.1 [taya 2003-11-27]
 	Updated gnupg to 1.2.3nb2 [heinz 2003-11-27]
 	Updated apr to 0.9.5.2.0.48 [junyoung 2003-11-28]
+	Updated MesaDemos to 5.0.2nb2 [jschauma 2003-11-28]
+	Updated glu to 5.0.2nb3 [jschauma 2003-11-28]
+	Updated glut to 5.0.2nb3 [jschauma 2003-11-28]
