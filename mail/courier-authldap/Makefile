@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/02/07 11:35:44 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/02/13 20:44:27 zuntum Exp $
 
 PKGNAME=	courier-authldap-${BASE_VERS}
 PKGREVISION=	1
@@ -8,7 +8,7 @@ CONFLICTS=	courier-imap-ldap-[0-9]*
 
 DEPENDS+=	courier-auth-${BASE_VERS}{,nb*}:../../mail/courier-auth
 
-PKG_OPTION_VAR=	PKG_OPTIONS.courier-authldap
+PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-authldap
 
 .include "../courier-auth/Makefile.authdaemond"
 
