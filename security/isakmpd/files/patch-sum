@@ -1,5 +1,6 @@
-$NetBSD: patch-sum,v 1.7 2001/04/03 13:06:28 itojun Exp $
+$NetBSD: patch-sum,v 1.8 2001/04/04 03:45:14 itojun Exp $
 
 SHA1 (patch-aa) = d1616a16251ccd770c392e60057b357b7224d38a
 SHA1 (patch-ab) = f30c790f42d72866e95092848e102e4c3728365c
 SHA1 (patch-ac) = 3f36a2bfff793f55c79f67affe142a8807082e70
+SHA1 (patch-ba) = fe9f9eed9955eeb691fb48497cd303203d6ea5d2
