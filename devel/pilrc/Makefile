@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2001/05/11 08:14:33 dillo Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/18 09:51:59 dillo Exp $
 #
 
 DISTNAME=	pilrc-2.8p4
-PKGNAME=	pilrc-2.8.4
+PKGNAME=	pilrc-2.8.4nb1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ardiri.com/download/palm/pilrc/patch/
 #MASTER_SITES=	http://www.ardiri.com/download/palm/pilrc/archive/
@@ -19,9 +19,7 @@ COMMENT=	generate resources for PalmOS applications from textual description
 
 .include "../../mk/bsd.prefs.mk"
 
-# pilrcui is broken in 2.8
-#PILRC_USE_GTK?=	YES
-PILRC_USE_GTK=	NO
+PILRC_USE_GTK?=	YES
 
 .if ${PILRC_USE_GTK} == YES
 DEPENDS+=	gtk+>=1.2.0:../../x11/gtk
