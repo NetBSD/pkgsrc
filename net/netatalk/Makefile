@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/09/03 03:16:58 jmc Exp $
+# $NetBSD: Makefile,v 1.28 2004/01/24 14:50:06 grant Exp $
 
 DISTNAME=	netatalk-1.6.2
 CATEGORIES=	net print
@@ -11,7 +11,7 @@ COMMENT=	Netatalk appletalk file and print services
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_PERL5=	YES
 
 USE_PKGINSTALL=		YES

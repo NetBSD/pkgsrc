@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/01/23 21:50:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2004/01/24 14:50:05 grant Exp $
 #
 
 DISTNAME=	gtk-gnutella-0.92
@@ -12,7 +12,7 @@ HOMEPAGE=	http://gtk-gnutella.sourceforge.net/
 COMMENT=	GTK-based gnutella client
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes

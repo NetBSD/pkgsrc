@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:22:20 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/24 14:50:06 grant Exp $
 
 DISTNAME=	nProbe-source-1.3.1
 PKGREVISION=	1
@@ -14,7 +14,7 @@ COMMENT=	Monitor a network interface and generate NetFlow data
 WRKSRC=		${WRKDIR}/nProbe
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 ALL_TARGET=	nprobe
 
 INTERACTIVE_STAGE=	fetch

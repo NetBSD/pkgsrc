@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2003/12/24 12:51:31 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/24 14:58:00 grant Exp $
 
 TETEX_BIN_VERS=		2.0.2
 DIST_SUBDIR=		teTeX
@@ -6,7 +6,7 @@ ALL_TARGET=		all
 INSTALL_TARGET=		install strip
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		yes
 USE_X11=		yes
 CFLAGS+=		-Dunix
