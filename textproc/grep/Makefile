@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/14 16:43:14 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/06 15:29:20 cjep Exp $
 # FreeBSD Id: Makefile,v 1.10 1999/01/27 07:41:16 fenner Exp $
 
 DISTNAME=	grep-2.5
@@ -15,6 +15,12 @@ TEXINFO_REQD=		4.0
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=        --program-prefix=g
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == SunOS)
+CONFIGURE_SCRIPT=	${SH} ./configure
+.endif
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
