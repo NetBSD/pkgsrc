@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2002/03/13 10:33:44 pooka Exp $
+# $NetBSD: Makefile,v 1.16 2002/03/13 10:51:39 pooka Exp $
 #
 
 DISTNAME=		bladeenc-0.94.2-src-stable
 PKGNAME=		bladeenc-0.94.2
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://bladeenc.mp3.no/source/
 
