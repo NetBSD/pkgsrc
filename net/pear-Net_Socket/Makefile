@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/01 21:36:44 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/27 10:02:52 jdolecek Exp $
 
-DISTNAME=	Net_Socket-1.0.1
+DISTNAME=	Net_Socket-1.0.2
 CATEGORIES+=	net
 
 MAINTAINER=	jdolecek@NetBSD.org
-HOMEPAGE= 	http://pear.php.net/package/Net_Socket
 COMMENT=	PHP classes to provide Network Socket Interface
 
 .include "../../lang/php/pear.mk"
