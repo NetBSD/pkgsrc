@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 1998/07/13 17:56:28 tv Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/05/18 14:16:53 bouyer Exp $
+etc/mrtg/mrtg.conf.example
 bin/mrtgcfgmaker
 bin/mrtgconvert
 bin/mrtgindexmaker
@@ -6,6 +7,8 @@ bin/mrtg
 lib/perl5/site_perl/BER.pm
 lib/perl5/site_perl/SNMP_Session.pm
 libexec/rateup
+libexec/netstat2mrtg
+libexec/sys2mrtg
 share/mrtg/mrtg-l.gif
 share/mrtg/mrtg-m.gif
 share/mrtg/mrtg-r.gif
