@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1 2004/11/02 22:51:33 jmmv Exp $
+
+--- gok/main.c.orig	2004-10-13 15:36:18.000000000 +0200
++++ gok/main.c
+@@ -608,8 +608,8 @@ gok_main_open(gint argc, gchar *argv[])
+ 		
+ 		fprintf (stderr, "\nGOK Actions:\n");
+ 		if (error == NULL) {
+-			list = g_slist_sort (list, (GCompareFunc)comparebasenames);
+-			GSList* listhead = list;
++			GSList* listhead;
++			listhead = list = g_slist_sort (list, (GCompareFunc)comparebasenames);
+ 			while (list) {
+ 				fprintf(stderr,"%s\n",g_path_get_basename(list->data));
+ 				g_free(list->data);
+@@ -636,8 +636,8 @@ gok_main_open(gint argc, gchar *argv[])
+ 		fprintf (stderr, "\nGOK Access Methods:\n");
+ 		if (error == NULL) {
+ 			gchar* base;
+-			list = g_slist_sort (list, (GCompareFunc)comparebasenames);
+-			GSList* listhead = list;
++			GSList* listhead;
++			listhead = list = g_slist_sort (list, (GCompareFunc)comparebasenames);
+ 			while (list) {
+ 				base = g_path_get_basename(list->data);
+ 				fprintf(stderr,"%s\n",base);
