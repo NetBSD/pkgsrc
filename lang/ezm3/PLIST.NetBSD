@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2004/01/06 06:35:47 xtraeme Exp $
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Udir.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Uerror.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Uexec.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Ugrp.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Uin.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Uipc.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Umman.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Umsg.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Unetdb.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Unix.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Uprocess.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Upwd.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Uresource.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Usem.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Ushm.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Usignal.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Usocket.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Ustat.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Usyslog.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Utime.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Utypes.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Uugid.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Uuio.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1/Uutmp.i3
+@dirrm ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-1
