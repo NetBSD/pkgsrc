@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6797 2004/08/04 20:08:47 jlam Exp $
+$NetBSD: CHANGES,v 1.6798 2004/08/04 20:48:37 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3727,3 +3727,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.3c [minskim 2004-08-04]
 	Updated sqlite to 2.8.15 [jlam 2004-08-04]
 	Updated cyrus-saslauthd to 2.1.19 [jlam 2004-08-04]
+	Added cy2-sql-2.1.19 [jlam 2004-08-04]
