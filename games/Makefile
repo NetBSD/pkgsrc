@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 1999/11/17 22:19:57 tron Exp $
+# $NetBSD: Makefile,v 1.66 1999/11/18 23:27:16 tron Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -33,6 +33,7 @@
 #    SUBDIR += galaxis
     SUBDIR += gemdropx
     SUBDIR += gnome-chess
+    SUBDIR += gnome-games
     SUBDIR += gnuchess
     SUBDIR += gnugo
 #    SUBDIR += gnushogi
