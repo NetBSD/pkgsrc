@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/21 22:58:26 garbled Exp $
+bin/pacman
+share/pacman/pacman.dat
+@dirrm share/pacman

@@ -1,0 +1,3 @@
+A pacman game based on an old Apple IIe variant, where ghosts can follow a
+trail the pacman leaves behind.
+The game was written to demonstrate ClanLib, a crossplatform game SDK.
