@@ -1,0 +1,4 @@
+$NetBSD: md5,v 1.1.1.1 2000/12/27 15:44:55 hubertf Exp $
+
+MD5 (daemontools-0.70.tar.gz) = c88e8c5e4453b4df41571f60eaa0baf3
+MD5 (daemontools-0.70-man.diff.bz2) = bb7cbd7f2e06fd0e192ad09b6a7733b8
