@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/20 16:05:44 jmmv Exp $
 #
 
 DISTNAME=	etherape-0.9.0
@@ -12,7 +12,7 @@ COMMENT=	Graphical network monitor
 
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -31,6 +31,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/services ${EGDIR}
 
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
