@@ -1,37 +1,22 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/03/30 00:25:20 hubertf Exp $
+$NetBSD: patch-ad,v 1.2 2001/11/13 21:23:43 jlam Exp $
 
---- kchart/kchartEngine2.cc.orig	Sat Jul 22 16:13:49 2000
-+++ kchart/kchartEngine2.cc
-@@ -48,8 +48,8 @@
-                 p->setPen( AnnoteColor );
-                 p->drawLine( x2,PY(highest)-2,x2-annote_hgt/2, PY(highest)-2-annote_hgt/2 );
-                 p->setFont( params->annotationFont() );
--                QRect br = QFontMetrics( params->annotationFont() ).boundingRect( 0, 0, MAXINT,
--                                                                   MAXINT,
-+                QRect br = QFontMetrics( params->annotationFont() ).boundingRect( 0, 0, INT_MAX,
-+                                                                   INT_MAX,
-                                                                    Qt::AlignRight,
-                                                                    params->annotation->note );
-                 p->drawText(   x2-annote_hgt/2-1-annote_len - 1,
-@@ -63,8 +63,8 @@
-                 p->drawLine( x2, PY(highest)-2,x2+annote_hgt/2, PY(highest)-2-annote_hgt/2 );
-                 p->setFont( params->annotationFont() );
-                 QRect br = QFontMetrics( params->annotationFont() ).boundingRect( 0, 0,
--                                                                        MAXINT,
--                                                                        MAXINT,
-+                                                                        INT_MAX,
-+                                                                        INT_MAX,
-                                                                         Qt::AlignLeft,
-                                                                         params->annotation->note );
-                 p->drawText( x2+annote_hgt/2+1 + 1,
-@@ -85,8 +85,8 @@
-         p->setFont( params->titleFont() );
-         p->setPen( titlecolor );
-         QRect br = QFontMetrics( params->titleFont() ).boundingRect( 0, 0,
--                                MAXINT,
--                                MAXINT,
-+                                INT_MAX,
-+                                INT_MAX,
-                                 Qt::AlignCenter,
-                                 params->title );
-         p->drawText( imagewidth/2 - tlen*params->titleFontWidth()/2, // x
+--- kchart/kdchart/KDChartTable.h.orig	Tue Aug 14 00:20:06 2001
++++ kchart/kdchart/KDChartTable.h
+@@ -40,9 +40,17 @@
+ #define MINDOUBLE DBL_MIN
+ #define std
+ #else
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ #include <values.h>
++#endif
+ #include <limits.h>
+ #include <math.h>
++#ifdef DBL_MAX
++#define MAXDOUBLE DBL_MAX
++#endif
++#ifdef DBL_MIN
++#define MINDOUBLE DBL_MIN
++#endif
+ #endif
+ 
+ #if defined SUN7 || ( defined HP11_aCC && defined HP1100 )
