@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.2 2003/04/26 15:44:17 mrauch Exp $
+$NetBSD: distinfo,v 1.3 2004/01/25 16:57:57 mrauch Exp $
 
-SHA1 (OOo_1.0.3.1_LinuxIntel_install.tar.gz) = b641c49d05ec440bd3cbda6eeed3ee25ae195658
-Size (OOo_1.0.3.1_LinuxIntel_install.tar.gz) = 73618518 bytes
+SHA1 (OOo_1.1.0_LinuxIntel_install.tar.gz) = 0b08b675fd3dd940c90bdcfa4def4d720953e4b2
+Size (OOo_1.1.0_LinuxIntel_install.tar.gz) = 78347712 bytes
+SHA1 (openoffice-linux-110-services.rdb.bz2) = eb0064670ac00b6d2219d2fc9228719c0769a0e2
+Size (openoffice-linux-110-services.rdb.bz2) = 160324 bytes
