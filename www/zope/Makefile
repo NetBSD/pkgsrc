@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/12/23 07:04:22 tsarna Exp $
+# $NetBSD: Makefile,v 1.5 1999/02/20 22:48:46 hubertf Exp $
 #
 
 DISTNAME=	Zope-1.9.0-src
@@ -10,8 +10,6 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/
 
 DEPENDS+=	python-1.5.1:../../lang/python
-
-CONFLICTS=	zope-1.9b1 zope-1.9.0b2
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 

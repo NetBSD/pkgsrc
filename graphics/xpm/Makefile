@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/08/20 15:17:03 tsarna Exp $
+# $NetBSD: Makefile,v 1.13 1999/02/20 22:48:32 hubertf Exp $
 #
 
 DISTNAME=       xpm-3.4k
@@ -7,8 +7,6 @@ MASTER_SITES=	ftp://avahi.inria.fr/pub/xpm/
 
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.inria.fr/koala/lehors/xpm.html
-
-CONFLICTS=	xpm-3.4j
 
 USE_IMAKE=	yes
 

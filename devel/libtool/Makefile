@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/10/02 14:49:33 tv Exp $
+# $NetBSD: Makefile,v 1.6 1999/02/20 22:48:27 hubertf Exp $
 #
 
 DISTNAME=	libtool-1.2
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_GNU}
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.profitpress.com/libtool/
-
-CONFLICTS=	libtool-1.2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/12/03 17:29:58 tv Exp $
+# $NetBSD: Makefile,v 1.12 1999/02/20 22:48:42 hubertf Exp $
 #
 
 DISTNAME=		SSLeay-0.9.0b
@@ -10,8 +10,6 @@ MASTER_SITES=		ftp://psych.psy.uq.oz.au/pub/Crypto/SSL/
 
 MAINTAINER=		explorer@netbsd.org
 HOMEPAGE=		http://www.psy.uq.oz.au/~ftp/Crypto/
-
-CONFLICTS=		SSLeay-*
 
 NOT_FOR_ARCHS=		alpha *64
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/11/13 01:44:50 frueauf Exp $
+# $NetBSD: Makefile,v 1.12 1999/02/20 22:48:43 hubertf Exp $
 #
 
 DISTNAME=       mkisofs-1.11.3
@@ -7,8 +7,6 @@ MASTER_SITES=   ftp://ftp.cdrom.com/pub/linux/tsx-11/packages/mkisofs/
 
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://andante.jic.com/mkisofs.html
-
-CONFLICTS=	mkisofs-1.11
 
 NOT_FOR_ARCHS=	alpha	#gcc lossage
 

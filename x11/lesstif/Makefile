@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 1999/01/30 23:18:57 agc Exp $
+# $NetBSD: Makefile,v 1.37 1999/02/20 22:48:47 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://linux.gt.ed.net/pub/linux/libs/lesstif/srcdist/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.lesstif.org/
-
-CONFLICTS=	lesstif-*
 
 GNU_CONFIGURE=  yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/01/06 16:30:46 frueauf Exp $
+# $NetBSD: Makefile,v 1.20 1999/02/20 22:48:25 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -10,8 +10,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/autoconf/autoconf.html
 
 DEPENDS=	m4-1.4:../../devel/m4
-
-CONFLICTS=	autoconf-*
 
 USE_PERL5=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/01/31 23:37:28 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/02/20 22:48:32 hubertf Exp $
 
 DISTNAME=	clispsrc-19990108
 PKGNAME=	clisp-19990108
@@ -7,8 +7,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	mjl@emsi.priv.at
 HOMEPAGE=	http://clisp.cons.org/~haible/clisp.html
-
-CONFLICTS=	clisp-*
 
 NOT_FOR_ARCHS=	alpha	# severe LP64 problems
 

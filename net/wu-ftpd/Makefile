@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/02/14 15:27:50 rh Exp $
+# $NetBSD: Makefile,v 1.9 1999/02/20 22:48:37 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/12/24 17:45:28 ache Exp
 #
 # REMINDER: to use ftpaccess(5) you need to specify -a in command line,
@@ -14,8 +14,6 @@ EXTRACT_SUFX=   .tar.Z
 
 MAINTAINER=     rh@netbsd.org
 HOMEPAGE=	http://www.academ.com/academ/wu-ftpd/
-
-CONFLICTS=	wu-ftpd*
 
 MAKE_ENV+=	INSTALL="${INSTALL}"
 MAKE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}"

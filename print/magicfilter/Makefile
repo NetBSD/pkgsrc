@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/11/11 11:28:02 agc Exp $
+# $NetBSD: Makefile,v 1.12 1999/02/20 22:48:39 hubertf Exp $
 
 DISTNAME=	magicfilter-1.2
 CATEGORIES=	print
@@ -12,8 +12,6 @@ DEPENDS+=	a2ps-4.10.3:../../print/a2ps			\
 		netpbm-19940301:../../graphics/netpbm		\
 		teTeX-0.4p8:../../print/teTeX			\
 		papersize-1.0:../../print/papersize
-
-CONFLICTS=	magicfilter-A4-1.2 magicfilter-Letter-1.2
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
