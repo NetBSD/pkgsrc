@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/16 20:53:05 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/26 17:56:10 zuntum Exp $
 # FreeBSD Id: ports/sysutils/ucspi-tcp/Makefile,v 1.12 2000/07/10 01:41:24 steve Exp
 
 DISTNAME=	ucspi-tcp-0.88
@@ -23,7 +23,7 @@ INSTALL_TARGET=	setup check
 post-configure:
 	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} -s > ${WRKSRC}/conf-ld
+	${ECHO} ${CC} ${STRIPFLAG} > ${WRKSRC}/conf-ld
 
 post-install:
 	cd ${WRKDIR}/${DISTNAME}-man &&					\
