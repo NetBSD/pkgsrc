@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2003/05/31 12:11:47 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.15 2003/07/17 16:13:07 jmmv Exp $
 bin/gaim
 bin/gaim-remote
+include/gaim-remote/remote-socket.h
+include/gaim-remote/remote.h
 lib/gaim/autorecon.a
 lib/gaim/autorecon.la
 lib/gaim/autorecon.so
@@ -46,9 +48,6 @@ lib/gaim/libyahoo.so
 lib/gaim/libzephyr.a
 lib/gaim/libzephyr.la
 lib/gaim/libzephyr.so
-lib/gaim/notify.a
-lib/gaim/notify.la
-lib/gaim/notify.so
 lib/gaim/spellchk.a
 lib/gaim/spellchk.la
 lib/gaim/spellchk.so
@@ -61,6 +60,11 @@ lib/gaim/ticker.so
 lib/gaim/timestamp.a
 lib/gaim/timestamp.la
 lib/gaim/timestamp.so
+lib/libgaim-remote.a
+lib/libgaim-remote.la
+lib/libgaim-remote.so
+lib/libgaim-remote.so.0
+lib/libgaim-remote.so.0.0
 man/man1/gaim.1
 share/applications/gaim.desktop
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gaim.mo
@@ -72,6 +76,7 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gaim.mo
@@ -79,6 +84,7 @@ ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gaim.mo
@@ -95,6 +101,8 @@ share/pixmaps/gaim/buttons/edit.png
 share/pixmaps/gaim/buttons/insert-image-small.png
 share/pixmaps/gaim/buttons/insert-link-small.png
 share/pixmaps/gaim/buttons/insert-smiley-small.png
+share/pixmaps/gaim/buttons/pause.png
+share/pixmaps/gaim/buttons/send-im.png
 share/pixmaps/gaim/buttons/text_bigger.png
 share/pixmaps/gaim/buttons/text_normal.png
 share/pixmaps/gaim/buttons/text_smaller.png
@@ -196,6 +204,8 @@ share/pixmaps/gaim/smileys/default/yahoo_chicken.gif
 share/pixmaps/gaim/smileys/default/yahoo_clap.gif
 share/pixmaps/gaim/smileys/default/yahoo_clown.gif
 share/pixmaps/gaim/smileys/default/yahoo_coffee.gif
+share/pixmaps/gaim/smileys/default/yahoo_cow.gif
+share/pixmaps/gaim/smileys/default/yahoo_cowboy.gif
 share/pixmaps/gaim/smileys/default/yahoo_cry.gif
 share/pixmaps/gaim/smileys/default/yahoo_dance.gif
 share/pixmaps/gaim/smileys/default/yahoo_devil.gif
@@ -249,6 +259,7 @@ share/pixmaps/gaim/status/default/aol.png
 share/pixmaps/gaim/status/default/away.png
 share/pixmaps/gaim/status/default/dnd.png
 share/pixmaps/gaim/status/default/extendedaway.png
+share/pixmaps/gaim/status/default/female.png
 share/pixmaps/gaim/status/default/freeforchat.png
 share/pixmaps/gaim/status/default/gadu-gadu.png
 share/pixmaps/gaim/status/default/game.png
@@ -258,12 +269,14 @@ share/pixmaps/gaim/status/default/irc.png
 share/pixmaps/gaim/status/default/jabber.png
 share/pixmaps/gaim/status/default/login.png
 share/pixmaps/gaim/status/default/logout.png
+share/pixmaps/gaim/status/default/male.png
 share/pixmaps/gaim/status/default/msn.png
 share/pixmaps/gaim/status/default/na.png
 share/pixmaps/gaim/status/default/napster.png
 share/pixmaps/gaim/status/default/notauthorized.png
 share/pixmaps/gaim/status/default/occupied.png
 share/pixmaps/gaim/status/default/offline.png
+share/pixmaps/gaim/status/default/trepia.png
 share/pixmaps/gaim/status/default/wireless.png
 share/pixmaps/gaim/status/default/yahoo.png
 share/pixmaps/gaim/tb_drag_arrow_down.xpm
@@ -289,3 +302,4 @@ share/sounds/gaim/send.wav
 @dirrm share/pixmaps/gaim
 @comment in gnome2-dirs: @dirrm share/applications
 @dirrm lib/gaim
+@dirrm include/gaim-remote
