@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/29 06:36:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/29 07:27:43 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
@@ -13,6 +13,7 @@ COMMENT=	Imake and other utilities from X.org
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_BUILDLINK3=		yes
+USE_DIRS+=		xorg-1.0
 INSTALL_TARGET=		install install.man
 NO_XORG_TARGETS=	# defined
 
