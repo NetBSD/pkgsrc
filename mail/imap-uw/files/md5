@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 1998/11/22 22:59:25 tv Exp $
+$NetBSD: md5,v 1.5 1999/02/08 23:31:59 tron Exp $
 
-MD5 (imap-4.4.tar.Z) = 89b1cc8031c4a12da102fb1bc9f842c9
+MD5 (imap-4.5.tar.Z) = 24e5ff01e0f14ecc647f10a9148a9dbd
