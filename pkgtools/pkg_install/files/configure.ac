@@ -40,8 +40,14 @@ AC_CHECK_HEADERS([fnmatch.h md5.h regex.h])
 AC_CHECK_HEADERS([sys/ioctl.h sys/resource.h sys/wait.h])
 
 # Checks for library functions.
-AC_CHECK_FUNCS([chflags dbopen tgetent])
+AC_CHECK_FUNCS([chflags dbopen tgetent vfork])
 AC_CHECK_FUNCS([getrlimit setrlimit])
+
+AH_BOTTOM(
+#if !HAVE_VFORK
+# define vfork fork
+#endif
+)
 
 AC_CONFIG_FILES([Makefile add/Makefile admin/Makefile create/Makefile delete/Makefile info/Makefile lib/Makefile view/Makefile])
 AC_OUTPUT
