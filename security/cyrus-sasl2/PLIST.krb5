@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST.krb5,v 1.8 2004/02/14 03:16:58 jlam Exp $
+@comment $NetBSD: PLIST.krb5,v 1.9 2004/03/29 05:47:31 jlam Exp $
 lib/sasl2/libgssapiv2.la
 lib/sasl2/libgssapiv2.so
 lib/sasl2/libgssapiv2.so.2
-lib/sasl2/libgssapiv2.so.2.17
+lib/sasl2/libgssapiv2.so.2.18

@@ -1,25 +1,25 @@
-@comment $NetBSD: PLIST.plugins,v 1.7 2004/02/14 03:16:58 jlam Exp $
+@comment $NetBSD: PLIST.plugins,v 1.8 2004/03/29 05:47:31 jlam Exp $
 lib/sasl2/libanonymous.la
 lib/sasl2/libanonymous.so
 lib/sasl2/libanonymous.so.2
-lib/sasl2/libanonymous.so.2.17
+lib/sasl2/libanonymous.so.2.18
 lib/sasl2/libcrammd5.la
 lib/sasl2/libcrammd5.so
 lib/sasl2/libcrammd5.so.2
-lib/sasl2/libcrammd5.so.2.17
+lib/sasl2/libcrammd5.so.2.18
 lib/sasl2/libdigestmd5.la
 lib/sasl2/libdigestmd5.so
 lib/sasl2/libdigestmd5.so.2
-lib/sasl2/libdigestmd5.so.2.17
+lib/sasl2/libdigestmd5.so.2.18
 lib/sasl2/libotp.la
 lib/sasl2/libotp.so
 lib/sasl2/libotp.so.2
-lib/sasl2/libotp.so.2.17
+lib/sasl2/libotp.so.2.18
 lib/sasl2/libplain.la
 lib/sasl2/libplain.so
 lib/sasl2/libplain.so.2
-lib/sasl2/libplain.so.2.17
+lib/sasl2/libplain.so.2.18
 lib/sasl2/libsasldb.la
 lib/sasl2/libsasldb.so
 lib/sasl2/libsasldb.so.2
-lib/sasl2/libsasldb.so.2.17
+lib/sasl2/libsasldb.so.2.18
