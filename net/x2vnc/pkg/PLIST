@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/10/24 09:42:52 agc Exp $
+bin/x2vnc
+man/cat1/x2vnc.0
