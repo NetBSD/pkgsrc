@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6086 2004/06/01 19:59:20 shannonjr Exp $
+$NetBSD: CHANGES,v 1.6087 2004/06/01 21:03:04 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2721,3 +2721,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gccAda-3.4 [shannonjr 2004-06-01]
 	Added gcc-3.4 [shannonjr 2004-06-01]
 	Added gdb6 [shannonjr 2004-06-01]
+	Updated gaim to 0.78 [jmmv 2004-06-01]
