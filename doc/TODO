@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.707 2003/07/12 12:05:49 zuntum Exp $
+$NetBSD: TODO,v 1.708 2003/07/12 12:13:22 itojun Exp $
 
 Suggested new packages
 ======================
@@ -145,7 +145,6 @@ Suggested package updates
 	o inform-6.21.3 [pkg/19298]
 	o inform-6.21.4 [pkg/21934]
 	o inn-2.4.0
-	o intlfonts-1.2.1
 	o ipa-1.3.5
 	o jakarta-tomcat-3.3.1a
 	o joe-2.9.8 [pkg/18022, incomplete]
