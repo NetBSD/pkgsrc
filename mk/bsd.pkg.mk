@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.721 2001/04/18 10:53:02 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.722 2001/04/18 21:50:46 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -177,7 +177,9 @@ PKG_FC?=		f2c-f77
 # /usr/bin/f77, the default will remain as f2c-f77.
 PKG_FC?=		f2c-f77
 .if  (${PKG_FC} == "f2c-f77")
-BUILD_DEPENDS+=       f2c>=20001205:../../lang/f2c
+# this is a DEPENDS not BUILD_DEPENDS because of the
+# shared Fortran libs
+DEPENDS+=       f2c>=20001205nb3:../../lang/f2c
 .endif
 FC=             ${PKG_FC}
 F77=            ${PKG_FC}
