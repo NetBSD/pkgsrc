@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/07/21 16:43:24 martti Exp $
+# $NetBSD: Makefile,v 1.21 2003/08/09 10:44:44 seb Exp $
 #
 
 DISTNAME=	isect-1.6.2
@@ -17,7 +17,6 @@ USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 PTHREAD_OPTS+=	require
 USE_PKGINSTALL=	YES
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	isect.info
 
 RCD_SCRIPTS=	isect
