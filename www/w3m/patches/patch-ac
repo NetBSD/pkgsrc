@@ -1,14 +1,38 @@
-$NetBSD: patch-ac,v 1.7 2000/10/14 01:22:42 itojun Exp $
+$NetBSD: patch-ac,v 1.8 2001/03/31 09:21:17 itojun Exp $
 
---- display.c.orig	Wed Jun 14 19:26:34 2000
-+++ display.c	Wed Oct 11 15:35:33 2000
-@@ -232,3 +232,3 @@
-     else
--#if LANG == JA
-+#if KANJI_SYMBOL
- 	msg = Sprintf("¢ã¢¬¢­Viewing <%s> ", cleanup_str(buf->buffername));
-@@ -251,3 +251,3 @@
- 		Strcat(msg, Strsubstr(s, 0, (l - 2) / 2));
--#if LANG == JA
-+#if KANJI_SYMBOL
- 		Strcat_charp(msg, "¡Ä");
+*** display.c.orig	Fri Mar 23 10:49:53 2001
+--- display.c	Fri Mar 30 21:02:31 2001
+***************
+*** 251,257 ****
+  
+  #ifdef MOUSE
+      if (use_mouse)
+! #if LANG == JA
+  	msg = Strnew_charp("¢ã¢¬¢­");
+  #else				/* LANG != JA */
+  	msg = Strnew_charp("<=UpDn ");
+--- 251,257 ----
+  
+  #ifdef MOUSE
+      if (use_mouse)
+! #if KANJI_SYMBOL
+  	msg = Strnew_charp("¢ã¢¬¢­");
+  #else				/* LANG != JA */
+  	msg = Strnew_charp("<=UpDn ");
+***************
+*** 273,279 ****
+  	if (s->length > l) {
+  	    if (l >= 4) {
+  		msg = Strsubstr(s, 0, (l - 2) / 2);
+! #if LANG == JA
+  		Strcat_charp(msg, "¡Ä");
+  #else				/* LANG != JA */
+  		Strcat_charp(msg, "..");
+--- 273,279 ----
+  	if (s->length > l) {
+  	    if (l >= 4) {
+  		msg = Strsubstr(s, 0, (l - 2) / 2);
+! #if KANJI_SYMBOL
+  		Strcat_charp(msg, "¡Ä");
+  #else				/* LANG != JA */
+  		Strcat_charp(msg, "..");
