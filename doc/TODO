@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2378 2004/11/17 15:47:41 adam Exp $
+$NetBSD: TODO,v 1.2379 2004/11/17 16:17:32 adam Exp $
 
 Suggested new packages
 ======================
@@ -395,7 +395,6 @@ Suggested package updates
 	o larswm-7.5.3
 	o latex2rtf-1.9.15
 	o lavaps-2.5
-	o lbreakout-2.5.1
 	o lcab-1.011
 	o leafnode-1.10.6
 	o libcdaudio-0.99.12
