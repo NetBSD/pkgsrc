@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:47:06 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/03 18:19:42 xtraeme Exp $
 #
 
-DISTNAME=	sylpheed-0.8.11claws
-PKGNAME=	sylpheed-claws-0.8.11
-PKGREVISION=	3
+DISTNAME=	sylpheed-0.9.4claws
+PKGNAME=	sylpheed-claws-0.9.4
 CATEGORIES=	mail news x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +13,7 @@ COMMENT=	X based e-mail and netnews client
 
 BUILD_USES_MSGFMT=	yes
 
-CONFLICTS=	sylpheed-[0-9]*
+CONFLICTS=		sylpheed-[0-9]*
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
@@ -25,11 +24,17 @@ USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 # Force gnome detection off to avoid installing some extra files
 CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="no"
+CONFIGURE_ARGS+=        --enable-aspell
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-openssl
 CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--enable-compface
-CONFIGURE_ARGS+=	--enable-aspell
+CONFIGURE_ARGS+=	--disable-trayicon-plugin
+CONFIGURE_ARGS+=	--disable-image-viewer-plugin
+CONFIGURE_ARGS+=	--disable-clamav-plugin
+CONFIGURE_ARGS+=	--disable-dillo-viewer-plugin
+CONFIGURE_ARGS+=	--disable-spamassassin-plugin
+CONFIGURE_ARGS+=	--disable-mathml-viewer-plugin
 
 PKG_SYSCONFSUBDIR=	sylpheed
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
