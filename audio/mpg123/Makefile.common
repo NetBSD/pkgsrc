@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2002/09/06 11:51:58 wiz Exp $ -*- Makefile -*-
+# $NetBSD: Makefile.common,v 1.3 2003/03/13 03:07:02 jschauma Exp $ -*- Makefile -*-
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
 CATEGORIES=	audio
@@ -22,17 +22,17 @@ USE_BUILDLINK2=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == "i386")
-.if (${OBJECT_FMT} == "ELF")
+.  if (${OBJECT_FMT} == "ELF")
 ALL_TARGET=	netbsd-i386-elf${TARGET_SUFFIX}
-.else
+.  else
 ALL_TARGET=	netbsd-i386${TARGET_SUFFIX}
-.endif
+.  endif # ELF
 .elif (${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32")
-.if defined(MPG123_ARM_FIXED64) && ${MPG123_ARM_FIXED64} == "YES"
+.  if defined(MPG123_ARM_FIXED64) && ${MPG123_ARM_FIXED64} == "YES"
 ALL_TARGET=	netbsd-arm-64${TARGET_SUFFIX}
-.else
+.  else
 ALL_TARGET=	netbsd-arm${TARGET_SUFFIX}
-.endif
+.  endif # MPG123_ARM_FIXED64
 .elif (${MACHINE_ARCH} == "m68k")
 ALL_TARGET=	netbsd-m68k${TARGET_SUFFIX}
 .else
@@ -41,6 +41,8 @@ ALL_TARGET=	${LOWER_OPSYS}${TARGET_SUFFIX}
 
 .if ${OPSYS} == "SunOS"
 ALL_TARGET=	solaris-gcc${TARGET_SUFFIX}
+.elif ${OPSYS} == "IRIX"
+ALL_TARGET=	sgi
 .endif
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
