@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2004/01/24 13:40:44 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/18 06:04:44 wulf Exp $
 #
 
-DISTNAME=	xlog-0.8
-PKGREVISION=	1
+DISTNAME=	xlog-0.9.1
 CATEGORIES=	ham
-MASTER_SITES=	http://people.debian.org/~pa3aba/download/
+MASTER_SITES=	http://www.qsl.net/pg4i/download/
 
 MAINTAINER=	wulf@NetBSD.org
-HOMEPAGE=	http://people.debian.org/~pa3aba/xlog.html
+HOMEPAGE=	http://http://www.qsl.net/pg4i/linux/xlog.html
 COMMENT=	Amateur Radio logging program
 
 USE_BUILDLINK2=	yes
@@ -17,5 +16,5 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-hamlib
 
 .include "../../ham/hamlib/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
