@@ -1,24 +1,24 @@
-$NetBSD: patch-aa,v 1.4 1998/08/07 11:09:18 agc Exp $
+$NetBSD: patch-aa,v 1.5 1998/10/14 21:34:43 frueauf Exp $
 
---- configure.orig	Tue Jul 14 08:54:26 1998
-+++ configure	Wed Jul 15 13:08:19 1998
-@@ -2587,7 +2587,7 @@
+--- configure.orig	Fri Oct  2 00:27:20 1998
++++ configure	Wed Oct  7 18:08:26 1998
+@@ -2707,7 +2707,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="-ljpeg  $LIBS"
-+LIBS="-ljpeg -L$libdir $LIBS"
++LIBS="-ljpeg -L${LOCALBASE}/lib $LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 2593 "configure"
+ #line 2713 "configure"
  #include "confdefs.h"
-@@ -2615,8 +2615,8 @@
+@@ -2735,8 +2735,8 @@
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
 -    JPEG_LIBRARIES="-ljpeg $JPEG_LIBRARIES";
 -  LIBS="-ljpeg $LIBS"
-+    JPEG_LIBRARIES="-ljpeg -L$libdir $JPEG_LIBRARIES";
-+  LIBS="-ljpeg  -L$libdir $LIBS"
++    JPEG_LIBRARIES="-ljpeg -L${LOCALBASE}/lib $JPEG_LIBRARIES";
++  LIBS="-ljpeg  -L${LOCALBASE}/lib $LIBS"
    ac_tr_lib=HAVE_LIB`echo jpeg | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'`
    cat >> confdefs.h <<EOF
  #define $ac_tr_lib 1
