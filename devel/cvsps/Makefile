@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:13:26 tv Exp $
+# $NetBSD: Makefile,v 1.12 2004/11/03 11:30:15 grant Exp $
 #
 
 DISTNAME=	cvsps-2.0rc1
@@ -16,6 +16,8 @@ USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 
 INSTALLATION_DIRS=	bin man/man1
+
+LIBS.SunOS+=		-lnsl -lsocket
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
