@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/03 03:50:13 jwise Exp $
+bin/ant
+bin/antRun
+lib/java/xml.jar
+lib/java/ant.jar
+share/doc/java/ant/README
+share/doc/java/ant/index.html
+@dirrm share/doc/java/ant
