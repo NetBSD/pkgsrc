@@ -1,6 +1,6 @@
 include/wine/windows.h
 include/wine/wintypes.h
-lib/libwine.a
+lib/libwine.so.1.0
 bin/wine
 man/man1/wine.1
 @dirrm include/wine
