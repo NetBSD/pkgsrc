@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/12 00:38:30 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/02 20:52:51 wiz Exp $
 
 DISTNAME=	scummvm_0.2.0-src
 PKGNAME=	scummvm-0.2.0
@@ -11,6 +11,7 @@ HOMEPAGE=	http://scummvm.sourceforge.net/
 COMMENT=	LucasArts Script Creation Utility for Maniac Mansion
 
 USE_BUILDLINK2=	yes
+USE_X11=	yes
 WRKSRC=		${WRKDIR}/scummvm
 
 do-install:
