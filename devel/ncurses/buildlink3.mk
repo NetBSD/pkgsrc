@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2004/02/19 14:56:33 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2004/02/19 17:36:38 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
@@ -121,6 +121,8 @@ BUILDLINK_USE_BUILTIN.ncurses=	NO
 .    if !empty(BUILDLINK_IS_BUILTIN.ncurses:M[yY][eE][sS]) && \
         !empty(_BLNK_LIBNCURSES_FOUND:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.ncurses=	YES
+.    else
+BUILDLINK_USE_BUILTIN.ncurses=	NO
 .    endif
 .  endif
 .endif
