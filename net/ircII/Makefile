@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/08/09 21:23:28 kim Exp $
+# $NetBSD: Makefile,v 1.15 1998/08/09 21:42:01 kim Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -26,5 +26,6 @@ post-install:
 		${ECHO} Compressing help files; \
 		find ${PREFIX}/share/irc/help -type f -print | xargs ${GZIP_CMD}; \
 	fi
+	(cd ${PREFIX}/man/man1; ${LN} -s ircII.1 irc.1)
 
 .include "../../mk/bsd.pkg.mk"
