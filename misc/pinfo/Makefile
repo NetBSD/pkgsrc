@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/21 15:04:43 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/12/01 16:25:58 salo Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
@@ -12,6 +12,7 @@ COMMENT=		Przemek's Info Viewer
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 CPPFLAGS=		-DDFLT_INFOPATH='\"/usr/share/info:${X11BASE}/info:${LOCALBASE}/info:/usr/local/info\"'
