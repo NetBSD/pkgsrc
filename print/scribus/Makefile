@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/05/08 20:11:27 reed Exp $
+# $NetBSD: Makefile,v 1.17 2004/05/08 20:21:43 reed Exp $
 
 DISTNAME=	scribus-1.1.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	print
 MASTER_SITES=	http://scribus.planetmirror.com/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://web2.altmuehlnet.de/fschmid/
+HOMEPAGE=	http://www.scribus.net/
 COMMENT=	Publishing layout with graphical interface
 
 USE_BUILDLINK3=		yes
