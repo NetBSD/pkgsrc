@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/02/14 18:26:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/03 11:20:20 recht Exp $
 
-DISTNAME=		startup-notification-0.5
+DISTNAME=		startup-notification-0.6
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/startup-notification/0.5/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/startup-notification/0.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		benedikt.meurer@unix-ag.uni-siegen.de
@@ -22,4 +22,5 @@ post-install:
 		doc/startup-notification.txt \
 		${PREFIX}/share/doc/startup-notification/
 
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
