@@ -1,50 +1,24 @@
-$NetBSD: patch-ab,v 1.4 2002/07/27 15:20:06 jschauma Exp $
+$NetBSD: patch-ab,v 1.5 2004/01/20 13:41:06 xtraeme Exp $
 
---- config/gdm.conf.in.orig	Sun Mar  4 15:27:12 2001
-+++ config/gdm.conf.in	Fri Jul 26 19:51:41 2002
-@@ -1,10 +1,10 @@
- [daemon]
- AutomaticLogin=
- Chooser=@EXPANDED_BINDIR@/gdmchooser --disable-sound --disable-crash-dialog
--DefaultPath=/bin:/usr/bin:/usr/bin/X11:/usr/local/bin:@EXPANDED_BINDIR@
-+DefaultPath=/bin:/usr/bin:/usr/local/bin:@X11BASE@/bin:@LOCALBASE@/bin
- DisplayInitDir=@EXPANDED_SYSCONFDIR@/gdm/Init
- Greeter=@EXPANDED_BINDIR@/gdmlogin --disable-sound --disable-crash-dialog
--Group=gdm
-+Group=@GDMGRP@
- HaltCommand=/sbin/shutdown -h now
- KillInitClients=true
- LogDir=@EXPANDED_AUTHDIR@
-@@ -12,10 +12,10 @@
- PostSessionScriptDir=@EXPANDED_SYSCONFDIR@/gdm/PostSession/
- PreSessionScriptDir=@EXPANDED_SYSCONFDIR@/gdm/PreSession/
- RebootCommand=/sbin/shutdown -r now
--RootPath=/sbin:/usr/sbin:/bin:/usr/bin:/usr/bin/X11:/usr/local/bin:@EXPANDED_BINDIR@
-+RootPath=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin:@X11BASE@/bin:@LOCALBASE@/bin
- ServAuthDir=@EXPANDED_AUTHDIR@
- SessionDir=@EXPANDED_SYSCONFDIR@/gdm/Sessions/
+--- config/gdm.conf.in.orig	2003-10-10 16:03:16.000000000 -0500
++++ config/gdm.conf.in
+@@ -68,8 +68,8 @@ TimedLoginDelay=30
+ # you should create these user and group.  Anyone found running this as
+ # someone too privilaged will get a kick in the ass.  This should have
+ # access to only the gdm directories and files.
 -User=gdm
+-Group=gdm
 +User=@GDMOWN@
- UserAuthDir=
- UserAuthFBDir=/tmp
- UserAuthFile=.Xauthority
-@@ -51,7 +51,7 @@
- GlobalFaceDir=@EXPANDED_DATADIR@/faces/
- Icon=@EXPANDED_PIXMAPDIR@/gdm.xpm
- LocaleFile=@EXPANDED_LOCALEDIR@/locale.alias
--Logo=@EXPANDED_PIXMAPDIR@/gnome-logo-large.png
++Group=@GDMGRP@
+ # To try to kill all clients started at greeter time or in the Init script.
+ # doesn't always work, only if those clients have a window of their own
+ #KillInitClients=true
+@@ -237,7 +237,7 @@ Browser=false
+ # although gdm will be able to read a standard locale.alias file as well.
+ #LocaleFile=@EXPANDED_LOCALEDIR@/locale.alias
+ # Logo shown in the standard greeter
+-#Logo=@EXPANDED_PIXMAPDIR@/gdm-foot-logo.png
 +Logo=@EXPANDED_PIXMAPDIR@/Daemon.png
- Quiver=true
- SystemMenu=true
- Welcome=Welcome to %n
-@@ -75,8 +75,8 @@
- Enable=false
- 
- [servers]
--0=/usr/bin/X11/X
--#1=/usr/bin/X11/X
-+0=@X11BASE@/bin/X
-+#1=@X11BASE@/bin/X
- #Note: If you want to make sure X runs on a specific virtual console on linux,
- #      you can use the following (for console 7):
- #0=/usr/bin/X11/X vt7
+ # The standard greeter should shake if a user entered the wrong username or
+ # password.  Kind of cool looking
+ #Quiver=true
