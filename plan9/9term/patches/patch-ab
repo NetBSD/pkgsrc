@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.5 1998/08/07 11:11:15 agc Exp $
+
 --- 9term/9term.c.orig	Fri Jun  3 09:35:39 1994
 +++ 9term/9term.c	Fri Sep 26 16:45:48 1997
 @@ -10,7 +10,13 @@

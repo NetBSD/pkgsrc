@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:09:40 agc Exp $
+
 *** bin/sun2mime.ORIG	Sat Nov 13 15:53:51 1993
 --- bin/sun2mime	Mon Dec 12 10:07:44 1994
 ***************

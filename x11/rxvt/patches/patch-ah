@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 11:18:15 agc Exp $
+
 --- src/command.c.orig	Fri Sep 27 10:48:22 1996
 +++ src/command.c	Mon Feb 24 01:25:51 1997
 @@ -509,7 +509,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.2 1998/08/07 11:14:19 agc Exp $
+
 *** src/readPNG.c.bak	Sun Jun 30 16:30:00 1996
 --- src/readPNG.c	Sat Aug  3 14:22:45 1996
 ***************

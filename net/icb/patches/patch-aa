@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.4 1998/08/07 11:10:40 agc Exp $
+
 --- tcl/tclCmdAH.c.orig	Fri Feb 24 22:19:53 1995
 +++ tcl/tclCmdAH.c	Wed Apr 15 12:26:09 1998
 @@ -38,8 +38,14 @@

@@ -1,2 +1,5 @@
+#
+# $NetBSD: Makefile.work,v 1.3 1998/08/07 11:09:58 agc Exp $
+#
 all install clean:
 	cd netbsd; $(MAKE) $@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.4 1998/08/07 11:09:47 agc Exp $
+
 --- pine/abookcpy.c.orig	Sun Jul 19 00:20:02 1998
 +++ pine/abookcpy.c	Sun Jul 19 00:22:20 1998
 @@ -48,6 +48,7 @@

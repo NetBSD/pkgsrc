@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:11:18 agc Exp $
+
 *** samterm/Makefile.orig	Fri Jul 28 14:09:32 1995
 --- samterm/Makefile	Fri Jul 21 15:30:09 1995
 ***************

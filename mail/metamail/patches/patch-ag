@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1998/08/07 11:09:42 agc Exp $
+
 diff -u -r mm2.7.org/src/bin/showaudio mm2.7/src/bin/showaudio
 --- bin/showaudio	Wed Feb  2 16:21:26 1994
 +++ bin/showaudio	Wed May 21 21:34:08 1997

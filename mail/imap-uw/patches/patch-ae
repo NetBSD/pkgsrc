@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.4 1998/08/07 11:09:37 agc Exp $
+
 --- src/osdep/unix/Makefile.orig	Thu Jul 16 21:12:22 1998
 +++ src/osdep/unix/Makefile	Tue Aug  4 22:23:05 1998
 @@ -88,7 +88,7 @@

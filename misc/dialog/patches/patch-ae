@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:10:14 agc Exp $
+
 --- inputbox.c.orig	Fri Jan 23 17:37:12 1998
 +++ inputbox.c	Fri Jan 23 18:15:24 1998
 @@ -29,10 +29,20 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:18:20 agc Exp $
+
 *** xautolock.c.orig	Sat Jul 20 17:32:41 1996
 --- xautolock.c	Sat Jul 20 17:56:41 1996
 ***************

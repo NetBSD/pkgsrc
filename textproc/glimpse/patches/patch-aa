@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:14:12 agc Exp $
+
 *** agrep/agrep.c.orig	Thu Aug 22 07:51:14 1996
 --- agrep/agrep.c	Thu Aug 22 07:51:27 1996
 ***************

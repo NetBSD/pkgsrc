@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:14:11 agc Exp $
+
 --- catdoc.c.orig	Fri Jun  5 12:43:35 1998
 +++ catdoc.c	Sat Jun 20 01:03:13 1998
 @@ -46,7 +46,7 @@

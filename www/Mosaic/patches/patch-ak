@@ -1,3 +1,5 @@
+$NetBSD: patch-ak,v 1.2 1998/08/07 11:14:19 agc Exp $
+
 --- src/Makefile.in.orig	Fri Jun 28 01:42:15 1996
 +++ src/Makefile.in	Sat Jul 11 21:40:17 1998
 @@ -7,6 +7,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:10:14 agc Exp $
+
 --- dialog.h.orig	Fri Jan 23 17:37:12 1998
 +++ dialog.h	Fri Jan 23 18:14:38 1998
 @@ -28,8 +28,12 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:09:04 agc Exp $
+
 *** config/unix/Config/Makefile.orig	Fri Jul 29 21:40:55 1994
 --- config/unix/Config/Makefile	Wed Mar  1 14:27:05 1995
 ***************

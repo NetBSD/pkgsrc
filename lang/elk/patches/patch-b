@@ -1,3 +1,5 @@
+$NetBSD: patch-b,v 1.2 1998/08/07 11:08:55 agc Exp $
+
 --- /dev/null	Fri Mar 27 13:45:57 1998
 +++ config/untested/aout-netbsd-cc	Tue Mar 31 10:03:57 1998
 @@ -0,0 +1,370 @@

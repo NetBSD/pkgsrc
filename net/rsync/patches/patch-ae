@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:10:51 agc Exp $
+
 --- syscall.c-orig	Tue May 26 16:43:43 1998
 +++ syscall.c	Sun Jul 26 00:50:22 1998
 @@ -103,12 +103,14 @@

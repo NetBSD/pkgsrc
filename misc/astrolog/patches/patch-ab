@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:09 agc Exp $
+
 *** astrolog.h.orig	Sun Feb  2 23:06:03 1997
 --- astrolog.h	Thu May 29 05:06:03 1997
 ***************

@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: config.sh,v 1.2 1998/08/07 11:11:12 agc Exp $
+#
 # config.sh
 # This file was produced by running the Configure script
 # (and manually bashed on by tv@netbsd.org)

@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:14:10 agc Exp $
+
 --- /dev/null	Thu Feb 19 12:11:00 1998
 +++ machine/m_netbsd13.desc	Thu Feb 19 12:11:22 1998
 @@ -0,0 +1,30 @@
@@ -29,5 +31,5 @@
 +		matthew green <mrg@eterna.com.au>
 +
 +
-+$Id: patch-ae,v 1.1 1998/02/20 06:55:27 hubertf Exp $
++Id: patch-ae,v 1.1 1998/02/20 06:55:27 hubertf Exp
 +

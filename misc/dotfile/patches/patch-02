@@ -1,3 +1,5 @@
+$NetBSD: patch-02,v 1.2 1998/08/07 11:10:16 agc Exp $
+
 Change for tcl/tk V8.0 - hubertf
 
 --- configure.BAK	Thu Oct 23 20:31:32 1997

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:09:43 agc Exp $
+
 diff -ur nmh-0.14-dist/acconfig.h nmh-0.14/acconfig.h
 --- acconfig.h-dist	Wed Apr 16 21:25:42 1997
 +++ acconfig.h	Tue May 20 18:59:52 1997

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:14:23 agc Exp $
+
 --- Library/src/HTMIMImp.c.orig	Sat Apr  5 09:26:21 1997
 +++ Library/src/HTMIMImp.c	Tue May  6 01:15:02 1997
 @@ -213,7 +213,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.5 1998/08/07 11:11:14 agc Exp $
+
 --- libtext/Makefile.orig	Thu Jun  2 03:01:19 1994
 +++ libtext/Makefile	Fri Sep 26 16:44:27 1997
 @@ -5,14 +5,15 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:23 agc Exp $
+
 --- ile.c.orig	Wed Jun 25 01:54:50 1997
 +++ ile.c	Wed Jun 25 01:55:24 1997
 @@ -65,7 +65,7 @@

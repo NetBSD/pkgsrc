@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:14:03 agc Exp $
+
 *** DEFAULTS/Defaults.netbsd.orig	Wed Nov 12 23:52:33 1997
 --- DEFAULTS/Defaults.netbsd	Wed Nov 12 23:55:30 1997
 ***************

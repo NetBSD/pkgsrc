@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:09:28 agc Exp $
+
 --- tools/cpmanpages.tcl	1998/03/08 02:16:19	1.1
 +++ tools/cpmanpages.tcl	1998/03/08 02:16:44
 @@ -204,9 +204,9 @@

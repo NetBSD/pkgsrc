@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 11:09:05 agc Exp $
+
 --- /dev/null	Wed Oct  1 17:23:30 1997
 +++ config/unix/intel_netbsd/copybin.c	Wed Oct  1 17:32:26 1997
 @@ -0,0 +1,3 @@

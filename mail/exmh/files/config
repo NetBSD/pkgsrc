@@ -1,3 +1,5 @@
+# $NetBSD: config,v 1.4 1998/08/07 11:09:33 agc Exp $
+
 set wish !!WISH!!
 set exmh(version) {version !!VERSION!! !!DATE!!}
 set exmh(name) exmh

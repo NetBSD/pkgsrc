@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:13:56 agc Exp $
+
 *** scsh/scsh.scm.original   Tue Nov 26 17:15:00 1996
 --- scsh/scsh.scm    Tue Nov 26 17:15:06 1996
 ***************

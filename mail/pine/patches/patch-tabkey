@@ -1,3 +1,5 @@
+$NetBSD: patch-tabkey,v 1.4 1998/08/07 11:09:50 agc Exp $
+
 --- pine/mailcmd.c.orig	Sun Jul 19 01:00:42 1998
 +++ pine/mailcmd.c	Sun Jul 19 01:06:24 1998
 @@ -316,9 +316,7 @@

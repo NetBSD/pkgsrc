@@ -1,3 +1,5 @@
+$NetBSD: patch-bv,v 1.2 1998/08/07 11:09:17 agc Exp $
+
 --- config/unix/Config/rtt.make.orig	Fri Jun 19 04:54:16 1998
 +++ config/unix/Config/rtt.make	Fri Jun 19 04:54:24 1998
 @@ -29,3 +29,3 @@

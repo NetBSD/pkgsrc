@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:18:18 agc Exp $
+
 --- tkcron.tcl	Sat Aug  3 17:53:42 1996
 +++ tkcron.tcl	Sat Aug  3 17:52:03 1996
 @@ -281,6 +281,7 @@

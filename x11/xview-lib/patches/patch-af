@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 11:18:36 agc Exp $
+
 --- ../alt/lib/libxview/notify/ndet_fd.c	Tue Jun 29 07:18:08 1993
 +++ lib/libxview/notify/ndet_fd.c	Sat Jul 26 00:42:21 1997
 @@ -27,8 +27,9 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:09:56 agc Exp $
+
 --- src/search.h.orig	Wed Sep  4 03:54:13 1996
 +++ src/search.h	Thu Oct 31 14:19:33 1996
 @@ -14,11 +14,6 @@

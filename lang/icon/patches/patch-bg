@@ -1,3 +1,5 @@
+$NetBSD: patch-bg,v 1.2 1998/08/07 11:09:12 agc Exp $
+
 --- /dev/null	Fri Jun 19 02:02:36 1998
 +++ config/unix/alpha_netbsd/status	Fri Jun 19 02:46:17 1998
 @@ -0,0 +1,28 @@

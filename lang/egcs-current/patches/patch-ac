@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:08:54 agc Exp $
+
 --- gcc/gcc.texi.orig	Tue May 19 20:24:28 1998
 +++ gcc/gcc.texi	Wed Jun  3 15:14:41 1998
 @@ -182,6 +182,10 @@

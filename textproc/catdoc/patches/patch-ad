@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:14:12 agc Exp $
+
 --- wordview.orig	Tue Nov 11 15:04:07 1997
 +++ wordview	Sat Jun 20 01:20:09 1998
 @@ -1,4 +1,4 @@

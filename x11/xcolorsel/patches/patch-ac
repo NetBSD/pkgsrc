@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:18:21 agc Exp $
+
 --- RgbSink.h.orig	Sun Nov 13 23:14:23 1994
 +++ RgbSink.h	Wed Jul 15 09:56:56 1998
 @@ -85,7 +85,7 @@

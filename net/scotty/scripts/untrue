@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: untrue,v 1.2 1998/08/07 11:10:56 agc Exp $
+#
 # untrue $1: convert /bin/true -> true
 # also mask CFLAGS
 mv -f $1 $1.true

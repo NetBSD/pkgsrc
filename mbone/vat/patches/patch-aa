@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:02 agc Exp $
+
 --- configure.orig	Thu May 16 01:03:58 1996
 +++ configure	Tue Sep  9 11:36:10 1997
 @@ -1,7 +1,7 @@
@@ -1457,7 +1459,7 @@
 --- configure.in.tk.orig	Thu May 16 01:06:05 1996
 +++ configure.in.tk	Tue Sep  9 11:35:45 1997
 @@ -2,6 +2,7 @@
- dnl $Header: /cvsroot/pkgsrc/mbone/vat/patches/patch-aa,v 1.1.1.1 1997/11/20 12:20:01 is Exp $ (LBL)
+ dnl $Header: /cvsroot/pkgsrc/mbone/vat/patches/patch-aa,v 1.2 1998/08/07 11:10:02 agc Exp $ (LBL)
  
  AC_ARG_WITH(tcl,	--with-tcl=path	specify a pathname for tcl, d=$withval, d="")
 +tclposs="tcl8.0 tcl80 tcl"

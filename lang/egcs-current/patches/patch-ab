@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:08:54 agc Exp $
+
 --- gcc/cpp.texi.orig	Sat Apr  4 12:37:40 1998
 +++ gcc/cpp.texi	Wed Jun  3 15:13:28 1998
 @@ -2,16 +2,6 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:14:03 agc Exp $
+
 --- lib/libschily.mk~	Sat May 17 12:31:25 1997
 +++ lib/libschily.mk	Sun Nov  2 19:21:32 1997
 @@ -49,8 +49,8 @@

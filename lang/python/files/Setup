@@ -1,4 +1,7 @@
 # -*- makefile -*-
+#
+# $NetBSD: Setup,v 1.4 1998/08/07 11:09:24 agc Exp $
+#
 # The file Setup is used by the makesetup script to construct the files
 # Makefile and config.c, from Makefile.pre and config.c.in,
 # respectively.  The file Setup itself is initially copied from

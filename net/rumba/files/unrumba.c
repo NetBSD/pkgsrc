@@ -1,3 +1,4 @@
+/* $NetBSD: unrumba.c,v 1.3 1998/08/07 11:10:52 agc Exp $ */
 #include <sys/param.h>
 #include <sys/mount.h>
 

@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 11:09:59 agc Exp $
+
 --- /dev/null	Fri Nov 21 14:47:55 1997
 +++ src/plugins/sdr2.plugin.S53.image.imm	Fri Nov 21 14:42:48 1997
 @@ -0,0 +1,5 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.3 1998/08/07 11:09:34 agc Exp $
+
 diff -c -N ../faces/Faces.ad ./Faces.ad
 *** ../faces/Faces.ad	Mon Jul  1 03:25:46 1991
 --- ./Faces.ad	Tue Dec 10 19:07:26 1996

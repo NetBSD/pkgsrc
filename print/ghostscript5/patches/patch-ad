@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:11:23 agc Exp $
+
 --- /dev/null	Sun May 18 19:02:12 1997
 +++ cdj850.dev	Sun May 18 19:14:48 1997
 @@ -0,0 +1 @@

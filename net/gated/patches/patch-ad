@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:10:39 agc Exp $
+
 --- src/sockaddr.h.orig	Wed Oct  1 21:55:58 1997
 +++ src/sockaddr.h	Wed Oct  1 21:55:13 1997
 @@ -126,6 +126,7 @@

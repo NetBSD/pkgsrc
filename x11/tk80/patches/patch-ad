@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.4 1998/08/07 11:18:17 agc Exp $
+
 --- mkLinks.orig	Tue Nov 25 17:42:01 1997
 +++ mkLinks	Sun Mar  1 17:36:37 1998
 @@ -29,850 +29,850 @@

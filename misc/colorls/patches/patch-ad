@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:10:12 agc Exp $
+
 --- ls.h.orig	Sun Dec 22 00:40:58 1996
 +++ ls.h	Thu May 21 15:42:08 1998
 @@ -54,6 +54,7 @@

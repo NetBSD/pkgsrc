@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:17:58 agc Exp $
+
 *** fr.orig	Thu Sep 18 22:55:04 1997
 --- fr	Thu Sep 18 22:57:08 1997
 *************** CheckCmdLineArgs

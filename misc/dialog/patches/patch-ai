@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.2 1998/08/07 11:10:15 agc Exp $
+
 --- util.c.orig	Fri Jan 23 17:37:13 1998
 +++ util.c	Fri Jan 23 17:37:12 1998
 @@ -361,3 +361,52 @@

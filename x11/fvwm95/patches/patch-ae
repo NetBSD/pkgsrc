@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:18:04 agc Exp $
+
 --- modules/FvwmTaskBar/Goodies.h.orig	Sun Aug  3 13:00:30 1997
 +++ modules/FvwmTaskBar/Goodies.h	Sun Aug  3 13:00:09 1997
 @@ -1,4 +1,8 @@

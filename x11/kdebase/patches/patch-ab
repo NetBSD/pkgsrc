@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.5 1998/08/07 11:18:06 agc Exp $
+
 --- kappfinder/pics/Makefile.in.orig	Fri Jul 10 20:35:26 1998
 +++ kappfinder/pics/Makefile.in	Mon Jul 13 22:42:35 1998
 @@ -150,7 +150,7 @@

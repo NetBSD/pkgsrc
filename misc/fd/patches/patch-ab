@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:18 agc Exp $
+
 --- input.c.BAK	Thu Oct 23 22:11:36 1997
 +++ input.c	Thu Oct 23 22:11:49 1997
 @@ -21,7 +21,7 @@

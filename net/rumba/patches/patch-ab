@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.4 1998/08/07 11:10:53 agc Exp $
+
 --- nfs/syscalls.c.orig	Mon Mar 23 00:00:17 1998
 +++ nfs/syscalls.c	Wed May  6 18:39:39 1998
 @@ -17,6 +17,9 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:09:19 agc Exp $
+
 --- Makefile.in.orig	Sun Dec 17 22:20:55 1995
 +++ Makefile.in	Wed Oct  1 16:24:02 1997
 @@ -11,10 +11,11 @@
