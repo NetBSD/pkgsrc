@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/12/28 04:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2000/07/11 09:19:14 agc Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
@@ -24,11 +24,11 @@ NO_WRKSUBDIR=	yes
 
 do-configure:
 	${RM} -f ${WRKSRC}/makefile
-	${SED} 's@$${X11BASE}@${X11BASE}@' <${FILESDIR}/NetBSD \
+	${SED} 's@$${X11BASE}@${X11PREFIX}@' <${FILESDIR}/NetBSD \
 		>${WRKSRC}/conf/NetBSD
 	${MV} ${WRKSRC}/conf/defaults ${WRKSRC}/conf/defaults.BAK
 	${SED} \
-		-e 's@$${X11BASE}@${X11BASE}@' \
+		-e 's@$${X11BASE}@${X11PREFIX}@' \
 		-e 's@$${PREFIX}@${PREFIX}@' \
 		<${WRKSRC}/conf/defaults.BAK >${WRKSRC}/conf/defaults
 
