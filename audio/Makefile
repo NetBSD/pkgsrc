@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2001/03/12 21:22:42 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2001/03/13 13:24:36 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -13,6 +13,8 @@ SUBDIR+=	cddbd
 SUBDIR+=	cdparanoia
 SUBDIR+=	cmp3
 SUBDIR+=	cs4235
+SUBDIR+=	csound
+SUBDIR+=	csound-manual
 SUBDIR+=	dap
 SUBDIR+=	easytag
 SUBDIR+=	eawpatches
