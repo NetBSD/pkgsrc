@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2000/06/07 22:51:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2000/07/10 03:31:14 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.17 1999/04/24 09:25:32 kuriyama Exp
 
-DISTNAME=	db141
-PKGNAME=	dsssl-docbook-modular-1.41
+DISTNAME=	db154
+PKGNAME=	dsssl-docbook-modular-1.54
 CATEGORIES=	textproc
 MASTER_SITES=	http://nwalsh.com/docbook/dsssl/
-DISTFILES=	db141.zip db141d.zip
+DISTFILES=	db154.zip db154d.zip
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://nwalsh.com/docbook/dsssl/
 
 BUILD_DEPENDS=	unzip:../../archivers/unzip
-DEPENDS+=	docbook>=3.1:../../textproc/docbook
+DEPENDS+=	docbook>=4.0:../../textproc/docbook
 
 EXTRACT_CMD=	unzip ${DOWNLOADED_DISTFILE}
 NO_MTREE=	yes
