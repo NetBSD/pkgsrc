@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/05/03 22:02:59 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/13 14:34:08 jtb Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
@@ -21,7 +21,7 @@ EVAL_PREFIX+=		RL_PREFIX=readline
 
 USE_X11BASE=		yes
 USE_XAW=		yes
-XAW_TYPE=		3d
+XAW_TYPE?=		3d
 
 post-extract:
 	@${GZCAT} ${DISTDIR}/felt-3.05.ps.gz > ${WRKSRC}/felt.ps
