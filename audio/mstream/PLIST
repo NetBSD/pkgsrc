@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/25 00:33:15 kim Exp $
+bin/mstream-play
+man/man1/mstream-play.1
+share/ices-mp3/mstream.pm
