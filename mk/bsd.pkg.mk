@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1035 2002/08/26 05:17:40 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1036 2002/08/27 06:06:38 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4188,7 +4188,7 @@ PERL5_PACKLIST_FILES=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do
 PERL5_PACKLIST_DIRS=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
 		-e "s,^,@unexec \${RMDIR} -p %D/," \
-		-e "s,/[^/]*$$, 2>/dev/null || true," \
+		-e "s,/[^/]*$$, 2>/dev/null || \${TRUE}," \
 	| ${SORT} -ur
 PERL5_GENERATE_PLIST=	${PERL5_COMMENT}; \
 			${PERL5_PACKLIST_FILES}; \
