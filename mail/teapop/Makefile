@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/11/25 22:55:04 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2001/12/02 06:56:42 jlam Exp $
 
 DISTNAME=	teapop-0.3.2
 CATEGORIES=	mail
@@ -28,13 +28,9 @@ CONFIGURE_ARGS+=--disable-apop
 CONFIGURE_ARGS+=--disable-vpop
 .endif
 
-pre-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL                                                           
-
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/teapop.passwd ${EGDIR}
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL 
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

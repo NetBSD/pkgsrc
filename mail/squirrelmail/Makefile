@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/11/25 18:59:46 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/12/02 06:56:42 jlam Exp $
 
 DISTNAME=	squirrelmail-1.0.6
 CATEGORIES=	mail www
@@ -51,7 +51,6 @@ pre-install:
 	${SED}	${FILES_SUBST_SED}					\
 		${FILESDIR}/squirrelmail.conf.dist			\
 		> ${WRKDIR}/squirrelmail.conf.dist
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR} ${SMDIR}
@@ -60,9 +59,6 @@ do-install:
 	${CP} -R ${WRKSRC}/* ${SMDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
 	${CHMOD} -R a-w ${SMDIR}
-
-post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

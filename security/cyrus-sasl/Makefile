@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/11/29 01:12:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.23 2001/12/02 06:56:43 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.24
 PKGREVISION=		3
@@ -97,14 +97,12 @@ pre-configure:
 pre-install:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/sasl_pwcheck.sh		\
 		> ${WRKDIR}/sasl_pwcheck.sh
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/sasl_pwcheck.sh \
 		${PREFIX}/etc/rc.d/sasl_pwcheck
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt ${HTMLDIR}
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"

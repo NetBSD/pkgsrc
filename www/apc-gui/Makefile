@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/11/25 18:59:49 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/02 06:56:46 jlam Exp $
 
 DISTNAME=	apc_gui-1.0.3
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -27,7 +27,6 @@ OWN_DIRS=	${APC_GUI_DIR}
 pre-install:
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/apc_gui.conf.dist		\
 		> ${WRKDIR}/apc_gui.conf.dist
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
 	${INSTALL_DATA_DIR} ${APC_GUI_DIR} ${EGDIR}
@@ -36,9 +35,6 @@ do-install:
 	${CP} -R ${WRKSRC}/* ${APC_GUI_DIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${APC_GUI_DIR}
 	${CHMOD} -R a-w ${APC_GUI_DIR}
-
-post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
