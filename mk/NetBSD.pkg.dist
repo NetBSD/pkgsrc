@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: NetBSD.pkg.dist,v 1.7 1998/12/03 05:07:04 simonb Exp $
+#	$NetBSD: NetBSD.pkg.dist,v 1.8 1998/12/12 15:32:50 simonb Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -200,10 +200,6 @@
             ..
         ..
         skel
-        ..
-    ..
-    var
-        games
         ..
     ..
 ..
