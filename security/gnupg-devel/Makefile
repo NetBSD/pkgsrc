@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/11/05 22:20:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/23 11:10:35 shannonjr Exp $
 #
 
-DISTNAME=		gnupg-1.9.11
+DISTNAME=		gnupg-1.9.12
 PKGNAME=		${DISTNAME:S/gnupg/gnupg-devel/}
-PKGREVISION=		1
+#PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/
 
