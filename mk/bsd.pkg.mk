@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.389 2000/01/11 13:19:03 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.390 2000/01/11 13:59:28 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2220,7 +2220,10 @@ check-depends:
 .if !target(clean-depends)
 clean-depends:
 .if defined(BUILD_DEPENDS) || defined(DEPENDS) || defined(RUN_DEPENDS)
-	@for dir in `${ECHO} ${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//} \
+			    ${DEPENDS:C/^[^:]*://:C/:.*//} \
+			    ${RUN_DEPENDS:C/^[^:]*://:C/:.*//} | sort -u`; do \
 		if [ -d $$dir ] ; then					\
 			(cd $$dir && ${MAKE} CLEANDEPENDS=${CLEANDEPENDS} clean ); \
 		fi							\
