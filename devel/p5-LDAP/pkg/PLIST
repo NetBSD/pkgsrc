@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/24 08:32:36 hwr Exp $
-lib/perl5/site_perl/i386-netbsd/./auto/Mozilla/LDAP/API/API.so
-lib/perl5/site_perl/i386-netbsd/./auto/Mozilla/LDAP/API/API.bs
-lib/perl5/site_perl/./Mozilla/LDAP/Conn.pm
-lib/perl5/site_perl/./Mozilla/LDAP/LDIF.pm
-lib/perl5/site_perl/./Mozilla/LDAP/Utils.pm
-lib/perl5/site_perl/./Mozilla/LDAP/API.pm
-lib/perl5/site_perl/./Mozilla/LDAP/Entry.pm
-lib/perl5/site_perl/./auto/Mozilla/LDAP/API/autosplit.ix
-lib/perl5/man/man3/./Mozilla::LDAP::Conn.3
-lib/perl5/man/man3/./Mozilla::LDAP::LDIF.3
-lib/perl5/man/man3/./Mozilla::LDAP::Utils.3
-lib/perl5/man/man3/./Mozilla::LDAP::Entry.3
-lib/perl5/man/man3/./Mozilla::LDAP::API.3
-lib/perl5/site_perl/i386-netbsd/auto/Mozilla/LDAP/API/.packlist
+@comment $NetBSD: PLIST,v 1.2 1999/09/07 14:49:43 bad Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Mozilla/LDAP/API/API.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Mozilla/LDAP/API/API.bs
+lib/perl5/site_perl/Mozilla/LDAP/Conn.pm
+lib/perl5/site_perl/Mozilla/LDAP/LDIF.pm
+lib/perl5/site_perl/Mozilla/LDAP/Utils.pm
+lib/perl5/site_perl/Mozilla/LDAP/API.pm
+lib/perl5/site_perl/Mozilla/LDAP/Entry.pm
+lib/perl5/site_perl/auto/Mozilla/LDAP/API/autosplit.ix
+lib/perl5/man/man3/Mozilla::LDAP::Conn.3
+lib/perl5/man/man3/Mozilla::LDAP::LDIF.3
+lib/perl5/man/man3/Mozilla::LDAP::Utils.3
+lib/perl5/man/man3/Mozilla::LDAP::Entry.3
+lib/perl5/man/man3/Mozilla::LDAP::API.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Mozilla/LDAP/API/.packlist
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Mozilla/LDAP/API
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Mozilla/LDAP
 @dirrm lib/perl5/site_perl/Mozilla/LDAP
