@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 1999/03/04 14:59:23 tron Exp $
+# $NetBSD: Makefile,v 1.33 1999/04/04 14:42:19 tron Exp $
 
-DISTNAME=	gimp-1.0.2
+DISTNAME=	gimp-1.0.3
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v1.0/v1.0.2/ \
-		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gimp/v1.0/v1.0.2/ \
-		ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.0/v1.0.2/
-
+MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v1.0/v1.0.3/ \
+		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gimp/v1.0/v1.0.3/ \
+		ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.0/v1.0.3/
+EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		${GIMP_DATA}${EXTRACT_SUFX}
 
@@ -14,27 +14,25 @@ HOMEPAGE=	http://www.gimp.org/
 
 BUILD_DEPENDS=	emacs:../../editors/emacs
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	gtk10-1.0.6:../../x11/gtk10
+DEPENDS+=	gtk+-1.2.0:../../x11/gtk
 DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
 DEPENDS+=	png-1.0.3:../../graphics/png
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
-NOT_FOR_ARCHS=	alpha	#illegal instruction, core dumped.
-
 GIMP_DATA=	gimp-data-extras-1.0.0
 
 .ifndef DISPLAY
-IS_INTERACTIVE=	yes
+IS_INTERACTIVE=		yes
 .endif
-USE_X11BASE=	yes
-GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		GTK_CONFIG="${X11BASE}/bin/gtk10-config"
-CFLAGS=		-pipe -O2 -I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
-
-INFO_FILES=	pdb.info
+USE_X11BASE=		yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+CPPFLAGS=		-I${LOCALBASE}/include
+LDFLAGS+=		-L${LOCALBASE}/lib
+CONFIGURE_ARGS+=	--with-gtk-prefix=${X11BASE}
+CONFIGURE_ENV=		CPPFLAGS="${CPPFLAGS}"
 
 post-configure:
 	@${ECHO_MSG} "--> now configuring in ${GIMP_DATA}"
@@ -48,8 +46,9 @@ pre-build:
 	 fi
 
 post-install:
-	@(cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET})
-	@(cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
+.for DOC_TARGET in ${ALL_TARGET} ${INSTALL_TARGET}
+	@(cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${DOC_TARGET})
+.endfor
 	@${ECHO_MSG} "--> now installing in ${GIMP_DATA}"
 	@(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
 	    ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
