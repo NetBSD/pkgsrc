@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/10 07:30:23 jdolecek Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/04 20:10:13 recht Exp $
 
 PKGNAME=		postgresql74-lib-${BASE_VERS}
 PKGREVISION=		# empty
@@ -9,11 +9,18 @@ COMMENT=		PostgreSQL database headers and libraries
 
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 
-BUILD_DIRS=		${WRKSRC}/src/include
-BUILD_DIRS+=		${WRKSRC}/src/interfaces
-BUILD_DIRS+=		${WRKSRC}/src/pl
-
 .include "../../mk/bsd.prefs.mk"
+
+BUILD_DIRS+=		${WRKSRC}/src/include
+BUILD_DIRS+=		${WRKSRC}/src/interfaces
+
+# without this the Darwin build fails
+# (-bundle_loader related)
+.if ${OPSYS} == "Darwin"
+BUILD_DIRS+=		${WRKSRC}/src/backend
+.endif
+
+BUILD_DIRS+=		${WRKSRC}/src/pl
 
 # As told by Josh Berkus
 .include "../../mk/pthread.buildlink3.mk"
@@ -37,10 +44,17 @@ post-buildlink:
 .if (${OPSYS} == "SunOS")
 	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
 .endif
+do-install:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
+		${MAKE_PROGRAM} -C src/include install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
+		${MAKE_PROGRAM} -C src/interfaces install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
+		${MAKE_PROGRAM} -C src/pl install
+	cd ${WRKSRC}/src/include && ${SETENV} ${MAKE_ENV}	\
+		${MAKE_PROGRAM} install-all-headers
 
 post-install:
-	cd ${WRKSRC}/src/include && ${SETENV} ${MAKE_ENV}		\
-		${MAKE_PROGRAM} install-all-headers
 	${EGREP} -v "^#" ${FILESDIR}/man.lib > ${WRKDIR}/man_tar
 	cd ${PREFIX}/man && ${TAR} -zxm -T ${WRKDIR}/man_tar  		\
 		-f ${WRKSRC}/doc/man.tar.gz
