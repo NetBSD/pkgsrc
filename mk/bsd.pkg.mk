@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.298 1999/07/14 19:34:06 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.299 1999/07/17 19:26:44 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -118,7 +118,7 @@ BUILD_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:${PKGSRCDIR}/x11/lesstif
 .endif
 
 .if defined(USE_LIBTOOL)
-LIBTOOL=		${LOCALBASE}/bin/pkglibtool-1.2p1
+LIBTOOL=		${LOCALBASE}/bin/pkglibtool-${OBJECT_FMT}-1.2p2
 BUILD_DEPENDS+=		${LIBTOOL}:${PKGSRCDIR}/pkgtools/pkglibtool
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
