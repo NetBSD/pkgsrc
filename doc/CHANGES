@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1598 2003/03/09 06:08:21 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.1599 2003/03/09 06:20:05 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -997,3 +997,11 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ethereal to 0.9.10 [salo 2003-03-09]
 	Updated fep to 1.0nb1 [salo 2003-03-09]
 	Updated libgdgeda to 2.0.9 [dmcmahill 2003-03-09]
+	Updated libgeda to 20030223 [dmcmahill 2003-03-09]
+	Updated geda-symbols to 20030223 [dmcmahill 2003-03-09]
+	Updated geda-utils  to 20030223 [dmcmahill 2003-03-09]
+	Updated geda-docs  to 20030223 [dmcmahill 2003-03-09]
+	Updated gnetlist to 20030223 [dmcmahill 2003-03-09]
+	Updated gschem to 20030223 [dmcmahill 2003-03-09]
+	Updated gsymcheck to 20030223 [dmcmahill 2003-03-09]
+	Updated geda to 20030223 [dmcmahill 2003-03-09]
