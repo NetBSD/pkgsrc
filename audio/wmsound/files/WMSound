@@ -1,0 +1,23 @@
+{
+  SoundPath = (
+    "~/GNUstep/Library/WindowMaker/Sounds",
+    "@PREFIX@/share/WindowMaker/Sounds"
+  );
+  SoundSetPath = (
+    "~/GNUstep/Library/WindowMaker/SoundSets",
+    "@PREFIX@/share/WindowMaker/SoundSets"
+  );
+  Device = /dev/audio;
+  AppExit = appexit.wav;
+  AppStart = appstart.wav;
+  Hide = hide.wav;
+  Iconify = iconify.wav;
+  Maximize = maximize.wav;
+  UnMaximize = unmaximize.wav;
+  Shade = shade.wav;
+  Startup = startup.wav;
+  UnHide = unhide.wav;
+  DeIconify = uniconify.wav;
+  UnShade = unshade.wav;
+  UserDefined = replaceme.wav;
+}

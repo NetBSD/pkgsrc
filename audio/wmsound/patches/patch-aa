@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/04/06 17:18:01 tron Exp $
+
+--- Imakefile.orig	Thu Mar 18 00:14:45 1999
++++ Imakefile	Sun Mar 21 02:26:11 1999
+@@ -1,12 +1,12 @@
+ #define IHaveSubdirs
+ #define PassCDebugFlags CDEBUGFLAGS="$(CDEBUGFLAGS)"
+ 
+-PREFIX = /usr/local
++XCOMM PREFIX = /usr/local
+ 
+ DESTDIR = $(PREFIX)
+ 
+ XCOMM CDEBUGFLAGS = -Wall -ggdb -DDEBUG
+-CDEBUGFLAGS = -O6 -ffast-math
++XCOMM CDEBUGFLAGS = -O6 -ffast-math
+ 
+ 
+ XCOMM Uncomment the following two lines for HPUX support 

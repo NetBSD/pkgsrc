@@ -1,0 +1,32 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/04/06 17:18:01 tron Exp $
+
+--- src/Imakefile.orig	Thu Mar 18 00:15:19 1999
++++ src/Imakefile	Sun Mar 21 02:34:05 1999
+@@ -14,9 +14,16 @@
+ XCOMM uncomment out the next line if you want to use esd comment out the line below next line
+ XCOMM ESDLIB = -lesd -laudiofile
+ 
+-WMSOUNDLIB = -L/usr/local/lib -lPropList -L../lib -lwmsnd $(ESDLIB)
++XCOMM NetBSD requires -lossaudio for Linux OSS interface compatibility.
++#ifdef NetBSDArchitecture
++  OSSLIB = -lossaudio
++#else
++  OSSLIB =
++#endif
+ 
+-STD_INCLUDES = -I/usr/local/include -I/usr/X11R6/include
++WMSOUNDLIB = -L${LOCALBASE}/lib -lPropList -L../lib -lwmsnd $(ESDLIB) $(OSSLIB)
++
++STD_INCLUDES = -I${LOCALBASE}/include -I${X11BASE}/include
+ DEPLIBS = $(DEPXLIB) 
+ 
+ LOCAL_LIBRARIES += $(WMSOUNDLIB) $(XLIB) $(EFENCELIB)
+@@ -26,7 +33,7 @@
+ SRCS = wmsound.c
+ OBJS = wmsound.o
+ 
+-ComplexProgramTarget(wmsound)
++ComplexProgramTargetNoMan(wmsound)
+ 
+ XCOMM MakeSubdirs($(SUBDIRS))
+ XCOMM DependSubdirs($(SUBDIRS))
