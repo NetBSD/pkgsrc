@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/01 16:19:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/01 16:21:31 hubertf Exp $
 
 DISTNAME=       fontkit-nobdf
 PKGNAME=        mglfonts-0.1
-CATEGORIES=     graphics
+CATEGORIES=     fonts
 MASTER_SITES=   http://www.at.sakura.ne.jp/~suz/arc/
 
 MAINTAINER=     fk200329@fsinet.or.jp
