@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:16:21 agc Exp $
+
+MD5 (xscribble.tgz) = 016aa7614009f91662d85939988b0511
+SHA1 (patch-aa) = a9624489e56f0196ed3ac3a6f82d41c7f5a586e3
+SHA1 (patch-ab) = 1857a200a6b95032b7854c7b59309a4c1c0d6f27
+SHA1 (patch-ac) = 0a6352bf35e79db51b25e195a5bed88661672987

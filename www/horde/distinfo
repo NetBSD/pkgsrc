@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:12:44 agc Exp $
+
+MD5 (horde-1.2.4.tar.gz) = 34c4dad1b7d4f7043e5cd8fc0e1b8eba
+SHA1 (patch-aa) = 31c6653a6c0d237684caa441f5d95b69dee16976
+SHA1 (patch-ab) = 2beb9e66918e113ed1c3112e74cf42ff06975614
+SHA1 (patch-ac) = e8c2702cae1698f2274ecf8ebd676eb25e451c66
+SHA1 (patch-ad) = 76cdb0970d66c7b97f83b5dc4033eb44705e251a
+SHA1 (patch-ae) = c0e0befce11c535d6f655e3c8bc7a6c0487c1d78

@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:14:50 agc Exp $
+
+MD5 (Eterm-0.8.9.tar.gz) = 9e4945a6920f7d10cf28516266307519
+MD5 (Eterm-bg-scale-1.tar.gz) = 8fe075c118acb7bf050a5b616bf764e0
+MD5 (Eterm-bg-scale-2.tar.gz) = ba1b3ceec51bd4196df1b887c8396475
+MD5 (Eterm-bg-tile.tar.gz) = 24a60f33a3611b4c7a6e8a2b65dc120d
+SHA1 (patch-aa) = 056585ad4c39b60a3dbf41d8c7e65d31ba5f7fcd
+SHA1 (patch-ab) = d9b2874485ffcf411f83fd69f2fdc822bc76e657
+SHA1 (patch-ac) = c45dba8ca41b4d3d788c3b070aa09bedc9a22b1d
+SHA1 (patch-ad) = 2fbe515a55d352e52da9f0eb828697993541eb00
+SHA1 (patch-ae) = 88a8a097830694dec581bd3f84f2858fa3f38ae5
