@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.pre,v 1.1 1999/04/14 04:51:29 tsarna Exp $
+@comment $NetBSD: PLIST.pre,v 1.2 2000/10/22 20:01:50 tsarna Exp $
 bin/python
-bin/python1.5
+bin/python2.0
 man/man1/python.1
