@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2003/02/06 15:41:58 wiz Exp $
+# $NetBSD: Makefile,v 1.152 2003/03/01 13:04:00 jlam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -29,6 +29,7 @@ SUBDIR+=	dotfile
 SUBDIR+=	dsbr100
 SUBDIR+=	dt
 SUBDIR+=	dync
+SUBDIR+=	elizatalk
 SUBDIR+=	fd
 SUBDIR+=	fep
 SUBDIR+=	figlet
