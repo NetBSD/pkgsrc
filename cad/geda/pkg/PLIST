@@ -1,35 +1,67 @@
-@comment $NetBSD: PLIST,v 1.3 1999/02/04 21:21:23 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/03/01 13:16:25 rh Exp $
 bin/geda
+bin/gpcb
 bin/gschem
 bin/gnetlist
-bin/gsymbol
+bin/gsymcheck
 lib/libgeda.so.2.2
 lib/libgeda.a
+share/gEDA/scheme/gpcb.scm
 share/gEDA/scheme/gschem.scm
 share/gEDA/scheme/gnetlist.scm
+share/gEDA/scheme/gsymcheck.scm
 share/gEDA/sym/local/555-1.sym
+share/gEDA/sym/local/icl7660-1.sym
 share/gEDA/sym/local/osc-1.sym
 share/gEDA/sym/local/test.sym
 share/gEDA/sym/74/7400-1.sym
 share/gEDA/sym/74/7400-2.sym
+share/gEDA/sym/74/7401-1.sym
+share/gEDA/sym/74/7401-2.sym
 share/gEDA/sym/74/7402-1.sym
+share/gEDA/sym/74/7402-2.sym
+share/gEDA/sym/74/7403-1.sym
+share/gEDA/sym/74/7403-2.sym
 share/gEDA/sym/74/7404-1.sym
 share/gEDA/sym/74/7404-2.sym
+share/gEDA/sym/74/7405-1.sym
+share/gEDA/sym/74/7405-2.sym
 share/gEDA/sym/74/7407-1.sym
 share/gEDA/sym/74/7408-1.sym
+share/gEDA/sym/74/7408-2.sym
+share/gEDA/sym/74/7409-1.sym
+share/gEDA/sym/74/7409-2.sym
 share/gEDA/sym/74/7410-1.sym
+share/gEDA/sym/74/7410-2.sym
+share/gEDA/sym/74/74109-1.sym
 share/gEDA/sym/74/7411-1.sym
+share/gEDA/sym/74/7411-2.sym
+share/gEDA/sym/74/7412-1.sym
+share/gEDA/sym/74/7412-2.sym
 share/gEDA/sym/74/74123-1.sym
 share/gEDA/sym/74/74138-1.sym
 share/gEDA/sym/74/74139-1.sym
+share/gEDA/sym/74/74139-2.sym
+share/gEDA/sym/74/7415-1.sym
+share/gEDA/sym/74/7415-2.sym
 share/gEDA/sym/74/74151-1.sym
 share/gEDA/sym/74/74153-1.sym
 share/gEDA/sym/74/74154-1.sym
 share/gEDA/sym/74/74161-1.sym
 share/gEDA/sym/74/74164-1.sym
 share/gEDA/sym/74/74191-1.sym
+share/gEDA/sym/74/7420-1.sym
+share/gEDA/sym/74/7420-2.sym
+share/gEDA/sym/74/7421-1.sym
+share/gEDA/sym/74/7421-2.sym
+share/gEDA/sym/74/7422-1.sym
+share/gEDA/sym/74/7422-2.sym
+share/gEDA/sym/74/74244-1.sym
+share/gEDA/sym/74/74244-2.sym
 share/gEDA/sym/74/74245-1.sym
 share/gEDA/sym/74/74265-1.sym
+share/gEDA/sym/74/7427-1.sym
+share/gEDA/sym/74/74273-1.sym
 share/gEDA/sym/74/7432-1.sym
 share/gEDA/sym/74/74541-1.sym
 share/gEDA/sym/74/74574-1.sym
@@ -303,6 +335,17 @@ share/gEDA/sym/radio/if_trans_aircore-1.sym
 share/gEDA/sym/radio/loop_antenna-1.sym
 share/gEDA/sym/radio/loop_antenna-2.sym
 share/gEDA/sym/radio/osc_coil_aircore-1.sym
+share/gEDA/sym/idt/idt7204-1.sym
+share/gEDA/sym/4000/4020-1.sym
+share/gEDA/sym/4000/4040-1.sym
+share/gEDA/sym/4000/4046-1.sym
+share/gEDA/sym/4000/4051-1.sym
+share/gEDA/sym/foot/cap.foot
+share/gEDA/sym/foot/dip300_18.foot
+share/gEDA/sym/foot/led.foot
+share/gEDA/sym/foot/led_7seg.foot
+share/gEDA/sym/foot/resistor.foot
+share/gEDA/sym/foot/test.foot
 share/gEDA/source/68K_reset_1.sch
 share/gEDA/source/7400-1_1.sch
 share/gEDA/source/7400-1_2.sch
@@ -313,14 +356,17 @@ share/gEDA/source/test_3.sch
 share/gEDA/source/test_4.sch
 share/gEDA/system-gschemrc
 share/gEDA/system-gnetlistrc
-share/gEDA/system-gsymbolrc
+share/gEDA/system-gsymcheckrc
 share/gEDA/system-gedarc
 @dirrm share/gEDA/scheme
 @dirrm share/gEDA/source
+@dirrm share/gEDA/sym/4000
 @dirrm share/gEDA/sym/74
 @dirrm share/gEDA/sym/IEC417
 @dirrm share/gEDA/sym/analog
 @dirrm share/gEDA/sym/font
+@dirrm share/gEDA/sym/foot
+@dirrm share/gEDA/sym/idt
 @dirrm share/gEDA/sym/local
 @dirrm share/gEDA/sym/memory
 @dirrm share/gEDA/sym/micro
