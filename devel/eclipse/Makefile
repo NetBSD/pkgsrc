@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/12/30 17:21:55 cjep Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/28 18:31:25 jschauma Exp $
 #
 
 DISTNAME=	${PKGNAME}
-PKGNAME=	eclipse-2.1
+PKGNAME=	eclipse-${VERSION}
 CATEGORIES=	devel java
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jschauma/
 
@@ -17,11 +17,13 @@ PKG_JVM=	sun-jdk14
 MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
 MAKE_ENV+=	ANT_HOME=${PREFIX}
 
+VERSION=	2.1.2
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
-DISTNAME=	eclipse-sourceBuild-srcIncluded-2.1
-MASTER_SITES=	http://download.eclipse.org/downloads/drops/R-2.1-200303272130/
+DISTNAME=	eclipse-sourceBuild-srcIncluded-${VERSION}
+MASTER_SITES=	http://download.eclipse.org/downloads/drops/R-2.1.2-200311030802/
 EXTRACT_SUFX=	.zip
 
 PAXDIR=		${WRKDIR}

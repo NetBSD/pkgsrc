@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/17 18:51:57 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/28 18:31:25 jschauma Exp $
 bin/eclipse
 eclipse/build
 eclipse/build.bat
@@ -265,7 +265,7 @@ eclipse/icon.xpm
 eclipse/instructions.html
 eclipse/libXm.so
 eclipse/libXm.so.2
-eclipse/libXm.so.${PKGVERSION}
+eclipse/libXm.so.2.1
 eclipse/plugins/org.apache.ant/.classpath
 eclipse/plugins/org.apache.ant/.project
 eclipse/plugins/org.apache.ant/about.html
@@ -321,6 +321,7 @@ eclipse/plugins/org.eclipse.ant.core/doc/org_eclipse_ant_core_extraClasspathEntr
 eclipse/plugins/org.eclipse.ant.core/lib/antsupportlib.jar
 eclipse/plugins/org.eclipse.ant.core/plugin.properties
 eclipse/plugins/org.eclipse.ant.core/plugin.xml
+eclipse/plugins/org.eclipse.ant.core/r2_1_buildnotes_platform-ant.html
 eclipse/plugins/org.eclipse.ant.core/r2_0_buildnotes_platform-ant.html
 eclipse/plugins/org.eclipse.ant.core/schema/antTasks.exsd
 eclipse/plugins/org.eclipse.ant.core/schema/antTypes.exsd
@@ -608,7 +609,7 @@ eclipse/plugins/org.eclipse.core.resources.qnx/about.html
 eclipse/plugins/org.eclipse.core.resources.qnx/build.properties
 eclipse/plugins/org.eclipse.core.resources.qnx/build.xml
 eclipse/plugins/org.eclipse.core.resources.qnx/fragment.xml
-eclipse/plugins/org.eclipse.core.resources.qnx/os/qnx/x86/libcore_2_0_5.so
+eclipse/plugins/org.eclipse.core.resources.qnx/os/qnx/x86/libcore_2_1_0a.so
 eclipse/plugins/org.eclipse.core.resources.qnx/src/Makefile
 eclipse/plugins/org.eclipse.core.resources.qnx/src/core.c
 eclipse/plugins/org.eclipse.core.resources.qnx/src/core.h
@@ -1544,6 +1545,7 @@ eclipse/plugins/org.eclipse.help.webapp/advanced/images/e_links_view.gif
 eclipse/plugins/org.eclipse.help.webapp/advanced/images/e_print_edit.gif
 eclipse/plugins/org.eclipse.help.webapp/advanced/images/e_search_results_view.gif
 eclipse/plugins/org.eclipse.help.webapp/advanced/images/e_synch_toc_nav.gif
+eclipse/plugins/org.eclipse.help.webapp/advanced/images/e_synch_nav.gif
 eclipse/plugins/org.eclipse.help.webapp/advanced/images/forward.gif
 eclipse/plugins/org.eclipse.help.webapp/advanced/images/helpbanner.gif
 eclipse/plugins/org.eclipse.help.webapp/advanced/images/hide_nav.gif
@@ -1559,6 +1561,7 @@ eclipse/plugins/org.eclipse.help.webapp/advanced/images/search_results_view.gif
 eclipse/plugins/org.eclipse.help.webapp/advanced/images/separator.gif
 eclipse/plugins/org.eclipse.help.webapp/advanced/images/stripe.gif
 eclipse/plugins/org.eclipse.help.webapp/advanced/images/synch_toc_nav.gif
+eclipse/plugins/org.eclipse.help.webapp/advanced/images/synch_nav.gif
 eclipse/plugins/org.eclipse.help.webapp/advanced/images/toc_closed.gif
 eclipse/plugins/org.eclipse.help.webapp/advanced/images/toc_open.gif
 eclipse/plugins/org.eclipse.help.webapp/advanced/images/tool_separator.gif
@@ -1571,6 +1574,7 @@ eclipse/plugins/org.eclipse.help.webapp/advanced/list.css
 eclipse/plugins/org.eclipse.help.webapp/advanced/list.js
 eclipse/plugins/org.eclipse.help.webapp/advanced/livehelp.js.jsp
 eclipse/plugins/org.eclipse.help.webapp/advanced/nav.jsp
+eclipse/plugins/org.eclipse.help.webapp/advanced/navActions.js
 eclipse/plugins/org.eclipse.help.webapp/advanced/search.jsp
 eclipse/plugins/org.eclipse.help.webapp/advanced/searchInfocenter.jsp
 eclipse/plugins/org.eclipse.help.webapp/advanced/searchToolbar.jsp
@@ -2575,11 +2579,13 @@ eclipse/plugins/org.eclipse.jdt.core/model/org/eclipse/jdt/internal/core/util/Pe
 eclipse/plugins/org.eclipse.jdt.core/model/org/eclipse/jdt/internal/core/util/PublicScanner.java
 eclipse/plugins/org.eclipse.jdt.core/model/org/eclipse/jdt/internal/core/util/ReferenceInfoAdapter.java
 eclipse/plugins/org.eclipse.jdt.core/model/org/eclipse/jdt/internal/core/util/SimpleLookupTable.java
+eclipse/plugins/org.eclipse.jdt.core/model/org/eclipse/jdt/internal/core/util/SimpleSet.java
 eclipse/plugins/org.eclipse.jdt.core/model/org/eclipse/jdt/internal/core/util/SourceFileAttribute.java
 eclipse/plugins/org.eclipse.jdt.core/model/org/eclipse/jdt/internal/core/util/ToStringSorter.java
 eclipse/plugins/org.eclipse.jdt.core/model/org/eclipse/jdt/internal/core/util/Util.java
 eclipse/plugins/org.eclipse.jdt.core/model/org/eclipse/jdt/internal/core/util/messages.properties
 eclipse/plugins/org.eclipse.jdt.core/notes/R20_buildnotes_jdt-core.html
+eclipse/plugins/org.eclipse.jdt.core/notes/R21_buildnotes_jdt-core.html
 eclipse/plugins/org.eclipse.jdt.core/plugin.jars
 eclipse/plugins/org.eclipse.jdt.core/plugin.properties
 eclipse/plugins/org.eclipse.jdt.core/plugin.xml
@@ -8236,6 +8242,7 @@ eclipse/plugins/org.eclipse.platform.doc.user/book.css
 eclipse/plugins/org.eclipse.platform.doc.user/build.properties
 eclipse/plugins/org.eclipse.platform.doc.user/build.xml
 eclipse/plugins/org.eclipse.platform.doc.user/concepts/accessibility/accessmain.htm
+eclipse/plugins/org.eclipse.platform.doc.user/concepts/accessibility/colordialog.htm
 eclipse/plugins/org.eclipse.platform.doc.user/concepts/accessibility/fontsandcolors.htm
 eclipse/plugins/org.eclipse.platform.doc.user/concepts/accessibility/keyboardshortcuts.htm
 eclipse/plugins/org.eclipse.platform.doc.user/concepts/accessibility/navigation.htm
@@ -8831,6 +8838,7 @@ eclipse/plugins/org.eclipse.platform.doc.user/reference/ref-72.htm
 eclipse/plugins/org.eclipse.platform.doc.user/reference/ref-8.htm
 eclipse/plugins/org.eclipse.platform.doc.user/reference/ref-anteditorprefs.htm
 eclipse/plugins/org.eclipse.platform.doc.user/reference/ref-anticons.htm
+eclipse/plugins/org.eclipse.platform.doc.user/reference/ref-anteditor.htm
 eclipse/plugins/org.eclipse.platform.doc.user/reference/ref-antprefs.htm
 eclipse/plugins/org.eclipse.platform.doc.user/reference/ref-antruntimeprefs.htm
 eclipse/plugins/org.eclipse.platform.doc.user/reference/ref-antview.htm
@@ -9057,7 +9065,7 @@ eclipse/plugins/org.eclipse.platform.linux.gtk/about.properties
 eclipse/plugins/org.eclipse.platform.linux.gtk/build.properties
 eclipse/plugins/org.eclipse.platform.linux.gtk/build.xml
 eclipse/plugins/org.eclipse.platform.linux.gtk/eclipse32.gif
-eclipse/plugins/org.eclipse.platform.linux.gtk/libXm.so.${PKGVERSION}
+eclipse/plugins/org.eclipse.platform.linux.gtk/libXm.so.2.1
 eclipse/plugins/org.eclipse.platform.linux.gtk/plugin.properties
 eclipse/plugins/org.eclipse.platform.linux.gtk/plugin.xml
 eclipse/plugins/org.eclipse.platform.linux.motif.source/.project
@@ -9078,8 +9086,8 @@ eclipse/plugins/org.eclipse.platform.linux.motif/about.properties
 eclipse/plugins/org.eclipse.platform.linux.motif/build.properties
 eclipse/plugins/org.eclipse.platform.linux.motif/build.xml
 eclipse/plugins/org.eclipse.platform.linux.motif/eclipse32.gif
-eclipse/plugins/org.eclipse.platform.linux.motif/libXm.so.${PKGVERSION}
-eclipse/plugins/org.eclipse.platform.linux.motif/os/linux/x86/libXm.so.${PKGVERSION}
+eclipse/plugins/org.eclipse.platform.linux.motif/libXm.so.2.1
+eclipse/plugins/org.eclipse.platform.linux.motif/os/linux/x86/libXm.so.2.1
 eclipse/plugins/org.eclipse.platform.linux.motif/plugin.properties
 eclipse/plugins/org.eclipse.platform.linux.motif/plugin.xml
 eclipse/plugins/org.eclipse.platform.macosx.carbon.source/.project
@@ -9412,7 +9420,7 @@ eclipse/plugins/org.eclipse.swt.carbon/build.properties
 eclipse/plugins/org.eclipse.swt.carbon/build.xml
 eclipse/plugins/org.eclipse.swt.carbon/fragment.properties
 eclipse/plugins/org.eclipse.swt.carbon/fragment.xml
-eclipse/plugins/org.eclipse.swt.carbon/os/macosx/ppc/libswt-carbon-2133.jnilib
+eclipse/plugins/org.eclipse.swt.carbon/os/macosx/ppc/libswt-carbon-2135.jnilib
 eclipse/plugins/org.eclipse.swt.gtk/.classpath
 eclipse/plugins/org.eclipse.swt.gtk/.project
 eclipse/plugins/org.eclipse.swt.gtk/about.html
@@ -9422,9 +9430,9 @@ eclipse/plugins/org.eclipse.swt.gtk/cpl-v10.html
 eclipse/plugins/org.eclipse.swt.gtk/fragment.properties
 eclipse/plugins/org.eclipse.swt.gtk/fragment.xml
 eclipse/plugins/org.eclipse.swt.gtk/lgpl-v21.txt
-eclipse/plugins/org.eclipse.swt.gtk/os/linux/x86/libswt-gnome-gtk-2133.so
-eclipse/plugins/org.eclipse.swt.gtk/os/linux/x86/libswt-gtk-2133.so
-eclipse/plugins/org.eclipse.swt.gtk/os/linux/x86/libswt-pi-gtk-2133.so
+eclipse/plugins/org.eclipse.swt.gtk/os/linux/x86/libswt-gnome-gtk-2135.so
+eclipse/plugins/org.eclipse.swt.gtk/os/linux/x86/libswt-gtk-2135.so
+eclipse/plugins/org.eclipse.swt.gtk/os/linux/x86/libswt-pi-gtk-2135.so
 eclipse/plugins/org.eclipse.swt.motif/.classpath
 eclipse/plugins/org.eclipse.swt.motif/.project
 eclipse/plugins/org.eclipse.swt.motif/about.html
@@ -9432,15 +9440,16 @@ eclipse/plugins/org.eclipse.swt.motif/build.properties
 eclipse/plugins/org.eclipse.swt.motif/build.xml
 eclipse/plugins/org.eclipse.swt.motif/fragment.properties
 eclipse/plugins/org.eclipse.swt.motif/fragment.xml
-eclipse/plugins/org.eclipse.swt.motif/os/aix/ppc/libswt-cde-motif-2133.a
-eclipse/plugins/org.eclipse.swt.motif/os/aix/ppc/libswt-motif-2133.a
-eclipse/plugins/org.eclipse.swt.motif/os/hpux/PA_RISC/libswt-cde-motif-2133.sl
-eclipse/plugins/org.eclipse.swt.motif/os/hpux/PA_RISC/libswt-motif-2133.sl
-eclipse/plugins/org.eclipse.swt.motif/os/linux/x86/libswt-gnome-motif-2133.so
-eclipse/plugins/org.eclipse.swt.motif/os/linux/x86/libswt-kde-motif-2133.so
-eclipse/plugins/org.eclipse.swt.motif/os/linux/x86/libswt-motif-2133.so
-eclipse/plugins/org.eclipse.swt.motif/os/solaris/sparc/libswt-cde-motif-2133.so
-eclipse/plugins/org.eclipse.swt.motif/os/solaris/sparc/libswt-motif-2133.so
+eclipse/plugins/org.eclipse.swt.motif/os/aix/ppc/libswt-cde-motif-2135.a
+eclipse/plugins/org.eclipse.swt.motif/os/aix/ppc/libswt-motif-2135.a
+eclipse/plugins/org.eclipse.swt.motif/os/hpux/PA_RISC/libswt-cde-motif-2135.sl
+eclipse/plugins/org.eclipse.swt.motif/os/hpux/PA_RISC/libswt-motif-2135.sl
+eclipse/plugins/org.eclipse.swt.motif/os/linux/x86/libswt-gnome-motif-2135.so
+eclipse/plugins/org.eclipse.swt.motif/os/linux/x86/libswt-kde-motif-2135.so
+eclipse/plugins/org.eclipse.swt.motif/os/linux/x86/libswt-motif-2135.so
+eclipse/plugins/org.eclipse.swt.motif/os/linux/x86/libXm.so.2.1
+eclipse/plugins/org.eclipse.swt.motif/os/solaris/sparc/libswt-cde-motif-2135.so
+eclipse/plugins/org.eclipse.swt.motif/os/solaris/sparc/libswt-motif-2135.so
 eclipse/plugins/org.eclipse.swt.motif/permissions.properties
 eclipse/plugins/org.eclipse.swt.motif/ws/motif/swt.jar
 eclipse/plugins/org.eclipse.swt.photon/.classpath
@@ -9450,7 +9459,7 @@ eclipse/plugins/org.eclipse.swt.photon/build.properties
 eclipse/plugins/org.eclipse.swt.photon/build.xml
 eclipse/plugins/org.eclipse.swt.photon/fragment.properties
 eclipse/plugins/org.eclipse.swt.photon/fragment.xml
-eclipse/plugins/org.eclipse.swt.photon/os/qnx/x86/libswt-photon-2133.so
+eclipse/plugins/org.eclipse.swt.photon/os/qnx/x86/libswt-photon-2135.so
 eclipse/plugins/org.eclipse.swt.win32/.classpath
 eclipse/plugins/org.eclipse.swt.win32/.project
 eclipse/plugins/org.eclipse.swt.win32/about.html
@@ -9459,8 +9468,8 @@ eclipse/plugins/org.eclipse.swt.win32/build.xml
 eclipse/plugins/org.eclipse.swt.win32/build_custom.xml
 eclipse/plugins/org.eclipse.swt.win32/fragment.properties
 eclipse/plugins/org.eclipse.swt.win32/fragment.xml
-eclipse/plugins/org.eclipse.swt.win32/os/win32-ce/arm/swt-win32-2133.dll
-eclipse/plugins/org.eclipse.swt.win32/os/win32/x86/swt-win32-2133.dll
+eclipse/plugins/org.eclipse.swt.win32/os/win32-ce/arm/swt-win32-2135.dll
+eclipse/plugins/org.eclipse.swt.win32/os/win32/x86/swt-win32-2135.dll
 eclipse/plugins/org.eclipse.swt/.classpath_carbon
 eclipse/plugins/org.eclipse.swt/.classpath_carbon_j2me
 eclipse/plugins/org.eclipse.swt/.classpath_gtk
@@ -9668,6 +9677,7 @@ eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/carbon/org/eclipse/swt/internal/c
 eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/carbon/org/eclipse/swt/internal/carbon/Point.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/carbon/org/eclipse/swt/internal/carbon/RGBColor.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/carbon/org/eclipse/swt/internal/carbon/Rect.java
+eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/carbon/org/eclipse/swt/internal/carbon/TXNBackground.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/carbon/org/eclipse/swt/internal/carbon/TXNLongRect.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/carbon/org/eclipse/swt/internal/carbon/ThemeButtonDrawInfo.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/common_j2me/org/eclipse/swt/internal/Library.java
@@ -9903,6 +9913,7 @@ eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/win32/org/eclipse/swt/internal/wi
 eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/win32/org/eclipse/swt/internal/win32/BROWSEINFO.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/win32/org/eclipse/swt/internal/win32/CHOOSECOLOR.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/win32/org/eclipse/swt/internal/win32/CHOOSEFONT.java
+eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/win32/org/eclipse/swt/internal/win32/COMBOBOXINFO.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/win32/org/eclipse/swt/internal/win32/COMPOSITIONFORM.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/win32/org/eclipse/swt/internal/win32/CREATESTRUCT.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT PI/win32/org/eclipse/swt/internal/win32/DIBSECTION.java
@@ -10027,18 +10038,18 @@ eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/Scrol
 eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/Shell.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/Slider.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/TabFolder.java
+eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/TableItem.java
+eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/Table.java
+eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/TableColumn.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/TabItem.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/Text.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/ToolBar.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/ToolItem.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/Tracker.java
+eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/Tree.java
+eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/TreeItem.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/Widget.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets/WidgetTable.java
-eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon2/org/eclipse/swt/widgets/Table.java
-eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon2/org/eclipse/swt/widgets/TableColumn.java
-eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon2/org/eclipse/swt/widgets/TableItem.java
-eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon2/org/eclipse/swt/widgets/Tree.java
-eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon2/org/eclipse/swt/widgets/TreeItem.java
 eclipse/plugins/org.eclipse.swt/Eclipse SWT/common/library/callback.c
 eclipse/plugins/org.eclipse.swt/Eclipse SWT/common/library/callback.h
 eclipse/plugins/org.eclipse.swt/Eclipse SWT/common/library/make_common.mak
@@ -10758,6 +10769,7 @@ eclipse/plugins/org.eclipse.team.cvs.ui/src/org/eclipse/team/internal/ccvs/ui/CV
 eclipse/plugins/org.eclipse.team.cvs.ui/src/org/eclipse/team/internal/ccvs/ui/CVSPreferencesPage.java
 eclipse/plugins/org.eclipse.team.cvs.ui/src/org/eclipse/team/internal/ccvs/ui/CVSProjectPropertiesPage.java
 eclipse/plugins/org.eclipse.team.cvs.ui/src/org/eclipse/team/internal/ccvs/ui/CVSProjectSetSerializer.java
+eclipse//plugins/org.eclipse.team.cvs.ui/src/org/eclipse/team/internal/ccvs/ui/CVSPropertiesPage.java
 eclipse/plugins/org.eclipse.team.cvs.ui/src/org/eclipse/team/internal/ccvs/ui/CVSRemoveResolutionGenerator.java
 eclipse/plugins/org.eclipse.team.cvs.ui/src/org/eclipse/team/internal/ccvs/ui/CVSUIPlugin.java
 eclipse/plugins/org.eclipse.team.cvs.ui/src/org/eclipse/team/internal/ccvs/ui/CommitCommentArea.java
@@ -11210,6 +11222,10 @@ eclipse/plugins/org.eclipse.tomcat/commons-logging.jar
 eclipse/plugins/org.eclipse.tomcat/conf/catalina.policy
 eclipse/plugins/org.eclipse.tomcat/conf/tomcat-users.xml
 eclipse/plugins/org.eclipse.tomcat/conf/web.xml
+eclipse/plugins/org.eclipse.tomcat/doc/org_eclipse_tomcat.html
+eclipse/plugins/org.eclipse.tomcat/doc/hglegal2003.htm
+eclipse/plugins/org.eclipse.tomcat/doc/ngibmcpy2003.gif
+eclipse/plugins/org.eclipse.tomcat/src/org/eclipse/tomcat/internal/EclipseErrorReportValve.java
 eclipse/plugins/org.eclipse.tomcat/jakarta-regexp-1.2.jar
 eclipse/plugins/org.eclipse.tomcat/jasper-compiler.jar
 eclipse/plugins/org.eclipse.tomcat/jasper-runtime.jar
@@ -11238,6 +11254,7 @@ eclipse/plugins/org.eclipse.tomcat/tomcat-util.jar
 eclipse/plugins/org.eclipse.tomcat/tomcatwrapper.jar
 eclipse/plugins/org.eclipse.tomcat/webapps/ROOT/WEB-INF/web.xml
 eclipse/plugins/org.eclipse.tomcat/webapps/ROOT/index.html
+eclipse/plugins/org.eclipse.tomcat/preferences.ini
 eclipse/plugins/org.eclipse.ui.editors/.classpath
 eclipse/plugins/org.eclipse.ui.editors/.project
 eclipse/plugins/org.eclipse.ui.editors/_buildnotes_text_2_0.html
@@ -11608,6 +11625,18 @@ eclipse/plugins/org.eclipse.ui.externaltools/scripts/buildSelfHostingJARs.xml
 eclipse/plugins/org.eclipse.ui.externaltools/scripts/exportplugin.xml
 eclipse/plugins/org.eclipse.ui.externaltools/scripts/updateTarget.xml
 eclipse/plugins/org.eclipse.ui.externaltools/scripts/updateTargets.xml
+eclipse/plugins/org.eclipse.ui.versioncheck/about.html
+eclipse/plugins/org.eclipse.ui.versioncheck/build.properties
+eclipse/plugins/org.eclipse.ui.versioncheck/build.xml
+eclipse/plugins/org.eclipse.ui.versioncheck/plugin.xml
+eclipse/plugins/org.eclipse.ui.versioncheck/versioncheck.jar
+eclipse/plugins/org.eclipse.ui.versioncheck/.classpath
+eclipse/plugins/org.eclipse.ui.versioncheck/.project
+eclipse/plugins/org.eclipse.ui.versioncheck/plugin.properties
+eclipse/plugins/org.eclipse.ui.versioncheck/temp.folder
+eclipse/plugins/org.eclipse.ui.versioncheck/src/org/eclipse/ui/internal/versioncheck/VersionCheck.java
+eclipse/plugins/org.eclipse.ui.versioncheck/src/org/eclipse/ui/internal/versioncheck/VersionCheckPlugin.java
+eclipse/plugins/org.eclipse.ui.versioncheck/src/org/eclipse/ui/internal/versioncheck/messages.properties
 eclipse/plugins/org.eclipse.ui.views/.classpath
 eclipse/plugins/org.eclipse.ui.views/.project
 eclipse/plugins/org.eclipse.ui.views/about.html
@@ -13918,6 +13947,13 @@ eclipse/startup.jar
 @dirrm eclipse/plugins/org.eclipse.ui.views/extensions/org
 @dirrm eclipse/plugins/org.eclipse.ui.views/extensions
 @dirrm eclipse/plugins/org.eclipse.ui.views
+@dirrm eclipse/plugins/org.eclipse.ui.versioncheck/src/org/eclipse/ui/internal/versioncheck
+@dirrm eclipse/plugins/org.eclipse.ui.versioncheck/src/org/eclipse/ui/internal
+@dirrm eclipse/plugins/org.eclipse.ui.versioncheck/src/org/eclipse/ui
+@dirrm eclipse/plugins/org.eclipse.ui.versioncheck/src/org/eclipse
+@dirrm eclipse/plugins/org.eclipse.ui.versioncheck/src/org
+@dirrm eclipse/plugins/org.eclipse.ui.versioncheck/src
+@dirrm eclipse/plugins/org.eclipse.ui.versioncheck
 @exec ${MKDIR} %D/eclipse/plugins/org.eclipse.ui.externaltools/temp.folder/lib
 @dirrm eclipse/plugins/org.eclipse.ui.externaltools/temp.folder/lib
 @dirrm eclipse/plugins/org.eclipse.ui.externaltools/temp.folder
@@ -14029,6 +14065,7 @@ eclipse/startup.jar
 @dirrm eclipse/plugins/org.eclipse.tomcat/src/org/eclipse
 @dirrm eclipse/plugins/org.eclipse.tomcat/src/org
 @dirrm eclipse/plugins/org.eclipse.tomcat/src
+@dirrm eclipse/plugins/org.eclipse.tomcat/doc/
 @dirrm eclipse/plugins/org.eclipse.tomcat/conf
 @dirrm eclipse/plugins/org.eclipse.tomcat
 @exec ${MKDIR} %D/eclipse/plugins/org.eclipse.text/temp.folder
@@ -14258,11 +14295,6 @@ eclipse/startup.jar
 @dirrm eclipse/plugins/org.eclipse.swt/Eclipse SWT/common/org
 @dirrm eclipse/plugins/org.eclipse.swt/Eclipse SWT/common/library
 @dirrm eclipse/plugins/org.eclipse.swt/Eclipse SWT/common
-@dirrm eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon2/org/eclipse/swt/widgets
-@dirrm eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon2/org/eclipse/swt
-@dirrm eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon2/org/eclipse
-@dirrm eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon2/org
-@dirrm eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon2
 @dirrm eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/widgets
 @dirrm eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/internal
 @dirrm eclipse/plugins/org.eclipse.swt/Eclipse SWT/carbon/org/eclipse/swt/graphics
