@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2004/06/22 21:54:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.205 2004/07/08 11:06:14 xtraeme Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -153,6 +153,7 @@ SUBDIR+=	setiathome
 SUBDIR+=	siag
 SUBDIR+=	splitvt
 SUBDIR+=	staroffice
+SUBDIR+=	stellarium
 SUBDIR+=	tds
 SUBDIR+=	team
 SUBDIR+=	ttyrec
