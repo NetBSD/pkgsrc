@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/30 06:19:08 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/27 02:52:58 wiz Exp $
 #
 
 DISTNAME=	GConf-0.8
@@ -11,6 +11,7 @@ HOMEPAGE=	http://advogato.org/proj/GConf/
 DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
 DEPENDS+=	oaf-*:../../devel/oaf
 DEPENDS+=	guile>=1.3.4:../../lang/guile
+BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
@@ -22,6 +23,7 @@ BROKEN=		"GConf only builds correctly on ELF architectures"
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
+USE_LIBINTL=	YES
 USE_LIBTOOL=	YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
