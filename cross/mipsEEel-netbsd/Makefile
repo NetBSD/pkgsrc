@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/05/15 14:03:27 kent Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/03 18:47:14 wiz Exp $
 
 DISTNAME=	cross-${TARGET_ARCH}-${DISTVERSION}
 TARGET_ARCH=	mipsEEel-netbsd
@@ -46,14 +46,11 @@ GCC_PATCH1=		${_DISTDIR}/gcc-${GCC_VERSION}-single-float-const.patch.bz2
 DISTFILES+=		gcc-ps2linux-1.0.0.patch.bz2
 GCC_PATCH2=		${_DISTDIR}/gcc-ps2linux-1.0.0.patch.bz2
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+=		autoconf-[0-9]*:../../devel/autoconf
-
 
 pre-patch: binutils-patch gcc-patch
 do-configure: binutils-configure gcc-configure
 do-build: binutils-build gcc-build
 do-install: binutils-install gcc-install
-
 
 binutils-patch:
 	${BZCAT} ${BINUTILS_PATCH1} | ${PATCH} -d ${BINUTILS_WRKSRC} --forward --quiet -p1 -E
@@ -71,7 +68,6 @@ binutils-build:
 
 binutils-install:
 	${GMAKE} -C ${BINUTILS_WRKSRC}/obj install
-
 
 gcc-patch:
 	${BZCAT} ${GCC_PATCH0} | ${PATCH} -d ${GCC_WRKSRC} --forward --quiet -p1 -E
@@ -100,5 +96,6 @@ gcc-install:
 	${GMAKE} -C ${GCC_WRKSRC}/obj/gcc install-common install-headers \
 		install-cpp lang.install-normal install-driver
 
+# just uses autoheader -- any version is ok
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
-
