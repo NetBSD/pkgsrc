@@ -1,21 +1,25 @@
-@comment $NetBSD: PLIST,v 1.3 2000/06/26 17:03:11 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/08/15 02:44:46 jlam Exp $
 bin/gnc-prices
 bin/gnucash
 etc/gnucash/config
+lib/gnucash/perl/gnucash.so
+lib/gnucash/perl/libgncswig.a
+lib/gnucash/perl/libgncswig.la
+lib/gnucash/perl/libgncswig.so.1.1
+lib/libgncengine.a
 lib/libgncengine.la
 lib/libgncengine.so.1.1
-lib/libgncengine.a
-lib/gnucash/perl/libgncswig.so.1.1
-lib/gnucash/perl/libgncswig.la
-lib/gnucash/perl/libgncswig.a
-lib/gnucash/perl/gnucash.so
-man/man1/gnucash.1
 man/man1/gnc-prices.1
-share/locale/de/LC_MESSAGES/gnucash.mo
-share/locale/fr/LC_MESSAGES/gnucash.mo
-share/locale/sv/LC_MESSAGES/gnucash.mo
-share/locale/en_GB/LC_MESSAGES/gnucash.mo
+man/man1/gnucash.1
 share/gnome/apps/Applications/gnucash.desktop
+share/gnucash/doc/AUTHORS
+share/gnucash/doc/COPYING
+share/gnucash/doc/ChangeLog
+share/gnucash/doc/INSTALL
+share/gnucash/doc/NEWS
+share/gnucash/doc/README
+share/gnucash/doc/README.francais
+share/gnucash/doc/README.german
 share/gnucash/doc/examples/Money95bank_fr.qif
 share/gnucash/doc/examples/Money95invst_fr.qif
 share/gnucash/doc/examples/Money95mfunds_fr.qif
@@ -39,16 +43,10 @@ share/gnucash/doc/examples/trading.xac
 share/gnucash/doc/examples/trading2.xac
 share/gnucash/doc/examples/web.qif
 share/gnucash/doc/examples/xfer.xac
-share/gnucash/doc/README.francais
-share/gnucash/doc/README.german
-share/gnucash/doc/guile-hackers.txt
 share/gnucash/doc/gnc.html
-share/gnucash/doc/AUTHORS
-share/gnucash/doc/COPYING
-share/gnucash/doc/ChangeLog
-share/gnucash/doc/INSTALL
-share/gnucash/doc/NEWS
-share/gnucash/doc/README
+share/gnucash/doc/guile-hackers.txt
+share/gnucash/html/C/RAW-NOTES
+share/gnucash/html/C/bofa-mym.html
 share/gnucash/html/C/image/appr-asset1.gif
 share/gnucash/html/C/image/appr-asset2.gif
 share/gnucash/html/C/image/appr-income.gif
@@ -83,8 +81,6 @@ share/gnucash/html/C/image/report-pnl.gif
 share/gnucash/html/C/image/reportwin.gif
 share/gnucash/html/C/image/ticker-a.gif
 share/gnucash/html/C/image/ticker-b.gif
-share/gnucash/html/C/RAW-NOTES
-share/gnucash/html/C/bofa-mym.html
 share/gnucash/html/C/projects.html
 share/gnucash/html/C/xacc-about.html
 share/gnucash/html/C/xacc-accountedit.html
@@ -109,7 +105,6 @@ share/gnucash/html/C/xacc-main.html
 share/gnucash/html/C/xacc-mainwin.html
 share/gnucash/html/C/xacc-pnl.html
 share/gnucash/html/C/xacc-portfolio_report.html
-share/gnucash/html/C/xacc-print-check.html
 share/gnucash/html/C/xacc-print.html
 share/gnucash/html/C/xacc-qif-import.html
 share/gnucash/html/C/xacc-quicken.html
@@ -120,6 +115,7 @@ share/gnucash/html/C/xacc-reports.html
 share/gnucash/html/C/xacc-ticker.html
 share/gnucash/html/C/xacc-trans_report.html
 share/gnucash/html/C/xacc-y2k.html
+share/gnucash/html/fr/bofa-mym.html
 share/gnucash/html/fr/image/appr-asset1.gif
 share/gnucash/html/fr/image/appr-asset2.gif
 share/gnucash/html/fr/image/appr-income.gif
@@ -146,7 +142,6 @@ share/gnucash/html/fr/image/report-option.gif
 share/gnucash/html/fr/image/reportwin.gif
 share/gnucash/html/fr/image/ticker-a.gif
 share/gnucash/html/fr/image/ticker-b.gif
-share/gnucash/html/fr/bofa-mym.html
 share/gnucash/html/fr/projects.html
 share/gnucash/html/fr/xacc-about.html
 share/gnucash/html/fr/xacc-accountedit.html
@@ -162,8 +157,8 @@ share/gnucash/html/fr/xacc-date.html
 share/gnucash/html/fr/xacc-double.html
 share/gnucash/html/fr/xacc-expense.html
 share/gnucash/html/fr/xacc-globalprefs.html
-share/gnucash/html/fr/xacc-gpl.html
 share/gnucash/html/fr/xacc-gpl-fr.html
+share/gnucash/html/fr/xacc-gpl.html
 share/gnucash/html/fr/xacc-groups.html
 share/gnucash/html/fr/xacc-main.html
 share/gnucash/html/fr/xacc-mainwin.html
@@ -178,31 +173,8 @@ share/gnucash/html/fr/xacc-trans_report.html
 share/gnucash/html/fr/xacc-y2k.html
 share/gnucash/html/gnucash.css
 share/gnucash/html/index.html
-share/gnucash/scm/gnumeric/gnumeric-utilities.scm
-share/gnucash/scm/gnumeric/table-utils.scm
-share/gnucash/scm/printing/number-to-words.scm
-share/gnucash/scm/printing/print-check.scm
-share/gnucash/scm/qif-import/qif-dialog-utils.scm
-share/gnucash/scm/qif-import/qif-file.scm
-share/gnucash/scm/qif-import/qif-guess-map.scm
-share/gnucash/scm/qif-import/qif-import.scm
-share/gnucash/scm/qif-import/qif-objects.scm
-share/gnucash/scm/qif-import/qif-parse.scm
-share/gnucash/scm/qif-import/qif-to-gnc.scm
-share/gnucash/scm/qif-import/qif-utils.scm
-share/gnucash/scm/qif-import/simple-obj.scm
-share/gnucash/scm/report/average-balance.scm
-share/gnucash/scm/report/balance-and-pnl.scm
-share/gnucash/scm/report/budget-report.scm
-share/gnucash/scm/report/folio.scm
-share/gnucash/scm/report/hello-world.scm
-share/gnucash/scm/report/report-list.scm
-share/gnucash/scm/report/transaction-report.scm
-share/gnucash/scm/srfi/srfi-1.r5rs.scm
-share/gnucash/scm/srfi/srfi-1.unclear.scm
-share/gnucash/scm/srfi/srfi-19.scm
-share/gnucash/scm/srfi/srfi-8.guile.scm
-share/gnucash/scm/srfi/srfi-8.scm
+share/gnucash/perl/Quote.pm
+share/gnucash/perl/gnucash.pm
 share/gnucash/scm/bootstrap.scm
 share/gnucash/scm/bs-interp.scm
 share/gnucash/scm/c-interface.scm
@@ -215,6 +187,8 @@ share/gnucash/scm/doc.scm
 share/gnucash/scm/engine-interface.scm
 share/gnucash/scm/engine-utilities.scm
 share/gnucash/scm/extensions.scm
+share/gnucash/scm/gnumeric/gnumeric-utilities.scm
+share/gnucash/scm/gnumeric/table-utils.scm
 share/gnucash/scm/graph.scm
 share/gnucash/scm/hooks.scm
 share/gnucash/scm/html-generator.scm
@@ -222,9 +196,32 @@ share/gnucash/scm/main.scm
 share/gnucash/scm/options.scm
 share/gnucash/scm/path.scm
 share/gnucash/scm/prefs.scm
+share/gnucash/scm/printing/number-to-words.scm
+share/gnucash/scm/printing/print-check.scm
+share/gnucash/scm/qif-import/qif-dialog-utils.scm
+share/gnucash/scm/qif-import/qif-file.scm
+share/gnucash/scm/qif-import/qif-guess-map.scm
+share/gnucash/scm/qif-import/qif-import.scm
+share/gnucash/scm/qif-import/qif-objects.scm
+share/gnucash/scm/qif-import/qif-parse.scm
+share/gnucash/scm/qif-import/qif-to-gnc.scm
+share/gnucash/scm/qif-import/qif-utils.scm
+share/gnucash/scm/qif-import/simple-obj.scm
 share/gnucash/scm/report-utilities.scm
 share/gnucash/scm/report.scm
+share/gnucash/scm/report/average-balance.scm
+share/gnucash/scm/report/balance-and-pnl.scm
+share/gnucash/scm/report/budget-report.scm
+share/gnucash/scm/report/folio.scm
+share/gnucash/scm/report/hello-world.scm
+share/gnucash/scm/report/report-list.scm
+share/gnucash/scm/report/transaction-report.scm
 share/gnucash/scm/slib-backup.scm
+share/gnucash/scm/srfi/srfi-1.r5rs.scm
+share/gnucash/scm/srfi/srfi-1.unclear.scm
+share/gnucash/scm/srfi/srfi-19.scm
+share/gnucash/scm/srfi/srfi-8.guile.scm
+share/gnucash/scm/srfi/srfi-8.scm
 share/gnucash/scm/startup.scm
 share/gnucash/scm/structure.scm
 share/gnucash/scm/substring-search.scm
@@ -232,23 +229,25 @@ share/gnucash/scm/testbed.scm
 share/gnucash/scm/text-export.scm
 share/gnucash/scm/utilities.scm
 share/gnucash/scm/xml-generator.scm
-share/gnucash/perl/Quote.pm
-share/gnucash/perl/gnucash.pm
-@dirrm etc/gnucash
-@dirrm lib/gnucash/perl
-@dirrm lib/gnucash
-@dirrm share/gnucash/perl
-@dirrm share/gnucash/doc/examples
-@dirrm share/gnucash/doc
-@dirrm share/gnucash/html/C/image
-@dirrm share/gnucash/html/C
-@dirrm share/gnucash/html/fr/image
-@dirrm share/gnucash/html/fr
-@dirrm share/gnucash/html
+share/locale/de/LC_MESSAGES/gnucash.mo
+share/locale/en_GB/LC_MESSAGES/gnucash.mo
+share/locale/fr/LC_MESSAGES/gnucash.mo
+share/locale/sv/LC_MESSAGES/gnucash.mo
+@dirrm share/gnucash/scm/srfi
+@dirrm share/gnucash/scm/report
+@dirrm share/gnucash/scm/qif-import
 @dirrm share/gnucash/scm/printing
 @dirrm share/gnucash/scm/gnumeric
-@dirrm share/gnucash/scm/qif-import
-@dirrm share/gnucash/scm/report
-@dirrm share/gnucash/scm/srfi
 @dirrm share/gnucash/scm
+@dirrm share/gnucash/perl
+@dirrm share/gnucash/html/fr/image
+@dirrm share/gnucash/html/fr
+@dirrm share/gnucash/html/C/image
+@dirrm share/gnucash/html/C
+@dirrm share/gnucash/html
+@dirrm share/gnucash/doc/examples
+@dirrm share/gnucash/doc
 @dirrm share/gnucash
+@dirrm lib/gnucash/perl
+@dirrm lib/gnucash
+@dirrm etc/gnucash
