@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2001/04/15 01:18:07 itojun Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2001/05/29 03:31:26 itojun Exp $
 bin/newaliases
 bin/mailq
 bin/hoststat
@@ -131,6 +131,7 @@ share/sendmail/ostype/darwin.m4
 share/sendmail/ostype/dgux.m4
 share/sendmail/ostype/domainos.m4
 share/sendmail/ostype/dynix3.2.m4
+share/sendmail/ostype/freebsd4.m4
 share/sendmail/ostype/gnu.m4
 share/sendmail/ostype/hpux10.m4
 share/sendmail/ostype/hpux11.m4
