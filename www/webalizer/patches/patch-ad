@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.1 1999/08/26 20:25:44 mjl Exp $
+$NetBSD: patch-ad,v 1.2 1999/08/27 09:06:38 agc Exp $
 
---- Makefile.in.orig	Tue Jun 29 07:12:40 1999
-+++ Makefile.in	Thu Aug 26 22:16:11 1999
+--- Makefile.in.orig	Tue Jun 29 06:12:40 1999
++++ Makefile.in	Fri Aug 27 09:55:04 1999
+@@ -23,7 +23,7 @@
+ MANDIR = @mandir@/man1
+ CC     = @CC@
+ CFLAGS = @CFLAGS@
+-LIBS   = @LIBS@
++LIBS   = @LIBS@ -lpng -lz
+ DEFS   = @DEFS@
+ LDFLAGS= @LDFLAGS@
+ INSTALL= @INSTALL@
 @@ -41,7 +41,7 @@
  	$(CC) ${LDFLAGS} -o webalizer webalizer.o graphs.o ${LIBS}
  
