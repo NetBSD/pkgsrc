@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/26 02:27:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/25 18:51:10 snj Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.4-src
@@ -13,7 +13,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.mysql.com/
 COMMENT=		MySQL Control Center
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-mysql-lib=${PREFIX}/lib/mysql
@@ -30,7 +30,7 @@ do-install:
 
 .include "../../mk/autoconf.mk"
 .include "../../mk/automake.mk"
-.include "../../databases/mysql4-client/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../x11/qt3-tools/buildlink2.mk"
+.include "../../databases/mysql4-client/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
