@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/14 01:16:39 xtraeme Exp $
+
+SHA1 (fribidi-0.10.4.tar.bz2) = a77f55797095ea5de6e620370f5968b891aed103
+Size (fribidi-0.10.4.tar.bz2) = 335733 bytes
+SHA1 (patch-aa) = bc930c1df929716aa5e4bf8e8951668f15f71ec0
