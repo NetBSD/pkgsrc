@@ -1,0 +1,72 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/08 14:17:57 drochner Exp $
+
+--- dvd.c.orig	2004-02-26 02:14:15.000000000 +0100
++++ dvd.c	2004-02-26 12:36:40.000000000 +0100
+@@ -23,7 +23,7 @@
+ #include <unistd.h>
+ #include <ctype.h>
+ #include <sys/stat.h>
+-#if (defined(__unix__) || defined(unix)) && !defined(USG) || (defined(__APPLE__) && defined(__GNUC__))
++#if (defined(__unix__) || defined(unix)) && !defined(USG) || (defined(__APPLE__) && defined(__GNUC__)) || defined(__NetBSD__)
+ #include <sys/param.h>  
+ #include <sys/mount.h>
+ #endif
+@@ -56,9 +56,10 @@
+   int  filehandle = 0;
+   int  i = 0, last = 0;
+   int  bytes_read;
++  char help[2048];
+   
+   /* open the device */
+-  if ( !(filehandle = open(device, O_RDONLY)) )
++  if ( !(filehandle = open(device, O_RDONLY, 0)) )
+   {
+       /* open failed */
+       fprintf( stderr, "[Error] something wrong in dvd_name getting - please specify path as /cdrom or /dvd (mount point) or use -t\n");
+@@ -67,7 +68,7 @@
+   }
+   
+   /* seek to title of first track, which is at (track_no * 32768) + 40 */
+-  if ( 32808 != lseek( filehandle, 32808, SEEK_SET ) ) 
++  if ( 32768 != lseek( filehandle, 32768, SEEK_SET ) ) 
+   {
+       /* seek failed */
+       close( filehandle );
+@@ -77,13 +78,15 @@
+   }
+   
+   /* read title */
+-  if ( (bytes_read = read(filehandle, title, 32)) != 32) 
++  if ( (bytes_read = read(filehandle, help, 2048)) != 2048) 
+   {
+       close(filehandle);
+       fprintf( stderr, "[Error] something wrong in dvd_name getting - please specify path as /cdrom or /dvd (mount point) or use -t\n" );
+-      fprintf(stderr, "[Error] only read %d bytes instead of 32\n", bytes_read);
++      fprintf(stderr, "[Error] only read %d bytes instead of 2048\n", bytes_read);
+       return -1;
+   }
++
++  memcpy(title, help + 40, 32);
+   
+   /* make sure string is terminated */
+   title[32] = '\0';
+@@ -162,6 +165,9 @@
+        if( !strcmp( path, buf.f_mntonname ) )
+          {
+            mounted = TRUE;
++	   strcpy(device, "/dev/r");
++	   strcat(device, buf.f_mntfromname + 5);
++	   return mounted;
+          }
+       }
+     else
+@@ -350,7 +356,8 @@
+             {
+               dvd_count++;
+               strcpy( path, mntbuf[i].f_mntonname );
+-              strcpy( device, mntbuf[i].f_mntfromname );
++	      strcpy(device, "/dev/r");
++	      strcat(device, mntbuf[i].f_mntfromname + 5);
+             }
+         }
+       if(dvd_count == 0)
