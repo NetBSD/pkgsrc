@@ -1,4 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/06 08:02:49 agc Exp $
+$NetBSD: distinfo,v 1.2 2004/08/01 16:13:32 kristerw Exp $
 
 SHA1 (libopendaap-0.2.1.tar.bz2) = 9e5d143087f7f5366250b47ba3444fa3ed46794d
 Size (libopendaap-0.2.1.tar.bz2) = 325586 bytes
+SHA1 (patch-aa) = 360e6173f943fe6283bc28b2ad9e5acd76041899
+SHA1 (patch-ab) = 44c6228eade8122da02972f6f73e34423457ded0
+SHA1 (patch-ac) = 0dbca4ad085ffe81bf707b97bbc77408faa9c6ca
+SHA1 (patch-ad) = 87735f1d47ddb9aa53a4220675060a31979cb771

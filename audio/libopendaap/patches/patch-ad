@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2004/08/01 16:13:32 kristerw Exp $
+
+--- threadpool.c.orig	Sun Aug  1 18:07:35 2004
++++ threadpool.c	Sun Aug  1 18:07:55 2004
+@@ -264,9 +264,10 @@
+ void CP_ThreadPool_QueueWorkItem(CP_SThreadPool *pTPThis, CP_TPfnJob pfnCallback,
+                                  void *arg1, void *arg2)
+ {
++    CP_STPJobQueue *pTPJQNewJob;
+     pthread_mutex_lock(&pTPThis->mtJobQueueMutex);
+ 
+-    CP_STPJobQueue *pTPJQNewJob = malloc(sizeof(CP_STPJobQueue));
++    pTPJQNewJob = malloc(sizeof(CP_STPJobQueue));
+ 
+     pTPJQNewJob->fnJobCallback = pfnCallback;
+     pTPJQNewJob->arg1 = arg1;
