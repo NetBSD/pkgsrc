@@ -1,4 +1,4 @@
-/*	$NetBSD: buf_subs.c,v 1.3 2003/12/20 04:45:04 grant Exp $	*/
+/*	$NetBSD: buf_subs.c,v 1.4 2004/06/20 10:11:02 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -44,7 +44,7 @@
 #if 0
 static char sccsid[] = "@(#)buf_subs.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: buf_subs.c,v 1.3 2003/12/20 04:45:04 grant Exp $");
+__RCSID("$NetBSD: buf_subs.c,v 1.4 2004/06/20 10:11:02 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -718,7 +718,7 @@ rd_wrfile(ARCHD *arcn, int ofd, off_t *left)
 	 * pass the blocksize of the file being written to the write routine,
 	 * if the size is zero, use the default MINFBSZ
 	 */
-	if (ofd == -1)
+	if (ofd < 0)
 		sz = PAXPATHLEN+1;
 	else if (fstat(ofd, &sb) == 0) {
 		if (sb.st_blksize > 0)

@@ -1,4 +1,4 @@
-/*	$NetBSD: options.c,v 1.5 2003/12/20 04:45:04 grant Exp $	*/
+/*	$NetBSD: options.c,v 1.6 2004/06/20 10:11:02 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -44,7 +44,7 @@
 #if 0
 static char sccsid[] = "@(#)options.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: options.c,v 1.5 2003/12/20 04:45:04 grant Exp $");
+__RCSID("$NetBSD: options.c,v 1.6 2004/06/20 10:11:02 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -104,7 +104,7 @@ __RCSID("$NetBSD: options.c,v 1.5 2003/12/20 04:45:04 grant Exp $");
  */
 
 static int nopids;		/* tar mode: suppress "pids" for -p option */
-static char *flgch = FLGCH;	/* list of all possible flags (pax) */
+static char flgch[] = FLGCH;	/* list of all possible flags (pax) */
 static OPLIST *ophead = NULL;	/* head for format specific options -x */
 static OPLIST *optail = NULL;	/* option tail */
 
@@ -205,6 +205,11 @@ FSUB fsub[] = {
 int ford[] = {F_USTAR, F_TAR, F_SV4CRC, F_SV4CPIO, F_CPIO, F_BCPIO, -1};
 
 /*
+ * filename record separator
+ */
+int sep = '\n';
+
+/*
  * options()
  *	figure out if we are pax, tar or cpio. Call the appropriate options
  *	parser
@@ -259,9 +264,12 @@ pax_options(int argc, char **argv)
 	 * process option flags
 	 */
 	while ((c = getopt_long(argc, argv,
-	    "ab:cdf:ijklno:p:rs:tuvwx:zAB:DE:G:HLMN:OPT:U:XYZ",
+	    "0ab:cdf:ijklno:p:rs:tuvwx:zAB:DE:G:HLMN:OPT:U:XYZ",
 	    pax_longopts, NULL)) != -1) {
 		switch (c) {
+		case '0':
+			sep = '\0';
+			break;
 		case 'a':
 			/*
 			 * append
@@ -501,10 +509,10 @@ pax_options(int argc, char **argv)
 			/*
 			 * non-standard limit on read faults
 			 * 0 indicates stop after first error, values
-			 * indicate a limit, "NONE" try forever
+			 * indicate a limit, "none" try forever
 			 */
 			flg |= CEF;
-			if (strcmp(NONE, optarg) == 0)
+			if (strcmp(none, optarg) == 0)
 				maxflt = -1;
 			else if ((maxflt = atoi(optarg)) < 0) {
 				tty_warn(1,
@@ -827,7 +835,7 @@ tar_options(int argc, char **argv)
 	 * process option flags
 	 */
 	while ((c = getoldopt(argc, argv,
-	    "+b:cef:hjlmopqrstuvwxzBC:HI:OPT:X:Z014578",
+	    "+b:cef:hjklmopqrs:tuvwxzBC:HI:OPT:X:Z014578",
 	    tar_longopts, NULL))
 	    != -1)  {
 		switch(c) {
@@ -1727,13 +1735,11 @@ static void
 printflg(unsigned int flg)
 {
 	int nxt;
-	int pos = 0;
 
 	(void)fprintf(stderr,"%s: Invalid combination of options:", argv0);
 	while ((nxt = ffs(flg)) != 0) {
-		flg = flg >> nxt;
-		pos += nxt;
-		(void)fprintf(stderr, " -%c", flgch[pos-1]);
+		flg &= ~(1 << (nxt - 1));
+		(void)fprintf(stderr, " -%c", flgch[nxt - 1]);
 	}
 	(void)putc('\n', stderr);
 }
@@ -1747,7 +1753,7 @@ printflg(unsigned int flg)
 static int
 c_frmt(const void *a, const void *b)
 {
-	return(strcmp(((FSUB *)a)->name, ((FSUB *)b)->name));
+	return(strcmp(((const FSUB *)a)->name, ((const FSUB *)b)->name));
 }
 
 /*
@@ -1978,7 +1984,7 @@ void
 pax_usage(void)
 {
 	fprintf(stderr,
-"Usage: pax [-cdjnvzO] [-E limit] [-f archive] [-N dbdir] [-s replstr] ...\n"
+"usage: pax [-cdjnvzO] [-E limit] [-f archive] [-N dbdir] [-s replstr] ...\n"
 "           [-U user] ... [-G group] ... [-T [from_date][,to_date]] ...\n"
 "           [pattern ...]\n");
 	fprintf(stderr,
@@ -2006,7 +2012,7 @@ pax_usage(void)
 void
 tar_usage(void)
 {
-	(void)fputs("Usage: tar [-]{crtux}[-befhjlmopqvwzHLOPXZ014578] [archive] "
+	(void)fputs("usage: tar [-]{crtux}[-befhjlmopqvwzHLOPXZ014578] [archive] "
 		    "[blocksize]\n"
 		    "           [-C directory] [-T file] [-s replstr] "
 		    "[file ...]\n", stderr);
@@ -2023,7 +2029,7 @@ void
 cpio_usage(void)
 {
 
-	(void)fputs("Usage: cpio -o [-aABcLvzZ] [-C bytes] [-F archive] "
+	(void)fputs("usage: cpio -o [-aABcLvzZ] [-C bytes] [-F archive] "
 		    "[-H format] [-O archive]\n"
 		    "               < name-list [> archive]\n"
 		    "       cpio -i [-bBcdfmrsStuvzZ6] [-C bytes] [-E file] "
