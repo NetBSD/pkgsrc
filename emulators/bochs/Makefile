@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/07/17 21:35:20 grant Exp $
+# $NetBSD: Makefile,v 1.29 2003/10/26 17:40:31 kristerw Exp $
 
 DISTNAME=		bochs-2.0.2
 CATEGORIES=		emulators
@@ -9,6 +9,8 @@ HOMEPAGE=		http://bochs.sourceforge.net/
 COMMENT=		i386 machine emulator capable of running DOS/Windows
 
 GNU_CONFIGURE=		yes
+CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 USE_GMAKE=		yes
 # These options are not enabled by default because they can adversely impact
 # performance. The number of processors can be either 1 (default), 2, or 4.
