@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.392 2003/03/21 23:10:12 wiz Exp $
+$NetBSD: TODO,v 1.393 2003/03/21 23:45:16 salo Exp $
 
 Suggested new packages
 ======================
@@ -147,7 +147,6 @@ Suggested package updates
 	o hatari-0.30
 	o icepref-2.2
 	o icewm-1.2.7
-	o icu-2.4 [pkg/20825|heinz]
 	o inform-6.21.3 [pkg/19298]
 	o inn 2.3.5
 	o ja-shinonome-0.9.10 [pkg/20832]
