@@ -1,9 +1,16 @@
-$NetBSD: patch-aj,v 1.1.1.1 2000/12/15 00:36:38 wiz Exp $
+$NetBSD: patch-aj,v 1.2 2003/11/13 20:59:53 tron Exp $
 
-diff -x *.orig -urN ./icb/strings.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/strings.c
---- ./icb/strings.c	Fri Feb 24 22:20:30 1995
-+++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/strings.c	Fri Nov 26 22:56:28 1999
-@@ -333,6 +333,7 @@
+--- icb/strings.c.orig	1995-02-24 22:20:30.000000000 +0100
++++ icb/strings.c	2003-11-13 21:57:35.000000000 +0100
+@@ -3,7 +3,6 @@
+ 
+ #include "icb.h"
+ #include "externs.h"
+-#include <varargs.h>
+ 
+ extern char *charmap;
+ 
+@@ -333,6 +332,7 @@
  /* cat multiple strings into one */
  /* call with strscat(dest, src, src, ...) */
  
@@ -11,7 +18,7 @@ diff -x *.orig -urN ./icb/strings.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-
  char *
  strscat(va_alist)
  va_dcl
-@@ -357,6 +358,7 @@
+@@ -357,6 +357,7 @@
  	*dest = '\0';
  	return(dest);
  }
