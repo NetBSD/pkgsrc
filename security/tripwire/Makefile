@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/09/19 13:26:12 agc Exp $
+# $NetBSD: Makefile,v 1.15 2003/10/02 07:13:27 martti Exp $
 #
 
 DISTNAME=	tripwire-1.2
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cerias.purdue.edu/coast/coast-library.html
 COMMENT=	File and directory integrity checker
 
-ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* SunOS-*-*
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
