@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE.tls,v 1.2 2003/05/01 14:07:57 jmmv Exp $
+$NetBSD: MESSAGE.tls,v 1.3 2004/07/19 02:33:31 jlam Exp $
 
 To enable TLS, you might need to reconfigure /etc/postfix/main.cf and
-${PKG_SYSCONFDIR}/master.cf (See ${SHAREDIR}/sample-tls.cf.)
+${PKG_SYSCONFDIR}/master.cf (See ${EXAMPLEDIR}/sample-tls.cf.)
 
 master.cf:
 ----------
