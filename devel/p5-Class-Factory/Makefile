@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/23 00:20:37 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/29 20:52:39 wiz Exp $
 
-DISTNAME=	Class-Factory-1.00
+DISTNAME=	Class-Factory-1.03
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5clf
 CATEGORIES=	devel perl5
