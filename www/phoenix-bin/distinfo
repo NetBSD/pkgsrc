@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2003/04/14 19:56:29 grant Exp $
+$NetBSD: distinfo,v 1.2 2003/05/18 03:43:01 grant Exp $
 
-SHA1 (phoenix-0.5-i686-pc-linux-gnu.tar.gz) = 4102222f85dcbf8352c000dea6072452c6094a69
-Size (phoenix-0.5-i686-pc-linux-gnu.tar.gz) = 9153046 bytes
+SHA1 (MozillaFirebird-0.6-i686-pc-linux-gnu.tar.gz) = 37cd2cf736770371373eeb461b0fa96bc1a4d041
+Size (MozillaFirebird-0.6-i686-pc-linux-gnu.tar.gz) = 9776851 bytes
