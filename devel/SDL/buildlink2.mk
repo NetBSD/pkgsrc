@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2003/12/08 20:25:51 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2004/03/23 04:37:38 snj Exp $
 
 .if !defined(SDL_BUILDLINK2_MK)
 SDL_BUILDLINK2_MK=	# defined
@@ -19,8 +19,7 @@ USE_X11=		YES
 
 PTHREAD_OPTS+=		require
 
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glut/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink2.mk"
 .include "../../graphics/aalib-x11/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 
