@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.8 2000/12/31 17:38:32 dmcmahill Exp $
+# $NetBSD: post-build,v 1.9 2001/02/01 08:47:29 dmcmahill Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -35,6 +35,7 @@ getconf("USR_PKGSRC");		# "/usr/pkgsrc"
 getconf("osrev");	       	# `uname -r`
 getconf("arch"); 		# `uname -m`
 chomp($date=`date`);
+$reportf=basename($REPORT);
 
 # extract the name of the files used for the build log and broken build log.
 # these have defaults set by bsd.bulk-pkg.mk and may be overridden in /etc/mk.conf
@@ -83,7 +84,7 @@ EOHTML
 ;
 
 # some nifty postprocessing of $FTP/.broken* -> HTML here
-$nunpackaged = $nbroken = 0;
+$nunpackaged = $nbroken = $nbrokendep = 0;
 chdir("$FTP");
 open(BF,"sort +1 $BROKENFILE |") or die "can't open .broken-file '$BROKENFILE'";
 while (<BF>) {
@@ -98,7 +99,11 @@ while (<BF>) {
 	$color = "red";
 	$state = "build broken";
 	$nbroken++;
-    } else {
+    } elsif ($nerrors == -1) {
+	$color = "orange";
+	$state = "broken depends";
+	$nbrokendep++;
+    }  else {
 	$color = "yellow";
 	$state = "not packaged";
 	$nunpackaged++;
@@ -122,7 +127,7 @@ while (<BF>) {
 
     ($category, $dbfeed_pkg) = split('/', $pkg);
 
-    if ($nerrors > 0) {
+    if ($nerrors != 0) {
     	printf("%-23s $state\t($who, $maintainer)\n", "$pkg:")
 	    if $verbose;
     }
@@ -130,16 +135,19 @@ while (<BF>) {
 close(BF);
 
 
-$ntotal=$nunpackaged+$nbroken;
+$nbrokentot=$nbroken+$nbrokendep;
+$ntotal=$nunpackaged+$nbroken+$nbrokendep;
 print HTML <<EOHTML
 </TABLE>
 
 <HR>
 
 <TABLE>
-<TR><TD> Packages not packaged:	<TD ALIGHT=RIGHT> <FONT COLOR=yellow>$nunpackaged</FONT>
-<TR><TD> Packages broken:	<TD ALIGHT=RIGHT> <FONT COLOR=red>$nbroken</FONT>
-<TR><TD> Total:			<TD ALIGHT=RIGHT> $ntotal
+<TR><TD> Packages not packaged:		<TD ALIGHT=RIGHT> <FONT COLOR=yellow>$nunpackaged</FONT>
+<TR><TD> Packages really broken:	<TD ALIGHT=RIGHT> <FONT COLOR=red>$nbroken</FONT>
+<TR><TD> Pkgs broken due to them:	<TD ALIGHT=RIGHT> <FONT COLOR=blue>$nbrokendep</FONT>
+<TR><TD> Total broken:			<TD ALIGHT=RIGHT> $nbrokentot
+<TR><TD> Total:				<TD ALIGHT=RIGHT> $ntotal
 </TABLE>
 
 <HR>
@@ -205,7 +213,7 @@ close(HTML);
 EOOUT
 ;
 	while (<IN>) {
-	    	print OUT "<A HREF=\"/${FTPURL}/leftovers-${arch}$_\">$_</A>\n";
+	    	print OUT "<A HREF=\"${FTPHOST}/${FTPURL}/leftovers-${arch}$_\">$_</A>\n";
 	}
 	print OUT <<EOOUT2
 </PRE>
@@ -219,11 +227,13 @@ EOOUT2
 
 if ($verbose) {
 	print "\n";
-	print "Packages not packaged:  $nunpackaged\n";
-	print "Packages broken:        $nbroken\n";
-	print "Total:                  $ntotal\n";
+	print "Packages not packaged:     $nunpackaged\n";
+	print "Packages really broken:    $nbroken\n";
+	print "Pkgs broken due to them:   $nbrokendep\n";
+	print "Total broken:              $nbrokentot\n";
+	print "Total:                     $ntotal\n";
 	print "\n";
-	print "See $FTPHOST/$FTPURL/broken.html\n";
+	print "See $FTPHOST/$FTPURL/$reportf\n";
 	print "for logs of builds broken or not resulting in a binary pkg.\n";
 	print "\n";
 	print "\n";

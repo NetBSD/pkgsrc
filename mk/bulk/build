@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.7 2000/12/31 17:38:32 dmcmahill Exp $
+# $NetBSD: build,v 1.8 2001/02/01 08:47:29 dmcmahill Exp $
 #
 # Do builk build
 #
@@ -42,15 +42,50 @@ else
 	sh mk/bulk/pre-build	# make veryveryclean :)
 fi
 
+cd pkgtools/pkglint
+DEPENDSTREEFILE=`make show-var VARNAME=DEPENDSTREEFILE`
+DEPENDSFILE=`make show-var VARNAME=DEPENDSFILE`
+SUPPORTSFILE=`make show-var VARNAME=SUPPORTSFILE`
+INDEXFILE=`make show-var VARNAME=INDEXFILE`
+ORDERFILE=`make show-var VARNAME=ORDERFILE`
+cd ${USR_PKGSRC}	
+
 # Figure out optimal build order, and build
 if [ "$1" != "restart" ]; then
-	sh mk/bulk/printdepends | tsort | tee .l
+	echo "Building dependency tree (this may take a while)..."
+	sh mk/bulk/printdepends > $DEPENDSTREEFILE
+
+	echo "Sorting build order..."
+	tsort $DEPENDSTREEFILE > $ORDERFILE
+
+	echo "Generating up and down dependency files..."
+	./mk/bulk/tflat -u $DEPENDSTREEFILE > $SUPPORTSFILE
+	./mk/bulk/tflat -d $DEPENDSTREEFILE > $DEPENDSFILE
+
+	echo "Generating package name <=> package directory cross reference file (this may take a while)..."
+	sh mk/bulk/printindex > $INDEXFILE
+
 fi
+
+echo "Starting actual build using the order specified in $ORDERFILE..."
 nice -n 20 make \
 		SPECIFIC_PKGS=1 \
-		GROUP_SPECIFIC_PKGS="`cat .l | tr '\012' ' '`" \
+		GROUP_SPECIFIC_PKGS="`cat $ORDERFILE | tr '\012' ' '`" \
 		bulk-package | sed 's/^/'`uname -p`'> /g'
-rm .l
+
+echo "Build finished.  Removing all installed packages left over from build..."
+
+for pkg in `pkg_info`
+do
+	if `pkg_info -qe $pkg`; then 
+		echo pkg_delete -r $pkg
+		pkg_delete -rR $pkg
+	fi
+done
+
+echo "Post processing bulk build results..."
+
+#rm $DEPENDSTREEFILE $DEPENDSFILE $SUPPORTSFILE $INDEXFILE $ORDERFILE
 
 # Perl was wiped, reinstall it!
 ( cd lang/perl5-base ; make bulk-install )

@@ -1,4 +1,4 @@
-#	$Id: bsd.bulk-pkg.mk,v 1.16 2001/01/28 21:20:48 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.17 2001/02/01 08:47:29 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -45,17 +45,52 @@
 LS?=	ls
 WC?=	wc
 
-# Shall we keep the package installed after a "make bulk-package"?
-# Set to "yes" by bulk-install.
-KEEP?=	no
+# Shall we remove any packages which are installed, but not required
+# to build this package
+PRECLEAN?=      yes
 
-# This file exists to mark a package as broken
 .ifdef OBJMACHINE
+# This file exists to mark a package as broken
 BROKENFILE?=	.broken.${MACHINE}
+
+# This file is where the log of the build goes
 BUILDLOG?=	.make.${MACHINE}
+
+# This is a top level file which lists the entire pkgsrc depends tree in the format:
+# foo/bar devel/libfoo
+# meaning 'foo/bar' is requied to build 'devel/libfoo'
+# this is in the format needed by tsort(1)
+DEPENDSTREEFILE?=	${PKGSRCDIR}/.dependstree.${MACHINE}
+
+# This is a top level file which lists the entire pkgsrc depends tree in the format:
+# foo/bar depends on: devel/libfoo devel/libbar devel/baz .....
+# ie, to build foo/bar we need devel/libfoo devel/libbar devel/baz ... installed
+DEPENDSFILE?=	${PKGSRCDIR}/.depends.${MACHINE}
+
+# This is a top level file which lists the entire pkgsrc depends tree in the format:
+# devel/libfoo is depended upon by: foo/bar graphics/gtkfoo ...
+# ie, to build foo/bar we need  devel/libfoo to be installed.
+#     to build graphics/gtkfoo we need devel/libfoo to be installed
+SUPPORTSFILE?=	${PKGSRCDIR}/.supports.${MACHINE}
+
+# This is a top level file which cross-references each package name and pkg directory
+# in the format:
+# devel/libfoo libfoo-1.3
+INDEXFILE?=	${PKGSRCDIR}/.index.${MACHINE}
+
+# file containing a list of all the packages in the correct order for a bulk build.
+# the correct order is one where packages that are required by others are built
+# before the packages which require them.
+ORDERFILE?=	${PKGSRCDIR}/.order.${MACHINE}
+
 .else
-BROKENFILE?=	.broken
-BUILDLOG?=	.make
+BROKENFILE?=		.broken
+BUILDLOG?=		.make
+DEPENDSTREEFILE?=	${PKGSRCDIR}/.dependstree
+DEPENDSFILE?=		${PKGSRCDIR}/.depends
+SUPPORTSFILE?=		${PKGSRCDIR}/.supports
+INDEXFILE?=		${PKGSRCDIR}/.index
+ORDERFILE?=		${PKGSRCDIR}/.order
 .endif
 
 
@@ -108,7 +143,7 @@ bulk-package:
 		exit 1; \
 	fi
 	@( \
-	if [ "${KEEP}" = "no" ]; then \
+	if [ "${PRECLEAN}" = "yes" ]; then \
 		${ECHO_MSG} '' ; \
 		${ECHO_MSG} '' ; \
 		${ECHO_MSG} '###' ; \
@@ -126,9 +161,6 @@ bulk-package:
 	if [ $$uptodate = 1 ]; then \
 		( if [ $$installed = 1 ]; then \
 			${ECHO_MSG} "BULK> Package ${PKGNAME} is upto-date, and still installed" ; \
-			${ECHO_MSG} "      removing installed package." ; \
-			${ECHO_MSG} ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
-			${DO}       ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
 		else \
 			${ECHO_MSG} "BULK> Nothing to be done." ; \
 		fi \
@@ -136,47 +168,109 @@ bulk-package:
 	else \
 		( if [ $$installed = 1 ]; then \
 			${ECHO_MSG} "BULK> Removing outdated (installed) package ${PKGNAME} first." ; \
-			${ECHO_MSG} ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
-			${DO}       ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
+			${ECHO_MSG} ${MAKE} deinstall ; \
+			${DO}       ${MAKE} deinstall ; \
 		fi ; \
-		if [ -f ${BUILDLOG} ]; then \
-			${ECHO_MSG} "BULK> Continuing previous build..." ; \
-		else \
+		if [ -f ${PKGFILE} ]; then \
 			${ECHO_MSG} "BULK> Removing old binary package..." ; \
 			${ECHO_MSG} ${RM} -f ${PKGFILE} ; \
 			${DO}       ${RM} -f ${PKGFILE} ; \
+		fi; \
 			${ECHO_MSG} "BULK> Full rebuild  in progress..." ; \
-			${ECHO_MSG} ${MAKE} -k clean CLEANDEPENDS=YES ; \
-			${DO}       ${MAKE} -k clean CLEANDEPENDS=YES ; \
-		fi ; \
-		${ECHO_MSG} ${MAKE} install-depends '(${PKGNAME})' 2>&1; \
-		${DO}     ( ${MAKE} install-depends 2>&1 ); \
+			${ECHO_MSG} "BULK> Cleaning package and its depends" ;\
+			thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
+			for pkgdir in $$thisdir `${GREP} "^$$thisdir " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
+				${ECHO_MSG} "(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean)" ; \
+				${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
+			done ;\
+		if [ "${PRECLEAN}" = "yes" ]; then \
+			${ECHO_MSG} "BULK> Removing installed packages which are not needed to build ${PKGNAME}" ; \
+			thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
+			for pkgname in `${PKG_INFO} | ${AWK} '{print $$1}'` ; \
+			do \
+				pkgdir=`${GREP} " $$pkgname " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
+				if `${PKG_INFO} -qe $$pkgname` ; then \
+					if ! `${EGREP} "^$$thisdir.* $$pkgdir( |$$)" ${DEPENDSFILE} >/dev/null 2>&1` ; then \
+						${ECHO_MSG} "BULK> ${PKGNAME} does not require installed package $$pkgname ($$pkgdir) to build." ;\
+						${ECHO_MSG} "BULK> Deinstalling $$pkgname" ;\
+						${ECHO_MSG} ${PKG_DELETE} -r $$pkgname ; \
+						${DO}       ${PKG_DELETE} -r $$pkgname || true ; \
+						if `${PKG_INFO} -qe $$pkgname` ; then \
+							${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) did not nicely deinstall.  Forcing the deinstall." ;\
+							${ECHO_MSG} ${PKG_DELETE} -f $$pkgname ; \
+							${DO}       ${PKG_DELETE} -f $$pkgname || true ; \
+						fi ;\
+					else \
+						${ECHO_MSG} "BULK> ${PKGNAME}  requires installed package $$pkgname ($$pkgdir) to build." ;\
+						${ECHO_MSG} "BULK> Keeping $$pkgname" ;\
+					fi ;\
+				else \
+					${ECHO_MSG} "BULK> package $$pkgname ($$pkgdir) is no longer installed" ;\
+				fi ;\
+			done ; \
+		fi ;\
+		thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
+		${ECHO_MSG} "BULK> Installing packages which are required to build ${PKGNAME}." ;\
+		for pkgdir in `${GREP} "^$$thisdir " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
+			pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ; \
+			pkgfile=${PACKAGES}/All/$${pkgname}.tgz ;\
+			if ! `${PKG_INFO} -qe $$pkgname` ; then \
+				${ECHO_MSG} "BULK> " ${PKG_ADD} $$pkgfile ; \
+				${DO} ${PKG_ADD} $$pkgfile ; \
+			else \
+				${ECHO_MSG} "BULK> Required package $$pkgname ($$pkgdir) is already installed" ; \
+			fi ;\
+		done ;\
 		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 ; \
 		${DO}     ( ${MAKE} package 2>&1 ); \
 		) 2>&1 | tee -a ${BUILDLOG} ; \
 		if [ -f ${PKGFILE} ]; then \
 			${RM} ${BUILDLOG} ; \
 		else \
-			( \
 			${MV} ${BUILDLOG} ${BROKENFILE} ; \
+			( \
 			${ECHO_MSG} "BULK> ${PKGNAME} was marked as broken:" ; \
 			${LS} -la ${BROKENFILE} ; \
-			nerrors=`${GREP} '^\*\*\* Error code' ${BROKENFILE} | ${WC} -l`; \
-			${ECHO_MSG} "$$nerrors ${PKGPATH}/${BROKENFILE}" >>../../${BROKENFILE}; \
-			) 2>&1 | tee -a ${BUILDLOG}; \
+			${ECHO_MSG} ${MAKE} deinstall ; \
+			${DO}       ${MAKE} deinstall ; \
+			nerrors=`${GREP} -c '^\*\*\* Error code' ${BROKENFILE} || true`; \
+			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE}" >> ${PKGSRCDIR}/${BROKENFILE}; \
+			${ECHO_MSG} "BULK> Marking all packages which depend upon ${PKGNAME} as broken:"; \
+			thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
+			for pkgdir in `${GREP} "^$$thisdir " ${SUPPORTSFILE} | ${SED} -e 's;^.*:;;g'`; do \
+				pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ;\
+				${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken:  $$pkgname ($$pkgdir)";\
+				pkgerr="-1"; \
+				pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=IGNORE)`; \
+				if [ ! -z "$$pkgignore" -a ! -f ${PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
+					 ${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) may not be packaged because:" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+					 ${ECHO_MSG} "BULK> $$pkgignore" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+					if [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
+						pkgerr="0"; \
+					else \
+						pkgerr="1"; \
+					fi; \
+				fi; \
+				${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} ($$thisdir) which is broken." \
+					>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+				if ! `${GREP} " $$pkgdir/${BROKENFILE}" ${PKGSRCDIR}/${BROKENFILE} >/dev/null 2>&1` ; then \
+					${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE}" >> ${PKGSRCDIR}/${BROKENFILE} ;\
+				fi ;\
+			done \
+			) 2>&1 | tee -a ${BROKENFILE}; \
 		fi ; \
-		${ECHO_MSG} ${MAKE} clean CLEANDEPENDS=YES ; \
-		${DO}       ${MAKE} clean CLEANDEPENDS=YES ; \
-		if [ "${KEEP}" = "no" ]; then \
-			${ECHO_MSG} ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
-			${DO}       ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
-			${ECHO_MSG} ${PKG_DELETE} -rR \\* ; \
-			${DO}       ${PKG_DELETE} -rR \*  >/dev/null 2>&1 || ${TRUE} ; \
-		fi ; \
+		${ECHO_MSG} "BULK> Cleaning packages and its depends" ;\
+		thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
+		for pkgdir in $$thisdir `${GREP} "^$$thisdir " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
+			${ECHO_MSG} "(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean)" ; \
+			${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
+		done ;\
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
-		${ECHO_MSG} "BULK>" Build for ${PKGNAME} was not successful, aborting. | tee -a ${BUILDLOG} ; \
+		${ECHO_MSG} "BULK>" Build for ${PKGNAME} was not successful, aborting. | tee -a ${BROKENFILE} ; \
 		false; \
+	else \
+		${RM} -f ${BUILDLOG} ;\
 	fi
 
 # Install pkg - if possible from binary pkg (i.e. available & upto date)
@@ -185,12 +279,12 @@ bulk-package:
 # been modified and need rebuilding.
 bulk-install:
 	@if [ `${MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
-		if ! ${PKG_INFO} -e ${PKGNAME} ; then \
+		if ! ${PKG_INFO} -qe ${PKGNAME} ; then \
 			${DO} ${MAKE} install-depends ; \
 			${ECHO_MSG} "BULK> " ${PKG_ADD} ${PKGFILE} ; \
 			${DO} ${PKG_ADD} ${PKGFILE} ; \
 		fi ; \
 	else \
-		${ECHO_MSG} ${MAKE} bulk-package KEEP=yes; \
-		${DO}       ${MAKE} bulk-package KEEP=yes; \
+		${ECHO_MSG} ${MAKE} bulk-package PRECLEAN=no; \
+		${DO}       ${MAKE} bulk-package PRECLEAN=no; \
 	fi
