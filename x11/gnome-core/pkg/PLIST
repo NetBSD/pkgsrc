@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/01/16 05:39:42 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/02/19 01:29:08 tv Exp $
 bin/gmenu
 bin/gnome-session
 bin/save-session
@@ -55,31 +55,6 @@ lib/libfish_applet.a
 lib/libpanel_applet.so.0.0
 lib/libpanel_applet.a
 lib/appletsConf.sh
-lib/locale/it/LC_MESSAGES/gnome-core.cat
-lib/locale/ko/LC_MESSAGES/gnome-core.cat
-lib/locale/fr/LC_MESSAGES/gnome-core.cat
-lib/locale/de/LC_MESSAGES/gnome-core.cat
-lib/locale/es/LC_MESSAGES/gnome-core.cat
-lib/locale/no/LC_MESSAGES/gnome-core.cat
-lib/locale/ga/LC_MESSAGES/gnome-core.cat
-lib/locale/sv/LC_MESSAGES/gnome-core.cat
-lib/locale/pt/LC_MESSAGES/gnome-core.cat
-lib/locale/ja/LC_MESSAGES/gnome-core.cat
-lib/locale/fi/LC_MESSAGES/gnome-core.cat
-lib/locale/cs/LC_MESSAGES/gnome-core.cat
-lib/locale/ca/LC_MESSAGES/gnome-core.cat
-lib/locale/da/LC_MESSAGES/gnome-core.cat
-lib/locale/es_DO/LC_MESSAGES/gnome-core.cat
-lib/locale/es_GT/LC_MESSAGES/gnome-core.cat
-lib/locale/es_HN/LC_MESSAGES/gnome-core.cat
-lib/locale/es_MX/LC_MESSAGES/gnome-core.cat
-lib/locale/es_PA/LC_MESSAGES/gnome-core.cat
-lib/locale/es_PE/LC_MESSAGES/gnome-core.cat
-lib/locale/es_SV/LC_MESSAGES/gnome-core.cat
-lib/locale/ru/LC_MESSAGES/gnome-core.cat
-lib/locale/pl/LC_MESSAGES/gnome-core.cat
-lib/locale/hu/LC_MESSAGES/gnome-core.cat
-lib/locale/nl/LC_MESSAGES/gnome-core.cat
 share/applets/Monitors/cpumemusage_applet.desktop
 share/applets/Monitors/diskusage_applet.desktop
 share/applets/Monitors/cpuload_applet.desktop
@@ -212,6 +187,31 @@ share/gnome/help/mini-commander/C/index.html
 share/gnome/help/mini-commander/C/docbook.css
 share/gnome/help/mini-commander/C/introduction.html
 share/gnome/help/mini-commander/C/download.html
+share/locale/it/LC_MESSAGES/gnome-core.mo
+share/locale/ko/LC_MESSAGES/gnome-core.mo
+share/locale/fr/LC_MESSAGES/gnome-core.mo
+share/locale/de/LC_MESSAGES/gnome-core.mo
+share/locale/es/LC_MESSAGES/gnome-core.mo
+share/locale/no/LC_MESSAGES/gnome-core.mo
+share/locale/ga/LC_MESSAGES/gnome-core.mo
+share/locale/sv/LC_MESSAGES/gnome-core.mo
+share/locale/pt/LC_MESSAGES/gnome-core.mo
+share/locale/ja/LC_MESSAGES/gnome-core.mo
+share/locale/fi/LC_MESSAGES/gnome-core.mo
+share/locale/cs/LC_MESSAGES/gnome-core.mo
+share/locale/ca/LC_MESSAGES/gnome-core.mo
+share/locale/da/LC_MESSAGES/gnome-core.mo
+share/locale/es_DO/LC_MESSAGES/gnome-core.mo
+share/locale/es_GT/LC_MESSAGES/gnome-core.mo
+share/locale/es_HN/LC_MESSAGES/gnome-core.mo
+share/locale/es_MX/LC_MESSAGES/gnome-core.mo
+share/locale/es_PA/LC_MESSAGES/gnome-core.mo
+share/locale/es_PE/LC_MESSAGES/gnome-core.mo
+share/locale/es_SV/LC_MESSAGES/gnome-core.mo
+share/locale/ru/LC_MESSAGES/gnome-core.mo
+share/locale/pl/LC_MESSAGES/gnome-core.mo
+share/locale/hu/LC_MESSAGES/gnome-core.mo
+share/locale/nl/LC_MESSAGES/gnome-core.mo
 share/panelrc
 share/pixmaps/emacs.png
 share/pixmaps/gnome-aorta.png
@@ -327,19 +327,5 @@ share/idl/help-browser.idl
 @dirrm share/applets/Network
 @dirrm share/applets/Utility
 @dirrm share/applets
-@dirrm lib/locale/es_DO/LC_MESSAGES
-@dirrm lib/locale/es_DO
-@dirrm lib/locale/es_GT/LC_MESSAGES
-@dirrm lib/locale/es_GT
-@dirrm lib/locale/es_HN/LC_MESSAGES
-@dirrm lib/locale/es_HN
-@dirrm lib/locale/es_MX/LC_MESSAGES
-@dirrm lib/locale/es_MX
-@dirrm lib/locale/es_PA/LC_MESSAGES
-@dirrm lib/locale/es_PA
-@dirrm lib/locale/es_PE/LC_MESSAGES
-@dirrm lib/locale/es_PE
-@dirrm lib/locale/es_SV/LC_MESSAGES
-@dirrm lib/locale/es_SV
 @dirrm etc/CORBA/servers
 @dirrm etc/CORBA
