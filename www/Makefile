@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.221 2002/10/19 17:06:51 grant Exp $
+# $NetBSD: Makefile,v 1.222 2002/10/23 17:24:14 drochner Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -185,7 +185,9 @@ SUBDIR+=	wwwoffle
 SUBDIR+=	zope
 SUBDIR+=	zope-confera
 SUBDIR+=	zope25
+SUBDIR+=	zope25-BTreeFolder
 SUBDIR+=	zope25-CMF
+SUBDIR+=	zope25-DocumentLibrary
 SUBDIR+=	zope25-EasyImage
 SUBDIR+=	zope25-Formulator
 SUBDIR+=	zope25-Fortune
