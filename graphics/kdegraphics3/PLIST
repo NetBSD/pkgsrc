@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/04/03 14:39:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/09/17 23:45:22 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -255,29 +255,27 @@ share/kde/apps/kiconedit/pics/source.png
 share/kde/apps/kiconedit/pics/standard.png
 share/kde/apps/kiconedit/toolbar/aim-cursor.xpm
 share/kde/apps/kiconedit/toolbar/aim.png
+share/kde/apps/kiconedit/toolbar/airbrush-cursor.xpm
 share/kde/apps/kiconedit/toolbar/areaselect.png
 share/kde/apps/kiconedit/toolbar/circle.png
+share/kde/apps/kiconedit/toolbar/colorpicker-cursor.xpm
 share/kde/apps/kiconedit/toolbar/ellipse.png
 share/kde/apps/kiconedit/toolbar/eraser-cursor.xpm
 share/kde/apps/kiconedit/toolbar/fileclose.png
+share/kde/apps/kiconedit/toolbar/fill-cursor.xpm
 share/kde/apps/kiconedit/toolbar/filledcircle.png
 share/kde/apps/kiconedit/toolbar/filledellipse.png
 share/kde/apps/kiconedit/toolbar/filledrectangle.png
-share/kde/apps/kiconedit/toolbar/flood-cursor.xpm
-share/kde/apps/kiconedit/toolbar/flood.png
 share/kde/apps/kiconedit/toolbar/grayscale.png
 share/kde/apps/kiconedit/toolbar/grid.png
 share/kde/apps/kiconedit/toolbar/kdepalette.png
 share/kde/apps/kiconedit/toolbar/line.png
 share/kde/apps/kiconedit/toolbar/newwin.png
 share/kde/apps/kiconedit/toolbar/paintbrush-cursor.xpm
-share/kde/apps/kiconedit/toolbar/paintbrush.png
 share/kde/apps/kiconedit/toolbar/pointer.png
 share/kde/apps/kiconedit/toolbar/rectangle.png
 share/kde/apps/kiconedit/toolbar/selectcircle.png
 share/kde/apps/kiconedit/toolbar/selectrect.png
-share/kde/apps/kiconedit/toolbar/spraycan-cursor.xpm
-share/kde/apps/kiconedit/toolbar/spraycan.png
 share/kde/apps/kiconedit/toolbar/transform.png
 share/kde/apps/konqueror/servicemenus/mrml-servicemenu.desktop
 share/kde/apps/kooka/kookaui.rc
