@@ -1,0 +1,34 @@
+$NetBSD: patch-ac,v 1.1 2004/01/04 11:48:44 tron Exp $
+
+--- src/kernel/netbsd.c.orig	2004-01-04 12:27:05.000000000 +0100
++++ src/kernel/netbsd.c	2004-01-04 12:46:17.000000000 +0100
+@@ -162,7 +162,7 @@
+ 	if (tcbtablep == NULL)
+ 		return (NULL);
+ 
+-	kpcbp = tcbtablep->inpt_queue.cqh_first;
++	kpcbp = (struct inpcb *) tcbtablep->inpt_queue.cqh_first;
+ 	while (kpcbp != (struct inpcb *) ktcbtablep) {
+ 		if (getbuf((u_long) kpcbp, &pcb, sizeof(struct inpcb)) == -1)
+ 			break;
+@@ -185,7 +185,7 @@
+ 			return (pcb.inp_socket);
+ 		}
+ 
+-		kpcbp = pcb.inp_queue.cqe_next;
++		kpcbp = (struct inpcb *) pcb.inp_queue.cqe_next;
+ 	}
+ 
+ 	return (NULL);
+@@ -351,7 +351,11 @@
+ 			return (tcb6_temp.in6p_socket);
+ 		}
+ 
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 106250000	/* 1.6Y */
++		tcb6_cur = tcb6_temp.in6p_queue.cqe_next;
++#else
+ 		tcb6_cur = tcb6_temp.in6p_next;
++#endif
+ 		if (getbuf((u_long) tcb6_cur, &tcb6_temp, sizeof(tcb6_temp)) == -1)
+ 			break;
+ 	} while ((u_long) tcb6_cur != kinfo->nl[N_TCB6].n_value);
