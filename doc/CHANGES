@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8179 2004/11/30 15:27:19 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8180 2004/11/30 15:41:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5673,3 +5673,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-icon-theme to 2.8.0nb2 [wiz 2004-11-30]
 	Updated cooledit to 3.17.12 [adam 2004-11-30]
 	Updated samba to 3.0.9 [xtraeme 2004-11-30]
+	Removed filmgimp [adam 2004-11-30]
+	Added cinepaint-0.18.3 [adam 2004-11-30]
