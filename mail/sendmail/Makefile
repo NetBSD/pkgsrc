@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2002/06/23 12:15:03 tron Exp $
+# $NetBSD: Makefile,v 1.52 2002/08/21 07:47:05 seb Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
@@ -53,6 +53,10 @@ USE_DB2?=	NO
 
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
 .include "../../databases/openldap/buildlink.mk"
+.endif
+
+.if defined(USE_SASL) && ${USE_SASL} == YES
+.include "../../security/cyrus-sasl/buildlink.mk"
 .endif
 
 .if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
