@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:00:53 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/25 13:20:13 taca Exp $
 #
 
 DISTNAME=		ipadic-2.4.4
+PKGREVISION=		1
 CATEGORIES=		japanese textproc
 MASTER_SITES=		http://chasen.aist-nara.ac.jp/stable/ipadic/
 
@@ -12,12 +13,12 @@ COMMENT=		Japanese Morphological Dictionary for ChaSen
 DEPENDS=		chasen-base>=2.2.5:../../textproc/chasen-base
 
 GNU_CONFIGURE=		# defined
-CONF_FILES=		${CHASEN_DICDIR}/chasenrc.example \
+CONF_FILES=		${CHASEN_DICDIR}/ipadic/chasenrc.example \
 			${CHASEN_CONFDIR}/chasenrc
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/chasenrc \
-		${LOCALBASE}/share/chasen/dic/ipadic/chasenrc.example
+		${CHASEN_DICDIR}/ipadic/chasenrc.example
 
 .include "../../textproc/chasen/Makefile.common"
 .include "../../mk/bsd.pkg.install.mk"
