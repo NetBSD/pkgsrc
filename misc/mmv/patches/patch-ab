@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/08/15 21:09:04 agc Exp $
+
+--- mmv.c	2001/08/15 21:55:50	1.1
++++ mmv.c	2001/08/15 21:56:37
+@@ -123,10 +123,13 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/file.h>
++#include <sys/param.h>
+ 
++#if !(defined(BSD) && BSD >= 199306)
+ extern char *getenv();
+ extern long lseek();
+ extern char *malloc();
++#endif
+ 
+ #ifdef HAS_DIRENT
+ #include <dirent.h>
