@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.880 2002/12/23 01:58:26 cjep Exp $
+$NetBSD: CHANGES,v 1.881 2002/12/23 04:26:28 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4066,3 +4066,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added gp-factint-1.3 [cjep 2002-12-23]
 	Updated ffmpeg to 0.4.5nb2 [wiz 2002-12-23]
 	Added unzoo-4.4 [cjep 2002-12-23]
+	Updated librep to 0.15.1nb3 [jlam 2002-12-23]
