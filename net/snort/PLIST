@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2003/12/31 14:11:42 salo Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/04/10 03:09:45 snj Exp $
 bin/snort
 etc/rc.d/snort
 man/man8/snort.8
@@ -8,6 +8,7 @@ share/doc/snort/CREDITS
 share/doc/snort/FAQ
 share/doc/snort/INSTALL
 share/doc/snort/NEWS
+share/doc/snort/PROBLEMS
 share/doc/snort/README
 share/doc/snort/README.FLEXRESP
 share/doc/snort/README.PLUGINS
@@ -18,11 +19,14 @@ share/doc/snort/README.csv
 share/doc/snort/README.database
 share/doc/snort/README.flow
 share/doc/snort/README.flow-portscan
+share/doc/snort/README.flowbits
 share/doc/snort/README.http_inspect
 share/doc/snort/README.thresholding
 share/doc/snort/README.wireless
+share/doc/snort/RULES.todo
 share/doc/snort/TODO
 share/doc/snort/USAGE
+share/doc/snort/WISHLIST
 share/doc/snort/signatures/1000.txt
 share/doc/snort/signatures/1001.txt
 share/doc/snort/signatures/1002.txt
@@ -266,6 +270,7 @@ share/doc/snort/signatures/1235.txt
 share/doc/snort/signatures/1236.txt
 share/doc/snort/signatures/1237.txt
 share/doc/snort/signatures/1238.txt
+share/doc/snort/signatures/1239.txt
 share/doc/snort/signatures/1240.txt
 share/doc/snort/signatures/1241.txt
 share/doc/snort/signatures/1242.txt
@@ -276,6 +281,8 @@ share/doc/snort/signatures/1248.txt
 share/doc/snort/signatures/1249.txt
 share/doc/snort/signatures/1250.txt
 share/doc/snort/signatures/1251.txt
+share/doc/snort/signatures/1252.txt
+share/doc/snort/signatures/1253.txt
 share/doc/snort/signatures/1254.txt
 share/doc/snort/signatures/1255.txt
 share/doc/snort/signatures/1256.txt
@@ -313,6 +320,9 @@ share/doc/snort/signatures/1289.txt
 share/doc/snort/signatures/1290.txt
 share/doc/snort/signatures/1291.txt
 share/doc/snort/signatures/1292.txt
+share/doc/snort/signatures/1293.txt
+share/doc/snort/signatures/1294.txt
+share/doc/snort/signatures/1295.txt
 share/doc/snort/signatures/1298.txt
 share/doc/snort/signatures/1299.txt
 share/doc/snort/signatures/1300.txt
@@ -424,6 +434,7 @@ share/doc/snort/signatures/1405.txt
 share/doc/snort/signatures/1406.txt
 share/doc/snort/signatures/1407.txt
 share/doc/snort/signatures/1408.txt
+share/doc/snort/signatures/1409.txt
 share/doc/snort/signatures/141.txt
 share/doc/snort/signatures/1410.txt
 share/doc/snort/signatures/1411.txt
@@ -436,12 +447,16 @@ share/doc/snort/signatures/1417.txt
 share/doc/snort/signatures/1418.txt
 share/doc/snort/signatures/1419.txt
 share/doc/snort/signatures/1420.txt
+share/doc/snort/signatures/1421.txt
 share/doc/snort/signatures/1422.txt
 share/doc/snort/signatures/1423.txt
 share/doc/snort/signatures/1424.txt
 share/doc/snort/signatures/1425.txt
+share/doc/snort/signatures/1426.txt
+share/doc/snort/signatures/1427.txt
 share/doc/snort/signatures/1428.txt
 share/doc/snort/signatures/1429.txt
+share/doc/snort/signatures/1430.txt
 share/doc/snort/signatures/1431.txt
 share/doc/snort/signatures/1432.txt
 share/doc/snort/signatures/1433.txt
@@ -459,6 +474,8 @@ share/doc/snort/signatures/1443.txt
 share/doc/snort/signatures/1444.txt
 share/doc/snort/signatures/1445.txt
 share/doc/snort/signatures/1446.txt
+share/doc/snort/signatures/1447.txt
+share/doc/snort/signatures/1448.txt
 share/doc/snort/signatures/1449.txt
 share/doc/snort/signatures/145.txt
 share/doc/snort/signatures/1450.txt
@@ -553,6 +570,7 @@ share/doc/snort/signatures/1534.txt
 share/doc/snort/signatures/1535.txt
 share/doc/snort/signatures/1536.txt
 share/doc/snort/signatures/1537.txt
+share/doc/snort/signatures/1538.txt
 share/doc/snort/signatures/1539.txt
 share/doc/snort/signatures/1540.txt
 share/doc/snort/signatures/1541.txt
@@ -647,10 +665,13 @@ share/doc/snort/signatures/1625.txt
 share/doc/snort/signatures/1626.txt
 share/doc/snort/signatures/1627.txt
 share/doc/snort/signatures/1628.txt
+share/doc/snort/signatures/1629.txt
 share/doc/snort/signatures/163.txt
 share/doc/snort/signatures/1631.txt
 share/doc/snort/signatures/1632.txt
 share/doc/snort/signatures/1633.txt
+share/doc/snort/signatures/1634.txt
+share/doc/snort/signatures/1635.txt
 share/doc/snort/signatures/1636.txt
 share/doc/snort/signatures/1637.txt
 share/doc/snort/signatures/1638.txt
@@ -749,6 +770,7 @@ share/doc/snort/signatures/1731.txt
 share/doc/snort/signatures/1732.txt
 share/doc/snort/signatures/1733.txt
 share/doc/snort/signatures/1734.txt
+share/doc/snort/signatures/1735.txt
 share/doc/snort/signatures/1736.txt
 share/doc/snort/signatures/1737.txt
 share/doc/snort/signatures/1738.txt
@@ -773,6 +795,8 @@ share/doc/snort/signatures/1757.txt
 share/doc/snort/signatures/1758.txt
 share/doc/snort/signatures/1759.txt
 share/doc/snort/signatures/176.txt
+share/doc/snort/signatures/1760.txt
+share/doc/snort/signatures/1761.txt
 share/doc/snort/signatures/1762.txt
 share/doc/snort/signatures/1763.txt
 share/doc/snort/signatures/1764.txt
@@ -802,6 +826,7 @@ share/doc/snort/signatures/1788.txt
 share/doc/snort/signatures/1789.txt
 share/doc/snort/signatures/1790.txt
 share/doc/snort/signatures/1791.txt
+share/doc/snort/signatures/1792.txt
 share/doc/snort/signatures/1793.txt
 share/doc/snort/signatures/1794.txt
 share/doc/snort/signatures/1795.txt
@@ -828,6 +853,7 @@ share/doc/snort/signatures/1815.txt
 share/doc/snort/signatures/1816.txt
 share/doc/snort/signatures/1817.txt
 share/doc/snort/signatures/1818.txt
+share/doc/snort/signatures/1819.txt
 share/doc/snort/signatures/1820.txt
 share/doc/snort/signatures/1821.txt
 share/doc/snort/signatures/1822.txt
@@ -850,6 +876,7 @@ share/doc/snort/signatures/1837.txt
 share/doc/snort/signatures/1838.txt
 share/doc/snort/signatures/1839.txt
 share/doc/snort/signatures/184.txt
+share/doc/snort/signatures/1840.txt
 share/doc/snort/signatures/1841.txt
 share/doc/snort/signatures/1842.txt
 share/doc/snort/signatures/1843.txt
@@ -896,10 +923,13 @@ share/doc/snort/signatures/1883.txt
 share/doc/snort/signatures/1884.txt
 share/doc/snort/signatures/1885.txt
 share/doc/snort/signatures/1886.txt
+share/doc/snort/signatures/1887.txt
 share/doc/snort/signatures/1888.txt
+share/doc/snort/signatures/1889.txt
 share/doc/snort/signatures/1890.txt
 share/doc/snort/signatures/1891.txt
 share/doc/snort/signatures/1892.txt
+share/doc/snort/signatures/1893.txt
 share/doc/snort/signatures/1894.txt
 share/doc/snort/signatures/1895.txt
 share/doc/snort/signatures/1896.txt
@@ -940,7 +970,13 @@ share/doc/snort/signatures/1930.txt
 share/doc/snort/signatures/1931.txt
 share/doc/snort/signatures/1932.txt
 share/doc/snort/signatures/1933.txt
+share/doc/snort/signatures/1934.txt
+share/doc/snort/signatures/1935.txt
+share/doc/snort/signatures/1936.txt
 share/doc/snort/signatures/1937.txt
+share/doc/snort/signatures/1938.txt
+share/doc/snort/signatures/1939.txt
+share/doc/snort/signatures/1940.txt
 share/doc/snort/signatures/1941.txt
 share/doc/snort/signatures/1942.txt
 share/doc/snort/signatures/1943.txt
@@ -967,6 +1003,7 @@ share/doc/snort/signatures/1962.txt
 share/doc/snort/signatures/1963.txt
 share/doc/snort/signatures/1964.txt
 share/doc/snort/signatures/1965.txt
+share/doc/snort/signatures/1966.txt
 share/doc/snort/signatures/1967.txt
 share/doc/snort/signatures/1968.txt
 share/doc/snort/signatures/1969.txt
@@ -1269,6 +1306,7 @@ share/doc/snort/signatures/2251.txt
 share/doc/snort/signatures/2252.txt
 share/doc/snort/signatures/2253.txt
 share/doc/snort/signatures/2254.txt
+share/doc/snort/signatures/2255.txt
 share/doc/snort/signatures/2256.txt
 share/doc/snort/signatures/2257.txt
 share/doc/snort/signatures/2258.txt
@@ -1291,6 +1329,7 @@ share/doc/snort/signatures/2272.txt
 share/doc/snort/signatures/2273.txt
 share/doc/snort/signatures/2274.txt
 share/doc/snort/signatures/2275.txt
+share/doc/snort/signatures/2276.txt
 share/doc/snort/signatures/2277.txt
 share/doc/snort/signatures/2278.txt
 share/doc/snort/signatures/2279.txt
@@ -1335,10 +1374,17 @@ share/doc/snort/signatures/2313.txt
 share/doc/snort/signatures/2314.txt
 share/doc/snort/signatures/2315.txt
 share/doc/snort/signatures/2316.txt
+share/doc/snort/signatures/2317.txt
+share/doc/snort/signatures/2318.txt
+share/doc/snort/signatures/2319.txt
 share/doc/snort/signatures/232.txt
+share/doc/snort/signatures/2320.txt
+share/doc/snort/signatures/2329.txt
 share/doc/snort/signatures/233.txt
 share/doc/snort/signatures/234.txt
 share/doc/snort/signatures/235.txt
+share/doc/snort/signatures/2350.txt
+share/doc/snort/signatures/2351.txt
 share/doc/snort/signatures/236.txt
 share/doc/snort/signatures/237.txt
 share/doc/snort/signatures/238.txt
@@ -1570,7 +1616,9 @@ share/doc/snort/signatures/484.txt
 share/doc/snort/signatures/485.txt
 share/doc/snort/signatures/486.txt
 share/doc/snort/signatures/487.txt
+share/doc/snort/signatures/488.txt
 share/doc/snort/signatures/489.txt
+share/doc/snort/signatures/490.txt
 share/doc/snort/signatures/491.txt
 share/doc/snort/signatures/492.txt
 share/doc/snort/signatures/493.txt
@@ -1608,9 +1656,16 @@ share/doc/snort/signatures/525.txt
 share/doc/snort/signatures/526.txt
 share/doc/snort/signatures/527.txt
 share/doc/snort/signatures/528.txt
+share/doc/snort/signatures/529.txt
 share/doc/snort/signatures/530.txt
 share/doc/snort/signatures/532.txt
 share/doc/snort/signatures/533.txt
+share/doc/snort/signatures/534.txt
+share/doc/snort/signatures/535.txt
+share/doc/snort/signatures/536.txt
+share/doc/snort/signatures/537.txt
+share/doc/snort/signatures/538.txt
+share/doc/snort/signatures/539.txt
 share/doc/snort/signatures/540.txt
 share/doc/snort/signatures/541.txt
 share/doc/snort/signatures/542.txt
@@ -1666,6 +1721,7 @@ share/doc/snort/signatures/593.txt
 share/doc/snort/signatures/595.txt
 share/doc/snort/signatures/598.txt
 share/doc/snort/signatures/599.txt
+share/doc/snort/signatures/601.txt
 share/doc/snort/signatures/602.txt
 share/doc/snort/signatures/603.txt
 share/doc/snort/signatures/604.txt
@@ -1769,7 +1825,11 @@ share/doc/snort/signatures/705.txt
 share/doc/snort/signatures/706.txt
 share/doc/snort/signatures/707.txt
 share/doc/snort/signatures/708.txt
+share/doc/snort/signatures/709.txt
+share/doc/snort/signatures/710.txt
 share/doc/snort/signatures/711.txt
+share/doc/snort/signatures/712.txt
+share/doc/snort/signatures/713.txt
 share/doc/snort/signatures/714.txt
 share/doc/snort/signatures/715.txt
 share/doc/snort/signatures/716.txt
