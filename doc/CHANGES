@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2094 2003/04/30 00:08:48 jtb Exp $
+$NetBSD: CHANGES,v 1.2095 2003/04/30 03:18:40 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1798,3 +1798,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added mtl-2.1.2-21 [jtb 2003-04-29]
 	Added ickle-0.3.2 [hubertf 2003-04-30]
 	Added blitz++-0.6 [jtb 2003-04-30]
+	Updated pkglint to 3.53 [atatat 2003-04-30]
