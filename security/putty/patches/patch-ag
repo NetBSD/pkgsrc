@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2005/04/06 21:51:13 xtraeme Exp $
+
+--- ../terminal.c.orig	2005-04-06 23:15:37.000000000 +0200
++++ ../terminal.c	2005-04-06 23:15:48.000000000 +0200
+@@ -5818,7 +5818,7 @@
+ 		if (modifiers & PKM_CONTROL)
+ 		    c &= 0x1f;
+ 		else if (modifiers & PKM_SHIFT)
+-		    c = toupper(c);
++		    c = toupper((int)c);
+ 	    }
+ 	    *p++ = c;
+ 	    goto done;

@@ -1,0 +1,17 @@
+$NetBSD: patch-ah,v 1.1 2005/04/06 21:51:13 xtraeme Exp $
+
+--- uxpty.c.orig	2005-04-06 23:16:28.000000000 +0200
++++ uxpty.c	2005-04-06 23:28:38.000000000 +0200
+@@ -2,8 +2,10 @@
+  * Pseudo-tty backend for pterm.
+  */
+ 
+-#define _XOPEN_SOURCE 600
+-#define _XOPEN_SOURCE_EXTENDED
++/* Don't use _XOPEN_SOURCE/_XOPEN_SOURCE_EXTENDED here, because
++ * we are using strsignal() (which is not defined in POSIX).
++ */
++
+ #define _GNU_SOURCE
+ 
+ #include <stdio.h>

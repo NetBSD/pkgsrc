@@ -1,7 +1,15 @@
-$NetBSD: distinfo,v 1.3 2005/03/29 14:40:09 wiz Exp $
+$NetBSD: distinfo,v 1.4 2005/04/06 21:51:13 xtraeme Exp $
 
-SHA1 (putty-0.57.tar.gz) = 006e336c9c5a77538f22f545c38ca2afb0dd46e9
-RMD160 (putty-0.57.tar.gz) = c44e61b6fb8899ab2a6f2ee6f265085281eb866b
-Size (putty-0.57.tar.gz) = 1319513 bytes
-SHA1 (patch-aa) = 843dd63165d715ca7e6c3c4b573d9e5d560beae1
-SHA1 (patch-ab) = a96d4630fc8a74dd373fa66c3665ab17f6290797
+SHA1 (putty-0.58.tar.gz) = 25504ca4fe4e3b1a8d96d9c50be5eb6cd370f018
+RMD160 (putty-0.58.tar.gz) = 3a01b629d9646d2c328881d3011a9f2da08702dd
+Size (putty-0.58.tar.gz) = 1567268 bytes
+SHA1 (patch-aa) = a03ab13bddca16aef6f8b2c5a2ceb4ae10ee972a
+SHA1 (patch-ac) = 58c3928a0903ce9028fa47d1caa42b8502c29f56
+SHA1 (patch-ad) = a5ff354431f4f21309dc697d7a355708789eee9d
+SHA1 (patch-ae) = e54b92ea6b4030ee9ac342fcc0d3edb98c8d1c45
+SHA1 (patch-af) = f479153cfe14d93ba5d538f48268bbce2ebdf17d
+SHA1 (patch-ag) = c38cde511ab5730d13451628d0763460ca37e759
+SHA1 (patch-ah) = c01fc3bd3527d784685d4eda2f07a2e0bd22b46d
+SHA1 (patch-ai) = eacb4a3ecb97e5e636baf65aa9a3d721137369ad
+SHA1 (patch-aj) = 48f2d8581110c79767f4af1393a619db3271c7f3
+SHA1 (patch-ak) = a9aaa2c3c7945559f802b2a7a6c628ad7fa0cece
