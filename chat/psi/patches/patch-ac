@@ -1,0 +1,11 @@
+--- src/common.cpp.orig	Wed Jun 12 13:03:22 2002
++++ src/common.cpp	Tue Jun 11 23:24:46 2002
+@@ -1130,7 +1130,7 @@
+ #ifdef Q_WS_X11
+ QString getResourcesDir()
+ {
+-	return "/usr/local/psi";
++	return @PREFIX@"/psi";
+ }
+ 
+ QString getHomeDir()
