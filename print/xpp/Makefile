@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/02/18 10:21:43 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/18 10:22:27 jlam Exp $
 
 DISTNAME=	xpp-1.1
 PKGREVISION=	2
@@ -16,11 +16,11 @@ GNU_CONFIGURE=	yes
 
 DOCDIR=		${PREFIX}/share/doc/xpp
 
+.include "../../print/cups/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
+
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} LICENSE README ${DOCDIR}
-
-.include "../../print/cups/buildlink3.mk"
-.include "../../x11/fltk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
