@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1258 2003/09/05 09:44:01 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1259 2003/09/05 09:44:34 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -122,7 +122,7 @@ PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages.
 .endif
 
 USE_BUILDLINK2?=	no	# default to not using buildlink2
-USE_BUILDLINK3?=	no	# defualt to not using buildlink3
+USE_BUILDLINK3?=	no	# default to not using buildlink3
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 USE_BUILDLINK3=		yes	# pkgviews requires buildlink3
 .endif
