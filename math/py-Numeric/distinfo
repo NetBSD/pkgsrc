@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2001/09/25 17:46:00 drochner Exp $
+$NetBSD: distinfo,v 1.5 2002/01/10 20:47:28 drochner Exp $
 
-SHA1 (Numeric-20.2.1.tar.gz) = 97e73976dbe8e65e4ab5498e7b457b23e9387ecc
-Size (Numeric-20.2.1.tar.gz) = 708622 bytes
+SHA1 (Numeric-20.3.tar.gz) = 2bb31d417b4cafc2f99b4c6cf9aad2cc71a2fb25
+Size (Numeric-20.3.tar.gz) = 711012 bytes
