@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2004/04/05 13:59:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.245 2004/04/29 23:58:56 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -149,6 +149,7 @@ SUBDIR+=	p5-Text-DelimMatch
 SUBDIR+=	p5-Text-Diff
 SUBDIR+=	p5-Text-Format
 SUBDIR+=	p5-Text-Kakasi
+SUBDIR+=	p5-Text-Quoted
 SUBDIR+=	p5-Text-Reform
 SUBDIR+=	p5-Text-Substitute
 SUBDIR+=	p5-Text-Template
