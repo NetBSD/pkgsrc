@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/23 20:05:44 kim Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/23 20:12:24 kim Exp $
 #
 
 DISTNAME=		cvsweb-1.93
@@ -27,7 +27,7 @@ APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
 do-build:
 	${MV} ${WRKSRC}/cvsweb.cgi ${WRKSRC}/cvsweb.cgi.bak
 	${SED} -e 's,/usr/bin/perl,${PERL5},'				\
-	    -e 's,/usr/local/web/apache/conf/,${APACHE_SYSCONFDIR},'	\
+	    -e 's,/usr/local/web/apache/conf/,${APACHE_SYSCONFDIR}/,'	\
 	    ${WRKSRC}/cvsweb.cgi.bak > ${WRKSRC}/cvsweb.cgi
 
 pre-install:
