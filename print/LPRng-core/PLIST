@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:26 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/22 00:43:36 wiz Exp $
 bin/cancel
 bin/lp
 bin/lpq
@@ -26,6 +26,7 @@ man/man5/lpd.conf.5
 man/man5/lpd.perms.5
 man/man5/printcap.5
 man/man8/checkpc.8
+man/man8/lpc.8
 man/man8/lpd.8
 sbin/checkpc
 sbin/lpc
