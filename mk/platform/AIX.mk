@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.7 2005/01/28 21:05:59 jlam Exp $
+# $NetBSD: AIX.mk,v 1.8 2005/02/13 04:33:24 reed Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -6,7 +6,7 @@ AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
 CAT?=		/bin/cat
 CHMOD?=		/bin/chmod
-CHOWN?=		/usr/sbin/chown
+CHOWN?=		/usr/bin/chown
 CHGRP?=		/usr/bin/chgrp
 CMP?=		/usr/bin/cmp
 CP?=		/bin/cp
