@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8193 2004/12/01 04:02:00 minskim Exp $
+$NetBSD: CHANGES,v 1.8194 2004/12/01 04:06:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5689,3 +5689,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sunclock to 1.5 [perry 2004-11-30]
 	Added elscreen-1.3.2 [uebayasi 2004-12-01]
 	Updated hmmer to 2.3.2 [minskim 2004-12-01]
+	Updated mathomatic to 11.5c [minskim 2004-12-01]
