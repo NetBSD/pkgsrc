@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/20 04:55:04 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/11 02:01:55 snj Exp $
 #
 
 DISTNAME=		mtree-20031220
@@ -10,7 +10,7 @@ MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		Utility for mapping and checking directory hierarchies
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 GNU_CONFIGURE=		# defined
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
@@ -23,7 +23,7 @@ PKG_PRESERVE=           # defined
 do-extract:
 	@${CP} -Rp ${FILESDIR} ${WRKSRC}
 
-.include "../../pkgtools/libnbcompat/buildlink2.mk"
+.include "../../pkgtools/libnbcompat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 PREFIX:=		${PKG_TOOLS_BIN:C|/[^/]?bin$||}
