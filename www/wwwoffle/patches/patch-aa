@@ -1,21 +1,22 @@
-$NetBSD: patch-aa,v 1.11 2000/11/20 05:12:38 itojun Exp $
-
---- Makefile.orig	Sun Oct 22 03:32:41 2000
-+++ Makefile	Mon Nov 20 13:03:42 2000
-@@ -16,9 +16,9 @@
- 
+--- Makefile.orig	Mon Apr  2 16:48:09 2001
++++ Makefile	Mon Apr  2 16:50:24 2001
+@@ -18,11 +18,11 @@
  LOCALHOST=localhost:8080
  
+ # For UNIX.
 -INSTDIR=/usr/local
 -SPOOLDIR=/var/spool/wwwoffle
 -CONFDIR=/var/spool/wwwoffle
 +INSTDIR=${PREFIX}
 +SPOOLDIR=/var/wwwoffle
 +CONFDIR=${PREFIX}/etc/wwwoffle
+ MANDIR=$(INSTDIR)/man
+-DOCDIR=$(INSTDIR)/doc/wwwoffle
++DOCDIR=$(INSTDIR)/share/doc/wwwoffle
  
  # For Cygwin (win32).
  #INSTDIR=/wwwoffle
-@@ -46,13 +46,13 @@
+@@ -51,13 +51,13 @@
  ########
  
  CC=gcc
@@ -31,40 +32,59 @@ $NetBSD: patch-aa,v 1.11 2000/11/20 05:12:38 itojun Exp $
  
  # For HP/UX this is a good idea.
  #LDFLAGS=
-@@ -71,8 +71,8 @@
- 
- ########
+@@ -82,8 +82,8 @@
+ # The option to not use zlib for compression.
+ #USE_ZLIB=0
  
 -INCLUDE=
--LIBRARY=
+-LIBRARY=-lz
 +#INCLUDE=
-+#LIBRARY=
++#LIBRARY=-lz
  
- # For Solaris you need the following instead.
- #LIBRARY=-lnsl -lsocket
-@@ -280,13 +280,13 @@
- 	$(INSTALL) -c -m 644 wwwoffle.conf.man.install $(INSTDIR)/man/man5/wwwoffle.conf.5
- 	[ -x $(INSTDIR)/man/man8 ] || $(INSTALL) -d -m 755 $(INSTDIR)/man/man8
- 	$(INSTALL) -c -m 644 wwwoffled.man $(INSTDIR)/man/man8/wwwoffled.8
--	[ -x $(INSTDIR)/doc/wwwoffle ] || $(INSTALL) -d -m 755 $(INSTDIR)/doc/wwwoffle
-+	[ -x $(INSTDIR)/share/doc/wwwoffle ] || $(INSTALL) -d -m 755 $(INSTDIR)/share/doc/wwwoffle
- 	for file in CHANGES.CONF CONVERT COPYING FAQ INSTALL NEWS README* ; do \
--	  $(INSTALL) -c -m 644 $$file $(INSTDIR)/doc/wwwoffle/$$file ;\
-+	  $(INSTALL) -c -m 644 $$file $(INSTDIR)/share/doc/wwwoffle/$$file ;\
- 	done
- 	[ "x$(LANG)" = "x" ] || [ ! -d lang-$(LANG) ] || ( cd lang-$(LANG) && \
- 	  for file in CHANGES.CONF CONVERT COPYING FAQ INSTALL NEWS README* ; do \
--	    [ ! -f $$file ] || $(INSTALL) -c -m 644 $$file $(INSTDIR)/doc/wwwoffle/$$file-$(LANG) ;\
-+	    [ ! -f $$file ] || $(INSTALL) -c -m 644 $$file $(INSTDIR)/share/doc/wwwoffle/$$file-$(LANG) ;\
- 	  done )
+ # To compile without zlib
+ #LIBRARY=
+@@ -153,7 +153,7 @@
+ 	     configfile.o config.o errors.o io.o misc.o proto.o sockets.o md5.o
  
+ wwwoffle : $(WWWOFFLE_OBJ)
+-	$(LINK) $(WWWOFFLE_OBJ) -o $@ $(LIBRARY)
++	$(LINK) $(WWWOFFLE_OBJ) -o $@ $(LIBRARY) -lz
  
-@@ -360,7 +360,7 @@
- 	[    -f $(CONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 640 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf
+ ####
  
- install_fixup-win32:
--	for file in $(INSTDIR)/doc/* $(CONFDIR)/README.win32 ; do \
-+	for file in $(INSTDIR)/share/doc/* $(CONFDIR)/README.win32 ; do \
- 	  [ -f $$file ] && awk '{print $$0 "\r";}' < $$file > $$file.txt && rm -f $$file ;\
- 	done
- 	rm -f $(SPOOLDIR)/html/index.html && ln $(SPOOLDIR)/html/Welcome.html $(SPOOLDIR)/html/index.html
+@@ -165,7 +165,7 @@
+ 	      configfile.o config.o errors.o io.o misc.o proto.o sockets.o md5.o
+ 
+ wwwoffled : $(WWWOFFLED_OBJ)
+-	$(LINK) $(WWWOFFLED_OBJ) -o $@ $(LIBRARY)
++	$(LINK) $(WWWOFFLED_OBJ) -o $@ $(LIBRARY) -lz
+ 
+ ####
+ 
+@@ -176,7 +176,7 @@
+ 	           configfile.o config.o errors.o io.o misc.o proto.o sockets.o md5.o
+ 
+ wwwoffle-tools : $(WWWOFFLE_TOOLS_OBJ)
+-	$(LINK) $(WWWOFFLE_TOOLS_OBJ) -o $@ $(LIBRARY)
++	$(LINK) $(WWWOFFLE_TOOLS_OBJ) -o $@ $(LIBRARY) -lz
+ 
+ ####
+ 
+@@ -184,7 +184,7 @@
+ 	    configfile.o config.o errors.o io.o misc.o proto-none.o sockets.o spool.o md5.o
+ 
+ convert-cache : $(CONVERT_OBJ)
+-	$(LINK) $(CONVERT_OBJ) -o $@ $(LIBRARY)
++	$(LINK) $(CONVERT_OBJ) -o $@ $(LIBRARY) -lz
+ 
+ ####
+ 
+@@ -193,7 +193,7 @@
+ 	       configfile.o config.o errors.o io.o misc.o proto-none.o sockets.o spool.o md5.o
+ 
+ uncompress-cache : $(UNCOMPRESS_OBJ)
+-	$(LINK) $(UNCOMPRESS_OBJ) -o $@ $(LIBRARY)
++	$(LINK) $(UNCOMPRESS_OBJ) -o $@ $(LIBRARY) -lz
+ 
+ ####
+ 
