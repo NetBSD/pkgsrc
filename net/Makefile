@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.311 2002/06/25 15:33:18 taca Exp $
+# $NetBSD: Makefile,v 1.312 2002/06/26 03:50:49 kent Exp $
 #
 
 COMMENT=	Networking tools
@@ -50,7 +50,6 @@ SUBDIR+=	dlint
 SUBDIR+=	dynipclient
 SUBDIR+=	echoping
 SUBDIR+=	edonkey2k
-SUBDIR+=	eggdrop
 SUBDIR+=	etherape
 SUBDIR+=	ethereal
 SUBDIR+=	ettercap
