@@ -1,21 +1,73 @@
-# $NetBSD: Makefile,v 1.87 2003/07/17 21:40:52 grant Exp $
+# $NetBSD: Makefile,v 1.88 2004/03/29 22:16:09 xtraeme Exp $
 #
 
-DISTNAME=	gimp-1.2.5
+DISTNAME=	gimp-${GIMP_VER}
 CATEGORIES=	graphics
-DISTFILES=	# nothing
+MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v2.0/ \
+		ftp://ftp.cs.umn.edu/pub/gimp/gimp/v2.0/ \
+		ftp://ftp.tuwien.ac.at/graphics/gimp/gimp/v2.0/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gimp.org/
-COMMENT=	GNU Image Manipulation Program
+COMMENT=	Image manipulation program similar to Photoshop[tm]
 
-NO_BUILD=	YES
+BUILD_USES_MSGFMT=	yes
 
-DEPENDS+=	gimp-base>=1.2.5:../../graphics/gimp-base
-DEPENDS+=	gimp-data>=1.2:../../graphics/gimp-data
-DEPENDS+=	gimp-print>=4.2.0:../../print/gimp-print
-DEPENDS+=	gimp-print-escputil>=4.2.0:../../print/gimp-print-escputil
+CONFLICTS+=		gimp<=1.2.3
 
-do-install:	# nothing
+GIMP_VER=		2.0.0
 
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
+USE_PKGINSTALL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
+USE_GNU_TOOLS+=		make
+
+PKG_SYSCONFSUBDIR=	gimp-2.0
+
+PKGCONFIG_OVERRIDE=	gimp-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gimpthumb-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gimpui-2.0.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILDLINK_DEPENDS.fontconfig+=	    fontconfig>=2.2.0
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-perl
+CONFIGURE_ARGS+=	--disable-print
+CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/${PKGNAME}
+
+EGDIR=			${PREFIX}/share/examples/gimp-2.0
+.for f in gimprc gtkrc ps-menurc sessionrc templaterc unionrc
+CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+.endfor
+
+# Ensure we export symbols in the linked shared object.
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+
+post-install:
+	${TEST} ${PREFIX} = ${LOCALBASE} ||				\
+		${LN} -fs ${PREFIX}/share/aclocal/gimp.m4		\
+			${LOCALBASE}/share/aclocal/gimp.m4
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/aalib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
+.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/mng/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/libwmf/buildlink3.mk"
+.include "../../www/libgtkhtml/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
