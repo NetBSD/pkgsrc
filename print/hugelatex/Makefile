@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:51:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/02 19:51:38 hubertf Exp $
 #
 
 DISTNAME=	hugelatex-1.0
@@ -23,7 +23,7 @@ do-install:
 	${CP} -p ${TEXMF_CNF} ${TEXMF_CNF}-before-hugelatex
 	${CAT} ${FILESDIR}/texmf.cnf-add >>${TEXMF_CNF}
 	cd `dirname ${TEXMF_CNF}`; \
-	${PREFIX}/bin/latex -ini -fmt=hugelatex -progname=hugelatex latex.ini; \
+	echo "" | ${PREFIX}/bin/latex -ini -fmt=hugelatex -progname=hugelatex latex.ini || ${TRUE}; \
 	${RM} -f texsys.aux
 	${RM} -f ${PREFIX}/bin/hugelatex
 	${LN} -s latex ${PREFIX}/bin/hugelatex
