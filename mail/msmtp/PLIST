@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/19 09:24:29 wiz Exp $
+bin/msmtp
+man/man1/msmtp.1
+share/examples/msmtp/msmtprc.example
+@dirrm share/examples/msmtp
