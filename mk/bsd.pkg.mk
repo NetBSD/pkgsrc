@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1335 2004/01/06 09:24:14 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1336 2004/01/06 09:27:40 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4934,25 +4934,6 @@ _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_ADD_MANZ}
 _PLIST_AWK_SCRIPT+=	{ print $$0; }
 #
 _PLIST_AWK_SCRIPT+=	'
-
-.if !defined(PERL5_GENERATE_PLIST)
-.  if defined(PERL5_PACKLIST)
-PERL5_COMMENT=		( ${ECHO} "@comment The following lines are automatically generated"; \
-	${ECHO} "@comment from the installed .packlist files." )
-PERL5_PACKLIST_FILES=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
-	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,/*${PREFIX}/,," \
-	| ${SORT} -u
-PERL5_PACKLIST_DIRS=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
-	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,/*${PREFIX}/,," \
-		-e "s,^,@unexec \${RMDIR} -p %D/," \
-		-e "s,/[^/]*$$, 2>/dev/null || \${TRUE}," \
-	| ${SORT} -ur
-PERL5_GENERATE_PLIST=	${PERL5_COMMENT}; \
-			${PERL5_PACKLIST_FILES}; \
-			${PERL5_PACKLIST_DIRS}
-GENERATE_PLIST+=	${PERL5_GENERATE_PLIST};
-.  endif
-.endif
 
 # GENERATE_PLIST is a sequence of commands, terminating in a semicolon,
 #	that outputs contents for a PLIST to stdout and is appended to
