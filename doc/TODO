@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1232 2003/12/21 10:06:07 jmmv Exp $
+$NetBSD: TODO,v 1.1233 2003/12/21 10:18:44 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -178,7 +178,6 @@ Suggested package updates
 	o gnomeicu-0.99
 	o gnuchess-5.06
 	o gnumeric-1.2.2
-	o gnutls-1.0.2
 	o gpsim-0.21.0 [bouyer]
 	o grace-5.1.12
 	o gstreamer-0.6.4
