@@ -1,7 +1,6 @@
-$NetBSD: patch-ae,v 1.2 1998/11/25 23:58:25 tron Exp $
-
---- doc/liboctave/liboctave.texi.orig	Tue May 20 21:42:48 1997
-+++ doc/liboctave/liboctave.texi	Sat Nov 21 00:58:49 1998
+$NetBSD: patch-ae,v 1.3 2000/04/28 08:59:37 wennmach Exp $
+--- doc/liboctave/liboctave.texi.orig	Tue Aug 18 23:49:42 1998
++++ doc/liboctave/liboctave.texi	Wed Apr 26 16:40:36 2000
 @@ -5,6 +5,14 @@
  \input texinfo  @c -*-texinfo-*-
  @setfilename liboctave.info
@@ -17,12 +16,3 @@ $NetBSD: patch-ae,v 1.2 1998/11/25 23:58:25 tron Exp $
  @c @smallbook
  @c @setchapternewpage odd
  @c @cropmarks
-@@ -98,7 +106,7 @@
- * Copying::                     
- * Introduction::                
- * Arrays::                      
--* Matrix and Vector @var{Operations}::  
-+* Matrix and Vector OPERATIONS::  
- * Matrix Factorizations::       
- * Ranges::                      
- * Nonlinear Functions::         
