@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/05 22:39:08 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:30:10 seb Exp $
 bin/another_clock_applet
 bin/asclock_applet
 bin/battery_applet
@@ -1534,396 +1534,396 @@ share/xmodmap/xmodmap.yu
 @dirrm share/odometer/57chevy
 @dirrm share/odometer
 @dirrm share/gweather
-@exec ${MKDIR} -p %D/share/gnome/help/whereami_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/whereami_applet/it/stylesheet-images
 @dirrm share/gnome/help/whereami_applet/it/stylesheet-images
 @dirrm share/gnome/help/whereami_applet/it/figures
 @dirrm share/gnome/help/whereami_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/whereami_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/whereami_applet/es/stylesheet-images
 @dirrm share/gnome/help/whereami_applet/es/stylesheet-images
 @dirrm share/gnome/help/whereami_applet/es/figures
 @dirrm share/gnome/help/whereami_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/whereami_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/whereami_applet/C/stylesheet-images
 @dirrm share/gnome/help/whereami_applet/C/stylesheet-images
 @dirrm share/gnome/help/whereami_applet/C/figures
 @dirrm share/gnome/help/whereami_applet/C
 @dirrm share/gnome/help/whereami_applet
-@exec ${MKDIR} -p %D/share/gnome/help/webcontrol_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/webcontrol_applet/it/stylesheet-images
 @dirrm share/gnome/help/webcontrol_applet/it/stylesheet-images
 @dirrm share/gnome/help/webcontrol_applet/it/figures
 @dirrm share/gnome/help/webcontrol_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/webcontrol_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/webcontrol_applet/C/stylesheet-images
 @dirrm share/gnome/help/webcontrol_applet/C/stylesheet-images
 @dirrm share/gnome/help/webcontrol_applet/C/figures
 @dirrm share/gnome/help/webcontrol_applet/C
 @dirrm share/gnome/help/webcontrol_applet
-@exec ${MKDIR} -p %D/share/gnome/help/tickastat_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/tickastat_applet/it/stylesheet-images
 @dirrm share/gnome/help/tickastat_applet/it/stylesheet-images
 @dirrm share/gnome/help/tickastat_applet/it/figures
 @dirrm share/gnome/help/tickastat_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/tickastat_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/tickastat_applet/C/stylesheet-images
 @dirrm share/gnome/help/tickastat_applet/C/stylesheet-images
 @dirrm share/gnome/help/tickastat_applet/C/figures
 @dirrm share/gnome/help/tickastat_applet/C
 @dirrm share/gnome/help/tickastat_applet
-@exec ${MKDIR} -p %D/share/gnome/help/swapload_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/swapload_applet/it/stylesheet-images
 @dirrm share/gnome/help/swapload_applet/it/stylesheet-images
 @dirrm share/gnome/help/swapload_applet/it/figures
 @dirrm share/gnome/help/swapload_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/swapload_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/swapload_applet/es/stylesheet-images
 @dirrm share/gnome/help/swapload_applet/es/stylesheet-images
 @dirrm share/gnome/help/swapload_applet/es/figures
 @dirrm share/gnome/help/swapload_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/swapload_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/swapload_applet/C/stylesheet-images
 @dirrm share/gnome/help/swapload_applet/C/stylesheet-images
 @dirrm share/gnome/help/swapload_applet/C/figures
 @dirrm share/gnome/help/swapload_applet/C
 @dirrm share/gnome/help/swapload_applet
-@exec ${MKDIR} -p %D/share/gnome/help/sound-monitor_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/sound-monitor_applet/it/stylesheet-images
 @dirrm share/gnome/help/sound-monitor_applet/it/stylesheet-images
 @dirrm share/gnome/help/sound-monitor_applet/it/figures
 @dirrm share/gnome/help/sound-monitor_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/sound-monitor_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/sound-monitor_applet/C/stylesheet-images
 @dirrm share/gnome/help/sound-monitor_applet/C/stylesheet-images
 @dirrm share/gnome/help/sound-monitor_applet/C/figures
 @dirrm share/gnome/help/sound-monitor_applet/C
 @dirrm share/gnome/help/sound-monitor_applet
-@exec ${MKDIR} -p %D/share/gnome/help/quicklaunch_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/quicklaunch_applet/it/stylesheet-images
 @dirrm share/gnome/help/quicklaunch_applet/it/stylesheet-images
 @dirrm share/gnome/help/quicklaunch_applet/it/figures
 @dirrm share/gnome/help/quicklaunch_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/quicklaunch_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/quicklaunch_applet/C/stylesheet-images
 @dirrm share/gnome/help/quicklaunch_applet/C/stylesheet-images
 @dirrm share/gnome/help/quicklaunch_applet/C/figures
 @dirrm share/gnome/help/quicklaunch_applet/C
 @dirrm share/gnome/help/quicklaunch_applet
-@exec ${MKDIR} -p %D/share/gnome/help/odometer_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/odometer_applet/it/stylesheet-images
 @dirrm share/gnome/help/odometer_applet/it/stylesheet-images
 @dirrm share/gnome/help/odometer_applet/it/figures
 @dirrm share/gnome/help/odometer_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/odometer_applet/fr/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/odometer_applet/fr/stylesheet-images
 @dirrm share/gnome/help/odometer_applet/fr/stylesheet-images
 @dirrm share/gnome/help/odometer_applet/fr/figures
 @dirrm share/gnome/help/odometer_applet/fr
-@exec ${MKDIR} -p %D/share/gnome/help/odometer_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/odometer_applet/C/stylesheet-images
 @dirrm share/gnome/help/odometer_applet/C/stylesheet-images
 @dirrm share/gnome/help/odometer_applet/C/figures
 @dirrm share/gnome/help/odometer_applet/C
 @dirrm share/gnome/help/odometer_applet
-@exec ${MKDIR} -p %D/share/gnome/help/netload_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/netload_applet/it/stylesheet-images
 @dirrm share/gnome/help/netload_applet/it/stylesheet-images
 @dirrm share/gnome/help/netload_applet/it/figures
 @dirrm share/gnome/help/netload_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/netload_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/netload_applet/es/stylesheet-images
 @dirrm share/gnome/help/netload_applet/es/stylesheet-images
 @dirrm share/gnome/help/netload_applet/es/figures
 @dirrm share/gnome/help/netload_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/netload_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/netload_applet/C/stylesheet-images
 @dirrm share/gnome/help/netload_applet/C/stylesheet-images
 @dirrm share/gnome/help/netload_applet/C/figures
 @dirrm share/gnome/help/netload_applet/C
 @dirrm share/gnome/help/netload_applet
-@exec ${MKDIR} -p %D/share/gnome/help/modemlights_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/modemlights_applet/it/stylesheet-images
 @dirrm share/gnome/help/modemlights_applet/it/stylesheet-images
 @dirrm share/gnome/help/modemlights_applet/it/figures
 @dirrm share/gnome/help/modemlights_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/modemlights_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/modemlights_applet/es/stylesheet-images
 @dirrm share/gnome/help/modemlights_applet/es/stylesheet-images
 @dirrm share/gnome/help/modemlights_applet/es/figures
 @dirrm share/gnome/help/modemlights_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/modemlights_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/modemlights_applet/C/stylesheet-images
 @dirrm share/gnome/help/modemlights_applet/C/stylesheet-images
 @dirrm share/gnome/help/modemlights_applet/C/figures
 @dirrm share/gnome/help/modemlights_applet/C
 @dirrm share/gnome/help/modemlights_applet
-@exec ${MKDIR} -p %D/share/gnome/help/mixer_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/mixer_applet/it/stylesheet-images
 @dirrm share/gnome/help/mixer_applet/it/stylesheet-images
 @dirrm share/gnome/help/mixer_applet/it/figures
 @dirrm share/gnome/help/mixer_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/mixer_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/mixer_applet/es/stylesheet-images
 @dirrm share/gnome/help/mixer_applet/es/stylesheet-images
 @dirrm share/gnome/help/mixer_applet/es/figures
 @dirrm share/gnome/help/mixer_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/mixer_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/mixer_applet/C/stylesheet-images
 @dirrm share/gnome/help/mixer_applet/C/stylesheet-images
 @dirrm share/gnome/help/mixer_applet/C/figures
 @dirrm share/gnome/help/mixer_applet/C
 @dirrm share/gnome/help/mixer_applet
-@exec ${MKDIR} -p %D/share/gnome/help/mini-commander_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/mini-commander_applet/it/stylesheet-images
 @dirrm share/gnome/help/mini-commander_applet/it/stylesheet-images
 @dirrm share/gnome/help/mini-commander_applet/it/figures
 @dirrm share/gnome/help/mini-commander_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/mini-commander_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/mini-commander_applet/es/stylesheet-images
 @dirrm share/gnome/help/mini-commander_applet/es/stylesheet-images
 @dirrm share/gnome/help/mini-commander_applet/es/figures
 @dirrm share/gnome/help/mini-commander_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/mini-commander_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/mini-commander_applet/C/stylesheet-images
 @dirrm share/gnome/help/mini-commander_applet/C/stylesheet-images
 @dirrm share/gnome/help/mini-commander_applet/C/figures
 @dirrm share/gnome/help/mini-commander_applet/C
 @dirrm share/gnome/help/mini-commander_applet
-@exec ${MKDIR} -p %D/share/gnome/help/memload_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/memload_applet/it/stylesheet-images
 @dirrm share/gnome/help/memload_applet/it/stylesheet-images
 @dirrm share/gnome/help/memload_applet/it/figures
 @dirrm share/gnome/help/memload_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/memload_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/memload_applet/es/stylesheet-images
 @dirrm share/gnome/help/memload_applet/es/stylesheet-images
 @dirrm share/gnome/help/memload_applet/es/figures
 @dirrm share/gnome/help/memload_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/memload_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/memload_applet/C/stylesheet-images
 @dirrm share/gnome/help/memload_applet/C/stylesheet-images
 @dirrm share/gnome/help/memload_applet/C/figures
 @dirrm share/gnome/help/memload_applet/C
 @dirrm share/gnome/help/memload_applet
-@exec ${MKDIR} -p %D/share/gnome/help/loadavg_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/loadavg_applet/it/stylesheet-images
 @dirrm share/gnome/help/loadavg_applet/it/stylesheet-images
 @dirrm share/gnome/help/loadavg_applet/it/figures
 @dirrm share/gnome/help/loadavg_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/loadavg_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/loadavg_applet/es/stylesheet-images
 @dirrm share/gnome/help/loadavg_applet/es/stylesheet-images
 @dirrm share/gnome/help/loadavg_applet/es/figures
 @dirrm share/gnome/help/loadavg_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/loadavg_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/loadavg_applet/C/stylesheet-images
 @dirrm share/gnome/help/loadavg_applet/C/stylesheet-images
 @dirrm share/gnome/help/loadavg_applet/C/figures
 @dirrm share/gnome/help/loadavg_applet/C
 @dirrm share/gnome/help/loadavg_applet
-@exec ${MKDIR} -p %D/share/gnome/help/life_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/life_applet/it/stylesheet-images
 @dirrm share/gnome/help/life_applet/it/stylesheet-images
 @dirrm share/gnome/help/life_applet/it/figures
 @dirrm share/gnome/help/life_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/life_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/life_applet/es/stylesheet-images
 @dirrm share/gnome/help/life_applet/es/stylesheet-images
 @dirrm share/gnome/help/life_applet/es/figures
 @dirrm share/gnome/help/life_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/life_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/life_applet/C/stylesheet-images
 @dirrm share/gnome/help/life_applet/C/stylesheet-images
 @dirrm share/gnome/help/life_applet/C/figures
 @dirrm share/gnome/help/life_applet/C
 @dirrm share/gnome/help/life_applet
-@exec ${MKDIR} -p %D/share/gnome/help/jbc_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/jbc_applet/it/stylesheet-images
 @dirrm share/gnome/help/jbc_applet/it/stylesheet-images
 @dirrm share/gnome/help/jbc_applet/it/figures
 @dirrm share/gnome/help/jbc_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/jbc_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/jbc_applet/es/stylesheet-images
 @dirrm share/gnome/help/jbc_applet/es/stylesheet-images
 @dirrm share/gnome/help/jbc_applet/es/figures
 @dirrm share/gnome/help/jbc_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/jbc_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/jbc_applet/C/stylesheet-images
 @dirrm share/gnome/help/jbc_applet/C/stylesheet-images
 @dirrm share/gnome/help/jbc_applet/C/figures
 @dirrm share/gnome/help/jbc_applet/C
 @dirrm share/gnome/help/jbc_applet
-@exec ${MKDIR} -p %D/share/gnome/help/gweather_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gweather_applet/it/stylesheet-images
 @dirrm share/gnome/help/gweather_applet/it/stylesheet-images
 @dirrm share/gnome/help/gweather_applet/it/figures
 @dirrm share/gnome/help/gweather_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/gweather_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gweather_applet/C/stylesheet-images
 @dirrm share/gnome/help/gweather_applet/C/stylesheet-images
 @dirrm share/gnome/help/gweather_applet/C/figures
 @dirrm share/gnome/help/gweather_applet/C
 @dirrm share/gnome/help/gweather_applet
-@exec ${MKDIR} -p %D/share/gnome/help/gnotes_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gnotes_applet/it/stylesheet-images
 @dirrm share/gnome/help/gnotes_applet/it/stylesheet-images
 @dirrm share/gnome/help/gnotes_applet/it/figures
 @dirrm share/gnome/help/gnotes_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/gnotes_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gnotes_applet/C/stylesheet-images
 @dirrm share/gnome/help/gnotes_applet/C/stylesheet-images
 @dirrm share/gnome/help/gnotes_applet/C/figures
 @dirrm share/gnome/help/gnotes_applet/C
 @dirrm share/gnome/help/gnotes_applet
-@exec ${MKDIR} -p %D/share/gnome/help/gkb_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gkb_applet/it/stylesheet-images
 @dirrm share/gnome/help/gkb_applet/it/stylesheet-images
 @dirrm share/gnome/help/gkb_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/gkb_applet/hu/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gkb_applet/hu/stylesheet-images
 @dirrm share/gnome/help/gkb_applet/hu/stylesheet-images
 @dirrm share/gnome/help/gkb_applet/hu/figures
 @dirrm share/gnome/help/gkb_applet/hu
-@exec ${MKDIR} -p %D/share/gnome/help/gkb_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gkb_applet/C/stylesheet-images
 @dirrm share/gnome/help/gkb_applet/C/stylesheet-images
 @dirrm share/gnome/help/gkb_applet/C/figures
 @dirrm share/gnome/help/gkb_applet/C
 @dirrm share/gnome/help/gkb_applet
-@exec ${MKDIR} -p %D/share/gnome/help/geyes_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/geyes_applet/it/stylesheet-images
 @dirrm share/gnome/help/geyes_applet/it/stylesheet-images
 @dirrm share/gnome/help/geyes_applet/it/figures
 @dirrm share/gnome/help/geyes_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/geyes_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/geyes_applet/es/stylesheet-images
 @dirrm share/gnome/help/geyes_applet/es/stylesheet-images
 @dirrm share/gnome/help/geyes_applet/es/figures
 @dirrm share/gnome/help/geyes_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/geyes_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/geyes_applet/C/stylesheet-images
 @dirrm share/gnome/help/geyes_applet/C/stylesheet-images
 @dirrm share/gnome/help/geyes_applet/C/figures
 @dirrm share/gnome/help/geyes_applet/C
 @dirrm share/gnome/help/geyes_applet
-@exec ${MKDIR} -p %D/share/gnome/help/fifteen_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/fifteen_applet/it/stylesheet-images
 @dirrm share/gnome/help/fifteen_applet/it/stylesheet-images
 @dirrm share/gnome/help/fifteen_applet/it/figures
 @dirrm share/gnome/help/fifteen_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/fifteen_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/fifteen_applet/C/stylesheet-images
 @dirrm share/gnome/help/fifteen_applet/C/stylesheet-images
 @dirrm share/gnome/help/fifteen_applet/C/figures
 @dirrm share/gnome/help/fifteen_applet/C
 @dirrm share/gnome/help/fifteen_applet
-@exec ${MKDIR} -p %D/share/gnome/help/drivemount_applet/ja/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/drivemount_applet/ja/stylesheet-images
 @dirrm share/gnome/help/drivemount_applet/ja/stylesheet-images
 @dirrm share/gnome/help/drivemount_applet/ja/figures
 @dirrm share/gnome/help/drivemount_applet/ja
-@exec ${MKDIR} -p %D/share/gnome/help/drivemount_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/drivemount_applet/it/stylesheet-images
 @dirrm share/gnome/help/drivemount_applet/it/stylesheet-images
 @dirrm share/gnome/help/drivemount_applet/it/figures
 @dirrm share/gnome/help/drivemount_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/drivemount_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/drivemount_applet/es/stylesheet-images
 @dirrm share/gnome/help/drivemount_applet/es/stylesheet-images
 @dirrm share/gnome/help/drivemount_applet/es/figures
 @dirrm share/gnome/help/drivemount_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/drivemount_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/drivemount_applet/C/stylesheet-images
 @dirrm share/gnome/help/drivemount_applet/C/stylesheet-images
 @dirrm share/gnome/help/drivemount_applet/C/figures
 @dirrm share/gnome/help/drivemount_applet/C
 @dirrm share/gnome/help/drivemount_applet
-@exec ${MKDIR} -p %D/share/gnome/help/diskusage_applet/ja/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/diskusage_applet/ja/stylesheet-images
 @dirrm share/gnome/help/diskusage_applet/ja/stylesheet-images
 @dirrm share/gnome/help/diskusage_applet/ja/figures
 @dirrm share/gnome/help/diskusage_applet/ja
-@exec ${MKDIR} -p %D/share/gnome/help/diskusage_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/diskusage_applet/it/stylesheet-images
 @dirrm share/gnome/help/diskusage_applet/it/stylesheet-images
 @dirrm share/gnome/help/diskusage_applet/it/figures
 @dirrm share/gnome/help/diskusage_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/diskusage_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/diskusage_applet/es/stylesheet-images
 @dirrm share/gnome/help/diskusage_applet/es/stylesheet-images
 @dirrm share/gnome/help/diskusage_applet/es/figures
 @dirrm share/gnome/help/diskusage_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/diskusage_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/diskusage_applet/C/stylesheet-images
 @dirrm share/gnome/help/diskusage_applet/C/stylesheet-images
 @dirrm share/gnome/help/diskusage_applet/C/figures
 @dirrm share/gnome/help/diskusage_applet/C
 @dirrm share/gnome/help/diskusage_applet
-@exec ${MKDIR} -p %D/share/gnome/help/cpumemusage_applet/ru/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/cpumemusage_applet/ru/stylesheet-images
 @dirrm share/gnome/help/cpumemusage_applet/ru/stylesheet-images
 @dirrm share/gnome/help/cpumemusage_applet/ru
-@exec ${MKDIR} -p %D/share/gnome/help/cpumemusage_applet/ja/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/cpumemusage_applet/ja/stylesheet-images
 @dirrm share/gnome/help/cpumemusage_applet/ja/stylesheet-images
 @dirrm share/gnome/help/cpumemusage_applet/ja/figures
 @dirrm share/gnome/help/cpumemusage_applet/ja
-@exec ${MKDIR} -p %D/share/gnome/help/cpumemusage_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/cpumemusage_applet/it/stylesheet-images
 @dirrm share/gnome/help/cpumemusage_applet/it/stylesheet-images
 @dirrm share/gnome/help/cpumemusage_applet/it/figures
 @dirrm share/gnome/help/cpumemusage_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/cpumemusage_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/cpumemusage_applet/es/stylesheet-images
 @dirrm share/gnome/help/cpumemusage_applet/es/stylesheet-images
 @dirrm share/gnome/help/cpumemusage_applet/es/figures
 @dirrm share/gnome/help/cpumemusage_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/cpumemusage_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/cpumemusage_applet/C/stylesheet-images
 @dirrm share/gnome/help/cpumemusage_applet/C/stylesheet-images
 @dirrm share/gnome/help/cpumemusage_applet/C/figures
 @dirrm share/gnome/help/cpumemusage_applet/C
 @dirrm share/gnome/help/cpumemusage_applet
-@exec ${MKDIR} -p %D/share/gnome/help/cpuload_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/cpuload_applet/it/stylesheet-images
 @dirrm share/gnome/help/cpuload_applet/it/stylesheet-images
 @dirrm share/gnome/help/cpuload_applet/it/figures
 @dirrm share/gnome/help/cpuload_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/cpuload_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/cpuload_applet/es/stylesheet-images
 @dirrm share/gnome/help/cpuload_applet/es/stylesheet-images
 @dirrm share/gnome/help/cpuload_applet/es/figures
 @dirrm share/gnome/help/cpuload_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/cpuload_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/cpuload_applet/C/stylesheet-images
 @dirrm share/gnome/help/cpuload_applet/C/stylesheet-images
 @dirrm share/gnome/help/cpuload_applet/C/figures
 @dirrm share/gnome/help/cpuload_applet/C
 @dirrm share/gnome/help/cpuload_applet
-@exec ${MKDIR} -p %D/share/gnome/help/clockmail_applet/ja/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/clockmail_applet/ja/stylesheet-images
 @dirrm share/gnome/help/clockmail_applet/ja/stylesheet-images
 @dirrm share/gnome/help/clockmail_applet/ja/figures
 @dirrm share/gnome/help/clockmail_applet/ja
-@exec ${MKDIR} -p %D/share/gnome/help/clockmail_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/clockmail_applet/it/stylesheet-images
 @dirrm share/gnome/help/clockmail_applet/it/stylesheet-images
-@exec ${MKDIR} -p %D/share/gnome/help/clockmail_applet/it/figures
+@exec ${MKDIR} %D/share/gnome/help/clockmail_applet/it/figures
 @dirrm share/gnome/help/clockmail_applet/it/figures
 @dirrm share/gnome/help/clockmail_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/clockmail_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/clockmail_applet/C/stylesheet-images
 @dirrm share/gnome/help/clockmail_applet/C/stylesheet-images
 @dirrm share/gnome/help/clockmail_applet/C/figures
 @dirrm share/gnome/help/clockmail_applet/C
 @dirrm share/gnome/help/clockmail_applet
-@exec ${MKDIR} -p %D/share/gnome/help/charpick_applet/ja/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/charpick_applet/ja/stylesheet-images
 @dirrm share/gnome/help/charpick_applet/ja/stylesheet-images
 @dirrm share/gnome/help/charpick_applet/ja/figures
 @dirrm share/gnome/help/charpick_applet/ja
-@exec ${MKDIR} -p %D/share/gnome/help/charpick_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/charpick_applet/it/stylesheet-images
 @dirrm share/gnome/help/charpick_applet/it/stylesheet-images
 @dirrm share/gnome/help/charpick_applet/it/figures
 @dirrm share/gnome/help/charpick_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/charpick_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/charpick_applet/es/stylesheet-images
 @dirrm share/gnome/help/charpick_applet/es/stylesheet-images
 @dirrm share/gnome/help/charpick_applet/es/figures
 @dirrm share/gnome/help/charpick_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/charpick_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/charpick_applet/C/stylesheet-images
 @dirrm share/gnome/help/charpick_applet/C/stylesheet-images
 @dirrm share/gnome/help/charpick_applet/C/figures
 @dirrm share/gnome/help/charpick_applet/C
 @dirrm share/gnome/help/charpick_applet
-@exec ${MKDIR} -p %D/share/gnome/help/cdplayer_applet/ja/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/cdplayer_applet/ja/stylesheet-images
 @dirrm share/gnome/help/cdplayer_applet/ja/stylesheet-images
 @dirrm share/gnome/help/cdplayer_applet/ja/figures
 @dirrm share/gnome/help/cdplayer_applet/ja
-@exec ${MKDIR} -p %D/share/gnome/help/cdplayer_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/cdplayer_applet/it/stylesheet-images
 @dirrm share/gnome/help/cdplayer_applet/it/stylesheet-images
 @dirrm share/gnome/help/cdplayer_applet/it/figures
 @dirrm share/gnome/help/cdplayer_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/cdplayer_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/cdplayer_applet/es/stylesheet-images
 @dirrm share/gnome/help/cdplayer_applet/es/stylesheet-images
 @dirrm share/gnome/help/cdplayer_applet/es/figures
 @dirrm share/gnome/help/cdplayer_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/cdplayer_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/cdplayer_applet/C/stylesheet-images
 @dirrm share/gnome/help/cdplayer_applet/C/stylesheet-images
 @dirrm share/gnome/help/cdplayer_applet/C/figures
 @dirrm share/gnome/help/cdplayer_applet/C
 @dirrm share/gnome/help/cdplayer_applet
-@exec ${MKDIR} -p %D/share/gnome/help/battery_applet/ja/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/battery_applet/ja/stylesheet-images
 @dirrm share/gnome/help/battery_applet/ja/stylesheet-images
 @dirrm share/gnome/help/battery_applet/ja/figures
 @dirrm share/gnome/help/battery_applet/ja
-@exec ${MKDIR} -p %D/share/gnome/help/battery_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/battery_applet/it/stylesheet-images
 @dirrm share/gnome/help/battery_applet/it/stylesheet-images
 @dirrm share/gnome/help/battery_applet/it/figures
 @dirrm share/gnome/help/battery_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/battery_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/battery_applet/es/stylesheet-images
 @dirrm share/gnome/help/battery_applet/es/stylesheet-images
 @dirrm share/gnome/help/battery_applet/es/figures
 @dirrm share/gnome/help/battery_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/battery_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/battery_applet/C/stylesheet-images
 @dirrm share/gnome/help/battery_applet/C/stylesheet-images
 @dirrm share/gnome/help/battery_applet/C/figures
 @dirrm share/gnome/help/battery_applet/C
 @dirrm share/gnome/help/battery_applet
-@exec ${MKDIR} -p %D/share/gnome/help/asclock_applet/ja/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/asclock_applet/ja/stylesheet-images
 @dirrm share/gnome/help/asclock_applet/ja/stylesheet-images
 @dirrm share/gnome/help/asclock_applet/ja/figures
 @dirrm share/gnome/help/asclock_applet/ja
-@exec ${MKDIR} -p %D/share/gnome/help/asclock_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/asclock_applet/it/stylesheet-images
 @dirrm share/gnome/help/asclock_applet/it/stylesheet-images
-@exec ${MKDIR} -p %D/share/gnome/help/asclock_applet/it/figures
+@exec ${MKDIR} %D/share/gnome/help/asclock_applet/it/figures
 @dirrm share/gnome/help/asclock_applet/it/figures
 @dirrm share/gnome/help/asclock_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/asclock_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/asclock_applet/C/stylesheet-images
 @dirrm share/gnome/help/asclock_applet/C/stylesheet-images
 @dirrm share/gnome/help/asclock_applet/C/figures
 @dirrm share/gnome/help/asclock_applet/C
 @dirrm share/gnome/help/asclock_applet
-@exec ${MKDIR} -p %D/share/gnome/help/anotherclock_applet/uk/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/anotherclock_applet/uk/stylesheet-images
 @dirrm share/gnome/help/anotherclock_applet/uk/stylesheet-images
 @dirrm share/gnome/help/anotherclock_applet/uk/figures
 @dirrm share/gnome/help/anotherclock_applet/uk
-@exec ${MKDIR} -p %D/share/gnome/help/anotherclock_applet/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/anotherclock_applet/it/stylesheet-images
 @dirrm share/gnome/help/anotherclock_applet/it/stylesheet-images
 @dirrm share/gnome/help/anotherclock_applet/it/figures
 @dirrm share/gnome/help/anotherclock_applet/it
-@exec ${MKDIR} -p %D/share/gnome/help/anotherclock_applet/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/anotherclock_applet/es/stylesheet-images
 @dirrm share/gnome/help/anotherclock_applet/es/stylesheet-images
 @dirrm share/gnome/help/anotherclock_applet/es/figures
 @dirrm share/gnome/help/anotherclock_applet/es
-@exec ${MKDIR} -p %D/share/gnome/help/anotherclock_applet/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/anotherclock_applet/C/stylesheet-images
 @dirrm share/gnome/help/anotherclock_applet/C/stylesheet-images
 @dirrm share/gnome/help/anotherclock_applet/C/figures
 @dirrm share/gnome/help/anotherclock_applet/C

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/05/08 14:22:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/06/26 10:30:11 seb Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -614,5 +614,5 @@ share/type-convert/type.convert
 @dirrm etc/CORBA
 @exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/libart.m4 ${LOCALBASE}/share/aclocal/libart.m4
 @unexec test %D = ${LOCALBASE} || ${RM} -f ${LOCALBASE}/share/aclocal/libart.m4
-@exec ${MKDIR} -p ${LOCALSTATEDIR}
+@exec ${MKDIR} ${LOCALSTATEDIR}
 @unexec ${RM} -rf ${LOCALSTATEDIR}
