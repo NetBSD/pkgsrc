@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1 1998/08/30 17:39:21 garbled Exp $
+--- Makefile.orig	Tue Jul 12 12:35:06 1988
++++ Makefile	Sat Aug 29 07:57:23 1998
+@@ -14,33 +14,33 @@
+ #	For Microsoft C under DOS, you need a real make, not MSC make,
+ #	to run this Makefile.  The public domain "ndmake" will suffice.
+ #
+-CC=		cl			# C compiler name goes here (MSC)
++#CC=		cl			# C compiler name goes here (MSC)
+ CC=		cc			# C compiler name goes here (UNIX)
+ 
+-PROGS=		msc			# Programs to build (MSC)
++#PROGS=		msc			# Programs to build (MSC)
+ PROGS=		unix			# Programs to build (UNIX)
+ 
+ TIME_FUNC=	-DMSC_CLOCK		# Use Microsoft clock() for measurement
+-TIME_FUNC=	-DTIME			# Use time(2) for measurement
+-TIME_FUNC=	-DTIMES			# Use times(2) for measurement
+-HZ=		50			# Frequency of times(2) clock ticks
+-HZ=		60			# Frequency of times(2) clock ticks
+-HZ=		100			# Frequency of times(2) clock ticks
+-HZ=		1			# Give bogus result unless changed!
+-HZ=		60			# Frequency of times(2) clock ticks
++#TIME_FUNC=	-DTIME			# Use time(2) for measurement
++#TIME_FUNC=	-DTIMES			# Use times(2) for measurement
++#HZ=		50			# Frequency of times(2) clock ticks
++#HZ=		60			# Frequency of times(2) clock ticks
++#HZ=		100			# Frequency of times(2) clock ticks
++#HZ=		1			# Give bogus result unless changed!
++#HZ=		60			# Frequency of times(2) clock ticks
+ 
+ STRUCTASSIGN=				# Compiler can assign structs
+-STRUCTASSIGN=	-DNOSTRUCTASSIGN	# Compiler cannot assign structs
++#STRUCTASSIGN=	-DNOSTRUCTASSIGN	# Compiler cannot assign structs
+ 
+ ENUMS=					# Compiler does have enum type
+-ENUMS=		-DNOENUMS		# Compiler doesn't have enum type
++#ENUMS=		-DNOENUMS		# Compiler doesn't have enum type
+ 
+-OPTIMIZE=	-Ox -G2			# Optimization Level (MSC, 80286)
+-OPTIMIZE=	-O			# Optimization Level (generic UNIX)
++#OPTIMIZE=	-Ox -G2			# Optimization Level (MSC, 80286)
++OPTIMIZE=	-O2			# Optimization Level (generic UNIX)
+ 
+ LFLAGS=					#Loader Flags
+ 
+-CFLAGS=	$(OPTIMIZE) $(TIME_FUNC) -DHZ=$(HZ) $(ENUMS) $(STRUCTASSIGN) $(CFL)
++CFLAGS=	$(OPTIMIZE) $(TIME_FUNC) $(ENUMS) $(STRUCTASSIGN) $(CFL)
+ 
+ #
+ #		You shouldn't need to touch the rest

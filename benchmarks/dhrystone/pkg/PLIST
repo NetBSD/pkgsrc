@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/30 17:39:22 garbled Exp $
+bin/dry2
+bin/dry2reg
+share/doc/dhrystone/clarify.doc
+share/doc/dhrystone/Rationale
+@dirrm share/doc/dhrystone
