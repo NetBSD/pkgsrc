@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/03/13 17:37:14 fredb Exp $
+# $NetBSD: Makefile,v 1.15 2002/03/14 00:44:48 wiz Exp $
 
 DISTNAME=		ImageMagick-5.3.9
 PKGNAME=		p5-PerlMagick-5.3.9
@@ -12,7 +12,9 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.simplesystems.org/ImageMagick/
 COMMENT=		Object-oriented Perl interface to ImageMagick
 
-DEPENDS+=		${DISTNAME}:../../${MAGICK}
+# restore following line on next update
+#DEPENDS+=		${DISTNAME}:../../${MAGICK}
+DEPENDS+=		ImageMagick-5.3.9nb1:../../${MAGICK}
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
