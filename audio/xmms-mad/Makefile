@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/05/02 11:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/10 11:36:44 adam Exp $
 #
 
 DISTNAME=		xmms-mad-0.0.9
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		audio
 MASTER_SITES=		http://www.superduper.net/downloads/xmms-mad/
 
@@ -19,7 +19,8 @@ USE_BUILDLINK2=		YES
 CPPFLAGS+=              -DHAVE_NANOSLEEP=1
 .endif
 
-.include "../../audio/mad/buildlink2.mk"
+.include "../../audio/libid3tag/buildlink2.mk"
+.include "../../audio/libmad/buildlink2.mk"
 .include "../../audio/xmms/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
