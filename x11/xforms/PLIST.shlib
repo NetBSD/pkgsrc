@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.shlib,v 1.2 2001/01/04 15:11:04 agc Exp $
+@comment $NetBSD: PLIST.shlib,v 1.1 2001/10/31 22:29:24 zuntum Exp $
 lib/libforms.so
 lib/libforms.so.0
 lib/libforms.so.0.88

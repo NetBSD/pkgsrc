@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-SunOS,v 1.1 1999/12/06 20:44:59 bouyer Exp $
+@comment $NetBSD: PLIST-SunOS,v 1.1 2001/10/31 22:29:22 zuntum Exp $
 bin/kappfinder
 bin/kappfinder_restart
 bin/kattraction.kss
