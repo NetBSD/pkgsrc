@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/03/26 02:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/24 18:02:25 snj Exp $
 #
 
 DISTNAME=	bbweather-0.6
@@ -13,7 +13,7 @@ COMMENT=	Show current weather conditions
 
 DEPENDS+=	wget>=1.7:../../net/wget
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 REPLACE_PERL=		GrabWeather
