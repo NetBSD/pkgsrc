@@ -1,8 +1,12 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:14:18 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 21:16:47 wiz Exp $
 
-MD5 (jisksp14.bdf.gz) = e8a452c07cd5d1d31d3a6f32c2b74265
-MD5 (jisksp16-1990.bdf.Z) = c4ebfb1328a0d9a738ce7621094e40aa
-MD5 (min-1-24.bdf.gz) = 3c18ee131862b6cf04c662e9c6ef9677
-MD5 (jisksp40.bdf.Z) = 220476f8641f336da48aad3c3e9c386f
+SHA1 (jisksp14.bdf.gz) = 8286f53311a81345bd16dd29b8f860d66bd048c6
+Size (jisksp14.bdf.gz) = 181005 bytes
+SHA1 (jisksp16-1990.bdf.Z) = 41836e93c8ed72c2745c91024a749422e94fd976
+Size (jisksp16-1990.bdf.Z) = 255357 bytes
+SHA1 (min-1-24.bdf.gz) = 7c36ea55010383c5f07dcfeb65dee23cc0534c74
+Size (min-1-24.bdf.gz) = 336272 bytes
+SHA1 (jisksp40.bdf.Z) = 0ed56bc280a41da088fc9d5df00a7b989d0e8932
+Size (jisksp40.bdf.Z) = 893895 bytes
 SHA1 (patch-aa) = 366d448cbf803d406945f2a4b9002a68bf346e52
 SHA1 (patch-ab) = e89c21ee2df5eb4312679cb58a7fdb9b243bf04b
