@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.974 2003/10/29 17:55:55 jmmv Exp $
+$NetBSD: TODO,v 1.975 2003/10/29 21:03:01 reed Exp $
 
 Suggested new packages
 ======================
@@ -298,7 +298,6 @@ Suggested package updates
 	o sablecc-2.18.1
 	o samba-3.0.0
 	o sawfish-1.3
-	o scribus-1.0.1 [pkg/22557]
 	o sendfile-20010424
 	o siag-3.6.0
 	o skill-4.1.1
