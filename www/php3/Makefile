@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/02/29 18:10:24 explorer Exp $
+# $NetBSD: Makefile,v 1.11 2000/04/12 17:51:57 jdolecek Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.php.net/
 
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
 
-PHP_VERSION=	3.0.7
+PHP_VERSION=	3.0.16
 
 .if defined(BUILDING_EXTENSION_MODULE) || defined(BUILDING_SERVER_MODULE)
 DEPENDS+=	php-${PHP_VERSION}:../../www/php3
@@ -51,11 +51,7 @@ do-install:
 		${PREFIX}/bin/php2convert
 	if [ ! -d ${PREFIX}/libexec/cgi-bin ]; then \
 	  ${MKDIR}  ${PREFIX}/libexec/cgi-bin ; fi
-	${LN} -sf ${PREFIX}/bin/php ${PREFIX}/libexec/cgi-bin/php
-	cd ${WRKSRC}/dbase && \
-		${INSTALL_PROGRAM} dbfadd dbfcreat dbfdel dbfget dbflst \
-			dbfndx dbfpack dbftst ${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/dbase/dbfscan ${PREFIX}/bin/
+	${LN} -sf ../../bin/php ${PREFIX}/libexec/cgi-bin/php
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/php3 ${PREFIX}/share/php3
 	${INSTALL_DATA} ${WRKSRC}/extra/icons/* ${PREFIX}/share/php3/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/php3
