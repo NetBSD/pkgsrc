@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/12 17:13:32 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/05/14 08:03:54 xtraeme Exp $
 
-SHA1 (pnet-0.6.2.tar.gz) = 2e6d1e26aa6bc332e9c286667105276f46110fa8
-Size (pnet-0.6.2.tar.gz) = 3138851 bytes
+SHA1 (pnet-0.6.4.tar.gz) = f386fce37d143cbe9e2b2e2f7ffad8de52ec1a9e
+Size (pnet-0.6.4.tar.gz) = 3323737 bytes
