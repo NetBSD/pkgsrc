@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2000/02/01 02:00:14 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2000/06/02 19:45:01 fredb Exp $
 
---- ./hacks/Makefile.in.orig	Sun Jan 30 13:31:59 2000
-+++ ./hacks/Makefile.in	Tue Feb  1 02:34:20 2000
+--- hacks/Makefile.in.orig	Mon Apr  3 04:04:17 2000
++++ hacks/Makefile.in	Fri Jun  2 07:53:12 2000
 @@ -30,7 +30,7 @@
  SHELL		= /bin/sh
  INSTALL		= @INSTALL@
@@ -11,10 +11,10 @@ $NetBSD: patch-ab,v 1.5 2000/02/01 02:00:14 wiz Exp $
  INSTALL_DATA	= @INSTALL_DATA@
  INSTALL_DIRS	= @INSTALL_DIRS@
  HACKDIR		= @HACKDIR@
-@@ -501,6 +500,11 @@
+@@ -501,6 +501,11 @@
  
- bsod:	 	bsod.o		$(HACK_OBJS) $(COL)
- 	$(CC_HACK) -o $@ $@.o	$(HACK_OBJS) $(COL) $(HACK_LIBS) $(XPM_LIBS)
+ bsod:	 	bsod.o		$(HACK_OBJS) $(GRAB)
+ 	$(CC_HACK) -o $@ $@.o	$(HACK_OBJS) $(GRAB) $(HACK_LIBS) $(XPM_LIBS) $(GRAB_LIBS)
 +
 +.if ($(MACHINE_ARCH) == arm32)
 +distort.o: distort.c
