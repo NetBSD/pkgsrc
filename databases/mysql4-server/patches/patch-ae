@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/12/20 16:00:43 martti Exp $
+
+--- configure.in.orig	2003-12-14 21:23:49.000000000 +0000
++++ configure.in	2003-12-20 12:08:47.000000000 +0000
+@@ -2159,7 +2159,6 @@
+ else
+   bench_dirs=""
+ fi
+-bench_dirs="$bench_dirs mysql-test"
+ AC_SUBST(bench_dirs)
+ 
+ # Don't build readline, i have it already

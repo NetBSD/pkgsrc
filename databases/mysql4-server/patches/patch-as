@@ -1,0 +1,21 @@
+$NetBSD: patch-as,v 1.1.1.1 2003/12/20 16:00:43 martti Exp $
+
+--- support-files/Makefile.in.orig	Mon Oct 13 17:48:34 2003
++++ support-files/Makefile.in	Mon Oct 13 17:50:44 2003
+@@ -219,15 +219,7 @@
+ 
+ SUBDIRS = MacOSX
+ 
+-pkgdata_DATA = my-small.cnf \
+-			my-medium.cnf \
+-			my-large.cnf \
+-			my-huge.cnf \
+-			mysql-log-rotate \
+-			mysql-@VERSION@.spec \
+-			binary-configure \
+-			MySQL-shared-compat.spec
+-
++pkgdata_DATA = 
+ 
+ pkgdata_SCRIPTS = mysql.server
+ 
