@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/14 17:21:44 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/11 12:23:19 jmmv Exp $
 #
 
 DISTNAME=	ghostscript-viewer-0.6
@@ -12,16 +12,16 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://reboot.animeirc.de/sylpheed/ghostscript_viewer/
 COMMENT=	Plugin to make Sylpheed-claws display PostScript and PDF attachments
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
 PLIST_SRC=	${.CURDIR}/../../mail/sylpheed-claws/PLIST.plugins
 PLIST_SUBST+=	PLUGIN_NAME=ghostscript_viewer
 
-.include "../../mail/sylpheed-claws/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../mk/ghostscript.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../mail/sylpheed-claws/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
+.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
