@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/09/21 13:12:26 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/11/12 00:29:57 dmcmahill Exp $
 #
 
 DISTNAME=		xmame-0.56.2
@@ -24,8 +24,8 @@ UNLIMIT_RESOURCES=	datasize
 
 .include "../../mk/bsd.prefs.mk"
 
-# XXX On arm(32), the src/unix/video_drivers/x11_window.c causes problems
-.if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm") 
+# XXX On arm(32)/sparc, the src/unix/video_drivers/x11_window.c causes problems
+.if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "sparc") 
 .  if (${CFLAGS:M-O2} == "-O2")
 CFLAGS:=		${CFLAGS:S/-O2/-O0/}
 .  endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2002/09/21 12:53:48 jlam Exp $
+# $NetBSD: Makefile,v 1.79 2002/11/12 00:25:54 dmcmahill Exp $
 #
 
 DISTNAME=		xmame-0.60.1
@@ -24,7 +24,7 @@ UNLIMIT_RESOURCES=	datasize
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm")
+.if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "sparc")
 .  if (${CFLAGS:M-O2} == "-O2")
 CFLAGS:=         ${CFLAGS:S/-O2/-O0/} 
 .  endif
