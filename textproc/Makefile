@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2000/10/24 10:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2000/10/26 22:44:36 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
@@ -31,7 +31,7 @@
     SUBDIR += p5-Convert-ASN1
     SUBDIR += p5-Convert-BER
     SUBDIR += p5-Filter
-    SUBDIR += p5-Text-CVS_XS
+    SUBDIR += p5-Text-CSV_XS
     SUBDIR += p5-Text-DelimMatch
     SUBDIR += p5-Text-Template
     SUBDIR += p5-XML-Parser
