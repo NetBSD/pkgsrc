@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/08/28 14:53:15 agc Exp $
+
+--- doc/Makefile.in.orig	Sun Aug 25 20:05:32 2002
++++ doc/Makefile.in	Sun Aug 25 20:05:51 2002
+@@ -112,8 +112,8 @@
+ opencm.html: opencm.texi version.texi manual/cmd-ref.texi
+ opencm.info: opencm.texi version.texi manual/cmd-ref.texi
+ 
+-opencm-internals: opencm-internals.info.gz opencm-internals.ps opencm-internals.html
+-opencm: opencm.info.gz opencm.ps opencm.html
++opencm-internals: opencm-internals.info.gz
++opencm: opencm.info.gz
+ 
+ %.info.gz: %.info
+ 	rm -f $@
