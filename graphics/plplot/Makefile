@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/25 21:08:58 jtb Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/26 21:42:16 jtb Exp $
 
 DISTNAME=	plplot-5.0.2
 CATEGORIES=	graphics
@@ -47,6 +47,9 @@ CONFIGURE_ARGS+="--without-shlib"
 CONFIGURE_ARGS+="--disable-python"
 CONFIGURE_ARGS+="--disable-itcl"
 CONFIGURE_ARGS+="--disable-dp"
+
+CPPFLAGS+=	-Dunix
+CONFIGURE_ENV+=	"CPPFLAGS=${CPPFLAGS}"
 
 post-patch:
 	for f in ${WRKSRC}/src/plctrl.c ; do		\
