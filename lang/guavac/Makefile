@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 21:44:31 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/05/31 16:43:46 kristerw Exp $
 #
 
 DISTNAME=	guavac-1.2
@@ -13,13 +13,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Free compiler for the Java language
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-DEPENDS+=	egcs-1.1.2:../../lang/egcs
-MAKE_ENV+=	PATH=${LOCALBASE}/egcs/bin:$PATH
-CXX=		${LOCALBASE}/egcs/bin/gcc
-CONFIGURE_ENV+=	CXX=${CXX}
-.endif
 
 GNU_CONFIGURE=  yes
 
