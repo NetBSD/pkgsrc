@@ -1,15 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/10/30 18:28:00 minskim Exp $
-
-# Global and legacy options
-.if defined(USE_SOCKS) && !empty(USE_SOCKS:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	socks
-.endif
-.if defined(XCHAT_USE_SSL) && !empty(XCHAT_USE_SSL:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	ssl
-.endif
-.if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	inet6
-.endif
+# $NetBSD: options.mk,v 1.2 2004/11/17 19:56:49 xtraeme Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xchat2
 PKG_SUPPORTED_OPTIONS=	inet6 ssl socks
