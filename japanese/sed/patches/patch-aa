@@ -1,0 +1,2215 @@
+●●●●● GNU sed version 1.18 + multi-byte extension 1.03 ●●●●●
+●●●●●                              Jun. 2, 1994 by t^2 ●●●●●
+
+  このファイルは GNU sed version 1.18 (sed-1.18) のソースコードから, そ
+  のマルチバイト文字対応版 sed-1.18+mb1.03 のソースコードを生成するため
+  の差分を含んでいます. sed-1.18 のソースを展開してあるディレクトリで
+
+      % patch -p1 < このファイル
+
+  などとしてパッチを当ててください. その後 README.MB を読んでください.
+
+〒810  福岡市中央区梅光園団地 7-207
+TEL/FAX: 092-731-4025 (TEL/FAX 自動切替え)
+         092-724-6342 (TEL のみ)
+E-mail: NBC02362@niftyserve.or.jp                       t^2 (谷本孝浩)
+
+diff -ru2N sed-1.18/ChangeLog.MB sed+mb1.03/ChangeLog.MB
+--- sed-1.18/ChangeLog.MB	Thu Jan  1 09:00:00 1970
++++ sed+mb1.03/ChangeLog.MB	Thu Jun  2 17:00:34 1994
+@@ -0,0 +1,206 @@
++Thu Jun  2 16:56:47 1994  Takahiro Tanimoto  (tt@isaac)
++
++	* Version 1.18 + multi-byte extension 1.03 released.
++
++Sat Mar  5 16:31:53 1994  Takahiro Tanimoto  (tt@isaac)
++
++	* README.MSC: PC-9800 シリーズ用 MS-C 6.00A の, ワイルドカード展
++	開ルーチンのバグに対処した.  以前の stdargv.diff をこれに統合し, 
++	削除した.  (Thanks to 福浩邦さん <GFE00522@niftyserve.or.jp>)
++
++Sat Aug 21 18:03:33 1993  Takahiro Tanimoto  (tt at pc98)
++
++	* Version 1.18 + multi-byte extension 1.02 released.
++
++Thu Aug 19 03:48:33 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* regex.c (re_compile_fastmap): charset_not の fastmap の作成処
++	理が間違っていて, fastmap を使用する場合 (sed も含まれる), 正規
++	表現の先頭の [^Ａ] や [^a] に例えば Ｂ がマッチしなかった.
++	(Thanks to 小屋良祐さん <JAE03716@niftyserve.or.jp>)
++
++Tue Aug 10 00:23:37 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* regex.c (set_list_bits): 文字クラス中のマルチバイト文字の最適
++	化で, 区間終点の更新処理部分にバグがあり, [Ａ-ＣＥ-ＧＢ-Ｄ] を最
++	適化すると [Ａ-Ｇ] だが, これが [Ａ-Ｅ] となってしまっていた.
++
++Fri Jul 23 15:59:26 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* Version 1.18 + multi-byte extension 1.01 released.
++
++Fri Jul 23 02:05:23 1993  Takahiro Tanimoto  (tt at pc98)
++
++	* DEFS.dos: strcmpi(), strncmpi() を stricmp(), strnicmp() に変
++	更.
++
++	* sed.c (main): MS-DOS の場合, argv[0] からディレクトリ名, 拡張
++	子を取り除き, 小文字にしてから argv[0], myname へセットするよう
++	に変更した.
++
++	* stdargv.diff: 追加.
++
++Sun Jul 11 02:31:13 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* sed.c (compare_mbcs): 同じオブジェクトに対するポインタを渡され
++	た時には 0 を返すように修正.
++
++Sat Jul 10 17:12:46 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* configure.in: strncasecmp のチェックを追加.
++
++	* sed.c (main): マルチバイト文字のタイプ指定オプションの形式を 
++	gawk-2.15.2+mb1.01, grep-2.0+mb1.01 に合わせて変更.
++
++	* grep-2.0+mb1.01 から mbc.[ch] を輸入.  regex.[ch], sed.c をそ
++	れに従って書き換えた.
++
++	* regex.c (print_compiled_pattern): printf() で syntax の出力書
++	式が間違っていた.
++
++	* regex.h: 定数の後に U, UL をつけると old-C でコンパイルできな
++	い.  これらをキャストに変更した.
++
++	* regex.h: RE_DUP_MAX の定義を 16 ビット int のマシンでもオーバ
++	フローしない書き方に修正.
++
++Sat Jul  3 06:53:23 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* Version 1.18 + multi-byte extension 1.00 released.
++
++Fri Jul  2 11:33:41 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* regex.c (regex_compile): set_list_bits からの返り値の判定にバ
++	グがあったのを修正.  (判定の必要がない部分だったので単に削除した.)
++
++	* sed.c (compile_program), regex.c (set_list_bits): 使用していな
++	い変数があったので削除した.
++
++Fri Jul  2 10:34:35 1993  Takahiro Tanimoto  (tt at pc98)
++
++	* regex.c (re_match_2): ポインタ同士を int にキャストしてから比
++	較している部分があったが, そのキャストを削除した.  オリジナルの
++	作者が何のためにキャストしていたのかは不明.
++
++	* utils.c (add1_buffer): 16 ビット int のために修正.
++
++	* sed.c (compile_program): y コマンドの処理を 16 ビット int のた
++	めに修正.
++
++	* regex.c (regcmp): 変数 syntax の宣言が unsigned となっていたの
++	を reg_syntax_t に修正した.
++
++	* regex.c (at_endline_loc_p): 引数 syntax の宣言が int となって
++	いたのを reg_syntax_t に修正した.
++
++	* regex.c (print_compiled_pattern): syntax の表示部分を修正.
++
++	* regex.h (reg_syntax_t, RE_BACKSLASH_ESCAPE_IN_LISTS): 16 ビッ
++	ト int のマシンでは reg_syntax_t == unsigned ではオーバフローす
++	るため, unsigned long とした.
++
++	* sed.c (read_file): MSDOS のとき errno, sys_errlist, sys_nerr 
++	を宣言しないように修正.  <stdlib.h> で宣言されていて多重定義エラー
++	になる.
++
++	* sed.c: MS-C (6.00A) にはプロトタイプ宣言中で
++
++	  void foo(int x, int);
++
++	のように変数名を付けた引数と型指定だけの引数を混在させるとエラー
++	になるというバグがあった.  compile_program のプロトタイプ宣言が
++	このバグのせいで通らなかったため変数名を追加して回避した.
++
++	* Makefile.msc DEFS.dos: DOS サポートのため追加.
++
++Sat Jun 19 09:53:47 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* Version 1.18 + multi-byte extension 0.04 released.
++
++	* sed.c (compile_program): y コマンドの処理が一部 byte order に
++	依存していて, little endian のマシンで誤動作していた.  (Thanks
++	to 長田仁志さん <QFH02545@niftyserve.or.jp>)
++
++Wed Jun  2 02:10:51 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* sed-1.17-1.18.diff を適用.
++
++Tue Jun  1 20:33:36 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* Version 1.17 + multi-byte extension 0.03 released.
++
++	* Version 1.15 → 1.17 の変更を施した.
++
++Tue May 25 00:12:06 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* Version 1.15 + multi-byte extension 0.02 released.
++
++Mon May 24 15:37:50 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* sed.c: 不必要な isascii() を削除した.
++
++	* regex.c (re_search_2): 後方へ advance する際のバグを修正.
++
++	* sed-1.14-1.15.diff を適用.
++
++Sat May 22 02:05:32 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* regex.c (re_match_2): exactn の処理部分で, #if 0 を #if 1 にし
++	た場合, 正しい処理を行っていなかったのを修正.
++
++Fri May 21 21:49:36 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* Version 1.14b + multi-byte extension 0.01.
++
++	* regex.[ch]: mbcharset, mbcharset_not を廃止.  代わりに 
++	charset, charset_not がマルチバイト文字をも保持する.
++
++	* regex.c (set_list_bits), regex.h (RE_TRANSLATED_RANGE): 廃止.
++
++Wed May 19 05:27:18 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* sed.c (execute_program): l コマンドでマルチバイト文字を出力す
++	るように変更した.  (Shift-JIS の際の半角カナ文字も.)
++
++Tue May 18 01:36:54 1993  Takahiro Tanimoto  (tt@albert)
++
++	* configure.in: memmove() のチェックを追加.
++
++	* regex.h: !__STDC__ のときに const の #define を追加.
++
++	* sed.c (compile_regex): [^]...] の扱いにオリジナルのバグがあっ
++	たが, マルチバイト対応に変更する際, 自動的に fix された.
++
++Mon May 17 03:37:51 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* regex.h (RE_TRANSLATED_RANGE): 下記の機能の選択のために追加.
++
++	* regex.c (set_list_bits, regex_compile): translate([a-z]) の解
++	釈を新旧どちらの方法で行うかを syntax で選択できるようにした.
++
++Sun May 16 15:12:18 1993  Takahiro Tanimoto  (tt@isaac)
++
++	* regex.c (regex_compile): GNU regex は, 例えば,
++	    translate('A') = 'A',
++	    translate('B') = 'B',
++	    translate('C') = 'C',
++	    translate('a') = 'A',
++	    translate('b') = 'b',
++	    translate('c') = 'C'
++	となっている場合に, translate([a-z]) を, 以前は [ABC] として解釈
++	していたが, 最近のものは [AbC] と解釈するように変更されている. 
++	これを古い解釈に戻した.  あまり関係はないが, translate 関連には, 
++	オリジナルのバグがあるようだ.  たとえば, x がメタキャラクタ 'Y' 
++	かどうかを判断するのに, translate(x) == 'Y', translate(x) ==
++	translate('Y'), x == 'Y' といった, 様々なテスト方法がソース中に
++	散在している.  メタキャラクタは translate で変更できないと思って
++	おいたほうがいい.
++
++
++Local Variables:
++mode: indented-text
++left-margin: 8
++fill-column: 72
++fill-prefix: "	"
++version-control: never
++End:
+diff -ru2N sed-1.18/DEFS.dos sed+mb1.03/DEFS.dos
+--- sed-1.18/DEFS.dos	Thu Jan  1 09:00:00 1970
++++ sed+mb1.03/DEFS.dos	Fri Jul 23 16:07:18 1993
+@@ -0,0 +1,10 @@
++#define __STDC__ 1
++#define STDC_HEADERS 1
++#define HAVE_STRING_H 1
++#define HAVE_VPRINTF 1
++#define HAVE_MEMCPY 1
++#define HAVE_MEMMOVE 1
++#define HAVE_STRCASECMP 1
++#define HAVE_STRNCASECMP 1
++#define strcasecmp(x, y) stricmp(x, y)
++#define strncasecmp(x, y, n) strnicmp(x, y, n)
+diff -ru2N sed-1.18/Makefile.in sed+mb1.03/Makefile.in
+--- sed-1.18/Makefile.in	Tue May 18 06:26:28 1993
++++ sed+mb1.03/Makefile.in	Fri Jul 23 02:49:14 1993
+@@ -18,4 +18,7 @@
+ # the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+ 
++# Multi-byte extension added May, 1993 by t^2 (Takahiro Tanimoto)
++# Last change: Jul. 23, 1993 by t^2
++
+ SHELL = /bin/sh
+ 
+@@ -38,4 +41,12 @@
+ 
+ DEFS = @DEFS@
++
++# Things you might set to MBCTYPE_DEF to spec. default multi-byte char type.
++# -DEUC			will make default multi-byte char type EUC and
++# -DSJIS		SJIS.
++#			If you do not set EUC/SJIS, sed assumes no multi-byte
++#			char as default.
++MBCTYPE_DEF = -DEUC
++
+ LIBS = @LIBS@
+ 
+@@ -55,9 +66,10 @@
+ #### End of system configuration section. ####
+ 
+-objs = sed.o utils.o regex.o getopt.o getopt1.o
+-srcs = sed.c utils.c regex.c getopt.c getopt1.c alloca.c
++objs = sed.o utils.o regex.o getopt.o getopt1.o mbc.o
++srcs = sed.c utils.c regex.c getopt.c getopt1.c mbc.c alloca.c
+ 
+ distfiles = COPYING COPYING.LIB ChangeLog README INSTALL Makefile.in \
+- configure configure.in regex.h getopt.h $(srcs)
++ configure configure.in regex.h getopt.h $(srcs) \
++ ChangeLog.MB README.MB Makefile.msc DEFS.dos mbc.h stdargv.diff
+ 
+ all_objs= $(objs) $(extra_objs)
+@@ -65,5 +77,5 @@
+ 
+ .c.o:
+-	$(CC) -c $(CFLAGS) $(CPPFLAGS) $(DEFS) -I$(srcdir) $<
++	$(CC) -c $(CFLAGS) $(CPPFLAGS) $(DEFS) $(MBCTYPE_DEF) -I$(srcdir) $<
+ 
+ sed:	$(all_objs)
+@@ -72,4 +84,5 @@
+ sed.o regex.o: regex.h
+ sed.o getopt1.o: getopt.h
++sed.o regex.o: mbc.h
+ 
+ install:	all
+@@ -91,5 +104,6 @@
+ 
+ dist:	$(distfiles)
+-	echo sed-`sed -e '/version_string/!d' -e 's/[^0-9.]*\([0-9.]*\).*/\1/' -e q sed.c` > .fname
++	echo -n sed-`sed -e '/version_string/!d' -e 's/[^0-9.]*\([0-9.]*\).*/\1/' -e q sed.c` > .fname
++	echo +mb`sed -e '/^ + multi-byte extension/!d' -e 's/[^0-9.]*\([0-9.]*\).*/\1/' -e q sed.c` >> .fname
+ 	rm -rf `cat .fname`
+ 	mkdir `cat .fname`
+@@ -99,5 +113,6 @@
+ 
+ dist.afs: $(distfiles)
+-	echo sed-`sed -e '/version_string/!d' -e 's/[^0-9.]*\([0-9.]*\).*/\1/' -e q sed.c` > .fname
++	echo -n sed-`sed -e '/version_string/!d' -e 's/[^0-9.]*\([0-9.]*\).*/\1/' -e q sed.c` > .fname
++	echo +mb`sed -e '/^ + multi-byte extension/!d' -e 's/[^0-9.]*\([0-9.]*\).*/\1/' -e q sed.c` >> .fname
+ 	rm -rf `cat .fname`
+ 	mkdir `cat .fname`
+diff -ru2N sed-1.18/Makefile.msc sed+mb1.03/Makefile.msc
+--- sed-1.18/Makefile.msc	Thu Jan  1 09:00:00 1970
++++ sed+mb1.03/Makefile.msc	Fri Jul 23 02:49:14 1993
+@@ -0,0 +1,106 @@
++# Generated automatically from Makefile.in by configure.
++# Makefile for GNU SED, a batch editor.
++# Copyright (C) 1987, 1991 Free Software Foundation, Inc.
++# 
++# This file is part of GNU SED.
++# 
++# GNU SED is free software; you can redistribute it and/or modify
++# it under the terms of the GNU General Public License as published by
++# the Free Software Foundation; either version 2, or (at your option)
++# any later version.
++# 
++# GNU SED is distributed in the hope that it will be useful,
++# but WITHOUT ANY WARRANTY; without even the implied warranty of
++# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++# GNU General Public License for more details.
++# 
++# You should have received a copy of the GNU General Public License
++# along with GNU SED; see the file COPYING.  If not, write to
++# the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
++
++# Multi-byte extension added May, 1993 by t^2 (Takahiro Tanimoto)
++# Last change: Jul. 23, 1993 by t^2
++
++#### Start of system configuration section. ####
++
++srcdir = .
++VPATH = .
++
++CC = cl -nologo -AL
++INSTALL = cp
++INSTALL_PROGRAM = $(INSTALL)
++
++# Things you might add to DEFS:
++# -DSTDC_HEADERS	If you have ANSI C headers and libraries.
++# -DUSG			If you have System V/ANSI C string
++#			and memory functions and headers.
++# -D__CHAR_UNSIGNED__	If type `char' is unsigned.
++#			gcc defines this automatically.
++# -DNO_VFPRINTF		If you lack vprintf function (but have _doprnt).
++#
++# For DOS, you must add them in DEFS.dos
++
++# Things you might set to MBCTYPE_DEF to spec. default multi-byte char type.
++# -DEUC			will make default multi-byte char type EUC and
++# -DSJIS		SJIS.
++#			If you do not set EUC/SJIS, sed assumes no multi-byte
++#			char as default.
++MBCTYPE_DEF = -DSJIS
++
++LIBS = setargv /link /noe /st:10000
++
++CFLAGS = -Ox -DREGEX_MALLOC=1
++LDFLAGS = 
++extra_objs =
++
++prefix =
++exec_prefix = $(prefix)
++
++# Prefix for each installed program, normally empty or `g'.
++binprefix = 
++
++# Where to install the executable.
++bindir = $(exec_prefix)/bin
++
++#### End of system configuration section. ####
++
++objs = sed.obj utils.obj regex.obj getopt.obj getopt1.obj mbc.obj
++srcs = sed.c utils.c regex.c getopt.c getopt1.c mbc.c alloca.c
++
++distfiles = COPYING COPYING.LIB ChangeLo README INSTALL Makefile.in \
++ configur configur.in regex.h getopt.h $(srcs) \
++ ChangeLo.MB README.MB Makefile.msc DEFS.dos mbc.h stdargv.dif
++
++all_objs= $(objs) $(extra_objs)
++all:	sed.exe
++
++.c.obj:
++	cat defs.dos $*.c > $*_.c
++	$(CC) -c $(CFLAGS) $(CPPFLAGS) $(MBCTYPE_DEF) -I$(srcdir) -Fo$*.obj $*_.c
++	rm $*_.c
++
++sed.exe:	$(all_objs)
++	$(CC) -o $@ $(LDFLAGS) $(all_objs) $(LIBS)
++
++sed.obj regex.obj: regex.h
++sed.obj getopt1.obj: getopt.h
++sed.obj regex.obj: mbc.h
++
++install:	all
++	$(INSTALL_PROGRAM) sed.exe $(bindir)/$(binprefix)sed.exe
++
++TAGS:	$(srcs)
++	etags $(srcs)
++
++clean:
++	rm -f sed.exe *.obj
++
++mostlyclean: clean
++
++distclean: clean
++	rm -f Makefile config.sta
++
++realclean: distclean
++	rm -f TAGS
++
++alloca.obj : alloca.c 
+diff -ru2N sed-1.18/README.MB sed+mb1.03/README.MB
+--- sed-1.18/README.MB	Thu Jan  1 09:00:00 1970
++++ sed+mb1.03/README.MB	Thu Jun  2 16:27:07 1994
+@@ -0,0 +1,228 @@
++●●●●● GNU sed version 1.18 + multi-byte extension 1.03 ●●●●●
++●●●●●                              Jun. 2, 1994 by t^2 ●●●●●
++
++    sed-1.18+mb1.03 -- マルチバイト文字対応版 GNU sed
++
++●概要
++
++    GNU プロジェクトによる sed をマルチバイト文字対応化したものです.
++
++●使用法
++
++    GNU sed からの拡張部分だけを説明します.
++
++    増えたオプションは以下の通りです.
++
++        -Wctype=ASCII または --ctype=ASCII
++            マルチバイト文字を考慮しません.  このオプションを使用した場
++            合, GNU sed のオリジナルと同じ動作になるはずです.
++
++        -Wctype=EUC または --ctype=EUC
++            マルチバイト文字として EUC を認識します.
++
++        -Wctype=SJIS または --ctype=SJIS
++            マルチバイト文字として Shift-JIS を認識します.
++
++        MS-DOS 以外のシステムで, Makefile(.in)? を書き換えずにインストー
++        ルした場合, デフォルトでは EUC を認識します.  MS-DOS ではデフォ
++        ルトで Shift-JIS を認識します.
++
++    以下, コマンドなどの変更点です.
++
++        y コマンド      バイト毎ではなく文字毎に変換します.
++
++        l コマンド      マルチバイト文字を考慮した出力を行います.  特に,
++                        EUC の半角カナの文字幅を考慮しています.
++
++        その他          ラベルにマルチバイト文字が使用できます.
++
++● SEDM103.LZH (MS-DOS 版実行形式を含むアーカイブ) について (それ以外の
++   形態で入手された方は無視してください)
++
++    1. アーカイブに含まれているファイル
++
++       オリジナルから全く手を加えていないファイル
++
++           CHANGELO     オリジナルのソースに含まれている ChangeLog
++           COPYING      オリジナルのソースに含まれている COPYING
++           COPYING.LIB  オリジナルのソースに含まれている COPYING.LIB
++           README       オリジナルのソースに含まれている README
++
++       sed+mb 用のファイル
++
++           CHANGELO.MB  sed+mb の変更履歴
++           README.MB    このファイル
++
++       MS-DOS 版 sed+mb 用のファイル
++
++           SED.EXE      MS-DOS 版 sed-1.18+mb1.03 の実行形式
++
++    2. SED.EXE について
++
++        sed-1.18+mb1.03 を MS-C 6.00A でコンパイルしたものです.
++
++        デフォルトでは Shift-JIS 漢字コードを含むプログラムやファイルを
++        処理できます.
++
++        setargv.obj を組み込んでありますので, MS-DOS でポピュラーなタイ
++        プのワイルドカードが使用できます.
++
++    3. コマンドライン引数について
++
++        前述したとおり MS-C の setargv.obj をリンクしていますので, その
++        仕様に従わなければなりません.
++
++        １つ１つの引数は空白で区切ります.  引数に空白, ", \, <, >, | を
++        含むときはクォーティングが必要です.  その方法は COMMAND.COM のバ
++        グ臭い仕様と, さらに setargv.obj にも問題があり, かなり難しいの
++        でここでは説明を省きます.  各自研究してください.  一番簡単なのは,
++        sed のプログラムをファイルにして
++
++            sed -f ファイル名
++
++        とすることです.
++
++●インストール (MS-DOS 以外)
++
++    デフォルトのマルチバイト文字の設定は, Makefile.in の中で指定します. 
++    デフォルトを Shift-JIS とする場合と, デフォルトでマルチバイト文字を
++    使用しない場合は Makefile.in の MBCTYPE_DEF マクロの定義をそれぞれ以
++    下のように変えてください.
++
++        MBCTYPE_DEF = -DSJIS            (デフォルトで Shift-JIS の場合)
++        MBCTYPE_DEF =                   (デフォルトで使用しない場合)
++
++    いずれの場合でも起動時のオプションによりマルチバイト文字コードの選択
++    が可能です.
++
++    その他の作業は, オリジナルの sed と同様ですので INSTALL をお読みくだ
++    さい.
++
++●インストール (MS-DOS 版)
++
++    MS-C 6.00A を使用して, デフォルトで Shift-JIS を認識する sed を作成
++    する場合は, README.MSC に目を通して, 必要ならライブラリにパッチを当
++    てた後,
++
++        A>nmake -f Makefile.msc
++
++    だけでＯＫです.  その他の処理系を使用する場合や, デフォルトを 
++    Shift-JIS 以外にしたい場合は Makefile.msc を参考に Makefile を書いて
++    ください.
++
++●バグ
++
++    1. いわゆる JIS には対応していません.  将来対応する予定もありません.
++
++    2. マルチバイト文字コードはあまり厳格には考えていません.
++
++        EUC       １バイト目 ... 0x80 - 0xff
++        EUC       ２バイト目 ... 0x01 - 0xff (0x0a を除く)
++
++        Shift-JIS １バイト目 ... 0x80 - 0x9f, 0xe0 - 0xff
++        Shift-JIS ２バイト目 ... 0x01 - 0xff (0x0a を除く)
++
++       として処理しています.  半角カナも使えます.  EUC の SS3 (0x8f) に
++       始まる３バイトコードは使えません.  (私はこれをサポートしているシ
++       ステムを見たことがない...)
++
++● regex.[ch] の拡張仕様
++
++    regex.[ch] モジュールは mbc.[ch] モジュールに依存していますので, 使
++    用する場合には, mbc.[ch] モジュールを同時に使用する必要があります.
++
++    マルチバイト文字のタイプは, mbc.[ch] の mbcinit() で設定します.
++    mbc.h に定義されているマクロ MBCTYPE_ASCII, MBCTYPE_EUC,
++    MBCTYPE_SJIS のいずれかを mbcinit() に渡してください.
++
++    regex.[ch] は, パターンコンパイル時, マッチング時の両方で mbc.[ch] 
++    の設定を参照します.  が, この両者で mbc.[ch] の設定を変更することは
++    できません.  つまり, Shift-JIS で記述されたパターンを, EUC テキスト
++    から検索するといった動作はできません.  注意してください.
++
++    マルチバイト文字対応に伴って注意すべき正規表現を以下に記します.
++
++        .       任意の１バイト文字, 正当なマルチバイト文字にマッチします. 
++                「正当なマルチバイト文字」とは, マルチバイト文字の１文字
++                目に, '\0' または '\n' 以外が続く文字のことです.
++
++        [x-y]   文字コード (内部表現) が x から y の範囲にある任意の１文
++                字にマッチします.  これも . と同じく, 正当でない文字には
++                マッチしません.
++
++        [^x-y]  文字コード (内部表現) が x から y の範囲にない任意の１文
++                字にマッチします.  正当でない文字にもマッチします.
++
++    マルチバイト文字の内部表現は単に１バイト目を上位バイト, ２バイト目を
++    下位バイトとした１６ビット符号なし整数です.  Shift-JIS でも EUC でも
++
++        １バイト ASCII 文字 < 半角カナ文字 < 全角文字
++
++    という大小関係が成り立っています.
++
++●条件など
++
++    1. オリジナルの GNU sed の著作権は Free Software Foundation, Inc. が
++       有しています. パッチ部分 (sed-mb.diff) の著作権は私 (t^2) が有し
++       ています.
++
++    2. GNU sed のソースコードは各所の ftp サイト, もしくは Nifty-serve 
++       の FUNIX のデータライブラリから入手可能です. GNU sed から sed+mb 
++       への差分 sed-mb.diff は私が Nifty-serve の FUNIX へ登録し, 堂園和
++       郎氏 (dohzono@sdsft.kme.mei.co.jp) が fj.sources へポストしてくだ
++       さっています.
++
++    3. 差分 sed-mb.diff の再配布は自由です. これに関しては FSF の規定に
++       従う必要もありません. しかし差分を適用した結果のソースコード, お
++       よび実行形式での再配布の際は GNU GENERAL PUBLIC LICENSE (COPYING 
++       参照) に従ってください.
++
++       sed+mb に何らかの改変を加えたものを再配布する際も, GNU GENERAL
++       PUBLIC LICENSE に従うように注意してください. また sed+mb に含まれ
++       るコード (regex.[ch] など) を利用したプログラムを配布する際も GNU
++       GENERAL PUBLIC LICENSE または GNU LIBRARY GENERAL PUBLIC LICENSE
++       (COPYING.LIB 参照) の該当部分に従ってください.
++
++       また義務ではありませんが再配布される方は事後にでも連絡をください. 
++       そして可能な限り, 新しいバージョンへのアップデートに努め, 利用者
++       からの連絡が私に届くように配慮してください.
++
++    4. このプログラムは無保証です.
++
++    5. sed+mb に何らかの不具合が発生した場合, (FSF や, オリジナルの作者
++       ではなく) 私に連絡してください. 配布した人が希望している場合は, 
++       その人に連絡してください.
++
++    6. ご質問/ご要望/お叱り, その他も大歓迎です. できるかぎりサポートし
++       ます.
++
++●謝辞
++
++    原作者および FSF に感謝します.
++
++    ドキュメント作成に関して助言をくださった堂園和郎氏
++    (dohzono@sdsft.kme.mei.co.jp) に感謝します.
++
++    これまで転載/バグ報告をくださった方々に感謝します. 実名を挙げさせて
++    頂きたかったのですがハードディスクのトラブルでほとんどのメールを消失
++    させてしまいました.
++
++    最後に, 貴重なディスクスペースを sed+mb のために割いてご使用頂いてい
++    るすべての利用者の方々に感謝いたします.
++
++●「私」の連絡先
++
++    〒810  福岡市中央区梅光園団地 7-207               (注: 転居しました)
++    TEL/FAX: 092-731-4025 (TEL/FAX 自動切替え)
++             092-724-6342 (TEL のみ)
++    E-mail: NBC02362@niftyserve.or.jp                           谷本孝浩
++
++# Local variables:
++# mode: indented-text
++# indent-tabs-mode: nil
++# tab-stop-list: (4 8 16 24 32 40 48 56 64 72 80)
++# left-margin: 4
++# fill-column: 72
++# fill-prefix: "    "
++# version-control: never
++# End:
+diff -ru2N sed-1.18/README.MSC sed+mb1.03/README.MSC
+--- sed-1.18/README.MSC	Thu Jan  1 09:00:00 1970
++++ sed+mb1.03/README.MSC	Sat Mar  5 16:14:14 1994
+@@ -0,0 +1,99 @@
++PC-9801 用 MS-C version 6.00A の引数のセットアップルーチンにはバグがあり
++ます.
++
++#include <stdio.h>
++
++int
++main(int argc, char **argv)
++{
++  int i;
++
++  for (i = 0; i <= argc; i++)
++    printf("argv[%d] == %s\n", i, argv[i]);
++  return 0;
++}
++
++をコンパイル, リンクした FOO.EXE に
++
++  A>foo "\\" abc
++
++などの引数を渡して実行すると, バグが確認できます.  また, ワイルドカード
++展開ルーチンにもバグがあり, 上記のプログラムを SETARGV.OBJ とともにリン
++クして
++
++  A>foo \DOS\*.com
++
++などの引数で実行すると, おかしな展開の仕方をしてしまいます.
++
++このバグは SOURCE/STARTUP 下の DOS/STDARGV.ASM および WILD.C に以下のパッ
++チを当てると修正できるようです.  パッチを当てて STARTUP.BAT でコンパイル
++してください. その後, 例えばラージモデル用のライブラリを修正する場合,
++L/DOS/STDARGV.OBJ, L/DOS/_SETARGV.OBJ, L/WILD.OBJ をそれぞれ 
++KSTDARGV.OBJ, _KSTARGV.OBJ, KWILD.OBJ とリネームし,
++
++  lib \msc6\lib\llibce.lib-+dos\kstdargv.obj-+dos\_kstargv.obj-+kwild.obj;
++
++などとしてモジュールを更新してください.  念のためこの作業を行う前に,
++
++  lib \msc6\lib\llibce.lib*kstdargv.obj*_kstargv.obj*kwild.obj;
++
++などで, kstdargv.obj, _kstargv.obj, kwild.obj のバックアップをとって置く
++といいでしょう.
++
++なお, このパッチは当然のことながら無保証です.
++
++Mar. 5, 1994                                                      t^2
++
++*** stdargv.org	Mon Oct  8 19:50:46 1990
++--- stdargv.asm	Thu Jul 22 17:50:44 1993
++***************
++*** 409,415 ****
++  	shr	cx,1
++  	adc	dx,cx		; add 1 for every pair of backslashes
++  	test	al,1		; plus 1 for the " if odd number of \
++! 	jz	arg310		; [J1]
++  	jmp	arg210		; [J1]
++  ;
++  ; Command line is fully parsed - compute number of bytes needed
++--- 409,415 ----
++  	shr	cx,1
++  	adc	dx,cx		; add 1 for every pair of backslashes
++  	test	al,1		; plus 1 for the " if odd number of \
++! 	jnz	arg310		; ! Jul.21.93 t^2
++  	jmp	arg210		; [J1]
++  ;
++  ; Command line is fully parsed - compute number of bytes needed
++
++*** wild.org	Mon Oct  8 19:49:48 1990
++--- wild.c	Sat Mar  5 00:42:12 1994
++***************
++*** 186,197 ****
++      char    *ptr2 = arg;                    // [J1]
++  
++      if(ptr != arg) {                        // [J1]
++!         while(ptr2 + 1 != ptr && *ptr2 != SLASHCHAR && *ptr2 != FWDSLASHCHAR
++!                 && *ptr2 != ':') {          // [J1]
++              if(iskanji(*ptr2))  ptr2++;     // [J1]
++              ptr2++;                         // [J1]
++          }                                   // [J1]
++!         ptr = ptr2;                         // [J1]
++      }                                       // [J1]
++  
++      if (*ptr == ':' && ptr != arg+1) /* weird name, just add it as is */
++--- 186,201 ----
++      char    *ptr2 = arg;                    // [J1]
++  
++      if(ptr != arg) {                        // [J1]
++! 	char *ptr3 = arg;
++! 
++!         while (ptr2 < ptr) {
++! 	    if (*ptr2 == SLASHCHAR || *ptr2 == FWDSLASHCHAR
++! 		|| *ptr2 == ':')
++! 		ptr3 = ptr2;
++              if(iskanji(*ptr2))  ptr2++;     // [J1]
++              ptr2++;                         // [J1]
++          }                                   // [J1]
++! 	ptr = ptr3;
++      }                                       // [J1]
++  
++      if (*ptr == ':' && ptr != arg+1) /* weird name, just add it as is */
+diff -ru2N sed-1.18/configure sed+mb1.03/configure
+--- sed-1.18/configure	Fri May 21 15:09:06 1993
++++ sed+mb1.03/configure	Sat Jul 10 18:18:47 1993
+@@ -294,5 +294,5 @@
+ fi
+ 
+-for func in bcopy memcpy
++for func in bcopy memcpy memmove strncasecmp
+ do
+ trfunc=HAVE_`echo $func | tr '[a-z]' '[A-Z]'`
+diff -ru2N sed-1.18/configure.in sed+mb1.03/configure.in
+--- sed-1.18/configure.in	Fri May 21 13:22:42 1993
++++ sed+mb1.03/configure.in	Sat Jul 10 17:54:03 1993
+@@ -9,5 +9,5 @@
+ AC_HAVE_HEADERS(string.h)
+ AC_VPRINTF
+-AC_HAVE_FUNCS(bcopy memcpy)
++AC_HAVE_FUNCS(bcopy memcpy memmove strcasecmp strncasecmp)
+ AC_CONST
+ AC_ALLOCA
+diff -ru2N sed-1.18/mbc.c sed+mb1.03/mbc.c
+--- sed-1.18/mbc.c	Thu Jan  1 09:00:00 1970
++++ sed+mb1.03/mbc.c	Fri Jul  9 14:38:28 1993
+@@ -0,0 +1,98 @@
++/* Functions for multi-byte support.
++   Created for grep multi-byte extension Jul., 1993 by t^2 (Takahiro Tanimoto)
++   Last change: Jul. 9, 1993 by t^2  */
++#include "mbc.h"
++
++static const unsigned char mbctab_ascii[] = {
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
++};
++
++static const unsigned char mbctab_euc[] = {
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
++  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
++  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
++  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
++  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
++  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
++  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
++  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
++};
++
++static const unsigned char mbctab_sjis[] = {
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
++  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
++  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
++  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
++};
++
++#ifdef EUC
++const unsigned char *mbctab = mbctab_euc;
++int current_mbctype = MBCTYPE_EUC;
++#else
++#ifdef SJIS
++const unsigned char *mbctab = mbctab_sjis;
++int current_mbctype = MBCTYPE_SJIS;
++#else
++const unsigned char *mbctab = mbctab_ascii;
++int current_mbctype = MBCTYPE_ASCII;
++#endif
++#endif
++
++void
++#ifdef __STDC__
++mbcinit(int mbctype)
++#else
++mbcinit(mbctype)
++     int mbctype;
++#endif
++{
++  switch (mbctype) {
++  case MBCTYPE_ASCII:
++    mbctab = mbctab_ascii;
++    current_mbctype = MBCTYPE_ASCII;
++    break;
++  case MBCTYPE_EUC:
++    mbctab = mbctab_euc;
++    current_mbctype = MBCTYPE_EUC;
++    break;
++  case MBCTYPE_SJIS:
++    mbctab = mbctab_sjis;
++    current_mbctype = MBCTYPE_SJIS;
++    break;
++  }
++}
+diff -ru2N sed-1.18/mbc.h sed+mb1.03/mbc.h
+--- sed-1.18/mbc.h	Thu Jan  1 09:00:00 1970
++++ sed+mb1.03/mbc.h	Fri Jul  9 14:40:03 1993
+@@ -0,0 +1,38 @@
++#ifndef MBC_H
++#define MBC_H 1
++/* Definitions for multi-byte support.
++   Created for grep multi-byte extension Jul., 1993 by t^2 (Takahiro Tanimoto)
++   Last change: Jul. 9, 1993 by t^2  */
++
++#ifndef const
++#ifndef __STDC__
++#ifdef __GNUC__
++#define const __const__
++#define volatile __volatile__
++#else
++#define const
++#define volatile
++#endif
++#endif
++#endif
++
++#ifndef _
++#ifdef __STDC__
++#define _(x) x
++#else
++#define _(x) ()
++#endif
++#endif
++
++#define MBCTYPE_ASCII 0
++#define MBCTYPE_EUC 1
++#define MBCTYPE_SJIS 2
++
++extern const unsigned char *mbctab;
++extern int current_mbctype;
++
++void mbcinit _((int));
++
++#define ismbchar(c) mbctab[(unsigned char)c]
++
++#endif /* !MBC_H */
+diff -ru2N sed-1.18/regex.c sed+mb1.03/regex.c
+--- sed-1.18/regex.c	Mon May 24 01:10:46 1993
++++ sed+mb1.03/regex.c	Thu Aug 19 04:16:32 1993
+@@ -19,4 +19,6 @@
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.  */
++/* Multi-byte extension added May, 1993 by t^2 (Takahiro Tanimoto)
++   Last change: Aug. 19, 1993 by t^2  */
+ 
+ /* AIX requires this to be the first thing in the file. */
+@@ -54,6 +56,33 @@
+ #define bcmp(s1, s2, n)	memcmp ((s1), (s2), (n))
+ #endif
++#ifdef HAVE_MEMMOVE
+ #ifndef bcopy
+-#define bcopy(s, d, n)	memcpy ((d), (s), (n))
++#define bcopy(s, d, n)	memmove ((d), (s), (n))
++#endif
++#else
++#ifndef HAVE_BCOPY
++static void
++#ifdef __STDC__
++bcopy (const void *s0, void *d0, size_t n)
++#else
++bcopy (s, d, n)
++     const void *s0;
++     void *d;
++     size_t n;
++#endif
++{
++  const char *s = s0;
++  char *d = d0;
++
++  if (s < d) {
++    s += n, d += n;
++    while (n--)
++      *--d = *--s;
++  }
++  else
++    while (n--)
++      *d++ = *s++;
++}
++#endif
+ #endif
+ #ifndef bzero
+@@ -123,4 +152,5 @@
+ /* Get the interface, including the syntax bits.  */
+ #include "regex.h"
++#include "mbc.h"
+ 
+ /* isalpha etc. are used for the character classes.  */
+@@ -450,4 +480,19 @@
+ 
+ #endif /* DEBUG */
++
++#define STORE_MBC(p, c) \
++  ((p)[0] = (unsigned char) ((c) >> 8), (p)[1] = (unsigned char) (c))
++#define STORE_MBC_AND_INCR(p, c) \
++  (*(p)++ = (unsigned char) ((c) >> 8), *(p)++ = (unsigned char) (c))
++
++#define EXTRACT_MBC(p) \
++  ((unsigned char) (p)[0] << 8 | (unsigned char) (p)[1])
++#define EXTRACT_MBC_AND_INCR(p) \
++  ((p) += 2, (unsigned char) (p)[-2] << 8 | (unsigned char) (p)[-1])
++
++#define EXTRACT_UNSIGNED(p) \
++  ((unsigned char) (p)[0] | (unsigned char) (p)[1] << 8)
++#define EXTRACT_UNSIGNED_AND_INCR(p) \
++  ((p) += 2, (unsigned char) (p)[-2] | (unsigned char) (p)[-1] << 8)
+ 
+ /* If DEBUG is defined, Regex prints many voluminous messages about what
+@@ -544,4 +589,8 @@
+ 	    {
+               putchar ('/');
++	      if (ismbchar (*p) && 2 <= mcnt) {
++		printf ("/%.2s", (char *) p), p += 2, --mcnt;
++		continue;
++	      }
+ 	      printchar (*p++);
+             }
+@@ -574,4 +623,5 @@
+             printf ("/charset%s",
+ 	            (re_opcode_t) *(p - 1) == charset_not ? "_not" : "");
++	    printf ("/%d", *p);
+             
+             assert (p + *p < pend);
+@@ -589,4 +639,13 @@
+               }
+ 	    p += 1 + *p;
++	    {
++	      unsigned short i, size;
++
++	      size = EXTRACT_UNSIGNED_AND_INCR (p);
++	      printf ("/0/%d", size);
++	      for (i = 0; i < size; i++)
++		printf ("//%.2s-//%.2s", (char *) p, (char *) p + 2),
++		p += 4;
++	    }
+ 	    break;
+ 	  }
+@@ -744,5 +803,5 @@
+   printf ("not_bol: %d\t", bufp->not_bol);
+   printf ("not_eol: %d\t", bufp->not_eol);
+-  printf ("syntax: %d\n", bufp->syntax);
++  printf ("syntax: %lu\n", bufp->syntax);
+   /* Perhaps we should print the translate table?  */
+ }
+@@ -843,5 +902,7 @@
+ static boolean at_begline_loc_p (), at_endline_loc_p ();
+ static boolean group_in_compile_stack ();
++#if 0
+ static reg_errcode_t compile_range ();
++#endif
+ 
+ /* Fetch the next character in the uncompiled pattern---translating it 
+@@ -852,5 +913,6 @@
+   do {if (p == pend) return REG_EEND;					\
+     c = (unsigned char) *p++;						\
+-    if (translate) c = translate[c]; 					\
++    if (translate && !ismbchar (c))					\
++      c = (unsigned char) translate[(unsigned char) c];			\
+   } while (0)
+ 
+@@ -870,5 +932,7 @@
+    `char *', to avoid warnings when a string constant is passed.  But
+    when we use a character as a subscript we must make it unsigned.  */
+-#define TRANSLATE(d) (translate ? translate[(unsigned char) (d)] : (d))
++#define TRANSLATE(d) (translate						\
++		      ? (unsigned char) translate[(unsigned char) (d)]	\
++		      : (d))
+ 
+ 
+@@ -1040,4 +1104,159 @@
+     || STREQ (string, "cntrl") || STREQ (string, "blank"))
+ 
++/* Handle charset(_not)?.
++
++   Structure of charset(_not)? in compiled pattern.
++
++     struct {
++       unsinged char id;		charset(_not)?
++       unsigned char sbc_size;
++       unsigned char sbc_map[sbc_size];	same as original up to here.
++       unsigned short mbc_size;		number of intervals.
++       struct {
++	 unsigned short beg;		beginning of interval.
++	 unsigned short end;		end of interval.
++       } intervals[mbc_size];
++     }; */
++
++static reg_errcode_t
++#ifdef __STDC__
++set_list_bits (unsigned short c1, unsigned short c2,
++	       reg_syntax_t syntax, unsigned char *b, const char *translate)
++#else
++set_list_bits (c1, c2, syntax, b, translate)
++     unsigned short c1, c2;
++     reg_syntax_t syntax;
++     unsigned char *b;
++     const char *translate;
++#endif
++{
++  unsigned char sbc_size = b[-1];
++  unsigned short mbc_size = EXTRACT_UNSIGNED (&b[sbc_size]);
++  unsigned short beg, end, upb;
++
++  if (c1 > c2)
++    return syntax & RE_NO_EMPTY_RANGES ? REG_ERANGE : REG_NOERROR;
++  if (c1 < 1 << BYTEWIDTH) {
++    upb = c2;
++    if (1 << BYTEWIDTH <= upb)
++      upb = (1 << BYTEWIDTH) - 1;	/* The last single-byte char */
++    if (sbc_size <= upb / BYTEWIDTH) {
++      /* Allocate maximum size so it never happens again.  */
++      /* NOTE: memcpy() would not work here.  */
++      bcopy (&b[sbc_size], &b[(1 << BYTEWIDTH) / BYTEWIDTH], 2 + mbc_size*4);
++      bzero (&b[sbc_size], (1 << BYTEWIDTH) / BYTEWIDTH - sbc_size);
++      b[-1] = sbc_size = (1 << BYTEWIDTH) / BYTEWIDTH;
++    }
++    if (!translate) {
++      for (; c1 <= upb; c1++)
++	if (!ismbchar (c1))
++	  SET_LIST_BIT (c1);
++    }
++    else
++      for (; c1 <= upb; c1++)
++	if (!ismbchar (c1))
++	  SET_LIST_BIT (TRANSLATE (c1));
++    if (c2 < 1 << BYTEWIDTH)
++      return REG_NOERROR;
++    c1 = 0x8000;			/* The first wide char */
++  }
++  b = &b[sbc_size + 2];
++
++  /*                             intervals[beg]
++         ●----------●          ●----------●
++                         c1
++                       ○----------------------●
++
++     上図のような区間のインデックス beg を決定する. */
++  for (beg = 0, upb = mbc_size; beg < upb; ) {
++    unsigned short mid = (beg + upb) >> 1;
++
++    if (c1 - 1 > EXTRACT_MBC (&b[mid*4 + 2]))
++      beg = mid + 1;
++    else
++      upb = mid;
++  }
++
++  /*                        intervals[end]
++           ●-------●      ●----------●
++                        c2
++         ●---------------○
++
++     上図のような区間のインデックス end を決定する. */
++  for (end = beg, upb = mbc_size; end < upb; ) {
++    unsigned short mid = (end + upb) >> 1;
++
++    if (c2 >= EXTRACT_MBC (&b[mid*4]) - 1)
++      end = mid + 1;
++    else
++      upb = mid;
++  }
++
++  if (beg != end) {
++    /* 既存の区間を少なくとも1つ統合する場合,
++       区間の始点, 終点を修正する. */
++    if (c1 > EXTRACT_MBC (&b[beg*4]))
++      c1 = EXTRACT_MBC (&b[beg*4]);
++    if (c2 < EXTRACT_MBC (&b[end*4 - 2]))
++      c2 = EXTRACT_MBC (&b[end*4 - 2]);
++  }
++  if (end < mbc_size && end != beg + 1)
++    /* 追加される区間の後ろに既存の区間を移動する. */
++    /* NOTE: memcpy() would not work here.  */
++    bcopy (&b[end*4], &b[(beg + 1)*4], (mbc_size - end)*4);
++  STORE_MBC (&b[beg*4 + 0], c1);
++  STORE_MBC (&b[beg*4 + 2], c2);
++  mbc_size += beg + 1 - end;
++  STORE_NUMBER (&b[-2], mbc_size);
++  return REG_NOERROR;
++}
++
++static int
++#ifdef __STDC__
++is_in_list (unsigned short c, const unsigned char *b)
++#else
++is_in_list (c, b)
++     unsigned short c;
++     const unsigned char *b;
++#endif
++{
++  unsigned short size;
++  int in = (re_opcode_t) b[-1] == charset_not;
++
++  size = *b++;
++  if (c < 1 << BYTEWIDTH) {
++    if (c / BYTEWIDTH < size && b[c / BYTEWIDTH] & 1 << c % BYTEWIDTH)
++      in = !in;
++  }
++  else {
++    unsigned short i, j;
++
++    b += size + 2;
++    size = EXTRACT_UNSIGNED (&b[-2]);
++
++    /*                        intervals[i]
++             ●-------●      ●--------●
++                        c
++                      ○----------------●
++
++     上図のような区間のインデックス i を決定する. */
++    for (i = 0, j = size; i < j; ) {
++      unsigned short k = (i + j) >> 1;
++
++      if (c > EXTRACT_MBC (&b[k*4 + 2]))
++	i = k + 1;
++      else
++	j = k;
++    }
++    if (i < size && EXTRACT_MBC (&b[i*4]) <= c
++	/* [...] から, 無効なマルチバイト文字を除外する.  ここでは簡単の
++	   ため２バイト目が '\n' または '\0' だけを無効とした.  [^...] 
++	   の場合は, 逆に無効なマルチバイト文字をマッチさせる.  */
++	&& ((unsigned char) c != '\n' && (unsigned char) c != '\0'))
++      in = !in;
++  }
++  return in;
++}
++
+ /* `regex_compile' compiles PATTERN (of length SIZE) according to SYNTAX.
+    Returns one of error codes defined in `regex.h', or zero for success.
+@@ -1350,4 +1569,6 @@
+           {
+             boolean had_char_class = false;
++	    unsigned short c, c1;
++	    int last_char = -1;
+ 
+             if (p == pend) return REG_EBRACK;
+@@ -1355,5 +1576,6 @@
+             /* Ensure that we have enough space to push a charset: the
+                opcode, the length count, and the bitset; 34 bytes in all.  */
+-	    GET_BUFFER_SPACE (34);
++	    /* + 2 + 4 for mbcharset(_not)? with just one interval.  */
++	    GET_BUFFER_SPACE (34 + 2 + 4);
+ 
+             laststart = b;
+@@ -1372,5 +1594,5 @@
+ 
+             /* Clear the whole map.  */
+-            bzero (b, (1 << BYTEWIDTH) / BYTEWIDTH);
++	    bzero (b, (1 << BYTEWIDTH) / BYTEWIDTH + 2);
+ 
+             /* charset_not matches newline according to a syntax bit.  */
+@@ -1382,7 +1604,14 @@
+             for (;;)
+               {
++		int size;
++
+                 if (p == pend) return REG_EBRACK;
+ 
+-                PATFETCH (c);
++		if ((size = EXTRACT_UNSIGNED (&b[(1 << BYTEWIDTH) / BYTEWIDTH])))
++		  /* Ensure the space is enough to hold another interval
++		     of multi-byte chars in charset(_not)?.  */
++		  GET_BUFFER_SPACE (32 + 2 + size*4 + 4);
++
++		PATFETCH_RAW (c);
+ 
+                 /* \ might escape characters inside [...] and [^...].  */
+@@ -1391,6 +1620,16 @@
+                     if (p == pend) return REG_EESCAPE;
+ 
+-                    PATFETCH (c1);
+-                    SET_LIST_BIT (c1);
++		    PATFETCH_RAW (c1);
++		    if (ismbchar (c1)) {
++		      unsigned char c2;
++
++		      PATFETCH_RAW (c2);
++		      c1 = c1 << 8 | c2;
++		      (void) set_list_bits (c1, c1, syntax, b, translate);
++		      last_char = c1;
++		      continue;
++		    }
++		    SET_LIST_BIT (TRANSLATE (c1));
++		    last_char = c1;
+                     continue;
+                   }
+@@ -1407,4 +1646,11 @@
+                   return REG_ERANGE;
+ 
++		if (ismbchar (c)) {
++		  unsigned char c2;
++
++		  PATFETCH_RAW (c2);
++		  c = c << 8 | c2;
++		}
++
+                 /* Look ahead to see if it's a range when the last thing
+                    was a character: if this is a hyphen not at the
+@@ -1412,10 +1658,25 @@
+                    operator.  */
+                 if (c == '-' 
++#if 0 /* The original was: */
+                     && !(p - 2 >= pattern && p[-2] == '[') 
+                     && !(p - 3 >= pattern && p[-3] == '[' && p[-2] == '^')
++#else /* I wonder why he did not write like this.
++	 Have we got any problems?  */
++		    && p != p1 + 1
++#endif
+                     && *p != ']')
+                   {
+-                    reg_errcode_t ret
+-                      = compile_range (&p, pend, translate, syntax, b);
++		    reg_errcode_t ret;
++
++		    assert (last_char >= 0);
++		    PATFETCH_RAW (c1);
++		    if (ismbchar (c1)) {
++		      unsigned char c2;
++
++		      PATFETCH_RAW (c2);
++		      c1 = c1 << 8 | c2;
++		    }
++		    ret = set_list_bits (last_char, c1, syntax, b, translate);
++		    last_char = c1;
+                     if (ret != REG_NOERROR) return ret;
+                   }
+@@ -1426,7 +1687,15 @@
+ 
+ 		    /* Move past the `-'.  */
+-                    PATFETCH (c1);
+-                    
+-                    ret = compile_range (&p, pend, translate, syntax, b);
++		    PATFETCH_RAW (c1);
++
++		    PATFETCH_RAW (c1);
++		    if (ismbchar (c1)) {
++		      unsigned char c2;
++
++		      PATFETCH_RAW (c2);
++		      c1 = c1 << 8 | c2;
++		    }
++		    ret = set_list_bits (c, c1, syntax, b, translate);
++		    last_char = c1;
+                     if (ret != REG_NOERROR) return ret;
+                   }
+@@ -1439,5 +1708,5 @@
+                     char str[CHAR_CLASS_MAX_LENGTH + 1];
+ 
+-                    PATFETCH (c);
++		    PATFETCH_RAW (c);
+                     c1 = 0;
+ 
+@@ -1499,4 +1768,7 @@
+                           }
+                         had_char_class = true;
++#ifdef DEBUG
++			last_char = -1;
++#endif
+                       }
+                     else
+@@ -1505,7 +1777,13 @@
+                         while (c1--)    
+                           PATUNFETCH;
++#if 0 /* The original was: */
+                         SET_LIST_BIT ('[');
+                         SET_LIST_BIT (':');
++#else /* I think this is the right way.  */
++			SET_LIST_BIT (TRANSLATE ('['));
++			SET_LIST_BIT (TRANSLATE (':'));
++#endif
+                         had_char_class = false;
++			last_char = ':';
+                       }
+                   }
+@@ -1513,5 +1791,6 @@
+                   {
+                     had_char_class = false;
+-                    SET_LIST_BIT (c);
++		    (void) set_list_bits (c, c, syntax, b, translate);
++		    last_char = c;
+                   }
+               }
+@@ -1521,5 +1800,9 @@
+             while ((int) b[-1] > 0 && b[b[-1] - 1] == 0) 
+               b[-1]--; 
+-            b += b[-1];
++	    if (b[-1] != (1 << BYTEWIDTH) / BYTEWIDTH)
++	      bcopy (&b[(1 << BYTEWIDTH) / BYTEWIDTH], &b[b[-1]],
++		     2 + EXTRACT_UNSIGNED (&b[(1 << BYTEWIDTH) / BYTEWIDTH])*4);
++	    b += b[-1] + 2 + EXTRACT_UNSIGNED (&b[b[-1]])*4;
++	    break;
+           }
+           break;
+@@ -1988,5 +2271,6 @@
+                  not to translate; but if we don't translate it
+                  it will never match anything.  */
+-              c = TRANSLATE (c);
++	      if (!ismbchar (c))
++		c = TRANSLATE (c);
+               goto normal_char;
+             }
+@@ -1997,4 +2281,11 @@
+         /* Expects the character in `c'.  */
+ 	normal_char:
++
++	  c1 = 0;
++	  if (ismbchar (c)) {
++	    c1 = c;
++	    PATFETCH_RAW (c);
++	  }
++
+ 	      /* If no exactn currently being built.  */
+           if (!pending_exact 
+@@ -2004,5 +2295,6 @@
+               
+               /* We have only one byte following the exactn for the count.  */
+-	      || *pending_exact == (1 << BYTEWIDTH) - 1
++	      || *pending_exact >= (c1 ? (1 << BYTEWIDTH) - 2
++				       : (1 << BYTEWIDTH) - 1)
+ 
+               /* If followed by a repetition operator.  */
+@@ -2024,4 +2316,8 @@
+             }
+             
++	  if (c1) {
++	    BUF_PUSH (c1);
++	    (*pending_exact)++;
++	  }
+ 	  BUF_PUSH (c);
+           (*pending_exact)++;
+@@ -2149,5 +2445,5 @@
+ at_endline_loc_p (p, pend, syntax)
+     const char *p, *pend;
+-    int syntax;
++    reg_syntax_t syntax;
+ {
+   const char *next = p;
+@@ -2185,4 +2481,5 @@
+ 
+ 
++#if 0 /* We use set_list_bits() now.  */
+ /* Read the ending character of a range (in a bracket expression) from the
+    uncompiled pattern *P_PTR (which ends at PEND).  We assume the
+@@ -2240,4 +2537,5 @@
+   return REG_NOERROR;
+ }
++#endif
+ 
+ /* Failure stack declarations and macros; both re_compile_fastmap and
+@@ -2603,18 +2901,65 @@
+ 
+         case charset:
++	  /* NOTE: Charset for single-byte chars never contain
++		   multi-byte char.  See set_list_bits().  */
+           for (j = *p++ * BYTEWIDTH - 1; j >= 0; j--)
+ 	    if (p[j / BYTEWIDTH] & (1 << (j % BYTEWIDTH)))
+               fastmap[j] = 1;
++	  {
++	    unsigned short size;
++	    unsigned char c, end;
++
++	    p += p[-1] + 2;
++	    size = EXTRACT_UNSIGNED (&p[-2]);
++	    for (j = 0; j < size; j++)
++	      /* set bits for 1st bytes of multi-byte chars.  */
++	      for (c = (unsigned char) p[j*4],
++		   end = (unsigned char) p[j*4 + 2];
++		   c <= end; c++)
++		/* NOTE: Charset for multi-byte chars might contain
++		         single-byte chars.  We must reject them. */
++		if (ismbchar (c))
++		  fastmap[c] = 1;
++	  }
+ 	  break;
+ 
+ 
+ 	case charset_not:
++	  /* S: set of all single-byte chars.
++	     M: set of all first bytes that can start multi-byte chars.
++	     s: any set of single-byte chars.
++	     m: any set of first bytes that can start multi-byte chars.
++
++	     We assume S+M = U.
++	       ___      _   _
++	       s+m = (S*s+M*m).  */
+ 	  /* Chars beyond end of map must be allowed.  */
++	  /* NOTE: Charset_not for single-byte chars might contain
++		   multi-byte chars.  See set_list_bits(). */
+ 	  for (j = *p * BYTEWIDTH; j < (1 << BYTEWIDTH); j++)
+-            fastmap[j] = 1;
++	    if (!ismbchar (j))
++	      fastmap[j] = 1;
+ 
+ 	  for (j = *p++ * BYTEWIDTH - 1; j >= 0; j--)
+ 	    if (!(p[j / BYTEWIDTH] & (1 << (j % BYTEWIDTH))))
+-              fastmap[j] = 1;
++	      if (!ismbchar (j))
++		fastmap[j] = 1;
++	  {
++	    unsigned short size;
++	    unsigned short c, beg;
++
++	    p += p[-1] + 2;
++	    size = EXTRACT_UNSIGNED (&p[-2]);
++	    c = 0x00;
++	    for (j = 0; j < size; j++) {
++	      for (beg = (unsigned char) p[j*4 + 0]; c <= beg; c++)
++		if (ismbchar (c))
++		  fastmap[c] = 1;
++	      c = (unsigned char) p[j*4 + 2];
++	    }
++	    for (beg = 0xff; c <= beg; c++)
++	      if (ismbchar (c))
++		fastmap[c] = 1;
++	  }
+           break;
+ 
+@@ -2929,4 +3274,5 @@
+ 	      register int lim = 0;
+ 	      int irange = range;
++	      unsigned char c;
+ 
+               if (startpos < size1 && startpos + range >= size1)
+@@ -2938,11 +3284,23 @@
+                  inside the loop.  */
+ 	      if (translate)
+-                while (range > lim
+-                       && !fastmap[(unsigned char)
+-				   translate[(unsigned char) *d++]])
++		while (range > lim) {
++		  c = *d++;
++		  if (ismbchar (c)) {
++		    if (fastmap[c])
++		      break;
++		    d++;
++		    range -= 2;
++		    continue;
++		  }
++		  if (fastmap[(unsigned char) translate[c]])
++		    break;
+                   range--;
++		}
+ 	      else
+-                while (range > lim && !fastmap[(unsigned char) *d++])
++		while (range > lim && (c = *d++, !fastmap[c])) {
++		  if (ismbchar (c))
++		    d++, range--;
+                   range--;
++		}
+ 
+ 	      startpos += irange - range;
+@@ -2977,11 +3335,34 @@
+       else if (range > 0) 
+         {
+-          range--; 
+-          startpos++;
++	  const char *d = ((startpos >= size1 ? string2 - size1 : string1)
++			   + startpos);
++
++	  if (ismbchar (*d)) {
++	    range--, startpos++;
++	    if (!range)
++	      break;
++	  }
++          range--, startpos++;
+         }
+       else
+         {
+-          range++; 
+-          startpos--;
++          range++, startpos--;
++	  {
++	    const char *s, *d, *p;
++
++	    if (startpos < size1)
++	      s = string1, d = string1 + startpos;
++	    else
++	      s = string2, d = string2 + startpos - size1;
++	    for (p = d; p-- > s && ismbchar(*p); )
++	      /* --p >= s だと 80[12]?86 で動かない可能性がある.  (huge
++		 model 以外で, s のオフセットが 0 だった場合.)  */
++	      ;
++	    if (!((d - p) & 1)) {
++	      if (!range)
++		break;
++	      range++, startpos--;
++	    }
++	  }
+         }
+     }
+@@ -3539,6 +3920,19 @@
+ 	      do
+ 		{
++		  unsigned char c;
++
+ 		  PREFETCH ();
+-		  if (translate[(unsigned char) *d++] != (char) *p++)
++		  c = *d++;
++		  if (ismbchar (c)) {
++		    if (c != (unsigned char) *p++
++			|| !--mcnt	/* パターンが正しくコンパイルさ
++					   れている限り, このチェックは
++					   冗長だが念のため.  */
++			|| d == dend
++			|| (unsigned char) *d++ != (unsigned char) *p++)
++		      goto fail;
++		    continue;
++		  }
++		  if ((unsigned char) translate[c] != (unsigned char) *p++)
+                     goto fail;
+ 		}
+@@ -3549,6 +3943,26 @@
+ 	      do
+ 		{
++#if 0
++		  /* 他の部分では, string1 と string2 にマルチバイト文字
++		     が跨るのを許していない.  このことを速度を犠牲にして
++		     もチェックする場合は, ここと次の `#if 0' を `#if 1' 
++		     に変えること.  */
++		  unsigned char c;
++
++#endif
+ 		  PREFETCH ();
++#if 0
++		  c = *d++;
++		  if (ismbchar (c)) {
++		    if (c != (unsigned char) *p++
++			|| !--mcnt
++			|| d == dend)
++		      goto fail;
++		    c = *d++;
++		  }
++		  if (c != (unsigned char) *p++) goto fail;
++#else
+ 		  if (*d++ != (char) *p++) goto fail;
++#endif
+ 		}
+ 	      while (--mcnt);
+@@ -3563,4 +3977,14 @@
+ 
+           PREFETCH ();
++	  if (ismbchar (*d)) {
++	    if (d + 1 == dend || d[1] == '\n' || d[1] == '\0')
++	      /* 無効なマルチバイト文字にはマッチさせない.  ここでは, 簡
++		 単のため２バイト目が '\n', '\0' のものだけを無効とする.  */
++	      goto fail;
++	    SET_REGS_MATCHED ();
++	    DEBUG_PRINT2 ("  Matched `%d'.\n", EXTRACT_MBC (&d[0]));
++	    d += 2;
++	    break;
++	  }
+ 
+           if ((!(bufp->syntax & RE_DOT_NEWLINE) && TRANSLATE (*d) == '\n')
+@@ -3577,19 +4001,23 @@
+ 	case charset_not:
+ 	  {
+-	    register unsigned char c;
+-	    boolean not = (re_opcode_t) *(p - 1) == charset_not;
++	    register unsigned short c;
++	    boolean not;
+ 
+-            DEBUG_PRINT2 ("EXECUTING charset%s.\n", not ? "_not" : "");
++	    DEBUG_PRINT2 ("EXECUTING charset%s.\n",
++			  (re_opcode_t) *(p - 1) == charset_not ? "_not" : "");
+ 
+ 	    PREFETCH ();
+-	    c = TRANSLATE (*d); /* The character to match.  */
++	    c = (unsigned char) *d;
++	    if (ismbchar (c)) {
++	      c <<= 8;
++	      if (d + 1 != dend)
++		c |= (unsigned char) d[1];
++	    }
++	    else
++	      c = TRANSLATE (c); /* The character to match.  */
+ 
+-            /* Cast to `unsigned' instead of `unsigned char' in case the
+-               bit list is a full 32 bytes long.  */
+-	    if (c < (unsigned) (*p * BYTEWIDTH)
+-		&& p[1 + c / BYTEWIDTH] & (1 << (c % BYTEWIDTH)))
+-	      not = !not;
++	    not = is_in_list (c, p);
+ 
+-	    p += 1 + *p;
++	    p += 1 + *p + 2 + EXTRACT_UNSIGNED (&p[1 + *p])*4;
+ 
+ 	    if (!not) goto fail;
+@@ -3597,4 +4025,6 @@
+ 	    SET_REGS_MATCHED ();
+             d++;
++	    if (d != dend && c >= 1 << BYTEWIDTH)
++	      d++;
+ 	    break;
+ 	  }
+@@ -3762,5 +4192,5 @@
+ 
+                           /* xx why this test?  */
+-                          if ((int) old_regend[r] >= (int) regstart[r])
++			  if (old_regend[r] >= regstart[r])
+                             regend[r] = old_regend[r];
+                         }     
+@@ -4013,5 +4443,5 @@
+ 		     || (bufp->newline_anchor && (re_opcode_t) *p2 == endline))
+ 	      {
+-		register unsigned char c
++		register unsigned short c
+                   = *p2 == (unsigned char) endline ? '\n' : p2[2];
+ 		p1 = p + mcnt;
+@@ -4030,13 +4460,10 @@
+ 			 || (re_opcode_t) p1[3] == charset_not)
+ 		  {
+-		    int not = (re_opcode_t) p1[3] == charset_not;
+-                    
+-		    if (c < (unsigned char) (p1[4] * BYTEWIDTH)
+-			&& p1[5 + c / BYTEWIDTH] & (1 << (c % BYTEWIDTH)))
+-		      not = !not;
++		    if (ismbchar (c))
++		      c = c << 8 | p2[3];
+ 
+-                    /* `not' is equal to 1 if c would match, which means
++		    /* `is_in_list()' is TRUE if c would match, which means
+                         that we can't change to pop_failure_jump.  */
+-		    if (!not)
++		    if (!is_in_list (c, p1 + 4))
+                       {
+   		        p[-3] = (unsigned char) pop_failure_jump;
+@@ -4593,8 +5020,15 @@
+      char *translate;
+ {
+-  register unsigned char *p1 = s1, *p2 = s2;
++  register unsigned char *p1 = s1, *p2 = s2, c;
+   while (len)
+     {
+-      if (translate[*p1++] != translate[*p2++]) return 1;
++      c = *p1++;
++      if (ismbchar(c)) {
++	if (c != *p2++ || !--len || *p1++ != *p2++)
++	  return 1;
++      }
++      else
++	if (translate[c] != translate[*p2++])
++	  return 1;
+       len--;
+     }
+@@ -4739,5 +5173,5 @@
+ {
+   reg_errcode_t ret;
+-  unsigned syntax
++  reg_syntax_t syntax
+     = (cflags & REG_EXTENDED) ?
+       RE_SYNTAX_POSIX_EXTENDED : RE_SYNTAX_POSIX_BASIC;
+diff -ru2N sed-1.18/regex.h sed+mb1.03/regex.h
+--- sed-1.18/regex.h	Sat Apr  3 08:17:33 1993
++++ sed+mb1.03/regex.h	Sat Jul 10 17:23:29 1993
+@@ -17,4 +17,6 @@
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.  */
++/* Multi-byte extension added May, 1993 by t^2 (Takahiro Tanimoto)
++   Last change: Jul. 10, 1993 by t^2  */
+ 
+ #ifndef __REGEXP_LIBRARY_H__
+@@ -36,9 +38,9 @@
+    the definitions shifted by one from the previous bit; thus, when we
+    add or remove a bit, only one other definition need change.  */
+-typedef unsigned reg_syntax_t;
++typedef unsigned long reg_syntax_t;
+ 
+ /* If this bit is not set, then \ inside a bracket expression is literal.
+    If set, then such a \ quotes the following character.  */
+-#define RE_BACKSLASH_ESCAPE_IN_LISTS (1)
++#define RE_BACKSLASH_ESCAPE_IN_LISTS ((unsigned long)1)
+ 
+ /* If this bit is not set, then + and ? are operators, and \+ and \? are
+@@ -206,5 +208,5 @@
+ #undef RE_DUP_MAX
+ #endif
+-#define RE_DUP_MAX ((1 << 15) - 1) 
++#define RE_DUP_MAX ((int)(((unsigned)1 << 15) - 1))
+ 
+ 
+@@ -397,4 +399,10 @@
+ 
+ #define _RE_ARGS(args) ()
++
++#ifdef __GNUC__
++#define const __const__
++#else
++#define const
++#endif
+ 
+ #endif /* not __STDC__ */
+diff -ru2N sed-1.18/sed.c sed+mb1.03/sed.c
+--- sed-1.18/sed.c	Wed Jun  2 02:10:33 1993
++++ sed+mb1.03/sed.c	Thu Jun  2 16:57:49 1994
+@@ -15,4 +15,6 @@
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.  */
++/* Multi-byte extension added May, 1993 by t^2 (Takahiro Tanimoto)
++   Last change: Jun. 2, 1994 by t^2  */
+ 
+ #ifdef __STDC__
+@@ -43,4 +45,5 @@
+ #include <strings.h>
+ #endif
++#include "mbc.h"
+ 
+ #ifndef HAVE_BCOPY
+@@ -69,5 +72,73 @@
+ #endif
+ 
+-char *version_string = "GNU sed version 1.18";
++#ifndef HAVE_STRNCASECMP
++static const unsigned char
++lowertab[] = {
++  0000, 0001, 0002, 0003, 0004, 0005, 0006, 0007,
++  0010, 0011, 0012, 0013, 0014, 0015, 0016, 0017,
++  0020, 0021, 0022, 0023, 0024, 0025, 0026, 0027,
++  0030, 0031, 0032, 0033, 0034, 0035, 0036, 0037,
++  0040,  '!',  '"',  '#',  '$',  '%',  '&', '\'',
++   '(',  ')',  '*',  '+',  ',',  '-',  '.',  '/',
++   '0',  '1',  '2',  '3',  '4',  '5',  '6',  '7',
++   '8',  '9',  ':',  ';',  '<',  '=',  '>',  '?',
++   '@',  'a',  'b',  'c',  'd',  'e',  'f',  'g',
++   'h',  'i',  'j',  'k',  'l',  'm',  'n',  'o',
++   'p',  'q',  'r',  's',  't',  'u',  'v',  'w',
++   'x',  'y',  'z',  '[', '\\',  ']',  '^',  '_',
++   '`',  'a',  'b',  'c',  'd',  'e',  'f',  'g',
++   'h',  'i',  'j',  'k',  'l',  'm',  'n',  'o',
++   'p',  'q',  'r',  's',  't',  'u',  'v',  'w',
++   'x',  'y',  'z',  '{',  '|',  '}',  '~', 0177,
++  0200, 0201, 0202, 0203, 0204, 0205, 0206, 0207,
++  0210, 0211, 0212, 0213, 0214, 0215, 0216, 0217,
++  0220, 0221, 0222, 0223, 0224, 0225, 0226, 0227,
++  0230, 0231, 0232, 0233, 0234, 0235, 0236, 0237,
++  0240, 0241, 0242, 0243, 0244, 0245, 0246, 0247,
++  0250, 0251, 0252, 0253, 0254, 0255, 0256, 0257,
++  0260, 0261, 0262, 0263, 0264, 0265, 0266, 0267,
++  0270, 0271, 0272, 0273, 0274, 0275, 0276, 0277,
++  0300, 0301, 0302, 0303, 0304, 0305, 0306, 0307,
++  0310, 0311, 0312, 0313, 0314, 0315, 0316, 0317,
++  0320, 0321, 0322, 0323, 0324, 0325, 0326, 0327,
++  0330, 0331, 0332, 0333, 0334, 0335, 0336, 0337,
++  0340, 0341, 0342, 0343, 0344, 0345, 0346, 0347,
++  0350, 0351, 0352, 0353, 0354, 0355, 0356, 0357,
++  0360, 0361, 0362, 0363, 0364, 0365, 0366, 0367,
++  0370, 0371, 0372, 0373, 0374, 0375, 0376, 0377
++};
++
++static int
++strcasecmp(s1, s2)
++     char *s1, *s2;
++{
++  int c1;
++
++  do {
++    if (!(c1 = (unsigned char)lowertab[(unsigned char)*s1++]))
++      return !*s2 ? 0 : -1;
++  } while (!(c1 -= (unsigned char)lowertab[(unsigned char)*s2++]));
++  return c1;
++}
++
++static int
++strncasecmp(s1, s2, n)
++     char *s1, *s2;
++     int n;
++{
++  int c1;
++
++  while (n--) {
++    if (!(c1 = (unsigned char)lowertab[(unsigned char)*s1++]))
++      return !*s2 ? 0 : -1;
++    if ((c1 -= (unsigned char)lowertab[(unsigned char)*s2++]))
++      return c1;
++  }
++  return 0;
++}
++#endif
++
++char *version_string = "GNU sed version 1.18\
++ + multi-byte extension 1.03";
+ 
+ /* Struct vector is used to describe a chunk of a compiled sed program.  
+@@ -185,5 +256,10 @@
+       
+       /* This for the y command */
+-      unsigned char *translate;
++      struct
++	{
++	  unsigned short *translate;
++	  unsigned short mbcsize;
++	}
++      cmd_y;
+       
+       /* For { */
+@@ -239,9 +315,10 @@
+ void add_buffer P_ ((VOID * bb, char *p, int n));
+ void add1_buffer P_ ((VOID * bb, int ch));
++void add2_buffer P_ ((VOID * bb, int ch));
+ char *get_buffer P_ ((VOID * bb));
+ 
+ void compile_string P_ ((char *str));
+ void compile_file P_ ((char *str));
+-struct vector *compile_program P_ ((struct vector * vector, int));
++struct vector *compile_program P_ ((struct vector * vector, int open_line));
+ void bad_prog P_ ((char *why));
+ int inchar P_ ((void));
+@@ -349,4 +426,5 @@
+ static char NO_REGEX[] = "No previous regular expression";
+ static char NO_COMMAND[] = "Missing command";
++static char BAD_MBC[] = "Multi-byte char incomplete";
+ 
+ static struct option longopts[] =
+@@ -358,4 +436,5 @@
+   {"version", 0, NULL, 'V'},
+   {"help", 0, NULL, 'h'},
++  {"ctype", 1, NULL, 'T'},
+   {NULL, 0, NULL, 0}
+ };
+@@ -374,6 +453,19 @@
+   re_set_syntax (RE_SYNTAX_POSIX_BASIC);
+ 
++#ifdef MSDOS
++  {
++    char *p, *q, c;
++    static char argv0[8 + 1];
++
++    for (q = p = argv[0]; (c = *p++); )
++      if (c == '/' || c == '\\' || c == ':')
++	q = p;
++    for (p = argv0; p < &argv0[8] && (c = *q++) && c != '.'; )
++      *p++ = tolower((unsigned char)c);
++    argv[0] = argv0;
++  }
++#endif
+   myname = argv[0];
+-  while ((opt = getopt_long (argc, argv, "hne:f:V", longopts, (int *) 0))
++  while ((opt = getopt_long (argc, argv, "hne:f:VW:", longopts, (int *) 0))
+ 	 != EOF)
+     {
+@@ -408,4 +500,24 @@
+ 	  usage (0);
+ 	  break;
++	case 'W':
++	  if (strncasecmp(optarg, "ctype=", 6) != 0)
++	    usage (4);
++	  optarg += 6;
++	  /*FALLDOWN*/
++	case 'T':
++	  if (strcasecmp(optarg, "ASCII") == 0) {
++	    mbcinit(MBCTYPE_ASCII);
++	    break;
++	  }
++	  if (strcasecmp(optarg, "EUC") == 0) {
++	    mbcinit(MBCTYPE_EUC);
++	    break;
++	  }
++	  if (strcasecmp(optarg, "SJIS") == 0) {
++	    mbcinit(MBCTYPE_SJIS);
++	    break;
++	  }
++	  fprintf (stderr, "%s: unknown ctype\n", optarg);
++	  /*FALLDOWN*/
+ 	default:
+ 	  usage (4);
+@@ -526,4 +638,23 @@
+ #define MORE_CMDS 40
+ 
++static int
++#ifdef __STDC__
++compare_mbcs(const void *p1, const void *p2)
++#else
++compare_mbcs(p1, p2)
++     /* The `const' keyword is #defined in regex.h.  */
++     const void *p1, *p2;
++#endif
++{
++  unsigned short c1 = *(const unsigned short *)p1;
++  unsigned short c2 = *(const unsigned short *)p2;
++
++  if (c1 == c2)
++    return (p1 == p2 ? 0
++	    /* qsort() が安定になるように, 大小関係を強制する.  */
++	    : p1 < p2 ? -1 : 1);
++  return c1 < c2 ? -1 : 1;
++}
++
+ /* Read a program (or a subprogram within '{' '}' pairs) in and store
+    the compiled form in *'vector'  Return a pointer to the new vector.  */
+@@ -828,22 +959,42 @@
+ 	case 'y':
+ 	  cur_cmd->cmd = ch;
+-	  string = (unsigned char *) ck_malloc (256);
+-	  for (num = 0; num < 256; num++)
+-	    string[num] = num;
+-	  b = init_buffer ();
+-	  slash = inchar ();
+-	  while ((ch = inchar ()) != EOF && ch != slash)
+-	    add1_buffer (b, ch);
+-	  cur_cmd->x.translate = string;
+-	  string = (unsigned char *) get_buffer (b);
+-	  for (num = size_buffer (b); num; --num)
+-	    {
+-	      ch = inchar ();
+-	      if (ch == EOF)
+-		bad_prog (BAD_EOF);
+-	      if (ch == slash)
+-		bad_prog ("strings for y command are different lengths");
+-	      cur_cmd->x.translate[*string++] = ch;
++	  {
++	    unsigned short *q;
++	    unsigned char *p;
++	    int i, n;
++
++	    b = init_buffer ();
++	    n = 0;		/* count multi-byte chars.  */
++	    slash = inchar ();
++	    while ((ch = inchar ()) != EOF && ch != slash) {
++	      if ((unsigned short)ch >= 256)
++		n++;
++	      add2_buffer (b, ch);
+ 	    }
++	    q = (unsigned short *) ck_malloc (512 + n*2*sizeof (unsigned short));
++	    cur_cmd->x.cmd_y.translate = q;
++	    cur_cmd->x.cmd_y.mbcsize = n;
++	    for (num = 0; num < 256; num++)
++	      q[num] = num;
++	    p = (unsigned char *) get_buffer (b);
++	    for (i = 256, num = size_buffer (b) >> 1; num; --num)
++	      {
++		unsigned char c;
++
++		ch = inchar ();
++		if (ch == EOF)
++		  bad_prog (BAD_EOF);
++		if (ch == slash)
++		  bad_prog ("strings for y command are different lengths");
++		c = *p++;
++		if (!c)
++		  q[*p++] = ch;
++		else
++		  q[i++] = c << 8 | *p++,
++		  q[i++] = ch;
++	      }
++	    if (n)
++	      qsort(&q[256], n, 2*sizeof (unsigned short), compare_mbcs);
++	  }
+ 	  flush_buffer (b);
+ 	  if (inchar () != slash || ((ch = inchar ()) != EOF && ch != '\n' && ch != ';'))
+@@ -880,5 +1031,5 @@
+    be meaningful. */
+ int
+-inchar ()
++inchar_raw ()
+ {
+   int ch;
+@@ -907,4 +1058,25 @@
+ }
+ 
++int saved_char = EOF;
++
++int
++inchar ()
++{
++  int c, c2;
++
++  if (saved_char != EOF) {
++    c = saved_char;
++    saved_char = EOF;
++    return c;
++  }
++  c = inchar_raw ();
++  if (c == EOF || !ismbchar (c))
++    return c;
++  c2 = inchar_raw ();
++  if (c2 == EOF || c2 == '\n' || c2 == '\0')
++    bad_prog (BAD_MBC);
++  return c << 8 | (unsigned char) c2;
++}
++
+ /* unget 'ch' so the next call to inchar will return it.  'ch' must not be
+    EOF or anything nasty like that. */
+@@ -913,4 +1085,8 @@
+      int ch;
+ {
++  if (ch >= 256) {
++    saved_char = ch;
++    return;
++  }
+   if (ch == EOF)
+     return;
+@@ -1178,7 +1354,9 @@
+       if (input_file == 0)
+ 	{
++#ifndef MSDOS
+ 	  extern int errno;
+ 	  extern char *sys_errlist[];
+ 	  extern int sys_nerr;
++#endif
+ 
+ 	  char *ptr;
+@@ -1405,9 +1583,21 @@
+ 		    width += 2;
+ 		  }
+-		else if (isprint (*tmp))
++		else if (isprint ((unsigned char)*tmp)
++			 || (current_mbctype == MBCTYPE_SJIS
++			     && '\240' <= *tmp && *tmp <= '\337'))
+ 		  {
+ 		    putchar (*tmp);
+ 		    width++;
+ 		  }
++		else if (ismbchar (tmp[0]) && n >= 2
++			 && tmp[1] != '\n' && tmp[1] != '\0')
++		  {
++		    putchar (tmp[0]);
++		    putchar (tmp[1]);
++		    if (!(current_mbctype == MBCTYPE_EUC && tmp[0] == '\216'))
++		      width++;
++		    width++;
++		    --n;
++		  }
+ 		else
+ 		  switch (*tmp)
+@@ -1663,9 +1853,61 @@
+ 
+ 	case 'y':
+-	  {
++	  if (current_mbctype == MBCTYPE_ASCII) {
+ 	    unsigned char *p, *e;
+ 
+ 	    for (p = (unsigned char *) (line.text), e = p + line.length; p < e; p++)
+-	      *p = cur_cmd->x.translate[*p];
++	      *p = cur_cmd->x.cmd_y.translate[*p];
++	  }
++	  else {
++	    unsigned char *p, *e;
++	    int i = 0, j, k;
++	    unsigned short c;
++
++	    if (!tmp.alloc) {
++	      tmp.alloc = line.length + 1;
++	      if (tmp.alloc < 50)
++		tmp.alloc = 50;
++	      tmp.text = ck_malloc (tmp.alloc);
++	    }
++	    for (p = (unsigned char *) (line.text), e = p + line.length; p < e; ) {
++	      if (i + 2 > tmp.alloc) {
++		tmp.alloc *= 2;
++		tmp.text = ck_realloc (tmp.text, tmp.alloc);
++	      }
++	      c = *p++;
++	      if (!ismbchar (c))
++		c = cur_cmd->x.cmd_y.translate[c];
++	      else {
++		c = c << 8 | *p++;
++		/* 同じキーについては最後のものが有効になるように, 慎重
++		   に探索する.  */
++		/* まず, c < cur_cmd->x.cmd_y.translate[256 + j*2] を満
++		   たす j の最小値を求める.  */
++		for (j = 0, k = cur_cmd->x.cmd_y.mbcsize; j < k; ) {
++		  int m = (j + k) >> 1;
++
++		  if (c >= cur_cmd->x.cmd_y.translate[256 + m*2])
++		    j = m + 1;
++		  else
++		    k = m;
++		}
++		if (0 < j
++		    && c == cur_cmd->x.cmd_y.translate[256 + (j - 1)*2])
++		  /* 直前のキーが一致すれば, 変換する.  */
++		  c = cur_cmd->x.cmd_y.translate[256 + (j - 1)*2 + 1];
++	      }
++	      if (c >= 256)
++		tmp.text[i++] = c >> 8;
++	      tmp.text[i++] = c;
++	    }
++	    t.text = line.text;
++	    t.length = line.length;
++	    t.alloc = line.alloc;
++	    line.text = tmp.text;
++	    line.length = i;
++	    line.alloc = tmp.alloc;
++	    tmp.text = t.text;
++	    tmp.length = t.length;
++	    tmp.alloc = t.alloc;
+ 	  }
+ 	  break;
+@@ -1871,5 +2113,6 @@
+ {
+   fprintf (status ? stderr : stdout, "\
+-Usage: %s [-nV] [--quiet] [--silent] [--version] [-e script]\n\
++Usage: %s [-nV] [--quiet] [--silent] [--version]\n\
++        [-Wctype=...] [--ctype=...] [-e script]\n\
+         [-f script-file] [--expression=script] [--file=script-file] [file...]\n",
+ 	   myname);
+diff -ru2N sed-1.18/utils.c sed+mb1.03/utils.c
+--- sed-1.18/utils.c	Tue May 18 06:28:49 1993
++++ sed+mb1.03/utils.c	Fri Jul  2 11:19:13 1993
+@@ -15,4 +15,6 @@
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.  */
++/* Multi-byte extension added May, 1993 by t^2 (Takahiro Tanimoto)
++   Last change: Jul. 2, 1993 by t^2  */
+ 
+ /* These routines were written as part of a library (by hack), but since most
+@@ -298,10 +300,29 @@
+ 
+ 	b=(struct buffer *)bb;
+-	if(b->length+1>b->allocated) {
++	if(b->length+2>b->allocated) {
+ 		b->allocated*=2;
+ 		b->b=(char *)ck_realloc(b->b,b->allocated);
+ 	}
++	if ((unsigned short)ch >= 256)
++	  b->b[b->length++] = ch >> 8;
+ 	b->b[b->length]=ch;
+ 	b->length++;
++}
++
++void
++add2_buffer(bb,ch)
++VOID *bb;
++int ch;
++{
++	struct buffer *b;
++
++	b=(struct buffer *)bb;
++	if(b->length+2>b->allocated) {
++		b->allocated*=2;
++		b->b=(char *)ck_realloc(b->b,b->allocated);
++	}
++	b->b[b->length]=ch >> 8;
++	b->b[b->length + 1] = ch;
++	b->length += 2;
+ }
+ 
