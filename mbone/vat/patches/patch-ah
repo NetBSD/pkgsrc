@@ -1,0 +1,35 @@
+--- configure.in.original	Thu Dec 11 18:14:48 1997
++++ configure.in	Thu Dec 11 18:14:58 1997
+@@ -166,6 +166,7 @@
+ *-*-netbsd*)
+ 	V_TARCMD="tar -h -c -f"
+-	V_LIB="$V_LIB -L/usr/pkg/lib"
++	V_LIB="$V_LIB -L/usr/pkg/lib -lossaudio"
++	V_OBJ_AUDIO="audio-voxware.o"
+ 	;;
+ *-*-hpux*)
+ 	V_DEFINE="$V_DEFINE"
+--- configure.original	Thu Dec 11 18:21:14 1997
++++ configure	Thu Dec 11 18:22:08 1997
+@@ -2179,6 +2179,7 @@
+ *-*-netbsd*)
+ 	V_TARCMD="tar -h -c -f"
+-	V_LIB="$V_LIB -L/usr/pkg/lib"
++	V_LIB="$V_LIB -L/usr/pkg/lib -lossaudio"
++	V_OBJ_AUDIO="audio-voxware.o"
+ 	;;
+ *-*-hpux*)
+ 	V_DEFINE="$V_DEFINE"
+--- audio-voxware.cc.original	Thu Nov 20 14:44:07 1997
++++ audio-voxware.cc	Thu Dec 11 17:47:55 1997
+@@ -44,8 +44,10 @@
+ #include <sys/uio.h>
+ #include <unistd.h>
+ #include <machine/soundcard.h>
++#elif defined(__NetBSD__)
++#include <soundcard.h>
+ #else
+ #include <sys/soundcard.h>
+ #endif
+ #include "audio.h"
+ #include "Tcl.h"
