@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/06/22 12:32:18 agc Exp $
+# $NetBSD: Makefile,v 1.5 1999/04/02 22:31:29 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/12/08 01:11:27 max Exp
 #
 
@@ -18,5 +18,8 @@ NO_CDROM=	"Restrictive copyright"
 
 post-extract:
 	@${CP} ${WRKSRC}/xmahjongg.6 ${WRKSRC}/xmahjongg.man
+
+post-install:
+	${X11BASE}/bin/mkfontdir ${X11BASE}/lib/X11/fonts/misc
 
 .include <../../mk/bsd.pkg.mk>
