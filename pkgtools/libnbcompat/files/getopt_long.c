@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt_long.c,v 1.1 2003/06/23 11:33:11 grant Exp $	*/
+/*	$NetBSD: getopt_long.c,v 1.2 2003/07/15 05:33:05 grant Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -41,7 +41,7 @@
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: getopt_long.c,v 1.1 2003/06/23 11:33:11 grant Exp $");
+__RCSID("$NetBSD: getopt_long.c,v 1.2 2003/07/15 05:33:05 grant Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 /* #include "namespace.h" */
@@ -61,7 +61,7 @@ __RCSID("$NetBSD: getopt_long.c,v 1.1 2003/06/23 11:33:11 grant Exp $");
 #define _DIAGASSERT(cond)	assert(cond)
 #endif
 
-#if HAVE_CONFIG_H && !HAVE_GETOPT_LONG && !HAVE_DECL_OPTIND
+#if HAVE_CONFIG_H && !HAVE_GETOPT_LONG && !HAVE_OPTIND_D
 #define REPLACE_GETOPT
 #endif
 
