@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/02/09 17:44:51 abs Exp $
+
+--- Makefile.orig	Sat Oct 31 03:58:47 1998
++++ Makefile	Wed Feb  9 16:06:35 2000
+@@ -8,7 +8,7 @@
+ PROG   = junkbuster
+ O      = o
+ RM     = rm -f
+-MORE_CFLAGS = -g
++MORE_CFLAGS = -O2
+ 
+ # use this for Solaris 2.x
+ #LDFLAGS = -lnsl -lsocket 
+@@ -52,7 +52,7 @@
+ OBJS =	jcc.$(O) parsers.$(O) filters.$(O) loaders.$(O) bind.$(O) conn.$(O) \
+ 	encode.$(O) ssplit.$(O) socks4.$(O) acl.$(O) gnu_regex.$(O) win32.$(O)
+ 
+-$(PROG): $(OBJS)
++$(PROG) all: $(OBJS)
+ 	$(CC) $(CFLAGS) -o $(PROG) $(OBJS) $(LDFLAGS)
+ 
+ clean:
