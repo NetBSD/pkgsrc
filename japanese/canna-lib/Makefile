@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/09/06 07:25:48 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/26 17:18:22 sakamoto Exp $
 #
 
 DISTNAME=	Canna35b2
@@ -46,5 +46,6 @@ post-configure:
 
 post-install:
 	@${LN} -s ${DICT_DIR}/canna ${PREFIX}/share/canna/dic
+	@${CHOWN} ${CANNAOWNER}:${CANNAGROUP} ${DICT_DIR}/canna
 
 .include "../../mk/bsd.pkg.mk"
