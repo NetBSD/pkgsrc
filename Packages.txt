@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.279 2003/01/10 11:58:02 agc Exp $
+# $NetBSD: Packages.txt,v 1.280 2003/01/10 17:26:35 jschauma Exp $
 ###########################################################################
 
 			==========================
@@ -1330,8 +1330,7 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    format, most commonly .tar.gz. If only some of the distfiles need to be
    uncompressed, the files to be uncompressed should be put into
    EXTRACT_ONLY. If the distfiles are not in .tar.gz format, they can be
-   extracted by setting EXTRACT_CMD, EXTRACT_BEFORE_ARGS and/or
-   EXTRACT_AFTER_ARGS. 
+   extracted by setting EXTRACT_CMD.
 
  * patch:
    After extraction, all the patches named by the PATCHFILES, those present
@@ -1808,8 +1807,6 @@ DISTNAME field, and add the following to your package's Makefile:
 
 	EXTRACT_SUFX=   .msg.gz
 	EXTRACT_CMD=            zcat
-	EXTRACT_BEFORE_ARGS=
-	EXTRACT_AFTER_ARGS=     |sh
 
 
  10.3 Packages not creating their own subdirectory
