@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/12/18 00:42:40 tsarna Exp $
+# $NetBSD: Makefile,v 1.13 1999/04/17 01:53:01 tsarna Exp $
 
 DISTNAME=	LLNLPython4
 PKGNAME=	py-Numeric-1.3
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/sigs/matrix-sig/
 
-DEPENDS+=	python-1.5.1:../../lang/python
+DEPENDS+=	python-1.5.2:../../lang/python
 
 WRKSRC=		${WRKDIR}/LLNLPython4/Numerical
 ALL_TARGET=	default
