@@ -1,0 +1,2 @@
+This package provides the lame plugin for GStreamer, which allows MP3 encoding
+of audio streams.

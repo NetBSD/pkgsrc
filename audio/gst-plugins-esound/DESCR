@@ -1,0 +1,2 @@
+This package provides the esound plugin for GStreamer, which allows playback
+and recording of sound through the Enlightened Sound Daemon.

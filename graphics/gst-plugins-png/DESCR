@@ -1,0 +1,2 @@
+This package provides the png plugin for GStreamer, which allows encoding and
+decoding of PNG images.
