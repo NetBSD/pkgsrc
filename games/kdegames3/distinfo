@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2004/02/05 07:53:58 markd Exp $
+$NetBSD: distinfo,v 1.15 2004/03/09 12:38:16 markd Exp $
 
-SHA1 (kdegames-3.2.0.tar.bz2) = 61d99b81fa477e6641d1f73afab594c0f77699d7
-Size (kdegames-3.2.0.tar.bz2) = 9079958 bytes
+SHA1 (kdegames-3.2.1.tar.bz2) = 375673263f5485a5ae4a6e9d16a9a7bf675f699f
+Size (kdegames-3.2.1.tar.bz2) = 9121779 bytes
