@@ -1,18 +1,15 @@
-$NetBSD: patch-ag,v 1.1 1999/08/17 11:18:41 agc Exp $
+$NetBSD: patch-ag,v 1.2 2002/01/09 23:04:56 seb Exp $
 
-Avoid conflicts with the definition in <sys/param.h>
-
---- include/misc.h	1999/08/17 08:00:50	1.1
-+++ include/misc.h	1999/08/17 08:01:01
-@@ -38,9 +38,9 @@
+--- doc/man/Makefile.orig	Tue Jul 25 16:20:17 1995
++++ doc/man/Makefile
+@@ -7,5 +7,10 @@
+ elk.1.html: elk.1
+ 	$(UNROFF) $?
  
- /* Align heap addresses */
- #ifdef ALIGN_8BYTE
--#  define ALIGN(ptr) ((ptr) = (char *)(((long)(ptr) + 7) & ~7))
-+#  define ELK_ALIGN(ptr) ((ptr) = (char *)(((long)(ptr) + 7) & ~7))
- #else
--#  define ALIGN(ptr) ((ptr) = (char *)(((long)(ptr) + 3) & ~3))
-+#  define ELK_ALIGN(ptr) ((ptr) = (char *)(((long)(ptr) + 3) & ~3))
- #endif
- 
- /* Normalize stack addresses */
++default: elk.1
++
+ clean:
+ 	rm -f elk.ps elk.1.html
++
++install: elk.1
++	${BSD_INSTALL_MAN} elk.1 ${PREFIX}/man/man1
