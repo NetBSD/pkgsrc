@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/25 04:16:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/03 21:50:41 snj Exp $
 
 DISTNAME=		camlimages-2.11
 PKGREVISION=		1
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://pauillac.inria.fr/camlimages/
 COMMENT=		Image processing library for Objective Caml
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
@@ -22,12 +22,12 @@ ALL_TARGET+=	all.opt
 PLIST_SRC+=	${PKGDIR}/PLIST.opt
 .endif
 
-.include "../../lang/ocaml/buildlink2.mk"
-.include "../../x11/lablgtk/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../graphics/libungif/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../lang/ocaml/buildlink3.mk"
+.include "../../x11/lablgtk/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
