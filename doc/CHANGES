@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3442 2003/09/18 14:45:23 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3443 2003/09/18 17:14:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3831,3 +3831,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added mp3splt-1.9 [wiz 2003-09-18]
 	Updated createbuildlink to 2.7 [jmmv 2003-09-18]
 	Added p5-Unicode-String-2.06 [xtraeme 2003-09-18]
+	Updated sendmail811 to 8.11.6nb6 [taca 2003-09-18]
