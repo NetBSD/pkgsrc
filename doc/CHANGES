@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1409 2003/02/16 23:13:36 seb Exp $
+$NetBSD: CHANGES,v 1.1410 2003/02/16 23:58:43 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -714,3 +714,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnuboy to 1.0.3nb1 [salo 2003-02-16]
 	Updated mp3check to 0.8.0 [abs 2003-02-16]
 	Updated rrdtool to 1.0.40 [seb 2003-02-16]
+	Updated flow-tools to 0.63 [seb 2003-02-16]
