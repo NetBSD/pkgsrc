@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.34 2001/10/04 01:02:16 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.35 2001/10/04 03:29:08 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -41,6 +41,39 @@
 # BUILDLINK_CONFIG_WRAPPER.<pkgname>
 #				absolute path for generated wrapper script;
 #				this should be under ${BUILDLINK_DIR}/bin
+#
+# Additional variables used by bsd.buildlink.mk that may be defined in
+# either the package Makefile or in buildlink.mk files:
+#
+# REPLACE_BUILDLINK		space-separated list of files on which we
+#				run ${SED} ${REPLACE_BUILDLINK_SED}
+#
+# REPLACE_BUILDLINK_PATTERNS	space-separated list of shell glob patterns
+#				representing files on which we run ${SED}
+#				${REPLACE_BUILDLINK_SED}
+#
+# REPLACE_BUILDLINK_SED		sed expression used primarily to replace
+#				references to directories in ${BUILDLINK_DIR}
+#				into directories in ${LOCALBASE} and
+#				${X11PREFIX}
+#
+# REPLACE_LIBNAMES		space-separated list of files on which we
+#				run ${SED} ${REPLACE_LIBNAMES_SED}
+#
+# REPLACE_LIBNAMES_PATTERNS	space-separated list of shell glob patterns
+#				representing files on which we run ${SED}
+#				${REPLACE_LIBNAMES_SED}
+#
+# REPLACE_LIBNAMES_SED		sed expression used primarily to replace
+#				references to library names within
+#				${BUILDLINK_DIR} into the true library names
+#				from the base system.
+#
+# BUILDLINK_CONFIG_WRAPPER_SED	sed expression used primarily to replace
+#				references to directories in ${LOCALBASE}
+#				and ${X11PREFIX} into directories in
+#				${BUILDLINK_DIR} or ${BUILDLINK_X11_DIR} in
+#				the buildlink config wrapper scripts
 #
 # The targets required to be defined prior to including this file are
 # listed below.
@@ -177,7 +210,7 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 
 _CHECK_IS_TEXT_FILE=	${FILE_CMD} $${file} | ${GREP} "text" >/dev/null 2>&1
 
-# REPLACE_LIBNAMES_SCRIPT runs sed with ${REPLACE_LIBNAMES_SED} as the
+# _REPLACE_LIBNAMES_SCRIPT runs sed with ${REPLACE_LIBNAMES_SED} as the
 # substitution expression on the files specified in $${replace_libnames}.
 # The following variables need to be predefined:
 #
@@ -185,7 +218,7 @@ _CHECK_IS_TEXT_FILE=	${FILE_CMD} $${file} | ${GREP} "text" >/dev/null 2>&1
 #	replace_libnames	files on which to run the substitution
 #	message			message to display
 #
-REPLACE_LIBNAMES_SCRIPT=						\
+_REPLACE_LIBNAMES_SCRIPT=						\
 	if [ ! -f $${cookie} ]; then					\
 		${MKDIR} ${BUILDLINK_DIR};				\
 		if [ -n "$${replace_libnames}" -a -n "${REPLACE_LIBNAMES_SED:Q}" ]; then \
@@ -229,7 +262,7 @@ replace-libnames-configure:
 	cookie=${BUILDLINK_DIR}/.replace_libnames_configure_done;	\
 	replace_libnames="${CONFIGURE_SCRIPT}";				\
 	message="Fixing library name references in configure scripts:";	\
-	${REPLACE_LIBNAMES_SCRIPT}
+	${_REPLACE_LIBNAMES_SCRIPT}
 .endif	# HAS_CONFIGURE
 
 post-configure: replace-libnames-makefiles
@@ -242,7 +275,7 @@ replace-libnames-makefiles:
 	cookie=${BUILDLINK_DIR}/.replace_libnames_makefiles_done;	\
 	replace_libnames="${REPLACE_LIBNAMES}";				\
 	message="Fixing library name references in Makefiles:";		\
-	${REPLACE_LIBNAMES_SCRIPT}
+	${_REPLACE_LIBNAMES_SCRIPT}
 .endif	# REPLACE_LIBNAMES
 
 REPLACE_BUILDLINK_PATTERNS+=	*.lai
