@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:47 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/23 21:50:47 jmmv Exp $
 
 DISTNAME=	ktail-0.5.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc kde
 MASTER_SITES=	http://www.franken.de/users/duffy1/rjakob/
 

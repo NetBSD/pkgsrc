@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/01/22 15:17:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/23 21:50:50 jmmv Exp $
 # FreeBSD Id: ports/www/swish-e/Makefile,v 1.3 1999/08/31 02:43:18 peter Exp
 
 DISTNAME=       swish-e-2.4.1
+PKGREVISION=     1
 CATEGORIES=     www textproc
 MASTER_SITES=	http://swish-e.org/Download/
 
