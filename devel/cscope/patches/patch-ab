@@ -1,27 +1,19 @@
-$NetBSD: patch-ab,v 1.6 2001/10/03 14:57:21 seb Exp $
+$NetBSD: patch-ab,v 1.7 2002/06/12 13:16:50 seb Exp $
 
---- configure.orig	Mon Jul  2 17:50:46 2001
+--- configure.orig	Wed Jun 12 12:47:17 2002
 +++ configure
-@@ -829,6 +829,8 @@
- 
- 
- 
-+# configure's patch is hand-trimmed after regen from patched configure.in
-+
- # ACNU_PROG_LEX fm AC_PROG_LEX 
- # -----------  
- 
-@@ -1344,9 +1346,8 @@
+@@ -1344,9 +1344,8 @@
        flex*) ac_lib=fl ;;
        *) ac_lib=l ;;
        esac
 -      LDFLAGS='-L/usr/local/lib'
        echo $ac_n "checking for yywrap in -l$ac_lib""... $ac_c" 1>&6
- echo "configure:1350: checking for yywrap in -l$ac_lib" >&5
+-echo "configure:1350: checking for yywrap in -l$ac_lib" >&5
++echo "configure:1349: checking for yywrap in -l$ac_lib" >&5
  ac_lib_var=`echo $ac_lib'_'yywrap | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -1380,12 +1381,11 @@
+@@ -1380,12 +1379,11 @@
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
