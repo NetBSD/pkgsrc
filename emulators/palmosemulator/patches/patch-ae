@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/12/31 06:59:56 dsainty Exp $
+
+Without this patch, ROM transfers tend to not get very far due to consistently
+lost characters.
+
+--- SrcUnix/EmTransportSerialUnix.cpp.orig	Sat Mar 30 01:11:19 2002
++++ SrcUnix/EmTransportSerialUnix.cpp	Sun Nov 24 05:42:39 2002
+@@ -220,7 +220,7 @@
+ 	// Programming Mini-Howto") says to turn off these for "raw" (as opposed to
+ 	// "canonical") mode.
+ 
+-	io.c_lflag &= ~(ICANON | ECHO | ISIG);
++	io.c_lflag &= ~(ICANON | ECHO | ISIG | IEXTEN);
+ 
+ 	// The UNIX Programming FAQ (<www://www.faqs.org/faqs/unix-faq/programmer/faq/>)
+ 	// recommends just setting all the c_iflags and c_oflags to zero.

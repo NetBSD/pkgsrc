@@ -1,0 +1,36 @@
+$NetBSD: patch-ag,v 1.1.1.1 2002/12/31 06:59:57 dsainty Exp $
+
+This patch prevents the emulator from grabbing the mouse.  It isn't clear why
+the emulator does grab the mouse, a fairly bad-mannered thing for an
+application to do.
+
+There doesn't appear to be any actual reason for doing so, and if the emulator
+hangs for any reason with the mouse grab in-force, it tends to disable the
+entire X session.
+
+--- SrcShared/EmWindow.cpp.orig	Sun Dec  1 16:05:17 2002
++++ SrcShared/EmWindow.cpp	Sun Dec  1 16:05:00 2002
+@@ -229,11 +229,6 @@
+ 	if (down && (fCurrentButton == kElement_None))
+ 	{
+ 		what = ::SkinTestPoint (where);
+-
+-		if ((what != kElement_Frame) && (what != kElement_None))
+-		{
+-			this->HostMouseCapture ();
+-		}
+ 	}
+ 
+ 	// If the pen is up, or if we were already in the progress of tracking
+@@ -288,11 +283,6 @@
+ 		fCurrentButton = what;
+ 	else
+ 		fCurrentButton = kElement_None;
+-
+-	if (fCurrentButton == kElement_None)
+-	{
+-		this->HostMouseRelease ();
+-	}
+ }
+ 
+ 

@@ -1,0 +1,8 @@
+Palm OS Emulator is an emulator for hardware capable of running the Palm OS
+operating system, with an X based interface.
+
+To use the emulator you must obtain a ROM image of the Palm OS operating
+system.  If you have a Palm OS device, you can extract the ROM image directly.
+
+Read "UsingPalmOSEmulator.pdf" for details of how to extract ROM images and
+how to use the emulator.  Run "pose" to start the emulator.
