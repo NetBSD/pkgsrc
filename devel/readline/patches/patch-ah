@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 1999/02/23 18:56:59 sommerfe Exp $
+
+--- chardefs.h.~1~	Thu Sep 25 10:59:00 1997
++++ chardefs.h	Tue Feb 23 13:47:23 1999
+@@ -51,7 +51,7 @@
+ #define meta_character_bit 0x080	    /* x0000000, must be on. */
+ #define largest_char 255		    /* Largest character value. */
+ 
+-#define CTRL_CHAR(c) ((c) < control_character_threshold && (c) >= 0)
++#define CTRL_CHAR(c) (((unsigned)(c)) < control_character_threshold)
+ #define META_CHAR(c) ((c) > meta_character_threshold && (c) <= largest_char)
+ 
+ #define CTRL(c) ((c) & control_character_mask)
