@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2512 2003/06/16 04:56:18 itojun Exp $
+$NetBSD: CHANGES,v 1.2513 2003/06/16 08:29:26 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2465,3 +2465,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkglint to 3.55 [abs 2003-06-15]
 	Added privoxy-3.0.2 [kim 2003-06-16]
 	Updated cue to 20030616 [itojun 2003-06-16]
+	Updated postfix to 2.0.12 [martti 2003-06-16]
