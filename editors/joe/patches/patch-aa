@@ -1,5 +1,5 @@
-*** Makefile.orig	Sat Jul  1 18:43:39 1995
---- Makefile	Sat Jul  1 18:59:47 1995
+*** Makefile.orig	Mon Jan 23 01:01:28 1995
+--- Makefile	Mon Apr  6 16:29:17 1998
 ***************
 *** 9,17 ****
   # to go and where you want the man page
@@ -37,6 +37,23 @@
 ! # CFLAGS = -O
   
   # C compiler to use: make's built-in rules use this variable
+  
+***************
+*** 45,51 ****
+  # add '-ltinfo', '-lcurses' or '-ltermlib',
+  # depending on the system.
+  
+! EXTRALIBS =
+  
+  # Object files
+  
+--- 45,51 ----
+  # add '-ltinfo', '-lcurses' or '-ltermlib',
+  # depending on the system.
+  
+! EXTRALIBS = -ltermcap
+  
+  # Object files
   
 ***************
 *** 84,100 ****
