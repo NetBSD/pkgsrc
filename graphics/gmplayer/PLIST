@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/07/24 12:56:52 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/09/02 17:46:37 jmmv Exp $
 bin/gmplayer
 man/man1/gmplayer.1
 share/mplayer/Skin/AlienMind/README
@@ -538,8 +538,8 @@ share/mplayer/Skin/xine-lcd/volume.png
 @dirrm share/mplayer/Skin/WindowsMediaPlayer6
 @dirrm share/mplayer/Skin/MidnightLove
 @dirrm share/mplayer/Skin/Cyrus
-@dirrm share/mplayer/Skin/CornerMP
 @dirrm share/mplayer/Skin/CornerMP-aqua
+@dirrm share/mplayer/Skin/CornerMP
 @dirrm share/mplayer/Skin/BlueHeart
 @dirrm share/mplayer/Skin/AlienMind
 @dirrm share/mplayer/Skin

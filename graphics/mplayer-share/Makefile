@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/08/31 00:25:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2003/09/02 17:46:31 jmmv Exp $
 
 .include "Makefile.common"
 
@@ -24,19 +24,21 @@ DISTFILES+=	${MP_FONTS}
 .include "../../mk/bsd.prefs.mk"
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/DOCS/mplayer.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/DOCS/en/mplayer.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer
+	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer/DOCS
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer/fonts
 	${INSTALL_DATA} ${WRKSRC}/etc/codecs.conf ${PREFIX}/share/mplayer
 	${INSTALL_DATA} ${WRKSRC}/etc/input.conf ${PREFIX}/share/mplayer
-	${CP} -R ${WRKSRC}/DOCS ${PREFIX}/share/mplayer
+	(cd ${WRKSRC}/DOCS && \
+		${PAX} -rwpppm * ${PREFIX}/share/mplayer/DOCS); \
 	${FIND} ${PREFIX}/share/mplayer/DOCS -type d -exec ${CHMOD} \
      		${PKGDIRMODE} \{\} \;
 	${FIND} ${PREFIX}/share/mplayer/DOCS -type f -exec ${CHMOD} \
   		${SHAREMODE} \{\} \;
 	for D in ${FONT_DIRS}; do \
 		(cd ${WRKDIR}/$$D && \
-			${PAX} -rw * ${PREFIX}/share/mplayer/fonts); \
+			${PAX} -rwpppm * ${PREFIX}/share/mplayer/fonts); \
 	done
 	${LN} -s ${PREFIX}/share/mplayer/fonts/font-arial-18-iso-8859-1 \
 		${PREFIX}/share/mplayer/font
