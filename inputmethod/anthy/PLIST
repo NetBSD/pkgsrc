@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/04 03:57:44 taya Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/28 05:35:29 taya Exp $
 bin/anthy-agent
 bin/anthy-dic-tool
 etc/anthy-conf
@@ -22,18 +22,10 @@ share/anthy/noun-variant.depword
 share/anthy/noun.depword
 share/anthy/typetab
 share/anthy/v.depword
-${EMACS_LISPPREFIX}/anthy/anthy-azik.el
-${EMACS_LISPPREFIX}/anthy/anthy-azik.elc
-${EMACS_LISPPREFIX}/anthy/anthy-conf.el
-${EMACS_LISPPREFIX}/anthy/anthy-conf.elc
-${EMACS_LISPPREFIX}/anthy/anthy-dic.el
-${EMACS_LISPPREFIX}/anthy/anthy-dic.elc
-${EMACS_LISPPREFIX}/anthy/anthy-isearch.el
-${EMACS_LISPPREFIX}/anthy/anthy-isearch.elc
-${EMACS_LISPPREFIX}/anthy/anthy.el
-${EMACS_LISPPREFIX}/anthy/anthy.elc
-${EMACS_LISPPREFIX}/anthy/leim-list.el
-${EMACS_LISPPREFIX}/anthy/leim-list.elc
-@dirrm ${EMACS_LISPPREFIX}/anthy
+share/doc/anthy/DICUTIL
+share/doc/anthy/ELISP
+share/doc/anthy/GUIDE.english
+share/doc/anthy/README
+@dirrm share/doc/anthy
 @dirrm share/anthy
 @dirrm include/anthy
