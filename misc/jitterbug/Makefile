@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/03/01 19:07:52 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/04/09 11:45:35 wiz Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -169,7 +169,7 @@ pre-install:
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${JB_CONFIGDIR}
-	-${INSTALL_DATA_DIR} ${PREFIX}/${JB_DATADIR}
+	${INSTALL_DATA_DIR} ${PREFIX}/${JB_DATADIR}
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
 		${CONFIGDIR}/footer.html ${PREFIX}/${JB_CONFIGDIR}
 	[ -f ${PREFIX}/${JB_DATADIR}/footer.html ] ||                         \
@@ -200,7 +200,7 @@ do-install:
 	[ -f ${PREFIX}/${JB_DATADIR}/users ] ||                               \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
 		${CONFIGDIR}/users ${PREFIX}/${JB_DATADIR}
-	-${INSTALL_PROGRAM_DIR} ${PREFIX}/${CGIBINDIR}
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/${CGIBINDIR}
 	${INSTALL} -c -o root -g nobody -m 4710                               \
 		${WRKSRC}/jitterbug ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}
 	${LN} -f ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE} ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
@@ -237,7 +237,7 @@ do-install:
 		>${PREFIX}/${JB_CONFIGDIR}/jitterbug.config
 	${CHOWN} -R ${JB_USER} ${PREFIX}/${JB_USER}
 	${CHGRP} -R ${JB_GROUP} ${PREFIX}/${JB_USER}
-	-${INSTALL_DATA_DIR} ${PREFIX}/etc/jitterbug
+	${INSTALL_DATA_DIR} ${PREFIX}/etc/jitterbug
 	[ -f ${PREFIX}/etc/jitterbug/${JB_PACKAGE} ] ||                       \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
 		${PREFIX}/${JB_CONFIGDIR}/jitterbug.config                    \
