@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/21 01:29:47 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/21 01:30:56 jlam Exp $
 
 .if !defined(XMMS_BUILDLINK2_MK)
 XMMS_BUILDLINK2_MK=	# defined
@@ -14,7 +14,7 @@ BUILDLINK_FILES.xmms+=	lib/libxmms.*
 
 PTHREAD_OPTS+=		require
 
-.include "../../textproc/libiconv/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 
