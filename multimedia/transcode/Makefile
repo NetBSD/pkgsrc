@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/19 03:11:38 sekiya Exp $
+# $NetBSD: Makefile,v 1.8 2004/10/19 10:37:30 grant Exp $
 
 DISTNAME=	transcode-0.6.12
 PKGREVISION=	3
@@ -54,9 +54,7 @@ post-install:
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
-.if ${MACHINE_ARCH} == "i386"
 .include "../../multimedia/xvidcore/buildlink3.mk"
-.endif
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
