@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.409 2002/10/30 05:36:47 elric Exp $
+$NetBSD: CHANGES,v 1.410 2002/10/30 06:46:06 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3446,3 +3446,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated libgnomecanvas to 2.0.4nb1 [rh 2002-10-30]
 	Added libgnomedb-0.8.199 [rh 2002-10-30]
 	Updated imap-uw to 2001.1nb2 [elric 2002-10-30]
+	Updated jikes to 1.17 [skrll 2002-10-30]
