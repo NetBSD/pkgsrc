@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/26 02:27:59 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/09 06:48:40 snj Exp $
 #
 
 DISTNAME=	Preferences-1.2.0
@@ -13,11 +13,11 @@ HOMEPAGE=	http://prefsapp.sourceforge.net/
 COMMENT=	Application for setting preferences for the GNUstep system
 
 NO_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
 MAKEFILE=		GNUmakefile
 
-.include "../../x11/gnustep-back/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../x11/gnustep-back/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

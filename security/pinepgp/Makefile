@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/08 17:44:49 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/09 06:48:40 snj Exp $
 #
 
 DISTNAME=		pinepgp-0.18.0
@@ -13,7 +13,7 @@ COMMENT=		PGP display and sending filters for pine
 
 DEPENDS+=		bash>=2.05.2.7:../../shells/bash2
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

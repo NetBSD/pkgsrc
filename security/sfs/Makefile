@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/26 02:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/09 06:48:40 snj Exp $
 #
 
 DISTNAME=		sfs-0.7.2
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-sfsdir=${SFS_ROOT}
 CONFIGURE_ARGS+=	--disable-uvfs
 
 USE_PKGINSTALL=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PERL5=		yes
 
 GCC_REQD+=		2.95.3
@@ -49,7 +49,7 @@ post-install:
 	@${SED} -e 's|@SFSDIR@|${SFS_ROOT}|g' ${FILESDIR}/sfsrwsd_config.sample \
 		> ${SFSEXAMPLEDIR}/sfsrwsd_config.sample
 
-.include "../../devel/gmp/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
