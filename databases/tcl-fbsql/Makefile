@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2004/03/08 19:52:50 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/12 22:15:04 minskim Exp $
 
 DISTNAME=		fbsql.c
 PKGNAME=		tcl-fbsql-1.05
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		http://www.fastbase.co.nz/fbsql/
 EXTRACT_SUFX=
@@ -21,14 +22,8 @@ do-extract:
 	${CP} ${_DISTDIR}/fbsql.c ${WRKSRC}/
 
 do-install:
-	@-${MKDIR} ${TCL_DIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/fbsql.so ${TCL_DIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/fbsql.so ${PREFIX}/lib/tcl
 
 .include "../../databases/mysql-client/buildlink2.mk"
-.include "../../lang/tcl83/buildlink2.mk"
+.include "../../lang/tcl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.ifmake do-install
-# Need here for $PREFIX
-TCL_DIR!=		. ${PREFIX}/lib/tclConfig.sh; echo $$TCL_PACKAGE_PATH
-.endif
