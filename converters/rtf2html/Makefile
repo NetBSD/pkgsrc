@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2001/08/20 02:25:21 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/02 18:16:46 wiz Exp $
 #
 
 DISTNAME=	rtf2html
 PKGNAME=	rtf2html-1.1
 CATEGORIES=	converters
-MASTER_SITES=	http://www.fe.msk.ru/~vitus/misc/
+MASTER_SITES=	http://www.ice.ru/~vitus/misc/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.fe.msk.ru/~vitus/catdoc/
+HOMEPAGE=	http://www.ice.ru/~vitus/catdoc/
 COMMENT=	Rich Text to HTML file converter
 
 USE_BUILDLINK_ONLY=	# defined
