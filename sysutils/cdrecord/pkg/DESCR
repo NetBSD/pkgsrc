@@ -1,19 +1,7 @@
-Cdrecord allows you to create CD's on a CD-Recorder.
-
-Cdrecord has been implemented with a Philips CDD 521.
-Cdrecord now is maintained with a Philips CDD-2000
-It should run also on:
-
-	Philips CDD 522
-	Philips CDD 2000
-	Philips CDD 2600
-	HP C4324/C4325	 (HP SureStore 4020i/6020i)
-	Plasmon	RF-41000
-	Plasmon CDR 4220 (not tested)
-	Grundig CDR-100  (not tested)
-	Mitsumi	CR-2401-TS (not tested)
-	Yamaha	CDR-100
-	Yamaha	CDR-102
-	Sony	CDU-924
-
-Multi-session has not been tested with the Plasmon RF-4100
+Cdrecord cwallows you to burn CDs with a CD-R/CD-RW recorder. It
+works as a burn engine for several applications. Cdrecord supports
+CD recorders from many different vendors; all SCSI-3/mmc and
+ATAPI/mmc compliant drives should also work.  Supported features
+include: IDE/ATAPI, parallel-port, and SCSI drives; audio CDs, data
+CDs, and mixed CDs; full multi-session support, CD-RWs (rewritable),
+TAO, DAO and human-readable error messages.
