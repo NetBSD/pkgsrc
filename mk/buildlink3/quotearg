@@ -1,0 +1,20 @@
+# $NetBSD: quotearg,v 1.1 2003/10/03 19:39:19 jlam Exp $
+#
+# Returns $qarg, which contains a correctly-quoted $arg.  Also sets
+# $quotedarg to "yes" if the $arg needed to be quoted.
+#
+case $arg in
+*[\`\"\$\\]*)
+        qarg=`$echo "X$arg" | $Xsed -e "$sed_quote_subst"`
+	quotedarg=yes
+        ;;
+*)
+        qarg="$arg"
+        ;;
+esac
+case $qarg in
+        *[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
+        qarg="\"$qarg\""
+	quotedarg=yes
+        ;;
+esac
