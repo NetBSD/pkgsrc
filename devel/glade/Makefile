@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 1999/02/19 14:29:16 rh Exp $
+# $NetBSD: Makefile,v 1.4 1999/05/02 14:50:33 rh Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/11/18 17:35:16 vanilla Exp
 #
 
-DISTNAME=	glade-0.3.9
+DISTNAME=	glade-0.4.1
 CATEGORIES=	devel
 MASTER_SITES=   http://glade.pn.org/ \
 		http://www.glade.hhips.de/
@@ -12,11 +12,11 @@ HOMEPAGE=	http://glade.pn.org/
 
 BUILD_DEPENDS+=	xgettext:../../devel/gettext
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
-DEPENDS+=	gtk10-1.0.6:../../x11/gtk10
+DEPENDS+=	gtk+-1.2.1:../../x11/gtk
+DEPENDS+=	gnome-libs-1.0.8:../../x11/gnome-libs
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
-		GTK_CONFIG="${X11BASE}/bin/gtk10-config"
+CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -I${LOCALBASE}/include"
 USE_X11BASE=	yes
 
 post-install:
