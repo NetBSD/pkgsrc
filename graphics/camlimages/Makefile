@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:14:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/24 17:21:01 jmmv Exp $
 
 DISTNAME=		camlimages-2.11
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.inria.fr/INRIA/caml-light/bazar-ocaml/
 EXTRACT_SUFX=		.tgz
@@ -23,11 +23,12 @@ PLIST_SRC+=	${PKGDIR}/PLIST.opt
 .endif
 
 .include "../../lang/ocaml/buildlink3.mk"
-.include "../../x11/lablgtk/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/lablgtk/buildlink3.mk"
+.include "../../x11/ocaml-graphics/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
