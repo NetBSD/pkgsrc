@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2001/03/26 17:56:10 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/27 17:58:47 zuntum Exp $
 # FreeBSD Id: ports/sysutils/daemontools/Makefile,v 1.8 2000/12/03 05:16:41 steve Exp
 
 DISTNAME=	daemontools-0.70
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cr.yp.to/daemontools/				\
 		ftp://cr.yp.to/daemontools/				\
-		ftp://ftp.innominate.org/gpa/djb/			\
-		http://zuntum.eik.pl/pkgsrc/distfiles/
+		ftp://ftp.innominate.org/gpa/djb/
 DISTFILES=	${DISTNAME}.tar.gz					\
 		${DISTNAME}-man.tar.gz
 
