@@ -1,25 +1,14 @@
-$NetBSD: patch-ac,v 1.6 2004/12/14 09:08:37 adam Exp $
+$NetBSD: patch-ac,v 1.7 2004/12/14 12:13:43 wiz Exp $
 
---- libraries/libldap_r/thr_posix.c.orig	2004-01-01 18:16:30.000000000 +0000
+--- libraries/libldap_r/thr_posix.c.orig	Thu Jan  1 13:16:30 2004
 +++ libraries/libldap_r/thr_posix.c
-@@ -112,8 +112,10 @@ ldap_pvt_thread_create( ldap_pvt_thread_
+@@ -112,7 +112,9 @@ ldap_pvt_thread_create( ldap_pvt_thread_
  
  #if defined(LDAP_PVT_THREAD_STACK_SIZE) && LDAP_PVT_THREAD_STACK_SIZE > 0
  	/* this should be tunable */
 +#if defined(_POSIX_THREAD_ATTR_STACKSIZE)
  	pthread_attr_setstacksize( &attr, LDAP_PVT_THREAD_STACK_SIZE );
- #endif
 +#endif
+ #endif
  
  #if HAVE_PTHREADS > 5
- 	detach = detach ? PTHREAD_CREATE_DETACHED : PTHREAD_CREATE_JOINABLE;
-@@ -190,7 +192,8 @@ ldap_pvt_thread_yield( void )
- 	return thr_yield();
- 
- #elif HAVE_PTHREADS == 10
--	return sched_yield();
-+	sched_yield();
-+	return 0;
- 
- #elif defined(_POSIX_THREAD_IS_GNU_PTH)
- 	sched_yield();
