@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.179 2003/09/06 11:39:29 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.180 2003/09/06 11:51:17 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -168,6 +168,12 @@ PKG_SYSCONFBASE?= ${PREFIX}/etc
 # files should be found.
 # Possible: any path you like
 # Default: ${PREFIX}/etc
+
+RCD_SCRIPTS_DIR?= /etc/rc.d
+# This is the system rc.d script directory in which all rc.d scripts
+# expected to be executed at boot-time should be found.
+# Possible: any path you like
+# Default: /etc/rc.d
 
 PACKAGES?=       ${_PKGSRCDIR}/packages
 # Store generated packages on a per-architecture base
