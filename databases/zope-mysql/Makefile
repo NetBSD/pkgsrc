@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/06/19 23:09:28 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 1999/12/17 11:17:59 agc Exp $
 #
 
 DISTNAME=	ZMySQLDA-1.1.3-nonbin
@@ -9,7 +9,7 @@ MASTER_SITES=   http://www.zope.org/Download/ZMySQLDA/
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/
 
-DEPENDS+=	zope-1.10.3:../../www/zope
+DEPENDS+=	zope-2.0.1:../../www/zope
 DEPENDS+=	py-mysql-1.4:../../databases/py-mysql
 
 WRKSRC=		${WRKDIR}/lib
