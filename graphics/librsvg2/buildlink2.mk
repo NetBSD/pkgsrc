@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2004/01/03 18:49:43 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2004/01/04 17:23:39 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use librsvg2.
 #
@@ -9,7 +9,7 @@
 LIBRSVG2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			librsvg2
-BUILDLINK_DEPENDS.librsvg2?=		librsvg2>=2.5.0nb2
+BUILDLINK_DEPENDS.librsvg2?=		librsvg2>=2.5.0nb3
 BUILDLINK_PKGSRCDIR.librsvg2?=		../../graphics/librsvg2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.librsvg2=librsvg2
@@ -26,6 +26,7 @@ BUILDLINK_FILES.librsvg2+=	lib/librsvg-2.*
 .include "../../devel/libgsf/buildlink2.mk"
 .include "../../devel/pango/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
+.include "../../textproc/libcroco/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	librsvg2-buildlink

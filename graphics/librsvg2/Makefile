@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2004/01/03 18:49:43 reed Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/04 17:23:39 jmmv Exp $
 #
 
 DISTNAME=	librsvg-2.5.0
 PKGNAME=	${DISTNAME:S/-/2-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.5/}
 EXTRACT_SUFX=	.tar.bz2
@@ -37,5 +37,6 @@ MESSAGE_SUBST+=		PKG_SYSCONFDIR.gtk2="${PKG_SYSCONFDIR.gtk2}"
 .include "../../devel/pango/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
+.include "../../textproc/libcroco/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
