@@ -1,10 +1,16 @@
-$NetBSD: patch-aa,v 1.24 2002/06/25 02:13:12 itojun Exp $
+$NetBSD: patch-aa,v 1.25 2002/08/28 04:55:18 jlam Exp $
 
-use libcrypt before libcrypto, as crypt() in libcrypt is more than just for DES
-
---- configure.orig	Sat Jun 22 00:56:52 2002
-+++ configure	Tue Jun 25 10:54:48 2002
-@@ -3943,8 +3943,6 @@
+--- configure.orig	Wed Jun 26 07:08:18 2002
++++ configure
+@@ -3920,6 +3920,7 @@ _ACEOF
+ 	SONY=1
+ 	;;
+ *-*-netbsd*)
++	check_for_libcrypt_before=1
+ 	need_dash_r=1
+ 	;;
+ *-*-freebsd*)
+@@ -3950,8 +3951,6 @@ _ACEOF
  	CFLAGS="$CFLAGS"
  	;;
  *-*-solaris*)
@@ -13,7 +19,7 @@ use libcrypt before libcrypto, as crypt() in libcrypt is more than just for DES
  	need_dash_r=1
  	cat >>confdefs.h <<\_ACEOF
  #define PAM_SUN_CODEBASE 1
-@@ -4393,6 +4391,9 @@
+@@ -4406,6 +4405,9 @@ _ACEOF
  	;;
  esac
  
@@ -23,27 +29,95 @@ use libcrypt before libcrypto, as crypt() in libcrypt is more than just for DES
  # Allow user to specify flags
  
  # Check whether --with-cflags or --without-cflags was given.
-@@ -6306,6 +6307,10 @@
+@@ -6319,6 +6321,10 @@ echo $ECHO_N "checking for libwrap... $E
  #line $LINENO "configure"
  #include "confdefs.h"
  
 +#ifdef HAVE_SYS_CDEFS_H
-+#include <sys/cdefs.h> 
++#include <sys/cdefs.h>
 +#endif
 +#include <stdio.h>
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  
-@@ -8051,7 +8056,7 @@
+@@ -8090,6 +8096,76 @@ fi
+ rm -f conftest.$ac_objext conftest.$ac_ext
+ fi
  
- 
- fi;
--LIBS="$LIBS -lcrypto"
-+LIBS="$LIBS -lcrypt -lcrypto"
- cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
- #include "confdefs.h"
-@@ -17485,7 +17490,7 @@
++# Some systems want crypt() from libcrypt, *not* the version in OpenSSL,
++# because the system crypt() is more featureful.
++if test "x$check_for_libcrypt_before" = "x1"; then
++
++echo "$as_me:$LINENO: checking for crypt in -lcrypt" >&5
++echo $ECHO_N "checking for crypt in -lcrypt... $ECHO_C" >&6
++if test "${ac_cv_lib_crypt_crypt+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lcrypt  $LIBS"
++cat >conftest.$ac_ext <<_ACEOF
++#line $LINENO "configure"
++#include "confdefs.h"
++
++/* Override any gcc2 internal prototype to avoid an error.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++/* We use char because int might match the return type of a gcc2
++   builtin and then its argument prototype would still apply.  */
++char crypt ();
++#ifdef F77_DUMMY_MAIN
++#  ifdef __cplusplus
++     extern "C"
++#  endif
++   int F77_DUMMY_MAIN() { return 1; }
++#endif
++int
++main ()
++{
++crypt ();
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++         { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  ac_cv_lib_crypt_crypt=yes
++else
++  echo "$as_me: failed program was:" >&5
++cat conftest.$ac_ext >&5
++ac_cv_lib_crypt_crypt=no
++fi
++rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++echo "$as_me:$LINENO: result: $ac_cv_lib_crypt_crypt" >&5
++echo "${ECHO_T}$ac_cv_lib_crypt_crypt" >&6
++if test $ac_cv_lib_crypt_crypt = yes; then
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_LIBCRYPT 1
++_ACEOF
++
++  LIBS="-lcrypt $LIBS"
++
++fi
++
++fi
++
+ # Search for OpenSSL
+ saved_CPPFLAGS="$CPPFLAGS"
+ saved_LDFLAGS="$LDFLAGS"
+@@ -17497,7 +17573,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
