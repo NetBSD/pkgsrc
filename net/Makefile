@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.381 2003/06/01 10:25:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.382 2003/06/02 11:04:46 jmmv Exp $
 #
 
 COMMENT=	Networking tools
@@ -77,6 +77,7 @@ SUBDIR+=	ftpproxy
 SUBDIR+=	gated
 SUBDIR+=	gethost
 SUBDIR+=	gftp
+SUBDIR+=	gini
 SUBDIR+=	gkrellm-ping
 SUBDIR+=	gkrellm-snmp
 SUBDIR+=	gkrellm-wireless
