@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 1999/06/04 00:05:51 tron Exp $
+$NetBSD: patch-aa,v 1.10 1999/06/05 15:07:23 tron Exp $
 
 --- configure.orig	Wed Apr 28 17:21:06 1999
 +++ configure	Fri Jun  4 00:56:50 1999
@@ -81,19 +81,3 @@ $NetBSD: patch-aa,v 1.9 1999/06/04 00:05:51 tron Exp $
    cat >> confdefs.h <<EOF
  #define HAVE_PAM_LIB 1
  EOF
-@@ -5072,6 +5072,7 @@
- 
- 
- 
-+if false; then
- echo $ac_n "checking for giflib""... $ac_c" 1>&6
- echo "configure:5077: checking for giflib" >&5
- if eval "test \"`echo '$''{'ac_cv_lib_gif'+set}'`\" = set"; then
-@@ -5118,6 +5119,7 @@
- 
- else
-   { echo "configure: error: You need giflib30. Please install the kdesupport package" 1>&2; exit 1; }
-+fi
- fi
- 
- echo $ac_n "checking for jpeglib""... $ac_c" 1>&6

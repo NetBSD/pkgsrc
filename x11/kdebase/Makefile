@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 1999/06/04 15:15:11 tron Exp $
+# $NetBSD: Makefile,v 1.39 1999/06/05 15:07:23 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 #
 
@@ -13,6 +13,7 @@ HOMEPAGE=       http://www.kde.org/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext
 DEPENDS+=	Mesa-3.0:../../graphics/Mesa
+DEPENDS+=	giflib-3.0:../../graphics/giflib
 DEPENDS+=	kdelibs-1.1.1:../../x11/kdelibs
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
