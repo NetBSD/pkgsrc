@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 1999/06/28 11:50:24 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/12/16 20:56:20 mjl Exp $
 #
 
-DISTNAME=	sp-1.3
+DISTNAME=	sp-1.3.4
 CATEGORIES=	textproc
 MASTER_SITES=   ftp://ftp.jclark.com/pub/sp/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.jclark.com/pub/sp/ \
