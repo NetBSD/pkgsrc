@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/10 17:06:37 wiz Exp $
+bin/host
+bin/mxlookup
+bin/rblookup
+man/man1/host.1
