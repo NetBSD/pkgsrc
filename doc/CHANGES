@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3957 2003/12/04 08:46:40 agc Exp $
+$NetBSD: CHANGES,v 1.3958 2003/12/04 09:15:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4828,3 +4828,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added chef-19920415 [agc 2003-12-04]
 	Added awf-19900907 [agc 2003-12-04]
 	Added mph-1.2 [agc 2003-12-04]
+	Updated blas to 1.0nb2 [adam 2003-12-04]
