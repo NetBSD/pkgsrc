@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9611 2005/03/24 17:13:42 agc Exp $
+$NetBSD: CHANGES,v 1.9612 2005/03/24 18:03:57 chris Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1722,3 +1722,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-DBIx-SearchBuilder to 1.22 [cube 2005-03-24]
 	Updated rt3 to 3.2.3 [cube 2005-03-24]
 	Added systrace-policies-1.1 [agc 2005-03-24]
+	Updated p5-HTML-TableExtract to 1.10 [chris 2005-03-24]
