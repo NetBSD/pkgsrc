@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2001/09/27 23:18:26 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2001/10/03 17:32:11 jlam Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		high-performance CORBA ORB with support for the C language
 
 DEPENDS+=		gindent-[0-9]*:../../devel/gindent
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 BUILD_USES_GETTEXT_M4=	YES
 USE_GMAKE=		YES
