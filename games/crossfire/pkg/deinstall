@@ -1,6 +1,6 @@
-#!/usr/pkg/bin/perl
+#!XXXLOCALBASEXXX/bin/perl
 #
-# $NetBSD: deinstall,v 1.2 1998/08/07 10:40:40 agc Exp $
+# $NetBSD: deinstall,v 1.3 1998/08/23 21:09:36 frueauf Exp $
 #
 open (FILE,"XXXLOCALBASEXXX/etc/rplay.conf");
 open (OUT,">tmp");
@@ -17,4 +17,3 @@ close(FILE);
 system("mv tmp XXXLOCALBASEXXX/etc/rplay.conf");
 system("XXXX11BASEXXX/bin/mkfontdir XXXX11BASEXXX/lib/X11/fonts/misc");
 __END__
-
