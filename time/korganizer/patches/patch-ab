@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/21 15:03:46 wiz Exp $
+--- src/Makefile.in.orig	Sat Oct  2 00:08:28 1999
++++ src/Makefile.in	Sat Oct  2 00:12:50 1999
+@@ -628,10 +628,11 @@
+ 		mv messages.po ../po/korganizer.pot
+ 
+ $(srcdir)/parseholiday.c: parseholiday.y
+-	cd $(srcdir) && bison -d -o parseholiday.c parseholiday.y
++	cd $(srcdir) && $(YACC) -d parseholiday.y && \
++		mv y.tab.c parseholiday.c
+ 
+ $(srcdir)/scanholiday.c: scanholiday.lex parseholiday.h
+-	cd $(srcdir) && flex -B -oscanholiday.c scanholiday.lex
++	cd $(srcdir) && $(LEX) -B -oscanholiday.c scanholiday.lex
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
