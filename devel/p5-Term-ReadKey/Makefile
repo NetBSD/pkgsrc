@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2001/11/26 06:49:54 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/18 22:13:04 mjl Exp $
 #
 
-DISTNAME=	TermReadKey-2.14
-PKGNAME=	p5-Term-ReadKey-2.14
+VERS=		2.16
+DISTNAME=	TermReadKey-${VERS}
+PKGNAME=	p5-Term-ReadKey-${VERS}
 SVR4_PKGNAME=	p5trk
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Term/}
