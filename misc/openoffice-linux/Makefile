@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/22 21:57:25 mrauch Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/22 22:46:33 rh Exp $
 
 DISTNAME=		OOo_1.0.2_LinuxIntel_install
 PKGNAME=		openoffice-linux-1.0.2
@@ -13,7 +13,8 @@ COMMENT=		Integrated office productivity suite (binary pkg)
 NO_CONFIGURE=           # defined
 WRKSRC=			${WRKDIR}/install/
 
-CONFLICTS=		staroffice-[0-9]* openoffice-[0-9]*
+CONFLICTS+=		staroffice-[0-9]*
+CONFLICTS+=		openoffice-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
 
