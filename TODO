@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.54 2001/06/11 21:01:18 zuntum Exp $
+$NetBSD: TODO,v 1.55 2001/06/11 21:51:54 zuntum Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -34,7 +34,7 @@ packages TODO (Suggested new packages)
 	qmail
 	secure, reliable, efficient, simple, and fast MTA for UNIX systems
 	http://www.qmail.org/
-	zuntum already has pkg for this one, but it needs to be fixed first
+	zuntum already has pkg for this one, but the pkg needs to be fixed first
 
 	squirm
 	fast and configurable redirector for Squid
