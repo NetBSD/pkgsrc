@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2000/02/13 19:17:24 fredb Exp $
+@comment $NetBSD: PLIST,v 1.11 2001/05/06 00:11:47 wiz Exp $
 bin/cda
 bin/cddbcmd
 bin/dp2xmcd
@@ -55,8 +55,10 @@ lib/X11/xmcd/config/common.cfg
 lib/X11/xmcd/config/config.sh
 lib/X11/xmcd/config/device.cfg
 lib/X11/xmcd/config/sites
-@comment remove the CD drive configuration file(s). Its name is unknown.
-@unexec rm -f %D/lib/X11/xmcd/config/*
+@comment remove the CD drive configuration file(s). Its exact name is unknown.
+@comment just doing the unexec like it was before is a bit too disruptive,
+@comment though, see pkg/12373. So ask the user to delete it (DEINSTALL).
+@comment unexec rm -f %D/lib/X11/xmcd/config/*
 lib/X11/xmcd/discog/bkgnd.gif
 lib/X11/xmcd/discog/xmcdlogo.gif
 lib/X11/xmcd/discog/discog.html
@@ -233,7 +235,5 @@ man/man1/xmcd.1
 @dirrm lib/X11/xmcd/config
 @dirrm lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}
 @dirrm lib/X11/xmcd/app-defaults
-@comment in case users requested using internet cddb server
-@unexec rm -fr %D/lib/X11/xmcd/cddb
 @dirrm lib/X11/xmcd
 @exec %D/lib/X11/xmcd/config/config.sh
