@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/05 05:05:27 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/05 05:16:49 xtraeme Exp $
 #
 
 DISTNAME=	raines-0.40.0
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 WRKSRC=		${WRKDIR}/raine
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
+USE_X11=	yes
 MAKEFILE=	makefile
 MAKE_ENV+=	OSTYPE=linux
 USE_PERL5=	run
