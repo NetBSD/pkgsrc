@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/05/20 16:44:27 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2000/09/03 13:09:20 wiz Exp $
 #
 
 DISTNAME=       aide-0.6
@@ -9,8 +9,9 @@ MASTER_SITES=   http://www.cs.tut.fi/~rammer/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cs.tut.fi/~rammer/aide.html
 
-GNU_CONFIGURE=	yes
 BUILD_DEPENDS+=	bison:../../devel/bison
+
+GNU_CONFIGURE=	yes
 #don't set YACC so configure can correctly find bison
 YACC=
 
