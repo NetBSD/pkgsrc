@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.5 1999/04/05 01:01:30 hubertf Exp $
+
 *** configure.in-ORIG	Mon Mar 15 18:31:43 1999
 --- configure.in	Sun Apr  4 16:42:20 1999
 ***************
