@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2000/09/19 13:27:01 hubertf Exp $
+$NetBSD: patch-ac,v 1.9 2000/11/09 03:37:26 hubertf Exp $
 
 --- pine/makefile.neb.orig	Thu Aug 27 18:50:02 1998
 +++ pine/makefile.neb
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.8 2000/09/19 13:27:01 hubertf Exp $
 +.endif
  PROFILE=     # -pg
 -DEBUG=       -g -DDEBUG
-+DEBUG=       # -g -DDEBUG
++DEBUG=       -DDEBUG # -g -DDEBUG	# crashes on 'c'ompose w/o -DDEBUG
  
 -CCLIENTDIR=  ../c-client
 +CCLIENTDIR=  ${LOCALBASE}
@@ -41,7 +41,7 @@ $NetBSD: patch-ac,v 1.8 2000/09/19 13:27:01 hubertf Exp $
  
  OFILES=	addrbook.o adrbkcmd.o adrbklib.o args.o bldaddr.o context.o filter.o \
  	folder.o help.o helptext.o imap.o init.o mailcap.o mailcmd.o \
-@@ -79,8 +83,10 @@
+@@ -79,8 +83,8 @@
  	$(PICODIR)/headers.h $(PICODIR)/estruct.h \
  	$(PICODIR)/edef.h $(PICODIR)/efunc.h \
  	$(PICODIR)/pico.h $(PICODIR)/os.h \
@@ -49,12 +49,10 @@ $NetBSD: patch-ac,v 1.8 2000/09/19 13:27:01 hubertf Exp $
 -	$(CCLIENTDIR)/rfc822.h $(CCLIENTDIR)/misc.h
 +	$(CCLIENTINC)/mail.h $(CCLIENTINC)/osdep.h \
 +	$(CCLIENTINC)/rfc822.h $(CCLIENTINC)/misc.h
-+
-+all: pine abookcpy
  
  pine:  $(OFILES) $(LOCLIBS)
  	echo "char datestamp[]="\"`date`\"";" > date.c
-@@ -88,7 +94,7 @@
+@@ -88,7 +92,7 @@
  	$(CC) $(LDFLAGS) $(CFLAGS) -o pine $(OFILES) date.c $(LIBS)
  
  abookcpy:	abookcpy.o $(LOCLIBES)
@@ -63,7 +61,7 @@ $NetBSD: patch-ac,v 1.8 2000/09/19 13:27:01 hubertf Exp $
  
  pine-use:	pine-use.c
  	$(CC) -o pine-use pine-use.c
-@@ -107,8 +113,8 @@
+@@ -107,8 +111,8 @@
  
  $(OFILES):						$(HFILES)
  addrbook.o adrbkcmd.o adrbklib.o bldaddr.o takeaddr.o:	adrbklib.h
