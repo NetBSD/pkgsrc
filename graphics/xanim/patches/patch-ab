@@ -1,6 +1,6 @@
---- Imakefile.orig	Sun Jan 26 16:22:08 1997
-+++ Imakefile	Wed Feb 11 16:24:45 1998
-@@ -91,13 +91,13 @@
+--- Imakefile.orig	Sun Jan 26 17:22:08 1997
++++ Imakefile	Mon Feb 16 10:33:43 1998
+@@ -91,13 +91,29 @@
  XCOMM --    Indeo 3.x  IV32	indeo.readme
  XCOMM --    Creative   CYUV	creative.readme
  XCOMM 
@@ -11,17 +11,33 @@
 -XA_IV32_LIB = 
 -XA_CVID_LIB = 
 -XA_CYUV_LIB = 
++.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "m68k") || (${MACHINE_ARCH} == "sparc")
 +XA_IV32_DEF = -DXA_INDEO
 +XA_CVID_DEF = -DXA_CINEPAK
 +XA_CYUV_DEF = -DXA_CYUV
++.endif
 +XCOMM
++.if (${MACHINE_ARCH} == "i386")
 +XA_IV32_LIB = xa2.0_cvid_netbsd386.o
 +XA_CVID_LIB = xa2.0_iv32_netbsd386.o
 +XA_CYUV_LIB = xa1.0_cyuv_netbsd386.o
++.elif (${MACHINE_ARCH} == "m68k")
++XA_IV32_LIB = xa2.0_cvid_netbsd68k.o
++XA_CVID_LIB = xa2.0_iv32_netbsd68k.o
++XA_CYUV_LIB = xa1.0_cyuv_netbsd68k.o
++.elif (${MACHINE_ARCH} == "sparc")
++XA_IV32_LIB = xa2.0_cvid_sparcCOFF.o
++XA_CVID_LIB = xa2.0_iv32_sparcCOFF.o
++XA_CYUV_LIB = xa1.0_cyuv_sparcAOUT.o
++.else
++XA_IV32_DEF =
++XA_CVID_DEF =
++XA_CYUV_DEF =
++.endif
  XCOMM
  XCOMM -- NOTE: SGI Machines only: if you see an error like
  XCOMM --               "merge_ext returns nil during relocation" or similiar
-@@ -154,7 +154,7 @@
+@@ -154,7 +170,7 @@
  XCOMM XA_AUDIO_DEFS =
  XCOMM
  XCOMM -- Sun Sparcs -----------------------------------------------------------
@@ -30,7 +46,7 @@
  XCOMM
  XCOMM NOTE: Imakefile should add the -DSVR4 to Sun Solaris machines, if not
  XCOMM       use the following:
-@@ -184,7 +184,7 @@
+@@ -184,7 +200,7 @@
  XCOMM XA_AUDIO_DEFS = -DXA_SONY_AUDIO
  XCOMM
  XCOMM -- NetBSD-current (as of 30/April 1995)----------------------------------
@@ -39,7 +55,7 @@
  XCOMM
  XCOMM -- QNX 4.2 PC's ---------------------------------------------------------
  XCOMM XA_AUDIO_DEFS = -DXA_LINUX_AUDIO -DXA_LINUX_NEWER_SND -DXA_SELECT
-@@ -334,7 +334,7 @@
+@@ -334,7 +350,7 @@
  
  PROGRAMS = xanim
  
