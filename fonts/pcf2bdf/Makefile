@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/22 08:38:29 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/15 13:35:02 grant Exp $
 #
 
 DISTNAME=	pcf2bdf-1.04
@@ -12,6 +12,7 @@ COMMENT=	Convert X font from PCF to BDF
 
 WRKSRC=		${WRKDIR}
 USE_GNU_TOOLS+=	make
+USE_LANGUAGES=	c++
 MAKEFILE=	Makefile.gcc
 
 do-install:
