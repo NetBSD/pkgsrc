@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4840 2004/02/15 15:48:43 minskim Exp $
+$NetBSD: CHANGES,v 1.4841 2004/02/15 15:51:10 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -846,3 +846,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ups-nut to 1.4.1 [lukem 2004-02-15]
 	Updated ups-nut-cgi to 1.4.1 [lukem 2004-02-15]
 	Added py-vorbis-1.3 [minskim 2004-02-15]
+	Updated TeXmacs to 1.0.3.3 [recht 2004-02-15]
