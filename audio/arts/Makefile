@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/08/08 16:17:04 jlam Exp $
+# $NetBSD: Makefile,v 1.6.4.1 2002/10/24 16:59:48 wiz Exp $
 
 DISTNAME=	arts-1.0.2
 PKGREVISION=	1
@@ -15,11 +15,8 @@ LIBTOOL_OVERRIDE+=	${WRKSRC}/libltdl/libtool
 
 USE_PERL5=		build
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-LIBS+=			-Wl,--export-dynamic
-.endif
+# Ensure we export symbols in the linked shared object.
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "../../audio/libaudiofile/buildlink.mk"
 .include "../../x11/kde3/buildlink.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/02/28 18:32:19 jlam Exp $
+# $NetBSD: Makefile,v 1.21.8.1 2002/10/24 16:59:54 wiz Exp $
 
 PKGNAME=		ap-php-${PHP_BASE_VERS}
 PKGREVISION=		# empty
@@ -12,9 +12,7 @@ USE_BUILDLINK_ONLY=	YES
 .include "../../www/php4/Makefile.php"
 
 # Ensure we export symbols in the linked shared object.
-.if ${OPSYS} != "SunOS"
-LDFLAGS+=		-Wl,--export-dynamic
-.endif
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/.libs/libphp4.so	\
