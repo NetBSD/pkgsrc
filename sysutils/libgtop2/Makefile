@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/11/19 10:53:55 sketch Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/19 10:58:16 sketch Exp $
 
 DISTNAME=		libgtop-2.8.1
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -38,8 +38,10 @@ CONFIGURE_ARGS+=	--with-catgets --with-libgtop-guile=no
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ENV+=		AWK="${AWK}" LN_S="${LN} -s" PERL="${PERL5}"
 
-PRINT_PLIST_AWK+=	/^(bin\/libgtop_server2|include\/libgtop-2.0\/glibtop_suid.h)$$/ \
+PRINT_PLIST_AWK+=	/^bin\/libgtop_server2$$/ \
 				{ print "$${LIBGTOP_SERVER}" $$0; next }
+PRINT_PLIST_AWK+=	/^include\/libgtop-2.0\/glibtop_suid.h$$/ \
+				{ print "$${LIBGTOP_SUID_H}" $$0; next }
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -59,9 +61,16 @@ PKG_FAIL_REASON+=	"(More information can be found in libgtop.info.)"
 
 .if ${OPSYS} == "Linux"
 PLIST_SUBST+=	LIBGTOP_SERVER="@comment "
+PLIST_SUBST+=	LIBGTOP_SUID_H="@comment "
+.elif ${OPSYS} == "SunOS"
+PLIST_SUBST+=	LIBGTOP_SERVER=""
+PLIST_SUBST+=	LIBGTOP_SUID_H="@comment "
 .else
 PLIST_SUBST+=	LIBGTOP_SERVER=""
+PLIST_SUBST+=	LIBGTOP_SUID_H=""
+.endif
 
+.if ${OPSYS} != "Linux"
 post-install:
 	@${CHMOD} g+s ${PREFIX}/bin/libgtop_server2
 .endif
