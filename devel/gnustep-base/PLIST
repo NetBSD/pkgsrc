@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/27 23:56:30 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/03 04:04:36 rh Exp $
 bin/openapp
 share/GNUstep/System/Headers/Foundation/Foundation.h
 share/GNUstep/System/Headers/Foundation/GSMime.h
@@ -72,6 +72,7 @@ share/GNUstep/System/Headers/Foundation/NSValue.h
 share/GNUstep/System/Headers/Foundation/NSZone.h
 share/GNUstep/System/Headers/Foundation/objc-load.h
 share/GNUstep/System/Headers/gnustep/base/DistributedObjects.h
+share/GNUstep/System/Headers/gnustep/base/GCObject.h
 share/GNUstep/System/Headers/gnustep/base/GSFileHandle.h
 share/GNUstep/System/Headers/gnustep/base/GSIArray.h
 share/GNUstep/System/Headers/gnustep/base/GSIMap.h
@@ -93,6 +94,7 @@ share/GNUstep/System/Headers/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/mfr
 share/GNUstep/System/Libraries/Resources/DTDs/gsdoc-0_6_5.dtd
 share/GNUstep/System/Libraries/Resources/DTDs/gsdoc-0_6_6.dtd
 share/GNUstep/System/Libraries/Resources/DTDs/gsdoc-0_6_7.dtd
+share/GNUstep/System/Libraries/Resources/DTDs/gsdoc-1_0_0.dtd
 share/GNUstep/System/Libraries/Resources/DTDs/plist-0_9.dtd
 share/GNUstep/System/Libraries/Resources/DocTemplates/AutoDocTemplate.gsdoc
 share/GNUstep/System/Libraries/Resources/DocTemplates/indextemplate.gsdoc
@@ -106,6 +108,7 @@ share/GNUstep/System/Libraries/Resources/Languages/French
 share/GNUstep/System/Libraries/Resources/Languages/German
 share/GNUstep/System/Libraries/Resources/Languages/Italian
 share/GNUstep/System/Libraries/Resources/Languages/Locale.aliases
+share/GNUstep/System/Libraries/Resources/Languages/Locale.encodings
 share/GNUstep/System/Libraries/Resources/Languages/Russian
 share/GNUstep/System/Libraries/Resources/Languages/Slovak
 share/GNUstep/System/Libraries/Resources/Languages/UkraineRussian
@@ -365,6 +368,7 @@ share/GNUstep/System/Libraries/Resources/NSTimeZones/zones/Asia/Kuwait
 share/GNUstep/System/Libraries/Resources/NSTimeZones/zones/Asia/Macao
 share/GNUstep/System/Libraries/Resources/NSTimeZones/zones/Asia/Macau
 share/GNUstep/System/Libraries/Resources/NSTimeZones/zones/Asia/Magadan
+share/GNUstep/System/Libraries/Resources/NSTimeZones/zones/Asia/Makassar
 share/GNUstep/System/Libraries/Resources/NSTimeZones/zones/Asia/Manila
 share/GNUstep/System/Libraries/Resources/NSTimeZones/zones/Asia/Muscat
 share/GNUstep/System/Libraries/Resources/NSTimeZones/zones/Asia/Nicosia
@@ -695,10 +699,7 @@ share/GNUstep/System/Libraries/Resources/NSTimeZones/zones/WET
 share/GNUstep/System/Libraries/Resources/NSTimeZones/zones/Zulu
 share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libgnustep-base.so
 share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libgnustep-base.so.${PKGVERSION}
-share/GNUstep/System/Library/Bundles/SSL.bundle/Contents/Info.plist
-share/GNUstep/System/Library/Bundles/SSL.bundle/Contents/Resources
 share/GNUstep/System/Library/Bundles/SSL.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Bundles/SSL.bundle/Resources/Info.plist
 share/GNUstep/System/Library/Bundles/SSL.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/SSL
 share/GNUstep/System/Makefiles/Additional/base.make
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gdomap
@@ -719,7 +720,6 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-g
 @dirrm share/GNUstep/System/Library/Bundles/SSL.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
 @dirrm share/GNUstep/System/Library/Bundles/SSL.bundle/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/SSL.bundle/Resources
-@dirrm share/GNUstep/System/Library/Bundles/SSL.bundle/Contents
 @dirrm share/GNUstep/System/Library/Bundles/SSL.bundle
 @dirrm share/GNUstep/System/Libraries/Resources/NSTimeZones/zones/US
 @dirrm share/GNUstep/System/Libraries/Resources/NSTimeZones/zones/SystemV
