@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2004/07/03 05:28:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/05 23:33:30 wiz Exp $
 #
 
 DISTNAME=	win32codecs-20040703
-PKGNAME=	win32-codecs-040703
+PKGNAME=	win32-codecs-040703.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.mplayerhq.hu/MPlayer/releases/codecs/ \
 		http://www2.mplayerhq.hu/MPlayer/releases/codecs/ \
-		ftp://ftp.mplayerhq.hu/MPlayer/releases/codecs/ \
-		ftp://ftp2.mplayerhq.hu/MPlayer/releases/codecs/
+		ftp://ftp.mplayerhq.hu/MPlayer/releases/codecs/
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=	qt6dlls-20040626.tar.bz2
-DISTFILES+=	qtextras-20040626.tar.bz2
+DISTFILES+=	qt65dlls-20040704.tar.bz2
+DISTFILES+=	qtextras-20040704.tar.bz2
 DISTFILES+=	rp9codecs-win32-20040626.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -33,8 +32,8 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/win32
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/* ${PREFIX}/lib/win32
-	${INSTALL_DATA} ${WRKDIR}/qt6dlls-20040626/* ${PREFIX}/lib/win32
-	${INSTALL_DATA} ${WRKDIR}/qtextras-20040626/* ${PREFIX}/lib/win32
+	${INSTALL_DATA} ${WRKDIR}/qt65dlls-20040704/* ${PREFIX}/lib/win32
+	${INSTALL_DATA} ${WRKDIR}/qtextras-20040704/* ${PREFIX}/lib/win32
 	${INSTALL_DATA} ${WRKDIR}/rp9codecs-win32-20040626/*.dll ${PREFIX}/lib/win32
 
 .include "../../mk/bsd.pkg.mk"
