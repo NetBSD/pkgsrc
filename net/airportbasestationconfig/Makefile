@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2002/07/31 14:51:35 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/09/08 06:19:00 tron Exp $
 
-DISTNAME=	configurator_152
+DISTNAME=	configurator_152-128
 PKGNAME=	${BINNAME}-1.5.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.zip
@@ -18,7 +19,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc Darwin-*-*
 
 BINNAME=	airportbasestationconfig
 DOCDIR=		${PREFIX}/share/doc/${BINNAME}
-JARNAME=	AirportBaseStationConfig.jar
+JARNAME=	AirportConfig128Bit.jar
 LIBDIR=		${PREFIX}/lib/${BINNAME}
 
 .include "../../mk/bsd.prefs.mk"
