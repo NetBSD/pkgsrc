@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST-md-a.out.shared,v 1.1 2000/01/18 22:27:18 tron Exp $
+lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/libperl.so.5.3
