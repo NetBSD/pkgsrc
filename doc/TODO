@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.341 2003/03/05 12:55:01 wiz Exp $
+$NetBSD: TODO,v 1.342 2003/03/05 13:15:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -177,7 +177,6 @@ Suggested package updates
 	o midnight-commander-4.6.0
 	o mixer.app-1.8.0
 	o mkfontscale-20020618
-	o mowitz-0.2.2
 	o mpgtx-1.3 [pkg/19082]
 	o mrproject-0.9
 	o mrtg-2.9.27
@@ -189,7 +188,6 @@ Suggested package updates
 	o net-snmp-5.0.7 [pkg/19939]
 	o netpbm-10.8
 	o netscape-7.02
-	o neXtaw-0.14.0
 	o ns-flash-6.0.69
 	o ogle-0.9.0
 	o openh323-1.11.2
