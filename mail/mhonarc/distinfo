@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/08/21 07:28:28 grant Exp $
+$NetBSD: distinfo,v 1.6 2002/08/23 01:48:25 grant Exp $
 
-SHA1 (MHonArc2.5.3.tar.bz2) = 0cc08b5628715b705de7a20dffee37b0512f2436
-Size (MHonArc2.5.3.tar.bz2) = 450055 bytes
+SHA1 (MHonArc2.5.11.tar.bz2) = 65960e6cfe8056efacbd90936eb00d88ec9ddad5
+Size (MHonArc2.5.11.tar.bz2) = 467400 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/04/21 00:43:10 jwise Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/08/23 01:48:26 grant Exp $
 bin/mha-dbedit
 bin/mha-dbrecover
 bin/mha-decode
@@ -26,6 +26,7 @@ lib/mhonarc/MHonArc/CharEnt/ISO8859_9.pm
 lib/mhonarc/MHonArc/CharEnt/ISO8859_9R.pm
 lib/mhonarc/MHonArc/CharEnt/Makefile
 lib/mhonarc/MHonArc/Makefile
+lib/mhonarc/MHonArc/UTF8.pm
 lib/mhonarc/base64.pl
 lib/mhonarc/ewhutil.pl
 lib/mhonarc/iso2022jp.pl
@@ -107,11 +108,13 @@ share/doc/mhonarc/monicon.png
 share/doc/mhonarc/next.png
 share/doc/mhonarc/prev.png
 share/doc/mhonarc/quickstart.html
+share/doc/mhonarc/rcfileexs/blog.mrc.html
 share/doc/mhonarc/rcfileexs/date.mrc.html
 share/doc/mhonarc/rcfileexs/def-mime.mrc.html
 share/doc/mhonarc/rcfileexs/frames.mrc.html
 share/doc/mhonarc/rcfileexs/icons.mrc.html
 share/doc/mhonarc/rcfileexs/subject.mrc.html
+share/doc/mhonarc/rcfileexs/utf-8.mrc.html
 share/doc/mhonarc/rcvars.html
 share/doc/mhonarc/relnotes.html
 share/doc/mhonarc/resources.html
@@ -154,7 +157,6 @@ share/doc/mhonarc/resources/folrefs.html
 share/doc/mhonarc/resources/folupbegin.html
 share/doc/mhonarc/resources/folupend.html
 share/doc/mhonarc/resources/foluplitxt.html
-share/doc/mhonarc/resources/footer.html
 share/doc/mhonarc/resources/force.html
 share/doc/mhonarc/resources/fromfields.html
 share/doc/mhonarc/resources/genidx.html
@@ -163,13 +165,13 @@ share/doc/mhonarc/resources/gzipexe.html
 share/doc/mhonarc/resources/gzipfiles.html
 share/doc/mhonarc/resources/gziplinks.html
 share/doc/mhonarc/resources/headbodysep.html
-share/doc/mhonarc/resources/header.html
 share/doc/mhonarc/resources/htmlext.html
 share/doc/mhonarc/resources/icons.html
 share/doc/mhonarc/resources/idxfname.html
 share/doc/mhonarc/resources/idxlabel.html
 share/doc/mhonarc/resources/idxpgbegin.html
 share/doc/mhonarc/resources/idxpgend.html
+share/doc/mhonarc/resources/idxpgssmarkup.html
 share/doc/mhonarc/resources/idxprefix.html
 share/doc/mhonarc/resources/idxsize.html
 share/doc/mhonarc/resources/include.html
@@ -192,6 +194,7 @@ share/doc/mhonarc/resources/mailtourl.html
 share/doc/mhonarc/resources/main.html
 share/doc/mhonarc/resources/maxsize.html
 share/doc/mhonarc/resources/mhpattern.html
+share/doc/mhonarc/resources/mimealtprefs.html
 share/doc/mhonarc/resources/mimeargs.html
 share/doc/mhonarc/resources/mimedecoders.html
 share/doc/mhonarc/resources/mimeexcs.html
@@ -209,6 +212,7 @@ share/doc/mhonarc/resources/msglocaldatefmt.html
 share/doc/mhonarc/resources/msgpgbegin.html
 share/doc/mhonarc/resources/msgpgend.html
 share/doc/mhonarc/resources/msgpgs.html
+share/doc/mhonarc/resources/msgpgssmarkup.html
 share/doc/mhonarc/resources/msgprefix.html
 share/doc/mhonarc/resources/msgsep.html
 share/doc/mhonarc/resources/multipg.html
@@ -219,6 +223,7 @@ share/doc/mhonarc/resources/nextlink.html
 share/doc/mhonarc/resources/nextlinkia.html
 share/doc/mhonarc/resources/nextpglink.html
 share/doc/mhonarc/resources/nextpglinkia.html
+share/doc/mhonarc/resources/nosubjecttxt.html
 share/doc/mhonarc/resources/note.html
 share/doc/mhonarc/resources/notedir.html
 share/doc/mhonarc/resources/noteia.html
@@ -259,6 +264,7 @@ share/doc/mhonarc/resources/subjectthreads.html
 share/doc/mhonarc/resources/subsort.html
 share/doc/mhonarc/resources/tcontbegin.html
 share/doc/mhonarc/resources/tcontend.html
+share/doc/mhonarc/resources/textclipfunc.html
 share/doc/mhonarc/resources/tfirstpglink.html
 share/doc/mhonarc/resources/tfoot.html
 share/doc/mhonarc/resources/thead.html
@@ -267,6 +273,7 @@ share/doc/mhonarc/resources/tidxfname.html
 share/doc/mhonarc/resources/tidxlabel.html
 share/doc/mhonarc/resources/tidxpgbegin.html
 share/doc/mhonarc/resources/tidxpgend.html
+share/doc/mhonarc/resources/tidxpgssmarkup.html
 share/doc/mhonarc/resources/tidxprefix.html
 share/doc/mhonarc/resources/timezones.html
 share/doc/mhonarc/resources/tindentbegin.html
