@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/26 20:23:41 agc Exp $
+bin/dqs_execd332
+bin/dqs_options332
+bin/dqs_random332
+bin/dsh332
+bin/qalter332
+bin/qconf332
+bin/qdel332
+bin/qhold332
+bin/qmaster332
+bin/qmod332
+bin/qmove332
+bin/qrls332
+bin/qstat332
+bin/qsub332
+share/examples/dqs/conf_file
+share/examples/dqs/key_file
+share/examples/dqs/resolve_file
