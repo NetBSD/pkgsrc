@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/09/19 18:50:11 kim Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/21 21:01:29 hubertf Exp $
 #
 
 DISTNAME=	gzip-1.2.4a
@@ -19,7 +19,7 @@ BUILD_TARGET=	all manlinks=so
 INSTALL_TARGET=	install manlinks=so
 
 .if exists(/usr/bin/gzip)
-IGNORE=		"is part of your NetBSD distribution"
+IGNORE=		"${PKGNAME} is part of your NetBSD distribution"
 .endif
 
 # We avoid using a patch for disabling the install of the info

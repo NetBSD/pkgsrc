@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/02/05 19:41:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/21 21:01:30 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.4 1999/06/06 13:19:49 taoka Exp $
 
 DISTNAME=	kinput2-v3
@@ -17,7 +17,7 @@ PLIST_SRC=	${PKGDIR}/PLIST-common
     defined(USE_WNN4) && ${USE_WNN4} != YES &&		\
     defined(USE_WNN6) && ${USE_WNN6} != YES &&		\
     defined(USE_SJ3) && ${USE_SJ3} != YES
-IGNORE=	"is ignored. because USE_CANNA,USE_WNN4,USE_WNN6,USE_SJ3 are \"NO\""
+IGNORE=	${PKGNAME} is ignored. because USE_CANNA,USE_WNN4,USE_WNN6,USE_SJ3 are "NO"
 .endif
 
 .if !defined(USE_CANNA) || ${USE_CANNA} == YES

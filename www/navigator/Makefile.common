@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2000/08/18 22:46:51 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.18 2000/08/21 21:01:34 hubertf Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -26,7 +26,7 @@ VENDOR_NAME=	Solaris 2.5.1
 #
 .elif (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
-IGNORE=	"requires Digital UNIX libraries - see compat_osf1(8)"
+IGNORE=	"${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)"
 .endif
 PLIST_ARCH=	osf-alpha
 DISTUNAME=	alpha-dec-osf4.0
@@ -51,7 +51,7 @@ VENDOR_NAME=	Linux 2.2
 #
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
-IGNORE=	"requires SunOS libraries - see compat_sunos(8)"
+IGNORE=	"${PKGNAME} requires SunOS libraries - see compat_sunos(8)"
 .endif
 NS_VERS=	4.61
 NS_ENCRYPTION=	export

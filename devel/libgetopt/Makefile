@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/05/01 14:18:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/21 21:01:30 hubertf Exp $
 #
 
 VERS=		1.1
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 DISTFILES=	getopt_long.c-${VERS} getopt_long.3-${VERS}
 
 .if exists(/usr/include/getopt.h)
-IGNORE=         "is part of your NetBSD distribution"
+IGNORE=         "${PKGNAME} is part of your NetBSD distribution"
 .endif
 
 MAINTAINER=	hubertf@netbsd.org,mcr@netbsd.org

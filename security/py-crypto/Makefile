@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/08/18 22:46:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/21 21:01:33 hubertf Exp $
 
 DISTNAME=	pycrypt100
 PKGNAME=	py-crypto-1.0.0
@@ -20,7 +20,7 @@ MAKE_FLAGS=	'OPT=${CFLAGS}'
 INFO_FILES=	pct.info
 
 .if ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "mips" || ${MACHINE_ARCH} == "vax"
-IGNORE="Needs dynamic loading"
+IGNORE="${PKGNAME} needs dynamic loading"
 .endif
 
 post-extract:

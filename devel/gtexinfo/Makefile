@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/08/13 20:40:54 abs Exp $
+# $NetBSD: Makefile,v 1.18 2000/08/21 21:01:30 hubertf Exp $
 #
 
 DISTNAME=		texinfo-3.12
@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--with-catgets
 PLIST_SRC=      	${WRKDIR}/.PLIST_SRC
 
 .if exists(/usr/bin/install-info)
-IGNORE=			"is included with your NetBSD distribution"
+IGNORE=			"${PKGNAME} is included with your NetBSD distribution"
 .endif
 
 post-patch:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/06/15 12:08:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 2000/08/21 21:01:33 hubertf Exp $
 #
 
 DISTNAME=       mkisofs-1.11.3
@@ -8,7 +8,7 @@ MASTER_SITES=   ftp://ftp.cdrom.com/pub/linux/tsx-11/packages/mkisofs/
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://andante.jic.com/mkisofs.html
 
-IGNORE=		"is now part of the cdrecord(-current) package" \
+IGNORE=		"${PKGNAME} is now part of the cdrecord(-current) package" \
 		"(someone maybe split mkisofs out from cdrecord)."
 
 GNU_CONFIGURE=	yes

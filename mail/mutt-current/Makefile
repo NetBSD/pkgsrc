@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/18 22:46:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/21 21:01:31 hubertf Exp $
 
 IGNORE=		"Stable mutt avaiable in mail/mutt"
 
@@ -35,7 +35,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 .include "../../mk/bsd.prefs.mk"
 
 .if !(defined(MUTT_INTERNATIONAL) && ${MUTT_INTERNATIONAL} == YES)
-IGNORE=		"Contains PGP code"
+IGNORE=		"${PKGNAME} contains PGP code"
 .endif
 
 .if ${OPSYS} == "SunOS"

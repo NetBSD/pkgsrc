@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/04/17 01:53:01 tsarna Exp $
+# $NetBSD: Makefile,v 1.14 2000/08/21 21:01:32 hubertf Exp $
 
 DISTNAME=	LLNLPython4
 PKGNAME=	py-Numeric-1.3
@@ -17,7 +17,7 @@ MAKE_FLAGS=	'OPT=${CFLAGS}'
 DOCDIR=		${PREFIX}/share/doc/py-Numeric
 
 .if ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "mips" || ${MACHINE_ARCH} == "vax"
-IGNORE="Needs dynamic loading"
+IGNORE="${PKGNAME} needs dynamic loading"
 .endif
 
 do-configure:

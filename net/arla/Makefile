@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/15 16:08:23 wennmach Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/21 21:01:32 hubertf Exp $
 #
 
 DISTNAME=		arla-0.34.1
@@ -19,7 +19,7 @@ INFO_FILES=		arla.info
 .if exists(${BSDSRCDIR}/sys/lib/libkern/libkern.h)
 CONFIGURE_ARGS+=	--with-sys=${BSDSRCDIR}/sys
 .else
-IGNORE=			"requires kernel sources available under \$$BSDSRCDIR/sys (or /sys)"
+IGNORE=			"${PKGNAME} requires kernel sources available under \$$BSDSRCDIR/sys (or /sys)"
 .endif
 .endif
 

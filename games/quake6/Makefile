@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/02/11 04:36:17 itojun Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/21 21:01:30 hubertf Exp $
 
 DISTNAME=	quake-v6-bsd-kame
 PKGNAME=	quake6-0.0
@@ -27,7 +27,7 @@ GNU_CONFIGURE=	yes
 BUILD_DEFS+=	USE_INET6
 .include "../../mk/bsd.prefs.mk"
 .if !(defined(USE_INET6) && ${USE_INET6} == "YES")
-IGNORE=		"requires IPv6 support"
+IGNORE=		"${PKGNAME} requires IPv6 support"
 .endif
 
 # "bindir" setting is very non-standard for GNU autoconf
