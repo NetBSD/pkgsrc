@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/25 15:19:37 tron Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/11 20:02:26 tron Exp $
 
-DISTNAME=	dgd-1.2p1
-PKGNAME=	dgd-1.2.0.1
+DISTNAME=	dgd-1.2p2
+PKGNAME=	dgd-1.2.0.2
 CATEGORIES=	net games
-MASTER_SITES=	ftp://ftp.dworkin.nl/pub/dgd/ \
-		ftp://ftp.imaginary.com/pub/LPC/servers/DGD/
+MASTER_SITES=	ftp://ftp.dworkin.nl/pub/dgd/
 
 MAINTAINER=     sco@openface.ca
 HOMEPAGE=	http://www.dworkin.nl/dgd/
