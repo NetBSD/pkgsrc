@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3347 2003/09/12 21:22:33 jlam Exp $
+$NetBSD: CHANGES,v 1.3348 2003/09/12 21:58:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3663,3 +3663,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated scilab to 2.7nb2 [dmcmahill 2003-09-12]
 	Updated gwave to 20030804 [dmcmahill 2003-09-12]
 	Updated p5-Digest-SHA1 to 2.04 [jlam 2003-09-12]
+	Removed bsdpak [wiz 2003-09-12]
