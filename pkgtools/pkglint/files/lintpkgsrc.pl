@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.40 2000/11/17 12:45:31 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.41 2001/01/18 11:40:33 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -320,11 +320,14 @@ sub fail
 
 sub get_default_makefile_vars
     {
-    chomp($_ = `uname -srmp`);
+    chomp($_ = `uname -srm`);
     ( $default_vars->{'OPSYS'},
 	$default_vars->{'OS_VERSION'},
-	$default_vars->{'MACHINE_ARCH'},
 	$default_vars->{'MACHINE'} ) = (split);
+    # Handle systems without uname -p  (NetBSD pre 1.4)
+    chomp($default_vars->{'MACHINE_ARCH'} = `uname -p 2>/dev/null`);
+    if (! $default_vars->{'MACHINE_ARCH'})
+	{ $default_vars->{'MACHINE_ARCH'} = $default_vars->{'MACHINE'}; }
     $default_vars->{'LINTPKGSRC'} = 'YES';
     $default_vars->{'EXTRACT_SUFX'} = 'tar.gz';
     $default_vars->{'OBJECT_FMT'} = 'x';
@@ -929,7 +932,7 @@ sub pkgsrc_check_depends
 	    {
 	    my($err, $msg);
 	    defined $pkg{$pkgname}{$ver}{'depends'} || next;
-	    foreach (split("\n", $pkg{$pkgname}{$ver}{'depends'}))
+	    foreach (split(" ", $pkg{$pkgname}{$ver}{'depends'}))
 		{
 		s/:.*// || next;
 		if (($msg = &invalid_version($_)) )
