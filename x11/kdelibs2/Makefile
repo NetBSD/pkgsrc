@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/03/28 08:57:39 skrll Exp $
+# $NetBSD: Makefile,v 1.36 2002/04/10 12:30:23 dmcmahill Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	1
@@ -116,15 +116,18 @@ post-install:
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
 
-# XXX On NetBSD, the egcs for:
+# XXX On NetBSD, the egcs and gcc-2.95.3 for:
 # XXX
 # XXX     alpha
 # XXX
 # XXX has an optimization bug when compiling with -O2 that is tickled by
 # XXX ${WRKSRC}/kdeprint/management/kmiconview.cpp.
-#
+# XXX ${WRKSRC}/kdecore/kwinmodule.cpp
 .if ${OPSYS} == "NetBSD"
 .  if (${MACHINE_ARCH} == "alpha")
-CFLAGS+=	-O
+CXXFLAGS:=	${CXXFLAGS:C/-O[0-9]*//g}
+CFLAGS:=	${CFLAGS:C/-O[0-9]*//g}
+CONFIGURE_ENV+=	CXXFLAGS="${CXXFLAGS}"
+CONFIGURE_ENV+=	CFLAGS="${CFLAGS}"
 .  endif
 .endif
