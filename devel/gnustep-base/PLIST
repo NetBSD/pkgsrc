@@ -1,13 +1,21 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/10 23:41:01 rh Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/08/18 13:59:19 adam Exp $
 bin/openapp
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_5.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_6.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_7.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-1_0_0.dtd
 share/GNUstep/System/Library/DTDs/plist-0_9.dtd
-share/GNUstep/System/Library/DocTemplates/AutoDocTemplate.gsdoc
-share/GNUstep/System/Library/DocTemplates/indextemplate.gsdoc
+share/GNUstep/System/Library/Bundles/SSL.bundle/Resources/Info-gnustep.plist
+share/GNUstep/System/Library/Bundles/SSL.bundle/SSL
+share/GNUstep/System/Library/Bundles/SSL.bundle/stamp.make
+share/GNUstep/System/Library/DTDs/gsdoc-1_0_1.dtd
 share/GNUstep/System/Library/Documentation/man/man1/gdnc.1
+share/GNUstep/System/Library/Documentation/man/man1/autogsdoc.1
+share/GNUstep/System/Library/Documentation/man/man1/cvtenc.1
+share/GNUstep/System/Library/Documentation/man/man1/defaults.1
+share/GNUstep/System/Library/Documentation/man/man1/pldes.1
+share/GNUstep/System/Library/Documentation/man/man1/sfparse.1
+share/GNUstep/System/Library/Documentation/man/man1/xmlparse.1
 share/GNUstep/System/Library/Documentation/man/man8/gdomap.8
 share/GNUstep/System/Library/Headers/Foundation/Foundation.h
 share/GNUstep/System/Library/Headers/Foundation/GSMime.h
@@ -35,6 +43,7 @@ share/GNUstep/System/Library/Headers/Foundation/NSDistantObject.h
 share/GNUstep/System/Library/Headers/Foundation/NSDistributedLock.h
 share/GNUstep/System/Library/Headers/Foundation/NSDistributedNotificationCenter.h
 share/GNUstep/System/Library/Headers/Foundation/NSEnumerator.h
+share/GNUstep/System/Library/Headers/Foundation/NSError.h
 share/GNUstep/System/Library/Headers/Foundation/NSException.h
 share/GNUstep/System/Library/Headers/Foundation/NSFileHandle.h
 share/GNUstep/System/Library/Headers/Foundation/NSFileManager.h
@@ -134,6 +143,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Dutch
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/English
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/French
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/German
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Hungarian
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Italian
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Locale.aliases
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Locale.encodings
@@ -727,7 +737,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Zulu
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/TraditionalChinese.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/libgnustep-base.so
-share/GNUstep/System/Library/Libraries/libgnustep-base.so.1.9.1
+share/GNUstep/System/Library/Libraries/libgnustep-base.so.1.9.2
 share/GNUstep/System/Library/Makefiles/Additional/base.make
 share/GNUstep/System/Tools/autogsdoc
 share/GNUstep/System/Tools/cvtenc
@@ -781,4 +791,6 @@ share/GNUstep/System/Tools/xmlparse
 @dirrm share/GNUstep/System/Library/Headers/Foundation
 @dirrm share/GNUstep/System/Library/Documentation/man/man8
 @dirrm share/GNUstep/System/Library/Documentation/man/man1
+@dirrm share/GNUstep/System/Library/Bundles/SSL.bundle/Resources
+@dirrm share/GNUstep/System/Library/Bundles/SSL.bundle
 @dirrm share/GNUstep/System/Library/DTDs
