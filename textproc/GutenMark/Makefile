@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 15:13:19 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/18 19:36:39 wiz Exp $
 #
 
 DISTNAME=	GutenMark_source_${GVER}
@@ -14,12 +14,12 @@ DEPENDS+=	GutenMark-words-[0-9]*:../../textproc/GutenMark-words
 
 WRKSRC=		${WRKDIR}/GutenMark-source
 GVER=		20020714
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 ALL_TARGET=	GutenMark
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/GutenMark ${PREFIX}/bin
 
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
