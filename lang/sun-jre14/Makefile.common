@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2004/06/15 12:00:09 abs Exp $
+# $NetBSD: Makefile.common,v 1.21 2004/07/02 14:40:21 jschauma Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -50,9 +50,8 @@ _FETCH_MESSAGE= 							\
 	${ECHO} "	${DOWNLOAD}"; 					\
 	${ECHO} "	or ${ARCHIVE}"; 				\
 	${ECHO} ; \
-	${ECHO} " Choose '32-bit/64-bit for Windows/Linux/Solaris SPARC' from"; \
-	${ECHO} " the '${SHORT}' column, accept the license, then choose 'Linux ";\
-	${ECHO} " self-extracting file'."; 				\
+	${ECHO} " Click 'Download J2SE ${SHORT}', read and accept the"; \
+	${ECHO} " license, then choose 'Linux self-extracting file'."; 	\
 	${ECHO} ; 							\
 	${ECHO} "======================================================================"
 
