@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:11:32 agc Exp $
+
 --- kpse-2.6/dvipsk/dvips.texi.orig	Sun Jan  8 18:17:04 1995
 +++ kpse-2.6/dvipsk/dvips.texi	Tue Jul 15 14:36:55 1997
 @@ -2,6 +2,11 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.2 1998/08/07 11:18:23 agc Exp $
+
 --- xcolorsel.c.orig	Sun Nov 13 23:16:59 1994
 +++ xcolorsel.c	Wed Jul 15 10:02:50 1998
 @@ -60,16 +60,16 @@

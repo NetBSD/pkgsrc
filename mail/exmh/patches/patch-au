@@ -1,3 +1,5 @@
+$NetBSD: patch-au,v 1.2 1998/08/07 11:09:34 agc Exp $
+
 diff -cr /nr/user/skr/lib/exmh2.0zeta/mime.tcl ./mime.tcl
 *** /nr/user/skr/lib/exmh2.0zeta/mime.tcl	Fri Oct  3 21:56:34 1997
 --- lib/mime.tcl	Wed Dec 10 12:57:57 1997

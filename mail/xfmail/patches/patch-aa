@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:09:54 agc Exp $
+
 --- ui/newobjs.h.orig	Wed Oct 22 04:31:31 1997
 +++ ui/newobjs.h	Fri Jun 26 03:14:01 1998
 @@ -6,3 +6,3 @@

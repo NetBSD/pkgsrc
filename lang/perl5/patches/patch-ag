@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1998/08/07 11:09:24 agc Exp $
+
 --- doio.c.orig	Mon Jul 28 21:08:11 1997
 +++ doio.c	Thu Apr 23 08:09:19 1998
 @@ -1333,7 +1333,7 @@

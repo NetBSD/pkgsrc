@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:18:34 agc Exp $
+
 diff -rc ../old/xview3.2p1-X11R6/bitmaps/Imakefile ./bitmaps/Imakefile
 *** ../old/xview3.2p1-X11R6/bitmaps/Imakefile	Tue Jun 29 01:19:54 1993
 --- ./bitmaps/Imakefile	Sun Nov 20 13:38:56 1994

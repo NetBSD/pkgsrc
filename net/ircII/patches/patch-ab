@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:43 agc Exp $
+
 *** source/wserv.c.old	Mon Jan  1 19:10:40 1996
 --- source/wserv.c	Mon Jan  1 19:10:18 1996
 ***************

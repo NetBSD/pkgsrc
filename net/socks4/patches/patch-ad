@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:10:59 agc Exp $
+
 --- rtelnet/Config.local	1998/06/11 13:32:18	1.1
 +++ rtelnet/Config.local	1998/06/11 13:33:11
 @@ -683,11 +683,10 @@

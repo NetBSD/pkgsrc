@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: configure,v 1.3 1998/08/07 11:18:29 agc Exp $
+#
 
 cd $WRKSRC || exit 1;
 

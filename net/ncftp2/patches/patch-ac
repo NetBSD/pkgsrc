@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.3 1998/08/07 11:10:48 agc Exp $
+
 --- configure.orig	Fri Jul 31 22:54:32 1998
 +++ configure	Fri Jul 31 22:52:16 1998
 @@ -1072,7 +1072,7 @@

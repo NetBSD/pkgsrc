@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:13:48 agc Exp $
+
 --- ../source/rsa.h.orig	Fri Mar 25 14:01:45 1994
 +++ ../source/rsa.h	Tue Jul 14 13:20:12 1998
 @@ -5,6 +5,11 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.6 1998/08/07 11:14:25 agc Exp $
+
 *** cmd/stubfe/Makefile.orig	Tue Aug  4 02:37:20 1998
 --- cmd/stubfe/Makefile	Tue Aug  4 11:29:40 1998
 ***************

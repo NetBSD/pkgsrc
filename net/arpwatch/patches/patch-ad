@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:10:36 agc Exp $
+
 --- report.c.original	Thu Jun 25 13:01:29 1998
 +++ report.c	Thu Jun 25 13:07:26 1998
 @@ -45,6 +45,7 @@

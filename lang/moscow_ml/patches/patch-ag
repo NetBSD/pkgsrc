@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1998/08/07 11:09:21 agc Exp $
+
 --- runtime/Makefile.orig	Tue Jul 29 02:51:01 1997
 +++ runtime/Makefile	Mon Feb 16 23:59:45 1998
 @@ -36,7 +36,7 @@

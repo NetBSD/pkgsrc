@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 11:10:07 agc Exp $
+
 --- /usr/local/pkgsrc//mbone/vic/work/vic-2.8/config.h	Thu May 16 14:27:06 1996
 +++ config.h	Wed Nov 19 15:46:41 1997
 @@ -36,7 +36,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-br,v 1.2 1998/08/07 11:09:16 agc Exp $
+
 --- /dev/null	Fri Jun 19 03:24:28 1998
 +++ config/unix/alpha_netbsd/define.h	Fri Jun 19 05:00:47 1998
 @@ -0,0 +1,28 @@

@@ -1,3 +1,6 @@
+#
+# $NetBSD: Makefile.unrumba,v 1.2 1998/08/07 11:10:52 agc Exp $
+#
 PROG=unrumba
 NOMAN=sorry
 

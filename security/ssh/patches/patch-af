@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.4 1998/08/07 11:13:50 agc Exp $
+
 --- sshd.c.orig	Wed Aug  5 21:35:31 1998
 +++ sshd.c	Wed Aug  5 23:52:17 1998
 @@ -1736,55 +1736,59 @@

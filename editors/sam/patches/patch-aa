@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:11:17 agc Exp $
+
 *** libXg/Makefile.orig	Fri Jul 28 14:02:17 1995
 --- libXg/Makefile	Fri Jul 21 15:03:43 1995
 ***************

@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1998/08/07 11:10:15 agc Exp $
+
 --- msgbox.c.orig	Fri Jan 23 17:37:13 1998
 +++ msgbox.c	Fri Jan 23 18:16:53 1998
 @@ -28,8 +28,19 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:14:27 agc Exp $
+
 --- src/dns.c.dist	Wed Jun  4 00:25:44 1997
 +++ src/dns.c	Sun Jul  6 01:00:27 1997
 @@ -202,9 +202,9 @@

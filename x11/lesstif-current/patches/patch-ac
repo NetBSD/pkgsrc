@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:18:11 agc Exp $
+
 --- lib/config/mxmkmf.in.orig	Wed Feb 19 20:53:22 1997
 +++ lib/config/mxmkmf.in	Tue Feb 25 11:24:59 1997
 @@ -5,4 +5,4 @@

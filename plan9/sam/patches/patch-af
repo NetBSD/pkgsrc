@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 11:11:19 agc Exp $
+
 *** Makefile.orig	Fri Aug 11 15:55:41 1995
 --- Makefile	Fri Aug 11 16:08:35 1995
 ***************

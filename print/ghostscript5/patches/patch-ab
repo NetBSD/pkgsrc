@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:11:23 agc Exp $
+
 --- gs_init.ps.orig	Thu Jan  2 19:23:13 1997
 +++ gs_init.ps	Thu Jan  2 19:24:46 1997
 @@ -1363,3 +1363,7 @@

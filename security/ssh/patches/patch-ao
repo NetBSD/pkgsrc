@@ -1,3 +1,5 @@
+$NetBSD: patch-ao,v 1.5 1998/08/07 11:13:50 agc Exp $
+
 *** newchannels.c.orig	Tue Jan 20 07:24:06 1998
 --- newchannels.c	Wed Mar 18 20:44:26 1998
 ***************

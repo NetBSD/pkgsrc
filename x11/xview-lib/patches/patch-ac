@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:18:35 agc Exp $
+
 diff -rc ../old/xview3.2p1-X11R6/lib/libolgx/ol_init.c ./lib/libolgx/ol_init.c
 *** ../old/xview3.2p1-X11R6/lib/libolgx/ol_init.c	Tue Jun 29 01:18:28 1993
 --- ./lib/libolgx/ol_init.c	Sun Nov 20 13:38:59 1994

@@ -1,3 +1,5 @@
+$NetBSD: patch-av,v 1.2 1998/08/07 11:09:34 agc Exp $
+
 *** lib/post.tcl	Tue Dec 23 18:41:31 1997
 --- lib/post.tcl.new	Fri Jan  9 11:40:29 1998
 ***************

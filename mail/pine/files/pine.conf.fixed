@@ -1,4 +1,7 @@
 ###########################################################################
+#
+# $NetBSD: pine.conf.fixed,v 1.3 1998/08/07 11:09:47 agc Exp $
+#
 # pine.conf.fixed
 # Insert any statements from .../pine.conf here that you don't want your
 # users can change.

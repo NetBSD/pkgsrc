@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 11:09:21 agc Exp $
+
 --- mosmlyac/Makefile.orig	Mon Oct 16 10:36:52 1995
 +++ mosmlyac/Makefile	Tue Feb 17 00:07:43 1998
 @@ -18,7 +18,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.3 1998/08/07 11:13:53 agc Exp $
+
 --- lib/glob/Makefile.in.orig	Tue Sep 16 12:13:23 1997
 +++ lib/glob/Makefile.in	Tue Aug  4 21:18:05 1998
 @@ -46,7 +46,7 @@

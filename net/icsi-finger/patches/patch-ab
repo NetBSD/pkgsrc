@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:42 agc Exp $
+
 --- support/cpp-Makefile.orig	Thu Aug 17 04:40:19 1995
 +++ support/cpp-Makefile	Fri Jun 26 15:32:27 1998
 @@ -114,7 +114,7 @@

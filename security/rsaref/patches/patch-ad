@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:13:47 agc Exp $
+
 --- ../source/r_random.c.orig	Fri Mar 25 14:01:47 1994
 +++ ../source/r_random.c	Tue Jul 14 13:20:11 1998
 @@ -8,7 +8,7 @@

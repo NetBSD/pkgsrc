@@ -1,3 +1,5 @@
+$NetBSD: patch-as,v 1.2 1998/08/07 11:09:33 agc Exp $
+
 *** exmh-2.0/lib/pgpExec.tcl	Mon Dec 22 15:52:20 1997
 --- lib/pgpExec.tcl		Tue Dec 23 12:33:36 1997
 ***************

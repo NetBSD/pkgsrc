@@ -1,4 +1,7 @@
 #! /bin/sh
+#
+# $NetBSD: INSTALL,v 1.2 1998/08/07 11:09:45 agc Exp $
+#
 
 case "$2" in
   ""|POST-INSTALL) cat <<EOF

@@ -1,3 +1,6 @@
+#
+# $NetBSD: Makefile.freebsd,v 1.2 1998/08/07 11:09:58 agc Exp $
+#
 CC=cc
 INCLUDES=-I${LOCALBASE}/include/tk8.0 -I${LOCALBASE}/include/tcl8.0 -I${X11BASE}/include
 LIB_DIR=${LOCALBASE}/lib

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:10:26 agc Exp $
+
 *** Make.common.in.orig	Thu Jun 19 23:14:51 1997
 --- Make.common.in	Thu Jun 19 23:16:28 1997
 *************** exec_prefix = $(prefix)

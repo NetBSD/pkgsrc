@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:14:24 agc Exp $
+
 --- Library/src/HTStyle.c.orig	Tue Apr 30 16:31:55 1996
 +++ Library/src/HTStyle.c	Wed Jun 18 18:34:01 1997
 @@ -19,6 +19,8 @@

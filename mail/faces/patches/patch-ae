@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:09:35 agc Exp $
+
 --- filters/rs2icon.c	1998/02/25 13:51:18	1.1
 +++ filters/rs2icon.c	1998/02/25 13:51:55
 @@ -21,7 +21,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:14:08 agc Exp $
+
 --- signals.c.orig	Tue Mar 28 21:32:06 1995
 +++ signals.c	Sun Jul 19 14:07:51 1998
 @@ -2,14 +2,18 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.4 1998/08/07 11:11:10 agc Exp $
+
 *** account.c.orig	Thu Sep 23 06:10:59 1993
 --- account.c	Sat Apr 15 04:57:47 1995
 ***************

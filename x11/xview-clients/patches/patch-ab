@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:18:31 agc Exp $
+
 diff -c /usr/ports/x11/xview-config/work/xview3.2p1-X11R6/clients/olwm/screen.c screen.c
 *** /usr/ports/x11/xview-config/work/xview3.2p1-X11R6/clients/olwm/screen.c	Tue Oct  8 23:31:04 1996
 --- olwm/screen.c	Mon Jan  1 23:54:12 1996

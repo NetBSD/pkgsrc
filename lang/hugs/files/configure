@@ -1,3 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: configure,v 1.2 1998/08/07 11:09:03 agc Exp $
+#
+
 cd unix
 exec ./configure $*

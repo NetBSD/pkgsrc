@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 11:08:59 agc Exp $
+
 --- libI77/libI77.xsum.orig	Thu Jul  9 08:26:43 1998
 +++ libI77/libI77.xsum	Thu Jul  9 08:27:14 1998
 @@ -22,5 +22,4 @@

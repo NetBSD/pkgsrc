@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:09:55 agc Exp $
+
 --- editor/fl_edit.c.orig	Fri Jun 26 03:24:52 1998
 +++ editor/fl_edit.c	Fri Jun 26 03:25:10 1998
 @@ -69,3 +69,3 @@

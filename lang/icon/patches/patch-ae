@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:09:04 agc Exp $
+
 *** src/h/sys.h.orig	Fri Jul 29 21:24:57 1994
 --- src/h/sys.h	Wed Mar  1 15:43:55 1995
 ***************

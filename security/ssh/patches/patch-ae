@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.4 1998/08/07 11:13:49 agc Exp $
+
 Index: server_config.sample
 *** server_config.sample.orig	Tue Jan 20 05:20:14 1998
 --- server_config.sample	Tue Jan 20 20:40:35 1998

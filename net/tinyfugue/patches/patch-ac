@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:11:01 agc Exp $
+
 --- unix/tfconfig.orig	Fri Apr  4 11:51:58 1997
 +++ unix/tfconfig	Mon Jun 16 18:00:45 1997
 @@ -211,17 +211,17 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:14:27 agc Exp $
+
 --- src/redirect.c.dist	Wed Apr 16 07:26:02 1997
 +++ src/redirect.c	Sun Jul  6 01:01:21 1997
 @@ -154,7 +154,7 @@

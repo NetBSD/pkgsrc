@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.3 1998/08/07 11:09:28 agc Exp $
+
 --- Common.mk.in.orig	Sun Nov 30 00:19:08 1997
 +++ Common.mk.in	Sat Mar  7 22:59:30 1998
 @@ -101,7 +101,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 11:10:14 agc Exp $
+
 --- menubox.c.orig	Fri Jan 23 17:37:12 1998
 +++ menubox.c	Fri Jan 23 18:15:46 1998
 @@ -53,12 +53,32 @@

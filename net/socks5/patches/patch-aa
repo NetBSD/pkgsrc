@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:59 agc Exp $
+
 --- shlib/Makefile.in	1997/11/21 14:05:10	1.1
 +++ shlib/Makefile.in	1997/11/21 14:20:18
 @@ -81,7 +81,7 @@

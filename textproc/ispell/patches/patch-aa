@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:14:12 agc Exp $
+
 --- languages/english/english.2-orig	Mon Jan 23 19:28:44 1995
 +++ languages/english/english.2	Thu Apr 16 14:34:21 1998
 @@ -1867,7 +1867,6 @@

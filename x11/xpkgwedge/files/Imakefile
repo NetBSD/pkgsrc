@@ -1,3 +1,6 @@
+#
+# $NetBSD: Imakefile,v 1.2 1998/08/07 11:18:26 agc Exp $
+#
 # in case this hack is already installed
 X11_ROOT ?= ProjectRoot
 PREFIX = ${X11_ROOT}

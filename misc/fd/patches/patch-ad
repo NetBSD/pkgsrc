@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:10:18 agc Exp $
+
 --- machine.h.orig	Sat Jun 27 22:34:14 1998
 +++ machine.h	Sat Jun 27 22:35:30 1998
 @@ -160,7 +160,7 @@
