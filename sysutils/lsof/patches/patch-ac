@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 1999/05/05 17:40:38 bad Exp $
+
+--- dialects/n+obsd/dproc.c.orig	Tue Nov 24 02:11:24 1998
++++ dialects/n+obsd/dproc.c	Wed May  5 19:29:31 1999
+@@ -394,11 +394,11 @@
+ 	int i, j;
+ 	KA_T ka;
+ 	int n = 0;
+-	struct pager_struct pg;
+ 	struct vm_map_entry vmme, *e;
+ 	struct vmspace vmsp;
+ 
+ #if	!defined(UVM)
++	struct pager_struct pg;
+ 	struct vm_object vmo;
+ #endif	/* !defined(UVM) */
+ 
