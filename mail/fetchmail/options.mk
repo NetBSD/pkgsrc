@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2005/01/10 20:59:43 adrianp Exp $
+# $NetBSD: options.mk,v 1.6 2005/01/20 12:59:11 frueauf Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fetchmail
-PKG_SUPPORTED_OPTIONS=	inet6 kerberos4 ssl
+PKG_SUPPORTED_OPTIONS=	inet6 kerberos4 kerberos5 ssl
 
 .if !defined(PKG_OPTIONS.fetchmail)
 PKG_DEFAULT_OPTIONS+=	ssl
@@ -27,6 +27,16 @@ REPLACE_KERBEROS_LIBS=	yes
 .  endif
 .else
 CONFIGURE_ARGS+=	--with-kerberos=no
+.endif
+
+###
+### Kerberos 5 / GSSAPI support.
+###
+.if !empty(PKG_OPTIONS:Mkerberos5)
+CRYPTO+=                uses Kerberos encryption code
+CONFIGURE_ARGS+=        --with-kerberos5=yes
+.else
+CONFIGURE_ARGS+=        --with-kerberos5=no
 .endif
 
 ###
