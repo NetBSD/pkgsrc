@@ -1,19 +1,27 @@
-$NetBSD: patch-ab,v 1.14 2004/03/28 20:52:00 martin Exp $
+$NetBSD: patch-ab,v 1.15 2004/03/28 21:24:12 martin Exp $
 
 --- bozohttpd.8.orig	2004-02-18 14:25:39.000000000 +0100
-+++ bozohttpd.8	2004-03-28 22:31:05.000000000 +0200
-@@ -365,7 +365,13 @@
- .Pa .bzredirect
++++ bozohttpd.8	2004-03-28 23:20:36.000000000 +0200
+@@ -26,7 +26,7 @@
+ .\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ .\" SUCH DAMAGE.
+ .\"
+-.Dd February 18, 2004
++.Dd March 28, 2004
+ .Dt BOZOHTTPD 8
+ .Os BOZOS
+ .Sh NAME
+@@ -366,6 +366,13 @@
  symbolic link is found,
  .Nm
--will perform a smart redirect to the target of this symlink.
-+will perform a smart redirect to the target of this symlink. The target is
-+assumed to live on the same server. If a
+ will perform a smart redirect to the target of this symlink.
++The target is assumed to live on the same server.
++If a
 +.Pa .bzabsredirect
 +symbolic link is found,
 +.Nm
-+will redirect to the absolute url pointed to by this symlink. This is usefull
-+to redirect to different servers.
++will redirect to the absolute url pointed to by this symlink.
++This is useful to redirect to different servers.
  .Sh SSL SUPPORT
  .Nm
  has support for SSLv2, SSLv3, and TLSv1 protocols that is included by
