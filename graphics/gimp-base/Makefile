@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2002/10/07 14:54:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2002/12/01 13:49:40 salo Exp $
 
 DISTNAME=		gimp-1.2.3
 PKGNAME=		gimp-base-1.2.3
 PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.3/ \
-		ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.3/ \
-		ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.3/
+			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.3/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.3/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		hubertf@netbsd.org
@@ -16,7 +16,9 @@ COMMENT=		Image manipulation program similar to Photoshop[tm]
 CONFLICTS+=		gimp<=1.2.3
 
 BUILD_USES_MSGFMT=	yes
+
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 USE_GMAKE=		yes
 

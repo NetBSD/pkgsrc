@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/10/21 15:02:26 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2002/12/01 13:49:42 salo Exp $
 #
 
 DISTNAME=	xsane-0.86
@@ -19,10 +19,11 @@ COMMENT=	New improved frontend for SANE
 
 BUILD_USES_MSGFMT=	yes
 
-GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
-USE_X11BASE=	YES
-USE_BUILDLINK2=	YES
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
+USE_X11BASE=		YES
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"

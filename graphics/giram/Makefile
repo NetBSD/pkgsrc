@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/10/20 13:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2002/12/01 13:49:40 salo Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/19 17:38:24 cpiazza Exp $
 
 DISTNAME=	Giram-0.1.2
@@ -13,12 +13,11 @@ COMMENT=	Giram is Really A Modeller
 
 DEPENDS+=	povray-[0-9]*:../../graphics/povray
 
-USE_BUILDLINK2=	yes
-USE_X11=	yes
-USE_GMAKE=	yes
-GNU_CONFIGURE=	yes
-
-CONFIGURE_ENV=	PKGLOCALEDIR="${PKGLOCALEDIR}"
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
+USE_GMAKE=		yes
+GNU_CONFIGURE=		yes
 
 post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/Giram

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/02 04:09:34 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/01 13:49:40 salo Exp $
 #
 
 DISTNAME=		eog-1.0.3
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_GMAKE=		YES
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR}
 
 .include "../../textproc/scrollkeeper/buildlink2.mk"

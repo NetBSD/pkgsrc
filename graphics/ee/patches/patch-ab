@@ -1,13 +1,11 @@
-$NetBSD: patch-ab,v 1.3 2002/01/24 15:44:12 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2002/12/01 13:49:39 salo Exp $
 
---- configure.orig	Mon Jul 17 17:42:39 2000
-+++ configure
-@@ -4740,6 +4740,10 @@
+--- configure.orig	Mon Jul 17 23:42:39 2000
++++ configure	Sun Dec  1 14:21:19 2002
+@@ -4740,6 +4740,8 @@
  
  
  
-+# Set DATADIRNAME to "${PKGLOCALEDIR}"
-+DATADIRNAME="${PKGLOCALEDIR}"
 +INTLDEPS=
 +INTLLIBS="-lintl"
  

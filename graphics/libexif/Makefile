@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/08/26 17:59:39 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/12/01 13:49:41 salo Exp $
 
 DISTNAME=	libexif-0.5.3
 CATEGORIES=	graphics
@@ -10,6 +10,7 @@ HOMEPAGE=	http://libexif.sourceforge.net/
 COMMENT=	EXIF file library
 
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

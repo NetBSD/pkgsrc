@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/10/19 10:54:52 rh Exp $
+# $NetBSD: Makefile,v 1.27 2002/12/01 13:49:39 salo Exp $
 
 DISTNAME=		ee-0.3.12
 PKGREVISION=		2
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Image viewer based on imlib by the Rasterman.  Gtk clone of xv
 
 USE_BUILDLINK2=		# defined
+USE_PKGLOCALEDIR=	# defined
 USE_X11BASE=		# defined
 USE_GMAKE=		# defined
 
@@ -21,7 +22,6 @@ LOCALSTATEDIR=		/var/gnome
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 			--with-glib-prefix=${BUILDLINK_PREFIX.glib}
-CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 
 .include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
