@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.74 2000/11/02 11:59:46 itojun Exp $
+# $NetBSD: Makefile,v 1.75 2000/11/18 00:39:32 tv Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
     SUBDIR += STk
     SUBDIR += awka
     SUBDIR += baci
-    SUBDIR += blackdown-jdk12
-    SUBDIR += blackdown-jre12
     SUBDIR += bwbasic
     SUBDIR += caml-light
     SUBDIR += camlp4
@@ -60,6 +58,8 @@
     SUBDIR += sml-nj
     SUBDIR += snobol
     SUBDIR += squeak
+    SUBDIR += sun-jdk12
+    SUBDIR += sun-jre12
     SUBDIR += tcl
     SUBDIR += tcl-expect
     SUBDIR += tcl-tclX
