@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/06 17:40:30 pooka Exp $
+$NetBSD: distinfo,v 1.2 2001/09/08 15:54:01 pooka Exp $
 
-SHA1 (vim-6.0aq.tar.bz2) = f5330b30b7dae6a035d15ec866ef68a005de09e4
-Size (vim-6.0aq.tar.bz2) = 2727341 bytes
+SHA1 (vim-6.0au.tar.bz2) = 5f341b31b1f2476d3b96a7e1dc80355b8e505f30
+Size (vim-6.0au.tar.bz2) = 2755045 bytes
