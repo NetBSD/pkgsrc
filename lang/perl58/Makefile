@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/02/18 13:33:41 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2004/03/07 01:02:59 danw Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -109,10 +109,15 @@ MKPIC=		yes
 STATIC_PERL=	no
 #
 # "installarchlib" and "installsitearch" have different forms between
-# Darwin and NetBSD.
+# Darwin and NetBSD (and between older and newer versions of Darwin)
 #
-PERL5_ARCHLIB=	${PREFIX}/lib/perl5/${PERL5_VERS}/${LOWER_OPSYS}
-PERL5_SITEARCH=	${PREFIX}/lib/perl5/site_perl/${PERL5_VERS}/${LOWER_OPSYS}
+.if ${OS_VERSION:R} >= 7
+PERL5_ARCHLIB=	${PREFIX}/lib/perl5/${PERL5_VERS}/darwin-2level
+PERL5_SITEARCH=	${PREFIX}/lib/perl5/site_perl/${PERL5_VERS}/darwin-2level
+.else
+PERL5_ARCHLIB=	${PREFIX}/lib/perl5/${PERL5_VERS}/darwin
+PERL5_SITEARCH=	${PREFIX}/lib/perl5/site_perl/${PERL5_VERS}/darwin
+.endif
 .endif
 
 # Nail down the needed libraries for each platform here to avoid hidden
