@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/11/15 18:34:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/12/09 14:42:54 junyoung Exp $
 bin/function_grep.pl
 bin/notepad
 bin/progman
@@ -55,6 +55,8 @@ include/wine/dplay.h
 include/wine/dplobby.h
 include/wine/dshow.h
 include/wine/dsound.h
+include/wine/fci.h
+include/wine/fdi.h
 include/wine/guiddef.h
 include/wine/imagehlp.h
 include/wine/imm.h
@@ -249,6 +251,7 @@ lib/wine/avifil32.dll.so
 lib/wine/avifile.dll.so
 lib/wine/aviinfo.exe.so
 lib/wine/aviplay.exe.so
+lib/wine/cabinet.dll.so
 lib/wine/clock.exe.so
 lib/wine/comcat.dll.so
 lib/wine/comctl32.dll.so
@@ -340,6 +343,7 @@ lib/wine/regedit.exe.so
 lib/wine/regsvr32.exe.so
 lib/wine/riched32.dll.so
 lib/wine/rpcrt4.dll.so
+lib/wine/rundll32.exe.so
 lib/wine/serialui.dll.so
 lib/wine/setupapi.dll.so
 lib/wine/setupx.dll.so

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2002/11/15 18:34:40 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2002/12/09 14:42:54 junyoung Exp $
 
-DISTNAME=		Wine-20021031
+DISTNAME=		Wine-20021125
 PKGNAME=		${DISTNAME:S/W/w/}
-WRKSRC= 		${WRKDIR}/wine-20021031
+WRKSRC= 		${WRKDIR}/wine-20021125
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
 
@@ -17,9 +17,6 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.[6-9]*-i386
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GMAKE=		YES
-
-USE_PERL5=		run
-REPLACE_PERL=		tools/winedump/function_grep.pl tools/winemaker
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-curses
@@ -52,6 +49,5 @@ post-install:
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
