@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/06/26 02:27:41 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/07/20 12:34:32 hubertf Exp $
 #
 
 DISTNAME=	jadetex-2.20
@@ -17,9 +17,10 @@ TEXMF_CNF=	${LOCALBASE}/share/texmf/web2c/texmf.cnf
 do-install:
 	${CP} -p ${TEXMF_CNF} ${TEXMF_CNF}-before-jadetex
 	${CAT} ${FILESDIR}/texmf.cnf-add >>${TEXMF_CNF}
-	cd ${WRKSRC}; \
-	${MAKE} ${.MAKEFLAGS}; \
-	${MAKE} ${.MAKEFLAGS} install; \
+	cd ${WRKSRC}; ${SETENV} TEXFORMATS=${LOCALBASE}/share/texmf/web2c \
+		${MAKE} ${MAKEFLAGS};
+	cd ${WRKSRC}; ${SETENV} TEXFORMATS=${LOCALBASE}/share/texmf/web2c \
+		${MAKE} ${MAKEFLAGS} install
 	${RM} -f ${PREFIX}/bin/jadetex
 	${LN} -s tex ${PREFIX}/bin/jadetex
 	${RM} -f ${PREFIX}/bin/pdfjadetex
