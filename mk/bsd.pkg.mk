@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.326 1999/08/27 11:23:48 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.327 1999/08/29 22:13:01 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -58,6 +58,7 @@ NOMANCOMPRESS?=		yes
 DEF_UMASK?=		0022
 CLEANDEPENDS?=		NO
 DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
+REINSTALL?=		NO	# reinstall upon update
 
 LOCALBASE?=		${DESTDIR}/usr/local
 X11BASE?=		${DESTDIR}/usr/X11R6
@@ -330,6 +331,8 @@ COMMENT?=		${PKGDIR}/COMMENT
 DESCR_SRC?=		${PKGDIR}/DESCR
 DESCR=			${WRKDIR}/.DESCR
 PLIST=			${WRKDIR}/.PLIST
+DLIST=			${WRKDIR}/.DLIST
+DDIR=			${WRKDIR}/.DDIR
 
 # Set INSTALL_FILE to be the name of any INSTALL file
 .if !defined(INSTALL_FILE) && exists(${PKGDIR}/INSTALL)
@@ -393,6 +396,7 @@ CHMOD?=		/usr/bin/chmod
 CHOWN?=		/usr/bin/chown
 CHGRP?=		/usr/bin/chgrp
 CP?=		/usr/bin/cp
+CUT?=		/usr/bin/cut
 ECHO?=		/usr/ucb/echo
 EGREP?=		/usr/xpg4/bin/egrep
 FALSE?=		/usr/bin/false
@@ -436,6 +440,7 @@ CHMOD?=		/bin/chmod
 CHOWN?=		/usr/sbin/chown
 CHGRP?=		/usr/bin/chgrp
 CP?=		/bin/cp
+CUT?=		/bin/cut
 ECHO?=		/bin/echo
 EGREP?=		/bin/egrep
 FALSE?=		/bin/false
@@ -479,6 +484,7 @@ CHMOD?=		/bin/chmod
 CHOWN?=		/usr/sbin/chown
 CHGRP?=		/usr/bin/chgrp
 CP?=		/bin/cp
+CUT?=		/usr/bin/cut
 ECHO?=		/bin/echo
 EGREP?=		/usr/bin/egrep
 FALSE?=		/usr/bin/false
@@ -983,7 +989,9 @@ DOWNLOADED_DISTFILE=	${_DISTDIR}/$$file
 .if !target(do-extract)
 do-extract:
 .ifndef NO_WRKDIR
+.ifndef KEEP_WRKDIR
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${WRKDIR}
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
 .ifdef WRKOBJDIR
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -1555,7 +1563,11 @@ pkg-su-deinstall: uptodate-pkgtools
 
 
 .if (${DEINSTALLDEPENDS} != "NO")
+.if (${DEINSTALLDEPENDS} != "ALL")
 root-install-flags+=	-R
+.else
+root-install-flags+=	-r
+.endif
 .endif
 .ifdef PKG_VERBOSE
 root-install-flags+=	-v
@@ -1574,6 +1586,50 @@ root-deinstall:
 ################################################################
 # Some more targets supplied for users' convenience
 ################################################################
+
+# The 'update' target can be used to update a package and all
+# currently installed packages that depend upon this package.
+update:
+.if (${REINSTALL} == "NO")
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} clean
+.endif
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${DDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} deinstall DEINSTALLDEPENDS=ALL
+.if (${REINSTALL} == "NO")
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+		${MAKE} ${INSTALL_TARGET} KEEP_WRKDIR=YES
+.else
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} reinstall
+.endif
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -s ${DDIR} ] ; then					\
+		for dep in `${CAT} ${DDIR}` ; do			\
+			${ECHO_MSG} "===>  Installing in $${dep}" ;	\
+			(cd "../../$${dep}" && 				\
+			if [ "${REINSTALL}" = "NO" ] ; then		\
+				${MAKE} clean &&			\
+				${MAKE} ${DEPENDS_TARGET} ;		\
+			else						\
+				${MAKE} reinstall ;			\
+			fi) ;						\
+		done ;							\
+	fi
+
+${DDIR}: ${DLIST}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	ddir=`${SED} 's:-[^-]*$$::' <${DLIST}` ;			\
+	if ${PKG_INFO} -b $${ddir} >/dev/null 2>&1 ; then		\
+		${PKG_INFO} -b $${ddir} | ${GREP} Makefile |		\
+			${CUT} -d'/' -f1-2 >${DDIR} ;			\
+	else 								\
+		${ECHO} >${DDIR} ;					\
+	fi
+
+${DLIST}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} -p ${WRKDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	(${PKG_INFO} -R "${PKGNAME:C/-[^-]*$/-[0-9]*/}" || ${TRUE}) |	\
+		${TAIL} -n +4 >${DLIST}
 
 # This is for the use of sites which store distfiles which others may
 # fetch - only fetch the distfile if it is allowed to be
