@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/11/25 20:34:36 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/04/02 12:03:42 wiz Exp $
 
 .if !defined(LIBGII_BUILDLINK2_MK)
 LIBGII_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libgii
-BUILDLINK_DEPENDS.libgii?=	libgii>=0.6
+BUILDLINK_DEPENDS.libgii?=	libgii>=0.8.3
 BUILDLINK_PKGSRCDIR.libgii?=	../../graphics/libgii
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libgii=libgii
@@ -18,7 +18,6 @@ BUILDLINK_FILES.libgii+=	include/ggi/input/lin_kbd.h
 BUILDLINK_FILES.libgii+=	include/ggi/input/xwin.h
 BUILDLINK_FILES.libgii+=	include/ggi/internal/gii-dl.h
 BUILDLINK_FILES.libgii+=	include/ggi/internal/gii.h
-BUILDLINK_FILES.libgii+=	include/ggi/internal/gii_debug.h
 BUILDLINK_FILES.libgii+=	include/ggi/keyboard.h
 BUILDLINK_FILES.libgii+=	include/ggi/system.h
 BUILDLINK_FILES.libgii+=	lib/libgg.*
