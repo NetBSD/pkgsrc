@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/10/05 14:31:44 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/11/21 23:03:21 tron Exp $
 #
 
 DISTNAME=	gnome-libs-0.30.1
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/ \
 MAINTAINER=	tron@netbsd.org
 
 DEPENDS+=	gettext-0.10:../../misc/gettext
-DEPENDS+=	gtk+-1.1.2:../../x11/gtk
+DEPENDS+=	gtk+-1.1.3:../../x11/gtk
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	giflib-3.0:../../graphics/giflib
