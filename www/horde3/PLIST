@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/04 22:35:22 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2005/04/01 05:19:28 snj Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -8,7 +8,6 @@ share/doc/horde/HACKING
 share/doc/horde/INSTALL
 share/doc/horde/PERFORMANCE
 share/doc/horde/README
-share/doc/horde/RELEASE
 share/doc/horde/RELEASE_NOTES
 share/doc/horde/SECURITY
 share/doc/horde/TODO
@@ -31,6 +30,7 @@ share/horde/admin/setup/index.php
 share/horde/admin/setup/scripts.php
 share/horde/admin/sqlshell.php
 share/horde/admin/templates.php
+share/horde/admin/user.php
 share/horde/config/conf.php.dist
 share/horde/config/conf.xml.dist
 share/horde/config/hooks.php.dist
@@ -343,6 +343,7 @@ share/horde/lib/Horde/Token/sql.php
 share/horde/lib/Horde/Tree.php
 share/horde/lib/Horde/Tree/html.php
 share/horde/lib/Horde/Tree/javascript.php
+share/horde/lib/Horde/Tree/select.php
 share/horde/lib/Horde/UI/Language.php
 share/horde/lib/Horde/UI/Pager.php
 share/horde/lib/Horde/UI/Table.php
@@ -560,6 +561,7 @@ share/horde/scripts/sql/script.initial_horde_user.sql
 share/horde/scripts/temp-cleanup.cron
 share/horde/scripts/themes_check.php
 share/horde/scripts/upgrades/2.2_to_3.0.mysql.sql
+share/horde/scripts/upgrades/2.2_to_3.0.pgsql.sql
 share/horde/services/cacheview.php
 share/horde/services/download/index.php
 share/horde/services/editor/htmlarea/dialog.js
@@ -1294,6 +1296,7 @@ share/horde/themes/luc/screen.css
 share/horde/themes/lucblue/info.php
 share/horde/themes/lucblue/screen.css
 share/horde/themes/mobile/screen.css
+share/horde/themes/moz14.css
 share/horde/themes/mozilla/graphics/header.png
 share/horde/themes/mozilla/graphics/menu-active.png
 share/horde/themes/mozilla/graphics/menu.png
@@ -1305,6 +1308,7 @@ share/horde/themes/postnuke/screen.css
 share/horde/themes/print/screen.css
 share/horde/themes/purple/info.php
 share/horde/themes/purple/screen.css
+share/horde/themes/safari.css
 share/horde/themes/screen.css
 share/horde/themes/simplex/graphics/background.png
 share/horde/themes/simplex/info.php
@@ -1557,6 +1561,7 @@ share/horde/util/regex_test.php
 @dirrm share/horde/lib/Horde
 @dirrm share/horde/lib/File/PDF/fonts
 @dirrm share/horde/lib/File/PDF
+@dirrm share/horde/lib/File/tests
 @dirrm share/horde/lib/File
 @dirrm share/horde/lib/Block
 @dirrm share/horde/lib
