@@ -1,28 +1,28 @@
-# $NetBSD: Makefile,v 1.16 1999/04/15 07:21:04 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/05/24 20:39:45 tv Exp $
 #
 
-DISTNAME=	nt.1.5a23
-PKGNAME=	nte-1.5a23
-CATEGORIES=	mbone tk80
-MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/nte/1.5a23/
+DISTNAME=		nt.1.5a23
+PKGNAME=		nte-1.5a23
+CATEGORIES=		mbone tk80
+MASTER_SITES=		http://www-mice.cs.ucl.ac.uk/multimedia/software/nte/1.5a23/
 
-MAINTAINER=	mycroft@netbsd.org
-HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/nte/
+MAINTAINER=		mycroft@netbsd.org
+HOMEPAGE=		http://www-mice.cs.ucl.ac.uk/multimedia/software/nte/
 
-BUILD_DEPENDS=	${TK_SRC}/generic/default.h:${TK_DIR}:configure
-DEPENDS+=	tk-8.0.5:../../x11/tk80
+BUILD_DEPENDS=		${TK_SRC}/generic/default.h:${TK_DIR}:configure
+DEPENDS+=		tk-8.0.5:../../x11/tk80
 
-TK_DIR=         ${.CURDIR}/../../x11/tk80
-TK_SRC=		${TK_DIR}/${WRKDIR:T}/tk8.0.5
+TK_DIR=         	${.CURDIR}/../../x11/tk80
+TK_SRC=			${TK_DIR}/${WRKDIR:T}/tk8.0.5
 
-NOT_FOR_ARCHS=	alpha	# ANSI headers cause LP64 problems
+NOT_FOR_PLATFORM=	*-*-alpha	# ANSI headers cause LP64 problems
 
-RESTRICTED=	"Contains DES encryption"
-MIRROR_DISTFILE=no
-NO_WRKSUBDIR=	yes
-USE_GMAKE=	yes
+RESTRICTED=		"Contains DES encryption"
+MIRROR_DISTFILE=	no
+NO_WRKSUBDIR=		yes
+USE_GMAKE=		yes
 # Pass this on to our child
-MAKE_ENV=	TK_SRC=${TK_SRC}
+MAKE_ENV=		TK_SRC=${TK_SRC}
 
 do-configure:
 	cd ${WRKSRC}/netbsd && sh configure

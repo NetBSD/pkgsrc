@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 1999/04/15 20:39:42 tron Exp $
+# $NetBSD: Makefile,v 1.18 1999/05/24 20:39:42 tv Exp $
 
 DISTNAME=		Wine-981211
 PKGNAME=		wine-981211
 WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
-ONLY_FOR_ARCHS=		i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 MAINTAINER=		mycroft@netbsd.org
 HOMEPAGE=		http://www.winehq.com/

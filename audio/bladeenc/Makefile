@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.2 1998/12/28 19:16:50 tv Exp $
+# $NetBSD: Makefile,v 1.3 1999/05/24 20:39:35 tv Exp $
 #
 
-DISTNAME=	BladeEnc-076-bsd-i386
-PKGNAME=	bladeenc-0.76
-CATEGORIES=	audio
-MASTER_SITES=	http://home.swipnet.se/~w-82625/encoder/binaries/
-ONLY_FOR_ARCHS=	i386
+DISTNAME=		BladeEnc-076-bsd-i386
+PKGNAME=		bladeenc-0.76
+CATEGORIES=		audio
+MASTER_SITES=		http://home.swipnet.se/~w-82625/encoder/binaries/
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-MAINTAINER=	tv@netbsd.org
-HOMEPAGE=	http://bladeenc.home.ml.org/
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://bladeenc.home.ml.org/
 
-NO_BUILD=	yes
+NO_BUILD=
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/bladeenc ${PREFIX}/bin/

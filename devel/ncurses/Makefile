@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.17 1998/09/22 06:11:36 garbled Exp $
+# $NetBSD: Makefile,v 1.18 1999/05/24 20:39:38 tv Exp $
 
-DISTNAME=	ncurses-1.9.9g
-CATEGORIES=	devel
+DISTNAME=		ncurses-1.9.9g
+CATEGORIES=		devel
 # XXX this should be moved to ftp.netcom.com:/pub/zm/zmbenhal/ncurses/
 # XXX once upgraded to the latest version - hubertf
-MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/gnu/ncurses/
+MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/gnu/ncurses/
 
-MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://www.gnu.org/software/ncurses/ncurses.html
+MAINTAINER=		hubertf@netbsd.org
+HOMEPAGE=		http://www.gnu.org/software/ncurses/ncurses.html
 
-NOT_FOR_ARCHS=	alpha	# needs to be libtooled
+NOT_FOR_PLATFORM=	*-*-alpha	# needs to be libtooled
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --with-normal --with-shared --enable-bsdpad
-WRKSRC=		${WRKDIR}/ncurses_1.9.9g
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-normal --with-shared --enable-bsdpad
+WRKSRC=			${WRKDIR}/ncurses_1.9.9g
 
 post-patch:
 	( cd ${WRKSRC}/man ; ${RM} -f tput.1 tset.1 clear.1 )

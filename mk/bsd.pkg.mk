@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.272 1999/05/24 18:42:00 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.273 1999/05/24 20:39:50 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -16,16 +16,6 @@
 #
 # NEVER override the "regular" targets unless you want to open
 # a major can of worms.
-
-##### Transitional compatibility: #####
-ONLY_FOR_OPSYS?=	*
-ONLY_FOR_ARCHS?=	*
-.for __opsys__ in ${ONLY_FOR_OPSYS}
-.for __arch__ in ${ONLY_FOR_ARCHS}
-ONLY_FOR_PLATFORM+=	${__opsys__}-*-${__arch__}
-.endfor
-.endfor
-NOT_FOR_PLATFORM+=	${NOT_FOR_OPSYS:S/$/-*-*/} ${NOT_FOR_ARCHS:S/^/*-*-/}
 
 ##### Include any preferences, if not already included, and common definitions
 .include "../../mk/bsd.prefs.mk"
@@ -615,6 +605,13 @@ EXTRACT_ONLY?=	${DISTFILES}
 .if defined(PATCH_SITE_SUBDIR)
 .BEGIN:
 	@${ECHO_MSG} 'PATCH_SITE_SUBDIR is deprecated and must be replaced with PATCH_SITES.'
+	@${FALSE}
+.endif
+
+.if defined(ONLY_FOR_ARCHS) || defined(NOT_FOR_ARCHS) \
+	|| defined(ONLY_FOR_OPSYS) || defined(NOT_FOR_OPSYS)
+.BEGIN:
+	@${ECHO_MSG} 'ONLY/NOT_FOR_ARCHS/OPSYS are deprecated and must be replaced with ONLY/NOT_FOR_PLATFORM.'
 	@${FALSE}
 .endif
 

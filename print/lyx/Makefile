@@ -1,26 +1,23 @@
-# $NetBSD: Makefile,v 1.17 1999/05/09 14:06:38 frueauf Exp $
+# $NetBSD: Makefile,v 1.18 1999/05/24 20:39:47 tv Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
-DISTNAME=	lyx-1.0.2
-CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.via.ecp.fr/pub/lyx/stable/ \
-		ftp://la1ad.uio.no/pub/lyx/
+DISTNAME=		lyx-1.0.2
+CATEGORIES=		print
+MASTER_SITES=		ftp://ftp.via.ecp.fr/pub/lyx/stable/ \
+			ftp://la1ad.uio.no/pub/lyx/
 
-MAINTAINER=	frueauf@netbsd.org
-HOMEPAGE=	http://la1ad.uio.no/lyx/
+MAINTAINER=		frueauf@netbsd.org
+HOMEPAGE=		http://la1ad.uio.no/lyx/
 
-DEPENDS+=	ispell-3.1.20:../../textproc/ispell
-DEPENDS+=	teTeX-0.4p8:../../print/teTeX
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-DEPENDS+=	xforms-0.88:../../x11/xforms
+DEPENDS=		ispell-3.1.20:../../textproc/ispell \
+			teTeX-0.4p8:../../print/teTeX \
+			xpm-3.4k:../../graphics/xpm \
+			xforms-0.88:../../x11/xforms
 
-# restrictions from xforms
-ONLY_FOR_ARCHS=	arm32 i386 m68k sparc ns32k
-
-USE_PERL5=	yes
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS= --with-extra-lib=${X11BASE}/lib \
-		--with-extra-inc="${X11BASE}/include ${X11BASE}/include/X11"
+USE_PERL5=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS= 	--with-extra-lib=${X11BASE}/lib \
+			--with-extra-inc="${X11BASE}/include ${X11BASE}/include/X11"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,42 +1,42 @@
-# $NetBSD: Makefile,v 1.31 1999/04/13 15:31:05 agc Exp $
+# $NetBSD: Makefile,v 1.32 1999/05/24 20:39:36 tv Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
-DISTNAME=	postgresql-6.4.2
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
-CATEGORIES=	databases
-MASTER_SITES=	ftp://ftp.PostgreSQL.org/pub/ \
-		ftp://ftp.sunsite.auc.dk/mirrors/www.postgresql.org/pub/ \
-		ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/
+DISTNAME=		postgresql-6.4.2
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
+CATEGORIES=		databases
+MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/ \
+			ftp://ftp.sunsite.auc.dk/mirrors/www.postgresql.org/pub/ \
+			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.PostgreSQL.ORG/
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.PostgreSQL.ORG/
 
-BUILD_DEPENDS+=	bison:../../devel/bison
-DEPENDS+=	tk-8.0.5:../../x11/tk80
-DEPENDS+=	tcl-8.0.5:../../lang/tcl80
-DEPENDS+=	addnerd-1.6:../../sysutils/addnerd
+BUILD_DEPENDS+=		bison:../../devel/bison
+DEPENDS+=		tk-8.0.5:../../x11/tk80 \
+			tcl-8.0.5:../../lang/tcl80 \
+			addnerd-1.6:../../sysutils/addnerd
 
 # Needs ELF clue, mips has no TAS implementation
-NOT_FOR_ARCHS=	alpha mips
+NOT_FOR_PLATFORM=	*-*-{alpha,mips}
 
-PLIST_SRC=	${WRKDIR}/PLIST.tmp
-REQ_FILE=	${WRKDIR}/REQ
+PLIST_SRC=		${WRKDIR}/PLIST.tmp
+REQ_FILE=		${WRKDIR}/REQ
 
-PGUSER?=	pgsql
-PGGROUP?=	ingres
+PGUSER?=		pgsql
+PGGROUP?=		ingres
 
-USE_GMAKE=	yes
-MAKEFILE=	GNUmakefile
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS= --prefix=${PREFIX}/${PGUSER} \
-		--enable-locale \
-		--with-tcl \
-		--with-tclconfig="${PREFIX}/lib/tcl8.0 ${PREFIX}/lib/tk8.0" \
-		--with-includes=${PREFIX}/include \
-		--with-libs=${PREFIX}/lib \
-		--with-template=`${ECHO} ${OPSYS} | ${TR} '[A-Z]' '[a-z]'`
-CONFIGURE_ENV+=	CPPFLAGS="-I${PREFIX}/include/tcl8.0 -I${PREFIX}/include/tk8.0"
+USE_GMAKE=
+MAKEFILE=		GNUmakefile
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS= 	--prefix=${PREFIX}/${PGUSER} \
+			--enable-locale \
+			--with-tcl \
+			--with-tclconfig="${PREFIX}/lib/tcl8.0 ${PREFIX}/lib/tk8.0" \
+			--with-includes=${PREFIX}/include \
+			--with-libs=${PREFIX}/lib \
+			--with-template=`${ECHO} ${OPSYS} | ${TR} '[A-Z]' '[a-z]'`
+CONFIGURE_ENV+=		CPPFLAGS="-I${PREFIX}/include/tcl8.0 -I${PREFIX}/include/tk8.0"
 
 INSTALL_TARGET=	install install-man
 
