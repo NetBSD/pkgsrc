@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/30 10:45:46 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/09/08 01:03:21 jwise Exp $
 
 DISTNAME=	tk8.3.2
 PKGNAME=	tk-8.3.2
@@ -24,6 +24,7 @@ post-install:
 	${MKDIR} ${PREFIX}/include/tk
 	${MKDIR} ${PREFIX}/include/tk/generic
 	${MKDIR} ${PREFIX}/include/tk/unix
+	${INSTALL_DATA} ${WRKSRC}/../generic/default.h ${PREFIX}/include/tk/generic
 	${INSTALL_DATA} ${WRKSRC}/../generic/tk.h ${PREFIX}/include/tk/generic
 	${INSTALL_DATA} ${WRKSRC}/../generic/tk3d.h ${PREFIX}/include/tk/generic
 	${INSTALL_DATA} ${WRKSRC}/../generic/tkButton.h ${PREFIX}/include/tk/generic
