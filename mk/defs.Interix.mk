@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.14 2004/04/22 03:36:30 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.15 2004/04/22 04:14:27 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -89,6 +89,7 @@ MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=		/sbin/nologin
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
+PKGDIRMODE?=		775
 ROOT_CMD?=		${SU} - ${ROOT_USER} -c
 ROOT_USER?=		${BINOWN}
 ROOT_GROUP?=		+Administrators
