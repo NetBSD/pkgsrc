@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 1999/10/08 21:12:53 jlam Exp $
+# $NetBSD: Makefile,v 1.41 1999/10/09 16:50:24 jlam Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -21,9 +21,9 @@ USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 LIBTOOL_FLAGS=	--cplusplus --install-la
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
-		"--with-qt-dir=${PREFIX}" \
-		"--with-qt-includes=${PREFIX}/include/qt"
+CONFIGURE_ARGS=	--datadir=${PREFIX}/share/kde \
+		--with-qt-dir=${PREFIX} \
+		--with-qt-includes=${PREFIX}/include/qt
 CFLAGS+=	-I${LOCALBASE}/include
 
 .include "../../mk/bsd.prefs.mk"
@@ -36,6 +36,8 @@ post-install:
 	@${GREP} -v ^lib/lib.*\.so ${PKGDIR}/PLIST >${PLIST_SRC}
 .endif
 
-CONFIGURE_ENV=	CXXFLAGS="${CFLAGS}" all_libraries="-L${LOCALBASE}/lib"
+CONFIGURE_ENV=	KDEDIR=${PREFIX} \
+		CXXFLAGS="${CFLAGS}" \
+		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib"
 
 .include "../../mk/bsd.pkg.mk"
