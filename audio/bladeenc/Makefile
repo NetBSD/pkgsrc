@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2001/02/16 13:30:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/03/12 06:12:10 zuntum Exp $
 #
 
-DISTNAME=		bladeenc-0.92.7-src-stable
-PKGNAME=		bladeenc-0.92.7
+DISTNAME=		bladeenc-0.94.0-src-stable
+PKGNAME=		bladeenc-0.94
 CATEGORIES=		audio
 MASTER_SITES=		http://bladeenc.mp3.no/source/
 
@@ -12,7 +12,7 @@ COMMENT=		Free MPEG Audio Layer 3 encoder (not decoder)
 
 USE_GMAKE=		yes
 
-WRKSRC=	${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME}.0
 
 GNU_CONFIGURE=		yes
 
