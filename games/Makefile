@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2004/04/17 20:25:33 snj Exp $
+# $NetBSD: Makefile,v 1.211 2004/04/18 05:04:36 xtraeme Exp $
 #
 
 COMMENT=	Games
@@ -129,6 +129,7 @@ SUBDIR+=	nethack-x11
 SUBDIR+=	netmaj
 SUBDIR+=	netmaze
 SUBDIR+=	netris
+SUBDIR+=	neverball
 SUBDIR+=	newvox
 SUBDIR+=	nighthawk
 SUBDIR+=	omega
