@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/07/13 13:53:43 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/07/23 15:34:17 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use metacity.
 #
@@ -9,7 +9,7 @@
 METACITY_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			metacity
-BUILDLINK_DEPENDS.metacity?=		metacity>=2.4.34nb3
+BUILDLINK_DEPENDS.metacity?=		metacity>=2.4.55
 BUILDLINK_PKGSRCDIR.metacity?=		../../wm/metacity
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.metacity=metacity
@@ -21,6 +21,7 @@ BUILDLINK_FILES.metacity+=	lib/pkgconfig/libmetacity-private.pc
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libglade2/buildlink2.mk"
 .include "../../net/ORBit2/buildlink2.mk"
+.include "../../x11/startup-notification/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	metacity-buildlink
 
