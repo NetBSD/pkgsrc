@@ -1,33 +1,8 @@
-$NetBSD: patch-az,v 1.8 2000/02/18 23:57:54 mycroft Exp $
+$NetBSD: patch-az,v 1.9 2000/06/24 17:03:39 minoura Exp $
 
---- src/unexelf.c.orig	Fri Dec  3 04:09:21 1999
-+++ src/unexelf.c	Fri Feb 18 18:56:56 2000
-@@ -478,6 +478,13 @@
- # endif
- # include <sys/exec_elf.h>
- 
-+#include <sys/param.h>
-+
-+/* NetBSD 1.4M has sane <elf.h> */
-+
-+#if !defined(__NetBSD_Version__) || __NetBSD_Version__ < 104130000
-+# include <sys/exec_elf.h>
-+
- # define PT_LOAD	Elf_pt_load
- # define SHT_SYMTAB	Elf_sht_symtab
- # define SHT_DYNSYM	Elf_sht_dynsym
-@@ -490,6 +497,10 @@
- # define SHN_ABS	Elf_eshn_absolute
- # define SHN_COMMON	Elf_eshn_common
- 
-+#else
-+# include <elf.h>
-+#endif
-+
- /*
-  * The magic of picking the right size types is handled by the ELFSIZE
-  * definition above.
-@@ -504,9 +515,14 @@
+--- src/unexelf.c.orig	Mon May 15 17:14:02 2000
++++ src/unexelf.c	Sun Jun 18 09:44:41 2000
+@@ -495,9 +495,14 @@
  #  include <sys/exec_ecoff.h>
  #  define HDRR		struct ecoff_symhdr
  #  define pHDRR		HDRR *
@@ -43,8 +18,8 @@ $NetBSD: patch-az,v 1.8 2000/02/18 23:57:54 mycroft Exp $
  #ifdef __OpenBSD__
  # include <sys/exec_elf.h>
  #endif
-@@ -530,6 +546,14 @@
- extern void fatal (char *, ...);
+@@ -522,6 +527,14 @@
+ # define ElfW(type) ElfExpandBitsW (ELFSIZE, type)
  #endif
  
 +#if defined ( __sony_news) && defined (_SYSTYPE_SYSV)
@@ -58,8 +33,15 @@ $NetBSD: patch-az,v 1.8 2000/02/18 23:57:54 mycroft Exp $
  #ifndef ELF_BSS_SECTION_NAME
  #define ELF_BSS_SECTION_NAME ".bss"
  #endif
-@@ -588,6 +612,47 @@
-   return x - rem + y;
+@@ -613,12 +626,53 @@
+       if (noerror)
+ 	return -1;
+       else
+-	fatal ("Can't find %s in %s.\n", name, file_name, 0);
++	fatal ("Can't find %s in %s.\n", name, file_name);
+     }
+ 
+   return idx;
  }
  
 +#if defined(__alpha__) || (defined ( __sony_news) && defined (_SYSTYPE_SYSV))
@@ -106,7 +88,7 @@ $NetBSD: patch-az,v 1.8 2000/02/18 23:57:54 mycroft Exp $
  /* ****************************************************************
   * unexec
   *
-@@ -983,22 +1048,11 @@
+@@ -1005,22 +1059,11 @@
  	  == 0)
  	{
  	  pHDRR symhdr = (pHDRR) (NEW_SECTION_H (nn).sh_offset + new_base);
@@ -128,10 +110,10 @@ $NetBSD: patch-az,v 1.8 2000/02/18 23:57:54 mycroft Exp $
  
 -#if defined (__sony_news) && defined (_SYSTYPE_SYSV)
 +#ifdef HAVE_MIPS_SBSS
-       if (NEW_SECTION_H (nn).sh_type == SHT_MIPS_DEBUG && old_mdebug_index) 
+       if (NEW_SECTION_H (nn).sh_type == SHT_MIPS_DEBUG
+ 	  && old_mdebug_index != -1) 
          {
- 	  int diff = NEW_SECTION_H(nn).sh_offset 
-@@ -1007,20 +1061,17 @@
+@@ -1030,20 +1073,17 @@
  
  	  if (diff)
  	    {

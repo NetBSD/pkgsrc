@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.10 2000/03/01 05:07:41 minoura Exp $
+$NetBSD: patch-ab,v 1.11 2000/06/24 17:03:38 minoura Exp $
 
---- configure.orig	Fri Dec  3 16:41:15 1999
-+++ configure	Tue Feb 29 15:36:45 2000
+--- configure.orig	Tue Jun 13 05:05:56 2000
++++ configure	Sun Jun 18 09:18:13 2000
 @@ -21,6 +21,9 @@
    --with-x-toolkit=KIT    use an X toolkit (KIT = yes/lucid/athena/motif/no)"
  ac_help="$ac_help
@@ -12,20 +12,20 @@ $NetBSD: patch-ab,v 1.10 2000/03/01 05:07:41 minoura Exp $
  
  # Initialize some variables set by options.
  # The variables have the same names as the options, with
-@@ -715,9 +718,12 @@
+@@ -718,9 +721,12 @@
  			machine=hp9000s300 ;;
        powerpc-apple-netbsd*) machine=macppc ;;
        mips-*-netbsd*)	machine=pmax ;;
 +      mipsel-*-netbsd*)	machine=pmax ;;
        ns32k-*-netbsd*)	machine=ns32000 ;;
-+      powerpc-*-netbsd*) machine=powerpc ;;
++      powerpc-*-netbsd*) machine=macppc ;;
        sparc-*-netbsd*)	machine=sparc ;;
        vax-*-netbsd*)	machine=vax ;;
 +      arm*-*-netbsd*)	machine=arm ;;
      esac
    ;;
  
-@@ -4690,6 +4696,64 @@
+@@ -4903,6 +4909,64 @@
    cat >> confdefs.h <<\EOF
  #define HAVE_AIX_SMT_EXP 1
  EOF

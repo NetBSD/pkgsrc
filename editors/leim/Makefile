@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/03/10 15:45:35 minoura Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/24 17:03:40 minoura Exp $
 
 DISTNAME=	leim-${VERSION}
 CATEGORIES=	editors
@@ -13,8 +13,8 @@ DEPENDS+=	emacs-${VERSION}:../emacs
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
-VERSION=	20.6
-WRKSRC=		${WRKDIR}/emacs-20.6/leim
+VERSION=	20.7
+WRKSRC=		${WRKDIR}/emacs-20.7/leim
 
 post-extract:
 	@${ECHO} '#!/bin/sh' >${WRKSRC}/configure
