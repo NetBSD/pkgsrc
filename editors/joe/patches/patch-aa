@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2001/05/22 11:37:16 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2003/04/27 17:45:30 cjep Exp $
 
---- Makefile.orig	Mon Jan 23 07:01:28 1995
+--- Makefile.orig	1995-01-23 06:01:28.000000000 +0000
 +++ Makefile
 @@ -9,9 +9,9 @@
  # to go and where you want the man page
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/22 11:37:16 wiz Exp $
  
  # If you want to use TERMINFO, you have to set
  # the following variable to 1.  Also you have to
-@@ -27,7 +27,7 @@
+@@ -27,7 +27,7 @@ TERMINFO = 0
  
  # C compiler options: make's built-in rules use this variable
  
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/22 11:37:16 wiz Exp $
  
  # C compiler to use: make's built-in rules use this variable
  
-@@ -45,7 +45,7 @@
+@@ -45,7 +45,7 @@ CC = cc
  # add '-ltinfo', '-lcurses' or '-ltermlib',
  # depending on the system.
  
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/22 11:37:16 wiz Exp $
  
  # Object files
  
-@@ -84,17 +84,17 @@
+@@ -84,17 +84,17 @@ termidx: termidx.o
  
  # Install proceedure
  
@@ -55,7 +55,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/22 11:37:16 wiz Exp $
  	if [ ! -d $(WHERERC) ]; then mkdir $(WHERERC); chmod a+rx $(WHERERC); fi
  	rm -f $(WHERERC)/joerc $(WHERERC)/jmacsrc $(WHERERC)/jstarrc $(WHERERC)/jpicorc $(WHERERC)/rjoerc $(WHEREMAN)/joe.1
  	cp joerc $(WHERERC)
-@@ -114,13 +114,13 @@
+@@ -114,13 +114,13 @@ install: joe termidx
  	chmod a+r $(WHERERC)/rjoerc
  	chmod a+r $(WHERERC)/jpicorc
  	chmod a+r $(WHEREMAN)/joe.1
