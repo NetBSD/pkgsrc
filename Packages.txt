@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.126 2000/12/06 17:15:58 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.127 2000/12/07 01:23:48 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -911,7 +911,8 @@ Here's how to use libtool in a pkg in six simple steps:
    This automatically creates all of the .a, .so.major.minor, and ELF
    symlinks (if necessary) in the build directory. Be sure to include
    the -version-info esp. when major and minor are zero, as libtool will
-   strip off the shared library version else.
+   strip off the shared library version else. Also, any "-release" should
+   be removed, as it removes the version info as well.
 
    PLIST only gets the .a, .la and .so.major.minor entries.
 
