@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/05 19:33:15 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/26 15:25:29 drochner Exp $
 bin/gdeskcal
 lib/gdeskcal/AUTHORS
 lib/gdeskcal/LICENSE
@@ -106,11 +106,13 @@ lib/gdeskcal/locale/hu/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/is/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/it/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/ja/LC_MESSAGES/gdeskcal.mo
+lib/gdeskcal/locale/ko/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/lt/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/nl/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/no/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/pl/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/ru/LC_MESSAGES/gdeskcal.mo
+lib/gdeskcal/locale/sk/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/sv/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/tr/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/zh_CN/LC_MESSAGES/gdeskcal.mo
@@ -130,11 +132,13 @@ lib/gdeskcal/po/hu.po
 lib/gdeskcal/po/is.po
 lib/gdeskcal/po/it.po
 lib/gdeskcal/po/ja.po
+lib/gdeskcal/po/ko.po
 lib/gdeskcal/po/lt.po
 lib/gdeskcal/po/nl.po
 lib/gdeskcal/po/no.po
 lib/gdeskcal/po/pl.po
 lib/gdeskcal/po/ru.po
+lib/gdeskcal/po/sk.po
 lib/gdeskcal/po/sv.po
 lib/gdeskcal/po/tr.po
 lib/gdeskcal/po/zh_CN.po
@@ -146,6 +150,14 @@ lib/gdeskcal/skins/default/next.png
 lib/gdeskcal/skins/default/prev.png
 lib/gdeskcal/skins/default/skin.xml
 lib/gdeskcal/skins/default/today.png
+lib/gdeskcal/skins/miderat/bg.png
+lib/gdeskcal/skins/miderat/bg.xcf
+lib/gdeskcal/skins/miderat/home.png
+lib/gdeskcal/skins/miderat/next.png
+lib/gdeskcal/skins/miderat/prev.png
+lib/gdeskcal/skins/miderat/skin.xml
+lib/gdeskcal/skins/miderat/today.png
+@dirrm lib/gdeskcal/skins/miderat
 @dirrm lib/gdeskcal/skins/default
 @dirrm lib/gdeskcal/skins/big_and_simple
 @dirrm lib/gdeskcal/skins
@@ -156,6 +168,8 @@ lib/gdeskcal/skins/default/today.png
 @dirrm lib/gdeskcal/locale/tr
 @dirrm lib/gdeskcal/locale/sv/LC_MESSAGES
 @dirrm lib/gdeskcal/locale/sv
+@dirrm lib/gdeskcal/locale/sk/LC_MESSAGES
+@dirrm lib/gdeskcal/locale/sk
 @dirrm lib/gdeskcal/locale/ru/LC_MESSAGES
 @dirrm lib/gdeskcal/locale/ru
 @dirrm lib/gdeskcal/locale/pl/LC_MESSAGES
@@ -166,6 +180,8 @@ lib/gdeskcal/skins/default/today.png
 @dirrm lib/gdeskcal/locale/nl
 @dirrm lib/gdeskcal/locale/lt/LC_MESSAGES
 @dirrm lib/gdeskcal/locale/lt
+@dirrm lib/gdeskcal/locale/ko/LC_MESSAGES
+@dirrm lib/gdeskcal/locale/ko
 @dirrm lib/gdeskcal/locale/ja/LC_MESSAGES
 @dirrm lib/gdeskcal/locale/ja
 @dirrm lib/gdeskcal/locale/it/LC_MESSAGES
