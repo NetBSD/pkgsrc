@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2002/03/13 17:37:57 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/19 10:55:02 rh Exp $
 
 DISTNAME=	users-guide-1.2
 PKGNAME=	gnome-users-guide-1.2
 PKGREVISION=	1
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/users-guide/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/users-guide/1.2/}
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/users-guide/project.shtml
