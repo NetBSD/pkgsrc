@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2001/03/05 13:05:09 skrll Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/03/12 11:23:08 skrll Exp $
+lib/libamserver-2.4.2.so
 lib/libamserver.a
 lib/libamserver.la
 lib/libamserver.so
-lib/libamserver.so.0
-lib/libamserver.so.0.0
 libexec/amcleanupdisk
 libexec/amidxtaped
 libexec/amindexd
@@ -88,5 +87,5 @@ share/examples/amanda/chg-multi.conf
 share/examples/amanda/chg-scsi.conf
 share/examples/amanda/config.site
 share/examples/amanda/disklist
-@dirrm share/doc/amanda
 @dirrm share/examples/amanda
+@dirrm share/doc/amanda
