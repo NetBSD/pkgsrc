@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/08/25 19:23:34 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/08/28 07:15:40 skrll Exp $
 bin/appletproxy
 bin/chooser
 bin/conttest
@@ -2698,7 +2698,6 @@ share/kde/services/searchproviders/msdn.desktop
 share/kde/services/searchproviders/nl-teletekst.desktop
 share/kde/services/searchproviders/php.desktop
 share/kde/services/searchproviders/python.desktop
-share/kde/services/searchproviders/realnames.desktop
 share/kde/services/searchproviders/rfc.desktop
 share/kde/services/searchproviders/rpmfind.desktop
 share/kde/services/searchproviders/ruby_application_archive.desktop
