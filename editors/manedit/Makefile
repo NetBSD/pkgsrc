@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2002/10/13 12:03:30 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/12/30 00:00:17 kristerw Exp $
 #
 
-DISTNAME=	${PKGNAME:S,manedit-,manedit,}
-PKGNAME=	manedit-0.4j
+DISTNAME=	manedit-0.5.6
 CATEGORIES=	editors
 MASTER_SITES=	ftp://wolfpack.twu.net/users/wolfpack/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,8 +16,13 @@ USE_BUILDLINK2=	YES
 
 MAKE_ENV+=	CPP="${CXX}"
 
+# The FreeBSD makefile may be used as "generic UNIX".
+MAKEFILE=	Makefile.FreeBSD
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/manedit ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/utils/manview.sh ${PREFIX}/bin/manview
+	${INSTALL_SCRIPT} ${WRKSRC}/utils/manwrap.sh ${PREFIX}/bin/manwrap
 	${INSTALL_DATA_DIR} ${PREFIX}/share/manedit			\
 		${PREFIX}/share/manedit/templates			\
 		${PREFIX}/share/manedit/icons
