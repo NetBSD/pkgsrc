@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2002/01/06 09:36:45 kristerw Exp $
+# $NetBSD: Makefile,v 1.64 2002/01/06 22:09:31 kristerw Exp $
 #
 
 DISTNAME=		xmame-0.57.1
@@ -97,7 +97,7 @@ MAKE_FLAGS+=		X11_DGA=1
 MAKE_FLAGS+=		JOY_I386=1
 .endif
 .if ${OPSYS} == "NetBSD"
-.  if exists(/usr/lib/libusb.a)
+.  if exists(/usr/lib/libusb.a) || exists(/usr/lib/libusbhid.a)
 MAKE_FLAGS+=		JOY_USB=1
 .  endif
 .endif
