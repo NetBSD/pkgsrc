@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 15:10:45 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:24 agc Exp $
 
 DISTNAME=		large
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
@@ -23,7 +23,7 @@ NO_SRC_ON_FTP=		${REASON}
 
 CHESS_ENGINE=		crafty
 DIST_SUBDIR=		chessbooks
-NO_WRKSUBDIR=		# defined
+WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		# defined
 
 PLIST_SUBST+=		CHESS_ENGINE=${CHESS_ENGINE}

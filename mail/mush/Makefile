@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/06/04 22:05:19 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2001/09/09 20:36:34 agc Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -23,7 +23,7 @@ LICENSE=	mush-license
 
 DIST_SUBDIR=	mush
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 pre-configure:
 	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/config.h-dist > ${WRKSRC}/config.h

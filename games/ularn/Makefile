@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/27 15:27:30 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:28 agc Exp $
 
 DISTNAME=		ularn
 PKGNAME=		ularn-6.12.92
@@ -10,7 +10,7 @@ MAINTAINER=		collver@linuxfreemail.com
 HOMEPAGE=		http://www.win.tue.nl/games/roguelike/larn/
 COMMENT=		fantasy roguelike game based on vintage larn
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 HAS_CONFIGURE=          # defined
 CONFIGURE_ENV+=         PREFIX=${LOCALBASE}
 CONFIGURE_SCRIPT=       ./Configure

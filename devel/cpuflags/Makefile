@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/08/27 20:58:38 abs Exp $
+# $NetBSD: Makefile,v 1.10 2001/09/09 20:36:19 agc Exp $
 #
 
 DISTNAME=		cpuflags-0.9
@@ -12,7 +12,7 @@ COMMENT=		Determine compiler flags to best target current cpu
 ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-*
 
 EXTRACT_ONLY=	# empty
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
 NO_CONFIGURE=	yes

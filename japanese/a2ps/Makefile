@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 15:25:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/09 20:36:31 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1999/04/16 04:57:06 taoka Exp $
 
 DISTNAME=	a2ps.pl-1.44
@@ -14,7 +14,7 @@ COMMENT=	Text file to postscript converter (with Japanese support)
 USE_PERL5=	YES
 
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} .
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 
 do-install:

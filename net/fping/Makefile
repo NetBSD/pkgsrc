@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:18:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/09 20:36:38 agc Exp $
 # FreeBSD Id: ports/net/fping/Makefile,v 1.10 2000/04/20 20:18:57 mharo Exp
 
 DISTNAME=	part01
@@ -15,7 +15,7 @@ COMMENT=	Quickly ping many hosts w/o flooding the network
 
 DIST_SUBDIR=	fping
 EXTRACT_CMD=	zcat ${DOWNLOADED_DISTFILE} | ${SED} -e '1,/Archive-Name/d' | ${SH}
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 post-install:
 	${CHMOD} 4555 ${PREFIX}/sbin/fping

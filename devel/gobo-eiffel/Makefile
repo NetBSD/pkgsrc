@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/27 03:19:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/09 20:36:19 agc Exp $
 #
 
 DISTNAME=	gobo15
@@ -15,7 +15,7 @@ COMMENT=	portable Eiffel structure libraries and tools
 
 BUILD_DEPENDS+=	smalleiffel-0.77:../../lang/smalleiffel
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${LOCALBASE}/bin/unzip -uLa \
 			${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 

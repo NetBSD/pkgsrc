@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/08/20 02:28:26 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/09 20:36:17 agc Exp $
 # FreeBSD Id: ports/misc/rpm2cpio/Makefile,v 1.2 1999/08/25 07:22:29 obrien Exp
 
 DISTNAME=	rpm2cpio
@@ -17,7 +17,7 @@ USE_PERL5=	# defined
 REPLACE_PERL=	rpm2cpio
 
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} .
-NO_WRKSUBDIR=	# defined
+WRKSRC=		${WRKDIR}
 NO_BUILD=	# defined
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/13 20:34:08 nra Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:09 agc Exp $
 #
 
 DISTNAME=		bicom101
@@ -13,7 +13,7 @@ COMMENT=		data compressor in the PPM family
 
 LICENSE=		no-commercial-use
 USE_BUILDLINK_ONLY=	yes
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 
 do-build:
 	for i in bialib bicom; do \

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/15 02:56:38 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:52 agc Exp $
 #
 
 DISTNAME=	hiawatha
 PKGNAME=	hiawatha-0.1
-NO_WRKSUBDIR=
 CATEGORIES=	textproc www
 MASTER_SITES=	${HOMEPAGE} ${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.zip
@@ -19,6 +18,7 @@ DEPENDS+=	saxon-*:../../textproc/saxon
 NO_PATCH=
 NO_CONFIGURE=
 NO_BUILD=
+WRKSRC=		${WRKDIR}
 
 USE_JAVA=	yes
 DIST_SUBDIR=	${PKGNAME}

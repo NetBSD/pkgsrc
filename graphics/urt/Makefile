@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/02/26 16:56:35 agc Exp $
+# $NetBSD: Makefile,v 1.20 2001/09/09 20:36:30 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 
 DISTNAME=	urt
@@ -21,7 +21,7 @@ EXTRACT_ONLY=	urt-3.1b.tar.Z
 
 USE_LIBTOOL=	yes
 USE_X11=	yes
-NO_WRKSUBDIR=   yes
+WRKSRC=		${WRKDIR}
 CONFIGURE_SCRIPT=./Configure
 CONFIGURE_ARGS=	config/urt
 HAS_CONFIGURE=	yes

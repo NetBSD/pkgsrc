@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/07/06 19:26:18 tron Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/09 20:36:52 agc Exp $
 
 DISTNAME=	wmthemes-0.62nb1
 CATEGORIES=	x11 wm
@@ -16,7 +16,7 @@ DIST_SUBDIR=	wmthemes
 USE_X11BASE=	yes
 NO_BUILD=	yes
 NO_CHECKSUM=	yes
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 PLIST_SRC=	${WRKDIR}/PLIST
 THEME_SUBDIRS=	Backgrounds IconSets Icons Pixmaps Sounds Styles Themes

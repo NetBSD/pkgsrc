@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/15 18:26:11 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:44 agc Exp $
 
 DISTNAME=	foomatic-gswrapper
 PKGNAME=	${DISTNAME}-1.2
@@ -26,7 +26,7 @@ DIST_SUBDIR=	${PKGNAME}
 DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 
 USE_PERL5=	# defined
-NO_WRKSUBDIR=	# defined
+WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	# defined
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}/${DISTNAME}
 

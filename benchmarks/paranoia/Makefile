@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/04/09 11:45:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/09 20:36:15 agc Exp $
 
 DISTNAME=		paranoia
 PKGNAME=		paranoia-960101
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.c
 MAINTAINER=		root@garbled.net
 COMMENT=		Highly paranoid test of IEEE 754 conformancy
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 
 do-build:
