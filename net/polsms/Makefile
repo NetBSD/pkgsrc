@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2002/11/01 16:34:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/12/16 11:47:52 cjep Exp $
 #
 
-DISTNAME=	sms-1.8.9i
+DISTNAME=	sms-1.9.0
 PKGNAME=	pol${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.ceti.pl/~miki/komputery/download/sms/
 
