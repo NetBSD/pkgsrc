@@ -1,5 +1,5 @@
-# $NetBSD: Setup.in,v 1.2 1998/08/07 14:58:43 agc Exp $
+# $NetBSD: Setup.in,v 1.3 1998/10/19 21:47:59 tsarna Exp $
 #
 *shared*
-MySQL MySQLmodule.c -L@PREFIX@/lib -lmysqlclient \
+MySQL MySQLmodule.c -L@PREFIX@/lib/mysql -lmysqlclient \
 	-I@PREFIX@/include/mysql
