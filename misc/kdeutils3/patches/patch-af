@@ -1,0 +1,236 @@
+$NetBSD: patch-af,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
+
+--- kedit/Makefile.in.orig	Wed May  8 21:11:41 2002
++++ kedit/Makefile.in
+@@ -237,16 +237,20 @@
+ INCLUDES = $(all_includes)
+ 
+ bin_PROGRAMS = kedit
+-lib_LTLIBRARIES = kedit.la
++lib_LTLIBRARIES = libkedit_main.la kedit.la
+ 
+-kedit_la_SOURCES = kedit.cpp ktextfiledlg.cpp\
++libkedit_main_la_SOURCES = kedit.cpp ktextfiledlg.cpp\
+ 	mail.cpp  optiondialog.cpp 
+ 
+-kedit_la_LIBADD = -lkdeprint -lkspell $(LIB_KFILE) $(LIB_KIO)
++libkedit_main_la_LIBADD = -lkdeprint -lkspell $(LIB_KFILE) $(LIB_KIO)
++libkedit_main_la_LDFLAGS = $(all_libraries) -module -avoid-version
++
++kedit_la_SOURCES = kedit_main.cpp
++kedit_la_LIBADD = libkedit_main.la
+ kedit_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+-kedit_SOURCES = dummy.cpp
+-kedit_LDADD = kedit.la
++kedit_SOURCES = kedit_main.cpp
++kedit_LDADD = libkedit_main.la
+ kedit_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ noinst_HEADERS = kedit.h ktextfiledlg.h\
+@@ -270,23 +274,30 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-kedit_la_DEPENDENCIES =
+-am_kedit_la_OBJECTS = kedit.lo ktextfiledlg.lo mail.lo optiondialog.lo
++kedit_la_DEPENDENCIES = libkedit_main.la
++am_kedit_la_OBJECTS = kedit_main.lo
+ #>- kedit_la_OBJECTS = $(am_kedit_la_OBJECTS)
+-#>+ 5
+-kedit_la_final_OBJECTS = kedit_la.all_cpp.lo 
+-kedit_la_nofinal_OBJECTS = kedit.lo ktextfiledlg.lo mail.lo optiondialog.lo \
+-	kedit_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@kedit_la_OBJECTS = $(kedit_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@kedit_la_OBJECTS = $(kedit_la_final_OBJECTS)
++#>+ 1
++kedit_la_OBJECTS = kedit_main.lo
++libkedit_main_la_DEPENDENCIES =
++am_libkedit_main_la_OBJECTS = kedit.lo ktextfiledlg.lo mail.lo \
++	optiondialog.lo
++#>- libkedit_main_la_OBJECTS = $(am_libkedit_main_la_OBJECTS)
++#>+ 6
++libkedit_main_la_final_OBJECTS = libkedit_main_la.all_cpp.lo 
++libkedit_main_la_nofinal_OBJECTS = kedit.lo ktextfiledlg.lo mail.lo \
++	optiondialog.lo \
++	libkedit_main_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libkedit_main_la_OBJECTS = $(libkedit_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libkedit_main_la_OBJECTS = $(libkedit_main_la_final_OBJECTS)
+ bin_PROGRAMS = kedit$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_kedit_OBJECTS = dummy.$(OBJEXT)
++am_kedit_OBJECTS = kedit_main.$(OBJEXT)
+ #>- kedit_OBJECTS = $(am_kedit_OBJECTS)
+ #>+ 1
+-kedit_OBJECTS = dummy.$(OBJEXT)
+-kedit_DEPENDENCIES = kedit.la
++kedit_OBJECTS = kedit_main.$(OBJEXT)
++kedit_DEPENDENCIES = libkedit_main.la
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -294,9 +305,9 @@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/kedit.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/ktextfiledlg.Plo $(DEPDIR)/mail.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/optiondialog.Plo
++@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/kedit.Plo $(DEPDIR)/kedit_main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kedit_main.Po $(DEPDIR)/ktextfiledlg.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/mail.Plo $(DEPDIR)/optiondialog.Plo
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ #>- $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 2
+@@ -316,7 +327,8 @@
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CXXFLAGS = @CXXFLAGS@
+-DIST_SOURCES = $(kedit_la_SOURCES) $(kedit_SOURCES)
++DIST_SOURCES = $(kedit_la_SOURCES) $(libkedit_main_la_SOURCES) \
++	$(kedit_SOURCES)
+ DATA = $(apps_DATA) $(rc_DATA)
+ 
+ HEADERS = $(noinst_HEADERS)
+@@ -329,7 +341,7 @@
+ DIST_COMMON = README $(noinst_HEADERS) ChangeLog Makefile.am \
+ 	Makefile.in TODO
+ DIST_SUBDIRS = $(SUBDIRS)
+-SOURCES = $(kedit_la_SOURCES) $(kedit_SOURCES)
++SOURCES = $(kedit_la_SOURCES) $(libkedit_main_la_SOURCES) $(kedit_SOURCES)
+ 
+ #>- all: all-recursive
+ #>+ 1
+@@ -378,6 +390,8 @@
+ 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+ kedit.la: $(kedit_la_OBJECTS) $(kedit_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(kedit_la_LDFLAGS) $(kedit_la_OBJECTS) $(kedit_la_LIBADD) $(LIBS)
++libkedit_main.la: $(libkedit_main_la_OBJECTS) $(libkedit_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkedit_main_la_LDFLAGS) $(libkedit_main_la_OBJECTS) $(libkedit_main_la_LIBADD) $(LIBS)
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+@@ -412,8 +426,9 @@
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kedit.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kedit_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kedit_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/ktextfiledlg.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/mail.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/optiondialog.Plo@am__quote@
+@@ -569,7 +584,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=optionstate.h KEdit.desktop keditui.rc 
++KDE_DIST=KEdit.desktop kedit keditui.rc dummy.cpp optionstate.h 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -708,9 +723,6 @@
+ 
+ messages: rc.cpp
+ 	$(XGETTEXT) rc.cpp *.cpp -o $(podir)/kedit.pot
+-
+-dummy.cpp:
+-	echo > dummy.cpp
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -746,28 +758,28 @@
+ 
+ 
+ #>+ 12
+-kedit_la_meta_unload.cpp:  optiondialog.moc mail.moc kedit.moc ktextfiledlg.moc
+-	@echo 'creating kedit_la_meta_unload.cpp'
+-	@-rm -f kedit_la_meta_unload.cpp
++libkedit_main_la_meta_unload.cpp:  optiondialog.moc mail.moc kedit.moc ktextfiledlg.moc
++	@echo 'creating libkedit_main_la_meta_unload.cpp'
++	@-rm -f libkedit_main_la_meta_unload.cpp
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kedit_la[] = {' > kedit_la_meta_unload.cpp ;\
+-		cat  optiondialog.moc mail.moc kedit.moc ktextfiledlg.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kedit_la_meta_unload.cpp ;\
+-		echo '0};' >> kedit_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kedit_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kedit_la)' >> kedit_la_meta_unload.cpp ;\
+-	else echo > kedit_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkedit_main_la[] = {' > libkedit_main_la_meta_unload.cpp ;\
++		cat  optiondialog.moc mail.moc kedit.moc ktextfiledlg.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkedit_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkedit_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkedit_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkedit_main_la)' >> libkedit_main_la_meta_unload.cpp ;\
++	else echo > libkedit_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
+-	-rm -f  kedit_la_meta_unload.cpp
++	-rm -f  libkedit_main_la_meta_unload.cpp
+ 
+ #>+ 11
+-kedit_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kedit.cpp $(srcdir)/ktextfiledlg.cpp $(srcdir)/mail.cpp $(srcdir)/optiondialog.cpp kedit_la_meta_unload.cpp   optiondialog.moc mail.moc ktextfiledlg.moc kedit.moc 
++kedit_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kedit_main.cpp   optiondialog.moc mail.moc ktextfiledlg.moc kedit.moc 
+ 	@echo 'creating kedit_la.all_cpp.cpp ...'; \
+ 	rm -f kedit_la.all_cpp.files kedit_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kedit_la.all_cpp.final; \
+-	for file in kedit.cpp ktextfiledlg.cpp mail.cpp optiondialog.cpp kedit_la_meta_unload.cpp ; do \
++	for file in kedit_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kedit_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kedit_la.all_cpp.final; \
+ 	done; \
+@@ -775,11 +787,23 @@
+ 	rm -f kedit_la.all_cpp.final kedit_la.all_cpp.files
+ 
+ #>+ 11
+-kedit.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++libkedit_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kedit.cpp $(srcdir)/ktextfiledlg.cpp $(srcdir)/mail.cpp $(srcdir)/optiondialog.cpp $(srcdir)/libkedit_main_la_meta_unload.cpp  
++	@echo 'creating libkedit_main_la.all_cpp.cpp ...'; \
++	rm -f libkedit_main_la.all_cpp.files libkedit_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkedit_main_la.all_cpp.final; \
++	for file in kedit.cpp ktextfiledlg.cpp mail.cpp optiondialog.cpp libkedit_main_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libkedit_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkedit_main_la.all_cpp.final; \
++	done; \
++	cat libkedit_main_la.all_cpp.final libkedit_main_la.all_cpp.files  > libkedit_main_la.all_cpp.cpp; \
++	rm -f libkedit_main_la.all_cpp.final libkedit_main_la.all_cpp.files
++
++#>+ 11
++kedit.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kedit_main.cpp  
+ 	@echo 'creating kedit.all_cpp.cpp ...'; \
+ 	rm -f kedit.all_cpp.files kedit.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kedit.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in kedit_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kedit.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kedit.all_cpp.final; \
+ 	done; \
+@@ -788,20 +812,20 @@
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f kedit_la.all_cpp.cpp kedit.all_cpp.cpp
++	-rm -f kedit_la.all_cpp.cpp libkedit_main_la.all_cpp.cpp kedit.all_cpp.cpp
+ 
+ #>+ 2
+ final:
+-	$(MAKE) kedit_la_OBJECTS="$(kedit_la_final_OBJECTS)" all-am
++	$(MAKE) libkedit_main_la_OBJECTS="$(libkedit_main_la_final_OBJECTS)" all-am
+ #>+ 2
+ final-install:
+-	$(MAKE) kedit_la_OBJECTS="$(kedit_la_final_OBJECTS)" install-am
++	$(MAKE) libkedit_main_la_OBJECTS="$(libkedit_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
+-	$(MAKE) kedit_la_OBJECTS="$(kedit_la_nofinal_OBJECTS)" all-am
++	$(MAKE) libkedit_main_la_OBJECTS="$(libkedit_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kedit_la_OBJECTS="$(kedit_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkedit_main_la_OBJECTS="$(libkedit_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean
