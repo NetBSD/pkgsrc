@@ -1,0 +1,5 @@
+wmpload is a variation of pload, displaying ppp network device
+usage in a 64x64 pixel square.
+
+Wmpload was designed to be docked into the Window Maker dock but
+can be used with any window manager.

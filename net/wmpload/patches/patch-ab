@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/01/25 10:54:55 abs Exp $
+
+--- Imakefile	Sat Dec 18 01:35:12 1999
++++ Imakefile.orig	Tue Jan 25 10:46:39 2000
+@@ -4,23 +4,22 @@
+ XCOMM
+ 
+ include osdefs.mk
+-	DEPLIBS = $(DEPXLIB)
++        DEPLIBS = $(DEPXLIB)
+ LOCAL_LIBRARIES = $(XPMLIB) $(XLIB)
+ SYS_LIBRARIES   = MathLibrary
+         HEADERS = wmpload.h
+-            VER	= 0.9.4
++            VER = 0.9.4
+         DEFINES = -DVERSION="\"$(VER)\"" $(OSDEFS)
+ 
+-ComplexProgramTarget(wmpload)
++ComplexProgramTargetNoMan(wmpload)
+ 
+-distclean: clean	
++distclean: clean
+ 	$(RM) Makefile osdefs.mk core
+ 
+-tgz:	
++tgz:
+ 	rm -rf wmpload-$(VER)
+ 	mkdir wmpload-$(VER)
+ 	cp `echo * | sed s,wmpload-$(VER),,` wmpload-$(VER)
+ 	cd wmpload-$(VER) && make distclean
+ 	tar cvf - wmpload-$(VER) | gzip -9 > wmpload-$(VER).tar.gz
+ 	rm -rf wmpload-$(VER)
+-	
