@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/04/26 06:58:28 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/10 01:18:34 kristerw Exp $
 
 DISTNAME=	krb5-1.3.3
 PKGNAME=	mit-${DISTNAME}
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	security
 
 MAINTAINER=	jlam@NetBSD.org
@@ -10,6 +9,8 @@ HOMEPAGE=	http://web.mit.edu/kerberos/www/
 COMMENT=	MIT Kerberos 5 authentication system
 
 RESTRICTED=	"Redistribution is restricted by U.S. export regulations"
+
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 .include "../../mk/bsd.prefs.mk"
 
