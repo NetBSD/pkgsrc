@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3666 2003/10/08 12:21:47 abs Exp $
+$NetBSD: CHANGES,v 1.3667 2003/10/08 13:37:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4126,4 +4126,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated squirrelmail to 1.4.2 [martti 2003-10-08]
 	Updated cvsync to 0.24.8 [gehenna 2003-10-08]
 	Updated rconfig to 0.25 [abs 2003-10-08]
-
+	Updated rocksndiamonds to 3.0.6 [adam 2003-10-08]
+	Updated rocksndiamonds-sdl to 3.0.6 [adam 2003-10-08]
