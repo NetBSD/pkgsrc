@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/10/08 14:17:08 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2002/10/22 22:06:13 jlam Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -17,22 +17,37 @@ HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite
 
 NO_BUILDLINK2=		# arcane build procedure causes buildlink2 to not work
-PTHREAD_OPTS+=		require
+
+.include "../../mk/bsd.prefs.mk"
 
 # OpenOffice requires gcc 2.95.2 or better,
-# so for NetBSD<=1.5 we need the package lang/gcc.
 GCC_VERSION!=		${CC} --version
-.if ${GCC_VERSION}!="2.95.2" && ${GCC_VERSION}!="2.95.3"
-.include "../../lang/gcc/Makefile.gcc"
+.if (${GCC_VERSION} != "2.95.2") && (${GCC_VERSION} != "2.95.3")
+BUILD_DEPENDS+= gcc>=2.95.3:../../lang/gcc
+.  if ${OPSYS} == "SunOS"
+GCCPREFIX=		${LOCALBASE}
+CC=			${GCCPREFIX}/bin/gcc
+CXX=			${GCCPREFIX}/bin/g++
+.  else
+GCCPREFIX=		${LOCALBASE}/gcc-2.95.3
+CC=			${GCCPREFIX}/bin/cc
+CXX=			${GCCPREFIX}/bin/c++
+.  endif
+CPP=			${GCCPREFIX}/bin/cpp
+F77=			${GCCPREFIX}/bin/g77
+PKG_FC=			${GCCPREFIX}/bin/g77
+LDFLAGS+=		-R${GCCPREFIX}/lib
 .endif
+
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 BUILD_DEPENDS+=		gmake-[0-9]*:../../devel/gmake
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		stlport>=4.0nb1:../../devel/stlport
 
+USE_X11=		# defined
 USE_JAVA=		build
-PKG_JVM=		sun-jdk13
+PKG_JVMS_ACCEPTED=	sun-jdk13
 
 CONFLICTS=		staroffice-[0-9]*
 
@@ -40,7 +55,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5.3*-i386 NetBSD-1.5Z?-i386 \
 			NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+= 	--with-stlport4-home=${PREFIX}
+CONFIGURE_ARGS+= 	--with-stlport4-home=${LOCALBASE}
 CONFIGURE_ARGS+= 	--with-jdk-home=${PKG_JAVA_HOME}
 
 TEMP?=			${WRKSRC}
@@ -55,19 +70,17 @@ post-extract:
 	${PERL5} -p -i.save -e 's/\r\n/\n/' 				\
 	    ${WRKSRC}/../sablot/Sablot-0.52.patch
 
-.include "../../mk/bsd.prefs.mk"
-
 DISPLAY?=	#empty, if unset
 checkforx:
 .if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && echo YES || echo NO!} == "NO"
-.if exists(${X11BASE}/bin/Xvfb)
+.  if exists(${X11BASE}/bin/Xvfb)
 	-${X11BASE}/bin/Xvfb :2 &
 DISPLAY= ':2'
-.else
+.  else
 	@${ECHO} "Error: Environment variable DISPLAY must be set"
 	@${ECHO} "       and point to a connectible X server."
 	@${FALSE}
-.endif  #Xvfb
+.  endif  #Xvfb
 .endif  #DISPLAY
 
 pre-build: checkforx
@@ -94,6 +107,7 @@ do-install:
 	    <${FILESDIR}/soffice >${PREFIX}/bin/soffice
 	${CHMOD} +x ${PREFIX}/bin/soffice
 	
+.include "../../devel/pth/buildlink.mk"
 .include "../../lang/perl5/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
+.include "../../mk/java.mk"
 .include "../../mk/bsd.pkg.mk"
