@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 1999/05/12 08:09:17 frueauf Exp $
+# $NetBSD: Makefile,v 1.33 1999/05/13 00:04:22 hubertf Exp $
 #
 
     SUBDIR += amp
@@ -30,6 +30,7 @@
     SUBDIR += festvox-rab16
     SUBDIR += festvox-rab8
     SUBDIR += festvox-tll
+    SUBDIR += gqmpeg
     SUBDIR += gsm
     SUBDIR += libaudiofile
     SUBDIR += maplay
