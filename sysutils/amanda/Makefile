@@ -1,9 +1,10 @@
+# $NetBSD: Makefile,v 1.2 1997/10/13 14:01:45 agc Exp $
 # New ports collection makefile for:	amanda
 # Version required:			2.3.0
 # Date created:				28th Feb 1995
 # Whom:					gpalmer
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:53:59 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.1.1.1 1997/10/11 21:53:59 hubertf Exp
 #
 
 DISTNAME=	amanda-2.3.0
