@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4740 2004/02/09 01:29:25 kim Exp $
+$NetBSD: CHANGES,v 1.4741 2004/02/09 03:57:18 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -716,3 +716,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kde3 to 3.2.0nb2 [chris 2004-02-09]
 	Updated bogofilter to 0.16.4 [snj 2004-02-09]
 	Updated roller to 1.15 [kim 2004-02-09]
+	Updated audit-packages to 1.29 [jlam 2004-02-09]
