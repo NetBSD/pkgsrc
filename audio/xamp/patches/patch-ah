@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 1999/11/15 13:07:12 rh Exp $
+
+--- configure.in.orig	Sun Oct  5 18:42:34 1997
++++ configure.in	Mon Nov 15 13:58:45 1999
+@@ -57,7 +57,7 @@
+     CFLAGS="-O3 -ffast-math -funroll-loops"
+     ;;
+ 
+-  Linux|FreeBSD)
++  Linux|FreeBSD|NetBSD)
+     CC="gcc"
+     if test "$ARCH_TYPE" = "i486" ; then
+       CFLAGS_ARCH="-m486"
