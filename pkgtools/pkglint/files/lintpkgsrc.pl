@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.15 2000/01/03 15:21:45 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.16 2000/01/10 02:01:22 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -21,6 +21,7 @@ my(	$pkgsrcdir,		# Base of pkgsrc tree
 	%pkgver2dir,		# Map package-version to category/pkgname
 	%pkg2ver,		# Map pkgname to version
 	%pkgrestricted,		# RESTRICTED packages, by pkgname
+	%default_makefile_vars,	# Default vars set for Makefiles
 	%opt,			# Command line options
 	@old_prebuiltpackages,	# List of obsolete prebuilt package paths
 	@restricted_prebuiltpackages);	# Ditto, but for RESTRICTED packages
@@ -33,6 +34,8 @@ if (! &getopts('DK:P:Rdhilmopr', \%opt) || $opt{'h'} ||
 	    defined($opt{'r'}) || defined($opt{'D'}) || defined($opt{'R'}) ))
     { &usage_and_exit; }
 $| = 1;
+
+%default_makefile_vars = &get_default_makefile_vars;
 
 if ($opt{'D'})
     {
@@ -163,6 +166,20 @@ sub dewey_cmp
 
 sub fail
     { print STDERR @_, "\n"; exit(3); }
+
+sub get_default_makefile_vars
+    {
+    my(%vars);
+
+    chomp($_ = `uname -srmp`);
+    ( $vars{'OPSYS'},
+	$vars{'OS_VERSION'},
+	$vars{'MACHINE_ARCH'},
+	$vars{'MACHINE'} ) = (split);
+    $vars{'EXTRACT_SUFX'} = 'tar.gz';
+    $vars{'OBJECT_FMT'} = '';
+    %vars;
+    }
 
 # Determine if a package version is current. If not, report correct version
 # if found
@@ -311,58 +328,74 @@ sub package_globmatch
 sub parse_makefile
     {
     my($file) = @_;
-    my($pkgname, %vars);
-    my($key, $plus, $value, @data, $if_nest, $if_false);
+    my($pkgname, %vars, $key, $plus, $value, @data,
+       @if_false); # 0:true 1:false 2:nested-false&nomore-elsif
 
     if (! open(FILE, $file))
 	{ return(undef); }
-    @data = <FILE>;
+    @data = map {chomp; $_} <FILE>;
     close(FILE);
 
     # Some Makefiles depend on these being set
-    $vars{'EXTRACT_SUFX'} = 'tar.gz';
-    $vars{'OBJECT_FMT'} = '';
+    %vars = %default_makefile_vars;
     if ($file =~ m#(.*)/#)
 	{ $vars{'.CURDIR'} = $1; }
+    debug("read: $file\n");
 
-    while( $_ = shift(@data) )
+    while( defined($_ = shift(@data)) )
 	{
 	s/#.*//;
 
 	# Continuation lines
 	#
-	while ( substr($_,-2) eq "\\\n" )
+	while ( substr($_,-1) eq "\\" )
 	    { substr($_,-2) = shift @data; }
 
 	# Conditionals
 	#
-	if (m#^\.endif\b#)
+	if (m#^\.if(|def|ndef)\s+(.*)#)
 	    {
-	    --$if_nest;
-	    if ($if_false)
-		{ --$if_false; }
-	    }
-	elsif (m#^\.if\s+(.*)#)
-	    {
-	    ++$if_nest;
-	    if ($if_false)
-		{ ++$if_false; }
+	    my($type, $false);
+
+	    $type = $1;
+	    if ($if_false[$#if_false])
+		{ push(@if_false, 2); }
+	    elsif( $type eq '')	# Straight if
+		{ push(@if_false, &parse_eval_make_false($2, \%vars)); }
 	    else
 		{
-		my($test);
-
-		$test = parse_expand_vars($1, \%vars);
-		# XX This is _so_ wrong - need to parse this correctly
-		$test =~ s/"//g;
-
-		if ( $test =~ /^defined\((\S+)\)$/ && !defined($vars{$1}) )
-		    { ++$if_false; }
-		elsif ( $test =~ /^(\S+)\s+==\s+(\S+)$/ && $1 ne $2 )
-		    { ++$if_false; }
+		$false = ! defined($vars{parse_expand_vars($2, \%vars)});
+		if ( $type eq 'ndef' )
+		    { $false = ! $false ; }
+		push(@if_false, $false ?1 :0);
 		}
+	    debug("$file: .if$type (@if_false)\n");
+	    next;
+	    }
+	if (m#^\.elif\s+(.*)# && @if_false)
+	    {
+	    if ($if_false[$#if_false] == 0)
+		{ $if_false[$#if_false] = 2; }
+	    elsif ($if_false[$#if_false] == 1 &&
+		    ! &parse_eval_make_false($1, \%vars) )
+		{ $if_false[$#if_false] = 0; }
+	    debug("$file: .elif (@if_false)\n");
+	    next;
+	    }
+	if (m#^\.else\b# && @if_false)
+	    {
+	    $if_false[$#if_false] = $if_false[$#if_false]?0:1;
+	    debug("$file: .else (@if_false)\n");
+	    next;
+	    }
+	if (m#^\.endif\b#)
+	    {
+	    pop(@if_false);
+	    debug("$file: .endif (@if_false)\n");
+	    next;
 	    }
 
-	$if_false && next;
+        $if_false[$#if_false] && next;
 
 	# Included files (just unshift onto @data)
 	#
@@ -386,14 +419,14 @@ sub parse_makefile
 		    { &verbose("Cannot open '$newfile' (from $file): $!\n"); }
 		else
 		    {
-		    unshift(@data, <FILE>);
+		    unshift(@data, map {chomp; $_} <FILE>);
 		    close(FILE);
 		    }
 		}
 	    next;
 	    }
 
-	if (/^\s*(\w+)([+?]?)=\s*(\S.*)/)
+	if (/^ *(\w+)([+?]?)=\s*(\S.*)/)
 	    {
 	    $key = $1;
 	    $plus = $2;
@@ -404,6 +437,7 @@ sub parse_makefile
 		{ $vars{$key} = $value; }
 	    } 
 	}
+    debug("simple-expand: $file\n");
 
     # Handle simple variable substitutions FRED = a-${FRED}-b
     # Must be before next block to handle FRED = a-${JIM:S/-/-${SHELIA}-/}
@@ -424,6 +458,8 @@ sub parse_makefile
 		}
 	    }
 	}
+
+    debug("complex-expand: $file\n");
 
     # Handle more complex variable substitutions FRED = a-${JIM:S/-/-b-/}
     #
@@ -485,6 +521,23 @@ sub parse_expand_vars
     $line;
     }
 
+sub parse_eval_make_false
+    {
+    my($line, $vars) = @_;
+    my($false, $test);
+
+    $false = 0;
+    $test = parse_expand_vars($1, $vars);
+    # XX This is _so_ wrong - need to parse this correctly
+    $test =~ s/"//g;
+
+    if ( $test =~ /^defined\((\S+)\)$/ && !defined($${vars}{$1}) )
+	{ $false = 1; }
+    elsif ( $test =~ /^(\S+)\s+==\s+(\S+)$/ && $1 ne $2 )
+	{ $false = 1; }
+    $false;
+    }
+
 # Run pkglint on every pkgsrc entry
 #
 sub pkglint_all_pkgsrc
@@ -537,33 +590,28 @@ sub safe_chdir
 sub scan_pkgsrc_makefiles
     {
     my($pkgsrcdir, $check_depends) = @_;
-    my($cat, @categories, $pkg, $pkgname);
+    my($cat, @categories, $pkgdir, $pkgname);
     my(%depends);
 
     @categories = &list_pkgsrc_categories($pkgsrcdir);
     &verbose("Scanning pkgsrc Makefiles: ".'_'x@categories."\b"x@categories);
 
-    # @categories = qw( cross mail );
-    # @categories = qw( archivers audio benchmarks biology cad comms converters
-    # corba databases devel graphics lang mail ); # XXX
-    # corba cross databases devel graphics lang mail ); # XXX
-
     foreach $cat ( sort @categories )
 	{
 	if (! opendir(CAT, "$pkgsrcdir/$cat"))
 	    { die("Unable to opendir($pkgsrcdir/$cat): $!"); }
-	foreach $pkg ( grep(substr($_, 0, 1) ne '.', readdir(CAT) ) )
+	foreach $pkgdir ( grep(substr($_, 0, 1) ne '.', readdir(CAT) ) )
 	    {
 	    my(%vars);
 	    ($pkgname, %vars) =
-			    &parse_makefile("$pkgsrcdir/$cat/$pkg/Makefile");
+			    &parse_makefile("$pkgsrcdir/$cat/$pkgdir/Makefile");
 	    if ($pkgname)
 		{
 		if ($pkgname !~ /(.*)-(\d.*)/)
-		    { print "Cannot extract $pkgname version ($cat/$pkg)\n"; }
-		else
+		    { print "Cannot extract $pkgname version ($cat/$pkgdir)\n"; }
+		elsif (!defined($pkg2ver{$1}) || $pkgdir !~ /-current/)
 		    { $pkg2ver{$1} = $2; }
-		$pkgver2dir{$pkgname} = "$cat/$pkg";
+		$pkgver2dir{$pkgname} = "$cat/$pkgdir";
 		if (defined($vars{'DEPENDS'}))
 		    { $depends{$pkgname} = $vars{'DEPENDS'}; }
 		}
@@ -579,16 +627,16 @@ sub scan_pkgsrc_makefiles
 
     if ($check_depends)
 	{
-	foreach $pkg ( sort keys %depends )
+	foreach $pkgname ( sort keys %depends )
 	    {
 	    my($err, $msg);
-	    foreach (split("\n", $depends{$pkg}))
+	    foreach (split("\n", $depends{$pkgname}))
 		{
 		s/:.*// || next;
 		if (($msg = &invalid_version($_)) )
 		    {
 		    if (!defined($err))
-			{ print "$pkgver2dir{$pkg} DEPENDS errors:\n"; }
+			{ print "$pkgver2dir{$pkgname} DEPENDS errors:\n"; }
 		    $err = 1;
 		    print "\t$msg";
 		    }
@@ -723,3 +771,8 @@ If pkgsrc is not in /usr/pkgsrc, set PKGSRCDIR in /etc/mk.conf
 
 sub verbose
     { print STDERR @_; }
+
+sub debug
+    {
+    ($opt{'D'}) && print STDERR 'DEBUG: ', @_;
+    }
