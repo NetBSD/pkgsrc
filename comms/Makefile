@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/12/03 15:13:48 frueauf Exp $
+# $NetBSD: Makefile,v 1.15 1998/12/03 23:21:00 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/10/13 04:41:06 max Exp
 #
 
@@ -20,7 +20,7 @@
 #    SUBDIR += snooper
 #    SUBDIR += tkhylafax
 #    SUBDIR += xcept
-     SUBDIR += xisp
+    SUBDIR += xisp
 #    SUBDIR += zmtx-zmrx
 
 .include "../mk/bsd.pkg.subdir.mk"
