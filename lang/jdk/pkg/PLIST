@@ -1,740 +1,739 @@
-@comment $NetBSD: PLIST,v 1.3 1999/02/05 16:33:34 frueauf Exp $
-java/CHANGES
-java/COPYRIGHT
-java/LICENSE
-java/README
-java/README.NetBSD
-java/bin/.java_wrapper
-java/bin/appletviewer
-java/bin/i386/green_threads/.extract_args
-java/bin/i386/green_threads/appletviewer
-java/bin/i386/green_threads/jar
-java/bin/i386/green_threads/java
-java/bin/i386/green_threads/java_g
-java/bin/i386/green_threads/javac
-java/bin/i386/green_threads/javac_g
-java/bin/i386/green_threads/javadoc
-java/bin/i386/green_threads/javah
-java/bin/i386/green_threads/javah_g
-java/bin/i386/green_threads/javakey
-java/bin/i386/green_threads/javap
-java/bin/i386/green_threads/javaverify
-java/bin/i386/green_threads/javaverify_g
-java/bin/i386/green_threads/jdb
-java/bin/i386/green_threads/jre
-java/bin/i386/green_threads/jre_g
-java/bin/i386/green_threads/native2ascii
-java/bin/i386/green_threads/rmic
-java/bin/i386/green_threads/rmiregistry
-java/bin/i386/green_threads/serialver
-java/bin/jar
-java/bin/java
-java/bin/java-rmi.cgi
-java/bin/java_g
-java/bin/javac
-java/bin/javac_g
-java/bin/javadoc
-java/bin/javah
-java/bin/javah_g
-java/bin/javakey
-java/bin/javap
-java/bin/javaverify
-java/bin/javaverify_g
-java/bin/jdb
-java/bin/jre
-java/bin/jre_g
-java/bin/native2ascii
-java/bin/rmic
-java/bin/rmiregistry
-java/bin/serialver
-java/demo/Animator/1.0.2/Animator.class
-java/demo/Animator/1.0.2/Animator.java
-java/demo/Animator/1.0.2/DescriptionFrame.class
-java/demo/Animator/1.0.2/ParseException.class
-java/demo/Animator/1.0.2/audio/0.au
-java/demo/Animator/1.0.2/audio/1.au
-java/demo/Animator/1.0.2/audio/2.au
-java/demo/Animator/1.0.2/audio/3.au
-java/demo/Animator/1.0.2/audio/4.au
-java/demo/Animator/1.0.2/audio/5.au
-java/demo/Animator/1.0.2/audio/6.au
-java/demo/Animator/1.0.2/audio/7.au
-java/demo/Animator/1.0.2/audio/8.au
-java/demo/Animator/1.0.2/audio/9.au
-java/demo/Animator/1.0.2/audio/spacemusic.au
-java/demo/Animator/1.0.2/images/Beans/T1.gif
-java/demo/Animator/1.0.2/images/Beans/T10.gif
-java/demo/Animator/1.0.2/images/Beans/T2.gif
-java/demo/Animator/1.0.2/images/Beans/T3.gif
-java/demo/Animator/1.0.2/images/Beans/T4.gif
-java/demo/Animator/1.0.2/images/Beans/T5.gif
-java/demo/Animator/1.0.2/images/Beans/T6.gif
-java/demo/Animator/1.0.2/images/Beans/T7.gif
-java/demo/Animator/1.0.2/images/Beans/T8.gif
-java/demo/Animator/1.0.2/images/Beans/T9.gif
-java/demo/Animator/1.0.2/images/SimpleAnimation/T1.gif
-java/demo/Animator/1.0.2/images/SimpleAnimation/T2.gif
-java/demo/Animator/1.0.2/images/loading-msg.gif
-java/demo/Animator/1.1/Animator.class
-java/demo/Animator/1.1/Animator.java
-java/demo/Animator/1.1/DescriptionFrame.class
-java/demo/Animator/1.1/ParseException.class
-java/demo/Animator/1.1/audio/0.au
-java/demo/Animator/1.1/audio/1.au
-java/demo/Animator/1.1/audio/2.au
-java/demo/Animator/1.1/audio/3.au
-java/demo/Animator/1.1/audio/4.au
-java/demo/Animator/1.1/audio/5.au
-java/demo/Animator/1.1/audio/6.au
-java/demo/Animator/1.1/audio/7.au
-java/demo/Animator/1.1/audio/8.au
-java/demo/Animator/1.1/audio/9.au
-java/demo/Animator/1.1/audio/spacemusic.au
-java/demo/Animator/1.1/example1.html
-java/demo/Animator/1.1/example2.html
-java/demo/Animator/1.1/example3.html
-java/demo/Animator/1.1/example4.html
-java/demo/Animator/1.1/images/Beans/T1.gif
-java/demo/Animator/1.1/images/Beans/T10.gif
-java/demo/Animator/1.1/images/Beans/T2.gif
-java/demo/Animator/1.1/images/Beans/T3.gif
-java/demo/Animator/1.1/images/Beans/T4.gif
-java/demo/Animator/1.1/images/Beans/T5.gif
-java/demo/Animator/1.1/images/Beans/T6.gif
-java/demo/Animator/1.1/images/Beans/T7.gif
-java/demo/Animator/1.1/images/Beans/T8.gif
-java/demo/Animator/1.1/images/Beans/T9.gif
-java/demo/Animator/1.1/images/SimpleAnimation/T1.gif
-java/demo/Animator/1.1/images/SimpleAnimation/T2.gif
-java/demo/Animator/1.1/images/loading-msg.gif
-java/demo/Animator/example1.html
-java/demo/Animator/example2.html
-java/demo/Animator/example3.html
-java/demo/Animator/example4.html
-java/demo/Animator/index.html
-java/demo/ArcTest/1.0.2/ArcCanvas.class
-java/demo/ArcTest/1.0.2/ArcControls.class
-java/demo/ArcTest/1.0.2/ArcTest.class
-java/demo/ArcTest/1.0.2/ArcTest.java
-java/demo/ArcTest/1.1/ArcCanvas.class
-java/demo/ArcTest/1.1/ArcControls.class
-java/demo/ArcTest/1.1/ArcTest.class
-java/demo/ArcTest/1.1/ArcTest.java
-java/demo/ArcTest/1.1/example1.html
-java/demo/ArcTest/example1.html
-java/demo/BarChart/1.0.2/Chart.class
-java/demo/BarChart/1.0.2/Chart.java
-java/demo/BarChart/1.1/Chart.class
-java/demo/BarChart/1.1/Chart.java
-java/demo/BarChart/1.1/example1.html
-java/demo/BarChart/example1.html
-java/demo/Blink/1.0.2/Blink.class
-java/demo/Blink/1.0.2/Blink.java
-java/demo/Blink/1.1/Blink.class
-java/demo/Blink/1.1/Blink.java
-java/demo/Blink/1.1/example1.html
-java/demo/Blink/example1.html
-java/demo/CardTest/1.0.2/CardPanel.class
-java/demo/CardTest/1.0.2/CardTest.class
-java/demo/CardTest/1.0.2/CardTest.java
-java/demo/CardTest/1.1/CardPanel.class
-java/demo/CardTest/1.1/CardTest.class
-java/demo/CardTest/1.1/CardTest.java
-java/demo/CardTest/1.1/example1.html
-java/demo/CardTest/example1.html
-java/demo/Clock/1.0.2/Clock2.class
-java/demo/Clock/1.0.2/Clock2.java
-java/demo/Clock/Clock2.class
-java/demo/Clock/Clock2.java
-java/demo/Clock/index.html
-java/demo/DitherTest/1.0.2/DitherCanvas.class
-java/demo/DitherTest/1.0.2/DitherControls.class
-java/demo/DitherTest/1.0.2/DitherTest.class
-java/demo/DitherTest/1.0.2/DitherTest.java
-java/demo/DitherTest/1.1/DitherCanvas.class
-java/demo/DitherTest/1.1/DitherControls.class
-java/demo/DitherTest/1.1/DitherTest.class
-java/demo/DitherTest/1.1/DitherTest.java
-java/demo/DitherTest/1.1/example1.html
-java/demo/DitherTest/example1.html
-java/demo/DrawTest/1.0.2/DrawControls.class
-java/demo/DrawTest/1.0.2/DrawPanel.class
-java/demo/DrawTest/1.0.2/DrawTest.class
-java/demo/DrawTest/1.0.2/DrawTest.java
-java/demo/DrawTest/1.1/DrawControls.class
-java/demo/DrawTest/1.1/DrawPanel.class
-java/demo/DrawTest/1.1/DrawTest.class
-java/demo/DrawTest/1.1/DrawTest.java
-java/demo/DrawTest/1.1/example1.html
-java/demo/DrawTest/example1.html
-java/demo/Fractal/1.0.2/CLSFractal.class
-java/demo/Fractal/1.0.2/CLSFractal.java
-java/demo/Fractal/1.0.2/CLSRule.class
-java/demo/Fractal/1.0.2/CLSTurtle.class
-java/demo/Fractal/1.0.2/ContextLSystem.class
-java/demo/Fractal/1.1/CLSFractal.class
-java/demo/Fractal/1.1/CLSFractal.java
-java/demo/Fractal/1.1/CLSRule.class
-java/demo/Fractal/1.1/CLSTurtle.class
-java/demo/Fractal/1.1/ContextLSystem.class
-java/demo/Fractal/1.1/example1.html
-java/demo/Fractal/example1.html
-java/demo/GraphLayout/Edge.class
-java/demo/GraphLayout/Graph.class
-java/demo/GraphLayout/Graph.java
-java/demo/GraphLayout/GraphPanel.class
-java/demo/GraphLayout/Node.class
-java/demo/GraphLayout/audio/computer.au
-java/demo/GraphLayout/audio/drip.au
-java/demo/GraphLayout/audio/gong.au
-java/demo/GraphLayout/example1.html
-java/demo/GraphLayout/example2.html
-java/demo/GraphLayout/example3.html
-java/demo/GraphLayout/example4.html
-java/demo/GraphicsTest/AppletFrame.class
-java/demo/GraphicsTest/AppletFrame.java
-java/demo/GraphicsTest/ArcCard.class
-java/demo/GraphicsTest/ArcDegreePanel.class
-java/demo/GraphicsTest/ArcPanel.class
-java/demo/GraphicsTest/ColorUtils.class
-java/demo/GraphicsTest/GraphicsCards.class
-java/demo/GraphicsTest/GraphicsFrame.class
-java/demo/GraphicsTest/GraphicsTest.class
-java/demo/GraphicsTest/GraphicsTest.java
-java/demo/GraphicsTest/OvalShape.class
-java/demo/GraphicsTest/PolygonShape.class
-java/demo/GraphicsTest/RectShape.class
-java/demo/GraphicsTest/RoundRectShape.class
-java/demo/GraphicsTest/Shape.class
-java/demo/GraphicsTest/ShapeTest.class
-java/demo/GraphicsTest/example1.html
-java/demo/ImageMap/AniArea.class
-java/demo/ImageMap/AniArea.java
-java/demo/ImageMap/ButtonFilter.class
-java/demo/ImageMap/ButtonFilter.java
-java/demo/ImageMap/ClickArea.class
-java/demo/ImageMap/ClickArea.java
-java/demo/ImageMap/DelayedSoundArea.class
-java/demo/ImageMap/DelayedSoundArea.java
-java/demo/ImageMap/HighlightArea.class
-java/demo/ImageMap/HighlightArea.java
-java/demo/ImageMap/HighlightFilter.class
-java/demo/ImageMap/HighlightFilter.java
-java/demo/ImageMap/HrefButtonArea.class
-java/demo/ImageMap/HrefButtonArea.java
-java/demo/ImageMap/ImageMap.class
-java/demo/ImageMap/ImageMap.java
-java/demo/ImageMap/ImageMapArea.class
-java/demo/ImageMap/ImageMapArea.java
-java/demo/ImageMap/LinkArea.class
-java/demo/ImageMap/LinkArea.java
-java/demo/ImageMap/NameArea.class
-java/demo/ImageMap/NameArea.java
-java/demo/ImageMap/RoundButtonFilter.class
-java/demo/ImageMap/RoundButtonFilter.java
-java/demo/ImageMap/RoundHrefButtonArea.class
-java/demo/ImageMap/RoundHrefButtonArea.java
-java/demo/ImageMap/SoundArea.class
-java/demo/ImageMap/SoundArea.java
-java/demo/ImageMap/TickerArea.class
-java/demo/ImageMap/TickerArea.java
-java/demo/ImageMap/audio/chirp1.au
-java/demo/ImageMap/audio/hi.au
-java/demo/ImageMap/example1.html
-java/demo/ImageMap/imagemapcheat.html
-java/demo/ImageMap/images/jim.graham.gif
-java/demo/ImageMap/sources.html
-java/demo/JumpingBox/1.0.2/MouseTrack.class
-java/demo/JumpingBox/1.0.2/MouseTrack.java
-java/demo/JumpingBox/1.0.2/sounds/adapt-or-die.au
-java/demo/JumpingBox/1.0.2/sounds/cannot.be.completed.au
-java/demo/JumpingBox/1.0.2/sounds/ip.au
-java/demo/JumpingBox/1.0.2/sounds/that.hurts.au
-java/demo/JumpingBox/1.0.2/sounds/thin.bell.au
-java/demo/JumpingBox/1.0.2/sounds/tiptoe.thru.the.tulips.au
-java/demo/JumpingBox/1.1/MouseTrack.class
-java/demo/JumpingBox/1.1/MouseTrack.java
-java/demo/JumpingBox/1.1/example1.html
-java/demo/JumpingBox/1.1/sounds/adapt-or-die.au
-java/demo/JumpingBox/1.1/sounds/cannot.be.completed.au
-java/demo/JumpingBox/1.1/sounds/ip.au
-java/demo/JumpingBox/1.1/sounds/that.hurts.au
-java/demo/JumpingBox/1.1/sounds/thin.bell.au
-java/demo/JumpingBox/1.1/sounds/tiptoe.thru.the.tulips.au
-java/demo/JumpingBox/example1.html
-java/demo/MoleculeViewer/Atom.class
-java/demo/MoleculeViewer/Matrix3D.class
-java/demo/MoleculeViewer/Matrix3D.java
-java/demo/MoleculeViewer/XYZApp.class
-java/demo/MoleculeViewer/XYZApp.java
-java/demo/MoleculeViewer/XYZChemModel.class
-java/demo/MoleculeViewer/example1.html
-java/demo/MoleculeViewer/example2.html
-java/demo/MoleculeViewer/example3.html
-java/demo/MoleculeViewer/models/HyaluronicAcid.xyz
-java/demo/MoleculeViewer/models/benzene.xyz
-java/demo/MoleculeViewer/models/buckminsterfullerine.xyz
-java/demo/MoleculeViewer/models/cyclohexane.xyz
-java/demo/MoleculeViewer/models/ethane.xyz
-java/demo/MoleculeViewer/models/water.xyz
-java/demo/NervousText/1.0.2/NervousText.class
-java/demo/NervousText/1.0.2/NervousText.java
-java/demo/NervousText/1.1/NervousText.class
-java/demo/NervousText/1.1/NervousText.java
-java/demo/NervousText/1.1/example1.html
-java/demo/NervousText/example1.html
-java/demo/SimpleGraph/1.0.2/GraphApplet.class
-java/demo/SimpleGraph/1.0.2/GraphApplet.java
-java/demo/SimpleGraph/1.1/GraphApplet.class
-java/demo/SimpleGraph/1.1/GraphApplet.java
-java/demo/SimpleGraph/1.1/example1.html
-java/demo/SimpleGraph/example1.html
-java/demo/SortDemo/1.0.2/BidirBubbleSortAlgorithm.class
-java/demo/SortDemo/1.0.2/BidirBubbleSortAlgorithm.java
-java/demo/SortDemo/1.0.2/BubbleSortAlgorithm.class
-java/demo/SortDemo/1.0.2/BubbleSortAlgorithm.java
-java/demo/SortDemo/1.0.2/QSortAlgorithm.class
-java/demo/SortDemo/1.0.2/QSortAlgorithm.java
-java/demo/SortDemo/1.0.2/SortAlgorithm.class
-java/demo/SortDemo/1.0.2/SortAlgorithm.java
-java/demo/SortDemo/1.0.2/SortItem.class
-java/demo/SortDemo/1.0.2/SortItem.java
-java/demo/SortDemo/1.1/BidirBubbleSortAlgorithm.class
-java/demo/SortDemo/1.1/BidirBubbleSortAlgorithm.java
-java/demo/SortDemo/1.1/BubbleSortAlgorithm.class
-java/demo/SortDemo/1.1/BubbleSortAlgorithm.java
-java/demo/SortDemo/1.1/QSortAlgorithm.class
-java/demo/SortDemo/1.1/QSortAlgorithm.java
-java/demo/SortDemo/1.1/SortAlgorithm.class
-java/demo/SortDemo/1.1/SortAlgorithm.java
-java/demo/SortDemo/1.1/SortItem$ClockStarter.class
-java/demo/SortDemo/1.1/SortItem.class
-java/demo/SortDemo/1.1/SortItem.java
-java/demo/SortDemo/1.1/example1.html
-java/demo/SortDemo/example1.html
-java/demo/SpreadSheet/Cell.class
-java/demo/SpreadSheet/CellUpdater.class
-java/demo/SpreadSheet/InputField.class
-java/demo/SpreadSheet/Node.class
-java/demo/SpreadSheet/SpreadSheet.class
-java/demo/SpreadSheet/SpreadSheet.java
-java/demo/SpreadSheet/SpreadSheetInput.class
-java/demo/SpreadSheet/example1.html
-java/demo/TicTacToe/1.0.2/TicTacToe.class
-java/demo/TicTacToe/1.0.2/TicTacToe.java
-java/demo/TicTacToe/1.0.2/audio/beep.au
-java/demo/TicTacToe/1.0.2/audio/ding.au
-java/demo/TicTacToe/1.0.2/audio/joy.au
-java/demo/TicTacToe/1.0.2/audio/return.au
-java/demo/TicTacToe/1.0.2/audio/yahoo1.au
-java/demo/TicTacToe/1.0.2/audio/yahoo2.au
-java/demo/TicTacToe/1.0.2/images/cross.gif
-java/demo/TicTacToe/1.0.2/images/not.gif
-java/demo/TicTacToe/1.1/TicTacToe.class
-java/demo/TicTacToe/1.1/TicTacToe.java
-java/demo/TicTacToe/1.1/audio/beep.au
-java/demo/TicTacToe/1.1/audio/ding.au
-java/demo/TicTacToe/1.1/audio/joy.au
-java/demo/TicTacToe/1.1/audio/return.au
-java/demo/TicTacToe/1.1/audio/yahoo1.au
-java/demo/TicTacToe/1.1/audio/yahoo2.au
-java/demo/TicTacToe/1.1/example1.html
-java/demo/TicTacToe/1.1/images/cross.gif
-java/demo/TicTacToe/1.1/images/not.gif
-java/demo/TicTacToe/example1.html
-java/demo/WireFrame/FileFormatException.class
-java/demo/WireFrame/Matrix3D.class
-java/demo/WireFrame/Matrix3D.java
-java/demo/WireFrame/Model3D.class
-java/demo/WireFrame/ThreeD.class
-java/demo/WireFrame/ThreeD.java
-java/demo/WireFrame/example1.html
-java/demo/WireFrame/example2.html
-java/demo/WireFrame/example3.html
-java/demo/WireFrame/example4.html
-java/demo/WireFrame/models/cube.obj
-java/demo/WireFrame/models/dinasaur.obj
-java/demo/WireFrame/models/hughes_500.obj
-java/demo/WireFrame/models/knoxS.obj
-java/demo/awt-1.1/eventmodel/Box.class
-java/demo/awt-1.1/eventmodel/Box.java
-java/demo/awt-1.1/eventmodel/Click0$1.class
-java/demo/awt-1.1/eventmodel/Click0$2.class
-java/demo/awt-1.1/eventmodel/Click0.class
-java/demo/awt-1.1/eventmodel/Click0.java
-java/demo/awt-1.1/eventmodel/Click1$1.class
-java/demo/awt-1.1/eventmodel/Click1$2.class
-java/demo/awt-1.1/eventmodel/Click1$TargetListener.class
-java/demo/awt-1.1/eventmodel/Click1.class
-java/demo/awt-1.1/eventmodel/Click1.java
-java/demo/awt-1.1/eventmodel/Click2$1.class
-java/demo/awt-1.1/eventmodel/Click2$2.class
-java/demo/awt-1.1/eventmodel/Click2$TargetListener.class
-java/demo/awt-1.1/eventmodel/Click2.class
-java/demo/awt-1.1/eventmodel/Click2.java
-java/demo/awt-1.1/eventmodel/Click3$1.class
-java/demo/awt-1.1/eventmodel/Click3$2.class
-java/demo/awt-1.1/eventmodel/Click3$3.class
-java/demo/awt-1.1/eventmodel/Click3$TargetListener.class
-java/demo/awt-1.1/eventmodel/Click3.class
-java/demo/awt-1.1/eventmodel/Click3.java
-java/demo/awt-1.1/eventmodel/ColumnOfBoxes.class
-java/demo/awt-1.1/eventmodel/ColumnOfBoxes.java
-java/demo/awt-1.1/eventmodel/index.html
-java/demo/awt-1.1/index.html
-java/demo/awt-1.1/lightweight/Gauge/ExampleApplet.jar
-java/demo/awt-1.1/lightweight/Gauge/ExampleApplet.zip
-java/demo/awt-1.1/lightweight/Gauge/Switcher.class
-java/demo/awt-1.1/lightweight/Gauge/actual/DoubleBufferPanel.class
-java/demo/awt-1.1/lightweight/Gauge/actual/DoubleBufferPanel.java
-java/demo/awt-1.1/lightweight/Gauge/actual/ExampleApplet.class
-java/demo/awt-1.1/lightweight/Gauge/actual/ExampleApplet.java
-java/demo/awt-1.1/lightweight/Gauge/actual/Gauge.class
-java/demo/awt-1.1/lightweight/Gauge/actual/Gauge.java
-java/demo/awt-1.1/lightweight/Gauge/actual/GaugeThread.class
-java/demo/awt-1.1/lightweight/Gauge/actual/PrettyPanel.class
-java/demo/awt-1.1/lightweight/Gauge/actual/images/mandrill.jpg
-java/demo/awt-1.1/lightweight/Gauge/alternative/Compatibility.class
-java/demo/awt-1.1/lightweight/Gauge/alternative/Compatibility.java
-java/demo/awt-1.1/lightweight/Gauge/alternative/ExampleApplet.class
-java/demo/awt-1.1/lightweight/Gauge/alternative/ExampleApplet.gif
-java/demo/awt-1.1/lightweight/Gauge/alternative/ExampleApplet.java
-java/demo/awt-1.1/lightweight/Gauge/alternative/ImageDisplayer.class
-java/demo/awt-1.1/lightweight/Gauge/alternative/ImageDisplayer.java
-java/demo/awt-1.1/lightweight/Gauge/alternative/PictureFrame.class
-java/demo/awt-1.1/lightweight/Gauge/alternative/PictureFrame.java
-java/demo/awt-1.1/lightweight/Gauge/example.html
-java/demo/awt-1.1/lightweight/OpenlookButtons/ExampleApplet.jar
-java/demo/awt-1.1/lightweight/OpenlookButtons/ExampleApplet.zip
-java/demo/awt-1.1/lightweight/OpenlookButtons/Switcher.class
-java/demo/awt-1.1/lightweight/OpenlookButtons/actual/ExampleActionListener.class
-java/demo/awt-1.1/lightweight/OpenlookButtons/actual/ExampleApplet.class
-java/demo/awt-1.1/lightweight/OpenlookButtons/actual/ExampleApplet.java
-java/demo/awt-1.1/lightweight/OpenlookButtons/actual/OpenlookButton.class
-java/demo/awt-1.1/lightweight/OpenlookButtons/actual/OpenlookButton.java
-java/demo/awt-1.1/lightweight/OpenlookButtons/actual/OpenlookButtonListener.class
-java/demo/awt-1.1/lightweight/OpenlookButtons/actual/images/scott.jpg
-java/demo/awt-1.1/lightweight/OpenlookButtons/alternative/Compatibility.class
-java/demo/awt-1.1/lightweight/OpenlookButtons/alternative/Compatibility.java
-java/demo/awt-1.1/lightweight/OpenlookButtons/alternative/ExampleApplet.class
-java/demo/awt-1.1/lightweight/OpenlookButtons/alternative/ExampleApplet.gif
-java/demo/awt-1.1/lightweight/OpenlookButtons/alternative/ExampleApplet.java
-java/demo/awt-1.1/lightweight/OpenlookButtons/alternative/ImageDisplayer.class
-java/demo/awt-1.1/lightweight/OpenlookButtons/alternative/ImageDisplayer.java
-java/demo/awt-1.1/lightweight/OpenlookButtons/alternative/PictureFrame.class
-java/demo/awt-1.1/lightweight/OpenlookButtons/alternative/PictureFrame.java
-java/demo/awt-1.1/lightweight/OpenlookButtons/example.html
-java/demo/awt-1.1/lightweight/RoundButtons/ExampleApplet.jar
-java/demo/awt-1.1/lightweight/RoundButtons/ExampleApplet.zip
-java/demo/awt-1.1/lightweight/RoundButtons/Switcher.class
-java/demo/awt-1.1/lightweight/RoundButtons/actual/ExampleActionListener.class
-java/demo/awt-1.1/lightweight/RoundButtons/actual/ExampleApplet.class
-java/demo/awt-1.1/lightweight/RoundButtons/actual/ExampleApplet.java
-java/demo/awt-1.1/lightweight/RoundButtons/actual/RoundButton.class
-java/demo/awt-1.1/lightweight/RoundButtons/actual/RoundButton.java
-java/demo/awt-1.1/lightweight/RoundButtons/actual/images/scott.jpg
-java/demo/awt-1.1/lightweight/RoundButtons/alternative/Compatibility.class
-java/demo/awt-1.1/lightweight/RoundButtons/alternative/Compatibility.java
-java/demo/awt-1.1/lightweight/RoundButtons/alternative/Compatibility.java,v
-java/demo/awt-1.1/lightweight/RoundButtons/alternative/ExampleApplet.class
-java/demo/awt-1.1/lightweight/RoundButtons/alternative/ExampleApplet.gif
-java/demo/awt-1.1/lightweight/RoundButtons/alternative/ExampleApplet.java
-java/demo/awt-1.1/lightweight/RoundButtons/alternative/ExampleApplet.java,v
-java/demo/awt-1.1/lightweight/RoundButtons/alternative/ImageDisplayer.class
-java/demo/awt-1.1/lightweight/RoundButtons/alternative/ImageDisplayer.java
-java/demo/awt-1.1/lightweight/RoundButtons/alternative/ImageDisplayer.java,v
-java/demo/awt-1.1/lightweight/RoundButtons/alternative/PictureFrame.class
-java/demo/awt-1.1/lightweight/RoundButtons/alternative/PictureFrame.java
-java/demo/awt-1.1/lightweight/RoundButtons/alternative/PictureFrame.java,v
-java/demo/awt-1.1/lightweight/RoundButtons/example.html
-java/demo/awt-1.1/lightweight/Spinner/ExampleApplet.jar
-java/demo/awt-1.1/lightweight/Spinner/ExampleApplet.zip
-java/demo/awt-1.1/lightweight/Spinner/Switcher.class
-java/demo/awt-1.1/lightweight/Spinner/actual/ExampleApplet.class
-java/demo/awt-1.1/lightweight/Spinner/actual/ExampleApplet.java
-java/demo/awt-1.1/lightweight/Spinner/actual/Spinner.class
-java/demo/awt-1.1/lightweight/Spinner/actual/Spinner.java
-java/demo/awt-1.1/lightweight/Spinner/actual/SpinnerThread.class
-java/demo/awt-1.1/lightweight/Spinner/actual/images/orb.gif
-java/demo/awt-1.1/lightweight/Spinner/alternative/Compatibility.class
-java/demo/awt-1.1/lightweight/Spinner/alternative/Compatibility.java
-java/demo/awt-1.1/lightweight/Spinner/alternative/ExampleApplet.class
-java/demo/awt-1.1/lightweight/Spinner/alternative/ExampleApplet.gif
-java/demo/awt-1.1/lightweight/Spinner/alternative/ExampleApplet.java
-java/demo/awt-1.1/lightweight/Spinner/alternative/ImageDisplayer.class
-java/demo/awt-1.1/lightweight/Spinner/alternative/ImageDisplayer.java
-java/demo/awt-1.1/lightweight/Spinner/alternative/PictureFrame.class
-java/demo/awt-1.1/lightweight/Spinner/alternative/PictureFrame.java
-java/demo/awt-1.1/lightweight/Spinner/example.html
-java/demo/awt-1.1/lightweight/index.html
-java/demo/awt-1.1/symboltest/SymbolCanvas.class
-java/demo/awt-1.1/symboltest/SymbolTest$MyAdapter.class
-java/demo/awt-1.1/symboltest/SymbolTest.class
-java/demo/awt-1.1/symboltest/SymbolTest.java
-java/demo/awt-1.1/symboltest/index.html
-java/demo/i18n/Collate/CollationDetails.html
-java/demo/i18n/Collate/example1.html
-java/demo/i18n/DateTimeFormat/example1.html
-java/demo/i18n/MessageFormat/example1.html
-java/demo/i18n/NumberFormat/example1.html
-java/demo/i18n/TextBound/example1.html
-java/demo/i18n/code/BorderPanel.class
-java/demo/i18n/code/BorderPanel.java
-java/demo/i18n/code/ChoiceResource.class
-java/demo/i18n/code/ChoiceResource.java
-java/demo/i18n/code/ChoiceResource_da.class
-java/demo/i18n/code/ChoiceResource_da.java
-java/demo/i18n/code/ChoiceResource_de.class
-java/demo/i18n/code/ChoiceResource_de.java
-java/demo/i18n/code/ChoiceResource_en.class
-java/demo/i18n/code/ChoiceResource_en.java
-java/demo/i18n/code/ChoiceResource_fr.class
-java/demo/i18n/code/ChoiceResource_fr.java
-java/demo/i18n/code/ChoiceResource_it.class
-java/demo/i18n/code/ChoiceResource_it.java
-java/demo/i18n/code/ChoiceResource_ja.class
-java/demo/i18n/code/ChoiceResource_ja.java
-java/demo/i18n/code/CollateDemo.class
-java/demo/i18n/code/CollateDemo.java
-java/demo/i18n/code/CollateFrame.class
-java/demo/i18n/code/DateTimeDemo.class
-java/demo/i18n/code/DateTimeDemo.java
-java/demo/i18n/code/DateTimeFrame.class
-java/demo/i18n/code/DemoApplet.class
-java/demo/i18n/code/DemoApplet.java
-java/demo/i18n/code/MessageFormatDemo.class
-java/demo/i18n/code/MessageFormatDemo.java
-java/demo/i18n/code/MessageFormatFrame.class
-java/demo/i18n/code/NumberFormatDemo.class
-java/demo/i18n/code/NumberFormatDemo.java
-java/demo/i18n/code/NumberFormatFrame.class
-java/demo/i18n/code/TextBoundDemo.class
-java/demo/i18n/code/TextBoundDemo.java
-java/demo/i18n/code/TextBoundFrame.class
-java/demo/i18n/code/Utility.class
-java/demo/i18n/code/Utility.java
-java/demo/i18n/code/XBorderPanel.class
-java/demo/jre/jre.c
-java/demo/jre/jre.h
-java/demo/jre/jre_main.c
-java/demo/jre/solaris/GNUmakefile
-java/demo/jre/solaris/jre.sh
-java/demo/jre/solaris/jre_md.c
-java/demo/jre/solaris/jre_md.h
-java/include/StubPreamble.h
-java/include/alloc_cache.h
-java/include/bool.h
-java/include/breakpoints.h
-java/include/byteorder.h
-java/include/common_exceptions.h
-java/include/config.h
-java/include/debug.h
-java/include/decode.h
-java/include/exceptions.h
-java/include/finalize.h
-java/include/gc.h
-java/include/green_threads/include/context.h
-java/include/green_threads/include/context_md.h
-java/include/green_threads/include/internal_md.h
-java/include/green_threads/include/monitor_md.h
-java/include/green_threads/include/queue.h
-java/include/green_threads/include/schedule.h
-java/include/green_threads/include/threads_md.h
-java/include/interpreter.h
-java/include/javaString.h
-java/include/java_lang_ClassLoader.h
-java/include/java_lang_String.h
-java/include/java_lang_Thread.h
-java/include/java_lang_ThreadGroup.h
-java/include/jcov.h
-java/include/jmath.h
-java/include/jni.h
-java/include/log.h
-java/include/monitor.h
-java/include/monitor_cache.h
-java/include/native.h
-java/include/netbsd/byteorder_md.h
-java/include/netbsd/gc_md.h
-java/include/netbsd/io_md.h
-java/include/netbsd/jmath_md.h
-java/include/netbsd/jni_md.h
-java/include/netbsd/oobj_md.h
-java/include/netbsd/path_md.h
-java/include/netbsd/prof_md.h
-java/include/netbsd/sysmacros_md.h
-java/include/netbsd/timeval_md.h
-java/include/netbsd/typedefs_md.h
-java/include/oobj.h
-java/include/path.h
-java/include/profile.h
-java/include/reflect.h
-java/include/selftest.h
-java/include/signature.h
-java/include/sys_api.h
-java/include/threads.h
-java/include/timeval.h
-java/include/tree.h
-java/include/typecodes.h
-java/include/typedefs.h
-java/include/utf.h
-java/include/verify.h
-java/include/wrap.h
-java/include/zip.h
-java/index.html
-java/lib/appletviewer.properties
-java/lib/awt.properties
-java/lib/classes.zip
-java/lib/content-types.properties
-java/lib/font.properties
-java/lib/font.properties.cs
-java/lib/font.properties.el
-java/lib/font.properties.hu
-java/lib/font.properties.ja
-java/lib/font.properties.ko
-java/lib/font.properties.lt
-java/lib/font.properties.lv
-java/lib/font.properties.pl
-java/lib/font.properties.ru
-java/lib/font.properties.tr
-java/lib/font.properties.zh_EUC_CN
-java/lib/font.properties.zh_TW_Big5
-java/lib/font.properties.zh_TW_EUC_TW
-java/lib/i386/green_threads/libXm.so
-java/lib/i386/green_threads/libXm.so.1.2
-java/lib/i386/green_threads/libagent.so
-java/lib/i386/green_threads/libagent_g.so
-java/lib/i386/green_threads/libawt.so
-java/lib/i386/green_threads/libawt.so.1.1.6
-java/lib/i386/green_threads/libawt_g.so
-java/lib/i386/green_threads/libawt_g.so.1.1.6
-java/lib/i386/green_threads/libjava.so
-java/lib/i386/green_threads/libjava.so.1.1.6
-java/lib/i386/green_threads/libjava_g.so
-java/lib/i386/green_threads/libjava_g.so.1.1.6
-java/lib/i386/green_threads/libjpeg.so
-java/lib/i386/green_threads/libjpeg_g.so
-java/lib/i386/green_threads/libmath.so
-java/lib/i386/green_threads/libmath_g.so
-java/lib/i386/green_threads/libmmedia.so
-java/lib/i386/green_threads/libmmedia_g.so
-java/lib/i386/green_threads/libnet.so
-java/lib/i386/green_threads/libnet_g.so
-java/lib/i386/green_threads/libsysresource.so
-java/lib/i386/green_threads/libsysresource_g.so
-java/lib/i386/green_threads/libtawt.so
-java/lib/i386/green_threads/libtawt_g.so
-java/lib/i386/green_threads/libzip.so
-java/lib/i386/green_threads/libzip_g.so
-java/lib/psfont.properties.ja
-java/lib/rmic.properties
-java/lib/security/java.security
-java/lib/serialver.properties
-java/src.zip
-@dirrm java/bin/i386/green_threads
-@dirrm java/bin/i386
-@dirrm java/bin
-@dirrm java/demo/Animator/1.0.2/audio
-@dirrm java/demo/Animator/1.0.2/images/Beans
-@dirrm java/demo/Animator/1.0.2/images/SimpleAnimation
-@dirrm java/demo/Animator/1.0.2/images
-@dirrm java/demo/Animator/1.0.2
-@dirrm java/demo/Animator/1.1/audio
-@dirrm java/demo/Animator/1.1/images/Beans
-@dirrm java/demo/Animator/1.1/images/SimpleAnimation
-@dirrm java/demo/Animator/1.1/images
-@dirrm java/demo/Animator/1.1
-@dirrm java/demo/Animator
-@dirrm java/demo/ArcTest/1.0.2
-@dirrm java/demo/ArcTest/1.1
-@dirrm java/demo/ArcTest
-@dirrm java/demo/BarChart/1.0.2
-@dirrm java/demo/BarChart/1.1
-@dirrm java/demo/BarChart
-@dirrm java/demo/Blink/1.0.2
-@dirrm java/demo/Blink/1.1
-@dirrm java/demo/Blink
-@dirrm java/demo/CardTest/1.0.2
-@dirrm java/demo/CardTest/1.1
-@dirrm java/demo/CardTest
-@dirrm java/demo/Clock/1.0.2
-@dirrm java/demo/Clock
-@dirrm java/demo/DitherTest/1.0.2
-@dirrm java/demo/DitherTest/1.1
-@dirrm java/demo/DitherTest
-@dirrm java/demo/DrawTest/1.0.2
-@dirrm java/demo/DrawTest/1.1
-@dirrm java/demo/DrawTest
-@dirrm java/demo/Fractal/1.0.2
-@dirrm java/demo/Fractal/1.1
-@dirrm java/demo/Fractal
-@dirrm java/demo/GraphLayout/audio
-@dirrm java/demo/GraphLayout
-@dirrm java/demo/GraphicsTest
-@dirrm java/demo/ImageMap/audio
-@dirrm java/demo/ImageMap/images
-@dirrm java/demo/ImageMap
-@dirrm java/demo/JumpingBox/1.0.2/sounds
-@dirrm java/demo/JumpingBox/1.0.2
-@dirrm java/demo/JumpingBox/1.1/sounds
-@dirrm java/demo/JumpingBox/1.1
-@dirrm java/demo/JumpingBox
-@dirrm java/demo/MoleculeViewer/models
-@dirrm java/demo/MoleculeViewer
-@dirrm java/demo/NervousText/1.0.2
-@dirrm java/demo/NervousText/1.1
-@dirrm java/demo/NervousText
-@dirrm java/demo/SimpleGraph/1.0.2
-@dirrm java/demo/SimpleGraph/1.1
-@dirrm java/demo/SimpleGraph
-@dirrm java/demo/SortDemo/1.0.2
-@dirrm java/demo/SortDemo/1.1
-@dirrm java/demo/SortDemo
-@dirrm java/demo/SpreadSheet
-@dirrm java/demo/TicTacToe/1.0.2/audio
-@dirrm java/demo/TicTacToe/1.0.2/images
-@dirrm java/demo/TicTacToe/1.0.2
-@dirrm java/demo/TicTacToe/1.1/audio
-@dirrm java/demo/TicTacToe/1.1/images
-@dirrm java/demo/TicTacToe/1.1
-@dirrm java/demo/TicTacToe
-@dirrm java/demo/WireFrame/models
-@dirrm java/demo/WireFrame
-@dirrm java/demo/awt-1.1/eventmodel
-@dirrm java/demo/awt-1.1/lightweight/Gauge/actual/images
-@dirrm java/demo/awt-1.1/lightweight/Gauge/actual
-@dirrm java/demo/awt-1.1/lightweight/Gauge/alternative
-@dirrm java/demo/awt-1.1/lightweight/Gauge
-@dirrm java/demo/awt-1.1/lightweight/OpenlookButtons/actual/images
-@dirrm java/demo/awt-1.1/lightweight/OpenlookButtons/actual
-@dirrm java/demo/awt-1.1/lightweight/OpenlookButtons/alternative
-@dirrm java/demo/awt-1.1/lightweight/OpenlookButtons
-@dirrm java/demo/awt-1.1/lightweight/RoundButtons/actual/images
-@dirrm java/demo/awt-1.1/lightweight/RoundButtons/actual
-@dirrm java/demo/awt-1.1/lightweight/RoundButtons/alternative
-@dirrm java/demo/awt-1.1/lightweight/RoundButtons
-@dirrm java/demo/awt-1.1/lightweight/Spinner/actual/images
-@dirrm java/demo/awt-1.1/lightweight/Spinner/actual
-@dirrm java/demo/awt-1.1/lightweight/Spinner/alternative
-@dirrm java/demo/awt-1.1/lightweight/Spinner
-@dirrm java/demo/awt-1.1/lightweight
-@dirrm java/demo/awt-1.1/symboltest
-@dirrm java/demo/awt-1.1
-@dirrm java/demo/i18n/Collate
-@dirrm java/demo/i18n/DateTimeFormat
-@dirrm java/demo/i18n/MessageFormat
-@dirrm java/demo/i18n/NumberFormat
-@dirrm java/demo/i18n/TextBound
-@dirrm java/demo/i18n/code
-@dirrm java/demo/i18n
-@dirrm java/demo/jre/solaris
-@dirrm java/demo/jre
-@dirrm java/demo
-@dirrm java/include/green_threads/include
-@dirrm java/include/green_threads
-@dirrm java/include/netbsd
-@dirrm java/include
-@dirrm java/lib/i386/green_threads
-@dirrm java/lib/i386
-@dirrm java/lib/security
-@dirrm java/lib
-@dirrm java
+@comment $NetBSD: PLIST,v 1.4 1999/12/10 03:55:23 hubertf Exp $
+CHANGES
+COPYRIGHT
+LICENSE
+README
+README.NetBSD
+bin/.java_wrapper
+bin/appletviewer
+bin/i386/green_threads/.extract_args
+bin/i386/green_threads/appletviewer
+bin/i386/green_threads/jar
+bin/i386/green_threads/java
+bin/i386/green_threads/java_g
+bin/i386/green_threads/javac
+bin/i386/green_threads/javac_g
+bin/i386/green_threads/javadoc
+bin/i386/green_threads/javah
+bin/i386/green_threads/javah_g
+bin/i386/green_threads/javakey
+bin/i386/green_threads/javap
+bin/i386/green_threads/javaverify
+bin/i386/green_threads/javaverify_g
+bin/i386/green_threads/jdb
+bin/i386/green_threads/jre
+bin/i386/green_threads/jre_g
+bin/i386/green_threads/native2ascii
+bin/i386/green_threads/rmic
+bin/i386/green_threads/rmiregistry
+bin/i386/green_threads/serialver
+bin/jar
+bin/java
+bin/java-rmi.cgi
+bin/java_g
+bin/javac
+bin/javac_g
+bin/javadoc
+bin/javah
+bin/javah_g
+bin/javakey
+bin/javap
+bin/javaverify
+bin/javaverify_g
+bin/jdb
+bin/jre
+bin/jre_g
+bin/native2ascii
+bin/rmic
+bin/rmiregistry
+bin/serialver
+demo/Animator/1.0.2/Animator.class
+demo/Animator/1.0.2/Animator.java
+demo/Animator/1.0.2/DescriptionFrame.class
+demo/Animator/1.0.2/ParseException.class
+demo/Animator/1.0.2/audio/0.au
+demo/Animator/1.0.2/audio/1.au
+demo/Animator/1.0.2/audio/2.au
+demo/Animator/1.0.2/audio/3.au
+demo/Animator/1.0.2/audio/4.au
+demo/Animator/1.0.2/audio/5.au
+demo/Animator/1.0.2/audio/6.au
+demo/Animator/1.0.2/audio/7.au
+demo/Animator/1.0.2/audio/8.au
+demo/Animator/1.0.2/audio/9.au
+demo/Animator/1.0.2/audio/spacemusic.au
+demo/Animator/1.0.2/images/Beans/T1.gif
+demo/Animator/1.0.2/images/Beans/T10.gif
+demo/Animator/1.0.2/images/Beans/T2.gif
+demo/Animator/1.0.2/images/Beans/T3.gif
+demo/Animator/1.0.2/images/Beans/T4.gif
+demo/Animator/1.0.2/images/Beans/T5.gif
+demo/Animator/1.0.2/images/Beans/T6.gif
+demo/Animator/1.0.2/images/Beans/T7.gif
+demo/Animator/1.0.2/images/Beans/T8.gif
+demo/Animator/1.0.2/images/Beans/T9.gif
+demo/Animator/1.0.2/images/SimpleAnimation/T1.gif
+demo/Animator/1.0.2/images/SimpleAnimation/T2.gif
+demo/Animator/1.0.2/images/loading-msg.gif
+demo/Animator/1.1/Animator.class
+demo/Animator/1.1/Animator.java
+demo/Animator/1.1/DescriptionFrame.class
+demo/Animator/1.1/ParseException.class
+demo/Animator/1.1/audio/0.au
+demo/Animator/1.1/audio/1.au
+demo/Animator/1.1/audio/2.au
+demo/Animator/1.1/audio/3.au
+demo/Animator/1.1/audio/4.au
+demo/Animator/1.1/audio/5.au
+demo/Animator/1.1/audio/6.au
+demo/Animator/1.1/audio/7.au
+demo/Animator/1.1/audio/8.au
+demo/Animator/1.1/audio/9.au
+demo/Animator/1.1/audio/spacemusic.au
+demo/Animator/1.1/example1.html
+demo/Animator/1.1/example2.html
+demo/Animator/1.1/example3.html
+demo/Animator/1.1/example4.html
+demo/Animator/1.1/images/Beans/T1.gif
+demo/Animator/1.1/images/Beans/T10.gif
+demo/Animator/1.1/images/Beans/T2.gif
+demo/Animator/1.1/images/Beans/T3.gif
+demo/Animator/1.1/images/Beans/T4.gif
+demo/Animator/1.1/images/Beans/T5.gif
+demo/Animator/1.1/images/Beans/T6.gif
+demo/Animator/1.1/images/Beans/T7.gif
+demo/Animator/1.1/images/Beans/T8.gif
+demo/Animator/1.1/images/Beans/T9.gif
+demo/Animator/1.1/images/SimpleAnimation/T1.gif
+demo/Animator/1.1/images/SimpleAnimation/T2.gif
+demo/Animator/1.1/images/loading-msg.gif
+demo/Animator/example1.html
+demo/Animator/example2.html
+demo/Animator/example3.html
+demo/Animator/example4.html
+demo/Animator/index.html
+demo/ArcTest/1.0.2/ArcCanvas.class
+demo/ArcTest/1.0.2/ArcControls.class
+demo/ArcTest/1.0.2/ArcTest.class
+demo/ArcTest/1.0.2/ArcTest.java
+demo/ArcTest/1.1/ArcCanvas.class
+demo/ArcTest/1.1/ArcControls.class
+demo/ArcTest/1.1/ArcTest.class
+demo/ArcTest/1.1/ArcTest.java
+demo/ArcTest/1.1/example1.html
+demo/ArcTest/example1.html
+demo/BarChart/1.0.2/Chart.class
+demo/BarChart/1.0.2/Chart.java
+demo/BarChart/1.1/Chart.class
+demo/BarChart/1.1/Chart.java
+demo/BarChart/1.1/example1.html
+demo/BarChart/example1.html
+demo/Blink/1.0.2/Blink.class
+demo/Blink/1.0.2/Blink.java
+demo/Blink/1.1/Blink.class
+demo/Blink/1.1/Blink.java
+demo/Blink/1.1/example1.html
+demo/Blink/example1.html
+demo/CardTest/1.0.2/CardPanel.class
+demo/CardTest/1.0.2/CardTest.class
+demo/CardTest/1.0.2/CardTest.java
+demo/CardTest/1.1/CardPanel.class
+demo/CardTest/1.1/CardTest.class
+demo/CardTest/1.1/CardTest.java
+demo/CardTest/1.1/example1.html
+demo/CardTest/example1.html
+demo/Clock/1.0.2/Clock2.class
+demo/Clock/1.0.2/Clock2.java
+demo/Clock/Clock2.class
+demo/Clock/Clock2.java
+demo/Clock/index.html
+demo/DitherTest/1.0.2/DitherCanvas.class
+demo/DitherTest/1.0.2/DitherControls.class
+demo/DitherTest/1.0.2/DitherTest.class
+demo/DitherTest/1.0.2/DitherTest.java
+demo/DitherTest/1.1/DitherCanvas.class
+demo/DitherTest/1.1/DitherControls.class
+demo/DitherTest/1.1/DitherTest.class
+demo/DitherTest/1.1/DitherTest.java
+demo/DitherTest/1.1/example1.html
+demo/DitherTest/example1.html
+demo/DrawTest/1.0.2/DrawControls.class
+demo/DrawTest/1.0.2/DrawPanel.class
+demo/DrawTest/1.0.2/DrawTest.class
+demo/DrawTest/1.0.2/DrawTest.java
+demo/DrawTest/1.1/DrawControls.class
+demo/DrawTest/1.1/DrawPanel.class
+demo/DrawTest/1.1/DrawTest.class
+demo/DrawTest/1.1/DrawTest.java
+demo/DrawTest/1.1/example1.html
+demo/DrawTest/example1.html
+demo/Fractal/1.0.2/CLSFractal.class
+demo/Fractal/1.0.2/CLSFractal.java
+demo/Fractal/1.0.2/CLSRule.class
+demo/Fractal/1.0.2/CLSTurtle.class
+demo/Fractal/1.0.2/ContextLSystem.class
+demo/Fractal/1.1/CLSFractal.class
+demo/Fractal/1.1/CLSFractal.java
+demo/Fractal/1.1/CLSRule.class
+demo/Fractal/1.1/CLSTurtle.class
+demo/Fractal/1.1/ContextLSystem.class
+demo/Fractal/1.1/example1.html
+demo/Fractal/example1.html
+demo/GraphLayout/Edge.class
+demo/GraphLayout/Graph.class
+demo/GraphLayout/Graph.java
+demo/GraphLayout/GraphPanel.class
+demo/GraphLayout/Node.class
+demo/GraphLayout/audio/computer.au
+demo/GraphLayout/audio/drip.au
+demo/GraphLayout/audio/gong.au
+demo/GraphLayout/example1.html
+demo/GraphLayout/example2.html
+demo/GraphLayout/example3.html
+demo/GraphLayout/example4.html
+demo/GraphicsTest/AppletFrame.class
+demo/GraphicsTest/AppletFrame.java
+demo/GraphicsTest/ArcCard.class
+demo/GraphicsTest/ArcDegreePanel.class
+demo/GraphicsTest/ArcPanel.class
+demo/GraphicsTest/ColorUtils.class
+demo/GraphicsTest/GraphicsCards.class
+demo/GraphicsTest/GraphicsFrame.class
+demo/GraphicsTest/GraphicsTest.class
+demo/GraphicsTest/GraphicsTest.java
+demo/GraphicsTest/OvalShape.class
+demo/GraphicsTest/PolygonShape.class
+demo/GraphicsTest/RectShape.class
+demo/GraphicsTest/RoundRectShape.class
+demo/GraphicsTest/Shape.class
+demo/GraphicsTest/ShapeTest.class
+demo/GraphicsTest/example1.html
+demo/ImageMap/AniArea.class
+demo/ImageMap/AniArea.java
+demo/ImageMap/ButtonFilter.class
+demo/ImageMap/ButtonFilter.java
+demo/ImageMap/ClickArea.class
+demo/ImageMap/ClickArea.java
+demo/ImageMap/DelayedSoundArea.class
+demo/ImageMap/DelayedSoundArea.java
+demo/ImageMap/HighlightArea.class
+demo/ImageMap/HighlightArea.java
+demo/ImageMap/HighlightFilter.class
+demo/ImageMap/HighlightFilter.java
+demo/ImageMap/HrefButtonArea.class
+demo/ImageMap/HrefButtonArea.java
+demo/ImageMap/ImageMap.class
+demo/ImageMap/ImageMap.java
+demo/ImageMap/ImageMapArea.class
+demo/ImageMap/ImageMapArea.java
+demo/ImageMap/LinkArea.class
+demo/ImageMap/LinkArea.java
+demo/ImageMap/NameArea.class
+demo/ImageMap/NameArea.java
+demo/ImageMap/RoundButtonFilter.class
+demo/ImageMap/RoundButtonFilter.java
+demo/ImageMap/RoundHrefButtonArea.class
+demo/ImageMap/RoundHrefButtonArea.java
+demo/ImageMap/SoundArea.class
+demo/ImageMap/SoundArea.java
+demo/ImageMap/TickerArea.class
+demo/ImageMap/TickerArea.java
+demo/ImageMap/audio/chirp1.au
+demo/ImageMap/audio/hi.au
+demo/ImageMap/example1.html
+demo/ImageMap/imagemapcheat.html
+demo/ImageMap/images/jim.graham.gif
+demo/ImageMap/sources.html
+demo/JumpingBox/1.0.2/MouseTrack.class
+demo/JumpingBox/1.0.2/MouseTrack.java
+demo/JumpingBox/1.0.2/sounds/adapt-or-die.au
+demo/JumpingBox/1.0.2/sounds/cannot.be.completed.au
+demo/JumpingBox/1.0.2/sounds/ip.au
+demo/JumpingBox/1.0.2/sounds/that.hurts.au
+demo/JumpingBox/1.0.2/sounds/thin.bell.au
+demo/JumpingBox/1.0.2/sounds/tiptoe.thru.the.tulips.au
+demo/JumpingBox/1.1/MouseTrack.class
+demo/JumpingBox/1.1/MouseTrack.java
+demo/JumpingBox/1.1/example1.html
+demo/JumpingBox/1.1/sounds/adapt-or-die.au
+demo/JumpingBox/1.1/sounds/cannot.be.completed.au
+demo/JumpingBox/1.1/sounds/ip.au
+demo/JumpingBox/1.1/sounds/that.hurts.au
+demo/JumpingBox/1.1/sounds/thin.bell.au
+demo/JumpingBox/1.1/sounds/tiptoe.thru.the.tulips.au
+demo/JumpingBox/example1.html
+demo/MoleculeViewer/Atom.class
+demo/MoleculeViewer/Matrix3D.class
+demo/MoleculeViewer/Matrix3D.java
+demo/MoleculeViewer/XYZApp.class
+demo/MoleculeViewer/XYZApp.java
+demo/MoleculeViewer/XYZChemModel.class
+demo/MoleculeViewer/example1.html
+demo/MoleculeViewer/example2.html
+demo/MoleculeViewer/example3.html
+demo/MoleculeViewer/models/HyaluronicAcid.xyz
+demo/MoleculeViewer/models/benzene.xyz
+demo/MoleculeViewer/models/buckminsterfullerine.xyz
+demo/MoleculeViewer/models/cyclohexane.xyz
+demo/MoleculeViewer/models/ethane.xyz
+demo/MoleculeViewer/models/water.xyz
+demo/NervousText/1.0.2/NervousText.class
+demo/NervousText/1.0.2/NervousText.java
+demo/NervousText/1.1/NervousText.class
+demo/NervousText/1.1/NervousText.java
+demo/NervousText/1.1/example1.html
+demo/NervousText/example1.html
+demo/SimpleGraph/1.0.2/GraphApplet.class
+demo/SimpleGraph/1.0.2/GraphApplet.java
+demo/SimpleGraph/1.1/GraphApplet.class
+demo/SimpleGraph/1.1/GraphApplet.java
+demo/SimpleGraph/1.1/example1.html
+demo/SimpleGraph/example1.html
+demo/SortDemo/1.0.2/BidirBubbleSortAlgorithm.class
+demo/SortDemo/1.0.2/BidirBubbleSortAlgorithm.java
+demo/SortDemo/1.0.2/BubbleSortAlgorithm.class
+demo/SortDemo/1.0.2/BubbleSortAlgorithm.java
+demo/SortDemo/1.0.2/QSortAlgorithm.class
+demo/SortDemo/1.0.2/QSortAlgorithm.java
+demo/SortDemo/1.0.2/SortAlgorithm.class
+demo/SortDemo/1.0.2/SortAlgorithm.java
+demo/SortDemo/1.0.2/SortItem.class
+demo/SortDemo/1.0.2/SortItem.java
+demo/SortDemo/1.1/BidirBubbleSortAlgorithm.class
+demo/SortDemo/1.1/BidirBubbleSortAlgorithm.java
+demo/SortDemo/1.1/BubbleSortAlgorithm.class
+demo/SortDemo/1.1/BubbleSortAlgorithm.java
+demo/SortDemo/1.1/QSortAlgorithm.class
+demo/SortDemo/1.1/QSortAlgorithm.java
+demo/SortDemo/1.1/SortAlgorithm.class
+demo/SortDemo/1.1/SortAlgorithm.java
+demo/SortDemo/1.1/SortItem$ClockStarter.class
+demo/SortDemo/1.1/SortItem.class
+demo/SortDemo/1.1/SortItem.java
+demo/SortDemo/1.1/example1.html
+demo/SortDemo/example1.html
+demo/SpreadSheet/Cell.class
+demo/SpreadSheet/CellUpdater.class
+demo/SpreadSheet/InputField.class
+demo/SpreadSheet/Node.class
+demo/SpreadSheet/SpreadSheet.class
+demo/SpreadSheet/SpreadSheet.java
+demo/SpreadSheet/SpreadSheetInput.class
+demo/SpreadSheet/example1.html
+demo/TicTacToe/1.0.2/TicTacToe.class
+demo/TicTacToe/1.0.2/TicTacToe.java
+demo/TicTacToe/1.0.2/audio/beep.au
+demo/TicTacToe/1.0.2/audio/ding.au
+demo/TicTacToe/1.0.2/audio/joy.au
+demo/TicTacToe/1.0.2/audio/return.au
+demo/TicTacToe/1.0.2/audio/yahoo1.au
+demo/TicTacToe/1.0.2/audio/yahoo2.au
+demo/TicTacToe/1.0.2/images/cross.gif
+demo/TicTacToe/1.0.2/images/not.gif
+demo/TicTacToe/1.1/TicTacToe.class
+demo/TicTacToe/1.1/TicTacToe.java
+demo/TicTacToe/1.1/audio/beep.au
+demo/TicTacToe/1.1/audio/ding.au
+demo/TicTacToe/1.1/audio/joy.au
+demo/TicTacToe/1.1/audio/return.au
+demo/TicTacToe/1.1/audio/yahoo1.au
+demo/TicTacToe/1.1/audio/yahoo2.au
+demo/TicTacToe/1.1/example1.html
+demo/TicTacToe/1.1/images/cross.gif
+demo/TicTacToe/1.1/images/not.gif
+demo/TicTacToe/example1.html
+demo/WireFrame/FileFormatException.class
+demo/WireFrame/Matrix3D.class
+demo/WireFrame/Matrix3D.java
+demo/WireFrame/Model3D.class
+demo/WireFrame/ThreeD.class
+demo/WireFrame/ThreeD.java
+demo/WireFrame/example1.html
+demo/WireFrame/example2.html
+demo/WireFrame/example3.html
+demo/WireFrame/example4.html
+demo/WireFrame/models/cube.obj
+demo/WireFrame/models/dinasaur.obj
+demo/WireFrame/models/hughes_500.obj
+demo/WireFrame/models/knoxS.obj
+demo/awt-1.1/eventmodel/Box.class
+demo/awt-1.1/eventmodel/Box.java
+demo/awt-1.1/eventmodel/Click0$1.class
+demo/awt-1.1/eventmodel/Click0$2.class
+demo/awt-1.1/eventmodel/Click0.class
+demo/awt-1.1/eventmodel/Click0.java
+demo/awt-1.1/eventmodel/Click1$1.class
+demo/awt-1.1/eventmodel/Click1$2.class
+demo/awt-1.1/eventmodel/Click1$TargetListener.class
+demo/awt-1.1/eventmodel/Click1.class
+demo/awt-1.1/eventmodel/Click1.java
+demo/awt-1.1/eventmodel/Click2$1.class
+demo/awt-1.1/eventmodel/Click2$2.class
+demo/awt-1.1/eventmodel/Click2$TargetListener.class
+demo/awt-1.1/eventmodel/Click2.class
+demo/awt-1.1/eventmodel/Click2.java
+demo/awt-1.1/eventmodel/Click3$1.class
+demo/awt-1.1/eventmodel/Click3$2.class
+demo/awt-1.1/eventmodel/Click3$3.class
+demo/awt-1.1/eventmodel/Click3$TargetListener.class
+demo/awt-1.1/eventmodel/Click3.class
+demo/awt-1.1/eventmodel/Click3.java
+demo/awt-1.1/eventmodel/ColumnOfBoxes.class
+demo/awt-1.1/eventmodel/ColumnOfBoxes.java
+demo/awt-1.1/eventmodel/index.html
+demo/awt-1.1/index.html
+demo/awt-1.1/lightweight/Gauge/ExampleApplet.jar
+demo/awt-1.1/lightweight/Gauge/ExampleApplet.zip
+demo/awt-1.1/lightweight/Gauge/Switcher.class
+demo/awt-1.1/lightweight/Gauge/actual/DoubleBufferPanel.class
+demo/awt-1.1/lightweight/Gauge/actual/DoubleBufferPanel.java
+demo/awt-1.1/lightweight/Gauge/actual/ExampleApplet.class
+demo/awt-1.1/lightweight/Gauge/actual/ExampleApplet.java
+demo/awt-1.1/lightweight/Gauge/actual/Gauge.class
+demo/awt-1.1/lightweight/Gauge/actual/Gauge.java
+demo/awt-1.1/lightweight/Gauge/actual/GaugeThread.class
+demo/awt-1.1/lightweight/Gauge/actual/PrettyPanel.class
+demo/awt-1.1/lightweight/Gauge/actual/images/mandrill.jpg
+demo/awt-1.1/lightweight/Gauge/alternative/Compatibility.class
+demo/awt-1.1/lightweight/Gauge/alternative/Compatibility.java
+demo/awt-1.1/lightweight/Gauge/alternative/ExampleApplet.class
+demo/awt-1.1/lightweight/Gauge/alternative/ExampleApplet.gif
+demo/awt-1.1/lightweight/Gauge/alternative/ExampleApplet.java
+demo/awt-1.1/lightweight/Gauge/alternative/ImageDisplayer.class
+demo/awt-1.1/lightweight/Gauge/alternative/ImageDisplayer.java
+demo/awt-1.1/lightweight/Gauge/alternative/PictureFrame.class
+demo/awt-1.1/lightweight/Gauge/alternative/PictureFrame.java
+demo/awt-1.1/lightweight/Gauge/example.html
+demo/awt-1.1/lightweight/OpenlookButtons/ExampleApplet.jar
+demo/awt-1.1/lightweight/OpenlookButtons/ExampleApplet.zip
+demo/awt-1.1/lightweight/OpenlookButtons/Switcher.class
+demo/awt-1.1/lightweight/OpenlookButtons/actual/ExampleActionListener.class
+demo/awt-1.1/lightweight/OpenlookButtons/actual/ExampleApplet.class
+demo/awt-1.1/lightweight/OpenlookButtons/actual/ExampleApplet.java
+demo/awt-1.1/lightweight/OpenlookButtons/actual/OpenlookButton.class
+demo/awt-1.1/lightweight/OpenlookButtons/actual/OpenlookButton.java
+demo/awt-1.1/lightweight/OpenlookButtons/actual/OpenlookButtonListener.class
+demo/awt-1.1/lightweight/OpenlookButtons/actual/images/scott.jpg
+demo/awt-1.1/lightweight/OpenlookButtons/alternative/Compatibility.class
+demo/awt-1.1/lightweight/OpenlookButtons/alternative/Compatibility.java
+demo/awt-1.1/lightweight/OpenlookButtons/alternative/ExampleApplet.class
+demo/awt-1.1/lightweight/OpenlookButtons/alternative/ExampleApplet.gif
+demo/awt-1.1/lightweight/OpenlookButtons/alternative/ExampleApplet.java
+demo/awt-1.1/lightweight/OpenlookButtons/alternative/ImageDisplayer.class
+demo/awt-1.1/lightweight/OpenlookButtons/alternative/ImageDisplayer.java
+demo/awt-1.1/lightweight/OpenlookButtons/alternative/PictureFrame.class
+demo/awt-1.1/lightweight/OpenlookButtons/alternative/PictureFrame.java
+demo/awt-1.1/lightweight/OpenlookButtons/example.html
+demo/awt-1.1/lightweight/RoundButtons/ExampleApplet.jar
+demo/awt-1.1/lightweight/RoundButtons/ExampleApplet.zip
+demo/awt-1.1/lightweight/RoundButtons/Switcher.class
+demo/awt-1.1/lightweight/RoundButtons/actual/ExampleActionListener.class
+demo/awt-1.1/lightweight/RoundButtons/actual/ExampleApplet.class
+demo/awt-1.1/lightweight/RoundButtons/actual/ExampleApplet.java
+demo/awt-1.1/lightweight/RoundButtons/actual/RoundButton.class
+demo/awt-1.1/lightweight/RoundButtons/actual/RoundButton.java
+demo/awt-1.1/lightweight/RoundButtons/actual/images/scott.jpg
+demo/awt-1.1/lightweight/RoundButtons/alternative/Compatibility.class
+demo/awt-1.1/lightweight/RoundButtons/alternative/Compatibility.java
+demo/awt-1.1/lightweight/RoundButtons/alternative/Compatibility.java,v
+demo/awt-1.1/lightweight/RoundButtons/alternative/ExampleApplet.class
+demo/awt-1.1/lightweight/RoundButtons/alternative/ExampleApplet.gif
+demo/awt-1.1/lightweight/RoundButtons/alternative/ExampleApplet.java
+demo/awt-1.1/lightweight/RoundButtons/alternative/ExampleApplet.java,v
+demo/awt-1.1/lightweight/RoundButtons/alternative/ImageDisplayer.class
+demo/awt-1.1/lightweight/RoundButtons/alternative/ImageDisplayer.java
+demo/awt-1.1/lightweight/RoundButtons/alternative/ImageDisplayer.java,v
+demo/awt-1.1/lightweight/RoundButtons/alternative/PictureFrame.class
+demo/awt-1.1/lightweight/RoundButtons/alternative/PictureFrame.java
+demo/awt-1.1/lightweight/RoundButtons/alternative/PictureFrame.java,v
+demo/awt-1.1/lightweight/RoundButtons/example.html
+demo/awt-1.1/lightweight/Spinner/ExampleApplet.jar
+demo/awt-1.1/lightweight/Spinner/ExampleApplet.zip
+demo/awt-1.1/lightweight/Spinner/Switcher.class
+demo/awt-1.1/lightweight/Spinner/actual/ExampleApplet.class
+demo/awt-1.1/lightweight/Spinner/actual/ExampleApplet.java
+demo/awt-1.1/lightweight/Spinner/actual/Spinner.class
+demo/awt-1.1/lightweight/Spinner/actual/Spinner.java
+demo/awt-1.1/lightweight/Spinner/actual/SpinnerThread.class
+demo/awt-1.1/lightweight/Spinner/actual/images/orb.gif
+demo/awt-1.1/lightweight/Spinner/alternative/Compatibility.class
+demo/awt-1.1/lightweight/Spinner/alternative/Compatibility.java
+demo/awt-1.1/lightweight/Spinner/alternative/ExampleApplet.class
+demo/awt-1.1/lightweight/Spinner/alternative/ExampleApplet.gif
+demo/awt-1.1/lightweight/Spinner/alternative/ExampleApplet.java
+demo/awt-1.1/lightweight/Spinner/alternative/ImageDisplayer.class
+demo/awt-1.1/lightweight/Spinner/alternative/ImageDisplayer.java
+demo/awt-1.1/lightweight/Spinner/alternative/PictureFrame.class
+demo/awt-1.1/lightweight/Spinner/alternative/PictureFrame.java
+demo/awt-1.1/lightweight/Spinner/example.html
+demo/awt-1.1/lightweight/index.html
+demo/awt-1.1/symboltest/SymbolCanvas.class
+demo/awt-1.1/symboltest/SymbolTest$MyAdapter.class
+demo/awt-1.1/symboltest/SymbolTest.class
+demo/awt-1.1/symboltest/SymbolTest.java
+demo/awt-1.1/symboltest/index.html
+demo/i18n/Collate/CollationDetails.html
+demo/i18n/Collate/example1.html
+demo/i18n/DateTimeFormat/example1.html
+demo/i18n/MessageFormat/example1.html
+demo/i18n/NumberFormat/example1.html
+demo/i18n/TextBound/example1.html
+demo/i18n/code/BorderPanel.class
+demo/i18n/code/BorderPanel.java
+demo/i18n/code/ChoiceResource.class
+demo/i18n/code/ChoiceResource.java
+demo/i18n/code/ChoiceResource_da.class
+demo/i18n/code/ChoiceResource_da.java
+demo/i18n/code/ChoiceResource_de.class
+demo/i18n/code/ChoiceResource_de.java
+demo/i18n/code/ChoiceResource_en.class
+demo/i18n/code/ChoiceResource_en.java
+demo/i18n/code/ChoiceResource_fr.class
+demo/i18n/code/ChoiceResource_fr.java
+demo/i18n/code/ChoiceResource_it.class
+demo/i18n/code/ChoiceResource_it.java
+demo/i18n/code/ChoiceResource_ja.class
+demo/i18n/code/ChoiceResource_ja.java
+demo/i18n/code/CollateDemo.class
+demo/i18n/code/CollateDemo.java
+demo/i18n/code/CollateFrame.class
+demo/i18n/code/DateTimeDemo.class
+demo/i18n/code/DateTimeDemo.java
+demo/i18n/code/DateTimeFrame.class
+demo/i18n/code/DemoApplet.class
+demo/i18n/code/DemoApplet.java
+demo/i18n/code/MessageFormatDemo.class
+demo/i18n/code/MessageFormatDemo.java
+demo/i18n/code/MessageFormatFrame.class
+demo/i18n/code/NumberFormatDemo.class
+demo/i18n/code/NumberFormatDemo.java
+demo/i18n/code/NumberFormatFrame.class
+demo/i18n/code/TextBoundDemo.class
+demo/i18n/code/TextBoundDemo.java
+demo/i18n/code/TextBoundFrame.class
+demo/i18n/code/Utility.class
+demo/i18n/code/Utility.java
+demo/i18n/code/XBorderPanel.class
+demo/jre/jre.c
+demo/jre/jre.h
+demo/jre/jre_main.c
+demo/jre/solaris/GNUmakefile
+demo/jre/solaris/jre.sh
+demo/jre/solaris/jre_md.c
+demo/jre/solaris/jre_md.h
+include/StubPreamble.h
+include/alloc_cache.h
+include/bool.h
+include/breakpoints.h
+include/byteorder.h
+include/common_exceptions.h
+include/config.h
+include/debug.h
+include/decode.h
+include/exceptions.h
+include/finalize.h
+include/gc.h
+include/green_threads/include/context.h
+include/green_threads/include/context_md.h
+include/green_threads/include/internal_md.h
+include/green_threads/include/monitor_md.h
+include/green_threads/include/queue.h
+include/green_threads/include/schedule.h
+include/green_threads/include/threads_md.h
+include/interpreter.h
+include/javaString.h
+include/java_lang_ClassLoader.h
+include/java_lang_String.h
+include/java_lang_Thread.h
+include/java_lang_ThreadGroup.h
+include/jcov.h
+include/jmath.h
+include/jni.h
+include/log.h
+include/monitor.h
+include/monitor_cache.h
+include/native.h
+include/netbsd/byteorder_md.h
+include/netbsd/gc_md.h
+include/netbsd/io_md.h
+include/netbsd/jmath_md.h
+include/netbsd/jni_md.h
+include/netbsd/oobj_md.h
+include/netbsd/path_md.h
+include/netbsd/prof_md.h
+include/netbsd/sysmacros_md.h
+include/netbsd/timeval_md.h
+include/netbsd/typedefs_md.h
+include/oobj.h
+include/path.h
+include/profile.h
+include/reflect.h
+include/selftest.h
+include/signature.h
+include/sys_api.h
+include/threads.h
+include/timeval.h
+include/tree.h
+include/typecodes.h
+include/typedefs.h
+include/utf.h
+include/verify.h
+include/wrap.h
+include/zip.h
+index.html
+lib/appletviewer.properties
+lib/awt.properties
+lib/classes.zip
+lib/content-types.properties
+lib/font.properties
+lib/font.properties.cs
+lib/font.properties.el
+lib/font.properties.hu
+lib/font.properties.ja
+lib/font.properties.ko
+lib/font.properties.lt
+lib/font.properties.lv
+lib/font.properties.pl
+lib/font.properties.ru
+lib/font.properties.tr
+lib/font.properties.zh_EUC_CN
+lib/font.properties.zh_TW_Big5
+lib/font.properties.zh_TW_EUC_TW
+lib/i386/green_threads/libXm.so
+lib/i386/green_threads/libXm.so.1.2
+lib/i386/green_threads/libagent.so
+lib/i386/green_threads/libagent_g.so
+lib/i386/green_threads/libawt.so
+lib/i386/green_threads/libawt.so.1.1.6
+lib/i386/green_threads/libawt_g.so
+lib/i386/green_threads/libawt_g.so.1.1.6
+lib/i386/green_threads/libjava.so
+lib/i386/green_threads/libjava.so.1.1.6
+lib/i386/green_threads/libjava_g.so
+lib/i386/green_threads/libjava_g.so.1.1.6
+lib/i386/green_threads/libjpeg.so
+lib/i386/green_threads/libjpeg_g.so
+lib/i386/green_threads/libmath.so
+lib/i386/green_threads/libmath_g.so
+lib/i386/green_threads/libmmedia.so
+lib/i386/green_threads/libmmedia_g.so
+lib/i386/green_threads/libnet.so
+lib/i386/green_threads/libnet_g.so
+lib/i386/green_threads/libsysresource.so
+lib/i386/green_threads/libsysresource_g.so
+lib/i386/green_threads/libtawt.so
+lib/i386/green_threads/libtawt_g.so
+lib/i386/green_threads/libzip.so
+lib/i386/green_threads/libzip_g.so
+lib/psfont.properties.ja
+lib/rmic.properties
+lib/security/java.security
+lib/serialver.properties
+src.zip
+@dirrm bin/i386/green_threads
+@dirrm bin/i386
+@dirrm bin
+@dirrm demo/Animator/1.0.2/audio
+@dirrm demo/Animator/1.0.2/images/Beans
+@dirrm demo/Animator/1.0.2/images/SimpleAnimation
+@dirrm demo/Animator/1.0.2/images
+@dirrm demo/Animator/1.0.2
+@dirrm demo/Animator/1.1/audio
+@dirrm demo/Animator/1.1/images/Beans
+@dirrm demo/Animator/1.1/images/SimpleAnimation
+@dirrm demo/Animator/1.1/images
+@dirrm demo/Animator/1.1
+@dirrm demo/Animator
+@dirrm demo/ArcTest/1.0.2
+@dirrm demo/ArcTest/1.1
+@dirrm demo/ArcTest
+@dirrm demo/BarChart/1.0.2
+@dirrm demo/BarChart/1.1
+@dirrm demo/BarChart
+@dirrm demo/Blink/1.0.2
+@dirrm demo/Blink/1.1
+@dirrm demo/Blink
+@dirrm demo/CardTest/1.0.2
+@dirrm demo/CardTest/1.1
+@dirrm demo/CardTest
+@dirrm demo/Clock/1.0.2
+@dirrm demo/Clock
+@dirrm demo/DitherTest/1.0.2
+@dirrm demo/DitherTest/1.1
+@dirrm demo/DitherTest
+@dirrm demo/DrawTest/1.0.2
+@dirrm demo/DrawTest/1.1
+@dirrm demo/DrawTest
+@dirrm demo/Fractal/1.0.2
+@dirrm demo/Fractal/1.1
+@dirrm demo/Fractal
+@dirrm demo/GraphLayout/audio
+@dirrm demo/GraphLayout
+@dirrm demo/GraphicsTest
+@dirrm demo/ImageMap/audio
+@dirrm demo/ImageMap/images
+@dirrm demo/ImageMap
+@dirrm demo/JumpingBox/1.0.2/sounds
+@dirrm demo/JumpingBox/1.0.2
+@dirrm demo/JumpingBox/1.1/sounds
+@dirrm demo/JumpingBox/1.1
+@dirrm demo/JumpingBox
+@dirrm demo/MoleculeViewer/models
+@dirrm demo/MoleculeViewer
+@dirrm demo/NervousText/1.0.2
+@dirrm demo/NervousText/1.1
+@dirrm demo/NervousText
+@dirrm demo/SimpleGraph/1.0.2
+@dirrm demo/SimpleGraph/1.1
+@dirrm demo/SimpleGraph
+@dirrm demo/SortDemo/1.0.2
+@dirrm demo/SortDemo/1.1
+@dirrm demo/SortDemo
+@dirrm demo/SpreadSheet
+@dirrm demo/TicTacToe/1.0.2/audio
+@dirrm demo/TicTacToe/1.0.2/images
+@dirrm demo/TicTacToe/1.0.2
+@dirrm demo/TicTacToe/1.1/audio
+@dirrm demo/TicTacToe/1.1/images
+@dirrm demo/TicTacToe/1.1
+@dirrm demo/TicTacToe
+@dirrm demo/WireFrame/models
+@dirrm demo/WireFrame
+@dirrm demo/awt-1.1/eventmodel
+@dirrm demo/awt-1.1/lightweight/Gauge/actual/images
+@dirrm demo/awt-1.1/lightweight/Gauge/actual
+@dirrm demo/awt-1.1/lightweight/Gauge/alternative
+@dirrm demo/awt-1.1/lightweight/Gauge
+@dirrm demo/awt-1.1/lightweight/OpenlookButtons/actual/images
+@dirrm demo/awt-1.1/lightweight/OpenlookButtons/actual
+@dirrm demo/awt-1.1/lightweight/OpenlookButtons/alternative
+@dirrm demo/awt-1.1/lightweight/OpenlookButtons
+@dirrm demo/awt-1.1/lightweight/RoundButtons/actual/images
+@dirrm demo/awt-1.1/lightweight/RoundButtons/actual
+@dirrm demo/awt-1.1/lightweight/RoundButtons/alternative
+@dirrm demo/awt-1.1/lightweight/RoundButtons
+@dirrm demo/awt-1.1/lightweight/Spinner/actual/images
+@dirrm demo/awt-1.1/lightweight/Spinner/actual
+@dirrm demo/awt-1.1/lightweight/Spinner/alternative
+@dirrm demo/awt-1.1/lightweight/Spinner
+@dirrm demo/awt-1.1/lightweight
+@dirrm demo/awt-1.1/symboltest
+@dirrm demo/awt-1.1
+@dirrm demo/i18n/Collate
+@dirrm demo/i18n/DateTimeFormat
+@dirrm demo/i18n/MessageFormat
+@dirrm demo/i18n/NumberFormat
+@dirrm demo/i18n/TextBound
+@dirrm demo/i18n/code
+@dirrm demo/i18n
+@dirrm demo/jre/solaris
+@dirrm demo/jre
+@dirrm demo
+@dirrm include/green_threads/include
+@dirrm include/green_threads
+@dirrm include/netbsd
+@dirrm include
+@dirrm lib/i386/green_threads
+@dirrm lib/i386
+@dirrm lib/security
+@dirrm lib
