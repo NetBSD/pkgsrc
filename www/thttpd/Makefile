@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/06/16 19:10:25 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2002/06/16 19:12:13 wiz Exp $
 
 DISTNAME=	thttpd-2.23beta1
 PKGNAME=	thttpd-2.23.0.1
@@ -24,16 +24,16 @@ RCD_SCRIPTS=	thttpd
 pre-configure:
 	${MV} ${WRKSRC}/extras/htpasswd.1 ${WRKSRC}/extras/thtpasswd.1
 	${MV} ${WRKSRC}/extras/htpasswd.c ${WRKSRC}/extras/thtpasswd.c
-	for file in thttpd.8 extras/Makefile.in extras/thtpasswd.c; do	\
-		${MV} -f ${WRKSRC}/$${file} ${WRKSRC}/$${file}.bak;	\
+	for FILE in thttpd.8 extras/Makefile.in extras/thtpasswd.c; do	\
+		${MV} -f ${WRKSRC}/$${FILE} ${WRKSRC}/$${FILE}.bak;	\
 		${SED}	-e "s,\.htpasswd,XXX,g;s,htpasswd,thtpasswd,g;s,XXX,.htpasswd,g" \
-			${WRKSRC}/$${file}.bak > ${WRKSRC}/$${file};	\
+			${WRKSRC}/$${FILE}.bak > ${WRKSRC}/$${FILE};	\
 	done
 
 post-build:
-	for file in thttpd.conf thttpd.sh; do				\
+	for FILE in thttpd.conf thttpd.sh; do				\
 		${SED} ${FILES_SUBST_SED}				\
-			${FILESDIR}/$${file} > ${WRKDIR}/$${file};	\
+			${FILESDIR}/$${FILE} > ${WRKDIR}/$${FILE};	\
 	done
 
 pre-install:
