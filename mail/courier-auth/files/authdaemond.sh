@@ -1,11 +1,11 @@
 #! /bin/sh
 #
-# $NetBSD: authdaemond.sh,v 1.4 2002/06/22 15:48:00 grant Exp $
+# $NetBSD: authdaemond.sh,v 1.5 2002/07/18 01:48:09 lukem Exp $
 #
 # Courier user authentication daemon
 #
 # PROVIDE: authdaemond
-# REQUIRE: DAEMON
+# REQUIRE: LOGIN
 
 if [ -f /etc/rc.subr ]
 then
