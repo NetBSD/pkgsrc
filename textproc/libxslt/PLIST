@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2003/05/20 05:46:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2003/07/11 23:43:53 wiz Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -26,12 +26,12 @@ lib/libexslt.a
 lib/libexslt.la
 lib/libexslt.so
 lib/libexslt.so.7
-lib/libexslt.so.7.20
+lib/libexslt.so.7.21
 lib/libxslt.a
 lib/libxslt.la
 lib/libxslt.so
 lib/libxslt.so.1
-lib/libxslt.so.1.30
+lib/libxslt.so.1.31
 lib/libxsltbreakpoint.a
 lib/libxsltbreakpoint.la
 lib/libxsltbreakpoint.so
@@ -40,8 +40,8 @@ lib/libxsltbreakpoint.so.1.8
 lib/pkgconfig/libxslt.pc
 lib/xsltConf.sh
 man/man1/xsltproc.1
-man/man4/libexslt.4
-man/man4/libxslt.4
+man/man3/libexslt.3
+man/man3/libxslt.3
 share/aclocal/libxslt.m4
 share/doc/html/libxslt/API.html
 share/doc/html/libxslt/APIchunk0.html
@@ -80,7 +80,6 @@ share/doc/html/libxslt/libxslt-lib.html
 share/doc/html/libxslt/libxslt-namespaces.html
 share/doc/html/libxslt/libxslt-notes.html
 share/doc/html/libxslt/libxslt-numbersInternals.html
-share/doc/html/libxslt/libxslt-numbersinternals.html
 share/doc/html/libxslt/libxslt-pattern.html
 share/doc/html/libxslt/libxslt-templates.html
 share/doc/html/libxslt/libxslt-transform.html
