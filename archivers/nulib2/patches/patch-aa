@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/11 03:01:02 tv Exp $
+
+--- configure.orig	Sat Mar 10 21:41:17 2001
++++ configure	Sat Mar 10 21:42:16 2001
+@@ -7,6 +7,9 @@
+ # This configure script is free software; the Free Software Foundation
+ # gives unlimited permission to copy, distribute and modify it.
+ 
++# XXX - until pkgsrc has a sane way to invoke multiple "configure" scripts
++(cd ../nufxlib-101 && ./configure ${1+$@})
++
+ # Defaults:
+ ac_help=
+ ac_default_prefix=/usr/local
