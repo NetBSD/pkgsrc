@@ -1,6 +1,9 @@
-$NetBSD: patch-ad,v 1.4 2002/06/15 21:27:25 wiz Exp $
+$NetBSD: patch-ad,v 1.5 2002/06/15 21:57:54 dmcmahill Exp $
 
---- main.c.orig	Sat Nov  4 23:48:33 1995
+the addition of the -p flag is required for non-PC machines which
+might use a different serial device.
+
+--- main.c.orig	Sat Nov  4 17:48:33 1995
 +++ main.c
 @@ -5,7 +5,6 @@
  #include <stdlib.h>
@@ -48,3 +51,19 @@ $NetBSD: patch-ad,v 1.4 2002/06/15 21:27:25 wiz Exp $
                  exit(3);
               }
               break;
+@@ -130,6 +129,15 @@
+              printf("Invalid serial port number!!!\n  Remember:  com1 is 0, com2 is 1, etc.\n");
+              return(-1);
+        }
++    } else if (argc == 3) {
++	if (strcmp("-p",argv[1]) != 0) {
++		perror("Invalid flag");
++		exit(3);
++	}
++   	if ((fdSer = open(argv[2], O_RDWR )) < 0) {
++		perror("open of serial port failed");
++		exit(3);
++	}
+     } else {
+        printf("usage:  yaesu [port #]\n");
+        exit(3);
