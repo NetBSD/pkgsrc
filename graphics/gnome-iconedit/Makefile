@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/07/14 13:49:11 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/08 07:53:46 jlam Exp $
 #
 
 DISTNAME=		gnome-iconedit-1.2.0
@@ -9,19 +9,18 @@ MASTER_SITES=		http://www.webtribe.net/i/iain/
 MAINTAINER=		wiz@netbsd.org
 COMMENT=		icon editor based on GNOME libraries
 
-BUILD_USES_MSGFMT=	yes
+BUILD_USES_MSGFMT=	YES
 
-GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_GMAKE=		YES
+GNU_CONFIGURE=		YES
 
 post-configure:
-	cd ${WRKSRC}/src && ${GMAKE} clean
+	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} clean
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/oaf/buildlink.mk"
-.include "../../graphics/gdk-pixbuf/buildlink.mk"
-.include "../../x11/gnome-libs/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
