@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.15 1999/12/11 23:21:51 jdolecek Exp $
+$NetBSD: patch-aa,v 1.16 2000/02/29 19:43:59 jlam Exp $
 
 The ossaudio check pulled into KDE. 1999-12-11 jdolecek
 --- configure.old	Tue Sep  7 17:21:06 1999
@@ -83,15 +83,6 @@ The ossaudio check pulled into KDE. 1999-12-11 jdolecek
    cat >> confdefs.h <<EOF
  #define HAVE_PAM_LIB 1
  EOF
-@@ -5124,7 +5125,7 @@
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-   ac_save_LIBS="$LIBS"
--LIBS="$all_libraries -lgif -lX11 $LIBSOCKET"
-+LIBS="$all_libraries -lungif -lX11 $LIBSOCKET"
- cat > conftest.$ac_ext <<EOF
- #line 5130 "configure"
- #include "confdefs.h"
 @@ -6166,6 +6167,46 @@
  
  
