@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/03/07 12:00:29 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.36 2002/07/06 13:29:09 tron Exp $
 
 DISTNAME=		a2ps-4.13b
 PKGNAME=		a2ps-4.13.0.2
@@ -12,7 +11,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www-inf.enst.fr/~demaille/a2ps/
 COMMENT=		Formats an ascii file for printing on a postscript printer
 
-DEPENDS+=		papersize-1.0.2:../../print/papersize
+DEPENDS+=		papersize>=1.0.2:../../print/papersize
 DEPENDS+=		psutils-1.17:../../print/psutils
 
 STRIP=			# empty
