@@ -1,3 +1,5 @@
+$NetBSD: patch-bb,v 1.2 1999/05/09 21:12:33 tron Exp $
+
 *** All/freebsd/Makefile.include.orig	Mon Dec 30 17:18:49 1996
 --- All/freebsd/Makefile.include	Mon Dec 30 17:19:46 1996
 ***************
