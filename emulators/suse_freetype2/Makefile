@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/11 19:41:39 cjep Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/14 11:31:11 xtraeme Exp $
 
 DISTNAME=		freetype2
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
@@ -14,7 +14,7 @@ COMMENT=		Linux compatibility package for the FreeType2 library
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
 
-ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc
+ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc FreeBSD-*-i386
 
 USE_BUILDLINK2=		YES
 NO_BUILD=		YES
