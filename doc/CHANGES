@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2119 2003/05/02 07:58:53 zuntum Exp $
+$NetBSD: CHANGES,v 1.2120 2003/05/02 08:05:22 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1823,3 +1823,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated socks4 to 2.2nb1 [jmmv 2003-05-01]
 	Updated newscache to 0.99.17nb1 [jmmv 2003-05-02]
 	Updated ekg to 1.0 [zuntum 2003-05-02]
+	Added sigrot-1.2 [jmmv 2003-05-02]
