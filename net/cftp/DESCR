@@ -1,4 +1,5 @@
-CFTP is used to transfer files from one computer to another via the
-FTP protocol.  It's advantages over most standard ftp clients is its
-termcap-based fullscreen representation of the remote directory tree,
-providing a compact overview of the remote server's contents.
+CFTP is used to transfer files from one computer to another via
+the FTP or SFTP (via ssh) protocol.  It's advantages over most
+standard ftp clients is its termcap-based fullscreen representation
+of the remote directory tree, providing a compact overview of the
+remote server's contents.
