@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.10 2002/04/04 07:48:25 jlam Exp $
+$NetBSD: patch-ac,v 1.11 2002/04/05 16:27:28 jlam Exp $
 
---- doc/Makefile.orig	Wed Aug 29 15:14:39 2001
+--- doc/Makefile.orig	Thu Feb  7 04:29:35 2002
 +++ doc/Makefile
-@@ -68,7 +68,7 @@
+@@ -70,7 +70,7 @@
  
  install: all installdirs
  ifdef found_html
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.10 2002/04/04 07:48:25 jlam Exp $
  endif
  ifdef found_man
  	for file in man1/*.1 man$(sqlmansectnum)/*.$(sqlmansect) ; do \
-@@ -79,7 +79,7 @@
+@@ -81,7 +81,7 @@
  
  installdirs:
  ifdef found_html
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.10 2002/04/04 07:48:25 jlam Exp $
  endif
  ifdef found_man
  	$(mkinstalldirs) $(addprefix $(DESTDIR)$(mandir)/man, 1 $(sqlmansectnum))
-@@ -88,7 +88,7 @@
+@@ -90,7 +90,7 @@
  
  uninstall:
  ifdef found_html
