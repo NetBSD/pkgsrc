@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/15 20:40:56 kei Exp $
+lib/X11/fonts/local/10x20b.pcf.gz
+lib/X11/fonts/local/10x20m.pcf.gz
+lib/X11/fonts/local/10x20L2b.pcf.gz
+lib/X11/fonts/local/10x20L2m.pcf.gz
+lib/X11/fonts/local/10x20L3b.pcf.gz
+lib/X11/fonts/local/10x20L3m.pcf.gz
+lib/X11/fonts/local/10x20L9b.pcf.gz
+lib/X11/fonts/local/10x20L9m.pcf.gz
+lib/X11/fonts/local/10x20rkb.pcf.gz
+lib/X11/fonts/local/10x20rkm.pcf.gz
+lib/X11/fonts/local/ipa-10x20b.pcf.gz
+lib/X11/fonts/local/ipa-10x20m.pcf.gz
+lib/X11/fonts/local/k20b.pcf.gz
+lib/X11/fonts/local/k20m.pcf.gz
+lib/X11/fonts/local/vk20b.pcf.gz
+lib/X11/fonts/local/vk20m.pcf.gz
+share/doc/README.Kappa20
+share/examples/fonts.alias.Kappa20
