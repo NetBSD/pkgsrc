@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 1999/04/24 16:17:40 tron Exp $
+# $NetBSD: Makefile,v 1.39 1999/04/24 18:33:08 tron Exp $
 #
 
 DISTNAME=	ImageMagick-4.2.2
@@ -14,6 +14,11 @@ DEPENDS+=	mpeg2codec-1.2:../../graphics/mpeg2codec
 DEPENDS+=	png-1.0.3:../../graphics/png
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 
+# "cc" on 1.3/1.3.x ELF systems doesn't recognize "-R" option.
+.if !exists(/usr/bin/c89)
+NOT_FOR_ARCHS=	alpha mips powerpc
+.endif
+
 pre-configure:
 .if exists(/usr/lib/libbz2.a)
 		@echo >${WRKSRC}/bzlib.tmpl "#define HasBZLIB"
@@ -26,10 +31,5 @@ MIRROR_DISTFILE= no
 USE_IMAKE=	yes
 XMKMF=		${MAKE_ENV} xmkmf -a
 MAKE_ENV+=	LOCALBASE=${LOCALBASE} PREFIX=${PREFIX}
-
-GCC_VERSION!=  gcc --version
-.if (${GCC_VERSION:C/-.*$$//} != egcs)
-NOT_FOR_ARCHS=	alpha pmax
-.endif
 
 .include "../../mk/bsd.pkg.mk"
