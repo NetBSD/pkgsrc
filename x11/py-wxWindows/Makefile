@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/04/24 22:47:00 snj Exp $
+# $NetBSD: Makefile,v 1.29 2004/06/30 23:51:21 recht Exp $
 #
 
 DISTNAME=	wxPythonSrc-2.4.2.4
@@ -34,6 +34,7 @@ PYSETUPBUILDARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1 ${WXARG}
 PYSETUPINSTALLARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1 ${WXARG}
 PYBINMODULE=	yes
 
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
