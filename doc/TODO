@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1156 2003/12/10 22:40:30 heinz Exp $
+$NetBSD: TODO,v 1.1157 2003/12/11 00:06:29 heinz Exp $
 
 Suggested new packages
 ======================
@@ -312,6 +312,7 @@ Suggested package updates
 	o snes9x-1.42
 	o snort-2.0.5
 	o sodipodi-0.33
+	o spamassassin-2.61 [heinz]
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
