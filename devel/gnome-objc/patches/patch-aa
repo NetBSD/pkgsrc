@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/15 17:11:59 rh Exp $
+
+--- Makefile.in.orig	Mon Sep 11 22:10:01 2000
++++ Makefile.in
+@@ -478,10 +478,10 @@
+ @MAINT@	cd macros && $(MAKE) macros.dep
+ 
+ obGnomeConf.sh: obGnomeConf.sh.in Makefile
+-	sed -e 's,\@OBGNOME_LIBDIR\@,$(OBGNOME_LIBDIR),g' \
+-	    -e 's,\@OBGNOME_INCLUDEDIR\@,$(OBGNOME_INCLUDEDIR),g' \
+-	    -e 's,\@OBGNOME_LIBS\@,$(OBGNOME_LIBS),g' \
+-	    -e 's,\@OBGTK_LIBS\@,$(OBGTK_LIBS),g' \
++	sed -e 's:\@OBGNOME_LIBDIR\@:$(OBGNOME_LIBDIR):g' \
++	    -e 's:\@OBGNOME_INCLUDEDIR\@:$(OBGNOME_INCLUDEDIR):g' \
++	    -e 's:\@OBGNOME_LIBS\@:$(OBGNOME_LIBS):g' \
++	    -e 's:\@OBGTK_LIBS\@:$(OBGTK_LIBS):g' \
+ 	      < $(srcdir)/obGnomeConf.sh.in > obGnomeConf.tmp \
+ 	  && mv obGnomeConf.tmp obGnomeConf.sh
+ 
