@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/02/14 18:26:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/18 16:58:36 minskim Exp $
 #
 
 DISTNAME=	pygtk-2.0.0
@@ -15,7 +15,7 @@ COMMENT=	Python bindings for GTK+2
 CONFLICTS=	${PYPKGPREFIX}-gtk<0.6.10
 
 PY_PATCHPLIST=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 PKGCONFIG_OVERRIDE+=	pygtk-2.0.pc.in
 GNU_CONFIGURE=	YES
@@ -24,12 +24,13 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
 BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 
-.include "../../devel/libglade2/buildlink2.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
-.include "../../math/py-Numeric/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
-.include "../../x11/gtkglarea2/buildlink2.mk"
+.include "../../math/py-Numeric/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtkglarea2/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
