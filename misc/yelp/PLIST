@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/01 18:48:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/05/15 14:28:34 jmmv Exp $
 bin/gnome-help
 bin/yelp
 lib/bonobo/servers/GNOME_Yelp.server
 share/applications/yelp.desktop
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/yelp.mo
@@ -25,6 +26,7 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/yelp.mo
@@ -113,5 +115,5 @@ share/yelp/ui/yelp.glade
 @dirrm share/yelp
 @dirrm share/sgml/docbook/yelp
 @comment in docbook: @dirrm share/sgml/docbook
-@comment in gnome2-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/applications
 @comment in libbonobo: @dirrm lib/bonobo/servers
