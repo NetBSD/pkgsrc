@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/02/10 12:54:27 frueauf Exp $
+
+--- conf/Make.conf.in.orig	Tue May 12 13:48:45 1998
++++ conf/Make.conf.in	Wed Jan  6 17:54:31 1999
+@@ -58,6 +58,7 @@
+ # BSD install
+ INSTALL=@INSTALL@
+ INSTALL_PROGRAM=@INSTALL_PROGRAM@
++INSTALL_SCRIPT=@INSTALL_SCRIPT@
+ INSTALL_DATA=@INSTALL_DATA@
+ MKINSTALLDIRS=@MKINSTALLDIRS@
+ 
