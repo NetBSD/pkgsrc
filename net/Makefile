@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2000/02/22 04:00:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.114 2000/02/22 04:41:21 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -9,7 +9,7 @@
 #    SUBDIR += ascend-radius
     SUBDIR += batchftp
 #    SUBDIR += bb
-    SUBDIR += beroftpd
+#   SUBDIR += beroftpd		# Superceded by latest wu-ftpd
     SUBDIR += bind4
     SUBDIR += bind8
     SUBDIR += bind9
@@ -148,7 +148,7 @@
     SUBDIR += wget
     SUBDIR += wmpload
     SUBDIR += wu-ftpd
-#    SUBDIR += wu-ftpd-vr
+#    SUBDIR += wu-ftpd-vr		# Superceded by latest wu-ftpd
     SUBDIR += xarchie
     SUBDIR += xchat
     SUBDIR += xipdump
