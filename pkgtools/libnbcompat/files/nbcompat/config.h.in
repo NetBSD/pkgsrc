@@ -70,12 +70,6 @@
 /* Define to 1 if you have the `gid_from_group' function. */
 #undef HAVE_GID_FROM_GROUP
 
-/* Define to 1 if you have the `glob' function. */
-#undef HAVE_GLOB
-
-/* Define to 1 if you have the <glob.h> header file. */
-#undef HAVE_GLOB_H
-
 /* Define to 1 if you have the `group_from_gid' function. */
 #undef HAVE_GROUP_FROM_GID
 
@@ -157,9 +151,6 @@
 
 /* Define to 1 if the `getopt_long' function is built into the library. */
 #undef HAVE_NBCOMPAT_GETOPT_LONG
-
-/* Define to 1 if the `glob' function is built into the library. */
-#undef HAVE_NBCOMPAT_GLOB
 
 /* Define to 1 if the `MD5Init' function is built into the library. */
 #undef HAVE_NBCOMPAT_MD5INIT
