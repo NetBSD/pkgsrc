@@ -1,7 +1,5 @@
-$NetBSD: patch-aa,v 1.11 1998/08/29 21:32:04 mycroft Exp $
-
 --- makefile.unix.orig	Sun Aug 23 17:44:39 1998
-+++ makefile.unix	Fri Aug 28 23:42:40 1998
++++ makefile.unix	Mon Aug 31 04:03:21 1998
 @@ -38,7 +38,7 @@
  # GNU MAKE is MANDATORY !!!
  # so please give me the path...
@@ -68,12 +66,23 @@ $NetBSD: patch-aa,v 1.11 1998/08/29 21:32:04 mycroft Exp $
  
  # *** When using timer, you should provide the frequency to generate audio sample
  # frames in your system. See readme.unix notes about these item
-@@ -208,14 +212,14 @@
+@@ -186,7 +190,7 @@
+ # note: xwindows is the only one supported on all platforms
+ 
+ ### normal X-windows
+-DISPLAY_METHOD = xwindows
++#DISPLAY_METHOD = xwindows
+ ### xfree86's DGA extension, only tested under linux
+ #DISPLAY_METHOD = xf86_dga
+ ### svgalib, only supported under linux
+@@ -208,14 +212,16 @@
  # *** If you haven't  the MIT-Shared Memory X Extensions, comment the following:
  # ( Test if available by mean of xdpyinfo command )
  # Comment it if not compiling  for normal xwindows
 -# MSHM	= -DUSE_MITSHM
++ifeq (${DISPLAY_METHOD},xwindows)
 +MSHM	= -DUSE_MITSHM
++endif
  
  # standard location for X11 
  # X11INC		= -I/usr/include/X11
@@ -86,7 +95,7 @@ $NetBSD: patch-aa,v 1.11 1998/08/29 21:32:04 mycroft Exp $
  # for Sun systems 
  # X11INC		= -I/usr/openwin/include
  # X11LIB		= -L/usr/openwin/lib
-@@ -236,11 +240,12 @@
+@@ -236,11 +242,12 @@
  ######## Alpha/Linux
  # ARCH  = linux_alpha
  ######## ix86/Linux
@@ -101,7 +110,7 @@ $NetBSD: patch-aa,v 1.11 1998/08/29 21:32:04 mycroft Exp $
  ######## Sparc/SunOS ( no sound )
  # ARCH  = sunos
  ######## ix86/Solaris
-@@ -275,7 +280,11 @@
+@@ -275,7 +282,11 @@
  DEFS.linux_alpha   = -Dlinux -DLSB_FIRST -DAXP_ASM -DACORN
  DEFS.linux_i386    = -Dlinux -DLSB_FIRST -DX86_ASM
  DEFS.FREEBSD       = -DLSB_FIRST -DX86_ASM -Dlinux -DFREEBSD_SOUND_WORKAROUND
@@ -114,7 +123,7 @@ $NetBSD: patch-aa,v 1.11 1998/08/29 21:32:04 mycroft Exp $
  DEFS.sunos	   = -Dsun -DCLOCKS_PER_SEC=1000000 -DACORN
  DEFS.solaris	   = -Dsun -DACORN 
  DEFS.solaris_i386  = -DLSB_FIRST -Dsun -Dsolaris
-@@ -293,12 +302,14 @@
+@@ -293,12 +304,14 @@
  LIBS.solaris_i386  = -lm -lnsl -lsocket
  LIBS.irix          = -lm -laudio
  LIBS.aix           = -lm -lUMSobj
