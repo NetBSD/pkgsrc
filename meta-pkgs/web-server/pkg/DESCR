@@ -1,0 +1,8 @@
+The web-server meta-package provides all the elements of a webserver,
+using other components of the NetBSD packages collection.
+
+This package does not contain anything by itself -- it is a
+"meta-package" that depends on other packages.  Its sole purpose is
+to require dependencies so users can install this package only and
+have all the other packages pulled in by the port/package dependency
+mechanism.
