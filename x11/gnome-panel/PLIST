@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2003/12/14 23:34:16 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/12/29 02:09:11 xtraeme Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/gnome-panel-preferences
-bin/gnome2-panel-screenshot
+bin/gnome-panel-screenshot
 bin/panel-test-applets
 include/panel-2.0/GNOME_Panel.h
 include/panel-2.0/panel-applet-gconf.h
@@ -217,10 +217,10 @@ share/gnome/help/workspace-switcher/zh_TW/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/zh_TW/figures/workspacelist_applet.png
 share/gnome/help/workspace-switcher/zh_TW/legal.xml
 share/gnome/help/workspace-switcher/zh_TW/workspace-switcher.xml
-share/gnome/panel2/gnome-panel-preferences.glade
-share/gnome/panel2/gnome-panel-screenshot.glade
-share/gnome/panel2/panel-properties-dialog.glade
-share/gnome/panel2/panel-run-dialog.glade
+share/gnome/panel/gnome-panel-preferences.glade
+share/gnome/panel/gnome-panel-screenshot.glade
+share/gnome/panel/panel-properties-dialog.glade
+share/gnome/panel/panel-run-dialog.glade
 share/idl/gnome-panel-2.0/GNOME_Panel.idl
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-panel-2.0.mo
@@ -347,7 +347,7 @@ share/pixmaps/panel-force-quit.png
 @dirrm share/omf/gnome-panel
 @comment in scrollkeeper: @dirrm share/omf
 @dirrm share/idl/gnome-panel-2.0
-@dirrm share/gnome/panel2
+@dirrm share/gnome/panel
 @dirrm share/gnome/help/workspace-switcher/zh_TW/figures
 @dirrm share/gnome/help/workspace-switcher/zh_TW
 @dirrm share/gnome/help/workspace-switcher/zh_CN/figures
