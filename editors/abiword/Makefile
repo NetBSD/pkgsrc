@@ -1,28 +1,21 @@
-# $NetBSD: Makefile,v 1.32 2001/07/02 08:07:08 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2001/08/10 04:50:08 jlam Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
-# be named "AbiWord Personal" or some name completely unlike AbiSource's
-# registered trademarks.
+# be named either "AbiWord Personal" or some name completely unlike
+# AbiSource's registered trademarks.
 
-DISTNAME=	abi-${ABIWORD_VERS}
+DISTNAME=	abiword-${ABIWORD_VERS}
 PKGNAME=	abiword-personal-${ABIWORD_VERS}
-ABIWORD_VERS=	0.7.14
+ABIWORD_VERS=	0.9.0
 CATEGORIES=	editors
-MASTER_SITES=	http://www.abisource.com/downloads/Version-${ABIWORD_VERS}/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=abiword/}
 DIST_SUBDIR=	abisuite
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=	abidistfiles-${ABIWORD_VERS}${EXTRACT_SUFX}
-DISTFILES+=	expat-${ABIWORD_VERS}${EXTRACT_SUFX}
-DISTFILES+=	psiconv-${ABIWORD_VERS}${EXTRACT_SUFX}
-DISTFILES+=	unixfonts-${ABIWORD_VERS}${EXTRACT_SUFX}
-DISTFILES+=	wv-${ABIWORD_VERS}${EXTRACT_SUFX}
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.abisource.com/
 COMMENT=	Open Source cross-platform word processor
 
-BUILD_DEPENDS+=	unzip-*:../../archivers/unzip
 DEPENDS+=	ispell-base-*:../../textproc/ispell-base
 
 USE_BUILDLINK_ONLY=	# defined
@@ -44,20 +37,31 @@ XLDFLAGS=	${LDFLAGS} -liconv
 
 MAKE_ENV+=	OS_CFLAGS="${OS_CFLAGS}"
 MAKE_ENV+=	XLDFLAGS="${XLDFLAGS}"
+MAKE_ENV+=	GLIB_CONFIG="${BUILDLINK_CONFIG_WRAPPER.glib}"
+MAKE_ENV+=	GTK_CONFIG="${BUILDLINK_CONFIG_WRAPPER.gtk}"
 
 MAKE_FLAGS+=	ABI_BUILD_VERSION="${ABIWORD_VERS}"
 MAKE_FLAGS+=	UNIX_CAN_BUILD_STATIC=0
 
-WRKSRC=		${WRKDIR}/abi
+WRKSRC=		${WRKDIR}/${DISTNAME}/abi
 
-post-extract:
-	${RM} -rf ${WRKSRC}/user/wp/help/images/CVS
+INSTALL_FILE=		${WRKDIR}/INSTALL
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+
+FILES_SUBST=		LN=${LN:Q}
+FILES_SUBST+=		MKDIR=${MKDIR:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		RMDIR=${RMDIR:Q}
+FILES_SUBST+=		TRUE=${TRUE:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
+pre-install:
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 
 post-install:
 	${CHMOD} -R a+r ${PREFIX}/share/AbiSuite
-	${RM} -f ${PREFIX}/share/AbiSuite/dictionary/american.hash
-	${LN} -sf ../../../lib/american.hash				\
-		${PREFIX}/share/AbiSuite/dictionary/american.hash
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../converters/libiconv/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"

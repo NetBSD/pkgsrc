@@ -1,0 +1,29 @@
+#! /bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2001/08/10 04:50:09 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+MKDIR="@MKDIR@"
+LN="@LN@"
+RM="@RM@"
+
+ABIDIR=${PKG_PREFIX}/share/AbiSuite
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+
+POST-INSTALL)
+	${MKDIR} ${ABIDIR}/dictionary
+	${RM} -f ${ABIDIR}/dictionary/american.hash
+	${LN} -sf ../../../lib/american.hash ${ABIDIR}/dictionary/american.hash
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

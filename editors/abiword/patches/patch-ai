@@ -1,13 +1,17 @@
-$NetBSD: patch-ai,v 1.4 2001/05/24 04:28:20 jlam Exp $
+$NetBSD: patch-ai,v 1.5 2001/08/10 04:50:09 jlam Exp $
 
---- ../psiconv/psiconv/generate_layout.c.orig	Mon Mar  5 22:46:15 2001
-+++ ../psiconv/psiconv/generate_layout.c
-@@ -78,7 +78,7 @@
-     return res;
-   if ((res = psiconv_write_color(buf,value->color)))
-     return res;
--  // Unknown byte
-+  /* Unknown byte */
-   return psiconv_write_u8(buf,1);
- }
+--- src/config/platforms/netbsd.mk.orig	Fri Jun  8 12:07:03 2001
++++ src/config/platforms/netbsd.mk
+@@ -75,9 +75,9 @@
+ # Linker flags
+ OS_DLLFLAGS		+=
  
+-GLIB_CONFIG		= glib-config
+-GTK_CONFIG		= gtk-config
+-GNOME_CONFIG    	= gnome-config
++#GLIB_CONFIG		= glib-config
++#GTK_CONFIG		= gtk-config
++#GNOME_CONFIG    	= gnome-config
+ 
+ # Shared library flags
+ MKSHLIB			= $(LD) $(DSO_LDOPTS) -soname $(@:$(OBJDIR)/%.so=%.so)

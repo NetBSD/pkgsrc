@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2001/08/10 04:50:09 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+RM="@RM@"
+RMDIR="@RMDIR@"
+TRUE="@TRUE@"
+
+ABIDIR=${PKG_PREFIX}/share/AbiSuite
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+
+POST-DEINSTALL)
+	${RM} -f ${ABIDIR}/dictionary/american.hash
+	${RMDIR} -p ${ABIDIR}/dictionary 2>/dev/null || ${TRUE}
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

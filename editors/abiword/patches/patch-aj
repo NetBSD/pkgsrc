@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.3 2001/08/10 04:50:09 jlam Exp $
+
+--- src/config/abi_defs.mk.orig	Wed Jul 18 09:01:58 2001
++++ src/config/abi_defs.mk
+@@ -584,7 +584,7 @@
+ ABI_OPTIONS  +=GnomeVFS:On
+ endif
+ 
+-GNOME_CFLAGS += $(shell glib-config --cflags)
++GNOME_CFLAGS += $(shell $(GLIB_CONFIG) --cflags)
+ 
+ # the bonobo target is known not to work properly yet
+ ifdef ABI_OPT_BONOBO
+@@ -614,7 +614,7 @@
+ ABI_OPT_GNOME=
+ GTK_CFLAGS	:=	$(shell $(GTK_CONFIG) --cflags)
+ GTK_LIBS	:=	$(shell $(GTK_CONFIG) --libs)
+-GLIB_CFLAGS     :=      $(shell glib-config --cflags)
++GLIB_CFLAGS     :=      $(shell $(GLIB_CONFIG) --cflags)
+ CFLAGS 		+=	$(GTK_CFLAGS) $(GLIB_CFLAGS)
+ EXTRA_LIBS	+=	$(GTK_LIBS)
+ #
