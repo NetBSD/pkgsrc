@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2002/08/25 19:22:13 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8 2002/09/20 21:26:30 jlam Exp $
 
 DISTNAME=	unixODBC-${ODBC_DIST_VERS}
 CATEGORIES=	databases
@@ -15,6 +15,7 @@ HOMEPAGE?=	http://www.unixodbc.org/
 ODBC_DIST_VERS=		2.0.11
 ODBC_BASE_VERS=		${ODBC_DIST_VERS}
 
+USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
@@ -30,7 +31,7 @@ PTHREAD_OPTS+=		require
 # libfl.a isn't needed.
 #
 MAKE_FLAGS+=		LIBLTDL="-lltdl"
-MAKE_FLAGS+=		INCLTDL="-I${BUILDLINK_DIR}/include"
+MAKE_FLAGS+=		INCLTDL="-I${BUILDLINK_PREFIX.ltdl}/include"
 MAKE_FLAGS+=		LEXLIB=""
 MAKE_ENV+=		AM_MAKEFLAGS="${MAKE_FLAGS}"
 
@@ -57,10 +58,10 @@ fix-ltdl-and-lexlib:
 		${MV} -f $${file}.fixed $${file};			\
 	done
 
-.include "../../devel/libtool/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
+.include "../../devel/libtool/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
 CONFIGURE_ARGS+=	--enable-gnuthreads
-CONFIGURE_ARGS+=	--with-pth=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-pth=${PTHREADBASE}
 .endif
