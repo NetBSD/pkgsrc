@@ -3,26 +3,26 @@
 # Date created:				19971214
 # Whom:					hubertf@netbsd.org
 #
-# $NetBSD: Makefile,v 1.12 1998/02/20 07:23:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 1998/03/10 16:18:28 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 # Maximal ssh package requires a YES value for USE_PERL
 # and USE_LIBWRAP.
 #
 
-DISTNAME=       ssh-1.2.22
-CATEGORIES=	security net
-MASTER_SITES=   ftp://ftp.cs.hut.fi/pub/ssh/ \
-		ftp://ftp.funet.fi/pub/unix/security/login/ssh/
+DISTNAME=		ssh-1.2.22
+CATEGORIES=		security net
+MASTER_SITES=		ftp://ftp.cs.hut.fi/pub/ssh/ \
+			ftp://ftp.funet.fi/pub/unix/security/login/ssh/
 
-MAINTAINER=	mrg@eterna.com.au
+MAINTAINER=		mrg@eterna.com.au
 
-RESTRICTED=	"Crypto; export-controlled"
+RESTRICTED=		"Crypto; export-controlled"
 MIRROR_DISTFILE=	no
-IS_INTERACTIVE=	YES
+IS_INTERACTIVE=		YES
 
-CFLAGS=		-O2
-GNU_CONFIGURE=	YES
+CFLAGS=			-O2
+GNU_CONFIGURE=		YES
 
 # Include local make config file here.  It is essential to have this
 # precede any override targets (those that override defaults in
@@ -42,10 +42,10 @@ OPSYS!= uname -s
 .endif
 
 # You can set USA_RESIDENT appropriately in /etc/mk.conf if this bugs you..
-USA_RESIDENT?=	NO
+USA_RESIDENT?=		NO
 
 .if defined(USA_RESIDENT) && ${USA_RESIDENT} == YES
-DISTFILES=	${DISTNAME}.tar.gz rsaref2.tar.gz
+DISTFILES=		${DISTNAME}.tar.gz rsaref2.tar.gz
 MASTER_SITES=	\
 	ftp://ftp.funet.fi/pub/unix/security/login/ssh/ \
 	ftp://nic.funet.fi/pub/crypt/mirrors/ftp.dsi.unimi.it/applied-crypto/ \
@@ -56,9 +56,9 @@ MASTER_SITES=	\
 .endif
 
 # Use SSH_CONF_DIR from /etc/mk.conf, if defined; otherwise default to /etc
-SSH_CONF_DIR?=/etc
+SSH_CONF_DIR?=		/etc
 
-CONFIGURE_ARGS+= --prefix=${PREFIX} --with-etcdir=${SSH_CONF_DIR} \
+CONFIGURE_ARGS+=	--prefix=${PREFIX} --with-etcdir=${SSH_CONF_DIR} \
 			--disable-suid-ssh
 
 #Uncomment if all your users are in their own group and their homedir
@@ -68,38 +68,38 @@ CONFIGURE_ARGS+= --prefix=${PREFIX} --with-etcdir=${SSH_CONF_DIR} \
 #Uncomment if you want to allow ssh to emulate an unencrypted rsh connection
 #over a secure medium.  This is normally dangerous since it can lead to the
 #disclosure keys and passwords.
-#CONFIGURE_ARGS+= --with-none
+#CONFIGURE_ARGS+=	--with-none
 
 .if defined(USA_RESIDENT) && ${USA_RESIDENT} == YES
-CONFIGURE_ARGS+= --with-rsaref
+CONFIGURE_ARGS+=	--with-rsaref
 .endif
 
 # Include support for the SecureID card
 # Warning: untested !
 .if defined(USE_SECUREID) && ${USE_SECUREID} == YES
-CONFIGURE_ARGS+= --with-secureid
+CONFIGURE_ARGS+=	--with-secureid
 .endif
 
 # Don't use IDEA. IDEA can be freely used for non-commercial use. However,
 # commercial use may require a licence in a number of countries
 # Warning: untested !
 .if defined(DONT_USE_IDEA) && ${DONT_USE_IDEA} == YES
-CONFIGURE_ARGS+= --without-idea
+CONFIGURE_ARGS+=	--without-idea
 .endif
 
 # Support for libwrap.
 .if defined(USE_LIBWRAP) && ${USE_LIBWRAP} == YES
-CONFIGURE_ARGS+= --with-libwrap
+CONFIGURE_ARGS+=	--with-libwrap
 .endif
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && ${USE_SOCKS} == YES
-CONFIGURE_ARGS+= --with-socks="-L${PREFIX}/lib -lsocks5"
+CONFIGURE_ARGS+=	--with-socks="-L${PREFIX}/lib -lsocks5"
 .endif
 
-MAN1=		scp.1 ssh-add.1 ssh-agent.1 ssh-keygen.1 ssh.1 \
-		make-ssh-known-hosts.1
-MAN8=		sshd.8
+MAN1=			scp.1 ssh-add.1 ssh-agent.1 ssh-keygen.1 ssh.1 \
+			make-ssh-known-hosts.1
+MAN8=			sshd.8
 
 pre-patch:
 	@${MV} -f ${WRKSRC}/make-ssh-known-hosts.pl \
@@ -115,7 +115,7 @@ fetch-depends:
 	@${ECHO} cypto in general - using RSA implementations other than
 	@${ECHO} RSAREF will violate the US patent law\)
 	@${ECHO} and extract it to ${WRKSRC}.
-	@false
+	@${FALSE}
 .endif
 
 post-extract:
@@ -124,16 +124,16 @@ post-extract:
 .endif
 
 pre-install:
-	@${CAT} pkg/PLIST.pre | ${SED} \
+	@${CAT} ${PKGDIR}/PLIST.pre | ${SED} \
 		-e 's;\<\$$SSH_CONF_DIR\>;'${SSH_CONF_DIR}';g' \
-		>pkg/PLIST
-	@${CAT} pkg/MESSAGE.pre | ${SED} \
+		> ${PKGDIR}/PLIST
+	@${CAT} ${PKGDIR}/MESSAGE.pre | ${SED} \
 		-e 's;\<\$$SSH_CONF_DIR\>;'${SSH_CONF_DIR}';g' \
 		-e 's;\<\$$PREFIX\>;'${PREFIX}';g' \
-		>pkg/MESSAGE
-	@${CAT} pkg/DEINSTALL.pre | ${SED} \
+		> ${PKGDIR}/MESSAGE
+	@${CAT} ${PKGDIR}/DEINSTALL.pre | ${SED} \
 		-e 's;\<\$$SSH_CONF_DIR\>;'${SSH_CONF_DIR}';g' \
-		>pkg/DEINSTALL
+		> ${PKGDIR}/DEINSTALL
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/ssh
@@ -161,10 +161,10 @@ post-install:
 #		${ECHO} "[ -x ${PREFIX}/sbin/sshd ] && ${PREFIX}/sbin/sshd && ${ECHO} -n ' sshd'" >> ${PREFIX}/etc/rc.d/sshd.sh; \
 #		chmod 755 ${PREFIX}/etc/rc.d/sshd.sh; \
 #	fi
-	@${CAT} pkg/MESSAGE
+	@${CAT} ${PKGDIR}/MESSAGE
 
 pre-clean:
-	@${RM} -f pkg/PLIST pkg/MESSAGE pkg/DEINSTALL
+	@${RM} -f ${PKGDIR}/PLIST ${PKGDIR}/MESSAGE ${PKGDIR}/DEINSTALL
 
 # Include <bsd.port.mk> here.  It is essential to have all the override
 # targets precede inclusion of this.
@@ -177,8 +177,8 @@ pre-clean:
 .if defined(USE_PERL) && ${USE_PERL} == YES || \
     exists(${PREFIX}/bin/perl5.00404) && \
     (!defined(USE_PERL) || ${USE_PERL} != NO)
-BUILD_DEPENDS+= perl5.00404:${PORTSDIR}/lang/perl5
-CONFIGURE_ENV+= PERL=${PREFIX}/bin/perl5.00404
+BUILD_DEPENDS+=		perl5.00404:${PORTSDIR}/lang/perl5
+CONFIGURE_ENV+=		PERL=${PREFIX}/bin/perl5.00404
 .else
-CONFIGURE_ENV+= PERL=/replace_it_with_PERL_path
+CONFIGURE_ENV+=		PERL=/replace_it_with_PERL_path
 .endif
