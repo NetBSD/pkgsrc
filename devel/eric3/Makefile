@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2003/08/25 17:31:43 recht Exp $
+# $NetBSD: Makefile,v 1.3 2003/12/24 09:53:48 jmmv Exp $
 #
 
 DISTNAME=		eric-3.2
 CATEGORIES=		devel
 MASTER_SITES=		http://www.die-offenbachs.de/detlev/files/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.die-offenbachs.de/detlev/eric3.html
 COMMENT=		Python IDE
 
