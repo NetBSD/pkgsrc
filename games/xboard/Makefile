@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/08/08 16:38:41 seb Exp $
+# $NetBSD: Makefile,v 1.22 2003/08/09 10:51:12 seb Exp $
 
 DISTNAME=	xboard-4.2.6
 CATEGORIES=	games
@@ -14,7 +14,6 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-xpm
 CONFIGURE_ARGS+=	--enable-zippy	# interface to ICS
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	xboard.info
 
 .include "../../mk/bsd.prefs.mk"

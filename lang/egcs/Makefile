@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/23 17:17:57 seb Exp $
+# $NetBSD: Makefile,v 1.10 2003/08/09 10:59:06 seb Exp $
 #
 
 DISTNAME=		egcs-1.1.2
@@ -20,7 +20,6 @@ MAKE_ENV+=		CPPFLAGS=
 
 ALL_TARGET=		bootstrap
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		cpp.info g77.info gcc.info
 
 .include "../../mk/bsd.pkg.mk"

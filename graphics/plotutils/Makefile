@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/07/17 21:42:16 grant Exp $
+# $NetBSD: Makefile,v 1.28 2003/08/09 10:53:29 seb Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -16,7 +16,6 @@ USE_BUILDLINK2=		YES
 USE_GCC_SHLIB=		YES
 USE_X11=		YES
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	plotutils.info
 
 GNU_CONFIGURE=		YES

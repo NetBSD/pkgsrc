@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:43:57 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/09 10:59:04 seb Exp $
 
 DISTNAME=	a60-0.20a
 CATEGORIES=	lang
@@ -11,7 +11,6 @@ GNU_CONFIGURE=	yes
 
 CPPFLAGS+= 	-Dunix
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	RRA60.info a60.info
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/30 10:52:35 kleink Exp $
+# $NetBSD: Makefile,v 1.18 2003/08/09 10:51:13 seb Exp $
 
 DISTNAME=		xconq-7.4.1
 CATEGORIES=		games x11
@@ -19,7 +19,6 @@ CONFIGURE_ARGS+=	--with-tkconfig="${BUILDLINK_PREFIX.tk}/lib"
 
 MAKE_ENV+=		LOCALBASE="${LOCALBASE}"
 
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=		YES
 INFO_FILES=     	hacking.info xcdesign.info xconq.info
 

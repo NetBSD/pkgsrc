@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/08/04 07:51:23 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/09 10:51:12 seb Exp $
 
 DISTNAME=	gnugo-3.4
 CATEGORIES=	games
@@ -12,7 +12,6 @@ GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_BUILDLINK2=		yes
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	gnugo.info
 
 TEST_TARGET=	check

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/08/08 16:42:37 seb Exp $
+# $NetBSD: Makefile,v 1.14 2003/08/09 10:53:28 seb Exp $
 
 DISTNAME=		gri-2.12.5
 CATEGORIES=		graphics
@@ -18,7 +18,6 @@ USE_BUILDLINK2=	 	yes
 USE_PERL5=		build
 REPLACE_PERL=		gri_merge gri_unpage
 
-USE_NEW_TEXINFO=	yes
 USE_MAKEINFO=		yes
 INFO_FILES=		gri.info
 
