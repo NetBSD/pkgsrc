@@ -1,18 +1,11 @@
---- config/free_net-bsd-shared.mk.orig	Wed Nov 19 16:21:24 1997
-+++ config/free_net-bsd-shared.mk	Thu Nov 27 16:01:50 1997
-@@ -26,15 +26,10 @@
+--- doc/Makefile.in-orig	Sat Mar 14 16:50:01 1998
++++ doc/Makefile.in	Sun Mar 22 22:33:30 1998
+@@ -98,7 +98,7 @@
  
- ${SHARED_LIB}: $(SH_OBJS)
- 	ld -Bshareable -o ${SHARED_LIB} ${SH_OBJS}
--	chmod a+x ${SHARED_LIB}
--	rm -f lib${lib_name}.so
--	ln -s ${SHARED_LIB} lib${lib_name}.so
+ SUBDIRS	= www.lesstif.org lessdox
  
- install:: ${SHARED_LIB}
- 	mkdir -p ${lib_dir}
- 	${INSTALL_DATA} ${SHARED_LIB} ${lib_dir}
--	rm -f ${lib_dir}/lib${lib_name}.so
--	ln -s ${lib_dir}/${SHARED_LIB} ${lib_dir}/lib${lib_name}.so
- 
- install-list::
- 	echo ${lib_dir}/${SHARED_LIB}
+-rootdir=	$(exec_prefix)/LessTif/doc
++rootdir=	$(exec_prefix)/share/lesstif/doc
+ root_DATA=	INSTALL.html
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../include/LTconfig.h
