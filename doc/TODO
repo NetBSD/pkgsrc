@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2143 2004/09/20 23:19:47 wiz Exp $
+$NetBSD: TODO,v 1.2144 2004/09/20 23:36:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -315,11 +315,9 @@ Suggested package updates
 	o lbreakout-2.5
 	o leafnode-1.10.5
 	o libcddb-0.9.5
-	o libidn-0.5.5
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
 	o libnids-1.19
-	o libntlm-0.3.3
 	o libole2-2.2.8
 	o libpng-1.2.7
 	o libsigc++-2.0.3
