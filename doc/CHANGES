@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.418 2002/10/30 11:29:03 markd Exp $
+$NetBSD: CHANGES,v 1.419 2002/10/30 15:27:10 taya Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3460,3 +3460,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated py-Numeric to 21.0 [markd 2002-10-30]
 	Added py-docutils-0.2 [markd 2002-10-30]
 	Added py-piddle-1.0.15 [markd 2002-10-30]
+	Updated phoenix to 0.4 [taya 2002-10-30]
