@@ -1,8 +1,8 @@
-$NetBSD: patch-at,v 1.5 2002/11/24 21:31:25 hubertf Exp $
+$NetBSD: patch-at,v 1.6 2003/07/12 09:19:19 wiz Exp $
 
---- src/logmsg.c.orig	Fri Sep 14 19:12:10 2001
+--- src/logmsg.c.orig	Tue May 20 20:12:23 2003
 +++ src/logmsg.c
-@@ -298,7 +298,7 @@
+@@ -301,7 +301,7 @@ do_editor (dir, messagep, repository, ch
      run_setup (editinfo_editor ? editinfo_editor : Editor);
      run_arg (fname);
      if ((retcode = run_exec (RUN_TTY, RUN_TTY, RUN_TTY,
@@ -11,7 +11,7 @@ $NetBSD: patch-at,v 1.5 2002/11/24 21:31:25 hubertf Exp $
  	error (editinfo_editor ? 1 : 0, retcode == -1 ? errno : 0,
  	       editinfo_editor ? "Logfile verification failed" :
  	       "warning: editor session failed");
-@@ -686,6 +686,15 @@
+@@ -678,6 +678,15 @@ title_proc (p, closure)
  			xrealloc (str_list,
  				  strlen (str_list) + strlen (p->key) + 5);
  		    (void) strcat (str_list, p->key);

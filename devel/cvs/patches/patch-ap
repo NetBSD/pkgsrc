@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.4 2002/11/24 21:31:24 hubertf Exp $
+$NetBSD: patch-ap,v 1.5 2003/07/12 09:19:19 wiz Exp $
 
---- src/main.c.orig	Tue Mar 19 20:15:45 2002
+--- src/main.c.orig	Fri May  2 03:12:55 2003
 +++ src/main.c
-@@ -41,6 +41,7 @@
+@@ -41,6 +41,7 @@ int really_quiet = 0;
  int quiet = 0;
  int trace = 0;
  int noexec = 0;
@@ -10,7 +10,7 @@ $NetBSD: patch-ap,v 1.4 2002/11/24 21:31:24 hubertf Exp $
  int logoff = 0;
  
  /* Set if we should be writing CVSADM directories at top level.  At
-@@ -49,6 +50,7 @@
+@@ -49,6 +50,7 @@ int logoff = 0;
  int top_level_admin = 0;
  
  mode_t cvsumask = UMASK_DFLT;
@@ -18,7 +18,7 @@ $NetBSD: patch-ap,v 1.4 2002/11/24 21:31:24 hubertf Exp $
  
  char *CurDir;
  
-@@ -249,6 +251,7 @@
+@@ -249,6 +251,7 @@ static const char *const opt_usage[] =
      "    -w           Make checked-out files read-write (default).\n",
      "    -l           Turn history logging off.\n",
      "    -n           Do not execute anything that will change the disk.\n",
@@ -26,7 +26,7 @@ $NetBSD: patch-ap,v 1.4 2002/11/24 21:31:24 hubertf Exp $
      "    -t           Show trace of program execution -- try with -n.\n",
      "    -v           CVS version and copyright.\n",
      "    -T tmpdir    Use 'tmpdir' for temporary files.\n",
-@@ -407,7 +410,7 @@
+@@ -407,7 +410,7 @@ main (argc, argv)
      int help = 0;		/* Has the user asked for help?  This
  				   lets us support the `cvs -H cmd'
  				   convention to give help for cmd. */
@@ -35,7 +35,7 @@ $NetBSD: patch-ap,v 1.4 2002/11/24 21:31:24 hubertf Exp $
      static struct option long_options[] =
      {
          {"help", 0, NULL, 'H'},
-@@ -537,6 +540,8 @@
+@@ -537,6 +540,8 @@ main (argc, argv)
  		break;
  	    case 'n':
  		noexec = 1;
