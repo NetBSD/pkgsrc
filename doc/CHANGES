@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6852 2004/08/12 12:23:26 adam Exp $
+$NetBSD: CHANGES,v 1.6853 2004/08/12 13:35:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3800,3 +3800,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qt3-tools to 3.3.3 [adam 2004-08-12]
 	Updated qt3-docs to 3.3.3 [adam 2004-08-12]
 	Updated qt3 to 3.3.3 [adam 2004-08-12]
+	Updated pkgse to 0.2 [wiz 2004-08-12]
