@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:14:44 tv Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/01 15:57:18 wiz Exp $
 #
 
 DISTNAME=	frozen-bubble-1.0.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	http://zarb.org/~gc/fb/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +26,6 @@ post-extract:
 	${RM} -rf ${WRKSRC}/gfx/.xvpics
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
+.include "../../lang/perl5/module.mk"
 
 .include "../../mk/bsd.pkg.mk"
