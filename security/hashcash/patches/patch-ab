@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/12/01 12:50:39 tv Exp $
+
+--- hashcash.c.orig	2004-12-01 07:49:23.000000000 -0500
++++ hashcash.c
+@@ -117,7 +117,7 @@ typedef struct {
+ 
+ void db_open( DB* db, const char* db_filename );
+ void db_purge( DB* db, ARRAY* purge_resource, int purge_all, 
+-	       long purge_period, time_t now_time, time_t real_time,
++	       long purge_period, time_t now_time, long validity_period,
+ 	       long grace_period );
+ int db_in( DB* db, char* token, char *period );
+ void db_add( DB* db, char* token, char *token_utime );
