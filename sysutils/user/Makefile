@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/16 16:28:31 agc Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/17 10:48:25 agc Exp $
 #
 
-DISTNAME=	user
-PKGNAME=	user-19991216
+DISTNAME=	user-19991216
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-current/src/usr.sbin/
-DIST_SUBDIR=	${PKGNAME}
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	agc@netbsd.org
 HOMEPAGE=	http://www.netbsd.org/
 
-WRKSRC=		${WRKDIR}/pub/NetBSD/NetBSD-current/src/usr.sbin/user
+WRKSRC=		${WRKDIR}/user
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* # already in Solaris base system
 
