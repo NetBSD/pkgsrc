@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.129 2003/02/14 19:46:43 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.130 2003/02/16 23:56:12 seb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -606,6 +606,12 @@ FETCHMAIL_USE_SSL?=	YES
 # Enable SSL in fetchmail (for pop and imap connections)
 # Possible: YES, NO
 # Default: YES
+
+FLOW_TOOLS_USE_MYSQL?=	NO
+# Used by flow-tools to enable support of flow records export
+# into a MySQL database.
+# Possible: YES, NO
+# Default: NO
 
 FOX_USE_XUNICODE?=	YES
 # Used in fox to build in support for Unicode by XUnicode. See
