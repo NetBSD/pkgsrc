@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/16 18:13:26 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/25 21:49:57 jlam Exp $
 #
 
 DISTNAME=	gnet-1.1.4
@@ -12,7 +12,7 @@ COMMENT=	simple network library
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
-.include "../../devel/glib/buildlink.mk"
+.include "../../devel/glib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

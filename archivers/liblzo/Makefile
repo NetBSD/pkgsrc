@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/08/22 23:51:13 mjl Exp $
+# $NetBSD: Makefile,v 1.10 2002/08/25 21:49:14 jlam Exp $
 #
 
 VERS=			1.08
@@ -13,7 +13,7 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.oberhumer.com/opensource/lzo/
 COMMENT=		Portable lossless data compression library written in ANSI C
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

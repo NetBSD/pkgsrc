@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/13 02:16:13 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/25 21:50:03 jlam Exp $
 #
 
 DISTNAME=	mtr-0.49
@@ -11,9 +11,10 @@ MAINTAINER=	sommerfeld@netbsd.org
 HOMEPAGE=	http://www.bitwizard.nl/mtr/
 COMMENT=	Traceroute and ping in a single graphical network diagnostic tool
 
-GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
-USE_BUILDLINK_ONLY=	yes
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_BUILDLINK2=	yes
+USE_X11=	yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mtr-gtk
@@ -21,6 +22,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/mtr.8 ${PREFIX}/man/man8/mtr-gtk.8
 	${INSTALL_DATA} ${WRKSRC}/SECURITY ${PREFIX}/share/doc/mtr-gtk
 
-.include "../../devel/ncurses/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

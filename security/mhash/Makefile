@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/08/25 18:39:55 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/25 21:50:39 jlam Exp $
 
 DISTNAME=	mhash-0.8.9
 CATEGORIES=	security devel

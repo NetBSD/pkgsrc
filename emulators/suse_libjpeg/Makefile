@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/04/04 09:47:04 tron Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/25 21:49:49 jlam Exp $
 
 DISTNAME=		libjpeg
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
@@ -14,6 +14,7 @@ DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
 
 ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
+USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC

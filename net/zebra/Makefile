@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2002/08/03 12:27:18 itojun Exp $
+# $NetBSD: Makefile,v 1.53 2002/08/25 21:50:20 jlam Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 PKG_SYSCONFSUBDIR?=	zebra
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -27,7 +27,7 @@ PLIST_SRC=		# empty
 
 .if defined(USE_ZEBRA_VTYSH) && ${USE_ZEBRA_VTYSH} == "YES"
 USE_GNU_READLINE=	# uses rl_pending_input
-.include "../../devel/readline/buildlink.mk"
+.  include "../../devel/readline/buildlink2.mk"
 CONFIGURE_ARGS+=	--enable-vtysh
 PLIST_SRC+=		${PKGDIR}/PLIST.vtysh
 .else

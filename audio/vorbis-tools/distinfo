@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/08/05 13:12:43 lukem Exp $
+$NetBSD: distinfo,v 1.8 2002/08/25 21:49:29 jlam Exp $
 
 SHA1 (vorbis-tools-1.0.tar.gz) = 5c2508786cf6a2a270c697d3debe66ee83df376d
 Size (vorbis-tools-1.0.tar.gz) = 425404 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/03/14 13:02:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/08/25 21:49:11 jlam Exp $
 
 DISTNAME=       hpack79src
 PKGNAME=        hpack-0.79
@@ -8,19 +8,22 @@ MASTER_SITES=   ftp://src.doc.ic.ac.uk/packages/hpack/
 MAINTAINER=     packages@netbsd.org
 COMMENT=	Multi-System Archiver with open keys PGP-based security
 
+USE_BUILDLINK2=	yes
+
 CRYPTO=		yes
 WRKSRC=		${WRKDIR}
 
 MAKEFILE=       makefile
 ALL_TARGET=     hpack
 
+MAKE_FLAGS=	CFLAGS="-c -DBSD386 -D__UNIX__ -DPREFIX=\\\"${PREFIX}\\\" -I. ${CFLAGS} -Icrypt"
+
 .include "../../mk/bsd.prefs.mk"
+
 .if ${OPSYS} == "Darwin"
-MAKE_FLAGS=	CFLAGS="-c -DBSD386 -D__UNIX__ -DPREFIX=\\\"${PREFIX}\\\" -I. ${CFLAGS} -Icrypt" \
-		CMDL="${LDFLAGS} -lcurses"
+MAKE_FLAGS+=	CMDL="${LDFLAGS} -lcurses"
 .else
-MAKE_FLAGS=	CFLAGS="-c -DBSD386 -D__UNIX__ -DPREFIX=\\\"${PREFIX}\\\" -I. ${CFLAGS} -Icrypt" \
-		CMDL="${LDFLAGS} -ltermcap"
+MAKE_FLAGS+=	CMDL="${LDFLAGS} -ltermcap"
 .endif
 
 post-build:

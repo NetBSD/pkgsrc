@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/25 18:39:33 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/25 21:50:05 jlam Exp $
 
 DISTNAME=	net-snmp-5.0.pre2
 PKGNAME=	net-snmp-5.0.0.2

@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2002/07/19 03:14:31 mycroft Exp $
+$NetBSD: patch-ah,v 1.2 2002/08/25 21:49:13 jlam Exp $
 
 --- src/lharc.c.orig	Thu Oct  5 17:33:34 2000
 +++ src/lharc.c	Fri Jul 19 03:11:24 2002

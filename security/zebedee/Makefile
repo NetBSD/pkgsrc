@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/07/24 19:45:27 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/25 21:50:49 jlam Exp $
 #
 
 DISTNAME=		zebedee-2.3.1
@@ -12,13 +12,14 @@ COMMENT=		Simple tunneling program for TCP or UDP with encryption
 
 USE_PERL5=		build
 USE_GMAKE=		# defined
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 
 MAKE_ENV+=		PERL5=${PERL5}
 MAKE_FLAGS=		OS=${LOWER_OPSYS}
 
-.include "../../archivers/bzip2/buildlink.mk"
-.include "../../devel/zlib/buildlink.mk"
-.include "../../lang/tcl/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
+.include "../../archivers/bzip2/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../lang/tcl/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

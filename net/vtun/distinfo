@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/07/23 23:55:45 taca Exp $
+$NetBSD: distinfo,v 1.5 2002/08/25 21:50:19 jlam Exp $
 
 SHA1 (vtun-2.5.tar.gz) = 6220497fc64b8b4d42e972e3b7855ec97cab1975
 Size (vtun-2.5.tar.gz) = 92510 bytes

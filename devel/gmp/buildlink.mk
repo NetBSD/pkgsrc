@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2002/08/24 00:39:06 mjl Exp $
+# $NetBSD: buildlink.mk,v 1.9 2002/08/25 21:49:42 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gmp.
 #

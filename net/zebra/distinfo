@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2002/08/03 12:27:19 itojun Exp $
+$NetBSD: distinfo,v 1.9 2002/08/25 21:50:21 jlam Exp $
 
 SHA1 (zebra-0.93a.tar.gz) = aa9d307a53adcd6e9b76003f230c4cd79eefba6b
 Size (zebra-0.93a.tar.gz) = 1335141 bytes

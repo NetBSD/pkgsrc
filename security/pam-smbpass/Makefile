@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2002/07/30 23:24:05 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/25 21:50:41 jlam Exp $
+
+.include "../../net/samba/Makefile.common"
 
 PKGNAME=		pam-smbpass-${SAMBA_DIST_VERS}
 CATEGORIES=		security
-
-USE_BUILDLINK_ONLY=	# defined
-
-.include "../../net/samba/Makefile.common"
 
 MAINTAINER=		jlam@netbsd.org
 COMMENT=		PAM authentication against a Samba password database
 
 DEPENDS+=		{samba>=2.0,ja-samba>=2.0}:../../net/samba
 
+USE_BUILDLINK2=		# defined
 CONFIGURE_ARGS+=	--with-pam
 
 ALL_TARGET=		pam_smbpass
@@ -31,5 +30,5 @@ do-install:
 		${INSTALL_DATA} $${file} ${EGDIR}/$${file};		\
 	done
 
-.include "../../security/PAM/buildlink.mk"
+.include "../../security/PAM/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

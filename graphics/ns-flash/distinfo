@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/08/20 05:01:59 rh Exp $
+$NetBSD: distinfo,v 1.5 2002/08/25 21:49:55 jlam Exp $
 
 SHA1 (flash/5.0r50/flash_linux.tar.gz) = 572e13227afc18b7c0f5a6d675a8683fc903a5da
 Size (flash/5.0r50/flash_linux.tar.gz) = 574447 bytes

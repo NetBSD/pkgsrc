@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: samba.sh,v 1.11 2002/05/24 22:28:27 hubertf Exp $
+# $NetBSD: samba.sh,v 1.12 2002/08/25 21:50:12 jlam Exp $
 #
 # KEYWORD: nostart
 

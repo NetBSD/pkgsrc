@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/07/07 19:27:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2002/08/25 21:49:58 jlam Exp $
 #
 
 DISTNAME=		gtk-gnutella-0.90
@@ -11,13 +11,14 @@ COMMENT=		GTk-based gnutella client
 
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
+USE_X11=		yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gtk-gnutella
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/gtk-gnutella
 
-.include "../../textproc/libxml2/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

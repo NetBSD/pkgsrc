@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2002/06/16 20:20:18 wiz Exp $
+$NetBSD: distinfo,v 1.11 2002/08/25 21:50:48 jlam Exp $
 
 SHA1 (sudo-1.6.6.tar.gz) = 6768cca950fc840857b01b0bd94dbd0ca756d324
 Size (sudo-1.6.6.tar.gz) = 333074 bytes

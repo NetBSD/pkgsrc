@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/07/16 08:58:33 grant Exp $
+$NetBSD: distinfo,v 1.6 2002/08/25 21:49:26 jlam Exp $
 
 SHA1 (unzip550.tar.gz) = 51034a8098eddc8facb4db9ea1a935e813dbdb73
 Size (unzip550.tar.gz) = 1068662 bytes

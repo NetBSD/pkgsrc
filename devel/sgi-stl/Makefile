@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:21 agc Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/25 21:49:47 jlam Exp $
 
 DISTNAME=		stl
 PKGNAME=		sgi-stl-3.3
@@ -12,6 +12,7 @@ COMMENT=		SGI Standard Template Library
 DIST_SUBDIR=		${PKGNAME}
 WRKSRC=			${WRKDIR}
 
+USE_BUILDLINK2=		# defined
 NO_CONFIGURE=		# defined
 NO_BUILD=		# defined
 

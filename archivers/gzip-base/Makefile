@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/01/27 18:32:33 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/08/25 21:49:09 jlam Exp $
 
 DISTNAME=	gzip-1.2.4a
 PKGNAME=	gzip-base-1.2.4a
@@ -11,13 +11,10 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/gzip/gzip.html
 COMMENT=	Compress or expand files
 
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 BUILD_TARGET=	all manlinks=so
 INSTALL_TARGET=	install manlinks=so
-
-.if exists(/usr/bin/gzip)
-IGNORE=		"${PKGNAME} is part of your ${OPSYS} distribution"
-.endif
 
 # We avoid using a patch for disabling the install of the info
 # file.  The easu part is that "install-info" is not called so

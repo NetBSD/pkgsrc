@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/09/09 20:36:10 agc Exp $
+# $NetBSD: Makefile,v 1.11 2002/08/25 21:49:10 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/08/10 22:31:19 fenner Exp 
 #
 
@@ -11,9 +11,9 @@ EXTRACT_SUFX=   .tgz
 MAINTAINER=     packages@netbsd.org
 COMMENT=	The HA archiver using the HSC compression method
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=	yes
 
-WRKSRC=			${WRKDIR}
+WRKSRC=		${WRKDIR}
 MAKEFILE=       makefile.nix
 MAKE_FLAGS=     CC="${CC}"
 ALL_TARGET=     ha

@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.3 2001/12/06 05:09:48 jlam Exp $
+$NetBSD: patch-ae,v 1.4 2002/08/25 21:49:13 jlam Exp $
 
 --- Makefile.orig	Mon Dec  3 14:32:27 2001
 +++ Makefile
@@ -8,12 +8,12 @@ $NetBSD: patch-ae,v 1.3 2001/12/06 05:09:48 jlam Exp $
  
 -SHELL=/bin/sh
 -MAKE = make
-+SHELL = ${SH}
-+MAKE = ${MAKE}
++#SHELL=/bin/sh
++#MAKE = make
  
 -#CC			= cc
 -CC			= gcc
-+CC			= ${CC}
++#CC			= gcc
  SWITCHES	= -DNEED_INCREMENTAL_INDICATOR \
   -DTMP_FILENAME_TEMPLATE="\"/tmp/lhXXXXXX\""
  
