@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:36 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2004/03/30 17:04:06 jlam Exp $
 
 _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
 
@@ -26,9 +26,9 @@ _XRENDER_VERSIONS=	0.8.3  0.8.2  0.8.1  0.8  0.2  0.1
 _XRENDER_0.1=	4.0 4.0.* 4.1 4.1.[0-9] 4.1.[0-9].* 4.1.[1-8][0-9]* 4.1.9[0-8]*
 _XRENDER_0.2=	4.1.99.* 4.2 4.2.[0-9] 4.2.[0-9].* 4.2.[1-8][0-9]* 4.2.9[0-8]*
 _XRENDER_0.8=	4.2.99.* 4.3 4.3.[0-9] 4.3.[0-9].* 4.3.[1-8][0-9]* 4.3.9[0-8]*
-.      if !defined(_XF86_VERSION)
+.      if !defined(XF86_VERSION)
 _X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/version.def
-_XF86_VERSION=	3.3
+XF86_VERSION=	3.3
 .        if exists(${_X11_CONFIG_VERSION_DEF})
 _XF86_MAJOR!=	\
 	${AWK} '/\#define[ 	]*XF86_VERSION_MAJOR/ { print $$3 }'	\
@@ -44,16 +44,16 @@ _XF86_SNAP!=	\
 		${_X11_CONFIG_VERSION_DEF}
 _XF86_TEENY=	${_XF86_PATCH}.${_XF86_SNAP}
 .          if !empty(_XF86_TEENY:M0.0)
-_XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}
+XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}
 .          else
-_XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}.${_XF86_TEENY}
+_F86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}.${_XF86_TEENY}
 .          endif
 .        endif
-BUILDLINK_VARS+=	_XF86_VERSION
+BUILDLINK_VARS+=	XF86_VERSION
 .      endif
 .      for _xrender_version_ in ${_XRENDER_VERSIONS}
 .        for _pattern_ in ${_XRENDER_${_xrender_version_}}
-.          if !empty(_XF86_VERSION:M${_pattern_})
+.          if !empty(XF86_VERSION:M${_pattern_})
 _XRENDER_VERSION?=	${_xrender_version_}
 .          endif
 .        endfor
