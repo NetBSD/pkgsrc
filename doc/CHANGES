@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9653 2005/03/27 18:14:15 wiz Exp $
+$NetBSD: CHANGES,v 1.9654 2005/03/27 18:23:27 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1784,3 +1784,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added socket++-1.12.10 [wiz 2005-03-27]
 	Updated DatLib to 2.4 [wiz 2005-03-27]
 	Updated DatUtil to 2.16 [wiz 2005-03-27]
+	Updated rtf-tools to 1.10nb2 [ben 2005-03-27]
