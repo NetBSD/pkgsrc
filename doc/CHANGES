@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.844 2002/12/19 18:32:10 frueauf Exp $
+$NetBSD: CHANGES,v 1.845 2002/12/19 20:07:22 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4019,3 +4019,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated nessus-libraries to 1.2.7 [frueauf 2002-12-19]
 	Updated nessus-plugins to 1.2.7 [frueauf 2002-12-19]
 	Updated libnasl to 1.2.7 [frueauf 2002-12-19]
+	Added wampager-0.9.1 [jmmv 2002-12-19]
