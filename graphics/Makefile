@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2001/02/09 03:28:23 jtb Exp $
+# $NetBSD: Makefile,v 1.115 2001/02/09 23:42:27 jtb Exp $
 #
 
     SUBDIR += CompuPic
@@ -68,6 +68,7 @@
     SUBDIR += mpeg2codec
     SUBDIR += mpeg_play
     SUBDIR += mtv
+    SUBDIR += ncview
     SUBDIR += netpbm
     SUBDIR += ns-flash
     SUBDIR += opendis
