@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2001/02/01 14:35:44 wiz Exp $
+# $NetBSD: Makefile,v 1.188 2001/02/07 16:56:35 agc Exp $
 #
 
     SUBDIR += adns
@@ -58,6 +58,7 @@
     SUBDIR += libsscript
     SUBDIR += lopster
     SUBDIR += lukemftp
+    SUBDIR += md-whois
     SUBDIR += mirror
     SUBDIR += mouse-pppoe
     SUBDIR += mrt
