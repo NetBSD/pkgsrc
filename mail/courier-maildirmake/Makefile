@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/18 21:15:11 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/08 23:16:00 jlam Exp $
 
 PKGNAME=	courier-maildirmake-${BASE_VERS}
 PKGREVISION?=	1
@@ -7,7 +7,6 @@ COMMENT=	Courier Maildir utilities
 PERL5_REQD=	5.6.0
 USE_PERL5=	build
 
-USE_BUILDLINK_ONLY=	yes
 REPLACE_PERL=		sysconftool
 
 .include "../../mail/courier-auth/Makefile.common"
@@ -21,6 +20,8 @@ WRKSRC_SUBDIRS+=	maildir
 EXTRACT_ELEMENTS=	${WRKSRC_FILES:S/^/${DISTNAME}\//}
 EXTRACT_ELEMENTS+=	${WRKSRC_SUBDIRS:S/^/${DISTNAME}\//}
 
+BUILD_DIRS=		${WRKSRC_SUBDIRS:S/^/${WRKSRC}\//}
+
 .if defined(_STRIPFLAG_INSTALL) && !empty(_STRIPFLAG_INSTALL:M-s)
 INSTALL_TARGET=		install-strip
 .endif
@@ -28,18 +29,6 @@ INSTALL_TARGET=		install-strip
 CONF_FILES=		${EGDIR}/quotawarnmsg ${PKG_SYSCONFDIR}/quotawarnmsg
 
 pre-configure: configure-init
-
-do-build:
-.for DIR in ${WRKSRC_SUBDIRS}
-	@cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${ALL_TARGET}
-.endfor
-
-do-install:
-.for DIR in ${WRKSRC_SUBDIRS}
-	@cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${INSTALL_TARGET}
-.endfor
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
