@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/12/22 13:25:58 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/04/14 17:52:41 dmcmahill Exp $
 bin/scilab
 lib/X11/app-defaults/Metanet-color
 lib/X11/app-defaults/Xscilab
@@ -2193,6 +2193,7 @@ share/${PKGNAME}/macros/mtlb/mtlb_length.bin
 share/${PKGNAME}/macros/mtlb/mtlb_length.sci
 share/${PKGNAME}/macros/mtlb/mtlb_load.bin
 share/${PKGNAME}/macros/mtlb/mtlb_load.sci
+share/${PKGNAME}/macros/mtlb/mtlb_load.sci.orig
 share/${PKGNAME}/macros/mtlb/mtlb_loglog.bin
 share/${PKGNAME}/macros/mtlb/mtlb_loglog.sci
 share/${PKGNAME}/macros/mtlb/mtlb_max.bin
