@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:08 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/14 17:44:48 wiz Exp $
 #
 
 DISTNAME=	linuxq3apoint-1.17.x86
 PKGNAME=	quake3arena-1.17
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://mirrors.aol.com/pub/pc_games/doom/idstuff/quake3/linux/
+MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/quake3/linux/old/
 EXTRACT_SUFX=	.run
 
 MAINTAINER=	jmcneill@invisible.yi.org
