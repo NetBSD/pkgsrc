@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.1 2003/01/12 17:53:42 veego Exp $
+
+Index: src/irc/core/modes.c
+===================================================================
+RCS file: /home/cvs/irssi/src/irc/core/modes.c,v
+retrieving revision 1.51
+retrieving revision 1.52
+diff -c -r1.51 -r1.52
+*** modes.c	31 Oct 2002 17:24:49 -0000	1.51
+--- modes.c	9 Dec 2002 21:54:03 -0000	1.52
+***************
+*** 512,518 ****
+  			curmode = cmd_get_param(&modestr);
+  			if (*curmode == '\0')
+  				break;
+- 			continue;
+  		}
+  
+  		if (*curmode == '+' || *curmode == '-') {
+--- 512,517 ----
