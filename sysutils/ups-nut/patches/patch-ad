@@ -1,0 +1,27 @@
+$NetBSD: patch-ad,v 1.1 2001/03/11 13:46:12 martin Exp $
+
+--- configure.in.orig	Sat Mar 10 15:32:25 2001
++++ configure.in	Sat Mar 10 15:32:27 2001
+@@ -350,12 +350,16 @@
+ dnl | let's test it for sanity before proceeding.  It's better to      |
+ dnl | catch them here rather than in the program itself at runtime.    |
+ 
+-temp_group=`grep ^$RUN_AS_GROUP: /etc/group`
+-if ( test x"$temp_group" = "x" )
+-then
+-   AC_MSG_WARN($RUN_AS_GROUP not found in /etc/group!)
+-   AC_MSG_ERROR(Restart configure using --with-group and another group name.)
+-fi  
++dnl | NetBSD's pkgsrc setup creates the user and group AFTER the build
++dnl | and BEFORE install.  This gives the configure and build a chance
++dnl | to fail before modifying the group and passwd files.
++dnl
++dnl temp_group=`grep ^$RUN_AS_GROUP: /etc/group`
++dnl if ( test x"$temp_group" = "x" )
++dnl then
++dnl    AC_MSG_WARN($RUN_AS_GROUP not found in /etc/group!)
++dnl    AC_MSG_ERROR(Restart configure using --with-group and another group name.)
++dnl fi  
+ 
+ dnl | All done with group tests.                                       |
+ dnl +------------------------------------------------------------------+
