@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/01 03:55:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/02 01:09:06 jschauma Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -34,14 +34,14 @@ PKG_LANG?=		english
 NS_INST?=		recommended
 
 .if ${PKG_LANG} != english
-DISTINFO_FILE=		distinfo.${PKG_LANG}
+DISTINFO_FILE=		${PKGDIR}/distinfo.${PKG_LANG}
 .endif
 
 .if ${NS_INST} == "complete"
-PLIST_SRC+=		PLIST.extra
+PLIST_SRC+=		${PKGDIR}/PLIST.extra
 .endif
 
-PLIST_SRC+=		PLIST.${PKG_LANG} PLIST
+PLIST_SRC+=		${PKGDIR}/PLIST.${PKG_LANG} ${PKGDIR}/PLIST
 
 pre-fetch:
 	@${CAT} ${FILESDIR}/fetch-message
