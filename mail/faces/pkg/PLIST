@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1998/07/15 12:17:02 agc Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/07/11 09:53:11 agc Exp $
 @cwd @localbase@
 share/faces/machine.tab
 share/faces/people.tab
@@ -36,5 +36,5 @@ bin/face_update
 bin/faces.sendmail
 man/man1/faces.1.gz
 man/man1/face_update.1.gz
-@cwd @x11base@
+@cwd @x11prefix@
 lib/X11/app-defaults/Faces
