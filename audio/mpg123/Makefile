@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/10/12 04:43:11 simonb Exp $
+# $NetBSD: Makefile,v 1.19 2000/02/18 11:04:10 itojun Exp $
 #
 
 DISTNAME=       mpg123-0.59r
@@ -6,8 +6,14 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.mpg123.de/mpg123/ \
 		http://www-ti.informatik.uni-tuebingen.de/~hippm/mpg123/
 
+PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
+PATCHFILES=	mpg123-059r-v6-20000111.diff.gz
+PATCH_DIST_STRIP=	-p1
+
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mpg123.de/
+
+BUILD_DEFS+=	USE_INET6
 
 # for OBJECT_FMT
 .include "../../mk/bsd.prefs.mk"
@@ -28,6 +34,10 @@ ALL_TARGET=	${LOWER_OPSYS}
 
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=	CPPFLAGS=""
+.endif
+
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
+MAKE_ENV+=	CPPFLAGS="-DINET6"
 .endif
 
 MAKE_FLAGS+=	PREFIX="${PREFIX}"
