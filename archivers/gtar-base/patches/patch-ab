@@ -1,121 +1,55 @@
-$NetBSD: patch-ab,v 1.7 2000/10/20 02:47:45 hubertf Exp $
+$NetBSD: patch-ab,v 1.7.8.1 2002/12/22 08:29:20 agc Exp $
 
---- src/extract.c.orig	Tue Apr 22 20:05:57 1997
-+++ src/extract.c	Fri Mar  6 14:33:05 1998
-@@ -103,7 +103,11 @@
- 
-   if (!keep_old_files_option
-       || (stat_info->st_mode & (S_ISUID | S_ISGID | S_ISVTX)))
-+#if (defined (__NetBSD__) && NetBSD > 199706 && !defined(NetBSD1_2))
-+    if (lchmod (file_name, ~current_umask & (int) stat_info->st_mode) < 0)
-+#else
-     if (chmod (file_name, ~current_umask & (int) stat_info->st_mode) < 0)
-+#endif
-       ERROR ((0, errno, _("%s: Cannot change mode to %0.4o"),
- 	      file_name, ~current_umask & (int) stat_info->st_mode));
- }
-@@ -124,8 +128,10 @@
- {
-   struct utimbuf utimbuf;
- 
-+#if !(defined (__NetBSD__) && NetBSD > 199706 && !defined(NetBSD1_2))
-   if (!symlink_flag)
-     {
-+#endif
-       /* We do the utime before the chmod because some versions of utime are
- 	 broken and trash the modes of the file.  */
- 
-@@ -137,6 +143,7 @@
- 
- 	  /* FIXME: incremental_option should set ctime too, but how?  */
- 
-+#if !(defined (__NetBSD__) && NetBSD > 199706 && !defined(NetBSD1_2))
- 	  if (incremental_option)
- 	    utimbuf.actime = stat_info->st_atime;
- 	  else
-@@ -145,6 +152,19 @@
- 	  utimbuf.modtime = stat_info->st_mtime;
- 
- 	  if (utime (file_name, &utimbuf) < 0)
-+#else
-+	  struct timeval tv[2];
-+
-+	  if (incremental_option)
-+	    tv[0].tv_sec = stat_info->st_atime;
-+	  else
-+	    tv[0].tv_sec = now;
-+	  tv[0].tv_usec = 0;
-+	  tv[1].tv_sec = stat_info->st_mtime;
-+	  tv[1].tv_usec = 0;
-+
-+	  if (lutimes (file_name, tv) < 0)
-+#endif
- 	    ERROR ((0, errno,
- 		    _("%s: Could not change access and modification times"),
- 		    file_name));
-@@ -155,7 +175,9 @@
- 	 have to set permissions prior to possibly giving files away.  */
- 
-       set_mode (file_name, stat_info);
-+#ifndef __NetBSD__
-     }
-+#endif
- 
-   /* If we are root, set the owner and group of the extracted file, so we
-      extract as the original owner.  Or else, if we are running as a user,
---- src/tar.c.orig	Fri Apr 25 16:09:49 1997
-+++ src/tar.c	Sat Mar  7 21:43:15 1998
-@@ -163,6 +163,7 @@
- #define SUFFIX_OPTION			15
- #define USE_COMPRESS_PROGRAM_OPTION	16
- #define VOLNO_FILE_OPTION		17
-+#define NO_UNLINK_FIRST_OPTION		20
- 
- /* Some cleanup is being made in GNU tar long options.  Using old names is
-    allowed for a while, but will also send a warning to stderr.  Take old
-@@ -237,6 +238,8 @@
-   {"newer-mtime", required_argument, NULL, NEWER_MTIME_OPTION},
-   {"null", no_argument, NULL, NULL_OPTION},
-   {"no-recursion", no_argument, NULL, NO_RECURSE_OPTION},
-+  {"norecurse", no_argument, NULL, NO_RECURSE_OPTION},
+--- src/tar.c.orig	Fri Sep 21 02:11:27 2001
++++ src/tar.c	Sun Nov 17 18:24:55 2002
+@@ -136,6 +136,7 @@
+   NEWER_MTIME_OPTION,
+   NO_ANCHORED_OPTION,
+   NO_IGNORE_CASE_OPTION,
++  NO_UNLINK_FIRST_OPTION,
+   NO_WILDCARDS_OPTION,
+   NO_WILDCARDS_MATCH_SLASH_OPTION,
+   NULL_OPTION,
+@@ -233,6 +234,7 @@
+   {"no-recursion", no_argument, &recursion_option, 0},
+   {"no-same-owner", no_argument, &same_owner_option, -1},
+   {"no-same-permissions", no_argument, &same_permissions_option, -1},
 +  {"no-unlink-first", no_argument, NULL, NO_UNLINK_FIRST_OPTION},
    {"numeric-owner", no_argument, &numeric_owner_option, 1},
-   {"old-archive", no_argument, NULL, 'o'},
-   {"one-file-system", no_argument, NULL, 'l'},
-@@ -267,6 +270,7 @@
-   {"touch", no_argument, NULL, 'm'},
-   {"uncompress", no_argument, NULL, 'Z'},
-   {"ungzip", no_argument, NULL, 'z'},
-+  {"unlink", no_argument, NULL, 'U'},
-   {"unlink-first", no_argument, NULL, 'U'},
-   {"update", no_argument, NULL, 'u'},
-   {"use-compress-program", required_argument, NULL, USE_COMPRESS_PROGRAM_OPTION},
-@@ -320,7 +324,8 @@
-   -W, --verify               attempt to verify the archive after writing it\n\
-       --remove-files         remove files after adding them to the archive\n\
-   -k, --keep-old-files       don't overwrite existing files when extracting\n\
--  -U, --unlink-first         remove each file prior to extracting over it\n\
-+  -U, --unlink-first         remove each file prior to extracting (default)\n\
+   {"old-archive", no_argument, 0, 'o'},
+   {"one-file-system", no_argument, 0, 'l'},
+@@ -266,6 +268,7 @@
+   {"touch", no_argument, 0, 'm'},
+   {"uncompress", no_argument, 0, 'Z'},
+   {"ungzip", no_argument, 0, 'z'},
++  {"unlink", no_argument, 0, 'U'},
+   {"unlink-first", no_argument, 0, 'U'},
+   {"update", no_argument, 0, 'u'},
+   {"use-compress-program", required_argument, 0, USE_COMPRESS_PROGRAM_OPTION},
+@@ -327,6 +330,7 @@
+       --overwrite            overwrite existing files when extracting\n\
+       --overwrite-dir        overwrite directory metadata when extracting\n\
+   -U, --unlink-first         remove each file prior to extracting over it\n\
 +      --no-unlink-first      don't remove each file prior to extracting\n\
        --recursive-unlink     empty hierarchies prior to extracting directory\n\
    -S, --sparse               handle sparse files efficiently\n\
    -O, --to-stdout            extract files to standard output\n\
-@@ -487,6 +492,7 @@
+@@ -510,6 +514,7 @@
  
    owner_option = -1;
    group_option = -1;
-+  unlink_first_option = 1;
++  old_files_option = UNLINK_FIRST_OLD_FILES;
  
    backup_suffix_string = getenv ("SIMPLE_BACKUP_SUFFIX");
-   version_control_string = getenv ("VERSION_CONTROL");
-@@ -780,6 +786,10 @@
+ 
+@@ -843,6 +848,10 @@
  
        case 'U':
- 	unlink_first_option = 1;
+ 	old_files_option = UNLINK_FIRST_OLD_FILES;
 +	break;
 +
 +      case NO_UNLINK_FIRST_OPTION:
-+	unlink_first_option = 0;
++	old_files_option = 0;
  	break;
  
        case 'v':
