@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2001/10/03 22:36:40 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2001/10/23 13:14:59 jlam Exp $
 #
 
 DISTNAME=		imlib-1.9.11
@@ -42,6 +42,7 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/imlib.m4 \
 		${LOCALBASE}/share/aclocal/imlib.m4
 
+.include "../../mk/x11.buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/libungif/buildlink.mk"
@@ -49,5 +50,4 @@ post-install:
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

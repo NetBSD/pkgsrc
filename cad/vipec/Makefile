@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/08/29 22:41:06 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2001/10/23 13:14:46 jlam Exp $
 #
 
 DISTNAME=	vipec-2.0.4
@@ -34,6 +34,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/vipec/help/models/*.html ${PREFIX}/share/doc/vipec/models
 	${INSTALL_DATA} ${WRKSRC}/vipec/help/models/*.png ${PREFIX}/share/doc/vipec/models
 
-.include "../../x11/qt2-libs/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
+.include "../../x11/qt2-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
