@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/08/30 08:41:44 rh Exp $
+
+--- Makefile.in.orig	Thu Jul 15 07:55:47 1999
++++ Makefile.in	Mon Aug 30 10:25:50 1999
+@@ -128,10 +128,10 @@
+ 
+ always_built_SUBDIRS = cddbslave
+ 
+-SUBDIRS = intl po macros $(always_built_SUBDIRS) 	  @PROGRAMS_VUMETER@ @PROGRAMS_GMIX@ @PROGRAMS_TCD@
++SUBDIRS = intl po macros $(always_built_SUBDIRS) 	  @PROGRAMS_VUMETER@ @PROGRAMS_GMIX@
+ 
+ 
+-DIST_SUBDIRS = intl po macros $(always_built_SUBDIRS) 	       vu-meter gmix tcd
++DIST_SUBDIRS = intl po macros $(always_built_SUBDIRS) 	       vu-meter gmix
+ 
+ 
+ EXTRA_DIST = gnome-media.spec.in configure acinclude.m4
