@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2004/11/30 18:26:39 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2004/12/03 16:06:31 wiz Exp $
 
 DISTNAME=		gnucash-1.8.9
 PKGREVISION=		4
@@ -87,7 +87,7 @@ GNUCASH_GUILE_MAKEFILE_IN_FILES= \
 .include "../../devel/gal/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
 .include "../../print/gnome-print/buildlink3.mk"
-.include "../../devel/g-wrap/buildlink3.mk"
+.include "../../devel/g-wrap1/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
