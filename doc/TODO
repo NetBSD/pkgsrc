@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2955 2005/01/22 18:59:20 adrianp Exp $
+$NetBSD: TODO,v 1.2956 2005/01/22 21:54:49 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -1016,7 +1016,6 @@ Suggested package updates
 	o smartmontools-5.33
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.52
-	o smokeping-1.34
 	o snd-7.9
 	o snes9x-1.43
 	o snownews-1.5.6.1
