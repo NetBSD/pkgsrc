@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/12/28 22:14:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2004/12/28 22:50:58 jmmv Exp $
 
 DISTNAME=	gnome-extras-2.8.2
 CATEGORIES=	meta-pkgs x11 gnome
@@ -18,7 +18,7 @@ DEPENDS+=	gaim>=1.1.0:../../chat/gaim
 DEPENDS+=	glade2>=2.6.0:../../devel/glade2
 DEPENDS+=	gnome>=2.8.2:../../meta-pkgs/gnome
 DEPENDS+=	gnome-audio>=2.0.0:../../audio/gnome-audio
-DEPENDS+=	gnome-themes-extras>=0.7:../../x11/gnome-themes-extras
+DEPENDS+=	gnome-themes-extras>=0.8:../../x11/gnome-themes-extras
 DEPENDS+=	gqview>=1.4.5:../../graphics/gqview
 DEPENDS+=	mergeant>=0.12.1:../../databases/mergeant
 DEPENDS+=	pan>=0.14.2:../../news/pan
