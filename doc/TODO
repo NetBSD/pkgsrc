@@ -1,10 +1,15 @@
-$NetBSD: TODO,v 1.190 2003/01/16 08:26:42 salo Exp $
+$NetBSD: TODO,v 1.191 2003/01/16 09:01:53 salo Exp $
 
 Suggested new packages
 ======================
 
 	any unresolved PRs (if you have commit access)
 	http://www.netbsd.org/Gnats/category/pkg.html
+
+	aspell-*
+	Various dictionaries for aspell.
+	http://aspell.net/
+	[use e.g. aspell-english as a reference]
 
 	balsa-2
 	GNOME2 version of balsa
