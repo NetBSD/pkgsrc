@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2001/01/18 20:17:11 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2001/04/19 15:32:51 jlam Exp $
 
 DISTNAME=	wmx-6pre6
 WMX_VERS=	5.0.6
@@ -22,7 +22,7 @@ CXXFLAGS+=	-I${XPMDIR}/include
 
 ALL_TARGET=	depend all
 
-FILESDIR=	${.CURDIR}/../../wm/wmx-current/files
+DISTINFO_FILE=	${.CURDIR}/../../wm/wmx-current/distinfo
 PATCHDIR=	${.CURDIR}/../../wm/wmx-current/patches
 PLIST_SRC=	${.CURDIR}/../../wm/wmx-current/pkg/PLIST
 
