@@ -3,5 +3,5 @@
 
 To use Scilab, you need to fill and return the end of the file notice.tex
 or notice.ps (postscript file). You may email to Scilab@inria.fr.
-These files are in ${PREFIX}/share/scilab-2.4.1/
+These files are in ${PREFIX}/share/scilab-2.5/
 ******************************************************************************
