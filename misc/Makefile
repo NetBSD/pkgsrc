@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2 1997/10/11 22:00:15 hubertf Exp $
+# $Id: Makefile,v 1.3 1997/10/11 22:17:46 hubertf Exp $
 #
 
 #    SUBDIR += amanda
@@ -34,7 +34,7 @@
 #    SUBDIR += p5-Search
 #    SUBDIR += plan
 #    SUBDIR += rpm
-#    SUBDIR += screen
+    SUBDIR += screen
 #    SUBDIR += splitvt
 #    SUBDIR += team
 #    SUBDIR += tkcron
