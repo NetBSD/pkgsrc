@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.740 2001/05/18 02:08:17 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.741 2001/05/18 10:29:10 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -600,6 +600,7 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
 TYPE?=		/usr/bin/type
+XARGS?=		xargs
 .elif (${OPSYS} == "Linux")
 AWK?=		/usr/bin/awk
 BASENAME?=	/bin/basename
@@ -644,6 +645,7 @@ TOUCH?=		/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/bin/true
 TYPE?=		type
+XARGS?=		xargs -r
 .else
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
@@ -688,6 +690,7 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		true				# Shell builtin
 TYPE?=		type				# Shell builtin
+XARGS?=		xargs
 .endif # !SunOS
 
 PKG_ADD?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add
@@ -1676,7 +1679,7 @@ package-links:
 .if !target(delete-package-links)
 delete-package-links:
 	${_PKG_SILENT}${_PKG_DEBUG}\
-	${FIND} ${PACKAGES} -type l -name ${PKGNAME}${PKG_SUFX} | xargs ${RM} -f
+	${FIND} ${PACKAGES} -type l -name ${PKGNAME}${PKG_SUFX} | ${XARGS} ${RM} -f
 .endif
 
 .if !target(delete-package)
@@ -3040,7 +3043,7 @@ print-pkg-size-this:
 		<${PLIST} 						\
 	| sort -u							\
 	| ${SED} -e 's, ,\\ ,g'						\
-	| xargs ${LS} -ld						\
+	| ${XARGS} ${LS} -ld						\
 	| ${AWK} 'BEGIN { print("0 "); }				\
 		  { print($$5, " + "); }				\
 		  END { print("p"); }'					\
@@ -3052,9 +3055,9 @@ print-pkg-size-this:
 # dependencies are all installed. 
 print-pkg-size-depends:
 	@${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true \
-	| xargs -n 1 ${SETENV} ${PKG_INFO} -e				\
+	| ${XARGS} -n 1 ${SETENV} ${PKG_INFO} -e			\
 	| sort -u							\
-	| xargs -n 256 ${SETENV} ${PKG_INFO} -qs			\
+	| ${XARGS} -n 256 ${SETENV} ${PKG_INFO} -qs			\
 	| ${AWK} -- 'BEGIN { print("0 "); }				\
 		/^[0-9]+$$/ { print($$1, " + "); }			\
 		END { print("p"); }'					\
@@ -3285,7 +3288,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 				continue ; 				\
 			fi ; 						\
 		done ; 						\
-		for realdep in `echo $$list | xargs -n 1 ${SETENV} ${PKG_INFO} -e | sort -u`; do \
+		for realdep in `echo $$list | ${XARGS} -n 1 ${SETENV} ${PKG_INFO} -e | sort -u`; do \
 			if ${TEST} -z "$$realdep"; then			\
 				${ECHO} "$$dep not installed - dependency NOT registered" ; \
 			elif [ -d ${PKG_DBDIR}/$$realdep ]; then	\
