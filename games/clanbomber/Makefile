@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/03/13 17:36:59 fredb Exp $
+# $NetBSD: Makefile,v 1.15 2002/03/30 02:58:47 hubertf Exp $
 
 DISTNAME=		clanbomber-1.01
 PKGREVISION=		2
@@ -14,21 +14,9 @@ USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 
-# needs a valid X display to compile its datafiles
-.ifndef DISPLAY
-IS_INTERACTIVE=		yes
-.endif
-
 pre-configure:
 	${ECHO} "#define BOMBERDATDIR \"${X11PREFIX}/share/clanbomber/clanbomber.dat\"" >> ${WRKSRC}/config.h.in
 	${ECHO} "#define BOMBERMAPS \"${X11PREFIX}/share/clanbomber/maps\"" >> ${WRKSRC}/config.h.in
-
-pre-build:
-	@if [ "${DISPLAY}" = "" ]; then					    \
-		${ECHO} Please set the DISPLAY variable to a valid display; \
-		${ECHO} before compiling ${PKGNAME}.;			    \
-		exit 1;							    \
-	fi;
 
 .include "../../graphics/clanlib/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
