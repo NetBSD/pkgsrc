@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2000/08/30 23:56:04 jwise Exp $
+$NetBSD: patch-aa,v 1.7 2001/07/22 21:26:41 agc Exp $
 
---- Imakefile.orig	Thu Mar  5 04:19:56 1998
-+++ Imakefile	Sun Jun 28 18:56:38 1998
-@@ -60,6 +60,20 @@
+--- Imakefile.orig	Tue Jul 20 19:23:50 1999
++++ Imakefile	Sun Jul 22 23:13:29 2001
+@@ -63,6 +63,20 @@
      EXTRASYSLIBS = -ldl
  #endif
  
@@ -23,7 +23,16 @@ $NetBSD: patch-aa,v 1.6 2000/08/30 23:56:04 jwise Exp $
  #if XF86SetupUsesStaticTk
         TKLIBRARY = StaticLibrary($(TKLIBDIR),$(TKLIBNAME))
  #endif
-@@ -82,7 +96,7 @@
+@@ -75,7 +89,7 @@
+ 		   $(TCLTK_LIBRARIES) $(XXF86VMLIB) $(XXF86MISCLIB) \
+ 		   $(USEINSTALLEDLIB) XawClientLibs MathLibrary
+          DEPLIBS = XawClientDepLibs $(DEPXXF86VMLIB)
+-      CARDDBFILE = $(LIBDIR)/Cards
++      CARDDBFILE = $(X11BASE)/lib/X11/Cards
+       XCONFIGSRC = xf86Config
+      XCONFIGFILE = XF86Config
+ 
+@@ -85,7 +99,7 @@
  
   XF86SETUPLIBDIR = $(LIBDIR)/XF86Setup
           DEFINES = -DCARD_DATABASE_FILE='"$(CARDDBFILE)"' \
@@ -32,7 +41,7 @@ $NetBSD: patch-aa,v 1.6 2000/08/30 23:56:04 jwise Exp $
          INCLUDES = -I../os-support -I../common \
  		   -I$(SERVERSRC)/include -I$(XINCLUDESRC) -I$(INCLUDESRC) \
  		   -I$(EXTINCSRC) $(USEINSTALLEDINC) \
-@@ -119,3 +133,5 @@
+@@ -122,3 +136,5 @@
  
  #endif
  
