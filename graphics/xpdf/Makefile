@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/09/25 20:43:25 fredb Exp $
+# $NetBSD: Makefile,v 1.10 1999/10/23 13:00:36 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
@@ -13,8 +13,9 @@ HOMEPAGE=	http://www.foolabs.com/xpdf/
 DEPENDS+=	t1lib-0.9.2:../../textproc/t1lib
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
-GNU_CONFIGURE=	yes
 USE_X11BASE=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--enable-japanese
 
 CONFLICTS=	xpdf-crypto-0.90
 
