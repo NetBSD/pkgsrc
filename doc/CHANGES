@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1424 2003/02/17 15:02:18 zuntum Exp $
+$NetBSD: CHANGES,v 1.1425 2003/02/17 18:51:38 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -728,3 +728,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added pxtools-0.0.19 [zuntum 2003-02-17]
         Updated sqlite to 2.8.0 [agc 2003-02-17]
 	Added xvier-1.0 [zuntum 2003-02-17]
+        Added gpc-2.1 [jtb 2003-02-17]
