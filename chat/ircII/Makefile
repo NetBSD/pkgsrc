@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/07/17 21:25:52 grant Exp $
+# $NetBSD: Makefile,v 1.28 2003/11/25 13:35:20 cjep Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -46,6 +46,9 @@ CONFIGURE_ARGS+=	--with-socks5=${BUILDLINK_PREFIX.socks5}
 # Allow customizations from /etc/mk.conf.
 CONFIGURE_ARGS+=	${IRCII_CONFIGURE_ARGS}
 CONFIGURE_ENV+=		${IRCII_CONFIGURE_ENV}
+
+# Solaris
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 pre-install:
 	@(if [ "X${MANZ}" != X"" ]; then \
