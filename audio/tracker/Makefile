@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/01/20 12:07:43 agc Exp $
+# $NetBSD: Makefile,v 1.29 2004/07/10 16:33:01 minskim Exp $
 # FreeBSD Id: Makefile,v 1.29 1996/12/20 23:46:22 ache Exp
 #
 
@@ -17,8 +17,9 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
+USE_BUILDLINK3=		yes
 WRKSRC=			${WRKDIR}/tracker
-MAKE_FLAGS=		MACHINE=netbsd CC=${CC} INSTALL="${INSTALL}" \
+MAKE_FLAGS=		MACHINE=${LOWER_OPSYS} CC=${CC} INSTALL="${INSTALL}" \
 		INST_BIN_OPT="-c -s -m ${BINMODE} -o ${BINOWN} -g ${BINGRP}" \
 		INST_MAN_OPT="-c -m 644 -o ${BINOWN} -g ${BINGRP}" \
 		COMPRESSION_FILE=${PKG_SYSCONFDIR}/compression_methods \
@@ -30,6 +31,8 @@ CONF_FILES=	${EGDIR}/compression_methods ${PKG_SYSCONFDIR}/compression_methods
 
 USE_MAKEINFO=	YES
 INFO_FILES=	tracker.info
+
+.include "../../mk/ossaudio.buildlink3.mk"
 
 pre-install:
 	cd ${WRKSRC}/Docs && \

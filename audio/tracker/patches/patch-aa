@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2004/07/10 16:11:59 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2004/07/10 16:33:01 minskim Exp $
 
---- Makefile.orig	2004-07-10 11:05:04.000000000 -0500
+--- Makefile.orig	1996-05-07 10:20:50.000000000 -0500
 +++ Makefile
 @@ -20,7 +20,7 @@ CC = gcc
  
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.4 2004/07/10 16:11:59 minskim Exp $
  SHELL_freebsd = /bin/sh
  
 +CFLAGS_netbsd = -O2 -funroll-loops -finline-functions
-+LIBS_netbsd = -lm -lossaudio
++LIBS_netbsd = -lm
 +AUDIODIR_netbsd=PCux/
 +CONFIG_netbsd = PCux/netbsd_
 +O_netbsd = .o
@@ -36,6 +36,18 @@ $NetBSD: patch-aa,v 1.4 2004/07/10 16:11:59 minskim Exp $
  CFLAGS_aix = -O
  LIBS_aix = -lm
  AUDIODIR_aix = Aix/
+@@ -220,9 +229,9 @@ EXE_sbos2 = .exe
+ UI_sbos2 = OS2/./
+ SHELL_sbos2 = /bin/sh
+ 
+-CFLAGS = $(CFLAGS_${MACHINE})
++CFLAGS = $(CFLAGS_${MACHINE}) -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\"
+ COPTS = $(OPTS) $(CFLAGS)
+-LIBS = $(LIBS_${MACHINE})
++LIBS = $(LIBS_${MACHINE}) ${LIBOSSAUDIO}
+ CONFIG = Arch/$(CONFIG_${MACHINE})
+ AUDIODIR = Arch/$(AUDIODIR_${MACHINE})
+ AUDIONAME = $(AUDIONAME_${MACHINE})
 @@ -250,7 +259,7 @@ OBJ_SPLITMOD = split$O time$O st_read$O 
  display$O prefs$O autoinit$O $(UI)ui$O empty$O color$O version$O \
  st_virt$O automaton$O
@@ -57,4 +69,3 @@ $NetBSD: patch-aa,v 1.4 2004/07/10 16:11:59 minskim Exp $
  
  # no manpage available, use the texinfo manual.
  install.man:
--
