@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:39 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/22 23:42:51 snj Exp $
 #
 
 DISTNAME=	ucl-1.02
@@ -13,6 +13,9 @@ USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--enable-shared=yes
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=	F77=${FALSE}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ucl
