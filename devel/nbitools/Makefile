@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 21:31:55 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/05 21:15:53 minskim Exp $
 #
 
 DISTNAME=	nbitools-R6.3
@@ -9,6 +9,10 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://www.kitebird.com/imake-book/
 COMMENT=	imake and tools derived from NetBSD-current/xsrc
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
 
 ALL_TARGET=	World
 MAKE_ENV+=	GCCCMD=gcc
