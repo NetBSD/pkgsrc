@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.210 2001/11/03 21:02:46 wiz Exp $
+# $NetBSD: Packages.txt,v 1.211 2001/11/08 08:54:04 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1462,7 +1462,7 @@ Goal (2) requires some work on the part of the package builder.  As all
 headers and libraries used by a package may be found in ${BUILDLINK_DIR},
 and -I${BUILDLINK_DIR}/include and -L${BUILDLINK_DIR}/lib are already passed
 to the compiler, it is no longer necessary to pass -I${LOCALBASE}/include or
--L${LOCABASE}/lib to the compiler.  Therefore, those lines should be removed
+-L${LOCALBASE}/lib to the compiler.  Therefore, those lines should be removed
 from package Makefiles, and where necessary, the package sources should be
 patched to do the same.  Also, if a package uses X11, then by including
 mk/x11.buildlink.mk, -I${BUILDLINK_X11_DIR}/include and
