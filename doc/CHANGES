@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3671 2003/10/09 17:23:16 jdolecek Exp $
+$NetBSD: CHANGES,v 1.3672 2003/10/09 19:10:05 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4133,3 +4133,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated unrar to 3.2.3 [fredb 2003-10-09]
 	Added p5-File-Spec-0.86 [thorpej 2003-10-09]
 	Updated freetds to 0.61.2 [dolecek 2003-10-09]
+	Updated speedtouch to 1.2-beta2 [abs 2003-10-09]
+
