@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:15:17 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/15 13:47:54 grant Exp $
 
 DISTNAME=		elisau10
 PKGNAME=		ja-elisau-1.0
@@ -18,6 +18,7 @@ SITES_elisau10${EXTRACT_SUFX}=	\
 SITES_clR5x8.bdf=	ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/
 
 WRKSRC=			${WRKDIR}
+USE_GNU_TOOLS+=		patch
 USE_X11BASE=		YES
 DOCDIR=			${PREFIX}/share/doc/elisau
 FONTDIR=		${X11PREFIX}/lib/X11/fonts/local
