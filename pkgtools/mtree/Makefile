@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 17:14:06 martti Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/31 09:30:27 grant Exp $
 #
 
-DISTNAME=		mtree-20030630
+DISTNAME=		mtree-20030731
 CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
