@@ -1,23 +1,12 @@
-$NetBSD: patch-aa,v 1.1 1999/09/07 13:22:00 is Exp $
---- netcat.c.original	Tue Sep  7 14:33:35 1999
-+++ netcat.c	Tue Sep  7 14:35:50 1999
-@@ -333,6 +333,7 @@
-   struct in_addr iaddr;
-   register HINF * poop = NULL;
-   register int x;
-+  int rc;
+$NetBSD: patch-aa,v 1.2 2002/10/08 14:29:36 abs Exp $
+
+--- data/data.c.orig	Tue Feb 27 13:43:48 1996
++++ data/data.c
+@@ -16,6 +16,7 @@
+    *Hobbit*, started 951004 or so and randomly screwed around with since */
  
- /* I really want to strangle the twit who dreamed up all these sockaddr and
-    hostent abstractions, and then forced them all to be incompatible with
-@@ -361,9 +362,9 @@
-     bail ("gethostpoop fuxored");
-   strcpy (poop->name, unknown);		/* preload it */
- /* see wzv:workarounds.c for dg/ux return-a-struct inet_addr lossage */
--  iaddr.s_addr = inet_addr (name);
-+  rc = inet_aton(name, &iaddr);
+ #include <stdio.h>
++#include <string.h>
  
--  if (iaddr.s_addr == INADDR_NONE) {	/* here's the great split: names... */
-+  if (rc == 0) {	/* here's the great split: names... */
-     if (numeric)
-       bail ("Can't parse %s as an IP address", name);
-     hostent = gethostbyname (name);
+ #ifdef MSDOS				/* for MSC only at the moment... */
+ #include <fcntl.h>
