@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2005/01/03 06:59:32 minskim Exp $
+
+--- server/mpm_common.c.orig	Thu Feb 26 14:32:21 2004
++++ server/mpm_common.c
+@@ -322,7 +322,7 @@ AP_DECLARE(gid_t) ap_gname2id(const char
+ #ifndef HAVE_INITGROUPS
+ int initgroups(const char *name, gid_t basegid)
+ {
+-#if defined(QNX) || defined(MPE) || defined(BEOS) || defined(_OSD_POSIX) || defined(TPF) || defined(__TANDEM) || defined(OS2) || defined(WIN32) || defined(NETWARE)
++#if defined(QNX) || defined(MPE) || defined(BEOS) || defined(_OSD_POSIX) || defined(TPF) || defined(__TANDEM) || defined(OS2) || defined(WIN32) || defined(NETWARE) || defined(__INTERIX)
+ /* QNX, MPE and BeOS do not appear to support supplementary groups. */
+     return 0;
+ #else /* ndef QNX */
