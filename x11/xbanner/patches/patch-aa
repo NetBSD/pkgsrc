@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1998/11/12 15:01:17 agc Exp $
+$NetBSD: patch-aa,v 1.4 2001/09/14 03:19:23 jlam Exp $
 
 --- Imakefile.orig	Thu May 15 22:38:25 1997
 +++ Imakefile	Wed Aug 19 00:21:21 1998
@@ -17,17 +17,7 @@ $NetBSD: patch-aa,v 1.3 1998/11/12 15:01:17 agc Exp $
  
  XCOMM *** Remove following line if you don't have XPM!
 -DEFINES=-DHAS_XPM
-+DEFINES=-DHAS_XPM -DX11BASE=\"${X11BASE}\"
++DEFINES=-DHAS_XPM -DPREFIX=\"${PREFIX}\"
  
  AllTarget($(PROGRAMS))
  SingleProgramTarget(xbanner, backg.o colors.o effect.o linger.o pix.o plasma.o ripples.o util.o xbanner.o xres.o , /**/ , -lXpm -lX11 -lm )
-@@ -23,6 +23,6 @@
- SingleProgramTarget(random_effect, random_effect.o , /**/ , /**/ )
- 
- XCOMM Install directives
--InstallTarget(install,xbanner, --strip --mode "0755" --owner root --group bin , $(LOCALBINDIR))
--InstallTarget(install,freetemp, --strip --mode "0755" --owner root --group bin , $(LOCALBINDIR))
--InstallTarget(install,xb_check, --strip --mode "0755" --owner root --group bin , $(LOCALBINDIR))
-+InstallTarget(install,xbanner, -s -m 0755 -o root -g bin , $(LOCALBINDIR))
-+InstallTarget(install,freetemp, -s -m 0755 -o root -g bin , $(LOCALBINDIR))
-+InstallTarget(install,xb_check, -s -m 0755 -o root -g bin , $(LOCALBINDIR))
