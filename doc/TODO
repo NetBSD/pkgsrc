@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1087 2003/12/01 00:41:05 heinz Exp $
+$NetBSD: TODO,v 1.1088 2003/12/01 12:09:07 bouyer Exp $
 
 Suggested new packages
 ======================
@@ -452,6 +452,7 @@ Suggested package updates
 	o zebra-0.94
 	o zenicb 1.31 (needs merge with lots of local changes)
 	o zope-2.6.2
+	o gpsim-0.21.0 [bouyer]
 
 Infrastructure problems which need addressing
 =============================================
