@@ -15,6 +15,6 @@ If not the server will consider, on an individual basis, that the
 client has disconnected and will
 again update the databases to an offline state.
 
-Alternativelly the server may receive an OFFLINE_REQ packet from
+Alternatively the server may receive an OFFLINE_REQ packet from
 the client, in which case the DNS record is updated at once and
-the online state droped.
+the online state dropped.
