@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.42 2004/02/06 19:16:37 jlam Exp $
+# $NetBSD: gcc.mk,v 1.43 2004/02/06 20:15:49 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	one
@@ -146,7 +146,7 @@ _GCC_DEPENDENCY=	gcc3-c>=${_GCC_REQD}:../../lang/gcc3-c
 .  endif
 _GCC_DEPENDS=		${_GCC_PKGBASE}>=${_GCC_REQD}
 
-.  if defined(_NEED_GCC3)
+.  if !empty(_NEED_GCC3:M[yY][eE][sS])
 .    if !empty(PKGPATH:Mlang/gcc3-c++)
 _IGNORE_GCC3CXX=	yes
 MAKEFLAGS+=		_IGNORE_GCC3CXX=yes
