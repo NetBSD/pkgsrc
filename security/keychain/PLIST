@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:46 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/18 03:59:49 martti Exp $
 bin/keychain
+man/man1/keychain.1
 share/doc/keychain/README
 @dirrm share/doc/keychain
