@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2002/09/24 12:30:47 wiz Exp $
+$NetBSD: MESSAGE,v 1.5 2003/03/14 20:41:30 mason Exp $
 
 Please refer to the file:
 
 	${PREFIX}/share/doc/horde/INSTALL
 
-to setup Horde to access it's database properly.  The short summary is to
+to setup Horde to access its database properly.  The short summary is to
 edit:
 
 	${HORDEDIR}/config/horde.php
