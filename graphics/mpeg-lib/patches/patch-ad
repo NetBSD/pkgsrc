@@ -1,0 +1,8 @@
+--- gdith.c.orig	Mon Sep 25 10:22:06 1995
++++ gdith.c	Sat Jun 20 00:33:27 1998
+@@ -25,2 +25,5 @@
+ #include "globals.h"		/* for global variable ditherType */
++#ifdef __NetBSD__
++#include <stdlib.h>
++#endif
+ 

@@ -1,0 +1,9 @@
+--- 24bit.c.orig	Mon Sep 25 10:22:04 1995
++++ 24bit.c	Sat Jun 20 00:33:26 1998
+@@ -32,2 +32,6 @@
+ #include <time.h>
++#ifdef __NetBSD__
++#include <stdlib.h>
++#endif
++
+ 
