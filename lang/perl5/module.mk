@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.22 2003/09/13 22:58:07 jlam Exp $
+# $NetBSD: module.mk,v 1.23 2003/11/25 15:37:35 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -109,8 +109,8 @@ MAKEFLAGS+=	_PERL5_SUB_INSTALLSCRIPT="${_PERL5_SUB_INSTALLSCRIPT}"
 # module's ${PREFIX}.
 #
 .for _var_ in ${_PERL5_SITEVARS} INSTALLSCRIPT
-_PERL5_${_var_}=	${PREFIX}/${_PERL5_SUB_${_var_}}
-MAKE_FLAGS+=		${_var_}="${_PERL5_${_var_}}"
+PERL5_${_var_}=	${PREFIX}/${_PERL5_SUB_${_var_}}
+MAKE_FLAGS+=	${_var_}="${PERL5_${_var_}}"
 .endfor
 #
 # The PREFIX in the generated Makefile will point to ${_PERL5_PREFIX},
@@ -167,7 +167,7 @@ post-install: perl5-post-install
 .PHONY: perl5-post-install
 perl5-post-install:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for dir in ${_PERL5_INSTALLARCHLIB} ${_PERL5_INSTALLSITEARCH}; do \
+	for dir in ${PERL5_INSTALLARCHLIB} ${PERL5_INSTALLSITEARCH}; do \
 		if [ -f $$dir/perllocal.pod ]; then			\
 			${RM} -f $$dir/perllocal.pod;			\
 		fi;							\
