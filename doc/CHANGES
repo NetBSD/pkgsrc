@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8123 2004/11/29 00:08:18 tv Exp $
+$NetBSD: CHANGES,v 1.8124 2004/11/29 00:22:54 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5607,3 +5607,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated amavisd-new to 2.2.0 [wiz 2004-11-28]
 	Updated lsof to 4.73nb1 [atatat 2004-11-29]
 	Updated proxycheck to 0.49a [tv 2004-11-29]
+	Added clearsilver-base-0.9.13 [epg 2004-11-29]
+	Added py-clearsilver-0.9.13 [epg 2004-11-29]
+	Added ruby-clearsilver-0.9.13 [epg 2004-11-29]
+	Updated clearsilver to 0.9.13 [epg 2004-11-29]
