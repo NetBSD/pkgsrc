@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/03/26 02:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/26 18:48:52 jlam Exp $
 
 DISTNAME=		heimdal-0.6
 PKGREVISION=		2
@@ -39,7 +39,6 @@ BUILD_DEFS+=		USE_DB4
 .if defined(USE_DB4) && !empty(USE_DB4:M[yY][eE][sS])
 .include "../../databases/db4/buildlink3.mk"
 .else
-USE_DB185=		yes
 .include "../../mk/bdb.buildlink3.mk"
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/03/10 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2004/03/26 18:48:52 jlam Exp $
 
 PKGNAME=	courier-maildirmake-${BASE_VERS}
 COMMENT=	Courier Maildir utilities
@@ -7,7 +7,6 @@ USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 USE_PKGINSTALL=		yes
 USE_PERL5=		build
-USE_DB185=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 .include "../courier-auth/Makefile.common"
