@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/03/26 13:46:22 bad Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/05/02 08:22:31 jlam Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
@@ -18,11 +18,13 @@ lib/mysql/libdbug.a
 lib/mysql/libheap.a
 lib/mysql/libmerge.a
 lib/mysql/libmyisam.a
+lib/mysql/libmyisammrg.a
 lib/mysql/libmystrings.a
 lib/mysql/libmysys.a
 lib/mysql/libnisam.a
-lib/mysql/libmyisammrg.a
 libexec/mysqld
+man/man1/mysqld.1
+man/man1/safe_mysqld.1
 share/mysql/charsets/Index
 share/mysql/charsets/README
 share/mysql/charsets/cp1251.conf
@@ -47,8 +49,6 @@ share/mysql/charsets/usa7.conf
 share/mysql/charsets/win1250.conf
 share/mysql/charsets/win1251.conf
 share/mysql/charsets/win1251ukr.conf
-share/mysql/mi_test_all
-share/mysql/mi_test_all.res
 share/mysql/czech/errmsg.sys
 share/mysql/czech/errmsg.txt
 share/mysql/danish/errmsg.sys
@@ -73,6 +73,8 @@ share/mysql/japanese/errmsg.sys
 share/mysql/japanese/errmsg.txt
 share/mysql/korean/errmsg.sys
 share/mysql/korean/errmsg.txt
+share/mysql/mi_test_all
+share/mysql/mi_test_all.res
 share/mysql/norwegian-ny/errmsg.sys
 share/mysql/norwegian-ny/errmsg.txt
 share/mysql/norwegian/errmsg.sys
@@ -91,26 +93,25 @@ share/mysql/spanish/errmsg.sys
 share/mysql/spanish/errmsg.txt
 share/mysql/swedish/errmsg.sys
 share/mysql/swedish/errmsg.txt
-@exec %D/bin/mysql_install_db --force
-@dirrm share/mysql/charsets
-@dirrm share/mysql/czech
-@dirrm share/mysql/danish
-@dirrm share/mysql/dutch
-@dirrm share/mysql/english
-@dirrm share/mysql/estonian
-@dirrm share/mysql/french
-@dirrm share/mysql/german
-@dirrm share/mysql/greek
-@dirrm share/mysql/hungarian
-@dirrm share/mysql/italian
-@dirrm share/mysql/japanese
-@dirrm share/mysql/korean
-@dirrm share/mysql/norwegian
-@dirrm share/mysql/norwegian-ny
-@dirrm share/mysql/polish
-@dirrm share/mysql/portuguese
-@dirrm share/mysql/romanian
-@dirrm share/mysql/russian
-@dirrm share/mysql/slovak
-@dirrm share/mysql/spanish
 @dirrm share/mysql/swedish
+@dirrm share/mysql/spanish
+@dirrm share/mysql/slovak
+@dirrm share/mysql/russian
+@dirrm share/mysql/romanian
+@dirrm share/mysql/portuguese
+@dirrm share/mysql/polish
+@dirrm share/mysql/norwegian-ny
+@dirrm share/mysql/norwegian
+@dirrm share/mysql/korean
+@dirrm share/mysql/japanese
+@dirrm share/mysql/italian
+@dirrm share/mysql/hungarian
+@dirrm share/mysql/greek
+@dirrm share/mysql/german
+@dirrm share/mysql/french
+@dirrm share/mysql/estonian
+@dirrm share/mysql/english
+@dirrm share/mysql/dutch
+@dirrm share/mysql/danish
+@dirrm share/mysql/czech
+@dirrm share/mysql/charsets

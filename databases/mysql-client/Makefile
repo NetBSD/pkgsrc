@@ -1,35 +1,36 @@
-# $NetBSD: Makefile,v 1.13 2001/03/26 13:26:42 bad Exp $
+# $NetBSD: Makefile,v 1.14 2001/05/02 08:22:28 jlam Exp $
 #
 
-DISTNAME=	mysql-3.23.35
-PKGNAME=	${DISTNAME:S/-/-client-/}
-CATEGORIES=	databases
-MASTER_SITES=	ftp://ftp.mysql.com/MySQL-3.23/ \
-		ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQL-3.23/
+.include "../../databases/mysql-client/Makefile.common"
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.mysql.com/
-COMMENT=	MySQL, a free SQL database (client)
+PKGNAME=		${DISTNAME:S/-/-client-/}
+COMMENT=		MySQL, a free SQL database (client)
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--without-perl --without-debug --without-bench \
-		--without-server --with-named-curses-libs="-lcurses -ltermcap"
+INFO_FILES=		mysql.info
 
-.if exists(/usr/include/readline.h)
-CONFIGURE_ARGS+=--without-readline
+CONFIGURE_ARGS+=	--without-server
+
+.if exists(/usr/include/readline.h) || exists(/usr/include/readline/readline.h)
+CONFIGURE_ENV+=		readline_lib="edit"
+.else
+DEPENDS+=		readline>=4.0:../../devel/readline
+CPPFLAGS+=		-I${LOCALBASE}/include
 .endif
 
-CFLAGS+=	-Dunix
+# The compilation looks for <readline/readline.h>, so make sure
+# /usr/include/readline.h may be accessed that way if it's the readline
+# header available on the system.
+#
+.if exists(/usr/include/readline.h)
+CPPFLAGS+=		-I${WRKDIR}
 
-USE_PERL5=	yes
-USE_LIBTOOL=	yes
-LTCONFIG_OVERRIDE= ${WRKSRC}/ltconfig
+pre-build:
+	${RM} -f ${WRKDIR}/readline
+	${LN} -sf /usr/include ${WRKDIR}/readline
+.endif
 
-INFO_FILES=	mysql.info
-
-EXTRACT_USING_PAX=	yes
-
-pre-install:
+post-install:
+	cd ${PREFIX}/man/man1; ${RM} -f mysqld.1 safe_mysqld.1
 	${INSTALL_DATA} ${WRKSRC}/Docs/mysql.info ${PREFIX}/info
 
 .include "../../mk/bsd.pkg.mk"
