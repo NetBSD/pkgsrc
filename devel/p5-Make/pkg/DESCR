@@ -1,0 +1,3 @@
+Pmake is a Perl replacement of 'make' command. It uses 'Make' module, which
+is also included this package. This means that with 'Make' module you can
+use any information in makefiles.
