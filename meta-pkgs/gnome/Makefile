@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2004/02/05 17:37:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/06 22:57:04 jmmv Exp $
 
-DISTNAME=	gnome-2.4.1
-PKGREVISION=	4
+DISTNAME=	gnome-2.4.2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,24 +10,26 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for the GNU Network Object Model Environment
 
 DEPENDS+=	balsa>=2.0.10:../../mail/balsa2
+DEPENDS+=	bug-buddy>=2.4.2:../../net/bug-buddy
 DEPENDS+=	eog>=2.5.1:../../graphics/eog2
-DEPENDS+=	epiphany>=1.0.7:../../www/epiphany
-DEPENDS+=	file-roller>=2.4.2:../../archivers/file-roller
+DEPENDS+=	epiphany>=1.0.7nb1:../../www/epiphany
+DEPENDS+=	file-roller>=2.4.4:../../archivers/file-roller
 DEPENDS+=	gcalctool>=4.2.83:../../math/gcalctool
 DEPENDS+=	gconf-editor>=2.4.0:../../editors/gconf-editor
 DEPENDS+=	gedit>=2.4.1:../../editors/gedit
-DEPENDS+=	ggv>=2.4.0.2:../../print/ggv2
+DEPENDS+=	ggv>=2.4.1:../../print/ggv2
 DEPENDS+=	glade2>=2.0.0:../../devel/glade2
-DEPENDS+=	gnome-applets>=2.4.1:../../x11/gnome2-applets
-DEPENDS+=	gnome-base>=2.4.1:../../meta-pkgs/gnome-base
+DEPENDS+=	gnome-applets>=2.4.2:../../x11/gnome2-applets
+DEPENDS+=	gnome-base>=2.4.2:../../meta-pkgs/gnome-base
 DEPENDS+=	gnome-audio>=2.0.0:../../audio/gnome-audio
-DEPENDS+=	gnome-games>=2.4.1:../../games/gnome2-games
+DEPENDS+=	gnome-games>=2.4.2:../../games/gnome2-games
 DEPENDS+=	gnome-icon-theme>=1.0.9:../../graphics/gnome-icon-theme
 DEPENDS+=	gnome-media>=2.4.1.1:../../audio/gnome2-media
 DEPENDS+=	gnome-themes>=2.4.1:../../x11/gnome-themes
 DEPENDS+=	gnome2-user-docs>=2.4.1:../../misc/gnome2-user-docs
 DEPENDS+=	gnome2-system-monitor>=2.4.0:../../sysutils/gnome2-system-monitor
 DEPENDS+=	gnome-utils>=2.4.1:../../misc/gnome2-utils
+DEPENDS+=	gpdf>=0.112:../../print/gpdf
 DEPENDS+=	gtk2-extras>=2.2.4:../../meta-pkgs/gtk2-extras
 DEPENDS+=	vera-ttf>=1.10:../../fonts/vera-ttf
 
