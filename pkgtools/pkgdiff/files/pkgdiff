@@ -1,13 +1,13 @@
 #!/bin/sh
 #
-# $NetBSD: pkgdiff,v 1.3 2000/08/15 14:35:23 abs Exp $
+# $NetBSD: pkgdiff,v 1.4 2000/08/26 04:40:28 hubertf Exp $
 #
-# Id: pkgdiff,v 1.4 2000/05/14 01:04:54 feyrer Exp feyrer 
-#
-# Usage: pkgdiff oldfile newfile
+# Usage: pkgdiff newfile
+#        pkgdiff oldfile newfile
 #
 # Will output a patch ready for the NetBSD Pkgs Collection (unified
-# diff, plus no RCS IDs if possible). 
+# diff, plus no RCS IDs if possible). If only newfile is given,
+# oldfile is assumed as newfile.orig.
 #
 # Copyright (c) 2000 by Hubert Feyrer <hubertf@netbsd.org>
 # All Rights Reserved.  Absolutely no warranty.  
@@ -15,12 +15,20 @@
 
 if [ $# -le 1 ]
 then
-	echo $0: need at least two arguments >&2
-	exit 1;
+	if [ -f "$1.orig" ]; then 
+		old="$1.orig"
+		new="$1"
+	else
+		echo $0: need at least one arguments >&2
+		exit 1;
+	fi
+else
+	old="$1"
+	new="$2"
 fi
 
 lines=3
-while [ `diff -u -$lines "$@" | egrep -c '\\$(NetBSD|Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State)'`  !=  0 ]
+while [ `diff -u -$lines "$old" "$new" | egrep -c '\\$(NetBSD|Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State)'`  !=  0 ]
 do
 	lines=`expr $lines - 1`
 	if [ $lines = 0 ]; then
@@ -29,11 +37,11 @@ do
 	fi
 done
 
-if ! diff -qu -$lines "$@" > /dev/null
+if ! diff -qu -$lines "$old" "$new" > /dev/null
 then
     echo '$'NetBSD'$'
     echo ''
     # Strip out the date on the +++ line to reduce needless
     # differences in regenerated patches
-    diff -u -$lines "$@" | sed -e 's:^\(+++ [^	]*\)	.*:\1:'
+    diff -u -$lines "$old" "$new" | sed -e 's:^\(+++ [^	]*\)	.*:\1:'
 fi

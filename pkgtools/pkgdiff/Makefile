@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2000/08/17 03:09:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/26 04:40:28 hubertf Exp $
 #
 
-DISTNAME=		pkgdiff-0.94
+DISTNAME=		pkgdiff-0.95
 CATEGORIES=		pkgtools devel
 MASTER_SITES=		# empty
 DISTFILES=		# empty
