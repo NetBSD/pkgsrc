@@ -1,0 +1,27 @@
+$NetBSD: patch-aj,v 1.1.2.2 2003/04/06 20:58:37 grant Exp $
+
+Fixes potential remote buffer overflows.  See the following url for more
+details:  http://securityfocus.com/archive/1/315057
+
+Patch by caf@guarana.org.
+
+--- source/names.c.orig	2003-03-29 21:48:19.000000000 +0100
++++ source/names.c	2003-03-29 21:52:59.000000000 +0100
+@@ -572,7 +572,7 @@
+ 
+    	*nmodes = 0;
+    	*nargs = 0;
+-	for (; *modes; modes++) 
++	for (; *modes && (strlen(nmodes) + 2) < sizeof nmodes; modes++)
+ 	{
+ 		isbanned = isopped = isvoiced = 0;
+ 		switch (*modes) 
+@@ -742,7 +742,7 @@
+ 
+    /* modes which can be done multiple times are added here */
+ 
+-	for (tucm = ucm; tucm; tucm = tucm->next) 
++	for (tucm = ucm; tucm && (strlen(nmodes) + 2) < sizeof nmodes; tucm = tucm->next)
+ 	{
+ 		if (tucm->o_ed) 
+ 		{

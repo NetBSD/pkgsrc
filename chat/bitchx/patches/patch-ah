@@ -1,0 +1,20 @@
+$NetBSD: patch-ah,v 1.1.2.2 2003/04/06 20:58:12 grant Exp $
+
+Fixes potential remote buffer overflows.  See the following url for more
+details:  http://securityfocus.com/archive/1/315057
+
+Patch by caf@guarana.org.
+
+--- source/ctcp.c.orig	2002-02-28 05:22:47.000000000 +0100
++++ source/ctcp.c	2003-03-29 21:41:01.000000000 +0100
+@@ -1482,6 +1482,10 @@
+ 	     *putbuf2;
+ 	int len;
+ 	len = IRCD_BUFFER_SIZE - (12 + strlen(to));
++
++	if (len < strlen(ctcp_cmd[datatag].name) + 3)
++		return;
++
+ 	putbuf2 = alloca(len);
+ 
+ 	if (format)
