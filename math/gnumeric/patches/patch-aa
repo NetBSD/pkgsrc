@@ -1,64 +1,37 @@
-$NetBSD: patch-aa,v 1.2 1999/08/23 17:12:41 rh Exp $
+$NetBSD: patch-aa,v 1.3 1999/09/08 16:16:07 rh Exp $
 
---- configure.orig	Sun Aug 22 16:22:16 1999
-+++ configure	Mon Aug 23 17:10:50 1999
-@@ -2361,8 +2361,10 @@
- # This can be used to rebuild libtool when needed
- LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
+--- configure.orig	Tue Sep  7 06:16:32 1999
++++ configure	Wed Sep  8 12:23:31 1999
+@@ -2063,8 +2063,10 @@
+   ac_tool_prefix=
+ fi
  
 +if false; then
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 +fi
  
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
-@@ -3401,7 +3403,7 @@
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags=
+@@ -3333,7 +3335,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
--LIBS="-lxml `gnome-config --libs xml` $LIBS"
-+LIBS="-L${LOCALBASE}/lib -lxml -lz $LIBS"
+-LIBS="-lxml `$GNOME_CONFIG --libs xml` $LIBS"
++LIBS="-L${LOCALBASE}/lib -lxml -lz ${LIBS}"
  cat > conftest.$ac_ext <<EOF
- #line 3407 "configure"
+ #line 3339 "configure"
  #include "confdefs.h"
-@@ -3432,7 +3434,7 @@
+@@ -3364,7 +3366,7 @@
    
  		
  		
--		GNOME_XML_LIB=`gnome-config --libs xml`
+-		GNOME_XML_LIB=`$GNOME_CONFIG --libs xml`
 +		GNOME_XML_LIB=-lxml
  	
  else
    echo "$ac_t""no" 1>&6
-@@ -6103,7 +6105,7 @@
- 
- echo $ac_n "checking For GnomePrint libraries""... $ac_c" 1>&6
- echo "configure:6106: checking For GnomePrint libraries" >&5
--if gnome-config --libs print > /dev/null 2>&1; then 
-+if [ -f ${PREFIX}/lib/libgnomeprint.a ]; then
-     echo "$ac_t""found" 1>&6
- else
-     { echo "configure: error: Did not find GnomePrint installed" 1>&2; exit 1; }
-@@ -6111,14 +6113,14 @@
- 
- echo $ac_n "checking For Glade libraries""... $ac_c" 1>&6
- echo "configure:6114: checking For Glade libraries" >&5
--if gnome-config --libs libglade > /dev/null 2>&1; then 
-+if [ -f ${PREFIX}/lib/libglade-gnome.a ]; then
-     echo "$ac_t""found" 1>&6
- else
-     { echo "configure: error: Did not find libGlade installed" 1>&2; exit 1; }
- fi
- 
--EXTRA_GNOME_LIBS=`gnome-config --libs gnomeui print libglade $bonobo`
--EXTRA_GNOME_CFLAGS=`gnome-config --cflags gnomeui print libglade $bonobo`
-+EXTRA_GNOME_LIBS="`gnome-config --libs gnomeui $bonobo`  -L${LOCALBASE}/lib -L${PREFIX}/lib -lgnomeprint -lglade-gnome -lglade"
-+EXTRA_GNOME_CFLAGS="`gnome-config --cflags gnomeui $bonobo` -I${LOCALBASE}/include -I${PREFIX}/include/libgnomeprint"
- 
- 
- 
-@@ -6503,10 +6505,12 @@
+@@ -6449,10 +6451,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
