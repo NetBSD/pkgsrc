@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: src2nbcompat,v 1.5 2004/08/06 16:55:09 jlam Exp $
+#	$NetBSD: src2nbcompat,v 1.6 2004/08/20 22:22:24 jlam Exp $
 #
 # Copyright (c) 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,43 +37,43 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-if [ $# -ne 2 ]; then echo "src2nbcompat src dest"; exit 1; fi
+if [ $# -lt 2 ]; then echo "src2nbcompat src dest"; exit 1; fi
 
 src=$1
 dest=$2
 
-case "$src" in
+case $src in
 /*)	;;
 *)	src=`pwd`/$src ;;
 esac
 
-case "$dest" in
+case $dest in
 /*)	;;
 *)	dest=`pwd`/$dest ;;
 esac
 
-echo "Preparing directory $dest"
-mkdir -p $dest
-
-echo "Copying files and directories to $dest"
-cd $src
-dirs=`find . -type d -print`
-for d in $dirs; do
-	newd=`echo $d | sed 's,^\./,,'`
-	case $newd in
+make_dir()
+{
+	_d="$1"
+	_destdir="$2"
+	_newd=${3-`echo $_d | sed 's,^\./,,'`}
+	case $_newd in
 	*CVS)
 		;;
 	.)
 		;;
 	*)
-		mkdir -p $dest/$newd
+		mkdir -p $_destdir/$_newd
 		;;
 	esac
-done
-files=`find . \! -type d -print`
-for f in $files; do
-	newf=`echo $f | sed 's,^\./,,'`
-	case $newf in
+}
+
+copy_file()
+{
+	_f="$1"
+	_destdir="$2"
+	_newf=${3-`echo $_f | sed 's,^\./,,'`}
+	case $_newf in
 	*CVS/*)
 		# Skip copying over any CVS information.
 		;;
@@ -85,7 +85,7 @@ for f in $files; do
 		# Assume shell scripts will require variable substitution
 		# by the GNU configure script.
 		#
-		cp $newf $dest/$newf.in
+		cp $_f $_destdir/$_newf.in
 		;;
 	*.[ch])
 		# Add "#include <nbcompat.h>" before the first system
@@ -114,36 +114,64 @@ for f in $files; do
 				next;					\
 			}						\
 			{ print }					\
-		' $newf > $dest/$newf.tmp
-		if [ -f $dest/$newf ] &&				\
-		   diff -q -I "\$NetBSD.*\$" $dest/$newf $dest/$newf.tmp >/dev/null; then
-			rm -f $dest/$newf.tmp
+		' $_f > $_destdir/$_newf.tmp
+		if [ -f $_destdir/$_newf ] &&				\
+		   diff -q -I "\$NetBSD.*\$" $_destdir/$_newf $_destdir/$_newf.tmp >/dev/null; then
+			rm -f $_destdir/$_newf.tmp
 		else
-			rm -f $dest/$newf
-			mv $dest/$newf.tmp $dest/$newf
+			rm -f $_destdir/$_newf
+			mv $_destdir/$_newf.tmp $_destdir/$_newf
 		fi
 		;;
 	*.[1-9])
 		# Copy the manpage over, and generate the catpage.
-		cp $newf $dest/$newf.tmp
-		if [ -f $dest/$newf ] &&				\
-		   diff -q -I "\$NetBSD.*\$" $dest/$newf $dest/$newf.tmp >/dev/null; then
-			rm -f $dest/$newf.tmp
+		cp $_newf $_destdir/$_newf.tmp
+		if [ -f $_destdir/$_newf ] &&				\
+		   diff -q -I "\$NetBSD.*\$" $_destdir/$_newf $_destdir/$_newf.tmp >/dev/null; then
+			rm -f $_destdir/$_newf.tmp
 		else
-			mv -f $dest/$newf.tmp $dest/$newf
-			catf=`echo $newf | sed 's,\.\([1-9]\),.cat\1,'`
-			nroff -mandoc $newf > $dest/$catf
+			mv -f $_destdir/$_newf.tmp $_destdir/$_newf
+			_catf=`echo $_newf | sed 's,\.\([1-9]\),.cat\1,'`
+			nroff -mandoc $_newf > $_destdir/$_catf
 		fi
 		;;
 	*)
 		# Everything else just gets copied verbatim.
-		cp $newf $dest/$newf.tmp
-		if [ -f $dest/$newf ] &&				\
-		   diff -q -I "\$NetBSD.*\$" $dest/$newf $dest/$newf.tmp >/dev/null; then
-			rm -f $dest/$newf.tmp
+		cp $_newf $_destdir/$_newf.tmp
+		if [ -f $_destdir/$_newf ] &&				\
+		   diff -q -I "\$NetBSD.*\$" $_destdir/$_newf $_destdir/$_newf.tmp >/dev/null; then
+			rm -f $_destdir/$_newf.tmp
 		else
-			mv -f $dest/$newf.tmp $dest/$newf
+			mv -f $_destdir/$_newf.tmp $_destdir/$_newf
 		fi
 		;;
 	esac
-done
+}
+
+if [ -f "$src" ]; then
+	srcdir=`dirname $src`
+	destdir=`dirname $dest`
+else
+	srcdir="$src"
+	destdir="$dest"
+fi
+
+echo "Preparing directory $destdir"
+mkdir -p $destdir
+
+if [ -f "$src" ]; then
+	echo "Copying $src to $dest"
+	cd $srcdir
+	copy_file `basename $src` $destdir `basename $dest`
+else
+	echo "Copying files and directories to $destdir"
+	cd $srcdir
+	find . -type d -print |
+	while read d; do
+		make_dir $d $destdir
+	done
+	find . \! -type d -print |
+	while read f; do
+		copy_file $f $destdir
+	done
+fi
