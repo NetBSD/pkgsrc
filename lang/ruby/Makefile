@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 1999/09/21 01:18:06 sakamoto Exp $
+# $NetBSD: Makefile,v 1.7 1999/12/14 07:16:04 sakamoto Exp $
 #
 
-DISTNAME=	ruby-1.4.2
+DISTNAME=	ruby-1.4.3
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.TokyoNet.AD.JP/pub/misc/ruby/ \
 		ftp://ftp.iij.ad.jp/pub/lang/ruby/ \
@@ -12,7 +12,7 @@ MASTER_SITES=	ftp://ftp.TokyoNet.AD.JP/pub/misc/ruby/ \
 		http://mirror.nucba.ac.jp/mirror/ruby/
 
 MAINTAINER=	sakamoto@netbsd.org
-HOMEPAGE=	http://www.netlab.co.jp/ruby/index.html
+HOMEPAGE=	http://www.ruby-lang.org/
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
@@ -21,7 +21,7 @@ DEPENDS+=	readline-4.0:../../devel/readline
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --enable-shared
-MAKE_ENV+=	DLDFLAGS="-L${LOCALBASE}/lib -R${LOCALBASE}/lib"
+MAKE_ENV+=	DLDFLAGS="-L${LOCALBASE}/lib -R${LOCALBASE}/lib -L${X11BASE}/lib -R${X11BASE}/lib"
 
 PLIST_SUBST=	RUBY_VERSION=1.4
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/10/05 07:22:46 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/12/14 07:16:06 sakamoto Exp $
 bin/ruby
 lib/libruby.so.${RUBY_VERSION}
 lib/ruby/${RUBY_VERSION}/English.rb
@@ -6,6 +6,7 @@ lib/ruby/${RUBY_VERSION}/Env.rb
 lib/ruby/${RUBY_VERSION}/base64.rb
 lib/ruby/${RUBY_VERSION}/cgi-lib.rb
 lib/ruby/${RUBY_VERSION}/cgi.rb
+lib/ruby/${RUBY_VERSION}/cgi/session.rb
 lib/ruby/${RUBY_VERSION}/complex.rb
 lib/ruby/${RUBY_VERSION}/date.rb
 lib/ruby/${RUBY_VERSION}/date2.rb
@@ -140,7 +141,6 @@ share/examples/ruby/pi.rb
 share/examples/ruby/rcs.awk
 share/examples/ruby/rcs.dat
 share/examples/ruby/rcs.rb
-share/examples/ruby/rd2html.rb
 share/examples/ruby/regx.rb
 share/examples/ruby/rename.rb
 share/examples/ruby/sieve.rb
@@ -158,5 +158,6 @@ share/examples/ruby/uumerge.rb
 @dirrm lib/ruby/${RUBY_VERSION}/net
 @dirrm lib/ruby/${RUBY_VERSION}/irb
 @dirrm lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/ruby/${RUBY_VERSION}/cgi
 @dirrm lib/ruby/${RUBY_VERSION}
 @dirrm lib/ruby
