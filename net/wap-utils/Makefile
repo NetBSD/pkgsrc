@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/09/28 09:13:58 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/28 00:33:23 wiz Exp $
 #
 
 DISTNAME=	ap-utils-1.3.2
@@ -15,7 +15,9 @@ COMMENT=	Wireless access points UNIX management tool
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
-USE_NCURSES=		# redrawwin()
+
+INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
+INCOMPAT_CURSES=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*
 
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
