@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4793 2004/02/11 22:58:34 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4794 2004/02/11 23:11:30 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -787,3 +787,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mldonkey to 2.5.11 [wiz 2004-02-11]
 	Updated pkg_comp to 1.16 [jmmv 2004-02-11]
 	Updated imlib2 to 1.1.0nb2 [xtraeme 2004-02-11]
+	Removed linuxls [jmmv 2004-02-11]
+	Added gnuls-5.0 [jmmv 2004-02-11]
