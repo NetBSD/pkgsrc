@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/25 03:30:29 jlam Exp $
+$NetBSD: distinfo,v 1.2 2005/01/25 19:35:17 abs Exp $
 
-SHA1 (Spiffy-0.21.tar.gz) = c80359118bf9936065c4518392dbd7bd0f935dd0
-Size (Spiffy-0.21.tar.gz) = 24629 bytes
+SHA1 (Spiffy-0.22.tar.gz) = cf9015c17eabc8620b3489334a95219d373821a0
+Size (Spiffy-0.22.tar.gz) = 24965 bytes
