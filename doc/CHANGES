@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2454 2003/06/08 05:54:09 epg Exp $
+$NetBSD: CHANGES,v 1.2455 2003/06/08 09:55:28 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2376,5 +2376,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added plotutils-nox11-2.4.1 [jschauma 2003-06-07]
 	Updated gnuplot to 3.7.3nb1 [jschauma 2003-06-07]
 	Added gnuplot-nox11-3.7.3 [jschauma 2003-06-07]
-	Bumped spamassassin to 2.55nb1 [heinz 2003-06-08]
-	Added gnuserv-3.12.6 [epg 2003-05-25]
+	Updated spamassassin to 2.55nb1 [heinz 2003-06-08]
+	Added gnuserv-3.12.6 [epg 2003-06-08]
+	Updated figlet to 2.2.1nb1 [abs 2003-06-08]
