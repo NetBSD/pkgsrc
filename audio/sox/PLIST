@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:56 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/12 19:30:50 mycroft Exp $
 bin/play
 bin/rec
 bin/sox
+bin/soxmix
 man/man1/play.1
 man/man1/rec.1
 man/man1/sox.1
 man/man1/soxexam.1
+man/man1/soxmix.1
