@@ -7,7 +7,7 @@ diff -u ../work/configuration.sh ./configuration.sh
       AUDIO_INCLUDES='#include <sys/audioio.h>' ;;
 +  NetBSD*)
 +     COMPILER=g++
-+     COMPILERFLAGS='-O2 -m486 -DNETBSD'
++     COMPILERFLAGS='-O2 -DNETBSD'
 +     INCLUDEDIRS=
 +     LIBRARIES= 
 +     AUDIO_INCLUDES='#include <sys/audioio.h>' ;;
