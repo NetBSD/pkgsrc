@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/02/20 00:33:18 xtraeme Exp $
+
+--- form.c.orig	2005-02-20 01:29:05.000000000 +0100
++++ form.c	2005-02-20 01:31:00.000000000 +0100
+@@ -791,7 +791,7 @@
+ 	struct dfui_action *a;
+ 
+ 	if (f == NULL)
+-		return(NULL);
++		return((int)NULL);
+ 
+ 	a = f->action_head;
+ 	while (a != NULL) {

@@ -1,4 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/09 05:41:36 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/20 00:33:18 xtraeme Exp $
 
 SHA1 (libdfui-3.0.tar.gz) = 7a30125df8d9c29a0b4db69add3953011f34076e
 Size (libdfui-3.0.tar.gz) = 29346 bytes
+SHA1 (patch-aa) = 0e7f7f5062ff42da25a4058d1e3e1912d0fa38bb
+SHA1 (patch-ab) = fc93cf0285348b16d4169c57edc512fc87635682
+SHA1 (patch-ac) = 2f14683e034a22fd752f58468143f68d5f3ed44e
