@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2877 2005/01/11 11:10:48 adam Exp $
+$NetBSD: TODO,v 1.2878 2005/01/11 11:22:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -500,7 +500,6 @@ Suggested package updates
 	o geda-20041228
 	o generator-0.35
 	o geneweb-4.10
-	o gentoo-0.11.54
 	o gerbv-1.0.0
 	o gettext-0.14.1
 	o ghc-6.2.2
