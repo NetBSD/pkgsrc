@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.198 1998/11/26 23:39:15 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.199 1998/12/29 17:23:39 garbled Exp $
 #
 # This file is in the public domain.
 #
@@ -1707,6 +1707,11 @@ misc-depends: uptodate-pkgtools
 			${ECHO_MSG} ">> No directory for $$dir.  Skipping.."; \
 		else							\
 			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target);	\
+			found="`${PKG_INFO} -e \"$$package\" || ${TRUE}`"; \
+			if [ X"$$found" = X"" ]; then		\
+				${ECHO_MSG} "===> $$package did not install properly"; \
+				exit 1 ; 				\
+			fi;						\
 		fi							\
 	fi							
 .endfor
