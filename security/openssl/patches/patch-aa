@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.4 2001/01/14 01:51:12 tron Exp $
+
+--- config.orig	Tue Mar 14 00:52:44 2000
++++ config	Sun Jan 14 02:10:07 2001
+@@ -324,6 +324,7 @@
+   CC=cc
+ fi
+ 
++if false; then
+ if [ "$SYSTEM" = "SunOS" ]; then
+   # check for WorkShop C, expected output is "cc: blah-blah C x.x"
+   CCVER=`(cc -V 2>&1) 2>/dev/null | \
+@@ -340,6 +341,7 @@
+   elif [ "$CC" = "cc" -a $CCVER -gt 0 ]; then
+     CC=sc3
+   fi
++fi
+ fi
+ 
+ if [ "${SYSTEM}-${MACHINE}" = "Linux-alpha" ]; then
