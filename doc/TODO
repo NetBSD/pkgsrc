@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.616 2003/06/04 16:44:29 wiz Exp $
+$NetBSD: TODO,v 1.617 2003/06/04 16:50:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -257,7 +257,6 @@ Suggested package updates
 	o ttf2pt1-3.4.3
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
-	o vsftpd-1.2.0
 	o vttest-20030301
 	o wine-20030508
 	o wmbiff-0.4.15
