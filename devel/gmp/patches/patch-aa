@@ -1,0 +1,86 @@
+$NetBSD: patch-aa,v 1.4 2000/11/17 07:21:55 mycroft Exp $
+
+--- mpn/arm/add_n.S.orig	Mon Apr 17 06:01:59 2000
++++ mpn/arm/add_n.S	Thu Nov 16 14:01:51 2000
+@@ -35,9 +35,9 @@
+ 
+ .text
+ 	.align	0
+-	.global __gmpn_add_n
+-	.type	__gmpn_add_n,%function
+-__gmpn_add_n:
++	.global ___gmpn_add_n
++	.type	___gmpn_add_n,%function
++___gmpn_add_n:
+ 	stmfd	sp!, { r8, r9, lr }
+ 	movs	n, n, lsr #1
+ 	bcc	skip1
+@@ -74,4 +74,4 @@
+ 	adc	r0, n, #0
+ 	ldmfd	sp!, { r8, r9, pc }
+ end:
+-	.size	__gmpn_add_n, end - __gmpn_add_n
++	.size	___gmpn_add_n, end - ___gmpn_add_n
+--- mpn/arm/addmul_1.S.orig	Mon Apr 17 06:01:59 2000
++++ mpn/arm/addmul_1.S	Thu Nov 16 14:01:57 2000
+@@ -35,9 +35,9 @@
+ 
+ .text
+ 	.align	0
+-	.global	__gmpn_addmul_1
+-	.type	__gmpn_addmul_1,%function
+-__gmpn_addmul_1:
++	.global	___gmpn_addmul_1
++	.type	___gmpn_addmul_1,%function
++___gmpn_addmul_1:
+ 	stmfd	sp!, { r8-r11, lr }
+ 	mov	z, #0
+ 	mov	ip, #0
+@@ -86,4 +86,4 @@
+ 	mov	r0, ip
+ 	ldmfd	sp!, { r8-r11, pc }
+ end:
+-	.size	__gmpn_addmul_1, end - __gmpn_addmul_1
++	.size	___gmpn_addmul_1, end - ___gmpn_addmul_1
+--- mpn/arm/mul_1.S.orig	Mon Apr 17 06:01:59 2000
++++ mpn/arm/mul_1.S	Thu Nov 16 14:02:03 2000
+@@ -35,9 +35,9 @@
+ 
+ .text
+ 	.align	0
+-	.global	__gmpn_mul_1
+-	.type	__gmpn_mul_1,%function
+-__gmpn_mul_1:
++	.global	___gmpn_mul_1
++	.type	___gmpn_mul_1,%function
++___gmpn_mul_1:
+ 	stmfd	sp!, { r8, r9, lr }
+ 	ands	ip, n, #1
+ 	beq	skip1
+@@ -78,4 +78,4 @@
+ 	mov	r0, ip
+ 	ldmfd	sp!, { r8, r9, pc }
+ end:
+-	.size	__gmpn_mul_1, end - __gmpn_mul_1
++	.size	___gmpn_mul_1, end - ___gmpn_mul_1
+--- mpn/arm/sub_n.S.orig	Mon Apr 17 06:01:59 2000
++++ mpn/arm/sub_n.S	Thu Nov 16 14:02:08 2000
+@@ -35,9 +35,9 @@
+ 
+ .text
+ 	.align	0
+-	.global	__gmpn_sub_n
+-	.type	__gmpn_sub_n,%function
+-__gmpn_sub_n:
++	.global	___gmpn_sub_n
++	.type	___gmpn_sub_n,%function
++___gmpn_sub_n:
+ 	stmfd	sp!, { r8, r9, lr }
+ 	subs	ip, ip, ip
+ 	tst	n, #1
+@@ -76,4 +76,4 @@
+ 	and	r0, r0, #1
+ 	ldmfd	sp!, { r8, r9, pc }
+ end:
+-	.size	__gmpn_sub_n, end - __gmpn_sub_n
++	.size	___gmpn_sub_n, end - ___gmpn_sub_n
