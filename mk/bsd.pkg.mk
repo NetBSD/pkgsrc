@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.941 2002/03/04 19:41:03 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.942 2002/03/06 11:37:28 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -1084,7 +1084,7 @@ IGNORE+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 #
 .  if defined(IGNORE)
 fetch checksum extract patch configure all build install package \
-install-depends check-depends:
+install-depends:
 .    if defined(IGNORE_SILENT)
 	@${DO_NADA}
 .    else
@@ -3211,18 +3211,6 @@ install-depends: uptodate-pkgtools
 .    endif	# !NO_DEPENDS
 .  endif	# DEPENDS
 
-.endif
-
-real-fetch: check-depends
-.if !target(check-depends)
-check-depends:
-.  if (defined(DEPENDS) || defined(BUILD_DEPENDS)) && \
-      !defined(NO_DEPENDS) && !defined(NO_CHECK_DEPENDS) && !exists(${EXTRACT_COOKIE})
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	${ECHO_MSG} "${_PKGSRC_IN}> Validating dependencies for ${PKGNAME}" ; \
-	${MAKE} ${MAKEFLAGS} DEPENDS_TARGET=check-depends ECHO_MSG=${TRUE:Q} IGNORE_FAIL=1 _DEPENDS_TARGET_OVERRIDE=1 install-depends || \
-		{ ${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} cannot build necessary dependencies."; ${FALSE}; }
-.  endif
 .endif
 
 .if !target(build-depends-list)
