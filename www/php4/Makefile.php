@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.php,v 1.1 2001/10/16 04:54:24 jlam Exp $
+# $NetBSD: Makefile.php,v 1.2 2001/10/16 12:44:17 tron Exp $
 
-.include "../php4/Makefile.common"
+.include "../../www/php4/Makefile.common"
 
-DISTINFO_FILE=		${.CURDIR}/../php4/distinfo
-PATCHDIR=		${.CURDIR}/../php4/patches
+DISTINFO_FILE=		${.CURDIR}/../../www/php4/distinfo
+PATCHDIR=		${.CURDIR}/../../www/php4/patches
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
