@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2000/12/31 06:45:19 mrg Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/07/07 20:54:53 mrg Exp $
 bin/irc
-bin/irc-20001231
+bin/irc-20010612
 bin/ircbug
 bin/ircflush
 bin/ircio
@@ -172,6 +172,7 @@ share/irc/help/load/kickmenu@.GZ@
 share/irc/help/load/killpath@.GZ@
 share/irc/help/load/kpstat@.GZ@
 share/irc/help/load/list@.GZ@
+share/irc/help/load/listidle@.GZ@
 share/irc/help/load/load@.GZ@
 share/irc/help/load/local@.GZ@
 share/irc/help/load/lynx_ircrc@.GZ@
@@ -396,6 +397,7 @@ share/irc/help/set/show_end_of_msgs@.GZ@
 share/irc/help/set/show_numerics@.GZ@
 share/irc/help/set/show_status_all@.GZ@
 share/irc/help/set/show_who_hopcount@.GZ@
+share/irc/help/set/star_prefix@.GZ@
 share/irc/help/set/status_away@.GZ@
 share/irc/help/set/status_channel@.GZ@
 share/irc/help/set/status_chanop@.GZ@
@@ -414,6 +416,7 @@ share/irc/help/set/status_query@.GZ@
 share/irc/help/set/status_server@.GZ@
 share/irc/help/set/status_umode@.GZ@
 share/irc/help/set/status_user@.GZ@
+share/irc/help/set/status_voice@.GZ@
 share/irc/help/set/status_window@.GZ@
 share/irc/help/set/suppress_server_motd@.GZ@
 share/irc/help/set/tab_max@.GZ@
@@ -539,6 +542,7 @@ share/irc/script/kickmenu
 share/irc/script/killpath
 share/irc/script/kpstat
 share/irc/script/list
+share/irc/script/listidle
 share/irc/script/log
 share/irc/script/lynx_ircrc
 share/irc/script/meta1
