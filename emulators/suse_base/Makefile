@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2003/03/01 10:46:39 jmc Exp $
+# $NetBSD: Makefile,v 1.37 2003/03/22 01:22:30 dillo Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=a1/} \
 			${MASTER_SITE_SUSE_UPD:=a1/}
@@ -39,6 +39,9 @@ do-build:
 	         -e 's#@@EMULSUBDIR@@#${EMULSUBDIR}#g' \
 	    <$$FILE >${WRKDIR}/`basename $$FILE`; \
 	done
+	${SED} -e 's#@@VERSION@@#${SUSE_VERSION}#g' \
+	       -e 's#@@ARCH@@#${SUSE_ARCH}#g' \
+	    <${FILESDIR}/SuSE-release >${WRKDIR}/SuSE-release
 
 do-install:
 	for FILE in ${WRKDIR}/*.sh; do \
@@ -50,6 +53,7 @@ do-install:
 	@${CP} ${WRKDIR}/PLIST ${PLIST_SRC}
 	${RPM2PKG} ${RPM2PKGARGS}
 	${ECHO} "@dirrm ${EMULSUBDIR}" >>${PLIST_SRC}
+	${INSTALL_DATA} ${WRKDIR}/SuSE-release ${EMULDIR}/etc
 	${INSTALL_DATA} ${FILESDIR}/ld.so.conf ${EMULDIR}/etc
 	${EMULDIR}/sbin/ldconfig -r ${EMULDIR}
 	${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" \

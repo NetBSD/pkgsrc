@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/25 21:49:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/03/22 01:22:30 dillo Exp $
 sbin/linux-mkpwd
 @unexec ${RM} -f %D/@@EMULSUBDIR@@/etc/ld.so.cache
+@@EMULSUBDIR@@/etc/SuSE-release
 @@EMULSUBDIR@@/etc/ld.so.conf
 @unexec cd %D/@@EMULSUBDIR@@/etc && ${RM} -f group gshadow passwd shadow
 @exec ${MKDIR} %D/@@EMULSUBDIR@@/dev
