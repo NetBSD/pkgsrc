@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2004/06/21 15:55:55 drochner Exp $
+$NetBSD: distinfo,v 1.7 2004/08/02 19:09:45 shannonjr Exp $
 
 SHA1 (xine-lib-1-rc5.tar.gz) = b38aa71ab717ba04f03591d1d003da4ce23ed1cf
 Size (xine-lib-1-rc5.tar.gz) = 7052663 bytes
@@ -20,3 +20,4 @@ SHA1 (patch-as) = ad09d98ba79cdaa0367589658d7fa05a78d075ba
 SHA1 (patch-at) = b43d07b20f209a31df454620673a21f174550cf9
 SHA1 (patch-au) = 569ac1d00402eb3679bf99f0afe5832f425b3b0e
 SHA1 (patch-av) = 56f462e6091a72e87544ece689557d60fbb749aa
+SHA1 (patch-aw) = 748feea39a7c41f40e56f463dde9186430c2a74f
