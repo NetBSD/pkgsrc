@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/12/23 21:10:22 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/12/24 13:02:00 jmmv Exp $
 #
 
 DISTNAME=		lyx-1.3.3
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.lyx.org/
 COMMENT=		Graphical frontend for LaTeX
 
 CONFLICTS=		lyx-[0-9]*
-DEPENDS+=		{teTeX-[0-9]*,teTeX2-[0-9]*}:../../print/teTeX2
+DEPENDS+=		teTeX-[0-9]*:../../print/teTeX
 
 DESCR_SRC=		${.CURDIR}/../../editors/lyx-qt/DESCR
 DISTINFO_FILE=		${.CURDIR}/../../editors/lyx-qt/distinfo

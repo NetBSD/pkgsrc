@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:52:31 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/24 13:02:01 jmmv Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 PKGNAME=        ja-${DISTNAME}
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/dvipdfm
 CATEGORIES=	print converters
 MASTER_SITES=	ftp://ftp.kettering.edu/pub/outgoing/mwicks/dvipdfm/
@@ -16,6 +17,7 @@ COMMENT=	DVI to PDF translator with Japanese patch
 
 CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	dvipdfmx-[0-9]*
+CONFLICTS+=	teTeX-bin>=2.0
 
 USE_BUILDLINK2=	# defined
 GNU_CONFIGURE=	# defined
@@ -34,6 +36,6 @@ post-install:
 	${PREFIX}/bin/mktexlsr
 
 .include "../../graphics/png/buildlink2.mk"
-.include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
+.include "../../print/teTeX1-bin/kpathsea.buildlink2.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

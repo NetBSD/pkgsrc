@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/12/03 22:14:46 kristerw Exp $
+# $NetBSD: Makefile,v 1.11 2003/12/24 13:02:01 jmmv Exp $
 #
 
 DISTNAME=	Template-Toolkit-2.10
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5tto
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
@@ -24,7 +25,7 @@ DEPENDS+=	p5-Text-Autoformat-[0-9]*:../../textproc/p5-Text-Autoformat
 DEPENDS+=	p5-XML-Parser>=2.30:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-XML-RSS>=0.9:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-XML-XPath>=1.08:../../textproc/p5-XML-XPath
-DEPENDS+=	{teTeX>=1.0.7,teTeX2>=2.0}:../../print/teTeX
+DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
 
 USE_BUILDLINK2=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Template/.packlist

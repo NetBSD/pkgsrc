@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/19 09:38:03 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/24 13:02:01 jmmv Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -27,7 +27,7 @@ DEPENDS+=	ja-ptex-share>=2.1:../../print/ja-ptex-share
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
-.include "../../print/teTeX2-bin/Makefile.common"
+.include "../../print/teTeX-bin/Makefile.common"
 
 PTEX_VERS=		3.1.2
 DVIPSK_PATCH_VERS=	p1.6
@@ -53,9 +53,9 @@ FILES_SUBST+=		PATCH=${PATCH}
 
 pre-extract:
 	if [ ! -e ${WRKSRC} ]; then \
-		cd ../../print/teTeX2-bin && ${MAKE} patch; \
+		cd ../../print/teTeX-bin && ${MAKE} patch; \
 	elif [ ! -e ${WRKSRC_PTEX} ]; then \
-		cd ../../print/teTeX2-bin && ${MAKE} clean; ${MAKE} patch; \
+		cd ../../print/teTeX-bin && ${MAKE} clean; ${MAKE} patch; \
 	fi;
 
 post-extract:
@@ -115,7 +115,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/texk/PSTricks.patch ${TEXMF}/dvips/pstricks
 
 pre-clean:
-	cd ../../print/teTeX2-bin && ${MAKE} clean
+	cd ../../print/teTeX-bin && ${MAKE} clean
 
-.include "../../print/teTeX2-bin/kpathsea.buildlink2.mk"
+.include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
