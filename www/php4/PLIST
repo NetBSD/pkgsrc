@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/04/20 19:19:23 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/12/12 09:21:45 jdolecek Exp $
 bin/pear
 bin/php
 bin/php-config
@@ -232,6 +232,8 @@ lib/php/doc/DB/doc/MAINTAINERS
 lib/php/doc/DB/doc/STATUS
 lib/php/doc/DB/doc/TESTERS
 lib/php/doc/DB/doc/IDEAS
+lib/php/doc/Net_SMTP/docs/guide.txt
+lib/php/doc/Net_SMTP/docs/examples/basic.php
 lib/php/DB/dbase.php
 lib/php/DB/fbsql.php
 lib/php/DB/ibase.php
@@ -303,6 +305,9 @@ lib/php/test/DB/tests/driver/run.cvs
 lib/php/test/DB/tests/driver/skipif.inc
 lib/php/test/DB/tests/driver/setup.inc.cvs
 lib/php/test/DB/tests/db_error.phpt
+lib/php/test/Net_SMTP/tests/auth.phpt
+lib/php/test/Net_SMTP/tests/basic.phpt
+lib/php/test/Net_SMTP/tests/config.php.dist
 lib/php/test/XML_Parser/tests/002.phpt
 lib/php/test/XML_Parser/tests/003.phpt
 lib/php/test/XML_Parser/tests/004.phpt
@@ -332,12 +337,17 @@ share/php/php.gif
 @dirrm lib/php/data
 @dirrm lib/php/doc/Archive_Tar/docs
 @dirrm lib/php/doc/Archive_Tar
+@dirrm lib/php/doc/Net_SMTP/docs/examples
+@dirrm lib/php/doc/Net_SMTP/docs
+@dirrm lib/php/doc/Net_SMTP
 @dirrm lib/php/doc/DB/doc
 @dirrm lib/php/doc/DB
 @dirrm lib/php/doc
 @dirrm lib/php/test/DB/tests/driver
 @dirrm lib/php/test/DB/tests
 @dirrm lib/php/test/DB
+@dirrm lib/php/test/Net_SMTP/tests
+@dirrm lib/php/test/Net_SMTP
 @dirrm lib/php/test/XML_Parser/tests
 @dirrm lib/php/test/XML_Parser
 @dirrm lib/php/test
