@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9768 2005/04/05 21:47:21 rillig Exp $
+$NetBSD: CHANGES,v 1.9769 2005/04/05 21:50:20 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -719,7 +719,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Kwiki-UserName to 0.14 [jlam 2005-02-02]
 	Updated p5-Kwiki-UserPreferences to 0.13 [jlam 2005-02-02]
 	Added libarchive-1.02.002 [xtraeme 2005-02-02]
-	Added gaim-encryption [jschauma 2005-02-02]
+	Added gaim-encryption-2.34 [jschauma 2005-02-02]
 	Updated speedtouch to 1.3.1nb2 [tron 2005-02-02]
 	Updated dcraw to 1.233 [drochner 2005-02-02]
 	Added gimp-rawphoto-1.19 [drochner 2005-02-02]
