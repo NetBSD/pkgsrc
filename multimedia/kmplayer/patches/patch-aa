@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/26 12:10:14 jmmv Exp $
+
+--- src/Makefile.in.orig	2004-01-02 22:10:41.000000000 +0100
++++ src/Makefile.in
+@@ -258,7 +258,7 @@ qt_includes = @qt_includes@
+ qt_libraries = @qt_libraries@
+ x_includes = @x_includes@
+ x_libraries = @x_libraries@
+-xdg_appsdir = @xdg_appsdir@
++xdg_appsdir = @kde_appsdir@/Multimedia
+ xdg_directorydir = @xdg_directorydir@
+ xdg_menudir = @xdg_menudir@
+ INCLUDES = -I$(kde_includes)/kio $(all_includes)
