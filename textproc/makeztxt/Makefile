@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2001/02/19 15:16:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/05 20:16:05 wiz Exp $
 #
 
 DISTNAME=	${PKGNAME}b-src
 PKGNAME=	makeztxt-1.40
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME}b
 CATEGORIES=	textproc converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gutenpalm/}
 
