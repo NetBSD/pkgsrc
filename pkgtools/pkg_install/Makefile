@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2003/12/22 00:23:35 grant Exp $
+# $NetBSD: Makefile,v 1.91 2004/01/15 01:40:13 grant Exp $
 
 # Notes to package maintainers:
 #
@@ -44,6 +44,9 @@ LIBNBCOMPAT_SRCDIR=	${WRKDIR}/libnbcompat
 CFLAGS+=		-I${LIBNBCOMPAT_SRCDIR}
 LDFLAGS+=		-L${LIBNBCOMPAT_SRCDIR}
 LIBS+=			-lnbcompat
+
+CPPFLAGS+=		-DOPSYS_NAME='\"${OPSYS}\"'
+CPPFLAGS+=		-DMACHINE_ARCH='\"${MACHINE_ARCH}\"'
 
 VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
