@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/03/08 22:12:05 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/03/11 12:16:33 tron Exp $
 bin/xchat
 bin/xchat-text
 share/doc/xchat/xchat-1.html
@@ -16,20 +16,16 @@ share/gnome/apps/Internet/xchat.desktop
 share/locale/cs/LC_MESSAGES/xchat.mo
 share/locale/da/LC_MESSAGES/xchat.mo
 share/locale/de/LC_MESSAGES/xchat.mo
+share/locale/el/LC_MESSAGES/xchat.mo
 share/locale/es/LC_MESSAGES/xchat.mo
 share/locale/fr/LC_MESSAGES/xchat.mo
-share/locale/fr_CA/LC_MESSAGES/xchat.mo
 share/locale/hu/LC_MESSAGES/xchat.mo
 share/locale/it/LC_MESSAGES/xchat.mo
 share/locale/ja/LC_MESSAGES/xchat.mo
 share/locale/ko/LC_MESSAGES/xchat.mo
 share/locale/nl/LC_MESSAGES/xchat.mo
-share/locale/no/LC_MESSAGES/xchat.mo
-share/locale/pl/LC_MESSAGES/xchat.mo
 share/locale/pt_BR/LC_MESSAGES/xchat.mo
-share/locale/ru/LC_MESSAGES/xchat.mo
 share/locale/sl/LC_MESSAGES/xchat.mo
 share/locale/sr_YU/LC_MESSAGES/xchat.mo
-share/locale/sv/LC_MESSAGES/xchat.mo
 share/pixmaps/xchat.png
 @dirrm share/doc/xchat
