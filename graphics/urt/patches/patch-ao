@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2000/05/17 18:50:35 tron Exp $
+
+--- get/getx11/makefile.src.orig	Wed Jul 15 22:31:20 1992
++++ get/getx11/makefile.src	Wed May 17 20:48:07 2000
+@@ -16,7 +16,7 @@
+ #endif
+ 
+ # Point to X11 include directory, if it's in a strange place
+-DIRFLAGS = $(INCX11)
++DIRFLAGS = $(INCX11) -Dunix
+ 
+ # -lX11 is X11 support library
+ DIRLIBS = $(LIBX11) $(LIBEXT) -lm
