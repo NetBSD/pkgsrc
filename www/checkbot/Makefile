@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/08/09 12:35:36 abs Exp $
+# $NetBSD: Makefile,v 1.10 2001/09/27 20:43:04 abs Exp $
 #
 
 DISTNAME=	checkbot-1.64
@@ -10,10 +10,10 @@ MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://degraaff.org/checkbot/
 COMMENT=	Verify links on a set of HTML pages
 
-DEPENDS+= 	p5-MailTools-*:../../mail/p5-MailTools
-DEPENDS+= 	p5-Net-*:../../net/p5-Net
-DEPENDS+= 	p5-URI-*:../../www/p5-URI
-DEPENDS+= 	p5-libwww-*:../../www/p5-libwww
+DEPENDS+= 	p5-MailTools-[0-9]*:../../mail/p5-MailTools
+DEPENDS+= 	p5-Net-[0-9]*:../../net/p5-Net
+DEPENDS+= 	p5-URI-[0-9]*:../../www/p5-URI
+DEPENDS+= 	p5-libwww-[0-9]*:../../www/p5-libwww
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/checkbot/.packlist
