@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/03/04 16:52:07 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2003/03/18 15:06:20 jmmv Exp $
 
 DISTNAME=	libxml2-${LIBXML_VERSION}
 CATEGORIES=	textproc
@@ -22,6 +22,8 @@ CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--with-threads
+
+MAKE_ENV+=		PAX=${PAX:Q}
 
 CFLAGS+=	-DXML_SGML_DEFAULT_CATALOG=\"\\\"${SGML_DEFAULT_CATALOG}\\\"\"
 CFLAGS+=	-DXML_XML_DEFAULT_CATALOG=\"\\\"${XML_DEFAULT_CATALOG}\\\"\"
