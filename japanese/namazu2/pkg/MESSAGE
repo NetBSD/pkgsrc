@@ -1,5 +1,14 @@
-$NetBSD: MESSAGE,v 1.1.1.1 2001/01/27 02:29:25 taca Exp $
+$NetBSD: MESSAGE,v 1.2 2001/02/18 14:39:07 taca Exp $
 
-*WARNING*: Index file format has changed since namazu 2.0.
-If you upgrade from namazu 1.X, you need to rebuild index
-files at least.
+*WARNING*:
+
+1. Index file format has changed since namazu 2.0.
+   If you upgrade from namazu 1.X, you need to rebuild index
+   files at least.
+
+2. In order to processing Japanese, you need to set "LANG",
+   "LC_ALL", "LC_MESSAGES" or "LANGUAGE" environment to "ja".
+   Because of lack of locale support, you could only use
+   "LANGUAGE" environment.  This restriction is hoped to
+   remove feature NetBSD release.
+
