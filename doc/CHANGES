@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7573 2004/10/26 14:00:22 adam Exp $
+$NetBSD: CHANGES,v 1.7574 2004/10/26 17:02:22 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4877,3 +4877,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated glut to 6.2 [adam 2004-10-26]
 	Updated MesaDemos to 6.2 [adam 2004-10-26]
 	Updated Mesa to 6.2 [adam 2004-10-26]
+	Updated m4 to 1.4.2 [gavan 2004-10-26]
