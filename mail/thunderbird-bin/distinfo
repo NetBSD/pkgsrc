@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/04 05:24:42 grant Exp $
+$NetBSD: distinfo,v 1.2 2003/12/13 04:01:50 grant Exp $
 
-SHA1 (thunderbird-0.3-i686-pc-linux-gtk2-gnu.tar.bz2) = d5f8571705f5490038e699ee70f9189aa7ecaec5
-Size (thunderbird-0.3-i686-pc-linux-gtk2-gnu.tar.bz2) = 10164247 bytes
-SHA1 (thunderbird-0.3-i386-pc-solaris2.8.tar.gz) = 2104352719c02cbfbf8852c27e98b33bdd048c6e
-Size (thunderbird-0.3-i386-pc-solaris2.8.tar.gz) = 13264518 bytes
+SHA1 (thunderbird-0.4-i686-pc-linux-gtk2-gnu.tar.bz2) = 1877ba3d5e256653e4ac059c605760f75971fdcf
+Size (thunderbird-0.4-i686-pc-linux-gtk2-gnu.tar.bz2) = 10330376 bytes
+SHA1 (thunderbird-0.4-i386-pc-solaris2.8.tar.gz) = cdaea1686c16156ce54bd8e872ac559965ac6429
+Size (thunderbird-0.4-i386-pc-solaris2.8.tar.gz) = 12987091 bytes
+SHA1 (thunderbird-0.4-sparc-sun-solaris2.8.tar.gz) = 4fd79104d3c7e6ec266c2a63647e9b65b5dc408a
+Size (thunderbird-0.4-sparc-sun-solaris2.8.tar.gz) = 15463913 bytes
