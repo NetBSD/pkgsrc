@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 09:31:31 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/05 09:34:23 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BZIP2_BUILDLINK3_MK:=	${BZIP2_BUILDLINK3_MK}+
@@ -18,12 +18,12 @@ BUILDLINK_IS_BUILTIN.bzip2=	NO
 .  if exists(/usr/include/bzlib.h)
 BUILDLINK_IS_BUILTIN.bzip2!=						\
 	if ${GREP} -q "BZ2_" /usr/include/bzlib.h; then			\
-		${ECHO} YES;						\
+		${ECHO} "YES";						\
 	else								\
-		${ECHO} NO;						\
+		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.bzip2=${BUILDLINK_IS_BUILTIN.bzip2}
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.bzip2="${BUILDLINK_IS_BUILTIN.bzip2}"
 .endif
 
 .if defined(USE_BZIP2)
