@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2002/05/21 16:50:26 magick Exp $
+# $NetBSD: Makefile,v 1.16 2002/06/09 10:59:34 magick Exp $
 
-DISTNAME=	nxtvepg-0.7.2
+DISTNAME=	nxtvepg-0.7.4
 CATEGORIES=	misc
 MASTER_SITES=	http://www.nefkom.net/tomzo/prj/nxtvepg/src/
 
