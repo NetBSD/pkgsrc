@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2000/03/16 15:32:50 mrg Exp $
+# $NetBSD: Makefile,v 1.28 2000/03/18 09:45:02 itojun Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
-DISTNAME=		ircii-4.4R
-PKGNAME=		ircII-4.4R
-WRKSRC=			${WRKDIR}/ircii-4.4R
+DISTNAME=		ircii-4.4S
+PKGNAME=		ircII-4.4S
+WRKSRC=			${WRKDIR}/ircii-4.4S
 CATEGORIES=		net
 MASTER_SITES=		ftp://ircftp.au.eterna.com.au/pub/ircII/
 
@@ -16,6 +16,8 @@ GNU_CONFIGURE=		yes
 .if defined(DEFAULT_IRC_SERVER)
 CONFIGURE_ARGS+=	--with-default-server=${DEFAULT_IRC_SERVER}
 .endif
+
+BUILD_DEFS+=		USE_INET6
 
 # Note: this pkg auto-detects IPv6 without regarding USE_INET6.
 # (Leave the above line in to still get it into the README-IPv6.html!)
