@@ -1,7 +1,5 @@
-$NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
-
---- configure.orig	Fri Oct 19 20:24:15 2001
-+++ configure	Sun Mar 16 13:17:49 2003
+--- configure.orig	Fri Oct 19 17:24:15 2001
++++ configure	Tue Apr  1 19:47:04 2003
 @@ -4776,6 +4776,7 @@
      # Step 3: set configuration options based on system name and version.
  
@@ -100,7 +98,27 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -5166,20 +5167,23 @@
+@@ -5123,6 +5124,9 @@
+ 	    DL_OBJS="tclLoadDl.o"
+ 	    DL_LIBS=""
+ 	    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
++	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
++	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
++	    TCL_LIB_VERSIONS_OK=nodots
+ 	    if test "$GCC" = "yes" ; then
+ 		EXTRA_CFLAGS="-mabi=n32"
+ 		LDFLAGS="-mabi=n32"
+@@ -5148,6 +5152,9 @@
+ 	    DL_LIBS=""
+ 	    LDFLAGS=""
+ 	    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
++	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
++	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
++	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+ 	Linux*)
+ 	    SHLIB_CFLAGS="-fPIC"
+@@ -5166,20 +5173,23 @@
  		DL_LIBS="-ldl"
  		LDFLAGS="-rdynamic"
  		LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
@@ -127,7 +145,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -5236,17 +5240,17 @@
+@@ -5236,17 +5246,17 @@
  	    else
  		ac_safe=`echo "dld.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dld.h""... $ac_c" 1>&6
@@ -148,7 +166,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -5298,20 +5302,23 @@
+@@ -5298,20 +5308,23 @@
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	NetBSD-*|FreeBSD-[1-2].*|OpenBSD-*)
@@ -175,7 +193,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -5330,17 +5337,15 @@
+@@ -5330,17 +5343,15 @@
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
@@ -195,7 +213,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  #include "confdefs.h"
  
  #ifdef __ELF__
-@@ -5351,11 +5356,20 @@
+@@ -5351,11 +5362,20 @@
  if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
    egrep "yes" >/dev/null 2>&1; then
    rm -rf conftest*
@@ -216,7 +234,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
  		
  fi
-@@ -5569,6 +5583,9 @@
+@@ -5569,6 +5589,9 @@
  	    DL_LIBS="-ldl"
  	    LDFLAGS=""
  	    LD_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
@@ -226,7 +244,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  	    ;;
  	SunOS-5*)
  
-@@ -5616,6 +5633,9 @@
+@@ -5616,6 +5639,9 @@
  	    else
  		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
  	    fi
@@ -236,7 +254,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
-@@ -5641,17 +5661,17 @@
+@@ -5641,10 +5667,10 @@
  	    # that don't grok the -Bexport option.  Test that it does.
  	    hold_ldflags=$LDFLAGS
  	    echo $ac_n "checking for ld accepts -Bexport flag""... $ac_c" 1>&6
@@ -249,6 +267,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  #include "confdefs.h"
  
  int main() {
+@@ -5651,7 +5677,7 @@
  int i;
  ; return 0; }
  EOF
@@ -257,7 +276,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
    rm -rf conftest*
    found=yes
  else
-@@ -5697,9 +5717,9 @@
+@@ -5697,9 +5723,9 @@
  
      if test "x$DL_OBJS" = "xtclLoadAout.o" ; then
  	echo $ac_n "checking sys/exec.h""... $ac_c" 1>&6
@@ -269,7 +288,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  #include "confdefs.h"
  #include <sys/exec.h>
  int main() {
-@@ -5717,7 +5737,7 @@
+@@ -5717,7 +5743,7 @@
      
  ; return 0; }
  EOF
@@ -278,7 +297,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
    rm -rf conftest*
    tcl_ok=usable
  else
-@@ -5735,9 +5755,9 @@
+@@ -5735,9 +5761,9 @@
  
  	else
  	    echo $ac_n "checking a.out.h""... $ac_c" 1>&6
@@ -290,7 +309,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  #include "confdefs.h"
  #include <a.out.h>
  int main() {
-@@ -5755,7 +5775,7 @@
+@@ -5755,7 +5781,7 @@
  	    
  ; return 0; }
  EOF
@@ -299,7 +318,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
    rm -rf conftest*
    tcl_ok=usable
  else
-@@ -5773,9 +5793,9 @@
+@@ -5773,9 +5799,9 @@
  
  	    else
  		echo $ac_n "checking sys/exec_aout.h""... $ac_c" 1>&6
@@ -311,7 +330,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  #include "confdefs.h"
  #include <sys/exec_aout.h>
  int main() {
-@@ -5793,7 +5813,7 @@
+@@ -5793,7 +5819,7 @@
  		
  ; return 0; }
  EOF
@@ -320,7 +339,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
    rm -rf conftest*
    tcl_ok=usable
  else
-@@ -5890,7 +5910,7 @@
+@@ -5890,7 +5916,7 @@
  
  
      echo $ac_n "checking for build with symbols""... $ac_c" 1>&6
@@ -329,7 +348,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
      # Check whether --enable-symbols or --disable-symbols was given.
  if test "${enable_symbols+set}" = set; then
    enableval="$enable_symbols"
-@@ -5927,17 +5947,17 @@
+@@ -5927,17 +5953,17 @@
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
@@ -350,7 +369,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -5967,17 +5987,17 @@
+@@ -5967,17 +5993,17 @@
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
@@ -371,7 +390,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -6004,7 +6024,7 @@
+@@ -6004,7 +6030,7 @@
  done
  
      echo $ac_n "checking FIONBIO vs. O_NONBLOCK for nonblocking I/O""... $ac_c" 1>&6
@@ -380,7 +399,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
      if test -f /usr/lib/NextStep/software_version; then
  	system=NEXTSTEP-`awk '/3/,/3/' /usr/lib/NextStep/software_version`
      else
-@@ -6066,7 +6086,7 @@
+@@ -6066,7 +6092,7 @@
  
  
      echo $ac_n "checking how to build libraries""... $ac_c" 1>&6
@@ -389,7 +408,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
      # Check whether --enable-shared or --disable-shared was given.
  if test "${enable_shared+set}" = set; then
    enableval="$enable_shared"
-@@ -6103,7 +6123,7 @@
+@@ -6103,7 +6129,7 @@
      if test "x$DL_OBJS" = "xtclLoadAout.o"; then
  	MAKE_LIB="\${STLIB_LD} \$@ \${OBJS}"
      else
@@ -398,7 +417,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
      fi
  else
      case $system in
-@@ -6141,7 +6161,7 @@
+@@ -6141,7 +6167,7 @@
          TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
      fi
      TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
@@ -407,7 +426,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  else
      TCL_BUILD_EXP_FILE="lib.exp"
      eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
-@@ -6171,9 +6191,9 @@
+@@ -6171,9 +6197,9 @@
  #--------------------------------------------------------------------
  
  if test "$prefix" != "$exec_prefix"; then
@@ -419,7 +438,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  fi
  
  #--------------------------------------------------------------------
-@@ -6186,7 +6206,7 @@
+@@ -6186,7 +6212,7 @@
  # Replace DBGX with TCL_DBGX
  eval "TCL_STUB_LIB_FILE=\"${TCL_STUB_LIB_FILE}\""
  
@@ -428,7 +447,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  
  if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
      TCL_STUB_LIB_FLAG="-ltclstub${TCL_VERSION}\${TCL_DBGX}"
-@@ -6262,6 +6282,8 @@
+@@ -6262,6 +6288,8 @@
  
  
  
@@ -437,7 +456,7 @@ $NetBSD: patch-ab,v 1.15 2003/03/16 18:36:24 jschauma Exp $
  trap '' 1 2 15
  cat > confcache <<\EOF
  # This file is a shell script that caches the results of configure
-@@ -6437,12 +6459,12 @@
+@@ -6437,12 +6465,12 @@
  s%@CFG_TCL_SHARED_LIB_SUFFIX@%$CFG_TCL_SHARED_LIB_SUFFIX%g
  s%@CFG_TCL_UNSHARED_LIB_SUFFIX@%$CFG_TCL_UNSHARED_LIB_SUFFIX%g
  s%@CFG_TCL_EXPORT_FILE_SUFFIX@%$CFG_TCL_EXPORT_FILE_SUFFIX%g
