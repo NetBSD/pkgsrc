@@ -1,33 +1,33 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:38 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/20 19:28:14 jlam Exp $
 include/rvm/rds.h
 include/rvm/rvm.h
 include/rvm/rvm_segment.h
 include/rvm/rvm_statistics.h
-@dirrm include/rvm
 lib/librds.a
-lib/librvm.a
-lib/librdslwp.a
-lib/librvmlwp.a
 lib/librds.la
-lib/librvm.la
-lib/librdslwp.la
-lib/librvmlwp.la
 lib/librds.so
 lib/librds.so.2
-lib/librds.so.2.1
-lib/librvm.so
-lib/librvm.so.2
-lib/librvm.so.2.1
+lib/librds.so.2.3
+lib/librdslwp.a
+lib/librdslwp.la
 lib/librdslwp.so
 lib/librdslwp.so.2
-lib/librdslwp.so.2.1
+lib/librdslwp.so.2.3
+lib/librvm.a
+lib/librvm.la
+lib/librvm.so
+lib/librvm.so.2
+lib/librvm.so.2.3
+lib/librvmlwp.a
+lib/librvmlwp.la
 lib/librvmlwp.so
 lib/librvmlwp.so.2
-lib/librvmlwp.so.2.1
+lib/librvmlwp.so.2.3
 lib/libseg.a
 lib/libseg.la
 lib/libseg.so
 lib/libseg.so.2
-lib/libseg.so.2.1
-sbin/rvmutl
+lib/libseg.so.2.3
 sbin/rdsinit
+sbin/rvmutl
+@dirrm include/rvm
