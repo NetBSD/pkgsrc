@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.25 2005/01/12 22:56:41 jlam Exp $
+# $NetBSD: ccache.mk,v 1.26 2005/01/24 18:20:57 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -69,7 +69,6 @@ _USE_CCACHE=	YES
 .if !empty(_USE_CCACHE:M[yY][eE][sS])
 EVAL_PREFIX+=		_CCACHEBASE=ccache
 _CCACHEBASE_DEFAULT=	${LOCALBASE}
-_CCACHEBASE?=		${LOCALBASE}
 
 _CCACHE_DIR=	${WRKDIR}/.ccache
 _CCACHE_VARS=	# empty
