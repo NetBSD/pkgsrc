@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/05/24 18:09:47 tron Exp $
+
+--- PilotMgr.pm.orig	Wed Mar 24 23:59:59 1999
++++ PilotMgr.pm	Mon May 24 20:01:22 1999
+@@ -604,14 +604,18 @@
+     my ($image);
+ 
+     my (@TTYMENU) =
+-	("/dev/ttya", [],
+-	 "/dev/ttyb", [],
+-	 "/dev/cua/a", [],
+-	 "/dev/cua/b", [],
+-	 "/dev/cua0", [],
+-	 "/dev/cua1", [],
+-	 "/dev/cua2", [],
+-	 "/dev/cua3", [],
++	("/dev/tty00", [],
++	 "/dev/tty01", [],
++	 "/dev/tty02", [],
++	 "/dev/tty03", [],
++	 "/dev/ttyA0", [],
++	 "/dev/ttyA1", [],
++	 "/dev/ttyB0", [],
++	 "/dev/ttyB1", [],
++	 "/dev/ttyC0", [],
++	 "/dev/ttyC1", [],
++	 "/dev/ttyD0", [],
++	 "/dev/ttyD1", [],
+ 	 "/dev/pilot", [],
+ 	 "Other...", []);
+ 
