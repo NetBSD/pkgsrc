@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2002/08/25 21:50:29 jlam Exp $
+# $NetBSD: Makefile.common,v 1.35 2002/09/11 00:08:32 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.cs.wisc.edu/~ghost/index.html
+
+CONFLICTS+=		hpijs-[0-9]*
 
 DEPENDS+=		ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
 DEPENDS+=		watanabe-vfont-19930318:../../fonts/watanabe_vfont
