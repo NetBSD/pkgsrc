@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2002/09/01 00:38:09 mjl Exp $
+
+--- app/sheets_dialog_callbacks.c.orig	Sat Aug 31 13:42:24 2002
++++ app/sheets_dialog_callbacks.c	Sat Aug 31 13:42:45 2002
+@@ -52,9 +52,9 @@
+ #include <gtk/gtk.h>
+ #endif
+ 
+-#include <libxml/tree.h>
+-#include <libxml/parser.h>
+-#include <libxml/xmlmemory.h>
++#include <gnome-xml/tree.h>
++#include <gnome-xml/parser.h>
++#include <gnome-xml/xmlmemory.h>
+ 
+ #include "gtkwrapbox.h"
+ 
