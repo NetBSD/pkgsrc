@@ -1,9 +1,16 @@
-# $NetBSD: Makefile,v 1.8 1999/10/24 16:42:51 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/11/11 14:02:04 rh Exp $
 #
 
-DISTNAME=	xsane-0.33
+DISTNAME=	xsane-0.43
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.wolfsburg.de/~rauch/sane/
+MASTER_SITES=	http://www.wolfsburg.de/~rauch/sane/ \
+		http://gd.tuwien.ac.at/hci/sane/xsane/ \
+		ftp://ftp.mostang.com/pub/sane/xsane/ \
+		ftp://ftp.informatik.uni-oldenburg.de/pub/sane/xsane/ \
+		ftp://gd.tuwien.ac.at/hci/sane/xsane/ \
+		ftp://ftp.u-aizu.ac.jp/pub/misc/device/scsi/scanner/sane/xsane/ \
+		ftp://ftp.umax.co.uk/sane/ \
+		ftp://sunsite.uio.no/pub/sane/xsane/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.wolfsburg.de/~rauch/sane/sane-xsane.html
@@ -19,6 +26,6 @@ USE_GMAKE=	YES
 USE_X11BASE=	YES
 USE_LIBTOOL=	YES
 
-CPPFLAGS+=	-I${PREFIX}/include
+CPPFLAGS+=	-I${PREFIX}/include -I${LOCALBASE}/include
 
 .include "../../mk/bsd.pkg.mk"
