@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2001/09/19 03:21:24 mjl Exp $
+# $NetBSD: Makefile,v 1.88 2001/09/20 00:57:40 mjl Exp $
 #
 
 COMMENT=	Security tools
@@ -47,6 +47,9 @@ SUBDIR+=	p0f
 SUBDIR+=	p5-Crypt-Blowfish
 SUBDIR+=	p5-Crypt-CBC
 SUBDIR+=	p5-Crypt-DES
+SUBDIR+=	p5-Crypt-Twofish
+SUBDIR+=	p5-Crypt-Rijndael
+SUBDIR+=	p5-Crypt-RIPEMD160
 SUBDIR+=	p5-Digest-MD2
 SUBDIR+=	p5-Digest-MD4
 SUBDIR+=	p5-Digest-MD5
