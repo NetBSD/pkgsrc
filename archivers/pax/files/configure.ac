@@ -14,11 +14,11 @@ AC_CHECK_LIB(util, fparseln)
 
 # Checks for header files.
 AC_HEADER_STDC
-AC_CHECK_HEADERS([ctype.h errno.h err.h fnctl.h fts.h getopt.h grp.h \
-	inttypes.h limits.h netdb.h paths.h pwd.h regexp.h regex.h rmt.h \
-	signal.h stdarg.h stddef.h stdio.h stdlib.h strings.h string.h \
-	time.h tzfile.h unistd.h vis.h])
-AC_CHECK_HEADERS([sys/cdefs.h sys/ioctl.h sys/mtio.h sys/param.h \
+AC_CHECK_HEADERS([ctype.h err.h errno.h fnctl.h fts.h getopt.h grp.h \
+	limits.h netdb.h paths.h pwd.h regex.h regexp.h rmt.h \
+	signal.h stdarg.h stddef.h stdio.h stdlib.h string.h strings.h \
+	time.h tzfile.h unistd.h util.h vis.h])
+AC_CHECK_HEADERS([sys/cdefs.h sys/ioctl.h sys/mman.h sys/mtio.h sys/param.h \
 	sys/resource.h sys/stat.h sys/tape.h sys/time.h sys/types.h sys/uio.h \
 	sys/wait.h])
 AC_CHECK_MEMBERS([struct stat.st_flags],,, [#include <sys/stat.h>])
