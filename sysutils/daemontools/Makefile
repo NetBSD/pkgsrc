@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/05/02 17:50:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/07/22 01:16:53 schmonz Exp $
 # FreeBSD Id: ports/sysutils/daemontools/Makefile,v 1.8 2000/12/03 05:16:41 steve Exp
 
 DISTNAME=	daemontools-0.76
@@ -9,24 +9,26 @@ MASTER_SITES=	http://cr.yp.to/daemontools/				\
 DISTFILES=	${DISTNAME}.tar.gz					\
 		${DISTNAME}-man.tar.gz
 
-MAINTAINER=	zuntum@NetBSD.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://cr.yp.to/daemontools.html
 COMMENT=	Service monitoring and logging utilities by djb
 
-RESTRICTED=	"Redistribution of modified package is forbidden"
+RESTRICTED=	"modified source and binaries may not be distributed"
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
+USE_BUILDLINK3=	yes
+
 ALL_TARGET=	it
 SAMPLERC=	svscan.sh.sample
-SERVICEDIR?=	/var/spool/service
+SERVICEDIR?=	${VARBASE}/spool/service
 WRKSRC=		${WRKDIR}/admin/${DISTNAME}
 CMDDIR=		${WRKSRC}/command
 
 PLIST_SUBST+=	SERVICEDIR=${SERVICEDIR}
 DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
 
-post-patch:
+do-configure:
 	@${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/src/conf-cc
 	@${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/src/conf-ld
 	@${ECHO} ${PREFIX} > ${WRKSRC}/src/conf-home
