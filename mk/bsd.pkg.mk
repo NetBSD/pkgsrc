@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.802 2001/08/24 00:54:47 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.803 2001/08/24 10:50:03 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -3115,8 +3115,8 @@ print-PLIST:
 		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
 		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
 		-e  's@${PKGNAME}@\$${PKGNAME}@' 			\
-	 | ${SORT}							\
 	 | ${GREP} -v emul/linux/proc					\
+	 | ${SORT}							\
 	 | ${AWK} '							\
 		/^@/ { print $$0; next }				\
 		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { 	\
