@@ -1,0 +1,55 @@
+$NetBSD: patch-aa,v 1.1 2003/07/15 12:56:37 drochner Exp $
+
+--- Makefile.in.orig	2003-07-15 13:50:59.000000000 +0200
++++ Makefile.in	2003-07-15 13:52:59.000000000 +0200
+@@ -178,42 +178,42 @@
+ 
+ installthsl : $(LIB_TH_SL)
+ 	$(srcdir)/mkinstalldirs $(libdir)
+-	$(INSTALL_PROGRAM) $(LIB_TH_SL) $(libdir)
++	$(INSTALL_DATA) $(LIB_TH_SL) $(libdir)
+ 
+ installth : $(INSTALL_THREADS)
+ 	$(srcdir)/mkinstalldirs $(libdir)
+-	$(INSTALL_PROGRAM) $(LIB_TH) $(libdir)
++	$(INSTALL_DATA) $(LIB_TH) $(libdir)
+ @CXX_OFF@	@echo "Enter 'make installthcxx' to install the threaded C++ library"
+ @SL_OFF@	@echo "Enter 'make installthsl' to install the threaded shared-library"
+ 
+ installthcxxsl : $(LIB_TH_CXX_SL)
+ 	$(srcdir)/mkinstalldirs $(shlibdir)
+-	$(INSTALL_PROGRAM) $(LIB_TH_CXX_SL) $(shlibdir)
++	$(INSTALL_DATA) $(LIB_TH_CXX_SL) $(shlibdir)
+ 
+ installthcxx : $(INSTALL_TH_CXX)
+ 	$(srcdir)/mkinstalldirs $(libdir)
+-	$(INSTALL_PROGRAM) $(LIB_TH_CXX) $(libdir)
++	$(INSTALL_DATA) $(LIB_TH_CXX) $(libdir)
+ @SL_OFF@	@echo "Enter 'make installthcxxsl' to install the threaded C++ shared-library"
+ 
+ installcxxsl : $(LIB_CXX_SL)
+ 	$(srcdir)/mkinstalldirs $(libdir)
+-	$(INSTALL_PROGRAM) $(LIB_CXX_SL) $(libdir)
++	$(INSTALL_DATA) $(LIB_CXX_SL) $(libdir)
+ 
+ installcxx : $(INSTALL_CXX)
+ 	$(srcdir)/mkinstalldirs $(libdir)
+-	$(INSTALL_PROGRAM) $(LIB_CXX) $(libdir)
++	$(INSTALL_DATA) $(LIB_CXX) $(libdir)
+ @TH_OFF@	@echo "Enter 'make installthcxx' to install the threaded C++ library"
+ @SL_OFF@	@echo "Enter 'make installcxxsl' to install the C++ shared-library"
+ 
+ installsl : $(LIB_SL)
+ 	$(srcdir)/mkinstalldirs $(shlibdir)
+-	$(INSTALL_PROGRAM) $(LIB_SL) $(shlibdir)
++	$(INSTALL_DATA) $(LIB_SL) $(shlibdir)
+ @CXX_OFF@	@echo "Enter 'make installcxxsl' to install the C++ shared-library"
+ @TH_OFF@	@echo "Enter 'make installthsl' to install thread shared-library"
+ 
+ installlib : $(INSTALL_LIB)
+ 	$(srcdir)/mkinstalldirs $(libdir)
+-	$(INSTALL_PROGRAM) $(LIBRARY) $(libdir)
++	$(INSTALL_DATA) $(LIBRARY) $(libdir)
+ 	@RANLIB@ $(libdir)/$(LIBRARY)
+ @SL_OFF@	@echo "Enter 'make installsl' to install $(LIB_SL) in $(shlibdir)"
+ @CXX_OFF@	@echo "Enter 'make installcxx' to install the C++ library"
