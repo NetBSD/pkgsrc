@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/09/10 09:06:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/04/11 22:00:12 ben Exp $
 share/doc/html/csound/a.html
 share/doc/html/csound/abetarand.html
 share/doc/html/csound/abexprnd.html
@@ -369,6 +369,8 @@ share/doc/html/csound/examples/flanger.orc
 share/doc/html/csound/examples/flanger.sco
 share/doc/html/csound/examples/flashtxt.orc
 share/doc/html/csound/examples/flashtxt.sco
+share/doc/html/csound/examples/flknob.orc
+share/doc/html/csound/examples/flknob.sco
 share/doc/html/csound/examples/fmb3.orc
 share/doc/html/csound/examples/fmb3.sco
 share/doc/html/csound/examples/fmbell.orc
@@ -428,6 +430,34 @@ share/doc/html/csound/examples/gen01.orc
 share/doc/html/csound/examples/gen01.sco
 share/doc/html/csound/examples/gen01computed.orc
 share/doc/html/csound/examples/gen01computed.sco
+share/doc/html/csound/examples/gen02.orc
+share/doc/html/csound/examples/gen02.sco
+share/doc/html/csound/examples/gen03.orc
+share/doc/html/csound/examples/gen03.sco
+share/doc/html/csound/examples/gen05.orc
+share/doc/html/csound/examples/gen05.sco
+share/doc/html/csound/examples/gen06.orc
+share/doc/html/csound/examples/gen06.sco
+share/doc/html/csound/examples/gen07.orc
+share/doc/html/csound/examples/gen07.sco
+share/doc/html/csound/examples/gen08.orc
+share/doc/html/csound/examples/gen08.sco
+share/doc/html/csound/examples/gen09.orc
+share/doc/html/csound/examples/gen09.sco
+share/doc/html/csound/examples/gen09square.orc
+share/doc/html/csound/examples/gen09square.sco
+share/doc/html/csound/examples/gen10.orc
+share/doc/html/csound/examples/gen10.sco
+share/doc/html/csound/examples/gen11.orc
+share/doc/html/csound/examples/gen11.sco
+share/doc/html/csound/examples/gen12.orc
+share/doc/html/csound/examples/gen12.sco
+share/doc/html/csound/examples/gen13.orc
+share/doc/html/csound/examples/gen13.sco
+share/doc/html/csound/examples/gen14.orc
+share/doc/html/csound/examples/gen14.sco
+share/doc/html/csound/examples/gen19.orc
+share/doc/html/csound/examples/gen19.sco
 share/doc/html/csound/examples/gogobel.orc
 share/doc/html/csound/examples/gogobel.sco
 share/doc/html/csound/examples/goto.orc
@@ -713,6 +743,8 @@ share/doc/html/csound/examples/rnd31_seed7.orc
 share/doc/html/csound/examples/rnd31_seed7.sco
 share/doc/html/csound/examples/rnd31_time.orc
 share/doc/html/csound/examples/rnd31_time.sco
+share/doc/html/csound/examples/rt-midi-input.orc
+share/doc/html/csound/examples/rt-midi-input.sco
 share/doc/html/csound/examples/rtclock.orc
 share/doc/html/csound/examples/rtclock.sco
 share/doc/html/csound/examples/sandpaper.orc
@@ -773,6 +805,8 @@ share/doc/html/csound/examples/svfilter.sco
 share/doc/html/csound/examples/table.orc
 share/doc/html/csound/examples/table.sco
 share/doc/html/csound/examples/table1.inc
+share/doc/html/csound/examples/tableng.orc
+share/doc/html/csound/examples/tableng.sco
 share/doc/html/csound/examples/tambourine.orc
 share/doc/html/csound/examples/tambourine.sco
 share/doc/html/csound/examples/tan.orc
@@ -1002,6 +1036,7 @@ share/doc/html/csound/gen18.html
 share/doc/html/csound/gen19.html
 share/doc/html/csound/gen20.html
 share/doc/html/csound/gen21.html
+share/doc/html/csound/gen22.html
 share/doc/html/csound/gen23.html
 share/doc/html/csound/gen24.html
 share/doc/html/csound/gen25.html
@@ -1065,6 +1100,21 @@ share/doc/html/csound/images/fltabs_joysticks-tab.png
 share/doc/html/csound/images/fltabs_rollers-tab.png
 share/doc/html/csound/images/fltabs_sliders-tab.png
 share/doc/html/csound/images/fltext.png
+share/doc/html/csound/images/gen01.png
+share/doc/html/csound/images/gen02.png
+share/doc/html/csound/images/gen03.png
+share/doc/html/csound/images/gen05.png
+share/doc/html/csound/images/gen06.png
+share/doc/html/csound/images/gen07.png
+share/doc/html/csound/images/gen08.png
+share/doc/html/csound/images/gen09.png
+share/doc/html/csound/images/gen09square.png
+share/doc/html/csound/images/gen10.png
+share/doc/html/csound/images/gen11.png
+share/doc/html/csound/images/gen12.png
+share/doc/html/csound/images/gen13.png
+share/doc/html/csound/images/gen14.png
+share/doc/html/csound/images/gen19.png
 share/doc/html/csound/images/grain2_rand-448x289.png
 share/doc/html/csound/images/grain3_2.png
 share/doc/html/csound/images/home.gif
@@ -1720,8 +1770,6 @@ share/doc/html/csound/zkmod.html
 share/doc/html/csound/zkr.html
 share/doc/html/csound/zkw.html
 share/doc/html/csound/zkwm.html
-share/doc/html/csound/examples/rt-midi-input.orc
-share/doc/html/csound/examples/rt-midi-input.sco
 share/examples/csound
 @dirrm share/doc/html/csound/examples
 @dirrm share/doc/html/csound/images
