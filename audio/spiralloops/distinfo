@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/12 22:27:05 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2002/06/12 00:07:34 wiz Exp $
 
 SHA1 (SpiralLoops-2.0.0.tar.gz) = 47d9caa17f20827abef7708bff212bb3fad58a72
 Size (SpiralLoops-2.0.0.tar.gz) = 85458 bytes
-SHA1 (patch-aa) = 611b2f7738d73a16665a5bf13714b8ebff73dafd
+SHA1 (patch-aa) = faae8e528ab46b7a83d53719fca07588e45407a2
 SHA1 (patch-ab) = 8d21e1615909f94c750f1cf3afbf46f7e0cfdb83
 SHA1 (patch-ac) = 4a1675489e169d8ce9090eeaabf8c30ceb047897
 SHA1 (patch-ad) = 09c1734e875335dae92afef7bbbd4fdc6821eb1f
