@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/17 18:50:22 wennmach Exp $
+
+Njet fix_javascript.
+Disable the use of pdflatex as it chokes on doxygen output.
+
+--- doc/api/Makefile.in.orig	Sun May 11 22:31:56 2003
++++ doc/api/Makefile.in	Thu Jul 17 20:31:07 2003
+@@ -125,7 +125,7 @@
+ 
+ MAINTAINERCLEANFILES = Makefile.in stamp-vti
+ 
+-CLEANFILES = *.html *.pdf *.ma *.mas *.ps doxygen-pdf.config                        *.png *.eps fix_png fix_anchors fix_javascript
++CLEANFILES = *.html *.pdf *.ma *.mas *.ps doxygen-pdf.config                        *.png *.eps fix_png fix_anchors
+ 
+ 
+ EXTRA_DIST = dox.css dox_html_header dox_html_footer                        main_page.dox                        assembler.dox                        inline_asm.dox                        interrupts.dox                        acknowledge.dox                        malloc.dox                        $(IMAGE_SRC)                        sections.dox                        sfr.dox                        tools-install.dox                        using-avrprog.dox                        using-tools.dox                        faq.dox                        unjs.pl
+@@ -288,7 +288,7 @@
+ ps: demo $(TARGET_DOX_PS)
+ 
+ # Rule for generating html output.
+-html: demo $(TARGET_DOX_HTML) fix_png fix_anchors fix_javascript
++html: demo $(TARGET_DOX_HTML) fix_png fix_anchors
+ 
+ # Make the background color of the png's transparent.
+ fix_png: $(wildcard $(USER_MANUAL)/*.png)
+@@ -399,7 +399,6 @@
+ 
+ doxygen-pdf.config: doxygen.config
+ 	sed \
+-		-e '/USE_PDFLATEX/s/NO/YES/' \
+ 		-e '/LATEX_OUTPUT/s/latex_src/latex_pdf_src/' \
+ 		-e '/GENERATE_HTML/s/YES/NO/' \
+ 		-e '/GENERATE_MAN/s/YES/NO/' \
