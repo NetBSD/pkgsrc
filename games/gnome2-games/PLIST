@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2003/05/30 16:19:58 jmmv Exp $
-bin/ctali
-bin/freecell
+@comment $NetBSD: PLIST,v 1.4 2003/12/29 00:02:47 xtraeme Exp $
+bin/blackjack
 bin/gataxx
 bin/glines
 bin/gnect
 bin/gnibbles
 bin/gnobots2
 bin/gnome-stones
-bin/gnome-xbill
 bin/gnometris
 bin/gnomine
 bin/gnotravex
@@ -29,6 +27,7 @@ lib/libgdkcardimage.la
 lib/libgdkcardimage.so
 lib/libgdkcardimage.so.0
 lib/libgdkcardimage.so.0.0
+share/applications/blackjack.desktop
 share/applications/freecell.desktop
 share/applications/gataxx.desktop
 share/applications/glines.desktop
@@ -45,17 +44,27 @@ share/applications/iagno.desktop
 share/applications/mahjongg.desktop
 share/applications/same-gnome.desktop
 share/applications/sol.desktop
-share/applications/xbill.desktop
+share/blackjack/Ameristar.rules
+share/blackjack/Atlantic_City.rules
+share/blackjack/Vegas_Downtown.rules
+share/blackjack/Vegas_Strip.rules
+share/blackjack/Vegas_Strip.rules.dat
 share/examples/gnome2-games/sound/events/gataxx.soundlist
 share/examples/gnome2-games/sound/events/gnect.soundlist
 share/examples/gnome2-games/sound/events/gnibbles.soundlist
 share/examples/gnome2-games/sound/events/gnobots2.soundlist
 share/examples/gnome2-games/sound/events/iagno.soundlist
-share/gconf/schemas/freecell.schemas
+share/gconf/schemas/aisleriot.schemas
+share/gconf/schemas/blackjack.schemas
 share/gconf/schemas/gataxx.schemas
+share/gconf/schemas/glines.schemas
 share/gconf/schemas/gnect.schemas
+share/gconf/schemas/gnibbles.schemas
+share/gconf/schemas/gnobots2.schemas
+share/gconf/schemas/gnome-stones.schemas
 share/gconf/schemas/gnometris.schemas
 share/gconf/schemas/gnomine.schemas
+share/gconf/schemas/gnotravex.schemas
 share/gconf/schemas/gtali.schemas
 share/gconf/schemas/iagno.schemas
 share/gconf/schemas/mahjongg.schemas
@@ -189,6 +198,10 @@ share/gnome/help/aisleriot/C/will_o_the_wisp.xml
 share/gnome/help/aisleriot/C/yield.xml
 share/gnome/help/aisleriot/C/yukon.xml
 share/gnome/help/aisleriot/C/zebra.xml
+share/gnome/help/blackjack/C/blackjack.xml
+share/gnome/help/blackjack/C/figures/blackjack_start_window.png
+share/gnome/help/blackjack/C/figures/blackjack_win_window.png
+share/gnome/help/blackjack/C/legal.xml
 share/gnome/help/gataxx/C/figures/gataxx-legalmoves.png
 share/gnome/help/gataxx/C/figures/gataxx-prefs.png
 share/gnome/help/gataxx/C/figures/gataxx-startgame.png
@@ -259,13 +272,10 @@ share/gnome/help/iagno/C/figures/PLAYER.png
 share/gnome/help/iagno/C/figures/START.png
 share/gnome/help/iagno/C/iagno.xml
 share/gnome/help/iagno/C/legal.xml
-share/gnome/help/mahjongg/C/figures/color.png
-share/gnome/help/mahjongg/C/figures/confirm.png
 share/gnome/help/mahjongg/C/figures/mahjongg.png
 share/gnome/help/mahjongg/C/figures/no-match.png
 share/gnome/help/mahjongg/C/figures/no-move.png
 share/gnome/help/mahjongg/C/figures/preferences.png
-share/gnome/help/mahjongg/C/figures/scores.png
 share/gnome/help/mahjongg/C/figures/seed.png
 share/gnome/help/mahjongg/C/figures/toolbar.png
 share/gnome/help/mahjongg/C/legal.xml
@@ -274,35 +284,17 @@ share/gnome/help/same-gnome/C/figures/blink-sync.png
 share/gnome/help/same-gnome/C/figures/preferences.png
 share/gnome/help/same-gnome/C/figures/same-main-window.png
 share/gnome/help/same-gnome/C/figures/same-planets-fig.png
-share/gnome/help/same-gnome/C/figures/score-dialog.png
 share/gnome/help/same-gnome/C/legal.xml
 share/gnome/help/same-gnome/C/same-gnome.xml
-share/gnome/help/xbill/C/figures/bucket.png
-share/gnome/help/xbill/C/figures/cable.png
-share/gnome/help/xbill/C/figures/computer.png
-share/gnome/help/xbill/C/figures/fakeseg.png
-share/gnome/help/xbill/C/figures/fallenos.png
-share/gnome/help/xbill/C/figures/infected.png
-share/gnome/help/xbill/C/figures/mainwin.png
-share/gnome/help/xbill/C/figures/microbill.png
-share/gnome/help/xbill/C/figures/network.png
-share/gnome/help/xbill/C/figures/remove.png
-share/gnome/help/xbill/C/figures/removeos.png
-share/gnome/help/xbill/C/figures/score.png
-share/gnome/help/xbill/C/figures/scores.png
-share/gnome/help/xbill/C/figures/spark.png
-share/gnome/help/xbill/C/figures/splat.png
-share/gnome/help/xbill/C/figures/startgame.png
-share/gnome/help/xbill/C/figures/toasters.png
-share/gnome/help/xbill/C/legal.xml
-share/gnome/help/xbill/C/xbill.xml
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-games.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-games.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-games.mo
@@ -316,13 +308,16 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnome-games.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-games.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gnome-games.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-games.mo
@@ -335,6 +330,8 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnome-games.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-games.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-games.mo
@@ -345,6 +342,7 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 share/mime-info/gnome-stones.keys
 share/mime-info/gnome-stones.mime
 share/omf/gnome-games/aisleriot-C.omf
+share/omf/gnome-games/blackjack-C.omf
 share/omf/gnome-games/gataxx-C.omf
 share/omf/gnome-games/glines-C.omf
 share/omf/gnome-games/gnect-C.omf
@@ -358,19 +356,29 @@ share/omf/gnome-games/gtali-C.omf
 share/omf/gnome-games/iagno-C.omf
 share/omf/gnome-games/mahjongg-C.omf
 share/omf/gnome-games/same-gnome-C.omf
-share/omf/gnome-games/xbill-C.omf
+share/pixmaps/blackjack/baize.png
+share/pixmaps/blackjack/blackjack-splash.png
+share/pixmaps/blackjack/chip-1.png
+share/pixmaps/blackjack/chip-100.png
+share/pixmaps/blackjack/chip-25.png
+share/pixmaps/blackjack/chip-5.png
+share/pixmaps/cards/backs/antique-red.png
 share/pixmaps/cards/backs/beige.png
+share/pixmaps/cards/backs/dondorf-flower.png
 share/pixmaps/cards/backs/face.png
 share/pixmaps/cards/backs/grey.png
 share/pixmaps/cards/backs/rods.png
+share/pixmaps/cards/backs/tux.png
 share/pixmaps/cards/baize.png
 share/pixmaps/cards/honors/bonded.png
+share/pixmaps/cards/honors/dondorf.png
 share/pixmaps/cards/honors/xpat.png
 share/pixmaps/cards/jokers/gnome.png
 share/pixmaps/cards/ranks/bold-09x14.png
 share/pixmaps/cards/ranks/fine-07x12.png
 share/pixmaps/cards/slots/hand.png
 share/pixmaps/cards/slots/plain.png
+share/pixmaps/cards/slots/white-outline.png
 share/pixmaps/cards/splash.png
 share/pixmaps/cards/suits_large/knuth-09x10.png
 share/pixmaps/cards/suits_large/knuth-15x19.png
@@ -391,22 +399,12 @@ share/pixmaps/cards/suits_small/knuth-09x10.png
 share/pixmaps/cards/suits_small/xpat-11x11.png
 share/pixmaps/cards/suits_small/xpat-15x15.png
 share/pixmaps/gataxx.png
-share/pixmaps/gataxx/blend.png
-share/pixmaps/gataxx/classic.png
-share/pixmaps/gataxx/flipblend.png
-share/pixmaps/gataxx/metal.png
-share/pixmaps/gataxx/metal2.png
-share/pixmaps/gataxx/shrink.png
-share/pixmaps/gataxx/sunmoon.png
-share/pixmaps/gataxx/woodtrim.png
 share/pixmaps/glines.png
 share/pixmaps/glines/ball.png
-share/pixmaps/glines/black.xpm
 share/pixmaps/glines/classic.png
 share/pixmaps/glines/dots.png
-share/pixmaps/glines/gray.xpm
+share/pixmaps/glines/gumball.png
 share/pixmaps/glines/pulse.png
-share/pixmaps/glines/woody.xpm
 share/pixmaps/gnect-icon.png
 share/pixmaps/gnect/bg_grotty.jpg
 share/pixmaps/gnect/bg_nightfall.jpg
@@ -434,7 +432,18 @@ share/pixmaps/gnobots2/splat.png
 share/pixmaps/gnobots2/windows.png
 share/pixmaps/gnobots2/yahoo.png
 share/pixmaps/gnome-aisleriot.png
+share/pixmaps/gnome-blackjack.png
+share/pixmaps/gnome-cardgame.png
+share/pixmaps/gnome-die1.png
+share/pixmaps/gnome-die2.png
+share/pixmaps/gnome-die3.png
+share/pixmaps/gnome-die4.png
+share/pixmaps/gnome-die5.png
+share/pixmaps/gnome-die6.png
 share/pixmaps/gnome-gnobots2.png
+share/pixmaps/gnome-gnomine.png
+share/pixmaps/gnome-gnotravex.png
+share/pixmaps/gnome-gsame.png
 share/pixmaps/gnome-gtali.png
 share/pixmaps/gnome-gtetris.png
 share/pixmaps/gnome-mahjongg.png
@@ -456,9 +465,8 @@ share/pixmaps/gnome-stones/explosion.png
 share/pixmaps/gnome-stones/firefly.png
 share/pixmaps/gnome-stones/frame.png
 share/pixmaps/gnome-stones/gnome.png
-share/pixmaps/gnome-stones/title.png
+share/pixmaps/gnome-stones/title-tile.png
 share/pixmaps/gnome-stones/wall.png
-share/pixmaps/gnome-xbill.png
 share/pixmaps/gnometris/5blocks-tig.png
 share/pixmaps/gnometris/5blocks-tim.png
 share/pixmaps/gnometris/5blocks.png
@@ -466,27 +474,28 @@ share/pixmaps/gnometris/7blocks-tig.png
 share/pixmaps/gnometris/7blocks.png
 share/pixmaps/gnometris/7stones-gn.png
 share/pixmaps/gnometris/7stones2-gn.png
-share/pixmaps/gnometris/bg/dog-bg.png
-share/pixmaps/gnometris/bg/fishy-bg.png
-share/pixmaps/gnometris/bg/geschier-bg.png
-share/pixmaps/gnometris/bg/gitter-bg.png
-share/pixmaps/gnometris/bg/gnometris-bg.png
-share/pixmaps/gnometris/bg/greyprint-bg.png
-share/pixmaps/gnometris/bg/leaves-bg.png
-share/pixmaps/gnometris/bg/rhinoceros-bg.png
-share/pixmaps/gnometris/bg/scrcow-bg.png
-share/pixmaps/gnometris/bg/sweet-bg.png
-share/pixmaps/gnometris/bg/trees-bg.png
-share/pixmaps/gnometris/bg/vortex-bg.png
-share/pixmaps/gnometris/bg/watery-bg.png
-share/pixmaps/gnometris/bg/weirdo-bg.png
+share/pixmaps/gnometris/bg/dog-bg.jpg
+share/pixmaps/gnometris/bg/fishy-bg.jpg
+share/pixmaps/gnometris/bg/geschier-bg.jpg
+share/pixmaps/gnometris/bg/gitter-bg.jpg
+share/pixmaps/gnometris/bg/gnometris-bg.jpg
+share/pixmaps/gnometris/bg/greyprint-bg.jpg
+share/pixmaps/gnometris/bg/leaves-bg.jpg
+share/pixmaps/gnometris/bg/rhinoceros-bg.jpg
+share/pixmaps/gnometris/bg/scrcow-bg.jpg
+share/pixmaps/gnometris/bg/sweet-bg.jpg
+share/pixmaps/gnometris/bg/trees-bg.jpg
+share/pixmaps/gnometris/bg/vortex-bg.jpg
+share/pixmaps/gnometris/bg/watery-bg.jpg
+share/pixmaps/gnometris/bg/weirdo-bg.jpg
 share/pixmaps/gnomine/face-cool.xpm
 share/pixmaps/gnomine/face-sad.xpm
 share/pixmaps/gnomine/face-smile.xpm
 share/pixmaps/gnomine/face-win.xpm
 share/pixmaps/gnomine/face-worried.xpm
-share/pixmaps/gnotravex/gnome-gnotravex.png
-share/pixmaps/gnotravex/gnotravex.png
+share/pixmaps/gnomine/flag-question.png
+share/pixmaps/gnomine/flag.png
+share/pixmaps/gnomine/mine.png
 share/pixmaps/gnotski-icon.png
 share/pixmaps/gnotski.png
 share/pixmaps/iagno.png
@@ -606,84 +615,6 @@ share/sounds/gnome-stones/get_diamond.wav
 share/sounds/gnome-stones/title.wav
 share/sounds/iagno/flip-piece.wav
 share/sounds/iagno/gameover.wav
-share/xbill/cursors/apple.xpm
-share/xbill/cursors/beos.xpm
-share/xbill/cursors/bsd.xpm
-share/xbill/cursors/bucket.xpm
-share/xbill/cursors/caldera.xpm
-share/xbill/cursors/debian.xpm
-share/xbill/cursors/hand_down.xpm
-share/xbill/cursors/hand_down_mask.xpm
-share/xbill/cursors/hand_up.xpm
-share/xbill/cursors/hand_up_mask.xpm
-share/xbill/cursors/hurd.xpm
-share/xbill/cursors/linux.xpm
-share/xbill/cursors/mandrake.xpm
-share/xbill/cursors/next.xpm
-share/xbill/cursors/os2.xpm
-share/xbill/cursors/redhat.xpm
-share/xbill/cursors/sgi.xpm
-share/xbill/cursors/slackware.xpm
-share/xbill/cursors/sun.xpm
-share/xbill/cursors/suse.xpm
-share/xbill/cursors/turbolinux.xpm
-share/xbill/pixmaps/about.xpm
-share/xbill/pixmaps/apple.xpm
-share/xbill/pixmaps/beos.xpm
-share/xbill/pixmaps/billA_0.xpm
-share/xbill/pixmaps/billA_1.xpm
-share/xbill/pixmaps/billA_10.xpm
-share/xbill/pixmaps/billA_11.xpm
-share/xbill/pixmaps/billA_12.xpm
-share/xbill/pixmaps/billA_2.xpm
-share/xbill/pixmaps/billA_3.xpm
-share/xbill/pixmaps/billA_4.xpm
-share/xbill/pixmaps/billA_5.xpm
-share/xbill/pixmaps/billA_6.xpm
-share/xbill/pixmaps/billA_7.xpm
-share/xbill/pixmaps/billA_8.xpm
-share/xbill/pixmaps/billA_9.xpm
-share/xbill/pixmaps/billD_0.xpm
-share/xbill/pixmaps/billD_1.xpm
-share/xbill/pixmaps/billD_2.xpm
-share/xbill/pixmaps/billD_3.xpm
-share/xbill/pixmaps/billD_4.xpm
-share/xbill/pixmaps/billL_0.xpm
-share/xbill/pixmaps/billL_1.xpm
-share/xbill/pixmaps/billL_2.xpm
-share/xbill/pixmaps/billR_0.xpm
-share/xbill/pixmaps/billR_1.xpm
-share/xbill/pixmaps/billR_2.xpm
-share/xbill/pixmaps/bsd.xpm
-share/xbill/pixmaps/bsdcpu.xpm
-share/xbill/pixmaps/bucket.xpm
-share/xbill/pixmaps/caldera.xpm
-share/xbill/pixmaps/debian.xpm
-share/xbill/pixmaps/hurd.xpm
-share/xbill/pixmaps/icon.xpm
-share/xbill/pixmaps/linux.xpm
-share/xbill/pixmaps/logo.xpm
-share/xbill/pixmaps/maccpu.xpm
-share/xbill/pixmaps/mandrake.xpm
-share/xbill/pixmaps/next.xpm
-share/xbill/pixmaps/nextcpu.xpm
-share/xbill/pixmaps/os2.xpm
-share/xbill/pixmaps/os2cpu.xpm
-share/xbill/pixmaps/redhat.xpm
-share/xbill/pixmaps/sgi.xpm
-share/xbill/pixmaps/sgicpu.xpm
-share/xbill/pixmaps/slackware.xpm
-share/xbill/pixmaps/spark_0.xpm
-share/xbill/pixmaps/spark_1.xpm
-share/xbill/pixmaps/sun.xpm
-share/xbill/pixmaps/suncpu.xpm
-share/xbill/pixmaps/suse.xpm
-share/xbill/pixmaps/toaster.xpm
-share/xbill/pixmaps/turbolinux.xpm
-share/xbill/pixmaps/wingdows.xpm
-@dirrm share/xbill/pixmaps
-@dirrm share/xbill/cursors
-@dirrm share/xbill
 @dirrm share/sounds/iagno
 @dirrm share/sounds/gnome-stones
 @dirrm share/sounds/gnobots2
@@ -694,7 +625,6 @@ share/xbill/pixmaps/wingdows.xpm
 @dirrm share/pixmaps/mahjongg/bg
 @dirrm share/pixmaps/mahjongg
 @dirrm share/pixmaps/iagno
-@dirrm share/pixmaps/gnotravex
 @dirrm share/pixmaps/gnomine
 @dirrm share/pixmaps/gnometris/bg
 @dirrm share/pixmaps/gnometris
@@ -703,7 +633,6 @@ share/xbill/pixmaps/wingdows.xpm
 @dirrm share/pixmaps/gnibbles
 @dirrm share/pixmaps/gnect
 @dirrm share/pixmaps/glines
-@dirrm share/pixmaps/gataxx
 @dirrm share/pixmaps/cards/suits_small
 @dirrm share/pixmaps/cards/suits_medium
 @dirrm share/pixmaps/cards/suits_large
@@ -713,11 +642,8 @@ share/xbill/pixmaps/wingdows.xpm
 @dirrm share/pixmaps/cards/honors
 @dirrm share/pixmaps/cards/backs
 @dirrm share/pixmaps/cards
+@dirrm share/pixmaps/blackjack
 @dirrm share/omf/gnome-games
-@comment in gnome-dirs: @dirrm share/mime-info
-@dirrm share/gnome/help/xbill/C/figures
-@dirrm share/gnome/help/xbill/C
-@dirrm share/gnome/help/xbill
 @dirrm share/gnome/help/same-gnome/C/figures
 @dirrm share/gnome/help/same-gnome/C
 @dirrm share/gnome/help/same-gnome
@@ -761,6 +687,9 @@ share/xbill/pixmaps/wingdows.xpm
 @dirrm share/gnome/help/gataxx/C/figures
 @dirrm share/gnome/help/gataxx/C
 @dirrm share/gnome/help/gataxx
+@dirrm share/gnome/help/blackjack/C/figures
+@dirrm share/gnome/help/blackjack/C
+@dirrm share/gnome/help/blackjack
 @dirrm share/gnome/help/aisleriot/C/figures
 @dirrm share/gnome/help/aisleriot/C
 @dirrm share/gnome/help/aisleriot
@@ -771,6 +700,7 @@ share/xbill/pixmaps/wingdows.xpm
 @dirrm share/examples/gnome2-games/sound/events
 @dirrm share/examples/gnome2-games/sound
 @dirrm share/examples/gnome2-games
+@dirrm share/blackjack
 @dirrm lib/gnome-stones/objects
 @dirrm lib/gnome-stones
 @dirrm include/gdkcardimage
