@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.6 2004/07/06 04:20:59 jlam Exp $
+$NetBSD: patch-ag,v 1.7 2004/08/04 19:41:07 jlam Exp $
 
---- plugins/Makefile.in.orig	Sun Jul  4 02:24:08 2004
+--- plugins/Makefile.in.orig	Fri Jul  2 15:40:16 2004
 +++ plugins/Makefile.in
 @@ -125,7 +125,7 @@ JAVA_TRUE = @JAVA_TRUE@
  LDFLAGS = @LDFLAGS@
@@ -10,4 +10,4 @@ $NetBSD: patch-ag,v 1.6 2004/07/06 04:20:59 jlam Exp $
 +LIBTOOL = $(SHLIBTOOL)
  LIB_CRYPT = @LIB_CRYPT@
  LIB_DES = @LIB_DES@
- 
+ LIB_DOOR = @LIB_DOOR@
