@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/03/17 18:29:58 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/03/26 04:05:42 jschauma Exp $
 
 CATEGORIES=	lang
 EXTRACT_SUFX=	.bin
@@ -45,8 +45,8 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}
 	cd ${WRKSRC} && ${PAX} -rwp ma . ${PREFIX}
 
-.if ${OPSYS} != "NetBSD"
-.  include "../../mk/bsd.pkg.mk"
-.else
+.if ${OPSYS} == "NetBSD"
 .  include "../../emulators/suse_linux/Makefile.application"
 .endif
+
+.include "../../mk/bsd.pkg.mk"
