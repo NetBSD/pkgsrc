@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/07/26 17:10:17 hubertf Exp $
+$NetBSD: distinfo,v 1.4 2001/08/22 14:21:46 mjl Exp $
 
-SHA1 (slrn-0.9.7.0a.tar.gz) = 55cf070ee208d7d3bcddc48506cd717224d98fd6
-Size (slrn-0.9.7.0a.tar.gz) = 427036 bytes
-SHA1 (patch-aa) = 6c6730bfa7a33c3f43184f552699823d7edcd904
-SHA1 (patch-ac) = f8d6cee35de3c983e8832c8cc729418713a5d3d5
+SHA1 (slrn-0.9.7.2.tar.gz) = 49a157fc0adb4ecd06f698de7755a46b137cca59
+Size (slrn-0.9.7.2.tar.gz) = 466665 bytes
+SHA1 (patch-aa) = 2fe15ab7455f366554e530a0bb2e25758440af4c
