@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/06/20 06:04:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/07/13 18:25:34 jlam Exp $
 include/boost/array.hpp
 include/boost/call_traits.hpp
 include/boost/cast.hpp
@@ -16,9 +16,11 @@ include/boost/detail/ob_type_traits.hpp
 include/boost/detail/type_traits.hpp
 include/boost/f_heap.cc
 include/boost/f_heap.hpp
+include/boost/functional.hpp
 include/boost/heap.hpp
 include/boost/integer.hpp
 include/boost/integer_traits.hpp
+include/boost/iterator.hpp
 include/boost/l_heap.cc
 include/boost/l_heap.hpp
 include/boost/min_rand.hpp
@@ -42,14 +44,14 @@ include/boost/stdint.h
 include/boost/timer.hpp
 include/boost/type_traits.hpp
 include/boost/utility.hpp
-lib/libboost.a
-lib/libboost.so.0.0
 share/doc/html/boost/c++boost.gif
 share/doc/html/boost/index.htm
 share/doc/html/boost/libraries.htm
 share/doc/html/boost/libs/array/array-article.html
 share/doc/html/boost/libs/array/array_traits.html
 share/doc/html/boost/libs/array/index.html
+share/doc/html/boost/libs/compiler_status.htm
+share/doc/html/boost/libs/compose/compose.hpp
 share/doc/html/boost/libs/compose/compose.hpp.html
 share/doc/html/boost/libs/compose/compose.html
 share/doc/html/boost/libs/compose/compose1.cpp
@@ -63,7 +65,17 @@ share/doc/html/boost/libs/compose/compose4.cpp.html
 share/doc/html/boost/libs/compose/index.htm
 share/doc/html/boost/libs/compose/print.hpp
 share/doc/html/boost/libs/compose/print.hpp.html
+share/doc/html/boost/libs/config/config_test.cpp
+share/doc/html/boost/libs/config/index.htm
+share/doc/html/boost/libs/functional/binders.html
+share/doc/html/boost/libs/functional/function_test.cpp
+share/doc/html/boost/libs/functional/function_traits.html
+share/doc/html/boost/libs/functional/index.html
+share/doc/html/boost/libs/functional/mem_fun.html
+share/doc/html/boost/libs/functional/negators.html
+share/doc/html/boost/libs/functional/ptr_fun.html
 share/doc/html/boost/libs/integer/cstdint.htm
+share/doc/html/boost/libs/integer/cstdint_test.cpp
 share/doc/html/boost/libs/integer/index.htm
 share/doc/html/boost/libs/integer/integer.htm
 share/doc/html/boost/libs/integer/integer_test.cpp
@@ -90,7 +102,9 @@ share/doc/html/boost/libs/pri_queue/r_heap.html
 share/doc/html/boost/libs/pri_queue/s_heap.html
 share/doc/html/boost/libs/pri_queue/sidebar.jpg
 share/doc/html/boost/libs/pri_queue/stack.html
+share/doc/html/boost/libs/random/histogram.cpp
 share/doc/html/boost/libs/random/index.html
+share/doc/html/boost/libs/random/integrate.hpp
 share/doc/html/boost/libs/random/nondet_random.html
 share/doc/html/boost/libs/random/nondet_random_speed.cpp
 share/doc/html/boost/libs/random/random-concepts.html
@@ -98,7 +112,11 @@ share/doc/html/boost/libs/random/random-distributions.html
 share/doc/html/boost/libs/random/random-generators.html
 share/doc/html/boost/libs/random/random-misc.html
 share/doc/html/boost/libs/random/random_demo.cpp
+share/doc/html/boost/libs/random/random_device.cpp
 share/doc/html/boost/libs/random/random_speed.cpp
+share/doc/html/boost/libs/random/random_test.cpp
+share/doc/html/boost/libs/random/statistic_tests.cpp
+share/doc/html/boost/libs/random/statistic_tests.hpp
 share/doc/html/boost/libs/rational/index.html
 share/doc/html/boost/libs/rational/rational.html
 share/doc/html/boost/libs/rational/rational_example.cpp
@@ -113,10 +131,14 @@ share/doc/html/boost/libs/smart_ptr/smart_ptr.htm
 share/doc/html/boost/libs/smart_ptr/smart_ptr_test.cpp
 share/doc/html/boost/libs/smart_ptr/smarttests.htm
 share/doc/html/boost/libs/timer/index.htm
+share/doc/html/boost/libs/timer/prg_display.cpp
+share/doc/html/boost/libs/timer/prg_timer.cpp
+share/doc/html/boost/libs/timer/timer.cpp
 share/doc/html/boost/libs/timer/timer.htm
 share/doc/html/boost/libs/timer/timer_test.cpp
 share/doc/html/boost/libs/utility/algo_opt_examples.cpp
 share/doc/html/boost/libs/utility/call_traits.htm
+share/doc/html/boost/libs/utility/call_traits_test.cpp
 share/doc/html/boost/libs/utility/cast.htm
 share/doc/html/boost/libs/utility/cast_test.cpp
 share/doc/html/boost/libs/utility/compressed_pair.htm
@@ -138,14 +160,20 @@ share/doc/html/boost/more/lib_guide.htm
 share/doc/html/boost/more/submission_process.htm
 share/doc/html/boost/more/use_other_libs.htm
 @dirrm share/doc/html/boost/more
+@dirrm share/doc/html/boost/libs/utility/debug
 @dirrm share/doc/html/boost/libs/utility
 @dirrm share/doc/html/boost/libs/timer
+@dirrm share/doc/html/boost/libs/smart_ptr/debug
 @dirrm share/doc/html/boost/libs/smart_ptr
+@dirrm share/doc/html/boost/libs/rational/debug
 @dirrm share/doc/html/boost/libs/rational
-@dirrm share/doc/html/boost/libs/random/
+@dirrm share/doc/html/boost/libs/random
 @dirrm share/doc/html/boost/libs/pri_queue
 @dirrm share/doc/html/boost/libs/min_rand
+@dirrm share/doc/html/boost/libs/integer/debug
 @dirrm share/doc/html/boost/libs/integer
+@dirrm share/doc/html/boost/libs/functional
+@dirrm share/doc/html/boost/libs/config
 @dirrm share/doc/html/boost/libs/compose
 @dirrm share/doc/html/boost/libs/array
 @dirrm share/doc/html/boost/libs

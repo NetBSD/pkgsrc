@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/29 22:46:44 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/07/13 18:25:33 jlam Exp $
 
 CXX=		c++
 
@@ -16,7 +16,7 @@ CPPFLAGS+=	-I${.CURDIR} -I${LOCALBASE}/include/sgi-stl
 all:	${LIB}
 
 ${LIB}:	${LOBJS}
-	${LIBTOOL} --cplusplus ${CXX} ${CXXFLAGS} -o ${.TARGET} ${LOBJS} \
+	${LIBTOOL} ${CXX} ${CXXFLAGS} -o ${.TARGET} ${LOBJS} \
 		-rpath ${PREFIX}/lib -version-info ${BOOST_VERS}
 
 prg_display.lo:	libs/timer/prg_display.cpp
