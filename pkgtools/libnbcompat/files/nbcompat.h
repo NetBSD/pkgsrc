@@ -165,8 +165,41 @@ char	*tgoto(const char *, int, int);
 void	 tputs(const char *, int, int (*)(int));
 #endif
 
+/* not all systems define all of these in tzfile.h */
 #if HAVE_TZFILE_H
 # include <tzfile.h>
+#endif
+
+#ifndef DAYSPERNYEAR
+# define DAYSPERNYEAR	365
+#endif
+
+#ifndef EPOCH_YEAR
+# define EPOCH_YEAR	1970
+#endif
+
+#ifndef HOURSPERDAY
+# define HOURSPERDAY	24
+#endif
+
+#ifndef MINSPERHOUR
+# define MINSPERHOUR	60
+#endif
+
+#ifndef SECSPERHOUR
+# define SECSPERHOUR	3600
+#endif
+
+#ifndef SECSPERMIN
+# define SECSPERMIN	60
+#endif
+
+#ifndef SECSPERDAY
+# define SECSPERDAY	86400
+#endif
+
+#ifndef TM_YEAR_BASE
+# define TM_YEAR_BASE	1900
 #endif
 
 #if HAVE_UTIL_H
@@ -338,14 +371,5 @@ char   *strsep(char **stringp, const char *delim);
 #if ! defined(ALLPERMS)
 # define ALLPERMS (S_ISUID|S_ISGID|S_ISVTX|S_IRWXU|S_IRWXG|S_IRWXO)
 #endif
-
-#define DAYSPERNYEAR  365
-#define	EPOCH_YEAR	1970
-#define HOURSPERDAY    24
-#define MINSPERHOUR    60
-#define	SECSPERHOUR	3600
-#define SECSPERMIN     60
-#define	SECSPERDAY	86400
-#define	TM_YEAR_BASE	1900
 
 #endif /* _NBCOMPAT_H */
