@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/10/27 07:21:19 garbled Exp $
+# $NetBSD: Makefile,v 1.13 1998/11/13 15:26:06 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/13 23:29:52 jmz Exp
 #
 
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.gnu.org/software/ispell/ispell.html
 
 MAKE_FLAGS=	TMPDIR=${.CURDIR}
 SCRIPTS_ENV=	"LANG=${LANG}"
+USE_GTEXINFO=	yes
+INFO_FILES=	ispell
 
 .include "../../mk/bsd.prefs.mk"
 
