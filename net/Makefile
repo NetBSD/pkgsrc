@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2001/01/08 15:53:11 lukem Exp $
+# $NetBSD: Makefile,v 1.178 2001/01/11 01:46:53 mjl Exp $
 #
 
     SUBDIR += adns
@@ -126,6 +126,7 @@
     SUBDIR += ucd-snmp
     SUBDIR += ucd-snmp-current
     SUBDIR += ucspi-tcp
+    SUBDIR += unison
     SUBDIR += upclient
     SUBDIR += userppp
     SUBDIR += vnc
