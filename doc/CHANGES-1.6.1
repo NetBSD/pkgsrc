@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.29 2003/04/21 03:46:11 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.30 2003/04/28 01:07:35 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -605,3 +605,10 @@ print/teTeX-bin/Makefile			1.40
 
 	Use wildcard dependence on "dialog" package.
 	[tron, ticket #1247]
+
+mk/pthread.buildlink2.mk			1.8
+
+	s/SILIENT/SILENT/ (makes the pthread buildlink2 stage quiet
+	by default)
+
+	[jmmv, ticket #1273]
