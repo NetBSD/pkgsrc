@@ -1,5 +1,5 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.7 2000/12/30 14:53:28 dmcmahill Exp $
+# $NetBSD: build.conf-example,v 1.8 2001/03/19 11:25:39 dmcmahill Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #
@@ -13,6 +13,9 @@ FTPHOST="ftp://ftp.machi.ne"                    # host for broken.html
 
 # Where build will mail the report
 ADMIN="you@some.whe.re"
+
+# Who the report is signed by
+ADMINSIG="-Your Name"
 
 # The OS release this bulk build is happening on
 osrev=`uname -r`
