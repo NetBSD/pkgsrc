@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2002/11/28 05:24:16 itojun Exp $
+# $NetBSD: Makefile.common,v 1.11 2002/11/29 05:19:55 itojun Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -171,7 +171,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/w3mhelperpanel ${LOCALBASE}/${HELPERDIR}
 .if ${W3M_USE_IMAGE} == YES
 	${INSTALL_PROGRAM} ${WRKSRC}/w3mimgdisplay ${LOCALBASE}/${HELPERDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/w3mimgsize ${LOCALBASE}/${HELPERDIR}
 .endif
 
 post-install:
@@ -182,6 +181,7 @@ post-install:
 .if ${W3M_USE_IMAGE} == YES
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/imlib/buildlink2.mk"
+.include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .endif
 .include "../../devel/boehm-gc/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/11/28 05:24:16 itojun Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/11/29 05:19:55 itojun Exp $
 bin/w3m
 man/man1/w3m.1
 man/ja_JP.EUC/man1/w3m.1
@@ -56,5 +56,4 @@ lib/w3m/inflate
 lib/w3m/w3mbookmark
 lib/w3m/w3mhelperpanel
 ${USE_IMAGE}lib/w3m/w3mimgdisplay
-${USE_IMAGE}lib/w3m/w3mimgsize
 @dirrm lib/w3m
