@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.10 2002/09/03 03:14:10 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.11 2002/09/03 21:43:40 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -476,7 +476,7 @@ MAKE_ENV+=	${_BLNK_WRAP_ENV.${_wrappee_}}
 BUILDLINK_${_wrappee_}=	\
 	${BUILDLINK_DIR}/bin/${${_wrappee_}:T:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
 
-_BLNK_WRAPPER_TRANSFORM_SED=						\
+_BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}=				\
 	-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"			\
 	-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL}|g"			\
 	-e "s|@CAT@|${CAT:Q}|g"						\
@@ -527,7 +527,7 @@ ${BUILDLINK_${_wrappee_}}:						\
 	esac;								\
 	${MKDIR} ${.TARGET:H};						\
 	${CAT} ${_BLNK_WRAPPER_SH.${_wrappee_}}	|			\
-	${SED}	${_BLNK_WRAPPER_TRANSFORM_SED}				\
+	${SED}	${_BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}}		\
 		-e "s|@WRAPPEE@|$${absdir}${${_wrappee_}:Q}|g"		\
 		> ${.TARGET};						\
 	${CHMOD} +x ${.TARGET}
@@ -561,7 +561,7 @@ buildlink-${_BLNK_OPSYS}-wrappers: buildlink-wrappers
 			"Creating ${_BLNK_OPSYS} wrapper: $${wrapper}";	\
 		${RM} -f $${wrapper};					\
 		${CAT} ${_BLNK_WRAPPER_SH.${_wrappee_}} |		\
-		${SED}	${_BLNK_WRAPPER_TRANSFORM_SED}			\
+		${SED}	${_BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}}	\
 			-e "s|@WRAPPEE@|${${_wrappee_}.${_BLNK_OPSYS}}|g" \
 		> $${wrapper};						\
 		${CHMOD} +x $${wrapper};				\
