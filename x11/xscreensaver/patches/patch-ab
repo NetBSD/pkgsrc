@@ -1,17 +1,13 @@
-$NetBSD: patch-ab,v 1.9 2002/02/24 21:42:56 wiz Exp $
+$NetBSD: patch-ab,v 1.10 2002/10/28 22:37:11 wiz Exp $
 
---- hacks/Makefile.in.orig	Sun Feb 24 10:56:29 2002
-+++ hacks/Makefile.in
-@@ -428,6 +428,12 @@
- .c.o:
- 	$(CC) -c $(INCLUDES) $(DEFS) $(CFLAGS) $(X_CFLAGS) $<
- 
-+# Work around gcc codegen bug
-+.if $(MACHINE_ARCH) == "arm32"
-+distort.o:
-+	$(CC) -c $(INCLUDES) $(DEFS) $(CFLAGS) $(X_CFLAGS) -O0 $<
-+.endif 
-+
- # Some hacks use a slightly-differently-compiled variant of this file.
- # This is how to make the the other .o file from it.
- #
+--- configure.in.orig	Wed Oct 23 14:24:25 2002
++++ configure.in
+@@ -1535,7 +1535,7 @@ if test "$enable_locking" = yes -a "$wit
+   if test "$have_kerberos5" = yes ; then
+     # from Matt Knopp <mhat@infocalypse.netlag.com>
+     # (who got it from amu@mit.edu)
+-    PASSWD_LIBS="$PASSWD_LIBS -lkrb4 -ldes425 -lkrb5 -lk5crypto -lcrypt -lcom_err"
++    PASSWD_LIBS="$PASSWD_LIBS -lkrb5 -lasn1 -lkrb -lcrypto -lroken -lcom_err -lcrypt"
+   elif test "$have_kerberos" = yes ; then
+     # from Tim Showalter <tjs@psaux.com> for FreeBSD 4.2
+     PASSWD_LIBS="$PASSWD_LIBS -lkrb -ldes -lcom_err"
