@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/04 22:23:47 abs Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/15 13:34:59 jlam Exp $
 #
 
 DISTNAME=	libungif-4.1.0b1
@@ -15,15 +15,13 @@ CONFLICTS=	giflib-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--without-x
 CONFIGURE_ENV+=		ac_cv_lib_X11_main=no
-
-USE_LANGUAGES=		c c++
-USE_BUILDLINK3=		yes
 
 DOCDIR=			${PREFIX}/share/doc/libungif
 HTMLDIR=		${PREFIX}/share/doc/html/libungif
