@@ -1,0 +1,15 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/10/31 22:49:05 zuntum Exp $
+
+To use the fonts you have just installed, add
+the line:
+
+    FontPath ${PREFIX}/lib/X11/fonts/jmk
+
+to your X window configuration file, or run the
+following command:
+
+    xset +fp ${PREFIX}/lib/X11/fonts/jmk
+    xset fp rehash
+
+======================================================================
