@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/11 13:27:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/02/05 07:53:58 markd Exp $
 bin/atlantik
 bin/kasteroids
 bin/katomic
@@ -8,6 +8,7 @@ bin/kblackbox
 bin/kbounce
 bin/kenolaba
 bin/kfouleggs
+bin/kgoldrunner
 bin/kjumpingcube
 bin/klickety
 bin/klines
@@ -31,7 +32,6 @@ bin/kwin4
 bin/kwin4proc
 bin/lskat
 bin/lskatproc
-bin/megami
 include/atlantic/atlantic_core.h
 include/atlantic/auction.h
 include/atlantic/estate.h
@@ -40,7 +40,6 @@ include/atlantic/player.h
 include/atlantic/trade.h
 include/atlantik/ui/auction_widget.h
 include/atlantik/ui/board.h
-include/atlantik/ui/display_widget.h
 include/atlantik/ui/estatedetails.h
 include/atlantik/ui/estateview.h
 include/atlantik/ui/portfolioestate.h
@@ -52,6 +51,8 @@ include/kcarddialog.h
 include/kchat.h
 include/kchatbase.h
 include/kchatdialog.h
+include/kexthighscore.h
+include/kexthighscore_item.h
 include/kgame/kgame.h
 include/kgame/kgamechat.h
 include/kgame/kgameconnectdialog.h
@@ -68,12 +69,16 @@ include/kgame/kgameproperty.h
 include/kgame/kgamepropertyarray.h
 include/kgame/kgamepropertyhandler.h
 include/kgame/kgamepropertylist.h
+include/kgame/kgamesequence.h
+include/kgame/kgameversion.h
 include/kgame/kmessageclient.h
 include/kgame/kmessageio.h
 include/kgame/kmessageserver.h
 include/kgame/kplayer.h
+include/kgamelcd.h
 include/kgamemisc.h
 include/kgameprogress.h
+include/kgrid2d.h
 include/khighscore.h
 include/kolf/ball.h
 include/kolf/canvasitem.h
@@ -93,24 +98,57 @@ lib/kde3/kolf.la
 lib/kde3/kolf.so
 lib/libatlantic.la
 lib/libatlantic.so
-lib/libatlantic.so.2
-lib/libatlantic.so.2.0
+lib/libatlantic.so.3
+lib/libatlantic.so.3.0
 lib/libatlantikclient.la
 lib/libatlantikclient.so
-lib/libatlantikclient.so.2
-lib/libatlantikclient.so.2.0
+lib/libatlantikclient.so.3
+lib/libatlantikclient.so.3.0
 lib/libatlantikui.la
 lib/libatlantikui.so
-lib/libatlantikui.so.2
-lib/libatlantikui.so.2.0
+lib/libatlantikui.so.3
+lib/libatlantikui.so.3.0
 lib/libkdegames.la
 lib/libkdegames.so
-lib/libkdegames.so.2
-lib/libkdegames.so.2.0
+lib/libkdegames.so.3
+lib/libkdegames.so.3.0
+lib/libkdeinit_kolf.la
+lib/libkdeinit_kolf.so
 lib/libkolf.la
 lib/libkolf.so
-lib/libkolf.so.0
-lib/libkolf.so.0.0
+lib/libkolf.so.3
+lib/libkolf.so.3.0
+share/applications/kde/KGoldrunner.desktop
+share/applications/kde/atlantik.desktop
+share/applications/kde/kasteroids.desktop
+share/applications/kde/katomic.desktop
+share/applications/kde/kbackgammon.desktop
+share/applications/kde/kbattleship.desktop
+share/applications/kde/kblackbox.desktop
+share/applications/kde/kbounce.desktop
+share/applications/kde/kenolaba.desktop
+share/applications/kde/kfouleggs.desktop
+share/applications/kde/kjumpingcube.desktop
+share/applications/kde/klickety.desktop
+share/applications/kde/klines.desktop
+share/applications/kde/kmahjongg.desktop
+share/applications/kde/kmines.desktop
+share/applications/kde/kolf.desktop
+share/applications/kde/konquest.desktop
+share/applications/kde/kpat.desktop
+share/applications/kde/kpoker.desktop
+share/applications/kde/kreversi.desktop
+share/applications/kde/ksame.desktop
+share/applications/kde/kshisen.desktop
+share/applications/kde/ksirtet.desktop
+share/applications/kde/ksmiletris.desktop
+share/applications/kde/ksnake.desktop
+share/applications/kde/ksokoban.desktop
+share/applications/kde/kspaceduel.desktop
+share/applications/kde/ktron.desktop
+share/applications/kde/ktuberling.desktop
+share/applications/kde/kwin4.desktop
+share/applications/kde/lskat.desktop
 share/doc/kde/HTML/en/atlantik/common
 share/doc/kde/HTML/en/atlantik/index.cache.bz2
 share/doc/kde/HTML/en/atlantik/index.docbook
@@ -138,6 +176,7 @@ share/doc/kde/HTML/en/kbounce/index.docbook
 share/doc/kde/HTML/en/kbounce/jezball_corridor1.png
 share/doc/kde/HTML/en/kbounce/jezball_corridor2.png
 share/doc/kde/HTML/en/kbounce/jezball_newWall.png
+share/doc/kde/HTML/en/kdegames-apidocs/common
 share/doc/kde/HTML/en/kenolaba/common
 share/doc/kde/HTML/en/kenolaba/index.cache.bz2
 share/doc/kde/HTML/en/kenolaba/index.docbook
@@ -146,6 +185,16 @@ share/doc/kde/HTML/en/kfouleggs/common
 share/doc/kde/HTML/en/kfouleggs/gamescreen.png
 share/doc/kde/HTML/en/kfouleggs/index.cache.bz2
 share/doc/kde/HTML/en/kfouleggs/index.docbook
+share/doc/kde/HTML/en/kgoldrunner/common
+share/doc/kde/HTML/en/kgoldrunner/editbar.png
+share/doc/kde/HTML/en/kgoldrunner/enemy.png
+share/doc/kde/HTML/en/kgoldrunner/hero.png
+share/doc/kde/HTML/en/kgoldrunner/index.cache.bz2
+share/doc/kde/HTML/en/kgoldrunner/index.docbook
+share/doc/kde/HTML/en/kgoldrunner/kgoldrunner.png
+share/doc/kde/HTML/en/kgoldrunner/level010.png
+share/doc/kde/HTML/en/kgoldrunner/select.png
+share/doc/kde/HTML/en/kgoldrunner/tute008.png
 share/doc/kde/HTML/en/kjumpingcube/common
 share/doc/kde/HTML/en/kjumpingcube/index.cache.bz2
 share/doc/kde/HTML/en/kjumpingcube/index.docbook
@@ -204,8 +253,6 @@ share/doc/kde/HTML/en/ksokoban/index.docbook
 share/doc/kde/HTML/en/kspaceduel/common
 share/doc/kde/HTML/en/kspaceduel/index.cache.bz2
 share/doc/kde/HTML/en/kspaceduel/index.docbook
-share/doc/kde/HTML/en/kspaceduel/kspaceduel1.png
-share/doc/kde/HTML/en/kspaceduel/kspaceduel2.png
 share/doc/kde/HTML/en/kspaceduel/kspaceduel3.png
 share/doc/kde/HTML/en/ktron/common
 share/doc/kde/HTML/en/ktron/index.cache.bz2
@@ -235,42 +282,8 @@ share/doc/kde/HTML/en/kwin4/index.docbook
 share/doc/kde/HTML/en/lskat/common
 share/doc/kde/HTML/en/lskat/index.cache.bz2
 share/doc/kde/HTML/en/lskat/index.docbook
-share/doc/kde/HTML/en/megami/common
-share/doc/kde/HTML/en/megami/index.cache.bz2
-share/doc/kde/HTML/en/megami/index.docbook
-share/kde/applnk/Games/Arcade/kasteroids.desktop
-share/kde/applnk/Games/Arcade/kbounce.desktop
-share/kde/applnk/Games/Arcade/kfouleggs.desktop
-share/kde/applnk/Games/Arcade/klickety.desktop
-share/kde/applnk/Games/Arcade/kolf.desktop
-share/kde/applnk/Games/Arcade/ksirtet.desktop
-share/kde/applnk/Games/Arcade/ksmiletris.desktop
-share/kde/applnk/Games/Arcade/ksnake.desktop
-share/kde/applnk/Games/Arcade/kspaceduel.desktop
-share/kde/applnk/Games/Arcade/ktron.desktop
-share/kde/applnk/Games/Board/atlantik.desktop
-share/kde/applnk/Games/Board/kbackgammon.desktop
-share/kde/applnk/Games/Board/kbattleship.desktop
-share/kde/applnk/Games/Board/kblackbox.desktop
-share/kde/applnk/Games/Board/kenolaba.desktop
-share/kde/applnk/Games/Board/kmahjongg.desktop
-share/kde/applnk/Games/Board/kreversi.desktop
-share/kde/applnk/Games/Board/kshisen.desktop
-share/kde/applnk/Games/Board/kwin4.desktop
-share/kde/applnk/Games/Card/kpat.desktop
-share/kde/applnk/Games/Card/kpoker.desktop
-share/kde/applnk/Games/Card/lskat.desktop
-share/kde/applnk/Games/Card/megami.desktop
-share/kde/applnk/Games/Kidsgames/ktuberling.desktop
-share/kde/applnk/Games/TacticStrategy/katomic.desktop
-share/kde/applnk/Games/TacticStrategy/kjumpingcube.desktop
-share/kde/applnk/Games/TacticStrategy/klines.desktop
-share/kde/applnk/Games/TacticStrategy/kmines.desktop
-share/kde/applnk/Games/TacticStrategy/konquest.desktop
-share/kde/applnk/Games/TacticStrategy/ksame.desktop
-share/kde/applnk/Games/TacticStrategy/ksokoban.desktop
-share/kde/applnk/Toys/ktuberling.desktop
 share/kde/apps/atlantik/atlantikui.rc
+share/kde/apps/atlantik/eventsrc
 share/kde/apps/atlantik/icons/crystalsvg/16x16/actions/jail_pay.png
 share/kde/apps/atlantik/icons/crystalsvg/22x22/actions/atlantik_buy_estate.png
 share/kde/apps/atlantik/icons/crystalsvg/22x22/actions/jail_pay.png
@@ -284,6 +297,24 @@ share/kde/apps/atlantik/pics/qmark-blue.png
 share/kde/apps/atlantik/pics/qmark-red.png
 share/kde/apps/atlantik/pics/token.png
 share/kde/apps/atlantik/pics/train.png
+share/kde/apps/atlantik/themes/default/tokens/badge.png
+share/kde/apps/atlantik/themes/default/tokens/beachball.png
+share/kde/apps/atlantik/themes/default/tokens/bell.png
+share/kde/apps/atlantik/themes/default/tokens/bomb.png
+share/kde/apps/atlantik/themes/default/tokens/cat.png
+share/kde/apps/atlantik/themes/default/tokens/cookie.png
+share/kde/apps/atlantik/themes/default/tokens/cube.png
+share/kde/apps/atlantik/themes/default/tokens/eyeball.png
+share/kde/apps/atlantik/themes/default/tokens/flag.png
+share/kde/apps/atlantik/themes/default/tokens/ghost.png
+share/kde/apps/atlantik/themes/default/tokens/globe.png
+share/kde/apps/atlantik/themes/default/tokens/hamburger.png
+share/kde/apps/atlantik/themes/default/tokens/lips.png
+share/kde/apps/atlantik/themes/default/tokens/puzzle.png
+share/kde/apps/atlantik/themes/default/tokens/pyramid.png
+share/kde/apps/atlantik/themes/default/tokens/skull.png
+share/kde/apps/atlantik/themes/default/tokens/traffic_light.png
+share/kde/apps/atlantik/themes/default/tokens/wizard.png
 share/kde/apps/carddecks/cards-aisleriot/1.png
 share/kde/apps/carddecks/cards-aisleriot/10.png
 share/kde/apps/carddecks/cards-aisleriot/11.png
@@ -1159,6 +1190,8 @@ share/kde/apps/katomic/levels/level_8
 share/kde/apps/katomic/levels/level_80
 share/kde/apps/katomic/levels/level_81
 share/kde/apps/katomic/levels/level_82
+share/kde/apps/katomic/levels/level_83
+share/kde/apps/katomic/levels/level_84
 share/kde/apps/katomic/levels/level_9
 share/kde/apps/katomic/pics/abilder.png
 share/kde/apps/katomic/pics/molek.png
@@ -1170,6 +1203,7 @@ share/kde/apps/kbackgammon/sounds/kbackgammon-lost.wav
 share/kde/apps/kbackgammon/sounds/kbackgammon-move.wav
 share/kde/apps/kbackgammon/sounds/kbackgammon-roll.wav
 share/kde/apps/kbackgammon/sounds/kbackgammon-won.wav
+share/kde/apps/kbattleship/eventsrc
 share/kde/apps/kbattleship/kbattleshipui.rc
 share/kde/apps/kbattleship/pictures/border.png
 share/kde/apps/kbattleship/pictures/death.png
@@ -1261,10 +1295,16 @@ share/kde/apps/kenolaba/toolbar/stop.xpm
 share/kde/apps/kenolaba/toolbar/undo.xpm
 share/kde/apps/kenolaba/toolbar/warning.xpm
 share/kde/apps/kenolaba/toolbar/yellowball.xpm
-share/kde/apps/kfouleggs/kfouleggsconfig.rc
+share/kde/apps/kfouleggs/eventsrc
 share/kde/apps/kfouleggs/kfouleggsui.rc
+share/kde/apps/kgoldrunner/kgoldrunnerui.rc
+share/kde/apps/kgoldrunner/system/games.dat
+share/kde/apps/kgoldrunner/system/hi_level.dat
+share/kde/apps/kgoldrunner/system/hi_plws.dat
+share/kde/apps/kgoldrunner/system/hi_plwv.dat
+share/kde/apps/kgoldrunner/system/hi_wad.dat
 share/kde/apps/kjumpingcube/kjumpingcubeui.rc
-share/kde/apps/klickety/klicketyconfig.rc
+share/kde/apps/klickety/eventsrc
 share/kde/apps/klickety/klicketyui.rc
 share/kde/apps/klines/balls.jpg
 share/kde/apps/klines/field.jpg
@@ -1294,7 +1334,7 @@ share/kde/apps/kmahjongg/pics/traditional.tileset
 share/kde/apps/kmahjongg/pics/triangle.layout
 share/kde/apps/kmahjongg/pics/wood.bgnd
 share/kde/apps/kmahjongg/toolbar/newnum.xpm
-share/kde/apps/kmines/kminesconfig.rc
+share/kde/apps/kmines/eventsrc
 share/kde/apps/kmines/kminesui.rc
 share/kde/apps/kolf/courses/Classic.kolf
 share/kde/apps/kolf/courses/Easy.kolf
@@ -1303,6 +1343,7 @@ share/kde/apps/kolf/courses/Impossible
 share/kde/apps/kolf/courses/Medium.kolf
 share/kde/apps/kolf/courses/Practice
 share/kde/apps/kolf/courses/ReallyEasy
+share/kde/apps/kolf/courses/USApro
 share/kde/apps/kolf/intro
 share/kde/apps/kolf/kolfui.rc
 share/kde/apps/kolf/pics/cup.png
@@ -1337,36 +1378,29 @@ share/kde/apps/kpoker/sounds/cardflip.wav
 share/kde/apps/kpoker/sounds/hold.wav
 share/kde/apps/kpoker/sounds/lose.wav
 share/kde/apps/kpoker/sounds/win.wav
-share/kde/apps/kreversi/pics/background/Dark_Wood.xpm
-share/kde/apps/kreversi/pics/background/Earth.xpm
-share/kde/apps/kreversi/pics/background/Granite.xpm
-share/kde/apps/kreversi/pics/background/Hexagon.xpm
-share/kde/apps/kreversi/pics/background/Light_Wood.xpm
-share/kde/apps/kreversi/pics/background/Mystique.xpm
-share/kde/apps/kreversi/pics/background/Ocean.xpm
-share/kde/apps/kreversi/pics/background/Pipes.xpm
-share/kde/apps/kreversi/pics/background/Puzzle.xpm
-share/kde/apps/kreversi/pics/background/Stones.xpm
+share/kde/apps/kreversi/kreversiui.rc
+share/kde/apps/kreversi/pics/background/Dark_Wood.png
+share/kde/apps/kreversi/pics/background/Earth.png
+share/kde/apps/kreversi/pics/background/Granite.png
+share/kde/apps/kreversi/pics/background/Hexagon.png
+share/kde/apps/kreversi/pics/background/Light_Wood.png
+share/kde/apps/kreversi/pics/background/Mystique.png
+share/kde/apps/kreversi/pics/background/Ocean.png
+share/kde/apps/kreversi/pics/background/Pipes.png
+share/kde/apps/kreversi/pics/background/Puzzle.png
+share/kde/apps/kreversi/pics/background/Stones.png
 share/kde/apps/kreversi/pics/chips.png
 share/kde/apps/kreversi/pics/chips_mono.png
-share/kde/apps/kreversi/pics/help.xpm
-share/kde/apps/kreversi/pics/hint.xpm
-share/kde/apps/kreversi/pics/logo.xpm
-share/kde/apps/kreversi/pics/stop.xpm
-share/kde/apps/kreversi/pics/undo.xpm
-share/kde/apps/kreversi/pics/zoomin.xpm
-share/kde/apps/kreversi/pics/zoomout.xpm
 share/kde/apps/kreversi/sounds/reversi-click.wav
 share/kde/apps/kreversi/sounds/reversi-lost.wav
 share/kde/apps/kreversi/sounds/reversi-won.wav
 share/kde/apps/ksame/eventsrc
 share/kde/apps/ksame/ksameui.rc
 share/kde/apps/ksame/stones.png
-share/kde/apps/kshisen/kshisen.xpm
 share/kde/apps/kshisen/kshisen_bgnd.xpm
 share/kde/apps/kshisen/kshisenui.rc
-share/kde/apps/kshisen/paused.xpm
-share/kde/apps/ksirtet/ksirtetconfig.rc
+share/kde/apps/kshisen/tileset.png
+share/kde/apps/ksirtet/eventsrc
 share/kde/apps/ksirtet/ksirtetui.rc
 share/kde/apps/ksmiletris/data/bg1.bmp
 share/kde/apps/ksmiletris/data/bg10.bmp
@@ -1980,8 +2014,17 @@ share/kde/apps/lskat/grafix/type1.png
 share/kde/apps/lskat/grafix/type2.png
 share/kde/apps/lskat/grafix/type3.png
 share/kde/apps/lskat/lskatui.rc
-share/kde/apps/megami/megamiui.rc
+share/kde/config.kcfg/kasteroids.kcfg
+share/kde/config.kcfg/kfouleggs.kcfg
+share/kde/config.kcfg/kjumpingcube.kcfg
+share/kde/config.kcfg/klines.kcfg
+share/kde/config.kcfg/kmahjongg.kcfg
+share/kde/config.kcfg/kreversi.kcfg
+share/kde/config.kcfg/ksirtet.kcfg
+share/kde/config.kcfg/kspaceduel.kcfg
+share/kde/config.kcfg/ktron.kcfg
 share/kde/config/magic/kolf.magic
+share/kde/icons/crystalsvg/128x128/apps/ksmiletris.png
 share/kde/icons/crystalsvg/16x16/actions/endturn.png
 share/kde/icons/crystalsvg/16x16/actions/highscore.png
 share/kde/icons/crystalsvg/16x16/actions/roll.png
@@ -2044,7 +2087,6 @@ share/kde/icons/crystalsvg/32x32/apps/ktron.png
 share/kde/icons/crystalsvg/32x32/apps/ktuberling.png
 share/kde/icons/crystalsvg/32x32/apps/kwin4.png
 share/kde/icons/crystalsvg/32x32/apps/lskat.png
-share/kde/icons/crystalsvg/32x32/apps/megami.png
 share/kde/icons/crystalsvg/48x48/apps/atlantik.png
 share/kde/icons/crystalsvg/48x48/apps/kasteroids.png
 share/kde/icons/crystalsvg/48x48/apps/kbackgammon.png
@@ -2066,7 +2108,9 @@ share/kde/icons/crystalsvg/48x48/apps/ksnake.png
 share/kde/icons/crystalsvg/48x48/apps/ksokoban.png
 share/kde/icons/crystalsvg/48x48/apps/kwin4.png
 share/kde/icons/crystalsvg/48x48/apps/lskat.png
-share/kde/icons/hicolor/32x32/apps/megami.png
+share/kde/icons/crystalsvg/64x64/apps/ksmiletris.png
+share/kde/icons/hicolor/16x16/apps/kgoldrunner.png
+share/kde/icons/hicolor/32x32/apps/kgoldrunner.png
 share/kde/icons/locolor/16x16/apps/kbounce.png
 share/kde/icons/locolor/16x16/apps/kspaceduel.png
 share/kde/icons/locolor/16x16/apps/lskat.png
@@ -2075,6 +2119,7 @@ share/kde/icons/locolor/32x32/apps/kspaceduel.png
 share/kde/icons/locolor/32x32/apps/lskat.png
 share/kde/mimelnk/application/x-kolf.desktop
 share/kde/mimelnk/application/x-kourse.desktop
+share/kde/mimelnk/application/x-tuberling.desktop
 share/kde/services/atlantik.protocol
 @comment dirrm share/kde/services
 @comment dirrm share/kde/mimelnk/application
@@ -2089,7 +2134,6 @@ share/kde/services/atlantik.protocol
 @comment dirrm share/kde/icons/crystalsvg/16x16/actions
 @comment dirrm share/kde/config/magic
 @comment dirrm share/kde/config
-@dirrm share/kde/apps/megami
 @dirrm share/kde/apps/lskat/grafix
 @dirrm share/kde/apps/lskat
 @dirrm share/kde/apps/kwin4/grafix/default
@@ -2150,6 +2194,8 @@ share/kde/services/atlantik.protocol
 @dirrm share/kde/apps/klines
 @dirrm share/kde/apps/klickety
 @dirrm share/kde/apps/kjumpingcube
+@dirrm share/kde/apps/kgoldrunner/system
+@dirrm share/kde/apps/kgoldrunner
 @dirrm share/kde/apps/kfouleggs
 @dirrm share/kde/apps/kenolaba/toolbar
 @dirrm share/kde/apps/kenolaba
@@ -2193,6 +2239,9 @@ share/kde/services/atlantik.protocol
 @dirrm share/kde/apps/carddecks/cards-default
 @dirrm share/kde/apps/carddecks/cards-aisleriot
 @dirrm share/kde/apps/carddecks
+@dirrm share/kde/apps/atlantik/themes/default/tokens
+@dirrm share/kde/apps/atlantik/themes/default
+@dirrm share/kde/apps/atlantik/themes
 @dirrm share/kde/apps/atlantik/pics
 @dirrm share/kde/apps/atlantik/icons/locolor/16x16/actions
 @dirrm share/kde/apps/atlantik/icons/locolor/16x16
@@ -2207,13 +2256,6 @@ share/kde/services/atlantik.protocol
 @dirrm share/kde/apps/atlantik/icons
 @dirrm share/kde/apps/atlantik
 @comment dirrm share/kde/apps
-@comment dirrm share/kde/applnk/Toys
-@comment dirrm share/kde/applnk/Games/TacticStrategy
-@comment dirrm share/kde/applnk/Games/Kidsgames
-@comment dirrm share/kde/applnk/Games/Card
-@comment dirrm share/kde/applnk/Games/Board
-@comment dirrm share/kde/applnk/Games/Arcade
-@dirrm share/doc/kde/HTML/en/megami
 @dirrm share/doc/kde/HTML/en/lskat
 @dirrm share/doc/kde/HTML/en/kwin4
 @dirrm share/doc/kde/HTML/en/ktuberling
@@ -2233,6 +2275,7 @@ share/kde/services/atlantik.protocol
 @dirrm share/doc/kde/HTML/en/klines
 @dirrm share/doc/kde/HTML/en/klickety
 @dirrm share/doc/kde/HTML/en/kjumpingcube
+@dirrm share/doc/kde/HTML/en/kgoldrunner
 @dirrm share/doc/kde/HTML/en/kfouleggs
 @dirrm share/doc/kde/HTML/en/kenolaba
 @dirrm share/doc/kde/HTML/en/kbounce
