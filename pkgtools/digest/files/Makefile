@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2001/03/06 11:21:04 agc Exp $
+#	$NetBSD: Makefile,v 1.2 2001/03/10 15:55:14 tron Exp $
 
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the version definition in the package Makefile
@@ -28,6 +28,10 @@ CPPFLAGS+= -DHAVE_SYS_ENDIAN_H_
 CPPFLAGS+= -DHAVE_MACHINE_ENDIAN_H_
 .endif
 
+.if (${OPSYS} == SunOS)
+NOMAN=		YES
+.else
 LDSTATIC?=      -static
+.endif
 
 .include <bsd.prog.mk>
