@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 2003/07/12 01:07:11 jschauma Exp $
+
 --- src-glut/glutint.h.orig	2003-07-11 19:33:42.000000000 +0000
 +++ src-glut/glutint.h	2003-07-11 19:33:45.000000000 +0000
 @@ -33,6 +33,8 @@
