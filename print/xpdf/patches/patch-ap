@@ -1,0 +1,12 @@
+$NetBSD: patch-ap,v 1.1 2004/04/27 19:45:59 adam Exp $
+
+--- splash/SplashFTFontEngine.h.orig	Tue Apr 27 21:35:08 2004
++++ splash/SplashFTFontEngine.h
+@@ -15,6 +15,7 @@
+ #pragma interface
+ #endif
+ 
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ #include "gtypes.h"
+ 
