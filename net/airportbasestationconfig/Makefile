@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/20 20:39:46 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/06 08:58:08 tron Exp $
 
 DISTNAME=	configurator
 PKGNAME=	${BINNAME}-1.2.2
@@ -9,10 +9,14 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://edge.mcs.drexel.edu/GICL/people/sevy/airport/
 
+# "jdk" and "kaffe" packages don't work.
+DEPENDS+=	sun-jdk>=1.3.0:../../lang/sun-jdk13
+
 BINNAME=	airportbasestationconfig
 DOCDIR=		${PREFIX}/share/doc/${BINNAME}
 DIST_SUBDIR=	${PKGNAME}
 LIBDIR=		${PREFIX}/lib/${BINNAME}
+PKG_JVM=	jdk
 PLIST_SUBST+=	BINNAME=${BINNAME}
 USE_JAVA=	YES
 WRKSRC=		${WRKDIR}
