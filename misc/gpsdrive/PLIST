@@ -1,0 +1,57 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/26 19:55:01 tsarna Exp $
+bin/garble
+bin/gpsd
+bin/gpsdrive
+bin/gpsfetchmap
+bin/gpsfetchmap.pl
+bin/gpspoint2gpsdrive.pl
+bin/wpcvt
+bin/wpget
+gpsdrive/locale/locale.alias
+lib/libfly.a
+lib/libfly.la
+lib/libfly.so
+lib/libfly.so.2
+lib/libfly.so.2.0
+lib/libnautic.a
+lib/libnautic.la
+lib/libnautic.so
+lib/libnautic.so.2
+lib/libnautic.so.2.0
+man/de/man1/gpsdrive.1
+man/es/man1/gpsdrive.1
+man/man1/gpsdrive.1
+share/gpsdrive/friendsicon.png
+share/gpsdrive/gpsdrive/AUTHORS
+share/gpsdrive/gpsdrive/FAQ.gpsdrive
+share/gpsdrive/gpsdrive/FAQ.gpsdrive.fr
+share/gpsdrive/gpsdrive/GPS-receivers
+share/gpsdrive/gpsdrive/LEEME
+share/gpsdrive/gpsdrive/LISEZMOI
+share/gpsdrive/gpsdrive/NMEA.txt
+share/gpsdrive/gpsdrive/README
+share/gpsdrive/gpsdrive/README.FreeBSD
+share/gpsdrive/gpsdrive/README.SQL
+share/gpsdrive/gpsdrive/README.gpspoint2gspdrive
+share/gpsdrive/gpsdrive/README.kismet
+share/gpsdrive/gpsdrive/TODO
+share/gpsdrive/gpsdrive/create.sql
+share/gpsdrive/gpsdrive/wp2sql
+share/gpsdrive/gpsdrivesplash.png
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gpsdrive.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gpsdrive.mo
+${PKGLOCALEDIR}/locale/de_AT/LC_MESSAGES/gpsdrive.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gpsdrive.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gpsdrive.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gpsdrive.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gpsdrive.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gpsdrive.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gpsdrive.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gpsdrive.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gpsdrive.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gpsdrive.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gpsdrive.mo
+@dirrm share/gpsdrive/gpsdrive
+@dirrm share/gpsdrive
+@dirrm gpsdrive/locale
+@dirrm gpsdrive
