@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2002/09/30 20:51:03 frueauf Exp $
+# $NetBSD: Makefile,v 1.119 2002/10/01 06:53:50 tron Exp $
 
 DISTNAME=	fetchmail-6.1.0
 CATEGORIES=	mail
@@ -10,10 +10,11 @@ MAINTAINER=	frueauf@netbsd.org
 HOMEPAGE=	http://www.tuxedo.org/~esr/fetchmail/
 COMMENT=	batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 
-BUILD_USES_MSGFMT=	yes
+BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		yes
-GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		YES
+USE_GNU_GETTEXT=	YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-hesiod
 
 BUILD_DEFS+=		USE_INET6
