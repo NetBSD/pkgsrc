@@ -1,9 +1,9 @@
-#	$NetBSD: Makefile.netbsd,v 1.4 1998/11/05 05:32:19 mycroft Exp $
+#	$NetBSD: Makefile.netbsd,v 1.5 1999/01/01 07:58:29 garbled Exp $
 
 CC	    = gcc -g -O
 INCLUDES    = -I${LOCALBASE}/include/tk8.0 -I${LOCALBASE}/include/tcl8.0 -I${X11BASE}/include
 LIBS	    = -L${LOCALBASE}/lib -ltk80 -ltcl80 -lm -L${X11BASE}/lib -lX11
-CFLAGS	    = ${INCLUDES} -DNORANDPROTO -DUSE_PERROR -DAUTH -Werror
+CFLAGS	    = ${INCLUDES} -DNORANDPROTO -DUSE_PERROR -DAUTH ${EXTRA_FLAGS} -Werror
 
 all::	sdr
 

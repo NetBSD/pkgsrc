@@ -1,8 +1,17 @@
-$NetBSD: patch-ad,v 1.5 1998/11/05 05:32:19 mycroft Exp $
-
---- src/sd_listen.c.orig	Wed Oct  7 07:18:56 1998
-+++ src/sd_listen.c	Wed Nov  4 23:52:04 1998
-@@ -484,10 +484,18 @@
+$NetBSD: patch-ad,v 1.6 1999/01/01 07:58:29 garbled Exp $
+--- src/sd_listen.c.orig	Wed Oct  7 04:18:56 1998
++++ src/sd_listen.c	Thu Dec 31 22:59:57 1998
+@@ -55,6 +55,9 @@
+ #include <unistd.h>
+ #include <fcntl.h>
+ #endif
++#ifdef HAVE_SYS_INTTYPES_H
++#include <inttypes.h>
++#endif
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <setjmp.h>
+@@ -484,10 +487,18 @@
        }
  
        if (strncmp(k1, "k=", 2)==0) {
@@ -22,7 +31,19 @@ $NetBSD: patch-ad,v 1.5 1998/11/05 05:32:19 mycroft Exp $
            key[0]='\0';
          }
  	p=strchr(k1, '\n')+1;
-@@ -1509,7 +1517,11 @@
+@@ -1344,7 +1355,11 @@
+     if (cli) {
+       init_cli();
+       inChannel = fileno(stdin);
++#ifdef HAVE_SYS_INTTYPES_H
++      Tcl_CreateFileHandler(inChannel, TCL_READABLE, (Tcl_FileProc*)do_cli, (ClientData)(intptr_t) inChannel);
++#else
+       Tcl_CreateFileHandler(inChannel, TCL_READABLE, (Tcl_FileProc*)do_cli, (ClientData) inChannel);
++#endif
+     }
+ #endif
+ 
+@@ -1509,7 +1524,11 @@
      char buf[MAXADSIZE];
      char debugbuf[MAXADSIZE];
  
