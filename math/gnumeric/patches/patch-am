@@ -1,0 +1,24 @@
+$NetBSD: patch-am,v 1.1 2000/05/30 09:16:12 rh Exp $
+
+--- plugins/numtheory/Makefile.in.orig	Wed May 10 04:59:16 2000
++++ plugins/numtheory/Makefile.in	Fri May 19 23:49:15 2000
+@@ -156,7 +156,7 @@
+ INCLUDES =      -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		    -I$(includedir)	-I$(top_srcdir)/src		    $(GNOME_INCLUDEDIR)
+ 
+ 
+-gnumeric_plugin_LTLIBRARIES = gnum_numtheory.la
++gnumeric_plugin_LTLIBRARIES = gnum_numtheory.a
+ gnum_numtheory_la_LDFLAGS = -module -avoid-version
+ gnum_numtheory_la_SOURCES = numtheory.c
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -257,7 +257,9 @@
+ 
+ maintainer-clean-libtool:
+ 
+-gnum_numtheory.la: $(gnum_numtheory_la_OBJECTS) $(gnum_numtheory_la_DEPENDENCIES)
++gnum_numtheory.la: gnum_numtheory.a
++
++gnum_numtheory.a: $(gnum_numtheory_la_OBJECTS) $(gnum_numtheory_la_DEPENDENCIES)
+ 	$(LINK) -rpath $(gnumeric_plugindir) $(gnum_numtheory_la_LDFLAGS) $(gnum_numtheory_la_OBJECTS) $(gnum_numtheory_la_LIBADD) $(LIBS)
+ 
+ tags: TAGS

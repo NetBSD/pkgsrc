@@ -1,0 +1,24 @@
+$NetBSD: patch-al,v 1.1 2000/05/30 09:16:12 rh Exp $
+
+--- plugins/sample/Makefile.in.orig	Wed May 10 04:59:14 2000
++++ plugins/sample/Makefile.in	Fri May 19 23:49:31 2000
+@@ -164,7 +164,7 @@
+ 
+ # The naming convention used for plugins is
+ #	gnum_<name>.so
+-gnumeric_plugin_LTLIBRARIES = gnum_sample.la
++gnumeric_plugin_LTLIBRARIES = gnum_sample.a
+ 
+ # Don't bother versioning
+ gnum_sample_la_LDFLAGS = -module -avoid-version
+@@ -267,7 +267,9 @@
+ 
+ maintainer-clean-libtool:
+ 
+-gnum_sample.la: $(gnum_sample_la_OBJECTS) $(gnum_sample_la_DEPENDENCIES)
++gnum_sample.la: gnum_sample.a
++
++gnum_sample.a: $(gnum_sample_la_OBJECTS) $(gnum_sample_la_DEPENDENCIES)
+ 	$(LINK) -rpath $(gnumeric_plugindir) $(gnum_sample_la_LDFLAGS) $(gnum_sample_la_OBJECTS) $(gnum_sample_la_LIBADD) $(LIBS)
+ 
+ tags: TAGS

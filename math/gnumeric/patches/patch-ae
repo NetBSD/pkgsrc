@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.1 2000/05/30 09:16:11 rh Exp $
+
+--- plugins/sc/Makefile.in.orig	Wed May 10 04:58:53 2000
++++ plugins/sc/Makefile.in	Fri May 19 23:49:34 2000
+@@ -156,7 +156,7 @@
+ INCLUDES =      -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		    -I$(includedir)	-I$(top_srcdir)/src		    $(GNOME_INCLUDEDIR)
+ 
+ 
+-gnumeric_plugin_LTLIBRARIES = gnum_sc.la
++gnumeric_plugin_LTLIBRARIES = gnum_sc.a
+ gnum_sc_la_LDFLAGS = -module -avoid-version
+ gnum_sc_la_SOURCES = sc.c
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -257,7 +257,9 @@
+ 
+ maintainer-clean-libtool:
+ 
+-gnum_sc.la: $(gnum_sc_la_OBJECTS) $(gnum_sc_la_DEPENDENCIES)
++gnum_sc.la: gnum_sc.a
++
++gnum_sc.a: $(gnum_sc_la_OBJECTS) $(gnum_sc_la_DEPENDENCIES)
+ 	$(LINK) -rpath $(gnumeric_plugindir) $(gnum_sc_la_LDFLAGS) $(gnum_sc_la_OBJECTS) $(gnum_sc_la_LIBADD) $(LIBS)
+ 
+ tags: TAGS

@@ -1,15 +1,24 @@
-$NetBSD: patch-ab,v 1.1 2000/01/26 12:00:40 rh Exp $
+$NetBSD: patch-ab,v 1.2 2000/05/30 09:16:10 rh Exp $
 
---- plugins/python/Makefile.in.orig	Wed Jan 26 10:26:55 2000
-+++ plugins/python/Makefile.in	Wed Jan 26 10:42:09 2000
-@@ -255,7 +255,9 @@
+--- plugins/python/Makefile.in.orig	Wed May 10 04:59:07 2000
++++ plugins/python/Makefile.in	Fri May 19 23:49:29 2000
+@@ -157,7 +157,7 @@
+ INCLUDES =      -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		    -I$(includedir)	-I$(top_srcdir)/src		    $(PY_CFLAGS)					    $(GNOME_INCLUDEDIR)
+ 
+ 
+-noinst_LTLIBRARIES = gnum_python.la
++noinst_LTLIBRARIES = gnum_python.a
+ gnum_python_la_LDFLAGS = -module -avoid-version 			 $(PY_LIB_LOC)  
+ 
+ gnum_python_la_SOURCES = python.c
+@@ -250,7 +250,9 @@
  
  maintainer-clean-libtool:
  
--libgnum_python.la: $(libgnum_python_la_OBJECTS) $(libgnum_python_la_DEPENDENCIES)
-+libgnum_python.la: libgnum_python.a
+-gnum_python.la: $(gnum_python_la_OBJECTS) $(gnum_python_la_DEPENDENCIES)
++gnum_python.la: gnum_python.a
 +
-+libgnum_python.a: $(libgnum_python_la_OBJECTS) $(libgnum_python_la_DEPENDENCIES)
- 	$(LINK)  $(libgnum_python_la_LDFLAGS) $(libgnum_python_la_OBJECTS) $(libgnum_python_la_LIBADD) $(LIBS)
++gnum_python.a: $(gnum_python_la_OBJECTS) $(gnum_python_la_DEPENDENCIES)
+ 	$(LINK)  $(gnum_python_la_LDFLAGS) $(gnum_python_la_OBJECTS) $(gnum_python_la_LIBADD) $(LIBS)
  
  install-PythonscriptsDATA: $(Pythonscripts_DATA)
