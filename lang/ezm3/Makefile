@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/11 20:30:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/13 22:02:20 xtraeme Exp $
 
 DISTNAME=	ezm3-1.1
 CATEGORIES=	lang
@@ -11,11 +11,10 @@ COMMENT=	Easier, more portable Modula-3 distribution for building CVSup
 
 DIST_SUBDIR=		ezm3
 USE_GMAKE=		yes
-
+NO_BUILD=		yes
 INSTALL_TARGET=		all
 MAKE_ARGS+=		M3OPTIONS="-DBUILD_ALL -DSHIP_ALL"
 PLIST_SUBST+=		TARGET=${TARGET} TARGETDIR=${TARGETDIR}
-PLIST_SUBST+=		WORDSIZE=${WORDSIZE}
 
 # XXX CFLAGS has to be empty, because if it's not, the build
 # XXX process will fail.
@@ -36,8 +35,6 @@ TARGET=         NetBSDi386
 TARGETDIR=      netbsd-1
 .endif
 
-PROGS=		bin/m3build bin/m3bundle bin/m3ship
-
 do-configure:
 	cd ${WRKSRC}/m3config/src && \
 	    ${MV} -f ${TARGET} ${TARGET}.bak && \
@@ -45,12 +42,7 @@ do-configure:
 		   -e "/^X11ROOT = /s|\".*\"|\"${X11BASE}/lib\"|" \
 		   ${TARGET}.bak > ${TARGET}
 
-do-build:
+pre-build:
 	${RM} -rf ${WRKSRC}/${TARGET}
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
-		${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET}
-
-do-install:
-	for i in ${PROGS}; do strip ${EZM3ROOT}/$$i; done
 
 .include "../../mk/bsd.pkg.mk"
