@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 1999/05/17 02:16:07 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/05/17 02:24:27 tron Exp $
 
 DISTNAME=	suse_base-6.1
 CATEGORIES=	emulators
-MASTER_SITES=	ftp://ftp.suse.com/pub/suse/i386/6.1/suse/a1/
+MASTER_SITES=	ftp://ftp.suse.com/pub/suse/i386/6.1/suse/a1/ \
+		ftp://ftp.cs.unm.edu/mirrors/SuSE61/suse/a1/
 DISTFILES=	aaa_dir.rpm shlibs.rpm ldso.rpm gppshare.rpm
 ONLY_FOR_ARCHS=	i386
 
