@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/07/31 10:36:46 fredb Exp $
+$NetBSD: patch-ac,v 1.2 1999/08/29 14:16:13 fredb Exp $
 
---- src/Audio/Makefile.in.orig	Tue Nov 10 10:51:01 1998
-+++ src/Audio/Makefile.in	Tue Dec 29 00:02:11 1998
-@@ -4,12 +4,12 @@
+--- src/Audio/Makefile.in.orig	Mon Aug  9 17:43:38 1999
++++ src/Audio/Makefile.in	Fri Aug 27 22:25:12 1999
+@@ -4,15 +4,15 @@
  # are correct for your rplay installation.
  #
  
@@ -14,8 +14,11 @@ $NetBSD: patch-ac,v 1.1.1.1 1999/07/31 10:36:46 fredb Exp $
  
  PROG		= Audio
  
- @MAKEFILECOMMON@
+ LIBS_ASDYN      = $(LIB_AFTERSTEP)
 +
 +EXTRA_DEFINES = -DHAVE_RPLAY
 +EXTRA_INCLUDES = -I${LOCALBASE}/include
 +EXTRA_LIBRARIES = -L${LOCALBASE}/lib -lrplay
+ LIBS_DEPEND     = $(LIB_AFTERSTEP)
+ 
+ @MAKEFILECOMMON@
