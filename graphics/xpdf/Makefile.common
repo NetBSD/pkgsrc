@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 1999/10/25 01:36:27 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.2 1999/10/28 14:45:08 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
@@ -23,11 +23,15 @@ MAN1=		xpdf.1 pdftops.1 pdftotext.1 pdfinfo.1 pdftopbm.1 pdfimages.1
 
 post-install:
 	@cd ${WRKSRC}/doc; \
-	  for m in ${MAN1}; do \
-	    nroff -Tascii -mandoc $$m > $${m%.1}.0; \
-	  done; \
-	  ${ECHO} ${INSTALL_MAN} ${MAN1:S/.1/.0/} ${PREFIX}/man/cat1; \
-	  ${INSTALL_MAN} ${MAN1:S/.1/.0/} ${PREFIX}/man/cat1
+	case ${OPSYS} in						\
+	SunOS)	mancmd="gnroff -Tascii -mandoc" ;;			\
+	*)	mancmd="nroff -Tascii -mandoc" ;;			\
+	esac;								\
+	for m in ${MAN1}; do						\
+		$$mancmd $$m > `${ECHO} "$$m" | ${SED} -e 's|\.1|\.0|g'`; \
+	done;								\
+	${ECHO} ${INSTALL_MAN} ${MAN1:S/.1/.0/} ${PREFIX}/man/cat1;	\
+	${INSTALL_MAN} ${MAN1:S/.1/.0/} ${PREFIX}/man/cat1
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
