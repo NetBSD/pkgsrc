@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9160 2005/02/16 22:20:43 jschauma Exp $
+$NetBSD: CHANGES,v 1.9161 2005/02/17 11:09:01 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -898,3 +898,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wine to 20050211 [adam 2005-02-16]
 	Added libassetml-1.2.1 [reed 2005-02-16]
 	Added radiance-3.6.1 [jschauma 2005-02-16]
+	Updated libebml to 0.7.3 [salo 2005-02-17]
+	Updated libmatroska to 0.7.5 [salo 2005-02-17]
+	Updated mkvtoolnix to 1.0.2 [salo 2005-02-17]
+	Updated mmg to 1.0.2 [salo 2005-02-17]
