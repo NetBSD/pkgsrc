@@ -1,0 +1,77 @@
+#! /bin/sh
+# Copyright (c) 2002 SuSE Gmbh Nuernberg, Germany.  All rights reserved.
+#
+# Author: Holger Hetterich <hhetter@suse.de>, 2002
+#
+# SuSEconfig.gtk: this script will generate a /etc/opt/gnome/gtk-2.0/gtk.immodules file 
+# based on the gtk-2.0 modules installed on the system
+#
+#
+# check if we are started as root
+# only one of UID and USER must be set correctly
+
+if test "$UID" != 0 -a "$USER" != root; then
+    echo "You must be root to start $0."
+    exit 1
+fi
+
+test -n "$ROOT" && exit 0
+
+# do we need to run at all? only on RPM Update or new installation
+test ! -f /var/adm/SuSEconfig/run-gtk && exit 0
+
+test -d /etc/opt/gnome/gtk-2.0 || mkdir /etc/opt/gnome/gtk-2.0
+
+if [ -x $r/opt/gnome/bin/gtk-query-immodules-2.0 ] ; then
+ /opt/gnome/bin/gtk-query-immodules-2.0 > /etc/opt/gnome/gtk-2.0/gtk.immodules
+fi
+
+if [ -x $r/opt/gnome/bin/gdk-pixbuf-query-loaders ] ; then
+ /opt/gnome/bin/gdk-pixbuf-query-loaders > /etc/opt/gnome/gtk-2.0/gdk-pixbuf.loaders
+fi
+
+if [ -x $r/opt/gnome/bin/gtk-query-immodules-2.0-64 ] ; then
+ /opt/gnome/bin/gtk-query-immodules-2.0-64 > /etc/opt/gnome/gtk-2.0/gtk64.immodules
+fi
+
+if [ -x $r/opt/gnome/bin/gdk-pixbuf-query-loaders-64 ] ; then
+ /opt/gnome/bin/gdk-pixbuf-query-loaders-64 > /etc/opt/gnome/gtk-2.0/gdk-pixbuf64.loaders
+fi
+
+rm /var/adm/SuSEconfig/run-gtk
+
+exit 0 
+#! /bin/sh
+# Copyright (c) 2002 SuSE Gmbh Nuernberg, Germany.  All rights reserved.
+#
+# Author: Holger Hetterich <hhetter@suse.de>, 2002
+#
+# SuSEconfig.pango: this script will generate a /etc/pango/pango.modules file 
+# based on the pango modules installed on the system
+#
+#
+# check if we are started as root
+# only one of UID and USER must be set correctly
+
+if test "$UID" != 0 -a "$USER" != root; then
+    echo "You must be root to start $0."
+    exit 1
+fi
+
+test -n "$ROOT" && exit 0
+
+# do we need to run at all? only on RPM Update or new installation
+test ! -f /var/adm/SuSEconfig/run-pango && exit 0
+
+if [ -x $r/opt/gnome/bin/pango-querymodules ] ; then
+	/opt/gnome/bin/pango-querymodules \
+	> /etc/opt/gnome/pango/pango.modules
+fi
+
+if [ -x $r/opt/gnome/bin/pango-querymodules-64 ] ; then
+	/opt/gnome/bin/pango-querymodules-64 \
+	> /etc/opt/gnome/pango/pango64.modules
+fi
+
+rm /var/adm/SuSEconfig/run-pango
+exit 0 
