@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2003/09/02 09:42:55 martti Exp $
+# $NetBSD: Makefile,v 1.16 2005/02/15 20:54:37 rillig Exp $
 #
 
 DISTNAME=		rcs-5.7
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=rcs/}
 
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--with-diffutils=gdiff
 .endif
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV=		PATH=${LOCALBASE}/bin:$PATH
+CONFIGURE_ENV=		PATH=${LOCALBASE}/bin:$$PATH
 
 post-install:
 	${RM} -f ${PREFIX}/bin/rcslog
