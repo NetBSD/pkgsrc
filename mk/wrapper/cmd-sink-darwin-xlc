@@ -1,4 +1,4 @@
-# $NetBSD: transform-xlc-cc,v 1.1.2.1 2004/12/09 17:15:01 tv Exp $
+# $NetBSD: cmd-sink-darwin-xlc,v 1.1.2.2 2004/12/09 17:15:01 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -34,41 +34,26 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-case $arg in
-######################################################################
-# Leave -Wl, unchanged.
-######################################################################
--Wl,*)
-	;;
-######################################################################
-# XL C doesn't understand many -W* arguments, so just silently ignore
-# them all.
-######################################################################
--W*)
-	arg=
-	msg_log $wrapperlog "   (transform-xlc-cc) to: $arg"
-	addtocache=yes
-	;;
-# xlc uses -qmkshrobj to create shared objects, and we also need to
-# tell the linker to use a flat namespace and allow undefined symbols.
--dynamiclib)
-	arg="-qmkshrobj -Wl,-flat_namespace -Wl,-undefined -Wl,suppress"
-	msg_log $wrapperlog "   (transform-xlc-cc) to: $arg"
-	addtocache=yes
-	split_arg=yes
-        ;;
-# -qnocommon is the xlc argument to allocate uninitialized globals in
-# the data section.
--fno-common)
-	arg=-qnocommon
-	addtocache=yes
-	;;
-######################################################################
-# Ignore some flags that are unnecessary for XL C.
-######################################################################
--pipe|-ansi|-fno-gnu-keywords|-fstrict-prototypes|-no-cpp-precomp|-pedantic)
-	arg=
-	msg_log $wrapperlog "   (transform-xlc-cc) to: $arg"
-	addtocache=yes
-	;;
-esac
+# Empty out the command buffer and build up the command line in $cmd.
+while ! queue_is_empty cmdbuf; do
+	pop_queue cmdbuf arg
+	$debug_log $wrapperlog "    (cmd-sink-darwin-xlc) pop: $arg"
+	case $arg in
+	##############################################################
+	# xlc doesn't support -install_name, -compatibility_version,
+	# -current_version, so explicitly pass them to the linker with
+	# the next argument.
+	##############################################################
+	-install_name|-compatibility_version|-current_version)
+		pop_queue cmdbuf arg2
+		$debug_log $wrapperlog "    (cmd-sink-darwin-xlc) pop: $arg2"
+		$debug_log $wrapperlog "    (cmd-sink-darwin-xlc) pre: -Wl,$arg2"
+		prepend_queue cmdbuf "-Wl,$arg2"
+		$debug_log $wrapperlog "    (cmd-sink-darwin-xlc) pre: -Wl,$arg"
+		prepend_queue cmdbuf "-Wl,$arg"
+		;;
+	*)
+		. $buildcmd
+		;;
+	esac
+done
