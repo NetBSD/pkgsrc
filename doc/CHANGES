@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9348 2005/02/28 00:49:41 hubertf Exp $
+$NetBSD: CHANGES,v 1.9349 2005/02/28 02:22:02 kim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1190,3 +1190,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-MailTools to 1.66 [adrianp 2005-02-27]
 	Updated pkg_chk to 1.56 [wiz 2005-02-28]
 	Updated adjustkernel to 1.7 [hubertf 2005-02-28]
+	Updated libshout to 2.1 [kim 2005-02-28]
