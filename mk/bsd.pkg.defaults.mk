@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.271 2004/08/04 02:56:01 jschauma Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.272 2004/08/05 02:55:50 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -861,22 +861,6 @@ DELIVER_SUID?=	NO
 # Possible: YES, NO
 # Default: NO
 
-DOVECOT_USE_GNUTLS?=	NO
-# Used by dovecot package to determine whether to use GnuTLS or OpenSSL as the
-# underlying crypto library.
-# Possible: YES, NO
-# Default: NO
-
-DOVECOT_USE_MYSQL?=	NO
-# Used by dovecot package to determive whether to enable MySQL support.
-# Possible: YES, NO
-# Default: NO
-
-DOVECOT_USE_PGSQL?=	NO
-# Used by dovecot package to determine whether to enable PostgreSQL support.
-# Possible: YES, NO
-# Default: NO
-
 DT_LAYOUT?= US
 # Used by dt package to specify the keyboard layout.
 # Possible: US, FI, FR, GER, DV
@@ -937,11 +921,6 @@ EZMLM_IDX_USE_PGSQL?=	NO
 # Enable PostgreSQL support in ezmlm-idx.
 # Possible: YES, NO
 # Default: NO
-
-FETCHMAIL_USE_SSL?=	YES
-# Enable SSL in fetchmail (for pop and imap connections)
-# Possible: YES, NO
-# Default: YES
 
 FLOW_TOOLS_USE_MYSQL?=	NO
 # Used by flow-tools to enable support of flow records export
@@ -1394,12 +1373,6 @@ JSDK_HOME?= ${JAVA_HOME}/jsdk
 # Possible: defined, not defined
 # Default: not defined
 
-KERBEROS_PREFIX_CMDS?=	no
-# Use in the Kerberos packages to determine whether to prefix certain
-# application executables with a "k".
-# Possible: yes, no
-# Default: no
-
 #KERMIT_SUID_UUCP
 # If set to YES or yes, install kermit binary set-uid uucp. Permits an 
 # unprivileged user to access the serial ports, with default permissions
@@ -1541,14 +1514,6 @@ MAJORDOMO_USER?= majordom
 # Default: may set info files size for consistency across platforms and
 # makeinfo version, also various machine_archs arguments may be set in
 # mk/defs.${OPSYS}.mk with the _OPSYS_MAKEINFO_ARGS variable.
-
-MKTTINTERP?= no
-# Used by freetype2 to enable the TrueType bytecode interpreter.
-# Since there are important patent issues related to the to
-# use of the interpreter, default to no.
-# See http://www.freetype.org/patents.html for details.
-# Possible: yes, no
-# Default: no
 
 #MOZILLA_USE_LINUX=
 # Used by mozilla binary packages to prefer the use of Linux
@@ -1833,12 +1798,6 @@ PKG_LANG?=english
 # Possible: YES, not defined
 # Default: not defined
 
-#POSTFIX_OPTIONS?=	inet6 mysql sasl
-# Add support for various optional add-ons to Postfix.
-# Possible: Valid values can be found in POSTFIX_ALL_OPTIONS in
-#	mail/postfix/Makefile.options.
-# Default: empty
-
 PURE_FTPD_USE_MYSQL?=	NO
 # Compile in MySQL support.
 # Possible: YES, NO
@@ -1859,11 +1818,6 @@ PURE_FTPD_USE_VIRTUAL_CHROOT?=	NO
 # to follow symlinks outside a chroot jail).
 # Possible: YES, NO
 # Default: NO
-
-#SASL_USE_GSSAPI=YES
-# Add support for GSSAPI.
-# Possible: YES, not defined
-# Default: not defined
 
 #PROCMAIL_MAILSPOOLHOME=.MailBox
 # To default user mailboxes to their home directory,
@@ -2107,11 +2061,6 @@ USE_IDEA?=	NO
 # Possible: not defined, YES
 # Default: not defined
 
-USE_LIBCRACK?= YES
-# Used in PAM and shadow (for Linux) to enable libcrack support.
-# Possible: YES, NO
-# Default: YES
-
 USE_MMX?=	NO
 # Used in eterm, imlib2, libast, and snes9x to specify if the i386 MMX
 # extensions should be used.
@@ -2135,12 +2084,6 @@ USE_OPENLDAP?=	NO
 # Used to specify optional support for PAM authentication
 # Possible: defined, not defined
 # Default: not defined
-
-#USE_RSAREF2=
-# Used in openssl to specify use of the RSA reference package instead of
-# the built-in code for the RSA algorithm. (Not recommended!)
-# Possible: YES, or NO.
-# Default: not defined.
 
 #USE_SASL=YES
 # Used to specify optional support for SASL authentication
