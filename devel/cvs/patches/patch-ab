@@ -1,18 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2002/11/24 21:31:22 hubertf Exp $
+$NetBSD: patch-ab,v 1.7 2003/06/19 21:55:26 seb Exp $
 
 --- doc/cvs.texinfo.orig	Wed Apr 17 20:24:27 2002
 +++ doc/cvs.texinfo
-@@ -40,6 +40,10 @@
- @setfilename cvs.info
- @include version.texi
- @settitle CVS---Concurrent Versions System v@value{VERSION}
-+@dircategory Programming & development tools
-+@direntry
-+* CVS: (cvs)                   CVS Reference Manual.
-+@end direntry
- @setchapternewpage odd
- 
- @c -- TODO list:
 @@ -13478,6 +13482,11 @@
  
  @xref{verifymsg}, for more information on how verifymsg
