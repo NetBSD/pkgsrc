@@ -1,0 +1,15 @@
+  GdkPixbuf is a new GNOME library designed to solve part of Imlib's
+design limitations that make it hard to write efficient and highly
+modular applications.  The GdkPixbuf library provides a basic,
+reference counted structure called GdkPixbuf.  This structure points
+to a block of image data, has fields that describe the format of the
+image data, and also contains a reference count.  The library also
+provides a simple mechanism for loading images from files, and a more
+sophisticated mechanism for loading images progressively from
+arbitrary buffers.  It also provides utility functions to transform
+pixbufs and render them to GDK drawables.
+
+The GdkPixBuf library provides a number of features:
+	* Image loading facilities.
+	* Rendering of a GdkPixBuf into various formats:
+	  drawables (windows, pixmaps), GdkRGB buffers.
