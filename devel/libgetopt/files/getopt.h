@@ -1,11 +1,11 @@
-/*	$NetBSD: getopt.h,v 1.1.1.1 1999/08/06 16:37:22 hubertf Exp $	*/
+/*	$NetBSD: getopt.h,v 1.2 2000/10/18 11:16:59 wiz Exp $	*/
 
 /*-
- * Copyright (c) 1997 The NetBSD Foundation, Inc.
+ * Copyright (c) 2000 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
- * by Jaromir Dolecek.
+ * by Dieter Baron and Thomas Klausner.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -17,8 +17,8 @@
  *    documentation and/or other materials provided with the distribution.
  * 3. All advertising materials mentioning features or use of this software
  *    must display the following acknowledgement:
- *	This product includes software developed by the NetBSD
- *	Foundation, Inc. and its contributors.
+ *        This product includes software developed by the NetBSD
+ *        Foundation, Inc. and its contributors.
  * 4. Neither the name of The NetBSD Foundation nor the names of its
  *    contributors may be used to endorse or promote products derived
  *    from this software without specific prior written permission.
@@ -35,24 +35,39 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+
 #ifndef _GETOPT_H_
 #define _GETOPT_H_
 
+#include <sys/cdefs.h>
+#include <unistd.h>
+
+/*
+ * Gnu like getopt_long() and BSD4.4 getsubopt()/optreset extensions
+ */
+#if !defined(_POSIX_SOURCE) && !defined(_XOPEN_SOURCE)
+#define no_argument        0
+#define required_argument  1
+#define optional_argument  2
+
 struct option {
-  char *    name;
-  int has_arg;
-  int * flag;
-  int val;
+	/* name of long option */
+	const char *name;
+	/*
+	 * one of no_argument, required_argument, and optional_argument:
+	 * whether option takes an argument
+	 */
+	int has_arg;
+	/* if not NULL, set *flag to val when option found */
+	int *flag;
+	/* if flag not NULL, value to set *flag to; else return value */
+	int val;
 };
 
-/* Values for has_arg: */
-#define no_argument		0
-#define required_argument	1
-#define optional_argument	2
-
 __BEGIN_DECLS
-int getopt_long(int nargc, char **nargv, char *options,
-		struct option *long_options, int *index);
+int getopt_long __P((int, char * const *, const char *,
+    const struct option *, int *));
 __END_DECLS
-
-#endif /* _GETOPT_H_ */
+#endif
+ 
+#endif /* !_GETOPT_H_ */

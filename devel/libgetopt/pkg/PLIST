@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/06 16:37:22 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/10/18 11:17:00 wiz Exp $
 lib/libgetopt.a
 lib/libgetopt_pic.a
-lib/libgetopt.so.1.0
+lib/libgetopt.so.1.1
 man/man3/getopt_long.3
 man/cat3/getopt_long.0
 include/getopt.h
