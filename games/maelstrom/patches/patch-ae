@@ -1,0 +1,23 @@
+--- Makefile.orig	Wed Feb  5 14:12:18 1997
++++ Makefile	Fri Jul 31 00:59:32 1998
+@@ -18,7 +18,7 @@
+ 	@echo "Installing binaries in $(BINDIR)..."
+ 	@for i in $(MAELSTROM) ; do \
+ 		strip $$i; \
+-		$(INSTALL) -m 755 $$i $(BINDIR); \
++		$(INSTALL) -c -m 755 $$i $(BINDIR); \
+ 	done
+ 	@if [ ! -d $(LIBDIR) ]; then \
+ 		mkdir $(LIBDIR); chmod 755 $(LIBDIR); \
+@@ -26,9 +26,10 @@
+ 	@echo "Installing data files in $(LIBDIR) ..."
+ 	@tar cf - $(DATAFILES) | (cd $(LIBDIR); tar xvf -)
+ 	@chmod -R +r $(LIBDIR)
++	@chown -R ${BINOWN}:${BINGRP} $(LIBDIR)
+ 	@if [ ! -f "$(LIBDIR)/Maelstrom-Scores" ]; then \
+ 		echo "Installing Maelstrom high-scores file"; \
+-		$(INSTALL) -m 666 Maelstrom-Scores  $(LIBDIR); \
++		$(INSTALL) -c -m 666 Maelstrom-Scores  $(LIBDIR); \
+ 		chmod 666 $(LIBDIR)/Maelstrom-Scores; \
+ 	fi
+ 	@-if [ "$(SYSTEM)" = "Linux" ]; then \
