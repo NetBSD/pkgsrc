@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/02/23 19:04:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/26 15:10:50 jmmv Exp $
 #
 
-DISTNAME=	dasher-3.2.3
+DISTNAME=	dasher-3.2.4
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/3.2/}
 
@@ -9,7 +9,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.inference.phy.cam.ac.uk/dasher/
 COMMENT=	Easy typing without using keyboard
 
-DEPENDS+=		xdg-dirs>=1.0:../../misc/xdg-dirs
+DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
@@ -23,5 +23,6 @@ USE_PKGLOCALEDIR=	yes
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
