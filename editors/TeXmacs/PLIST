@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/01/20 14:44:13 recht Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/02/01 22:26:01 recht Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -15,7 +15,9 @@ libexec/TeXmacs/bin/tm_gnuplot
 libexec/TeXmacs/bin/tm_graphviz
 libexec/TeXmacs/bin/tm_gs
 libexec/TeXmacs/bin/tm_lisp
+libexec/TeXmacs/bin/tm_lush
 libexec/TeXmacs/bin/tm_maple
+libexec/TeXmacs/bin/tm_matlab
 libexec/TeXmacs/bin/tm_maxima
 libexec/TeXmacs/bin/tm_mupad
 libexec/TeXmacs/bin/tm_mupad_help
@@ -210,14 +212,17 @@ share/TeXmacs/doc/devel/format/env-vars.fr.tm
 share/TeXmacs/doc/devel/format/format.de.tm
 share/TeXmacs/doc/devel/format/format.en.tm
 share/TeXmacs/doc/devel/format/format.fr.tm
-share/TeXmacs/doc/devel/format/leaves.en.tm
+share/TeXmacs/doc/devel/format/language/auxiliaries.en.tm
+share/TeXmacs/doc/devel/format/language/environment.en.tm
+share/TeXmacs/doc/devel/format/language/language.en.tm
+share/TeXmacs/doc/devel/format/language/lengths.en.tm
+share/TeXmacs/doc/devel/format/language/strings.en.tm
 share/TeXmacs/doc/devel/format/leaves.fr.tm
-share/TeXmacs/doc/devel/format/planned-changes.en.tm
 share/TeXmacs/doc/devel/format/planned-changes.fr.tm
 share/TeXmacs/doc/devel/format/primitives.en.tm
 share/TeXmacs/doc/devel/format/primitives.fr.tm
+share/TeXmacs/doc/devel/format/syntax.en.tm
 share/TeXmacs/doc/devel/format/trees.de.tm
-share/TeXmacs/doc/devel/format/trees.en.tm
 share/TeXmacs/doc/devel/format/trees.fr.tm
 share/TeXmacs/doc/devel/interface/interface-background.en.tm
 share/TeXmacs/doc/devel/interface/interface-channels.en.tm
@@ -896,6 +901,12 @@ share/TeXmacs/fonts/enc/cmex.enc
 share/TeXmacs/fonts/enc/cmmi.enc
 share/TeXmacs/fonts/enc/cmr.enc
 share/TeXmacs/fonts/enc/cmsy.enc
+share/TeXmacs/fonts/enc/cork-cmacc.scm
+share/TeXmacs/fonts/enc/cork-cmmi.scm
+share/TeXmacs/fonts/enc/cork-cmsy.scm
+share/TeXmacs/fonts/enc/cork-cmtacc.scm
+share/TeXmacs/fonts/enc/cork-cmtt.scm
+share/TeXmacs/fonts/enc/cork-pl.scm
 share/TeXmacs/fonts/enc/enr-math.enc
 share/TeXmacs/fonts/enc/enr.enc
 share/TeXmacs/fonts/enc/italic.enc
@@ -983,6 +994,7 @@ share/TeXmacs/langs/encoding/symbol-unicode-math.scm
 share/TeXmacs/langs/encoding/symbol-unicode-oneway.scm
 share/TeXmacs/langs/encoding/tmuniversaltounicode.scm
 share/TeXmacs/langs/encoding/unicode-cork-oneway.scm
+share/TeXmacs/langs/encoding/unicode-symbol-oneway.scm
 share/TeXmacs/langs/mathematical/syntax/texmath.syx
 share/TeXmacs/langs/natural/dic/english-british.scm
 share/TeXmacs/langs/natural/dic/english-czech.scm
@@ -1233,7 +1245,7 @@ share/TeXmacs/packages/environment/env-math.ts
 share/TeXmacs/packages/environment/env-theorem.ts
 share/TeXmacs/packages/environment/env-us.ts
 share/TeXmacs/packages/example/allouche.ts
-share/TeXmacs/packages/example/mf.ts
+share/TeXmacs/packages/example/bpr.ts
 share/TeXmacs/packages/example/vdh.ts
 share/TeXmacs/packages/header/header-article.ts
 share/TeXmacs/packages/header/header-book.ts
@@ -1290,6 +1302,8 @@ share/TeXmacs/plugins/lisp/cmucl/cmucl-init.lisp
 share/TeXmacs/plugins/lisp/docs/README
 share/TeXmacs/plugins/lisp/lisp/tmlib.lisp
 share/TeXmacs/plugins/lisp/progs/init-lisp.scm
+share/TeXmacs/plugins/lush/lush/tmlush.lsh
+share/TeXmacs/plugins/lush/progs/init-lush.scm
 share/TeXmacs/plugins/macaulay2/packages/session/macaulay2.ts
 share/TeXmacs/plugins/macaulay2/progs/init-macaulay2.scm
 share/TeXmacs/plugins/macaulay2/progs/m2-input.scm
@@ -1298,6 +1312,19 @@ share/TeXmacs/plugins/maple/progs/init-maple.scm
 share/TeXmacs/plugins/maple/progs/maple-input.scm
 share/TeXmacs/plugins/mathemagix/packages/session/mathemagix.ts
 share/TeXmacs/plugins/mathemagix/progs/init-mathemagix.scm
+share/TeXmacs/plugins/matlab/code/isnewans.m
+share/TeXmacs/plugins/matlab/code/mat2scm.m
+share/TeXmacs/plugins/matlab/code/num2scm.m
+share/TeXmacs/plugins/matlab/code/obj2scm.m
+share/TeXmacs/plugins/matlab/code/scheme.m
+share/TeXmacs/plugins/matlab/code/str2scm.m
+share/TeXmacs/plugins/matlab/code/struct2bullet.m
+share/TeXmacs/plugins/matlab/code/struct2scm.m
+share/TeXmacs/plugins/matlab/code/struct2tree.m
+share/TeXmacs/plugins/matlab/code/tmdisp.m
+share/TeXmacs/plugins/matlab/code/tmrepl.m
+share/TeXmacs/plugins/matlab/code/typeinfo.m
+share/TeXmacs/plugins/matlab/progs/init-matlab.scm
 share/TeXmacs/plugins/maxima/lisp/texmacs-maxima-5.6.lisp
 share/TeXmacs/plugins/maxima/lisp/texmacs-maxima-5.9.0.lisp
 share/TeXmacs/plugins/maxima/packages/session/maxima.ts
@@ -1313,7 +1340,6 @@ share/TeXmacs/plugins/octave/doc/COPYING
 share/TeXmacs/plugins/octave/doc/README
 share/TeXmacs/plugins/octave/doc/TM_Octave_Doc.tm
 share/TeXmacs/plugins/octave/octave/.octaverc
-share/TeXmacs/plugins/octave/octave/octaverc
 share/TeXmacs/plugins/octave/octave/plot/__errplot__.m
 share/TeXmacs/plugins/octave/octave/plot/__plt2mm__.m
 share/TeXmacs/plugins/octave/octave/plot/__plt2mv__.m
@@ -1323,6 +1349,8 @@ share/TeXmacs/plugins/octave/octave/plot/__plt2vv__.m
 share/TeXmacs/plugins/octave/octave/plot/contour.m
 share/TeXmacs/plugins/octave/octave/plot/mesh.m
 share/TeXmacs/plugins/octave/octave/polynomial/polyout.m
+share/TeXmacs/plugins/octave/octave/tm-start.oct
+share/TeXmacs/plugins/octave/octave/tm/isnewans.m
 share/TeXmacs/plugins/octave/octave/tm/list2scm.m
 share/TeXmacs/plugins/octave/octave/tm/mat2scm.m
 share/TeXmacs/plugins/octave/octave/tm/num2scm.m
@@ -1333,6 +1361,7 @@ share/TeXmacs/plugins/octave/octave/tm/struct2bullet.m
 share/TeXmacs/plugins/octave/octave/tm/struct2scm.m
 share/TeXmacs/plugins/octave/octave/tm/struct2tree.m
 share/TeXmacs/plugins/octave/octave/tm/tmdisp.m
+share/TeXmacs/plugins/octave/octave/tm/tmrepl.m
 share/TeXmacs/plugins/octave/progs/init-octave.scm
 share/TeXmacs/plugins/pari/packages/session/pari.ts
 share/TeXmacs/plugins/pari/progs/init-pari.scm
@@ -1619,6 +1648,9 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/plugins/maxima/packages
 @dirrm share/TeXmacs/plugins/maxima/lisp
 @dirrm share/TeXmacs/plugins/maxima
+@dirrm share/TeXmacs/plugins/matlab/progs
+@dirrm share/TeXmacs/plugins/matlab/code
+@dirrm share/TeXmacs/plugins/matlab
 @dirrm share/TeXmacs/plugins/mathemagix/progs
 @dirrm share/TeXmacs/plugins/mathemagix/packages/session
 @dirrm share/TeXmacs/plugins/mathemagix/packages
@@ -1631,6 +1663,9 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/plugins/macaulay2/packages/session
 @dirrm share/TeXmacs/plugins/macaulay2/packages
 @dirrm share/TeXmacs/plugins/macaulay2
+@dirrm share/TeXmacs/plugins/lush/progs
+@dirrm share/TeXmacs/plugins/lush/lush
+@dirrm share/TeXmacs/plugins/lush
 @dirrm share/TeXmacs/plugins/lisp/progs
 @dirrm share/TeXmacs/plugins/lisp/lisp
 @dirrm share/TeXmacs/plugins/lisp/docs
@@ -1793,6 +1828,7 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/doc/devel/source
 @dirrm share/TeXmacs/doc/devel/plugin
 @dirrm share/TeXmacs/doc/devel/interface
+@dirrm share/TeXmacs/doc/devel/format/language
 @dirrm share/TeXmacs/doc/devel/format
 @dirrm share/TeXmacs/doc/devel
 @dirrm share/TeXmacs/doc/about/welcome
