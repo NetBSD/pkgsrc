@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 1999/01/31 18:54:24 bad Exp $
+
+--- src/neighbors.c.orig	Fri Dec  4 18:17:12 1998
++++ src/neighbors.c	Sun Jan 31 18:58:40 1999
+@@ -915,7 +915,7 @@
+ {
+     peer *p = NULL;
+     if (eventFind(peerRefreshDNS, NULL))
+-	return;
++	eventDelete(peerRefreshDNS, NULL);
+     if (!data && 0 == stat5minClientRequests()) {
+ 	/* no recent client traffic, wait a bit */
+ 	eventAddIsh("peerRefreshDNS", peerRefreshDNS, NULL, 180.0, 1);
