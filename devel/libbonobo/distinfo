@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/07/12 16:22:58 wiz Exp $
+
+SHA1 (libbonobo-2.0.0.tar.bz2) = 7a42a169af5a493854b79cef20951504913f727b
+Size (libbonobo-2.0.0.tar.bz2) = 470293 bytes
+SHA1 (patch-aa) = 8d89014b6ccf9929a3dd0a91e84a0fb002e1800d
+SHA1 (patch-ab) = 1e7319c1a9731c9a0519f21ac72a3a9b58a83f68
