@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/08/20 15:17:33 tsarna Exp $
+# $NetBSD: Makefile,v 1.8 1999/01/30 23:18:55 agc Exp $
 # $FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:11 jseger Exp
 #
 
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.cd.chalmers.se/~hch/filerunner.html
 
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 
-USE_X11=	yes
+USE_X11BASE=	yes
 
 post-extract:
 	${RM} ${WRKSRC}/ext.so

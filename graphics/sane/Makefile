@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/11/28 20:59:58 frueauf Exp $
+# $NetBSD: Makefile,v 1.10 1999/01/30 23:18:51 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/04/30 02:38:03 obrien Exp
 #
 
@@ -16,7 +16,7 @@ CONFLICTS+=	sane-0.72 sane-0.74
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_X11=	yes
+USE_X11BASE=	yes
 
 # -O to workaorund bug with -O2 and egcs.
 CFLAGS=		-O -I${LOCALBASE}/include

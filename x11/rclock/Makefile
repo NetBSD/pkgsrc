@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/06/22 13:20:59 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/01/30 23:18:57 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/03/03 16:27:10 obrien Exp
 #
 
@@ -14,7 +14,7 @@ MASTER_SITE_SUBDIR=	utils/file/managers/mc/rxvt
 MAINTAINER=		packages@netbsd.org
 
 CFLAGS+=		'-DMAIL_SPOOL=\"/var/mail/\"'
-USE_X11=		yes
+USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 ALL_TARGET=		clock
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 1999/01/14 08:18:42 tron Exp $
+# $NetBSD: Makefile,v 1.36 1999/01/30 23:18:57 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -14,7 +14,7 @@ CONFLICTS=	lesstif-*
 
 GNU_CONFIGURE=  yes
 USE_LIBTOOL=	yes
-USE_X11=	yes
+USE_X11BASE=	yes
 
 # disable this for debugging
 CONFIGURE_ARGS+=--enable-production

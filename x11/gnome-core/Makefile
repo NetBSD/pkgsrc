@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/01/16 06:08:02 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/01/30 23:18:56 agc Exp $
 #
 
 DISTNAME=	gnome-core-0.99.3.1
@@ -17,7 +17,7 @@ CONFLICTS=	gnome-core-*
 NOT_FOR_ARCHS=	alpha	# problems with gtk
 
 GNU_CONFIGURE=	yes
-USE_X11=	yes
+USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 

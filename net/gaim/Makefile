@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/01/22 00:47:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1999/01/30 23:18:53 agc Exp $
 #
 
 DISTNAME=	gaim-19981231
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.marko.net/gaim/
 
 DEPENDS=	gtk+-1.1.12:../../x11/gtk
 
-USE_X11=	YES
+USE_X11BASE=	YES
 USE_GMAKE=	YES
 ALL_TARGET=	aim
 

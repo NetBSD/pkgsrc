@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/10/05 12:43:46 agc Exp $
+# $NetBSD: Makefile,v 1.15 1999/01/30 23:18:46 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 
-USE_X11=	yes
+USE_X11BASE=	yes
 MAKEFILE=	makefile
 GNU_CONFIGURE=	yes
 USE_PERL5=	yes

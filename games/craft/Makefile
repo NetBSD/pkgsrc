@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/10/13 00:37:33 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1999/01/30 23:18:47 agc Exp $
 
 DISTNAME=		craftcc35
 PKGNAME=		craft-3.5
@@ -11,7 +11,7 @@ HOMEPAGE=		http://borneo.gmd.de/~hua/
 
 NO_WRKSUBDIR=		yes
 USE_GMAKE=		yes
-USE_X11=		yes
+USE_X11BASE=		yes
 
 post-patch:
 	${RM} -f ${WRKSRC}/hcc/hcc

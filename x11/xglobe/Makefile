@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/01/20 20:24:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1999/01/30 23:18:58 agc Exp $
 #
 
 DISTNAME=	xglobe-0.2
@@ -17,7 +17,7 @@ DIST_SUBDIR=	xglobe
 MAPS=		LE.400.gif Brill.400.gif mggd.gif
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_X11=	YES
+USE_X11BASE=	YES
 USE_GMAKE=	YES
 MAKE_ENV+=	QTDIR=${X11BASE}
 

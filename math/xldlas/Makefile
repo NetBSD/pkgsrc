@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/01/16 17:26:03 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:52 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/09/26 23:18:07 steve Exp
 #
 
@@ -18,7 +18,7 @@ DEPENDS+=	xforms-0.88:../../x11/xforms
 
 ONLY_FOR_ARCHS=	arm32 i386 m68k sparc ns32k
 
-USE_X11=	yes
+USE_X11BASE=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xldlas ${PREFIX}/bin

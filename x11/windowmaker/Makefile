@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/01/19 22:12:15 tron Exp $
+# $NetBSD: Makefile,v 1.19 1999/01/30 23:18:57 agc Exp $
 
 DISTNAME=		WindowMaker-0.50.2
 PKGNAME=		windowmaker-0.50.2
@@ -20,7 +20,7 @@ DEPENDS+=		tiff-3.4:../../graphics/tiff
 CONFLICTS=		windowmaker-*
 
 USE_LIBTOOL=		yes
-USE_X11=		yes
+USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/share/locale \
 			--with-gfx-incs="-I${LOCALBASE}/include \

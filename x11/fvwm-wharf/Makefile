@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/23 15:12:05 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:55 agc Exp $
 
 DISTNAME=		AfterStep-1.0
 PKGNAME=		fvwm-wharf-1.0
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.afterstep.org/
 
 DEPENDS=		xpm-3.4k:../../graphics/xpm
 
-USE_X11=		yes
+USE_X11BASE=		yes
 
 do-configure:
 	(cd ${WRKSRC} ; xmkmf ; make Makefiles)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1998/12/29 19:42:09 tron Exp $
+# $NetBSD: Makefile,v 1.24 1999/01/30 23:18:56 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -16,7 +16,7 @@ DEPENDS+=	giflib-3.0:../../graphics/giflib
 
 CONFLICTS=	kdelibs-2.1b kdelibs-3.1b kdelibs-4.1b
 
-USE_X11=	yes
+USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--x-inc=${X11BASE}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/giflib" \
 		"--x-lib=${X11BASE}/lib -L${LOCALBASE}/lib" \

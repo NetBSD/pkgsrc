@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/01/16 04:10:05 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/01/30 23:18:45 agc Exp $
 #
 
 DISTNAME=	libgtop-0.99.2
@@ -18,7 +18,7 @@ CONFLICTS=	libgtop-*
 NOT_FOR_ARCHS=	alpha	# problems with gtk
 
 GNU_CONFIGURE=	yes
-USE_X11=	yes
+USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 

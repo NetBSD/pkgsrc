@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/01/14 13:57:05 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1999/01/30 23:18:52 agc Exp $
 #
 
 DISTNAME=	scilab-2.4-src
@@ -15,7 +15,7 @@ DEPENDS+=	xless-1.7:../../x11/xless
 
 NOT_FOR_ARCHS=	alpha #LP64 problems
 
-USE_X11=	yes
+USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 
 PLIST_SRC=	${WRKDIR}/PLIST-src

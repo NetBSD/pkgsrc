@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:56 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:48 agc Exp $
 #
 
 DISTNAME=		tanked-0.90
@@ -10,7 +10,7 @@ HOMEPAGE=		http://ogresoft.dyn.ml.org/tanked.html
 
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-USE_X11=		yes
+USE_X11BASE=		yes
 
 post-patch:
 	@${TOUCH} ${WRKSRC}/client/tanked.man
