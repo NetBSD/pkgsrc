@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.sasl,v 1.5 2004/07/19 02:48:42 jlam Exp $
+$NetBSD: MESSAGE.sasl,v 1.6 2004/07/19 05:28:07 jlam Exp $
 
 To enable SASL authentication, you may want to edit
 
@@ -12,7 +12,7 @@ security/cyrus-saslauthd, you should change the contents of smtpd.conf to:
 
 Please consult:
 
-	${EXAMPLEDIR}/sample-auth.cf
+	${DOCDIR}/SASL_README
 
 and the SASL documentation for more information on setting up SASL
 authentication.
