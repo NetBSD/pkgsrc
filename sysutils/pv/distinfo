@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2003/01/22 21:35:49 kristerw Exp $
+$NetBSD: distinfo,v 1.3 2004/10/27 22:45:43 wiz Exp $
 
-SHA1 (pv-0.4.5.tar.gz) = 67731b80f8a08c9105fcad4cddc105042d4ec860
-Size (pv-0.4.5.tar.gz) = 105632 bytes
-SHA1 (patch-aa) = 9a822d58ef94261306d023ac964e843fd16028f0
-SHA1 (patch-ab) = 4191c14b5ea4e33ea9aa2af19e0e9b4e62a2508e
+SHA1 (pv-0.8.6.tar.gz) = c87bd1522073f6f85fada95db24c3bd79bc846c1
+Size (pv-0.8.6.tar.gz) = 95396 bytes
+SHA1 (patch-ab) = 24bd26c660532b1a502afd4157d34af885d90db4
 SHA1 (patch-ac) = b6b08a88a11bd8f35d05ea995dafe672d19f1932
