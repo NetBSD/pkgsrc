@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/08/26 06:03:47 sakamoto Exp $
+# $NetBSD: Makefile,v 1.5 2000/02/05 18:16:32 wiz Exp $
 #
 
 DISTNAME=	plptools-0.4
@@ -9,7 +9,7 @@ MAINTAINER=	sakamoto@netbsd.org
 
 DEPENDS=	readline-4.0:../../devel/readline
 
-BROKEN=		"plptools is not work correctly"
+BROKEN=		plptools does not work correctly
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
