@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/04/16 23:20:50 kei Exp $
+# $NetBSD: Makefile,v 1.6 2003/04/17 01:11:10 uebayasi Exp $
 
 DISTNAME=	Mule-UCS-0.84
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/Mule-UCS/
 
@@ -23,9 +23,9 @@ do-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/mule-ucs
+	cd ${WRKSRC}/lisp && \
 	for f in ChangeLog README* *.txt *.el *.elc *.txt; do \
-		${INSTALL_DATA} ${WRKSRC}/lisp/$$f \
-		    ${EMACS_LISPPREFIX}/mule-ucs; \
+		${INSTALL_DATA} $$f ${EMACS_LISPPREFIX}/mule-ucs; \
 	done
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/mule-ucs/big5conv
 	${INSTALL_DATA} ${WRKSRC}/lisp/big5conv/* \
