@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/03/27 03:20:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/11 20:11:12 jtb Exp $
 
 DISTNAME=		pl-lite-4.0.0
 PKGNAME=		swi-prolog-4.0.0
@@ -9,28 +9,25 @@ MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://www.swi.psy.uva.nl/projects/SWI-Prolog/
 COMMENT=		ISO/Edinburgh-style Prolog compiler
 
-DEPENDS+=		readline-[0-9]*:../../devel/readline
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+DEPENDS+=		readline>=4.0:../../devel/readline
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S,-lite,,}
 DIST_SUBDIR=		swi-prolog
 
-USE_CURSES=		#defined
+GNU_CONFIGURE=		yes
+
+USE_CURSES=		yes
 REPLACE_NCURSES=	${WRKSRC}/src/configure
 
-GNU_CONFIGURE=		#defined
-CONFIGURE_ENV+=		"BUILDARCH=${MACHINE_PLATFORM}"
 SWIPL=			swi-prolog
-CONFIGURE_ENV+=		"PL=${SWIPL}"
+CONFIGURE_ENV+=		PL="${SWIPL}"
 CPPFLAGS+=		-D__unix__=1
+
 EVAL_PREFIX+=		READLINE_PREFIX=readline
 CPPFLAGS+=		-I${READLINE_PREFIX}/include
-CONFIGURE_ENV+=		"CPPFLAGS=${CPPFLAGS}"
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 PLIST_SUBST+=		SWIPL=${SWIPL}
 PLIST_SUBST+=		SWILIBDIR=${DISTNAME:S,pl-lite,'${SWIPL}',}
-
-pre-configure:
-	cd ${WRKSRC}/src && ${LOCALBASE}/bin/autoconf
 
 .include "../../mk/bsd.pkg.mk"
