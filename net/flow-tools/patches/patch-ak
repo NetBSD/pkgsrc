@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1 2004/04/22 15:33:35 seb Exp $
+$NetBSD: patch-ak,v 1.2 2005/02/18 10:08:33 seb Exp $
 
 --- src/flow-export.c.orig	2003-12-04 05:55:31.000000000 +0000
 +++ src/flow-export.c
@@ -23,3 +23,93 @@ $NetBSD: patch-ak,v 1.1 2004/04/22 15:33:35 seb Exp $
    format_index = 0;
    bzero(&opt, sizeof opt);
    ascii_mask = 0;
+@@ -864,7 +864,7 @@ int format5(struct ftio *ftio, struct op
+   struct ftver ftv;
+   char fields[1024], values[1024], query[3*1024];
+   char *rec;
+-  char *db_host, *db_name, *db_table, *db_user, *db_pwd, *db_tmp, *tmp;
++  char *db_host, *db_name, *db_table, *db_user, *db_pwd, *tmp;
+   char *db_port;
+   int len;
+ 
+@@ -891,7 +891,7 @@ int format5(struct ftio *ftio, struct op
+     db_name = strsep(&tmp, ":");
+     db_table = strsep(&tmp, ":");
+ 
+-    if (!db_user || !db_pwd || !db_host || !db_tmp || !db_name || !db_table) {
++    if (!db_user || !db_pwd || !db_host || !db_name || !db_table) {
+       fterr_warnx("Missing field in dbaseURI, expecting user:pwd:host:port:name:table.");
+       return -1;
+     }
+@@ -1199,10 +1199,10 @@ int fmt_xfields_val(char *fmt_buf, char 
+ 
+   if (xfields & FT_XFIELD_EXADDR) {
+     if (comma) fmt_buf[len++] = ',';
+-    if (quote) fmt_buf[len++] = '"';
++    if (quote) fmt_buf[len++] = '\'';
+     len += fmt_ipv4(fmt_buf+len, *((u_int32*)(rec+fo->exaddr)),
+       FMT_JUST_LEFT);
+-    if (quote) fmt_buf[len++] = '"';
++    if (quote) fmt_buf[len++] = '\'';
+     comma = 1;
+   }
+ 
+@@ -1257,28 +1257,28 @@ int fmt_xfields_val(char *fmt_buf, char 
+ 
+   if (xfields & FT_XFIELD_SRCADDR) {
+     if (comma) fmt_buf[len++] = ',';
+-    if (quote) fmt_buf[len++] = '"';
++    if (quote) fmt_buf[len++] = '\'';
+     len += fmt_ipv4(fmt_buf+len, *((u_int32*)(rec+fo->srcaddr)),
+       FMT_JUST_LEFT);
+-    if (quote) fmt_buf[len++] = '"';
++    if (quote) fmt_buf[len++] = '\'';
+     comma = 1;
+   }
+ 
+   if (xfields & FT_XFIELD_DSTADDR) {
+     if (comma) fmt_buf[len++] = ',';
+-    if (quote) fmt_buf[len++] = '"';
++    if (quote) fmt_buf[len++] = '\'';
+     len += fmt_ipv4(fmt_buf+len, *((u_int32*)(rec+fo->dstaddr)),
+       FMT_JUST_LEFT);
+-    if (quote) fmt_buf[len++] = '"';
++    if (quote) fmt_buf[len++] = '\'';
+     comma = 1;
+   }
+ 
+   if (xfields & FT_XFIELD_NEXTHOP) {
+     if (comma) fmt_buf[len++] = ',';
+-    if (quote) fmt_buf[len++] = '"';
++    if (quote) fmt_buf[len++] = '\'';
+     len += fmt_ipv4(fmt_buf+len, *((u_int32*)(rec+fo->nexthop)),
+       FMT_JUST_LEFT);
+-    if (quote) fmt_buf[len++] = '"';
++    if (quote) fmt_buf[len++] = '\'';
+     comma = 1;
+   }
+ 
+@@ -1375,19 +1375,19 @@ int fmt_xfields_val(char *fmt_buf, char 
+ 
+   if (xfields & FT_XFIELD_PEER_NEXTHOP) {
+     if (comma) fmt_buf[len++] = ',';
+-    if (quote) fmt_buf[len++] = '"';
++    if (quote) fmt_buf[len++] = '\'';
+     len += fmt_ipv4(fmt_buf+len, *((u_int32*)(rec+fo->peer_nexthop)),
+       FMT_JUST_LEFT);
+-    if (quote) fmt_buf[len++] = '"';
++    if (quote) fmt_buf[len++] = '\'';
+     comma = 1;
+   }
+ 
+   if (xfields & FT_XFIELD_ROUTER_SC) {
+     if (comma) fmt_buf[len++] = ',';
+-    if (quote) fmt_buf[len++] = '"';
++    if (quote) fmt_buf[len++] = '\'';
+     len += fmt_ipv4(fmt_buf+len, *((u_int32*)(rec+fo->router_sc)),
+       FMT_JUST_LEFT);
+-    if (quote) fmt_buf[len++] = '"';
++    if (quote) fmt_buf[len++] = '\'';
+     comma = 1;
+   }
+ 
