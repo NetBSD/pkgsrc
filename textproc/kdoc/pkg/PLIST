@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/03/27 09:30:31 skrll Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/10/18 09:57:11 skrll Exp $
 bin/kdoc
 bin/makekdedoc
 bin/qt2kdoc
@@ -10,6 +10,7 @@ share/doc/kdoc/index.docbook
 share/kdoc/Ast.pm
 share/kdoc/Iter.pm
 share/kdoc/kdocAstGen.pm
+share/kdoc/kdocAstSearch.pm
 share/kdoc/kdocAstUtil.pm
 share/kdoc/kdocCxxDocbook.pm
 share/kdoc/kdocCxxHTML.pm
@@ -17,10 +18,11 @@ share/kdoc/kdocCxxLaTeX.pm
 share/kdoc/kdocDocHelper.pm
 share/kdoc/kdocDocIter.pm
 share/kdoc/kdocHTMLutil.pm
-share/kdoc/kdocIDLhtml.pm
 share/kdoc/kdocLib.pm
 share/kdoc/kdocMan.pm
+share/kdoc/kdocParseCxx.pm
 share/kdoc/kdocParseDoc.pm
+share/kdoc/kdocParsePy.pm
 share/kdoc/kdocParser.pm
 share/kdoc/kdocUtil.pm
 share/kdoc/kdoctexi.pm
