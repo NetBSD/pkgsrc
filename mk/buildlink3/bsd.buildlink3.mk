@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.54 2004/01/21 18:18:13 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.55 2004/01/25 12:43:24 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -202,10 +202,13 @@ BUILDLINK_PREFIX.${_pkg_}?=	/usr
 # containing the package metadata.
 #
 .  if !defined(_BLNK_PKG_DBDIR.${_pkg_})
+_BLNK_PKG_DBDIR.${_pkg_}?=	# empty
+.    for _depend_ in ${BUILDLINK_DEPENDS.${_pkg_}}
+.      if empty(BUILDLINK_DEPENDS.${_pkg_}:Mnot_found)
 _BLNK_PKG_DBDIR.${_pkg_}!=	\
 	dir="";								\
 	if [ -d ${_PKG_DBDIR} ]; then					\
-		dir=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}" || ${TRUE}`; \
+		dir=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -s "" lsbest "${_depend_}" || ${TRUE}`; \
 	fi;								\
 	case "$$dir" in							\
 	"")	dir="not_found" ;;					\
@@ -214,6 +217,8 @@ _BLNK_PKG_DBDIR.${_pkg_}!=	\
 		fi ;;							\
 	esac;								\
 	${ECHO} $$dir
+.      endif
+.    endfor
 .    if empty(_BLNK_PKG_DBDIR.${_pkg_}:Mnot_found)
 MAKEFLAGS+=	_BLNK_PKG_DBDIR.${_pkg_}=${_BLNK_PKG_DBDIR.${_pkg_}}
 .    endif
