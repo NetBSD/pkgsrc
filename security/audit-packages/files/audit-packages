@@ -1,26 +1,93 @@
 #! @SH@
-
-# $NetBSD: audit-packages,v 1.13 2003/10/17 09:45:28 agc Exp $
+#
+# $NetBSD: audit-packages,v 1.14 2003/10/18 10:16:57 agc Exp $
+#
+# Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+#	This product includes software developed by Alistair Crooks
+#	for the NetBSD project.
+# 4. The name of the author may not be used to endorse or promote
+#    products derived from this software without specific prior written
+#    permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS
+# OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+# DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+# GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
 
 : ${PKGVULNDIR=@PKGVULNDIR@}
 
-if [ ! -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then
-	echo "** Missing ${PKGVULNDIR}/pkg-vulnerabilities" 1>&2
-	echo "** run download-vulnerability-list" 1>&2
-	exit 1
-fi
+vuls=${PKGVULNDIR}/pkg-vulnerabilities 
 
-if [ -n "$(find ${PKGVULNDIR}/pkg-vulnerabilities -ctime +7)" ]; then
-	echo "** ${PKGVULNDIR}/pkg-vulnerabilities more than a week old" 1>&2
-	echo "** run download-vulnerability-list" 1>&2
-	exit 1
-fi
+errmsg=""
 
-@AWK@ '
-	/^#.*/ { next }
-	NF == 0 { next }
-	{ cmd = sprintf("@PKG_TOOLS_BIN@/pkg_info -qe \"%s\" && echo Package \"`@PKG_TOOLS_BIN@/pkg_info -e %c%s%c`\" has a %s vulnerability, see %s ; wait", $1, 39, $1, 39, $2, $3);
-	  system(cmd); }
-' ${PKGVULNDIR}/pkg-vulnerabilities
+# check for missing vulnerabilities file
+[ ! -f $vuls ] && errmsg="** Missing $vuls"
+
+case "$errmsg" in
+"")	# check for old vulnerabilities file
+	[ -n "$(find $vuls -ctime +7)" ] && errmsg="** $vuls more than a week old"
+	;;
+esac
+
+case "$errmsg" in
+"")	# check integrity of vulnerabilities file
+	recordedsum=`@AWK@ '$1 == "#CHECKSUM" { print $3 }' $vuls`
+	recordedalg=`@AWK@ '$1 == "#CHECKSUM" { print $2 }' $vuls`
+	case "$recordedsum" in
+	"")	errmsg="***WARNING*** No checksum found in $vuls"
+		;;
+	*)	case "$recordedalg" in
+		"")	errmsg="***WARNING*** No checksum algorithm found in $vuls file"
+			;;
+		*)	calcsum=`@AWK@ '$1 == "#CHECKSUM" || /\$NetBSD.*/ { next } { print }' $vuls | @DIGEST@ $recordedalg`
+			if [ "$recordedsum" != "$calcsum" ]; then
+				errmsg="***WARNING*** Checksum mismatch - recorded $recordedalg checksum \"$recordedsum\", calculated checksum \"$calcsum\""
+			fi
+			;;
+		esac
+		;;
+	esac
+	;;
+esac
+
+# if we have found an error, then complain and exit
+case "$errmsg" in
+"")	;;
+*)	echo "$errmsg" 1>&2
+	echo "** Please run download-vulnerability-list" 1>&2
+	exit 1
+	;;
+esac
+
+# check for vulnerabilities
+while read pat type url; do
+	case "$pat" in
+	\#*|'') continue;;
+	esac
+
+	if @PKG_TOOLS_BIN@/pkg_info -qe "$pat"; then
+		echo Package `@PKG_TOOLS_BIN@/pkg_info -e "$pat"` has a \
+			$type vulnerability, see $url
+	fi
+done < $vuls
 
 exit 0
