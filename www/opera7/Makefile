@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/11/14 19:45:54 jdolecek Exp $
+# $NetBSD: Makefile,v 1.11 2003/11/14 19:55:13 jdolecek Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 PKGREVISION=	# empty
@@ -11,7 +11,7 @@ MASTER_SITES=	http://www.panix.com/opera/files/linux/${OPERA_DIR}/ \
 		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/linux/${OPERA_DIR}/ \
 		ftp://ftp.opera.com/pub/opera/linux/
 EXTRACT_SUFX=	.rpm
-DISTFILES=	opera-${OPERA_DIST_VERSION}.${OPERA_ARCH}-en${EXTRACT_SUFX}
+DISTFILES=	opera-${OPERA_DIST_VERSION}.${OPERA_ARCH}-${OPERA_LANG}${EXTRACT_SUFX}
 
 MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://www.opera.com/
@@ -43,7 +43,8 @@ DEPENDS+=	suse_openmotif>=7.3:../../emulators/${SUSE_DIR_PREFIX}_openmotif
 
 OPERA_ARCH=		i386
 OPERA_PKG_VERSION=	7.22
-OPERA_DIR=		${OPERA_PKG_VERSION:S/.//g:C/beta.*//}/final/en/i386/static
+OPERA_LANG=		en
+OPERA_DIR=		${OPERA_PKG_VERSION:S/.//g:C/beta.*//}/final/${OPERA_LANG}/${OPERA_ARCH}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//}-20031103.1-static-qt
 .endif
 
