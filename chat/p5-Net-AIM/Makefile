@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/05/12 15:13:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/09 00:51:47 schmonz Exp $
 #
 
 DISTNAME=	Net-AIM-1.22
@@ -10,11 +10,8 @@ MAINTAINER=	schmonz@netbsd.org
 HOMEPAGE=	http://www.aryeh.net/Net-AIM/
 COMMENT=	implementation of the AOL Instant Messenger TOC protocol
 
-USE_BUILDLINK_ONLY=	YES
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/AIM/.packlist
+USE_BUILDLINK2=	YES
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/AIM/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
