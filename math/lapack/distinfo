@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2004/12/22 10:17:28 wennmach Exp $
+$NetBSD: distinfo,v 1.8 2005/01/03 15:33:55 wennmach Exp $
 
 SHA1 (lapack-20010201/lapack.tgz) = 47d85508d87d60e32b613ef0c951d0be4bf10e72
 Size (lapack-20010201/lapack.tgz) = 4991992 bytes
-SHA1 (patch-aa) = c5599ed209509fdd37f8041de3e49c1da283ac66
+SHA1 (patch-aa) = cad0f70bf4f738ea7c72d87abc8681d78cb55f02
+SHA1 (patch-ab) = 397cd0c42776287040cf258ac5eb526a869790d9
