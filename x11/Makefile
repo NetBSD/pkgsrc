@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 1999/11/20 13:39:35 tron Exp $
+# $NetBSD: Makefile,v 1.128 1999/11/20 20:24:37 tron Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -47,6 +47,7 @@
     SUBDIR += glclock
     SUBDIR += gnome-core
     SUBDIR += gnome-libs
+    SUBDIR += gnome-python
     SUBDIR += gnome-users-guide
     SUBDIR += gtk
     SUBDIR += gtk--
@@ -81,6 +82,7 @@
     SUBDIR += polclock
 #    SUBDIR += pythonqt
     SUBDIR += py-Tk
+    SUBDIR += py-gtk
     SUBDIR += qt
 #    SUBDIR += qvwm
     SUBDIR += qwspritefield
