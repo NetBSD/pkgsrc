@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2046 2004/08/15 22:53:15 wiz Exp $
+$NetBSD: TODO,v 1.2047 2004/08/16 04:53:46 minskim Exp $
 
 Suggested new packages
 ======================
@@ -450,7 +450,6 @@ Suggested package updates
 	o xscreensaver-4.17
 	o xsidplay-1.6.5.1a [pkg/26465|pooka]
 	o xskat-4.0
-	o xterm-194
 	o xzgv-0.8
 	o yacas-1.0.55
 	o yaz-2.0.12
