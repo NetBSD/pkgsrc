@@ -1,0 +1,50 @@
+$NetBSD: patch-bs,v 1.3 2001/12/10 10:02:53 skrll Exp $
+
+--- kdoctools/xslt.cpp.orig	Sat Dec  8 16:39:55 2001
++++ kdoctools/xslt.cpp
+@@ -51,18 +51,18 @@
+ 
+     va_list args;
+ 
+-    char buffer[50000];
++#define WF_BUFSIZE 50000
++    char buffer[WF_BUFSIZE];
+     buffer[0] = 0;
+ 
+     if (input->filename) {
+-        sprintf(&buffer[strlen(buffer)], "%s:%d: ", input->filename,
+-                input->line);
++        snprintf(buffer, WF_BUFSIZE, "%s:%d: ", input->filename, input->line);
+     } else {
+-        sprintf(&buffer[strlen(buffer)], "Entity: line %d: ", input->line);
++        snprintf(buffer, WF_BUFSIZE, "Entity: line %d: ", input->line);
+     }
+ 
+     va_start(args, msg);
+-    vsprintf(&buffer[strlen(buffer)], msg, args);
++    vsnprintf(&buffer[strlen(buffer)], WF_BUFSIZE, msg, args);
+     va_end(args);
+ 
+     fprintf( stderr, "%s", buffer );
+@@ -88,9 +90,10 @@
+     INFO(i18n("Reading document"));
+     QFile xmlFile( pat );
+     xmlFile.open(IO_ReadOnly);
++
++    int len = xmlFile.size();
+     QCString contents;
+     contents.assign(xmlFile.readAll());
+-    contents.truncate(xmlFile.size());
+     xmlFile.close();
+     /* if (contents.left(5) != "<?xml") {
+         fprintf(stderr, "xmlizer\n");
+@@ -110,8 +113,7 @@
+ 
+     INFO(i18n("Parsing document"));
+     xmlParserCtxtPtr ctxt = xmlCreateMemoryParserCtxt
+-                            (contents.data(),
+-                             contents.length());
++                            (contents.data(), len);
+     ctxt->sax->warning = warningsFunc;
+ 
+     int directory = pat.findRev('/');
