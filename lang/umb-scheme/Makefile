@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 09:07:37 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:17:57 hubertf Exp $
 
 DISTNAME=	umb-scheme-2.12
 CATEGORIES=	lang
@@ -18,7 +18,7 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/scheme ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/lib/umb-scheme
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/umb-scheme
 	${INSTALL_DATA} ${WRKSRC}/prelude.scheme ${PREFIX}/lib/umb-scheme
 	${INSTALL_MAN} ${WRKSRC}/scheme.1 ${PREFIX}/man/man1
 

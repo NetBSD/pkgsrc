@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/17 17:06:43 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/25 04:18:27 hubertf Exp $
 #
 
 DISTNAME=	qtarch-2.1-1
@@ -23,10 +23,10 @@ PATH=		${QTDIR}/bin:$$PATH
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/qtarch ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/qtarch
-	${MKDIR} ${PREFIX}/share/qtarch/help
+	${INSTALL_DATA_DIR} ${PREFIX}/share/qtarch
+	${INSTALL_DATA_DIR} ${PREFIX}/share/qtarch/help
 	${INSTALL_DATA} ${WRKSRC}/help/* ${PREFIX}/share/qtarch/help
-	${MKDIR} ${PREFIX}/share/qtarch/doc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/qtarch/doc
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/qtarch/doc
 
 .include "../../mk/bsd.pkg.mk"

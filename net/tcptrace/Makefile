@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/17 18:19:45 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/25 04:18:08 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/07/19 19:43:36 fenner Exp
 #
 
@@ -21,7 +21,7 @@ DOCFILES=	COPYRIGHT README README.tput_graphs
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcptrace ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/tcptrace.man ${PREFIX}/man/man1/tcptrace.1
-	${MKDIR} ${PREFIX}/share/doc/tcptrace
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcptrace
 .for file in ${DOCFILES}
 	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/tcptrace
 .endfor

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/02/16 15:22:22 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/25 04:17:51 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/19 17:38:24 cpiazza Exp $
 
 DISTNAME=	Giram-0.1.2
@@ -26,7 +26,7 @@ CONFIGURE_ENV=	GTK_CONFIG="${GTKDIR}/bin/gtk-config" \
 ALL_TARGET=	install-strip
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/examples/Giram
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/Giram
 	${INSTALL_DATA} ${WRKSRC}/SampleScenes/* ${PREFIX}/share/examples/Giram/
 
 .include "../../mk/bsd.pkg.mk"

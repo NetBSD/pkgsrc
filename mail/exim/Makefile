@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/02/17 18:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2001/02/25 04:17:58 hubertf Exp $
 
 DISTNAME=	exim-3.20
 CATEGORIES=	mail net
@@ -23,8 +23,8 @@ pre-configure:
 	    > ${WRKSRC}/Local/Makefile
 
 pre-install:
-	${MKDIR} ${PREFIX}/etc/exim
-	${MKDIR} /var/log/exim
+	${INSTALL_DATA_DIR} ${PREFIX}/etc/exim
+	${INSTALL_DATA_DIR} /var/log/exim
 	${CHMOD} 750 /var/log/exim
 	strip ${WRKSRC}/build*/exim
 	strip ${WRKSRC}/build*/exim_dbmbuild
@@ -34,7 +34,6 @@ pre-install:
 	strip ${WRKSRC}/build*/exim_lock
 
 post-install:
-	${MKDIR} ${PREFIX}/etc/rc.d
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    < ${FILESDIR}/exim.sh \
 	    > ${PREFIX}/etc/rc.d/exim
@@ -45,9 +44,8 @@ post-install:
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    < ${FILESDIR}/mailer.conf.exim \
 	    > ${PREFIX}/etc/exim/mailer.conf.exim
-	${MKDIR} ${PREFIX}/man/man8
 	${CP} ${FILESDIR}/exim.8 ${PREFIX}/man/man8/exim.8
-	${MKDIR} ${PREFIX}/share/doc/exim
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/exim
 	${RM} ${WRKDIR}/exim-html-3.20/doc/html/spec
 	${CP} -R ${WRKDIR}/exim-html-3.20/doc/html/* ${PREFIX}/share/doc/exim
 

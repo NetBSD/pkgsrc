@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:18:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:03 hubertf Exp $
 
 DISTNAME=	configurator
 PKGNAME=	${BINNAME}-1.2.2
@@ -32,7 +32,7 @@ do-build:
 	${ECHO} "exec java -jar ${LIBDIR}/${BINNAME}.jar" >>${BINNAME}
 
 do-install:
-	${MKDIR} ${DOCDIR} ${LIBDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR} ${LIBDIR}
 	cd ${WRKSRC} && \
 	${INSTALL_SCRIPT} ${BINNAME} ${PREFIX}/bin && \
 	${INSTALL_DATA} ${BINNAME}.jar ${LIBDIR} && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/02/16 15:10:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/25 04:17:48 hubertf Exp $
 #
 
 DISTNAME=		battalion
@@ -22,11 +22,11 @@ do-install:
 	${INSTALL} -c -s -o root -g games -m 2755 ${WRKSRC}/battalion ${PREFIX}/bin
 	cd ${WRKDIR} && \
 	    ${GZCAT} ${DISTDIR}/battalionSUN4.tar.gz | ${GTAR} xmf -
-	${MKDIR} ${PREFIX}/share/battalion/HELP
-	${MKDIR} ${PREFIX}/share/battalion/battalion.data/DATA
-	${MKDIR} ${PREFIX}/share/battalion/battalion.data/MUSIC
-	${MKDIR} ${PREFIX}/share/battalion/battalion.data/SOUNDS
-	${MKDIR} ${PREFIX}/share/battalion/battalion.data/TEXTURES
+	${INSTALL_DATA_DIR} ${PREFIX}/share/battalion/HELP
+	${INSTALL_DATA_DIR} ${PREFIX}/share/battalion/battalion.data/DATA
+	${INSTALL_DATA_DIR} ${PREFIX}/share/battalion/battalion.data/MUSIC
+	${INSTALL_DATA_DIR} ${PREFIX}/share/battalion/battalion.data/SOUNDS
+	${INSTALL_DATA_DIR} ${PREFIX}/share/battalion/battalion.data/TEXTURES
 	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/DATA/* ${PREFIX}/share/battalion/battalion.data/DATA
 	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/MUSIC/* ${PREFIX}/share/battalion/battalion.data/MUSIC
 	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/SOUNDS/* ${PREFIX}/share/battalion/battalion.data/SOUNDS

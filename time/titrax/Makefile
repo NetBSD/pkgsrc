@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:32:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:20 hubertf Exp $
 #
 
 DISTNAME=		titrax-1.98
@@ -18,6 +18,6 @@ post-patch:
 		< ${WRKSRC}/Imakefile.bak > ${WRKSRC}/Imakefile
 
 pre-install:
-	${MKDIR} ${X11PREFIX}/libexec/titrax
+	${INSTALL_DATA_DIR} ${X11PREFIX}/libexec/titrax
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 09:06:58 agc Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:55 hubertf Exp $
 #
 
 DISTNAME=	bacisrc
@@ -27,8 +27,8 @@ do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/disasm/badis ${LOCALBASE}/bin
 		${INSTALL_PROGRAM} ${WRKSRC}/interp/bainterp ${LOCALBASE}/bin
 		${INSTALL_PROGRAM} ${WRKSRC}/pascomp/bapas ${LOCALBASE}/bin
-		${MKDIR} ${LOCALBASE}/share/doc/baci
-		${CP} ${WRKDIR}/bacidoc/* ${LOCALBASE}/share/doc/baci
+		${INSTALL_DATA_DIR} ${LOCALBASE}/share/doc/baci
+		${INSTALL_DATA} ${WRKDIR}/bacidoc/* ${LOCALBASE}/share/doc/baci
 		${CP} ${PKGDIR}/PLIST ${WRKDIR}
 
 .include "../../mk/bsd.pkg.mk"

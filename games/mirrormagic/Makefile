@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/16 15:10:54 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/25 04:17:49 hubertf Exp $
 #
 
 DISTNAME=		mirrormagic-1.3
@@ -15,8 +15,8 @@ USE_XPM=		YES
 
 do-install:
 	${INSTALL_PROGRAM} -o bin -g games -m 2755 ${WRKSRC}/mirrormagic ${X11PREFIX}/bin
-	${MKDIR} ${X11PREFIX}/share/mirrormagic/sounds
-	${MKDIR} ${X11PREFIX}/share/mirrormagic/graphics
+	${INSTALL_DATA_DIR} ${X11PREFIX}/share/mirrormagic/sounds
+	${INSTALL_DATA_DIR} ${X11PREFIX}/share/mirrormagic/graphics
 	${CHOWN} bin:games ${X11PREFIX}/share/mirrormagic
 	${CHMOD} 775 ${X11PREFIX}/share/mirrormagic
 	${INSTALL_DATA} ${WRKSRC}/sounds/* ${X11PREFIX}/share/mirrormagic/sounds

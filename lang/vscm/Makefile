@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 09:07:38 agc Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:57 hubertf Exp $
 
 DISTNAME=	vscmV0r4
 PKGNAME=	vscm-0.4
@@ -19,7 +19,7 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/scheme ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/lib/vscm
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/vscm
 	${INSTALL_DATA} ${WRKSRC}/.scheme-boot ${PREFIX}/lib/vscm/scheme-boot
 	${MKDIR} ${PREFIX}/share/examples/vscm
 	for i in README INSTALL DESCRIPTION; do \

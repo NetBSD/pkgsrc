@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/20 11:40:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:17:43 hubertf Exp $
 
 DISTNAME=		rdp1_5
 PKGNAME=		rdp-1.5
@@ -19,7 +19,7 @@ NO_CONFIGURE=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rdp ${PREFIX}/bin
-	-${MKDIR} ${PREFIX}/share/doc/rdp
+	-${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rdp
 	${INSTALL_DATA} ${WRKSRC}/rdp_doc/rdp_case.ps ${PREFIX}/share/doc/rdp
 	${INSTALL_DATA} ${WRKSRC}/rdp_doc/rdp_supp.ps ${PREFIX}/share/doc/rdp
 	${INSTALL_DATA} ${WRKSRC}/rdp_doc/rdp_tut.ps ${PREFIX}/share/doc/rdp

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/18 04:34:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:29 hubertf Exp $
 #
 
 DISTNAME=		xfstt-1.1
@@ -24,7 +24,7 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xfstt ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/xfstt.1x ${PREFIX}/man/man1/xfstt.1
-	${MKDIR} ${PREFIX}/share/doc/xfstt
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xfstt
 	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/xfstt
 	${INSTALL_DATA} ${WRKSRC}/CHANGES ${PREFIX}/share/doc/xfstt
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/xfstt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/17 18:08:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/25 04:18:01 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/04/20 13:19:30 wosch Exp
 #
 
@@ -21,7 +21,7 @@ GNU_CONFIGURE=	yes
 NO_BUILD=
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/${PKGNAME}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGNAME}
 	cd ${WRKSRC}/Doc && ${GTAR} cf - . | ( cd ${PREFIX}/share/doc/${PKGNAME} && ${GTAR} xf - )
 	${CHOWN} -R root:${ROOT_GROUP} ${PREFIX}/share/doc/${PKGNAME}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/17 17:21:47 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/25 04:18:22 hubertf Exp $
 
 DISTNAME=	mod_dtcl-0.8.12
 PKGNAME=	ap-dtcl-0.8.12
@@ -23,12 +23,12 @@ do-build:
 
 do-install:
 	@cd ${WRKSRC} && ${PREFIX}/sbin/apxs -i mod_dtcl.so
-	-${MKDIR} ${PREFIX}/share/doc/mod_dtcl
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_dtcl
 	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${PREFIX}/share/doc/mod_dtcl
 	${INSTALL_DATA} ${WRKSRC}/docs/*.gif ${PREFIX}/share/doc/mod_dtcl
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${PREFIX}/share/doc/mod_dtcl
-	-${MKDIR} ${PREFIX}/share/examples/mod_dtcl
-	-${MKDIR} ${PREFIX}/share/examples/mod_dtcl/tests
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mod_dtcl
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mod_dtcl/tests
 	${INSTALL_DATA} ${WRKSRC}/tests/README ${PREFIX}/share/examples/mod_dtcl/tests
 	${INSTALL_DATA} ${WRKSRC}/tests/dtcl-test.ttml ${PREFIX}/share/examples/mod_dtcl/tests
 	${INSTALL_DATA} ${WRKSRC}/tests/dtcl.test ${PREFIX}/share/examples/mod_dtcl/tests

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 15:25:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:17:54 hubertf Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
 DISTNAME=	namazu-2.0.5
@@ -47,7 +47,7 @@ post-build:
 	done
 
 post-install:
-	@${TEST} -d ${LOCALBASE}/etc/namazu || ${MKDIR} ${LOCALBASE}/etc/namazu
+	@${TEST} -d ${LOCALBASE}/etc/namazu || ${INSTALL_DATA_DIR} ${LOCALBASE}/etc/namazu
 	@${SH} ${WRKDIR}/INSTALL ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"

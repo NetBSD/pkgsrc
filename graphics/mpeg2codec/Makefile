@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 15:22:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:52 hubertf Exp $
 
 DISTNAME=	mpeg2vidcodec_v12
 PKGNAME=	mpeg2codec-1.2
@@ -18,10 +18,10 @@ do-install:
 	  ${WRKSRC}/src/mpeg2dec/mpeg2decode \
 	  ${WRKSRC}/src/mpeg2enc/mpeg2encode \
 	  ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/doc/mpeg2codec
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mpeg2codec
 	${INSTALL_DATA} ${WRKSRC}/doc/mpeg2enc.doc \
 	  ${PREFIX}/share/doc/mpeg2codec
-	${MKDIR} ${PREFIX}/share/mpeg2codec
+	${INSTALL_DATA_DIR} ${PREFIX}/share/mpeg2codec
 	${INSTALL_DATA} ${WRKSRC}/par/* ${PREFIX}/share/mpeg2codec
 
 .include "../../mk/bsd.pkg.mk"
