@@ -1,0 +1,22 @@
+$NetBSD: patch-fe,v 1.1 2004/01/22 18:55:26 jmmv Exp $
+
+--- ksysguard/gui/KSysGuardApplet.cc.orig	2003-07-13 21:24:24.000000000 +0200
++++ ksysguard/gui/KSysGuardApplet.cc
+@@ -359,7 +359,7 @@ bool
+ KSysGuardApplet::load()
+ {
+ 	KStandardDirs* kstd = KGlobal::dirs();
+-	kstd->addResourceType("data", "share/apps/ksysguard");
++	kstd->addResourceType("data", "share/kde/apps/ksysguard");
+ 	QString fileName = kstd->findResource("data", "KSysGuardApplet.xml");
+ 
+ 	QFile file(fileName);
+@@ -516,7 +516,7 @@ KSysGuardApplet::save()
+ 		}
+ 
+ 	KStandardDirs* kstd = KGlobal::dirs();
+-	kstd->addResourceType("data", "share/apps/ksysguard");
++	kstd->addResourceType("data", "share/kde/apps/ksysguard");
+ 	QString fileName = kstd->saveLocation("data", "ksysguard");
+ 	fileName += "/KSysGuardApplet.xml";
+ 
