@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 1999/01/31 22:08:43 bad Exp $
+# $NetBSD: Makefile,v 1.45 1999/02/07 02:06:46 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -48,6 +48,7 @@
     SUBDIR += nethack-qt
     SUBDIR += nethack-tty
     SUBDIR += nethack-x11
+    SUBDIR += nighthawk
 #    SUBDIR += netris
 #    SUBDIR += oneko
 #    SUBDIR += oonsoo
