@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/07/21 12:27:50 wiz Exp $
+
+--- configure.orig	Mon Jul 21 08:29:47 2003
++++ configure
+@@ -8930,7 +8930,7 @@ cat >>confdefs.h <<EOF
+ EOF
+ 
+ cat >>confdefs.h <<EOF
+-#define WMHCONFFILE "$PATHTAG$static_sysconfdir/$ggi_subdir/$wmh_conffile"
++#define WMHCONFFILE "$PATHTAG$static_sysconfdir/$wmh_conffile"
+ EOF
+ 
+ # Add the stamp file to the list of files AC keeps track of,
