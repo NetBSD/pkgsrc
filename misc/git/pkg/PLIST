@@ -12,10 +12,12 @@ bin/gitxgrep
 bin/.gitaction
 bin/gitregrep
 bin/gitrfgrep
+@unexec install-info --delete %D/info/git.info %D/info/dir
 info/git.info
 info/git.info-1
 info/git.info-2
 info/git.info-3
+@exec install-info %D/info/git.info %D/info/dir
 lib/git/term/.gitrc.aixterm
 lib/git/term/.gitrc.ansi
 lib/git/term/.gitrc.common
@@ -43,6 +45,8 @@ lib/git/term/.gitrc.vt400
 lib/git/term/.gitrc.vt420
 lib/git/term/.gitrc.xterm
 lib/git/term/.gitrc.xterms
+@dirrm lib/git/term
+@dirrm lib/git
 man/man1/git.1.gz
 man/man1/gitaction.1.gz
 man/man1/gitmount.1.gz
