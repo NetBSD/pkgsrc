@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2004/08/25 07:56:18 cjs Exp $
+$NetBSD: patch-aa,v 1.2.4.1 2004/12/29 15:54:55 salo Exp $
 
---- datalink.c.orig	1999-04-21 10:40:13.000000000 +0900
-+++ datalink.c	2004-08-20 16:02:02.000000000 +0900
+--- src/datalink.c.orig	1999-04-21 10:40:13.000000000 +0900
++++ src/datalink.c	2004-08-20 16:02:02.000000000 +0900
 @@ -64,7 +64,6 @@
  #ifndef DLT_NULL_BROKEN
    /* make sure this is AF_INET */

@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2004/08/20 07:10:53 cjs Exp $
+# $NetBSD: Makefile,v 1.3.4.1 2004/12/29 15:54:55 salo Exp $
 #
 
-DISTNAME=	tcpflow-0.20
-PKGREVISION=	1
+DISTNAME=	tcpflow-0.21
 CATEGORIES=	net security
 MASTER_SITES=	http://www.circlemud.org/pub/jelson/tcpflow/
 
-MAINTAINER=	adrianp@stindustries.net
+MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE= 	http://www.circlemud.org/~jelson/software/tcpflow/
 COMMENT=	Captures data transmitted as part of TCP connections
 
