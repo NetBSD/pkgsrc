@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/27 10:02:52 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/16 19:28:55 jdolecek Exp $
 
 DISTNAME=	SOAP-0.7.5
 CATEGORIES+=	net
@@ -10,6 +10,8 @@ DEPENDS+=	pear-Mail_Mime>=1.2:../../mail/pear-Mail_Mime
 DEPENDS+=	pear-HTTP_Request>=1.2:../../www/pear-HTTP_Request
 DEPENDS+=	pear-Net_URL>=1.0:../../net/pear-Net_URL
 DEPENDS+=	pear-Net_DIME>=0.3:../../net/pear-Net_DIME
+
+PEAR_DIRRM_BASEDIR=     yes
 
 .include "../../lang/php/pear.mk"
 .include "../../mk/bsd.pkg.mk"
