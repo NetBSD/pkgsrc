@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.3 2002/03/26 12:36:03 rh Exp $
+
+--- atk/Makefile.in.orig	Tue Mar 26 22:18:01 2002
++++ atk/Makefile.in
+@@ -153,6 +153,7 @@
+ 
+ LDFLAGS = \
+ 	-version-info $(LT_VERSION_INFO)	\
++	-Wl,-R$(libdir)				\
+ 	$(export_symbols)			\
+ 	$(no_undefined)				\
+ 	@DEP_LIBS@

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/24 20:28:05 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/26 12:36:03 rh Exp $
 #
 
 DISTNAME=		atk-1.0.0
@@ -22,4 +22,5 @@ UNLIMIT_RESOURCES=	stacksize
 
 .include "../../devel/glib2/buildlink.mk"
 .include "../../devel/pkgconfig/buildlink.mk"
+.include "../../converters/libiconv/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
