@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/25 01:27:29 groo Exp $
+bin/type1inst
+bin/t1embed
+man/man1/type1inst.1
+share/doc/type1inst/README
+@dirrm share/doc/type1inst

@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/05/25 01:27:28 groo Exp $
+
+--- t1embed.orig	Wed May 24 21:03:19 2000
++++ t1embed	Wed May 24 21:03:26 2000
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!XXXPERLXXX
+ #
+ # t1embed: Embed Type 1 font in a PostScript file that calls for 
+ # non-standard fonts but does not supply them.
