@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/23 23:59:25 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/25 02:21:24 hubertf Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 CATEGORIES=		games x11
@@ -9,6 +9,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		automake:../../devel/automake
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		libmikmod>=3.1.9:../../audio/libmikmod
 
