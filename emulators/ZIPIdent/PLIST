@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/04 12:05:13 wiz Exp $
+bin/zipident
+share/doc/ZIPIdent/zipident.txt
+@dirrm share/doc/ZIPIdent

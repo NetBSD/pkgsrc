@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/03/04 12:05:13 wiz Exp $
+
+--- src/datutil.c.orig	2005-02-22 21:04:44.000000000 +0100
++++ src/datutil.c
+@@ -21,13 +21,13 @@
+ 
+ /* --- Dat library includes --- */
+ 
+-#include "datlib/src/datlib.h"
+-#include "datlib/src/macro.h"
++#include <DatLib/datlib.h>
++#include <DatLib/macro.h>
+ 
+ 
+ /* --- Misc library includes --- */
+ 
+-#include "datlib/src/misc/getopt.h"
++#include <DatLib/misc/getopt.h>
+ 
+ 
+ /* --- DatUtil definitions and macros --- */
