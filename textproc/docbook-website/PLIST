@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/29 21:31:17 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/02/19 00:22:10 wiz Exp $
 share/doc/docbook-website/ChangeLog
 share/doc/docbook-website/README
 share/doc/docbook-website/VERSION
@@ -6,6 +6,7 @@ share/doc/docbook-website/WhatsNew
 share/examples/docbook-website/.tabular
 share/examples/docbook-website/.textonly
 share/examples/docbook-website/ChangeLog
+share/examples/docbook-website/about.html
 share/examples/docbook-website/about.xml
 share/examples/docbook-website/autolayout.xml
 share/examples/docbook-website/bookmark/ChangeLog
@@ -16,10 +17,17 @@ share/examples/docbook-website/build-ext.xml
 share/examples/docbook-website/build-make.xml
 share/examples/docbook-website/build-textonly.xml
 share/examples/docbook-website/build.xml
+share/examples/docbook-website/buildext.html
+share/examples/docbook-website/building.html
 share/examples/docbook-website/building.xml
+share/examples/docbook-website/buildmake.html
+share/examples/docbook-website/catalog.xml
+share/examples/docbook-website/custom.html
 share/examples/docbook-website/custom.xml
 share/examples/docbook-website/dynxbel.js
 share/examples/docbook-website/example.css
+share/examples/docbook-website/formtest.html
+share/examples/docbook-website/full.html
 share/examples/docbook-website/full.xml
 share/examples/docbook-website/graphics/ChangeLog
 share/examples/docbook-website/graphics/arrow.gif
@@ -85,25 +93,39 @@ share/examples/docbook-website/graphics/navicons/triangle/other/ChangeLog
 share/examples/docbook-website/graphics/navicons/triangle/other/closed.gif
 share/examples/docbook-website/graphics/navicons/triangle/other/leaf.gif
 share/examples/docbook-website/graphics/navicons/triangle/other/open.gif
+share/examples/docbook-website/graphics/spacer.gif
+share/examples/docbook-website/index.html
+share/examples/docbook-website/layout.html
 share/examples/docbook-website/layout.xml
+share/examples/docbook-website/linking.html
 share/examples/docbook-website/olink.xml
 share/examples/docbook-website/param.xml
+share/examples/docbook-website/php.html
 share/examples/docbook-website/php.xml
+share/examples/docbook-website/rddl.html
 share/examples/docbook-website/rddl.xml
+share/examples/docbook-website/revflag.html
 share/examples/docbook-website/revflag.xml
+share/examples/docbook-website/rss.html
 share/examples/docbook-website/rss.xml
 share/examples/docbook-website/subdir/ChangeLog
+share/examples/docbook-website/subdir/test1a.html
+share/examples/docbook-website/subdir/test1b.html
+share/examples/docbook-website/subdir/txttest1a.html
+share/examples/docbook-website/subdir/txttest1b.html
+share/examples/docbook-website/test1.html
 share/examples/docbook-website/test1.xml
 share/examples/docbook-website/test1a.xml
 share/examples/docbook-website/test1b.xml
 share/examples/docbook-website/test2.xml
+share/examples/docbook-website/test3.html
 share/examples/docbook-website/test3.xml
+share/examples/docbook-website/textonly.html
 share/examples/docbook-website/website.xml
 share/examples/docbook-website/wslayout.xml
+@comment in xmlcatmgr: share/xml/catalog
 share/xml/website/VERSION
-share/xml/website/autolayout.dtd
-share/xml/website/catalog
-share/xml/website/extensions.mod
+share/xml/website/catalog.xml
 share/xml/website/extensions/ChangeLog
 share/xml/website/extensions/saxon64.jar
 share/xml/website/extensions/saxon64/ChangeLog
@@ -115,14 +137,33 @@ share/xml/website/extensions/xalan2/ChangeLog
 share/xml/website/extensions/xalan2/com/nwalsh/xalan/ChangeLog
 share/xml/website/extensions/xalan2/com/nwalsh/xalan/Website.java
 share/xml/website/extensions/xalan2/prj.el
-share/xml/website/forms.mod
-share/xml/website/layout.dtd
-share/xml/website/namespaces.mod
-share/xml/website/rddl.mod
-share/xml/website/website-custom.dtd
-share/xml/website/website-full.dtd
-share/xml/website/website.dtd
-share/xml/website/website.mod
+share/xml/website/schema/ChangeLog
+share/xml/website/schema/dtd/ChangeLog
+share/xml/website/schema/dtd/autolayout.dtd
+share/xml/website/schema/dtd/extensions.mod
+share/xml/website/schema/dtd/forms.mod
+share/xml/website/schema/dtd/layout.dtd
+share/xml/website/schema/dtd/namespaces.mod
+share/xml/website/schema/dtd/rddl.mod
+share/xml/website/schema/dtd/website-custom.dtd
+share/xml/website/schema/dtd/website-full.dtd
+share/xml/website/schema/dtd/website.dtd
+share/xml/website/schema/dtd/website.mod
+share/xml/website/schema/relaxng/ChangeLog
+share/xml/website/schema/relaxng/autolayout.rng
+share/xml/website/schema/relaxng/config.xml
+share/xml/website/schema/relaxng/extensions.rng
+share/xml/website/schema/relaxng/forms.rng
+share/xml/website/schema/relaxng/layout.rng
+share/xml/website/schema/relaxng/rddl.rng
+share/xml/website/schema/relaxng/union.xml
+share/xml/website/schema/relaxng/website-full.rng
+share/xml/website/schema/relaxng/website.rng
+share/xml/website/schema/relaxng/websitedb.rng
+share/xml/website/tests/ChangeLog
+share/xml/website/tests/test.xml
+share/xml/website/tests/testcust.xml
+share/xml/website/tests/testfull.xml
 share/xml/website/xsl/ChangeLog
 share/xml/website/xsl/VERSION
 share/xml/website/xsl/autolayout.xsl
@@ -131,15 +172,21 @@ share/xml/website/xsl/chunk-tabular.xsl
 share/xml/website/xsl/chunk-website.xsl
 share/xml/website/xsl/head.xsl
 share/xml/website/xsl/makefile-dep.xsl
+share/xml/website/xsl/olink.xsl
 share/xml/website/xsl/param.xsl
 share/xml/website/xsl/rss.xsl
 share/xml/website/xsl/tabular.xsl
 share/xml/website/xsl/toc-tabular.xsl
 share/xml/website/xsl/toc.xsl
 share/xml/website/xsl/website-common.xsl
+share/xml/website/xsl/website-targets.xsl
 share/xml/website/xsl/website.xsl
 share/xml/website/xsl/xbel.xsl
 @dirrm share/xml/website/xsl
+@dirrm share/xml/website/tests
+@dirrm share/xml/website/schema/relaxng
+@dirrm share/xml/website/schema/dtd
+@dirrm share/xml/website/schema
 @dirrm share/xml/website/extensions/xalan2/com/nwalsh/xalan
 @dirrm share/xml/website/extensions/xalan2/com/nwalsh
 @dirrm share/xml/website/extensions/xalan2/com
@@ -150,6 +197,7 @@ share/xml/website/xsl/xbel.xsl
 @dirrm share/xml/website/extensions/saxon64
 @dirrm share/xml/website/extensions
 @dirrm share/xml/website
+@comment in xmlcatmgr: @dirrm share/xml
 @dirrm share/examples/docbook-website/subdir
 @dirrm share/examples/docbook-website/graphics/navicons/triangle/other
 @dirrm share/examples/docbook-website/graphics/navicons/triangle/current
