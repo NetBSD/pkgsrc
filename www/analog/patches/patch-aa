@@ -1,16 +1,19 @@
-$NetBSD: patch-aa,v 1.19 2001/07/08 20:01:12 tron Exp $
+$NetBSD: patch-aa,v 1.20 2001/11/08 08:27:02 tron Exp $
 
 --- Makefile.orig	Tue May  1 12:38:33 2001
 +++ Makefile	Mon May 14 22:29:27 2001
-@@ -1,12 +1,17 @@
- # Makefile for analog 5.03
+@@ -1,14 +1,19 @@
+ # Makefile for analog 5.1
  # Please read docs/Readme.html, or http://www.analog.cx/
 -CC = gcc           # which compiler to use: eg cc, acc, gcc. NB Different
 +#CC = gcc           # which compiler to use: eg cc, acc, gcc. NB Different
  #                    compilers need different CFLAGS, e.g., -O instead of -O2.
+-MAKE = make        # which "make" to use
++#MAKE = make        # which "make" to use
 -CFLAGS = -O2    # options, e.g. for optimisation or ANSI compilation.
 +#CFLAGS = -O2    # options, e.g. for optimisation or ANSI compilation.
  #                 HP/UX cc needs CFLAGS = -Aa (HP/UX 9) or -Ae (HP/UX 10)
+ #                 BeOS needs CFLAGS = -O2 -Wl,-L/boot/home/config/lib
  #                 BS2000/OSD needs CFLAGS = -XLLML -XLLMK
  #                 NeXTSTEP needs CFLAGS = -O2 -pipe -no-precomp 
 -DEFS =          # any combination of -DNOPIPES -DNODNS -DNODIRENT -DNOGLOB ...

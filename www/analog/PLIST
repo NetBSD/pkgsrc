@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:15:27 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/08 08:27:02 tron Exp $
 bin/analog
 etc/analog.cfg.default
 @exec test -f %D/etc/analog.cfg || cp -p %D/%F %D/etc/analog.cfg
@@ -125,7 +125,9 @@ lib/analog/lang/bgmdesc.txt
 lib/analog/lang/bgmdom.tab
 lib/analog/lang/br.lng
 lib/analog/lang/bra.lng
+lib/analog/lang/bradesc.txt
 lib/analog/lang/bradom.tab
+lib/analog/lang/brdesc.txt
 lib/analog/lang/brdom.tab
 lib/analog/lang/cat.lng
 lib/analog/lang/cata.lng
