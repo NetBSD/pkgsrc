@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/23 13:34:58 rh Exp $
+bin/dotlock
+bin/maildirmake
+bin/maildrop
+bin/makemime
+bin/reformail
+bin/reformime
+man/man1/dotlock.1
+man/man1/maildirmake.1
+man/man1/maildrop.1
+man/man1/makemime.1
+man/man1/reformail.1
+man/man1/reformime.1
+man/man5/maildropex.5
+man/man5/maildropfilter.5
+man/man5/maildropgdbm.5
+man/man8/deliverquota.8
+man/man8/maildirquota.8
+share/doc/maildrop/html/dotlock.html
+share/doc/maildrop/html/maildirmake.html
+share/doc/maildrop/html/maildrop.html
+share/doc/maildrop/html/maildropex.html
+share/doc/maildrop/html/maildropfilter.html
+share/doc/maildrop/html/maildropgdbm.html
+share/doc/maildrop/html/makemime.html
+share/doc/maildrop/html/reformail.html
+share/doc/maildrop/html/reformime.html
+share/doc/maildrop/html/rfc2045.html
+share/doc/maildrop/html/rfc822.html
+@dirrm share/doc/maildrop/html
+@dirrm share/doc/maildrop

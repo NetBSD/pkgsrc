@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/23 13:34:58 rh Exp $
+
+--- Makefile.in.orig	Mon Oct 23 04:46:11 2000
++++ Makefile.in
+@@ -39,7 +39,7 @@
+ 
+ DESTDIR =
+ 
+-pkgdatadir = $(datadir)/@PACKAGE@
++pkgdatadir = $(datadir)/doc/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+ 
+@@ -798,8 +798,8 @@
+ 	$(INSTALL_PROGRAM) maildir/maildirmake $(DESTDIR)$(bindir)/$$f
+ 	$(INSTALL_PROGRAM) rfc2045/reformime $(DESTDIR)$(bindir)/reformime
+ 	$(INSTALL_PROGRAM) rfc2045/makemime $(DESTDIR)$(bindir)/makemime
+-	. maildrop/uidgid ; test -z "$$gid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chgrp $$gid maildrop dotlock
+-	. maildrop/uidgid ; test -z "$$uid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chown $$uid maildrop dotlock && chmod 6755 maildrop dotlock
++	. maildrop/uidgid ; test -z "$$gid" || exit 0; cd $(DESTDIR)$(bindir) && chgrp $$gid maildrop dotlock
++	. maildrop/uidgid ; test -z "$$uid" || exit 0; cd $(DESTDIR)$(bindir) && chown $$uid maildrop dotlock && chmod 6755 maildrop dotlock
+ 
+ uninstall-maildrop:
+ 	for f in maildrop maildirmake reformail dotlock makemime reformime ; do \
