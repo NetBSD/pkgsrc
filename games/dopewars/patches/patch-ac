@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1 2001/01/04 21:50:14 wiz Exp $
+
+--- dopewars.c.orig	Sun Jul  9 22:12:31 2000
++++ dopewars.c
+@@ -35,8 +35,6 @@
+ #include "clientside.h"
+ #include "AIPlayer.h"
+ 
+-SCREEN *cur_screen;
+-
+ #define CM_SERVER 0
+ #define CM_PROMPT 1
+ #define CM_META   2
+@@ -670,8 +668,7 @@
+ }
+ 
+ void start_curses() {
+-/* Initialises the curses library for accessing the screen */
+-   cur_screen=newterm(NULL,stdout,stdin);
++   initscr();
+ /*   initscr();*/
+    if (WantColour) {
+       start_color();

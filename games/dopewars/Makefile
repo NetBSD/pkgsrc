@@ -1,15 +1,22 @@
-# $NetBSD: Makefile,v 1.3 2000/01/15 18:46:27 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/01/04 21:50:10 wiz Exp $
 
-DISTNAME=		dopewars-1.4.3
+DISTNAME=		dopewars-1.4.8
 CATEGORIES=		games
-MASTER_SITES=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/
+MASTER_SITES=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/ \
+			${MASTER_SITE_SOURCEFORGE:=dopewars/} \
+			http://berlin.sfai.edu/~tobi/dopewars/files/ \
+			http://www.ideenpark.de/dopewars/files/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/
 
-DEPENDS+=		ncurses>=4.2:../../devel/ncurses
+USE_CURSES=		YES
+USE_GMAKE=		YES
+REPLACE_NCURSES=	${WRKSRC}/configure
 
-ALL_TARGET=		dopewars
-LDFLAGS+=		-L${LOCALBASE}/lib
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--enable-networking
+# datadir is the place the score file is saved
+CONFIGURE_ARGS+=	--datadir=/var/games
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,29 +1,24 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/01 08:27:31 garbled Exp $
---- Makefile.orig	Thu Jul  1 00:07:30 1999
-+++ Makefile	Thu Jul  1 01:07:42 1999
-@@ -1,8 +1,8 @@
--CFLAGS = -Wall
-+CFLAGS = -Wall -I${LOCALBASE}/include
- CC = gcc
- HEADERS = message.h dopewars.h serverside.h clientside.h AIPlayer.h
- OBJS = message.o dopewars.o serverside.o clientside.o AIPlayer.o
--LIBS = -lncurses
-+LIBS = $(LDFLAGS) -lncurses
+$NetBSD: patch-aa,v 1.2 2001/01/04 21:50:13 wiz Exp $
+
+--- Makefile.in.orig	Sun Jul  9 21:59:38 2000
++++ Makefile.in
+@@ -66,7 +66,7 @@
+ dopewars_SOURCES = AIPlayer.c serverside.c clientside.c dopewars.c message.c 		   dopeos.c
  
- dopewars : $(OBJS)
- 	$(CC) $(CFLAGS) -o dopewars $(OBJS) $(LIBS)
-@@ -23,10 +23,10 @@
- 	$(CC) $(CFLAGS) -c AIPlayer.c
  
- install :
--	install -o root -g games -m 2755 dopewars /usr/bin/dopewars
--	touch /var/lib/games/dopewars.sco
--	chown root.games /var/lib/games/dopewars.sco
--	chmod 0660 /var/lib/games/dopewars.sco
-+	install -o root -g games -m 2755 dopewars ${PREFIX}/bin/dopewars
-+	touch /var/games/dopewars.sco
-+	chown root.games /var/games/dopewars.sco
-+	chmod 0660 /var/games/dopewars.sco
+-DOCPATH = /usr/doc/${PACKAGE}-${VERSION}/
++DOCPATH = ${prefix}/share/doc/html/dopewars/
+ DOCS = aiplayer.html configfile.html index.html server.html clientplay.html       credits.html installation.html servercommands.html commandline.html       developer.html metaserver.html windows.html README
  
- clean :
- 	rm -f $(OBJS)
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -400,8 +400,8 @@
+ 	touch ${datadir}/dopewars.sco
+ 	chown root.games ${datadir}/dopewars.sco
+ 	chmod 0660 ${datadir}/dopewars.sco
+-	${INSTALL} -d -o root -g root -m 0755 $(DOCPATH)
+-	${INSTALL} -o root -g root -m 0644 $(DOCS) $(DOCPATH)
++	${INSTALL} -d $(DOCPATH)
++	${INSTALL} -m 0644 $(DOCS) $(DOCPATH)
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
