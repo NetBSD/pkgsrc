@@ -1,19 +1,13 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.2 2001/11/26 07:34:05 jlam Exp $
+$NetBSD: MESSAGE,v 1.3 2002/02/01 22:44:27 bouyer Exp $
 
 Please refer to the file:
 
-	${PREFIX}/share/doc/imp/SECURITY
+	${PREFIX}/share/doc/imp/INSTALL
 
-on how to secure the IMP installation.  It is at least recommended that
-you change the default database password used by horde-phplib and imp.
-You may setup the Horde/IMP installation by pointing a web browser at:
+on how to setup your IMP installation. You need to at last edit
 
-	http://www.domain.com/horde/setup.php3
-
-or by manually editting:
-
-	${IMPDIR}/config/defaults.php3
+	${IMPDIR}/config/conf.php
 
 You will also need to make IMP accessible through your HTTP server.  If
 you are running Apache and ap-php, then you can add the following lines
@@ -22,8 +16,12 @@ to httpd.conf:
 	Include ${PKG_SYSCONFDIR}/horde.conf
 	Include ${PKG_SYSCONFDIR}/imp.conf
 
-to make Horde accessible through:
-	
-	http://www.domain.com/horde/imp/
+and then you have to edit
+	${PREFIX}/share/horde/config/registry.php
+to enable IMP in the horde framework.
+
+If you are updating from IMP 2.2.x, use the script
+	${PREFIX}share/horde/imp/config
+to convert the IMP 2.2.x user preference database to the new format.
 
 ==========================================================================
