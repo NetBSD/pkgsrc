@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2000/05/31 21:03:15 tron Exp $
+# $NetBSD: Makefile,v 1.42 2000/05/31 21:23:38 tron Exp $
 
 DISTNAME=		gnome-core-1.2.0
 CATEGORIES=		x11 gnome
@@ -50,7 +50,7 @@ post-install:
 .if (${OPSYS} == "NetBSD")
 .if (${MACHINE_ARCH} == arm32) || (${MACHINE_ARCH} == i386) || \
    (${MACHINE_ARCH} == m68k)
-#DEPENDS+=		libgtop-*:../../devel/libgtop
+DEPENDS+=		libgtop-*:../../devel/libgtop
 .endif
 
 .if exists(/usr/include/machine/apmvar.h)
