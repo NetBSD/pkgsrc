@@ -1,0 +1,14 @@
+# $NetBSD: patch-am,v 1.1 2005/03/03 08:53:06 garbled Exp $
+--- ./src/lat_fs.c      Fri Jun 27 01:34:38 1997
++++ work/hbench-OS/src/lat_fs.c       Wed Aug 14 12:48:11 2002
+@@ -229,8 +229,8 @@
+ 	if (deldir == DEL_REVERSE) {
+ 		for (i = 0; i < (num_iter +1)/2; i++) {
+ 			/* swap(filenames[i],filenames[numfiles - i]); */
+-			tmp = filenames[num_iter - i];
+-			filenames[num_iter - i] = filenames[i];
++			tmp = filenames[num_iter - 1 - i];
++			filenames[num_iter - 1 - i] = filenames[i];
+ 			filenames[i] = tmp;
+ 		}
+ 	} else if (deldir == DEL_PSEUDORANDOM) {
