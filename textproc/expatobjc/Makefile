@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/19 08:19:14 rh Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/19 08:37:31 rh Exp $
 #
 
 DISTNAME=		expatobjc-1.0
@@ -13,6 +13,8 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ENV+=		objc_works=yes
 
 .include "../../textproc/expat/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
