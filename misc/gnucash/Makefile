@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.3 1999/08/29 21:50:20 jlam Exp $
+# $NetBSD: Makefile,v 1.4 1999/09/06 22:10:35 jlam Exp $
 #
 
-DISTNAME=       gnucash-1.1.25
+DISTNAME=       gnucash-1.2.2
 CATEGORIES=	misc
-MASTER_SITES=   ftp://ftp.gnucash.org/pub/gnucash/
+MASTER_SITES=   ftp://ftp.gnucash.org/pub/gnucash/sources/
 
 MAINTAINER=	mellon@isc.org
 HOMEPAGE=	http://www.gnucash.org/
 
-DEPENDS +=	xpm-3.4k:../../graphics/xpm
-DEPENDS +=	jpeg-6b:../../graphics/jpeg
-DEPENDS +=	lesstif-0.87.1:../../x11/lesstif
-DEPENDS +=	swig-1.1p5:../../devel/swig
-DEPENDS +=	eperl-2.2.14:../../textproc/eperl
-DEPENDS +=	XmHTML-1.1.5:../../x11/XmHTML
-DEPENDS +=	guile-1.3.2:../../lang/guile
-DEPENDS +=	libperl-5.00404:../../lang/libperl
+DEPENDS+=	xpm-3.4k:../../graphics/xpm
+DEPENDS+=	jpeg-6b:../../graphics/jpeg
+DEPENDS+=	lesstif-0.88.9:../../x11/lesstif
+DEPENDS+=	swig-1.1p5:../../devel/swig
+DEPENDS+=	eperl-2.2.14:../../textproc/eperl
+DEPENDS+=	XmHTML-1.1.5:../../x11/XmHTML
+DEPENDS+=	guile-1.3.2:../../lang/guile
+DEPENDS+=	libperl-5.00404:../../lang/libperl
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
