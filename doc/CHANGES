@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2802 2003/07/16 10:57:45 wiz Exp $
+$NetBSD: CHANGES,v 1.2803 2003/07/16 12:07:50 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2833,3 +2833,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cue to 20030714 [itojun 2003-07-16]
 	Updated postgresql-server to 7.3.3nb1 [abs 2003-07-16]
 	Updated dc_gui2 to 0.75 [wiz 2003-07-16]
+	Updated mserv to 0.33nb7 [abs 2003-07-16]
