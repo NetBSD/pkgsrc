@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/04/06 22:53:15 kim Exp $
+# $NetBSD: Makefile,v 1.21 2001/04/07 01:53:24 kim Exp $
 # FreeBSD Id: Makefile,v 1.24 1997/05/14 14:40:34 ache Exp
 #
 
@@ -14,6 +14,14 @@ INSTALL_TARGET=	install-suid install.man
 MAKE_ENV=	SHELL=/bin/sh
 
 .include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=	PROCMAIL_MAILSPOOLHOME
+
+.ifdef(PROCMAIL_MAILSPOOLHOME)
+pre-configure:
+	${ECHO} "#define MAILSPOOLHOME \"/${PROCMAIL_MAILSPOOLHOME}\""	\
+	>> ${WRKSRC}/src/authenticate.h
+.endif
 
 .if ${OPSYS} == "SunOS"
 do-install:
