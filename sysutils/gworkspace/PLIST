@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/06 08:51:34 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/11 03:20:34 rh Exp $
 share/GNUstep/System/Applications/GWorkspace.app/GWorkspace
+share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/AppViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/AppViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/stamp.make
+share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/BrowserViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Dutch.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Dutch.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Dutch.lproj/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.gorm/CVS/Root
@@ -24,37 +22,24 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/English.lproj/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/English.lproj/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/English.lproj/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/French.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/French.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/French.lproj/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/German.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/German.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/German.lproj/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Info-gnustep.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Italian.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Italian.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Italian.lproj/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Portuguese.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Portuguese.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Portuguese.lproj/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/objects.gorm
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Romanian.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Romanian.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Romanian.lproj/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Spanish.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Spanish.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Spanish.lproj/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/miniwindow.tiff
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/BrowserViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/stamp.make
 share/GNUstep/System/Applications/GWorkspace.app/Resources/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/CellHighlight.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/CellHighlight_osx.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/ComputeSize.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/ComputeSize_dimm.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Date-0.tiff
@@ -69,22 +54,18 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/Date-8.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Date-9.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Date-Colon.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Date.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Dimple.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/DragableDocument.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/Finder.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/Finder.nib/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/Finder.nib/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/Finder.nib/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/Finder.nib/classes.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/Finder.nib/info.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/Finder.nib/objects.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/Localizable.strings
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/MainMenu-OSX.gsmarkup
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/.gwsort
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/AttributesPanel.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/AttributesPanel.gorm/CVS/Repository
@@ -145,14 +126,18 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/DeskTop
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/DeskTopPref.nib/classes.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/DeskTopPref.nib/info.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/DeskTopPref.nib/objects.nib
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.gorm/.gwdir
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.gorm/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.gorm/objects.gorm
-share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOps.gorm/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOps.gorm/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOps.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.nib/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.nib/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.nib/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.nib/classes.nib
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.nib/info.nib
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.nib/objects.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOpsPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOpsPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOpsPref.gorm/CVS/Root
@@ -209,12 +194,23 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/Inspect
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/InspectorsWin.nib/info.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/InspectorsWin.nib/objects.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/Localizable.strings
-share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/MainMenu-OSX.gsmarkup
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/MainMenu.nib/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/MainMenu.nib/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/MainMenu.nib/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/MainMenu.nib/classes.nib
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/MainMenu.nib/info.nib
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/MainMenu.nib/objects.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm/objects.gorm
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.nib/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.nib/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.nib/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.nib/classes.nib
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.nib/info.nib
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.nib/objects.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/PermissionsPanel.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/PermissionsPanel.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/PermissionsPanel.gorm/CVS/Root
@@ -242,6 +238,12 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExte
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.gorm/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.gorm/objects.gorm
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.nib/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.nib/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.nib/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.nib/classes.nib
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.nib/info.nib
+share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.nib/objects.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/ShelfPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/ShelfPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/ShelfPref.gorm/CVS/Root
@@ -280,11 +282,13 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/FileIcon_Directory.ti
 share/GNUstep/System/Applications/GWorkspace.app/Resources/FileIcon_Directory_Open.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/FileIcon_Directory_Open_Small.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/FileIcon_Directory_Open_Small_alt.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/FileIcon_Directory_Open_Small_osx.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/FileIcon_Directory_Open_alt.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/FileIcon_Directory_Open_osx.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/FileManager.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/FolderViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/FolderViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/stamp.make
 share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/CVS/Repository
@@ -292,16 +296,10 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/Finder.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/Finder.nib/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/Finder.nib/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/Finder.nib/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/Finder.nib/classes.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/Finder.nib/info.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/Finder.nib/objects.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/Localizable.strings
-share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/MainMenu-OSX.gsmarkup
 share/GNUstep/System/Applications/GWorkspace.app/Resources/GWorkspace.desktop
 share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/CVS/Repository
@@ -309,28 +307,17 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/Finder.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/Finder.nib/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/Finder.nib/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/Finder.nib/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/Finder.nib/classes.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/Finder.nib/info.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/Finder.nib/objects.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/Localizable.strings
-share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj/MainMenu-OSX.gsmarkup
+share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/IconsViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Dutch.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Dutch.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Dutch.lproj/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewPref.gorm/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewPref.gorm/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewPref.gorm/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.gorm/CVS/Root
@@ -342,41 +329,27 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Re
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.nib/classes.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.nib/info.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.nib/objects.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/French.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/French.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/French.lproj/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/German.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/German.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/German.lproj/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Info-gnustep.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Italian.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Italian.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Italian.lproj/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Portuguese.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Portuguese.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Portuguese.lproj/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/objects.gorm
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Romanian.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Romanian.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Romanian.lproj/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Spanish.lproj/CVS/Entries
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Spanish.lproj/CVS/Repository
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Spanish.lproj/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/miniwindow.tiff
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/IconsViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/stamp.make
+share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/ImageViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/ImageViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/stamp.make
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/InspectorViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/InspectorViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/stamp.make
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/CVS/Repository
@@ -384,16 +357,10 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/CVS/Roo
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.nib/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.nib/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.nib/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.nib/classes.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.nib/info.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.nib/objects.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Localizable.strings
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/MainMenu-OSX.gsmarkup
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Kill.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/LED-0.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/LED-1.tiff
@@ -431,6 +398,12 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/Month-8.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Month-9.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Month.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/MultipleSelection.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/PasteboardViewer.inspector/PasteboardViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/PasteboardViewer.inspector/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/GWorkspace.app/Resources/PasteboardViewer.inspector/Resources/InspectorInfo.plist
+share/GNUstep/System/Applications/GWorkspace.app/Resources/PasteboardViewer.inspector/stamp.make
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Pboard.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/PdfViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/Resources/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/Resources/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/Resources/CVS/Root
@@ -443,11 +416,10 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/R
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/Resources/play.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/Resources/right.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/Resources/stop.tiff
-share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/PdfViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/stamp.make
+share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/PlistViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/PlistViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/stamp.make
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/CVS/Repository
@@ -455,25 +427,25 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/CVS/
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Finder.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Finder.nib/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Finder.nib/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Finder.nib/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Finder.nib/classes.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Finder.nib/info.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Finder.nib/objects.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Localizable.strings
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/MainMenu-OSX.gsmarkup
 share/GNUstep/System/Applications/GWorkspace.app/Resources/REWArrow.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Recycler.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/RecyclerFull.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj/Finder.gorm/objects.gorm
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj/Finder.gorm/Finder.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj/Finder.gorm/Finder.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj/Finder.gorm/Finder.gorm/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj/Localizable.strings
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/AttributesPanel.gorm/AttributesPanel.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/AttributesPanel.gorm/AttributesPanel.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/AttributesPanel.gorm/AttributesPanel.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/AttributesPanel.gorm/AttributesPanel.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/AttributesPanel.gorm/AttributesPanel.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/AttributesPanel.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/AttributesPanel.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/AttributesPanel.gorm/CVS/Root
@@ -482,125 +454,219 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lpr
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm/ContentsPanel.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm/ContentsPanel.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm/ContentsPanel.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm/ContentsPanel.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm/ContentsPanel.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm/DefEditorPref.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm/DefEditorPref.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm/DefEditorPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm/DefEditorPref.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm/DefEditorPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm/DefSortOrderPref.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm/DefSortOrderPref.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm/DefSortOrderPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm/DefSortOrderPref.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm/DefSortOrderPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/.gwdir
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/DeskTopPref.gorm/.gwdir
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/DeskTopPref.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/DeskTopPref.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/DeskTopPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/DeskTopPref.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/DeskTopPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/objects.gorm
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/.gwdir
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/FileOperationWin.gorm/.gwdir
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/FileOperationWin.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/FileOperationWin.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/FileOperationWin.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/FileOperationWin.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/FileOperationWin.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm/FileOpsPref.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm/FileOpsPref.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm/FileOpsPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm/FileOpsPref.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm/FileOpsPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm/Finder.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm/Finder.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm/Finder.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm/Finder.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm/Finder.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm/HiddenFilesPref.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm/HiddenFilesPref.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm/HiddenFilesPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm/HiddenFilesPref.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm/HiddenFilesPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm/IconsPref.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm/IconsPref.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm/IconsPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm/IconsPref.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm/IconsPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm/InspectorsWin.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm/InspectorsWin.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm/InspectorsWin.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm/InspectorsWin.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm/InspectorsWin.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Localizable.strings
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm/OpenWith.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm/OpenWith.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm/OpenWith.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm/OpenWith.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm/OpenWith.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm/PermissionsPanel.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm/PermissionsPanel.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm/PermissionsPanel.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm/PermissionsPanel.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm/PermissionsPanel.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm/PrefWindow.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm/PrefWindow.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm/PrefWindow.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm/PrefWindow.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm/PrefWindow.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm/RunExternal.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm/RunExternal.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm/RunExternal.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm/RunExternal.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm/RunExternal.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm/ShelfPref.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm/ShelfPref.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm/ShelfPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm/ShelfPref.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm/ShelfPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm/ToolsPanel.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm/ToolsPanel.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm/ToolsPanel.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm/ToolsPanel.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm/ToolsPanel.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm/XTermPref.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm/XTermPref.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm/XTermPref.gorm/CVS/Root
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm/XTermPref.gorm/data.classes
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm/XTermPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm/data.classes
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj/Finder.gorm/objects.gorm
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj/Finder.gorm/Finder.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj/Finder.gorm/Finder.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj/Finder.gorm/Finder.gorm/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj/Localizable.strings
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj/Finder.gorm/objects.gorm
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj/Finder.gorm/Finder.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj/Finder.gorm/Finder.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj/Finder.gorm/Finder.gorm/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj/Localizable.strings
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj/Finder.gorm/objects.gorm
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj/Finder.gorm/Finder.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj/Finder.gorm/Finder.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj/Finder.gorm/Finder.gorm/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj/Localizable.strings
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj/Finder.gorm/objects.gorm
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj/Finder.gorm/Finder.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj/Finder.gorm/Finder.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj/Finder.gorm/Finder.gorm/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj/Localizable.strings
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj/Finder.gorm/objects.gorm
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj/Finder.gorm/Finder.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj/Finder.gorm/Finder.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj/Finder.gorm/Finder.gorm/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj/Localizable.strings
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj/Finder.gorm/objects.gorm
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj/Finder.gorm/Finder.gorm/CVS/Entries
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj/Finder.gorm/Finder.gorm/CVS/Repository
+share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj/Finder.gorm/Finder.gorm/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj/Localizable.strings
 share/GNUstep/System/Applications/GWorkspace.app/Resources/RightArr.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/CVS/Entries
@@ -609,19 +675,13 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/CVS/Ro
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Finder.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Finder.nib/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Finder.nib/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Finder.nib/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Finder.nib/classes.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Finder.nib/info.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Finder.nib/objects.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Localizable.strings
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/MainMenu-OSX.gsmarkup
 share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/RtfViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/RtfViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/stamp.make
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SlideMask.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallCellHighlight.tiff
@@ -631,7 +691,7 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.view
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/Resources/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/Resources/miniwindow.tiff
-share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/SmallIconsViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/SmallIconsViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/stamp.make
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources/CVS/Repository
@@ -641,7 +701,7 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources/pause.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources/play.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources/stop.tiff
-share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/SoundViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/SoundViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/stamp.make
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/CVS/Repository
@@ -649,19 +709,13 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/CVS/Roo
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Finder.gorm/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Finder.gorm/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Finder.gorm/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Finder.gorm/data.classes
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Finder.gorm/objects.gorm
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Finder.nib/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Finder.nib/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Finder.nib/CVS/Root
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Finder.nib/classes.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Finder.nib/info.nib
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Finder.nib/objects.nib
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Localizable.strings
-share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/MainMenu-OSX.gsmarkup
 share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/StringsViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/StringsViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/stamp.make
 share/GNUstep/System/Applications/GWorkspace.app/Resources/TileHighlight.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Weekday-0.tiff
@@ -672,32 +726,45 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/Weekday-4.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Weekday-5.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Weekday-6.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Weekday.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/colorPboard.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/common_ArrowLeftH.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/common_ArrowRightH.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/filecontsPboard.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/gormPboard.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/littleArrowDown.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/littleArrowRight.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/page.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/pause.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/play.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/rtfPboard.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/rtfdPboard.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/stop.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/stop_16.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/stop_24.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/stop_32.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/stop_48.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/stringPboard.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/switchMultiple.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/switchOff.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/switchOn.tiff
-share/GNUstep/System/Applications/GWorkspace.app/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/GWorkspace
-share/GNUstep/System/Applications/GWorkspace.app/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/library_paths.openapp
+share/GNUstep/System/Applications/GWorkspace.app/Resources/tabSelectedLeft.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/tabSelectedRight.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/tabSelectedToUnSelectedJunction.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/tabUnSelectToSelectedJunction.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/tabUnSelectedJunction.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/tabUnSelectedLeft.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/tabUnSelectedRight.tiff
+share/GNUstep/System/Applications/GWorkspace.app/Resources/tiffPboard.tiff
+share/GNUstep/System/Applications/GWorkspace.app/library_paths.openapp
 share/GNUstep/System/Applications/GWorkspace.app/stamp.make
+share/GNUstep/System/Library/Bundles/AppViewer.inspector/AppViewer
 share/GNUstep/System/Library/Bundles/AppViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/AppViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/AppViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/AppViewer
 share/GNUstep/System/Library/Bundles/AppViewer.inspector/stamp.make
+share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/BrowserViewer
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/CVS/Entries
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/CVS/Repository
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/CVS/Root
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Dutch.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Dutch.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Dutch.lproj/CVS/Root
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.gorm/CVS/Entries
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.gorm/CVS/Repository
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.gorm/CVS/Root
@@ -712,49 +779,30 @@ share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/English.lpro
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/English.lproj/CVS/Entries
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/English.lproj/CVS/Repository
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/English.lproj/CVS/Root
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/French.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/French.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/French.lproj/CVS/Root
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/German.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/German.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/German.lproj/CVS/Root
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Italian.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Italian.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Italian.lproj/CVS/Root
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Portuguese.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Portuguese.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Portuguese.lproj/CVS/Root
+share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm/CVS/Entries
+share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm/CVS/Repository
+share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm/CVS/Root
+share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm/data.classes
+share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm/objects.gorm
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/CVS/Entries
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/CVS/Repository
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/CVS/Root
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/data.classes
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/objects.gorm
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Romanian.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Romanian.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Romanian.lproj/CVS/Root
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Spanish.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Spanish.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Spanish.lproj/CVS/Root
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/miniwindow.tiff
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/BrowserViewer
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/stamp.make
+share/GNUstep/System/Library/Bundles/FolderViewer.inspector/FolderViewer
 share/GNUstep/System/Library/Bundles/FolderViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/FolderViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/FolderViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/FolderViewer
 share/GNUstep/System/Library/Bundles/FolderViewer.inspector/stamp.make
+share/GNUstep/System/Library/Bundles/IconsViewer.viewer/IconsViewer
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/CVS/Entries
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/CVS/Repository
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/CVS/Root
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Dutch.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Dutch.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Dutch.lproj/CVS/Root
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/CVS/Entries
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/CVS/Repository
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/CVS/Root
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewPref.gorm/CVS/Entries
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewPref.gorm/CVS/Repository
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewPref.gorm/CVS/Root
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.gorm/CVS/Entries
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.gorm/CVS/Repository
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.gorm/CVS/Root
@@ -766,44 +814,35 @@ share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.nib/classes.nib
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.nib/info.nib
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.nib/objects.nib
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/French.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/French.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/French.lproj/CVS/Root
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/German.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/German.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/German.lproj/CVS/Root
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Italian.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Italian.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Italian.lproj/CVS/Root
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Portuguese.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Portuguese.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Portuguese.lproj/CVS/Root
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/CVS/Entries
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/CVS/Repository
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/CVS/Root
+share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm/CVS/Entries
+share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm/CVS/Repository
+share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm/CVS/Root
+share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm/data.classes
+share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm/objects.gorm
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/data.classes
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/objects.gorm
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Romanian.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Romanian.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Romanian.lproj/CVS/Root
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Spanish.lproj/CVS/Entries
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Spanish.lproj/CVS/Repository
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Spanish.lproj/CVS/Root
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/miniwindow.tiff
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/IconsViewer
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/stamp.make
+share/GNUstep/System/Library/Bundles/ImageThumbnailer.thumb/ImageThumbnailer
 share/GNUstep/System/Library/Bundles/ImageThumbnailer.thumb/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Bundles/ImageThumbnailer.thumb/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/ImageThumbnailer
 share/GNUstep/System/Library/Bundles/ImageThumbnailer.thumb/stamp.make
+share/GNUstep/System/Library/Bundles/ImageViewer.inspector/ImageViewer
 share/GNUstep/System/Library/Bundles/ImageViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/ImageViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/ImageViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/ImageViewer
 share/GNUstep/System/Library/Bundles/ImageViewer.inspector/stamp.make
+share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/InspectorViewer
 share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/InspectorViewer
 share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/stamp.make
+share/GNUstep/System/Library/Bundles/PasteboardViewer.inspector/PasteboardViewer
+share/GNUstep/System/Library/Bundles/PasteboardViewer.inspector/Resources/Info-gnustep.plist
+share/GNUstep/System/Library/Bundles/PasteboardViewer.inspector/Resources/InspectorInfo.plist
+share/GNUstep/System/Library/Bundles/PasteboardViewer.inspector/stamp.make
+share/GNUstep/System/Library/Bundles/PdfViewer.inspector/PdfViewer
 share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/CVS/Entries
 share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/CVS/Repository
 share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/CVS/Root
@@ -816,22 +855,21 @@ share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/pause.tiff
 share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/play.tiff
 share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/right.tiff
 share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/stop.tiff
-share/GNUstep/System/Library/Bundles/PdfViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/PdfViewer
 share/GNUstep/System/Library/Bundles/PdfViewer.inspector/stamp.make
+share/GNUstep/System/Library/Bundles/PlistViewer.inspector/PlistViewer
 share/GNUstep/System/Library/Bundles/PlistViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/PlistViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/PlistViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/PlistViewer
 share/GNUstep/System/Library/Bundles/PlistViewer.inspector/stamp.make
 share/GNUstep/System/Library/Bundles/RtfViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/RtfViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/RtfViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/RtfViewer
+share/GNUstep/System/Library/Bundles/RtfViewer.inspector/RtfViewer
 share/GNUstep/System/Library/Bundles/RtfViewer.inspector/stamp.make
 share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources/CVS/Entries
 share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources/CVS/Repository
 share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources/CVS/Root
 share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources/miniwindow.tiff
-share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/SmallIconsViewer
+share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/SmallIconsViewer
 share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/stamp.make
 share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/CVS/Entries
 share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/CVS/Repository
@@ -841,183 +879,80 @@ share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/InspectorIn
 share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/pause.tiff
 share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/play.tiff
 share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/stop.tiff
-share/GNUstep/System/Library/Bundles/SoundViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/SoundViewer
+share/GNUstep/System/Library/Bundles/SoundViewer.inspector/SoundViewer
 share/GNUstep/System/Library/Bundles/SoundViewer.inspector/stamp.make
 share/GNUstep/System/Library/Bundles/StringsViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/StringsViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/StringsViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/StringsViewer
+share/GNUstep/System/Library/Bundles/StringsViewer.inspector/StringsViewer
 share/GNUstep/System/Library/Bundles/StringsViewer.inspector/stamp.make
+share/GNUstep/System/Library/Services/thumbnailer.service/Resources/ImageThumbnailer.thumb/ImageThumbnailer
 share/GNUstep/System/Library/Services/thumbnailer.service/Resources/ImageThumbnailer.thumb/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Services/thumbnailer.service/Resources/ImageThumbnailer.thumb/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/ImageThumbnailer
 share/GNUstep/System/Library/Services/thumbnailer.service/Resources/ImageThumbnailer.thumb/stamp.make
 share/GNUstep/System/Library/Services/thumbnailer.service/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Services/thumbnailer.service/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/thumbnailer
-share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/findfile
-share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/wopen
-@dirrm share/GNUstep/System/Library/Services/thumbnailer.service/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Services/thumbnailer.service/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Services/thumbnailer.service/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Library/Services/thumbnailer.service/Resources/ImageThumbnailer.thumb/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Services/thumbnailer.service/Resources/ImageThumbnailer.thumb/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Services/thumbnailer.service/Resources/ImageThumbnailer.thumb/${GNUSTEP_HOST_CPU}
+share/GNUstep/System/Library/Services/thumbnailer.service/thumbnailer
+share/GNUstep/System/Tools/findfile
+share/GNUstep/System/Tools/wopen
 @dirrm share/GNUstep/System/Library/Services/thumbnailer.service/Resources/ImageThumbnailer.thumb/Resources
 @dirrm share/GNUstep/System/Library/Services/thumbnailer.service/Resources/ImageThumbnailer.thumb
 @dirrm share/GNUstep/System/Library/Services/thumbnailer.service/Resources
 @dirrm share/GNUstep/System/Library/Services/thumbnailer.service
-@dirrm share/GNUstep/System/Library/Bundles/StringsViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/StringsViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Bundles/StringsViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/StringsViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/StringsViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/CVS
 @dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources/CVS
 @dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources
 @dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer
-@dirrm share/GNUstep/System/Library/Bundles/RtfViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/RtfViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Bundles/RtfViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/RtfViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/RtfViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/PlistViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/PlistViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Bundles/PlistViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/PlistViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/PlistViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/CVS
 @dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/${GNUSTEP_HOST_CPU}
+@dirrm share/GNUstep/System/Library/Bundles/PasteboardViewer.inspector/Resources
+@dirrm share/GNUstep/System/Library/Bundles/PasteboardViewer.inspector
 @dirrm share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/InspectorViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/ImageViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/ImageViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Bundles/ImageViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/ImageViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/ImageViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/ImageThumbnailer.thumb/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/ImageThumbnailer.thumb/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Bundles/ImageThumbnailer.thumb/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/ImageThumbnailer.thumb/Resources
 @dirrm share/GNUstep/System/Library/Bundles/ImageThumbnailer.thumb
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Spanish.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Spanish.lproj
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Romanian.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Romanian.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/Spanish.lproj
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/Spanish.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/Romanian.lproj
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/Romanian.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/Portuguese.lproj
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/Portuguese.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/Italian.lproj
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/Italian.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/German.lproj
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/German.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/French.lproj
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/French.lproj
+@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm/CVS
+@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/CVS
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/English.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/Dutch.lproj
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources/Dutch.lproj
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Resources
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Portuguese.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Portuguese.lproj
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Italian.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Italian.lproj
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/German.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/German.lproj
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/French.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/French.lproj
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.nib/CVS
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.nib
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.gorm/CVS
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.gorm
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewPref.gorm/CVS
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/IconsViewPref.gorm
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj/CVS
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/English.lproj
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Dutch.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Dutch.lproj
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/CVS
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer
-@dirrm share/GNUstep/System/Library/Bundles/FolderViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/FolderViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Bundles/FolderViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/FolderViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/FolderViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Spanish.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Spanish.lproj
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Romanian.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Romanian.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/Spanish.lproj
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/Spanish.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/Romanian.lproj
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/Romanian.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/Portuguese.lproj
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/Portuguese.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/Italian.lproj
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/Italian.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/German.lproj
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/German.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/French.lproj
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/French.lproj
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/CVS
+@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm/CVS
+@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/English.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/Dutch.lproj
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources/Dutch.lproj
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Resources
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Portuguese.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Portuguese.lproj
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Italian.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Italian.lproj
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/German.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/German.lproj
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/French.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/French.lproj
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/English.lproj/CVS
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.nib/CVS
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.nib
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.gorm/CVS
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.gorm
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/English.lproj
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Dutch.lproj/CVS
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Dutch.lproj
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/CVS
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer
-@dirrm share/GNUstep/System/Library/Bundles/AppViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/AppViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/Bundles/AppViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/AppViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/AppViewer.inspector
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Finder.nib/CVS
@@ -1026,21 +961,12 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/wo
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/Resources/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Finder.nib/CVS
@@ -1049,61 +975,111 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/wo
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj/Finder.gorm/Finder.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj/Finder.gorm/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj/Finder.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Spanish.lproj
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj/Finder.gorm/Finder.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj/Finder.gorm/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj/Finder.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Romanian.lproj
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj/Finder.gorm/Finder.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj/Finder.gorm/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj/Finder.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Portuguese.lproj
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj/Finder.gorm/Finder.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj/Finder.gorm/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj/Finder.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Italian.lproj
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj/Finder.gorm/Finder.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj/Finder.gorm/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj/Finder.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/German.lproj
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj/Finder.gorm/Finder.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj/Finder.gorm/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj/Finder.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/French.lproj
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm/XTermPref.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm/XTermPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/XTermPref.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm/ToolsPanel.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm/ToolsPanel.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ToolsPanel.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm/ShelfPref.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm/ShelfPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ShelfPref.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm/RunExternal.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm/RunExternal.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/RunExternal.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm/PrefWindow.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm/PrefWindow.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PrefWindow.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm/PermissionsPanel.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm/PermissionsPanel.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/PermissionsPanel.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm/OpenWith.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm/OpenWith.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/OpenWith.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm/InspectorsWin.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm/InspectorsWin.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/InspectorsWin.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm/IconsPref.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm/IconsPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/IconsPref.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm/HiddenFilesPref.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm/HiddenFilesPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/HiddenFilesPref.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm/Finder.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/Finder.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm/FileOpsPref.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm/FileOpsPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOpsPref.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/FileOperationWin.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/FileOperationWin.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/FileOperationWin.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/DeskTopPref.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/DeskTopPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DeskTopPref.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm/DefSortOrderPref.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm/DefSortOrderPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefSortOrderPref.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm/DefEditorPref.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm/DefEditorPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/DefEditorPref.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm/ContentsPanel.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm/ContentsPanel.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/ContentsPanel.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/AttributesPanel.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/AttributesPanel.gorm/AttributesPanel.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/AttributesPanel.gorm/AttributesPanel.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj/AttributesPanel.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/English.lproj
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj/Finder.gorm/Finder.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj/Finder.gorm/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj/Finder.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Resources/Dutch.lproj
@@ -1114,76 +1090,35 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/wo
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/Resources/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PasteboardViewer.inspector/Resources
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PasteboardViewer.inspector
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.nib/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.nib
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Spanish.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Spanish.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Romanian.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Romanian.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/Spanish.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/Spanish.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/Romanian.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/Romanian.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/Portuguese.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/Portuguese.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/Italian.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/Italian.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/German.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/German.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/French.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/French.lproj
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/IconsViewerPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj/IconsViewerPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/English.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/Dutch.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources/Dutch.lproj
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Resources
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Portuguese.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Portuguese.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Italian.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Italian.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/German.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/German.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/French.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/French.lproj
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.nib/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.nib
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewerPref.gorm
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewPref.gorm/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/IconsViewPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/English.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Dutch.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Dutch.lproj
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer
@@ -1199,9 +1134,6 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/wo
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/Finder.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/XTermPref.nib/CVS
@@ -1216,6 +1148,8 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/wo
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/ShelfPref.nib
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/ShelfPref.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/ShelfPref.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.nib/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.nib
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/PrefWindow.nib/CVS
@@ -1226,8 +1160,12 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/wo
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/PermissionsPanel.nib
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/PermissionsPanel.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/PermissionsPanel.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.nib/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.nib
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/MainMenu.nib/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/MainMenu.nib
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/InspectorsWin.nib/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/InspectorsWin.nib
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/InspectorsWin.gorm/CVS
@@ -1248,8 +1186,8 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/wo
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOpsPref.nib
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOpsPref.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOpsPref.gorm
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOps.gorm/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOps.gorm
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.nib/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.nib
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/FileOperationWin.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/DeskTopPref.nib/CVS
@@ -1281,53 +1219,21 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/wo
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Dutch.lproj
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Spanish.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Spanish.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Romanian.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Romanian.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/Spanish.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/Spanish.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/Romanian.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/Romanian.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/Portuguese.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/Portuguese.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/Italian.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/Italian.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/German.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/German.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/French.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/French.lproj
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm/CVS
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm/BrowserViewerPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj/BrowserViewerPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/English.lproj
-@exec ${MKDIR} %D/share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/Dutch.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources/Dutch.lproj
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Resources
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Portuguese.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Portuguese.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Italian.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Italian.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/German.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/German.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/French.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/French.lproj
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/English.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.nib/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.nib
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.gorm/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/English.lproj/BrowserViewerPref.gorm
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/English.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Dutch.lproj/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Dutch.lproj
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources

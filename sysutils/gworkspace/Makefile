@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/11 03:20:34 rh Exp $
 #
 
 .include "Makefile.common"
-PKGREVISION=	5
 
 COMMENT=	GNUstep Workspace manager
 
 pre-install:
 	${CP} ${FILESDIR}/GNUmakefile ${WRKSRC}/GWLib
 
-.include "../../sysutils/GWLib/buildlink2.mk"
+.include "../../sysutils/GWLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
