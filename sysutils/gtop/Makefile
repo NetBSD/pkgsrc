@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/11/09 22:28:21 mycroft Exp $
+# $NetBSD: Makefile,v 1.8 2000/11/25 12:09:42 hubertf Exp $
 
 DISTNAME=		gtop-1.0.9
 CATEGORIES=		sysutils gnome
@@ -11,6 +11,7 @@ BUILD_DEPENDS+=		automake:../../devel/automake
 DEPENDS+=		gnome-core>=1.2.0:../../x11/gnome-core
 DEPENDS+=		libgtop>=1.0.9:../../devel/libgtop
 
+OSVERSION_SPECIFIC=	yes
 USE_GMAKE=		# defined
 USE_X11BASE=		# defined
 USE_LIBTOOL=            # defined
