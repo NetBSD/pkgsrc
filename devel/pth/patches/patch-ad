@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.4 2003/05/02 11:49:48 wiz Exp $
+$NetBSD: patch-ad,v 1.5 2004/04/19 12:16:08 skrll Exp $
 
---- pth_syscall.c.orig	2003-01-01 16:45:06.000000000 +0100
-+++ pth_syscall.c	2003-04-15 14:31:43.000000000 +0200
+--- pth_syscall.c.orig	Wed Jan  1 15:45:06 2003
++++ pth_syscall.c
 @@ -57,6 +57,7 @@
  #define sendto        __pth_sys_sendto
  #define pread         __pth_sys_pread
@@ -10,7 +10,7 @@ $NetBSD: patch-ad,v 1.4 2003/05/02 11:49:48 wiz Exp $
  
  /* include the private header and this way system headers */
  #include "pth_p.h"
-@@ -108,6 +109,7 @@
+@@ -108,6 +109,7 @@ int pth_syscall_hard = PTH_SYSCALL_HARD;
  #undef sendto
  #undef pread
  #undef pwrite
@@ -18,7 +18,7 @@ $NetBSD: patch-ad,v 1.4 2003/05/02 11:49:48 wiz Exp $
  
  /* internal data structures */
  #if cpp
-@@ -157,13 +159,18 @@
+@@ -157,13 +159,18 @@ intern pth_syscall_fct_tab_t pth_syscall
  #define PTH_SCF_sendto        19
  #define PTH_SCF_pread         20
  #define PTH_SCF_pwrite        21
@@ -37,7 +37,7 @@ $NetBSD: patch-ad,v 1.4 2003/05/02 11:49:48 wiz Exp $
      { "sigwait",     NULL },
      { "select",      NULL },
      { "poll",        NULL },
-@@ -179,6 +186,7 @@
+@@ -179,6 +186,7 @@ intern pth_syscall_fct_tab_t pth_syscall
      { "sendto",      NULL },
      { "pread",       NULL },
      { "pwrite",      NULL },
@@ -45,7 +45,16 @@ $NetBSD: patch-ad,v 1.4 2003/05/02 11:49:48 wiz Exp $
      { NULL,          NULL }
  };
  #endif
-@@ -651,6 +659,48 @@
+@@ -405,6 +413,8 @@ intern pid_t pth_sc_waitpid(pid_t wpid, 
+                (wpid, status, options);
+ #if defined(HAVE_SYSCALL) && defined(SYS_waitpid)
+     else return (pid_t)syscall(SYS_waitpid, wpid, status, options);
++#elif defined(HAVE_SYSCALL) && defined(SYS_wait4)
++    else return (pid_t)syscall(SYS_wait4, wpid, status, options, (struct rusage *) NULL);
+ #else
+     else PTH_SYSCALL_ERROR(-1, ENOSYS, "waitpid");
+ #endif
+@@ -651,6 +661,52 @@ intern ssize_t pth_sc_recvfrom(int fd, v
  #endif
  }
  
@@ -65,6 +74,8 @@ $NetBSD: patch-ad,v 1.4 2003/05/02 11:49:48 wiz Exp $
 +               (fd, buf, nbytes, flags);
 +#if defined(HAVE_SYSCALL) && defined(SYS_recv)
 +    else return (ssize_t)syscall(SYS_recv, fd, buf, nbytes, flags);
++#elif defined(HAVE_SYSCALL) && defined(SYS_recvfrom)
++    else return (ssize_t)syscall(SYS_recvfrom, fd, buf, nbytes, flags, (struct sockaddr *) NULL, (socklen_t *) NULL);
 +#else
 +    else PTH_SYSCALL_ERROR(-1, ENOSYS, "recv");
 +#endif
@@ -86,6 +97,8 @@ $NetBSD: patch-ad,v 1.4 2003/05/02 11:49:48 wiz Exp $
 +               (fd, buf, nbytes, flags);
 +#if defined(HAVE_SYSCALL) && defined(SYS_send)
 +    else return (ssize_t)syscall(SYS_send, fd, buf, nbytes, flags);
++#elif defined(HAVE_SYSCALL) && defined(SYS_sendto)
++    else return (ssize_t)syscall(SYS_sendto, fd, buf, nbytes, flags, (struct sockaddr *) NULL, NULL);
 +#else
 +    else PTH_SYSCALL_ERROR(-1, ENOSYS, "send");
 +#endif
@@ -94,7 +107,7 @@ $NetBSD: patch-ad,v 1.4 2003/05/02 11:49:48 wiz Exp $
  /* ==== Pth hard syscall wrapper for sendto(2) ==== */
  ssize_t sendto(int, const void *, size_t, int, const struct sockaddr *, socklen_t);
  ssize_t sendto(int fd, const void *buf, size_t nbytes, int flags, const struct sockaddr *to, socklen_t tolen)
-@@ -664,7 +714,7 @@
+@@ -664,12 +720,34 @@ intern ssize_t pth_sc_sendto(int fd, con
      /* internal exit point for Pth */
      if (pth_syscall_fct_tab[PTH_SCF_sendto].addr != NULL)
          return ((ssize_t (*)(int, const void *, size_t, int, const struct sockaddr *, socklen_t))
@@ -103,10 +116,11 @@ $NetBSD: patch-ad,v 1.4 2003/05/02 11:49:48 wiz Exp $
                 (fd, buf, nbytes, flags, to, tolen);
  #if defined(HAVE_SYSCALL) && defined(SYS_sendto)
      else return (ssize_t)syscall(SYS_sendto, fd, buf, nbytes, flags, to, tolen);
-@@ -673,5 +723,27 @@
- #endif
- }
- 
+ #else
+     else PTH_SYSCALL_ERROR(-1, ENOSYS, "sendto");
++#endif
++}
++
 +/* ==== Pth hard syscall wrapper for wait4(2) ==== */
 +pid_t wait4(pid_t, int *, int, struct rusage *);
 +pid_t wait4(pid_t wpid, int *status, int options, struct rusage *rusage)
@@ -126,8 +140,6 @@ $NetBSD: patch-ad,v 1.4 2003/05/02 11:49:48 wiz Exp $
 +    else return (pid_t)syscall(SYS_wait4, wpid, status, options, rusage);
 +#else
 +    else PTH_SYSCALL_ERROR(-1, ENOSYS, "wait4");
-+#endif
-+}
-+
- #endif /* PTH_SYSCALL_HARD */
+ #endif
+ }
  
