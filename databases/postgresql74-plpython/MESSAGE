@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/10/10 12:38:21 jdolecek Exp $
+$NetBSD: MESSAGE,v 1.2 2004/10/10 12:56:31 jdolecek Exp $
 
 Please see the PL/Python section of the PostgreSQL Programmer's Guide
 (databases/postgresql-docs) for information on programming with
@@ -10,11 +10,8 @@ offer any way of restricting what users can do in it. Any DB user with
 access to PL/Python can run arbitrary Python code under privileges
 of the PostgreSQL server process.
 
-To configure PostgreSQL to enable PL/Python, run this as DBA:
+To enable PL/Python for database <dbname>, run following:
 
-CREATE FUNCTION plpython_call_handler() RETURNS language_handler AS
-	'$libdir/plpython' LANGUAGE C;
-
-CREATE PROCEDURAL LANGUAGE plpythonu HANDLER plpython_call_handler;
+createlang plpythonu <dbname>
 
 ===========================================================================
