@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7156 2004/09/16 19:36:53 minskim Exp $
+$NetBSD: CHANGES,v 1.7157 2004/09/17 08:08:20 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4254,3 +4254,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xpm to 3.4knb2 [minskim 2004-09-16]
 	Updated XFree86-libs to 4.4.0nb2 [minskim 2004-09-16]
 	Updated xorg-libs to 6.7.0nb2 [minskim 2004-09-16]
+	Updated win32-codecs to 040916.1 [salo 2004-09-16]
