@@ -1,35 +1,36 @@
-# New ports collection makefile for:    arena
-# Version required:     i18n beta-3b
-# Date created:         Dec 1 1995
-# Whom:                 ache
-#
-# $Id: Makefile,v 1.1.1.1 1998/07/15 01:01:35 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/07/15 01:09:21 tv Exp $
+# FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
-DISTNAME=       arena-CJK-beta3a
-PKGNAME=        arena-i18n-beta3b
-CATEGORIES=     www
-MASTER_SITES=   ftp://ftp-eu.w3.org/pub/Arena/beta-3/
+DISTNAME=	arena-0.3.61
+CATEGORIES=	www
+MASTER_SITES=	ftp://ftp.yggdrasil.com/pub/dist/web/arena/
 
-MAINTAINER=     ache@FreeBSD.ORG
+MAINTAINER=	tv@netbsd.org
 
-LIB_DEPENDS+=   jpeg\\.9\\.:${PORTSDIR}/graphics/jpeg
-LIB_DEPENDS+=   png\\.2\\.:${PORTSDIR}/graphics/png
+DEPENDS=	libwww-5.1m1:../../www/libwww \
+		jpeg-6b:../../graphics/jpeg \
+		png-0.96:../../graphics/png \
+		xpm-3.4k:../../graphics/xpm
 
-BROKEN=		png upgrade
+USE_GMAKE=	yes
+MAKEFILE=	makefile
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-libwww-include=${PREFIX}/include/w3c-libwww
+CONFIGURE_ENV=	CPPFLAGS="-I${PREFIX}/include -I${X11BASE}/include -I${WRKDIR}" \
+		LDFLAGS="-L${PREFIX}/lib -L${X11BASE}/lib"
 
-WRKSRC=         ${WRKDIR}/WWW
+WRKSRC=		${WRKDIR}/Arena-0.3.61
 
-do-build:
-	cd ${WRKSRC}/Library/freebsd; ${MAKE}
-	cd ${WRKSRC}/Arena/freebsd; \
-	${MAKE} PREFIX=${PREFIX} LFLAGS=-L${PREFIX}/lib \
-		XLIBDIR=${X11BASE}/lib \
-		JPEGDIR=${WRKSRC} PNGDIR=${WRKSRC} ZLIBDIR=${WRKSRC} \
-		JPEGLIB=-ljpeg PNGLIB=-lpng ZLIB=-lz
+# Arena requires libwww's "config.h" header - it is installed as "wwwconf.h",
+# so make a symlink in ${WRKDIR} and add it to the -I list.
+pre-configure:
+	@${LN} -sf ${PREFIX}/include/w3c-libwww/wwwconf.h ${WRKDIR}/config.h
 
 do-install:
-	cd ${WRKSRC}/Arena/freebsd; \
-	${INSTALL} -c -m ${BINMODE} -o ${BINOWN} -g ${BINGRP} -s arena ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/Arena/netbsd/arena ${PREFIX}/bin/
+	${INSTALL_DATA_DIR} ${PREFIX}/share/Arena
+	${INSTALL_DATA} ${WRKSRC}/Arena/Source/arenarc ${PREFIX}/share/Arena/
+	${INSTALL_DATA} ${WRKSRC}/Arena/doc/arena.man ${PREFIX}/man/man1/arena.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
