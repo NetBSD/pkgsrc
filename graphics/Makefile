@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2000/11/01 16:30:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.99 2000/11/17 08:06:23 rh Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -9,6 +9,7 @@
     SUBDIR += MesaLib
     SUBDIR += Ngraph
     SUBDIR += alevt
+    SUBDIR += autotrace
     SUBDIR += camediaplay
     SUBDIR += cdlabelgen
     SUBDIR += clanlib
