@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/08/29 04:08:12 mycroft Exp $
+# $NetBSD: Makefile,v 1.15 1998/08/31 08:12:19 mycroft Exp $
 #
 
 DISTNAME=		xmame-0.34b1.1
@@ -19,9 +19,11 @@ USE_GMAKE=		yes
 MAKE_ENV+=		OPSYS=${OPSYS} ARCH=${ARCH} DESTDIR=${DESTDIR} \
 			INSTALL_MAN="${INSTALL_MAN}" \
 			INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-			NETBSD_JOYSTICK="${NETBSD_JOYSTICK}"
+			NETBSD_JOYSTICK="${NETBSD_JOYSTICK}" \
+			DISPLAY_METHOD="${DISPLAY_METHOD}"
 MAKEFILE=		makefile.unix
-ALL_TARGET=		xmame.xwindows
+DISPLAY_METHOD=		xwindows
+ALL_TARGET=		xmame.${DISPLAY_METHOD}
 
 MAMEDIR=		${PREFIX}/share/xmame
 .if exists(/usr/include/machine/joystick.h)
