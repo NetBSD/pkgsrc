@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.419 2000/03/25 17:17:37 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.420 2000/03/26 08:11:21 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2570,10 +2570,11 @@ print-pkg-size:
 	fi ;								\
 	)								\
 	| sort -u							\
+	| ${SED} -e 's, ,\\ ,g'						\
 	| xargs ls -ld							\
-	| awk 'BEGIN { sum=0; }						\
-	       { sum+=$$5; }						\
-	       END { print sum; }'
+	| ${AWK} 'BEGIN { sum=0; }					\
+		  { sum+=$$5; }						\
+		  END { print sum; }'
 
 # Find sizes of required pkgs
 print-pkg-depend-sizes:
