@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.24 2004/04/11 19:44:27 seb Exp $
+# $NetBSD: HACKS,v 1.25 2004/05/30 00:14:43 recht Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -411,4 +411,15 @@ descr
 	Hence openssl's bn_prime.pl perl script fails.
 	Use POSIX::floor() as a workaround.
 	See perl ticket #25249.
+kcah
+
+hack	alpha c++ -O2 bug
+cdate	Wed Feb 16 13:24:06 2000
+who	recht
+port	alpha
+file	graphics/freetype2/Makefile
+pr	25742
+descr
+	The default compiler flags on the alpha port "-O2 -mieee"
+	cause the c++ compiler to generate buggy code.
 kcah
