@@ -1,16 +1,28 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/12 21:32:54 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2004/06/27 08:50:03 seb Exp $
 
---- doc/barcode.info.orig	Thu Nov  9 16:26:37 2000
-+++ doc/barcode.info
-@@ -13,6 +13,11 @@
-    This file documents version 0.96 of the barcode library and sample
- programs (November 2000).
+--- Makefile.in.orig	2001-10-17 13:26:21.000000000 +0000
++++ Makefile.in
+@@ -55,7 +55,7 @@ $(LIBRARY): $(LIBOBJECTS)
+ 	$(RANLIB) $(LIBRARY)
  
-+INFO-DIR-SECTION Miscellaneous
-+START-INFO-DIR-ENTRY
-+* Barcode: (barcode).             A barcode generation program and library.
-+END-INFO-DIR-ENTRY
-+
- * Menu:
+ $(MAN1) $(MAN3): doc/doc.$(TARGET)
+-	awk -f doc/manpager doc/doc.$(TARGET)
++	${AWK} -f doc/manpager doc/doc.$(TARGET)
  
- * Overview::
+ 
+ # Unfortunately, pmake has no "-C". Also, "pmake -n" doesn't follow the cd.
+@@ -63,8 +63,12 @@ $(INFO): doc/doc.$(TARGET)
+ 	cd doc && $(MAKE) 
+ 
+ install:
+-	$(INSTALL) -d $(BINDIR) $(INCDIR) $(LIBDIR) $(MAN1DIR) \
+-		$(MAN3DIR) $(INFODIR)
++	$(INSTALL) -d $(BINDIR)
++	$(INSTALL) -d $(INCDIR)
++	$(INSTALL) -d $(LIBDIR)
++	$(INSTALL) -d $(MAN1DIR)
++	$(INSTALL) -d $(MAN3DIR)
++	$(INSTALL) -d $(INFODIR)
+ 	$(INSTALL) -c $(TARGET) $(BINDIR)
+ 	$(INSTALL) -c -m 0644 $(HEADER) $(INCDIR)
+ 	$(INSTALL) -c -m 0644  $(LIBRARY) $(LIBDIR)
