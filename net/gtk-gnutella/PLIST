@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2004/08/02 09:00:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/12/03 13:12:05 adam Exp $
 bin/gtk-gnutella
+share/gtk-gnutella/bogons.txt
+share/gtk-gnutella/geo-ip.txt
 share/gtk-gnutella/gwcache.boot
 share/gtk-gnutella/hostiles.txt
 share/gtk-gnutella/pixmaps/arrow_down.xpm
@@ -13,6 +15,10 @@ share/gtk-gnutella/pixmaps/download.xpm
 share/gtk-gnutella/pixmaps/exit.xpm
 share/gtk-gnutella/pixmaps/filter.xpm
 share/gtk-gnutella/pixmaps/firewall.xpm
+share/gtk-gnutella/pixmaps/firewall_punchable.xpm
+share/gtk-gnutella/pixmaps/firewall_tcp.xpm
+share/gtk-gnutella/pixmaps/firewall_udp.xpm
+share/gtk-gnutella/pixmaps/firewall_udp_punchable.xpm
 share/gtk-gnutella/pixmaps/freeze.xpm
 share/gtk-gnutella/pixmaps/icon.xpm
 share/gtk-gnutella/pixmaps/leaf.xpm
@@ -26,10 +32,12 @@ share/gtk-gnutella/pixmaps/stock_form-time-field-16.xpm
 share/gtk-gnutella/pixmaps/thaw.xpm
 share/gtk-gnutella/pixmaps/ultra.xpm
 share/gtk-gnutella/pixmaps/upload.xpm
+share/gtk-gnutella/pixmaps/warning.xpm
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gtk-gnutella.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gtk-gnutella.mo
 @dirrm share/gtk-gnutella/pixmaps
 @dirrm share/gtk-gnutella
