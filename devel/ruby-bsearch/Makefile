@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/01/03 15:50:00 taca Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/04 09:47:56 taca Exp $
 
 DISTNAME=	ruby-bsearch-${VERSION}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}bsearch-${VERSION}
@@ -33,7 +33,6 @@ do-install:
 test:
 	cd ${WRKSRC}/tests; make
 
-#.include "../../textproc/ruby-rdtool/Makefile.common"
-.include "../ruby-rdtool/Makefile.common"
+.include "../../textproc/ruby-rdtool/Makefile.common"
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
