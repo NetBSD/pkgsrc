@@ -1,0 +1,19 @@
+--- configure.orig	Fri Jul 17 13:52:31 1998
++++ configure	Fri Jul 17 13:53:03 1998
+@@ -1764,7 +1764,7 @@
+ NM="$ac_cv_path_NM"
+ echo "$ac_t""$NM" 1>&6
+ 
+-
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(top_builddir)/libtool'
+ 
+@@ -1814,6 +1814,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
++fi
+ 
+ for ac_prog in 'bison -y' byacc
+ do
