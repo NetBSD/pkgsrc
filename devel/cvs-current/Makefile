@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/08/18 09:04:17 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/13 14:01:29 kim Exp $
 #
 
 DISTNAME=       cvs-1.10.6
@@ -13,11 +13,19 @@ USE_GTEXINFO=	yes
 
 BUILD_DEFS+=	USE_KERBEROS4 USE_KERBEROS5 RCS_LOCALID
 
-#.if exists(/usr/lib/libkrb.a)
-#CONFIGURE_ARGS+=	--with-krb4=/usr --enable-encryption
-#.endif
-
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_KERBEROS4)
+CONFIGURE_ARGS+=	--with-krb4=/usr --enable-encryption
+.else
+CONFIGURE_ARGS+=	--with-krb4=no
+.endif
+
+.if defined(USE_KERBEROS5)
+CONFIGURE_ARGS+=	--with-gssapi
+.else
+CONFIGURE_ARGS+=	--with-gssapi=no
+.endif
 
 .if defined(RCS_LOCALID)
 CFLAGS+=	-DLOCALID=\"\\\"${RCS_LOCALID}\\\"\"
