@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2001/03/10 10:51:03 frueauf Exp $
+# $NetBSD: Makefile,v 1.89 2001/03/23 10:01:01 wiz Exp $
 #
 
 DISTNAME=       fetchmail-5.7.2
@@ -38,6 +38,9 @@ BUILD_DEFS+=	FETCHMAIL_USE_SSL
 .if defined(KERBEROS)
 USE_KERBEROS=	yes
 CONFIGURE_ARGS+=--with-kerberos=yes
+.if ${MACHINE_PLATFORM:MNetBSD-1.[0-4]*-i386} == ""
+REPLACE_KERBEROS_LIBS=	# defined
+.endif
 .else
 CONFIGURE_ARGS+=--with-kerberos=no
 .endif
@@ -53,6 +56,15 @@ post-extract:
 	@${RM} -f ${WRKSRC}/md5.h
 .endif
 	@${MV} ${WRKSRC}/fetchmail.man ${WRKSRC}/fetchmail.tbl
+.if defined(REPLACE_KERBEROS_LIBS)
+	cd ${WRKSRC} && \
+	for F in configure.in configure; do \
+		${SED} -e "s/-lkrb -ldes/-lkrb -ldes -lcom_err -lroken/" \
+			$$F > $$F.mod; \
+		${MV} -f $$F.mod $$F; \
+	done
+	${CHMOD} a+x ${WRKSRC}/configure
+.endif
 
 pre-configure:
 	(cd ${WRKSRC}; autoreconf)
