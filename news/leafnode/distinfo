@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/06/16 11:34:26 cjep Exp $
+
+SHA1 (leafnode-1.9.22.tar.gz) = fde8b7b97247a184438c1395fc7d3b3c8a12418e
+Size (leafnode-1.9.22.tar.gz) = 641708 bytes
+SHA1 (patch-aa) = 442143f000b0c1af91bbeda81bcaead26204deb6
