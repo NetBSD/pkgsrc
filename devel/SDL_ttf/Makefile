@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/12/07 21:25:28 jmc Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/27 18:31:28 jlam Exp $
 #
 
 DISTNAME=	SDL_ttf-2.0.3
@@ -9,12 +9,13 @@ MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.libsdl.org/projects/SDL_ttf/
 COMMENT=	use TrueType fonts in your SDL applications
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-.include "../../devel/SDL/buildlink.mk"
-.include "../../graphics/freetype2/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/SDL/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
