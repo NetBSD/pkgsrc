@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/14 11:44:22 jtb Exp $
+bin/iselect
+man/man1/iselect.1

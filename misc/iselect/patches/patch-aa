@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/14 11:44:22 jtb Exp $
+
+--- iselect_browse.c.orig	Tue Feb 13 13:38:50 2001
++++ iselect_browse.c
+@@ -758,7 +758,7 @@
+                      nRelLastDraw = nAbsLastLine-nAbsFirstLine;
+                      strcpy(msg, "");
+                      iSelect_Draw(wField, wYSize, wXSize, wYPos, wXPos, nAbsFirstLine, nAbsLastLine, nRelMarked, nRelFirstDraw, nRelLastDraw, nLines, sField, title, name, mField, msg, tagbegin, tagend);
+-#ifndef USE_SLCURSES
++#ifdef USE_NCURSES
+                      redrawwin(wField);
+ #endif
+                      wrefresh(wField);
