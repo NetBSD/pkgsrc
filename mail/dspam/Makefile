@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/10/28 06:03:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2004/10/28 10:12:47 adrianp Exp $
 
 DISTNAME=	dspam-3.2.0
 PKGREVISION=	1
@@ -15,17 +15,19 @@ USE_LIBTOOL=		yes
 USE_PERL5=		yes
 REPLACE_PERL=		tools/dspam_genaliases.in			\
 			tools/dspam_corpus.in				\
-			cgi/*.cgi configure.pl.in
+			cgi/*.cgi cgi/configure.pl.in
 
 PKGCONFIG_OVERRIDE+=	dspam.pc.in
 
 SUBST_CLASSES+=		cgi
 SUBST_STAGE.cgi=	post-patch
-SUBST_FILES.cgi=	cgi/dspam.cgi cgi/admin.cgi
+SUBST_FILES.cgi=	cgi/dspam.cgi cgi/admin.cgi \
+			cgi/templates/nav_performance.html
 SUBST_SED.cgi=		-e "s|/usr/local/bin/dspam|${PREFIX}/bin/dspam|g" \
 			-e "s|/var/dspam|${DSPAM_HOME}|g"		\
 			-e "s|/usr/local|${PREFIX}|g"			\
-			-e "s|-deaf|${DSPAM_PSFLAGS}|g"
+			-e "s|-deaf|${DSPAM_PSFLAGS}|g"			\
+			-e "s|yourdomain.com|${DSPAM_DOMAIN}|g"
 SUBST_MESSAGE.cgi=	"Fixing paths and default options."
 
 BUILD_DEFS+=		DSPAM_HOME
@@ -33,6 +35,7 @@ BUILD_DEFS+=		DSPAM_SIGNATURE_LIFE
 BUILD_DEFS+=		DSPAM_USER DSPAM_GROUP
 BUILD_DEFS+=		DSPAM_BINMODE
 BUILD_DEFS+=		DSPAM_LOGDIR
+BUILD_DEFS+=		DSPAM_DOMAIN
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,6 +46,7 @@ DSPAM_BINMODE?=		4511
 DSPAM_USER?=		dspam
 DSPAM_GROUP?=		dspam
 DSPAM_LOGDIR?=		${DSPAM_HOME}/log
+DSPAM_DOMAIN?=		yourdomain.com
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
@@ -63,7 +67,8 @@ DATADIR=	${PREFIX}/share/dspam
 EGDIR=		${PREFIX}/share/examples/dspam
 
 USE_PKGINSTALL=		yes
-CONF_FILES=		${EGDIR}/dspam.conf ${PKG_SYSCONFDIR}/dspam.conf
+CONF_FILES_PERMS=	${EGDIR}/dspam.conf ${PKG_SYSCONFDIR}/dspam.conf \
+			${BINOWN} ${DSPAM_GROUP} 0640
 
 PKG_GROUPS=		${DSPAM_GROUP}
 PKG_USERS=		${DSPAM_USER}:${DSPAM_GROUP}
