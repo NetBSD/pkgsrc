@@ -1,8 +1,8 @@
-$NetBSD: patch-bz,v 1.8 2003/07/30 13:34:59 markd Exp $
+$NetBSD: patch-bz,v 1.9 2004/01/15 10:15:14 markd Exp $
 
---- klipper/Makefile.in.orig	2003-07-15 22:03:37.000000000 +1200
+--- klipper/Makefile.in.orig	2004-01-02 14:06:00.000000000 +1300
 +++ klipper/Makefile.in
-@@ -424,27 +424,29 @@ x_libraries = @x_libraries@
+@@ -425,27 +425,29 @@ x_libraries = @x_libraries@
  INCLUDES = $(all_includes)
  
  bin_PROGRAMS = klipper
@@ -42,7 +42,7 @@ $NetBSD: patch-bz,v 1.8 2003/07/30 13:34:59 markd Exp $
  #>- klipper_panelapplet_la_SOURCES = applet.cpp applet.skel
  #>+ 1
  klipper_panelapplet_la_SOURCES=applet.cpp  applet_skel.cpp
-@@ -470,17 +472,12 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -472,17 +474,12 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES) $(lib_LTLIBRARIES)
  
@@ -65,7 +65,7 @@ $NetBSD: patch-bz,v 1.8 2003/07/30 13:34:59 markd Exp $
  am_klipper_panelapplet_la_OBJECTS = applet.lo
  #>- klipper_panelapplet_la_OBJECTS = $(am_klipper_panelapplet_la_OBJECTS)
  #>+ 4
-@@ -488,31 +485,44 @@ klipper_panelapplet_la_final_OBJECTS = k
+@@ -490,31 +487,44 @@ klipper_panelapplet_la_final_OBJECTS = k
  klipper_panelapplet_la_nofinal_OBJECTS = applet.lo applet_skel.lo
  @KDE_USE_FINAL_FALSE@klipper_panelapplet_la_OBJECTS = $(klipper_panelapplet_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@klipper_panelapplet_la_OBJECTS = $(klipper_panelapplet_la_final_OBJECTS)
@@ -125,7 +125,7 @@ $NetBSD: patch-bz,v 1.8 2003/07/30 13:34:59 markd Exp $
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -533,11 +543,11 @@ CXXLD = $(CXX)
+@@ -535,11 +545,11 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  DIST_SOURCES = $(klipper_la_SOURCES) $(klipper_panelapplet_la_SOURCES) \
@@ -139,7 +139,7 @@ $NetBSD: patch-bz,v 1.8 2003/07/30 13:34:59 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -614,6 +624,8 @@ klipper.la: $(klipper_la_OBJECTS) $(klip
+@@ -616,6 +626,8 @@ klipper.la: $(klipper_la_OBJECTS) $(klip
  	$(CXXLINK) -rpath $(libdir) $(klipper_la_LDFLAGS) $(klipper_la_OBJECTS) $(klipper_la_LIBADD) $(LIBS)
  klipper_panelapplet.la: $(klipper_panelapplet_la_OBJECTS) $(klipper_panelapplet_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(kde_moduledir) $(klipper_panelapplet_la_LDFLAGS) $(klipper_panelapplet_la_OBJECTS) $(klipper_panelapplet_la_LIBADD) $(LIBS)
@@ -148,7 +148,7 @@ $NetBSD: patch-bz,v 1.8 2003/07/30 13:34:59 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -655,7 +667,8 @@ distclean-compile:
+@@ -657,7 +669,8 @@ distclean-compile:
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/applet.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/configdialog.Plo@am__quote@
@@ -158,16 +158,16 @@ $NetBSD: patch-bz,v 1.8 2003/07/30 13:34:59 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/toplevel.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/urlgrabber.Plo@am__quote@
-@@ -833,7 +846,7 @@ distclean-tags:
+@@ -835,7 +848,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=toplevel.h cr64-app-klipper.png klipperrc.desktop klipperbindings.cpp cr48-app-klipper.png klipper.desktop cr22-app-klipper.png cr32-app-klipper.png urlgrabber.h klipperrc.upd klipper-kde31.sh cr128-app-klipper.png configdialog.h cr16-app-klipper.png klipper-1-2.pl version.h klippershortcuts.upd applet.h 
+-KDE_DIST=klipperrc.upd cr64-app-klipper.png urlgrabber.h cr22-app-klipper.png toplevel.h configdialog.h cr16-app-klipper.png klipper-kde31.sh cr128-app-klipper.png klippershortcuts.upd klipper.desktop applet.h cr32-app-klipper.png klipperrc.desktop cr48-app-klipper.png klipper-1-2.pl klipperbindings.cpp version.h 
 +KDE_DIST=applet.h cr128-app-klipper.png cr22-app-klipper.png toplevel.h cr48-app-klipper.png cr64-app-klipper.png klipper-kde31.sh klipperbindings.cpp version.h configdialog.h cr32-app-klipper.png klipper-1-2.pl cr16-app-klipper.png klipper.desktop Makefile.in.rej klipperrc.upd urlgrabber.h klipperrc.desktop klippershortcuts.upd 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -894,7 +907,6 @@ install-strip:
+@@ -895,7 +908,6 @@ install-strip:
  mostlyclean-generic:
  
  clean-generic:
@@ -175,7 +175,7 @@ $NetBSD: patch-bz,v 1.8 2003/07/30 13:34:59 markd Exp $
  
  distclean-generic:
  	-rm -f Makefile $(CONFIG_CLEAN_FILES)
-@@ -1004,18 +1016,18 @@ dummy.cpp:
+@@ -1005,6 +1017,12 @@ dummy.cpp:
  .NOEXPORT:
  
  #>+ 5
@@ -188,36 +188,42 @@ $NetBSD: patch-bz,v 1.8 2003/07/30 13:34:59 markd Exp $
  toplevel.kidl: $(srcdir)/toplevel.h $(DCOP_DEPENDENCIES)
  	$(DCOPIDL) $(srcdir)/toplevel.h > toplevel.kidl || ( rm -f toplevel.kidl ; false )
  toplevel_skel.cpp: toplevel.kidl
- 	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub toplevel.kidl
- 
+@@ -1017,11 +1035,11 @@ urlgrabber.moc: $(srcdir)/urlgrabber.h
+ #>+ 1
+ mocs: urlgrabber.moc
  #>+ 3
 -configdialog.moc: $(srcdir)/configdialog.h
 -	$(MOC) $(srcdir)/configdialog.h -o configdialog.moc
--
--#>+ 1
--mocs: configdialog.moc
--#>+ 3
- urlgrabber.moc: $(srcdir)/urlgrabber.h
- 	$(MOC) $(srcdir)/urlgrabber.h -o urlgrabber.moc
- 
-@@ -1033,21 +1045,21 @@ applet.moc: $(srcdir)/applet.h
++toplevel.moc: $(srcdir)/toplevel.h
++	$(MOC) $(srcdir)/toplevel.h -o toplevel.moc
  
  #>+ 1
+-mocs: configdialog.moc
++mocs: toplevel.moc
+ #>+ 3
+ applet.moc: $(srcdir)/applet.h
+ 	$(MOC) $(srcdir)/applet.h -o applet.moc
+@@ -1029,26 +1047,20 @@ applet.moc: $(srcdir)/applet.h
+ #>+ 1
  mocs: applet.moc
+ #>+ 3
+-toplevel.moc: $(srcdir)/toplevel.h
+-	$(MOC) $(srcdir)/toplevel.h -o toplevel.moc
++configdialog.moc: $(srcdir)/configdialog.h
++	$(MOC) $(srcdir)/configdialog.h -o configdialog.moc
+ 
+ #>+ 1
+-mocs: toplevel.moc
 -#>+ 5
 -applet.kidl: $(srcdir)/applet.h $(DCOP_DEPENDENCIES)
 -	$(DCOPIDL) $(srcdir)/applet.h > applet.kidl || ( rm -f applet.kidl ; false )
 -applet_skel.cpp: applet.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub applet.kidl
-+#>+ 3
-+configdialog.moc: $(srcdir)/configdialog.h
-+	$(MOC) $(srcdir)/configdialog.h -o configdialog.moc
- 
-+#>+ 1
+-
 +mocs: configdialog.moc
  #>+ 3
  clean-metasources:
--	-rm -f  configdialog.moc urlgrabber.moc toplevel.moc applet.moc
+-	-rm -f  urlgrabber.moc configdialog.moc applet.moc toplevel.moc
 +	-rm -f  urlgrabber.moc toplevel.moc applet.moc configdialog.moc
  
  #>+ 5
@@ -230,7 +236,7 @@ $NetBSD: patch-bz,v 1.8 2003/07/30 13:34:59 markd Exp $
  
  #>+ 2
  docs-am:
-@@ -1083,18 +1095,6 @@ force-reedit:
+@@ -1084,18 +1096,6 @@ force-reedit:
  
  
  #>+ 11
@@ -249,7 +255,7 @@ $NetBSD: patch-bz,v 1.8 2003/07/30 13:34:59 markd Exp $
  klipper_panelapplet_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/applet.cpp applet_skel.cpp  applet.moc
  	@echo 'creating klipper_panelapplet_la.all_cpp.cpp ...'; \
  	rm -f klipper_panelapplet_la.all_cpp.files klipper_panelapplet_la.all_cpp.final; \
-@@ -1106,22 +1106,34 @@ klipper_panelapplet_la.all_cpp.cpp: $(sr
+@@ -1107,22 +1107,34 @@ klipper_panelapplet_la.all_cpp.cpp: $(sr
  	cat klipper_panelapplet_la.all_cpp.final klipper_panelapplet_la.all_cpp.files > klipper_panelapplet_la.all_cpp.cpp; \
  	rm -f klipper_panelapplet_la.all_cpp.final klipper_panelapplet_la.all_cpp.files
  
@@ -289,19 +295,19 @@ $NetBSD: patch-bz,v 1.8 2003/07/30 13:34:59 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1131,11 +1143,11 @@ kde-rpo-clean:
+@@ -1132,11 +1144,11 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 9
+-applet.lo: applet.moc 
+-urlgrabber.lo: urlgrabber.moc 
+ urlgrabber.o: urlgrabber.moc 
 -toplevel.lo: toplevel.moc 
-+urlgrabber.o: urlgrabber.moc 
-+toplevel.o: toplevel.moc 
- urlgrabber.lo: urlgrabber.moc 
 -configdialog.lo: configdialog.moc 
+ toplevel.o: toplevel.moc 
++urlgrabber.lo: urlgrabber.moc 
 +toplevel.lo: toplevel.moc 
- applet.lo: applet.moc 
++applet.lo: applet.moc 
  applet.o: applet.moc 
 +configdialog.lo: configdialog.moc 
  configdialog.o: configdialog.moc 
--urlgrabber.o: urlgrabber.moc 
--toplevel.o: toplevel.moc 

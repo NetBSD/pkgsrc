@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
+$NetBSD: patch-ao,v 1.7 2004/01/15 10:15:14 markd Exp $
 
---- kcontrol/kcontrol/Makefile.in.orig	2003-07-15 22:03:19.000000000 +1200
+--- kcontrol/kcontrol/Makefile.in.orig	2004-01-02 14:05:56.000000000 +1300
 +++ kcontrol/kcontrol/Makefile.in
-@@ -446,52 +446,65 @@ INCLUDES = $(all_includes)
+@@ -447,52 +447,65 @@ INCLUDES = $(all_includes)
  
  SUBDIRS = . pics
  
@@ -95,7 +95,7 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
  kcminit_LDFLAGS = $(all_libraries) $(KDE_RPATH) -export-dynamic
  
  rccontroldir = $(kde_datadir)/kcontrol
-@@ -510,7 +523,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -512,7 +525,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -104,7 +104,7 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
  am_kcminit_la_OBJECTS = kcminit.lo global.lo
  #>- kcminit_la_OBJECTS = $(am_kcminit_la_OBJECTS)
  #>+ 4
-@@ -518,60 +531,84 @@ kcminit_la_final_OBJECTS = kcminit_la.al
+@@ -520,60 +533,84 @@ kcminit_la_final_OBJECTS = kcminit_la.al
  kcminit_la_nofinal_OBJECTS = kcminit.lo global.lo
  @KDE_USE_FINAL_FALSE@kcminit_la_OBJECTS = $(kcminit_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@kcminit_la_OBJECTS = $(kcminit_la_final_OBJECTS)
@@ -214,7 +214,7 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
  #>- @AMDEP_TRUE@	./$(DEPDIR)/kecdialog.Plo ./$(DEPDIR)/main.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/modloader.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/moduleIface.Plo \
-@@ -582,13 +619,19 @@ am__depfiles_maybe = depfiles
+@@ -584,13 +621,19 @@ am__depfiles_maybe = depfiles
  #>- @AMDEP_TRUE@	./$(DEPDIR)/quickhelp.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/searchwidget.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/toplevel.Plo
@@ -238,7 +238,7 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kecdialog.Plo ./$(DEPDIR)/main.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/modloader.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/moduleIface.Plo \
-@@ -600,11 +643,17 @@ am__depfiles_maybe = depfiles
+@@ -602,11 +645,17 @@ am__depfiles_maybe = depfiles
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/searchwidget.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/toplevel.Plo
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/kcdialog_skel.P $(DEPDIR)/moduleIface_skel.P  ./$(DEPDIR)/aboutwidget.Plo \
@@ -258,7 +258,7 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kecdialog.Plo ./$(DEPDIR)/main.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/modloader.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/moduleIface.Plo \
-@@ -635,8 +684,9 @@ CXXLD = $(CXX)
+@@ -637,8 +686,9 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  DIST_SOURCES = $(kcminit_la_SOURCES) $(kcmshell_la_SOURCES) \
@@ -270,7 +270,7 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
  DATA = $(data_DATA) $(rccontrol_DATA) $(rcinfo_DATA)
  
  
-@@ -647,7 +697,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -649,7 +699,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	check-recursive installcheck-recursive
  DIST_COMMON = Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -279,7 +279,7 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -698,6 +748,12 @@ kcmshell.la: $(kcmshell_la_OBJECTS) $(kc
+@@ -700,6 +750,12 @@ kcmshell.la: $(kcmshell_la_OBJECTS) $(kc
  	$(CXXLINK) -rpath $(libdir) $(kcmshell_la_LDFLAGS) $(kcmshell_la_OBJECTS) $(kcmshell_la_LIBADD) $(LIBS)
  kcontrol.la: $(kcontrol_la_OBJECTS) $(kcontrol_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kcontrol_la_LDFLAGS) $(kcontrol_la_OBJECTS) $(kcontrol_la_LIBADD) $(LIBS)
@@ -292,7 +292,7 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -745,13 +801,17 @@ distclean-compile:
+@@ -747,13 +803,17 @@ distclean-compile:
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/aboutwidget.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dockcontainer.Plo@am__quote@
@@ -311,16 +311,16 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kcrootonly.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kecdialog.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
-@@ -985,7 +1045,7 @@ distclean-tags:
+@@ -993,7 +1053,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=cr32-app-kcontrol.png cr48-app-kcontrol.png kcdialog.h proxywidget.h quickhelp.h KControl_NoDisplay.desktop cr64-app-kcontrol.png aboutwidget.h global.h toplevel.h modulemenu.h modulemenu.cpp kinfocenterui.rc kcontrolui.rc kcmshell.h kinfocenter.desktop helpwidget.h main.h moduleinfo.h moduletreeview.h searchwidget.h moduleiconview.h dockcontainer.h kecdialog.h cr16-app-kcontrol.png version.h cr128-app-kcontrol.png indexwidget.h KControl.desktop moduleIface.h modules.h modloader.h kcrootonly.h 
+-KDE_DIST=cr16-app-kcontrol.png cr32-app-kcontrol.png moduleIface.h kcontrolui.rc cr48-app-kcontrol.png kcrootonly.h kcmshell.h cr64-app-kcontrol.png modulemenu.h modulemenu.cpp KControl_NoDisplay.desktop helpwidget.h moduleiconview.h KControl.desktop modloader.h moduleinfo.h aboutwidget.h quickhelp.h dockcontainer.h toplevel.h kinfocenterui.rc global.h moduletreeview.h indexwidget.h modules.h main.h kcdialog.h kecdialog.h proxywidget.h searchwidget.h version.h cr128-app-kcontrol.png kinfocenter.desktop 
 +KDE_DIST=kcontrolui.rc indexwidget.h cr64-app-kcontrol.png kinfocenterui.rc proxywidget.h dockcontainer.h cr32-app-kcontrol.png modulemenu.h quickhelp.h cr128-app-kcontrol.png searchwidget.h main.h Makefile.in.rej moduletreeview.h kcdialog.h kecdialog.h moduleIface.h aboutwidget.h kinfocenter.desktop kcrootonly.h toplevel.h helpwidget.h KControl.desktop cr48-app-kcontrol.png modules.h version.h cr16-app-kcontrol.png moduleiconview.h KControl_NoDisplay.desktop moduleinfo.h global.h kcmshell.h modulemenu.cpp modloader.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -1059,7 +1119,6 @@ install-strip:
+@@ -1067,7 +1127,6 @@ install-strip:
  mostlyclean-generic:
  
  clean-generic:
@@ -328,7 +328,7 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
  
  distclean-generic:
  	-rm -f Makefile $(CONFIG_CLEAN_FILES)
-@@ -1164,49 +1223,34 @@ install-data-local: KControl_NoDisplay.d
+@@ -1172,67 +1231,58 @@ install-data-local: KControl_NoDisplay.d
  
  messages: rc.cpp
  	$(XGETTEXT) *.cpp -o $(podir)/kcontrol.pot
@@ -340,181 +340,172 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
  .NOEXPORT:
  
  #>+ 3
--moduleinfo.moc: $(srcdir)/moduleinfo.h
--	$(MOC) $(srcdir)/moduleinfo.h -o moduleinfo.moc
+-kcmshell.moc: $(srcdir)/kcmshell.h
+-	$(MOC) $(srcdir)/kcmshell.h -o kcmshell.moc
 -
 -#>+ 1
--mocs: moduleinfo.moc
+-mocs: kcmshell.moc
 -#>+ 3
- indexwidget.moc: $(srcdir)/indexwidget.h
- 	$(MOC) $(srcdir)/indexwidget.h -o indexwidget.moc
+-proxywidget.moc: $(srcdir)/proxywidget.h
+-	$(MOC) $(srcdir)/proxywidget.h -o proxywidget.moc
++indexwidget.moc: $(srcdir)/indexwidget.h
++	$(MOC) $(srcdir)/indexwidget.h -o indexwidget.moc
  
  #>+ 1
- mocs: indexwidget.moc
+-mocs: proxywidget.moc
++mocs: indexwidget.moc
  #>+ 3
--moduleiconview.moc: $(srcdir)/moduleiconview.h
--	$(MOC) $(srcdir)/moduleiconview.h -o moduleiconview.moc
--
--#>+ 1
--mocs: moduleiconview.moc
--#>+ 3
--dockcontainer.moc: $(srcdir)/dockcontainer.h
--	$(MOC) $(srcdir)/dockcontainer.h -o dockcontainer.moc
+-moduletreeview.moc: $(srcdir)/moduletreeview.h
+-	$(MOC) $(srcdir)/moduletreeview.h -o moduletreeview.moc
 +main.moc: $(srcdir)/main.h
 +	$(MOC) $(srcdir)/main.h -o main.moc
  
  #>+ 1
--mocs: dockcontainer.moc
+-mocs: moduletreeview.moc
 +mocs: main.moc
  #>+ 3
--aboutwidget.moc: $(srcdir)/aboutwidget.h
--	$(MOC) $(srcdir)/aboutwidget.h -o aboutwidget.moc
+-toplevel.moc: $(srcdir)/toplevel.h
+-	$(MOC) $(srcdir)/toplevel.h -o toplevel.moc
 +moduleinfo.moc: $(srcdir)/moduleinfo.h
 +	$(MOC) $(srcdir)/moduleinfo.h -o moduleinfo.moc
  
  #>+ 1
--mocs: aboutwidget.moc
+-mocs: toplevel.moc
 +mocs: moduleinfo.moc
  #>+ 3
--proxywidget.moc: $(srcdir)/proxywidget.h
--	$(MOC) $(srcdir)/proxywidget.h -o proxywidget.moc
+-aboutwidget.moc: $(srcdir)/aboutwidget.h
+-	$(MOC) $(srcdir)/aboutwidget.h -o aboutwidget.moc
 +kcmshell.moc: $(srcdir)/kcmshell.h
 +	$(MOC) $(srcdir)/kcmshell.h -o kcmshell.moc
  
  #>+ 1
--mocs: proxywidget.moc
+-mocs: aboutwidget.moc
 +mocs: kcmshell.moc
  #>+ 3
- helpwidget.moc: $(srcdir)/helpwidget.h
- 	$(MOC) $(srcdir)/helpwidget.h -o helpwidget.moc
-@@ -1214,17 +1258,29 @@ helpwidget.moc: $(srcdir)/helpwidget.h
+-kecdialog.moc: $(srcdir)/kecdialog.h
+-	$(MOC) $(srcdir)/kecdialog.h -o kecdialog.moc
++helpwidget.moc: $(srcdir)/helpwidget.h
++	$(MOC) $(srcdir)/helpwidget.h -o helpwidget.moc
+ 
  #>+ 1
- mocs: helpwidget.moc
+-mocs: kecdialog.moc
++mocs: helpwidget.moc
  #>+ 3
--quickhelp.moc: $(srcdir)/quickhelp.h
--	$(MOC) $(srcdir)/quickhelp.h -o quickhelp.moc
+-moduleiconview.moc: $(srcdir)/moduleiconview.h
+-	$(MOC) $(srcdir)/moduleiconview.h -o moduleiconview.moc
 +toplevel.moc: $(srcdir)/toplevel.h
 +	$(MOC) $(srcdir)/toplevel.h -o toplevel.moc
  
  #>+ 1
--mocs: quickhelp.moc
+-mocs: moduleiconview.moc
 +mocs: toplevel.moc
  #>+ 3
--main.moc: $(srcdir)/main.h
--	$(MOC) $(srcdir)/main.h -o main.moc
+-moduleIface.moc: $(srcdir)/moduleIface.h
+-	$(MOC) $(srcdir)/moduleIface.h -o moduleIface.moc
 +moduletreeview.moc: $(srcdir)/moduletreeview.h
 +	$(MOC) $(srcdir)/moduletreeview.h -o moduletreeview.moc
  
  #>+ 1
--mocs: main.moc
+-mocs: moduleIface.moc
 +mocs: moduletreeview.moc
-+#>+ 3
+ #>+ 3
+-dockcontainer.moc: $(srcdir)/dockcontainer.h
+-	$(MOC) $(srcdir)/dockcontainer.h -o dockcontainer.moc
 +kecdialog.moc: $(srcdir)/kecdialog.h
 +	$(MOC) $(srcdir)/kecdialog.h -o kecdialog.moc
-+
-+#>+ 1
-+mocs: kecdialog.moc
-+#>+ 3
-+modulemenu.moc: $(srcdir)/modulemenu.h
-+	$(MOC) $(srcdir)/modulemenu.h -o modulemenu.moc
-+
-+#>+ 1
-+mocs: modulemenu.moc
- #>+ 3
- modules.moc: $(srcdir)/modules.h
- 	$(MOC) $(srcdir)/modules.h -o modules.moc
-@@ -1232,53 +1288,53 @@ modules.moc: $(srcdir)/modules.h
+ 
  #>+ 1
- mocs: modules.moc
+-mocs: dockcontainer.moc
++mocs: kecdialog.moc
  #>+ 3
--kcdialog.moc: $(srcdir)/kcdialog.h
--	$(MOC) $(srcdir)/kcdialog.h -o kcdialog.moc
+ modulemenu.moc: $(srcdir)/modulemenu.h
+ 	$(MOC) $(srcdir)/modulemenu.h -o modulemenu.moc
+@@ -1240,17 +1290,17 @@ modulemenu.moc: $(srcdir)/modulemenu.h
+ #>+ 1
+ mocs: modulemenu.moc
+ #>+ 3
+-moduleinfo.moc: $(srcdir)/moduleinfo.h
+-	$(MOC) $(srcdir)/moduleinfo.h -o moduleinfo.moc
++modules.moc: $(srcdir)/modules.h
++	$(MOC) $(srcdir)/modules.h -o modules.moc
+ 
+ #>+ 1
+-mocs: moduleinfo.moc
++mocs: modules.moc
+ #>+ 3
+-quickhelp.moc: $(srcdir)/quickhelp.h
+-	$(MOC) $(srcdir)/quickhelp.h -o quickhelp.moc
 +moduleiconview.moc: $(srcdir)/moduleiconview.h
 +	$(MOC) $(srcdir)/moduleiconview.h -o moduleiconview.moc
  
  #>+ 1
--mocs: kcdialog.moc
+-mocs: quickhelp.moc
 +mocs: moduleiconview.moc
  #>+ 3
--moduletreeview.moc: $(srcdir)/moduletreeview.h
--	$(MOC) $(srcdir)/moduletreeview.h -o moduletreeview.moc
-+kcdialog.moc: $(srcdir)/kcdialog.h
-+	$(MOC) $(srcdir)/kcdialog.h -o kcdialog.moc
- 
+ kcdialog.moc: $(srcdir)/kcdialog.h
+ 	$(MOC) $(srcdir)/kcdialog.h -o kcdialog.moc
+@@ -1264,29 +1314,35 @@ searchwidget.moc: $(srcdir)/searchwidget
  #>+ 1
--mocs: moduletreeview.moc
-+mocs: kcdialog.moc
+ mocs: searchwidget.moc
  #>+ 3
--kecdialog.moc: $(srcdir)/kecdialog.h
--	$(MOC) $(srcdir)/kecdialog.h -o kecdialog.moc
-+searchwidget.moc: $(srcdir)/searchwidget.h
-+	$(MOC) $(srcdir)/searchwidget.h -o searchwidget.moc
- 
- #>+ 1
--mocs: kecdialog.moc
-+mocs: searchwidget.moc
- #>+ 3
--toplevel.moc: $(srcdir)/toplevel.h
--	$(MOC) $(srcdir)/toplevel.h -o toplevel.moc
+-modules.moc: $(srcdir)/modules.h
+-	$(MOC) $(srcdir)/modules.h -o modules.moc
 +moduleIface.moc: $(srcdir)/moduleIface.h
 +	$(MOC) $(srcdir)/moduleIface.h -o moduleIface.moc
  
  #>+ 1
--mocs: toplevel.moc
+-mocs: modules.moc
 +mocs: moduleIface.moc
  #>+ 3
--modulemenu.moc: $(srcdir)/modulemenu.h
--	$(MOC) $(srcdir)/modulemenu.h -o modulemenu.moc
+-helpwidget.moc: $(srcdir)/helpwidget.h
+-	$(MOC) $(srcdir)/helpwidget.h -o helpwidget.moc
 +aboutwidget.moc: $(srcdir)/aboutwidget.h
 +	$(MOC) $(srcdir)/aboutwidget.h -o aboutwidget.moc
  
  #>+ 1
--mocs: modulemenu.moc
+-mocs: helpwidget.moc
 +mocs: aboutwidget.moc
  #>+ 3
--kcmshell.moc: $(srcdir)/kcmshell.h
--	$(MOC) $(srcdir)/kcmshell.h -o kcmshell.moc
+-indexwidget.moc: $(srcdir)/indexwidget.h
+-	$(MOC) $(srcdir)/indexwidget.h -o indexwidget.moc
 +proxywidget.moc: $(srcdir)/proxywidget.h
 +	$(MOC) $(srcdir)/proxywidget.h -o proxywidget.moc
  
  #>+ 1
--mocs: kcmshell.moc
+-mocs: indexwidget.moc
 +mocs: proxywidget.moc
  #>+ 3
--moduleIface.moc: $(srcdir)/moduleIface.h
--	$(MOC) $(srcdir)/moduleIface.h -o moduleIface.moc
+-main.moc: $(srcdir)/main.h
+-	$(MOC) $(srcdir)/main.h -o main.moc
 +dockcontainer.moc: $(srcdir)/dockcontainer.h
 +	$(MOC) $(srcdir)/dockcontainer.h -o dockcontainer.moc
  
  #>+ 1
--mocs: moduleIface.moc
+-mocs: main.moc
 +mocs: dockcontainer.moc
- #>+ 3
--searchwidget.moc: $(srcdir)/searchwidget.h
--	$(MOC) $(srcdir)/searchwidget.h -o searchwidget.moc
++#>+ 3
 +quickhelp.moc: $(srcdir)/quickhelp.h
 +	$(MOC) $(srcdir)/quickhelp.h -o quickhelp.moc
- 
- #>+ 1
--mocs: searchwidget.moc
++
++#>+ 1
 +mocs: quickhelp.moc
  #>+ 5
  kcdialog.kidl: $(srcdir)/kcdialog.h $(DCOP_DEPENDENCIES)
  	$(DCOPIDL) $(srcdir)/kcdialog.h > kcdialog.kidl || ( rm -f kcdialog.kidl ; false )
-@@ -1293,7 +1349,7 @@ moduleIface_skel.cpp: moduleIface.kidl
+@@ -1301,7 +1357,7 @@ moduleIface_skel.cpp: moduleIface.kidl
  
  #>+ 3
  clean-metasources:
--	-rm -f  moduleinfo.moc indexwidget.moc moduleiconview.moc dockcontainer.moc aboutwidget.moc proxywidget.moc helpwidget.moc quickhelp.moc main.moc modules.moc kcdialog.moc moduletreeview.moc kecdialog.moc toplevel.moc modulemenu.moc kcmshell.moc moduleIface.moc searchwidget.moc
+-	-rm -f  kcmshell.moc proxywidget.moc moduletreeview.moc toplevel.moc aboutwidget.moc kecdialog.moc moduleiconview.moc moduleIface.moc dockcontainer.moc modulemenu.moc moduleinfo.moc quickhelp.moc kcdialog.moc searchwidget.moc modules.moc helpwidget.moc indexwidget.moc main.moc
 +	-rm -f  indexwidget.moc main.moc moduleinfo.moc kcmshell.moc helpwidget.moc toplevel.moc moduletreeview.moc kecdialog.moc modulemenu.moc modules.moc moduleiconview.moc kcdialog.moc searchwidget.moc moduleIface.moc aboutwidget.moc proxywidget.moc dockcontainer.moc quickhelp.moc
  
  #>+ 5
  clean-idl:
-@@ -1344,45 +1400,57 @@ kcminit_la.all_cpp.cpp: $(srcdir)/Makefi
+@@ -1352,45 +1408,57 @@ kcminit_la.all_cpp.cpp: $(srcdir)/Makefi
  	rm -f kcminit_la.all_cpp.final kcminit_la.all_cpp.files
  
  #>+ 11
--kcmshell_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcmshell.cpp $(srcdir)/moduleinfo.cpp $(srcdir)/modloader.cpp $(srcdir)/kecdialog.cpp $(srcdir)/proxywidget.cpp $(srcdir)/kcdialog.cpp $(srcdir)/global.cpp kcdialog_skel.cpp  kecdialog.moc kcdialog.moc moduleinfo.moc proxywidget.moc kcmshell.moc
+-kcmshell_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcmshell.cpp $(srcdir)/moduleinfo.cpp $(srcdir)/modloader.cpp $(srcdir)/kecdialog.cpp $(srcdir)/proxywidget.cpp $(srcdir)/kcdialog.cpp $(srcdir)/global.cpp kcdialog_skel.cpp  kcmshell.moc proxywidget.moc kecdialog.moc moduleinfo.moc kcdialog.moc
 -	@echo 'creating kcmshell_la.all_cpp.cpp ...'; \
 -	rm -f kcmshell_la.all_cpp.files kcmshell_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> kcmshell_la.all_cpp.final; \
@@ -546,7 +537,7 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
 +	rm -f libkcmshell_main_la.all_cpp.final libkcmshell_main_la.all_cpp.files
  
  #>+ 11
--kcontrol_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/toplevel.cpp $(srcdir)/indexwidget.cpp $(srcdir)/searchwidget.cpp $(srcdir)/helpwidget.cpp $(srcdir)/moduleinfo.cpp $(srcdir)/modules.cpp $(srcdir)/proxywidget.cpp $(srcdir)/modloader.cpp $(srcdir)/dockcontainer.cpp $(srcdir)/aboutwidget.cpp $(srcdir)/global.cpp $(srcdir)/quickhelp.cpp $(srcdir)/moduletreeview.cpp $(srcdir)/moduleiconview.cpp $(srcdir)/kecdialog.cpp $(srcdir)/kcrootonly.cpp $(srcdir)/moduleIface.cpp moduleIface_skel.cpp  indexwidget.moc dockcontainer.moc moduleiconview.moc helpwidget.moc kecdialog.moc moduletreeview.moc searchwidget.moc moduleinfo.moc aboutwidget.moc proxywidget.moc quickhelp.moc main.moc modules.moc toplevel.moc moduleIface.moc
+-kcontrol_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/toplevel.cpp $(srcdir)/indexwidget.cpp $(srcdir)/searchwidget.cpp $(srcdir)/helpwidget.cpp $(srcdir)/moduleinfo.cpp $(srcdir)/modules.cpp $(srcdir)/proxywidget.cpp $(srcdir)/modloader.cpp $(srcdir)/dockcontainer.cpp $(srcdir)/aboutwidget.cpp $(srcdir)/global.cpp $(srcdir)/quickhelp.cpp $(srcdir)/moduletreeview.cpp $(srcdir)/moduleiconview.cpp $(srcdir)/kecdialog.cpp $(srcdir)/kcrootonly.cpp $(srcdir)/moduleIface.cpp moduleIface_skel.cpp  proxywidget.moc moduletreeview.moc toplevel.moc aboutwidget.moc kecdialog.moc moduleiconview.moc moduleIface.moc dockcontainer.moc moduleinfo.moc quickhelp.moc searchwidget.moc main.moc indexwidget.moc helpwidget.moc modules.moc
 -	@echo 'creating kcontrol_la.all_cpp.cpp ...'; \
 -	rm -f kcontrol_la.all_cpp.files kcontrol_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> kcontrol_la.all_cpp.final; \
@@ -589,60 +580,52 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1392,39 +1460,39 @@ kde-rpo-clean:
+@@ -1400,39 +1468,39 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 37
--quickhelp.o: quickhelp.moc 
 +searchwidget.lo: searchwidget.moc 
- toplevel.lo: toplevel.moc 
--moduletreeview.lo: moduletreeview.moc 
--main.lo: main.moc 
--kcmshell.lo: kcmshell.moc 
--kcdialog.lo: kcdialog.moc 
--searchwidget.o: searchwidget.moc 
--modulemenu.lo: modulemenu.moc 
--moduleinfo.lo: moduleinfo.moc 
--dockcontainer.o: dockcontainer.moc 
--moduleiconview.o: moduleiconview.moc 
--modules.o: modules.moc 
--proxywidget.lo: proxywidget.moc 
--kcmshell.o: kcmshell.moc 
--dockcontainer.lo: dockcontainer.moc 
--quickhelp.lo: quickhelp.moc 
--indexwidget.o: indexwidget.moc 
--kcdialog.o: kcdialog.moc 
- helpwidget.lo: helpwidget.moc 
--modulemenu.o: modulemenu.moc 
++toplevel.lo: toplevel.moc 
++helpwidget.lo: helpwidget.moc 
 +indexwidget.o: indexwidget.moc 
 +moduleIface.lo: moduleIface.moc 
 +kcdialog.lo: kcdialog.moc 
  aboutwidget.lo: aboutwidget.moc 
+-moduleiconview.o: moduleiconview.moc 
++indexwidget.lo: indexwidget.moc 
++kecdialog.lo: kecdialog.moc 
+ dockcontainer.o: dockcontainer.moc 
 -main.o: main.moc 
- indexwidget.lo: indexwidget.moc 
--helpwidget.o: helpwidget.moc 
--moduleinfo.o: moduleinfo.moc 
--aboutwidget.o: aboutwidget.moc 
+-kcdialog.lo: kcdialog.moc 
++proxywidget.o: proxywidget.moc 
+ modulemenu.o: modulemenu.moc 
 -toplevel.o: toplevel.moc 
--moduleIface.o: moduleIface.moc 
--moduletreeview.o: moduletreeview.moc 
- kecdialog.lo: kecdialog.moc 
--searchwidget.lo: searchwidget.moc 
-+dockcontainer.o: dockcontainer.moc 
- proxywidget.o: proxywidget.moc 
--moduleIface.lo: moduleIface.moc 
--moduleiconview.lo: moduleiconview.moc 
-+modulemenu.o: modulemenu.moc 
+-moduleinfo.lo: moduleinfo.moc 
+-indexwidget.o: indexwidget.moc 
 +moduletreeview.lo: moduletreeview.moc 
 +quickhelp.o: quickhelp.moc 
 +searchwidget.o: searchwidget.moc 
 +main.o: main.moc 
 +moduletreeview.o: moduletreeview.moc 
-+dockcontainer.lo: dockcontainer.moc 
+ dockcontainer.lo: dockcontainer.moc 
+-quickhelp.lo: quickhelp.moc 
 +kcdialog.o: kcdialog.moc 
-+moduleIface.o: moduleIface.moc 
+ moduleIface.o: moduleIface.moc 
  kecdialog.o: kecdialog.moc 
-+proxywidget.lo: proxywidget.moc 
+-proxywidget.o: proxywidget.moc 
+-moduleiconview.lo: moduleiconview.moc 
+-kcdialog.o: kcdialog.moc 
+-searchwidget.lo: searchwidget.moc 
+-quickhelp.o: quickhelp.moc 
+-searchwidget.o: searchwidget.moc 
+-main.lo: main.moc 
+-kcmshell.o: kcmshell.moc 
+-toplevel.lo: toplevel.moc 
+-aboutwidget.o: aboutwidget.moc 
+-modules.lo: modules.moc 
+-moduleIface.lo: moduleIface.moc 
+-kecdialog.lo: kecdialog.moc 
+ proxywidget.lo: proxywidget.moc 
 +aboutwidget.o: aboutwidget.moc 
 +quickhelp.lo: quickhelp.moc 
 +main.lo: main.moc 
@@ -651,9 +634,15 @@ $NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
 +helpwidget.o: helpwidget.moc 
 +moduleinfo.lo: moduleinfo.moc 
 +modules.o: modules.moc 
-+kcmshell.lo: kcmshell.moc 
+ kcmshell.lo: kcmshell.moc 
 +moduleiconview.o: moduleiconview.moc 
- modules.lo: modules.moc 
-+moduleinfo.o: moduleinfo.moc 
++modules.lo: modules.moc 
+ moduleinfo.o: moduleinfo.moc 
+-indexwidget.lo: indexwidget.moc 
+-helpwidget.lo: helpwidget.moc 
+-moduletreeview.lo: moduletreeview.moc 
+-moduletreeview.o: moduletreeview.moc 
 +kcmshell.o: kcmshell.moc 
-+modulemenu.lo: modulemenu.moc 
+ modulemenu.lo: modulemenu.moc 
+-modules.o: modules.moc 
+-helpwidget.o: helpwidget.moc 

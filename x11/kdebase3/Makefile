@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2004/01/03 18:49:59 reed Exp $
+# $NetBSD: Makefile,v 1.35 2004/01/15 10:15:14 markd Exp $
 
-DISTNAME=	kdebase-3.1.4
-PKGREVISION=	3
+DISTNAME=	kdebase-3.1.5
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -23,6 +22,8 @@ CONFIGURE_ARGS+=	--without-vorbis
 CONFIGURE_ARGS+=	--without-java
 
 REPLACE_PERL=		kcontrol/fileshare/fileshareset
+
+RCD_SCRIPTS=		kdm
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -157,5 +158,6 @@ post-install:
 .include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/qt3-tools/buildlink2.mk"
 .include "../../x11/kdelibs3/buildlink2.mk"
+.include "../../mk/kerberos.mk"
 
 .include "../../mk/bsd.pkg.mk"

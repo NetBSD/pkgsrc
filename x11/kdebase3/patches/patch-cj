@@ -1,8 +1,8 @@
-$NetBSD: patch-cj,v 1.6 2003/07/30 13:35:00 markd Exp $
+$NetBSD: patch-cj,v 1.7 2004/01/15 10:15:14 markd Exp $
 
---- konqueror/client/Makefile.in.orig	2003-07-15 22:03:39.000000000 +1200
+--- konqueror/client/Makefile.in.orig	2004-01-02 14:06:01.000000000 +1300
 +++ konqueror/client/Makefile.in
-@@ -424,14 +424,18 @@ x_libraries = @x_libraries@
+@@ -425,14 +425,18 @@ x_libraries = @x_libraries@
  AM_CPPFLAGS = -DQT_NO_CAST_ASCII
  
  bin_PROGRAMS = kfmclient
@@ -26,7 +26,7 @@ $NetBSD: patch-cj,v 1.6 2003/07/30 13:35:00 markd Exp $
  
  noinst_HEADERS = kfmclient.h
  #>- METASOURCES = AUTO
-@@ -439,39 +443,50 @@ noinst_HEADERS = kfmclient.h
+@@ -440,9 +444,9 @@ noinst_HEADERS = kfmclient.h
  KonquerorIface_DIR = $(srcdir)/..
  KDesktopIface_DIR = $(top_srcdir)/kdesktop
  
@@ -36,8 +36,9 @@ $NetBSD: patch-cj,v 1.6 2003/07/30 13:35:00 markd Exp $
 -kfmclient_LDADD = kfmclient.la
 +kfmclient_LDADD = libkfmclient_main.la
  subdir = konqueror/client
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
- CONFIG_HEADER = $(top_builddir)/config.h
+@@ -450,30 +454,41 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -92,7 +93,7 @@ $NetBSD: patch-cj,v 1.6 2003/07/30 13:35:00 markd Exp $
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -491,11 +506,12 @@ CXXLD = $(CXX)
+@@ -493,11 +508,12 @@ CXXLD = $(CXX)
  #>+ 2
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -107,7 +108,7 @@ $NetBSD: patch-cj,v 1.6 2003/07/30 13:35:00 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -542,6 +558,8 @@ clean-libLTLIBRARIES:
+@@ -544,6 +560,8 @@ clean-libLTLIBRARIES:
  	done
  kfmclient.la: $(kfmclient_la_OBJECTS) $(kfmclient_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kfmclient_la_LDFLAGS) $(kfmclient_la_OBJECTS) $(kfmclient_la_LIBADD) $(LIBS)
@@ -116,7 +117,7 @@ $NetBSD: patch-cj,v 1.6 2003/07/30 13:35:00 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -581,8 +599,9 @@ mostlyclean-compile:
+@@ -583,8 +601,9 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -127,7 +128,7 @@ $NetBSD: patch-cj,v 1.6 2003/07/30 13:35:00 markd Exp $
  
  distclean-depend:
  	-rm -rf ./$(DEPDIR)
-@@ -683,7 +702,12 @@ GTAGS:
+@@ -685,7 +704,12 @@ GTAGS:
  
  distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
@@ -141,7 +142,7 @@ $NetBSD: patch-cj,v 1.6 2003/07/30 13:35:00 markd Exp $
  
  top_distdir = ../..
  distdir = $(top_distdir)/$(PACKAGE)-$(VERSION)
-@@ -816,15 +840,18 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -817,15 +841,18 @@ uninstall-am: uninstall-binPROGRAMS unin
  	uninstall-libLTLIBRARIES
  
  
@@ -163,7 +164,7 @@ $NetBSD: patch-cj,v 1.6 2003/07/30 13:35:00 markd Exp $
  #>+ 9
  KonquerorIface.kidl: $(srcdir)/../KonquerorIface.h $(DCOP_DEPENDENCIES)
  	$(DCOPIDL) $(srcdir)/../KonquerorIface.h > KonquerorIface.kidl || ( rm -f KonquerorIface.kidl ; false )
-@@ -836,12 +863,6 @@ KDesktopIface_stub.h: KDesktopIface.kidl
+@@ -837,12 +864,6 @@ KDesktopIface_stub.h: KDesktopIface.kidl
  	$(DCOPIDL2CPP) --c++-suffix cc --no-signals --no-skel KDesktopIface.kidl
  
  #>+ 3
@@ -176,7 +177,7 @@ $NetBSD: patch-cj,v 1.6 2003/07/30 13:35:00 markd Exp $
  clean-metasources:
  	-rm -f  kfmclient.moc
  
-@@ -862,33 +883,33 @@ force-reedit:
+@@ -863,33 +884,33 @@ force-reedit:
  
  
  #>+ 11
@@ -223,14 +224,15 @@ $NetBSD: patch-cj,v 1.6 2003/07/30 13:35:00 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -898,8 +919,8 @@ kde-rpo-clean:
+@@ -899,8 +920,8 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 6
+-kfmclient.lo: kfmclient.moc 
 +$(srcdir)/kfmclient.cc: KonquerorIface_stub.h KDesktopIface_stub.h 
  KDesktopIface_stub.cc: KDesktopIface_stub.h 
-+KonquerorIface_stub.cc: KonquerorIface_stub.h 
- kfmclient.lo: kfmclient.moc 
- kfmclient.o: kfmclient.moc 
--KonquerorIface_stub.cc: KonquerorIface_stub.h 
+-kfmclient.o: kfmclient.moc 
+ KonquerorIface_stub.cc: KonquerorIface_stub.h 
 -$(srcdir)/kfmclient.cc: KonquerorIface_stub.h KDesktopIface_stub.h 
++kfmclient.lo: kfmclient.moc 
++kfmclient.o: kfmclient.moc 

@@ -1,8 +1,8 @@
-$NetBSD: patch-bg,v 1.6 2003/07/30 13:34:59 markd Exp $
+$NetBSD: patch-bg,v 1.7 2004/01/15 10:15:14 markd Exp $
 
---- khotkeys/khotkeys/Makefile.in.orig	2003-07-15 22:03:33.000000000 +1200
+--- khotkeys/khotkeys/Makefile.in.orig	2004-01-02 14:05:58.000000000 +1300
 +++ khotkeys/khotkeys/Makefile.in
-@@ -425,16 +425,20 @@ x_includes = @x_includes@
+@@ -426,16 +426,20 @@ x_includes = @x_includes@
  x_libraries = @x_libraries@
  
  bin_PROGRAMS = khotkeys
@@ -29,7 +29,7 @@ $NetBSD: patch-bg,v 1.6 2003/07/30 13:34:59 markd Exp $
  khotkeys_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  autostart_DATA = khotkeys.desktop
-@@ -451,33 +455,41 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -453,33 +457,41 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -87,7 +87,7 @@ $NetBSD: patch-bg,v 1.6 2003/07/30 13:34:59 markd Exp $
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -497,13 +509,14 @@ CXXLD = $(CXX)
+@@ -499,13 +511,14 @@ CXXLD = $(CXX)
  #>+ 2
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -104,7 +104,7 @@ $NetBSD: patch-bg,v 1.6 2003/07/30 13:34:59 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -550,6 +563,8 @@ clean-libLTLIBRARIES:
+@@ -552,6 +565,8 @@ clean-libLTLIBRARIES:
  	done
  khotkeys.la: $(khotkeys_la_OBJECTS) $(khotkeys_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(khotkeys_la_LDFLAGS) $(khotkeys_la_OBJECTS) $(khotkeys_la_LIBADD) $(LIBS)
@@ -113,7 +113,7 @@ $NetBSD: patch-bg,v 1.6 2003/07/30 13:34:59 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -589,8 +604,9 @@ mostlyclean-compile:
+@@ -591,8 +606,9 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -124,16 +124,16 @@ $NetBSD: patch-bg,v 1.6 2003/07/30 13:34:59 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
  
  distclean-depend:
-@@ -712,7 +728,7 @@ distclean-tags:
+@@ -714,7 +730,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=khkglobalaccel.cpp khotkeys.desktop khkglobalaccel.h 
+-KDE_DIST=khkglobalaccel.h khkglobalaccel.cpp khotkeys.desktop 
 +KDE_DIST=khotkeys.desktop khkglobalaccel.h khkglobalaccel.cpp Makefile.in.rej 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -848,34 +864,31 @@ uninstall-am: uninstall-autostartDATA un
+@@ -849,19 +865,10 @@ uninstall-am: uninstall-autostartDATA un
  	uninstall-binPROGRAMS uninstall-info-am \
  	uninstall-libLTLIBRARIES
  
@@ -149,37 +149,24 @@ $NetBSD: patch-bg,v 1.6 2003/07/30 13:34:59 markd Exp $
 -	$(DCOPIDL) $(srcdir)/khotkeys.h > khotkeys.kidl || ( rm -f khotkeys.kidl ; false )
 -khotkeys_skel.cpp: khotkeys.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub khotkeys.kidl
-+#>+ 3
-+khotkeys.moc: $(srcdir)/khotkeys.h
-+	$(MOC) $(srcdir)/khotkeys.h -o khotkeys.moc
- 
-+#>+ 1
-+mocs: khotkeys.moc
+-
  #>+ 3
- khkglobalaccel.moc: $(srcdir)/khkglobalaccel.h
- 	$(MOC) $(srcdir)/khkglobalaccel.h -o khkglobalaccel.moc
+ khotkeys.moc: $(srcdir)/khotkeys.h
+ 	$(MOC) $(srcdir)/khotkeys.h -o khotkeys.moc
+@@ -874,6 +881,12 @@ khkglobalaccel.moc: $(srcdir)/khkglobala
  
  #>+ 1
  mocs: khkglobalaccel.moc
--#>+ 3
--khotkeys.moc: $(srcdir)/khotkeys.h
--	$(MOC) $(srcdir)/khotkeys.h -o khotkeys.moc
 +#>+ 5
 +khotkeys.kidl: $(srcdir)/khotkeys.h $(DCOP_DEPENDENCIES)
 +	$(DCOPIDL) $(srcdir)/khotkeys.h > khotkeys.kidl || ( rm -f khotkeys.kidl ; false )
 +khotkeys_skel.cpp: khotkeys.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub khotkeys.kidl
- 
--#>+ 1
--mocs: khotkeys.moc
++
  #>+ 3
  clean-metasources:
--	-rm -f  khkglobalaccel.moc khotkeys.moc
-+	-rm -f  khotkeys.moc khkglobalaccel.moc
- 
- #>+ 4
- clean-idl:
-@@ -893,33 +906,33 @@ force-reedit:
+ 	-rm -f  khotkeys.moc khkglobalaccel.moc
+@@ -894,33 +907,33 @@ force-reedit:
  
  
  #>+ 11
@@ -226,11 +213,14 @@ $NetBSD: patch-bg,v 1.6 2003/07/30 13:34:59 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -930,6 +943,6 @@ kde-rpo-clean:
+@@ -930,7 +943,7 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
  
  #>+ 5
- khotkeys.lo: khotkeys.moc 
 -khotkeys.o: khotkeys.moc 
- khkglobalaccel.lo: khkglobalaccel.moc 
- khkglobalaccel.o: khkglobalaccel.moc 
+-khkglobalaccel.o: khkglobalaccel.moc 
+-khkglobalaccel.lo: khkglobalaccel.moc 
+ khotkeys.lo: khotkeys.moc 
++khkglobalaccel.lo: khkglobalaccel.moc 
++khkglobalaccel.o: khkglobalaccel.moc 
 +khotkeys.o: khotkeys.moc 
