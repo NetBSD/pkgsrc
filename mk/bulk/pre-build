@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.40 2004/11/16 18:34:12 jlam Exp $
+# $NetBSD: pre-build,v 1.41 2005/01/11 18:33:16 tv Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -135,10 +135,9 @@ rm -fr /tmp/mod*
 
 # Clean up state files
 cd ${USR_PKGSRC}
-rm -f $BROKENF */*/$BROKENF
-rm -f $BRKWRKLOG */*/$BRKWRKLOG
-rm -f $BLDLOG */*/$BLDLOG
-rm -f $STARTFILE
+echo Cleaning up leftover state files from previous runs
+rm -f */*/$BROKENF */*/$BRKWRKLOG */*/$BLDLOG
+rm -f $BROKENF $BRKWRKLOG $BLDLOG $STARTFILE
 
 
 
