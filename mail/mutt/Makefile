@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2000/11/22 16:09:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.62 2001/01/10 13:26:32 tron Exp $
 
 DISTNAME=	mutt-1.2.5i
 CATEGORIES=	mail
@@ -46,11 +46,6 @@ CONFIGURE_ARGS+= --without-ssl
 .endif
 
 BUILD_DEFS+=	MUTT_USE_SSL
-
-.if ${OPSYS} == "SunOS"
-PLIST_SUBST+=	LOCALEBASE=lib
-.else
-PLIST_SUBST+=	LOCALEBASE=share
-.endif
+PLIST_SUBST+=	LOCALEBASE=${LOCALEBASE}
 
 .include "../../mk/bsd.pkg.mk"
