@@ -1,14 +1,19 @@
-# $NetBSD: Makefile,v 1.93 2004/03/31 07:03:30 cube Exp $
+# $NetBSD: Makefile,v 1.94 2004/05/14 09:20:31 xtraeme Exp $
 #
 
-DISTNAME=		ethereal-0.10.3
+DISTNAME=		ethereal-0.10.4
 PKGREVISION=		# defined
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.ethereal.com/pub/ethereal/ \
+MASTER_SITES=		http://www.ethereal.com/distribution/ \
+			http://ethereal.planetmirror.com/distribution/ \
+			http://www.mirrors.wiretapped.net/security/packet-capture/ethereal/ \
+			http://netmirror.org/mirror/ftp.ethereal.com/ \
+			http://ethereal.secuwiz.com/distribution/ \
+			http://ethereal.0ni0n.org/distribution/ \
+			ftp://ftp.ethereal.com/pub/ethereal/ \
 			ftp://ftp.sunet.se/pub/network/monitoring/ethereal/ \
 			ftp://ftp.planetmirror.com/pub/ethereal/ \
 			ftp://gd.tuwien.ac.at/infosys/security/ethereal/ \
-			http://www.ethereal.com/distribution/ \
 			http://ftp.sunet.se/pub/network/monitoring/ethereal/ \
 			http://ethereal.netarc.jp/distribution/ \
 			ftp://ftp.ethereal.com/pub/ethereal/old-versions/
