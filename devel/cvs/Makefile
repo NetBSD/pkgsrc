@@ -1,28 +1,29 @@
-# $NetBSD: Makefile,v 1.13 1998/08/20 15:16:46 tsarna Exp $
+# $NetBSD: Makefile,v 1.14 1998/08/21 19:06:51 tv Exp $
 #
 
-DISTNAME=       cvs-1.9
+DISTNAME=       cvs-1.10
 CATEGORIES=	devel
-MASTER_SITES=   ${MASTER_SITE_GNU}
+MASTER_SITES=   ftp://download.cyclic.com/pub/${DISTNAME}/
 
-MAINTAINER=	lamj@stat.cmu.edu
+MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.cyclic.com/cvs/info.html
 
 GNU_CONFIGURE=	yes
 
-CONFLICTS=	cvs-1.9.26 cvs-1.9.27 cvs-1.9.28
+CONFLICTS=	cvs-1.9 cvs-1.9.26 cvs-1.9.27 cvs-1.9.28 cvs-1.9.29 cvs-1.9.30
 
 .if exists(/usr/lib/libkrb.a)
 CONFIGURE_ARGS+=	--with-krb4=/usr --enable-encryption
 .endif
 
-MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(RCS_LOCALID)
+CFLAGS+=	-DLOCALID=\"\\\"${RCS_LOCALID}\\\"\"
+.endif
+
+CONFIGURE_ENV+=	perl_path=${LOCALBASE}/bin/perl
 
 INFO_FILES=	cvs.info cvsclient.info
-
-post-install:
-	${RM} -f ${PREFIX}/bin/cvs
-	${INSTALL_PROGRAM} ${WRKSRC}/src/cvs ${PREFIX}/bin/
-	${SH} ${PKGDIR}/INSTALL ${DISTNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"

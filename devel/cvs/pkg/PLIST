@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/05/09 12:17:46 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/08/21 19:06:52 tv Exp $
 bin/cvs
 bin/cvsbug
 bin/rcs2log
@@ -11,26 +11,33 @@ info/cvs.info-3
 info/cvs.info-4
 info/cvs.info-5
 info/cvs.info-6
+info/cvs.info-7
+info/cvs.info-8
+info/cvs.info-9
 info/cvsclient.info
+info/cvsclient.info-1
+info/cvsclient.info-2
+info/cvsclient.info-3
 @exec	%D/bin/install-info --info-dir=%D/info		%D/info/cvs.info
 @exec	%D/bin/install-info --info-dir=%D/info		%D/info/cvsclient.info
-lib/cvs/contrib/README
-lib/cvs/contrib/clmerge
-lib/cvs/contrib/cln_hist
-lib/cvs/contrib/commit_prep
-lib/cvs/contrib/cvs_acls
-lib/cvs/contrib/cvscheck
-lib/cvs/contrib/cvscheck.man
-lib/cvs/contrib/intro.doc
-lib/cvs/contrib/log
-lib/cvs/contrib/log_accum
-lib/cvs/contrib/mfpipe
-lib/cvs/contrib/rcs-to-cvs
-lib/cvs/contrib/rcs2log
-lib/cvs/contrib/rcslock
-lib/cvs/contrib/sccs2rcs
-@dirrm lib/cvs/contrib
-@dirrm lib/cvs
-man/man1/cvs.1.gz
-man/man5/cvs.5.gz
-man/man8/cvsbug.8.gz
+share/cvs/contrib/README
+share/cvs/contrib/clmerge
+share/cvs/contrib/cln_hist
+share/cvs/contrib/commit_prep
+share/cvs/contrib/cvs_acls
+share/cvs/contrib/cvs2vendor
+share/cvs/contrib/cvscheck
+share/cvs/contrib/cvscheck.man
+share/cvs/contrib/intro.doc
+share/cvs/contrib/log
+share/cvs/contrib/log_accum
+share/cvs/contrib/mfpipe
+share/cvs/contrib/rcs-to-cvs
+share/cvs/contrib/rcs2log
+share/cvs/contrib/rcslock
+share/cvs/contrib/sccs2rcs
+@dirrm share/cvs/contrib
+@dirrm share/cvs
+man/man1/cvs.1
+man/man5/cvs.5
+man/man8/cvsbug.8

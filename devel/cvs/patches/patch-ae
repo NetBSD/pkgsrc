@@ -1,0 +1,32 @@
+$NetBSD: patch-ae,v 1.1 1998/08/21 19:06:52 tv Exp $
+
+--- src/rcs.c.orig	Wed Aug 12 13:14:05 1998
++++ src/rcs.c	Wed Aug 12 13:17:05 1998
+@@ -3559,6 +3559,9 @@
+     { KEYWORD_INIT ("Revision") },
+     { KEYWORD_INIT ("Source") },
+     { KEYWORD_INIT ("State") },
++#ifdef LOCALID
++    { KEYWORD_INIT (LOCALID) },
++#endif
+     { NULL, 0 }
+ };
+ enum keyword
+@@ -3573,7 +3576,8 @@
+     KEYWORD_RCSFILE,
+     KEYWORD_REVISION,
+     KEYWORD_SOURCE,
+-    KEYWORD_STATE
++    KEYWORD_STATE,
++    KEYWORD_LOCALID
+ };
+ 
+ /* Convert an RCS date string into a readable string.  This is like
+@@ -3801,6 +3805,7 @@
+ 
+ 	    case KEYWORD_HEADER:
+ 	    case KEYWORD_ID:
++	    case KEYWORD_LOCALID:
+ 		{
+ 		    char *path;
+ 		    int free_path;

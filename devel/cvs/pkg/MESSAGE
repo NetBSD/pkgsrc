@@ -1,15 +1,5 @@
-#! /bin/sh
-#
-# $NetBSD: INSTALL,v 1.2 1998/08/07 10:40:23 agc Exp $
-#
-# Installation script for cvs
-#
-
-if [ "$2" != "POST-INSTALL" ]; then
-	exit 0
-fi
-cat << EOF
 =============================================================================
+$NetBSD: MESSAGE,v 1.1 1998/08/21 19:06:52 tv Exp $
 
     Set up the master source repository.  See the "Setting up the repository"
     section of cvs.info for details; the one-line summary is (if you are
@@ -34,4 +24,3 @@ cat << EOF
     just edited).
 
 =============================================================================
-EOF
