@@ -1,9 +1,0 @@
-# $NetBSD: Setup.in,v 1.5 2000/08/31 02:35:19 tsarna Exp $
-#
-*shared*
-
-_tkinter _tkinter.c tkappinit.c -DWITH_APPINIT \
-	-I@LOCALBASE@/include -I@LOCALBASE@/include \
-	-I@X11BASE@/include -L@X11BASE@/lib -lX11 -L@LOCALBASE@/lib \
-	-R@X11BASE@/lib -R@LOCALBASE@/lib -ltk83 -ltcl83
-
