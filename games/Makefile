@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1998/07/30 23:12:51 tron Exp $
+# $NetBSD: Makefile,v 1.21 1998/07/31 08:04:48 tron Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -62,7 +62,7 @@
     SUBDIR += xdemineur
 #    SUBDIR += xdino
 #    SUBDIR += xemeraldia
-#    SUBDIR += xevil
+    SUBDIR += xevil
 #    SUBDIR += xeyesplus
 #    SUBDIR += xfrisk
 #    SUBDIR += xgalaga
