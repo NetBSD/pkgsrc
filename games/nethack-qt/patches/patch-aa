@@ -1,0 +1,197 @@
+$NetBSD: patch-aa,v 1.1 1998/08/27 13:06:51 garbled Exp $
+--- win/Qt/nhqt.patch.orig	Tue Apr 14 08:40:16 1998
++++ win/Qt/nhqt.patch	Sat Aug  8 06:42:11 1998
+@@ -1,16 +1 @@
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./doc/tmac.n ../qnethack/doc/tmac.n
+-*** ./doc/tmac.n	Tue Aug 21 16:42:05 1990
+---- ../qnethack/doc/tmac.n	Mon Mar 16 10:01:07 1998
+-***************
+-*** 1,4 ****
+-! \" @(#)$Id: patch-aa,v 1.1 1998/08/27 13:06:51 garbled Exp $
+-  .\" The News macro package
+-  .\"
+-  .\" This  is  the macro package that is used to format news documents.  It
+---- 1,4 ----
+-! \" @(#)$Id: patch-aa,v 1.1 1998/08/27 13:06:51 garbled Exp $
+-  .\" The News macro package
+-  .\"
+-  .\" This  is  the macro package that is used to format news documents.  It
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./include/config.h ../qnethack/include/config.h
+ *** ./include/config.h	Tue Dec 10 21:20:07 1996
+@@ -88,3 +73,3 @@
+ + # endif
+-+ # ifndef WIN32
+++ # if !defined(WIN32) && !defined(__NetBSD__)
+ + #  define USER_SOUNDS
+@@ -123,3 +108,2 @@
+   # define DOAGAIN '\001'	/* ^A, the "redo" key used in cmd.c and getline.c */
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./include/extern.h ../qnethack/include/extern.h
+ *** ./include/extern.h	Mon Dec  9 16:37:13 1996
+@@ -143,3 +127,2 @@
+   E char *FDECL(xname, (struct obj *));
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./include/global.h ../qnethack/include/global.h
+ *** ./include/global.h	Tue Nov 26 00:52:52 1996
+@@ -163,3 +146,2 @@
+   # endif
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./include/system.h ../qnethack/include/system.h
+ *** ./include/system.h	Mon Nov  4 15:01:25 1996
+@@ -200,3 +182,2 @@
+   E int FDECL(chdir, (char *));
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./src/files.c ../qnethack/src/files.c
+ *** ./src/files.c	Mon Oct 28 01:33:03 1996
+@@ -237,3 +218,2 @@
+   	return 1;
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./src/o_init.c ../qnethack/src/o_init.c
+ *** ./src/o_init.c	Tue Aug 13 19:31:28 1996
+@@ -257,3 +237,2 @@
+       }
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./src/objnam.c ../qnethack/src/objnam.c
+ *** ./src/objnam.c	Mon Dec  9 16:43:29 1996
+@@ -277,3 +256,2 @@
+   #ifdef LINT	/* static char buf[BUFSZ]; */
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./src/sounds.c ../qnethack/src/sounds.c
+ *** ./src/sounds.c	Fri May 24 14:52:26 1996
+@@ -382,3 +360,2 @@
+   /*sounds.c*/
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./src/spell.c ../qnethack/src/spell.c
+ *** ./src/spell.c	Tue Aug 13 19:27:25 1996
+@@ -414,3 +391,2 @@
+   	else
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./src/windows.c ../qnethack/src/windows.c
+ *** ./src/windows.c	Fri May 24 20:27:05 1996
+@@ -441,20 +417,7 @@
+       { &mac_procs, 0 },
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./sys/unix/Makefile.dat ../qnethack/sys/unix/Makefile.dat
+-*** ./sys/unix/Makefile.dat	Tue Sep 12 22:01:37 1995
+---- ../qnethack/sys/unix/Makefile.dat	Tue Apr 14 17:40:03 1998
++*** ./sys/unix/Makefile.dat	Tue Sep 12 13:01:37 1995
++--- ../qnethack/sys/unix/Makefile.dat	Sat Aug  8 06:39:59 1998
+ ***************
+-*** 22,33 ****
+-  	../util/tile2x11 ../win/share/monsters.txt ../win/share/objects.txt \
+-  				../win/share/other.txt
+-  
+-  pet_mark.xbm: ../win/X11/pet_mark.xbm
+-  	cp ../win/X11/pet_mark.xbm pet_mark.xbm
+-  
+-  rip.xpm: ../win/X11/rip.xpm
+-  	cp ../win/X11/rip.xpm rip.xpm
+-- 
+-  
+-  data:	data.base ../util/makedefs
+-  	../util/makedefs -d
+---- 22,37 ----
++*** 22,27 ****
++--- 22,32 ----
+   	../util/tile2x11 ../win/share/monsters.txt ../win/share/objects.txt \
+@@ -470,8 +433,2 @@
+   
+-  rip.xpm: ../win/X11/rip.xpm
+-  	cp ../win/X11/rip.xpm rip.xpm
+-  
+-  data:	data.base ../util/makedefs
+-  	../util/makedefs -d
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./sys/unix/Makefile.src ../qnethack/sys/unix/Makefile.src
+ *** ./sys/unix/Makefile.src	Tue Dec 10 21:20:09 1996
+@@ -494,6 +451,6 @@
+ ! CFLAGS = -O2 -I../include
+-! LFLAGS = -L/usr/X11/lib -L$(QTDIR)/lib
++! LFLAGS = -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -L$(QTDIR)/lib
+   
+ + # For USER_SOUNDS support, include -I/usr/X11/include
+-+ CXXFLAGS = $(CFLAGS) -I. -I$(QTDIR)/include -I/usr/X11/include
+++ CXXFLAGS = $(CFLAGS) -I. -I$(QTDIR)/include/qt -I$(X11BASE)/include
+   
+@@ -519,8 +476,8 @@
+ + # for USER_SOUNDS support, include ../win/Qt/qaudio.cpp ../win/Qt/qaudio-p.cpp
+-+ WINQTSRC = ../win/Qt/qt_win.cpp ../win/Qt/qt_cluster.cpp \
+-+ 	../win/Qt/qaudio.cpp ../win/Qt/qaudio-p.cpp
+++ WINQTSRC = ../win/Qt/qt_win.cpp ../win/Qt/qt_cluster.cpp
+++ # 	../win/Qt/qaudio.cpp ../win/Qt/qaudio-p.cpp
+ + 
+ + # For USER_SOUNDS support, include qaudio.o qaudio-p.o
+-+ WINQTOBJ = qt_win.o qt_cluster.o tile.o \
+-+ 	qaudio.o qaudio-p.o
+++ WINQTOBJ = qt_win.o qt_cluster.o tile.o
+++ # 	qaudio.o qaudio-p.o
+ + #
+@@ -548,3 +505,3 @@
+ + # For USER_SOUNDS support, include -laudio -lm
+-+ WINQTLIB = -lqt -lX11 -laudio -lm
+++ WINQTLIB = -lqt -lX11
+ + #
+@@ -994,3 +951,2 @@
+   # IF YOU PUT STUFF HERE IT WILL GO AWAY
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./sys/unix/Makefile.top ../qnethack/sys/unix/Makefile.top
+ *** ./sys/unix/Makefile.top	Tue Dec 10 21:20:10 1996
+@@ -998,21 +954,11 @@
+ ***************
+-*** 35,42 ****
+-  GAMEDIR  = /usr/games/lib/$(GAME)dir
+-  SHELLDIR = /usr/games
+-  
+-! # per discussion in Install.X11
+-! VARDATND = 
+-  # VARDATND = x11tiles pet_mark.xbm
+-  # VARDATND = x11tiles pet_mark.xbm rip.xpm
+-  
+---- 35,43 ----
+-  GAMEDIR  = /usr/games/lib/$(GAME)dir
+-  SHELLDIR = /usr/games
+-  
+-! # per discussion in Install.X11 and Install.Qt
+-! VARDATND = tiles.xpm rip.xpm
+-! 
++*** 39,44 ****
++--- 39,45 ----
++  VARDATND =
+   # VARDATND = x11tiles pet_mark.xbm
+-  # VARDATND = x11tiles pet_mark.xbm rip.xpm
+-  
++  VARDATND = x11tiles pet_mark.xbm rip.xpm
+++ VARDATND += tiles.xpm
++ 
++  VARDATD = data oracles options quest.dat rumors
++  VARDAT = $(VARDATD) $(VARDATND)
+ ***************
+@@ -1031,5 +977,5 @@
+ + 
+-  all:	$(GAME) Guidebook $(VARDAT) dungeon spec_levs check-dlb
++  all:	$(GAME) datastuff
+   	@echo "Done."
+-  
++
+ ***************
+@@ -1055,3 +1001,2 @@
+   	( cd dat ; $(MAKE) pet_mark.xbm )
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./sys/unix/Makefile.utl ../qnethack/sys/unix/Makefile.utl
+ *** ./sys/unix/Makefile.utl	Tue Dec 10 21:20:11 1996
+@@ -1068,16 +1013,2 @@
+ --- 290,295 ----
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./sys/unix/nethack.sh ../qnethack/sys/unix/nethack.sh
+-*** ./sys/unix/nethack.sh	Tue Sep 12 22:01:39 1995
+---- ../qnethack/sys/unix/nethack.sh	Mon Mar 30 23:19:48 1998
+-***************
+-*** 2,7 ****
+---- 2,8 ----
+-  #	SCCS Id: @(#)nethack.sh	3.2	90/02/26
+-  
+-  HACKDIR=/usr/games/lib/nethackdir
+-+ export HACKDIR
+-  HACK=$HACKDIR/nethack
+-  MAXNROFPLAYERS=4
+-  
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./sys/unix/unixmain.c ../qnethack/sys/unix/unixmain.c
+ *** ./sys/unix/unixmain.c	Wed Sep 25 02:37:10 1996
+@@ -1105,3 +1036,2 @@
+   #endif
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./sys/winnt/Makefile.nt ../qnethack/sys/winnt/Makefile.nt
+ *** ./sys/winnt/Makefile.nt	Mon Nov  4 14:54:36 1996
+@@ -1349,3 +1279,2 @@
+   # from sys\share
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./util/makedefs.c ../qnethack/util/makedefs.c
+ *** ./util/makedefs.c	Mon Nov  4 15:01:17 1996
+@@ -1364,3 +1293,2 @@
+   
+-diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./win/X11/tile2x11.c ../qnethack/win/X11/tile2x11.c
+ *** ./win/X11/tile2x11.c	Fri May  3 23:44:17 1996
