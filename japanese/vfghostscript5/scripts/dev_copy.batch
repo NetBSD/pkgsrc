@@ -1,0 +1,9 @@
+#! /bin/sh
+
+${CP} ${WRKSRC}/../gdevlips-2.3.3/* ${WRKSRC}
+${CP} ${WRKSRC}/../gdev10v/gdev10v.c ${WRKSRC}
+${CP} ${WRKSRC}/../gdevmjc-0.8/*.[ch] ${WRKSRC}
+${CP} ${WRKSRC}/../gdevrpdl/gdevrpdl.c ${WRKSRC}
+${CP} ${WRKSRC}/../gdevdmpr.c ${WRKSRC}
+${CP} ${WRKSRC}/../dviprlib.* ${WRKSRC}
+${CP} ${WRKSRC}/../gdevalps/gdevalps.c ${WRKSRC}
