@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5252 2004/03/13 09:56:10 jmmv Exp $
+$NetBSD: CHANGES,v 1.5253 2004/03/13 17:21:07 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1462,3 +1462,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bittorrent to 3.4.1 [recht 2004-03-12]
 	Updated bittorrent-gui to 3.4.1 [recht 2004-03-12]
 	Updated libxslt to 1.1.4 [jmmv 2004-03-13]
+	Updated oo2c to 2.0.11nb2 [kristerw 2004-03-13]
+	Updated swi-prolog to 5.0.10nb2 [kristerw 2004-03-13]
