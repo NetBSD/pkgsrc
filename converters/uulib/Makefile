@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:21 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/03 12:35:44 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/18 22:20:02 hoek Exp
 #
 
@@ -20,13 +20,14 @@ DOCFILES=	HISTORY doc/Makefile doc/README doc/binhex.fig \
 		doc/library.ltx doc/structure.fig doc/td-v1.c doc/td-v2.c \
 		doc/td-v3.c doc/test.txt
 
+.include "../../mk/bsd.prefs.mk"
+
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/uulib/libuu.so.1.0 ${PREFIX}/lib
 	@${LDCONFIG} || ${TRUE}
 	${INSTALL_DATA} ${WRKSRC}/uulib/libuu.a ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/uulib/uudeview.h ${PREFIX}/include/uu.h
-	${SED} s/FUNKYTOKENHERE/${PREFIX:S/\//\\\\\//g}\\//g \
-		<${FILESDIR}/uulib.3 >${WRKSRC}/uulib.3
+	${SED} -e 's|FUNKYTOKENHERE|${PREFIX}|g' <${FILESDIR}/uulib.3 >${WRKSRC}/uulib.3
 	${INSTALL_MAN} ${WRKSRC}/uulib.3 ${PREFIX}/man/man3
 .if !defined(NOPORTDOCS)
 	@echo "===>   Installing documentation for ${PKGNAME}"
