@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/11/30 23:21:39 salo Exp $
+# $NetBSD: Makefile,v 1.23 2003/02/16 10:49:35 jmmv Exp $
 #
 
 DISTNAME=		oaf-0.6.10
@@ -17,6 +17,8 @@ USE_X11BASE=		YES
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
 .include "../../mk/bsd.prefs.mk"
 
