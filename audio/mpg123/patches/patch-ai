@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
+$NetBSD: patch-ai,v 1.2 2002/02/22 12:52:04 simonb Exp $
 
---- layer3.c.orig	Thu Apr 22 01:25:18 1999
-+++ layer3.c	Mon Aug 16 02:02:01 1999
+--- layer3.c.orig	Fri Feb 22 23:36:59 2002
++++ layer3.c
 @@ -109,54 +109,54 @@
    int i,j,k,l;
  
@@ -111,7 +111,49 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
      }
    }
  
-@@ -713,22 +713,22 @@
+@@ -608,21 +608,12 @@
+  * Dequantize samples (includes huffman decoding)
+  */
+ /* 24 is enough because tab13 has max. a 19 bit huffvector */
+-#ifdef __alpha
+ #define BITSHIFT ((sizeof(int)-1)*8)
+ #define REFRESH_MASK \
+   while(num < BITSHIFT) { \
+     mask |= getbyte()<<(BITSHIFT-num); \
+     num += 8; \
+     part2remain -= 8; }
+-#else
+-#define BITSHIFT ((sizeof(long)-1)*8)
+-#define REFRESH_MASK \
+-  while(num < BITSHIFT) { \
+-    mask |= getbyte()<<(BITSHIFT-num); \
+-    num += 8; \
+-    part2remain -= 8; }
+-#endif
+ 
+ static int III_dequantize_sample(real xr[SBLIMIT][SSLIMIT],int *scf,
+    struct gr_info_s *gr_info,int sfreq,int part2bits)
+@@ -634,11 +625,7 @@
+   int *me;
+ 
+   int num=getbitoffset();
+-#ifdef __alpha
+   int mask = (int) getbits(num)<<(BITSHIFT+8-num);
+-#else
+-  long mask = (long) getbits(num)<<(BITSHIFT+8-num);
+-#endif
+   part2remain -= num;
+ 
+   {
+@@ -722,58 +709,50 @@
+         if(x == 15 && h->linbits) {
+           max[lwin] = cb;
+           REFRESH_MASK;
+-#ifdef __alpha
+           x += ((unsigned int) mask) >> (BITSHIFT+8-h->linbits);
+-#else
+-          x += ((unsigned long) mask) >> (BITSHIFT+8-h->linbits);
+-#endif
            num -= h->linbits+1;
            mask <<= h->linbits;
            if(mask < 0)
@@ -139,7 +181,12 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
          xrpnt += step;
          if(y == 15 && h->linbits) {
            max[lwin] = cb;
-@@ -737,22 +737,22 @@
+           REFRESH_MASK;
+-#ifdef __alpha
+           y += ((unsigned int) mask) >> (BITSHIFT+8-h->linbits);
+-#else
+-          y += ((unsigned long) mask) >> (BITSHIFT+8-h->linbits);
+-#endif
            num -= h->linbits+1;
            mask <<= h->linbits;
            if(mask < 0)
@@ -167,7 +214,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
          xrpnt += step;
        }
      }
-@@ -804,7 +804,7 @@
+@@ -825,7 +804,7 @@
            mask <<= 1;
          }
          else
@@ -176,7 +223,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
          xrpnt += step;
        }
      }
-@@ -812,8 +812,8 @@
+@@ -833,8 +812,8 @@
      if(lwin < 3) { /* short band? */
        while(1) {
          for(;mc > 0;mc--) {
@@ -187,7 +234,15 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
          }
          if(m >= me)
            break;
-@@ -887,22 +887,22 @@
+@@ -904,58 +883,50 @@
+         if (x == 15 && h->linbits) {
+           max = cb;
+ 	  REFRESH_MASK;
+-#ifdef __alpha
+           x += ((unsigned int) mask) >> (BITSHIFT+8-h->linbits);
+-#else
+-          x += ((unsigned long) mask) >> (BITSHIFT+8-h->linbits);
+-#endif
            num -= h->linbits+1;
            mask <<= h->linbits;
            if(mask < 0)
@@ -215,7 +270,12 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
  
          if (y == 15 && h->linbits) {
            max = cb;
-@@ -911,22 +911,22 @@
+ 	  REFRESH_MASK;
+-#ifdef __alpha
+           y += ((unsigned int) mask) >> (BITSHIFT+8-h->linbits);
+-#else
+-          y += ((unsigned long) mask) >> (BITSHIFT+8-h->linbits);
+-#endif
            num -= h->linbits+1;
            mask <<= h->linbits;
            if(mask < 0)
@@ -243,7 +303,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
        }
      }
  
-@@ -974,7 +974,7 @@
+@@ -1003,7 +974,7 @@
            mask <<= 1;
          }
          else
@@ -252,7 +312,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
        }
      }
  
-@@ -987,7 +987,7 @@
+@@ -1016,7 +987,7 @@
    num = 0;
  
    while(xrpnt < &xr[SBLIMIT][0]) 
@@ -261,7 +321,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
  
    while( part2remain > 16 ) {
      getbits(16); /* Dismiss stuffing Bits */
-@@ -1065,8 +1065,8 @@
+@@ -1094,8 +1065,8 @@
                 t1  = tab1[is_p]; t2 = tab2[is_p];
                 for (; sb > 0; sb--,idx+=3) {
                   real v = xr[0][idx];
@@ -272,7 +332,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
                 }
               }
             }
-@@ -1087,8 +1087,8 @@
+@@ -1116,8 +1087,8 @@
               t1 = tab1[is_p]; t2 = tab2[is_p];
               for ( ; sb > 0; sb--,idx+=3 ) {  
                 real v = xr[0][idx];
@@ -283,7 +343,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
               }
             }
           } /* end for(lwin; .. ; . ) */
-@@ -1108,8 +1108,8 @@
+@@ -1137,8 +1108,8 @@
                 t1 = tab1[is_p]; t2 = tab2[is_p];
                 for ( ; sb > 0; sb--,idx++) {
                   real v = xr[0][idx];
@@ -294,7 +354,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
                 }
               }
               else 
-@@ -1128,8 +1128,8 @@
+@@ -1157,8 +1128,8 @@
              t1 = tab1[is_p]; t2 = tab2[is_p];
              for ( ; sb > 0; sb--,idx++) {
                 real v = xr[0][idx];
@@ -305,7 +365,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
              }
            }
            else
-@@ -1143,8 +1143,8 @@
+@@ -1172,8 +1143,8 @@
  
            for ( sb = bi->longDiff[21]; sb > 0; sb--,idx++ ) {
              real v = xr[0][idx];
@@ -316,7 +376,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
            }
          }
        } /* ... */
-@@ -1177,8 +1177,8 @@
+@@ -1206,8 +1177,8 @@
         for(ss=7;ss>=0;ss--)
         {       /* upper and lower butterfly inputs */
           register real bu = *--xr2,bd = *xr1;
@@ -327,7 +387,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
         }
       }
    }
-@@ -1252,8 +1252,8 @@
+@@ -1281,8 +1252,8 @@
       { 
        real t0, t1, t2;
  
@@ -338,7 +398,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
  
        t3 = in[0];
        t2 = t3 - t1 - t1;
-@@ -1261,16 +1261,16 @@
+@@ -1290,16 +1261,16 @@
        tmp[4]          = t2 + t0 + t0;
        t3 += t1;
  
@@ -359,7 +419,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
  
        tmp[2] = tmp[6] = t3 - t0      - t2;
        tmp[0] = tmp[8] = t3 + t0 + t1;
-@@ -1280,9 +1280,9 @@
+@@ -1309,9 +1280,9 @@
      {
        real t1, t2, t3;
  
@@ -372,7 +432,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
  
        {
          real t0 = t1 + t2 + t3;
-@@ -1293,7 +1293,7 @@
+@@ -1322,7 +1293,7 @@
        t2 -= t3;
        t1 -= t3;
  
@@ -381,7 +441,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
  
        t1 += t3;
        tmp[3] += t1;
-@@ -1308,35 +1308,35 @@
+@@ -1337,35 +1308,35 @@
      {
        real t0, t1, t2, t3, t4, t5, t6, t7;
  
@@ -427,7 +487,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
        tmp[5] = t3 - t2;
  
        t4 -= t1 + t7;
-@@ -1351,53 +1351,53 @@
+@@ -1380,53 +1351,53 @@
      {
        real t0, t1, t2, t3, t4, t5, t6, t7;
  
@@ -504,7 +564,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
  
  {
     register real *out2 = o2;
-@@ -1422,20 +1422,20 @@
+@@ -1451,20 +1422,20 @@
  
  #define MACRO0(v) { \
      real tmp; \
@@ -531,7 +591,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
  	MACRO0(v); }
  
      register const real *c = COS9;
-@@ -1446,17 +1446,17 @@
+@@ -1475,17 +1446,17 @@
  
      real ta33,ta66,tb33,tb66;
  
@@ -557,7 +617,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
  
        MACRO1(0);
        MACRO2(8);
-@@ -1464,10 +1464,10 @@
+@@ -1493,10 +1464,10 @@
  
      {
        real tmp1a,tmp2a,tmp1b,tmp2b;
@@ -572,7 +632,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
  
        MACRO1(1);
        MACRO2(7);
-@@ -1475,10 +1475,10 @@
+@@ -1504,10 +1475,10 @@
  
      {
        real tmp1a,tmp2a,tmp1b,tmp2b;
@@ -587,7 +647,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
  
        MACRO1(2);
        MACRO2(6);
-@@ -1486,10 +1486,10 @@
+@@ -1515,10 +1486,10 @@
  
      {
        real tmp1a,tmp2a,tmp1b,tmp2b;
@@ -602,7 +662,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
  
        MACRO1(3);
        MACRO2(5);
-@@ -1498,7 +1498,7 @@
+@@ -1527,7 +1498,7 @@
  	{
  		real sum0,sum1;
      	sum0 =  in[2*0+0] - in[2*2+0] + in[2*4+0] - in[2*6+0] + in[2*8+0];
@@ -611,7 +671,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
  		MACRO0(4);
  	}
    }
-@@ -1522,19 +1522,19 @@
+@@ -1551,19 +1522,19 @@
                               \
       in5 += in3; in3 += in1; \
                               \
@@ -637,7 +697,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
                           \
       in3 = in4 + in5;    \
       in4 -= in5;         \
-@@ -1554,27 +1554,27 @@
+@@ -1583,27 +1554,27 @@
       {
         real tmp0,tmp1 = (in0 - in4);
         {
@@ -679,7 +739,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
    }
  
    in++;
-@@ -1588,27 +1588,27 @@
+@@ -1617,27 +1588,27 @@
       {
         real tmp0,tmp1 = (in0 - in4);
         {
@@ -721,7 +781,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
    }
  
    in++; 
-@@ -1623,27 +1623,27 @@
+@@ -1652,27 +1623,27 @@
       {
         real tmp0,tmp1 = (in0 - in4);
         {
@@ -763,7 +823,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
    }
  }
  
-@@ -1693,7 +1693,7 @@
+@@ -1722,7 +1693,7 @@
       int i;
       for(i=0;i<SSLIMIT;i++) {
         tspnt[i*SBLIMIT] = *rawout1++;
@@ -772,7 +832,7 @@ $NetBSD: patch-ai,v 1.1 1999/10/12 04:43:14 simonb Exp $
       }
     }
  }
-@@ -1865,5 +1865,3 @@
+@@ -1894,5 +1865,3 @@
    
    return clip;
  }
