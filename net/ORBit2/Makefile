@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/04/27 08:49:40 rh Exp $
+# $NetBSD: Makefile,v 1.3 2002/04/27 11:31:24 rh Exp $
 #
 
 DISTNAME=		ORBit2-2.3.108
@@ -15,6 +15,7 @@ USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../net/linc/buildlink.mk"
 .include "../../net/libIDL/buildlink.mk"
