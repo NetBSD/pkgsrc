@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.331 2002/10/22 02:53:17 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.332 2002/10/22 07:01:46 kent Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3353,3 +3353,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xscrabble to 1.0nb1 [wiz 2002-10-21]
 	Updated cpuflags to 0.36 [abs 2002-10-21]
 	Updated verilog-current to 20021019 [dmcmahill 2002-10-21]
+	Updated gcc-ssp to 2.95.3.13 [kent 2002-10-22]
