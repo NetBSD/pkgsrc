@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1 2000/07/31 18:33:53 abs Exp $
+
+--- libatalk/asp/asp_getsess.c.orig	Thu Jan 21 20:10:25 1999
++++ libatalk/asp/asp_getsess.c	Mon Jul 31 18:53:31 2000
+@@ -7,7 +7,7 @@
+ #include <stdlib.h>
+ #include <syslog.h>
+ #include <errno.h>
+-#include <sys/signal.h>
++#include <signal.h>
+ #include <sys/time.h>
+ #include <sys/types.h>
+ #include <sys/uio.h>

@@ -1,24 +1,31 @@
-$NetBSD: patch-ag,v 1.1.1.1 2000/07/31 17:36:02 abs Exp $
+$NetBSD: patch-ag,v 1.2 2000/07/31 18:33:49 abs Exp $
 
---- etc/Makefile.orig	Mon Dec  7 21:52:29 1998
-+++ etc/Makefile	Mon Jul 31 14:07:25 2000
-@@ -8,6 +8,7 @@
- ${ALL}: FRC
- 	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" \
- 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
-+	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 	    DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
-@@ -25,9 +26,11 @@
- install:
- 	-mkdir ${ETCDIR}
- 	-mkdir ${SBINDIR}
-+	-mkdir ${LIBEXECDIR}
- 	for i in ${ALL}; \
- 	    do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
- 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
-+		LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
- 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 		DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
+--- etc/atalkd/nbp.c.orig	Sun Dec 13 05:22:42 1998
++++ etc/atalkd/nbp.c	Mon Jul 31 18:52:23 2000
+@@ -110,7 +110,7 @@
+     nn.nn_sat.sat_port = nt.nt_port;
+ 
+     /* object */
+-    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
++    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
+ 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
+ 	return 1;
+     }
+@@ -119,7 +119,7 @@
+     data += nn.nn_objlen;
+ 
+     /* type */
+-    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
++    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
+ 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
+ 	return 1;
+     }
+@@ -128,7 +128,7 @@
+     data += nn.nn_typelen;
+ 
+     /* zone */
+-    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
++    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
+ 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
+ 	return 1;
+     }
