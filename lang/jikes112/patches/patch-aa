@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/10/30 07:29:08 skrll Exp $
+
+--- configure.orig	Fri Jul 12 09:48:26 2002
++++ configure
+@@ -2549,6 +2549,7 @@
+ extern "C" void exit (int);
+ #endif
+ $ac_includes_default
++#include <wchar.h>
+ int
+ main ()
+ {
