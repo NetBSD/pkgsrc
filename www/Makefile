@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.311 2004/03/12 05:13:51 taca Exp $
+# $NetBSD: Makefile,v 1.312 2004/03/30 23:42:17 xtraeme Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -82,6 +82,7 @@ SUBDIR+=	firefox-gtk2
 SUBDIR+=	firefox-gtk2-bin
 SUBDIR+=	firefox-gtk2-bin-nightly
 SUBDIR+=	galeon
+SUBDIR+=	galeon-devel
 SUBDIR+=	galway
 SUBDIR+=	glibwww
 SUBDIR+=	grail
