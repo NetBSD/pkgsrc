@@ -1,47 +1,39 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 10:40:22 agc Exp $
+$NetBSD: patch-ac,v 1.3 1998/08/21 19:06:52 tv Exp $
 
-*** src/Makefile.in.orig	Fri Sep 27 05:32:45 1996
---- src/Makefile.in	Mon Nov 17 01:49:22 1997
-***************
-*** 151,160 ****
-  
-  # Linking rules.
-  
-! $(PROGS): ../lib/libcvs.a ../zlib/libz.a
-  
-  cvs: $(OBJECTS)
-! 	$(CC) $(OBJECTS) ../lib/libcvs.a ../zlib/libz.a $(LIBS) $(LDFLAGS) -o $@ 
-  
-  xlint: $(SOURCES)
-  	files= ; \
---- 151,162 ----
-  
-  # Linking rules.
-  
-! #$(PROGS): ../lib/libcvs.a ../zlib/libz.a
-! $(PROGS): ../lib/libcvs.a
-  
-  cvs: $(OBJECTS)
-! #	$(CC) $(OBJECTS) ../lib/libcvs.a ../zlib/libz.a $(LIBS) $(LDFLAGS) -o $@ 
-! 	$(CC) $(OBJECTS) ../lib/libcvs.a -lz $(LIBS) $(LDFLAGS) -o $@ 
-  
-  xlint: $(SOURCES)
-  	files= ; \
-***************
-*** 185,191 ****
-  $(OBJECTS): $(HEADERS) options.h
-  
-  zlib.o: zlib.c
-! 	$(CC) $(CPPFLAGS) $(INCLUDES) -I$(top_srcdir)/zlib $(DEFS) $(CFLAGS) -c $(srcdir)/zlib.c
-  
-  subdir = src
-  Makefile: ../config.status Makefile.in
---- 187,194 ----
-  $(OBJECTS): $(HEADERS) options.h
-  
-  zlib.o: zlib.c
-! #	$(CC) $(CPPFLAGS) $(INCLUDES) -I$(top_srcdir)/zlib $(DEFS) $(CFLAGS) -c $(srcdir)/zlib.c
-! 	$(CC) $(CPPFLAGS) $(INCLUDES) -I/usr/include $(DEFS) $(CFLAGS) -c $(srcdir)/zlib.c
-  
-  subdir = src
-  Makefile: ../config.status Makefile.in
+--- src/Makefile.in.orig	Thu Jun 18 13:21:42 1998
++++ src/Makefile.in	Wed Aug 12 13:32:09 1998
+@@ -86,10 +86,8 @@
+ 	@cd ..; $(MAKE) lint SUBDIRS=src
+ 
+ install: installdirs
+-	@for prog in $(PROGS); do \
+-	  echo Installing $$prog in $(bindir); \
+-	  $(INSTALL) $$prog $(bindir)/$$prog ; \
+-	done
++	$(INSTALL_PROGRAM) cvs $(bindir)/
++	$(BSD_INSTALL_SCRIPT) cvsbug $(bindir)/
+ 
+ installdirs:
+ 	$(SHELL) $(top_srcdir)/mkinstalldirs $(bindir)
+@@ -144,10 +142,10 @@
+ 
+ # Linking rules.
+ 
+-$(PROGS): ../lib/libcvs.a ../zlib/libz.a ../diff/libdiff.a
++$(PROGS): ../lib/libcvs.a ../diff/libdiff.a
+ 
+ cvs: $(OBJECTS)
+-	$(CC) $(OBJECTS) ../lib/libcvs.a ../zlib/libz.a ../diff/libdiff.a $(LIBS) $(LDFLAGS) -o $@ 
++	$(CC) $(OBJECTS) ../lib/libcvs.a -lz ../diff/libdiff.a $(LIBS) $(LDFLAGS) -o $@ 
+ 
+ xlint: $(SOURCES)
+ 	files= ; \
+@@ -181,7 +179,7 @@
+ 	$(CC) $(CPPFLAGS) $(INCLUDES) -I$(top_srcdir)/diff $(DEFS) $(CFLAGS) -c $(srcdir)/rcscmds.c
+ 
+ zlib.o: zlib.c $(top_srcdir)/zlib/zlib.h
+-	$(CC) $(CPPFLAGS) $(INCLUDES) -I$(top_srcdir)/zlib $(DEFS) $(CFLAGS) -c $(srcdir)/zlib.c
++	$(CC) $(CPPFLAGS) $(INCLUDES) $(DEFS) $(CFLAGS) -c $(srcdir)/zlib.c
+ 
+ subdir = src
+ Makefile: ../config.status Makefile.in
