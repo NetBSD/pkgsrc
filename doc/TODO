@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1549 2004/03/30 00:26:34 wiz Exp $
+$NetBSD: TODO,v 1.1550 2004/03/30 12:45:21 recht Exp $
 
 Suggested new packages
 ======================
@@ -131,7 +131,6 @@ Suggested package updates
 
 	o ImageViewer-0.6.3
 	o SDL-1.2.7
-	o TeXmacs-1.0.3.4
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0.5
