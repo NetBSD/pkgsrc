@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.6 2002/10/16 03:14:42 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2002/10/27 09:30:59 rh Exp $
 
 .if !defined(BONOBO_ACTIVATION_BUILDLINK2_MK)
 BONOBO_ACTIVATION_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=				bonobo-activation
-BUILDLINK_DEPENDS.bonobo-activation?=		bonobo-activation>=1.0.2nb2
+BUILDLINK_DEPENDS.bonobo-activation?=		bonobo-activation>=2.1.0
 BUILDLINK_PKGSRCDIR.bonobo-activation?=		../../devel/bonobo-activation
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.bonobo-activation=bonobo-activation
@@ -23,9 +23,6 @@ BUILDLINK_FILES.bonobo-activation+=	include/bonobo-activation-2.0/bonobo-activat
 BUILDLINK_FILES.bonobo-activation+=	include/bonobo-activation-2.0/bonobo-activation/bonobo-activation-version.h
 BUILDLINK_FILES.bonobo-activation+=	include/bonobo-activation-2.0/bonobo-activation/bonobo-activation.h
 BUILDLINK_FILES.bonobo-activation+=	lib/bonobo/servers/Bonobo_CosNaming_NamingContext.server
-BUILDLINK_FILES.bonobo-activation+=	lib/bonobo/servers/broken.server
-BUILDLINK_FILES.bonobo-activation+=	lib/bonobo/servers/empty.server
-BUILDLINK_FILES.bonobo-activation+=	lib/bonobo/servers/plugin.server
 BUILDLINK_FILES.bonobo-activation+=	lib/libbonobo-activation.*
 BUILDLINK_FILES.bonobo-activation+=	share/idl/bonobo-activation-2.0/*
 
