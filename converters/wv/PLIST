@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:51:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/11 11:23:14 wiz Exp $
 bin/make_epses.sh
 bin/wv-incconfig
 bin/wv-libconfig
@@ -12,7 +12,6 @@ bin/wvMime
 bin/wvPDF
 bin/wvPS
 bin/wvRTF
-bin/wvSimpleCLX
 bin/wvSummary
 bin/wvText
 bin/wvVersion
