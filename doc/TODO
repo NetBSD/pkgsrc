@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2175 2004/09/27 16:31:57 wiz Exp $
+$NetBSD: TODO,v 1.2176 2004/09/27 20:43:44 cube Exp $
 
 Suggested new packages
 ======================
@@ -200,7 +200,6 @@ Suggested package updates
 	o cdrtools-2.01
 	o celestia-1.3.2
 	o centericq-4.11.0
-	o check-0.9.1 [pkg/27038]
 	o checkbot-1.75 [pkg/26371]
 	o checkpassword-pam-0.99
 	o chemtool-1.6.3
