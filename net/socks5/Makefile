@@ -3,7 +3,7 @@
 # Date created:				24 Apr 1996
 # Whom:					pst
 #
-# $NetBSD: Makefile,v 1.2 1997/11/21 14:57:28 agc Exp $
+# $NetBSD: Makefile,v 1.3 1997/12/17 14:55:36 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -11,7 +11,7 @@ DISTNAME=	socks5-v1_0r2_tar
 PKGNAME=	socks5-1.0.2
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.astec.co.jp/pub/security/socks/  \
-		ftp://ftp.ualg.pt/Linux/net/proxies/
+		ftp://ftp.ualg.pt/Linux/net/proxies/socks5/
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	ambrisko@ambrisko.roble.com
