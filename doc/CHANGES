@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1297 2003/02/01 02:05:12 lukem Exp $
+$NetBSD: CHANGES,v 1.1298 2003/02/01 15:17:26 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -528,3 +528,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wmbiff to 0.4.13 [tron 2003-01-31]
 	Updated lftp to 2.6.4 [salo 2003-01-31]
 	Updated postfix to 2.0.3nb1 [lukem 2003-02-01]
+	Updated atlc to 4.2.10 [dmcmahill 2003-02-01]
