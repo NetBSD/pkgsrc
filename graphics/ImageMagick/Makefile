@@ -3,10 +3,10 @@
 # Date created:         09th February 1998
 # Whom:                 tron
 #
-# $NetBSD: Makefile,v 1.13 1998/02/24 14:45:15 tron Exp $
+# $NetBSD: Makefile,v 1.14 1998/03/19 09:23:07 tron Exp $
 #
 
-DISTNAME=	ImageMagick-4.0.1
+DISTNAME=	ImageMagick-4.0.3
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.wizards.dupont.com/pub/ImageMagick/ \
 		ftp://ftp.ms.mff.cuni.cz/MIRRORS/ftp.wizards.dupont.com/pub/ImageMagick/ \
