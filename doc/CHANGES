@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8550 2004/12/31 21:39:43 kim Exp $
+$NetBSD: CHANGES,v 1.8551 2004/12/31 22:32:48 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6733,3 +6733,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mftrace to 1.1.1 [wiz 2004-12-31]
 	Added p5-File-Tail-0.99.1 [kim 2004-12-31]
 	Added mailgraph-1.10 [kim 2004-12-31]
+	Updated irrd to 2.2.3 [kim 2004-12-31]
