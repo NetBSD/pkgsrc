@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/29 00:49:49 xtraeme Exp $
+
+--- src/util.c.orig	2003-12-29 01:33:58.000000000 +0100
++++ src/util.c	2003-12-29 01:34:44.000000000 +0100
+@@ -12,11 +12,13 @@
+ #include <sys/types.h>
+ #include <sys/ioctl.h>
+ #include <sys/wait.h>
+-
++#include <sys/param.h>
+ 
+ #ifdef __FreeBSD__
+ # include <errno.h>
+ # include <libutil.h>
++#elif defined(__NetBSD__)
++# include <util.h>
+ #endif
+ 
+ #include "util.h"
+@@ -40,7 +42,7 @@
+  */
+ #define OPEN_TTY() getpt()
+ 
+-#ifdef __FreeBSD__
++#ifdef BSD
+ /* FreeBSD doesn't have getpt(). This function emulates it's behaviour. */
+ int getpt (void);
+ 
