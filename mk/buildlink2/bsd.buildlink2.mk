@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.40 2002/10/09 23:17:54 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.41 2002/10/13 07:13:42 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -20,6 +20,24 @@
 # BUILDLINK_TARGETS+=		foo-buildlink
 #
 # foo-buildlink: _BUILDLINK_USE
+# -------------8<-------------8<-------------8<-------------8<-------------
+#
+# Another example package buildlink2.mk file:
+#
+# -------------8<-------------8<-------------8<-------------8<-------------
+# BUILDLINK_PACKAGES+=		baz
+# BUILDLINK_PKGBASE.baz=	baz-devel
+# BUILDLINK_DEPENDS.baz?=	baz-devel>=1.0
+# BUILDLINK_PKGSRCDIR.baz?=	../../category/baz-devel
+#
+# EVAL_PREFIX+=			BUILDLINK_PREFIX.foo=foo-lib
+# BUILDLINK_PREFIX.baz_DEFAULT=	${LOCALBASE}
+# BUILDLINK_FILES_CMD.baz= \
+#	${BUILDLINK_PLIST_CMD.baz} | ${GREP} "^\(include\|lib\)"
+#
+# BUILDLINK_TARGETS+=		baz-buildlink
+#
+# baz-buildlink: _BUILDLINK_USE
 # -------------8<-------------8<-------------8<-------------8<-------------
 #
 # The different variables that may be set in a buildlink2.mk file are
@@ -161,22 +179,32 @@ _LT_ARCHIVE_TRANSFORM=							\
 # hierarchy under ${BUILDLINK_DIR}.
 #
 # The variables required to be defined to use this target are listed
-# below.  <pkgname> refers to the name of the package and should be used
+# below.  <pkg> refers to the name of the package and should be used
 # consistently.
 #
 # The target that uses this macro target should perform no other actions
-# and be named "<pkgname>-buildlink".
+# and be named "<pkg>-buildlink".
 #
-# BUILDLINK_PREFIX.<pkgname>    installation prefix of the package
+# BUILDLINK_PREFIX.<pkg>    installation prefix of the package:
+#                           ${LOCALBASE} or ${X11PREFIX}
 #
-# BUILDLINK_FILES.<pkgname>     files relative to ${BUILDLINK_PREFIX.<pkgname>}
-#                               to be symlinked into ${BUILDLINK_DIR};
-#                               libtool archive files are automatically
-#                               filtered out and not linked
+# BUILDLINK_FILES.<pkg>     files relative to ${BUILDLINK_PREFIX.<pkg>}
+#                           to be symlinked into ${BUILDLINK_DIR};
+#                           libtool archive files are automatically
+#                           filtered out and not linked
 #
-# BUILDLINK_TARGETS             targets to be invoked during buildlink;
-#                               the targets should be appended to this variable
-#                               using +=
+# BUILDLINK_FILES_CMD.<pkg> shell pipeline that outputs to stdout a list
+#                           of files relative to ${BUILDLINK_PREFIX.<pkg>};
+#                           the shell variable $${pkg_prefix} may be used
+#                           and is the subdirectory (ending in /) of
+#                           ${BUILDLINK_PREFIX.<pkg>} to which the PLIST
+#                           is relative, e.g. if `pkg_info -qp foo' returns
+#                           "/usr/pkg/java/kaffe", then $${pkg_prefix} is
+#                           "java/kaffe/".
+#
+# BUILDLINK_TARGETS         targets to be invoked during buildlink;
+#                           the targets should be appended to this variable
+#                           using +=
 #
 # The variables that may optionally be defined:
 #
@@ -194,15 +222,23 @@ _BUILDLINK_USE: .USE
 		${X11BASE})						\
 			${RM} -f ${BUILDLINK_X11PKG_DIR} 2>/dev/null;	\
 			${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11PKG_DIR}; \
-			buildlink_dir="${BUILDLINK_X11PKG_DIR}";		\
+			buildlink_dir="${BUILDLINK_X11PKG_DIR}";	\
 			;;						\
 		*)							\
 			buildlink_dir="${BUILDLINK_DIR}";		\
 			;;						\
 		esac;							\
+		pkg_prefix=;						\
+		if [ -n "${BUILDLINK_PKGBASE.${.TARGET:S/-buildlink//}}" ]; then \
+			pkg_prefix=`${PKG_INFO} -qp ${BUILDLINK_PKGBASE.${.TARGET:S/-buildlink//}} | ${AWK} '{ sub("${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}", "", $$2); sub("/", "", $$2); print $$2; exit }'`/; \
+		fi;							\
+		rel_files_cmd=;						\
+		if [ -n "${BUILDLINK_FILES_CMD.${.TARGET:S/-buildlink//}:Q}" ]; then \
+			rel_files_cmd=`${BUILDLINK_FILES_CMD.${.TARGET:S/-buildlink//}}`; \
+		fi;							\
 		cd ${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}};	\
 		rel_files="${BUILDLINK_FILES.${.TARGET:S/-buildlink//}}"; \
-		for rel_file in $${rel_files}; do			\
+		for rel_file in $${rel_files_cmd} $${rel_files}; do	\
 			file="${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/$${rel_file}"; \
 			if [ -z "${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}:Q}" ]; then \
 				dest="$${buildlink_dir}/$${rel_file}";	\
