@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.466 2000/06/03 20:26:05 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.467 2000/06/03 20:31:27 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -1924,7 +1924,8 @@ ${DDIR}: ${DLIST}
 	ddir=`${SED} 's:-[^-]*$$::' <${DLIST}`;				\
 	if ${PKG_INFO} -b $${ddir} >/dev/null 2>&1 ; then		\
 		${PKG_INFO} -b $${ddir} |				\
-		    ${SED} -ne 's,^\([^/]*/[^/]*\)/Makefile:.*,\1,p';	\
+		    ${SED} -ne 's,^\([^/]*/[^/]*\)/Makefile:.*,\1,p'	\
+		    >${DDIR};						\
 	else 								\
 		${ECHO} >${DDIR};					\
 	fi
