@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3149 2005/02/28 14:09:50 wiz Exp $
+$NetBSD: TODO,v 1.3150 2005/02/28 15:17:26 minskim Exp $
 
 Suggested new packages
 ======================
@@ -319,7 +319,6 @@ Suggested package updates
 	o bchunk-1.2.0
 	o bdb-xml-2.0.9 [requires xerces-c>=2.6.0]
 	o benchfft-3.1
-	o bibtex2html-1.75
 	o bind-9.3.1
 	o bioperl-1.5.0
 	o bitlbee-0.92
