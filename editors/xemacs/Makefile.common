@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/05/02 00:23:40 snj Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/11/25 21:34:59 xtraeme Exp $
 
 DISTNAME=	xemacs-21.4.15
 CATEGORIES=	editors
@@ -12,14 +12,13 @@ NOT_FOR_PLATFORM=	*-*-mips*	# fails purespace dumping
 
 USE_BUILDLINK3=	YES
 
-BUILD_DEFS+=	USE_OPENLDAP USE_XFACE XEMACS_USE_CANNA
 DIST_SUBDIR=	xemacs
 EXTRA_FILES=	${DISTNAME}-elc.tar.gz ${DISTNAME}-info.tar.gz
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 PLIST_SUBST+=	DISTNAME="${DISTNAME}"
 MESSAGE_SUBST+=	DISTNAME="${DISTNAME}"
 
-.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 # XXX GUI configuration is a mess...
 #
@@ -69,27 +68,6 @@ CONFIGURE_ARGS+=	--with_sound=none
 .  endif
 .endif
 
-.if defined(USE_OPENLDAP) && (${USE_OPENLDAP} == "YES")
-WITH_LDAP=	--with-ldap
-.  include "../../databases/openldap/buildlink3.mk"
-.else
-WITH_LDAP=	--without-ldap
-.endif
-
-.if defined(USE_XFACE) && (${USE_XFACE} == "YES")
-WITH_XFACE=	--with-xface
-.  include "../../mail/faces/buildlink3.mk"
-.else
-WITH_XFACE=	--without-xface
-.endif
-
-.if defined(XEMACS_USE_CANNA) && (${XEMACS_USE_CANNA} == "YES")
-.  include "../../inputmethod/canna-lib/buildlink3.mk"
-WITH_CANNA=	--with-canna
-.else
-WITH_CANNA=	--without-canna
-.endif
-
 .if defined(MANZ)
 PLIST_SUBST+=	ELSUFX='.gz'
 .else
@@ -110,7 +88,7 @@ CONFIGURE_ARGS+=	--with-mule=yes
 CONFIGURE_ARGS+=	--with-ncurses=no
 .endif
 CONFIGURE_ARGS+=	--with-msw=no
-CONFIGURE_ARGS+=	${WITH_DIALOGS} ${WITH_LDAP} ${WITH_XFACE} ${WITH_CANNA}
+CONFIGURE_ARGS+=	${WITH_DIALOGS}
 CONFIGURE_ARGS+=	--infopath="${INFOPATH}"
 CONFIGURE_ARGS+=	--site-includes=${BUILDLINK_DIR}/include:${WRKDIR}
 CONFIGURE_ARGS+=	--site-libraries=${BUILDLINK_DIR}/lib
