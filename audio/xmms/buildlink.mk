@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2002/08/08 14:45:50 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2002/08/08 16:17:06 jlam Exp $
 #
 # This Makefile fragment is included by packages that use xmms.
 #
@@ -17,7 +17,7 @@ XMMS_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.xmms?=	xmms>=1.2.5
+BUILDLINK_DEPENDS.xmms?=	xmms>=1.2.7nb1
 DEPENDS+=		${BUILDLINK_DEPENDS.xmms}:../../audio/xmms
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.xmms=xmms
