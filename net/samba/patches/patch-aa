@@ -1,7 +1,5 @@
-$NetBSD: patch-aa,v 1.2 1998/01/12 17:19:28 agc Exp $
-
---- Makefile.orig	Wed Jan  7 12:29:04 1998
-+++ Makefile	Fri Jan  9 17:48:49 1998
+--- Makefile.orig	Mon Jun  1 08:29:04 1998
++++ Makefile	Wed Jun 17 14:57:00 1998
 @@ -5,11 +5,11 @@
  ###########################################################################
  
@@ -53,7 +51,7 @@ $NetBSD: patch-aa,v 1.2 1998/01/12 17:19:28 agc Exp $
  
  # The directory where code page definition files go
  CODEPAGEDIR = $(LIBDIR)/codepages
-@@ -333,10 +334,10 @@
+@@ -352,10 +353,10 @@
  # LIBSM =   
  
  
@@ -65,9 +63,9 @@ $NetBSD: patch-aa,v 1.2 1998/01/12 17:19:28 agc Exp $
 +FLAGSM = -DFAST_SHARE_MODES
 +LIBSM = -lcrypt 
  
- 
- # This is for SEQUENT. 
-@@ -795,8 +796,8 @@
+ # This is for NetBSD 1.3  
+ # contributed by sean@fuzzymagic.com  
+@@ -824,8 +825,8 @@
  install: installbin installman installscripts installcp
  
  installbin: all
@@ -78,7 +76,7 @@ $NetBSD: patch-aa,v 1.2 1998/01/12 17:19:28 agc Exp $
  
  installscripts:
  	@$(SHELL) $(srcdir)installscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
-@@ -818,8 +819,8 @@
+@@ -847,8 +848,8 @@
  	@$(SHELL) $(srcdir)uninstallman.sh $(MANDIR) $(srcdir)
  
  uninstallbin:

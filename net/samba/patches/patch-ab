@@ -1,12 +1,5 @@
-$NetBSD: patch-ab,v 1.2 1998/06/04 13:08:36 agc Exp $
-
-Note: I (tsarna@endicor.com) have submitted the patches in this file 
-plus a more generic Makefile patch (ie, without the pkgsrc changes) to
-the Samba group. I hope this file can be deleted when this package is
-updated for the next version of Samba. 
-
---- includes.h.orig	Tue May 12 20:46:49 1998
-+++ includes.h	Tue Jun  2 15:46:07 1998
+--- includes.h.orig	Sat Jun 13 03:44:19 1998
++++ includes.h	Wed Jun 17 15:03:22 1998
 @@ -198,7 +198,7 @@
  #include <pwdadj.h>
  #endif
@@ -16,14 +9,13 @@ updated for the next version of Samba.
  #include <shadow.h>
  #endif
  
-@@ -506,21 +506,22 @@
+@@ -510,23 +510,21 @@
  #endif
  
  
 -#ifdef NETBSD 
 -#ifdef NetBSD1_3
 -#include <string.h>
-+
 +#ifdef __NetBSD__
 +#include <dirent.h>
 +#include <strings.h>
@@ -35,6 +27,8 @@ updated for the next version of Samba.
 -#include <strings.h>
 -#endif /* NetBSD1_3 */
 -#include <netinet/tcp.h>
+-#include <netinet/in_systm.h> 
+-#include <netinet/ip.h> 
 -/* you may not need this */
 -#define NO_GETSPNAM
  #define SIGNAL_CAST (void (*)())
@@ -50,9 +44,8 @@ updated for the next version of Samba.
  #endif 
  
  
-
---- interface.c.orig	Fri Jan  9 17:22:01 1998
-+++ interface.c	Fri Jan  9 17:22:13 1998
+--- interface.c.orig	Tue May  5 01:27:35 1998
++++ interface.c	Wed Jun 17 14:57:01 1998
 @@ -161,7 +161,7 @@
        }
      }
@@ -62,9 +55,9 @@ updated for the next version of Samba.
    ifc.ifc_len = sizeof(buff);
    ifc.ifc_buf = buff;
    if (ioctl(sock, SIOCGIFCONF, &ifc) < 0) {
---- quotas.c.orig	Fri Jan  9 17:27:17 1998
-+++ quotas.c	Fri Jan  9 17:29:13 1998
-@@ -546,7 +546,7 @@
+--- quotas.c.orig	Wed May 13 03:46:55 1998
++++ quotas.c	Wed Jun 17 14:57:01 1998
+@@ -548,7 +548,7 @@
  
  #else
  
@@ -73,7 +66,7 @@ updated for the next version of Samba.
  #include <ufs/ufs/quota.h>
  #include <machine/param.h>
  #elif         AIX
-@@ -556,7 +556,7 @@
+@@ -558,7 +558,7 @@
  #define dqb_curfiles dqb_curinodes
  #define dqb_fhardlimit dqb_ihardlimit
  #define dqb_fsoftlimit dqb_isoftlimit
@@ -82,7 +75,7 @@ updated for the next version of Samba.
  #include <sys/quota.h>
  #include <devnm.h>
  #endif
-@@ -569,7 +569,7 @@
+@@ -571,7 +571,7 @@
    uid_t euser_id;
    int r;
    struct dqblk D;
@@ -91,7 +84,7 @@ updated for the next version of Samba.
    char dev_disk[256];
    struct stat S;
    /* find the block device file */
-@@ -591,7 +591,7 @@
+@@ -593,7 +593,7 @@
        DEBUG(5,("Unable to reset uid to %d\n", user_id));
    }
  #else /* USE_SETRES */
@@ -100,7 +93,7 @@ updated for the next version of Samba.
    {
      /* FreeBSD patches from Marty Moll <martym@arbor.edu> */
      uid_t user_id;
-@@ -615,17 +615,17 @@
+@@ -617,17 +617,17 @@
    /* AIX has both USER and GROUP quotas: 
       Get the USER quota (ohnielse@fysik.dtu.dk) */
    r= quotactl(path,QCMD(Q_GETQUOTA,USRQUOTA),euser_id,(char *) &D);
@@ -123,7 +116,7 @@ updated for the next version of Samba.
  
    if (r)
      {
-@@ -641,7 +641,7 @@
+@@ -643,7 +643,7 @@
      return(False);
    /* Use softlimit to determine disk space, except when it has been exceeded */
    if ((D.dqb_curblocks>D.dqb_bsoftlimit)
@@ -132,9 +125,9 @@ updated for the next version of Samba.
  ||((D.dqb_curfiles>D.dqb_fsoftlimit) && (D.dqb_fsoftlimit != 0))
  #endif
      ) {
---- util.c.orig	Fri Jan  9 17:22:58 1998
-+++ util.c	Fri Jan  9 17:23:05 1998
-@@ -3352,7 +3352,7 @@
+--- util.c.orig	Sat Jun 13 03:44:21 1998
++++ util.c	Wed Jun 17 14:57:01 1998
+@@ -3614,7 +3614,7 @@
    
    bzero((char *)&sock,sizeof(sock));
    memcpy((char *)&sock.sin_addr,(char *)hp->h_addr, hp->h_length);
