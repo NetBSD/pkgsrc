@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/08/27 04:11:35 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:25:13 wiz Exp $
 #
 
 DISTNAME=	canuum-1.0
@@ -9,6 +9,7 @@ EXTRACT_ONLY=	Uum4.109.tar.gz
 
 MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.nec.co.jp/japanese/product/computer/soft/canna/
+COMMENT=	Japanese input tty frontend for Canna using uum
 
 DEPENDS=	Canna-lib-3.5b2:../../japanese/canna-lib
 

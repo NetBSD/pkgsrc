@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/06 03:16:58 fredb Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 15:22:14 wiz Exp $
 
 DISTNAME=	GMT3.3.6
 PKGNAME=	GMT-3.3.6
@@ -15,6 +15,7 @@ DISTFILES=	GMT3.3.6_progs.tar.bz2 GMT3.3.6_doc.tar.bz2 GMT_share.tar.bz2 \
 
 MAINTAINER=	jtb@netbsd.org
 HOMEPAGE=	http://imina.soest.hawaii.edu/gmt/
+COMMENT=	Generic Mapping Tools
 
 DEPENDS+=	netcdf>=3.0:../../devel/netcdf
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf

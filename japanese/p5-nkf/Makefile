@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/27 07:11:13 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:25:28 wiz Exp $
 #
 
 DISTNAME=	nkf-1.7
@@ -7,6 +7,7 @@ CATEGORIES=	japanese converters
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/cmd/nkf/
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+COMMENT=	Perl library for Network Kanji code conversion Filter
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/NKF/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/06 16:30:26 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 15:25:25 wiz Exp $
 #
 
 DISTNAME=	Jcode-0.68
@@ -8,6 +8,7 @@ MASTER_SITES=	http://openlab.ring.gr.jp/Jcode/
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://openlab.ring.gr.jp/Jcode/index.html
+COMMENT=	perl5 module for handling various Japanese charsets
 
 DEPENDS+=	p5-MIME-Base64>=2.1:../../converters/p5-MIME-Base64
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/01 15:20:03 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:22:15 wiz Exp $
 
 DISTNAME=	alevt-1.6.0
 CATEGORIES=	graphics
@@ -6,6 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/video/}
 
 MAINTAINER=	magick@bundy.zhadum.de
 HOMEPAGE=	http://user.exit.de/froese/
+COMMENT=	Teletext decoder and browser for Brooktree 848 compatible TV cards
 
 DEPENDS+=	png>=1.0.6:../../graphics/png
 DEPENDS+=	fxtv>=1.02:../../graphics/fxtv

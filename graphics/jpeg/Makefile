@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/06/03 19:17:43 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/16 15:22:25 wiz Exp $
 #
 
 DISTNAME=		jpegsrc.v6b
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.uu.net/graphics/jpeg/
 
 MAINTAINER=		mycroft@netbsd.org
 HOMEPAGE=		http://www.ijg.org/
+COMMENT=		IJG's jpeg compression utilities
 
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/08/08 01:09:49 mjl Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 15:22:16 wiz Exp $
 #
 
 DISTNAME=		cdlabelgen-1.5.0
@@ -9,6 +9,7 @@ MASTER_SITES=		http://www.red-bean.com/~bwf/software/cdlabelgen/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.red-bean.com/~bwf/software/cdlabelgen/
+COMMENT=		generate frontcards and traycards for CDs
 
 USE_PERL5=		YES
 MAKE_ENV+=		SED="${SED}" MV="${MV}"

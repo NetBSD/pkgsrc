@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/18 09:08:10 itohy Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 15:25:19 wiz Exp $
 
 DISTNAME=	kbanner2
 PKGNAME=	kbanner-2.1
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.kudpc.kyoto-u.ac.jp/~yasuoka/program.html
+COMMENT=	Display kanji files in large letters
 
 ALL_TARGET=	kbanner
 

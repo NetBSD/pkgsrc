@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/14 18:32:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 15:22:20 wiz Exp $
 #
 
 DISTNAME=	g3d-0.0.2
@@ -7,6 +7,7 @@ MASTER_SITES=	http://condor.stcloudstate.edu/~hebl9901/g3d/
 
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://condor.stcloudstate.edu/~hebl9901/g3d/
+COMMENT=	3D modeller with a view of 3D modelling
 
 DEPENDS+=	gtkglarea-1.2.1:../../x11/gtkglarea
 

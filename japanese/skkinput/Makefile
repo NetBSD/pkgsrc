@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/29 11:34:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 15:25:30 wiz Exp $
 
 DISTNAME=	skkinput-2.03
 CATEGORIES=	japanese
@@ -6,6 +6,7 @@ MASTER_SITES=	http://member.nifty.ne.jp/Tatari_SAKAMOTO/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.yajima.kuis.kyoto-u.ac.jp/staffs/sakamoto/skkinput/skkinput.html
+COMMENT=	X11 frontend for SKK
 
 BUILD_DEFS+=	USE_INET6
 
