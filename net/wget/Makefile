@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2002/12/16 11:39:00 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2002/12/16 16:14:06 drochner Exp $
 
 DISTNAME=	wget-1.8.2
 CATEGORIES=	net
@@ -17,6 +17,8 @@ USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
 USE_PKGLOCALEDIR=	# defined
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+USE_LIBTOOL=	yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 EGDIR=			${PREFIX}/share/examples/wget
 CONF_FILES=		${EGDIR}/wgetrc ${PKG_SYSCONFDIR}/wgetrc
