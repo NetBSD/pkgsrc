@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2003/05/02 11:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2003/05/16 22:31:49 wiz Exp $
 #
 
 DISTNAME=		wxGTK-2.4.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		ftp://biolpc22.york.ac.uk/pub/2.4.0/
 
