@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/05/01 18:24:47 kim Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/06/20 20:18:34 minskim Exp $
 include/httpd/mod_perl.h
 include/httpd/modperl_apache_compat.h
 include/httpd/modperl_apache_includes.h
@@ -11,6 +11,7 @@ include/httpd/modperl_const.h
 include/httpd/modperl_constants.h
 include/httpd/modperl_directives.h
 include/httpd/modperl_env.h
+include/httpd/modperl_error.h
 include/httpd/modperl_filter.h
 include/httpd/modperl_flags.h
 include/httpd/modperl_global.h
@@ -42,140 +43,169 @@ include/httpd/modperl_xs_sv_convert.h
 include/httpd/modperl_xs_typedefs.h
 include/httpd/modperl_xs_util.h
 lib/httpd/mod_perl.so
-share/doc/html/mod_perl/TODO
-share/doc/html/mod_perl/api/APR.pod
-share/doc/html/mod_perl/api/APR/Const.pod
-share/doc/html/mod_perl/api/APR/PerlIO.pod
-share/doc/html/mod_perl/api/APR/Table.pod
-share/doc/html/mod_perl/api/AUTOGENERATION
-share/doc/html/mod_perl/api/Apache/Access.pod
-share/doc/html/mod_perl/api/Apache/Const.pod
-share/doc/html/mod_perl/api/Apache/Directive.pod
-share/doc/html/mod_perl/api/Apache/Filter.pod
-share/doc/html/mod_perl/api/Apache/FilterRec.pod
-share/doc/html/mod_perl/api/Apache/Log.pod
-share/doc/html/mod_perl/api/Apache/PerlSections.pod
-share/doc/html/mod_perl/api/Apache/Reload.pod
-share/doc/html/mod_perl/api/Apache/RequestRec.pod
-share/doc/html/mod_perl/api/Apache/RequestUtil.pod
-share/doc/html/mod_perl/api/Apache/ServerUtil.pod
-share/doc/html/mod_perl/api/Apache/Status.pod
-share/doc/html/mod_perl/api/Apache/SubProcess.pod
-share/doc/html/mod_perl/api/Apache/compat.pod
-share/doc/html/mod_perl/api/Apache/porting.pod
-share/doc/html/mod_perl/api/ModPerl/BuildMM.pod
-share/doc/html/mod_perl/api/ModPerl/MM.pod
-share/doc/html/mod_perl/api/ModPerl/MethodLookup.pod
-share/doc/html/mod_perl/api/ModPerl/PerlRun.pod
-share/doc/html/mod_perl/api/ModPerl/Registry.pod
-share/doc/html/mod_perl/api/ModPerl/RegistryBB.pod
-share/doc/html/mod_perl/api/ModPerl/RegistryCooker.pod
-share/doc/html/mod_perl/api/ModPerl/RegistryLoader.pod
-share/doc/html/mod_perl/api/ModPerl/Util.pod
-share/doc/html/mod_perl/api/README
-share/doc/html/mod_perl/api/config.cfg
-share/doc/html/mod_perl/api/index_bot.html
-share/doc/html/mod_perl/config.cfg
-share/doc/html/mod_perl/devel/Changes.pod
-share/doc/html/mod_perl/devel/config.cfg
-share/doc/html/mod_perl/devel/core/apache_integration.pod
-share/doc/html/mod_perl/devel/core/coding_style.pod
-share/doc/html/mod_perl/devel/core/explained.pod
-share/doc/html/mod_perl/devel/core/mod_perl_specific.pod
-share/doc/html/mod_perl/devel/core/mpms.pod
-share/doc/html/mod_perl/devel/debug/c.pod
-share/doc/html/mod_perl/devel/debug/perl.pod
-share/doc/html/mod_perl/devel/help/help.pod
-share/doc/html/mod_perl/devel/performance/size_matters.pod
-share/doc/html/mod_perl/devel/performance/speed_matters.pod
-share/doc/html/mod_perl/devel/porting/porting.pod
-share/doc/html/mod_perl/index_top.html
-share/doc/html/mod_perl/os/config.cfg
-share/doc/html/mod_perl/os/win32/Changes.pod
-share/doc/html/mod_perl/os/win32/config.cfg
-share/doc/html/mod_perl/os/win32/config.pod
-share/doc/html/mod_perl/os/win32/distinstall
-share/doc/html/mod_perl/os/win32/faq.pod
-share/doc/html/mod_perl/os/win32/install.pod
-share/doc/html/mod_perl/os/win32/mpinstall
-share/doc/html/mod_perl/user/Changes.pod
-share/doc/html/mod_perl/user/coding/coding.pod
-share/doc/html/mod_perl/user/coding/cooking.pod
-share/doc/html/mod_perl/user/config.cfg
-share/doc/html/mod_perl/user/config/config.pod
-share/doc/html/mod_perl/user/config/custom.pod
-share/doc/html/mod_perl/user/design/design.pod
-share/doc/html/mod_perl/user/handlers/bucket_brigades.dia
-share/doc/html/mod_perl/user/handlers/bucket_brigades.gif
-share/doc/html/mod_perl/user/handlers/bucket_brigades.png
-share/doc/html/mod_perl/user/handlers/connection_cycle.dia
-share/doc/html/mod_perl/user/handlers/connection_cycle.gif
-share/doc/html/mod_perl/user/handlers/connection_cycle.png
-share/doc/html/mod_perl/user/handlers/connection_cycle_time.dia
-share/doc/html/mod_perl/user/handlers/connection_cycle_time.gif
-share/doc/html/mod_perl/user/handlers/connection_cycle_time.png
-share/doc/html/mod_perl/user/handlers/filter_life_camera.jpg
-share/doc/html/mod_perl/user/handlers/filter_life_cigarrette.jpg
-share/doc/html/mod_perl/user/handlers/filter_life_coffee.jpg
-share/doc/html/mod_perl/user/handlers/filter_life_goggles.jpg
-share/doc/html/mod_perl/user/handlers/filter_life_mask.jpg
-share/doc/html/mod_perl/user/handlers/filter_life_player.jpg
-share/doc/html/mod_perl/user/handlers/filter_life_shower.jpg
-share/doc/html/mod_perl/user/handlers/filter_logic.dia
-share/doc/html/mod_perl/user/handlers/filter_logic.gif
-share/doc/html/mod_perl/user/handlers/filter_logic.png
-share/doc/html/mod_perl/user/handlers/filters.pod
-share/doc/html/mod_perl/user/handlers/general.pod
-share/doc/html/mod_perl/user/handlers/http.pod
-share/doc/html/mod_perl/user/handlers/http_cycle.dia
-share/doc/html/mod_perl/user/handlers/http_cycle.gif
-share/doc/html/mod_perl/user/handlers/http_cycle.png
-share/doc/html/mod_perl/user/handlers/in_filter_stream.dia
-share/doc/html/mod_perl/user/handlers/in_filter_stream.gif
-share/doc/html/mod_perl/user/handlers/in_filter_stream.png
-share/doc/html/mod_perl/user/handlers/intro.pod
-share/doc/html/mod_perl/user/handlers/out_filter_stream.dia
-share/doc/html/mod_perl/user/handlers/out_filter_stream.gif
-share/doc/html/mod_perl/user/handlers/out_filter_stream.png
-share/doc/html/mod_perl/user/handlers/protocols.pod
-share/doc/html/mod_perl/user/handlers/server.pod
-share/doc/html/mod_perl/user/handlers/server_life_cycle.dia
-share/doc/html/mod_perl/user/handlers/server_life_cycle.gif
-share/doc/html/mod_perl/user/handlers/server_life_cycle.png
-share/doc/html/mod_perl/user/help/help.pod
-share/doc/html/mod_perl/user/install/install.pod
-share/doc/html/mod_perl/user/intro/overview.pod
-share/doc/html/mod_perl/user/intro/start_fast.pod
-share/doc/html/mod_perl/user/performance/mpm.pod
-share/doc/html/mod_perl/user/performance/prevent.pod
-share/doc/html/mod_perl/user/porting/code/apache_mp3_2.diff
-share/doc/html/mod_perl/user/porting/code/apache_mp3_7.diff
-share/doc/html/mod_perl/user/porting/code/apache_mp3_9.diff
-share/doc/html/mod_perl/user/porting/compat.pod
-share/doc/html/mod_perl/user/porting/porting.pod
-share/doc/html/mod_perl/user/troubleshooting/troubleshooting.pod
-@dirrm share/doc/html/mod_perl/user/troubleshooting
-@dirrm share/doc/html/mod_perl/user/porting/code
-@dirrm share/doc/html/mod_perl/user/porting
-@dirrm share/doc/html/mod_perl/user/performance
-@dirrm share/doc/html/mod_perl/user/intro
-@dirrm share/doc/html/mod_perl/user/install
-@dirrm share/doc/html/mod_perl/user/help
-@dirrm share/doc/html/mod_perl/user/handlers
-@dirrm share/doc/html/mod_perl/user/design
-@dirrm share/doc/html/mod_perl/user/config
-@dirrm share/doc/html/mod_perl/user/coding
-@dirrm share/doc/html/mod_perl/user
-@dirrm share/doc/html/mod_perl/os/win32
-@dirrm share/doc/html/mod_perl/os
-@dirrm share/doc/html/mod_perl/devel/porting
-@dirrm share/doc/html/mod_perl/devel/performance
-@dirrm share/doc/html/mod_perl/devel/help
-@dirrm share/doc/html/mod_perl/devel/debug
-@dirrm share/doc/html/mod_perl/devel/core
-@dirrm share/doc/html/mod_perl/devel
-@dirrm share/doc/html/mod_perl/api/ModPerl
-@dirrm share/doc/html/mod_perl/api/Apache
-@dirrm share/doc/html/mod_perl/api/APR
-@dirrm share/doc/html/mod_perl/api
-@dirrm share/doc/html/mod_perl
+share/doc/mod_perl/TODO
+share/doc/mod_perl/api/APR.pod
+share/doc/mod_perl/api/APR/Base64.pod
+share/doc/mod_perl/api/APR/Brigade.pod
+share/doc/mod_perl/api/APR/Bucket.pod
+share/doc/mod_perl/api/APR/BucketAlloc.pod
+share/doc/mod_perl/api/APR/Const.pod
+share/doc/mod_perl/api/APR/Date.pod
+share/doc/mod_perl/api/APR/Error.pod
+share/doc/mod_perl/api/APR/Finfo.pod
+share/doc/mod_perl/api/APR/NetLib.pod
+share/doc/mod_perl/api/APR/PerlIO.pod
+share/doc/mod_perl/api/APR/Pool.pod
+share/doc/mod_perl/api/APR/SockAddr.pod
+share/doc/mod_perl/api/APR/Socket.pod
+share/doc/mod_perl/api/APR/Table.pod
+share/doc/mod_perl/api/APR/ThreadMutex.pod
+share/doc/mod_perl/api/APR/URI.pod
+share/doc/mod_perl/api/APR/Util.pod
+share/doc/mod_perl/api/AUTOGENERATION
+share/doc/mod_perl/api/Apache.pod
+share/doc/mod_perl/api/Apache/Access.pod
+share/doc/mod_perl/api/Apache/CmdParms.pod
+share/doc/mod_perl/api/Apache/Command.pod
+share/doc/mod_perl/api/Apache/Connection.pod
+share/doc/mod_perl/api/Apache/Const.pod
+share/doc/mod_perl/api/Apache/Directive.pod
+share/doc/mod_perl/api/Apache/Filter.pod
+share/doc/mod_perl/api/Apache/FilterRec.pod
+share/doc/mod_perl/api/Apache/HookRun.pod
+share/doc/mod_perl/api/Apache/Log.pod
+share/doc/mod_perl/api/Apache/Module.pod
+share/doc/mod_perl/api/Apache/PerlSections.pod
+share/doc/mod_perl/api/Apache/Process.pod
+share/doc/mod_perl/api/Apache/Reload.pod
+share/doc/mod_perl/api/Apache/RequestIO.pod
+share/doc/mod_perl/api/Apache/RequestRec.pod
+share/doc/mod_perl/api/Apache/RequestUtil.pod
+share/doc/mod_perl/api/Apache/Response.pod
+share/doc/mod_perl/api/Apache/Server.pod
+share/doc/mod_perl/api/Apache/ServerUtil.pod
+share/doc/mod_perl/api/Apache/Status.pod
+share/doc/mod_perl/api/Apache/SubProcess.pod
+share/doc/mod_perl/api/Apache/SubRequest.pod
+share/doc/mod_perl/api/Apache/URI.pod
+share/doc/mod_perl/api/Apache/Util.pod
+share/doc/mod_perl/api/Apache/compat.pod
+share/doc/mod_perl/api/Apache/porting.pod
+share/doc/mod_perl/api/ModPerl/BuildMM.pod
+share/doc/mod_perl/api/ModPerl/Const.pod
+share/doc/mod_perl/api/ModPerl/Global.pod
+share/doc/mod_perl/api/ModPerl/MM.pod
+share/doc/mod_perl/api/ModPerl/MethodLookup.pod
+share/doc/mod_perl/api/ModPerl/PerlRun.pod
+share/doc/mod_perl/api/ModPerl/Registry.pod
+share/doc/mod_perl/api/ModPerl/RegistryBB.pod
+share/doc/mod_perl/api/ModPerl/RegistryCooker.pod
+share/doc/mod_perl/api/ModPerl/RegistryLoader.pod
+share/doc/mod_perl/api/ModPerl/Util.pod
+share/doc/mod_perl/api/README
+share/doc/mod_perl/api/config.cfg
+share/doc/mod_perl/api/index_bot.html
+share/doc/mod_perl/config.cfg
+share/doc/mod_perl/devel/Changes.pod
+share/doc/mod_perl/devel/config.cfg
+share/doc/mod_perl/devel/core/apache_integration.pod
+share/doc/mod_perl/devel/core/coding_style.pod
+share/doc/mod_perl/devel/core/explained.pod
+share/doc/mod_perl/devel/core/mod_perl_specific.pod
+share/doc/mod_perl/devel/core/mpms.pod
+share/doc/mod_perl/devel/debug/c.pod
+share/doc/mod_perl/devel/debug/perl.pod
+share/doc/mod_perl/devel/help/help.pod
+share/doc/mod_perl/devel/performance/size_matters.pod
+share/doc/mod_perl/devel/performance/speed_matters.pod
+share/doc/mod_perl/devel/porting/porting.pod
+share/doc/mod_perl/index_top.html
+share/doc/mod_perl/os/config.cfg
+share/doc/mod_perl/os/win32/Changes.pod
+share/doc/mod_perl/os/win32/config.cfg
+share/doc/mod_perl/os/win32/config.pod
+share/doc/mod_perl/os/win32/distinstall
+share/doc/mod_perl/os/win32/faq.pod
+share/doc/mod_perl/os/win32/install.pod
+share/doc/mod_perl/os/win32/mpinstall
+share/doc/mod_perl/user/Changes.pod
+share/doc/mod_perl/user/coding/coding.pod
+share/doc/mod_perl/user/coding/cooking.pod
+share/doc/mod_perl/user/config.cfg
+share/doc/mod_perl/user/config/config.pod
+share/doc/mod_perl/user/config/custom.pod
+share/doc/mod_perl/user/design/design.pod
+share/doc/mod_perl/user/handlers/bucket_brigades.dia
+share/doc/mod_perl/user/handlers/bucket_brigades.gif
+share/doc/mod_perl/user/handlers/bucket_brigades.png
+share/doc/mod_perl/user/handlers/connection_cycle.dia
+share/doc/mod_perl/user/handlers/connection_cycle.gif
+share/doc/mod_perl/user/handlers/connection_cycle.png
+share/doc/mod_perl/user/handlers/connection_cycle_time.dia
+share/doc/mod_perl/user/handlers/connection_cycle_time.gif
+share/doc/mod_perl/user/handlers/connection_cycle_time.png
+share/doc/mod_perl/user/handlers/filter_life_camera.jpg
+share/doc/mod_perl/user/handlers/filter_life_cigarrette.jpg
+share/doc/mod_perl/user/handlers/filter_life_coffee.jpg
+share/doc/mod_perl/user/handlers/filter_life_goggles.jpg
+share/doc/mod_perl/user/handlers/filter_life_mask.jpg
+share/doc/mod_perl/user/handlers/filter_life_player.jpg
+share/doc/mod_perl/user/handlers/filter_life_shower.jpg
+share/doc/mod_perl/user/handlers/filter_logic.dia
+share/doc/mod_perl/user/handlers/filter_logic.gif
+share/doc/mod_perl/user/handlers/filter_logic.png
+share/doc/mod_perl/user/handlers/filters.pod
+share/doc/mod_perl/user/handlers/general.pod
+share/doc/mod_perl/user/handlers/http.pod
+share/doc/mod_perl/user/handlers/http_cycle.dia
+share/doc/mod_perl/user/handlers/http_cycle.gif
+share/doc/mod_perl/user/handlers/http_cycle.png
+share/doc/mod_perl/user/handlers/in_filter_stream.dia
+share/doc/mod_perl/user/handlers/in_filter_stream.gif
+share/doc/mod_perl/user/handlers/in_filter_stream.png
+share/doc/mod_perl/user/handlers/intro.pod
+share/doc/mod_perl/user/handlers/out_filter_stream.dia
+share/doc/mod_perl/user/handlers/out_filter_stream.gif
+share/doc/mod_perl/user/handlers/out_filter_stream.png
+share/doc/mod_perl/user/handlers/protocols.pod
+share/doc/mod_perl/user/handlers/server.pod
+share/doc/mod_perl/user/handlers/server_life_cycle.dia
+share/doc/mod_perl/user/handlers/server_life_cycle.gif
+share/doc/mod_perl/user/handlers/server_life_cycle.png
+share/doc/mod_perl/user/help/help.pod
+share/doc/mod_perl/user/install/install.pod
+share/doc/mod_perl/user/intro/overview.pod
+share/doc/mod_perl/user/intro/start_fast.pod
+share/doc/mod_perl/user/performance/mpm.pod
+share/doc/mod_perl/user/performance/prevent.pod
+share/doc/mod_perl/user/porting/code/apache_mp3_2.diff
+share/doc/mod_perl/user/porting/code/apache_mp3_7.diff
+share/doc/mod_perl/user/porting/code/apache_mp3_9.diff
+share/doc/mod_perl/user/porting/compat.pod
+share/doc/mod_perl/user/porting/porting.pod
+share/doc/mod_perl/user/troubleshooting/troubleshooting.pod
+@dirrm share/doc/mod_perl/user/troubleshooting
+@dirrm share/doc/mod_perl/user/porting/code
+@dirrm share/doc/mod_perl/user/porting
+@dirrm share/doc/mod_perl/user/performance
+@dirrm share/doc/mod_perl/user/intro
+@dirrm share/doc/mod_perl/user/install
+@dirrm share/doc/mod_perl/user/help
+@dirrm share/doc/mod_perl/user/handlers
+@dirrm share/doc/mod_perl/user/design
+@dirrm share/doc/mod_perl/user/config
+@dirrm share/doc/mod_perl/user/coding
+@dirrm share/doc/mod_perl/user
+@dirrm share/doc/mod_perl/os/win32
+@dirrm share/doc/mod_perl/os
+@dirrm share/doc/mod_perl/devel/porting
+@dirrm share/doc/mod_perl/devel/performance
+@dirrm share/doc/mod_perl/devel/help
+@dirrm share/doc/mod_perl/devel/debug
+@dirrm share/doc/mod_perl/devel/core
+@dirrm share/doc/mod_perl/devel
+@dirrm share/doc/mod_perl/api/ModPerl
+@dirrm share/doc/mod_perl/api/Apache
+@dirrm share/doc/mod_perl/api/APR
+@dirrm share/doc/mod_perl/api
+@dirrm share/doc/mod_perl

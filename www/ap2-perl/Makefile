@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2004/05/04 23:59:15 snj Exp $
+# $NetBSD: Makefile,v 1.14 2004/06/20 20:18:34 minskim Exp $
 #
 # NOTE: This package is *BETA*.  If it doesn't work, then check the
 #	modperl-2.0 mailing lists for help.
 
-DISTNAME=		mod_perl-1.99_12
-PKGNAME=		ap2-perl-1.99.12
-PKGREVISION=		2
+DISTNAME=		mod_perl-1.99_14
+PKGNAME=		ap2-perl-1.99.14
 CATEGORIES=		www perl5
 MASTER_SITES=		http://perl.apache.org/dist/
 
@@ -22,7 +21,7 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/mod_perl/.packlist
 
 MAKE_PARAMS+=		MP_APXS=${APXS}
 
-MODPERLDOCSDIR=	${PREFIX}/share/doc/html/mod_perl
+MODPERLDOCSDIR=	${PREFIX}/share/doc/mod_perl
 
 post-install:
 	${INSTALL_DATA_DIR} ${MODPERLDOCSDIR}
