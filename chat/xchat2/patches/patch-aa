@@ -1,25 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2004/05/07 12:06:47 cjep Exp $
-# Fix broken Socks5 traversal in xchat <= 2.0.8
+$NetBSD: patch-aa,v 1.3 2004/06/07 05:56:00 minskim Exp $
 
-http://mail.nl.linux.org/xchat-announce/2004-04/msg00000.html
-
---- src/common/server.c	2004-03-16 15:33:47.000000000 +1100
-+++ src/common/server.c	2004-04-05 15:33:15.000000000 +1000
-@@ -1054,7 +1054,7 @@
- 	struct sock5_connect1 sc1;
- 	unsigned char *sc2;
- 	unsigned int packetlen, addrlen;
--	unsigned char buf[10];
-+	unsigned char buf[260];
+--- src/common/util.c.orig	2004-05-29 05:19:23.000000000 -0500
++++ src/common/util.c
+@@ -605,7 +605,7 @@ get_cpu_str (void)
+ 	} else
+ #endif
+ 		snprintf (buf, 128,
+-					(cpus == 1) ? "%s %s [%s]" : "%s %s [%s/SMP]",
++					"%s %s [%s]",
+ 					un.sysname, un.release, un.machine);
  
- 	sc1.version = 5;
- 	sc1.nmethods = 1;
-@@ -1095,7 +1095,7 @@
- 	{
- 		if (recv (sok, buf, 1, 0) != 1)
- 			return 1;
--		packetlen = buf[0] + 2;
-+		packetlen = buf[0] + 2;	/* can't exceed 260 */
- 		if (recv (sok, buf, packetlen, 0) != packetlen)
- 			return 1;
- 	}
+ 	return buf;
