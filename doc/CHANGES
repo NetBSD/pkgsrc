@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.15 2002/09/20 17:01:33 abs Exp $
+$NetBSD: CHANGES,v 1.16 2002/09/21 01:06:59 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2918,3 +2918,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ploticus to 2.04 [rh 2002-09-20]
 	Updated communicator to 4.80 [abs 2002-09-20]
 	Updated navigator to 4.80 [abs 2002-09-20]
+	Added gail-0.17 [rh 2002-09-21]
+	Removed kyahoo [jlam 2002-09-20]
