@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.11 2003/04/01 16:07:22 wiz Exp $
+$NetBSD: patch-af,v 1.12 2004/05/19 19:26:38 kim Exp $
 
---- configure.in.orig	Mon Mar 24 17:05:59 2003
-+++ configure.in
-@@ -110,7 +110,6 @@ dnl
+--- configure.in.orig	2003-05-06 11:22:36.000000000 -0400
++++ configure.in	2004-05-19 15:22:23.000000000 -0400
+@@ -110,7 +110,6 @@
  test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
@@ -10,13 +10,10 @@ $NetBSD: patch-af,v 1.11 2003/04/01 16:07:22 wiz Exp $
  
  dnl
  dnl Deprecated --with options (these all warn or generate an error)
-@@ -233,6 +232,19 @@ AC_ARG_WITH(csops, [  --with-csops      
+@@ -236,6 +235,19 @@
  		;;
-     no)		;;
-     *)		AC_MSG_WARN([Ignoring unknown argument to --with-csops: $with_csops])
-+		;;
-+esac])
-+
+ esac])
+ 
 +AC_ARG_WITH(nbsdops, [  --with-nbsdops          add NetBSD standard options],
 +[case $with_nbsdops in
 +    yes)	echo 'Adding NetBSD standard options'
@@ -27,6 +24,17 @@ $NetBSD: patch-af,v 1.11 2003/04/01 16:07:22 wiz Exp $
 +		;;
 +    no)		;;
 +    *)		echo "Ignoring unknown argument to --with-nbsdops: $with_nbsdops"
- 		;;
- esac])
- 
++		;;
++esac])
++
+ AC_ARG_WITH(passwd, [  --without-passwd        don't use passwd/shadow file for authentication],
+ [case $with_passwd in
+     yes)	;;
+@@ -1813,6 +1825,7 @@
+ 	    AC_MSG_RESULT(yes)
+ 	    AC_DEFINE(HAVE_HEIMDAL, 1, [Define if your Kerberos is Heimdal.])
+ 	    SUDO_LIBS="${SUDO_LIBS} -lkrb5 -ldes -lcom_err -lasn1"
++	    AC_CHECK_LIB(crypto, main, [SUDO_LIBS="${SUDO_LIBS} -lcrypto"])
+ 	    AC_CHECK_LIB(roken, main, [SUDO_LIBS="${SUDO_LIBS} -lroken"])
+ 	], [
+ 	    AC_MSG_RESULT(no)
