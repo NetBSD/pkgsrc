@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.90.4.10 2003/08/16 17:17:11 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.90.4.11 2003/08/18 15:37:36 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -325,6 +325,12 @@ _BLNK_UNPROTECT+=	s:${_BLNK_MANGLE_DIR.${_dir_}}:${${_dir_}}
 
 _BLNK_TRANSFORM+=	${_BLNK_PROTECT}
 #
+# Change references to -[IL]${DEPOTBASE}/* into -[IL]${LOCALBASE} so that
+# "overwrite" packages think headers and libraries for "pkgviews" packages
+# are just found in the default view.
+#
+_BLNK_TRANSFORM+=	s:${DEPOTBASE}/[^/]*/:${LOCALBASE}/
+#
 # Convert direct paths to shared libraries into "-Ldir -llib" equivalents.
 #
 _BLNK_TRANSFORM+=	p:${X11BASE}
@@ -441,14 +447,13 @@ _REPLACE_BUILDLINK= \
 # buildlink directories and change any -llib to the proper replacement
 # libraries (-lreadline -> -ledit, etc.).  Redundant -Idir and -Ldir
 # options are removed to optimize the resulting file.  Also, prefer the
-# .la files in ${LOCALBASE}/lib over the ones in
-# ${LOCALBASE}/${DEPOT_SUBDIR}/*/lib when creating new .la files.  This
-# makes "overwrite" packages look and feel more like they would without
-# the pkgviews integration.
+# .la files in ${LOCALBASE}/lib over the ones in ${DEPOTBASE}/*/lib when
+# creating new .la files.  This makes "overwrite" packages look and feel
+# more like they would without the pkgviews integration.
 #
 LIBTOOL_ARCHIVE_UNTRANSFORM_SED?=	# empty
 _LIBTOOL_ARCHIVE_UNTRANSFORM_SED=	\
-	-e "s|${LOCALBASE}/${DEPOT_SUBDIR}/[^/]*/|${LOCALBASE}/|g"
+	-e "s|${DEPOTBASE}/[^/]*/|${LOCALBASE}/|g"
 _LIBTOOL_ARCHIVE_UNTRANSFORM_SED+=	${LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
 REPLACE_BUILDLINK_SED?=			# empty
 _REPLACE_BUILDLINK_SED=			${REPLACE_BUILDLINK_SED}
