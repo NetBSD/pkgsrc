@@ -1,0 +1,24 @@
+$NetBSD: patch-aj,v 1.1.1.1 2004/11/09 13:05:33 xtraeme Exp $
+
+--- Makefile.target.orig	2004-11-09 13:20:37.000000000 +0100
++++ Makefile.target	2004-11-09 13:22:17.000000000 +0100
+@@ -7,8 +7,8 @@
+ VPATH+=:$(SRC_PATH)/linux-user
+ DEFINES+=-I$(SRC_PATH)/linux-user -I$(SRC_PATH)/linux-user/$(TARGET_ARCH)
+ endif
+-CFLAGS=-Wall -O2 -g -fno-strict-aliasing
+-LDFLAGS=-g
++#CFLAGS=-Wall -O2 -g -fno-strict-aliasing
++#LDFLAGS=-g
+ LIBS=
+ HELPER_CFLAGS=$(CFLAGS)
+ DYNGEN=../dyngen$(EXESUF)
+@@ -340,7 +340,7 @@
+ 
+ install: all 
+ ifneq ($(PROGS),)
+-	install -m 755 -s $(PROGS) "$(bindir)"
++	$(BSD_INSTALL_PROGRAM) $(PROGS) "$(bindir)"
+ endif
+ 
+ ifneq ($(wildcard .depend),)
