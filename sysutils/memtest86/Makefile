@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/07 14:44:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/07 15:05:23 wiz Exp $
 #
 
-DISTNAME=		memtest86-2.8a
-PKGNAME=		memtest86-2.8.1
+DISTNAME=		memtest86-2.9
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.memtest86.com/
 
@@ -12,7 +11,6 @@ COMMENT=		thorough, stand alone memory test for x86 arch
 
 USE_GMAKE=		yes
 ONLY_FOR_PLATFORM=	NetBSD-1.5[Y-Z]*-i386 NetBSD-1.[6-9]*-i386
-WRKSRC=			${WRKDIR}/${DISTNAME:S/a$//}
 
 post-patch:
 	${CP} ${FILESDIR}/linkage.h ${WRKSRC}
