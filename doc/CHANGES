@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3433 2003/09/17 21:18:00 wiz Exp $
+$NetBSD: CHANGES,v 1.3434 2003/09/17 23:05:14 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3755,3 +3755,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated poptop to 1.1.3.20030409 [cube 2003-09-17]
 	Updated mysql-server to 3.23.49nb5 [wiz 2003-09-17]
 	Added enchant-0.4.0 [wiz 2003-09-17]
+	Updated sylpheed to 0.9.6 [recht 2003-09-17]
