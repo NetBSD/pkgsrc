@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 1999/02/25 22:11:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1999/03/22 16:08:33 bad Exp $
 #
 
 DISTNAME=	libtool-1.2
 PKGNAME=	pkglibtool-1.2p1
 CATEGORIES=	pkgtools devel
-MASTER_SITES=	${MASTER_SITE_GNU}
+MASTER_SITES=	${MASTER_SITE_GNU:=/libtool/}
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.profitpress.com/libtool/

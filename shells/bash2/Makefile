@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/03/02 03:53:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 1999/03/22 16:08:33 bad Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
@@ -7,7 +7,7 @@ DV=		2.03
 DISTNAME=       bash-${V}
 CATEGORIES=	shells
 MASTER_SITES=	ftp://slc2.ins.cwru.edu/pub/dist/  \
-		${MASTER_SITE_GNU}/bash/
+		${MASTER_SITE_GNU:=/bash/}
 
 .include "../../mk/bsd.prefs.mk"
 
