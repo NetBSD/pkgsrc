@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/12/17 00:43:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/12/21 09:07:09 hubertf Exp $
 
-DISTNAME=		silc-server-0.7.1
+DISTNAME=		silc-server-0.7.2
 CATEGORIES=		chat
-MASTER_SITES=		http://ftp.silcnet.org/server/sources/ \
+MASTER_SITES=		http://silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
 			http://www.planetmirror.com/pub/silcnet/server/sources/ \
 			ftp://ftp.au.silcnet.org/pub/silcnet/server/sources/ \
@@ -18,7 +18,6 @@ COMMENT=                Server for the Secure Internet Live Conferencing (SILC) 
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-USE_NCURSES=		yes
 USE_LIBTOOL=		yes
 USE_BUILDLINK_ONLY=	yes
 
@@ -30,7 +29,8 @@ CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silcd \
 			--with-etcdir=${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR} \
 			--with-silcd-config-file=${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}/silcd.conf \
 			--with-silcd-pid-file=/var/run/silcd.pid \
-			--with-logsdir=/var/log/silcd
+			--with-logsdir=/var/log/silcd \
+			--without-ncurses
 
 INSTALL_FILE=		${WRKDIR}/INSTALL
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
