@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/25 13:02:07 wulf Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/19 11:25:34 wulf Exp $
 #
 
-DISTNAME=	geneweb-3.06
+DISTNAME=	geneweb-3.07
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/cristal/geneweb/Src/
 
@@ -41,6 +41,7 @@ do-install:
 		${INSTALL_PROGRAM} gwd ${PREFIX}/libexec && \
 		${INSTALL_PROGRAM} consang ${PREFIX}/bin && \
 		${INSTALL_PROGRAM} gwc ${PREFIX}/bin && \
+		${INSTALL_PROGRAM} gwtp ${PREFIX}/bin && \
 		${INSTALL_PROGRAM} ged2gwb ${PREFIX}/bin && \
 		${INSTALL_PROGRAM} gwb2ged ${PREFIX}/bin && \
 		${INSTALL_PROGRAM} gwsetup ${PREFIX}/sbin && \
