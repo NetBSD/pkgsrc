@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.15 2003/05/02 11:54:17 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.16 2003/07/03 11:17:50 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use GConf2.
 #
@@ -45,7 +45,7 @@ GConf2-buildlink-fake:
 	if [ ! -f ${_GCONF2_FAKE} ]; then				\
 		${ECHO_BUILDLINK_MSG} "Creating ${_GCONF2_FAKE}";	\
 		${MKDIR} ${_GCONF2_FAKE:H};				\
-		${ECHO} "#!/bin/sh" > ${_GCONF2_FAKE};			\
+		${ECHO} "#!${SH}" > ${_GCONF2_FAKE};			\
 		${CHMOD} +x ${_GCONF2_FAKE};				\
 	fi
 
