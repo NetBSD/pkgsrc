@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.654 2001/01/29 11:34:21 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.655 2001/01/29 14:40:26 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1662,7 +1662,7 @@ real-su-install: ${MESSAGE}
 .endfor
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -s ${WRKDIR}/.CONFLICTS ]; then \
-		found=`cat ${WRKDIR}/.CONFLICTS | ${SED} -e s'|${PKG_DBDIR}/||g' | tr '\012' ' '`; \
+		found=`${SED} -e s'|${PKG_DBDIR}/||g' ${WRKDIR}/.CONFLICTS | tr '\012' ' '`; \
 		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} conflicts with installed package(s): $$found found."; \
 		${ECHO_MSG} "*** They install the same files into the same place."; \
 		${ECHO_MSG} "*** Please remove $$found first with pkg_delete(1)."; \
@@ -1872,7 +1872,7 @@ do-shlib-handling:
 						${ECHO_MSG} >&2 "Ignoring $$so"; \
 					fi;				\
 					${SED} -e "s;^$$so$$;@comment No shared objects - &;" \
-						<${PLIST} >${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST};	\
+						${PLIST} >${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST};	\
 				done;					\
 			fi ;						\
 			;;						\
@@ -2213,7 +2213,7 @@ update-dirlist:
 
 ${DDIR}: ${DLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	ddir=`${SED} 's:-[^-]*$$::' <${DLIST}`;				\
+	ddir=`${SED} 's:-[^-]*$$::' ${DLIST}`;				\
 	${ECHO} >${DDIR};						\
 	for pkg in $${ddir} ; do					\
 		if ${PKG_INFO} -b $${pkg} >/dev/null 2>&1 ; then	\
