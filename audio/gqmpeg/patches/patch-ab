@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 1999/06/15 02:06:39 hubertf Exp $
+$NetBSD: patch-ab,v 1.7 1999/06/16 03:06:36 hubertf Exp $
 
 From rxg@ms25.url.com.tw Tue Jun 15 02:49:50 1999
 Date: Mon, 14 Jun 1999 13:58:57 +0100
@@ -16,7 +16,7 @@ Can you tell me what you think?
 Thanks!
     [ Part 2: "Attached Text" ]
 
-$NetBSD: patch-ab,v 1.6 1999/06/15 02:06:39 hubertf Exp $
+$NetBSD: patch-ab,v 1.7 1999/06/16 03:06:36 hubertf Exp $
 
 --- mixer.c.orig	Wed Jun  2 05:50:45 1999
 +++ mixer.c	Mon Jun 14 14:14:29 1999
@@ -79,7 +79,7 @@ $NetBSD: patch-ab,v 1.6 1999/06/15 02:06:39 hubertf Exp $
 +
 +  mixer_device = getenv("MIXERDEVICE");
 +  if (mixer_device == NULL)
-+    mixer_device = "/dev/mixer";
++    mixer_device = "/dev/mixer0";
 +
 +  if ((fd = open(mixer_device, O_RDWR)) == -1) {
 +    perror(mixer_device);
@@ -155,7 +155,7 @@ $NetBSD: patch-ab,v 1.6 1999/06/15 02:06:39 hubertf Exp $
 +
 +  audioctl_device = getenv("AUDIOCTLDEVICE");
 +  if (audioctl_device == NULL)
-+    audioctl_device = "/dev/audioctl";
++    audioctl_device = "/dev/audioctl0";
 +
 +  if ((fd = open(audioctl_device, O_RDONLY)) == -1) {
 +    perror(audioctl_device);
@@ -180,7 +180,7 @@ $NetBSD: patch-ab,v 1.6 1999/06/15 02:06:39 hubertf Exp $
 +
 +  mixer_device = getenv("MIXERDEVICE");
 +  if (mixer_device == NULL)
-+    mixer_device = "/dev/mixer";
++    mixer_device = "/dev/mixer0";
 +
 +  if ((fd = open(mixer_device, O_RDWR)) == -1) {
 +    perror(mixer_device);
@@ -211,7 +211,7 @@ $NetBSD: patch-ab,v 1.6 1999/06/15 02:06:39 hubertf Exp $
 +
 +  audioctl_device = getenv("AUDIOCTLDEVICE");
 +  if (audioctl_device == NULL)
-+    audioctl_device = "/dev/audioctl";
++    audioctl_device = "/dev/audioctl0";
 +
 +  if ((fd = open(audioctl_device, O_RDONLY)) == -1) {
 +    perror(audioctl_device);
@@ -241,7 +241,7 @@ $NetBSD: patch-ab,v 1.6 1999/06/15 02:06:39 hubertf Exp $
 +
 +  mixer_device = getenv("MIXERDEVICE");
 +  if (mixer_device == NULL)
-+    mixer_device = "/dev/mixer";
++    mixer_device = "/dev/mixer0";
 +
 +  if ((fd = open(mixer_device, O_RDWR)) == -1) {
 +    perror(mixer_device);
