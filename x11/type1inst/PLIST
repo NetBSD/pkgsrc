@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:45 zuntum Exp $
-bin/type1inst
-bin/t1embed
-man/man1/type1inst.1
-share/doc/type1inst/README
-@dirrm share/doc/type1inst
