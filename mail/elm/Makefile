@@ -4,7 +4,7 @@
 # Date created:         26 June 1995
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.2 1998/01/23 13:17:11 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 1998/02/25 17:03:12 agc Exp $
 # FreeBSD: Makefile,v 1.42 1997/12/24 01:21:07 alex Exp
 #
 
@@ -18,7 +18,11 @@ MAINTAINER=	ache@FreeBSD.ORG
 
 WRKSRC=         ${WRKDIR}/elm2.4.ME+.32
 MAN1=           answer.1 checkalias.1 elm.1 elmalias.1 fastmail.1 \
-		listalias.1 messages.1 newalias.1 printmail.1 readmsg.1
+		frm.1 listalias.1 messages.1 newalias.1 newmail.1 \
+		printmail.1 readmsg.1
+CAT1=           answer.0 checkalias.0 elm.0 elmalias.0 fastmail.0 \
+		frm.0 listalias.0 messages.0 newalias.0 newmail.0 \
+		printmail.0 readmsg.0
 
 HAS_CONFIGURE=  Yes
 CONFIGURE_SCRIPT= Configure
