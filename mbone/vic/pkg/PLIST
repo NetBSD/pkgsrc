@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/19 16:28:28 is Exp $
 bin/vic
 bin/histtolut
 man/man1/vic.1.gz

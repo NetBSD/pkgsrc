@@ -1,5 +1,5 @@
---- tkStripchart.c.orig	Tue Sep  9 11:00:42 1997
-+++ tkStripchart.c	Tue Sep  9 10:52:30 1997
+--- /usr/local/pkgsrc//mbone/vic/work/vic-2.8/tkStripchart.c	Sat Mar 16 22:14:00 1996
++++ tkStripchart.c	Tue Nov 18 13:16:26 1997
 @@ -148,7 +148,7 @@
  	int scrollrequired;
  	int guarantee_draw;

@@ -1,5 +1,5 @@
---- main.cc.orig	Mon Jul 22 13:12:22 1996
-+++ main.cc	Tue Sep  9 10:25:36 1997
+--- /usr/local/pkgsrc//mbone/vic/work/vic-2.8/main.cc	Mon Jul 22 22:12:22 1996
++++ main.cc	Tue Nov 18 13:16:25 1997
 @@ -177,7 +177,7 @@
  		else {
  			Tk_Window tk = t.tkmain();
