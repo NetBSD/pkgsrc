@@ -1,8 +1,8 @@
-# $NetBSD: extension.mk,v 1.5 2003/09/14 16:43:45 recht Exp $
+# $NetBSD: extension.mk,v 1.6 2003/11/01 12:10:00 recht Exp $
 
 # derive a python version from the package name if possible
 .if defined(PKGNAME_REQD)
-PYTHON_VERSION_REQD?= ${PKGNAME_REQD:C/^py([^-]*)-.*/\1/}
+PYTHON_VERSION_REQD?= ${PKGNAME_REQD:C/^\'?py([^-]*)-.*/\1/}
 .endif
 
 .include "../../lang/python/pyversion.mk"
