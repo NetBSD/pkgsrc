@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/04/17 20:20:28 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/23 23:14:30 tron Exp $
 
 DISTNAME=		xinvest-2.6
 CATEGORIES=		misc x11
@@ -8,11 +8,11 @@ MASTER_SITES=		http://www.sunsite.auc.dk/xinvest/ \
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.sunsite.auc.dk/xinvest/xinvest.html
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
+USE_IMAKE=		YES
+USE_MOTIF=		YES
+USE_XPM=		YES
 
-USE_IMAKE=		yes
-USE_MOTIF=		yes
-NO_INSTALL_MANPAGES=	yes
+NO_INSTALL_MANPAGES=	YES
 
 post-patch:
 	${TOUCH} ${WRKSRC}/Xinvest.man

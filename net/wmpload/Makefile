@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/25 10:54:55 abs Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/23 23:14:30 tron Exp $
 #
 
 DISTNAME=	wmpload-0.9.4
@@ -8,9 +8,8 @@ MASTER_SITES=	http://www.engr.utk.edu/~mdsmith/pload/
 MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://www.engr.utk.edu/~mdsmith/pload/
 
-DEPENDS+=       xpm-3.4k:../../graphics/xpm
-
 HAS_CONFIGURE=	YES
 USE_X11BASE=	YES
+USE_XPM=	YES
 
 .include "../../mk/bsd.pkg.mk"

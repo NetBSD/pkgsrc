@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/04/15 20:39:43 tron Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/23 23:14:28 tron Exp $
 # FreeBSD: Makefile,v 1.3 1997/08/26 07:12:20 tg Exp
 #
 
@@ -9,9 +9,8 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=utilities/}
 
 MAINTAINER=		packages@netbsd.org
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
-
-USE_IMAKE=		yes
-USE_GMAKE=		yes
+USE_IMAKE=		YES
+USE_GMAKE=		YES
+USE_XPM=		YES
 
 .include "../../mk/bsd.pkg.mk"

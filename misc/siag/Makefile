@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/02/02 04:05:03 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2000/08/23 23:14:30 tron Exp $
 
 DISTNAME=       siag-3.1.20
 CATEGORIES=     misc textproc math
@@ -10,13 +10,13 @@ HOMEPAGE=       http://www.edu.stockholm.se/siag/
 DEPENDS+=	gv-3.5.8:../../print/gv
 DEPENDS+=	gnuplot-3.7:../../graphics/gnuplot
 DEPENDS+=	guile-1.3.*:../../lang/guile
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 CONFIGURE_ARGS=	--with-x --with-guile --includedir=${PREFIX}/include
-GNU_CONFIGURE=  yes
-USE_GMAKE=	yes
-USE_X11=	yes
-USE_XAW=	yes
+GNU_CONFIGURE=  YES
+USE_GMAKE=	YES
+USE_X11=	YES
+USE_XAW=	YES
+USE_XPM=	YES
 
 CFLAGS+=	-Dunix
 LDFLAGS+=	-Wl,-R${X11BASE}/lib

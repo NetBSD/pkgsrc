@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/02/19 19:42:55 rh Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/23 23:14:34 tron Exp $
 #
 
 DISTNAME=	wterm-6.2.6
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://wm.current.nu/files.php\#wterm
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	windowmaker-*:../../x11/windowmaker
 
 USE_X11BASE=	YES

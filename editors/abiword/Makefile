@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/08/04 11:09:38 abs Exp $
+# $NetBSD: Makefile,v 1.12 2000/08/23 23:14:23 tron Exp $
 #
 
 # According to AbiSource's explanation of their trademark rights,
@@ -20,11 +20,11 @@ HOMEPAGE=	http://www.abisource.com/
 BUILD_DEPENDS+=	${LOCALBASE}/bin/unzip:../../archivers/unzip
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	png>=1.0.6:../../graphics/png
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
-USE_X11=	# defined
-USE_GMAKE=	# defined
-NO_CONFIGURE=	# defined
+USE_X11=	YES
+USE_XPM=	YES
+USE_GMAKE=	YES
+NO_CONFIGURE=	YES
 ALL_TARGET=	compile canonical
 
 DIST_SUBDIR=	abisuite

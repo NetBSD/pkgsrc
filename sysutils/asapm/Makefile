@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/07/15 20:39:24 agc Exp $
+# $NetBSD: Makefile,v 1.14 2000/08/23 23:14:31 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/11/29 12:43:12 asami Exp
 #
 
@@ -15,10 +15,9 @@ HOMEPAGE=		http://www.tigr.net/afterstep/as-apps/download/asapm/
 IGNORE+=		"APM is not available for ${MACHINE_PLATFORM}"
 .endif
 
-DEPENDS+=		xpm-*:../../graphics/xpm
-
-GNU_CONFIGURE=		yes
-USE_X11=		yes
+GNU_CONFIGURE=		YES
+USE_X11=		YES
+USE_XPM=		YES
 CONFIGURE_ARGS+=	--disable-jpeg	# there actually is no JPEG support
 EVAL_PREFIX+=		XPMDIR=xpm
 CONFIGURE_ARGS+=	--with-xpm \

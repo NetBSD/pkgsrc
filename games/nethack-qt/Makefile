@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/08/10 17:50:10 pooka Exp $
+# $NetBSD: Makefile,v 1.21 2000/08/23 23:14:26 tron Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
@@ -7,13 +7,13 @@ PKGNAME=		nethack-qt-${NETHACK_VERSION}
 CATEGORIES+=		x11
 
 DEPENDS+=		nethack-lib-${NETHACK_VERSION}:../nethack-lib
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		qt2-2.0.2:../../x11/qt
 
-USE_X11=		yes
+USE_X11=		YES
+USE_XPM=		YES
+
 ALL_TARGET=		x11tiles nethack
 INSTALL_TARGET=		binfiles
-
 EVAL_PREFIX+=		QT2DIR=qt2
 PATH=   		${QT2DIR}/qt2/bin:$$PATH
 MAKE_ENV+=		GTYPE=-qt QTDIR=${QT2DIR}/qt2

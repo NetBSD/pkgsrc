@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2000/08/15 23:13:59 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2000/08/23 23:14:27 tron Exp $
 
 DISTNAME=		gimp-1.0.4
 CATEGORIES=		graphics
@@ -17,17 +17,17 @@ DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		mpeg-1.2.1:../../graphics/mpeg-lib
 DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 GIMP_DATA=		gimp-data-extras-1.0.0
 
 .ifndef DISPLAY
-IS_INTERACTIVE=		yes
+IS_INTERACTIVE=		YES
 .endif
-USE_X11BASE=		yes
-USE_GMAKE=		yes
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+USE_X11BASE=		YES
+USE_XPM=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
 
 EVAL_PREFIX+=		GTKDIR=gtk+
 CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}"

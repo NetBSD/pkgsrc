@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/07/27 14:01:00 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2000/08/23 23:14:28 tron Exp $
 #
 
 DISTNAME=		xfig.3.2.3a
@@ -11,11 +11,11 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://epb1.lbl.gov/BVSmith/xfig/
 
 DEPENDS+=		transfig-3.2.3:../../print/transfig
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 
-USE_IMAKE=		yes
-USE_XAW=		yes
+USE_IMAKE=		YES
+USE_XAW=		YES
+USE_XPM=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
