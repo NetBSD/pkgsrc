@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/03/08 19:40:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/12 05:12:01 snj Exp $
 #
 
 DISTNAME=		ccgo-0.3.4
@@ -15,7 +15,7 @@ DEPENDS+=		gnugo>=3.4:../../games/gnugo
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
@@ -28,9 +28,9 @@ SUBST_SED.ccgo=		-e 's|/usr/games/gnugo|${PREFIX.gnugo}/bin/gnugo|g'
 EVAL_PREFIX+=		PREFIX.gnugo
 PREFIX.gnugo_DEFAULT=	${LOCALBASE}
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/gconfmm/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../x11/gtkmm/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gconfmm/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/gtkmm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
