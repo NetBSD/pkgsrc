@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/01/15 08:07:07 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2004/02/22 20:37:45 dmcmahill Exp $
 #
 
 DISTNAME=	geda-${PKGVERSION}
@@ -20,8 +20,7 @@ DEPENDS+=	geda-utils-${PKGVERSION}nb2:../../cad/geda-utils
 DEPENDS+=	geda-docs-${PKGVERSION}:../../cad/geda-docs
 DEPENDS+=	geda-examples-${PKGVERSION}:../../cad/geda-examples
 
-DIST_SUBDIR=	geda
-PKGVERSION=	20030901
+.include "Makefile.common"
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
