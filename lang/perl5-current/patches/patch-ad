@@ -1,0 +1,25 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/01/18 22:15:51 tron Exp $
+
+--- perl.c.orig	Sat Mar 27 12:49:17 1999
++++ perl.c	Sun Jan 16 21:31:04 2000
+@@ -2213,6 +2213,20 @@
+ 		croak("Can't swap uid and euid");	/* really paranoid */
+ 	    if (PerlLIO_stat(SvPVX(GvSV(PL_curcop->cop_filegv)),&tmpstatbuf) < 0)
+ 		croak("Permission denied");	/* testing full pathname here */
++#if (defined(BSD) && (BSD >= 199306))
++#ifdef IAMSUID
++        {
++            struct statfs stfs;
++
++            if (fstatfs(PerlIO_fileno(PL_rsfp),&stfs) < 0)
++                croak("Can't statfs filesystem of script \"%s\"",origfilename);
++
++           if (stfs.f_flags & MNT_NOSUID)
++                croak("Permission denied");
++        }
++#endif /* IAMSUID */
++#endif /* BSD */
++
+ #if defined(IAMSUID) && !defined(NO_NOSUID_CHECK)
+ 	    if (fd_on_nosuid_fs(PerlIO_fileno(PL_rsfp)))
+ 		croak("Permission denied");
