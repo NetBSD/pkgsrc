@@ -1,0 +1,35 @@
+# $NetBSD: Makefile,v 1.1.1.1 1999/05/03 16:48:56 rh Exp $
+#
+
+DISTNAME=	gnome-utils-1.0.1
+CATEGORIES=	misc x11
+MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
+		ftp://ftp.tuwien.ac.at/hci/GNOME/gnome-1.0/sources/ \
+		ftp://gnomeftp.wgn.net/pub/gnome/ \
+		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/ \
+		ftp://unix.hensa.ac.uk/mirrors/ftp.gnome.org/pub/GNOME/ \
+		ftp://ftp.sunet.se/pub/X11/GNOME/ \
+		ftp://ftp.dataplus.se/pub/linux/gnome/ \
+		ftp://ftp.net.lut.ac.uk/gnome/ \
+		ftp://mirror.aarnet.edu.au/pub/gnome/ \
+		ftp://ftp.fr.gnome.org/pub/gnome/ \
+		ftp://ftp.dti.ad.jp/pub/X/GNOME/ \
+		http://gd.tuwien.ac.at/hci/GNOME/gnome-1.0/sources/
+
+MAINTAINER=	rh@netbsd.org
+HOMEPAGE=	http://www.gnome.org/
+
+BUILD_DEPENDS=	${LOCALBASE}/bin/bison:../../devel/bison
+DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
+DEPENDS+=	gettext-0.10.35:../../devel/gettext
+DEPENDS+=	gnome-libs-1.0.9:../../x11/gnome-libs
+DEPENDS+=	libaudiofile-0.1.6:../../audio/libaudiofile
+# "libgtop" packages is broken at the moment.
+#DEPENDS+=      libgtop-1.0.1:../../devel/libgtop
+
+GNU_CONFIGURE=	YES
+USE_X11BASE=	YES
+CONFIGURE_ENV+=	XGETTEXT="${LOCALBASE}/bin/xgettext"
+CONFIGURE_ARGS=	--with-ncurses=${PREFIX}
+
+.include "../../mk/bsd.pkg.mk"
