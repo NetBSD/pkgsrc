@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4756 2004/02/09 21:19:57 itojun Exp $
+$NetBSD: CHANGES,v 1.4757 2004/02/10 01:59:56 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -735,3 +735,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtkspell to 2.0.5 [minskim 2004-02-09]
 	Updated gnome-vfs2 to 2.4.2nb2 [jmmv 2004-02-09]
 	Updated cue to 20040209 [itojun 2004-02-09]
+	Updated perl58 to 5.8.3 [jlam 2004-02-10]
