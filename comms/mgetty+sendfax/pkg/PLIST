@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/11/15 20:45:30 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/11/16 02:49:48 tron Exp $
 bin/autopvf
 bin/basictopvf
 bin/faxspool
@@ -36,7 +36,8 @@ etc/mgetty+sendfax/dialin.config
 etc/mgetty+sendfax/faxheader
 etc/mgetty+sendfax/faxrunq.config
 etc/mgetty+sendfax/login.config
-@unexec rm -f %D/etc/mgetty+sendfax/faxheader %D/etc/mgetty+sendfax/mgetty.config* %D/etc/mgetty+sendfax/sendfax.config*
+etc/mgetty+sendfax/mgetty.config
+etc/mgetty+sendfax/sendfax.config
 @unexec install-info --delete %D/info/mgetty.info %D/info/dir
 info/mgetty.info
 info/mgetty.info-1
