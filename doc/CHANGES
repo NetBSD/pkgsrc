@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5557 2004/04/12 16:06:28 taca Exp $
+$NetBSD: CHANGES,v 1.5558 2004/04/12 18:21:59 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1930,3 +1930,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Schedule-RateLimiter-0.01 [grant 2004-04-12]
 	Updated libgtop2 to 2.6.0nb1 [jmmv 2004-04-12]
 	Updated postfix-current to 20040312 [taca 2004-04-12]
+	Added p5-ExtUtils-XSBuilder-0.25 [kim 2004-04-12]
+	Added p5-libapreq2-2.2.2 [kim 2004-04-12]
