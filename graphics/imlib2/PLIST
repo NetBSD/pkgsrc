@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/08/26 20:21:58 recht Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/06 02:56:07 rh Exp $
 bin/bumpmaptest
 bin/color_spaces
 bin/imconvert
@@ -32,6 +32,9 @@ lib/imlib2_loaders/image/gif.so
 lib/imlib2_loaders/image/jpeg.a
 lib/imlib2_loaders/image/jpeg.la
 lib/imlib2_loaders/image/jpeg.so
+lib/imlib2_loaders/image/lbm.a
+lib/imlib2_loaders/image/lbm.la
+lib/imlib2_loaders/image/lbm.so
 lib/imlib2_loaders/image/png.a
 lib/imlib2_loaders/image/png.la
 lib/imlib2_loaders/image/png.so
@@ -54,7 +57,7 @@ lib/libImlib2.a
 lib/libImlib2.la
 lib/libImlib2.so
 lib/libImlib2.so.2
-lib/libImlib2.so.2.1
+lib/libImlib2.so.2.2
 lib/pkgconfig/imlib2.pc
 @dirrm lib/imlib2_loaders/image
 @dirrm lib/imlib2_loaders/filter
