@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.163 1998/09/16 08:46:58 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.164 1998/09/17 14:03:48 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -350,10 +350,20 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 .undef NO_PACKAGE
 .endif
 
-COMMENT?=	${PKGDIR}/COMMENT
-DESCR_SRC?=	${PKGDIR}/DESCR
-DESCR?=		${WRKDIR}/.DESCR
-PLIST=		${WRKDIR}/.PLIST
+COMMENT?=		${PKGDIR}/COMMENT
+DESCR_SRC?=		${PKGDIR}/DESCR
+DESCR?=			${WRKDIR}/.DESCR
+PLIST=			${WRKDIR}/.PLIST
+
+# Set INSTALL_FILE to be the name of any INSTALL file
+.if !defined(INSTALL_FILE) && exists(${PKGDIR}/INSTALL)
+INSTALL_FILE=		${PKGDIR}/INSTALL
+.endif
+
+# Set DEINSTALL_FILE to be the name of any DEINSTALL file
+.if !defined(DEINSTALL_FILE) && exists(${PKGDIR}/DEINSTALL)
+DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
+.endif
 
 PKG_CMD?=		/usr/sbin/pkg_create
 .if !defined(PKG_ARGS)
@@ -365,11 +375,11 @@ __PKG_CMD_C__!= ${PKG_CMD} -C 2>&1 | /usr/bin/egrep 'illegal option' ; echo
 PKG_ARGS+=		-C "${CONFLICTS}"
 .endif
 .endif
-.if exists(${PKGDIR}/INSTALL)
-PKG_ARGS+=		-i ${PKGDIR}/INSTALL
+.ifdef INSTALL_FILE
+PKG_ARGS+=		-i ${INSTALL_FILE}
 .endif
-.if exists(${PKGDIR}/DEINSTALL)
-PKG_ARGS+=		-k ${PKGDIR}/DEINSTALL
+.ifdef DEINSTALL_FILE
+PKG_ARGS+=		-k ${DEINSTALL_FILE}
 .endif
 .if exists(${PKGDIR}/REQ)
 PKG_ARGS+=		-r ${PKGDIR}/REQ
