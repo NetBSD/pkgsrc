@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.401 2002/10/29 16:51:25 drochner Exp $
+$NetBSD: CHANGES,v 1.402 2002/10/29 17:11:39 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3437,3 +3437,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added rocksndiamonds-levels-1.0 [wiz 2002-10-29]
 	Updated cdrdao to 1.1.7 [drochner 2002-10-29]
 	Updated gcdmaster to 1.1.7 [drochner 2002-10-29]
+	Updated frotz to 2.43 [dillo 2002-10-29]
