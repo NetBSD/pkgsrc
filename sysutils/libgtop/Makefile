@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/10/18 22:12:40 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/10/18 22:34:00 tron Exp $
 #
 
 DISTNAME=	libgtop-0.26.0
@@ -20,10 +20,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 
-LOCALSTATEDIR=	/var/gnome
-
-CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
-			--with-glib-prefix=${LOCALBASE} \
+CONFIGURE_ARGS+=	--with-glib-prefix=${LOCALBASE} \
 			--with-libgtop-guile --with-catgets
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
 
