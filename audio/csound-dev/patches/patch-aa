@@ -1,0 +1,133 @@
+$NetBSD: patch-aa,v 1.1 2003/12/13 20:26:03 ben Exp $
+
+--- Makefile.defs.orig	2003-02-25 19:24:01.000000000 -0800
++++ Makefile.defs
+@@ -10,7 +10,7 @@ TARGET_OS = unix
+ # -----------------------------------------------------------------------------
+ # installation directories
+ 
+-INSTDIR	= /usr/local
++INSTDIR	= $(PREFIX)
+ 
+ BINDIR	= $(INSTDIR)/bin
+ LIBDIR	= $(INSTDIR)/lib
+@@ -70,9 +70,9 @@ RANLIB = ranlib
+ # General defines. These set the type of system for which Csound is compiled,
+ # and select various features to be enabled.
+ 
+-DEFINES = -DWINDOWS -DSFIRCAM -DSYS5 -DLINUX -DHAVE_TERMIOS_H		\
+-	  -DIV_VERSION -DPIPES -DMACROS -DHAVE_FLTK -D_REENTRANT	\
+-	  -DHAVE_SSTREAM -DMYFLT=float
++DEFINES = -DSFIRCAM -DSYS5 -DLINUX -DBSD -DHAVE_TERMIOS_H		\
++	  -DIV_VERSION -DPIPES -DMACROS -D_REENTRANT			\
++	  -DHAVE_SSTREAM -DMYFLT=float -DDEVOSSSOUND="\"$(DEVOSSSOUND)\""
+ # choose any of -
+ #	-DSYS5		invoke System V headers, e.g. 'string.h' for 'strings.h'
+ #	-DHAVE_SSTREAM	include <sstream> header from C++ sources, instead of
+@@ -112,9 +112,7 @@ DEFINES = -DWINDOWS -DSFIRCAM -DSYS5 -DL
+ # of your compiler for the list of available settings. $(DEFINES) must always
+ # be included.
+ 
+-CFLAGS = -pipe -Wall -O2 -ffast-math -fomit-frame-pointer		\
+-	 -finline-functions -funroll-loops -fno-strict-aliasing		\
+-	 $(PIC_FLAG)							\
++CFLAGS+= -Wall -O2 $(PIC_FLAG) \
+ 	 -I. -I$(TOPDIR) -I$(TOPDIR)/include -I$(TOPDIR)/opcodes $(DEFINES)
+ #	-O		Simple optimisation
+ #	-O2		to be more specific about the optimization level
+@@ -142,15 +140,12 @@ CFLAGS = -pipe -Wall -O2 -ffast-math -fo
+ # -----------------------------------------------------------------------------
+ # Additional flags for the C compiler only
+ 
+-C_FLAGS = -march=pentium3 -falign-functions=16 -falign-loops=16		\
+-	  -falign-jumps=16 -frename-registers -mfpmath=387 -mno-ieee-fp	\
+-	  -mno-sse
+ 
+ # -----------------------------------------------------------------------------
+ # C++ compiler flags
+ 
+-CXXFLAGS = $(CFLAGS) $(C_FLAGS) -fno-exceptions -fno-rtti		\
+-	   -fno-unroll-loops -I/usr/local/FLTK-1.1.0/Linux/include
++CXXFLAGS+= $(CFLAGS) $(C_FLAGS) -fno-exceptions -fno-rtti		\
++	   -fno-unroll-loops
+ # `fltk-config --cxxflags`		try adding this if the compilation of
+ #					FLTK widgets stops with error messages
+ #					related to not finding include files
+@@ -159,14 +154,13 @@ CXXFLAGS = $(CFLAGS) $(C_FLAGS) -fno-exc
+ # -----------------------------------------------------------------------------
+ # uncomment these if HAVE_FLTK was enabled in DEFINES
+ 
+-FLTKSRC = buttonsched.c widgets.cpp
+-FLTKOBJ = buttonsched.o widgets.o
++FLTKSRC =
++FLTKOBJ =
+ # source and object files for FLTK widgets
+ 
+ # FLTKLIB = -lfltk -lpthread -lstdc++
+ # FLTKLIB = `fltk-config --libs`
+-FLTKLIB = /usr/local/FLTK-1.1.0/Linux/lib/libfltk.a			\
+-	  /usr/local/gcc-3.2.2/lib/libstdc++.a
++FLTKLIB =
+ # libraries required by widgets.cpp
+ #	-lfltk -lpthread -lstdc++		use dynamic libraries
+ #
+@@ -185,10 +179,10 @@ FLTKLIB = /usr/local/FLTK-1.1.0/Linux/li
+ # -----------------------------------------------------------------------------
+ # libraries
+ 
+-LIBS = -lpthread -lm
++LIBS = -lm
+ # used for linking all executables
+ 
+-MISC_LIB = -ldl
++MISC_LIB =
+ # these are used by the main Csound executable only
+ 
+ #	-lefence                        for debugging only
+@@ -203,15 +197,15 @@ MISC_LIB = -ldl
+ # select source and object files for window (X11, FLTK, etc.) displays
+ # all files are in sysdep directory
+ 
+-WINSRC = sysdep/winX11.c
+-WINOBJ = sysdep/winX11.o
++WINSRC =
++WINOBJ =
+ # ;if WINDOWS enabled in DEFINES, choose one of -
+ #	winX11.o	for X11 window graphics
+ #	winSGI.o	for SGI window graphics
+ #	winFLTK.o and FL_graph.o for `improved' X graphics
+ # otherwise leave empty
+ 
+-WINLIBS = -L/usr/X11R6/lib -lX11
++WINLIBS =
+ # ;window system libraries
+ #	-lX11				for X window calls
+ #	-L/usr/lib/X11R4		for HP X11 library, v.4
+@@ -224,7 +218,7 @@ WINLIBS = -L/usr/X11R6/lib -lX11
+ # -----------------------------------------------------------------------------
+ # real-time audio support
+ 
+-RTAUDIO_PLUGINS = rtlinux.so rtalsa.so
++RTAUDIO_PLUGINS = rtlinux.so
+ #	rtlinux.so			for Linux (OSS interface)
+ #	rtalsa.so			for Linux (ALSA interface)
+ #	rtwin32.dll			Windows 32bit MM library
+@@ -232,7 +226,7 @@ RTAUDIO_PLUGINS = rtlinux.so rtalsa.so
+ # -----------------------------------------------------------------------------
+ # libraries and headers for real-time audio
+ 
+-AUDLIBS = -lasound
++AUDLIBS = $(LIBOSSAUDIO)
+ #	-laudio				on SUN, for SFSUN41
+ #	-laudio				on SGI, to include rt devaudio library
+ #	-lAlib				on HP, to include rt devaudio library
+@@ -248,8 +242,7 @@ AUDLIBS = -lasound
+ # Access permissions for main Csound executable. It is recommended to set it
+ # to 4551 under Linux to enable --sched. Other systems should use 0755.
+ 
+-#CSOUND_PERM = 0755
+-CSOUND_PERM = 4551
++CSOUND_PERM = 0755
+ 
+ # -----------------------------------------------------------------------------
+ # The Csound MAKE can be run in separate stages, or as a single command.

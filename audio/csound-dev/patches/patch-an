@@ -1,0 +1,14 @@
+$NetBSD: patch-an,v 1.1 2003/12/13 20:26:03 ben Exp $
+
+--- timers.c.orig	2003-02-02 19:24:00.000000000 -0800
++++ timers.c
+@@ -25,7 +25,9 @@
+ /* could in fact work under any x86/GCC system, but do not   */
+ /* know how to query the actual CPU frequency ...            */
+ 
++#ifndef __NetBSD__
+ #define HAVE_RDTSC  1
++#endif
+ 
+ /* ------------------------------------------------------------------------- */
+ 

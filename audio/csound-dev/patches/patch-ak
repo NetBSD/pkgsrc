@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2003/12/13 20:26:03 ben Exp $
+
+--- soundio.c.orig	2003-02-25 19:24:01.000000000 -0800
++++ soundio.c
+@@ -1400,7 +1404,7 @@ static void int24ptran(void)
+ 
+       if (osfopen) {
+         /* this is for direct 24bit packed output */
+-#if defined(_macintosh)||defined(SGI)||defined(LINUX_BE)||defined(LINUX_PPC)
++#if defined(_macintosh)||defined(SGI)||defined(LINUX_BE)||defined(LINUX_PPC)||defined(__BIG_ENDIAN__)
+         /* and all similar byte order machines */
+         *int24outbufp++ = s24.bytes[0];
+         *int24outbufp++ = s24.bytes[1];

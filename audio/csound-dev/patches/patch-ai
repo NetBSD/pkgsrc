@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2003/12/13 20:26:03 ben Exp $
+
+--- linevent.c.orig	2003-02-02 19:24:00.000000000 -0800
++++ linevent.c
+@@ -13,7 +13,7 @@ void RTclose(void);
+ # include <unistd.h>
+ #else
+   extern int close(int);
+-#if !defined(mac_classic) && !defined(SYMANTEC) && !defined(LINUX)
++#if !defined(mac_classic) && !defined(SYMANTEC) && !defined(LINUX) && !defined(__NetBSD__)
+ extern int read(int, void*, unsigned);
+ #endif
+ #endif
