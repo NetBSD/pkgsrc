@@ -1,8 +1,7 @@
-$NetBSD: patch-aj,v 1.6 2000/03/18 02:31:31 minoura Exp $
+$NetBSD: patch-aj,v 1.7 2000/06/24 17:03:38 minoura Exp $
 
- 
---- src/process.c.orig	Tue Feb 15 19:16:26 2000
-+++ src/process.c	Sat Mar 18 11:17:04 2000
+--- src/process.c.orig	Wed May 24 04:10:16 2000
++++ src/process.c	Sun Jun 18 09:20:15 2000
 @@ -1,7 +1,18 @@
 +/*
 + * Locally hacked process.c to add ipv6 support. -wsr
@@ -22,7 +21,7 @@ $NetBSD: patch-aj,v 1.6 2000/03/18 02:31:31 minoura Exp $
  This file is part of GNU Emacs.
  
  GNU Emacs is free software; you can redistribute it and/or modify
-@@ -1806,15 +1817,21 @@
+@@ -1810,15 +1821,21 @@
  {
    Lisp_Object proc;
    register int i;
@@ -47,7 +46,7 @@ $NetBSD: patch-aj,v 1.6 2000/03/18 02:31:31 minoura Exp $
    struct gcpro gcpro1, gcpro2, gcpro3, gcpro4;
    int retry = 0;
    int count = specpdl_ptr - specpdl;
-@@ -1827,6 +1844,22 @@
+@@ -1831,6 +1848,22 @@
    GCPRO4 (name, buffer, host, service);
    CHECK_STRING (name, 0);
    CHECK_STRING (host, 0);
@@ -70,7 +69,7 @@ $NetBSD: patch-aj,v 1.6 2000/03/18 02:31:31 minoura Exp $
    if (INTEGERP (service))
      port = htons ((unsigned short) XINT (service));
    else
-@@ -1837,6 +1870,8 @@
+@@ -1841,6 +1874,8 @@
  	error ("Unknown service \"%s\"", XSTRING (service)->data);
        port = svc_info->s_port;
      }
@@ -79,7 +78,7 @@ $NetBSD: patch-aj,v 1.6 2000/03/18 02:31:31 minoura Exp $
  
    /* Slow down polling to every ten seconds.
       Some kernels have a bug which causes retrying connect to fail
-@@ -1846,6 +1881,88 @@
+@@ -1850,6 +1885,88 @@
  #endif
  
  #ifndef TERM
@@ -168,7 +167,7 @@ $NetBSD: patch-aj,v 1.6 2000/03/18 02:31:31 minoura Exp $
    while (1)
      {
  #ifdef TRY_AGAIN
-@@ -1936,6 +2053,7 @@
+@@ -1940,6 +2057,7 @@
        report_file_error ("connection failed",
  			 Fcons (host, Fcons (name, Qnil)));
      }
