@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.16 2003/10/17 13:54:18 adam Exp $
+$NetBSD: patch-ab,v 1.17 2005/01/14 13:00:05 adam Exp $
 
---- dlls/ntdll/cdrom.c.orig	2003-10-08 04:59:22.000000000 +0200
+--- dlls/ntdll/cdrom.c.orig	2004-06-15 00:45:01.000000000 +0000
 +++ dlls/ntdll/cdrom.c
 @@ -61,6 +61,16 @@
  #endif
