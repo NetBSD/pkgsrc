@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.2 2000/12/11 09:04:52 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.3 2000/12/11 09:10:24 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -22,7 +22,8 @@ POST-DEINSTALL)
 	${RM} -rf ${PWCHECKDIR}
 	${CAT} << EOF
 ===========================================================================
-If you won't be using ${PKGNAME} any longer, you may want to remove
+If you won't be using ${PKGNAME} any longer, you may want
+to remove:
 
   * the \`${USER}' user
 
