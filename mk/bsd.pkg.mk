@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.529 2000/08/01 02:16:58 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.530 2000/08/01 02:18:12 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -170,7 +170,9 @@ NEED_NCURSES=   NO
 .else
 NEED_NCURSES=	NO
 .endif
-MAKEFLAGS+=	NEED_NCURSES=${NEED_NCURSES}
+# do _not_ pass NEED_NCURSES flag down, or we end up with recursive
+# dependency of ncurses on itself on <1.4Y.
+# MAKEFLAGS+=	NEED_NCURSES=${NEED_NCURSES}
 .endif
 
 .if defined(NEED_NCURSES) && ${NEED_NCURSES} == "YES"
