@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/06 13:21:45 taca Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/07 00:17:56 dan Exp $
 
 PKGNAME=		postgresql80-client-${BASE_VERS}
 PKGREVISION=		# empty
@@ -31,7 +31,7 @@ post-install:
 USE_GNU_READLINE=yes
 .endif
 
-.include "../../wip/postgresql80-lib/buildlink3.mk"
+.include "../../databases/postgresql80-lib/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
