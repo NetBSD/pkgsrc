@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.47 2004/04/19 20:19:46 jmmv Exp $
+# $NetBSD: defs.IRIX.mk,v 1.48 2004/04/21 16:30:19 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -168,8 +168,7 @@ MAKE_ENV+=		ABI=${ABI}
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
-# FIXME: Adjust to work on this system and enable the lines below.
-#.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
-#_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
-#CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
-#.endif
+.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
+_OPSYS_MAX_CMDLEN!=	/usr/sbin/sysconf ARG_MAX
+CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
+.endif
