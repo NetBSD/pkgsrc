@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:36:23 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/24 15:53:48 jdolecek Exp $
 
-DISTNAME=	vmware-netbsd-3.2.1.2
-PKGNAME=	vmware-module-3.2.1.2
+DISTNAME=	vmware-netbsd-3.2.1.3
+PKGNAME=	vmware-module-3.2.1.3
 WRKSRC=		${WRKDIR}
 CATEGORIES=	emulators
 MASTER_SITES=   ftp://ftp.NetBSD.org/pub/NetBSD/misc/vmware/
