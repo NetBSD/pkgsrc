@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/30 20:29:40 tv Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/30 20:36:09 tv Exp $
 #
 
 DISTNAME=		xbill-2.0
@@ -19,7 +19,7 @@ USE_PKGINSTALL=		YES
 NO_INSTALL_MANPAGES=	YES
 
 PKG_GROUPS=		games
-MAKE_DIRS_PERMS+=	/var/games 0775 ${BINOWN} games
+MAKE_DIRS_PERMS+=	/var/games ${BINOWN} games 0775
 SUPPORT_FILES_PERMS+=	${PREFIX}/share/examples/xbill.scores /var/games/xbill.scores ${BINOWN} games 0664
 
 post-install:
