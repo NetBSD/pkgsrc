@@ -1,0 +1,10 @@
+XGlobe displays the earth as seen from space on your X Desktop,
+similar to xearth by Kirk Lauritz Johnson. The code to calculate
+the sun's position was taken from this program. The image of the
+globe is updated at regular intervals. XGlobe uses a world map
+image which is mapped to the globe. With a good map this can look
+very nice.  It is possible to mark locations on the globe.
+
+The provided daymap.gif and nightmap.gif (in /usr/X11R6/lib/X11) are 
+(c) Copyright 1996 by The Living Earth, Inc./Earth Imaging, All
+Rights Reserved. See also http://livingearth.com.
