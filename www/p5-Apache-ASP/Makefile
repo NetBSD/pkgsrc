@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/01 02:12:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/27 10:37:05 jlam Exp $
 #
 
 DISTNAME=		Apache-ASP-0.05
@@ -9,13 +9,15 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/CHAMAS/}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/Apache-ASP/ASP.html
 
-DEPENDS+=		p5-libwww>=5.48:../../www/p5-libwww
-DEPENDS+=		p5-MLDBM>=2.00:../../devel/p5-MLDBM
 DEPENDS+=		ap-perl>=1.19:../../www/ap-perl
+DEPENDS+=		p5-Devel-Symdump>=2.00:../../devel/p5-Devel-Symdump
+DEPENDS+=		p5-MLDBM>=2.00:../../devel/p5-MLDBM
+DEPENDS+=		p5-libwww>=5.48:../../www/p5-libwww
 
-USE_PERL5=		YES
+USE_PERL5=		# defined
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/ASP/.packlist
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"
