@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2002/12/07 19:59:28 ad Exp $
+# $NetBSD: Makefile,v 1.174 2002/12/09 11:09:00 ad Exp $
 
 COMMENT=	System utilities
 
@@ -34,6 +34,7 @@ SUBDIR+=	crashme
 SUBDIR+=	daemontools
 SUBDIR+=	depot
 SUBDIR+=	dog
+SUBDIR+=	dptutil
 SUBDIR+=	e2fsprogs
 SUBDIR+=	easydiskpasswd
 SUBDIR+=	etcupdate
@@ -88,7 +89,6 @@ SUBDIR+=	pstree
 SUBDIR+=	pv
 SUBDIR+=	pwgen
 SUBDIR+=	qlogtools
-SUBDIR+=	raidutil
 SUBDIR+=	rconfig
 SUBDIR+=	rdiff-backup
 SUBDIR+=	roller
