@@ -1,9 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/21 15:03:46 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/23 17:29:11 dmcmahill Exp $
 
 --- configure.orig	Sun May 10 15:13:36 1998
-+++ configure	Sun Oct 24 15:13:43 1999
-@@ -503,9 +503,9 @@
- # Prefer explicitly selected file to automatically selected ones.
++++ configure	Tue Jan 23 12:26:20 2001
+@@ -504,7 +504,7 @@
  if test -z "$CONFIG_SITE"; then
    if test "x$prefix" != xNONE; then
 -    CONFIG_SITE="$prefix/share/config.site $prefix/etc/config.site"
@@ -13,9 +12,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/21 15:03:46 wiz Exp $
 +    CONFIG_SITE="$ac_default_prefix/share/kde/config.site $ac_default_prefix/etc/config.site"
    fi
  fi
- for ac_site_file in $CONFIG_SITE; do
-@@ -2533,27 +2533,27 @@
+@@ -2195,5 +2195,5 @@
+  else
+   X_LDFLAGS="-L$x_libraries"
+-  all_libraries=$X_LDFLAGS
++  #all_libraries=$X_LDFLAGS
+ fi
  
+@@ -2534,25 +2534,25 @@
  
  
 -kde_htmldir="\$(prefix)/share/doc/HTML"
@@ -51,4 +55,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/21 15:03:46 wiz Exp $
 +kde_wallpaperdir="\$(prefix)/share/kde/wallpapers"
  
  kde_kccmodules="\$(prefix)/lib/kcc/modules"
- 
