@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2210 2003/05/10 16:33:18 agc Exp $
+$NetBSD: CHANGES,v 1.2211 2003/05/10 16:39:03 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1932,3 +1932,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated STk to 4.0.1 [jtb 2003-05-09]
 	Updated gperiodic to 2.0.4 [jtb 2003-05-09]
 	Added ssh2-nox11-3.2.2 [seb 2003-05-10]
+	Updated Mesa to 5.0.1 [drochner 2003-05-10]
