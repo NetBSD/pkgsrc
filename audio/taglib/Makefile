@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/09 00:30:24 chris Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/10 17:54:14 gavan Exp $
 #
 
 DISTNAME=	taglib-1.0
@@ -20,6 +20,6 @@ pre-build:
 	${CP} ${FILESDIR}/id3lib_strings.h ${WRKSRC}/taglib/toolkit/.
 
 post-install:
-	${INSTALL} -o ${ROOT_USER} -g ${ROOT_GROUP} -m 444 ${FILESDIR}/id3lib_strings.h ${LOCALBASE}/include/taglib/.
+	${INSTALL} -c -o ${ROOT_USER} -g ${ROOT_GROUP} -m 444 ${FILESDIR}/id3lib_strings.h ${LOCALBASE}/include/taglib/.
 
 .include "../../mk/bsd.pkg.mk"
