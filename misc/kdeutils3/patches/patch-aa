@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2004/02/28 16:21:26 jmmv Exp $
+
+--- ark/arksettings.cpp.orig	2003-06-27 15:38:52.000000000 +0200
++++ ark/arksettings.cpp
+@@ -118,7 +118,7 @@ void ArkSettings::readConfiguration()
+ 
+   kc->setGroup( ARK_GROUP );
+ 
+-  tar_exe = kc->readPathEntry( TAR_KEY, "tar");
++  tar_exe = kc->readPathEntry( TAR_KEY, ARK_TAR);
+ #ifdef ARK_SETTINGS_DEBUG
+   kdDebug(1601) << "Tar command is " << tar_exe << endl;
+ #endif
