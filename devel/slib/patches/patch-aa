@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/02/23 20:20:45 jlam Exp $
+
+--- require.scm.orig	Sun Dec  5 19:54:37 1999
++++ require.scm	Wed Feb 23 14:49:52 2000
+@@ -126,7 +126,7 @@
+   (if (not *catalog*)
+       (let ((slibcat (catalog:try-read (implementation-vicinity) "slibcat")))
+ 	(cond ((not (catalog/require-version-match? slibcat))
+-	       (slib:load (in-vicinity (library-vicinity) "mklibcat"))
++	       (slib:load (in-vicinity (library-vicinity) "mklibcat.scm"))
+ 	       (set! slibcat
+ 		     (catalog:try-read (implementation-vicinity) "slibcat"))))
+ 	(cond (slibcat
