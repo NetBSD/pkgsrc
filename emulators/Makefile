@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2001/04/27 14:44:50 agc Exp $
+# $NetBSD: Makefile,v 1.56 2001/04/27 14:57:25 agc Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -46,6 +46,7 @@ SUBDIR+=	uae
 SUBDIR+=	vice
 SUBDIR+=	wine
 SUBDIR+=	wine-current
+SUBDIR+=	x48
 SUBDIR+=	xbeeb
 SUBDIR+=	xcopilot
 SUBDIR+=	xm7
