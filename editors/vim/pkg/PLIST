@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1999/08/08 07:23:47 rh Exp $
+@comment $NetBSD: PLIST,v 1.9 1999/08/08 09:20:50 rh Exp $
 bin/gvim
 bin/vim
 bin/vimtutor
@@ -25,67 +25,68 @@ man/man1/view.1
 man/man1/rvim.1
 man/man1/rview.1
 man/man1/vim-etags.1
-share/vim/vim54/doc/autocmd.txt
-share/vim/vim54/doc/windows.txt
-share/vim/vim54/doc/visual.txt
-share/vim/vim54/doc/vi_diff.txt
-share/vim/vim54/doc/version5.txt
-share/vim/vim54/doc/version4.txt
-share/vim/vim54/doc/various.txt
-share/vim/vim54/doc/undo.txt
-share/vim/vim54/doc/uganda.txt
-share/vim/vim54/doc/todo.txt
-share/vim/vim54/doc/tips.txt
-share/vim/vim54/doc/term.txt
-share/vim/vim54/doc/tagsearch.txt
-share/vim/vim54/doc/syntax.txt
-share/vim/vim54/doc/starting.txt
-share/vim/vim54/doc/scroll.txt
-share/vim/vim54/doc/rightleft.txt
-share/vim/vim54/doc/repeat.txt
-share/vim/vim54/doc/recover.txt
-share/vim/vim54/doc/quotes.txt
-share/vim/vim54/doc/quickfix.txt
-share/vim/vim54/doc/pattern.txt
-share/vim/vim54/doc/os_win32.txt
-share/vim/vim54/doc/os_vms.txt
-share/vim/vim54/doc/os_unix.txt
-share/vim/vim54/doc/os_riscos.txt
-share/vim/vim54/doc/os_os2.txt
-share/vim/vim54/doc/os_msdos.txt
-share/vim/vim54/doc/os_mint.txt
-share/vim/vim54/doc/os_mac.txt
-share/vim/vim54/doc/os_dos.txt
-share/vim/vim54/doc/os_beos.txt
-share/vim/vim54/doc/os_amiga.txt
-share/vim/vim54/doc/options.txt
-share/vim/vim54/doc/multibyte.txt
-share/vim/vim54/doc/motion.txt
-share/vim/vim54/doc/message.txt
-share/vim/vim54/doc/map.txt
-share/vim/vim54/doc/intro.txt
-share/vim/vim54/doc/insert.txt
-share/vim/vim54/doc/index.txt
-share/vim/vim54/doc/if_tcl.txt
-share/vim/vim54/doc/if_sniff.txt
-share/vim/vim54/doc/if_python.txt
-share/vim/vim54/doc/if_perl.txt
-share/vim/vim54/doc/if_ole.txt
-share/vim/vim54/doc/if_cscope.txt
-share/vim/vim54/doc/howto.txt
-share/vim/vim54/doc/help.txt
-share/vim/vim54/doc/hangulin.txt
-share/vim/vim54/doc/gui_x11.txt
-share/vim/vim54/doc/gui_w32.txt
-share/vim/vim54/doc/gui.txt
-share/vim/vim54/doc/farsi.txt
-share/vim/vim54/doc/eval.txt
-share/vim/vim54/doc/editing.txt
-share/vim/vim54/doc/digraph.txt
-share/vim/vim54/doc/cmdline.txt
-share/vim/vim54/doc/change.txt
-share/vim/vim54/doc/tags
-share/vim/vim54/doc/vim2html.pl
+share/vim/vim54/doc
+share/doc/vim/autocmd.txt
+share/doc/vim/windows.txt
+share/doc/vim/visual.txt
+share/doc/vim/vi_diff.txt
+share/doc/vim/version5.txt
+share/doc/vim/version4.txt
+share/doc/vim/various.txt
+share/doc/vim/undo.txt
+share/doc/vim/uganda.txt
+share/doc/vim/todo.txt
+share/doc/vim/tips.txt
+share/doc/vim/term.txt
+share/doc/vim/tagsearch.txt
+share/doc/vim/syntax.txt
+share/doc/vim/starting.txt
+share/doc/vim/scroll.txt
+share/doc/vim/rightleft.txt
+share/doc/vim/repeat.txt
+share/doc/vim/recover.txt
+share/doc/vim/quotes.txt
+share/doc/vim/quickfix.txt
+share/doc/vim/pattern.txt
+share/doc/vim/os_win32.txt
+share/doc/vim/os_vms.txt
+share/doc/vim/os_unix.txt
+share/doc/vim/os_riscos.txt
+share/doc/vim/os_os2.txt
+share/doc/vim/os_msdos.txt
+share/doc/vim/os_mint.txt
+share/doc/vim/os_mac.txt
+share/doc/vim/os_dos.txt
+share/doc/vim/os_beos.txt
+share/doc/vim/os_amiga.txt
+share/doc/vim/options.txt
+share/doc/vim/multibyte.txt
+share/doc/vim/motion.txt
+share/doc/vim/message.txt
+share/doc/vim/map.txt
+share/doc/vim/intro.txt
+share/doc/vim/insert.txt
+share/doc/vim/index.txt
+share/doc/vim/if_tcl.txt
+share/doc/vim/if_sniff.txt
+share/doc/vim/if_python.txt
+share/doc/vim/if_perl.txt
+share/doc/vim/if_ole.txt
+share/doc/vim/if_cscope.txt
+share/doc/vim/howto.txt
+share/doc/vim/help.txt
+share/doc/vim/hangulin.txt
+share/doc/vim/gui_x11.txt
+share/doc/vim/gui_w32.txt
+share/doc/vim/gui.txt
+share/doc/vim/farsi.txt
+share/doc/vim/eval.txt
+share/doc/vim/editing.txt
+share/doc/vim/digraph.txt
+share/doc/vim/cmdline.txt
+share/doc/vim/change.txt
+share/doc/vim/tags
+share/doc/vim/vim2html.pl
 share/vim/vim54/syntax/2html.vim
 share/vim/vim54/syntax/z8a.vim
 share/vim/vim54/syntax/yacc.vim
@@ -300,6 +301,7 @@ share/vim/vim54/tools/ccfilter.c
 share/vim/vim54/tools/ccfilter.1
 share/vim/vim54/tools/blink.c
 share/vim/vim54/tools/vimspell.txt
+@dirrm share/doc/vim
 @dirrm share/vim/vim54/tools
 @dirrm share/vim/vim54/tutor
 @dirrm share/vim/vim54/syntax
@@ -308,6 +310,5 @@ share/vim/vim54/tools/vimspell.txt
 @dirrm share/vim/vim54/macros/life
 @dirrm share/vim/vim54/macros/hanoi
 @dirrm share/vim/vim54/macros
-@dirrm share/vim/vim54/doc
 @dirrm share/vim/vim54
 @dirrm share/vim
