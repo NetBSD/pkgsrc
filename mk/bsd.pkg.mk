@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1490 2004/08/16 03:12:02 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1491 2004/08/17 17:48:11 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -408,11 +408,11 @@ CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 LIBTOOL_OVERRIDE?=	libtool */libtool */*/libtool
 .if defined(LIBTOOL_LA_FILES)
-GENERATE_PLIST+=	${SH} ../../mk/scripts/transform-la ${PREFIX} ${LIBTOOL_LA_FILES};
-_FILTER_LIBTOOL_LA_FILES= | ${GREP} -vxF \
-	`${SH} ../../mk/scripts/transform-la ${PREFIX} ${LIBTOOL_LA_FILES} | ${SED} -e 's,^,-e ,'`
+_DUMP_LIBTOOL_LA_FILES=	${SH} ../../mk/scripts/transform-la ${PREFIX} ${LIBTOOL_LA_FILES}
+_FILTER_LIBTOOL_LA_FILES=| ${GREP} -vxF `${_DUMP_LIBTOOL_LA_FILES} | ${SED} -e 's,^,-e ,'`
 .endif
 .endif
+_DUMP_LIBTOOL_LA_FILES?=${TRUE}
 
 .if defined(BUILD_USES_MSGFMT) && \
     (!exists(/usr/bin/msgfmt) || ${_USE_GNU_GETTEXT} == "yes")
@@ -4973,7 +4973,9 @@ _GENERATE_PLIST=							\
 		${SED} -e "s|^${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
 		       -e "s,$$, 2>/dev/null || ${TRUE},";
 .else
-_GENERATE_PLIST=	${CAT} ${_PLIST_SRC}; ${GENERATE_PLIST}
+_GENERATE_PLIST=	${_DUMP_LIBTOOL_LA_FILES}; \
+			${CAT} ${_PLIST_SRC}; \
+			${GENERATE_PLIST}
 .endif
 
 .PHONY: plist
