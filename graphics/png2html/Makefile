@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/13 17:37:15 fredb Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/09 11:47:46 wiz Exp $
 #
 
 DISTNAME=	png2html-1.1
@@ -10,8 +10,8 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.engr.mun.ca/~holden/png2html.html
 COMMENT=	Takes a PNG image and transforms it to a web page
 
-USE_BUILDLINK_ONLY=	YES
-CFLAGS+=	-L${BUILDLINK_DIR}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib
+USE_BUILDLINK2=	YES
+CFLAGS+=	-L${BUILDLINK_PREFIX.gd}/lib -Wl,-R${BUILDLINK_PREFIX.gd}/lib
 
 do-install:
 		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/png2html
@@ -20,5 +20,5 @@ do-install:
 		${INSTALL_MAN} ${WRKSRC}/CHANGES ${PREFIX}/share/doc/png2html
 		${INSTALL_PROGRAM} ${WRKSRC}/png2html ${PREFIX}/bin
 
-.include "../../graphics/gd/buildlink.mk"
+.include "../../graphics/gd/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
