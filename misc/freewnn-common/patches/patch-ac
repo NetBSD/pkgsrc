@@ -1,28 +1,22 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/08/02 05:45:01 sakamoto Exp $
+$NetBSD: patch-ac,v 1.2 1999/09/03 04:24:10 sakamoto Exp $
 
 --- ./kWnn/Makefile.in.orig	Tue Mar 23 21:14:47 1999
-+++ ./kWnn/Makefile.in	Wed Jul 28 11:29:10 1999
-@@ -621,17 +621,13 @@
++++ ./kWnn/Makefile.in	Thu Sep  2 19:29:22 1999
+@@ -621,6 +621,4 @@
  # Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  
 -WNNOWNER = wnn
 -
-+.if (${WNN_TARGET} == "SERVER")
  JSERVERDIR = jserver
--
- WNNJUTILDIR = jutil
--
--WNNCLIENTSDIR = conv
--
--JLIBDIR = romkan jlib
--
- KDICDIR = kdic
--
--KDDIR = include kd
-+KDDIR = kd
+ 
+@@ -635,5 +633,9 @@
+ KDDIR = include kd
+ 
+-SUBDIRS = $(KDDIR) etc $(JLIBDIR) $(JSERVERDIR) $(WNNCLIENTSDIR) 	$(WNNJUTILDIR) $(KDICDIR) $(WNNMANDIR)
++.if (${WNN_TARGET} == "SERVER")
++SUBDIRS = etc $(JSERVERDIR) $(WNNJUTILDIR) $(KDICDIR) $(WNNMANDIR)
 +.else
-+WNNCLIENTSDIR = conv
-+JLIBDIR = romkan jlib include
++SUBDIRS = $(KDDIR) $(JLIBDIR) $(WNNCLIENTSDIR)
 +.endif
  
- SUBDIRS = $(KDDIR) etc $(JLIBDIR) $(JSERVERDIR) $(WNNCLIENTSDIR) 	$(WNNJUTILDIR) $(KDICDIR) $(WNNMANDIR)
+ all::
