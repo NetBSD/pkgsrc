@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 1999/08/02 04:26:50 sakamoto Exp $
+
+--- sbr/advertise.c-	Tue May 18 03:29:44 1999
++++ sbr/advertise.c	Tue May 18 03:30:08 1999
+@@ -5,6 +5,7 @@
+ 
+ #include "../h/mh.h"
+ #include <stdio.h>
++#include <errno.h>
+ #if defined(BSD42) || defined(SVR4)
+ #include <sys/types.h>
+ #include <sys/uio.h>
