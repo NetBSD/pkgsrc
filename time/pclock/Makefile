@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:27:16 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/11 09:23:41 snj Exp $
 #
 
 DISTNAME=	pclock_0.13.1.orig
@@ -11,7 +11,7 @@ MAINTAINER=	salo@NetBSD.org
 COMMENT=	Simple analog clock designed for Window Maker
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}.orig
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 
 MAKE_ENV+=	LN=${LN}
@@ -23,6 +23,6 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/CREDITS ${PREFIX}/share/doc/pclock
 		${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/pclock
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
