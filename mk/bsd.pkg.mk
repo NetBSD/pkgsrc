@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.8 2003/07/25 18:49:23 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.9 2003/07/28 21:53:15 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -110,6 +110,7 @@ DEPOTBASE=		${X11PREFIX}/${DEPOT_SUBDIR}
 DEPOTBASE=		${LOCALBASE}/${DEPOT_SUBDIR}
 .  endif
 PREFIX=			${DEPOTBASE}/${PKGNAME}
+PKG_DBDIR_MAKEFLAGS=	_REAL_PKG_DBDIR=${PKG_DBDIR} PKG_DBDIR=${DEPOTBASE}
 NO_MTREE=		yes
 PLIST_SRC=		# empty, since we use dynamic PLIST generation
 #
@@ -2513,11 +2514,11 @@ real-su-install: ${MESSAGE}
 	@${ECHO_MSG} ""
 .endif
 .if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} _REAL_PKG_DBDIR=${PKG_DBDIR} PKG_DBDIR=${DEPOTBASE} fake-pkg
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PKG_DBDIR_MAKEFLAGS} fake-pkg
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
 .if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
-	@${MAKE} ${MAKEFLAGS} _REAL_PKG_DBDIR=${PKG_DBDIR} PKG_DBDIR=${DEPOTBASE} check-shlibs
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} ${PKG_DBDIR_MAKEFLAGS} check-shlibs
 .endif
 
 
