@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 11:11:01 agc Exp $
+$NetBSD: patch-ac,v 1.3 1999/11/27 23:13:43 rh Exp $
 
---- unix/tfconfig.orig	Fri Apr  4 11:51:58 1997
-+++ unix/tfconfig	Mon Jun 16 18:00:45 1997
-@@ -211,17 +211,17 @@
+--- unix/tfconfig.orig	Sun Nov 28 00:12:19 1999
++++ unix/tfconfig	Sun Nov 28 00:12:19 1999
+@@ -224,17 +224,17 @@
  echo
  
  echo 'To change these locations type "n" now and edit the unix/Config file.'
@@ -30,4 +30,4 @@ $NetBSD: patch-ac,v 1.2 1998/08/07 11:11:01 agc Exp $
 +# done
  echo; echo
  
- echo "#define LIBDIR     \"${LIBDIR}\"" >&4
+ rm -f ../src/Makefile ${AOUT}
