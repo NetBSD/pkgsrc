@@ -1,14 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2002/02/18 15:14:36 seb Exp $
+# $NetBSD: Makefile,v 1.44 2002/03/30 08:56:36 pooka Exp $
 
-DISTNAME=	wget-1.7
+DISTNAME=	wget-1.8.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 
-PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	wget-17-v6-20010716a.diff.gz
-PATCH_DIST_STRIP=-p1
-
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	michael@pasternak.w.lub.pl
 HOMEPAGE=	http://www.gnu.org/software/wget/wget.html
 COMMENT=	Retrieve files from the 'net via HTTP and FTP
 
