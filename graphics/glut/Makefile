@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/03/30 08:54:39 jmc Exp $
+# $NetBSD: Makefile,v 1.17 2003/05/10 16:37:13 drochner Exp $
 
 PKGNAME=		${DISTNAME:S/MesaLib/glut/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -31,7 +31,7 @@ post-install:
 .if (${MESA_REQD} == 3.4.2)
 SO_SUFFIX=3
 SO_VERS=3.7
-.elif (${MESA_REQD} == 5.0)
+.elif (${MESA_REQD} == 5.0.1)
 SO_SUFFIX=10
 SO_VERS=10.1
 .else
