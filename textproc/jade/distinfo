@@ -1,8 +1,13 @@
-$NetBSD: distinfo,v 1.4 2001/08/29 15:36:28 skrll Exp $
+$NetBSD: distinfo,v 1.5 2001/10/14 12:19:16 tron Exp $
 
 SHA1 (jade-1.2.1.tar.gz) = 4326e73b7f0b865515e1bb90c622a8b2aa6ecd06
 Size (jade-1.2.1.tar.gz) = 1092062 bytes
+SHA1 (jade_1.2.1-18.diff.gz) = b3d00e797239d061ef6063b44e9d3e14055da940
+Size (jade_1.2.1-18.diff.gz) = 121329 bytes
 SHA1 (patch-aa) = 11457de7520b6f1f473fb9b81aa9593d0987846b
 SHA1 (patch-ab) = 1742175ec89ea8e796b4e874a488225850cf78e1
 SHA1 (patch-ac) = c96ca44b40bbcc9c588dfe40045f4d386e32998d
 SHA1 (patch-ad) = 1afe17aeabda9f7f5c8531b09fb0af6085a8526f
+SHA1 (patch-ae) = a01bd39d4be17884f902a06c5c7324912935241f
+SHA1 (patch-af) = ef312d2f090bc32cdac60296d6b85940205da2a3
+SHA1 (patch-ag) = e6772fab67961e12ee8870a15763cde466b60636

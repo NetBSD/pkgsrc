@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2001/09/02 17:07:01 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/10/14 12:19:17 tron Exp $
 bin/jade
 bin/nsgmls
 bin/sgmlnorm
@@ -76,7 +76,6 @@ include/sp/MessageReporter.h
 include/sp/MessageTable.h
 include/sp/Mode.h
 include/sp/NCVector.h
-include/sp/NCVector.sed
 include/sp/Named.h
 include/sp/NamedResource.h
 include/sp/NamedResourceTable.h
@@ -167,10 +166,12 @@ share/doc/jade/dsssl2.htm
 share/doc/jade/jade.htm
 share/doc/jade/mif.htm
 share/doc/jade/transform.htm
+share/sgml/jade/FOT.tex
 share/sgml/jade/Makefile.jadetex
 share/sgml/jade/catalog
 share/sgml/jade/demo.dsl
 share/sgml/jade/demo.sgm
+share/sgml/jade/demoMaster.tex
 share/sgml/jade/dsssl.dtd
 share/sgml/jade/fot.dtd
 share/sgml/jade/style-sheet.dtd
