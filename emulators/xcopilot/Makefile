@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/11/01 12:21:38 tron Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/20 13:45:31 wiz Exp $
 #
 
 DISTNAME=		xcopilot-0.6.6
@@ -11,16 +11,12 @@ COMMENT=		PalmPilot emulator for X
 
 NOT_FOR_PLATFORM=	*-*-alpha	# suspected LP64 bugs
 
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
-USE_XPM=		YES
-
-EVAL_PREFIX+=		XPMDIR=xpm
-
-CFLAGS+=		-I${XPMDIR}/include
-LDFLAGS+=		-L${XPMDIR}/lib -Wl,-R${XPMDIR}/lib
 
 post-extract:
 	${RM} -f ${WRKSRC}/mc68k/custom.c
 
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
