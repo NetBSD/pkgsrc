@@ -1,7 +1,7 @@
-/*	$NetBSD: if_tap_stub.c,v 1.1.1.1 2005/01/20 18:02:40 cube Exp $	*/
+/*	$NetBSD: if_tap_stub.c,v 1.2 2005/02/15 21:23:08 cube Exp $	*/
 
 #include <sys/cdefs.h>
-__KERNEL_RCSID(0, "$NetBSD: if_tap_stub.c,v 1.1.1.1 2005/01/20 18:02:40 cube Exp $");
+__KERNEL_RCSID(0, "$NetBSD: if_tap_stub.c,v 1.2 2005/02/15 21:23:08 cube Exp $");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -15,10 +15,10 @@ __KERNEL_RCSID(0, "$NetBSD: if_tap_stub.c,v 1.1.1.1 2005/01/20 18:02:40 cube Exp
 /* 2.99.10 is gray area.  Oh, well. */
 #if __NetBSD_Version__ < 299001100
 int
-tap_fdclone(struct proc *p, struct file *fp, int fd, struct fileops *fops,
-    void *data)
+tap_fdclone(struct proc *p, struct file *fp, int flags, int fd,
+    struct fileops *fops, void *data)
 {
-	fp->f_flag = FREAD | FWRITE;
+	fp->f_flag = flags;
 	fp->f_type = DTYPE_MISC;
 	fp->f_ops = fops;
 	fp->f_data = data;
