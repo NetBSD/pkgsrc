@@ -1,0 +1,74 @@
+# $NetBSD: Makefile.readline,v 1.1 2001/05/16 04:39:12 jlam Exp $
+#
+# This Makefile fragment is included by packages that use readline().
+#
+# If readline() is not present in the base system through libedit, then a
+# dependency on devel/readline is added, the appropriate headers are linked
+# into ${WRKINCDIR} (${WRKSRC}/include), and the appropriate libraries are
+# linked into ${WRKLIBDIR} (${WRKSRC}/lib).
+#
+# To use this Makefile fragment, simply:
+#
+# (1) Include this Makefile fragment in the package Makefile,
+# (2) Optionally define WRKINCDIR and WRKLIBDIR,
+# (3) Add link-readline-headers and link-readline-libs to the prerequisite
+#     targets for pre-configure,
+# (4) Add ${WRKINCDIR} to the front of the C preprocessor's header search
+#     path, and
+# (5) Add ${WRKLIBDIR} to the front of the linker's library search path.
+#
+# NOTE:	You may need to do some more work to get libedit recognized over
+#	libreadline, especially by GNU configure scripts.
+
+.if exists(/usr/include/readline.h)
+READLINE_H=		/usr/include/readline.h
+HISTORY_H=		/usr/include/history.h
+LIBREADLINE=		/usr/lib/libedit.a
+LIBREADLINE+=		/usr/lib/libedit.so*
+LIBHISTORY=		/usr/lib/libedit.a
+LIBHISTORY+=		/usr/lib/libedit.so*
+HAVE_LIBEDIT_READLINE=	# defined
+.elif exists(/usr/include/readline/readline.h)
+READLINE_H=		/usr/include/readline/readline.h
+HISTORY_H=		/usr/include/readline/history.h
+LIBREADLINE=		/usr/lib/libedit.a
+LIBREADLINE+=		/usr/lib/libedit.so*
+LIBHISTORY=		/usr/lib/libedit.a
+LIBHISTORY+=		/usr/lib/libedit.so*
+HAVE_LIBEDIT_READLINE=	# defined
+.else
+READLINE_H=		${LOCALBASE}/readline/readline.h
+HISTORY_H=		${LOCALBASE}/readline/history.h
+LIBREADLINE=		${LOCALBASE}/lib/libreadline.a
+LIBREADLINE+=		${LOCALBASE}/lib/libreadline.so*
+LIBHISTORY=		${LOCALBASE}/lib/libhistory.a
+LIBHISTORY+=		${LOCALBASE}/lib/libhistory.so*
+DEPENDS+=		readline>=2.2:../../devel/readline
+.endif
+
+WRKINCDIR?=		${WRKDIR}/include
+WRKLIBDIR?=		${WRKDIR}/lib
+
+# This target links the readline and history headers into ${WRKINCDIR},
+# which should be searched first by the C preprocessor.
+#
+link-readline-headers:
+	${MKDIR} -p ${WRKINCDIR}/readline
+	${RM} -f ${WRKINCDIR}/readline/readline.h
+	${RM} -f ${WRKINCDIR}/readline/history.h
+	${LN} -sf ${READLINE_H} ${WRKINCDIR}/readline
+	${LN} -sf ${HISTORY_H} ${WRKINCDIR}/readline
+
+# This target links the readline and history libraries into ${WRKLIBDIR},
+# which should be searched first by the linker.
+#
+link-readline-libs:
+	${MKDIR} -p ${WRKLIBDIR}
+	for lib in ${LIBREADLINE}; do					\
+		dest=`${BASENAME} $${lib} | ${SED} "s|libedit|libreadline|"`; \
+		${LN} -sf $${lib} ${WRKLIBDIR}/$${dest};		\
+	done
+	for lib in ${LIBHISTORY}; do					\
+		dest=`${BASENAME} $${lib} | ${SED} "s|libedit|libhistory|"`; \
+		${LN} -sf $${lib} ${WRKLIBDIR}/$${dest};		\
+	done
