@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/08/29 22:41:12 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/23 10:03:24 jlam Exp $
 #
 
 DISTNAME=		lincity-1.11
@@ -10,7 +10,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.floot.demon.co.uk/lincity.html
 COMMENT=		Free clone of SimCity for X11
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		# defined
 USE_X11BASE=		# defined
 
 ALL_TARGET=		xlincity
@@ -24,5 +24,4 @@ pre-build:
 post-install:
 	${LN} -sf lincity.6 ${PREFIX}/man/man6/xlincity.6
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
