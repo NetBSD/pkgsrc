@@ -1,4 +1,4 @@
-# $NetBSD: xfree,v 1.7 2004/02/16 23:39:36 jlam Exp $
+# $NetBSD: xfree,v 1.8 2004/02/17 08:26:25 jlam Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported XFree distributions, minus the set of files representing
@@ -601,15 +601,6 @@ lib/libdpstk.so.1.0
 lib/libdpstk.dylib
 lib/libdpstk.1.dylib
 lib/libdpstk.1.0.dylib
-lib/libexpat.a
-lib/libexpat.so
-lib/libexpat.so.1
-lib/libexpat.so.1.0
-lib/libexpat.so.4
-lib/libexpat.so.4.0
-lib/libexpat.dylib
-lib/libexpat.1.dylib
-lib/libexpat.1.0.dylib
 lib/libfntstubs.a
 lib/libfontenc.a
 lib/libfontenc.so
