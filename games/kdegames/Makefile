@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2003/07/17 21:38:49 grant Exp $
+# $NetBSD: Makefile,v 1.52 2003/12/26 19:56:12 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:49 asami Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	Games for the KDE integrated X11 desktop
 
-DEPENDS+=	kdebase-1.1.2nb3:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.2nb4:../../x11/kdebase
 DEPENDS+=	qwspritefield-1.6:../../x11/qwspritefield
 
 USE_X11BASE=	yes
