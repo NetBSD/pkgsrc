@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/14 22:20:25 itojun Exp $
+bin/xbattbar
+man/man1/xbattbar.1
