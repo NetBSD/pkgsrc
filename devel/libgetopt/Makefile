@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 14:38:35 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/07/23 22:31:08 wiz Exp $
 #
 
 DISTNAME=	libgetopt-${VERS}
@@ -20,7 +20,24 @@ WRKSRC=		${WRKDIR}/libgetopt
 # I have NFC why the mkdir in pre-extract doesn't work, so do it here:
 EXTRACT_CMD=	${MKDIR} ${WRKSRC} && ${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 MANCOMPRESSED_IF_MANZ=  yes
-INSTALL_TARGET=	install NOLINT=1 LIBDIR=${PREFIX}/lib MANDIR=${PREFIX}/man
+MAKE_FLAGS+=	LIBDIR=${PREFIX}/lib MANDIR=${PREFIX}/man
+MAKE_FLAGS+=	MKLINT=no
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+MAKEFLAGS+=	NETBSD_COMPATIBLE=YES 
+CFLAGS+=	-DREPLACE_GETOPT
+.endif
+
+.if ${OPSYS} != "NetBSD"
+MAKE_FLAGS+=	MKMAN=no
+MAN_INCLUDED=	'@comment '
+.else
+MAN_INCLUDED=
+.endif
+
+PLIST_SUBST+=	MAN_INCLUDED=${MAN_INCLUDED}
 
 post-extract:
 		${CP} ${FILESDIR}/getopt.h ${WRKSRC}
