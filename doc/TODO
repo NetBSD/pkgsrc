@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3198 2005/03/05 13:50:03 wiz Exp $
+$NetBSD: TODO,v 1.3199 2005/03/05 13:50:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -863,7 +863,6 @@ Suggested package updates
 	o perl-5.6.2
 	o pfqueue-0.3.2
 	o pfstat-1.8
-	o pgpdump-0.24
 	o pgpool-2.5.1
 	o phoon-20030120
 	o photopc-3.05
