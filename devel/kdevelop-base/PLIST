@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/03/09 13:03:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/04/20 14:15:41 markd Exp $
 bin/kdevelop
 bin/kdevelop-htdig
 bin/kdevprj2kdevelop
@@ -260,12 +260,21 @@ share/doc/kde/HTML/en/kde_app_devel/kscribblefiles.png
 share/doc/kde/HTML/en/kdevelop/SF-general.png
 share/doc/kde/HTML/en/kdevelop/SF-indent.png
 share/doc/kde/HTML/en/kdevelop/SF-other.png
+share/doc/kde/HTML/en/kdevelop/applicationwizard.docbook
 share/doc/kde/HTML/en/kdevelop/automake-file-popup.png
 share/doc/kde/HTML/en/kdevelop/automake-subproject-popup.png
 share/doc/kde/HTML/en/kdevelop/automake-target-popup.png
 share/doc/kde/HTML/en/kdevelop/automakemanager.png
 share/doc/kde/HTML/en/kdevelop/classview.png
 share/doc/kde/HTML/en/kdevelop/common
+share/doc/kde/HTML/en/kdevelop/configure-adddialog-baselibs.png
+share/doc/kde/HTML/en/kdevelop/configure-adddialog-qt.png
+share/doc/kde/HTML/en/kdevelop/configure-adddialog.png
+share/doc/kde/HTML/en/kdevelop/configure-doctree-DevHelp.png
+share/doc/kde/HTML/en/kdevelop/configure-doctree-TOC.png
+share/doc/kde/HTML/en/kdevelop/configure-doctree-bookmark.png
+share/doc/kde/HTML/en/kdevelop/configure-doctree-general.png
+share/doc/kde/HTML/en/kdevelop/configure-doctree-textsearch.png
 share/doc/kde/HTML/en/kdevelop/configure-editor.png
 share/doc/kde/HTML/en/kdevelop/configure-file-selector.png
 share/doc/kde/HTML/en/kdevelop/configure-general.png
@@ -273,7 +282,10 @@ share/doc/kde/HTML/en/kdevelop/configure-select.png
 share/doc/kde/HTML/en/kdevelop/configure-snippets.png
 share/doc/kde/HTML/en/kdevelop/create-new-project-cvs.png
 share/doc/kde/HTML/en/kdevelop/createnewproject.png
+share/doc/kde/HTML/en/kdevelop/doctree-add-bookmark.png
+share/doc/kde/HTML/en/kdevelop/doctree.png
 share/doc/kde/HTML/en/kdevelop/doctreeview.png
+share/doc/kde/HTML/en/kdevelop/edit-doctree-TOC-entry.png
 share/doc/kde/HTML/en/kdevelop/file-selector.png
 share/doc/kde/HTML/en/kdevelop/filetree.png
 share/doc/kde/HTML/en/kdevelop/importdirectory.png
@@ -281,14 +293,19 @@ share/doc/kde/HTML/en/kdevelop/index.cache.bz2
 share/doc/kde/HTML/en/kdevelop/index.docbook
 share/doc/kde/HTML/en/kdevelop/kdevelop-ideal-mode-0.png
 share/doc/kde/HTML/en/kdevelop/kdevelop-ideal-mode.png
+share/doc/kde/HTML/en/kdevelop/kdevelop-install.docbook
 share/doc/kde/HTML/en/kdevelop/kdevelop-mdi-mode.png
+share/doc/kde/HTML/en/kdevelop/kdevelop-survey.docbook
 share/doc/kde/HTML/en/kdevelop/kdevelop-tabbed-mode.png
 share/doc/kde/HTML/en/kdevelop/kdevelop-toplevel-mode.png
 share/doc/kde/HTML/en/kdevelop/loading-progress-bar.png
 share/doc/kde/HTML/en/kdevelop/open-project.png
 share/doc/kde/HTML/en/kdevelop/open-recent-project.png
+share/doc/kde/HTML/en/kdevelop/project-management.docbook
 share/doc/kde/HTML/en/kdevelop/select-user-interface-0.png
 share/doc/kde/HTML/en/kdevelop/select-user-interface.png
+share/doc/kde/HTML/en/kdevelop/setup.docbook
+share/doc/kde/HTML/en/kdevelop/unixdev.docbook
 share/doc/kde/HTML/en/kdevelop/wrong-project-location.png
 share/kde/applnk/Development/kdevelop.desktop
 share/kde/apps/devdoctreeview/indices/kde2book.index
@@ -406,7 +423,7 @@ share/kde/apps/kdevappwizard/template-common/kdevelop.pm
 share/kde/apps/kdevappwizard/template-common/wx-Makefile.am
 share/kde/apps/kdevappwizard/template-common/wx-Makefile.cvs
 share/kde/apps/kdevappwizard/template-common/wx-configure.in
-share/kde/apps/kdevappwizard/template-common/wxwindows.tar.gz
+share/kde/apps/kdevappwizard/template-common/wxwidgets.tar.gz
 share/kde/apps/kdevappwizard/template-cpphello/app.kdevelop
 share/kde/apps/kdevappwizard/template-cpphello/configure.in
 share/kde/apps/kdevappwizard/template-cpphello/cpp-Makefile.am
@@ -613,6 +630,19 @@ share/kde/apps/kdevappwizard/template-khello/preview.png
 share/kde/apps/kdevappwizard/template-khello/script
 share/kde/apps/kdevappwizard/template-khello/src-Makefile.am
 share/kde/apps/kdevappwizard/template-khello/subdirs
+share/kde/apps/kdevappwizard/template-khello2/app.cpp
+share/kde/apps/kdevappwizard/template-khello2/app.desktop
+share/kde/apps/kdevappwizard/template-khello2/app.h
+share/kde/apps/kdevappwizard/template-khello2/app.kdevelop
+share/kde/apps/kdevappwizard/template-khello2/appui.rc
+share/kde/apps/kdevappwizard/template-khello2/main.cpp
+share/kde/apps/kdevappwizard/template-khello2/preview.png
+share/kde/apps/kdevappwizard/template-khello2/script
+share/kde/apps/kdevappwizard/template-khello2/src-Makefile.am
+share/kde/apps/kdevappwizard/template-khello2/subdirs
+share/kde/apps/kdevappwizard/template-khello2/widget.cpp
+share/kde/apps/kdevappwizard/template-khello2/widget.h
+share/kde/apps/kdevappwizard/template-khello2/widgetbase.ui
 share/kde/apps/kdevappwizard/template-kicker/applet.cpp
 share/kde/apps/kdevappwizard/template-kicker/applet.desktop
 share/kde/apps/kdevappwizard/template-kicker/applet.h
@@ -821,6 +851,7 @@ share/kde/apps/kdevappwizard/templates/kdevpart
 share/kde/apps/kdevappwizard/templates/kdevpart2
 share/kde/apps/kdevappwizard/templates/kfileplugin
 share/kde/apps/kdevappwizard/templates/khello
+share/kde/apps/kdevappwizard/templates/khello2
 share/kde/apps/kdevappwizard/templates/kicker
 share/kde/apps/kdevappwizard/templates/kioslave
 share/kde/apps/kdevappwizard/templates/kmod
@@ -941,7 +972,7 @@ share/kde/apps/kdevdoctreeview/tocs/sw.toc
 share/kde/apps/kdevdoctreeview/tocs/w3c-dom-level2-html.toc
 share/kde/apps/kdevdoctreeview/tocs/w3c-svg.toc
 share/kde/apps/kdevdoctreeview/tocs/w3c-uaag10.toc
-share/kde/apps/kdevdoctreeview/tocs/wxwindows_bugs.toc
+share/kde/apps/kdevdoctreeview/tocs/wxwidgets_bugs.toc
 share/kde/apps/kdevdoxygen/kdevdoxygen.rc
 share/kde/apps/kdevelop/eventsrc
 share/kde/apps/kdevelop/kdevelopui.rc
@@ -1271,6 +1302,7 @@ share/kde/servicetypes/kdevelopversioncontrol.desktop
 @dirrm share/kde/apps/kdevappwizard/template-kmod
 @dirrm share/kde/apps/kdevappwizard/template-kioslave
 @dirrm share/kde/apps/kdevappwizard/template-kicker
+@dirrm share/kde/apps/kdevappwizard/template-khello2
 @dirrm share/kde/apps/kdevappwizard/template-khello
 @dirrm share/kde/apps/kdevappwizard/template-kfileplugin
 @dirrm share/kde/apps/kdevappwizard/template-kdevpart2
