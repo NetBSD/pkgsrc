@@ -1,6 +1,0 @@
-Zephyr is a messaging service for securely delivering notification messages.
-It is intended to be a sort of network equivalent of wall, only you can
-target messages to particular users or classes of users rather than being
-forced to broadcast to everybody regardless of whether or not they are
-interested.  Messages are typically recieved either by the X client, zwgc,
-or by the emacs client.

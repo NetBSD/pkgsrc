@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2003/07/30 10:53:02 jmmv Exp $
-
-Zephyr requires a single master server, and then a host server for every
-host that supports zephyr.  You must start these out of your rc script.
-
-===========================================================================
