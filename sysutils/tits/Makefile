@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/06/04 08:38:20 seb Exp $
+# $NetBSD: Makefile,v 1.8 2002/06/04 09:08:32 seb Exp $
 #
 
 DISTNAME=       tits-1.0.2
@@ -17,7 +17,9 @@ MANCOMPRESSED_IF_MANZ=	yes
 
 post-patch:
 	${MV} ${WRKSRC}/tits.8 ${WRKSRC}/tits.8.in
-	${SED} -e 's|/usr/local|${PREFIX}|g' ${WRKSRC}/tits.8.in > ${WRKSRC}/tits.8
+	${SED} -e 's|/usr/local/etc|${PKG_SYSCONFDIR}|g'	\
+	   -e 's|/usr/local|${PREFIX}|g'			\
+	   ${WRKSRC}/tits.8.in > ${WRKSRC}/tits.8
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/tits.conf ${PREFIX}/share/examples/
