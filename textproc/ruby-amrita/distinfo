@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/12 05:15:27 taca Exp $
+
+SHA1 (amrita-1.0.2.tar.gz) = b9d74d73b7668bcbfa60abf8c076bc12f71c6898
+Size (amrita-1.0.2.tar.gz) = 221789 bytes
+SHA1 (patch-aa) = 47be517f55ee5e71443451363e371331edb44d65
