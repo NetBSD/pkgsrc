@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/09/21 10:57:08 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2002/11/30 23:21:39 salo Exp $
 #
 
 DISTNAME=	maketool-0.7
@@ -13,6 +13,7 @@ COMMENT=	Graphical front end to GNU make
 BUILD_USES_MSGFMT=	# defined
 
 USE_BUILDLINK2=		# defined
+USE_PKGLOCALEDIR=	# defined
 USE_X11=		# defined
 USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined

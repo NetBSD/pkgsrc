@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/19 10:54:51 rh Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/30 23:21:37 salo Exp $
 #
 
 DISTNAME=	libgnomeui-2.0.5
@@ -16,6 +16,7 @@ BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
 USE_GNU_GETTEXT=	yes
 USE_PERL5=		yes

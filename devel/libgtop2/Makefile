@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/11/04 03:18:40 rh Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/30 23:21:38 salo Exp $
 
 DISTNAME=		libgtop-2.0.0
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -30,6 +30,7 @@ IGNORE+=		"(More information can be found in libgtop.info.)"
 
 USE_PERL5=		build
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
@@ -46,7 +47,6 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib2}
 CONFIGURE_ARGS+=	--with-catgets --with-libgtop-guile=no
 CONFIGURE_ENV+=		AWK="${AWK}" LN_S="${LN} -s" PERL="${PERL5}"
-CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
