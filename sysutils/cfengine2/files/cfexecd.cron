@@ -1,0 +1,4 @@
+# $NetBSD: cfexecd.cron,v 1.1 2004/09/23 22:57:28 ben Exp $
+#
+# Cfengine
+7,37 * * * * * /usr/pkg/sbin/cfexecd -F
