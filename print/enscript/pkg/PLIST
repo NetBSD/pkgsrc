@@ -1,10 +1,12 @@
-etc/enscript.cfg
+@comment $NetBSD: PLIST,v 1.2 1998/02/22 17:24:25 frueauf Exp $
+bin/diffpp
 bin/enscript
 bin/many2html
-bin/diffpp
-bin/sliceprint
 bin/mkafmmap
+bin/sliceprint
 bin/states
+etc/enscript.cfg
+man/man1/diffpp.1.gz
 man/man1/enscript.1.gz
 man/man1/sliceprint.1.gz
 man/man1/states.1.gz
