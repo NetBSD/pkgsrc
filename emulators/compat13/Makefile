@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/04/15 16:36:14 tv Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/27 11:53:39 tv Exp $
 #
 
 DISTNAME=	compat13-${MACHINE_ARCH}
@@ -19,6 +19,12 @@ IGNORE=		"NetBSD version not new enough: ${OPSYS_VER}"
 .endif
 
 NO_BUILD=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+# This installs in /usr to avoid dynamic linker annoyances
+LOCALBASE=	/usr 
+NO_MTREE=	yes
 
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/lib*.so* ${PREFIX}/lib/
