@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.44 2003/04/11 11:49:53 darcy Exp $
+# $NetBSD: Makefile,v 1.45 2003/07/02 20:37:34 kim Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
 DISTNAME=	cku209
-PKGNAME=        kermit-8.0.209
+PKGNAME=	kermit-8.0.209
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	comms
 MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
@@ -16,26 +17,24 @@ LICENSE=	kermit-license
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
-ALL_TARGET=	macosx10
-.else
-ALL_TARGET=	netbsd
-.endif
-
-BUILD_DEFS+=	KFLAGS LIBS KERMIT_SUID_UUCP
+USE_BUILDLINK2=	YES
+BUILD_DEFS+=	KERMIT_SUID_UUCP KFLAGS LIBS
 MAKE_ENV+=	KFLAGS="${KFLAGS}" LIBS="${LIBS}"
+MAKE_ENV+=	SSLINC="${SSLINC}" SSLLIB="${SSLLIB}"
 MAKEFILE=	makefile
 PLIST_SRC=	${WRKDIR}/PLIST
 
 #KFLAGS+=	-DNODEBUG -DNOOLDMODEMS
+
+# Set to empty
+SSLINC=		-I${WRKDIR}/.buildlink/include
+SSLLIB=		-L${WRKDIR}/.buildlink/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${PREFIX}/bin/kermit
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/kermit
 	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/kermit
-
-no-manpage-in-beta-release:
 	for OPT in ${MANINSTALL} broken-solaris-needs-this; do \
 	  case $$OPT in \
 	    catinstall) \
@@ -68,14 +67,21 @@ LIBS+=          -ltermcap
 # Include SOCKS firewall support
 .if defined(USE_SOCKS)
 .if ${USE_SOCKS} == 4
-DEPENDS+=	socks4-2.2:../../net/socks4
 KFLAGS+=	-DSOCKS
 LIBS+=		-L${PREFIX}/lib -lsocks4
+.include "../../net/socks4/buildlink2.mk"
 .elif ${USE_SOCKS} == 5
-DEPENDS+=	socks5-1.0.2:../../net/socks5
 KFLAGS+=	-DSOCKS -DCK_SOCKS5
 LIBS+=		-L${PREFIX}/lib -lsocks5
+.include "../../net/socks5/buildlink2.mk"
 .endif
+.endif
+
+.if ${OPSYS} == "Darwin"
+ALL_TARGET=	macosx10
+.else
+ALL_TARGET=	netbsd+openssl
+.include "../../security/openssl/buildlink2.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
