@@ -1,21 +1,8 @@
-$NetBSD: patch-ai,v 1.7 2004/02/14 07:45:36 jlam Exp $
+$NetBSD: patch-ai,v 1.8 2004/03/29 05:47:31 jlam Exp $
 
---- configure.orig	Mon Dec  1 08:35:06 2003
+--- configure.orig	Wed Mar 10 10:56:10 2004
 +++ configure
-@@ -3915,6 +3915,12 @@ exec 5>>./config.log
- 
- target=$save_target
- 
-+_build_libtool_libs=`${CONFIG_SHELL-/bin/sh} $srcdir/libtool --config | grep '^build_libtool_libs='`
-+case "x$_build_libtool_libs" in
-+	x*=yes) ac_cv_can_build_shared=yes;;
-+	x*) ac_cv_can_build_shared=no;;
-+esac
-+
- if test "$ac_cv_can_build_shared" = no; then
- 	enable_shared=no
- 	enable_static=yes
-@@ -10731,7 +10737,14 @@ if test $ac_cv_lib_resolv_res_search = y
+@@ -10762,7 +10762,14 @@ if test $ac_cv_lib_resolv_res_search = y
  fi
  
    SASL_MECHS="$SASL_MECHS libgssapiv2.la"
@@ -31,7 +18,7 @@ $NetBSD: patch-ai,v 1.7 2004/02/14 07:45:36 jlam Exp $
  
    cmu_save_LIBS="$LIBS"
    LIBS="$LIBS $GSSAPIBASE_LIBS"
-@@ -10865,14 +10878,6 @@ _ACEOF
+@@ -10896,14 +10903,6 @@ _ACEOF
  echo "${ECHO_T}disabled" >&6
   fi
  
