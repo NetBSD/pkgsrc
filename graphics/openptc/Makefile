@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/24 15:46:44 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/18 05:53:28 snj Exp $
 
 DISTNAME=		OpenPTC-x11-1.0.0-2
 PKGNAME=		OpenPTC-X11-1.0.02
@@ -11,11 +11,11 @@ COMMENT=		Prometheus Truecolour for X11
 
 WRKSRC=			${WRKDIR}/OpenPTC-x11-1.0.0
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_X11BASE=		yes
 
 BUILDLINK_DEPENDS.Hermes=	Hermes>=1.3.2nb1
 
-.include "../../graphics/hermes/buildlink2.mk"
+.include "../../graphics/hermes/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
