@@ -1,34 +1,20 @@
-$NetBSD: patch-aa,v 1.2 1999/10/13 11:31:28 fredb Exp $
+$NetBSD: patch-aa,v 1.3 2000/01/03 23:36:19 fredb Exp $
 
---- Makefile.in.orig	Sat Sep  4 23:41:34 1999
-+++ Makefile.in	Wed Oct 13 04:50:29 1999
-@@ -25,14 +25,15 @@
- INSTALL=	@INSTALL@
+--- Makefile.in.orig	Sun Nov  7 05:09:56 1999
++++ Makefile.in	Sun Nov 21 14:47:41 1999
+@@ -26,13 +26,13 @@
  PACKAGE=	@PACKAGE@
  VERSION=	@VERSION@
--DOCDIR=		$(prefix)/doc/$(PACKAGE)-$(VERSION)
--LICENCE=	$(prefix)/doc/$(PACKAGE)-$(VERSION)/COPYING
+ @USRDOC@DOCDIR=		$(prefix)/doc/$(PACKAGE)-$(VERSION)
 -localedir=	$(prefix)/@DATADIRNAME@/locale
-+DOCDIR=		$(prefix)/share/$(PACKAGE)
-+LICENCE=	$(prefix)/share/$(PACKAGE)/COPYING
 +localedir=	$(prefix)/share/locale
  
  CC=		@CC@
  CFLAGS=		@CFLAGS@
  CPPFLAGS=	@GTK_CFLAGS@ -D_USE_BSD -I. -Iicons -Iintl \
- 		-DLICENCE="\"$(LICENCE)\"" -DLOCALEDIR=\"$(localedir)\" \
-+		-DGNU_MAKE=@GMAKE@ @CPPFLAGS@ \
- 		$(TESTCPPFLAGS)
+ 		-DLOCALEDIR=\"$(localedir)\" \
+-		$(TESTCPPFLAGS)
++		@CPPFLAGS@ $(TESTCPPFLAGS)
  LDLIBS=		@GTK_LIBS@ @INTLLIBS@
  O=		objs
-@@ -132,8 +133,8 @@
- 	test -d $(DOCDIR) || $(INSTALL) -m 755 -d $(DOCDIR)
- 	$(INSTALL) -m 755 COPYING $(DOCDIR)/COPYING
- 	$(INSTALL) -m 755 COPYRIGHT $(DOCDIR)/COPYRIGHT
--	$(INSTALL) -m 755 TODO $(DOCDIR)/TODO
--	$(INSTALL) -m 755 CHANGES $(DOCDIR)/CHANGES
-+#	$(INSTALL) -m 755 TODO $(DOCDIR)/TODO
-+#	$(INSTALL) -m 755 CHANGES $(DOCDIR)/CHANGES
- 	
  
- uninstall::

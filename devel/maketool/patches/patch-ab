@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/09/17 14:40:45 fredb Exp $
+$NetBSD: patch-ab,v 1.2 2000/01/03 23:36:19 fredb Exp $
 
 --- po/Makefile.in.in.orig	Sun May 30 08:42:41 1999
-+++ po/Makefile.in.in	Thu Sep 16 07:26:53 1999
++++ po/Makefile.in.in	Sun Nov 21 14:49:07 1999
 @@ -18,7 +18,7 @@
  
  prefix = @prefix@
