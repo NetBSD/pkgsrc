@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/09/18 15:11:32 kim Exp $
+# $NetBSD: Makefile,v 1.21 1999/09/18 15:24:12 kim Exp $
 # FreeBSD Id: Makefile,v 1.18 1997/05/16 01:42:31 asami Exp 
 #
 
@@ -9,7 +9,7 @@
     SUBDIR += gcpio
     SUBDIR += gsharutils
     SUBDIR += gtar
-#    SUBDIR += gtar-base
+    SUBDIR += gtar-base
     SUBDIR += gtar-info
     SUBDIR += gzip
     SUBDIR += gzip-base
