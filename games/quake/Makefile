@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/07/17 21:39:17 grant Exp $
+# $NetBSD: Makefile,v 1.25 2003/07/21 16:49:59 martti Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.idsoftware.com/
-COMMENT=	legendary first person shoot'em up game
+COMMENT=	Legendary first person shoot'em up game
 
 DEPENDS+=	quakedata-[0-9]*:../../games/quakedata
 

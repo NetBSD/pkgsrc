@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/03/29 12:41:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 16:49:46 martti Exp $
 #
 
 DISTNAME=	manual-1.8.1-2
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.freeciv.org/ftp/contrib/manual/
 
 MAINTAINER=	dillo@giga.or.at
 HOMEPAGE=	http://www.freeciv.org/
-COMMENT=	manuals for freeciv (game, client, and server)
+COMMENT=	Manuals for freeciv (game, client, and server)
 
 USE_BUILDLINK2=	YES
 NO_BUILD=	YES

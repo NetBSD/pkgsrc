@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:39:15 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/21 16:49:59 martti Exp $
 #
 
 DISTNAME=	prboom-2.2.3
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prboom/}
 
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://prboom.sourceforge.net/
-COMMENT=	multiplayer-capable and modified version of ID's classic doom game
+COMMENT=	Multiplayer-capable and modified version of ID's classic doom game
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES

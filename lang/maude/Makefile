@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:44:51 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 16:54:03 martti Exp $
 #
 
 DISTNAME=	maude-linux
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://maude.csl.sri.com/
-COMMENT=	system for equational and rewriting logic specification/programming
+COMMENT=	System for equational and rewriting logic specification/programming
 
 # see http://maude.csl.sri.com/license/license.html
 LICENSE=	maude-license

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:38:02 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:49:36 martti Exp $
 
 DISTNAME=		colchess
 PKGNAME=		${DISTNAME}-7.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.ast.cam.ac.uk/~cmf/chess/colchess/
-COMMENT=		chess analysis engine
+COMMENT=		Chess analysis engine
 
 DIST_SUBDIR=		${PKGNAME}
 NO_CONFIGURE=		# defined

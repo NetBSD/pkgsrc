@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:43:53 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 16:52:29 martti Exp $
 
 DISTNAME=	unicon-1.2
 PKGNAME=	unicon-im-1.2
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.opencjk.org/~yumj/download/
 
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.opencjk.org/~yumj/project-chinput.html
-COMMENT=	libraries and modules of Unicon
+COMMENT=	Libraries and modules of Unicon
 
 USE_BUILDLINK2=	YES
 USE_X11=	YES

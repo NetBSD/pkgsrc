@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:43:09 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/21 16:51:54 martti Exp $
 #
 
 DISTNAME=		xine-lib-1-beta10
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://xinehq.de/
-COMMENT=		multimedia player library
+COMMENT=		Multimedia player library
 
 BUILD_USES_MSGFMT=	YES
 .if ${MACHINE_ARCH} == "i386"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:36:58 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/21 16:47:07 martti Exp $
 #
 
 DISTNAME=	ISO8859-2-pcf
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.biz.net.pl/images/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.biz.net.pl/english/x-fonts/index.html
-COMMENT=	full set of ISO 8859-2 fonts for X Window System
+COMMENT=	Full set of ISO 8859-2 fonts for X Window System
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:42:02 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 16:51:48 martti Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}-src
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.openquicktime.org/
-COMMENT=		portable library for handling QuickTime(TM) media files
+COMMENT=		Portable library for handling QuickTime(TM) media files
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes

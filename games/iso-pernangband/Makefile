@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/19 08:54:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 16:49:51 martti Exp $
 #
 
 DISTNAME=		iso-pern_src-0_2_6
@@ -10,7 +10,7 @@ MASTER_SITES=		http://www.simugraph.com/simutrans/data/
 
 MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.isoband.cjb.net
-COMMENT=		isometric (pseudo 3D) view for Angband
+COMMENT=		Isometric (pseudo 3D) view for Angband
 
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes

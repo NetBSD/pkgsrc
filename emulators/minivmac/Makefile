@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:35:36 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 16:45:56 martti Exp $
 
 DISTNAME=	minivmac-0.1.7.src
 PKGNAME=	minivmac-0.1.7
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.gryphel.com/c/minivmac/
-COMMENT=	miniature Macintosh emulator
+COMMENT=	Miniature Macintosh emulator
 
 USE_X11BASE=	YES
 
