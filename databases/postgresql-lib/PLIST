@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/21 08:14:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/01/30 18:50:39 xtraeme Exp $
 bin/ecpg
 include/postgresql/ecpgerrno.h
 include/postgresql/ecpglib.h
@@ -335,11 +335,11 @@ include/postgresql/sqlca.h
 lib/libecpg.a
 lib/libecpg.so
 lib/libecpg.so.3
-lib/libecpg.so.3.4
+${LIBECPG}lib/libecpg.so.3.4
 lib/libpq.a
 lib/libpq.so
 lib/libpq.so.3
-lib/libpq.so.3.0
+${LIBPQ}lib/libpq.so.3.0
 lib/postgresql/plpgsql.so
 man/man1/ecpg.1
 @dirrm lib/postgresql
