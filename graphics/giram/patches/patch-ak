@@ -1,8 +1,9 @@
-$NetBSD: patch-ak,v 1.2 1999/09/09 07:55:22 sakamoto Exp $
+$NetBSD: patch-ak,v 1.3 2002/01/25 19:20:29 wiz Exp $
 
---- ./src/tools.c.orig	Sat Aug  7 11:17:42 1999
-+++ ./src/tools.c	Thu Sep  9 09:17:58 1999
-@@ -371,5 +371,6 @@
+--- src/tools.c.orig	Sat Aug  7 04:17:42 1999
++++ src/tools.c
+@@ -370,7 +370,8 @@
+                                                     &MaskIcon,
                                                      &transparent,
                                                      Tools[i].Icon);
 -          TD->PixmapInBox[0] = gtk_pixmap_new(PixmapIcon, MaskIcon);
@@ -10,3 +11,4 @@ $NetBSD: patch-ak,v 1.2 1999/09/09 07:55:22 sakamoto Exp $
 +          TD->PixmapInBox[TD->pos] = gtk_pixmap_new(PixmapIcon, MaskIcon);
            /* Draw the little black triangle */
            gc = gdk_gc_new((GTK_PIXMAP(TD->PixmapInBox[TD->pos]))->mask);
+           gdk_color_white(gdk_colormap_get_system(), &color);
