@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/07/29 00:09:59 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2000/08/23 23:14:32 tron Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -13,14 +13,14 @@ HOMEPAGE=		http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png>=1.0.6:../../graphics/png
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 NOT_FOR_PLATFORM=	*-*-alpha	#LP64 problems
 
-USE_X11BASE=		# defined
-USE_MOTIF12=		# defined
+USE_X11BASE=		YES
+USE_XPM=		YES
+USE_MOTIF12=		YES
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-zdir=/usr
 CONFIGURE_ARGS+=	--with-jpegdir=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-pngdir=${LOCALBASE}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/28 18:12:06 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/23 23:14:27 tron Exp $
 # FreeBSD: ports/games/xpat2/Makefile,v 1.11 2000/04/14 12:27:59 asami Exp
 
 DISTNAME=	xpat2-1.06
@@ -7,9 +7,8 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=games/solitaires/}
 
 MAINTAINER=	kuebart@mathematik.uni-ulm.de
 
-DEPENDS=	xpm-*:../../graphics/xpm
-
-USE_X11BASE=	# defined
+USE_X11BASE=	YES
+USE_XPM=	YES
 
 EVAL_PREFIX=	XPMDIR=xpm
 MAKE_ENV+=	XPMDIR="${XPMDIR}"

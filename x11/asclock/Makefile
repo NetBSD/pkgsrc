@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/11/03 04:24:59 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2000/08/23 23:14:32 tron Exp $
 #
 
 DISTNAME=	asclock-classic-1.0
@@ -9,9 +9,8 @@ MASTER_SITES=	http://www.asclock.org/tar/
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.asclock.org/
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
-USE_IMAKE=	yes
+USE_IMAKE=	YES
+USE_XPM=	YES
 
 LANGUAGES=	en de pt nl no it sv es hu br fr cs ru uk sl id da
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2000/07/31 08:45:45 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2000/08/23 23:14:33 tron Exp $
 
 DISTNAME=		gnome-libs-1.2.3
 CATEGORIES=		x11 gnome
@@ -11,14 +11,14 @@ DEPENDS+=		ORBit-*:../../net/ORBit
 DEPENDS+=		esound>=0.2.18:../../audio/esound
 DEPENDS+=		gtk+>=1.2.7:../gtk
 DEPENDS+=		imlib-*:../../graphics/imlib
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-USE_X11BASE=		# defined
-USE_GMAKE=		# defined
-USE_LIBTOOL=		# defined
+USE_X11BASE=		YES
+USE_XPM=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 			--with-glib-prefix=${LOCALBASE}
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}" \

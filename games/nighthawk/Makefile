@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/01/02 03:20:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/23 23:14:26 tron Exp $
 #
 
 DISTNAME=		nighthawk-2.1
@@ -14,10 +14,9 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		hubertf@netbsd.org
 HOMEPAGE=		http://www.downunder.net.au/~jsno/
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
-
 USE_GMAKE=		YES
 USE_X11=		YES
+USE_XPM=		YES
 
 post-build:
 	cd ${WRKSRC}/src_sound ; \

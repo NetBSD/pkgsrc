@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/05/01 18:23:51 tv Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/23 23:14:32 tron Exp $
 #
 
 DISTNAME=		Xaw-XPM-1.1
@@ -10,11 +10,10 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=libs/X/}
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.zip.com.au/~bb/XawXpm/
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
-
 CONFLICTS=		Xaw3d-*
 
-USE_IMAKE=		yes
+USE_IMAKE=		YES
+USE_XPM=		YES
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/Xaw-Xpm

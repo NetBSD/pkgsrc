@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/02/20 22:48:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/23 23:14:29 tron Exp $
 #
 
 DISTNAME=	abs-src-0.5
@@ -9,9 +9,8 @@ MASTER_SITES=	http://www.ping.be/bertin/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ping.be/bertin/abs.shtml
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
-USE_X11BASE=	yes
+USE_X11BASE=	YES
+USE_XPM=	YES
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/abs ${PREFIX}/bin

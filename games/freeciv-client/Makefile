@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/12 06:34:33 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/23 23:14:27 tron Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 
@@ -8,8 +8,9 @@ DEPENDS+=		xpm-*:../../graphics/xpm
 
 CONFLICTS=		freeciv-client-gtk-*
 
-USE_XAW=		# defined
-USE_X11=		# defined
+USE_X11=		YES
+USE_XAW=		YES
+USE_XPM=		YES
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/11 08:43:53 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/23 23:14:25 tron Exp $
 #
 
 DISTNAME=		xboing2.4
@@ -9,11 +9,11 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.catt.rmit.edu.au/xboing/xboing.html
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
+USE_IMAKE=		YES
+USE_XPM=		YES
 
+NO_INSTALL_MANPAGES=	YES
 WRKSRC=			${WRKDIR}/xboing
-NO_INSTALL_MANPAGES=	yes
-USE_IMAKE=		yes
 
 post-install:
 	${CHOWN} bin:games ${X11PREFIX}/bin/xboing

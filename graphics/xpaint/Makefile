@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/05/15 02:32:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.23 2000/08/23 23:14:28 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
 #
 
@@ -10,12 +10,12 @@ MASTER_SITES=	http://home.worldonline.dk/~torsten/xpaint/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://home.worldonline.dk/~torsten/xpaint/
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	tiff-*:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png>=1.0.6:../../graphics/png
 
-USE_IMAKE=      yes
+USE_IMAKE=      YES
+USE_XPM=	YES
 
 pre-configure:
 	@${SED} -e 's|\$${LOCALBASE}|'${LOCALBASE}'|g' \

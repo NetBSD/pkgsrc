@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/08/13 14:30:45 bouyer Exp $
+# $NetBSD: Makefile,v 1.13 2000/08/23 23:14:24 tron Exp $
 #
 
 DISTNAME=       xdemineur-2.1.1
@@ -9,8 +9,7 @@ MASTER_SITES=	ftp://ftp.babafou.eu.org/pub/babafou/ \
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://www.spinne.com/x/games/xdemineur/
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
-USE_IMAKE=	yes
+USE_IMAKE=	YES
+USE_XPM=	YES
 
 .include "../../mk/bsd.pkg.mk"

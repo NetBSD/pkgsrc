@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2000/07/31 07:37:00 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/08/23 23:14:36 tron Exp $
 #
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
+USE_XPM=		YES
 
 CONFLICTS+=		icewm-gnome-[0-9]*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/01/30 23:18:49 agc Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/23 23:14:25 tron Exp $
 #
 
 DISTNAME=		xnibbles-1.0BETA4
@@ -9,11 +9,11 @@ MASTER_SITES=		http://www.tjhsst.edu/xnibbles/
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.tjhsst.edu/xnibbles/
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
+USE_X11BASE=		YES
+USE_XPM=		YES
+USE_GMAKE=		YES
 
 WRKSRC=			${WRKDIR}/xnibbles
-USE_X11BASE=		yes
-USE_GMAKE=		yes
 ALL_TARGET=		netbsd
 
 .include "../../mk/bsd.pkg.mk"

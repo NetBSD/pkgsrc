@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/08/21 15:16:00 fredb Exp $
+# $NetBSD: Makefile,v 1.17 2000/08/23 23:14:28 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
@@ -14,12 +14,12 @@ HOMEPAGE=	http://www.foolabs.com/xpdf/
 DEPENDS+=	freetype-lib-1.3.1:../../graphics/freetype
 DEPENDS+=	ghostscript-fonts-*:../../print/ghostscript-fonts
 DEPENDS+=	t1lib-1.0.1:../../textproc/t1lib
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 CONFLICTS=	xpdf-crypto-*
 
-USE_X11BASE=	yes
-GNU_CONFIGURE=	yes
+USE_X11BASE=	YES
+USE_XPM=	YES
+GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=--enable-japanese --enable-chinese
 CONFIGURE_ARGS+=--with-freetype-includes=${LOCALBASE}/include

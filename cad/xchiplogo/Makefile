@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/23 03:57:11 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/23 23:14:22 tron Exp $
 #
 
 DISTNAME=	xchiplogo
@@ -10,9 +10,9 @@ MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.eleceng.adelaide.edu.au/Personal/moini/chiplogo.html
 
 DEPENDS+=	xforms-*:../../x11/xforms
-DEPENDS+=	xpm-*:../../graphics/xpm
 
-USE_X11=	yes
+USE_X11=	YES
+USE_XPM=	YES
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xchiplogo ${LOCALBASE}/bin/xchiplogo

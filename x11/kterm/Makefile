@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/10/19 09:17:35 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/23 23:14:34 tron Exp $
 
 DISTNAME=	kterm-6.2.0
 CATEGORIES=	x11
@@ -12,8 +12,9 @@ PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	sakamoto@netbsd.org
 
-USE_IMAKE=	yes
-USE_XAW=	yes
+USE_IMAKE=	YES
+USE_XAW=	YES
+USE_XPM=	YES
 
 BUILD_DEFS+=	KTERM_USE_WALLPAPER
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/08/04 23:59:02 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2000/08/23 23:14:27 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
 #
 
@@ -11,13 +11,13 @@ HOMEPAGE=	http://www.boutell.com/gd/
 
 DEPENDS+=	freetype-lib>=1.3.1:../../graphics/freetype-lib
 DEPENDS+=	png>=1.0.6:../../graphics/png
-DEPENDS+=	xpm-*:../../graphics/xpm
 DEPENDS+=	jpeg-*:../../graphics/jpeg
 
-USE_X11=	# defined
-USE_LIBTOOL=	# defined
+USE_X11=	YES
+USE_XPM=	YES
+USE_LIBTOOL=	YES
 
-NO_CONFIGURE=	# defined
+NO_CONFIGURE=	YES
 
 .include "../../mk/bsd.prefs.mk"
 

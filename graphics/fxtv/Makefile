@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/23 21:27:58 veego Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/23 23:14:29 tron Exp $
 
 DISTNAME=	fxtv-1.02
 CATEGORIES=	graphics
@@ -14,9 +14,10 @@ DEPENDS+=	xpm-3.4[j-z]:../../graphics/xpm
 ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
 			NetBSD-1.5_ALPHA-* NetBSD-1.[5-9]*-*
 
-USE_GMAKE=	yes
-USE_XAW=	yes
-USE_X11BASE=	yes
+USE_X11BASE=	YES
+USE_XAW=	YES
+USE_XPM=	YES
+USE_GMAKE=	YES
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/11 08:38:01 agc Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/23 23:14:24 tron Exp $
 #
 
 DISTNAME=	crossfire-0.94.2
@@ -10,7 +10,6 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.fak14.uni-muenchen.de/~h729ihqu/games/crossfire.html
 
 DEPENDS+=	rplay>=3.2.0:../../audio/rplay
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 EXTRACT_ONLY=	${CF_SRC}
 
@@ -18,8 +17,9 @@ CF_SRC=		crossfire-0.94.2.tar.gz
 CF_MAPS=	crossfire-0.94.2.maps.tar.gz
 CF_SOUND=	crossfire-0.92.7.sounds.tar.gz
 
-USE_IMAKE=	yes
-USE_PERL5=	yes
+USE_IMAKE=	YES
+USE_PERL5=	YES
+USE_XPM=	YES
 SCRIPTS_ENV+=	${SCRIPTSDIR}
 
 INSTALL_FILE=	${WRKDIR}/.INSTALL

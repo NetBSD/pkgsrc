@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/02/15 05:54:20 bad Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/23 23:14:22 tron Exp $
 #
 
 DISTNAME=	xmysqladmin-1.0
@@ -10,9 +10,9 @@ HOMEPAGE=	http://www.mysql.com/
 
 DEPENDS=	mysql-client-3.22.32:../../databases/mysql-client
 DEPENDS+=	xforms-0.88:../../x11/xforms
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
-USE_X11=	yes
+USE_X11=	YES
+USE_XPM=	YES
 
 ALL_TARGET=	xmysqladmin
 

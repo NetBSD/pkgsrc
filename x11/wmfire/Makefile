@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/10/05 01:27:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/23 23:14:35 tron Exp $
 #
 
 DISTNAME=	wmfire-0.0.3.8
@@ -7,9 +7,8 @@ MASTER_SITES=	http://www.zebra.net/~dm/wmfire/
 
 MAINTAINER=	hubertf@netbsd.org
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
 USE_X11=	YES
+USE_XPM=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	CPPFLAGS=-I${X11BASE}/include
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/08/15 13:38:05 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2000/08/23 23:14:33 tron Exp $
 
 DISTNAME=	AfterStep-1.8.0
 PKGNAME=	afterstep-1.8.0
@@ -14,14 +14,14 @@ BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		rplay>=3.2.0b6:../../audio/rplay
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		asclock-[0-9]*:../../x11/asclock
 DEPENDS+=		xp-*:../../x11/xp
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_PERL=		yes
-USE_X11=		yes
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
+USE_PERL=		YES
+USE_X11=		YES
+USE_XPM=		YES
 
 CONFIGURE_ARGS+=	--disable-staticlibs
 CONFIGURE_ARGS+=	--with-helpcommand="xpman"

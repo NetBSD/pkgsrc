@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/11 20:01:19 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/23 23:14:26 tron Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 CATEGORIES=		games x11
@@ -11,13 +11,13 @@ HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		libmikmod>=3.1.9:../../audio/libmikmod
-DEPENDS+=		xpm-*:../../graphics/xpm
 
-USE_X11BASE=		# defined
-USE_LIBTOOL=		# defined
+USE_X11BASE=		YES
+USE_XPM=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-gnome	# install desktop and pixmap files
 CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="${GNOME_CONFIG}"
 

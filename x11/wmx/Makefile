@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/07/22 06:44:53 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/23 23:14:36 tron Exp $
 
 DISTNAME=	wmx-5
 PKGNAME=	wmx-5.0
@@ -8,9 +8,8 @@ MASTER_SITES=	http://www.all-day-breakfast.com/wmx/
 MAINTAINER=	kuebart@mathematik.uni-ulm.de
 HOMEPAGE=	http://www.all-day-breakfast.com/wmx/
 
-DEPENDS=	xpm-3.4k:../../graphics/xpm
-
-USE_X11BASE=	yes
+USE_X11BASE=	YES
+USE_XPM=	YES
 EVAL_PREFIX=	XPMDIR=xpm
 
 MAKE_ENV+=	XPMDIR=${XPMDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/07/11 09:31:32 agc Exp $
+# $NetBSD: Makefile,v 1.25 2000/08/23 23:14:23 tron Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -12,12 +12,11 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
-USE_X11BASE=	yes
-GNU_CONFIGURE=	yes
-USE_PERL5=	yes
-USE_XAW=	yes
+USE_X11BASE=	YES
+GNU_CONFIGURE=	YES
+USE_PERL5=	YES
+USE_XAW=	YES
+USE_XPM=	YES
 MAKEFILE=	makefile
 CONFIGURE_ARGS+= --with-screen=Xaw --with-xpm --with-perl --with-lib-dir=${X11PREFIX}/libexec
 INSTALL_TARGET=	install install-perl

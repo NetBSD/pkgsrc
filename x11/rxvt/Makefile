@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/07/15 20:39:27 agc Exp $
+# $NetBSD: Makefile,v 1.18 2000/08/23 23:14:32 tron Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
@@ -11,10 +11,9 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		gcw@rxvt.org
 HOMEPAGE=		http://www.rxvt.org/
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
-
-USE_X11BASE=		yes
-GNU_CONFIGURE=		yes
+USE_X11BASE=		YES
+USE_XPM=		YES
+GNU_CONFIGURE=		YES
 
 EVAL_PREFIX+=		XPMDIR=xpm
 CONFIGURE_ARGS+=	--enable-utmp \

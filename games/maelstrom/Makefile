@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/07/30 05:46:24 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/08/23 23:14:25 tron Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-2.0.6
@@ -11,8 +11,6 @@ DISTFILES=		${DISTNAME} ${STREK} ${SWARS} ${ESOUND}
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.ambrosiasw.com/Products/Maelstrom.html
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
-
 ESOUND=			Maelstrom-Sounds-L2.0.0.tar.gz
 STREK=			Star_Trek.tar.gz
 SWARS=			Star_Wars.tar.gz
@@ -20,7 +18,8 @@ SWARS=			Star_Wars.tar.gz
 EXTRACT_ONLY=		${DISTNAME}
 WRKSRC=			${WRKDIR}/Maelstrom
 
-USE_X11BASE=		yes
+USE_X11BASE=		YES
+USE_XPM=		YES
 EVAL_PREFIX+=		XPMDIR=xpm
 MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP} XPMDIR=${XPMDIR}
 
