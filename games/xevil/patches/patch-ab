@@ -1,0 +1,7 @@
+--- actual.C.orig	Thu Jul 30 05:18:48 1998
++++ actual.C	Thu Jul 30 05:19:19 1998
+@@ -687,3 +687,3 @@
+ {
+-  PhysicalContext *list[A_CLASSES_NUM];
++  const PhysicalContext *list[A_CLASSES_NUM];
+   int size;

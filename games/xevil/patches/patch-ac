@@ -1,0 +1,17 @@
+--- game.C.orig	Thu Jul 30 05:20:22 1998
++++ game.C	Thu Jul 30 05:21:16 1998
+@@ -388,3 +388,3 @@
+   int weaponsNum;
+-  PhysicalContext *weapons[A_CLASSES_NUM];
++  const PhysicalContext *weapons[A_CLASSES_NUM];
+   weaponsNum = locator->filter_contexts(weapons,NULL,
+@@ -392,3 +392,3 @@
+   int oItemsNum;
+-  PhysicalContext *oItems[A_CLASSES_NUM];
++  const PhysicalContext *oItems[A_CLASSES_NUM];
+   oItemsNum = locator->filter_contexts(oItems,NULL,
+@@ -1383,3 +1383,3 @@
+       // Get list of all classes that are potential Human classes.
+-      PhysicalContext *list[A_CLASSES_NUM];
++      const PhysicalContext *list[A_CLASSES_NUM];
+       int size = locator.filter_contexts(list,NULL,potential_human_filter);
