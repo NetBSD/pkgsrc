@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/05/02 11:56:05 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/02 13:51:31 wiz Exp $
 #
 
 DISTNAME=	gtksamba-0.3.2pl1
@@ -11,10 +11,8 @@ MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://www.open-systems.com/gtksamba.html
 COMMENT=	Samba configuration tool for X Window System
 
-DEPENDS+=	gtk+>=1.2.10nb4:../../x11/gtk
-
-USE_X11=	yes
 GNU_CONFIGURE=	yes
+USE_BUILDLINK2=	yes
 CONFIGURE_ENV+=	CFLAGS="-DPREFIX='\"${PREFIX}\"' ${CFLAGS}"
 
 post-install:
@@ -23,4 +21,5 @@ post-install:
 	@ ${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/gtksamba
 .endfor
 
+.include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
