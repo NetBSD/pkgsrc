@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:25:16 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/25 09:13:24 wiz Exp $
 include/itcl.h
 include/itclDecls.h
 include/itclInt.h
 include/itclIntDecls.h
 include/itk.h
 include/itkDecls.h
+lib/iwidgets
 lib/tcl/itcl3.2/pkgIndex.tcl
 lib/tcl/itcl3.2/itcl.tcl
 lib/tcl/itk3.2/pkgIndex.tcl
