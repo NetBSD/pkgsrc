@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/09/15 09:26:24 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/27 08:54:54 tron Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
@@ -12,7 +12,7 @@ MAINTAINER=	mcmahill@alum.mit.edu
 HOMEPAGE=	http://kontiki.mit.edu/rle/research/info_research_proj.html
 
 HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	config
+CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS=		default
 
 .include "../../mk/bsd.pkg.mk"

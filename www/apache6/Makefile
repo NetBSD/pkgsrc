@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/02/22 17:43:23 veego Exp $
+# $NetBSD: Makefile,v 1.14 2000/03/27 08:55:00 tron Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} --libexecdir=${PREFIX}/lib/httpd \
 			--disable-module=auth_dbm \
 			--with-perl=${PREFIX}/bin/perl
 #			--enable-rule=EAPI --disable-module=ssl 
-CONFIGURE_SCRIPT=	configure.v6
+CONFIGURE_SCRIPT=	${WRKSRC}/configure.v6
 CONFIGURE_ENV+=		OPTIM="${OPTIM}"
 
 BUILD_DEFS+=		USE_INET6
@@ -99,7 +99,7 @@ BUILD_DEFS+=		APACHE_PERF_TUNING APACHE_SUEXEC USE_INET6
 
 post-patch:
 	@${FIND} ${WRKSRC}/htdocs -name '*.orig' | xargs ${RM} -f
-	@${CHMOD} +x ${WRKSRC}/${CONFIGURE_SCRIPT}
+	@${CHMOD} +x ${CONFIGURE_SCRIPT}
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/apache.sh \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/01/18 20:41:11 tron Exp $
+# $NetBSD: Makefile,v 1.10 2000/03/27 08:54:55 tron Exp $
 
 DISTNAME=	pilotmgr-1.107p2
 CATEGORIES=	comms
@@ -18,7 +18,7 @@ HAS_CONFIGURE=	yes
 NO_BUILD=	yes
 
 CONFIGURE_ARGS=		</dev/null
-CONFIGURE_SCRIPT=	Setup
+CONFIGURE_SCRIPT=	./Setup
 WRKSRC=			${WRKDIR}/${DISTNAME:C/-.*$//}
 
 PM_PERL_DIR=	${PREFIX}/lib/${DISTNAME:C/-.*$//}

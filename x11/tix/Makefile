@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/07/24 21:01:17 tron Exp $
+# $NetBSD: Makefile,v 1.10 2000/03/27 08:55:00 tron Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/03/17 07:55:17 tg Exp
 
 DISTNAME=	Tix4.1.0.006
@@ -22,7 +22,7 @@ pre-configure:
 	@(cd ${WRKSRC}/.. && \
 	    CC="${CC}" ac_cv_path_CC="${CC}" CFLAGS="${CFLAGS}" \
 	    INSTALL="${INSTALL}" INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-	  ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
+	  ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
 
 post-install:
 	@(cd ${WRKSRC}/.. && \

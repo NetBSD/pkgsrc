@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/11 13:56:52 bad Exp $
+# $NetBSD: Makefile,v 1.2 2000/03/27 08:54:59 tron Exp $
 #
 
 DISTNAME=	freeWAIS-sf-2.2.12
@@ -15,7 +15,7 @@ USE_LIBTOOL=	yes
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		PREFIX=${PREFIX}
-CONFIGURE_SCRIPT=	Configure
+CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} \
 				-Darchname=${MACHINE_ARCH}-${LOWER_OPSYS}
 INSTALL_TARGET=	install install.man

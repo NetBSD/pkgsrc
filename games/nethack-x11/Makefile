@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/12/24 22:30:05 pooka Exp $
+# $NetBSD: Makefile,v 1.7 2000/03/27 08:54:56 tron Exp $
 #
 
 DISTNAME=		nethack-3.3.0
@@ -14,7 +14,7 @@ DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 USE_X11=		yes
 HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	sys/unix/setup.sh
+CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 ALL_TARGET=		nethack
 INSTALL_TARGET=		binfiles
 MAKE_ENV+=		GTYPE=-x11
