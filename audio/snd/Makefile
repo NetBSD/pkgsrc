@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/05/11 08:55:10 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1998/05/11 11:34:05 frueauf Exp $
 #
 
 DISTNAME=		snd
@@ -10,12 +10,18 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		hubertf@netbsd.org
 
 DEPENDS+=		xpm-3.4j:../../graphics/xpm
-BUILD_DEPENDS+=		${X11BASE}/include/Xm:../../x11/lesstif
 
 USE_X11=		YES
 REQUIRES_MOTIF=		YES
 MAKEFILE=		makefile.netbsd
 ALL_TARGET=		snd
+
+post-patch:
+	${MV} ${WRKSRC}/makefile.netbsd ${WRKSRC}/makefile.netbsd.bak
+	${CAT} ${WRKSRC}/makefile.netbsd.bak | \
+		${SED} s/@LOCALBASE@/${LOCALBASE:S/\//\\\\\//g}/g | \
+		${SED} s/@X11BASE@/${X11BASE:S/\//\\\\\//g}/g \
+		> ${WRKSRC}/makefile.netbsd
 
 do-install:
 	cd ${WRKSRC} ; ${INSTALL_PROGRAM} snd ${PREFIX}/bin
