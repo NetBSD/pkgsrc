@@ -1,31 +1,10 @@
-$NetBSD: patch-ai,v 1.2 1999/03/05 11:22:35 frueauf Exp $
+$NetBSD: patch-ai,v 1.3 1999/12/22 13:25:42 dmcmahill Exp $
 
---- ./routines/default/scimem.c.orig	Mon Jul 20 07:50:29 1998
-+++ ./routines/default/scimem.c	Sat Aug  8 13:13:30 1998
-@@ -8,6 +8,25 @@
- #endif
- 
--
- #include "../machine.h"
-+
-+#if defined(netbsd)
-+#include <ieeefp.h>
-+#endif
-+
-+#if defined(freebsd)
-+#include <floatingpoint.h>
-+#endif
-+
-+#if (defined(netbsd) && !defined(__alpha__)) || defined(freebsd)
-+void C2F(nofpex)()
-+{
-+  fpsetmask(0);   /* Don't dump core on FPE return Inf or NaN */
-+}
-+#else
-+void C2F(nofpex)()
-+{
-+  return;
-+}
-+#endif
- 
- char *the_p=NULL;
+--- ./Makefile.incl.in.orig	Fri Jul 10 09:43:07 1998
++++ ./Makefile.incl.in	Mon Nov 29 18:50:27 1999
+@@ -61,4 +61,5 @@
+ PVMLIB = @PVMLIB@
+ PVMGLIB = @PVMGLIB@
++PVMROOT = @PVMROOT@
+ XAWLIB = @XAWLIB@
+ XMULIB = @XMULIB@
