@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1809 2003/03/31 15:56:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.1810 2003/03/31 17:45:17 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1353,3 +1353,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added mtree-20030331 [grant 2003-03-31]
 	Updated if-psprint to 1.6 [abs 2003-03-31]
 	Added mldonkey-2.04rc1 [jmmv 2003-03-31]
+	Updated wxGTK to 2.4.0 [jmmv 2003-03-31]
