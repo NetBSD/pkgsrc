@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/01/31 11:07:05 shell Exp $
+$NetBSD: distinfo,v 1.3 2003/05/24 09:26:56 mjl Exp $
 
-SHA1 (XML-Simple-2.03.tar.gz) = ee95d0461fc9940bc37bd55df37ef5045db21018
-Size (XML-Simple-2.03.tar.gz) = 51815 bytes
+SHA1 (XML-Simple-2.07.tar.gz) = 89960da1feca860294779338a1fb3fda7244c9c2
+Size (XML-Simple-2.07.tar.gz) = 59575 bytes
