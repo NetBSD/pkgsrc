@@ -1,0 +1,6 @@
+# $NetBSD: libtool-post-cache,v 1.1.4.2 2002/12/26 17:17:33 jlam Exp $
+
+-L.|-L./*|-L..*|-L${WRKSRC}*|-l*)
+	skipcache=yes
+	;;
+esac
