@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2004/10/30 16:17:53 grant Exp $
+# $NetBSD: Makefile.common,v 1.19 2004/11/15 17:54:49 jlam Exp $
 #
 
 DISTNAME=	Python-2.3.4
@@ -71,16 +71,10 @@ INSTALL_UNSTRIPPED=	yes
 .endif
 
 # ensure that the bsddb185 module is built on all platforms
-USE_DB185=	yes
 .include "../../mk/bdb.buildlink3.mk"
 MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE}
-
-.if ${BDB_TYPE} == "native"
-MAKE_ENV+=	PY_BDB_INCDIRS=/usr/${_BDB_INCDIRS}
-.else
 MAKE_ENV+=	PY_BDB_INCDIRS=${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
 MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
-.endif
 
 .if defined(BUILDLINK_TRANSFORM)
 MAKE_ENV+=	PY_BDB_TRANSFORM="${BUILDLINK_TRANSFORM}"
