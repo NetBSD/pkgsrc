@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/11/09 17:25:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/16 02:27:04 wiz Exp $
 
-DISTNAME=		s9xs129
-PKGNAME=		snes9x-1.29
+DISTNAME=		s9xs132
+PKGNAME=		snes9x-1.32
 WRKSRC=			${WRKDIR}/release
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.snes9x.com/zips/
@@ -15,9 +15,12 @@ BUILD_DEPENDS+=		nasm:../../devel/nasm
 USE_X11=		yes
 USE_GMAKE=		yes
 
+.if exists(/usr/X11R6/lib/libXxf86dga.a)
+MAKE_ENV+=	NETBSD_USE_DGA=1
+.endif
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/snes9x ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/s9xserver ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/offsets ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snes9x
 	${INSTALL_MAN} ${WRKSRC}/CHANGES.TXT ${PREFIX}/share/doc/snes9x
@@ -40,6 +43,4 @@ MAKE_ENV+=	FILEFORMAT=elf
 MAKE_ENV+=	ZSNESFX=1
 MAKE_ENV+=	ASMCPU=1
 .endif
-# XXX: this check should be redone -- DGA doesn't only exist on i386
-MAKE_ENV+=	NETBSD_USE_DGA=1
 .endif
