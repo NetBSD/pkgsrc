@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.152 1998/08/28 11:13:23 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.153 1998/08/28 14:03:48 garbled Exp $
 #
 # This file is in the public domain.
 #
@@ -31,6 +31,14 @@ __ARCH_OK?=	1
 .endfor
 .else
 __ARCH_OK?=	1
+.endif
+
+.if defined(NOT_FOR_ARCHS)
+.for __NARCH in ${NOT_FOR_ARCHS}
+.if ${MACHINE_ARCH:M${__NARCH}} != ""
+.undef __ARCH_OK
+.endif
+.endfor
 .endif
 
 .if exists(${.CURDIR}/../Makefile.inc)
@@ -644,7 +652,12 @@ package:
 .MAIN:	all
 
 fetch fetch-list extract patch configure build install reinstall package checkpatch checksum makesum all:
-	@echo "This port is only for ${ONLY_FOR_ARCHS},"
+.if defined(ONLY_FOR_ARCHS)
+	@echo "This pkg is only for ${ONLY_FOR_ARCHS},"
+.endif
+.if defined(NOT_FOR_ARCHS)
+	@echo "This pkg does not run on ${NOT_FOR_ARCHS},"
+.endif
 	@echo "and you are running ${MACHINE_ARCH}."
 .else
 
