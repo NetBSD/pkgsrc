@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2004/05/02 18:40:24 xtraeme Exp $
+$NetBSD: distinfo,v 1.9 2005/01/20 10:27:51 adam Exp $
 
-SHA1 (bluefish-0.13.tar.bz2) = ad61389f920c602bdd22244e0067c307d15313cd
-Size (bluefish-0.13.tar.bz2) = 1325135 bytes
+SHA1 (bluefish-1.0.tar.bz2) = eebbe96b57fdafa5cbd4d6947e95e9b8501cc2a7
+Size (bluefish-1.0.tar.bz2) = 1372325 bytes
