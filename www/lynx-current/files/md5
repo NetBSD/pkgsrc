@@ -1,12 +1,3 @@
-$NetBSD: md5,v 1.7 2000/10/18 03:55:47 fredb Exp $
+$NetBSD: md5,v 1.8 2001/02/08 19:52:03 fredb Exp $
 
-MD5 (lynx/lynx2.8.4dev.10.tar.bz2) = b0f7b58fc8742b126fb78189cb13b948
-MD5 (lynx/lynx-2.8.3.rel1.cs.po) = af4f8890fe06500f878a664bf3eba362
-MD5 (lynx/lynx-2.8.4.da.po) = 8a9a5e30b655ef6bb4541b0fd60d552b
-MD5 (lynx/lynx-2.8.3.rel1.de.po) = 0ed4a1d0a09a6c1742a2808f22c747db
-MD5 (lynx/lynx-2.8.3.rel1.ja.po) = afe4cdd5cd4908de9e21b07b335faa0a
-MD5 (lynx/lynx-2.8.3.rel1.nl.po) = 33e98f38c2f61bd86311c2e5be4a7e97
-MD5 (lynx/lynx-2.8.3.rel1.pt_BR.po) = 1deedb9954cbe299d2c6fcdc65b24084
-MD5 (lynx/lynx-2.8.3.rel1.ru.po) = 3cc74eb861aefcb0037bb0784cca7227
-MD5 (lynx/lynx-2.8.3.rel1.sl.po) = 4f5562aa17f767f40f549ea015d39a20
-MD5 (lynx/lynx-283-ssl.patch.gz) = c48607b33f493284ba60c8a431a13b03
+MD5 (lynx2.8.4dev.16.tar.bz2) = 8db0588e3ce75a92455b33a11c0f6703
