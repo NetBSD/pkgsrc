@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1183 2003/12/13 20:26:03 ben Exp $
+$NetBSD: TODO,v 1.1184 2003/12/13 20:29:22 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -223,7 +223,6 @@ Suggested package updates
 	o lavaps-2.4
 	o lcms-1.0.9
 	o leafnode-1.9.46
-	o libgtop-2.0.7 [xtraeme]
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtiff-3.6.0
