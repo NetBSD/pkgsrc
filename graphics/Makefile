@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.256 2003/09/21 16:24:34 kim Exp $
+# $NetBSD: Makefile,v 1.257 2003/09/25 04:23:06 xtraeme Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -188,6 +188,7 @@ SUBDIR+=	photopc
 SUBDIR+=	php3-gd
 SUBDIR+=	php4-exif
 SUBDIR+=	php4-gd
+SUBDIR+=	pixieplus
 SUBDIR+=	pixmap
 SUBDIR+=	plasma
 SUBDIR+=	ploticus
