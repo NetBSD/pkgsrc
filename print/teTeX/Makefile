@@ -3,7 +3,7 @@
 # Date created:		5 December 1996
 # Whom:			Bernd Rosauer <br@schiele-ct.de>
 #
-# $NetBSD: Makefile,v 1.3 1997/11/25 14:10:45 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/20 17:09:21 agc Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -34,6 +34,7 @@ MAN1=		afm2tfm.1 allcm.1 alldc.1 allneeded.1 amslatex.1 \
 		pltotf.1 pooltype.1 ps2frag.1 ps2pk.1 slitex.1 \
 		tangle.1 tex.1 texconfig.1 texhash.1 tftopl.1 \
 		vftovp.1 virtex.1 vptovf.1 weave.1 xdvi.1
+MAN5=		ls-R.5
 
 TETEX_SRC=	teTeX-src-0.4pl7.tar.gz
 TETEX_LIB=	teTeX-lib-0.4pl8.tar.gz
