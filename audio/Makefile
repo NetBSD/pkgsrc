@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/02/09 20:02:24 augustss Exp $
+# $NetBSD: Makefile,v 1.13 1998/02/09 22:28:42 augustss Exp $
 #
 
     SUBDIR += amp
@@ -15,7 +15,7 @@
     SUBDIR += timidity
     SUBDIR += tosha
     SUBDIR += tracker
-    #SUBDIR += xcd		# needs tk80
+    SUBDIR += xcd
     #SUBDIR += xcdplayer
     SUBDIR += xmcd
     SUBDIR += xmix
