@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/27 11:54:14 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/02 10:14:02 zuntum Exp $
 bin/NeMaC
 bin/NeTraMet
 bin/NetFlowMet
 bin/NetFwd
 bin/fd_extract
 bin/fd_filter
-bin/nifty
 bin/nm_rc
 bin/nm_rr
 bin/nm_st
