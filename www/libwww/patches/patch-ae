@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.2 1998/08/07 11:14:24 agc Exp $
+$NetBSD: patch-ae,v 1.3 1999/10/08 04:43:07 deberg Exp $
 
---- Library/src/HTStyle.c.orig	Tue Apr 30 16:31:55 1996
-+++ Library/src/HTStyle.c	Wed Jun 18 18:34:01 1997
-@@ -19,6 +19,8 @@
- #include "HTString.h"
+--- Library/src/HTStyle.c.orig	Wed Oct  6 23:16:43 1999
++++ Library/src/HTStyle.c	Wed Oct  6 23:16:35 1999
+@@ -18,6 +18,8 @@
+ #include "WWWUtil.h"
  #include "HTStyle.h"
  
-+PUBLIC HTStyleSheet * styleSheet;	/* application-wide style sheet */
++PUBLIC HTStyleSheet * styleSheet; /* application-wide style sheet */
 +
- 
- /*	Local definition of style
- **	-------------------------
+ struct _HTStyle {
+     char *	name;		/* Style name */
+     int		element;	/* Element (if any) that this style applies to */

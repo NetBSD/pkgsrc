@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.4 1998/11/13 00:01:21 frueauf Exp $
+$NetBSD: patch-ac,v 1.5 1999/10/08 04:43:07 deberg Exp $
 
---- Library/src/HTML.c.orig	Mon Sep 14 21:59:03 1998
-+++ Library/src/HTML.c	Mon Sep 14 21:59:13 1998
-@@ -22,7 +22,7 @@
- #include "WWWUtil.h"
- #include "WWWCore.h"
- #include "WWWHTML.h"
--#include "HText.h"
-+#include "HTextImp.h"
- #include "HTStyle.h"
- #include "HTML.h"
+--- Makefile.in.dist	Tue Jun 15 11:48:46 1999
++++ Makefile.in	Tue Jun 15 11:48:57 1999
+@@ -56,7 +56,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
+ INSTALL_STRIP_FLAG =
+ transform = @program_transform_name@
  
