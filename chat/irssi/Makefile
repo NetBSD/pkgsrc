@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.15 2002/11/21 13:00:02 grant Exp $
+# $NetBSD: Makefile,v 1.16 2002/12/02 12:19:18 jmmv Exp $
 
-DISTNAME=		irssi-0.8.5
-PKGREVISION=		1
-WRKSRC=			${WRKDIR}/irssi-0.8.5
+DISTNAME=		${IRSSI_DISTNAME}
 CATEGORIES=		chat
 MASTER_SITES=		http://real.irssi.org/files/
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		${IRSSI_EXTRACT_SUFX}
 
 MAINTAINER=		mutru@iki.fi
 HOMEPAGE=		http://www.irssi.org/
 COMMENT=                Secure and modular IRC client with text mode user interface
+
+.include "${.CURDIR}/Makefile.common"
 
 # list it into IPv6-ready packages
 BUILD_DEFS+=		USE_INET6
@@ -40,6 +40,10 @@ CONFIGURE_ARGS+=	--with-perl-lib=site
 .else
 CONFIGURE_ARGS+=	--with-perl=no
 .endif
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/config.h ${IRSSI_CONFIG_H}
+	${INSTALL_DATA} ${WRKSRC}/irssi-config ${IRSSI_CONFIG}
 
 .include "../../devel/glib/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"

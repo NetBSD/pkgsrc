@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2002/11/21 13:00:02 grant Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/12/02 12:19:19 jmmv Exp $
 bin/irssi
+man/man1/irssi.1
 share/doc/irssi/botnet.txt
 share/doc/irssi/design.txt
 share/doc/irssi/faq.html
@@ -10,7 +11,6 @@ share/doc/irssi/perl.txt
 share/doc/irssi/signals.txt
 share/doc/irssi/special_vars.txt
 share/doc/irssi/startup-HOWTO.html
-share/doc/irssi/startup-HOWTO.txt
 share/examples/irssi/irssi.conf
 share/irssi/help/action
 share/irssi/help/admin
@@ -23,6 +23,7 @@ share/irssi/help/cat
 share/irssi/help/cd
 share/irssi/help/channel
 share/irssi/help/clear
+share/irssi/help/completion
 share/irssi/help/connect
 share/irssi/help/ctcp
 share/irssi/help/cycle
@@ -90,6 +91,7 @@ share/irssi/help/rping
 share/irssi/help/save
 share/irssi/help/say
 share/irssi/help/sconnect
+share/irssi/help/script
 share/irssi/help/scrollback
 share/irssi/help/server
 share/irssi/help/servlist
@@ -128,6 +130,8 @@ share/irssi/help/whowas
 share/irssi/help/window
 share/irssi/help/wjoin
 share/irssi/help/wquery
+share/irssi/config.h
+share/irssi/irssi-config
 share/irssi/scripts/autoop.pl
 share/irssi/scripts/autorejoin.pl
 share/irssi/scripts/buf.pl
@@ -139,6 +143,7 @@ share/irssi/scripts/mlock.pl
 share/irssi/scripts/msg-event.pl
 share/irssi/scripts/quitmsg.pl
 share/irssi/scripts/redirect.pl
+share/irssi/scripts/scriptassist.pl
 share/irssi/scripts/splitlong.pl
 share/irssi/scripts/usercount.pl
 share/irssi/themes/colorless.theme
@@ -149,3 +154,5 @@ share/irssi/themes/default.theme
 @dirrm share/irssi
 @dirrm share/examples/irssi
 @dirrm share/doc/irssi
+@unexec ${RMDIR} %D/lib/irssi/modules 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/irssi 2>/dev/null || ${TRUE}
