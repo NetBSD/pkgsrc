@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8337 2004/12/15 13:10:53 taca Exp $
+$NetBSD: CHANGES,v 1.8338 2004/12/15 13:19:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5915,3 +5915,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated thunderbird to 1.0 [taya 2004-12-14]
 	Updated thunderbird-gtk2 to 1.0 [taya 2004-12-14]
 	Updated namazu to 2.0.14 [taca 2004-12-15]
+	Updated yatsvrs to 5.00.6nb3 [taca 2004-12-15]
