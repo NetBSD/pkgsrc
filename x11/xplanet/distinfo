@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/05/21 10:45:41 adam Exp $
+$NetBSD: distinfo,v 1.6 2004/05/24 13:43:32 adam Exp $
 
-SHA1 (xplanet-1.0.7.tar.gz) = 6dfb14aaa4f0e0ccf224fda4824a5932ae450eb7
-Size (xplanet-1.0.7.tar.gz) = 1175252 bytes
+SHA1 (xplanet-1.0.8.tar.gz) = 27e9fe206907e6837a18d5bfd3fa404773f06263
+Size (xplanet-1.0.8.tar.gz) = 1175294 bytes
