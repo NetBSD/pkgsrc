@@ -1,0 +1,35 @@
+$NetBSD: patch-dm,v 1.1 1999/04/28 23:56:35 rvb Exp $
+
+diff -u /usr/pkgsrc/net/coda-5.2.2/coda-src/vice/srvproc.cc ./coda-src/vice/srvproc.cc
+--- /usr/pkgsrc/net/coda-5.2.2/coda-src/vice/srvproc.cc	Mon Apr 19 20:03:17 1999
++++ ./coda-src/vice/srvproc.cc	Wed Apr 28 13:01:28 1999
+@@ -88,7 +88,6 @@
+ #include <repio.h>
+ #include <codadir.h>
+ #include <operations.h>
+-#include <reslog.h>
+ #include <lockqueue.h>
+ #include <resutil.h>
+ #include <ops.h>
+@@ -3653,7 +3657,7 @@
+     {
+ 	/* When we are continueing a trickle/interrupted fetch, the version
+ 	 * vector must be the same */
+-	if (VV && (VV_Cmp(VV, &vptr->disk.versionvector) != VV_EQ))
++	if (Offset && VV && (VV_Cmp(VV, &vptr->disk.versionvector) != VV_EQ))
+ 	{
+ 		SLog(1, "FetchBulkTransfer: Attempting resumed fetch on updated object");
+ 		/* now what errorcode can we use for this case?? */
+@@ -4760,12 +4764,7 @@
+ 	    }
+ 	    if (AllowResolution) {
+ 		/* clean up spooled log record list */
+-		sle *s;
+ 		rsle *rs;
+-		while ((s = (sle *)v->sl.get())) {
+-		    s->rec_index = -1;
+-		    delete s;
+-		}
+ 		while ((rs = (rsle *)v->rsl.get())) 
+ 		    delete rs;
+ 	    }
