@@ -1,38 +1,32 @@
-$NetBSD: patch-ab,v 1.3 1998/12/30 19:01:10 garbled Exp $
---- src/Makefile.in.orig	Wed Feb 11 09:57:16 1998
-+++ src/Makefile.in	Wed Dec 30 11:56:34 1998
+$NetBSD: patch-ab,v 1.4 2001/09/14 22:48:27 wiz Exp $
+
+--- src/Makefile.in.orig	Fri Jun  1 04:23:13 2001
++++ src/Makefile.in
 @@ -13,8 +13,8 @@
  prefix = @prefix@
  exec_prefix = @exec_prefix@
  #JED_ROOT = $(HOME)/src/jed# <--- make sure # is at end of file!!
 -#JED_ROOT = $(prefix)/jed# <--- make sure # is at end of file!!
 -JED_ROOT = @JED_ROOT@# <--- make sure # is at end of file!!
-+JED_ROOT = $(prefix)/share/jed# <--- make sure # is at end of file!!
-+#JED_ROOT = @JED_ROOT@# <--- make sure # is at end of file!!
++JED_ROOT = $(prefix)/share/jed# <-- make sure # is at end of file!!
++#JED_ROOT = @JED_ROOT# <-- make fure # is at end of file!!
  BIN_DIR = @bindir@
  MAN_DIR = @mandir@/man1
  INSTALL		= @INSTALL@
-@@ -121,7 +121,7 @@
+@@ -151,7 +151,7 @@
  rgrep: $(OBJDIR)/rgrep
  	@echo rgrep created in $(OBJDIR)
  $(OBJDIR)/rgrep: $(OBJDIR)/vfile.o $(OBJDIR)/rgrep.o
--	cd $(OBJDIR); $(CC) vfile.o rgrep.o -o rgrep $(LDFLAGS) -L$(SLANG_LIB_DIR) -lslang
-+	cd $(OBJDIR); $(CC) vfile.o rgrep.o -o rgrep $(LDFLAGS) -L$(SLANG_LIB_DIR) -lslang -lm -ltermcap
+-	cd $(OBJDIR); $(CC) vfile.o rgrep.o -o rgrep $(LDFLAGS) $(SLANG_LIB) -lslang
++	cd $(OBJDIR); $(CC) vfile.o rgrep.o -o rgrep $(LDFLAGS) $(SLANG_LIB) -lslang -lm -ltermcap
  #
  getmail: $(OBJDIR)/getmail
  	@echo getmail created in $(OBJDIR)
-@@ -136,14 +136,11 @@
- 	/bin/cp $(OBJDIR)/jed $(BIN_DIR)/
- 	- /bin/cp $(OBJDIR)/xjed $(BIN_DIR)/
- 	/bin/cp $(OBJDIR)/rgrep $(BIN_DIR)/
--	- /bin/cp $(OBJDIR)/getmail $(JED_ROOT)/bin/
- 	- /bin/cp ../doc/rgrep.1 ../doc/jed.1 $(MAN_DIR)/
--	@echo You will have to install the lib files manually.
- $(BIN_DIR):
- 	- $(MKINSDIR) $(BIN_DIR)
- $(JED_ROOT):
- 	$(MKINSDIR) $(JED_ROOT)/lib
--	$(MKINSDIR) $(JED_ROOT)/bin
- 	$(MKINSDIR) $(JED_ROOT)/info
- 	$(MKINSDIR) $(JED_ROOT)/doc
- # The symlinks target is for my own private use.  It simply creates the object
+@@ -183,7 +183,6 @@
+ 
+ install: all install_directories
+ 	$(INSTALL) $(OBJDIR)/jed $(DEST_BIN_DIR)/
+-	-$(INSTALL) $(OBJDIR)/xjed $(DEST_BIN_DIR)/
+ 	-$(INSTALL) $(OBJDIR)/rgrep $(DEST_BIN_DIR)/
+ 	-$(INSTALL) $(OBJDIR)/getmail $(DEST_JED_ROOT)/bin/
+ 	@for i in $(JED_LIB_FILES); \
