@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2004/10/19 01:06:03 grant Exp $
+
+--- ClamAV.pm.orig	2004-06-29 06:09:50.000000000 +1000
++++ ClamAV.pm
+@@ -61,8 +61,6 @@ our %EXPORT_TAGS = ( 'all' => [ qw(
+     CL_ENCRYPTED
+     CL_RAW
+     CL_DISABLERAR
+-    CL_MIN_LENGTH
+-    CL_NUM_CHILDS
+ 
+     CL_VIRUS
+     CL_CLEAN
+@@ -436,8 +434,6 @@ int clamav_perl_constant(char *name)
+     if (strEQ("CL_OLE2", name)) return CL_OLE2;
+     if (strEQ("CL_ENCRYPTED", name)) return CL_ENCRYPTED;
+     if (strEQ("CL_DISABLERAR", name)) return CL_DISABLERAR;
+-    if (strEQ("CL_NUM_CHILDS", name)) return CL_NUM_CHILDS;
+-    if (strEQ("CL_MIN_LENGTH", name)) return CL_MIN_LENGTH;
+ 
+     if (strEQ("CL_VIRUS", name)) return CL_VIRUS;
+     if (strEQ("CL_CLEAN", name)) return CL_CLEAN;
