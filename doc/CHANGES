@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5987 2004/05/19 14:12:33 adam Exp $
+$NetBSD: CHANGES,v 1.5988 2004/05/19 16:27:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2592,3 +2592,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated soup to 0.7.11 [adam 2004-05-19]
 	Updated php4 to 4.3.6nb2 [junyoung 2004-05-19]
 	Updated ImageMagick to 6.0.1-3 [adam 2004-05-19]
+	Updated nessus-libraries to 2.0.10a [adam 2004-05-19]
+	Updated libnasl to 2.0.10a [adam 2004-05-19]
+	Updated nessus-core to 2.0.10a [adam 2004-05-19]
+	Updated nessus-plugins to 2.0.10a [adam 2004-05-19]
+	Updated nessus to 2.0.10a [adam 2004-05-19]
