@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:13:02 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/03/22 16:34:36 jmmv Exp $
 
-DISTNAME=		gnome-media-2.8.0
-PKGREVISION=		1
+DISTNAME=		gnome-media-2.10.0
 CATEGORIES=		multimedia gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.8/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.10/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -11,9 +10,9 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of audio/multimedia applications for GNOME2
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gst-plugins-cdparanoia>=0.8.4:../../audio/gst-plugins-cdparanoia
-DEPENDS+=		gst-plugins-esound>=0.8.4:../../audio/gst-plugins-esound
-DEPENDS+=		gst-plugins-oss>=0.8.4:../../audio/gst-plugins-oss
+DEPENDS+=		gst-plugins-cdparanoia>=0.8.8:../../audio/gst-plugins-cdparanoia
+DEPENDS+=		gst-plugins-esound>=0.8.8:../../audio/gst-plugins-esound
+DEPENDS+=		gst-plugins-oss>=0.8.8:../../audio/gst-plugins-oss
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
@@ -40,18 +39,24 @@ GCONF2_SCHEMAS+=	gnome-cd.schemas
 GCONF2_SCHEMAS+=	gnome-sound-recorder.schemas
 
 .include "../../audio/esound/buildlink3.mk"
-.include "../../multimedia/gst-plugins/buildlink3.mk"
-.include "../../multimedia/gstreamer/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/GConf2-ui/buildlink3.mk"
 .include "../../devel/gail/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../multimedia/gst-plugins/buildlink3.mk"
+.include "../../multimedia/gstreamer/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
