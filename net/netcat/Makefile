@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 1999/03/07 00:34:36 kim Exp $
+# $NetBSD: Makefile,v 1.3 1999/03/07 00:40:40 kim Exp $
 
+DISTNAME=	nc110
 PKGNAME=	netcat-1.10
 CATEGORIES=	net
-DISTNAME!=	${ECHO} ${PKGNAME} | ${SED} -e 's/netcat-/nc/' -e 's/\.//'
 DISTFILES=	${DISTNAME}.tgz
 MASTER_SITES=	ftp://zippy.telcom.arizona.edu/pub/mirrors/avian.org/hacks/ \
 		ftp://ftp.sterling.com/mirrors/avian.org/src/hacks/ \
