@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2004/04/19 17:06:07 tv Exp $
+# $NetBSD: Makefile,v 1.59 2004/04/20 13:36:47 tv Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -15,7 +15,6 @@ DEPENDS+=			gettext-m4-0.11.5:../../devel/gettext-m4
 BUILDLINK_DEPENDS.gettext+=	gettext-lib>=0.11.5
 
 USE_BUILDLINK3=		yes
-USE_GNU_GETTEXT=	yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -31,6 +30,8 @@ CONFIGURE_ENV+=		HAVE_JIKES_IN_PATH=
 MAKE_ENV+=  		OPSYS="${OPSYS}"
 
 TEST_TARGET=		check
+
+USE_BUILTIN.gettext=	no # force use of pkgsrc gettext-lib
 
 post-install:
 	cd ${WRKSRC}/intl; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install-data
