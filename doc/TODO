@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2328 2004/11/08 15:49:40 adam Exp $
+$NetBSD: TODO,v 1.2329 2004/11/08 16:31:53 adam Exp $
 
 Suggested new packages
 ======================
@@ -293,7 +293,6 @@ Suggested package updates
 	o crimsonfields-0.4.5
 	o crossfire-1.5.0
 	o cscope-15.5
-	o cups-1.1.21
 	o curl-7.12.2
 	o cvs2cl-2.55
 	o cvsweb-3.0.4
