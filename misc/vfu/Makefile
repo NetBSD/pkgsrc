@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2003/07/13 13:52:46 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2003/07/14 10:07:10 jmmv Exp $
 #
 
 DISTNAME=	vfu-3.04
 PKGREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_SUNSITE:=utils/file/managers/} \
-		http://www.biscom.net/~cade/vfu/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	hubertf@netbsd.org
@@ -13,27 +12,18 @@ HOMEPAGE=	http://www.biscom.net/~cade/away/vfu/
 COMMENT=	Small, handy, easy-to-use file manager
 
 USE_BUILDLINK2=	# defined
+USE_PKGINSTALL=	YES
 USE_NCURSES=	# qiflush()
 
 DOCDIR=		${PREFIX}/share/doc/vfu
 EGDIR=		${PREFIX}/share/examples/vfu
 
-DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
-INSTALL_FILE=	${WRKDIR}/INSTALL
+CONF_FILES=	${EGDIR}/vfu.conf ${PKG_SYSCONFDIR}/vfu.conf
 
-FILES_SUBST=	CAT=${CAT:Q}
-FILES_SUBST+=	CHMOD=${CHMOD:Q}
-FILES_SUBST+=	CMP=${CMP:Q}
-FILES_SUBST+=	CP=${CP:Q}
-FILES_SUBST+=	RM=${RM:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+MAKE_ENV+=	PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
 
 do-build:
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${SH} build.netbsd
-
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 do-install:
 	cd ${WRKSRC} ; ${SETENV} ${MAKE_ENV} ${SH} install
@@ -44,8 +34,7 @@ post-install:
 	${INSTALL_DATA} COPYING INSTALL CONFIG FAQ HISTORY NOTES README \
 		README.DOS THANKS.TO TODO XWINDOW.NOTES ${DOCDIR}
 	cd ${WRKSRC};							\
-	${INSTALL_DATA} ${WRKSRC}/vfu.conf ${EGDIR}/vfurc
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+	${INSTALL_DATA} ${WRKSRC}/vfu.conf ${EGDIR}/vfu.conf
 
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
