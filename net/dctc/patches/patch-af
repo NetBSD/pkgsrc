@@ -1,16 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
+$NetBSD: patch-af,v 1.2 2002/09/29 17:37:20 wiz Exp $
 
---- src/main.c.orig	Mon Jul 15 16:39:50 2002
+--- src/main.c.orig	Sat Sep 28 18:52:38 2002
 +++ src/main.c
-@@ -34,11 +34,15 @@
- #include <sys/param.h>
- #include <sys/utsname.h>
- #include <sys/un.h>
-+#ifdef __linux__
- #include <linux/sem.h>     /* for the value of SEMVMX */
-+#else
-+#include <sys/sem.h>
-+#endif
+@@ -42,7 +42,7 @@
  #include <errno.h>
  #include <getopt.h>
  #include <string.h>
