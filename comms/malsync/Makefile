@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:26:49 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 16:35:14 martti Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S/-/_/}.src
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.tomw.org/malsync/
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.tomw.org/malsync/
-COMMENT=	utility to synchronize Palm Pilots to the AvantGo.com service
+COMMENT=	Utility to synchronize Palm Pilots to the AvantGo.com service
 
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES

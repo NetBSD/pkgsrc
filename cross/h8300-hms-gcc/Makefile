@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 14:05:02 abs Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:38:10 martti Exp $
 
 DISTNAME=		gcc-core-3.1
 PKGNAME=		cross-h8300-hms-gcc-3.1
@@ -14,7 +14,7 @@ PATCH_DIST_ARGS=	-d ${SRCDIR} -E -p1
 
 MAINTAINER=		oishi@ims.ac.jp
 HOMEPAGE=		#empty
-COMMENT=		gcc compiler for h8300-hms
+COMMENT=		GCC compiler for h8300-hms
 
 DEPENDS+=	cross-h8300-hms-binutils-[0-9]*:../../cross/h8300-hms-binutils
 

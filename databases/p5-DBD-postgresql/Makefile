@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/07/17 21:28:36 grant Exp $
+# $NetBSD: Makefile,v 1.25 2003/07/21 16:39:07 martti Exp $
 #
 
 VER=		1.22
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://gborg.postgresql.org/project/dbdpg/projdisplay.php
-COMMENT=	perl DBI/DBD driver for PostgreSQL databases
+COMMENT=	Perl DBI/DBD driver for PostgreSQL databases
 
 USE_BUILDLINK2=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/DBD/Pg/.packlist

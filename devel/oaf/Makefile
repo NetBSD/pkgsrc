@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/07/17 21:32:01 grant Exp $
+# $NetBSD: Makefile,v 1.28 2003/07/21 16:43:33 martti Exp $
 #
 
 DISTNAME=		oaf-0.6.10
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		new object activation framework for GNOME
+COMMENT=		New object activation framework for GNOME
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES

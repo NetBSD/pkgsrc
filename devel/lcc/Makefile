@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:31:14 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 16:43:25 martti Exp $
 
 DISTNAME=	lcc-4.1
 CATEGORIES=	devel lang
@@ -6,7 +6,7 @@ MASTER_SITES=	ftp://ftp.cs.princeton.edu/pub/lcc/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cs.princeton.edu/software/lcc/
-COMMENT=	local ANSI C compiler for a variety of platforms
+COMMENT=	Local ANSI C compiler for a variety of platforms
 
 MAKE_ENV+=	BUILDDIR=${WRKSRC}/bin HOSTFILE=etc/netbsd.c
 

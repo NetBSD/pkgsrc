@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 21:29:49 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/21 16:43:17 martti Exp $
 #
 
 DISTNAME=	cdecl-2.5
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.netsw.org/softeng/lang/c/tools/cdecl/ \
 		ftp://ftp.bitcon.no//pub/linux/linuxberg/files/console/dev/
 
 MAINTAINER=     tech-pkg@NetBSD.org
-COMMENT=	utility to explain and compose C and C++ declarations
+COMMENT=	Utility to explain and compose C and C++ declarations
 
 USE_BUILDLINK2=		# defined
 ALL_TARGET=		cdecl

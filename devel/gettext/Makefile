@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/07/17 21:30:38 grant Exp $
+# $NetBSD: Makefile,v 1.50 2003/07/21 16:43:21 martti Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=gettext/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gettext/gettext.html
-COMMENT=		tools for providing messages in different languages
+COMMENT=		Tools for providing messages in different languages
 
 DEPENDS+=			gettext-m4-0.11.5:../../devel/gettext-m4
 BUILDLINK_DEPENDS.gettext=	gettext-lib-0.11.5

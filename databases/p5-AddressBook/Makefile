@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:28:29 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:39:06 martti Exp $
 
 DISTNAME=	AddressBook-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=perl-abook/} \
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://perl-abook.sourceforge.net/
-COMMENT=	perl5 module for unified access to addressbook databases
+COMMENT=	Perl5 module for unified access to addressbook databases
 
 DEPENDS+=	p5-DBI>=1.14:../../databases/p5-DBI
 DEPENDS+=	p5-Date-Manip>=5.39:../../devel/p5-Date-Manip

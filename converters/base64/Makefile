@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:27:07 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 16:36:11 martti Exp $
 #
 
 DISTNAME=	base64-1.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.fourmilab.ch/webtools/base64/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.fourmilab.ch/webtools/base64/
-COMMENT=	encode and decode base64 files
+COMMENT=	Encode and decode base64 files
 
 CONFLICTS=	openssl-[0-9]*
 GNU_CONFIGURE=	yes
