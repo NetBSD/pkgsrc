@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2000/02/27 21:36:48 wiz Exp $
+
+--- ./configure.orig	Wed Feb 16 03:35:34 2000
++++ ./configure	Sun Feb 27 21:33:55 2000
+@@ -3669,7 +3669,7 @@
+ #include "confdefs.h"
+ #include <libintl.h>
+ EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++ac_try="$ac_cpp $CFLAGS conftest.$ac_ext >/dev/null 2>conftest.out"
+ { (eval echo configure:3674: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+ ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
+ if test -z "$ac_err"; then
