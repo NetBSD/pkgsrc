@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.8 2003/08/16 21:59:02 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.9 2003/08/19 02:50:57 jlam Exp $
 #
 # Assume PKG_INSTALLATION_TYPE == "pkgviews".
 
@@ -266,6 +266,10 @@ _BLNK_ALLOWED_RPATHDIRS=	# empty
 .for _pkg_ in ${BUILDLINK_PACKAGES}
 _BLNK_ALLOWED_RPATHDIRS+=	${BUILDLINK_DEPOT.${_pkg_}}
 .endfor
+#
+# Add the depot directory for the package we're building.
+#
+_BLNK_ALLOWED_RPATHDIRS+=	${PREFIX}
 #
 # Always add ${LOCALBASE}/lib to the runtime library search path so that
 # wildcard dependencies work correctly when installing from binary
