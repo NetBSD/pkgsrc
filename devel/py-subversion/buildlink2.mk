@@ -1,9 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2004/03/26 02:27:39 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/03/29 05:05:39 jlam Exp $
 
 .if !defined(PY_SUBVERSION_BUILDLINK2_MK)
 PY_SUBVERSION_BUILDLINK2_MK=		#defined
 
 BUILDLINK_PACKAGES+=			py-subversion
+BUILDLINK_PKGBASE.py-subversion?=	${PYPKGPREFIX}-subversion
 BUILDLINK_DEPENDS.py-subversion?=	${PYPKGPREFIX}-subversion-${SVNVER}:../../devel/py-subversion
 BUILDLINK_RECOMMENDED.py-subversion?=	${PYPKGPREFIX}-subversion>=1.0.0nb1
 BUILDLINK_PKGSRCDIR.py-subversion?=	../../devel/py-subversion

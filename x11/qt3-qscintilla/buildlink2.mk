@@ -1,9 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/07/22 17:25:25 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/03/29 05:05:55 jlam Exp $
 
 .if !defined(QT3_SCINTILLA_BUILDLINK2_MK)
 QT3_SCINTILLA_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		qt3-scintilla
+BUILDLINK_PKGBASE.qt3-scintilla?=	qt3-qscintilla
 BUILDLINK_DEPENDS.qt3-scintilla?=	qt3-qscintilla-[0-9]*
 BUILDLINK_PKGSRCDIR.qt3-scintilla?=	../../x11/qt3-qscintilla
 

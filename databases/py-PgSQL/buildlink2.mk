@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2004/03/26 02:27:37 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/03/29 05:05:33 jlam Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -6,6 +6,7 @@
 PYPGSQL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			pyPgSQL
+BUILDLINK_PKGBASE.pyPgSQL?=		${PYPKGPREFIX}-PgSQL
 BUILDLINK_DEPENDS.pyPgSQL?=		${PYPKGPREFIX}-PgSQL>=2.4
 BUILDLINK_RECOMMENDED.pyPgSQL?=		${PYPKGPREFIX}-PgSQL>=2.4nb1
 BUILDLINK_PKGSRCDIR.pyPgSQL?=		../../databases/py-PgSQL

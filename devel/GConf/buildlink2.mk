@@ -1,9 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/01/03 18:49:36 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/03/29 05:05:34 jlam Exp $
 
 .if !defined(GCONF_BUILDLINK2_MK)
 GCONF_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		gconf
+BUILDLINK_PKGBASE.gconf?=	GConf
 BUILDLINK_DEPENDS.gconf?=	GConf>=1.0.9nb5
 BUILDLINK_PKGSRCDIR.gconf?=	../../devel/GConf
 

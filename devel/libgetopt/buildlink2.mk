@@ -1,8 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:30 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/03/29 05:05:35 jlam Exp $
 
 .if !defined(GETOPT_BUILDLINK2_MK)
 GETOPT_BUILDLINK2_MK=	# defined
 
+BUILDLINK_PKGBASE.getopt?=	libgetopt
 BUILDLINK_DEPENDS.getopt?=	libgetopt>=1.3
 BUILDLINK_PKGSRCDIR.getopt?=	../../devel/libgetopt
 

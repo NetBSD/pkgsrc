@@ -1,9 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:39:44 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/03/29 05:05:42 jlam Exp $
 
 .if !defined(VFLIB_BUILDLINK2_MK)
 VFLIB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		vflib
+BUILDLINK_PKGBASE.vflib?=	ja-vflib-lib
 BUILDLINK_DEPENDS.vflib?=	ja-vflib-lib>=2.24.2
 BUILDLINK_PKGSRCDIR.vflib?=	../../print/ja-vflib-lib
 

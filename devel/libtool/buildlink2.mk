@@ -1,9 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2004/02/05 20:14:06 skrll Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/03/29 05:05:37 jlam Exp $
 
 .if !defined(LTDL_BUILDLINK2_MK)
 LTDL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		ltdl
+BUILDLINK_PKGBASE.ltdl?=	libtool-base
 BUILDLINK_DEPENDS.ltdl?=	libtool-base>=1.5.2
 BUILDLINK_PKGSRCDIR.ltdl?=	../../devel/libtool-base
 
