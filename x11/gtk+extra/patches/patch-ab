@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/10/15 12:25:51 rh Exp $
+
+--- gtkextra/Makefile.in.orig	Tue Aug 29 19:13:15 2000
++++ gtkextra/Makefile.in
+@@ -123,7 +123,7 @@
+ 
+ lib_LTLIBRARIES = libgtkextra.la
+ libgtkextra_la_SOURCES = $(gtkextra_c_sources)
+-libgtkextra_la_LDFLAGS =  	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) 	-release $(LT_RELEASE) 	-export-dynamic 	$(shell gtk-config --libs)
++libgtkextra_la_LDFLAGS =  	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) -export-dynamic 	$(shell gtk-config --libs)
+ 
+ EXTRA_HEADERS =  
+ EXTRA_DIST =  $(gtkextra_private_h_sources) gtkextra.def makefile.msc
