@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/22 03:07:19 markd Exp $
 share/doc/kde/HTML/ca/kcontrol/common
 share/doc/kde/HTML/ca/kcontrol/index.cache.bz2
 share/doc/kde/HTML/ca/kcontrol/index.docbook
@@ -39,6 +39,9 @@ share/doc/kde/HTML/ca/khelpcenter/lines.png
 share/doc/kde/HTML/ca/khelpcenter/lines2.png
 share/doc/kde/HTML/ca/khelpcenter/links.docbook
 share/doc/kde/HTML/ca/khelpcenter/pointers.png
+share/doc/kde/HTML/ca/khelpcenter/quickstart/common
+share/doc/kde/HTML/ca/khelpcenter/quickstart/index.cache.bz2
+share/doc/kde/HTML/ca/khelpcenter/quickstart/index.docbook
 share/doc/kde/HTML/ca/khelpcenter/shadow1.png
 share/doc/kde/HTML/ca/khelpcenter/support.docbook
 share/doc/kde/HTML/ca/khelpcenter/userguide/about-desktop.docbook
@@ -134,6 +137,7 @@ share/kde/locale/ca/LC_MESSAGES/desktop_kde-i18n.mo
 share/kde/locale/ca/LC_MESSAGES/desktop_kdeaddons.mo
 share/kde/locale/ca/LC_MESSAGES/desktop_kdeadmin.mo
 share/kde/locale/ca/LC_MESSAGES/desktop_kdebase.mo
+share/kde/locale/ca/LC_MESSAGES/desktop_kdeedu.mo
 share/kde/locale/ca/LC_MESSAGES/desktop_kdegames.mo
 share/kde/locale/ca/LC_MESSAGES/desktop_kdegraphics.mo
 share/kde/locale/ca/LC_MESSAGES/desktop_kdelibs.mo
@@ -144,6 +148,7 @@ share/kde/locale/ca/LC_MESSAGES/desktop_kdesdk.mo
 share/kde/locale/ca/LC_MESSAGES/desktop_kdetoys.mo
 share/kde/locale/ca/LC_MESSAGES/desktop_kdeutils.mo
 share/kde/locale/ca/LC_MESSAGES/dirfilterplugin.mo
+share/kde/locale/ca/LC_MESSAGES/dockbarextension.mo
 share/kde/locale/ca/LC_MESSAGES/domtreeviewer.mo
 share/kde/locale/ca/LC_MESSAGES/drkonqi.mo
 share/kde/locale/ca/LC_MESSAGES/dub.mo
@@ -167,6 +172,7 @@ share/kde/locale/ca/LC_MESSAGES/kaccess.mo
 share/kde/locale/ca/LC_MESSAGES/kaddressbook.mo
 share/kde/locale/ca/LC_MESSAGES/kalarm.mo
 share/kde/locale/ca/LC_MESSAGES/kalarmdgui.mo
+share/kde/locale/ca/LC_MESSAGES/kalzium.mo
 share/kde/locale/ca/LC_MESSAGES/kandy.mo
 share/kde/locale/ca/LC_MESSAGES/kaphorism.mo
 share/kde/locale/ca/LC_MESSAGES/kappfinder.mo
@@ -284,6 +290,7 @@ share/kde/locale/ca/LC_MESSAGES/kdmconfig.mo
 share/kde/locale/ca/LC_MESSAGES/kdmgreet.mo
 share/kde/locale/ca/LC_MESSAGES/kdvi.mo
 share/kde/locale/ca/LC_MESSAGES/kedit.mo
+share/kde/locale/ca/LC_MESSAGES/keduca.mo
 share/kde/locale/ca/LC_MESSAGES/kenolaba.mo
 share/kde/locale/ca/LC_MESSAGES/kfax.mo
 share/kde/locale/ca/LC_MESSAGES/kfifteenapplet.mo
@@ -326,6 +333,7 @@ share/kde/locale/ca/LC_MESSAGES/kgantt.mo
 share/kde/locale/ca/LC_MESSAGES/kget.mo
 share/kde/locale/ca/LC_MESSAGES/kghostview.mo
 share/kde/locale/ca/LC_MESSAGES/kgpgcertmanager.mo
+share/kde/locale/ca/LC_MESSAGES/khangman.mo
 share/kde/locale/ca/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/ca/LC_MESSAGES/khexedit.mo
 share/kde/locale/ca/LC_MESSAGES/khotkeys.mo
@@ -394,6 +402,7 @@ share/kde/locale/ca/LC_MESSAGES/kpager.mo
 share/kde/locale/ca/LC_MESSAGES/kpaint.mo
 share/kde/locale/ca/LC_MESSAGES/kpartapp.mo
 share/kde/locale/ca/LC_MESSAGES/kpat.mo
+share/kde/locale/ca/LC_MESSAGES/kpercentage.mo
 share/kde/locale/ca/LC_MESSAGES/kpersonalizer.mo
 share/kde/locale/ca/LC_MESSAGES/kpf.mo
 share/kde/locale/ca/LC_MESSAGES/kpilot.mo
@@ -427,6 +436,7 @@ share/kde/locale/ca/LC_MESSAGES/ksnapshot.mo
 share/kde/locale/ca/LC_MESSAGES/ksokoban.mo
 share/kde/locale/ca/LC_MESSAGES/kspaceduel.mo
 share/kde/locale/ca/LC_MESSAGES/ksplash.mo
+share/kde/locale/ca/LC_MESSAGES/kstars.mo
 share/kde/locale/ca/LC_MESSAGES/kstart.mo
 share/kde/locale/ca/LC_MESSAGES/kstartperf.mo
 share/kde/locale/ca/LC_MESSAGES/ksysctrl.mo
@@ -443,6 +453,7 @@ share/kde/locale/ca/LC_MESSAGES/ktexteditor_kdatatool.mo
 share/kde/locale/ca/LC_MESSAGES/ktimemon.mo
 share/kde/locale/ca/LC_MESSAGES/ktimer.mo
 share/kde/locale/ca/LC_MESSAGES/ktip.mo
+share/kde/locale/ca/LC_MESSAGES/ktouch.mo
 share/kde/locale/ca/LC_MESSAGES/ktron.mo
 share/kde/locale/ca/LC_MESSAGES/ktuberling.mo
 share/kde/locale/ca/LC_MESSAGES/ktux.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:08:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/22 03:07:30 markd Exp $
 share/doc/kde/HTML/pt/amor/common
 share/doc/kde/HTML/pt/amor/index.cache.bz2
 share/doc/kde/HTML/pt/amor/index.docbook
@@ -536,6 +536,7 @@ share/kde/locale/pt/LC_MESSAGES/desktop_kdesdk.mo
 share/kde/locale/pt/LC_MESSAGES/desktop_kdetoys.mo
 share/kde/locale/pt/LC_MESSAGES/desktop_kdeutils.mo
 share/kde/locale/pt/LC_MESSAGES/dirfilterplugin.mo
+share/kde/locale/pt/LC_MESSAGES/dockbarextension.mo
 share/kde/locale/pt/LC_MESSAGES/domtreeviewer.mo
 share/kde/locale/pt/LC_MESSAGES/drkonqi.mo
 share/kde/locale/pt/LC_MESSAGES/dub.mo

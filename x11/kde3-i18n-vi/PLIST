@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/22 03:07:37 markd Exp $
 share/kde/locale/vi/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/vi/LC_MESSAGES/appletproxy.mo
 share/kde/locale/vi/LC_MESSAGES/atlantikdesigner.mo
@@ -11,6 +11,7 @@ share/kde/locale/vi/LC_MESSAGES/desktop_kde-i18n.mo
 share/kde/locale/vi/LC_MESSAGES/desktop_kdeaddons.mo
 share/kde/locale/vi/LC_MESSAGES/desktop_kdebase.mo
 share/kde/locale/vi/LC_MESSAGES/desktop_kdegames.mo
+share/kde/locale/vi/LC_MESSAGES/desktop_kdegraphics.mo
 share/kde/locale/vi/LC_MESSAGES/desktop_kdelibs.mo
 share/kde/locale/vi/LC_MESSAGES/desktop_kdenetwork.mo
 share/kde/locale/vi/LC_MESSAGES/desktop_kdepim.mo
@@ -114,13 +115,22 @@ share/kde/locale/vi/LC_MESSAGES/kdvi.mo
 share/kde/locale/vi/LC_MESSAGES/kedit.mo
 share/kde/locale/vi/LC_MESSAGES/kenolaba.mo
 share/kde/locale/vi/LC_MESSAGES/kfax.mo
+share/kde/locale/vi/LC_MESSAGES/kfile_bmp.mo
 share/kde/locale/vi/LC_MESSAGES/kfile_desktop.mo
+share/kde/locale/vi/LC_MESSAGES/kfile_dvi.mo
 share/kde/locale/vi/LC_MESSAGES/kfile_folder.mo
+share/kde/locale/vi/LC_MESSAGES/kfile_gif.mo
 share/kde/locale/vi/LC_MESSAGES/kfile_html.mo
+share/kde/locale/vi/LC_MESSAGES/kfile_ico.mo
+share/kde/locale/vi/LC_MESSAGES/kfile_jpeg.mo
+share/kde/locale/vi/LC_MESSAGES/kfile_pcx.mo
 share/kde/locale/vi/LC_MESSAGES/kfile_pdf.mo
 share/kde/locale/vi/LC_MESSAGES/kfile_png.mo
 share/kde/locale/vi/LC_MESSAGES/kfile_ps.mo
+share/kde/locale/vi/LC_MESSAGES/kfile_tga.mo
+share/kde/locale/vi/LC_MESSAGES/kfile_tiff.mo
 share/kde/locale/vi/LC_MESSAGES/kfile_txt.mo
+share/kde/locale/vi/LC_MESSAGES/kfile_xbm.mo
 share/kde/locale/vi/LC_MESSAGES/kfind.mo
 share/kde/locale/vi/LC_MESSAGES/kfindpart.mo
 share/kde/locale/vi/LC_MESSAGES/kfmclient.mo
@@ -153,6 +163,7 @@ share/kde/locale/vi/LC_MESSAGES/klock.mo
 share/kde/locale/vi/LC_MESSAGES/kmcop.mo
 share/kde/locale/vi/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/vi/LC_MESSAGES/kminipagerapplet.mo
+share/kde/locale/vi/LC_MESSAGES/kmrml.mo
 share/kde/locale/vi/LC_MESSAGES/knotify.mo
 share/kde/locale/vi/LC_MESSAGES/kolourpicker.mo
 share/kde/locale/vi/LC_MESSAGES/konqsidebar_mediaplayer.mo
@@ -165,12 +176,17 @@ share/kde/locale/vi/LC_MESSAGES/kpartapp.mo
 share/kde/locale/vi/LC_MESSAGES/kpartsaver.mo
 share/kde/locale/vi/LC_MESSAGES/kpersonalizer.mo
 share/kde/locale/vi/LC_MESSAGES/kpixmap2bitmap.mo
+share/kde/locale/vi/LC_MESSAGES/kpovmodeler.mo
+share/kde/locale/vi/LC_MESSAGES/kppplogview.mo
 share/kde/locale/vi/LC_MESSAGES/kprinter.mo
+share/kde/locale/vi/LC_MESSAGES/krdc.mo
 share/kde/locale/vi/LC_MESSAGES/kreadconfig.mo
+share/kde/locale/vi/LC_MESSAGES/krfb.mo
 share/kde/locale/vi/LC_MESSAGES/kruler.mo
 share/kde/locale/vi/LC_MESSAGES/krunapplet.mo
 share/kde/locale/vi/LC_MESSAGES/ksame.mo
 share/kde/locale/vi/LC_MESSAGES/ksig.mo
+share/kde/locale/vi/LC_MESSAGES/ksirc.mo
 share/kde/locale/vi/LC_MESSAGES/ksmserver.mo
 share/kde/locale/vi/LC_MESSAGES/ksnapshot.mo
 share/kde/locale/vi/LC_MESSAGES/ksplash.mo
@@ -178,13 +194,19 @@ share/kde/locale/vi/LC_MESSAGES/kstart.mo
 share/kde/locale/vi/LC_MESSAGES/ksysguard.mo
 share/kde/locale/vi/LC_MESSAGES/ksystemtrayapplet.mo
 share/kde/locale/vi/LC_MESSAGES/ksystraycmd.mo
+share/kde/locale/vi/LC_MESSAGES/ktalkd.mo
 share/kde/locale/vi/LC_MESSAGES/ktaskbarapplet.mo
 share/kde/locale/vi/LC_MESSAGES/ktimemon.mo
 share/kde/locale/vi/LC_MESSAGES/ktip.mo
 share/kde/locale/vi/LC_MESSAGES/kuick_plugin.mo
 share/kde/locale/vi/LC_MESSAGES/kuickshow.mo
 share/kde/locale/vi/LC_MESSAGES/kview.mo
+share/kde/locale/vi/LC_MESSAGES/kview_scale.mo
+share/kde/locale/vi/LC_MESSAGES/kviewbrowserplugin.mo
+share/kde/locale/vi/LC_MESSAGES/kviewpresenterplugin.mo
+share/kde/locale/vi/LC_MESSAGES/kviewscannerplugin.mo
 share/kde/locale/vi/LC_MESSAGES/kviewshell.mo
+share/kde/locale/vi/LC_MESSAGES/kviewtemplateplugin.mo
 share/kde/locale/vi/LC_MESSAGES/kwin.mo
 share/kde/locale/vi/LC_MESSAGES/kwin_cde_config.mo
 share/kde/locale/vi/LC_MESSAGES/kwin_default_config.mo
