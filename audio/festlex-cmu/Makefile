@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.10 2001/07/14 12:37:46 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/18 15:19:37 wiz Exp $
 
 DISTNAME=	festlex_CMU
 PKGNAME=	festlex-cmu-1.4.0
 WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/
+MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
+		http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 COMMENT=	CMU American English pronounciation dictionary for Festival
 
-DEPENDS+=	festival-1.4.0:../festival
+DEPENDS+=	festival>=1.4.0:../festival
 
 NO_BUILD=	yes
 
