@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 1999/12/14 00:37:24 sakamoto Exp $
+# $NetBSD: Makefile,v 1.69 1999/12/14 00:45:47 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -59,6 +59,7 @@
 #    SUBDIR += oneko
 #    SUBDIR += oonsoo
     SUBDIR += pacman
+    SUBDIR += pysol
 #    SUBDIR += qcc
 #    SUBDIR += quakeserver
     SUBDIR += rollemup
