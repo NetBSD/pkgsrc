@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.30 2005/01/23 04:09:05 dsainty Exp $
+# $NetBSD: Makefile.common,v 1.31 2005/01/27 13:51:39 adam Exp $
 
 IM_MAJOR_VER=		6.1.9
-IM_MINOR_VER=		1
+IM_MINOR_VER=		4
 IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}
 
 .if (${IM_MINOR_VER} != NONE)
