@@ -1,7 +1,11 @@
-# $NetBSD: Makefile,v 1.78 2000/07/17 11:57:32 veego Exp $
+# $NetBSD: Makefile,v 1.79 2000/08/05 21:56:23 itojun Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
+# We do not upgrade to 1.2.28 and beyond, intentionally.  There was license
+# change between 1.2.27 and 1.2.28, and the new license prohibits us from
+# modifying/redistributing it.
+#
 DISTNAME=		ssh-1.2.27
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.cs.hut.fi/pub/ssh/ \
