@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.3 2003/06/12 01:17:33 seb Exp $
+$NetBSD: patch-ah,v 1.4 2003/10/03 14:42:39 seb Exp $
 
---- tests/Makefile.in.orig	2003-06-12 00:36:08.000000000 +0000
+--- tests/Makefile.in.orig	2003-10-03 14:29:44.000000000 +0000
 +++ tests/Makefile.in
 @@ -138,6 +138,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
@@ -10,16 +10,16 @@ $NetBSD: patch-ah,v 1.3 2003/06/12 01:17:33 seb Exp $
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  
-@@ -189,7 +190,7 @@ test.rb test_comments.rb test.rb.html te
+@@ -194,7 +195,7 @@ test.java.txt
  
  CPP2HTML_WHEADERS = $(CPP2HTML) --header=$(srcdir)/header.html --footer=$(srcdir)/footer.html --title="Header and footer test"
  
 -source_highlightdoc_DATA = test.php3.html test.pl.html test.pm.html \
 +source_highlightdochtml_DATA = test.php3.html test.pl.html test.pm.html \
- test.py.html test.rb.html
+ test.py.html test.rb.html test.js.html
  
  
-@@ -198,8 +199,10 @@ subdir = tests
+@@ -203,8 +204,10 @@ subdir = tests
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
@@ -31,7 +31,7 @@ $NetBSD: patch-ah,v 1.3 2003/06/12 01:17:33 seb Exp $
  
  DIST_COMMON = Makefile.am Makefile.in
  all: all-am
-@@ -207,27 +210,27 @@ all: all-am
+@@ -212,27 +215,27 @@ all: all-am
  .SUFFIXES:
  $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
  	cd $(top_srcdir) && \
@@ -70,7 +70,7 @@ $NetBSD: patch-ah,v 1.3 2003/06/12 01:17:33 seb Exp $
  	done
  tags: TAGS
  TAGS:
-@@ -272,7 +275,7 @@ check: check-am
+@@ -277,7 +280,7 @@ check: check-am
  all-am: Makefile $(DATA)
  
  installdirs:
@@ -79,7 +79,7 @@ $NetBSD: patch-ah,v 1.3 2003/06/12 01:17:33 seb Exp $
  
  install: install-am
  install-exec: install-exec-am
-@@ -315,7 +318,7 @@ info: info-am
+@@ -320,7 +323,7 @@ info: info-am
  
  info-am:
  
@@ -88,7 +88,7 @@ $NetBSD: patch-ah,v 1.3 2003/06/12 01:17:33 seb Exp $
  
  install-exec-am:
  
-@@ -341,17 +344,17 @@ ps: ps-am
+@@ -346,17 +349,17 @@ ps: ps-am
  
  ps-am:
  
