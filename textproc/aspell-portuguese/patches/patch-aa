@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/01/17 03:54:17 salo Exp $
+
+--- Makefile.pre.orig	Fri Jan  3 18:39:33 2003
++++ Makefile.pre	Wed Jan 15 00:48:39 2003
+@@ -16,12 +16,10 @@
+ all: ${rws_files} ${data_files}
+ 
+ install: all
+-	mkdir -p ${DESTDIR}${dictdir}/
+-	cp ${rws_files} ${multi_files} ${DESTDIR}${dictdir}/
+-	cd ${DESTDIR}${dictdir}/ && chmod 644 ${rws_files} ${multi_files}
+-	mkdir -p ${DESTDIR}${datadir}/
+-	cp ${data_files} ${DESTDIR}${datadir}/
+-	cd ${DESTDIR}${datadir}/ && chmod 644 ${data_files}
++	${INSTALL_DATA_DIR} ${DESTDIR}${dictdir}/
++	${INSTALL_DATA} ${rws_files} ${multi_files} ${DESTDIR}${dictdir}/
++	${INSTALL_DATA_DIR} ${DESTDIR}${datadir}/
++	${INSTALL_DATA} ${data_files} ${DESTDIR}${datadir}/
+ 
+ clean:
+ 	rm -f ${rws_files}
