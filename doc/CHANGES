@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1438 2003/02/20 13:52:42 salo Exp $
+$NetBSD: CHANGES,v 1.1439 2003/02/20 15:14:22 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -688,7 +688,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added vim-motif-6.1.0 [martti 2003-02-15]
 	Added larswm-7.2.8 [jschauma 2003-02-15]
 	Updated netatalk to 1.6.0 [fredb 2003-02-15]
-	Added ap-utils-1.3.1 [jschauma 2003-02-15]
 	Added mini_sendmail-1.3.2 [is 2003-02-15]
 	Upgraded mini_sendmail to 1.3.2nb1 [is 2003-02-15]
 	Added kochi-cidfonts-0.0.0.20030101 [kei 2003-02-15]
