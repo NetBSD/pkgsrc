@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5953 2004/05/15 14:56:35 seb Exp $
+$NetBSD: CHANGES,v 1.5954 2004/05/15 15:01:25 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2552,3 +2552,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated yelp to 2.6.1 [jmmv 2004-05-15]
 	Updated gnome-mag to 0.10.11 [jmmv 2004-05-15]
 	Updated source-highlight to 1.9 [seb 2004-05-15]
+	Updated gnome2-control-center to 2.6.1 [jmmv 2004-05-15]
