@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9737 2005/04/04 04:32:29 martti Exp $
+$NetBSD: CHANGES,v 1.9738 2005/04/04 07:24:07 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1883,3 +1883,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated squid to 2.5.9nb3 [taca 2005-04-04]
 	Updated ruby-postgresql to 0.7.1nb3 [taca 2005-04-04]
 	Updated vim to 6.3.068 [martti 2005-04-04]
+	Updated mono to 1.1.6 [recht 2005-04-04]
