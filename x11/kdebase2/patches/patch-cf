@@ -1,10 +1,14 @@
-$NetBSD: patch-cf,v 1.1 2001/10/15 22:46:04 skrll Exp $
+$NetBSD: patch-cf,v 1.2 2001/10/18 08:17:49 skrll Exp $
 
 --- klipper/Makefile.in.orig	Sat Sep  8 01:36:37 2001
 +++ klipper/Makefile.in
+@@ -273,18 +273,19 @@
+ INCLUDES = $(all_includes)
+ 
+ bin_PROGRAMS = klipper
 -lib_LTLIBRARIES = klipper.la
 +lib_LTLIBRARIES = libklipper_main.la klipper.la
-@@ -278,4 +278,3 @@
+ 
 -CLEANFILES = dummy.cpp
 -
 -klipper_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA)
@@ -12,15 +16,23 @@ $NetBSD: patch-cf,v 1.1 2001/10/15 22:46:04 skrll Exp $
 +libklipper_main_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA)
 +libklipper_main_la_SOURCES = main.cpp toplevel.cpp urlgrabber.cpp configdialog.cpp
 +libklipper_main_la_LDFLAGS = $(all_libraries) -module -avoid-version
-@@ -282,0 +282,2 @@
+ 
 +klipper_la_LIBADD = libklipper_main.la
 +klipper_la_SOURCES = klipper_main.cpp
-@@ -286,2 +287,2 @@
+ #>- klipper_la_METASOURCES = AUTO
+ klipper_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
 -klipper_LDADD = klipper.la $(LIB_KSYCOCA)
 -klipper_SOURCES = dummy.cpp
 +klipper_LDADD = libklipper_main.la $(LIB_KSYCOCA)
 +klipper_SOURCES = klipper_main.cpp
-@@ -317,8 +318,14 @@
+ klipper_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ appsdir = $(kde_appsdir)/Utilities
+@@ -314,21 +315,27 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -klipper_la_DEPENDENCIES = 
 -#>- klipper_la_OBJECTS =  main.lo toplevel.lo urlgrabber.lo configdialog.lo
 -#>+ 5
@@ -43,27 +55,52 @@ $NetBSD: patch-cf,v 1.1 2001/10/15 22:46:04 skrll Exp $
 +#>- klipper_la_OBJECTS =  klipper_main.lo
 +#>+ 1
 +klipper_la_OBJECTS = klipper_main.lo
-@@ -328 +335 @@
+ bin_PROGRAMS =  klipper$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- klipper_OBJECTS =  dummy.$(OBJEXT)
 +#>- klipper_OBJECTS =  klipper_main.$(OBJEXT)
-@@ -330,2 +337,2 @@
+ #>+ 1
 -klipper_OBJECTS = dummy.$(OBJEXT)
 -klipper_DEPENDENCIES =  klipper.la
 +klipper_OBJECTS = klipper_main.$(OBJEXT)
 +klipper_DEPENDENCIES =  libklipper_main.la
-@@ -350 +357 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -347,15 +354,15 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=klipperrc hi16-app-klipper.png hi32-app-klipper.png klipper-1-2.pl klipperrc.upd klipperbindings.cpp urlgrabber.h toplevel.h klipper.desktop hi48-app-klipper.png configdialog.h 
-+KDE_DIST=klipperrc hi48-app-klipper.png toplevel.h hi16-app-klipper.png hi32-app-klipper.png klipperbindings.cpp configdialog.h klipper-1-2.pl klipper.desktop klipperrc.upd urlgrabber.h 
-@@ -357,2 +364,2 @@
++KDE_DIST=klipperrc klipper hi48-app-klipper.png toplevel.h hi16-app-klipper.png hi32-app-klipper.png klipperbindings.cpp configdialog.h klipper-1-2.pl klipper.desktop klipperrc.upd urlgrabber.h libklipper_main_la_meta_unload.cpp 
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(klipper_la_SOURCES) $(klipper_SOURCES)
 -OBJECTS = $(klipper_la_OBJECTS) $(klipper_OBJECTS)
 +SOURCES = $(libklipper_main_la_SOURCES) $(klipper_la_SOURCES) $(klipper_SOURCES)
 +OBJECTS = $(libklipper_main_la_OBJECTS) $(klipper_la_OBJECTS) $(klipper_OBJECTS)
-@@ -444,0 +452,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -442,6 +449,9 @@
+ 
+ maintainer-clean-libtool:
+ 
 +libklipper_main.la: $(libklipper_main_la_OBJECTS) $(libklipper_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libklipper_main_la_LDFLAGS) $(libklipper_main_la_OBJECTS) $(libklipper_main_la_LIBADD) $(LIBS)
 +
-@@ -593,11 +602,0 @@
+ klipper.la: $(klipper_la_OBJECTS) $(klipper_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(klipper_la_LDFLAGS) $(klipper_la_OBJECTS) $(klipper_la_LIBADD) $(LIBS)
+ 
+@@ -590,17 +600,6 @@
+ subdir = klipper
+ 
+ distdir: $(DISTFILES)
 -#>- 	@for file in $(DISTFILES); do \
 -#>- 	  d=$(srcdir); \
 -#>- 	  if test -d $$d/$$file; then \
@@ -75,13 +112,31 @@ $NetBSD: patch-cf,v 1.1 2001/10/15 22:46:04 skrll Exp $
 -#>- 	  fi; \
 -#>- 	done
 -#>+ 10
-@@ -656 +654,0 @@
+ 	@for file in $(DISTFILES); do \
+ 	  d=$(srcdir); \
+ 	  if test -d $$d/$$file; then \
+@@ -653,7 +652,6 @@
+ mostlyclean-generic:
+ 
+ clean-generic:
 -	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
-@@ -718,3 +715,0 @@
+ 
+ distclean-generic:
+ 	-rm -f Makefile $(CONFIG_CLEAN_FILES)
+@@ -715,9 +713,6 @@
+ messages:
+ 	$(XGETTEXT) $(klipper_la_SOURCES) klipperbindings.cpp -o $(podir)/klipper.pot
+ 
 -dummy.cpp:
 -	echo > dummy.cpp
 -
-@@ -765,8 +760,8 @@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -762,26 +757,38 @@
+ 
+ 
+ #>+ 10
 -klipper_la_meta_unload.cpp:  urlgrabber.moc toplevel.moc configdialog.moc
 -	@echo 'creating klipper_la_meta_unload.cpp'
 -	@-rm -f klipper_la_meta_unload.cpp
@@ -98,12 +153,15 @@ $NetBSD: patch-cf,v 1.1 2001/10/15 22:46:04 skrll Exp $
 +	@echo '0};' >> libklipper_main_la_meta_unload.cpp
 +	@echo '#include <kunload.h>' >> libklipper_main_la_meta_unload.cpp
 +	@echo '_UNLOAD(libklipper_main_la)' >> libklipper_main_la_meta_unload.cpp
-@@ -777 +772,13 @@
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  klipper_la_meta_unload.cpp
 +	-rm -f  libklipper_main_la_meta_unload.cpp
 +
 +#>+ 11
-+libklipper_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/toplevel.cpp $(srcdir)/urlgrabber.cpp $(srcdir)/configdialog.cpp libklipper_main_la_meta_unload.cpp  
++libklipper_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/toplevel.cpp $(srcdir)/urlgrabber.cpp $(srcdir)/configdialog.cpp $(srcdir)/libklipper_main_la_meta_unload.cpp  
 +	@echo 'creating libklipper_main_la.all_cpp.cpp ...'; \
 +	rm -f libklipper_main_la.all_cpp.files libklipper_main_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libklipper_main_la.all_cpp.final; \
@@ -113,24 +171,47 @@ $NetBSD: patch-cf,v 1.1 2001/10/15 22:46:04 skrll Exp $
 +	done; \
 +	cat libklipper_main_la.all_cpp.final libklipper_main_la.all_cpp.files  > libklipper_main_la.all_cpp.cpp; \
 +	rm -f libklipper_main_la.all_cpp.final libklipper_main_la.all_cpp.files
-@@ -780 +787 @@
+ 
+ #>+ 11
 -klipper_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/toplevel.cpp $(srcdir)/urlgrabber.cpp $(srcdir)/configdialog.cpp klipper_la_meta_unload.cpp   urlgrabber.moc toplevel.moc configdialog.moc 
 +klipper_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/klipper_main.cpp   urlgrabber.moc toplevel.moc configdialog.moc 
-@@ -784 +791 @@
+ 	@echo 'creating klipper_la.all_cpp.cpp ...'; \
+ 	rm -f klipper_la.all_cpp.files klipper_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> klipper_la.all_cpp.final; \
 -	for file in main.cpp toplevel.cpp urlgrabber.cpp configdialog.cpp klipper_la_meta_unload.cpp ; do \
 +	for file in klipper_main.cpp ; do \
-@@ -792 +799 @@
+ 	  echo "#include \"$$file\"" >> klipper_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> klipper_la.all_cpp.final; \
+ 	done; \
+@@ -789,11 +796,11 @@
+ 	rm -f klipper_la.all_cpp.final klipper_la.all_cpp.files
+ 
+ #>+ 11
 -klipper.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
 +klipper.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/klipper_main.cpp  
-@@ -796 +803 @@
+ 	@echo 'creating klipper.all_cpp.cpp ...'; \
+ 	rm -f klipper.all_cpp.files klipper.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> klipper.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in klipper_main.cpp ; do \
-@@ -805 +812 @@
+ 	  echo "#include \"$$file\"" >> klipper.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> klipper.all_cpp.final; \
+ 	done; \
+@@ -802,14 +809,14 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f klipper_la.all_cpp.cpp klipper.all_cpp.cpp
 +	-rm -f libklipper_main_la.all_cpp.cpp klipper_la.all_cpp.cpp klipper.all_cpp.cpp
-@@ -809 +816 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) klipper_la_OBJECTS="$(klipper_la_final_OBJECTS)" all-am
 +	$(MAKE) libklipper_main_la_OBJECTS="$(libklipper_main_la_final_OBJECTS)" all-am
-@@ -812 +819 @@
+ #>+ 2
+ no-final:
 -	$(MAKE) klipper_la_OBJECTS="$(klipper_la_nofinal_OBJECTS)" all-am
 +	$(MAKE) libklipper_main_la_OBJECTS="$(libklipper_main_la_nofinal_OBJECTS)" all-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

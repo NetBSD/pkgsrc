@@ -1,4 +1,4 @@
-$NetBSD: patch-bq,v 1.1 2001/10/15 22:46:03 skrll Exp $
+$NetBSD: patch-bq,v 1.2 2001/10/18 08:17:49 skrll Exp $
 
 --- kicker/Makefile.in.orig	Sat Sep  8 01:36:32 2001
 +++ kicker/Makefile.in
@@ -13,7 +13,7 @@ $NetBSD: patch-bq,v 1.1 2001/10/15 22:46:03 skrll Exp $
  
  bindir = @bindir@
  sbindir = @sbindir@
-@@ -276,15 +271,18 @@
+@@ -276,7 +271,7 @@
  SUBDIRS = share core ui . proxy taskmanager taskbar applets extensions data
  
  bin_PROGRAMS = kicker
@@ -22,19 +22,20 @@ $NetBSD: patch-bq,v 1.1 2001/10/15 22:46:03 skrll Exp $
  
  CLEANFILES = dummy.cpp
  
-+libkicker_la_LIBADD = share/libkicker_share.la core/libkicker_core.la  ui/libkicker_ui.la $(LIB_KSYCOCA) $(LIB_KFILE)
-+libkicker_la_SOURCES = dummy.cpp
-+libkicker_la_LDFLAGS = $(KDE_PLUGIN)
-+
- kicker_la_LIBADD = share/libkicker_share.la core/libkicker_core.la  ui/libkicker_ui.la $(LIB_KSYCOCA) $(LIB_KFILE)
+@@ -284,7 +279,11 @@
  kicker_la_SOURCES = dummy.cpp
  kicker_la_LDFLAGS = $(KDE_PLUGIN) -no-undefined -module
  
 -kicker_LDADD = kicker.la
++libkicker_la_LIBADD = share/libkicker_share.la core/libkicker_core.la  ui/libkicker_ui.la $(LIB_KSYCOCA) $(LIB_KFILE)
++libkicker_la_SOURCES = dummy.cpp
++libkicker_la_LDFLAGS = $(KDE_PLUGIN)
++
++kicker_LDADD = libkicker.la
  kicker_SOURCES = dummy.cpp
  kicker_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
-@@ -304,54 +302,38 @@
+@@ -304,54 +303,37 @@
  X_LIBS = @X_LIBS@
  kicker_la_DEPENDENCIES =  share/libkicker_share.la \
  core/libkicker_core.la ui/libkicker_ui.la
@@ -53,8 +54,7 @@ $NetBSD: patch-bq,v 1.1 2001/10/15 22:46:03 skrll Exp $
 -kicker_OBJECTS = dummy.$(OBJEXT)
 -kicker_DEPENDENCIES =  kicker.la
 +kicker_OBJECTS =  dummy.$(OBJEXT)
-+kicker_LDADD = $(LDADD)
-+kicker_DEPENDENCIES = 
++kicker_DEPENDENCIES =  libkicker.la
  CXXFLAGS = @CXXFLAGS@
 -#>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
 -#>+ 1
