@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.extrafonts,v 1.2 2000/09/03 14:48:23 wiz Exp $
 lib/X11/fonts/intlfonts/cc40s.pcf.gz
 lib/X11/fonts/intlfonts/cc48s.pcf.gz
 lib/X11/fonts/intlfonts/cns1-40.pcf.gz
