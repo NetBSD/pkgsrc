@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3140 2003/08/30 07:26:10 gehenna Exp $
+$NetBSD: CHANGES,v 1.3141 2003/08/30 07:44:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3386,3 +3386,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ruby-zlib to 0.6.0 [taca 2003-08-30]
 	Moved ruby-zlib from archivers to devel [taca 2003-08-30]
 	Updated cvsync to 0.24.5 [gehenna 2003-08-30]
+	Updated ruby-oprtparse to 0.120 [taca 2003-08-30]
