@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2003/07/17 22:56:46 grant Exp $
+# $NetBSD: Makefile,v 1.23 2003/08/23 15:27:00 jschauma Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
 PKGREVISION=	1
 WRKSRC=		${WRKDIR}/swing-1.1.1fcs
-CATEGORIES=	devel x11
+CATEGORIES=	devel x11 java
 MASTER_SITES=	# empty
 EXTRACT_SUFX=	.zip
 
