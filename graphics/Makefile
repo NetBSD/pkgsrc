@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2002/12/19 12:27:50 grant Exp $
+# $NetBSD: Makefile,v 1.220 2002/12/19 13:51:25 grant Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -74,6 +74,7 @@ SUBDIR+=	gif320
 SUBDIR+=	giflib
 SUBDIR+=	gifsicle
 SUBDIR+=	giftrans
+SUBDIR+=	gimageview
 SUBDIR+=	gimp
 SUBDIR+=	gimp-base
 SUBDIR+=	gimp-data
@@ -209,7 +210,6 @@ SUBDIR+=	xdvipresent
 SUBDIR+=	xfig
 SUBDIR+=	xgraph
 SUBDIR+=	xli
-SUBDIR+=	xmountains
 SUBDIR+=	xpaint
 SUBDIR+=	xplot
 SUBDIR+=	xpm
