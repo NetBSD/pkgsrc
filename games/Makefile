@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 1998/10/13 00:46:11 garbled Exp $
+# $NetBSD: Makefile,v 1.39 1998/11/04 21:50:39 garbled Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -112,6 +112,7 @@
 #    SUBDIR += xspringies
 #    SUBDIR += xtic
 #    SUBDIR += xtriangles
+    SUBDIR += xworm
     SUBDIR += xzip
 #    SUBDIR += yahtzee
 #    SUBDIR += yamsweeper
