@@ -1,5 +1,13 @@
-$NetBSD: patch-sum,v 1.8 2001/04/05 13:57:14 wiz Exp $
+$NetBSD: distinfo,v 1.1 2001/04/17 09:14:10 agc Exp $
 
+SHA1 (xv-3.10a.tar.gz) = 9e6372f154be9e9e355972cbeb91d98d9c342474
+Size (xv-3.10a.tar.gz) = 2259124 bytes
+SHA1 (xv310a-magpic2-PhotoCD-patch.tar.gz) = b36192f0ab6cefba4221f8137d717a4c2cd45abd
+Size (xv310a-magpic2-PhotoCD-patch.tar.gz) = 56612 bytes
+SHA1 (xv-3.10a.JPEG-patch) = 05d0de5a3c4babc36f867247e1920eca6b9e9ff0
+Size (xv-3.10a.JPEG-patch) = 3297 bytes
+SHA1 (xv-3.10a.TIFF-patch) = 5e1ce5610a83a88d5878eefe175352a4cc2aa21c
+Size (xv-3.10a.TIFF-patch) = 3241 bytes
 SHA1 (patch-aa) = 2c3b3819b77df503d6d86725cbc2fce2d101a1b0
 SHA1 (patch-ab) = d8d48b7885ce7cd28c23ddb92be9ec90ad1bf8b7
 SHA1 (patch-ac) = 79793d6feb5d15e8e91f3e0747b7b14b00b21254
