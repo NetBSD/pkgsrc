@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:44:05 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:41:53 agc Exp $
 
-MD5 (psify/Makefile) = afaec5cd8b1be37f3ff0dcd214d9b277
-MD5 (psify/psify.c) = c931836a5d60436acc3dbe5bd00c0394
-MD5 (psify/psify.lex) = db28255eb30038d3052dd7b85078e1e6
-MD5 (psify/psify.man) = b3f035f0a27ab7183f00426f44b40cd1
+SHA1 (psify/Makefile) = fbceb5e2add289e07a42fceb0978a95e57b316c3
+Size (psify/Makefile) = 498 bytes
+SHA1 (psify/psify.c) = 60c368b0435a4ccc620640f382948b20c5288d24
+Size (psify/psify.c) = 12855 bytes
+SHA1 (psify/psify.lex) = ed5af37231547e5ac8788d47ca461181f9b7c512
+Size (psify/psify.lex) = 18541 bytes
+SHA1 (psify/psify.man) = f517bc97ba3d3ff20fa19f86f4a6c26d20e1afbc
+Size (psify/psify.man) = 4023 bytes

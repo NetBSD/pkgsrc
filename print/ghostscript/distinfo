@@ -1,17 +1,29 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:43:41 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:41:50 agc Exp $
 
-MD5 (ghostscript/ghostscript-6.01.tar.bz2) = c2ffb0b215c01c34795183569048ae6c
-MD5 (ghostscript/pdf_sec.ps) = 92cd6af5b4d7219e91e61b8351f0f7c4
-MD5 (ghostscript/hpdj-2.6.tar.gz) = dcc402281f36afd2041144e0e97917be
-MD5 (ghostscript/dmprt-2.01.tar.gz) = c7a9fb127fde5d888a798bf5e1822b88
-MD5 (ghostscript/gdev10v.tar.gz) = 1486bb54c214ce215044a6c606280d73
-MD5 (ghostscript/gdevmjc-0.8.tar.gz) = 228f41c3cccce22c8f477c7a9407527c
-MD5 (ghostscript/gdevalps-0.2.tar.gz) = 8690b96eeb79fe770983a86beae84a11
-MD5 (ghostscript/gdevmd2k-0.2a.tar.gz) = 5ed2b4218b8f77cb411f3d2e4509ed24
-MD5 (ghostscript/gdevlips-2.3.6.tar.gz) = 94d7cfa745e632a8338e47c88feb31f8
-MD5 (ghostscript/gdevrpdl.tar.gz) = 9606f3cca1a8f85be76944fa4eda09b7
-MD5 (ghostscript/gdevprsc-0.2.1.tar.gz) = 43298534dd2c67ea1a9c00753fdac303
-MD5 (ghostscript/gs6.01-jpdf-exp.patch.gz) = 63868cf3e6ccf93c31c79c66d7fea025
+SHA1 (ghostscript/ghostscript-6.01.tar.bz2) = 405a8ab16453a8c3f846eae2aa4abbea6a093300
+Size (ghostscript/ghostscript-6.01.tar.bz2) = 2974476 bytes
+SHA1 (ghostscript/pdf_sec.ps) = e185f12cb8764ce2d7d32931c6dbd5e05df8722f
+Size (ghostscript/pdf_sec.ps) = 11158 bytes
+SHA1 (ghostscript/hpdj-2.6.tar.gz) = 1767295652292ab00b6859cf6699939be44e49e7
+Size (ghostscript/hpdj-2.6.tar.gz) = 143944 bytes
+SHA1 (ghostscript/dmprt-2.01.tar.gz) = 179c7bf3d0fde128e1ad8c7142301efa7ccb8ab0
+Size (ghostscript/dmprt-2.01.tar.gz) = 44232 bytes
+SHA1 (ghostscript/gdev10v.tar.gz) = ae1d4c8f57c90986c9ef4de14679834fa957f416
+Size (ghostscript/gdev10v.tar.gz) = 6099 bytes
+SHA1 (ghostscript/gdevmjc-0.8.tar.gz) = 9978c08c4ea9e87c233fbda309b1612a031ed743
+Size (ghostscript/gdevmjc-0.8.tar.gz) = 102654 bytes
+SHA1 (ghostscript/gdevalps-0.2.tar.gz) = de0cc988498c8f5c76e142a72b5f3cd0c0a161e4
+Size (ghostscript/gdevalps-0.2.tar.gz) = 4448 bytes
+SHA1 (ghostscript/gdevmd2k-0.2a.tar.gz) = 75649faacb433c4b251c763fe2cb35ff889cad54
+Size (ghostscript/gdevmd2k-0.2a.tar.gz) = 9955 bytes
+SHA1 (ghostscript/gdevlips-2.3.6.tar.gz) = 2aedfd54a55356d6241fe3cbc8ba1aece9b69f45
+Size (ghostscript/gdevlips-2.3.6.tar.gz) = 64940 bytes
+SHA1 (ghostscript/gdevrpdl.tar.gz) = 927f2f858821ab6a445bfc860d8f87ab40f6e2de
+Size (ghostscript/gdevrpdl.tar.gz) = 1664 bytes
+SHA1 (ghostscript/gdevprsc-0.2.1.tar.gz) = 2f20889b06b2fee27a47e0aa0ef2de65a63be6a3
+Size (ghostscript/gdevprsc-0.2.1.tar.gz) = 12206 bytes
+SHA1 (ghostscript/gs6.01-jpdf-exp.patch.gz) = 21f427a4c80871edab8c4d748b1fe1b7796cd876
+Size (ghostscript/gs6.01-jpdf-exp.patch.gz) = 59034 bytes
 SHA1 (patch-aa) = 0d3591e0b50530c2b2dc517979757c9b6304bf3d
 SHA1 (patch-ab) = 26cea522dbe2e2cc57a5fdc60130f309c76c6991
 SHA1 (patch-ac) = 576e0bc659d771f9d634921a0cc6752ab9739a92
@@ -35,4 +47,3 @@ SHA1 (patch-at) = 47fa47098098ca3db32543a94b21c63a19bac0ba
 SHA1 (patch-au) = 07c99b2988c34396901594ab635a209e08766303
 SHA1 (patch-av) = 87f3c9e01a4e2fa63c75c348b1a5ec2be07948a5
 SHA1 (patch-aw) = 9855cacc48db068f87aa37568b198e22e6c391a0
-SHA1 (patch-bug-workaround) = 99f4e197b35a8f33b8a1219a38f6d9fc2c307eb6

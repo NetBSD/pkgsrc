@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:44:01 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:41:52 agc Exp $
 
-MD5 (Font-AFM-1.18.tar.gz) = 4e134a23de7be8c44f70e87d831c4f18
+SHA1 (Font-AFM-1.18.tar.gz) = 92b82f57f18b72462ba9d0d56953c8d3011eb421
+Size (Font-AFM-1.18.tar.gz) = 8815 bytes

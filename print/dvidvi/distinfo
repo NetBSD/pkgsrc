@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:43:36 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:41:49 agc Exp $
 
-MD5 (dvidvi-1.0.tar.gz) = 7aa2ad8596b6b85cd57f6620ae62d730
+SHA1 (dvidvi-1.0.tar.gz) = a72ac3f57f0435ab25fd1cb3e07943f34c672c6a
+Size (dvidvi-1.0.tar.gz) = 22790 bytes

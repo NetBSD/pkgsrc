@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:44:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:41:54 agc Exp $
 
-MD5 (teTeX/teTeX-texmfsrc-1.0.1.tar.gz) = 5260f5b14bf5ef758a03384bd6729b7b
+SHA1 (teTeX/teTeX-texmfsrc-1.0.1.tar.gz) = 2f2d6735cc98a7e2aa38c55ae12829b20e3abe8f
+Size (teTeX/teTeX-texmfsrc-1.0.1.tar.gz) = 12241774 bytes
