@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5171 2004/03/09 12:43:56 kent Exp $
+$NetBSD: CHANGES,v 1.5172 2004/03/09 13:39:54 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1274,3 +1274,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated peace to 0.0.20040309 [kent 2004-03-09]
 	Updated cross-i386-netbsdpe to 3.3.3 [kent 2004-03-09]
 	Updated w32api to 2.5 [kent 2004-03-09]
+	Updated libaudiofile to 0.2.6 [recht 2004-03-09]
