@@ -1,9 +1,9 @@
-$NetBSD: patch-af,v 1.1 2003/05/04 01:10:58 rh Exp $
+$NetBSD: patch-af,v 1.2 2005/03/22 16:14:16 jmmv Exp $
 
---- src/nautilus-main.c.orig	Sat Mar 15 01:34:55 2003
+--- src/nautilus-main.c.orig	2005-03-07 10:00:15.000000000 +0100
 +++ src/nautilus-main.c
-@@ -56,6 +56,24 @@
- #include <stdlib.h>
+@@ -57,6 +57,24 @@
+ #include <string.h>
  #include <unistd.h>
  
 +#ifdef __NetBSD__
@@ -27,7 +27,7 @@ $NetBSD: patch-af,v 1.1 2003/05/04 01:10:58 rh Exp $
  /* Keeps track of everyone who wants the main event loop kept active */
  static GSList *event_loop_registrants;
  
-@@ -259,6 +277,10 @@ main (int argc, char *argv[])
+@@ -420,6 +438,10 @@ main (int argc, char *argv[])
  	} else {
  		/* Run the nautilus application. */
  		application = nautilus_application_new ();

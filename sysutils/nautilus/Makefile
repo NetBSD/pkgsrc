@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2004/12/28 21:45:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.43 2005/03/22 16:14:16 jmmv Exp $
 #
 
-DISTNAME=		nautilus-2.8.2
+DISTNAME=		nautilus-2.10.0
 CATEGORIES=		sysutils gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.8/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.10/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -12,20 +12,20 @@ COMMENT=		Nautilus file manager for GNOME2
 
 USE_PKGLOCALEDIR=	yes
 USE_BUILDLINK3=		yes
-USE_DIRS+=		gnome2-1.5
+USE_DIRS+=		xdg-1.1
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-PKGCONFIG_OVERRIDE=	libnautilus/libnautilus.pc.in
-PKGCONFIG_OVERRIDE+=	libnautilus-extension/libnautilus-extension.pc.in
+PKGCONFIG_OVERRIDE=	libnautilus-extension/libnautilus-extension.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 GCONF2_SCHEMAS=		apps_nautilus_preferences.schemas
 
-BUILDLINK_DEPENDS.eel2+=	eel2>=2.8.2
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
@@ -49,5 +49,8 @@ BUILDLINK_DEPENDS.eel2+=	eel2>=2.8.2
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/nautilus/extensions-1.0
 
 .include "../../mk/bsd.pkg.mk"
