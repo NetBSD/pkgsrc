@@ -1,10 +1,25 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/25 22:27:10 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/14 19:46:25 jmmv Exp $
+bin/activation-client
+bin/bonobo-activation-run-query
+bin/bonobo-slay
 bin/echo-client-2
+include/bonobo-activation-2.0/bonobo-activation/Bonobo_Activation_types.h
+include/bonobo-activation-2.0/bonobo-activation/Bonobo_GenericFactory.h
+include/bonobo-activation-2.0/bonobo-activation/Bonobo_Unknown.h
+include/bonobo-activation-2.0/bonobo-activation/bonobo-activation-activate.h
+include/bonobo-activation-2.0/bonobo-activation/bonobo-activation-async.h
+include/bonobo-activation-2.0/bonobo-activation/bonobo-activation-init.h
+include/bonobo-activation-2.0/bonobo-activation/bonobo-activation-register.h
+include/bonobo-activation-2.0/bonobo-activation/bonobo-activation-server-info.h
+include/bonobo-activation-2.0/bonobo-activation/bonobo-activation-shlib.h
+include/bonobo-activation-2.0/bonobo-activation/bonobo-activation-version.h
+include/bonobo-activation-2.0/bonobo-activation/bonobo-activation.h
 include/libbonobo-2.0/bonobo/Bonobo.h
 include/libbonobo-2.0/bonobo/bonobo-arg.h
 include/libbonobo-2.0/bonobo/bonobo-context.h
 include/libbonobo-2.0/bonobo/bonobo-event-source.h
 include/libbonobo-2.0/bonobo/bonobo-exception.h
+include/libbonobo-2.0/bonobo/bonobo-foreign-object.h
 include/libbonobo-2.0/bonobo/bonobo-generic-factory.h
 include/libbonobo-2.0/bonobo/bonobo-i18n.h
 include/libbonobo-2.0/bonobo/bonobo-item-container.h
@@ -36,17 +51,57 @@ lib/bonobo-2.0/samples/bonobo-echo-2
 lib/bonobo/monikers/libmoniker_std_2.a
 lib/bonobo/monikers/libmoniker_std_2.la
 lib/bonobo/monikers/libmoniker_std_2.so
+lib/bonobo/servers/Bonobo_CosNaming_NamingContext.server
 lib/bonobo/servers/Bonobo_Moniker_std.server
 lib/bonobo/servers/Bonobo_Sample_Echo.server
+lib/bonobo/servers/broken.server
+lib/bonobo/servers/empty.server
+lib/bonobo/servers/plugin.server
 lib/libbonobo-2.a
 lib/libbonobo-2.la
 lib/libbonobo-2.so
 lib/libbonobo-2.so.0
 lib/libbonobo-2.so.0.0
+lib/libbonobo-activation.a
+lib/libbonobo-activation.la
+lib/libbonobo-activation.so
+lib/libbonobo-activation.so.4
+lib/libbonobo-activation.so.4.0
 lib/orbit-2.0/Bonobo_module.a
 lib/orbit-2.0/Bonobo_module.la
 lib/orbit-2.0/Bonobo_module.so
+lib/pkgconfig/bonobo-activation-2.0.pc
 lib/pkgconfig/libbonobo-2.0.pc
+libexec/bonobo-activation-server
+man/man1/bonobo-activation-server.1
+sbin/bonobo-activation-sysconf
+share/doc/html/bonobo-activation/api-reference.html
+share/doc/html/bonobo-activation/architecture.html
+share/doc/html/bonobo-activation/async-activation.html
+share/doc/html/bonobo-activation/attribute-tag.html
+share/doc/html/bonobo-activation/bonobo-activation-Debugging.html
+share/doc/html/bonobo-activation/bonobo-activation-Initialization.html
+share/doc/html/bonobo-activation/bonobo-activation-Query-and-Activation.html
+share/doc/html/bonobo-activation/bonobo-activation-Registration.html
+share/doc/html/bonobo-activation/bonobo-activation-Utilities.html
+share/doc/html/bonobo-activation/bonobo-activation.devhelp
+share/doc/html/bonobo-activation/bonobo-activation.png
+share/doc/html/bonobo-activation/checklist.html
+share/doc/html/bonobo-activation/configuring.html
+share/doc/html/bonobo-activation/home.png
+share/doc/html/bonobo-activation/index.html
+share/doc/html/bonobo-activation/index.sgml
+share/doc/html/bonobo-activation/left.png
+share/doc/html/bonobo-activation/lgpl.html
+share/doc/html/bonobo-activation/migrating.html
+share/doc/html/bonobo-activation/query-langage.html
+share/doc/html/bonobo-activation/query-syntax.html
+share/doc/html/bonobo-activation/right.png
+share/doc/html/bonobo-activation/server-arch.html
+share/doc/html/bonobo-activation/server-xml-reference.html
+share/doc/html/bonobo-activation/terms.html
+share/doc/html/bonobo-activation/tutorial.html
+share/doc/html/bonobo-activation/up.png
 share/doc/html/libbonobo/debugging.html
 share/doc/html/libbonobo/factories.html
 share/doc/html/libbonobo/general.html
@@ -64,7 +119,6 @@ share/doc/html/libbonobo/libbonobo-bonobo-i18n.html
 share/doc/html/libbonobo/libbonobo-bonobo-item-container.html
 share/doc/html/libbonobo/libbonobo-bonobo-item-handler.html
 share/doc/html/libbonobo/libbonobo-bonobo-listener.html
-share/doc/html/libbonobo/libbonobo-bonobo-macros.html
 share/doc/html/libbonobo/libbonobo-bonobo-main.html
 share/doc/html/libbonobo/libbonobo-bonobo-moniker-context.html
 share/doc/html/libbonobo/libbonobo-bonobo-moniker-extender.html
@@ -86,10 +140,10 @@ share/doc/html/libbonobo/libbonobo-bonobo-storage.html
 share/doc/html/libbonobo/libbonobo-bonobo-stream-client.html
 share/doc/html/libbonobo/libbonobo-bonobo-stream-memory.html
 share/doc/html/libbonobo/libbonobo-bonobo-types.html
-share/doc/html/libbonobo/libbonobo-bonobo-xobject.html
 share/doc/html/libbonobo/libbonobo-faq.html
 share/doc/html/libbonobo/libbonobo.devhelp
 share/doc/html/libbonobo/misc.html
+share/doc/html/libbonobo/monikers-overview.html
 share/doc/html/libbonobo/monikers.html
 share/doc/html/libbonobo/persist-file.png
 share/doc/html/libbonobo/persist-storage.png
@@ -100,10 +154,13 @@ share/doc/html/libbonobo/properties.html
 share/doc/html/libbonobo/property-bags.html
 share/doc/html/libbonobo/refcounting.html
 share/doc/html/libbonobo/right.png
+share/doc/html/libbonobo/running-context.png
 share/doc/html/libbonobo/storage.png
 share/doc/html/libbonobo/stream.png
 share/doc/html/libbonobo/streams.html
+share/doc/html/libbonobo/unknown.png
 share/doc/html/libbonobo/up.png
+share/examples/bonobo-activation/bonobo-activation-config.xml
 share/idl/bonobo-2.0/Bonobo.idl
 share/idl/bonobo-2.0/Bonobo_Canvas.idl
 share/idl/bonobo-2.0/Bonobo_Clipboard.idl
@@ -122,28 +179,44 @@ share/idl/bonobo-2.0/Bonobo_Sample_Echo.idl
 share/idl/bonobo-2.0/Bonobo_Storage.idl
 share/idl/bonobo-2.0/Bonobo_UI.idl
 share/idl/bonobo-2.0/Bonobo_Zoomable.idl
+share/idl/bonobo-activation-2.0/Bonobo_ActivationContext.idl
+share/idl/bonobo-activation-2.0/Bonobo_Activation_types.idl
+share/idl/bonobo-activation-2.0/Bonobo_GenericFactory.idl
+share/idl/bonobo-activation-2.0/Bonobo_ObjectDirectory.idl
+share/idl/bonobo-activation-2.0/Bonobo_Unknown.idl
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/li/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/libbonobo-2.0.mo
@@ -151,24 +224,35 @@ ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libbonobo-2.0.mo
+@dirrm share/idl/bonobo-activation-2.0
 @dirrm share/idl/bonobo-2.0
 @comment in ORBit2: @dirrm share/idl
+@dirrm share/examples/bonobo-activation
 @dirrm share/doc/html/libbonobo
+@dirrm share/doc/html/bonobo-activation
 @comment in ORBit2: @dirrm lib/orbit-2.0
-@comment in bonobo-activation: @dirrm lib/bonobo/servers
-@comment in bonobo-activation: @dirrm lib/bonobo/monikers
+@dirrm lib/bonobo/servers
+@unexec ${RMDIR} %D/lib/bonobo/monikers 2>/dev/null || ${TRUE}
 @dirrm lib/bonobo-2.0/samples
 @dirrm lib/bonobo-2.0
+@unexec ${RMDIR} %D/lib/bonobo 2>/dev/null || ${TRUE}
 @dirrm include/libbonobo-2.0/bonobo
 @dirrm include/libbonobo-2.0
+@dirrm include/bonobo-activation-2.0/bonobo-activation
+@dirrm include/bonobo-activation-2.0
