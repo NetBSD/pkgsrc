@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:46:54 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/08/30 22:51:22 jlam Exp $
 #
 
 DISTNAME=	qmail-1.03
@@ -27,6 +27,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_PACKAGE=		"needs work to function properly as a binary package"
 
 USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 OWN_DIRS+=		${QMAILDIR}
 
 FILES_SUBST+=		QMAILDIR=${QMAILDIR}

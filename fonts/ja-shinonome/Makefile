@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/30 10:41:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/30 22:51:17 jlam Exp $
 #
 
 DISTNAME=		shinonome-0.9.10-src
@@ -14,12 +14,15 @@ COMMENT=		12, 14, 16 dots bitmap fonts for Japanese, iso8859-1
 
 GNU_CONFIGURE=		YES
 USE_PERL5=		build
-USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 FONTDIR=		${PREFIX}/lib/X11/fonts/local
 FOUNDRY=		Misc
 ALIAS_SHINONOME=	${PREFIX}/share/examples/fonts.alias.shinonome
+
+USE_PKGINSTALL=		YES
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 FILES_SUBST+=		FONTDIR=${FONTDIR}
 FILES_SUBST+=		ALIAS_SHINONOME=${ALIAS_SHINONOME}
