@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/20 08:33:59 jun Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/21 09:54:19 wiz Exp $
 
 DISTNAME=	apel-10.3
 CATEGORIES=	devel
@@ -9,5 +9,12 @@ HOMEPAGE=	http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/elisp/APEL/
 COMMENT=	Portable Emacs Library
 
 DEPENDS+=	emacs-20.7:../../editors/emacs
+
+DOCDIR=		${PREFIX}/share/doc/apel
+
+post-install:
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.en ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.ja ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
