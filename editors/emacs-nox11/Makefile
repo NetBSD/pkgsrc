@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/08/09 10:48:10 seb Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/22 08:30:30 grant Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-21.3
@@ -15,7 +15,7 @@ CONFLICTS=	mule-[0-9]*
 CONFLICTS+=	emacs-[0-9]*
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_BUILDLINK2=	yes
 
 PATCHDIR=	${PKGDIR}/../emacs/patches

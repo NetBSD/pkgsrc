@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/01/03 18:49:38 reed Exp $
+# $NetBSD: Makefile,v 1.44 2004/01/22 08:24:29 grant Exp $
 
 DISTNAME=	glade-0.6.4
 PKGREVISION=	5
@@ -10,7 +10,7 @@ HOMEPAGE=	http://glade.gnome.org/
 COMMENT=	User interface builder for GTK+
 
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_X11BASE=		yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
