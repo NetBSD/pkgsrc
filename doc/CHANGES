@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3804 2003/11/10 02:04:55 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3805 2003/11/10 17:19:29 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4330,3 +4330,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dvd+rw-tools to 5.13.4.7.4 [wiz 2003-11-10]
 	Updated dosbox to 0.60 [xtraeme 2003-11-10]
 	Updated gqview-devel to 1.3.5 [xtraeme 2003-11-10]
+	Updated xosview to 1.8.1alpha [agc 2003-11-10]

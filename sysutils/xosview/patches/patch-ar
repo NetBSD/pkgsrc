@@ -1,9 +1,0 @@
-$NetBSD: patch-ar,v 1.1 2003/10/01 01:14:35 christos Exp $
-
---- llist.cc.orig	2003-09-30 20:46:58.000000000 -0400
-+++ llist.cc	2003-09-30 20:47:04.000000000 -0400
-@@ -8,3 +8,3 @@
- //
--#include <iostream.h>
-+#include <iostream>
- #include "general.h"
