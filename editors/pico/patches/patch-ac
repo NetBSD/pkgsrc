@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2002/12/14 10:28:42 tron Exp $
+$NetBSD: patch-ac,v 1.9 2004/05/13 18:27:48 adam Exp $
 
---- build.orig	Mon Dec  9 18:54:38 2002
-+++ build	Sat Dec 14 10:57:35 2002
-@@ -362,63 +362,6 @@
+--- build.orig	2004-05-07 19:32:32.000000000 +0000
++++ build
+@@ -380,63 +380,6 @@ case $maketarg in
  	  echo "Including SSL functionality"
  	fi
  
@@ -66,14 +66,26 @@ $NetBSD: patch-ac,v 1.8 2002/12/14 10:28:42 tron Exp $
          echo "Making Pico and Pilot"
          cd "$PHOME/pico"
          eval echo make "$makeargs" -f makefile.$picotarg
-@@ -427,30 +370,8 @@
+@@ -445,50 +388,8 @@ case $maketarg in
  	if [ $rc != "0" ] ; then exit $rc ; fi
          echo ''
  
 -        echo "Making Pine and rpload/rpdump".
+-	if [ "$ALTDOCPATHS" = "1" ]
+-	then
+-	    cd "$PHOME"
+-	    rm .pine.sedargs
+-	    echo -n " -e s/\/usr\/local\/lib\/pine.conf/\/etc\/pine.conf/" > .pine.sedargs
+-	    echo -n " -e s/\/usr\/local\/lib\/pine.info/\/etc\/pine.info/" >> .pine.sedargs
+-	    echo -n " -e s/\/usr\/lib\/sendmail/\/usr\/sbin\/sendmail/" >> .pine.sedargs
+-	    echo -n " -e s/\/usr\/spool\/news/\/var\/spool\/news/" >> .pine.sedargs
+-	    echo -n " -e s/\/usr\/spool\/mail/\/var\/spool\/mail/" >> .pine.sedargs
+-	    echo -n " -e s/\/bin\/passwd/\/usr\/bin\/passwd/" >> .pine.sedargs
+-	    PINEEXTRAC="'LOCALPINECFLAGS=-DSYSTEM_PINERC=\\\"/etc/pine.conf\\\" -DSYSTEM_PINERC_FIXED=\\\"/etc/pine.conf.fixed\\\" -DSYSTEM_PINE_INFO_PATH=\\\"/etc/pine.info\\\"'"
+-	fi
 -        cd "$PHOME/pine"
--        eval echo make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
--        eval make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
+-        eval echo make "$makeargs" "$L1" "$L2" "$PINEEXTRAC" -f makefile.$pinetarg
+-        eval make "$makeargs" "$L1" "$L2" "$PINEEXTRAC" -f makefile.$pinetarg
 -	rc=$?
 -	if [ $rc != "0" ] ; then exit $rc ; fi
 -        cd "$PHOME"
@@ -90,6 +102,14 @@ $NetBSD: patch-ac,v 1.8 2002/12/14 10:28:42 tron Exp $
 -        if [ -s ../pico/pilot ] ;     then ln ../pico/pilot pilot     ; fi
 -        if [ -s ../pine/rpload ] ;    then ln ../pine/rpload rpload   ; fi
 -        if [ -s ../pine/rpdump ] ;    then ln ../pine/rpdump rpdump   ; fi
+-	if [ "$ALTDOCPATHS" = "1" ]
+-	then
+-	    echo "making local docs"
+-	    echo "sed `cat ../.pine.sedargs` < ../doc/pine.1 > pine.1"
+-	    sed `cat ../.pine.sedargs` < ../doc/pine.1 > pine.1
+-	    echo "sed `cat ../.pine.sedargs` < ../doc/tech-notes.txt > tech-notes.txt"
+-	    sed `cat ../.pine.sedargs` < ../doc/tech-notes.txt > tech-notes.txt
+-	fi
          cd "$PHOME"
          echo ''
 -        echo "Links to executables are in bin directory:"

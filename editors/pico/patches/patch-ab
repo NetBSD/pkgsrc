@@ -1,13 +1,15 @@
-$NetBSD: patch-ab,v 1.9 2003/07/28 14:35:34 adam Exp $
+$NetBSD: patch-ab,v 1.10 2004/05/13 18:27:48 adam Exp $
 
---- pico/osdep/unix.orig	2003-05-28 00:56:45.000000000 +0200
-+++ pico/osdep/unix	2003-07-28 13:49:18.000000000 +0200
-@@ -2654,7 +2654,7 @@
+--- pico/osdep/unix.orig	2004-05-05 22:01:13.000000000 +0000
++++ pico/osdep/unix
+@@ -2659,10 +2659,7 @@ char *
  errstr(err)
  int err;
  {
--    return((err >= 0 && err < sys_nerr) ? (char *)sys_errlist[err] : NULL);
-+    return strerror(err);
+-    return((err >= 0) ? (char *) strerror(err) : NULL);
+-#ifdef OLDWAY
+     return((err >= 0 && err < sys_nerr) ? (char *)sys_errlist[err] : NULL);
+-#endif
  }
  
  
