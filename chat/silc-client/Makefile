@@ -1,18 +1,21 @@
-# $NetBSD: Makefile,v 1.23 2003/03/17 20:12:18 salo Exp $
+# $NetBSD: Makefile,v 1.24 2003/04/27 22:28:29 salo Exp $
 #
 
-DISTNAME=		silc-client-0.9.12
+DISTNAME=		${SILC_CLIENT_DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
 			http://www.fi.silcnet.org/download/client/sources/ \
 			ftp://ftp.au.silcnet.org/pub/silcnet/client/sources/ \
 			http://www.at.silcnet.org/download/client/sources/
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		${SILC_CLIENT_EXTRACT_SUFX}
 
 MAINTAINER=		salo@netbsd.org
 HOMEPAGE=		http://www.silcnet.org/
 COMMENT=                Client for the Secure Internet Live Conferencing (SILC) protocol
+
+.include "../../chat/silc-client/Makefile.common"
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
@@ -24,8 +27,6 @@ SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/irssi/libtool \
 			${WRKSRC}/lib/silcmath/mpi/libtool
 
 BUILDLINK_DEPENDS.iconv=	libiconv>=1.7
-
-.include "../../mk/bsd.prefs.mk"
 
 PKG_SYSCONFSUBDIR?=	silc
 
@@ -42,6 +43,8 @@ CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/silc/modules
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-terminfo
 CONFIGURE_ARGS+=	--without-libtoolfix
+
+.include "../../mk/bsd.prefs.mk"
 
 # Use native curses library.
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS")
@@ -79,6 +82,10 @@ CONFIGURE_ARGS+=	--disable-asm
 #CONFIGURE_ARGS+=	--enable-debug
 
 PLIST_SRC+=		${PKGDIR}/PLIST
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/irssi/config.h ${SILC_CLIENT_CONFIG_H}
+	${INSTALL_DATA} ${WRKSRC}/irssi/irssi-config ${SILC_CLIENT_CONFIG}
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
