@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2566 2003/06/23 15:12:12 salo Exp $
+$NetBSD: CHANGES,v 1.2567 2003/06/23 15:50:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2546,3 +2546,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added tcx-19940124 [agc 2003-06-23]
 	Updated 2vcard to 0.5 [jschauma 2003-06-23]
 	Updated dovecot to 0.99.10rc2 [salo 2003-06-23]
+	Added bomberclone-data-0.7 [wiz 2003-06-23]
+	Added bomberclone-0.9.9 [wiz 2003-06-23]
