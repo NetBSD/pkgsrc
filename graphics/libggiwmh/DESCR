@@ -1,0 +1,3 @@
+LibGGIWMH is an LibGGI extension for GGI targets that are window
+system based to allow access to things like setting the title bar,
+resizing, etc.

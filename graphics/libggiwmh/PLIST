@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/21 12:27:50 wiz Exp $
+include/ggi/internal/wmh.h
+include/ggi/wmh.h
+lib/ggi/wmh/display/X_wmh.a
+lib/ggi/wmh/display/X_wmh.la
+lib/ggi/wmh/display/X_wmh.so
+lib/libggiwmh.a
+lib/libggiwmh.la
+lib/libggiwmh.so
+lib/libggiwmh.so.0
+lib/libggiwmh.so.0.1
+share/examples/libggiwmh/libggiwmh.conf
+@dirrm share/examples/libggiwmh
+@dirrm lib/ggi/wmh/display
+@dirrm lib/ggi/wmh

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/21 12:27:50 wiz Exp $
+
+--- Makefile.in.orig	Mon Jul 21 08:29:47 2003
++++ Makefile.in
+@@ -102,7 +102,7 @@ AUTOMAKE_OPTIONS = 1.4 foreign
+ 
+ SUBDIRS = include wmh display demos m4
+ 
+-ggiconfdatadir = $(sysconfdir)/$(ggi_subdir)
++ggiconfdatadir = $(datadir)/examples/libggiwmh
+ ggiconfdata_DATA = libggiwmh.conf
+ 
+ DISTCLEANFILES = libggiwmh.conf
