@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/09 19:44:10 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/29 05:50:26 jlam Exp $
 
---- Makefile.am.orig	Wed Sep 24 15:36:09 2003
+--- Makefile.am.orig	Mon Jan 12 12:33:57 2004
 +++ Makefile.am
-@@ -30,11 +30,8 @@ INCLUDES	= -I$(top_srcdir)/include -I$(t
+@@ -27,11 +27,8 @@ INCLUDES	= -I$(top_srcdir)/include -I$(t
  DEFS            = @DEFS@ -DSASLAUTHD_CONF_FILE_DEFAULT=\"@sysconfdir@/saslauthd.conf\" -I. -I$(srcdir) -I..
  
  
