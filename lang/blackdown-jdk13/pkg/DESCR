@@ -1,0 +1,4 @@
+This is the Linux port of the Blackdown Java(tm) Development Kit, 
+version 1.3.0. This version runs on NetBSD/PowerPC, but it is still 
+very experimental. Please use it for testing purposes only, and don't 
+forget to report odd behaviors.
