@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2004/03/04 23:51:24 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2004/03/08 13:26:03 wiz Exp $
 
 DISTNAME=	ncurses-${NC_VERS}
 NC_VERS=	5.4
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--without-gpm
 CONFIGURE_ARGS+=	--with-manpage-format=normal
 CONFIGURE_ARGS+=	--with-manpage-tbl
 
-USE_GNU_TOOLS+=		awk make
+USE_GNU_TOOLS+=		awk
 
 .include "../../mk/bsd.prefs.mk"
 
