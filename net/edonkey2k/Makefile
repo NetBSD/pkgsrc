@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/06/26 14:33:14 agc Exp $
+# $NetBSD: Makefile,v 1.4 2002/06/28 11:30:51 drochner Exp $
 #
 
 DISTNAME=	donkey
@@ -16,7 +16,8 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-DEPENDS=	suse_base>=6.1:../../emulators/${SUSE_DIR_PREFIX}_base
+DEPENDS+=	suse_base>=6.1:../../emulators/${SUSE_DIR_PREFIX}_base
+DEPENDS+=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
 .endif
 
 WRKSRC=		${WRKDIR}
