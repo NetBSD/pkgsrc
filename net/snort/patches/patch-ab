@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/03/13 08:28:24 jmc Exp $
+
+--- config.sub.orig	Wed Mar 13 08:25:47 2002
++++ config.sub	Wed Mar 13 08:25:59 2002
+@@ -177,7 +177,7 @@
+ 	      | hppa-* | hppa1.0-* | hppa1.1-* | alpha-* | we32k-* | cydra-* | ns16k-* \
+ 	      | pn-* | np1-* | xps100-* | clipper-* | orion-* | sparclite-* \
+ 	      | pdp11-* | sh-* | powerpc-* | powerpcle-* | sparc64-* | mips64-* | mipsel-* \
+-	      | mips64el-* | mips64orion-* | mips64orionel-* | f301-*)
++	      | mips64el-* | mips64orion-* | mips64orionel-* | f301-* | macppc-*)
+ 		;;
+ 	# Recognize the various machine names and aliases which stand
+ 	# for a CPU type and a company and sometimes even an OS.
