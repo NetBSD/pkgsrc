@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.6 2000/12/27 10:08:35 rh Exp $
+$NetBSD: md5,v 1.7 2001/02/26 20:43:27 wiz Exp $
 
-MD5 (snort-1.6.3-patch2.tar.gz) = 6fd76cac4a5c65a020e13954f850481e
+MD5 (snort-1.7.tar.gz) = 0eae2f987f663a2fbf236e38d1f8e960
