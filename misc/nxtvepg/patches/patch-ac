@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2002/03/04 19:56:53 magick Exp $
+$NetBSD: patch-ac,v 1.3 2002/08/31 09:25:05 magick Exp $
 
---- epgui/help.tcl.orig	Sun Feb 17 13:34:51 2002
+--- epgui/help.tcl.orig	Sat Aug 31 11:00:26 2002
 +++ epgui/help.tcl
-@@ -27,7 +27,7 @@
+@@ -28,7 +28,7 @@
  } {} {-rcfile} bold { } {} {path} underlined {
  Specify an alternate configuration file. Default: on UNIX $HOME/.nxtvepgrc, on Windows nxtvepg.ini in the current directory.
  } {} {-dbdir} bold { } {} {directory} underlined {
@@ -10,4 +10,4 @@ $NetBSD: patch-ac,v 1.2 2002/03/04 19:56:53 magick Exp $
 +Specify an alternate directory for the databases. Default: On UNIX /tmp/nxtvdb, on Windows the current directory. Note that the database management is not equipped for concurrent writing, so if you have more than one TV tuner card in your system or network, relocate the directory into the users' homes.
  If you're using an acquisition daemon, the browser must be configured to use the same directory as the daemon.  If the daemon is running on a different host, you need to mount the remote directory, e.g. via NFS.
  } {} {-card} bold { } {} {index} underlined {
- Specify which tuner card to use, if you have more than one. The given index is appended to /dev/vbi and /dev/video. Default: index 0, i.e. the card in the first PCI slot.
+ Specify which TV card hardware to use, if you have more than card. Default: index 0. On Linux the given index is appended to the device names, i.e. } {} {/dev/vbi} underlined { and } {} {/dev/video} underlined {. On Windows index "n" means the n-th card found while scanning the PCI bus for cards with a Bt878, Bt878A, Bt848 or Bt849 chip.  If you have more than one TV card with the same chip, the order between those is undefined, but still constant (i.e. the order is determined by the driver, not nxtvepg)
