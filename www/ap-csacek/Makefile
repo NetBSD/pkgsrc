@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2000/02/25 17:17:51 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2000/03/16 14:11:37 wiz Exp $
 #
 
 DISTNAME=	csacek-2.1.3
@@ -8,7 +8,6 @@ MASTER_SITES=	http://www.csacek.cz/distrib/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jdolecek@netbsd.org
-
 # Note the homepage is in czech language only
 HOMEPAGE=	http://www.csacek.cz/
 
