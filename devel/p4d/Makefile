@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/01 02:26:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/01 05:00:27 schmonz Exp $
 #
 
 DISTNAME=	p4d
@@ -24,10 +24,6 @@ RCD_SCRIPTS=	p4d
 
 .include "../../mk/bsd.prefs.mk"
 
-P4USER?=	perforce
-P4GROUP?=	p4admin
-P4ROOT?=	/var/perforce
-P4PORT?=	1666
 P4LOG?=		log
 P4JOURNAL?=	journal
 
