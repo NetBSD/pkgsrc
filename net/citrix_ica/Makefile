@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/05/05 17:27:17 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/08 23:58:44 dmcmahill Exp $
 #
 
 DISTNAME=	citrix_ica-client
@@ -32,8 +32,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-DISTINFO_FILE=${.CURDIR}/distinfo.${MACHINE_ARCH}
-PATCHDIR=${.CURDIR}/patches.${MACHINE_ARCH}
 PLIST_SRC=	${PKGDIR}/PLIST.pre \
 		${PKGDIR}/PLIST.${MACHINE_ARCH} \
 		${PKGDIR}/PLIST.post
@@ -50,6 +48,11 @@ BINDIR=		${PREFIX}/bin
 IGNORE=		"${PKGNAME} requires SVR4 compability - see compat_svr4(8)"
 .endif
 .endif
+
+PATCHDIR=${WRKDIR}/.patches
+pre-patch:
+	${MKDIR} ${PATCHDIR}
+	${CP} ${.CURDIR}/patches/patch-${MACHINE_ARCH}-* ${PATCHDIR}
 
 do-install:
 	${SED} s%DESTINATION%${CDIR}% ${FILESDIR}/response \
