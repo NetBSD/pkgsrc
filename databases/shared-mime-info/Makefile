@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/06/05 00:07:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/08/31 11:43:44 jmmv Exp $
 #
 
-DISTNAME=	shared-mime-info-0.14
+DISTNAME=	shared-mime-info-0.15
 CATEGORIES=	databases
 MASTER_SITES=	http://freedesktop.org/Software/shared-mime-info/
 
@@ -14,9 +14,23 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
+USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 
+CONFIGURE_ARGS+=	--disable-update-mimedb
+
 CPPFLAGS+=		-DPREFIX=\"\\\"${PREFIX}\\\"\"
+
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+
+FILES_SUBST+=		MIMEDB_PATH="${PREFIX}/share/mime"
+FILES_SUBST+=		UPDATE_MIMEDB="${PREFIX}/bin/update-mime-database"
+
+PRINT_PLIST_AWK+=	/^share\/mime\/packages/ { print; next; }
+PRINT_PLIST_AWK+=	/^share\/mime/ { next; }
+PRINT_PLIST_AWK+=	/^@dirrm share\/mime\/packages$$/ { print; next; }
+PRINT_PLIST_AWK+=	/^@dirrm share\/mime/ { next; }
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
