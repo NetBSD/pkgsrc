@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 1998/10/04 15:59:44 tv Exp $
+
+--- src/slang.h.orig	Sun Oct  4 11:58:47 1998
++++ src/slang.h	Sun Oct  4 11:59:07 1998
+@@ -22,6 +22,11 @@
+ # endif
+ #endif /* __watcomc__ */
+ 
++#ifdef __NetBSD__
++#undef unix
++#define unix 1
++#endif
++
+ #ifdef unix
+ # ifndef __unix__
+ #  define __unix__ 1
