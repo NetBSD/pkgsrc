@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/07/06 22:49:29 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/07/30 21:05:41 jlam Exp $
 #
 
 DISTNAME=	Linux-PAM-0.77
@@ -38,7 +38,20 @@ MESSAGE_SUBST+=		PAM_MODULEDIR=${PAM_MODULEDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_LIBCRACK:M[yY][eE][sS])
+# Global and legacy options
+.if defined(USE_LIBCRACK)
+.  if !defined(PKG_OPTIONS.PAM)
+.    if defined(USE_LIBCRACK) && !empty(USE_LIBCRACK:M[yY][eE][sS])
+PKG_OPTIONS.PAM+=	libcrack
+.    endif
+.  endif
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.PAM
+PKG_SUPPORTED_OPTIONS=	libcrack
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mlibcrack)
 .  include "../../security/libcrack/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libcrack
 PLIST_SUBST+=		USE_LIBCRACK=
@@ -74,6 +87,8 @@ CONF_FILES=		${EGDIR}/pam.conf ${PKG_SYSCONFBASEDIR}/pam.conf
 CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
 
+.include "../../mk/bdb.buildlink3.mk"
+
 post-configure:
 	cd ${WRKSRC}; for file in libpam/pam_private.h; do		\
 		${SED}	-e "s|/etc/|${PKG_SYSCONFBASEDIR}/|g"		\
@@ -99,5 +114,4 @@ post-install:
 .endif
 	${INSTALL_DATA_DIR} ${DOCDIR}
 
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
