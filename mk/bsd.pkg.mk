@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1188 2003/06/01 23:59:07 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1189 2003/06/04 09:39:17 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -2056,7 +2056,7 @@ do-configure: ${_CONFIGURE_PREREQ}
 .  if defined(HAS_CONFIGURE)
 .    for DIR in ${CONFIGURE_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} \
-	    CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
+	    AWK="${AWK}" CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
 	    CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" FC="${FC}" F77="${FC}" FFLAGS="${FFLAGS}" \
 	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    ac_given_INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
