@@ -1,4 +1,4 @@
 # enable ldap
 APPENDDEF(`confMAPDEF', `-DLDAPMAP')
-APPENDDEF(`confENVDEF', `-I${LOCALBASE}/include')
+APPENDDEF(`confENVDEF', `-I${BUILDLINK_DIR}/include')
 APPENDDEF(`confLIBS', `-L${LOCALBASE}/lib -lldap -llber')
