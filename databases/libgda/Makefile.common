@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.5 2003/01/28 22:03:12 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/02/13 18:19:29 jmmv Exp $
 #
 
-DISTNAME?=		libgda-0.8.199
-PKGREVISION?=		1
+DISTNAME?=		libgda-0.10.0
 CATEGORIES?=		databases gnome
-MASTER_SITES?=		${MASTER_SITE_GNOME:=sources/libgda/0.8/}
+MASTER_SITES?=		${MASTER_SITE_GNOME:=sources/libgda/0.10/}
 EXTRACT_SUFX?=		.tar.bz2
 
 MAINTAINER?=		sab@posix.org.uk
@@ -21,15 +20,17 @@ GNU_CONFIGURE=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
+CONFIGURE_ARGS+=	--with-html-dir="${PREFIX}/share/doc/html"
 
 PKG_SYSCONFSUBDIR=	libgda
 EGDIR=			${PREFIX}/share/examples/libgda
 CONF_FILES+=		${EGDIR}/config ${PKG_SYSCONFDIR}/config
 
-.include "../../textproc/gtk-doc/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
 .include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../lang/python22/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
