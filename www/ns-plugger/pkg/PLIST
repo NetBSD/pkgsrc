@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/20 14:02:17 rh Exp $
+lib/netscape/plugins/plugger.so
+lib/netscape/${BINNAME}-${NS_VERS}/pluggerrc
+man/man7/plugger.7
+share/doc/plugger/README
+share/doc/plugger/COPYING
+@dirrm share/doc/plugger
