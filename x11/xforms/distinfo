@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2002/08/25 19:24:01 jlam Exp $
+$NetBSD: distinfo,v 1.11 2002/09/21 00:24:04 jlam Exp $
 
 SHA1 (xforms-0.9999.tgz) = d88d24a37ab4fe37fbcb8b85f0c6a727638db217
 Size (xforms-0.9999.tgz) = 1040128 bytes
 SHA1 (patch-aa) = c20083fc9f55986853c63726a9ad74e7bf233ef3
-SHA1 (patch-ab) = aac66bfb7a549fd6235d4c20feb3f957cdcc2821
-SHA1 (patch-ac) = f6795e4ca9c1887522fa7595ef502d169c28b9c6
-SHA1 (patch-ad) = f17516b9292be07794a7ac184c985be66ba88834
-SHA1 (patch-ae) = ccf27ff1e0c2f95a26f4b4365825ae7d511081f6
+SHA1 (patch-ab) = 1d5b440c88e2ea5915b050a28056cd4ad378996e
+SHA1 (patch-ac) = 47de2d8cbec85a8e9509c667bfe814fd0103eede
+SHA1 (patch-ad) = 964b6df86a0bd56f66073b2d121d7c12d0f89bdb
+SHA1 (patch-ae) = a6c3847470591a8d7e219fa5b0390fa145092dd7

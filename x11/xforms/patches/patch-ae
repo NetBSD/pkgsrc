@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2002/04/17 04:40:43 fredb Exp $
+$NetBSD: patch-ae,v 1.2 2002/09/21 00:24:05 jlam Exp $
 
 --- lib/Imakefile.orig	Tue Apr  2 11:27:04 2002
 +++ lib/Imakefile
@@ -7,7 +7,7 @@ $NetBSD: patch-ae,v 1.1 2002/04/17 04:40:43 fredb Exp $
  		  -I. \
  		  -Ifd \
 -		  -I/usr/local/include \
-+		  -I${BUILDLINK_DIR}/include \
++		  -I${LOCALBASE}/include \
  		  /* Do not remove this line */
  
  EXTRA_DEFINES	= \
