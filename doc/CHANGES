@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2018 2003/04/23 11:57:54 mjl Exp $
+$NetBSD: CHANGES,v 1.2019 2003/04/23 13:18:29 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1706,3 +1706,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added openquicktime-1.0 [rh 2003-04-23]
 	Updated pkg_install to 20030423 [seb 2003-04-23]
 	Updated multitail to 2.0 [mjl 2003-04-23]
+	Updated cvsync to 0.19.6 [gehenna 2003-04-23]
