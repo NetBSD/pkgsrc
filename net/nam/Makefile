@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/03/08 23:56:56 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/12 17:28:47 seb Exp $
 
 DISTNAME=	nam-src-1.10
 PKGNAME=	${DISTNAME:S/-src//}
@@ -22,6 +22,8 @@ CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
 CONFIGURE_ARGS+=	--with-otcl=${BUILDLINK_PREFIX.tcl-otcl}
 CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tcl-tclcl}
+
+CONFIGURE_ENV+=		V_LIBS="`${CONFIG_SHELL} -c '. ${TCLCONFIG_SH}; . ${TKCONFIG_SH}; echo $$TCL_LIBS $$TK_LIBS'`"
 
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
 
