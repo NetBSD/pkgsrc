@@ -1,7 +1,8 @@
-$NetBSD: patch-ae,v 1.1 1998/09/06 16:37:45 hubertf Exp $
---- sndserv/linux.c.orig	Sun Sep  6 18:02:05 1998
-+++ sndserv/linux.c	Sun Sep  6 18:02:31 1998
-@@ -39,8 +39,9 @@
+$NetBSD: patch-ae,v 1.2 1999/12/29 21:47:04 tron Exp $
+
+--- sndserv/linux.c.orig	Sun Jan 26 08:45:01 1997
++++ sndserv/linux.c	Wed Dec 29 22:41:14 1999
+@@ -39,11 +39,14 @@
  #include <stdio.h>
  #include <fcntl.h>
  #include <unistd.h>
@@ -12,3 +13,20 @@ $NetBSD: patch-ae,v 1.1 1998/09/06 16:37:45 hubertf Exp $
  
  #include "soundsrv.h"
  
++#define SOUND_DEV "/dev/sound"
++
+ int	audio_fd;
+ 
+ void
+@@ -76,9 +79,9 @@
+ 
+     int i;
+                 
+-    audio_fd = open("/dev/dsp", O_WRONLY);
++    audio_fd = open(SOUND_DEV, O_WRONLY);
+     if (audio_fd<0)
+-        fprintf(stderr, "Could not open /dev/dsp\n");
++        fprintf(stderr, "Could not open "SOUND_DEV"\n");
+          
+                      
+     i = 11 | (2<<16);                                           
