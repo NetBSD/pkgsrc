@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/06/06 23:51:37 tv Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/07 01:34:25 tv Exp $
 #
 
 BOOST_PKGNAME_ADD=	-python
@@ -27,8 +27,6 @@ do-build:
 	@cd ${WRKSRC} && ${BJAM_CMD} stage
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/boost/config/user.hpp \
-		${PREFIX}/include/boost-1_31/boost/config/thread_user.hpp
 	${INSTALL_LIB} ${WRKSRC}/stage/lib/*-1_31.* ${PREFIX}/lib/
 	@cd ${WRKSRC}/stage/lib && for f in *-1_31.*; do \
 		${LN} -f ${PREFIX}/lib/$$f \
