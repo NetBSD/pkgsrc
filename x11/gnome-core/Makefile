@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.101 2004/10/03 00:18:31 tv Exp $
+# $NetBSD: Makefile,v 1.102 2004/11/20 22:10:23 jmmv Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=		14
+PKGREVISION=		15
 
 COMMENT=		Core component of GNU Network Object Management Environment
 
