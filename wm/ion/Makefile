@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2003/01/28 22:04:22 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/07 01:25:09 salo Exp $
 #
 
-DISTNAME=	ion-20010523
-PKGREVISION=	1
+DISTNAME=	ion-20020207
 CATEGORIES=	x11 wm
-MASTER_SITES=	http://www.students.tut.fi/~tuomov/dl/
+MASTER_SITES=	http://modeemi.cs.tut.fi/~tuomov/dl/
 
 MAINTAINER=	daniel@codefactory.se,zuntum@netbsd.org
-HOMEPAGE=	http://www.students.tut.fi/~tuomov/ion/
+HOMEPAGE=	http://modeemi.cs.tut.fi/~tuomov/ion/
 COMMENT=	keyboard friendly tiling window manager
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
-USE_X11BASE=	YES
+USE_X11=	YES
 USE_GMAKE=	YES
 
 PKG_SYSCONFSUBDIR=	ion
