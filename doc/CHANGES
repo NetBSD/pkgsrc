@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.286 2002/10/16 16:03:22 jlam Exp $
+$NetBSD: CHANGES,v 1.287 2002/10/16 16:43:04 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3299,3 +3299,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added img2eps-0.1 [dillo 2002-10-16]
 	Added newmat-10 [jschauma 2002-10-16]
 	Updated oss to 3.9.7e [jlam 2002-10-16]
+	Added lablgtk-1.2.5 [dillo 2002-10-16]
