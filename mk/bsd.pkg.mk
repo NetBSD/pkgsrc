@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.915 2002/01/27 19:07:41 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.916 2002/01/27 20:01:56 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -19,6 +19,11 @@
 
 ##### Include any preferences, if not already included, and common definitions
 .include "../../mk/bsd.prefs.mk"
+
+##### Prevent /etc/mk.conf from being included by a distribution's BSD-style
+##### Makefiles.  We really don't want to pick up settings that are used by
+##### builds in /usr/src, e.g. DESTDIR.
+MAKE_ENV+=	MAKECONF=/dev/null
 
 ##### Pass information about desired toolchain to package build.
 .if defined(USETOOLS)
