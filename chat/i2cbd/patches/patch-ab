@@ -1,7 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2003/07/29 16:25:56 jmmv Exp $
-
---- config.mk.orig	2001-10-30 20:50:40.000000000 +0100
-+++ config.mk
+$NetBSD: patch-ab,v 1.3 2003/08/02 20:38:57 kristerw Exp $
+--- config.mk.orig	Tue Oct 30 20:50:40 2001
++++ config.mk	Sat Aug  2 22:28:11 2003
 @@ -3,7 +3,6 @@
  #	For copying and distribution information, see the file COPYING.
  #
@@ -10,7 +9,16 @@ $NetBSD: patch-ab,v 1.2 2003/07/29 16:25:56 jmmv Exp $
  BINDIR		= ${PREFIX}/sbin
  MANDIR		= ${PREFIX}/man
  MAN8DIR		= ${PREFIX}/man/man8
-@@ -19,7 +18,7 @@ EXTRAWARNS	= -Wshadow -Wpointer-arith -W
+@@ -11,7 +10,7 @@
+ 
+ INSTALL		= ../install-sh
+ 
+-WARNS		= -Wall -Wtraditional -ansi -pedantic
++WARNS		= -Wall -ansi -pedantic
+ EXTRAWARNS	= -Wshadow -Wpointer-arith -Werror -Wcast-qual -Wcast-align \
+ 		  -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations \
+ 		  -Wnested-externs
+@@ -19,7 +18,7 @@
  # affect portability to some platforms.  The others here are irrelevant.
  BADWARNS	= -Wwrite-strings -Wconversion -Waggregate-return -Wredundant-decls
  DEBUG		= -DDEBUG -DVERBOSE -g

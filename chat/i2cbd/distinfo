@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2003/07/29 16:25:56 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2003/08/02 20:38:56 kristerw Exp $
 
 SHA1 (i2cbd-2.0_BETA0.tar.gz) = dd76db90442f3ccd8e3048cbdb313740ddcfb792
 Size (i2cbd-2.0_BETA0.tar.gz) = 70622 bytes
 SHA1 (patch-aa) = 0151f8e68be11e759425d2e9569df3d465c50931
-SHA1 (patch-ab) = 8bdf6b8f1b59f16a9e996fe51fd0ceb9a0b35115
+SHA1 (patch-ab) = 11501fabf5effb3a2e8cfad78a7200064237b471
 SHA1 (patch-ac) = ca8e6b7324a22fb9ecabf2374e34febb55196e28
