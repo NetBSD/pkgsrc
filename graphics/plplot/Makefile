@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2004/10/03 00:14:56 tv Exp $
+# $NetBSD: Makefile,v 1.38 2004/10/15 11:54:11 tv Exp $
 
 DISTNAME=		plplot-5.2.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=plplot/}
 
@@ -62,7 +62,7 @@ post-install:
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../x11/tk83/buildlink3.mk"
 .include "../../lang/tcl83/buildlink3.mk"
 .include "../../mk/autoconf.mk"
