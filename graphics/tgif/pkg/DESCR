@@ -1,0 +1,6 @@
+Tgif is a X11 based drawing program.  It is based on Xlib
+and does not require Motif.
+
+Tgif is a full featured program including the ability to 
+export (from the menu or command line) PS and EPSF files.
+In addition libraries of symbols can be created for reuse.
