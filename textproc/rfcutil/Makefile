@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:26:50 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/16 10:11:45 seb Exp $
 #
 
 DISTNAME=	rfc-3.2
@@ -18,11 +18,10 @@ EXTRACT_ONLY=	#
 
 NO_BUILD=	YES
 USE_PERL5=	YES
+REPLACE_PERL=	rfc
 
-post-patch:
-	${SED}	-e "s|/usr/bin/perl|${LOCALBASE}/bin/perl|g"	\
-		-e "s|/usr/local|${PREFIX}|g"			\
-		${DISTDIR}/${DISTNAME} > ${WRKSRC}/rfc
+do-extract:
+	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}/rfc
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rfc ${PREFIX}/bin/rfc
