@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/03/06 10:21:32 wulf Exp $
+# $NetBSD: Makefile,v 1.22 2000/03/07 20:18:42 kim Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
@@ -11,8 +11,8 @@ HOMEPAGE=	http://www.beedub.com/exmh/
 
 DEPENDS+=	tcl-8.0.5:../../lang/tcl80
 DEPENDS+=	tk-8.0.5:../../x11/tk80
-DEPENDS+=	nmh-1.0:../../mail/nmh
-DEPENDS+=	mm-2.7:../../mail/metamail
+DEPENDS+=	nmh>=1.0:../../mail/nmh
+DEPENDS+=	mm>=2.7:../../mail/metamail
 
 .include "../../mk/bsd.prefs.mk"
 
