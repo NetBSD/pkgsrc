@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2004/05/17 18:40:51 minskim Exp $
+# $NetBSD: Makefile,v 1.174 2004/05/28 00:48:27 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -140,6 +140,8 @@ SUBDIR+=	sun-jdk14
 SUBDIR+=	sun-jre13
 SUBDIR+=	sun-jre14
 SUBDIR+=	swi-prolog
+SUBDIR+=	swi-prolog-lite
+SUBDIR+=	swi-prolog-packages
 SUBDIR+=	tcl
 SUBDIR+=	tcl-expect
 SUBDIR+=	tcl-itcl
