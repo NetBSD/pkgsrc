@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/27 12:11:43 adam Exp $
+include/glitz-glx.h
+include/glitz.h
+lib/libglitz-glx.a
+lib/libglitz-glx.la
+lib/libglitz-glx.so
+lib/libglitz-glx.so.1
+lib/libglitz-glx.so.1.0
+lib/libglitz.a
+lib/libglitz.la
+lib/libglitz.so
+lib/libglitz.so.1
+lib/libglitz.so.1.0
+lib/pkgconfig/glitz-glx.pc
+lib/pkgconfig/glitz.pc
