@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3088 2005/02/21 23:02:44 recht Exp $
+$NetBSD: TODO,v 1.3089 2005/02/21 23:31:41 bad Exp $
 
 Suggested new packages
 ======================
@@ -699,7 +699,6 @@ Suggested package updates
 	o open2300-1.8
 	o opencobol-0.30
 	o openmotif-2.2.4
-	o openvpn-1.6.0
 	o opera7-7.54u1
 	o oregano-0.40.3
 	o oroborus-2.0.13.1
