@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.13 2000/10/31 04:11:08 msaitoh Exp $
+$NetBSD: md5,v 1.14 2000/11/14 02:30:13 msaitoh Exp $
 
-MD5 (PTL-2.1.6.tar.gz) = 6d2b586070f68ffc7fffbdc580fd0cc3
+MD5 (PTL-2.1.7.tar.gz) = be1cb4c41b576cc2d3f722c19db18da0
