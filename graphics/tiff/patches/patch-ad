@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.10 2004/04/27 20:38:48 tv Exp $
+$NetBSD: patch-ad,v 1.11 2004/04/27 22:38:51 tv Exp $
 
 --- libtiff/Makefile.in.orig	Mon Nov 17 04:24:41 2003
 +++ libtiff/Makefile.in
@@ -84,7 +84,7 @@ $NetBSD: patch-ad,v 1.10 2004/04/27 20:38:48 tv Exp $
 -	${INSTALL} -idb tiff.sw.dev -m 755 -dir ${DESTDIR}@DIR_LIB@
 -	${INSTALL} -idb tiff.sw.dev -m 444 -F ${DESTDIR}@DIR_LIB@ -O libtiff.a
 +	${INSTALL} -idb tiff.sw.dev -m ${PKGDIRMODE} -dir ${DESTDIR}@DIR_LIB@
-+	${LIBTOOL} ${BSD_INSTALL_SCRIPT} libtiff.la @DIR_LIB@
++	${LIBTOOL} ${BSD_INSTALL_LIB} libtiff.la @DIR_LIB@
  	if [ @DSO@dso != nodso ]; then					\
  	    ${MAKE} -${MAKEFLAGS} installDSO;				\
  	else								\
