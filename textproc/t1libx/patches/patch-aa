@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/05 08:28:48 garbled Exp $
+--- lib/Makefile.in.orig	Thu Nov  5 00:59:03 1998
++++ lib/Makefile.in	Thu Nov  5 01:00:23 1998
+@@ -251,17 +251,9 @@
+ 
+ install: dummy
+ 	$(LIBTOOL) --mode=install \
+-		$(INSTALL_DATA) .libs/libt1.a .libs/libt1.so.* $(libdir)
++		$(INSTALL_DATA) .libs/libt1x.a .libs/libt1x.so.* $(libdir)
+ 	$(LIBTOOL) --mode=install \
+-		$(INSTALL_DATA) t1lib.h t1lib.h $(includedir)
+-	$(MKINSTALLDIRS) $(datadir)/t1lib
+-	if (test -f $(datadir)/t1lib/t1lib.config) \
+-	then \
+-	  echo "Alert: Global configuration file exists, installation skipped!"; \
+-	else \
+-	  $(LIBTOOL) --mode=install $(INSTALL_DATA) t1lib.config $(datadir)/t1lib; \
+-	fi;
+-
++		$(INSTALL_DATA) t1libx.h $(includedir)
+ 
+ uninstall: dummy
+ 	-$(LIBTOOL) --mode=uninstall $(RM) $(libdir)/libt1.la

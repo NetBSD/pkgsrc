@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/05 08:28:48 garbled Exp $
+lib/libt1x.so.8.0
+lib/libt1x.a
+share/t1lib
+include/t1libx.h
+bin/xglyph
