@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2004/11/30 02:44:56 uebayasi Exp $
+# $NetBSD: Makefile,v 1.15 2004/11/30 02:49:38 uebayasi Exp $
 
 DISTNAME=	mew-3.3
 PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.mew.org/pub/Mew/release/
 
-MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
+MAINTAINER=	uebayasi@jp.NetBSD.org
 HOMEPAGE=	http://www.mew.org/
 COMMENT=	Messaging in the Emacs World
 
@@ -24,13 +24,10 @@ MAKE_FLAGS+=	EMACS=${EMACS_BIN}
 MAKE_FLAGS+=	elispdir=${EMACS_LISPPREFIX}/mew
 MAKE_FLAGS+=	etcdir=${PREFIX}/share/mew
 
-post-patch:
-	@${GREP} -lr /usr/local ${WRKSRC} | \
-	while read f; do \
-		${MV} $$f $${f}.orig; \
-		${SED} -e 's|/usr/local|${PREFIX}|g' $${f}.orig >$$f; \
-	done
-	@${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} {} \;
+SUBST_CLASSES=		local
+SUBST_STAGE.local=	post-configure
+SUBST_FILES.local=	Makefile bin/configure info/Makefile
+SUBST_SED.local=	-e 's|/usr/local|${PREFIX}|g'
 
 post-install:
 	@${INSTALL_DATA_DIR} ${MEW_CONTRIB_DIR}
