@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/06/01 11:23:44 rh Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/16 00:41:13 wiz Exp $
 
 DISTNAME=		Eterm-0.8.9
 PKGNAME=		eterm-0.8.9
@@ -20,7 +20,7 @@ PIXMAP_FILES=		Eterm-bg-scale-1.tar.gz Eterm-bg-scale-2.tar.gz \
 			Eterm-bg-tile.tar.gz
 
 USE_X11BASE=		yes
-USE_PKGLIBTOOL=		yes
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
