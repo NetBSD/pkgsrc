@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.28 2003/05/06 17:42:03 jmmv Exp $
+# $NetBSD: build,v 1.29 2003/11/20 00:04:12 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -93,6 +93,11 @@ if [ "$1" = "restart" ]; then
 	echo Restarting - skipping pre-build script
 else
 	sh mk/bulk/pre-build	# make veryveryclean :)
+	if [ $? != 0 ]
+	then
+		echo "Error during bulk-build preparations, aborting."
+		exit 1
+	fi
 fi
 
 fail=no
