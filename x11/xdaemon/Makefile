@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/05/17 08:32:14 abs Exp $
+# $NetBSD: Makefile,v 1.8.4.1 2002/07/22 17:06:57 agc Exp $
 
 DISTNAME=	xdaemon-1.0
 CATEGORIES=	games x11
@@ -29,10 +29,13 @@ do-extract:
 	@${ECHO} Bringing daemonic powers to you!
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xteddy/pixmaps
 .for pic in ${PIX}
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${pic} ${PREFIX}/share/xteddy/pixmaps/${pic}
 .endfor
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/Daemon.README ${PREFIX}/share/doc/xdaemon.README
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/bin
 	${LN} -s ${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon
 	${LN} -s ${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon2
 
