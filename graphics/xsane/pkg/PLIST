@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2000/01/06 13:48:11 rh Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/01/26 22:03:19 rh Exp $
 bin/xsane
 man/man1/xsane.1
 share/locale/fr/LC_MESSAGES/xsane.mo
 share/locale/de/LC_MESSAGES/xsane.mo
+share/locale/cs/LC_MESSAGES/xsane.mo
 share/sane/xsane/xsane-style.rc
 share/sane/xsane-logo.xpm
 share/sane/sane-backends-doc.html
