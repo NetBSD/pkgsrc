@@ -1,10 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:25 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/08/26 20:06:57 tron Exp $
 bin/guile
 bin/guile-config
-bin/guile-doc-snarf
-bin/guile-func-name-check
 bin/guile-snarf
-bin/guile-snarf.awk
 include/guile-readline/readline.h
 include/guile/gh.h
 include/libguile.h
@@ -92,58 +89,61 @@ include/libguile/vectors.h
 include/libguile/version.h
 include/libguile/vports.h
 include/libguile/weaks.h
-@unexec ${INSTALL_INFO} --delete %D/info/data-rep.info %D/info/dir
-info/data-rep.info
-@exec ${INSTALL_INFO} %D/info/data-rep.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/guile.info %D/info/dir
+info/guile.info
+info/guile.info-1
+info/guile.info-2
+@exec ${INSTALL_INFO} %D/info/guile.info %D/info/dir
 lib/libguile.a
 lib/libguile.la
 lib/libguile.so
-lib/libguile.so.9
-lib/libguile.so.9.0
+lib/libguile.so.10
+lib/libguile.so.10.0
 lib/libguilereadline.a
 lib/libguilereadline.la
 lib/libguilereadline.so
 lib/libguilereadline.so.0
-lib/libguilereadline.so.0.0
+lib/libguilereadline.so.0.1
 share/aclocal/guile.m4
-share/guile/1.4/ice-9/and-let*.scm
-share/guile/1.4/ice-9/arrays.scm
-share/guile/1.4/ice-9/boot-9.scm
-share/guile/1.4/ice-9/calling.scm
-share/guile/1.4/ice-9/common-list.scm
-share/guile/1.4/ice-9/debug.scm
-share/guile/1.4/ice-9/debugger.scm
-share/guile/1.4/ice-9/documentation.scm
-share/guile/1.4/ice-9/emacs.scm
-share/guile/1.4/ice-9/expect.scm
-share/guile/1.4/ice-9/format.scm
-share/guile/1.4/ice-9/getopt-long.scm
-share/guile/1.4/ice-9/hcons.scm
-share/guile/1.4/ice-9/lineio.scm
-share/guile/1.4/ice-9/ls.scm
-share/guile/1.4/ice-9/mapping.scm
-share/guile/1.4/ice-9/networking.scm
-share/guile/1.4/ice-9/optargs.scm
-share/guile/1.4/ice-9/poe.scm
-share/guile/1.4/ice-9/popen.scm
-share/guile/1.4/ice-9/posix.scm
-share/guile/1.4/ice-9/psyntax.pp
-share/guile/1.4/ice-9/psyntax.ss
-share/guile/1.4/ice-9/q.scm
-share/guile/1.4/ice-9/r4rs.scm
-share/guile/1.4/ice-9/readline.scm
-share/guile/1.4/ice-9/regex.scm
-share/guile/1.4/ice-9/runq.scm
-share/guile/1.4/ice-9/session.scm
-share/guile/1.4/ice-9/slib.scm
-share/guile/1.4/ice-9/streams.scm
-share/guile/1.4/ice-9/string-fun.scm
-share/guile/1.4/ice-9/syncase.scm
-share/guile/1.4/ice-9/tags.scm
-share/guile/1.4/ice-9/threads.scm
+share/guile/${PKGVERSION}/ice-9/and-let*.scm
+share/guile/${PKGVERSION}/ice-9/and-let-star.scm
+share/guile/${PKGVERSION}/ice-9/arrays.scm
+share/guile/${PKGVERSION}/ice-9/boot-9.scm
+share/guile/${PKGVERSION}/ice-9/calling.scm
+share/guile/${PKGVERSION}/ice-9/common-list.scm
+share/guile/${PKGVERSION}/ice-9/debug.scm
+share/guile/${PKGVERSION}/ice-9/debugger.scm
+share/guile/${PKGVERSION}/ice-9/documentation.scm
+share/guile/${PKGVERSION}/ice-9/emacs.scm
+share/guile/${PKGVERSION}/ice-9/expect.scm
+share/guile/${PKGVERSION}/ice-9/format.scm
+share/guile/${PKGVERSION}/ice-9/getopt-long.scm
+share/guile/${PKGVERSION}/ice-9/hcons.scm
+share/guile/${PKGVERSION}/ice-9/lineio.scm
+share/guile/${PKGVERSION}/ice-9/ls.scm
+share/guile/${PKGVERSION}/ice-9/mapping.scm
+share/guile/${PKGVERSION}/ice-9/networking.scm
+share/guile/${PKGVERSION}/ice-9/optargs.scm
+share/guile/${PKGVERSION}/ice-9/poe.scm
+share/guile/${PKGVERSION}/ice-9/popen.scm
+share/guile/${PKGVERSION}/ice-9/posix.scm
+share/guile/${PKGVERSION}/ice-9/psyntax.pp
+share/guile/${PKGVERSION}/ice-9/psyntax.ss
+share/guile/${PKGVERSION}/ice-9/q.scm
+share/guile/${PKGVERSION}/ice-9/r4rs.scm
+share/guile/${PKGVERSION}/ice-9/readline.scm
+share/guile/${PKGVERSION}/ice-9/regex.scm
+share/guile/${PKGVERSION}/ice-9/runq.scm
+share/guile/${PKGVERSION}/ice-9/session.scm
+share/guile/${PKGVERSION}/ice-9/slib.scm
+share/guile/${PKGVERSION}/ice-9/streams.scm
+share/guile/${PKGVERSION}/ice-9/string-fun.scm
+share/guile/${PKGVERSION}/ice-9/syncase.scm
+share/guile/${PKGVERSION}/ice-9/tags.scm
+share/guile/${PKGVERSION}/ice-9/threads.scm
 share/guile/guile-procedures.txt
-@dirrm share/guile/1.4/ice-9
-@dirrm share/guile/1.4
+@dirrm share/guile/${PKGVERSION}/ice-9
+@dirrm share/guile/${PKGVERSION}
 @dirrm share/guile
 @dirrm include/libguile
 @dirrm include/guile-readline
