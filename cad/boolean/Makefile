@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/03/13 17:36:38 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2002/03/17 17:20:01 fredb Exp $
 #
 
 DISTNAME=	boolean
@@ -14,7 +14,7 @@ COMMENT=	GDSII viewer/editor + (boolean) operations on sets of 2d polygons
 
 DEPENDS+=	wxGTK>=2.2.7nb1:../../x11/wxGTK
 
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 REL=		6.2
 
 WRKSRC=		${WRKDIR}/boolean/${REL}/linux
