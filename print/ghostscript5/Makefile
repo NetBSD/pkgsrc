@@ -3,7 +3,7 @@
 # Date created:		Tue Jun 10 21:58:54 CEST 1997
 # Whom:			Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $NetBSD: Makefile,v 1.5 1997/12/19 09:21:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/01/06 04:05:04 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/13 11:22:43 asami Exp
 #
 
@@ -17,8 +17,8 @@ DISTFILES=	${GS_SOURCES} ${GS_FONTS_STD} ${GS_FONTS_OTHER} \
 
 MAINTAINER=	explorer@netbsd.org
 
-BUILD_DEPENDS=	/nonexistent:${PORTSDIR}/graphics/jpeg:extract \
-		/nonexistent:${PORTSDIR}/graphics/png:extract \
+BUILD_DEPENDS=	${PORTSDIR}/graphics/jpeg/work/jpeg-6a:${PORTSDIR}/graphics/jpeg:extract \
+		${PORTSDIR}/graphics/png/work/libpng-0.96:${PORTSDIR}/graphics/png:extract \
 		unzip:${PORTSDIR}/archivers/unzip
 
 MAKE_ENV=	PORTSDIR=${PORTSDIR}
