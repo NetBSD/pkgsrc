@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2002/07/12 18:48:19 mycroft Exp $
+# $NetBSD: Makefile,v 1.117 2002/08/26 05:27:02 jlam Exp $
 
 DISTNAME=	fetchmail-5.9.13
 CATEGORIES=	mail
@@ -12,12 +12,11 @@ COMMENT=	batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-hesiod
 
 BUILD_DEFS+=		USE_INET6
-CFLAGS+=		${CPPFLAGS}
 LDFLAGS+=		${CFLAGS}
 
 .include "../../mk/bsd.prefs.mk"
@@ -25,11 +24,10 @@ LDFLAGS+=		${CFLAGS}
 FETCHMAIL_USE_SSL?=	YES
 
 .if defined(FETCHMAIL_USE_SSL) && ${FETCHMAIL_USE_SSL} == YES
-.include "../../security/openssl/buildlink.mk"
-CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
+.  include "../../security/openssl/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 .else
 CONFIGURE_ARGS+=	--without-ssl
-.else
 .endif
 
 BUILD_DEFS+=		FETCHMAIL_USE_SSL
@@ -37,9 +35,9 @@ BUILD_DEFS+=		FETCHMAIL_USE_SSL
 .if defined(KERBEROS)
 PKG_USE_KERBEROS=	yes
 CONFIGURE_ARGS+=	--with-kerberos=yes
-.if ${MACHINE_PLATFORM:MNetBSD-1.[0-4]*-i386} == ""
+.  if ${MACHINE_PLATFORM:MNetBSD-1.[0-4]*-i386} == ""
 REPLACE_KERBEROS_LIBS=	# defined
-.endif
+.  endif
 .else
 CONFIGURE_ARGS+=	--with-kerberos=no
 .endif
@@ -76,5 +74,5 @@ post-install:
 	   fetchmail-FAQ.html fetchmail-features.html \
 	   design-notes.html ${FDOC}
 
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
