@@ -1,0 +1,91 @@
+$NetBSD: buildlink2.txt,v 1.9.4.2 2002/12/27 20:34:54 schmonz Exp $
+
+The buildlink2 framework is a departure from the original buildlink
+framework, which tried to do its work up-front before the configure
+process and fix things up after the build process.  Over time, the
+buildlink framework grew overly complex to deal with software that stored
+build-time information in the installed files, e.g. GNOME packages.  The
+new framework actually does its work as the software is being configured
+and built through a series of wrapper scripts that are used in place of the
+normal compiler tools.  We still symlink libraries and headers into
+${BUILDLINK_DIR} to normalize the environment in which the software is
+built, but now we tell the configure process the actual installed locations
+of the libraries and headers we are using, and the compiler wrappers will
+munge them into references into ${BUILDLINK_DIR}.
+
+To-do list:
+
+    (*) Write regression test targets to make sure _BLNK_TRANSFORM_SED
+	is doing what it's supposed to do.
+
+    (*) Since buildlink2 is a layer of abstraction atop the toolchain,
+	it's a logical place to deal with the vagaries of unusual
+	toolchains. For example, on Darwin we could reliably pass
+	the "-no-cpp-precomp" switch to every compiler invocation
+	by emitting it from the compiler wrapper. Likewise, the
+	use of _USE_RPATH in bsd.pkg.mk might be better handled in
+	the linker wrapper. More: _STRIPFLAG_CC, _STRIPFLAG_INSTALL,
+	compiler optimization flags.
+
+Here are some FAQs and answers regarding buildlink2:
+
+Q1: Why is the buildlink2 framework better than the old one?
+A1: There are several reasons:
+
+    (1) The new framework makes it simpler to buildinkify a package because
+	we just convert dependencies into including the equivalent
+	buildlink2.mk files and define USE_BUILDLINK2.  We don't need
+	to lie about where libraries or headers we use are installed.
+
+    (2) All packages using the new framework are strongly buildlinked; it
+	is not possible to create weakly buildlinked packages.  This
+	deprecates the need for x11.buildlink.mk.
+
+    (3) We no longer care if the configure or build processes add
+	-I${PREFIX}/include or -L${PREFIX}/lib to the compiler or linker
+	lines.  We _want_ them to do so (and we actually add them
+	ourselves) since they are munged into references to
+	${BUILDLINK_DIR) by the wrapper scripts.
+
+    (4)	We no longer need to create and use config script wrappers.
+
+    (5) buildlink2.mk files now simply create the <pkg>-buildlink target
+	and can discard the REPLACE_BUILDLINK and *CONFIG_WRAPPER* lines.
+
+    (6) We no longer mess around with configure scripts or Makefiles before
+	the build process, so we don't accidentally trigger rebuilds of
+	those files if the software uses GNU autoconf/automake.
+
+    (7)	We no longer mess around with libtool archives after the build
+	process, so we don't accidentally trigger rebuilds of those files
+	during the install process.
+
+Q2: How does this affect packages that use the old buildlink framework?
+A2: The buildlink and buildlink2 frameworks can coexist within pkgsrc, but
+    packages that use the new framework must use it exclusively, i.e. a
+    package Makefile can't include both buildlink.mk and buildlink2.mk
+    files.  Packages that use the old framework can continue to do so, but
+    it is encouraged that they convert to the new buildlink2 framework for
+    the benefits listed earlier.
+
+Q3: Can I make strongly buildlinked packages that use imake?
+A3: Yes.  Packages that use imake to drive the configuration and build
+    processes can now be strongly buildlinked as well.
+
+Q4: How do I use compilers other than the system-supplied cc?  I currently
+    set CC=/my/special/c-compiler in /etc/mk.conf.
+A4: It should Just Work.  The wrapper scripts automatically handle this
+    situation.  The software is told to use CC=cc, which points to the
+    special compiler wrapper script in ${BUILDLINK_DIR}/bin/cc, but the
+    wrapper itself will call the CC that you explicitly set.
+
+Q5: So what's bad about the new buildlink2 framework?
+A5: The full build now takes longer than it used to.  Since we are using
+    wrapper scripts in place of the compilers, we bear the cost of the extra
+    shell processes invoked as a result.
+
+Q6: What happened to x11.buildlink.mk?
+A6: x11.buildlink.mk is now deprecated, as it's all handled directly by
+    the buildlink2.mk framework.  However, in converting packages to use
+    buildlink2, if it uses x11.buildlink.mk, then you will need to define
+    USE_X11 if USE_X11BASE is not already defined.
