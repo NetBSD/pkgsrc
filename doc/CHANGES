@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8967 2005/01/28 23:38:20 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.8968 2005/01/29 00:52:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -649,3 +649,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed snort-contrib [adrianp 2005-01-28]
 	Updated snort to 2.3.0 [adrianp 2005-01-28]
 	Updated f2c to 20001205nb8 [dmcmahill 2005-01-28]
+	Updated squid to 2.5.7nb10 [taca 2005-01-28]
