@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/12/06 00:28:21 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/12/21 10:03:42 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use opencdk.
 #
@@ -17,6 +17,7 @@ BUILDLINK_PREFIX.opencdk_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.opencdk+=	include/opencdk.h
 BUILDLINK_FILES.opencdk+=	lib/libopencdk.*
 
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../security/libgcrypt/buildlink2.mk"
 
