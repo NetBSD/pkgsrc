@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/07/16 14:57:08 fredb Exp $
+$NetBSD: distinfo,v 1.8 2003/10/24 04:52:26 fredb Exp $
 
-SHA1 (ntp-4.1.1a.tar.gz) = a55ae3ae3aed8d8a37651bfa7b63dc622a33a52a
-Size (ntp-4.1.1a.tar.gz) = 2023986 bytes
+SHA1 (ntp-4.2.0.tar.gz) = 38343a4ebfc0b8d9aff3bec4c6a93f4c59071ce3
+Size (ntp-4.2.0.tar.gz) = 2514502 bytes
