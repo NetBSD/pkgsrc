@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1419 2004/03/11 21:19:00 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1420 2004/03/11 22:57:22 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -3073,13 +3073,7 @@ check-shlibs:
 show-shlib-type:
 .  if empty(USE_LANGUAGES)
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "none"
-.  elif exists(/usr/lib/libc.dylib)
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "dylib"
-.  elif ${OPSYS} == "AIX"
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "aixlib"
-.  elif ${OPSYS} == "Interix"
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "ELF" # not really, but acts like it
-.  else
+.  elif ${_OPSYS_SHLIB_TYPE} == "ELF/a.out"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${WRKDIR} &&							\
 	sotype=none;							\
@@ -3098,6 +3092,8 @@ show-shlib-type:
 	fi;								\
 	${ECHO} "$$sotype";						\
 	${RM} -f a.$$$$.c a.$$$$.out
+.  else
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${_OPSYS_SHLIB_TYPE}
 .  endif   # USE_LANGUAGES
 .endif
 

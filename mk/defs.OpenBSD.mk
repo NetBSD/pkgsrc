@@ -1,4 +1,4 @@
-# $NetBSD: defs.OpenBSD.mk,v 1.28 2004/01/27 16:11:47 agc Exp $
+# $NetBSD: defs.OpenBSD.mk,v 1.29 2004/03/11 22:57:22 agc Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -127,6 +127,7 @@ _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_RPATH_NAME=	-R	# name of symbol in rpath directive to linker 
+_OPSYS_SHLIB_TYPE=	ELF/a.out	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 .if ${OS_VERSION} >= 3.4
 _PATCH_BACKUP_ARG?=	-V simple -z 	# switch to patch(1) for backup suffix
