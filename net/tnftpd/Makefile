@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/12/18 01:49:05 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/19 21:30:00 grant Exp $
 #
 
 DISTNAME=		tnftpd-20031217
-PKGNAME=		tnftpd-20031217
-SVR4_PKGNAME=		tnftpd
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
 
@@ -36,9 +34,8 @@ CONFIGURE_ARGS+=	--enable-ipv6
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=		CPPFLAGS=""
-.endif
+OPSYSVARS+=		MAKE_ENV
+MAKE_ENV.SunOS+=	CPPFLAGS=""
 
 EXAMPLEDIR=		${PREFIX}/share/examples/tnftpd
 
