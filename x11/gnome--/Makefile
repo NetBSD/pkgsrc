@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2003/07/17 22:56:25 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/12 16:19:50 drochner Exp $
 #
 
-DISTNAME=	gnomemm-1.2.2
+DISTNAME=	gnomemm-1.2.4
 PKGNAME=	${DISTNAME:S/mm/--/}
-PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkmm/}
 
@@ -17,7 +16,7 @@ USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 USE_X11BASE=	yes
 USE_BUILDLINK2=	yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/scripts/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 REPLACE_PERL=	docgen/pce2
 
 .include "../../devel/libsigc++10/buildlink2.mk"
