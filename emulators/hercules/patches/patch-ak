@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2001/03/23 16:20:56 agc Exp $
+$NetBSD: patch-ak,v 1.2 2004/06/13 14:03:28 agc Exp $
 
-Patch from WOlfgang Solfrank:
+Patch from Wolfgang Solfrank:
 
 Disabling the O_SYNC option when opening printer or punch.
 
