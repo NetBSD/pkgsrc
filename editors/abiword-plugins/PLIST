@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/03/07 10:18:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/03/31 18:52:44 drochner Exp $
 lib/AbiWord-2.2/plugins/libAbiApplix.la
 lib/AbiWord-2.2/plugins/libAbiBMP.la
 lib/AbiWord-2.2/plugins/libAbiBZ2.la
@@ -11,6 +11,7 @@ lib/AbiWord-2.2/plugins/libAbiKWord.la
 lib/AbiWord-2.2/plugins/libAbiLaTeX.la
 lib/AbiWord-2.2/plugins/libAbiMSWrite.la
 lib/AbiWord-2.2/plugins/libAbiNroff.la
+lib/AbiWord-2.2/plugins/libAbiWMF.la
 lib/AbiWord-2.2/plugins/libAbiWML.la
 lib/AbiWord-2.2/plugins/libAbiXHTML.la
 lib/AbiWord-2.2/plugins/libAbiXSLFO.la
