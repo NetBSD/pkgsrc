@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 1998/05/14 22:12:37 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/05/15 21:33:45 tron Exp $
 lib/python1.5/lib-dynload/_tkinter.so
