@@ -3,4 +3,5 @@ means it can only handle offsets up to a certain size, and can fail
 to work in large programs. Compiling -fPIC allows larger offsets
 and should permit large programs to function.
 
-This package allows most of pkgsrc on NetBSD/sparc 1.4.x systems.
+This package allows most of pkgsrc on NetBSD/sparc systems before the
+1.4.3 release (which already contains this fix).
