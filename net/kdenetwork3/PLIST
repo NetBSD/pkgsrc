@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/03/23 21:56:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/03/26 03:49:03 markd Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -1673,7 +1673,7 @@ share/kde/sounds/ktalkd.wav
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/apps/zeroconf
-@comment in kdebase: @dirrm share/kde/apps/remoteview
+@comment in kde: @dirrm share/kde/apps/remoteview
 @dirrm share/kde/apps/lisa
 @dirrm share/kde/apps/ksirc/pics/emoticons
 @dirrm share/kde/apps/ksirc/pics
