@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8645 2005/01/07 11:15:31 wiz Exp $
+$NetBSD: CHANGES,v 1.8646 2005/01/07 11:44:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -164,3 +164,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated openntpd to 3.6.1p1 [peter 2005-01-07]
 	Updated curl to 7.12.3nb1 [cube 2005-01-07]
 	Added qnetwalk-1.1 [wiz 2005-01-07]
+	Removed ntop2 [adam 2005-01-07]
