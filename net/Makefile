@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/03/19 12:54:23 frueauf Exp $
+# $NetBSD: Makefile,v 1.18 1998/03/19 14:23:08 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -24,6 +24,7 @@
 #    SUBDIR += gated
 #    SUBDIR += gnu-finger
 #    SUBDIR += gopher
+    SUBDIR += icb
 #    SUBDIR += icmpinfo
 #    SUBDIR += irc
     SUBDIR += ircII
