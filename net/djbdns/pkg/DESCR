@@ -19,5 +19,16 @@ several components:
     command-line interfaces to DNS.
   * The dnsq and dnstrace programs are DNS debugging tools.
 
+You may also want to use:
+  * pkgsrc/net/ucspi-tcp, if you're going to use axfrdns or axfr-get
+  * tinydns logfile formatter, installed under ${PREFIX}/bin/tinydns-log.pl
+  * dnscache logfile formatter, installed under ${PREFIX}/bin/dnscache-log.pl
+    (formatters are taken from http://tinydns.org, they need perl to run]
+  * tai64nlocal (pkgsrc/sysutils/daemontools) -- to convert timestamps printed
+    out by these two formatters to human readable form
+
 This package includes IPv6 patches written by Fefe,
 see http://www.fefe.de/dns/ for more details.
+
+Please read http://cr.yp.to/djbdns/upgrade.html if you're upgrading from
+previous version of djbdns.
