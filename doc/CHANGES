@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1162 2003/01/19 06:08:22 salo Exp $
+$NetBSD: CHANGES,v 1.1163 2003/01/19 08:47:09 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -327,3 +327,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated openssh to 3.5.0.1 [seb 2003-01-19]
 	Updated diffutils to 2.8.1 [wiz 2003-01-19]
 	Updated evilwm to 0.99.14 [salo 2003-01-19]
+	Updated pnm2ppa to 1.04nb1 [salo 2003-01-19]
