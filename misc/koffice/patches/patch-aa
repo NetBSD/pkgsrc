@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.6 2003/10/09 18:38:34 reed Exp $
+
+formula.cc:4:23: strstream.h: No such file or directory
+formula.cc:477: error: `ostrstream' undeclared (first use this function)
+
+--- filters/kspread/qpro/libqpro/src/formula.cc.orig	2003-09-29 16:37:17.000000000 +0000
++++ filters/kspread/qpro/libqpro/src/formula.cc	2003-09-29 16:37:41.000000000 +0000
+@@ -1,7 +1,7 @@
+ #include <qpro/common.h>
+ 
+-#include <iostream.h>
+-#include <strstream.h>
++#include <iostream>
++#include <strstream>
+ 
+ #include <string.h>
+ 
+@@ -474,7 +474,7 @@
+ QpFormula::floatFuncReal(const char*)
+ {
+    QP_INT64   lFloat;
+-   ostrstream lNum;
++   std::ostrstream lNum;
+ 
+    cFormula >> lFloat;
+ 
+@@ -489,7 +489,7 @@
+ QpFormula::intFuncReal(const char*)
+ {
+    QP_INT16 lInt;
+-   ostrstream lNum;
++   std::ostrstream lNum;
+ 
+    cFormula >> lInt;
+ 

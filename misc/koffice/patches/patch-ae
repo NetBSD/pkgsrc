@@ -1,0 +1,70 @@
+$NetBSD: patch-ae,v 1.4 2003/10/09 18:38:34 reed Exp $
+
+table.cc:171: error: ISO C++ forbids variable-size array `border'
+http://bugs.kde.org/show_bug.cgi?id=62906
+
+--- filters/kword/latex/export/table.cc~	2002-05-25 03:16:02.000000000 -0700
++++ filters/kword/latex/export/table.cc	2003-08-19 14:03:48.000000000 -0700
+@@ -20,6 +20,7 @@
+ */
+ 
+ #include <kdebug.h>		/* for kdDebug stream */
++#include <qbitarray.h>
+ #include "listtable.h"
+ #include "texte.h"
+ 
+@@ -168,7 +169,7 @@
+ void Table::generateTopLineBorder(QTextStream& out, int row)
+ {
+ 	Element* elt = 0;
+-	bool border[getMaxCol()];
++	QBitArray border(getMaxCol());
+ 	bool fullLine = true;
+ 	for(int index = 0; index <= getMaxCol(); index++)
+ 	{
+@@ -179,11 +180,11 @@
+ 		/* If the element has a border display it here */
+ 		if(elt->hasTopBorder())
+ 		{
+-			border[index] = true;
++			border[index] = 1;
+ 		}
+ 		else
+ 		{
+-			border[index] = false;
++			border[index] = 0;
+ 			fullLine = false;
+ 		}
+ 	}
+@@ -221,7 +222,7 @@
+ void Table::generateBottomLineBorder(QTextStream& out, int row)
+ {
+ 	Element* elt = 0;
+-	bool border[getMaxCol()];
++	QBitArray border(getMaxCol());
+ 	bool fullLine = true;
+ 
+ 	for(int index = 0; index <= getMaxCol(); index++)
+@@ -232,11 +233,11 @@
+ 		/* If the element has a border display it here */
+ 		if(elt->hasBottomBorder())
+ 		{
+-			border[index] = true;
++			border[index] = 1;
+ 		}
+ 		else
+ 		{
+-			border[index] = false;
++			border[index] = 0;
+ 			fullLine = false;
+ 		}
+ 	}
+@@ -256,7 +257,7 @@
+ 			{
+ 				int begin = index;
+ 				int end = index;
+-				while(border[index] == true && index <= getMaxCol())
++				while(border[index] && index <= getMaxCol())
+ 				{
+ 					index = index + 1;
+ 				}
