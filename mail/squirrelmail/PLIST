@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/03/18 22:11:51 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/05/02 16:18:48 martti Exp $
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
@@ -13,6 +13,7 @@ share/squirrelmail/config/config_default.php
 share/squirrelmail/config/index.php
 share/squirrelmail/config/ri_once.pl
 share/squirrelmail/configure
+share/squirrelmail/data/.htaccess
 share/squirrelmail/data/default_pref
 share/squirrelmail/data/index.php
 share/squirrelmail/doc/README.russian_apache
@@ -21,6 +22,7 @@ share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.1.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.2.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.3.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.4.txt
+share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.5
 share/squirrelmail/doc/addressbook.txt
 share/squirrelmail/doc/db-backend.txt
 share/squirrelmail/doc/ie_ssl.txt
@@ -238,7 +240,6 @@ share/squirrelmail/images/sm_logo.png
 share/squirrelmail/images/sort_none.png
 share/squirrelmail/images/up_pointer.png
 share/squirrelmail/index.php
-share/squirrelmail/locale/timezones.cfg
 share/squirrelmail/locale/bg_BG/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/bg_BG/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/ca_ES/LC_MESSAGES/squirrelmail.mo
@@ -298,6 +299,7 @@ share/squirrelmail/locale/sv_SE/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/sv_SE/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/th_TH/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/th_TH/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/timezones.cfg
 share/squirrelmail/locale/tr_TR/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/tr_TR/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/zh_TW/LC_MESSAGES/squirrelmail.mo
@@ -314,8 +316,8 @@ share/squirrelmail/plugins/bug_report/README
 share/squirrelmail/plugins/bug_report/bug_report.php
 share/squirrelmail/plugins/bug_report/index.php
 share/squirrelmail/plugins/bug_report/setup.php
-share/squirrelmail/plugins/calendar/setup.php
 share/squirrelmail/plugins/calendar/README
+share/squirrelmail/plugins/calendar/calendar.php
 share/squirrelmail/plugins/calendar/calendar_data.php
 share/squirrelmail/plugins/calendar/day.php
 share/squirrelmail/plugins/calendar/event_create.php
@@ -323,32 +325,39 @@ share/squirrelmail/plugins/calendar/event_delete.php
 share/squirrelmail/plugins/calendar/event_edit.php
 share/squirrelmail/plugins/calendar/functions.php
 share/squirrelmail/plugins/calendar/index.php
-share/squirrelmail/plugins/calendar/calendar.php
-share/squirrelmail/plugins/delete_move_next/index.php
+share/squirrelmail/plugins/calendar/setup.php
 share/squirrelmail/plugins/delete_move_next/README
+share/squirrelmail/plugins/delete_move_next/index.php
 share/squirrelmail/plugins/delete_move_next/setup.php
 share/squirrelmail/plugins/filters/CHANGES
 share/squirrelmail/plugins/filters/README
+share/squirrelmail/plugins/filters/bulkquery/INSTALL
+share/squirrelmail/plugins/filters/bulkquery/Makefile
+share/squirrelmail/plugins/filters/bulkquery/README
+share/squirrelmail/plugins/filters/bulkquery/bq.in
+share/squirrelmail/plugins/filters/bulkquery/bq.out
+share/squirrelmail/plugins/filters/bulkquery/bulkquery.c
 share/squirrelmail/plugins/filters/filters.php
 share/squirrelmail/plugins/filters/index.php
 share/squirrelmail/plugins/filters/options.php
 share/squirrelmail/plugins/filters/setup.php
 share/squirrelmail/plugins/filters/spamoptions.php
 share/squirrelmail/plugins/index.php
-share/squirrelmail/plugins/listcommands/index.php
 share/squirrelmail/plugins/listcommands/README
+share/squirrelmail/plugins/listcommands/index.php
 share/squirrelmail/plugins/listcommands/mailout.php
 share/squirrelmail/plugins/listcommands/setup.php
 share/squirrelmail/plugins/mail_fetch/README
 share/squirrelmail/plugins/mail_fetch/class.POP3.php
 share/squirrelmail/plugins/mail_fetch/fetch.php
 share/squirrelmail/plugins/mail_fetch/functions.php
+share/squirrelmail/plugins/mail_fetch/index.php
 share/squirrelmail/plugins/mail_fetch/options.php
 share/squirrelmail/plugins/mail_fetch/setup.php
-share/squirrelmail/plugins/mail_fetch/index.php
 share/squirrelmail/plugins/make_archive.pl
 share/squirrelmail/plugins/newmail/HISTORY
 share/squirrelmail/plugins/newmail/README
+share/squirrelmail/plugins/newmail/index.php
 share/squirrelmail/plugins/newmail/newmail.php
 share/squirrelmail/plugins/newmail/newmail_opt.php
 share/squirrelmail/plugins/newmail/setup.php
@@ -357,12 +366,11 @@ share/squirrelmail/plugins/newmail/sounds/Friends.wav
 share/squirrelmail/plugins/newmail/sounds/MontyPython.wav
 share/squirrelmail/plugins/newmail/sounds/Notify.wav
 share/squirrelmail/plugins/newmail/testsound.php
-share/squirrelmail/plugins/newmail/index.php
-share/squirrelmail/plugins/sent_subfolders/setup.php
 share/squirrelmail/plugins/sent_subfolders/index.php
+share/squirrelmail/plugins/sent_subfolders/setup.php
+share/squirrelmail/plugins/spamcop/README
 share/squirrelmail/plugins/spamcop/index.php
 share/squirrelmail/plugins/spamcop/options.php
-share/squirrelmail/plugins/spamcop/README
 share/squirrelmail/plugins/spamcop/setup.php
 share/squirrelmail/plugins/spamcop/spamcop.php
 share/squirrelmail/plugins/squirrelspell/INSTALL
@@ -505,6 +513,7 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/plugins/newmail
 @dirrm share/squirrelmail/plugins/mail_fetch
 @dirrm share/squirrelmail/plugins/listcommands
+@dirrm share/squirrelmail/plugins/filters/bulkquery
 @dirrm share/squirrelmail/plugins/filters
 @dirrm share/squirrelmail/plugins/delete_move_next
 @dirrm share/squirrelmail/plugins/calendar
