@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.39 2004/07/29 21:31:00 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.40 2004/07/29 21:34:52 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -74,4 +74,6 @@ Pullup ticket 74, requested by Grant Beattie [agc 2004-07-28]
 	PLIST fix for fltk
 Pullup ticket 75, requested by Grant Beattie [agc 2004-07-29]
 	sites changes to bsd.sites.mk
+Pullup ticket 76, requested by Grant Beattie [agc 2004-07-29]
+	build fix for tcpdpriv
 
