@@ -1,11 +1,11 @@
 #!/bin/sh
 #
-# $NetBSD: configure,v 1.3 1998/08/29 18:05:57 kim Exp $
+# $NetBSD: configure,v 1.4 2000/03/26 22:33:18 kim Exp $
 #
 # Id: configure,v 1.1.1.1 1997/10/27 05:01:31 hubertf Exp
 #
 cd ${WRKSRC}
-for i in do_unlinks mirror.pl mm pkgs_to_mmin
+for i in do_unlinks.pl mirror.pl mm.pl pkgs_to_mmin.pl
 do
     sed \
 	-e s:!!PREFIX!!:$PREFIX:g \
