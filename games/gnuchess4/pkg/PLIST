@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/26 14:44:41 jlam Exp $
+bin/gnuchess
+bin/gnuchessr
+bin/gnuchessn
+bin/gnuchessx
+bin/gnuchessc
+bin/postprint
+bin/gnuan
+bin/game
+share/gnuchess/gnuchess.lang
+share/gnuchess/eco.pgn
+share/gnuchess/gnuchess.data
+share/gnuchess/gnuchess.eco
+share/doc/gnuchess/ARTICLE
+share/doc/gnuchess/ARTICLE.2
+share/doc/gnuchess/CHESSTOOL
+share/doc/gnuchess/FAQ
+share/doc/gnuchess/HEURISTICS
+share/doc/gnuchess/MOVE-GEN
+share/doc/gnuchess/README.font
+share/doc/gnuchess/README.output
+man/man6/game.6
+man/man6/gnuan.6
+man/man6/gnuchess.6
+man/man6/postprint.6
+@dirrm share/gnuchess
+@dirrm share/doc/gnuchess
