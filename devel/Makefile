@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.461 2004/02/20 03:58:00 minskim Exp $
+# $NetBSD: Makefile,v 1.462 2004/02/20 04:07:53 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -258,6 +258,7 @@ SUBDIR+=	p5-BSD-Resource
 SUBDIR+=	p5-Bit-Vector
 SUBDIR+=	p5-Cache-Cache
 SUBDIR+=	p5-Carp-Assert
+SUBDIR+=	p5-Class-Accessor
 SUBDIR+=	p5-Class-Container
 SUBDIR+=	p5-Class-Data-Inheritable
 SUBDIR+=	p5-Class-Loader
