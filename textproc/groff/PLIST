@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2003/01/05 01:07:57 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/16 08:59:39 wiz Exp $
 bin/addftinfo
 bin/afmtodit
 bin/eqn
@@ -94,6 +94,8 @@ share/doc/groff/${PKGVERSION}/examples/elvis_syntax
 share/doc/groff/${PKGVERSION}/examples/grnexmpl.g
 share/doc/groff/${PKGVERSION}/examples/grnexmpl.me
 share/doc/groff/${PKGVERSION}/examples/grnexmpl.ps
+share/doc/groff/${PKGVERSION}/examples/img/webpage1.png
+share/doc/groff/${PKGVERSION}/examples/img/webpage2.png
 share/doc/groff/${PKGVERSION}/examples/letter.mom
 share/doc/groff/${PKGVERSION}/examples/letter.ps
 share/doc/groff/${PKGVERSION}/examples/macros.mom
@@ -103,8 +105,57 @@ share/doc/groff/${PKGVERSION}/examples/typeset.mom
 share/doc/groff/${PKGVERSION}/examples/typeset.ps
 share/doc/groff/${PKGVERSION}/examples/typewrite.mom
 share/doc/groff/${PKGVERSION}/examples/typewrite.ps
+share/doc/groff/${PKGVERSION}/examples/webpage.html
 share/doc/groff/${PKGVERSION}/examples/webpage.ms
 share/doc/groff/${PKGVERSION}/examples/webpage.ps
+share/doc/groff/${PKGVERSION}/html/img/pic1.png
+share/doc/groff/${PKGVERSION}/html/img/pic10.png
+share/doc/groff/${PKGVERSION}/html/img/pic11.png
+share/doc/groff/${PKGVERSION}/html/img/pic12.png
+share/doc/groff/${PKGVERSION}/html/img/pic13.png
+share/doc/groff/${PKGVERSION}/html/img/pic14.png
+share/doc/groff/${PKGVERSION}/html/img/pic15.png
+share/doc/groff/${PKGVERSION}/html/img/pic16.png
+share/doc/groff/${PKGVERSION}/html/img/pic17.png
+share/doc/groff/${PKGVERSION}/html/img/pic18.png
+share/doc/groff/${PKGVERSION}/html/img/pic19.png
+share/doc/groff/${PKGVERSION}/html/img/pic2.png
+share/doc/groff/${PKGVERSION}/html/img/pic20.png
+share/doc/groff/${PKGVERSION}/html/img/pic21.png
+share/doc/groff/${PKGVERSION}/html/img/pic22.png
+share/doc/groff/${PKGVERSION}/html/img/pic23.png
+share/doc/groff/${PKGVERSION}/html/img/pic24.png
+share/doc/groff/${PKGVERSION}/html/img/pic25.png
+share/doc/groff/${PKGVERSION}/html/img/pic26.png
+share/doc/groff/${PKGVERSION}/html/img/pic27.png
+share/doc/groff/${PKGVERSION}/html/img/pic28.png
+share/doc/groff/${PKGVERSION}/html/img/pic29.png
+share/doc/groff/${PKGVERSION}/html/img/pic3.png
+share/doc/groff/${PKGVERSION}/html/img/pic30.png
+share/doc/groff/${PKGVERSION}/html/img/pic31.png
+share/doc/groff/${PKGVERSION}/html/img/pic32.png
+share/doc/groff/${PKGVERSION}/html/img/pic33.png
+share/doc/groff/${PKGVERSION}/html/img/pic34.png
+share/doc/groff/${PKGVERSION}/html/img/pic35.png
+share/doc/groff/${PKGVERSION}/html/img/pic36.png
+share/doc/groff/${PKGVERSION}/html/img/pic37.png
+share/doc/groff/${PKGVERSION}/html/img/pic38.png
+share/doc/groff/${PKGVERSION}/html/img/pic39.png
+share/doc/groff/${PKGVERSION}/html/img/pic4.png
+share/doc/groff/${PKGVERSION}/html/img/pic40.png
+share/doc/groff/${PKGVERSION}/html/img/pic41.png
+share/doc/groff/${PKGVERSION}/html/img/pic42.png
+share/doc/groff/${PKGVERSION}/html/img/pic43.png
+share/doc/groff/${PKGVERSION}/html/img/pic44.png
+share/doc/groff/${PKGVERSION}/html/img/pic46.png
+share/doc/groff/${PKGVERSION}/html/img/pic47.png
+share/doc/groff/${PKGVERSION}/html/img/pic48.png
+share/doc/groff/${PKGVERSION}/html/img/pic49.png
+share/doc/groff/${PKGVERSION}/html/img/pic5.png
+share/doc/groff/${PKGVERSION}/html/img/pic6.png
+share/doc/groff/${PKGVERSION}/html/img/pic7.png
+share/doc/groff/${PKGVERSION}/html/img/pic8.png
+share/doc/groff/${PKGVERSION}/html/img/pic9.png
 share/doc/groff/${PKGVERSION}/html/momdoc/appendices.html
 share/doc/groff/${PKGVERSION}/html/momdoc/cover.html
 share/doc/groff/${PKGVERSION}/html/momdoc/definitions.html
@@ -121,6 +172,7 @@ share/doc/groff/${PKGVERSION}/html/momdoc/toc.html
 share/doc/groff/${PKGVERSION}/html/momdoc/typemacdoc.html
 share/doc/groff/${PKGVERSION}/html/momdoc/typesetting.html
 share/doc/groff/${PKGVERSION}/html/momdoc/using.html
+share/doc/groff/${PKGVERSION}/html/pic.html
 share/doc/groff/${PKGVERSION}/meintro.me
 share/doc/groff/${PKGVERSION}/meintro.ps
 share/doc/groff/${PKGVERSION}/meref.me
@@ -463,7 +515,9 @@ share/groff/site-tmac/mdoc.local
 @dirrm share/groff/${PKGVERSION}
 @dirrm share/groff
 @dirrm share/doc/groff/${PKGVERSION}/html/momdoc
+@dirrm share/doc/groff/${PKGVERSION}/html/img
 @dirrm share/doc/groff/${PKGVERSION}/html
+@dirrm share/doc/groff/${PKGVERSION}/examples/img
 @dirrm share/doc/groff/${PKGVERSION}/examples
 @dirrm share/doc/groff/${PKGVERSION}
 @dirrm share/doc/groff
