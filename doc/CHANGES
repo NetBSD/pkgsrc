@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.596 2002/11/25 12:36:22 wiz Exp $
+$NetBSD: CHANGES,v 1.597 2002/11/25 14:47:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3713,3 +3713,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated lynx to 2.8.4.1.4 [itojun 2002-11-25]
 	vcdimager: Downgraded to 0.6.2 [wiz 2002-11-25]
 	Added vcdimager-devel-0.7.12 [wiz 2002-11-25]
+	Updated squid to 2.5.2nb1 [taca 2002-11-25]
