@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2003/02/14 21:14:38 salo Exp $
+$NetBSD: distinfo,v 1.6 2004/04/27 19:08:34 tv Exp $
 
 SHA1 (pkgconfig-0.15.0.tar.gz) = 1019c8027c0cf94bca680886f4e2ae4e629a2a97
 Size (pkgconfig-0.15.0.tar.gz) = 610697 bytes
+SHA1 (patch-aa) = 2f561ff86d639282b26aeb919b6de4ce1e1955f3
