@@ -1,25 +1,9 @@
-$NetBSD: patch-aa,v 1.5 1999/06/29 00:58:30 hubertf Exp $
-
---- Makefile.orig	Tue May 25 06:22:37 1999
-+++ Makefile	Sun Jun 13 09:21:33 1999
-@@ -1,19 +1,14 @@
+--- Makefile.orig	Mon Jul 12 02:31:07 1999
++++ Makefile	Mon Jul 12 02:31:40 1999
+@@ -1,6 +1,4 @@
  
 -PREFIX=/usr/local
 -
  GTK_INCLUDE = `gtk-config --cflags`
  GTK_LIB = `gtk-config --libs`
  IMLIB_INCLUDE = `imlib-config --cflags-gdk`
- IMLIB_LIB = `imlib-config --libs-gdk`
- 
--CFLAGS = $(GTK_INCLUDE) $(IMLIB_INCLUDE)
-+CFLAGS += $(GTK_INCLUDE) $(IMLIB_INCLUDE)
- LDFLAGS = $(GTK_LIB) $(IMLIB_LIB)
- 
- #The following commented out lines are for replacing the stock defines on
- #the named platforms.
--
--#for NetBSD:
--#LDFLAGS = $(GTK_LIB) $(IMLIB_LIB) -lossaudio
- 
- #for IRIX
- #LDFLAGS = $(GTK_LIB) $(IMLIB_LIB) -laudio
