@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/01/05 11:05:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/01/06 19:13:13 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
@@ -103,7 +103,7 @@ _BLNK_LIBINTL+=			${BUILDLINK_LDADD.iconv}
 _BLNK_LIBINTL=		-lintl
 .    else
 _BLNK_LIBINTL=		# empty
-BUILDLINK_TRANSFORM+=	S:-lintl:
+BUILDLINK_TRANSFORM+=	l:intl:
 .    endif
 .  endif
 
