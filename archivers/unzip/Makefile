@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/02/15 17:51:46 fredb Exp $
+# $NetBSD: Makefile,v 1.25 2001/02/15 18:10:48 fredb Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -6,7 +6,6 @@ DISTNAME=	unzip542
 PKGNAME=	unzip-5.42
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	archivers
-COMMENT=	List, test and extract compressed files in a ZIP archive
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
 		ftp://ftp.icce.rug.nl/infozip/src/ \
 		ftp://uiarchive.cso.uiuc.edu/pub/packages/zip/src/
