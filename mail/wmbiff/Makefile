@@ -1,20 +1,25 @@
-# $NetBSD: Makefile,v 1.6 2002/10/21 12:35:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/01/31 12:57:07 tron Exp $
 
-DISTNAME=	wmbiff-0.3.1
-PKGREVISION=	1
+DISTNAME=	wmbiff-0.4.13
 CATEGORIES=	mail x11
 MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=wmbiff/)
 
-MAINTAINER=	magick@zhadum.de
+MAINTAINER=	tron@zhadum.de
 HOMEPAGE=	http://sourceforge.net/projects/wmbiff/
 COMMENT=	xbuffy like "mail-checker" for WindowMaker
 
+GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 USE_GMAKE=	YES
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/wmbiff
+EX_DIR=		${PREFIX}/share/examples/wmbiff
 
+post-install:
+	${INSTALL_DATA_DIR} ${EX_DIR}
+	${INSTALL_DATA} ${WRKSRC}/wmbiff/sample.wmbiffrc ${EX_DIR}
+
+.include "../../devel/rx/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../wm/windowmaker/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
