@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.738 2002/12/09 19:20:48 abs Exp $
+$NetBSD: CHANGES,v 1.739 2002/12/09 19:31:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3880,3 +3880,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated p5-HTML-FixEntities to 1.03 [abs 2002-12-09]
 	Updated p5-Text-Substitute to 0.15 [abs 2002-12-09]
 	Updated p5-Text-CSV-Hash to 0.16 [abs 2002-12-09]
+	Added grhino-0.7.0 [wiz 2002-12-09]
