@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.42 2003/08/28 19:12:51 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.43 2003/08/29 00:53:05 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -126,12 +126,11 @@ PKG_FAIL_REASON+=	"Please undefine USE_BUILDLINK2 or USE_BUILDLINK3."
 
 .if !empty(USE_BUILDLINK3:M[nN][oO])
 #
-# Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
-# that if no buildlink2.mk files are included, then they still point to
-# where headers and libraries for installed packages and X11R6 may be found.
+# Set the default BUILDLINK_DIR, BUILDLINK_X11_DIR so that if no
+# buildlink2.mk files are included, then they still point to where headers
+# and libraries for installed packages and X11R6 may be found.
 #
 BUILDLINK_DIR?=		${LOCALBASE}
-BUILDLINK_X11PKG_DIR?=	${X11BASE}
 BUILDLINK_X11_DIR?=	${X11BASE}
 .endif
 
@@ -164,7 +163,6 @@ _OPSYS_NEEDS_XPKGWEDGE?=	no
 .  if defined(USE_X11BASE)
 .    if !empty(_OPSYS_NEEDS_XPKGWEDGE:M[yY][eE][sS])
 BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
-BUILDLINK_X11PKG_DIR=	${LOCALBASE}
 .    endif
 PREFIX=			${X11PREFIX}
 .  elif defined(USE_CROSSBASE)
