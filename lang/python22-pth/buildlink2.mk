@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:55:36 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/01/29 10:33:51 grant Exp $
 
 .if !defined(PYTHON22_BUILDLINK2_MK)
 PYTHON22_BUILDLINK2_MK=	# defined
@@ -18,7 +18,7 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.python22-pth=python22-pth
 BUILDLINK_PREFIX.python22-pth_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES_CMD.python22-pth= \
 	${BUILDLINK_PLIST_CMD.python22-pth} |				\
-		${GREP} '^\(include\|lib.*/lib[^/]*$$\)'
+		${EGREP} '^(include|lib.*/lib[^/]*$$)'
 BUILDLINK_TRANSFORM+=		l:python:python2p2
 
 BUILDLINK_CPPFLAGS.python22-pth+= \
