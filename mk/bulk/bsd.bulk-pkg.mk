@@ -1,4 +1,4 @@
-#	$Id: bsd.bulk-pkg.mk,v 1.2 2000/07/28 01:16:04 hubertf Exp $
+#	$Id: bsd.bulk-pkg.mk,v 1.3 2000/07/31 22:22:33 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -147,6 +147,8 @@ bulk-package:
 			${ECHO_MSG} ${MAKE} -k clean CLEANDEPENDS=YES ; \
 			${DO}       ${MAKE} -k clean CLEANDEPENDS=YES ; \
 		fi ; \
+		${ECHO_MSG} ${MAKE} depends '(${PKGNAME})' 2>&1 | tee -a ${BUILDLOG}; \
+		${DO}     ( ${MAKE} depends 2>&1 | tee -a ${BUILDLOG} ) || true; \
 		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 | tee -a ${BUILDLOG}; \
 		${DO}     ( ${MAKE} package 2>&1 | tee -a ${BUILDLOG} ) || true; \
 		if [ -f ${PKGFILE} ]; then \
