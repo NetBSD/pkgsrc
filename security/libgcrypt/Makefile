@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/25 15:51:51 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/29 07:42:16 jlam Exp $
 #
 
 DISTNAME=	libgcrypt-1.1.92
@@ -23,22 +23,16 @@ INFO_FILES=		gcrypt.info
 
 .include "../../mk/bsd.prefs.mk"
 
-# Our "libtool" doesn't like the crafted ".lo" files with the assembly
-# implementations. So we use the bundled "libtool" for NetBSD-i386 ELF
-# and ours otherwise.
-#
 .if empty(MACHINE_PLATFORM:MNetBSD-*-i386) && \
     empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
 CONFIGURE_ARGS+=	--disable-asm
-LIBTOOL_OVERRIDE+=	libtool
-.else
-LIBTOOL_OVERRIDE=	# empty
 .endif
 
+.include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "native")
 CONFIGURE_ARGS+=	--without-pth
 .endif
 
-.include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
