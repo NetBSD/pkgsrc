@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.4 1998/03/16 11:16:17 frueauf Exp $
 include/wine/windows.h
 include/wine/wintypes.h
 lib/libwine.so.1.0
