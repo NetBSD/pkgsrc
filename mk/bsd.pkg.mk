@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.175 1998/10/12 19:40:33 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.176 1998/10/13 14:51:31 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1922,7 +1922,7 @@ fake-pkg: ${PLIST} ${DESCR}
 			done;						\
 		fi;							\
 		pkgsrcdir=`(cd ../.. ; /bin/pwd)`;			\
-		${GREP} '\$NetBSD' $$files | ${SED} -e 's|^'$$pkgsrcdir'/||' > ${PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
+		${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^'$$pkgsrcdir'/||' > ${PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
 		for dep in `${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true ECHO_MSG=${TRUE} | sort -u`; do \
 			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
 			${ECHO} "a sanity check should be put in here to prevent some user having the pkg installed/registered twice somehow - HF" >/dev/null ; \
