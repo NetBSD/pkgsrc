@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.116 2002/12/29 23:47:51 chris Exp $
+$NetBSD: TODO,v 1.117 2002/12/31 11:29:38 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -77,7 +77,6 @@ Suggested package updates
 	o bluefish-0.8
 	o bonnie++-1.03
 	o bzflag-1.7g0
-	o canna-lib-3.6.1 [pkg/19340]
 	o cdlabelgen-2.5.0
 	o cdrecord-1.11a39 [pkg/19073]
 	o cdrecord-1.11a40
