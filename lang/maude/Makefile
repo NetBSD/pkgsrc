@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:19:16 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/02 23:02:06 snj Exp $
 #
 
 DISTNAME=	maude-src
@@ -21,13 +21,13 @@ BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 WRKSRC=		${WRKDIR}/Maude-${PKGVERSION}
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/maude
 
 post-install:
 	${INSTALL_DATA} ${DISTDIR}/fm.maude ${PREFIX}/share/maude
-.include "../../devel/buddy/buildlink2.mk"
-.include "../../devel/gmp/buildlink2.mk"
-.include "../../devel/libtecla/buildlink2.mk"
+.include "../../devel/buddy/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../devel/libtecla/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
