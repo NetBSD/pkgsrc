@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2004/03/29 05:43:36 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2004/07/24 06:48:51 grant Exp $
 
 _X11_XCURSOR_XCURSOR_H=	${X11BASE}/include/X11/Xcursor/Xcursor.h
 
@@ -13,13 +13,13 @@ IS_BUILTIN.xcursor=	yes
 # or if the built-in one is sufficient.
 #
 _XCURSOR_MAJOR!=	\
-	${AWK} '/\#define[ 	]*XCURSOR_MAJOR/ { print $$3 }'		\
+	${AWK} '/\#define[ 	]*XCURSOR_(LIB_)?MAJOR/ { print $$3 }'		\
 		${_X11_XCURSOR_XCURSOR_H}
 _XCURSOR_MINOR!=	\
-	${AWK} '/\#define[ 	]*XCURSOR_MINOR/ { print "."$$3 }'	\
+	${AWK} '/\#define[ 	]*XCURSOR_(LIB_)?MINOR/ { print "."$$3 }'	\
 		${_X11_XCURSOR_XCURSOR_H}
 _XCURSOR_REVISION!=	\
-	${AWK} '/\#define[ 	]*XCURSOR_MINOR/ { print "."$$3 }'	\
+	${AWK} '/\#define[ 	]*XCURSOR_(LIB_)?MINOR/ { print "."$$3 }'	\
 		${_X11_XCURSOR_XCURSOR_H}
 _XCURSOR_VERSION=	${_XCURSOR_MAJOR}${_XCURSOR_MINOR}${_XCURSOR_REVISION}
 BUILTIN_PKG.xcursor=	xcursor-${_XCURSOR_VERSION}
