@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/17 16:56:02 schmonz Exp $
+include/dlfcn.h
+lib/libdl.0.dylib
+lib/libdl.a
+lib/libdl.dylib
