@@ -48,6 +48,9 @@
 /* Define to 1 if you have the <sys/ioctl.h> header file. */
 #undef HAVE_SYS_IOCTL_H
 
+/* Define to 1 if you have the <sys/tape.h> header file. */
+#undef HAVE_SYS_TAPE_H
+
 /* Define to 1 if you have the <sys/mtio.h> header file. */
 #undef HAVE_SYS_MTIO_H
 
