@@ -1,0 +1,22 @@
+$NetBSD: patch-am,v 1.3 1999/09/01 07:41:03 itojun Exp $
+
+--- config.layout.orig	Thu Jul 29 11:12:43 1999
++++ config.layout	Wed Sep  1 00:21:55 1999
+@@ -21,7 +21,7 @@
+     datadir:       $prefix
+     iconsdir:      $datadir/icons
+     htdocsdir:     $datadir/htdocs
+-    cgidir:        $datadir/cgi-bin
++    cgidir:        $prefix/libexec/cgi-bin
+     includedir:    $prefix/include
+     localstatedir: $prefix
+     runtimedir:    $localstatedir/logs
+@@ -42,7 +42,7 @@
+     datadir:       $prefix/share+
+     iconsdir:      $datadir/icons
+     htdocsdir:     $datadir/htdocs
+-    cgidir:        $datadir/cgi-bin
++    cgidir:        $prefix/libexec/cgi-bin
+     includedir:    $prefix/include+
+     localstatedir: $prefix/var+
+     runtimedir:    $localstatedir/run
