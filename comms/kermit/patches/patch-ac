@@ -1,0 +1,12 @@
+--- ckuus5.c.orig	Thu Jun 18 04:32:48 1998
++++ ckuus5.c	Thu Jun 18 05:00:44 1998
+@@ -2540,4 +2540,6 @@
+ 		q[i] = m_arg[maclvl][i];
+-	    debug(F111,"popclvl mac 8",
+-		  (maclvl > -1 && macx[maclvl]) ? macx[maclvl] : "",maclvl);
++		if (maclvl > -1 && macx[maclvl])
++		    debug(F111,"popclvl mac 8",macx[maclvl],maclvl);
++		else
++		    debug(F111,"popclvl mac 8","",maclvl);
+ 	} else maclvl = -1;
+
