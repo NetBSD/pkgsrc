@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.9 1998/12/19 18:44:45 tsarna Exp $
+# $NetBSD: Makefile,v 1.10 1999/01/04 13:11:03 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
 #    SUBDIR += db
     SUBDIR += gdbm
 #    SUBDIR += gnats
+    SUBDIR += gtksql
 #    SUBDIR += msql
     SUBDIR += mysql
 #    SUBDIR += p5-DBD-mysql
