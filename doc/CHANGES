@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3677 2003/10/11 13:42:27 grant Exp $
+$NetBSD: CHANGES,v 1.3678 2003/10/11 15:01:30 cube Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4160,3 +4160,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cadaver to 0.21.0nb3 [grant 2003-10-11]
 	Updated neon to 0.24.1nb2 [grant 2003-10-11]
 	Updated paragui to 1.0.4nb2 [grant 2003-10-11]
+	Updated mpgtx to 1.3 [cube 2003-10-11]
