@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.19 2002/01/04 12:05:12 martti Exp $
+# $NetBSD: Makefile.common,v 1.20 2002/01/08 09:20:30 martti Exp $
 
-VIM_VERSION=		6.0.118
+VIM_VERSION=		6.0.120
 DISTNAME=		vim-${VIM_VERSION:C/\.[0-9]*$//}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
@@ -11,7 +11,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 #
 # Following patches were ignored:
-# 12, 27, 48, 53, 64, 70, 73, 87, 93, 106, 107, 115, 116, 117
+# 12, 27, 48, 53, 64, 70, 73, 87, 93, 106, 107, 115, 116, 117, 119
 #
 PATCH_SITES=		${MASTER_SITES:S/unix/patches/}
 .for p in		001 002 003 004 005 006 007 008 009 010 \
@@ -25,7 +25,7 @@ PATCH_SITES=		${MASTER_SITES:S/unix/patches/}
 			081 082 083 084 085 086 088 089 090 \
 			091 092 094 095 096 097 098 099 100 \
 			101 102 103 104 105 108 109 110 \
-			111 112 113 114 118
+			111 112 113 114 118 120
 PATCHFILES+=		${VIM_VERSION:C/\.[0-9]*$//}.${p}
 .endfor
 
