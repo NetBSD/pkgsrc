@@ -1,20 +1,27 @@
-$NetBSD: patch-ab,v 1.1 2000/01/16 21:41:09 jwise Exp $
---- src/etc/tomcat.conf.orig	Sun Jan 16 15:21:00 2000
-+++ src/etc/tomcat.conf	Sun Jan 16 16:12:03 2000
-@@ -10,7 +10,7 @@
- # Tell Apache on Unix to load the Apache JServ communication module
- # For shared object builds only!!!
- # @LOAD_OR_NOT@LoadModule jserv_module @LIBEXECDIR@/mod_jserv.so
--LoadModule jserv_module libexec/mod_jserv.so
-+LoadModule jserv_module @LOCALBASE@/lib/httpd/mod_jserv.so
+--- ./src/share/org/apache/tomcat/task/ApacheConfig.java.orig	Sun May 14 18:11:20 2000
++++ ./src/share/org/apache/tomcat/task/ApacheConfig.java	Sun May 14 18:13:28 2000
+@@ -97,7 +97,7 @@
+ 	    } else {
+ 		// XXX XXX change it to mod_jserv_${os.name}.so, put all so in tomcat
+ 		// home
+-		pw.println("LoadModule jserv_module libexec/mod_jserv.so");
++		pw.println("LoadModule jserv_module @LOCALBASE@/lib/httpd/mod_jserv.so");
+ 	    }
  
- <IfModule mod_jserv.c>
- # Do not edit! 
-@@ -18,6 +18,7 @@
- ApJServDefaultProtocol ajpv12
- ApJServSecretKey DISABLED
- ApJServMountCopy on
-+ApJServLogFile /var/log/httpd/mod_jserv.log
- ApJServLogLevel notice
+ 	    pw.println("ApJServManual on");
+@@ -105,13 +105,14 @@
+ 	    pw.println("ApJServSecretKey DISABLED");
+ 	    pw.println("ApJServMountCopy on");
+ 	    pw.println("ApJServLogLevel notice");
++	    pw.println("ApJServLogFile /var/log/httpd/jserv/mod_jserv.log");
+ 	    pw.println();
+ 	    
+ 	    // XXX read it from ContextManager
+ 	    pw.println("ApJServDefaultPort 8007");
  
+ 	    pw.println();
+-	    pw.println("AddType test/jsp .jsp");
++	    pw.println("AddType text/jsp .jsp");
+ 	    pw.println("AddHandler jserv-servlet .jsp");
  
+ 	    
