@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:26:50 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/05 09:56:36 taca Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/03/31 11:52:07 flathill Exp $
 
 DISTNAME=	namazu-1.3.0.11
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.namazu.org/index.html.en
 COMMENT=	Namazu is a search engine software intended for easy use
 
 DEPENDS=	kakasi>=2.3.1:../../textproc/kakasi
-DEPENDS+=	nkf-1.7:../../converters/nkf
+DEPENDS+=	nkf>=1.7:../../converters/nkf
 .if !defined(WITH_CHASEN) || ${WITH_CHASEN} != NO
 DEPENDS+=	p5-Text-ChaSen>=1.0:../../textproc/p5-Text-ChaSen
 .endif
