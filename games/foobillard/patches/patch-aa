@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/09/25 04:41:39 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/27 13:08:40 adam Exp $
 
---- src/billard3d.c.orig	2003-08-19 06:04:36.000000000 +0200
-+++ src/billard3d.c	2003-08-19 06:07:00.000000000 +0200
+--- src/billard3d.c.orig	2004-04-24 01:20:49.000000000 +0000
++++ src/billard3d.c
 @@ -24,7 +24,14 @@
  #include <string.h>
  #include <math.h>
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/09/25 04:41:39 xtraeme Exp $
  
  #ifndef USE_SDL
  #include <GL/glut.h>
-@@ -4934,7 +4941,7 @@
+@@ -5000,7 +5007,7 @@ int main( int argc, char *argv[] )
  
     /* config file */
     load_config( &confv, &confc, argv, argc );
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/09/25 04:41:39 xtraeme Exp $
         DPRINTF("processing option %d=%s\n",act_option,optarg);
         process_option(act_option);
     }
-@@ -5032,7 +5039,7 @@
+@@ -5098,7 +5105,7 @@ int main( int argc, char *argv[] )
         fread( &ball_ball_snd.data[SOUND_NULLOFFS*2], 1, ball_ball_snd.len-SOUND_NULLOFFS*2*2 , f );
         fclose(f);
  
