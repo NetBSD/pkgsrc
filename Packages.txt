@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.227 2002/02/12 09:29:56 skrll Exp $
+# $NetBSD: Packages.txt,v 1.228 2002/02/12 09:36:00 skrll Exp $
 ###########################################################################
 
 			==========================
@@ -1049,8 +1049,9 @@ and for packages that need automake and autoconf:
 
 There are times when the configure process makes additional changes to the
 generated files, which then causes the build process to try to re-execute
-the automake sequence.  This may be overridden by setting AUTOMAKE_OVERRIDE
-to YES in the package Makefile.
+the automake sequence.  This is prevented by touching various files in
+the configure stage. If this causes problems with your package you can set
+AUTOMAKE_OVERRIDE to NO in the package Makefile.
 
 
  6.5 Package configuration files
