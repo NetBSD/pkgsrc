@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1774 2004/05/25 12:05:39 salo Exp $
+$NetBSD: TODO,v 1.1775 2004/05/25 15:12:49 adam Exp $
 
 Suggested new packages
 ======================
@@ -158,7 +158,6 @@ Suggested package updates
 =========================
 
 	o ImageViewer-0.6.3
-	o SDL_gfx-2.0.11
 	o TeXmacs-1.0.3.9
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
@@ -166,7 +165,6 @@ Suggested package updates
 	o ap-python-2.7.10
 	o apcupsd-3.10.13
 	o aqsis-0.9.1
-	o audacity-1.2.1
 	o avidemux-2.0.20
 	o balsa-1.4.4
 	o bind-9.3
