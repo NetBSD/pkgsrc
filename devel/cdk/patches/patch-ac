@@ -1,21 +1,8 @@
-$NetBSD: patch-ac,v 1.2 1998/12/02 10:59:37 frueauf Exp $
+$NetBSD: patch-ac,v 1.3 1999/07/06 07:57:22 jlam Exp $
 
---- cdk.h.orig	Tue Apr  7 09:24:54 1998
-+++ cdk.h	Tue Dec  1 16:08:34 1998
-@@ -34,11 +34,20 @@
-  * SUCH DAMAGE.
-  */
- 
-+/*#ifdef __NetBSD__
-+#define _maxx maxx
-+#define _maxy maxy
-+#define _begx begx
-+#define _begy begy
-+#define _curx curx
-+#define _cury cury
-+#endif*/
-+
- #ifdef	CDK_PERL_EXT
+--- include/cdk.h.orig	Wed Dec  9 12:13:17 1998
++++ include/cdk.h	Tue Jul  6 00:56:37 1999
+@@ -38,7 +38,7 @@
  #undef	instr
  #endif
  

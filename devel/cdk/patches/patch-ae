@@ -1,12 +1,13 @@
-$NetBSD: patch-ae,v 1.1.1.1 1998/12/01 23:27:36 garbled Exp $
---- matrix.c.orig	Tue Dec  1 14:10:31 1998
-+++ matrix.c	Tue Dec  1 14:10:45 1998
-@@ -469,7 +470,7 @@
+$NetBSD: patch-ae,v 1.2 1999/07/06 07:57:23 jlam Exp $
+
+--- matrix.c.orig	Mon Dec 14 15:45:35 1998
++++ matrix.c	Tue Jul  6 00:59:09 1999
+@@ -470,7 +470,7 @@
              case CDK_ENDOFLINE :
                   break;
  
 -            case KEY_BACKSPACE : case DELETE : case '' : case KEY_DC :
-+            case KEY_BACKSPACE : case DELETE : case '' : /*case KEY_DC : */
++            case KEY_BACKSPACE : case DELETE : case '' : /* case KEY_DC : */
                   if (matrix->colvalues[matrix->col] == vVIEWONLY)
                   {
                     Beep();
