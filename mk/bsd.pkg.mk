@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.565 2000/09/07 02:29:42 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.566 2000/09/07 15:26:52 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -956,19 +956,18 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 # Many ways to disable a package.
 #
 # If we're in BATCH mode and the package is interactive, or we're
-# in interactive mode and the package is non-interactive, skip all
-# the important targets.  The reason we have two modes is that
-# one might want to leave a build in BATCH mode running
-# overnight, then come back in the morning and do _only_ the
-# interactive ones that required your intervention.
-#
-# Don't attempt to build packages that require Motif if you don't
-# have Motif.
+# in interactive mode and the package is non-interactive, skip
+# all the important targets. The reason we have two modes is that
+# one might want to leave a build in BATCH mode running overnight,
+# then come back in the morning and do _only_ the interactive ones
+# that required your intervention.
 #
 # Ignore packages that can't be resold if building for a CDROM.
 #
-# Don't build a package if it's restricted and we don't want to get
-# into that.
+# Don't build a package if it's restricted and we don't want to
+# get into that.
+#
+# Don't attempt to build packages against X if we don't have X.
 #
 # Don't build a package if it's broken.
 ################################################################
