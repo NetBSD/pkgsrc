@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2000/06/06 13:22:29 itojun Exp $
+$NetBSD: patch-aa,v 1.11 2000/11/20 05:12:38 itojun Exp $
 
---- Makefile.orig	Mon Apr  3 00:27:30 2000
-+++ Makefile	Tue Jun  6 22:08:00 2000
+--- Makefile.orig	Sun Oct 22 03:32:41 2000
++++ Makefile	Mon Nov 20 13:03:42 2000
 @@ -16,9 +16,9 @@
  
  LOCALHOST=localhost:8080
@@ -42,24 +42,24 @@ $NetBSD: patch-aa,v 1.10 2000/06/06 13:22:29 itojun Exp $
  
  # For Solaris you need the following instead.
  #LIBRARY=-lnsl -lsocket
-@@ -289,13 +289,13 @@
+@@ -280,13 +280,13 @@
  	$(INSTALL) -c -m 644 wwwoffle.conf.man.install $(INSTDIR)/man/man5/wwwoffle.conf.5
  	[ -x $(INSTDIR)/man/man8 ] || $(INSTALL) -d -m 755 $(INSTDIR)/man/man8
  	$(INSTALL) -c -m 644 wwwoffled.man $(INSTDIR)/man/man8/wwwoffled.8
 -	[ -x $(INSTDIR)/doc/wwwoffle ] || $(INSTALL) -d -m 755 $(INSTDIR)/doc/wwwoffle
 +	[ -x $(INSTDIR)/share/doc/wwwoffle ] || $(INSTALL) -d -m 755 $(INSTDIR)/share/doc/wwwoffle
- 	for file in CHANGES.CONF CONVERT COPYING FAQ INSTALL NEWS README* UPGRADE ; do \
+ 	for file in CHANGES.CONF CONVERT COPYING FAQ INSTALL NEWS README* ; do \
 -	  $(INSTALL) -c -m 644 $$file $(INSTDIR)/doc/wwwoffle/$$file ;\
 +	  $(INSTALL) -c -m 644 $$file $(INSTDIR)/share/doc/wwwoffle/$$file ;\
  	done
  	[ "x$(LANG)" = "x" ] || [ ! -d lang-$(LANG) ] || ( cd lang-$(LANG) && \
- 	  for file in CHANGES.CONF CONVERT COPYING FAQ INSTALL NEWS README* UPGRADE ; do \
+ 	  for file in CHANGES.CONF CONVERT COPYING FAQ INSTALL NEWS README* ; do \
 -	    [ ! -f $$file ] || $(INSTALL) -c -m 644 $$file $(INSTDIR)/doc/wwwoffle/$$file-$(LANG) ;\
 +	    [ ! -f $$file ] || $(INSTALL) -c -m 644 $$file $(INSTDIR)/share/doc/wwwoffle/$$file-$(LANG) ;\
  	  done )
  
  
-@@ -369,7 +369,7 @@
+@@ -360,7 +360,7 @@
  	[    -f $(CONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 640 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf
  
  install_fixup-win32:
