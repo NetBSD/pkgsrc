@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/10/03 00:18:27 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/03/21 19:26:03 wiz Exp $
 #
 
 DISTNAME=	wml-2.0.9
@@ -45,7 +45,7 @@ pre-configure:
 
 post-install:
 	cd ${PREFIX}/man/cat1 ; \
-	for i in wml_aux_linklint wml_aux_tidy wml_aux_txt2html wml_p4_gm4 ; \
+	for i in wml_aux_tidy wml_aux_txt2html wml_p4_gm4 ; \
 	do \
 	    ${MV} $${i}.1 $${i}.0 ; \
 	done
