@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/07/20 00:01:56 tv Exp $
+# $NetBSD: Makefile,v 1.17 1998/07/21 21:13:46 tv Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -24,6 +24,6 @@ CONFIGURE_ARGS=	"--x-inc=${X11BASE}/include -I${LOCALBASE}/include -I${LOCALBASE
 		"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${PREFIX}/include/qt"
 CONFIGURE_ENV=	CXXFLAGS="${CFLAGS}" \
-		LIBTOOL=${LOCALBASE}/bin/libtool
+		LIBTOOL="${LOCALBASE}/bin/libtool --install-la"
 
 .include "../../mk/bsd.pkg.mk"
