@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/06/26 22:42:23 wulf Exp $
+
+--- rpcrig/rpcrig.x.orig	2003-06-26 21:44:28.000000000 +0930
++++ rpcrig/rpcrig.x	2003-06-26 21:44:58.000000000 +0930
+@@ -31,7 +31,7 @@
+ 
+ typedef unsigned int model_x;
+ typedef int vfo_x;
+-typedef hyper freq_x;
++typedef longlong_t freq_x;
+ typedef unsigned int rmode_x;
+ typedef int pbwidth_x;
+ typedef unsigned long split_x;
+@@ -39,7 +39,7 @@
+ typedef int dcd_x;
+ typedef long vfo_op_x;
+ typedef long shortfreq_x;
+-typedef unsigned hyper setting_x;
++typedef u_longlong_t setting_x;
+ typedef long ant_x;
+ typedef long ann_x;
+ typedef int rptr_shift_x;

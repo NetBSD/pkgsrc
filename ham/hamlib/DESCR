@@ -1,0 +1,3 @@
+The Ham Radio Control Library, Hamlib for short, provides a standardized
+API layer enabling access and control to a wide variety of digital
+communications equipment.
