@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/10/31 07:31:45 zuntum Exp $
+# $NetBSD: Makefile,v 1.20 2001/11/19 08:03:37 tron Exp $
 #
 
 DISTNAME=	pkgdiff-0.102
@@ -10,6 +10,7 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/Packages.txt
 COMMENT=	Tools to ease creating and maintaining patches for pkgsrc
 
+PERL5_REQD=	5.6.0
 USE_PERL5=	YES
 
 EXTRACT_ONLY=	# empty
