@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.5 2004/10/13 02:08:43 tv Exp $
+$NetBSD: patch-ah,v 1.6 2005/02/10 13:21:20 adam Exp $
 
---- src/tools/qdatastream.cpp.orig	Thu Aug  5 10:41:57 2004
+--- src/tools/qdatastream.cpp.orig	2005-01-21 17:16:04.000000000 +0000
 +++ src/tools/qdatastream.cpp
-@@ -484,6 +484,8 @@ void QDataStream::setByteOrder( int bo )
+@@ -486,6 +486,8 @@ void QDataStream::setByteOrder( int bo )
  
  #if defined(Q_OS_HPUX) && !defined(__LP64__)
  extern "C" long long __strtoll( const char *, char**, int );
@@ -11,7 +11,7 @@ $NetBSD: patch-ah,v 1.5 2004/10/13 02:08:43 tv Exp $
  #endif
  
  static Q_INT64 read_int_ascii( QDataStream *s )
-@@ -508,7 +510,7 @@ static Q_INT64 read_int_ascii( QDataStre
+@@ -510,7 +512,7 @@ static Q_INT64 read_int_ascii( QDataStre
      return _atoi64( buf );
  #  elif defined(Q_OS_HPUX)
      return __strtoll( buf, (char**)0, 10 );
