@@ -1,35 +1,27 @@
-# $NetBSD: Makefile,v 1.17 2003/09/13 06:22:50 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/13 17:46:22 seb Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/06/27 01:53:13 jfitz Exp
 #
 
-DISTNAME=	SNMP-3.1.0
-PKGNAME=	p5-SNMP-3.1.0
-PKGREVISION=	1
+DISTNAME=	net-snmp-5.0.9
+PKGNAME=	p5-SNMP-5.0.9
 SVR4_PKGNAME=	p5snm
 CATEGORIES=	net perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SNMP/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-COMMENT=	Perl5 module for interfacing to the UCD SNMP library
+HOMEPAGE=	http://www.net-snmp.org/
+COMMENT=	Perl5 module for interfacing to the Net-SNMP library
 
 USE_BUILDLINK2=	YES
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/SNMP/.packlist
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Bundle/NetSNMP/.packlist
 
-# Until the source catches up to the current Perl API, we need PERL_POLLUTE
-# to look like an older perl.
-#MAKE_PARAMS=	DEFINE="-DPERL_POLLUTE=1"
+WRKSRC=		${WRKDIR}/${DISTNAME}/perl
 
-PLFILES=	async1.pl async2.pl ipforward.pl mibtree.pl mibwalk.pl
-PLFILES+=	pingmib.pl tablewalk.pl testleak.pl
-
-post-build:
-	@for i in ${PLFILES} ; do ${ECHO} "#! ${PREFIX}/bin/perl" | ${CAT} - ${WRKSRC}/examples/$$i > ${WRKDIR}/$$i ; done
+INSTALLATION_DIRS+=	share/doc/p5-SNMP
 
 post-install:
-	@${INSTALL_DATA} ${WRKSRC}/README ${PERL5_SITELIB}/README.SNMP
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/p5-SNMP
-	@for i in ${PLFILES} ; do ${INSTALL_SCRIPT} ${WRKDIR}/$$i ${PREFIX}/share/examples/p5-SNMP/$$i ; done
+	${INSTALL_DATA} ${WRKSRC}/SNMP/README ${PREFIX}/share/doc/p5-SNMP/README
 
 .include "../../lang/perl5/module.mk"
-.include "../../net/ucd-snmp/buildlink2.mk"
+.include "../../net/net-snmp/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
