@@ -1,0 +1,17 @@
+--- config/unix/i386_freebsd/define.h.orig	Tue Mar  7 21:50:58 1995
++++ config/unix/i386_freebsd/define.h	Sat Nov  2 17:24:10 1996
+@@ -21,6 +21,7 @@
+ 
+ #define Standard
+ #define Double
++#define IconEcvt
+ #define IconGcvt
+ #define GetHost
+ #define SysOpt
+@@ -41,5 +42,5 @@
+ #define LoadFunc
+ #define SystemFnc
+ 
+-
++#define LinkLibs " -lm"
+ #define COpts "-I/usr/X11R6/include"
