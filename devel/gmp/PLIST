@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:11 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/04/10 12:37:53 hubertf Exp $
 include/gmp.h
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gmp.info
 info/gmp.info
@@ -7,8 +7,12 @@ info/gmp.info-1
 info/gmp.info-2
 info/gmp.info-3
 info/gmp.info-4
+info/gmp.info-5
+info/gmp.info-6
+info/gmp.info-7
+info/gmp.info-8
 lib/libgmp.a
 lib/libgmp.la
 lib/libgmp.so
-lib/libgmp.so.4
-lib/libgmp.so.4.1
+lib/libgmp.so.5
+lib/libgmp.so.5.1
