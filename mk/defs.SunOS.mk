@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.57 2003/03/04 14:50:11 seb Exp $
+# $NetBSD: defs.SunOS.mk,v 1.58 2003/03/29 20:49:11 seb Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -46,7 +46,7 @@ IMAKE?=		${X11BASE}/bin/imake -DHasGcc2=YES -DHasGcc2ForCplusplus=YES
 LDCONFIG?=	/usr/bin/true
 LN?=		/usr/bin/ln
 LS?=		/usr/bin/ls
-M4?=		/usr/bin/m4
+M4?=		/usr/ccs/bin/m4
 MKDIR?=		/usr/bin/mkdir -p
 .if exists(${LOCALBASE}/sbin/mtree)
 MTREE?=		${LOCALBASE}/sbin/mtree
