@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2000/09/12 14:05:16 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2001/04/29 20:36:48 jlam Exp $
 
 --- pkg.sslsup/mkcert.sh.in.orig	Sun Apr 16 05:21:24 2000
 +++ pkg.sslsup/mkcert.sh.in
@@ -67,7 +67,7 @@ $NetBSD: patch-ab,v 1.1 2000/09/12 14:05:16 jlam Exp $
 +done
 +
 +openssl="openssl"
-+confdir=@PREFIX@/etc/httpd
++confdir=@APACHE_SYSCONFDIR@
 +
  #   configuration
 -#   WE ARE CALLED FROM THE PARENT DIR!

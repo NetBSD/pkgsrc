@@ -1,26 +1,26 @@
-@comment $NetBSD: PLIST,v 1.9 2001/02/02 16:41:23 jlam Exp $
-etc/httpd/apache_start.conf
-etc/httpd/ssl.crl/Makefile.crl
-etc/httpd/ssl.crl/README.CRL
-etc/httpd/ssl.crt/Makefile.crt
-etc/httpd/ssl.crt/README.CRT
-etc/httpd/ssl.crt/ca-bundle.crt
-etc/httpd/ssl.crt/snakeoil-ca-dsa.crt
-etc/httpd/ssl.crt/snakeoil-ca-rsa.crt
-etc/httpd/ssl.crt/snakeoil-dsa.crt
-etc/httpd/ssl.crt/snakeoil-rsa.crt
-etc/httpd/ssl.csr/README.CSR
-etc/httpd/ssl.key/README.KEY
-etc/httpd/ssl.key/snakeoil-ca-dsa.key
-etc/httpd/ssl.key/snakeoil-ca-rsa.key
-etc/httpd/ssl.key/snakeoil-dsa.key
-etc/httpd/ssl.key/snakeoil-rsa.key
-etc/httpd/ssl.prm/README.PRM
-etc/httpd/ssl.prm/snakeoil-ca-dsa.prm
-etc/httpd/ssl.prm/snakeoil-dsa.prm
+@comment $NetBSD: PLIST,v 1.10 2001/04/29 20:36:48 jlam Exp $
 lib/httpd/mod_ssl.so
-sbin/mkcert.sh
+sbin/mkcert
 share/doc/mod_ssl/README.mkcert
+share/examples/mod_ssl/apache_start.conf
+share/examples/mod_ssl/ssl.crl/Makefile.crl
+share/examples/mod_ssl/ssl.crl/README.CRL
+share/examples/mod_ssl/ssl.crt/Makefile.crt
+share/examples/mod_ssl/ssl.crt/README.CRT
+share/examples/mod_ssl/ssl.crt/ca-bundle.crt
+share/examples/mod_ssl/ssl.crt/snakeoil-ca-dsa.crt
+share/examples/mod_ssl/ssl.crt/snakeoil-ca-rsa.crt
+share/examples/mod_ssl/ssl.crt/snakeoil-dsa.crt
+share/examples/mod_ssl/ssl.crt/snakeoil-rsa.crt
+share/examples/mod_ssl/ssl.csr/README.CSR
+share/examples/mod_ssl/ssl.key/README.KEY
+share/examples/mod_ssl/ssl.key/snakeoil-ca-dsa.key
+share/examples/mod_ssl/ssl.key/snakeoil-ca-rsa.key
+share/examples/mod_ssl/ssl.key/snakeoil-dsa.key
+share/examples/mod_ssl/ssl.key/snakeoil-rsa.key
+share/examples/mod_ssl/ssl.prm/README.PRM
+share/examples/mod_ssl/ssl.prm/snakeoil-ca-dsa.prm
+share/examples/mod_ssl/ssl.prm/snakeoil-dsa.prm
 share/httpd/htdocs/manual/mod/mod_ssl/apache_pb.gif
 share/httpd/htdocs/manual/mod/mod_ssl/feather.jpg
 share/httpd/htdocs/manual/mod/mod_ssl/index.html
@@ -76,4 +76,10 @@ share/mod_ssl/loadcacert.cgi
 share/mod_ssl/sign.sh
 @dirrm share/mod_ssl
 @dirrm share/httpd/htdocs/manual/mod/mod_ssl
+@dirrm share/examples/mod_ssl/ssl.prm
+@dirrm share/examples/mod_ssl/ssl.key
+@dirrm share/examples/mod_ssl/ssl.csr
+@dirrm share/examples/mod_ssl/ssl.crt
+@dirrm share/examples/mod_ssl/ssl.crl
+@dirrm share/examples/mod_ssl
 @dirrm share/doc/mod_ssl
