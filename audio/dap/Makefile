@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2004/01/03 18:49:33 reed Exp $
+# $NetBSD: Makefile,v 1.20 2004/04/11 15:50:47 xtraeme Exp $
 
 DISTNAME=		dap-2.1.2
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		audio
 MASTER_SITES=		http://www.cee.hw.ac.uk/~richardk/
 EXTRACT_SUFX=		.tgz
@@ -14,8 +14,9 @@ MAKEFILE=		Makefile.netbsd
 
 MAKE_ENV+=		X11PREFIX=${X11PREFIX}
 
-USE_X11BASE=		yes
-USE_BUILDLINK2=		yes
+USE_X11=		yes
+USE_BUILDLINK3=		yes
+USE_LANGUAGES=		c c++
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/main/DAP ${PREFIX}/bin/dap
@@ -23,8 +24,8 @@ do-install:
 	@${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/TODO ${WRKSRC}/COPYING \
 		${WRKSRC}/FEATURES ${PREFIX}/share/doc/dap
 
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/xforms/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/xforms/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

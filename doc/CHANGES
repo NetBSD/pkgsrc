@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5534 2004/04/11 14:59:57 mrauch Exp $
+$NetBSD: CHANGES,v 1.5535 2004/04/11 15:50:47 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1906,3 +1906,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-rdtool to 0.6.14nb3 [taca 2004-04-11]
 	Updated nabi to 0.13 [minskim 2004-04-11]
 	Updated openoffice-linux to 1.1.1 [mrauch 2004-04-11]
+	Updated dap to 2.1.2nb4 [xtraeme 2004-04-11]
