@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9.2.1 2002/06/29 03:45:15 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.2 2002/06/29 03:50:43 jlam Exp $
 
 .include "Makefile.common"
 
@@ -36,6 +36,7 @@ MKPIC?=			yes
 # dependencies.  If this isn't defined, then use the perl defaults for the
 # particular operating system.
 #
+LIBSWANTED.Darwin=	m c
 LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
 
@@ -43,6 +44,7 @@ LIBSWANTED.SunOS=	m crypt dl socket nsl
 # If this isn't defined, then use the perl defaults for the particular
 # operating system.
 #
+SYSLIBPATH.Darwin=	/usr/lib
 SYSLIBPATH.NetBSD=	/usr/lib
 SYSLIBPATH.SunOS=	/usr/lib
 
@@ -58,8 +60,10 @@ LOCINCPATH=		${LOCALBASE}/include
 #
 .if ${OBJECT_FMT} == "a.out"
 LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/-R/g}
-.else
+.elif ${OBJECT_FMT} == "ELF"
 LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/-Wl,-R/g}
+.else
+LOCLIBRPATHFLAGS=	# empty
 .endif
 
 .if defined(LIBSWANTED.${OPSYS})
