@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 1997/12/13 19:48:18 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/01/24 05:23:49 hubertf Exp $
 lib/libmpeg.a
 lib/libmpeg_p.a
 lib/libmpeg_pic.a
 lib/libmpeg.so.1.2
-@exec /sbin/ldconfig -m %B || true
-@unexec /sbin/ldconfig -m %B || true
+@exec /sbin/ldconfig -m %B || /usr/bin/true
+@unexec /sbin/ldconfig -m %B || /usr/bin/true
 include/mpeg.h
