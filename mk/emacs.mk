@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.6 2002/11/14 03:56:53 wiz Exp $
+# $NetBSD: emacs.mk,v 1.7 2002/11/27 09:13:47 uebayasi Exp $
 #
 # A Makefile fragment for Emacs Lisp packages.
 #
@@ -43,7 +43,7 @@ BUILDLINK_DEPENDS.xemacs215?=	xemacs>=21.5
 BUILDLINK_DEPENDS.leim20?=	leim>=20.7
 BUILDLINK_DEPENDS.leim21?=	leim>=21.2
 
-.for v in ${EMACS_VERSION_ACCEPTED}
+.for v in ${EMACS_VERSIONS_ACCEPTED}
 _EMACS_VERSION_${v}_OK=	yes
 .endfor
 
@@ -150,12 +150,14 @@ EMACS_BIN=	${PREFIX}/bin/emacs
 EMACS_PKG_VERSION=	${_EMACS_VERSION_EMACS_FULL:C|^.*-||}
 EMACS_LISPPREFIX=	${PREFIX}/share/emacs/site-lisp
 PKGNAME_PREFIX=
+CONFLICTS+=		xemacs-${PKGBASE}-*
 .else
 EMACS_BIN=	${PREFIX}/bin/xemacs
 EMACS_PKG_VERSION=	${_EMACS_VERSION_XEMACS_FULL:C|^.*-||}
 EMACS_LISPPREFIX=	${PREFIX}/lib/xemacs/site-packages/lisp
 PKGNAME_PREFIX=		xemacs-
 PKGNAME=		${PKGNAME_PREFIX}${DISTNAME}
+CONFLICTS+=		${PKGBASE:C|^xemacs-||}-*
 .endif
 # strip out nb?
 EMACS_VERSION=${EMACS_PKG_VERSION:C|nb[0-9]*$||}
