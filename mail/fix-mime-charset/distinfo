@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/26 10:21:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2003/12/15 18:55:31 wiz Exp $
 
-SHA1 (fix-mime-charset-0.4.0.tar.gz) = b64dee1f20d915fcb53e848c9111646e5fbd0a04
-Size (fix-mime-charset-0.4.0.tar.gz) = 88018 bytes
+SHA1 (fix-mime-charset-0.5.1.tar.gz) = aea9ccb98ec45e2fd9a2b0578fea0e0084ae2244
+Size (fix-mime-charset-0.5.1.tar.gz) = 115028 bytes
+SHA1 (patch-aa) = 23517993de65322c21bc0604e3cac66148c4b2b8
