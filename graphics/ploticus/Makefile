@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2002/09/20 11:41:15 rh Exp $
+# $NetBSD: Makefile,v 1.14 2002/12/16 23:02:31 grant Exp $
 #
 
-DISTNAME=	plsrc204
-PKGNAME=	ploticus-2.04
+DISTNAME=	plsrc210
+PKGNAME=	ploticus-2.10
 CATEGORIES=	graphics
 MASTER_SITES=	http://ploticus.sourceforge.net/download/
 
@@ -38,17 +38,16 @@ do-install:
 	Versions Welcome
 	${INSTALL_DATA} ${MANSRC}/manpl/${file} ${DOCDST}/${file}
 .endfor
-.for file in Faq Problems annotate areadef attributetypes autorange	\
+.for file in Faq Problems annotate api areadef attributetypes autorange	\
 	axis bars breakaxis catslide cgi clickmap color commalist	\
 	condex config control controlling curvefit dataformat dates	\
-	defineunits drawcommands dynamic endproc fonts functions	\
-	getdata gifpatent import interactive legend legenddriven	\
-	legendentry limits line linedetails lineplot missingdata	\
-	originaldata page paper pie plshellsql posters prefabs prepress	\
-	print processdata rangebar rangesweep rect scaleunits		\
+	defineunits drawcommands dynamic fonts functions getdata	\
+	gifpatent import interactive legend legendentry limits line	\
+	linedetails lineplot page paper pie plshellsql posters prefabs	\
+	prepress print processdata rangebar rangesweep rect scaleunits	\
 	scatterplot scripts settings shell slides specialchars sql svg	\
-	symboldetails tabulate textdetails times trailer transform	\
-	variables web
+	symboldetails tabulate textdetails times trailer usedata	\
+	variables vector web
 	${NROFF} <${MANSRC}/manpl/${file} >${WRKDIR}/${file}
 	${INSTALL_DATA} ${WRKDIR}/${file} ${DOCDST}/${file}
 .endfor
