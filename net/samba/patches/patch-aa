@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.14 2001/05/14 18:56:16 jlam Exp $
+$NetBSD: patch-aa,v 1.15 2001/05/22 21:49:29 jlam Exp $
 
 --- configure.in.orig	Tue Apr 17 01:44:30 2001
-+++ configure.in
++++ configure.in	Tue May 22 15:58:59 2001
 @@ -392,9 +392,6 @@
  AC_CHECK_TYPE(ssize_t, int)
  AC_CHECK_TYPE(wchar_t, unsigned short)
@@ -12,11 +12,10 @@ $NetBSD: patch-aa,v 1.14 2001/05/14 18:56:16 jlam Exp $
  # we need libdl for PAM and the new VFS code
  AC_CHECK_LIB(dl, dlopen, [LIBS="$LIBS -ldl";
  	AC_DEFINE(HAVE_LIBDL)])
-@@ -1459,6 +1456,24 @@
-     AC_DEFINE(BROKEN_NISPLUS_INCLUDE_FILES)
+@@ -1460,6 +1457,24 @@
  fi
  
-+
+ 
 +################################################
 +# check for CUPS support
 +AC_MSG_CHECKING(whether to use CUPS)
@@ -34,6 +33,29 @@ $NetBSD: patch-aa,v 1.14 2001/05/14 18:56:16 jlam Exp $
 +  esac ],
 +  AC_MSG_RESULT(no)
 +)
- 
++
  #################################################
  # check for smbwrapper support
+ AC_MSG_CHECKING(whether to use smbwrapper)
+@@ -1724,6 +1739,9 @@
+ 	  LIBS="-lssl -lcrypto $LIBS"
+ 	  LDFLAGS="=L/usr/local/ssl/lib $LDFLAGS"
+ 	;;
++	/usr)
++	  LIBS="-lssl -lcrypto $LIBS"
++	;;
+         * )
+           CFLAGS="-I${withval}/include $CFLAGS"
+ 	  LIBS="-lssl -lcrypto $LIBS"
+@@ -1738,11 +1756,6 @@
+ 	LDFLAGS="-L/usr/local/ssl/lib $LDFLAGS"
+ 
+     fi
+-
+-    if test ! -d ${withval}; then
+-      echo "configure: error: called with --with-ssl, but ssl base directory ${withval} does not exist or is not a directory. Aborting config" 1>&2
+-      exit 1
+-    fi 
+ 
+     CFLAGS="-DHAVE_CRYPT_DECL $CFLAGS"  # Damn, SSLeay defines its own
+ 
