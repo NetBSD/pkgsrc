@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/16 20:24:42 rh Exp $
+
+lib/perl5/site_perl/GD/Graph/colour.pm
+lib/perl5/site_perl/GD/Graph/mixed.pm
+lib/perl5/site_perl/GD/Graph/bars.pm
+lib/perl5/site_perl/GD/Graph/linespoints.pm
+lib/perl5/site_perl/GD/Graph/area.pm
+lib/perl5/site_perl/GD/Graph/Error.pm
+lib/perl5/site_perl/GD/Graph/Data.pm
+lib/perl5/site_perl/GD/Graph/lines.pm
+lib/perl5/site_perl/GD/Graph/points.pm
+lib/perl5/site_perl/GD/Graph/FAQ.pod
+lib/perl5/site_perl/GD/Graph/pie.pm
+lib/perl5/site_perl/GD/Graph/utils.pm
+lib/perl5/site_perl/GD/Graph/axestype.pm
+lib/perl5/site_perl/GD/Graph.pm
+lib/perl5/man/man3/GD::Graph::colour.3
+lib/perl5/man/man3/GD::Graph::FAQ.3
+lib/perl5/man/man3/GD::Graph.3
+lib/perl5/man/man3/GD::Graph::Data.3
+lib/perl5/man/man3/GD::Graph::Error.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/GD/Graph/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/GD/Graph
