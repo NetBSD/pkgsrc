@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2001/10/04 13:25:50 agc Exp $
+$NetBSD: patch-aa,v 1.5 2001/10/09 10:11:34 martti Exp $
 
---- auto/configure.orig	Thu Oct  4 14:19:08 2001
-+++ auto/configure	Thu Oct  4 14:20:12 2001
+--- src/auto/configure.orig	Thu Oct  4 14:19:08 2001
++++ src/auto/configure	Thu Oct  4 14:20:12 2001
 @@ -2212,6 +2212,7 @@
    # Look for the header file in a standard set of common directories.
  # Check X11 before X11Rn because it is often a symlink to the current release.
