@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.331 2003/03/04 14:42:28 salo Exp $
+$NetBSD: TODO,v 1.332 2003/03/04 17:52:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -93,7 +93,6 @@ Suggested package updates
 	o cfengine-1.6.5 [pkg/19459|seb]
 	o citrix_ica-6.30.1052 [pkg/19210]
 	o clisp-2.30
-	o cook-2.22
 	o courier-0.40.2
 	o courier-imap-1.7.0
 	o coreutils-4.5.7 (was fileutils/sh-utils/textutils)
@@ -140,8 +139,6 @@ Suggested package updates
 	o grace-5.1.12
 	o gsed-4.0.5
 	o gtetrinet-0.6.2
-	o gtk_wicontrol-0.17
-	o gtk2-pan-0.13.4
 	o horde-2.1 [pkg/19497]
 	o horde-2.2
 	o htmllint-20030225 [pkg/20538]
@@ -164,8 +161,6 @@ Suggested package updates
 	o joe-2.9 [pkg/18022]
 	o jove-4.16.0.58 [pkg/19924]
 	o jove-4.16.0.61
-	o jpilot-0.99.5
-	o jpilot-syncmal-0.71.2
 	o kdbg-1.2.7
 	o kde-3.1 [skrll]
 	o kdevelop-2.1.5
@@ -179,9 +174,7 @@ Suggested package updates
 	o libole2-2.2.8
 	o libmcrypt-2.5.5
 	o librsvg-2.2.2.1
-	o libslang-1.4.8
-	o libxml-2.5.4 [devel?]
-	o libxslt-1.0.27
+	o libslang-1.4.8 [pkg/20575]
 	o lilypond-1.6.6
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
@@ -195,20 +188,17 @@ Suggested package updates
 	o midnight-commander-4.6.0
 	o mixer.app-1.8.0
 	o mkfontscale-20020618
-	o mng-1.0.5
 	o mowitz-0.2.2
 	o mpgtx-1.3 [pkg/19082]
 	o mrproject-0.9
 	o mrtg-2.9.27
 	o mtools-3.9.9
 	o mysql-3.23.54
-	o naim-0.11.5.5
 	o napshare-1.2
 	o neon-0.23.8
 	o nessus-2.0.0 [pkg/20530]
 	o net-snmp-5.0.7 [pkg/19939]
 	o netpbm-10.8
-	o nethack-3.4.1
 	o netscape-7.02
 	o neXtaw-0.14.0
 	o ns-flash-6.0.69
@@ -255,7 +245,6 @@ Suggested package updates
 	o snes9x-1.39a
 	o sodipodi-0.31
 	o spamassassin-2.50 [heinz]
-	o speex-1.0rc3
 	o sqlite-2.7.5 [pkg/19719]
 	o sqlite-2.7.6
 	o squeak-3.2 [fredb|pkg/17950]
