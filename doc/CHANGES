@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4996 2004/02/25 17:16:34 minskim Exp $
+$NetBSD: CHANGES,v 1.4997 2004/02/25 18:12:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1045,3 +1045,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gkrellm-share to 2.1.26 [cube 2004-02-25]
 	Updated libgcrypt to 1.1.92 [minskim 2004-02-25]
 	Updated mlterm to 2.8.0pl1 [minskim 2004-02-25]
+	Updated libksba to 0.9.4 [minskim 2004-02-25]
