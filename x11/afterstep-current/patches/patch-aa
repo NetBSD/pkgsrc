@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/31 10:36:46 fredb Exp $
+$NetBSD: patch-aa,v 1.2 1999/08/24 10:16:39 fredb Exp $
 
 --- doc/afterstepdoc.in.orig	Tue Nov 10 10:51:01 1998
 +++ doc/afterstepdoc.in	Tue Dec 29 00:20:54 1998
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/07/31 10:36:46 fredb Exp $
 -for netscape in /usr/X11R6/bin/netscape /usr/bin/netscape \
 -       /usr/local/bin/netscape /usr/local/netscape/netscape \
 -       /opt/netscape/netscape /opt/bin/netscape ; do
-+for netscape in @bindir@/netscape @bindir@/mozilla @bindir@/navigator \
++for netscape in @bindir@/netscape @bindir@/mozilla \
 +       /usr/local/bin/netscape /usr/local/netscape/bin/netscape ; do
     if [ -x $netscape ] ; then
       $netscape -remote \
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/07/31 10:36:46 fredb Exp $
  done
  
 -for lynx in /usr/bin/lynx /bin/lynx /usr/local/bin/lynx ; do
-+for lynx in @LOCALBASE@/bin/lynx /usr/local/bin/lynx ; do
++for lynx in /usr/pkg/bin/lynx /usr/local/bin/lynx ; do
      if [ -x $lynx ] ; then
         exec xterm -bg black -fg white -sl 500 -vb -e $lynx @datadir@/afterstep/doc/afterstep.html &
      fi
