@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2000/04/20 22:45:50 tron Exp $
+# $NetBSD: Makefile,v 1.37 2000/07/13 20:54:01 martin Exp $
 #
 
-DISTNAME=		xmame-0.36b16.1
+DISTNAME=		xmame-0.37b4.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tgz
@@ -15,6 +15,7 @@ DEPENDS+=		xpm-3.4k:../../graphics/xpm
 USE_X11BASE=		yes
 USE_GMAKE=		yes
 MAKE_ENV+=		OPSYS=${OPSYS} ARCH=${ARCH} \
+			MAME_CPU=${MAME_CPU} \
 			INSTALL_MAN="${INSTALL_MAN}" \
 			INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 			NETBSD_JOYSTICK="${NETBSD_JOYSTICK}" \
@@ -30,10 +31,22 @@ NETBSD_JOYSTICK=	yes
 .else
 NETBSD_JOYSTICK=	no
 .endif
-.if exists(/usr/X11R6/include/X11/extensions/xf86dga.h)
+.if exists(${X11BASE}/include/X11/extensions/xf86dga.h)
 NETBSD_DGA=		yes
 .else
 NETBSD_DGA=		no
+.endif
+
+.if ${MACHINE_ARCH} == "m68k"
+MAME_CPU=		m68k
+.elif ${MACHINE_ARCH} == "alpha"
+MAME_CPU=		alpha
+.elif ${MACHINE_ARCH} == "i386"
+MAME_CPU=		i386
+.elif ${MACHINE_ARCH} == "mipsel"
+MAME_CPU=		risc_lsb
+.else
+MAME_CPU=		risc
 .endif
 
 post-patch:
