@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/09/01 10:13:11 cjep Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/09/14 21:27:44 bouyer Exp $
 
 
 share/horde/imp/locale/ar_OM/LC_MESSAGES/imp.mo
@@ -6,6 +6,7 @@ share/horde/imp/locale/ar_SY/LC_MESSAGES/imp.mo
 share/horde/imp/locale/is_IS/LC_MESSAGES/imp.mo
 share/horde/imp/locale/mk_MK/LC_MESSAGES/imp.mo
 share/horde/imp/locale/th_TH/LC_MESSAGES/imp.mo
+ 
 share/doc/imp/CHANGES
 share/doc/imp/COPYING
 share/doc/imp/CREDITS
@@ -123,6 +124,7 @@ share/horde/imp/locale/fi_FI/help.xml
 share/horde/imp/locale/fr_FR/LC_MESSAGES/imp.mo
 share/horde/imp/locale/fr_FR/help.xml
 share/horde/imp/locale/hu_HU/LC_MESSAGES/imp.mo
+share/horde/imp/locale/hu_HU/help.xml
 share/horde/imp/locale/it_IT/LC_MESSAGES/imp.mo
 share/horde/imp/locale/it_IT/help.xml
 share/horde/imp/locale/ja_JP/LC_MESSAGES/imp.mo
