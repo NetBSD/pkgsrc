@@ -1,14 +1,15 @@
-$NetBSD: MESSAGE,v 1.3 1999/11/08 16:25:51 rh Exp $
+$NetBSD: MESSAGE,v 1.4 2000/04/16 15:19:17 rh Exp $
 
-**********************************************************************
-Now, copy the sample script in ${PREFIX}/etc/rc.d/delegated.sh.sample
+======================================================================
+Now copy the sample script in ${PREFIX}/etc/rc.d/delegated.sh.sample
 to ${PREFIX}/etc/rc.d/delegated.sh and edit it according to your
 needs.
 
-Don't forget to specify a correct e-mail address for MANAGER.
+Don't forget to specify a correct e-mail address for ADMIN.
 
 You can also run an interactive configuration session by executing 
 delegated with no argument.
 
-For more configuration information, consult delegated(8).
-**********************************************************************
+For more configuration information, consult
+${PREFIX}/share/doc/delegate/manual.html
+======================================================================
