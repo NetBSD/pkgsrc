@@ -1,18 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/05/31 15:02:58 skrll Exp $
+$NetBSD: patch-ac,v 1.2 2002/07/17 07:54:04 skrll Exp $
 
---- flow/cpuinfo.cc.orig	Wed May  8 19:57:52 2002
+--- flow/cpuinfo.cc.orig	Mon Mar 18 12:39:39 2002
 +++ flow/cpuinfo.cc
-@@ -204,6 +204,9 @@
+@@ -204,6 +204,7 @@
  		: /* no input */
  		: "memory"
  	);
-+#if defined(__NetBSD__)
-+        CpuInfo::s_flags = 0;
-+#else
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 105260000
  	// SSE must be supported by the OS, if it's not, any SSE insn will
  	// trigger an invalid opcode exception, to check for this, a SIGILL
  	// handler is installed and a SSE insn run. If the handler is called,
-@@ -226,6 +229,7 @@
+@@ -226,6 +227,7 @@
  		}
  		signal(SIGILL, oldHandler);
  	}
