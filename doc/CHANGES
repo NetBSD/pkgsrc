@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.958 2002/12/31 19:07:50 jlam Exp $
+$NetBSD: CHANGES,v 1.959 2002/12/31 19:18:05 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4330,3 +4330,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated p5-Net-SSLeay to 1.21 [shell 2002-12-31]
 	Updated mlterm to 2.6.2 [uebayasi 2002-12-31]
 	Updated libmm to 1.2.2 [jlam 2002-12-31]
+	Added hatari-0.25 [cjep 2002-12-31]
