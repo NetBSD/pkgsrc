@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5551 2004/04/12 05:24:45 snj Exp $
+$NetBSD: CHANGES,v 1.5552 2004/04/12 08:53:12 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1924,3 +1924,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated racoon to 20040408a [itojun 2004-04-12]
 	Removed ickle [snj 2004-04-12]
 	Removed libicq2000 [snj 2004-04-12]
+	Updated pkglint to 3.70 [jmmv 2004-04-12]
