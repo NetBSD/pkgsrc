@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2004/07/22 00:06:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2004/08/30 16:49:45 schmonz Exp $
 #
 
 DISTNAME=	qmail-lint-0.55
 PKGREVISION=	1
 CATEGORIES=	mail
-MASTER_SITES=	http://qmail.obeer.com/
+MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	#
 
 MAINTAINER=	schmonz@NetBSD.org
