@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4418 2004/01/10 17:07:24 cjep Exp $
+$NetBSD: CHANGES,v 1.4419 2004/01/10 19:48:08 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -155,3 +155,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-wxWindows to 2.4.2.4nb3 [recht 2004-01-10]
 	Added heimdal-0.6 [jlam 2004-01-10]
 	Added nologinmsg-1.0 [cjep 2004-01-10]
+	Added blender-doc-20030922 [jschauma 2004-01-10]
