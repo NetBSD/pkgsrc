@@ -1,9 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 10:46:23 markd Exp $
-share/doc/kde/HTML/af/kicker-applets/common
-share/doc/kde/HTML/af/kicker-applets/index.cache.bz2
-share/doc/kde/HTML/af/kicker-applets/index.docbook
+@comment $NetBSD: PLIST,v 1.2 2003/04/03 13:51:22 markd Exp $
 share/doc/kde/HTML/af/kicker-applets/kolourpicker.docbook
-share/doc/kde/HTML/af/kicker-applets/ktimemon.docbook
 share/kde/locale/af/LC_MESSAGES/aktion.mo
 share/kde/locale/af/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/af/LC_MESSAGES/alsaplayerui.mo
