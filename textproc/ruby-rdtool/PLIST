@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:41 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/04 15:30:17 taca Exp $
 bin/rd2
 bin/rdswap
 bin/rmi2html
@@ -39,14 +39,11 @@ ${RUBY_SITELIBDIR}/rd/visitor.rb
 ${RUBY_EXAMPLESDIR}/rd/dot.rd2rc
 @dirrm ${RUBY_EXAMPLESDIR}/rd
 ${RUBY_DOCDIR}/rd/README.html
+${RUBY_DOCDIR}/rd/README.html.ja
 ${RUBY_DOCDIR}/rd/README.rd
-${RUBY_DOCDIR}/rd/ja/README.html.ja
-${RUBY_DOCDIR}/rd/ja/README.rd.ja
-${RUBY_DOCDIR}/rd/ja/dev-note.html.ja
-${RUBY_DOCDIR}/rd/ja/dev-note.rd.ja
-${RUBY_DOCDIR}/rd/ja/rd-draft.html.ja
-${RUBY_DOCDIR}/rd/ja/rd-draft.rd.ja
+${RUBY_DOCDIR}/rd/README.rd.ja
 ${RUBY_DOCDIR}/rd/rd-draft.html
+${RUBY_DOCDIR}/rd/rd-draft.html.ja
 ${RUBY_DOCDIR}/rd/rd-draft.rd
-@dirrm ${RUBY_DOCDIR}/rd/ja
+${RUBY_DOCDIR}/rd/rd-draft.rd.ja
 @dirrm ${RUBY_DOCDIR}/rd

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/01/05 05:47:21 taca Exp $
+# $NetBSD: Makefile,v 1.5 2002/02/04 15:30:17 taca Exp $
 # FreeBSD: ports/textproc/ruby-rdtool/Makefile,v 1.15 2001/01/30 19:20:09 knu Exp
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://www2.pos.to/~tosh/ruby/rdtool/archive/
 
@@ -23,17 +22,15 @@ INSTALL_TARGET=	install install-rmi2html
 
 REPLACE_RUBY=	rmi2html.rb utils/rdswap.rb
 
-DOCS_RD_EN=	README.rd doc/rd-draft.rd
-DOCS_RD_JA=	README.rd.ja doc/dev-note.rd.ja doc/rd-draft.rd.ja
-DOCS_EN=	${DOCS_RD_EN} README.html doc/rd-draft.html
-DOCS_JA=	${DOCS_RD_JA} README.html.ja \
-		doc/dev-note.html.ja doc/rd-draft.html.ja
+DOCS_RD=	README.rd README.rd.ja doc/rd-draft.rd doc/rd-draft.rd.ja
+DOCS=		${DOCS_RD} README.html README.html.ja \
+		doc/rd-draft.html doc/rd-draft.html.ja
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${RUBY} rdtoolconf.rb
 
 post-build:
-.for f in ${DOCS_RD_EN} ${DOCS_RD_JA}
+.for f in ${DOCS_RD}
 	cd ${WRKSRC}; ${RUBY} -I. rd2 -r rd/rd2html-lib.rb ${f} \
 		> ${f:S/.rd/.html/}
 .endfor
@@ -41,12 +38,9 @@ post-build:
 post-install:
 	${LN} -sf rmi2html.rb ${PREFIX}/bin/rmi2html
 	${INSTALL_SCRIPT} ${WRKSRC}/utils/rdswap.rb ${PREFIX}/bin/rdswap
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/rd/ja
-.for f in ${DOCS_EN}
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/rd
+.for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/rd
-.endfor
-.for f in ${DOCS_JA}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/rd/ja
 .endfor
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/rd
 	${INSTALL_DATA} ${RUBY_SITELIBDIR}/rd/dot.rd2rc ${RUBY_EXAMPLESDIR}/rd
