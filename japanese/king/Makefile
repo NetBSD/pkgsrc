@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/25 00:20:23 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/08/31 02:35:27 hubertf Exp $
 #
 
 DISTNAME=	king-1.00-tb40-1
@@ -28,7 +28,7 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 EMULSUBDIR=	emul/linux
 EMULDIR=	${PREFIX}/${EMULSUBDIR}
 SBINDIR=	${PREFIX}/sbin
-LDD?=		${EMULDIR}/usr/bin/ldd
+CHECK_SHLIBS=	no
 
 RPM2PKG=	${PREFIX}/sbin/rpm2pkg
 RPM2PKGARGS=	-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}

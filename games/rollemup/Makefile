@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/08/25 00:20:22 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2000/08/31 02:35:26 hubertf Exp $
 #
 
 DISTNAME=	Rollemup
@@ -37,7 +37,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 
 .if ${OPSYS} == "NetBSD"
 DEPENDS=	suse_linux>=6.1:../../emulators/suse_linux
-LDD?=		/emul/linux/usr/bin/ldd
+CHECK_SHLIBS=	no
 .endif
 
 do-build:

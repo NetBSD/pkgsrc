@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/08/25 00:20:24 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2000/08/31 02:35:27 hubertf Exp $
 
 PKGNAME=	acroread3-3.01
 CATEGORIES=	print
@@ -23,7 +23,7 @@ NO_BUILD=	YES
 DEPENDS=	suse_linux>=6.3:../../emulators/suse_linux
 DISTNAME=	acroread_linux_301
 PLATFORM=	intellinux
-LDD?=		/emul/linux/usr/bin/ldd
+CHECK_SHLIBS=	no
 .elif (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
 IGNORE=	"${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)"
