@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.14 2004/09/15 20:56:31 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.14.4.1 2005/01/29 01:20:06 salo Exp $
 
 Much cleanup of the script.  Added various options such as
 -O    for optimization
@@ -12,9 +12,11 @@ Much cleanup of the script.  Added various options such as
 
 Also only pass -m* to the C compiler not f2c.
 
---- fc.orig	Fri Jul  7 17:47:06 2000
-+++ fc	Tue Jan 22 11:39:39 2002
-@@ -1,178 +1,262 @@
+Unknown options are passed on to the C compiler and C preprocessor.
+
+--- fc.orig	2000-07-07 21:47:06.000000000 +0000
++++ fc
+@@ -1,179 +1,276 @@
 -#! /bin/sh
 -
 -# NOTE: you may need to adjust the references to /usr/local/... below
@@ -150,21 +152,34 @@ Also only pass -m* to the C compiler not f2c.
 -#		-N tnnn		allow nnn entries in table t
 -
 -#		-P		emit .P files
+-
+-#		-U def		passed to C compiler (for .c files)
+-#				or to cpp (for .F files) to remove def
+-
+-s=/tmp/stderr_$$
+-t=/tmp/f77_$$.o
+-### On some systems (e.g., IRIX), -common prevents complaints
+-### about multiple definitions of COMMON blocks.
+-#CC=${CC_f2c:-'cc -common'}
+-CC=${CC_f2c:-'cc'}
 +# if no input arguments, then spit out the help stuff from the beginning
 +# of this file.
 +if [ $# = 0 ]; then
 + cat $0 | awk '$1 == "#USAGESTART", $1 == ""' | tail +2 | sed 's/#//g'
 +fi
- 
--#		-U def		passed to C compiler (for .c files)
--#				or to cpp (for .F files) to remove def
- 
- s=/tmp/stderr_$$
- t=/tmp/f77_$$.o
--### On some systems (e.g., IRIX), -common prevents complaints
--### about multiple definitions of COMMON blocks.
--#CC=${CC_f2c:-'cc -common'}
--CC=${CC_f2c:-'cc'}
++
++
++tmpd=${TMPDIR:-/tmp}
++mytmp=${tmpd}/f2c_$$
++mkdir -m 0700 $mytmp
++if test $? -ne 0 ; then
++	echo "ERROR:  Could not create temporary directory ${mytmp}"
++	echo "Either you do not have write permission to ${tmpd} or"
++	echo "${mytmp} already exists"
++	exit 1
++fi
++s=${mytmp}/stderr
++t=${mytmp}/f77.o
 +CC=${CC_f2c:-'@CC@ '}
  EFL=${EFL:-efl}
  EFLFLAGS=${EFLFLAGS:-'system=portable deltastno=10'}
@@ -178,7 +193,8 @@ Also only pass -m* to the C compiler not f2c.
 +S2DBLFLAG="-R"
 +CPP=${CPP:-'@CPP@ '}
  rc=0
- trap "rm -f $s $t; exit \$rc" 0
+-trap "rm -f $s $t; exit \$rc" 0
++trap "rm -fr $s $t $mytmp ; exit \$rc" 0
  OUTF=a.out
 -OUTO=
  cOPT=1
@@ -324,9 +340,9 @@ Also only pass -m* to the C compiler not f2c.
 -	-S)	CFLAGS="$CFLAGS -S"
 -		cOPT=0
 +	-w66)	F2CFLAGS="$F2CFLAGS -w66"
- 		shift
- 		;;
- 
++		shift
++		;;
++
 +	-Wl*)	CFLAGS="$CFLAGS $1"
 +		shift
 +		;;
@@ -335,10 +351,14 @@ Also only pass -m* to the C compiler not f2c.
 +		shift
 +		;;
 +
-+	-*)	echo "ERROR:  $1 is not a valid option"
-+		exit 1
-+		;;
-+
++	-*)	CFLAGS="$CFLAGS $1"
++		CPPFLAGS="$CPPFLAGS $1"
++		if test $VERBOSE = "yes"; then
++			echo "Warning:  Passing unknown option $1 on to the c compiler"
++		fi
+ 		shift
+ 		;;
+ 
  	*)
 -		echo "invalid parameter $1" 1>&2
 +		ARGS="$ARGS $1"
@@ -374,7 +394,9 @@ Also only pass -m* to the C compiler not f2c.
 +
  while
  	test -n "$1"
-@@ -184,4 +268,7 @@
+ do
+@@ -183,6 +280,9 @@ do
+ 		case "$1" in *.f) f=".f";; *.F) f=".F";; esac
  		case "$1" in
  			*.f)	b=`basename $1 .f`
 +				if test $VERBOSE = "yes"; then
@@ -382,7 +404,9 @@ Also only pass -m* to the C compiler not f2c.
 +				fi
  				$F2C $F2CFLAGS $1
  				rc=$?
-@@ -191,4 +278,7 @@
+ 				;;
+@@ -190,6 +290,9 @@ do
+ 				$CPP $CPPFLAGS $1 >$b.i
  				rc=$?
  				case $rc in 0)
 +					if test $VERBOSE="yes"; then
@@ -390,35 +414,45 @@ Also only pass -m* to the C compiler not f2c.
 +					fi
  					$F2C $F2CFLAGS <$b.i >$b.c
  					rc=$?
-@@ -198,5 +288,5 @@
+ 					;;esac
+@@ -197,7 +300,7 @@ do
+ 				;;
  			esac
  		case $rc in 0);; *) exit;; esac
 -                $CC -c $CFLAGSF2C $CFLAGS $b.c 2>$s
 +                $CC -c $CFLAGS $b.c 2>$s
  		rc=$?
  		sed '/parameter .* is not referenced/d;/warning: too many parameters/d' $s 1>&2
-@@ -213,5 +303,5 @@
+ 		case $rc in 0);; *) exit;; esac
+@@ -212,7 +315,7 @@ do
+ 		case $? in 0);; *) rc=$?; exit;; esac
  		$F2C $F2CFLAGS $b.f
  		case $? in 0);; *) rc=$?; exit;; esac
 -                $CC -c $CFLAGSF2C $CFLAGS $b.c
 +                $CC -c $CFLAGS $b.c
  		case $? in 0);; *) rc=$?; exit;; esac
  		OFILES="$OFILES $b.o"
-@@ -226,5 +316,5 @@
+ 		rm $b.[cf]
+@@ -225,7 +328,7 @@ do
+ 		case $? in 0);; *) rc=$?; exit;; esac
  		$F2C $F2CFLAGS $b.f
  		case $? in 0);; *) rc=$?; exit;; esac
 -		$CC -c $CFLAGSF2C $CFLAGS $b.c
 +		$CC -c $CFLAGS $b.c
  		case $? in 0);; *) rc=$?; exit;; esac
  		OFILES="$OFILES $b.o"
-@@ -245,5 +335,5 @@
+ 		rm $b.[cf]
+@@ -244,7 +347,7 @@ do
+ 	*.c)
  		echo $1: 1>&2
  		OFILE=`basename $1 .c`.o
 -                $CC -c $CFLAGSF2C $CPPFLAGS $CFLAGS $1
 +                $CC -c $CPPFLAGS $CFLAGS $1
  		rc=$?; case $rc in 0);; *) rc=$?; exit;; esac
  		OFILES="$OFILES $OFILE"
-@@ -261,10 +351,10 @@
+ 		case $cOPT in 1) cOPT=2;; esac
+@@ -260,19 +363,18 @@ do
+ 		case $cOPT in 1) cOPT=2;; esac
  		shift
  		;;
 -	-[lL])
@@ -432,7 +466,7 @@ Also only pass -m* to the C compiler not f2c.
 +	-l*)
  		OFILES="$OFILES $1"
  		shift
-@@ -272,6 +362,5 @@
+ 		case $cOPT in 1) cOPT=2;; esac
  		;;
  	-o)
 -		case $cOPT in 0) CFLAGS="$CFLAGS -o $2";; *) OUTF=$2;; esac
@@ -440,7 +474,9 @@ Also only pass -m* to the C compiler not f2c.
 +		OUTF=$2; shift 2;;
  	*.P)
  		F2CFLAGS="$F2CFLAGS $1"
-@@ -286,9 +375,11 @@
+ 		shift
+@@ -285,10 +387,12 @@ do
+ 	esac
  done
  
 -### On some (IRIX) systems, -Wl,-dont_warn_unused prevents complaints
