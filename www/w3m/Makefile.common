@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.26 2004/04/20 14:24:41 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.27 2004/04/25 04:16:43 xtraeme Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=w3m/}
 

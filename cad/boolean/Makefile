@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/22 07:21:54 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/25 04:16:43 xtraeme Exp $
 #
 
 DISTNAME=	boolean
@@ -17,7 +17,7 @@ REL=		6.4
 
 BUILD_DEPENDS+=	cmake>=1.6.6:../../devel/cmake
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 
 # the zip archive messes up the case of these files which breaks
@@ -45,5 +45,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/boolean  ${PREFIX}/bin/boolean
 	${INSTALL_PROGRAM} ${WRKSRC}/apps/edit/edit  ${PREFIX}/bin/edit
 
-.include "../../x11/wxGTK/buildlink2.mk"
+.include "../../x11/wxGTK/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

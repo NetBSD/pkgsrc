@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/01/24 15:46:43 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 04:16:43 xtraeme Exp $
 
 DISTNAME=		camlimages-2.11
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.inria.fr/INRIA/caml-light/bazar-ocaml/
 EXTRACT_SUFX=		.tgz
