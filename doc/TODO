@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3020 2005/02/14 08:58:04 xtraeme Exp $
+$NetBSD: TODO,v 1.3021 2005/02/14 09:21:36 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1153,6 +1153,7 @@ Suggested package updates
 	o xmmsctrl-1.8
 	o xmon-1.5.6
 	o xnap-2.5r3
+	o xorg-6.8.2 [xtraeme]
 	o xpad-2.2
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
