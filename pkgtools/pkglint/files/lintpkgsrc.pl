@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.39 2000/11/14 17:11:43 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.40 2000/11/17 12:45:31 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -17,8 +17,7 @@ $^W = 1;
 use strict;
 use Getopt::Std;
 use File::Find;
-my(	$pkgdistdir,		# Distfiles directory
-	%pkg,			# {$ver} ->{restricted} ->{dir} ->{BROKEN}
+my(	%pkg,			# {$ver} ->{restricted} ->{dir} ->{BROKEN}
 	$default_vars,		# Set for Makefiles, inc PACKAGES & PKGSRCDIR
 	%opt,			# Command line options
 	%vuln,			# vulnerability data
@@ -28,12 +27,12 @@ my(	$pkgdistdir,		# Distfiles directory
 
 $ENV{PATH} .= ':/usr/sbin';
 
-if (! &getopts('BS:VDK:LM:P:Rdhilmopru', \%opt) || $opt{'h'} ||
-	! ( defined($opt{'d'}) || defined($opt{'i'}) || defined($opt{'l'}) ||
-	    defined($opt{'m'}) || defined($opt{'o'}) || defined($opt{'p'}) ||
-	    defined($opt{'r'}) || defined($opt{'u'}) || defined($opt{'B'}) ||
-	    defined($opt{'D'}) || defined($opt{'S'}) || defined($opt{'V'}) ||
-	    defined($opt{'R'}) ))
+if (! &getopts('BDK:LM:P:RSVdg:hilmopru', \%opt) || $opt{'h'} ||
+	! ( defined($opt{'d'}) || defined($opt{'g'}) || defined($opt{'i'}) ||
+	    defined($opt{'l'}) || defined($opt{'m'}) || defined($opt{'o'}) ||
+	    defined($opt{'p'}) || defined($opt{'r'}) || defined($opt{'u'}) ||
+	    defined($opt{'B'}) || defined($opt{'D'}) || defined($opt{'R'}) ||
+	    defined($opt{'S'}) || defined($opt{'V'}) ))
     { &usage_and_exit; }
 $| = 1;
 
@@ -61,16 +60,11 @@ if ($opt{'D'} && @ARGV)
 
 # main
     {
-    my($pkglint_flags, $pkgsrcdir);
+    my($pkglint_flags, $pkgsrcdir, $pkgdistdir);
 
     $pkgsrcdir = $default_vars->{'PKGSRCDIR'};
+    $pkgdistdir = $default_vars->{'DISTDIR'};
     $pkglint_flags = '-v';
-
-    if ($opt{'M'})
-	{ $pkgdistdir = $opt{'M'}; } # override distfile dir
-    else
-	{ $pkgdistdir = "$pkgsrcdir/distfiles"; } # default
-
 
     if ($opt{'r'} && !$opt{'o'} && !$opt{'m'} && !$opt{'p'})
 	{ $opt{'o'} = $opt{'m'} = $opt{'p'} = 1; }
@@ -78,7 +72,7 @@ if ($opt{'D'} && @ARGV)
 	{
 	my(@baddist);
 
-	@baddist = &scan_pkgsrc_distfiles_vs_md5($pkgsrcdir,
+	@baddist = &scan_pkgsrc_distfiles_vs_md5($pkgsrcdir, $pkgdistdir,
 							$opt{'o'}, $opt{'m'});
 	if ($opt{'r'})
 	    {
@@ -136,9 +130,33 @@ if ($opt{'D'} && @ARGV)
 
     if ($opt{'S'})
 	{
+	my($cat, %in_subdir, $pkgname, $ver);
+
+	foreach $cat (&list_pkgsrc_categories($pkgsrcdir))
+	    {
+	    my($vars) = parse_makefile_vars("$pkgsrcdir/$cat/Makefile");
+	    if (! $vars->{'SUBDIR'})
+		{ print "Warning - no SUBDIR for $cat\n"; next; }
+	    foreach (split(/\s+/, $vars->{'SUBDIR'}))
+		{ $in_subdir{"$cat/$_"} = 1; }
+	    }
+
+	&scan_pkgsrc_makefiles($pkgsrcdir);
+	foreach $pkgname (sort keys %pkg)
+	    {			# Print highest number first
+	    foreach $ver (reverse sort keys %{$pkg{$pkgname}})
+		{
+		if (!defined $in_subdir{$pkg{$pkgname}{$ver}{'dir'}})
+		    { print "$pkg{$pkgname}{$ver}{'dir'}: Not in SUBDIR\n"; }
+		}
+	    }
+	}
+
+    if ($opt{'g'})
+	{
 	my($pkgname, $ver, $tmpfile);
 
-	$tmpfile = "$opt{'S'}.tmp.$$";
+	$tmpfile = "$opt{'g'}.tmp.$$";
 
 	&scan_pkgsrc_makefiles($pkgsrcdir);
 	if (!open(TABLE, ">$tmpfile"))
@@ -150,9 +168,10 @@ if ($opt{'D'} && @ARGV)
 	    }
 	if (!close(TABLE))
 	    { &fail("Error while writing '$tmpfile': $!"); }
-	if (!rename($tmpfile, $opt{'S'}))
-	    { &fail("Error in rename('$tmpfile','$opt{'S'}'): $!"); }
+	if (!rename($tmpfile, $opt{'g'}))
+	    { &fail("Error in rename('$tmpfile','$opt{'g'}'): $!"); }
 	}
+
     if ($opt{'d'})
 	{
 	&scan_pkgsrc_makefiles($pkgsrcdir);
@@ -323,6 +342,10 @@ sub get_default_makefile_vars
     if ($opt{'P'})
 	{ $default_vars->{'PKGSRCDIR'} = $opt{'P'}; }
 
+    if ($opt{'M'})
+	{ $default_vars->{'DISTDIR'} = $opt{'M'}; }
+    $default_vars->{'DISTDIR'} ||= $default_vars->{'PKGSRCDIR'}.'/distfiles';
+
     if ($opt{'K'})
 	{ $default_vars->{'PACKAGES'} = $opt{'K'}; }
     $default_vars->{'PACKAGES'} ||= $default_vars->{'PKGSRCDIR'}.'/packages';
@@ -437,13 +460,13 @@ sub glob2regex
 	elsif ($_ eq '.' || $_ eq '|' )
 	    { $regex .= quotemeta; }
 	elsif ($_ eq '{' )
-	    { $regex .= '('; $in_alt = 1; }
+	    { $regex .= '('; ++$in_alt; }
 	elsif ($_ eq '}' )
 	    {
 	    if (!$in_alt)		# Error
 		{ return undef; }
 	    $regex .= ')';
-	    $in_alt = 0;
+	    --$in_alt;
 	    }
 	elsif ($_ eq ','  && $in_alt)
 	    { $regex .= '|'; }
@@ -454,6 +477,8 @@ sub glob2regex
 	{ return undef; }
     if ($regex eq $glob)
 	{ return(''); }
+    if ($opt{'D'})
+	{ print "glob2regex: $glob -> $regex\n"; }
     '^'.$regex.'$';
     }
 
@@ -502,14 +527,17 @@ sub package_globmatch
 	    foreach $pkgname (sort keys %pkg)
 		{ ($pkgname =~ /$regex/) && push(@pkgnames, $pkgname); }
 	    }
+
+	# Try to convert $matchver into regex version
+	#
+	$regex = glob2regex($matchver);
+
 	foreach $pkgname (@pkgnames)
 	    {
 	    if (defined $pkg{$pkgname}{$matchver})
 		{ return($matchver); }
 
-	    # Try to convert $globver into regex version
-
-	    if ( $regex = glob2regex($matchver))
+	    if ($regex)
 		{
 		foreach $ver (keys %{$pkg{$pkgname}})
 		    {
@@ -519,7 +547,9 @@ sub package_globmatch
 		}
 	    $matchver || last;
 	    }
+
 	# last ditch attempt to handle the whole DEPENDS as a glob
+	#
 	if ($matchver && ($regex = glob2regex($pkgmatch)))	# (large-glob)
 	    {
 	    my($pkgname, $ver);
@@ -697,7 +727,7 @@ sub parse_makefile_vars
 	    next;
 	    }
 
-	if (/^ *(\w+)([+?]?)\s*=\s*(\S.*)/)
+	if (/^ *(\w+)\s*([+?]?)=\s*(\S.*)/)
 	    {
 	    $key = $1;
 	    $plus = $2;
@@ -918,7 +948,7 @@ sub pkgsrc_check_depends
 #
 sub scan_pkgsrc_distfiles_vs_md5
     {
-    my($pkgsrcdir, $check_unref, $check_md5) = @_;
+    my($pkgsrcdir, $pkgdistdir, $check_unref, $check_md5) = @_;
     my($cat, @categories, $pkgdir);
     my(%distfiles, %md5, @distwarn, $file, $numpkg);
     my(@distfiles, @bad_distfiles);
@@ -957,7 +987,7 @@ sub scan_pkgsrc_distfiles_vs_md5
 	}
     &verbose(" ($numpkg packages)\n");
 
-    # Do not mark the vulnerabilitis file as unknown
+    # Do not mark the vulnerabilities file as unknown
     $distfiles{'vulnerabilities'} = 'vulnerabilities';
     $md5{'vulnerabilities'} = 'IGNORE';
 
@@ -1002,37 +1032,39 @@ sub scan_pkgsrc_distfiles_vs_md5
 #
 sub usage_and_exit
     {
-    print "Usage: lintpkgsrc [opts]
+    print "Usage: lintpkgsrc [opts] [makefiles]
 opts:
-  -h	     : This help.
-  -d	     : Check 'DEPENDS' are up to date.
-  -i	     : Check installed package versions against pkgsrc.
-  -l	     : Pkglint every package in pkgsrc.
-  -R	     : List any NO_BIN_ON_FTP/RESTRICTED prebuilt packages (#).
-  -V	     : List any prebuilt packages with known vulnerabilities (#).
-  -m	     : List md5 mismatches for files in distfiles/.
-  -o	     : List old/obsolete distfiles (not referenced by any md5).
-  -p	     : List old/obsolete prebuilt packages (#).
-  -r	     : Remove 'bad' distfiles or packages (*).
-  -u	     : For each installed package ensure distfiles are fetched.
-  -B	     : List 'BROKEN' packages
-  -S file    : Output map of 'pkgname pkgdir pkgver'
+  -h : This help.	 [see lintpkgsrc(1) for more information]
 
-  -L         : List each Makefile when scanned
-  -P path    : Set PKGSRCDIR
-  -K path    : Set basedir for prebuild packages (default PKGSRCDIR/packages)
-  -M path    : Set basedir for distfiles (default PKGSRCDIR/distfiles)
-  -D [paths] : Parse Makefiles and output contents (For debugging)
+Installed package options:		Distfile options:
+  -i : Check version against pkgsrc	  -m : List md5 mismatches
+  -u : Fetch distfiles (may change)	  -o : List obsolete (no md5)
 
-(*) Without any of -m, -o, -p, or -V implies all. Can use with -R.
+Prebuilt package options:		Makefile options:
+  -p : List old/obsolete		  -B : List packages marked as 'BROKEN'
+  -R : List NO_BIN_ON_FTP/RESTRICTED	  -d : Check 'DEPENDS' up to date
+  -V : List known vulnerabilities	  -S : List packages not in 'SUBDIRS'
 
-See lintpkgsrc(1) for more information.
+Misc:
+  -g file : Generate 'pkgname pkgdir pkgver' map in file
+  -l	  : Pkglint all packages
+  -r	  : Remove bad files (Without -m -o -p or -V implies all, can use -R)
+
+Modifiers:
+  -K path : Set PACKAGES basedir (default PKGSRCDIR/packages)
+  -M path : Set DISTDIR		 (default PKGSRCDIR/distfiles)
+  -P path : Set PKGSRCDIR	 (default /usr/pkgsrc)
+  -D      : Debug makefile and glob parsing
+  -L      : List each Makefile when scanned
 ";
     exit;
     }
 
 sub verbose
-    { print STDERR @_; }
+    {
+    if (-t STDERR)
+	{ print STDERR @_; }
+    }
 
 sub debug
     {
