@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/01/24 23:11:55 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/02/28 20:27:13 frueauf Exp $
 bin/bash
 @exec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak; echo %D/%F) >/etc/shells
 @unexec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak) >/etc/shells
@@ -14,3 +14,4 @@ share/doc/bash/bash.html
 share/doc/bash/bashref.html
 share/doc/bash/bashref_toc.html
 share/doc/bash/article.txt
+@dirrm share/doc/bash
