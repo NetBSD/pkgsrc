@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/08/05 03:04:33 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2004/08/07 07:58:32 jlam Exp $
 
 # Global and legacy options
 #
@@ -136,17 +136,19 @@ AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq \
 .if !empty(PKG_OPTIONS:Msasl)
 .  if !defined(USE_SASL2) && !defined(USE_SASL)
 .    include "../../security/cyrus-sasl2/buildlink3.mk"
+BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
 SASLLIBDIR=	${PREFIX}/lib/sasl2
 PWCHECK_METHOD=	auxprop
-CCARGS+=	-DUSE_SASL2_AUTH
+CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
 		-lsasl2
 .  elif defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
 .    include "../../security/cyrus-sasl2/buildlink3.mk"
+BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
 SASLLIBDIR=	${PREFIX}/lib/sasl2
 PWCHECK_METHOD=	auxprop
-CCARGS+=	-DUSE_SASL2_AUTH
+CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
 		-lsasl2
