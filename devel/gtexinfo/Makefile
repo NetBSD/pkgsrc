@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1997/12/14 23:09:43 hubertf Exp $
 # New ports collection makefile for:	GNU texinfo
 # Version required:     3.11
 # Date created:		14 November 1997
 # Whom:			lamj@stat.cmu.edu
+#
+# $NetBSD: Makefile,v 1.3 1998/01/24 04:13:35 hubertf Exp $
 #
 
 DISTNAME=       texinfo-3.11
