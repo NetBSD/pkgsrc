@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:41:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/11/08 08:29:19 xtraeme Exp $
 #
 
-DISTNAME=	icbm3d.0.3
-PKGNAME=	icbm3d-0.3
+DISTNAME=	icbm3d.0.4
+PKGNAME=	${DISTNAME:S/./-/}
 WRKSRC=		${WRKDIR}/icbm3d
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.sonic.net/pub/users/nbs/unix/x/icbm3d/
@@ -12,10 +12,6 @@ HOMEPAGE=	http://www.sonic.net/~nbs/unix/x/icbm3d/
 COMMENT=	3D X11 game of defense
 
 MAKEFILE=	makefile
-USE_X11BASE=	yes
-
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/icbm3d
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${PREFIX}/share/doc/icbm3d
+USE_X11=	yes
 
 .include "../../mk/bsd.pkg.mk"
