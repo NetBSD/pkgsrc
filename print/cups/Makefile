@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.28 2001/05/22 09:32:24 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2001/05/24 03:17:18 jlam Exp $
 
 DISTNAME=		cups-${VERS}-source
 PKGNAME=		cups-${VERS}
-VERS=			1.1.7
+VERS=			1.1.8
 WRKSRC=			${WRKDIR}/cups-${VERS}
 CATEGORIES=		print
 MASTER_SITES=		ftp://ftp.easysw.com/pub/cups/${VERS}/ \
 			ftp://ftp2.easysw.com/pub/cups/${VERS}/ \
-			ftp://ftp.funet.fi/mirrors/ftp.easysw.com/pub/cups/${VERS}/ \
+			ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/${VERS}/ \
 			ftp://ftp.mpg.goe.ni.schule.de/pub/internet/printing/cups/${VERS}/ \
 			ftp://ftp.ntua.gr/pub/gnu/cups/${VERS}/ \
 			ftp://ftp.fisek.com.tr/pub/cups/${VERS}/
