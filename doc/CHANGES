@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4076 2003/12/13 19:11:57 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4077 2003/12/13 19:28:47 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3369,3 +3369,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gtk-send-pr-0.3 [xtraeme 2003-12-13]
 	Updated pkg_comp to 1.11 [seb 2003-12-13]
 	Added openbox-3.0 [xtraeme 2003-12-13]
+	Updated xscreensaver to 4.14 [jmmv 2003-12-13]
+	Updated xscreensaver-gnome to 4.14 [jmmv 2003-12-13]
+	Added xscreensaver-demo-4.14 [jmmv 2003-12-13]
