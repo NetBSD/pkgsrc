@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/12/07 19:58:57 ad Exp $
+
+diff -ur dpteng/engcalls.c dpteng/engcalls.c
+--- odpteng/engcalls.c	Tue Aug 13 16:02:24 2002
++++ dpteng/engcalls.c	Fri Dec  6 09:04:44 2002
+@@ -118,6 +118,12 @@
+ char *CommEnginePathNameDefault = "/opt/SUNWhwrdg/dptcom";
+ char *DefaultPathName = "/opt/SUNWhwrdg/";
+ 
++#elif defined (__NetBSD__)
++
++char *EnginePathNameDefault = _NBSD_LIBEXEC "/dpteng &";
++char *CommEnginePathNameDefault = _NBSD_LIBEXEC "/dptcom &";
++char *DefaultPathName = _NBSD_LIBEXEC;
++
+ #else
+ 
+ char *EnginePathNameDefault = "/usr/dpt/dpteng &";
