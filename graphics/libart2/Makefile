@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/12/03 02:39:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/11 01:25:25 xtraeme Exp $
 
 DISTNAME=		libart_lgpl-2.3.16
 PKGNAME=		${DISTNAME:S/_lgpl/2/}
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.levien.com/libart/
 COMMENT=		High-performance 2D graphics library
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 
 USE_LIBTOOL=		YES
