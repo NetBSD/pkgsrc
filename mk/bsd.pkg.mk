@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.777 2001/07/02 21:28:45 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.778 2001/07/04 23:44:27 perry Exp $
 #
 # This file is in the public domain.
 #
@@ -733,7 +733,7 @@ DEPENDS+=		${LESSTIF_DEPENDS}
 
 # If USE_XPM is set, depend on xpm.
 .if defined(USE_XPM)
-.if ${HAVE_BUILTIN_XPM} == "NO"
+.if (defined(HAVE_BUILTIN_XPM) && (${HAVE_BUILTIN_XPM} == "NO"))
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 XPMDIR_DEFAULT=		${X11PREFIX}
 .else
