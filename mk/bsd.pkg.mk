@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.911 2002/01/22 18:15:20 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.912 2002/01/23 13:05:51 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -523,15 +523,11 @@ PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 # Set INSTALL_FILE to be the name of any INSTALL file
 .if !defined(INSTALL_FILE) && exists(${PKGDIR}/INSTALL)
 INSTALL_FILE=		${PKGDIR}/INSTALL
-.elif !defined(INSTALL_FILE) && exists(${.CURDIR}/INSTALL)
-INSTALL_FILE=		${.CURDIR}/INSTALL
 .endif
 
 # Set DEINSTALL_FILE to be the name of any DEINSTALL file
 .if !defined(DEINSTALL_FILE) && exists(${PKGDIR}/DEINSTALL)
 DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
-.elif !defined(DEINSTALL_FILE) && exists(${.CURDIR}/DEINSTALL)
-DEINSTALL_FILE=		${.CURDIR}/DEINSTALL
 .endif
 
 # If MESSAGE hasn't been defined, then set MESSAGE_SRC to be a space-separated
@@ -539,8 +535,6 @@ DEINSTALL_FILE=		${.CURDIR}/DEINSTALL
 #
 .if !defined(MESSAGE_SRC) && !defined(MESSAGE) && exists(${PKGDIR}/MESSAGE)
 MESSAGE_SRC=		${PKGDIR}/MESSAGE
-.elif !defined(MESSAGE_SRC) && !defined(MESSAGE) && exists(${.CURDIR}/MESSAGE)
-MESSAGE_SRC=		${.CURDIR}/MESSAGE
 .endif
 
 .if defined(MESSAGE_SRC)
