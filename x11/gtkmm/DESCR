@@ -1,0 +1,9 @@
+gtkmm (previously known as Gtk--) is the official C++ interface for the
+popular GUI library GTK+. Highlights include typesafe callbacks, widgets
+extensible via inheritance and a comprehensive set of widget classes that
+can be freely combined to quickly create complex user interfaces. Here's
+an overview, with documentation and status. gtkmm is free software
+distributed under the GNU Library General Public License (LGPL).
+
+Aside from the C++ interface to Gtk 2.x, this package also provides
+bindings for glib, atk and pango (all of them related with the toolkit).
