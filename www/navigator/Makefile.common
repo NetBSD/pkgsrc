@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.57 2002/12/07 02:39:07 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.58 2002/12/08 01:54:19 mrg Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -94,7 +94,7 @@ MASTER_SITES=	ftp://archive.netscape.com/archive/communicator/${SUB}/
 #
 .elif (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "sparc64") 
 PLIST_ARCH=	solaris-sparc
-.if !exists(/emul/svr4/usr/lib/ld.so)
+.if !exists(/emul/svr4/usr/lib/ld.so.1)
 PKG_FAIL_REASON= "${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
 .endif
 NS_VERS=	4.79
