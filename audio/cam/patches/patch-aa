@@ -1,0 +1,76 @@
+diff -ru ../cam-1.02-virgin/cam.h ./cam.h
+--- ../cam-1.02-virgin/cam.h	Mon Oct 21 13:08:08 1996
++++ ./cam.h	Sun Nov 10 12:19:52 1996
+@@ -23,7 +23,11 @@
+ #include <stdio.h>
+ #include <ncurses.h>
+ #include <signal.h>
++#ifdef __FreeBSD__
++#include <machine/soundcard.h>
++#else
+ #include <sys/soundcard.h> 
++#endif
+ #include <fcntl.h>
+ 
+ #include "sounds.h"
+Only in .: cam.o
+Only in .: screens.o
+diff -ru ../cam-1.02-virgin/sounds.c ./sounds.c
+--- ../cam-1.02-virgin/sounds.c	Mon Oct 21 13:33:55 1996
++++ ./sounds.c	Sun Nov 10 12:20:22 1996
+@@ -36,7 +36,7 @@
+ 
+ 
+ int mixer_fd, recmask, devmask, stereodevs, recsrc;
+-char *devname[DEV_COUNT] = SOUND_DEVICE_LABELS;
++char *cam_devname[DEV_COUNT] = SOUND_DEVICE_LABELS;
+ char *mixer_dev = "/dev/mixer";
+ struct devices
+ {
+@@ -287,7 +287,7 @@
+           else
+              dev_vol[dev_count].vol_right = dev_vol[dev_count].vol_left;
+ 
+-          draw_slider( Y, X, devname[dev_nr]);
++          draw_slider( Y, X, cam_devname[dev_nr]);
+           draw_handle( Y+1, X+14+dev_vol[dev_count].vol_left, FALSE, 4);
+           if (STEREO(dev_nr))
+              draw_handle( Y+2, X+14+dev_vol[dev_count].vol_right, FALSE, 4);          
+Only in .: sounds.o
+diff -ru ../cam-1.02-virgin/xcam ./xcam
+--- ../cam-1.02-virgin/xcam	Thu Sep 19 12:10:40 1996
++++ ./xcam	Sun Nov 10 12:21:10 1996
+@@ -1 +1 @@
+-color-xterm -tn xterm-color -font vga  -geometry 80x25 -bg black -fg gray -e cam
++color_xterm -tn xterm-color -font vga  -geometry 80x25 -bg black -fg gray -e ./cam
+--- Makefile~	Tue Nov 12 16:03:05 1996
++++ Makefile	Tue Nov 12 16:03:57 1996
+@@ -8,11 +8,11 @@
+ CFLAGS = -Wall -O2
+ LIBS   = -lncurses
+ INSTALL = install
+-BINDIR = /usr/local/bin
++BINDIR = ${PREFIX}/bin
+ MANFILE= cam.1
+-MANDIR = /usr/man/man1
++MANDIR = ${PREFIX}/man/man1
+ EFILE  = cam
+-XEFILE = xcam
++#XEFILE = xcam
+ OBJS   = cam.o screens.o sounds.o
+ ###############################################################################
+ 
+@@ -69,12 +69,10 @@
+ 	@echo ""
+ 	@echo "installing $(EFILE) in directory $(BINDIR)"
++	@$(INSTALL) -m 755 -o root -g bin $(EFILE) $(BINDIR)
+-	@$(INSTALL) -m 755 -o root -g root $(EFILE) $(BINDIR)
+-	@$(INSTALL) -m 755 -o root -g root $(XEFILE) $(BINDIR)
+ 	@echo ""
+ 	@echo "installing manpages for cam"
++	@$(INSTALL) -m 644 -o root -g bin $(MANFILE) $(MANDIR)
+-	@$(INSTALL) -m 644 -o root -g root $(MANFILE) $(MANDIR)
++	@gzip -9nf ${MANDIR}/${MANFILE}
+-	@echo ""
+-	@. installvgafont.sh
+ 	@echo ""

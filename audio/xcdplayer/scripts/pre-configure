@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# $Id: pre-configure,v 1.1.1.1 1997/10/28 23:19:24 augustss Exp $
+#
+
+cp ${CURDIR}/files/cdrom_freebsd.c ${WRKSRC}
+cp ${CURDIR}/files/cdrom_freebsd.h ${WRKSRC}
+cp ${WRKSRC}/xcdplayer.1 ${WRKSRC}/xcdplayer.man
