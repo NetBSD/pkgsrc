@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.214 2003/01/24 10:54:52 wiz Exp $
+$NetBSD: TODO,v 1.215 2003/01/24 23:51:49 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -130,7 +130,6 @@ Suggested package updates
 	o gnuplot-3.7.3 [pkg/19663]
 	o gpa-0.6.0
 	o gpgme-0.4.0
-	o grub-0.93
 	o gsed-4.0.5
 	o gtetrinet-0.5.2
 	o gtk---2.2.0
