@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+
+--- utils/Makefile.in.orig	Wed Jan 20 06:29:27 1999
++++ utils/Makefile.in	Mon Feb 22 03:54:05 1999
+@@ -83,10 +83,10 @@
+ xpm_CFLAGS = @xpm_CFLAGS@
+ xpm_LIBS = @xpm_LIBS@
+ 
+-bin_PROGRAMS = @XPMROOT@
+-EXTRA_PROGRAMS = xpmroot
++#bin_PROGRAMS = @XPMROOT@
++#EXTRA_PROGRAMS = xpmroot
+ 
+-man_MANS = xpmroot.1
++#man_MANS = xpmroot.1
+ EXTRA_DIST = BuildXLockMenu fvwmrc_convert quantize_pixmaps $(man_MANS)
+ 
+ LDADD = -L$(top_builddir)/libs -lfvwm $(xpm_LIBS) 	$(X_LIBS) $(X_PRE_LIBS) -lXext -lX11 $(X_EXTRA_LIBS)

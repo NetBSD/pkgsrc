@@ -1,0 +1,68 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+
+--- src/aapm.cc.orig	Sun Feb 13 10:28:36 2000
++++ src/aapm.cc	Mon Mar  6 22:22:36 2000
+@@ -22,11 +22,18 @@
+ 
+ #ifdef CONFIG_APM
+ 
++#if defined(__NetBSD__)
++#include <sys/ioctl.h>
++#include <machine/apmvar.h>
++#include <fcntl.h>
++#endif
++
+ YColor *YApm::apmBg = 0;
+ YColor *YApm::apmFg = 0;
+ YFont *YApm::apmFont = 0;
+ 
+ void ApmStr(char *s, bool Tool) {
++#ifdef __linux__
+     char buf[45];
+     int len, i, fd = open("/proc/apm", O_RDONLY);
+     char driver[16];
+@@ -97,6 +104,44 @@
+             strcat(s," - Charging");
+         else
+             strcat(s,"M");
++#elif defined(__NetBSD__)
++    struct apm_power_info aip;
++    int fd = open(APMDEV, O_RDONLY);
++
++    if (fd == -1) {
++        return;
++    }
++
++    if (ioctl(fd, APM_IOC_GETPOWER, &aip) == -1) {
++        fprintf(stderr, "ioctl failed on APMDEV");
++        return;
++    }
++
++    if (!Tool) {
++        if (taskBarShowApmTime) {
++            if (aip.minutes_left == 0) {
++                sprintf(s, "%02d", aip.battery_life);
++            } else
++                sprintf(s, "%d:%02d", aip.minutes_left/60, aip.minutes_left%60);
++        } else
++            sprintf(s, "%02d", aip.battery_life);
++    } else {
++        sprintf(s, "%d%%", aip.battery_life);
++    }
++
++    if (aip.ac_state == APM_AC_ON)
++        if (Tool)
++            strcat(s," - Power");
++        else
++            strcat(s,"P");
++    if (aip.battery_state == APM_BATT_CHARGING)
++        if (Tool)
++            strcat(s," - Charging");
++        else
++            strcat(s,"M");
++
++    close(fd);
++#endif
+ }
+ 
+ YApm::YApm(YWindow *aParent): YWindow(aParent) {

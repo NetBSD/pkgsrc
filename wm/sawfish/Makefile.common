@@ -1,0 +1,29 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+
+DISTNAME=		sawfish-${SF_VERS}
+SF_VERS=		0.33.1
+CATEGORIES=		x11 gnome wm
+MASTER_SITES=		ftp://mirror.capital-internet.net/pub/sawmill/sawfish/ \
+			ftp://eprom.dhs.org/pub/mirrors/sawmill/ \
+			http://ftp.fi.muni.cz/pub/linux/sawmill/ \
+			ftp://ftp.dcs.warwick.ac.uk/people/John.Harper/ \
+			ftp://ftp.du.se/pub/mirrors/sawfish/ \
+			ftp://sawmill.sourceforge.net/pub/sawmill/
+
+MAINTAINER=		jlam@netbsd.org
+HOMEPAGE=		http://sawmill.sourceforge.net/
+
+DEPENDS+=		librep>=0.13:../../lang/librep
+DEPENDS+=		rep-gtk>=0.14:../../x11/rep-gtk
+DEPENDS+=		imlib>=1.8.2:../../graphics/imlib
+DEPENDS+=		control-center-*:../../x11/controlcenter
+
+USE_X11=		# defined
+
+USE_GMAKE=		# defined
+GNU_CONFIGURE=		# defined
+
+FILESDIR=		${.CURDIR}/../../wm/sawfish/files
+PATCHDIR=		${.CURDIR}/../../wm/sawfish/patches
+
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+
+--- Makefile.orig	Wed Jan 13 05:28:43 1999
++++ Makefile	Sat Jul 22 02:41:55 2000
+@@ -5,12 +5,12 @@
+ # If you're not using background pixmaps, remove -lXpm from the LIBS.
+ # If your X libraries are somewhere other than /usr/X11/lib, give their
+ # location here.
+-LIBS	= -L/usr/X11/lib -lXpm -lXext -lX11 -lXmu -lSM -lICE -lm
++LIBS	= ${LDFLAGS} -lXpm -lXext -lX11 -lXmu -lSM -lICE -lm
+ 
+ # If your X includes are not in /usr/include/X11, add their location
+ # as a -I option here (excluding the X11 bit).  If you're using I18N
+ # and Xlocale, please add -DX_LOCALE.
+-CFLAGS = -g -O2 -I/usr/include -I/usr/openwin/include
++CFLAGS = -g -O2 -I${X11BASE}/include -I${XPMDIR}/include
+ 
+ OBJECTS	= Border.o Buttons.o Channel.o Client.o Config.o Events.o Main.o Manager.o Menu.o Rotated.o Session.o
+ 

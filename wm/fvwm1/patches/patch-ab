@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+
+--- Imakefile.orig	Fri Dec  2 20:04:20 1994
++++ Imakefile	Wed Mar 25 00:36:03 1998
+@@ -28,7 +28,7 @@
+           modules/FvwmWinList
+ 
+ #ifdef XPM
+-XPMSUBDIRS = xpmroot modules/FvwmBanner 
++XPMSUBDIRS = modules/FvwmBanner 
+ #endif
+ 
+ SUBDIRS = $(ALLSUBDIRS) $(XPMSUBDIRS) $(SHAPESUBDIRS)

@@ -1,0 +1,18 @@
+The goal of IceWM is to provide a small, fast and familiar window
+manager for the X11 window system. Compatibility with the mwm window
+manager is desired and will be implemented where appropriate.
+
+The IceWM is designed to emulate the look of Motif, OS/2 Warp 4, OS/2
+Warp 3 and Windows 95. Others might added in the future.
+
+It also tries to combine the feel of the above systems whenever it is
+compatible.
+
+Generally, it tries to make all functions available both by keyboard
+and by mouse (this is not currently possible when using mouse focus).
+
+Extreme configurability similiar to fvwm and many other window
+managers is NOT the goal.
+
+Author: Marko Macek <Marko.Macek@gmx.net>
+Released under the GPL.
