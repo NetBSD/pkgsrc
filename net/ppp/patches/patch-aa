@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/11 20:41:27 tron Exp $
+
+--- chat/Makefile.bsd.orig	Tue Oct  8 06:37:59 1996
++++ chat/Makefile.bsd	Tue Jul 11 22:11:23 2000
+@@ -2,8 +2,7 @@
+ 
+ PROG=	chat
+ SRCS=	chat.c
+-MAN8=	chat.8
+-MAN=	chat.cat8
+-BINDIR=	/usr/sbin
++MAN=	chat.8
++#BINDIR=	/usr/sbin
+ 
+ .include <bsd.prog.mk>

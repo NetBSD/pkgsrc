@@ -1,0 +1,9 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/07/11 20:41:27 tron Exp $
+
+--- pppd/sys-bsd.c.orig	Tue Aug 24 07:25:54 1999
++++ pppd/sys-bsd.c	Tue Jul 11 22:24:06 2000
+@@ -1,3 +1,4 @@
++#ifndef lint
+ /*
+  * sys-bsd.c - System-dependent procedures for setting up
+  * PPP interfaces on bsd-4.4-ish systems (including 386BSD, NetBSD, etc.)

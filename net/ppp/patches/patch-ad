@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/07/11 20:41:27 tron Exp $
+
+--- pppstats/Makefile.bsd.orig	Wed Mar 25 03:21:17 1998
++++ pppstats/Makefile.bsd	Tue Jul 11 22:23:00 2000
+@@ -3,8 +3,7 @@
+ PROG=	pppstats
+ SRCS=	pppstats.c
+ CFLAGS+=-I../include -D_BITYPES
+-MAN8=	pppstats.8
+-MAN=	pppstats.cat8
+-BINDIR=	/usr/sbin
++MAN=	pppstats.8
++#BINDIR=	/usr/sbin
+ 
+ .include <bsd.prog.mk>
