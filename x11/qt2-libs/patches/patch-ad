@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/10/19 07:41:15 skrll Exp $
+$NetBSD: patch-ad,v 1.2 2001/03/28 09:27:51 skrll Exp $
 
---- configure.orig	Tue Oct 17 12:27:35 2000
+--- configure.orig	Mon Mar  5 18:12:49 2001
 +++ configure
 @@ -17,25 +17,6 @@
      HELP=yes
