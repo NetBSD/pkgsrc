@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 11:39:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/23 06:48:13 snj Exp $
 #
 
 DISTNAME=	xawtv_3.90
@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=	--enable-mmx
 .include "../../fonts/Xft2/buildlink2.mk"
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../x11/Xaw3d/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
