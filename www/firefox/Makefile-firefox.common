@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-firefox.common,v 1.1 2004/08/10 14:28:14 taya Exp $
+# $NetBSD: Makefile-firefox.common,v 1.2 2004/09/07 06:03:55 xtraeme Exp $
 
 MOZILLA_BIN=	firefox-bin
 MOZ_VER=	0.9.3
@@ -22,8 +22,9 @@ CONFIGURE_ARGS+=	--disable-mailnews
 CONFIGURE_ARGS+=	--disable-composer
 CONFIGURE_ARGS+=	--enable-extensions=default,-irc
 
-USE_GCC_SHLIB=		yes
+USE_LANGUAGES+=		c++
 BUILD_MATHML=		# defined
+MESSAGE=		${.CURDIR}/../../www/firefox/MESSAGE
 
 pre-install:
 	${CP} -r ${WRKSRC}/dist/bin/defaults/profile/extensions \
