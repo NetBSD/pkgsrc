@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2003/07/29 16:27:26 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2003/07/29 16:29:09 wiz Exp $
 
 DISTNAME=		inn-${INN_VERSION}
 PKGREVISION=		1
@@ -18,15 +18,14 @@ PATCHFILES=		inn-${INN_VERSION}-v6-20030327.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 INN_VERSION=		2.3.5
-INN_DATA_DIR?=		/var/news
-INN_SPOOL?=		${INN_DATA_DIR}/spool
+.include "Makefile.common"
 BUILD_DEFS+=		INN_DATA_DIR
 FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR}
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
-GNU_CONFIGURE_PREFIX=	${PREFIX}/inn
+GNU_CONFIGURE_PREFIX=	${INN_PREFIX}
 CONFIGURE_ARGS+=	--enable-setgid-inews \
 			--enable-uucp-rnews \
 			--mandir=${PREFIX}/man \
