@@ -1,16 +1,21 @@
-$NetBSD: patch-am,v 1.1 2003/02/25 02:14:59 uebayasi Exp $
+$NetBSD: patch-am,v 1.2 2003/12/22 07:08:30 uebayasi Exp $
 
---- src/database.c.orig	Thu Dec 12 15:21:31 2002
+--- src/database.c.orig	Thu Jun 19 12:34:42 2003
 +++ src/database.c
-@@ -45,9 +45,11 @@
+@@ -45,14 +45,14 @@ Boston, MA 02111-1307, USA.  */
  #ifdef HAVE_INTTYPES_H
  #define __BIT_TYPES_DEFINED__
  #include <inttypes.h>
-+#if !defined(__NetBSD__)
+-#ifndef __FreeBSD__
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__))
  typedef uint8_t  u_int8_t;
  typedef uint16_t u_int16_t;
  typedef uint32_t u_int32_t;
-+#endif /* !__NetBSD__ */
  #ifdef WE_DONT_NEED_QUADS
  typedef uint64_t u_int64_t;
+-#endif
  #endif /* WE_DONT_NEED_QUADS */
++#endif /* !(__FreeBSD__ || __NetBSD__ || __OpenBSD__) */
+ #endif /* HAVE_INTTYPES_H */
+ #endif /* !(defined __GLIBC__ && __GLIBC_MINOR__ >= 1) */
+ /* Berkeley DB wants __STDC__ to be defined; else if does `#define const' */
