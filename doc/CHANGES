@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5403 2004/04/01 05:31:22 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5404 2004/04/01 05:43:32 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1647,3 +1647,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added user_darwin-20040331 [danw 2004-04-01]
 	Added thy-0.8.10 [xtraeme 2004-04-01]
 	Added xmlindent-0.2.16 [xtraeme 2004-04-01]
+	Added tinc-1.0.1 [xtraeme 2004-04-01]
