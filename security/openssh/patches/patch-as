@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1 2004/04/28 04:00:17 jlam Exp $
+
+--- monitor.c.orig	Fri Feb  6 00:40:27 2004
++++ monitor.c
+@@ -738,7 +738,7 @@ mm_answer_skeyquery(int socket, Buffer *
+ 	char challenge[1024];
+ 	u_int success;
+ 
+-	success = skeychallenge(&skey, authctxt->user, challenge) < 0 ? 0 : 1;
++	success = SKEYCHALLENGE(&skey, authctxt->user, challenge, sizeof(challenge)) < 0 ? 0 : 1;
+ 
+ 	buffer_clear(m);
+ 	buffer_put_int(m, success);
