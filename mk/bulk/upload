@@ -1,14 +1,26 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.18 2004/04/19 18:39:09 hubertf Exp $
+# $NetBSD: upload,v 1.18.8.1 2005/01/31 00:25:32 salo Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
 # Must be called in $USR_PKGSRC
 #
 
+MD5="digest md5";
+SHA1="digest sha1";
+
 opsys=`uname -s`
 case "$opsys" in
-NetBSD)	BMAKE=make ;;
+NetBSD)	BMAKE=make;
+	BSDSUM="sum -o 1";
+	CKSUM="cksum";
+	SYSVSUM="sum -o 2";
+	;;
+IRIX*)	BMAKE=bmake;
+#	BSDSUM="sum -r";
+#	CKSUM="cksum";
+#	SYSVSUM="sum";
+	;;
 *)	BMAKE=bmake ;;
 esac
 
@@ -88,6 +100,53 @@ RSFLAGS="-vap --progress $RSYNC_OPTS"
 
 failed=no
 cd $packages
+
+if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
+
+	SUMFILES="BSDSUM CKSUM MD5 SHA1 SYSVSUM"
+
+	rm -f ${SUMFILES}
+
+	if [ x"${SIGN_AS}" != x"" ]; then
+		( cd ${pkgsrcdir}/security/gnupg; ${BMAKE} bulk-install )
+		for i in ${SUMFILES}; do
+			echo > $i
+			echo "This file is signed with ${SIGN_AS}'s PGP key." >> $i
+			echo >> $i
+		done
+	fi
+
+	( cd ${pkgsrcdir}/pkgtools/digest; ${BMAKE} bulk-install )
+
+	[ -z "${BSDSUM}" ] && BSDSUM="echo"
+	[ -z "${CKSUM}" ] && CKSUM="echo"
+	[ -z "${SYSVSUM}" ] && SYSVSUM="echo"
+
+	for i in All/*; do
+		if ! grep -q $i $exf; then
+			${BSDSUM} $i >> BSDSUM
+			${CKSUM} $i >> CKSUM
+			${MD5} $i >> MD5
+			${SHA1} $i >> SHA1
+			${SYSVSUM} $i >> SYSVSUM
+		fi
+	done
+
+	[ "${BSDSUM}" = "echo" ] && rm BSDSUM
+	[ "${CKSUM}" = "echo" ] && rm CKSUM
+	[ "${SYSVSUM}" = "echo" ] && rm SYSVSUM
+	
+	if [ x"${SIGN_AS}" != x"" ]; then
+		for i in ${SUMFILES}; do
+			if [ -s $i ]; then
+				echo "Signing $i"
+				gpg --clearsign $i && rm $i
+				echo ${i}.asc >> $osf
+			fi
+		done
+	fi
+fi
+
 
 echo "#!/bin/sh" > $upload
 echo "packages=$packages" >> $upload
