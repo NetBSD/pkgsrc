@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2299 2004/11/03 15:16:15 adam Exp $
+$NetBSD: TODO,v 1.2300 2004/11/03 15:33:18 adam Exp $
 
 Suggested new packages
 ======================
@@ -327,7 +327,6 @@ Suggested package updates
 	o epic4-2.0
 	o erlang-r10b
 	o ettercap-0.7.1 [wip/ettercap-NG|adrianp]
-	o evolution-2.0.0
 	o faac-1.24.1
 	o festival-1.4.3
 	o file-4.10
@@ -347,7 +346,6 @@ Suggested package updates
 	o gbib-0.1.2
 	o gdm-2.6.0.5
 	o generator-0.35
-	o gentoo-0.11.52
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
