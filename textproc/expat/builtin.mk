@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:15 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:35 jlam Exp $
 
 _EXPAT_H=	${X11BASE}/include/expat.h
 _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
@@ -30,16 +30,11 @@ _EXPAT_MICRO!=	\
 		${_EXPAT_H}
 _EXPAT_VERSION=	${_EXPAT_MAJOR}.${_EXPAT_MINOR}.${_EXPAT_MICRO}
 BUILTIN_PKG.expat=	expat-${_EXPAT_VERSION}
-MAKEFLAGS+=		BUILTIN_PKG.expat=${BUILTIN_PKG.expat}
+BUILDLINK_VARS+=	BUILTIN_PKG.expat
 .    endif
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.expat=${IS_BUILTIN.expat}
-.endif
-
-CHECK_BUILTIN.expat?=	no
-.if !empty(CHECK_BUILTIN.expat:M[yY][eE][sS])
-USE_BUILTIN.expat=	yes
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.expat
+.endif	# IS_BUILTIN.expat
 
 .if !defined(USE_BUILTIN.expat)
 USE_BUILTIN.expat?=	${IS_BUILTIN.expat}
@@ -59,6 +54,9 @@ USE_BUILTIN.expat!=	\
 .  endif
 .endif	# USE_BUILTIN.expat
 
+CHECK_BUILTIN.expat?=	no
+.if !empty(CHECK_BUILTIN.expat:M[nN][oO])
+
 .if !empty(USE_BUILTIN.expat:M[nN][oO])
 BUILDLINK_DEPENDS.expat+=	expat>=1.95.4
 .endif
@@ -67,3 +65,5 @@ BUILDLINK_DEPENDS.expat+=	expat>=1.95.4
 BUILDLINK_PREFIX.expat=		${X11BASE}
 USE_X11=			yes
 .endif
+
+.endif	# CHECK_BUILTIN.expat
