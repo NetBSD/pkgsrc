@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/03/12 16:02:32 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/03/16 09:46:43 agc Exp $
 bin/ci
 bin/co
 bin/ident
@@ -6,6 +6,7 @@ bin/merge
 bin/rcs
 bin/rcsclean
 bin/rcsdiff
+bin/rcslog
 bin/rcsmerge
 bin/rlog
 man/man1/ci.1
@@ -17,5 +18,6 @@ man/man1/rcsclean.1
 man/man1/rcsdiff.1
 man/man5/rcsfile.5
 man/man1/rcsintro.1
+man/man1/rcslog.1
 man/man1/rcsmerge.1
 man/man1/rlog.1
