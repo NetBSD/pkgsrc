@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/07 14:33:19 jschauma Exp $
+
+SHA1 (ganglia-monitor-core-2.5.7.tar.gz) = b5cfbb319bea0bafd6b0272584570207378ff841
+Size (ganglia-monitor-core-2.5.7.tar.gz) = 497202 bytes
+SHA1 (patch-aa) = 7a2f44bbde10513b66036169aaa990c64d0d0370
+SHA1 (patch-ab) = bdac9969d31762bc54b9e5476572a9be45faf0e6
+SHA1 (patch-ac) = 5a3fe5b9d86d495d4e157b3e2a152ac25cf91f7f
+SHA1 (patch-ad) = 4f03c665800827e1d89d7d76b81b667f0cf82ca6
+SHA1 (patch-ae) = 417a7ed552583fc61f8c3e095e9233c68311caf9
+SHA1 (patch-af) = 1874ebe88fa2ac288c5ca0a94f864bd0a71415ba
+SHA1 (patch-ag) = f78a42a47dcd8d396400ca4ed4c85e0041d21778
+SHA1 (patch-ah) = 40fae7e64918a0c7709005e9de0629dfb2c22565
+SHA1 (patch-ai) = 1ae508692d8160aa202e02612590d329d910f434
