@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/05 10:20:48 jmmv Exp $
+
+SHA1 (GTK2-Industrial.tar.gz) = f7e35d3024ede23e3ed7e16fc8d4a24e064883df
+Size (GTK2-Industrial.tar.gz) = 272966 bytes
+SHA1 (patch-aa) = 4abe06397186f01d25d99455918997696359a2b6

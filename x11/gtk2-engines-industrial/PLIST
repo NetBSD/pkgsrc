@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/05 10:20:48 jmmv Exp $
+lib/gtk-2.0/2.4.0/engines/libindustrial.la
+lib/gtk-2.0/2.4.0/engines/libindustrial.so
+share/themes/Industrial/gtk-2.0/gtkrc
+share/themes/Industrial/gtk-2.0/stock_apply.png
+share/themes/Industrial/gtk-2.0/stock_bottom-16.png
+share/themes/Industrial/gtk-2.0/stock_bottom.png
+share/themes/Industrial/gtk-2.0/stock_cancel-16.png
+share/themes/Industrial/gtk-2.0/stock_cancel.png
+share/themes/Industrial/gtk-2.0/stock_down-16.png
+share/themes/Industrial/gtk-2.0/stock_down.png
+share/themes/Industrial/gtk-2.0/stock_first-16.png
+share/themes/Industrial/gtk-2.0/stock_first.png
+share/themes/Industrial/gtk-2.0/stock_last-16.png
+share/themes/Industrial/gtk-2.0/stock_last.png
+share/themes/Industrial/gtk-2.0/stock_left-16.png
+share/themes/Industrial/gtk-2.0/stock_left.png
+share/themes/Industrial/gtk-2.0/stock_ok.png
+share/themes/Industrial/gtk-2.0/stock_refresh-16.png
+share/themes/Industrial/gtk-2.0/stock_refresh.png
+share/themes/Industrial/gtk-2.0/stock_right-16.png
+share/themes/Industrial/gtk-2.0/stock_right.png
+share/themes/Industrial/gtk-2.0/stock_top-16.png
+share/themes/Industrial/gtk-2.0/stock_top.png
+share/themes/Industrial/gtk-2.0/stock_up-16.png
+share/themes/Industrial/gtk-2.0/stock_up.png
+@dirrm share/themes/Industrial/gtk-2.0
+@dirrm share/themes/Industrial
+@comment in xdg-dirs: @dirrm share/themes
+@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/engines

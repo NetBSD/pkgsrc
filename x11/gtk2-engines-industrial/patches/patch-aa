@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/05 10:20:54 jmmv Exp $
+
+--- configure.orig	2003-07-24 22:28:29.000000000 +0200
++++ configure
+@@ -7850,6 +7850,7 @@ GETTEXT_PACKAGE=ximian-artwork
+ 
+ 
+ 
++if false; then
+ # Check whether --with-gtk-prefix or --without-gtk-prefix was given.
+ if test "${with_gtk_prefix+set}" = set; then
+   withval="$with_gtk_prefix"
+@@ -8217,6 +8218,7 @@ else
+ echo "$as_me: error: *** gtk_style_set_prop_experimental() not found; perhaps you have an old CVS version of GTK+ ***" >&2;}
+    { (exit 1); exit 1; }; }
+ fi
++fi
+ 
+ 
+ 
