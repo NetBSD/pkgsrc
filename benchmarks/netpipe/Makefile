@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2004/11/02 13:28:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/27 18:14:24 wiz Exp $
 
 DISTNAME=	NetPIPE_2.4
 PKGNAME=	netpipe-2.4
 CATEGORIES=	benchmarks net
 MASTER_SITES=	http://www.scl.ameslab.gov/netpipe/code/
 
-MAINTAINER=	thorpej@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.scl.ameslab.gov/netpipe/
 COMMENT=	TCP/PVM/MPI testing and performance measuring tool
 
