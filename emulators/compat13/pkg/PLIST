@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/15 16:36:15 tv Exp $
+lib/libedit.so.1.0
+lib/libg++.so.4.0
+lib/libstdc++.so.0.1
+lib/libutil.so.4.2
