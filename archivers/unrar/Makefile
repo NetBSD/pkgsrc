@@ -1,19 +1,15 @@
-# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:18 frueauf Exp $
-# FreeBSD Id: Makefile,v 1.10 1997/08/10 22:31:33 fenner Exp 
-#
+# $NetBSD: Makefile,v 1.6 1999/05/22 21:41:44 tv Exp $
 
-DISTNAME=       unrar-2.01
+DISTNAME=	unrar-2.50
 CATEGORIES=	archivers
-MASTER_SITES=   ftp://ftp.kiarchive.ru/pub/unix/arcers/
-EXTRACT_SUFX=   .tgz
+MASTER_SITES=	ftp://ftp.kiarchive.ru/pub/unix/arcers/
 
-MAINTAINER=     packages@netbsd.org
+MAINTAINER=	packages@netbsd.org
 
-NO_WRKSUBDIR=   Yes
+NO_WRKSUBDIR=
 
 do-build:
-	cd ${WRKSRC} && \
-		${CC} ${CFLAGS} -D_UNIX unrar.c -o unrar
+	cd ${WRKSRC} && ${LINK.c} -o unrar -D_UNIX unrar.c
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unrar
