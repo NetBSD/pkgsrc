@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/08/07 14:42:27 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2002/01/18 15:57:42 drochner Exp $
 #
 
 DISTNAME=	getmail-2.1.3
@@ -9,15 +9,17 @@ MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.qcc.sk.ca/~charlesc/software/getmail-2.0/
 COMMENT=	POP3 mail retriever with reliable Maildir and mbox delivery
 
-DEPENDS+=	python>=1.52:../../lang/python
-
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
+PYTHON_PATCH_SCRIPTS=	ConfParser.py getmail.py
+
 post-patch:
 	${SED} "s,/usr/lib,${PREFIX}/libexec," ${WRKSRC}/getmail	\
-		> ${WRKSRC}/getmail.done
-	${MV} ${WRKSRC}/getmail.done ${WRKSRC}/getmail
+		> ${WRKSRC}/getmail.done1
+	${SED} "s,\`which python\`,${PYTHONBIN}," <${WRKSRC}/getmail.done1 \
+		> ${WRKSRC}/getmail.done2
+	${MV} ${WRKSRC}/getmail.done2 ${WRKSRC}/getmail
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/getmail
@@ -32,4 +34,5 @@ do-install:
 		${PREFIX}/libexec/getmail
 	${INSTALL_SCRIPT} ${WRKSRC}/getmail ${PREFIX}/bin
 
+.include "../../lang/python/application.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
