@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/02/21 12:24:22 wiz Exp $
+$NetBSD: distinfo,v 1.5 2002/03/20 00:39:19 hubertf Exp $
 
-SHA1 (irssi-0.8.1.tar.gz) = d73319302103879b5dd0732bacd53b2f96a0155f
-Size (irssi-0.8.1.tar.gz) = 926295 bytes
+SHA1 (irssi-0.8.4.tar.gz) = a3550d1f2bc61e708d1deb7e6203d47e8058a8ca
+Size (irssi-0.8.4.tar.gz) = 952304 bytes
