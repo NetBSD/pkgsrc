@@ -1,12 +1,15 @@
-$NetBSD: patch-aa,v 1.9 2001/10/31 00:03:16 mjl Exp $
+$NetBSD: patch-aa,v 1.10 2002/01/17 17:11:49 agc Exp $
 
 --- makefiles/Makefile.netbsd.orig	Sat Aug 18 01:02:55 2001
 +++ makefiles/Makefile.netbsd	Wed Oct 31 00:18:05 2001
-@@ -9,6 +9,6 @@
+@@ -7,8 +7,8 @@
+ # To evaluate an alternative layout for the Replace/Find dialog, add
+ # -DREPLACE_SCOPE to the CFLAGS. See the README file for more information.
  #
- CFLAGS=-O -I/usr/X11R6/include -DUSE_DIRENT -DUSE_LPR_PRINT_CMD
+-CFLAGS=-O -I/usr/X11R6/include -DUSE_DIRENT -DUSE_LPR_PRINT_CMD
++CFLAGS=-O -I${X11BASE}/include -I${_MOTIFBASE}/include -DUSE_DIRENT -DUSE_LPR_PRINT_CMD
  ARFLAGS=-ur
 -LIBS= -L/usr/X11R6/lib -lm -lXm -lXpm -lXext -lXt -lSM -lICE -lX11
-+LIBS= ${LDFLAGS} ${MOTIFLIB} -L/usr/X11R6/lib -lm -lXpm -lXext -lXt -lSM -lICE -lX11
++LIBS= ${LDFLAGS} ${MOTIFLIB} -L${_MOTIFBASE}/lib -L${X11BASE}/lib -lm -lXpm -lXext -lXt -lSM -lICE -lX11
  
  include Makefile.common
