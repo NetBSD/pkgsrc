@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1982 2004/07/30 20:54:00 recht Exp $
+$NetBSD: TODO,v 1.1983 2004/07/31 11:45:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -182,6 +182,7 @@ Suggested package updates
 	o cdrtools-ossdvd-2.01.1.27
 	o cervisia-2.1.2
 	o checkbot-1.75 [pkg/26371]
+	o clamav-0.75.1
 	o clanlib-0.7.8
 	o classpath-0.10
 	o clisp-2.33.2
@@ -261,6 +262,7 @@ Suggested package updates
 	o hp2xx-3.4.4
 	o icepref-2.3
 	o idesk-0.5.6
+	o imp-3.2.5
 	o inform-6.30 [pkg/24631]
 	o intercal-0.24 [dillo]
 	o iozone-3.221
@@ -272,9 +274,10 @@ Suggested package updates
 	o larswm-7.5.3
 	o latex2rtf-1.9.15
 	o lavaps-2.5
-	o leafnode-1.10.2
+	o leafnode-1.10.3
 	o libcaca-0.9
 	o libcddb-0.9.5
+	o libevent-0.9
 	o libggi-2.0.5
 	o libgii-0.8.5
 	o libidn-0.5.2
@@ -307,6 +310,7 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.2
 	o musicpd-0.11.4
+	o nail-11.0
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
@@ -423,9 +427,9 @@ Suggested package updates
 	o xplanet-1.1.1
 	o xps-4.2
 	o xpuyopuyo-0.9.5
-	o xsidplay-1.6.5pre20
+	o xsidplay-1.6.5.1a [pkg/26465|pooka]
 	o xskat-4.0
-	o xterm-193
+	o xterm-194
 	o xzgv-0.8
 	o yacas-1.0.55
 	o yaz-2.0.12
