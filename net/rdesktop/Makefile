@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:17:58 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/02/15 20:20:06 xtraeme Exp $
 #
 
 DISTNAME=		rdesktop-1.3.1
@@ -21,8 +21,13 @@ CONFIGURE_ARGS=		--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-x=${X11BASE}
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 
-CFLAGS+=		-DAUDIO_DEV=\"\\\"${DEVOSSAUDIO}\\\"\"
 LDFLAGS+=		${LIBOSSAUDIO}
+
+SUBST_CLASSES+=		audio
+SUBST_STAGE.audio=	pre-configure
+SUBST_FILES.audio=	rdpsnd_oss.c
+SUBST_SED.audio=	-e "s,/dev/dsp,${DEVOSSAUDIO},g"
+SUBST_MESSAGE.audio=	"Fixing hardcoded audio device."
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
