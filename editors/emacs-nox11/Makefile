@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/06/02 01:20:11 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/29 23:38:41 seb Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-21.3
@@ -24,8 +24,10 @@ DISTINFO_FILE=	${PKGDIR}/../emacs/distinfo
 
 CONFIGURE_ARGS+=--without-x
 
-INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff \
-		    ccmode message widget reftex forms
+USE_NEW_TEXINFO=	YES
+INFO_FILES=	ada-mode autotype ccmode cl dired-x ebrowse ediff efaq emacs
+INFO_FILES+=	emacs-mime eshell eudc forms gnus idlwave message mh-e pcl-cvs
+INFO_FILES+=	reftex sc speedbar vip viper widget woman
 
 post-extract:
 	${CP} ${FILESDIR}/site-init.el ${WRKSRC}/lisp
@@ -36,5 +38,4 @@ pre-install:
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
