@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/12/21 04:22:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2005/01/08 17:54:34 schmonz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -26,11 +26,5 @@ INSTALLATION_DIRS=	bin man man/man1 man/man5 man/cat1 man/cat5
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
-
-.include "../../mk/compiler.mk"
-
-.if !empty(CC_VERSION:Mgcc-*)
-CFLAGS+=		-fno-builtin-log
-.endif
 
 .include "../../mk/bsd.pkg.mk"
