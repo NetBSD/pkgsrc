@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2000/06/19 07:56:20 kleink Exp $
+$NetBSD: patch-aa,v 1.3 2001/10/26 12:18:21 agc Exp $
 
 --- Makefile.orig	Wed Oct 28 15:21:57 1998
 +++ Makefile	Fri Jan  8 14:05:39 1999
@@ -7,16 +7,16 @@ $NetBSD: patch-aa,v 1.2 2000/06/19 07:56:20 kleink Exp $
  
  # Where to install web500gw
 -INSTDIR = /usr/local/etc
-+INSTDIR = @PREFIX@/sbin
++INSTDIR = ${PREFIX}/sbin
  
  # Where to install the manual web500gw.8
 -MANDIR	= /usr/local/man/man8
-+MANDIR	= @PREFIX@/man/man8
++MANDIR	= ${PREFIX}/man/man8
  
  # Where to install web500gw's config/filter/template/help/message files
  # It's recommended to use an own directory for it.
 -WEB500GWDIR	= $(INSTDIR)/web500
-+WEB500GWDIR	= @PREFIX@/etc/web500
++WEB500GWDIR	= ${PREFIX}/etc/web500
  
  # What language dependent files should be installed? 
  # "" stands for english (default) versions
@@ -35,8 +35,8 @@ $NetBSD: patch-aa,v 1.2 2000/06/19 07:56:20 kleink Exp $
  # (/usr/lib, /usr/include) use this:
 -LDAPINCL = 
 -LDAPLIBS = -lldap -llber
-+LDAPINCL = -I@PREFIX@/include
-+LDAPLIBS = -L@PREFIX@/lib -Wl,-R@PREFIX@/lib -lldap -llber -lcompat
++LDAPINCL = -I${PREFIX}/include
++LDAPLIBS = -L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lldap -llber -lcompat
  # set LDAPVERSION (32 for ldap-3.2, 33 for 3.3 etc)
  LDAPVERSION = 33
  VERSION = 3.3
