@@ -3,7 +3,7 @@
 # Date created:         Sat Nov 5 11:43:03 PST 1994
 # Whom:                 piero
 #
-# $NetBSD: Makefile,v 1.2 1998/02/12 12:42:33 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/02/12 13:01:04 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/09 22:27:11 max Exp
 #
 
@@ -26,9 +26,9 @@ EXTRA_FILES=    xa2.0_cvid_netbsd68k.o.Z \
 		xa2.0_iv32_netbsd68k.o.Z \
 		xa1.0_cyuv_netbsd68k.o.Z
 .elif (${MACHINE_ARCH} == "sparc")
-EXTRA_FILES=    xa2.0_cvid_sparcAOUT.o.Z \
-		xa2.0_iv32_sparcAOUT.o.Z \
-		xa1.0_cyuv_sparcAOUT.o.Z
+EXTRA_FILES=    xa2.0_cvid_sparcCOFF.o.Z \
+		xa2.0_iv32_sparcCOFF.o.Z \
+		xa1.0_cyuv_sparcCOFF.o.Z
 .endif
 USE_IMAKE=	yes
 CAT1=		xanim.0
