@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/07/29 22:57:03 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/01/14 05:15:40 jlam Exp $
 
 DISTNAME=	mod_auth_pam-1.0a
 PKGNAME=	ap-auth-pam-1.0a
@@ -24,6 +24,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/configure.html ${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/faq.html ${HTMLDIR}
 
-.include "../../security/PAM/buildlink3.mk"
 .include "../../www/apache/module.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
