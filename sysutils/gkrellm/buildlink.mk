@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/07/13 15:38:15 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/07/24 17:24:50 he Exp $
 #
 # This Makefile fragment is included by packages that use gkrellm.
 #
@@ -12,8 +12,8 @@
 # (4) Add ${BUILDLINK_DIR}/lib to the front of the linker's library search
 #     path.
 
-.if !defined(_BUILDLINK_MK)
-_BUILDLINK_MK=	# defined
+.if !defined(GKRELLM_BUILDLINK_MK)
+GKRELLM_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
@@ -31,4 +31,4 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.gkrellm}
 pre-configure: ${BUILDLINK_TARGETS}
 gkrellm-buildlink: _BUILDLINK_USE
 
-.endif	# _BUILDLINK_MK
+.endif	# GKRELLM_BUILDLINK_MK
