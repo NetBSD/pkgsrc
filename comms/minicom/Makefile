@@ -1,25 +1,32 @@
-# $NetBSD: Makefile,v 1.10 1998/11/19 15:40:45 agc Exp $
+# $NetBSD: Makefile,v 1.11 1999/04/14 21:13:24 tron Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
 #
 
 DISTNAME=	${PKGNAME}.src
-PKGNAME=	minicom-1.78
+PKGNAME=	minicom-1.82.1
 CATEGORIES=	comms
-MASTER_SITES=	ftp://ftp.cistron.nl/pub/people/miquels/software/
+MASTER_SITES=	http://www.pp.clinet.fi/~walker/
 
 MAINTAINER=     tron@netbsd.org
 HOMEPAGE=	http://www.clinet.fi/~walker/minicom.html
 
-DEPENDS+=	lrzsz-0.12.18:../../comms/lrzsz
+BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext
 DEPENDS+=	kermit-6.0.192:../../comms/kermit
+DEPENDS+=	lrzsz-0.12.18:../../comms/lrzsz
+DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
+
+USE_GMAKE=	yes
+NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/${PKGNAME}/src
-IS_INTERACTIVE=	yes
 
 .if !defined(BATCH)
 pre-install:
 	# this script creates a link from your comm port to /dev/modem
 	${SH} ${SCRIPTDIR}/create-dev-link
 .endif
+
+post-install:
+	@${CHOWN} -R uucp:dialer ${PREFIX}/etc/minicom
 
 .include "../../mk/bsd.pkg.mk"
