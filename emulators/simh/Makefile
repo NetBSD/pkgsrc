@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/11/06 08:37:46 thorpej Exp $
+# $NetBSD: Makefile,v 1.10 2002/11/28 12:00:26 agc Exp $
 #
 
 DISTNAME=	simhv210-0b2
@@ -7,8 +7,6 @@ PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	http://simh.trailing-edge.com/sources/
 EXTRACT_SUFX=	.zip
-EXTRACT_CMD=	unzip -aoq ${DOWNLOADED_DISTFILE}
-
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		xq_beta5${EXTRACT_SUFX}
 
@@ -17,6 +15,8 @@ HOMEPAGE=	http://simh.trailing-edge.com/
 COMMENT=	Bob Supnik's historical computer simulator
 
 WRKSRC=		${WRKDIR}
+
+EXTRACT_CMD=	unzip -aoq ${DOWNLOADED_DISTFILE}
 
 post-extract:
 	${MKDIR} ${WRKSRC}/BIN
