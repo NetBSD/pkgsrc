@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:30:13 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:43 wiz Exp $
 
-MD5 (xzip180.tar.Z) = 88397d490183fcb0ee180e9f7d3ee7c9
+SHA1 (xzip180.tar.Z) = 45581b97e2b00535fe6f4dfab2aa4f8efb353749
+Size (xzip180.tar.Z) = 134871 bytes
 SHA1 (patch-aa) = fa9f12081660760f52679357ab13bb9e8b9e5694

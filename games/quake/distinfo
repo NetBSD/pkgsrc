@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:28:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:34 wiz Exp $
 
-MD5 (q1source.zip) = 70a802bd815a61a99e6c1c9a4eaeb0f2
+SHA1 (q1source.zip) = 1f607e549c6aa3921797e51b7d2038e95116c989
+Size (q1source.zip) = 3211531 bytes
 SHA1 (patch-aa) = 6d6b82b1aa6b1326150ed356cb4ac5a3e4ea6497
 SHA1 (patch-ab) = 26a1565b6680852b246b90a855e92944e4abb211
 SHA1 (patch-ac) = 2be6028d15ede5819791c0809ed937755b144ab4

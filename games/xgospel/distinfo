@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:29:32 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:39 wiz Exp $
 
-MD5 (xgospel-1.12d.tar.gz) = edbfb454491dcb3a4115a98f6dc28d40
+SHA1 (xgospel-1.12d.tar.gz) = 9d873603b745b1e6046c1407a72e6d6ea474ef37
+Size (xgospel-1.12d.tar.gz) = 699374 bytes
 SHA1 (patch-aa) = 423221b45f897e40af211f75842fce21d4bf6f55
 SHA1 (patch-ab) = 3377d5472486579620f091f69cdf68d47bff4064
 SHA1 (patch-ac) = b0a2c73933424f4b480fa7518f1c518f44fcc17b

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:29:42 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:40 wiz Exp $
 
-MD5 (xmris.4.04.tgz) = 74c605ea9ac4284c003a398640a34a56
+SHA1 (xmris.4.04.tgz) = 793f7088ac86ec17ca02962ae08ef9fe91c96423
+Size (xmris.4.04.tgz) = 268308 bytes
 SHA1 (patch-aa) = 565e74857df2685f64798c505766642609298ef5
 SHA1 (patch-ab) = ea9e443b5741afbbed01c8e0bf436505d0955229

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:28:49 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:35 wiz Exp $
 
-MD5 (rocksndiamonds-1.4.0.tar.gz) = 48f94ba1421ff1865199d560aca70abb
+SHA1 (rocksndiamonds-1.4.0.tar.gz) = 3d05ca65838c8c1bcaeaeffd634ea5cc1a01e1e6
+Size (rocksndiamonds-1.4.0.tar.gz) = 1432092 bytes
 SHA1 (patch-aa) = 5afb278251f04347bcd9459724fda0fc5c568ef3
 SHA1 (patch-ab) = 6b2673687cf9a38eb916a749513b44b76edfb5f2
 SHA1 (patch-ac) = 7911b05274ea0875441ba52438ffcf3d260ab6ef

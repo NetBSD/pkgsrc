@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:26:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:21 wiz Exp $
 
-MD5 (crossfire-client-0.95.8.tar.gz) = 2123f9d30f999f6ef64183890cbf23d0
-MD5 (client-0.95.2-au-sounds.tgz) = 9f5496b93000956014c4541f4b66acba
-MD5 (client-0.95.2-raw-sounds.tgz) = d7e6cabe0050970ecf8d17df7e71d099
+SHA1 (crossfire-client-0.95.8.tar.gz) = 66fb6c2174afa7e00937cbccb92518b057961610
+Size (crossfire-client-0.95.8.tar.gz) = 235557 bytes
+SHA1 (client-0.95.2-au-sounds.tgz) = 16fe536118a2a8abea906cfb7064469bb44ddaa2
+Size (client-0.95.2-au-sounds.tgz) = 316549 bytes
+SHA1 (client-0.95.2-raw-sounds.tgz) = 61606356eb538198e8ad4ef0dc54b7ad048097af
+Size (client-0.95.2-raw-sounds.tgz) = 326199 bytes
 SHA1 (patch-aa) = 52dc3e94de2e63c9ed12a82fab29fc6e3d08719c
 SHA1 (patch-ab) = f057be4f617ff4c58dfff597961df83945451c51
