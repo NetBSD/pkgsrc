@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/13 17:53:29 zuntum Exp $
+
+--- Makefile.top.orig	Sun Feb  4 16:10:13 2001
++++ Makefile.top	Sun Feb  4 16:13:25 2001
+@@ -111,7 +111,7 @@
+ netbsd:
+ 	(cd locale && ${MAKE} all)
+ 	(cd src && ${MAKE} GTK_CONFIG=gtk-config GTOP_LIBS= GTOP_INCLUDE= \
+-		PTHREAD_INC=-I/usr/local/include SYS_LIBS="-lkvm" gkrellm )
++		PTHREAD_INC=-I$(LOCALBASE)/include SYS_LIBS="-lkvm" gkrellm )
+ 
+ openbsd:
+ 	(cd locale && ${MAKE} all)
+--- locale/Makefile~	Sat Jun 17 17:55:04 2000
++++ locale/Makefile	Sun Feb  4 16:18:25 2001
+@@ -6,7 +6,7 @@
+ FILES_PO:=$(wildcard *.po)
+ FILES_MO:=$(FILES_PO:.po=.mo)
+ 
+-LOCALEDIR ?= /usr/share/locale
++LOCALEDIR ?= $(LOCALBASE)/locale
+ 
+ ifeq ($(enable_nls),1)
+ all: mo-files
