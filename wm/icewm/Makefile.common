@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2002/08/25 21:51:34 jlam Exp $
+# $NetBSD: Makefile.common,v 1.16 2002/11/21 10:09:59 grant Exp $
 
 DISTNAME=		icewm-1.2.0
 CATEGORIES=		x11 wm
@@ -21,6 +21,7 @@ PATCHDIR=		${.CURDIR}/../../wm/icewm/patches
 .if !exists(/usr/include/machine/apmvar.h)
 CONFIGURE_ARGS+=	--disable-apm
 .endif
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .if ${OPSYS} == "NetBSD"
 .if exists(/usr/include/machine/apmvar.h)
