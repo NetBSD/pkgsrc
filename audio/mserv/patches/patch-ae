@@ -1,13 +1,51 @@
-$NetBSD: patch-ae,v 1.1 2002/06/14 20:04:08 abs Exp $
+$NetBSD: patch-ae,v 1.2 2002/07/31 14:02:45 abs Exp $
 
---- mserv/defconf.c.orig	Thu Jul 13 21:20:42 2000
-+++ mserv/defconf.c
-@@ -15,7 +15,7 @@
+--- mserv/configure.orig	Sat Jul 15 19:33:45 2000
++++ mserv/configure
+@@ -1201,6 +1201,46 @@ else
+   echo "$ac_t""no" 1>&6
+ fi
  
- # Define player invokation methods
- # mservplay is our special wrapper, the first parameter is a 'nice' level
--mpg123=/usr/local/bin/mpg123 -b 1024
-+mpg123=" PATH_MPG123 " -b 1024
- freeamp=/usr/local/bin/freeamp -ui mpg123
- mservplay=/usr/local/bin/mservplay 0 mpg123 -b 1024
- 
++	echo $ac_n "checking for _oss_ioctl in -lossaudio""... $ac_c" 1>&6
++echo "configure:1206: checking for _oss_ioctl in -lossaudio" >&5
++ac_lib_var=`echo ossaudio'_'_oss_ioctl | sed 'y%./+-%__p_%'`
++if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  ac_save_LIBS="$LIBS"
++LIBS="-lossaudio  $LIBS"
++cat > conftest.$ac_ext <<EOF
++#line 1214 "configure"
++#include "confdefs.h"
++/* Override any gcc2 internal prototype to avoid an error.  */
++/* We use char because int might match the return type of a gcc2
++    builtin and then its argument prototype would still apply.  */
++char _oss_ioctl();
++
++int main() {
++_oss_ioctl()
++; return 0; }
++EOF
++if { (eval echo configure:1225: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=yes"
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=no"
++fi
++rm -f conftest*
++LIBS="$ac_save_LIBS"
++
++fi
++if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  XTRA_LIBS="$XTRA_LIBS -lossaudio"
++else
++  echo "$ac_t""no" 1>&6
++fi
++
+ 	echo $ac_n "checking for inet_ntoa in -lnsl""... $ac_c" 1>&6
+ echo "configure:1206: checking for inet_ntoa in -lnsl" >&5
+ ac_lib_var=`echo nsl'_'inet_ntoa | sed 'y%./+-%__p_%'`
