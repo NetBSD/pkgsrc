@@ -1,0 +1,20 @@
+--- uml/concept.cpp.orig	2004-06-15 19:32:07.000000000 +0200
++++ uml/concept.cpp	2004-06-15 19:32:46.000000000 +0200
+@@ -30,7 +30,7 @@
+ {
+ 	if(!attsList.remove((Attribute *)a))
+ 	{
+-		cerr<<"can't find att given in list"<<endl;
++		std::cerr<<"can't find att given in list"<<std::endl;
+ 		return -1;
+ 	}
+ 	return attsList.count();
+@@ -47,7 +47,7 @@
+ {
+ 	if(!opsList.remove((Operation *)o))
+ 	{
+-		cerr<<"can't find opp given in list"<<endl;
++		std::cerr<<"can't find opp given in list"<<std::endl;
+ 		return -1;
+ 	}
+ 	return opsList.count();
