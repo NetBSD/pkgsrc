@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2000/08/25 21:49:30 tron Exp $
 bin/aslink
 bin/asx8051
 bin/s51
@@ -335,9 +336,7 @@ share/sdcc51lib/large/ser_ir.rel
 share/sdcc51lib/large/serial.asm
 share/sdcc51lib/large/serial.cdb
 share/sdcc51lib/large/serial.rel
-share/sdcc51lib/large/vprintf.asm
 share/sdcc51lib/large/vprintf.cdb
-share/sdcc51lib/large/vprintf.rel
 share/sdcc51lib/malloc.c
 share/sdcc51lib/printf_large.c
 share/sdcc51lib/printfl.c
@@ -564,9 +563,7 @@ share/sdcc51lib/small/malloc.rel
 share/sdcc51lib/small/printf_large.asm
 share/sdcc51lib/small/printf_large.cdb
 share/sdcc51lib/small/printf_large.rel
-share/sdcc51lib/small/printfl.asm
 share/sdcc51lib/small/printfl.cdb
-share/sdcc51lib/small/printfl.rel
 share/sdcc51lib/small/puts.asm
 share/sdcc51lib/small/puts.cdb
 share/sdcc51lib/small/puts.rel
@@ -576,9 +573,7 @@ share/sdcc51lib/small/ser_ir.rel
 share/sdcc51lib/small/serial.asm
 share/sdcc51lib/small/serial.cdb
 share/sdcc51lib/small/serial.rel
-share/sdcc51lib/small/vprintf.asm
 share/sdcc51lib/small/vprintf.cdb
-share/sdcc51lib/small/vprintf.rel
 share/sdcc51lib/vprintf.c
 @dirrm share/sdcc51inc
 @dirrm share/sdcc51lib/large

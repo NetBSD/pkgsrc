@@ -1,38 +1,13 @@
-*** configure.orig	Thu May 27 14:51:34 1999
---- configure	Thu Aug 26 18:15:36 1999
-***************
-*** 1075,1081 ****
-  # ./install, which can be erroneously created by make from ./install.sh.
-  echo $ac_n "checking for a BSD compatible install""... $ac_c" 1>&6
-  echo "configure:1078: checking for a BSD compatible install" >&5
-! if test -z "$INSTALL"; then
-  if eval "test \"`echo '$''{'ac_cv_path_install'+set}'`\" = set"; then
-    echo $ac_n "(cached) $ac_c" 1>&6
-  else
---- 1075,1081 ----
-  # ./install, which can be erroneously created by make from ./install.sh.
-  echo $ac_n "checking for a BSD compatible install""... $ac_c" 1>&6
-  echo "configure:1078: checking for a BSD compatible install" >&5
-! if true; then
-  if eval "test \"`echo '$''{'ac_cv_path_install'+set}'`\" = set"; then
-    echo $ac_n "(cached) $ac_c" 1>&6
-  else
-*** s51.src/configure.orig	Thu Aug 26 18:13:19 1999
---- s51.src/configure	Thu Aug 26 18:13:49 1999
-***************
-*** 812,818 ****
-  # ./install, which can be erroneously created by make from ./install.sh.
-  echo $ac_n "checking for a BSD compatible install""... $ac_c" 1>&6
-  echo "configure:815: checking for a BSD compatible install" >&5
-! if test -z "$INSTALL"; then
-  if eval "test \"`echo '$''{'ac_cv_path_install'+set}'`\" = set"; then
-    echo $ac_n "(cached) $ac_c" 1>&6
-  else
---- 812,818 ----
-  # ./install, which can be erroneously created by make from ./install.sh.
-  echo $ac_n "checking for a BSD compatible install""... $ac_c" 1>&6
-  echo "configure:815: checking for a BSD compatible install" >&5
-! if true ; then
-  if eval "test \"`echo '$''{'ac_cv_path_install'+set}'`\" = set"; then
-    echo $ac_n "(cached) $ac_c" 1>&6
-  else
+$NetBSD: patch-af,v 1.2 2000/08/25 21:49:29 tron Exp $
+
+--- gc/Makefile.in.orig	Tue May 11 17:14:06 1999
++++ gc/Makefile.in	Fri Aug 25 23:17:26 2000
+@@ -18,7 +18,7 @@
+ #  Under Irix 6, you will have to specify the ABI for as if you specify
+ #  it for the C compiler.
+ 
+-CFLAGS= -O2 -DATOMIC_UNCOLLECTABLE -DNO_SIGNALS -DALL_INTERIOR_POINTERS -DNO_EXECUTE_PERMISSION -DSILENT -I /usr/local/include
++CFLAGS= -O2 -DATOMIC_UNCOLLECTABLE -DNO_SIGNALS -DALL_INTERIOR_POINTERS -DNO_EXECUTE_PERMISSION -DSILENT -I /usr/local/include -Dunix
+ 
+ # For dynamic library builds, it may be necessary to add flags to generate
+ # PIC code, e.g. -fPIC on Linux.

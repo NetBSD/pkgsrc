@@ -1,22 +1,28 @@
-# New ports collection makefile for:	bcc
-# Version required:	"1995 Mar 12 10:29 UTC"
-# Date created:		26 March 1995
-# Whom:			joerg
-#
+# $NetBSD: Makefile,v 1.2 2000/08/25 21:49:28 tron Exp $
 # FreeBSD: ports/devel/sdcc/Makefile,v 1.5 2000/04/15 15:13:38 knu Exp
-#
 
-PORTNAME=	sdcc
-PORTVERSION=	2.1.9
+DISTNAME=	sdcc-2.1.9Ea
+PKGNAME=	${DISTNAME:S/Ea//}
 CATEGORIES=	devel lang
-MASTER_SITES=	http://www.geocities.com/ResearchTriangle/Forum/1353/
-DISTNAME=	${PORTNAME}-${PORTVERSION}Ea
+MASTER_SITES=	http://web.kd0yu.com/sdcc/
 
-MAINTAINER=	ambrisko@whistle.com
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://sdcc.sourceforge.net/
 
-WRKSRC=         ${WRKDIR}/sdcc219Ea
 GNU_CONFIGURE=	yes
 USE_GMAKE=      yes
-ALL_TARGET=	dep all
 
-.include <bsd.port.mk>
+ALL_TARGET=	dep all
+WRKSRC=         ${WRKDIR}/${DISTNAME:C/[\.-]//g}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ENV+=	CPPFLAGS=-I${WRKDIR}/include
+
+post-extract:
+	${MKDIR} ${WRKDIR}/include
+	${LN} -fs /usr/include/sys/endian.h ${WRKDIR}/include
+.endif
+
+.include "../../mk/bsd.pkg.mk"
