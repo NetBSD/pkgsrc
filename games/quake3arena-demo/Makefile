@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2003/10/12 07:11:49 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/04 18:53:54 xtraeme Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
+PKGREVISION=	1
 PKGNAME=	quake3arena-demo-1.11.6
 WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
@@ -16,7 +17,7 @@ CONFLICTS=	quake3arena-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != Linux
+.if ${OPSYS} != "Linux"
 DEPENDS+=	suse_linux>=6.3:../../emulators/${SUSE_DIR_PREFIX}_linux
 DEPENDS+=	suse_glx>=6.4:../../emulators/${SUSE_DIR_PREFIX}_glx
 .include "../../emulators/suse_linux/Makefile.application"
@@ -51,7 +52,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/x86/glibc-2.1/${DISTBINNAME} \
 		${LIBDIR}/${BINNAME}
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/x86/glibc-2.1/q3ded ${LIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/bin/x86/glibc-2.1/libMesaVoodooGL.so.3.2 \
 		${LIBDIR}
 	${LN} -s ${LIBDIR}/libMesaVoodooGL.so.3.2 \
