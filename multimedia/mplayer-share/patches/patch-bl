@@ -1,0 +1,26 @@
+$NetBSD: patch-bl,v 1.1 2004/07/02 17:07:21 drochner Exp $
+
+--- vidix/vidixlib.c.orig	2003-10-02 17:33:12.000000000 +0200
++++ vidix/vidixlib.c
+@@ -122,8 +122,8 @@ static int vdl_probe_driver(VDL_HANDLE s
+   unsigned (*_ver)(void);
+   int      (*_probe)(int,int);
+   int      (*_cap)(vidix_capability_t*);
+-  strcpy(drv_name,path);
+-  strcat(drv_name,name);
++  strlcpy(drv_name,path, sizeof( drv_name ));
++  strlcat(drv_name,name, sizeof( drv_name ));
+   if(verbose) printf("vidixlib: PROBING: %s\n",drv_name);
+   if(!(t_vdl(stream)->handle = dlopen(drv_name,RTLD_LAZY|RTLD_GLOBAL)))
+   {
+@@ -194,8 +194,8 @@ VDL_HANDLE vdlOpen(const char *path,cons
+     unsigned (*ver)(void);
+     int (*probe)(int,int);
+     unsigned version = 0;
+-    strcpy(drv_name,path);
+-    strcat(drv_name,name);
++    strlcpy(drv_name,path, sizeof( drv_name ));
++    strlcat(drv_name,name, sizeof( drv_name ));
+     if(!(t_vdl(stream)->handle = dlopen(drv_name,RTLD_NOW|RTLD_GLOBAL)))
+     {
+       if (verbose)

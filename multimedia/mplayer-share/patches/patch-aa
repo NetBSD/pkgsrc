@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2004/05/14 09:27:32 grant Exp $
+$NetBSD: patch-aa,v 1.6 2004/07/02 17:07:21 drochner Exp $
 
---- configure.orig	Mon Apr 26 11:44:06 2004
+--- configure.orig	2004-07-02 18:36:10.000000000 +0200
 +++ configure
 @@ -375,8 +375,8 @@ for ac_option do
      _inc_extra=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.5 2004/05/14 09:27:32 grant Exp $
      _def_arch='#define ARCH_X86_64 1'
      _target_arch='TARGET_ARCH_X86_64 = yes'
      iproc='x86_64'
-@@ -1587,7 +1587,8 @@
+@@ -1587,7 +1587,8 @@ for ac_option do
      _inc_x11=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
      ;;
    --with-x11libdir=*)
@@ -50,7 +50,42 @@ $NetBSD: patch-aa,v 1.5 2004/05/14 09:27:32 grant Exp $
      ;;
    --with-dxr2incdir=*)
      _inc_dxr2=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
-@@ -4653,11 +4653,11 @@ if test "$_matroska_external" != no ; th
+@@ -2649,6 +2650,34 @@ else
+ fi
+ echores "$_strsep"
+ 
++echocheck "strlcpy()"
++cat > $TMPC << EOF
++#include <string.h>
++int main (void) { char *s = "Hello, world!", t[20]; (void) strlcpy(t, s, sizeof( t )); return 0; }
++EOF
++_strlcpy=no
++cc_check && _strlcpy=yes
++if test "$_strlcpy" = yes ; then
++ _def_strlcpy='#define HAVE_STRLCPY 1'
++else
++ _def_strlcpy='#undef HAVE_STRLCPY'
++fi
++echores "$_strlcpy"
++
++echocheck "strlcat()"
++cat > $TMPC << EOF
++#include <string.h>
++int main (void) { char *s = "Hello, world!", t[20]; (void) strlcat(t, s, sizeof( t )); return 0; }
++EOF
++_strlcat=no
++cc_check && _strlcat=yes
++if test "$_strlcat" = yes ; then
++ _def_strlcat='#define HAVE_STRLCAT 1'
++else
++ _def_strlcat='#undef HAVE_STRLCAT'
++fi
++echores "$_strlcat"
++
+ echocheck "fseeko()"
+ cat > $TMPC << EOF
+ #include <stdio.h>
+@@ -4653,11 +4682,11 @@ if test "$_matroska_external" != no ; th
  
  int main(void) { return 0; }
  EOF
@@ -64,3 +99,22 @@ $NetBSD: patch-aa,v 1.5 2004/05/14 09:27:32 grant Exp $
      if test "$_matroska_external" = no ; then
        _inc_extra=$_saved_inc_extra
      fi
+@@ -6272,6 +6301,18 @@ $_def_scandir
+ /* Define this if your system has strsep */
+ $_def_strsep
+ 
++/* Define this if your system has strlcpy */
++$_def_strlcpy
++#ifndef HAVE_STRLCPY
++unsigned int strlcpy (char *dest, char *src, unsigned int size);
++#endif
++
++/* Define this if your system has strlcat */
++$_def_strlcat
++#ifndef HAVE_STRLCAT
++unsigned int strlcat (char *dest, char *src, unsigned int size);
++#endif
++
+ /* Define this if your system has fseeko */
+ $_def_fseeko
+ #ifndef HAVE_FSEEKO
