@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.426 2000/04/24 03:40:50 kim Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.427 2000/04/24 22:20:02 jwise Exp $
 #
 # This file is in the public domain.
 #
@@ -95,6 +95,9 @@ JAVA_HOME?=		${LOCALBASE}/java
 .elif ${PKG_JVM} == "kaffe"
 DEPENDS+=		kaffe-[0-9]*:${PKGSRCDIR}/lang/kaffe
 JAVA_HOME?=		${LOCALBASE}/kaffe
+.endif
+.if !defined(CLASSPATH)
+MAKE_ENV+=		CLASSPATH=${JAVA_HOME}/lib/classes.zip:.
 .endif
 .endif
 
