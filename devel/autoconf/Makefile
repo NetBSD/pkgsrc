@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/12/04 14:39:47 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2002/12/23 19:57:52 wiz Exp $
 
 DISTNAME=		autoconf-2.57
 CATEGORIES=		devel
@@ -8,7 +8,7 @@ MAINTAINER=		wiz@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/autoconf/autoconf.html
 COMMENT=		Generates automatic source code configuration scripts
 
-DEPENDS=		m4-1.4:../../devel/m4
+DEPENDS=		m4>=1.4:../../devel/m4
 
 # The next line is for conflicts with old versions of this package,
 # which had autoconf-devel as PKGNAME.
