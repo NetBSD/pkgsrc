@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2193 2004/10/03 23:43:41 wiz Exp $
+$NetBSD: TODO,v 1.2194 2004/10/04 00:20:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -253,7 +253,9 @@ Suggested package updates
 	o festival-1.4.3
 	o file-4.10
 	o findutils-4.1.20
-	o firefox-bin-0.9.3 (+ gtk2, etc..) [grant]
+	o firefox-bin-0.10.1
+	o firefox-gtk2-bin-0.10.1
+	o firefox-0.10.1
 	o firewalk-5.0
 	o firewalk-gtk-5.0
 	o fluxbox-0.9.10
