@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8667 2005/01/09 10:35:33 seb Exp $
+$NetBSD: CHANGES,v 1.8668 2005/01/09 10:39:23 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -189,3 +189,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added dbmail-2.0.1 [schmonz 2005-01-09]
 	Updated xanalyser to 1.24 [schmonz 2005-01-09]
 	Added libkexif-0.2.1 [seb 2005-01-09]
+	Added libkipi-0.1 [seb 2005-01-09]
