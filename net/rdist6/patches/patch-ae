@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 1999/08/29 12:26:22 kim Exp $
+
+--- src/setargs.c.orig	Wed Feb  9 20:04:58 1994
++++ src/setargs.c	Sun Aug 29 07:50:07 1999
+@@ -130,7 +130,11 @@
+ /*
+  * Stdarg front-end to _setproctitle()
+  */
++#if	defined(NETBSD)
++extern void setproctitle(const char *fmt, ...)
++#else
+ extern void setproctitle(char *fmt, ...)
++#endif
+ {
+ 	static char buf[BUFSIZ];
+ 	va_list args;

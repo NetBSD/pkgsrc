@@ -1,0 +1,22 @@
+# $NetBSD: mf.netbsd,v 1.1 1999/08/29 12:26:20 kim Exp $
+#
+# NetBSD Makefile
+#
+
+#
+# Functions that are missing in this OS are contained in the
+# files specified in ${MISSINGOBJS}.
+#
+#MISSINGOBJS 	= $(O)strerror.o $(O)strcasecmp.o
+
+#
+# System libraries that we need to load.
+#
+LIB_SYS	= -lcompat
+
+#
+# System dependent options for compiling
+#
+#CFLAGS_OS	=
+
+BIN_DIR		= /usr/local/bin

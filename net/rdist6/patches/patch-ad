@@ -1,0 +1,39 @@
+$NetBSD: patch-ad,v 1.1 1999/08/29 12:26:22 kim Exp $
+
+--- src/filesys-os.c.orig	Thu Feb 15 14:01:04 1996
++++ src/filesys-os.c	Sun Aug 29 07:50:07 1999
+@@ -51,7 +51,9 @@
+ 
+ #if 	FSI_TYPE == FSI_GETFSSTAT
+ static struct statfs   *mnt = NULL;
++#if	!defined(NETBSD)
+ typedef u_long 		ulong;
++#endif	/* !NetBSD */
+ #endif	/* FSI_GETFSSTAT */
+ 
+ #if	FSI_TYPE == FSI_MNTCTL
+@@ -179,6 +181,16 @@
+ 	if (mnt->f_flags & M_RDONLY)
+ 		mntstruct.me_flags |= MEFLAG_READONLY;
+ #endif
++#if	defined(NETBSD)
++	if (strcmp(mnt->f_fstypename, MOUNT_NFS)) {
++		(void) sprintf(remote_dev, "%s", mnt->f_mntfromname);
++		mntstruct.me_path = remote_dev;
++		mntstruct.me_type = METYPE_NFS;
++	} else {
++		mntstruct.me_path = mnt->f_mntonname;
++		mntstruct.me_type = METYPE_OTHER;
++	}
++#else
+ 	switch ((ulong)((struct statfs*)mnt)->f_type) {
+ 	      case MOUNT_NFS:
+ 		(void) sprintf(remote_dev, "%s", mnt->f_mntfromname);
+@@ -190,6 +202,7 @@
+ 		mntstruct.me_type = METYPE_OTHER;
+ 		break;
+ 	}
++#endif	/* !NetBSD */
+ 
+ 	mnt++;
+ 	entries_left--;
