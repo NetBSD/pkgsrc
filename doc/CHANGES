@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5360 2004/03/29 16:35:43 cube Exp $
+$NetBSD: CHANGES,v 1.5361 2004/03/29 18:35:14 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1591,3 +1591,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated octave-current to 2.1.57 [adam 2004-03-29]
 	Updated gkrellm1-snmp to 0.18nb9 [cube 2004-03-29]
 	Removed ucd-snmp-4.2.4nb4 [cube 2004-03-29]
+	Updated subversion to 1.0.1 [epg 2004-03-29]
+	Updated trac to 0.6 [epg 2004-03-29]
