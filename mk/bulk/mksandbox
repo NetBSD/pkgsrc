@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.28 2004/01/26 22:32:30 grant Exp $
+# $NetBSD: mksandbox,v 1.29 2004/01/30 08:34:28 grant Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -46,6 +46,12 @@ kernel=""
 sandboxMountDirs="/bin /sbin /lib /libexec /usr/X11R6 /usr/bin /usr/games /usr/include /usr/lib /usr/libdata /usr/libexec /usr/lkm /usr/share /usr/sbin /var/mail"
 sandboxEmptyDirs="/var/run /var/log /var/spool/mqueue"
 sandboxEmptyFiles="/var/run/utmp /var/run/utmpx /var/log/wtmp /var/log/wtmpx /var/log/lastlog /var/log/lastlogx"
+
+usage()
+{
+	echo "Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--verbose] sandbox-dir"
+	exit 1
+}
 
 opsys=`uname -s`
 case "$opsys" in
@@ -124,14 +130,14 @@ while [ $# -gt 0 ]; do
 	--pkgsrc=*)	pkgsrc=`echo $1 | $sedprog -e 's|^--pkgsrc=||'` ;;
 	--src=*)	src=`echo $1 | $sedprog -e 's|^--src=||'` ;;
 	--verbose)	set -x ;;
+	-*)		usage ;;
 	*)		break ;;
 	esac
 	shift
 done
 
 if [ $# -ne 1 ]; then
-	echo "Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--verbose] sandbox-dir"
-	exit 1
+	usage
 fi
 
 if [ `$idprog -u` -ne 0 ]; then
