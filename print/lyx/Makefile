@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2002/04/18 23:55:26 fredb Exp $
+# $NetBSD: Makefile,v 1.44 2002/04/19 16:53:41 fredb Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -22,10 +22,11 @@ DEPENDS+=		xforms>=0.9999:../../x11/xforms
 USE_PERL5=		YES
 USE_XPM=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS= 	--with-extra-lib="${X11PREFIX}/lib" \
-			--with-extra-inc="${X11PREFIX}/include ${X11PREFIX}/include/X11"
+EVAL_PREFIX+=		XFORMSDIR=xforms
+CONFIGURE_ARGS+= 	--with-extra-lib="${X11BASE}/lib" \
+			--with-extra-inc="${XFORMSDIR}/include/X11"
 
-LDFLAGS+=		-L${X11PREFIX}/lib -Wl,-R${X11PREFIX}/lib
+LDFLAGS+=		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
 
 post-install:
 	${CHMOD} +x ${PREFIX}/share/lyx/configure
