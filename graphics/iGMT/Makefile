@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/05/05 19:51:15 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/07 12:00:58 jtb Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
@@ -24,7 +24,7 @@ EVAL_PREFIX+=		GMT_PREFIX=GMT
 EVAL_PREFIX+=		TK_PREFIX=tk
 
 post-patch:
-	${RM} ${WRKSRC}/*.orig ${WRKSRC}/configure_script
+#	${RM} ${WRKSRC}/*.orig ${WRKSRC}/configure_script
 
 do-configure:
 	for i in ${WRKSRC}/igmt ${WRKSRC}/igmt_configure.tcl; do	\
@@ -42,13 +42,14 @@ do-install:
 		COPYING COPYRIGHT ${PREFIX}/share/doc/igmt/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/igmt/colormaps
 	${INSTALL_DATA} ${WRKSRC}/colormaps/* ${PREFIX}/share/igmt/colormaps/
-	cd ${WRKSRC} && ${INSTALL_DATA} igmt*.tcl *.awk 01_02-98.cmt	\
+	cd ${WRKSRC} && ${INSTALL_SCRIPT} igmt*.tcl *.awk 		\
+		igmt_helper* *.batch ${PREFIX}/share/igmt/
+	cd ${WRKSRC} && ${INSTALL_DATA} 01_02-98.cmt			\
 		gps.vel hotspots.dat nuvel.yx igmt_def.gif		\
 		allslabs_rum.gmt volcanoes.dat wcity.dat		\
 		wcity_major.dat	igmt_gmtdefaults_3.0			\
 		igmt_gmtdefaults_3.1 igmt_gmtdefaults_3.2		\
-		igmt_gmtdefaults_3.3 igmt_helper* *.batch		\
-		${PREFIX}/share/igmt/
+		igmt_gmtdefaults_3.3 ${PREFIX}/share/igmt/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/igmt
 	cd ${WRKSRC} && ${INSTALL_DATA} example*.ps.gz			\
 		${WRKSRC}/example*.dat ${PREFIX}/share/examples/igmt/	\
