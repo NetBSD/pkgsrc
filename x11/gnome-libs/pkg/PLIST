@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2000/01/20 13:40:13 tron Exp $
+@comment $NetBSD: PLIST,v 1.22 2000/03/13 22:25:47 tron Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -528,6 +528,7 @@ share/locale/hu/LC_MESSAGES/gnome-libs.mo
 share/locale/it/LC_MESSAGES/gnome-libs.mo
 share/locale/ja/LC_MESSAGES/gnome-libs.mo
 share/locale/ko/LC_MESSAGES/gnome-libs.mo
+share/locale/lt/LC_MESSAGES/gnome-libs.mo
 share/locale/nl/LC_MESSAGES/gnome-libs.mo
 share/locale/no/LC_MESSAGES/gnome-libs.mo
 share/locale/pl/LC_MESSAGES/gnome-libs.mo
