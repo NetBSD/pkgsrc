@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/06/24 09:33:15 abs Exp $
+# $NetBSD: Makefile,v 1.3 2002/06/27 18:06:25 abs Exp $
 #
 
-DISTNAME=	msu-1.01
+DISTNAME=	msu-1.03
 CATEGORIES=	security
 MASTER_SITES=	http://www.mono.org/abs/tools/msu/
 
