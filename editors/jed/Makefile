@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 1998/11/12 16:30:44 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/06/03 08:27:21 agc Exp $
 #
 
 DISTNAME=		jed0.98-7
 PKGNAME=		jed-0.98-7
 CATEGORIES=		editors
-MASTER_SITES=		ftp://space.mit.edu/pub/davis/jed/ \
+MASTER_SITES=		ftp://space.mit.edu/pub/davis/jed/v0.98/ \
 			ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/jed/
 
 MAINTAINER=		packages@netbsd.org
