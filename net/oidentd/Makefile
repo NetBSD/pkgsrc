@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/03/13 20:20:57 snj Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/12 14:18:15 tron Exp $
 
 DISTNAME=	oidentd-2.0.7
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ojnk/}
 
