@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/03/11 12:16:31 tron Exp $
+# $NetBSD: Makefile,v 1.11 2000/03/13 10:34:31 tron Exp $
 
 DISTNAME=	xchat-1.4.1
 CATEGORIES=	net x11 gnome
@@ -8,7 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://xchat.org/
 
-DEPENDS+=	gnome-core-*:../../x11/gnome-core
+DEPENDS+=	gnome-core>=1.0.55:../../x11/gnome-core
+DEPENDS+=	python>=1.5.2:../../lang/pyhton
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
