@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/04 17:00:26 rh Exp $
+bin/tn5250
+bin/scs2ascii
+bin/xt5250
+man/man1/tn5250.1
+man/man1/scs2ascii.1

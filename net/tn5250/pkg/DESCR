@@ -1,0 +1,5 @@
+  This is the implementation of a 5250 emulator. The 5250 is most commonly
+used for connected to IBM's AS/400. While one can connect to an AS/400 with
+a VT100 emulator, its not ideal. The problem is that the 5250 is a screen at
+a time terminal, whereas the VT100 is a character at a time device. The
+emulator uses the binary mode of telnet to transfer the 5250 data stream. 
