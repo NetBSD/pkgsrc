@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2003/10/26 06:50:10 grant Exp $
+# $NetBSD: Makefile.common,v 1.11 2003/12/03 02:14:00 reed Exp $
 
 DISTNAME=	aalib-${DIST_VERS}
 WRKSRC=		${WRKDIR}/aalib-1.4.0
@@ -17,6 +17,8 @@ PATCHDIR=		${.CURDIR}/../../graphics/aalib/patches
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+CONFIGURE_ARGS+=	--with-curses-driver=no
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 USE_PKGSRC_GCC=		# defined
