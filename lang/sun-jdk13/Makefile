@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.12 2002/03/01 01:58:36 abs Exp $
-#
+# $NetBSD: Makefile,v 1.13 2002/03/19 16:33:58 tron Exp $
 
 # MASTER_SITES is very special, and must end in "=":
-DISTNAME=	j2sdk-1_3_1_01-linux-i386
-PKGNAME=	sun-jdk-1.3.1.0.1
+DISTNAME=	j2sdk-1_3_1_02-linux-i386
+PKGNAME=	sun-jdk-1.3.1.0.2
 CATEGORIES=     lang
-MASTER_SITES=	http://java.sun.com/Download4?config-file=j2sdk-1_3_1_01.config&platform=linux-i386&protocol=HTTP+download&download-name=
+MASTER_SITES=	http://java.sun.com/Download4?config-file=j2sdk-1_3_1_02.config&platform=linux-i386&protocol=HTTP+download&download-name=
 EXTRACT_SUFX=	.bin
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://java.sun.com/
 COMMENT=	Sun's Java(tm) Development Kit 1.3.1
 
-DEPENDS=	sun-jre-1.3.1.0.1:../../lang/sun-jre13
+DEPENDS=	sun-jre-1.3.1.0.2:../../lang/sun-jre13
 
 CONFLICTS=	jdk-[0-9]* blackdown-j*
 
 FETCH_BEFORE_ARGS=-o ${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_CMD=	${ECHO} yes | ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} >/dev/null
-WRKSRC=		${WRKDIR}/jdk1.3.1_01
+WRKSRC=		${WRKDIR}/jdk1.3.1_02
 
 LICENSE=	jdk13-license
 RESTRICTED=	"Redistribution of repackaged binaries not permitted"
