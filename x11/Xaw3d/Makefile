@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/03/11 09:45:40 tron Exp $
+# $NetBSD: Makefile,v 1.25 2001/03/11 10:01:39 tron Exp $
 #
 
 DISTNAME=	Xaw3d-1.5
@@ -13,14 +13,14 @@ CONFLICTS=	Xaw-Xpm-*
 USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/xc/lib/Xaw3d
 PLIST_SRC=	${WRKDIR}/PLIST-src
-PLIST_SUBST=	XAWREV=${XAWREV}
+PLIST_SUBST=	XAWREV=${XAWREV} XAWMAJOR=${XAWMAJOR}
 
 .include "../../mk/bsd.prefs.mk"
 
 post-extract:
 	@(cd ${WRKSRC}; ${LN} -s .. X11)
 
-.if (${OPSYS} == SunOS) && (${X11BASE} == /usr/openwin)
+.if (${OPSYS} == SunOS)
 post-configure:
 	cd ${WRKSRC}; \
 	${SED} -e 's#^	SERVER#SERVER#' <${MAKEFILE} >${MAKEFILE}.sed; \
@@ -36,11 +36,16 @@ post-install:
 		${SED} -e '/lib\/libXaw3d\.a/d'			\
 			< ${PKGDIR}/PLIST > ${PLIST_SRC};	\
 	fi
+.if (${OPSYS} == SunOS)
+	${RM} -f ${PREFIX}/lib/libXaw3d.so.${XAWMAJOR}
+	${LN} -s libXaw3d.so.${XAWREV} ${PREFIX}/lib/libXaw3d.so.${XAWMAJOR}
+.endif
 
 .include "../../mk/bsd.pkg.mk"
 
 .if (${OPSYS} == SunOS) && (${X11BASE} == /usr/openwin)
-XAWREV!=awk '/define.*SharedXawRev/{print $$3}' ${X11BASE}/lib/config/sv4Lib.tmpl
+XAWREV!=	awk '/define.*SharedXawRev/{print $$3}' ${X11BASE}/lib/config/sv4Lib.tmpl
 .else
-XAWREV!=awk '/define.*SharedXawRev/{print $$3}' ${X11BASE}/lib/X11/config/X11.tmpl
+XAWREV!=	awk '/define.*SharedXawRev/{print $$3}' ${X11BASE}/lib/X11/config/X11.tmpl
 .endif
+XAWMAJOR=	${XAWREV:C/\..*//}
