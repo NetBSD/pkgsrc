@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5057 2004/03/02 15:50:08 wiz Exp $
+$NetBSD: CHANGES,v 1.5058 2004/03/02 16:15:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1115,3 +1115,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ImageMagick to 5.5.7.17 [adam 2004-03-02]
 	Updated gentoo to 0.11.46 [adam 2004-03-02]
 	Updated bittorrent to 3.3nb4 [wiz 2004-03-02]
+	Updated ffcall to 1.9 [adam 2004-03-02]
