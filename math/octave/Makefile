@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2004/02/09 03:26:39 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2004/02/18 13:33:41 jlam Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.17
@@ -49,14 +49,14 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/refcard/refcard-a4.ps ${PREFIX}/share/octave/2.0.17/doc
 	${INSTALL_DATA} ${WRKSRC}/doc/faq/Octave-FAQ.ps ${PREFIX}/share/octave/2.0.17/doc
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 .if !empty(CC_VERSION:Mgcc-3*)
 PKG_FAIL_REASON=	"Octave does not build with ${CC_VERSION} - please use octave-current."
 .endif
 
-post-patch:
 .if !empty(CC_VERSION:Mgcc-2.8.1)
+post-patch:
 	@EGCS_VERSION=`${CC} -v 2>&1 | ${AWK} '{print $$4}'`;		\
 	if [ $$EGCS_VERSION -lt 19981201 ]; then			\
 		cd ${WRKSRC};						\
