@@ -22,3 +22,4 @@ Features:
 * Language plugins
 * OpenPGP integration (via GnuPG)
 * Groupchat invites / private-messaging
+* File upload
