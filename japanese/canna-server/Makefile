@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/04/08 14:44:30 uebayasi Exp $
+# $NetBSD: Makefile,v 1.16 2002/04/10 14:25:48 uebayasi Exp $
 
 DISTNAME=	Canna35b2
 PKGNAME=	Canna-server-3.5.2
@@ -42,15 +42,15 @@ PLIST_SUBST=	CANNAOWNER=${CANNAOWNER} CANNAGROUP=${CANNAGROUP} \
 INSTALL_TARGET=	instserver instclient
 
 post-patch:
-	@${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
-	@${SED} -e 's|\(SUBDIRS = .*\) misc\(.*\)|\1\2|' \
+	${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
+	${SED} -e 's|\(SUBDIRS = .*\) misc\(.*\)|\1\2|' \
 		-e 's|\(SERVERDIR = .*\) dic/phono\(.*\)|\1\2|' \
 		-e 's|\(CLIENTDIR = .*\) dic/phono misc|\1|' \
 		${WRKSRC}/Imakefile.orig > ${WRKSRC}/Imakefile
-	@${FIND} ${WRKSRC} -name Imakefile -print | \
+	${FIND} ${WRKSRC} -name Imakefile -print | \
 	while read f; do \
 		${CP} $$f $${f}.orig; \
-		( \     
+		( \
 			${ECHO} '/#include ".*\/Canna.conf"$$/a\'; \
 			${ECHO} '#include "${FILESDIR}/LinkFileList.rules"'; \
 		) | ${SED} -f /dev/stdin $${f}.orig >$$f; \
