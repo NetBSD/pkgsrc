@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.223 1999/03/09 15:31:59 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.224 1999/03/09 16:39:56 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1019,7 +1019,9 @@ do-extract:
 	fi
 .endif # WRKOBJDIR
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}for file in ${EXTRACT_ONLY}; do \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for file in "" ${EXTRACT_ONLY}; do				\
+		if [ "X$$file" = X"" ]; then continue; fi;		\
 		(cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file ${EXTRACT_AFTER_ARGS}); \
 	done
 .endif
