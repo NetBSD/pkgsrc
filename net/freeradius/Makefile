@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2005/02/09 09:14:26 seb Exp $
+# $NetBSD: Makefile,v 1.24 2005/02/18 16:59:57 adrianp Exp $
 
-DISTNAME=	freeradius-1.0.1
-PKGREVISION=	7
+DISTNAME=	freeradius-1.0.2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -50,9 +49,12 @@ CONFIGURE_ARGS+=	--without-snmp
 SUBST_CLASSES=		make
 SUBST_STAGE.make=	post-patch
 SUBST_FILES.make=	src/modules/rlm_ldap/Makefile.in \
-			src/modules/rlm_mschap/Makefile
+			src/modules/rlm_mschap/Makefile \
+			src/modules/rlm_sql/drivers/rlm_sql_postgresql/Makefile.in
 SUBST_SED.make= 	-e "s|RLM_LDFLAGS	=|RLM_LDFLAGS 	= \
-				-L../../../src/lib/.libs/ -lradius|g"
+				-L../../../src/lib/.libs/ -lradius|g" \
+			-e "s|RLM_SQL_LIBS	=|RLM_SQL_LIBS	= \
+				-L${PREFIX}/lib|g"
 SUBST_MESSAGE.make=	"Fixing Makefiles."
 
 .include "options.mk"
