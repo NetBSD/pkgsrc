@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2003/09/27 13:25:39 jdolecek Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/30 19:09:15 tron Exp $
 
 MODNAME=		mysql
 CATEGORIES+=		databases
 PKGREVISION=		# empty
 COMMENT=		PHP4 extension for MySQL databases
+
+MAINTAINER=		tech-pkg@NetBSD.org
 
 .include "../../www/php4/Makefile.module"
 
