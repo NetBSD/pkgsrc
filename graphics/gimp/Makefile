@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 1999/04/16 20:16:41 tron Exp $
+# $NetBSD: Makefile,v 1.36 1999/05/02 14:35:57 tron Exp $
 
 DISTNAME=	gimp-1.0.4
 CATEGORIES=	graphics
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.gimp.org/
 
 BUILD_DEPENDS=	emacs:../../editors/emacs
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	gtk+-1.2.1:../../x11/gtk
+DEPENDS+=	gtk+-1.2.2:../../x11/gtk
 DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
 DEPENDS+=	png-1.0.3:../../graphics/png
 DEPENDS+=	tiff-3.4:../../graphics/tiff

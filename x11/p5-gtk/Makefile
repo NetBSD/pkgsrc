@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/04/26 19:30:26 garbled Exp $
+# $NetBSD: Makefile,v 1.9 1999/05/02 14:35:58 tron Exp $
 #
 
 DISTNAME=		Gtk-0.5120
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/perl/
 
 MAINTAINER=		root@garbled.net
 
-DEPENDS+=		gtk+-1.2.1:../../x11/gtk
+DEPENDS+=		gtk+-1.2.2:../../x11/gtk
 
 USE_PERL5=		yes
 USE_X11=		yes
