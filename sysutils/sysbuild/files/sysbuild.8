@@ -1,4 +1,4 @@
-.\" $NetBSD: sysbuild.8,v 1.3 2002/12/01 19:39:51 jmmv Exp $
+.\" $NetBSD: sysbuild.8,v 1.4 2002/12/08 11:37:18 jmmv Exp $
 .\"
 .\" sysbuild - Automatic NetBSD system builds
 .\" Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -312,6 +312,15 @@ White-space separated list of directories that are updated using
 when executing the
 .Ql update-srcs
 target.
+.It KEEP_TOOLS
+If set to
+.Ql yes ,
+do not remove tools while running the
+.Ql clean
+target.
+Therefore, the easiest way to really remove them will be with the
+.Ql destroy
+target.
 .It KERNCONF
 White-space separated list of kernels that are built with the
 .Ql build-kernels
@@ -465,7 +474,4 @@ This will require the use of
 because X11R6 build system creates object files together with sources.
 .It
 Support building for multiple architectures.
-.It
-Add an update flag, so that the user can avoid automatic cleans before
-builds.
 .El
