@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5266 2004/03/16 14:04:44 tron Exp $
+$NetBSD: CHANGES,v 1.5267 2004/03/16 15:23:25 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -60,7 +60,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvsup to 16.1.h [xtraeme 2004-01-05]
 	Updated cvsup-gui to 16.1.h [xtraeme 2004-01-05]
 	Updated kochi-ttf to 20030823 [uebayasi 2004-01-05]
-	Delete kochi-otf [uebayasi 2004-01-05]
+	Removed kochi-otf [uebayasi 2004-01-05]
 	Updated libtool to 1.4.20010614nb19 [cube 2004-01-05]
 	Updated lua to 5.0.1 [cube 2004-01-05]
 	Updated perl58 to 5.8.1nb1 [grant 2004-01-05]
@@ -73,7 +73,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Moved cvsup-16.1h to cvsup-bin-16.1h [xtraeme 2004-01-06]
 	Moved cvsup-gui-16.1h to cvsup-gui-bin-16.1h [xtraeme 2004-01-06]
 	Added p5-SOAP-Lite-0.55 [grant 2004-01-06]
-	Delete kochi-cid [uebayasi 2004-01-06]
+	Removed kochi-cid [uebayasi 2004-01-06]
 	Updated xlockmore to 5.11.1 [hubertf 2004-01-06]
 	Added chmlib-0.31 [wiz 2004-01-06]
 	Added xchm-0.8 [wiz 2004-01-06]
@@ -1474,3 +1474,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nsd to 2.0.1 [itojun 2004-03-16]
 	Updated newsx to 1.6nb1 [cube 2004-03-16]
 	Updated pilot-link to 0.11.7nb2 [tron 2004-03-16]
+	Removed mew-xemacs [uebayasi 2004-03-16]
