@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/01/26 17:39:55 tv Exp $
+# $NetBSD: Makefile,v 1.23 2005/03/12 05:24:50 tv Exp $
 
 DISTNAME=		libpcap-0.8.3
 SVR4_PKGNAME=		lpcap
@@ -8,6 +8,8 @@ MASTER_SITES= 		http://www.tcpdump.org/release/
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.tcpdump.org/
 COMMENT=		System-independent interface for user-level packet capture
+
+NOT_FOR_PLATFORM+=	Interix-*-* # no raw interface access
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
