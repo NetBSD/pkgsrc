@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/28 02:47:50 reed Exp $
-#
+# $NetBSD: Makefile,v 1.4 2005/01/02 20:29:16 jlam Exp $
 
 DISTNAME=		smartmontools-5.32
 PKGREVISION=		1
@@ -18,11 +17,11 @@ USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 
 EGDIR=			${PREFIX}/share/examples/smartmontools
-
 CONF_FILES=		${EGDIR}/smartd.conf ${PKG_SYSCONFDIR}/smartd.conf
 RCD_SCRIPTS=		smartd
 
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/smartmontools
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 INSTALLATION_DIRS=	${EGDIR}
 
