@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2566 2004/11/29 01:43:22 minskim Exp $
+$NetBSD: TODO,v 1.2567 2004/11/29 01:57:47 tv Exp $
 
 Suggested new packages
 ======================
@@ -575,7 +575,6 @@ Suggested package updates
 	o guile-www-1.1.1
 	o gv-3.6.0
 	o hackbot-2.21
-	o hashcash-1.13
 	o haskell-mode-1.45
 	o hdf5-1.6.3
 	o hercules-3.01
