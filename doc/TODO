@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2786 2004/12/27 22:51:20 wiz Exp $
+$NetBSD: TODO,v 1.2787 2004/12/27 23:36:46 minskim Exp $
 
 Suggested new packages
 ======================
@@ -910,7 +910,6 @@ Suggested package updates
 	o py-METAR-0.9
 	o py-Numeric-23.6
 	o py-ORBit-2.0.1
-	o py-OpenSSL-0.6
 	o py-Optik-1.4.1
 	o py-Pmw-1.2
 	o py-Scientific-2.4.9
