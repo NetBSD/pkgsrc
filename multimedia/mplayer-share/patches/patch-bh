@@ -1,0 +1,14 @@
+$NetBSD: patch-bh,v 1.1 2004/07/02 17:07:21 drochner Exp $
+
+--- osdep/Makefile.orig	2004-03-26 16:21:44.000000000 +0100
++++ osdep/Makefile
+@@ -3,7 +3,8 @@ include ../config.mak
+ 
+ LIBNAME = libosdep.a
+ 
+-SRCS= shmem.c strsep.c vsscanf.c scandir.c gettimeofday.c fseeko.c # timer.c
++SRCS= shmem.c strsep.c strl.c vsscanf.c scandir.c gettimeofday.c fseeko.c \
++      # timer.c
+ 
+ ifeq ($(TARGET_ARCH_X86),yes)
+ ifeq ($(TARGET_OS),Linux)

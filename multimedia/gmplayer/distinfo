@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2004/06/21 07:01:38 tron Exp $
+$NetBSD: distinfo,v 1.9 2004/07/02 17:07:21 drochner Exp $
 
 SHA1 (mplayer-1.0rc4/MPlayer-1.0pre4.tar.bz2) = 1e9f181589d6bf36e4c59ad013f8b5976447e702
 Size (mplayer-1.0rc4/MPlayer-1.0pre4.tar.bz2) = 4913390 bytes
@@ -42,5 +42,17 @@ SHA1 (mplayer-1.0rc4/xanim-1.6.tar.bz2) = ea147768cba50e62646216217028a9dac8b8e6
 Size (mplayer-1.0rc4/xanim-1.6.tar.bz2) = 94567 bytes
 SHA1 (mplayer-1.0rc4/xine-lcd-1.2.tar.bz2) = b882ec3e0aceeffb22c425cfd7322bf0f7aaf269
 Size (mplayer-1.0rc4/xine-lcd-1.2.tar.bz2) = 172340 bytes
-SHA1 (patch-aa) = 93b13909bd489599b3f9a6c4ec1fc3e53411fc17
+SHA1 (patch-aa) = 12c75630628dec1893ea06e0a623cd25c143cf1d
 SHA1 (patch-ad) = e01b08da4c46c57a50b5306353391b8f9ba7bf6e
+SHA1 (patch-ba) = 944cf2d3c99fe0af53bc71c47d5a48aff2bb4671
+SHA1 (patch-bb) = 395045e7e10c2154dce06eebcc04283f6aeac552
+SHA1 (patch-bc) = 900672b8f7c9aa3a66a56c3439607e8eeefedcba
+SHA1 (patch-bd) = 0687b9907e7fab7ffbb90a855088031e84123f76
+SHA1 (patch-be) = 159bef14dd6419445c5c530e8d402eb83543f774
+SHA1 (patch-bf) = 5ce3344b3384aa8caa9848e361902ebb0de148da
+SHA1 (patch-bg) = 297539d5d53721fdef12ee8ace7be8e50ee7ab50
+SHA1 (patch-bh) = fb757d74e9896fb29c55b87d586e801c7667b8a8
+SHA1 (patch-bi) = ce208ec7d6245a4e5609d61a5d877be0efb67102
+SHA1 (patch-bj) = 5f40f145303434c0869aea061f3e15d555a3b711
+SHA1 (patch-bk) = 31ddf8e0cee55bfac0b34859ef09f660a0404903
+SHA1 (patch-bl) = e778c11a4655127263d1d3ecc573e62167f98557
