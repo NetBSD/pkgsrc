@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2002/06/12 13:55:06 tron Exp $
+$NetBSD: patch-aa,v 1.8 2002/06/12 21:51:28 tron Exp $
 
 --- netstuff.cpp.orig	Thu Jun  6 03:52:08 2002
-+++ netstuff.cpp	Wed Jun 12 15:51:57 2002
++++ netstuff.cpp	Wed Jun 12 23:46:36 2002
 @@ -247,6 +247,8 @@
     fd_set fds;
     struct timeval tm;
@@ -11,3 +11,12 @@ $NetBSD: patch-aa,v 1.7 2002/06/12 13:55:06 tron Exp $
     GTimer * time_since_start=g_timer_new();
     g_timer_start(time_since_start);
  
+@@ -330,7 +332,7 @@
+    }
+ 
+    // send our request for the web page.
+-   sprintf(lineBuff, "GET %s HTTP/1.1\r\nHost: %s\r\nUser-Agent: bidwatcher\r\n%s\r\n", url->url, url->hostinfo->h_name, cookie);
++   sprintf(lineBuff, "GET %s HTTP/1.1\r\nConnection: close\r\nHost: %s\r\nUser-Agent: bidwatcher\r\n%s\r\n", url->url, url->hostinfo->h_name, cookie);
+ 
+    if (send(socketID, lineBuff, strlen(lineBuff), 0) < 0) {
+ #ifdef DEBUG_NETWORK
