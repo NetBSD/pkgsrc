@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4356 2004/01/05 04:43:35 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4357 2004/01/05 09:02:00 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -59,3 +59,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Net-Server to 0.86 [grant 2003-01-05]
 	Updated cvsup to 16.1.h [xtraeme 2003-01-05]
 	Updated cvsup-gui to 16.1.h [xtraeme 2003-01-05]
+	Updated kochi-tty to 20030823 [uebayasi 2003-01-05]
