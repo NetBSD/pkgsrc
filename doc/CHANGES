@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4172 2003/12/18 05:33:33 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4173 2003/12/18 06:05:29 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5223,3 +5223,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sodipodi to 0.33 [xtraeme 2003-12-18]
 	Updated pure-ftpd to 1.0.17a [xtraeme 2003-12-18]
 	Updated enlightenment to 0.16.6 [xtraeme 2003-12-18]
+	Updated gnutls to 1.0.1 [xtraeme 2003-12-18]
