@@ -1,22 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/03/26 20:53:54 jtb Exp $
+$NetBSD: patch-ac,v 1.2 2003/04/29 21:51:54 jtb Exp $
 
---- rconfig.cpp.orig	Tue Feb 20 21:28:44 2001
-+++ rconfig.cpp
-@@ -178,7 +178,7 @@
-   addSetting( "Print:PrintAdjustmentFactor", "1.0");
+--- rprgdef.h.orig
++++ rprgdef.h
+@@ -28,7 +28,7 @@
+ #define RUNNING_WINDOWS false
+ #define RUNNING_SOLARIS false
+ #define RUNNING_IRIX    false
+-#define DATADIR         "/usr/share"
++#define DATADIR         "@PREFIX@/share"
  
-   addSetting( "Paths:BrowserPath", (RUNNING_WINDOWS ? "C:\\Progra~1\\Intern~1\\Iexplore.exe" : "netscape"));
--  addSetting( "Paths:LibraryPath1", "/usr/share/qcad/libraries" );
-+  addSetting( "Paths:LibraryPath1", "@PREFIX@/share/qcad/libraries" );
  
-   verbose=false;
- }
-@@ -579,7 +579,7 @@
- 
-   // Search in /usr/share/qcad/... dir:
-   if(!QFileInfo(path).exists()) {
--    path = QString("/usr/share/")+DEF_APPNAME_L+"/"+_relPath;
-+    path = QString("@PREFIX@/share/")+DEF_APPNAME_L+"/"+_relPath;
-   }
- #endif
- 
+ #ifdef __FreeBSD__
