@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/01 12:14:10 salo Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:51:42 martti Exp $
 #
 
 DISTNAME=	gifsicle-1.37
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.lcdf.org/~eddietwo/gifsicle/
 
 MAINTAINER=	ben@wongs.net
 HOMEPAGE=	http://www.lcdf.org/~eddietwo/gifsicle/
-COMMENT=	create, edit, and inspect GIFs from shell
+COMMENT=	Create, edit, and inspect GIFs from shell
 
 USE_BUILDLINK2=	YES
 USE_X11=	YES

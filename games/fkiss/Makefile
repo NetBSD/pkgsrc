@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/19 08:54:31 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 16:49:45 martti Exp $
 #
 
 DISTNAME=		fkiss-0.32
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.oersted.co.jp/~yav/soft/fkiss/
 
 MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.oersted.co.jp/~yav/soft/indexe.html#fkiss
-COMMENT=		kisekae viewer
+COMMENT=		Kisekae viewer
 
 DEPENDS+=		lha-[0-9]*:../../archivers/lha
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:45:33 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/21 16:54:07 martti Exp $
 #
 
 .include "../../lang/tcl-expect/Makefile.common"
@@ -7,7 +7,7 @@ PKGNAME=	tk-expect-${EXPECT_VERSION}
 CATEGORIES=	lang
 
 MAINTAINER=	jwise@NetBSD.org
-COMMENT=	tcl interpreter with both the expect and tk extensions built in
+COMMENT=	Tcl interpreter with both the expect and tk extensions built in
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 DEPENDS+=	tcl-expect-${EXPECT_VERSION}:../../lang/tcl-expect

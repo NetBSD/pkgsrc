@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:37:26 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:47:07 martti Exp $
 #
 
 DISTNAME=	mkfontalias.py
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	# empty
 
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://home.c2i.net/dark/linux.html#fuzzy
-COMMENT=	creates a fonts.alias from the fonts.dir for TrueType fonts
+COMMENT=	Creates a fonts.alias from the fonts.dir for TrueType fonts
 
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
