@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.7 2005/03/10 23:39:53 rillig Exp $
+
+This patch makes imlib2 compile on systems that don't have an lround
+function, which is defined in C99.
+
+Needed at least for NetBSD-1.6.2 and NetBSD-2.0.
+
+--- src/lib/color_helpers.c.orig	Sat Jan  8 08:55:02 2005
++++ src/lib/color_helpers.c	Thu Mar 10 23:57:26 2005
+@@ -1,4 +1,13 @@
+ #include "color_helpers.h"
++
++#ifdef __NetBSD__
++#define lround(x) my_lround(x)
++static long my_lround(double x)
++{
++	return (long) ((x) >= 0 ? (x) + 0.5 : (x) - 0.5);
++}
++#endif
++
+ /*
+  * Color space conversion helper routines
+  * Convert between rgb and hsv adn between rgb and hls
