@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:55 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/14 18:26:29 jmmv Exp $
 #
 
 DISTNAME=	gtk-thinice-engine-2.0.2
@@ -20,7 +20,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/gtk-thinice-engine-2.pc.in
+PKGCONFIG_OVERRIDE=	gtk-thinice-engine-2.pc.in
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"

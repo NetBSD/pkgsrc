@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2004/02/14 17:21:56 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2004/02/14 18:26:29 jmmv Exp $
 #
 
 DISTNAME=		gtk+-2.2.4
@@ -32,10 +32,10 @@ CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 TEST_TARGET=		check
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/gdk-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/gtk+-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/gdk-pixbuf-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
+PKGCONFIG_OVERRIDE=	gdk-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gtk+-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
 
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/demos/gtk-demo
 

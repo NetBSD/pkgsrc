@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:35 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 18:26:27 jmmv Exp $
 #
 
 .include "../../databases/libpqxx/Makefile.common"
@@ -11,7 +11,7 @@ USE_LANGUAGES=		c c++
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/libpqxx.pc.in
+PKGCONFIG_OVERRIDE+=	libpqxx.pc.in
 
 GNU_CONFIGURE=		yes
 PG_PREFIX=		${BUILDLINK_PREFIX.postgresql-lib}

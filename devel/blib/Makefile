@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:36 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/14 18:26:27 jmmv Exp $
 #
 
 DISTNAME=		blib-1.0.2
@@ -15,9 +15,9 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
 SHLIBTOOL_OVERRIDE=	modules/libtool
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/blib-directfb.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/blib-gtk.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/blib.pc.in
+PKGCONFIG_OVERRIDE+=	blib-directfb.pc.in
+PKGCONFIG_OVERRIDE+=	blib-gtk.pc.in
+PKGCONFIG_OVERRIDE+=	blib.pc.in
 
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 CONFIGURE_ARGS+=	--enable-gtk-doc=no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2004/02/09 00:09:10 mjl Exp $
+# $NetBSD: Makefile,v 1.67 2004/02/14 18:26:27 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -21,9 +21,9 @@ USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-PKGCONFIG_OVERRIDE=	${WRKSRC}/glib.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/gmodule.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/gthread.pc.in
+PKGCONFIG_OVERRIDE=	glib.pc.in
+PKGCONFIG_OVERRIDE+=	gmodule.pc.in
+PKGCONFIG_OVERRIDE+=	gthread.pc.in
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 
 INFO_FILES=		glib.info

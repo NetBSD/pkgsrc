@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:52 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/14 18:26:28 jmmv Exp $
 
 DISTNAME=		gsasl-0.0.8
 PKGREVISION=		1
@@ -21,7 +21,7 @@ INFO_FILES=		gsasl.info
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/libgsasl.pc.in
+PKGCONFIG_OVERRIDE+=    libgsasl.pc.in
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"

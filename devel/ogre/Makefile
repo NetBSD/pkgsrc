@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:39 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 18:26:27 jmmv Exp $
 #
 
 DISTNAME=	ogre-v0-12-1
@@ -21,7 +21,7 @@ USE_X11=		yes
 
 CONFIGURE_ARGS+=	--with-platform=SDL
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/OGRE.pc.in
+PKGCONFIG_OVERRIDE+=    OGRE.pc.in
 
 .include "../../devel/devIL/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"

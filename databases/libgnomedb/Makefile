@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/02/14 17:21:35 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/14 18:26:27 jmmv Exp $
 #
 
 DISTNAME=		libgnomedb-1.0.0
@@ -21,7 +21,7 @@ USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/libgnomedb.pc.in
+PKGCONFIG_OVERRIDE=	libgnomedb.pc.in
 
 CONFIGURE_ARGS=		--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
