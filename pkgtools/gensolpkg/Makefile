@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/23 14:25:08 agc Exp $
+# $NetBSD: Makefile,v 1.2 1999/09/24 12:58:34 agc Exp $
 #
 
 DISTNAME=	gensolpkg-1.0
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.westley.demon.co.uk/software.html
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# uses Solaris pkgmk(1)
 
-MAKE_ENV+=	CPPFLAGS=""	
+MAKE_ENV+=	CPPFLAGS="" CC=${CC}
 
 do-install:
 	cd ${WRKSRC} && ${MAKE} install PREFIX=${PREFIX}
