@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/05/20 20:48:58 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/08/25 23:24:12 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSTATGRAB_BUILDLINK3_MK:=	${LIBSTATGRAB_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibstatgrab}
 BUILDLINK_PACKAGES+=	libstatgrab
 
 .if !empty(LIBSTATGRAB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libstatgrab+=	libstatgrab>=0.9
+BUILDLINK_DEPENDS.libstatgrab+=	libstatgrab>=0.10
 BUILDLINK_PKGSRCDIR.libstatgrab?=	../../wip/libstatgrab
 .endif	# LIBSTATGRAB_BUILDLINK3_MK
 
