@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/30 22:06:01 itojun Exp $
+
+--- config.layout-	Fri Mar 30 20:15:06 2001
++++ config.layout	Fri Mar 30 20:18:04 2001
+@@ -249,3 +249,23 @@
+     logfiledir:    $prefix/logs
+     proxycachedir: $prefix/proxy
+ </Layout>
++
++#   NetBSD Layout
++<Layout NetBSD>
++    prefix:        /usr/pkg
++    exec_prefix:   $prefix
++    bindir:        $prefix/bin
++    sbindir:       $prefix/sbin
++    libexecdir:    $prefix/lib/httpd
++    mandir:        $prefix/man
++    sysconfdir:    $prefix/etc/httpd
++    datadir:       $prefix/share/httpd
++    iconsdir:      $prefix/share/httpd/icons
++    htdocsdir:     $prefix/share/httpd/htdocs
++    cgidir:        $prefix/libexec/cgi-bin
++    includedir:    $prefix/include/httpd
++    localstatedir: /var
++    runtimedir:    /var/run
++    logfiledir:    /var/log/httpd
++    proxycachedir: /var/spool/httpd/proxy
++</Layout>

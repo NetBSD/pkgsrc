@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1.1.1 2001/03/30 22:06:02 itojun Exp $
+
+--- build/rules.mk-	Fri Mar 30 22:23:57 2001
++++ build/rules.mk	Fri Mar 30 22:35:49 2001
+@@ -80,9 +80,9 @@
+ 
+ SH_LIBTOOL = $(SHELL) $(top_builddir)/shlibtool --silent
+ MKINSTALLDIRS = $(abs_srcdir)/build/mkdir.sh
+-INSTALL = $(abs_srcdir)/build/install.sh -c
+-INSTALL_DATA = $(INSTALL) -m 644
+-INSTALL_PROGRAM = $(INSTALL) -m 755
++#INSTALL = $(abs_srcdir)/build/install.sh -c
++INSTALL_DATA = /bin/sh $(top_builddir)/libtool --mode=install ${BSD_INSTALL_DATA}
++INSTALL_PROGRAM = /bin/sh $(top_builddir)/libtool --mode=install ${BSD_INSTALL_PROGRAM}
+ 
+ DEFS = -I. -I$(srcdir) -I$(top_srcdir)/server/mpm/$(MPM_NAME) -I$(top_srcdir)/modules/http
+ 

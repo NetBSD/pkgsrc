@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/03/30 22:06:01 itojun Exp $
+
+make it compile with OpenSSL 0.9.5a
+
+--- modules/tls/openssl_state_machine.c-	Fri Mar 30 21:00:13 2001
++++ modules/tls/openssl_state_machine.c	Fri Mar 30 21:00:21 2001
+@@ -121,7 +121,7 @@
+ 	{
+ 	char buf[1024];
+ 
+-	ERR_error_string_n(l,buf,sizeof buf);
++	ERR_error_string(l,buf);
+ 	fprintf(stderr,"Error %lx: %s\n",l,buf);
+ 	}
+     }

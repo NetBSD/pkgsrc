@@ -1,0 +1,100 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/03/30 22:06:01 itojun Exp $
+
+--- docs/conf/httpd-std.conf.orig	Fri Feb 23 03:54:49 2001
++++ docs/conf/httpd-std.conf	Fri Mar 30 23:10:10 2001
+@@ -58,13 +58,13 @@
+ # DISK. The PID of the main server process is automatically appended to
+ # the filename. 
+ #
+-#LockFile logs/accept.lock
++#LockFile /var/log/httpd/accept.lock
+ 
+ #
+ # PidFile: The file in which the server should record its process
+ # identification number when it starts.
+ #
+-PidFile logs/httpd.pid
++PidFile /var/log/httpd/httpd.pid
+ 
+ #
+ # ScoreBoardFile: File used to store internal server process information.
+@@ -73,7 +73,7 @@
+ # no two invocations of Apache share the same scoreboard file.
+ #
+ <IfModule !perchild.c>
+-ScoreBoardFile logs/apache_runtime_status
++ScoreBoardFile /var/log/httpd/apache_runtime_status
+ </IfModule>
+ 
+ #
+@@ -158,6 +158,9 @@
+ #Listen 3000
+ #Listen 12.34.56.78:80
+ 
++Listen 0.0.0.0:80
++Listen [::]:80
++
+ #
+ # BindAddress: You can support virtual hosts with this option. This directive
+ # is used to tell the server which IP address to listen to. It can either
+@@ -372,7 +375,7 @@
+ # TypesConfig describes where the mime.types file (or equivalent) is
+ # to be found.
+ #
+-TypesConfig conf/mime.types
++TypesConfig /usr/pkg/etc/httpd/mime.types
+ 
+ #
+ # DefaultType is the default MIME type the server will use for a document
+@@ -397,7 +400,7 @@
+ # module is part of the server.
+ #
+ <IfModule mod_mime_magic.c>
+-    MIMEMagicFile conf/magic
++    MIMEMagicFile /usr/pkg/etc/httpd/magic
+ </IfModule>
+ 
+ #
+@@ -417,7 +420,7 @@
+ # logged here.  If you *do* define an error logfile for a <VirtualHost>
+ # container, that host's errors will be logged there and not here.
+ #
+-ErrorLog logs/error_log
++ErrorLog /var/log/httpd/error_log
+ 
+ #
+ # LogLevel: Control the number of messages logged to the error_log.
+@@ -442,20 +445,20 @@
+ # define per-<VirtualHost> access logfiles, transactions will be
+ # logged therein and *not* in this file.
+ #
+-CustomLog logs/access_log common
++CustomLog /var/log/httpd/access_log common
+ 
+ #
+ # If you would like to have agent and referer logfiles, uncomment the
+ # following directives.
+ #
+-#CustomLog logs/referer_log referer
+-#CustomLog logs/agent_log agent
++#CustomLog /var/log/httpd/referer_log referer
++#CustomLog /var/log/httpd/agent_log agent
+ 
+ #
+ # If you prefer a single logfile with access, agent, and referer information
+ # (Combined Logfile Format) you can use the following directive.
+ #
+-#CustomLog logs/access_log combined
++#CustomLog /var/log/httpd/access_log combined
+ 
+ #
+ # Optionally add a line containing the server version and virtual host
+@@ -936,6 +939,6 @@
+ #    ServerAdmin webmaster@dummy-host.example.com
+ #    DocumentRoot /www/docs/dummy-host.example.com
+ #    ServerName dummy-host.example.com
+-#    ErrorLog logs/dummy-host.example.com-error_log
+-#    CustomLog logs/dummy-host.example.com-access_log common
++#    ErrorLog /var/log/httpd/dummy-host.example.com-error_log
++#    CustomLog /var/log/httpd/dummy-host.example.com-access_log common
+ #</VirtualHost>

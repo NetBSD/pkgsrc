@@ -1,0 +1,46 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/03/30 22:06:02 itojun Exp $
+
+--- Makefile.in.orig	Sun Mar 11 23:54:12 2001
++++ Makefile.in	Fri Mar 30 23:18:34 2001
+@@ -24,6 +24,8 @@
+ include $(top_srcdir)/build/rules.mk
+ include $(top_srcdir)/build/program.mk
+ 
++LIBTOOL=$(SHELL) $(top_builddir)/libtool
++
+ install-conf:
+ 	@echo Installing configuration files
+ 	@test -d $(sysconfdir) || $(MKINSTALLDIRS) $(sysconfdir)
+@@ -32,7 +34,7 @@
+ 		$(INSTALL_DATA) $$i $(sysconfdir); \
+ 	done; \
+ 	for i in *-std*; do \
+-		sed -e 's#@@ServerRoot@@#$(prefix)#g' \
++		sed -e 's#@@ServerRoot@@#$(datadir)#g' \
+ 		    -e 's#@@Port@@#$(PORT)#g' \
+ 			< $$i > $(sysconfdir)/$$i; \
+ 		chmod 0644 $(sysconfdir)/$$i; \
+@@ -41,7 +43,7 @@
+ 			file=`echo $$file|sed s/.*.conf/$(PROGRAM_NAME).conf/`; \
+ 		fi; \
+ 		if test "$$file" != "$$i" && test ! -f $(sysconfdir)/$$file; then \
+-			$(INSTALL_DATA) $(sysconfdir)/$$i $(sysconfdir)/$$file; \
++			: $(INSTALL_DATA) $(sysconfdir)/$$i $(sysconfdir)/$$file; \
+ 		fi; \
+ 	done
+ 
+@@ -78,10 +80,10 @@
+ 	@echo Installing Support Binaries
+ 	@test -d $(bindir) || $(MKINSTALLDIRS) $(bindir)
+ 	@cp -p $(srcdir)/support/httpd.exp $(bindir)
+-	@cp -p $(builddir)/support/htpasswd $(bindir)
+-	@cp -p $(builddir)/support/htdigest $(bindir)
+-	@cp -p $(builddir)/support/rotatelogs $(bindir)
+-	@cp -p $(builddir)/support/logresolve $(bindir)
++	@${INSTALL_PROGRAM} $(builddir)/support/htpasswd $(bindir)
++	@${INSTALL_PROGRAM} $(builddir)/support/htdigest $(bindir)
++	@${INSTALL_PROGRAM} $(builddir)/support/rotatelogs $(bindir)
++	@${INSTALL_PROGRAM} $(builddir)/support/logresolve $(bindir)
+ 	@cp -p $(builddir)/support/ab $(bindir)
+ 	@cp -p $(builddir)/support/apachectl $(bindir)
+ 	chmod 755 $(bindir)/apachectl

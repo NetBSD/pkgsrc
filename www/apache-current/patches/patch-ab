@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/30 22:06:01 itojun Exp $
+
+--- configure-	Fri Mar 30 20:38:49 2001
++++ configure	Fri Mar 30 20:43:23 2001
+@@ -3434,18 +3434,18 @@
+ else  
+   
+   if test ! -f $srcdir/config.layout; then
+-    echo "** Error: Layout file $srcdir/../config.layout not found"
++    echo "** Error: Layout file $srcdir/config.layout not found"
+     echo "** Error: Cannot use undefined layout '$LAYOUT'"
+     exit 1
+   fi
+-  pldconf=config.pld
++  pldconf=./config.pld
+   
+   sed -e "1,/[ 	]*<[lL]ayout[ 	]*$LAYOUT[ 	]*>[ 	]*/d" \
+       -e '/[ 	]*<\/Layout>[ 	]*/,$d' \
+       -e "s/^[ 	]*//g" \
+       -e "s/:[ 	]*/=\'/g" \
+       -e "s/[ 	]*$/'/g" \
+-      $srcdir/../config.layout > $pldconf
++      $srcdir/config.layout > $pldconf
+   layout_name=$LAYOUT
+   . $pldconf
+   rm $pldconf
