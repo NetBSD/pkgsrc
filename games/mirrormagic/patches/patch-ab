@@ -1,18 +1,21 @@
-$NetBSD: patch-ab,v 1.2 2000/12/05 00:34:33 wiz Exp $
---- sound.h.orig	Mon Nov  9 12:36:49 1998
-+++ sound.h	Mon Nov  9 12:35:46 1998
-@@ -29,6 +29,14 @@
- extern void ioctl(long, long, void *);
- #endif
+$NetBSD: patch-ab,v 1.3 2001/07/05 22:13:08 kristerw Exp $
+--- src/Makefile.orig	Wed May  2 23:13:44 2001
++++ src/Makefile	Wed May  2 23:24:24 2001
+@@ -17,7 +17,7 @@
+ XINC_PATH = $(X11_PATH)/include
+ XLIB_PATH = $(X11_PATH)/lib
+ X11_INCL = -I$(XINC_PATH)
+-X11_LIBS = -L$(XLIB_PATH)
++X11_LIBS = -L$(XLIB_PATH) -Wl,-R$(XLIB_PATH)
+ endif
  
-+#ifdef __NetBSD__
-+#include <sys/ioctl.h>
-+#include <soundcard.h>
-+#ifdef VOXWARE
-+#undef VOXWARE
-+#endif
-+#endif
-+
- #define SND_BLOCKSIZE 4096
+ AR = ar
+@@ -100,7 +100,7 @@
+ # OPTIONS = -O3
+ # OPTIONS = -DSYSV -Ae				# may be needed for HP-UX
  
- #ifdef _HPUX_SOURCE
+-CFLAGS = $(OPTIONS) $(SYS_CFLAGS) $(CONFIG)
++CFLAGS = $(SYS_CFLAGS) $(CONFIG)
+ LDFLAGS = $(SYS_LDFLAGS) $(EXTRA_LDFLAGS) -lm
+ 
+ 

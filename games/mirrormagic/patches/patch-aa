@@ -1,39 +1,30 @@
-$NetBSD: patch-aa,v 1.4 2000/01/02 03:22:11 wiz Exp $
---- Makefile.orig	Wed Sep  6 04:56:17 1995
-+++ Makefile	Mon Nov  9 12:35:14 1998
-@@ -8,11 +8,11 @@
- CC = gcc
- # CC = cc				# for HP-UX and others
+$NetBSD: patch-aa,v 1.5 2001/07/05 22:13:07 kristerw Exp $
+--- Makefile.orig	Wed May  2 23:09:06 2001
++++ Makefile	Sun Jun 24 21:03:37 2001
+@@ -12,15 +12,17 @@
  
--GFX_PATH = -DGFX_PATH=\"./graphics\"	# path where the graphics are
--SND_PATH = -DSND_PATH=\"./sounds\"	# path where the sounds are
--LEVEL_PATH = -DLEVEL_PATH=\".\"		# path where the level file is
--SCORE_PATH = -DSCORE_PATH=\".\"		# path where the score file is
--NAMES_PATH = -DNAMES_PATH=\".\"		# path where the names file is
-+GFX_PATH = -DGFX_PATH=\"${X11BASE}/share/mirrormagic/graphics\" # path where the graphics are
-+SND_PATH = -DSND_PATH=\"${X11BASE}/share/mirrormagic/sounds\"	# path where the sounds are
-+LEVEL_PATH = -DLEVEL_PATH=\"${X11BASE}/share/mirrormagic\"		# path where the level file is
-+SCORE_PATH = -DSCORE_PATH=\"${X11BASE}/share/mirrormagic\"		# path where the score file is
-+NAMES_PATH = -DNAMES_PATH=\"${X11BASE}/share/mirrormagic\"		# path where the names file is
- # SOUNDS = -DNO_SOUNDS			# don't play any sounds
- # SCORE_ENTRIES = -DONE_PER_NAME	# only one score entry per name
- SCORE_ENTRIES = -DMANY_PER_NAME		# many score entries per name
-@@ -26,15 +26,15 @@
+ # specify path to X11 on your system
+ # if undefined, use system defaults (works with Linux/gcc/libc5)
+-X11_PATH = /usr/X11
++X11_PATH = ${X11BASE}
  
- # DEBUG = -DDEBUG -g -ansi -pedantic -Wall
- # DEBUG = -DDEBUG -g -Wall
--DEBUG = -O6
-+DEBUG = -O2
+ # specify directory for read-only game data (like graphics, sounds, levels)
+ # default is '.', so you can play without installing game data somewhere
+ # RO_GAME_DIR = /usr/games
++RO_GAME_DIR = ${PREFIX}/share/mirrormagic
  
- # SYSTEM = -Aa -D_HPUX_SOURCE -Dhpux	# for HP-UX (obsolete)
- # SYSTEM = -DSYSV -Ae			# for HP-UX
- # SYSTEM = -DSYSV			# for systems without 'usleep()'
--# INCL = -I/usr/include/X11R5		# for HP-UX and others
-+INCL = -I${X11BASE}/include		# for HP-UX and others
- # LIBS = -lXpm -lX11 -lm
- # LIBS = -L/usr/lib/X11R5 -lXpm -lX11 -lm # for HP-UX and others
--LIBS = -lXpm -lXpm -lXpm -lX11 -lm	# triple "-lXpm" because of Xpm error
-+LIBS = -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lXpm -lX11 -lm	-lossaudio # triple "-lXpm" because of Xpm error
+ # specify directory for writable game data (like highscore files)
+ # default is '.', so you can play without installing game data somewhere
+ # RW_GAME_DIR = /var/games
++RW_GAME_DIR = /var/games/mirrormagic
  
- # CFLAGS = -O2 $(CONFIG) $(SYSTEM)
- CFLAGS = $(DEBUG) $(CONFIG) $(SYSTEM) $(INCL)
+ # uncomment this if your system has no joystick include file
+ # JOYSTICK = -DNO_JOYSTICK
+@@ -42,7 +44,6 @@
+ 
+ .EXPORT_ALL_VARIABLES:
+ 
+-MAKE = make
+ 
+ SRC_DIR = src
+ MAKE_CMD = $(MAKE) -C $(SRC_DIR)
