@@ -1,13 +1,16 @@
-$NetBSD: patch-aa,v 1.2 1999/11/15 13:07:12 rh Exp $
-
---- ../audioIO.c.orig	Sat May 31 19:47:58 1997
-+++ ../audioIO.c	Mon Nov 15 13:58:45 1999
-@@ -18,7 +18,7 @@
-   #include "audioIO_HPUX.c"
- #endif
- 
--#ifdef OS_SunOS
-+#if defined(OS_SunOS) || defined(OS_NetBSD)
-   #include "audioIO_SunOS.c"
- #endif
- 
+diff -c ../audioIO.c:1.1.1.1 xamp/audioIO.c:1.2
+*** ../audioIO.c:1.1.1.1	Wed Jun 14 22:23:48 2000
+--- ../audioIO.c	Wed Jun 14 22:23:48 2000
+***************
+*** 6,11 ****
+--- 6,15 ----
+    #include "audioIO_Linux.c"
+  #endif
+  
++ #ifdef OS_NetBSD
++   #include "audioIO_NetBSD.c"
++ #endif
++ 
+  #ifdef OS_BSD
+    #include "audioIO_Linux.c"
+  #endif
