@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.4 2003/03/24 12:12:10 jtb Exp $
+$NetBSD: patch-ah,v 1.5 2003/06/06 08:58:43 jtb Exp $
 
---- config/unix/netbsd/Makedefs.orig	Mon Mar 24 06:48:54 2003
-+++ config/unix/netbsd/Makedefs
-@@ -0,0 +1,17 @@
+--- /dev/null
++++ config/netbsd/Makedefs
+@@ -0,0 +1,18 @@
 +#  Makefile definitions from config/unix/intel_netbsd
 +
 +#  CC       C compiler
@@ -20,3 +20,4 @@ $NetBSD: patch-ah,v 1.4 2003/03/24 12:12:10 jtb Exp $
 +CFLAGS += -I$(X11BASE)/include
 +XLIBS = -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -lX11
 +XPMDEFS = -DZPIPE -I$(X11BASE)/include
++GDIR= xpm
