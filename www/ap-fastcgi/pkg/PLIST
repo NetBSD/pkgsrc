@@ -1,5 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 1998/12/04 00:31:02 tv Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/05/13 14:59:43 tv Exp $
 lib/httpd/mod_fastcgi.so
-share/doc/mod_fastcgi/httpd.conf.example
 share/httpd/htdocs/manual/mod/mod_fastcgi.html
-@dirrm share/doc/mod_fastcgi
