@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/03/22 20:21:16 kristerw Exp $
+
+You may wish to add the following to your ~/.emacs:
+
+	(add-to-list 'auto-mode-alist '("\\.v$" . coq-mode))
+	(autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
+	(autoload 'run-coq "coq-inferior" "Run an inferior Coq process." t)
+	(autoload 'run-coq-other-window "coq-inferior"
+	  "Run an inferior Coq process in a new window." t)
+	(autoload 'run-coq-other-frame "coq-inferior"
+	  "Run an inferior Coq process in a new frame." t)
+
+===========================================================================
