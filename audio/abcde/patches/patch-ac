@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.12 2003/06/10 12:59:47 wiz Exp $
+$NetBSD: patch-ac,v 1.13 2003/07/12 15:25:55 wiz Exp $
 
---- abcde.orig  2003-05-25 12:37:53.000000000 +0200
-+++ abcde       2003-05-25 12:40:44.000000000 +0200
-@@ -1233,8 +1233,8 @@
+--- abcde.orig	Sun May 18 23:01:13 2003
++++ abcde
+@@ -1233,8 +1233,8 @@ if [ -z "$WAVOUTPUTDIR" ]; then
  fi
  
  # Load system defaults
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.12 2003/06/10 12:59:47 wiz Exp $
  fi
  # Load user preference defaults
  if [ -r $HOME/.abcde.conf ]; then
-@@ -1260,8 +1260,9 @@
+@@ -1260,8 +1260,8 @@ else
  	elif [ -e /dev/acd0c ]; then
  		CDROM=/dev/acd0c
  	else
@@ -21,7 +21,15 @@ $NetBSD: patch-ac,v 1.12 2003/06/10 12:59:47 wiz Exp $
 -		exit 1
 +		RAWPART=`sysctl -n kern.rawpartition | awk '{printf "%c",97+$0}'`
 +		CDROM=/dev/rcd0$RAWPART
-+		CDPARANOIAOPTS="-g ${CDROM}"
  	fi
  fi
-
+ 
+@@ -1308,7 +1308,7 @@ done
+ case "$CDROMREADERSYNTAX" in
+ 	cdparanoia|debug)
+ 		CDROMREADER="$CDPARANOIA"
+-		CDROMREADEROPTS="$CDPARANOIAOPTS"
++		CDROMREADEROPTS="$CDPARANOIAOPTS -g ${CDROM}"
+ 		;;
+ 	cdda2wav)
+ 		CDROMREADER="$CDDA2WAV"
