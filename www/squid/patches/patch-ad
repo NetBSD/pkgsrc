@@ -1,0 +1,11 @@
+--- src/redirect.c.dist	Wed Apr 16 07:26:02 1997
++++ src/redirect.c	Sun Jul  6 01:01:21 1997
+@@ -154,7 +154,7 @@
+     fclose(debug_log);
+     close(fd);
+     close(cfd);
+-    execlp(command, "(redirector)", NULL);
++    execlp(command, command, NULL);
+     debug(50, 0, "redirect_create_redirector: %s: %s\n", command, xstrerror());
+     _exit(1);
+     return 0;
