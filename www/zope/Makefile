@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/08/23 13:41:31 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.13 2000/08/23 21:33:53 wiz Exp $
 #
 
 DISTNAME=	Zope-2.1.4-src
@@ -11,7 +11,7 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/
 
 DEPENDS+=	python-1.5.2:../../lang/python
-DEPENDS+=	py-extclass-2.1.4:../../lang/py-extclass
+DEPENDS+=	py-extclass>=2.1.4:../../lang/py-extclass
 DEPENDS+=	py-dtml-2.2.0:../../textproc/py-dtml
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
