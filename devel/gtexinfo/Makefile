@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/14 21:29:39 cjs Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/18 16:49:30 tv Exp $
 #
 
 DISTNAME=		texinfo-3.12
@@ -11,7 +11,7 @@ MAINTAINER=		packages@netbsd.org
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-catgets
 
-pre-build:
+post-patch:
 	${MV} -f ${WRKSRC}/info/filesys.h ${WRKSRC}/info/filesys.h.orig
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@X11BASE@|${X11BASE}|g'		\
