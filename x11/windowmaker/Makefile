@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 1999/10/08 21:12:53 jlam Exp $
+# $NetBSD: Makefile,v 1.38 1999/10/09 20:29:17 jlam Exp $
 
 DISTNAME=		WindowMaker-0.61.1
 PKGNAME=		windowmaker-0.61.1
@@ -13,7 +13,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.windowmaker.org/
 
 DEPENDS+=		libproplist-0.9.*:../../devel/libproplist
-DEPENDS+=		giflib-*:../../graphics/giflib
+DEPENDS+=		libungif-*:../../graphics/libungif
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png-1.0.3:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
@@ -24,9 +24,7 @@ USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-usermenu \
 			--with-nlsdir=${PREFIX}/share/locale \
-			--with-incs-from=" \
-				-I${LOCALBASE}/include \
-				-I${LOCALBASE}/include/giflib"
+			--with-incs-from="-I${LOCALBASE}/include"
 
 # The following ensures that `get-wraster-flags --ldflags' returns the
 # correct linker flags.
