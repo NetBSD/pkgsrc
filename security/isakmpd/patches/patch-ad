@@ -1,7 +1,0 @@
-$NetBSD: patch-ad,v 1.1 2000/10/04 16:36:58 itojun Exp $
---- util.c-	Thu Oct  5 01:35:18 2000
-+++ util.c	Thu Oct  5 01:35:26 2000
-@@ -37,2 +37,3 @@
- #include <stdlib.h>
-+#include <string.h>
- 

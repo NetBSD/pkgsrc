@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2000/11/25 23:51:17 kim Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/14 13:27:32 itojun Exp $
 #
 
-DISTNAME=		isakmpd-000915-snap
-PKGNAME=		isakmpd-20000915
+DISTNAME=		isakmpd-20010214
+PKGNAME=		isakmpd-20010214
 CATEGORIES=		security net
-MASTER_SITES=		ftp://ftp.appli.se/pub/isakmpd/
+MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 MAINTAINER=		itojun@kame.net
 
@@ -19,21 +19,8 @@ IGNORE+=		"${PKGNAME} requires ipsec-ready NetBSD"
 
 ALL_TARGET=		depend all
 
-PLIST_SRC=		${WRKDIR}/PLIST
+WRKSRC=			${WRKDIR}/isakmpd
 
-MANCOMPRESSED=		${MANZ}
-
-pre-install:
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	@for OPT in ${MANINSTALL} broken-solaris-needs-this; do \
-	  case $$OPT in \
-	    catinstall) \
-		${CAT} ${PKGDIR}/PLIST.cat >> ${PLIST_SRC}; \
-		;; \
-	    maninstall) \
-		${CAT} ${PKGDIR}/PLIST.man >> ${PLIST_SRC}; \
-		;; \
-	  esac; \
-	done
+MAKE_ENV+=		BINDIR=${PREFIX}/sbin MANDIR=${PREFIX}/man
 
 .include "../../mk/bsd.pkg.mk"
