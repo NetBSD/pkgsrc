@@ -1,4 +1,4 @@
-	$NetBSD: CHANGES-2000,v 1.1 2002/09/19 12:45:29 lukem Exp $
+	$NetBSD: CHANGES-2000,v 1.2 2003/02/25 11:49:25 salo Exp $
 
 Changes to the packages collection and infrastructure in 2000:
 
@@ -2106,6 +2106,5 @@ Changes to the packages collection and infrastructure in 2000:
 	Updated bonobo to 0.30 [rh 2000-12-31]
 	Updated gtkhtml to 0.8 [rh 2000-12-31]
 	Updated gmp to 3.3.1 [skrll 2000-12-31]
-	Added libiconv-1.5 [rh 2001-01-01]
 	Updated fvwm2 to 2.2.4 [veego 2000-12-31]
 	Updated xpmroot to 2.2.4 [veego 2000-12-31]
