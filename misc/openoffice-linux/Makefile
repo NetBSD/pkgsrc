@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2003/01/24 11:15:02 mrauch Exp $
+# $NetBSD: Makefile,v 1.4 2003/02/11 11:41:01 jlam Exp $
 
 DISTNAME=		OOo_1.0.2_LinuxIntel_install
 PKGNAME=		openoffice-linux-1.0.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		http://sf1.mirror.openoffice.org/stable/1.0.2/	\
 			http://www.fs.tum.de/~mrauch/OpenOffice/download/
@@ -11,8 +11,8 @@ MAINTAINER=		mrauch@netbsd.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (binary pkg)
 
-NO_CONFIGURE=           # defined
-WRKSRC=			${WRKDIR}/install/
+NO_CONFIGURE=           yes
+WRKSRC=			${WRKDIR}/install
 INTERACTIVE_STAGE=	install
 
 CONFLICTS+=		staroffice-[0-9]*
@@ -24,7 +24,7 @@ TEMP?=			${WRKSRC}
 
 .include "../../mk/bsd.prefs.mk"
 
-DISPLAY?=       #empty, if unset
+DISPLAY?=       # empty, if unset
 checkforx:
 .if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && ${ECHO} YES || ${ECHO} NO!} == "NO"
 .  if exists(${X11BASE}/bin/Xvfb)
@@ -39,40 +39,37 @@ DISPLAY= ':2'
 
 do-build:
 
+.if ${OPSYS} == "NetBSD"
+USE_PKGINSTALL=		yes
+SUPPORT_FILES=		/dev/null /emul/linux/etc/mtab
+.endif
+
 pre-install: checkforx
-	${SH} -c "cd ${WRKSRC};						\
-	    ${SED} -e 's#@@PREFIX@@#${PREFIX}#g'			\
-		<${FILESDIR}/oo_setup.resp				\
-		>oo_setup.resp"
-.	if ${OPSYS}=="NetBSD" && !exists(/emul/linux/etc/mtab)
-	 @${ECHO} 'Error: Before you are able to install and use this package,'
-	 @${ECHO} '       the file /emul/linux/etc/mtab must exist.'
-	 @${ECHO} '       Please create this file, e.g. by running'
-	 @${ECHO} '       "touch /emul/linux/etc/mtab".'
-	 @${FALSE}
-.	endif
+	${SED}	-e "s|@@PREFIX@@|${PREFIX}|g"				\
+		< ${FILESDIR}/oo_setup.resp > ${WRKSRC}/oo_setup.resp
 
 do-install:
 	-${SH} -c "cd ${WRKSRC};					\
 		  TEMP=${WRKSRC}; export TEMP;				\
 		  DISPLAY=${DISPLAY}; export DISPLAY;			\
 		  ./setup -r:oo_setup.resp"
-	@${SH} -c "if ! [ -x ${PREFIX}/OpenOffice.org1.0.2/setup ] ;	\
-		   then ${ECHO} 'Installation was not successful.';	\
-		   ${FALSE}; fi"
-	${SED} -e 's#@@PREFIX@@#${PREFIX}#g'				\
-	    <${FILESDIR}/soffice >${PREFIX}/bin/soffice
+	@if [ ! -x ${PREFIX}/OpenOffice.org1.0.2/setup ]; then		\
+		${ECHO} "Installation was not successful.";		\
+		${FALSE};						\
+	fi
+	${SED}	-e "s|@@PREFIX@@|${PREFIX}|g"				\
+		< ${FILESDIR}/soffice > ${PREFIX}/bin/soffice
 	${CHMOD} +x ${PREFIX}/bin/soffice
 	${PATCH} -t -s ${PREFIX}/OpenOffice.org1.0.2/program/soffice	\
-		<${FILESDIR}/soffice.test.patch
+		< ${FILESDIR}/soffice.test.patch
 
 # everything specific to your OS/Arch goes into it's own Makefile
 # group together i386, i486, i586 and i686 (for Linux)
-ARCH=${MACHINE_ARCH:C/i[3-6]86/i386/g}
+#
+ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 
 .if exists(Makefile.${OPSYS}.${ARCH})
 .  include "Makefile.${OPSYS}.${ARCH}"
 .else
 .  include "../../mk/bsd.pkg.mk"
 .endif
-
