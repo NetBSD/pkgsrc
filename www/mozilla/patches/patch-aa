@@ -1,10 +1,13 @@
-$NetBSD: patch-aa,v 1.12 2000/06/19 04:17:27 soren Exp $
+$NetBSD: patch-aa,v 1.13 2000/08/16 21:23:48 tron Exp $
 
-diff -ru ../mozilla-current.orig/mozilla/build/unix/nspr_my_config.mk.in ./build/unix/nspr_my_config.mk.in
---- ../mozilla-current.orig/mozilla/build/unix/nspr_my_config.mk.in	Tue Jun 15 08:36:02 1999
-+++ ./build/unix/nspr_my_config.mk.in	Sun Jun  4 14:06:22 2000
-@@ -5,3 +5,4 @@
- NS_USE_NATIVE=@MOZ_NSPRENV_NS_USE_NATIVE@
- MOZILLA_CLIENT=@MOZ_NSPRENV_MOZILLA_CLIENT@
- CLASSIC_NSPR=@MOZ_NSPRENV_CLASSIC_NSPR@
-+OBJECT_FMT=@OBJECT_FMT@
+--- config/autoconf.mk.in.orig	Wed Jul 19 21:53:00 2000
++++ config/autoconf.mk.in	Wed Aug 16 22:16:56 2000
+@@ -236,8 +236,6 @@
+ MKSHLIB_UNFORCE_ALL     = @MKSHLIB_UNFORCE_ALL@
+ DSO_LDOPTS              = @DSO_LDOPTS@
+ DLL_SUFFIX              = @DLL_SUFFIX@
+-SHLIB_LDSTARTFILE	= @SHLIB_LDSTARTFILE@
+-SHLIB_LDENDFILE		= @SHLIB_LDENDFILE@
+ endif
+ 
+ NO_LD_ARCHIVE_FLAGS     = @NO_LD_ARCHIVE_FLAGS@

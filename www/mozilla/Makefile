@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2000/08/16 16:09:10 tron Exp $
-#
+# $NetBSD: Makefile,v 1.34 2000/08/16 21:23:48 tron Exp $: Makefile,v 1.30 2000/06/17 22:14:00 tsarna Exp $
 
-DISTNAME=	mozilla-source-M16
-PKGNAME=	mozilla-5.0m16
+DISTNAME=	mozilla-source-M17
+PKGNAME=	mozilla-5.0m17
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/m16/src/
+MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/m17/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
@@ -15,35 +14,37 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
 BUILD_DEPENDS+=	autoconf:../../devel/autoconf
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 DEPENDS+=	ORBit>=0.5.1:../../net/ORBit
-#DEPENDS+=	jpeg-6b:../../graphics/jpeg
-#DEPENDS+=	png>=1.0.6:../../graphics/png
+DEPENDS+=	jpeg-6b:../../graphics/jpeg
+DEPENDS+=	png>=1.0.6:../../graphics/png
 
-#GNU_CONFIGURE=	yes
-#CONFIGURE_ARGS=--with-jpeg=${LOCALBASE} --with-png=${LOCALBASE} \
-#		--disable-pedantic --disable-debug
-
-USE_X11BASE=	yes
 USE_GMAKE=	yes
-
-MOZ_OBJDIR=	${OPSYS}${OS_VERSION}_OPT.OBJ
+USE_X11BASE=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-tests \
+		--disable-debug \
+		--enable-optimize \
+		--with-jpeg=${LOCALBASE} \
+		--with-png=${LOCALBASE}
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla
+MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
+LDFLAGS+=	-Wl,-R${MOZ_LIBDIR}
 
-MAKE_ENV+=	MOZILLA_CLIENT=1 NO_MDUPDATE=1 BUILD_OPT=1 \
-		LIBRUNPATH=${MOZ_LIBDIR}
+PLIST_SRC=	${PKGDIR}/PLIST-${OBJECT_FMT}
 
 pre-configure:
 	(cd ${WRKSRC} && autoconf)
 
-pre-build:
-	${ECHO} 0000000000 > ${WRKSRC}/build/build_number
-
-do-build:
-	(cd ${WRKSRC} && ${GMAKE} -f client.mk build)
+#do-build:
+#	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} -f client.mk build)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dist/${MOZ_OBJDIR}/bin/mozilla \
-		${PREFIX}/bin
+	sed -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/mozilla
+	chmod 755 ${PREFIX}/bin/mozilla
 	${INSTALL_PROGRAM_DIR} ${MOZ_LIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/dist/${MOZ_OBJDIR}/bin/*.so.?.? ${MOZ_LIBDIR}
+	( cd ${WRKSRC}/dist/bin; \
+	tar chf - . | (cd ${MOZ_LIBDIR}; tar xpf -) ; \
+	cd ${MOZ_LIBDIR}; \
+	${SETENV} MOZILLA_FIVE_HOME=${MOZ_LIBDIR} ./regxpcom )
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/mozilla
 
 .include "../../mk/bsd.pkg.mk"
