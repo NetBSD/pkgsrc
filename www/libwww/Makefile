@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/09/02 16:29:22 fredb Exp $
+# $NetBSD: Makefile,v 1.13 2000/09/09 19:40:24 fredb Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/14 23:34:59 jseger Exp
 #
 
@@ -13,19 +13,16 @@ HOMEPAGE=		http://www.w3.org/Library/
 
 BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 
-RESTRICTED=		"Crypto, export-controlled"
-NO_BIN_ON_FTP=		${RESTRICTED}
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
+USE_SSL=		yes
 
-USE_GMAKE=		# defined
-USE_LIBTOOL=		# defined
-USE_SSL=		# defined
-LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
-
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--with-zlib --with-regex --without-x
 CONFIGURE_ARGS+=	--with-ssl
 
 DOCDIR=			${PREFIX}/share/doc/libwww
+LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 
 pre-configure:
 	cd ${WRKSRC}; autoconf
