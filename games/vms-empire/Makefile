@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/10/03 00:14:47 tv Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/04 12:15:40 wiz Exp $
 #
 
-DISTNAME=	vms-empire-1.4
-PKGREVISION=	2
+DISTNAME=	vms-empire-1.7
 CATEGORIES=	games
 MASTER_SITES=	http://www.catb.org/~esr/vms-empire/
 
