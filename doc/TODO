@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1698 2004/05/03 17:55:54 minskim Exp $
+$NetBSD: TODO,v 1.1699 2004/05/03 18:26:46 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -389,7 +389,6 @@ Suggested package updates
 	o yaz-2.0.12
 	o ysm-2.9.4
 	o zenicb 1.31 (needs merge with lots of local changes)
-	o zenity-2.6.2
 
 Infrastructure problems which need addressing
 =============================================
