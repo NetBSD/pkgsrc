@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/02/08 23:31:59 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/04/10 03:21:02 simonb Exp $
 lib/libimapuw.so.3.0
 libexec/imapd
 libexec/ipop2d
@@ -8,3 +8,4 @@ man/man8/ipopd.8
 man/man8/ipop2d.8
 man/man8/ipop3d.8
 sbin/mtest
+sbin/rimapd
