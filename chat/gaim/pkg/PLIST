@@ -1,29 +1,29 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/04 15:10:21 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/05/22 16:27:34 perry Exp $
 bin/gaim
 lib/gaim/autorecon.so
 lib/gaim/iconaway.so
 lib/gaim/irc.so
 lib/gaim/lagmeter.so
-lib/gaim/libgaimicq.a
 lib/gaim/libgaimicq.la
 lib/gaim/libgaimicq.so
 lib/gaim/libgaimicq.so.0
 lib/gaim/libgaimicq.so.0.0
-lib/gaim/libjabber.a
 lib/gaim/libjabber.la
 lib/gaim/libjabber.so
 lib/gaim/libjabber.so.0
 lib/gaim/libjabber.so.0.0
-lib/gaim/libmsn.a
 lib/gaim/libmsn.la
 lib/gaim/libmsn.so
 lib/gaim/libmsn.so.0
 lib/gaim/libmsn.so.0.0
-lib/gaim/libyahoo.a
 lib/gaim/libyahoo.la
 lib/gaim/libyahoo.so
 lib/gaim/libyahoo.so.0
 lib/gaim/libyahoo.so.0.0
+lib/gaim/libzephyr.la
+lib/gaim/libzephyr.so
+lib/gaim/libzephyr.so.0
+lib/gaim/libzephyr.so.0.0
 lib/gaim/napster.so
 lib/gaim/notify.so
 lib/gaim/spellchk.so
@@ -33,14 +33,13 @@ lib/locale/fr/LC_MESSAGES/gaim.mo
 lib/locale/ko/LC_MESSAGES/gaim.mo
 lib/locale/zh_CN/LC_MESSAGES/gaim.mo
 man/man1/gaim.1
+@exec mkdir %D/share/gnome/apps/Internet 2>/dev/null || true
 share/gnome/apps/Internet/gaim.desktop
+share/pixmaps/gaim.xpm
 @unexec rmdir %D/share/gnome/apps/Internet 2>/dev/null || true
 @unexec rmdir %D/share/gnome/apps 2>/dev/null || true
 @unexec rmdir %D/share/gnome 2>/dev/null || true
 @unexec rmdir %D/share/pixmaps 2>/dev/null || true
-share/pixmaps/gaim.xpm
-@dirrm share/pixmaps
-@dirrm share/gnome/apps/Internet
 @dirrm lib/locale/zh_CN/LC_MESSAGES
 @dirrm lib/locale/zh_CN
 @dirrm lib/locale/ko/LC_MESSAGES
@@ -52,3 +51,5 @@ share/pixmaps/gaim.xpm
 @dirrm lib/locale/de/LC_MESSAGES
 @dirrm lib/locale/de
 @dirrm lib/gaim
+
+
