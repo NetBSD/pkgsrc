@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2001/06/27 11:02:57 zuntum Exp $
+$NetBSD: distinfo,v 1.5 2001/06/27 11:19:34 zuntum Exp $
 
-SHA1 (apla-1.0.2.tar.gz) = 2824ef2db634a9344595ebe8e077520834daa151
-Size (apla-1.0.2.tar.gz) = 6789 bytes
-SHA1 (patch-aa) = 30ae5337b07d4f4c85be1581d8d813b31afb8bbb
+SHA1 (apla-1.0.3.tar.gz) = 7b28dd78644884bb737ff3ada416e838c7f5fe62
+Size (apla-1.0.3.tar.gz) = 6790 bytes
+SHA1 (patch-aa) = 767f2c43ede469b0aa6903f86788aabfe6d2b263
