@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/07/12 20:13:39 wiz Exp $
+
+--- Makefile.orig	Thu Apr  4 11:15:01 2002
++++ Makefile
+@@ -0,0 +1,10 @@
++all:
++	$(CC) -shared bg5pdflib.c -I$(LOCALBASE)/include -I$(LOCALBASE)/$(PYINC) -L$(LOCALBASE)/lib -lpdf -Wl,-R$(LOCALBASE)/lib -o bg5pdflib.so
++
++install:
++	${BSD_INSTALL_SCRIPT} bg5pdf ${PREFIX}/bin
++	${BSD_INSTALL_DATA} bg5pdflib.so ${PREFIX}/${PYSITELIB}
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/examples/bg5pdf
++	${BSD_INSTALL_DATA} test.big5 ${PREFIX}/share/examples/bg5pdf
++	${BSD_INSTALL_DATA} test.big5.pdf ${PREFIX}/share/examples/bg5pdf
++	${BSD_INSTALL_SCRIPT} genTest.py ${PREFIX}/share/examples/bg5pdf
