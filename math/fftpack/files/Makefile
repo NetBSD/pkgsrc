@@ -18,7 +18,7 @@ OBJ =	cfftb.o cosqf1.o passb2.o radb2.o radfg.o		\
 
 lib$(LIB):	$(OBJ)
 	@$(LIBTOOL) --mode=link $(FORTRAN) $(FFLAGS) $(FOPTS) \
-	-O -o lib$(LIB).la $(OBJ:.o=.lo) -rpath $(LIBDIR)
+	-O -o lib$(LIB).la $(OBJ:.o=.lo) --version-info 0:0 -rpath $(LIBDIR)
 
 .f.o:
 	@$(LIBTOOL) --mode=compile $(FORTRAN) $(FFLAGS) $(FOPTS) -c $<

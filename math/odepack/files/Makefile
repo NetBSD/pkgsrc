@@ -16,7 +16,7 @@ OBJ = adjlr.o aigbt.o ainvg.o blkdta000.o bnorm.o cdrv.o cfode.o cntnzu.o \
 
 lib$(LIB):	$(OBJ)
 	@$(LIBTOOL) --mode=link $(FORTRAN) $(FFLAGS) $(FOPTS) \
-	-O -o lib$(LIB).la $(OBJ:.o=.lo) -rpath $(LIBDIR)
+	-O -o lib$(LIB).la $(OBJ:.o=.lo) --version-info 0:0 -rpath $(LIBDIR)
 
 .f.o:
 	@$(LIBTOOL) --mode=compile $(FORTRAN) $(FFLAGS) $(FOPTS) -c $*.f
