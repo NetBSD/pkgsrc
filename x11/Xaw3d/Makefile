@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/10/07 17:41:59 tron Exp $
+# $NetBSD: Makefile,v 1.21 2000/12/14 18:21:28 abs Exp $
 #
 
 DISTNAME=	Xaw3d-1.5
@@ -12,6 +12,7 @@ CONFLICTS=	Xaw-Xpm-*
 USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/xc/lib/Xaw3d
 PLIST_SRC=	${WRKDIR}/PLIST-src
+PLIST_SUBST=	XAWREV=${XAWREV}
 
 post-extract:
 	@(cd ${WRKSRC}; ${LN} -s .. X11)
@@ -27,3 +28,5 @@ post-install:
 	fi
 
 .include "../../mk/bsd.pkg.mk"
+
+XAWREV!=awk '/define.*SharedXawRev/{print $$3}' ${X11BASE}/lib/X11/config/X11.tmpl
