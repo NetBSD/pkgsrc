@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2001/04/27 15:48:02 zuntum Exp $
+# $NetBSD: Makefile,v 1.79 2001/04/27 16:54:41 zuntum Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -30,6 +30,7 @@ SUBDIR+=	mailagent
 SUBDIR+=	maildrop
 SUBDIR+=	mailwrapper
 SUBDIR+=	majordomo
+SUBDIR+=	mdfrm
 SUBDIR+=	metamail
 SUBDIR+=	mew
 SUBDIR+=	mhonarc
