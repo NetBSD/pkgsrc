@@ -1,3 +1,5 @@
+$NetBSD: md5,v 1.4 1998/08/07 13:21:37 agc Exp $
+
 MD5 (xanim27070.tar.gz) = 768253a86b059b4d100e34c602931af6
 MD5 (xa2.0_cvid_netbsd386.o.Z) = 80a70d69ea532c7f32a074381fff8468
 MD5 (xa2.0_iv32_netbsd386.o.Z) = 1968c29d77e02c53df14bc4f2a29a1c0

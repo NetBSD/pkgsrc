@@ -1,3 +1,5 @@
+$NetBSD: md5,v 1.2 1998/08/07 13:21:28 agc Exp $
+
 MD5 (compat12_amiga.tgz) = d9d2939fc4607c498bddb34c47e051f5
 MD5 (compat12_atari.tgz) = 258286a20c74f07eeaf770c159f65cad
 MD5 (compat12_hp300.tgz) = 76f7eda9ecd6830ba52ec748e2db7d9a
