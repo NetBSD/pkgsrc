@@ -1,9 +1,9 @@
-$NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
+$NetBSD: patch-af,v 1.4 2003/03/11 13:13:28 markd Exp $
 
---- ksirc/Makefile.in.orig	Sat Dec 28 08:53:51 2002
+--- ksirc/Makefile.in.orig	Fri Jan 17 08:54:53 2003
 +++ ksirc/Makefile.in
-@@ -244,13 +244,13 @@ testview_SOURCES = kstextview.cpp kstext
- testview_LDADD = $(LIB_KDEUI)
+@@ -266,13 +266,13 @@ testview_SOURCES = kstextviewtest.cpp
+ testview_LDADD = kstextview.lo $(LIB_KDEUI)
  testview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
 -lib_LTLIBRARIES = ksirc.la
@@ -18,7 +18,7 @@ $NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
  #>- 	toplevel.cpp \
  #>- 	charSelector.cpp \
  #>- 	chanButtons.cpp \
-@@ -283,7 +283,7 @@ noinst_PROGRAMS = getdate
+@@ -305,7 +305,7 @@ noinst_PROGRAMS = getdate
  #>-         kstextview.cpp \
  #>-         colorpicker.cpp
  #>+ 32
@@ -27,17 +27,20 @@ $NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
  	toplevel.cpp \
  	charSelector.cpp \
  	chanButtons.cpp \
-@@ -318,6 +318,9 @@ ksirc_la_SOURCES=\
+@@ -340,8 +340,11 @@ ksirc_la_SOURCES=\
  
  
  # the library search path
 +libksirc_main_la_LDFLAGS = $(all_libraries)
++libksirc_main_la_COMPILE_FIRST = cdate.h
 +
 +ksirc_la_SOURCES = ksirc_main.cpp
  ksirc_la_LDFLAGS = $(all_libraries) -module -avoid-version
+-ksirc_la_COMPILE_FIRST = cdate.h
  
  all_ksirc_libraries = \
-@@ -329,10 +332,10 @@ all_ksirc_libraries = \
+ 	./KSPrefs/libksprefs.la \
+@@ -352,10 +355,10 @@ all_ksirc_libraries = \
  
  # the libraries to link against. Be aware of the order. First the libraries,
  # that depend on the following ones.
@@ -51,7 +54,7 @@ $NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
  ksirc_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  getdate_SOURCES = getdate.c
-@@ -391,9 +394,14 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -414,9 +417,14 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -68,7 +71,7 @@ $NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
  	ksirc.lo alistbox.lo ahistlineedit.lo iocontroller.lo \
  	NewWindowDialog.lo messageReceiver.lo ioBroadcast.lo \
  	ksircprocess.lo servercontroller.lo FilterRuleEditor.lo \
-@@ -402,10 +410,10 @@ am_ksirc_la_OBJECTS = toplevel.lo charSe
+@@ -425,10 +433,10 @@ am_ksirc_la_OBJECTS = toplevel.lo charSe
  	baserules.lo chanparser.lo objFinder.lo displayMgrSDI.lo \
  	displayMgrMDI.lo mditoplevel.lo ksopts.lo topic.lo ksview.lo \
  	logfile.lo kstextview.lo colorpicker.lo
@@ -82,10 +85,10 @@ $NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
  	ksirc.lo alistbox.lo ahistlineedit.lo iocontroller.lo \
  	NewWindowDialog.lo messageReceiver.lo ioBroadcast.lo \
  	ksircprocess.lo servercontroller.lo FilterRuleEditor.lo \
-@@ -414,8 +422,8 @@ ksirc_la_nofinal_OBJECTS = toplevel.lo c
+@@ -437,8 +445,8 @@ ksirc_la_nofinal_OBJECTS = toplevel.lo c
  	baserules.lo chanparser.lo objFinder.lo displayMgrSDI.lo \
  	displayMgrMDI.lo mditoplevel.lo ksopts.lo topic.lo ksview.lo \
- 	logfile.lo kstextview.lo colorpicker.lo FilterRuleEditorData.lo
+ 	logfile.lo kstextview.lo colorpicker.lo FilterRuleWidget.lo
 -@KDE_USE_FINAL_FALSE@ksirc_la_OBJECTS = $(ksirc_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@ksirc_la_OBJECTS = $(ksirc_la_final_OBJECTS)
 +@KDE_USE_FINAL_FALSE@libksirc_main_la_OBJECTS = $(libksirc_main_la_nofinal_OBJECTS)
@@ -93,7 +96,7 @@ $NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
  bin_PROGRAMS = ksirc$(EXEEXT)
  check_PROGRAMS = testview$(EXEEXT)
  noinst_PROGRAMS = getdate$(EXEEXT)
-@@ -428,11 +436,11 @@ getdate_OBJECTS = getdate.$(OBJEXT)
+@@ -451,11 +459,11 @@ getdate_OBJECTS = getdate.$(OBJEXT)
  getdate_LDADD = $(LDADD)
  getdate_DEPENDENCIES =
  getdate_LDFLAGS =
@@ -105,99 +108,66 @@ $NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
 -ksirc_DEPENDENCIES = ksirc.la
 +ksirc_OBJECTS = ksirc_main.$(OBJEXT)
 +ksirc_DEPENDENCIES = libksirc_main.la
- am_testview_OBJECTS = kstextview.$(OBJEXT) kstextviewtest.$(OBJEXT)
+ am_testview_OBJECTS = kstextviewtest.$(OBJEXT)
  #>- testview_OBJECTS = $(am_testview_OBJECTS)
- #>+ 4
-@@ -458,15 +466,16 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
- #>- @AMDEP_TRUE@	$(DEPDIR)/colorpicker.Plo $(DEPDIR)/dccDialog.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/dccDialogData.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/displayMgrMDI.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/displayMgrSDI.Plo $(DEPDIR)/dummy.Po \
--#>- @AMDEP_TRUE@	$(DEPDIR)/getdate.Po $(DEPDIR)/ioBroadcast.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/ioDCC.Plo $(DEPDIR)/ioDiscard.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/ioLAG.Plo $(DEPDIR)/ioNotify.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/iocontroller.Plo $(DEPDIR)/ksirc.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/ksircprocess.Plo $(DEPDIR)/ksopts.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/kstextview.Plo $(DEPDIR)/kstextview.Po \
--#>- @AMDEP_TRUE@	$(DEPDIR)/kstextviewtest.Po $(DEPDIR)/ksview.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/logfile.Plo $(DEPDIR)/mditoplevel.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/displayMgrSDI.Plo $(DEPDIR)/getdate.Po \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/ioBroadcast.Plo $(DEPDIR)/ioDCC.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/ioDiscard.Plo $(DEPDIR)/ioLAG.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/ioNotify.Plo $(DEPDIR)/iocontroller.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/ksirc.Plo $(DEPDIR)/ksirc_main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/ksirc_main.Po $(DEPDIR)/ksircprocess.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/ksopts.Plo $(DEPDIR)/kstextview.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kstextview.Po $(DEPDIR)/kstextviewtest.Po \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/ksview.Plo $(DEPDIR)/logfile.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/mditoplevel.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/messageReceiver.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/objFinder.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/servercontroller.Plo \
-@@ -474,8 +483,8 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
- #>- @AMDEP_TRUE@	$(DEPDIR)/ssfepromptdata.Plo $(DEPDIR)/topic.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/toplevel.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/usercontrolmenu.Plo
--#>+ 49
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/FilterRuleEditorData.P  $(DEPDIR)/ksirc_la.all_cpp.P $(DEPDIR)/testview.all_cpp.P  $(DEPDIR)/FilterRuleEditor.Plo \
-+#>+ 51
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/FilterRuleEditorData.P  $(DEPDIR)/libksirc_main_la.all_cpp.P $(DEPDIR)/testview.all_cpp.P  $(DEPDIR)/FilterRuleEditor.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/NewWindowDialog.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ahistlineedit.Plo $(DEPDIR)/alistbox.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/baserules.Plo $(DEPDIR)/chanButtons.Plo \
-@@ -483,15 +492,16 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/colorpicker.Plo $(DEPDIR)/dccDialog.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/dccDialogData.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/displayMgrMDI.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/displayMgrSDI.Plo $(DEPDIR)/dummy.Po \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/getdate.Po $(DEPDIR)/ioBroadcast.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ioDCC.Plo $(DEPDIR)/ioDiscard.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ioLAG.Plo $(DEPDIR)/ioNotify.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/iocontroller.Plo $(DEPDIR)/ksirc.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ksircprocess.Plo $(DEPDIR)/ksopts.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kstextview.Plo $(DEPDIR)/kstextview.Po \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kstextviewtest.Po $(DEPDIR)/ksview.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/logfile.Plo $(DEPDIR)/mditoplevel.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/displayMgrSDI.Plo $(DEPDIR)/getdate.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ioBroadcast.Plo $(DEPDIR)/ioDCC.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ioDiscard.Plo $(DEPDIR)/ioLAG.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ioNotify.Plo $(DEPDIR)/iocontroller.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ksirc.Plo $(DEPDIR)/ksirc_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ksirc_main.Po $(DEPDIR)/ksircprocess.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ksopts.Plo $(DEPDIR)/kstextview.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kstextview.Po $(DEPDIR)/kstextviewtest.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ksview.Plo $(DEPDIR)/logfile.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/mditoplevel.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/messageReceiver.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/objFinder.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/servercontroller.Plo \
-@@ -507,15 +517,16 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/colorpicker.Plo $(DEPDIR)/dccDialog.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/dccDialogData.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/displayMgrMDI.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/displayMgrSDI.Plo $(DEPDIR)/dummy.Po \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/getdate.Po $(DEPDIR)/ioBroadcast.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/ioDCC.Plo $(DEPDIR)/ioDiscard.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/ioLAG.Plo $(DEPDIR)/ioNotify.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/iocontroller.Plo $(DEPDIR)/ksirc.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/ksircprocess.Plo $(DEPDIR)/ksopts.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kstextview.Plo $(DEPDIR)/kstextview.Po \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kstextviewtest.Po $(DEPDIR)/ksview.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/logfile.Plo $(DEPDIR)/mditoplevel.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/displayMgrSDI.Plo $(DEPDIR)/getdate.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/ioBroadcast.Plo $(DEPDIR)/ioDCC.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/ioDiscard.Plo $(DEPDIR)/ioLAG.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/ioNotify.Plo $(DEPDIR)/iocontroller.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/ksirc.Plo $(DEPDIR)/ksirc_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/ksirc_main.Po $(DEPDIR)/ksircprocess.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/ksopts.Plo $(DEPDIR)/kstextview.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kstextview.Po $(DEPDIR)/kstextviewtest.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/ksview.Plo $(DEPDIR)/logfile.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/mditoplevel.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/messageReceiver.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/objFinder.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/servercontroller.Plo \
-@@ -551,8 +562,8 @@ CXXLD = $(CXX)
+ #>+ 1
+@@ -482,11 +490,13 @@ am__depfiles_maybe = depfiles
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/dccDialog.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/dccDialogData.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/displayMgrMDI.Plo \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/displayMgrSDI.Plo ./$(DEPDIR)/dummy.Po \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/displayMgrSDI.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/getdate.Po ./$(DEPDIR)/ioBroadcast.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/ioDCC.Plo ./$(DEPDIR)/ioDiscard.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/ioLAG.Plo ./$(DEPDIR)/ioNotify.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/iocontroller.Plo ./$(DEPDIR)/ksirc.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/ksirc_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/ksirc_main.Po \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/ksircprocess.Plo ./$(DEPDIR)/ksopts.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/kstextview.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/kstextviewtest.Po \
+@@ -499,8 +509,8 @@ am__depfiles_maybe = depfiles
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/ssfepromptdata.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/topic.Plo ./$(DEPDIR)/toplevel.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/usercontrolmenu.Plo
+-#>+ 57
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/FilterRuleWidget.P  $(DEPDIR)/ksirc_la.all_cpp.P  ./$(DEPDIR)/FilterRuleEditor.Plo \
++#>+ 61
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/FilterRuleWidget.P  $(DEPDIR)/libksirc_main_la.all_cpp.P  ./$(DEPDIR)/FilterRuleEditor.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/NewWindowDialog.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/ahistlineedit.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/alistbox.Plo ./$(DEPDIR)/baserules.Plo \
+@@ -511,11 +521,13 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/dccDialog.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/dccDialogData.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/displayMgrMDI.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/displayMgrSDI.Plo ./$(DEPDIR)/dummy.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/displayMgrSDI.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/getdate.Po ./$(DEPDIR)/ioBroadcast.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/ioDCC.Plo ./$(DEPDIR)/ioDiscard.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/ioLAG.Plo ./$(DEPDIR)/ioNotify.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/iocontroller.Plo ./$(DEPDIR)/ksirc.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/ksirc_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/ksirc_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/ksircprocess.Plo ./$(DEPDIR)/ksopts.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kstextview.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kstextviewtest.Po \
+@@ -539,11 +551,13 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/dccDialog.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/dccDialogData.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/displayMgrMDI.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/displayMgrSDI.Plo ./$(DEPDIR)/dummy.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/displayMgrSDI.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/getdate.Po ./$(DEPDIR)/ioBroadcast.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/ioDCC.Plo ./$(DEPDIR)/ioDiscard.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/ioLAG.Plo ./$(DEPDIR)/ioNotify.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/iocontroller.Plo ./$(DEPDIR)/ksirc.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/ksirc_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/ksirc_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/ksircprocess.Plo ./$(DEPDIR)/ksopts.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kstextview.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kstextviewtest.Po \
+@@ -584,8 +598,8 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
@@ -208,7 +178,7 @@ $NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
  DATA = $(apps_DATA) $(conf_DATA) $(misc_DATA)
  
  HEADERS = $(noinst_HEADERS)
-@@ -564,7 +575,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -597,7 +611,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	uninstall-recursive check-recursive installcheck-recursive
  DIST_COMMON = $(noinst_HEADERS) ChangeLog Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -217,42 +187,42 @@ $NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -613,6 +624,8 @@ clean-libLTLIBRARIES:
- 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+@@ -644,6 +658,8 @@ clean-libLTLIBRARIES:
+ 	done
  ksirc.la: $(ksirc_la_OBJECTS) $(ksirc_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(ksirc_la_LDFLAGS) $(ksirc_la_OBJECTS) $(ksirc_la_LIBADD) $(LIBS)
 +libksirc_main.la: $(libksirc_main_la_OBJECTS) $(libksirc_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libksirc_main_la_LDFLAGS) $(libksirc_main_la_OBJECTS) $(libksirc_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -693,7 +706,6 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dccDialogData.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/displayMgrMDI.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/displayMgrSDI.Plo@am__quote@
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/getdate.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/ioBroadcast.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/ioDCC.Plo@am__quote@
-@@ -702,6 +714,8 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/ioNotify.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/iocontroller.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/ksirc.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/ksirc_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/ksirc_main.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/ksircprocess.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/ksopts.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kstextview.Plo@am__quote@
-@@ -906,7 +920,7 @@ distclean-tags:
- 
+@@ -736,7 +752,6 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dccDialogData.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/displayMgrMDI.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/displayMgrSDI.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/getdate.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ioBroadcast.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ioDCC.Plo@am__quote@
+@@ -745,6 +760,8 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ioNotify.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/iocontroller.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ksirc.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ksirc_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ksirc_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ksircprocess.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ksopts.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kstextview.Plo@am__quote@
+@@ -963,7 +980,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=sirc.help.gz mditoplevel.cpp ssfepromptdata.cpp FilterRuleEditor.cpp displayMgrMDI.h messageReceiver.cpp ahistlineedit.cpp Artistic ksview.cpp default.pl ioLAG.cpp kstextview.h charSelector.h chanButtons.cpp ksopts.cpp relnotes filters.pl displayMgrMDI.cpp openksircproc.dlg ioNotify.cpp servercontroller.dlg dccDialog.dlg FilterRuleEditorData.ui topic.cpp chanButtons.h ioDiscard.cpp topic.h ksircrc colorpicker.cpp ksirc.pl ksircprocess.cpp stringparserstate.h logfile.cpp FilterRuleEditor.dlg ksirc.desktop dccDialog.cpp ioDCC.cpp iocontroller.cpp objFinder.cpp ksirc.cpp FAQ baserules.cpp charSelector.cpp logfile.h colorpicker.h toplevel.cpp NewWindowDialog.cpp dsirc servercontroller.cpp dccDialogData.cpp ssfeprompt.cpp mditoplevel.h displayMgrSDI.cpp usercontrolmenu.cpp version.h ioBroadcast.cpp alistbox.cpp chanparser.cpp 
-+KDE_DIST=FilterRuleEditor.dlg stringparserstate.h ksview.cpp displayMgrSDI.cpp FAQ mditoplevel.cpp topic.cpp mditoplevel.h objFinder.cpp messageReceiver.cpp ahistlineedit.cpp ioNotify.cpp charSelector.cpp ksircrc usercontrolmenu.cpp displayMgrMDI.cpp dccDialog.cpp charSelector.h kstextview.h default.pl sirc.help.gz FilterRuleEditor.cpp ioDCC.cpp ioLAG.cpp dsirc filters.pl ssfepromptdata.cpp openksircproc.dlg baserules.cpp Artistic logfile.h ksopts.cpp NewWindowDialog.cpp alistbox.cpp servercontroller.dlg ksircprocess.cpp ssfeprompt.cpp dccDialogData.cpp FilterRuleEditorData.ui logfile.cpp topic.h displayMgrMDI.h ksirc.cpp chanButtons.h colorpicker.cpp ksirc.pl chanButtons.cpp chanparser.cpp ksirc.desktop iocontroller.cpp version.h relnotes ioBroadcast.cpp ioDiscard.cpp toplevel.cpp dccDialog.dlg colorpicker.h servercontroller.cpp 
+-KDE_DIST=sirc.help.gz mditoplevel.cpp ssfepromptdata.cpp FilterRuleEditor.cpp eventsrc displayMgrMDI.h messageReceiver.cpp ahistlineedit.cpp Artistic ksview.cpp default.pl ioLAG.cpp kstextview.cpp kstextview.h charSelector.h chanButtons.cpp ksopts.cpp relnotes filters.pl displayMgrMDI.cpp openksircproc.dlg ioNotify.cpp FilterRuleWidget.ui servercontroller.dlg dccDialog.dlg topic.cpp chanButtons.h ioDiscard.cpp topic.h ksircrc colorpicker.cpp ksirc.pl ksircprocess.cpp stringparserstate.h logfile.cpp FilterRuleEditor.dlg ksirc.desktop dccDialog.cpp ioDCC.cpp iocontroller.cpp objFinder.cpp ksirc.cpp FAQ baserules.cpp charSelector.cpp logfile.h colorpicker.h toplevel.cpp NewWindowDialog.cpp dsirc servercontroller.cpp dccDialogData.cpp ssfeprompt.cpp mditoplevel.h displayMgrSDI.cpp usercontrolmenu.cpp version.h ioBroadcast.cpp alistbox.cpp chanparser.cpp 
++KDE_DIST=FilterRuleEditor.dlg stringparserstate.h ksview.cpp displayMgrSDI.cpp FAQ mditoplevel.cpp topic.cpp mditoplevel.h objFinder.cpp messageReceiver.cpp ahistlineedit.cpp ioNotify.cpp charSelector.cpp ksircrc usercontrolmenu.cpp FilterRuleWidget.ui displayMgrMDI.cpp dccDialog.cpp getdate charSelector.h kstextview.h default.pl sirc.help.gz FilterRuleEditor.cpp ioDCC.cpp ioLAG.cpp dsirc filters.pl ssfepromptdata.cpp openksircproc.dlg FilterRuleWidget.cpp baserules.cpp dummy.cpp Artistic logfile.h ksopts.cpp NewWindowDialog.cpp alistbox.cpp ksirc.la.blsav servercontroller.dlg ksircprocess.cpp ssfeprompt.cpp dccDialogData.cpp logfile.cpp topic.h displayMgrMDI.h ksirc.cpp chanButtons.h colorpicker.cpp ksirc.pl chanButtons.cpp chanparser.cpp ksirc.desktop iocontroller.cpp version.h relnotes eventsrc ioBroadcast.cpp ioDiscard.cpp toplevel.cpp dccDialog.dlg colorpicker.h kstextview.cpp servercontroller.cpp 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -1065,127 +1079,124 @@ messages: rc.cpp
+@@ -1124,127 +1141,128 @@ messages: rc.cpp
  	$(EXTRACTRC) KSOpenkSirc/*.ui >> rc.cpp
  	$(EXTRACTRC) KSPrefs/*.ui >> rc.cpp
  	$(XGETTEXT) *.cpp */*.cpp -o $(podir)/ksirc.pot
@@ -264,22 +234,22 @@ $NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
  .NOEXPORT:
  
 -#>+ 14
--FilterRuleEditorData.cpp: $(srcdir)/FilterRuleEditorData.ui FilterRuleEditorData.h FilterRuleEditorData.moc
--	rm -f FilterRuleEditorData.cpp
--	echo '#include <klocale.h>' > FilterRuleEditorData.cpp
--	$(UIC) -tr ${UIC_TR} -i FilterRuleEditorData.h $(srcdir)/FilterRuleEditorData.ui > FilterRuleEditorData.cpp.temp ; ret=$$?; \
--	sed -e "s,${UIC_TR}( \"\" ),QString::null,g" FilterRuleEditorData.cpp.temp | sed -e "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1_FilterRuleEditorData,g" >> FilterRuleEditorData.cpp ;\
--	rm -f FilterRuleEditorData.cpp.temp ;\
--	if test "$$ret" = 0; then echo '#include "FilterRuleEditorData.moc"' >> FilterRuleEditorData.cpp; else rm -f FilterRuleEditorData.cpp ; exit $$ret ; fi
+-FilterRuleWidget.cpp: $(srcdir)/FilterRuleWidget.ui FilterRuleWidget.h FilterRuleWidget.moc
+-	rm -f FilterRuleWidget.cpp
+-	echo '#include <klocale.h>' > FilterRuleWidget.cpp
+-	$(UIC) -tr ${UIC_TR} -i FilterRuleWidget.h $(srcdir)/FilterRuleWidget.ui > FilterRuleWidget.cpp.temp ; ret=$$?; \
+-	sed -e "s,${UIC_TR}( \"\" ),QString::null,g" FilterRuleWidget.cpp.temp | sed -e "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1_FilterRuleWidget,g" >> FilterRuleWidget.cpp ;\
+-	rm -f FilterRuleWidget.cpp.temp ;\
+-	if test "$$ret" = 0; then echo '#include "FilterRuleWidget.moc"' >> FilterRuleWidget.cpp; else rm -f FilterRuleWidget.cpp ; exit $$ret ; fi
 -
--FilterRuleEditorData.h: $(srcdir)/FilterRuleEditorData.ui
--	$(UIC) -o FilterRuleEditorData.h $(srcdir)/FilterRuleEditorData.ui
+-FilterRuleWidget.h: $(srcdir)/FilterRuleWidget.ui
+-	$(UIC) -o FilterRuleWidget.h $(srcdir)/FilterRuleWidget.ui
 +#>+ 3
 +iocontroller.moc: $(srcdir)/iocontroller.h
 +	$(MOC) $(srcdir)/iocontroller.h -o iocontroller.moc
  
--FilterRuleEditorData.moc: FilterRuleEditorData.h
--	$(MOC) FilterRuleEditorData.h -o FilterRuleEditorData.moc
+-FilterRuleWidget.moc: FilterRuleWidget.h
+-	$(MOC) FilterRuleWidget.h -o FilterRuleWidget.moc
 +#>+ 3
 +charSelector.moc: $(srcdir)/charSelector.h
 +	$(MOC) $(srcdir)/charSelector.h -o charSelector.moc
@@ -375,83 +345,90 @@ $NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
  #>+ 3
 -objFinder.moc: $(srcdir)/objFinder.h
 -	$(MOC) $(srcdir)/objFinder.h -o objFinder.moc
-+alistbox.moc: $(srcdir)/alistbox.h
-+	$(MOC) $(srcdir)/alistbox.h -o alistbox.moc
++FilterRuleWidget.moc: $(srcdir)/FilterRuleWidget.h
++	$(MOC) $(srcdir)/FilterRuleWidget.h -o FilterRuleWidget.moc
  
  #>+ 3
 -displayMgrMDI.moc: $(srcdir)/displayMgrMDI.h
 -	$(MOC) $(srcdir)/displayMgrMDI.h -o displayMgrMDI.moc
-+ioNotify.moc: $(srcdir)/ioNotify.h
-+	$(MOC) $(srcdir)/ioNotify.h -o ioNotify.moc
++alistbox.moc: $(srcdir)/alistbox.h
++	$(MOC) $(srcdir)/alistbox.h -o alistbox.moc
  
  #>+ 3
 -dccDialogData.moc: $(srcdir)/dccDialogData.h
 -	$(MOC) $(srcdir)/dccDialogData.h -o dccDialogData.moc
-+mditoplevel.moc: $(srcdir)/mditoplevel.h
-+	$(MOC) $(srcdir)/mditoplevel.h -o mditoplevel.moc
++ioNotify.moc: $(srcdir)/ioNotify.h
++	$(MOC) $(srcdir)/ioNotify.h -o ioNotify.moc
  
  #>+ 3
 -ssfepromptdata.moc: $(srcdir)/ssfepromptdata.h
 -	$(MOC) $(srcdir)/ssfepromptdata.h -o ssfepromptdata.moc
-+FilterRuleEditor.moc: $(srcdir)/FilterRuleEditor.h
-+	$(MOC) $(srcdir)/FilterRuleEditor.h -o FilterRuleEditor.moc
++mditoplevel.moc: $(srcdir)/mditoplevel.h
++	$(MOC) $(srcdir)/mditoplevel.h -o mditoplevel.moc
  
  #>+ 3
 -charSelector.moc: $(srcdir)/charSelector.h
 -	$(MOC) $(srcdir)/charSelector.h -o charSelector.moc
-+dccDialog.moc: $(srcdir)/dccDialog.h
-+	$(MOC) $(srcdir)/dccDialog.h -o dccDialog.moc
++FilterRuleEditor.moc: $(srcdir)/FilterRuleEditor.h
++	$(MOC) $(srcdir)/FilterRuleEditor.h -o FilterRuleEditor.moc
  
  #>+ 3
 -NewWindowDialog.moc: $(srcdir)/NewWindowDialog.h
 -	$(MOC) $(srcdir)/NewWindowDialog.h -o NewWindowDialog.moc
++dccDialog.moc: $(srcdir)/dccDialog.h
++	$(MOC) $(srcdir)/dccDialog.h -o dccDialog.moc
+ 
+ #>+ 3
+-toplevel.moc: $(srcdir)/toplevel.h
+-	$(MOC) $(srcdir)/toplevel.h -o toplevel.moc
 +ahistlineedit.moc: $(srcdir)/ahistlineedit.h
 +	$(MOC) $(srcdir)/ahistlineedit.h -o ahistlineedit.moc
  
 -#>+ 3
--toplevel.moc: $(srcdir)/toplevel.h
--	$(MOC) $(srcdir)/toplevel.h -o toplevel.moc
-+#>+ 14
-+FilterRuleEditorData.cpp: $(srcdir)/FilterRuleEditorData.ui FilterRuleEditorData.h FilterRuleEditorData.moc
-+	rm -f FilterRuleEditorData.cpp
-+	echo '#include <klocale.h>' > FilterRuleEditorData.cpp
-+	$(UIC) -tr ${UIC_TR} -i FilterRuleEditorData.h $(srcdir)/FilterRuleEditorData.ui > FilterRuleEditorData.cpp.temp ; ret=$$?; \
-+	sed -e "s,${UIC_TR}( \"\" ),QString::null,g" FilterRuleEditorData.cpp.temp | sed -e "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1_FilterRuleEditorData,g" >> FilterRuleEditorData.cpp ;\
-+	rm -f FilterRuleEditorData.cpp.temp ;\
-+	if test "$$ret" = 0; then echo '#include "FilterRuleEditorData.moc"' >> FilterRuleEditorData.cpp; else rm -f FilterRuleEditorData.cpp ; exit $$ret ; fi
- 
--#>+ 3
 -kstextview.moc: $(srcdir)/kstextview.h
 -	$(MOC) $(srcdir)/kstextview.h -o kstextview.moc
-+FilterRuleEditorData.h: $(srcdir)/FilterRuleEditorData.ui
-+	$(UIC) -o FilterRuleEditorData.h $(srcdir)/FilterRuleEditorData.ui
++#>+ 14
++FilterRuleWidget.cpp: $(srcdir)/FilterRuleWidget.ui FilterRuleWidget.h FilterRuleWidget.moc
++	rm -f FilterRuleWidget.cpp
++	echo '#include <klocale.h>' > FilterRuleWidget.cpp
++	$(UIC) -tr ${UIC_TR} -i FilterRuleWidget.h $(srcdir)/FilterRuleWidget.ui > FilterRuleWidget.cpp.temp ; ret=$$?; \
++	sed -e "s,${UIC_TR}( \"\" ),QString::null,g" FilterRuleWidget.cpp.temp | sed -e "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1_FilterRuleWidget,g" >> FilterRuleWidget.cpp ;\
++	rm -f FilterRuleWidget.cpp.temp ;\
++	if test "$$ret" = 0; then echo '#include "FilterRuleWidget.moc"' >> FilterRuleWidget.cpp; else rm -f FilterRuleWidget.cpp ; exit $$ret ; fi
  
 -#>+ 3
 -ioNotify.moc: $(srcdir)/ioNotify.h
 -	$(MOC) $(srcdir)/ioNotify.h -o ioNotify.moc
-+FilterRuleEditorData.moc: FilterRuleEditorData.h
-+	$(MOC) FilterRuleEditorData.h -o FilterRuleEditorData.moc
++FilterRuleWidget.h: $(srcdir)/FilterRuleWidget.ui
++	$(UIC) -o FilterRuleWidget.h $(srcdir)/FilterRuleWidget.ui
++
++FilterRuleWidget.moc: FilterRuleWidget.h
++	$(MOC) FilterRuleWidget.h -o FilterRuleWidget.moc
  
  #>+ 3
  clean-metasources:
 -	-rm -f  ksircprocess.moc servercontroller.moc ioDCC.moc ssfeprompt.moc FilterRuleEditor.moc ahistlineedit.moc chanButtons.moc alistbox.moc iocontroller.moc dccDialog.moc ksview.moc ioLAG.moc mditoplevel.moc colorpicker.moc topic.moc objFinder.moc displayMgrMDI.moc dccDialogData.moc ssfepromptdata.moc charSelector.moc NewWindowDialog.moc toplevel.moc kstextview.moc ioNotify.moc
-+	-rm -f  iocontroller.moc charSelector.moc ioLAG.moc NewWindowDialog.moc ssfepromptdata.moc kstextview.moc ksview.moc objFinder.moc chanButtons.moc ioDCC.moc toplevel.moc displayMgrMDI.moc ksircprocess.moc dccDialogData.moc ssfeprompt.moc colorpicker.moc servercontroller.moc topic.moc alistbox.moc ioNotify.moc mditoplevel.moc FilterRuleEditor.moc dccDialog.moc ahistlineedit.moc
++	-rm -f  iocontroller.moc charSelector.moc ioLAG.moc NewWindowDialog.moc ssfepromptdata.moc kstextview.moc ksview.moc objFinder.moc chanButtons.moc ioDCC.moc toplevel.moc displayMgrMDI.moc ksircprocess.moc dccDialogData.moc ssfeprompt.moc colorpicker.moc servercontroller.moc topic.moc FilterRuleWidget.moc alistbox.moc ioNotify.moc mditoplevel.moc FilterRuleEditor.moc dccDialog.moc ahistlineedit.moc
  
  #>+ 4
  clean-ui:
-@@ -1203,16 +1214,16 @@ force-reedit:
- 
+@@ -1365,36 +1383,36 @@ $(srcdir)/kstextview.cpp: FilterRuleWidg
+ #>- $(srcdir)/colorpicker.cpp: cdate.h
+ #>+ 1
+ $(srcdir)/colorpicker.cpp: FilterRuleWidget.h  cdate.h
+-FilterRuleWidget.cpp: cdate.h
++$(srcdir)/FilterRuleWidget.cpp: cdate.h
  
  #>+ 11
--ksirc_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/toplevel.cpp $(srcdir)/charSelector.cpp $(srcdir)/chanButtons.cpp $(srcdir)/ksirc.cpp $(srcdir)/alistbox.cpp $(srcdir)/ahistlineedit.cpp $(srcdir)/iocontroller.cpp $(srcdir)/NewWindowDialog.cpp $(srcdir)/messageReceiver.cpp $(srcdir)/ioBroadcast.cpp $(srcdir)/ksircprocess.cpp $(srcdir)/servercontroller.cpp $(srcdir)/FilterRuleEditor.cpp $(srcdir)/ioDiscard.cpp $(srcdir)/ioDCC.cpp $(srcdir)/dccDialog.cpp $(srcdir)/dccDialogData.cpp $(srcdir)/ioLAG.cpp $(srcdir)/ioNotify.cpp $(srcdir)/ssfeprompt.cpp $(srcdir)/ssfepromptdata.cpp $(srcdir)/usercontrolmenu.cpp $(srcdir)/baserules.cpp $(srcdir)/chanparser.cpp $(srcdir)/objFinder.cpp $(srcdir)/displayMgrSDI.cpp $(srcdir)/displayMgrMDI.cpp $(srcdir)/mditoplevel.cpp $(srcdir)/ksopts.cpp $(srcdir)/topic.cpp $(srcdir)/ksview.cpp $(srcdir)/logfile.cpp $(srcdir)/kstextview.cpp $(srcdir)/colorpicker.cpp FilterRuleEditorData.cpp  servercontroller.moc ksircprocess.moc ssfeprompt.moc ioDCC.moc chanButtons.moc ahistlineedit.moc FilterRuleEditor.moc alistbox.moc iocontroller.moc dccDialog.moc ksview.moc ioLAG.moc mditoplevel.moc FilterRuleEditorData.moc colorpicker.moc topic.moc objFinder.moc displayMgrMDI.moc dccDialogData.moc ssfepromptdata.moc charSelector.moc toplevel.moc NewWindowDialog.moc kstextview.moc ioNotify.moc
+-ksirc_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/toplevel.cpp $(srcdir)/charSelector.cpp $(srcdir)/chanButtons.cpp $(srcdir)/ksirc.cpp $(srcdir)/alistbox.cpp $(srcdir)/ahistlineedit.cpp $(srcdir)/iocontroller.cpp $(srcdir)/NewWindowDialog.cpp $(srcdir)/messageReceiver.cpp $(srcdir)/ioBroadcast.cpp $(srcdir)/ksircprocess.cpp $(srcdir)/servercontroller.cpp $(srcdir)/FilterRuleEditor.cpp $(srcdir)/ioDiscard.cpp $(srcdir)/ioDCC.cpp $(srcdir)/dccDialog.cpp $(srcdir)/dccDialogData.cpp $(srcdir)/ioLAG.cpp $(srcdir)/ioNotify.cpp $(srcdir)/ssfeprompt.cpp $(srcdir)/ssfepromptdata.cpp $(srcdir)/usercontrolmenu.cpp $(srcdir)/baserules.cpp $(srcdir)/chanparser.cpp $(srcdir)/objFinder.cpp $(srcdir)/displayMgrSDI.cpp $(srcdir)/displayMgrMDI.cpp $(srcdir)/mditoplevel.cpp $(srcdir)/ksopts.cpp $(srcdir)/topic.cpp $(srcdir)/ksview.cpp $(srcdir)/logfile.cpp $(srcdir)/kstextview.cpp $(srcdir)/colorpicker.cpp FilterRuleWidget.cpp  servercontroller.moc ksircprocess.moc ssfeprompt.moc ioDCC.moc chanButtons.moc ahistlineedit.moc FilterRuleEditor.moc alistbox.moc iocontroller.moc dccDialog.moc ksview.moc ioLAG.moc mditoplevel.moc colorpicker.moc topic.moc objFinder.moc displayMgrMDI.moc dccDialogData.moc ssfepromptdata.moc charSelector.moc toplevel.moc NewWindowDialog.moc FilterRuleWidget.moc kstextview.moc ioNotify.moc
 -	@echo 'creating ksirc_la.all_cpp.cpp ...'; \
 -	rm -f ksirc_la.all_cpp.files ksirc_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> ksirc_la.all_cpp.final; \
-+libksirc_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/toplevel.cpp $(srcdir)/charSelector.cpp $(srcdir)/chanButtons.cpp $(srcdir)/ksirc.cpp $(srcdir)/alistbox.cpp $(srcdir)/ahistlineedit.cpp $(srcdir)/iocontroller.cpp $(srcdir)/NewWindowDialog.cpp $(srcdir)/messageReceiver.cpp $(srcdir)/ioBroadcast.cpp $(srcdir)/ksircprocess.cpp $(srcdir)/servercontroller.cpp $(srcdir)/FilterRuleEditor.cpp $(srcdir)/ioDiscard.cpp $(srcdir)/ioDCC.cpp $(srcdir)/dccDialog.cpp $(srcdir)/dccDialogData.cpp $(srcdir)/ioLAG.cpp $(srcdir)/ioNotify.cpp $(srcdir)/ssfeprompt.cpp $(srcdir)/ssfepromptdata.cpp $(srcdir)/usercontrolmenu.cpp $(srcdir)/baserules.cpp $(srcdir)/chanparser.cpp $(srcdir)/objFinder.cpp $(srcdir)/displayMgrSDI.cpp $(srcdir)/displayMgrMDI.cpp $(srcdir)/mditoplevel.cpp $(srcdir)/ksopts.cpp $(srcdir)/topic.cpp $(srcdir)/ksview.cpp $(srcdir)/logfile.cpp $(srcdir)/kstextview.cpp $(srcdir)/colorpicker.cpp FilterRuleEditorData.cpp  iocontroller.moc charSelector.moc ioLAG.moc ssfepromptdata.moc NewWindowDialog.moc kstextview.moc ksview.moc objFinder.moc chanButtons.moc ioDCC.moc toplevel.moc displayMgrMDI.moc ksircprocess.moc dccDialogData.moc ssfeprompt.moc colorpicker.moc topic.moc servercontroller.moc alistbox.moc FilterRuleEditorData.moc ioNotify.moc dccDialog.moc FilterRuleEditor.moc mditoplevel.moc ahistlineedit.moc
++libksirc_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/toplevel.cpp $(srcdir)/charSelector.cpp $(srcdir)/chanButtons.cpp $(srcdir)/ksirc.cpp $(srcdir)/alistbox.cpp $(srcdir)/ahistlineedit.cpp $(srcdir)/iocontroller.cpp $(srcdir)/NewWindowDialog.cpp $(srcdir)/messageReceiver.cpp $(srcdir)/ioBroadcast.cpp $(srcdir)/ksircprocess.cpp $(srcdir)/servercontroller.cpp $(srcdir)/FilterRuleEditor.cpp $(srcdir)/ioDiscard.cpp $(srcdir)/ioDCC.cpp $(srcdir)/dccDialog.cpp $(srcdir)/dccDialogData.cpp $(srcdir)/ioLAG.cpp $(srcdir)/ioNotify.cpp $(srcdir)/ssfeprompt.cpp $(srcdir)/ssfepromptdata.cpp $(srcdir)/usercontrolmenu.cpp $(srcdir)/baserules.cpp $(srcdir)/chanparser.cpp $(srcdir)/objFinder.cpp $(srcdir)/displayMgrSDI.cpp $(srcdir)/displayMgrMDI.cpp $(srcdir)/mditoplevel.cpp $(srcdir)/ksopts.cpp $(srcdir)/topic.cpp $(srcdir)/ksview.cpp $(srcdir)/logfile.cpp $(srcdir)/kstextview.cpp $(srcdir)/colorpicker.cpp $(srcdir)/FilterRuleWidget.cpp  iocontroller.moc charSelector.moc ioLAG.moc ssfepromptdata.moc NewWindowDialog.moc kstextview.moc ksview.moc objFinder.moc chanButtons.moc ioDCC.moc toplevel.moc displayMgrMDI.moc ksircprocess.moc dccDialogData.moc ssfeprompt.moc colorpicker.moc topic.moc servercontroller.moc FilterRuleWidget.moc alistbox.moc ioNotify.moc dccDialog.moc FilterRuleEditor.moc mditoplevel.moc ahistlineedit.moc
 +	@echo 'creating libksirc_main_la.all_cpp.cpp ...'; \
 +	rm -f libksirc_main_la.all_cpp.files libksirc_main_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libksirc_main_la.all_cpp.final; \
- 	for file in toplevel.cpp charSelector.cpp chanButtons.cpp ksirc.cpp alistbox.cpp ahistlineedit.cpp iocontroller.cpp NewWindowDialog.cpp messageReceiver.cpp ioBroadcast.cpp ksircprocess.cpp servercontroller.cpp FilterRuleEditor.cpp ioDiscard.cpp ioDCC.cpp dccDialog.cpp dccDialogData.cpp ioLAG.cpp ioNotify.cpp ssfeprompt.cpp ssfepromptdata.cpp usercontrolmenu.cpp baserules.cpp chanparser.cpp objFinder.cpp displayMgrSDI.cpp displayMgrMDI.cpp mditoplevel.cpp ksopts.cpp topic.cpp ksview.cpp logfile.cpp kstextview.cpp colorpicker.cpp FilterRuleEditorData.cpp ; do \
+ 	for file in toplevel.cpp charSelector.cpp chanButtons.cpp ksirc.cpp alistbox.cpp ahistlineedit.cpp iocontroller.cpp NewWindowDialog.cpp messageReceiver.cpp ioBroadcast.cpp ksircprocess.cpp servercontroller.cpp FilterRuleEditor.cpp ioDiscard.cpp ioDCC.cpp dccDialog.cpp dccDialogData.cpp ioLAG.cpp ioNotify.cpp ssfeprompt.cpp ssfepromptdata.cpp usercontrolmenu.cpp baserules.cpp chanparser.cpp objFinder.cpp displayMgrSDI.cpp displayMgrMDI.cpp mditoplevel.cpp ksopts.cpp topic.cpp ksview.cpp logfile.cpp kstextview.cpp colorpicker.cpp FilterRuleWidget.cpp ; do \
 -	  echo "#include \"$$file\"" >> ksirc_la.all_cpp.files; \
 -	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> ksirc_la.all_cpp.final; \
 +	  echo "#include \"$$file\"" >> libksirc_main_la.all_cpp.files; \
@@ -462,112 +439,80 @@ $NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
 +	cat libksirc_main_la.all_cpp.final libksirc_main_la.all_cpp.files > libksirc_main_la.all_cpp.cpp; \
 +	rm -f libksirc_main_la.all_cpp.final libksirc_main_la.all_cpp.files
  
- #>+ 11
- testview.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kstextview.cpp $(srcdir)/kstextviewtest.cpp  kstextview.moc
-@@ -1228,20 +1239,20 @@ testview.all_cpp.cpp: $(srcdir)/Makefile
- 
  #>+ 3
  clean-final:
--	-rm -f ksirc_la.all_cpp.cpp testview.all_cpp.cpp
-+	-rm -f libksirc_main_la.all_cpp.cpp testview.all_cpp.cpp
+-	-rm -f ksirc_la.all_cpp.cpp
++	-rm -f libksirc_main_la.all_cpp.cpp
  
  #>+ 2
  final:
--	$(MAKE) ksirc_la_OBJECTS="$(ksirc_la_final_OBJECTS)" testview_OBJECTS="$(testview_final_OBJECTS)" all-am
-+	$(MAKE) libksirc_main_la_OBJECTS="$(libksirc_main_la_final_OBJECTS)" testview_OBJECTS="$(testview_final_OBJECTS)" all-am
+-	$(MAKE) ksirc_la_OBJECTS="$(ksirc_la_final_OBJECTS)" all-am
++	$(MAKE) libksirc_main_la_OBJECTS="$(libksirc_main_la_final_OBJECTS)" all-am
  #>+ 2
  final-install:
--	$(MAKE) ksirc_la_OBJECTS="$(ksirc_la_final_OBJECTS)" testview_OBJECTS="$(testview_final_OBJECTS)" install-am
-+	$(MAKE) libksirc_main_la_OBJECTS="$(libksirc_main_la_final_OBJECTS)" testview_OBJECTS="$(testview_final_OBJECTS)" install-am
+-	$(MAKE) ksirc_la_OBJECTS="$(ksirc_la_final_OBJECTS)" install-am
++	$(MAKE) libksirc_main_la_OBJECTS="$(libksirc_main_la_final_OBJECTS)" install-am
  #>+ 2
  no-final:
--	$(MAKE) ksirc_la_OBJECTS="$(ksirc_la_nofinal_OBJECTS)" testview_OBJECTS="$(testview_nofinal_OBJECTS)" all-am
-+	$(MAKE) libksirc_main_la_OBJECTS="$(libksirc_main_la_nofinal_OBJECTS)" testview_OBJECTS="$(testview_nofinal_OBJECTS)" all-am
+-	$(MAKE) ksirc_la_OBJECTS="$(ksirc_la_nofinal_OBJECTS)" all-am
++	$(MAKE) libksirc_main_la_OBJECTS="$(libksirc_main_la_nofinal_OBJECTS)" all-am
  #>+ 2
  no-final-install:
--	$(MAKE) ksirc_la_OBJECTS="$(ksirc_la_nofinal_OBJECTS)" testview_OBJECTS="$(testview_nofinal_OBJECTS)" install-am
-+	$(MAKE) libksirc_main_la_OBJECTS="$(libksirc_main_la_nofinal_OBJECTS)" testview_OBJECTS="$(testview_nofinal_OBJECTS)" install-am
+-	$(MAKE) ksirc_la_OBJECTS="$(ksirc_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libksirc_main_la_OBJECTS="$(libksirc_main_la_nofinal_OBJECTS)" install-am
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1251,84 +1262,84 @@ kde-rpo-clean:
+@@ -1403,52 +1421,54 @@ cvs-clean:
+ kde-rpo-clean:
  	-rm -f *.rpo
  
- #>+ 82
--$(srcdir)/ioDCC.cpp: FilterRuleEditorData.h 
--$(srcdir)/usercontrolmenu.cpp: FilterRuleEditorData.h 
+-#>+ 49
 -dccDialog.o: dccDialog.moc 
++#>+ 51
 +ioLAG.lo: ioLAG.moc 
 +ssfeprompt.lo: ssfeprompt.moc 
 +ssfepromptdata.lo: ssfepromptdata.moc 
-+$(srcdir)/chanparser.cpp: FilterRuleEditorData.h 
 +toplevel.lo: toplevel.moc 
 +displayMgrMDI.lo: displayMgrMDI.moc 
 +ioLAG.o: ioLAG.moc 
 +ioNotify.o: ioNotify.moc 
-+$(srcdir)/kstextview.cpp: FilterRuleEditorData.h 
 +mditoplevel.o: mditoplevel.moc 
  NewWindowDialog.o: NewWindowDialog.moc 
 -charSelector.lo: charSelector.moc 
--$(srcdir)/ksview.cpp: FilterRuleEditorData.h 
--ahistlineedit.o: ahistlineedit.moc 
++kstextview.lo: kstextview.moc 
+ ahistlineedit.o: ahistlineedit.moc 
 -servercontroller.o: servercontroller.moc 
--$(srcdir)/iocontroller.cpp: FilterRuleEditorData.h 
 -topic.o: topic.moc 
- $(srcdir)/toplevel.cpp: FilterRuleEditorData.h 
--$(srcdir)/colorpicker.cpp: FilterRuleEditorData.h 
--$(srcdir)/objFinder.cpp: FilterRuleEditorData.h 
--charSelector.o: charSelector.moc 
--$(srcdir)/logfile.cpp: FilterRuleEditorData.h 
--$(srcdir)/dccDialogData.cpp: FilterRuleEditorData.h 
--$(srcdir)/baserules.cpp: FilterRuleEditorData.h 
--$(srcdir)/chanButtons.cpp: FilterRuleEditorData.h 
--FilterRuleEditor.lo: FilterRuleEditor.moc 
--ssfeprompt.o: ssfeprompt.moc 
--kstextview.o: kstextview.moc 
--ksircprocess.lo: ksircprocess.moc 
--ksview.lo: ksview.moc 
--$(srcdir)/ksopts.cpp: FilterRuleEditorData.h 
-+$(srcdir)/NewWindowDialog.cpp: FilterRuleEditorData.h 
- kstextview.lo: kstextview.moc 
--$(srcdir)/ssfepromptdata.cpp: FilterRuleEditorData.h 
--$(srcdir)/ioBroadcast.cpp: FilterRuleEditorData.h 
--$(srcdir)/kstextview.cpp: FilterRuleEditorData.h 
--displayMgrMDI.lo: displayMgrMDI.moc 
-+ahistlineedit.o: ahistlineedit.moc 
-+$(srcdir)/ioDiscard.cpp: FilterRuleEditorData.h 
-+$(srcdir)/displayMgrSDI.cpp: FilterRuleEditorData.h 
 +mditoplevel.lo: mditoplevel.moc 
- ioNotify.lo: ioNotify.moc 
--topic.lo: topic.moc 
--$(srcdir)/ioLAG.cpp: FilterRuleEditorData.h 
++ioNotify.lo: ioNotify.moc 
++FilterRuleWidget.o: FilterRuleWidget.moc 
 +iocontroller.o: iocontroller.moc 
-+$(srcdir)/FilterRuleEditor.cpp: FilterRuleEditorData.h 
-+$(srcdir)/charSelector.cpp: FilterRuleEditorData.h 
 +ksview.o: ksview.moc 
 +ssfepromptdata.o: ssfepromptdata.moc 
 +ksview.lo: ksview.moc 
-+charSelector.o: charSelector.moc 
-+kstextview.o: kstextview.moc 
+ charSelector.o: charSelector.moc 
+-FilterRuleEditor.lo: FilterRuleEditor.moc 
+-ssfeprompt.o: ssfeprompt.moc 
+ kstextview.o: kstextview.moc 
+-ksircprocess.lo: ksircprocess.moc 
+-ksview.lo: ksview.moc 
+-kstextview.lo: kstextview.moc 
+-displayMgrMDI.lo: displayMgrMDI.moc 
+-ioNotify.lo: ioNotify.moc 
+-topic.lo: topic.moc 
  toplevel.o: toplevel.moc 
--$(srcdir)/messageReceiver.cpp: FilterRuleEditorData.h 
--$(srcdir)/ioNotify.cpp: FilterRuleEditorData.h 
--alistbox.o: alistbox.moc 
--$(srcdir)/alistbox.cpp: FilterRuleEditorData.h 
++NewWindowDialog.lo: NewWindowDialog.moc 
+ alistbox.o: alistbox.moc 
 -iocontroller.lo: iocontroller.moc 
--$(srcdir)/ksircprocess.cpp: FilterRuleEditorData.h 
 -dccDialogData.o: dccDialogData.moc 
 -servercontroller.lo: servercontroller.moc 
 -mditoplevel.o: mditoplevel.moc 
 -ioDCC.o: ioDCC.moc 
--$(srcdir)/NewWindowDialog.cpp: FilterRuleEditorData.h 
 -toplevel.lo: toplevel.moc 
 -ssfeprompt.lo: ssfeprompt.moc 
- $(srcdir)/ahistlineedit.cpp: FilterRuleEditorData.h 
 -ioLAG.o: ioLAG.moc 
--$(srcdir)/dccDialog.cpp: FilterRuleEditorData.h 
 -objFinder.o: objFinder.moc 
--$(srcdir)/charSelector.cpp: FilterRuleEditorData.h 
 -chanButtons.lo: chanButtons.moc 
 -colorpicker.o: colorpicker.moc 
 -iocontroller.o: iocontroller.moc 
@@ -575,71 +520,39 @@ $NetBSD: patch-af,v 1.3 2003/01/02 09:12:30 skrll Exp $
 -ioLAG.lo: ioLAG.moc 
 -ioDCC.lo: ioDCC.moc 
 -ksircprocess.o: ksircprocess.moc 
-+NewWindowDialog.lo: NewWindowDialog.moc 
-+alistbox.o: alistbox.moc 
-+$(srcdir)/ksview.cpp: FilterRuleEditorData.h 
  FilterRuleEditor.o: FilterRuleEditor.moc 
-+$(srcdir)/ssfepromptdata.cpp: FilterRuleEditorData.h 
-+$(srcdir)/displayMgrMDI.cpp: FilterRuleEditorData.h 
-+$(srcdir)/ioNotify.cpp: FilterRuleEditorData.h 
-+objFinder.o: objFinder.moc 
-+$(srcdir)/objFinder.cpp: FilterRuleEditorData.h 
-+dccDialogData.lo: dccDialogData.moc 
-+alistbox.lo: alistbox.moc 
- colorpicker.lo: colorpicker.moc 
--$(srcdir)/ioDiscard.cpp: FilterRuleEditorData.h 
+-colorpicker.lo: colorpicker.moc 
 -ssfepromptdata.o: ssfepromptdata.moc 
--$(srcdir)/displayMgrSDI.cpp: FilterRuleEditorData.h 
+-objFinder.lo: objFinder.moc 
+-displayMgrMDI.o: displayMgrMDI.moc 
++objFinder.o: objFinder.moc 
+ dccDialogData.lo: dccDialogData.moc 
+-ioNotify.o: ioNotify.moc 
+-ssfepromptdata.lo: ssfepromptdata.moc 
+-NewWindowDialog.lo: NewWindowDialog.moc 
+-mditoplevel.lo: mditoplevel.moc 
+ alistbox.lo: alistbox.moc 
+-ksview.o: ksview.moc 
++colorpicker.lo: colorpicker.moc 
 +ssfeprompt.o: ssfeprompt.moc 
 +FilterRuleEditor.lo: FilterRuleEditor.moc 
-+dccDialog.lo: dccDialog.moc 
-+$(srcdir)/colorpicker.cpp: FilterRuleEditorData.h 
+ dccDialog.lo: dccDialog.moc 
 +ioDCC.lo: ioDCC.moc 
 +ahistlineedit.lo: ahistlineedit.moc 
-+$(srcdir)/chanButtons.cpp: FilterRuleEditorData.h 
-+$(srcdir)/topic.cpp: FilterRuleEditorData.h 
-+$(srcdir)/dccDialog.cpp: FilterRuleEditorData.h 
-+$(srcdir)/logfile.cpp: FilterRuleEditorData.h 
 +ksircprocess.lo: ksircprocess.moc 
-+$(srcdir)/ioBroadcast.cpp: FilterRuleEditorData.h 
 +charSelector.lo: charSelector.moc 
 +servercontroller.o: servercontroller.moc 
- objFinder.lo: objFinder.moc 
++objFinder.lo: objFinder.moc 
 +ioDCC.o: ioDCC.moc 
 +servercontroller.lo: servercontroller.moc 
 +dccDialog.o: dccDialog.moc 
 +topic.o: topic.moc 
-+$(srcdir)/ksircprocess.cpp: FilterRuleEditorData.h 
 +dccDialogData.o: dccDialogData.moc 
- displayMgrMDI.o: displayMgrMDI.moc 
--dccDialogData.lo: dccDialogData.moc 
--ioNotify.o: ioNotify.moc 
--ssfepromptdata.lo: ssfepromptdata.moc 
-+$(srcdir)/messageReceiver.cpp: FilterRuleEditorData.h 
-+chanButtons.o: chanButtons.moc 
++displayMgrMDI.o: displayMgrMDI.moc 
+ chanButtons.o: chanButtons.moc 
 +topic.lo: topic.moc 
-+$(srcdir)/baserules.cpp: FilterRuleEditorData.h 
 +iocontroller.lo: iocontroller.moc 
-+$(srcdir)/usercontrolmenu.cpp: FilterRuleEditorData.h 
-+$(srcdir)/alistbox.cpp: FilterRuleEditorData.h 
-+$(srcdir)/ioDCC.cpp: FilterRuleEditorData.h 
 +ksircprocess.o: ksircprocess.moc 
- $(srcdir)/ssfeprompt.cpp: FilterRuleEditorData.h 
-+$(srcdir)/ioLAG.cpp: FilterRuleEditorData.h 
- $(srcdir)/mditoplevel.cpp: FilterRuleEditorData.h 
--$(srcdir)/topic.cpp: FilterRuleEditorData.h 
-+$(srcdir)/dccDialogData.cpp: FilterRuleEditorData.h 
-+$(srcdir)/ksopts.cpp: FilterRuleEditorData.h 
- $(srcdir)/servercontroller.cpp: FilterRuleEditorData.h 
--NewWindowDialog.lo: NewWindowDialog.moc 
--$(srcdir)/displayMgrMDI.cpp: FilterRuleEditorData.h 
--mditoplevel.lo: mditoplevel.moc 
--$(srcdir)/chanparser.cpp: FilterRuleEditorData.h 
--$(srcdir)/FilterRuleEditor.cpp: FilterRuleEditorData.h 
--alistbox.lo: alistbox.moc 
--ksview.o: ksview.moc 
--dccDialog.lo: dccDialog.moc 
--chanButtons.o: chanButtons.moc 
++FilterRuleWidget.lo: FilterRuleWidget.moc 
 +colorpicker.o: colorpicker.moc 
-+$(srcdir)/iocontroller.cpp: FilterRuleEditorData.h 
 +chanButtons.lo: chanButtons.moc 
