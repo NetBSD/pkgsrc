@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4919 2004/02/20 04:07:53 minskim Exp $
+$NetBSD: CHANGES,v 1.4920 2004/02/20 04:15:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -932,3 +932,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ed2k-gtk-gui-0.6.1 [minskim 2004-02-20]
 	Added p5-Carp-Assert-0.17 [minskim 2004-02-20]
 	Added p5-Class-Accessor-0.18 [minskim 2004-02-20]
+	Added p5-Class-Fields-0.201 [minskim 2004-02-20]
