@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.585 2003/05/25 05:33:26 taca Exp $
+$NetBSD: TODO,v 1.586 2003/05/25 08:01:59 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -121,6 +121,7 @@ Suggested package updates
 	o fox-1.0.40
 	o freetds-0.61 [pkg/21395]
 	o fsviewer-0.2.5
+	o gabber-0.8.8
 	o gauche-0.6.7 [kei]
 	o gawk-3.1.2
 	o gcc-3.2.3 [pkg/21316]
