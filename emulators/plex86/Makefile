@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/07/17 21:35:42 grant Exp $
+# $NetBSD: Makefile,v 1.25 2003/09/22 11:56:19 jmmv Exp $
 
 DISTNAME=	plex86-20010106
 PKGNAME=	${DISTNAME:S/-/-0./}
@@ -23,13 +23,10 @@ RESTRICTED=	CPU-specific binary code
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
-# to override <bsd.own.mk>, MUST be set this way BEFORE bsd.prefs.mk
-BSDSRCDIR?=	/nonexistent
-
 .include "../../mk/bsd.prefs.mk"
 
 pre-extract:
-.if ${BSDSRCDIR} == "/nonexistent"
+.if !defined(BSDSRCDIR)
 	@${ECHO_MSG} "Please set BSDSRCDIR in /etc/mk.conf, pointing it"
 	@${ECHO_MSG} "to a directory that contains sources that match"
 	@${ECHO_MSG} "your currently running system (esp. kernel), e.g."
