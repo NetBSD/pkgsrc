@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/10 01:01:11 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/31 15:33:42 jlam Exp $
 #
 
 DISTNAME=	Flan
@@ -10,7 +10,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://picolibre.enst-bretagne.fr/projects/flan/index.html
 COMMENT=	Simulator for IP networks writen in Java
 
-USE_JAVA=	yes
 PKG_JVM=	sun-jdk13
 USE_GMAKE=	yes
 
@@ -30,4 +29,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/flan.jar ${PREFIX}/lib/java/flan
 	${INSTALL_SCRIPT} ${WRKDIR}/flan ${PREFIX}/bin
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
