@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/11/05 06:26:08 mycroft Exp $
-# FreeBSD Id: Makefile,v 1.8 1997/09/08 13:20:10 tg Exp 
+# $NetBSD: Makefile,v 1.13 1998/11/05 06:35:24 mycroft Exp $
 #
 
 DISTNAME=	xmcd-2.4
