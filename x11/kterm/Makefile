@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.7 2000/09/11 03:53:04 fredb Exp $
+# $NetBSD: Makefile,v 1.8 2000/10/15 14:15:32 itojun Exp $
 
 DISTNAME=	kterm-6.2.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 
-PATCH_SITES=	ftp://ftp.sra.co.jp/pub/x11/kterm/ \
-		ftp://ftp.ics.nara-wu.ac.jp/pub/wd/src/kterm/
-PATCHFILES=	kterm-6.2.0.NFS-xauth.patch \
-		kterm-6.2.0-6.2.0.wd0.2.patch.gz
+# the following patch includes NFS xauth patch, and kamo's wd0.2 patch.
+PATCH_SITES+=	ftp://ftp.kame.net/pub/kame/misc/
+PATCHFILES+=	kterm-620-0213-20001010.diff.gz
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	sakamoto@netbsd.org
 
 USE_IMAKE=	YES
 USE_XAW=	YES
-USE_XPM=	YES
 
 BUILD_DEFS+=	KTERM_USE_WALLPAPER
 
@@ -23,6 +21,7 @@ BUILD_DEFS+=	KTERM_USE_WALLPAPER
 XAW_TYPE?=	standard
 
 .if defined(KTERM_USE_WALLPAPER) && ${KTERM_USE_WALLPAPER} == YES
+USE_XPM=	YES
 PATCH_SITES+=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
 PATCHFILES+=	KTerm-BGP-1.0.patch.gz
 .endif
