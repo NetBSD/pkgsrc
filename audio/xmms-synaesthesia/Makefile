@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/01 10:22:39 jmc Exp $
 #
 
 DISTNAME=	synaesthesia-xmms-0.0.3-rc3
@@ -11,6 +11,7 @@ HOMEPAGE=	http://staff.xmms.org/zinx/xmms/
 COMMENT=	Port of Synaesthesia to an XMMS plugin
 
 GNU_CONFIGURE=	yes
+USE_BUILDLINK2=	yes
 USE_LIBTOOL=	yes
 USE_X11=	yes
 LTCONFIG_OVERRIDE= ${WRKSRC}/ltconfig
