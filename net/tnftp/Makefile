@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/19 09:16:52 agc Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/19 10:52:18 agc Exp $
 #
 
 DISTNAME=		tnftp-20030825
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		YES
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == "4" || ${USE_SOCKS} == "5")
-  .if ${USE_SOCKS} == "4"
+.  if ${USE_SOCKS} == "4"
 DEPENDS+=		socks4-2.2:../../net/socks4
 CONFIGURE_ARGS+=	--with-socks4
 .  else
