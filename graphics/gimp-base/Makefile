@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/18 10:26:55 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/06 13:57:09 salo Exp $
 #
 
 DISTNAME=		gimp-1.2.5
@@ -62,6 +62,7 @@ CONF_FILES+=		${EGDIR}/ps-menurc ${PKG_SYSCONFDIR}/ps-menurc
 CONF_FILES+=		${EGDIR}/unitrc ${PKG_SYSCONFDIR}/unitrc
 
 pre-build:
+	cd ${WRKSRC} &&							\
 	${BUILDLINK_CC} -o ${WRKSRC}/docs/pdb_self_doc			\
 		${FILESDIR}/pdb_self_doc.c
 
