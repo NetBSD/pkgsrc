@@ -1,5 +1,14 @@
 --- mixer.cpp.orig	Thu Dec  5 14:14:44 1996
-+++ mixer.cpp	Sun Aug  2 20:07:14 1998
++++ mixer.cpp	Mon Aug  3 01:01:04 1998
+@@ -182,7 +182,7 @@
+ 	}
+ 
+ /* Do some system specific initialization */
+-#ifdef linux
++#if defined(linux) || defined(__NetBSD__)
+ #ifndef PLAY_DEV_AUDIO		/* VoxWare */
+ 	if ( ioctl(dsp_fd, SNDCTL_DSP_SETFRAGMENT, &frag_spec) < 0 ) {
+ 		if ( complain )
 @@ -285,7 +285,7 @@
  	/* This is necessary so that the sound server stays in sync */
  	long flags;
@@ -18,3 +27,23 @@
  	drain_it:
  		if ( ioctl(dsp_fd, AUDIO_DRAIN, 0) < 0 ) {
  			if ( errno == EINTR )
+@@ -549,13 +549,14 @@
+ 	write_frag:
+ 		if ( write(dsp_fd, clipped, frag_size*(AUDIO_BITS/8))
+ 						!= frag_size*(AUDIO_BITS/8) ) {
+-			if ( errno == EINTR )  // Interrupted system call...
++			if ( errno == EINTR)  // Interrupted system call...
+ 				// This should happen (SA_RESTART)
+ 				goto write_frag;
+-			else {
+-				perror("Mixer: Can't write to audio device");
+-				return;
+-			}
++			else
++				if ( errno != EAGAIN) {
++					perror("Mixer: Can't write to audio device");
++					return;
++				}
+ 		}
+ #endif /* Not SGI Source */
+ 	} else
