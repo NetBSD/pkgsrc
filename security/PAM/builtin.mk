@@ -1,8 +1,8 @@
-# $NetBSD: builtin.mk,v 1.7 2004/08/12 10:09:49 jlam Exp $
+# $NetBSD: builtin.mk,v 1.8 2004/08/19 20:21:56 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
-_PAM_PAM_APPL_H=	/usr/include/pam/pam_appl.h
 
+_PAM_PAM_APPL_H=	/usr/include/pam/pam_appl.h
 _SECURITY_PAM_APPL_H=	/usr/include/security/pam_appl.h
 
 .if !defined(IS_BUILTIN.pam)
