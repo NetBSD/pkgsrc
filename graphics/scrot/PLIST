@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/17 13:10:03 zuntum Exp $
+bin/scrot
+doc/scrot/AUTHORS
+doc/scrot/ChangeLog
+doc/scrot/README
+doc/scrot/TODO
+man/man1/scrot.1
+@dirrm doc/scrot
