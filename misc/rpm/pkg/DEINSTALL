@@ -1,29 +1,39 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2000/09/10 12:02:48 wiz Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/02/26 14:36:12 jlam Exp $
 #
 
 PKGNAME=$1
+STAGE=$2
 
-case $2 in
+CAT="@CAT@"
+
+RPMDIR=/var/pkg/lib/rpm
+
+case ${STAGE} in
 DEINSTALL)
 	;;
+
 POST-DEINSTALL)
-	/bin/cat << EOF
+	${CAT} << EOF
 ===========================================================================
 
-If you won't be using ${PKGNAME} any longer, you may want to remove the
-/var/pkg directory, where the rpm database is stored.
+If you won't be using ${PKGNAME} any longer, you may want to remove:
 
-Caution: you will lose any data ${PKGNAME} has about any installed packages!
+	${RPMDIR}
+
+where the RPM database is stored.
+
+Caution: you will lose any data ${PKGNAME} has about any installed
+packages!
 
 ===========================================================================
 EOF
 	;;
+
 *)
-	echo "Unexpected argument: $2"
+	echo "Unexpected argument: ${STAGE}"
 	exit 1
 	;;
 esac
-
 exit 0

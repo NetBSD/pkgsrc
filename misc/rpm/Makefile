@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/02/25 04:18:02 hubertf Exp $
+# $NetBSD: Makefile,v 1.26 2001/02/26 14:36:11 jlam Exp $
 #
 
 DISTNAME=	rpm-2.5.4
@@ -16,10 +16,17 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LIBINTL=	yes
 
+DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
+INSTALL_FILE=	${WRKDIR}/INSTALL
+
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/rpm
+	${SED}	-e "s|@CAT@|${CAT}|g"					\
+		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED}	-e "s|@MKDIR@|${MKDIR}|g"				\
+		${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
-	${SH} ${PKGDIR}/INSTALL ${PKGNAME} POST-INSTALL
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
