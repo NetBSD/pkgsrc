@@ -1,0 +1,6 @@
+Tools for the VIDC console used by NetBSD/arm32 on RiscPC
+
+ - blanktime	Screen blank control for arm32 virtual consoles
+ - mkbeep	Generates a waveform for the beep device
+ - setdisplay	Set display resolutiion and depth for arm32 virtual consoles
+ - setkbd	Set and report the keyboard autorepeat rate

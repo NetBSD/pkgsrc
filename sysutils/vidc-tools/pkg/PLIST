@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/19 12:07:49 abs Exp $
+bin/blanktime
+bin/mkbeep
+bin/setdisplay
+bin/setkbd
+man/cat1/blanktime.0
+man/cat1/mkbeep.0
+man/cat1/setdisplay.0
+man/man1/blanktime.1
+man/man1/mkbeep.1
+man/man1/setdisplay.1
