@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.47 2001/04/22 16:16:15 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.48 2001/04/23 14:49:45 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -226,11 +226,11 @@ if (-e <$portdir/$distinfo> ) {
 		&perror("WARN: no $portdir/$distinfo file. Please run 'make makesum'.");
 	}
 }
-if (-e <$pkgdir/files/md5> ) {
-	&perror("FATAL: pkg/files/md5 is deprecated -- run 'make mdi' to generate distinfo.");
+if (-e <$portdir/$filesdir/md5> ) {
+	&perror("FATAL: $filesdir/md5 is deprecated -- run 'make mdi' to generate distinfo.");
 }
-if (-e <$pkgdir/files/patch-sum> ) {
-	&perror("FATAL: pkg/files/patch-sum is deprecated -- run 'make mps' to generate distinfo.");
+if (-e <$portdir/$filesdir/patch-sum> ) {
+	&perror("FATAL: $filesdir/patch-sum is deprecated -- run 'make mps' to generate distinfo.");
 }
 if (-e <$pkgdir/COMMENT> ) {
 	&perror("FATAL: pkg/COMMENT is deprecated -- please use a COMMENT variable instead.");
