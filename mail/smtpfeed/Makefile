@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2000/01/02 18:02:50 itojun Exp $
-# KAME $Id: Makefile,v 1.4 2000/01/02 18:02:50 itojun Exp $
+# $NetBSD: Makefile,v 1.5 2000/04/05 16:18:33 itojun Exp $
+# KAME $Id: Makefile,v 1.5 2000/04/05 16:18:33 itojun Exp $
 # Based on FreeBSD Id: Makefile,v 1.27 1999/04/03 08:25:18 itojun Exp
 #
 
@@ -13,6 +13,7 @@ MASTER_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/ \
 MAINTAINER=	itojun@itojun.org
 HOMEPAGE=	http://www.kyoto.wide.ad.jp/mta/sendmail.html#smtpfeed
 
+# sendmail (8.10.x) or sendmail-wide (8.9.x + WIDE patch) works fine
 DEPENDS+=	sendmail-*:../../mail/sendmail
 
 GNU_CONFIGURE=	yes
