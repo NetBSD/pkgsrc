@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.5 2004/04/03 17:30:56 yamt Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 17:15:12 agc Exp $
 
 SHA1 (nvi-1.79.tar.gz) = 65b49768783372609278ecedd63caa8c1547aa2a
+RMD160 (nvi-1.79.tar.gz) = 1c39d480e0d30a87fc061c3219354b50011a8621
 Size (nvi-1.79.tar.gz) = 1295401 bytes
 SHA1 (nvi-1.79.m17n-19991117.diff.gz) = b242733c5da3c3797be0bd0c1829f7d0cebe451a
+RMD160 (nvi-1.79.m17n-19991117.diff.gz) = 0cdaf4e2a4bd3585d2751037ec377ab0d694e87e
 Size (nvi-1.79.m17n-19991117.diff.gz) = 166609 bytes
 SHA1 (patch-aa) = c246b1533dfbfc93ad9c0a8ea8cff5db157c9ee8
 SHA1 (patch-ab) = f7a382af11f200467ac994d90e108e97c7602b13
