@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.2 1998/09/02 06:42:13 tron Exp $
+$NetBSD: patch-ad,v 1.3 2000/03/08 12:01:50 agc Exp $
 
---- tools/encke2edb.pl.orig	Fri Oct 11 08:47:17 1996
-+++ tools/encke2edb.pl	Sat Aug 29 11:03:36 1998
+--- tools/tle2edb.pl.orig	Wed Oct  6 21:50:21 1999
++++ tools/tle2edb.pl	Sun Feb 20 18:35:40 2000
 @@ -1,4 +1,4 @@
--#!/usr/bin/perl
+-#!/usr/bin/perl -w
 +#!@LOCALBASE@/bin/perl
- # convert elements appearing in http://encke.jpl.nasa.gov/eph to xephem format.
- # we need to scan the entire ephemeris so we can dig out the various values
- #   which are sprinkled near the beginning and end of the file.
+ # tle2edb.pl: perl script to convert NASA "2-line" geocentric orbital elements
+ # to XEphem .edb. we crack everything that looks reasonable. we allow the TLE
+ # to be embedded in other text, just so long as it stands on three successive
