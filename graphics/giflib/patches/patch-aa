@@ -1,5 +1,5 @@
---- lib/Makefile.orig	Thu Jun 26 20:07:56 1997
-+++ lib/Makefile	Wed Sep 24 08:51:35 1997
+--- lib/Makefile.orig	Thu Jun 26 14:07:56 1997
++++ lib/Makefile	Tue Jul 14 15:37:23 1998
 @@ -11,9 +11,10 @@
  
  #
@@ -13,7 +13,7 @@
  
  #
  # What devices we should be able to grab into gif images. Note that if
-@@ -63,14 +64,22 @@
+@@ -63,28 +64,20 @@
  CC = gcc
  #
  #CFLAGS = -fno-builtin -O -c -W -Wreturn-type -Wcomment
@@ -24,38 +24,40 @@
  OBJS = dev2gif.o egif_lib.o dgif_lib.o gifalloc.o gif_font.o gif_hash.o \
  	gif_err.o quantize.o qprintf.o getarg.o
  
-+SOBJS = dev2gif.so egif_lib.so dgif_lib.so gifalloc.so gif_font.so \
-+	gif_hash.so gif_err.so quantize.so qprintf.so getarg.so
-+
-+.SUFFIXES: .o .so
-+
  .c.o:
 -	$(CC) $(INCS) $(DEVS) $(CFLAGS) $<
-+	$(CC) -c $(INCS) $(DEVS) $(CFLAGS) $<
-+
-+.c.so:
-+	$(CC) -c $(INCS) $(DEVS) $(CFLAGS) -fpic -DPIC -o $@ $<
++	${LIBTOOL} --mode=compile $(CC) -c $(INCS) $(DEVS) $(CFLAGS) $<
  
- all: static shared
+-all: static shared
++all static shared: libgif.la
  
-@@ -82,9 +91,9 @@
- 	ar rcv libgif.a $(OBJS)
- 	-ranlib libgif.a
- 
+-static: libgif.a
+-shared: $(SHLIB)
+-
+-libgif.a: $(OBJS)
+-	rm -f libgif.a
+-	ar rcv libgif.a $(OBJS)
+-	-ranlib libgif.a
+-
 -$(SHLIB): $(OBJS)
-+$(SHLIB): $(SOBJS)
- 	rm -f libgif.so.$(V)
+-	rm -f libgif.so.$(V)
 -	gcc -shared -o $(SHLIB) $(OBJS)
-+	ld -Bshareable -o $(SHLIB) $(SOBJS)
++libgif.la: $(OBJS)
++	${LIBTOOL} --mode=link ${CC} -o $@ ${OBJS:.o=.lo} -rpath ${PREFIX}/lib \
++		-version-info 3:0
  
  dev2gif.o: gif_lib.h
  egif_lib.o: gif_lib.h gif_hash.h
-@@ -99,6 +108,8 @@
+@@ -97,8 +90,10 @@
+ qprintf.o: gif_lib.h
+ getarg.o: getarg.h
  
- install-lib: libgif.a
- 	cp libgif.a libgif.so.$(V) $(LIBDIR)
-+	mkdir -p $(INCDIR)
-+	cp *.h $(INCDIR)
+-install-lib: libgif.a
+-	cp libgif.a libgif.so.$(V) $(LIBDIR)
++install-lib: libgif.la
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libgif.la ${PREFIX}/lib
++	mkdir -p ${INCDIR}
++	${BSD_INSTALL_DATA} *.h ${INCDIR}
  
  uninstall-lib: shared static
  	rm -f $(LIBDIR)/libgif.a $(LIBDIR)/$(SHLIB)

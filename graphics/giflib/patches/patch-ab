@@ -1,14 +1,15 @@
---- util/Makefile.orig	Wed Sep 24 05:11:17 1997
-+++ util/Makefile	Wed Sep 24 05:13:59 1997
+--- util/Makefile.orig	Thu Jun 26 13:22:30 1997
++++ util/Makefile	Tue Jul 14 15:46:43 1998
 @@ -22,12 +22,13 @@
  # X_INC_DIR = /server/sun4/usr/new/lib/X11R4
  
  # Declare the include files and libraries for the GIF utils:
 -INC = -I../lib
 -GIF_LIB = ../lib/libgif.a
+-GIF_INC_DEPEND = ../lib/libgif.a ../lib/gif_lib.h ../lib/getarg.h
 +CFLAGS+= -I../lib
-+GIF_LIB = -L../lib -lgif
- GIF_INC_DEPEND = ../lib/libgif.a ../lib/gif_lib.h ../lib/getarg.h
++GIF_LIB = ../lib/libgif.la
++GIF_INC_DEPEND = ../lib/libgif.la ../lib/gif_lib.h ../lib/getarg.h
 +LDFLAGS = -s
  
  # Where to copy executables to:
@@ -34,3 +35,31 @@
  
  BINARIES = gif2epsn gif2ps gif2rgb gif2x11 gifasm gifbg \
  	gifclip gifclrmp gifcomb giffix gifflip gifhisto \
+@@ -105,7 +106,8 @@
+ iris: $(IRIS)
+ 
+ install-all:
+-	cp $(BINARIES) $(SCRIPTS) $(DEST)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $(BINARIES) $(DEST)
++	${BSD_INSTALL_SCRIPT} $(SCRIPTS) $(DEST)
+ 
+ install-rle:
+ 	cp $(RLE) $(DEST)
+@@ -114,7 +116,7 @@
+ 	cp $(IRIS) $(DEST)
+ 
+ .c:
+-	$(CC) $(CFLAGS) $< $(GIF_LIB) -lm $(LDFLAGS) -o $*
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $< $(GIF_LIB) -lm $(LDFLAGS) -o $*
+ 
+ uninstall-utils:
+ 	(cd $(DEST); rm -f $(BINARIES) $(RLE) $(IRIS) $(SCRIPTS))
+@@ -123,7 +125,7 @@
+ 	$(CC) gif2iris.c $(CFLAGS) $(LDFLAGS) -lgl_s -o gif2iris
+ 
+ gif2x11: gif2x11.c
+-	$(CC) gif2x11.c $(CFLAGS) -I$(X_INC_DIR) -L$(X_LIB_DIR) $(LDFLAGS) $(GIF_LIB) $(XLIBS) -o gif2x11
++	${LIBTOOL} --mode=link $(CC) gif2x11.c $(CFLAGS) -I$(X_INC_DIR) -L$(X_LIB_DIR) $(LDFLAGS) $(GIF_LIB) $(XLIBS) -o gif2x11
+ 
+ 
+ clean:
