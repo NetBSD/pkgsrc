@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.24 2004/08/28 06:05:31 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.25 2004/10/01 13:17:50 adam Exp $
 
-DISTNAME=		flac-1.1.0
-PKGREVISION=		1
-CATEGORIES=		audio archivers
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=flac/}
+DISTNAME=	flac-1.1.1
+CATEGORIES=	audio archivers
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flac/}
 
-MAINTAINER=		ben@NetBSD.org
-HOMEPAGE=		http://flac.sourceforge.net/
-COMMENT=		Free lossless audio codec
+MAINTAINER=	ben@NetBSD.org
+HOMEPAGE=	http://flac.sourceforge.net/
+COMMENT=	Free lossless audio codec
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK3=		yes
@@ -29,7 +27,6 @@ NOT_FOR_COMPILER=	sunpro
 
 # This version of flac doesn't seem to build correctly with -O3 using
 # the MIPSpro compiler.
-#
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mmipspro)
 BUILDLINK_TRANSFORM+=	rm:-O3
