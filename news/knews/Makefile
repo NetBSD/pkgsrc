@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/10/07 17:41:57 tron Exp $
+# $NetBSD: Makefile,v 1.22 1999/10/19 08:55:48 agc Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0b1
@@ -17,28 +17,28 @@ CONFLICTS=	knews-1.0b0
 
 USE_IMAKE=	yes
 
-BUILD_DEFS+=	DOMAIN_NAME
+BUILD_DEFS+=	KNEWS_DOMAIN_NAME KNEWS_DOMAIN_FILE
 
 .include "../../mk/bsd.prefs.mk"
 
-# Set DOMAIN_NAME to a string appended to the "From:" header or
-# DOMAIN_FILE to a file from which the domain name will be read.
+# Set KNEWS_DOMAIN_NAME to a string appended to the "From:" header or
+# KNEWS_DOMAIN_FILE to a file from which the domain name will be read.
 post-extract:
-.if !defined(DOMAIN_FILE) && !defined(DOMAIN_NAME)
-	@${ECHO_MSG} "Type \"make DOMAIN_NAME=xyz\" to set the domain name."
-.elif defined(DOMAIN_FILE)
-	@${ECHO_MSG} "Reading \"From:\" domain from file \"${DOMAIN_FILE}\"."
+.if !defined(KNEWS_DOMAIN_FILE) && !defined(KNEWS_DOMAIN_NAME)
+	@${ECHO_MSG} "Type \"make KNEWS_DOMAIN_NAME=xyz\" to set the domain name."
+.elif defined(KNEWS_DOMAIN_FILE)
+	@${ECHO_MSG} "Reading \"From:\" domain from file \"${KNEWS_DOMAIN_FILE}\"."
 .else
-	@${ECHO_MSG} "Using \"${DOMAIN_NAME}\" as the \"From:\" domain name."
+	@${ECHO_MSG} "Using \"${KNEWS_DOMAIN_NAME}\" as the \"From:\" domain name."
 .endif
 
 post-patch:
-.if defined(DOMAIN_FILE)
+.if defined(KNEWS_DOMAIN_FILE)
 	${ECHO_MSG} >>${WRKSRC}/configure.h \
-	"#define DOMAIN_FILE \"${DOMAIN_FILE}\""
-.elif defined(DOMAIN_NAME)
+	"#define DOMAIN_FILE \"${KNEWS_DOMAIN_FILE}\""
+.elif defined(KNEWS_DOMAIN_NAME)
 	${ECHO_MSG} >>${WRKSRC}/configure.h \
-	"#define DOMAIN_NAME \"${DOMAIN_NAME}\""
+	"#define DOMAIN_NAME \"${KNEWS_DOMAIN_NAME}\""
 .endif
 
 .include "../../mk/bsd.pkg.mk"
