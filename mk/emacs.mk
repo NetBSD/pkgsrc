@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.3 2002/09/16 12:51:34 uebayasi Exp $
+# $NetBSD: emacs.mk,v 1.4 2002/09/28 14:19:51 uebayasi Exp $
 #
 # A Makefile fragment for Emacs Lisp packages.
 #
@@ -49,12 +49,7 @@ _EMACS_VERSION_${v}_OK=	yes
 
 # Look for Emacs 21/Emacs 20
 #
-_TMP!=	if ${PKG_TOOLS_BIN}/pkg_info -e emacs >/dev/null 2>&1; then \
-	${PKG_TOOLS_BIN}/pkg_info -I emacs 2>/dev/null | \
-		${AWK} '{print $$1}'; \
-	else \
-		${ECHO}; \
-	fi
+_TMP!=	${PKG_TOOLS_BIN}/pkg_info -e emacs || ${ECHO}
 .if ${_TMP} != ""
 _EMACS_VERSION_EMACS_FULL:=	${_TMP}
 _EMACS_VERSION_EMACS=	${_EMACS_VERSION_EMACS_FULL:C/^.*-//}
@@ -68,12 +63,7 @@ _EMACS_VERSION_emacs20_INSTALLED=	yes
 
 # Look for XEmacs 21.5/XEmacs 21.1
 #
-_TMP!=	if ${PKG_TOOLS_BIN}/pkg_info -e xemacs >/dev/null 2>&1; then \
-	${PKG_TOOLS_BIN}/pkg_info -I xemacs 2>/dev/null | \
-		${AWK} '{print $$1}'; \
-	else \
-		${ECHO}; \
-	fi
+_TMP!=	${PKG_TOOLS_BIN}/pkg_info -e xemacs || ${ECHO}
 .if ${_TMP} != ""
 _EMACS_VERSION_XEMACS_FULL:=	${_TMP:C/^.*-//}
 _EMACS_VERSION_XEMACS=	${_EMACS_VERSION_XEMACS_FULL:C/^.*-//}
