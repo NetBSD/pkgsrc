@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/09 21:12:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/02/24 21:42:57 wiz Exp $
 bin/screensaver-properties-capplet
 bin/xscreensaver
 bin/xscreensaver-command
@@ -10,11 +10,13 @@ bin/xscreensaver-gl-helper
 bin/xscreensaver.kss
 lib/X11/app-defaults/XScreenSaver
 libexec/xscreensaver/ant
+libexec/xscreensaver/apollonian
 libexec/xscreensaver/atlantis
 libexec/xscreensaver/attraction
 libexec/xscreensaver/blaster
 libexec/xscreensaver/blitspin
 libexec/xscreensaver/bouboule
+libexec/xscreensaver/boxed
 libexec/xscreensaver/braid
 libexec/xscreensaver/bsod
 libexec/xscreensaver/bubble3d
@@ -38,6 +40,7 @@ libexec/xscreensaver/distort
 libexec/xscreensaver/drift
 libexec/xscreensaver/engine
 libexec/xscreensaver/epicycle
+libexec/xscreensaver/euler2d
 libexec/xscreensaver/extrusion
 libexec/xscreensaver/fadeplot
 libexec/xscreensaver/flag
@@ -48,7 +51,9 @@ libexec/xscreensaver/forest
 libexec/xscreensaver/galaxy
 libexec/xscreensaver/gears
 libexec/xscreensaver/gflux
+libexec/xscreensaver/glforestfire
 libexec/xscreensaver/glplanet
+libexec/xscreensaver/glsnake
 libexec/xscreensaver/gltext
 libexec/xscreensaver/goop
 libexec/xscreensaver/grav
@@ -62,6 +67,7 @@ libexec/xscreensaver/ifs
 libexec/xscreensaver/imsmap
 libexec/xscreensaver/interference
 libexec/xscreensaver/jigsaw
+libexec/xscreensaver/juggle
 libexec/xscreensaver/julia
 libexec/xscreensaver/kaleidescope
 libexec/xscreensaver/kumppa
@@ -89,6 +95,7 @@ libexec/xscreensaver/penrose
 libexec/xscreensaver/petri
 libexec/xscreensaver/phosphor
 libexec/xscreensaver/pipes
+libexec/xscreensaver/polyominoes
 libexec/xscreensaver/pulsar
 libexec/xscreensaver/pyro
 libexec/xscreensaver/qix
@@ -99,6 +106,7 @@ libexec/xscreensaver/rorschach
 libexec/xscreensaver/rotor
 libexec/xscreensaver/rotzoomer
 libexec/xscreensaver/rubik
+libexec/xscreensaver/sballs
 libexec/xscreensaver/shadebobs
 libexec/xscreensaver/sierpinski
 libexec/xscreensaver/sierpinski3d
@@ -119,8 +127,10 @@ libexec/xscreensaver/strange
 libexec/xscreensaver/superquadrics
 libexec/xscreensaver/swirl
 libexec/xscreensaver/t3d
+libexec/xscreensaver/thornbird
 libexec/xscreensaver/triangle
 libexec/xscreensaver/truchet
+libexec/xscreensaver/twang
 libexec/xscreensaver/vermiculate
 libexec/xscreensaver/vidwhacker
 libexec/xscreensaver/vines
@@ -156,6 +166,8 @@ man/man1/flame.1
 man/man1/forest.1
 man/man1/galaxy.1
 man/man1/gflux.1
+man/man1/glforestfire.1
+man/man1/glsnake.1
 man/man1/gltext.1
 man/man1/goop.1
 man/man1/grav.1
@@ -192,6 +204,7 @@ man/man1/rd-bomb.1
 man/man1/rocks.1
 man/man1/rorschach.1
 man/man1/rotzoomer.1
+man/man1/sballs.1
 man/man1/sierpinski.1
 man/man1/slidescreen.1
 man/man1/slip.1
@@ -206,6 +219,7 @@ man/man1/starwars.1
 man/man1/strange.1
 man/man1/swirl.1
 man/man1/t3d.1
+man/man1/twang.1
 man/man1/vidwhacker.1
 man/man1/vines.1
 man/man1/webcollage.1
@@ -222,17 +236,21 @@ man/man1/xscreensaver-getimage-video.1
 man/man1/xscreensaver-getimage.1
 man/man1/xscreensaver-gl-helper.1
 man/man1/xscreensaver.1
+man/man1/xspirograph.1
 man/man1/xsublim.1
 man/man1/xteevee.1
 man/man1/zoom.1
 share/control-center/Desktop/screensaver-properties.desktop
+share/control-center/capplets/screensaver.desktop
 share/control-center/screensavers/README
 share/control-center/screensavers/ant.xml
+share/control-center/screensavers/apollonian.xml
 share/control-center/screensavers/atlantis.xml
 share/control-center/screensavers/attraction.xml
 share/control-center/screensavers/blaster.xml
 share/control-center/screensavers/blitspin.xml
 share/control-center/screensavers/bouboule.xml
+share/control-center/screensavers/boxed.xml
 share/control-center/screensavers/braid.xml
 share/control-center/screensavers/bsod.xml
 share/control-center/screensavers/bubble3d.xml
@@ -258,6 +276,7 @@ share/control-center/screensavers/drift.xml
 share/control-center/screensavers/electricsheep.xml
 share/control-center/screensavers/engine.xml
 share/control-center/screensavers/epicycle.xml
+share/control-center/screensavers/euler2d.xml
 share/control-center/screensavers/extrusion.xml
 share/control-center/screensavers/fadeplot.xml
 share/control-center/screensavers/flag.xml
@@ -268,7 +287,9 @@ share/control-center/screensavers/forest.xml
 share/control-center/screensavers/galaxy.xml
 share/control-center/screensavers/gears.xml
 share/control-center/screensavers/gflux.xml
+share/control-center/screensavers/glforestfire.xml
 share/control-center/screensavers/glplanet.xml
+share/control-center/screensavers/glsnake.xml
 share/control-center/screensavers/gltext.xml
 share/control-center/screensavers/goban.xml
 share/control-center/screensavers/goop.xml
@@ -283,6 +304,7 @@ share/control-center/screensavers/ifs.xml
 share/control-center/screensavers/imsmap.xml
 share/control-center/screensavers/interference.xml
 share/control-center/screensavers/jigsaw.xml
+share/control-center/screensavers/juggle.xml
 share/control-center/screensavers/julia.xml
 share/control-center/screensavers/kaleidescope.xml
 share/control-center/screensavers/kumppa.xml
@@ -310,6 +332,7 @@ share/control-center/screensavers/penrose.xml
 share/control-center/screensavers/petri.xml
 share/control-center/screensavers/phosphor.xml
 share/control-center/screensavers/pipes.xml
+share/control-center/screensavers/polyominoes.xml
 share/control-center/screensavers/pulsar.xml
 share/control-center/screensavers/pyro.xml
 share/control-center/screensavers/qix.xml
@@ -320,6 +343,7 @@ share/control-center/screensavers/rorschach.xml
 share/control-center/screensavers/rotor.xml
 share/control-center/screensavers/rotzoomer.xml
 share/control-center/screensavers/rubik.xml
+share/control-center/screensavers/sballs.xml
 share/control-center/screensavers/shadebobs.xml
 share/control-center/screensavers/sierpinski.xml
 share/control-center/screensavers/sierpinski3d.xml
@@ -342,8 +366,10 @@ share/control-center/screensavers/strange.xml
 share/control-center/screensavers/superquadrics.xml
 share/control-center/screensavers/swirl.xml
 share/control-center/screensavers/t3d.xml
+share/control-center/screensavers/thornbird.xml
 share/control-center/screensavers/triangle.xml
 share/control-center/screensavers/truchet.xml
+share/control-center/screensavers/twang.xml
 share/control-center/screensavers/vermiculate.xml
 share/control-center/screensavers/vidwhacker.xml
 share/control-center/screensavers/vines.xml
