@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7688 2004/11/04 10:37:52 adam Exp $
+$NetBSD: CHANGES,v 1.7689 2004/11/04 11:47:47 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5063,3 +5063,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added RTFM-2.0.4 [cube 2004-11-03]
 	Updated unrar to 3.4.3 [adam 2004-11-04]
 	Updated libsigc++2 to 2.0.6 [adam 2004-11-04]
+	Updated id3v2 to 0.1.11 [abs 2004-11-04]
+
