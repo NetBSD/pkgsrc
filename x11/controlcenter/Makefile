@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 1999/10/31 10:34:41 rh Exp $
-#
+# $NetBSD: Makefile,v 1.15 1999/11/08 21:50:39 tron Exp $
 
-DISTNAME=		control-center-1.0.6
+DISTNAME=		control-center-1.0.51
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/control-center/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=gnome-1.0.53/sources/}
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.gnome.org/
