@@ -1,24 +1,24 @@
-$NetBSD: patch-aa,v 1.8 2002/08/19 19:20:32 seb Exp $
+$NetBSD: patch-aa,v 1.9 2002/11/27 17:41:06 drochner Exp $
 
-Build shared libintl. And force directory for locale date.
-
---- configure.orig	Fri May  1 07:48:25 1998
-+++ configure
-@@ -3690,7 +3690,7 @@ fi
- 		 USE_INCLUDED_LIBINTL=yes
- 		 CATOBJEXT=.cat
- 		 INSTOBJEXT=.cat
--		 DATADIRNAME=lib
-+		 DATADIRNAME=${PKGLOCALEDIR}
- 		 INTLDEPS='$(top_builddir)/intl/libintl.a'
- 		 INTLLIBS=$INTLDEPS
- 		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
-@@ -3958,7 +3958,7 @@ fi
-    fi
-    
+--- configure.orig	Tue Aug  6 15:57:16 2002
++++ configure	Sun Sep  1 16:06:20 2002
+@@ -14293,10 +14293,6 @@
+       if test "$nls_cv_use_gnu_gettext" = "yes"; then
+                 INTLOBJS="\$(GETTOBJS)"
+         BUILD_INCLUDED_LIBINTL=yes
+-        USE_INCLUDED_LIBINTL=yes
+-        LIBINTL="\${top_builddir}/intl/libintl.la $LIBICONV"
+-        LTLIBINTL="\${top_builddir}/intl/libintl.la $LTLIBICONV"
+-        LIBS=`echo " $LIBS " | sed -e 's/ -lintl / /' -e 's/^ //' -e 's/ $//'`
+       fi
  
--      l=
-+      l=l
-    
+       if test "$gt_use_preinstalled_gnugettext" = "yes" \
+@@ -14369,7 +14365,7 @@
+         nls_cv_header_intl=
+     nls_cv_header_libgt=
  
-          test -d po || mkdir po
+-        DATADIRNAME=share
++        DATADIRNAME=${PKGLOCALEDIR}
+ 
+         INSTOBJEXT=.mo
+ 
