@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/20 11:58:46 rh Exp $
+
+--- configure.orig	Sun Oct 17 01:16:57 1999
++++ configure	Sun Dec 19 18:46:02 1999
+@@ -1316,7 +1316,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
+-
++if false; then
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1414,6 +1414,7 @@
+ # --recheck option to rerun configure.
+ #
+ EOF
++
+ # The following way of writing the cache mishandles newlines in values,
+ # but we know of no workaround that is simple, portable, and efficient.
+ # So, don't put newlines in cache variables' values.
+@@ -1470,6 +1471,7 @@
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++fi
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+@@ -2562,7 +2564,7 @@
+ 
+ echo $ac_n "checking whether libtool wins""... $ac_c" 1>&6
+ echo "configure:2565: checking whether libtool wins" >&5
+-if grep -q '^deplibs_check_method' ./libtool; then
++if true; then
+    LIBTOOL_IS_WINNING="#t"
+    echo "$ac_t""yes" 1>&6
+ else
+@@ -2854,10 +2856,12 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
+   esac
+ 
++if false; then
+   case "$ac_given_INSTALL" in
+   [/$]*) INSTALL="$ac_given_INSTALL" ;;
+   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+   esac
++fi
+ 
+   echo creating "$ac_file"
+   rm -f "$ac_file"
