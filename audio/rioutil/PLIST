@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/13 16:39:09 schmonz Exp $
+bin/riofck
+bin/rioutil
+include/rio.h
+lib/librioutil.a
+lib/librioutil.la
+lib/librioutil.so
+lib/librioutil.so.1
+lib/librioutil.so.1.0
+man/man1/rioutil.1
