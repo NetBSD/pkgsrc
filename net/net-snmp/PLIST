@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/03/30 12:10:58 adam Exp $
 bin/encode_keychange
 bin/fixproc
 bin/ipf-mod.pl
 bin/mib2c
+bin/mib2c-update
 bin/net-snmp-config
 bin/snmpbulkget
 bin/snmpbulkwalk
@@ -28,6 +29,7 @@ bin/traptoemail
 include/net-snmp/agent/agent_callbacks.h
 include/net-snmp/agent/agent_handler.h
 include/net-snmp/agent/agent_index.h
+include/net-snmp/agent/agent_module_config.h
 include/net-snmp/agent/agent_read_config.h
 include/net-snmp/agent/agent_registry.h
 include/net-snmp/agent/agent_trap.h
@@ -39,10 +41,12 @@ include/net-snmp/agent/cache_handler.h
 include/net-snmp/agent/debug_handler.h
 include/net-snmp/agent/ds_agent.h
 include/net-snmp/agent/instance.h
+include/net-snmp/agent/mfd.h
 include/net-snmp/agent/mib_module_config.h
 include/net-snmp/agent/mib_module_includes.h
-include/net-snmp/agent/multiplexer.h
+include/net-snmp/agent/mib_modules.h
 include/net-snmp/agent/mode_end_call.h
+include/net-snmp/agent/multiplexer.h
 include/net-snmp/agent/net-snmp-agent-includes.h
 include/net-snmp/agent/null.h
 include/net-snmp/agent/old_api.h
@@ -56,6 +60,7 @@ include/net-snmp/agent/snmp_agent.h
 include/net-snmp/agent/snmp_vars.h
 include/net-snmp/agent/table.h
 include/net-snmp/agent/table_array.h
+include/net-snmp/agent/table_container.h
 include/net-snmp/agent/table_data.h
 include/net-snmp/agent/table_dataset.h
 include/net-snmp/agent/table_iterator.h
@@ -132,11 +137,14 @@ include/net-snmp/system/bsdi3.h
 include/net-snmp/system/bsdi4.h
 include/net-snmp/system/cygwin.h
 include/net-snmp/system/darwin.h
+include/net-snmp/system/darwin7.h
 include/net-snmp/system/dynix.h
 include/net-snmp/system/freebsd.h
 include/net-snmp/system/freebsd2.h
 include/net-snmp/system/freebsd3.h
 include/net-snmp/system/freebsd4.h
+include/net-snmp/system/freebsd5.h
+include/net-snmp/system/freebsd6.h
 include/net-snmp/system/generic.h
 include/net-snmp/system/hpux.h
 include/net-snmp/system/irix.h
@@ -204,8 +212,8 @@ lib/libnetsnmp.la
 lib/libnetsnmpagent.la
 lib/libnetsnmphelpers.la
 lib/libnetsnmpmibs.la
-lib/libsnmp.la
 lib/libnetsnmptrapd.la
+lib/libsnmp.la
 man/man1/mib2c.1
 man/man1/snmpbulkget.1
 man/man1/snmpbulkwalk.1
@@ -235,7 +243,6 @@ man/man3/init_mib_internals.3
 man/man3/mib_api.3
 man/man3/netsnmp_Container_iterator.3
 man/man3/netsnmp_agent.3
-man/man3/netsnmp_asn1_packet_parse.3
 man/man3/netsnmp_baby_steps.3
 man/man3/netsnmp_bulk_to_next.3
 man/man3/netsnmp_cache_handler.3
@@ -305,6 +312,7 @@ man/man3/snmp_set_mib_warnings.3
 man/man3/snmp_set_save_descriptions.3
 man/man3/snmp_timeout.3
 man/man3/snmp_trap_api.3
+man/man5/mib2c.conf.5
 man/man5/snmp.conf.5
 man/man5/snmp_config.5
 man/man5/snmpd.conf.5
@@ -315,17 +323,83 @@ man/man8/snmptrapd.8
 sbin/snmpd
 sbin/snmptrapd
 share/examples/net-snmp/EXAMPLE.conf
+share/snmp/mib2c-data/default-mfd-top.m2c
+share/snmp/mib2c-data/details-enums.m2i
+share/snmp/mib2c-data/details-node.m2i
+share/snmp/mib2c-data/details-table.m2i
+share/snmp/mib2c-data/generic-ctx-copy.m2i
+share/snmp/mib2c-data/generic-ctx-get.m2i
+share/snmp/mib2c-data/generic-ctx-set.m2i
+share/snmp/mib2c-data/generic-data-allocate.m2i
+share/snmp/mib2c-data/generic-data-context.m2i
+share/snmp/mib2c-data/generic-get-char.m2i
+share/snmp/mib2c-data/generic-get-decl-bot.m2i
+share/snmp/mib2c-data/generic-get-decl.m2i
+share/snmp/mib2c-data/generic-get-long.m2i
+share/snmp/mib2c-data/generic-get-oid.m2i
+share/snmp/mib2c-data/generic-header-bottom.m2i
+share/snmp/mib2c-data/generic-header-top.m2i
+share/snmp/mib2c-data/generic-source-includes.m2i
+share/snmp/mib2c-data/generic-table-constants.m2c
+share/snmp/mib2c-data/generic-table-enums.m2c
+share/snmp/mib2c-data/generic-table-indexes-from-oid.m2i
+share/snmp/mib2c-data/generic-table-indexes-set.m2i
+share/snmp/mib2c-data/generic-table-indexes-to-oid.m2i
+share/snmp/mib2c-data/generic-table-indexes-varbind-setup.m2i
+share/snmp/mib2c-data/generic-table-indexes.m2i
+share/snmp/mib2c-data/generic-table-oids.m2c
+share/snmp/mib2c-data/generic-value-map-func.m2i
+share/snmp/mib2c-data/generic-value-map-reverse.m2i
+share/snmp/mib2c-data/generic-value-map.m2i
+share/snmp/mib2c-data/m2c-internal-warning.m2i
+share/snmp/mib2c-data/m2c_setup_enum.m2i
+share/snmp/mib2c-data/m2c_setup_node.m2i
+share/snmp/mib2c-data/m2c_setup_table.m2i
+share/snmp/mib2c-data/mfd-access-container-cached-defines.m2i
+share/snmp/mib2c-data/mfd-access-unsorted-external-defines.m2i
+share/snmp/mib2c-data/mfd-data-access.m2c
+share/snmp/mib2c-data/mfd-data-get.m2c
+share/snmp/mib2c-data/mfd-data-set.m2c
+share/snmp/mib2c-data/mfd-doxygen.m2c
+share/snmp/mib2c-data/mfd-interactive-setup.m2c
+share/snmp/mib2c-data/mfd-interface.m2c
+share/snmp/mib2c-data/mfd-makefile.m2m
+share/snmp/mib2c-data/mfd-readme.m2c
+share/snmp/mib2c-data/mfd-top.m2c
+share/snmp/mib2c-data/node-get.m2i
+share/snmp/mib2c-data/node-set.m2i
+share/snmp/mib2c-data/node-storage.m2i
+share/snmp/mib2c-data/node-varbind-validate.m2i
+share/snmp/mib2c-data/parent-dependencies.m2i
+share/snmp/mib2c-data/parent-set.m2i
+share/snmp/mib2c-data/subagent.m2c
+share/snmp/mib2c-data/syntax-COUNTER64-get.m2i
+share/snmp/mib2c-data/syntax-DateAndTime-get.m2d
+share/snmp/mib2c-data/syntax-DateAndTime-get.m2i
+share/snmp/mib2c-data/syntax-DateAndTime-readme.m2i
+share/snmp/mib2c-data/syntax-InetAddress-get.m2i
+share/snmp/mib2c-data/syntax-InetAddress-set.m2i
+share/snmp/mib2c-data/syntax-InetAddressType-get.m2i
+share/snmp/mib2c-data/syntax-InetAddressType-set.m2i
+share/snmp/mib2c-data/syntax-RowStatus-dependencies.m2i
+share/snmp/mib2c-data/syntax-RowStatus-get.m2i
+share/snmp/mib2c-data/syntax-RowStatus-varbind-validate.m2i
+share/snmp/mib2c-data/syntax-StorageType-dependencies.m2i
+share/snmp/mib2c-data/syntax-TestAndIncr-get.m2i
 share/snmp/mib2c.access_functions.conf
 share/snmp/mib2c.array-user.conf
 share/snmp/mib2c.check_values.conf
 share/snmp/mib2c.check_values_local.conf
 share/snmp/mib2c.column_defines.conf
 share/snmp/mib2c.column_enums.conf
+share/snmp/mib2c.column_storage.conf
 share/snmp/mib2c.conf
 share/snmp/mib2c.create-dataset.conf
+share/snmp/mib2c.genhtml.conf
 share/snmp/mib2c.int_watch.conf
 share/snmp/mib2c.iterate.conf
 share/snmp/mib2c.iterate_access.conf
+share/snmp/mib2c.mfd.conf
 share/snmp/mib2c.notify.conf
 share/snmp/mib2c.old-api.conf
 share/snmp/mib2c.scalar.conf
@@ -338,6 +412,7 @@ share/snmp/mibs/HOST-RESOURCES-MIB.txt
 share/snmp/mibs/HOST-RESOURCES-TYPES.txt
 share/snmp/mibs/IANA-ADDRESS-FAMILY-NUMBERS-MIB.txt
 share/snmp/mibs/IANA-LANGUAGE-MIB.txt
+share/snmp/mibs/IANA-RTPROTO-MIB.txt
 share/snmp/mibs/IANAifType-MIB.txt
 share/snmp/mibs/IF-INVERTED-STACK-MIB.txt
 share/snmp/mibs/IF-MIB.txt
@@ -351,6 +426,7 @@ share/snmp/mibs/IPV6-TCP-MIB.txt
 share/snmp/mibs/IPV6-UDP-MIB.txt
 share/snmp/mibs/NET-SNMP-AGENT-MIB.txt
 share/snmp/mibs/NET-SNMP-EXAMPLES-MIB.txt
+share/snmp/mibs/NET-SNMP-EXTEND-MIB.txt
 share/snmp/mibs/NET-SNMP-MIB.txt
 share/snmp/mibs/NET-SNMP-TC.txt
 share/snmp/mibs/NOTIFICATION-LOG-MIB.txt
@@ -367,6 +443,7 @@ share/snmp/mibs/SNMP-PROXY-MIB.txt
 share/snmp/mibs/SNMP-TARGET-MIB.txt
 share/snmp/mibs/SNMP-USER-BASED-SM-MIB.txt
 share/snmp/mibs/SNMP-USM-AES-MIB.txt
+share/snmp/mibs/SNMP-USM-DH-OBJECTS-MIB.txt
 share/snmp/mibs/SNMP-VIEW-BASED-ACM-MIB.txt
 share/snmp/mibs/SNMPv2-CONF.txt
 share/snmp/mibs/SNMPv2-MIB.txt
@@ -374,12 +451,14 @@ share/snmp/mibs/SNMPv2-SMI.txt
 share/snmp/mibs/SNMPv2-TC.txt
 share/snmp/mibs/SNMPv2-TM.txt
 share/snmp/mibs/TCP-MIB.txt
+share/snmp/mibs/TRANSPORT-ADDRESS-MIB.txt
 share/snmp/mibs/UCD-DEMO-MIB.txt
 share/snmp/mibs/UCD-DISKIO-MIB.txt
 share/snmp/mibs/UCD-DLMOD-MIB.txt
 share/snmp/mibs/UCD-IPFWACC-MIB.txt
 share/snmp/mibs/UCD-SNMP-MIB.txt
 share/snmp/mibs/UDP-MIB.txt
+share/snmp/snmp_perl_trapd.pl
 share/snmp/snmpconf-data/snmp-data/authopts
 share/snmp/snmpconf-data/snmp-data/debugging
 share/snmp/snmpconf-data/snmp-data/mibs
@@ -393,7 +472,10 @@ share/snmp/snmpconf-data/snmpd-data/operation
 share/snmp/snmpconf-data/snmpd-data/snmpconf-config
 share/snmp/snmpconf-data/snmpd-data/system
 share/snmp/snmpconf-data/snmpd-data/trapsinks
+share/snmp/snmpconf-data/snmptrapd-data/authentication
 share/snmp/snmpconf-data/snmptrapd-data/formatting
+share/snmp/snmpconf-data/snmptrapd-data/logging
+share/snmp/snmpconf-data/snmptrapd-data/runtime
 share/snmp/snmpconf-data/snmptrapd-data/snmpconf-config
 share/snmp/snmpconf-data/snmptrapd-data/traphandle
 @dirrm share/snmp/snmpconf-data/snmptrapd-data
@@ -401,6 +483,7 @@ share/snmp/snmpconf-data/snmptrapd-data/traphandle
 @dirrm share/snmp/snmpconf-data/snmp-data
 @dirrm share/snmp/snmpconf-data
 @dirrm share/snmp/mibs
+@dirrm share/snmp/mib2c-data
 @dirrm share/examples/net-snmp
 @dirrm include/ucd-snmp
 @dirrm include/net-snmp/system
