@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# $NetBSD: ns-open,v 1.1.1.1 2000/01/12 15:03:42 abs Exp $
+#
+# Simple script to open a URL in Netscape, starting a new process if necessary
+# If a netscape process is not running will run 'netscape'.
+# If you want this to use a different binary (such as navigator), set
+# the environment variable 'NS_OPEN_MOZILLA'.
+
+if [ -z "$NS_OPEN_MOZILLA" ]; then
+    NS_OPEN_MOZILLA=netscape
+fi
+
+if [ -z "$1" ]
+then
+    ns-remote -noraise -remote openBrowser
+else
+	# encode any ',' to avoid problems with the openURL(x,y) command
+    URL=`echo $1 | sed 's/,/%2c/g'`
+    ns-remote -noraise -remote openURL\(${URL}\,new-window\)
+fi
+
+if [ $? -ne 0 ]
+then
+    echo "Starting new Netscape process..."
+    $NS_OPEN_MOZILLA $1 &
+fi
+
+exit 0
