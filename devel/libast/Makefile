@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/03 18:49:38 reed Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/11 05:53:05 xtraeme Exp $
 
 DISTNAME=		libast-0.5
 PKGREVISION=		5
@@ -10,7 +10,7 @@ HOMEPAGE=		http://freshmeat.net/projects/libast/?topic_id=809%2C861
 COMMENT=		The Library of Assorted Spiffy Things
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 TEST_TARGET=		test
@@ -26,6 +26,6 @@ BUILD_DEFS+=		USE_MMX
 LDFLAGS+=-lresolv
 .endif
 
-.include "../../devel/pcre/buildlink2.mk"
-.include "../../graphics/imlib2/buildlink2.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

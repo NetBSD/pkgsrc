@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/24 15:18:32 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/11 05:55:08 xtraeme Exp $
 #
 
 DISTNAME=	waimea-0.4.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.waimea.org/
 COMMENT=	Fast and highly customizable virtual window manager
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_PERL5=	run
 USE_X11=	YES
@@ -37,9 +37,9 @@ REPLACE_PERL = \
 	data/scripts/procinfo.pl \
 	data/scripts/stylesdir.pl.in
 
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../fonts/Xft2/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/imlib2/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

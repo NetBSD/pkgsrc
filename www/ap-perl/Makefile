@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/02/10 02:22:50 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2004/02/11 05:59:54 xtraeme Exp $
 #
 # NOTE:	Versions 1.27 and 1.28 cause apache to dump core,
 #	so this packages has been left at version 1.25
@@ -21,7 +21,7 @@ DEPENDS+=		${BUILDLINK_DEPENDS.apache}:../../www/apache
 DEPENDS+=		{libperl>=${LIBPERL5_REQD},perl>=5.8.0}:../../lang/libperl
 DEPENDS+=		p5-BSD-Resource>=1.10:../../devel/p5-BSD-Resource
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 APACHE_MODULE=		YES
 LIBPERL5_REQD=		${_PERL5_REQD}
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/mod_perl/.packlist
@@ -36,7 +36,7 @@ post-install:
 		${PREFIX}/share/httpd/htdocs/manual/mod
 
 .include "../../lang/perl5/module.mk"
-.include "../../www/apache/buildlink2.mk"
+.include "../../www/apache/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
 

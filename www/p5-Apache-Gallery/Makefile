@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/08 21:49:57 kim Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/11 05:59:54 xtraeme Exp $
 #
 
 DISTNAME=	Apache-Gallery-0.7
@@ -20,7 +20,7 @@ DEPENDS+=	p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size
 DEPENDS+=	p5-CGI-FastTemplate-[0-9]*:../../www/p5-CGI-FastTemplate
 DEPENDS+=	p5-libapreq-[0-9]*:../../www/p5-libapreq
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/Gallery/.packlist
@@ -92,8 +92,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${AG_EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/${AG}.conf ${AG_EGDIR}
 
-.include "../../graphics/imlib2/buildlink2.mk"
-.include "../../www/ap-perl/buildlink2.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
+.include "../../www/ap-perl/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 
 .include "../../mk/bsd.pkg.mk"
