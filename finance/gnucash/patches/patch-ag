@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/12/11 13:53:26 wiz Exp $
+
+--- src/engine/util.h.orig	Thu Jun  8 23:22:11 2000
++++ src/engine/util.h	Mon Jun 26 17:10:40 2000
+@@ -34,6 +34,7 @@
+ #include <errno.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <locale.h>
+ 
+ #include "gnc-common.h"
+ 

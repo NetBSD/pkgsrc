@@ -1,0 +1,10 @@
+emma: a money management program
+
+Emma is a money management program for Gnome / Gtk+ similar to
+X-accountant, Quicken and MsMoney (these are registered trademarks
+of their respective owners). It is published under GPL
+
+Emma allows you to keep track of your incomes and expenses. You
+can easily analyse where all your money came from or why your wallet
+is empty. Using embedded python interface you can extend Emma
+functions to make it even more useful. Hope you like it.
