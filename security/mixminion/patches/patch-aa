@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/12/27 22:58:57 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2005/01/30 21:56:24 wiz Exp $
 
 --- Makefile.orig	2004-04-04 20:43:33.000000000 +0200
 +++ Makefile
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/12/27 22:58:57 wiz Exp $
  
 -PYTHON_CANDIDATES = python python2.3 python2.3x python2.2 python2.2x python2.1\
 -        python2.1x python2.0 python2.0x python2
-+PYTHON_CANDIDATES = python2p4 python2p3 python2p2 python2p1
++PYTHON_CANDIDATES = python2.3 python2.2 python2.1
  FINDPYTHON = \
     if [ "x`which which`" = "x" ]; then                                       \
          echo "Ouch!  I couldn't run 'which' on your system.";                \
