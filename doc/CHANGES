@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4480 2004/01/17 00:23:25 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4481 2004/01/17 01:14:02 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -305,3 +305,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla to 1.6 [taya 2004-01-17]
 	Updated coreutils to 5.0nb4 [recht 2004-01-17]
 	Updated gnome2-utils to 2.4.1nb4 [xtraeme 2004-01-17]
+	Added doclifter-1.6 [recht 2004-01-17]
