@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/10/21 22:53:00 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/13 12:49:07 is Exp $
 
 DISTNAME=		mpich-1.1.1
 CATEGORIES=		parallel
@@ -8,7 +8,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.mcs.anl.gov/mpi/mpich/index.html
 
 .if !exists(/usr/bin/ssh)
-DEPENDS+=		{openssh-*,ssh{,6}-1.2.27}:../../security/ssh
+DEPENDS+=		{openssh-*,ssh{,6}-1.2.27*}:../../security/ssh
 .endif
 
 WRKSRC=			${WRKDIR}/mpich
