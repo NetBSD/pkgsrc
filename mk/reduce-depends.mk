@@ -1,4 +1,4 @@
-# $NetBSD: reduce-depends.mk,v 1.1 2004/10/05 15:28:50 jlam Exp $
+# $NetBSD: reduce-depends.mk,v 1.2 2004/10/06 21:51:41 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -111,7 +111,9 @@ _STRICTEST_DEPENDS.${_path_}=	${_depend_}
 # The dependencies simply conflict, so just pass them on through to the
 # normal dependency handling code.
 #
-REDUCED_DEPENDS+=	${_DEPENDS.${_path_}}:${_DEPENDS_PKGPATH.${_path_}}
+.    for _depend_ in ${_DEPENDS.${_path_}}
+REDUCED_DEPENDS+=	${_depend_}:${_DEPENDS_PKGPATH.${_path_}}
+.    endfor
 .  else
 .    for _depend_ in ${_DEPENDS.${_path_}}
 .      if empty(_GE_DEPENDS.${_path_}:M${_depend_})
