@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7842 2004/11/12 22:59:08 jmmv Exp $
+$NetBSD: CHANGES,v 1.7843 2004/11/13 08:06:26 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5260,3 +5260,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated suse_libjpeg to 7.3nb1 [wiz 2004-11-12]
 	Updated sudo to 1.6.8pl2 [cube 2004-11-12]
 	Updated gaim to 1.0.3 [jmmv 2004-11-12]
+	Updated gaim to 1.0.3nb1 [jmmv 2004-11-13]
