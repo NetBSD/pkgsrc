@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:51:56 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/10 13:56:42 taca Exp $
 bin/libwmf-config
 bin/libwmf-fontmap
 bin/wmf2eps
@@ -12,6 +12,7 @@ include/libwmf/libwmf/color.h
 include/libwmf/libwmf/defs.h
 include/libwmf/libwmf/eps.h
 include/libwmf/libwmf/fig.h
+include/libwmf/libwmf/foreign.h
 include/libwmf/libwmf/fund.h
 include/libwmf/libwmf/gd.h
 include/libwmf/libwmf/gd/gd.h
@@ -31,8 +32,8 @@ include/libwmf/libwmf/svg.h
 include/libwmf/libwmf/types.h
 include/libwmf/libwmf/x.h
 lib/libwmf-0.2.so
-lib/libwmf-0.2.so.1
-lib/libwmf-0.2.so.1.0
+lib/libwmf-0.2.so.2
+lib/libwmf-0.2.so.2.0
 lib/libwmf.a
 lib/libwmf.la
 lib/libwmf.so
@@ -137,6 +138,8 @@ share/doc/html/libwmf/html/fig_2font_8h.html
 share/doc/html/libwmf/html/fig_8c.html
 share/doc/html/libwmf/html/fig_8h.html
 share/doc/html/libwmf/html/files.html
+share/doc/html/libwmf/html/foreign_8c.html
+share/doc/html/libwmf/html/foreign_8h.html
 share/doc/html/libwmf/html/functions.html
 share/doc/html/libwmf/html/fund_8h.html
 share/doc/html/libwmf/html/gd_2bmp_8h.html
@@ -156,6 +159,7 @@ share/doc/html/libwmf/html/ipa_2magick_2region_8h.html
 share/doc/html/libwmf/html/ipa_2plot_2region_8h.html
 share/doc/html/libwmf/html/ipa_2svg_2region_8h.html
 share/doc/html/libwmf/html/ipa_2x_2region_8h.html
+share/doc/html/libwmf/html/ipa_2xgd_2region_8h.html
 share/doc/html/libwmf/html/ipa_8c.html
 share/doc/html/libwmf/html/ipa_8h.html
 share/doc/html/libwmf/html/macro_8h.html
@@ -179,6 +183,7 @@ share/doc/html/libwmf/html/src_2ipa_2ipa_2color_8h.html
 share/doc/html/libwmf/html/src_2ipa_2x_2color_8h.html
 share/doc/html/libwmf/html/src_2player_2color_8h.html
 share/doc/html/libwmf/html/stream_8c.html
+share/doc/html/libwmf/html/struct__gd__t.html
 share/doc/html/libwmf/html/struct__wmfAPI.html
 share/doc/html/libwmf/html/struct__wmfAPI__Options.html
 share/doc/html/libwmf/html/struct__wmfBMP.html
@@ -204,6 +209,7 @@ share/doc/html/libwmf/html/struct__wmfFunctionReference.html
 share/doc/html/libwmf/html/struct__wmfGS__FontData.html
 share/doc/html/libwmf/html/struct__wmfGS__FontInfo.html
 share/doc/html/libwmf/html/struct__wmfHead.html
+share/doc/html/libwmf/html/struct__wmfImage.html
 share/doc/html/libwmf/html/struct__wmfMapping.html
 share/doc/html/libwmf/html/struct__wmfMetaHeader.html
 share/doc/html/libwmf/html/struct__wmfPen.html
@@ -219,6 +225,7 @@ share/doc/html/libwmf/html/struct__wmfXML__FontInfo.html
 share/doc/html/libwmf/html/struct__wmf__eps__t.html
 share/doc/html/libwmf/html/struct__wmf__fig__t.html
 share/doc/html/libwmf/html/struct__wmf__fig__t_1_1__wmf__fig__image.html
+share/doc/html/libwmf/html/struct__wmf__foreign__t.html
 share/doc/html/libwmf/html/struct__wmf__gd__t.html
 share/doc/html/libwmf/html/struct__wmf__gd__t_1_1__wmf__gd__sink.html
 share/doc/html/libwmf/html/struct__wmf__magick__t.html
@@ -242,6 +249,12 @@ share/doc/html/libwmf/html/x_2draw_8h.html
 share/doc/html/libwmf/html/x_2font_8h.html
 share/doc/html/libwmf/html/x_8c.html
 share/doc/html/libwmf/html/x_8h.html
+share/doc/html/libwmf/html/xgd_2bmp_8h.html
+share/doc/html/libwmf/html/xgd_2device_8h.html
+share/doc/html/libwmf/html/xgd_2draw_8h.html
+share/doc/html/libwmf/html/xgd_2font_8h.html
+share/doc/html/libwmf/html/xgd_8c.html
+share/doc/html/libwmf/html/xgd_8h.html
 share/doc/html/libwmf/index.html
 share/doc/html/libwmf/smlogo2.gif
 share/doc/html/libwmf/tutapi.html

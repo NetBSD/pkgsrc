@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2001/10/24 22:11:02 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2001/12/10 13:56:42 taca Exp $
 #
 
-DISTNAME=		libwmf-0.2.1
+DISTNAME=		libwmf-0.2.2
 CATEGORIES=		graphics devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
 
@@ -11,6 +11,7 @@ COMMENT=		library for reading and converting WMF (Windows Meta Files), version 2
 
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--enable-magick
 CONFIGURE_ARGS+=	--includedir=${INCLUDEDIR}
 CONFIGURE_ARGS+=	--with-docdir=${HTMLDIR}
 USE_X11=		YES
