@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.3 2001/11/17 15:17:42 itohy Exp $
+$NetBSD: patch-ah,v 1.4 2001/11/18 05:37:44 itohy Exp $
 
 --- src/graphics.c.orig	Thu Aug 13 08:27:09 1998
-+++ src/graphics.c	Sun Nov 18 00:06:53 2001
++++ src/graphics.c	Sun Nov 18 13:32:53 2001
 @@ -30,7 +30,7 @@
  
  #ifdef linux
@@ -11,7 +11,16 @@ $NetBSD: patch-ah,v 1.3 2001/11/17 15:17:42 itohy Exp $
  #include <machine/endian.h>
  #elif defined (sgi)
  #include <sys/endian.h>
-@@ -2064,6 +2064,9 @@
+@@ -1758,6 +1758,8 @@
+ 		md->wd->markbeg=ceil(event->x*md->mg->step);
+ 		md->wd->marklength=ceil((firstmark-event->x)*md->mg->step);
+ 	    }
++	    if (md->wd->markbeg + md->wd->marklength > md->wd->tlength)
++		md->wd->marklength = md->wd->tlength - md->wd->markbeg;
+ 	    md->wd->ismark=True;
+ 	    md->wd->isplay=False;
+ 	    md->cg->pos=(md->wd->markbeg+md->wd->marklength)*md->wd->bpspl;
+@@ -2064,6 +2066,9 @@
  	if (XPending(dpy)) {
  	    XPeekEvent(dpy,&pev);
  	    switch (pev.type) {
