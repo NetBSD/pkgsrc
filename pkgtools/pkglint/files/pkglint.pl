@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.133 2005/02/17 23:31:07 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.134 2005/02/23 11:45:16 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -646,7 +646,7 @@ EOF
 	if ($opt_committer) {
 		foreach my $wrkdir (<$opt_packagedir/work*>) {
 			if ($opt_warn_workdir && -d $wrkdir) {
-				log_warning($opt_warn_workdir, NO_LINE_NUMBER, "should be cleaned up before committing the package.");
+				log_warning($wrkdir, NO_LINE_NUMBER, "should be cleaned up before committing the package.");
 			}
 		}
 		foreach my $backup (<$opt_packagedir/*~>, <$opt_packagedir/*/*~>) {
