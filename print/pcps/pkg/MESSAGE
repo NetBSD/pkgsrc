@@ -1,0 +1,12 @@
+$NetBSD: MESSAGE,v 1.1.1.1 2000/11/23 13:47:00 rh Exp $
+
+---------------------------------------------------------
+  The configuration f\ile is set for US 8.5x11 inch paper
+and some other options you may wish to customize.
+
+  PCPS is Copyright (c) 1992-2000 by MicroSource.
+
+  PCPS IS NOT FREE, this version is SHAREWARE.
+
+  See @@PREFIX@@/share/doc/pcps/license.doc for details.
+---------------------------------------------------------

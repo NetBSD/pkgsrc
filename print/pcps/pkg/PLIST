@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/23 13:47:00 rh Exp $
+bin/pcps
+man/man1/pcps.1
+share/doc/pcps/pcps.man
+share/doc/pcps/license.doc
+share/doc/pcps/register.doc
+@dirrm share/doc/pcps
+@unexec rm -f %D/bin/pcps.cfg
