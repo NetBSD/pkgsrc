@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2003/07/17 21:26:15 grant Exp $
+# $NetBSD: Makefile,v 1.28 2003/10/16 12:34:50 salo Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
-PKGREVISION=		3
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
@@ -21,7 +20,6 @@ USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
-USE_GNU_ICONV=		YES
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/irssi/libtool \
 			${WRKSRC}/lib/silcmath/mpi/libtool
@@ -44,24 +42,27 @@ CONFIGURE_ARGS+=	--without-libtoolfix
 
 .include "../../mk/bsd.prefs.mk"
 
+BUILD_DEFS+=		USE_INET6 SILC_CLIENT_WITH_PERL
+
 # Use native curses library.
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS")
 CONFIGURE_ARGS+=	--with-vcurses
 .elif (${OPSYS} == "Linux") || (${OPSYS} == "Darwin")
 CONFIGURE_ARGS+=        --with-ncurses
+.else
+# XXX: Need testing on other operating systems, use safe defaults for now.
+CONFIGURE_ARGS+=        --with-ncurses
 .endif
 
-# List it into IPv6-ready packages.
-BUILD_DEFS+=		USE_INET6
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-ipv6
+.endif
 
 # Optional support for perl scripting.
 # If you want to disable it, set SILC_CLIENT_WITH_PERL to NO
 # in your /etc/mk.conf
 #
-SILC_CLIENT_WITH_PERL?=	YES
-
-.if defined(SILC_CLIENT_WITH_PERL) && ${SILC_CLIENT_WITH_PERL} == YES
+.if defined(SILC_CLIENT_WITH_PERL) && !empty(SILC_CLIENT_WITH_PERL:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-perl-lib=${PREFIX}/lib/silc/perl5
 .include "../../lang/perl5/buildlink2.mk"
 PLIST_SRC+=		${PKGDIR}/PLIST.perl
@@ -87,5 +88,6 @@ post-install:
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
