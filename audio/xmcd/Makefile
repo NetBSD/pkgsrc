@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2003/09/27 17:07:34 grant Exp $
+# $NetBSD: Makefile,v 1.44 2003/09/28 09:13:55 jlam Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=    3
@@ -55,7 +55,7 @@ post-install:
 		done;							\
 	fi
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/motif.buildlink2.mk"
 

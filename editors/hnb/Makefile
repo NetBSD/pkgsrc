@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/27 17:07:35 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/28 09:13:56 jlam Exp $
 #
 
 DISTNAME=	hnb-1.8.1
@@ -16,6 +16,6 @@ GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/09/27 17:07:38 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/09/28 09:13:59 jlam Exp $
 #
 
 .if !defined(KDEBASE_BUILDLINK2_MK)
@@ -146,7 +146,7 @@ BUILDLINK_FILES.kdebase+=	lib/libkimgio.*
 BUILDLINK_FILES.kdebase+=	lib/libkspell.*
 BUILDLINK_FILES.kdebase+=	lib/libmediatool.*
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../graphics/libungif/buildlink2.mk"
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/glu/buildlink2.mk"

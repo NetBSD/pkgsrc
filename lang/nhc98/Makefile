@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/09/27 17:07:37 grant Exp $
+# $NetBSD: Makefile,v 1.23 2003/09/28 09:13:57 jlam Exp $
 
 DISTNAME=		nhc98src-1.16
 PKGNAME=		nhc98-1.16
@@ -35,5 +35,5 @@ PLIST_SUBST+=		HARCH=${HARCH}
 post-extract:
 	@${FIND} ${WRKSRC}/docs -type d -name \*CVS\* | ${XARGS} ${RM} -rf
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
