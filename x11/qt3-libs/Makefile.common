@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2003/08/02 03:58:24 grant Exp $
+# $NetBSD: Makefile.common,v 1.21 2003/08/02 04:24:59 grant Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -18,7 +18,7 @@ USE_GMAKE=		yes
 USE_GCC_SHLIB=		yes
 USE_LIBTOOL=		yes
 
-USE_GNU_TOOLS=		awk
+USE_GNU_TOOLS+=		awk
 
 QTPREFIX=		${PREFIX}/qt3
 
