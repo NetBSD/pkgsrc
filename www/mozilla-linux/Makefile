@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2002/12/05 05:51:19 grant Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/27 16:28:08 grant Exp $
 #
 
-DISTNAME=		mozilla-i686-pc-linux-gnu-1.2.1
-PKGNAME=		mozilla-linux-1.2.1
+DISTNAME=		mozilla-i686-pc-linux-gnu-1.3a
+PKGNAME=		mozilla-linux-1.3rc1
 CATEGORIES=		www
-MASTER_SITES=		${MASTER_SITE_MOZILLA:=mozilla1.2.1/}
+MASTER_SITES=		${MASTER_SITE_MOZILLA:=mozilla1.3a/}
 
 MAINTAINER=		grant@netbsd.org
 HOMEPAGE=		http://www.mozilla.org/
