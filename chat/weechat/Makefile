@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/05 17:45:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/05 17:49:20 xtraeme Exp $
 #
 
 DISTNAME=	weechat-0.0.6
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://weechat.flashtux.org/
 COMMENT=	Lightweight and user friendly curses based IRC client
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_USES_MSGFMT=	yes
 
