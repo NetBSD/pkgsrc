@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2000/07/15 20:39:20 agc Exp $
+# $NetBSD: Makefile,v 1.57 2000/08/15 23:13:59 wiz Exp $
 
 DISTNAME=		gimp-1.0.4
 CATEGORIES=		graphics
@@ -26,7 +26,7 @@ IS_INTERACTIVE=		yes
 .endif
 USE_X11BASE=		yes
 USE_GMAKE=		yes
-USE_PKGLIBTOOL=		yes
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 EVAL_PREFIX+=		GTKDIR=gtk+
