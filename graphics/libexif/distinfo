@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2002/12/24 17:36:28 wiz Exp $
+$NetBSD: distinfo,v 1.7 2003/01/31 10:20:07 shell Exp $
 
-SHA1 (libexif-0.5.8.tar.gz) = 182329205a4240efb1087a3ef43bb1fd68c26fc1
-Size (libexif-0.5.8.tar.gz) = 404169 bytes
+SHA1 (libexif-0.5.9.tar.bz2) = 77959792f918919f198f55451756374634f93b7e
+Size (libexif-0.5.9.tar.bz2) = 309887 bytes
