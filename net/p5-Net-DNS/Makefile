@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/03 10:56:57 mjl Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/26 11:01:01 seb Exp $
 #
 
 DISTNAME=		Net-DNS-0.33
@@ -19,9 +19,7 @@ DEPENDS+=		p5-Digest-MD5>=2.12:../../security/p5-Digest-MD5
 
 BUILDLINK_DEPENDS.perl=	perl>=5.6.0
 USE_BUILDLINK2=		YES
-TEST_TARGET=		test
 
-PERL5_CONFIGURE=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/DNS/.packlist
 
 .include "../../lang/perl5/module.mk"
