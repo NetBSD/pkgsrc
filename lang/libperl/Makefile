@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2001/02/17 09:07:18 agc Exp $
+# $NetBSD: Makefile,v 1.15 2001/05/11 14:52:21 jlam Exp $
 
 DISTNAME=		perl-${PERL_VERSION}
-PKGNAME=		libperl-${PERL_VERSION}nb1
+PKGNAME=		libperl-${PERL_VERSION}nb2
 PERL_VERSION=		5.6.0
 CATEGORIES=		lang devel perl5
 MASTER_SITES=		ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/ \
@@ -12,10 +12,22 @@ HOMEPAGE=		http://language.perl.com/index.html
 COMMENT=		PERL core library and DynaLoader as a shared object
 
 USE_PERL5=		# defined
-DEPENDS+=		perl>=${PERL_VERSION}:../../lang/perl5
+PERL_REQD=		${PERL_VERSION}nb1
 
-EXTRACT_ELEMENTS=	${DISTNAME}/ext/DynaLoader
-WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
+DISTINFO_FILE=		${.CURDIR}/../../lang/perl5-base/distinfo
+PATCHDIR=		${.CURDIR}/../../lang/perl5-base/patches
+
+HAS_CONFIGURE=		# defined
+CONFIGURE_ENV+=		PREFIX=${PREFIX}
+CONFIGURE_SCRIPT=	./Configure
+CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} -Doptimize="${CFLAGS}" \
+                        -Darchname=${MACHINE_ARCH}-${LOWER_OPSYS} \
+                        -Dcc=gcc -Dusemymalloc=false
+CONFIGURE_ARGS+=	-Duseshrplib=true
+MAKE_ENV+=              LD_LIBRARY_PATH=${WRKSRC}
+ALL_TARGET=		lib/Config.pm libperl.so
+
+DYNALOADER_SRCDIR=	${WRKSRC}/ext/DynaLoader
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -25,13 +37,15 @@ IGNORE=			${PKGNAME} needs shared objects
 .endif
 .endif
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-do-build:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} DynaLoader.o
+post-build:
+	cd ${DYNALOADER_SRCDIR} &&					\
+		${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL &&		\
+		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} DynaLoader.o
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/DynaLoader.o ${PERL5_ARCHLIB}/DynaLoader_pic.o
+	${INSTALL_DATA} ${WRKSRC}/libperl.so				\
+		${PERL5_ARCHLIB}/CORE/libperl.so
+	${INSTALL_DATA} ${DYNALOADER_SRCDIR}/DynaLoader.o		\
+		${PERL5_ARCHLIB}/DynaLoader_pic.o
 
 .include "../../mk/bsd.pkg.mk"
