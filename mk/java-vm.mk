@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.38 2005/02/11 16:36:49 tv Exp $
+# $NetBSD: java-vm.mk,v 1.39 2005/03/24 17:46:01 tv Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -268,8 +268,6 @@ _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/wonka
 _JAVA_BASE_CLASSES=	wre.jar
 SCRIPTS_ENV+=		JAVAC="jikes"
 .endif
-_JDK_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_JVM}}:${_JDK_PKGSRCDIR}
-_JRE_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_JRE.${_PKG_JVM}}}:${_JRE_PKGSRCDIR}
 
 .if defined(_JAVA_HOME_DEFAULT)
 _JAVA_HOME=		${_JAVA_HOME_DEFAULT}
@@ -279,12 +277,8 @@ EVAL_PREFIX+=		_JAVA_HOME=${_JAVA_PKGBASE.${_PKG_JVM}}
 
 # We always need a run-time dependency on the JRE.
 .if defined(_JRE_PKGSRCDIR)
-.  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[Nn][Oo])
-.    if exists(${_JRE_PKGSRCDIR}/buildlink3.mk)
-.      include "${_JRE_PKGSRCDIR}/buildlink3.mk"
-.    endif
-.  else
-DEPENDS+=		${_JRE_DEPENDENCY}
+.  if exists(${_JRE_PKGSRCDIR}/buildlink3.mk)
+.    include "${_JRE_PKGSRCDIR}/buildlink3.mk"
 .  endif
 .endif
 
@@ -293,12 +287,8 @@ DEPENDS+=		${_JRE_DEPENDENCY}
 #
 .if empty(USE_JAVA:M[rR][uU][nN])
 .  if defined(_JDK_PKGSRCDIR)
-.    if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[Nn][Oo])
-.      if exists(${_JDK_PKGSRCDIR}/buildlink3.mk)
-.        include "${_JDK_PKGSRCDIR}/buildlink3.mk"
-.      endif
-.    else
-BUILD_DEPENDS+=		${_JDK_DEPENDENCY}
+.    if exists(${_JDK_PKGSRCDIR}/buildlink3.mk)
+.      include "${_JDK_PKGSRCDIR}/buildlink3.mk"
 .    endif
 .  endif
 .endif
