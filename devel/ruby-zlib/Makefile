@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/03/16 02:01:10 taca Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/28 06:06:51 taca Exp $
 # FreeBSD: ports/archivers/ruby-zlib/Makefile,v 1.7 2000/09/26 22:01:12 knu Exp
 
 DISTNAME=	ruby-zlib-${VERSION}
-PKGNAME=	${RUBY_PKGNAMEPREFIX}zlib-${VERSION}
+PKGNAME=	${RUBY_PKGPREFIX}-zlib-${VERSION}
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://www.blue.sky.or.jp/atelier/ruby/
 
@@ -10,12 +10,13 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.blue.sky.or.jp/atelier/
 COMMENT=	Zlib library for Ruby
 
-VERSION=	0.6.0
-DIST_SUBDIR=	ruby
-USE_RUBY_EXTCONF= yes
+VERSION=		0.6.0
+RUBY_VERSION=		${RUBY16_VERSION}
+USE_RUBY_EXTCONF=	yes
 
-INSTALL_TARGET=	site-install
-DOCS=	ChangeLog doc/zlib.html doc/zlib.rd doc/zlib.ja.html doc/zlib.rd.ja
+INSTALL_TARGET=		site-install
+DOCS=			ChangeLog doc/zlib.html doc/zlib.rd \
+			doc/zlib.ja.html doc/zlib.rd.ja
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/zlib
@@ -23,5 +24,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/zlib
 .endfor
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
