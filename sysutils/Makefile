@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.263 2004/10/11 09:42:35 kim Exp $
+# $NetBSD: Makefile,v 1.264 2004/10/11 15:57:02 minskim Exp $
 
 COMMENT=	System utilities
 
@@ -20,6 +20,7 @@ SUBDIR+=	bbsload
 SUBDIR+=	bchunk
 SUBDIR+=	bkpupsd
 SUBDIR+=	ccd2iso
+SUBDIR+=	ccze
 SUBDIR+=	cdbkup
 SUBDIR+=	cdrdao
 SUBDIR+=	cdrecord
