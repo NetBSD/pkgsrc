@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/03/26 20:09:55 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2004/03/31 07:12:21 xtraeme Exp $
 
 DISTNAME=		ettercap-0.6.b
 PKGREVISION=		1
@@ -15,12 +15,12 @@ CONFIGURE_ARGS+=	--enable-plugins \
 			--enable-https \
 			--disable-gtk
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 USE_NCURSES=		# putwin(), pechochar()
 PTHREAD_OPTS+=		require
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
-LIBS+=			-ldes
+LIBS+=			-ldes ${PTHREAD_LDFLAGS}
 
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/plugins
 INSTALL_DIRS=		${WRKSRC} ${WRKSRC}/plugins
@@ -35,7 +35,7 @@ post-buildlink:
 			${BUILDLINK_DIR}/include; \
 	fi
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
