@@ -1,4 +1,4 @@
-# $NetBSD: arch.mk,v 1.5 2003/03/20 23:34:36 wiz Exp $
+# $NetBSD: arch.mk,v 1.6 2004/07/18 18:05:12 dmcmahill Exp $
 #
 
 .include "../../mk/bsd.prefs.mk"
@@ -24,6 +24,9 @@ _PVM_ARCH=	# empty
 .elif ${OPSYS} == "SunOS"
 _PVM_OPSYS=	SUN4
 _PVM_ARCH=	SOL2	# Solaris (SunOS 5.*)
+.elif ${OPSYS} == "Darwin"
+_PVM_OPSYS=    DARWIN
+_PVM_ARCH=     # empty
 .else
 _PVM_OPSYS=	UNKNOWN
 _PVM_ARCH=	# empty
