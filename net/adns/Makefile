@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:50:58 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/22 12:20:33 xtraeme Exp $
 #
 
-DISTNAME=	adns-1.0
+DISTNAME=	adns-1.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.chiark.greenend.org.uk/~ian/adns/ftp/
 
