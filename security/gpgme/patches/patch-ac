@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.2 2004/10/23 15:00:48 shannonjr Exp $
+$NetBSD: patch-ac,v 1.3 2004/11/04 20:41:21 shannonjr Exp $
 
 --- configure.orig	2004-10-22 12:52:27.000000000 -0600
 +++ configure
+@@ -19827,7 +19827,7 @@ fi
+ 
+ # Checks for header files.
+ 
+-for ac_header in sys/select.h
++for ac_header in rfuncs.h sys/select.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
 @@ -21876,7 +21876,7 @@ esac
  fi
  GPGSM=$ac_cv_path_GPGSM

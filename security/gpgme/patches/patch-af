@@ -1,8 +1,18 @@
-$NetBSD: patch-af,v 1.1 2004/10/23 15:00:48 shannonjr Exp $
+$NetBSD: patch-af,v 1.2 2004/11/04 20:41:21 shannonjr Exp $
 
---- ./gpgme/get-env.c.orig	2003-09-13 11:45:04.000000000 -0600
-+++ ./gpgme/get-env.c
-@@ -52,7 +52,26 @@ _gpgme_getenv (const char *name, char **
+--- gpgme/get-env.c.orig	2003-09-13 11:45:04.000000000 -0600
++++ gpgme/get-env.c
+@@ -21,6 +21,9 @@
+ #include <config.h>
+ #endif
+ #include <stdlib.h>
++#if HAVE_RFUNCS_H
++#include <rfuncs.h>
++#endif
+ #include <errno.h>
+ #include <string.h>
+ 
+@@ -52,7 +55,26 @@ _gpgme_getenv (const char *name, char **
  
  #else
  
