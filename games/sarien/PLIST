@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/10 16:16:33 jmmv Exp $
+bin/sarien
+share/doc/sarien/README.agi
+share/doc/sarien/README.djgpp
+share/doc/sarien/README.macos
+share/doc/sarien/README.pocketpc
+share/doc/sarien/README.ports
+share/doc/sarien/README.sdl
+share/doc/sarien/README.svgalib
+share/doc/sarien/README.turboc
+share/doc/sarien/README.unix
+share/doc/sarien/README.win32
+share/examples/sarien/sarien.conf
+@dirrm share/examples/sarien
+@dirrm share/doc/sarien
