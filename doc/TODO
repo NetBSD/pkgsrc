@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1482 2004/03/08 22:14:19 minskim Exp $
+$NetBSD: TODO,v 1.1483 2004/03/08 22:18:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -270,7 +270,6 @@ Suggested package updates
 	o openh323-1.11.2
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
-	o oss-3.9.8d
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
 	o p5-Crypt-PasswdMD5-1.3
