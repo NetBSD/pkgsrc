@@ -1,8 +1,31 @@
-$NetBSD: patch-ab,v 1.1 2002/04/18 16:42:31 yyamano Exp $
+$NetBSD: patch-ab,v 1.2 2004/12/17 22:41:15 wiz Exp $
 
---- unix/unix.c.orig	Sat Mar  2 20:12:55 2002
+--- unix/unix.c.orig	1999-11-07 15:08:21.000000000 +0100
 +++ unix/unix.c
-@@ -698,7 +698,11 @@
+@@ -319,8 +319,8 @@ iztimes *t;             /* return value:
+    a file size of -1 */
+ {
+   struct stat s;        /* results of stat() */
+-  char name[FNMAX];
+-  int len = strlen(f);
++  char *name;
++  size_t len = strlen(f);
+ 
+   if (f == label) {
+     if (a != NULL)
+@@ -331,6 +331,11 @@ iztimes *t;             /* return value:
+       t->atime = t->mtime = t->ctime = label_utim;
+     return label_time;
+   }
++
++  name = malloc(len+1);
++  if (!name)
++    return 0;
++
+   strcpy(name, f);
+   if (name[len - 1] == '/')
+     name[len - 1] = '\0';
+@@ -698,7 +703,11 @@ void version_local()
  #ifdef __QNXNTO__
        " (QNX Neutrino)",
  #else
