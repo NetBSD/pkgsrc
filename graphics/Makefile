@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/04/21 00:47:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 1998/04/28 15:02:54 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -8,6 +8,7 @@
 #    SUBDIR += camediaplay
 #    SUBDIR += dc3play
 #    SUBDIR += dore
+    SUBDIR += fly
 #    SUBDIR += fxtv
     SUBDIR += gd
 #    SUBDIR += geomview
