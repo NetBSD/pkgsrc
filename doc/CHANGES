@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8203 2004/12/01 16:44:02 wiz Exp $
+$NetBSD: CHANGES,v 1.8204 2004/12/01 20:38:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5700,3 +5700,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated guile to 1.6.6 [wiz 2004-12-01]
 	Updated frozen-bubble to 1.0.0nb5 [wiz 2004-12-01]
 	Updated aide to 0.10 [wiz 2004-12-01]
+	Updated geg to 1.0.2 [wiz 2004-12-01]

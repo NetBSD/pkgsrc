@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2620 2004/12/01 20:15:42 darcy Exp $
+$NetBSD: TODO,v 1.2621 2004/12/01 20:38:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -497,7 +497,6 @@ Suggested package updates
 	o gdeskcal-0.57.1
 	o gdm-2.6.0.6
 	o gdm1-2.2.5.5
-	o geg-1.0.2
 	o generator-0.35
 	o getmail-4.2.4
 	o gettext-0.14.1
