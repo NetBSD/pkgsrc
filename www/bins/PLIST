@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.11 2003/10/05 12:03:33 martti Exp $
+@comment $NetBSD: PLIST,v 1.12 2003/12/07 15:17:08 martti Exp $
+bin/anti_bins
 bin/bins
 bin/bins_cleanupgallery
 bin/bins_edit
@@ -26,6 +27,7 @@ share/doc/html/bins/usage_desc_gui.html
 share/doc/html/bins/usage_desc_gui_gqview.html
 share/doc/html/bins/usage_desc_gui_nautilus.html
 share/doc/html/bins/usage_desc_xml.html
+share/doc/html/bins/usage_httpd.html
 share/examples/bins/binsrc
 share/examples/bins/templates.default/details.html
 share/examples/bins/templates.default/footer.html
@@ -36,6 +38,15 @@ share/examples/bins/templates.default/path.html
 share/examples/bins/templates.default/subalbum.html
 share/examples/bins/templates.default/thumbnail.html
 share/examples/bins/templates.default/tree.html
+share/examples/bins/templates.jab/details.html
+share/examples/bins/templates.jab/footer.html
+share/examples/bins/templates.jab/image.html
+share/examples/bins/templates.jab/imagelist.html
+share/examples/bins/templates.jab/navbar.html
+share/examples/bins/templates.jab/path.html
+share/examples/bins/templates.jab/subalbum.html
+share/examples/bins/templates.jab/thumbnail.html
+share/examples/bins/templates.jab/tree.html
 share/examples/bins/templates.joi/details.html
 share/examples/bins/templates.joi/footer.html
 share/examples/bins/templates.joi/image.html
@@ -79,16 +90,38 @@ share/examples/bins/templates.joi/thumbnav.html
 share/examples/bins/templates.joi/thumbnavrow.html
 share/examples/bins/templates.joi/tree.html
 share/examples/bins/templates.joi/xlink.html
+share/examples/bins/templates.new/th.html
+share/examples/bins/templates.new/thubnail.html
+share/examples/bins/templates.satyap/bodyheader.html
+share/examples/bins/templates.satyap/details.html
+share/examples/bins/templates.satyap/footer.html
+share/examples/bins/templates.satyap/header.html
+share/examples/bins/templates.satyap/image.html
+share/examples/bins/templates.satyap/imagelist.html
+share/examples/bins/templates.satyap/navbar.html
+share/examples/bins/templates.satyap/path.html
+share/examples/bins/templates.satyap/static/style.css
+share/examples/bins/templates.satyap/subalbum.html
+share/examples/bins/templates.satyap/thheader.html
+share/examples/bins/templates.satyap/thumbnail.html
+share/examples/bins/templates.satyap/tree.html
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bins.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bins.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bins.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/zh/LC_MESSAGES/bins.mo
 @dirrm share/doc/html/bins
 @dirrm share/examples/bins/templates.default
+@dirrm share/examples/bins/templates.jab
 @dirrm share/examples/bins/templates.joi/static
 @dirrm share/examples/bins/templates.joi
+@dirrm share/examples/bins/templates.new
+@dirrm share/examples/bins/templates.satyap/static
+@dirrm share/examples/bins/templates.satyap
 @dirrm share/examples/bins

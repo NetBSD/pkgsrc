@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2003/10/05 12:03:33 martti Exp $
+$NetBSD: distinfo,v 1.20 2003/12/07 15:17:08 martti Exp $
 
-SHA1 (bins-1.1.23.tar.bz2) = b72bead94d29564c2c314657c32be1523bd3e1d9
-Size (bins-1.1.23.tar.bz2) = 171397 bytes
+SHA1 (bins-1.1.24.tar.bz2) = 85a6e8063f7a8301ca8d874b745f3401e92f3625
+Size (bins-1.1.24.tar.bz2) = 181499 bytes
