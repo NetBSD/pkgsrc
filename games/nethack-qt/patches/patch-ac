@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2000/04/06 18:00:14 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.4 2000/04/14 21:13:58 dmcmahill Exp $
 
 --- sys/unix/Makefile.src.orig	Sat Dec 11 00:21:05 1999
 +++ sys/unix/Makefile.src	Thu Apr  6 11:54:15 2000
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.3 2000/04/06 18:00:14 dmcmahill Exp $
  
  # Only used for Qt interface (other interfaces are standard C)
 -CXXFLAGS = -g $(CFLAGS) -I. -I$(QTDIR)/include
-+CXXFLAGS = -g $(CFLAGS) -I. -I$(QTDIR)/include/qt
++CXXFLAGS = -g $(CFLAGS) -I. -I$(QTDIR)/include/qt2
  # Qt is C++, so define the compiler and linker thus required:
  #CXX=g++
 @@ -166,6 +166,6 @@
@@ -28,7 +28,7 @@ $NetBSD: patch-ac,v 1.3 2000/04/06 18:00:14 dmcmahill Exp $
  #
  # libraries for Qt
 -WINQTLIB = -L$(QTDIR)/lib -lqt
-+WINQTLIB = -Wl,-R$(QTDIR)/lib -L$(QTDIR)/lib -lqt -lXpm -lX11 -lICE -lSM -lz -lpng -lXext
++WINQTLIB = -Wl,-R$(QTDIR)/lib/qt2 -L$(QTDIR)/lib/qt2 -lqt -lXpm -lX11 -lICE -lSM -lz -lpng -lXext
  #
  # libraries for KDE (with Qt)
 @@ -200,5 +200,5 @@
