@@ -1,0 +1,6 @@
+RDFSummary is a product to display content from other web sites
+provided they make it available in RSS 0.9, RSS 0.91 or
+"RSS 1.0":http://purl.org/rss/1.0/spec format.
+The benefit of doing it this way is that the data you get is not
+encumbered with HTML, giving you more flexibility when applying your
+own look and feel.
