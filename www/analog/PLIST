@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/13 13:03:13 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/02/20 16:44:27 tron Exp $
 bin/analog
 etc/analog.cfg.default
 @exec test -f %D/etc/analog.cfg || cp -p %D/%F %D/etc/analog.cfg
@@ -100,6 +100,30 @@ lib/analog/images/barh4.gif
 lib/analog/images/barh4.png
 lib/analog/images/barh8.gif
 lib/analog/images/barh8.png
+lib/analog/images/bari1.gif
+lib/analog/images/bari1.png
+lib/analog/images/bari16.gif
+lib/analog/images/bari16.png
+lib/analog/images/bari2.gif
+lib/analog/images/bari2.png
+lib/analog/images/bari32.gif
+lib/analog/images/bari32.png
+lib/analog/images/bari4.gif
+lib/analog/images/bari4.png
+lib/analog/images/bari8.gif
+lib/analog/images/bari8.png
+lib/analog/images/barj1.gif
+lib/analog/images/barj1.png
+lib/analog/images/barj16.gif
+lib/analog/images/barj16.png
+lib/analog/images/barj2.gif
+lib/analog/images/barj2.png
+lib/analog/images/barj32.gif
+lib/analog/images/barj32.png
+lib/analog/images/barj4.gif
+lib/analog/images/barj4.png
+lib/analog/images/barj8.gif
+lib/analog/images/barj8.png
 lib/analog/images/html2.gif
 lib/analog/images/html2.png
 lib/analog/images/sq0.png
@@ -282,6 +306,8 @@ share/doc/analog/bare8.gif
 share/doc/analog/barf8.gif
 share/doc/analog/barg8.gif
 share/doc/analog/barh8.gif
+share/doc/analog/bari8.gif
+share/doc/analog/barj8.gif
 share/doc/analog/basiccmd.html
 share/doc/analog/cache.html
 share/doc/analog/compout.html
