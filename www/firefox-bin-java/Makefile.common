@@ -1,0 +1,34 @@
+# $NetBSD: Makefile.common,v 1.1 2004/10/01 19:20:27 wiz Exp $
+
+DISTNAME=		${MOZ_BIN}-java-1.1
+PKGREVISION=		1
+CATEGORIES=		www lang
+MASTER_SITES=		# empty
+DISTFILES=		# empty
+
+MAINTAINER=		kei@NetBSD.org
+COMMENT?=		Java Run Time Environment (JRE) 1.4 plugin for firefox-bin
+
+DEPENDS+=		sun-jre14-[0-9]*:../../lang/sun-jre14
+
+ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
+
+WRKSRC=			${WRKDIR}
+NO_CHECKSUM=		YES
+NO_BUILDLINK=		YES
+NO_EXTRACT=		YES
+NO_CONFIGURE=		YES
+NO_BUILD=		YES
+
+MOZ_NAME?=		firefox-linux
+MOZ_BIN?=		${MOZ_NAME:S/linux/bin/}
+
+PLIST_SUBST+=		MOZ_NAME=${MOZ_NAME:Q}
+PLIST_SRC=		${.CURDIR}/../firefox-bin-java/PLIST
+
+NS_PLUGINS_DIR=	${PREFIX}/lib/${MOZ_NAME}/plugins
+PLUGIN=		${PREFIX}/java/sun-1.4/plugin/i386/ns610-gcc32/libjavaplugin_oji.so
+
+do-install:
+	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
+	${LN} -s ${PLUGIN} ${NS_PLUGINS_DIR}/libjavaplugin_oji.so
