@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1998/12/30 01:07:07 tron Exp $
+# $NetBSD: Makefile,v 1.20 1999/03/22 09:38:24 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/11 03:54:43 fenner Exp 
 #
 
@@ -18,14 +18,6 @@ DEPENDS+=	tk-8.0p2:../../x11/tk80
 #DEPENDS+=	gsm-1.0.10:${GSM_DIR}
 
 NOT_FOR_ARCHS=	alpha	#filter.cc compiler error
-
-.include "../../mk/bsd.prefs.mk"
-
-.ifdef WRKOBJDIR
-BUILD_ROOT=	${WRKOBJDIR}
-.else
-BUILD_ROOT=	${PKGSRCDIR}
-.endif
 
 GSM_DIR=	${BUILD_ROOT}/audio/gsm
 GSM_WORK=	${GSM_DIR}/${WRKDIR:T}/gsm-1.0-pl10
