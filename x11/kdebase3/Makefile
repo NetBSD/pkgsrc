@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2005/03/23 21:44:37 markd Exp $
+# $NetBSD: Makefile,v 1.70 2005/03/24 04:47:58 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -74,8 +74,9 @@ CONFIGURE_ENV+=		RUN_KAPPFINDER=no
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
+PKG_DEFAULT_OPTIONS+=	sasl2
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kdebase
-PKG_SUPPORTED_OPTIONS=	samba
+PKG_SUPPORTED_OPTIONS=	sasl2 samba
 .include "../../mk/bsd.options.mk"
 
 BUILDLINK_DEPENDS.Xrandr+=      Xrandr>=1.0
@@ -143,6 +144,9 @@ post-install:
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Msasl2)
+.include "../../security/cyrus-sasl2/buildlink3.mk"
+.endif
 .include "../../x11/Xrandr/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/xcursor/buildlink3.mk"
