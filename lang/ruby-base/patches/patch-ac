@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/06/30 08:07:10 taca Exp $
+$NetBSD: patch-ac,v 1.2 2001/12/30 16:21:52 taca Exp $
 
---- ext/curses/extconf.rb.orig	Wed Mar 21 17:04:11 2001
+--- ext/curses/extconf.rb.orig	Mon Dec  3 19:04:46 2001
 +++ ext/curses/extconf.rb
 @@ -6,17 +6,9 @@
  
@@ -8,7 +8,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/06/30 08:07:10 taca Exp $
  have_library("mytinfo", "tgetent") if /bow/ =~ RUBY_PLATFORM
 -if have_header("ncurses.h") and have_library("ncurses", "initscr")
 +have_library("termcap", "tgetent") 
-+if have_library("curses", "initscr")
++if have_header("curses.h") and have_library("curses", "initscr")
    make=true
 -elsif have_header("ncurses/curses.h") and have_library("ncurses", "initscr")
 -  make=true
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/06/30 08:07:10 taca Exp $
 -  make=true
 -else
 -  have_library("termcap", "tgetent") 
--  if have_library("curses", "initscr")
+-  if have_header("curses.h") and have_library("curses", "initscr")
 -    make=true
 -  end
  end
