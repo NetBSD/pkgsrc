@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9237 2005/02/20 16:20:48 minskim Exp $
+$NetBSD: CHANGES,v 1.9238 2005/02/20 20:42:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -986,3 +986,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libvisual-plugins to 0.2.0 [wiz 2005-02-20]
 	Updated libvisual-xmms to 0.2.0 [wiz 2005-02-20]
 	Added scid-3.6.1 [minskim 2005-02-20]
+	Updated amarok to 1.2 [wiz 2005-02-20]
