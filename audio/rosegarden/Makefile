@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/01/22 07:15:00 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/28 12:54:34 xtraeme Exp $
 
 DISTNAME=	rosegarden-2.1pl4
 PKGNAME=	rosegarden-2.1.4
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.cannam.demon.co.uk/rosegarden/distribution/
 
@@ -13,7 +14,7 @@ USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
 MAKE_ENV+=	GCC=yes
-USE_X11BASE=	YES
+USE_X11=	YES
 
 post-extract:
 	cd ${WRKSRC} && ${MV} Rosegarden Rosegarden.in
