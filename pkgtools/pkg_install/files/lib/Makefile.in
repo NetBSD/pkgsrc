@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.4 2003/09/19 02:11:22 grant Exp $
+# $NetBSD: Makefile.in,v 1.5 2003/09/23 06:36:21 grant Exp $
 
 srcdir=		@srcdir@
 
@@ -7,7 +7,7 @@ pkgdbdir=	@pkgdbdir@
 RANLIB=		@RANLIB@
 AR=		@AR@
 CC=		@CC@
-CPPFLAGS=	$(DEFS) @CPPFLAGS@ -I. -I$(srcdir)
+CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir)
 DEFS=		@DEFS@ -DDEF_LOG_DIR=\"$(pkgdbdir)\"
 CFLAGS=		@CFLAGS@
 
