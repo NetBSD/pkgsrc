@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/11/14 08:04:49 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/11/14 08:43:17 tron Exp $
 bin/gnome-guile-repl
 bin/gnome-python-repl
 bin/guppi-gnumeric
@@ -387,6 +387,7 @@ share/pixmaps/guppi/surface.xpm
 @dirrm share/guppi
 @dirrm share/gnome/help/guppi/C/images
 @dirrm share/gnome/help/guppi/C
+@dirrm share/gnome/help/guppi
 @dirrm lib/guppi/plug-ins/${PKGVERSION}/plot/xybox
 @dirrm lib/guppi/plug-ins/${PKGVERSION}/plot/text
 @dirrm lib/guppi/plug-ins/${PKGVERSION}/plot/scatter
@@ -415,6 +416,9 @@ share/pixmaps/guppi/surface.xpm
 @dirrm lib/guppi/plug-ins/${PKGVERSION}/data_impl/curve
 @dirrm lib/guppi/plug-ins/${PKGVERSION}/data_impl/category
 @dirrm lib/guppi/plug-ins/${PKGVERSION}/data_impl
+@dirrm lib/guppi/plug-ins/${PKGVERSION}
+@dirrm lib/guppi/plug-ins
+@dirrm lib/guppi
 @dirrm include/libguppitank
 @dirrm include/libguppi
 @exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/libguppi.m4 ${LOCALBASE}/share/aclocal/libguppi.m4
