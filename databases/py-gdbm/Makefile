@@ -1,24 +1,30 @@
-# $NetBSD: Makefile,v 1.14 2001/02/16 14:17:37 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2002/01/28 09:30:08 drochner Exp $
 #
 
-DISTNAME=	${PY_DISTNAME}
-PKGNAME=	py-gdbm-${PY_VERSION}
-WRKSRC=		${PY_WRKSRC}
+PKGNAME=	${PYPKGPREFIX}-gdbm-0
 CATEGORIES=	databases
-MASTER_SITES=	${PY_MASTER_SITES}
 
 MAINTAINER=	dolecek@ics.muni.cz
 HOMEPAGE=	http://www.python.org/doc/lib/module-gdbm.html
 COMMENT=	Python interface to gdbm - GNU database manager
 
 DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
+EVAL_PREFIX+=	GDBMDIR=gdbm
 
-EXTRACT_ELEMENTS=	${PY_MODULES}/gdbmmodule.c
+EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/gdbmmodule.c
+PYDISTUTILSPKG=	yes
+PYBINMODULE=	yes
+PY_PATCHPLIST=	yes
 
-do-configure: python-std-do-configure
+PY_SETUP_SUBST+= GDBMPREFIX=${GDBMDIR}
 
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/gdbmmodule.so ${PY_LIBDIR}/lib-dynload
+# ignore errors due to missing files (EXTRACT_ELEMENTS!)
+do-patch:
+	(cd ${WRKSRC}; \
+	for f in ${PATCHDIR}/patch-*;do \
+	${PATCH} --batch <$$f || true; \
+	done)
 
-.include "../../lang/python/Makefile.inc"
+.include "../../lang/python/srcdist.mk"
+.include "../../lang/python/extension.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
