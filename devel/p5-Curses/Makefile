@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/10/13 14:09:57 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/20 23:30:50 seb Exp $
 # FreeBSD Id: Makefile,v 1.8 1998/04/04 13:58:26 vanilla Exp
 #
 
@@ -19,10 +19,9 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Curses/.packlist
 
 MAKE_PARAMS=	PANELS
 
-do-configure:
+pre-configure:
 	@${LN} -sf ${WRKSRC}/hints/c-netbsd.ncurses.h ${WRKSRC}/c-config.h
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
 
 .include "../../devel/ncurses/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
