@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/09/17 21:11:35 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/26 18:19:47 wiz Exp $
 #
 # This Makefile fragment is included by packages that use enchant.
 #
@@ -9,7 +9,7 @@
 ENCHANT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			enchant
-BUILDLINK_DEPENDS.enchant?=		enchant>=0.4.0
+BUILDLINK_DEPENDS.enchant?=		enchant>=1.1.3
 BUILDLINK_PKGSRCDIR.enchant?=		../../textproc/enchant
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.enchant=enchant

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 21:11:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/26 18:19:46 wiz Exp $
 #
 
-DISTNAME=		enchant-0.4.0
+DISTNAME=		enchant-1.1.3
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=abiword/}
 
 MAINTAINER=		wiz@NetBSD.org
-HOMEPAGE=		http://abiword.sourceforge.net/enchant/
+HOMEPAGE=		http://www.abisource.com/enchant/
 COMMENT=		Generic spell checking library
 
 USE_BUILDLINK2=		yes
