@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/08/06 13:30:42 agc Exp $
+# $NetBSD: Makefile,v 1.8 1999/10/04 21:41:03 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.7 1998/08/20 07:35:21 asami Exp
 #
 
@@ -15,6 +15,9 @@ USE_X11BASE=		yes
 
 NOT_FOR_PLATFORM=	*-*-alpha	#core dumps
 
+.ifndef DISPLAY
+IS_INTERACTIVE=         yes
+.endif
 ALL_TARGET=		xlispstat
 
 .include "../../mk/bsd.prefs.mk"
