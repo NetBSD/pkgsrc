@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/12/22 16:15:45 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.16 2000/06/01 11:23:35 rh Exp $
 #
 # IMPORTANT: Before upgrading this package, please read files/README.next_rev!
 
@@ -18,7 +18,7 @@ RESTRICTED=	"no paid distribution of SCILAB"
 NO_CDROM=	${RESTRICTED}
 
 USE_FORTRAN=	yes
-USE_LIBTOOL=    yes
+USE_PKGLIBTOOL=    yes
 USE_X11BASE=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/05/05 12:08:37 veego Exp $
+# $NetBSD: Makefile,v 1.15 2000/06/01 11:23:19 rh Exp $
 #
 
 DISTNAME=	openldap-1.2.7
@@ -16,7 +16,7 @@ HOMEPAGE=	http://www.OpenLDAP.org/
 
 CONFLICTS+=	ldapsdk*
 
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

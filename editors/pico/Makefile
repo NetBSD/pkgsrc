@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/12/02 17:01:05 bouyer Exp $
+# $NetBSD: Makefile,v 1.19 2000/06/01 11:23:25 rh Exp $
 #
 
 DISTNAME=	pine4.21
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.washington.edu/pine/
 
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 
 do-build:
 	cd ${WRKSRC} && ./build ${BUILDNAME} CC="${LIBTOOL} ${CC}" \

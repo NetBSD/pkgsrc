@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/05/08 17:23:46 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2000/06/01 11:23:42 rh Exp $
 #
 
 DISTNAME=	t1lib-1.0.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.neuroinformatik.ruhr-uni-bochum.de/ini/PEOPLE/rmz/t1lib/t1l
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 USE_X11BASE=	yes
 
 WRKSRC=		${WRKDIR}/T1-1.0.1

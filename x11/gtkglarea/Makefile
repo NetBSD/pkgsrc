@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/02/05 15:48:52 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2000/06/01 11:23:46 rh Exp $
 
 DISTNAME=	gtkglarea-1.2.1
 CATEGORIES=	x11 graphics
@@ -11,7 +11,7 @@ DEPENDS+=       Mesa-*:../../graphics/Mesa
 DEPENDS+=       gtk+-1.2.*:../../x11/gtk
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 USE_X11BASE=	yes
 CONFIGURE_ARGS+= --with-gtk-prefix=${X11BASE}
 CONFIGURE_ARGS+= --with-GL-prefix=${X11BASE}

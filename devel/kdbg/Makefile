@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/03/30 15:22:43 tron Exp $
+# $NetBSD: Makefile,v 1.10 2000/06/01 11:23:21 rh Exp $
 
 DISTNAME=	kdbg-1.0.1
 CATEGORIES=	devel kde
@@ -16,7 +16,7 @@ DEPENDS+=	png>=1.0.6:../../graphics/png
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-qt-dir=${PREFIX}/qt1 \
 		--with-qt-includes=${PREFIX}/qt1/include \

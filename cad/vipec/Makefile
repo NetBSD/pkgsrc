@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/04/28 10:11:02 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2000/06/01 11:23:16 rh Exp $
 #
 
 DISTNAME=	vipec-2.0.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.netfold.com/~vipec/
 DEPENDS+=	qt2-2.0.2:../../x11/qt
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 USE_X11=	yes
 
 CONFIGURE_ENV+=	"QTDIR=${X11BASE}/qt2" \

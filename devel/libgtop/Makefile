@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/05/30 19:35:40 drochner Exp $
+# $NetBSD: Makefile,v 1.35 2000/06/01 11:23:22 rh Exp $
 
 DISTNAME=		libgtop-1.0.9
 CATEGORIES=		devel gnome
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
 USE_GMAKE=		yes
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 
 CFLAGS+=		-g
 CPPFLAGS+=		-I${LOCALBASE}/include

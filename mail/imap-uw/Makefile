@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/05/19 03:58:55 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2000/06/01 11:23:34 rh Exp $
 #
 
 DISTNAME=       imap-4.7c2
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.washington.edu/imap/
 
-USE_LIBTOOL=	# defined
+USE_PKGLIBTOOL=	# defined
 
 WRKSRC=		${WRKDIR}/imap-4.7c
 MESSAGE_FILE=	${WRKDIR}/MESSAGE

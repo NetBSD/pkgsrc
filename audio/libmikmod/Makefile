@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/04/02 16:07:04 pooka Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/01 11:23:14 rh Exp $
 
 DISTNAME=	libmikmod-3.1.9
 CATEGORIES=	audio
@@ -9,7 +9,7 @@ HOMEPAGE=	http://mikmod.darkorb.net/
 
 DEPENDS+=	esound-0.2.*:../../audio/esound
 
-USE_LIBTOOL=	YES
+USE_PKGLIBTOOL=	YES
 USE_GMAKE=	YES
 USE_GTEXINFO=	YES
 GNU_CONFIGURE=	YES

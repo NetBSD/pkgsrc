@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/05/11 12:15:17 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2000/06/01 11:23:47 rh Exp $
 #
 
 DISTNAME=	qt-x11-2.1.0
@@ -20,7 +20,7 @@ NOT_FOR_PLATFORM=    *-*-alpha	# builds, but programs linked to qt crash
 HAS_CONFIGURE=		yes
 USE_X11BASE=		yes
 USE_GMAKE=		yes
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 CONFIGURE_ENV+=		QTDIR=${WRKSRC}
 CONFIGURE_ARGS+=	-static -sm -system-zlib \
 			-system-libpng -system-jpeg \

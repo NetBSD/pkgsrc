@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/04/20 02:11:46 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2000/06/01 11:23:31 rh Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:44 max Exp
 
 DISTNAME=       libpng-1.0.6
@@ -11,7 +11,7 @@ MASTER_SITES=   ftp://ftp.cdrom.com/pub/png/src/ \
 MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://www.cdrom.com/pub/png/
 
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 
 MAKEFILE=       scripts/makefile.std
 
