@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/07 14:46:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/07 14:50:41 jmmv Exp $
 #
 
 DISTNAME=	xosd-2.1.3
@@ -12,7 +12,6 @@ COMMENT=	Library to display shaped text on your X display
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
-#USE_GMAKE=		yes
 USE_X11=		yes
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/libtool-disable-static
