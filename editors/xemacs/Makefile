@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2002/03/29 11:02:42 magick Exp $
+# $NetBSD: Makefile,v 1.46 2002/03/29 14:48:23 magick Exp $
 
 DISTNAME=	xemacs-21.1.14
 PKGREVISION=	2
@@ -31,6 +31,7 @@ DIST_SUBDIR=	xemacs
 EXTRA_FILES=	${DISTNAME}-elc.tar.gz ${DISTNAME}-info.tar.gz
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 PLIST_SUBST+=	DISTNAME="${DISTNAME}"
+MESSAGE_SUBST+=	DISTNAME="${DISTNAME}"
 
 .include "../../mk/bsd.prefs.mk"
 
