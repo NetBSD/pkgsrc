@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.3 1999/01/04 23:30:35 frueauf Exp $
+
+--- configure.in-orig	Tue Sep 29 05:15:55 1998
++++ configure.in	Mon Jan  4 21:23:20 1999
+@@ -2300,6 +2300,9 @@
+     BITMAPTYPE="bsd"
+     PIXMAPTYPE="bsd"
+     INSTPGMFLAGS="-s -o root -m 4111"
++    XLOCKLDFLAGS="-Wl,-R${XLOCK_LDFLAGS}"
++    XMLOCKLDFLAGS="-Wl,-R${XMLOCK_LDFLAGS}"
++    XALOCKLDFLAGS="-Wl,-R${XALOCK_LDFLAGS}"
+   ;;
+ 
+   *-*-dgux5* )
