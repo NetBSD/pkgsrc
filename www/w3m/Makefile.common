@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2002/07/02 15:23:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2002/07/19 11:56:47 wiz Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -95,7 +95,7 @@ CONFIGURE_ENV+=	use_cookie=y
 CONFIGURE_ENV+=	use_cookie=n
 .endif
 .if ${W3M_USE_SSL} == YES
-CONFIGURE_ENV+=	use_ssl=y use_ssl_verify=n
+CONFIGURE_ENV+=	use_ssl=y use_ssl_verify=y
 CONFIGURE_ARGS+=	--ssl-includedir=${BUILDLINK_DIR}/include/openssl
 CONFIGURE_ARGS+=	--ssl-libdir=${BUILDLINK_DIR}/lib
 .include "../../security/openssl/buildlink.mk"
