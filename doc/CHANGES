@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5769 2004/04/29 12:55:23 markd Exp $
+$NetBSD: CHANGES,v 1.5770 2004/04/29 13:15:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2288,3 +2288,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qt3-psql to 3.3.2 [markd 2004-04-29]
 	Updated qt3-mysql to 3.3.2 [markd 2004-04-29]
 	Updated qt3 to 3.3.2 [markd 2004-04-29]
+	Updated automake to 1.8.4 [wiz 2004-04-29]
