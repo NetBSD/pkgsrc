@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7048 2004/08/31 10:27:45 martti Exp $
+$NetBSD: CHANGES,v 1.7049 2004/08/31 10:53:02 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4118,3 +4118,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pango to 1.4.1 [jmmv 2004-08-31]
 	Updated nail to 11.4 [cjep 2004-08-31]
 	Updated dropbear to 0.43 [martti 2004-08-31]
+	Updated sendmail to 8.13.1nb1 [adrianp 2004-08-31]
