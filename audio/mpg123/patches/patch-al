@@ -1,16 +1,26 @@
-$NetBSD: patch-al,v 1.1 2000/03/01 22:03:37 pooka Exp $
+$NetBSD: patch-al,v 1.2 2000/03/01 22:26:19 pooka Exp $
 
 --- readers.c.orig	Thu Mar  4 13:03:49 1999
-+++ readers.c	Wed Mar  1 23:49:46 2000
-@@ -250,6 +250,11 @@
++++ readers.c	Thu Mar  2 00:21:17 2000
+@@ -1,5 +1,9 @@
+ #include <stdlib.h>
+ 
++#ifdef __NetBSD__
++#include <sys/param.h>
++#endif
++
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
+@@ -249,6 +253,11 @@
+ 		mmap(NULL, len, PROT_READ, MAP_SHARED , rds->filept, 0);
  	if(!mapbuf || mapbuf == MAP_FAILED)
  		return -1;
- 
++
 +#if defined(__NetBSD__) && (__NetBSD_Version__ >= 104030000)
 +	if(madvise(mappnt, len, MADV_SEQUENTIAL) < 0)
 +		fprintf(stderr,"madvise failed, continuing anyways..\n");
 +#endif
-+
+ 
  	mapend = mapbuf + len;
  	
- 	if(param.verbose > 1)
