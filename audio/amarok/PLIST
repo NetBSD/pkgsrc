@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2005/02/28 16:54:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/03/22 01:09:08 seb Exp $
 bin/amarok
 bin/amarok_libvisual
 bin/amarok_xmmswrapper2
 bin/amarokapp
-bin/release_amarok
 lib/kde3/konqsidebar_universalamarok.la
 lib/kde3/libamarok_artsengine_plugin.la
 lib/kde3/libamarok_gstengine_plugin.la
@@ -15,6 +14,50 @@ lib/mcop/Amarok/Synth_STEREO_XFADE.mcopclass
 lib/mcop/amarokarts.mcopclass
 lib/mcop/amarokarts.mcoptype
 share/applications/kde/amarok.desktop
+share/doc/kde/HTML/da/amarok/advanced.docbook
+share/doc/kde/HTML/da/amarok/common
+share/doc/kde/HTML/da/amarok/config.docbook
+share/doc/kde/HTML/da/amarok/develop.docbook
+share/doc/kde/HTML/da/amarok/faq.docbook
+share/doc/kde/HTML/da/amarok/feature_guide.docbook
+share/doc/kde/HTML/da/amarok/hidden.docbook
+share/doc/kde/HTML/da/amarok/index.cache.bz2
+share/doc/kde/HTML/da/amarok/index.docbook
+share/doc/kde/HTML/da/amarok/quick.docbook
+share/doc/kde/HTML/da/amarok/requirements.docbook
+share/doc/kde/HTML/da/amarok/using.docbook
+share/doc/kde/HTML/de/amarok/advanced.docbook
+share/doc/kde/HTML/de/amarok/analyzer.png
+share/doc/kde/HTML/de/amarok/buttons.png
+share/doc/kde/HTML/de/amarok/collection.png
+share/doc/kde/HTML/de/amarok/common
+share/doc/kde/HTML/de/amarok/config.docbook
+share/doc/kde/HTML/de/amarok/config_appearance.png
+share/doc/kde/HTML/de/amarok/config_engine.png
+share/doc/kde/HTML/de/amarok/config_general.png
+share/doc/kde/HTML/de/amarok/config_osd.png
+share/doc/kde/HTML/de/amarok/config_playback.png
+share/doc/kde/HTML/de/amarok/context.png
+share/doc/kde/HTML/de/amarok/coverman.png
+share/doc/kde/HTML/de/amarok/develop.docbook
+share/doc/kde/HTML/de/amarok/faq.docbook
+share/doc/kde/HTML/de/amarok/file_browser.png
+share/doc/kde/HTML/de/amarok/hidden.docbook
+share/doc/kde/HTML/de/amarok/index.cache.bz2
+share/doc/kde/HTML/de/amarok/index.docbook
+share/doc/kde/HTML/de/amarok/menubar.png
+share/doc/kde/HTML/de/amarok/pl_browser.png
+share/doc/kde/HTML/de/amarok/pl_tip1.png
+share/doc/kde/HTML/de/amarok/play_list.png
+share/doc/kde/HTML/de/amarok/player_window.png
+share/doc/kde/HTML/de/amarok/playlist_window.png
+share/doc/kde/HTML/de/amarok/quick.docbook
+share/doc/kde/HTML/de/amarok/requirements.docbook
+share/doc/kde/HTML/de/amarok/rmb_menu.png
+share/doc/kde/HTML/de/amarok/search.png
+share/doc/kde/HTML/de/amarok/status_bar.png
+share/doc/kde/HTML/de/amarok/using.docbook
+share/doc/kde/HTML/de/amarok/vis_window.png
 share/doc/kde/HTML/en/amarok/advanced.docbook
 share/doc/kde/HTML/en/amarok/analyzer.png
 share/doc/kde/HTML/en/amarok/buttons.png
@@ -51,6 +94,132 @@ share/doc/kde/HTML/en/amarok/rmb_menu.png
 share/doc/kde/HTML/en/amarok/status_bar.png
 share/doc/kde/HTML/en/amarok/using.docbook
 share/doc/kde/HTML/en/amarok/vis_window.png
+share/doc/kde/HTML/et/amarok/advanced.docbook
+share/doc/kde/HTML/et/amarok/common
+share/doc/kde/HTML/et/amarok/config.docbook
+share/doc/kde/HTML/et/amarok/develop.docbook
+share/doc/kde/HTML/et/amarok/faq.docbook
+share/doc/kde/HTML/et/amarok/feature_guide.docbook
+share/doc/kde/HTML/et/amarok/hidden.docbook
+share/doc/kde/HTML/et/amarok/howto.docbook
+share/doc/kde/HTML/et/amarok/index.cache.bz2
+share/doc/kde/HTML/et/amarok/index.docbook
+share/doc/kde/HTML/et/amarok/plugin.docbook
+share/doc/kde/HTML/et/amarok/quick.docbook
+share/doc/kde/HTML/et/amarok/requirements.docbook
+share/doc/kde/HTML/et/amarok/using.docbook
+share/doc/kde/HTML/fr/amarok/advanced.docbook
+share/doc/kde/HTML/fr/amarok/common
+share/doc/kde/HTML/fr/amarok/config.docbook
+share/doc/kde/HTML/fr/amarok/faq.docbook
+share/doc/kde/HTML/fr/amarok/feature_guide.docbook
+share/doc/kde/HTML/fr/amarok/index.cache.bz2
+share/doc/kde/HTML/fr/amarok/index.docbook
+share/doc/kde/HTML/fr/amarok/quick.docbook
+share/doc/kde/HTML/fr/amarok/requirements.docbook
+share/doc/kde/HTML/fr/amarok/using.docbook
+share/doc/kde/HTML/it/amarok/advanced.docbook
+share/doc/kde/HTML/it/amarok/common
+share/doc/kde/HTML/it/amarok/config.docbook
+share/doc/kde/HTML/it/amarok/develop.docbook
+share/doc/kde/HTML/it/amarok/faq.docbook
+share/doc/kde/HTML/it/amarok/feature_guide.docbook
+share/doc/kde/HTML/it/amarok/hidden.docbook
+share/doc/kde/HTML/it/amarok/index.cache.bz2
+share/doc/kde/HTML/it/amarok/index.docbook
+share/doc/kde/HTML/it/amarok/plugin.docbook
+share/doc/kde/HTML/it/amarok/quick.docbook
+share/doc/kde/HTML/it/amarok/requirements.docbook
+share/doc/kde/HTML/it/amarok/using.docbook
+share/doc/kde/HTML/nl/amarok/advanced.docbook
+share/doc/kde/HTML/nl/amarok/analyzer.png
+share/doc/kde/HTML/nl/amarok/buttons.png
+share/doc/kde/HTML/nl/amarok/collection.png
+share/doc/kde/HTML/nl/amarok/common
+share/doc/kde/HTML/nl/amarok/config.docbook
+share/doc/kde/HTML/nl/amarok/config_appearance.png
+share/doc/kde/HTML/nl/amarok/config_collection.png
+share/doc/kde/HTML/nl/amarok/config_colors.png
+share/doc/kde/HTML/nl/amarok/config_engine.png
+share/doc/kde/HTML/nl/amarok/config_fonts.png
+share/doc/kde/HTML/nl/amarok/config_general.png
+share/doc/kde/HTML/nl/amarok/config_osd.png
+share/doc/kde/HTML/nl/amarok/config_playback.png
+share/doc/kde/HTML/nl/amarok/config_scrobbler.png
+share/doc/kde/HTML/nl/amarok/context.png
+share/doc/kde/HTML/nl/amarok/coverman.png
+share/doc/kde/HTML/nl/amarok/develop.docbook
+share/doc/kde/HTML/nl/amarok/equalizer.png
+share/doc/kde/HTML/nl/amarok/faq.docbook
+share/doc/kde/HTML/nl/amarok/feature_guide.docbook
+share/doc/kde/HTML/nl/amarok/file_browser.png
+share/doc/kde/HTML/nl/amarok/hidden.docbook
+share/doc/kde/HTML/nl/amarok/index.cache.bz2
+share/doc/kde/HTML/nl/amarok/index.docbook
+share/doc/kde/HTML/nl/amarok/media_device.png
+share/doc/kde/HTML/nl/amarok/menubar.png
+share/doc/kde/HTML/nl/amarok/pl_browser.png
+share/doc/kde/HTML/nl/amarok/pl_tip1.png
+share/doc/kde/HTML/nl/amarok/play_list.png
+share/doc/kde/HTML/nl/amarok/player_window.png
+share/doc/kde/HTML/nl/amarok/playlist_window.png
+share/doc/kde/HTML/nl/amarok/plugin.docbook
+share/doc/kde/HTML/nl/amarok/quick.docbook
+share/doc/kde/HTML/nl/amarok/requirements.docbook
+share/doc/kde/HTML/nl/amarok/rmb_menu.png
+share/doc/kde/HTML/nl/amarok/search.png
+share/doc/kde/HTML/nl/amarok/status_bar.png
+share/doc/kde/HTML/nl/amarok/using.docbook
+share/doc/kde/HTML/nl/amarok/vis_window.png
+share/doc/kde/HTML/pt/amarok/advanced.docbook
+share/doc/kde/HTML/pt/amarok/common
+share/doc/kde/HTML/pt/amarok/config.docbook
+share/doc/kde/HTML/pt/amarok/develop.docbook
+share/doc/kde/HTML/pt/amarok/faq.docbook
+share/doc/kde/HTML/pt/amarok/feature_guide.docbook
+share/doc/kde/HTML/pt/amarok/hidden.docbook
+share/doc/kde/HTML/pt/amarok/index.cache.bz2
+share/doc/kde/HTML/pt/amarok/index.docbook
+share/doc/kde/HTML/pt/amarok/plugin.docbook
+share/doc/kde/HTML/pt/amarok/quick.docbook
+share/doc/kde/HTML/pt/amarok/requirements.docbook
+share/doc/kde/HTML/pt/amarok/using.docbook
+share/doc/kde/HTML/pt_BR/amarok/advanced.docbook
+share/doc/kde/HTML/pt_BR/amarok/analyzer.png
+share/doc/kde/HTML/pt_BR/amarok/buttons.png
+share/doc/kde/HTML/pt_BR/amarok/collection.png
+share/doc/kde/HTML/pt_BR/amarok/common
+share/doc/kde/HTML/pt_BR/amarok/config.docbook
+share/doc/kde/HTML/pt_BR/amarok/config_appearance.png
+share/doc/kde/HTML/pt_BR/amarok/config_collection.png
+share/doc/kde/HTML/pt_BR/amarok/config_engine.png
+share/doc/kde/HTML/pt_BR/amarok/config_general.png
+share/doc/kde/HTML/pt_BR/amarok/config_osd.png
+share/doc/kde/HTML/pt_BR/amarok/config_playback.png
+share/doc/kde/HTML/pt_BR/amarok/config_scrobbler.png
+share/doc/kde/HTML/pt_BR/amarok/context.png
+share/doc/kde/HTML/pt_BR/amarok/coverman.png
+share/doc/kde/HTML/pt_BR/amarok/equalizer.png
+share/doc/kde/HTML/pt_BR/amarok/faq.docbook
+share/doc/kde/HTML/pt_BR/amarok/feature_guide.docbook
+share/doc/kde/HTML/pt_BR/amarok/file_browser.png
+share/doc/kde/HTML/pt_BR/amarok/index.cache.bz2
+share/doc/kde/HTML/pt_BR/amarok/index.docbook
+share/doc/kde/HTML/pt_BR/amarok/logo.png
+share/doc/kde/HTML/pt_BR/amarok/media_device.png
+share/doc/kde/HTML/pt_BR/amarok/menubar.png
+share/doc/kde/HTML/pt_BR/amarok/musicbrainz.png
+share/doc/kde/HTML/pt_BR/amarok/pl_browser.png
+share/doc/kde/HTML/pt_BR/amarok/pl_tip1.png
+share/doc/kde/HTML/pt_BR/amarok/play_list.png
+share/doc/kde/HTML/pt_BR/amarok/player_window.png
+share/doc/kde/HTML/pt_BR/amarok/playlist_window.png
+share/doc/kde/HTML/pt_BR/amarok/quick.docbook
+share/doc/kde/HTML/pt_BR/amarok/requirements.docbook
+share/doc/kde/HTML/pt_BR/amarok/rmb_menu.png
+share/doc/kde/HTML/pt_BR/amarok/status_bar.png
+share/doc/kde/HTML/pt_BR/amarok/using.docbook
+share/doc/kde/HTML/pt_BR/amarok/vis_window.png
 share/doc/kde/HTML/ru/amarok/advanced.docbook
 share/doc/kde/HTML/ru/amarok/collection.png
 share/doc/kde/HTML/ru/amarok/common
@@ -80,6 +249,48 @@ share/doc/kde/HTML/ru/amarok/requirements.docbook
 share/doc/kde/HTML/ru/amarok/rmb_menu.png
 share/doc/kde/HTML/ru/amarok/status_bar.png
 share/doc/kde/HTML/ru/amarok/using.docbook
+share/doc/kde/HTML/sv/amarok/advanced.docbook
+share/doc/kde/HTML/sv/amarok/buttons.png
+share/doc/kde/HTML/sv/amarok/collection.png
+share/doc/kde/HTML/sv/amarok/common
+share/doc/kde/HTML/sv/amarok/config.docbook
+share/doc/kde/HTML/sv/amarok/config_appearance.png
+share/doc/kde/HTML/sv/amarok/config_colors.png
+share/doc/kde/HTML/sv/amarok/config_engine.png
+share/doc/kde/HTML/sv/amarok/config_fonts.png
+share/doc/kde/HTML/sv/amarok/config_general.png
+share/doc/kde/HTML/sv/amarok/config_mysql.png
+share/doc/kde/HTML/sv/amarok/config_osd.png
+share/doc/kde/HTML/sv/amarok/config_playback.png
+share/doc/kde/HTML/sv/amarok/config_scrobbler.png
+share/doc/kde/HTML/sv/amarok/context.png
+share/doc/kde/HTML/sv/amarok/coverman.png
+share/doc/kde/HTML/sv/amarok/develop.docbook
+share/doc/kde/HTML/sv/amarok/equalizer.png
+share/doc/kde/HTML/sv/amarok/faq.docbook
+share/doc/kde/HTML/sv/amarok/feature_guide.docbook
+share/doc/kde/HTML/sv/amarok/file_browser.png
+share/doc/kde/HTML/sv/amarok/hidden.docbook
+share/doc/kde/HTML/sv/amarok/index.cache.bz2
+share/doc/kde/HTML/sv/amarok/index.docbook
+share/doc/kde/HTML/sv/amarok/media_device.png
+share/doc/kde/HTML/sv/amarok/menubar.png
+share/doc/kde/HTML/sv/amarok/pl_browser.png
+share/doc/kde/HTML/sv/amarok/pl_tip1.png
+share/doc/kde/HTML/sv/amarok/play_list.png
+share/doc/kde/HTML/sv/amarok/player_window.png
+share/doc/kde/HTML/sv/amarok/playlist_window.png
+share/doc/kde/HTML/sv/amarok/plugin.docbook
+share/doc/kde/HTML/sv/amarok/quick.docbook
+share/doc/kde/HTML/sv/amarok/requirements.docbook
+share/doc/kde/HTML/sv/amarok/rmb_menu.png
+share/doc/kde/HTML/sv/amarok/scripts_window.png
+share/doc/kde/HTML/sv/amarok/search.png
+share/doc/kde/HTML/sv/amarok/status_bar.png
+share/doc/kde/HTML/sv/amarok/streams.png
+share/doc/kde/HTML/sv/amarok/using.docbook
+share/doc/kde/HTML/sv/amarok/vis_window.png
+share/doc/kde/HTML/sv/amarok/welcome.png
 share/kde/apps/amarok/amarokui.rc
 share/kde/apps/amarok/amarokui_xmms.rc
 share/kde/apps/amarok/data/Cool-Streams.m3u
@@ -88,6 +299,7 @@ share/kde/apps/amarok/data/dot.png
 share/kde/apps/amarok/data/grid.png
 share/kde/apps/amarok/data/wirl1.png
 share/kde/apps/amarok/data/wirl2.png
+share/kde/apps/amarok/icons/crystalsvg/16x16/actions/dynamic.png
 share/kde/apps/amarok/icons/crystalsvg/16x16/actions/player_playlist_2.png
 share/kde/apps/amarok/icons/crystalsvg/16x16/actions/random.png
 share/kde/apps/amarok/icons/crystalsvg/16x16/actions/repeat_playlist.png
@@ -95,6 +307,7 @@ share/kde/apps/amarok/icons/crystalsvg/16x16/actions/repeat_track.png
 share/kde/apps/amarok/icons/crystalsvg/22x22/actions/player_playlist_2.png
 share/kde/apps/amarok/icons/crystalsvg/32x32/actions/player_playlist_2.png
 share/kde/apps/amarok/icons/crystalsvg/48x48/actions/player_playlist_2.png
+share/kde/apps/amarok/icons/crystalsvg/64x64/actions/dynamic.png
 share/kde/apps/amarok/icons/crystalsvg/64x64/actions/random.png
 share/kde/apps/amarok/icons/crystalsvg/64x64/actions/repeat_playlist.png
 share/kde/apps/amarok/images/amarok_cut.png
@@ -130,6 +343,8 @@ share/kde/apps/amarok/images/wizard_compact.png
 share/kde/apps/amarok/images/wizard_xmms.png
 share/kde/apps/amarok/scripts/alarm/README
 share/kde/apps/amarok/scripts/alarm/alarm.py
+share/kde/apps/amarok/scripts/graphequalizer/README
+share/kde/apps/amarok/scripts/graphequalizer/graphequalizer
 share/kde/apps/amarok/scripts/playlist2html/Playlist.py
 share/kde/apps/amarok/scripts/playlist2html/PlaylistServer.py
 share/kde/apps/amarok/scripts/playlist2html/README
@@ -153,7 +368,10 @@ share/kde/apps/amarok/scripts/webcontrol/player_start.png
 share/kde/apps/amarok/scripts/webcontrol/player_stop.png
 share/kde/apps/amarok/scripts/webcontrol/template.thtml
 share/kde/apps/amarok/scripts/webcontrol/vol_speaker.png
-share/kde/apps/amarok/themes/flat/stylesheet.css
+share/kde/apps/amarok/themes/default/stylesheet.css
+share/kde/apps/amarok/themes/reinhardt/images/background.png
+share/kde/apps/amarok/themes/reinhardt/images/transparency.png
+share/kde/apps/amarok/themes/reinhardt/stylesheet.css
 share/kde/apps/konqsidebartng/add/amarok.desktop
 share/kde/apps/konqsidebartng/entries/amarok.desktop
 share/kde/apps/konqsidebartng/kicker_entries/amarok.desktop
@@ -214,7 +432,6 @@ ${PKGLOCALEDIR}/locale/xx/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/amarok.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
@@ -225,14 +442,17 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/amarok.mo
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/apps/profiles
 @comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
-@comment in kdebase: dirrm share/kde/apps/konqsidebartng/kicker_entries
-@comment in kdebase: dirrm share/kde/apps/konqsidebartng/entries
-@comment in kdebase: dirrm share/kde/apps/konqsidebartng/add
-@dirrm share/kde/apps/amarok/themes/flat
+@comment in kdebase: @dirrm share/kde/apps/konqsidebartng/kicker_entries
+@comment in kdebase: @dirrm share/kde/apps/konqsidebartng/entries
+@comment in kdebase: @dirrm share/kde/apps/konqsidebartng/add
+@dirrm share/kde/apps/amarok/themes/reinhardt/images
+@dirrm share/kde/apps/amarok/themes/reinhardt
+@dirrm share/kde/apps/amarok/themes/default
 @dirrm share/kde/apps/amarok/themes
 @dirrm share/kde/apps/amarok/scripts/webcontrol
 @dirrm share/kde/apps/amarok/scripts/templates
 @dirrm share/kde/apps/amarok/scripts/playlist2html
+@dirrm share/kde/apps/amarok/scripts/graphequalizer
 @dirrm share/kde/apps/amarok/scripts/alarm
 @dirrm share/kde/apps/amarok/scripts
 @dirrm share/kde/apps/amarok/images
@@ -251,10 +471,28 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/amarok.mo
 @dirrm share/kde/apps/amarok/data
 @dirrm share/kde/apps/amarok
 @comment in kde: @dirrm share/kde/apps
+@dirrm share/doc/kde/HTML/sv/amarok
+@comment in kde: @dirrm share/doc/kde/HTML/sv
 @dirrm share/doc/kde/HTML/ru/amarok
 @comment in kde: @dirrm share/doc/kde/HTML/ru
+@dirrm share/doc/kde/HTML/pt_BR/amarok
+@comment in kde: @dirrm share/doc/kde/HTML/pt_BR
+@dirrm share/doc/kde/HTML/pt/amarok
+@comment in kde: @dirrm share/doc/kde/HTML/pt
+@dirrm share/doc/kde/HTML/nl/amarok
+@comment in kde: @dirrm share/doc/kde/HTML/nl
+@dirrm share/doc/kde/HTML/it/amarok
+@comment in kde: @dirrm share/doc/kde/HTML/it
+@dirrm share/doc/kde/HTML/fr/amarok
+@comment in kde: @dirrm share/doc/kde/HTML/fr
+@dirrm share/doc/kde/HTML/et/amarok
+@comment in kde: @dirrm share/doc/kde/HTML/et
 @dirrm share/doc/kde/HTML/en/amarok
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@dirrm share/doc/kde/HTML/de/amarok
+@comment in kde: @dirrm share/doc/kde/HTML/de
+@dirrm share/doc/kde/HTML/da/amarok
+@comment in kde: @dirrm share/doc/kde/HTML/da
 @comment in kde: @dirrm share/applications/kde
 @dirrm lib/mcop/Amarok
 @comment in arts: @dirrm lib/mcop
