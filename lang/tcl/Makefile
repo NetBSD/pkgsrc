@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.45 2005/01/05 09:15:29 adam Exp $
+# $NetBSD: Makefile,v 1.46 2005/01/13 14:37:43 minskim Exp $
 
-DISTNAME=	tcl8.4.9-src
-PKGNAME=	tcl-8.4.9
+DISTNAME=	tcl${TCL_VERSION}-src
+PKGNAME=	tcl-${TCL_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.tcl.tk/
 COMMENT=	Ousterhout's Tool Command Language, a scripting language
+
+.include "../../lang/tcl/Makefile.version"
 
 CONFLICTS+=		tclman80-[0-9]*
 
