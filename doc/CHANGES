@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4062 2003/12/13 10:34:40 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4063 2003/12/13 10:42:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3350,6 +3350,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mplayer-share to 1.0rc3 [wiz 2003-12-12]
 	Updated antiword to 0.35 [wiz 2003-12-12]
 	Updated pcre to 4.5 [jmmv 2003-12-12]
+	Updated dvipng to 0.8 [wiz 2003-12-12]
 	Updated distcc to 2.11.2 [jmmv 2003-12-12]
 	Updated win32-codecs to 031029 [recht 2003-12-12]
 	Updated atk to 1.4.1 [wiz 2003-12-13]
