@@ -1,7 +1,7 @@
-$NetBSD: patch-bk,v 1.2 1998/08/07 10:40:51 agc Exp $
+$NetBSD: patch-ao,v 1.1 1999/01/10 23:52:16 tron Exp $
 
---- /dev/null	Thu Oct 16 09:27:24 1997
-+++ ./pnm/pnmhisteq.1	Sun Aug 13 00:13:48 1995
+--- pnm/pnmhisteq.1.orig	Sun Jan 10 23:48:41 1999
++++ pnm/pnmhisteq.1	Sun Jan 10 23:48:41 1999
 @@ -0,0 +1,161 @@
 +.TH pnmhisteq 1 "19 March 1995"
 +.IX "pnmhisteq command"

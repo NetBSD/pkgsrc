@@ -1,7 +1,7 @@
-$NetBSD: patch-bo,v 1.2 1998/08/07 10:40:51 agc Exp $
+$NetBSD: patch-as,v 1.1 1999/01/10 23:52:17 tron Exp $
 
---- /dev/null	Thu Oct 16 09:27:24 1997
-+++ ./pnm/pnmsmooth.README	Sun Aug 13 00:21:28 1995
+--- pnm/pnmsmooth.README.orig	Sun Jan 10 23:48:41 1999
++++ pnm/pnmsmooth.README	Sun Jan 10 23:48:41 1999
 @@ -0,0 +1,21 @@
 +README for pnmsmooth.c 2.0
 +

@@ -1,7 +1,7 @@
-$NetBSD: patch-bs,v 1.2 1998/08/07 10:40:52 agc Exp $
+$NetBSD: patch-ay,v 1.1 1999/01/10 23:52:17 tron Exp $
 
---- ./ppm/ppm.5.orig	Mon Oct  4 05:12:19 1993
-+++ ./ppm/ppm.5	Sat Jul 20 21:53:06 1996
+--- ppm/ppm.5.orig	Mon Oct  4 10:12:19 1993
++++ ppm/ppm.5	Sun Jan 10 23:48:41 1999
 @@ -73,7 +73,7 @@
  it will automatically fall back on the slower but more general plain
  format.

@@ -1,7 +1,7 @@
-$NetBSD: patch-bj,v 1.2 1998/08/07 10:40:51 agc Exp $
+$NetBSD: patch-an,v 1.1 1999/01/10 23:52:16 tron Exp $
 
---- ./pnm/pnmconvol.c.orig	Mon Oct  4 05:11:36 1993
-+++ ./pnm/pnmconvol.c	Wed Jul  8 07:48:07 1998
+--- pnm/pnmconvol.c.orig	Mon Oct  4 10:11:36 1993
++++ pnm/pnmconvol.c	Sun Jan 10 23:48:40 1999
 @@ -1,5 +1,10 @@
  /* pnmconvol.c - general MxN convolution on a portable anymap
  **
