@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2004/02/26 22:55:01 minskim Exp $
+# $NetBSD: Makefile,v 1.120 2004/03/06 18:34:33 recht Exp $
 #
 
 COMMENT=	Databases
@@ -16,6 +16,7 @@ SUBDIR+=	gdbm
 SUBDIR+=	gdbm_primitive
 SUBDIR+=	geneweb
 SUBDIR+=	gnats
+SUBDIR+=	gnats4
 SUBDIR+=	gnome-mime-data
 SUBDIR+=	gq
 SUBDIR+=	gtksql
@@ -86,8 +87,8 @@ SUBDIR+=	postgresql-plperl
 SUBDIR+=	postgresql-pltcl
 SUBDIR+=	postgresql-server
 SUBDIR+=	pxtools
-SUBDIR+=	py-PgSQL
 SUBDIR+=	py-IndexedCatalog
+SUBDIR+=	py-PgSQL
 SUBDIR+=	py-ZODB
 SUBDIR+=	py-bsddb3
 SUBDIR+=	py-dbxml
