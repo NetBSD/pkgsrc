@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2002/11/07 18:20:28 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2002/11/25 14:07:42 schmonz Exp $
 #
 
 RELVERSION=	1.3.1
@@ -26,7 +26,7 @@ BLACKDOWN_ARCH?=	${MACHINE_ARCH}
 BLACKDOWN_REL=	rc1
 EXTRACT_SUFX=	.tar.bz2
 .elif ${BLACKDOWN_ARCH} == "ppc"
-DEPENDS+=	linuxppc_lib>=2000.4.2:../../emulators/linuxppc_lib
+DEPENDS+=	suse_base>=7.3:../../emulators/suse_base
 .endif
 
 MAINTAINER=	jschauma@netbsd.org
@@ -75,5 +75,3 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}
 	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}
-
-.include "../../mk/bsd.pkg.mk"
