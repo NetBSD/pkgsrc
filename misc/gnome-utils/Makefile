@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/03 16:48:56 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/13 23:46:50 tron Exp $
 #
 
 DISTNAME=	gnome-utils-1.0.1
@@ -22,10 +22,8 @@ HOMEPAGE=	http://www.gnome.org/
 BUILD_DEPENDS=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
-DEPENDS+=	gnome-libs-1.0.9:../../x11/gnome-libs
+DEPENDS+=	gnome-core-1.0.5:../../x11/gnome-libs
 DEPENDS+=	libaudiofile-0.1.6:../../audio/libaudiofile
-# "libgtop" packages is broken at the moment.
-#DEPENDS+=      libgtop-1.0.1:../../devel/libgtop
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
