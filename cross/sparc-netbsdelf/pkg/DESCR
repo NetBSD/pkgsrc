@@ -1,1 +1,1 @@
-This cross-compile environment is for NetBSD/sparc with ELF objects.
+This cross-compile environment is for 32-bit ELF NetBSD/sparc.
