@@ -6,15 +6,14 @@ Perl).  It is simple, straight-forward, and extensible.
 Features of Ruby are shown below.
 
   + Simple Syntax
-  + *Normal* Object-Oriented features(ex. class, method calls)
-  + *Advanced* Object-Oriented features(ex. Mix-in, Singleton-method)
+  + *Normal* Object-Oriented features (ex. class, method calls)
+  + *Advanced* Object-Oriented features (ex. Mix-in, Singleton-method)
   + Operator Overloading
   + Exception Handling
   + Iterators and Closures
   + Garbage Collection
-  + Dynamic Loading of Object files(on some architecture)
-  + Highly Portable(works on many UNIX machines, and on DOS,
+  + Dynamic Loading of Object files (on some architecture)
+  + Highly Portable (works on many UNIX machines, and on DOS,
     Windows, Mac, BeOS etc.)
 
 Author:	Matsumoto "matz" Yukihiro <matz@netlab.co.jp>
-WWW:	http://www.ruby-lang.org/en/
