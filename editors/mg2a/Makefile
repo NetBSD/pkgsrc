@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/04/01 00:21:25 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2000/04/01 00:30:53 dmcmahill Exp $
 # Top level for mg2a package make... nothing unusual
 # in this package - john refling
 #
@@ -12,6 +12,9 @@ EXTRACT_SUFX=   .tar.Z
 MAINTAINER=	refling@comet.lbl.gov
 
 USE_CONFIGURE=	NO
+
+post-extract:
+	cd ${WRKSRC} ; ${CP} sys/bsd/Makefile .
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mg ${PREFIX}/bin/mg
