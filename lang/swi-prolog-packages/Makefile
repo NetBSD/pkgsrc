@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/20 11:09:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/28 11:34:37 kristerw Exp $
 
 .include "../swi-prolog-lite/Makefile.common"
 
@@ -60,7 +60,7 @@ teardownx:
 	rm -f ${WRKDIR}/.Xvfb.pid
 
 
-.include "../../wip/swi-prolog-lite/buildlink3.mk"
+.include "../../lang/swi-prolog-lite/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
