@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/07/09 16:48:39 skrll Exp $
+# $NetBSD: Makefile,v 1.12 2001/07/14 05:12:10 jlam Exp $
 #
 
 DISTNAME=	kdelibs-2.1
@@ -21,8 +21,9 @@ LTCONFIG_OVERRIDE+=	${WRKSRC}/ksgmltools/ltconfig
 .endif
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_DIR}"
-CONFIGURE_ENV+=		USER_LDFLAGS="-L${BUILDLINK_DIR}/lib"
+CONFIGURE_ENV+=		USER_LDFLAGS="${USER_LDFLAGS}"
 LIBS+=			-Wl,--export-dynamic
+USER_LDFLAGS=		-L${BUILDLINK_DIR}/lib -Wl,-R${LOCALBASE}/lib
 
 MKDIRS=	share/kde/icons/locolor/32x32/actions/kde \
 	share/kde/icons/locolor/22x22/mimetypes \
