@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:37 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:48 wiz Exp $
 
-MD5 (tavrasm-1.15/tavrasm.tar.gz) = 23358cb72ba9bfb49642b72a82bead77
+SHA1 (tavrasm-1.15/tavrasm.tar.gz) = 94ef02c1d317fb3f616d06580f08d16b78812dd7
+Size (tavrasm-1.15/tavrasm.tar.gz) = 60729 bytes
 SHA1 (patch-aa) = e6844196e0a55b6a969a811ee1325d2c975ffe4c

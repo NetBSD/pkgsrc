@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:58 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:37 wiz Exp $
 
-MD5 (p5-FileKGlob-1.2/FileKGlob.tar.gz) = d56bd5397f0835cc083b9fa78a1a2275
+SHA1 (p5-FileKGlob-1.2/FileKGlob.tar.gz) = 3b959d9b75cf44f0faa3167ece70e08b2e7795b6
+Size (p5-FileKGlob-1.2/FileKGlob.tar.gz) = 7653 bytes

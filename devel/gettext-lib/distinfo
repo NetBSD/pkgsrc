@@ -1,14 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:19 wiz Exp $
 
-MD5 (gettext-0.10.35.tar.gz) = f29d32b82217b9d89fcda66328752acc
-SHA1 (patch-aa) = 3a08075e113a90cb4848718a73b55e572be7d1bb
-SHA1 (patch-ab) = aa7e3c08b3b598d48c768bea0d7afe9e375c4174
-SHA1 (patch-ac) = a31996698a632614bbf5269bcd22b4d3e7077e0c
-SHA1 (patch-ad) = c30246c62ad2a3809f092d4e83747a781437fc8c
-SHA1 (patch-ae) = a5b82ab8b98c34a8889d60fd9cb224bc1ccdd4d0
-SHA1 (patch-af) = 1e93d62e848f3dd6d902c0c91b32bb593f3afc43
-SHA1 (patch-ag) = d91a594dc455bd7b0f3ece4e5b237227d08e4418
-SHA1 (patch-ah) = 2822c9d3a6e9f2a9ae0d4b5ed5c25525e3d4f34d
-SHA1 (patch-ai) = dd77fb17fae639152ae1deca233f3a56629ecaea
-SHA1 (patch-aj) = 0df7b1c18f417532369abeff7429a3a2b26fdb09
-SHA1 (patch-ak) = d75e08203f779c26094e876aee5869c3aa1d9dff
+SHA1 (gettext-0.10.35.tar.gz) = fcf5aedd794b45f9a63cb30deba96e842cc2d77c
+Size (gettext-0.10.35.tar.gz) = 713694 bytes

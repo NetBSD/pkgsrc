@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:48 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:34 wiz Exp $
 
-MD5 (Curses-1.05.tar.gz) = 966d3ef5ed5a30f00f3f66ab68b6bf35
+SHA1 (Curses-1.05.tar.gz) = b84873e5196d7495999482df38254ee89e2e5ac4
+Size (Curses-1.05.tar.gz) = 60897 bytes
 SHA1 (patch-aa) = 351002e494b6ce5001154158b036e3f8e08108de
 SHA1 (patch-ab) = 578e6b65a930fd561254d8b6f3da7014debd271c

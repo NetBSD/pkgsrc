@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:20 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:43 wiz Exp $
 
-MD5 (pwlib_min_1.1pl17.tar.gz) = 4089db2aafb42cd019b8d96e9b4407a6
+SHA1 (pwlib_min_1.1pl17.tar.gz) = 85008dde337b9d03b24e9441dcbc19906b1bb163
+Size (pwlib_min_1.1pl17.tar.gz) = 606093 bytes
 SHA1 (patch-aa) = dff2b41d6ad6f2c7c009c3d5739c57f72f2345c5
 SHA1 (patch-ab) = f861afd35b4cbac46e8b7deba17f3ffd27160a1c
 SHA1 (patch-ac) = b217fd258e8012313765094a1ddaaae06441cdee
