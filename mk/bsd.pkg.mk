@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.898 2002/01/07 13:50:06 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.899 2002/01/09 12:53:46 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -1665,8 +1665,8 @@ automake-pre-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(for _PATTERN in ${AUTOMAKE_PATTERNS}; do			\
 	   ${FIND} ${WRKSRC} -type f -name "$$_PATTERN" -print;		\
-	 done) | 							\
-	${XARGS} ${TOUCH} ${TOUCH_ARGS}
+	 done; echo /dev/null ) |					\
+	${XARGS} ${TOUCH} ${TOUCH_FLAGS}
 .  endif
 
 AUTOMAKE_POST_PATTERNS+=     config.status
@@ -1680,8 +1680,8 @@ automake-post-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(for _PATTERN in ${AUTOMAKE_POST_PATTERNS}; do			\
 	   ${FIND} ${WRKSRC} -type f -name "$$_PATTERN" -print;		\
-	 done) | 							\
-	${XARGS} ${TOUCH} ${TOUCH_ARGS}
+	 done; echo /dev/null ) |					\
+	${XARGS} ${TOUCH} ${TOUCH_FLAGS}
 .  endif
 .endif	# AUTOMAKE_OVERRIDE
 
