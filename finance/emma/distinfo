@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.5 2001/06/30 16:56:30 tron Exp $
+$NetBSD: distinfo,v 1.6 2001/07/02 14:29:45 drochner Exp $
 
 SHA1 (emma-0.8-1.tar.gz) = 06c0216a441511b88c36d7d600b9e6e5b443f6d3
 Size (emma-0.8-1.tar.gz) = 409664 bytes
 SHA1 (patch-aa) = 55412520766343b18c46b1b4e13cc58077a14269
-SHA1 (patch-ab) = 2e47edb27702a38e91c45010052d288cd1fe8cd2
+SHA1 (patch-ab) = b40e3014cd9287aebf3c19759edc2d4ddcbf9ffe
 SHA1 (patch-ac) = d4519cc7d6c1b9d982855be957b88a33f38c3c3d
+SHA1 (patch-ad) = 5e0e39e13b2de33942fce6d5d3d72d7755139851
+SHA1 (patch-ae) = 9d624620c2702a1a2b6888a715e5ac3e63b21f96
