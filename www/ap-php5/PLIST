@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/31 21:51:07 jdolecek Exp $
+lib/httpd/mod_php5.so
