@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 22:52:43 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/12/24 13:02:01 jmmv Exp $
 
 DISTNAME=	TeXfamily-1.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	japanese print
 MASTER_SITES=	ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2/ \
 		ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2.1/ \
@@ -31,7 +31,7 @@ DEPENDS+=	TeXfamily-share>=1.2.1nb3:../../print/texfamily-share
 DEPENDS+=	ja-vflib-lib-[0-9]*:../../print/ja-vflib-lib
 
 DIST_SUBDIR=	TeXfamily
-TETEX_DIR=	${_PKGSRCDIR}/print/teTeX-bin/${WRKDIR:T}/teTeX-1.0
+TETEX_DIR=	${_PKGSRCDIR}/print/teTeX1-bin/${WRKDIR:T}/teTeX-1.0
 WRKSRC=		${TETEX_DIR}
 EXTRACT_ONLY=	# none
 
@@ -83,9 +83,9 @@ TEXFAMILY_MENDEXVERSION=2.5
 
 pre-extract:
 	if [ ! -e ${WRKSRC} ]; then \
-		cd ../../print/teTeX-bin && ${MAKE} patch; \
+		cd ../../print/teTeX1-bin && ${MAKE} patch; \
 	elif [ ! -e ${WRKSRC}/texk/texfam.ac ]; then \
-		cd ../../print/teTeX-bin && ${MAKE} clean; ${MAKE} patch; \
+		cd ../../print/teTeX1-bin && ${MAKE} clean; ${MAKE} patch; \
 	fi
 
 post-extract:
@@ -165,6 +165,6 @@ post-install:
 	${LOCALBASE}/bin/mktexlsr ${LOCALBASE}/share/texmf.local
 
 pre-clean:
-	cd ../../print/teTeX-bin && ${MAKE} clean
+	cd ../../print/teTeX1-bin && ${MAKE} clean
 
 .include "../../mk/bsd.pkg.mk"

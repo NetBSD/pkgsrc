@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:52:42 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/24 13:02:01 jmmv Exp $
 #
 
 DISTNAME=	hugelatex-1.0
@@ -12,7 +12,7 @@ DISTFILES=	# nada
 MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	LaTeX format files with large limits
 
-DEPENDS+=	teTeX-1.0*:../teTeX
+DEPENDS+=	teTeX-1.0*:../../print/teTeX1
 
 EXTRACT_ONLY=	# nothing
 NO_CHECKSUM=	yes

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 21:30:11 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/12/24 13:02:00 jmmv Exp $
 #
 # XXX This package needs to be installed with the same PREFIX as teTeX
 #
 
 DISTNAME=		cweb-3.64
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}
 CATEGORIES=		devel lang
 MASTER_SITES=		${MASTER_SITE_TEX_CTAN:=web/cweb/}
@@ -12,7 +13,9 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www-cs-faculty.stanford.edu/~knuth/cweb.html
 COMMENT=		CWEB System of Structured Documentation
 
-DEPENDS+= 		teTeX-[0-9]*:../../print/teTeX
+CONFLICTS+=		teTeX-bin>=2.0
+
+DEPENDS+= 		teTeX-[0-9]*:../../print/teTeX1
 
 post-patch:
 	${MV} ${WRKSRC}/cweb.1 ${WRKSRC}/cweb.1.dist
