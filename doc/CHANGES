@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.387 2002/10/28 11:42:58 wiz Exp $
+$NetBSD: CHANGES,v 1.388 2002/10/28 11:54:39 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3420,3 +3420,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added tinyscheme-1.31 [agc 2002-10-28]
 	Added gmngview-1.0.4 [wiz 2002-10-28]
 	Added qt3-psql-3.0.6 [drochner 2002-10-28]
+	Updated py-amkCrypto to 1.9a4 [drochner 2002-10-28]
