@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1 1998/08/29 12:31:44 garbled Exp $
+--- configure.in.orig	Mon Feb  9 20:58:57 1998
++++ configure.in	Fri Aug 28 08:23:21 1998
+@@ -1013,10 +1013,10 @@
+     case "$canonical" in
+       i[[3-9]]86-*-netbsd*) machine=intel386 ;;
+       hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
+-                      dnl Yes, this is somewhat bogus.
+-                      machine=hp9000s300 ;;
++                      machine=m68k ;;
+       pc532-*-netbsd* | ns32k-*-netbsd* )  machine=ns32000 ;;
+       pmax-*-netbsd*  | mips-*-netbsd*  )  machine=pmax ;;
++      alpha-*-netbsd* ) machine=alpha ;;
+     esac
+   ;;
+ 
