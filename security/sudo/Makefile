@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.53 2003/01/28 22:04:08 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2003/04/01 16:07:21 wiz Exp $
 #
 
-DISTNAME=		sudo-1.6.6
+DISTNAME=		sudo-1.6.7p1
 PKGNAME=		${DISTNAME:S/p/./}
 CATEGORIES=		security
 MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.courtesan.com/pub/sudo/ \
 			ftp://ftp.cs.colorado.edu/pub/sudo/ \
 			ftp://ftp.uu.net/pub/security/sudo/ \
-			ftp://ftp.tux.org/pub/security/sudo/
+			ftp://ftp.tux.org/pub/security/sudo/ \
+			http://www.courtesan.com/sudo/dist/beta/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.courtesan.com/sudo/
