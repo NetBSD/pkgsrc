@@ -1,0 +1,13 @@
+--- src/plugins/oss/ao_oss.c.orig	Mon Aug 13 16:20:05 2001
++++ src/plugins/oss/ao_oss.c	Wed Aug 15 00:15:59 2001
+@@ -81,8 +81,8 @@
+ 	char *err = NULL;
+ 	char *dev = NULL;
+ 
+-	/* default: first try the devfs path */
+-	*dev_path = strdup("/dev/sound/dsp");
++	/* default: first try the NetBSD path */
++	*dev_path = strdup("/dev/sound");
+ 	fd = open(*dev_path, O_WRONLY | O_NONBLOCK);
+ 
+ 	/* then try the original dsp path */
