@@ -1,8 +1,17 @@
-$NetBSD: patch-ad,v 1.5 1998/08/07 11:18:06 agc Exp $
+$NetBSD: patch-ad,v 1.6 1999/03/04 22:44:42 tron Exp $
 
---- kdm/Makefile.in.orig	Sun Apr 19 01:22:07 1998
-+++ kdm/Makefile.in	Fri Jun 26 00:27:10 1998
-@@ -217,7 +217,7 @@
+--- kdm/Makefile.in.orig	Sat Feb  6 18:49:17 1999
++++ kdm/Makefile.in	Thu Mar  4 21:30:30 1999
+@@ -100,7 +100,7 @@
+ LIBXDMCP = @LIBXDMCP@
+ LIBZ = @LIBZ@
+ LIB_KAB = @LIB_KAB@
+-LIB_KDECORE = @LIB_KDECORE@
++LIB_KDECORE = @prefix@/lib/libkdecore.a -lXext $(LIB_QT)
+ LIB_KDEUI = @LIB_KDEUI@
+ LIB_KDEUTIL = @LIB_KDEUTIL@
+ LIB_KFILE = @LIB_KFILE@
+@@ -255,7 +255,7 @@
  CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS)
  LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS)
  CXXLINK = $(LIBTOOL) --mode=link $(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@
