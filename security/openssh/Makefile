@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.92 2003/01/19 01:26:35 seb Exp $
+# $NetBSD: Makefile,v 1.93 2003/01/23 00:00:17 seb Exp $
 
 DISTNAME=		openssh-3.5p1
 PKGNAME=		openssh-3.5.0.1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
-#MASTER_SITES=		ftp://gd.tuwien.ac.at/opsys/OpenBSD/OpenSSH/portable/ \
-#			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
-#			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/old/
+MASTER_SITES=		ftp://gd.tuwien.ac.at/opsys/OpenBSD/OpenSSH/portable/ \
+			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
+			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/old/
 # Don't delete the last entry -- it's there if the pkgsrc version is not
 # up-to-date and the mirrors already removed the old distfile.
 
