@@ -1,4 +1,4 @@
-# $Id: parallel.txt,v 1.4 2004/03/26 08:22:55 jlam Exp $
+# $Id: parallel.txt,v 1.5 2004/07/10 14:37:36 grant Exp $
 #
 
 These are my (<dmcmahill>) thoughts on how one would want a parallel
@@ -50,7 +50,7 @@ following manner:
     c)  Install via pkg_add all packages which are needed to build the
     current package.  We are able to do this because we have been
     building our packages in a bottom up order so all dependencies
-    should have been build.
+    should have been built.
 
     d)  Build and package the package.
 
