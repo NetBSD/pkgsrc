@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2649 2004/12/04 15:49:07 peter Exp $
+$NetBSD: TODO,v 1.2650 2004/12/04 18:31:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -313,14 +313,14 @@ Suggested package updates
 	o arping-2.04
 	o artist-1.2.6
 	o asapm-2.13
-	o aspell-0.60.1.1
-	o aspell-czech-0.51
-	o aspell-english-0.51.1
-	o aspell-faroese-0.51.0
-	o aspell-italian-0.53.0
-	o aspell-polish-0.51.0
-	o aspell-svenska-0.51.0
-	o aspell-ukrainian-0.51.0
+	o aspell-0.60.1.1 [wiz]
+	o aspell-czech-0.51 [wiz]
+	o aspell-english-0.51.1 [wiz]
+	o aspell-faroese-0.51.0 [wiz]
+	o aspell-italian-0.53.0 [wiz]
+	o aspell-polish-0.51.0 [wiz]
+	o aspell-svenska-0.51.0 [wiz]
+	o aspell-ukrainian-0.51.0 [wiz]
 	o ast-ksh-20040229
 	o astyle-1.15.3
 	o auctex-11.53
