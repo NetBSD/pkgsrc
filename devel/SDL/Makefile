@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2002/10/13 19:28:56 kristerw Exp $
+# $NetBSD: Makefile,v 1.43 2002/10/31 22:19:49 jlam Exp $
 #
 
 DISTNAME=	SDL-1.2.5
+PKGREVISION=	1
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -10,6 +11,8 @@ HOMEPAGE=	http://www.libsdl.org/
 COMMENT=	Simple DirectMedia Layer, a cross-platform multimedia library
 
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
+NASMFLAGS_ELF=		-f elf
+NASMFLAGS_a.out=	-f aoutb
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES
@@ -22,13 +25,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OBJECT_FMT} == "ELF"
-NASMFLAGS=		-f elf
-.else
-NASMFLAGS=		-f aoutb
-.endif
-
-.ifdef SDL_USE_NAS
+.if defined(SDL_USE_NAS)
 .  include "../../audio/nas/buildlink2.mk"
 .else
 CONFIGURE_ARGS+=	--disable-nas
@@ -36,8 +33,8 @@ CONFIGURE_ARGS+=	--disable-nas
 
 CONFIGURE_ARGS+=	--disable-arts
 CONFIGURE_ARGS+=	--enable-video-aalib
-CONFIGURE_ENV+=		NASMFLAGS="${NASMFLAGS}"
-MAKE_ENV+=		NASMFLAGS="${NASMFLAGS}"
+CONFIGURE_ENV+=		NASMFLAGS="${NASMFLAGS_${OBJECT_FMT}}"
+MAKE_ENV+=		NASMFLAGS="${NASMFLAGS_${OBJECT_FMT}}"
 
 # Pass in LDFLAGS via SYSTEM_LIBS as it's used as the linker options for
 # finding various libraries.  This ensure that any unusual -Wl,-R options
@@ -45,16 +42,15 @@ MAKE_ENV+=		NASMFLAGS="${NASMFLAGS}"
 #
 CONFIGURE_ENV+=		SYSTEM_LIBS="${LDFLAGS}"
 
-.include "../../mk/pthread.buildlink2.mk"
-.if ${_PKG_PTHREAD} == "pth"
-# Let SDL know that we do not have native pthreads.
-CONFIGURE_ARGS+=	--disable-pthreads
-CONFIGURE_ARGS+=	--enable-pth
+.include "../../mk/ossaudio.buildlink2.mk"
+.if defined(HAVE_OSS) && (${HAVE_OSS} == "YES")
+AM_CFLAGS=		-D_PATH_DEV_DSP=\\\"${DEVOSSAUDIO}\\\"
+MAKE_ENV+=		AM_CFLAGS="${AM_CFLAGS}"
 .endif
 
 .include "../../audio/esound/buildlink2.mk"
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../graphics/aalib-x11/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
