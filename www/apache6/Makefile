@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2001/10/16 04:11:06 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2001/10/16 04:47:06 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -83,7 +83,7 @@ APACHE_CUSTOM_CFLAGS+=	-O6 -fomit-frame-pointer -fexpensive-optimizations
 # written in C++ will resolve correctly.
 #
 .if (${OPSYS} == "NetBSD")
-LINK_LIBGCC_LDFLAGS=	-Wl,-whole-archive -lgcc -Wl,-no-whole-archive
+LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -lgcc -Wl,--no-whole-archive
 MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
 
