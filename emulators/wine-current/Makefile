@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.5 1999/08/27 15:28:47 agc Exp $
+# $NetBSD: Makefile,v 1.6 1999/12/29 01:47:59 wiz Exp $
 
 DISTNAME=		Wine-990328
 PKGNAME=		wine-990328
 WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.winehq.com/
 
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		ncurses-4.2:../../devel/ncurses
+
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 USE_X11=		yes
 GNU_CONFIGURE=		yes
