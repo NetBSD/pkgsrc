@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/03 18:49:54 reed Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/01 17:57:53 snj Exp $
 #
 
 DISTNAME=	fvwm-themes-${THEM_VER}
@@ -19,7 +19,7 @@ DEPENDS+=	fvwm2>=2.4.8:../../wm/fvwm2
 THEM_VER=	0.6.2
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PERL5=	YES
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
@@ -30,5 +30,5 @@ post-install:
 	${PREFIX}/bin/fvwm-themes-config --site --install \
 		${DISTDIR}/fvwm-themes-extra-${THEM_VER}.tar.bz2
 
-.include "../../graphics/ImageMagick/buildlink2.mk"
+.include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

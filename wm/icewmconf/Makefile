@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/08 20:27:16 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/01 17:57:54 snj Exp $
 
 DISTNAME=	icewmconf-2.1.0
 CATEGORIES=	wm
@@ -9,7 +9,7 @@ HOMEPAGE=	http://sdboyd.dyndns.org/icewmconf/
 COMMENT=	Graphical configuration tool for IceWM
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	yes
 FILENAME=	${WRKDIR}/${DISTNAME:C/-.*//}
 NO_BUILD=	# defined
 
@@ -24,5 +24,5 @@ post-patch:
 do-install:
 	${INSTALL_SCRIPT} ${FILENAME} ${PREFIX}/bin/
 
-.include "../../x11/tk83/buildlink2.mk"
+.include "../../x11/tk83/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
