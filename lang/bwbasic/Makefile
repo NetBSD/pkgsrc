@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/05/20 10:39:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/25 06:37:19 tron Exp $
 
 DISTNAME=	bwbasic-2.20
 WRKSRC=		${WRKDIR}/bwbasic-2.20p2/${PKGNAME_NOREV}
@@ -13,9 +13,13 @@ COMMENT=	The Bywater Basic interpreter
 DIST_SUBDIR=	${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 
+SHARE_DIR=	${PREFIX}/share/bwbasic
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/bwbasic
-	${CP} -r ${WRKSRC}/bwbtest ${PREFIX}/share/bwbasic/
+	${INSTALL_DATA_DIR} ${SHARE_DIR}
+	${CP} -r ${WRKSRC}/bwbtest ${SHARE_DIR}
+	${FIND} ${SHARE_DIR} -type d | ${XARGS} ${CHMOD} ${BINMODE}
+	${FIND} ${SHARE_DIR} -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
 	${INSTALL_MAN} ${WRKSRC}/bwbasic.doc ${PREFIX}/man/man1/bwbasic.1
 
 .include "../../mk/bsd.pkg.mk"
