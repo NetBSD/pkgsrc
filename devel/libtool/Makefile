@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/12/28 17:55:37 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2001/01/04 13:05:23 bad Exp $
 #
 
 DISTNAME=	libtool-1.3.5
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.gnu.org/software/libtool/libtool.html
 
 CONFLICTS=	glibtool-*
 GNU_CONFIGURE=	yes
+USE_GTEXINFO=	yes
 
 # It seems the info-files distributed with libtool 1.3.5 are broken.
 # To test, type "info libtool|" and hold down space. See it stop with a
