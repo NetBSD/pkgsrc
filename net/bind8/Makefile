@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.22 2003/08/03 07:39:58 jmc Exp $
+# $NetBSD: Makefile,v 1.23 2003/12/03 22:14:46 kristerw Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
@@ -11,7 +11,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/${BIND_VERSION}/
 DISTFILES=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
 
-MAINTAINER=	packages@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
 COMMENT=	The Berkeley Internet Name Daemon, an implementation of DNS
 
