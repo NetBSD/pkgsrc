@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 16:39:05 martti Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/15 20:18:33 bad Exp $
 
-DISTNAME=	jdb-1.7
+DISTNAME=	jdb-1.12
 CATEGORIES=	databases
 MASTER_SITES=	http://www.isi.edu/~johnh/SOFTWARE/JDB/
 
