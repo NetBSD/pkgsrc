@@ -1,16 +1,28 @@
-$NetBSD: patch-am,v 1.5 2004/04/28 08:16:44 jmmv Exp $
+$NetBSD: patch-am,v 1.6 2004/04/29 14:18:34 xtraeme Exp $
 
---- libgnomevfs/gnome-vfs-unix-mounts.c.orig	2004-02-16 12:13:27.000000000 +0100
-+++ libgnomevfs/gnome-vfs-unix-mounts.c
-@@ -411,7 +411,11 @@ get_mtab_monitor_file (void)
+--- libgnomevfs/gnome-vfs-unix-mounts.c.orig	2004-04-29 16:11:52.000000000 +0200
++++ libgnomevfs/gnome-vfs-unix-mounts.c	2004-04-29 16:13:57.000000000 +0200
+@@ -411,7 +411,11 @@
  gboolean
  _gnome_vfs_get_current_unix_mounts (GList **return_list)
  {
-+#ifdef FSTYPE_STATVFS
++#ifdef HAVE_STATVFS
 +    	struct statvfs *mntent = NULL;
 +#else
      	struct statfs *mntent = NULL;
 +#endif
  	int num_mounts, i;
  	GnomeVFSUnixMount *mount_entry;
+ 
+@@ -428,7 +432,11 @@
+ 		mount_entry->mount_path = g_strdup (mntent[i].f_mntonname);
+ 		mount_entry->device_path = g_strdup (mntent[i].f_mntfromname);
+ 		mount_entry->filesystem_type = g_strdup (mntent[i].f_fstypename);
++#ifdef HAVE_STATVFS
++		if (mntent[i].f_flag == MNT_RDONLY) {
++#else
+ 		if (mntent[i].f_flags == MNT_RDONLY) {
++#endif
+ 		    	mount_entry->is_read_only = TRUE;
+ 		}
  
