@@ -1,14 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2003/11/18 16:10:55 jschauma Exp $
+$NetBSD: patch-aa,v 1.4 2003/11/28 18:41:03 jschauma Exp $
 
---- book/Makefile.am.orig	2003-11-07 08:32:07.000000000 -0600
-+++ book/Makefile.am	2003-11-17 20:50:19.000000000 -0600
-@@ -10,13 +10,12 @@
- 	lines list material mipmap model movelight nurbs pickdepth \
- 	picksquare plane planet polyoff polys quadric robot sccolorlight \
- 	scene scenebamb sceneflat select smooth stencil stroke surface \
--	teaambient teapots tess tesswind texbind texgen texprox texsub \
-+	teaambient teapots texbind texgen texprox texsub \
- 	texturesurf torus trim unproject varray wrap 
+--- book/Makefile.am.orig	2003-11-07 09:32:07.000000000 -0500
++++ book/Makefile.am	2003-11-28 12:47:45.000000000 -0500
+@@ -15,8 +15,7 @@
  
  EXTRA_DIST = jitter.h
  
