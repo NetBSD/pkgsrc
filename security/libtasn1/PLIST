@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/14 03:23:43 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/05 23:16:20 xtraeme Exp $
 include/libtasn1.h
 lib/libtasn1.a
 lib/libtasn1.la
 lib/libtasn1.so
 lib/libtasn1.so.2
-lib/libtasn1.so.2.4
+lib/libtasn1.so.2.6
