@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.355 2004/07/03 09:10:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.356 2004/07/04 13:56:06 drochner Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -74,6 +74,7 @@ SUBDIR+=	gtk2-theme-switch
 SUBDIR+=	gtkglarea
 SUBDIR+=	gtkglarea2
 SUBDIR+=	gtkmm
+SUBDIR+=	gtkmm24
 SUBDIR+=	gtksourceview
 SUBDIR+=	gtkstep
 SUBDIR+=	gtkterm2
