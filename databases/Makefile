@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2001/05/14 12:39:40 zuntum Exp $
+# $NetBSD: Makefile,v 1.53 2001/05/14 14:57:43 jlam Exp $
 #
 
 COMMENT=	Databases
@@ -36,6 +36,12 @@ SUBDIR+=	p5-perl-ldap
 SUBDIR+=	p5-pgsql
 SUBDIR+=	pgaccess
 SUBDIR+=	postgresql
+SUBDIR+=	postgresql-client
+SUBDIR+=	postgresql-docs
+SUBDIR+=	postgresql-lib
+SUBDIR+=	postgresql-plperl
+SUBDIR+=	postgresql-pltcl
+SUBDIR+=	postgresql-server
 SUBDIR+=	py-gdbm
 SUBDIR+=	py-ldap
 SUBDIR+=	py-mysqldb
