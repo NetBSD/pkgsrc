@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/10/14 00:17:18 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/01/25 21:43:58 tv Exp $
 #
 
 DISTNAME=		compat12-${MACHINE_ARCH}
@@ -6,7 +6,7 @@ PKGNAME=		compat12-1.2.1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		tv@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/Releases/formal-1.2/index.html
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-ns32k \
