@@ -1,0 +1,14 @@
+--- /dev/null	Mon Feb 22 03:47:57 1999
++++ Makefile	Mon Feb 22 04:18:05 1999
+@@ -0,0 +1,11 @@
++CFLAGS+=	-I${X11BASE}/include -L${X11BASE}/lib -DVERSION=\"${VERSION}\"
++#CFLAGS+=	-ggdb
++CFLAGS+=	-O2
++
++all: xpmroot
++xpmroot: xpmroot.c
++	${CC} ${CFLAGS} xpmroot.c -o xpmroot -lXpm -lX11
++
++install:
++	${INSTALL_PROGRAM} xpmroot	${X11BASE}/bin
++	${INSTALL_MAN} xpmroot.1	${X11BASE}/man/man1
