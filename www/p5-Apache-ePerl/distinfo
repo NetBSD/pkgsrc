@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:39 skrll Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 14:08:35 wiz Exp $
 
 SHA1 (eperl-2.2.14.tar.gz) = cf05566602d93019a38638a6958739a1e192ead7
+RMD160 (eperl-2.2.14.tar.gz) = 708c72d4a2bc494e9b3e953aa13efd0fe7933b98
 Size (eperl-2.2.14.tar.gz) = 199664 bytes

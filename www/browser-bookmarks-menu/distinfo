@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/19 17:33:03 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:08:29 wiz Exp $
 
 SHA1 (browser-bookmarks-menu-0.3.tar.gz) = ddaf7dff15064e029319d9f3e9ea1ffa115cc44a
+RMD160 (browser-bookmarks-menu-0.3.tar.gz) = 8cb4e909bb61b731528c3ae35ed00bc253faa9d0
 Size (browser-bookmarks-menu-0.3.tar.gz) = 12017 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2004/06/02 21:50:31 recht Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 14:08:29 wiz Exp $
 
 SHA1 (bk_edit-0.6.23.tar.gz) = fe37a0e213e54d8a60f70b6e03818e26f3690bf2
+RMD160 (bk_edit-0.6.23.tar.gz) = a9cc09925ccd0691d5a38b04ea2a81f877a3c102
 Size (bk_edit-0.6.23.tar.gz) = 113434 bytes
 SHA1 (patch-aa) = 84d7f99a8de035df2fd92586ded632aaf6edfc1e
