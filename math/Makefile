@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2001/04/27 22:58:13 jtb Exp $
+# $NetBSD: Makefile,v 1.60 2001/04/27 23:19:36 jtb Exp $
 #
 
 COMMENT=	Mathematics
@@ -36,9 +36,9 @@ SUBDIR+=	octave-current
 SUBDIR+=	odepack
 SUBDIR+=	otter
 SUBDIR+=	pari
-SUBDIR+=	p5-BigInteger
-SUBDIR+=	p5-Interpolate
-SUBDIR+=	p5-MatrixReal
+SUBDIR+=	p5-Math-BigInteger
+SUBDIR+=	p5-Math-Interpolate
+SUBDIR+=	p5-Math-MatrixReal
 SUBDIR+=	pspp
 SUBDIR+=	py-Numeric
 SUBDIR+=	py-Scientific
