@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/03 19:25:04 wiz Exp $
+bin/autoconf-2.13
+bin/autoheader-2.13
+bin/autoreconf-2.13
+bin/autoscan-2.13
+bin/autoupdate-2.13
+bin/ifnames-2.13
+@unexec ${INSTALL_INFO} --delete %D/info/autoconf213.info %D/info/dir
+info/autoconf213.info
+@exec ${INSTALL_INFO} %D/info/autoconf213.info %D/info/dir
+share/autoconf/acconfig.h
+share/autoconf/acfunctions
+share/autoconf/acgeneral.m4
+share/autoconf/acheaders
+share/autoconf/acidentifiers
+share/autoconf/acmakevars
+share/autoconf/acoldnames.m4
+share/autoconf/acprograms
+share/autoconf/acspecific.m4
+share/autoconf/autoconf.m4
+share/autoconf/autoconf.m4f
+share/autoconf/autoheader.m4
+share/autoconf/autoheader.m4f
+share/autoconf/config.guess
+share/autoconf/config.sub
+@unexec ${RMDIR} %D/share/autoconf 2>/dev/null || ${TRUE}
