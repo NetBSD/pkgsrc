@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1701 2003/03/21 08:31:11 tron Exp $
+$NetBSD: CHANGES,v 1.1702 2003/03/21 17:33:05 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1212,3 +1212,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated postfix to 2.0.7 [christos 2003-03-20]
 	Updated gerbv to 0.13 [dmcmahill 2003-03-20]
 	Updated netpbm to 10.11.6nb1 [tron 2003-03-21]
+	Updated ezmlm-idx to 0.40nb1 [jmmv 2003-03-20]
