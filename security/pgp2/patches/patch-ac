@@ -1,3 +1,4 @@
+$NetBSD: patch-ac,v 1.2 2000/02/05 04:35:51 wiz Exp $
 --- platform.h.orig	Sun Jun 20 22:21:24 1999
 +++ platform.h	Sun Jun 20 22:21:49 1999
 @@ -179,7 +179,7 @@
