@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/03/11 16:11:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1999/03/20 00:23:55 tron Exp $
 
 DISTNAME=	WMMail.app-0.62
 PKGNAME=	wmmail-0.62
@@ -9,7 +9,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.eecg.utoronto.ca/~chanb/wmmail.html
 
 BUILD_DEPENDS+=	automake:../../devel/automake
-DEPENDS+=	windowmaker-0.51.0:../../x11/windowmaker
+DEPENDS+=	windowmaker-0.51.2:../../x11/windowmaker
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
@@ -22,6 +22,6 @@ post-install:
 		${SED} -e 's#@@X11BASE@@#${X11BASE}#g' \
 		       -e 's#@@LOCALBASE@@#${LOCALBASE}#g' \
 		       <${WRKSRC}/WMMail.defaults \
-		       >${PREFIX}/share/WindowMaker/Defaults/WMMail
+		       >${PREFIX}/etc/WindowMaker/WMMail
 
 .include "../../mk/bsd.pkg.mk"
