@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1998/12/30 20:36:54 tv Exp $
+
+--- src/hash.cc.orig	Wed Dec 30 15:35:10 1998
++++ src/hash.cc	Wed Dec 30 15:37:29 1998
+@@ -95,7 +95,7 @@
+     return attrs_hash (x, M);
+ }
+ 
+-int hash(const char*& s, int M)
++int hash(const char*const& s, int M)
+     /* a char* hash function from Aho, Sethi, and Ullman */
+ {
+     const char *p;
