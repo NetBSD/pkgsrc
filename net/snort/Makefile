@@ -1,6 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2002/11/09 13:44:43 wiz Exp $
+# $NetBSD: Makefile,v 1.21.2.1 2003/04/20 09:59:21 grant Exp $
 #
+
 .include "Makefile.common"
+
+PKGREVISION=	1
+
 COMMENT=	Libpcap-based packet sniffer/logger
 
 USE_BUILDLINK2=	YES
