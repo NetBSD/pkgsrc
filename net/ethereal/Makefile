@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 1999/12/30 18:35:50 frueauf Exp $
+# $NetBSD: Makefile,v 1.16 2000/01/10 22:45:42 frueauf Exp $
 #
 
-DISTNAME=		ethereal-0.8.0
+DISTNAME=		ethereal-0.8.1
 CATEGORIES=		net
 MASTER_SITES=		http://ethereal.zing.org/distribution/
 
