@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1.1.1 2002/03/22 14:17:47 wiz Exp $
+
+--- data/properties/anjuta.properties.orig	Thu Feb 14 20:28:34 2002
++++ data/properties/anjuta.properties
+@@ -328,7 +328,7 @@
+ # CURRENT_FILE_EXTENSION            | $(current.file.extension)     | Only extension of the file #
+ ##################################################################################################
+ 
+-make=make
++make=gmake
+ anjuta.make.options=-k
+ 
+ command.build.module=$(make) $(anjuta.make.options)
+@@ -337,7 +337,7 @@
+ command.build.install=$(make) $(anjuta.make.options) install
+ command.build.clean=$(make) $(anjuta.make.options) clean
+ command.build.clean.all=$(make) $(anjuta.make.options) distclean
+-command.execute.project=./"$(project.source.target)" $(anjuta.program.arguments)
++command.execute.project=./$(project.source.target) $(anjuta.program.arguments)
+ command.terminal=gnome-terminal --command="$(anjuta.current.command)"
+ 
+ anjuta.compiler.flags=-O -g

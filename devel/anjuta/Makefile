@@ -1,0 +1,30 @@
+# $NetBSD: Makefile,v 1.1.1.1 2002/03/22 14:17:47 wiz Exp $
+#
+
+DISTNAME=       anjuta-0.1.9
+CATEGORIES=     devel
+MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=anjuta/}
+
+MAINTAINER=     packages@netbsd.org
+HOMEPAGE=       http://anjuta.sourceforge.net
+COMMENT=        Gnome based IDE for C and C++
+
+DEPENDS+=               pkgconfig>=0.8.0:../../devel/pkgconfig
+DEPENDS+=               scrollkeeper>=0.2:../../textproc/scrollkeeper
+DEPENDS+=		xml-i18n-tools>=0.9:../../textproc/xml-i18n-tools
+
+BUILD_USES_MSGFMT=	YES
+GNU_CONFIGURE=		YES
+USE_X11=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+
+CONFIGURE_ARGS+=        --localstatedir=${LOCALSTATEDIR}
+LOCALSTATEDIR=          /var/gnome
+
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../sysutils/gnome-vfs/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
+.include "../../x11/gnome-libs/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
+.include "../../mk/bsd.pkg.mk"

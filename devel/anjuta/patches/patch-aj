@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2002/03/22 14:17:47 wiz Exp $
+
+--- src/Makefile.in.orig	Thu Feb 14 20:31:26 2002
++++ src/Makefile.in
+@@ -451,7 +451,7 @@
+ ../scintilla/LexCrontab.o ../scintilla/LexEiffel.o \
+ ../scintilla/LexLisp.o ../scintilla/LexRuby.o ../scintilla/LexBullant.o \
+ ../scintilla/LexAda.o ../scintilla/LexBaan.o
+-anjuta_LDFLAGS = 
++anjuta_LDFLAGS = -export-dynamic 
+ CXXFLAGS = @CXXFLAGS@
+ CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
