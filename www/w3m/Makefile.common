@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2002/05/10 06:27:22 kei Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/05/10 16:51:02 wiz Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -19,6 +19,9 @@ W3M_SRC=	${DISTNAME}${EXTRACT_SUFX}
 WRKSRC=		${WRKDIR}/w3m-${W3M_VERS}
 DISTFILES+=	${W3M_SRC}
 EXTRACT_ONLY=	${W3M_SRC}
+
+PATCHDIR=	${.CURDIR}/../w3m/patches
+DISTINFO_FILE=	${.CURDIR}/../w3m/distinfo
 
 # multibyte/wide character support was split into libwc in latest version of
 # w3m-m17n.
