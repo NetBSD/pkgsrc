@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/06/26 16:57:07 rh Exp $
+bin/g-scan
+bin/g-wrap
+bin/g-wrap-config
+include/g-wrap.h
+@unexec install-info --delete %D/info/g-wrap.info %D/info/dir
+info/g-wrap.info
+@exec install-info %D/info/g-wrap.info %D/info/dir
+lib/libgwrapguile.so.0.0
+lib/libgwrapguile.la
+lib/libgwrapguile.a
+libexec/g-wrap-guile
+share/guile/site/g-wrap.scm
+share/guile/site/g-wrap/guile-types.scm
+share/guile/site/g-wrap/output-file.scm
+share/guile/site/g-wrap/g-translate.scm
+share/guile/site/g-wrap/sorting.scm
+share/guile/site/g-wrap/pointer.scm
+@dirrm share/guile/site/g-wrap
+@dirrm share/guile/site
