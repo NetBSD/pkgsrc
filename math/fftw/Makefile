@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/06/05 21:41:42 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/10 00:25:16 jmc Exp $
 
 .if (${MACHINE_ARCH} == "powerpc")
 DISTNAME=		fftw-3.0-fma
@@ -24,6 +24,7 @@ USE_FORTRAN=		yes
 USE_GMAKE=		yes
 INFO_FILES=		fftw3.info
 TEXINFO_OVERRIDE=	yes
+TEXINFO_REQD=		4.5
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
