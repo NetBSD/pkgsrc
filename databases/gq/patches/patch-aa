@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2003/09/09 18:51:42 jmmv Exp $
+
+--- config.h.in.orig	2002-06-19 00:21:52.000000000 +0200
++++ config.h.in
+@@ -107,6 +107,9 @@
+ /* Define if you have the iswspace function.  */
+ #undef HAVE_ISWSPACE
+ 
++/* Define if you have the btowc function.  */
++#undef HAVE_BTOWC
++
+ /* Define if you have the ldap_memfree function.  */
+ #undef HAVE_LDAP_MEMFREE
+ 
