@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/03/09 12:40:13 kent Exp $
+$NetBSD: distinfo,v 1.6 2004/06/11 12:59:27 kent Exp $
 
-SHA1 (peace-0.0.20040309.tar.gz) = 3007d341c1b8fb95d428ba5b3825d446b391f347
-Size (peace-0.0.20040309.tar.gz) = 517902 bytes
+SHA1 (peace-0.0.20040611.tar.gz) = ea7423a11b909f19cf523dc75b630eb832bbe9ca
+Size (peace-0.0.20040611.tar.gz) = 572332 bytes
