@@ -1,18 +1,22 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.3 2000/09/03 12:03:17 veego Exp $
+# $NetBSD: INSTALL,v 1.4 2001/06/14 21:54:36 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 AMUSER=@AMUSER@
 AMGROUP=@AMGROUP@
+AMVAR=@AMVAR@
 ADDUSER=@ADDUSER@
 ADDGROUP=@ADDGROUP@
-CHGRP=@CHGRP@
-ID=@ID@
-TOUCH=@TOUCH@
-RM=@RM@
+CHGRP="@CHGRP@"
+CHMOD="@CHMOD@"
+CHOWN="@CHOWN@"
+ID="@ID@"
+MKDIR="@MKDIR@"
+RM="@RM@"
+TOUCH="@TOUCH@"
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -39,10 +43,19 @@ PRE-INSTALL)
 		echo "Done."
 	fi
 	;;
+
 POST-INSTALL)
+	${MKDIR} ${AMVAR}
+	${CHMOD} 700 ${AMVAR}
+	${CHOWN} ${AMUSER}:${AMGROUP} ${AMVAR}
+
+	${MKDIR} ${AMVAR}/gnutar-lists
+	${CHMOD} 700 ${AMVAR}/gnutar-lists
+	${CHOWN} ${AMUSER}:${AMGROUP} ${AMVAR}/gnutar-lists
 	;;
+
 *)
-	echo "Unexpected argument: $2"
+	echo "Unexpected argument: ${STAGE}"
 	exit 1
 	;;
 esac
