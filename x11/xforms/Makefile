@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/02/29 19:28:53 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.24 2000/03/01 01:50:11 dmcmahill Exp $
 #
 
 DISTNAME=       bxform-088
@@ -24,7 +24,7 @@ ARCH_SUBDIR=    netBSD-${MACHINE_ARCH}
 DIST_SUBDIR=		xforms-${MACHINE_ARCH}
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
-			NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
+			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
 
 .include "../../mk/bsd.prefs.mk"
 
