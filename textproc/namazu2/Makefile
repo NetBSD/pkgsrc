@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2005/02/13 09:52:00 taca Exp $
+# $NetBSD: Makefile,v 1.17 2005/02/13 16:19:08 taca Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
 DISTNAME=	namazu-2.0.14
+PKGREVISION=	1
 CATEGORIES=	japanese textproc www
 MASTER_SITES=	http://www.namazu.org/stable/
 
@@ -39,7 +40,7 @@ EXAMPLES=		mknmzrc namazurc
 
 PKG_SYSCONFSUBDIR?=	namazu
 .for f in ${EXAMPLES}
-CONF_FILES+=		${EXAMPLESDIR}/namazu/$f	${PKG_SYSCONFDIR}/$f
+CONF_FILES+=		${EXAMPLESDIR}/$f	${PKG_SYSCONFDIR}/$f
 .endfor
 MAKE_DIRS+=		${DATADIR}/namazu/index
 OWN_DIRS+=		${PKG_SYSCONFDIR} ${DATADIR}/namazu
