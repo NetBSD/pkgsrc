@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 13:18:07 jmmv Exp $
+bin/gxine
+bin/gxine_client
+lib/gxine/gxineplugin.a
+lib/gxine/gxineplugin.la
+lib/gxine/gxineplugin.so
+man/man1/gxine.1
+share/gnome/apps/Multimedia/gxine.desktop
+share/gxine/logo.mpv
+share/gxine/mediamarks
+share/gxine/pixmaps/gxine-icon.xpm
+share/gxine/pixmaps/gxine-logo.png
+share/gxine/pixmaps/splash.png
+share/gxine/pixmaps/wizards.png
+@dirrm share/gxine/pixmaps
+@dirrm share/gxine
+@dirrm lib/gxine
