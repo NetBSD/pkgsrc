@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2004/11/05 21:04:38 jdolecek Exp $
+# $NetBSD: Makefile,v 1.150 2004/11/06 01:37:07 he Exp $
 #
 
 COMMENT=	Databases
@@ -65,9 +65,11 @@ SUBDIR+=	p5-DBD-postgresql
 SUBDIR+=	p5-DBI
 SUBDIR+=	p5-DBI-Shell
 SUBDIR+=	p5-DBIWrapper
+SUBDIR+=	p5-DBIx-ContextualFetch
 SUBDIR+=	p5-DBIx-Datasource
 SUBDIR+=	p5-DBIx-SearchBuilder
 SUBDIR+=	p5-DB_File
+SUBDIR+=	p5-Ima-DBI
 SUBDIR+=	p5-MARC
 SUBDIR+=	p5-MLDBM
 SUBDIR+=	p5-MLDBM-Sync
