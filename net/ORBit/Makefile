@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2001/06/11 06:34:45 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2001/06/16 20:02:10 jlam Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -10,12 +10,11 @@ MAINTAINER=		wiz@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		high-performance CORBA ORB with support for the C language
 
-DEPENDS+=		glib>=1.2.7:../../devel/glib
 DEPENDS+=		gindent-*:../../devel/gindent
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake-1.4:../../devel/automake
 
-USE_LIBINTL=		YES
+BUILD_USES_GETTEXT_M4=	YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE+=	${WRKSRC}/ltconfig
@@ -23,7 +22,7 @@ LTCONFIG_OVERRIDE+=	${WRKSRC}/popt/ltconfig
 LTCONFIG_OVERRIDE+=	${WRKSRC}/libIDL/ltconfig
 
 GNU_CONFIGURE=		YES
-CPPFLAGS+=		-I${LOCALBASE}/include		# libintl.h
+USE_CONFIG_WRAPPER=	YES
 
 # for DISTNAME, PKGNAME, and PLIST
 ORBIT_MAJOR=		5
@@ -33,16 +32,21 @@ PLIST_SUBST+=		ORBIT_MAJOR=${ORBIT_MAJOR} ORBIT_MINOR=${ORBIT_MINOR}
 INFO_FILES=		libIDL.info
 
 .include "../../mk/bsd.prefs.mk"
-
-.if !exists(${LOCALBASE}/share/aclocal/gettext.m4)
-BUILD_DEPENDS+=		gettext-0.10.35nb1:../../devel/gettext
-.endif
-
-.if (${OPSYS} == SunOS)
-DEPENDS+=		tcp_wrappers>=7.6.1nb1:../../security/tcp_wrappers
-.endif
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/glib/buildlink.mk"
+.include "../../security/tcp_wrappers/buildlink.mk"
 
 pre-configure:
-	cd ${WRKSRC}/popt && ${LOCALBASE}/bin/autoconf
+	cd ${WRKSRC}/popt && ${LOCALBASE}/bin/autoreconf --include-deps --force
+
+# Fix libIDLConf.sh by removing buildlink directory references.
+post-build:
+	@cd ${WRKSRC}/libIDL;						\
+	${MV} -f libIDLConf.sh libIDLConf.sh.fixme;			\
+	${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"		\
+		-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"		\
+		libIDLConf.sh.fixme > libIDLConf.sh;			\
+	${RM} -f libIDLConf.sh.fixme;					\
+	${CHMOD} +x libIDLConf.sh
 
 .include "../../mk/bsd.pkg.mk"
