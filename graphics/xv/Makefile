@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/03/21 22:40:55 tron Exp $
+# $NetBSD: Makefile,v 1.27 2000/04/16 17:36:44 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -17,7 +17,7 @@ PATCHFILES=     xv-3.10a.JPEG-patch xv-3.10a.TIFF-patch # (for tiff3.4)
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.trilon.com/xv/
 
-DEPENDS+=	ghostscript-5.50:../../print/ghostscript5
+DEPENDS+=	ghostscript-5.50nb1:../../print/ghostscript5
 DEPENDS+=	png>=1.0.6:../png
 DEPENDS+=	tiff-*:../../graphics/tiff
 
