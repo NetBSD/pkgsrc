@@ -1,13 +1,18 @@
-# $NetBSD: Makefile,v 1.13 2001/07/13 07:09:26 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/10/16 04:54:24 jlam Exp $
 
-.include "../../www/php4/Makefile.common"
+.include "../php4/Makefile.php"
 
 PKGNAME=		php-${PHP_VERS}
+PHP_PKG_VERS=		# empty
 CATEGORIES+=		lang
-
-COMMENT=		PHP4: Hypertext Preprocessor
+COMMENT=		HTML-embedded scripting language
 
 CONFLICTS+=		ap-php-4.0.3pl1
+
+USE_BUILDLINK_ONLY=	YES
+
+# Ensure we export symbols in the linked shared object.
+LDFLAGS+=		-Wl,--export-dynamic
 
 CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php
@@ -22,6 +27,17 @@ FILES_SUBST+=		CMP=${CMP:Q}
 FILES_SUBST+=		CP=${CP:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
+# On NetBSD, we need to link libgcc.a whole-archive so that certain symbols
+# from the C++ implementation (__get_eh_context, etc.) referenced by DSOs
+# written in C++ will resolve correctly.  We need to prefix the linker flags
+# "-whole-archive -lgcc -no-whole-archive" with "-Wl," to force all of the
+# flags to be passed down to the linker without change.
+#
+.if ${OPSYS} == "NetBSD"
+LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -Wl,-lgcc -Wl,--no-whole-archive
+MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
+.endif
 
 pre-install:
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
