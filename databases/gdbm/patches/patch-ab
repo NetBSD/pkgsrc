@@ -1,7 +1,19 @@
-$NetBSD: patch-ab,v 1.9 2002/08/25 18:38:21 jlam Exp $
---- Makefile.in.orig	Tue May 18 20:16:06 1999
-+++ Makefile.in	Thu Aug 16 14:27:07 2001
-@@ -27,11 +27,11 @@
+$NetBSD: patch-ab,v 1.10 2002/09/11 00:50:05 schmonz Exp $
+
+--- Makefile.in.orig	Tue May 18 23:16:06 1999
++++ Makefile.in
+@@ -14,10 +14,6 @@ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ 
+-# File ownership and group
+-BINOWN = bin
+-BINGRP = bin
+-
+ MAKEINFO = makeinfo
+ TEXI2DVI = texi2dvi
+ 
+@@ -27,11 +23,11 @@ DEFS =
  LIBS = @LIBS@ -lc
  
  # SunOS 4 users might wish to add '-fpcc-struct-return' to CFLAGS. see INSTALL.
@@ -15,12 +27,28 @@ $NetBSD: patch-ab,v 1.9 2002/08/25 18:38:21 jlam Exp $
  exec_prefix = $(prefix)
  binprefix = $(exec_prefix)
  manprefix = $(prefix)
-@@ -121,7 +121,7 @@
+@@ -121,18 +117,18 @@ progs: $(PROGS)
  
  install: libgdbm.la gdbm.h gdbm.info
  	$(srcdir)/mkinstalldirs $(libdir) $(includedir) $(man3dir) $(infodir)
 -	$(LIBTOOL) install -c libgdbm.la $(libdir)/libgdbm.la
+-	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) gdbm.h $(includedir)/gdbm.h
+-	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) $(srcdir)/gdbm.3 \
 +	$(LIBTOOL) $(INSTALL) -c libgdbm.la $(libdir)/libgdbm.la
- 	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) gdbm.h $(includedir)/gdbm.h
- 	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) $(srcdir)/gdbm.3 \
++	$(INSTALL_DATA) gdbm.h $(includedir)/gdbm.h
++	$(INSTALL_DATA) $(srcdir)/gdbm.3 \
  		$(man3dir)/gdbm.3
+-	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) $(srcdir)/gdbm.info \
++	$(INSTALL_DATA) $(srcdir)/gdbm.info \
+ 		$(infodir)/gdbm.info
+ 
+ install-compat:
+ 	$(srcdir)/mkinstalldirs $(includedir)
+-	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) $(srcdir)/dbm.h \
++	$(INSTALL_DATA) $(srcdir)/dbm.h \
+ 		$(includedir)/dbm.h
+-	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) $(srcdir)/ndbm.h \
++	$(INSTALL_DATA) $(srcdir)/ndbm.h \
+ 		$(includedir)/ndbm.h
+ 
+ #libgdbm.a: $(OBJS) gdbm.h
