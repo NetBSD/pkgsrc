@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/01/16 17:15:35 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2005/01/16 17:20:20 minskim Exp $
 #
 
 DISTNAME=	libid3tag-0.15.1b
@@ -21,6 +21,8 @@ USE_LIBTOOL=		YES
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
+
+INSTALLATION_DIRS=	lib/pkgconfig
 
 post-build:
 	${SED}	-e 's,@PREFIX@,${PREFIX},g'			\
