@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2004/01/03 18:49:38 reed Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/15 10:33:55 markd Exp $
 
-DISTNAME=	kdesdk-3.1.4
-PKGREVISION=	1
+DISTNAME=	kdesdk-3.1.5
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
-PKGREVISION=	1
 
 CONFLICTS=	cervisia-[0-9]*
 
