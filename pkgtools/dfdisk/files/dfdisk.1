@@ -1,0 +1,219 @@
+.\" $NetBSD: dfdisk.1,v 1.1.1.1 2003/04/17 11:10:41 jmmv Exp $
+.\"
+.\" dfdisk - Fetch distfiles from multiple locations
+.\" Copyright (c) 2003, Julio Merino <jmmv@netbsd.org>
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Neither the name of The NetBSD Foundation nor the names of its
+.\"    contributors may be used to endorse or promote products derived
+.\"    from this software without specific prior written permission.
+.\" 3. Neither the name of author nor the names of its contributors may
+.\"    be used to endorse or promote products derived from this software
+.\"    without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+.\" ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+.\" TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+.\" PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+.\" BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+.\" CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+.\" SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+.\" INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+.\" CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+.\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+.\" POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd April 17, 2003
+.Dt DFDISK 1
+.Os
+.Sh NAME
+.Nm dfdisk
+.Nd fetch distfiles from multiple locations
+.Sh SYNOPSIS
+.Nm
+.Op Fl c Ar conf_file
+.Ar target
+.Op Ar target_args
+.Sh DESCRIPTION
+.Nm
+is an utility that adds extra functionality to pkgsrc, allowing it to
+fetch distfiles from multiple locations.
+It currently supports the following methods:
+.Bl -tag -width XXXXXXX
+.It CD-ROM
+The program manages a CD database where every disk is matched to a
+series of distfiles.
+Whenever a distfile is requested, the program will check if it is known
+by the database and ask the user to place the needed disk in the drive.
+.It Network
+If a file is not found in the described database, the program fallbacks
+to the network, fetching the file from there (the usual method in pkgsrc).
+.El
+.Pp
+The following options are available:
+.Bl -tag -width flag
+.It Fl c
+Path to the configuration file to use.
+Overrides the default
+.Pa @PKG_SYSCONFDIR@/dfdisk.conf .
+.El
+.Ss Configuration file details: dfdisk.conf
+The configuration file is a simple shell script that sets some variable
+values.
+If the
+.Fl c
+flag is not given,
+.Pa @PKG_SYSCONFDIR@/dfdisk.conf
+is used as the default configuration file.
+.Pp
+The following variables ara available:
+.Bl -tag -width XXXXXXXXX
+.It Va CD_DIR
+CD mount point.
+Defaults to
+.Pa /cdrom .
+.It Va CD_MOUNT
+Command to mount the CD media.
+Defaults to
+.Sq mount ${CD_DIR} .
+.It Va CD_UMOUNT
+Command to unmount the CD media.
+Defaults to
+.Sq umount ${CD_DIR} .
+.It Va DBDIR
+Database directory where all disk information is stored.
+Defaults to
+.Pa /var/db/dfdisk .
+.It Va DISTDIR
+Path to pkgsrc's distribution directory, where distfiles are stored
+after downloading them.
+Defaults to
+.Pa /usr/pkgsrc/distfiles .
+This
+.Em must
+match pkgsrc's
+.Va DISTDIR
+variable, as the program uses it to guess the
+.Va DIST_SUBDIR
+for some packages.
+.It Va FTP_CMD
+Command to fetch files from the network, if they were not found in the
+disk database.
+Defaults to
+.Sq @FTP@ .
+.El
+.Ss Disk information file details: dfdisk.info
+Every disk can contain a control file which is read by
+.Nm
+to automatically get information from it.
+That file is called
+.Pa dfdisk.info
+and can be placed anywhere in the disk.
+.Pp
+This file can define the following variables:
+.Bl -tag -width indent
+.It Va dfdisk_name
+Full name of disk.
+Free form text field.
+.It Va dfdisk_subdir
+Relative path to where distfiles are stored in the CD.
+.It Va dfdisk_type
+Disk type.
+The only value allowed for now is
+.Sq cd .
+This variable is not used for now, but must be there for future
+compatibility.
+.El
+.Pp
+WARNING: this file is a shell script and is directly sourced by
+.Nm
+to read its information.
+Therefore it may contain malicious commands that will be executed
+by this program whenever it is read.
+If you have not authored the disk yourself, check the contents of
+this file (if present) before proceeding.
+.Ss Target description
+.Nm
+bases its behavior on the target given to it.
+The following list details all work modes:
+.Bl -tag -width indent
+.It Ar add
+Add the CD disk currently placed in the drive to the database.
+If the disk contains a
+.Pa dfdisk.info
+file, it is automatically read; otherwise, all disk information is
+requested to the user interactively.
+.It Ar clean
+Remove all local distfiles that are known to be stored in some disk.
+This will leave all new files under
+.Va DISTDIR ,
+so you can easily burn them to a new disk after creating a disk
+information file with the
+.Sq mkinfo
+target.
+.It Ar fetch Ar url
+Fetch a distfile, given as an URL.
+The program will search the database for the given file.
+If it is found, the user will be required to put the requested media
+on the drive.
+If it is not found,
+.Va FTP_CMD
+will be used to fetch it from the network; this is why you need to pass
+an URL to this target.
+.It Ar mkinfo Op Ar info_file
+Interactively create a
+.Pa dfdisk.info
+file.
+It will be saved as
+.Ar info_file
+if given; if not, its name will be asked.
+.It Ar remove
+Interactively remove a disk from the database.
+You will not want to use this target.
+.El
+.Sh EXAMPLES
+To enable
+.Nm
+by default within pkgsrc, add the following lines to your
+.Pa /etc/mk.conf
+file:
+.Bd -literal -offset indent
+\&.if exists(@PREFIX@/bin/dfdisk)
+FETCH_CMD= @PREFIX@/bin/dfdisk fetch
+\&.endif
+.Ed
+.Pp
+If you would like any user to be able to fetch files, you can use
+.Xr sudo 8
+to allow them mount the CD drive.
+To do it:
+.Bd -literal -offset indent
+CD_MOUNT="sudo mount /cdrom"
+CD_UMOUNT="sudo umount /cdrom"
+.Ed
+.Pp
+If you have more than one disk registered in your database and you
+plan to leave your computer building stuff for a large period of time,
+it is recommended that you fetch all required distfiles before starting
+the build.
+This way, it will not be interrupted waiting for any user action.
+To do this, you can use pkgsrc's
+.Sq fetch-list
+target, which will call
+.Nm
+for each required file:
+.Bd -literal -offset indent
+$ cd category/package && make fetch-list | sh
+.Ed
+.Sh SEE ALSO
+.Xr ftp 1 ,
+.Xr packages 7 ,
+.Xr sudo 8
+.Sh AUTHORS
+.Nm
+was written by
+.An Julio Merino Aq jmmv@netbsd.org .
