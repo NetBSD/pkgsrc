@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2001/12/12 17:06:18 taca Exp $
+# $NetBSD: Makefile,v 1.58 2002/02/10 19:26:56 veego Exp $
 
 DISTNAME=	squid-2.4.STABLE3-src
 PKGNAME=	squid-2.4.3
@@ -55,6 +55,7 @@ post-build:
 	  >${WRKDIR}/INSTALL
 
 pre-install:
+	@${INSTALL_DATA_DIR} ${PREFIX}/etc/squid
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/errors
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/icons
