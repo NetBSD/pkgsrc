@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1587 2005/02/12 00:27:41 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1588 2005/02/13 03:49:12 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1624,7 +1624,7 @@ _ACQUIRE_LOCK=								\
 		: "Remove lock files older than the last reboot";	\
 		if ${TEST} -f /var/run/dmesg.boot -a -f ${LOCKFILE}; then \
 			rebooted=`${FIND} /var/run/dmesg.boot -newer ${LOCKFILE}`; \
-			if ${TEST} x"$rebooted" != x; then		\
+			if ${TEST} x"$$rebooted" != x; then		\
 				${ECHO} "=> Removing stale ${LOCKFILE}"; \
 				${RM} ${LOCKFILE};			\
 			fi;						\
