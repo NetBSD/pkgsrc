@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.1 2002/02/02 11:59:09 jdolecek Exp $
+$NetBSD: patch-ai,v 1.2 2002/02/19 06:25:58 jmc Exp $
 
---- src/tools.c.orig	Sat Feb  2 12:05:13 2002
-+++ src/tools.c	Sat Feb  2 12:16:01 2002
+--- src/tools.c.orig	Tue Dec  5 00:14:16 2000
++++ src/tools.c	Tue Feb 19 05:52:08 2002
 @@ -13,7 +13,7 @@
  
  #include <stdarg.h>
  
 -#if defined(PLATFORM_FREEBSD)
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || (defined(__NetBSD__) && defined(HAVE_JOYSTICK))
  #include <machine/joystick.h>
  #endif
  
