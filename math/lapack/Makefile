@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2004/12/03 15:15:03 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/12/22 10:17:28 wennmach Exp $
 #
 
 DISTNAME=	lapack
 PKGNAME=	lapack-20010201
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.netlib.org/lapack/			\
 		ftp://netlib.bell-labs.com/netlib/lapack/	\
