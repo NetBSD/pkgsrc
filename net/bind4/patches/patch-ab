@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1 2002/06/26 06:00:51 itojun Exp $
+
+--- res/getnetnamadr.c-	Wed Jun 26 12:09:06 2002
++++ res/getnetnamadr.c	Wed Jun 26 12:12:06 2002
+@@ -99,7 +99,7 @@
+ 	register int n;
+ 	u_char *eom;
+-	int type, class, buflen, ancount, qdcount, haveanswer, i, nchar;
++	int type, class, ancount, qdcount, haveanswer, i, nchar;
+ 	char aux1[30], aux2[30], ans[30], *in, *st, *pauxt, *bp, **ap,
+-		*paux1 = &aux1[0], *paux2 = &aux2[0], flag = 0;
++		*paux1 = &aux1[0], *paux2 = &aux2[0], flag = 0, *ep;
+ static	struct netent net_entry;
+ static	char *net_aliases[MAXALIASES], netbuf[PACKETSZ];
+@@ -124,5 +124,5 @@
+ 	qdcount = ntohs(hp->qdcount); /* #/entries in the question section */
+ 	bp = netbuf;
+-	buflen = sizeof(netbuf);
++	ep = netbuf + sizeof(netbuf);
+ 	cp = answer->buf + HFIXEDSZ;
+ 	if (!qdcount) {
+@@ -140,5 +140,5 @@
+ 	haveanswer = 0;
+ 	while (--ancount >= 0 && cp < eom) {
+-		n = dn_expand(answer->buf, eom, cp, bp, buflen);
++		n = dn_expand(answer->buf, eom, cp, bp, ep - bp);
+ 		if ((n < 0) || !res_dnok(bp))
+ 			break;
+@@ -151,5 +151,5 @@
+ 		GETSHORT(n, cp);
+ 		if (class == C_IN && type == T_PTR) {
+-			n = dn_expand(answer->buf, eom, cp, bp, buflen);
++			n = dn_expand(answer->buf, eom, cp, bp, ep - bp);
+ 			if ((n < 0) || !res_hnok(bp)) {
+ 				cp += n;
