@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2004/09/22 08:09:46 jlam Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2004/10/27 20:31:33 drochner Exp $
 bin/xine-config
 include/xine.h
 include/xine/attributes.h
@@ -32,8 +32,8 @@ include/xine/xmllexer.h
 include/xine/xmlparser.h
 lib/libxine.la
 lib/pkgconfig/libxine.pc
-lib/xine/plugins/1.0.0/post/xineplug_post_audio_filter_upmix.a
-lib/xine/plugins/1.0.0/post/xineplug_post_audio_filter_upmix.so
+lib/xine/plugins/1.0.0/post/xineplug_post_audio_filters.a
+lib/xine/plugins/1.0.0/post/xineplug_post_audio_filters.so
 lib/xine/plugins/1.0.0/post/xineplug_post_goom.a
 lib/xine/plugins/1.0.0/post/xineplug_post_goom.so
 lib/xine/plugins/1.0.0/post/xineplug_post_mosaico.a
@@ -86,6 +86,8 @@ lib/xine/plugins/1.0.0/xineplug_decode_spu.a
 lib/xine/plugins/1.0.0/xineplug_decode_spu.so
 lib/xine/plugins/1.0.0/xineplug_decode_spucc.a
 lib/xine/plugins/1.0.0/xineplug_decode_spucc.so
+lib/xine/plugins/1.0.0/xineplug_decode_spucmml.a
+lib/xine/plugins/1.0.0/xineplug_decode_spucmml.so
 lib/xine/plugins/1.0.0/xineplug_decode_sputext.a
 lib/xine/plugins/1.0.0/xineplug_decode_sputext.so
 lib/xine/plugins/1.0.0/xineplug_decode_vorbis.a
