@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4511 2004/01/20 03:09:40 grant Exp $
+$NetBSD: CHANGES,v 1.4512 2004/01/20 03:28:02 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -348,3 +348,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated glu to 6.0 [jschauma 2004-01-19]
 	Updated glut to 6.0 [jschauma 2004-01-19]
 	Updated stunnel to 4.04nb3 [grant 2004-01-20]
+	Updated procmail to procmail-3.22nb1 [lukem 2004-01-20]
