@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.20 2003/10/11 07:05:19 grant Exp $
+# $NetBSD: pgsql.sh,v 1.21 2003/11/14 01:46:39 explorer Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -51,6 +51,8 @@ start_precmd="pgsql_precmd"
 start_cmd="pgsql_doit start"
 restart_cmd="pgsql_doit restart"
 stop_cmd="pgsql_doit stop"
+
+ulimit -n 4096
 
 pgsql_precmd()
 {
