@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4185 2003/12/19 09:52:36 jmmv Exp $
+$NetBSD: CHANGES,v 1.4186 2003/12/19 12:10:12 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5239,3 +5239,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Memoize-ExpireLRU-0.55 [grant 2003-12-19]
 	Updated gaim to 0.74nb3 [jmmv 2003-12-19]
 	Updated pkg_comp to 1.12 [jmmv 2003-12-19]
+	Updated ghostscript-esp to 7.07.1 [recht 2003-12-19]
+	Updated ghostscript-esp-nox11 to 7.07.1 [recht 2003-12-19]
