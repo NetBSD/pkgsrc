@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.85 2003/09/16 10:03:00 adam Exp $
+# $NetBSD: Makefile,v 1.86 2003/09/24 10:55:11 dillo Exp $
 #
 
 COMMENT=	Emulators for other operating systems
 
 SUBDIR+=	BasiliskII
 SUBDIR+=	arcem
+SUBDIR+=	arnold
 SUBDIR+=	atari800
 SUBDIR+=	bochs
 SUBDIR+=	compat12
