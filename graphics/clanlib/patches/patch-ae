@@ -1,31 +1,39 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
---- Layer1/Input/X11/joystick_linux.h.orig	Thu Jul  8
-11:36:50 1999
-+++ Layer1/Input/X11/joystick_linux.h	Thu Jul  8 11:41:55 1999
-@@ -21,13 +21,16 @@
- #define header_joystick_linux
+$NetBSD: patch-ae,v 1.2 2000/12/15 03:13:05 garbled Exp $
+--- Sources/Core/System/Unix/appconf.cpp.orig	Thu Dec 14 18:33:18 
+2000 +++ Sources/Core/System/Unix/appconf.cpp	Thu Dec 14 18:37:38 2000
+@@ -59,7 +59,7 @@
+ #	include  <windows.h>
+ #endif    // WIN32
  
- // TODO: ifdef this out if it isn't a linux system.
--
--#include <linux/version.h>
--
- #ifndef KERNEL_VERSION
- #define KERNEL_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))
- #endif
+-#ifdef	  __unix__
++#if defined(__unix__) || defined(__NetBSD__)
+ #	include <sys/param.h>
+ #	include	<sys/stat.h>
+ #	include <unistd.h>
+@@ -165,7 +165,7 @@
+ #if APPCONF_CASE_SENSITIVE
+ # define StrCmp(s1,s2)  strcmp((s1),(s2))
+ #else
+-# ifdef   __unix__
++# if defined(__unix__) || defined(__NetBSD__)
+     extern "C" int strcasecmp(const char *s1, const char *s2); // it's not ansi
+ #   define  StrCmp(s1,s2)  strcasecmp((s1),(s2))
+ # else
+@@ -1326,7 +1326,7 @@
+   // check if file has extension
+   Bool bNoExt = strchr(m_szFileName, '.') == NULL;
  
-+#ifdef __NetBSD__
-+#define LINUX_VERSION_CODE KERNEL_VERSION(1,0,0)
-+#else
-+
-+#include <linux/version.h>
-+
- #ifndef LINUX_VERSION_CODE
- #error "You need to use at least 2.0 Linux kernel." 
- #endif
-@@ -109,5 +112,5 @@
- };
+-#ifdef  __unix__
++#if defined(__unix__) || defined(__NetBSD__)
+     strcpy(s_szBuf, "/etc/");
+     strcat(s_szBuf, m_szFileName);
+     if ( bNoExt )
+@@ -1349,7 +1349,7 @@
+ {
+   static char s_szBuf[MAX_PATH];
  
- #endif
--
-+#endif
- #endif
+-#ifdef  __unix__
++#if defined(__unix__) || defined(__NetBSD__)
+     const char *szHome = getenv("HOME");
+     if ( szHome == NULL ) {
+       // we're homeless...
