@@ -1,0 +1,49 @@
+$NetBSD: patch-ab,v 1.19 2003/04/19 02:09:09 christos Exp $
+
+--- dialects/n+obsd/dnode.c.orig	2003-03-23 14:26:47.000000000 -0500
++++ dialects/n+obsd/dnode.c	2003-04-18 22:02:42.000000000 -0400
+@@ -616,8 +616,18 @@
+ 	    dev = i.i_dev;
+ 	    devs = 1;
+ 	    if ((type == VCHR) || (type == VBLK)) {
++#ifdef i_e2fs_rdev
++		struct ext2fs_dinode din;
++		if (i.i_din.e2fs_din &&
++		    !kread((KA_T)i.i_din.e2fs_din, (char *)&din, sizeof(din))) {
++		    rdev = din.e2di_rdev;
++		    rdevs = 1;
++		} else
++		    rdevs = 0;
++#else
+ 		rdev = i.i_rdev;
+ 		rdevs = 1;
++#endif
+ 	    }
+ # endif	/* defined(HASI_FFS) */
+ 
+@@ -628,14 +638,22 @@
+ 	    dev = i.i_dev;
+ 	    devs = 1;
+ 	    if ((type == VCHR) || (type == VBLK)) {
+-
+ #if	defined(HASI_FFS)
+-		rdev = i.i_ffs_rdev;
+ #else	/* !defined(HASI_FFS) */
++#ifdef i_ffs1_rdev
++		struct ufs1_dinode din;
++		if (i.i_din.ffs1_din &&
++		    !kread((KA_T)i.i_din.ffs1_din, (char *)&din, sizeof(din))) {
++		    rdev = din.di_rdev;
++		    rdevs = 1;
++		} else
++		    rdevs = 0;
++#else
+ 		rdev = i.i_rdev;
++		rdevs = 1;
++#endif
+ #endif	/* defined(HASI_FFS) */
+ 
+-		rdevs = 1;
+ 	    }
+ 	    break;
+ 
