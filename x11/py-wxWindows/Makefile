@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/09/01 02:58:56 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2000/09/03 13:51:08 wiz Exp $
 #
 
 DISTNAME=	wxPython-2.2.0
@@ -24,7 +24,7 @@ do-build:
 
 do-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${WRKSRC}/src; gmake install)
+	(cd ${WRKSRC}/src; ${GMAKE} install)
 	(cd ${PYTHON_LIBDIR}/wxPython; \
 	${PREFIX}/bin/python ${PREFIX}/lib/python1.5/compileall.py . \
 	${PREFIX}/bin/python -O ${PREFIX}/lib/python1.5/compileall.py . )
