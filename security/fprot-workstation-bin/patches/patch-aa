@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2004/05/13 18:48:32 ben Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/09 15:21:06 ben Exp $
 
---- tools/check-updates.pl.orig	Tue May 11 01:55:38 2004
+--- tools/check-updates.pl.orig	2005-01-05 23:20:13.000000000 -0800
 +++ tools/check-updates.pl
-@@ -258,10 +258,13 @@ sub printHelp
+@@ -294,10 +294,13 @@ sub printHelp
  # exists, and if it doesn't exist it tries to create it.
  sub checkTemporaryDirectory
  {
