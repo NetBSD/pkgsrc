@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/12/03 15:15:01 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/05 10:25:13 wiz Exp $
 
 DISTNAME=		siod
 PKGNAME=		siod-3.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://people.delphi.com/gjc/siod.html
 COMMENT=		Small-footprint implementation of the Scheme programming language
-
-DEPENDS+=		sdbm-[0-9]*:../../databases/sdbm
 
 WRKSRC=			${WRKDIR}
 MAKEFILE=		makefile
@@ -28,4 +26,5 @@ post-patch:
 	${MV} ${WRKSRC}/siod.man ${WRKSRC}/prefix-siod.man
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' ${WRKSRC}/prefix-siod.man > ${WRKSRC}/siod.man
 
+.include "../../databases/sdbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
