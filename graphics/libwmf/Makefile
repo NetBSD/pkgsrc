@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/07/24 17:13:29 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/04 22:07:21 jlam Exp $
 #
 
 DISTNAME=		libwmf-0.1.17
@@ -9,7 +9,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.csn.ul.ie/~caolan/docs/libwmf.html
 
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
-DEPENDS+=		freetype-lib-*:../../graphics/freetype-lib
+DEPENDS+=		freetype-lib>=1.3.1:../../graphics/freetype-lib
 DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
