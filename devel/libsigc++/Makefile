@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/14 18:26:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/03/06 23:22:33 snj Exp $
 
 DISTNAME=	libsigc++-1.2.5
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ MAINTAINER=	bsieker@freenet.de
 HOMEPAGE=	http://libsigc.sourceforge.net/
 COMMENT=	Type-safe callback system for C++ programs
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		m4 make
@@ -18,7 +18,7 @@ PKGCONFIG_OVERRIDE=	sigc++-1.2.pc.in
 
 CONFIGURE_ENV+=		ac_cv_prog_M4=${M4}
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
 CONFIGURE_ARGS+=	--disable-threads
