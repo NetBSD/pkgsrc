@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3673 2003/10/10 09:21:10 cube Exp $
+$NetBSD: CHANGES,v 1.3674 2003/10/10 12:59:33 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4137,3 +4137,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libnids to 1.17 [cube 2003-10-10]
 	Updated dsniff to 2.3nb1 [cube 2003-10-10]
 	Updated pakemon to 0.3.1nb1 [cube 2003-10-10]
+	Updated isakmpd to 20030903 [agc 2003-10-10]
