@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 13:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/05 12:01:32 dmcmahill Exp $
 #
 
-DISTNAME=	acs-0.28
+DISTNAME=	acs-0.29
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/dist/
 
