@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.2 2003/03/10 18:29:21 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.3 2003/03/13 02:56:50 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -213,3 +213,10 @@ to upgrade.  For more details see
 
   http://www.ethereal.com/appnotes/enpa-sa-00008.html
 	[salo, ticket #1204]
+
+net/soup/patches/patch-ac			1.1 (new)
+net/soup/distinfo				1.4
+
+fix bug with static initializers which prevented compilition on 64 bit
+platforms
+	[dmcmahill, ticket #1209]
