@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/04 23:10:50 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/07/23 15:08:56 recht Exp $
 bin/gmime-config
 bin/uudecode
 bin/uuencode
@@ -56,7 +56,7 @@ lib/libgmime-2.0.a
 lib/libgmime-2.0.la
 lib/libgmime-2.0.so
 lib/libgmime-2.0.so.3
-lib/libgmime-2.0.so.3.6
+lib/libgmime-2.0.so.3.7
 lib/pkgconfig/gmime-2.0.pc
 share/doc/gmime/CipherContexts.html
 share/doc/gmime/DataWrappers.html
@@ -129,6 +129,7 @@ share/doc/gmime/gmime-resources.html
 share/doc/gmime/gmime-streams.html
 share/doc/gmime/gmime.devhelp
 share/doc/gmime/gmime.html
+share/doc/gmime/gmon.out
 share/doc/gmime/home.png
 share/doc/gmime/index.html
 share/doc/gmime/index.sgml
