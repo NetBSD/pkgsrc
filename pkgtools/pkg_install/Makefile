@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2005/01/06 05:32:29 tv Exp $
+# $NetBSD: Makefile,v 1.108 2005/01/22 01:03:45 jklos Exp $
 
 # Notes to package maintainers:
 #
@@ -78,6 +78,7 @@ update:
 	${MAKE}
 	${MAKE} deinstall UPDATE_RUNNING=YES
 	${MAKE} install
+	${MAKE} clean
 
 .include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"
