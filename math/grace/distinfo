@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:59 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:40 agc Exp $
 
-MD5 (grace-5.1.2.tar.gz) = 3f630258a3572d9988aa6010a8167e39
+SHA1 (grace-5.1.2.tar.gz) = 5b2709f9e1b8b816b4e8addbb3c3d07b94246e23
+Size (grace-5.1.2.tar.gz) = 2336014 bytes
 SHA1 (patch-aa) = 542ba023a03fbf102fda1722447a0a53e79415b2
 SHA1 (patch-ab) = b7fb08b589d79960acc038628003b0baabdadf68

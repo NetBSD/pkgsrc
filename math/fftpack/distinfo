@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:49 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:39 agc Exp $
 
-MD5 (fftpack-20001130.tar.gz) = 4ba6a8d55e087f136505b0cda5e5039d
+SHA1 (fftpack-20001130.tar.gz) = 4abc6f2da65d20a228a4478d186b9d2433be392a
+Size (fftpack-20001130.tar.gz) = 50318 bytes
 SHA1 (patch-aa) = f3685055f3f45a29d1e86cb3df9a4efd9e559a0a
 SHA1 (patch-ab) = db5d8e22499093194b30df4ed3c37e83fddffd11
 SHA1 (patch-ac) = f4337f7db140e69ba6c571b31e0144723d5ee40f

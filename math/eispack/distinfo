@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:39 agc Exp $
 
-MD5 (eispack-20001130.tar.gz) = aac2a4cae7b2bf3895487920c6e3000a
+SHA1 (eispack-20001130.tar.gz) = dfd893128165534b6e8aacdf14c2c94d27e18891
+Size (eispack-20001130.tar.gz) = 434534 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:39 agc Exp $
 
-MD5 (dfftpack-20001209.tar.gz) = 9dcd2e14867e5c39aa09389d2d694062
+SHA1 (dfftpack-20001209.tar.gz) = 058986ce5d7617966f8bdc418d2c2aaeda52bef9
+Size (dfftpack-20001209.tar.gz) = 20475 bytes

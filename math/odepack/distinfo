@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:35:28 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:42 agc Exp $
 
-MD5 (odepack-20001130.tar.gz) = bf7eb50c7dce9bdee06678f339dbed7c
+SHA1 (odepack-20001130.tar.gz) = 204c1e4c643fab564f889dcf7ff798c5a5e29912
+Size (odepack-20001130.tar.gz) = 211213 bytes
 SHA1 (patch-aa) = ab1e90e86db78c522c8733e386f8615bfca18441
 SHA1 (patch-ab) = 27f5817114f86056d5905d12d1ab7bbd6eb07bf3
 SHA1 (patch-ac) = d74cb9f28ebe4efb41038ddb092734bb89411ca3
