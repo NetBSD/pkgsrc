@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/21 13:20:33 pooka Exp $
+$NetBSD: patch-aa,v 1.2 2000/06/25 11:50:37 pooka Exp $
 
---- ctags/Makefile.in.orig	Thu Sep 16 08:02:20 1999
-+++ ctags/Makefile.in	Sat Nov 20 11:42:47 1999
+--- ctags/Makefile.in.orig	Fri Oct  1 07:11:06 1999
++++ ctags/Makefile.in	Sun Jun 25 12:35:39 2000
 @@ -79,14 +79,14 @@
  #
  manext	= 1
