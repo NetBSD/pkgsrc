@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1646 2003/03/15 16:15:55 wiz Exp $
+$NetBSD: CHANGES,v 1.1647 2003/03/15 16:16:37 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1134,3 +1134,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added regexx-0.98.1 [rh 2003-03-15]
 	Updated esound to 0.2.29nb1 [jmmv 2003-03-15]
 	Updated nasm-devel to 0.98.36 [wiz 2003-03-15]
+	Updated screen to 3.9.15 [hubertf 2003-03-15]

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/18 15:14:34 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/03/15 16:16:38 hubertf Exp $
 bin/screen
 bin/${DISTNAME}
 man/man1/screen.1
@@ -17,6 +17,7 @@ share/screen/utf8encodings/02
 share/screen/utf8encodings/03
 share/screen/utf8encodings/04
 share/screen/utf8encodings/18
+share/screen/utf8encodings/19
 share/screen/utf8encodings/a1
 share/screen/utf8encodings/bf
 share/screen/utf8encodings/c2
