@@ -1,13 +1,32 @@
-@comment $NetBSD: PLIST,v 1.1 1998/06/12 12:59:44 frueauf Exp $
-bin/civclient
+@comment $NetBSD: PLIST,v 1.2 1999/07/22 23:35:40 garbled Exp $
+share/freeciv/default/techs.ruleset
+share/freeciv/default/units.ruleset
+share/freeciv/default/buildings.ruleset
+share/freeciv/default/flags.xpm
+share/freeciv/default/roads.xpm
+share/freeciv/default/small.xpm
+share/freeciv/default/space.xpm
+share/freeciv/default/tiles.xpm
+share/freeciv/default/treaty.xpm
+share/freeciv/default/units.xpm
+share/freeciv/civ1/techs.ruleset
+share/freeciv/civ1/units.ruleset
+share/freeciv/civ1/buildings.ruleset
+share/freeciv/trident/flags.xpm
+share/freeciv/trident/roads.xpm
+share/freeciv/trident/tiles.xpm
+share/freeciv/trident/units.xpm
+share/freeciv/Freeciv
+share/freeciv/helpdata.txt
+share/freeciv/earth-80x50.sav
+share/freeciv/earth-160x90.sav
+share/freeciv/europe.sav
+share/freeciv/civ1.serv
+share/freeciv/intro.xpm
+share/freeciv/radar.xpm
 bin/civserver
-lib/X11/app-defaults/Freeciv
-share/freeciv/data/helpdata.txt
-share/freeciv/data/intro.xpm
-share/freeciv/data/radar.xpm
-share/freeciv/data/small.xpm
-share/freeciv/data/tiles.xpm
-share/freeciv/data/treaty.xpm
-share/freeciv/data/units.xpm
-@dirrm share/freeciv/data
+bin/civclient
+@dirrm share/freeciv/trident
+@dirrm share/freeciv/default
+@dirrm share/freeciv/civ1
 @dirrm share/freeciv
