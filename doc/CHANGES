@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.177 2002/10/06 03:13:53 heinz Exp $
+$NetBSD: CHANGES,v 1.178 2002/10/06 03:40:26 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3126,3 +3126,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Added aquaified-0.30 [mrg 2002-10-05]
 	Updated p5-Net-DNS to 0.29 [heinz 2002-10-06]
 	Added p5-Digest-Nilsimsa-0.06 [heinz 2002-10-06]
+	Updated kdelibs3 to 3.0.3nb2 [jlam 2002-10-06]
+	Updated koffice3 to 1.1.1nb1 [jlam 2002-10-06]
