@@ -1,0 +1,18 @@
+$NetBSD: patch-as,v 1.1 2003/09/28 10:25:25 agc Exp $
+
+--- tool/script/unicode.awk	2003/09/28 10:19:19	1.1
++++ tool/script/unicode.awk	2003/09/28 10:20:03
+@@ -1295,11 +1295,11 @@
+   print  ""
+   print  "  if (to_category[try].from == ch) {"
+   print  "    woempa(7, \"Looking for %04X, found it (category %d) at %d\\n\", ch, to_category[try].to, try);"
+-  print  "    woempa(7, \"Returning ``%w''\n\", category_name[to_category[try].to]);"
++  print  "    woempa(7, \"Returning ``%w''\\n\", category_name[to_category[try].to]);"
+   print  "  }"
+   print  "  else {"
+   print  "    woempa(7, \"Looking for %04X, found %04X (%d) at %d\\n\", ch, to_category[min].from, to_category[min].to, min);"
+-  print  "    woempa(7, \"Returning ``%w''\n\", category_name[to_category[min].to]);"
++  print  "    woempa(7, \"Returning ``%w''\\n\", category_name[to_category[min].to]);"
+   print  "  }"
+   print  ""
+   print  "  return category_name[to_category[to_category[try].from == ch ? try : min].to];"
