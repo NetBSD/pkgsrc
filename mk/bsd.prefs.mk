@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.161 2004/07/02 16:27:48 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.162 2004/07/06 22:49:16 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -438,7 +438,6 @@ LINKFARM?=		${LINKFARM_CMD}
 #
 PKG_BEST_EXISTS?=	${PKG_ADMIN} -b -d ${_PKG_DBDIR} -S lsbest
 
-USE_BUILDLINK2?=	no	# default to not using buildlink2
 USE_BUILDLINK3?=	no	# default to not using buildlink3
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 USE_BUILDLINK3=		yes	# pkgviews requires buildlink3
@@ -493,7 +492,7 @@ WRKDIR_BASENAME?=	work
 WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
 
 # There are many uses for a common log file, so define one that may be
-# picked up and used by tools.mk, bsd.buildlink2.mk, etc.
+# picked up and used by tools.mk, bsd.buildlink3.mk, etc.
 #
 WRKLOG?=		${WRKDIR}/.work.log
 

@@ -1,9 +1,0 @@
-# $NetBSD: pre-cache,v 1.7 2002/12/26 17:08:57 jlam Exp $
-
-case $arg in
--[IL]${WRKDIR}*|-[IL]${BUILDLINK_DIR}*|-[IL]${BUILDLINK_X11_DIR}*)
-	cachehit=yes
-	;;
--[IL].|-[IL]./*|-[IL]..*)
-	cachehit=yes
-	;;

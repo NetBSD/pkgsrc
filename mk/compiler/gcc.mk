@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.68 2004/07/03 11:25:49 grant Exp $
+# $NetBSD: gcc.mk,v 1.69 2004/07/06 22:49:18 wiz Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -363,11 +363,7 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 
 # Add the dependency on GCC.
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
-.  if empty(USE_BUILDLINK2:M[nN][oO])
-.    for _dir_ in ${_GCC_PKGSRCDIR}
-.      include "${_dir_}/buildlink2.mk"
-.    endfor
-.  elif !empty(USE_BUILDLINK3:M[yY][eE][sS])
+.  if !empty(USE_BUILDLINK3:M[yY][eE][sS])
 .    for _dir_ in ${_GCC_PKGSRCDIR}
 .      include "${_dir_}/buildlink3.mk"
 .    endfor
