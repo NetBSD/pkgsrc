@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2003/08/18 17:35:56 agc Exp $
+# $NetBSD: Makefile,v 1.204 2003/08/24 18:27:35 cjep Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -34,7 +34,6 @@ SUBDIR+=	aspell-welsh
 SUBDIR+=	bibclean
 SUBDIR+=	biblook
 SUBDIR+=	bibparse
-SUBDIR+=	bsdgrep
 SUBDIR+=	btparse
 SUBDIR+=	catdoc
 SUBDIR+=	cdif
@@ -108,6 +107,7 @@ SUBDIR+=	lq-sp
 SUBDIR+=	makeztxt
 SUBDIR+=	namazu1
 SUBDIR+=	namazu2
+SUBDIR+=	nbgrep
 SUBDIR+=	nbsed
 SUBDIR+=	ndtpd
 SUBDIR+=	openjade
