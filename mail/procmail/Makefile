@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/02/17 18:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/04/06 22:53:15 kim Exp $
 # FreeBSD Id: Makefile,v 1.24 1997/05/14 14:40:34 ache Exp
 #
 
@@ -12,15 +12,6 @@ COMMENT=	Local mail delivery agent
 
 INSTALL_TARGET=	install-suid install.man
 MAKE_ENV=	SHELL=/bin/sh
-
-post-patch:
-	${MV} ${WRKSRC}/config.h ${WRKSRC}/config.h-orig
-	${SED} -e 's|@LOCALBASE@|${LOCALBASE}|g' < ${WRKSRC}/config.h-orig \
-		> ${WRKSRC}/config.h
-	${MV} ${WRKSRC}/man/procmail.man ${WRKSRC}/man/procmail.man-orig
-	${SED} -e 's|@LOCALBASE@|${LOCALBASE}|g' \
-		< ${WRKSRC}/man/procmail.man-orig \
-		> ${WRKSRC}/man/procmail.man
 
 .include "../../mk/bsd.prefs.mk"
 
