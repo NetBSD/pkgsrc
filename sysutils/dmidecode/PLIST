@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/12 00:00:36 hubertf Exp $
+sbin/biosdecode
+sbin/dmidecode
+sbin/ownership
+sbin/vpddecode
+man/man8/biosdecode.8
+man/man8/dmidecode.8
+man/man8/ownership.8
+man/man8/vpddecode.8
