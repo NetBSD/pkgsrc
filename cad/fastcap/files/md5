@@ -1,3 +1,5 @@
+$NetBSD: md5,v 1.2 1998/08/07 13:16:58 agc Exp $
+
 MD5 (fastcap/fastcap-2.0-15Jul92.tar.Z) = 7060f04f269ebede16d8a40a20373105
 MD5 (fastcap/postscript/ug.ps.Z) = IGNORE
 MD5 (fastcap/postscript/mtt.ps.Z) = IGNORE

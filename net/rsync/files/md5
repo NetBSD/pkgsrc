@@ -1,1 +1,3 @@
+$NetBSD: md5,v 1.4 1998/08/07 13:25:11 agc Exp $
+
 MD5 (rsync-2.1.0.tar.gz) = 6b711d9ed8675f03a87e44160443e179
