@@ -1,8 +1,10 @@
-$NetBSD: TODO,v 1.4 2004/02/16 20:50:50 jlam Exp $
+$NetBSD: TODO,v 1.5 2004/02/17 08:59:44 jlam Exp $
 
 TODO items
 ==========
 
+* Make the error where pkgviews packages depend on overwrite packages
+  less obfuscated.
 * Teach linkfarm to do tree-folding a la GNU stow.
 * Correct handling of pkgconfig *.pc files.
 
