@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/12/04 12:01:09 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/01/14 09:50:57 adam Exp $
 
-SHA1 (gtranslator-1.0.tar.gz) = 2d4ced2c03a736e20820e15b9809319766b3b0b4
-Size (gtranslator-1.0.tar.gz) = 1262605 bytes
+SHA1 (gtranslator-1.0.2.tar.gz) = 8fc2f2526d32021676df94b8cba027a44fc1b9f4
+Size (gtranslator-1.0.2.tar.gz) = 1378237 bytes
 SHA1 (patch-aa) = da6722b93c4407ee020390773460478ddb0f92fd
 SHA1 (patch-ab) = 93e6c28aacf1d0400238c3273579ba54f5a4f62f
 SHA1 (patch-ac) = 5683310f863afd029642178258b9992e2008ea69

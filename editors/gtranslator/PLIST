@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/21 04:20:56 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/14 09:50:57 adam Exp $
 bin/gtranslator
 bin/pozilla.sh
 man/man1/gtranslator.1.gz
@@ -38,17 +38,21 @@ ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtranslator.mo
@@ -59,6 +63,7 @@ ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gtranslator.mo
@@ -69,6 +74,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gtranslator.mo
