@@ -1,0 +1,28 @@
+$NetBSD: patch-av,v 1.1 1999/10/08 15:55:08 bouyer Exp $
+
+diff -u kfm/kiojob.cpp.orig kfm/kiojob.cpp
+--- kfm/kiojob.cpp.orig	Tue Oct  5 20:27:53 1999
++++ kfm/kiojob.cpp	Tue Oct  5 22:32:24 1999
+@@ -163,10 +163,11 @@
+     server->getSlave( this );
+ }
+ 
+-void KIOJob::unmount( const char *_point )
++void KIOJob::unmount( const char* _dev, const char *_point )
+ {
+     action = KIOJob::JOB_UNMOUNT;
+-    
++   
++    mntDev   = _dev; 
+     mntPoint = _point;
+     mntPoint.detach();
+ 
+@@ -1850,7 +1851,7 @@
+ 	    if ( action == KIOJob::JOB_MOUNT )
+ 		slave->mount( mntReadOnly, mntFSType.data(), mntDev.data(), mntPoint.data() );
+ 	    else
+-		slave->unmount( mntPoint.data() );
++		slave->unmount( mntDev.data() );
+ 	}
+ 	break;
+     case KIOJob::JOB_LIST:
