@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2001/01/25 13:39:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/09/18 16:17:56 taca Exp $
 bin/atoc_conv
 bin/kakasi
 bin/kakasi-config
@@ -9,8 +9,8 @@ include/libkakasi.h
 lib/libkakasi.a
 lib/libkakasi.la
 lib/libkakasi.so
-lib/libkakasi.so.2
-lib/libkakasi.so.2.3
+lib/libkakasi.so.3
+lib/libkakasi.so.3.0
 man/ja_JP.EUC/cat1/kakasi.0
 man/ja_JP.EUC/man1/kakasi.1
 share/kakasi/itaijidict
