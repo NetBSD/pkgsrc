@@ -1,0 +1,544 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/09 23:10:28 tron Exp $
+bin/db_load
+bin/db_dump
+bin/db_deadlock
+bin/db_archive
+bin/db_recover
+bin/db_printlog
+bin/db_checkpoint
+bin/db_stat
+include/db2/db_185.h
+include/db2/db_cxx.h
+include/db2/db.h
+lib/libdb2.a
+lib/libdb2.so.2.7
+docs/db/api_c/Db/close.html
+docs/db/api_c/Db/cursor.html
+docs/db/api_c/Db/del.html
+docs/db/api_c/Db/fd.html
+docs/db/api_c/Db/get.html
+docs/db/api_c/Db/join.html
+docs/db/api_c/Db/open.html
+docs/db/api_c/Db/put.html
+docs/db/api_c/Db/stat.html
+docs/db/api_c/Db/sync.html
+docs/db/api_c/DbEnv/appexit.html
+docs/db/api_c/DbEnv/appinit.html
+docs/db/api_c/DbEnv/env.html
+docs/db/api_c/DbEnv/version.html
+docs/db/api_c/DbInfo/info.html
+docs/db/api_c/DbLock/put.html
+docs/db/api_c/DbLockTab/close.html
+docs/db/api_c/DbLockTab/detect.html
+docs/db/api_c/DbLockTab/get.html
+docs/db/api_c/DbLockTab/id.html
+docs/db/api_c/DbLockTab/open.html
+docs/db/api_c/DbLockTab/stat.html
+docs/db/api_c/DbLockTab/unlink.html
+docs/db/api_c/DbLockTab/vec.html
+docs/db/api_c/DbLog/archive.html
+docs/db/api_c/DbLog/close.html
+docs/db/api_c/DbLog/compare.html
+docs/db/api_c/DbLog/db_register.html
+docs/db/api_c/DbLog/db_unregister.html
+docs/db/api_c/DbLog/file.html
+docs/db/api_c/DbLog/flush.html
+docs/db/api_c/DbLog/get.html
+docs/db/api_c/DbLog/lsn.html
+docs/db/api_c/DbLog/open.html
+docs/db/api_c/DbLog/put.html
+docs/db/api_c/DbLog/stat.html
+docs/db/api_c/DbLog/unlink.html
+docs/db/api_c/DbMpool/close.html
+docs/db/api_c/DbMpool/db_register.html
+docs/db/api_c/DbMpool/open.html
+docs/db/api_c/DbMpool/stat.html
+docs/db/api_c/DbMpool/sync.html
+docs/db/api_c/DbMpool/trickle.html
+docs/db/api_c/DbMpool/unlink.html
+docs/db/api_c/DbMpoolFile/close.html
+docs/db/api_c/DbMpoolFile/get.html
+docs/db/api_c/DbMpoolFile/open.html
+docs/db/api_c/DbMpoolFile/put.html
+docs/db/api_c/DbMpoolFile/set.html
+docs/db/api_c/DbMpoolFile/sync.html
+docs/db/api_c/DbTxn/abort.html
+docs/db/api_c/DbTxn/commit.html
+docs/db/api_c/DbTxn/id.html
+docs/db/api_c/DbTxn/prepare.html
+docs/db/api_c/DbTxnMgr/begin.html
+docs/db/api_c/DbTxnMgr/checkpoint.html
+docs/db/api_c/DbTxnMgr/close.html
+docs/db/api_c/DbTxnMgr/open.html
+docs/db/api_c/DbTxnMgr/stat.html
+docs/db/api_c/DbTxnMgr/unlink.html
+docs/db/api_c/Dbc/close.html
+docs/db/api_c/Dbc/del.html
+docs/db/api_c/Dbc/get.html
+docs/db/api_c/Dbc/put.html
+docs/db/api_c/Dbt/dbt.html
+docs/db/api_c/historic/dbm.html
+docs/db/api_c/historic/hsearch.html
+docs/db/api_c/index/flags.html
+docs/db/api_c/index/function.html
+docs/db/api_c/index/structure.html
+docs/db/api_c/internal/db_jump_set.html
+docs/db/api_c/internal/db_value_set.html
+docs/db/api_cxx/Db/class.html
+docs/db/api_cxx/Db/close.html
+docs/db/api_cxx/Db/cursor.html
+docs/db/api_cxx/Db/del.html
+docs/db/api_cxx/Db/fd.html
+docs/db/api_cxx/Db/get.html
+docs/db/api_cxx/Db/get_byteswapped.html
+docs/db/api_cxx/Db/get_type.html
+docs/db/api_cxx/Db/join.html
+docs/db/api_cxx/Db/open.html
+docs/db/api_cxx/Db/put.html
+docs/db/api_cxx/Db/stat.html
+docs/db/api_cxx/Db/sync.html
+docs/db/api_cxx/DbEnv/appexit.html
+docs/db/api_cxx/DbEnv/appinit.html
+docs/db/api_cxx/DbEnv/class.html
+docs/db/api_cxx/DbEnv/get_lg_info.html
+docs/db/api_cxx/DbEnv/get_lk_info.html
+docs/db/api_cxx/DbEnv/get_mp_info.html
+docs/db/api_cxx/DbEnv/get_tx_info.html
+docs/db/api_cxx/DbEnv/set_errcall.html
+docs/db/api_cxx/DbEnv/set_errfile.html
+docs/db/api_cxx/DbEnv/set_error_model.html
+docs/db/api_cxx/DbEnv/set_error_stream.html
+docs/db/api_cxx/DbEnv/set_errpfx.html
+docs/db/api_cxx/DbEnv/set_lg_max.html
+docs/db/api_cxx/DbEnv/set_lk_conflicts.html
+docs/db/api_cxx/DbEnv/set_lk_detect.html
+docs/db/api_cxx/DbEnv/set_lk_max.html
+docs/db/api_cxx/DbEnv/set_lk_modes.html
+docs/db/api_cxx/DbEnv/set_lorder.html
+docs/db/api_cxx/DbEnv/set_mp_mmapsize.html
+docs/db/api_cxx/DbEnv/set_mp_size.html
+docs/db/api_cxx/DbEnv/set_tx_max.html
+docs/db/api_cxx/DbEnv/set_tx_recover.html
+docs/db/api_cxx/DbEnv/set_verbose.html
+docs/db/api_cxx/DbEnv/version.html
+docs/db/api_cxx/DbException/class.html
+docs/db/api_cxx/DbException/get_errno.html
+docs/db/api_cxx/DbException/what.html
+docs/db/api_cxx/DbInfo/class.html
+docs/db/api_cxx/DbInfo/set_bt_compare.html
+docs/db/api_cxx/DbInfo/set_bt_maxkey.html
+docs/db/api_cxx/DbInfo/set_bt_minkey.html
+docs/db/api_cxx/DbInfo/set_bt_prefix.html
+docs/db/api_cxx/DbInfo/set_cachesize.html
+docs/db/api_cxx/DbInfo/set_compare.html
+docs/db/api_cxx/DbInfo/set_flags.html
+docs/db/api_cxx/DbInfo/set_h_ffactor.html
+docs/db/api_cxx/DbInfo/set_h_hash.html
+docs/db/api_cxx/DbInfo/set_h_nelem.html
+docs/db/api_cxx/DbInfo/set_lorder.html
+docs/db/api_cxx/DbInfo/set_malloc.html
+docs/db/api_cxx/DbInfo/set_pagesize.html
+docs/db/api_cxx/DbInfo/set_re_delim.html
+docs/db/api_cxx/DbInfo/set_re_len.html
+docs/db/api_cxx/DbInfo/set_re_pad.html
+docs/db/api_cxx/DbInfo/set_re_source.html
+docs/db/api_cxx/DbLock/class.html
+docs/db/api_cxx/DbLock/put.html
+docs/db/api_cxx/DbLockTab/class.html
+docs/db/api_cxx/DbLockTab/close.html
+docs/db/api_cxx/DbLockTab/detect.html
+docs/db/api_cxx/DbLockTab/get.html
+docs/db/api_cxx/DbLockTab/id.html
+docs/db/api_cxx/DbLockTab/open.html
+docs/db/api_cxx/DbLockTab/stat.html
+docs/db/api_cxx/DbLockTab/unlink.html
+docs/db/api_cxx/DbLockTab/vec.html
+docs/db/api_cxx/DbLog/archive.html
+docs/db/api_cxx/DbLog/class.html
+docs/db/api_cxx/DbLog/close.html
+docs/db/api_cxx/DbLog/compare.html
+docs/db/api_cxx/DbLog/db_register.html
+docs/db/api_cxx/DbLog/db_unregister.html
+docs/db/api_cxx/DbLog/file.html
+docs/db/api_cxx/DbLog/flush.html
+docs/db/api_cxx/DbLog/get.html
+docs/db/api_cxx/DbLog/open.html
+docs/db/api_cxx/DbLog/put.html
+docs/db/api_cxx/DbLog/stat.html
+docs/db/api_cxx/DbLog/unlink.html
+docs/db/api_cxx/DbLsn/class.html
+docs/db/api_cxx/DbMpool/class.html
+docs/db/api_cxx/DbMpool/close.html
+docs/db/api_cxx/DbMpool/db_register.html
+docs/db/api_cxx/DbMpool/open.html
+docs/db/api_cxx/DbMpool/stat.html
+docs/db/api_cxx/DbMpool/sync.html
+docs/db/api_cxx/DbMpool/trickle.html
+docs/db/api_cxx/DbMpool/unlink.html
+docs/db/api_cxx/DbMpoolFile/class.html
+docs/db/api_cxx/DbMpoolFile/close.html
+docs/db/api_cxx/DbMpoolFile/get.html
+docs/db/api_cxx/DbMpoolFile/open.html
+docs/db/api_cxx/DbMpoolFile/put.html
+docs/db/api_cxx/DbMpoolFile/set.html
+docs/db/api_cxx/DbMpoolFile/sync.html
+docs/db/api_cxx/DbTxn/abort.html
+docs/db/api_cxx/DbTxn/class.html
+docs/db/api_cxx/DbTxn/commit.html
+docs/db/api_cxx/DbTxn/id.html
+docs/db/api_cxx/DbTxn/prepare.html
+docs/db/api_cxx/DbTxnMgr/begin.html
+docs/db/api_cxx/DbTxnMgr/checkpoint.html
+docs/db/api_cxx/DbTxnMgr/class.html
+docs/db/api_cxx/DbTxnMgr/close.html
+docs/db/api_cxx/DbTxnMgr/open.html
+docs/db/api_cxx/DbTxnMgr/stat.html
+docs/db/api_cxx/DbTxnMgr/unlink.html
+docs/db/api_cxx/Dbc/class.html
+docs/db/api_cxx/Dbc/close.html
+docs/db/api_cxx/Dbc/del.html
+docs/db/api_cxx/Dbc/get.html
+docs/db/api_cxx/Dbc/put.html
+docs/db/api_cxx/Dbt/class.html
+docs/db/api_cxx/index/class.html
+docs/db/api_java/Db/class.html
+docs/db/api_java/Db/close.html
+docs/db/api_java/Db/cursor.html
+docs/db/api_java/Db/del.html
+docs/db/api_java/Db/fd.html
+docs/db/api_java/Db/get.html
+docs/db/api_java/Db/get_byteswapped.html
+docs/db/api_java/Db/get_type.html
+docs/db/api_java/Db/join.html
+docs/db/api_java/Db/open.html
+docs/db/api_java/Db/put.html
+docs/db/api_java/Db/stat.html
+docs/db/api_java/Db/sync.html
+docs/db/api_java/DbEnv/appexit.html
+docs/db/api_java/DbEnv/appinit.html
+docs/db/api_java/DbEnv/class.html
+docs/db/api_java/DbEnv/get_lg_info.html
+docs/db/api_java/DbEnv/get_lk_info.html
+docs/db/api_java/DbEnv/get_mp_info.html
+docs/db/api_java/DbEnv/get_tx_info.html
+docs/db/api_java/DbEnv/set_errcall.html
+docs/db/api_java/DbEnv/set_error_stream.html
+docs/db/api_java/DbEnv/set_errpfx.html
+docs/db/api_java/DbEnv/set_lg_max.html
+docs/db/api_java/DbEnv/set_lk_conflicts.html
+docs/db/api_java/DbEnv/set_lk_detect.html
+docs/db/api_java/DbEnv/set_lk_max.html
+docs/db/api_java/DbEnv/set_lk_modes.html
+docs/db/api_java/DbEnv/set_lorder.html
+docs/db/api_java/DbEnv/set_mp_mmapsize.html
+docs/db/api_java/DbEnv/set_mp_size.html
+docs/db/api_java/DbEnv/set_tx_max.html
+docs/db/api_java/DbEnv/set_verbose.html
+docs/db/api_java/DbEnv/version.html
+docs/db/api_java/DbException/class.html
+docs/db/api_java/DbException/get_errno.html
+docs/db/api_java/DbInfo/class.html
+docs/db/api_java/DbInfo/set_bt_compare.html
+docs/db/api_java/DbInfo/set_bt_maxkey.html
+docs/db/api_java/DbInfo/set_bt_minkey.html
+docs/db/api_java/DbInfo/set_bt_prefix.html
+docs/db/api_java/DbInfo/set_cachesize.html
+docs/db/api_java/DbInfo/set_compare.html
+docs/db/api_java/DbInfo/set_flags.html
+docs/db/api_java/DbInfo/set_h_ffactor.html
+docs/db/api_java/DbInfo/set_h_hash.html
+docs/db/api_java/DbInfo/set_h_nelem.html
+docs/db/api_java/DbInfo/set_lorder.html
+docs/db/api_java/DbInfo/set_malloc.html
+docs/db/api_java/DbInfo/set_pagesize.html
+docs/db/api_java/DbInfo/set_re_delim.html
+docs/db/api_java/DbInfo/set_re_len.html
+docs/db/api_java/DbInfo/set_re_pad.html
+docs/db/api_java/DbInfo/set_re_source.html
+docs/db/api_java/DbLock/class.html
+docs/db/api_java/DbLock/put.html
+docs/db/api_java/DbLockTab/class.html
+docs/db/api_java/DbLockTab/close.html
+docs/db/api_java/DbLockTab/detect.html
+docs/db/api_java/DbLockTab/get.html
+docs/db/api_java/DbLockTab/id.html
+docs/db/api_java/DbLockTab/open.html
+docs/db/api_java/DbLockTab/stat.html
+docs/db/api_java/DbLockTab/unlink.html
+docs/db/api_java/DbLockTab/vec.html
+docs/db/api_java/DbLog/archive.html
+docs/db/api_java/DbLog/class.html
+docs/db/api_java/DbLog/close.html
+docs/db/api_java/DbLog/compare.html
+docs/db/api_java/DbLog/db_register.html
+docs/db/api_java/DbLog/db_unregister.html
+docs/db/api_java/DbLog/file.html
+docs/db/api_java/DbLog/flush.html
+docs/db/api_java/DbLog/get.html
+docs/db/api_java/DbLog/open.html
+docs/db/api_java/DbLog/put.html
+docs/db/api_java/DbLog/stat.html
+docs/db/api_java/DbLog/unlink.html
+docs/db/api_java/DbLsn/class.html
+docs/db/api_java/DbMpool/class.html
+docs/db/api_java/DbMpool/close.html
+docs/db/api_java/DbMpool/db_register.html
+docs/db/api_java/DbMpool/open.html
+docs/db/api_java/DbMpool/stat.html
+docs/db/api_java/DbMpool/sync.html
+docs/db/api_java/DbMpool/trickle.html
+docs/db/api_java/DbMpool/unlink.html
+docs/db/api_java/DbMpoolFile/class.html
+docs/db/api_java/DbMpoolFile/close.html
+docs/db/api_java/DbMpoolFile/get.html
+docs/db/api_java/DbMpoolFile/open.html
+docs/db/api_java/DbMpoolFile/put.html
+docs/db/api_java/DbMpoolFile/set.html
+docs/db/api_java/DbMpoolFile/sync.html
+docs/db/api_java/DbRunRecoveryException/class.html
+docs/db/api_java/DbTxn/abort.html
+docs/db/api_java/DbTxn/class.html
+docs/db/api_java/DbTxn/commit.html
+docs/db/api_java/DbTxn/id.html
+docs/db/api_java/DbTxn/prepare.html
+docs/db/api_java/DbTxnMgr/begin.html
+docs/db/api_java/DbTxnMgr/checkpoint.html
+docs/db/api_java/DbTxnMgr/class.html
+docs/db/api_java/DbTxnMgr/close.html
+docs/db/api_java/DbTxnMgr/open.html
+docs/db/api_java/DbTxnMgr/stat.html
+docs/db/api_java/DbTxnMgr/unlink.html
+docs/db/api_java/Dbc/class.html
+docs/db/api_java/Dbc/close.html
+docs/db/api_java/Dbc/del.html
+docs/db/api_java/Dbc/get.html
+docs/db/api_java/Dbc/put.html
+docs/db/api_java/Dbt/class.html
+docs/db/api_java/index/class.html
+docs/db/build/java.html
+docs/db/build/shared.html
+docs/db/build/shared_gcc.html
+docs/db/build/shared_hp.html
+docs/db/build/unix.html
+docs/db/build/unix_faq.html
+docs/db/build/win16.html
+docs/db/build/win32.html
+docs/db/build/win_faq.html
+docs/db/distrib/layout.html
+docs/db/images/folder.gif
+docs/db/images/folder_open.gif
+docs/db/images/next.gif
+docs/db/images/prev.gif
+docs/db/images/ps.gif
+docs/db/images/sleepycat.gif
+docs/db/images/toc.gif
+docs/db/index.html
+docs/db/packages/hash_usenix.ps
+docs/db/packages/index.html
+docs/db/packages/libtp_usenix.ps
+docs/db/packages/witold.html
+docs/db/ref/am/bt_compare.html
+docs/db/ref/am/bt_dup.html
+docs/db/ref/am/bt_maxkey.html
+docs/db/ref/am/bt_minkey.html
+docs/db/ref/am/bt_prefix.html
+docs/db/ref/am/bt_recnum.html
+docs/db/ref/am/byteorder.html
+docs/db/ref/am/cachesize.html
+docs/db/ref/am/close.html
+docs/db/ref/am/compare.html
+docs/db/ref/am/curclose.html
+docs/db/ref/am/curdel.html
+docs/db/ref/am/curget.html
+docs/db/ref/am/curput.html
+docs/db/ref/am/cursor.html
+docs/db/ref/am/delete.html
+docs/db/ref/am/get.html
+docs/db/ref/am/h_dup.html
+docs/db/ref/am/h_ffactor.html
+docs/db/ref/am/h_hash.html
+docs/db/ref/am/h_nelem.html
+docs/db/ref/am/intro.html
+docs/db/ref/am/join.html
+docs/db/ref/am/logrec.html
+docs/db/ref/am/malloc.html
+docs/db/ref/am/ops.html
+docs/db/ref/am/pagesize.html
+docs/db/ref/am/partial.html
+docs/db/ref/am/put.html
+docs/db/ref/am/re_delim.html
+docs/db/ref/am/re_len.html
+docs/db/ref/am/re_pad.html
+docs/db/ref/am/re_source.html
+docs/db/ref/am/renumber.html
+docs/db/ref/am/select.html
+docs/db/ref/am/stat.html
+docs/db/ref/am/sync.html
+docs/db/ref/arch/apis.html
+docs/db/ref/arch/bigpic.gif
+docs/db/ref/arch/bigpic.html
+docs/db/ref/arch/env.html
+docs/db/ref/arch/extending.html
+docs/db/ref/arch/progmodel.html
+docs/db/ref/arch/script.html
+docs/db/ref/arch/smallpic.gif
+docs/db/ref/arch/subsystem.html
+docs/db/ref/arch/utilities.html
+docs/db/ref/cam/intro.html
+docs/db/ref/debug/runtime.html
+docs/db/ref/dumpload/format.html
+docs/db/ref/dumpload/text.html
+docs/db/ref/dumpload/utility.html
+docs/db/ref/env/create.html
+docs/db/ref/env/naming.html
+docs/db/ref/env/open.html
+docs/db/ref/env/region.html
+docs/db/ref/env/security.html
+docs/db/ref/install/file.html
+docs/db/ref/install/magic.s5.be.txt
+docs/db/ref/install/magic.s5.le.txt
+docs/db/ref/install/magic.txt
+docs/db/ref/intro/distrib.html
+docs/db/ref/intro/do.html
+docs/db/ref/intro/what.html
+docs/db/ref/intro/where.html
+docs/db/ref/lock/stdmode.html
+docs/db/ref/log/config.html
+docs/db/ref/log/intro.html
+docs/db/ref/log/limits.html
+docs/db/ref/mp/config.html
+docs/db/ref/mp/intro.html
+docs/db/ref/perl/intro.html
+docs/db/ref/program/appsignals.html
+docs/db/ref/program/byteorder.html
+docs/db/ref/program/compatible.html
+docs/db/ref/program/convert.html
+docs/db/ref/program/dbsizes.html
+docs/db/ref/program/environ.html
+docs/db/ref/program/errorret.html
+docs/db/ref/program/java.html
+docs/db/ref/program/runtime.html
+docs/db/ref/program/solaris.txt
+docs/db/ref/program/thread.html
+docs/db/ref/program/version.html
+docs/db/ref/sendmail/intro.html
+docs/db/ref/simple_tut/close.html
+docs/db/ref/simple_tut/del.html
+docs/db/ref/simple_tut/errors.html
+docs/db/ref/simple_tut/example.txt
+docs/db/ref/simple_tut/get.html
+docs/db/ref/simple_tut/intro.html
+docs/db/ref/simple_tut/keydata.html
+docs/db/ref/simple_tut/open.html
+docs/db/ref/simple_tut/put.html
+docs/db/ref/toc.html
+docs/db/ref/transapp/admin.html
+docs/db/ref/transapp/apps.html
+docs/db/ref/transapp/archival.html
+docs/db/ref/transapp/checkpoint.html
+docs/db/ref/transapp/deadlock.html
+docs/db/ref/transapp/filesys.html
+docs/db/ref/transapp/intro.html
+docs/db/ref/transapp/recovery.html
+docs/db/ref/transapp/throughput.html
+docs/db/ref/transapp/writetest.txt
+docs/db/ref/txn/config.html
+docs/db/ref/txn/limits.html
+docs/db/ref/txn/other.html
+docs/db/ref/txn/stability.html
+docs/db/sleepycat/contact.html
+docs/db/sleepycat/products.html
+docs/db/test/build.html
+docs/db/test/build_faq.html
+docs/db/test/debug.html
+docs/db/test/run.html
+docs/db/utility/db_archive.html
+docs/db/utility/db_checkpoint.html
+docs/db/utility/db_deadlock.html
+docs/db/utility/db_dump.html
+docs/db/utility/db_load.html
+docs/db/utility/db_recover.html
+docs/db/utility/db_stat.html
+docs/db/utility/index.html
+@exec mkdir -p %D/docs/db/api_java/special
+@exec mkdir -p %D/docs/db/api_cxx/special
+@exec mkdir -p %D/docs/db/api_c/special
+@dirrm docs/db/utility
+@dirrm docs/db/test
+@dirrm docs/db/sleepycat
+@dirrm docs/db/ref/txn
+@dirrm docs/db/ref/transapp
+@dirrm docs/db/ref/simple_tut
+@dirrm docs/db/ref/sendmail
+@dirrm docs/db/ref/program
+@dirrm docs/db/ref/perl
+@dirrm docs/db/ref/mp
+@dirrm docs/db/ref/log
+@dirrm docs/db/ref/lock
+@dirrm docs/db/ref/intro
+@dirrm docs/db/ref/install
+@dirrm docs/db/ref/env
+@dirrm docs/db/ref/dumpload
+@dirrm docs/db/ref/debug
+@dirrm docs/db/ref/cam
+@dirrm docs/db/ref/arch
+@dirrm docs/db/ref/am
+@dirrm docs/db/ref
+@dirrm docs/db/packages
+@dirrm docs/db/images
+@dirrm docs/db/distrib
+@dirrm docs/db/build
+@dirrm docs/db/api_java/special
+@dirrm docs/db/api_java/index
+@dirrm docs/db/api_java/Dbt
+@dirrm docs/db/api_java/Dbc
+@dirrm docs/db/api_java/DbTxnMgr
+@dirrm docs/db/api_java/DbTxn
+@dirrm docs/db/api_java/DbRunRecoveryException
+@dirrm docs/db/api_java/DbMpoolFile
+@dirrm docs/db/api_java/DbMpool
+@dirrm docs/db/api_java/DbLsn
+@dirrm docs/db/api_java/DbLog
+@dirrm docs/db/api_java/DbLockTab
+@dirrm docs/db/api_java/DbLock
+@dirrm docs/db/api_java/DbInfo
+@dirrm docs/db/api_java/DbException
+@dirrm docs/db/api_java/DbEnv
+@dirrm docs/db/api_java/Db
+@dirrm docs/db/api_java
+@dirrm docs/db/api_cxx/special
+@dirrm docs/db/api_cxx/index
+@dirrm docs/db/api_cxx/Dbt
+@dirrm docs/db/api_cxx/Dbc
+@dirrm docs/db/api_cxx/DbTxnMgr
+@dirrm docs/db/api_cxx/DbTxn
+@dirrm docs/db/api_cxx/DbMpoolFile
+@dirrm docs/db/api_cxx/DbMpool
+@dirrm docs/db/api_cxx/DbLsn
+@dirrm docs/db/api_cxx/DbLog
+@dirrm docs/db/api_cxx/DbLockTab
+@dirrm docs/db/api_cxx/DbLock
+@dirrm docs/db/api_cxx/DbInfo
+@dirrm docs/db/api_cxx/DbException
+@dirrm docs/db/api_cxx/DbEnv
+@dirrm docs/db/api_cxx/Db
+@dirrm docs/db/api_cxx
+@dirrm docs/db/api_c/special
+@dirrm docs/db/api_c/internal
+@dirrm docs/db/api_c/index
+@dirrm docs/db/api_c/historic
+@dirrm docs/db/api_c/Dbt
+@dirrm docs/db/api_c/Dbc
+@dirrm docs/db/api_c/DbTxnMgr
+@dirrm docs/db/api_c/DbTxn
+@dirrm docs/db/api_c/DbMpoolFile
+@dirrm docs/db/api_c/DbMpool
+@dirrm docs/db/api_c/DbLog
+@dirrm docs/db/api_c/DbLockTab
+@dirrm docs/db/api_c/DbLock
+@dirrm docs/db/api_c/DbInfo
+@dirrm docs/db/api_c/DbEnv
+@dirrm docs/db/api_c/Db
+@dirrm docs/db/api_c
+@dirrm docs/db
+@dirrm include/db2
