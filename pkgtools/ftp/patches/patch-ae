@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 1998/09/30 10:27:54 hubertf Exp $
+$NetBSD: patch-ae,v 1.2 1998/11/07 23:45:51 hubertf Exp $
 
 --- Makefile.orig	Thu Jul 23 13:13:14 1998
 +++ Makefile	Wed Sep 30 09:08:58 1998
@@ -12,7 +12,7 @@ $NetBSD: patch-ae,v 1.1 1998/09/30 10:27:54 hubertf Exp $
  # Uncomment the following to provide defaults for gate-ftp operation
  #
  #CPPFLAGS+=-DGATE_SERVER=\"ftp-gw.host\" # -DGATE_PORT=21
-+CPPFLAGS+= -I.
++CPPFLAGS+= -I${.CURDIR}
  
  LDADD+=	-ledit -ltermcap -lutil
  DPADD+=	${LIBEDIT} ${LIBTERMCAP} ${LIBUTIL}
