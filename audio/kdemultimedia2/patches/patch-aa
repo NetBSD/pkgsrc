@@ -1,8 +1,50 @@
-$NetBSD: patch-aa,v 1.4 2001/10/15 22:45:55 skrll Exp $
+$NetBSD: patch-aa,v 1.5 2001/11/13 21:11:55 jlam Exp $
 
---- configure.orig	Sun Sep  9 06:07:45 2001
+--- configure.orig	Sun Sep  9 01:07:45 2001
 +++ configure
-@@ -8178,7 +8178,7 @@
+@@ -7640,6 +7640,41 @@
+ if { (eval echo configure:7641: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   rm -rf conftest*
+   eval "ac_cv_lib_vm='-lXxf86dga -lXxf86vm'"
++
++	lib=Xxf86dga
++	shared_lib_found=no
++	for i in ${LDFLAGS}; do
++		case "$i" in
++		-L*)
++			dir=`echo $i | sed "s,^-L,,"`
++			if [ -e $dir/lib${lib}.so ] ||
++			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++				shared_lib_found=yes
++				break;
++			fi
++		esac
++	done
++	if [ "$shared_lib_found" = "no" ]; then
++		eval "ac_cv_lib_vm=no"
++	fi
++
++	lib=Xxf86vm
++	shared_lib_found=no
++	for i in ${LDFLAGS}; do
++		case "$i" in
++		-L*)
++			dir=`echo $i | sed "s,^-L,,"`
++			if [ -e $dir/lib${lib}.so ] ||
++			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++				shared_lib_found=yes
++				break;
++			fi
++		esac
++	done
++	if [ "$shared_lib_found" = "no" ]; then
++		eval "ac_cv_lib_vm=no"
++	fi
++
+ else
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+@@ -8178,7 +8213,7 @@
        au_enable_sun=yes
        ;;
      *-*-netbsd*)
@@ -11,7 +53,7 @@ $NetBSD: patch-aa,v 1.4 2001/10/15 22:45:55 skrll Exp $
        ;;
      *)
        echo "configure: warning: No --enable-audio=default audio for $target" 1>&2
-@@ -8194,7 +8194,7 @@
+@@ -8194,7 +8229,7 @@
      echo "$ac_t""yes - <sys/soundcard.h>" 1>&6
    else
      case "$target" in
@@ -20,7 +62,7 @@ $NetBSD: patch-aa,v 1.4 2001/10/15 22:45:55 skrll Exp $
  		echo "$ac_t""yes" 1>&6
  	;;
        *)
-@@ -11495,6 +11495,7 @@
+@@ -11495,6 +11530,7 @@
  case "$host" in
    *-*-linux*) kscd_compile=yes;;
    *-*-*bsdi*) kscd_compile=yes;; 
@@ -28,7 +70,7 @@ $NetBSD: patch-aa,v 1.4 2001/10/15 22:45:55 skrll Exp $
    *-*-*bsd*) kscd_compile=no;;
    *) kscd_compile=yes;;
  esac
-@@ -11641,7 +11642,7 @@
+@@ -11641,7 +11677,7 @@
  fi
  done
  
@@ -37,7 +79,76 @@ $NetBSD: patch-aa,v 1.4 2001/10/15 22:45:55 skrll Exp $
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
-@@ -12206,6 +12207,9 @@
+@@ -11905,7 +11941,22 @@
+ if { (eval echo configure:11906: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+   rm -rf conftest*
+   
++	lib=Xxf86dga
++	shared_lib_found=no
++	for i in ${LDFLAGS}; do
++		case "$i" in
++		-L*)
++			dir=`echo $i | sed "s,^-L,,"`
++			if [ -e $dir/lib${lib}.so ] ||
++			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++				shared_lib_found=yes
++				break;
++			fi
++		esac
++	done
++	if [ "$shared_lib_found" = "yes" ]; then
+                 x11_dga2=yes
++	fi
+                 
+ else
+   echo "configure: failed program was:" >&5
+@@ -11939,7 +11990,22 @@
+ if { (eval echo configure:11940: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+   rm -rf conftest*
+   
++	lib=Xv
++	shared_lib_found=no
++	for i in ${LDFLAGS}; do
++		case "$i" in
++		-L*)
++			dir=`echo $i | sed "s,^-L,,"`
++			if [ -e $dir/lib${lib}.so ] ||
++			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++				shared_lib_found=yes
++				break;
++			fi
++		esac
++	done
++	if [ "$shared_lib_found" = "yes" ]; then
+                 x11_xv=yes
++	fi
+                 
+ else
+   echo "configure: failed program was:" >&5
+@@ -11973,7 +12039,22 @@
+ if { (eval echo configure:11974: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+   rm -rf conftest*
+   
++	lib=Xxf86vm
++	shared_lib_found=no
++	for i in ${LDFLAGS}; do
++		case "$i" in
++		-L*)
++			dir=`echo $i | sed "s,^-L,,"`
++			if [ -e $dir/lib${lib}.so ] ||
++			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++				shared_lib_found=yes
++				break;
++			fi
++		esac
++	done
++	if [ "$shared_lib_found" = "yes" ]; then
+                 x11_xvidmode=yes
++	fi
+                 
+ else
+   echo "configure: failed program was:" >&5
+@@ -12206,6 +12287,9 @@
  kde_mpeglib_compiles=no
  
  case "$OS_TYPE" in
@@ -47,7 +158,7 @@ $NetBSD: patch-aa,v 1.4 2001/10/15 22:45:55 skrll Exp $
    Linux)
      kde_mpeglib_compiles=yes
      ;;
-@@ -12416,6 +12420,7 @@
+@@ -12416,6 +12500,7 @@
    NetBSD)
      echo "$ac_t""NetBSD :Unknown hardware. You will have problems!!" 1>&6
      OS_TYPE="BSD"

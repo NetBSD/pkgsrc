@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:16:56 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/13 21:11:54 jlam Exp $
 bin/aktion
 bin/artsbuilder
 bin/artscontrol
+bin/kmid
 bin/kmidi
 bin/kmix
 bin/kmixctrl
@@ -468,6 +469,7 @@ share/doc/kde/HTML/en/noatun/index.docbook
 share/kde/applnk/Multimedia/aktion.desktop
 share/kde/applnk/Multimedia/artsbuilder.desktop
 share/kde/applnk/Multimedia/artscontrol.desktop
+share/kde/applnk/Multimedia/kmid.desktop
 share/kde/applnk/Multimedia/kmidi.desktop
 share/kde/applnk/Multimedia/kmix.desktop
 share/kde/applnk/Multimedia/kscd.desktop
@@ -577,6 +579,29 @@ share/kde/apps/artsbuilder/pics/Synth_XFADE.xpm
 share/kde/apps/artscontrol/artscontrol.rc
 share/kde/apps/artscontrol/artsmidimanagerview.rc
 share/kde/apps/kicker/applets/kmixapplet.desktop
+share/kde/apps/kmid/DiesIrae.kar
+share/kde/apps/kmid/Guantanamera.kar
+share/kde/apps/kmid/MariaDeLasMercedes.kar
+share/kde/apps/kmid/OFortuna.kar
+share/kde/apps/kmid/fm/drums.o3
+share/kde/apps/kmid/fm/drums.sb
+share/kde/apps/kmid/fm/std.o3
+share/kde/apps/kmid/fm/std.sb
+share/kde/apps/kmid/icons/button1.xpm
+share/kde/apps/kmid/icons/button2.xpm
+share/kde/apps/kmid/icons/hicolor/16x16/actions/piano.png
+share/kde/apps/kmid/icons/hicolor/16x16/actions/volume.png
+share/kde/apps/kmid/icons/hicolor/22x22/actions/piano.png
+share/kde/apps/kmid/icons/hicolor/22x22/actions/volume.png
+share/kde/apps/kmid/icons/hicolor/32x32/actions/piano.png
+share/kde/apps/kmid/icons/hicolor/32x32/actions/volume.png
+share/kde/apps/kmid/icons/keyboard.xpm
+share/kde/apps/kmid/kmid_partui.rc
+share/kde/apps/kmid/kmidui.rc
+share/kde/apps/kmid/maps/YamahaPSR500.map
+share/kde/apps/kmid/maps/YamahaPSS790.map
+share/kde/apps/kmid/maps/YamahaQY10.map
+share/kde/apps/kmid/maps/gm.map
 share/kde/apps/kmidi/Axel_Elf.mid
 share/kde/apps/kmidi/Cavatina.mid
 share/kde/apps/kmidi/Georgia.mid
@@ -858,25 +883,32 @@ share/kde/config/aktionrc
 share/kde/icons/hicolor/16x16/apps/aktion.png
 share/kde/icons/hicolor/16x16/apps/artsbuilder.png
 share/kde/icons/hicolor/16x16/apps/artscontrol.png
+share/kde/icons/hicolor/16x16/apps/kmid.png
 share/kde/icons/hicolor/16x16/apps/kmidi.png
 share/kde/icons/hicolor/16x16/apps/kmix.png
 share/kde/icons/hicolor/16x16/apps/kscd.png
 share/kde/icons/hicolor/16x16/apps/noatun.png
 share/kde/icons/hicolor/22x22/apps/noatun.png
 share/kde/icons/hicolor/32x32/apps/aktion.png
+share/kde/icons/hicolor/32x32/apps/kmid.png
 share/kde/icons/hicolor/32x32/apps/kmidi.png
 share/kde/icons/hicolor/32x32/apps/kmix.png
 share/kde/icons/hicolor/32x32/apps/kscd.png
 share/kde/icons/hicolor/32x32/apps/noatun.png
+share/kde/icons/hicolor/48x48/apps/kmid.png
 share/kde/icons/hicolor/48x48/apps/kmidi.png
 share/kde/icons/hicolor/48x48/apps/kmix.png
 share/kde/icons/hicolor/48x48/apps/kscd.png
 share/kde/icons/hicolor/48x48/apps/noatun.png
 share/kde/mimelnk/application/x-artsbuilder.desktop
+share/kde/mimelnk/audio/x-karaoke.desktop
 share/kde/mimelnk/text/xmcd.desktop
 share/kde/services/kmixctrl_restore.desktop
+share/kde/servicetypes/audiomidi.desktop
+@comment dirrm share/kde/servicetypes
 @comment dirrm share/kde/services
 @comment dirrm share/kde/mimelnk/text
+@comment dirrm share/kde/mimelnk/audio
 @comment dirrm share/kde/mimelnk/application
 @comment dirrm share/kde/icons/hicolor/48x48/apps
 @comment dirrm share/kde/icons/hicolor/32x32/apps
@@ -940,6 +972,17 @@ share/kde/services/kmixctrl_restore.desktop
 @dirrm share/kde/apps/kmidi/config/BITMAPS
 @dirrm share/kde/apps/kmidi/config
 @dirrm share/kde/apps/kmidi
+@dirrm share/kde/apps/kmid/maps
+@dirrm share/kde/apps/kmid/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/kmid/icons/hicolor/32x32
+@dirrm share/kde/apps/kmid/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kmid/icons/hicolor/22x22
+@dirrm share/kde/apps/kmid/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kmid/icons/hicolor/16x16
+@dirrm share/kde/apps/kmid/icons/hicolor
+@dirrm share/kde/apps/kmid/icons
+@dirrm share/kde/apps/kmid/fm
+@dirrm share/kde/apps/kmid
 @comment dirrm share/kde/apps/kicker/applets
 @dirrm share/kde/apps/artscontrol
 @dirrm share/kde/apps/artsbuilder/pics
