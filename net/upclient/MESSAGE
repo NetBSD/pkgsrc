@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2002/09/24 12:30:28 wiz Exp $
+$NetBSD: MESSAGE,v 1.4 2003/07/02 18:22:42 jmmv Exp $
 
 To start the Uptime Client, run the ${PREFIX}/etc/rc.d/upclient
 script either manually or via /etc/rc.local.
 
 Register your server at http://uptimes.wonko.com then edit
-${LOCALBASE}/etc/upclient.conf to add your assigned AuthKey.
+${PKG_SYSCONFDIR}/upclient.conf to add your assigned AuthKey.
 
 ===========================================================================
