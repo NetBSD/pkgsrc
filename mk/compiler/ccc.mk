@@ -1,4 +1,4 @@
-# $NetBSD: ccc.mk,v 1.2 2004/11/20 05:54:36 grant Exp $
+# $NetBSD: ccc.mk,v 1.2.2.1 2004/11/23 20:54:12 tv Exp $
 
 .if !defined(COMPILER_CCC_MK)
 COMPILER_CCC_MK=	defined
@@ -10,34 +10,36 @@ COMPILER_CCC_MK=	defined
 # requested by the package in USE_LANGUAGES.
 # 
 
-LANGUAGES.ccc=	c
+LANGUAGES.ccc=		c
 .if exists(/usr/lib/cmplrs/cxx)
-LANGUAGES.ccc+=	c++
+LANGUAGES.ccc+=		c++
 .endif
-_LANGUAGES.ccc=	# empty
+_LANGUAGES.ccc=		# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.ccc+=	${LANGUAGES.ccc:M${_lang_}}
 .endfor
 
-_CCC_DIR=		${WRKDIR}/.ccc
-_CCC_LINKS=		# empty
+_CCC_DIR=	${WRKDIR}/.ccc
+_CCC_LINKS=	# empty
 .if exists(/usr/bin/cc)
-_CCC_CC=		${_CCC_DIR}/cc
+_CCC_CC=	${_CCC_DIR}/cc
 _CCC_LINKS+=	_CCC_CC
-PKG_CC=			${_CCC_CC}
-CC=			${PKG_CC:T}
+PKG_CC=		${_CCC_CC}
+CC=		${PKG_CC:T}
+CCPATH=		/usr/bin/cc
 .endif
 
 .if exists(/usr/bin/cxx)
-_CCC_CXX=		${_CCC_DIR}/cxx
-_CCC_LINKS+=		_CCC_CXX
-PKG_CXX=		${_CCC_CXX}
-CXX=			${PKG_CXX:T}
+_CCC_CXX=	${_CCC_DIR}/cxx
+_CCC_LINKS+=	_CCC_CXX
+PKG_CXX=	${_CCC_CXX}
+CXX=		${PKG_CXX:T}
+CXXPATH=	/usr/bin/cxx
 .endif
 
-.if exists(/usr/bin/cc) && !defined(CC_VERSION_STRING)
-CC_VERSION_STRING!=	/usr/bin/cc -V 2>&1 | awk '{print; exit(0);}'
-CC_VERSION!=		/usr/bin/cc -V 2>&1 | awk '{print "CCC-"$3; exit(0);}'
+.if exists(${CCPATH}) && !defined(CC_VERSION_STRING)
+CC_VERSION_STRING!=	${CCPATH} -V 2>&1 | awk '{print; exit(0);}'
+CC_VERSION!=		${CCPATH} -V 2>&1 | awk '{print "CCC-"$3; exit(0);}'
 .else
 CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		CCC

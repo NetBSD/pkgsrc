@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.74 2004/11/22 22:24:47 wiz Exp $
+# $NetBSD: gcc.mk,v 1.74.2.1 2004/11/23 20:54:12 tv Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -346,6 +346,7 @@ _GCC_CC=	${_GCC_DIR}/bin/gcc
 _GCC_LINKS+=	_GCC_CC
 PKG_CC=		${_GCC_CC}
 CC=		${PKG_CC:T}
+CCPATH=		${_GCCBINDIR}/gcc
 .endif
 .if exists(${_GCCBINDIR}/cpp) && ${OPSYS} != "Darwin"
 _GCC_CPP=	${_GCC_DIR}/bin/cpp
@@ -358,6 +359,7 @@ _GCC_CXX=	${_GCC_DIR}/bin/g++
 _GCC_LINKS+=	_GCC_CXX
 PKG_CXX=	${_GCC_CXX}
 CXX=		${PKG_CXX:T}
+CXXPATH=	${_GCCBINDIR}/g++
 .endif
 .if exists(${_GCCBINDIR}/g77)
 _GCC_FC=	${_GCC_DIR}/bin/g77
@@ -365,6 +367,8 @@ _GCC_LINKS+=	_GCC_FC
 PKG_FC=		${_GCC_FC}
 FC=		${PKG_FC:T}
 F77=		${PKG_FC:T}
+FCPATH=		${_GCCBINDIR}/g77
+F77PATH=	${_GCCBINDIR}/g77
 .endif
 
 # Pass the required flags to imake to tell it we're using gcc on Solaris.
@@ -373,11 +377,11 @@ IMAKEOPTS+=	-DHasGcc2=YES -DHasGcc2ForCplusplus=YES
 .endif
 
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
-.  if exists(${_GCCBINDIR}/gcc)
-CC_VERSION_STRING!=	${_GCCBINDIR}/gcc -v 2>&1
+.  if exists(${CCPATH})
+CC_VERSION_STRING!=	${CCPATH} -v 2>&1
 CC_VERSION!=		\
-	if ${_GCCBINDIR}/gcc -dumpversion > /dev/null 2>&1; then	\
-		${ECHO} "gcc-`${_GCCBINDIR}/gcc -dumpversion`";		\
+	if ${CCPATH} -dumpversion > /dev/null 2>&1; then		\
+		${ECHO} "gcc-`${CCPATH} -dumpversion`";			\
 	else								\
 		${ECHO} "gcc-${_GCC_REQD}";				\
 	fi
