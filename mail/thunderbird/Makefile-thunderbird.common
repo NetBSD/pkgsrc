@@ -1,9 +1,9 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.1 2004/08/10 14:27:17 taya Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.2 2004/09/20 12:55:43 taya Exp $
 
 MOZILLA_BIN=	thunderbird-bin
-MOZ_VER=	0.7.3
+MOZ_VER=	0.8
 EXTRACT_SUFX=	.tar.bz2
-DISTNAME=	thunderbird-${MOZ_VER}-source
+DISTNAME=	thunderbird-source-${MOZ_VER}
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/ \
 		ftp://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/
 
@@ -16,6 +16,7 @@ DISTINFO_FILE=	${.CURDIR}/../../mail/thunderbird/distinfo
 PATCHDIR=	${.CURDIR}/../../mail/thunderbird/patches
 
 CONFIGURE_ARGS+=	--enable-extensions=wallet,spellcheck,xmlextras
+CONFIGURE_ARGS+=	--enable-single-profile
 
 pre-install:
 	${CP} -r ${WRKSRC}/dist/bin/defaults/profile/extensions \
