@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2004/04/11 21:31:10 jschauma Exp $
+# $NetBSD: Makefile,v 1.16 2004/06/05 06:17:37 atatat Exp $
 #
 
-DISTNAME=	pkgdepgraph-2.5
+DISTNAME=	pkgdepgraph-2.6
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
