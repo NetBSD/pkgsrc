@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/19 11:38:33 jlam Exp $
+etc/rc.d/dhid.sh.sample
+libexec/dhid
+man/man1/dtool.1
+man/man8/dhid.8
+sbin/dtool
+share/doc/dhid/COPYRIGHT
+share/doc/dhid/README
+share/examples/dhid.conf
+@dirrm share/doc/dhid

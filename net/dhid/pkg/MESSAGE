@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 1999/07/19 11:38:33 jlam Exp $
+
+If you don't already have a FQDN with dhis.org domain, you will need to
+register at http://www.dhis.org/sp/register.html.
+
+You will need to install:
+
+	${PREFIX}/share/examples/dhid.conf --> /etc/dhid.conf
+
+and replace `idnumber', `fqdn', and `password' with your DHIS-provided
+host id number, FQDN with dhis.org domain, and update password,
+respectively.
+
+===========================================================================

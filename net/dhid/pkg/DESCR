@@ -1,0 +1,4 @@
+DHIS was developed and implemented in order to overcome the problem of
+dynamically assigned IP addresses and fixed Fully Qualified Domain Names.
+Its technology, allowing secure dynamic DNS updates, is provided freely
+under a BSD style copyright license. 
