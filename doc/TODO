@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3045 2005/02/18 17:23:40 wiz Exp $
+$NetBSD: TODO,v 1.3046 2005/02/18 18:05:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -375,7 +375,6 @@ Suggested package updates
 	o cscope-15.5
 	o cssc-1.0.1
 	o cstream-2.5
-	o curl-7.13.0
 	o cvs-1.11.18
 	o cvsweb-3.0.5
 	o cwtext-0.94
@@ -903,6 +902,7 @@ Suggested package updates
 	o py-ZODB-3.2.3
 	o py-amkCrypto-2.0
 	o py-bdb-xml-2.0.9
+	o py-curl-7.12.3
 	o py-gnuplot-1.7
 	o py-kenosis-0.94.1
 	o py-ldap-2.0.6
