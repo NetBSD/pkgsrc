@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3163 2003/08/31 00:14:07 chris Exp $
+$NetBSD: CHANGES,v 1.3164 2003/08/31 00:30:36 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3413,3 +3413,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wdm to 1.25 [jmmv 2003-08-30]
 	Updated capc-calc to 2.11.8 [wiz 2003-08-30]
 	Updated pan to 0.14.1 [chris 2003-08-31]
+	Updated mplayer to 0.91 [xtraeme 2003-08-31]
+	Updated mplayer-share to 0.91 [xtraeme 2003-08-31]
+	Updated gmplayer to 0.91 [xtraeme 2003-08-31]
+	Updated mencoder to 0.91 [xtraeme 2003-08-31]
