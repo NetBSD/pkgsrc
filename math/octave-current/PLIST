@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/01/13 15:41:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/02/22 14:02:30 adam Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -440,7 +440,9 @@ include/octave-${PKGVERSION}/octave/octave.h
 include/octave-${PKGVERSION}/octave/ops.h
 include/octave-${PKGVERSION}/octave/ov-base-int.cc
 include/octave-${PKGVERSION}/octave/ov-base-int.h
+include/octave-${PKGVERSION}/octave/ov-base-mat.cc
 include/octave-${PKGVERSION}/octave/ov-base-mat.h
+include/octave-${PKGVERSION}/octave/ov-base-scalar.cc
 include/octave-${PKGVERSION}/octave/ov-base-scalar.h
 include/octave-${PKGVERSION}/octave/ov-base.h
 include/octave-${PKGVERSION}/octave/ov-bool-mat.h
@@ -455,9 +457,9 @@ include/octave-${PKGVERSION}/octave/ov-cx-mat.h
 include/octave-${PKGVERSION}/octave/ov-dld-fcn.h
 include/octave-${PKGVERSION}/octave/ov-fcn-handle.h
 include/octave-${PKGVERSION}/octave/ov-fcn-inline.h
-include/octave-${PKGVERSION}/octave/ov-int-traits.h
 include/octave-${PKGVERSION}/octave/ov-fcn.h
 include/octave-${PKGVERSION}/octave/ov-file.h
+include/octave-${PKGVERSION}/octave/ov-int-traits.h
 include/octave-${PKGVERSION}/octave/ov-int16.h
 include/octave-${PKGVERSION}/octave/ov-int32.h
 include/octave-${PKGVERSION}/octave/ov-int64.h
@@ -640,6 +642,7 @@ share/doc/html/octave/Octave-FAQ_1.html
 share/doc/html/octave/Octave-FAQ_10.html
 share/doc/html/octave/Octave-FAQ_11.html
 share/doc/html/octave/Octave-FAQ_12.html
+share/doc/html/octave/Octave-FAQ_13.html
 share/doc/html/octave/Octave-FAQ_2.html
 share/doc/html/octave/Octave-FAQ_3.html
 share/doc/html/octave/Octave-FAQ_4.html
@@ -825,8 +828,8 @@ share/octave/${PKGVERSION}/m/control/system/__tfl__.m
 share/octave/${PKGVERSION}/m/control/system/__zp2ssg2__.m
 share/octave/${PKGVERSION}/m/control/system/abcddim.m
 share/octave/${PKGVERSION}/m/control/system/buildssic.m
-share/octave/${PKGVERSION}/m/control/system/cellidx.m
 share/octave/${PKGVERSION}/m/control/system/c2d.m
+share/octave/${PKGVERSION}/m/control/system/cellidx.m
 share/octave/${PKGVERSION}/m/control/system/d2c.m
 share/octave/${PKGVERSION}/m/control/system/dmr2d.m
 share/octave/${PKGVERSION}/m/control/system/fir2sys.m
@@ -957,6 +960,7 @@ share/octave/${PKGVERSION}/m/general/diff.m
 share/octave/${PKGVERSION}/m/general/flipdim.m
 share/octave/${PKGVERSION}/m/general/fliplr.m
 share/octave/${PKGVERSION}/m/general/flipud.m
+share/octave/${PKGVERSION}/m/general/ind2sub.m
 share/octave/${PKGVERSION}/m/general/int2str.m
 share/octave/${PKGVERSION}/m/general/is_duplicate_entry.m
 share/octave/${PKGVERSION}/m/general/isa.m
@@ -985,6 +989,7 @@ share/octave/${PKGVERSION}/m/general/shift.m
 share/octave/${PKGVERSION}/m/general/shiftdim.m
 share/octave/${PKGVERSION}/m/general/sph2cart.m
 share/octave/${PKGVERSION}/m/general/strerror.m
+share/octave/${PKGVERSION}/m/general/sub2ind.m
 share/octave/${PKGVERSION}/m/general/tril.m
 share/octave/${PKGVERSION}/m/general/triu.m
 share/octave/${PKGVERSION}/m/image/colormap.m
@@ -1022,18 +1027,25 @@ share/octave/${PKGVERSION}/m/linear-algebra/rank.m
 share/octave/${PKGVERSION}/m/linear-algebra/trace.m
 share/octave/${PKGVERSION}/m/linear-algebra/vec.m
 share/octave/${PKGVERSION}/m/linear-algebra/vech.m
+share/octave/${PKGVERSION}/m/miscellaneous/PKG_ADD
 share/octave/${PKGVERSION}/m/miscellaneous/bincoeff.m
 share/octave/${PKGVERSION}/m/miscellaneous/bug_report.m
 share/octave/${PKGVERSION}/m/miscellaneous/comma.m
+share/octave/${PKGVERSION}/m/miscellaneous/computer.m
 share/octave/${PKGVERSION}/m/miscellaneous/cputime.m
+share/octave/${PKGVERSION}/m/miscellaneous/delete.m
+share/octave/${PKGVERSION}/m/miscellaneous/dir.m
 share/octave/${PKGVERSION}/m/miscellaneous/dump_prefs.m
 share/octave/${PKGVERSION}/m/miscellaneous/etime.m
 share/octave/${PKGVERSION}/m/miscellaneous/fileparts.m
 share/octave/${PKGVERSION}/m/miscellaneous/flops.m
 share/octave/${PKGVERSION}/m/miscellaneous/fullfile.m
 share/octave/${PKGVERSION}/m/miscellaneous/is_leap_year.m
+share/octave/${PKGVERSION}/m/miscellaneous/ispc.m
+share/octave/${PKGVERSION}/m/miscellaneous/isunix.m
 share/octave/${PKGVERSION}/m/miscellaneous/list_primes.m
 share/octave/${PKGVERSION}/m/miscellaneous/menu.m
+share/octave/${PKGVERSION}/m/miscellaneous/not.m
 share/octave/${PKGVERSION}/m/miscellaneous/pack.m
 share/octave/${PKGVERSION}/m/miscellaneous/paren.m
 share/octave/${PKGVERSION}/m/miscellaneous/path.m
@@ -1044,6 +1056,7 @@ share/octave/${PKGVERSION}/m/miscellaneous/tempname.m
 share/octave/${PKGVERSION}/m/miscellaneous/texas_lotto.m
 share/octave/${PKGVERSION}/m/miscellaneous/tic.m
 share/octave/${PKGVERSION}/m/miscellaneous/toc.m
+share/octave/${PKGVERSION}/m/miscellaneous/unix.m
 share/octave/${PKGVERSION}/m/miscellaneous/version.m
 share/octave/${PKGVERSION}/m/miscellaneous/xor.m
 share/octave/${PKGVERSION}/m/plot/PKG_ADD
@@ -1347,21 +1360,11 @@ share/octave/${PKGVERSION}/m/time/asctime.m
 share/octave/${PKGVERSION}/m/time/clock.m
 share/octave/${PKGVERSION}/m/time/ctime.m
 share/octave/${PKGVERSION}/m/time/date.m
-share/octave/${PKGVERSION}/m/general/ind2sub.m
-share/octave/${PKGVERSION}/m/general/sub2ind.m
-share/octave/${PKGVERSION}/m/miscellaneous/PKG_ADD
-share/octave/${PKGVERSION}/m/miscellaneous/computer.m
-share/octave/${PKGVERSION}/m/miscellaneous/delete.m
-share/octave/${PKGVERSION}/m/miscellaneous/dir.m
-share/octave/${PKGVERSION}/m/miscellaneous/ispc.m
-share/octave/${PKGVERSION}/m/miscellaneous/isunix.m
-share/octave/${PKGVERSION}/m/miscellaneous/not.m
-share/octave/${PKGVERSION}/m/miscellaneous/unix.m
 share/octave/ls-R
 share/octave/site/m/startup/octaverc
 @dirrm share/octave/site/m/startup
-@dirrm share/octave/site/api-v12/m
-@dirrm share/octave/site/api-v12
+@dirrm share/octave/site/api-v13/m
+@dirrm share/octave/site/api-v13
 @dirrm share/octave/${PKGVERSION}/site/m
 @dirrm share/octave/${PKGVERSION}/site
 @dirrm share/octave/${PKGVERSION}/m/time
@@ -1399,8 +1402,8 @@ share/octave/site/m/startup/octaverc
 @dirrm share/octave/${PKGVERSION}/doc
 @dirrm share/octave/${PKGVERSION}
 @dirrm share/doc/html/octave
-@dirrm libexec/octave/site/oct/api-v12/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/site/oct/api-v12
+@dirrm libexec/octave/site/oct/api-v13/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/site/oct/api-v13
 @dirrm libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/octave/site/oct
 @dirrm libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
