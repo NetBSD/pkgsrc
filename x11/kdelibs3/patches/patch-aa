@@ -1,37 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2003/03/11 13:10:33 markd Exp $
+$NetBSD: patch-aa,v 1.4 2004/02/04 13:58:39 markd Exp $
 
---- arts/knotify/Makefile.am.orig	Mon Sep 16 09:12:54 2002
-+++ arts/knotify/Makefile.am
-@@ -4,15 +4,20 @@
- ####### Files
+--- kdoctools/move_kio_help_cache.sh.orig	2003-12-09 10:16:53.000000000 +1300
++++ kdoctools/move_kio_help_cache.sh
+@@ -1,6 +1,6 @@
+ #!/bin/sh
  
- bin_PROGRAMS	= knotify
--lib_LTLIBRARIES = knotify.la
-+lib_LTLIBRARIES = libknotify_main.la knotify.la
- 
--knotify_la_SOURCES	= knotify.cpp knotify.skel
--knotify_la_LIBADD	= -lsoundserver_idl -lqtmcop $(LIB_KDEUI)
-+libknotify_main_la_SOURCES     = knotify.cpp knotify.skel
-+libknotify_main_la_LIBADD      = -lsoundserver_idl -lqtmcop $(LIB_KDEUI)
-+libknotify_main_la_LDFLAGS = $(all_libraries)
-+libknotify_main_la_METASOURCES = AUTO
-+
-+knotify_la_SOURCES	= knotify_main.cpp
-+knotify_la_LIBADD	= libknotify_main.la
- knotify_la_LDFLAGS = $(all_libraries) -module -avoid-version
- knotify_la_METASOURCES = AUTO
- 
--knotify_SOURCES = dummy.cpp
--knotify_LDADD = knotify.la
-+knotify_SOURCES = knotify_main.cpp
-+knotify_LDADD = libknotify_main.la
- knotify_LDFLAGS  = $(all_libraries) $(KDE_RPATH)
- 
- check_PROGRAMS		= knotifytest
-@@ -27,6 +32,3 @@
- 
- messages:
- 	$(XGETTEXT) knotify.cpp -o $(podir)/knotify.pot
--
--dummy.cpp:
--	echo > dummy.cpp
+-bas=`kde-config --localprefix`share/apps/kio_help
++bas=`kde-config --localprefix`share/kde/apps/kio_help
+ mv "$bas/cache" "`kde-config --path cache`kio_help"
+ rmdir "$bas"
+ exit 0
