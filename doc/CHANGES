@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9047 2005/02/05 14:54:33 chris Exp $
+$NetBSD: CHANGES,v 1.9048 2005/02/05 14:56:12 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -763,3 +763,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated postgresql74 to 7.4.7 [jdolecek 2005-02-05]
 	Updated postgresql73 to 7.3.9 [jdolecek 2005-02-05]
 	Updated sylpheed to 1.0.1 [chris 2005-02-05]
+	Updated tnef to 1.3.1 [heinz 2005-02-05]
