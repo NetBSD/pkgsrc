@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2000/10/15 18:05:25 rh Exp $
+# $NetBSD: Makefile,v 1.97 2000/10/16 12:25:52 abs Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -11,6 +11,7 @@
     SUBDIR += battleball
     SUBDIR += cbzone
     SUBDIR += cgoban
+    SUBDIR += civctp-demo
     SUBDIR += corewars
     SUBDIR += craft
     SUBDIR += crafty
@@ -21,6 +22,7 @@
     SUBDIR += crafty-doc
     SUBDIR += crossfire
     SUBDIR += dopewars
+    SUBDIR += eus-demo
     SUBDIR += finalbattle
     SUBDIR += freeciv-client
     SUBDIR += freeciv-client-gtk
@@ -40,6 +42,7 @@
     SUBDIR += gnuchess4
     SUBDIR += gnugo
     SUBDIR += golddig
+    SUBDIR += heretic2-demo
     SUBDIR += icbm3d
     SUBDIR += imaze
     SUBDIR += jetpack
