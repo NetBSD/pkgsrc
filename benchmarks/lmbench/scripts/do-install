@@ -12,19 +12,19 @@ MAN1="bargraph.1 graph.1"
 mkdir -p $PREFIX/bin/lmbench
 mkdir -p $PREFIX/share/lmbench
 for files in $BINS; do
-	/usr/bin/install -c -s -o bin -g bin -m 0755 bin/$OSDIR/$files $PREFIX/bin/lmbench
+	$INSTALL_PROGRAM -c -s -o bin -g bin -m 0755 bin/$OSDIR/$files $PREFIX/bin/lmbench
 done
 for files in $SCRIPTS; do
-	/usr/bin/install -c -o bin -g bin -m 0755 scripts/$files $PREFIX/bin/lmbench
+	$INSTALL_PROGRAM -c -o bin -g bin -m 0755 scripts/$files $PREFIX/bin/lmbench
 done
 for files in $MAN1; do
-	/usr/bin/install -c -o bin -g bin -m 0444 doc/$files $PREFIX/man/man1
+	$INSTALL_PROGRAM -c -o bin -g bin -m 0444 doc/$files $PREFIX/man/man1
 done
 for files in $MAN8; do
-	/usr/bin/install -c -o bin -g bin -m 0444 doc/$files $PREFIX/man/man8
+	$INSTALL_PROGRAM -c -o bin -g bin -m 0444 doc/$files $PREFIX/man/man8
 done
 for files in $MAN3; do
-	/usr/bin/install -c -o bin -g bin -m 0444 doc/$files $PREFIX/man/man3
+	$INSTALL_PROGRAM -c -o bin -g bin -m 0444 doc/$files $PREFIX/man/man3
 done
 cat <<EOF >$PREFIX/bin/run-lmbench
 #!/bin/sh
