@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2001/07/16 09:49:16 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/10/22 01:13:11 mjl Exp $
 #
 
-DISTNAME=		lzo-1.06
-PKGNAME=		liblzo-1.06
+VERS=			1.07
+DISTNAME=		lzo-${VERS}
+PKGNAME=		liblzo-${VERS}
 CATEGORIES=		archivers
 MASTER_SITES=		http://wildsau.idv.uni-linz.ac.at/mfx/lzo-download/ \
 			ftp://wildsau.idv.uni-linz.ac.at/pub/mfx/lzo/ \
