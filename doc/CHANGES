@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7590 2004/10/28 13:03:36 wiz Exp $
+$NetBSD: CHANGES,v 1.7591 2004/10/28 14:27:27 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4917,3 +4917,21 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pgpdump to 0.23 [taca 2004-10-28]
 	Updated dcraw to 1.214 [wiz 2004-10-28]
 	Updated pkglint to 3.94 [wiz 2004-10-28]
+	Updated gstreamer to 0.8.7 [jmmv 2004-10-28]
+	Updated gst-plugins to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-artsd to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-cdparanoia to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-dvdnav to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-dvdread to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-esound to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-faad to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-flac to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-gnomevfs to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-lame to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-mad to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-mpeg2dec to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-ogg to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-oss to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-png to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-theora to 0.8.5 [jmmv 2004-10-28]
+	Updated gst-plugins-vorbis to 0.8.5 [jmmv 2004-10-28]
