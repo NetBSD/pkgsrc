@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2002/10/19 19:05:39 heinz Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2002/12/23 02:06:07 jlam Exp $
 
 .if !defined(FREETYPE2_BUILDLINK2_MK)
 FREETYPE2_BUILDLINK2_MK=	# defined
@@ -70,11 +70,19 @@ BUILDLINK_FILES.freetype2+=	lib/libfreetype.*
 
 BUILDLINK_TARGETS+=		freetype2-buildlink
 BUILDLINK_TARGETS+=		freetype2-buildlink-config
+BUILDLINK_TARGETS+=		freetype2-libfreetype-la
 
 _FREETYPE2_CONFIG= \
 	${BUILDLINK_PREFIX.freetype2}/bin/freetype-config
 _FREETYPE2_BUILDLINK_CONFIG= \
 	${BUILDLINK_DIR}/bin/freetype-config
+
+.if ${_NEED_FREETYPE2} == "NO"
+_BLNK_FREETYPE2_LDFLAGS=	-L${BUILDLINK_PREFIX.freetype2}/lib -lfreetype
+LIBTOOL_ARCHIVE_UNTRANSFORM_SED+=	\
+	-e "s|${BUILDLINK_PREFIX.freetype2}/lib/libfreetype.la|${_BLNK_FREETYPE2_LDFLAGS}|g" \
+	-e "s|${LOCALBASE}/lib/libfreetype.la|${_BLNK_FREETYPE2_LDFLAGS}|g"
+.endif
 
 freetype2-buildlink: _BUILDLINK_USE
 
@@ -91,5 +99,11 @@ freetype2-buildlink-config:
 			> ${_FREETYPE2_BUILDLINK_CONFIG};		\
 		${CHMOD} +x ${_FREETYPE2_BUILDLINK_CONFIG};		\
 	fi
+
+freetype2-libfreetype-la:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	lafile="${BUILDLINK_DIR}/lib/libfreetype.la";			\
+	libpattern="${BUILDLINK_PREFIX.freetype2}/lib/libfreetype.*";	\
+	${BUILDLINK_FAKE_LA}
 
 .endif	# FREETYPE2_BUILDLINK2_MK
