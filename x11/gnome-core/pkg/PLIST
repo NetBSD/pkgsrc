@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2001/05/14 17:18:15 rh Exp $
+@comment $NetBSD: PLIST,v 1.28 2001/05/26 13:28:41 rh Exp $
 bin/deskguide_applet
 bin/gmenu
 bin/gnome-about
@@ -1357,6 +1357,7 @@ share/pixmaps/panel-drawer.png
 share/pixmaps/panel-folder.png
 share/pixmaps/panel-knob.png
 share/pixmaps/panel-menu-main.png
+share/pixmaps/splash/gnome-splash-1.4.0.png
 share/pixmaps/splash/gnome-splash.png
 share/pixmaps/tiles/tile-blue-down.png
 share/pixmaps/tiles/tile-blue-up.png
