@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2000/01/01 20:08:27 christos Exp $
+
+--- dates.c.orig	Sat Jan  1 15:06:01 2000
++++ dates.c	Sat Jan  1 15:06:07 2000
+@@ -101,7 +101,7 @@
+ {
+     long year, julian;
+ 
+-    if (tym->tm_year < 100)
++    if (tym->tm_year < 1000)
+ 	year = tym->tm_year + 1900;
+     if (year < 69)
+ 	year += 100;
