@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1999/12/17 10:48:25 agc Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/03 22:08:56 agc Exp $
 #
 
-DISTNAME=	user-19991216
+DISTNAME=	user-19991231
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
