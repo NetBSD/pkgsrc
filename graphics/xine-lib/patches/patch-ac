@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/04/06 11:06:02 rh Exp $
+$NetBSD: patch-ac,v 1.2 2003/10/02 01:16:40 mycroft Exp $
 
---- src/audio_out/audio_sun_out.c.orig	Sat Mar  8 08:27:29 2003
-+++ src/audio_out/audio_sun_out.c
+--- src/audio_out/audio_sun_out.c.orig	2003-07-13 19:29:04.000000000 +0000
++++ src/audio_out/audio_sun_out.c	2003-10-02 01:12:46.000000000 +0000
 @@ -41,6 +41,11 @@
  #ifdef	__svr4__
  #include <stropts.h>
@@ -14,3 +14,53 @@ $NetBSD: patch-ac,v 1.1.1.1 2003/04/06 11:06:02 rh Exp $
  
  #include "xine_internal.h"
  #include "xineutils.h"
+@@ -161,6 +166,9 @@
+   info.play.precision = AUDIO_PRECISION_16;
+   info.play.encoding = AUDIO_ENCODING_LINEAR;
+   info.play.samples = 0;
++#ifdef __NetBSD__
++  info.blocksize = 1024;
++#endif
+   if (ioctl(fd, AUDIO_SETINFO, &info)) {
+     fprintf(stderr, "rtsc: SETINFO failed\n");
+     goto error;
+@@ -175,6 +183,9 @@
+     fprintf(stderr, "rtsc: GETINFO1, %s\n", strerror(errno));
+     goto error;
+   }
++#ifdef __NetBSD__
++  info.play.samples /= 4;
++#endif
+ 
+   last_samplecnt = info.play.samples;
+   min_increment = ~0;
+@@ -197,6 +208,9 @@
+ 	fprintf(stderr, "rtsc: GETINFO2 failed, %s\n", strerror(errno));
+ 	goto error;
+     }
++#ifdef __NetBSD__
++    info.play.samples /= 4;
++#endif
+     if (info.play.samples < last_samplecnt) {
+ 	fprintf(stderr, "rtsc: %u > %u?\n", last_samplecnt, info.play.samples);
+ 	goto error;
+@@ -463,6 +477,9 @@
+       info.play.sample_rate = this->input_sample_rate;
+       info.play.eof = 0;
+       info.play.samples = 0;
++#ifdef __NetBSD__
++      info.blocksize = 1024;
++#endif
+ 
+       this->convert_u8_s8 = 0;
+ 
+@@ -568,6 +585,9 @@
+ 
+   if (ioctl(this->audio_fd, AUDIO_GETINFO, &info) == 0 &&
+       (this->frames_in_buffer == 0 || info.play.samples > 0)) {
++#ifdef __NetBSD__
++    info.play.samples /= this->bytes_per_frame;
++#endif
+ 
+     if (info.play.samples < this->last_samplecnt) {
+ 	fprintf(stderr, "audio_sun_out: broken sound driver, sample counter runs backwards, cur %u < prev %u\n",
