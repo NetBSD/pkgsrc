@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2000/10/31 17:06:18 itojun Exp $
+
+--- Makefile.in-	Wed Nov  1 01:32:40 2000
++++ Makefile.in	Wed Nov  1 01:32:49 2000
+@@ -103,7 +103,7 @@
+ gettextsrc_DATA = ABOUT-NLS
+ 
+ EXTRA_DIST = BUGS DISCLAIM README.gemtext
+-SUBDIRS = doc lib intl src po m4 misc tests
++SUBDIRS = doc lib src po m4 misc tests
+ 
+ DISTCLEANFILES = intl/libintl.h
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
