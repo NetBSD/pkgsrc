@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/28 15:17:54 hwr Exp $
+pdf-afm/Courier-Bold.afm
+pdf-afm/Courier-BoldOblique.afm
+pdf-afm/Courier-Oblique.afm
+pdf-afm/Courier.afm
+pdf-afm/Helvetica-Bold.afm
+pdf-afm/Helvetica-BoldOblique.afm
+pdf-afm/Helvetica-Oblique.afm
+pdf-afm/Helvetica.afm
+pdf-afm/Symbol.afm
+pdf-afm/Times-Bold.afm
+pdf-afm/Times-BoldItalic.afm
+pdf-afm/Times-Italic.afm
+pdf-afm/Times-Roman.afm
+pdf-afm/ZapfDingbats.afm
+pdf-afm/afmlist
+@dirrm pdf-afm
+lib/libpdf.a
+include/pdf.h
+include/p_port.h
+bin/text2pdf
