@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/10/09 21:14:04 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/02/01 16:49:58 rh Exp $
 bin/gnomecal
 bin/gnomecard
 etc/CORBA/servers/gnomecard.gnorba
@@ -26,6 +26,7 @@ share/locale/wa/LC_MESSAGES/gnome-pim.mo
 share/locale/el/LC_MESSAGES/gnome-pim.mo
 share/locale/en_GB/LC_MESSAGES/gnome-pim.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/gnome-pim.mo
+share/locale/uk/LC_MESSAGES/gnome-pim.mo
 share/mime-info/gnome-pim.keys
 share/gnome/apps/Applications/gncal.desktop
 share/gnome/apps/Applications/gnomecard.desktop
