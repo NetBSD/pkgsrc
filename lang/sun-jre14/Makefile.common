@@ -1,0 +1,39 @@
+# $NetBSD: Makefile.common,v 1.1 2002/07/27 22:17:45 jschauma Exp $
+
+CATEGORIES=     lang
+EXTRACT_SUFX=	.bin
+
+MAINTAINER=	jschauma@netbsd.org
+HOMEPAGE=	http://java.sun.com/
+
+FETCH_BEFORE_ARGS=-o ${DISTNAME}${EXTRACT_SUFX}
+EXTRACT_CMD=	${ECHO} yes | ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} >/dev/null
+
+LICENSE=	jdk13-license
+RESTRICTED=	"Redistribution of repackaged binaries not permitted"
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+
+.include "../../mk/bsd.prefs.mk"
+
+# We need to overwrite JDK_HOME, since JRE and JDK need to be
+# installed in the same directory
+JDK_HOME:=	${LOCALBASE}/java/sun-1.4.0
+MESSAGE_SUBST+= JDK_HOME=${JDK_HOME}
+
+# since we change PREFIX:
+NO_MTREE=	yes
+
+ONLY_FOR_PLATFORM= NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 Linux-*-i[3-6]86
+LDD=		${TRUE}
+
+NO_BUILD=	# defined
+
+post-fetch:
+	@${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+
+do-install:
+	${INSTALL_PROGRAM_DIR} ${PREFIX}
+	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}
