@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2283 2003/05/22 16:19:30 salo Exp $
+$NetBSD: CHANGES,v 1.2284 2003/05/22 16:39:54 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2078,3 +2078,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xdvipresent to 0.6.1.14 [jschauma 2003-05-22]
 	Updated bbkeys tp 0.8.6 [jschauma 2003-05-22]
 	Updated mtools to 3.9.7nb2 [salo 2003-05-22]
+	Updated pkgchk to 1.36 [abs 2003-05-22]
