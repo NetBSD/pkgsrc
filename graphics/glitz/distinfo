@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/11/15 03:33:22 rh Exp $
+$NetBSD: distinfo,v 1.4 2005/02/09 21:20:03 xtraeme Exp $
 
-SHA1 (glitz-0.2.3.tar.gz) = 59e72a4cbc9f0cd2b9ca4d6ea8e71c767e58b51a
-Size (glitz-0.2.3.tar.gz) = 370765 bytes
-SHA1 (patch-aa) = 83197e31db8871c4a04ca5062aad8f4b5e2ee2c5
+SHA1 (glitz-0.4.0.tar.gz) = f88d3470bd5abfda66f8e6a205d7a1a346604164
+Size (glitz-0.4.0.tar.gz) = 391481 bytes
