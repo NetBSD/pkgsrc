@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.9 2003/09/07 17:22:16 jschauma Exp $
+$NetBSD: patch-ae,v 1.10 2005/01/18 14:16:20 adam Exp $
 
---- generator/pbmtextps.c.orig	Sat Sep  6 23:31:49 2003
-+++ generator/pbmtextps.c	Sat Sep  6 23:32:23 2003
-@@ -13,7 +13,6 @@
-  * PostScript is a registered trademark of Adobe Systems International.
+--- generator/pbmtextps.c.orig	2003-10-08 02:39:27.000000000 +0000
++++ generator/pbmtextps.c
+@@ -15,7 +15,6 @@
+  * Additions by Bryan Henderson contributed to public domain by author.
   *
   */
 -#define _XOPEN_SOURCE   /* Make sure popen() is in stdio.h */
