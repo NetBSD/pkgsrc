@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1151 2003/03/14 19:37:49 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1152 2003/03/19 01:19:30 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2169,12 +2169,11 @@ real-su-install: ${MESSAGE}
 	found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`";		\
 	if [ "$$found" != "" ]; then					\
 		${ECHO_MSG} "${_PKGSRC_IN}>  $$found is already installed - perhaps an older version?"; \
-		${ECHO_MSG} "*** If so, you may wish to \`\`pkg_delete $$found'' and install"; \
-		${ECHO_MSG} "*** this package again by \`\`${MAKE} reinstall'' to upgrade it properly,"; \
-		${ECHO_MSG} "*** or use \`\`${MAKE} update'' to upgrade it and all of its dependencies."; \
-		${ECHO_MSG} "*** If you really wish to overwrite the old package of $$found"; \
-		${ECHO_MSG} "*** without deleting it first, set the variable \"FORCE_PKG_REGISTER\""; \
-		${ECHO_MSG} "*** in your environment or the \"${MAKE} install\" command line."; \
+		${ECHO_MSG} "*** If so, you may use either of:"; \
+		${ECHO_MSG} "***  - \"pkg_delete $$found\" and \"${MAKE} reinstall\" to upgrade properly"; \
+		${ECHO_MSG} "***  - \"${MAKE} update\" to rebuild the package and all of its dependencies"; \
+		${ECHO_MSG} "***  - \"${MAKE} replace\" to replace only the package without re-linking"; \
+		${ECHO_MSG} "***    dependencies, risking various problems."; \
 		exit 1;							\
 	fi
 .endif # !NO_PKG_REGISTER && !NO_FORCE_REGISTER
@@ -3988,6 +3987,7 @@ print-PLIST:
 		}'
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	for i in `${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} -type d	\
+		        | ( ${GREP} -v emul/linux/proc || ${TRUE} )	\
 			| ${SED}					\
 				-e 's@${PREFIX}/./@@'			\
 				-e '/^${PREFIX:S/\//\\\//g}\/.$$/d'	\
