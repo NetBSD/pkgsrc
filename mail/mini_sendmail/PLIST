@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2003/02/15 22:11:24 is Exp $
+etc/mailer.conf.mini_sendmail
+man/man8/mini_sendmail.8
+sbin/mini_sendmail
