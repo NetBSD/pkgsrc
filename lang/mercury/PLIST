@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/07 00:19:29 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/04/05 11:17:04 wiz Exp $
 bin/c2init
 bin/canonical_grade
 bin/info_to_mdb
@@ -1671,6 +1671,7 @@ lib/mercury/lib/asm_fast.gc/${MACHINE_GNU_PLATFORM}/libmer_browser.a
 lib/mercury/lib/asm_fast.gc/${MACHINE_GNU_PLATFORM}/libmer_rt.a
 lib/mercury/lib/asm_fast.gc/${MACHINE_GNU_PLATFORM}/libmer_std.a
 lib/mercury/lib/asm_fast.gc/${MACHINE_GNU_PLATFORM}/libmer_trace.a
+lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}/inc/Mercury/mihs
 lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}/inc/array.mih
 lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}/inc/assoc_list.mih
 lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}/inc/bag.mih
@@ -1740,7 +1741,7 @@ lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}/libmer_browser.a
 lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}/libmer_rt.a
 lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}/libmer_std.a
 lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}/libmer_trace.a
-lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}/inc/Mercury/mihs
+lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}/inc/Mercury/mihs
 lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}/inc/array.mih
 lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}/inc/assoc_list.mih
 lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}/inc/bag.mih
@@ -1810,7 +1811,6 @@ lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}/libmer_browser.a
 lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}/libmer_rt.a
 lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}/libmer_std.a
 lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}/libmer_trace.a
-lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}/inc/Mercury/mihs
 lib/mercury/mdb/mdb_doc
 lib/mercury/mdb/mdbrc
 lib/mercury/mmake/Mmake.rules
