@@ -1,43 +1,25 @@
-$NetBSD: patch-ac,v 1.2 1999/10/31 12:08:27 mrg Exp $
+$NetBSD: patch-ac,v 1.3 1999/11/13 07:31:40 jlam Exp $
 
-diff -ru /tmp/XmHTML-1.1.5/examples/Imakefile XmHTML-1.1.5/examples/Imakefile
---- /tmp/XmHTML-1.1.5/examples/Imakefile	Fri Mar 13 09:53:27 1998
-+++ XmHTML-1.1.5/examples/Imakefile	Sun Oct 31 21:01:09 1999
-@@ -24,23 +24,23 @@
- XCOMM
+--- http/Makefile.orig	Wed Feb  3 19:43:27 1999
++++ http/Makefile	Tue Nov  2 01:28:54 1999
+@@ -2,7 +2,7 @@
+ # lint configuration. I use lclint.
+ #
  
- #if DebugLibXmHTML
--   XMHTMLLIB = $(BUILDINCTOP)/src/libXmHTML_d.a
-+   XMHTMLLIB = $(TOP)/src/libXmHTML_d.a
-    DEPLIB    = $(XMHTMLLIB)
- #else
- #if SharedLibXmHTML
--   XMHTMLLIB = -L$(BUILDINCTOP)/src -lXmHTML
-+   XMHTMLLIB = -L$(TOP)/src -lXmHTML
- #else
--   XMHTMLLIB = $(BUILDINCTOP)/src/libXmHTML.a
-+   XMHTMLLIB = $(TOP)/src/libXmHTML.a
-    DEPLIB    = $(XMHTMLLIB)
- #endif
- #endif
--XCOMM    INCLUDES = -I$(BUILDINCTOP)/include $(DMALLOCINC)
-+XCOMM    INCLUDES = -I$(TOP)/include $(DMALLOCINC)
-      DEPLIBS = $(DEPXMLIB) $(DEPXTOOLLIB) $(DEPXLIB)
+-LIBRARY=libhttp.a
++LIBRARY=libhttp.la
  
- XCOMM
- XCOMM Richard's http client-side library (used by example_4)
- XCOMM
--HTTPLIB = -L$(BUILDINCTOP)/http -lhttp
-+HTTPLIB = -L$(TOP)/http -lhttp
+ # List of source, object and header files 
+ SRCS=HTTP.c cookie.c
+@@ -27,9 +27,8 @@
+ # targets to build
  
- XCOMM required libraries
- LOCAL_LIBS = $(XMHTMLLIB) $(XMLIB) $(XTOOLLIB) $(XLIB) $(DMALLOCLIB)
-@@ -54,7 +54,7 @@
- SRCS = example_1.c example_2.c example_4.c
+ $(TARGET):: $(OBJS)  
+-	$(RM) $@ \ 
+-	$(AR) $@ $(OBJS)  
+-	$(RANLIB) $@
++	$(RM) $@
++	$(CC) -o $@ $(OBJS:.o=.lo) -rpath ${PREFIX}/lib -version-info 0:2
  
- OBJS1 = example_1.o
--OBJS2 = example_2.o $(MOBJS)
-+OBJS2 = example_2.o $(MOBJS) history.o
- OBJS4 = example_4.o
- 
- AllTarget(example_1 example_2 example_4)
+ stamp-includes:
+ 	@if [ -d ../include ]; then set +x; \

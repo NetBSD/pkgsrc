@@ -1,54 +1,26 @@
-$NetBSD: patch-ad,v 1.2 1999/10/31 12:08:27 mrg Exp $
+$NetBSD: patch-ad,v 1.3 1999/11/13 07:31:40 jlam Exp $
 
-diff -ru /tmp/XmHTML-1.1.5/http/Imakefile XmHTML-1.1.5/http/Imakefile
---- /tmp/XmHTML-1.1.5/http/Imakefile	Sat Jan 17 12:56:33 1998
-+++ XmHTML-1.1.5/http/Imakefile	Sun Oct 31 21:01:10 1999
-@@ -81,8 +81,6 @@
+--- lib/Makefile.orig	Wed Feb  3 19:43:26 1999
++++ lib/Makefile	Tue Nov  2 01:28:54 1999
+@@ -25,7 +25,7 @@
+ # Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.         #
+ ##############################################################################
+ #
+-LIBRARY=libXmHTML.a
++LIBRARY=libXmHTML.la
  
- OBJS = HTTP.o cookie.o
+ # Target to make
+ TARGET=$(LIBRARY)
+@@ -44,9 +44,9 @@
+ 	@(set -x; cd common; $(MAKE) all $(pass_flags) )
  
--INSTALLFLAGS = $(INSTINCFLAGS)
--
- #define DoSharedLib SharedLibXmHTML
- #define DoNormalLib NormalLibXmHTML
- #define DoDebugLib  DebugLibXmHTML
-@@ -164,17 +162,37 @@
- #else
- lib$(LIBNAME).so: lib$(LIBNAME).so.$(SOHTTPLIBREV)
- 	$(RM) $@
--	ln -s $@$(SOHTTPLIBREV) $@
-+	ln -s lib$(LIBNAME).so.$(SOHTTPLIBREV) $@
- #endif /* SGIArchitecture */
- 
- clean::
- 	$(RM) lib$(LIBNAME).so 
-+
-+#if defined (XmHTMLLibInstall) && XmHTMLLibInstall
-+InstallSharedLibrary($(LIBNAME),$(SOHTTPLIBREV),$(HTTPLIBDIR))
-+# if HasSharedData
-+InstallSharedLibraryData($(LIBNAME),$(SOHTTPLIBREV),$(HTTPLIBDIR))
-+# endif
-+#endif
-+
- #endif /* DoSharedLib */
- 
-+#if defined (XmHTMLLibInstall) && XmHTMLLibInstall
-+InstallLibrary($(LIBNAME),$(HTTPLIBDIR))
-+# if !defined (DoSharedLib)
-+#  if DoProfileLib  
-+InstallLibrary($(LIBNAME)_p,$(HTTPLIBDIR))
-+#  endif  
-+#  if DoDebugLib  
-+InstallLibrary($(LIBNAME)_d,$(HTTPLIBDIR))
-+#  endif   
-+# endif   
-+#endif   
-+
- #endif /* ProjectX < 6 */
- 
- XCOMM rule to install header files
--InstallMultiple($(HEADERS),$(HTTPINCDIR))
-+InstallMultipleFlags($(HEADERS),$(HTTPINCDIR),$(INSTINCFLAGS))
- 
- DependTarget()
- 
+ $(TARGET):: common $(PLATFORM) 
+-	$(RM) $@ \ 
+-	$(AR) $@ common/*.o $(PLATFORM)/*.o
+-	$(RANLIB) $@
++	$(RM) $@
++	$(CC) -o $@ common/*.lo $(PLATFORM)/*.lo \
++		-rpath ${PREFIX}/lib -version-info 1:2
+ 	
+ depend:: 
+ 	@( for dir in $(SUBDIRS) ; do \
