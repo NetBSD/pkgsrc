@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/04/25 11:33:46 kent Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/11 08:51:48 jmc Exp $
 #
 BROKEN=		work in progress for updating to the latest
 PEACE_VERSION=	20020901
@@ -23,7 +23,7 @@ DISTFILES+=	freetype-dll-2.0.1nb1.tgz \
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=peace/}
 # bin/showstack requires perl5
 # DEPENDS+=	perl5:../../lang/perl5
-ONLY_FOR_PLATFORMS=	NetBSD-1.5ZC-i386 NetBSD-1.6*-i386
+ONLY_FOR_PLATFORM=      NetBSD-1.6[Q-Z]*-* NetBSD-[2-9]*-*
 
 BUILD_DEPENDS=	cross-i386-netbsdpe>=1.3:../../cross/i386-netbsdpe
 BUILD_DEPENDS+=	w32api>=1.5nb1:../../devel/w32api
