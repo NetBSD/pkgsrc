@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.6 2004/02/18 05:07:34 ben Exp $
+$NetBSD: patch-ac,v 1.7 2004/10/21 08:29:45 adam Exp $
 
---- configure.orig	2003-09-08 12:18:58.000000000 -0700
+--- configure.orig	2004-10-19 20:01:57.000000000 +0000
 +++ configure
-@@ -838,6 +838,8 @@ Optional Features:
+@@ -855,6 +855,8 @@ Optional Features:
    --enable-debug          turn on debugging default=no
    --enable-gl             turn on OpenGL support default=yes
    --enable-shared         turn on shared libraries default=no
 +  --enable-libtool=LIBTOOL_PATH
 +                          turn on building with libtool [default=no]
    --enable-threads        enable multi-threading support
-   --enable-xft            turn on Xft support default=no
-   --enable-xdbe           turn on Xdbe support default=no
-@@ -1294,7 +1296,22 @@ if test "${enable_shared+set}" = set; th
+   --enable-quartz         use Quartz instead of Quickdraw (default=no)
+   --enable-localjpeg      use local JPEG library, default=auto
+@@ -1377,7 +1379,22 @@ if test "${enable_shared+set}" = set; th
    enableval="$enable_shared"
  
  fi;
@@ -35,7 +35,7 @@ $NetBSD: patch-ac,v 1.6 2004/02/18 05:07:34 ben Exp $
      PICFLAG=1
      SHAREDSUFFIX=""
      FLUID="fluid-shared"
-@@ -1395,6 +1412,20 @@ else
+@@ -1478,6 +1495,20 @@ else
      LINKSHARED="-L../lib -lfltk_images -lfltk_forms -lfltk"
  fi
  
@@ -56,18 +56,18 @@ $NetBSD: patch-ac,v 1.6 2004/02/18 05:07:34 ben Exp $
  
  
  
-@@ -8919,7 +8950,7 @@ echo "${ECHO_T}yes" >&6
+@@ -9204,7 +9235,7 @@ echo "${ECHO_T}yes" >&6
  	    ;;
      esac
  
 -    CXX="$CC"
 +#    CXX="$CC"
  
-     # Show all standard warnings + unused variables when compiling...
-     OPTIM="-Wall -Wunused $OPTIM"
-@@ -9753,6 +9784,7 @@ s,@GLDEMOS@,$GLDEMOS,;t t
- s,@GLLIBNAME@,$GLLIBNAME,;t t
+     # Show all standard warnings + unused variables, conversion errors,
+     # and inlining problems when compiling...
+@@ -10094,6 +10125,7 @@ s,@GLLIBNAME@,$GLLIBNAME,;t t
  s,@IMGLIBNAME@,$IMGLIBNAME,;t t
+ s,@LIBEXT@,$LIBEXT,;t t
  s,@LIBNAME@,$LIBNAME,;t t
 +s,@LIBTOOL@,$LIBTOOL,;t t
  s,@LINKFLTK@,$LINKFLTK,;t t

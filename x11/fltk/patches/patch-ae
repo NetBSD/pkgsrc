@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.3 2004/02/18 05:07:34 ben Exp $
+$NetBSD: patch-ae,v 1.4 2004/10/21 08:29:45 adam Exp $
 
---- fluid/Makefile.orig	2003-08-02 14:17:30.000000000 -0700
+--- fluid/Makefile.orig	2004-10-18 20:22:22.000000000 +0000
 +++ fluid/Makefile
 @@ -75,7 +75,7 @@ include makedepend
  install: all
- 	echo "Installing FLUID in $(bindir)..."
- 	-$(MKDIR) $(bindir)
--	$(CP) $(FLUID) $(bindir)/fluid$(EXEEXT)
-+	$(INSTALL_BIN) $(FLUID) $(bindir)/fluid$(EXEEXT)
- 	$(STRIP) $(bindir)/fluid$(EXEEXT)
- 	$(bindir)/fltk-config --post $(bindir)/fluid$(EXEEXT)
- 	$(CHMOD) 755 $(bindir)/fluid$(EXEEXT)
+ 	echo "Installing FLUID in $(DESTDIR)$(bindir)..."
+ 	-$(MKDIR) $(DESTDIR)$(bindir)
+-	$(CP) $(FLUID) $(DESTDIR)$(bindir)/fluid$(EXEEXT)
++	$(INSTALL_BIN) $(FLUID) $(DESTDIR)$(bindir)/fluid$(EXEEXT)
+ 	$(STRIP) $(DESTDIR)$(bindir)/fluid$(EXEEXT)
+ 	$(DESTDIR)$(bindir)/fltk-config --post $(DESTDIR)$(bindir)/fluid$(EXEEXT)
+ 	$(CHMOD) 755 $(DESTDIR)$(bindir)/fluid$(EXEEXT)
