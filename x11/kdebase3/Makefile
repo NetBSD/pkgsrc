@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2005/03/24 04:47:58 markd Exp $
+# $NetBSD: Makefile,v 1.71 2005/03/26 15:30:46 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -138,9 +138,15 @@ post-install:
 	${CP} -f ${WRKDIR}/kdmrc.ad kdmrc
 .endif
 
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-6]*)
+CONFIGURE_ENV+= ac_cv_func_getutxent='no'
+CONFIGURE_ENV+= kde_cv_path_fontconfig_config='NONE'
+.endif
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 
 .include "../../databases/openldap/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
