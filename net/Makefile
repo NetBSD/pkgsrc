@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.412 2003/09/30 17:29:00 recht Exp $
+# $NetBSD: Makefile,v 1.413 2003/10/01 01:16:28 grant Exp $
 #
 
 COMMENT=	Networking tools
@@ -242,6 +242,7 @@ SUBDIR+=	radiusd-cistron
 SUBDIR+=	rdesktop
 SUBDIR+=	rdesktop10
 SUBDIR+=	rdist6
+SUBDIR+=	rinetd
 SUBDIR+=	ripe-whois
 SUBDIR+=	ripe-whois-tools
 SUBDIR+=	rootprobe
