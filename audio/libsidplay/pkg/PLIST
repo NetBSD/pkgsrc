@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/06/19 22:45:59 pooka Exp $
+include/sidplay/compconf.h
+include/sidplay/libcfg.h
+include/sidplay/emucfg.h
+include/sidplay/fformat.h
+include/sidplay/fixpoint.h
+include/sidplay/myendian.h
+include/sidplay/mytypes.h
+include/sidplay/player.h
+include/sidplay/sidtune.h
+include/sidplay/version.h
+lib/libsidplay.so.1.0
+lib/libsidplay.la
+lib/libsidplay.a
+@dirrm include/sidplay
