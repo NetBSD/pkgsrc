@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/04/12 14:15:07 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/04/16 23:25:55 kei Exp $
 
 DISTNAME=	leim-${VERSION}
 WRKSRC=		${WRKDIR}/emacs-${VERSION}/leim
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	Libraries of Emacs Input Methods (for emacs21)
 
-DEPENDS+=	emacs-${VERSION}:../emacs
+DEPENDS+=	emacs>=${VERSION}:../emacs
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
