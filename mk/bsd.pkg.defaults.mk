@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.103 2002/11/10 12:17:31 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.104 2002/11/10 18:20:44 hubertf Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -376,7 +376,7 @@ WARN_NO_OBJECT_FMT?=yes
 # Possible: defined, not defined
 # Default: not defined
 
-#BINPKG_SITE=...
+#BINPKG_SITES=...
 # Whitespace seperated list of URLs for binary packages. Directories
 # "All" etc. are expected in the named place, variables "rel" and
 # "arch" are replaced with OS release ("1.5", ...) and architecture

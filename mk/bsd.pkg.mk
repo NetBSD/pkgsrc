@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1081 2002/11/07 04:22:29 dillo Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1082 2002/11/10 18:20:44 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -3322,7 +3322,7 @@ checksum: fetch uptodate-digest
 
 # List of sites carrying binary pkgs. Variables "rel" and "arch" are
 # replaced with OS release ("1.5", ...) and architecture ("mipsel", ...)
-BINPKG_SITE?= \
+BINPKG_SITES?= \
 	ftp://ftp.netbsd.org/pub/NetBSD/packages/$${rel}/$${arch}
 
 # List of flags to pass to pkg_add(8) for bin-install:
@@ -3344,7 +3344,7 @@ bin-install:
 	else 				 				\
 		rel=`${UNAME} -r | ${SED} 's@\.\([0-9]*\)[\._].*@\.\1@'`; \
 		arch=${MACHINE_ARCH}; 					\
-		for site in ${BINPKG_SITE} ; do 			\
+		for site in ${BINPKG_SITES} ; do 			\
 			${ECHO} Trying `eval ${ECHO} $$site`/All ; 	\
 			${SHCOMMENT} ${ECHO} ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; \
 			if ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; then \
