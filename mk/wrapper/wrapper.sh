@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.4 2004/11/12 16:27:57 jlam Exp $
+# $NetBSD: wrapper.sh,v 1.5 2005/01/18 17:25:13 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -36,6 +36,8 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+arg_pp="@_WRAP_ARG_PP@"
+arg_pp_main="@_WRAP_ARG_PP_MAIN@"
 arg_source="@_WRAP_ARG_SOURCE@"
 buildcmd="@_WRAP_BUILDCMD@"
 cache="@_WRAP_CACHE@"
