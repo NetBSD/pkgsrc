@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.225 2002/01/06 21:48:40 fredb Exp $
+# $NetBSD: Packages.txt,v 1.226 2002/01/11 14:41:41 agc Exp $
 ###########################################################################
 
 			==========================
@@ -365,7 +365,7 @@ policy:
     BATCH=                  yes          # required for bulk builds 
     DEPENDS_TARGET?=        bulk-install
     PACKAGES?=              ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
-    OBJMACHINE?=            1                 # use work.${MACHINE_ARCH}
+    OBJHOST?=               yes               # use work.`hostname`
     WRKOBJDIR?=             /usr/tmp/pkgsrc   # build here instead of in pkgsrc
     FAILOVER_FETCH=         yes               # insist on the correct checksum
     PKG_DEVELOPER?=         yes

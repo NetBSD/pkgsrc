@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.31 2002/01/09 23:13:11 seb Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.32 2002/01/11 14:41:42 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -19,6 +19,12 @@
 # If not YES or yes, don't fetch, build or install crypto packages.
 # Possible: not defined, no
 # Default: yes
+
+#OBJHOSTNAME=
+# use hostname-specific object directories, e.g.  work.amnesiac, work.localhost
+# OBJHOSTNAME takes precedence over OBJMACHINE (see below).
+# Possible: defined, not defined
+# Default: not defined
 
 #OBJMACHINE=
 # use machine-specific object directories, e.g.  work.i386, work.sparc
