@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2002/09/11 11:31:40 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/16 03:14:41 rh Exp $
 #
 
 DISTNAME=		glib-2.0.6
 PKGNAME=		${DISTNAME:S/glib/glib2/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.0/ \
@@ -26,8 +26,11 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
-# GLib needs a working pre-emptive pthreads implementation
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_PTL2)
 PTHREAD_OPTS+=		native
+.endif
 
 test: build
 	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
