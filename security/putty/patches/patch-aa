@@ -1,0 +1,63 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/29 23:00:31 xtraeme Exp $
+
+--- Makefile.gtk.orig	2004-10-30 00:39:30.000000000 +0200
++++ Makefile.gtk	2004-10-30 00:42:07.000000000 +0200
+@@ -78,16 +78,15 @@
+ 
+ # You can define this path to point at your tools if you need to
+ # TOOLPATH = /opt/gcc/bin
+-CC = $(TOOLPATH)cc
++#CC = $(TOOLPATH)cc
+ 
+-CFLAGS = -O2 -Wall -Werror -g -I.././ -I../charset/ -I../unix/ -I../mac/ \
+-		`gtk-config --cflags`
++CFLAGS += -I.././ -I../charset/ -I../unix/ -I../mac/ `gtk-config --cflags`
+ XLDFLAGS = `gtk-config --libs`
+-ULDFLAGS =#
+-INSTALL=install
+-INSTALL_PROGRAM=$(INSTALL)
+-INSTALL_DATA=$(INSTALL)
+-prefix=/usr/local
++ULDFLAGS = $(LDFLAGS)
++#INSTALL=install
++#INSTALL_PROGRAM=$(INSTALL)
++#BSD_INSTALL_DATA=$(INSTALL)
++prefix=$(PREFIX)
+ exec_prefix=$(prefix)
+ bindir=$(exec_prefix)/bin
+ mandir=$(prefix)/man
+@@ -634,20 +633,20 @@
+ 		$(CC) $(COMPAT) $(FWHACK) $(XFLAGS) $(CFLAGS) $(VER) -c ../version.c; \
+ 	fi
+ install:
+-	$(INSTALL_PROGRAM) -m 755 plink $(DESTDIR)$(bindir)/plink
+-	$(INSTALL_PROGRAM) -m 755 pscp $(DESTDIR)$(bindir)/pscp
+-	$(INSTALL_PROGRAM) -m 755 psftp $(DESTDIR)$(bindir)/psftp
+-	$(INSTALL_PROGRAM) -m 755 pterm $(DESTDIR)$(bindir)/pterm
+-	$(INSTALL_PROGRAM) -m 755 putty $(DESTDIR)$(bindir)/putty
+-	$(INSTALL_PROGRAM) -m 755 puttygen $(DESTDIR)$(bindir)/puttygen
+-	$(INSTALL_PROGRAM) -m 755 puttytel $(DESTDIR)$(bindir)/puttytel
+-	$(INSTALL_DATA) -m 644 ../doc/plink.1 $(DESTDIR)$(man1dir)/plink.1
+-	$(INSTALL_DATA) -m 644 ../doc/pscp.1 $(DESTDIR)$(man1dir)/pscp.1
+-	$(INSTALL_DATA) -m 644 ../doc/psftp.1 $(DESTDIR)$(man1dir)/psftp.1
+-	$(INSTALL_DATA) -m 644 ../doc/pterm.1 $(DESTDIR)$(man1dir)/pterm.1
+-	$(INSTALL_DATA) -m 644 ../doc/putty.1 $(DESTDIR)$(man1dir)/putty.1
+-	$(INSTALL_DATA) -m 644 ../doc/puttygen.1 $(DESTDIR)$(man1dir)/puttygen.1
+-	$(INSTALL_DATA) -m 644 ../doc/puttytel.1 $(DESTDIR)$(man1dir)/puttytel.1
++	$(BSD_INSTALL_PROGRAM) plink $(DESTDIR)$(bindir)/plink
++	$(BSD_INSTALL_PROGRAM) pscp $(DESTDIR)$(bindir)/pscp
++	$(BSD_INSTALL_PROGRAM) psftp $(DESTDIR)$(bindir)/psftp
++	$(BSD_INSTALL_PROGRAM) pterm $(DESTDIR)$(bindir)/pterm
++	$(BSD_INSTALL_PROGRAM) putty $(DESTDIR)$(bindir)/putty
++	$(BSD_INSTALL_PROGRAM) puttygen $(DESTDIR)$(bindir)/puttygen
++	$(BSD_INSTALL_PROGRAM) puttytel $(DESTDIR)$(bindir)/puttytel
++	$(BSD_INSTALL_DATA) ../doc/plink.1 $(DESTDIR)$(man1dir)/plink.1
++	$(BSD_INSTALL_DATA) ../doc/pscp.1 $(DESTDIR)$(man1dir)/pscp.1
++	$(BSD_INSTALL_DATA) ../doc/psftp.1 $(DESTDIR)$(man1dir)/psftp.1
++	$(BSD_INSTALL_DATA) ../doc/pterm.1 $(DESTDIR)$(man1dir)/pterm.1
++	$(BSD_INSTALL_DATA) ../doc/putty.1 $(DESTDIR)$(man1dir)/putty.1
++	$(BSD_INSTALL_DATA) ../doc/puttygen.1 $(DESTDIR)$(man1dir)/puttygen.1
++	$(BSD_INSTALL_DATA) ../doc/puttytel.1 $(DESTDIR)$(man1dir)/puttytel.1
+ 
+ install-strip:
+ 	$(MAKE) install INSTALL_PROGRAM="$(INSTALL_PROGRAM) -s"
