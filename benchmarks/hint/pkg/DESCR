@@ -16,6 +16,3 @@ an on-line database of HINT results.
 HINT also outputs a single number which is the integral of the HINT
 curve.  This number, called NetQUIPS, can be used for general
 comparison between machines.
-
-- Guy Helmer
-ghelmer@freebsd.org
