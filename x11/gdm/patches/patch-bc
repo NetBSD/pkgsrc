@@ -1,3 +1,5 @@
+$NetBSD: patch-bc,v 1.2 2001/03/28 22:30:43 wennmach Exp $
+
 --- config/Makefile.in.orig	Tue Mar 20 03:07:31 2001
 +++ config/Makefile.in	Tue Mar 20 03:08:13 2001
 @@ -315,7 +315,7 @@
