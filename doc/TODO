@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1973 2004/07/27 04:30:24 salo Exp $
+$NetBSD: TODO,v 1.1974 2004/07/27 13:42:48 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -181,7 +181,6 @@ Suggested package updates
 	o cdrtools-ossdvd-2.01.1.27
 	o cervisia-2.1.2
 	o checkbot-1.75 [pkg/26371]
-	o clamav-0.75
 	o clanlib-0.7.8
 	o classpath-0.10
 	o clisp-2.33.2
@@ -333,6 +332,7 @@ Suggested package updates
 	o p5-CGI-Application-3.1
 	o p5-Exception-Class-1.17
 	o pdmenu-1.2.81
+	o perl-5.8.5
 	o pgplot-5.2 [grant]
 	o php-5.0.0
 	o phppgadmin-3.4 [pkg/26130]
