@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2004/12/24 10:04:39 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.37 2005/01/09 17:30:47 jmmv Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -735,6 +735,7 @@ share/doc/gtk/stock_media_forward_24.png
 share/doc/gtk/stock_media_next_24.png
 share/doc/gtk/stock_media_pause_24.png
 share/doc/gtk/stock_media_play_24.png
+share/doc/gtk/stock_media_play_rtl_24.png
 share/doc/gtk/stock_media_previous_24.png
 share/doc/gtk/stock_media_record_24.png
 share/doc/gtk/stock_media_rewind_24.png
