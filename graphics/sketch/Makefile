@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/11/22 13:08:41 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 2001/11/25 21:56:59 hubertf Exp $
 #
 
 DISTNAME=	sketch-0.6.12
@@ -39,7 +39,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${SKETCHDOCDIR}
 	cd ${WRKSRC} && ${PAX} -rw -pe -v ${SKETCHDOCS} ${SKETCHDOCDIR}
 	${INSTALL_DATA_DIR} ${SKETCHEXDIR}
-	cd ${WRKSRC}/Examples && ${PAX} -rw . ${SKETCHEXDIR}
+	cd ${WRKSRC}/Examples && ${PAX} -rw -pe -v . ${SKETCHEXDIR}
 	(cd ${SKETCHDIR}; python finishinst.py)
 	${SED} -e "s|@PREFIX@|${PREFIX}|g" < ${FILESDIR}/sketch.in > ${PREFIX}/bin/sketch
 	${CHMOD} +x ${PREFIX}/bin/sketch
