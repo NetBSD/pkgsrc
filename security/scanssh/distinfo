@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 13:10:13 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/04/02 11:55:29 adrianp Exp $
 
-SHA1 (scanssh-2.0.tar.gz) = 596b8fd7654109863edd245f50ed14d30aa87ead
-RMD160 (scanssh-2.0.tar.gz) = b669b63d46aecd05a8f86a4b1a88c6ee0cb5f486
-Size (scanssh-2.0.tar.gz) = 85694 bytes
+SHA1 (scanssh-2.1.tar.gz) = 69d35bab7fbe3ebc7e2e0dba37b3b1935b3cc194
+RMD160 (scanssh-2.1.tar.gz) = c768f6dca5abe0998f0520bc4cb9be506bf038e6
+Size (scanssh-2.1.tar.gz) = 111481 bytes
 SHA1 (patch-aa) = 1ddaafe6b8d65d44f8bf5a54c2d10548a6455a00
