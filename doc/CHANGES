@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5908 2004/05/11 18:28:32 sjg Exp $
+$NetBSD: CHANGES,v 1.5909 2004/05/12 15:08:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2480,3 +2480,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgdiplus to 0.5 [recht 2004-05-11]
 	Updated winelib to 0.2 [recht 2004-05-11]
 	Updated bmake to 20040511 [sjg 2004-05-11]
+	Updated tkinfo to 2.8 [minskim 2004-05-12]
