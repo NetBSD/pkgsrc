@@ -1,0 +1,280 @@
+$NetBSD: patch-ah,v 1.1 2002/08/28 07:15:30 skrll Exp $
+
+--- kuickshow/src/Makefile.in.orig	Tue Aug 27 21:05:03 2002
++++ kuickshow/src/Makefile.in
+@@ -238,16 +238,15 @@ x_libraries = @x_libraries@
+ KDE_CXXFLAGS = $(IMLIB_CFLAGS)
+ 
+ bin_PROGRAMS = kuickshow
+-lib_LTLIBRARIES = kuickshow.la
++lib_LTLIBRARIES = libkuickshow_main.la kuickshow.la
+ 
+ # set the include path for X, qt and KDE
+ INCLUDES = $(all_includes)
+-CLEANFILES = dummy.cpp
+ #>- METASOURCES = AUTO
+ 
+-kuickshow_la_LDFLAGS = $(all_libraries) -module -avoid-version
+-kuickshow_la_LIBADD = $(LIB_KDEPRINT) $(LIB_IMLIB)
+-kuickshow_la_SOURCES = kuickshow.cpp \
++libkuickshow_main_la_LDFLAGS = $(all_libraries)
++libkuickshow_main_la_LIBADD = $(LIB_KDEPRINT) $(LIB_IMLIB)
++libkuickshow_main_la_SOURCES = kuickshow.cpp \
+ 	aboutwidget.cpp     generalwidget.cpp  kuickconfigdlg.cpp  main.cpp \
+ 	defaultswidget.cpp  imagewindow.cpp    kuickdata.cpp  \
+ 	imdata.cpp          basewidget.cpp \
+@@ -255,9 +254,13 @@ kuickshow_la_SOURCES = kuickshow.cpp \
+ 	logotabdialog.cpp  kuickio.cpp    kuick.cpp imlibwidget.cpp
+ 
+ 
++kuickshow_la_LDFLAGS = $(all_libraries) -module -avoid-version
++kuickshow_la_LIBADD = $(LIB_KDEPRINT) $(LIB_IMLIB) libkuickshow_main.la
++kuickshow_la_SOURCES = kuickshow_main.cpp
++
+ # now the kuickshow binary
+-kuickshow_LDADD = kuickshow.la $(LIB_KIO) $(LIB_IMLIB)
+-kuickshow_SOURCES = dummy.cpp
++kuickshow_LDADD = libkuickshow_main.la $(LIB_KIO) $(LIB_IMLIB)
++kuickshow_SOURCES = kuickshow_main.cpp
+ kuickshow_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ # if you "make distclean", this files get removed. If you want to remove
+@@ -273,31 +276,36 @@ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-kuickshow_la_DEPENDENCIES =
+-am_kuickshow_la_OBJECTS = kuickshow.lo aboutwidget.lo generalwidget.lo \
+-	kuickconfigdlg.lo main.lo defaultswidget.lo imagewindow.lo \
+-	kuickdata.lo imdata.lo basewidget.lo filefinder.lo \
+-	kurlwidget.lo logo.lo filewidget.lo logotabdialog.lo kuickio.lo \
+-	kuick.lo imlibwidget.lo
++kuickshow_la_DEPENDENCIES = libkuickshow_main.la
++am_kuickshow_la_OBJECTS = kuickshow_main.lo
+ #>- kuickshow_la_OBJECTS = $(am_kuickshow_la_OBJECTS)
++#>+ 1
++kuickshow_la_OBJECTS = kuickshow_main.lo
++libkuickshow_main_la_DEPENDENCIES =
++am_libkuickshow_main_la_OBJECTS = kuickshow.lo aboutwidget.lo \
++	generalwidget.lo kuickconfigdlg.lo main.lo defaultswidget.lo \
++	imagewindow.lo kuickdata.lo imdata.lo basewidget.lo \
++	filefinder.lo kurlwidget.lo logo.lo filewidget.lo \
++	logotabdialog.lo kuickio.lo kuick.lo imlibwidget.lo
++#>- libkuickshow_main_la_OBJECTS = $(am_libkuickshow_main_la_OBJECTS)
+ #>+ 9
+-kuickshow_la_final_OBJECTS = kuickshow_la.all_cpp.lo 
+-kuickshow_la_nofinal_OBJECTS = kuickshow.lo aboutwidget.lo generalwidget.lo \
+-	kuickconfigdlg.lo main.lo defaultswidget.lo imagewindow.lo \
+-	kuickdata.lo imdata.lo basewidget.lo filefinder.lo \
+-	kurlwidget.lo logo.lo filewidget.lo logotabdialog.lo kuickio.lo \
+-	kuick.lo imlibwidget.lo \
+-	kuickshow_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@kuickshow_la_OBJECTS = $(kuickshow_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@kuickshow_la_OBJECTS = $(kuickshow_la_final_OBJECTS)
++libkuickshow_main_la_final_OBJECTS = libkuickshow_main_la.all_cpp.lo 
++libkuickshow_main_la_nofinal_OBJECTS = kuickshow.lo aboutwidget.lo \
++	generalwidget.lo kuickconfigdlg.lo main.lo defaultswidget.lo \
++	imagewindow.lo kuickdata.lo imdata.lo basewidget.lo \
++	filefinder.lo kurlwidget.lo logo.lo filewidget.lo \
++	logotabdialog.lo kuickio.lo kuick.lo imlibwidget.lo \
++	libkuickshow_main_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libkuickshow_main_la_OBJECTS = $(libkuickshow_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libkuickshow_main_la_OBJECTS = $(libkuickshow_main_la_final_OBJECTS)
+ bin_PROGRAMS = kuickshow$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_kuickshow_OBJECTS = dummy.$(OBJEXT)
++am_kuickshow_OBJECTS = kuickshow_main.$(OBJEXT)
+ #>- kuickshow_OBJECTS = $(am_kuickshow_OBJECTS)
+ #>+ 1
+-kuickshow_OBJECTS = dummy.$(OBJEXT)
+-kuickshow_DEPENDENCIES = kuickshow.la
++kuickshow_OBJECTS = kuickshow_main.$(OBJEXT)
++kuickshow_DEPENDENCIES = libkuickshow_main.la
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -307,16 +315,18 @@ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+ @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/aboutwidget.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/basewidget.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/defaultswidget.Plo $(DEPDIR)/dummy.Po \
++	@AMDEP_TRUE@	$(DEPDIR)/defaultswidget.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/filefinder.Plo $(DEPDIR)/filewidget.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/generalwidget.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/imagewindow.Plo $(DEPDIR)/imdata.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/imlibwidget.Plo $(DEPDIR)/kuick.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kuickconfigdlg.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kuickdata.Plo $(DEPDIR)/kuickio.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/kuickshow.Plo $(DEPDIR)/kurlwidget.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/logo.Plo $(DEPDIR)/logotabdialog.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/main.Plo
++	@AMDEP_TRUE@	$(DEPDIR)/kuickshow.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kuickshow_main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kuickshow_main.Po \
++	@AMDEP_TRUE@	$(DEPDIR)/kurlwidget.Plo $(DEPDIR)/logo.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/logotabdialog.Plo $(DEPDIR)/main.Plo
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ #>- $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 2
+@@ -336,11 +346,12 @@ CXXLD = $(CXX)
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CXXFLAGS = @CXXFLAGS@
+-DIST_SOURCES = $(kuickshow_la_SOURCES) $(kuickshow_SOURCES)
++DIST_SOURCES = $(kuickshow_la_SOURCES) $(libkuickshow_main_la_SOURCES) \
++	$(kuickshow_SOURCES)
+ DATA = $(apps_DATA)
+ 
+ DIST_COMMON = Makefile.am Makefile.in
+-SOURCES = $(kuickshow_la_SOURCES) $(kuickshow_SOURCES)
++SOURCES = $(kuickshow_la_SOURCES) $(libkuickshow_main_la_SOURCES) $(kuickshow_SOURCES)
+ 
+ #>- all: all-am
+ #>+ 1
+@@ -389,6 +400,8 @@ clean-libLTLIBRARIES:
+ 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+ kuickshow.la: $(kuickshow_la_OBJECTS) $(kuickshow_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(kuickshow_la_LDFLAGS) $(kuickshow_la_OBJECTS) $(kuickshow_la_LIBADD) $(LIBS)
++libkuickshow_main.la: $(libkuickshow_main_la_OBJECTS) $(libkuickshow_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkuickshow_main_la_LDFLAGS) $(libkuickshow_main_la_OBJECTS) $(libkuickshow_main_la_LIBADD) $(LIBS)
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+@@ -426,7 +439,6 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/aboutwidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/basewidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/defaultswidget.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/filefinder.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/filewidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/generalwidget.Plo@am__quote@
+@@ -438,6 +450,8 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kuickdata.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kuickio.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kuickshow.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kuickshow_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kuickshow_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kurlwidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/logo.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/logotabdialog.Plo@am__quote@
+@@ -517,7 +531,7 @@ distclean-tags:
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=kuickshow.h kuickshow.desktop hi16-app-kuickshow.png filewidget.h imagewindow.h aboutwidget.h kuickio.h mainwidget.h mainwidget.cpp kuickconfigdlg.h logotabdialog.h kuickglobals.h basewidget.h lo32-app-kuickshow.png imdata.h logo.h kurlwidget.h imlibwidget.h version.h generalwidget.h lo16-app-kuickshow.png kuickdata.h hi32-app-kuickshow.png defaultswidget.h filefinder.h kuick.h 
++KDE_DIST=kuickshow.h kuickshow.desktop kuickio.h kuickshow mainwidget.h lo32-app-kuickshow.png imdata.h mainwidget.cpp imlibwidget.h kuickconfigdlg.h version.h lo16-app-kuickshow.png logo.h logotabdialog.h generalwidget.h hi32-app-kuickshow.png kurlwidget.h kuickdata.h kuickglobals.h defaultswidget.h basewidget.h filefinder.h hi16-app-kuickshow.png filewidget.h imagewindow.h kuick.h dummy.cpp aboutwidget.h 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -566,7 +580,6 @@ install-strip:
+ mostlyclean-generic:
+ 
+ clean-generic:
+-	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
+ 
+ distclean-generic:
+ 	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
+@@ -644,9 +657,6 @@ messages:
+ 	$(XGETTEXT) *.cpp *.h -o $(podir)/kuickshow.pot
+ 
+  # this is where the kdelnk file will go 
+-
+-dummy.cpp:
+-	echo "// generated dummy file" > dummy.cpp
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -739,28 +749,28 @@ force-reedit:
+ 
+ 
+ #>+ 12
+-kuickshow_la_meta_unload.cpp:  kuickconfigdlg.moc filefinder.moc basewidget.moc imlibwidget.moc generalwidget.moc defaultswidget.moc aboutwidget.moc logotabdialog.moc kuickshow.moc filewidget.moc kurlwidget.moc kuickio.moc imagewindow.moc
+-	@echo 'creating kuickshow_la_meta_unload.cpp'
+-	@-rm -f kuickshow_la_meta_unload.cpp
++libkuickshow_main_la_meta_unload.cpp:  kuickconfigdlg.moc filefinder.moc basewidget.moc imlibwidget.moc generalwidget.moc defaultswidget.moc aboutwidget.moc logotabdialog.moc kuickshow.moc filewidget.moc kurlwidget.moc kuickio.moc imagewindow.moc
++	@echo 'creating libkuickshow_main_la_meta_unload.cpp'
++	@-rm -f libkuickshow_main_la_meta_unload.cpp
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kuickshow_la[] = {' > kuickshow_la_meta_unload.cpp ;\
+-		cat  kuickconfigdlg.moc filefinder.moc basewidget.moc imlibwidget.moc generalwidget.moc defaultswidget.moc aboutwidget.moc logotabdialog.moc kuickshow.moc filewidget.moc kurlwidget.moc kuickio.moc imagewindow.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kuickshow_la_meta_unload.cpp ;\
+-		echo '0};' >> kuickshow_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kuickshow_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kuickshow_la)' >> kuickshow_la_meta_unload.cpp ;\
+-	else echo > kuickshow_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkuickshow_main_la[] = {' > libkuickshow_main_la_meta_unload.cpp ;\
++		cat  kuickconfigdlg.moc filefinder.moc basewidget.moc imlibwidget.moc generalwidget.moc defaultswidget.moc aboutwidget.moc logotabdialog.moc kuickshow.moc filewidget.moc kurlwidget.moc kuickio.moc imagewindow.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkuickshow_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkuickshow_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkuickshow_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkuickshow_main_la)' >> libkuickshow_main_la_meta_unload.cpp ;\
++	else echo > libkuickshow_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
+-	-rm -f  kuickshow_la_meta_unload.cpp
++	-rm -f  libkuickshow_main_la_meta_unload.cpp
+ 
+ #>+ 11
+-kuickshow_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kuickshow.cpp $(srcdir)/aboutwidget.cpp $(srcdir)/generalwidget.cpp $(srcdir)/kuickconfigdlg.cpp $(srcdir)/main.cpp $(srcdir)/defaultswidget.cpp $(srcdir)/imagewindow.cpp $(srcdir)/kuickdata.cpp $(srcdir)/imdata.cpp $(srcdir)/basewidget.cpp $(srcdir)/filefinder.cpp $(srcdir)/kurlwidget.cpp $(srcdir)/logo.cpp $(srcdir)/filewidget.cpp $(srcdir)/logotabdialog.cpp $(srcdir)/kuickio.cpp $(srcdir)/kuick.cpp $(srcdir)/imlibwidget.cpp kuickshow_la_meta_unload.cpp   mainwidget.moc filefinder.moc kuickconfigdlg.moc basewidget.moc imlibwidget.moc generalwidget.moc defaultswidget.moc aboutwidget.moc logotabdialog.moc kuickshow.moc kurlwidget.moc filewidget.moc imagewindow.moc kuickio.moc 
++kuickshow_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kuickshow_main.cpp   mainwidget.moc filefinder.moc kuickconfigdlg.moc basewidget.moc imlibwidget.moc generalwidget.moc defaultswidget.moc aboutwidget.moc logotabdialog.moc kuickshow.moc kurlwidget.moc filewidget.moc imagewindow.moc kuickio.moc 
+ 	@echo 'creating kuickshow_la.all_cpp.cpp ...'; \
+ 	rm -f kuickshow_la.all_cpp.files kuickshow_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kuickshow_la.all_cpp.final; \
+-	for file in kuickshow.cpp aboutwidget.cpp generalwidget.cpp kuickconfigdlg.cpp main.cpp defaultswidget.cpp imagewindow.cpp kuickdata.cpp imdata.cpp basewidget.cpp filefinder.cpp kurlwidget.cpp logo.cpp filewidget.cpp logotabdialog.cpp kuickio.cpp kuick.cpp imlibwidget.cpp kuickshow_la_meta_unload.cpp ; do \
++	for file in kuickshow_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kuickshow_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kuickshow_la.all_cpp.final; \
+ 	done; \
+@@ -768,11 +778,23 @@ kuickshow_la.all_cpp.cpp: $(srcdir)/Make
+ 	rm -f kuickshow_la.all_cpp.final kuickshow_la.all_cpp.files
+ 
+ #>+ 11
+-kuickshow.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++libkuickshow_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kuickshow.cpp $(srcdir)/aboutwidget.cpp $(srcdir)/generalwidget.cpp $(srcdir)/kuickconfigdlg.cpp $(srcdir)/main.cpp $(srcdir)/defaultswidget.cpp $(srcdir)/imagewindow.cpp $(srcdir)/kuickdata.cpp $(srcdir)/imdata.cpp $(srcdir)/basewidget.cpp $(srcdir)/filefinder.cpp $(srcdir)/kurlwidget.cpp $(srcdir)/logo.cpp $(srcdir)/filewidget.cpp $(srcdir)/logotabdialog.cpp $(srcdir)/kuickio.cpp $(srcdir)/kuick.cpp $(srcdir)/imlibwidget.cpp libkuickshow_main_la_meta_unload.cpp  
++	@echo 'creating libkuickshow_main_la.all_cpp.cpp ...'; \
++	rm -f libkuickshow_main_la.all_cpp.files libkuickshow_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkuickshow_main_la.all_cpp.final; \
++	for file in kuickshow.cpp aboutwidget.cpp generalwidget.cpp kuickconfigdlg.cpp main.cpp defaultswidget.cpp imagewindow.cpp kuickdata.cpp imdata.cpp basewidget.cpp filefinder.cpp kurlwidget.cpp logo.cpp filewidget.cpp logotabdialog.cpp kuickio.cpp kuick.cpp imlibwidget.cpp libkuickshow_main_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libkuickshow_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkuickshow_main_la.all_cpp.final; \
++	done; \
++	cat libkuickshow_main_la.all_cpp.final libkuickshow_main_la.all_cpp.files  > libkuickshow_main_la.all_cpp.cpp; \
++	rm -f libkuickshow_main_la.all_cpp.final libkuickshow_main_la.all_cpp.files
++
++#>+ 11
++kuickshow.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kuickshow_main.cpp  
+ 	@echo 'creating kuickshow.all_cpp.cpp ...'; \
+ 	rm -f kuickshow.all_cpp.files kuickshow.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kuickshow.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in kuickshow_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kuickshow.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kuickshow.all_cpp.final; \
+ 	done; \
+@@ -781,20 +803,20 @@ kuickshow.all_cpp.cpp: $(srcdir)/Makefil
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f kuickshow_la.all_cpp.cpp kuickshow.all_cpp.cpp
++	-rm -f kuickshow_la.all_cpp.cpp libkuickshow_main_la.all_cpp.cpp kuickshow.all_cpp.cpp
+ 
+ #>+ 2
+ final:
+-	$(MAKE) kuickshow_la_OBJECTS="$(kuickshow_la_final_OBJECTS)" all-am
++	$(MAKE) libkuickshow_main_la_OBJECTS="$(libkuickshow_main_la_final_OBJECTS)" all-am
+ #>+ 2
+ final-install:
+-	$(MAKE) kuickshow_la_OBJECTS="$(kuickshow_la_final_OBJECTS)" install-am
++	$(MAKE) libkuickshow_main_la_OBJECTS="$(libkuickshow_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
+-	$(MAKE) kuickshow_la_OBJECTS="$(kuickshow_la_nofinal_OBJECTS)" all-am
++	$(MAKE) libkuickshow_main_la_OBJECTS="$(libkuickshow_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kuickshow_la_OBJECTS="$(kuickshow_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkuickshow_main_la_OBJECTS="$(libkuickshow_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

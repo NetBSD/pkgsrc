@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/27 12:15:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/08/28 07:15:28 skrll Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -48,6 +48,11 @@ lib/libkmultipage.so.0.0
 lib/libkpagetest.a
 lib/libkpagetest.la
 lib/libkpagetest.so
+lib/libkuickshow_main.a
+lib/libkuickshow_main.la
+lib/libkuickshow_main.so
+lib/libkuickshow_main.so.0
+lib/libkuickshow_main.so.0.0
 lib/libkview_main.a
 lib/libkview_main.la
 lib/libkview_main.so

@@ -1,8 +1,8 @@
-$NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
+$NetBSD: patch-ct,v 1.3 2002/08/28 07:15:42 skrll Exp $
 
---- konsole/konsole/Makefile.in.orig	Mon May 13 23:57:52 2002
+--- konsole/konsole/Makefile.in.orig	Wed Aug  7 18:19:54 2002
 +++ konsole/konsole/Makefile.in
-@@ -304,7 +304,9 @@
+@@ -304,7 +304,9 @@ INCLUDES = $(all_includes)
  
  # you can add here more. This one gets installed
  bin_PROGRAMS = konsole konsole_grantpty kwrited #kcmkonsole
@@ -13,8 +13,8 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  
  # libkonsolepart is a part, but konsole.la links directly to it, so we can't
  # install it under kde_module
-@@ -337,28 +339,39 @@
- libkonsolepart_la_LIBADD = $(LIB_KPARTS) $(LIBUTIL) @XTESTLIB@
+@@ -337,18 +339,26 @@ libkonsolepart_la_LDFLAGS = $(all_librar
+ libkonsolepart_la_LIBADD = $(LIBUTIL) @XTESTLIB@ $(LIB_KPARTS)
  
  # kwrited kdeinit module
 -kwrited_la_SOURCES = kwrited.cpp
@@ -46,27 +46,16 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  konsole_la_LDFLAGS = $(all_libraries) -module -avoid-version
  
  # konsole executable - has all the sources, doesn't link kparts, saves startup time
--#>- konsole_SOURCES = TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp \
--#>- TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp konsoleiface.skel sessioniface.skel \
--#>- konsole_wcwidth.cpp
--#>+ 3
--konsole_SOURCES=TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp \
--	TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp   \
+@@ -358,7 +368,7 @@ konsole_la_LDFLAGS = $(all_libraries) -m
+ #>+ 3
+ konsole_SOURCES=TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp \
+ 	TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp   \
 -	konsole_wcwidth.cpp konsoleiface_skel.cpp sessioniface_skel.cpp
-+#>- konsole_SOURCES = TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp \
-+#>- session.cpp TEWidget.cpp TEmuVt102.cpp TEScreen.cpp TEmulation.cpp \
-+#>- TEHistory.cpp keytrans.cpp konsoleiface.skel sessioniface.skel \
-+#>- konsole_wcwidth.cpp konsole_main.cpp
-+#>+ 4
-+konsole_SOURCES=TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp \
-+	session.cpp TEWidget.cpp TEmuVt102.cpp TEScreen.cpp TEmulation.cpp \
-+	TEHistory.cpp keytrans.cpp   \
 +	konsole_wcwidth.cpp konsole_main.cpp konsoleiface_skel.cpp sessioniface_skel.cpp
-+
  
- konsole_LDADD = $(LIB_KDEUI) $(LIB_KSYCOCA) $(LIBUTIL) $(LIB_KFILE) @XTESTLIB@
+ konsole_LDADD = $(LIB_KSYCOCA) $(LIBUTIL) $(LIB_KFILE) @XTESTLIB@ $(LIB_KDEUI)
  konsole_LDFLAGS = $(all_libraries) $(KDE_RPATH)
-@@ -392,24 +405,25 @@
+@@ -392,24 +402,25 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -107,7 +96,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  libkonsolepart_la_DEPENDENCIES =
  am_libkonsolepart_la_OBJECTS = TEPty.lo BlockArray.lo konsole_part.lo \
  	schema.lo session.lo TEWidget.lo TEmuVt102.lo TEScreen.lo \
-@@ -423,6 +437,15 @@
+@@ -423,6 +434,15 @@ libkonsolepart_la_nofinal_OBJECTS = TEPt
  	libkonsolepart_la_meta_unload.lo 
  @KDE_USE_FINAL_FALSE@libkonsolepart_la_OBJECTS = $(libkonsolepart_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@libkonsolepart_la_OBJECTS = $(libkonsolepart_la_final_OBJECTS)
@@ -123,7 +112,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  bin_PROGRAMS = konsole$(EXEEXT) konsole_grantpty$(EXEEXT) \
  	kwrited$(EXEEXT)
  PROGRAMS = $(bin_PROGRAMS)
-@@ -431,7 +454,7 @@
+@@ -431,7 +451,7 @@ am_konsole_OBJECTS = TEPty.$(OBJEXT) Blo
  	konsole.$(OBJEXT) schema.$(OBJEXT) session.$(OBJEXT) \
  	TEWidget.$(OBJEXT) TEmuVt102.$(OBJEXT) TEScreen.$(OBJEXT) \
  	TEmulation.$(OBJEXT) TEHistory.$(OBJEXT) keytrans.$(OBJEXT) \
@@ -132,7 +121,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  #>- konsole_OBJECTS = $(am_konsole_OBJECTS)
  #>+ 9
  konsole_final_OBJECTS = konsole.all_cpp.o 
-@@ -439,7 +462,7 @@
+@@ -439,7 +459,7 @@ konsole_nofinal_OBJECTS = TEPty.$(OBJEXT
  	konsole.$(OBJEXT) schema.$(OBJEXT) session.$(OBJEXT) \
  	TEWidget.$(OBJEXT) TEmuVt102.$(OBJEXT) TEScreen.$(OBJEXT) \
  	TEmulation.$(OBJEXT) TEHistory.$(OBJEXT) keytrans.$(OBJEXT) \
@@ -141,7 +130,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  	konsole_meta_unload.o 
  @KDE_USE_FINAL_FALSE@konsole_OBJECTS = $(konsole_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@konsole_OBJECTS = $(konsole_final_OBJECTS)
-@@ -450,11 +473,11 @@
+@@ -450,11 +470,11 @@ am_konsole_grantpty_OBJECTS = konsole_gr
  konsole_grantpty_OBJECTS = konsole_grantpty.$(OBJEXT)
  konsole_grantpty_LDADD = $(LDADD)
  konsole_grantpty_DEPENDENCIES =
@@ -156,7 +145,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -469,15 +492,19 @@
+@@ -469,15 +489,19 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
  	@AMDEP_TRUE@	$(DEPDIR)/TEWidget.Plo $(DEPDIR)/TEWidget.Po \
  	@AMDEP_TRUE@	$(DEPDIR)/TEmuVt102.Plo $(DEPDIR)/TEmuVt102.Po \
  	@AMDEP_TRUE@	$(DEPDIR)/TEmulation.Plo $(DEPDIR)/TEmulation.Po \
@@ -182,7 +171,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
  	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
-@@ -506,14 +533,15 @@
+@@ -506,14 +530,15 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(konsole_la_SOURCES) $(kwrited_la_SOURCES) \
@@ -200,7 +189,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -564,11 +592,15 @@
+@@ -564,11 +589,15 @@ konsole.la: $(konsole_la_OBJECTS) $(kons
  	$(CXXLINK) -rpath $(libdir) $(konsole_la_LDFLAGS) $(konsole_la_OBJECTS) $(konsole_la_LIBADD) $(LIBS)
  kwrited.la: $(kwrited_la_OBJECTS) $(kwrited_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kwrited_la_LDFLAGS) $(kwrited_la_OBJECTS) $(kwrited_la_LIBADD) $(LIBS)
@@ -216,7 +205,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -623,16 +655,19 @@
+@@ -623,16 +652,19 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/TEmuVt102.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/TEmulation.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/TEmulation.Po@am__quote@
@@ -237,7 +226,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/schema.Plo@am__quote@
-@@ -750,7 +785,7 @@
+@@ -750,7 +782,7 @@ distclean-tags:
  
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
@@ -246,7 +235,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -892,9 +927,6 @@
+@@ -892,9 +924,6 @@ messages: rc.cpp
  	rm -f schemas.cpp
  	rm -f tips.cpp
  
@@ -256,7 +245,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  konsole.lo: konsole.o
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
-@@ -978,29 +1010,16 @@
+@@ -978,29 +1007,16 @@ force-reedit:
  
  
  #>+ 12
@@ -295,7 +284,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  
  
  #>+ 12
-@@ -1017,6 +1036,19 @@
+@@ -1017,6 +1033,19 @@ libkonsolepart_la_meta_unload.cpp:  TEmu
  
  
  #>+ 12
@@ -315,7 +304,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  konsole_meta_unload.cpp:  TEmulation.moc TEWidget.moc TEPty.moc konsole.moc session.moc TEmuVt102.moc
  	@echo 'creating konsole_meta_unload.cpp'
  	@-rm -f konsole_meta_unload.cpp
-@@ -1031,14 +1063,14 @@
+@@ -1031,14 +1060,14 @@ konsole_meta_unload.cpp:  TEmulation.moc
  
  #>+ 3
  clean-moc-classes:
@@ -333,7 +322,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  	  echo "#include \"$$file\"" >> konsole_la.all_cpp.files; \
  	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> konsole_la.all_cpp.final; \
  	done; \
-@@ -1046,11 +1078,11 @@
+@@ -1046,11 +1075,11 @@ konsole_la.all_cpp.cpp: $(srcdir)/Makefi
  	rm -f konsole_la.all_cpp.final konsole_la.all_cpp.files
  
  #>+ 11
@@ -347,7 +336,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  	  echo "#include \"$$file\"" >> kwrited_la.all_cpp.files; \
  	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kwrited_la.all_cpp.final; \
  	done; \
-@@ -1058,6 +1090,18 @@
+@@ -1058,6 +1087,18 @@ kwrited_la.all_cpp.cpp: $(srcdir)/Makefi
  	rm -f kwrited_la.all_cpp.final kwrited_la.all_cpp.files
  
  #>+ 11
@@ -366,7 +355,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  libkonsolepart_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/TEPty.cpp $(srcdir)/BlockArray.cpp $(srcdir)/konsole_part.cpp $(srcdir)/schema.cpp $(srcdir)/session.cpp $(srcdir)/TEWidget.cpp $(srcdir)/TEmuVt102.cpp $(srcdir)/TEScreen.cpp $(srcdir)/konsole_wcwidth.cpp $(srcdir)/TEmulation.cpp $(srcdir)/TEHistory.cpp $(srcdir)/keytrans.cpp konsoleiface_skel.cpp sessioniface_skel.cpp libkonsolepart_la_meta_unload.cpp  
  	@echo 'creating libkonsolepart_la.all_cpp.cpp ...'; \
  	rm -f libkonsolepart_la.all_cpp.files libkonsolepart_la.all_cpp.final; \
-@@ -1070,11 +1114,23 @@
+@@ -1070,11 +1111,23 @@ libkonsolepart_la.all_cpp.cpp: $(srcdir)
  	rm -f libkonsolepart_la.all_cpp.final libkonsolepart_la.all_cpp.files
  
  #>+ 11
@@ -392,7 +381,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  	  echo "#include \"$$file\"" >> konsole.all_cpp.files; \
  	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> konsole.all_cpp.final; \
  	done; \
-@@ -1082,11 +1138,11 @@
+@@ -1082,11 +1135,11 @@ konsole.all_cpp.cpp: $(srcdir)/Makefile.
  	rm -f konsole.all_cpp.final konsole.all_cpp.files
  
  #>+ 11
@@ -406,7 +395,7 @@ $NetBSD: patch-ct,v 1.2 2002/08/25 19:23:43 jlam Exp $
  	  echo "#include \"$$file\"" >> kwrited.all_cpp.files; \
  	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kwrited.all_cpp.final; \
  	done; \
-@@ -1095,20 +1151,20 @@
+@@ -1095,20 +1148,20 @@ kwrited.all_cpp.cpp: $(srcdir)/Makefile.
  
  #>+ 3
  clean-final:
