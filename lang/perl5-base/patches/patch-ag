@@ -1,0 +1,28 @@
+$NetBSD: patch-ag,v 1.1 2000/11/08 08:28:00 martin Exp $
+
+--- hints/netbsd.sh.orig	Sun Feb  6 15:57:09 2000
++++ hints/netbsd.sh	Wed Nov  8 08:26:20 2000
+@@ -63,6 +63,23 @@
+ '') usevfork=true ;;
+ esac
+ 
++# Using perl's malloc leads to trouble on some toolchain versions...
++test "$usemymalloc" || usemymalloc='n'
++
++# The toolchain on sparc64 is not realy production quality right now,
++# but gcc 2.96 is supposed to fix most problems.
++# The -g triggers -DDEBUGGING, which plays the real trick and circumvents
++# code generation bugs. So we add -g everywhere, to at least have a
++# realy debuggable build.
++if [ "`uname -m`" = "sparc64" ]; then
++	if $cc -v 2>&1 | grep "gcc version" | grep "2.95.2" > /dev/null; then
++		ccdlflags="-g $ccdlflags"
++		cccdlflags="-g $cccdlflags"
++		lddlflags="-g $lddlflags"
++		optimize='-g -msoft-quad-float -O2 -DGCC2952_SPARC64_WORKAROUND'
++	fi
++fi
++
+ # Pre-empt the /usr/bin/perl question of installperl.
+ installusrbinperl='n'
+ 

@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 2000/11/08 08:28:01 martin Exp $
+
+--- regcomp.c.orig	Tue Mar 14 23:19:44 2000
++++ regcomp.c	Wed Nov  8 01:23:19 2000
+@@ -669,6 +669,7 @@
+ 	    regnode *oscan = scan;
+ 	    struct regnode_charclass_class this_class;
+ 	    struct regnode_charclass_class *oclass = NULL;
++	    pos_before = 1;
+ 
+ 	    switch (PL_regkind[(U8)OP(scan)]) {
+ 	    case WHILEM:		/* End of (?:...)* . */
