@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/12/30 17:27:31 cjep Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/11 14:49:19 cjep Exp $
 #
 
 DISTNAME=	dhisd-5.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.dhis.org/pub/dhis/
 
@@ -9,7 +10,7 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.dhis.org/
 COMMENT=	DynDNS server
 
-DEPENDS+=	gmp>=3.0:../../devel/gmp
+USE_BUILDLINK2=	yes
 
 do-install:
 		${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dhisd
@@ -37,4 +38,5 @@ do-install:
 			${PREFIX}/bin/dhisd-genkeys \
 			${PREFIX}/bin/dhisd
 
+.include "../../devel/gmp/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
