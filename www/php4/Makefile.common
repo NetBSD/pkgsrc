@@ -1,0 +1,63 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2000/12/17 09:19:32 jlam Exp $
+
+DISTNAME=		php-${PHP_VERS}
+PHP_VERS=		4.0.3pl1
+CATEGORIES+=		php4
+
+# Note the http address is written this way by purpose, so that bsd.pkg.mk DTRT
+MASTER_SITES=		http://www.php.net/do_download.php?source_site=www.php.net&download_file= \
+			ftp://ftp.php.net/pub/distributions/
+
+MAINTAINER=		jdolecek@netbsd.org
+HOMEPAGE=		http://www.php.net/
+
+# Put this dependency here to compile in dbm support for all PHP4 modules.
+DEPENDS+=               gdbm>=1.7.3:../../databases/gdbm
+
+FILESDIR=		${.CURDIR}/../../www/php4/files
+PATCHDIR=		${.CURDIR}/../../www/php4/patches
+
+# Location of installed PHP4 loadable modules under ${PREFIX}.
+PHP_EXTENSION_DIR=	lib/php4
+PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
+
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+# Here we configure only for what NetBSD ships.  We add the rest via modules.
+#
+GNU_CONFIGURE=		# defined
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV+=		LIBS="${LIBS}"
+
+CONFIGURE_ARGS+=	--without-gd
+CONFIGURE_ARGS+=	--without-mysql
+CONFIGURE_ARGS+=	--with-gdbm=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-yp --with-zlib
+CONFIGURE_ARGS+=	--with-config-file-path=${PREFIX}/etc
+CONFIGURE_ARGS+=	--with-system-regex
+CONFIGURE_ARGS+=	--with-exec-dir=${PREFIX}/libexec/php4
+CONFIGURE_ARGS+=	--enable-track-vars
+CONFIGURE_ARGS+=	--enable-force-cgi-redirect
+CONFIGURE_ARGS+=	--enable-discard-path
+CONFIGURE_ARGS+=	--enable-memory-limit
+CONFIGURE_ARGS+=	--enable-sysvsem
+CONFIGURE_ARGS+=	--enable-sysvshm
+CONFIGURE_ARGS+=	--enable-wddx
+
+# The following two modules are bogus to include, but we need it to maintain
+# version/capability compatibility with older binary packages of ap-php4.
+#
+CONFIGURE_ARGS+=	--with-dbase
+CONFIGURE_ARGS+=	--with-filepro
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+DEPENDS+=		zlib-*:../../devel/zlib
+.endif
+
+pre-configure: pre-common-configure
+
+pre-common-configure:
+	${LN} -sf ${WRKSRC}/libtool ${WRKSRC}/shlibtool
