@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2002/10/07 19:16:46 seb Exp $
+# $NetBSD: Makefile,v 1.36 2002/10/21 06:03:41 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.27
 SVR4_PKGNAME=		csasl
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 			ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/

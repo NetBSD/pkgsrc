@@ -1,6 +1,6 @@
-$NetBSD: patch-an,v 1.1 2002/09/07 07:37:42 jlam Exp $
+$NetBSD: patch-an,v 1.2 2002/10/21 06:03:42 jlam Exp $
 
---- plugins/Makefile.in.orig	Fri Sep  6 10:59:39 2002
+--- plugins/Makefile.in.orig	Fri Mar 23 20:48:13 2001
 +++ plugins/Makefile.in
 @@ -143,6 +143,7 @@ SASL_KRB_LIB = @SASL_KRB_LIB@
  SASL_MECHS = @SASL_MECHS@
@@ -16,7 +16,7 @@ $NetBSD: patch-an,v 1.1 2002/09/07 07:37:42 jlam Exp $
  
 +bin_SCRIPTS = sasl-config
 +sasl_config_CFLAGS = $(CPPFLAGS)
-+sasl_config_LIBS = $(libplain_la_LIBADD) $(libkerberos4_la_LIBADD) $(libgssapiv2_la_LIBADD) $(libdigestmd5_la_LIBADD) $(liblogin_la_LIBADD) $(libsrp_la_LIBADD)
++sasl_config_LIBS = -lsasl $(libplain_la_LIBADD) $(libkerberos4_la_LIBADD) $(libgssapiv2_la_LIBADD)
 +
  libplain_la_SOURCES = plain.c
  libplain_la_LDFLAGS = -version-info $(plain_version)
