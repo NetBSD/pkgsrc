@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/04/07 13:01:17 agc Exp $
+# $NetBSD: Makefile,v 1.9 1999/11/19 12:32:26 agc Exp $
 #
 
 DISTNAME=	arpwatch-2.1a4
@@ -9,6 +9,11 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	bouyer@netbsd.org
 
 GNU_CONFIGURE=	yes
+
+pre-patch:
+	f=arpwatch.h;							\
+	${MV} ${WRKSRC}/$$f ${WRKSRC}/$$f-prepatch;			\
+	${SED} -e '/Header/s|\$$||g' ${WRKSRC}/$$f-prepatch > ${WRKSRC}/$$f
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/arpwatch.8 ${PREFIX}/man/man8
