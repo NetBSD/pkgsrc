@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2004/08/02 04:53:00 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/08/02 17:28:10 schmonz Exp $
 #
 
 QMAIL_VERS=	qmail-1.03
@@ -43,15 +43,12 @@ PKG_SYSCONFSUBDIR=	qmail
 DOCDIR=			${PREFIX}/share/doc/qmail
 EGDIR=			${PREFIX}/share/examples/qmail
 SHAREDIR=		${PREFIX}/share/qmail
-MESSAGE_SUBST+=		EGDIR=${EGDIR}
-MESSAGE_SUBST+=		PKGBASE=${PKGBASE}
-FILES_SUBST+=		DOCDIR=${DOCDIR}
-FILES_SUBST+=		EGDIR=${EGDIR}
-FILES_SUBST+=		SHAREDIR=${SHAREDIR}
-FILES_SUBST+=		QMAILDIR=${QMAILDIR}
-FILES_SUBST+=		QMAIL_QUEUE_DIR=${QMAIL_QUEUE_DIR}
+MESSAGE_SUBST+=		DOCDIR=${DOCDIR} EGDIR=${EGDIR} PKGBASE=${PKGBASE}
+FILES_SUBST+=		DOCDIR=${DOCDIR} EGDIR=${EGDIR} SHAREDIR=${SHAREDIR}
+FILES_SUBST+=		QMAILDIR=${QMAILDIR} QMAIL_QUEUE_DIR=${QMAIL_QUEUE_DIR}
 FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA}
-PLIST_SUBST+=		OSXSUFX+=${OSXSUFX}
+FILES_SUBST+=		PKGNAME=${PKGNAME}
+PLIST_SUBST+=		OSXSUFX=${OSXSUFX}
 
 SETUP_PROGRAMS=		dnsfq dnsip dnsptr hostname install ipmeprint
 SETUP_SCRIPTS=		config config-fast
@@ -104,6 +101,10 @@ do-configure:
 	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
 
+post-build:
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/README.pkgsrc            \
+		> ${WRKDIR}/README.pkgsrc
+
 post-install:
 	# qmail's installer sets strange permissions; set them back
 .	if (${PKG_INSTALLATION_TYPE} == "overwrite")
@@ -118,7 +119,8 @@ post-install:
 .	  endfor
 .	endif
 
-	${INSTALL_DATA_DIR} ${SHAREDIR}
+	${INSTALL_DATA} ${WRKDIR}/README.pkgsrc ${DOCDIR}
+
 	${INSTALL_PROGRAM_DIR} ${SHAREDIR}/setup
 	for i in ${SETUP_PROGRAMS}; do					\
 		${INSTALL_PROGRAM} ${WRKSRC}/$$i ${SHAREDIR}/setup;	\
