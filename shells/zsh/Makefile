@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 1999/02/26 11:00:13 frueauf Exp $
-# FreeBSD Id: Makefile,v 1.26 1997/09/26 08:23:14 torstenb Exp
+# $NetBSD: Makefile,v 1.14 2000/01/06 22:42:14 windsor Exp $
 #
 
-DISTNAME=       zsh-3.0.5
+DISTNAME=       zsh-3.0.7
 CATEGORIES=	shells
 MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/zsh/ \
 		ftp://uiarchive.uiuc.edu/pub/packages/shells/zsh/ \
