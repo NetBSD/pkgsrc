@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/09/12 08:26:45 itojun Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/11/02 09:42:30 cube Exp $
 bin/checkgid
 bin/dbmmanage
 bin/htdigest
@@ -102,6 +102,7 @@ share/httpd/htdocs/index.html.ru.ucs4
 share/httpd/htdocs/index.html.ru.utf8
 share/httpd/htdocs/index.html.se
 share/httpd/htdocs/index.html.zh-tw.big5
+share/httpd/htdocs/manual/FAQ.html
 share/httpd/htdocs/manual/LICENSE
 share/httpd/htdocs/manual/bind.html.en
 share/httpd/htdocs/manual/bind.html.fr
@@ -280,7 +281,9 @@ share/httpd/htdocs/manual/mod/mod_negotiation.html.en
 share/httpd/htdocs/manual/mod/mod_negotiation.html.html
 share/httpd/htdocs/manual/mod/mod_negotiation.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_proxy.html
-share/httpd/htdocs/manual/mod/mod_rewrite.html
+share/httpd/htdocs/manual/mod/mod_rewrite.html.en
+share/httpd/htdocs/manual/mod/mod_rewrite.html.html
+share/httpd/htdocs/manual/mod/mod_rewrite.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_setenvif.html.en
 share/httpd/htdocs/manual/mod/mod_setenvif.html.html
 share/httpd/htdocs/manual/mod/mod_setenvif.html.ja.jis
