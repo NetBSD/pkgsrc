@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2000/08/07 15:45:15 danw Exp $
+$NetBSD: patch-aa,v 1.2 2000/09/07 16:36:54 danw Exp $
 
 --- src/numbers.c.orig	Fri Aug  4 02:03:23 2000
 +++ src/numbers.c	Fri Aug  4 02:04:01 2000
@@ -8,8 +8,8 @@ $NetBSD: patch-aa,v 1.1 2000/08/07 15:45:15 danw Exp $
  # if SIZEOF_LONG_LONG > SIZEOF_LONG
 -#  define BIGNUM_MIN LONG_LONG_MIN
 -#  define BIGNUM_MAX LONG_LONG_MAX
-+#  define BIGNUM_MIN LLONG_MIN
-+#  define BIGNUM_MAX LLONG_MAX
++#  define BIGNUM_MIN QUAD_MIN
++#  define BIGNUM_MAX QUAD_MAX
  # else
  #  define BIGNUM_MIN LONG_MIN
  #  define BIGNUM_MAX LONG_MAX
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.1 2000/08/07 15:45:15 danw Exp $
  	    return rep_make_long_int ((long) in);
  #if SIZEOF_LONG_LONG > SIZEOF_LONG
 -	else if (in < LONG_LONG_MAX && in > LONG_LONG_MIN)
-+	else if (in < LLONG_MAX && in > LLONG_MIN)
++	else if (in < QUAD_MAX && in > QUAD_MIN)
  	    return rep_make_longlong_int (in);
  #endif
      }
