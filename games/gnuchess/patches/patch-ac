@@ -1,13 +1,12 @@
-$NetBSD: patch-ac,v 1.4 2000/10/01 04:24:27 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2000/10/15 01:53:40 jlam Exp $
 
---- book.c.orig	Sat Oct 23 06:07:21 1999
-+++ book.c
-@@ -85,7 +85,7 @@
-   mcnt = -1;
-   side = board.side;
-   xside = 1^side;
--  rfp = fopen(BOOKBIN,"r+b");
-+  rfp = fopen(BOOKBIN,"rb");	/* don't need to open read/write */
-   if (rfp == NULL) {
-     if (!(flags & XBOARD))
-       fprintf(ofp," no book (%s).\n",BOOKBIN);
+--- book.h.orig	Fri Oct 15 23:41:03 1999
++++ book.h
+@@ -23,5 +23,5 @@
+      bug-gnu-chess@gnu.org
+      cracraft@ai.mit.edu, cracraft@stanfordalumni.org, cracraft@earthlink.net
+ */
+-#define BOOKSRC "book.pgn"
+-#define BOOKBIN	"book.dat"
++#define BOOKSRC LIBDIR "book.pgn"
++#define BOOKBIN	LIBDIR "book.dat"
