@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/10/20 12:34:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2003/10/23 12:33:58 agc Exp $
 #
 
 DISTNAME=		dmesg2gif-1.1
@@ -12,7 +12,7 @@ COMMENT=		Output dmesg(8) device tree as GIF graph
 
 USE_PKGINSTALL=		YES
 
-DEPENDS+=		graphviz-[0-9]*:.../../graphics/graphviz
+DEPENDS+=		graphviz-[0-9]*:../../graphics/graphviz
 
 USE_PERL5=	yes
 EXTRACT_ONLY=	# empty
