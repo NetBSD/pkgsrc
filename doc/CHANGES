@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4523 2004/01/20 21:34:24 rh Exp $
+$NetBSD: CHANGES,v 1.4524 2004/01/20 22:50:34 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -364,3 +364,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added elvis-2.2.0 [recht 2004-01-20]
 	Added elvis-x11-2.2.0 [recht 2004-01-20]
 	Added pthread-sem-1.0 [rh 2004-01-20]
+	Updated elvis to 2.2.0nb1 [recht 2004-01-20]
+	Updated elvis-x11 to 2.2.0nb1 [recht 2004-01-20]
