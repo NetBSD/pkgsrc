@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 1999/03/22 15:11:21 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1999/04/11 17:51:31 hubertf Exp $
 #
 
-DISTNAME=	vfu-1.46-source
-PKGNAME=	vfu-1.46
+PKGNAME=	vfu-1.50
+DISTNAME=	${PKGNAME}-source
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	misc
 MASTER_SITES=	http://www.biscom.net/~cade/away/
