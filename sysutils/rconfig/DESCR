@@ -1,0 +1,5 @@
+Rconfig is intended to manage configuration files across
+hetrogenous groups of machines. The configuration for each
+machine is determined by a set of rdist trees based on the
+various tags such as OS, hostname, and architecture.
+Files in 'more specific' rdist trees take priority.
