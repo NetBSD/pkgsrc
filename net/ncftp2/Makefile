@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/02/17 18:19:10 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/05/13 06:13:15 tron Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -18,7 +18,7 @@ BUILD_DEFS+=		USE_SOCKS
 .include "../../mk/bsd.prefs.mk"
 
 # Check for readline.h as standard
-.if exists(/usr/include/readline.h)
+.if exists(/usr/include/readline.h) || exists(/usr/include/readline/readline.h)
 CPPFLAGS+=		-DHAVE_LIBREADLINE=1
 CPPFLAGS+=		-DHAVE_FILENAME_COMPLETION_FUNCTION=1
 CPPFLAGS+=		-DHAVE_READLINE_H=1 -DHAVE_HISTORY_H=1
