@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2001/01/28 19:16:03 ad Exp $
+$NetBSD: md5,v 1.2 2001/03/28 12:32:38 tron Exp $
 
-MD5 (lopster-0.9.7.2.tar.gz) = 722eb20e8a2c0c2f477e53b0ff246f8e
+SHA1 (lopster-0.9.8.tar.gz) = 3e244d7b2aaccc32d296ca9c28ecadc24f71cf10
