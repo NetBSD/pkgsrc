@@ -1,0 +1,11 @@
+--- orig/xwave/src/graphics.c	Mon Nov 25 13:33:43 1996
++++ src/graphics.c	Sat Sep 13 04:28:37 1997
+@@ -30,7 +30,7 @@
+ 
+ #ifdef linux
+ #include <endian.h>
+-#elif defined (FreeBSD)
++#elif defined (FreeBSD) || defined(__NetBSD__)
+ #include <machine/endian.h>
+ #elif defined (sgi)
+ #include <sys/endian.h>

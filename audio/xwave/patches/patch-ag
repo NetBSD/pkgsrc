@@ -1,0 +1,11 @@
+--- orig/xwave/src/endian.h	Mon Nov 25 13:25:15 1996
++++ src/endian.h	Sat Sep 13 04:22:54 1997
+@@ -16,7 +16,7 @@
+ #define big_endian 1
+ #endif
+ 
+-#elif defined (linux) || defined (sun) || defined (FreeBSD)
++#elif defined (linux) || defined (sun) || defined (FreeBSD) || defined(__NetBSD__)
+ 
+ #if BYTE_ORDER==LITTLE_ENDIAN
+ #define little_endian 1

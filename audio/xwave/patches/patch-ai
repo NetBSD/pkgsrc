@@ -1,0 +1,11 @@
+--- orig/xwave/src/record_dialog.c	Tue Nov 19 15:24:36 1996
++++ src/record_dialog.c	Sat Sep 13 04:28:58 1997
+@@ -498,7 +498,7 @@
+     sprintf(MD->mw->messages,"%.2f kbytes (%.2fs)",
+ 	    (float)playsize/1024,recordtime);
+     XtVaSetValues(label5,XtNlabel, MD->mw->messages, NULL);
+-#if defined(linux)||defined(FreeBSD)||defined(sun)
++#if defined(linux)||defined(FreeBSD)||defined(sun) || defined(__NetBSD__)
+     usleep(80000);
+ #elif defined(sgi)
+     sginap(CLK_TCK/(ONE_SECOND/80000));

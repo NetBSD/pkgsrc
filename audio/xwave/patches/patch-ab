@@ -1,0 +1,11 @@
+--- orig/xwave/src/aifc.c	Mon Nov 25 13:30:37 1996
++++ src/aifc.c	Sat Sep 13 04:18:47 1997
+@@ -9,7 +9,7 @@
+ 
+ #ifdef linux
+ #include <endian.h>
+-#elif defined (FreeBSD)
++#elif defined (FreeBSD) || defined(__NetBSD__)
+ #include <machine/endian.h>
+ #elif defined (sgi)
+ #include <sys/endian.h>

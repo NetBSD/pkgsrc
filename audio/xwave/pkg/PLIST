@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 1998/02/21 22:47:35 hubertf Exp $
+bin/xwave
+lib/X11/app-defaults/XWave

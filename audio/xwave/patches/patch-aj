@@ -1,0 +1,11 @@
+--- orig/xwave/src/riff.c	Mon Nov 25 13:35:17 1996
++++ src/riff.c	Sat Sep 13 04:29:02 1997
+@@ -33,7 +33,7 @@
+ 
+ #ifdef linux
+ #include <endian.h>
+-#elif defined (FreeBSD)
++#elif defined (FreeBSD) || defined(__NetBSD__)
+ #include <machine/endian.h>
+ #elif defined (sgi)
+ #include <sys/endian.h>
