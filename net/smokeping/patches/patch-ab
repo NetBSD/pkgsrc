@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/24 15:24:39 bouyer Exp $
+
+--- htdocs/smokeping.cgi.dist.orig	Wed Mar 19 22:48:58 2003
++++ htdocs/smokeping.cgi.dist	Wed Mar 19 22:50:01 2003
+@@ -1,12 +1,11 @@
+-#!/usr/sepp/bin/speedy -w
++#!@PREFIX@/bin/perl -w
+ # -*-perl-*-
+ 
+-use lib qw(/usr/pack/rrdtool-1.0.33-to/lib/perl);
+-use lib qw(/home/oetiker/data/projects/AADJ-smokeping/dist/lib);
++use lib qw(@PREFIX@/lib/smokeping);
+ 
+ use Smokeping 1.19;
+ 
+-Smokeping::cgi("/home/oetiker/data/projects/AADJ-smokeping/dist/etc/config");
++Smokeping::cgi("@PKG_SYSCONFDIR@/config");
+ 
+ 
+ BEGIN {

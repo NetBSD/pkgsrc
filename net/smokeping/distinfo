@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/24 15:24:39 bouyer Exp $
+
+SHA1 (smokeping-1.19.tar.gz) = 6397d059313b5d72cf32b016eab7cf27c0e48e1b
+Size (smokeping-1.19.tar.gz) = 137348 bytes
+SHA1 (patch-aa) = 2d79e1ffde3f8d65cecfae0aea3b91ece151cb05
+SHA1 (patch-ab) = a8c3877881fa06f203be52d80aecb30609b2d27a
+SHA1 (patch-ac) = b2ced83abad8ec60d3c9f7a0664caddf77dd17e8
