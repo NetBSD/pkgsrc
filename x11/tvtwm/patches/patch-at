@@ -1,0 +1,64 @@
+Index: resize.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/resize.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- resize.c	1999/08/08 05:46:53	1.1.1.1
++++ resize.c	1999/08/08 05:56:56	1.2
+@@ -90,6 +90,9 @@
+ #include "add_window.h"
+ #include "screen.h"
+ 
++/* function prototypes */
++void SetFrameShape (TwmWindow *tmp);
++
+ #define MINHEIGHT 0     /* had been 32 */
+ #define MINWIDTH 0      /* had been 60 */
+ 
+@@ -349,8 +352,8 @@
+ TwmWindow *tmp_win;
+ int x, y, w, h;
+ {
+-  Window junkRoot;
+-  unsigned int junkbw, junkDepth;
++/*  Window junkRoot;
++    unsigned int junkbw, junkDepth;*/
+     XGrabServer(dpy);
+     XGrabPointer(dpy, Scr->Root, True,
+         ButtonPressMask | ButtonMotionMask | PointerMotionMask,
+@@ -677,7 +680,7 @@
+     }
+ 
+     if (!Scr->NoRaiseResize)
+-        RaiseFrame(dpy, tmp_win);
++        RaiseFrame(tmp_win);
+ 
+     UninstallRootColormap();
+ 
+@@ -735,7 +738,7 @@
+  * 
+  ***********************************************************************/
+ 
+-ConstrainSize (tmp_win, widthp, heightp)
++void ConstrainSize (tmp_win, widthp, heightp)
+     TwmWindow *tmp_win;
+     int *widthp, *heightp;
+ {
+@@ -1174,7 +1177,7 @@
+       }
+ 
+     if (!Scr->NoRaiseResize)
+-        RaiseFrame(dpy, tmp_win);
++        RaiseFrame(tmp_win);
+ 
+     ConstrainSize(tmp_win, &dragWidth, &dragHeight);
+ 
+@@ -1183,6 +1186,7 @@
+     XUngrabServer (dpy);
+ }
+ 
++void
+ SetFrameShape (tmp)
+     TwmWindow *tmp;
+ {

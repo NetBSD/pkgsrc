@@ -1,0 +1,77 @@
+Index: util.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/util.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- util.c	1999/08/08 05:46:52	1.1.1.1
++++ util.c	1999/08/08 05:56:59	1.2
+@@ -306,6 +306,7 @@
+ 
+ extern int XmuCompareISOLatin1();
+ 
++/* ARGSUSED */
+ Pixmap FindPixmap (name, widthp, heightp, isXpm, bg_color, colors,
+ 			numcolors, shape_mask)
+     char *name;
+@@ -496,7 +497,7 @@
+ }
+ 
+ 
+-InsertRGBColormap (a, maps, nmaps, replace)
++void InsertRGBColormap (a, maps, nmaps, replace)
+     Atom a;
+     XStandardColormap *maps;
+     int nmaps;
+@@ -538,7 +539,7 @@
+     return;
+ }
+ 
+-RemoveRGBColormap (a)
++void RemoveRGBColormap (a)
+     Atom a;
+ {
+     StdCmap *sc, *prev;
+@@ -558,7 +559,7 @@
+     return;
+ }
+ 
+-LocateStandardColormaps()
++void LocateStandardColormaps(void)
+ {
+     Atom *atoms;
+     int natoms;
+@@ -655,7 +656,7 @@
+     return TRUE;
+ }
+ 
+-GetFont(font)
++void GetFont(font)
+ MyFont *font;
+ {
+     char *deffontname = "fixed";
+@@ -685,6 +686,7 @@
+  * SetFocus - separate routine to set focus to make things more understandable
+  * and easier to debug
+  */
++void
+ SetFocus (tmp_win, time)
+     TwmWindow *tmp_win;
+     Time      time;
+@@ -913,6 +915,7 @@
+     int *widthp, *heightp;
+ {
+     CreateMenuIcon (Scr->TBInfo.width - Scr->TBInfo.border * 2,widthp,heightp);
++    return Scr->tbpm.menu;
+ }
+ 
+ Pixmap CreateMenuIcon (height, widthp, heightp)
+@@ -1013,7 +1016,7 @@
+     unsigned long nitems;
+     unsigned long bytes_after;
+     unsigned char *value;
+-    int status;
++/*    int status;*/
+     char *s;
+ 
+     if (XGetWindowProperty(dpy, win, atom, 0, (MAX_NUM+3)/4,

@@ -1,0 +1,24 @@
+Index: icons.h
+===================================================================
+RCS file: /home/siren/src/tvtwm/icons.h,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- icons.h	1999/08/08 05:46:52	1.1.1.1
++++ icons.h	1999/08/08 05:56:50	1.2
+@@ -29,6 +29,8 @@
+  *
+  **********************************************************************/
+ 
++#include "twm.h"
++
+ #ifndef ICONS_H
+ #define ICONS_H
+ 
+@@ -80,5 +82,6 @@
+ 
+ #define ICON_TEXT_VBORDER 1
+ #define ICON_TEXT_HBORDER 2
++
+ 
+ #endif /* ICONS_H */

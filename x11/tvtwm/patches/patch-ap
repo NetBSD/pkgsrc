@@ -1,0 +1,97 @@
+Index: move.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/move.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- move.c	1999/08/08 05:46:52	1.1.1.1
++++ move.c	1999/08/08 05:56:54	1.2
+@@ -34,11 +34,6 @@
+  *
+  **********************************************************************/
+ 
+-#if !defined(lint) && !defined(SABER)
+-static char RCSinfo[]=
+-"$XConsortium: move.c,v 1.140 90/03/23 11:42:33 jim Exp $";
+-#endif
+-
+ #include <stdio.h>
+ #include <X11/X.h>
+ #include <X11/Xatom.h>
+@@ -70,7 +65,8 @@
+ 
+ static void reallyStartMove();
+ static void doMove();
+-static void getPointer();
++static void getPointer(int *x_root, int *y_root, int *cancel, int *done,
++		       int *first, int adding, int pulldown);
+ 
+ /***********************************************************************
+  *
+@@ -165,11 +161,9 @@
+ int pulldown;		/* moving window from a pulldown menu */
+ {
+     Window junkRoot, junkChild;
+-    unsigned int junkDepth, numChildren;
++    unsigned int junkDepth;
+     int junkX, junkY;
+-    int junkxroot, junkyroot;
+     Bool old_save_under;
+-    unsigned int junkMask;
+     int first;
+     XSetWindowAttributes attr;
+     XWindowAttributes wattr;
+@@ -338,7 +332,7 @@
+ 	XRaiseWindow(dpy, window);
+ 
+     while (True) {
+-	getPointer(outlineWindow, x_root, y_root, cancel, &done, first, adding, pulldown);
++	    getPointer(/*outlineWindow,*/ x_root, y_root, cancel, &done, first, adding, pulldown);
+ 	if (done) {
+ 	    doMove(tmp_win, window, *x_root, *y_root, &xdest, &ydest, panner, False);
+ 	    break;
+@@ -363,9 +357,8 @@
+ int paint;
+ {
+     int xl, yt;
+-    int deltax, deltay;
++/*    int deltax, deltay;*/
+     int vdtx, vdty;
+-    char str[20];
+     Window actual, virtual;
+ 
+     dragX = x_root;
+@@ -374,8 +367,8 @@
+     xl = dragX + diffX;
+     yt = dragY + diffY;
+ 
+-    deltax = xl - origX/scale;
+-    deltay = yt - origY/scale;
++/*    deltax = xl - origX/scale;
++      deltay = yt - origY/scale;*/
+ 
+     if (MoveFunction != F_FORCEMOVE && Scr->DontMoveOff && outlineWindow != Scr->Panner) {
+ 	if (tmp_win->root == Scr->VirtualDesktop || tmp_win->root == Scr->Panner) {
+@@ -438,8 +431,8 @@
+ }
+ 
+ static void
+-getPointer(window, x_root, y_root, cancel, done, first, adding, pulldown)
+-Window window;
++getPointer(/*window,*/ x_root, y_root, cancel, done, first, adding, pulldown)
++/*Window window;*/
+ int *x_root;
+ int *y_root;
+ int *cancel;
+@@ -448,11 +441,9 @@
+ int adding;
+ int pulldown;
+ {
+-    Window junkChild;
+     int doingFine;
+     XEvent event,bakevent;
+ 
+-    int xdest, ydest;
+     unsigned mask;
+     static int buttons;
+ 

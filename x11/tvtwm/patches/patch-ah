@@ -1,0 +1,101 @@
+Index: gram.y
+===================================================================
+RCS file: /home/siren/src/tvtwm/gram.y,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- gram.y	1999/08/08 05:46:53	1.1.1.1
++++ gram.y	1999/08/08 05:56:49	1.2
+@@ -80,6 +80,8 @@
+ extern name_list **do_colorlist_keyword();
+ extern int do_color_keyword(), do_string_savecolor();
+ extern int yylineno;
++
++ int yylex(void);
+ %}
+ 
+ %union
+@@ -207,7 +209,8 @@
+ 					    root = GetRoot(TWM_ROOT,NULLSTR,NULLSTR);
+ 					    Scr->Mouse[$1][C_ROOT][0].item = 
+ 						AddToMenu(root,"x",Action,
+-							  NULLSTR,$2,NULLSTR,NULLSTR);
++							  (MenuRoot *) NULLSTR,
++							  $2,NULLSTR,NULLSTR);
+ 					  }
+ 					  Action = "";
+ 					  pull = NULL;
+@@ -274,7 +277,8 @@
+ 					    root = GetRoot(TWM_ROOT,NULLSTR,NULLSTR);
+ 					    Scr->DefaultFunction.item = 
+ 						AddToMenu(root,"x",Action,
+-							  NULLSTR,$2, NULLSTR, NULLSTR);
++							  (MenuRoot *) NULLSTR,
++							  $2, NULLSTR, NULLSTR);
+ 					  }
+ 					  Action = "";
+ 					  pull = NULL;
+@@ -283,7 +287,8 @@
+ 					   root = GetRoot(TWM_ROOT,NULLSTR,NULLSTR);
+ 					   Scr->WindowFunction.item = 
+ 						AddToMenu(root,"x",Action,
+-							  NULLSTR,$2, NULLSTR, NULLSTR);
++							  (MenuRoot *) NULLSTR,
++							  $2, NULLSTR, NULLSTR);
+ 					   Action = "";
+ 					   pull = NULL;
+ 					}
+@@ -640,8 +645,9 @@
+ 		| function_entries function_entry
+ 		;
+ 
+-function_entry	: action		{ AddToMenu(root, "", Action, NULLSTR, $1,
+-						NULLSTR, NULLSTR);
++function_entry	: action		{ AddToMenu(root, "", Action,
++						    (MenuRoot *) NULLSTR, $1,
++						    NULLSTR, NULLSTR);
+ 					  Action = "";
+ 					}
+ 		;
+@@ -829,6 +835,7 @@
+ 		;
+ 
+ %%
++void
+ yyerror(s) char *s;
+ {
+     twmrc_error_prefix();
+@@ -836,12 +843,13 @@
+     fprintf (stderr, ": %s", current_input_line());
+     ParseError = 1;
+ }
++void
+ RemoveDQuote(str)
+ char *str;
+ {
+     register char *i, *o;
+-    register n;
+-    register count;
++    register int n;
++    register int count;
+ 
+     for (i=str+1, o=str; *i && *i != '\"'; o++)
+     {
+@@ -964,7 +972,7 @@
+ 	{
+ 	    root = GetRoot(TWM_ROOT, NULLSTR, NULLSTR);
+ 	    Scr->Mouse[butt][i][mods].item = AddToMenu(root,"x",Action,
+-		    NULLSTR, func, NULLSTR, NULLSTR);
++		    (MenuRoot *) NULLSTR, func, NULLSTR, NULLSTR);
+ 	}
+     }
+     Action = "";
+@@ -1053,7 +1061,7 @@
+ }
+ 
+ 
+-twmrc_error_prefix ()
++void twmrc_error_prefix ()
+ {
+     fprintf (stderr, "%s:  line %d:  ", ProgramName, yylineno);
+ }

@@ -1,0 +1,207 @@
+Index: parse.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/parse.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- parse.c	1999/08/08 05:46:53	1.1.1.1
++++ parse.c	1999/08/08 05:56:55	1.2
+@@ -41,6 +41,7 @@
+ #include <errno.h>
+ #include <X11/Xos.h>
+ #include <X11/Xmu/CharSet.h>
++#include <X11/Xmu/SysUtil.h>
+ #include "twm.h"
+ #include "screen.h"
+ #include "menus.h"
+@@ -70,6 +71,10 @@
+ #endif
+ #define BUF_LEN 300
+ 
++#ifndef errno
++extern int errno;
++#endif
++
+ static FILE *twmrc;
+ static FILE *menufile;
+ static int ptr = 0;
+@@ -98,9 +103,10 @@
+ static int twmFileInput(), twmStringListInput(), twmMenuInput();
+ void twmUnput();
+ int (*twmInputFunc)();
++char *m4_defs(Display *dpy, char *display_name);
+ 
+ extern char *defTwmrc[];        /* default bindings */
+-
++extern void yyparse(void);
+ 
+ /***********************************************************************
+  *
+@@ -462,6 +468,7 @@
+ 
+ void
+ TwmOutput(c)
++	int c;
+ {
+     putchar(c);
+ }
+@@ -1420,6 +1427,7 @@
+ /*
+  * put_pixel_on_root() Save a pixel value in twm root window color property.
+  */
++void
+ put_pixel_on_root(pixel)                                 
+     Pixel pixel;                                         
+ {                                                        
+@@ -1562,11 +1570,11 @@
+     return -1;
+ }
+ 
+-
+-do_squeeze_entry (list, name, type, justify, num, denom)
++void
++do_squeeze_entry (list, name, matchtype, justify, num, denom)
+     name_list **list;			/* squeeze or dont-squeeze list */
+     char *name;				/* window name */
+-    short type;				/* match type */
++    short matchtype;			/* match type */
+     int justify;			/* left, center, right */
+     int num;				/* signed num */
+     int denom;				/* 0 or indicates fraction denom */
+@@ -1605,7 +1613,7 @@
+ 	sinfo->justify = justify;
+ 	sinfo->num = num;
+ 	sinfo->denom = denom;
+-	AddToList (list, name, type, (char *)sinfo);
++	AddToList (list, name, matchtype, (char *)sinfo);
+     }
+ }
+ 
+@@ -1614,27 +1622,29 @@
+ {
+ 	int fno;
+ 	int fids[2];
+-	int fres;		/* Fork result */
++	pid_t fres;		/* Fork result */
+ 
+ 	fno = fileno(fraw);
+ 	/* if (-1 == fcntl(fno, F_SETFD, 0)) perror("fcntl()"); */
+-	pipe(fids);
++	if (pipe(fids) != 0) perror("pipe creation failed for m4");
++        
+ 	fres = fork();
+ 	if (fres < 0) {
+-		perror("Fork for m4 failed");
++	perror("Fork for m4 failed");
+ 		exit(23);
+ 	}
+ 	if (fres == 0) {
+ 		extern Display *dpy;
+ 		extern char *display_name;
+-		static char *m4_defs();
+ 		char *tmp_file;
+-
++                
+ 		/* Child */
+ 		close(0);			/* stdin */
+ 		close(1);			/* stdout */
+ 		dup2(fno, 0);		/* stdin = fraw */
+ 		dup2(fids[1], 1);	/* stdout = pipe to parent */
++                close(fids[0]); /* read end of pipe */
++                close(fids[1]); /* write end of pipe - its been duped */
+ 		/* get_defs("m4", dpy, display_name) */
+ 		tmp_file = m4_defs(dpy, display_name);
+ 		execlp("m4", "m4", tmp_file, M4STDIN, NULL); 
+@@ -1696,7 +1706,7 @@
+ 
+ /* Make a definition, but quote the defined string... */
+ 
+-static char *MkQte(name, def)
++char *MkQte(name, def)
+ char *name, *def;
+ {
+ 	char *cp, *cp2;
+@@ -1714,7 +1724,7 @@
+ 	strcpy(cp + 1, def);
+ 	strcat(cp, "\'");
+ 	cp2 = MkDef(name, cp);
+-	free(cp);		/* Not really needed, but good habits die hard... */
++	free(cp);  /*Not really needed, but good habits die hard... */
+ 	return(cp2);
+ }
+ 
+@@ -1741,24 +1751,29 @@
+ }
+ #endif
+ 
+-static char *m4_defs(display, host)
++char *m4_defs(display, host)
+ Display *display;
+ char *host;
+ {
+ 	extern int KeepTmpFile;
+-	int i;
+ 	Screen *screen;
+ 	Visual *visual;
+ 	char client[MAXHOSTNAME], server[MAXHOSTNAME], *colon;
+ 	struct hostent *hostname;
+ 	char *vc;		/* Visual Class */
+-	static char tmp_name[] = "/tmp/twmrcXXXXXX";
++	char *tmp_name, name[] = "/tmp/twmrcXXXXXX";
+ 	int fd;
+ 	FILE *tmpf;
+ 	char *sp;
+ 	char *getenv_res;	/* Result of a getenv() call */
+ 	Boolean tvtwm = False;
+ 
++	if ((tmp_name = malloc(sizeof(char)*strlen(name)+1)) == NULL) {
++		perror("Cannot malloc temp_name\n");
++		exit(2);
++	}
++	
++	strcpy(tmp_name, name);
+ 	fd = mkstemp(tmp_name);		/* I *hope* mkstemp exists, because */
+ 					/* I tried to find the "portable" */
+ 					/* mktmp... */
+@@ -1864,7 +1879,7 @@
+ {
+ 	struct group *g;
+ 	int           i, ngids, staffg = 10;
+-#if defined(SYSV) || defined(SVR4)
++#if defined(SYSV) || defined(SVR4) || defined(__NetBSD__)
+ 	gid_t         gids[NGIDS];
+ #else
+ 	int           gids[NGIDS];
+@@ -1899,18 +1914,19 @@
+ /* next release.                                                           */
+ /*                                      <cross@eng.umd.edu>                */
+ 
+-static int getmask()
++int getmask()
+ {
++#define L 150				/* Length of a line in /etc/passwd */
++#ifdef NOT
+ 	int tuid;				/* target */
+ 	FILE *passwd2;
+ 	int lineno = 0;
+ 	int mask, uid, gid;
+-#define L 150				/* Length of a line in /etc/passwd */
+ 	char line[L], bak[L];
+ 	char *uname, *pisswd, *gcos, *dir, *shell, *num, *end;
+ 	int ch;
+-
+-#if 0
++#endif
++#if NOT
+     tuid = getuid();
+     passwd2 = fopen("/usr/local/etc/passwd/passwd", "r");
+     if (passwd2 == NULL) {
+@@ -1952,7 +1968,7 @@
+ #endif
+ }
+ 
+-def_netmask(tmpf)
++void def_netmask(tmpf)
+ FILE *tmpf;
+ {
+ 	int mask;

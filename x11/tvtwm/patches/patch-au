@@ -1,0 +1,17 @@
+Index: screen.h
+===================================================================
+RCS file: /home/siren/src/tvtwm/screen.h,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- screen.h	1999/08/08 05:46:53	1.1.1.1
++++ screen.h	1999/08/08 05:56:57	1.2
+@@ -63,7 +63,7 @@
+     Pixmap pm;				/* focus highlight window right end */
+     Pixmap mask;			/* shape mask */
+     Bool isXpm;				/* is it an Xpm format pixmap? */
+-    int height, width;			/* cache the size */
++    unsigned int height, width;		/* cache the size */
+ } TwmPixmap;
+ 
+ typedef struct ScreenInfo

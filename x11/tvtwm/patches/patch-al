@@ -1,0 +1,94 @@
+Index: list.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/list.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- list.c	1999/08/08 05:46:52	1.1.1.1
++++ list.c	1999/08/08 05:56:52	1.2
+@@ -61,6 +61,7 @@
+     char *ptr;			/* list dependent data */
+ };
+ 
++
+ /***********************************************************************
+  *
+  * Wrappers to allow code to step through a list
+@@ -185,15 +186,12 @@
+ }
+ 
+ static int
+-MatchName(name, pattern, length, compiled, type)
++MatchName(name, pattern, compiled, type)
+ char *name;
+ char *pattern;
+-int length;
+ regexp *compiled;
+ short type;
+ {
+-    /* fprintf(stderr, "\tcompare %s with %s\n", name, pattern); */
+-
+     if (type & LTYPE_ANYTHING)
+ 	return 1;
+ 
+@@ -203,7 +201,7 @@
+ 
+ 	regexp_error = "";
+ 	if ((matcher = regcomp(pattern)) == NULL) {
+-	    fprintf(stderr, "%s: Error in regexp `%s'\n", ProgramName,
++	    fprintf(stderr, "%s: Error in regexp `%s' name %s\n", ProgramName,
+ 			regexp_error, name);
+ 	    return 0;
+ 	}
+@@ -224,17 +222,13 @@
+ }
+ 
+ char *
+-MultiLookInList(list_head, name, class, /* win,*/ continuation)
++MultiLookInList(list_head, name, class, continuation)
+ name_list *list_head;
+ char *name;
+ XClassHint *class;
+-/* Window win; */
+ name_list **continuation;
+ {
+     name_list *nptr;
+-    Window win = None;
+-
+-    /* fprintf(stderr, "looking for %s\n", name); */
+ 
+     for (nptr = list_head ; nptr ; nptr = nptr->next) {
+ #ifdef CACHE_REGEXP
+@@ -264,18 +258,20 @@
+ 	    return nptr->ptr;
+ 	}
+ 	if (nptr->type & LTYPE_NAME)
+-	    if (MatchName(name, nptr->name, nptr->namelen, nptr->regexp, nptr->type)) {
++	    if (MatchName(name, nptr->name, nptr->regexp, nptr->type)) {
+ 		*continuation = nptr->next;
+ 		return nptr->ptr;
+ 	    }
+ 	if (class) {
+ 	    if (nptr->type & LTYPE_RES_NAME)
+-		if (MatchName(class->res_name, nptr->name, nptr->namelen, nptr->regexp, nptr->type)) {
++		if (MatchName(class->res_name, nptr->name, nptr->regexp,
++			      nptr->type)) {
+ 		    *continuation = nptr->next;
+ 		    return nptr->ptr;
+ 		}
+ 	    if (nptr->type & LTYPE_RES_CLASS)
+-		if (MatchName(class->res_class, nptr->name, nptr->namelen, nptr->regexp, nptr->type)) {
++		if (MatchName(class->res_class, nptr->name, nptr->regexp,
++			      nptr->type)) {
+ 		    *continuation = nptr->next;
+ 		    return nptr->ptr;
+ 		}
+@@ -284,7 +280,7 @@
+ 	if (win && (nptr->type & LTYPE_PROPERTY)) {
+ 	    char *s = GetPropertyString(win, nptr->property);
+ 
+-	    if (s && MatchName(s, nptr->name, nptr->namelen, nptr->regexp, nptr->type)) {
++	    if (s && MatchName(s, nptr->name, nptr->regexp, nptr->type)) {
+ 		*continuation = nptr->next;
+ 		free(s);
+ 		return nptr->ptr;

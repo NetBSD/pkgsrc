@@ -1,0 +1,497 @@
+Index: menus.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/menus.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- menus.c	1999/08/08 05:46:53	1.1.1.1
++++ menus.c	1999/08/08 05:56:53	1.2
+@@ -191,6 +191,7 @@
+ #include "gram.h"
+ #include "screen.h"
+ #include <X11/Xmu/CharSet.h>		/* for XmuCompareISOLatin1() */
++#include <X11/Xmu/Drawing.h>            /* for XmuLocateBitmapFile */
+ #include "version.h"
+ #include "vdt.h"
+ #include "add_window.h"
+@@ -228,8 +229,6 @@
+ } MenuOrigins[MAXMENUDEPTH];
+ static Cursor LastCursor;
+ 
+-void WarpAlongRing(), WarpToWindow();
+-
+ extern char *Action;
+ extern int Context;
+ extern TwmWindow *ButtonWindow, *Tmp_win;
+@@ -237,6 +236,12 @@
+ extern char *InitFile;
+ static void Identify();
+ 
++/* Local function prototypes */
++Bool Deferrable(int func);
++int DeferExecution(int context, int func, char *action, Cursor cursor);
++void WarpToWindow (TwmWindow *t);
++void WarpAlongRing (XButtonEvent *ev, Bool forward);
++
+ #define MAX(x,y) ((x)>(y)?(x):(y))
+ 
+ 
+@@ -527,7 +532,7 @@
+ 
+ 
+ 
+-PaintEntry(mr, mi, exposure)
++void PaintEntry(mr, mi, exposure)
+ MenuRoot *mr;
+ MenuItem *mi;
+ int exposure;
+@@ -602,9 +607,9 @@
+ #endif
+ 
+ 		    Scr->pullrightPm.pm = FindPixmap(Scr->pullrightPm.name,
+-						&Scr->pullrightPm.width,
+-						&Scr->pullrightPm.height,
+-						&Scr->pullrightPm.isXpm,
++						&(Scr->pullrightPm.width),
++						&(Scr->pullrightPm.height),
++						&(Scr->pullrightPm.isXpm),
+ 						NULL,
+ #ifdef XPM
+ 						ctrans, 2,
+@@ -684,7 +689,7 @@
+ 
+ 
+ 
+-PaintMenu(mr, e)
++void PaintMenu(mr, e)
+ MenuRoot *mr;
+ XEvent *e;
+ {
+@@ -710,7 +715,7 @@
+ 
+ static Bool fromMenu;
+ 
+-#if 1
++void
+ UpdateMenu()
+ {
+     MenuItem *mi;
+@@ -787,13 +792,8 @@
+ 	if (Event.type != MotionNotify)
+ 	    continue;
+ 
+-#if 1
+ 	XQueryPointer( dpy, ActiveMenu->w, &aJunkRoot, &aJunkChild,
+ 	    &x_root, &y_root, &x, &y, &aJunkMask);
+-#else
+-	x = ((XMotionEvent *)&Event)->x;
+-	y = ((XMotionEvent *)&Event)->y;
+-#endif
+ 
+ 	/* if we are in the parent, pop back down, this should prevent
+ 	 * menus that are slow to pop up from hanging around too long.
+@@ -910,137 +910,6 @@
+     }
+ 
+ }
+-#else
+-UpdateMenu()
+-{
+-    MenuItem       *mi;
+-    int             i, x, y, x_root, y_root, entry;
+-    int             done;
+-    MenuItem       *badItem = NULL;
+-    Window          aJunkRoot, aJunkChild;
+-    unsigned int    aJunkMask;
+-    static int      firstTime = True;
+-
+-    fromMenu = TRUE;
+-
+-    while (TRUE) {
+-	while (XCheckMaskEvent(dpy, ButtonPressMask | ButtonReleaseMask |
+-			       EnterWindowMask | ExposureMask, &Event)) {
+-	    if (!DispatchEvent())
+-		continue;
+-
+-	    if (Event.type == ButtonRelease || ActiveMenu == NULL) {
+-		menuFromFrameOrWindowOrTitlebar = FALSE;
+-		fromMenu = FALSE;
+-		if (Scr->StayUpMenus) {
+-		    if (firstTime == True) {
+-			/* it was the first release of the button */
+-			firstTime = False;
+-		    }
+-		    /* end if  */
+-		    else {
+-			/* thats the second we need to return now */
+-			firstTime = True;
+-			return;
+-		    }				 /* end else  */
+-		}
+-		/* end if  */
+-		else {
+-		    return;
+-		}				 /* end else  */
+-	    }
+-	    if (Event.type == Cancel) {
+-		menuFromFrameOrWindowOrTitlebar = FALSE;
+-		fromMenu = FALSE;
+-		return;
+-	    }
+-	}
+-
+-	done = FALSE;
+-	XQueryPointer(dpy, ActiveMenu->w, &aJunkRoot, &aJunkChild,
+-		      &x_root, &y_root, &x, &y, &aJunkMask);
+-
+-	/* if we haven't received the enter notify yet, wait */
+-	if (!ActiveMenu || !ActiveMenu->entered)
+-	    continue;
+-
+-	XFindContext(dpy, ActiveMenu->w, ScreenContext, (caddr_t *) & Scr);
+-
+-	if (x < 0 || y < 0 ||
+-	    x >= ActiveMenu->width || y >= ActiveMenu->height) {
+-	    if (ActiveItem && ActiveItem->func != F_TITLE) {
+-		ActiveItem->state = 0;
+-		PaintEntry(ActiveMenu, ActiveItem, False);
+-	    }
+-	    ActiveItem = NULL;
+-	    continue;
+-	}
+-	/* look for the entry that the mouse is in */
+-	entry = y / Scr->EntryHeight;
+-	for (i = 0, mi = ActiveMenu->first; mi != NULL; i++, mi = mi->next) {
+-	    if (i == entry)
+-		break;
+-	}
+-
+-	/* if there is an active item, we might have to turn it off */
+-	if (ActiveItem) {
+-	    /* is the active item the one we are on ? */
+-	    if (ActiveItem->item_num == entry && ActiveItem->state)
+-		done = TRUE;
+-
+-	    /*
+-	     * if we weren't on the active entry, let's turn the old active
+-	     * one off
+-	     */
+-	    if (!done && ActiveItem->func != F_TITLE) {
+-		ActiveItem->state = 0;
+-		PaintEntry(ActiveMenu, ActiveItem, False);
+-	    }
+-	}
+-	/*
+-	 * if we weren't on the active item, change the active item and turn
+-	 * it on
+-	 */
+-	if (!done) {
+-	    ActiveItem = mi;
+-	    if (ActiveItem->func != F_TITLE && !ActiveItem->state) {
+-		ActiveItem->state = 1;
+-		PaintEntry(ActiveMenu, ActiveItem, False);
+-	    }
+-	}
+-	/* now check to see if we were over the arrow of a pull right entry */
+-	if ((ActiveItem->func == F_MENU || ActiveItem->func == F_MENUFUNC) &&
+-	    ((ActiveMenu->width - x) * 100 <
+-	    (ActiveMenu->width * Scr->PopupSensitivity))) {
+-	    MenuRoot       *save = ActiveMenu;
+-	    int             savex = MenuOrigins[MenuDepth - 1].x;
+-	    int             savey = MenuOrigins[MenuDepth - 1].y;
+-	    if (MenuDepth < MAXMENUDEPTH) {
+-		PopUpMenu(ActiveItem->sub,
+-			  (savex + (int)(ActiveMenu->width
+-					* (100-Scr->PopupSensitivity) / 100.0)),
+-			  (savey + ActiveItem->item_num * Scr->EntryHeight)
+-		/*
+-		 * (savey + ActiveItem->item_num * Scr->EntryHeight +
+-		 * (Scr->EntryHeight >> 1))
+-			  */ , False);
+-	    } else if (!badItem) {
+-		XBell(dpy, 0);
+-		badItem = ActiveItem;
+-	    }
+-	    /* if the menu did get popped up, unhighlight the active item */
+-	    if (save != ActiveMenu && ActiveItem->state) {
+-		ActiveItem->state = 0;
+-		PaintEntry(save, ActiveItem, False);
+-		ActiveItem = NULL;
+-	    }
+-	}
+-	if (badItem != ActiveItem)
+-	    badItem = NULL;
+-	XFlush(dpy);
+-    }
+-}
+-#endif
+ 
+ 
+ 
+@@ -1205,7 +1074,7 @@
+ 
+ 
+ 
+-MakeMenus()
++void MakeMenus(void)
+ {
+     MenuRoot *mr;
+ 
+@@ -1220,7 +1089,7 @@
+ 
+ 
+ 
+-MakeMenu(mr)
++void MakeMenu(mr)
+ MenuRoot *mr;
+ {
+     MenuItem *start, *end, *cur, *tmp;
+@@ -1472,10 +1341,11 @@
+  *                                                                    *
+  \********************************************************************/
+ 
++void
+ HandleChangingMenus(menu)
+ MenuRoot *menu;
+ {
+-    int WindowNameOffset, WindowNameCount;
++	int /*WindowNameOffset,*/ WindowNameCount;
+     TwmWindow **WindowNames;
+     TwmWindow *tmp_win2, *tmp_win3;
+     TwmWindow **sortlist, *bakwin;
+@@ -1524,8 +1394,8 @@
+ 		AddToMenu(menu,sortlist[loop]->name, (char *)sortlist[loop],
+ 			NULL, F_POPUP, NULLSTR, NULLSTR);
+ 	} else {
+-	    WindowNameOffset=(char *)Scr->TwmRoot.next->name -
+-				(char *)Scr->TwmRoot.next;
++/*	    WindowNameOffset=(char *)Scr->TwmRoot.next->name -
++	    (char *)Scr->TwmRoot.next;*/
+ 	    for(tmp_win = Scr->TwmRoot.next , WindowNameCount=0;
+ 		tmp_win != NULL;
+ 		tmp_win = tmp_win->next)
+@@ -1665,7 +1535,7 @@
+  ***********************************************************************
+  */
+ 
+-PopDownMenu()
++void PopDownMenu()
+ {
+     MenuRoot *tmp;
+ 
+@@ -1770,19 +1640,19 @@
+     Window w;
+     TwmWindow *tmp_win;
+ {
+-  int lastx, lasty, width, height, bw2;
+-  int namelen;
+-  int stat;
++	int lastx, lasty, /*width, height,*/ bw2;
++/*  int namelen;
++  int stat;*/
+   XEvent event;
+-  Window junk;
++/*  Window junk;*/
+ 
+-  namelen = strlen (tmp_win->name);
++/*  namelen = strlen (tmp_win->name);*/
+   bw2 = tmp_win->frame_bw * 2;
+   AddingW = tmp_win->attr.width + bw2;
+   AddingH = tmp_win->attr.height + tmp_win->title_height + bw2;
+-  width = (SIZE_HINDENT + XTextWidth (Scr->SizeFont.font,
++/*  width = (SIZE_HINDENT + XTextWidth (Scr->SizeFont.font,
+ 				      tmp_win->name, namelen));
+-  height = Scr->SizeFont.height + SIZE_VINDENT * 2;
++				      height = Scr->SizeFont.height + SIZE_VINDENT * 2;*/
+   XGetGeometry(dpy, w, &JunkRoot, &origDragX, &origDragY,
+ 	       (unsigned int *)&DragWidth, (unsigned int *)&DragHeight,
+ 	       &JunkBW, &JunkDepth);
+@@ -1953,18 +1823,14 @@
+     int context;
+     int pulldown;
+ {
+-    static Time last_time = 0;
+     short Real_OpaqueMove;                  /* holder for F_OPAQUEMOVE */
+     char tmp[200];
+     char *ptr;
+     char buff[MAX_FILE_SIZE];
+     int count, fd;
+-    Window rootw;
+-    int origX, origY;
++/*    Window rootw;*/
+     int do_next_action = TRUE;
+-    int moving_icon = FALSE;
+     Bool fromtitlebar = False;
+-    extern int ConstrainedMoveTime;
+     struct MenuItem *item;
+ 
+     RootFunction = 0;
+@@ -2092,8 +1958,6 @@
+ 	    return TRUE;
+ 
+ 	if (Scr->VirtualDesktop) {
+-	    int x, y;
+-
+ 	    if (tmp_win->sticky) {
+ 		if (Scr->StickyAbove) {
+ 		    XReparentWindow(dpy, tmp_win->frame, Scr->VirtualDesktop,
+@@ -2300,7 +2164,7 @@
+ 	    return TRUE;
+ 
+ 	PopDownMenu();
+-	rootw = eventp->xbutton.root;
++/*	rootw = eventp->xbutton.root;*/
+ 	MoveFunction = func;
+ 	if (MoveFunction == F_OPAQUEMOVE) {
+ 	    Real_OpaqueMove = Scr->OpaqueMove;
+@@ -2313,11 +2177,11 @@
+ 
+ 	if (context == C_ICON && tmp_win->icon.w)
+ 	{
+-	    DragIcon(tmp_win, eventp, pulldown);
++	    DragIcon(tmp_win, (XButtonEvent *) eventp, pulldown);
+ 	}
+ 	else if (w != tmp_win->icon.w)
+ 	{
+-	    DragFrame(tmp_win, eventp, pulldown);
++	    DragFrame(tmp_win, (XButtonEvent *) eventp, pulldown);
+ 	}
+ #ifdef OLD_MOVE
+ 	if (DeferExecution(context, func, action, Scr->MoveCursor))
+@@ -3149,7 +3013,7 @@
+  ***********************************************************************
+  */
+ 
+-ReGrab()
++void ReGrab(void)
+ {
+     XGrabPointer(dpy, Scr->Root, True,
+ 	ButtonPressMask | ButtonReleaseMask,
+@@ -3171,6 +3035,7 @@
+  ***********************************************************************
+  */
+ 
++Bool
+ Deferrable(func)
+ int func;
+ {
+@@ -3205,7 +3070,7 @@
+     }
+ }
+ 
+-NeedToDefer(root)
++Bool NeedToDefer(root)
+ MenuRoot *root;
+ {
+     MenuItem *mitem;
+@@ -3321,7 +3186,7 @@
+     Scr->FocusRoot = TRUE;
+ }
+ 
+-DeIconify(tmp_win)
++void DeIconify(tmp_win)
+ TwmWindow *tmp_win;
+ {
+     TwmWindow *t;
+@@ -3396,7 +3261,7 @@
+ 
+ 
+ 
+-Iconify(tmp_win, def_x, def_y)
++void Iconify(tmp_win, def_x, def_y)
+ TwmWindow *tmp_win;
+ int def_x, def_y;
+ {
+@@ -3603,7 +3468,7 @@
+ 
+ 
+ 
+-SetMapStateProp(tmp_win, state)
++void SetMapStateProp(tmp_win, state)
+ TwmWindow *tmp_win;
+ int state;
+ {
+@@ -3647,7 +3512,7 @@
+ 
+ 
+ 
+-WarpToScreen (n, inc)
++void WarpToScreen (n, inc)
+     int n, inc;
+ {
+     Window dumwin;
+@@ -3691,7 +3556,7 @@
+  * BumpWindowColormap - rotate our internal copy of WM_COLORMAP_WINDOWS
+  */
+ 
+-BumpWindowColormap (tmp, inc)
++void BumpWindowColormap (tmp, inc)
+     TwmWindow *tmp;
+     int inc;
+ {
+@@ -3704,9 +3569,9 @@
+ 	cwins = (ColormapWindow **) malloc(sizeof(ColormapWindow *)*
+ 					   tmp->cmaps.number_cwins);
+ 	if (cwins) {
+-	    if (previously_installed =
+-		/* SUPPRESS 560 */(Scr->cmapInfo.cmaps == &tmp->cmaps &&
+-		tmp->cmaps.number_cwins)) {
++	    if ((previously_installed =
++		(Scr->cmapInfo.cmaps == &tmp->cmaps &&
++		 tmp->cmaps.number_cwins))) {
+ 		for (i = tmp->cmaps.number_cwins; i-- > 0; )
+ 		    tmp->cmaps.cwins[i]->colormap->state = 0;
+ 	    }
+@@ -3737,7 +3602,7 @@
+ 
+ 
+ 
+-HideIconManager ()
++void HideIconManager ()
+ {
+     SetMapStateProp (Scr->iconmgr.twm_win, WithdrawnState);
+     UnmapFrame(Scr->iconmgr.twm_win);
+@@ -3749,7 +3614,7 @@
+ 
+ 
+ 
+-SetBorder (tmp, onoroff)
++void SetBorder (tmp, onoroff)
+     TwmWindow *tmp;
+     Bool onoroff;
+ {
+@@ -3768,7 +3633,7 @@
+ 
+ 
+ 
+-DestroyMenu (menu)
++void DestroyMenu (menu)
+     MenuRoot *menu;
+ {
+     MenuItem *item;
+@@ -3890,14 +3755,14 @@
+     XSendEvent (dpy, w, False, 0L, (XEvent *) &ev);
+ }
+ 
+-SendDeleteWindowMessage (tmp, timestamp)
++void SendDeleteWindowMessage (tmp, timestamp)
+     TwmWindow *tmp;
+     Time timestamp;
+ {
+     send_clientmessage (tmp->w, _XA_WM_DELETE_WINDOW, timestamp);
+ }
+ 
+-SendSaveYourselfMessage (tmp, timestamp)
++void SendSaveYourselfMessage (tmp, timestamp)
+     TwmWindow *tmp;
+     Time timestamp;
+ {
+@@ -3905,7 +3770,7 @@
+ }
+ 
+ 
+-SendTakeFocusMessage (tmp, timestamp)
++void SendTakeFocusMessage (tmp, timestamp)
+     TwmWindow *tmp;
+     Time timestamp;
+ {
