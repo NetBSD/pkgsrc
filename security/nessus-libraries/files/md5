@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 2000/08/03 23:09:22 frueauf Exp $
+$NetBSD: md5,v 1.3 2000/10/15 17:19:52 frueauf Exp $
 
-MD5 (nessus-libraries-1.0.4.tar.gz) = 1fe60e282532c6018ed402a275903c15
+MD5 (nessus-libraries-1.0.5.tar.gz) = f34c510ab6e05119b3d6cf66558adb7d
