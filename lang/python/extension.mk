@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.10 2003/12/05 19:24:31 recht Exp $
+# $NetBSD: extension.mk,v 1.11 2004/06/12 21:18:31 darcy Exp $
 
 # derive a python version from the package name if possible
 # optionally handled quoted package names
@@ -29,7 +29,7 @@ do-build:
 
 do-install:
 	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} \
-	 ${PYSETUP} install ${_PYSETUPINSTALLARGS})
+	 ${PYSETUP} "install" ${_PYSETUPINSTALLARGS})
 .endif
 
 .if defined(PY_PATCHPLIST)
