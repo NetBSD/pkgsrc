@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/03/13 17:37:20 fredb Exp $
+# $NetBSD: Makefile,v 1.11 2002/04/27 02:39:00 hubertf Exp $
 
 DISTNAME=		yplot-1.1.0
 PKGREVISION=		1
@@ -12,6 +12,10 @@ COMMENT=		Yorick interface to PLplot
 DEPENDS+=		yorick-1.4*:../../math/yorick
 DEPENDS+=		plplot>=5.0.3:../../graphics/plplot
 BUILD_DEPENDS+=		teTeX>=1.0:../../print/teTeX
+
+.if (${MACHINE_ARCH} == "sparc64")
+IS_INTERACTIVE=		yes		# Hangs sparc64 bulk builds
+.endif
 
 EVAL_PREFIX+=		PLPLOT_PREFIX=plplot
 CONFIGURE_ENV+=		PLPLOT_PREFIX=${PLPLOT_PREFIX}
