@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/11/26 06:50:26 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/25 15:16:21 seb Exp $
 
 DISTNAME=	XML-XPath-1.08
 PKGNAME=	p5-${DISTNAME}
@@ -10,11 +10,8 @@ MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://sergeant.org
 COMMENT=	XML XPath software
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/XPath/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
