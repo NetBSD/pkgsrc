@@ -1,23 +1,33 @@
-# $NetBSD: Makefile,v 1.4 2002/04/27 10:12:40 rh Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/06 06:45:07 jlam Exp $
 #
 
-DISTNAME=		flac-1.0.2-src
-PKGNAME=		flac-xmms-1.0.2
-WRKSRC=			${WRKDIR}/flac-1.0.2/src/plugin_xmms/
-CATEGORIES=		audio archivers
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=flac/}
+DISTNAME=	flac-1.0.3
+PKGNAME=	flac-xmms-1.0.3
+CATEGORIES=	audio archivers
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flac/}
 
-MAINTAINER=		collver@linuxfreemail.com
-HOMEPAGE=		http://flac.sourceforge.net
-COMMENT=		FLAC xmms plugin
+MAINTAINER=	collver@linuxfreemail.com
+HOMEPAGE=	http://flac.sourceforge.net/
+COMMENT=	FLAC XMMS plugin
 
-MAKEFILE=		Makefile.lite
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
+GNU_CONFIGURE=		yes
+
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+XMMS_WRKSRC=	${WRKSRC}/src/plugin_xmms
+
+do-build:
+	@cd ${XMMS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/../../obj/lib/libxmms-flac.so \
-		${PREFIX}/lib/xmms/Input
+	@cd ${XMMS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 
-.include "../../audio/flac/buildlink.mk"
-.include "../../audio/xmms/buildlink.mk"
+.include "../../audio/flac/buildlink2.mk"
+.include "../../audio/xmms/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
