@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3337 2005/03/30 13:51:18 adam Exp $
+$NetBSD: TODO,v 1.3338 2005/03/30 21:59:31 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -524,7 +524,6 @@ Suggested package updates
 	o haskell-mode-1.45
 	o hercules-3.02
 	o hitchhiker-0.7
-	o horde-3.0.4
 	o hot-babe-0.2.2
 	o html2ps-1.0b4
 	o html2wml-0.4.11

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9697 2005/03/30 21:55:49 recht Exp $
+$NetBSD: CHANGES,v 1.9698 2005/03/30 21:59:31 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1834,3 +1834,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ap-jk to 1.2.8 [erh 2005-03-30]
 	Updated qmail-run to 20050330 [schmonz 2005-03-30]
 	Updated icu to 3.2nb1 [recht 2005-03-30]
+	Updated horde to 3.0.4 [adrianp 2005-03-30]
