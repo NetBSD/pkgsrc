@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.28 2004/08/25 01:20:11 wiz Exp $
+
+--- src/unix/devices.c.orig	2004-08-13 06:30:14.000000000 +0200
++++ src/unix/devices.c
+@@ -971,7 +971,7 @@ static void init_joycodes(void)
+ 			}
+ 			for (button = 0; button < JOY_BUTTONS; button++)
+ 			{
+-				snprintf(tempname, JOY_NAME_LEN, "Joy %d button %d", stick + 1 , axis + 1);
++				snprintf(tempname, JOY_NAME_LEN, "Joy %d button %d", stick + 1 , button + 1);
+ 				add_joylist_entry(tempname, JOYCODE(stick, CODETYPE_BUTTON, button), CODE_OTHER_DIGITAL);
+ 			}
+ 		}
