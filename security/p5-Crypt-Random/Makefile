@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:05 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:20:17 martti Exp $
 #
 
 DISTNAME=		Crypt-Random-1.11
@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 #HOMEPAGE=	
-COMMENT=		perl5 interface to /dev/random
+COMMENT=		Perl5 interface to /dev/random
 
 DEPENDS+=		p5-Class-Loader-[0-9]*:../../devel/p5-Class-Loader
 DEPENDS+=		p5-Math-Pari-[0-9]*:../../math/p5-Math-Pari

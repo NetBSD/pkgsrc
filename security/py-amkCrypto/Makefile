@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:53:11 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 17:20:29 martti Exp $
 #
 
 DISTNAME=	pycrypto-1.9a4
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.amk.ca/files/python/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.amk.ca/python/code/crypto.html
-COMMENT=	cryptographic and hash functions for Python
+COMMENT=	Cryptographic and hash functions for Python
 
 USE_BUILDLINK2=	yes
 PYBINMODULE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:11 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:20:29 martti Exp $
 #
 
 DISTNAME=	priv-1.0-beta
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	simonb@NetBSD.org
-COMMENT=	execute commands as a different user
+COMMENT=	Execute commands as a different user
 
 GNU_CONFIGURE=	yes
 
