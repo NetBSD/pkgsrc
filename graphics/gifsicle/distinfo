@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/06/01 12:14:10 salo Exp $
+$NetBSD: distinfo,v 1.3 2003/11/26 19:52:18 explorer Exp $
 
-SHA1 (gifsicle-1.37.tar.gz) = b9a090133f42a6e6d04ff4f4a584d5b28b90c10d
-Size (gifsicle-1.37.tar.gz) = 206839 bytes
+SHA1 (gifsicle-1.40.tar.gz) = d7de1a7a5021c8d987853ec89e1ccf816e5584b8
+Size (gifsicle-1.40.tar.gz) = 212021 bytes
