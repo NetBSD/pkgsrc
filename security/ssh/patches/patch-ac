@@ -1,30 +1,18 @@
-$NetBSD: patch-ac,v 1.7 1999/09/18 21:08:20 kim Exp $
+$NetBSD: patch-ac,v 1.8 1999/09/18 22:04:57 kim Exp $
 
 --- Makefile.in.orig	Wed May 12 07:19:31 1999
-+++ Makefile.in	Sat Sep 18 17:00:27 1999
-@@ -305,8 +305,10 @@
++++ Makefile.in	Sat Sep 18 17:25:37 1999
+@@ -304,7 +304,8 @@
+ GMPLIBS 	= -L$(GMPDIR) -lgmp
  GMPDEP 		= $(GMPDIR)/gmp.h $(GMPDIR)/libgmp.a
  
- ZLIBDIR		= zlib-1.0.4
--ZLIBDEP		= $(ZLIBDIR)/libz.a
--ZLIBLIBS	= -L$(ZLIBDIR) -lz
-+ZLIBINCDIR	= /usr/include
-+ZLIBLIBDIR	= /usr/lib
-+ZLIBDEP		= $(ZLIBINCDIR)/libz.a
-+ZLIBLIBS	= -L$(ZLIBLIBDIR) -lz
+-ZLIBDIR		= zlib-1.0.4
++#ZLIBDIR	= zlib-1.0.4
++ZLIBDIR		= /usr/lib
+ ZLIBDEP		= $(ZLIBDIR)/libz.a
+ ZLIBLIBS	= -L$(ZLIBDIR) -lz
  
- RSAREFDIR	= rsaref2
- RSAREFSRCDIR 	= $(RSAREFDIR)/source
-@@ -411,7 +413,7 @@
- 	$(CC) -o rfc-pg rfc-pg.o
- 
- .c.o:
--	$(CC) -c -I. $(KERBEROS_INCS) -I$(srcdir)/$(GMPDIR) -I$(srcdir)/$(ZLIBDIR) $(DEFS) -DHOST_KEY_FILE=\"$(HOST_KEY_FILE)\" -DHOST_CONFIG_FILE=\"$(HOST_CONFIG_FILE)\" -DSERVER_CONFIG_FILE=\"$(SERVER_CONFIG_FILE)\" -DSSH_PROGRAM=\"$(SSH_PROGRAM)\" -DETCDIR=\"$(etcdir)\" -DPIDDIR=\"$(piddir)\" -DSSH_BINDIR=\"$(bindir)\" -DTIS_MAP_FILE=\"$(TIS_MAP_FILE)\" $(CFLAGS) $(X_CFLAGS) $<
-+	$(CC) -c -I. $(KERBEROS_INCS) -I$(srcdir)/$(GMPDIR) -I$(srcdir)/$(ZLIBINCDIR) $(DEFS) -DHOST_KEY_FILE=\"$(HOST_KEY_FILE)\" -DHOST_CONFIG_FILE=\"$(HOST_CONFIG_FILE)\" -DSERVER_CONFIG_FILE=\"$(SERVER_CONFIG_FILE)\" -DSSH_PROGRAM=\"$(SSH_PROGRAM)\" -DETCDIR=\"$(etcdir)\" -DPIDDIR=\"$(piddir)\" -DSSH_BINDIR=\"$(bindir)\" -DTIS_MAP_FILE=\"$(TIS_MAP_FILE)\" $(CFLAGS) $(X_CFLAGS) $<
- 
- sshd: $(SSHD_OBJS) $(GMPDEP) $(RSAREFDEP) $(ZLIBDEP)
- 	-rm -f sshd
-@@ -459,14 +461,14 @@
+@@ -459,14 +460,14 @@
  $(GMPDIR)/libgmp.a:
  	cd $(GMPDIR); $(MAKE)
  
@@ -47,7 +35,7 @@ $NetBSD: patch-ac,v 1.7 1999/09/18 21:08:20 kim Exp $
  
  $(RSAREFSRCDIR)/librsaref.a:
  	-if test '!' -d $(RSAREFDIR); then \
-@@ -523,10 +525,10 @@
+@@ -523,10 +524,10 @@
  # (otherwise it can only log in as the user it runs as, and must be
  # bound to a non-privileged port).  Also, password authentication may
  # not be available if non-root and using shadow passwords.
@@ -61,7 +49,7 @@ $NetBSD: patch-ac,v 1.7 1999/09/18 21:08:20 kim Exp $
  	-mv $(install_prefix)$(bindir)/ssh1 $(install_prefix)$(bindir)/ssh1.old
  	$(INSTALL_PROGRAM) -o root -m $(SSH_INSTALL_MODE) ssh $(install_prefix)$(bindir)/ssh1
  	-if test -f $(install_prefix)$(bindir)/ssh2; then \
-@@ -549,7 +551,7 @@
+@@ -549,7 +550,7 @@
  	-for p in $(NORMAL_PROGRAMS) $(X_PROGRAMS) $(OTHER_PROGRAMS); do \
  	  rm -f $(install_prefix)$(bindir)/$${p}1.old ; \
  	  mv $(install_prefix)$(bindir)/$${p}1 $(install_prefix)$(bindir)/$${p}1.old; \
@@ -70,7 +58,7 @@ $NetBSD: patch-ac,v 1.7 1999/09/18 21:08:20 kim Exp $
  	  if test -f $(install_prefix)$(bindir)/$${p}2; then \
  	    echo "Ssh version 2 $$p utility found, installation doesn't touch $$p link"; \
  	  else \
-@@ -566,7 +568,7 @@
+@@ -566,7 +567,7 @@
  	  rm -f $(install_prefix)$(bindir)/$${p}1.old ; \
  	  mv $(install_prefix)$(bindir)/$${p}1 $(install_prefix)$(bindir)/$${p}1.old; \
  	  $(INSTALL_DATA) $$p $(install_prefix)$(bindir)/$${p}1; \
@@ -79,7 +67,7 @@ $NetBSD: patch-ac,v 1.7 1999/09/18 21:08:20 kim Exp $
  	  if test -f $(install_prefix)$(bindir)/$${p}2; then \
  	    echo "Ssh version 2 $$p utility found, installation doesn't touch $$p link"; \
  	  else \
-@@ -582,7 +584,7 @@
+@@ -582,7 +583,7 @@
  	-for p in $(SBIN_PROGRAMS); do \
  	  rm -f $(install_prefix)$(sbindir)/$${p}1.old ; \
  	  mv $(install_prefix)$(sbindir)/$${p}1 $(install_prefix)$(sbindir)/$${p}1.old; \
@@ -88,7 +76,7 @@ $NetBSD: patch-ac,v 1.7 1999/09/18 21:08:20 kim Exp $
  	  if test -f $(install_prefix)$(sbindir)/$${p}2; then \
  	    echo "Ssh version 2 $$p utility found, installation doesn't touch $$p link"; \
  	  else \
-@@ -596,7 +598,7 @@
+@@ -596,7 +597,7 @@
  	      $(install_prefix)$(sbindir)/`echo $$p | sed '$(transform)'`; fi;\
  	done
  	-for p in $(MAN1PAGES); do \
@@ -97,7 +85,7 @@ $NetBSD: patch-ac,v 1.7 1999/09/18 21:08:20 kim Exp $
  	  rm -f $(install_prefix)$(man1dir)/$$p.1 ;\
  	  $(LN_S) $${p}1.1 $(install_prefix)$(man1dir)/$$p.1 ;\
  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-@@ -615,7 +617,7 @@
+@@ -615,7 +616,7 @@
  	    $(install_prefix)$(man1dir)/`echo slogin.1 | sed '$(transform)'`; \
  	fi
  	-for p in $(MAN1GENERATED); do \
@@ -106,7 +94,7 @@ $NetBSD: patch-ac,v 1.7 1999/09/18 21:08:20 kim Exp $
  	  rm -f $(install_prefix)$(man1dir)/$$p.1 ; \
  	  $(LN_S) $${p}1.1 $(install_prefix)$(man1dir)/$$p.1 ; \
  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-@@ -625,7 +627,7 @@
+@@ -625,7 +626,7 @@
  	  fi; \
  	done
  	-for p in $(MAN8GENERATED); do \
@@ -115,7 +103,7 @@ $NetBSD: patch-ac,v 1.7 1999/09/18 21:08:20 kim Exp $
  	  rm -f $(install_prefix)$(man8dir)/$$p.8 ; \
  	  $(LN_S) $${p}1.8 $(install_prefix)$(man8dir)/$$p.8 ; \
  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-@@ -636,12 +638,13 @@
+@@ -636,12 +637,13 @@
  
  install-configs:
  	-if test '!' -f $(install_prefix)$(HOST_CONFIG_FILE); then \
@@ -131,7 +119,7 @@ $NetBSD: patch-ac,v 1.7 1999/09/18 21:08:20 kim Exp $
  	    $(install_prefix)$(SERVER_CONFIG_FILE); \
  	  rm -f /tmp/ssh_inst.$$$$; fi
  
-@@ -681,13 +684,13 @@
+@@ -681,13 +683,13 @@
  	-rm -f *.o gmon.out *core $(PROGRAMS) rfc-pg
  	cd $(GMPDIR); $(MAKE) clean
  #	cd $(RSAREFSRCDIR); rm -f *.o *.a
@@ -147,7 +135,7 @@ $NetBSD: patch-ac,v 1.7 1999/09/18 21:08:20 kim Exp $
  
  dist: dist-free
  
-@@ -720,8 +723,8 @@
+@@ -720,8 +722,8 @@
  	gzip -cd $(GMPDIR)/$(GMPDIR).tar.gz | (cd $(DISTNAME); tar pxf - )
  #	tar cf - $(RSAREFDIR) | (cd $(DISTNAME); tar xf -)
  #	cd $(DISTNAME)/$(RSAREFSRCDIR); rm -f *.o *.a
@@ -158,7 +146,7 @@ $NetBSD: patch-ac,v 1.7 1999/09/18 21:08:20 kim Exp $
  
  #ifdef F_SECURE_COMMERCIAL
  #
-@@ -749,7 +752,7 @@
+@@ -749,7 +751,7 @@
  	 (echo "s/\.$$old_version\"/.$$new_version\"/g"; echo w; echo q) | ed $(srcdir)/version.h >/dev/null
  
  depend:
