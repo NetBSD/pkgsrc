@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ja-freewnn,v 1.2 2001/04/11 22:48:48 kei Exp $
+# $NetBSD: ja_freewnn,v 1.1 2001/06/25 18:39:19 wiz Exp $
 #
 # PROVIDE: freewnn
 # REQUIRE: DAEMON
