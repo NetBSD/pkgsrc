@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.43 2003/09/10 19:12:55 jmmv Exp $
+# $Id: pkgchk.sh,v 1.44 2003/09/16 14:36:12 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -227,9 +227,16 @@ run_cmd()
     fi
     echo $1
     if [ -z "$opt_n" ];then
-        sh -c "$1" || FAIL=1
+	if [ -n "$opt_L" ] ; then
+	    sh -c "$1" > "$opt_L" 2>&1 || FAIL=1
+	else
+	    sh -c "$1" || FAIL=1
+	fi
 	if [ -n "$FAIL" ] ; then
             echo "** '$1' failed"
+	    if [ -n "$opt_L" ] ; then
+		tail -20 "$opt_L"
+	    fi
             if [ "$FAILOK" != 1 ]; then
                 exit 1
             fi
@@ -237,7 +244,7 @@ run_cmd()
     fi
     }
 
-args=`getopt BC:D:U:abcfhiknrsuv $*`
+args=`getopt BC:D:L:U:abcfhiknrsuv $*`
 if [ $? != 0 ]; then
     opt_h=1
 fi
@@ -247,6 +254,7 @@ while [ $# != 0 ]; do
 	-B )    opt_B=1 ; opt_i=1 ;;
 	-C )	opt_C="$2" ; shift;;
 	-D )	opt_D="$2" ; shift;;
+	-L )	opt_L="$2" ; shift;;
 	-U )	opt_U="$2" ; shift;;
 	-a )	opt_a=1 ; opt_c=1 ;;
 	-b )	opt_b=1 ;;
@@ -280,6 +288,7 @@ if [ -n "$opt_h" -o $# != 1 ];then
 	-B      Check the "Build version" of packages (implies -i)
 	-C conf Use pkgchk.conf file 'conf'
 	-D tags Comma separated list of additional pkgchk.conf tags to set
+	-L file Redirect output from commands run into file (should be fullpath)
 	-U tags Comma separated list of pkgchk.conf tags to unset
 	-a      Add all missing packages (implies -c)
 	-b      Limit installations to binary packages
@@ -329,6 +338,10 @@ else
   ac_n= ac_c='\c' ac_t=
 fi
 
+if [ -n "$opt_L" ] ; then
+    rm -f $opt_L
+fi
+
 extract_variables
 if [ -n "$opt_C" ] ; then
     PKGCHK_CONF=$opt_C
@@ -340,6 +353,7 @@ real_pkgsrcdir=`pwd`
 if [ -n "$opt_i" ];then
     PKGDIRLIST=`sh -c "${PKG_INFO} -B \*" | ${AWK} -F= '/PKGPATH=/{print $2" "}'`
 fi
+
 
 if [ -n "$opt_c" ];then
 
