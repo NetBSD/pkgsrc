@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4853 2004/02/16 01:21:03 minskim Exp $
+$NetBSD: CHANGES,v 1.4854 2004/02/16 02:02:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -863,3 +863,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated snownews to 1.4.4 [wiz 2004-02-15]
 	Updated gucharmap to 1.2.0nb5 [jmmv 2004-02-16]
 	Added scew-0.3.1 [minskim 2004-02-16]
+	Added rss2html-0.5 [minskim 2004-02-16]
