@@ -1,26 +1,26 @@
-$NetBSD: patch-ab,v 1.8 2000/07/10 11:12:10 wiz Exp $
+$NetBSD: patch-ab,v 1.9 2000/08/10 10:44:10 wiz Exp $
 
---- Makefile.common.orig	Fri Jun 30 21:59:36 2000
-+++ Makefile.common	Sun Jul  9 23:51:05 2000
-@@ -67,7 +67,7 @@
- $(OBJECTS): %.o: %.c
- 	$(CC) -c $(CFLAGS) $(INCLUDE) -o $@ $<
+--- Makefile.common.orig	Fri Aug  4 02:17:52 2000
++++ Makefile.common	Thu Aug 10 12:16:47 2000
+@@ -68,7 +68,7 @@
+ # Note that the user may have configured -I options into CFLAGS.
+ 	$(CC) -c $(INCLUDE) $(CFLAGS) -o $@ $<
  
 -LIBOPT = $(SRCDIR)/libopt
-+LIBOPT = /bin/echo		# XXX must exist, can't be ${ECHO} (shell builtin)
++LIBOPT = /bin/echo	# XXX must exist, can't be ${ECHO} (shell builtin)
  
  # Rules for conventional single-object file executables
  $(PORTBINARIES): %: %.o $(NETPBMLIBS) $(LIBOPT)
-@@ -97,7 +97,7 @@
- # BUILDING NETPBM LIBRARIES
+@@ -103,7 +103,7 @@
  
  $(LIBOBJECTS): %.o: %.c
--	$(CC) -c $(CFLAGS) $(CFLAGS_SHLIB) $(INCLUDE) -o $@ $<
-+	$(LIBTOOL) $(CC) -c $(CFLAGS) $(CFLAGS_SHLIB) $(INCLUDE) $<
+ # Note that the user may have configured -I options into CFLAGS.
+-	$(CC) -c $(INCLUDE) $(CFLAGS) $(CFLAGS_SHLIB) -o $@ $<
++	$(LIBTOOL) $(CC) -c $(INCLUDE) $(CFLAGS) $(CFLAGS_SHLIB) $<
  
  SONAME = lib$(LIBROOT).so.$(MAJ)
  
-@@ -117,10 +117,8 @@
+@@ -123,10 +123,8 @@
            `$(LIBOPT) $(LIBLIBS)` -lc
  
  # Static library.  Unused by default, but with a small change to make files...
@@ -33,7 +33,7 @@ $NetBSD: patch-ab,v 1.8 2000/07/10 11:12:10 wiz Exp $
  
  # Some maintenance notes about $(INSTALL): Some install programs can
  # install multiple files in one shot; others can take only one file at
-@@ -163,7 +161,7 @@
+@@ -169,7 +167,7 @@
  # Make and Install know that pbmmake.exe counts as pbmmake.
  	for x in $(BINARIES); \
  	do \
@@ -42,9 +42,9 @@ $NetBSD: patch-ab,v 1.8 2000/07/10 11:12:10 wiz Exp $
  	done
  
  .PHONY: install.script
-@@ -214,8 +212,8 @@
- # built.  If a previous make STATICLIB=N didn't build the static
- # library, the dependency here will do that.
+@@ -222,8 +220,8 @@
+ # built.  So if you later do a make install.staticlib, the dependency
+ # here causes the static library to be built at that time.
  .PHONY: install.staticlib
 -install.staticlib: lib$(LIBROOT).a
 -	$(INSTALL) -c -m $(INSTALL_PERM_LIBS) $< $(INSTALLLIBS)/$<
@@ -52,8 +52,8 @@ $NetBSD: patch-ab,v 1.8 2000/07/10 11:12:10 wiz Exp $
 +	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) lib$(LIBROOT).la $(PREFIX)/lib
  
  .PHONY: install.lib.common
- ifeq ($(NETPBMLIBSUFFIX),so)
-@@ -229,7 +227,7 @@
+ # install a shared library
+@@ -235,7 +233,7 @@
  
  .PHONY: clean.common
  clean.common:
