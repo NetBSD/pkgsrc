@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/20 14:38:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/06/10 13:31:35 markd Exp $
 share/doc/kde/HTML/de/KRegExpEditor/common
 share/doc/kde/HTML/de/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/de/KRegExpEditor/index.docbook
@@ -440,6 +440,12 @@ share/doc/kde/HTML/de/kget/kget5.png
 share/doc/kde/HTML/de/kghostview/common
 share/doc/kde/HTML/de/kghostview/index.cache.bz2
 share/doc/kde/HTML/de/kghostview/index.docbook
+share/doc/kde/HTML/de/kgoldrunner/common
+share/doc/kde/HTML/de/kgoldrunner/editbar.png
+share/doc/kde/HTML/de/kgoldrunner/index.cache.bz2
+share/doc/kde/HTML/de/kgoldrunner/index.docbook
+share/doc/kde/HTML/de/kgoldrunner/select.png
+share/doc/kde/HTML/de/kgoldrunner/tute008.png
 share/doc/kde/HTML/de/kgpg/common
 share/doc/kde/HTML/de/kgpg/editor.png
 share/doc/kde/HTML/de/kgpg/index.cache.bz2
@@ -783,6 +789,9 @@ share/doc/kde/HTML/de/knode/using-subscribing.docbook
 share/doc/kde/HTML/de/knotes/common
 share/doc/kde/HTML/de/knotes/index.cache.bz2
 share/doc/kde/HTML/de/knotes/index.docbook
+share/doc/kde/HTML/de/kolf/common
+share/doc/kde/HTML/de/kolf/index.cache.bz2
+share/doc/kde/HTML/de/kolf/index.docbook
 share/doc/kde/HTML/de/kompare/common
 share/doc/kde/HTML/de/kompare/index.cache.bz2
 share/doc/kde/HTML/de/kompare/index.docbook
@@ -853,6 +862,9 @@ share/doc/kde/HTML/de/kpager/index.docbook
 share/doc/kde/HTML/de/kpaint/common
 share/doc/kde/HTML/de/kpaint/index.cache.bz2
 share/doc/kde/HTML/de/kpaint/index.docbook
+share/doc/kde/HTML/de/kpat/common
+share/doc/kde/HTML/de/kpat/index.cache.bz2
+share/doc/kde/HTML/de/kpat/index.docbook
 share/doc/kde/HTML/de/kpat/man.docbook
 share/doc/kde/HTML/de/kpercentage/answer.png
 share/doc/kde/HTML/de/kpercentage/commands.docbook
@@ -1065,6 +1077,9 @@ share/doc/kde/HTML/de/ktouch/screenshot3.png
 share/doc/kde/HTML/de/ktron/common
 share/doc/kde/HTML/de/ktron/index.cache.bz2
 share/doc/kde/HTML/de/ktron/index.docbook
+share/doc/kde/HTML/de/ktuberling/common
+share/doc/kde/HTML/de/ktuberling/index.cache.bz2
+share/doc/kde/HTML/de/ktuberling/index.docbook
 share/doc/kde/HTML/de/ktuberling/technical-reference.docbook
 share/doc/kde/HTML/de/kuickshow/common
 share/doc/kde/HTML/de/kuickshow/index.cache.bz2
@@ -1162,24 +1177,41 @@ share/doc/kde/HTML/de/noatun/index.cache.bz2
 share/doc/kde/HTML/de/noatun/index.docbook
 share/doc/kde/HTML/de/quanta/action-script-out-error-options.png
 share/doc/kde/HTML/de/quanta/adv-quanta.docbook
+share/doc/kde/HTML/de/quanta/attribute_tree.png
 share/doc/kde/HTML/de/quanta/common
 share/doc/kde/HTML/de/quanta/conf-action.png
 share/doc/kde/HTML/de/quanta/conf-action1.png
 share/doc/kde/HTML/de/quanta/conf-action2.png
 share/doc/kde/HTML/de/quanta/conf-action3.png
+share/doc/kde/HTML/de/quanta/contents2.png
 share/doc/kde/HTML/de/quanta/debugging-quanta.docbook
+share/doc/kde/HTML/de/quanta/doc-view1.png
+share/doc/kde/HTML/de/quanta/dtep_doc_img15.png
+share/doc/kde/HTML/de/quanta/dtep_doc_img18.png
+share/doc/kde/HTML/de/quanta/dtep_doc_img21.png
+share/doc/kde/HTML/de/quanta/dtep_doc_img22.png
+share/doc/kde/HTML/de/quanta/dtep_doc_img23.png
+share/doc/kde/HTML/de/quanta/dtep_doc_img24.png
+share/doc/kde/HTML/de/quanta/dtep_doc_img25.png
+share/doc/kde/HTML/de/quanta/dtep_doc_img7.png
+share/doc/kde/HTML/de/quanta/dtep_doc_img8.png
+share/doc/kde/HTML/de/quanta/exec.png
 share/doc/kde/HTML/de/quanta/extending-quanta.docbook
+share/doc/kde/HTML/de/quanta/ftab.png
 share/doc/kde/HTML/de/quanta/fundamentals.docbook
 share/doc/kde/HTML/de/quanta/index.cache.bz2
 share/doc/kde/HTML/de/quanta/index.docbook
 share/doc/kde/HTML/de/quanta/installation.docbook
 share/doc/kde/HTML/de/quanta/introduction.docbook
+share/doc/kde/HTML/de/quanta/kfr-icon.png
+share/doc/kde/HTML/de/quanta/plugin-edit.png
 share/doc/kde/HTML/de/quanta/project-1.png
 share/doc/kde/HTML/de/quanta/project-3.png
 share/doc/kde/HTML/de/quanta/project-add-local-files.png
 share/doc/kde/HTML/de/quanta/project-tree-view-dir-rmb-menu.png
 share/doc/kde/HTML/de/quanta/project-tree-view-file-rmb-menu.png
 share/doc/kde/HTML/de/quanta/project-upload-dialog.png
+share/doc/kde/HTML/de/quanta/ptab.png
 share/doc/kde/HTML/de/quanta/quanta-menus.docbook
 share/doc/kde/HTML/de/quanta/quanta-projects.docbook
 share/doc/kde/HTML/de/quanta/quantamdi-editor.png
@@ -1187,9 +1219,13 @@ share/doc/kde/HTML/de/quanta/quantamdi-toolbar.png
 share/doc/kde/HTML/de/quanta/quantamdi-treeview.png
 share/doc/kde/HTML/de/quanta/quantamdi.png
 share/doc/kde/HTML/de/quanta/set-conf-action.png
+share/doc/kde/HTML/de/quanta/tag_misc.png
 share/doc/kde/HTML/de/quanta/taginputex.png
 share/doc/kde/HTML/de/quanta/template-rmb.png
 share/doc/kde/HTML/de/quanta/toolbars.png
+share/doc/kde/HTML/de/quanta/ttab.png
+share/doc/kde/HTML/de/quanta/view_sidetree.png
+share/doc/kde/HTML/de/quanta/vplsourceview.png
 share/doc/kde/HTML/de/umbrello/asf.xmi
 share/doc/kde/HTML/de/umbrello/authors.docbook
 share/doc/kde/HTML/de/umbrello/code_import_and_generation.docbook
@@ -1477,6 +1513,7 @@ share/kde/locale/de/LC_MESSAGES/kghostview.mo
 share/kde/locale/de/LC_MESSAGES/kgoldrunner.mo
 share/kde/locale/de/LC_MESSAGES/kgpg.mo
 share/kde/locale/de/LC_MESSAGES/kgpgcertmanager.mo
+share/kde/locale/de/LC_MESSAGES/kgreet_classic.mo
 share/kde/locale/de/LC_MESSAGES/khangman.mo
 share/kde/locale/de/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/de/LC_MESSAGES/khexedit.mo
@@ -1553,6 +1590,7 @@ share/kde/locale/de/LC_MESSAGES/knotify.mo
 share/kde/locale/de/LC_MESSAGES/kodo.mo
 share/kde/locale/de/LC_MESSAGES/kolf.mo
 share/kde/locale/de/LC_MESSAGES/kolourpicker.mo
+share/kde/locale/de/LC_MESSAGES/kommander.mo
 share/kde/locale/de/LC_MESSAGES/kompare.mo
 share/kde/locale/de/LC_MESSAGES/konq_smbmounterplugin.mo
 share/kde/locale/de/LC_MESSAGES/konqsidebar_mediaplayer.mo
@@ -1792,6 +1830,7 @@ share/kde/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/konqueror
 @dirrm share/doc/kde/HTML/de/konq-plugins
 @dirrm share/doc/kde/HTML/de/kompare
+@dirrm share/doc/kde/HTML/de/kolf
 @dirrm share/doc/kde/HTML/de/knotes
 @dirrm share/doc/kde/HTML/de/knode
 @dirrm share/doc/kde/HTML/de/knewsticker
@@ -1844,6 +1883,7 @@ share/kde/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/khangman
 @dirrm share/doc/kde/HTML/de/kgpgcertmanager
 @dirrm share/doc/kde/HTML/de/kgpg
+@dirrm share/doc/kde/HTML/de/kgoldrunner
 @dirrm share/doc/kde/HTML/de/kghostview
 @dirrm share/doc/kde/HTML/de/kget
 @dirrm share/doc/kde/HTML/de/kgamma
@@ -1939,7 +1979,7 @@ share/kde/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/kaddressbook
 @dirrm share/doc/kde/HTML/de/kaboodle
 @dirrm share/doc/kde/HTML/de/flashkard
-@dirrm share/doc/kde/HTML/de/common
+@comment dirrm share/doc/kde/HTML/de/common
 @dirrm share/doc/kde/HTML/de/cervisia
 @dirrm share/doc/kde/HTML/de/atlantik
 @dirrm share/doc/kde/HTML/de/artsbuilder

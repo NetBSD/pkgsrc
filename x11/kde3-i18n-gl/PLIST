@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/20 14:38:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/06/10 13:31:35 markd Exp $
 share/kde/locale/gl/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/gl/LC_MESSAGES/amor.mo
 share/kde/locale/gl/LC_MESSAGES/appletproxy.mo
@@ -25,6 +25,7 @@ share/kde/locale/gl/LC_MESSAGES/flashkard.mo
 share/kde/locale/gl/LC_MESSAGES/fontinst.mo
 share/kde/locale/gl/LC_MESSAGES/htmlsearch.mo
 share/kde/locale/gl/LC_MESSAGES/imagerename_plugin.mo
+share/kde/locale/gl/LC_MESSAGES/irkick.mo
 share/kde/locale/gl/LC_MESSAGES/kabc_dir.mo
 share/kde/locale/gl/LC_MESSAGES/kabc_file.mo
 share/kde/locale/gl/LC_MESSAGES/kabc_ldap.mo
@@ -44,7 +45,10 @@ share/kde/locale/gl/LC_MESSAGES/katedefaultproject.mo
 share/kde/locale/gl/LC_MESSAGES/katehelloworld.mo
 share/kde/locale/gl/LC_MESSAGES/kateprojectmanager.mo
 share/kde/locale/gl/LC_MESSAGES/kbattleship.mo
+share/kde/locale/gl/LC_MESSAGES/kbounce.mo
 share/kde/locale/gl/LC_MESSAGES/kcalc.mo
+share/kde/locale/gl/LC_MESSAGES/kcardchooser.mo
+share/kde/locale/gl/LC_MESSAGES/kcharselecapplet.mo
 share/kde/locale/gl/LC_MESSAGES/kcm_kviewgeneralconfig.mo
 share/kde/locale/gl/LC_MESSAGES/kcm_kviewpluginsconfig.mo
 share/kde/locale/gl/LC_MESSAGES/kcm_kviewviewerpluginsconfig.mo
@@ -54,6 +58,7 @@ share/kde/locale/gl/LC_MESSAGES/kcmarts.mo
 share/kde/locale/gl/LC_MESSAGES/kcmaudiocd.mo
 share/kde/locale/gl/LC_MESSAGES/kcmbackground.mo
 share/kde/locale/gl/LC_MESSAGES/kcmbell.mo
+share/kde/locale/gl/LC_MESSAGES/kcmcddb.mo
 share/kde/locale/gl/LC_MESSAGES/kcmcgi.mo
 share/kde/locale/gl/LC_MESSAGES/kcmcolors.mo
 share/kde/locale/gl/LC_MESSAGES/kcmcomponentchooser.mo
@@ -82,6 +87,7 @@ share/kde/locale/gl/LC_MESSAGES/kcmkonsole.mo
 share/kde/locale/gl/LC_MESSAGES/kcmkontactnt.mo
 share/kde/locale/gl/LC_MESSAGES/kcmktalkd.mo
 share/kde/locale/gl/LC_MESSAGES/kcmkvaio.mo
+share/kde/locale/gl/LC_MESSAGES/kcmkwallet.mo
 share/kde/locale/gl/LC_MESSAGES/kcmkwindecoration.mo
 share/kde/locale/gl/LC_MESSAGES/kcmkwintheme.mo
 share/kde/locale/gl/LC_MESSAGES/kcmkwm.mo
@@ -167,6 +173,7 @@ share/kde/locale/gl/LC_MESSAGES/kfindpart.mo
 share/kde/locale/gl/LC_MESSAGES/kfloppy.mo
 share/kde/locale/gl/LC_MESSAGES/kfmclient.mo
 share/kde/locale/gl/LC_MESSAGES/kfontinst.mo
+share/kde/locale/gl/LC_MESSAGES/kfouleggs.mo
 share/kde/locale/gl/LC_MESSAGES/kgamma.mo
 share/kde/locale/gl/LC_MESSAGES/kget.mo
 share/kde/locale/gl/LC_MESSAGES/kghostview.mo
@@ -242,9 +249,11 @@ share/kde/locale/gl/LC_MESSAGES/kreadconfig.mo
 share/kde/locale/gl/LC_MESSAGES/krec.mo
 share/kde/locale/gl/LC_MESSAGES/kruler.mo
 share/kde/locale/gl/LC_MESSAGES/krunapplet.mo
+share/kde/locale/gl/LC_MESSAGES/ksame.mo
 share/kde/locale/gl/LC_MESSAGES/kscreensaver.mo
 share/kde/locale/gl/LC_MESSAGES/ksig.mo
 share/kde/locale/gl/LC_MESSAGES/ksim.mo
+share/kde/locale/gl/LC_MESSAGES/ksirtet.mo
 share/kde/locale/gl/LC_MESSAGES/ksmiletris.mo
 share/kde/locale/gl/LC_MESSAGES/ksmserver.mo
 share/kde/locale/gl/LC_MESSAGES/ksnake.mo
@@ -290,6 +299,7 @@ share/kde/locale/gl/LC_MESSAGES/kworldclock.mo
 share/kde/locale/gl/LC_MESSAGES/kwriteconfig.mo
 share/kde/locale/gl/LC_MESSAGES/kxkb.mo
 share/kde/locale/gl/LC_MESSAGES/kxmlrpcd.mo
+share/kde/locale/gl/LC_MESSAGES/libkcddb.mo
 share/kde/locale/gl/LC_MESSAGES/libkdegames.mo
 share/kde/locale/gl/LC_MESSAGES/libkicker.mo
 share/kde/locale/gl/LC_MESSAGES/libkickermenu_kdeprint.mo
