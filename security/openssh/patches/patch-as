@@ -1,0 +1,20 @@
+$NetBSD: patch-as,v 1.3 2005/03/07 23:29:50 tv Exp $
+
+--- log.h.orig	2004-06-21 22:57:44.000000000 -0400
++++ log.h
+@@ -53,7 +53,7 @@ void     log_init(char *, LogLevel, Sysl
+ SyslogFacility	log_facility_number(char *);
+ LogLevel log_level_number(char *);
+ 
+-void     fatal(const char *, ...) __dead __attribute__((format(printf, 1, 2)));
++void     fatal(const char *, ...) __noreturn __attribute__((format(printf, 1, 2)));
+ void     error(const char *, ...) __attribute__((format(printf, 1, 2)));
+ void     logit(const char *, ...) __attribute__((format(printf, 1, 2)));
+ void     verbose(const char *, ...) __attribute__((format(printf, 1, 2)));
+@@ -62,5 +62,5 @@ void     debug2(const char *, ...) __att
+ void     debug3(const char *, ...) __attribute__((format(printf, 1, 2)));
+ 
+ void	 do_log(LogLevel, const char *, va_list);
+-void	 cleanup_exit(int) __dead;
++void	 cleanup_exit(int) __noreturn;
+ #endif
