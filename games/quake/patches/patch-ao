@@ -1,0 +1,27 @@
+$NetBSD: patch-ao,v 1.1 2000/08/07 02:30:43 wiz Exp $
+
+--- QW/client/glquake.h.orig	Tue Dec 21 15:49:06 1999
++++ QW/client/glquake.h	Mon Aug  7 03:08:01 2000
+@@ -35,15 +35,15 @@
+ 
+ 
+ // Function prototypes for the Texture Object Extension routines
+-typedef GLboolean (APIENTRY *ARETEXRESFUNCPTR)(GLsizei, const GLuint *,
++typedef GLboolean (GLAPIENTRY *ARETEXRESFUNCPTR)(GLsizei, const GLuint *,
+                     const GLboolean *);
+-typedef void (APIENTRY *BINDTEXFUNCPTR)(GLenum, GLuint);
+-typedef void (APIENTRY *DELTEXFUNCPTR)(GLsizei, const GLuint *);
+-typedef void (APIENTRY *GENTEXFUNCPTR)(GLsizei, GLuint *);
+-typedef GLboolean (APIENTRY *ISTEXFUNCPTR)(GLuint);
+-typedef void (APIENTRY *PRIORTEXFUNCPTR)(GLsizei, const GLuint *,
++typedef void (GLAPIENTRY *BINDTEXFUNCPTR)(GLenum, GLuint);
++typedef void (GLAPIENTRY *DELTEXFUNCPTR)(GLsizei, const GLuint *);
++typedef void (GLAPIENTRY *GENTEXFUNCPTR)(GLsizei, GLuint *);
++typedef GLboolean (GLAPIENTRY *ISTEXFUNCPTR)(GLuint);
++typedef void (GLAPIENTRY *PRIORTEXFUNCPTR)(GLsizei, const GLuint *,
+                     const GLclampf *);
+-typedef void (APIENTRY *TEXSUBIMAGEPTR)(int, int, int, int, int, int, int, int, void *);
++typedef void (GLAPIENTRY *TEXSUBIMAGEPTR)(int, int, int, int, int, int, int, int, void *);
+ 
+ extern	BINDTEXFUNCPTR bindTexFunc;
+ extern	DELTEXFUNCPTR delTexFunc;
