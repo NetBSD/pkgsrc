@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/09/21 17:38:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/22 09:44:33 adam Exp $
 
 DISTNAME=	# empty
 PKGNAME=	xorg-${XORG_VER}
@@ -23,15 +23,16 @@ DEPENDS+=	xorg-fontsTruetype>=${XORG_VER}:../../fonts/xorg-fontsTruetype
 DEPENDS+=	xorg-fontsType1>=${XORG_VER}:../../fonts/xorg-fontsType1
 #DEPENDS+=	xorg-docs>=${XORG_VER}:../../misc/xorg-docs
 
-NO_BUILD=		# defined
-NO_BUILDLINK=		# defined
-NO_CHECKSUM=		# defined
-NO_MTREE=		# defined
-NO_XORG_TARGETS=	# defined
+NO_BUILD=		yes
+NO_BUILDLINK=		yes
+NO_CHECKSUM=		yes
+NO_MTREE=		yes
+NO_XORG_TARGETS=	yes
 USE_DIRS+=		xorg-1.0
-NO_CONFIGURE=		# defined
+NO_CONFIGURE=		yes
 
 do-install:
 
 .include "Makefile.common"
+
 .include "../../mk/bsd.pkg.mk"
