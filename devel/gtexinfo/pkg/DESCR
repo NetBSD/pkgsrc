@@ -1,7 +1,5 @@
 GNU hypertext utilities to manipulate info files.
 
-Version 3.9.
-
 The  GNU  project has a hypertext system called Info which
 allows the same source file to  be  either  printed  as  a
 paper manual, or viewed using info.  It is possible to use

@@ -1,0 +1,19 @@
+*** util/texindex.c.orig	Thu Jul 24 19:34:46 1997
+--- util/texindex.c	Fri Oct  3 13:11:13 1997
+***************
+*** 1692,1698 ****
+  }
+  
+  #if !defined (HAVE_STRERROR)
+! extern char *sys_errlist[];
+  extern int sys_nerr;
+  
+  char *
+--- 1692,1698 ----
+  }
+  
+  #if !defined (HAVE_STRERROR)
+! extern const char * const sys_errlist[];
+  extern int sys_nerr;
+  
+  char *
