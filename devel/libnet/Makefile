@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2000/06/01 11:23:22 rh Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/14 12:07:45 itojun Exp $
 #
 
-DISTNAME=	libnet-1.0
+DISTNAME=	libnet-1.0.1b
 CATEGORIES=	devel net
 MASTER_SITES=	http://www.packetfactory.net/libnet/dist/
-EXTRACT_SUFX=	.tgz
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.packetfactory.net/libnet/
