@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.5 2003/01/29 09:34:32 abs Exp $
+# $NetBSD: java-vm.mk,v 1.6 2003/01/29 19:35:41 jlam Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -199,7 +199,7 @@ _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
 _JDK_PKGSRCDIR=		../../lang/sun-jdk14
 _JRE_PKGSRCDIR=		../../lang/sun-jre14
 _JRE_DEPENDENCY=	sun-jre14-[0-9]*:${_JRE_PKGSRCDIR}
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.4.0
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.4
 UNLIMIT_RESOURCES+=	datasize
 .elif ${_PKG_JVM} == "blackdown-jdk13"
 _JDK_PKGSRCDIR=		../../lang/blackdown-jdk13
