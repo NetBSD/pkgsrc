@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/02/09 00:59:06 snj Exp $
+$NetBSD: patch-aa,v 1.3 2004/10/26 05:41:41 snj Exp $
 
---- Makefile.in.orig	2004-01-23 14:35:06.000000000 -0800
-+++ Makefile.in	2004-01-24 00:50:28.000000000 -0800
-@@ -204,6 +204,7 @@
+--- Makefile.in.orig	2004-10-19 17:39:42.000000000 -0700
++++ Makefile.in	2004-10-25 22:11:33.000000000 -0700
+@@ -204,6 +204,7 @@ SYSCONFDIR = @sysconfdir@
  
  # what to build
  sysconf_DATA = bogofilter.cf.example
@@ -10,17 +10,17 @@ $NetBSD: patch-aa,v 1.2 2004/02/09 00:59:06 snj Exp $
  
  # what to distribute
  EXTRA_DIST = autogen.sh gsl config.rpath \
-@@ -257,14 +258,8 @@
+@@ -254,14 +255,8 @@ bogofilter.spec: $(top_builddir)/config.
  	cd $(top_builddir) && $(SHELL) ./config.status $@
  uninstall-info-am:
  install-sysconfDATA: $(sysconf_DATA)
 -	@$(NORMAL_INSTALL)
--	$(mkdir_p) $(DESTDIR)$(sysconfdir)
+-	test -z "$(sysconfdir)" || $(mkdir_p) "$(DESTDIR)$(sysconfdir)"
 -	@list='$(sysconf_DATA)'; for p in $$list; do \
 -	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
 -	  f="`echo $$p | sed -e 's|^.*/||'`"; \
--	  echo " $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f"; \
--	  $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f; \
+-	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
+-	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
 -	done
 +	$(mkdir_p) $(egdir)
 +	$(INSTALL_DATA) $(sysconf_DATA) $(egdir)/bogofilter.cf
