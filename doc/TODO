@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1242 2003/12/26 03:13:48 taca Exp $
+$NetBSD: TODO,v 1.1243 2003/12/26 09:40:40 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -205,7 +205,6 @@ Suggested package updates
 	o lavaps-2.4
 	o lcms-1.0.9
 	o leafnode-1.9.46
-	o libcaca-0.4
 	o libcroco-0.4.0 [pkg/23793]
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
