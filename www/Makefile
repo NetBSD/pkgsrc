@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2002/06/09 11:11:36 taca Exp $
+# $NetBSD: Makefile,v 1.196 2002/06/18 06:38:37 thorpej Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -147,6 +147,7 @@ SUBDIR+=	snarf
 SUBDIR+=	spfc
 SUBDIR+=	squid
 SUBDIR+=	surfraw
+SUBDIR+=	swill
 SUBDIR+=	swish-e
 SUBDIR+=	tcl-cgi
 SUBDIR+=	thttpd
