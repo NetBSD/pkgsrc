@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2001/06/18 05:02:09 jlam Exp $
+$NetBSD: patch-ab,v 1.7 2001/06/29 08:53:18 jlam Exp $
 
---- Makefile.in.orig	Tue May 22 16:27:56 2001
-+++ Makefile.in	Fri Jun 15 01:07:50 2001
+--- Makefile.in.orig	Tue May 22 10:27:56 2001
++++ Makefile.in
 @@ -19,13 +19,13 @@
  .SUFFIXES:	.o .cpp .c .cxx
  
@@ -39,11 +39,20 @@ $NetBSD: patch-ab,v 1.6 2001/06/18 05:02:09 jlam Exp $
  
  top_srcdir = @top_srcdir@
  prefix = @prefix@
+@@ -87,7 +83,7 @@
+ 
+ DESTDIR =
+ 
+-localedir = $(datadir)/locale
++localedir = $(prefix)/${PKGLOCALEDIR}/locale
+ 
+ pkgdatadir = $(datadir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
 @@ -95,13 +91,16 @@
  
  top_builddir = .
  
-+EXTRALIBS=-lz -L@prefix@/lib -Wl,-R@prefix@/lib -ljpeg -lpng -ltiff
++EXTRALIBS=${LDFLAGS} -lz -ljpeg -lpng -ltiff
 +
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
