@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/07 11:55:03 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/02 08:34:56 grant Exp $
 bin/ccmake
 bin/cmake
 bin/cmaketest
@@ -100,7 +100,7 @@ share/CMake/Modules/Platform/IRIX64.cmake
 share/CMake/Modules/Platform/Linux-como.cmake
 share/CMake/Modules/Platform/Linux.cmake
 share/CMake/Modules/Platform/MP-RAS.cmake
-share/CMake/Modules/Platform/${OPSYS}.cmake
+share/CMake/Modules/Platform/NetBSD.cmake
 share/CMake/Modules/Platform/OSF1.cmake
 share/CMake/Modules/Platform/OpenBSD.cmake
 share/CMake/Modules/Platform/RISCos.cmake
