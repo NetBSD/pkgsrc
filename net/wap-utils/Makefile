@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/27 17:07:38 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/28 09:13:58 jlam Exp $
 #
 
 DISTNAME=	ap-utils-1.3.2
@@ -17,5 +17,5 @@ USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_NCURSES=		# redrawwin()
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
