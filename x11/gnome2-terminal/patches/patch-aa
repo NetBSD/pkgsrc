@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/10/30 10:32:15 rh Exp $
+$NetBSD: patch-aa,v 1.2 2003/02/14 21:13:35 jmmv Exp $
 
 --- src/Makefile.in.orig	Mon Aug  5 03:05:07 2002
 +++ src/Makefile.in
@@ -11,3 +11,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/10/30 10:32:15 rh Exp $
  	  else :; fi; \
  	done
  
+@@ -603,7 +603,6 @@ maintainer-clean-generic clean mostlycle
+ 
+ 
+ install-data-local:
+-	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$(schema_DATA)
+ 
+ regenerate-built-sources:
+ 	EGGFILES="$(EGGFILES)" EGGDIR="$(EGGDIR)" $(srcdir)/update-from-egg.sh
