@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1998/11/05 01:34:02 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/11/10 22:39:59 tron Exp $
 bin/gendiff
 bin/rpm
 bin/rpm2cpio
@@ -16,3 +16,13 @@ man/man8/rpm.8
 man/man8/rpm2cpio.8
 @dirrm lib/rpm
 @dirrm include/rpm
+share/locale/de/LC_MESSAGES/rpm.mo
+share/locale/fr/LC_MESSAGES/rpm.mo
+share/locale/sv/LC_MESSAGES/rpm.mo
+share/locale/ru/LC_MESSAGES/rpm.mo
+share/locale/fi/LC_MESSAGES/rpm.mo
+share/locale/tr/LC_MESSAGES/rpm.mo
+share/locale/cz/LC_MESSAGES/rpm.mo
+share/locale/pt_BR/LC_MESSAGES/rpm.mo
+share/locale/sk/LC_MESSAGES/rpm.mo
+share/locale/sr/LC_MESSAGES/rpm.mo
