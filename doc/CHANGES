@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9639 2005/03/26 12:09:11 adrianp Exp $
+$NetBSD: CHANGES,v 1.9640 2005/03/26 16:20:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1761,3 +1761,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated phpldapadmin to 0.9.5 [seb 2005-03-26]
 	Updated socat to 1.4.2.0 [adrianp 2005-03-26]
 	Updated tcpreplay to 2.3.3 [adrianp 2005-03-26]
+	Added ruby-redcloth-2.0.5 [minskim 2005-03-26]
