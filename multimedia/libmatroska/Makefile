@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/07 12:52:16 salo Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/17 16:49:49 grant Exp $
 #
 
 DISTNAME=	libmatroska-0.6.3
@@ -11,6 +11,7 @@ COMMENT=	Extensible open standard Audio/Video container format
 
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
+USE_LANGUAGES=	c++
 
 NO_CONFIGURE=	yes
 MAKEFLAGS+=	prefix="${PREFIX}"
