@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.28 2004/09/07 14:31:04 jschauma Exp $
+# $NetBSD: HACKS,v 1.29 2004/11/02 17:48:04 sketch Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -459,4 +459,16 @@ descr
 	reason: using gcc we have longer CFLAGS.  Fix:  add USE_GNU_TOOLS+=awk
 	iff IRIX and gcc.  Problem: this might affect other packages as well.
 	One might consider depending libtool on gawk for IRIX.
+kcah
+
+hack	devel/bison -O* bug with sunpro
+cdate	Tue Nov  2 17:30:48 GMT 2004
+who	sketch
+port	sparc (Solaris)
+file	devel/bison/Makefile : 1.49
+descr
+	bison's quotearg_buffer_restyled() has issues with certain compilers
+	using optimisation flags.  The resulting bison with optimsation
+	breaks on at least net/libIDL.  BUILDLINK_TRANSFORM -O* away until
+	the root cause can be fixed.
 kcah
