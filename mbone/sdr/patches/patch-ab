@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.8 1999/10/28 02:40:24 hubertf Exp $
+
 --- sdr/src/sip_common.c.orig	Thu Jul 15 18:00:03 1999
 +++ sdr/src/sip_common.c	Sat Oct  2 20:42:19 1999
 @@ -41,6 +41,9 @@
