@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/19 21:48:04 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/16 13:05:45 seb Exp $
 bin/${GNU_PROGRAM_PREFIX}m4
 ${GM4_LINK}bin/gm4
-info/m4.info
 share/examples/m4/capitalize.m4
 share/examples/m4/comments.m4
 share/examples/m4/ddivert.m4
