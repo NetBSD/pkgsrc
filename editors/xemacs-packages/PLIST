@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:24:30 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/27 19:13:18 magick Exp $
 lib/xemacs/xemacs-packages/etc/enriched.doc
 lib/xemacs/xemacs-packages/etc/gnus-tut.txt
 lib/xemacs/xemacs-packages/etc/gnus/bar.xbm
@@ -910,6 +910,8 @@ lib/xemacs/xemacs-packages/lisp/mail-lib/base64.el
 lib/xemacs/xemacs-packages/lisp/mail-lib/base64.elc
 lib/xemacs/xemacs-packages/lisp/mail-lib/browse-url.el
 lib/xemacs/xemacs-packages/lisp/mail-lib/browse-url.elc
+lib/xemacs/xemacs-packages/lisp/mail-lib/browse-url-xemacs.el
+lib/xemacs/xemacs-packages/lisp/mail-lib/browse-url-xemacs.elc
 lib/xemacs/xemacs-packages/lisp/mail-lib/custom-load.el
 lib/xemacs/xemacs-packages/lisp/mail-lib/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/mail-lib/highlight-headers.el
@@ -1051,8 +1053,6 @@ lib/xemacs/xemacs-packages/lisp/os-utils/kermit.el
 lib/xemacs/xemacs-packages/lisp/os-utils/kermit.elc
 lib/xemacs/xemacs-packages/lisp/os-utils/ledit.el
 lib/xemacs/xemacs-packages/lisp/os-utils/ledit.elc
-lib/xemacs/xemacs-packages/lisp/os-utils/lpr.el
-lib/xemacs/xemacs-packages/lisp/os-utils/lpr.elc
 lib/xemacs/xemacs-packages/lisp/os-utils/mchat.el
 lib/xemacs/xemacs-packages/lisp/os-utils/mchat.elc
 lib/xemacs/xemacs-packages/lisp/os-utils/rlogin.el
@@ -1109,14 +1109,24 @@ lib/xemacs/xemacs-packages/lisp/prog-modes/mode-compile.el
 lib/xemacs/xemacs-packages/lisp/prog-modes/mode-compile.elc
 lib/xemacs/xemacs-packages/lisp/prog-modes/modula2.el
 lib/xemacs/xemacs-packages/lisp/prog-modes/modula2.elc
+lib/xemacs/xemacs-packages/lisp/prog-modes/old-c-mode.el
+lib/xemacs/xemacs-packages/lisp/prog-modes/old-c-mode.elc
+lib/xemacs/xemacs-packages/lisp/prog-modes/p4.el
+lib/xemacs/xemacs-packages/lisp/prog-modes/p4.elc
 lib/xemacs/xemacs-packages/lisp/prog-modes/pascal.el
 lib/xemacs/xemacs-packages/lisp/prog-modes/pascal.elc
 lib/xemacs/xemacs-packages/lisp/prog-modes/perl-mode.el
 lib/xemacs/xemacs-packages/lisp/prog-modes/perl-mode.elc
+lib/xemacs/xemacs-packages/lisp/prog-modes/php-mode.el
+lib/xemacs/xemacs-packages/lisp/prog-modes/php-mode.elc
 lib/xemacs/xemacs-packages/lisp/prog-modes/postscript.el
 lib/xemacs/xemacs-packages/lisp/prog-modes/postscript.elc
 lib/xemacs/xemacs-packages/lisp/prog-modes/prolog.el
 lib/xemacs/xemacs-packages/lisp/prog-modes/prolog.elc
+lib/xemacs/xemacs-packages/lisp/prog-modes/pydoc-el-README
+lib/xemacs/xemacs-packages/lisp/prog-modes/pydoc.el
+lib/xemacs/xemacs-packages/lisp/prog-modes/pydoc.elc
+lib/xemacs/xemacs-packages/lisp/prog-modes/pydoc_lisp.py
 lib/xemacs/xemacs-packages/lisp/prog-modes/python-mode.el
 lib/xemacs/xemacs-packages/lisp/prog-modes/python-mode.elc
 lib/xemacs/xemacs-packages/lisp/prog-modes/rexx-mode.el
@@ -1239,6 +1249,8 @@ lib/xemacs/xemacs-packages/lisp/text-modes/iso-swed.el
 lib/xemacs/xemacs-packages/lisp/text-modes/iso-swed.elc
 lib/xemacs/xemacs-packages/lisp/text-modes/nroff-mode.el
 lib/xemacs/xemacs-packages/lisp/text-modes/nroff-mode.elc
+lib/xemacs/xemacs-packages/lisp/text-modes/rtf-support.el
+lib/xemacs/xemacs-packages/lisp/text-modes/rtf-support.elc
 lib/xemacs/xemacs-packages/lisp/text-modes/scribe.el
 lib/xemacs/xemacs-packages/lisp/text-modes/scribe.elc
 lib/xemacs/xemacs-packages/lisp/text-modes/swedish.el
@@ -1281,8 +1293,6 @@ lib/xemacs/xemacs-packages/lisp/vc-cc/ChangeLog
 lib/xemacs/xemacs-packages/lisp/vc-cc/_pkg.el
 lib/xemacs/xemacs-packages/lisp/vc-cc/auto-autoloads.el
 lib/xemacs/xemacs-packages/lisp/vc-cc/auto-autoloads.elc
-lib/xemacs/xemacs-packages/lisp/vc-cc/tq.el
-lib/xemacs/xemacs-packages/lisp/vc-cc/tq.elc
 lib/xemacs/xemacs-packages/lisp/vc-cc/vc-cc-hooks.el
 lib/xemacs/xemacs-packages/lisp/vc-cc/vc-cc-hooks.elc
 lib/xemacs/xemacs-packages/lisp/vc-cc/vc-cc.el
@@ -1396,6 +1406,8 @@ lib/xemacs/xemacs-packages/lisp/xemacs-base/time-stamp.el
 lib/xemacs/xemacs-packages/lisp/xemacs-base/time-stamp.elc
 lib/xemacs/xemacs-packages/lisp/xemacs-base/timezone.el
 lib/xemacs/xemacs-packages/lisp/xemacs-base/timezone.elc
+lib/xemacs/xemacs-packages/lisp/xemacs-base/tq.el
+lib/xemacs/xemacs-packages/lisp/xemacs-base/tq.elc
 lib/xemacs/xemacs-packages/lisp/xemacs-base/xbm-button.el
 lib/xemacs/xemacs-packages/lisp/xemacs-base/xbm-button.elc
 lib/xemacs/xemacs-packages/lisp/xemacs-base/xpm-button.el
@@ -1526,4 +1538,5 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.xemacs-devel
 @dirrm lib/xemacs/xemacs-packages/man/viper
 @dirrm lib/xemacs/xemacs-packages/man
 @dirrm lib/xemacs/xemacs-packages/pkginfo
-@unexec rm -fr %D/lib/xemacs/xemacs-packages
+@dirrm lib/xemacs/xemacs-packages
+
