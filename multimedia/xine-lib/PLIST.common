@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.7 2004/12/23 03:05:53 xtraeme Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2005/03/30 10:23:45 tron Exp $
 bin/xine-config
 include/xine.h
 include/xine/attributes.h
@@ -86,6 +86,8 @@ lib/xine/plugins/1.0.0/xineplug_decode_real_audio.a
 lib/xine/plugins/1.0.0/xineplug_decode_real_audio.so
 lib/xine/plugins/1.0.0/xineplug_decode_rgb.a
 lib/xine/plugins/1.0.0/xineplug_decode_rgb.so
+lib/xine/plugins/1.0.0/xineplug_decode_speex.a
+lib/xine/plugins/1.0.0/xineplug_decode_speex.so
 lib/xine/plugins/1.0.0/xineplug_decode_spu.a
 lib/xine/plugins/1.0.0/xineplug_decode_spu.so
 lib/xine/plugins/1.0.0/xineplug_decode_spucc.a
