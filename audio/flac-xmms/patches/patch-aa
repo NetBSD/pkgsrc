@@ -1,20 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2002/11/15 15:27:59 lukem Exp $
+$NetBSD: patch-aa,v 1.4 2003/02/14 23:56:30 wiz Exp $
 
---- src/plugin_xmms/Makefile.am.orig	Tue Sep 10 06:11:30 2002
-+++ src/plugin_xmms/Makefile.am
-@@ -32,7 +32,7 @@ INCLUDES = -I$(top_srcdir)/src
- xmmsinputplugindir = @XMMS_INPUT_PLUGIN_DIR@
+--- src/libFLAC/ia32/Makefile.in.orig	Sat Feb 15 00:49:15 2003
++++ src/libFLAC/ia32/Makefile.in
+@@ -352,7 +352,7 @@ uninstall-am: uninstall-info-am
  
- # Don't build a static library
--LIBTOOL = $(top_builddir)/libtool-disable-static
-+LIBTOOL = $(top_builddir)/libtool
  
- xmmsinputplugin_LTLIBRARIES = libxmms-flac.la
- 
-@@ -52,5 +52,5 @@ endif
- # for fix info see:
- #   http://lists.freshrpms.net/pipermail/rpm-list/2002-April/000746.html
- # the workaround is the extra '-L$(top_builddir)/src/libFLAC/.libs'
--libxmms_flac_la_LIBADD = $(top_builddir)/src/plugin_common/libplugin_common.a $(top_builddir)/src/libFLAC/libFLAC.la -L$(top_builddir)/src/libFLAC/.libs @XMMS_LIBS@ @ID3LIB_LIBS@
-+libxmms_flac_la_LIBADD = $(top_builddir)/src/plugin_common/libplugin_common.la $(libdir)/libFLAC.la @XMMS_LIBS@ @ID3LIB_LIBS@
- libxmms_flac_la_LDFLAGS = -module -avoid-version
+ .nasm.lo:
+-	$(LIBTOOL) --mode=compile $(STRIP_FPIC) $(NASM) -f $(OBJ_FORMAT) -d OBJ_FORMAT_$(OBJ_FORMAT) -i$(srcdir)/ $< -o $@
++	$(LIBTOOL) --tag=CC --mode=compile $(STRIP_FPIC) $(NASM) -f $(OBJ_FORMAT) -d OBJ_FORMAT_$(OBJ_FORMAT) -i$(srcdir)/ $< -o $@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
