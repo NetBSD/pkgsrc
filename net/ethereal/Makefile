@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2002/08/22 00:30:07 itojun Exp $
+# $NetBSD: Makefile,v 1.65 2002/09/24 00:13:13 jlam Exp $
 
 DISTNAME=		ethereal-0.9.6
 CATEGORIES=		net
@@ -9,23 +9,24 @@ MAINTAINER=		frueauf@netbsd.org
 HOMEPAGE=		http://www.ethereal.com/
 COMMENT=		Network protocol analyzer
 
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 USE_PERL5=		build
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-gtk-prefix=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-ucdsnmp=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-gtk-prefix=${BUILDLINK_PREFIX.gtk}
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-ucdsnmp=${BUILDLINK_PREFIX.ucd-snmp}
+CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
+CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../net/libpcap/buildlink.mk"
-.include "../../net/ucd-snmp/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../net/libpcap/buildlink2.mk"
+.include "../../net/ucd-snmp/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
