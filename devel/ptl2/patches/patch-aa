@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2000/05/07 11:18:20 msaitoh Exp $
---- Makefile.orig	Wed Mar 24 13:33:28 1999
-+++ Makefile	Thu Mar 25 01:03:04 1999
-@@ -7,13 +7,13 @@
+$NetBSD: patch-aa,v 1.3 2002/12/12 07:07:05 msaitoh Exp $
+--- Makefile.orig	Tue Nov 26 21:19:42 2002
++++ Makefile	Thu Dec 12 15:26:47 2002
+@@ -7,7 +7,7 @@
  #
  
  # Install directory 
@@ -10,10 +10,3 @@ $NetBSD: patch-aa,v 1.2 2000/05/07 11:18:20 msaitoh Exp $
  exec_prefix = $(prefix)
  
  # Directory to install ptlgcc
- dest_bindir = $(exec_prefix)/bin
- # Directory to install libPTL.a and libPTL.so
--dest_libdir = $(exec_prefix)/PTL/lib
-+dest_libdir = $(exec_prefix)/lib
- # Directory to install include files
- # This directory must NOT be /usr/local/include
- dest_includedir = $(exec_prefix)/PTL/include
