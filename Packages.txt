@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.356 2004/09/09 12:25:27 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.357 2004/09/10 10:53:13 sketch Exp $
 ###########################################################################
 
 			==========================
@@ -3831,7 +3831,7 @@ Layout for precompiled binary packages on ftp.netbsd.org:
 				i386/
 					All/
 					...
-			Solaris-9/
+			SunOS-5.9/
 				sparc/
 					All/
 					...
@@ -3855,9 +3855,9 @@ Layout for precompiled binary packages on ftp.netbsd.org:
 		2.0 -> NetBSD-2.0	# backward compat, historic
 		NetBSD-2.0/
 			i386 -> ../pkgsrc-2004Q1/NetBSD-2.0/i386
-		Solaris-9/
-			sparc -> ../pkgsrc-2004Q1/Solaris-9/sparc
-			x86 -> ../pkgsrc-2004Q1/Solaris-9/x86
+		SunOS-5.9/
+			sparc -> ../pkgsrc-2004Q1/SunOS-5.9/sparc
+			x86 -> ../pkgsrc-2004Q1/SunOS-5.9/x86
 
 To create:
  - Run bulk build, see #3.2
