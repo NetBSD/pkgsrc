@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/03/03 15:22:15 scw Exp $
+# $NetBSD: Makefile,v 1.28 2000/05/22 02:00:56 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 23:55:31 asami Exp
 #
 
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.fokus.gmd.de/nthp/employees/schilling/cdrecord.html
 USE_GMAKE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/a.*//}
-TARGET_ARCH=	${MACHINE}-netbsd-cc
+TARGET_ARCH=	${MACHINE_ARCH}-netbsd-cc
 TARGET_DIR=	OBJ/${TARGET_ARCH}
 
 post-configure:
