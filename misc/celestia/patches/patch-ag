@@ -1,0 +1,11 @@
+$NetBSD: patch-ag,v 1.1 2003/11/27 13:45:25 markd Exp $
+
+--- src/celestia/kde/data/celestia.protocol.orig	2003-11-28 02:04:06.000000000 +1300
++++ src/celestia/kde/data/celestia.protocol
+@@ -1,5 +1,5 @@
+ [Protocol]
+-exec=celestia %u
++exec=kcelestia %u
+ protocol=cel
+ input=none
+ output=none
