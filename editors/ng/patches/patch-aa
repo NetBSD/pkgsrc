@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/19 23:54:37 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2000/12/15 20:02:02 wiz Exp $
 
 --- sys/bsd/Makefile.orig	Tue Jun 27 10:48:02 2000
 +++ sys/bsd/Makefile	Thu Sep  7 06:02:02 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/10/19 23:54:37 hubertf Exp $
  
  SYS	= bsd
 -LIBS	= -L/usr/pkg/lib -lcanna -ltermcap
-+LIBS	= -L${PREFIX}/lib -ltermcap
++LIBS	= -Wl,-R${PREFIX}/lib -L${PREFIX}/lib -ltermcap
 +.if ${USE_CANNA} == "YES"
 +LIBS	+=	-lcanna
 +.endif
