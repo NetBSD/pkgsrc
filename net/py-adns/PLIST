@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/25 11:49:53 drochner Exp $
-${PYSITELIB}/ADNS.pyc
+@comment $NetBSD: PLIST,v 1.2 2003/09/14 16:43:52 recht Exp $
 ${PYSITELIB}/ADNS.py
+${PYSITELIB}/ADNS.pyc
+${PYSITELIB}/ADNS.pyo
 ${PYSITELIB}/adns.so
-${PYSITELIB}/hostmx.pyc
 ${PYSITELIB}/hostmx.py
-${PYSITELIB}/rblcheck.pyc
+${PYSITELIB}/hostmx.pyc
+${PYSITELIB}/hostmx.pyo
 ${PYSITELIB}/rblcheck.py
+${PYSITELIB}/rblcheck.pyc
+${PYSITELIB}/rblcheck.pyo
