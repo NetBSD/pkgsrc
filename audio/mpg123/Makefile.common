@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2004/04/09 11:50:59 grant Exp $
+# $NetBSD: Makefile.common,v 1.16 2004/04/11 17:33:14 xtraeme Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -19,7 +19,7 @@ DISTINFO_FILE=	${.CURDIR}/../../audio/mpg123/distinfo
 
 LICENSE=	no-commercial-use
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	yes
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
