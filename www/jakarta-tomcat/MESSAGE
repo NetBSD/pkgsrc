@@ -1,18 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2004/04/23 22:43:20 reed Exp $
+$NetBSD: MESSAGE,v 1.5 2004/04/29 18:24:55 erh Exp $
 
 For detailed instructions on how to run Tomcat, either as a
 standalone server or in conjunction with Apache (using the
 www/ap-jk package), see:
 
-	${PREFIX}/tomcat/doc/uguide/tomcat_ug.html
+	http://localhost:8080/tomcat-docs/index.html
 
 For more information on application development with Tomcat, see
 
-	${PREFIX}/tomcat/doc/appdev/index.html
+	http://localhost:8080/tomcat-docs/appdev/index.html
 
 Note that tomcat may be started with the following command:
 
-	${RCD_SCRIPTS_EXAMPLEDIR}/tomcat start
+	${PREFIX}/etc/rc.d/tomcat5 start
 
 ===========================================================================
