@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1967 2004/07/23 15:50:21 wiz Exp $
+$NetBSD: TODO,v 1.1968 2004/07/24 08:34:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -179,7 +179,6 @@ Suggested package updates
 	o blender-2.33
 	o boson-0.10
 	o cdrtools-ossdvd-2.01.1.27
-	o centericq-4.10.0
 	o cervisia-2.1.2
 	o checkbot-1.75 [pkg/26371]
 	o clamav-0.75
@@ -204,7 +203,6 @@ Suggested package updates
 	o dict-server-1.9.11
 	o dillo-0.8.2
 	o dmalloc-5.3.0
-	o dnetc-2.9004-482 [pkg/22390]
 	o docbook-4.3
 	o docsis-0.9.1
 	o dvdrip-0.50.18
