@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/20 12:14:41 agc Exp $
+# $NetBSD: Makefile,v 1.20 2004/03/22 03:47:15 kristerw Exp $
 
 DISTNAME=		linuxppc_lib-2000.4.6
 CATEGORIES=		emulators
@@ -22,20 +22,8 @@ BUILD_DEPENDS+=		rpm2pkg-1.2:../../pkgtools/rpm2pkg
 
 CONFLICTS=		suse_base-[0-9]*
 
-ONLY_FOR_PLATFORM=	NetBSD-1.5[U-Z]-macppc NetBSD-1.5Z[A-Z]-macppc \
-			NetBSD-1.[6-9]*-macppc \
-			NetBSD-1.5[U-Z]-powerpc NetBSD-1.5Z[A-Z]-powerpc \
-			NetBSD-1.[6-9]*-powerpc \
-			NetBSD-1.5[U-Z]-prep NetBSD-1.5Z[A-Z]-prep \
-			NetBSD-1.[6-9]*-prep \
-			NetBSD-1.5[U-Z]-bebox NetBSD-1.5Z[A-Z]-bebox \
-			NetBSD-1.[6-9]*-bebox \
-			NetBSD-1.5[U-Z]-ofppc NetBSD-1.5Z[A-Z]-ofppc \
-			NetBSD-1.[6-9]*-ofppc \
-			NetBSD-1.5[U-Z]-amigappc NetBSD-1.5Z[A-Z]-amigappc \
-			NetBSD-1.[6-9]*-amigappc \
-			NetBSD-1.5[U-Z]-sandpoint NetBSD-1.5Z[A-Z]-sandpoint \
-			NetBSD-1.[6-9]*-sandpoint
+ONLY_FOR_PLATFORM=	NetBSD-1.5[U-Z]-powerpc NetBSD-1.5Z[A-Z]-powerpc \
+			NetBSD-1.[6-9]*-powerpc NetBSD-[2-9]*-*
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 SHLIB_HANDLING=		NO
