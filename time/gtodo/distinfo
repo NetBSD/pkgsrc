@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/10 19:20:45 jmmv Exp $
+
+SHA1 (gtodo-0.14.tar.gz) = c6eb5089a324abdf41383a60a9f8f0d3f4ebb8ff
+Size (gtodo-0.14.tar.gz) = 198798 bytes
+SHA1 (patch-aa) = 3729f70027316bbab34c2c3a81adc7f83c18e189
