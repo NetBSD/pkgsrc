@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2004/12/28 10:12:27 minskim Exp $
+# $NetBSD: Makefile,v 1.95 2005/01/06 11:10:55 adam Exp $
 
-DISTNAME=	openldap-2.2.19
+DISTNAME=	openldap-2.2.20
 SVR4_PKGNAME=	oldap
-PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
 EXTRACT_SUFX=	.tgz
@@ -16,8 +15,8 @@ CONFLICTS+=		ldapsdk-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 TEST_TARGET=		test
 
 MAKE_ENV+=		LIBMODE=${LIBMODE}
