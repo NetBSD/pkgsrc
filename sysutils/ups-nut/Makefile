@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/01 14:04:36 martin Exp $
+# $NetBSD: Makefile,v 1.8 2001/08/14 03:41:39 jlam Exp $
 #
 
 DISTNAME=		nut-0.44.3-pre5
@@ -59,7 +59,7 @@ pre-install:
 		-e 's|@ADDUSER@|${ADDUSER}|g' \
 		-e 's|@ADDGROUP@|${ADDGROUP}|g' \
 		-e 's|@CHGRP@|${CHGRP}|g' \
-		-e 's|@GREP@|${GREP}|g' \
+		-e 's|@ID@|${ID}|g' \
 		-e 's|@RM@|${RM}|g' \
 		-e 's|@TOUCH@|${TOUCH}|g' \
 		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
