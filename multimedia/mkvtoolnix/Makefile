@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/10/03 00:13:03 tv Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/14 17:13:27 salo Exp $
 #
 
 .include "../../multimedia/mkvtoolnix/Makefile.dist"
-
-PKGREVISION=	1
 
 MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.bunkus.org/videotools/mkvtoolnix/
@@ -13,6 +11,8 @@ GNU_CONFIGURE=	yes
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_LANGUAGES=	c c++
+
+CONFIGURE_ARGS+=	--disable-gui
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/liblzo/buildlink3.mk"
