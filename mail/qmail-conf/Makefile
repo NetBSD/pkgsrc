@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/08/22 00:22:31 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2004/08/22 00:23:55 schmonz Exp $
 #
 
 DISTNAME=		qmail-conf-0.60
@@ -15,7 +15,7 @@ COMMENT=		Collection of tools for setting up qmail services
 
 DEPENDS+=		checkpassword-[0-9]*:../../sysutils/checkpassword
 DEPENDS+=		daemontools>=0.70:../../sysutils/daemontools
-DEPENDS+=		{qmail>=1.03nb7,netqmail>=1.05}:../../mail/qmail
+DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 DEPENDS+=		ucspi-tcp>=0.86:../../net/ucspi-tcp
 
 USE_BUILDLINK3=		yes
