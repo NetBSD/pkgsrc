@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2004/01/03 18:49:46 reed Exp $
+# $NetBSD: Makefile,v 1.32 2004/01/06 18:52:33 jmmv Exp $
 
 DISTNAME=	Guppi-0.40.3
 PKGNAME=	${DISTNAME:S/G/g/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	math graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/Guppi/0.40/}
 EXTRACT_SUFX=	.tar.bz2
@@ -40,9 +40,12 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/libguppi.m4 \
 		${LOCALBASE}/share/aclocal/libguppi.m4
 
+.include "../../devel/bonobo/buildlink2.mk"
+.include "../../devel/gal/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../lang/guile14/buildlink2.mk"
-.include "../../x11/gnome-core/buildlink2.mk"
+.include "../../print/gnome-print/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
