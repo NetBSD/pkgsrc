@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 1999/09/13 01:23:24 itohy Exp $
+
+--- oneko.h.orig	Thu Oct 31 21:38:52 1991
++++ oneko.h	Sat Sep 11 19:34:29 1999
+@@ -17,6 +17,9 @@
+ #include <signal.h>
+ #include <math.h>
+ #include <sys/time.h>
++#ifndef X_NOT_STDC_ENV
++#include <stdlib.h>
++#endif
+ 
+ 
+ /*
