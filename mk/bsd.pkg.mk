@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1508 2004/10/04 20:28:29 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1509 2004/10/05 15:28:50 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1216,6 +1216,10 @@ DEPENDS+=		${RECOMMENDED}
 BUILD_DEFS+=		IGNORE_RECOMMENDED
 .  endif
 .endif
+
+# Remove some redundant dependencies from the DEPENDS list.
+.include "../../mk/reduce-depends.mk"
+DEPENDS:=	${REDUCED_DEPENDS}
 
 .if defined(USE_DIRS) && !empty(USE_DIRS) && \
     ${PKG_INSTALLATION_TYPE} == "overwrite"
