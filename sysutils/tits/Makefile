@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/02/27 21:04:13 scw Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/03 14:07:19 scw Exp $
 #
 
-DISTNAME=       tits-1.0.1
+DISTNAME=       tits-1.0.2
 CATEGORIES=	sysutils
 MASTER_SITES=   http://www.wee-eck.demon.co.uk/tits/
 
