@@ -1,4 +1,4 @@
-$NetBSD: PKGVIEWS,v 1.1.2.9 2003/08/16 10:31:17 jlam Exp $
+$NetBSD: PKGVIEWS,v 1.1.2.10 2003/08/16 20:20:55 jlam Exp $
 
 Package views integration plan:
 ==============================
@@ -19,15 +19,16 @@ the default view should look and feel like a non-depoted package in
 all respects, down to what you find in /var/db/pkg/${PKGNAME}, so
 non-depoted packages can depend on depoted packages without change.
 
-(2) Migrate non-USE_IMAKE packages to set PKG_INSTALLATION_TYPE to
-    "pkgviews".  Depoted packages can only depend on other depoted
-    packages.  A depoted package will have <deppkg_dir>/lib and
-    ${LOCALBASE}/lib in the run-time library search path (-Wl,-R*)
-    so that wildcard dependencies on library packages will still work
-    (so long as the major number of the shlib hasn't increased).
+(2) Migrate non-USE_X11BASE and non-USE_IMAKE packages to set
+    PKG_INSTALLATION_TYPE to "pkgviews".  Depoted packages can only
+    depend on other depoted packages.  A depoted package will have
+    <deppkg_dir>/lib and ${LOCALBASE}/lib in the run-time library
+    search path (-Wl,-R*) so that wildcard dependencies on library
+    packages will still work (so long as the major number of the shlib
+    hasn't increased).
 
 At this point, all packages in pkgsrc except for those that define
-USE_IMAKE will be depoted.
+USE_X11BASE or USE_IMAKE will be depoted.
 
 (3) Make xpkgwedge the default for pkgsrc.  It would be nice to
     enhance xpkgwedge in some way so that a package could be compiled
@@ -35,10 +36,11 @@ USE_IMAKE will be depoted.
     having the user fiddle with environment variables.
 
 This is a flag day change and will require bumping the PKGREVISIONs
-for every single USE_X11BASE and USE_IMAKE package.
+for every single USE_X11BASE and USE_IMAKE package and all packages
+that depend on them.
 
-(4) Migrate the USE_IMAKE packages to set PKG_INSTALLATION_TYPE to
-    "pkgviews".
+(4) Migrate the USE_X11BASE and USE_IMAKE packages to set
+    PKG_INSTALLATION_TYPE to "pkgviews".
 
 At this point every package in pkgsrc will be using pkgviews, and we
 can excise all of the "overwrite" code from pkgsrc internals.  From
