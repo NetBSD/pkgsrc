@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2000/07/14 17:25:55 jwise Exp $
---- Makefile.orig	Wed Jun  7 10:31:07 2000
-+++ Makefile	Wed Jun  7 10:33:52 2000
-@@ -83,8 +83,7 @@
+--- build.xml.orig	Sat Sep  8 19:53:58 2001
++++ build.xml	Sat Sep  8 19:54:45 2001
+@@ -134,9 +134,8 @@
+   </target>
  
- # This rule builds the javadoc documentation
- doc:
--	export CLASSPATH=.;\
--		$(JAVADOC) -public \
-+		-$(JAVADOC) -public \
- 			org.postgresql \
- 			org.postgresql.fastpath \
- 			org.postgresql.largeobject
+   <!-- This builds the jar file containing the driver -->
+-  <target name="jar" depends="compile,examples">
++  <target name="jar" depends="compile">
+     <jar jarfile="${jars}/postgresql.jar" basedir="${dest}" includes="${package}/**" excludes="${package}/test/**"/>
+-    <jar jarfile="${jars}/postgresql-examples.jar" basedir="${dest}" includes="example/**" />
+   </target>
+ 
+   <!--

@@ -1,33 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2000/07/14 17:25:55 jwise Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/09/09 23:35:40 jwise Exp $
 lib/java/postgresql.jar
 share/examples/java/jdbc-postgresql/ImageViewer.java
+share/examples/java/jdbc-postgresql/Unicode.java
 share/examples/java/jdbc-postgresql/basic.java
 share/examples/java/jdbc-postgresql/blobtest.java
 share/examples/java/jdbc-postgresql/datestyle.java
 share/examples/java/jdbc-postgresql/metadata.java
 share/examples/java/jdbc-postgresql/psql.java
 share/examples/java/jdbc-postgresql/threadsafe.java
-share/doc/java/jdbc-postgresql/api/AllNames.html
-share/doc/java/jdbc-postgresql/api/Package-org.postgresql.fastpath.html
-share/doc/java/jdbc-postgresql/api/Package-org.postgresql.html
-share/doc/java/jdbc-postgresql/api/Package-org.postgresql.largeobject.html
-share/doc/java/jdbc-postgresql/api/org.postgresql.Connection.html
-share/doc/java/jdbc-postgresql/api/org.postgresql.Driver.html
-share/doc/java/jdbc-postgresql/api/org.postgresql.DriverClass.html
-share/doc/java/jdbc-postgresql/api/org.postgresql.Field.html
-share/doc/java/jdbc-postgresql/api/org.postgresql.PG_Stream.html
-share/doc/java/jdbc-postgresql/api/org.postgresql.ResultSet.html
-share/doc/java/jdbc-postgresql/api/org.postgresql.fastpath.Fastpath.html
-share/doc/java/jdbc-postgresql/api/org.postgresql.fastpath.FastpathArg.html
-share/doc/java/jdbc-postgresql/api/org.postgresql.largeobject.LargeObject.html
-share/doc/java/jdbc-postgresql/api/org.postgresql.largeobject.LargeObjectManager.html
-share/doc/java/jdbc-postgresql/api/org.postgresql.largeobject.PGblob.html
-share/doc/java/jdbc-postgresql/api/packages.html
-share/doc/java/jdbc-postgresql/api/tree.html
-share/doc/java/jdbc-postgresql/README
-share/doc/java/jdbc-postgresql/README_6.3
-share/doc/java/jdbc-postgresql/Implementation
 share/doc/java/jdbc-postgresql/CHANGELOG
+share/doc/java/jdbc-postgresql/Implementation
+share/doc/java/jdbc-postgresql/README
 @dirrm share/examples/java/jdbc-postgresql/
-@dirrm share/doc/java/jdbc-postgresql/api
 @dirrm share/doc/java/jdbc-postgresql/
