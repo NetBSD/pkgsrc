@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:17 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/03/18 15:30:15 wiz Exp $
 
 SHA1 (angband-283.tar.gz) = 1dc4a2786c31c2336daf57f76f4fa762f7d84cf3
 Size (angband-283.tar.gz) = 822762 bytes
 SHA1 (angband-spoilers.tar.gz) = 6f5db28f686be3f41df6c22990c53f9e46a1c7cd
 Size (angband-spoilers.tar.gz) = 234909 bytes
-SHA1 (patch-aa) = 069d80b8d749f0b102f27598bfac4a128f76770d
+SHA1 (patch-aa) = 4ac1892fd94ef97431a5860caacdb6394b01bd5b
+SHA1 (patch-ab) = 6abaa44ac3131720855950598e4bfa18fc0c595a
+SHA1 (patch-ac) = 845a47bec2b5eb3abf10d2f7f244041d8167fba6
+SHA1 (patch-ad) = ea446d8d7f79a35f0d70aa8bf03a18dcf87f908b
