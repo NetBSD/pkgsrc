@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/11/29 13:08:59 augustss Exp $
+# $NetBSD: Makefile,v 1.39 2002/01/12 18:36:11 bouyer Exp $
 #
 
 COMMENT=	Communication utilities
@@ -34,5 +34,6 @@ SUBDIR+=	ruby-termios
 SUBDIR+=	snooper
 SUBDIR+=	tkhylafax
 SUBDIR+=	xisp
+SUBDIR+=	xtel
 
 .include "../mk/bsd.pkg.subdir.mk"
