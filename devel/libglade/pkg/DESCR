@@ -1,0 +1,9 @@
+  Libglade is a library that performs a similar job to the C source
+output routines in the GLADE user interface builder.   Whereas GLADE's
+output routines create C code that can then be compiled, libglade builds
+the interface from an XML file (GLADE's save format) at runtime.  This
+way you can change the look of a program without needing to recompile. 
+
+  Currently it supports all the widgets in current releases, together
+with support for keyboard accelerators and automatic signal
+connection. 
