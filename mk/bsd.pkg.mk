@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.652 2001/01/28 18:53:58 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.653 2001/01/29 01:56:51 jwise Exp $
 #
 # This file is in the public domain.
 #
@@ -701,27 +701,31 @@ BUILD_INFO_FILE=	${WRKDIR}/.build_info
 SIZE_PKG_FILE=		${WRKDIR}/.SizePkg
 SIZE_ALL_FILE=		${WRKDIR}/.SizeAll
 
-.ifndef PKG_ARGS
-PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
-PKG_ARGS+=		-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
-PKG_ARGS+=		-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
-PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true|sort -u`"
+.ifndef PKG_ARGS_COMMON
+PKG_ARGS_COMMON=	-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
+PKG_ARGS_COMMON+=	-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
+PKG_ARGS_COMMON+=	-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
+PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true|sort -u`"
 .ifdef CONFLICTS
-PKG_ARGS+=		-C "${CONFLICTS}"
+PKG_ARGS_COMMON+=	-C "${CONFLICTS}"
 .endif
 .ifdef INSTALL_FILE
-PKG_ARGS+=		-i ${INSTALL_FILE}
+PKG_ARGS_COMMON+=	-i ${INSTALL_FILE}
 .endif
 .ifdef DEINSTALL_FILE
-PKG_ARGS+=		-k ${DEINSTALL_FILE}
+PKG_ARGS_COMMON+=	-k ${DEINSTALL_FILE}
 .endif
 .ifdef MESSAGE_FILE
-PKG_ARGS+=		-D ${MESSAGE_FILE}
+PKG_ARGS_COMMON+=	-D ${MESSAGE_FILE}
 .endif
 .ifndef NO_MTREE
-PKG_ARGS+=		-m ${MTREE_FILE}
+PKG_ARGS_COMMON+=	-m ${MTREE_FILE}
 .endif
-.endif # !PKG_ARGS
+
+PKG_ARGS_INSTALL=	-p ${PREFIX} ${PKG_ARGS_COMMON}
+PKG_ARGS_BINPKG=	-p ${PREFIX:C/^${DESTDIR}//} -L ${PREFIX} ${PKG_ARGS_COMMON}
+.endif # !PKG_ARGS_COMMON
+
 PKG_SUFX?=		.tgz
 #PKG_SUFX?=		.tbz		# bzip2(1) pkgs
 # where pkg_add records its dirty deeds.
@@ -1558,7 +1562,7 @@ do-package: ${PLIST} ${DESCR}
 			exit 1;					\
 		fi;						\
 	fi;							\
-	if ${PKG_CREATE} ${PKG_ARGS} ${PKGFILE}; then		\
+	if ${PKG_CREATE} ${PKG_ARGS_BINPKG} ${PKGFILE}; then		\
 		${MAKE} ${MAKEFLAGS} package-links;		\
 	else							\
 		${MAKE} ${MAKEFLAGS} delete-package;		\
@@ -3190,7 +3194,7 @@ fake-pkg: ${PLIST} ${DESCR}
 	if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
 		${ECHO_MSG} "${_PKGSRC_IN}> Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
-		${PKG_CREATE} ${PKG_ARGS} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
+		${PKG_CREATE} ${PKG_ARGS_INSTALL} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
 		${CP} ${DESCR} ${PKG_DBDIR}/${PKGNAME}/+DESC;		\
 		${CP} ${COMMENT} ${PKG_DBDIR}/${PKGNAME}/+COMMENT;	\
 		${CP} ${BUILD_VERSION_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
