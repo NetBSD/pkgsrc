@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/02/23 07:43:19 rxg Exp $
+$NetBSD: distinfo,v 1.2 2002/03/18 14:13:51 rxg Exp $
 
-MD5 (mp3blaster-3.0p8.tar.gz) = ac8d30b18cfd7b67efe1a3847c62fe17
-SHA1 (patch-aa) = e8e6823e55598b8f19688d3afddff11fa80be449
-SHA1 (patch-ab) = bda29c7efd978b63ba038cabb69c62f9a625640a
-SHA1 (patch-ac) = ddc7a7d7509002af68ead8a8d370238cae65783c
+SHA1 (mp3blaster-3.1.1.tar.gz) = 794e87ac78f915bedf72a685080e729bf2f13337
+Size (mp3blaster-3.1.1.tar.gz) = 286621 bytes
+SHA1 (patch-ab) = 02a1245efef23f1807c05aab530bf0ae4502fd5a
+SHA1 (patch-ac) = fb99e0330bbec8c0813eb8a38fe534e090878c43

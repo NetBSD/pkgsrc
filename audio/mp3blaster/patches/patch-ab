@@ -1,14 +1,22 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/02/23 07:43:20 rxg Exp $
+$NetBSD: patch-ab,v 1.2 2002/03/18 14:13:53 rxg Exp $
 
---- src/Makefile.in.orig	Fri Feb 15 22:35:03 2002
+--- src/Makefile.in.orig	Sun Mar 17 04:00:49 2002
 +++ src/Makefile.in
-@@ -75,8 +75,7 @@
- SRCDIRS = @SRCDIRS@
- VERSION = @VERSION@
+@@ -85,8 +85,7 @@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
  
 -bin_PROGRAMS = mp3blaster mp3tag splay
 -#bin_PROGRAMS		= mp3blaster mp3tag
 +bin_PROGRAMS = mp3blaster mp3tag
- mp3blaster_SOURCES = fileman.cc 			  main.cc 			  scrollwin.cc 			  getopt.c 			  getopt1.c 			  fileman.h 			  genretab.h 			  getopt.h 				id3parse.cc 			  id3parse.h 			  mp3blaster.h 			  global.cc 			  global.h 			  config.cc 			  scrollwin.h 			  winitem.cc 			  winitem.h 			  mp3win.cc 			  mp3win.h 			  mp3item.cc 			  mp3item.h 				keybindings.h 			  @MP3B_MODULES@
+ mp3blaster_SOURCES = fileman.cc \
+ 			  main.cc \
+ 			  scrollwin.cc \
+@@ -131,7 +130,6 @@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+-bin_PROGRAMS = mp3blaster$(EXEEXT) mp3tag$(EXEEXT) splay$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
  
- splay_SOURCES = splay.cc splay.h splay_common.cc
+ am_mp3blaster_OBJECTS = fileman.$(OBJEXT) main.$(OBJEXT) \
