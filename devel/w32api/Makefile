@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2003/09/21 16:03:39 kent Exp $
-# $PEACE: Makefile,v 1.21 2002/08/21 02:02:27 kent Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/21 19:58:38 kent Exp $
 
 DISTNAME=	w32api-2.4-src
 PKGNAME=	w32api-2.4
-#PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mingw/}
@@ -14,7 +12,7 @@ MAINTAINER=	peace-sacrifice@hauN.org
 HOMEPAGE=	http://www.mingw.org/
 COMMENT=	Free headers and libraries for the Win32 API
 
-BUILD_DEPENDS+=	cross-i386-netbsdpe:../../cross/i386-netbsdpe
+BUILD_DEPENDS+=	cross-i386-netbsdpe>=1.3:../../cross/i386-netbsdpe
 
 PE_CC=		${CROSSBASE}/bin/i386-netbsdpe-cc -I${WRKSRC}/include
 PE_AR=		${CROSSBASE}/bin/i386-netbsdpe-ar
@@ -58,7 +56,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${CROSSBASE}/i386-netbsdpe/lib
 	${INSTALL_DATA} ${WRKSRC}/lib/lib*.a ${CROSSBASE}/i386-netbsdpe/lib
 	${_PKG_SILENT}cd ${CRTWRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install
-#post-install:
-#	PKG_PREFIX=${LOCALBASE} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
