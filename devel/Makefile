@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.445 2003/12/29 13:22:03 grant Exp $
+# $NetBSD: Makefile,v 1.446 2003/12/29 17:48:15 xtraeme Exp $
 #
 
 COMMENT=	Development utilities
@@ -27,6 +27,7 @@ SUBDIR+=	as31
 SUBDIR+=	asm2html
 SUBDIR+=	astyle
 SUBDIR+=	atk
+SUBDIR+=	at-spi
 SUBDIR+=	autoconf
 SUBDIR+=	autoconf213
 SUBDIR+=	autogen
