@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/12 13:57:51 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/31 17:17:07 minskim Exp $
 
 --- makefile.orig	2004-02-28 17:30:22.000000000 +0100
 +++ makefile	2004-02-28 17:35:17.000000000 +0100
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/01/12 13:57:51 xtraeme Exp $
  INCLUDES	=	-I.
 -LIBRARIES	=	-ldl -lm
 -CFLAGS		=	$(INCLUDES) -Wall -Werror -O3 -fPIC
-+LIBRARIES	=	-lm
++LIBRARIES	=	$(DL_LIBS) -lm
 +CFLAGS		=	$(INCLUDES) -Wall -Werror -fPIC
  CXXFLAGS	=	$(CFLAGS)
  PLUGINS		=	../plugins/amp.so				\
