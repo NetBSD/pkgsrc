@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/12/29 18:23:09 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/25 06:17:46 snj Exp $
 #
 
 DISTNAME=	wml-2.0.3
@@ -25,7 +25,7 @@ CONFIGURE_ARGS=	--with-perl=${PERL5} \
 		--with-openworld \
 		--with-tidy=${LOCALBASE}/bin/tidy
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 TEST_TARGET=	test
 
 INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
@@ -45,6 +45,6 @@ post-install:
 	    ${MV} $${i}.7 $${i}.0 ; \
 	done
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
