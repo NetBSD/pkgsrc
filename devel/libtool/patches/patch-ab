@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.30 2004/02/05 20:14:06 skrll Exp $
+$NetBSD: patch-ab,v 1.31 2004/02/08 11:21:58 skrll Exp $
 
 --- configure.orig	2004-01-25 12:36:38.000000000 +0000
 +++ configure
@@ -27,7 +27,7 @@ $NetBSD: patch-ab,v 1.30 2004/02/05 20:14:06 skrll Exp $
 -bsdi4*)
 -  version_type=linux
 +bsdi*)
-+  version_type=sunox
++  version_type=sunos
    need_version=no
 +  need_lib_prefix=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
