@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1758 2003/03/24 10:51:14 wiz Exp $
+$NetBSD: CHANGES,v 1.1759 2003/03/24 12:15:04 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1279,3 +1279,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated speex to 1.0 [wiz 2003-03-24]
 	Updated sweep to 0.8nb1 [wiz 2003-03-24]
 	Updated SDL-mixer to 1.2.4nb1 [wiz 2003-03-24]
+	Updated icon to 9.4.1 [jtb 2003-03-24]
