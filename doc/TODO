@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3220 2005/03/14 10:47:27 wiz Exp $
+$NetBSD: TODO,v 1.3221 2005/03/14 15:17:19 salo Exp $
 
 Suggested new packages
 ======================
@@ -440,7 +440,6 @@ Suggested package updates
 	o erlang-10b-3
 	o esh-0.8.5
 	o etach-1.4.0
-	o ethereal-0.10.10
 	o ettercap-0.7.2 [wip/ettercap-NG|adrianp]
 	o exiftags-1.00
 	o exim-4.50
