@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 1998/09/27 03:29:34 tv Exp $
+# $NetBSD: Makefile,v 1.16 1998/11/09 01:25:12 fvdl Exp $
 #
 
-DISTNAME=	mozilla-19980728
-PKGNAME=	mozilla-19980728
+DISTNAME=	mozilla-19981008
+PKGNAME=	mozilla-19981008
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/source/ \
 	ftp://sunsite.org.uk/Mirrors/ftp.mozilla.org/pub/mozilla/source/ \
@@ -16,9 +16,7 @@ USE_GMAKE=	yes
 USE_PERL5=	yes
 USE_MOTIF=	yes
 
-NOT_FOR_ARCHS=	arm32	# Cause not yet known
-
-CONFLICTS=	mozilla-19980603 mozilla-19980429
+CONFLICTS=	mozilla-19980603 mozilla-19980429 mozilla-19980728
 
 WRKSRC=		${WRKDIR}/mozilla
 
@@ -34,6 +32,5 @@ do-install:
 	${LN} -sf ${PREFIX}/bin/moz-export ${PREFIX}/bin/mozilla
 	${INSTALL_PROGRAM_DIR} ${MOZ_LIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/dist/${MOZ_OBJDIR}/bin/*.so* ${MOZ_LIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/dist/${MOZ_OBJDIR}/lib/*.so* ${MOZ_LIBDIR}
 
 .include "../../mk/bsd.pkg.mk"
