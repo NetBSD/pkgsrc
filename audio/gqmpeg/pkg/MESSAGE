@@ -1,0 +1,12 @@
+If you want other skins, you can download them from
+http://www.geocities.com/SiliconValley/Haven/5235/mpeg-skin.html
+To unpack them into HOME/.gqmpeg/skins then type
+"gqmpeg -skin:skinfile (the skin in the directory named skinfile)" to use them.
+
+  Shoutcast support:
+    (unsupported, very buggy) (not available in binary packages)
+    Shoutcast support _requires_ mpg123 0.59pre-p ..
+              ... mpg123 0.59o WILL NOT WORK!
+    The shoutcast directory of the source code includes a script and
+    instructions to use GQmpeg as a netscape plugin for shoutcast(.com)
+    pls files.
