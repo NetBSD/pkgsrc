@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2001/07/31 05:27:31 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2001/09/14 05:41:06 jlam Exp $
 
 --- configure.orig	Tue May 22 02:09:41 2001
-+++ configure
++++ configure	Fri Sep 14 01:34:23 2001
 @@ -1763,7 +1763,7 @@
  if test "$mgp_use_freetype" = "yes"; then
   	echo $ac_n "checking for freetype library/header""... $ac_c" 1>&6
@@ -38,6 +38,15 @@ $NetBSD: patch-aa,v 1.7 2001/07/31 05:27:31 jlam Exp $
  	if test -f $i/include/libmng.h; then 
  		if test -f $i/lib/libmng.a ; then
  			DEPLIBS="$DEPLIBS $i/lib/libmng.a"
+@@ -2277,7 +2277,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  LIBS="$LIBS -Wl,-rpath,$i/lib -lmng"
++  LIBS="$LIBS -lmng"
+ 			 cat >> confdefs.h <<\EOF
+ #define MNG 1
+ EOF
 @@ -2764,7 +2764,7 @@
  		echo 'FATAL: You need libungif to use gif images.  pass proper LIBS to configure.'
  		exit 1
