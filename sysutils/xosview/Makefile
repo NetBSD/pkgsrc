@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/11/13 15:52:36 agc Exp $
+# $NetBSD: Makefile,v 1.4 1997/11/18 09:57:27 hubertf Exp $
 # New ports collection makefile for:    xosview
 # Version required:     		1.5.0
 # Date created:         		Fri Oct 24 10:03:55 BST 1997
@@ -7,7 +7,7 @@
 
 DISTNAME=       xosview-1.5.0
 CATEGORIES=	sysutils
-MASTER_SITES=   http://lore.ece.utexas.edu/~bgrayson/xosview/
+MASTER_SITES=   http://www.ece.utexas.edu/~bgrayson/xosview/
 
 MAINTAINER=	bgrayson@ece.utexas.edu
 
