@@ -1,0 +1,7 @@
+==========================================================================
+
+Copy ${PREFIX}/lib/${EMACSVER}/etc/sample.init.el to ~/.xemacs/init.el.
+You need to install xemacs-package for a basic set of
+support packages.
+
+==========================================================================
