@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4095 2003/12/14 13:58:43 jmmv Exp $
+$NetBSD: CHANGES,v 1.4096 2003/12/14 14:00:36 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -597,7 +597,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated avifile-devel to 0.6.20010814nb2 [fredb 2003-02-13]
 	Updated sh-utils to 2.0nb2 [grant 2003-02-13]
 	Updated libgda to 0.10.0 [jmmv 2003-02-13]
-	Added php4-iconv 4.2.3 [jdolecek 2003-02-13]
+	Added php4-iconv-4.2.3 [jdolecek 2003-02-13]
 	Updated xmame to 0.65.1 [kristerw 2003-02-13]
 	Updated apla to 1.0.3nb2 [fredb 2003-02-13]
 	Updated gnome2-pixmaps to 2.2.0.1 [jmmv 2003-02-13]
@@ -5127,3 +5127,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ivtools to 1.1.2 [markd 2003-12-14]
 	Updated gperiodic to 2.0.7 [wiz 2003-12-14]
 	Added zziplib-0.10.82 [jdolecek 2003-12-14]
+	Added php4-zip-4.3.4 [jdolecek 2003-12-14]
