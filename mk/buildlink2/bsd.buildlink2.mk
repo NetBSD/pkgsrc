@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.54 2002/11/21 00:21:11 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.55 2002/11/25 19:32:47 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -382,13 +382,15 @@ _BUILDLINK_SUBST_USE: .USE
 				cd ${WRKSRC};				\
 				for file in $${files}; do		\
 					if ${_BLNK_CHECK_IS_TEXT_FILE}; then \
+						${MV} -f $${file} $${file}.blsav; \
 						${SED}  ${BUILDLINK_SUBST_SED.${.TARGET:S/-buildlink-subst//}} \
-							$${file} > $${file}.modified; \
-						if [ -x $${file} ]; then \
-							${CHMOD} +x $${file}.modified; \
+							$${file}.blsav > $${file}; \
+						if [ -x $${file}.blsav ]; then \
+							${CHMOD} +x $${file}; \
 						fi;			\
-						if ${CMP} -s $${file} $${file}.modified; then :; else \
-							${MV} -f $${file}.modified $${file}; \
+						if ${CMP} -s $${file}.blsav $${file}; then \
+							${MV} -f $${file}.blsav $${file}; \
+						else			\
 							${ECHO} $${file} >> $${cookie}; \
 						fi;			\
 					fi;				\
