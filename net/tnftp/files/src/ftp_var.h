@@ -1,7 +1,7 @@
-/*	$NetBSD: ftp_var.h,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	$NetBSD: ftp_var.h,v 1.2 2004/07/27 10:25:09 grant Exp $	*/
 
 /*-
- * Copyright (c) 1996-2003 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2004 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -306,6 +306,7 @@ GLOBAL	void	(*reply_callback)(const char *);
 					 * first (`xxx-') and last (`xxx ')
 					 */
 
+GLOBAL	volatile sig_atomic_t	sigint_raised;
 
 GLOBAL	FILE	*cin;
 GLOBAL	FILE	*cout;
