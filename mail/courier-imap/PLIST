@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/02 22:19:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/01/02 22:51:19 jlam Exp $
 bin/couriertls
 bin/imapd
-bin/maildirmake.imapd
+bin/imapd.maildirmake
 bin/pop3d
 etc/rc.d/courierimap
 etc/rc.d/courierimaps
@@ -18,7 +18,7 @@ libexec/courier/logger
 libexec/courier/makedatprog
 libexec/courier/pop3d-ssl.rc
 libexec/courier/pop3d.rc
-man/man1/maildirmake.imapd.1
+man/man1/imapd.maildirmake.1
 man/man7/authcram.7
 man/man7/authdaemon.7
 man/man7/authdaemond.7
