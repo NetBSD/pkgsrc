@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.8 2001/05/22 22:07:01 jlam Exp $
+
+--- profile/profile.c.orig	Thu Nov 16 16:44:48 2000
++++ profile/profile.c	Tue May 22 17:53:46 2001
+@@ -26,6 +26,16 @@
+ 
+ extern int DEBUGLEVEL;
+ 
++/*
++ * Definitions for OSes without SHM_R or SHM_W in <sys/shm.h>.
++ */
++#ifndef SHM_R
++#define SHM_R IPC_R
++#endif
++#ifndef SHM_W
++#define SHM_W IPC_W
++#endif
++
+ #define IPC_PERMS ((SHM_R | SHM_W) | (SHM_R>>3) | (SHM_R>>6))
+ 
+ static int shm_id;
