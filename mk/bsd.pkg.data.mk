@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.data.mk,v 1.1.2.1 2004/11/23 18:25:35 tv Exp $
+#	$NetBSD: bsd.pkg.data.mk,v 1.1.2.2 2004/11/23 20:39:19 tv Exp $
 #
 # bsd.pkg.mk fragments for exporting data in human-readable or machine
 # parseable formats.
@@ -10,21 +10,33 @@
 #
 # Targets:
 #
+## README.html (internal only)
+## binpkg-list
+## cdrom-readme
 ## check
+## describe
 ## fetch-list
 ## fetch-list-recursive (internal only)
 ## fetch-list-one-pkg (internal only)
 ## info
 ## lint
 ## list
+## make-readme-html-help (internal only)
+## print-build-depends-list
+## print-run-depends-list
+## print-summary-data
+## readme [readmes]
 ## show-all-depends-dirs
 ## show-depends-dirs
 ## show-distfiles
 ## show-downlevel
 ## show-installed-depends
+## show-license [show-licence]
 ## show-needs-update
 ## show-pkgsrc-dir
+## show-pkgtools-version
 ## show-root-dirs
+## show-vulnerabilities-html (internal only)
 #
 
 # show both build and run depends directories (non-recursively)
@@ -272,25 +284,6 @@ fetch-list-one-pkg:
 .    endif # defined(_FETCH_MESSAGE) || defined(DYNAMIC_MASTER_SITES)
 .  endfor
 .endif # !empty(_ALLFILES)
-
-# Set to "html" by the README.html target to generate HTML code,
-# or to "svr4" to print SVR4 (Solaris, ...) short package names, from
-# SVR4_PKGNAME variable.
-# This variable is passed down via build-depends-list and run-depends-list
-PACKAGE_NAME_TYPE?=	name
-
-# Nobody should want to override this unless PKGNAME is simply bogus.
-HTML_PKGNAME=<a href="../../${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}/README.html">${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</A>
-
-.PHONY: package-name
-package-name:
-.if (${PACKAGE_NAME_TYPE} == "html")
-	@${ECHO} '<a href="../../${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}/README.html">${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</A>'
-.elif (${PACKAGE_NAME_TYPE} == "svr4")
-	@${ECHO} ${SVR4_PKGNAME}
-.else
-	@${ECHO} ${PKGNAME}
-.endif # PACKAGE_NAME_TYPE
 
 .PHONY: make-readme-html-help
 make-readme-html-help:

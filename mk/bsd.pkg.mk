@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.5 2004/11/23 18:25:35 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.6 2004/11/23 20:39:19 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -3101,6 +3101,25 @@ run-depends-list:
 		fi;							\
 	fi
 .endfor
+
+# Set to "html" by the README.html target to generate HTML code,
+# or to "svr4" to print SVR4 (Solaris, ...) short package names, from
+# SVR4_PKGNAME variable.
+# This variable is passed down via build-depends-list and run-depends-list
+PACKAGE_NAME_TYPE?=	name
+
+# Nobody should want to override this unless PKGNAME is simply bogus.
+HTML_PKGNAME=<a href="../../${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}/README.html">${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</A>
+
+.PHONY: package-name
+package-name:
+.if (${PACKAGE_NAME_TYPE} == "html")
+	@${ECHO} '<a href="../../${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}/README.html">${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</A>'
+.elif (${PACKAGE_NAME_TYPE} == "svr4")
+	@${ECHO} ${SVR4_PKGNAME}
+.else
+	@${ECHO} ${PKGNAME}
+.endif # PACKAGE_NAME_TYPE
 
 # Build a package but don't check the package cookie
 
