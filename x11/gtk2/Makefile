@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2004/10/13 07:28:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.66 2004/11/12 06:39:21 jlam Exp $
 #
 
 DISTNAME=		gtk+-2.4.13
@@ -32,7 +32,6 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ENV+=		ac_cv_header_X11_extensions_Xinerama_h=no
 CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
-MAKE_ENV+=		PTHREAD_LDFLAGS="${PTHREAD_LDFLAGS}"
 TEST_TARGET=		check
 
 PKGCONFIG_OVERRIDE=	gdk-2.0.pc.in
