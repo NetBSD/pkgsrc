@@ -1,26 +1,121 @@
-$NetBSD: patch-am,v 1.1 2003/09/14 14:04:31 recht Exp $
+$NetBSD: patch-am,v 1.2 2003/12/08 21:13:56 recht Exp $
 
---- Include/py_curses.h.orig	2003-09-14 13:55:07.000000000 +0200
-+++ Include/py_curses.h	2003-09-14 14:10:49.000000000 +0200
-@@ -39,6 +39,21 @@
- #endif
- #endif
+--- setup.py.orig	2003-09-22 03:19:45.000000000 +0200
++++ setup.py	2003-12-08 21:33:30.000000000 +0100
+@@ -15,7 +15,7 @@
+ from distutils.command.install_lib import install_lib
  
-+#ifdef __NetBSD__
-+/*
-+** On NetBSD, [n]curses.h and stdlib.h/wchar.h use different guards
-+** against multiple definition of wchar_t and wint_t.
-+*/
-+#ifdef	_XOPEN_SOURCE_EXTENDED
-+#ifndef _WCHAR_T
-+#define _WCHAR_T
-+#endif
-+#ifndef _WINT_T
-+#define _WINT_T
-+#endif
-+#endif
-+#endif
-+
- #ifdef HAVE_NCURSES_H
- #include <ncurses.h>
- #else
+ # This global variable is used to hold the list of modules to be disabled.
+-disabled_module_list = []
++disabled_module_list = ["_bsddb", "_curses", "_curses_panel", "_tkinter", "gdbm", "mpz", "pyexpat", "readline"]
+ 
+ def add_dir_to_list(dirlist, dir):
+     """Add the directory 'dir' to the list 'dirlist' (at the front) if
+@@ -240,9 +240,15 @@
+         return sys.platform
+ 
+     def detect_modules(self):
+-        # Ensure that /usr/local is always used
+-        add_dir_to_list(self.compiler.library_dirs, '/usr/local/lib')
+-        add_dir_to_list(self.compiler.include_dirs, '/usr/local/include')
++        # Add the buildlink directories for pkgsrc
++        if os.environ.has_key('BUILDLINK_DIR'):
++            dir = os.environ['BUILDLINK_DIR']
++            libdir = dir + '/lib'
++            incdir = dir + '/include'
++            if libdir not in self.compiler.library_dirs:
++                self.compiler.library_dirs.insert(0, libdir)
++            if incdir not in self.compiler.include_dirs:
++                self.compiler.include_dirs.insert(0, incdir)
+ 
+         # fink installs lots of goodies in /sw/... - make sure we
+         # check there
+@@ -436,9 +442,7 @@
+                                depends = ['socketmodule.h']) )
+         # Detect SSL support for the socket module (via _ssl)
+         ssl_incs = find_file('openssl/ssl.h', inc_dirs,
+-                             ['/usr/local/ssl/include',
+-                              '/usr/contrib/ssl/include/'
+-                             ]
++                             []
+                              )
+         if ssl_incs is not None:
+             krb5_h = find_file('krb5.h', inc_dirs,
+@@ -446,9 +450,7 @@
+             if krb5_h:
+                 ssl_incs += krb5_h
+         ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
+-                                     ['/usr/local/ssl/lib',
+-                                      '/usr/contrib/ssl/lib/'
+-                                     ] )
++                                     [] )
+ 
+         if (ssl_incs is not None and
+             ssl_libs is not None):
+@@ -562,9 +564,11 @@
+                                   include_dirs=db_incs,
+                                   libraries=dblibs))
+         else:
+-            db_incs = None
+-            dblibs = []
+-            dblib_dir = None
++            db_incs =['%%DB185_INCS%%']
++            dblibs = ['%%DB185_LIBS%%']
++            dblib_dir = ['%%DB185_LIBDIR%%']
++	    if len(dblibs) > 0 and dblibs[0] == '':
++                dblibs = []
+ 
+ 
+         # Look for Berkeley db 1.85.   Note that it is built as a different
+@@ -573,21 +577,30 @@
+         # accidentally building this module with a later version of the
+         # underlying db library.  May BSD-ish Unixes incorporate db 1.85
+         # symbols into libc and place the include file in /usr/include.
+-        f = "/usr/include/db.h"
++        f = "%%DB185_H%%"
+         if os.path.exists(f):
+             data = open(f).read()
+             m = re.search(r"#s*define\s+HASHVERSION\s+2\s*", data)
+             if m is not None:
++                bsddb185_define_macros = []
++		if f.split("/")[-1] == "db_185.h":
++		    bsddb185_define_macros=[('HAVE_DB_185_H',1)]
+                 # bingo - old version used hash file format version 2
+                 ### XXX this should be fixed to not be platform-dependent
+                 ### but I don't have direct access to an osf1 platform and
+                 ### seemed to be muffing the search somehow
+-                libraries = platform == "osf1" and ['db'] or None
++                #libraries = platform == "osf1" and ['db'] or None
++                libraries = dblibs
+                 if libraries is not None:
+                     exts.append(Extension('bsddb185', ['bsddbmodule.c'],
++                                          library_dirs=dblib_dir,
++                                          runtime_library_dirs=dblib_dir,
++                                          include_dirs=db_incs,
++                                          define_macros=bsddb185_define_macros,
+                                           libraries=libraries))
+                 else:
+-                    exts.append(Extension('bsddb185', ['bsddbmodule.c']))
++                    exts.append(Extension('bsddb185', ['bsddbmodule.c'],
++                                          define_macros=bsddb185_define_macros))
+ 
+         # The standard Unix dbm module:
+         if platform not in ['cygwin']:
+@@ -765,7 +778,7 @@
+             # Linux-specific modules
+             exts.append( Extension('linuxaudiodev', ['linuxaudiodev.c']) )
+ 
+-        if platform in ('linux2', 'freebsd4'):
++        if platform in ('linux2', 'freebsd4', 'freebsd5'):
+             exts.append( Extension('ossaudiodev', ['ossaudiodev.c']) )
+ 
+         if platform == 'sunos5':
+@@ -1135,7 +1148,7 @@
+           ext_modules=[Extension('struct', ['structmodule.c'])],
+ 
+           # Scripts to install
+-          scripts = ['Tools/scripts/pydoc', 'Tools/scripts/idle']
++          scripts = ['Tools/scripts/pydoc2.3']
+         )
+ 
+ # --install-platlib

@@ -1,81 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2003/08/18 20:57:14 recht Exp $
+$NetBSD: patch-aa,v 1.3 2003/12/08 21:13:56 recht Exp $
 
---- setup.py.orig	2003-07-10 14:48:39.000000000 +0200
-+++ setup.py	2003-08-18 21:19:14.000000000 +0200
-@@ -15,7 +15,7 @@
- from distutils.command.install_lib import install_lib
+--- Include/patchlevel.h.orig	2003-10-01 08:47:48.000000000 +0200
++++ Include/patchlevel.h
+@@ -26,7 +26,7 @@
+ #define PY_RELEASE_SERIAL	0
  
- # This global variable is used to hold the list of modules to be disabled.
--disabled_module_list = []
-+disabled_module_list = ["_curses", "_curses_panel", "_tkinter", "gdbm", "mpz", "pyexpat", "readline"]
+ /* Version as a string */
+-#define PY_VERSION		"2.3.2"
++#define PY_VERSION		"2p3.2"
  
- def add_dir_to_list(dirlist, dir):
-     """Add the directory 'dir' to the list 'dirlist' (at the front) if
-@@ -240,9 +240,15 @@
-         return sys.platform
- 
-     def detect_modules(self):
--        # Ensure that /usr/local is always used
--        add_dir_to_list(self.compiler.library_dirs, '/usr/local/lib')
--        add_dir_to_list(self.compiler.include_dirs, '/usr/local/include')
-+        # Add the buildlink directories for pkgsrc
-+        if os.environ.has_key('BUILDLINK_DIR'):
-+            dir = os.environ['BUILDLINK_DIR']
-+            libdir = dir + '/lib'
-+            incdir = dir + '/include'
-+            if libdir not in self.compiler.library_dirs:
-+                self.compiler.library_dirs.insert(0, libdir)
-+            if incdir not in self.compiler.include_dirs:
-+                self.compiler.include_dirs.insert(0, incdir)
- 
-         # fink installs lots of goodies in /sw/... - make sure we
-         # check there
-@@ -396,13 +402,13 @@
-         # These represent audio samples or images as strings:
- 
-         # Disabled on 64-bit platforms
--        if sys.maxint != 9223372036854775807L:
-+#        if sys.maxint != 9223372036854775807L:
-             # Operations on audio samples
--            exts.append( Extension('audioop', ['audioop.c']) )
-+#            exts.append( Extension('audioop', ['audioop.c']) )
-             # Operations on images
--            exts.append( Extension('imageop', ['imageop.c']) )
-+#            exts.append( Extension('imageop', ['imageop.c']) )
-             # Read SGI RGB image files (but coded portably)
--            exts.append( Extension('rgbimg', ['rgbimgmodule.c']) )
-+#            exts.append( Extension('rgbimg', ['rgbimgmodule.c']) )
- 
-         # readline
-         if self.compiler.find_library_file(lib_dirs, 'readline'):
-@@ -436,9 +442,7 @@
-                                depends = ['socketmodule.h']) )
-         # Detect SSL support for the socket module (via _ssl)
-         ssl_incs = find_file('openssl/ssl.h', inc_dirs,
--                             ['/usr/local/ssl/include',
--                              '/usr/contrib/ssl/include/'
--                             ]
-+                             []
-                              )
-         if ssl_incs is not None:
-             krb5_h = find_file('krb5.h', inc_dirs,
-@@ -446,9 +450,7 @@
-             if krb5_h:
-                 ssl_incs += krb5_h
-         ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
--                                     ['/usr/local/ssl/lib',
--                                      '/usr/contrib/ssl/lib/'
--                                     ] )
-+                                     [] )
- 
-         if (ssl_incs is not None and
-             ssl_libs is not None):
-@@ -1128,7 +1130,7 @@
-           ext_modules=[Extension('struct', ['structmodule.c'])],
- 
-           # Scripts to install
--          scripts = ['Tools/scripts/pydoc', 'Tools/scripts/idle']
-+          scripts = ['Tools/scripts/pydoc2p3']
-         )
- 
- # --install-platlib
+ /* Version as a single 4-byte hex number, e.g. 0x010502B2 == 1.5.2b2.
+    Use this for numeric comparisons, e.g. #if PY_VERSION_HEX >= ... */

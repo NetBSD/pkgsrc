@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.2 2003/12/08 21:13:56 recht Exp $
+$NetBSD: patch-ah,v 1.1 2003/12/08 21:13:56 recht Exp $
 
 --- Makefile.pre.in.orig	2003-09-20 12:50:28.000000000 +0200
 +++ Makefile.pre.in

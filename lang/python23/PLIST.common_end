@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.1 2003/08/18 20:57:12 recht Exp $
+@comment $NetBSD: PLIST.common_end,v 1.2 2003/12/08 21:13:56 recht Exp $
 @dirrm lib/python2.3/xml/sax
 @dirrm lib/python2.3/xml/parsers
 @dirrm lib/python2.3/xml/dom

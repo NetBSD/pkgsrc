@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2003/12/08 21:13:56 recht Exp $
+$NetBSD: patch-ag,v 1.1 2003/12/08 21:13:56 recht Exp $
 
 --- Lib/test/test_weakref.py.orig	2003-07-14 23:37:17.000000000 +0200
 +++ Lib/test/test_weakref.py
