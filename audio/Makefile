@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2002/10/13 16:08:03 wiz Exp $
+# $NetBSD: Makefile,v 1.159 2002/12/14 18:24:04 jmmv Exp $
 #
 
 COMMENT=	Audio tools
@@ -87,6 +87,7 @@ SUBDIR+=	libaudiofile
 SUBDIR+=	libcdaudio
 SUBDIR+=	libmikmod
 SUBDIR+=	libogg
+SUBDIR+=	libsamplerate
 SUBDIR+=	libsidplay
 SUBDIR+=	libsndfile
 SUBDIR+=	libvorbis
