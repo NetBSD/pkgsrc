@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2004/04/26 16:49:17 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2004/07/04 22:18:41 jmmv Exp $
 #
 
-DISTNAME=	buildtool-0.15
+DISTNAME=	buildtool-0.16
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=buildtool/}
 
@@ -23,6 +23,6 @@ CONFIGURE_ARGS+=	-c ${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		SH="${SH}"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/buildtool-0/pkgflags
+	${INSTALL_DATA_DIR} ${PREFIX}/share/buildtool/pkgflags
 
 .include "../../mk/bsd.pkg.mk"
