@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/03 20:05:21 lha Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/29 06:45:47 jlam Exp $
 
 DISTNAME=	psi-0.8.7
 CATEGORIES=	chat
@@ -8,6 +8,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jdolecek@netbsd.org
 HOMEPAGE=	http://psi.affinix.com/
 COMMENT=	PSI Jabber Client
+
+# need qt3 3.0.4nb2, for qmake
+BUILD_DEPENDS+=	qt3-tools>=3.0.4nb2:../../x11/qt3-tools
 
 USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
@@ -19,12 +22,7 @@ BUILD_DIRS=	${WRKSRC}/src
 
 CONFIGURE_ARGS+= -p ${PREFIX}
 
-BUILDLINK_DEPENDS_METHOD.qt3-tools=	build
-# need qt3 3.0.4nb2, for qmake
-BUILDLINK_DEPENDS.qt3-tools=		qt3-tools>=3.0.4nb2
-
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../x11/qt3-libs/buildlink2.mk"
-.include "../../x11/qt3-tools/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
