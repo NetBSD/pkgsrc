@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2000/11/10 16:57:25 abs Exp $
+$NetBSD: patch-aa,v 1.7 2000/11/13 10:26:16 abs Exp $
 
 --- Imakefile.orig	Mon May 18 14:18:46 1998
 +++ Imakefile
@@ -6,8 +6,8 @@ $NetBSD: patch-aa,v 1.6 2000/11/10 16:57:25 abs Exp $
  #define IHaveSubdirs
  #define PassCDebugFlags
  
--SUBDIRS = libvncauth vncviewer vncpasswd
-+SUBDIRS = libvncauth vncpasswd
+-SUBDIRS = libvncauth vncviewer vncpasswd vncconnect
++SUBDIRS = libvncauth vncpasswd vncconnect
  
  World:
  	make Makefiles
