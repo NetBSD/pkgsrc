@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/08/01 06:57:25 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/09 10:27:29 jlam Exp $
 #
 
 DISTNAME=	OpenSP-1.4
@@ -12,7 +12,7 @@ COMMENT=	SGML parser, successor to "sp"
 
 CONFLICTS+=     sp-[0-9]*
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_PERL5=		build
 PTHREAD_OPTS+=		native
 
@@ -23,11 +23,11 @@ CONFIGURE_ARGS+=	--enable-http \
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-.  include "../../devel/unproven-pthreads/buildlink.mk"
+.  include "../../devel/unproven-pthreads/buildlink2.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
