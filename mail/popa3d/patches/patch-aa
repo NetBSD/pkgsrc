@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2001/09/02 16:48:32 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2001/09/11 16:47:13 wiz Exp $
 
---- params.h.orig	Sat Sep  1 11:08:34 2001
+--- params.h.orig	Sat Sep  8 15:46:55 2001
 +++ params.h
-@@ -124,8 +124,8 @@
+@@ -142,8 +142,8 @@
   *
   * Note that there's no built-in password aging support.
   */
@@ -13,12 +13,12 @@ $NetBSD: patch-aa,v 1.4 2001/09/02 16:48:32 wiz Exp $
  #define AUTH_PAM			0
  #define AUTH_PAM_USERPASS		0
  
-@@ -158,7 +158,7 @@
-  * Your mail spool directory. Note: only local (non-NFS) mode 775 mail
-  * spools are currently supported.
+@@ -178,7 +178,7 @@
+  *
+  * #undef this for qmail-style $HOME/Mailbox mailboxes.
   */
 -#define MAIL_SPOOL_PATH			"/var/spool/mail"
 +#define MAIL_SPOOL_PATH			"/var/mail"
  
- #endif
- 
+ #ifndef MAIL_SPOOL_PATH
+ /*
