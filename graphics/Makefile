@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1998/08/24 18:13:08 agc Exp $
+# $NetBSD: Makefile,v 1.28 1998/08/27 11:18:44 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -66,7 +66,7 @@
     SUBDIR += xfig
 #    SUBDIR += xfractint
 #    SUBDIR += xgrasp
-#    SUBDIR += xli
+    SUBDIR += xli
 #    SUBDIR += xmandel
 #    SUBDIR += xmfract
 #    SUBDIR += xmorph
