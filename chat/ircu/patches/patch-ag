@@ -1,30 +1,23 @@
-$NetBSD: patch-ag,v 1.1 2003/03/01 05:22:24 grant Exp $
+$NetBSD: patch-ag,v 1.2 2004/09/28 12:32:17 adrianp Exp $
 
---- tools/README.orig	Sat Apr  8 00:53:35 2000
-+++ tools/README
-@@ -35,17 +35,14 @@ security holes, namely server-server pas
- obvious problem.
+--- tools/README.orig	2004-09-22 17:24:06.000000000 +0100
++++ tools/README	2004-09-22 17:26:41.000000000 +0100
+@@ -35,12 +35,12 @@
+ very obvious problem.
  
- So how do you generate these icky looking strings for passwords?
--There's a simple program called mkpasswd to do that for you.  Just run
--mkpasswd, and at the prompt type in your plaintext password.  It will
--spit out the encrypted password, which you should then just copy into
--the irc.conf file. This should be done only when adding new passwords
--to your irc.conf file. To change over your irc.conf file to use
--encrypted passwords, define CRYPT_OPER_PASSWORD in config.h. You will
--need to recompile your server if you already compiled it with this
--feature disabled. Once compiled, edit the Makefile in this directory
--and chang "IRCDCONF" to your irc.conf file. Then "make install" in this
--directory to replace all the operator passwords in your irc.conf file
--with the encrypted format.
-+There's a simple program called ircd-mkpasswd to do that for you.  
-+Just run ircd-mkpasswd, and at the prompt type in your plaintext 
-+password.  It will spit out the encrypted password, which you should 
-+then just copy into the ircd.conf file. This should be done only when 
-+adding new passwords to your ircd.conf file. 
-+
-+To change over your ircd.conf file to use encrypted passwords, define 
-+F:CRYPT_OPER_PASSWORD:TRUE in ircd.conf.
- 
- Choose your passwords carefully. Do not choose something in a
- dictionary, make sure its at least 5 characters. Anything past 8
+ So, how do you generate these icky looking strings for passwords?
+-There's a simple program called mkpasswd to do that for you. To
+-compile mkpasswd, just "make -f Makefile.crypt" in this directory. After it
+-compiles, just run mkpasswd, and at the prompt type in your plaintext 
+-password. It will spit out the encrypted password, which you should then 
+-just copy into your ircd.conf file. This should be done only when adding 
+-new passwords to your ircd.conf file. Crypting of oper passwords is 
++There's a simple program called ircd-mkpasswd to do that for you. To
++compile ircd-mkpasswd, just "make -f Makefile.crypt" in this directory. 
++After it compiles, just run ircd-mkpasswd, and at the prompt type in your 
++plaintext password. It will spit out the encrypted password, which you 
++should then just copy into your ircd.conf file. This should be done only 
++when adding new passwords to your ircd.conf file. Crypting of oper passwords is 
+ automatically done with the new F:lines so there is nothing to enable to 
+ be able to use crypted oper passwords. All you have to do is edit the 
+ Makefile.crypt in this directory and change "IRCDCONF = 
