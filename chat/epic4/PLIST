@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/09/19 18:34:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/12/07 15:32:56 wiz Exp $
 bin/epic
 bin/epic-EPIC4-${PKGVERSION}
 libexec/wserv4
@@ -6,6 +6,7 @@ man/man1/epic.1
 share/epic/script/2.8script
 share/epic/script/alias
 share/epic/script/altchan
+share/epic/script/altchan.bj
 share/epic/script/autoget
 share/epic/script/autokick
 share/epic/script/autoop
@@ -16,6 +17,7 @@ share/epic/script/commandqueues
 share/epic/script/country
 share/epic/script/data_array
 share/epic/script/data_struct
+share/epic/script/dcc_spacefix
 share/epic/script/dcc_timeout
 share/epic/script/deban
 share/epic/script/debug.irc
@@ -38,6 +40,7 @@ share/epic/script/genalias
 share/epic/script/global
 share/epic/script/grep
 share/epic/script/guh
+share/epic/script/hold_mode
 share/epic/script/hybrid6
 share/epic/script/imap
 share/epic/script/ip-to-int
@@ -65,7 +68,9 @@ share/epic/script/newaway
 share/epic/script/newformat
 share/epic/script/nicks
 share/epic/script/nopaste
+share/epic/script/notify
 share/epic/script/old-dcc
+share/epic/script/paste
 share/epic/script/pipe
 share/epic/script/prefix
 share/epic/script/recursion
@@ -78,12 +83,14 @@ share/epic/script/sdiff
 share/epic/script/setmail
 share/epic/script/silent
 share/epic/script/sound
+share/epic/script/sping
 share/epic/script/starutils
 share/epic/script/stat
 share/epic/script/status_lag
 share/epic/script/suppressmotd
 share/epic/script/tabkey
 share/epic/script/tabkey.ce
+share/epic/script/tabkey.jm
 share/epic/script/tabkey.th
 share/epic/script/tc
 share/epic/script/time
