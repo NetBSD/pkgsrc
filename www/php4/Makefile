@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/17 17:18:02 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/17 21:33:55 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -9,24 +9,22 @@ HOMEPAGE=		http://www.php.net/
 
 CONFLICTS+=		ap-php-4.0.3pl1
 
-EXTRACT_ELEMENTS=	${DISTNAME}/php.ini-dist
-EXTRACT_ELEMENTS+=	${DISTNAME}/php.ini-optimized
-EXTRACT_ELEMENTS+=	${DISTNAME}/php4.gif
-
 MESSAGE_FILE=		${WRKDIR}/.MESSAGE
 
-# This package only installs some PHP4-related files, and doesn't require
-# any of these steps.
-#
-NO_PATCH=		# defined
-NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
+BINDIR=			${PREFIX}/bin
+CGIDIR=			${PREFIX}/libexec/cgi-bin
+LIBDIR=			${PREFIX}/lib
 
 pre-install:
 	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
 		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 do-install:
+	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/php ${BINDIR}
+	${INSTALL_DATA_DIR} ${CGIDIR}
+	${RM} -f ${CGIDIR}/php
+	${LN} -sf ../../bin/php ${CGIDIR}/php
+	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libphp4.la ${LIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/php.ini-dist ${PREFIX}/etc
 	${INSTALL_DATA} ${WRKSRC}/php.ini-optimized ${PREFIX}/etc
 	${INSTALL_DATA_DIR} ${PREFIX}/share/php4
