@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/09/27 23:18:18 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/01/27 00:38:56 jmc Exp $
 
 DISTNAME=		stalin-0.9
 CATEGORIES=		lang
@@ -8,6 +8,9 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.neci.nj.nec.com/homepages/qobi/software.html
 COMMENT=		Aggressively optimizing Scheme compiler
+
+# Only ported to these 4 archs
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-alpha *-*-mips
 
 DEPENDS+=		boehm-gc-[0-9]*:../../devel/boehm-gc
 
