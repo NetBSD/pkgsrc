@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.889 2002/01/04 15:20:25 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.890 2002/01/05 06:46:03 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -234,9 +234,12 @@ DEPENDS+=		gtexinfo-3.12:../../devel/gtexinfo
 # Automatically increase process limit where necessary for building.
 _ULIMIT_CMD=
 .if defined(UNLIMIT_RESOURCES)
-.  for _LIMIT in $(UNLIMIT_RESOURCES)
-_ULIMIT_CMD+=	ulimit -${_LIMIT} `ulimit -H -${_LIMIT}`;
-.  endfor
+.  if ${UNLIMIT_RESOURCES:Mdatasize} != ""
+_ULIMIT_CMD+=	ulimit -d `ulimit -H -d`;
+.  endif
+.  if ${UNLIMIT_RESOURCES:Mstacksize} != ""
+_ULIMIT_CMD+=	ulimit -s `ulimit -H -s`;
+.  endif
 .endif
 
 # -lintl in CONFIGURE_ENV is to workaround broken gettext.m4
