@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9346 2005/02/27 23:53:31 adrianp Exp $
+$NetBSD: CHANGES,v 1.9347 2005/02/28 00:44:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1188,3 +1188,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mtr-gtk to 0.69 [wiz 2005-02-27]
 	Updated bash to 3.0pl16 [wiz 2005-02-27]
 	Updated p5-MailTools to 1.66 [adrianp 2005-02-27]
+	Updated pkg_chk to 1.56 [wiz 2005-02-28]
