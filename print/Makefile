@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2004/03/28 21:15:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.115 2004/08/17 12:59:31 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -43,6 +43,7 @@ SUBDIR+=	gimp-print-cups
 SUBDIR+=	gimp-print-escputil
 SUBDIR+=	gimp-print-ijs
 SUBDIR+=	gimp-print-lib
+SUBDIR+=	glabels
 SUBDIR+=	gnome-print
 SUBDIR+=	gpdf
 SUBDIR+=	gv
