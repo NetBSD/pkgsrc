@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/04/24 22:46:11 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/04/26 04:37:38 snj Exp $
 
 DISTNAME=		srp-1.4.4
 PKGNAME=		srp-client-1.4.4
@@ -14,7 +14,7 @@ LICENSE=		srp_client-license
 
 CRYPTO=			yes
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 CPPFLAGS+=		-Dunix=1
 #CPPFLAGS+=		-Dkrb_get_err_text=k_strerror
@@ -51,5 +51,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ftp/ftp/ftp ${PREFIX}/bin/srpftp
 	${INSTALL_DATA} ${WRKSRC}/ftp/ftp/ftp.M ${PREFIX}/man/man1/srpftp.1
 
-.include "../../devel/gmp/buildlink2.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
