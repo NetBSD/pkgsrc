@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 1998/08/20 15:17:22 tsarna Exp $
+# $NetBSD: Makefile,v 1.16 1999/01/25 20:09:09 tron Exp $
 #
 
 DISTNAME=	knews-1.0b.0
 PKGNAME=	knews-1.0b0
-CATEGORIES=	news
+CATEGORIES=	news x11
 MASTER_SITES=	http://www.matematik.su.se/~kjj/
 
 MAINTAINER=	tron@netbsd.org
