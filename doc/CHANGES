@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5610 2004/04/16 15:05:34 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5611 2004/04/16 16:12:14 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2005,3 +2005,24 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qt3-mysql to 3.3.1 [recht 2004-04-15]
 	Updated qt3 to 3.3.1 [recht 2004-04-15]
 	Added quake2forge-0.2.1 [xtraeme 2004-04-15]
+	Updated libxfce4gui to 4.0.5
+	Updated libxfce4mcs to 4.0.5
+	Updated libxfce4util to 4.0.5
+	Updated xfce4 to 4.0.5
+	Updated xfce4-desktop to 4.0.5
+	Updated xfce4-extras to 4.0.5
+	Updated xfce4-fm to 4.0.5
+	Updated xfce4-fm-icons to 4.0.5
+	Updated xfce4-iconbox to 4.0.5
+	Updated xfce4-mcs-manager to 4.0.5
+	Updated xfce4-mcs-plugins to 4.0.5
+	Updated xfce4-mixer to 4.0.5
+	Updated xfce4-panel to 4.0.5
+	Updated xfce4-print to 4.0.5
+	Updated xfce4-systray to 4.0.5
+	Updated xfce4-themes to 4.0.5
+	Updated xfce4-toys to 4.0.5
+	Updated xfce4-trigger-launcher to 4.0.5
+	Updated xfce4-utils to 4.0.5
+	Updated xfce4-wm to 4.0.5
+	Updated xfce4-wm-themes to 4.0.5
