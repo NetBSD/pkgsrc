@@ -1,13 +1,16 @@
-$NetBSD: patch-ab,v 1.3 1998/09/28 10:35:56 frueauf Exp $
+$NetBSD: patch-ab,v 1.4 1999/11/12 16:07:02 agc Exp $
 
---- hexedit.h.orig	Mon Aug 31 20:50:50 1998
-+++ hexedit.h	Tue Sep 15 13:45:05 1998
-@@ -12,7 +12,7 @@
+--- hexedit.h	1999/11/12 15:56:55	1.1
++++ hexedit.h	1999/11/12 15:57:32
+@@ -12,7 +12,11 @@
  #if HAVE_UNISTD_H
  #include <unistd.h>
  #endif
--#include <curses.h>
++#ifdef __NetBSD__
 +#include <ncurses.h>
++#else
+ #include <curses.h>
++#endif
  #include <ctype.h>
  #include <signal.h>
  #if HAVE_SYS_WAIT_H
