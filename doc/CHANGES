@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2817 2003/07/17 20:06:16 wennmach Exp $
+$NetBSD: CHANGES,v 1.2818 2003/07/18 04:00:08 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2850,3 +2850,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added avrdude-4.1.0 [wennmach 2003-07-17]
 	Updated libnbcompat to 20030717 [grant 2003-07-17]
 	Updated avr-gdb to 5.3 [wennmach 2003-07-17]
+	Updated keychain to 2.0.3 [martti 2003-07-18]
