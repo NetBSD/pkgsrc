@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2002/12/17 12:02:01 grant Exp $
+
+--- source/irc.c.orig	Tue Oct 16 01:50:56 2001
++++ source/irc.c
+@@ -217,7 +217,7 @@ static	int	cntl_c_hit = 0;
+ 	char	internal_version[] = INTERNAL_VERSION;
+ 
+ static	char	FAR switch_help[] =
+-"Usage: irc [switches] [nickname] [server list] \n\
++"Usage: scrollz [switches] [nickname] [server list] \n\
+   The [nickname] can be at most 9 characters long on some server\n\
+   The [server list] is a whitespace separate list of server name\n\
+   The [switches] may be any or all of the following\n\
