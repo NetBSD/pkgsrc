@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 1998/07/16 13:36:47 tv Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/09/15 00:48:39 tv Exp $
 bin/gif2epsn
 bin/gif2ps
 bin/gif2rgb
-bin/gif2x11
 bin/gifasm
 bin/gifbg
 bin/gifclip
@@ -40,7 +39,6 @@ share/doc/giflib/gif2iris.html
 share/doc/giflib/gif2ps.html
 share/doc/giflib/gif2rgb.html
 share/doc/giflib/gif2rle.html
-share/doc/giflib/gif2x11.html
 share/doc/giflib/gif89.txt
 share/doc/giflib/gif_lib.html
 share/doc/giflib/gifasm.html
