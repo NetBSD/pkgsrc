@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/03/21 10:09:51 tron Exp $
+# $NetBSD: Makefile,v 1.28 2000/05/03 15:14:53 rh Exp $
 
 DISTNAME=	squid-2.3.STABLE2-src
 PKGNAME=	squid-2.3s2
@@ -11,7 +11,6 @@ MASTER_SITES=	\
 	ftp://ftp.net.lut.ac.uk/squid/squid-2/STABLE/ \
 	ftp://ftp.xlink.net/pub/mirror.squid/squid-2/STABLE/
 
-PATCH_DIST_ARGS=-d ${WRKSRC}/src --forward --quiet -E ${PATCH_DIST_STRIP}
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.3/bugs/
 PATCHFILES=	squid-2.3.stable2-EOF_in_cf.data.pre.patch \
 		squid-2.3.stable2-USE_DNSSERVER.patch \

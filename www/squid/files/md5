@@ -1,10 +1,10 @@
-$NetBSD: md5,v 1.10 2000/03/21 10:09:52 tron Exp $
+$NetBSD: md5,v 1.11 2000/05/03 15:14:54 rh Exp $
 
 MD5 (squid-2.3.STABLE2-src.tar.gz) = ba90c12907e5dd8a29bf824bde2f7755
-MD5 (squid-2.3.stable2-EOF_in_cf.data.pre.patch) = aaa8ba879452b23c4fa5a4da6bdce5ed
-MD5 (squid-2.3.stable2-USE_DNSSERVER.patch) = ab04e0f9681dfdb62a813502cc936f98
-MD5 (squid-2.3.stable2-USE_DNSSERVER_part2.patch) = 53a4a11c4af677465bba1fe4a8f66618
-MD5 (squid-2.3.stable2-getMyHostname.patch) = 5315c391215c0dc58733ae0829f1514c
-MD5 (squid-2.3.stable2-hostname_whitespace.patch) = d8657f1d6f57a5a0fd5999be90696301
-MD5 (squid-2.3.stable2-netdb_exchange_loop.patch) = 94166d0fe4f700008dde41677108aed9
-MD5 (squid-2.3.stable2-redirected_username_logging.patch) = e859170c4a333630515f0fe25bb8e4ac
+MD5 (squid-2.3.stable2-EOF_in_cf.data.pre.patch) = bade9d4d6dbed4520e0353669ee057b6
+MD5 (squid-2.3.stable2-USE_DNSSERVER.patch) = a586565ec1809f8afff72cd33f5e388d
+MD5 (squid-2.3.stable2-USE_DNSSERVER_part2.patch) = 65de93562970eaa5af25e88fc15c62f9
+MD5 (squid-2.3.stable2-getMyHostname.patch) = 3649a611c44418366d07d579bfb4c64d
+MD5 (squid-2.3.stable2-hostname_whitespace.patch) = 9ce477e56b4eed66ed97bf377792029e
+MD5 (squid-2.3.stable2-netdb_exchange_loop.patch) = 2d7f25ca0c723907c9265ea840739982
+MD5 (squid-2.3.stable2-redirected_username_logging.patch) = abafca200d09fc9badf81992af47e5ad
