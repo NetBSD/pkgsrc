@@ -1,68 +1,93 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 10:40:54 agc Exp $
+$NetBSD: patch-ab,v 1.5 1999/03/19 08:43:55 rh Exp $
 
---- Imakefile.orig	Sun Jan 26 17:22:08 1997
-+++ Imakefile	Mon Feb 16 10:33:43 1998
-@@ -91,13 +91,29 @@
- XCOMM --    Indeo 3.x  IV32	indeo.readme
- XCOMM --    Creative   CYUV	creative.readme
+--- Imakefile.orig	Tue Mar 16 00:58:48 1999
++++ Imakefile	Wed Mar 17 20:43:19 1999
+@@ -96,9 +96,9 @@
+ XCOMM   to link against symbols inside xanim.
  XCOMM 
--XCOMM XA_IV32_DEF = -DXA_INDEO 
--XCOMM XA_CVID_DEF = -DXA_CINEPAK
+ XCOMM ## Linux
+-LD_FLAGS = -rdynamic
++XCOMM LD_FLAGS = -rdynamic
+ XCOMM ## SunOS/Solaris use:
+-XCOMM  LD_FLAGS =
++LD_FLAGS =
+ 
+ 
+ XCOMM #########################################################################
+@@ -109,8 +109,8 @@
+ XCOMM  So far I've only tested this on Linux_x86, SunOS_Sparc and Solaris_Sparc
+ XCOMM #########################################################################
+ XCOMM 
+-XA_DLL_DEF = -DXA_DLL
+-XA_DLL_LIB = -ldl
++XCOMM XA_DLL_DEF = -DXA_DLL
++XCOMM XA_DLL_LIB = -ldl
+ 
+ 
+ XCOMM #########################################################################
+@@ -165,13 +165,29 @@
+ XCOMM  
+ XCOMM  Again don't use these if you are using the dynamically loadable modules.
+ XCOMM 
+-XCOMM XA_IV32_DEF = -DXA_IV32 
+-XCOMM XA_CVID_DEF = -DXA_CVID
 -XCOMM XA_CYUV_DEF = -DXA_CYUV
--XCOMM
--XA_IV32_LIB = 
--XA_CVID_LIB = 
--XA_CYUV_LIB = 
+-XCOMM 
+-XCOMM XA_IV32_LIB = mods/xa2.1_iv32_linuxELF.o
+-XCOMM XA_CVID_LIB = mods/xa2.0_cvid_linuxELF.o
+-XCOMM XA_CYUV_LIB = mods/xa1.0_cyuv_linuxELF.o
 +.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "m68k") || (${MACHINE_ARCH} == "sparc")
-+XA_IV32_DEF = -DXA_INDEO
-+XA_CVID_DEF = -DXA_CINEPAK
++XA_IV32_DEF = -DXA_IV32 
++XA_CVID_DEF = -DXA_CVID
 +XA_CYUV_DEF = -DXA_CYUV
 +.endif
 +XCOMM
 +.if (${MACHINE_ARCH} == "i386")
-+XA_IV32_LIB = xa2.0_cvid_netbsd386.o
-+XA_CVID_LIB = xa2.0_iv32_netbsd386.o
-+XA_CYUV_LIB = xa1.0_cyuv_netbsd386.o
++XA_IV32_LIB = mods/xa2.0_iv32_netbsd386.o
++XA_CVID_LIB = mods/xa2.0_cvid_netbsd386.o
++XA_CYUV_LIB = mods/xa1.0_cyuv_netbsd386.o
 +.elif (${MACHINE_ARCH} == "m68k")
-+XA_IV32_LIB = xa2.0_cvid_netbsd68k.o
-+XA_CVID_LIB = xa2.0_iv32_netbsd68k.o
-+XA_CYUV_LIB = xa1.0_cyuv_netbsd68k.o
++XA_IV32_LIB = mods/xa2.0_iv32_netbsd68k.o
++XA_CVID_LIB = mods/xa2.0_cvid_netbsd68k.o
++XA_CYUV_LIB = mods/xa1.0_cyuv_netbsd68k.o
 +.elif (${MACHINE_ARCH} == "sparc")
-+XA_IV32_LIB = xa2.0_cvid_sparcCOFF.o
-+XA_CVID_LIB = xa2.0_iv32_sparcCOFF.o
-+XA_CYUV_LIB = xa1.0_cyuv_sparcAOUT.o
++XA_IV32_LIB = mods/xa2.0_iv32_sparcCOFF.o
++XA_CVID_LIB = mods/xa2.0_cvid_sparcCOFF.o
++XA_CYUV_LIB = mods/xa1.0_cyuv_sparcAOUT.o
 +.else
 +XA_IV32_DEF =
 +XA_CVID_DEF =
 +XA_CYUV_DEF =
 +.endif
- XCOMM
- XCOMM -- NOTE: SGI Machines only: if you see an error like
- XCOMM --               "merge_ext returns nil during relocation" or similiar
-@@ -154,7 +170,7 @@
- XCOMM XA_AUDIO_DEFS =
- XCOMM
- XCOMM -- Sun Sparcs -----------------------------------------------------------
--XA_AUDIO_DEFS = -DXA_SPARC_AUDIO
-+XCOMM XA_AUDIO_DEFS = -DXA_SPARC_AUDIO
- XCOMM
- XCOMM NOTE: Imakefile should add the -DSVR4 to Sun Solaris machines, if not
- XCOMM       use the following:
-@@ -184,7 +200,7 @@
- XCOMM XA_AUDIO_DEFS = -DXA_SONY_AUDIO
- XCOMM
- XCOMM -- NetBSD-current (as of 30/April 1995)----------------------------------
--XCOMM XA_AUDIO_DEFS = -DXA_NetBSD_AUDIO
+ XCOMM 
+ XCOMM ##########################
+ XCOMM  NOTE: SGI Machines Only: 
+@@ -242,8 +258,8 @@
+ XCOMM  XA_AUDIO_DEFS =
+ XCOMM 
+ XCOMM ## -- Linux PCs ---------------------------------------------------------
+-XA_AUDIO_DEFS = -DXA_LINUX_AUDIO
+-XA_AUDIO_LIBS = -lc
++XCOMM XA_AUDIO_DEFS = -DXA_LINUX_AUDIO
++XCOMM XA_AUDIO_LIBS = -lc
+ XCOMM 
+ XCOMM  -- Linux PC's with OLD Rev sound drivers -------------------------------
+ XCOMM  XA_AUDIO_DEFS = -DXA_LINUX_AUDIO -DXA_LINUX_OLDER_SND
+@@ -282,7 +298,7 @@
+ XCOMM  XA_AUDIO_DEFS = -DXA_SONY_AUDIO
+ XCOMM 
+ XCOMM  -- NetBSD-current (as of 30/April 1995)---------------------------------
+-XCOMM  XA_AUDIO_DEFS = -DXA_NetBSD_AUDIO
 +XA_AUDIO_DEFS = -DXA_NetBSD_AUDIO
- XCOMM
- XCOMM -- QNX 4.2 PC's ---------------------------------------------------------
- XCOMM XA_AUDIO_DEFS = -DXA_LINUX_AUDIO -DXA_LINUX_NEWER_SND -DXA_SELECT
-@@ -334,7 +350,7 @@
+ XCOMM 
+ XCOMM  -- QNX 4.2 PC's --------------------------------------------------------
+ XCOMM  XA_AUDIO_DEFS = -DXA_LINUX_AUDIO -DXA_SELECT
+@@ -440,7 +456,7 @@
  
- PROGRAMS = xanim
+ PROGRAMS = $(XANIM)
  
 -INCLUDES = -I$(INCDIR) $(XA_INCS)
 +INCLUDES = -I$(INCDIR)/X11 $(XA_INCS)
  
- 
     LIBS1 = $(XA_LIBS) $(EXTENSIONLIB) $(XTOOLLIB) $(XLIB) -lm
+ DEPLIBS1 = $(DEPEXTENSIONLIB) $(DEPXTOOLLIB) $(DEPXLIB)
