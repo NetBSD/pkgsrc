@@ -1,11 +1,20 @@
-$NetBSD: patch-ac,v 1.5 2001/10/15 22:46:00 skrll Exp $
+$NetBSD: patch-ac,v 1.6 2001/12/03 15:37:18 skrll Exp $
 
---- kate/main/Makefile.in.orig	Sat Sep  8 01:36:21 2001
+--- kate/main/Makefile.in.orig	Sat Nov 10 07:58:16 2001
 +++ kate/main/Makefile.in
-@@ -274 +274 @@
+@@ -273,7 +273,7 @@
+ x_includes = @x_includes@
+ x_libraries = @x_libraries@
+ 
 -lib_LTLIBRARIES = libkatecore.la kate.la kwrite.la
 +lib_LTLIBRARIES = libkatecore.la libkate_main.la kate.la libkwrite_main.la kwrite.la
-@@ -282,2 +282,6 @@
+ bin_PROGRAMS = kate kwrite
+ 
+ libkatecore_la_SOURCES = dummy.cpp
+@@ -281,20 +281,28 @@
+ 
+ libkatecore_la_LDFLAGS = $(all_libraries) $(KDE_RPATH)  $(KDE_PLUGIN)  -module -avoid-version
+ 
 -kate_la_SOURCES = katemain.cpp
 -kate_la_LIBADD = libkatecore.la
 +libkate_main_la_SOURCES = katemain.cpp
@@ -14,7 +23,8 @@ $NetBSD: patch-ac,v 1.5 2001/10/15 22:46:00 skrll Exp $
 +
 +kate_la_SOURCES = kate_main.cpp
 +kate_la_LIBADD = libkate_main.la
-@@ -286,2 +290,6 @@
+ kate_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -module -avoid-version
+ 
 -kwrite_la_SOURCES = kwritemain.cpp
 -kwrite_la_LIBADD = libkatecore.la
 +libkwrite_main_la_SOURCES = kwritemain.cpp
@@ -23,108 +33,138 @@ $NetBSD: patch-ac,v 1.5 2001/10/15 22:46:00 skrll Exp $
 +
 +kwrite_la_SOURCES = kwrite_main.cpp
 +kwrite_la_LIBADD = libkwrite_main.la
-@@ -290,2 +298,2 @@
+ kwrite_la_LDFLAGS = $(all_libraries) $(KDE_RPATH)  -module -avoid-version
+ 
 -kate_SOURCES = dummy.cpp
 -kate_LDADD = kate.la
 +kate_SOURCES = kate_main.cpp
 +kate_LDADD = libkate_main.la
-@@ -294,2 +302,2 @@
+ kate_LDFLAGS = $(KDE_RPATH) $(all_libraries)
+ 
 -kwrite_SOURCES = dummy.cpp
 -kwrite_LDADD = kwrite.la
 +kwrite_SOURCES = kwrite_main.cpp
 +kwrite_LDADD = libkwrite_main.la
-@@ -323,2 +331,6 @@
+ kwrite_LDFLAGS = $(KDE_RPATH) $(all_libraries)
+ 
+ INCLUDES = $(all_includes)
+@@ -322,29 +330,37 @@
+ #>- libkatecore_la_OBJECTS =  dummy.lo
+ #>+ 1
+ libkatecore_la_OBJECTS = dummy.lo
 -kate_la_DEPENDENCIES =  libkatecore.la
 -#>- kate_la_OBJECTS =  katemain.lo
 +libkate_main_la_DEPENDENCIES =  libkatecore.la
 +#>- libkate_main_la_OBJECTS =  katemain.lo
-+#>+ 1
-+libkate_main_la_OBJECTS = katemain.lo
-+kate_la_DEPENDENCIES =  libkate_main.la
-+#>- kate_la_OBJECTS =  kate_main.lo
-@@ -326,3 +338,3 @@
+ #>+ 1
 -kate_la_OBJECTS = katemain.lo
 -kwrite_la_DEPENDENCIES =  libkatecore.la
 -#>- kwrite_la_OBJECTS =  kwritemain.lo
++libkate_main_la_OBJECTS = katemain.lo
++kate_la_DEPENDENCIES =  libkate_main.la
++#>- kate_la_OBJECTS =  kate_main.lo
++#>+ 1
 +kate_la_OBJECTS = kate_main.lo
 +libkwrite_main_la_DEPENDENCIES =  libkatecore.la
 +#>- libkwrite_main_la_OBJECTS =  kwritemain.lo
-@@ -330,5 +342,9 @@
+ #>+ 5
 -kwrite_la_final_OBJECTS = kwrite_la.all_cpp.lo 
 -kwrite_la_nofinal_OBJECTS = kwritemain.lo \
--kwrite_la_meta_unload.lo 
+-	kwrite_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@kwrite_la_OBJECTS = $(kwrite_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kwrite_la_OBJECTS = $(kwrite_la_final_OBJECTS)
 +libkwrite_main_la_final_OBJECTS = libkwrite_main_la.all_cpp.lo 
 +libkwrite_main_la_nofinal_OBJECTS = kwritemain.lo \
-+libkwrite_main_la_meta_unload.lo 
++	libkwrite_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkwrite_main_la_OBJECTS = $(libkwrite_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkwrite_main_la_OBJECTS = $(libkwrite_main_la_final_OBJECTS)
 +kwrite_la_DEPENDENCIES =  libkwrite_main.la
 +#>- kwrite_la_OBJECTS =  kwrite_main.lo
 +#>+ 1
 +kwrite_la_OBJECTS = kwrite_main.lo
-@@ -338 +354 @@
+ bin_PROGRAMS =  kate$(EXEEXT) kwrite$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- kate_OBJECTS =  dummy.$(OBJEXT)
 +#>- kate_OBJECTS =  kate_main.$(OBJEXT)
-@@ -340,3 +356,3 @@
+ #>+ 1
 -kate_OBJECTS = dummy.$(OBJEXT)
 -kate_DEPENDENCIES =  kate.la
 -#>- kwrite_OBJECTS =  dummy.$(OBJEXT)
 +kate_OBJECTS = kate_main.$(OBJEXT)
 +kate_DEPENDENCIES =  libkate_main.la
 +#>- kwrite_OBJECTS =  kwrite_main.$(OBJEXT)
-@@ -344,2 +360,2 @@
+ #>+ 1
 -kwrite_OBJECTS = dummy.$(OBJEXT)
 -kwrite_DEPENDENCIES =  kwrite.la
 +kwrite_OBJECTS = kwrite_main.$(OBJEXT)
 +kwrite_DEPENDENCIES =  libkwrite_main.la
-@@ -369,2 +385,2 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -368,8 +384,8 @@
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(libkatecore_la_SOURCES) $(kate_la_SOURCES) $(kwrite_la_SOURCES) $(kate_SOURCES) $(kwrite_SOURCES)
 -OBJECTS = $(libkatecore_la_OBJECTS) $(kate_la_OBJECTS) $(kwrite_la_OBJECTS) $(kate_OBJECTS) $(kwrite_OBJECTS)
 +SOURCES = $(libkatecore_la_SOURCES) $(libkate_main_la_SOURCES) $(kate_la_SOURCES) $(libkwrite_main_la_SOURCES) $(kwrite_la_SOURCES) $(kate_SOURCES) $(kwrite_SOURCES)
 +OBJECTS = $(libkatecore_la_OBJECTS) $(libkate_main_la_OBJECTS) $(kate_la_OBJECTS) $(libkwrite_main_la_OBJECTS) $(kwrite_la_OBJECTS) $(kate_OBJECTS) $(kwrite_OBJECTS)
-@@ -462,0 +479,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -462,9 +478,15 @@
+ @KDE_USE_CLOSURE_FALSE@libkatecore.la: $(libkatecore_la_OBJECTS) $(libkatecore_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(libkatecore_la_LDFLAGS) $(libkatecore_la_OBJECTS) $(libkatecore_la_LIBADD) $(LIBS)
+ 
 +libkate_main.la: $(libkate_main_la_OBJECTS) $(libkate_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkate_main_la_LDFLAGS) $(libkate_main_la_OBJECTS) $(libkate_main_la_LIBADD) $(LIBS)
 +
-@@ -465,0 +485,3 @@
+ kate.la: $(kate_la_OBJECTS) $(kate_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(kate_la_LDFLAGS) $(kate_la_OBJECTS) $(kate_la_LIBADD) $(LIBS)
+ 
 +libkwrite_main.la: $(libkwrite_main_la_OBJECTS) $(libkwrite_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkwrite_main_la_LDFLAGS) $(libkwrite_main_la_OBJECTS) $(libkwrite_main_la_LIBADD) $(LIBS)
 +
-@@ -542,11 +563,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -687,8 +698,8 @@
+ kwrite.la: $(kwrite_la_OBJECTS) $(kwrite_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(kwrite_la_LDFLAGS) $(kwrite_la_OBJECTS) $(kwrite_la_LIBADD) $(LIBS)
+ 
+@@ -675,21 +697,21 @@
+ 
+ 
+ #>+ 12
 -kwrite_la_meta_unload.cpp:  kwritemain.moc
 -	@echo 'creating kwrite_la_meta_unload.cpp'
 -	@-rm -f kwrite_la_meta_unload.cpp
--	@echo 'static const char * _metalist_kwrite_la[] = {' > kwrite_la_meta_unload.cpp
--	@cat  kwritemain.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kwrite_la_meta_unload.cpp
--	@echo '0};' >> kwrite_la_meta_unload.cpp
--	@echo '#include <kunload.h>' >> kwrite_la_meta_unload.cpp
--	@echo '_UNLOAD(kwrite_la)' >> kwrite_la_meta_unload.cpp
 +libkwrite_main_la_meta_unload.cpp:  kwritemain.moc
 +	@echo 'creating libkwrite_main_la_meta_unload.cpp'
 +	@-rm -f libkwrite_main_la_meta_unload.cpp
-+	@echo 'static const char * _metalist_libkwrite_main_la[] = {' > libkwrite_main_la_meta_unload.cpp
-+	@cat  kwritemain.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkwrite_main_la_meta_unload.cpp
-+	@echo '0};' >> libkwrite_main_la_meta_unload.cpp
-+	@echo '#include <kunload.h>' >> libkwrite_main_la_meta_unload.cpp
-+	@echo '_UNLOAD(libkwrite_main_la)' >> libkwrite_main_la_meta_unload.cpp
-@@ -699 +710 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kwrite_la[] = {' > kwrite_la_meta_unload.cpp ;\
+-		cat  kwritemain.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kwrite_la_meta_unload.cpp ;\
+-		echo '0};' >> kwrite_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kwrite_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kwrite_la)' >> kwrite_la_meta_unload.cpp ;\
+-	else echo > kwrite_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkwrite_main_la[] = {' > libkwrite_main_la_meta_unload.cpp ;\
++		cat  kwritemain.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkwrite_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkwrite_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkwrite_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkwrite_main_la)' >> libkwrite_main_la_meta_unload.cpp ;\
++	else echo > libkwrite_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  kwrite_la_meta_unload.cpp
 +	-rm -f  libkwrite_main_la_meta_unload.cpp
-@@ -714 +725,13 @@
+ 
+ #>+ 11
+ libkatecore_la.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp   kwritemain.moc 
+@@ -704,11 +726,23 @@
+ 	rm -f libkatecore_la.all_cpp.final libkatecore_la.all_cpp.files
+ 
+ #>+ 11
 -kate_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/katemain.cpp  
 +libkate_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/katemain.cpp  
 +	@echo 'creating libkate_main_la.all_cpp.cpp ...'; \
@@ -139,10 +179,18 @@ $NetBSD: patch-ac,v 1.5 2001/10/15 22:46:00 skrll Exp $
 +
 +#>+ 11
 +kate_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kate_main.cpp  
-@@ -718 +741 @@
+ 	@echo 'creating kate_la.all_cpp.cpp ...'; \
+ 	rm -f kate_la.all_cpp.files kate_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kate_la.all_cpp.final; \
 -	for file in katemain.cpp ; do \
 +	for file in kate_main.cpp ; do \
-@@ -726 +749,13 @@
+ 	  echo "#include \"$$file\"" >> kate_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kate_la.all_cpp.final; \
+ 	done; \
+@@ -716,11 +750,23 @@
+ 	rm -f kate_la.all_cpp.final kate_la.all_cpp.files
+ 
+ #>+ 11
 -kwrite_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwritemain.cpp kwrite_la_meta_unload.cpp  
 +libkwrite_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwritemain.cpp libkwrite_main_la_meta_unload.cpp  
 +	@echo 'creating libkwrite_main_la.all_cpp.cpp ...'; \
@@ -157,27 +205,65 @@ $NetBSD: patch-ac,v 1.5 2001/10/15 22:46:00 skrll Exp $
 +
 +#>+ 11
 +kwrite_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwrite_main.cpp  
-@@ -730 +765 @@
+ 	@echo 'creating kwrite_la.all_cpp.cpp ...'; \
+ 	rm -f kwrite_la.all_cpp.files kwrite_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kwrite_la.all_cpp.final; \
 -	for file in kwritemain.cpp kwrite_la_meta_unload.cpp ; do \
 +	for file in kwrite_main.cpp ; do \
-@@ -738 +773 @@
+ 	  echo "#include \"$$file\"" >> kwrite_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kwrite_la.all_cpp.final; \
+ 	done; \
+@@ -728,11 +774,11 @@
+ 	rm -f kwrite_la.all_cpp.final kwrite_la.all_cpp.files
+ 
+ #>+ 11
 -kate.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
 +kate.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kate_main.cpp  
-@@ -742 +777 @@
+ 	@echo 'creating kate.all_cpp.cpp ...'; \
+ 	rm -f kate.all_cpp.files kate.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kate.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in kate_main.cpp ; do \
-@@ -750 +785 @@
+ 	  echo "#include \"$$file\"" >> kate.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kate.all_cpp.final; \
+ 	done; \
+@@ -740,11 +786,11 @@
+ 	rm -f kate.all_cpp.final kate.all_cpp.files
+ 
+ #>+ 11
 -kwrite.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
 +kwrite.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwrite_main.cpp  
-@@ -754 +789 @@
+ 	@echo 'creating kwrite.all_cpp.cpp ...'; \
+ 	rm -f kwrite.all_cpp.files kwrite.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kwrite.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in kwrite_main.cpp ; do \
-@@ -763 +798 @@
+ 	  echo "#include \"$$file\"" >> kwrite.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kwrite.all_cpp.final; \
+ 	done; \
+@@ -753,20 +799,20 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f libkatecore_la.all_cpp.cpp kate_la.all_cpp.cpp kwrite_la.all_cpp.cpp kate.all_cpp.cpp kwrite.all_cpp.cpp
 +	-rm -f libkatecore_la.all_cpp.cpp libkate_main_la.all_cpp.cpp kate_la.all_cpp.cpp libkwrite_main_la.all_cpp.cpp kwrite_la.all_cpp.cpp kate.all_cpp.cpp kwrite.all_cpp.cpp
-@@ -767 +802 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) kwrite_la_OBJECTS="$(kwrite_la_final_OBJECTS)" all-am
 +	$(MAKE) libkwrite_main_la_OBJECTS="$(libkwrite_main_la_final_OBJECTS)" all-am
-@@ -770 +805 @@
+ #>+ 2
+ final-install:
+-	$(MAKE) kwrite_la_OBJECTS="$(kwrite_la_final_OBJECTS)" install-am
++	$(MAKE) libkwrite_main_la_OBJECTS="$(libkwrite_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
 -	$(MAKE) kwrite_la_OBJECTS="$(kwrite_la_nofinal_OBJECTS)" all-am
 +	$(MAKE) libkwrite_main_la_OBJECTS="$(libkwrite_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kwrite_la_OBJECTS="$(kwrite_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkwrite_main_la_OBJECTS="$(libkwrite_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

@@ -1,25 +1,22 @@
-$NetBSD: patch-dl,v 1.1 2001/10/15 22:46:09 skrll Exp $
+$NetBSD: patch-dl,v 1.2 2001/12/03 15:37:19 skrll Exp $
 
---- kwin/clients/default/Makefile.in.orig	Sat Sep  8 01:36:49 2001
+--- kwin/clients/default/Makefile.in.orig	Sat Nov 10 07:58:36 2001
 +++ kwin/clients/default/Makefile.in
-@@ -281 +281 @@
+@@ -280,7 +280,7 @@
+ kde_module_LTLIBRARIES = libkwindefault.la
+ 
+ libkwindefault_la_SOURCES = kdedefault.cpp
 -libkwindefault_la_LIBADD = ../../kwin.la
 +libkwindefault_la_LIBADD = ../../libkwin.la
-@@ -298 +298 @@
+ libkwindefault_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ 
+ #>- METASOURCES = AUTO
+@@ -297,7 +297,7 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -libkwindefault_la_DEPENDENCIES =  ../../kwin.la
 +libkwindefault_la_DEPENDENCIES =  ../../libkwin.la
-@@ -462 +462 @@
--	  test "$$subdir" = "." && dot_seen=yes; \
-+	  test "$$subdir" != "." || dot_seen=yes; \
-@@ -520,11 +519,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
+ #>- libkwindefault_la_OBJECTS =  kdedefault.lo
+ #>+ 5
+ libkwindefault_la_final_OBJECTS = libkwindefault_la.all_cpp.lo 

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/11/13 21:19:35 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/12/03 15:37:15 skrll Exp $
 
-DISTNAME=	kdeadmin-2.2.1
+DISTNAME=	kdeadmin-2.2.2
 CATEGORIES=	misc
 COMMENT=	Utilities for the KDE integrated X11 desktop
 

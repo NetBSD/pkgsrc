@@ -1,22 +1,22 @@
-$NetBSD: patch-ea,v 1.1 2001/10/15 22:46:10 skrll Exp $
+$NetBSD: patch-ea,v 1.2 2001/12/03 15:37:20 skrll Exp $
 
---- kwin/clients/mwm/Makefile.in.orig	Sat Sep  8 01:36:50 2001
+--- kwin/clients/mwm/Makefile.in.orig	Sat Nov 10 07:58:37 2001
 +++ kwin/clients/mwm/Makefile.in
-@@ -279 +279 @@
+@@ -278,7 +278,7 @@
+ kde_module_LTLIBRARIES = libkwinmwm.la
+ 
+ libkwinmwm_la_SOURCES = mwmclient.cpp
 -libkwinmwm_la_LIBADD = ../../kwin.la
 +libkwinmwm_la_LIBADD = ../../libkwin.la
-@@ -301 +301 @@
+ libkwinmwm_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ 
+ #>- METASOURCES = AUTO
+@@ -300,7 +300,7 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -libkwinmwm_la_DEPENDENCIES =  ../../kwin.la
 +libkwinmwm_la_DEPENDENCIES =  ../../libkwin.la
-@@ -489,11 +488,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
+ #>- libkwinmwm_la_OBJECTS =  mwmclient.lo
+ #>+ 5
+ libkwinmwm_la_final_OBJECTS = libkwinmwm_la.all_cpp.lo 

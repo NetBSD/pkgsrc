@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2001/11/15 21:00:27 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/12/03 15:37:20 skrll Exp $
 
-DISTNAME=	kdelibs-2.2.1
+DISTNAME=	kdelibs-2.2.2
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -74,6 +74,7 @@ post-install:
 .include "../../print/cups/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
 .include "../../textproc/libxml2/buildlink.mk"
+.include "../../textproc/libxslt/buildlink.mk"
 .include "../../x11/kde2/buildlink.mk"
 .include "../../x11/qt2-libs/buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"

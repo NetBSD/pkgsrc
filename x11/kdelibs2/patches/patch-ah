@@ -1,21 +1,26 @@
-Cannot strip away RCS IDs, please handle manually!
-$NetBSD: patch-ah,v 1.2 2001/10/15 22:46:22 skrll Exp $
+$NetBSD: patch-ah,v 1.3 2001/12/03 15:37:21 skrll Exp $
 
---- dcop/Makefile.in.orig	Wed Sep 12 06:09:37 2001
+--- dcop/Makefile.in.orig	Tue Nov 13 20:57:03 2001
 +++ dcop/Makefile.in
-@@ -2 +2 @@
--# Makefile.in generated automatically by automake 1.4 from Makefile.am
-+# Makefile.in generated automatically by automake 1.4-p5 from Makefile.am
-@@ -4 +4 @@
--# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
-+# Copyright (C) 1994, 1995-8, 1999, 2001 Free Software Foundation, Inc.
-@@ -291 +291 @@
+@@ -284,12 +284,12 @@
+ KDE_OPTIONS = qtonly
+ 
+ INCLUDES = $(all_includes)
 -LDFLAGS = $(all_libraries)
 +LDFLAGS = $(all_libraries) $(KDE_RPATH)
-@@ -296 +296 @@
+ 
+ bin_PROGRAMS = dcopserver
+ check_PROGRAMS = testdcop testdcopc
+ 
 -lib_LTLIBRARIES = libDCOP.la dcopserver.la
 +lib_LTLIBRARIES = libDCOP.la libdcopserver_main.la dcopserver.la
-@@ -310,3 +310,7 @@
+ libDCOP_la_LIBADD = KDE-ICE/libkICE.la $(LIB_QT)
+ libDCOP_la_LDFLAGS = -version-info 1:0 $(all_libraries) -no-undefined
+ 
+@@ -303,13 +303,17 @@
+ # dcopstub needs to go first for --enable-final to work
+ libDCOP_la_SOURCES = dcopstub.cpp dcopclient.cpp dcopobject.cpp dcopref.cpp
+ 
 -dcopserver_la_LDFLAGS = -module -avoid-version
 -dcopserver_la_SOURCES = dcopserver.cpp dcopsignals.cpp
 -dcopserver_la_LIBADD = libDCOP.la
@@ -26,18 +31,25 @@ $NetBSD: patch-ah,v 1.2 2001/10/15 22:46:22 skrll Exp $
 +dcopserver_la_LDFLAGS = -Wl,-export-dynamic -module -avoid-version
 +dcopserver_la_SOURCES = dcopserver_main.cpp
 +dcopserver_la_LIBADD = libdcopserver_main.la
-@@ -315,2 +319,2 @@
+ 
+ dcopserver_LDFLAGS = $(KDE_RPATH)
 -dcopserver_SOURCES = dummy.cpp
 -dcopserver_LDADD = dcopserver.la
 +dcopserver_SOURCES = dcopserver_main.cpp
 +dcopserver_LDADD = libdcopserver_main.la
-@@ -341,2 +345,3 @@
+ 
+ testdcop_SOURCES = testdcop.cpp
+ testdcop_LDADD = ../kdecore/libkdecore.la
+@@ -334,21 +338,26 @@
+ libDCOP_la_nofinal_OBJECTS = dcopstub.lo dcopclient.lo dcopobject.lo dcopref.lo
+ @KDE_USE_FINAL_FALSE@libDCOP_la_OBJECTS = $(libDCOP_la_nofinal_OBJECTS)
+ @KDE_USE_FINAL_TRUE@libDCOP_la_OBJECTS = $(libDCOP_la_final_OBJECTS)
 -dcopserver_la_DEPENDENCIES =  libDCOP.la
 -#>- dcopserver_la_OBJECTS =  dcopserver.lo dcopsignals.lo
 +libdcopserver_main_la_LDFLAGS = 
 +libdcopserver_main_la_DEPENDENCIES =  libDCOP.la
 +#>- libdcopserver_main_la_OBJECTS =  dcopserver.lo dcopsignals.lo
-@@ -344,4 +349,8 @@
+ #>+ 4
 -dcopserver_la_final_OBJECTS = dcopserver_la.all_cpp.lo 
 -dcopserver_la_nofinal_OBJECTS = dcopserver.lo dcopsignals.lo
 -@KDE_USE_FINAL_FALSE@dcopserver_la_OBJECTS = $(dcopserver_la_nofinal_OBJECTS)
@@ -50,43 +62,55 @@ $NetBSD: patch-ah,v 1.2 2001/10/15 22:46:22 skrll Exp $
 +#>- dcopserver_la_OBJECTS =  dcopserver_main.lo
 +#>+ 1
 +dcopserver_la_OBJECTS = dcopserver_main.lo
-@@ -352 +361 @@
+ bin_PROGRAMS =  dcopserver$(EXEEXT)
+ check_PROGRAMS =  testdcop$(EXEEXT) testdcopc$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- dcopserver_OBJECTS =  dummy.$(OBJEXT)
 +#>- dcopserver_OBJECTS =  dcopserver_main.$(OBJEXT)
-@@ -354,2 +363,2 @@
+ #>+ 1
 -dcopserver_OBJECTS = dummy.$(OBJEXT)
 -dcopserver_DEPENDENCIES =  dcopserver.la
 +dcopserver_OBJECTS = dcopserver_main.$(OBJEXT)
 +dcopserver_DEPENDENCIES =  libdcopserver_main.la
-@@ -399,2 +408,2 @@
+ #>- testdcop_OBJECTS =  testdcop.$(OBJEXT)
+ #>+ 1
+ testdcop_OBJECTS = testdcop.$(OBJEXT)
+@@ -392,8 +401,8 @@
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(libDCOP_la_SOURCES) $(dcopserver_la_SOURCES) $(dcopserver_SOURCES) $(testdcop_SOURCES) $(testdcopc_SOURCES)
 -OBJECTS = $(libDCOP_la_OBJECTS) $(dcopserver_la_OBJECTS) $(dcopserver_OBJECTS) $(testdcop_OBJECTS) $(testdcopc_OBJECTS)
 +SOURCES = $(libDCOP_la_SOURCES) $(libdcopserver_main_la_SOURCES) $(dcopserver_la_SOURCES) $(dcopserver_SOURCES) $(testdcop_SOURCES) $(testdcopc_SOURCES)
 +OBJECTS = $(libDCOP_la_OBJECTS) $(libdcopserver_main_la_OBJECTS) $(dcopserver_la_OBJECTS) $(dcopserver_OBJECTS) $(testdcop_OBJECTS) $(testdcopc_OBJECTS)
-@@ -492,0 +502,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -486,6 +495,9 @@
+ @KDE_USE_CLOSURE_FALSE@libDCOP.la: $(libDCOP_la_OBJECTS) $(libDCOP_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(libDCOP_la_LDFLAGS) $(libDCOP_la_OBJECTS) $(libDCOP_la_LIBADD) $(LIBS)
+ 
 +libdcopserver_main.la: $(libdcopserver_main_la_OBJECTS) $(libdcopserver_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libdcopserver_main_la_LDFLAGS) $(libdcopserver_main_la_OBJECTS) $(libdcopserver_main_la_LIBADD) $(LIBS)
 +
-@@ -599 +611 @@
--	  test "$$subdir" = "." && dot_seen=yes; \
-+	  test "$$subdir" != "." || dot_seen=yes; \
-@@ -657,11 +668,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -788,3 +788,0 @@
+ dcopserver.la: $(dcopserver_la_OBJECTS) $(dcopserver_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(dcopserver_la_LDFLAGS) $(dcopserver_la_OBJECTS) $(dcopserver_la_LIBADD) $(LIBS)
+ 
+@@ -770,9 +782,6 @@
+ 	maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 
 -dummy.cpp:
 -	echo > dummy.cpp
 -
-@@ -846 +844,13 @@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -828,11 +837,23 @@
+ 	rm -f libDCOP_la.all_cpp.final libDCOP_la.all_cpp.files
+ 
+ #>+ 11
 -dcopserver_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dcopserver.cpp $(srcdir)/dcopsignals.cpp  
 +libdcopserver_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dcopserver.cpp $(srcdir)/dcopsignals.cpp  
 +	@echo 'creating libdcopserver_main_la.all_cpp.cpp ...'; \
@@ -101,21 +125,51 @@ $NetBSD: patch-ah,v 1.2 2001/10/15 22:46:22 skrll Exp $
 +
 +#>+ 11
 +dcopserver_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dcopserver_main.cpp  
-@@ -850 +860 @@
+ 	@echo 'creating dcopserver_la.all_cpp.cpp ...'; \
+ 	rm -f dcopserver_la.all_cpp.files dcopserver_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> dcopserver_la.all_cpp.final; \
 -	for file in dcopserver.cpp dcopsignals.cpp ; do \
 +	for file in dcopserver_main.cpp ; do \
-@@ -858 +868 @@
+ 	  echo "#include \"$$file\"" >> dcopserver_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> dcopserver_la.all_cpp.final; \
+ 	done; \
+@@ -840,11 +861,11 @@
+ 	rm -f dcopserver_la.all_cpp.final dcopserver_la.all_cpp.files
+ 
+ #>+ 11
 -dcopserver.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
 +dcopserver.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dcopserver_main.cpp  
-@@ -862 +872 @@
+ 	@echo 'creating dcopserver.all_cpp.cpp ...'; \
+ 	rm -f dcopserver.all_cpp.files dcopserver.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> dcopserver.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in dcopserver_main.cpp ; do \
-@@ -883 +893 @@
+ 	  echo "#include \"$$file\"" >> dcopserver.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> dcopserver.all_cpp.final; \
+ 	done; \
+@@ -865,20 +886,20 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f libDCOP_la.all_cpp.cpp dcopserver_la.all_cpp.cpp dcopserver.all_cpp.cpp testdcop.all_cpp.cpp
 +	-rm -f libDCOP_la.all_cpp.cpp libdcopserver_main_la.all_cpp.cpp dcopserver_la.all_cpp.cpp dcopserver.all_cpp.cpp testdcop.all_cpp.cpp
-@@ -887 +897 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) libDCOP_la_OBJECTS="$(libDCOP_la_final_OBJECTS)" dcopserver_la_OBJECTS="$(dcopserver_la_final_OBJECTS)" testdcopc_OBJECTS="$(testdcopc_final_OBJECTS)" all-am
 +	$(MAKE) libDCOP_la_OBJECTS="$(libDCOP_la_final_OBJECTS)" libdcopserver_main_la_OBJECTS="$(libdcopserver_main_la_final_OBJECTS)" testdcopc_OBJECTS="$(testdcopc_final_OBJECTS)" all-am
-@@ -890 +900 @@
+ #>+ 2
+ final-install:
+-	$(MAKE) libDCOP_la_OBJECTS="$(libDCOP_la_final_OBJECTS)" dcopserver_la_OBJECTS="$(dcopserver_la_final_OBJECTS)" testdcopc_OBJECTS="$(testdcopc_final_OBJECTS)" install-am
++	$(MAKE) libDCOP_la_OBJECTS="$(libDCOP_la_final_OBJECTS)" libdcopserver_main_la_OBJECTS="$(libdcopserver_main_la_final_OBJECTS)" testdcopc_OBJECTS="$(testdcopc_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
 -	$(MAKE) libDCOP_la_OBJECTS="$(libDCOP_la_nofinal_OBJECTS)" dcopserver_la_OBJECTS="$(dcopserver_la_nofinal_OBJECTS)" testdcopc_OBJECTS="$(testdcopc_nofinal_OBJECTS)" all-am
 +	$(MAKE) libDCOP_la_OBJECTS="$(libDCOP_la_nofinal_OBJECTS)" libdcopserver_main_la_OBJECTS="$(libdcopserver_main_la_nofinal_OBJECTS)" testdcopc_OBJECTS="$(testdcopc_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) libDCOP_la_OBJECTS="$(libDCOP_la_nofinal_OBJECTS)" dcopserver_la_OBJECTS="$(dcopserver_la_nofinal_OBJECTS)" testdcopc_OBJECTS="$(testdcopc_nofinal_OBJECTS)" install-am
++	$(MAKE) libDCOP_la_OBJECTS="$(libDCOP_la_nofinal_OBJECTS)" libdcopserver_main_la_OBJECTS="$(libdcopserver_main_la_nofinal_OBJECTS)" testdcopc_OBJECTS="$(testdcopc_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

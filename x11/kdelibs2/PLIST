@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/11/15 21:00:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/12/03 15:37:20 skrll Exp $
 bin/artsc-config
 bin/artscat
 bin/artsd
@@ -155,6 +155,7 @@ include/kallocator.h
 include/kalphapainter.h
 include/kanimwidget.h
 include/kapp.h
+include/kapplication.h
 include/karrowbutton.h
 include/kasyncio.h
 include/kaudioplayer.h
@@ -406,6 +407,7 @@ include/ksslpkcs12.h
 include/ksslsettings.h
 include/ksslutils.h
 include/ksslx509map.h
+include/kstandarddirs.h
 include/kstartupinfo.h
 include/kstaticdeleter.h
 include/kstatusbar.h
@@ -432,6 +434,7 @@ include/ktoolbarbutton.h
 include/ktoolbarradiogroup.h
 include/ktrader.h
 include/kuniqueapp.h
+include/kuniqueapplication.h
 include/kunload.h
 include/kurifilter.h
 include/kurl.h
@@ -651,6 +654,9 @@ lib/libkdecore.la
 lib/libkdecore.so
 lib/libkdecore.so.3
 lib/libkdecore.so.3.0
+lib/libkded_kssld.a
+lib/libkded_kssld.la
+lib/libkded_kssld.so
 lib/libkded_main.a
 lib/libkded_main.la
 lib/libkded_main.so
@@ -1481,6 +1487,7 @@ share/kde/apps/ksgmltools2/docbook/xsl/common/subtitles.xsl
 share/kde/apps/ksgmltools2/docbook/xsl/common/sv.xml
 share/kde/apps/ksgmltools2/docbook/xsl/common/titles.xsl
 share/kde/apps/ksgmltools2/docbook/xsl/common/tr.xml
+share/kde/apps/ksgmltools2/docbook/xsl/common/xh.xml
 share/kde/apps/ksgmltools2/docbook/xsl/common/zh_cn.xml
 share/kde/apps/ksgmltools2/docbook/xsl/common/zh_tw.xml
 share/kde/apps/ksgmltools2/docbook/xsl/html/ChangeLog
@@ -2728,6 +2735,7 @@ share/kde/services/kaclplugin.desktop
 share/kde/services/kbzip2filter.desktop
 share/kde/services/kcookiejar.desktop
 share/kde/services/kded/kdeprintd.desktop
+share/kde/services/kded/kssld.desktop
 share/kde/services/kgzipfilter.desktop
 share/kde/services/khtml.desktop
 share/kde/services/khtmlimage.desktop

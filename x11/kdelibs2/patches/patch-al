@@ -1,23 +1,21 @@
-Cannot strip away RCS IDs, please handle manually!
-$NetBSD: patch-al,v 1.2 2001/10/15 22:46:22 skrll Exp $
+$NetBSD: patch-al,v 1.3 2001/12/03 15:37:21 skrll Exp $
 
---- kconf_update/Makefile.in.orig	Wed Sep 12 06:09:39 2001
+--- kconf_update/Makefile.in.orig	Tue Nov 13 20:57:04 2001
 +++ kconf_update/Makefile.in
-@@ -2 +2 @@
--# Makefile.in generated automatically by automake 1.4 from Makefile.am
-+# Makefile.in generated automatically by automake 1.4-p5 from Makefile.am
-@@ -4 +4 @@
--# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
-+# Copyright (C) 1994, 1995-8, 1999, 2001 Free Software Foundation, Inc.
-@@ -284 +284 @@
+@@ -277,16 +277,20 @@
+ 
+ INCLUDES = $(all_includes)
+ 
 -lib_LTLIBRARIES = kconf_update.la
 +lib_LTLIBRARIES = libkconf_update_main.la kconf_update.la
-@@ -287,2 +287,2 @@
+ 
+ bin_PROGRAMS = kconf_update
 -kconf_update_SOURCES = dummy.cpp
 -kconf_update_LDADD = kconf_update.la
 +kconf_update_SOURCES = kconf_update_main.cpp
 +kconf_update_LDADD = libkconf_update_main.la
-@@ -291,2 +291,5 @@
+ kconf_update_LDFLAGS = $(KDE_RPATH) $(all_libraries)
+ 
 -kconf_update_la_SOURCES = kconf_update.cpp
 -kconf_update_la_LIBADD = ../kdecore/libkdecore.la
 +libkconf_update_main_la_SOURCES = kconf_update.cpp
@@ -25,9 +23,15 @@ $NetBSD: patch-al,v 1.2 2001/10/15 22:46:22 skrll Exp $
 +libkconf_update_main_la_LDFLAGS = $(all_libraries)
 +
 +kconf_update_la_SOURCES = kconf_update_main.cpp
-@@ -293,0 +297 @@
+ kconf_update_la_LDFLAGS = $(all_libraries) -module -avoid-version
 +kconf_update_la_LIBADD = libkconf_update_main.la
-@@ -306,2 +310,6 @@
+ 
+ #>- METASOURCES = AUTO
+ mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
+@@ -299,17 +303,21 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
 -kconf_update_la_DEPENDENCIES =  ../kdecore/libkdecore.la
 -#>- kconf_update_la_OBJECTS =  kconf_update.lo
 +libkconf_update_main_la_DEPENDENCIES =  ../kdecore/libkdecore.la
@@ -36,43 +40,57 @@ $NetBSD: patch-al,v 1.2 2001/10/15 22:46:22 skrll Exp $
 +libkconf_update_main_la_OBJECTS = kconf_update.lo
 +kconf_update_la_DEPENDENCIES =  libkconf_update_main.la
 +#>- kconf_update_la_OBJECTS =  kconf_update_main.lo
-@@ -309 +317 @@
+ #>+ 1
 -kconf_update_la_OBJECTS = kconf_update.lo
 +kconf_update_la_OBJECTS = kconf_update_main.lo
-@@ -313 +321 @@
+ bin_PROGRAMS =  kconf_update$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- kconf_update_OBJECTS =  dummy.$(OBJEXT)
 +#>- kconf_update_OBJECTS =  kconf_update_main.$(OBJEXT)
-@@ -315,2 +323,2 @@
+ #>+ 1
 -kconf_update_OBJECTS = dummy.$(OBJEXT)
 -kconf_update_DEPENDENCIES =  kconf_update.la
 +kconf_update_OBJECTS = kconf_update_main.$(OBJEXT)
 +kconf_update_DEPENDENCIES =  libkconf_update_main.la
-@@ -340,2 +348,2 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -333,8 +341,8 @@
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(kconf_update_la_SOURCES) $(kconf_update_SOURCES)
 -OBJECTS = $(kconf_update_la_OBJECTS) $(kconf_update_OBJECTS)
 +SOURCES = $(libkconf_update_main_la_SOURCES) $(kconf_update_la_SOURCES) $(kconf_update_SOURCES)
 +OBJECTS = $(libkconf_update_main_la_OBJECTS) $(kconf_update_la_OBJECTS) $(kconf_update_OBJECTS)
-@@ -427,0 +436,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -421,6 +429,9 @@
+ 
+ maintainer-clean-libtool:
+ 
 +libkconf_update_main.la: $(libkconf_update_main_la_OBJECTS) $(libkconf_update_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkconf_update_main_la_LDFLAGS) $(libkconf_update_main_la_OBJECTS) $(libkconf_update_main_la_LIBADD) $(LIBS)
 +
-@@ -500,11 +510,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -610,3 +609,0 @@
+ kconf_update.la: $(kconf_update_la_OBJECTS) $(kconf_update_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(kconf_update_la_LDFLAGS) $(kconf_update_la_OBJECTS) $(kconf_update_la_LIBADD) $(LIBS)
+ 
+@@ -592,9 +603,6 @@
+ # Internal
+ # noinst_HEADERS = kconf_update.h
+ 
 -dummy.cpp: 
 -	echo > dummy.cpp
 -
-@@ -627 +624,13 @@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -609,11 +617,23 @@
+ 
+ 
+ #>+ 11
 -kconf_update_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kconf_update.cpp  
 +libkconf_update_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kconf_update.cpp  
 +	@echo 'creating libkconf_update_main_la.all_cpp.cpp ...'; \
@@ -87,15 +105,34 @@ $NetBSD: patch-al,v 1.2 2001/10/15 22:46:22 skrll Exp $
 +
 +#>+ 11
 +kconf_update_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kconf_update_main.cpp  
-@@ -631 +640 @@
+ 	@echo 'creating kconf_update_la.all_cpp.cpp ...'; \
+ 	rm -f kconf_update_la.all_cpp.files kconf_update_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kconf_update_la.all_cpp.final; \
 -	for file in kconf_update.cpp ; do \
 +	for file in kconf_update_main.cpp ; do \
-@@ -639 +648 @@
+ 	  echo "#include \"$$file\"" >> kconf_update_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kconf_update_la.all_cpp.final; \
+ 	done; \
+@@ -621,11 +641,11 @@
+ 	rm -f kconf_update_la.all_cpp.final kconf_update_la.all_cpp.files
+ 
+ #>+ 11
 -kconf_update.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
 +kconf_update.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kconf_update_main.cpp  
-@@ -643 +652 @@
+ 	@echo 'creating kconf_update.all_cpp.cpp ...'; \
+ 	rm -f kconf_update.all_cpp.files kconf_update.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kconf_update.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in kconf_update_main.cpp ; do \
-@@ -652 +661 @@
+ 	  echo "#include \"$$file\"" >> kconf_update.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kconf_update.all_cpp.final; \
+ 	done; \
+@@ -634,7 +654,7 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f kconf_update_la.all_cpp.cpp kconf_update.all_cpp.cpp
 +	-rm -f libkconf_update_main_la.all_cpp.cpp kconf_update_la.all_cpp.cpp kconf_update.all_cpp.cpp
+ 
+ #>+ 2
+ final:

@@ -1,55 +1,75 @@
-$NetBSD: patch-cz,v 1.1 2001/10/15 22:46:07 skrll Exp $
+$NetBSD: patch-cz,v 1.2 2001/12/03 15:37:19 skrll Exp $
 
---- konsole/src/Makefile.in.orig	Sat Sep  8 01:36:44 2001
+--- konsole/src/Makefile.in.orig	Sat Nov 10 07:58:33 2001
 +++ konsole/src/Makefile.in
-@@ -292 +292,2 @@
+@@ -291,7 +291,8 @@
+ 
+ # you can add here more. This one gets installed
+ bin_PROGRAMS = konsole konsole_grantpty kwrited #kcmkonsole
 -lib_LTLIBRARIES = libkonsolepart.la kwrited.la konsole.la
 +lib_LTLIBRARIES = libkonsolepart.la libkwrited_main.la kwrited.la 	libkonsole_main.la konsole.la
 +
-@@ -301,0 +303,4 @@
+ # libkonsolepart is a part, but konsole.la links directly to it, so we can't
+ # install it under kde_module
+ 
+@@ -301,23 +302,31 @@
+ libkonsolepart_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ libkonsolepart_la_LIBADD = $(LIB_KPARTS) $(LIBUTIL)
+ 
 +libkwrited_main_la_SOURCES = kwrited.C
 +libkwrited_main_la_LIBADD = libkonsolepart.la
 +libkwrited_main_la_LDFLAGS = $(all_libraries)
 +
-@@ -303,2 +308,2 @@
+ # kwrited kdeinit module
 -kwrited_la_SOURCES = kwrited.C
 -kwrited_la_LIBADD = libkonsolepart.la
 +kwrited_la_SOURCES = kwrited_main.cpp
 +kwrited_la_LIBADD = libkwrited_main.la
-@@ -308,2 +313,2 @@
+ kwrited_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+ # kwrited executable
 -kwrited_SOURCES = dummy.C
 -kwrited_LDADD = kwrited.la 
 +kwrited_SOURCES = kwrited_main.cpp
 +kwrited_LDADD = libkwrited_main.la 
-@@ -311,0 +317,4 @@
+ kwrited_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
 +libkonsole_main_la_SOURCES = main.C konsole.C
 +libkonsole_main_la_LIBADD = libkonsolepart.la
 +libkonsole_main_la_LDFLAGS = $(all_libraries)
 +
-@@ -313,2 +322,2 @@
+ # konsole kdeinit module
 -konsole_la_SOURCES = main.C konsole.C
 -konsole_la_LIBADD = libkonsolepart.la
 +konsole_la_SOURCES = konsole_main.cpp
 +konsole_la_LIBADD = libkonsole_main.la
-@@ -318 +327 @@
+ konsole_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+ # konsole executable - has all the sources, doesn't link kparts, saves startup time
 -konsole_SOURCES = TEPty.C BlockArray.C main.C konsole.C schema.C session.C TEWidget.C TEmuVt102.C                   TEScreen.C TEmulation.C TEHistory.C keytrans.C 
 +konsole_SOURCES = TEPty.C BlockArray.C main.C konsole.C schema.C session.C TEWidget.C TEmuVt102.C                   TEScreen.C TEmulation.C TEHistory.C keytrans.C konsole_main.cpp
-@@ -372,2 +381,2 @@
+ 
+ konsole_LDADD = $(LIB_KDEUI) $(LIB_KSYCOCA) $(LIBUTIL)
+ konsole_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+@@ -371,22 +380,30 @@
+ 	libkonsolepart_la_meta_unload.lo 
+ @KDE_USE_FINAL_FALSE@libkonsolepart_la_OBJECTS = $(libkonsolepart_la_nofinal_OBJECTS)
+ @KDE_USE_FINAL_TRUE@libkonsolepart_la_OBJECTS = $(libkonsolepart_la_final_OBJECTS)
 -kwrited_la_DEPENDENCIES =  libkonsolepart.la
 -#>- kwrited_la_OBJECTS =  kwrited.lo
 +libkwrited_main_la_DEPENDENCIES =  libkonsolepart.la
 +#>- libkwrited_main_la_OBJECTS =  kwrited.lo
-@@ -375,7 +384,11 @@
+ #>+ 5
 -kwrited_la_final_OBJECTS = kwrited_la.all_C.lo 
 -kwrited_la_nofinal_OBJECTS = kwrited.lo \
--kwrited_la_meta_unload.lo 
+-	kwrited_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@kwrited_la_OBJECTS = $(kwrited_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kwrited_la_OBJECTS = $(kwrited_la_final_OBJECTS)
 -konsole_la_DEPENDENCIES =  libkonsolepart.la
 -#>- konsole_la_OBJECTS =  main.lo konsole.lo
 +libkwrited_main_la_final_OBJECTS = libkwrited_main_la.all_C.lo 
 +libkwrited_main_la_nofinal_OBJECTS = kwrited.lo \
-+libkwrited_main_la_meta_unload.lo 
++	libkwrited_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkwrited_main_la_OBJECTS = $(libkwrited_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkwrited_main_la_OBJECTS = $(libkwrited_main_la_final_OBJECTS)
 +kwrited_la_DEPENDENCIES =  libkwrited_main.la
@@ -58,118 +78,181 @@ $NetBSD: patch-cz,v 1.1 2001/10/15 22:46:07 skrll Exp $
 +kwrited_la_OBJECTS = kwrited_main.lo
 +libkonsole_main_la_DEPENDENCIES =  libkonsolepart.la
 +#>- libkonsole_main_la_OBJECTS =  main.lo konsole.lo
-@@ -383,5 +396,9 @@
+ #>+ 5
 -konsole_la_final_OBJECTS = konsole_la.all_C.lo 
 -konsole_la_nofinal_OBJECTS = main.lo konsole.lo \
--konsole_la_meta_unload.lo 
+-	konsole_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@konsole_la_OBJECTS = $(konsole_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@konsole_la_OBJECTS = $(konsole_la_final_OBJECTS)
 +libkonsole_main_la_final_OBJECTS = libkonsole_main_la.all_C.lo 
 +libkonsole_main_la_nofinal_OBJECTS = main.lo konsole.lo \
-+libkonsole_main_la_meta_unload.lo 
++	libkonsole_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkonsole_main_la_OBJECTS = $(libkonsole_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkonsole_main_la_OBJECTS = $(libkonsole_main_la_final_OBJECTS)
 +konsole_la_DEPENDENCIES =  libkonsole_main.la
 +#>- konsole_la_OBJECTS =  konsole_main.lo
 +#>+ 1
 +konsole_la_OBJECTS = konsole_main.lo
-@@ -395 +412 @@
+ bin_PROGRAMS =  konsole$(EXEEXT) konsole_grantpty$(EXEEXT) \
+ 	kwrited$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+@@ -394,13 +411,13 @@
+ #>- konsole_OBJECTS =  TEPty.$(OBJEXT) BlockArray.$(OBJEXT) main.$(OBJEXT) \
+ #>- konsole.$(OBJEXT) schema.$(OBJEXT) session.$(OBJEXT) TEWidget.$(OBJEXT) \
+ #>- TEmuVt102.$(OBJEXT) TEScreen.$(OBJEXT) TEmulation.$(OBJEXT) \
 -#>- TEHistory.$(OBJEXT) keytrans.$(OBJEXT)
 +#>- TEHistory.$(OBJEXT) keytrans.$(OBJEXT) konsole_main.$(OBJEXT)
-@@ -397 +414 @@
+ #>+ 8
 -konsole_final_OBJECTS = konsole.all_C.o 
-+konsole_final_OBJECTS = konsole_main.o konsole.all_C.o 
-@@ -401 +418 @@
--TEHistory.$(OBJEXT) keytrans.$(OBJEXT) \
-+TEHistory.$(OBJEXT) keytrans.$(OBJEXT) konsole_main.$(OBJEXT) \
-@@ -411 +428 @@
++konsole_final_OBJECTS = konsole.all_cpp.o konsole.all_C.o 
+ konsole_nofinal_OBJECTS = TEPty.$(OBJEXT) BlockArray.$(OBJEXT) main.$(OBJEXT) \
+ 	konsole.$(OBJEXT) schema.$(OBJEXT) session.$(OBJEXT) TEWidget.$(OBJEXT) \
+ 	TEmuVt102.$(OBJEXT) TEScreen.$(OBJEXT) TEmulation.$(OBJEXT) \
+-	TEHistory.$(OBJEXT) keytrans.$(OBJEXT) \
++	TEHistory.$(OBJEXT) keytrans.$(OBJEXT) konsole_main.$(OBJEXT) \
+ 	konsole_meta_unload.o 
+ @KDE_USE_FINAL_FALSE@konsole_OBJECTS = $(konsole_nofinal_OBJECTS)
+ @KDE_USE_FINAL_TRUE@konsole_OBJECTS = $(konsole_final_OBJECTS)
+@@ -410,10 +427,10 @@
+ konsole_grantpty_OBJECTS = konsole_grantpty.$(OBJEXT)
+ konsole_grantpty_LDADD = $(LDADD)
+ konsole_grantpty_DEPENDENCIES = 
 -#>- kwrited_OBJECTS =  dummy.$(OBJEXT)
 +#>- kwrited_OBJECTS =  kwrited_main.$(OBJEXT)
-@@ -413,2 +430,2 @@
+ #>+ 1
 -kwrited_OBJECTS = dummy.$(OBJEXT)
 -kwrited_DEPENDENCIES =  kwrited.la
 +kwrited_OBJECTS = kwrited_main.$(OBJEXT)
 +kwrited_DEPENDENCIES =  libkwrited_main.la
-@@ -438 +455 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -437,21 +454,21 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=x-konsole.desktop konsolerc sample.shell konsole_part.rc 
 +KDE_DIST=sample.shell konsole_part.rc x-konsole.desktop konsolerc 
-@@ -445,2 +462,2 @@
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(libkonsolepart_la_SOURCES) $(kwrited_la_SOURCES) $(konsole_la_SOURCES) $(konsole_SOURCES) $(konsole_grantpty_SOURCES) $(kwrited_SOURCES)
 -OBJECTS = $(libkonsolepart_la_OBJECTS) $(kwrited_la_OBJECTS) $(konsole_la_OBJECTS) $(konsole_OBJECTS) $(konsole_grantpty_OBJECTS) $(kwrited_OBJECTS)
 +SOURCES = $(libkonsolepart_la_SOURCES) $(libkwrited_main_la_SOURCES) $(kwrited_la_SOURCES) $(libkonsole_main_la_SOURCES) $(konsole_la_SOURCES) $(konsole_SOURCES) $(konsole_grantpty_SOURCES) $(kwrited_SOURCES)
 +OBJECTS = $(libkonsolepart_la_OBJECTS) $(libkwrited_main_la_OBJECTS) $(kwrited_la_OBJECTS) $(libkonsole_main_la_OBJECTS) $(konsole_la_OBJECTS) $(konsole_OBJECTS) $(konsole_grantpty_OBJECTS) $(kwrited_OBJECTS)
-@@ -452 +469 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+ all: docs-am  all-redirect
+ .SUFFIXES:
 -.SUFFIXES: .C .S .c .lo .o .obj .s
 +.SUFFIXES: .C .S .c .cpp .lo .o .obj .s
-@@ -538,0 +556,3 @@
+ $(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+ #>- 	cd $(top_srcdir) && $(AUTOMAKE) --foreign --include-deps konsole/src/Makefile
+ #>+ 2
+@@ -538,9 +555,15 @@
+ @KDE_USE_CLOSURE_FALSE@libkonsolepart.la: $(libkonsolepart_la_OBJECTS) $(libkonsolepart_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(libkonsolepart_la_LDFLAGS) $(libkonsolepart_la_OBJECTS) $(libkonsolepart_la_LIBADD) $(LIBS)
+ 
 +libkwrited_main.la: $(libkwrited_main_la_OBJECTS) $(libkwrited_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkwrited_main_la_LDFLAGS) $(libkwrited_main_la_OBJECTS) $(libkwrited_main_la_LIBADD) $(LIBS)
 +
-@@ -541,0 +562,3 @@
+ kwrited.la: $(kwrited_la_OBJECTS) $(kwrited_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(kwrited_la_LDFLAGS) $(kwrited_la_OBJECTS) $(kwrited_la_LIBADD) $(LIBS)
+ 
 +libkonsole_main.la: $(libkonsole_main_la_OBJECTS) $(libkonsole_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkonsole_main_la_LDFLAGS) $(libkonsole_main_la_OBJECTS) $(libkonsole_main_la_LIBADD) $(LIBS)
 +
-@@ -586,0 +610,6 @@
+ konsole.la: $(konsole_la_OBJECTS) $(konsole_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(konsole_la_LDFLAGS) $(konsole_la_OBJECTS) $(konsole_la_LIBADD) $(LIBS)
+ 
+@@ -586,6 +609,12 @@
+ 	$(CXXCOMPILE) -c `cygpath -w $<`
+ .C.lo:
+ 	$(LTCXXCOMPILE) -c $<
 +.cpp.o:
 +	$(CXXCOMPILE) -c $<
 +.cpp.obj:
 +	$(CXXCOMPILE) -c `cygpath -w $<`
 +.cpp.lo:
 +	$(LTCXXCOMPILE) -c $<
-@@ -679,11 +707,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -814,3 +831,0 @@
+ 
+ install-dataDATA: $(data_DATA)
+ 	@$(NORMAL_INSTALL)
+@@ -802,9 +831,6 @@
+ 	$(XGETTEXT) rc.cpp *.C -o $(podir)/konsole.pot
+ 	rm -f schemas.C
+ 
 -dummy.C:
 -	echo > dummy.C
 -
-@@ -891,8 +906,8 @@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -881,29 +907,29 @@
+ 
+ 
+ #>+ 12
 -kwrited_la_meta_unload.C:  kwrited.moc
 -	@echo 'creating kwrited_la_meta_unload.C'
 -	@-rm -f kwrited_la_meta_unload.C
--	@echo 'static const char * _metalist_kwrited_la[] = {' > kwrited_la_meta_unload.C
--	@cat  kwrited.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kwrited_la_meta_unload.C
--	@echo '0};' >> kwrited_la_meta_unload.C
--	@echo '#include <kunload.h>' >> kwrited_la_meta_unload.C
--	@echo '_UNLOAD(kwrited_la)' >> kwrited_la_meta_unload.C
 +libkwrited_main_la_meta_unload.C:  kwrited.moc
 +	@echo 'creating libkwrited_main_la_meta_unload.C'
 +	@-rm -f libkwrited_main_la_meta_unload.C
-+	@echo 'static const char * _metalist_libkwrited_main_la[] = {' > libkwrited_main_la_meta_unload.C
-+	@cat  kwrited.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkwrited_main_la_meta_unload.C
-+	@echo '0};' >> libkwrited_main_la_meta_unload.C
-+	@echo '#include <kunload.h>' >> libkwrited_main_la_meta_unload.C
-+	@echo '_UNLOAD(libkwrited_main_la)' >> libkwrited_main_la_meta_unload.C
-@@ -902,8 +917,8 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kwrited_la[] = {' > kwrited_la_meta_unload.C ;\
+-		cat  kwrited.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kwrited_la_meta_unload.C ;\
+-		echo '0};' >> kwrited_la_meta_unload.C ;\
+-		echo '#include <kunload.h>' >> kwrited_la_meta_unload.C ;\
+-		echo '_UNLOAD(kwrited_la)' >> kwrited_la_meta_unload.C ;\
+-	else echo > kwrited_la_meta_unload.C; fi
++		echo 'static const char * _metalist_libkwrited_main_la[] = {' > libkwrited_main_la_meta_unload.C ;\
++		cat  kwrited.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkwrited_main_la_meta_unload.C ;\
++		echo '0};' >> libkwrited_main_la_meta_unload.C ;\
++		echo '#include <kunload.h>' >> libkwrited_main_la_meta_unload.C ;\
++		echo '_UNLOAD(libkwrited_main_la)' >> libkwrited_main_la_meta_unload.C ;\
++	else echo > libkwrited_main_la_meta_unload.C; fi
+ 
+ 
+ #>+ 12
 -konsole_la_meta_unload.C:  konsole.moc
 -	@echo 'creating konsole_la_meta_unload.C'
 -	@-rm -f konsole_la_meta_unload.C
--	@echo 'static const char * _metalist_konsole_la[] = {' > konsole_la_meta_unload.C
--	@cat  konsole.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> konsole_la_meta_unload.C
--	@echo '0};' >> konsole_la_meta_unload.C
--	@echo '#include <kunload.h>' >> konsole_la_meta_unload.C
--	@echo '_UNLOAD(konsole_la)' >> konsole_la_meta_unload.C
 +libkonsole_main_la_meta_unload.C:  konsole.moc
 +	@echo 'creating libkonsole_main_la_meta_unload.C'
 +	@-rm -f libkonsole_main_la_meta_unload.C
-+	@echo 'static const char * _metalist_libkonsole_main_la[] = {' > libkonsole_main_la_meta_unload.C
-+	@cat  konsole.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkonsole_main_la_meta_unload.C
-+	@echo '0};' >> libkonsole_main_la_meta_unload.C
-+	@echo '#include <kunload.h>' >> libkonsole_main_la_meta_unload.C
-+	@echo '_UNLOAD(libkonsole_main_la)' >> libkonsole_main_la_meta_unload.C
-@@ -925 +940 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_konsole_la[] = {' > konsole_la_meta_unload.C ;\
+-		cat  konsole.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> konsole_la_meta_unload.C ;\
+-		echo '0};' >> konsole_la_meta_unload.C ;\
+-		echo '#include <kunload.h>' >> konsole_la_meta_unload.C ;\
+-		echo '_UNLOAD(konsole_la)' >> konsole_la_meta_unload.C ;\
+-	else echo > konsole_la_meta_unload.C; fi
++		echo 'static const char * _metalist_libkonsole_main_la[] = {' > libkonsole_main_la_meta_unload.C ;\
++		cat  konsole.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkonsole_main_la_meta_unload.C ;\
++		echo '0};' >> libkonsole_main_la_meta_unload.C ;\
++		echo '#include <kunload.h>' >> libkonsole_main_la_meta_unload.C ;\
++		echo '_UNLOAD(libkonsole_main_la)' >> libkonsole_main_la_meta_unload.C ;\
++	else echo > libkonsole_main_la_meta_unload.C; fi
+ 
+ 
+ #>+ 12
+@@ -921,7 +947,7 @@
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  libkonsolepart_la_meta_unload.C kwrited_la_meta_unload.C konsole_la_meta_unload.C konsole_meta_unload.C
 +	-rm -f  libkonsolepart_la_meta_unload.C libkwrited_main_la_meta_unload.C libkonsole_main_la_meta_unload.C konsole_meta_unload.C
-@@ -940,7 +955,7 @@
+ 
+ #>+ 11
+ libkonsolepart_la.all_C.C: $(srcdir)/Makefile.in $(srcdir)/TEPty.C $(srcdir)/BlockArray.C $(srcdir)/schema.C $(srcdir)/session.C $(srcdir)/TEWidget.C $(srcdir)/TEmuVt102.C $(srcdir)/TEScreen.C $(srcdir)/TEmulation.C $(srcdir)/TEHistory.C $(srcdir)/keytrans.C $(srcdir)/konsole_part.C libkonsolepart_la_meta_unload.C   konsole_part.moc konsole.moc TEWidget.moc TEmulation.moc session.moc TEmuVt102.moc kwrited.moc TEPty.moc 
+@@ -936,28 +962,64 @@
+ 	rm -f libkonsolepart_la.all_C.final libkonsolepart_la.all_C.files
+ 
+ #>+ 11
 -kwrited_la.all_C.C: $(srcdir)/Makefile.in $(srcdir)/kwrited.C kwrited_la_meta_unload.C  
 -	@echo 'creating kwrited_la.all_C.C ...'; \
 -	rm -f kwrited_la.all_C.files kwrited_la.all_C.final; \
@@ -184,19 +267,23 @@ $NetBSD: patch-cz,v 1.1 2001/10/15 22:46:07 skrll Exp $
 +	for file in kwrited.C libkwrited_main_la_meta_unload.C ; do \
 +	  echo "#include \"$$file\"" >> libkwrited_main_la.all_C.files; \
 +	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkwrited_main_la.all_C.final; \
-@@ -948,2 +963,2 @@
--	cat kwrited_la.all_C.final kwrited_la.all_C.files  > kwrited_la.all_C.C; \
--	rm -f kwrited_la.all_C.final kwrited_la.all_C.files
++	done; \
 +	cat libkwrited_main_la.all_C.final libkwrited_main_la.all_C.files  > libkwrited_main_la.all_C.C; \
 +	rm -f libkwrited_main_la.all_C.final libkwrited_main_la.all_C.files
-@@ -952,7 +967,7 @@
--konsole_la.all_C.C: $(srcdir)/Makefile.in $(srcdir)/main.C $(srcdir)/konsole.C konsole_la_meta_unload.C  
--	@echo 'creating konsole_la.all_C.C ...'; \
--	rm -f konsole_la.all_C.files konsole_la.all_C.final; \
--	echo "#define KDE_USE_FINAL 1" >> konsole_la.all_C.final; \
--	for file in main.C konsole.C konsole_la_meta_unload.C ; do \
--	  echo "#include \"$$file\"" >> konsole_la.all_C.files; \
--	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> konsole_la.all_C.final; \
++
++#>+ 11
++kwrited_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwrited_main.cpp  
++	@echo 'creating kwrited_la.all_cpp.cpp ...'; \
++	rm -f kwrited_la.all_cpp.files kwrited_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> kwrited_la.all_cpp.final; \
++	for file in kwrited_main.cpp ; do \
++	  echo "#include \"$$file\"" >> kwrited_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kwrited_la.all_cpp.final; \
++	done; \
++	cat kwrited_la.all_cpp.final kwrited_la.all_cpp.files  > kwrited_la.all_cpp.cpp; \
++	rm -f kwrited_la.all_cpp.final kwrited_la.all_cpp.files
++
++#>+ 11
 +libkonsole_main_la.all_C.C: $(srcdir)/Makefile.in $(srcdir)/main.C $(srcdir)/konsole.C libkonsole_main_la_meta_unload.C  
 +	@echo 'creating libkonsole_main_la.all_C.C ...'; \
 +	rm -f libkonsole_main_la.all_C.files libkonsole_main_la.all_C.final; \
@@ -204,13 +291,51 @@ $NetBSD: patch-cz,v 1.1 2001/10/15 22:46:07 skrll Exp $
 +	for file in main.C konsole.C libkonsole_main_la_meta_unload.C ; do \
 +	  echo "#include \"$$file\"" >> libkonsole_main_la.all_C.files; \
 +	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkonsole_main_la.all_C.final; \
-@@ -960,2 +975,2 @@
--	cat konsole_la.all_C.final konsole_la.all_C.files  > konsole_la.all_C.C; \
--	rm -f konsole_la.all_C.final konsole_la.all_C.files
++	done; \
 +	cat libkonsole_main_la.all_C.final libkonsole_main_la.all_C.files  > libkonsole_main_la.all_C.C; \
 +	rm -f libkonsole_main_la.all_C.final libkonsole_main_la.all_C.files
-@@ -975,12 +989,0 @@
--#>+ 11
++
++#>+ 11
++konsole_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/konsole_main.cpp  
++	@echo 'creating konsole_la.all_cpp.cpp ...'; \
++	rm -f konsole_la.all_cpp.files konsole_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> konsole_la.all_cpp.final; \
++	for file in konsole_main.cpp ; do \
++	  echo "#include \"$$file\"" >> konsole_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> konsole_la.all_cpp.final; \
+ 	done; \
+-	cat kwrited_la.all_C.final kwrited_la.all_C.files  > kwrited_la.all_C.C; \
+-	rm -f kwrited_la.all_C.final kwrited_la.all_C.files
++	cat konsole_la.all_cpp.final konsole_la.all_cpp.files  > konsole_la.all_cpp.cpp; \
++	rm -f konsole_la.all_cpp.final konsole_la.all_cpp.files
+ 
+ #>+ 11
+-konsole_la.all_C.C: $(srcdir)/Makefile.in $(srcdir)/main.C $(srcdir)/konsole.C konsole_la_meta_unload.C  
+-	@echo 'creating konsole_la.all_C.C ...'; \
+-	rm -f konsole_la.all_C.files konsole_la.all_C.final; \
+-	echo "#define KDE_USE_FINAL 1" >> konsole_la.all_C.final; \
+-	for file in main.C konsole.C konsole_la_meta_unload.C ; do \
+-	  echo "#include \"$$file\"" >> konsole_la.all_C.files; \
+-	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> konsole_la.all_C.final; \
++konsole.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/konsole_main.cpp  
++	@echo 'creating konsole.all_cpp.cpp ...'; \
++	rm -f konsole.all_cpp.files konsole.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> konsole.all_cpp.final; \
++	for file in konsole_main.cpp ; do \
++	  echo "#include \"$$file\"" >> konsole.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> konsole.all_cpp.final; \
+ 	done; \
+-	cat konsole_la.all_C.final konsole_la.all_C.files  > konsole_la.all_C.C; \
+-	rm -f konsole_la.all_C.final konsole_la.all_C.files
++	cat konsole.all_cpp.final konsole.all_cpp.files  > konsole.all_cpp.cpp; \
++	rm -f konsole.all_cpp.final konsole.all_cpp.files
+ 
+ #>+ 11
+ konsole.all_C.C: $(srcdir)/Makefile.in $(srcdir)/TEPty.C $(srcdir)/BlockArray.C $(srcdir)/main.C $(srcdir)/konsole.C $(srcdir)/schema.C $(srcdir)/session.C $(srcdir)/TEWidget.C $(srcdir)/TEmuVt102.C $(srcdir)/TEScreen.C $(srcdir)/TEmulation.C $(srcdir)/TEHistory.C $(srcdir)/keytrans.C konsole_meta_unload.C  
+@@ -972,33 +1034,33 @@
+ 	rm -f konsole.all_C.final konsole.all_C.files
+ 
+ #>+ 11
 -kwrited.all_C.C: $(srcdir)/Makefile.in dummy.C  
 -	@echo 'creating kwrited.all_C.C ...'; \
 -	rm -f kwrited.all_C.files kwrited.all_C.final; \
@@ -218,16 +343,40 @@ $NetBSD: patch-cz,v 1.1 2001/10/15 22:46:07 skrll Exp $
 -	for file in dummy.C ; do \
 -	  echo "#include \"$$file\"" >> kwrited.all_C.files; \
 -	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kwrited.all_C.final; \
--	done; \
++kwrited.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwrited_main.cpp  
++	@echo 'creating kwrited.all_cpp.cpp ...'; \
++	rm -f kwrited.all_cpp.files kwrited.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> kwrited.all_cpp.final; \
++	for file in kwrited_main.cpp ; do \
++	  echo "#include \"$$file\"" >> kwrited.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kwrited.all_cpp.final; \
+ 	done; \
 -	cat kwrited.all_C.final kwrited.all_C.files  > kwrited.all_C.C; \
 -	rm -f kwrited.all_C.final kwrited.all_C.files
--
-@@ -989 +992 @@
++	cat kwrited.all_cpp.final kwrited.all_cpp.files  > kwrited.all_cpp.cpp; \
++	rm -f kwrited.all_cpp.final kwrited.all_cpp.files
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f libkonsolepart_la.all_C.C kwrited_la.all_C.C konsole_la.all_C.C konsole.all_C.C kwrited.all_C.C
-+	-rm -f libkonsolepart_la.all_C.C libkwrited_main_la.all_C.C libkonsole_main_la.all_C.C konsole.all_C.C
-@@ -993 +996 @@
++	-rm -f libkonsolepart_la.all_C.C libkwrited_main_la.all_C.C kwrited_la.all_cpp.cpp libkonsole_main_la.all_C.C konsole_la.all_cpp.cpp konsole.all_cpp.cpp konsole.all_C.C kwrited.all_cpp.cpp
+ 
+ #>+ 2
+ final:
 -	$(MAKE) libkonsolepart_la_OBJECTS="$(libkonsolepart_la_final_OBJECTS)" kwrited_la_OBJECTS="$(kwrited_la_final_OBJECTS)" konsole_la_OBJECTS="$(konsole_la_final_OBJECTS)" konsole_OBJECTS="$(konsole_final_OBJECTS)" all-am
 +	$(MAKE) libkonsolepart_la_OBJECTS="$(libkonsolepart_la_final_OBJECTS)" libkwrited_main_la_OBJECTS="$(libkwrited_main_la_final_OBJECTS)" libkonsole_main_la_OBJECTS="$(libkonsole_main_la_final_OBJECTS)" konsole_OBJECTS="$(konsole_final_OBJECTS)" all-am
-@@ -996 +999 @@
+ #>+ 2
+ final-install:
+-	$(MAKE) libkonsolepart_la_OBJECTS="$(libkonsolepart_la_final_OBJECTS)" kwrited_la_OBJECTS="$(kwrited_la_final_OBJECTS)" konsole_la_OBJECTS="$(konsole_la_final_OBJECTS)" konsole_OBJECTS="$(konsole_final_OBJECTS)" install-am
++	$(MAKE) libkonsolepart_la_OBJECTS="$(libkonsolepart_la_final_OBJECTS)" libkwrited_main_la_OBJECTS="$(libkwrited_main_la_final_OBJECTS)" libkonsole_main_la_OBJECTS="$(libkonsole_main_la_final_OBJECTS)" konsole_OBJECTS="$(konsole_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
 -	$(MAKE) libkonsolepart_la_OBJECTS="$(libkonsolepart_la_nofinal_OBJECTS)" kwrited_la_OBJECTS="$(kwrited_la_nofinal_OBJECTS)" konsole_la_OBJECTS="$(konsole_la_nofinal_OBJECTS)" konsole_OBJECTS="$(konsole_nofinal_OBJECTS)" all-am
 +	$(MAKE) libkonsolepart_la_OBJECTS="$(libkonsolepart_la_nofinal_OBJECTS)" libkwrited_main_la_OBJECTS="$(libkwrited_main_la_nofinal_OBJECTS)" libkonsole_main_la_OBJECTS="$(libkonsole_main_la_nofinal_OBJECTS)" konsole_OBJECTS="$(konsole_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) libkonsolepart_la_OBJECTS="$(libkonsolepart_la_nofinal_OBJECTS)" kwrited_la_OBJECTS="$(kwrited_la_nofinal_OBJECTS)" konsole_la_OBJECTS="$(konsole_la_nofinal_OBJECTS)" konsole_OBJECTS="$(konsole_nofinal_OBJECTS)" install-am
++	$(MAKE) libkonsolepart_la_OBJECTS="$(libkonsolepart_la_nofinal_OBJECTS)" libkwrited_main_la_OBJECTS="$(libkwrited_main_la_nofinal_OBJECTS)" libkonsole_main_la_OBJECTS="$(libkonsole_main_la_nofinal_OBJECTS)" konsole_OBJECTS="$(konsole_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

@@ -1,8 +1,8 @@
-$NetBSD: patch-dd,v 1.1 2001/10/15 22:46:08 skrll Exp $
+$NetBSD: patch-dd,v 1.2 2001/12/03 15:37:19 skrll Exp $
 
 --- konsole/src/main.C.orig	Wed Sep  5 00:16:57 2001
 +++ konsole/src/main.C
-@@ -109,7 +109,7 @@
+@@ -108,7 +108,7 @@
  
  
  /* --| main |------------------------------------------------------ */
