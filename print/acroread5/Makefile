@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/09/04 08:21:57 martti Exp $
+# $NetBSD: Makefile,v 1.18 2003/11/01 13:33:10 dmcmahill Exp $
 
 DISTNAME=	acroread5	# Overridden below
 PKGNAME=	acroread5-5.08
@@ -73,5 +73,8 @@ post-install:
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${PREFIX}/Acrobat5/Reader/license.txt"
 
+# do not include the linux stuff if we are, for example, on a Solaris box
+. if (${MACHINE_ARCH} == "i386")
 .include "../../emulators/suse_linux/Makefile.application"
+.endif
 .include "../../mk/bsd.pkg.mk"
