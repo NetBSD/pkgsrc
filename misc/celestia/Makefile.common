@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2005/03/18 12:36:42 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2005/03/20 12:36:25 fredb Exp $
 
 DISTNAME=	celestia-${CELESTIA_VERS}
 CATEGORIES=	misc x11
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--with-lua --with-glut
 
 GCC_REQD=		3.0
 
-CXXFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
+CXXFLAGS+=	-DPKG_SYSCONFDIR=\"${PKG_SYSCONFDIR}\"
 
 .include "../../mk/bsd.prefs.mk"
 
