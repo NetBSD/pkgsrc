@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.10 2004/06/05 18:57:37 cube Exp $
+
+--- src/sysdeps/netbsd.c.orig	2004-05-01 19:46:38.000000000 +0200
++++ src/sysdeps/netbsd.c
+@@ -295,7 +295,7 @@ gkrellm_sys_sensors_init(void)
+    int fd;			/* file desc. for /dev/sysmon */
+    int id = 0;			/* incremented for each sensor */
+    int type;
+-   char *s, base_name[32];
++   char *s, base_name[33];
+    gboolean	found_sensors = FALSE;
+ 
+    /* check if some sensor is configured */
