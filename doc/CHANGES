@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9766 2005/04/05 14:57:32 cube Exp $
+$NetBSD: CHANGES,v 1.9767 2005/04/05 15:59:47 is Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1915,3 +1915,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gaim to 1.2.1 [salo 2005-04-05]
 	Updated centericq to 4.20.0 [wiz 2005-04-05]
 	Updated lv to 4.51 [cube 2005-04-05]
+	Updated sr to 2.3.3nb5 [is 2005-04-05]
+	Updated sr to 2.3.3nb6 [is 2005-04-05]
