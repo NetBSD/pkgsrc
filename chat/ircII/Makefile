@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2003/02/18 02:29:14 lukem Exp $
+# $NetBSD: Makefile,v 1.22 2003/03/14 12:59:03 mrg Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
-PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		ftp://ircii.warped.com/pub/ircII/ \
 			ftp://ircftp.au.eterna.com.au/pub/ircII/
@@ -13,7 +12,7 @@ COMMENT=		The 'Internet Relay Chat' and 'Internet Citizens Band' Client
 
 CONFLICTS=		blackened-[0-9]*
 
-VERS=			20021103
+VERS=			20030314
 PLIST_SUBST+= 		VERS=${VERS}
 
 .include "../../mk/bsd.prefs.mk"
