@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/08 23:40:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/12 02:20:17 snj Exp $
 #
 
 DISTNAME=		Csound-4.24.1
@@ -20,10 +20,11 @@ NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64	# many LP64 problems
 DIST_SUBDIR=		csound
 GCC_REQD=		3.0
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
+USE_X11=		yes
 CONFLICTS=		csound-bath*
 
-.include "../../x11/fltk/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../x11/fltk/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
