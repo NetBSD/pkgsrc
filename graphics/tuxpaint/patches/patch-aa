@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2003/03/07 11:40:58 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2003/08/05 08:54:23 wiz Exp $
 
 --- Makefile.orig	Wed Feb 19 08:27:22 2003
 +++ Makefile
@@ -61,3 +61,12 @@ $NetBSD: patch-aa,v 1.4 2003/03/07 11:40:58 wiz Exp $
  
  
  # Install a launcher icon in the Gnome menu, under "Graphics"
+@@ -510,7 +502,7 @@ install-man:
+ tuxpaint:	obj/tuxpaint.o $(ARCH_LIBS)
+ 	@echo
+ 	@echo "...Linking Tux Paint..."
+-	@$(CC) $(CFLAGS) -o tuxpaint obj/tuxpaint.o $(ARCH_LIBS) $(SDL_LIBS) \
++	@$(CC) $(CFLAGS) ${LDFLAGS} -o tuxpaint obj/tuxpaint.o $(ARCH_LIBS) $(SDL_LIBS) \
+ 		-lm $(ARCH_LINKS)
+ 	@$(RSRC_CMD)
+ 	@$(MIMESET_CMD)
