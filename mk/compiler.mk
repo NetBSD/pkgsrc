@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.17 2003/10/06 11:14:22 grant Exp $
+# $NetBSD: compiler.mk,v 1.18 2003/10/11 02:44:18 grant Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -250,6 +250,13 @@ CC_VERSION=		gcc-${_CC_VERSION}
 _COMPILER_LD_FLAG=		# SunPro compiler
 .else
 _COMPILER_LD_FLAG=	-Wl,	# GCC and others
+.endif
+
+# Pass the required flags to imake to tell it we're using gcc on
+# Solaris.
+#
+.if ${OPSYS} == "SunOS" && defined(_CC_IS_GCC)
+IMAKEOPTS+=	-DHasGcc2=YES -DHasGcc2ForCplusplus=YES
 .endif
 
 .endif	# COMPILER_MK
