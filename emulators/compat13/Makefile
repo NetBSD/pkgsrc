@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/05/24 20:39:39 tv Exp $
+# $NetBSD: Makefile,v 1.4 1999/06/20 21:06:19 tron Exp $
 #
 
 DISTNAME=		compat13-${MACHINE_ARCH}
@@ -9,7 +9,9 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/Releases/formal-1.3/index.html
 
-ONLY_FOR_PLATFORM=	NetBSD-*-{alpha,arm32,i386,m68k,mipsel,ns32k,sparc}
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
+			NetBSD-*-m68k NetBSD-*-mipsel NetBSD-*-ns32k \
+			NetBSD-*-sparc
 NOT_FOR_PLATFORM=	NetBSD-1.3*-*
 
 NO_BUILD=
