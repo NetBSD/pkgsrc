@@ -1,9 +1,9 @@
 #!@PREFIX@/bin/perl
 
-# Copyright (c) 2002, 2003 by Andrew Brown <atatat@netbsd.org>
+# Copyright (c) 2002, 2003, 2004 by Andrew Brown <atatat@netbsd.org>
 # Absolutely no warranty.
 
-# $NetBSD: pkgdepgraph.pl,v 1.8 2003/04/30 03:39:18 atatat Exp $
+# $NetBSD: pkgdepgraph.pl,v 1.9 2004/06/05 06:17:37 atatat Exp $
 # pkgdepgraph: @DISTVER@
 
 use strict;
@@ -15,13 +15,14 @@ my(@opts, %opt);
 my($iam, $version, $usecolor, $group, $locations, $order, $versions);
 my($limit, $delete, $rebuild, $force, @outofdate, @update, $clean);
 my($pkg_dbdir, $pkgsrcdir, $packages, $pkgadd, $fetch, $make);
-my($all, $target, $exists, $reverse, $simple, @subgraph);
+my($all, $target, $exists, $reverse, $simple, @subgraph, @impact, %impactof);
 
 $version = '@DISTVER@';
 ($iam = $0) =~ s:.*/::;
-@opts = ('A', 'a+', 'C', 'c', 'D', 'd=s', 'e', 'F', 'f', 'g', 'K=s',
-	 'L', 'l', 'M=s', 'm=s', 'O=s', 'o', 'P=s', 'R', 'r', 'S=s',
-	 's', 't=s', 'U=s', 'v');
+@opts = ('A', 'a+', 'C', 'c', 'D', 'd=s', 'e', 'F', 'f', 'g', 'i=s',
+	 'K=s', 'L', 'l', 'M=s', 'm=s', 'O=s', 'o', 'P=s', 'R', 'r',
+	 'S=s', 's', 't=s', 'U=s', 'v');
+
 %opt = (
 	'A' => \$pkgadd,
 	'a' => \$all,
@@ -33,6 +34,7 @@ $version = '@DISTVER@';
 	'F' => \$fetch,
 	'f' => \$force,
 	'g' => \$group,
+	'i' => \@impact,
 	'K' => \$packages,
 	'L' => \$limit,
 	'l' => \$locations,
@@ -49,11 +51,13 @@ $version = '@DISTVER@';
 	'U' => \@update,
 	'v' => \$versions,
 	);
-die("usage: $iam [-AaCcDeFfgLloRrsv] [-d pkg_dbdir] [-K packages] [-M make]\n",
+die("usage: $iam [-AaCcDeFfgLloRrsv] [-d pkg_dbdir] [-i impact]\n",
     " " x (length($iam) + 8),
-    "[-m target] [-O package] [-P pkgsrcdir] [-S package]\n",
+    "[-K packages] [-M make] [-m target] [-O package]\n",
     " " x (length($iam) + 8),
-    "[-t target] [-U package] [data ...]\n")
+    "[-P pkgsrcdir] [-S package] [-t target] [-U package]\n",
+    " " x (length($iam) + 8),
+    "[data ...]\n")
     if (!GetOptions(\%opt, @opts));
 
 die("$iam: -D, -F, -m, and -R are mutually exclusive -- please pick one\n")
@@ -74,11 +78,24 @@ $make ||= $ENV{'MAKE'} || "make";
 
 my(@pkgs, $pkg, $req, %req, %dep, @reqs, @rreqs);
 my(%clusters, $cluster);
-my(%where, $pkgcnt, $num, %num, @num, %ord, @ord, $suffix);
+my(%where, $pkgcnt, $num, %num, @num, %ord, $suffix);
 my(%color, $color, %vuln);
 my(%need, %forced, $label);
 my($recolor, @graph);
 my(%vpkgs);
+
+# @pkgs		- list of all installed pkgs
+# %req		- pkg to ref to hash of pkgs that it requires
+# %dep		- pkg to ref to hash of pkgs that depend on it
+# %clusters	- pkg prefix to number of pkgs that share the prefix
+# %where	- pkg to location in source tree
+# %num/@num	- pkg to group number/group number array ref
+# %ord		- pkg to its height in the tree
+# %color	- pkg to pkg color (green, yellow, red, etc)
+# %vuln		- pkg to vulnerabilities recorded against it
+# %need		- pkg to version required (pkg is out of date) 
+# %forced	- pkg marked as "forced" to be out of date
+# %vpkgs	- pkg is viewable (part of selected subgraph)
 
 ##
 ## load out-of-date or security problem list (if given), or a graph to
@@ -381,6 +398,48 @@ else {
 }
 
 ##
+## if checking for rebuild impact, also mark packages that are too
+## deeply involved as "green" so that they're not candidates for
+## destruction
+##
+if (@impact) {
+    my ($impact);
+
+    # step 1: canonicalize anything that's not a number (ie, is the
+    # name of a pkg) and eliminate duplicates (we just don't need 'em)
+    foreach (@impact) {
+	next if (/^\d+$/);
+	canonicalize($_);
+    }
+    @impact = uniq(sort(@impact));
+
+    # step 2: the "default" impact allows for anything to be rebuilt,
+    # but numeric values in @impact are also allowed, so pick the
+    # lowest one (specifying both 1 and 2 really means just 1)
+    $impact = $ord{(sort(byord @pkgs))[0]};
+    while ($impact[0] =~ /^\d+$/) {
+	$_ = shift(@impact);
+	$impact = $_ if ($_ < $impact);
+    }
+
+    # step 3: anything that would have too great an impact on the tree
+    # gets marked (the impactof() function will check the @impact
+    # array to avoid specific pkgs being rebuild)
+    foreach $pkg (keys %vpkgs) {
+	next if (impactof($impact, $pkg) <= $impact);
+	$vpkgs{$pkg} = 2;
+    }
+
+    # step 4: anything so marked gets tagged as green.  this tagging
+    # is a separate step so that we can properly judge impact over the
+    # entire tree (marking too early could prematurely split chunks
+    # that need to be rebuilt)
+    foreach $pkg (keys %vpkgs) {
+	$color{$pkg} = "green" if ($vpkgs{$pkg} == 2);
+    }
+}
+
+##
 ## translate "older" alternate output modes to the new generic version
 ##
 if ($fetch) {
@@ -436,6 +495,7 @@ foreach $pkg (sort(bynum keys %vpkgs)) {
 	$label .= "\\n[$vuln{$pkg}]";
     }
     $suffix = "\t// \#$ord{$pkg}, group $num{$pkg}, " .
+	(exists($impactof{$pkg}) ? "impact $impactof{$pkg}, " : "") .
 	scalar(@{$num[$num{$pkg}]}) . " members, $pkgcnt pkgs";
     $suffix .= ", LEAF" if ($ord{$pkg} == 1);
 
@@ -616,4 +676,50 @@ sub uniq {
 	}
     }
     @_;
+}
+
+##
+## impactof - impact of pkg delete/rebuild is the longest path (either
+## up or down the tree) that encompasses all things that need
+## rebuilding
+##
+sub impactof {
+    my ($impact, $pkg) = @_;
+    my (@in, @out);
+
+    # if we already know or it's dead-simple, get out early
+    return $impactof{$pkg} if (exists($impactof{$pkg}));
+    return $impactof{$pkg} = 0 if (color($pkg) eq "green");
+
+    # starting with the given pkg, repeatedly look up and down the
+    # tree for connected pkgs that also require a rebuild
+    @out = ($pkg);
+    do {
+	@in = @out;
+	@out = ($pkg);
+	push(@out, grep(color($_) ne "green", recurse(\%dep, @in)));
+	push(@out, grep(color($_) ne "green", recurse(\%req, @out)));
+	@out = uniq(sort(byord @out));
+    } while (@in != @out);
+
+    # check to see if the set of related pkgs intersects with the set
+    # we want to avoid and if so, mark this set as "too expensive"
+    $a = "";
+    if (@impact) {
+	foreach $b (@impact) {
+	    if (grep($_ eq $b, @out)) {
+		$a = $b;
+		$impact++;
+		last;
+	    }
+	}
+    }
+
+    # if we didn't hit anything, the impact is the one less than the
+    # highest ordered remotely connected pkg we found (the longest
+    # path from the top to the bottom of the set to be rebuilt)
+    $impact = $ord{$out[0]} - 1 if ($a eq "");
+    @impactof{@in} = ($impact) x @in;
+
+    $impactof{$pkg};
 }
