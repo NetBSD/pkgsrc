@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2004/03/29 00:50:41 dillo Exp $
+$NetBSD: distinfo,v 1.9 2004/08/22 08:02:30 minskim Exp $
 
 SHA1 (xv-3.10a.tar.gz) = 9e6372f154be9e9e355972cbeb91d98d9c342474
 Size (xv-3.10a.tar.gz) = 2259124 bytes
@@ -13,7 +13,7 @@ SHA1 (patch-ab) = dee0a3fc05e01f8b15c636ec4dcf745533eca345
 SHA1 (patch-ac) = 79793d6feb5d15e8e91f3e0747b7b14b00b21254
 SHA1 (patch-ad) = 699c3b8e636b369ec2f0de995df0c028f6b1e91a
 SHA1 (patch-ae) = a2adc219090e3214ff6c891cd76d3285ee0596b0
-SHA1 (patch-af) = bc0018210c198ec7c0df90cdea967dce995d7161
+SHA1 (patch-af) = 1c6578865affe775936d10118de72aada84887c5
 SHA1 (patch-ag) = 6802096dc1493a92379cd2750448407cf4e08dc4
 SHA1 (patch-ah) = 5d9fbc3459c44e8c61f50d9f0624ec2069795af9
 SHA1 (patch-ai) = 1beb3d45b08be536f297661f5dbdca050591548a
