@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/21 21:25:57 wiz Exp $
+$NetBSD: distinfo,v 1.2 2003/12/21 21:37:50 wiz Exp $
 
-SHA1 (libcaca-0.3.tar.gz) = 1de81e55563eb1f1d42941c1a101a9ee331bbe5d
-Size (libcaca-0.3.tar.gz) = 179732 bytes
+SHA1 (libcaca-0.3.tar.bz2) = f70c254ab6be9755858a813e1a8bd03673f464f1
+Size (libcaca-0.3.tar.bz2) = 141785 bytes
