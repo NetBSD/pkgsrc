@@ -1,0 +1,4 @@
+Spy vs "BoB" is a simple arcade game, based on Dodger by Bert Nelson
+and an Apple ][ game, Spy vs Spy.  Its been tested with SunOS 4.x, and
+should run with minimal changes on any BSD-based UNIX.  Other OS's will
+need to come up with another way to handle select().
