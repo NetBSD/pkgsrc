@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.71 2005/02/15 14:02:22 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.72 2005/02/15 21:06:13 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -151,3 +151,5 @@ Pullup ticket 286 - requested by grant beattie
 clamav update
 Pullup ticket 272 - requested by Robert T. Retzlaff
 pkg_add preserve modes of entries in binary packages
+Pullup ticket 290 - requested by Min Sik Kim
+security fix for awstats
