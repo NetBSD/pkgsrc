@@ -1,4 +1,4 @@
-# $Id: parallel.txt,v 1.1 2003/03/16 13:45:12 dmcmahill Exp $
+# $Id: parallel.txt,v 1.2 2003/04/16 09:55:53 wiz Exp $
 #
 
 These are my thoughts on how one would want a parallel bulk build to
@@ -36,7 +36,7 @@ following manner:
     times throughout the build.
 
 4)  During the build, the 'buildorder' file is consulted to figure out
-    which package should be built next.   Then to build the package,
+    which package should be built next.  Then to build the package,
     the following steps are taken:
 
     a)  Check for the existance of a '.broken' file in the package
@@ -138,9 +138,9 @@ The actually build should progress as follows:
     build based on the rule that only packages that have had all their
     dependencies built will be sent to slaves for compilation.
 
-2)  When a slave finishes, the master either notes  that the binary
+2)  When a slave finishes, the master either notes that the binary
     package is now available for use as a depends _or_ notes failure
-    and marks all pacakges which depend upon it as broken as in step
+    and marks all packages which depend upon it as broken as in step
     4e of the single machine build.
 
 
@@ -159,8 +159,8 @@ Important Parallel Build Considerations
     we don't want to have to start over.
 
 3)  The master needs to be able to monitor all slaves for signs of
-    life.  Ie, if a slave machine is simply shut off, the master
-    should detect that its no longer there an re-assign that slaves
+    life.  I.e., if a slave machine is simply shut off, the master
+    should detect that it's no longer there and re-assign that slaves
     current job.
 
 3a) The master must be able to distinguish between a slave failing to
@@ -169,9 +169,7 @@ Important Parallel Build Considerations
     be marked as broken, the latter causes the slave to be marked as
     broken.
 
-4)  Security.
-
-5)  Ability to add and remove slaves from the cluster during a build.
+4)  Ability to add and remove slaves from the cluster during a build.
     Again, a build may take a long time so we want to add/remove
     slaves while the build is in progress.
 
@@ -188,7 +186,7 @@ network.
 
 -  security
 
--  Support for kerberos?
+-  support for Kerberos?
 
 ====================================================================
 Implementation Thoughts
@@ -207,4 +205,3 @@ Implementation Thoughts
    p5-Parallel-Pvm package and perl nicely deals with parsing some of
    these files and sorting dependencies although I hate to add any
    extra dependencies to the build system.
-
