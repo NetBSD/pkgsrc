@@ -1,73 +1,37 @@
-# $NetBSD: Makefile,v 1.9 2003/01/28 22:03:51 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2003/04/20 12:31:56 grant Exp $
 
-DISTNAME=		samba-${SAMBA_BASE_VERSION}-ja-${SAMBA_JA_VERSION}
-PKGNAME=		ja-samba-${SAMBA_BASE_VERSION}.${SAMBA_JA_VERSION}
-WRKSRC=			${WRKDIR}/${DISTNAME}/source
+.include "Makefile.common"
+
+PKGNAME=		ja-samba-${SAMBA_BASE_VERS:S/b/.2/}.${SAMBA_JA_VERS}
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.samba.gr.jp/pub/samba-jp/samba-${SAMBA_BASE_VERSION}-ja/ \
-			ftp://ring.asahi-net.or.jp/pub/net/samba-jp/samba-${SAMBA_BASE_VERSION}-ja/
-EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=		http://www.jp.samba.org/project/samba-ja/index.html.en
 COMMENT=		Samba supporting I18N swat and L10N for Japanese
 
-SAMBA_BASE_VERSION=	2.2.4
-SAMBA_JA_VERSION=	1.0
 CONFLICTS+=		samba-[0-9]*
-
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
+
 USE_PKGLOCALEDIR=	YES
+
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
-
-.include "../../mk/bsd.prefs.mk"
-
-PKG_SYSCONFSUBDIR?=	samba
-
-VARDIR?=		/var
-SAMBA_ETCDIR?=		${PKG_SYSCONFDIR}
-SAMBA_DATADIR=		${PREFIX}/share
-SAMBA_LOCKDIR?=		${VARDIR}/db/samba
-SAMBA_LOGDIR?=		${VARDIR}/log
-SAMBA_PIDDIR?=		${VARDIR}/run
-SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
-
-CONFIGURE_ARGS+=	--localstatedir=${VARDIR}
-CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
-CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
-CONFIGURE_ARGS+=	--with-codepagedir=${SAMBA_DATADIR}/samba/codepages
-CONFIGURE_ARGS+=	--with-datadir=${SAMBA_DATADIR}
-CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
-CONFIGURE_ARGS+=	--with-logfilebase=${SAMBA_LOGDIR}
-CONFIGURE_ARGS+=	--with-piddir=${SAMBA_PIDDIR}
-CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE}
-CONFIGURE_ARGS+=	--with-swatdir=${SAMBA_DATADIR}/samba/swat
-
 CONFIGURE_ARGS+=	--with-readline
+
 CONFIGURE_ARGS+=	--with-ssl
 CONFIGURE_ARGS+=	--with-sslinc=${SSLBASE}
 CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
-
-CONFIGURE_ARGS+=	--with-i18n-swat
 
 # Force the use of the included gettext library this doesn't seem to link
 # with the gettext-lib package.
 #
 CONFIGURE_ARGS+=	--with-included-gettext
 
-CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
-
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
 .  include "../../print/cups/buildlink2.mk"
 BUILD_DEFS+=		USE_CUPS
 CONFIGURE_ARGS+=	--enable-cups
-.else
-CONFIGURE_ARGS+=	--disable-cups
 .endif
 
 .if defined(USE_PAM)
@@ -83,35 +47,30 @@ CONFIGURE_ARGS+=	--with-ldapsam
 PLIST_SUBST+=		SAMBA_LDAP=""
 .else
 PLIST_SUBST+=		SAMBA_LDAP="@comment "
-MESSAGE_SRC=		${.CURDIR}/MESSAGE.smbpasswd
+MESSAGE_SRC=		${.CURDIR}/MESSAGE.smbpasswd \
+			${.CURDIR}/MESSAGE.security
 SMBPASSWD_FILE=		/dev/null ${SAMBA_PRIVATE}/smbpasswd		\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 .endif
 
-# The following are Linux-only options.
-CONFIGURE_ARGS+=	--without-smbwrapper
-CONFIGURE_ARGS+=	--without-smbmount
+# Microsoft DFS support
+CONFIGURE_ARGS+=	--with-msdfs
 
-# Explicitly disable winbind until it may be properly handled by pkgsrc.
-CONFIGURE_ARGS+=	--without-winbind
+MESSAGE_SUBST+=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
+MESSAGE_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
+MESSAGE_SUBST+=		ROOT_USER=${ROOT_USER}
 
 DOCDIR=			${PREFIX}/share/doc/samba
 HTMLDIR=		${PREFIX}/share/doc/html/samba
 EXAMPLESDIR=		${PREFIX}/share/examples/samba
-
-FILES_SUBST=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
-FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR}
-FILES_SUBST+=		SAMBA_LOGDIR=${SAMBA_LOGDIR}
-FILES_SUBST+=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
-MESSAGE_SUBST+=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
-MESSAGE_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
-MESSAGE_SUBST+=		ROOT_USER=${ROOT_USER}
 
 CONF_FILES=		${EXAMPLESDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
 SUPPORT_FILES_PERMS=	${SMBPASSWD_FILE}
 RCD_SCRIPTS=		samba nmbd smbd
 OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}
 OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0500
+
+REPLACE_PERL=		${WRKSRC}/script/findsmb.in
 
 # Remove irrelevant files for this package.
 post-extract:
