@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/07/31 20:10:22 jmc Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/09/23 15:06:57 uebayasi Exp $
 #
 # Canna common makefile.
 #
@@ -6,7 +6,7 @@
 DISTNAME=	Canna${CANNA_VERSION:S|.||:S|pl|p|}
 PKGNAME=	Canna-${CANNA_MODULE}-${CANNA_VERSION}
 CATEGORIES=	japanese inputmethod
-MASTER_SITES=	http://downloads.sourceforge.jp/canna/2181/
+MASTER_SITES=	http://downloads.sourceforge.jp/canna/6059/
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://canna.sourceforge.jp/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/09/02 14:20:21 minoura Exp $
+# $NetBSD: Makefile,v 1.14 2003/09/23 15:06:57 uebayasi Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -6,10 +6,10 @@ COMMENT=	Input method tools and libraries
 SUBDIR+=	Chinput
 SUBDIR+=	ami
 SUBDIR+=	canna
+SUBDIR+=	canna-canuum
 SUBDIR+=	canna-dict
 SUBDIR+=	canna-lib
-SUBDIR+=	canna-server-bin
-SUBDIR+=	canuum
+SUBDIR+=	canna-server
 SUBDIR+=	iiimecf
 SUBDIR+=	ja-freewnn-dict
 SUBDIR+=	ja-freewnn-lib
