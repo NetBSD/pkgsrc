@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/28 20:34:53 jmmv Exp $
+lib/classpath/libgtkpeer.a
+lib/classpath/libgtkpeer.la
+lib/classpath/libgtkpeer.so
+lib/classpath/libgtkpeer.so.0
+lib/classpath/libgtkpeer.so.0.0
+@comment in classpath: @dirrm lib/classpath
