@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/01/16 10:33:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/20 21:47:15 snj Exp $
 
 DISTNAME=	mpeg2dec-0.4.0
 PKGNAME=	libmpeg2-0.4.0
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmpeg2/}
+MASTER_SITES=	http://libmpeg2.sourceforge.net/files/
 
 MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://libmpeg2.sourceforge.net/
