@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 08:45:46 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/01/18 17:32:22 drochner Exp $
 
 SHA1 (yorick-1.4.tar.gz) = 11e2ea5f0b5ac6b08251e4a3f9bb13f2dec22f1d
 Size (yorick-1.4.tar.gz) = 1429179 bytes
 SHA1 (patch-aa) = 0032e1e564603c97779f47be1fae44e64561860d
-SHA1 (patch-ab) = f19497ceaca1699028c6326db710e0eb81e45d89
+SHA1 (patch-ab) = e5563c99ad577973517ab5d2a9b72728280792de
+SHA1 (patch-ac) = 054fe84cf1c00e09c89fc7318353b84ff41bbd21
