@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.14 2004/01/19 05:11:44 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.15 2004/01/19 10:09:36 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -9,6 +9,7 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 # equivalents:
 #
 #	mangle:src:dst		mangles the directory "src" into "dst"
+#	submangle:src:dst	mangles "src/*" into "dst/*"
 #	rpath:src:dst		translates the directory "src" into "dst"
 #					in rpath options
 #	abs-rpath		removes all rpath options that try to add
@@ -46,9 +47,38 @@ gen() {
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|$2\([/$_sep]\)|$3\1|g
-s|$2$|$3|g
+s|^$2\([/$_sep]\)|$3\1|g
+s|^$2$|$3|g
+s|\([$_sep]\)$2\([/$_sep]\)|\1$3\2|g
+s|\([$_sep]\)$2$|\1$3|g
 EOF
+			case "$2" in
+			-*)	;;
+			*)
+				@CAT@ >> $sedfile << EOF
+s|\(-[ILR]\)$2\([/$_sep]\)|\1$3\2|g
+s|\(-[ILR]\)$2$|\1$3|g
+EOF
+				;;
+			esac
+			;;
+		esac
+		;;
+	submangle)
+		case "$action" in
+		transform|untransform)
+			@CAT@ >> $sedfile << EOF
+s|^$2\(/[^/$_sep]\)|$3\1|g
+s|\([$_sep]\)$2\(/[^/$_sep]\)|\1$3\2|g
+EOF
+			case "$2" in
+			-*)	;;
+			*)
+				@CAT@ >> $sedfile << EOF
+s|\(-[ILR]\)$2\(/[^/$_sep]\)|\1$3\2|g
+EOF
+				;;
+			esac
 			;;
 		esac
 		;;
@@ -80,8 +110,12 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|$2/[^/$_sep]*\(/[^$_sep]\)|$3\1|g
-s|$2/[^/$_sep]*$|$3|g
+s|^$2/[^/$_sep]*\(/[^$_sep]\)|$3\1|g
+s|^$2/[^/$_sep]*$|$3|g
+s|\([$_sep]\)$2/[^/$_sep]*\(/[^$_sep]\)|\1$3\2|g
+s|\([$_sep]\)$2/[^/$_sep]*$|\1$3|g
+s|\(-[ILR]\)$2/[^/$_sep]*\(/[^$_sep]\)|\1$3\2|g
+s|\(-[ILR]\)$2/[^/$_sep]*$|\1$3|g
 EOF
 			;;
 		esac
