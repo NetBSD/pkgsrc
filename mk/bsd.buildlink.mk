@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.20 2001/07/01 22:56:01 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.21 2001/07/02 04:26:50 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -155,57 +155,41 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
 
-.if defined(USE_LIBTOOL)
-post-build: buildlink-fix-libtool-archives
-
-BUILDLINK_FIX_LIBTOOL_SED?=	# empty
-BUILDLINK_FIX_LIBTOOL_POST_SED+=					\
-	-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"
-
-# Note: This target _MUST_ know something about libtool internals to correctly
-#       fix the references to ${BUILDLINK_DIR} into ${LOCALBASE}.
+# Note: This hack uses some libtool internals to correctly fix the references
+# to ${BUILDLINK_DIR} into ${LOCALBASE}.
 #
-buildlink-fix-libtool-archives:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cookie=${BUILDLINK_DIR}/.buildlink_fix_libtool_archives_done;	\
-	if [ ! -f $${cookie} ]; then					\
-		${ECHO_MSG} "Fixing directory references in libtool archives."; \
-		lai_files=`${FIND} ${WRKSRC} -name "*.lai"`;		\
-		for file in $${lai_files}; do				\
-			${MV} -f $${file} $${file}.fixme;		\
-			${SED}	${BUILDLINK_FIX_LIBTOOL_SED}		\
-				${BUILDLINK_FIX_LIBTOOL_POST_SED}	\
-				$${file}.fixme > $${file};		\
-			${RM} -f $${file}.fixme;			\
-		done;							\
-		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
-	fi
+.if defined(USE_LIBTOOL)
+REPLACE_BUILDLINK+=	`${FIND} . -name "*.lai" | ${SED} -e "s|^\./||"`
 .endif
 
 .if defined(REPLACE_BUILDLINK)
-post-build: buildlink-fix-config-scripts
+post-build: replace-buildlink
 
 REPLACE_BUILDLINK_SED?=		# empty
 REPLACE_BUILDLINK_POST_SED+=	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"
 REPLACE_BUILDLINK_POST_SED+=	-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"
 
-# Fix config scripts by removing buildlink directory references.
-buildlink-fix-config-scripts:
+# Fix files by removing buildlink directory references.
+replace-buildlink:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cookie=${BUILDLINK_DIR}/.buildlink_fix_config_scripts_done;	\
+	cookie=${BUILDLINK_DIR}/.replace_buildlink_done;		\
 	if [ ! -f $${cookie} ]; then					\
-		${ECHO_MSG} "Fixing directory references in config scripts."; \
-		cd ${WRKSRC};						\
-		for file in ${REPLACE_BUILDLINK}; do			\
-			${MV} -f $${file} $${file}.fixme;		\
-			${SED}	${REPLACE_BUILDLINK_SED}		\
-				${REPLACE_BUILDLINK_POST_SED}		\
-				$${file}.fixme > $${file};		\
-			if [ -x $${file}.fixme ]; then			\
-				${CHMOD} +x $${file};			\
-			fi;						\
-			${RM} -f $${file}.fixme;			\
-		done;							\
+		replace_buildlink="${REPLACE_BUILDLINK}";		\
+		if [ -n "$${replace_buildlink}" ]; then			\
+			${ECHO_MSG} "Fixing directory references:";	\
+			cd ${WRKSRC};					\
+			for file in ${REPLACE_BUILDLINK}; do		\
+				${ECHO_MSG} "	$${file}";		\
+				${MV} -f $${file} $${file}.fixme;	\
+				${SED}	${REPLACE_BUILDLINK_SED}	\
+					${REPLACE_BUILDLINK_POST_SED}	\
+					$${file}.fixme > $${file};	\
+				if [ -x $${file}.fixme ]; then		\
+					${CHMOD} +x $${file};		\
+				fi;					\
+				${RM} -f $${file}.fixme;		\
+			done;						\
+		fi;							\
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
 .endif
