@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.145 2000/07/23 18:36:49 fredb Exp $
+# $NetBSD: mk.conf.example,v 1.146 2000/07/23 19:40:17 fredb Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -117,7 +117,7 @@
 # Default: none
 
 #ACCEPTABLE_LICENSES=	fee-based-commercial-use no-commercial-use \
-# 			no-profit no-redistribution shareware
+# 			no-profit limited-redistribution shareware
 # Whitespace-delimited list of the types of license which are
 # acceptable for installation.  (apart from standard "free" licenses
 # such as Berkeley/CMU and GPL).
