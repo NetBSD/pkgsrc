@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/09/29 06:17:27 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/29 06:28:00 jlam Exp $
 
 DISTNAME=	PostScript-MailLabels-1.01
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	print
+CATEGORIES=	print perl5
 MASTER_SITES=	http://www.oplnk.net/~ajackson/software/
 
 MAINTAINER=	jlam@netbsd.org
