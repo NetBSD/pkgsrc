@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/05/25 23:45:06 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/08/26 23:52:22 jlam Exp $
 bin/R
 bin/R.binary
 bin/Rd2txt
@@ -238,6 +238,8 @@ share/R/library/base/R-ex/complex.R
 share/R/library/base/R-ex/conflicts.R
 share/R/library/base/R-ex/consume.R
 share/R/library/base/R-ex/contour.R
+share/R/library/base/R-ex/contrast.R
+share/R/library/base/R-ex/contrasts.R
 share/R/library/base/R-ex/convolve.R
 share/R/library/base/R-ex/coplot.R
 share/R/library/base/R-ex/count.fields.R
@@ -292,6 +294,7 @@ share/R/library/base/R-ex/file.R
 share/R/library/base/R-ex/file.show.R
 share/R/library/base/R-ex/filled.contour.R
 share/R/library/base/R-ex/fivenum.R
+share/R/library/base/R-ex/fix.R
 share/R/library/base/R-ex/formals.R
 share/R/library/base/R-ex/format.R
 share/R/library/base/R-ex/format.info.R
@@ -416,6 +419,7 @@ share/R/library/base/R-ex/poly.R
 share/R/library/base/R-ex/polygon.R
 share/R/library/base/R-ex/polyroot.R
 share/R/library/base/R-ex/postscript.R
+share/R/library/base/R-ex/power.R
 share/R/library/base/R-ex/ppoints.R
 share/R/library/base/R-ex/predict.R
 share/R/library/base/R-ex/predict.glm.R
@@ -921,6 +925,7 @@ share/R/library/base/help/poly
 share/R/library/base/help/polygon
 share/R/library/base/help/polyroot
 share/R/library/base/help/postscript
+share/R/library/base/help/power
 share/R/library/base/help/ppoints
 share/R/library/base/help/precip
 share/R/library/base/help/predict
@@ -1399,6 +1404,7 @@ share/R/library/base/html/poly.html
 share/R/library/base/html/polygon.html
 share/R/library/base/html/polyroot.html
 share/R/library/base/html/postscript.html
+share/R/library/base/html/power.html
 share/R/library/base/html/ppoints.html
 share/R/library/base/html/precip.html
 share/R/library/base/html/predict.glm.html
@@ -1876,6 +1882,7 @@ share/R/library/base/latex/poly.tex
 share/R/library/base/latex/polygon.tex
 share/R/library/base/latex/polyroot.tex
 share/R/library/base/latex/postscript.tex
+share/R/library/base/latex/power.tex
 share/R/library/base/latex/ppoints.tex
 share/R/library/base/latex/precip.tex
 share/R/library/base/latex/predict.glm.tex

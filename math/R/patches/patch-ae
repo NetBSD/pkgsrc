@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 1999/05/25 23:51:12 jlam Exp $
+$NetBSD: patch-ae,v 1.2 1999/08/26 23:52:22 jlam Exp $
 
---- Makefile.in.orig	Fri Apr 16 09:25:20 1999
-+++ Makefile.in	Tue May 25 02:48:46 1999
-@@ -49,15 +49,19 @@
+--- Makefile.in.orig	Mon Jun 28 09:46:08 1999
++++ Makefile.in	Thu Aug 26 18:41:20 1999
+@@ -49,16 +49,20 @@
  	    $(INSTALL_DATA) $${f} $(rhome); \
  	  done)
  	@echo "Installing executables ..."
@@ -14,10 +14,10 @@ $NetBSD: patch-ae,v 1.1 1999/05/25 23:51:12 jlam Exp $
  	@cat bin/R | sed "s@RHOME=.*@RHOME=$(rhome)@" > $(rhome)/bin/R
  	@cat bin/R | sed "s@RHOME=.*@RHOME=$(rhome)@" > $(bindir)/R
  	@chmod 755 $(bindir)/R $(rhome)/bin/R
--	@for f in `ls bin/* | grep -v '^bin/\(R\|R.binary\)\**$$'`; do \
+ 	@for f in `ls bin/* | grep -v '^bin/R\**$$' \
++                            | grep -v '^bin/R.gnome\**$$' \
+                             | grep -v '^bin/R.binary\**$$'`; do \
 -	  $(INSTALL) $${f} $(rhome)/bin; \
-+	@for f in \
-+	  `ls bin/* | grep -v '^bin/\(R\|R.binary\|R.gnome\)\**$$'`; do \
 +	  $(INSTALL_SCRIPT) $${f} $(rhome)/bin; \
  	done
  	@for f in Rd2txt Rdconv Rdindex Sd2Rd; do \
