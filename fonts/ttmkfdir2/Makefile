@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/29 22:04:08 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/29 22:16:11 recht Exp $
 #
 
 DISTNAME=	ttmkfdir2.20021109
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://people.redhat.com/yshao/
 COMMENT=	Tool that creates a fonts.scale file
+
+CONFLICTS=	ttmkfdir-[0-9]*
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 USE_LIBTOOL=	yes
