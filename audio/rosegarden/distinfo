@@ -1,4 +1,4 @@
-SHA1 (patch-Makefile.in) = bf77b6cdb830dcbdbe52bf0613d8fbc3653e6e80
+$NetBSD: distinfo,v 1.3 2002/07/02 12:40:27 wiz Exp $
 
 SHA1 (rosegarden-2.1pl3.tar.gz) = db03538e285f632024945539e1912ef44716aff7
 Size (rosegarden-2.1pl3.tar.gz) = 584431 bytes
