@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/12/17 14:34:17 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/17 14:47:03 tron Exp $
 
 DISTNAME=	xterm-164
 CATEGORIES=	x11
@@ -21,14 +21,14 @@ post-extract:
 
 pre-build:
 	@${SED} -e 's#@MV@#${MV}#g' \
-	  -e 's#@PREFIX@#${PREFIX}#g' ${PKGDIR}/INSTALL >${INSTALL_FILE}
+	  -e 's#@LOCALBASE@#${LOCALBASE}#g' \
+	  -e 's#@PREFIX@#${PREFIX}#g' \
+	  ${PKGDIR}/INSTALL >${INSTALL_FILE}
 
 pre-install:
 	${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
-	cd ${PREFIX}/lib/X11/etc; \
-	${SETENV} TERMINFO=${LOCALBASE}/share/lib/terminfo \
-	  /usr/5bin/tic xterm.terminfo
+	${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
