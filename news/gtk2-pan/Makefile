@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2002/12/24 06:10:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/24 22:46:37 wiz Exp $
 #
 
-DISTNAME=		pan-0.13.1
-PKGREVISION=		1
+DISTNAME=		pan-0.13.2
 CATEGORIES=		news
 MASTER_SITES=		http://pan.rebelbase.com/download/releases/${DISTNAME:C/pan-//}/SOURCE/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,10 +13,9 @@ COMMENT=		Newsreader for GTK2
 BUILD_USES_MSGFMT=	YES
 
 USE_PERL5=		build
-USE_X11=		YES
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		LOCALEDIR="${PKGLOCALEDIR}"
 LIBS=			-lcompat
 
 .include "../../converters/libiconv/buildlink2.mk"
@@ -26,10 +24,5 @@ LIBS=			-lcompat
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-CC=			${PREFIX}/bin/ptlgcc
-.include "../../devel/ptl2/buildlink2.mk"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
