@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.235 2003/01/31 17:03:07 salo Exp $
+$NetBSD: TODO,v 1.236 2003/02/01 01:05:29 salo Exp $
 
 Suggested new packages
 ======================
@@ -237,7 +237,6 @@ Suggested package updates
 	o sqlite-2.7.5 [pkg/19719]
 	o sqlite-2.7.6
 	o srp_client-1.7.5 [jlam]
-	o subversion-0.17.1
 	o suck-4.3.1
 	o sun-jdk14-1.4.1_01 [pkg/19853]
 	o sun-jre14-1.4.1_01 [pkg/19853]
