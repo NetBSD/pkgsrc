@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2001/11/26 17:38:13 wiz Exp $
+
+--- MANIFEST.orig	Sat Nov 24 04:10:47 2001
++++ MANIFEST
+@@ -30,8 +30,6 @@
+ examples/time.pl
+ examples/vacation.pl
+ examples/weiberfastnacht.pl
+-lib/Carp/Clan.pm
+-lib/Carp/Clan.pod
+ lib/Date/Calc/Object.pm
+ lib/Date/Calc/Object.pod
+ lib/Date/Calendar/Profiles.pm

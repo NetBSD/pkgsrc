@@ -1,18 +1,23 @@
-# $NetBSD: Makefile,v 1.6 2001/11/26 06:49:48 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/11/26 17:38:11 wiz Exp $
 #
 
-DISTNAME=     	Date-Calc-4.3
+DISTNAME=     	Date-Calc-5.0
 PKGNAME=       	p5-${DISTNAME}
 SVR4_PKGNAME=	p5dca
-CATEGORIES=	textproc perl5
+CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.engelschall.com/u/sb/download/
 COMMENT=	perl5 module for Gregorian calendar date calculations
 
+DEPENDS+=	p5-Bit-Vector-[0-9]*:../../devel/p5-Bit-Vector
+
 USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Date/Calc/.packlist
+
+post-patch:
+	@rm -rf ${WRKSRC}/lib/Carp
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
