@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/10/11 21:17:01 kim Exp $
+# $NetBSD: Makefile,v 1.6 1998/10/12 01:30:13 kim Exp $
 
 DISTNAME=	ntop-1.0
 CATEGORIES=	net
@@ -17,6 +17,7 @@ NOT_FOR_ARCHS=	alpha mips # elf problems WRT libcurses
 HAS_CONFIGURE=	yes
 GNU_CONFIGURE=	yes
 
+CFLAGS+=	-I${PREFIX}/include
 LDFLAGS+=	-L${PREFIX}/lib
 
 CONFIGURE_ENV+=	CPPFLAGS=-I${PREFIX}/include
