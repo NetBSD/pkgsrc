@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2001/04/30 11:03:31 skrll Exp $
+$NetBSD: patch-aa,v 1.2 2001/06/26 20:43:00 jlam Exp $
 
 --- makefiles/netbsd-g++.orig	Wed Dec 13 23:23:09 2000
 +++ makefiles/netbsd-g++
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.1 2001/04/30 11:03:31 skrll Exp $
 -LIBS	=	$(SUBLIBS) -L$(QTDIR)/lib -L/usr/X11R6/lib -lqt -lXext -lX11 -lm
 +#LINK	=	g++
 +#LFLAGS	=	-Bshareable 
-+LIBS	=	$(SUBLIBS) -L$(QTDIR)/lib -L${X11BASE}/lib -lqt -lXext -lX11 -lm -Wl,-R${X11BASE}/lib
++LIBS	=	${LDFLAGS} $(SUBLIBS) -L$(QTDIR)/lib -L${X11BASE}/lib -lqt -lXext -lX11 -lm
  AR	=	ar cqs
  RANLIB	=	
  MOC	=	$(QTDIR)/bin/moc
