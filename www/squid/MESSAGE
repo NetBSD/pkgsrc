@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2002/10/07 21:00:49 bouyer Exp $
+$NetBSD: MESSAGE,v 1.4 2002/11/02 07:55:02 grant Exp $
 
 You DO need running nameservice to start and run ${PKGNAME}.
 
@@ -7,9 +7,9 @@ Use the ${PKGNAME} proxy and caching WWW Server by
 configuring your WWW Navigator (Netscape, Mosaic, ...)
 to use it as a proxy server.
 
-Please note that to use the diskd storage method, ypu'll lilely have to
+Please note that to use the diskd storage method, you'll likely have to
 change SYSV-IPC parameters in the kernel config file (see
-http://www.squid-cache.org/Doc/FAQ/FAQ-22.html fro details).
+http://www.squid-cache.org/Doc/FAQ/FAQ-22.html for details).
 The following parameters should work for most cases:
 options         SYSVMSG         # System V-like message queues
 options         SYSVSEM         # System V-like semaphores
