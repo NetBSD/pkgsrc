@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.238 2004/06/07 17:44:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.239 2004/06/07 18:09:03 xtraeme Exp $
 
 COMMENT=	System utilities
 
@@ -140,6 +140,7 @@ SUBDIR+=	service-config
 SUBDIR+=	setquota
 SUBDIR+=	shmux
 SUBDIR+=	skill
+SUBDIR+=	slay
 SUBDIR+=	socket
 SUBDIR+=	sredird
 SUBDIR+=	sshsh

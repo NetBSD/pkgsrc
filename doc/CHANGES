@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6183 2004/06/07 17:43:51 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6184 2004/06/07 18:09:03 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2844,3 +2844,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gkrellm to 2.2.1nb1 [cube 2004-06-07]
 	Updated gkrellm-server to 2.2.1nb1 [cube 2004-06-07]
 	Added dmassage-0.6 [xtraeme 2004-06-07]
+	Added slay-1.2 [xtraeme 2004-06-07]
