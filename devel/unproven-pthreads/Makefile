@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/12/28 03:56:52 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/01/09 16:14:20 briggs Exp $
 #
 
 DISTNAME=		unproven-pthreads-0.17
@@ -10,7 +10,7 @@ MAINTAINER=		explorer@netbsd.org
 
 #ONLY_FOR_PLATFORM=	NetBSD-*-sparc
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
-			NetBSD-*-m68k
+			NetBSD-*-m68k NetBSD-*-powerpc
 CONFLICTS+=		mit-pthreads-*
 
 HAS_CONFIGURE=		yes
