@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cyrus.sh,v 1.1.1.1 2004/01/18 12:42:12 recht Exp $
+# $NetBSD: cyrus.sh,v 1.2 2004/05/27 04:45:06 jlam Exp $
 #
 # PROVIDE: cyrus
 # REQUIRE: DAEMON
@@ -50,18 +50,16 @@ cyrus_mkimap()
 {
 	# Generate the prerequisite directory structure for Cyrus IMAP.
 	if [ -f @IMAPDCONF@ ]; then
-		imap_dirs=`
-			@AWK@ '/^configdirectory:/	{ print $2 };	\
-			       /^partition-.*:/		{ print $2 };	\
-			       /^sievedir:/		{ print $2 }'	\
-			      @IMAPDCONF@				\
-		`
-		for dir in ${imap_dirs}; do
-			if [ ! -d ${dir} ]; then
-				@MKDIR@ ${dir}
-				@CHMOD@ 750 ${dir}
-				@CHOWN@ @CYRUS_USER@ ${dir}
-				@CHGRP@ @CYRUS_GROUP@ ${dir}
+		@AWK@ '/^configdirectory:/	{ print $2 };		\
+		       /^partition-.*:/		{ print $2 };		\
+		       /^sievedir:/		{ print $2 }'		\
+		      @IMAPDCONF@ |					\
+		while read dir; do
+			if [ ! -d "$dir" ]; then
+				@MKDIR@ "$dir"
+				@CHMOD@ 750 "$dir"
+				@CHOWN@ @CYRUS_USER@ "$dir"
+				@CHGRP@ @CYRUS_GROUP@ "$dir"
 			fi
 		done
 		@SU@ -m @CYRUS_USER@ -c "@PREFIX@/cyrus/bin/mkimap"
