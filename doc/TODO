@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.793 2003/08/29 09:28:48 jmmv Exp $
+$NetBSD: TODO,v 1.794 2003/08/29 13:34:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -80,7 +80,7 @@ Suggested package updates
 	o avidemux-2.0.14
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
-	o balsa2-2.0.13
+	o balsa2-2.0.14
 	o bogofilter-0.14.5.2
 	o bzflag-1.7g2
 	o calc-2.11.8
@@ -88,6 +88,7 @@ Suggested package updates
 	o cervisia-2.0
 	o citrix_ica-7.00.7757 [pkg/22209]
 	o courier-0.42.2 [pkg/22373]
+	o courier-0.43.1
 	o courier-auth-0.42.2 [pkg/22371]
 	o courier-auth-0.43
 	o courier-imap-2.0 [pkg/22374]
@@ -104,6 +105,7 @@ Suggested package updates
 	o dnetc-2.9004-482 [pkg/22390]
 	o doxygen-1.3.3
 	o dvdrip-0.50.15
+	o dvipng-0.6
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o echoping-5.0.1
@@ -142,16 +144,19 @@ Suggested package updates
 	o gnuchess-5.06
 	o gnustep-0.8.8
 	o gpa-0.6.1
+	o gphoto2-2.1.2
 	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
 	o grepmail-5.20
 	o grhino-0.8.1
 	o gsl-1.4
-	o gtetrinet-0.7.3
+	o gstreamer-0.6.3
+	o gtetrinet-0.7.4
 	o gtkglext-1.0.3
 	o gtksee-0.5.3
 	o guile-1.6.4
 	o hatari-0.40
+	o horde-2.2.4rc2 [pkg/22629]
 	o host-20030604
 	o hp2xx-3.4.4
 	o hpijs-1.4.1
@@ -177,12 +182,13 @@ Suggested package updates
 	o libgcrypt-1.1.42
 	o libgda-0.90.0
 	o libgnomedb-0.90.0
+	o libgphoto2-2.1.2
 	o licq-1.2.7
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtool-1.5 [skrll]
 	o libxml-2.5.10
-	o libxslt-1.0.32
+	o libxslt-1.0.32 [pkg/22609]
 	o lilypond-1.8.1
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
@@ -219,6 +225,7 @@ Suggested package updates
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ngrep-1.41
+	o ns-2.26 [pkg/22633]
 	o ns-flash-6.0.79
 	o openh323-1.11.2
 	o openldap-2.1.22 [recht|pkg/21682]
@@ -234,7 +241,7 @@ Suggested package updates
 	o pcre-4.4
 	o pdmenu-1.2.81
 	o php4-4.3.3
-	o plib-1.6.0 [pkg/19015]
+	o plib-1.6.0 [pkg/19015,pkg/22612]
 	o pnm2ppa-1.12 [pkg/21667]
 	o povray-3.5
 	o proftpd-1.2.9rc1
@@ -249,12 +256,13 @@ Suggested package updates
 	o rt-3.0.2
 	o ruby-1.8.0
 	o sablecc-2.18.1
-	o sablotron-0.97
+	o sablotron-1.0 [pkg/22603]
 	o sawfish-1.3
 	o scribus-1.0.1
 	o sendfile-20010424
 	o skill-4.1.1
 	o slib-2.4.4 [pkg/22185]
+	o slrn-0.9.8.0
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snd-6.8
 	o snes9x-1.41
@@ -267,6 +275,7 @@ Suggested package updates
 	o sylpheed-claws-0.9.4 [pkg/22519]
 	o t1lib-5.0.0
 	o tcl/tk-8.4.4
+	o tcl-tclcl-1.0b13 [pkg/22632]
 	o tcpreplay-1.4.4
 	o teapop-0.3.6
 	o tightvnc-1.2.9
@@ -274,12 +283,13 @@ Suggested package updates
 	o tinyproxy-1.6.0 [pkg/22161]
 	o tinyproxy-1.6.1
 	o tkman-2.2
-	o top-3.5b12.6
+	o top-3.5b12.7
 	o ttf2pt1-3.4.3
 	o transcode-0.6.9
 	o vfu-4.03
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
+	o wdg-validate-1.1.3 [pkg/22631]
 	o wdm-1.25
 	o wine-20030813
 	o wmbiff-0.4.15
