@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/08/31 16:54:33 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/04/08 01:03:33 fredb Exp $
 
 .if !defined(UULIB_BUILDLINK2_MK)
 UULIB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		uulib
-BUILDLINK_DEPENDS.uulib?=	uulib>=0.5.18
+BUILDLINK_DEPENDS.uulib?=	uulib>=0.5.20
 BUILDLINK_PKGSRCDIR.uulib?=	../../converters/uulib
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.uulib=uulib
