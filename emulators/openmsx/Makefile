@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/29 11:28:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/05 17:26:55 xtraeme Exp $
 #
 
 DISTNAME=		openmsx-0.4.0
@@ -29,6 +29,13 @@ SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	build/custom.mk
 SUBST_SED.prefix=	-e "s,/opt/openMSX,${PREFIX}/openmsx,"
 SUBST_MESSAGE.prefix=	"Fixing installation directory."
+
+post-install:
+	@(							\
+	${ECHO_MSG} "#!/bin/sh";				\
+	${ECHO_MSG} "exec ${PREFIX}/openmsx/bin/openmsx"	\
+	) > ${WRKSRC}/openmsx.sh
+	${INSTALL_SCRIPT} ${WRKSRC}/openmsx.sh ${PREFIX}/bin/openmsx
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
