@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/21 15:41:30 taca Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/06 13:12:20 taca Exp $
 
 DISTNAME=	instiki-0.9.2
 PKGREVISION=	2
@@ -36,8 +36,8 @@ post-patch:
 do-install:
 	${INSTALL_DATA_DIR} ${INSTIKI_DIR}
 .for d in app libraries
-	cd ${WRKSRC} && ${CP} -R $d ${INSTIKI_DIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INSTIKI_DIR}/$d
+	cd ${WRKSRC} && ${CP} -R ${d} ${INSTIKI_DIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INSTIKI_DIR}/${d}
 .endfor
 	${FIND} ${INSTIKI_DIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${INSTIKI_DIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
