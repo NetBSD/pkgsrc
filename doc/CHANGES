@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5148 2004/03/08 03:05:27 minskim Exp $
+$NetBSD: CHANGES,v 1.5149 2004/03/08 06:14:06 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1236,3 +1236,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated echoping to 5.2.0 [minskim 2004-03-08]
 	Updated dgd to 1.2.0.4 [minskim 2004-03-08]
 	Updated gnuchess to 5.07 [minskim 2004-03-08]
+	Added gnuchess-book-1.01 [minskim 2004-03-09]
+	Updated gnuchess to 5.07nb1 [minskim 2004-03-09]
+	Updated gnuchess-book-medium to 20000511nb2 [minskim 2004-03-09]
+	Updated gnuchess-book-small to 20000511nb1 [minskim 2004-03-09]
+	Removed gnuchess-book [minskim 2004-03-09]
