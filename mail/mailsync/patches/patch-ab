@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2004/04/22 23:41:27 ben Exp $
+
+--- mailsync.c.orig	Thu Apr 15 23:36:22 2004
++++ mailsync.c
+@@ -17,6 +17,7 @@
+ #include <ctype.h>
+ #include <stdio.h>
+ #include <errno.h>
++#include <assert.h>
+ extern int errno;               // Just in case
+ #include <sys/stat.h>           // Stat()
+ 
