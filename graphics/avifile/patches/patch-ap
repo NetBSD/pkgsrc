@@ -1,11 +1,10 @@
-$NetBSD: patch-ap,v 1.1.1.1 2001/04/12 21:26:21 zuntum Exp $
+$NetBSD: patch-ap,v 1.2 2002/01/23 16:52:10 skrll Exp $
 
---- lib/loader/Makefile.am.orig	Fri Jan 26 17:06:42 2001
+--- lib/loader/Makefile.am.orig	Fri Jan 26 16:06:42 2001
 +++ lib/loader/Makefile.am
-@@ -7,6 +7,3 @@
- -D__WINE__ -Ddbg_printf=__vprintf -DTRACE=__vprintf -fno-omit-frame-pointer -fno-inline
- 
+@@ -9,4 +9,4 @@
  LIBS=
--
--stubs.lo: stubs.s
+ 
+ stubs.lo: stubs.s
 -	$(CC) -c ./stubs.s -o stubs.lo
++	$(LIBTOOL) $(CC) -c ./stubs.s -o stubs.o
