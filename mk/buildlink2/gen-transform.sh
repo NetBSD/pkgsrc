@@ -1,4 +1,6 @@
 #!@BUILDLINK_SHELL@
+#
+# $NetBSD: gen-transform.sh,v 1.10 2003/01/15 09:26:14 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
