@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2000/01/15 18:39:28 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2000/02/12 05:00:38 wiz Exp $
 
 DISTNAME=		ncurses-5.0
 CATEGORIES=		devel
@@ -28,6 +28,10 @@ NCURSES_MINOR=		0
 #
 CURSES_INCLUDES=	c++/cursesw.h form/form.h include/unctrl.h \
 			menu/menu.h panel/panel.h
+CURSES_MAN_WITH_TABLES=	captoinfo.1m curs_addch.3x curs_attr.3x \
+			curs_getch.3x curs_inch.3x curs_mouse.3x \
+			form.3x infocmp.1m menu.3x ncurses.3x
+#			terminfo.5 is handled by patch-ac
 SED_NCURSES=		'/\#[ 	]*include/s/curses.h/ncurses.h/'
 
 post-configure:
@@ -39,6 +43,10 @@ post-configure:
 	done
 	cd ${WRKSRC}/man;						\
 	${RM} -f clear.1 tput.1 tset.1;					\
+	for file in ${CURSES_MAN_WITH_TABLES}; do			\
+		tbl $${file} > $${file}.notbl;				\
+		${MV} $${file}.notbl $${file};				\
+	done;								\
 	for file in *.1m; do						\
 		${SED} -e ${SED_NCURSES} <$${file} >`basename $${file} .1m`.1; \
 		${RM} -f $${file};					\
