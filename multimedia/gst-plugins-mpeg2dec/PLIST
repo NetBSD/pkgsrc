@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/06 13:50:42 jmmv Exp $
+lib/gstreamer-0.8/libgstmpeg2dec.a
+lib/gstreamer-0.8/libgstmpeg2dec.la
+lib/gstreamer-0.8/libgstmpeg2dec.so
+@comment in gstreamer: @dirrm lib/gstreamer-0.8
