@@ -1,9 +1,16 @@
-$NetBSD: patch-aa,v 1.15 2000/10/14 09:24:46 martin Exp $
+$NetBSD: patch-aa,v 1.16 2001/01/13 19:33:27 mycroft Exp $
 
-diff -ru /usr/local/src/mozilla/config/autoconf.mk.in ./config/autoconf.mk.in
---- /usr/local/src/mozilla/config/autoconf.mk.in	Fri Sep 15 09:19:30 2000
-+++ ./config/autoconf.mk.in	Fri Oct 13 11:23:07 2000
-@@ -238,8 +238,6 @@
+--- config/autoconf.mk.in.orig	Fri Sep 15 00:19:30 2000
++++ config/autoconf.mk.in	Sat Jan 13 19:25:34 2001
+@@ -72,7 +72,6 @@
+ NO_NETSCAPE_STATIC = @NO_STATIC_LIB@
+ ENABLE_TESTS	= @ENABLE_TESTS@
+ BUILD_IDLC = @BUILD_IDLC@
+-NEED_BASE_DLL_NAME_ALSO = @NEED_BASE_DLL_NAME_ALSO@
+ MOZ_ENDER_LITE = @MOZ_ENDER_LITE@
+ MOZ_LDAP_XPCOM = @MOZ_LDAP_XPCOM@
+ 
+@@ -238,8 +237,6 @@
  MKSHLIB_UNFORCE_ALL     = @MKSHLIB_UNFORCE_ALL@
  DSO_LDOPTS              = @DSO_LDOPTS@
  DLL_SUFFIX              = @DLL_SUFFIX@
