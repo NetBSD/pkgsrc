@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2003/01/06 07:43:25 uebayasi Exp $
+# $NetBSD: Makefile,v 1.142 2003/01/09 11:10:50 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -39,6 +39,7 @@ SUBDIR+=	ghc
 SUBDIR+=	gprolog
 SUBDIR+=	guavac
 SUBDIR+=	guile
+SUBDIR+=	guile14
 SUBDIR+=	hugs
 SUBDIR+=	icon
 SUBDIR+=	inform
