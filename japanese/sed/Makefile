@@ -1,20 +1,26 @@
-# New ports collection makefile for:	sed+mb
-# Version required:	1.18+mb1.03
-# Date created:		2 April 1995
-# Whom:			Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
-#
-# $Id: Makefile,v 1.1.1.1 1999/06/08 09:37:36 sakamoto Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/06/08 09:44:46 sakamoto Exp $
+# FreeBSD Id: Makefile,v 1.7 1999/01/27 07:41:18 fenner Exp $
 
-DISTNAME=	sed-1.18
-PKGNAME=	ja-sed-1.18
+DISTNAME=	sed-3.02
+PKGNAME=	ja-sed-3.02
 CATEGORIES=	japanese textproc
-MASTER_SITES=	${MASTER_SITE_GNU}
-MASTER_SITE_SUBDIR=	sed
+MASTER_SITES=	${MASTER_SITE_GNU:=sed/}
 
-MAINTAINER=	ports@FreeBSD.ORG
+PATCH_SITES=	http://member.nifty.ne.jp/wills/program/
+PATCHFILES=	sedmb107.diff.gz
+PATCH_DIST_STRIP=	-p1
 
-HAS_CONFIGURE=	yes
-PATCH_STRIP=	-p1
+MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+HOMEPAGE=	http://www.gnu.org/software/sed/sed.html
 
-.include <bsd.port.mk>
+INFO_FILES=	sed.info
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--program-transform-name='s,^,j,'
+
+post-install:
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ja-sed
+	@${INSTALL_DATA} ${WRKSRC}/OREADME.MB ${PREFIX}/share/doc/ja-sed
+	@${INSTALL_DATA} ${WRKSRC}/README.MB ${PREFIX}/share/doc/ja-sed
+
+.include "../../mk/bsd.pkg.mk"
