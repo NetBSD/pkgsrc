@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.42 2001/05/15 06:56:54 zuntum Exp $
+$NetBSD: TODO,v 1.43 2001/05/16 08:01:35 jlam Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -43,6 +43,7 @@ packages TODO (Suggested new packages)
 	SquirrelMail plugins
 	SquirrelMail has a plugings features and several plugins exist.
 	http://www.squirrelmail.org/index.php3?page=15
+	see mail/sq-squirrelspell for an example of a SquirrelMail plugin package
 
 	vmsbackup
 	Read VMS backup tapes
