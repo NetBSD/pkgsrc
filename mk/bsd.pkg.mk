@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.547 2000/08/19 15:32:15 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.548 2000/08/21 09:41:07 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -2526,7 +2526,7 @@ install-run-depends: uptodate-pkgtools
 	dir="${dep:C/[^:]*://:C/:.*$//}";				\
 	found="`${PKG_INFO} -e \"$$pkg\" || ${TRUE}`";			\
 	if [ "$$found" != "" ]; then					\
-		instobjfmt=`${PKG_INFO} -B "$$pkg" | ${AWK} '/^OBJECT_FMT/ {print $$2}'`; \
+		instobjfmt=`${PKG_INFO} -B "$$pkg" | ${AWK} '/^OBJECT_FMT/ {print $$2}' | ${HEAD} -1`; \
 		if [ "$$instobjfmt" = "" ]; then			\
 			if [ "X${WARN_NO_OBJECT_FMT}" != "Xno" ]; then	\
 				${ECHO} "WARNING: Unknown object format for installed package $$pkg - continuing"; \
