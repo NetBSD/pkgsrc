@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2666 2003/07/03 00:08:53 hubertf Exp $
+$NetBSD: CHANGES,v 1.2667 2003/07/03 00:52:07 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2659,3 +2659,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated algae to 4.1.3 [jtb 2003-07-02]
 	Updated octave to 2.0.17 [jtb 2003-07-02]
 	Updated dhid to 5.0 [hubertf 2003-07-03]
+	Added xlog-0.8 [wulf 2003-07-03]
