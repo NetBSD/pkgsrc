@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.11 2000/02/25 01:27:16 mjl Exp $
+$NetBSD: patch-aa,v 1.12 2000/06/28 23:18:30 wiz Exp $
 
---- src/Makefile.in.orig	Sun Nov 14 07:21:11 1999
-+++ src/Makefile.in	Sat Jan  1 17:53:05 2000
+--- src/Makefile.in.orig	Sun Apr 23 05:57:42 2000
++++ src/Makefile.in	Thu Jun 29 01:06:01 2000
 @@ -2,9 +2,9 @@
  #---------------------------------------------------------------------------
  # ANSI C compiler
@@ -63,7 +63,7 @@ $NetBSD: patch-aa,v 1.11 2000/02/25 01:27:16 mjl Exp $
 -	cd $(OBJDIR); $(AR_CR) $(NORMAL_LIB) $(OFILES)
 -	$(RANLIB) $(OBJDIR_NORMAL_LIB)
 +	cd $(OBJDIR); $(LIBTOOL) --mode=link cc -o $(NORMAL_LIB) $(OFILES:.o=.lo) \
-+		-rpath $(PREFIX)/lib -version-info 1:4
++		-rpath $(PREFIX)/lib -lm -ltermcap -version-info 1:4
  	@echo ""
  	@echo $(NORMAL_LIB) created in $(OBJDIR)
  
