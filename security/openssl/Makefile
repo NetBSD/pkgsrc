@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2002/09/07 07:17:00 jlam Exp $
+# $NetBSD: Makefile,v 1.62 2002/11/30 05:13:23 uebayasi Exp $
 
 DISTNAME=		openssl-0.9.6g
 SVR4_PKGNAME=		ossl
@@ -22,7 +22,7 @@ LICENCE=		fee-based-commercial-use
 USE_BUILDLINK2=		YES
 CONFIGURE_SCRIPT=	config
 CONFIGURE_ARGS=		shared --openssldir=${PKG_SYSCONFDIR} --prefix=${PREFIX}
-CONFIGURE_ENV=		CC="${CC}"
+CONFIGURE_ENV=		CC="${CC}" PERL="${PERL5}"
 
 PLIST_SRC=		${PKGDIR}/PLIST.${LOWER_OPSYS}
 PLIST_SRC+=		${PLIST_RSAREF}
