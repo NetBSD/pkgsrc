@@ -1,6 +1,13 @@
-This is a tool to enable TV-Out on Linux for NVidia
-cards. It does not need the kernel, supports
-multiple TV encoder chips. You may use all the
-features of the chip, down to direct register
-access, and all resolutions and sizes the chip
-supports.
+Nvtv can enable, activate and configure the TV output of most NVidia cards,
+and some others, like some 3dfx ones. Nvtv probes and uses the PCI bus
+directly, thus does not need any kernel support, and allows a very low-level
+access to the multiple TV encoder chips supported. Then you have a direct
+control over the registers of the chip, and can use all the resolutions and
+sizes the board supports.
+
+Most of the accesses done by Nvtv need root privileges, and a daemon is
+provided to allow non-privileged users control the TV output of the graphics
+card.
+
+Nvtv can integrate into either a GTK1 or a GTK2 environment, with the exact
+same interface.
