@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/06 18:26:50 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/11 23:04:48 jmmv Exp $
 bin/gcalctool
-etc/share/gconf/schemas/gcalctool.schemas
 share/applications/gcalctool.desktop
+share/gconf/schemas/gcalctool.schemas
 share/gnome/help/gcalctool/C/figures/gcalctool_basic_window.png
 share/gnome/help/gcalctool/C/figures/gcalctool_financial_window.png
 share/gnome/help/gcalctool/C/figures/gcalctool_menu_symbol.png
@@ -15,8 +15,8 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gcalctool.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gcalctool.mo
@@ -24,7 +24,11 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gcalctool.mo
 share/omf/gcalctool/gcalctool-C.omf
 share/pixmaps/gcalctool.png
+@dirrm share/omf/gcalctool
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/gcalctool/C/figures
 @dirrm share/gnome/help/gcalctool/C
 @dirrm share/gnome/help/gcalctool
-@dirrm share/omf/gcalctool
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in gnome2-dirs: @dirrm share/applications
