@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/01 05:42:12 xtraeme Exp $
+man/man5/tinc.conf.5
+man/man8/tincd.8
+sbin/tincd
