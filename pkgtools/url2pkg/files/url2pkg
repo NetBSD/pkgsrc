@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# url2pkg $Id: url2pkg,v 1.4 1999/06/18 00:56:14 feyrer Exp $
+# url2pkg $Id: url2pkg,v 1.5 2000/01/06 01:46:18 feyrer Exp $
 # (c) 1999 Hubert Feyrer
 #
 
@@ -45,7 +45,7 @@ if [ ! -f w*/.extract_done ]; then
 	fi
 	
 	(
-	echo '# $NetBSD: url2pkg,v 1.4 1999/06/18 00:56:14 feyrer Exp $'
+	echo '# $NetBSD: url2pkg,v 1.5 2000/01/06 01:46:18 feyrer Exp $'
 	echo '#'
 	echo ""
 	echo "DISTNAME=	$DISTNAME"
@@ -62,7 +62,7 @@ if [ ! -f w*/.extract_done ]; then
 	) >Makefile
 	
 	mkdir pkg
-	echo '@comment $NetBSD: url2pkg,v 1.4 1999/06/18 00:56:14 feyrer Exp $' >pkg/PLIST
+	echo '@comment $NetBSD: url2pkg,v 1.5 2000/01/06 01:46:18 feyrer Exp $' >pkg/PLIST
 	
 	vi +/FILLTHISINPLEASE Makefile
 	
@@ -78,7 +78,7 @@ fi
 #
 wrksrc=`cd w* ; echo *`
 if [ "$wrksrc" != "$DISTNAME" ]; then
-	WRKSRC=		"\${WRKDIR}/$wrksrc"
+	WRKSRC="\${WRKDIR}/$wrksrc"
 fi
 
 configure=`echo w*`/$wrksrc/configure
