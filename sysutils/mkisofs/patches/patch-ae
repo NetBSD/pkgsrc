@@ -5,7 +5,7 @@
  	char  parent[2];	/* 721 */
  	char name[1];
 -};
-+} __attribute((packed));
++} __attribute__((packed));
  
 -struct iso_directory_record {
 +struct  iso_directory_record {
