@@ -16,7 +16,4 @@ Fast: In typical use it's about as fast as the best full-featured servers
 Secure: It goes to great lengths to protect the web server machine
 against attacks and breakins from other sites.
 
-It also has one extremely useful feature (URL-traffic-based throttling) that
-no other server currently has.
-
-Jef Poskanzer  jef@acme.com  http://www.acme.com/jef/
+thttpd also provides URL-traffic-based throttling and virtual hosting.
