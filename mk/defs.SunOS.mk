@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.54 2003/02/26 15:15:38 jschauma Exp $
+# $NetBSD: defs.SunOS.mk,v 1.55 2003/02/27 08:15:53 tron Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -105,8 +105,7 @@ ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
 
 # imake installs manpages in weird places
-# XXX: assume NetBSD defaults until somebody determines correct values
-IMAKE_MAN_SOURCE_PATH=	man/cat
+IMAKE_MAN_SOURCE_PATH=	share/man/cat
 IMAKE_MAN_SUFFIX=	1
 IMAKE_LIBMAN_SUFFIX=	3
 IMAKE_FILEMAN_SUFFIX=	5
