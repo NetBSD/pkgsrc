@@ -1,4 +1,4 @@
-#     $NetBSD: OpenBSD.x11.dist,v 1.10 2003/05/25 08:00:16 jmmv Exp $
+#     $NetBSD: OpenBSD.x11.dist,v 1.11 2003/06/03 09:20:18 jmmv Exp $
 #  	OpenBSD: BSD.x11.dist,v 1.4 2002/06/09 06:15:15 todd Exp 
 #	FreeBSD: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 
@@ -335,6 +335,10 @@
                 ..
             ..
             dk
+                LC_MESSAGES
+                ..
+            ..
+            ee
                 LC_MESSAGES
                 ..
             ..
