@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5723 2004/04/24 00:46:41 snj Exp $
+$NetBSD: CHANGES,v 1.5724 2004/04/24 05:30:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2227,3 +2227,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.73 [reed 2004-04-23]
 	Updated gmngview to 1.0.7 [wiz 2004-04-24]
 	Updated xkbd to 0.8.5nb1 [snj 2004-04-24]
+	Updated qmail to 1.03nb6 [schmonz 2004-04-24]
