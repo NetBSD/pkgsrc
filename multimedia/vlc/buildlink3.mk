@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/04/12 23:22:59 salo Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/04/14 12:11:30 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use vlc.
 #
@@ -26,10 +26,10 @@ BUILDLINK_PKGSRCDIR.vlc?=	../../multimedia/vlc
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/libmpeg2/buildlink3.mk"
 .include "../../misc/libdvdcss/buildlink3.mk"
 .include "../../misc/libdvdplay/buildlink3.mk"
 .include "../../misc/libdvdread/buildlink3.mk"
+.include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"

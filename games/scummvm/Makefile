@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/04/11 21:05:46 tron Exp $
+# $NetBSD: Makefile,v 1.23 2004/04/14 12:11:30 jmmv Exp $
 
 DISTNAME=	scummvm-0.6.0
 CATEGORIES=	games
@@ -29,5 +29,5 @@ do-install:
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/libmpeg2/buildlink3.mk"
+.include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
