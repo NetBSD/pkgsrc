@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2000/01/02 18:14:18 tron Exp $
+# $NetBSD: Makefile,v 1.135 2000/01/05 05:03:57 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -137,6 +137,7 @@
     SUBDIR += xcolorsel
     SUBDIR += xcruise
     SUBDIR += xdaliclock
+    SUBDIR += xdaemon
     SUBDIR += xdm3d
 #    SUBDIR += xdtm
     SUBDIR += xearth
