@@ -1,21 +1,17 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 22:51:57 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/16 21:20:04 snj Exp $
 
-DISTNAME=	trafshow-3.1
-PKGREVISION=	1
+DISTNAME=	trafshow-4.0
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.nsk.su/pub/RinetSoftware/
 EXTRACT_SUFX=	.tgz
-
-PATCHFILES=	trafshow-31-v6-20010322a.diff.gz
-PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCH_DIST_STRIP+=	-p1
 
 MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=	http://soft.risp.ru/trafshow/index.shtml
 COMMENT=	Full screen visualization of the network traffic
 
-GNU_CONFIGURE=	yes
 ALL_TARGET=	trafshow
+GNU_CONFIGURE=	yes
+USE_BUILDLINK3=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,4 +28,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/.trafshow \
 		${PREFIX}/share/examples/trafshow/trafshow
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
