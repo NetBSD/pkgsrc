@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2000/01/02 21:05:01 fredb Exp $
+# $NetBSD: Makefile,v 1.19 2000/01/02 22:57:25 fredb Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
-DISTNAME=	cku196src
+DISTNAME=	cku196
 PKGNAME=        kermit-7.0.196.beta11
 CATEGORIES=	comms
 MASTER_SITES=	ftp://kermit.columbia.edu/kermit/test/tar/
@@ -22,8 +22,7 @@ MAKE_ENV+=	KFLAGS="${KFLAGS}" LIBS="${LIBS}"
 MAKEFILE=	makefile
 NO_WRKSUBDIR=	yes
 
-KFLAGS+=	-DCK_PCT_BAR -DNODEBUG -DNOOLDMODEMS
-KFLAGS+=	-DDYNAMIC
+#KFLAGS+=	-DNODEBUG -DNOOLDMODEMS
 
 # XXX This needs to be tested. XXX
 #
