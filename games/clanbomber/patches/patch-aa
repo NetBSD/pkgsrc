@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/15 07:42:32 garbled Exp $
+--- clanbomber/Resources.cpp.orig	Fri Dec 15 00:10:49 2000
++++ clanbomber/Resources.cpp	Fri Dec 15 00:13:12 2000
+@@ -24,6 +24,7 @@
+ #include <ClanLib/Core/Sound/soundbuffer.h>
+ 
+ #include "Resources.h"
++#include <config.h>
+ 
+ CL_ResourceManager*	Resources::res = NULL;
+ 
+@@ -110,8 +111,7 @@
+ 	    	try
+ 		{
+ 			res = CL_ResourceManager::create(
+-				"/usr/share/clanbomber/clanbomber.dat",
+-				true);
++				BOMBERDATDIR, true);
+ 		}
+ 		catch (CL_Error err)
+ 		{
