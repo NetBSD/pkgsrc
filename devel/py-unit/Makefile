@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/21 23:46:49 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/21 16:43:45 martti Exp $
 
 DISTNAME=	pyunit-1.4.1
 PKGNAME=	${PYPKGPREFIX}-unit-1.4.1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyunit/}
 
 MAINTAINER=	shell@shellhung.org
 HOMEPAGE=	http://pyunit.sourceforge.net/
-COMMENT=	unit testing framework for python
+COMMENT=	Unit testing framework for python
 
 PYDISTUTILSPKG=	# defined
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2003/07/17 21:31:31 grant Exp $
+# $NetBSD: Makefile,v 1.73 2003/07/21 16:43:29 martti Exp $
 
 DISTNAME=		libgtop-1.0.13
 PKGREVISION=		3
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		library to retrieve system information, used in GNOME
+COMMENT=		Library to retrieve system information, used in GNOME
 
 BUILD_USES_MSGFMT=	yes
 

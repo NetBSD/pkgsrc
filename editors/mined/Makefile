@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:34:40 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 16:44:37 martti Exp $
 #
 
 DISTNAME=	mined-2000.7
@@ -8,7 +8,7 @@ MASTER_SITES=	http://towo.net/mined/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://towo.net/mined/
-COMMENT=	html-aware editor
+COMMENT=	Html-aware editor
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_BUILDLINK2=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:30:05 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 16:43:18 martti Exp $
 #
 
 DISTNAME=	cvs2html-1.82
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://cvs.sslug.dk/cvs2html/
-COMMENT=	perl script to turn ``cvs log'' output into HTML
+COMMENT=	Perl script to turn ``cvs log'' output into HTML
 
 USE_BUILDLINK2=	YES
 NO_BUILD=	YES

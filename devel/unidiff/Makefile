@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:34:15 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 16:43:48 martti Exp $
 #
 
 DISTNAME=	part01
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.gz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	#
-COMMENT=	converts between uni-diffs and context diffs
+COMMENT=	Converts between uni-diffs and context diffs
 
 BUILD_DEPENDS=	gsharutils-4.2.1:../../archivers/gsharutils
 

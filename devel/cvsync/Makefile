@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2003/07/13 16:26:00 gehenna Exp $
+# $NetBSD: Makefile,v 1.43 2003/07/21 16:43:19 martti Exp $
 #
 
 DISTNAME=	cvsync-0.24.0
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.daemon-systems.org/pub/cvsync/
 
 MAINTAINER=	gehenna@NetBSD.ORG
 HOMEPAGE=	http://www.daemon-systems.org/cvsync/
-COMMENT=	portable incremental cvs repository syncer
+COMMENT=	Portable incremental cvs repository syncer
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES

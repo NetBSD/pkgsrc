@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 21:33:07 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/21 16:43:44 martti Exp $
 #
 
 DISTNAME=	pilrc-2.9p9
@@ -21,7 +21,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFFIX}
 
 MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.ardiri.com/index.cfm?redir=palm&cat=pilrc
-COMMENT=	generate resources for PalmOS applications from textual description
+COMMENT=	Generate resources for PalmOS applications from textual description
 
 #EXTRACT_CMD=	unzip -aq ${DOWNLOADED_DISTFILE}
 
