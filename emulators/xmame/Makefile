@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2004/01/17 17:11:08 kristerw Exp $
+# $NetBSD: Makefile,v 1.103 2004/01/22 08:36:04 grant Exp $
 #
 
 DISTNAME=		xmame-0.78.1
@@ -17,7 +17,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 MAKEFILE=		makefile.unix
 TARGET=			${PKGBASE}
 UNLIMIT_RESOURCES=	datasize

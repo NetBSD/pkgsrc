@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/03 18:49:40 reed Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/22 08:36:04 grant Exp $
 
 DISTNAME=		rewind-20020420
 PKGREVISION=		4
@@ -16,7 +16,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.[6-9]*-i386
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-curses
