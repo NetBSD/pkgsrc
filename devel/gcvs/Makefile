@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2004/04/27 04:59:42 snj Exp $
+# $NetBSD: Makefile,v 1.16 2004/09/08 16:21:53 wiz Exp $
 
-DISTNAME=		gcvs-1.0a7
-PKGREVISION=		2
+DISTNAME=		gcvs-1.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cvsgui/}
+# extra distfile containing an updated configure script
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gcvs-1.0-configure.tar.gz
 
 MAINTAINER=		mike@ethmoid.org
 HOMEPAGE=		http://cvsgui.sourceforge.net/
@@ -21,7 +22,7 @@ INFO_FILES=		cvs.info cvsclient.info
 CONFIGURE_ARGS+=	--with-tclinclude="${BUILDLINK_PREFIX.tcl}/include" \
 			--with-tcllib="${BUILDLINK_PREFIX.tcl}/lib"
 
-.include "../../lang/tcl83/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

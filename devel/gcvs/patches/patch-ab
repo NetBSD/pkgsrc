@@ -1,17 +1,18 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/06/24 23:11:42 zuntum Exp $
+$NetBSD: patch-ab,v 1.2 2004/09/08 16:21:53 wiz Exp $
 
---- cvsunix/src/Makefile.in.orig	Thu May 10 14:56:37 2001
-+++ cvsunix/src/Makefile.in	Thu May 10 14:56:58 2001
-@@ -35,4 +35,5 @@
- INSTALL_DATA = @INSTALL_DATA@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
-+INSTALL_SCRIPT = @INSTALL_SCRIPT@
+--- cvsunix/lib/Makefile.in.orig	2002-11-07 19:29:36.000000000 +0100
++++ cvsunix/lib/Makefile.in
+@@ -130,11 +130,11 @@ CPPFLAGS=
+ YACC = @YACC@
  
- LIBS = @LIBS@
-@@ -89,5 +90,5 @@
- 	@for prog in $(PROGS); do \
- 	  echo Installing $$prog in $(bindir); \
--	  $(INSTALL) $$prog $(bindir)/$$prog ; \
-+	  $(INSTALL_SCRIPT) $$prog $(bindir)/$$prog ; \
- 	done
+ .c.o:
+-	$(CC) $(CPPFLAGS) -I.. -I$(srcdir) -I$(cvs_srcdir) \
++	$(CC) $(CPPFLAGS) -I.. -I../../common -I$(srcdir) -I$(cvs_srcdir) \
+               $(DEFS) $(CFLAGS) -c $<
  
+ .cpp.o:
+-	$(CXX) $(CPPFLAGS) -I.. -I$(srcdir) -I$(cvs_srcdir) \
++	$(CXX) $(CPPFLAGS) -I.. -I../../common -I$(srcdir) -I$(cvs_srcdir) \
+               $(DEFS) $(CFLAGS) -c $<
+ 
+ .SUFFIXES:
