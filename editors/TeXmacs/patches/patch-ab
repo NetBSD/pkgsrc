@@ -1,12 +1,11 @@
-$NetBSD: patch-ab,v 1.4 2004/01/01 12:30:56 recht Exp $
+$NetBSD: patch-ab,v 1.5 2004/01/20 14:44:13 recht Exp $
 
---- configure.orig	2003-12-28 17:18:08.000000000 +0100
-+++ configure	2003-12-29 18:01:52.000000000 +0100
-@@ -6132,6 +6132,10 @@
+--- configure.orig	2004-01-18 23:38:08.000000000 +0100
++++ configure	2004-01-19 13:36:56.000000000 +0100
+@@ -6132,6 +6132,9 @@
       ;;
  esac
  
-+CONFIG_CXXFLAGS="${PKG_CXXFLAGS}"
 +CONFIG_LSHARED="${CONFIG_LSHARED} ${PKG_LDFLAGS}"
 +CONFIG_BSHARED="${CONFIG_BSHARED} ${PKG_LDFLAGS}"
 +
