@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/01/22 22:06:06 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/23 02:21:20 jlam Exp $
 
 PKGNAME=	courier-maildirmake-${BASE_VERS}
-PKGREVISION?=	# empty
+PKGREVISION?=	1
 COMMENT=	Courier Maildir utilities
 
 PERL5_REQD=	5.6.0
@@ -27,6 +27,10 @@ INSTALL_TARGET=		install-strip
 INSTALL_TARGET=		install
 .endif
 
+CONF_FILES=		${EGDIR}/quotawarnmsg ${PKG_SYSCONFDIR}/quotawarnmsg
+
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
+
 pre-configure: configure-init
 
 do-build:
@@ -42,10 +46,13 @@ do-install:
 .endfor
 
 post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/maildir/quotawarnmsg ${EGDIR}/quotawarnmsg
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/maildir/README.maildirquota.txt	\
 		${DOCDIR}/README.maildirquota
 	${INSTALL_DATA} ${WRKSRC}/maildir/README.sharedfolders.txt	\
 		${DOCDIR}/README.sharedfolders
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
