@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/20 12:08:40 agc Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/29 13:34:24 grant Exp $
 
 DISTNAME=	clustalw1.8.UNIX
 PKGNAME=	clustalw-1.8
@@ -13,6 +13,8 @@ COMMENT=	General purpose multiple alignment program for DNA or proteins
 MAKEFILE=	makefile
 ALL_TARGET=	clustalw
 WRKSRC=		${WRKDIR}/clustalw1.8
+
+MAKE_FLAGS+=	CC="${CC}"
 
 post-patch:
 	@${SED} -e 's:@PREFIX@:${PREFIX}:' < ${WRKSRC}/clustalw.c \
