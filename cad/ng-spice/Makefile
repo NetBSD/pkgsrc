@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/06/20 01:49:10 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/22 02:16:31 jlam Exp $
 #
 
 DISTNAME=	ng-spice-rework-13
@@ -17,6 +17,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-debug
+LIBS+=			${LIBGETOPT}
 
 USE_X11=		YES
 #USE_CURSES=		YES
