@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/01 10:46:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/19 12:22:42 uebayasi Exp $
 
 DISTNAME=	mklivecd-0.6
 CATEGORIES=	sysutils
@@ -21,7 +21,7 @@ NO_CONFIGURE=	YES
 NO_BUILDLINK=	YES
 NO_BUILD=	YES
 
-INSTALLATION_DIRS=	share/mklivecd sbin
+INSTALLATION_DIRS=	man/man8 sbin share/mklivecd
 
 FILES=	    KERN-LIVECD mfs_rcd personal_config
 
