@@ -1,8 +1,15 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 11:10:38 agc Exp $
+$NetBSD: patch-ac,v 1.3 2003/11/13 21:20:08 tron Exp $
 
---- dip.h.orig	Fri Jun 30 19:41:05 1995
-+++ dip.h	Tue Apr 14 18:56:26 1998
-@@ -50,10 +50,23 @@
+--- dip.h.orig	1995-07-01 01:41:05.000000000 +0200
++++ dip.h	2003-11-13 22:18:59.000000000 +0100
+@@ -43,17 +43,29 @@
+ #include <string.h>
+ #include <errno.h>
+ #include <syslog.h>
+-#include <varargs.h>
+ #include <sys/param.h>
+ #include <sys/termios.h>
+ #include <sys/types.h>
  #include <pwd.h>
  #include <signal.h>
  #include <sys/socket.h>
