@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/10/31 21:16:09 hubertf Exp $
+
+--- Imakefile.orig	Tue Oct 26 03:09:57 1999
++++ Imakefile	Tue Oct 26 03:10:22 1999
+@@ -9,6 +9,9 @@
+ #ifdef FreeBSDArchitecture
+ INSTALLFLAGS=-c -g operator -m 2755
+ #endif
++#ifdef NetBSDArchitecture
++INSTALLFLAGS=-c -m 755
++#endif
+ #ifdef LinuxArchitecture
+ INSTALLFLAGS=-c -m 2755
+ #endif
