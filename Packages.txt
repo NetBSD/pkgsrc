@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.51 1999/02/19 01:44:41 tv Exp $
+# $NetBSD: Packages.txt,v 1.52 1999/02/24 10:40:58 agc Exp $
 ###########################################################################
 
 			==========================
@@ -454,11 +454,9 @@ witticisms.
 If you're updating a FreeBSD package to work for NetBSD, please pay special
 attention to the following things in pkg/PLIST:
 
- - If there's a "@exec ldconfig ...", add an "@unexec ldconfig ...", so the
-   hints-file for ld.so doesn't grow without end.
- - For @exec and @unexec rewrite any ldconfig-command as "ldconfig ||
-   /usr/bin/true", as there's no ldconfig command on some of the platforms
-   NetBSD runs on (e.g. alpha).
+ - If there are any "@exec ldconfig ..." statements, or any "@unexec
+   ldconfig ...", delete them. NetBSD works out automatically whether to
+   call ldconfig, since some NetBSD architectures do not have ldconfig.
  - Add any missing @dirrm statements
 
 
