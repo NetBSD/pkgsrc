@@ -1,9 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/07/02 19:02:55 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/07/13 13:04:10 grant Exp $
+
+# do not directly include this file. .include "../../mk/gcc.buildlink2.mk"
+# to ensure the correct gcc package is selected based on USE_GCC2 and
+# USE_GCC3.
 
 .if !defined(GCC3_BUILDLINK2_MK)
 GCC3_BUILDLINK2_MK=	# defined
-
-.include "../../mk/bsd.prefs.mk"
 
 GCC_REQD?=			3.3
 BUILDLINK_DEPENDS.gcc?=		gcc3>=${GCC_REQD}
@@ -30,28 +32,6 @@ _GCC_ARCHDIR=		${_GCC_PREFIX}${_GCC_ARCHSUBDIR}
 
 BUILDLINK_LDFLAGS.gcc=	-L${_GCC_ARCHDIR} -Wl,${RPATH_FLAG}${_GCC_ARCHDIR} -L${_GCC_PREFIX}lib -Wl,${RPATH_FLAG}${_GCC_PREFIX}lib
 
-_GCC_VERSION!=		( ${CC} -dumpversion ) 2>/dev/null || ${ECHO} 0
-
-GCC_VERSION=		${_GCC_VERSION}
-GCC_PKG=		gcc-${GCC_VERSION}
-
-.if defined(USE_PKGSRC_GCC)
-_NEED_PKGSRC_GCC=	YES
-.else
-_NEED_PKGSRC_GCC!= \
-	if ${PKG_ADMIN} pmatch '${BUILDLINK_DEPENDS.gcc}' ${GCC_PKG}; then \
-		gccpath=`${TYPE} gcc | ${AWK} '{ print $$NF }'`;	\
-		if [ "$$gccpath" = "${_GCC_PREFIX}bin/gcc" ]; then \
-			${ECHO} "YES";					\
-		else							\
-			${ECHO} "NO";					\
-		fi;							\
-	else								\
-		${ECHO} "YES";						\
-	fi
-.endif
-
-.if ${_NEED_PKGSRC_GCC} == "YES"
 BUILDLINK_PACKAGES+=	gcc
 PATH:=		${_GCC_PREFIX}bin:${PATH}
 CC=		${_GCC_PREFIX}bin/gcc
@@ -60,12 +40,11 @@ CXX=		${_GCC_PREFIX}bin/g++
 F77=		${_GCC_PREFIX}bin/g77
 PKG_FC=		${F77}
 
-.  if defined(USE_GCC_SHLIB)
+.if defined(USE_GCC_SHLIB)
 LDFLAGS+=		${BUILDLINK_LDFLAGS.gcc}
-.  endif
+.endif
 BUILDLINK_WRAPPER_ENV+=	\
 	COMPILER_PATH="${BUILDLINK_DIR}/bin"; export COMPILER_PATH
-.endif	# _NEED_PKGSRC_GCC == YES
 
 # These files are from gcc-3.3.
 BUILDLINK_FILES.gcc=	${_GCC_SUBPREFIX}include/c++/3.3/*
