@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1351 2004/01/21 18:13:27 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1352 2004/01/22 10:19:58 xtraeme Exp $
 #
 # This file is in the public domain.
 #
@@ -1054,7 +1054,10 @@ MASTER_SITE_SOURCEFORGE+=	\
 	ftp://ftp.tuwien.ac.at/linux/sourceforge/
 
 MASTER_SITE_SUSE+=	\
-	ftp://fr2.rpmfind.net/linux/SuSE-Linux/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
+	ftp://rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
+	ftp://fr.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
+	ftp://fr2.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
+	ftp://speakeasy.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
 	ftp://ftp.duth.gr/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
 	ftp://ftp.kddlabs.co.jp/Linux/packages/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
 	ftp://sunsite.cnlab-switch.ch/mirror/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
