@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/03/14 16:17:42 rh Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:37:27 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/06/27 05:19:39 asami Exp
 #
 
@@ -11,6 +11,7 @@ DISTFILES=	article.dtd book.dtd maths.dtd serial.dtd
 
 MAINTAINER=	rh@NetBSD.ORG
 HOMEPAGE=	http://www.oasis-open.org/cover/sgml-xml.html
+COMMENT=	SGML DTDs from the The Electronic Publishing Special Interest Group
 
 DIST_SUBDIR=	iso12083
 

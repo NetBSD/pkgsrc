@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/03/15 08:48:15 rh Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:37:29 wiz Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/01/31 11:15:57 dirk Exp
 #
 
@@ -11,6 +11,7 @@ MASTER_SITES=	ftp://ftp.jclark.com/pub/jade/ \
 
 MAINTAINER=	rh@NetBSD.ORG
 HOMEPAGE=	http://www.jclark.com/jade/
+COMMENT=	Object-oriented SGML/XML parser toolkit and DSSSL engine
 
 CONFLICTS+=	sp-*
 
