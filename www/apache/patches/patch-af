@@ -1,87 +1,21 @@
-$NetBSD: patch-af,v 1.5 1999/11/21 22:09:28 tron Exp $
+$NetBSD: patch-af,v 1.6 2000/09/12 14:17:32 jlam Exp $
 
---- src/modules/standard/mod_include.c.orig	Sat May 22 08:57:57 1999
-+++ src/modules/standard/mod_include.c	Mon Oct  4 20:53:14 1999
-@@ -92,7 +92,11 @@
- #include "http_log.h"
- #include "http_main.h"
- #include "util_script.h"
-+#include "ap_include_extern.h"
-+#include "ap_hook.h"
- #endif
-+#define get_tag ap_include_get_tag
-+#define parse_string ap_include_parse_string
+--- src/modules/standard/mod_so.c.orig	Thu Sep  7 01:28:46 2000
++++ src/modules/standard/mod_so.c
+@@ -307,7 +307,15 @@
+     ap_os_dso_handle_t handle;
+     char *file;
  
- #define STARTING_SEQUENCE "<!--#"
- #define ENDING_SEQUENCE "-->"
-@@ -354,7 +358,8 @@
-  * the tag value is html decoded if dodecode is non-zero
-  */
- 
--static char *get_tag(pool *p, FILE *in, char *tag, int tagbuf_len, int dodecode)
-+API_EXPORT(char *)
-+ap_include_get_tag(pool *p, FILE *in, char *tag, int tagbuf_len, int dodecode)
- {
-     char *t = tag, *tag_val, c, term;
- 
-@@ -473,7 +478,7 @@
- /*
-  * Do variable substitution on strings
-  */
--static void parse_string(request_rec *r, const char *in, char *out,
-+API_EXPORT(void) ap_include_parse_string(request_rec *r, const char *in, char *out,
- 			size_t length, int leave_name)
- {
-     char ch;
-@@ -666,7 +671,8 @@
-             parse_string(r, tag_val, parsed_string, sizeof(parsed_string), 0);
-             if (tag[0] == 'f') {
-                 /* be safe; only files in this directory or below allowed */
--		if (!is_only_below(parsed_string)) {
-+		if ((ap_allow_options(r) & OPT_INCNOEXEC) &&
-+		    !is_only_below(parsed_string)) {
-                     error_fmt = "unable to include file \"%s\" "
-                         "in parsed file %s";
-                 }
-@@ -1057,7 +1063,9 @@
-                         "in parsed file %s";
-         }
-         else {
--            ap_getparents(tag_val);    /* get rid of any nasties */
-+            if (ap_allow_options(r) & OPT_INCNOEXEC)
-+               	ap_getparents(tag_val);    /* get rid of any nasties */
-+
-             rr = ap_sub_req_lookup_file(tag_val, r);
- 
-             if (rr->status == HTTP_OK && rr->finfo.st_mode != 0) {
-@@ -2135,6 +2143,16 @@
-     }
- }
- 
-+API_EXPORT(int)
-+ap_include_register_extern(const char *cmd, ap_include_extern_func func) {
-+    char cmdbuf[40] = "include::";
-+
-+    strncat(cmdbuf, cmd, 30);
-+    ap_hook_configure(cmdbuf, AP_HOOK_SIG5(int,ptr,ptr,ptr,ptr), AP_HOOK_TOPMOST);
-+    ap_hook_register(cmdbuf, func, NULL);
-+
-+    return 0;
-+}
- 
- 
- /* -------------------------- The main function --------------------------- */
-@@ -2259,6 +2277,13 @@
-             }
- #endif
-             else {
-+		char cmdbuf[40] = "include::";
-+
-+		strncat(cmdbuf, directive, 30);
-+		if ((ap_hook_status(cmdbuf) >= AP_HOOK_STATE_CONFIGURED) &&
-+		    (ap_hook_call(cmdbuf, &ret, f, r, error, timefmt) == TRUE))
-+		    continue;
-+
-                 ap_log_rerror(APLOG_MARK, APLOG_NOERRNO|APLOG_ERR, r,
- 			      "unknown directive \"%s\" "
- 			      "in parsed doc %s",
+-    file = ap_server_root_relative(cmd->pool, filename);
++    /*
++     * XXX Hack: If the filename starts with '!', then just as dlopen()
++     * XXX without translating to a pathname relative to ServerRoot.
++     */
++    if (filename[0] == '!') {
++	file = filename + 1;
++    } else {
++	file = ap_server_root_relative(cmd->pool, filename);
++    }
+     
+     if (!(handle = ap_os_dso_load(file))) {
+ 	const char *my_error = ap_os_dso_error();
