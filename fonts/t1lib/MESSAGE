@@ -1,9 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/07/19 12:37:41 wiz Exp $
-
-Sample configs tailored for NetBSD may have been copied to
-${PREFIX}/share/t1lib, but no existing files were overwritten.
-More samples may be found in ${PREFIX}/share/examples/t1lib.
+$NetBSD: MESSAGE,v 1.2 2002/11/08 15:51:25 fredb Exp $
 
 Most programs that use the lib will look first in the directory
 specified by the environment variable T1LIB_CONFIG_DIR, and then
