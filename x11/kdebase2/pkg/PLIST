@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/05/11 17:43:22 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/09/07 14:34:34 drochner Exp $
 bin/appletproxy
 bin/chooser
 bin/conttest
@@ -1515,6 +1515,7 @@ share/kde/config/penroserc
 share/kde/config/rocksrc
 share/kde/config/sliprc
 share/kde/icons/Daemon.png
+share/kde/icons/hicolor/16x16/apps/access.png
 share/kde/icons/hicolor/16x16/apps/background.png
 share/kde/icons/hicolor/16x16/apps/bell.png
 share/kde/icons/hicolor/16x16/apps/cookie.png
@@ -1530,6 +1531,7 @@ share/kde/icons/hicolor/16x16/apps/kcmsystem.png
 share/kde/icons/hicolor/16x16/apps/kcontrol.png
 share/kde/icons/hicolor/16x16/apps/kdisknav.png
 share/kde/icons/hicolor/16x16/apps/keditbookmarks.png
+share/kde/icons/hicolor/16x16/apps/key_bindings.png
 share/kde/icons/hicolor/16x16/apps/kfm.png
 share/kde/icons/hicolor/16x16/apps/kfm_home.png
 share/kde/icons/hicolor/16x16/apps/khelpcenter.png
