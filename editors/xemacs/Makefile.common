@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/02/28 16:20:09 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/03/03 16:16:03 uebayasi Exp $
 
 DISTNAME=	xemacs-21.4.17
 CATEGORIES=	editors
@@ -92,9 +92,6 @@ CONFIGURE_ARGS+=	--with-ncurses=no
 CONFIGURE_ARGS+=	--with-msw=no
 CONFIGURE_ARGS+=	${WITH_DIALOGS}
 CONFIGURE_ARGS+=	--infopath="${INFOPATH}"
-CONFIGURE_ARGS+=	--site-includes=${BUILDLINK_DIR}/include:${BUILDLINK_X11_DIR}/include:${WRKDIR}
-CONFIGURE_ARGS+=	--site-libraries=${BUILDLINK_DIR}/lib:${BUILDLINK_X11_DIR}
-CONFIGURE_ARGS+=	--site-runtime-libraries=${LOCALBASE}/lib:${X11BASE}/lib
 
 CFLAGS+=		-Dunix
 
