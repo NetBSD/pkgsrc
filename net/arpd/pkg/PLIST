@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/27 20:43:24 hubertf Exp $
+sbin/arpd
+etc/arpd.conf.example
+share/doc/arpd.README

@@ -1,0 +1,7 @@
+Look in the sample arpd.conf file. You can only have one aprnet
+for each interface, but as many nonet, dont and proxy as you want.
+On startup arpd will try to open /usr/local/etc/arpd.conf . If you
+want another config file, specify that as an argument to arpd.
+
+If you have any questions/suggestions, don't hesitate to ask/tell 
+Jens A Nilsson, jnilsson@ludd.luth.se.
