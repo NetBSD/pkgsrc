@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/19 14:01:46 markd Exp $
+
+SHA1 (libmal-0.40.tar.gz) = fcce27b320215e32de70e0c4a1fc7a553d486611
+Size (libmal-0.40.tar.gz) = 329928 bytes
+SHA1 (patch-aa) = 6a5426aad935fb736044a92da6f56e21e2915824
