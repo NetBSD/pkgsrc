@@ -1,26 +1,22 @@
-$NetBSD: patch-aa,v 1.9 2002/12/23 13:13:29 tron Exp $
+$NetBSD: patch-aa,v 1.10 2004/03/30 01:36:54 minskim Exp $
 
---- doinstall.tcl.orig	Wed Jan 23 18:18:03 2002
+--- doinstall.tcl.orig	2003-10-16 02:23:32.000000000 -0500
 +++ doinstall.tcl
-@@ -1,6 +1,6 @@
- #!/bin/sh
+@@ -2,5 +2,5 @@
  #-*-tcl-*-
  # the next line restarts using wish \
 -if [ -z "$DISPLAY" ]; then exec tclsh "$0" -- ${1+"$@"}; else exec wish "$0" -- ${1+"$@"}; fi
 +exec tclsh "$0" -- ${1+"$@"}
  
  #
-@@ -29,7 +29,7 @@
-     set MANDIR ""
+@@ -30,5 +30,5 @@ proc set_paths {INSTALLROOT} {
    } else {
      set BINDIR [file join $INSTALLROOT bin]
 -    set LIBDIR [file join $INSTALLROOT lib]
 +    set LIBDIR [file join $INSTALLROOT share]
      set MANDIR [file join $INSTALLROOT man man1]
    }
- }
-@@ -40,23 +40,6 @@
-   global LIBDIR BINDIR MANDIR
+@@ -41,21 +41,4 @@ proc show_paths {INSTALLROOT} {
  
    set_paths $INSTALLROOT
 -
@@ -42,9 +38,7 @@ $NetBSD: patch-aa,v 1.9 2002/12/23 13:13:29 tron Exp $
 -  }
  }
  
- proc doinstall { INSTALLROOT } {
-@@ -117,13 +100,6 @@
-   }
+@@ -118,11 +101,4 @@ proc doinstall { INSTALLROOT } {
    cd ..
    puts "Finished!"
 -
@@ -56,9 +50,7 @@ $NetBSD: patch-aa,v 1.9 2002/12/23 13:13:29 tron Exp $
 -  }
  }
  
- ################################################################################
-@@ -132,12 +108,7 @@
- set X 1
+@@ -133,10 +109,5 @@ set X 1
  
  # Check Tcl/TK version
 -if {$tcl_version < 8.3} {
@@ -70,4 +62,3 @@ $NetBSD: patch-aa,v 1.9 2002/12/23 13:13:29 tron Exp $
 +# This is done by the package Makefile
  
  # Do this after checking tcl version, because 7.x doesn't have it.
- puts "[info nameofexecutable]"
