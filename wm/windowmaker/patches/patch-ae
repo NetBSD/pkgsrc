@@ -1,13 +1,31 @@
-$NetBSD: patch-ae,v 1.1 2001/07/15 08:43:34 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2001/08/18 18:13:28 tron Exp $
 
---- util/wmaker.inst.in.orig	Mon Feb 19 20:28:11 2001
-+++ util/wmaker.inst.in
-@@ -293,7 +293,7 @@
-  echo "menu that will be used by default is the property list one. Read"
-  echo "    $GSDIR/Library/WindowMaker/README"
-  echo "for information on how to change it."
--    if [ "${inst_menu%.*}" == "menu" ]; then
-+    if [ "${inst_menu%.*}" = "menu" ]; then
-  echo "However, since you have locale set to $LOCALE and plmenu for such locale"
-  echo "was not found, your WMRootMenu contains path to text formated menu:"
-  echo "    $GSDIR/Library/WindowMaker/$inst_menu"
+--- doc/sk/Makefile.am.orig	Wed Jun  6 22:22:55 2001
++++ doc/sk/Makefile.am	Sat Aug 18 18:25:38 2001
+@@ -3,16 +3,16 @@
+ mandir=@mandir@/sk
+ 
+ man_MANS = \
+-	geticonset.1x \
+-	setstyle.1x \
+-	wxpaste.1x \
+-	getstyle.1x \
+-	wdwrite.1x \
+-	wmsetbg.1x \
+-	wsetfont.1x \
+-	seticons.1x \
+-	wmaker.1x \
+-	wxcopy.1x
++	geticonset.1 \
++	setstyle.1 \
++	wxpaste.1 \
++	getstyle.1 \
++	wdwrite.1 \
++	wmsetbg.1 \
++	wsetfont.1 \
++	seticons.1 \
++	wmaker.1 \
++	wxcopy.1
+ 
+ EXTRA_DIST = $(man_MANS)
+ 
