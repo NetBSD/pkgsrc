@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 1999/08/20 00:15:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2000/02/03 16:01:14 abs Exp $
 
 DISTNAME=	linuxdoom-1.10
-PKGNAME=	xdoom-1.10
+PKGNAME=	xdoom-1.10nb1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/source/
@@ -23,13 +23,6 @@ USE_GMAKE=	yes
 post-extract:
 	(cd ${WRKDIR}; ${GTAR} xzf linuxdoom-1.10.src.tgz)
 	(cd ${WRKDIR}; ${GTAR} xzf sndserv.tgz)
-
-post-patch:
-	@${MV} ${WRKSRC}/${DISTNAME}/i_sound.c ${WRKSRC}/foo
-	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' <${WRKSRC}/foo> ${WRKSRC}/${DISTNAME}/i_sound.c
-	@${MV} ${WRKSRC}/${DISTNAME}/d_main.c ${WRKSRC}/foo
-	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' <${WRKSRC}/foo> ${WRKSRC}/${DISTNAME}/d_main.c
-	@${RM} -f ${WRKSRC}/foo
 
 do-build:
 	cd ${WRKSRC}/${DISTNAME} ; ${GMAKE} X11BASE=${X11BASE}

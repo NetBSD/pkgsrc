@@ -1,0 +1,17 @@
+$NetBSD: patch-ar,v 1.1 2000/02/03 16:01:15 abs Exp $
+
+--- linuxdoom-1.10/r_data.c.orig	Mon Dec 22 20:57:47 1997
++++ linuxdoom-1.10/r_data.c	Thu Feb  3 01:34:00 2000
+@@ -84,10 +84,10 @@
+ typedef struct
+ {
+     char		name[8];
+-    boolean		masked;	
++    short		masked[2];		// OBSOLETE
+     short		width;
+     short		height;
+-    void		**columndirectory;	// OBSOLETE
++    short		columndirectory[2];	// OBSOLETE
+     short		patchcount;
+     mappatch_t	patches[1];
+ } maptexture_t;
