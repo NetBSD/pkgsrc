@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/06/21 16:04:37 jschauma Exp $
+# $NetBSD: Makefile,v 1.15 2002/06/21 16:31:13 jschauma Exp $
 
 DISTNAME=		silc-client-0.9.2
 CATEGORIES=		chat security
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=	--disable-asm
 
 # If you want to help with testing silc-client, uncomment this.
 #
-CONFIGURE_ARGS+=	--enable-debug
+#CONFIGURE_ARGS+=	--enable-debug
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
