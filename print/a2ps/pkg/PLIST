@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/05/09 01:51:31 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/05/09 11:57:01 hubertf Exp $
 share/a2ps/README
 share/a2ps/ps/base.ps
 share/a2ps/ps/bw.pro
@@ -177,6 +177,7 @@ etc/a2ps.cfg
 bin/ogonkify
 bin/a2ps
 bin/composite
+bin/texi2dvi4a2ps
 include/liba2ps.h
 @unexec %D/bin/install-info --delete %D/info/a2ps.info %D/info/dir
 @unexec %D/bin/install-info --delete %D/info/ogonkify.info %D/info/dir
