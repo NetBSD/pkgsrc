@@ -1,0 +1,11 @@
+--- mklib.freebsd.orig	Wed Jan  8 05:24:57 1997
++++ mklib.freebsd	Sun Jun 22 07:32:42 1997
+@@ -6,7 +6,7 @@
+ # First argument is name of output library
+ # Rest of arguments are object files
+ 
+-VERSION="2.2"
++VERSION="13.2"
+ 
+ LIBRARY=$1
+ shift 1
