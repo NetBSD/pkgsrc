@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/03/05 23:24:06 jlam Exp $
+
+SHA1 (httpd-2_0_28-beta.tar.gz) = b71fbba49868ff3eff617ba7bb841d487a30a19b
+Size (httpd-2_0_28-beta.tar.gz) = 3644979 bytes
+SHA1 (patch-aa) = cd6d76791c934b4e160d31b37eb1eca1968c16b2
+SHA1 (patch-ac) = ef3e92cf357b9be7a521f42028dc0c48d095e258
+SHA1 (patch-ad) = adc737014e565a99ac2b9477a6f73091ac56569a
+SHA1 (patch-ae) = ca009f4b6654f5de765128ed437efffacc372183
+SHA1 (patch-af) = 758d300711afd0b4a312332b65ec2d213f28bc83
+SHA1 (patch-ag) = 44c7dfcd5e2a32872b7896b0b02568880d0e5ed2
+SHA1 (patch-ah) = 26a891fa9350a01f77d14a2dc0aa05cccbdee537
+SHA1 (patch-ai) = d5f60af54338408648c20ae46dc7731b16e7ce6d
