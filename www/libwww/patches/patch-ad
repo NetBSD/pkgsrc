@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.4 2002/10/26 18:11:20 bouyer Exp $
+$NetBSD: patch-ad,v 1.5 2003/04/03 18:05:34 jschauma Exp $
 
---- Library/src/Makefile.am.orig	Tue Jun 20 13:01:34 2000
-+++ Library/src/Makefile.am	Mon Oct 21 22:33:59 2002
-@@ -251,7 +251,7 @@
+--- Library/src/Makefile.am.orig	Wed May 29 12:09:13 2002
++++ Library/src/Makefile.am	Thu Apr  3 12:53:38 2003
+@@ -1,6 +1,6 @@
+ ## Process this file with Automake to create Makefile.in.
+ 
+-LDFLAGS = -version-info "1:0:1"
++LDFLAGS = @LDFLAGS@ -version-info "1:0:1"
+ 
+ lib_LTLIBRARIES = \
+ 	libwwwutils.la \
+@@ -253,7 +253,7 @@
  	HTPEP.c
  
  libwwwhttp_la_DEPENDENCIES = \
@@ -11,7 +19,7 @@ $NetBSD: patch-ad,v 1.4 2002/10/26 18:11:20 bouyer Exp $
  
  libwwwnews_la_SOURCES = \
  	WWWNews.h \
-@@ -379,9 +379,8 @@
+@@ -387,9 +387,8 @@
  libwwwsql_la_LDFLAGS = -rpath $(libdir)
  
  INCLUDES = \
