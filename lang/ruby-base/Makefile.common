@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2001/06/30 15:04:25 taca Exp $
+# $NetBSD: Makefile.common,v 1.3 2001/12/30 16:21:51 taca Exp $
 # FreeBSD: ports/Mk/bsd.ruby.mk,v 1.11 2000/11/16 17:59:40 knu Exp
 # Makefile.common: ruby common makefile, based on FreeBSD's bsd.ruby.mk.
 
@@ -64,20 +64,20 @@ RUBY_VER?=		1.6
 
 RUBY?=			${LOCALBASE}/bin/${RUBY_NAME}
 
-RUBY_ARCH?=		${MACHINE_ARCH}-${LOWER_OPSYS}
-RUBY_NAME?=		ruby${RUBY_SUFFIX}
-
 .if ${RUBY_VER} < 1.5
 RUBY_VERSION?=		1.4.6
 RUBY_SUFFIX?=		${_RUBY_SUFFIX}
 RUBY_IRB_VERSION=	0.6.1
 .elif ${RUBY_VER} < 1.7
-RUBY_VERSION?=		1.6.4
+RUBY_VERSION?=		1.6.6
 RUBY_SUFFIX?=		# empty
 .else
 RUBY_VERSION?=		1.7			# current, not tested.
 RUBY_SUFFIX?=		${_RUBY_SUFFIX}
 .endif
+
+RUBY_ARCH?=		${MACHINE_GNU_PLATFORM:S/--/-/}
+RUBY_NAME?=		ruby${RUBY_SUFFIX}
 
 RUBY_DISTNAME?=		ruby-${RUBY_VERSION}
 RUBY_WRKSRC?=		${WRKDIR}/${RUBY_DISTNAME}
@@ -97,6 +97,9 @@ RUBY_SITELIBDIR?=	${LOCALBASE}/lib/ruby/site_ruby/${RUBY_VER}
 RUBY_SITEARCHLIBDIR?=	${RUBY_SITELIBDIR}/${RUBY_ARCH}
 RUBY_DOCDIR?=		${LOCALBASE}/share/doc/${RUBY_NAME}
 RUBY_EXAMPLESDIR?=	${LOCALBASE}/share/examples/${RUBY_NAME}
+
+# MAKE_ENV
+MAKE_ENV+=		RUBY_VER=${RUBY_VER}
 
 # PLIST
 PLIST_RUBY_DIRS=	RUBY_LIBDIR="${RUBY_LIBDIR}" \
@@ -121,18 +124,22 @@ RUBY_DISTINFO?=		${.CURDIR}/../../lang/ruby${RUBY_SUFFIX}-base/distinfo
 
 # fix shebang lines
 .if defined(REPLACE_RUBY) && !empty(REPLACE_RUBY)
-USE_RUBY=		yes
-
-post-patch: replace-ruby
+pre-configure: replace-ruby
 
 replace-ruby:
-	@for f in ${REPLACE_RUBY}; do \
-		case $$f in \
-		/*)	;; \
-		*)	f=${WRKSRC}/$$f;; \
+	@for file in ${REPLACE_RUBY}; do \
+		case $${file} in \
+		/*)	f=$${file};; \
+		*)	f=${WRKSRC}/$${file};; \
 		esac; \
-		${ECHO_MSG} "===>  Fixing the #! line of $$f"; \
-		${RUBY} -i -pe '$$. == 1 and sub /^#!\s*\S*(\benv\s+)?\bruby/, "#!${RUBY}"' $$f; \
+		${ECHO_MSG} "===>  Fixing the #! line of $${file}"; \
+		${SED}	-e 's| *[a-z0-9_/\.-][a-z0-9_/\.-]*/env *||g' \
+			-e 's| *[a-z0-9_/\.-]*ruby|${RUBY}|' $$f > $$f.tmp; \
+		if ${CMP} -s $$f $$f.tmp; then \
+			${RM} $$f.tmp; \
+		else \
+			${MV} $$f.tmp $$f; \
+		fi; \
 	done
 .endif
 
@@ -145,14 +152,36 @@ CONFIGURE_ARGS+=	--with-opt-dir="${LOCALBASE}"
 
 do-configure:	ruby-extconf-configure
 
-ruby-extconf-configure:
 .if defined(RUBY_EXTCONF_SUBDIRS)
+ruby-extconf-configure:
 .for d in ${RUBY_EXTCONF_SUBDIRS}
 	@${ECHO_MSG} "===>  Running ${RUBY_EXTCONF} in ${d} to configure"
 	@cd ${WRKSRC}/${d}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}
 .endfor
+
+.if !target(do-build)
+do-build:	ruby-extconf-build
+
+ruby-extconf-build:
+.for d in ${RUBY_EXTCONF_SUBDIRS}
+	@${ECHO_MSG} "===>  Building ${d}"
+	@cd ${WRKSRC}/${d}; ${SETENV} ${MAKE} ${ALL_TARGET}
+.endfor
+.endif
+
+.if !target(do-install)
+do-install:	ruby-extconf-install
+
+ruby-extconf-install:
+.for d in ${RUBY_EXTCONF_SUBDIRS}
+	@${ECHO_MSG} "===>  Installing ${d}"
+	@cd ${WRKSRC}/${d}; ${SETENV} ${MAKE} ${INSTALL_TARGET}
+.endfor
+.endif
+
 .else
+ruby-extconf-configure:
 	@${ECHO_MSG} "===>  Running ${RUBY_EXTCONF} to configure"
 	@cd ${WRKSRC}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}
@@ -161,7 +190,6 @@ ruby-extconf-configure:
 
 # setup.rb
 .if defined(USE_RUBY_SETUP)
-USE_RUBY_AMSTD=		yes
 USE_RUBY?=		yes
 RUBY_SETUP?=		setup.rb
 

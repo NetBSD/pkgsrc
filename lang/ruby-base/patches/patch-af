@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/06/30 08:07:10 taca Exp $
+$NetBSD: patch-af,v 1.2 2001/12/30 16:21:52 taca Exp $
 
---- lib/mkmf.rb.orig	Mon May 21 13:19:49 2001
+--- lib/mkmf.rb.orig	Fri Dec 21 18:19:47 2001
 +++ lib/mkmf.rb
-@@ -160,7 +160,7 @@
+@@ -158,7 +158,7 @@
    for f in path
      d = '/' + File::dirname(f)
      d = '' if d == '/.' 

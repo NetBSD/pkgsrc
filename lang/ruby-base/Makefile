@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/30 14:11:26 taca Exp $
+# $NetBSD: Makefile,v 1.3 2001/12/30 16:21:51 taca Exp $
 # FreeBSD Id: ports/lang/ruby/Makefile,v 1.39 2000/10/20 19:56:03 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -23,13 +23,21 @@ WRKSRC=		${RUBY_WRKSRC}
 CONFIGURE_ARGS=	--enable-shared
 MLINKS=		ruby${_RUBY_SUFFIX}.1 ruby.1
 
-DOCS=		README README.EXT README.EXT.jp README.jp ToDo \
-		doc/NEWS doc/forwardable.rd doc/forwardable.rd.jp \
-		doc/shell.rd doc/shell.rd.jp
-DOCS_ETC=	etc.txt etc.txt.jp
-DOCS_PTY=	README README.expect README.expect.jp README.jp
+DOCS=		README README.EXT README.EXT.ja README.ja ToDo \
+		doc/NEWS doc/forwardable.rd doc/forwardable.rd.ja \
+		doc/shell.rd doc/shell.rd.ja
+DOCS_ETC=	etc.txt etc.txt.ja
+DOCS_PTY=	README README.expect README.expect.ja README.ja
 
-.include "../../lang/ruby-base/Makefile.common"
+REPLACE_RUBY=	ext/curses/hello.rb ext/curses/rain.rb ext/curses/view.rb \
+		lib/matrix.rb sample/biorhythm.rb sample/cal.rb \
+		sample/exyacc.rb sample/from.rb sample/fullpath.rb \
+		sample/goodfriday.rb sample/irb.rb sample/less.rb \
+		sample/mine.rb sample/mpart.rb sample/observ.rb \
+		sample/pi.rb sample/rcs.rb sample/rename.rb sample/test.rb \
+		sample/time.rb sample/trojan.rb sample/uumerge.rb
+
+.include "Makefile.common"
 
 .if !empty(RUBY_SUFFIX)
 CONFIGURE_ARGS+= --program-suffix="${RUBY_SUFFIX}"
@@ -41,7 +49,11 @@ CONFIGURE_ARGS+= --enable-ipv6
 
 pre-configure:
 	${RM} -f ${WRKSRC}/ext/gdbm/MANIFEST
-	${RM} -f ${WRKSRC}/ext/md5/MANIFEST
+	${RM} -f ${WRKSRC}/ext/digest/MANIFEST
+	${RM} -f ${WRKSRC}/ext/digest/md5/MANIFEST
+	${RM} -f ${WRKSRC}/ext/digest/rmd160/MANIFEST
+	${RM} -f ${WRKSRC}/ext/digest/sha1/MANIFEST
+	${RM} -f ${WRKSRC}/ext/digest/sha2/MANIFEST
 	${RM} -f ${WRKSRC}/ext/readline/MANIFEST
 	${RM} -f ${WRKSRC}/ext/tcltklib/MANIFEST
 	${RM} -f ${WRKSRC}/ext/tk/MANIFEST
@@ -51,8 +63,7 @@ pre-build:
 	@${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} -f {} \;
 
 post-build:
-	${SED} -e 's|#!/usr/bin/env ruby|#!${RUBY}|' \
-		${WRKSRC}/sample/irb.rb > ${WRKDIR}/irb.rb
+	${MV} -f ${WRKSRC}/sample/irb.rb ${WRKDIR}/irb.rb
 
 post-install:
 	strip ${RUBY}
@@ -66,7 +77,6 @@ post-install:
 	${LN} -fs ruby${_RUBY_SUFFIX}.1 ${PREFIX}/man/man1/ruby.1
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/irb.rb ${PREFIX}/bin/irb
-	${RM} -f ${WRKSRC}/sample/irb.rb
 	${INSTALL_DATA} ${WRKSRC}/sample/* ${RUBY_EXAMPLESDIR}
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/curses
 	${INSTALL_DATA} ${RUBY_WRKSRC}/ext/curses/hello.rb \
