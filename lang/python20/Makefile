@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:15:02 tv Exp $
+# $NetBSD: Makefile,v 1.22 2004/10/31 13:23:03 recht Exp $
 #
 
 DISTNAME=	Python-2.0.1
@@ -24,6 +24,8 @@ USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--without-threads
 INSTALL_TARGET=	altinstall
+# ensure that the bsddb185 module is built on all platforms
+USE_DB185=	yes
 
 # Make sure having environment variable OPT doesn't affect the
 # installed module-building Makefile
@@ -77,4 +79,5 @@ post-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
