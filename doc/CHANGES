@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11 2002/09/20 11:06:29 jlam Exp $
+$NetBSD: CHANGES,v 1.12 2002/09/20 11:18:03 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2913,3 +2913,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added giblib-1.2.2 [rh 2002-09-20]
 	Updated feh to 1.2.1 [rh 2002-09-20]
 	Added kyim-1.0 [jlam 2002-09-20]
+	Removed kyahoo [jlam 2002-09-20]
