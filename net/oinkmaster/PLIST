@@ -1,8 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/20 09:36:09 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/29 13:53:31 adrianp Exp $
 bin/oinkmaster
+share/doc/oinkmaster/FAQ
 share/doc/oinkmaster/INSTALL
 share/doc/oinkmaster/LICENSE
 share/doc/oinkmaster/README
+share/doc/oinkmaster/README.templates
+share/doc/oinkmaster/UPGRADING
 share/examples/oinkmaster/oinkmaster.conf
+share/examples/oinkmaster/template-examples.conf
+man/man1/oinkmaster.1
 @dirrm share/examples/oinkmaster
 @dirrm share/doc/oinkmaster
