@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.buildlink3.mk,v 1.3 2004/11/25 22:18:34 jlam Exp $
+# $NetBSD: dlopen.buildlink3.mk,v 1.4 2004/11/26 01:40:42 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles and
 # buildlink3.mk files for the packages that use dlopen().
@@ -23,7 +23,7 @@ _DLOPEN_REQUIRE_PTHREAD_PLATFORMS=					\
 
 _DLOPEN_REQUIRE_PTHREADS?=	no
 .for _pattern_ in ${_DLOPEN_REQUIRE_PTHREAD_PLATFORMS}
-.  if !empty(MACHINE_PLATFORM:${_pattern_})
+.  if !empty(MACHINE_PLATFORM:M${_pattern_})
 .    if !empty(PREFER_NATIVE_PTHREADS:M[yY][eE][sS])
 _DLOPEN_REQUIRE_PTHREADS=	yes
 .    endif
