@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/09/27 13:56:33 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/29 00:08:51 jlam Exp $
 
 .if !defined(GCC_BUILDLINK2_MK)
 GCC_BUILDLINK2_MK=	# defined
@@ -22,13 +22,17 @@ BUILDLINK_DEPMETHOD.gcc?=	build
 .endif
 
 BUILDLINK_PREFIX.gcc=	${LOCALBASE}
+
 .if ${OPSYS} == "SunOS"
-_GCC_PREFIX=		${BUILDLINK_PREFIX.gcc}
 _GCC_SUBPREFIX=		# empty
 .else
-_GCC_PREFIX=		${BUILDLINK_PREFIX.gcc}/gcc-2.95.3
 _GCC_SUBPREFIX=		gcc-2.95.3/
 .endif
+_GCC_PREFIX=		${BUILDLINK_PREFIX.gcc}/${_GCC_SUBPREFIX}
+_GCC_ARCHSUBDIR=	lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3
+_GCC_ARCHDIR=		${_GCC_PREFIX}${_GCC_ARCHSUBDIR}
+
+BUILDLINK_LDFLAGS.gcc=	-Wl,-R${_GCC_ARCHDIR}
 
 .if defined(USE_PKGSRC_GCC)
 _NEED_PKGSRC_GCC=	YES
@@ -45,7 +49,7 @@ _GCC_PKG=		gcc-${_GCC_VERSION}
 _NEED_PKGSRC_GCC!= \
 	if ${PKG_ADMIN} pmatch '${BUILDLINK_DEPENDS.gcc}' ${_GCC_PKG}; then \
 		gccpath=`${TYPE} gcc | ${AWK} '{ print $$NF }'`;	\
-		if [ "$$gccpath" = "${_GCC_PREFIX}/bin/gcc" ]; then \
+		if [ "$$gccpath" = "${_GCC_PREFIX}bin/gcc" ]; then \
 			${ECHO} "YES";					\
 		else							\
 			${ECHO} "NO";					\
@@ -57,18 +61,17 @@ _NEED_PKGSRC_GCC!= \
 
 .if ${_NEED_PKGSRC_GCC} == "YES"
 BUILDLINK_PACKAGES+=	gcc
-PATH:=		${_GCC_PREFIX}/bin:${PATH}
-CC=		${_GCC_PREFIX}/bin/gcc
-CPP=		${_GCC_PREFIX}/bin/cpp
-CXX=		${_GCC_PREFIX}/bin/g++
-F77=		${_GCC_PREFIX}/bin/g77
+PATH:=		${_GCC_PREFIX}bin:${PATH}
+CC=		${_GCC_PREFIX}bin/gcc
+CPP=		${_GCC_PREFIX}bin/cpp
+CXX=		${_GCC_PREFIX}bin/g++
+F77=		${_GCC_PREFIX}bin/g77
 PKG_FC=		${F77}
 
-BUILDLINK_LDFLAGS.gcc=	-Wl,-R${_GCC_PREFIX}/lib
 LDFLAGS+=		${BUILDLINK_LDFLAGS.gcc}
+BUILDLINK_WRAPPER_ENV+=	\
+	COMPILER_PATH="${BUILDLINK_DIR}/bin"; export COMPILER_PATH
 .endif	# _NEED_PKGSRC_GCC == YES
-
-_GCC_ARCHSUBDIR=	lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3
 
 # These file are from gcc>=2.95.3.
 BUILDLINK_FILES.gcc=	${_GCC_SUBPREFIX}include/g++-3/*
