@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/08 18:22:14 salo Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/05 11:11:32 salo Exp $
 #
 
 .include "../../multimedia/mkvtoolnix/Makefile.dist"
-
 PKGNAME=        ${DISTNAME:S/mkvtoolnix/mmg/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
