@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 1998/09/06 23:47:31 garbled Exp $
+--- data/C128/Makefile.in.orig	Sun Sep  6 11:56:23 1998
++++ data/C128/Makefile.in	Sun Sep  6 11:56:37 1998
+@@ -94,7 +94,7 @@
+ VERSION = @VERSION@
+ YACC = @YACC@
+ 
+-c128dir = $(prefix)/lib/vice/C128
++c128dir = $(prefix)/share/vice/C128
+ 
+ c128_DATA = \
+ 	basic \
