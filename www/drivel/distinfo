@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/06/28 00:25:21 kristerw Exp $
+$NetBSD: distinfo,v 1.4 2004/07/02 20:35:46 jmmv Exp $
 
-SHA1 (drivel-1.0.1.tar.bz2) = 87c79a7023ee8ce9034c279980e9936300cd78a3
-Size (drivel-1.0.1.tar.bz2) = 341964 bytes
-SHA1 (patch-aa) = cc77a91ef7056b216ef32b84a02768b1f5a1af86
+SHA1 (drivel-1.0.2.tar.bz2) = a733d6106795ffb13a70938f9648d423835114b5
+Size (drivel-1.0.2.tar.bz2) = 390550 bytes
