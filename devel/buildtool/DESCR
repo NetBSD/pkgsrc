@@ -6,6 +6,6 @@ it also makes developer's work easier because all Makefile complexity
 is hidden and behavior is homogenized. These are probably its main
 features, but Buildtool can do much more!
 
-Buildtool is completly free, licensed under the terms of the BSD
-license. It can be thought as the BSD replacement of GNU automake,
-autoconf and libtool.
+Buildtool is completely free, licensed under the terms of the BSD
+license. It can be thought of as the BSD replacement of GNU automake,
+autoconf, and libtool.
