@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2002/09/13 05:43:26 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/09/13 20:14:18 jlam Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 GS_VERS=	7.05
@@ -11,7 +11,7 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.cs.wisc.edu/~ghost/index.html
 
 CONFLICTS+=	ghostscript{,-nox11}-[0-9]*
-CONFLICTS+=	ghostscript-gnu{,-nox11}-[0-9]*
+CONFLICTS+=	ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
 DEPENDS+=	ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
 
