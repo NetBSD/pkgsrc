@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/02/14 13:00:25 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/14 17:24:18 wiz Exp $
 #
 
-DISTNAME=	tmda-0.46
+DISTNAME=	tmda-0.48
 CATEGORIES=	mail python
-MASTER_SITES=	http://software.libertine.org/tmda/releases/
+MASTER_SITES=	http://software.libertine.org/tmda/releases/ \
+		http://software.libertine.org/tmda/releases/old/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	schmonz+netbsd@schmonz.com
@@ -24,12 +25,20 @@ PLIST_SUBST+=	HTMLDIR="${HTMLDIR}"
 
 TMDA_PROGRAMS=	bin/tmda-address
 TMDA_PROGRAMS+=	bin/tmda-check-address
-TMDA_PROGRAMS+=	bin/tmda-clean
 TMDA_PROGRAMS+=	bin/tmda-filter
 TMDA_PROGRAMS+=	bin/tmda-inject
 TMDA_PROGRAMS+=	bin/tmda-keygen
+TMDA_PROGRAMS+=	bin/tmda-pending
 TMDA_PROGRAMS+=	bin/tmda-rfilter
 TMDA_PROGRAMS+=	bin/tmda-sendmail
+
+TMDA_DOCS=	COPYING
+TMDA_DOCS+=	CRYPTO
+TMDA_DOCS+=	ChangeLog
+TMDA_DOCS+=	INSTALL
+TMDA_DOCS+=	README
+TMDA_DOCS+=	THANKS
+TMDA_DOCS+=	UPGRADE
 
 do-build:
 	cd ${WRKSRC}; ${PYTHONBIN} ./compileall
@@ -46,7 +55,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/templates/*.txt ${PREFIX}/${SHAREDIR}
 
 	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
-	for file in ChangeLog COPYRIGHT CRYPTO INSTALL README THANKS UPGRADE; do \
+	for file in ${TMDA_DOCS}; do \
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${PREFIX}/${DOCDIR}; \
 	done
 
