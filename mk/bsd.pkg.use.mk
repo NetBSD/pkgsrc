@@ -1,9 +1,7 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.7 2005/01/13 20:20:35 tv Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.8 2005/02/11 15:27:57 tv Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
-
-PREPEND_PATH+=		${LOCALBASE}/bin
 
 ############################################################################
 # ${PREFIX} selection
@@ -11,7 +9,6 @@ PREPEND_PATH+=		${LOCALBASE}/bin
 
 .if defined(USE_IMAKE)
 INSTALL_TARGET+=	${NO_INSTALL_MANPAGES:D:Uinstall.man}
-PREPEND_PATH+=		${X11BASE}/bin
 USE_X11BASE?=		implied
 PLIST_SUBST+=		IMAKE_MAN_SOURCE_PATH=${IMAKE_MAN_SOURCE_PATH}
 PLIST_SUBST+=		IMAKE_MAN_DIR=${IMAKE_MAN_DIR}

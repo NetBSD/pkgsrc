@@ -1,4 +1,4 @@
-# $NetBSD: obsolete.mk,v 1.2 2004/11/17 23:28:12 jlam Exp $
+# $NetBSD: obsolete.mk,v 1.2.2.1 2005/02/11 15:27:57 tv Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -53,9 +53,6 @@ PKG_DEFAULT_OPTIONS+=	ldap
 .endif
 .if defined(USE_OSS)
 PKG_DEFAULT_OPTIONS+=	oss
-.endif
-.if defined(USE_PAM)
-PKG_DEFAULT_OPTIONS+=	PAM
 .endif
 .if defined(USE_RSAREF2) && !empty(USE_RSAREF2:M[yY][eE][sS])
 PKG_DEFAULT_OPTIONS+=	rsaref
