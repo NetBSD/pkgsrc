@@ -1,0 +1,14 @@
+$NetBSD: patch-bb,v 1.1 2002/09/07 17:40:51 mjl Exp $
+
+--- lib/font.c.orig	Sun Sep  1 02:46:29 2002
++++ lib/font.c	Sun Sep  1 02:47:22 2002
+@@ -467,7 +467,8 @@
+ 
+ char *last_resort_fonts[] = {
+   "-adobe-courier-medium-r-normal-*-%d-*-*-*-*-*-*-*",
+-#ifndef G_OS_WIN32
++  "-*-courier-medium-r-normal-*-%d-*-*-*-*-*-*-*",
++#ifdef G_OS_WIN32
+   "system" /* Must be last. This is guaranteed to exist on a MS-Windows 
+               system. */
+ #else
