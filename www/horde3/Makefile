@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/03/04 22:35:22 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/25 13:12:08 adrianp Exp $
 
 DISTNAME=	horde-3.0.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.horde.org/pub/horde/tarballs/
 
@@ -58,7 +59,6 @@ SUPPORT_FILES_PERMS+=	${HORDEDIR}/config/registry.php.dist \
 SUPPORT_FILES_PERMS+=	${HORDEDIR}/config/hooks.php.dist \
 			${HORDEDIR}/config/hooks.php \
 			${APACHE_USER} ${ROOT_GROUP} 0000
-SPECIAL_PERMS+=		${HORDEDIR}/config ${APACHE_USER} ${ROOT_GROUP} 0750
 
 SUBST_CLASSES=		files
 SUBST_STAGE.files=	post-build
@@ -102,5 +102,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.php ${HORDEDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${HORDEDIR}
 	${CHMOD} -R a-w ${HORDEDIR}
+	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${HORDEDIR}/config
+	${CHMOD} 0750 ${HORDEDIR}/config
 
 .include "../../mk/bsd.pkg.mk"
