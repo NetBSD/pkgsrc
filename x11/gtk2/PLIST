@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2004/07/10 09:36:22 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.30 2004/08/30 19:20:02 jmmv Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -289,22 +289,22 @@ lib/libgdk-x11-2.0.a
 lib/libgdk-x11-2.0.la
 lib/libgdk-x11-2.0.so
 lib/libgdk-x11-2.0.so.400
-lib/libgdk-x11-2.0.so.400.4
+lib/libgdk-x11-2.0.so.400.9
 lib/libgdk_pixbuf-2.0.a
 lib/libgdk_pixbuf-2.0.la
 lib/libgdk_pixbuf-2.0.so
 lib/libgdk_pixbuf-2.0.so.400
-lib/libgdk_pixbuf-2.0.so.400.4
+lib/libgdk_pixbuf-2.0.so.400.9
 lib/libgdk_pixbuf_xlib-2.0.a
 lib/libgdk_pixbuf_xlib-2.0.la
 lib/libgdk_pixbuf_xlib-2.0.so
 lib/libgdk_pixbuf_xlib-2.0.so.400
-lib/libgdk_pixbuf_xlib-2.0.so.400.4
+lib/libgdk_pixbuf_xlib-2.0.so.400.9
 lib/libgtk-x11-2.0.a
 lib/libgtk-x11-2.0.la
 lib/libgtk-x11-2.0.so
 lib/libgtk-x11-2.0.so.400
-lib/libgtk-x11-2.0.so.400.4
+lib/libgtk-x11-2.0.so.400.9
 lib/pkgconfig/gdk-2.0.pc
 lib/pkgconfig/gdk-pixbuf-2.0.pc
 lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
@@ -349,6 +349,7 @@ share/doc/gdk-pixbuf/license.html
 share/doc/gdk-pixbuf/right.png
 share/doc/gdk-pixbuf/rn01.html
 share/doc/gdk-pixbuf/rn02.html
+share/doc/gdk-pixbuf/style.css
 share/doc/gdk-pixbuf/up.png
 share/doc/gdk/GdkDisplay.html
 share/doc/gdk/GdkDisplayManager.html
@@ -450,6 +451,7 @@ share/doc/gdk/sizing.png
 share/doc/gdk/spider.png
 share/doc/gdk/spraycan.png
 share/doc/gdk/star.png
+share/doc/gdk/style.css
 share/doc/gdk/target.png
 share/doc/gdk/tcross.png
 share/doc/gdk/top_left_arrow.png
@@ -629,6 +631,7 @@ share/doc/gtk/WindowWidgets.html
 share/doc/gtk/ch01.html
 share/doc/gtk/checklist-gdkeventexpose-region.html
 share/doc/gtk/checklist-modifiers.html
+share/doc/gtk/glossary.html
 share/doc/gtk/gtk-Accelerator-Maps.html
 share/doc/gtk/gtk-Bindings.html
 share/doc/gtk/gtk-Clipboards.html
@@ -757,6 +760,7 @@ share/doc/gtk/stock_zoom_1_24.png
 share/doc/gtk/stock_zoom_fit_24.png
 share/doc/gtk/stock_zoom_in_24.png
 share/doc/gtk/stock_zoom_out_24.png
+share/doc/gtk/style.css
 share/doc/gtk/ui-manager.html
 share/doc/gtk/up.png
 share/gtk-2.0/demo/alphatest.png
@@ -807,6 +811,8 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/br/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/br/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/gtk20-properties.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gtk20-properties.mo
@@ -879,6 +885,8 @@ ${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gtk20-properties.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gtk20-properties.mo
