@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/26 02:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/20 19:29:45 minskim Exp $
 #
 
 DISTNAME=		gtk-send-pr-0.3
@@ -10,10 +10,10 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.energyhq.es.eu.org/gtk-send-pr.html
 COMMENT=		GTK+ based problem report tool
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../mail/libesmtp/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../mail/libesmtp/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
