@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2907 2003/07/28 10:12:47 jmmv Exp $
+$NetBSD: CHANGES,v 1.2908 2003/07/28 11:17:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3036,3 +3036,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated smpeg to 0.4.4nb4 [jmmv 2003-07-28]
 	Updated graphviz to 1.10 [seb 2003-07-28]
 	Updated libiconv to 1.9.1nb1 [jmmv 2003-07-28]
+	Updated gtk-gnutella to 0.92 [adam 2003-07-28]
