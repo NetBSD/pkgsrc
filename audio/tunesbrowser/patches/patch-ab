@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.4 2005/03/20 15:21:04 jmmv Exp $
+
+--- audioplayer.c.orig	2004-12-20 09:03:55.000000000 +0100
++++ audioplayer.c
+@@ -148,11 +148,11 @@ static void cb_eos(__UNUSED__ GstElement
+ 
+ static void cb_error (__UNUSED__ GstElement *gstelement,
+                       __UNUSED__ GstElement *arg1,
+-                      __UNUSED__ gpointer arg2,
+-                      gchar *arg3,
++                      GError *err,
++                      gchar *dbg_msg,
+                       __UNUSED__ gpointer user_data)
+ {
+-    fprintf(stderr, "an error occured:\n%s\n\n", arg3);
++    fprintf(stderr, "an error occured:\n%s (%s)\n\n", err->message, dbg_msg);
+ }
+ 
+ static void cb_iterate(GstBin *bin, __UNUSED__ gpointer data)
+@@ -176,6 +176,7 @@ static void audioplayer_destroy_pipeline
+     /* remove the source and decoder from the pipeline */
+     gst_bin_remove_many (GST_BIN (pipeline_thread), srcelem, decoder, NULL);
+ 
++    gst_element_set_state(pipeline_thread, GST_STATE_NULL);
+     gst_object_unref(GST_OBJECT(pipeline_thread));
+ }
+ 
+@@ -203,7 +204,7 @@ static void audioplayer_setup_pipeline(e
+     }
+     if (!srcelem) goto gst_element_err;
+ 
+-#if (GST_VERSION_MINOR < 8)
++#if (1)
+     /* older versions of gstreamer seem to crash when I use the
+      * spider plugin
+      */

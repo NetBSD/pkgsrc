@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/20 11:09:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/20 15:21:04 jmmv Exp $
 #
 
 DISTNAME=		tunesbrowser-0.2.0
@@ -15,11 +15,15 @@ USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/tunesbrowser
+
 BUILDLINK_DEPENDS.libopendaap+=	libopendaap>=0.3.0
 
 .include "../../audio/gst-plugins-mad/buildlink3.mk"
 # XXX Enable this dependency after the package is created (couldn't be done at
 # XXX the moment because we were preparing the pkgsrc-2005Q1 branch).
+# XXX When that happens, do not depend gst-plugins-mad, and adjust patch-ab to
+# XXX not disable spider use.
 #.include "../../audio/gst-plugins-spider/buildlink3.mk"
 .include "../../audio/libopendaap/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
