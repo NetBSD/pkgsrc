@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/07/31 04:14:08 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/01/05 01:12:54 wiz Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -16,10 +16,11 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/pspp/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
-DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 
 GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
+USE_LIBINTL=	yes
 CPPFLAGS+=	-Dunix=1
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 MAKE_ENV+=	pkgsysconfdir="${PREFIX}/etc/pspp"
