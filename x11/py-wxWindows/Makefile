@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2004/07/22 09:16:00 recht Exp $
+# $NetBSD: Makefile,v 1.31 2004/08/27 15:03:27 drochner Exp $
 #
 
 DISTNAME=	wxPythonSrc-2.4.2.4
 PKGNAME=	${PYPKGPREFIX}-wxWindows-2.4.2.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 
@@ -27,14 +27,13 @@ WXARG=	WXPORT=gtk2
 .endif
 
 PYDISTUTILSPKG=	yes
-# no GL to limit dependencies
-# OGL doesn't build with egcs-1.1.2
 # no scripts to avoid conflicts
-PYSETUPBUILDARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1 ${WXARG}
-PYSETUPINSTALLARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1 ${WXARG}
+PYSETUPBUILDARGS=	NO_SCRIPTS=1 ${WXARG}
+PYSETUPINSTALLARGS=	NO_SCRIPTS=1 ${WXARG}
 PYBINMODULE=	yes
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
