@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4460 2004/01/14 08:55:08 rh Exp $
+$NetBSD: CHANGES,v 1.4461 2004/01/14 09:22:52 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -215,3 +215,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmms-nebulus to 0.6.0 [xtraeme 2004-01-14]
 	Updated evolution to 1.4.5nb1 [xtraeme 2004-01-14]
 	Updated createbuildlink to 3.0 [rh 2004-01-14]
+	Updated racoon to 20040114a [itojun 2004-01-14]
