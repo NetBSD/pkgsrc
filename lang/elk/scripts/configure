@@ -1,4 +1,21 @@
 #!/bin/sh
 
-cp ${WRKSRC}/config/untested/386pc-freebsd2.1-cc ${WRKSRC}/config/system
-cp ${WRKSRC}/config/sites/386pc-freebsd2.1 ${WRKSRC}/config/site
+mach=`uname -m`
+
+case $mach in
+i386|sparc|m68k)
+	exetype=aout
+	;;
+pmax|alpha)
+	exetype=elf
+	;;
+*)
+	echo "Unrecognised machine type: $mach"
+	exit 1
+	;;
+esac
+
+ln -sf ${WRKSRC}/config/untested/$exetype-netbsd-cc ${WRKSRC}/config/system
+ln -sf ${WRKSRC}/config/sites/$exetype-netbsd ${WRKSRC}/config/site
+
+exit 0
