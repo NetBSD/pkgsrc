@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1312 2004/01/20 01:06:25 xtraeme Exp $
+$NetBSD: TODO,v 1.1313 2004/01/20 01:09:03 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -274,7 +274,7 @@ Suggested package updates
 	o pgplot-5.2 [grant]
 	o plib-1.7.0
 	o ploticus-2.20
-	o postgresql-7.4.1
+	o postgresql-7.4.1 [pkgsrc-wip]
 	o psi-0.9.1
 	o py-curl-7.10.8
 	o py-dns-1.2.0
