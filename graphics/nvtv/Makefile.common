@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.2 2003/10/05 09:45:51 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/04/26 10:19:53 cube Exp $
 
-DISTNAME=	nvtv-0.4.5
+DISTNAME=	nvtv-0.4.7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nv-tv-out/}
 
@@ -10,7 +10,7 @@ COMMENT=	Tool to manipulate TV-Out settings on NVidia cards
 
 ONLY_FOR_PLATFORM=      *-i386
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 RCD_SCRIPTS=		nvtvd
 USE_PKGINSTALL=		YES
@@ -25,4 +25,4 @@ post-install:
 		${WRKSRC}/doc/overview.txt ${WRKSRC}/doc/timing.txt \
 		${PREFIX}/share/doc/nvtv
 
-.include "../../sysutils/pciutils/buildlink2.mk"
+.include "../../sysutils/pciutils/buildlink3.mk"
