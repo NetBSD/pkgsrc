@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6121 2004/06/04 12:04:45 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6122 2004/06/04 12:06:20 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2778,4 +2778,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.2 [minskim 2004-06-04]
 	Updated ffcall to 1.10 [adam 2004-06-04]
 	Updated xosd to 2.2.7 [xtraeme 2004-06-04]
+	Updated ddd to 3.3.8 [shannonjr 2004-06-04]
 	Updated xmms-osd to 2.2.7 [xtraeme 2004-06-04]
