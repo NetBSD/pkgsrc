@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2002/01/14 21:15:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/26 18:30:08 hubertf Exp $
 
-DISTNAME=		silc-client-0.7.2
+DISTNAME=		silc-client-0.7.3
 CATEGORIES=		chat
 MASTER_SITES=		http://silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
@@ -28,7 +28,7 @@ PKG_SYSCONFSUBDIR?=	silc
 
 CONFIGURE_ARGS+=	--with-helpdir=${PREFIX}/share/silc/help
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silc
-CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
+CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_DIR}
 
 .if (${MACHINE_ARCH} != "i386")
