@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2878 2005/01/11 11:22:51 adam Exp $
+$NetBSD: TODO,v 1.2879 2005/01/11 12:05:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -652,7 +652,6 @@ Suggested package updates
 	o libksba-0.9.9
 	o liblive-2004.12.29
 	o libmpeg3-1.5.4
-	o libnasl-2.2.2a
 	o libnet-1.1.2.1 [wip/libnet11|adrianp]
 	o libnids-1.19
 	o libopendaap-0.2.3
@@ -731,7 +730,6 @@ Suggested package updates
 	o navi2ch-1.7.5
 	o ncmpc-0.11.0 [pkg/26237]
 	o ncview-1.92e
-	o nessus-2.2.2a
 	o netatalk1-1.6.4
 	o netcdf-3.6.0
 	o netio-123

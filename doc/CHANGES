@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8696 2005/01/11 11:42:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.8697 2005/01/11 12:05:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -235,3 +235,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated abiword-plugins to 2.2.2 [adam 2005-01-11]
 	Updated gentoo to 0.11.54 [adam 2005-01-11]
 	Removed gnome-extras [jmmv 2005-01-11]
+	Updated nessus-libraries to 2.2.2a [adam 2005-01-11]
+	Updated libnasl to 2.2.2a [adam 2005-01-11]
+	Updated nessus-core to 2.2.2a [adam 2005-01-11]
+	Updated nessus-plugins to 2.2.2a [adam 2005-01-11]
+	Updated nessus to 2.2.2a [adam 2005-01-11]
