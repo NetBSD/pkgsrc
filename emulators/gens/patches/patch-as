@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.1 2004/08/15 12:13:53 dillo Exp $
+$NetBSD: patch-as,v 1.2 2004/08/22 11:37:28 kristerw Exp $
 
---- src/gens/util/save.c.orig	2004-05-18 22:33:59.000000000 +0200
-+++ src/gens/util/save.c
-@@ -101,8 +101,8 @@ Change_File_L (char *Dest, char *Dir)
+--- src/gens/util/save.c.orig	Tue May 18 22:33:59 2004
++++ src/gens/util/save.c	Sun Aug 22 13:24:38 2004
+@@ -101,8 +101,8 @@
  
    if (filename)
      {
@@ -12,7 +12,7 @@ $NetBSD: patch-as,v 1.1 2004/08/15 12:13:53 dillo Exp $
        return 1;
      }
    return 0;
-@@ -130,8 +130,37 @@ Change_File_L_CD (char *Dest, char *Dir)
+@@ -130,8 +130,37 @@
  
    if (filename)
      {
@@ -50,3 +50,18 @@ $NetBSD: patch-as,v 1.1 2004/08/15 12:13:53 dillo Exp $
        return 1;
      }
    return 0;
+@@ -268,11 +297,12 @@
+ int
+ Save_State (char *Name)
+ {
+-  if (Name == NULL)
+-    return 0;
+   FILE *f;
+   unsigned char *buf;
+   int len;
++
++  if (Name == NULL)
++    return 0;
+ 
+   buf = State_Buffer;
+   if ((f = fopen (Name, "wb")) == NULL)
