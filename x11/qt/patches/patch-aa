@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.6 1999/10/01 15:09:23 drochner Exp $
 --- configs/netbsd-g++-static.orig	Fri Feb 26 18:02:07 1999
 +++ configs/netbsd-g++-static	Fri Jun  4 14:00:58 1999
 @@ -1,5 +1,6 @@
