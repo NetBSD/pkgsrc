@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2875 2003/07/24 14:28:32 jmmv Exp $
+$NetBSD: CHANGES,v 1.2876 2003/07/24 16:50:20 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2924,3 +2924,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated buildtool to 0.12 [jmmv 2003-07-24]
 	Added buildtool-doc-0.12 [jmmv 2003-07-24]
 	Added xmms-arts-0.4 [jmmv 2003-07-24]
+	Added djbfft-0.76 [jschauma 2003-07-24]
