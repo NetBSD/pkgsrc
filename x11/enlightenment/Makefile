@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 1999/10/28 23:50:58 jlam Exp $
+# $NetBSD: Makefile,v 1.16 1999/11/08 21:17:52 tron Exp $
 
-DISTNAME=		enlightenment-0.16.1
+DISTNAME=		enlightenment-0.16.2
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.enlightenment.org/pub/e/enlightenment/
 
@@ -18,9 +18,9 @@ USE_X11BASE=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-fsstd
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-
 CPPFLAGS+=		-I${LOCALBASE}/include
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+MAKE_ENV+=		USER=${SHAREOWN}:${SHAREGRP}
 
 post-install:
 	for file in `${GREP} "\.directory$$" ${PKGDIR}/PLIST`; do \
