@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:26:13 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:21 wiz Exp $
 
-MD5 (crafty-doc-18.0/crafty.doc.ps) = e31675fdd891a68f81e67ff7a5d66953
+SHA1 (crafty-doc-18.0/crafty.doc.ps) = fac398f8631fb97dce2d51540bba3933c7156d78
+Size (crafty-doc-18.0/crafty.doc.ps) = 141725 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:29:37 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:40 wiz Exp $
 
-MD5 (xkobo-1.11.tar.gz) = b350678e49ad1a319a73d3e23ba5ec06
+SHA1 (xkobo-1.11.tar.gz) = 6ac1c0fe86b7fa524eb86f40b89e86ee6cbe3c5d
+Size (xkobo-1.11.tar.gz) = 71804 bytes
 SHA1 (patch-aa) = 4bec21d419ec0d582d318fe342182d1296a05cff

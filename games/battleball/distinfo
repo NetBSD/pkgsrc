@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:25 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:18 wiz Exp $
 
-MD5 (battleball.21.src.tar.gz) = d0ed7beee19194cea86e738fed2b69c4
+SHA1 (battleball.21.src.tar.gz) = 5bc651d513d378d449c117488ef54af5f3381072
+Size (battleball.21.src.tar.gz) = 102001 bytes
 SHA1 (patch-aa) = 645b753a5be8f1bba80181da92df878546a04fb1
