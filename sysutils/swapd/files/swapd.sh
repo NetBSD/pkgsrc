@@ -1,9 +1,9 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: swapd.sh,v 1.1.1.1 2004/10/30 05:06:15 xtraeme Exp $
+# $NetBSD: swapd.sh,v 1.2 2004/11/05 16:19:58 xtraeme Exp $
 #
 # PROVIDE: swapd
-# REQUIRE: DAEMON LOGIN swap
+# REQUIRE: DAEMON LOGIN
 
 
 name="swapd"
