@@ -1,4 +1,4 @@
-/*	$NetBSD: pack_dev.h,v 1.1 2003/09/05 18:39:00 jlam Exp $	*/
+/*	$NetBSD: pack_dev.h,v 1.2 2004/08/21 04:10:45 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -44,7 +44,7 @@ typedef	__dev32_t	portdev_t;
 #else
 typedef	dev_t		portdev_t;
 #endif
-typedef	portdev_t pack_t(int, u_long []);
+typedef	portdev_t pack_t(int, u_long [], const char **);
 
 pack_t	*pack_find(const char *);
 pack_t	 pack_native;
