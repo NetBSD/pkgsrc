@@ -1,19 +1,19 @@
-$NetBSD: patch-ad,v 1.5 2005/02/22 14:02:31 adam Exp $
+$NetBSD: patch-ad,v 1.6 2005/04/01 10:15:19 adam Exp $
 
---- libcruft/Makefile.in.orig	2004-02-16 19:57:21.000000000 +0000
+--- libcruft/Makefile.in.orig	2005-03-09 15:22:58.000000000 +0000
 +++ libcruft/Makefile.in
-@@ -98,8 +98,8 @@ libraries: $(SUBDIRS)
+@@ -93,8 +93,8 @@ libraries: $(SUBDIRS)
  
  libcruft.$(LIBEXT): $(CRUFT_OBJ)
  	rm -f $@
 -	$(AR) $(ARFLAGS) $@ $^
 -	$(RANLIB) $@
 +	${LIBTOOL} --mode=link ${CC} -o libcruft.$(LIBEXT) $(CRUFT_OBJ:.o=.lo) \
-+		-rpath ${PREFIX}/lib -version-info ${version:2.1.%=2:%}
++		-rpath ${PREFIX}/lib -version-info ${version:2.9.%=2:%}
  
  libcruft.$(SHLEXT_VER): libcruft.$(SHLEXT)
  	rm -f $@
-@@ -124,9 +124,8 @@ install::
+@@ -119,9 +119,8 @@ install::
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(octlibdir)
  	if $(STATIC_LIBS); then \
  	  rm -f $(DESTDIR)$(octlibdir)/libcruft.$(LIBEXT) ; \
