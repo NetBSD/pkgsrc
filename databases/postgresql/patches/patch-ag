@@ -1,19 +1,25 @@
-$NetBSD: patch-ag,v 1.3 1999/07/11 20:00:43 bad Exp $
+$NetBSD: patch-ag,v 1.4 1999/09/19 04:24:54 jlam Exp $
 
---- include/port/bsd.h.orig	Sun Jul 19 03:19:53 1998
-+++ include/port/bsd.h	Sun Jul 11 21:49:27 1999
-@@ -24,6 +24,14 @@
- #define HAS_TEST_AND_SET
- #endif
+--- ./bin/psql/Makefile.in.orig	Sun Jan 17 01:19:19 1999
++++ ./bin/psql/Makefile.in	Sat Sep 18 03:18:28 1999
+@@ -30,17 +30,13 @@
  
-+#if defined(__arm32__)
-+#define HAS_TEST_AND_SET
-+#endif
-+
-+#if defined(__powerpc__)
-+#define HAS_TEST_AND_SET
-+#endif
-+
- #if defined(__mips__)
- /* #	undef HAS_TEST_AND_SET */
- #endif
+ OBJS= psql.o stringutils.o @STRDUP@ @STRERROR2@
+ 
+-all: submake psql
++all: psql
+ 
+-psql: $(OBJS) $(LIBPQDIR)/libpq.a
+-	$(CC) -o psql -L$(LIBPQDIR) $(OBJS) -lpq $(LDFLAGS)
++psql: $(OBJS)
++	$(CC) -o psql $(OBJS) $(LIBPQ) $(LDFLAGS)
+ 
+ ../../utils/strdup.o:
+ 	$(MAKE) -C ../../utils strdup.o
+-
+-.PHONY: submake
+-submake:
+-	$(MAKE) -C $(LIBPQDIR) libpq.a
+ 
+ install: psql
+ 	$(INSTALL) $(INSTL_EXE_OPTS) psql$(X) $(BINDIR)/psql$(X)

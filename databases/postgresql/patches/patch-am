@@ -1,0 +1,56 @@
+$NetBSD: patch-am,v 1.1 1999/09/19 04:24:55 jlam Exp $
+
+--- ./pl/plpgsql/src/Makefile.in.orig	Wed Jun 30 19:57:31 1999
++++ ./pl/plpgsql/src/Makefile.in	Sat Sep 18 03:10:58 1999
+@@ -27,7 +27,7 @@
+ 
+ OBJS=	pl_parse.o pl_handler.o pl_comp.o pl_exec.o pl_funcs.o
+ 
+-SHLIB_LINK+= -L$(LIBPQDIR) -lpq
++SHLIB_LINK+= -L$(LIBPQ)
+ 
+ # If crypt is a separate library, rather than part of libc, it may need
+ # to be referenced separately to keep (broken) linkers happy.  (This is
+@@ -44,12 +44,20 @@
+ # installed, however, so we ignore the install-shlib rule and do this
+ # instead:
+ 
++ifneq ($(LIBTOOL),)
++install: install-lib post-install-lib
++
++post-install-lib:
++	rm -f $(LIBDIR)/lib$(NAME).a
++	$(LN_S) -f $(LIBDIR)/lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION) $(LIBDIR)/plpgsql$(DLSUFFIX)
++else
+ install: $(shlib)
+ ifneq ($(shlib),)
+ 	$(INSTALL) $(INSTL_SHLIB_OPTS) $(shlib) $(LIBDIR)/plpgsql$(DLSUFFIX)
+ else
+ 	@echo "plpgsql not installed due to lack of shared library support."
+ endif
++endif
+ 
+ 
+ pl_handler.o:	pl_handler.c plpgsql.h pl.tab.h
+@@ -60,8 +68,10 @@
+ 
+ pl_funcs.o:	pl_funcs.c plpgsql.h pl.tab.h
+ 
+-pl_parse.o:	pl_gram.c pl_scan.c plpgsql.h
+-	$(CC) $(CFLAGS) -c -o $@ pl_gram.c
++pl_parse.o:	pl_parse.c plpgsql.h pl.tab.h
++
++pl_parse.c:	pl_gram.c pl_scan.c plpgsql.h
++	$(LN_S) -f pl_gram.c pl_parse.c
+ 
+ pl_gram.c pl.tab.h:	gram.y
+ 	$(YACC) $(YFLAGS) $<
+@@ -79,7 +89,7 @@
+ 
+ clean: clean-shlib
+ 	rm -f lib$(NAME).a
+-	rm -f *.o pl.tab.h pl_gram.c pl_scan.c
++	rm -f *.o pl.tab.h pl_parse.c pl_gram.c pl_scan.c
+ # And the garbage that might have been left behind by partial build:
+ 	rm -f y.tab.c y.tab.h lex.yy.c
+ ifeq ($(PORTNAME), win)
