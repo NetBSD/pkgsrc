@@ -1,0 +1,372 @@
+$NetBSD: patch-ap,v 1.1 2004/09/13 09:05:25 agc Exp $
+
+--- speech_tools/siod/slib_file.cc	2004/08/12 10:31:50	1.1
++++ speech_tools/siod/slib_file.cc	2004/08/12 10:33:42
+@@ -13,11 +13,16 @@
+ #include "siodp.h"
+ #include "EST_Pathname.h"
+ 
+-static void siod_string_print(LISP exp, ostrstream &sd);
++#include <sstream>
++#include <strstream>
++
++using namespace std;
++
++static int siod_string_print(LISP, char *, int, int);
+ 
+ LISP open_files = NIL;
+ 
+-void pprintf(FILE *fd,LISP exp,int indent,int width, int depth,int length)
++void pprintf(FILE *fd,LISP expression,int indent,int width, int depth,int length)
+ {
+     // A pretty printer for expressions
+     // indent is the number of spaces to indent by
+@@ -27,13 +32,13 @@
+     int i,ll;
+     LISP l;
+ 
+-    if (exp == NIL)
++    if (expression == NIL)
+ 	fprintf(fd,"nil");
+-    else if (!consp(exp))
+-	fprintf(fd,"%s",(const char *)siod_sprint(exp));
++    else if (!consp(expression))
++	fprintf(fd,"%s",(const char *)siod_sprint(expression));
+     else 
+     {
+-	EST_String p = siod_sprint(exp);
++	EST_String p = siod_sprint(expression);
+ 	if (p.length() < width-indent)
+ 	    fprintf(fd,"%s",(const char *)p);
+ 	else
+@@ -44,8 +49,8 @@
+ 		fprintf(fd,"...");
+ 	    else
+ 	    {
+-		pprintf(fd,car(exp),indent,width,depth-1,length);
+-		for (ll=length,l=cdr(exp); l != NIL; l=cdr(l),ll--)
++		pprintf(fd,car(expression),indent,width,depth-1,length);
++		for (ll=length,l=cdr(expression); l != NIL; l=cdr(l),ll--)
+ 		{
+ 		    fprintf(fd,"\n");
+ 		    for (i=0; i<indent; i++)
+@@ -70,32 +75,32 @@
+     }    
+ }
+ 
+-void pprint_to_fd(FILE *fd,LISP exp)
++void pprint_to_fd(FILE *fd,LISP expression)
+ {
+-    pprintf(fd,exp,0,72,-1,-1);
++    pprintf(fd,expression,0,72,-1,-1);
+     fprintf(fd,"\n");
+ }
+ 
+-static LISP siod_pprintf(LISP exp, LISP file)
++static LISP siod_pprintf(LISP expression, LISP file)
+ {
+     //  Pretty printer
+ 
+     if ((file == NIL) ||
+ 	(equal(file,rintern("t"))))
+-	pprint(exp);
++	pprint(expression);
+     else
+     {
+-	pprintf(get_c_file(file,stdout),exp,0,72,-1,-1);	
++	pprintf(get_c_file(file,stdout),expression,0,72,-1,-1);	
+ 	fprintf(get_c_file(file,stdout),"\n");
+     }
+     return NIL;
+ }
+ 
+-void pprint(LISP exp)
++void pprint(LISP expression)
+ {
+     // Pretty print this expression to stdout
+ 
+-    pprint_to_fd(stdout,exp);
++    pprint_to_fd(stdout,expression);
+ }
+ 
+ static LISP fflush_l(LISP p)
+@@ -109,55 +114,67 @@
+     return NIL;
+ }
+ 
+-static void siod_string_print(LISP exp, ostrstream &sd)
++static int
++siod_string_print(LISP expression, char *buf, int size, int off)
+ {
+     LISP tmp;
++    int oldoff;
+     int i;
+ 
+-    switch TYPE(exp)
++    oldoff = off;
++    switch TYPE(expression)
+     {
+       case tc_nil:
+-	sd << "nil";
++	(void) strlcpy(&buf[off], "nil", size - off);
++	off += 3;
+ 	break;
+       case tc_cons:
+-	sd << "(";
+-	siod_string_print(car(exp),sd);
+-	for(tmp=cdr(exp);CONSP(tmp);tmp=cdr(tmp))
++	(void) strlcpy(&buf[off], "(", size - off);
++	off += 1;
++	off += siod_string_print(car(expression), buf, size - 1, off);
++	for(tmp=cdr(expression);CONSP(tmp);tmp=cdr(tmp))
+ 	{
+-	    sd << " ";
+-	    siod_string_print(car(tmp),sd);
++	    (void) strlcpy(&buf[off], "(", size - off);
++	    off += 1;
++	    off += siod_string_print(car(tmp), buf, size - 1, off);
+ 	}
+ 	if NNULLP(tmp) 
+ 	{
+-	    sd << " . ";
+-	    siod_string_print(tmp,sd);
++	    (void) strlcpy(&buf[off], " . ", size - off);
++	    off += 3;
++	    off += siod_string_print(tmp, buf, size - off, off);
+ 	}
+-	sd << ")";
++	(void) strlcpy(&buf[off], ")", size - off);
++	off += 1;
+ 	break;
+       case tc_flonum:
+-	if (FLONMPNAME(exp) == NULL)
++	if (FLONMPNAME(expression) == NULL)
+ 	{
+- 	    sprintf(tkbuffer,"%.14g",FLONM(exp)); /// MWM Tue Aug  3 12:09:08 PDT 1999
+-	    FLONMPNAME(exp) = (char *)must_malloc(strlen(tkbuffer)+1);
+-	    sprintf(FLONMPNAME(exp),"%s",tkbuffer);
++ 	    sprintf(tkbuffer,"%.14g",FLONM(expression)); /// MWM Tue Aug  3 12:09:08 PDT 1999
++	    FLONMPNAME(expression) = (char *)must_malloc(strlen(tkbuffer)+1);
++	    sprintf(FLONMPNAME(expression),"%s",tkbuffer);
+ 	}
+-	sprintf(tkbuffer,"%s",FLONMPNAME(exp));
+-	sd << tkbuffer;
++	sprintf(tkbuffer,"%s",FLONMPNAME(expression));
++	(void) strlcpy(&buf[off], tkbuffer, size - off);
+ 	break;
+       case tc_string:
+-	sd << "\"";
+-	for (i=0; exp->storage_as.string.data[i] != '\0'; i++)
++	(void) strlcpy(&buf[off], "\"", size - off);
++	off += 1;
++	for (i=0; expression->storage_as.string.data[i] != '\0'; i++)
+ 	{
+-	    if (exp->storage_as.string.data[i] == '"')
+-		sd << '\\';
+-	    if (exp->storage_as.string.data[i] == '\\')
+-		sd << '\\';
+-	    sd << exp->storage_as.string.data[i];
++	    if (expression->storage_as.string.data[i] == '"' ||
++	        expression->storage_as.string.data[i] == '\\') {
++		(void) strlcpy(&buf[off], "\\", size - off);
++		off += 1;
++	    }
++	    (void) snprintf(&buf[off], size - off, "%c", expression->storage_as.string.data[i]);
++	    off += 1;
+ 	}
+-	sd << "\"";
++	(void) strlcpy(&buf[off], "\"", size - off);
++	off += 1;
+ 	break;
+       case tc_symbol:
+-	sd << PNAME(exp);
++        off += snprintf(&buf[off], size - off, "%s", PNAME(expression));
+ 	break;
+       case tc_subr_0:
+       case tc_subr_1:
+@@ -167,57 +184,50 @@
+       case tc_lsubr:
+       case tc_fsubr:
+       case tc_msubr:
+-	sprintf(tkbuffer,"#<SUBR(%d) ",TYPE(exp));
+-	sd << tkbuffer;
+-	sd << (*exp).storage_as.subr.name;
+-	sd << ">";
++	off += snprintf(&buf[off], size - off, "#<SUBR(%d) %s>", TYPE(expression), (*expression).storage_as.subr.name);
+ 	break;
+       case tc_c_file:
+-	sprintf(tkbuffer,"#<FILE %p ",exp->storage_as.c_file.f);
+-	sd << tkbuffer;
+-	if (exp->storage_as.c_file.name)
+-	    sd << exp->storage_as.c_file.name;
+-	sd << ">";
++	off += snprintf(&buf[off], size - off, "#<FILE %p ", expression->storage_as.c_file.f);
++	if (expression->storage_as.c_file.name)
++	    off += snprintf(&buf[off], size - off, "%s", expression->storage_as.c_file.name);
++	(void) strlcpy(&buf[off], ">", size - off);
++	off += 1;
+         break;
+       case tc_closure:
+-	sd << "#<CLOSURE ";
+-	siod_string_print(car((*exp).storage_as.closure.code),sd);
+-	sd << " ";
+-	siod_string_print(cdr((*exp).storage_as.closure.code),sd);
+-	sd << ">";
++	off += snprintf(&buf[off], size - off, "#<CLOSURE ");
++	off += siod_string_print(car((*expression).storage_as.closure.code), buf, size - off, off);
++	(void) strlcpy(&buf[off], " ", size - off);
++	off += 1;
++	off += siod_string_print(cdr((*expression).storage_as.closure.code), buf, size - off, off);
++	(void) strlcpy(&buf[off], ">", size - off);
++	off += 1;
+ 	break;
+       default:
+ 	struct user_type_hooks *p;
+-	p = get_user_type_hooks(TYPE(exp));
++	p = get_user_type_hooks(TYPE(expression));
+ 	if (p->print_string)
+-	  (*p->print_string)(exp, tkbuffer);
+-	else
+-	{
++	  (*p->print_string)(expression, tkbuffer);
++	else {
+ 	    if (p->name)
+-		sprintf(tkbuffer,"#<%s %p>",p->name,exp);
++		sprintf(tkbuffer,"#<%s %p>",p->name,expression);
+ 	    else
+-		sprintf(tkbuffer,"#<UNKNOWN %d %p>",TYPE(exp),exp);
++		sprintf(tkbuffer,"#<UNKNOWN %d %p>",TYPE(expression),expression);
+ 	}
+-	sd << tkbuffer;
++	off += snprintf(&buf[off], size - off, "%s", tkbuffer);
+     }
+-    return;
++    return off - oldoff;
+ }
+ 
+ 
+-EST_String siod_sprint(LISP exp)
++EST_String siod_sprint(LISP expression)
+ {
+-    ostrstream sd;
+     EST_String r;
++    char buf[32767];
++    int	cc;
+ 
+-    siod_string_print(exp,sd);
+-
+-    sd << '\0';
+-    r = sd.str();
+-
+-#ifdef __GNUC__
+-    // need to do this otherwise sd doesn't free its internal buffer
+-    sd.freeze(0);
+-#endif
++    cc = siod_string_print(expression, buf, sizeof(buf), 0);
++    buf[cc] = 0x0;
++    r = buf;
+ 
+     return r;
+ }
+@@ -474,35 +484,35 @@
+  no_interrupt(flag);
+  return(NIL);}
+ 
+-LISP lprin1f(LISP exp,FILE *f)
++LISP lprin1f(LISP expression,FILE *f)
+ {LISP tmp;
+  struct user_type_hooks *p;
+- STACK_CHECK(&exp);
++ STACK_CHECK(&expression);
+  INTERRUPT_CHECK();
+- switch TYPE(exp)
++ switch TYPE(expression)
+    {case tc_nil:
+       fput_st(f,"nil");
+       break;
+    case tc_cons:
+       fput_st(f,"(");
+-      lprin1f(car(exp),f);
+-      for(tmp=cdr(exp);CONSP(tmp);tmp=cdr(tmp))
++      lprin1f(car(expression),f);
++      for(tmp=cdr(expression);CONSP(tmp);tmp=cdr(tmp))
+ 	{fput_st(f," ");lprin1f(car(tmp),f);}
+       if NNULLP(tmp) {fput_st(f," . ");lprin1f(tmp,f);}
+       fput_st(f,")");
+       break;
+     case tc_flonum:
+-      if (FLONMPNAME(exp) == NULL)
++      if (FLONMPNAME(expression) == NULL)
+       {
+-	  sprintf(tkbuffer,"%g",FLONM(exp));
+-	  FLONMPNAME(exp) = (char *)must_malloc(strlen(tkbuffer)+1);
+-	  sprintf(FLONMPNAME(exp),"%s",tkbuffer);
++	  sprintf(tkbuffer,"%g",FLONM(expression));
++	  FLONMPNAME(expression) = (char *)must_malloc(strlen(tkbuffer)+1);
++	  sprintf(FLONMPNAME(expression),"%s",tkbuffer);
+       }
+-      sprintf(tkbuffer,"%s",FLONMPNAME(exp));
++      sprintf(tkbuffer,"%s",FLONMPNAME(expression));
+       fput_st(f,tkbuffer);
+       break;
+     case tc_symbol:
+-      fput_st(f,PNAME(exp));
++      fput_st(f,PNAME(expression));
+       break;
+     case tc_subr_0:
+     case tc_subr_1:
+@@ -512,33 +522,33 @@
+     case tc_lsubr:
+     case tc_fsubr:
+     case tc_msubr:
+-      sprintf(tkbuffer,"#<SUBR(%d) ",TYPE(exp));
++      sprintf(tkbuffer,"#<SUBR(%d) ",TYPE(expression));
+       fput_st(f,tkbuffer);
+-      fput_st(f,(*exp).storage_as.subr.name);
++      fput_st(f,(*expression).storage_as.subr.name);
+       fput_st(f,">");
+       break;
+     case tc_closure:
+       fput_st(f,"#<CLOSURE ");
+-      lprin1f(car((*exp).storage_as.closure.code),f);
++      lprin1f(car((*expression).storage_as.closure.code),f);
+       fput_st(f," ");
+-      lprin1f(cdr((*exp).storage_as.closure.code),f);
++      lprin1f(cdr((*expression).storage_as.closure.code),f);
+       fput_st(f,">");
+       break;
+     default:
+-      p = get_user_type_hooks(TYPE(exp));
++      p = get_user_type_hooks(TYPE(expression));
+       if (p->prin1)
+-	(*p->prin1)(exp,f);
++	(*p->prin1)(expression,f);
+       else 
+       {
+ 	  if (p->name) 
+-	      sprintf(tkbuffer,"#<%s %p>",p->name,USERVAL(exp));
++	      sprintf(tkbuffer,"#<%s %p>",p->name,USERVAL(expression));
+ 	  else
+-	      sprintf(tkbuffer,"#<UNKNOWN %d %p>",TYPE(exp),exp);
++	      sprintf(tkbuffer,"#<UNKNOWN %d %p>",TYPE(expression),expression);
+ 	  fput_st(f,tkbuffer);}}
+  return(NIL);}
+ 
+-static LISP lprintfp(LISP exp,LISP file)
+-{lprin1f(exp,get_c_file(file,stdout));
++static LISP lprintfp(LISP expression,LISP file)
++{lprin1f(expression,get_c_file(file,stdout));
+  return(NIL);}
+ 
+ static LISP terpri(LISP file)
+@@ -551,8 +561,8 @@
+ LISP load(LISP fname,LISP cflag)
+ {return(vload(get_c_string(fname),NULLP(cflag) ? 0 : 1));}
+ 
+-LISP lprint(LISP exp)
+-{lprin1f(exp,stdout);
++LISP lprint(LISP expression)
++{lprin1f(expression,stdout);
+  put_st("\n");
+  return(NIL);}
+ 
