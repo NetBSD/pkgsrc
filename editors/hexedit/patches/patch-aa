@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 1998/08/24 11:58:05 frueauf Exp $
+
+--- Makefile.orig	Fri Aug  7 17:09:38 1998
++++ Makefile	Mon Aug 24 13:01:04 1998
+@@ -2,7 +2,7 @@
+ VERSION = 0.9.4
+ 
+ # Define BASENAME if your libc doesn't have it
+-#BASENAME=-DBASENAME
++BASENAME=-DBASENAME
+ 
+ CC=gcc
+ TARSOURCE = $(PROJECT)-$(VERSION).src.tgz
+@@ -11,8 +11,8 @@
+ HTMLFILES = $(PROJECT).html
+ TMPFILES = $(DYNAMICBIN) $(TARSOURCE) $(HTMLFILES)
+ 
+-CFLAGS = -Wall -O2 $(BASENAME)
+-LOADLIBES = -lcurses #-lccmalloc -ldl
++CFLAGS = -Wall -O2 $(BASENAME) -I${PREFIX}/include -L${PREFIX}/lib -lncurses
++LOADLIBES = -lncurses #-lccmalloc -ldl
+ 
+ .PHONY: clean tgz docs
+ 
