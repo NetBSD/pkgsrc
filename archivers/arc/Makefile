@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/03/11 18:03:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/10 23:51:36 minskim Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:09 fenner Exp
 #
 
@@ -15,9 +15,13 @@ RESTRICTED=	"Do not modify. Do not charge for redistribution"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 WRKSRC=		${WRKDIR}
 
 USE_BUILDLINK3=	yes
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/arc ${PREFIX}/bin/
