@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/08/27 20:34:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/03/08 21:49:32 tron Exp $
 lib/xemacs/xemacs-packages/etc/enriched.doc
 lib/xemacs/xemacs-packages/etc/mule-doc/ChangeLog.Mule
 lib/xemacs/xemacs-packages/etc/mule-doc/ChangeLog.Mule-Wnn6
@@ -25,9 +25,7 @@ lib/xemacs/xemacs-packages/etc/mule/FAQ-Mule.ja
 lib/xemacs/xemacs-packages/etc/mule/FAQ-Mule.kr
 lib/xemacs/xemacs-packages/etc/mule/FAQ-Mule.th
 lib/xemacs/xemacs-packages/etc/mule/Makefile.in
-lib/xemacs/xemacs-packages/etc/mule/TUTORIAL.ja
 lib/xemacs/xemacs-packages/etc/mule/TUTORIAL.kr
-lib/xemacs/xemacs-packages/etc/mule/TUTORIAL.th
 lib/xemacs/xemacs-packages/etc/mule/VERSIONS
 lib/xemacs/xemacs-packages/etc/mule/coco.1
 lib/xemacs/xemacs-packages/etc/mule/demo.ps
@@ -949,8 +947,6 @@ lib/xemacs/xemacs-packages/lisp/xemacs-devel/pretty-print.el
 lib/xemacs/xemacs-packages/lisp/xemacs-devel/pretty-print.elc
 lib/xemacs/xemacs-packages/lisp/xemacs-devel/profile.el
 lib/xemacs/xemacs-packages/lisp/xemacs-devel/profile.elc
-lib/xemacs/xemacs-packages/lisp/xemacs-devel/regexp-opt.el
-lib/xemacs/xemacs-packages/lisp/xemacs-devel/regexp-opt.elc
 lib/xemacs/xemacs-packages/lisp/xemacs-devel/reposition.el
 lib/xemacs/xemacs-packages/lisp/xemacs-devel/reposition.elc
 lib/xemacs/xemacs-packages/lisp/xemacs-devel/trace.el
