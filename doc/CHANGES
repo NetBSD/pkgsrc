@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6541 2004/07/13 12:46:55 cjep Exp $
+$NetBSD: CHANGES,v 1.6542 2004/07/13 13:45:45 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3375,3 +3375,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xdkcal-0.9d [jmmv 2004-07-13]
 	Updated ifp-line to 0.2.4.3 [sekiya 2004-07-13]
 	Updated bsdiff to 4.2 [cjep 2004-07-13]
+	Updated lsof to 4.72 [atatat 2004-07-13]
