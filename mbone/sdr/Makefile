@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:33 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/22 14:22:45 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/10/15 20:35:20 fenner Exp 
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://cs.ucl.ac.uk/mice/sdr/
 
 MAINTAINER=	is@netbsd.org
 
-LIB_DEPENDS=	tk80.1:${PORTSDIR}/x11/tk80
+DEPENDS+=	tk-8.0p2:../../x11/tk80
 
 RESTRICTED=	"Contains DES encryption"
 MIRROR_DISTFILE=	no

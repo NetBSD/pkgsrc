@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/20 11:56:36 frueauf Exp $
+# $NetBSD: Makefile,v 1.11 1998/04/22 14:22:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.28 1997/12/08 15:51:20 tg Exp
 #
 
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		packages@netbsd.org
 
-LIB_DEPENDS=		tk80.1.:${PORTSDIR}/x11/tk80
+DEPENDS+=		tk-8.0p2:../../x11/tk80
 RUN_DEPENDS=		rman:${PORTSDIR}/textproc/rman \
 			glimpse:${PORTSDIR}/textproc/glimpse
 

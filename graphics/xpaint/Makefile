@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:24 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/22 14:22:44 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
 #
 
@@ -8,10 +8,10 @@ MASTER_SITES=	http://www.danbbs.dk/~torsten/xpaint/
 
 MAINTAINER=	packages@netbsd.org
 
-LIB_DEPENDS=    jpeg.7.:${PORTSDIR}/graphics/jpeg \
-		tiff.3.:${PORTSDIR}/graphics/tiff \
-		Xpm.4.:${PORTSDIR}/graphics/xpm   \
-		png.0.:${PORTSDIR}/graphics/png
+DEPENDS+=	xpm-3.4j:../../graphics/xpm
+DEPENDS+=	tiff-3.4:../../graphics/tiff
+DEPENDS+=	jpeg-6a:../../graphics/jpeg
+DEPENDS+=	png-0.96:../../graphics/png
 
 WRKSRC=		${WRKDIR}/xpaint
 USE_IMAKE=      yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/04/21 00:46:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/04/22 14:22:43 agc Exp $
 #
 
 DISTNAME=       xart19980415
@@ -9,10 +9,10 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 
-LIB_DEPENDS=    jpeg.7.:${PORTSDIR}/graphics/jpeg \
-                tiff.3.:${PORTSDIR}/graphics/tiff \
-                Xpm.4.:${PORTSDIR}/graphics/xpm   \
-                png.0.:${PORTSDIR}/graphics/png
+DEPENDS+=	jpeg-6a:../../graphics/jpeg
+DEPENDS+=	tiff-3.4:../../graphics/tiff
+DEPENDS+=	xpm-3.4j:../../graphics/xpm
+DEPENDS+=	png-0.96:../../graphics/png
 
 WRKSRC=		${WRKDIR}/19980415
 USE_IMAKE=      yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:32 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/22 14:22:45 agc Exp $
 #
 # NetBSD "imm" package
 # The original was based on the imm-3.5a1 FreeBSD port maintained
@@ -13,7 +13,7 @@ DISTFILES=	imm36a1.tar.Z
 
 MAINTAINER=	is@netbsd.org
 
-LIB_DEPENDS=	tk80.1:${PORTSDIR}/x11/tk80
+DEPENDS+=	tk-8.0p2:../../x11/tk80
 
 ALL_TARGET=	netbsd
 MAKE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}"

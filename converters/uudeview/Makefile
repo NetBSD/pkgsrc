@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:21 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/22 14:22:40 agc Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/02/18 22:19:58 hoek Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.uni-frankfurt.de/~fp/uudeview/Apps/frank/  \
 
 MAINTAINER=	packages@netbsd.org
 
-LIB_DEPENDS=	uu.1.:${PORTSDIR}/converters/uulib
+DEPENDS+=	uulib-0.5.13:../../converters/uulib
 
 GNU_CONFIGURE=	Yes
 CONFIGURE_ARGS=	--enable-inews=inews --disable-tcl

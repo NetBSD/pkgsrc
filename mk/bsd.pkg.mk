@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.72 1998/04/22 11:05:03 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.73 1998/04/22 14:22:46 agc Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -196,9 +196,10 @@ NetBSD_MAINTAINER=	agc@netbsd.org
 #				  No special backslashes are needed to escape regular
 #				  expression metacharacters in NetBSD, and the old backslash
 #				  escapes are recognised for backwards compatibility.
-# DEPENDS		- A list of other ports this package depends on being
-#				  made first.  Use this for things that don't fall into
-#				  the above two categories.
+# DEPENDS - A list of prerequisite packages. The format of this
+#				  entry is "pkgname:dir". If the package is not
+#				  installed, then it will be built and installed from the
+#				  source package in "dir".
 # EXTRACT_CMD	- Command for extracting archive (default: tar).
 # EXTRACT_SUFX	- Suffix for archive names (default: .tar.gz).
 # EXTRACT_BEFORE_ARGS -
@@ -1219,8 +1220,8 @@ do-build:
 do-install:
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} ${MAKEFILE} ${INSTALL_TARGET})
 	@for f in ${INFO_FILES}; do		\
-		${ECHO} "${LOCALBASE}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f";	\
-		${LOCALBASE}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f;		\
+		${ECHO} "install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f.info";	\
+		install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f.info;			\
 	done
 .endif
 
@@ -1553,7 +1554,7 @@ fetch-list:
 fetch-list-recursive:
 	@${MAKE} fetch-list-one-pkg
 .if ${RECURSIVE_FETCH_LIST} != "NO"
-	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${LIB_DEPENDS}  ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u` `${ECHO} ${DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/:.*//' | sort -u`; do \
+	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${LIB_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u` ; do \
 		(cd $$dir; ${MAKE} fetch-list-recursive; ); \
 	done
 .endif # ${RECURSIVE_FETCH_LIST} != "NO"
@@ -1679,7 +1680,7 @@ package-path:
 
 .if !target(package-depends)
 package-depends:
-	@for dir in `${ECHO} ${LIB_DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u` `${ECHO} ${DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/:.*//' | sort -u`; do \
+	@for dir in `${ECHO} ${LIB_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
 		if [ -d $$dir ]; then \
 			(cd $$dir ; ${MAKE} package-name package-depends PACKAGE_NAME_AS_LINK=${PACKAGE_NAME_AS_LINK}); \
 		else \
@@ -1812,22 +1813,22 @@ lib-depends:
 misc-depends:
 .if defined(DEPENDS)
 .if !defined(NO_DEPENDS)
-	@for dir in ${DEPENDS}; do \
-		if expr "$$dir" : '.*:' > /dev/null; then \
-			target=`${ECHO} $$dir | ${SED} -e 's/.*://'`; \
-			dir=`${ECHO} $$dir | ${SED} -e 's/:.*//'`; \
-		else \
-			target=${DEPENDS_TARGET}; \
-		fi; \
-		${ECHO_MSG} "===>  ${PKGNAME} depends on: $$dir"; \
-		${ECHO_MSG} "===>  Verifying $$target for $$dir"; \
-		if [ ! -d $$dir ]; then \
-			${ECHO_MSG} ">> No directory for $$dir.  Skipping.."; \
-		else \
-			(cd $$dir; ${MAKE} ${.MAKEFLAGS} $$target) ; \
-		fi \
+	@for dir in ${DEPENDS}; do					\
+		package=`${ECHO} $$dir | ${SED} -e 's/:.*//'`;		\
+		dir=`${ECHO} $$dir | ${SED} -e 's/.*://'`;		\
+		if `pkg_info -e $$package`; then			\
+			${ECHO_MSG} "===>  ${PKGNAME} depends on: installed package $$package";	\
+		else							\
+			${ECHO_MSG} "===>  ${PKGNAME} depends on: package $$package";	\
+			target=${DEPENDS_TARGET};			\
+			${ECHO_MSG} "===>  Verifying $$target for $$dir"; \
+			if [ ! -d $$dir ]; then				\
+				${ECHO_MSG} ">> No directory for $$dir.  Skipping.."; \
+			else						\
+				(cd $$dir; ${MAKE} ${.MAKEFLAGS} $$target);	\
+			fi						\
+		fi							\
 	done
-	@${ECHO_MSG} "===>  Returning to build of ${PKGNAME}"
 .endif
 .else
 	@${DO_NADA}
@@ -1838,15 +1839,8 @@ misc-depends:
 .if !target(clean-depends)
 clean-depends:
 .if defined(FETCH_DEPENDS) || defined(BUILD_DEPENDS) || defined(LIB_DEPENDS) \
-	|| defined(RUN_DEPENDS)
-	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${LIB_DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
-		if [ -d $$dir ] ; then \
-			(cd $$dir; ${MAKE} NOCLEANDEPENDS=yes clean clean-depends); \
-		fi \
-	done
-.endif
-.if defined(DEPENDS)
-	@for dir in `${ECHO} ${DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/:.*//' | sort -u`; do \
+	|| defined(DEPENDS) || defined(RUN_DEPENDS)
+	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${LIB_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
 		if [ -d $$dir ] ; then \
 			(cd $$dir; ${MAKE} NOCLEANDEPENDS=yes clean clean-depends); \
 		fi \
@@ -1856,7 +1850,7 @@ clean-depends:
 
 .if !target(depends-list)
 depends-list:
-	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${LIB_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u` `${ECHO} ${DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/:.*//' | sort -u`; do \
+	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${LIB_DEPENDS} ${DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
 		(cd $$dir; ${MAKE} package-name depends-list PACKAGE_NAME_AS_LINK=${PACKAGE_NAME_AS_LINK}; ); \
 	done
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:21 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/22 14:22:40 agc Exp $
 # FreeBSD Id: Makefile,v 1.11 1998/02/24 21:43:45 jseger Exp
 #
 
@@ -10,8 +10,8 @@ MASTER_SITES=	http://www.uni-frankfurt.de/~fp/uudeview/Apps/frank/ \
 
 MAINTAINER=	packages@netbsd.org
 
-LIB_DEPENDS=    tk80.1.:${PORTSDIR}/x11/tk80 \
-		uu.1.:${PORTSDIR}/converters/uulib
+DEPENDS+=	tk-8.0p2:../../x11/tk80
+DEPENDS+=	uulib-0.5.13:../../converters/uulib
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-tcl="${PREFIX}" --enable-tk="${PREFIX}"
