@@ -1,0 +1,4 @@
+# $NetBSD: Setup.in,v 1.1.1.1 1999/10/04 17:36:48 jlam Exp $
+#
+*shared*
+_pg pgmodule.c -I@PGPREFIX@/include -L@PGPREFIX@/lib -lpq -lcrypt -DNO_DIRECT
