@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.29 2003/09/16 13:52:31 grant Exp $
-
---- configure.orig	2003-09-16 16:19:17.000000000 +1000
-+++ configure
-@@ -4583,6 +4583,9 @@ EOF
+--- configure.orig	Tue Sep 23 02:55:43 2003
++++ configure	Tue Sep 23 13:27:33 2003
+@@ -4646,6 +4646,9 @@
  	;;
  esac
  
@@ -12,8 +10,8 @@ $NetBSD: patch-aa,v 1.29 2003/09/16 13:52:31 grant Exp $
  # Allow user to specify flags
  
  # Check whether --with-cflags or --without-cflags was given.
-@@ -6428,6 +6431,10 @@ echo $ECHO_N "checking for libwrap... $E
- #line 6428 "configure"
+@@ -6491,6 +6494,10 @@
+ #line 6491 "configure"
  #include "confdefs.h"
  
 +#ifdef HAVE_SYS_CDEFS_H
@@ -23,7 +21,7 @@ $NetBSD: patch-aa,v 1.29 2003/09/16 13:52:31 grant Exp $
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  
-@@ -16950,7 +16957,7 @@ echo "OpenSSH has been configured with t
+@@ -17138,7 +17145,7 @@
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
