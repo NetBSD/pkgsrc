@@ -1,0 +1,8 @@
+--- frozen-bubble.orig	Wed Jan  1 19:46:44 2003
++++ frozen-bubble	Wed Jan  1 19:56:51 2003
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/bin/env perl
+ #*****************************************************************************
+ #
+ #                          Frozen-Bubble
