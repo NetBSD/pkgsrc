@@ -1,36 +1,33 @@
-# $NetBSD: Makefile,v 1.21 2004/10/28 12:08:06 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2004/10/28 12:27:08 wiz Exp $
 
 DISTNAME=	QwSpriteField1.6
 PKGNAME=	qwspritefield-1.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 graphics
 MASTER_SITES=	ftp://ftp.troll.no/contrib/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Efficiently redrawn sprites in the Qt GUI Toolkit
 
-DEPENDS+=	qt1>=1.44:../../x11/qt1
-
 CONFLICTS=	kdesupport-1.0
 
 WRKSRC=		${WRKDIR}/QwSpriteField
-USE_X11BASE=	yes
+USE_BUILDLINK3=	YES
+USE_X11=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 
 QW_INCLUDES=	Pix.h QwCluster.h QwPublicList.h QwSpriteField.h
 
-EVAL_PREFIX+=	QT1DIR=qt1
-PATH:=		${QT1DIR}/qt1/bin:${PATH}
-
-MAKE_ENV+=	CXX="${CXX}" "QTDIR=${QT1DIR}/qt1"
+MAKE_ENV+=	CXX=${CXX:Q} QTDIR=${QT1DIR:Q}
 
 do-install:
-	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libQwSpriteField.la \
+	@${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libQwSpriteField.la \
 	  ${PREFIX}/lib
 	@QT1DIR=${QT1DIR};		\
 	for FILE in ${QW_INCLUDES}; do					\
-		${INSTALL_DATA} ${WRKSRC}/$$FILE $$QT1DIR/qt1/include;	\
+		${INSTALL_DATA} ${WRKSRC}/$$FILE $$QT1DIR/include;	\
 	done
 
+.include "../../x11/qt1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
