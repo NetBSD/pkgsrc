@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/02/13 19:39:50 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/26 05:26:19 jlam Exp $
 # FreeBSD: ports/mail/distribute/Makefile,v 1.2 1999/08/25 06:50:06 obrien Exp
 #
 
@@ -15,7 +15,7 @@ MAINTAINER=	itojun@itojun.org
 # in japanese
 HOMEPAGE=	http://www.foretune.co.jp/distribute/
 
-USE_PERL=	YES
+USE_PERL5=	YES
 
 WRKSRC=		${WRKDIR}/distribute-pl19
 MAN1=		distribute.1
