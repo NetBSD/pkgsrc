@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2004/10/21 21:27:29 xtraeme Exp $
+$NetBSD: distinfo,v 1.9 2004/11/03 17:00:05 minskim Exp $
 
-SHA1 (sylpheed-0.9.12-gtk2-20040918.tar.gz) = ab9c7ca3c49b86077c257bae4f44943c537516be
-Size (sylpheed-0.9.12-gtk2-20040918.tar.gz) = 3377968 bytes
+SHA1 (sylpheed-0.9.99-gtk2-20041024.tar.gz) = a1cc44f798403c08115c1ce6f37ca37553a7d5c1
+Size (sylpheed-0.9.99-gtk2-20041024.tar.gz) = 3412783 bytes
