@@ -1,37 +1,37 @@
-$NetBSD: patch-aa,v 1.5 2004/01/30 14:36:09 adam Exp $
+$NetBSD: patch-aa,v 1.6 2004/04/13 13:50:05 adam Exp $
 
---- configure.orig	2003-08-10 02:12:55.000000000 +0000
+--- configure.orig	2004-01-04 21:03:31.000000000 +0000
 +++ configure
-@@ -1566,16 +1566,8 @@ pcap_dir=""
- for dir in $PCAP_DIR ; do 
+@@ -3274,16 +3274,8 @@ pcap_dir=""
+ for dir in $PCAP_DIR ; do
      if test -d $dir -a -r "$dir/pcap.h" -a \
-                        -r "$dir/net/bpf.h" ; then 
+                        -r "$dir/net/bpf.h" ; then
 -       if test -n "$pcap_dir" -a "$pcap_dir" != "$dir"; then
--          echo 
+-          echo
 -          echo; echo more than one set found in:
--          echo  $pcap_dir 
+-          echo  $pcap_dir
 -          echo  $dir
 -          echo; echo please wipe out all unused pcap installations
 -          exit
--       else 
+-       else
 -          pcap_dir="$dir"
 -       fi
-+       pcap_dir="$dir"
-+       break
++	pcap_dir="$dir"
++	break
      fi
  done
  
-@@ -1968,7 +1960,12 @@ if eval "test \"`echo '$''{'ac_cv_lib_$a
-   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -3309,7 +3301,12 @@ if test "${ac_cv_lib_pcap_pcap_open_live
+   echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-   ac_save_LIBS="$LIBS"
+   ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lpcap  $LIBS"
 +case `uname -s` in
 +SunOS)
 +	LIBS="-lpcap -lxnet $LIBS" ;;
 +*)
-+	LIBS="-lpcap  $LIBS" ;;
++	LIBS="-lpcap $LIBS" ;;
 +esac
- cat > conftest.$ac_ext <<EOF
- #line 1974 "configure"
- #include "confdefs.h"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
