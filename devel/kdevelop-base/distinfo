@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2002/07/17 11:28:04 skrll Exp $
+$NetBSD: distinfo,v 1.5 2002/10/03 13:32:19 markd Exp $
 
-SHA1 (kdevelop-2.1.2_for_KDE_3.0.tar.bz2) = 8c2dde46607a267281b5bb15c34cf0445a15b097
-Size (kdevelop-2.1.2_for_KDE_3.0.tar.bz2) = 3384306 bytes
+SHA1 (kdevelop-2.1.3_for_KDE_3.0.tar.bz2) = 5188c6404a00c91634878b9b11cb84981c01729f
+Size (kdevelop-2.1.3_for_KDE_3.0.tar.bz2) = 3403196 bytes
 SHA1 (patch-aa) = fb81b39dbfeacec8f6b496ed71d804ae4699ed18
 SHA1 (patch-ab) = 0e209ce83acd60b6b3a004c6398d3aed11e8cdfc
 SHA1 (patch-ac) = 4956d5864f064bd79d8f06cf763af8405b1d55cd
