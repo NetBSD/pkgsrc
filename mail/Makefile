@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.197 2004/03/06 15:09:59 grant Exp $
+# $NetBSD: Makefile,v 1.198 2004/03/16 15:19:55 uebayasi Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -83,7 +83,6 @@ SUBDIR+=	majordomo
 SUBDIR+=	mdfrm
 SUBDIR+=	metamail
 SUBDIR+=	mew
-SUBDIR+=	mew-xemacs
 SUBDIR+=	mew3
 SUBDIR+=	mhonarc
 SUBDIR+=	milter-greylist
