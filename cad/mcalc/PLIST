@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/15 03:10:45 dmcmahill Exp $
+${MCALCBASE}/README
+${MCALCBASE}/copying.html
+${MCALCBASE}/erinfo.html
+${MCALCBASE}/index.html
+${MCALCBASE}/mstrip.gif
+${MCALCBASE}/rghinfo.html
+${MCALCBASE}/rhoinfo.html
+${MCALCBASE}/tmetinfo.html
+${MCALCBASE}/verinfo.html
+@dirrm ${MCALCBASE}
