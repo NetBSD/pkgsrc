@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.11 2003/03/30 20:35:00 jschauma Exp $
+$NetBSD: patch-ac,v 1.12 2004/03/03 13:36:09 adam Exp $
 
---- configure.orig	Sun Mar 30 15:21:38 2003
-+++ configure	Sun Mar 30 15:21:47 2003
-@@ -5031,12 +5031,7 @@
+--- configure.orig	2004-02-01 01:03:42.000000000 +0000
++++ configure
+@@ -5537,12 +5537,7 @@ case ".$MANPAGE_RENAMES" in #(vi
  .no) #(vi
    ;;
  .|.yes)
