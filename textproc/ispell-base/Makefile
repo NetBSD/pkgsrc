@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 22:54:22 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/05 21:46:07 seb Exp $
 #
 
 DISTNAME=	ispell-3.1.20
@@ -19,6 +19,8 @@ CONFLICTS+=	ispell-[0-9]*
 
 MAKE_FLAGS+=	TMPDIR="${WRKDIR}"
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
 INFO_FILES=	ispell.info
 
 .if exists(/usr/include/inttypes.h)
@@ -51,5 +53,4 @@ do-configure:
 	${ECHO} "#define USG" >> local.h;
 .endif
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
