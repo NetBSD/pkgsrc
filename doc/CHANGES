@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1781 2003/03/27 07:25:51 wiz Exp $
+$NetBSD: CHANGES,v 1.1782 2003/03/27 08:44:52 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1323,3 +1323,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated opera6 to 6.12 [jdolecek 2003-03-26]
 	Updated pkglint to 3.47 [atatat 2003-03-26]
 	Updated rxvt to 2.7.10 [wiz 2003-03-27]
+	Updated polsms to 1.9.1h [zuntum 2003-03-27]
