@@ -1,4 +1,5 @@
-GNU hypertext utilities to manipulate info files.
+GNU hypertext utilities to view and manipulate info
+documentation files.
 
 The  GNU  project has a hypertext system called Info which
 allows the same source file to  be  either  printed  as  a
