@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/10/27 21:50:49 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/29 13:24:00 hubertf Exp $
 
-DISTNAME=	opera-4.0-b2-static.i386
-PKGNAME=	opera-4.0b2
+DISTNAME=	opera-4.0-b3-static.i386
+PKGNAME=	opera-4.0b3
 CATEGORIES=	www
 MASTER_SITES=	http://opera.online.no/linux/tgz/
 
@@ -22,12 +22,21 @@ NO_BUILD=	YES
 PLIST_SUBST=	EMULSUBDIR=${EMULSUBDIR}
 
 do-install:
-	${MKDIR} ${PREFIX}/share/doc/opera ${PREFIX}/share/opera/styles
+	${INSTALL_DATA_DIR} \
+		${PREFIX}/share/doc/opera \
+		${PREFIX}/share/opera/buttons \
+		${PREFIX}/share/opera/buttons/default \
+		${PREFIX}/share/opera/buttons/defsmall \
+		${PREFIX}/share/opera/images \
+		${PREFIX}/share/opera/styles
 	cd ${WRKSRC} && \
 	${INSTALL_SCRIPT} opera ${PREFIX}/bin && \
 	${INSTALL_DATA} LICENSE README ${PREFIX}/share/doc/opera && \
 	${INSTALL_DATA} opera.adr ${PREFIX}/share/opera && \
-	${INSTALL_DATA} *.css ${PREFIX}/share/opera/styles
+	${INSTALL_DATA} buttons/default/* ${PREFIX}/share/opera/buttons/default && \
+	${INSTALL_DATA} buttons/defsmall/* ${PREFIX}/share/opera/buttons/defsmall && \
+	${INSTALL_DATA} images/* ${PREFIX}/share/opera/images && \
+	${INSTALL_DATA} styles/* ${PREFIX}/share/opera/styles
 	${LN} -fs ${PREFIX}/share/opera ${EMULDIR}/usr/share
 
 .include "../../mk/bsd.pkg.mk"
