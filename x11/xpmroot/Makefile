@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2000/08/23 23:14:37 tron Exp $
+# $NetBSD: Makefile,v 1.12 2001/01/01 23:42:33 veego Exp $
 #
 
 DISTNAME=       fvwm-${PKG_VERSION}
 PKGNAME=	xpmroot-${PKG_VERSION}
-PKG_VERSION=	2.2.2
+PKG_VERSION=	2.2.4
 CATEGORIES=	x11
 MASTER_SITES=   ftp://ftp.hpc.uh.edu/pub/fvwm/version-2/ \
 		ftp://ftp.ics.es.osaka-u.ac.jp/pub/CFAN/sources/2.0.x/ \

@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 1999/11/01 08:44:25 rh Exp $
+$NetBSD: md5,v 1.5 2001/01/01 23:42:33 veego Exp $
 
-MD5 (fvwm-2.2.2.tar.gz) = 684c5100084c5958ca2cb74780e615d9
+MD5 (fvwm-2.2.4.tar.gz) = 14ec1ca8ba305345078b7ed4c9cfdcfb
