@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2001/02/28 10:40:24 wiz Exp $
+# $NetBSD: Makefile.common,v 1.29 2001/03/05 20:15:59 abs Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -28,6 +28,7 @@ DISTUNAME=	sparc-sun-solaris2.5.1
 DIST_DIR_NAME=	supported/sunos551
 WRKNAME=	sparc-sun-solaris2.5.1
 VENDOR_NAME=	Solaris 2.5.1
+DEPENDS+=	ns-flash:../../graphics/ns-flash
 #
 .elif (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
@@ -55,6 +56,7 @@ DISTUNAME=	x86-unknown-linux2.2
 DIST_DIR_NAME=	supported/linux22
 WRKNAME=	x86-unknown-linux2.2
 VENDOR_NAME=	Linux 2.2
+DEPENDS+=	ns-flash:../../graphics/ns-flash
 #
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
@@ -83,7 +85,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-sparc
 CATEGORIES=	www
-PKGNAME=	${BINNAME}-${NS_VERS}
+NS_NAME=	${BINNAME}-${NS_VERS}
+PKGNAME=	${BINNAME}-${NS_VERS}nb1
 DISTNAME=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${DISTUNAME}
 
 .if (${BINNAME} != "netscape")
@@ -95,7 +98,7 @@ BUILD_DEFS+=	NS_ENCRYPTION
 DIST_SUBDIR=	netscape
 
 WRKSRC=         ${WRKDIR}/${BINNAME}-v${NS_VERS_SHORT}.${WRKNAME}
-MOZILLA_HOME=	${PREFIX}/lib/netscape/${PKGNAME}
+MOZILLA_HOME=	${PREFIX}/lib/netscape/${NS_NAME}
 NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
 
 PLIST_SRC=	${PKGDIR}/PLIST.pre \
@@ -111,7 +114,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${MOZILLA_HOME}/java/classes
 .endfor
 	cd ${MOZILLA_HOME} ; ${GTAR} xpzf ${WRKSRC}/nethelp-v${NS_VERS_SHORT}.nif
-	cd ${MOZILLA_HOME} ; ${GTAR} --exclude '*dynMotif*' -xpzf ${WRKSRC}/netscape-v${NS_VERS_SHORT}.nif
+	cd ${MOZILLA_HOME} ; ${GTAR} --exclude 'libflashplayer.so' \
+		--exclude 'ShockwaveFlash.class' --exclude '*dynMotif*' \
+		-xpzf ${WRKSRC}/netscape-v${NS_VERS_SHORT}.nif
 .if (${BINNAME} == "communicator")
 	cd ${MOZILLA_HOME} ; ${GTAR} xpzf ${WRKSRC}/spellchk-v${NS_VERS_SHORT}.nif
 .endif
@@ -119,18 +124,18 @@ do-install:
 	${SED} -e 's#@@MOZILLA_HOME@@#${MOZILLA_HOME}#g' \
 	       -e 's#@@NS_PLUGINS_DIR@@#${NS_PLUGINS_DIR}#g' \
 	    <${FILESDIR}/${BINNAME}.sh >${WRKDIR}/${BINNAME}.sh
-	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${PKGNAME}
+	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${NS_NAME}
 	${RM} -f ${PREFIX}/bin/${BINNAME}
-	${LN} -sf ${PKGNAME} ${PREFIX}/bin/${BINNAME}
+	${LN} -sf ${NS_NAME} ${PREFIX}/bin/${BINNAME}
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"
 	# Bizarre magic to handle the NIS and DNS versions. Make DNS default.
 	@${SED} -e 's#MOZILLA_HOME/netscape#MOZILLA_HOME/netscape_nis#g' \
 	    <${WRKDIR}/${BINNAME}.sh >${WRKDIR}/${BINNAME}_nis.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}_nis.sh \
-	    ${PREFIX}/bin/${PKGNAME}_nis
+	    ${PREFIX}/bin/${NS_NAME}_nis
 .if (${BINNAME} == "communicator")
-	${LN} -sf ${PKGNAME}_nis ${PREFIX}/bin/netscape_nis
+	${LN} -sf ${NS_NAME}_nis ${PREFIX}/bin/netscape_nis
 .endif
 	${MV} ${MOZILLA_HOME}/netscape ${MOZILLA_HOME}/netscape_nis
 	${MV} ${MOZILLA_HOME}/netscape_dns ${MOZILLA_HOME}/netscape
