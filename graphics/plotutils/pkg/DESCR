@@ -1,0 +1,22 @@
+The GNU plotutils package contains programs for plotting scientific data,
+and a function library for drawing vector graphics and doing vector graphics
+animations.  The package includes:
+* GNU graph, which does two-dimensional plotting in real time. It's designed
+  for command-line use, and can be used in shell scripts. It produces output
+  on an X Window System display, in Illustrator format, in Postscript format,
+  in PCL 5 format, in HP-GL/2 format, in Fig format (editable with the xfig
+  drawing editor), in Tektronix format, or in GNU Metafile format. Output in
+  Postscript format may be edited with the idraw drawing editor.
+* GNU plot, which translates GNU Metafile format to any of the other formats.
+* GNU tek2plot, for translating legacy Tektronix data to any of the above 
+  formats.
+* GNU plotfont, for displaying character maps of the fonts that are available 
+  in the above formats.
+* GNU spline, which does spline interpolation of data. 
+* GNU ode, which numerically integrates a system consisting of one or more
+  ordinary differential equations.
+
+The programs graph, plot, tek2plot, and plotfont are based on GNU libplot, a C
+function library for device-independent two-dimensional vector graphics. GNU 
+libplot is compatible with the traditional Unix libplot library, but is much 
+more powerful. It is installed as part of the package.
