@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2004/10/03 09:20:41 tron Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/03/15 16:07:01 tron Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
 bin/nslookup
 bin/nsupdate
-etc/rc.d/lwresd
-etc/rc.d/named9
 ${IPV6H}include/isc/ipv6.h
 include/bind/arpa/inet.h
 include/bind/arpa/nameser.h
