@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/10/05 04:01:44 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2002/10/19 19:17:13 soren Exp $
 
 DISTNAME=		pchar-1.4
 CATEGORIES=		net
@@ -19,7 +19,6 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--with-ipv6
 .endif
 
-# XXX Not fully integrated
 .if ${OPSYS} == "NetBSD"
 .include "../ucd-snmp/buildlink2.mk"
 
