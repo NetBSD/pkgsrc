@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2004/12/28 11:06:35 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2004/12/29 17:12:13 fredb Exp $
 
 DISTNAME=	nas-1.7.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://radscan.com/nas.html
 COMMENT=	Network Audio System
 
-DEPENDS+=	p5-perl-headers-${OS_VERSION}{,nb1}:../../devel/p5-perl-headers
+DEPENDS+=	p5-perl-headers-${OS_VERSION}{,nb*}:../../devel/p5-perl-headers
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
