@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2003/07/23 09:44:11 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2004/05/09 17:06:56 recht Exp $
 
---- eric/Project/ProjectBrowser.py.orig	2003-07-23 11:00:19.000000000 +0200
-+++ eric/Project/ProjectBrowser.py	2003-07-23 11:17:26.000000000 +0200
-@@ -1129,7 +1129,7 @@
+--- eric/Project/ProjectBrowser.py.orig	2004-04-02 19:52:23.000000000 +0200
++++ eric/Project/ProjectBrowser.py	2004-05-09 18:51:55.000000000 +0200
+@@ -1372,7 +1372,7 @@
          """
          self.compileProc = QProcess(self)
          
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1 2003/07/23 09:44:11 drochner Exp $
          if sys.platform == "win32":
              pyuic = pyuic + '.exe'
          self.compileProc.addArgument(pyuic)
-@@ -1430,7 +1430,7 @@
+@@ -1730,7 +1730,7 @@
              
          self.pylupdateProc = QProcess(self)
          
