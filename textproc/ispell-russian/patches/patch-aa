@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/11/19 15:53:26 jschauma Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/23 15:02:07 agc Exp $
 
---- Makefile.orig	Tue Nov 19 10:43:06 2002
-+++ Makefile	Tue Nov 19 10:47:30 2002
-@@ -1,40 +1,48 @@
+--- Makefile.orig	2002-10-09 23:35:54.000000000 +0100
++++ Makefile	2004-01-23 14:49:03.000000000 +0000
+@@ -1,40 +1,49 @@
  # Makefile for Russian ispell dictionary
  
 -LIB=/usr/lib/ispell
@@ -35,30 +35,31 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/11/19 15:53:26 jschauma Exp $
 +TRANSKOI= | ./trans koi ${ENC}
 +.endif
 +
-+.ifdef YO
++.ifdef IO
 +PATT= y
++DICTNAME=-io
 +.else
 +PATT= e
 +YO2E= | ${TR} '\243\263' '\305\345'
 +.endif
 +
-+all:		russian.hash
++all:		russian${DICTNAME}.hash
  
  install:
 -	cp russian.hash russian.aff $(LIB)
-+	${BSD_INSTALL_DATA} russian.hash ${INSTALLDIR}
-+	${BSD_INSTALL_DATA} russian.aff ${INSTALLDIR}
++	${BSD_INSTALL_DATA} russian${DICTNAME}.hash ${INSTALLDIR}
++	${BSD_INSTALL_DATA} russian${DICTNAME}.aff ${INSTALLDIR}
 +
-+russian.hash:	russian.aff russian.dict
-+	${BUILDHASH} russian.dict russian.aff $@
++russian${DICTNAME}.hash:	russian${DICTNAME}.aff russian${DICTNAME}.dict
++	${BUILDHASH} russian${DICTNAME}.dict russian${DICTNAME}.aff $@
  
 -russian.dict.koi: $(DICT)
 -	cat $^ $(YO2E) | ./sortkoi8 | uniq > $@
-+russian.aff:	russian.aff.koi
++russian${DICTNAME}.aff:	russian.aff.koi
 +	${SED} -e "s/^\#${PATT}//;s/^\#${ENC}/wordchars/" $> \
 +		${TRANSKOI} > $@
 +
-+russian.dict:	${DICT}
++russian${DICTNAME}.dict:	${DICT}
 +	${CAT} $> ${YO2E} | ${SORTKOI8} | ${UNIQ} \
 +		${TRANSKOI} > $@
  
@@ -66,12 +67,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/11/19 15:53:26 jschauma Exp $
  	for i in `cat $(DICT) | sed 's,/.*$$,,' | sort | uniq -d`; do \
  		grep "^$$i/\|^$$i$$" $(DICT); \
  	done > .temp
--
+ 
 -sort_dict: $(DICT)
 -	for i in $(DICT); do \
 -		cat $$i | ./sortkoi8 > $$i.temp; \
 -		mv -f $$i.temp $$i; \
 -	done
- 
+-
  clean:
- 	rm -f russian.dict* russian.hash russian.aff .temp
+-	rm -f russian.dict* russian.hash russian.aff .temp
++	rm -f russian${DICTNAME}.dict* russian${DICTNAME}.hash russian${DICTNAME}.aff .temp
