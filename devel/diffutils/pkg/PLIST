@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/03/12 15:38:07 agc Exp $
+bin/cmp
+bin/diff
+bin/diff3
+bin/sdiff
+@unexec install-info --delete %D/info/diff.info %D/info/dir
+info/diff.info
+info/diff.info-1
+info/diff.info-2
+info/diff.info-3
+info/diff.info-4
+@exec install-info %D/info/diff.info %D/info/dir 
