@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2004/05/08 13:35:20 uebayasi Exp $
+# $NetBSD: Makefile,v 1.14 2004/11/27 18:14:24 wiz Exp $
 
 DISTNAME=		zenicb-19981202
 PKGREVISION=		2
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		thorpej@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		ICB client for Emacs
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL

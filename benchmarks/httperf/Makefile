@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2004/07/30 15:50:37 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/27 18:14:24 wiz Exp $
 #
 
 DISTNAME=	httperf-0.6
 CATEGORIES=	benchmarks www
 MASTER_SITES=	ftp://ftp.hpl.hp.com/pub/httperf/
 
-MAINTAINER=	thorpej@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.hpl.hp.com/personal/David_Mosberger/httperf.html
 COMMENT=	Popular web server benchmarking program
 
