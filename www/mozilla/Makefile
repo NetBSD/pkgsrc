@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2001/10/16 15:52:08 taya Exp $
+# $NetBSD: Makefile,v 1.74 2001/10/26 14:35:12 agc Exp $
 
 MOZ_VER=	0.9.5
 NB_VER=
@@ -82,6 +82,6 @@ post-build:
 	${ECHO} locale,install,select,en-US >> ${WRKSRC}/dist/bin/chrome/installed-chrome.txt
 
 do-install:
-	${SETENV} ${SCRIPTS_ENV} ${SCRIPTDIR}/moz-install
+	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR}/moz-install
 
 .include "../../mk/bsd.pkg.mk"
