@@ -1,0 +1,58 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/03/28 19:44:12 xtraeme Exp $
+
+--- etc/c2s.xml.in.orig	2003-11-05 01:21:31.000000000 +0100
++++ etc/c2s.xml.in	2003-11-05 01:23:03.000000000 +0100
+@@ -6,7 +6,7 @@
+   <!-- The process ID file. comment this out if you don't need to know
+        to know the process ID from outside the process (eg for control
+        scripts) -->
+-  <pidfile>@localstatedir@/jabberd/pid/c2s.pid</pidfile>
++  <pidfile>@PIDDIR@/c2s.pid</pidfile>
+ 
+   <!-- Router connection configuration -->
+   <router>
+@@ -23,7 +23,7 @@
+          commented out, or the file can't be read, no attempt will be
+          made to establish an encrypted channel with the router. -->
+     <!--
+-    <pemfile>@sysconfdir@/server.pem</pemfile>
++    <pemfile>@SSLCERTS@/server.pem</pemfile>
+     -->
+ 
+     <!-- Router connection retry -->
+@@ -56,7 +56,7 @@
+     
+     <!-- If logging to file, this is the filename of the logfile -->
+     <!--
+-    <file>@localstatedir@/jabberd/log/c2s.log</file>
++    <file>@LOGDIR@/c2s.log</file>
+     -->
+   </log>
+ 
+@@ -88,7 +88,7 @@
+          connections. If this is commented out, clients will not be
+          offered the STARTTLS stream extension -->
+     <!--
+-    <pemfile>@sysconfdir@/server.pem</pemfile>
++    <pemfile>@SSLCERTS@/server.pem</pemfile>
+     -->
+ 
+     <!-- Older versions of jabberd support encrypted client connections
+@@ -282,7 +282,7 @@
+     <!-- Berkeley DB module configuration -->
+     <db>
+       <!-- Directory to store database files under -->
+-      <path>@localstatedir@/jabberd/db</path>
++      <path>@DBDIR@</path>
+       
+       <!-- Synchronize the database to disk after each write. If you
+            disable this, database accesses may be faster, but data may
+@@ -316,7 +316,7 @@
+     <!-- Pipe module configuration -->
+     <pipe>
+       <!-- Program to execute -->
+-      <exec>@bindir@/pipe-auth.pl</exec>
++      <exec>@BINDIR@/pipe-auth.pl</exec>
+     </pipe>
+ 
+   </authreg>
