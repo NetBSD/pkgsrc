@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3356 2005/04/04 09:35:17 wiz Exp $
+$NetBSD: TODO,v 1.3357 2005/04/04 10:02:01 adam Exp $
 
 Suggested new packages
 ======================
@@ -380,7 +380,6 @@ Suggested package updates
 	o cy-login-1.5.28
 	o cyrus-imapd21-2.1.18
 	o dact-0.8.37
-	o dante-1.1.15
 	o dar-2.2.0
 	o dbench-3.03
 	o dbus-0.31 [0.2x API more common -- new package?]
