@@ -1,17 +1,14 @@
-# New ports collection makefile for:	zephyr
+# Makefile for:		zephyr
 # Version required:	2.0.4
-# Date created:		1-Aug-1995
-# Whom:			pst
 #
-# $NetBSD: Makefile,v 1.4 1998/03/06 02:48:27 mycroft Exp $
-# FreeBSD Id: Makefile,v 1.7 1997/07/10 15:50:55 pst Exp
+# $NetBSD: Makefile,v 1.5 1998/03/20 06:38:24 mycroft Exp $
 #
 
 DISTNAME=	zephyr-2.0.4
 CATEGORIES=	athena
 MASTER_SITES=	ftp://athena-dist.mit.edu/pub/ATHENA/zephyr/dist/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	mycroft@NetBSD.ORG
 
 .if exists(/usr/lib/libkrb.a) && defined(MAKE_EBONES)
 CONFIGURE_ARGS+="--with-krb4"
