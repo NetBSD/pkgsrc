@@ -1,0 +1,40 @@
+$NetBSD: patch-ac,v 1.5 2002/10/10 16:48:09 junyoung Exp $
+
+--- configure.orig	Tue Oct  8 11:03:41 2002
++++ configure	Fri Oct 11 00:54:07 2002
+@@ -10982,7 +10982,7 @@
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_lib_soname_X11=`$ac_cv_path_LDD conftest$ac_exeext | grep libX11\\.so | sed 's/^[ 	]*\([^ 	]*\)[ 	]*=>.*$/\1/'`
++  ac_cv_lib_soname_X11=`$ac_cv_path_LDD conftest$ac_exeext | grep libX11\\.so | sed 's/^.*=>[	 ]*\(.*\)[	 ]*/\1/'`
+   if test "x$ac_cv_lib_soname_X11" = "x"
+   then
+      ac_cv_lib_soname_X11="libX11.so"
+@@ -11048,7 +11048,7 @@
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_lib_soname_Xext=`$ac_cv_path_LDD conftest$ac_exeext | grep libXext\\.so | sed 's/^[ 	]*\([^ 	]*\)[ 	]*=>.*$/\1/'`
++  ac_cv_lib_soname_Xext=`$ac_cv_path_LDD conftest$ac_exeext | grep libXext\\.so | sed 's/^.*=>[	 ]*\(.*\)[	 ]*/\1/'`
+   if test "x$ac_cv_lib_soname_Xext" = "x"
+   then
+      ac_cv_lib_soname_Xext="libXext.so"
+@@ -11114,7 +11114,7 @@
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_lib_soname_Xrender=`$ac_cv_path_LDD conftest$ac_exeext | grep libXrender\\.so | sed 's/^[ 	]*\([^ 	]*\)[ 	]*=>.*$/\1/'`
++  ac_cv_lib_soname_Xrender=`$ac_cv_path_LDD conftest$ac_exeext | grep libXrender\\.so | sed 's/^.*=>[	 ]*\(.*\)[	 ]*/\1/'`
+   if test "x$ac_cv_lib_soname_Xrender" = "x"
+   then
+      ac_cv_lib_soname_Xrender="libXrender.so"
+@@ -11180,7 +11180,7 @@
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_lib_soname_freetype=`$ac_cv_path_LDD conftest$ac_exeext | grep libfreetype\\.so | sed 's/^[ 	]*\([^ 	]*\)[ 	]*=>.*$/\1/'`
++  ac_cv_lib_soname_freetype=`$ac_cv_path_LDD conftest$ac_exeext | grep libfreetype\\.so | sed 's/^.*=>[	 ]*\(.*\)[	 ]*/\1/'`
+   if test "x$ac_cv_lib_soname_freetype" = "x"
+   then
+      ac_cv_lib_soname_freetype="libfreetype.so"
