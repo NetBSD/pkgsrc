@@ -1,15 +1,13 @@
-*** gnucash-1.1.25.orig/src/engine/Makefile.in	Sat Jan  2 20:55:32 1999
---- gnucash-1.1.25/src/engine/Makefile.in	Mon Mar 22 10:54:03 1999
-***************
-*** 35,39 ****
-  INDEP_SRCS := AccInfo.c Account.c DateUtils.c FileIO.c Group.c \
-                LedgerUtils.c QIFIO.c Query.c Scrub.c Session.c  \
-!               Transaction.c TransLog.c date.c util.c
-  ######################################################################
-  
---- 35,39 ----
-  INDEP_SRCS := AccInfo.c Account.c DateUtils.c FileIO.c Group.c \
-                LedgerUtils.c QIFIO.c Query.c Scrub.c Session.c  \
-!               Transaction.c TransLog.c date.c util.c asprintf.c
-  ######################################################################
-  
+$NetBSD: patch-ad,v 1.2 1999/03/25 19:25:32 tsarna Exp $
+
+--- src/engine/Makefile.in.orig	Sat Jan  2 19:55:32 1999
++++ src/engine/Makefile.in	Thu Mar 25 13:17:14 1999
+@@ -34,7 +34,7 @@
+ # See Makefile.common for information about these variables.
+ INDEP_SRCS := AccInfo.c Account.c DateUtils.c FileIO.c Group.c \
+               LedgerUtils.c QIFIO.c Query.c Scrub.c Session.c  \
+-              Transaction.c TransLog.c date.c util.c
++              Transaction.c TransLog.c date.c util.c asprintf.c
+ ######################################################################
+ 
+ all: default
