@@ -1,11 +1,11 @@
-$NetBSD: patch-ax,v 1.1 2004/11/08 18:19:41 xtraeme Exp $
+$NetBSD: patch-ax,v 1.2 2005/01/10 15:47:18 xtraeme Exp $
 
---- scripts/Makefile.in.orig	2004-11-08 17:28:31.000000000 +0100
-+++ scripts/Makefile.in	2004-11-08 17:30:26.000000000 +0100
-@@ -295,28 +295,12 @@
+--- scripts/Makefile.in.orig	2005-01-10 13:42:12.000000000 +0100
++++ scripts/Makefile.in	2005-01-10 13:43:10.000000000 +0100
+@@ -316,25 +316,10 @@
+ vio_dir = @vio_dir@
  vio_libs = @vio_libs@
  zlib_dir = @zlib_dir@
- 
 -bin_SCRIPTS = @server_scripts@ \
 -			msql2mysql \
 -			mysql_config \
@@ -31,7 +31,4 @@ $NetBSD: patch-ax,v 1.1 2004/11/08 18:19:41 xtraeme Exp $
 +	      mysqldumpslow mysql_explain_log mysql_tableinfo \
  			mysql_create_system_tables
  
--
  EXTRA_SCRIPTS = make_binary_distribution.sh \
- 			make_sharedlib_distribution.sh \
- 			make_win_src_distribution.sh \

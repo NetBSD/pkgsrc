@@ -1,17 +1,18 @@
-$NetBSD: patch-at,v 1.2 2004/03/07 19:42:55 martti Exp $
+$NetBSD: patch-at,v 1.3 2005/01/10 15:47:18 xtraeme Exp $
 
---- support-files/MacOSX/Makefile.in.orig	Tue Feb 10 20:16:53 2004
-+++ support-files/MacOSX/Makefile.in	Sun Mar  7 20:22:21 2004
-@@ -284,11 +284,7 @@
+--- support-files/MacOSX/Makefile.in.orig	2005-01-10 16:17:30.000000000 +0100
++++ support-files/MacOSX/Makefile.in	2005-01-10 16:17:48.000000000 +0100
+@@ -324,12 +324,7 @@
+ 		StartupItem.Info.plist \
  		StartupItem.postinstall
- 
  
 -pkgdata_DATA = Info.plist \
 -		Description.plist \
 -		StartupParameters.plist \
 -		postinstall \
 -		preinstall
-+pkgdata_DATA =
- 
- 
+-
++pkgdata_DATA = 
  CLEANFILES = Info.plist \
+ 		Description.plist \
+ 		StartupParameters.plist \

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/11/23 16:07:02 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/01/10 15:47:18 xtraeme Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysql_config
@@ -70,6 +70,6 @@ share/examples/mysql/my-small.cnf
 share/mysql/fill_help_tables.sql
 share/mysql/mysql_fix_privilege_tables.sql
 @dirrm share/mysql
-@dirrm lib/mysql
 @dirrm share/examples/mysql
+@dirrm lib/mysql
 @dirrm include/mysql

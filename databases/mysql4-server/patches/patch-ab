@@ -1,8 +1,26 @@
-$NetBSD: patch-ab,v 1.1 2004/10/28 01:12:44 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2005/01/10 15:47:18 xtraeme Exp $
 
---- tests/Makefile.in.orig	2004-10-27 23:47:23.000000000 +0200
-+++ tests/Makefile.in	2004-10-27 23:47:53.000000000 +0200
-@@ -315,7 +315,7 @@
+--- tests/Makefile.in.orig	2005-01-10 16:09:56.000000000 +0100
++++ tests/Makefile.in	2005-01-10 16:11:05.000000000 +0100
+@@ -74,7 +74,7 @@
+ PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
+ am_client_test_OBJECTS = client_test.$(OBJEXT)
+ client_test_OBJECTS = $(am_client_test_OBJECTS)
+-am__DEPENDENCIES_1 = ../libmysql/libmysqlclient.la
++am__DEPENDENCIES_1 = 
+ am__DEPENDENCIES_2 =
+ client_test_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2)
+ insert_test_SOURCES = insert_test.c
+@@ -86,7 +86,7 @@
+ thread_test_SOURCES = thread_test.c
+ thread_test_OBJECTS = thread_test.$(OBJEXT)
+ thread_test_LDADD = $(LDADD)
+-thread_test_DEPENDENCIES = ../libmysql/libmysqlclient.la
++thread_test_DEPENDENCIES =
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+@@ -368,7 +368,7 @@
  # C Test for 4.1 protocol
  #
  INCLUDES = -I$(top_srcdir)/include $(openssl_includes)
@@ -11,21 +29,3 @@ $NetBSD: patch-ab,v 1.1 2004/10/28 01:12:44 xtraeme Exp $
  client_test_LDADD = $(LDADD) $(CXXLDFLAGS)
  client_test_SOURCES = client_test.c
  insert_test_DEPENDENCIES = $(LIBRARIES) $(pkglib_LTLIBRARIES)
-@@ -332,7 +332,7 @@
- 
- am_client_test_OBJECTS = client_test.$(OBJEXT)
- client_test_OBJECTS = $(am_client_test_OBJECTS)
--client_test_DEPENDENCIES = ../libmysql/libmysqlclient.la
-+client_test_DEPENDENCIES =
- client_test_LDFLAGS =
- insert_test_SOURCES = insert_test.c
- insert_test_OBJECTS = insert_test.$(OBJEXT)
-@@ -345,7 +345,7 @@
- thread_test_SOURCES = thread_test.c
- thread_test_OBJECTS = thread_test.$(OBJEXT)
- thread_test_LDADD = $(LDADD)
--thread_test_DEPENDENCIES = ../libmysql/libmysqlclient.la
-+thread_test_DEPENDENCIES =
- thread_test_LDFLAGS =
- 
- DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
