@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1998/06/06 20:40:06 tron Exp $
+# $NetBSD: Makefile,v 1.21 1998/06/07 19:40:30 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -15,7 +15,8 @@ CONFLICTS=	lesstif-0.82 lesstif-0.83 lesstif-0.84 lesstif-19980510
 GNU_CONFIGURE=  yes
 USE_X11=	yes
 # change this for debugging
-CONFIGURE_ENV=	CCFLAGS="-O -pipe" INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+CONFIGURE_ENV=	CCFLAGS="-O -pipe" INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
+		VarHaveMan2html=0
 
 MAN1=		mwm.1 xmbind.1 lesstif.1
 MAN3=		XmClipboard.3 LessTifInternals.3 XmArrowButton.3\
