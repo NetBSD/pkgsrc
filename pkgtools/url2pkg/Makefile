@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2003/04/22 00:35:08 rh Exp $
+# $NetBSD: Makefile,v 1.26 2003/04/23 09:18:29 rh Exp $
 #
 
-DISTNAME=	url2pkg-1.22
+DISTNAME=	url2pkg-1.23
 WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	# Nothing
