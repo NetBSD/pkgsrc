@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4295 2003/12/30 22:54:02 grant Exp $
+$NetBSD: CHANGES,v 1.4296 2003/12/31 00:11:26 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5487,3 +5487,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gnome-mag-0.10.4 [xtraeme 2003-12-30]
 	Added gnopernicus-0.7.1 [xtraeme 2003-12-30]
 	Added MozillaFirebird-gtk2-bin-0.7 [grant 2003-12-30]
+	Added buddy-2.2 [kristerw 2003-12-31]
+	Added libtecla-1.5.0 [kristerw 2003-12-31]
