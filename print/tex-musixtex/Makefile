@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/01/18 00:08:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2005/02/10 23:49:25 hubertf Exp $
 #
 
 DISTNAME=	musixtex-112
@@ -11,7 +11,7 @@ MAINTAINER=	dgriffi@cs.csubak.edu
 HOMEPAGE=	http://icking-music-archive.sunsite.dk/
 COMMENT=	TeX macros to typeset music
 
-DEPENDS+=       teTeX-2.0*:../../print/teTeX
+DEPENDS+=       teTeX>=2:../../print/teTeX
 
 WRKSRC=		${WRKDIR}/musixtex-T112
 NO_CONFIGURE=	yes
@@ -19,12 +19,19 @@ NO_CONFIGURE=	yes
 TEXMF=		${LOCALBASE}/share/texmf
 TEXMF_CNF=	${LOCALBASE}/share/texmf/web2c/texmf.cnf
 
+.include "../../mk/bsd.prefs.mk"
+.if exists(${LOCALBASE}/bin/initex)
+INITEX= 	initex		# teTeX2
+.else
+INITEX= 	tex -ini	# teTeX3
+.endif
+
 do-build:
 	@${ECHO} "======> Building musixtex.fmt"
 	${CP} -f ${WRKSRC}/system/dos/musixtex.ins \
 		${WRKSRC}/tex
 	cd ${WRKSRC}/tex ; \
-		(TEXFONTS=${WRKSRC}/tfm initex '&tex musixtex.ins \dump')
+		(TEXFONTS=${WRKSRC}/tfm ${INITEX} '&tex musixtex.ins \dump')
 	@${ECHO} "======> Building musixflx executable"
 	cd ${WRKSRC}/system/c-source; ${CC} -o musixflx musixflx.c
 
