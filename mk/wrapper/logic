@@ -1,4 +1,4 @@
-# $NetBSD: logic,v 1.6.2.3 2005/01/24 18:40:01 tv Exp $
+# $NetBSD: logic,v 1.6.2.4 2005/02/15 16:25:23 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -153,7 +153,7 @@ EOF
 		yes)
 			for i in $arg; do
 				append_queue cmdbuf "$i"
-				$debug_log $wrapperlog "    (logic) push: $i"
+				$debug_log $wrapperlog "    (logic) push: $i [split]"
 			done
 			;;
 		######################################################
@@ -167,7 +167,7 @@ EOF
 		;;
 	*)
 		append_queue cmdbuf "$arg"
-		$debug_log $wrapperlog "    (logic) push: $arg"
+		$debug_log $wrapperlog "    (logic) push: $arg [skipped]"
 		;;
 	esac
 done

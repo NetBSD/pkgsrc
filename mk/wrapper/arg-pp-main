@@ -1,4 +1,4 @@
-# $NetBSD: arg-pp-main,v 1.1.2.3 2005/02/11 15:27:57 tv Exp $
+# $NetBSD: arg-pp-main,v 1.1.2.4 2005/02/15 16:25:23 tv Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -64,23 +64,6 @@ case $arg in
 	*/*)		argok=yes; argmatch=yes ;;
 	*.sl)		lib="${lib%.sl}" ;;
 	*.sl.[0-9]*)	lib="${lib%.sl.[0-9]*}" ;;
-	esac
-	case $argmatch in
-	yes)	;;
-	*)	prepend_queue argbuf "-l$lib"
-		$debug_log $wrapperlog "    (arg-pp-main) pre:  -l$lib"
-		prepend_queue argbuf "-L$dir"
-		$debug_log $wrapperlog "    (arg-pp-main) pre:  -L$dir"
-		argmatch=yes
-		;;
-	esac
-	;;
-/*/lib*.dylib)  # Darwin      
-	dir="${arg%/lib*.dylib}"
-	lib="${arg#$dir/lib}" 
-	case $lib in
-	*/*)		argok=yes; argmatch=yes ;;
-	*.dylib)	lib="${lib%.dylib}" ;;
 	esac
 	case $argmatch in
 	yes)	;;
