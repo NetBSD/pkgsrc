@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/05/02 11:55:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/06/24 12:22:50 cjep Exp $
 #
 
 DISTNAME=	avi-xmms-1.2.2
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.xmms.org/files/plugins/avi-xmms/ \
 		ftp://ftp.sunet.se/pub/multimedia/xmms/plugins/avi-xmms/ \
-                ftp://ftp.fu-berlin.de/unix/sound/xmms/plugins/avi-xmms/
+		ftp://ftp.fu-berlin.de/unix/sound/xmms/plugins/avi-xmms/
 
 MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://www.xmms.org/
