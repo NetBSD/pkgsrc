@@ -1,3 +1,4 @@
+$NetBSD: patch-au,v 1.2 2003/10/18 12:04:54 cjep Exp $
 --- src/include/prototypes.h.orig	2003-10-10 18:39:41.000000000 +1000
 +++ src/include/prototypes.h	2003-10-10 18:39:55.000000000 +1000
 @@ -271,6 +271,8 @@
