@@ -1,15 +1,15 @@
-$NetBSD: README.mkcert,v 1.1 2000/09/12 14:05:16 jlam Exp $
+$NetBSD: README.mkcert,v 1.2 2001/04/29 20:36:47 jlam Exp $
 
 If you don't already have them, you will need to generate SSL certificates
 and keys for your server before Apache will start with mod_ssl support.
 You can do this with:
 
-        @PREFIX@/sbin/mkcert.sh -t custom -a RSA
+        @PREFIX@/sbin/mkcert -t custom -a RSA
 
 If you already have an existing server certificate and key, you will need
 to run:
 
-        @PREFIX@/sbin/mkcert.sh -t existing -c /path/to/cert -k /path/to/key
+        @PREFIX@/sbin/mkcert -t existing -c /path/to/cert -k /path/to/key
 
 to generate new certificates from your existing ones.  For a more detailed,
 step-by-step description of how to generate SSL certificates, point your
@@ -20,4 +20,4 @@ browser at:
 After generating your SSL certificates, you should update the certificate
 hashes with:
 
-	cd @PREFIX@/etc/httpd/ssl.crt; make -f Makefile.crt update
+	cd @APACHE_SYSCONFDIR@/ssl.crt; make -f Makefile.crt update
