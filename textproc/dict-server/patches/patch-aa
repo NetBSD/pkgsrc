@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/28 16:17:20 tron Exp $
+
+--- configure.orig	Mon Jul  6 03:38:03 1998
++++ configure	Wed Jul 28 17:57:42 1999
+@@ -46,11 +46,13 @@
+ # dashes changed to underlines.
+ build=NONE
+ cache_file=./config.cache
++etcdir=/etc
+ exec_prefix=NONE
+ host=NONE
+ no_create=
+ nonopt=NONE
+ no_recursion=
++piddir=/var/run
+ prefix=NONE
+ program_prefix=NONE
+ program_suffix=NONE
+@@ -549,9 +551,6 @@
+ 
+ 
+ 
+-prefix=/usr
+-etcdir=/etc
+-piddir=/var/run
+ 
+ echo Configuring for dict
+ echo .

@@ -1,0 +1,10 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/07/28 16:17:20 tron Exp $
+
+--- dictd.conf.orig	Sun Feb 22 19:53:29 1998
++++ dictd.conf	Wed Jul 28 17:57:42 1999
+@@ -14,3 +14,5 @@
+                      index "/usr/lib/dict/easton.index" }
+ database hitchcock { data "/usr/lib/dict/hitchcock.dict.dz"
+                      index "/usr/lib/dict/hitchcock.index" }
++database world95   { data "/usr/lib/dict/world95.dict.dz"
++                     index "/usr/lib/dict/world95.index" }
