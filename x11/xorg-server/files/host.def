@@ -1,4 +1,4 @@
-/* $NetBSD: host.def,v 1.5 2004/09/21 17:38:53 xtraeme Exp $ */
+/* $NetBSD: host.def,v 1.6 2004/12/23 12:39:10 reed Exp $ */
 
 #define ProjectRoot @PREFIX@
 #define BuildHtmlManPages NO
@@ -57,5 +57,3 @@
 
 #define HasFontconfig YES
 #define FontconfigDir @BLNK@
-
-#define BuildHtmlManPages NO
