@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.160 2002/10/04 09:02:25 jlam Exp $
+$NetBSD: CHANGES,v 1.161 2002/10/04 09:08:42 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3106,3 +3106,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gv to 3.5.8nb2 [itojun 2002-10-04]
 	Updated libao to 0.8.3nb1 [jlam 2002-10-04]
 	Updated audacity to 1.0.0.2 [jlam 2002-10-04]
+	Added dictd-1.8.0 [uebayasi 2002-10-04]
