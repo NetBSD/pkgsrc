@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.32 2004/02/08 09:13:43 grant Exp $
+# $NetBSD: post-build,v 1.33 2004/02/08 12:54:05 grant Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -7,6 +7,7 @@
 #
 
 use File::Basename;
+use POSIX ();
 
 # Where config vars are stored (/bin/sh syntax)
 
@@ -33,7 +34,6 @@ getconf("REPORT");		# "broken.html"
 getconf("USR_PKGSRC");		# "/usr/pkgsrc"
 getconf("osrev");	       	# `uname -r`
 getconf("arch"); 		# `uname -m`
-$enddate=localtime(time());
 $reportf=basename($REPORT);
 
 chomp($os=`uname -s`);
@@ -64,7 +64,9 @@ $startdate = (stat($STARTFILE))[9];
 if ($startdate == 0) {
 	$startdate = "unknown";
 } else {
-	$startdate = localtime($startdate)."";
+	local $ENV{TZ} = "UTC";
+	$startdate = POSIX::strftime("%c %Z", gmtime($startdate));
+	$enddate = POSIX::strftime("%c %Z", gmtime(time()));
 }
 
 $verbose=1;
