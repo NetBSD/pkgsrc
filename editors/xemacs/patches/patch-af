@@ -1,16 +1,16 @@
-$NetBSD: patch-af,v 1.2 1999/06/29 23:13:41 tron Exp $
+$NetBSD: patch-af,v 1.3 1999/12/06 14:24:02 bouyer Exp $
 
---- configure.in.orig	Mon Feb  9 20:58:57 1998
-+++ configure.in	Sat Mar  6 11:09:17 1999
-@@ -940,6 +940,7 @@
+--- configure.in.orig	Sun Aug 15 03:29:49 1999
++++ configure.in	Mon Dec  6 11:20:27 1999
+@@ -1027,6 +1027,7 @@
  
  dnl Straightforward machine determination
  case "$canonical" in
 +  arm-*-*	   ) machine=arm ;;
    sparc-*-*        ) machine=sparc ;;
-   alpha-*-*        ) machine=alpha ;;
+   alpha*-*-*       ) machine=alpha ;;
    vax-*-*          ) machine=vax ;;
-@@ -1013,10 +1014,10 @@
+@@ -1101,10 +1102,10 @@
      case "$canonical" in
        i[[3-9]]86-*-netbsd*) machine=intel386 ;;
        hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
@@ -23,3 +23,22 @@ $NetBSD: patch-af,v 1.2 1999/06/29 23:13:41 tron Exp $
      esac
    ;;
  
+@@ -1941,7 +1942,7 @@
+     decosf* | linux* | irix*) dash_r="-rpath " ;;
+     *)
+       dash_r=""
+-      for try_dash_r in "-R" "-R " "-rpath "; do
++      for try_dash_r in "-Wl,-R" "-R" "-R " "-rpath "; do
+         xe_check_libs="${try_dash_r}/no/such/file-or-directory"
+         XE_PROTECT_LINKER_FLAGS(xe_check_libs)
+         AC_TRY_LINK(, , dash_r="$try_dash_r")
+@@ -3485,6 +3486,9 @@
+     eval "with_${feature}=no"
+   done
+ fi dnl with_tty
++
++AC_CHECK_LIB(ossaudio, main, LIBOSSAUDIO=-lossaudio)
++AC_SUBST(LIBOSSAUDIO)
+ 
+ dnl Do we need event-unixoid.o ?
+ test "$with_x11" = "yes" -o "$with_tty" = "yes" && XE_ADD_OBJS(event-unixoid.o)
