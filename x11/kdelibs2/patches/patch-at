@@ -1,0 +1,23 @@
+$NetBSD: patch-at,v 1.1 2001/05/01 09:46:37 skrll Exp $
+
+--- kdesu/kdesu_pty.cpp.orig	Sun Feb 18 15:26:55 2001
++++ kdesu/kdesu_pty.cpp
+@@ -16,15 +16,15 @@
+  */
+ 
+ 
+-#include <config.h>
+-
+ #ifndef _GNU_SOURCE
+ #define _GNU_SOURCE   /* Needed for getpt, ptsname in glibc 2.1.x systems */
+ #endif
+ 
+-#ifndef _XOPEN_SOURCE
++#if !defined(_XOPEN_SOURCE) && !defined(__osf__)
+ #define _XOPEN_SOURCE /* Needed for grantpt, unlockpt in glibc 2.1.x      */
+ #endif
++
++#include <config.h>
+ 
+ #include <stdio.h>
+ #include <fcntl.h>
