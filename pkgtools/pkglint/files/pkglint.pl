@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.49 2001/05/03 19:18:55 abs Exp $
+# $NetBSD: pkglint.pl,v 1.50 2001/05/12 15:19:15 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -738,6 +738,10 @@ sub checkmakefile {
 	if ($whole =~ /\nNO_CHECKSUM/) {
 		$seen_NO_CHECKSUM=1;
 	}
+	print "OK: checking USE_PERL usage.\n" if ($verbose);
+	if ($whole =~ /\nUSE_PERL[^5]/) {
+		&perror("WARN: USE_PERL found -- you probably mean USE_PERL5.");
+	}
 	print "OK: checking USE_PKGLIBTOOL.\n" if ($verbose);
 	if ($whole =~ /\nUSE_PKGLIBTOOL/) {
 		&perror("FATAL: USE_PKGLIBTOOL is deprecated, ".
@@ -833,6 +837,13 @@ EOF
 	if ($j =~ /\${MKDIR}\s+-p/) {
 		&perror("WARN: possible use of \"\${MKDIR} -p\" ".
 			"found. \${MKDIR} includes \"-p\" by default.");
+	}
+	#
+	# whole file: continuation line in DEPENDS
+	#
+	if ($whole =~ /\n(BUILD_|)DEPENDS[^\n]*\\\n/) {
+		&perror("WARN: Please don't use continuation lines in".
+			" (BUILD_)DEPENDS, use (BUILD_)DEPENDS+= instead.");
 	}
 
 	#
