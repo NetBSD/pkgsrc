@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/09/26 11:23:43 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/06/04 11:45:45 xtraeme Exp $
 bin/osd_cat
 bin/xosd-config
 include/xosd.h
@@ -6,7 +6,7 @@ lib/libxosd.a
 lib/libxosd.la
 lib/libxosd.so
 lib/libxosd.so.4
-lib/libxosd.so.4.5
+lib/libxosd.so.4.7
 man/man1/osd_cat.1
 man/man1/xosd-config.1
 man/man3/xosd.3
