@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/06/24 03:30:26 danw Exp $
+# $NetBSD: Makefile,v 1.20 2000/06/24 13:57:52 danw Exp $
 
 DISTNAME=	gnome-utils-1.2.0
 CATEGORIES=	misc x11 gnome
@@ -23,5 +23,16 @@ GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
 CONFIGURE_ENV+=	XGETTEXT="${LOCALBASE}/bin/xgettext"
 CONFIGURE_ARGS=	--with-ncurses=${LOCALBASE}
+
+PLIST_SRC=	${WRKDIR}/PLIST
+
+post-install:
+	@if [ -x ${PREFIX}/bin/gdiskfree ]; then \
+	  ${CP} ${PKGDIR}/PLIST ${PLIST_SRC}; \
+	else \
+	  ${EGREP} -v 'gdiskfree|stripchart' \
+		< ${PKGDIR}/PLIST > ${PLIST_SRC}; \
+	fi
+
 
 .include "../../mk/bsd.pkg.mk"
