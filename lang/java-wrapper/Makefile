@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/08/11 14:45:31 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/05 22:03:42 tv Exp $
 #
 
-DISTNAME=	java-wrapper-1.1
+DISTNAME=	java-wrapper-1.2
 CATEGORIES=	lang
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -43,9 +43,9 @@ do-build:
 # Not all implemetations supply all of the following programs, but these
 # comprise the majority of useful tools available with most JVMs:
 do-install:
-.for f in appletviewer extcheck idlj jar jarsigner java javac javadoc \
-	  javah javakey javap jdb keytool policytool rmic rmid \
-	  rmiregistry serialver tnameserv
+.for f in appletviewer apt extcheck idlj jar jarsigner java javac javadoc \
+	  javah javakey javap javaws jdb keytool policytool rmic rmid \
+	  rmiregistry serialver servertool tnameserv
 	${INSTALL_SCRIPT} ${WRKSRC}/java-wrapper.sh ${PREFIX}/bin/${f}
 .endfor
 .undef f
