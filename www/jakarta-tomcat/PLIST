@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:17:08 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:03 skrll Exp $
 etc/rc.d/tomcat
 tomcat/KEYS
 tomcat/LICENSE
@@ -364,17 +364,17 @@ tomcat/webapps/admin.war
 tomcat/webapps/examples.war
 tomcat/webapps/test.war
 @comment must explicitly remove webapp working files, but not any user files in webapps
-@unexec rm -rf tomcat/webapps/ROOT
-@unexec rm -rf tomcat/webapps/admin
-@unexec rm -rf tomcat/webapps/examples
-@unexec rm -rf tomcat/webapps/test
+@unexec ${RM} -rf tomcat/webapps/ROOT
+@unexec ${RM} -rf tomcat/webapps/admin
+@unexec ${RM} -rf tomcat/webapps/examples
+@unexec ${RM} -rf tomcat/webapps/test
 @comment must explicitly remove tomcat working stash
-@unexec rm -rf tomcat/work
+@unexec ${RM} -rf tomcat/work
 @comment also remove auto-generated conf fragments, if present
-@unexec rm -f /usr/pkg/tomcat/conf/iis_redirect.reg-auto
-@unexec rm -f /usr/pkg/tomcat/conf/mod_jk.conf-auto
-@unexec rm -f /usr/pkg/tomcat/conf/obj.conf-auto
-@unexec rm -f /usr/pkg/tomcat/conf/uriworkermap.properties-auto
+@unexec ${RM} -f /usr/pkg/tomcat/conf/iis_redirect.reg-auto
+@unexec ${RM} -f /usr/pkg/tomcat/conf/mod_jk.conf-auto
+@unexec ${RM} -f /usr/pkg/tomcat/conf/obj.conf-auto
+@unexec ${RM} -f /usr/pkg/tomcat/conf/uriworkermap.properties-auto
 @dirrm tomcat/src/org/apache/tomcat/util/xml
 @dirrm tomcat/src/org/apache/tomcat/util/pattern
 @dirrm tomcat/src/org/apache/tomcat/util/compat

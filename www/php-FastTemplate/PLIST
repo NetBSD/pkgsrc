@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:25 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:04 skrll Exp $
 ${PHP_LIB_SUBDIR}/class.FastTemplate.php3
 share/doc/html/${PKGBASE}/FastTemplate.html
 share/examples/${PKGBASE}/dynamic_example.php
@@ -18,4 +18,4 @@ share/examples/${PKGBASE}/templates/test.tpl
 @dirrm share/examples/${PKGBASE}/templates
 @dirrm share/examples/${PKGBASE}
 @dirrm share/doc/html/${PKGBASE}
-@unexec rmdir -p %D/${PHP_LIB_SUBDIR} 2>/dev/null || true
+@unexec ${RMDIR} -p %D/${PHP_LIB_SUBDIR} 2>/dev/null || true

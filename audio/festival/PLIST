@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:49 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:29 skrll Exp $
 bin/festival
 bin/festival_client
 libexec/audsp
@@ -122,8 +122,8 @@ share/festival/lib/tokenpos.scm
 share/festival/lib/tts.scm
 share/festival/lib/voices.scm
 share/festival/lib/web.scm
-@unexec rm -r %D/share/festival/lib/voices
-@unexec rm -r %D/share/festival/lib/dicts
+@unexec ${RM} -r %D/share/festival/lib/voices
+@unexec ${RM} -r %D/share/festival/lib/dicts
 @dirrm share/festival/lib/etc/NetBSD
 @dirrm share/festival/lib/etc
 @dirrm share/festival/lib

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:07 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:35 skrll Exp $
 ${LISPDIR}/haskell-decl-scan.el
 ${LISPDIR}/haskell-decl-scan.elc
 ${LISPDIR}/haskell-doc.el
@@ -13,4 +13,4 @@ ${LISPDIR}/haskell-mode.el
 ${LISPDIR}/haskell-mode.elc
 ${LISPDIR}/haskell-simple-indent.el
 ${LISPDIR}/haskell-simple-indent.elc
-@unexec rmdir %D/${LISPDIR} 2>/dev/null || true
+@unexec ${RMDIR} %D/${LISPDIR} 2>/dev/null || true

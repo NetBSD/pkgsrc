@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/13 22:43:06 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:12:45 skrll Exp $
 @cwd ${DICT_DIR}
 @cwd ${DICT_DIR}
 canna/canna/bushu.cld
@@ -66,5 +66,5 @@ sbin/cannaserver
 @exec ${MKDIR} ${CANNA_SPOOL}
 @exec ${CHMOD} ${CANNAOWNER}:${CANNAGROUP} ${CANNA_SPOOL}
 @exec ${CHOWN} ${CANNA_MODE} ${CANNA_SPOOL}
-@unexec rmdir ${DICT_DIR}/canna/canna
-@unexec rmdir ${CANNA_SPOOL}
+@unexec ${RMDIR} ${DICT_DIR}/canna/canna
+@unexec ${RMDIR} ${CANNA_SPOOL}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:55:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:41 skrll Exp $
 bin/quake3arena-demo
 lib/lokigames/quake3arena-demo/demoq3/pak0.pk3
 lib/lokigames/quake3arena-demo/q3ded
@@ -249,5 +249,5 @@ share/doc/lokigames/quake3arena-demo-README
 @dirrm share/doc/lokigames/quake3arena-Help
 @dirrm lib/lokigames/quake3arena-demo/demoq3
 @dirrm lib/lokigames/quake3arena-demo
-@unexec rmdir -p %D/lib/lokigames 2>/dev/null || true
-@unexec rmdir -p %D/share/doc/lokigames 2>/dev/null || true
+@unexec ${RMDIR} -p %D/lib/lokigames 2>/dev/null || true
+@unexec ${RMDIR} -p %D/share/doc/lokigames 2>/dev/null || true

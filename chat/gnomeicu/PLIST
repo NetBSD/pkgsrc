@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:06:27 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:31 skrll Exp $
 bin/gnomeicu
 bin/gnomeicu-client
 etc/CORBA/servers/GnomeICU.gnorba
@@ -122,6 +122,6 @@ share/sounds/gnomeicu/message.wav
 @dirrm share/gnomeicu/icons
 @dirrm share/gnomeicu
 @dirrm share/sounds/gnomeicu
-@unexec rmdir share/applets/Network 2> /dev/null || true
-@unexec rmdir etc/sound/events 2> /dev/null || true
-@unexec rmdir etc/CORBA/servers 2> /dev/null || true
+@unexec ${RMDIR} share/applets/Network 2> /dev/null || true
+@unexec ${RMDIR} etc/sound/events 2> /dev/null || true
+@unexec ${RMDIR} etc/CORBA/servers 2> /dev/null || true

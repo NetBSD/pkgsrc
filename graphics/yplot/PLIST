@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:53 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:44 skrll Exp $
 bin/yplot
 bin/yplotl
 share/yorick/1.4/contrib/yplot.i
@@ -46,4 +46,4 @@ share/doc/yplot/ytut.dvi
 share/doc/yplot/ytut.ps.gz
 @dirrm share/doc/yplot
 @dirrm share/examples/yplot
-@unexec rmdir %D/share/yorick/1.4/contrib 2>/dev/null || true
+@unexec ${RMDIR} %D/share/yorick/1.4/contrib 2>/dev/null || true

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:47:49 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:30 skrll Exp $
 bin/eagle
 eagle/README
 eagle/bin/eagle
@@ -605,7 +605,7 @@ eagle/ulp/rename-in-lbr.ulp
 eagle/ulp/useful_routines.ulp
 eagle/uninstall
 eagle/userinstall
-@unexec rm -f %D/eagle/bin/eagle.key
+@unexec ${RM} -f %D/eagle/bin/eagle.key
 @dirrm eagle/ulp
 @dirrm eagle/scr
 @dirrm eagle/projects/examples/tutorial

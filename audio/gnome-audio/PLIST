@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:16:39 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:29 skrll Exp $
 share/sounds/card_shuffle.wav
 share/sounds/phone.wav
 share/sounds/shutdown1.wav
@@ -16,4 +16,4 @@ share/sounds/gtk-events/clicked.wav
 share/sounds/gtk-events/toggled.wav
 @dirrm share/sounds/gtk-events
 @dirrm share/sounds/panel
-@unexec rmdir %D/share/sounds 2>/dev/null || true
+@unexec ${RMDIR} %D/share/sounds 2>/dev/null || true

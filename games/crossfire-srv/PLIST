@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:51:48 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:39 skrll Exp $
 bin/random_map
 bin/crossfire
 bin/flushlocks
@@ -1759,7 +1759,7 @@ share/crossfire/maps/mak/unnatural/unnat
 var/crossfire/highscore
 var/crossfire/bookarch
 var/crossfire/temp.maps
-@unexec rm -r %D/var/crossfire/unique-items/*
+@unexec ${RM} -r %D/var/crossfire/unique-items/*
 @dirrm var/crossfire/unique-items
 @dirrm var/crossfire/players
 @dirrm var/crossfire

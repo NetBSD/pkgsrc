@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.post,v 1.1 2001/11/01 02:24:37 zuntum Exp $
+@comment $NetBSD: PLIST.post,v 1.2 2002/02/15 10:13:03 skrll Exp $
 @dirrm lib/netscape/${BINNAME}-${NS_VERS}/spell
 @dirrm lib/netscape/${BINNAME}-${NS_VERS}/plugins
 @dirrm lib/netscape/${BINNAME}-${NS_VERS}/nethelp/netscape/trouble
@@ -18,6 +18,6 @@
 @dirrm lib/netscape/${BINNAME}-${NS_VERS}/java/classes
 @dirrm lib/netscape/${BINNAME}-${NS_VERS}/java
 @dirrm lib/netscape/${BINNAME}-${NS_VERS}
-@exec mkdir -p %D/lib/netscape/plugins
-@unexec rmdir %D/lib/netscape/plugins 2>/dev/null || true
-@unexec rmdir %D/lib/netscape 2>/dev/null || true
+@exec ${MKDIR} -p %D/lib/netscape/plugins
+@unexec ${RMDIR} %D/lib/netscape/plugins 2>/dev/null || true
+@unexec ${RMDIR} %D/lib/netscape 2>/dev/null || true

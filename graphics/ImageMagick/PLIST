@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:08 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:42 skrll Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/animate
@@ -62,7 +62,7 @@ lib/libMagick++.la
 lib/libMagick++.so
 lib/libMagick++.so.5
 lib/libMagick++.so.5.39
-@exec mkdir -p %D/lib/ImageMagick/modules/coders
+@exec ${MKDIR} -p %D/lib/ImageMagick/modules/coders
 man/man1/ImageMagick.1
 man/man1/Magick-config.1
 man/man1/Magick++-config.1

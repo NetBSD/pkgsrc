@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:30 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:59 skrll Exp $
 share/sgml/docbook/2.4.1/241chg.txt
 share/sgml/docbook/2.4.1/announce.txt
 share/sgml/docbook/2.4.1/calstbl.mod
@@ -69,4 +69,4 @@ share/sgml/docbook/4.1/readme.txt
 @dirrm share/sgml/docbook/3.0
 @dirrm share/sgml/docbook/2.4.1
 @dirrm share/sgml/docbook
-@unexec rmdir %D/share/sgml 2>/dev/null || true
+@unexec ${RMDIR} %D/share/sgml 2>/dev/null || true

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:42 skrll Exp $
 bin/gdk-pixbuf-config
 include/gdk-pixbuf/gdk-pixbuf.h
 include/gdk-pixbuf/gdk-pixbuf-loader.h
@@ -52,4 +52,4 @@ share/aclocal/gdk-pixbuf.m4
 @dirrm lib/gdk-pixbuf
 @dirrm include/gdk-pixbuf
 @exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/gdk-pixbuf.m4 ${LOCALBASE}/share/aclocal/gdk-pixbuf.m4
-@unexec test %D = ${LOCALBASE} || rm -f ${LOCALBASE}/share/aclocal/gdk-pixbuf.m4
+@unexec test %D = ${LOCALBASE} || ${RM} -f ${LOCALBASE}/share/aclocal/gdk-pixbuf.m4

@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:03:48 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:56 skrll Exp $
 bin/inews
 include/nntp.h
 lib/libnntpclnt.a
-@exec mkdir -p %D/etc/nntp
-@unexec rm -f %D/etc/nntp/domainname
-@unexec rm -f %D/etc/nntp/server
-@unexec rm -f %D/etc/nntp/server.auth
+@exec ${MKDIR} -p %D/etc/nntp
+@unexec ${RM} -f %D/etc/nntp/domainname
+@unexec ${RM} -f %D/etc/nntp/server
+@unexec ${RM} -f %D/etc/nntp/server.auth
 @dirrm etc/nntp
 man/man3/nntpclnt.3.gz

@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:58 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:00 skrll Exp $
 share/sgml/iso12083/article.dtd
 share/sgml/iso12083/book.dtd
 share/sgml/iso12083/maths.dtd
 share/sgml/iso12083/serial.dtd
 share/sgml/iso12083/catalog
 @dirrm share/sgml/iso12083
-@unexec rmdir %D/share/sgml 2>/dev/null || true
+@unexec ${RMDIR} %D/share/sgml 2>/dev/null || true

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:39:49 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:45 skrll Exp $
 sbin/tfkiss
 share/tfkiss/doc/alas.eng
 share/tfkiss/doc/alas.txt
@@ -7,7 +7,7 @@ share/tfkiss/doc/rfc1226
 share/tfkiss/doc/tfkiss.doc
 share/tfkiss/conf/tfkiss.ini
 share/tfkiss/conf/tfkiss.cfg
-@unexec rm -f %D/share/tfkiss/conf/tfkiss.par
+@unexec ${RM} -f %D/share/tfkiss/conf/tfkiss.par
 @dirrm share/tfkiss/doc
 @dirrm share/tfkiss/conf
 @dirrm share/tfkiss

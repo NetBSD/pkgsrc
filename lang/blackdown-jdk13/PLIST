@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:22:48 zuntum Exp $
-@unexec rm -f %D/java/jre/bin/java
-@unexec rm -f %D/java/jre/bin/keytool
-@unexec rm -f %D/java/jre/bin/policytool
-@unexec rm -f %D/java/jre/bin/tnameserv
-@unexec rm -f %D/java/jre/bin/rmiregistry
-@unexec rm -f %D/java/jre/bin/rmid
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:46 skrll Exp $
+@unexec ${RM} -f %D/java/jre/bin/java
+@unexec ${RM} -f %D/java/jre/bin/keytool
+@unexec ${RM} -f %D/java/jre/bin/policytool
+@unexec ${RM} -f %D/java/jre/bin/tnameserv
+@unexec ${RM} -f %D/java/jre/bin/rmiregistry
+@unexec ${RM} -f %D/java/jre/bin/rmid
 java/jre/bin/ppc/green_threads/java
 java/jre/bin/ppc/green_threads/keytool
 java/jre/bin/ppc/green_threads/policytool

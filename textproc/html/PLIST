@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:52 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:00 skrll Exp $
 share/sgml/html/2.0/ISOlat1.sgml
 share/sgml/html/2.0/html-1.dtd
 share/sgml/html/2.0/html-1s.dtd
@@ -20,4 +20,4 @@ share/sgml/html/catalog
 @dirrm share/sgml/html/3.2
 @dirrm share/sgml/html/2.0
 @dirrm share/sgml/html
-@unexec rmdir %D/share/sgml 2>/dev/null || true
+@unexec ${RMDIR} %D/share/sgml 2>/dev/null || true

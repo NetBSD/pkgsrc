@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/14 14:33:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:13:07 skrll Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -573,16 +573,16 @@ share/type-convert/type.convert
 @dirrm share/gtk-doc/html/libart
 @dirrm share/gtk-doc/html
 @dirrm share/gtk-doc
-@unexec rmdir %D/share/gnome/html/zvt 2>/dev/null || true
-@unexec rmdir %D/share/gnome/html/gnorba 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/html/zvt 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/html/gnorba 2>/dev/null || true
 @dirrm share/gnome/html/gnomeui
 @dirrm share/gnome/html/gnome
 @dirrm share/gnome/html
 @dirrm share/gnome/help/gnome-dev-info/C
 @dirrm share/gnome/help/gnome-dev-info
 @dirrm share/gnome/help
-@unexec rmdir %D/share/gnome/apps 2>/dev/null || true
-@unexec rmdir %D/share/gnome 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome 2>/dev/null || true
 @dirrm share/doc/gnome-libs
 @dirrm lib/gnome-libs/include
 @dirrm lib/gnome-libs
@@ -597,6 +597,6 @@ share/type-convert/type.convert
 @dirrm etc/CORBA/servers
 @dirrm etc/CORBA
 @exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/libart.m4 ${LOCALBASE}/share/aclocal/libart.m4
-@unexec test %D = ${LOCALBASE} || rm -f ${LOCALBASE}/share/aclocal/libart.m4
-@exec mkdir -p ${LOCALSTATEDIR}
-@unexec rm -rf ${LOCALSTATEDIR}
+@unexec test %D = ${LOCALBASE} || ${RM} -f ${LOCALBASE}/share/aclocal/libart.m4
+@exec ${MKDIR} -p ${LOCALSTATEDIR}
+@unexec ${RM} -rf ${LOCALSTATEDIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:10:39 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:06 skrll Exp $
 bin/fluid
 include/FL/Enumerations.H
 include/FL/Enumerations.h
@@ -188,7 +188,7 @@ include/FL/win32.h
 include/FL/x.H
 include/FL/x.h
 @exec   ln -sf FL %D/include/Fl
-@unexec rm -f %D/include/Fl
+@unexec ${RM} -f %D/include/Fl
 lib/libfltk.a
 lib/libfltk.la
 lib/libfltk.so

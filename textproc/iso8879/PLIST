@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:59 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:00 skrll Exp $
 share/sgml/iso8879/ISOamsa
 share/sgml/iso8879/ISOamsb
 share/sgml/iso8879/ISOamsc
@@ -20,4 +20,4 @@ share/sgml/iso8879/ISOpub
 share/sgml/iso8879/ISOtech
 share/sgml/iso8879/catalog
 @dirrm share/sgml/iso8879
-@unexec rmdir %D/share/sgml 2>/dev/null || true
+@unexec ${RMDIR} %D/share/sgml 2>/dev/null || true

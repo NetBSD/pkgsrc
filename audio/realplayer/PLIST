@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:29 skrll Exp $
 bin/realplay
 lib/RealPlayer8/Codecs/14_4.so.6.0
 lib/RealPlayer8/Codecs/28_8.so.6.0
@@ -305,7 +305,7 @@ lib/RealPlayer8/rp7mini.xpm
 lib/RealPlayer8/rpnp.so
 lib/netscape/plugins/raclass.zip
 lib/netscape/plugins/rpnp.so
-@unexec rmdir -p %D/lib/netscape/plugins 2>/dev/null || true
+@unexec ${RMDIR} -p %D/lib/netscape/plugins 2>/dev/null || true
 @dirrm lib/RealPlayer8/Plugins/ExtResources
 @dirrm lib/RealPlayer8/Plugins
 @dirrm lib/RealPlayer8/Help/realplay/pics

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/15 23:52:11 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:12:53 skrll Exp $
 bin/libIDL-config
 bin/name-client
 bin/old-name-server
@@ -107,7 +107,7 @@ share/idl/orbit-1.0/CosTypedEventComm.idl
 share/idl/orbit-1.0/LName.pidl
 @dirrm share/idl/orbit-1.0
 @dirrm share/idl
-@unexec rmdir %D/lib/pkgconfig 2>/dev/null || true
+@unexec ${RMDIR} %D/lib/pkgconfig 2>/dev/null || true
 @dirrm include/orbit-1.0/orb
 @dirrm include/orbit-1.0/ORBitutil
 @dirrm include/orbit-1.0/ORBitservices

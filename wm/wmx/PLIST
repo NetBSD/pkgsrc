@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:34 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:01 skrll Exp $
 bin/wmx
 share/doc/wmx/README
 share/doc/wmx/README.contrib
 @dirrm share/doc/wmx
-@exec	mkdir -p %D/etc/wmx
-@unexec	rmdir -p %D/etc/wmx 2>/dev/null || true
+@exec	${MKDIR} -p %D/etc/wmx
+@unexec	${RMDIR} -p %D/etc/wmx 2>/dev/null || true

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2001/11/01 00:21:31 zuntum Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2002/02/15 10:12:33 skrll Exp $
 bin/ud
 bin/ldapsearch
 bin/ldapmodify
@@ -220,6 +220,6 @@ sbin/ldbmtest
 share/openldap/ldapfriendly
 share/openldap/go500gw.help
 share/openldap/rcpt500.help
-@unexec rmdir %D/etc/openldap 2>/dev/null || true
-@unexec rmdir -p %D/var/openldap-ldbm 2>/dev/null || true
+@unexec ${RMDIR} %D/etc/openldap 2>/dev/null || true
+@unexec ${RMDIR} -p %D/var/openldap-ldbm 2>/dev/null || true
 @dirrm share/openldap

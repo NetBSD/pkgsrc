@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:41 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:34 skrll Exp $
 bin/postgres
 bin/postmaster
 etc/rc.d/pgsql
@@ -11,4 +11,4 @@ share/postgresql/pg_ident.conf.sample
 share/postgresql/postgresql.conf.sample
 share/postgresql/template1.bki
 share/postgresql/template1.description
-@unexec rmdir -p %D/share/postgresql 2>/dev/null || true
+@unexec ${RMDIR} -p %D/share/postgresql 2>/dev/null || true

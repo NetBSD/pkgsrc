@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:07 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:12:57 skrll Exp $
 bin/nessus
 include/nessus/config.h
 include/nessus/includes.h
@@ -15,9 +15,9 @@ man/man8/nessusd.8
 sbin/nessus-adduser
 sbin/nessusd
 @exec ${MKDIR} -p %D/lib/nessus/reports
-@unexec /bin/rmdir %D/lib/nessus/reports 2>/dev/null || true
-@unexec /bin/rmdir %D/lib/nessus 2>/dev/null || true
+@unexec ${RMDIR} %D/lib/nessus/reports 2>/dev/null || true
+@unexec ${RMDIR} %D/lib/nessus 2>/dev/null || true
 @exec ${MKDIR} -p %D/etc/nessus
-@unexec /bin/rmdir %D/etc/nessus 2>/dev/null || true
+@unexec ${RMDIR} %D/etc/nessus 2>/dev/null || true
 @exec ${MKDIR} -p /var/nessus
-@unexec /bin/rmdir /var/nessus 2>/dev/null || true
+@unexec ${RMDIR} /var/nessus 2>/dev/null || true

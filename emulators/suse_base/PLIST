@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:33 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:37 skrll Exp $
 sbin/linux-mkpwd
-@unexec rm -f %D/@@EMULSUBDIR@@/etc/ld.so.cache
+@unexec ${RM} -f %D/@@EMULSUBDIR@@/etc/ld.so.cache
 @@EMULSUBDIR@@/etc/ld.so.conf
-@unexec cd %D/@@EMULSUBDIR@@/etc && rm -f group gshadow passwd shadow
-@exec mkdir -p %D/@@EMULSUBDIR@@/dev
+@unexec cd %D/@@EMULSUBDIR@@/etc && ${RM} -f group gshadow passwd shadow
+@exec ${MKDIR} -p %D/@@EMULSUBDIR@@/dev
 @exec ln -s /dev/sound %D/@@EMULSUBDIR@@/dev/dsp
-@unexec rm -f %D/@@EMULSUBDIR@@/dev/dsp
+@unexec ${RM} -f %D/@@EMULSUBDIR@@/dev/dsp
 @exec ln -s /dev/null %D/@@EMULSUBDIR@@/dev/null
-@unexec rm -f %D/@@EMULSUBDIR@@/dev/null
+@unexec ${RM} -f %D/@@EMULSUBDIR@@/dev/null
 @dirrm @@EMULSUBDIR@@/dev

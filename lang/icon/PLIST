@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:36 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:46 skrll Exp $
 bin/iconc
 bin/icont
 bin/iconx
@@ -834,4 +834,4 @@ share/doc/icon/lb80.jpg
 share/doc/icon/relnotes.htm
 share/doc/icon/wwwcube.gif
 @dirrm share/doc/icon
-@unexec rmdir %D/lib/icon 2>/dev/null || true
+@unexec ${RMDIR} %D/lib/icon 2>/dev/null || true

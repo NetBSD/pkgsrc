@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:56:48 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:41 skrll Exp $
 bin/xgalaga
 share/xgalaga/README
 share/xgalaga/sounds/ddloo.raw
@@ -26,7 +26,7 @@ share/xgalaga/levels/level8.xgl
 share/xgalaga/levels/level9.xgl
 share/xgalaga/xgal.sndsrv.linux
 share/xgalaga/scores
-@unexec rm -f %D/share/xgalaga/scores
+@unexec ${RM} -f %D/share/xgalaga/scores
 @dirrm share/xgalaga/sounds
 @dirrm share/xgalaga/levels
 @dirrm share/xgalaga

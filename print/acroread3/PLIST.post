@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST.post,v 1.1 2001/10/31 23:31:15 zuntum Exp $
+@comment $NetBSD: PLIST.post,v 1.2 2002/02/15 10:12:56 skrll Exp $
 @exec ln -sf %D/Acrobat3/Reader/Fonts %D/Acrobat3/Reader/${PLATFORM}/fonts
-@unexec rm -f %D/Acrobat3/Reader/${PLATFORM}/fonts
+@unexec ${RM} -f %D/Acrobat3/Reader/${PLATFORM}/fonts
 @exec ln -sf %D/Acrobat3/Reader/res %D/Acrobat3/Reader/${PLATFORM}/res
-@unexec rm -f %D/Acrobat3/Reader/${PLATFORM}/res
+@unexec ${RM} -f %D/Acrobat3/Reader/${PLATFORM}/res
 @dirrm Acrobat3/Browsers/${PLATFORM}
 @dirrm Acrobat3/Reader/${PLATFORM}/app-defaults
 @dirrm Acrobat3/Reader/${PLATFORM}/bin

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:55:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:40 skrll Exp $
 bin/quake3arena
 lib/lokigames/quake3arena/libMesaVoodooGL.so
 lib/lokigames/quake3arena/libMesaVoodooGL.so.3
@@ -13,7 +13,7 @@ share/doc/lokigames/quake3arena-Help/Q3A_EULA.txt
 share/doc/lokigames/quake3arena-Help/Q3A_FAQ.html
 share/doc/lokigames/quake3arena-README
 @dirrm share/doc/lokigames/quake3arena-Help
-@unexec rmdir -p %D/share/doc/lokigames 2>/dev/null || true
+@unexec ${RMDIR} -p %D/share/doc/lokigames 2>/dev/null || true
 @comment next dir not necessarily empty, since the game data file could
 @comment be there
-@unexec rmdir -p %D/lib/lokigames/quake3arena/baseq3 2>/dev/null || true
+@unexec ${RMDIR} -p %D/lib/lokigames/quake3arena/baseq3 2>/dev/null || true

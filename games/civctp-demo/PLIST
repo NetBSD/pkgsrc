@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:51:09 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:38 skrll Exp $
 bin/civctp-demo
 lib/lokigames/civctp-demo/appstr.txt
 lib/lokigames/civctp-demo/civctp-demo
@@ -584,5 +584,5 @@ share/doc/lokigames/civctp-demo-README
 @dirrm lib/lokigames/civctp-demo/ctp_data/default
 @dirrm lib/lokigames/civctp-demo/ctp_data
 @dirrm lib/lokigames/civctp-demo
-@unexec rmdir -p %D/lib/lokigames 2>/dev/null || true
-@unexec rmdir -p %D/share/doc/lokigames 2>/dev/null || true
+@unexec ${RMDIR} -p %D/lib/lokigames 2>/dev/null || true
+@unexec ${RMDIR} -p %D/share/doc/lokigames 2>/dev/null || true

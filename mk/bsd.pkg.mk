@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.926 2002/02/13 23:02:14 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.927 2002/02/15 10:12:52 skrll Exp $
 #
 # This file is in the public domain.
 #
@@ -516,6 +516,7 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		CHOWN=${CHOWN:Q}					\
 		MKDIR=${MKDIR:Q}					\
 		RMDIR=${RMDIR:Q}					\
+		RM=${RM:Q}						\
 		TRUE=${TRUE:Q}						\
 		QMAILDIR=${QMAILDIR}
 .if defined(PERL5_SITELIB)
@@ -3674,7 +3675,7 @@ PERL5_PACKLIST_FILES=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do
 	| ${SORT} -u
 PERL5_PACKLIST_DIRS=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
-		-e "s,^,@unexec ${RMDIR} -p %D/," \
+		-e "s,^,@unexec \${RMDIR} -p %D/," \
 		-e "s,/[^/]*$$, 2>/dev/null || true," \
 	| ${SORT} -ur
 PERL5_GENERATE_PLIST=	${PERL5_COMMENT}; \
