@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.4 1998/08/11 12:20:57 agc Exp $
+$NetBSD: md5,v 1.5 1998/08/14 20:52:38 frueauf Exp $
 
-MD5 (lsof_4.33_W.tar.gz) = cab0593c57700c4c590a79890d996dd9
+MD5 (lsof/lsof_4.36_W.tar.gz) = ef3ca33905707de8c8c9845902956230
+MD5 (lsof/fd_lookup_patch) = bcd43338c20cbd9e11bd778ac8750a8b
