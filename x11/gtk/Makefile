@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 1999/10/22 23:35:04 tron Exp $
+# $NetBSD: Makefile,v 1.37 1999/11/12 11:17:02 agc Exp $
 
 DISTNAME=	gtk+-1.2.6
 CATEGORIES=	x11
@@ -26,6 +26,8 @@ INFO_FILES=	gdk.info gtk.info
 CPPFLAGS=	-I${LOCALBASE}/include				# libintl.h
 LDFLAGS=	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib	# -lintl
 PLIST_SUBST+=	LOCALBASE=${LOCALBASE}
+
+PATCH_FUZZ_FACTOR=	-F1
 
 # The following ensures that `gtk-config --libs' includes the correct linker
 # flags for linking the X11 libs.
