@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/08/06 01:20:20 itojun Exp $
+# $NetBSD: Makefile,v 1.40 2002/08/07 09:15:43 jlam Exp $
 
 DISTNAME=	wwwoffle-2.7c
 PKGREVISION=	2
@@ -28,8 +28,6 @@ post-build:
 		  -e 's#/usr/local#${PREFIX}#' <$$f.old >$$f; \
 		${RM} $$f.old; \
 	done
-	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${FILESDIR}/wwwoffle.sh \
-	  >${WRKDIR}/wwwoffle.sh
 	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${FILESDIR}/wwwoffled \
 	  >${WRKDIR}/wwwoffled
 
@@ -46,7 +44,6 @@ post-install:
 	  ${PREFIX}/sbin/wwwoffle-upgrade-config.pl
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/upgrade-config-2.x-2.5.pl \
 	  ${PREFIX}/sbin/wwwoffle-upgrade-config-2.x-2.5.pl
-	${INSTALL_SCRIPT} ${WRKDIR}/wwwoffle.sh ${PREFIX}/etc/rc.d/wwwoffle
 	${INSTALL_SCRIPT} ${WRKDIR}/wwwoffled ${PREFIX}/etc/rc.d
 # Directories other than html and search are automatically created at run time
 	${GTAR} czCf / ${PREFIX}/libdata/wwwoffle-spool.tar.gz \
