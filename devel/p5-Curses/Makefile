@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/21 16:43:35 martti Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/27 17:07:35 grant Exp $
 # FreeBSD Id: Makefile,v 1.8 1998/04/04 13:58:26 vanilla Exp
 #
 
@@ -23,6 +23,6 @@ MAKE_PARAMS=	PANELS
 pre-configure:
 	@${LN} -sf ${WRKSRC}/hints/c-netbsd.ncurses.h ${WRKSRC}/c-config.h
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 13:51:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/27 17:07:35 grant Exp $
 #
 
 DISTNAME=		tvision-0.7
@@ -14,5 +14,5 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
