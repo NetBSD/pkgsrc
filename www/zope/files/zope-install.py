@@ -1,6 +1,6 @@
 #!/usr/pkg/bin/python
 #
-#	$NetBSD: zope-install.py,v 1.3 1999/06/19 22:48:23 tsarna Exp $
+#	$NetBSD: zope-install.py,v 1.4 1999/09/23 17:42:59 tsarna Exp $
 #
 # Copyright (c) 1998,1999 Endicor Technologies, Inc.
 # All rights reserved. Written by Ty Sarna <tsarna@endicor.com>
@@ -35,11 +35,14 @@ apconf = prefix + "/etc/httpd/httpd.conf"
 zopedir = prefix + "/lib/zope"
 zopevar = zopedir + "/var"
 zopedata = "/var/zope"
+ext = "fs"
+module = "Zope"
 
 def usage():
-    print 'usage: zope-install [-n] [-p perms] [-u user] [-g group] [-d dir] [-c cgidir] instancename'
+    print 'usage: zope-install [-n] [-b] [-p perms] [-u user] [-g group] [-d dir] [-c cgidir] instancename'
     print
     print '\t-n\tshow what would be done, but don\'t actually do it'
+    print '\t-b\tuse old .bbb format BoboPOS format instead of .fs ZODB format'
     print '\t-p\tmanager permissions, in the form'
     print '\t\tusername:plaintextpassword[:domain-restrinction]'
     print '\t\teg: "root:mypass" or "root:mypass:*.mydomain.com'
@@ -60,8 +63,8 @@ def exists(f):
 
 def resourcefile(v):
     resource = '''#!%(zopedir)s/pcgi/pcgi-wrapper
-PCGI_NAME=Main
-PCGI_MODULE_PATH=%(zopedir)s/lib/python/Main.py
+PCGI_NAME=%(module)s
+PCGI_MODULE_PATH=%(zopedir)s/lib/python/%(module)s.py
 PCGI_PUBLISHER=%(zopedir)s/pcgi/pcgi_publisher.py
 PCGI_EXE=%(python)s
 PCGI_SOCKET_FILE=%(instvar)s/pcgi.soc
@@ -106,7 +109,7 @@ def createfile(pretend, fname, contents):
         f.close()
             
 if __name__ == "__main__":
-    optlist, args = getopt.getopt(sys.argv[1:], 'np:u:g:d:c:')
+    optlist, args = getopt.getopt(sys.argv[1:], 'bnp:u:g:d:c:')
     if len(args) != 1:
         usage()
 
@@ -121,6 +124,9 @@ if __name__ == "__main__":
     for (oname, oarg) in optlist:
         if oname == '-n':
             pretend = 1
+        elif oname == '-b':
+            ext = "bbb"
+            module = "Main"
         elif oname == '-p':
             perms = oarg
             seenperms = 1
@@ -140,8 +146,8 @@ if __name__ == "__main__":
     
     runsys(pretend, "mkdir -p " + instvar)
 
-    if not exists(instvar + "/Data.bbb"):
-        runsys(pretend, "cp %(zopevar)s/Data.bbb.in %(instvar)s" % vars())
+    if not exists(instvar + "/Data." + ext):
+        runsys(pretend, "cp %(zopevar)s/Data.%(ext)s.in %(instvar)s" % vars())
 
     runsys(pretend, "chown -R %(user)s:%(group)s %(dirname)s" % vars())
     runsys(pretend, "chmod -R u+rwX,g+rX,g-w,o-rwx %(dirname)s" % vars())
@@ -164,10 +170,12 @@ if __name__ == "__main__":
 
     sys.stderr.write("""
 now you will need to add lines similar to these to your
-Apache srm.conf file to enable access to your instance
+Apache httpd.conf file to enable access to your instance
 via http://yourwebserver/instance/
 
 RewriteEngine on
 RewriteCond %%{HTTP:Authorization}  ^(.*)
 RewriteRule ^/%(instance)s($|/)(.*) %(cgidir)s/%(instance)s.cgi/$2  [e=HTTP_CGI_AUTHORIZATION:%%1,t=application/x-httpd-cgi,l]
+
+You may need to add Options ExecCGI on "<Directory />" for this to work.
 """ % vars())

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 1999/06/19 22:48:23 tsarna Exp $
+# $NetBSD: Makefile,v 1.9 1999/09/23 17:42:59 tsarna Exp $
 #
 
-DISTNAME=	Zope-1.10.3-src
-PKGNAME=	zope-1.10.3
+DISTNAME=	Zope-2.0.1-src
+PKGNAME=	zope-2.0.1
 CATEGORIES=	www
-MASTER_SITES=   http://www.zope.org/Download/Releases/Zope-1.10.3/
+MASTER_SITES=   http://www.zope.org/Products/Zope/2.0.1/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
@@ -29,7 +29,7 @@ do-install:
 	${PREFIX}/bin/python \
 		${PREFIX}/lib/python1.5/compileall.py ${ZOPEDIR}
 	chmod -R a+rX ${ZOPEDIR}
-	(cd ${PREFIX}; find lib/zope -type f -print >>${PLIST_SRC})
+	(cd ${PREFIX}; find lib/zope \( -type f -o -type l \) -print >>${PLIST_SRC})
 	(cd ${PREFIX}; find -d lib/zope -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 	${SED} -e "s,/usr/pkg,${PREFIX}," \
