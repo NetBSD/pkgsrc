@@ -1,7 +1,6 @@
-Xpdf is a viewer for Portable Document Format (PDF) files.  (These are
-also sometimes also called 'Acrobat' files, from the name of Adobe's
-PDF software.)  Xpdf runs under UNIX and the X Window System.
+Xpdf is a viewer for Portable Document Format (PDF) files. 
 
-Xpdf is designed to be small and efficient.  It does not use the Motif
-or Xt libraries.  It uses standard X fonts.  Xpdf is quite usable on a
-486-66 PC running FreeBSD.
+Xpdf is designed to be small and efficient. It runs under X, 
+but does not use the Motif or Xt libraries. Use of the T1 library 
+provides superior rendering of type 1 fonts, and also permits 
+run-time configuration of the exact fonts to be used. 
