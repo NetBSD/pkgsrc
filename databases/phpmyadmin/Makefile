@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/01/05 08:41:45 tron Exp $
+# $NetBSD: Makefile,v 1.8 2003/01/05 14:25:18 tron Exp $
 
-DISTNAME=	phpMyAdmin-2.3.2-php
-PKGNAME=	phpmyadmin-2.3.2
+DISTNAME=	phpMyAdmin-${DIST_VERSION}-php
+PKGNAME=	phpmyadmin-2.3.3.1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,12 +13,14 @@ COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
 DEPENDS+=	php-mysql>=4.0.5:../../databases/php4-mysql
 DEPENDS+=	php-pcre>=4.0.5:../../devel/php4-pcre
 
+PLIST_SUBST+=	DIST_VERSION=${DIST_VERSION}
 NO_BUILD=	YES
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-php//}
 
+DIST_VERSION=	2.3.3pl1
 DOC_FILES=	ANNOUNCE.txt CREDITS ChangeLog Documentation.html \
-		Documentation.txt INSTALL LICENSE README RELEASE-DATE-2.3.2 \
-		TODO
+		Documentation.txt INSTALL LICENSE README \
+		RELEASE-DATE-${DIST_VERSION} TODO
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin
