@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.5 2004/12/04 16:05:06 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.6 2005/01/16 11:48:56 taca Exp $
 #
 
 .ifndef _RUBYVERSION_MK
@@ -66,12 +66,21 @@ _RUBY_VERS_TEENY=	${RUBY_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
 RUBY_VER=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
 
 #
-# RUBY_REQD is minimum required Ruby's version
+# RUBY_HAS_ARCHLIB	This package contains machine dependent binaries.
+# RUBY_REQD		Minimum required Ruby's version
 #
+.if defined(RUBY_HAS_ARCHLIB) && empty(RUBY_HAS_ARCHLIB:M[nN][oO])
+.if ${RUBY_VER} == "16"
+RUBY_REQD?=		${RUBY16_VERSION}
+.elif ${RUBY_VER} == "18"
+RUBY_REQD?=		${RUBY18_VERSION}
+.endif
+.else
 .if ${RUBY_VER} == "16"
 RUBY_REQD?=		1.6.8
 .elif ${RUBY_VER} == "18"
 RUBY_REQD?=		1.8.1
+.endif
 .endif
 
 # RUBY_SUFFIX is appended to Ruby's commands; ruby, irb and so on.
