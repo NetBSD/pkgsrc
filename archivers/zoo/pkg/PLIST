@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/06 09:57:37 agc Exp $
-bin/fiz
-bin/zoo
-man/man1/fiz.1.gz
-man/man1/zoo.1.gz

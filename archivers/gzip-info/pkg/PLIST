@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/18 14:26:52 kim Exp $
-@unexec install-info --delete --info-dir=%D/info %D/info/gzip.info
-info/gzip.info
-@exec install-info --info-dir=%D/info %D/info/gzip.info

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.pre,v 1.1 1998/06/20 23:27:51 tv Exp $
-bin/zip1
-man/man1/zip1.1
