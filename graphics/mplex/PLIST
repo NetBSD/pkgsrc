@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:14 zuntum Exp $
-bin/mplex
-share/doc/mplex/COPYING
-share/doc/mplex/INSTRUCT
-share/doc/mplex/README
-@dirrm share/doc/mplex
