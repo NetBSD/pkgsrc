@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.7 2002/02/09 19:25:33 jlam Exp $
-# FreeBSD Id: Makefile,v 1.1.1.1 1998/02/20 04:37:31 steve Exp
+# $NetBSD: Makefile,v 1.8 2002/02/16 01:21:52 wiz Exp $
+#
 
 DISTNAME=	mpage-2.5
 CATEGORIES=	print
@@ -11,5 +11,13 @@ COMMENT=	Print multiple pages per sheet of paper
 
 USE_BUILDLINK_ONLY=	yes
 ALL_TARGET=		default
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PAPERSIZE} == "A4"
+MAKEFLAGS+=	PAGESIZE=PAGE_A4
+.elif ((${PAPERSIZE} == "Letter") || (${PAPERSIZE} == "Letterdj"))
+MAKEFLAGS+=	PAGESIZE=PAGE_LETTER
+.endif
 
 .include "../../mk/bsd.pkg.mk"
