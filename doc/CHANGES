@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.995 2003/01/03 16:35:04 lukem Exp $
+$NetBSD: CHANGES,v 1.996 2003/01/03 18:58:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -57,3 +57,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated easytag to 0.26 [wiz 2003-01-03]
 	Updated cdrecord to 2.0 [lukem 2003-01-03]
 	Removed cdrecord-devel [lukem 2003-01-03]
+	Updated pan to 0.13.3 (gtk2-pan) [wiz 2003-01-03]
+	Updated Speex to 0.99.4nb1 [wiz 2003-01-03]
