@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/05/07 02:11:17 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2000/05/10 15:39:07 jlam Exp $
 #
 
 DISTNAME=		gnome-print-0.18
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.levien.com/gnome/print-arch.html
 
 DEPENDS+=		gnome-libs>=1.0.56:../../x11/gnome-libs
 DEPENDS+=		libxml>=1.8.5:../../textproc/libxml
-DEPENDS+=		ghostscript{,-nox11,-x11}-[0-9]*:../../print/ghostscript-x11
+DEPENDS+=		ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 
 USE_LIBTOOL=		# defined
 USE_X11BASE=		# defined

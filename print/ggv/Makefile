@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/05/07 02:11:17 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2000/05/10 15:39:07 jlam Exp $
 #
 
 DISTNAME=	ggv-0.50
@@ -9,7 +9,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
-DEPENDS+=	ghostscript-x11-*:../../print/ghostscript-x11
+DEPENDS+=	ghostscript-[6-9]*:../../print/ghostscript
 DEPENDS+=	gnome-core-*:../../x11/gnome-core
 
 GNU_CONFIGURE=	YES
