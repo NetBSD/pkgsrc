@@ -1,202 +1,200 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:46 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/07/27 21:54:32 jschauma Exp $
+CHANGES
+COPYRIGHT
+ControlPanel.html
+LICENSE
+README
+Welcome.html
+bin/.java_wrapper
+bin/ControlPanel
+bin/awt_robot
+bin/i386/green_threads/appletviewer
+bin/i386/green_threads/extcheck
+bin/i386/green_threads/idlj
+bin/i386/green_threads/jar
+bin/i386/green_threads/jarsigner
+bin/i386/green_threads/java
+bin/i386/green_threads/javac
+bin/i386/green_threads/javadoc
+bin/i386/green_threads/javah
+bin/i386/green_threads/javap
+bin/i386/green_threads/jdb
+bin/i386/green_threads/keytool
+bin/i386/green_threads/native2ascii
+bin/i386/green_threads/oldjava
+bin/i386/green_threads/oldjavac
+bin/i386/green_threads/oldjdb
+bin/i386/green_threads/policytool
+bin/i386/green_threads/rmic
+bin/i386/green_threads/rmid
+bin/i386/green_threads/rmiregistry
+bin/i386/green_threads/serialver
+bin/i386/green_threads/tnameserv
+bin/i386/native_threads/java
+bin/i386/native_threads/java_vm
+bin/i386/native_threads/keytool
+bin/i386/native_threads/policytool
+bin/i386/native_threads/rmid
+bin/i386/native_threads/rmiregistry
+bin/i386/native_threads/tnameserv
+bin/i386/realpath
 bin/java
-jre/CHANGES
-jre/COPYRIGHT
-jre/ControlPanel.html
-jre/LICENSE
-jre/README
-jre/Welcome.html
-jre/bin/.java_wrapper
-jre/bin/ControlPanel
-jre/bin/awt_robot
-jre/bin/i386/green_threads/appletviewer
-jre/bin/i386/green_threads/extcheck
-jre/bin/i386/green_threads/idlj
-jre/bin/i386/green_threads/jar
-jre/bin/i386/green_threads/jarsigner
-jre/bin/i386/green_threads/java
-jre/bin/i386/green_threads/javac
-jre/bin/i386/green_threads/javadoc
-jre/bin/i386/green_threads/javah
-jre/bin/i386/green_threads/javap
-jre/bin/i386/green_threads/jdb
-jre/bin/i386/green_threads/keytool
-jre/bin/i386/green_threads/native2ascii
-jre/bin/i386/green_threads/oldjava
-jre/bin/i386/green_threads/oldjavac
-jre/bin/i386/green_threads/oldjdb
-jre/bin/i386/green_threads/policytool
-jre/bin/i386/green_threads/rmic
-jre/bin/i386/green_threads/rmid
-jre/bin/i386/green_threads/rmiregistry
-jre/bin/i386/green_threads/serialver
-jre/bin/i386/green_threads/tnameserv
-jre/bin/i386/native_threads/java
-jre/bin/i386/native_threads/java_vm
-jre/bin/i386/native_threads/keytool
-jre/bin/i386/native_threads/policytool
-jre/bin/i386/native_threads/rmid
-jre/bin/i386/native_threads/rmiregistry
-jre/bin/i386/native_threads/tnameserv
-jre/bin/i386/realpath
-jre/bin/java
-jre/bin/keytool
-jre/bin/policytool
-jre/bin/realpath
-jre/bin/rmid
-jre/bin/rmiregistry
-jre/bin/tnameserv
-jre/lib/audio/soundbank.gm
-jre/lib/cmm/CIEXYZ.pf
-jre/lib/cmm/GRAY.pf
-jre/lib/cmm/LINEAR_RGB.pf
-jre/lib/cmm/PYCC.pf
-jre/lib/cmm/sRGB.pf
-jre/lib/content-types.properties
-jre/lib/flavormap.properties
-jre/lib/font.properties
-jre/lib/font.properties.ja
-jre/lib/font.properties.zh
-jre/lib/fonts/LucidaBrightDemiBold.ttf
-jre/lib/fonts/LucidaBrightDemiItalic.ttf
-jre/lib/fonts/LucidaBrightItalic.ttf
-jre/lib/fonts/LucidaBrightRegular.ttf
-jre/lib/fonts/LucidaSansDemiBold.ttf
-jre/lib/fonts/LucidaSansDemiOblique.ttf
-jre/lib/fonts/LucidaSansOblique.ttf
-jre/lib/fonts/LucidaSansRegular.ttf
-jre/lib/fonts/LucidaTypewriterBold.ttf
-jre/lib/fonts/LucidaTypewriterBoldOblique.ttf
-jre/lib/fonts/LucidaTypewriterOblique.ttf
-jre/lib/fonts/LucidaTypewriterRegular.ttf
-jre/lib/fonts/fonts.dir
-jre/lib/i18n.jar
-jre/lib/i386/classic/Xusage.txt
-jre/lib/i386/classic/libjvm.so
-jre/lib/i386/client/Xusage.txt
-jre/lib/i386/client/libjvm.so
-jre/lib/i386/green_threads/libhpi.so
-jre/lib/i386/hotspot
-jre/lib/i386/libJdbcOdbc.so
-jre/lib/i386/libagent.so
-jre/lib/i386/libawt.so
-jre/lib/i386/libcmm.so
-jre/lib/i386/libdcpr.so
-jre/lib/i386/libfontmanager.so
-jre/lib/i386/libhprof.so
-jre/lib/i386/libioser12.so
-jre/lib/i386/libjava.so
-jre/lib/i386/libjavaplugin_jni.so
-jre/lib/i386/libjawt.so
-jre/lib/i386/libjcov.so
-jre/lib/i386/libjpeg.so
-jre/lib/i386/libjsound.so
-jre/lib/i386/libmlib_image.so
-jre/lib/i386/libnet.so
-jre/lib/i386/libpreemptive_close.so
-jre/lib/i386/libverify.so
-jre/lib/i386/libzip.so
-jre/lib/i386/native_threads/libhpi.so
-jre/lib/i386/server/Xusage.txt
-jre/lib/i386/server/libjvm.so
-jre/lib/images/cursors/cursors.properties
-jre/lib/images/cursors/invalid32x32.gif
-jre/lib/images/cursors/motif_CopyDrop32x32.gif
-jre/lib/images/cursors/motif_CopyNoDrop32x32.gif
-jre/lib/images/cursors/motif_LinkDrop32x32.gif
-jre/lib/images/cursors/motif_LinkNoDrop32x32.gif
-jre/lib/images/cursors/motif_MoveDrop32x32.gif
-jre/lib/images/cursors/motif_MoveNoDrop32x32.gif
-jre/lib/javaplugin.jar
-jre/lib/jvm.cfg
-jre/lib/jvm.hprof.txt
-jre/lib/jvm.jcov.txt
-jre/lib/locale/de/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/es/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/fr/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/it/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/ja/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/ko.UTF-8/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/ko/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/sv/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/zh.GBK/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/psfont.properties.ja
-jre/lib/psfontj2d.properties
-jre/lib/rt.jar
-jre/lib/security/cacerts
-jre/lib/security/java.policy
-jre/lib/security/java.security
-jre/lib/sunrsasign.jar
-jre/lib/tzmappings
-jre/man/ja
-jre/man/ja_JP.eucJP/man1/java.1
-jre/man/ja_JP.eucJP/man1/keytool.1
-jre/man/ja_JP.eucJP/man1/rmid.1
-jre/man/ja_JP.eucJP/man1/rmiregistry.1
-jre/man/ja_JP.eucJP/man1/tnameserv.1
-jre/man/man1/java.1
-jre/man/man1/keytool.1
-jre/man/man1/rmid.1
-jre/man/man1/rmiregistry.1
-jre/man/man1/tnameserv.1
-jre/plugin/i386/ns4/javaplugin.so
-jre/plugin/i386/ns600/libjavaplugin_oji.so
+bin/keytool
+bin/policytool
+bin/realpath
+bin/rmid
+bin/rmiregistry
+bin/tnameserv
+lib/audio/soundbank.gm
+lib/cmm/CIEXYZ.pf
+lib/cmm/GRAY.pf
+lib/cmm/LINEAR_RGB.pf
+lib/cmm/PYCC.pf
+lib/cmm/sRGB.pf
+lib/content-types.properties
+lib/flavormap.properties
+lib/font.properties
+lib/font.properties.ja
+lib/font.properties.zh
+lib/fonts/LucidaBrightDemiBold.ttf
+lib/fonts/LucidaBrightDemiItalic.ttf
+lib/fonts/LucidaBrightItalic.ttf
+lib/fonts/LucidaBrightRegular.ttf
+lib/fonts/LucidaSansDemiBold.ttf
+lib/fonts/LucidaSansDemiOblique.ttf
+lib/fonts/LucidaSansOblique.ttf
+lib/fonts/LucidaSansRegular.ttf
+lib/fonts/LucidaTypewriterBold.ttf
+lib/fonts/LucidaTypewriterBoldOblique.ttf
+lib/fonts/LucidaTypewriterOblique.ttf
+lib/fonts/LucidaTypewriterRegular.ttf
+lib/fonts/fonts.dir
+lib/i18n.jar
+lib/i386/classic/Xusage.txt
+lib/i386/classic/libjvm.so
+lib/i386/client/Xusage.txt
+lib/i386/client/libjvm.so
+lib/i386/green_threads/libhpi.so
+lib/i386/hotspot
+lib/i386/libJdbcOdbc.so
+lib/i386/libagent.so
+lib/i386/libawt.so
+lib/i386/libcmm.so
+lib/i386/libdcpr.so
+lib/i386/libfontmanager.so
+lib/i386/libhprof.so
+lib/i386/libioser12.so
+lib/i386/libjava.so
+lib/i386/libjavaplugin_jni.so
+lib/i386/libjawt.so
+lib/i386/libjcov.so
+lib/i386/libjpeg.so
+lib/i386/libjsound.so
+lib/i386/libmlib_image.so
+lib/i386/libnet.so
+lib/i386/libpreemptive_close.so
+lib/i386/libverify.so
+lib/i386/libzip.so
+lib/i386/native_threads/libhpi.so
+lib/i386/server/Xusage.txt
+lib/i386/server/libjvm.so
+lib/images/cursors/cursors.properties
+lib/images/cursors/invalid32x32.gif
+lib/images/cursors/motif_CopyDrop32x32.gif
+lib/images/cursors/motif_CopyNoDrop32x32.gif
+lib/images/cursors/motif_LinkDrop32x32.gif
+lib/images/cursors/motif_LinkNoDrop32x32.gif
+lib/images/cursors/motif_MoveDrop32x32.gif
+lib/images/cursors/motif_MoveNoDrop32x32.gif
+lib/javaplugin.jar
+lib/jvm.cfg
+lib/jvm.hprof.txt
+lib/jvm.jcov.txt
+lib/locale/de/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/es/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/fr/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/it/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/ja/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/ko.UTF-8/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/ko/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/sv/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/zh.GBK/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo
+lib/psfont.properties.ja
+lib/psfontj2d.properties
+lib/rt.jar
+lib/security/cacerts
+lib/security/java.policy
+lib/security/java.security
+lib/sunrsasign.jar
+lib/tzmappings
+man/ja
+man/ja_JP.eucJP/man1/java.1
+man/ja_JP.eucJP/man1/keytool.1
+man/ja_JP.eucJP/man1/rmid.1
+man/ja_JP.eucJP/man1/rmiregistry.1
+man/ja_JP.eucJP/man1/tnameserv.1
+man/man1/java.1
+man/man1/keytool.1
+man/man1/rmid.1
+man/man1/rmiregistry.1
+man/man1/tnameserv.1
+plugin/i386/ns4/javaplugin.so
+plugin/i386/ns600/libjavaplugin_oji.so
 @exec ${MKDIR} %D/jre/lib/applet
 @exec ${MKDIR} %D/jre/lib/ext
-@dirrm jre/plugin/i386/ns600
-@dirrm jre/plugin/i386/ns4
-@dirrm jre/plugin/i386
-@dirrm jre/plugin
-@dirrm jre/man/man1
-@dirrm jre/man/ja_JP.eucJP/man1
-@dirrm jre/man/ja_JP.eucJP
-@dirrm jre/man
-@dirrm jre/lib/security
-@dirrm jre/lib/locale/zh_TW/LC_MESSAGES
-@dirrm jre/lib/locale/zh_TW.BIG5/LC_MESSAGES
-@dirrm jre/lib/locale/zh_TW.BIG5
-@dirrm jre/lib/locale/zh_TW
-@dirrm jre/lib/locale/zh/LC_MESSAGES
-@dirrm jre/lib/locale/zh.GBK/LC_MESSAGES
-@dirrm jre/lib/locale/zh.GBK
-@dirrm jre/lib/locale/zh
-@dirrm jre/lib/locale/sv/LC_MESSAGES
-@dirrm jre/lib/locale/sv
-@dirrm jre/lib/locale/ko/LC_MESSAGES
-@dirrm jre/lib/locale/ko.UTF-8/LC_MESSAGES
-@dirrm jre/lib/locale/ko.UTF-8
-@dirrm jre/lib/locale/ko
-@dirrm jre/lib/locale/ja/LC_MESSAGES
-@dirrm jre/lib/locale/ja
-@dirrm jre/lib/locale/it/LC_MESSAGES
-@dirrm jre/lib/locale/it
-@dirrm jre/lib/locale/fr/LC_MESSAGES
-@dirrm jre/lib/locale/fr
-@dirrm jre/lib/locale/es/LC_MESSAGES
-@dirrm jre/lib/locale/es
-@dirrm jre/lib/locale/de/LC_MESSAGES
-@dirrm jre/lib/locale/de
-@dirrm jre/lib/locale
-@dirrm jre/lib/images/cursors
-@dirrm jre/lib/images
-@dirrm jre/lib/i386/server
-@dirrm jre/lib/i386/native_threads
-@dirrm jre/lib/i386/green_threads
-@dirrm jre/lib/i386/client
-@dirrm jre/lib/i386/classic
-@dirrm jre/lib/i386
-@dirrm jre/lib/fonts
-@dirrm jre/lib/ext
-@dirrm jre/lib/cmm
-@dirrm jre/lib/audio
-@dirrm jre/lib/applet
-@dirrm jre/lib
-@dirrm jre/bin/i386/native_threads
-@dirrm jre/bin/i386/green_threads
-@dirrm jre/bin/i386
-@dirrm jre/bin
-@dirrm jre
+@dirrm plugin/i386/ns600
+@dirrm plugin/i386/ns4
+@dirrm plugin/i386
+@dirrm plugin
+@dirrm man/man1
+@dirrm man/ja_JP.eucJP/man1
+@dirrm man/ja_JP.eucJP
+@dirrm man
+@dirrm lib/security
+@dirrm lib/locale/zh_TW/LC_MESSAGES
+@dirrm lib/locale/zh_TW.BIG5/LC_MESSAGES
+@dirrm lib/locale/zh_TW.BIG5
+@dirrm lib/locale/zh_TW
+@dirrm lib/locale/zh/LC_MESSAGES
+@dirrm lib/locale/zh.GBK/LC_MESSAGES
+@dirrm lib/locale/zh.GBK
+@dirrm lib/locale/zh
+@dirrm lib/locale/sv/LC_MESSAGES
+@dirrm lib/locale/sv
+@dirrm lib/locale/ko/LC_MESSAGES
+@dirrm lib/locale/ko.UTF-8/LC_MESSAGES
+@dirrm lib/locale/ko.UTF-8
+@dirrm lib/locale/ko
+@dirrm lib/locale/ja/LC_MESSAGES
+@dirrm lib/locale/ja
+@dirrm lib/locale/it/LC_MESSAGES
+@dirrm lib/locale/it
+@dirrm lib/locale/fr/LC_MESSAGES
+@dirrm lib/locale/fr
+@dirrm lib/locale/es/LC_MESSAGES
+@dirrm lib/locale/es
+@dirrm lib/locale/de/LC_MESSAGES
+@dirrm lib/locale/de
+@dirrm lib/locale
+@dirrm lib/images/cursors
+@dirrm lib/images
+@dirrm lib/i386/server
+@dirrm lib/i386/native_threads
+@dirrm lib/i386/green_threads
+@dirrm lib/i386/client
+@dirrm lib/i386/classic
+@dirrm lib/i386
+@dirrm lib/fonts
+@dirrm lib/ext
+@dirrm lib/cmm
+@dirrm lib/audio
+@dirrm lib/applet
+@dirrm lib
+@dirrm bin/i386/native_threads
+@dirrm bin/i386/green_threads
+@dirrm bin/i386
 @dirrm bin
+@unexec ${RMDIR} %D
