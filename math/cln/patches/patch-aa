@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/05 14:46:23 adam Exp $
+
+--- src/base/random/cl_random_from.cc.orig	2003-12-29 19:04:08.000000000 +0000
++++ src/base/random/cl_random_from.cc
+@@ -12,7 +12,7 @@
+ #include "cl_base_config.h"
+ #include "cl_low.h"
+ 
+-#if defined(unix) || defined(__unix) || defined(_AIX) || defined(sinix) || (defined(__MACH__) && defined(__APPLE__)) || (defined(_WIN32) && defined(__GNUC__)) || defined(__BEOS__)
++#if defined(unix) || defined(__unix) || defined(_AIX) || defined(sinix) || (defined(__MACH__) && defined(__APPLE__)) || (defined(_WIN32) && defined(__GNUC__)) || defined(__BEOS__) || defined(__NetBSD__)
+ 
+ #include <sys/types.h>
+ #include <unistd.h> // declares getpid()
+@@ -64,7 +64,7 @@ random_state::random_state ()
+ {
+ 	var uint32 seed_hi;
+ 	var uint32 seed_lo;
+-#if defined(unix) || defined(__unix) || defined(_AIX) || defined(sinix) || (defined(__MACH__) && defined(__APPLE__)) || (defined(_WIN32) && defined(__GNUC__)) || defined(__BEOS__)
++#if defined(unix) || defined(__unix) || defined(_AIX) || defined(sinix) || (defined(__MACH__) && defined(__APPLE__)) || (defined(_WIN32) && defined(__GNUC__)) || defined(__BEOS__) || defined(__NetBSD__)
+ 	seed_lo = ::get_seed();
+ 	seed_hi = (rand() // zufällige 31 Bit (bei UNIX_BSD) bzw. 16 Bit (bei UNIX_SYSV)
+                           << 8) ^ (uintL)(getpid()); // ca. 8 Bit von der Process ID
