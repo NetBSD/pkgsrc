@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/26 03:15:28 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2005/02/22 21:28:56 agc Exp $
 
 SHA1 (pdbalign.tar.gz) = 83f8e393fe98cb877bc90e804911b1819a18c1d3
+RMD160 (pdbalign.tar.gz) = 7cc3f416fd3347628e2f21f48f6243ec51342e98
 Size (pdbalign.tar.gz) = 10457 bytes
 SHA1 (patch-aa) = 77293faa3e81fd6cdb093d378b14128208d3f845
 SHA1 (patch-ab) = 9795a6a0174811a5e4d922e1ba69e24ced97dc61
