@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1806 2003/03/31 07:57:50 tron Exp $
+$NetBSD: CHANGES,v 1.1807 2003/03/31 08:57:07 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1350,3 +1350,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.17.2 [gehenna 2003-03-30]
 	Added libnbcompat-20030331 [grant 2003-03-31]
 	Updated bidwatcher to 1.3.7nb1 [tron 2003-03-31]
+	Added mtree-20030331 [grant 2003-03-31]
