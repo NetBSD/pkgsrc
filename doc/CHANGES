@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3927 2003/12/03 15:51:39 epg Exp $
+$NetBSD: CHANGES,v 1.3928 2003/12/03 15:57:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4777,3 +4777,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ap2-perl to 1.99.8nb1 [epg 2003-12-03]
 	Updated ap2-ruby to 1.1.1nb1 [epg 2003-12-03]
 	Updated ap2-subversion to 0.33.1nb1 [epg 2003-12-03]
+	Updated gperf to 3.0.1 [adam 2003-12-03]
