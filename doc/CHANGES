@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5292 2004/03/22 12:28:08 wiz Exp $
+$NetBSD: CHANGES,v 1.5293 2004/03/22 19:55:59 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1509,3 +1509,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fvwm2 to 2.4.18 [martti 2004-03-22]
 	Updated xvile to 9.4 [wiz 2004-03-22]
 	Updated p5-Tk to 804.026 [wiz 2004-03-22]
+	Updated apr to 0.9.5.2.0.49 [reed 2004-03-22]
+	Updated apache2 to 2.0.49 [reed 2004-03-22]
