@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 1999/08/18 09:00:23 agc Exp $
+# $NetBSD: Makefile,v 1.37 1999/08/24 14:18:53 tron Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -12,7 +12,7 @@ MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/ \
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.PostgreSQL.ORG/
 
-BUILD_DEPENDS+=		bison:../../devel/bison
+BUILD_DEPENDS+=		${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=		tk-8.0.5:../../x11/tk80 \
 			tcl-8.0.5:../../lang/tcl80 \
 			addnerd-1.6:../../sysutils/addnerd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/08/18 08:38:51 agc Exp $
+# $NetBSD: Makefile,v 1.11 1999/08/24 14:18:57 tron Exp $
 
 DISTNAME=		inn-2.2
 CATEGORIES=		news
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.isc.org/inn.html
 
-BUILD_DEPENDS+=		bison:../../devel/bison
+BUILD_DEPENDS+=		${LOCALBASE}/bin/bison:../../devel/bison
 
 CONFLICTS+=		nntpclnt-*
 

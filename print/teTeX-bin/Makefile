@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/08/14 18:42:09 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/08/24 14:18:57 tron Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -10,12 +10,12 @@ DISTFILES=	teTeX-src-1.0.6.tar.gz
 
 MAINTAINER=	hubertf@netbsd.org
 
+BUILD_DEPENDS+=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	teTeX-share-1.0:../teTeX-share
 DEPENDS+=	dialog-0.6z:../../misc/dialog
 DEPENDS+=	libwww-5.1m1:../../www/libwww
 DEPENDS+=	ncurses-4.2:../../devel/ncurses
 DEPENDS+=	png-1.0.3:../../graphics/png
-BUILD_DEPENDS+=	bison:../../devel/bison
 
 ALL_TARGET=	all
 INSTALL_TARGET=	install strip
