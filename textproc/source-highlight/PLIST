@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2003/10/03 14:42:38 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/05/15 14:55:38 seb Exp $
 bin/cpp2html
 bin/java2html
 bin/source-highlight
 bin/source-highlight-cgi
+bin/src-hilite-lesspipe.sh
 man/man1/source-highlight.1
-share/doc/html/source-highlight/ChangeLog.html
 share/doc/html/source-highlight/Hello.css
 share/doc/html/source-highlight/Hello.java
 share/doc/html/source-highlight/Hello.java.html
@@ -28,11 +28,14 @@ share/doc/html/source-highlight/mono.css
 share/doc/html/source-highlight/source-highlight.html
 share/doc/html/source-highlight/startapp.cc.html
 share/doc/html/source-highlight/test.js.html
+share/doc/html/source-highlight/test.lua.html
+share/doc/html/source-highlight/test.ml.html
 share/doc/html/source-highlight/test.php3.html
 share/doc/html/source-highlight/test.pl.html
 share/doc/html/source-highlight/test.pm.html
 share/doc/html/source-highlight/test.py.html
 share/doc/html/source-highlight/test.rb.html
+share/doc/html/source-highlight/test.sml.html
 share/doc/html/source-highlight/xhtml.css
 share/doc/source-highlight/COPYING
 share/doc/source-highlight/CREDITS
