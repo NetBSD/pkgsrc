@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2001/09/29 00:26:00 jwise Exp $
+# $NetBSD: Makefile,v 1.17 2002/04/19 18:32:37 jwise Exp $
 
-DISTNAME=	mod_dtcl-0.11.2
+DISTNAME=	mod_dtcl-0.11.6
 PKGNAME=	ap-dtcl-0.11.2
 WRKSRC=		${WRKDIR}/mod_dtcl
 CATEGORIES=	www
@@ -33,8 +33,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${HTMLDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}/tests
 	cd ${WRKSRC}; ${INSTALL_DATA} tests/README ${EGDIR}/tests
-	cd ${WRKSRC}; ${INSTALL_DATA} tests/dtcl-test.ttml ${EGDIR}/tests
+	cd ${WRKSRC}; ${INSTALL_DATA} tests/dtcl-test.tcl ${EGDIR}/tests
+	cd ${WRKSRC}; ${INSTALL_DATA} tests/dtcl-test2.ttml ${EGDIR}/tests
 	cd ${WRKSRC}; ${INSTALL_DATA} tests/dtcl.test ${EGDIR}/tests
+	cd ${WRKSRC}; ${INSTALL_DATA} tests/makeconf.tcl ${EGDIR}/tests
+	cd ${WRKSRC}; ${INSTALL_DATA} tests/runtests.tcl ${EGDIR}/tests
+	cd ${WRKSRC}; ${INSTALL_DATA} tests/template.conf.tcl ${EGDIR}/tests
 	cd ${WRKSRC}; ${INSTALL_DATA} contrib/*.ttml ${EGDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} contrib/*.tcl ${EGDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} docs/examples.ttml ${EGDIR}
