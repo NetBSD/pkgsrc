@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2004/02/11 00:56:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/12 23:44:09 jmmv Exp $
 #
 
 DISTNAME=		gnome-vfs-2.4.2
-PKGREVISION=		2
+PKGREVISION=		3
 PKGNAME=		${DISTNAME:S/vfs/vfs2/}
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.4/}
@@ -52,7 +52,8 @@ CONF_FILES+=	${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
 .endfor
 .undef f
 
-GCONF2_SCHEMAS=	system_http_proxy.schemas
+GCONF2_SCHEMAS=		desktop_default_applications.schemas
+GCONF2_SCHEMAS+=	system_http_proxy.schemas
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/cdparanoia/buildlink3.mk"
