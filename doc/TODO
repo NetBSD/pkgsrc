@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1912 2004/07/09 12:42:20 wiz Exp $
+$NetBSD: TODO,v 1.1913 2004/07/09 14:38:52 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -171,7 +171,6 @@ Suggested package updates
 	o apache-2.0.50 [adrianp]
 	o apcupsd-3.10.13
 	o aqsis-0.9.1
-	o aranym-0.8.9
 	o asc-1.15.0
 	o avidemux-2.0.20
 	o balsa-1.4.4
