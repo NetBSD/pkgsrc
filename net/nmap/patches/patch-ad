@@ -1,17 +1,22 @@
-$NetBSD: patch-ad,v 1.1 2000/10/08 15:06:09 hubertf Exp $
+$NetBSD: patch-ad,v 1.2 2001/08/24 11:05:36 abs Exp $
 
---- tcpip.c.orig	Sun Apr 30 02:12:24 2000
-+++ tcpip.c
-@@ -995,6 +995,12 @@
- #ifdef DLT_PPP_BSDOS
-  case DLT_PPP_BSDOS:
- #endif
-+#ifdef DLT_PPP_SERIAL
-+ case DLT_PPP_SERIAL:
-+#endif
-+#ifdef DLT_PPP_ETHER
-+ case DLT_PPP_ETHER:
-+#endif
- #if (FREEBSD || OPENBSD || NETBSD || BSDI)
-    offset = 4;
- #else
+--- nmap-services.orig	Tue May  9 07:21:44 2000
++++ nmap-services
+@@ -1725,7 +1725,7 @@
+ dls-monitor       2048/udp   # 
+ nfs               2049/tcp   # networked file system
+ nfs               2049/udp   # networked file system
+-distrib-netassholes 2064/tcp # A group of lamers working on a silly closed-source client for solving the RSA cryptographic challenge.  This is the keyblock proxy port.
++distrib-net-kbproxy 2064/tcp # keyblock proxy port for distributed.net-clients
+ dlsrpn            2065/tcp   # Data Link Switch Read Port Number
+ dlsrpn            2065/udp   # Data Link Switch Read Port Number
+ dlswpn            2067/tcp   # Data Link Switch Write Port Number
+@@ -1783,7 +1783,7 @@
+ deslogind         3006/tcp   # 
+ cfs               3049/tcp   # cryptographic file system (nfs) (proposed)
+ cfs               3049/udp   # cryptographic file system (nfs)
+-distrib-net-proxy 3064/tcp   # Stupid closed source distributed.net project proxy port
++distrib-net-proxy 3064/tcp   # distributed.net project proxy port
+ sj3               3086/tcp   # SJ3 (kanji input)
+ squid-http        3128/tcp   #
+ squid-ipc         3130/udp   #
