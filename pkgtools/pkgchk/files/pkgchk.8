@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgchk.8,v 1.5 2001/08/23 11:55:17 abs Exp $
+.\"	$NetBSD: pkgchk.8,v 1.6 2001/09/27 21:13:46 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -6,11 +6,11 @@
 .Dd June 28, 2001
 .Dt PKGCHK 1
 .Sh NAME
-.Nm pkgchk
+.Nm pkg_chk
 .Nd check, and optionally update, installed packages
 .Sh SYNOPSIS
 .Nm
-.Op Fl abchiknsuvB
+.Op Fl abchiknrsuvB
 .Op Fl D Ar tags
 .Op Fl U Ar tags
 .Sh DESCRIPTION
@@ -62,6 +62,9 @@ Check versions of installed packages, ignoring pkgchk.conf.
 Continue with further packages if errors are encountered.
 .It Fl n
 Display actions that would be taken, but do not change anything.
+.It Fl r
+Recursively delete any mismatched packages found. Use with care,
+this does not record which packages were installed for later update.
 .It Fl s
 Limit additions or updates to building from source.
 .It Fl u
@@ -79,12 +82,14 @@ Verbose - list the tags set, and all packages checked.
 .El
 .Sh FILE FORMAT
 .Pp
-Each non comment line in pkgsrc.conf should contain a package directory
-(such as sysutils/skill) followed by a list of tags. If a tag starts with
-a hyphen (-), then any machine matching will be excluded, otherwise if any
-tags match the current machine the package will be included. The tag
+Each non comment line in pkgsrc.conf should contain a package
+directory (such as sysutils/skill) followed by an optional list of
+tags. If a tag starts with a hyphen (-), then any machine matching
+will be excluded, otherwise if any tags match the current machine
+the package will be included. A line with a package directory
+without any tags, or the tag
 .Em *
-matches all machines.
+will match all machines.
 .Pp
 The default set of tags used to determine which packages to match in
 pkgsrc.conf are equivalent to the output of the following with any spaces
@@ -133,7 +138,7 @@ then
 should be appended to 
 .Ev ${PACKAGES} .
 .It Ev PKGCHK_CONF
-Pathname to pkgchk configuration file. If not set in environment
+Pathname to pkg_chk configuration file. If not set in environment
 then read from
 .Pa /etc/mk.conf .
 Defaults to
