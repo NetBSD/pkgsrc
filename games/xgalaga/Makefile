@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:49 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/07/11 08:43:53 agc Exp $
 #
 
 DISTNAME=		xgalaga-2.0.34
@@ -12,10 +12,10 @@ DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 USE_X11BASE=		yes
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${X11BASE}/share/xgalaga
-CONFIGURE_ARGS+=	--exec-prefix=${X11BASE}/bin
+CONFIGURE_ARGS+=	--prefix=${X11PREFIX}/share/xgalaga
+CONFIGURE_ARGS+=	--exec-prefix=${X11PREFIX}/bin
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/README ${X11BASE}/share/xgalaga/README
+	${INSTALL_MAN} ${WRKSRC}/README ${X11PREFIX}/share/xgalaga/README
 
 .include "../../mk/bsd.pkg.mk"
