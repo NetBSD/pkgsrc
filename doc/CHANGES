@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6168 2004/06/06 21:55:02 recht Exp $
+$NetBSD: CHANGES,v 1.6169 2004/06/06 22:11:52 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2825,3 +2825,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated squid to 2.5.5nb4 [taca 2004-06-06]
 	Updated pkglint to 3.77 [schmonz 2004-06-06]
 	Updated roundup to 0.7.3 [recht 2004-06-06]
+	Updated exim to 4.34 [abs 2004-06-06]
+	Updated exim-exiscan to 4.34_22 [abs 2004-06-06]
+

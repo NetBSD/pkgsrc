@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/06/04 23:21:34 reed Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/06/06 22:10:51 abs Exp $
 
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -10,7 +10,7 @@ USE_PKGINSTALL= yes
 
 MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
 
-EXIM_VERSION=	4.33
+EXIM_VERSION=	4.34
 
 EXTRACT_SUFX=	.tar.bz2
 
