@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/07/17 21:26:51 grant Exp $
+# $NetBSD: Makefile,v 1.32 2003/08/07 15:29:57 seb Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
@@ -40,6 +40,10 @@ CONF_FILES+=		${_EXAMPLES_DIR}/${cfg} ${PKG_SYSCONFDIR}/${cfg}
 .endif
 
 _EXAMPLES_DIR=		${PREFIX}/share/examples/mgetty+sendfax
+MAKE_DIRS_PERMS+=	/var/spool/fax ${ROOT_USER} ${ROOT_GROUP} 755
+MAKE_DIRS_PERMS+=	/var/spool/fax/incoming ${ROOT_USER} ${ROOT_GROUP} 755
+MAKE_DIRS_PERMS+=	/var/spool/fax/outgoing ${ROOT_USER} ${ROOT_GROUP} 1777
+MAKE_DIRS_PERMS+=	/var/spool/fax/outgoing/locks ${ROOT_USER} ${ROOT_GROUP} 777
 
 do-configure:
 	${MV} ${WRKSRC}/doc/fax.1in ${WRKSRC}/doc/sendfax.1in
