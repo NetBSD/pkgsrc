@@ -1,0 +1,47 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/04/04 19:32:34 proff Exp $
+
+--- /tmp/speech_tools/config/config	Wed Mar 10 03:24:51 1999
++++ speech_tools/config/config	Wed Mar 10 03:04:29 1999
+@@ -15,7 +15,7 @@
+ ## You may need to set this explicitly if automounter or NFS
+ ## side effects cause problems
+ 
+-EST_HOME := $(shell (cd $(EST); pwd))
++EST_HOME := $(PKG_EST_HOME)
+ 
+ ###########################################################################
+ ## System type. 
+@@ -28,14 +28,18 @@
+ ## 
+ ## Examples: sparc_SunOS5 intel_Linux2.0
+ 
+-SYSTEM_TYPE=$(MACHINETYPE)_$(OSTYPE)$(OSREV)
++#SYSTEM_TYPE=$(MACHINETYPE)_$(OSTYPE)$(OSREV)
++# unforunately the above does not fit in well with NetBSD's multiple
++# architectures and frequent changes of revision level (for people running
++# NetBSD-current)
++SYSTEM_TYPE=NetBSD
+ 
+ ###########################################################################
+ ## Compiler.
+ ## The definitions are in compilers/$(COMPILER).mak
+ ## Examples: gcc gcc26 suncc egcs gcc28
+ 
+-COMPILER=gcc
++COMPILER=$(PKG_COMPILER)
+ 
+ ###########################################################################
+ ## Java system to use if you include the Java interface.
+@@ -77,10 +81,10 @@
+ ## specify a program to play files in a desired format.
+ 
+ ## NCD's network audio system, This is recommended.
+-# INCLUDE_MODULES += NAS_AUDIO
++INCLUDE_MODULES += NAS_AUDIO
+ 
+ ## Native audio for your platform (sun, linux, freebsd, irix, windows)
+-INCLUDE_MODULES += NATIVE_AUDIO
++#INCLUDE_MODULES += NATIVE_AUDIO
+ 
+ ## Special code to run Windows MPLAYER
+ # INCLUDE_MODULES += MPLAYER_AUDIO
