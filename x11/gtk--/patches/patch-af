@@ -1,24 +1,24 @@
-$NetBSD: patch-af,v 1.1 1999/03/14 17:12:54 rh Exp $
+$NetBSD: patch-af,v 1.2 1999/11/14 23:36:27 tron Exp $
 
---- configure.orig	Tue Mar  9 02:53:45 1999
-+++ configure	Wed Mar 10 20:44:43 1999
-@@ -1699,6 +1699,7 @@
-   ac_tool_prefix=
+--- configure.orig	Tue Sep 28 22:07:12 1999
++++ configure	Sun Nov 14 22:59:48 1999
+@@ -1698,6 +1698,7 @@
  fi
  
+ 
 +if false; then
+ # Check for any special flags to pass to ltconfig.
+ #
+ # the following will cause an existing older ltconfig to fail, so
+@@ -1999,6 +2000,7 @@
+ 
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-@@ -1931,6 +1932,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
 +fi
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
-@@ -4046,10 +4048,12 @@
+@@ -4166,10 +4168,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
