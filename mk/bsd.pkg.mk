@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1135 2003/01/29 09:34:29 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1136 2003/01/29 19:34:14 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -476,6 +476,10 @@ PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SITEARCH:S/^${LOCALBASE}\///}
 PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 .endif
 
+.if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
+.  include "../../mk/bsd.pkg.install.mk"
+.endif
+
 # Set INSTALL_FILE to be the name of any INSTALL file
 .if !defined(INSTALL_FILE) && exists(${PKGDIR}/INSTALL)
 INSTALL_FILE=		${PKGDIR}/INSTALL
@@ -939,10 +943,6 @@ NO_BUILDLINK=		# defined
 
 .if !defined(NO_BUILDLINK)
 .  include "../../mk/buildlink2/bsd.buildlink2.mk"
-.endif
-
-.if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
-.  include "../../mk/bsd.pkg.install.mk"
 .endif
 
 .MAIN: all
