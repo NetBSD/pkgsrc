@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/06/11 06:34:58 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/04/30 13:19:03 jschauma Exp $
 
-DISTNAME=	wmfstatus-0.3
+DISTNAME=	wmfstatus-0.4
 CATEGORIES=	x11
 MASTER_SITES=	http://www.finik.net/files/
 
