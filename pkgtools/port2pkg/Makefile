@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/20 12:23:58 agc Exp $
+# $NetBSD: Makefile,v 1.23 2004/04/11 21:29:52 jschauma Exp $
 #
 
 DISTNAME=	port2pkg-1.11
@@ -21,14 +21,13 @@ NO_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-NROFF=		gnroff
-.else
-NROFF=		nroff
-.endif
-
 do-build:
-	${NROFF} -mandoc ${FILESDIR}/port2pkg.1 >${WRKSRC}/port2pkg.0
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
+	# the pre-generated man-pages are 'mandoc';  these OS need 'man'
+	nroff -man ${FILESDIR}/port2pkg.1 >${WRKSRC}/port2pkg.0
+.else
+	${CP} ${FILESDIR}/port2pkg.0 ${WRKSRC}/port2pkg.0
+.endif
 	${SED} -e 's|$${GTAR}|${GTAR}|g' ${FILESDIR}/port2pkg.pl \
 		> ${WRKSRC}/port2pkg
 
