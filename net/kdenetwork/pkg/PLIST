@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/03/21 01:54:51 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/04/28 22:55:14 tron Exp $
 bin/kmail
 bin/knu
 bin/korn
@@ -69,6 +69,13 @@ share/doc/HTML/en/kmail/index-5.html
 share/doc/HTML/en/kmail/index-6.html
 share/doc/HTML/en/kmail/index-7.html
 share/doc/HTML/en/kmail/logotp3.gif
+share/doc/HTML/en/knu/index-1.html
+share/doc/HTML/en/knu/index-2.html
+share/doc/HTML/en/knu/index-3.html
+share/doc/HTML/en/knu/index-4.html
+share/doc/HTML/en/knu/index-5.html
+share/doc/HTML/en/knu/index-6.html
+share/doc/HTML/en/knu/logotp3.gif
 share/doc/HTML/en/knu/knu-host.gif
 share/doc/HTML/en/knu/knu-traceroute.gif
 share/doc/HTML/en/knu/knu-config.gif
@@ -80,16 +87,44 @@ share/doc/HTML/en/krn/articles.html
 share/doc/HTML/en/krn/groups.html
 share/doc/HTML/en/krn/offline.html
 share/doc/HTML/en/krn/overview.html
-share/applnk/Internet/KMail.kdelnk
 share/applnk/Internet/Krn.kdelnk
-share/applnk/Network/knu.kdelnk
-share/applnk/Network/KOrn.kdelnk
+share/applnk/Internet/knu.kdelnk
+share/applnk/Internet/KOrn.kdelnk
+share/applnk/Internet/KMail.kdelnk
 share/icons/mini/kmail.xpm
 share/icons/mini/krn.xpm
+share/icons/mini/knu.xpm
+share/icons/mini/korn.xpm
 share/icons/kmail.xpm
 share/icons/knu.xpm
 share/icons/korn.xpm
 share/icons/krn.xpm
+share/locale/fr/LC_MESSAGES/kppp.mo
+share/locale/da/LC_MESSAGES/kppp.mo
+share/locale/it/LC_MESSAGES/krn.mo
+share/locale/it/LC_MESSAGES/knu.mo
+share/locale/it/LC_MESSAGES/kppp.mo
+share/locale/nl/LC_MESSAGES/kmail.mo
+share/locale/nl/LC_MESSAGES/krn.mo
+share/locale/nl/LC_MESSAGES/knu.mo
+share/locale/nl/LC_MESSAGES/kppp.mo
+share/locale/pt/LC_MESSAGES/krn.mo
+share/locale/no/LC_MESSAGES/kmail.mo
+share/locale/no/LC_MESSAGES/krn.mo
+share/locale/no/LC_MESSAGES/kppp.mo
+share/locale/no/LC_MESSAGES/knu.mo
+share/locale/el/LC_MESSAGES/kmail.mo
+share/locale/el/LC_MESSAGES/krn.mo
+share/locale/el/LC_MESSAGES/kppp.mo
+share/locale/el/LC_MESSAGES/knu.mo
+share/locale/ro/LC_MESSAGES/kmail.mo
+share/locale/ro/LC_MESSAGES/kppp.mo
+share/locale/sk/LC_MESSAGES/kmail.mo
+share/locale/sk/LC_MESSAGES/krn.mo
+share/locale/sk/LC_MESSAGES/knu.mo
+share/locale/sk/LC_MESSAGES/kppp.mo
+share/locale/cr/LC_MESSAGES/kppp.mo
+share/locale/cr/LC_MESSAGES/krn.mo
 share/locale/de/LC_MESSAGES/kmail.mo
 share/locale/de/LC_MESSAGES/krn.mo
 share/locale/de/LC_MESSAGES/knu.mo
@@ -125,7 +160,6 @@ share/locale/cr/LC_MESSAGES/knu.mo
 @dirrm share/doc/HTML/en/kmail
 @dirrm share/doc/HTML/en/knu
 @dirrm share/doc/HTML/en/korn
-@dirrm share/applnk/Network
 @dirrm share/apps/krn/toolbar
 @dirrm share/apps/krn
 @dirrm share/apps/kmail/pics
