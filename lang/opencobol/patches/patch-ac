@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/06/29 02:57:37 xtraeme Exp $
+
+--- Makefile.in.orig	2004-06-29 04:52:23.000000000 +0200
++++ Makefile.in	2004-06-29 04:54:22.000000000 +0200
+@@ -135,6 +135,7 @@
+ build_os = @build_os@
+ build_vendor = @build_vendor@
+ datadir = @datadir@
++examplesdir = @datadir@/examples/@PACKAGE@
+ exec_prefix = @exec_prefix@
+ host = @host@
+ host_alias = @host_alias@
+@@ -263,20 +264,20 @@
+ sysconfDATA_INSTALL = $(INSTALL_DATA)
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
++	$(mkinstalldirs) $(DESTDIR)$(examplesdir)
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f"; \
+-	  $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f; \
++	  echo " $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(examplesdir)/$$f"; \
++	  $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(examplesdir)/$$f; \
+ 	done
+ 
+ uninstall-sysconfDATA:
+ 	@$(NORMAL_UNINSTALL)
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " rm -f $(DESTDIR)$(sysconfdir)/$$f"; \
+-	  rm -f $(DESTDIR)$(sysconfdir)/$$f; \
++	  echo " rm -f $(DESTDIR)$(examplesdir)/$$f"; \
++	  rm -f $(DESTDIR)$(examplesdir)/$$f; \
+ 	done
+ includeHEADERS_INSTALL = $(INSTALL_HEADER)
+ install-includeHEADERS: $(include_HEADERS)
