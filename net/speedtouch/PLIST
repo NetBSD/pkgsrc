@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/07/18 00:10:07 abs Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/11/07 11:06:17 abs Exp $
 libdata/alcaudsl.sys
 man/man1/modem_run.1
 man/man1/pppoa2.1
@@ -11,6 +11,7 @@ share/doc/speedtouch/INSTALL
 share/doc/speedtouch/INSTALL-de
 share/doc/speedtouch/INSTALL-fr
 share/doc/speedtouch/INSTALL-it
+share/doc/speedtouch/INSTALL-nl
 share/examples/speedtouch/adsl.sh
 share/examples/speedtouch/ppp.conf
 @dirrm share/doc/speedtouch

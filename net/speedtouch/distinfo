@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/10/09 19:09:28 abs Exp $
+$NetBSD: distinfo,v 1.5 2003/11/07 11:06:17 abs Exp $
 
 SHA1 (speedtouch-1.2-beta2.tar.bz2) = 7a09eaf3f462a735dc5cf261b7668b7582d86663
 Size (speedtouch-1.2-beta2.tar.bz2) = 170497 bytes
 SHA1 (speedmgmt.tar.gz) = 15314d3c53b1b4d3af92f247ac1ef8a825da1479
 Size (speedmgmt.tar.gz) = 293547 bytes
+SHA1 (patch-aa) = 6c8524fc7f462055803d2cc4833c3aa7293b339b
