@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/06/05 15:04:44 lukem Exp $
+$NetBSD: distinfo,v 1.4 2002/06/10 08:41:14 lukem Exp $
 
-SHA1 (lukemftp-1.6-beta1.tar.gz) = 210a6fcb93dfc9de6b9a6b1676d41c0d44f03102
-Size (lukemftp-1.6-beta1.tar.gz) = 274741 bytes
+SHA1 (lukemftp-1.6-beta2.tar.gz) = 312d3d68b1a9c1c7be55b790aadbfca7557bcf58
+Size (lukemftp-1.6-beta2.tar.gz) = 275393 bytes
