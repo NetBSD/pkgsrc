@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.17 1999/07/06 08:00:50 jlam Exp $
+# $NetBSD: Makefile,v 1.18 1999/08/08 07:23:46 rh Exp $
 
-DISTNAME=		vim-5.3
+DISTNAME=		vim-5.4
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.oce.nl/pub/vim/unix/ \
 			ftp://ftp.vim.org/pub/misc/editors/vim/unix/ \
 			ftp://uiarchive.uiuc.edu/pub/packages/vim/ \
 			ftp://ftp.progsoc.uts.edu.au/pub/vim/unix/
-DISTFILES=		vim-5.3-src.tar.gz vim-5.3-rt.tar.gz
 DISTFILES=		${DISTNAME}-src${EXTRACT_SUFX} \
 			${DISTNAME}-rt${EXTRACT_SUFX}
 
