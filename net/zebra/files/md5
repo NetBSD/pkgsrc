@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.5 1999/07/11 17:11:17 itojun Exp $
+$NetBSD: md5,v 1.6 1999/07/16 02:01:10 itojun Exp $
 
-MD5 (zebra-0.72.tar.gz) = d21a2fce18f24e64a063a4a60075932d
+MD5 (zebra-0.73.tar.gz) = 8ba2dcc0dc39fa4419b8edbca7d88968
