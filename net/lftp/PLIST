@@ -1,23 +1,36 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/25 21:50:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/31 17:01:57 salo Exp $
 bin/lftp
 bin/lftpget
+lib/lftp/${PKGVERSION}/cmd-mirror.la
+lib/lftp/${PKGVERSION}/cmd-mirror.so
+lib/lftp/${PKGVERSION}/cmd-sleep.la
+lib/lftp/${PKGVERSION}/cmd-sleep.so
+lib/lftp/${PKGVERSION}/libnetwork.la
+lib/lftp/${PKGVERSION}/libnetwork.so
+lib/lftp/${PKGVERSION}/proto-file.la
+lib/lftp/${PKGVERSION}/proto-file.so
+lib/lftp/${PKGVERSION}/proto-fish.la
+lib/lftp/${PKGVERSION}/proto-fish.so
+lib/lftp/${PKGVERSION}/proto-ftp.la
+lib/lftp/${PKGVERSION}/proto-ftp.so
+lib/lftp/${PKGVERSION}/proto-http.la
+lib/lftp/${PKGVERSION}/proto-http.so
 man/man1/lftp.1
 share/examples/lftp/lftp.conf
 share/lftp/import-ncftp
 share/lftp/import-netscape
-share/locale/de/LC_MESSAGES/lftp.mo
-share/locale/es/LC_MESSAGES/lftp.mo
-share/locale/fr/LC_MESSAGES/lftp.mo
-share/locale/it/LC_MESSAGES/lftp.mo
-share/locale/ja/LC_MESSAGES/lftp.mo
-share/locale/ko/LC_MESSAGES/lftp.mo
-share/locale/pl/LC_MESSAGES/lftp.mo
-share/locale/pt_BR/LC_MESSAGES/lftp.mo
-share/locale/ru/LC_MESSAGES/lftp.mo
-share/locale/zh_CN/LC_MESSAGES/lftp.mo
-share/locale/zh_TW/LC_MESSAGES/lftp.mo
-@dirrm share/examples/lftp
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lftp.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/lftp.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/lftp.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/lftp.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/lftp.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/lftp.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/lftp.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/lftp.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/lftp.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/lftp.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/lftp.mo
 @dirrm share/lftp
-@exec ${MKDIR} %D/lib/lftp/${PKGVERSION}
+@dirrm share/examples/lftp
 @dirrm lib/lftp/${PKGVERSION}
 @dirrm lib/lftp
