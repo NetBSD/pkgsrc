@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/24 21:42:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/03/01 06:46:49 fredb Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -285,6 +285,7 @@ libexec/xscreensaver/vidwhacker
 libexec/xscreensaver/vines
 libexec/xscreensaver/wander
 libexec/xscreensaver/webcollage
+libexec/xscreensaver/webcollage-helper
 libexec/xscreensaver/whirlwindwarp
 libexec/xscreensaver/whirlygig
 libexec/xscreensaver/worm
