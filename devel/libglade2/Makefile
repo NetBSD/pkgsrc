@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2003/09/23 12:18:57 recht Exp $
+# $NetBSD: Makefile,v 1.18 2003/12/04 19:48:24 xtraeme Exp $
 #
 
 DISTNAME=		libglade-2.0.1
 PKGNAME=		${DISTNAME:S/libglade/libglade2/}
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.0/}
 

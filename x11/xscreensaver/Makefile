@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2003/09/08 12:11:14 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2003/12/04 19:48:26 xtraeme Exp $
 #
 
 COMMENT=	Screen saver and locker for the X window system
 
 CONFLICTS+=	xscreensaver-gnome-[0-9]*
+PKGREVISION=	1
 
 .include "../../x11/xscreensaver/Makefile.common"
 
