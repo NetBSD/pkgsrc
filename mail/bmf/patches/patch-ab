@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/10/10 11:05:31 mjl Exp $
+
+--- Makefile.in.orig	Thu Oct 10 12:04:54 2002
++++ Makefile.in	Thu Oct 10 12:05:18 2002
+@@ -1,7 +1,7 @@
+ # Makefile for bmf
+ 
+-BINDIR=/usr/bin
+-MANDIR=/usr/share/man
++BINDIR?=/usr/bin
++MANDIR?=/usr/share/man
+ 
+ VERSION=0.84
+ 
