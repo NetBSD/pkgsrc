@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3174 2005/03/02 16:19:58 minskim Exp $
+$NetBSD: TODO,v 1.3175 2005/03/02 17:58:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -411,7 +411,6 @@ Suggested package updates
 	o dmalloc-5.4.2
 	o dnstop-20050203
 	o dnstracer-1.8
-	o docbook-website-2.5.0
 	o doclifter-2.1
 	o docsis-0.9.1
 	o dpkg-1.13.0
