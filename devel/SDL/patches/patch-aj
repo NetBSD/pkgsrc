@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.18 2004/04/17 00:15:21 snj Exp $
+$NetBSD: patch-aj,v 1.19 2004/07/13 20:51:58 kristerw Exp $
 
---- configure.in.orig	2004-02-22 13:31:47.000000000 -0800
-+++ configure.in	2004-04-10 16:05:54.000000000 -0700
-@@ -28,9 +28,9 @@ AC_SUBST(SDL_VERSION)
+--- configure.in.orig	Sun Feb 22 22:31:47 2004
++++ configure.in	Tue Jul 13 22:28:09 2004
+@@ -28,9 +28,9 @@
  
  # libtool versioning
  LT_RELEASE=$SDL_MAJOR_VERSION.$SDL_MINOR_VERSION
@@ -15,7 +15,7 @@ $NetBSD: patch-aj,v 1.18 2004/04/17 00:15:21 snj Exp $
  
  AC_SUBST(LT_RELEASE)
  AC_SUBST(LT_CURRENT)
-@@ -267,6 +267,8 @@ CheckOSS()
+@@ -267,6 +267,8 @@
          AC_MSG_RESULT($have_oss)
          if test x$have_oss = xyes; then
              CFLAGS="$CFLAGS -DOSS_SUPPORT"
@@ -24,7 +24,7 @@ $NetBSD: patch-aj,v 1.18 2004/04/17 00:15:21 snj Exp $
              AUDIO_SUBDIRS="$AUDIO_SUBDIRS dsp"
              AUDIO_DRIVERS="$AUDIO_DRIVERS dsp/libaudio_dsp.la"
              AUDIO_SUBDIRS="$AUDIO_SUBDIRS dma"
-@@ -422,9 +424,9 @@ CheckNAS()
+@@ -422,9 +424,9 @@
      if test x$enable_audio = xyes -a x$enable_nas = xyes; then
          AC_MSG_CHECKING(for NAS audio support)
          have_nas=no
@@ -36,7 +36,7 @@ $NetBSD: patch-aj,v 1.18 2004/04/17 00:15:21 snj Exp $
              SYSTEM_LIBS="$SYSTEM_LIBS -laudio -lXt"
              AUDIO_SUBDIRS="$AUDIO_SUBDIRS nas"
              AUDIO_DRIVERS="$AUDIO_DRIVERS nas/libaudio_nas.la"
-@@ -505,7 +507,7 @@ CheckNASM()
+@@ -505,7 +507,7 @@
                    NASMFLAGS="-f aoutb"
                    ;;
                *)
@@ -45,24 +45,22 @@ $NetBSD: patch-aj,v 1.18 2004/04/17 00:15:21 snj Exp $
                    ;;
              esac
              AC_SUBST(NASMFLAGS)
-@@ -943,18 +945,18 @@ CheckAAlib()
+@@ -943,18 +945,18 @@
  [  --enable-video-aalib    use AAlib video driver [default=no]],
                    , enable_video_aalib=no)
      if test x$enable_video = xyes -a x$enable_video_aalib = xyes; then
 +        AC_PATH_PROG(AALIB_CONFIG, aalib-config)
          AC_MSG_CHECKING(for AAlib support)
--        video_aalib=no
++        if test x$AALIB_CONFIG = x; then
+         video_aalib=no
 -        AC_TRY_COMPILE([
 -         #include <aalib.h>
 -        ],[
 -        ],[
--        video_aalib=yes
--        ])
-+        if test x$AALIB_CONFIG = x; then
-+            video_aalib=no
 +	else
 +            AALIB_LIBS=`$AALIB_CONFIG --libs`
-+            video_aalib=yes
+         video_aalib=yes
+-        ])
 +        fi
          AC_MSG_RESULT($video_aalib)
          if test x$video_aalib = xyes; then
@@ -72,7 +70,7 @@ $NetBSD: patch-aj,v 1.18 2004/04/17 00:15:21 snj Exp $
  
              VIDEO_SUBDIRS="$VIDEO_SUBDIRS aalib"
              VIDEO_DRIVERS="$VIDEO_DRIVERS aalib/libvideo_aa.la"
-@@ -1125,12 +1127,13 @@ CheckPTH()
+@@ -1125,12 +1127,13 @@
  [  --enable-pth            use GNU pth library for multi-threading [default=yes]],
                    , enable_pth=yes)
      if test x$enable_threads = xyes -a x$enable_pth = xyes; then
@@ -90,7 +88,7 @@ $NetBSD: patch-aj,v 1.18 2004/04/17 00:15:21 snj Exp $
              SDL_CFLAGS="$SDL_CFLAGS $PTH_CFLAGS"
              SDL_LIBS="$SDL_LIBS $PTH_LIBS"
              CFLAGS="$CFLAGS -DENABLE_PTH"
-@@ -1171,8 +1174,8 @@ CheckPTHREAD()
+@@ -1171,8 +1174,8 @@
              pthread_lib="-pthread"
              ;;
          *-*-netbsd*)
@@ -101,7 +99,7 @@ $NetBSD: patch-aj,v 1.18 2004/04/17 00:15:21 snj Exp $
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -1638,29 +1641,31 @@ CheckUSBHID()
+@@ -1638,29 +1641,31 @@
          have_libusbhid=no
          have_libusb=no
          AC_CHECK_LIB(usbhid, hid_init, have_libusbhid=yes)
@@ -142,7 +140,34 @@ $NetBSD: patch-aj,v 1.18 2004/04/17 00:15:21 snj Exp $
          fi
  
          AC_MSG_CHECKING(for usbhid)
-@@ -1957,6 +1962,7 @@ case "$target" in
+@@ -1749,6 +1754,26 @@
+     fi
+ }
+ 
++dnl Check for the NetBSD machine/joystick.h
++CheckMachineJoystick()
++{
++    if test x$enable_joystick = xyes; then
++        AC_MSG_CHECKING(whether struct joystick is defined in machine/joystick.h)
++        have_machine_joystick=no
++        AC_TRY_COMPILE([
++          #include <machine/joystick.h>
++        ],[
++          struct joystick t;
++        ],[
++        have_machine_joystick=yes
++        ])
++        AC_MSG_RESULT($have_machine_joystick)
++        if test x$have_machine_joystick = xyes; then
++            CFLAGS="$CFLAGS -DHAVE_MACHINE_JOYSTICK"
++        fi
++    fi
++}    
++
+ dnl Check for altivec instruction support using gas syntax
+ CheckAltivec()
+ {
+@@ -1957,16 +1982,18 @@
          CheckESD
          CheckNAS
          CheckX11
@@ -150,8 +175,9 @@ $NetBSD: patch-aj,v 1.18 2004/04/17 00:15:21 snj Exp $
          CheckAAlib
          CheckOpenGL
          CheckPTHREAD
-@@ -1964,9 +1970,9 @@ case "$target" in
+         CheckSIGACTION
          CheckUSBHID
++        CheckMachineJoystick
          # Set up files for the audio library
          if test x$enable_audio = xyes; then
 -            CFLAGS="$CFLAGS -DSUNAUDIO_SUPPORT"
@@ -163,7 +189,7 @@ $NetBSD: patch-aj,v 1.18 2004/04/17 00:15:21 snj Exp $
          fi
          # Set up files for the cdrom library
          if test x$enable_cdrom = xyes; then
-@@ -1975,9 +1981,6 @@ case "$target" in
+@@ -1975,9 +2002,6 @@
          fi
          # Set up files for the thread library
          if test x$enable_threads = xyes; then
@@ -173,7 +199,7 @@ $NetBSD: patch-aj,v 1.18 2004/04/17 00:15:21 snj Exp $
              CopyUnixThreadSource
          fi
          # Set up files for the timer library
-@@ -2606,7 +2609,7 @@ AM_CONDITIONAL([ENABLE_STATIC], [test "$
+@@ -2606,7 +2630,7 @@
  
  # Set runtime shared library paths as needed
  

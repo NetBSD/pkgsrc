@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.7 2004/06/22 09:10:12 dillo Exp $
+$NetBSD: patch-aa,v 1.8 2004/07/13 20:51:58 kristerw Exp $
 
 --- src/joystick/bsd/SDL_sysjoystick.c.orig	2004-02-18 18:22:01.000000000 +0100
-+++ src/joystick/bsd/SDL_sysjoystick.c
-@@ -238,6 +238,7 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
++++ src/joystick/bsd/SDL_sysjoystick.c	2004-07-13 22:43:44.000000000 +0200
+@@ -60,7 +60,7 @@
+ #include <sys/joystick.h>
+ #endif
+ 
+-#if defined(__NetBSD__) || defined(__OpenBSD__)
++#if defined(HAVE_MACHINE_JOYSTICK) || defined(__OpenBSD__)
+ #include <machine/joystick.h>
+ #endif
+ 
+@@ -238,6 +238,7 @@
  	struct hid_data *hdata;
  	struct report *rep;
  	int fd;
@@ -10,7 +19,7 @@ $NetBSD: patch-aa,v 1.7 2004/06/22 09:10:12 dillo Exp $
  
  	fd = open(path, O_RDONLY);
  	if (fd == -1) {
-@@ -302,6 +303,8 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -302,6 +303,8 @@
  	joy->nbuttons = 0;
  	joy->nhats = 0;
  	joy->nballs = 0;
@@ -19,7 +28,7 @@ $NetBSD: patch-aa,v 1.7 2004/06/22 09:10:12 dillo Exp $
  
  	while (hid_get_item(hdata, &hitem) > 0) {
  		char *sp;
-@@ -328,8 +331,7 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -328,8 +331,7 @@
  			    unsigned usage = HID_USAGE(hitem.usage);
  			    int joyaxe = usage_to_joyaxe(usage);
  			    if (joyaxe >= 0) {
@@ -29,7 +38,7 @@ $NetBSD: patch-aa,v 1.7 2004/06/22 09:10:12 dillo Exp $
  			    } else if (usage == HUG_HAT_SWITCH) {
  				joy->nhats++;
  			    }
-@@ -347,6 +349,9 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -347,6 +349,9 @@
  		}
  	}
  	hid_end_parse(hdata);
@@ -39,7 +48,16 @@ $NetBSD: patch-aa,v 1.7 2004/06/22 09:10:12 dillo Exp $
  
  usbend:
  	/* The poll blocks the event thread. */
-@@ -456,7 +461,8 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
+@@ -369,7 +374,7 @@
+ 	int nbutton, naxe = -1;
+ 	Sint32 v;
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(HAVE_MACHINE_JOYSTICK) || defined(__OpenBSD__)
+ 	struct joystick gameport;
+ 	static int x, y, xmin = 0xffff, ymin = 0xffff, xmax = 0, ymax = 0;
+  
+@@ -456,7 +461,8 @@
  			    } else if (usage == HUG_HAT_SWITCH) {
  				v = (Sint32)hid_get_data(REP_BUF_DATA(rep),
  							 &hitem);
@@ -49,7 +67,7 @@ $NetBSD: patch-aa,v 1.7 2004/06/22 09:10:12 dillo Exp $
  			    }
  			    break;
  			}
-@@ -529,9 +535,9 @@ report_alloc(struct report *r, struct re
+@@ -529,9 +535,9 @@
  #endif
  #else
  # ifdef USBHID_NEW
