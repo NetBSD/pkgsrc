@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/08/04 19:41:06 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2004/08/05 03:04:34 jlam Exp $
 
 .include "Makefile.common"
 
@@ -40,7 +40,7 @@ AUTHDAEMONVAR?=		${VARBASE}/authdaemon
 CONFIGURE_ARGS+=        --with-authdaemond=${AUTHDAEMONVAR}
 BUILD_DEFS+=		AUTHDAEMONVAR
 
-.include "Makefile.options"
+.include "options.mk"
 
 .if exists(/dev/urandom)
 SASL_ENTROPY_SOURCE?=	/dev/urandom

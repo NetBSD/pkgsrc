@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.options,v 1.4 2004/08/03 11:28:31 sketch Exp $
+# $NetBSD: options.mk,v 1.1 2004/08/05 03:04:33 jlam Exp $
 
 # Global and legacy options
 .if defined(MUTT_USE_SLANG) || defined(MUTT_USE_NCURSES) || \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/07/31 05:53:44 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2004/08/05 03:04:33 jlam Exp $
 
 DISTNAME=	postfix-2.2-20040628
 CATEGORIES=	mail
@@ -38,10 +38,10 @@ CCARGS+=	-DDEF_SENDMAIL_PATH=\"${PREFIX}/sbin/sendmail\"
 CCARGS+=	-DDEF_MAILQ_PATH=\"${PREFIX}/bin/mailq\"
 CCARGS+=	-DDEF_NEWALIAS_PATH=\"${PREFIX}/bin/newaliases\"
 
-# Makefile.options appends to CCARGS and AUXLIBS the options needed to
-# build Postfix with support for various add-on modules.
+# options.mk appends to CCARGS and AUXLIBS the options needed to build
+# Postfix with support for various add-on modules.
 #
-.include "Makefile.options"
+.include "options.mk"
 
 PKG_SYSCONFSUBDIR=	postfix
 LIBEXECDIR=		${PREFIX}/libexec/postfix

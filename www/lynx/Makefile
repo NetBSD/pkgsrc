@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2004/07/30 21:05:42 jlam Exp $
+# $NetBSD: Makefile,v 1.75 2004/08/05 03:04:34 jlam Exp $
 #
 
 DISTNAME=	lynx2.8.5
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=	--enable-nested-tables
 CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
 
-.include "Makefile.options"
+.include "options.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
