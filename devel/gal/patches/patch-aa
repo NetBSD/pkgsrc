@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2002/04/10 16:05:19 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2002/07/12 23:38:45 mycroft Exp $
 
---- configure.orig	Tue Dec 18 17:36:11 2001
-+++ configure
-@@ -2292,8 +2292,8 @@
+--- configure.orig	Thu Jun 20 04:40:53 2002
++++ configure	Wed Jul 10 22:54:42 2002
+@@ -5989,8 +5989,8 @@
  fi
  	if test x$gnome_cv_orbit_found = xyes; then
  		
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.7 2002/04/10 16:05:19 jlam Exp $
  		
  		
  	else
-@@ -2310,8 +2310,8 @@
+@@ -6007,8 +6007,8 @@
    
  		gnome_cv_gnorba_found=no
  		if test x$gnome_cv_orbit_found = xyes; then
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.7 2002/04/10 16:05:19 jlam Exp $
  			if test -n "$GNORBA_LIBS"; then
  				gnome_cv_gnorba_found=yes
  			fi
-@@ -2331,8 +2331,8 @@
+@@ -6028,8 +6028,8 @@
  fi
  	if test x$gnome_cv_orbit_found = xyes; then
  		
@@ -35,10 +35,10 @@ $NetBSD: patch-aa,v 1.7 2002/04/10 16:05:19 jlam Exp $
  		
  		
  	else
-@@ -4858,8 +4858,11 @@
+@@ -8585,8 +8585,11 @@
  
  echo $ac_n "checking for libxml (aka gnome-xml) libraries 1.8.8 <= version < 2.0.0""... $ac_c" 1>&6
- echo "configure:4861: checking for libxml (aka gnome-xml) libraries 1.8.8 <= version < 2.0.0" >&5
+ echo "configure:8588: checking for libxml (aka gnome-xml) libraries 1.8.8 <= version < 2.0.0" >&5
 -if xml-config --libs > /dev/null 2>&1; then 
 -    vers=`xml-config --version | sed -e "s/libxml //" | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
 +if test -z "$XML_CONFIG"; then
@@ -49,10 +49,10 @@ $NetBSD: patch-aa,v 1.7 2002/04/10 16:05:19 jlam Exp $
      if test "$vers" -ge 1008008; then
  	if test "$vers" -lt 2000000; then
  	    echo "$ac_t""found" 1>&6
-@@ -5185,8 +5188,8 @@
+@@ -8952,8 +8955,8 @@
  
  echo $ac_n "checking for GnomePrint libraries >= 0.25""... $ac_c" 1>&6
- echo "configure:5188: checking for GnomePrint libraries >= 0.25" >&5
+ echo "configure:8955: checking for GnomePrint libraries >= 0.25" >&5
 -if gnome-config --libs print > /dev/null 2>&1; then 
 -    vers=`gnome-config --modversion print | sed -e "s/gnome-print-//" -e 's/cvs$//' -e 's/pre$//' | \
 +if $GNOME_CONFIG --libs print > /dev/null 2>&1; then 
@@ -60,10 +60,10 @@ $NetBSD: patch-aa,v 1.7 2002/04/10 16:05:19 jlam Exp $
          awk 'BEGIN { FS = "."; } { print $1 * 1000 + $2;}'`
      if test "$vers" -ge 25; then
          echo "$ac_t""found" 1>&6
-@@ -5199,8 +5202,8 @@
+@@ -8966,8 +8969,8 @@
  
  echo $ac_n "checking for Glade libraries >= 0.13""... $ac_c" 1>&6
- echo "configure:5202: checking for Glade libraries >= 0.13" >&5
+ echo "configure:8969: checking for Glade libraries >= 0.13" >&5
 -if gnome-config --libs libglade > /dev/null 2>&1; then 
 -    vers=`gnome-config --modversion libglade | awk 'BEGIN { FS = "."; } { print $1 * 1000 + $2;}'`
 +if $GNOME_CONFIG --libs libglade > /dev/null 2>&1; then 
@@ -71,10 +71,10 @@ $NetBSD: patch-aa,v 1.7 2002/04/10 16:05:19 jlam Exp $
      if test "$vers" -ge 13; then
          echo "$ac_t""found" 1>&6
      else
-@@ -5226,8 +5229,8 @@
+@@ -8993,8 +8996,8 @@
  
  echo $ac_n "checking for GNOME-VFS""... $ac_c" 1>&6
- echo "configure:5229: checking for GNOME-VFS" >&5
+ echo "configure:8996: checking for GNOME-VFS" >&5
 -if gnome-config --libs vfs > /dev/null 2>&1; then
 -	vers=`gnome-config --modversion vfs`
 +if $GNOME_CONFIG --libs vfs > /dev/null 2>&1; then
@@ -82,7 +82,7 @@ $NetBSD: patch-aa,v 1.7 2002/04/10 16:05:19 jlam Exp $
  	case $vers
  	in
  	    gnome-vfs-0.012) vfs_ok=false ;;
-@@ -5240,8 +5243,8 @@
+@@ -9007,8 +9010,8 @@
  if $vfs_ok; then
  	echo "$ac_t""$vers" 1>&6
  
@@ -93,14 +93,14 @@ $NetBSD: patch-aa,v 1.7 2002/04/10 16:05:19 jlam Exp $
  	
  	
  
-@@ -5307,8 +5310,8 @@
+@@ -9074,8 +9077,8 @@
  
  
  
--EXTRA_GNOME_LIBS=`gnome-config --libs gnomeui print libart libglade gdk_pixbuf gnomecanvaspixbuf`
--EXTRA_GNOME_CFLAGS=`gnome-config --cflags gnomeui print libart libglade gdk_pixbuf gnomecanvaspixbuf`
-+EXTRA_GNOME_LIBS=`$GNOME_CONFIG --libs gnomeui print libart libglade gdk_pixbuf gnomecanvaspixbuf`
-+EXTRA_GNOME_CFLAGS=`$GNOME_CONFIG --cflags gnomeui print libart libglade gdk_pixbuf gnomecanvaspixbuf`
+-EXTRA_GNOME_LIBS="`gnome-config --libs gnomeui print libart libglade gdk_pixbuf gnomecanvaspixbuf` `imlib-config --libs-gdk`"
+-EXTRA_GNOME_CFLAGS="`gnome-config --cflags gnomeui print libart libglade gdk_pixbuf gnomecanvaspixbuf` `imlib-config --cflags-gdk`"
++EXTRA_GNOME_LIBS="`$GNOME_CONFIG --libs gnomeui print libart libglade gdk_pixbuf gnomecanvaspixbuf` `$IMLIB_CONFIG --libs-gdk`"
++EXTRA_GNOME_CFLAGS="`$GNOME_CONFIG --cflags gnomeui print libart libglade gdk_pixbuf gnomecanvaspixbuf` `$IMLIB_CONFIG --cflags-gdk`"
  
  
  
