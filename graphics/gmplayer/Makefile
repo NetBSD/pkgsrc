@@ -1,37 +1,38 @@
-# $NetBSD: Makefile,v 1.12 2003/01/20 22:42:40 fredb Exp $
+# $NetBSD: Makefile,v 1.13 2003/02/03 05:07:06 fredb Exp $
 
 .include "../../graphics/mplayer-share/Makefile.common"
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
+PKGREVISION=    1
 SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
-		http://www2.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp.mplayerhq.hu/MPlayer/Skin/		\
-		ftp://ftp2.mplayerhq.hu/MPlayer/Skin/
+		${MASTER_SITE_LOCAL:=mplayer}
 
 COMMENT=	Software only MPEG-1/2/4 video decoder with a GTK+ interface
 
-SKINS +=	default${EXTRACT_SUFX}				\
-		MidnightLove${EXTRACT_SUFX}			\
-		avifile${EXTRACT_SUFX}				\
-		BlueHeart${EXTRACT_SUFX}			\
-		WindowsMediaPlayer6${EXTRACT_SUFX}		\
-		xanim${EXTRACT_SUFX}				\
-		neutron${EXTRACT_SUFX}				\
-		plastic${EXTRACT_SUFX}				\
-		Cyrus${EXTRACT_SUFX}				\
-		xine-lcd${EXTRACT_SUFX}				\
-		phony${EXTRACT_SUFX}				\
-		mentalic${EXTRACT_SUFX}				\
-		proton${EXTRACT_SUFX}				\
-		slim${EXTRACT_SUFX}				\
-		netscape4${EXTRACT_SUFX}			\
-		CubicPlayer${EXTRACT_SUFX}			\
-		AlienMind${EXTRACT_SUFX}			\
-		CornerMP${EXTRACT_SUFX}				\
-		CornerMP-aqua${EXTRACT_SUFX}			\
-		hwswskin${EXTRACT_SUFX}
+SKINS +=	default-1.7${EXTRACT_SUFX}			\
+		AlienMind-1.0${EXTRACT_SUFX}			\
+		BlueHeart-1.4${EXTRACT_SUFX}			\
+		CornerMP-1.0${EXTRACT_SUFX}			\
+		CornerMP-aqua-1.0${EXTRACT_SUFX}		\
+		Cyrus-1.0${EXTRACT_SUFX}			\
+		MidnightLove-1.5${EXTRACT_SUFX}			\
+		WindowsMediaPlayer6-1.2${EXTRACT_SUFX}		\
+		avifile-1.5${EXTRACT_SUFX}			\
+		gnome-1.1${EXTRACT_SUFX}			\
+		hayraphon-1.0${EXTRACT_SUFX}			\
+		hwswskin-1.0${EXTRACT_SUFX}			\
+		mentalic-1.1${EXTRACT_SUFX}			\
+		neutron-1.4${EXTRACT_SUFX}			\
+		phony-1.0${EXTRACT_SUFX}			\
+		plastic-1.1.1${EXTRACT_SUFX}			\
+		proton-1.1${EXTRACT_SUFX}			\
+		slim-1.0${EXTRACT_SUFX}				\
+		trium-1.0${EXTRACT_SUFX}			\
+		xanim-1.5${EXTRACT_SUFX}			\
+		xine-lcd-1.0${EXTRACT_SUFX}
 
-.if !defined(SITES_default.tar.bz2)
+.if !defined(SITES_default-1.7.tar.bz2)
 .  for skin in ${SKINS}
 SITES_${skin}= ${SKIN_SITES}
 .  endfor
