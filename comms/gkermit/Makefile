@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/01/05 22:47:42 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 13:56:13 wiz Exp $
 #
 
 DISTNAME=	gkermit
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
 
 MAINTAINER=	fb@enteract.com
 HOMEPAGE=	http://www.columbia.edu/kermit/gkermit.html
+COMMENT=	minimal implementation of the ``kermit'' protocol (GPL'd)
 
 ALL_TARGET=	posix
 MAKEFILE=	makefile

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/10 18:34:23 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 13:56:12 wiz Exp $
 
 DISTNAME=	estic-1.61
 CATEGORIES=	comms
@@ -8,6 +8,7 @@ DISTFILES=	${EXTRACT_ONLY} ${ESTICPATCH}
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.von-bassewitz.de/uz/estic/estic.html
+COMMENT=	German language configuration tool for ISTEC 1003/1008 ISDN systems
 
 EXTRACT_ONLY=	estic-1.60-sources${EXTRACT_SUFX}
 USE_X11=	YES

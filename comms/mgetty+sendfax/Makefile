@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/10/21 22:19:21 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/16 13:56:17 wiz Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://alpha.greenie.net/pub/mgetty/source/1.1/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://alpha.greenie.net/mgetty/
+COMMENT=	Handle external logins, send and receive faxes
 
 DEPENDS=	netpbm-[0-9]*:../../graphics/netpbm
 
