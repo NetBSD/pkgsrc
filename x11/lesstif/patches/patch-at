@@ -1,17 +1,39 @@
-$NetBSD: patch-at,v 1.7 2000/10/23 19:45:19 jlam Exp $
+$NetBSD: patch-at,v 1.8 2000/12/22 17:26:19 jlam Exp $
 
---- lib/config/Makefile.am.orig	Wed Aug 30 09:48:20 2000
-+++ lib/config/Makefile.am
-@@ -6,10 +6,10 @@
+--- include/Motif-1.2/Xm/Makefile.am.orig	Wed Oct 11 15:36:18 2000
++++ include/Motif-1.2/Xm/Makefile.am
+@@ -73,6 +73,7 @@
  
- configdir=	$(libdir)/X11/config
+ EXTRA_DIST=	$(xm_both_h)
  
--EXTRA_DIST =    LessTif.rules LessTif.tmpl host.def Imake.tmpl
-+EXTRA_DIST =    LessTif.rules LessTif.tmpl LessTif.def Imake.tmpl
++if Version_1_2
+ #
+ # Install headers
+ #
+@@ -81,8 +82,6 @@
+ #
+ xmdir=	$(prefix)/LessTif/Motif1.2/include/Xm
  
- if XIsR6
--config_DATA=	LessTif.rules LessTif.tmpl host.def
-+config_DATA=	LessTif.rules LessTif.tmpl LessTif.def
- else
- # so being R5 
- config_DATA=	Imake.tmpl LessTif.rules LessTif.tmpl
+-if Version_1_2
+-
+ xm_HEADERS = $(xm_both_h)
+ #
+ # Note Xm.h is built by configure, therefore it's not necessarily in
+@@ -91,17 +90,4 @@
+ #
+ xm_DATA = Xm.h
+ 
+-else
+-#
+-# Not Version_1_2
+-#
+-xm_HEADERS = $(xm_12_h)
+-
+-endif
+-install-data-hook:
+-if Version_1_2
+-if DefaultVersion12
+-	if [ -d $(DESTDIR)$(prefix)/include/Xm ]; then rm -rf $(DESTDIR)$(prefix)/include/Xm; else rm -f $(DESTDIR)$(prefix)/include/Xm; fi
+-	(mkdir -p $(DESTDIR)$(prefix)/include && cd $(DESTDIR)$(prefix)/include && $(LN_S) ../LessTif/Motif1.2/include/Xm Xm)
+-endif
+ endif

@@ -1,0 +1,16 @@
+$NetBSD: patch-bb,v 1.1 2000/12/22 17:26:20 jlam Exp $
+
+--- lib/Dt/Makefile.am.orig	Sat Dec 16 15:44:05 2000
++++ lib/Dt/Makefile.am
+@@ -7,7 +7,11 @@
+ 
+ if BuildLibDt
+ 
++if DefaultVersion21
++libdir = $(prefix)/lib
++else
+ libdir = $(prefix)/LessTif/Motif2.1/lib
++endif
+ lib_LTLIBRARIES=	libDt.la
+ 
+ includedir=	$(prefix)/LessTif/Motif2.1/include/Dt

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2000/10/23 19:45:24 jlam Exp $
+@comment $NetBSD: PLIST,v 1.28 2000/12/22 17:26:22 jlam Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -25,6 +25,7 @@ include/Xm/CascadeB.h
 include/Xm/CascadeBG.h
 include/Xm/CascadeBGP.h
 include/Xm/CascadeBP.h
+include/Xm/ColorObjP.h
 include/Xm/ComboBox.h
 include/Xm/ComboBoxP.h
 include/Xm/Command.h
@@ -39,6 +40,7 @@ include/Xm/DesktopP.h
 include/Xm/DialogS.h
 include/Xm/DialogSEP.h
 include/Xm/DialogSP.h
+include/Xm/DialogSavvyT.h
 include/Xm/Display.h
 include/Xm/DisplayP.h
 include/Xm/DragC.h
@@ -70,6 +72,7 @@ include/Xm/GrabShell.h
 include/Xm/GrabShellP.h
 include/Xm/IconG.h
 include/Xm/IconGP.h
+include/Xm/JoinSideT.h
 include/Xm/Label.h
 include/Xm/LabelG.h
 include/Xm/LabelGP.h
@@ -125,6 +128,7 @@ include/Xm/ShellEP.h
 include/Xm/SpecRenderT.h
 include/Xm/SpinB.h
 include/Xm/SpinBP.h
+include/Xm/TakesDefT.h
 include/Xm/TearOffBP.h
 include/Xm/TearOffP.h
 include/Xm/Text.h
@@ -143,7 +147,9 @@ include/Xm/ToggleBP.h
 include/Xm/TraitP.h
 include/Xm/Transfer.h
 include/Xm/TransferP.h
+include/Xm/TransferT.h
 include/Xm/TransltnsP.h
+include/Xm/TxtPropCv.h
 include/Xm/VaSimpleP.h
 include/Xm/VendorS.h
 include/Xm/VendorSEP.h
@@ -153,11 +159,16 @@ include/Xm/VirtKeysP.h
 include/Xm/WorldP.h
 include/Xm/Xm.h
 include/Xm/XmAll.h
+include/Xm/XmIm.h
 include/Xm/XmP.h
 include/Xm/XmStrDefs.h
 include/Xm/XmosP.h
-include/Xm/Xpm.h
 include/Xm/XpmP.h
+include/uil/Uil.h
+include/uil/UilDBDef.h
+include/uil/UilDef.h
+include/uil/UilSymDef.h
+include/uil/UilSymGl.h
 lib/X11/app-defaults/Mwm
 lib/X11/config/LessTif.def
 lib/X11/config/LessTif.rules
@@ -168,11 +179,15 @@ lib/X11/mwm/system.mwmrc
 lib/libMrm.a
 lib/libMrm.la
 lib/libMrm.so.2.0
+lib/libUil.a
+lib/libUil.la
+lib/libUil.so.2.0
 lib/libXm.a
 lib/libXm.la
 lib/libXm.so.2.0
 man/man1/lesstif.1
 man/man1/mwm.1
+man/man1/uil.1
 man/man1/xbae.1
 man/man1/xlt.1
 man/man1/xmbind.1
@@ -244,11 +259,67 @@ share/doc/html/lesstif/Form.txt
 share/doc/html/lesstif/GeoUtils.txt
 share/doc/html/lesstif/Geometry.html
 share/doc/html/lesstif/INSTALL.html
+share/doc/html/lesstif/LessTifInternals.html
 share/doc/html/lesstif/SyntheticResources.txt
 share/doc/html/lesstif/UIL.txt
 share/doc/html/lesstif/Xbae.html
 share/doc/html/lesstif/Xlt.html
+share/doc/html/lesstif/XmArrowButton.html
+share/doc/html/lesstif/XmArrowButtonGadget.html
+share/doc/html/lesstif/XmBulletinBoard.html
+share/doc/html/lesstif/XmCascadeButton.html
+share/doc/html/lesstif/XmCascadeButtonGadget.html
+share/doc/html/lesstif/XmClipboard.html
+share/doc/html/lesstif/XmComboBox.html
+share/doc/html/lesstif/XmCommand.html
+share/doc/html/lesstif/XmDesktop.html
+share/doc/html/lesstif/XmDialogShell.html
+share/doc/html/lesstif/XmDialogShellExt.html
+share/doc/html/lesstif/XmDisplay.html
+share/doc/html/lesstif/XmDragContext.html
+share/doc/html/lesstif/XmDragIcon.html
+share/doc/html/lesstif/XmDragOverShell.html
+share/doc/html/lesstif/XmDrawingArea.html
+share/doc/html/lesstif/XmDrawnButton.html
+share/doc/html/lesstif/XmDropSiteManager.html
+share/doc/html/lesstif/XmDropTransfer.html
+share/doc/html/lesstif/XmFileSelectionBox.html
+share/doc/html/lesstif/XmForm.html
+share/doc/html/lesstif/XmFrame.html
+share/doc/html/lesstif/XmGadget.html
+share/doc/html/lesstif/XmGrabShell.html
+share/doc/html/lesstif/XmIconGadget.html
+share/doc/html/lesstif/XmLabel.html
+share/doc/html/lesstif/XmLabelGadget.html
+share/doc/html/lesstif/XmList.html
+share/doc/html/lesstif/XmMainWindow.html
+share/doc/html/lesstif/XmManager.html
+share/doc/html/lesstif/XmMenuShell.html
+share/doc/html/lesstif/XmMessageBox.html
+share/doc/html/lesstif/XmNotebook.html
+share/doc/html/lesstif/XmPanedWindow.html
+share/doc/html/lesstif/XmPrimitive.html
+share/doc/html/lesstif/XmProtocol.html
+share/doc/html/lesstif/XmPushButton.html
+share/doc/html/lesstif/XmPushButtonGadget.html
+share/doc/html/lesstif/XmRowColumn.html
+share/doc/html/lesstif/XmSash.html
+share/doc/html/lesstif/XmScale.html
+share/doc/html/lesstif/XmScreen.html
+share/doc/html/lesstif/XmScrollBar.html
+share/doc/html/lesstif/XmScrolledWindow.html
+share/doc/html/lesstif/XmSelectionBox.html
+share/doc/html/lesstif/XmSeparator.html
+share/doc/html/lesstif/XmSeparatorGadget.html
+share/doc/html/lesstif/XmSpinBox.html
 share/doc/html/lesstif/XmStrings.txt
+share/doc/html/lesstif/XmTearOffButton.html
+share/doc/html/lesstif/XmText.html
+share/doc/html/lesstif/XmTextField.html
+share/doc/html/lesstif/XmToggleButton.html
+share/doc/html/lesstif/XmToggleButtonGadget.html
+share/doc/html/lesstif/XmVendorShell.html
+share/doc/html/lesstif/XmWorld.html
 share/doc/html/lesstif/apps.html
 share/doc/html/lesstif/bugs.html
 share/doc/html/lesstif/cdrom.html
@@ -271,9 +342,12 @@ share/doc/html/lesstif/images/vh40.jpg
 share/doc/html/lesstif/images/vh40.png
 share/doc/html/lesstif/index.html
 share/doc/html/lesstif/known.html
+share/doc/html/lesstif/lesstif.html
 share/doc/html/lesstif/links.html
 share/doc/html/lesstif/lists.html
 share/doc/html/lesstif/mirrors.html
+share/doc/html/lesstif/mwm.html
+share/doc/html/lesstif/mwmrc.html
 share/doc/html/lesstif/platforms.html
 share/doc/html/lesstif/release-notes.html
 share/doc/html/lesstif/release-policy.html
@@ -281,8 +355,12 @@ share/doc/html/lesstif/test_policy.html
 share/doc/html/lesstif/test_summary.html
 share/doc/html/lesstif/testers.html
 share/doc/html/lesstif/thread.html
+share/doc/html/lesstif/uil.html
 share/doc/html/lesstif/versions.html
 share/doc/html/lesstif/web_button.html
+share/doc/html/lesstif/xbae.html
+share/doc/html/lesstif/xlt.html
+share/doc/html/lesstif/xmbind.html
 share/doc/lesstif/AUTHORS
 share/doc/lesstif/BUG-REPORTING
 share/doc/lesstif/COPYING
@@ -291,14 +369,13 @@ share/doc/lesstif/CREDITS
 share/doc/lesstif/FAQ
 share/doc/lesstif/Install
 share/doc/lesstif/KNOWN_BUGS
-share/doc/lesstif/NEWS
 share/doc/lesstif/README
 share/doc/lesstif/RELEASE-POLICY
-share/doc/lesstif/TODO
 share/doc/lesstif/release-notes.txt
 @dirrm share/doc/lesstif
 @dirrm share/doc/html/lesstif/images
 @dirrm share/doc/html/lesstif
 @dirrm lib/X11/mwm
+@dirrm include/uil
 @dirrm include/Xm
 @dirrm include/Mrm
