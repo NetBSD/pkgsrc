@@ -1,0 +1,169 @@
+$NetBSD: patch-aq,v 1.1 2003/09/30 23:03:59 christos Exp $
+
+--- xwin.cc.orig	1999-02-16 09:08:34.000000000 -0500
++++ xwin.cc	2003-09-30 18:46:45.000000000 -0400
+@@ -3,6 +3,7 @@
+ //
+ 
+ #include <X11/Xatom.h>
++#include <iostream>
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include "snprintf.h"
+@@ -22,8 +23,8 @@
+ //-----------------------------------------------------------------------------
+ 
+ XWin::XWin( int argc, char *argv[], int x, int y, int width, int height ){
+-  cerr << "This constructor call is not supported! (" << __FILE__
+-       << ":" << __LINE__ << ")" << endl;
++  std::cerr << "This constructor call is not supported! (" << __FILE__
++       << ":" << __LINE__ << ")" << std::endl;
+   exit (-1);
+   //  FIXME BCG  This constructor needs to do much of the work of the above
+   //  one.  Or, we need to drop this as a constructor.  As it is, it is
+@@ -134,7 +135,7 @@
+   map();
+   flush();
+   if(XGetWindowAttributes(display_, window_, &attr_) == 0){
+-    cerr <<"Error getting attributes of Main." <<endl;
++    std::cerr <<"Error getting attributes of Main." <<std::endl;
+     exit(2);
+   }
+ 
+@@ -154,8 +155,8 @@
+   const char* fontName = getResource("font");
+ 
+   if ((font_ = XLoadQueryFont(display_, fontName)) == NULL){
+-    cerr <<name_ <<": display " <<DisplayString(display_)
+-      <<" cannot load font " << fontName << endl;
++    std::cerr <<name_ <<": display " <<DisplayString(display_)
++      <<" cannot load font " << fontName << std::endl;
+     exit(1);
+   }
+ }
+@@ -164,7 +165,7 @@
+ void XWin::setHints( int argc, char *argv[] ){
+   // Set up class hint
+   if((classhints_ = XAllocClassHint()) == NULL){
+-    cerr <<"Error allocating class hint!" <<endl;
++    std::cerr <<"Error allocating class hint!" <<std::endl;
+     exit(1);
+   }
+   //  We have to cast away the const's.
+@@ -173,7 +174,7 @@
+ 
+   // Set up the window manager hints
+   if((wmhints_ = XAllocWMHints()) == NULL){
+-    cerr <<"Error allocating Window Manager hints!" <<endl;
++    std::cerr <<"Error allocating Window Manager hints!" <<std::endl;
+     exit(1);
+   }
+   wmhints_->flags = (InputHint|StateHint);
+@@ -182,11 +183,11 @@
+ 
+   // Set up XTextProperty for window name and icon name
+   if(XStringListToTextProperty(&name_, 1, &title_) == 0){
+-    cerr <<"Error creating XTextProperty!" <<endl;
++    std::cerr <<"Error creating XTextProperty!" <<std::endl;
+     exit(1);
+   }
+   if(XStringListToTextProperty(&name_, 1, &iconname_) == 0){
+-    cerr <<"Error creating XTextProperty!" <<endl;
++    std::cerr <<"Error creating XTextProperty!" <<std::endl;
+     exit(1);
+   }
+ 
+@@ -204,7 +205,7 @@
+ void XWin::openDisplay( void ){
+   // Open connection to display selected by user
+   if ((display_ = XOpenDisplay (display_name_)) == NULL) {
+-    cerr <<"Can't open display named " << display_name_ <<endl;
++    std::cerr <<"Can't open display named " << display_name_ <<std::endl;
+     exit(1);
+   }
+ 
+@@ -251,8 +252,8 @@
+ 		pixmap_att.valuemask=XpmSize|XpmReturnPixels|XpmColormap|XpmCloseness;
+ 		if(XpmReadFileToPixmap(display_,DefaultRootWindow(display_),pixmap_file, pixmap, NULL, &pixmap_att))
+         	{
+-                	cerr << "Pixmap " << pixmap_file  << " not found" << endl;
+-                	cerr << "Defaulting to blank" << endl;
++                	std::cerr << "Pixmap " << pixmap_file  << " not found" << std::endl;
++                	std::cerr << "Defaulting to blank" << std::endl;
+                 	pixmap=NULL;
+ 			return 0; // OOps
+         	}
+@@ -261,7 +262,7 @@
+ 	return 0; // No file specified, none used
+ #else
+ 	(void) pixmap;
+-	cerr << "Error:  getPixmap called, when Xpm is not enabled!\n" ;
++	std::cerr << "Error:  getPixmap called, when Xpm is not enabled!\n" ;
+ 	return 0;
+ #endif
+ }
+@@ -273,7 +274,7 @@
+   // Fill out a XsizeHints structure to inform the window manager
+   // of desired size and location of main window.
+   if((sizehints_ = XAllocSizeHints()) == NULL){
+-    cerr <<"Error allocating size hints!" <<endl;
++    std::cerr <<"Error allocating size hints!" <<std::endl;
+     exit(1);
+   }
+   sizehints_->flags = PSize;
+@@ -350,7 +351,7 @@
+ #if 0
+ void XWin::usage( void ){
+   //  FIXME  We need to update this.  BCG
+-  cerr <<name_ <<" [-display name] [-geometry geom]" <<endl;
++  std::cerr <<name_ <<" [-display name] [-geometry geom]" <<std::endl;
+ //    exit (1);
+ }
+ #endif
+@@ -386,7 +387,7 @@
+     return retval;
+   else
+   {
+-    cerr << "Error:  Couldn't find '" << name << "' resource in the resource database!\n";
++    std::cerr << "Error:  Couldn't find '" << name << "' resource in the resource database!\n";
+     exit (-1);
+       /*  Some compilers aren't smart enough to know that exit() exits.  */
+     return '\0';
+@@ -396,7 +397,7 @@
+ //-----------------------------------------------------------------------------
+ 
+ void XWin::dumpResources( ostream &os ){
+-cerr << "Function not implemented!\n";  //  BCG  FIXME  Need to make this.
++std::cerr << "Function not implemented!\n";  //  BCG  FIXME  Need to make this.
+ (void) os;  //  Keep gcc happy.
+ }
+ //-----------------------------------------------------------------------------
+@@ -405,7 +406,7 @@
+   XColor exact, closest;
+   
+   if ( XAllocNamedColor( display_, colormap(), name, &closest, &exact ) == 0 )
+-    cerr <<"XWin::allocColor() : failed to alloc : " <<name <<endl;
++    std::cerr <<"XWin::allocColor() : failed to alloc : " <<name <<std::endl;
+ 
+   return exact.pixel;
+ }
+@@ -504,7 +505,7 @@
+     mask_ = ResizeRedirectMask;
+     break;
+   default:
+-    cerr <<"XWin::Event::Event() : unknown event type : " <<event_ <<endl;
++    std::cerr <<"XWin::Event::Event() : unknown event type : " <<event_ <<std::endl;
+     mask_ = NoEventMask;
+     break;
+   }
+--- xwin.h.orig	1999-02-16 09:08:35.000000000 -0500
++++ xwin.h	2003-09-30 18:33:56.000000000 -0400
+@@ -105,7 +105,7 @@
+     Event( XWin *parent, int event, EventCallBack callBack );
+     virtual ~Event( void ){}
+ 
+-    friend XWin;
++    friend class XWin;
+ 
+     void callBack( XEvent &event )
+       { if ( event.type == event_ ) (parent_->*callBack_)( event ); }
