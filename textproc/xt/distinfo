@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:55:48 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 15:05:14 skrll Exp $
 
-MD5 (xt.zip) = 2ac9973f7f9cb2a480af94066f89568a
+SHA1 (xt.zip) = 167170166cf008c7373e0f8f1368a1cbfb9273c1
+Size (xt.zip) = 525521 bytes

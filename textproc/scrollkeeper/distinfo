@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:55:25 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 15:05:07 skrll Exp $
 
 SHA1 (scrollkeeper-0.2.tar.gz) = 2f1f7ce884d64d3f7e6222a373372635cdf8508e
+Size (scrollkeeper-0.2.tar.gz) = 308061 bytes
 SHA1 (patch-aa) = 26878255f20e941ac923ae5845c7a983ec33ef68
 SHA1 (patch-ab) = 84a69952e60e0ad661dead97f7190ed58c753a33
