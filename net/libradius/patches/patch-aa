@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/10/20 22:51:37 manu Exp $
+$NetBSD: patch-aa,v 1.3 2004/11/10 08:46:51 xtraeme Exp $
 --- Makefile.orig	2004-08-27 07:20:33.000000000 +0000
 +++ Makefile	2004-09-07 18:39:55.000000000 +0000
 @@ -23,20 +23,16 @@
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.2 2004/10/20 22:51:37 manu Exp $
  
  # netbsd - it's in libc
 -#LIBMD= -L/usr/lib -lc
-+LIBMD= -L/usr/lib -lc
++#LIBMD= -L/usr/lib -lc
  
  
  LIB=    radius
