@@ -1,4 +1,4 @@
-<!-- $NetBSD: ftp-layout.xml,v 1.1.1.1 2004/10/21 14:27:37 grant Exp $ -->
+<!-- $NetBSD: ftp-layout.xml,v 1.2 2005/01/10 21:00:38 hubertf Exp $ -->
 
 <appendix id="ftp-layout">
   <title>Layout of the FTP server's package archive</title>
@@ -78,7 +78,7 @@
       <para> Upload /usr/pkgsrc/packages to </para>
 
       <programlisting>    ftp://ftp.NetBSD.org/pub/NetBSD/packages/\
-	pkgsrc-2004Q3/\				# pkgsrc-branch
+	pkgsrc-2004Q4/\				# pkgsrc-branch
 	`uname -s`-`uname -r`/			# OS & version
 	`uname -p`				# architecture
        </programlisting>
