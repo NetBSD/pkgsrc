@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/01/26 13:08:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/29 22:11:01 jmmv Exp $
 #
 
 DISTNAME=	kmplayer-0.8.2rc5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia kde
 MASTER_SITES=	http://www.xs4all.nl/~jjvrieze/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,6 +24,12 @@ USE_LIBTOOL=		yes
 USE_PERL5=		build
 
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+SUBST_CLASSES+=		desktop
+SUBST_MESSAGE.desktop=	"Fixing application launcher."
+SUBST_STAGE.desktop=	pre-configure
+SUBST_FILES.desktop=	src/kmplayer.desktop
+SUBST_SED.desktop=	-e 's|@PREFIX@|${PREFIX}|g'
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
