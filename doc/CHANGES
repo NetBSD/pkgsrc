@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9061 2005/02/06 21:59:35 salo Exp $
+$NetBSD: CHANGES,v 1.9062 2005/02/06 23:12:43 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -780,3 +780,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libbonoboui to 2.8.1 [jmmv 2005-02-06]
 	Updated nmap to 3.80 [salo 2005-02-06]
 	Updated nmapfe to 0.9.5nb19 [salo 2005-02-06]
+	Updated vice to 1.16 [kristerw 2005-02-06]
