@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2199 2003/05/09 12:59:47 jmmv Exp $
+$NetBSD: CHANGES,v 1.2200 2003/05/09 13:04:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1915,3 +1915,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lmule to 1.2.1 [jmmv 2003-05-09]
 	Updated pan to 0.14.0 [wiz 2003-05-09]
 	Updated boehm-gc to 6.1.994 [jmmv 2003-05-09]
+	Updated mono to 0.24 [jmmv 2003-05-09]
