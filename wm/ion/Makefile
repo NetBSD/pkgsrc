@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.13 2004/04/05 15:21:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/06 04:38:45 cube Exp $
 #
 
-DISTNAME=	ion-2-20040207
+DISTNAME=	ion-2-20040407
 PKGNAME=	${DISTNAME:S/-2-/-/}
-PKGREVISION=	1
 CATEGORIES=	wm x11
-MASTER_SITES=	http://modeemi.fi/~tuomov/dl/
+MASTER_SITES=	http://modeemi.cs.tut.fi/~tuomov/ion/dl/
 
 MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://iki.fi/~tuomov/ion/
 COMMENT=	Keyboard friendly tiling window manager
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 USE_X11=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	ion
 EGDIR=			${PREFIX}/share/examples/ion
@@ -31,6 +34,9 @@ EGFILES=		floatws.lua ion-bindings.lua ion-menus.lua	\
 CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
 .endfor
 .undef f
+
+INSTALLATION_DIRS=	bin lib/ion libexec/ion man/man1
+INSTALLATION_DIRS+=	share/doc/ion share/examples/ion share/ion
 
 .include "../../lang/lua/buildlink3.mk"
 .include "../../devel/libtool/buildlink3.mk"
