@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.796 2001/08/08 07:24:57 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.797 2001/08/16 01:49:09 dogcow Exp $
 #
 # This file is in the public domain.
 #
@@ -410,7 +410,7 @@ EXTRACT_SUFX?=		.tar.gz
 BZCAT=			/usr/bin/bzcat <
 .  else
 BZCAT=			${LOCALBASE}/bin/bzcat
-BUILD_DEPENDS+=		bzip2-0.9.0b:../../archivers/bzip2
+BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
 .  endif # !exists bzcat
 DECOMPRESS_CMD?=	${BZCAT}
 .elif ${EXTRACT_SUFX} == ".tar"
@@ -432,7 +432,7 @@ DECOMPRESS_CMD?=	${GZCAT}
 BZCAT=			/usr/bin/bzcat
 .    else
 BZCAT=			${LOCALBASE}/bin/bzcat
-BUILD_DEPENDS+=		bzip2-0.9.0b:../../archivers/bzip2
+BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
 .    endif # !exists bzcat
 .  endif
 .endif # defined(PATCHFILES)
