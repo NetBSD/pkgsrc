@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/05/23 16:55:00 manu Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/23 16:57:47 manu Exp $
 #
 
-DISTNAME=       blackdown-jdk-1.3.0.nb2
+DISTNAME=       blackdown-jdk-1.3.0.nb3
 CATEGORIES=     lang
 MASTER_SITES+=  http://linuxppc.org/software/java/dl/jdk130/
 MASTER_SITES+=  ftp://ftp.netbsd.org/pub/NetBSD/misc/manu/
