@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1997/12/14 16:17:14 hubertf Exp $
+@comment XXX etc/rc.d/sshd.sh - not yet - hubertf
+bin/scp
+bin/ssh
+@exec ln -fs %f %B/slogin
+@unexec rm -f %B/slogin
+bin/ssh-add
+bin/ssh-agent
+bin/ssh-askpass
+bin/ssh-keygen
+bin/make-ssh-known-hosts
+man/man1/make-ssh-known-hosts.1.gz
+man/man1/scp.1.gz
+man/man1/ssh-add.1.gz
+man/man1/ssh-agent.1.gz
+man/man1/ssh-keygen.1.gz
+man/man1/ssh.1.gz
+man/man1/slogin.1.gz
+man/man8/sshd.8.gz
+sbin/sshd
+etc/ssh_config
+etc/sshd_config
+@exec ln -s /etc/ssh_host_key %B
+@unexec rm -f %B/ssh_host_key
+@exec ln -s /etc/ssh_host_key.pub %B
+@unexec rm -f %B/ssh_host_key.pub
+@exec if [ ! -f %D/etc/ssh_host_key ]; then echo "Generating a secret host key.." ; %D/bin/ssh-keygen -N "" -f %D/etc/ssh_host_key; fi
