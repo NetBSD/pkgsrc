@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/04/14 23:16:00 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/06/20 21:55:02 tron Exp $
 bin/gtk-config
 include/gdk/gdk.h
 include/gdk/gdkcursors.h
@@ -33,6 +33,7 @@ include/gtk/gtkeditable.h
 include/gtk/gtkentry.h
 include/gtk/gtkenums.h
 include/gtk/gtkeventbox.h
+include/gtk/gtkfeatures.h
 include/gtk/gtkfilesel.h
 include/gtk/gtkfixed.h
 include/gtk/gtkframe.h
@@ -104,13 +105,14 @@ include/gtk/gtkwindow.h
 lib/glib/include/glibconfig.h
 lib/libgdk.a
 lib/libgdk.la
-lib/libgdk.so.1.0
+lib/libgdk.so.1.4
 lib/libglib.a
 lib/libglib.la
-lib/libglib.so.1.0
+lib/libglib.so.1.4
 lib/libgtk.a
 lib/libgtk.la
-lib/libgtk.so.1.0
+lib/libgtk.so.1.4
+man/man1/gtk-config.1
 @unexec install-info --delete %D/info/gdk.info %D/info/dir
 @unexec install-info --delete %D/info/glib.info %D/info/dir
 @unexec install-info --delete %D/info/gtk.info %D/info/dir
@@ -122,11 +124,10 @@ info/gtk.info-2
 info/gtk.info-3
 info/gtk.info-4
 info/gtk.info-5
-share/aclocal/gtk.m4
-@exec ([ ! -f %D/info/dir ] && /usr/bin/sed -ne '1,/Menu:/p' ${LOCALBASE}/info/dir > %D/info/dir) || /usr/bin/true
 @exec install-info %D/info/gdk.info %D/info/dir
 @exec install-info %D/info/glib.info %D/info/dir
 @exec install-info %D/info/gtk.info %D/info/dir
+share/aclocal/gtk.m4
 @exec /sbin/ldconfig || /usr/bin/true
 @unexec /sbin/ldconfig || /usr/bin/true
 @dirrm share/aclocal
