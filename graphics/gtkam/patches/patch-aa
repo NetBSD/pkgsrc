@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/07/08 01:48:38 garbled Exp $
+--- Makefile.in.orig	Sat Jul  7 18:53:29 2001
++++ Makefile.in	Sat Jul  7 18:53:40 2001
+@@ -90,7 +90,7 @@
+ 
+ SUBDIRS = po src
+ 
+-gtkamdocdir = $(prefix)/doc/gtkam
++gtkamdocdir = $(prefix)/share/doc/gtkam
+ gtkamdoc_DATA = AUTHORS COPYING MANUAL
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
