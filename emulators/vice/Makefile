@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2004/04/24 23:34:28 snj Exp $
+# $NetBSD: Makefile,v 1.43 2004/05/25 21:51:42 wiz Exp $
 #
 
 DISTNAME=		vice-1.14
@@ -29,6 +29,12 @@ USE_GCC_SHLIB=		YES
 
 INFO_FILES=		vice.info
 
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(VICE_USE_FFMPEG:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-ffmpeg
+.endif
+
 # These changes are rather common, so sed instead of patch:
 post-patch:
 	@for file in `${FIND} ${WRKSRC} -name Makefile.in -print`	\
@@ -49,5 +55,8 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
+.if !empty(VICE_USE_FFMPEG:M[Yy][Ee][Ss])
+.include "../../multimedia/ffmpeg/buildlink3.mk"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
