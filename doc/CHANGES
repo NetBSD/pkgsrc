@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1652 2003/03/16 00:18:14 wiz Exp $
+$NetBSD: CHANGES,v 1.1653 2003/03/16 01:13:11 kei Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1142,5 +1142,12 @@ Changes to the packages collection and infrastructure in 2003:
 	Added ja-ptex-share-2.1 [kei 2003-03-15]
 	Added ja-jsclasses-0.0.0.20021127 [kei 2003-03-15]
 	Added ja-ptex-1.0 [kei 2003-03-15]
+	Added vfontcap-kochi-0.0 [kei 2003-03-15]
 	Updated gtkmm to 2.2.1 [jmmv 2003-03-15]
 	Updated gcpio to 2.4.2nb1 [wiz 2003-03-16]
+	Added ja-elisat-1.0 [kei 2003-03-15]
+	Added ja-elisau-1.0 [kei 2003-03-15]
+	Added ja-kaname-0.0.0.20030112 [kei 2003-03-15]
+	Added ja-kappa20-0.394 [kei 2003-03-15]
+	Added ja-naga10-1.1 [kei 2003-03-15]
+	Added ja-shinonome-0.9.9 [kei 2003-03-15]
