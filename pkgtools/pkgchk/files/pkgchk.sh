@@ -1,6 +1,8 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.2 2001/07/02 15:28:44 abs Exp $
+# $Id: pkgchk.sh,v 1.3 2001/07/05 21:00:54 abs Exp $
+#
+# TODO: Handle and as well as or tags (eg: i386+x11)
 
 extract_variables()
     {
@@ -181,14 +183,14 @@ fi
 # Check packages are installed
 #
 for pkgdir in $PKGDIRLIST ; do
+
     cd $PKGSRCDIR/$pkgdir
     # Use 'make x' rather than 'make all' to avoid potential licence errors
-    pkgname=`printf 'x:\n\t@echo ${PKGNAME}\n'|make -f - -f Makefile x`
+    pkgname=`printf 'x:\n\t@echo ${PKGNAME}\n'|make -f - -f Makefile x` || true
     if [ -z "$pkgname" ]; then
 	echo "Unable to extract PKGNAME for $pkgdir"
 	exit 1
     fi
-
     if [ ! -d /var/db/pkg/$pkgname ];then
 	echo -n "$pkgname: "
 	pkg=`echo $pkgname | sed 's/-[0-9].*//'`
@@ -212,7 +214,7 @@ for pkgdir in $PKGDIRLIST ; do
 	if [ -n "$INSTALL" ];then
 	    pkg_install $pkgname $pkgdir $INSTALL
 	fi
-     elif [ -n "$opt_v" ];then
+    elif [ -n "$opt_v" ];then
 	echo "$pkgname: OK"
     fi
 done
