@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 1999/09/07 14:55:06 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2003/11/20 00:33:47 fredb Exp $
 
 --- config.h.orig	Tue Jul  6 03:45:49 1999
 +++ config.h	Tue Sep  7 08:35:15 1999
@@ -11,3 +11,12 @@ $NetBSD: patch-ab,v 1.1 1999/09/07 14:55:06 jlam Exp $
  
  /*
   * French layout (AppleDesign keyboard)
+@@ -81,7 +81,7 @@
+ /*
+  * be compatible with old-style grf-devices (untested with old kernels)
+  */
+-#define GRF_COMPAT
++#undef GRF_COMPAT
+ 
+ /*
+  * force usage of old grf interface
