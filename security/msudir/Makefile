@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/27 08:57:32 abs Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/27 17:04:50 abs Exp $
 #
 
-DISTNAME=	msudir-0.09
+DISTNAME=	msudir-0.10
 CATEGORIES=	security
 MASTER_SITES=	http://www.mono.org/abs/tools/msudir/
 
