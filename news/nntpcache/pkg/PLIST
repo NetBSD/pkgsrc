@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 1998/06/06 15:28:36 frueauf Exp $
+etc/nntpcache/access
+etc/nntpcache/access.default
+etc/nntpcache/config
+etc/nntpcache/config.default
+etc/nntpcache/servers
+etc/nntpcache/servers.default
+etc/nntpcache/spam.filter
+etc/nntpcache/spam.filter.default
+etc/rc.d/nntpcached.sh
+sbin/nntpcached
+man/man8/nntpcache.8.gz
+@dirrm etc/nntpcache
+@unexec rm -rf /var/spool/nntpcache
