@@ -1,0 +1,12 @@
+$NetBSD: patch-ax,v 1.1 2004/10/03 16:16:39 taca Exp $
+
+--- smbd/vfs.c.orig	2003-05-20 11:17:19.000000000 +0900
++++ smbd/vfs.c
+@@ -790,7 +790,6 @@ BOOL reduce_name(connection_struct *conn
+ 	*dir2 = *wd = *base_name = *newname = 0;
+ 
+ 	if (widelinks) {
+-		unix_clean_name(s);
+ 		/* can't have a leading .. */
+ 		if (strncmp(s,"..",2) == 0 && (s[2]==0 || s[2]=='/')) {
+ 			DEBUG(3,("Illegal file name? (%s)\n",s));
