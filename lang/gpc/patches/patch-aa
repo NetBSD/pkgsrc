@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/17 18:47:25 jtb Exp $
+
+--- ../gcc-2.95.3/gcc/p/config-lang.in.orig	Fri Apr 26 22:15:55 2002
++++ ../gcc-2.95.3/gcc/p/config-lang.in	Fri Jan 17 21:58:29 2003
+@@ -100,9 +100,9 @@
+   echo "*** $0 detected GCC version $mainversion." >&2
+   echo "*** GPC 2.1 requires a patch to GCC to build with version $mainversion." >&2
+   echo "*** This patch will now be applied." >&2
+-  echo "*** Press ENTER to continue, Ctrl-C to abort." >&2
++#  echo "*** Press ENTER to continue, Ctrl-C to abort." >&2
+   echo "***" >&2
+-  read junk
++#  read junk
+ 
+   cur_dir="`pwd`"
+   cd $srcdir
