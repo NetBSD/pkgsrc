@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/14 17:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/11 23:35:06 snj Exp $
 #
 
 DISTNAME=	flac-1.1.0
@@ -11,7 +11,7 @@ MAINTAINER=	ben@NetBSD.org
 HOMEPAGE=	http://flac.sourceforge.net/
 COMMENT=	FLAC XMMS plugin
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 
@@ -33,7 +33,7 @@ do-install:
 	@cd ${XMMS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 
-.include "../../audio/flac/buildlink2.mk"
-.include "../../audio/xmms/buildlink2.mk"
+.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/xmms/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
