@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/03/13 17:37:55 fredb Exp $
+# $NetBSD: Makefile,v 1.27 2002/05/31 10:09:35 tron Exp $
 
 DISTNAME=	gdm-2.2.0
 PKGREVISION=	1
@@ -73,7 +73,7 @@ post-build:
 	done
 	cd ${WRKSRC}/config;						\
 	for f in Default PostSession PreSession; do			\
-		${SED} -e 's#/usr/bin/X11#${X11PREFIX}/bin#g' $$f >$$f.new; \
+		${SED} -e 's#/usr/bin/X11#${X11BASE}/bin#g' $$f >$$f.new; \
 		${MV} $$f.new $$f;					\
 		${CHMOD} +x $$f;					\
 	done
