@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/10/07 16:36:47 tv Exp $
+# $NetBSD: Makefile,v 1.34 2004/12/25 20:07:30 wiz Exp $
 #
 
 DISTNAME=		wxGTK-2.4.2
@@ -8,8 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wxwindows/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tsarna@NetBSD.org
-HOMEPAGE=		http://www.wxwindows.org/
-COMMENT=		GTK-based implementation of the wxWindows GUI library
+HOMEPAGE=		http://www.wxwidgets.org/
+COMMENT=		GTK-based implementation of the wxWidgets GUI library
 
 USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
