@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.150 1998/08/27 11:34:23 frueauf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.151 1998/08/27 14:56:02 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1476,22 +1476,19 @@ checksum: fetch
 
 HTMLIFY=	${SED} -e 's/&/\&amp;/g' -e 's/>/\&gt;/g' -e 's/</\&lt;/g'
 
-# Set to YES by the README.html target (and passed via depends-list
+# Set to "html" by the README.html target (and passed via depends-list
 # and package-depends)
-.ifndef PACKAGE_NAME_AS_LINK
-PACKAGE_NAME_AS_LINK=NO
-.endif # PACKAGE_NAME_AS_LINK
-
+PACKAGE_NAME_TYPE?=	name
 
 # Nobody should want to override this unless PKGNAME is simply bogus.
 
 .if !target(package-name)
 package-name:
-.if (${PACKAGE_NAME_AS_LINK} == "YES")
-	@${ECHO} '<A HREF="../../'`${MAKE} package-path | ${HTMLIFY}`'/README.html">'`echo ${PKGNAME} | ${HTMLIFY}`'</A>'
+.if (${PACKAGE_NAME_TYPE} == "html")
+	@${ECHO} '<A HREF="../../'`${MAKE} package-path | ${HTMLIFY}`'/README.html">'`${ECHO} ${PKGNAME} | ${HTMLIFY}`'</A>'
 .else
 	@${ECHO} '${PKGNAME}'
-.endif # PACKAGE_NAME_AS_LINK != ""
+.endif # PACKAGE_NAME_TYPE
 .endif # !target(package-name)
 
 .if !target(package-path)
@@ -1505,7 +1502,7 @@ package-path:
 package-depends:
 	@for dir in `${ECHO} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
 		if [ -d $$dir ]; then \
-			(cd $$dir ; ${MAKE} package-name package-depends PACKAGE_NAME_AS_LINK=${PACKAGE_NAME_AS_LINK}); \
+			(cd $$dir ; ${MAKE} package-name package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		else \
 			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 		fi; \
@@ -1641,7 +1638,7 @@ clean-depends:
 .if !target(depends-list)
 depends-list:
 	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
-		(cd $$dir; ${MAKE} package-name depends-list PACKAGE_NAME_AS_LINK=${PACKAGE_NAME_AS_LINK}; ); \
+		(cd $$dir; ${MAKE} package-name depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; ); \
 	done
 .endif
 
@@ -1756,9 +1753,9 @@ SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
 .endif
 
 README.html:
-	@${MAKE} depends-list PACKAGE_NAME_AS_LINK=YES | sort -u >> $@.tmp1
+	@${MAKE} depends-list PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp1
 	@[ -s $@.tmp1 ] || echo "<I>(none)</I>" >> $@.tmp1
-	@${MAKE} package-depends PACKAGE_NAME_AS_LINK=YES | sort -u >> $@.tmp2
+	@${MAKE} package-depends PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp2
 	@[ -s $@.tmp2 ] || echo "<I>(none)</I>" >> $@.tmp2
 	@${ECHO} ${PKGNAME} | ${HTMLIFY} >> $@.tmp3
 	@${MAKE} binpkg-list  >> $@.tmp4
