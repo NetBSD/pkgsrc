@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2003/09/17 19:41:01 grant Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/01/24 14:58:00 grant Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 GS_VERS=	7.05
@@ -17,7 +17,7 @@ CONFLICTS+=	ghostscript-gnu{,-nox11,-x11}-[0-9]*
 DEPENDS+=	ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
 
 USE_BUILDLINK2=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ijs
 

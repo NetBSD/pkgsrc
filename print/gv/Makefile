@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2003/07/17 22:52:29 grant Exp $
+# $NetBSD: Makefile,v 1.41 2004/01/24 14:58:00 grant Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -20,7 +20,7 @@ IMAKEOPTS+=		-DCONVERT_INCLUDE_DIRECTIVES
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 .elif ${OPSYS} == "IRIX" && !empty(ABI)
 # Hack to put the correct path first -- otherwise, buildlink will first try to link X11BASE/lib
 .  if ${ABI} == "64"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/05/01 19:14:12 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/01/24 14:50:06 grant Exp $
 #
 
 CATEGORIES=		net sysutils
@@ -17,7 +17,7 @@ PKG_USERS+=	${NETSTADM_USER}:${NETSTADM_GROUP}::NetSaint\\ Administrator:${PREFI
 
 USE_X11=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 USE_PERL5=		YES
 

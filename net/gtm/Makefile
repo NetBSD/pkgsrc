@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/03 18:49:48 reed Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/24 14:50:05 grant Exp $
 #
 
 DISTNAME=	gtm-0.4.12
@@ -15,7 +15,7 @@ DEPENDS+=	wget-[0-9]*:../../net/wget
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 
 .include "../../devel/gettext-lib/buildlink2.mk"
