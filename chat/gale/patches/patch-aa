@@ -1,0 +1,14 @@
+--- lib/term.c.orig	Wed Feb  7 10:32:09 2001
++++ lib/term.c	Wed Feb  7 10:32:43 2001
+@@ -10,9 +10,11 @@
+ #ifdef HAVE_CURSES_H
+ #define HAVE_CURSES
+ #include <curses.h>
++#if 0 /* XXX - conflict between ncurses' term.h and netbsd's curses.h */
+ #ifdef HAVE_TERM_H
+ #include <term.h>
+ #endif
++#endif /* XXX - conflict between ncurses' term.h and netbsd's curses.h */
+ #endif
+ 
+ /* This needs to be here for Solaris. */
