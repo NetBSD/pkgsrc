@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/04/28 23:59:19 jtb Exp $
+# $NetBSD: Makefile,v 1.16 2001/04/30 04:16:10 jlam Exp $
 
 DISTNAME=	plplot-5.0.3
 CATEGORIES=	graphics
@@ -12,7 +12,7 @@ DEPENDS+=	tcl>=8.3.0:../../lang/tcl
 DEPENDS+= 	tk>=8.3.0:../../x11/tk
 BUILD_DEPENDS+=	m4>=1.4:../../devel/m4
 BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
-BUILD_DEPENDS+=	perl-5.*:../../lang/perl5
+BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
 
 GNU_CONFIGURE=	#defined
 USE_GMAKE=	#defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2001/04/29 05:13:57 rh Exp $
+# $NetBSD: Makefile,v 1.57 2001/04/30 04:16:12 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 CATEGORIES=		x11
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.gtk.org/
 COMMENT=		Gimp toolkit. Libraries for building X11 user interfaces
 
 DEPENDS+=		glib>=1.2.8:../../devel/glib
-BUILD_DEPENDS+=		perl-5.*:../../lang/perl5
+BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 BUILD_USES_MSGFMT=	yes
 
 USE_LIBINTL=		yes

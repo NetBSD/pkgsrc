@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/04/17 23:32:34 itojun Exp $
+# $NetBSD: Makefile,v 1.39 2001/04/30 04:16:11 jlam Exp $
 
 DISTNAME=		openssl-0.9.6
 CATEGORIES=		security
@@ -9,7 +9,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssl.org/
 COMMENT=		Secure Socket Layer and cryptographic library
 
-BUILD_DEPENDS+=		perl-5.*:../../lang/perl5
+BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 
 CONFLICTS=		SSLeay-* ssleay-* base64-*
 
