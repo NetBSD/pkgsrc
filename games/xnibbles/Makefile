@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/24 13:30:57 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/09 23:06:18 snj Exp $
 #
 
 DISTNAME=		xnibbles-1.0BETA4
@@ -12,19 +12,18 @@ HOMEPAGE=		http://www.tjhsst.edu/xnibbles/
 COMMENT=		Winding snakes game for X11
 
 WRKSRC=			${WRKDIR}/xnibbles
-USE_BUILDLINK2=		YES
-USE_X11=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
+USE_LANGUAGES=		c c++
+USE_X11=		YES
 
-ALL_TARGET=		netbsd
+SUBST_CLASSES+=		audio
+SUBST_STAGE.audio=	pre-build
+SUBST_MESSAGE.audio=	Adjusting path to audio device
+SUBST_FILES.audio=	Makefile
+SUBST_SED.audio=	-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
-CC=			${CXX}
-MAKE_FLAGS+=		INSTALL_PROGRAM="${INSTALL_PROGRAM}"
-MAKE_FLAGS+=		INSTALL_DATA="${INSTALL_DATA}"
-MAKE_FLAGS+=		INSTALL_MAN="${INSTALL_MAN}"
-MAKE_FLAGS+=		INSTALL_DIR="${INSTALL_DATA_DIR}"
-
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
