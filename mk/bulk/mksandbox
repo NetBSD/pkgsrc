@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.27 2004/01/22 13:08:32 grant Exp $
+# $NetBSD: mksandbox,v 1.28 2004/01/26 22:32:30 grant Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -101,7 +101,7 @@ SunOS)
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/xpg4/bin/sed
-	sandboxMountDirs="/bin /sbin /kernel /lib /proc /usr/X11R6 /usr/bin /usr/ccs /usr/dt /usr/games /usr/include /usr/lib /usr/openwin /usr/share /usr/sbin /usr/ucb /usr/ucblib /usr/xpg4 /var/mail"
+	sandboxMountDirs="/bin /sbin /kernel /lib /proc /usr/X11R6 /usr/5bin /usr/bin /usr/ccs /usr/dt /usr/games /usr/include /usr/lib /usr/openwin /usr/share /usr/sbin /usr/ucb /usr/ucblib /usr/xpg4 /var/mail"
 	;;
 *)
 	echo "Unknown Operating System ($opsys) - good luck"
