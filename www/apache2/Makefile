@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/04/15 18:35:29 kei Exp $
+# $NetBSD: Makefile,v 1.5 2002/04/16 17:41:54 jlam Exp $
 
 DISTNAME=		httpd-2.0.35
 PKGNAME=		apache-2.0.35
@@ -41,12 +41,13 @@ CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_DIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-APACHE_MODULES=		all
-APACHE_MODULES+=	proxy proxy_connect proxy_ftp proxy_http
-APACHE_MODULES+=	ssl
-
+DFLT_APACHE_MODULES=	all
+DFLT_APACHE_MODULES+=	proxy proxy_connect proxy_ftp proxy_http
+DFLT_APACHE_MODULES+=	ssl
+APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 CONFIGURE_ARGS+=	--enable-modules="${APACHE_MODULES}"
 CONFIGURE_ARGS+=	--enable-so
+BUILD_DEFS+=		APACHE_MODULES
 
 SUEXEC_COMMENT?=	"@comment "
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
@@ -91,6 +92,32 @@ OWN_DIRS_PERMS+=	/var/db/httpd/proxy ${APACHE_SUEXEC_USER} ${APACHE_SUEXEC_GROUP
 OWN_DIRS_PERMS+=	/var/db/httpd/proxy nobody nobody 0755
 .endif
 
+# Add dependencies for the modules that will be built.  For each module
+# ap_mod listed in ${APACHE_MODULES}, _AP_DEPENDS.ap_mod is a whitespace
+# separated list of dependencies or buildlink.mk files needed to build
+# ap_mod, and _AP_CFG_ARGS.ap_mod is a whitespace separated list of
+# configure script options for ap_mod.
+#
+_AP_DEPENDS.ssl=	../../security/openssl/buildlink.mk
+_AP_DEPENDS.deflate=	../../devel/zlib/buildlink.mk
+
+_AP_CFG_ARGS.deflate=	--with-z=${BUILDLINK_DIR}
+
+.for _ap_mod in ${APACHE_MODULES}
+.  if defined(_AP_DEPENDS.${_ap_mod}) && !empty(_AP_DEPENDS.${_ap_mod})
+.    for _ap_depend in ${_AP_DEPENDS.${_ap_mod}}
+.      if exists(${_ap_depend})
+.        include "${_ap_depend}"
+.      else
+DEPENDS+=		${_ap_depend}
+.      endif
+.    endfor
+.  endif
+.  if defined(_AP_CFG_ARGS.${_ap_mod}) && !empty(_AP_CFG_ARGS.${_ap_mod})
+CONFIGURE_ARGS+=	${_AP_CFG_ARGS.${_ap_mod}}
+.  endif
+.endfor
+
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
 
@@ -129,7 +156,6 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 
 .include "../../lang/perl5/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
 .include "../../textproc/expat/buildlink.mk"
 
 .include "../../mk/bsd.pkg.install.mk"
