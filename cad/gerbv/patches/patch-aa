@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2002/02/10 17:49:00 dmcmahill Exp $
+
+--- src/draw.c.orig	Sun Feb  3 18:01:41 2002
++++ src/draw.c	Sun Feb 10 12:36:17 2002
+@@ -30,4 +30,8 @@
+ #include <math.h>  /* ceil(), atan2() */
+ 
++#ifdef HAVE_STRING_H
++#include <string.h>
++#endif
++
+ #include <gtk/gtk.h>
+ 
