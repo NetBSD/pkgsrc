@@ -1,0 +1,98 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/02/13 23:28:07 wiz Exp $
+
+--- ./cd_netbsd.c.orig	Sun Feb 13 22:28:03 2000
++++ ./cd_netbsd.c	Sun Feb 13 22:28:32 2000
+@@ -0,0 +1,93 @@
++/*
++ * cd_netbsd.c
++ *
++ * NetBSD CDROM interface
++ */
++
++#include <sys/types.h>
++#include <sys/stat.h>
++#include <fcntl.h>
++#include <sys/ioctl.h>
++#include <unistd.h>
++#include <stdio.h>
++
++#include <sys/cdio.h>
++
++#include "types.h"
++#include "cd.h"
++
++#define CDROM_DEVICE "/dev/rcd0d"
++
++int pce_cd_drive;
++
++struct ioc_read_toc_entry pce_cd_tocentry;
++
++void cd_set_sector_address(u32 sector)
++{
++    int result;
++
++    result = lseek(pce_cd_drive, (sector) * 2048, SEEK_SET);
++    if (result < 0) {
++	perror("pce_cd: seeking to CD sector");
++    }
++}
++
++void cd_read_next_sector(u8 *buf)
++{
++    int result;
++
++    result = read(pce_cd_drive, buf, 2048);
++    if (result < 0) {
++	perror("pce_cd: reading CD data");
++    }
++}
++
++void cd_get_tocheader(u8 *start_track, u8 *stop_track)
++{
++    struct ioc_toc_header toc_header;
++    int result;
++    
++    result = ioctl(pce_cd_drive, CDIOREADTOCHEADER, &toc_header);
++    if (result < 0) {
++	perror("pce_cd: reading tocheader");
++	/* XXX: use dummy values? */
++	*start_track = 1;
++	*stop_track = 4;
++    } else {
++	*start_track = toc_header.starting_track;
++	*stop_track = toc_header.ending_track;
++    }	
++}
++
++void cd_get_tocentry(u8 track, u32 *lba, u8 *flags)
++{
++    int result;
++    struct cd_toc_entry toc_entry;
++    
++    pce_cd_tocentry.starting_track = track;
++    pce_cd_tocentry.address_format = CD_LBA_FORMAT;
++    pce_cd_tocentry.data_len = sizeof(toc_entry);
++    pce_cd_tocentry.data = &toc_entry;
++
++    result = ioctl(pce_cd_drive, CDIOREADTOCENTRYS, &pce_cd_tocentry);
++    if (result < 0) {
++	perror("pce_cd: reading tocentry");
++/*  	deb_printf("pce_cd: tocread failure.\n"); */
++    } else {
++	/* is this what you want? */
++	*lba = toc_entry.addr.lba;
++	*flags = toc_entry.control;
++	/* ???: FIXME: may want cdte.adr << 4 in here as well */
++    }
++}
++
++void cd_init(void)
++{
++    pce_cd_drive = open(CDROM_DEVICE, O_RDONLY);
++    if (pce_cd_drive < 0) {
++	perror("pce_cd: opening CD drive");
++	pce_cd_drive = 0;
++    } else {
++	/* Do something? */
++    }
++}
