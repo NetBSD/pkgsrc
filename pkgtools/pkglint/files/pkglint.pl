@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.38 2001/01/26 13:16:52 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.39 2001/02/16 13:06:19 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -158,9 +158,8 @@ if (! -f "$portdir/Makefile") {
 #
 # check for files.
 #
-@checker = ("$pkgdir/COMMENT", "$pkgdir/DESCR");
-%checker = ("$pkgdir/COMMENT", 'checkdescr',
-	    "$pkgdir/DESCR", 'checkdescr');
+@checker = ("$pkgdir/DESCR");
+%checker = ("$pkgdir/DESCR", 'checkdescr');
 
 if ($extrafile) {
 	foreach $i ((<$portdir/$scriptdir/*>, <$portdir/$pkgdir/*>)) {
@@ -232,6 +231,9 @@ if (-e <$portdir/$md5file> ) {
 		&perror("WARN: no $portdir/$md5file file. Please run 'make makesum'.");
 	}
 }
+if (-e <$pkgdir/COMMENT> ) {
+	&perror("FATAL: pkg/COMMENT is deprecated -- please use a COMMENT variable instead.");
+}
 if (! -f "$portdir/$pkgdir/PLIST"
     and ! -f "$portdir/$pkgdir/PLIST-mi"
     and ! $seen_PLIST_SRC
@@ -261,14 +263,13 @@ if ($err || $warn) {
 exit $err;
 
 #
-# pkg/COMMENT, pkg/DESCR
+# pkg/DESCR
 #
 sub checkdescr {
 	local($file) = @_;
-	local(%maxchars) = ('COMMENT', 70, 'DESCR', 80);
-	local(%maxlines) = ('COMMENT', 1, 'DESCR', 24);
-	local(%errmsg) = ('COMMENT', "must be one-liner",
-			  'DESCR', "exceeds $maxlines{'DESCR'} ".
+	local(%maxchars) = ('DESCR', 80);
+	local(%maxlines) = ('DESCR', 24);
+	local(%errmsg) = ('DESCR', "exceeds $maxlines{'DESCR'} ".
 			  	   "lines, make it shorter if possible");
 	local($longlines, $linecnt, $tmp) = (0, 0, "");
 
@@ -294,19 +295,6 @@ sub checkdescr {
 		&perror("WARN: $file includes iso-8859-1, or ".
 			"other local characters.  $file should be ".
 			"plain ascii file.");
-	}
-	if ($shortname eq 'COMMENT') {
-	    	if ($tmp =~ /\.$/i) {
-			&perror("WARN: $file should not end with".
-				" a '.' (period).");
-		}
-		if ($tmp =~ /^(a|an) /i) {
-			&perror("WARN: $file should not begin with '$1 '.");
-		}
-		if ($tmp =~ /^\s/ || $tmp =~ /\s\n$/) {
-			&perror("WARN: $file should not not have any leading".
-				" or trailing whitespace.");
-		}
 	}
 	close(IN);
 }
@@ -651,7 +639,7 @@ sub readmakefile {
 sub checkmakefile {
 	local($file) = @_;
 	local($rawwhole, $whole, $idx, @sections);
-	local($tmp);
+	local($tmp, $tmp2);
 	local($i, $j, $k, $l);
 	local(@varnames) = ();
 	local($distfiles, $pkgname, $distname, $extractsufx) = ('', '', '', '');
@@ -1137,15 +1125,28 @@ EOF
         @tocheck=split(/\s+/, <<EOF);
 MAINTAINER
 EOF
-	if ($osname eq "NetBSD") {
-	    push(@tocheck,"HOMEPAGE");
-	}
+	push(@tocheck,"HOMEPAGE");
+	push(@tocheck,"COMMENT");
+
         &checkorder('MAINTAINER', $tmp, @tocheck);
 
 	# warnings for missing HOMEPAGE
 	$tmp = "\n" . $tmp;
 	if ($tmp !~ /\nHOMEPAGE=/) {
 		&perror("WARN: please add HOMEPAGE if the package has one.");
+	}
+
+	# warnings for missing COMMENT
+	if ($tmp !~ /\nCOMMENT=\s*(.*)$/) {
+		&perror("FATAL: please add a short COMMENT describing the package.");
+	}
+	# and its properties:
+	$tmp2 = $1;
+	if ($tmp2 =~ /\.$/i) {
+		&perror("WARN: COMMENT should not end with a '.' (period).");
+	}
+	if ($tmp2 =~ /^(a|an) /i) {
+		&perror("WARN: COMMENT should not begin with '$1 '.");
 	}
 
 	&checkearlier($tmp, @varnames);

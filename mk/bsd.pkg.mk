@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.662 2001/02/15 13:49:04 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.663 2001/02/16 13:06:18 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -467,7 +467,11 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 .undef NO_PACKAGE
 .endif
 
-COMMENT?=		${PKGDIR}/COMMENT
+.if !defined(COMMENT)
+# ${CAT} isn't defined yet at the time this part gets executed
+COMMENT!=	(/bin/cat ${PKGDIR}/COMMENT || /usr/bin/cat ${PKGDIR}/COMMENT || echo -n "(no description)")  2>/dev/null
+.endif
+
 DESCR=			${WRKDIR}/.DESCR
 DESCR_SRC?=		${PKGDIR}/DESCR
 PLIST=			${WRKDIR}/.PLIST
@@ -716,8 +720,8 @@ SIZE_PKG_FILE=		${WRKDIR}/.SizePkg
 SIZE_ALL_FILE=		${WRKDIR}/.SizeAll
 
 .ifndef PKG_ARGS_COMMON
-PKG_ARGS_COMMON=	-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
-PKG_ARGS_COMMON+=	-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
+PKG_ARGS_COMMON=	-v -c -"${COMMENT:S/"/\"/g:S/`/\`/g} " -d ${DESCR} -f ${PLIST}
+PKG_ARGS_COMMON+=	-l -b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
 PKG_ARGS_COMMON+=	-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
 PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true|sort -u`"
 .ifdef CONFLICTS
@@ -2580,6 +2584,11 @@ package-name:
 .endif # PACKAGE_NAME_TYPE
 .endif # !target(package-name)
 
+.if !target(make-readme-html-help)
+make-readme-html-help:
+	@${ECHO} '${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</a>: <TD>'"${COMMENT:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g:S/"/\"/g:S/`/\`/g}"
+.endif # !target(make-readme-html-help)
+
 # Show (recursively) all the packages this package depends on.
 # If PACKAGE_DEPENDS_WITH_PATTERNS is set, print as pattern (if possible)
 PACKAGE_DEPENDS_WITH_PATTERNS?=true
@@ -2831,11 +2840,7 @@ binpkg-list:
 describe:
 	@${ECHO} -n "${PKGNAME}|${.CURDIR}|";				\
 	${ECHO} -n "${PREFIX}|";					\
-	if [ -f ${COMMENT} ]; then					\
-		${ECHO} -n "`${CAT} ${COMMENT}`";			\
-	else								\
-		${ECHO} -n "** No Description";				\
-	fi;								\
+	${ECHO} -n "${COMMENT:S/"/\"/g:S/`/\`/g}";			\
 	if [ -f ${DESCR_SRC} ]; then					\
 		${ECHO} -n "|${DESCR_SRC}";				\
 	else								\
@@ -2940,8 +2945,7 @@ README.html: .PRECIOUS
 		-e '/%%VULNERABILITIES%%/d'				\
 		-e '/%%VULDATE%%/r $@.tmp6'				\
 		-e '/%%VULDATE%%/d'					\
-		-e '/%%COMMENT%%/r ${PKGDIR}/COMMENT'			\
-		-e '/%%COMMENT%%/d'					\
+		-e "s/%%COMMENT%%/${COMMENT:S/"/\"/g:S/`/\`/g:S|/|\/|g}/" \
 		-e '/%%BUILD_DEPENDS%%/r $@.tmp1'			\
 		-e '/%%BUILD_DEPENDS%%/d'				\
 		-e '/%%RUN_DEPENDS%%/r $@.tmp2'				\
@@ -3149,7 +3153,7 @@ print-PLIST:
 .if !target(fake-pkg)
 fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}\
-	if [ ! -f ${PLIST} -o ! -f ${COMMENT} -o ! -f ${DESCR} ]; then \
+	if [ ! -f ${PLIST} -o ! -f ${DESCR} ]; then \
 		${ECHO} "** Missing package files for ${PKGNAME} - installation not recorded."; \
 		exit 1;							\
 	fi
@@ -3213,7 +3217,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
 		${PKG_CREATE} ${PKG_ARGS_INSTALL} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
 		${CP} ${DESCR} ${PKG_DBDIR}/${PKGNAME}/+DESC;		\
-		${CP} ${COMMENT} ${PKG_DBDIR}/${PKGNAME}/+COMMENT;	\
+		${ECHO} "${COMMENT:S/"/\"/g:S/`/\`/g}" > ${PKG_DBDIR}/${PKGNAME}/+COMMENT; \
 		${CP} ${BUILD_VERSION_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
 		${CP} ${BUILD_INFO_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO; \
 		if ${TEST} -e ${SIZE_PKG_FILE}; then 			\
