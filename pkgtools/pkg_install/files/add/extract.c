@@ -1,4 +1,4 @@
-/*	$NetBSD: extract.c,v 1.1.1.1 2002/12/20 18:13:55 schmonz Exp $	*/
+/*	$NetBSD: extract.c,v 1.2 2003/01/06 04:34:15 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static const char *rcsid = "FreeBSD - Id: extract.c,v 1.17 1997/10/08 07:45:35 charnier Exp";
 #else
-__RCSID("$NetBSD: extract.c,v 1.1.1.1 2002/12/20 18:13:55 schmonz Exp $");
+__RCSID("$NetBSD: extract.c,v 1.2 2003/01/06 04:34:15 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -153,9 +153,9 @@ extract_plist(char *home, package_t *pkg)
 	Directory = home;
 
 	/* Open Package Database for writing */
-	if (pkgdb_open(0) == -1) {
+	if (!pkgdb_open(ReadWrite)) {
 		cleanup(0);
-		err(1, "can't open pkgdb");
+		err(EXIT_FAILURE, "can't open pkgdb");
 	}
 	/* Do it */
 	while (p) {

@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h.in,v 1.1.1.1 2002/12/20 18:14:02 schmonz Exp $ */
+/* $NetBSD: lib.h.in,v 1.2 2003/01/06 04:34:17 jschauma Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -117,6 +117,11 @@
 /* the BSD derivatives have added --fast-read to their tar(1) commands */
 #define HAVE_TAR__FAST_READ	1
 #endif
+
+enum {
+	ReadWrite,
+	ReadOnly
+};
 
 
 /* Where we put logging information by default, else ${PKG_DBDIR} if set */
@@ -426,7 +431,7 @@ int     pkgdb_store(const char *, const char *);
 char   *pkgdb_retrieve(const char *);
 int     pkgdb_remove(const char *);
 char   *pkgdb_iter(void);
-char   *_pkgdb_getPKGDB_FILE(void);
+char   *_pkgdb_getPKGDB_FILE(char *, unsigned);
 char   *_pkgdb_getPKGDB_DIR(void);
 
 /* List of packages functions */
