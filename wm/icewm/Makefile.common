@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2004/07/03 21:17:18 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.37 2004/08/02 16:50:40 recht Exp $
 
 DISTNAME=		icewm-1.2.14
 CATEGORIES=		x11 wm
@@ -63,3 +63,4 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
+.include "../../x11/Xrandr/buildlink3.mk"
