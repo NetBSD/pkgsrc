@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/10 13:32:34 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.1 2004/06/26 18:10:20 grant Exp $
 lib/xmms/Input/libsmpeg_xmms.a
 lib/xmms/Input/libsmpeg_xmms.la
 lib/xmms/Input/libsmpeg_xmms.so
