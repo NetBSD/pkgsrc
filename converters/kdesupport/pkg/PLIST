@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 1998/07/21 21:13:46 tv Exp $
+@comment $NetBSD: PLIST,v 1.10 1999/02/15 22:34:58 tron Exp $
 include/Pix.h
 include/QwCluster.h
 include/QwPublicList.h
 include/QwSpriteField.h
+include/js.h
+include/jsint.h
 include/mimelib/address.h
 include/mimelib/addrlist.h
 include/mimelib/body.h
@@ -39,7 +41,10 @@ include/mimelib/uuencode.h
 include/mimelib/binhex.h
 lib/libQwSpriteField.a
 lib/libQwSpriteField.la
-lib/libQwSpriteField.so.5.2
+lib/libQwSpriteField.so.6.0
+lib/libjs.a
+lib/libjs.la
+lib/libjs.so.2.0
 lib/libmimelib.a
 lib/libmimelib.la
 lib/libmimelib.so.1.0
