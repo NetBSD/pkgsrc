@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/09/15 05:38:45 garbled Exp $
+# $NetBSD: Makefile,v 1.7 1998/09/15 17:29:58 garbled Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -18,7 +18,7 @@ LDFLAGS+=	-L${PREFIX}/lib -L${X11BASE}/lib
 USE_GMAKE=	yes
 MAKEFILE=	makefile
 GNU_CONFIGURE=	yes
-LDFLAGS+=	-Wl,-R${X11BASE}/lib
+USE_X11=	yes
 CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--with-libwww-include=${PREFIX}/include/w3c-libwww
 CONFIGURE_ARGS+=	--with-libwww-libdir=${PREFIX}/lib
