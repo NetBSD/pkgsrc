@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.444 2004/02/22 12:28:48 grant Exp $
+# $NetBSD: Makefile,v 1.445 2004/02/23 01:34:54 xtraeme Exp $
 #
 
 COMMENT=	Networking tools
@@ -116,6 +116,7 @@ SUBDIR+=	irrd
 SUBDIR+=	isic
 SUBDIR+=	ispman
 SUBDIR+=	ja-samba
+SUBDIR+=	jftpgw
 SUBDIR+=	jumpgate
 SUBDIR+=	jwhois
 SUBDIR+=	kdenetwork2
