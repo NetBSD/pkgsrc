@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/12/03 15:37:20 skrll Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/12/19 15:29:28 tron Exp $
 bin/artsc-config
 bin/artscat
 bin/artsd
@@ -8,8 +8,8 @@ bin/artsplay
 bin/artsshell
 bin/artswrapper
 bin/checkXML
-bin/cupsdconf
-bin/cupsdoprint
+${CUPS}bin/cupsdconf
+${CUPS}bin/cupsdoprint
 bin/dcop
 bin/dcopidl
 bin/dcopidl2cpp
@@ -36,7 +36,7 @@ bin/ksendbugmail
 bin/kshell
 bin/kwrapper
 bin/lnusertemp
-bin/make_driver_db_cups
+${CUPS}bin/make_driver_db_cups
 bin/make_driver_db_lpd
 bin/mcopidl
 bin/meinproc
@@ -539,9 +539,9 @@ lib/kde2/kjs_html.so
 lib/kde2/libkded_kdeprintd.a
 lib/kde2/libkded_kdeprintd.la
 lib/kde2/libkded_kdeprintd.so
-lib/kde2/libkdeprint_cups.a
-lib/kde2/libkdeprint_cups.la
-lib/kde2/libkdeprint_cups.so
+${CUPS}lib/kde2/libkdeprint_cups.a
+${CUPS}lib/kde2/libkdeprint_cups.la
+${CUPS}lib/kde2/libkdeprint_cups.so
 lib/kde2/libkdeprint_ext.a
 lib/kde2/libkdeprint_ext.la
 lib/kde2/libkdeprint_ext.so
@@ -621,9 +621,9 @@ lib/libartswavplayobject.la
 lib/libartswavplayobject.so
 lib/libartswavplayobject.so.0
 lib/libartswavplayobject.so.0.0
-lib/libcupsdconf.a
-lib/libcupsdconf.la
-lib/libcupsdconf.so
+${CUPS}lib/libcupsdconf.a
+${CUPS}lib/libcupsdconf.la
+${CUPS}lib/libcupsdconf.so
 lib/libdcopserver_main.a
 lib/libdcopserver_main.la
 lib/libdcopserver_main.so
@@ -883,8 +883,8 @@ share/kde/apps/kconf_update/kcookiescfg.upd
 share/kde/apps/kconf_update/kioslave.upd
 share/kde/apps/kconf_update/proxytype.pl
 share/kde/apps/kconf_update/useragent.pl
-share/kde/apps/kdeprint/cups_logo.png
-share/kde/apps/kdeprint/cupsd.conf.template
+${CUPS}share/kde/apps/kdeprint/cups_logo.png
+${CUPS}share/kde/apps/kdeprint/cupsd.conf.template
 share/kde/apps/kdeprint/filters/enscript.desktop
 share/kde/apps/kdeprint/filters/enscript.xml
 share/kde/apps/kdeprint/filters/imagetops.desktop
@@ -925,7 +925,7 @@ share/kde/apps/kdeprint/icons/hicolor/32x32/apps/kdeprint_printer_remote.png
 share/kde/apps/kdeprint/icons/hicolor/32x32/apps/kdeprint_printer_remote_process.png
 share/kde/apps/kdeprint/icons/hicolor/32x32/apps/kdeprint_printer_remote_stopped.png
 share/kde/apps/kdeprint/icons/hicolor/32x32/apps/kdeprint_printer_stopped.png
-share/kde/apps/kdeprint/kde_logo.png
+${CUPS}share/kde/apps/kdeprint/kde_logo.png
 share/kde/apps/kdeprint/pics/kdeprint_collate.png
 share/kde/apps/kdeprint/pics/kdeprint_collate_reverse.png
 share/kde/apps/kdeprint/pics/kdeprint_color.png
@@ -942,7 +942,7 @@ share/kde/apps/kdeprint/pics/kdeprint_revlandscape.png
 share/kde/apps/kdeprint/pics/kdeprint_revportrait.png
 share/kde/apps/kdeprint/pics/kdeprint_uncollate.png
 share/kde/apps/kdeprint/pics/kdeprint_uncollate_reverse.png
-share/kde/apps/kdeprint/plugins/cups.print
+${CUPS}share/kde/apps/kdeprint/plugins/cups.print
 share/kde/apps/kdeprint/plugins/ext.print
 share/kde/apps/kdeprint/plugins/lpd.print
 share/kde/apps/kdeprint/plugins/lpdunix.print
