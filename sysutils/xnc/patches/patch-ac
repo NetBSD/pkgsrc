@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/09/17 05:40:06 zuntum Exp $
+$NetBSD: patch-ac,v 1.2 2002/07/08 14:25:05 jschauma Exp $
 
---- ives/makefile.in.orig	Thu Aug 30 15:27:39 2001
-+++ ives/makefile.in
+--- ives/makefile.in.orig	Sun Jul  7 12:57:19 2002
++++ ives/makefile.in	Sun Jul  7 12:57:59 2002
 @@ -31,7 +31,7 @@
             STYLE=-DOLD_STYLE
  
             CXXOPT=-DIVES $(NO_ALT) $(STYLE) $(DEB) $(DEFS) $(CFLAGS)
--           LOCAL_LIBRARIES=$(TLIB) $(XLIBS) -L../image -L/usr/lib $(PNGLIB) $(ZLIB) $(LIBS)
-+           LOCAL_LIBRARIES=$(TLIB) $(XLIBS) -L../image -L/usr/lib $(PNGLIB) $(ZLIB) $(LIBS) $(LDFLAGS)
+-           LOCAL_LIBRARIES=$(TLIB) $(XLIBS) -L/usr/lib $(PNGLIB) $(ZLIB) $(LIBS)
++           LOCAL_LIBRARIES=$(TLIB) $(XLIBS) -L/usr/lib $(PNGLIB) $(ZLIB) $(LIBS) $(LDFLAGS)
  
-  PROGRAM =ives es vs $(IMAGEOBJS) $(JDEP)
+  PROGRAM =ives iedit iview $(IMAGEOBJS) $(JDEP)
  

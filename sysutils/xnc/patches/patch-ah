@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1.1.1 2001/09/17 05:40:06 zuntum Exp $
+$NetBSD: patch-ah,v 1.2 2002/07/08 14:25:06 jschauma Exp $
 
---- plugins/aqua/makefile.in.orig	Tue Mar 13 19:05:49 2001
-+++ plugins/aqua/makefile.in
-@@ -18,6 +18,11 @@
+--- plugins/aqua/makefile.in.orig	Sun Jul  7 12:53:26 2002
++++ plugins/aqua/makefile.in	Sun Jul  7 12:55:14 2002
+@@ -18,6 +18,12 @@
  
  @MCOMMON@
  
@@ -11,25 +11,27 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/09/17 05:40:06 zuntum Exp $
 +.c.o:
 +	$(CXX) -c $(CXXINCLUDES) $(INCLUDES) $(CXXOPT) $<
 +
++
  PLUGINFLAGS=$(SHAREFLAGS)
  
             IOBJS =aquaplugin.o aquagui.o aquafuncs.o aquageom.o aquapanel.o\
-@@ -25,9 +30,12 @@
-            CXXINCLUDES=$(XINC) -I../../image -I../../xbitmaps -I../.. -I../common -I../../ftplib 
+@@ -26,9 +32,13 @@
+ 	-I../common -I../../ftplib -I../../resloader 
             CXXOPT=$(DEFS) $(DEB) $(CFLAGS)
  
 -PROGRAM =libxncaqua.so
 +#PROGRAM =libxncaqua.so
-+PROGRAM = libxncaqua.a
++PROGRAM =libxncaqua.a
  
 -all:: $(PROGRAM)
 +#all:: $(PROGRAM)
 +all: $(IOBJS)
-+	$(LIBTOOL) $(CC) -module -avoid-version -o $(PROGRAM:.a=.la) $(IOBJS:.o=.lo) -rpath $(INSTPLUG)
++	$(LIBTOOL) $(CC) -module -avoid-version -o $(PROGRAM:.a=.la) \
++		$(IOBJS:.o=.lo) -rpath $(INSTPLUG)
  
  
  ../gui.o: ../gui.cxx
-@@ -86,7 +94,8 @@
+@@ -87,7 +97,8 @@
  
  
  install:
