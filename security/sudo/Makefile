@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/08/31 19:26:40 jlam Exp $
+# $NetBSD: Makefile,v 1.15 1999/09/13 13:17:40 kim Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/12 03:24:41 obrien Exp
 #
 
@@ -15,14 +15,19 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 
 .include "../../mk/bsd.prefs.mk"
 
+GNU_CONFIGURE=	yes
+
 .if ${OPSYS} == "NetBSD"
-SKEY_OPTION=	--with-skey
+CONFIGURE_ARGS+=--with-skey
 .elif ${OPSYS} == "SunOS"
-SKEY_OPTION=	--without-skey
+CONFIGURE_ARGS+=--without-skey
 .endif
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-C2 ${SKEY_OPTION} --with-nbsdops --disable-path-info
+.ifdef ${USE_KERBEROS4}
+CONFIGURE_ARGS+=--with-kerb4
+.endif
+
+CONFIGURE_ARGS+=--with-C2 --with-nbsdops --disable-path-info
 
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
