@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4033 2003/12/09 12:54:58 abs Exp $
+$NetBSD: CHANGES,v 1.4034 2003/12/09 16:08:35 ben Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5044,4 +5044,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated zope to 2.6.2 [drochner 2003-12-09]
 	Updated disc-cover to 1.5.4 [drochner 2003-12-09]
 	Updated pkgchk to 1.45 [abs 2003-12-09]
-
+	Updated tripwire to 1.2nb3 [ben 2003-12-09]
