@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2003/03/28 21:14:15 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2003/04/01 05:14:08 jmc Exp $
 
 PKGNAME=	postgresql-${BASE_VERS}
 COMMENT=	Robust, next generation, object-relational DBMS
@@ -15,5 +15,6 @@ NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
 do-install:	# empty
+do-patch:	# empty
 
 .include "../../mk/bsd.pkg.mk"
