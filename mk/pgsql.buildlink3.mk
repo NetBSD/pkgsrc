@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.1 2004/07/23 21:40:00 recht Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.2 2004/07/24 10:40:15 recht Exp $
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
@@ -69,6 +69,7 @@ PGPKGSRCDIR=	../../databases/postgresql73-lib
 
 .if (defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO]))
 .    include "${PGPKGSRCDIR}/buildlink3.mk"
+PGSQL_PREFIX=	${BUILDLINK_PREFIX.postgresql${_PGSQL_VERSION}-lib}
 .endif
 
 .endif	# PGVERSION_MK
