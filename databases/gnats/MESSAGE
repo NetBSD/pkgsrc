@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/05/06 17:40:43 jmmv Exp $
+$NetBSD: MESSAGE,v 1.5 2003/05/30 22:14:29 seb Exp $
 
 See http://sourceware.cygnus.com/gnats/ for the official web page
 and don't forget to run ${PREFIX}/libexec/gnats/mkcat as gnats.
@@ -12,7 +12,7 @@ Add something like this into the crontab to process incoming bug reports:
 
 To accept PRs by mail you'll need some new mail aliases too, e.g.
 	gnats-admin:    postmaster
-	bugs:           "| /usr/pkg/libexec/gnats/queue-pr -q"
-	query-pr:       "| /usr/pkg/libexec/gnats/mail-query"
+	bugs:           "| ${PREFIX}/libexec/gnats/queue-pr -q"
+	query-pr:       "| ${PREFIX}/libexec/gnats/mail-query"
 
 ===========================================================================

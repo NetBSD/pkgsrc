@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/01/05 14:39:41 cjep Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/30 22:14:29 seb Exp $
 
 DISTNAME=	gnats-3.113.1
 CATEGORIES=	devel
@@ -12,36 +12,24 @@ COMMENT=	Cygnus GNATS bug tracking system
 
 BUILD_DEPENDS+=	m4-*:../../devel/m4
 
-.if exists(/usr/sbin/useradd)
-ADDUSER=	/usr/sbin/useradd
-ADDGROUP=	/usr/sbin/groupadd
-.else
-DEPENDS+=	user>=20000313:../../sysutils/user
-ADDUSER=	${LOCALBASE}/sbin/useradd
-ADDGROUP=	${LOCALBASE}/sbin/groupadd
-.endif
-
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-lispdir=${PREFIX}/share/emacs/site-lisp \
-		--with-full-gnats \
-		--with-release-based
+USE_PKGINSTALL=	YES
+GNU_CONFIGURE=	YES
 USE_GMAKE=	yes
 USE_BISON=	yes
 TEXINFO_OVERRIDE=	YES
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
+CONFIGURE_ARGS=	--with-lispdir=${PREFIX}/share/emacs/site-lisp \
+		--with-full-gnats \
+		--with-release-based
 
-INSTALL_SUBST+=		PREFIX="${PREFIX}"
-INSTALL_SUBST+=		USER="gnats"
-INSTALL_SUBST+=		GROUP="daemon"
-INSTALL_SUBST+=		ADDUSER="${ADDUSER:Q}"
-INSTALL_SUBST+=		ADDGROUP="${ADDGROUP:Q}"
-INSTALL_SUBST+=		ID="${ID:Q}"
-INSTALL_SUBST+=		CAT="${CAT:Q}"
-INSTALL_SUBST+=		MKDIR="${MKDIR:Q}"
-INSTALL_SUBST+=		RMDIR="${RMDIR:Q}"
-INSTALL_SUBST_SED=	${INSTALL_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+GNATS_HOME=	${PREFIX}/share/gnats/gnats-db
+PKG_USERS=	gnats:daemon::GNATS\\ database\\ owner:${GNATS_HOME}:/bin/sh
+MAKE_DIRS=		${PREFIX}/share/gnats
+OWN_DIRS_PERMS=		${GNATS_HOME} gnats daemon 755
+OWN_DIRS_PERMS+=	${GNATS_HOME}/gnats-queue gnats daemon 755
+OWN_DIRS_PERMS+=	${GNATS_HOME}/pending gnats daemon 755
+OWN_DIRS_PERMS+=	${GNATS_HOME}/gnats-adm gnats daemon 755
+OWN_DIRS_PERMS+=	${GNATS_HOME}/gnats-adm/locks gnats daemon 755
 
 MESSAGE_SUBST+=		PREFIX="${PREFIX}"
 
@@ -56,11 +44,6 @@ INSTALL_TARGET=	install-gnats install-send-pr
 post-build:
 	(cd ${WRKSRC}/gnats;   ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} info)
 	(cd ${WRKSRC}/send-pr; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} info)
-
-pre-install:
-	${SED} ${INSTALL_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${INSTALL_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
 	(cd ${WRKSRC}/gnats;   ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} install-info)
