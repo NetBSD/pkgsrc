@@ -1,7 +1,6 @@
-$NetBSD: patch-ab,v 1.6 1998/09/10 14:22:32 agc Exp $
-
---- Makefile.in.orig	Tue Nov 25 16:41:56 1997
-+++ Makefile.in	Thu Sep 10 14:10:29 1998
+$NetBSD: patch-ab,v 1.7 1998/09/13 00:02:26 garbled Exp $
+--- Makefile.in.orig	Tue Nov 25 09:41:56 1997
++++ Makefile.in	Sat Sep 12 14:07:20 1998
 @@ -56,7 +56,9 @@
  BIN_DIR =		$(exec_prefix)/bin
  
@@ -18,7 +17,7 @@ $NetBSD: patch-ab,v 1.6 1998/09/10 14:22:32 agc Exp $
  # Libraries to use when linking.  This definition is determined by the
  # configure script.
 -LIBS = @TCL_BUILD_LIB_SPEC@ @LIBS@ $(X11_LIB_SWITCHES) @DL_LIBS@ @MATH_LIBS@ -lc
-+LIBS = -L${prefix}/lib -ltcl80 @LIBS@ $(X11_LIB_SWITCHES) @DL_LIBS@ @MATH_LIBS@ -lc
++LIBS = -L${.CURDIR}/.libs -L${prefix}/lib -ltcl80 @LIBS@ $(X11_LIB_SWITCHES) @DL_LIBS@ @MATH_LIBS@ -lc
  
  # To change the compiler switches, for example to change from -O
  # to -g, change the following line:
@@ -47,26 +46,29 @@ $NetBSD: patch-ab,v 1.6 1998/09/10 14:22:32 agc Exp $
  
  # Make target which outputs the list of the .o contained in the Tk lib
  # usefull to build a single big shared library containing Tcl/Tk and other
-@@ -301,15 +301,15 @@
+@@ -299,17 +299,18 @@
+ # case
+ objs: ${OBJS}
  
++RPATH= -Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib
  
  wish: $(WISH_OBJS) $(TK_LIB_FILE)
 -	$(CC) @LD_FLAGS@ $(WISH_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
-+	${LIBTOOL} --mode=link $(CC) @LD_FLAGS@ $(WISH_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
++	${LIBTOOL} --mode=link $(CC) @LD_FLAGS@ $(RPATH) $(WISH_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
  		$(TK_CC_SEARCH_FLAGS) -o wish
  
  tktest: $(TKTEST_OBJS) $(TK_LIB_FILE)
 -	${CC} @LD_FLAGS@ $(TKTEST_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
-+	${LIBTOOL} --mode=link ${CC} @LD_FLAGS@ $(TKTEST_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
++	${LIBTOOL} --mode=link ${CC} @LD_FLAGS@ $(RPATH) $(TKTEST_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
  		$(TK_CC_SEARCH_FLAGS) -o tktest
  
  xttest: test.o tkTest.o tkSquare.o $(TK_LIB_FILE)
 -	${CC} @LD_FLAGS@ test.o tkTest.o tkSquare.o \
-+	${LIBTOOL} --mode=link ${CC} @LD_FLAGS@ test.o tkTest.o tkSquare.o \
++	${LIBTOOL} --mode=link ${CC} @LD_FLAGS@ $(RPATH) test.o tkTest.o tkSquare.o \
  		@TK_BUILD_LIB_SPEC@ $(LIBS) \
  		@TK_LD_SEARCH_FLAGS@ -lXt -o xttest
  
-@@ -351,16 +351,17 @@
+@@ -351,16 +352,17 @@
  		fi; \
  	    done;
  	@echo "Installing $(TK_LIB_FILE)"
@@ -87,7 +89,7 @@ $NetBSD: patch-ab,v 1.6 1998/09/10 14:22:32 agc Exp $
  		$(SCRIPT_INSTALL_DIR) $(SCRIPT_INSTALL_DIR)/images; \
  	    do \
  	    if [ ! -d $$i ] ; then \
-@@ -370,8 +371,18 @@
+@@ -370,8 +372,18 @@
  		else true; \
  		fi; \
  	    done;
@@ -108,7 +110,7 @@ $NetBSD: patch-ab,v 1.6 1998/09/10 14:22:32 agc Exp $
  	for i in $(SRC_DIR)/library/*.tcl $(SRC_DIR)/library/tclIndex $(SRC_DIR)/library/prolog.ps $(UNIX_DIR)/tkAppInit.c; \
  	    do \
  	    echo "Installing $$i"; \
-@@ -430,7 +441,7 @@
+@@ -430,7 +442,7 @@
  	@cd $(SRC_DIR)/doc; for i in *.1; \
  	    do \
  	    echo "Installing doc/$$i"; \
@@ -117,7 +119,7 @@ $NetBSD: patch-ab,v 1.6 1998/09/10 14:22:32 agc Exp $
  	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
  		    $$i > $(MAN1_INSTALL_DIR)/$$i; \
  	    chmod 444 $(MAN1_INSTALL_DIR)/$$i; \
-@@ -439,7 +450,7 @@
+@@ -439,7 +451,7 @@
  	@cd $(SRC_DIR)/doc; for i in *.3; \
  	    do \
  	    echo "Installing doc/$$i"; \
@@ -126,7 +128,7 @@ $NetBSD: patch-ab,v 1.6 1998/09/10 14:22:32 agc Exp $
  	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
  		    $$i > $(MAN3_INSTALL_DIR)/$$i; \
  	    chmod 444 $(MAN3_INSTALL_DIR)/$$i; \
-@@ -448,7 +459,7 @@
+@@ -448,7 +460,7 @@
  	@cd $(SRC_DIR)/doc; for i in *.n; \
  	    do \
  	    echo "Installing doc/$$i"; \
@@ -135,7 +137,7 @@ $NetBSD: patch-ab,v 1.6 1998/09/10 14:22:32 agc Exp $
  	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
  		    $$i > $(MANN_INSTALL_DIR)/$$i; \
  	    chmod 444 $(MANN_INSTALL_DIR)/$$i; \
-@@ -474,275 +485,267 @@
+@@ -474,275 +486,267 @@
  # because this doesn't work on some strange compilers (e.g. UnixWare).
  
  tkTestInit.o: $(UNIX_DIR)/tkAppInit.c
