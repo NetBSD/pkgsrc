@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2895 2005/01/14 09:33:27 adam Exp $
+$NetBSD: TODO,v 1.2896 2005/01/14 09:52:12 adam Exp $
 
 Suggested new packages
 ======================
@@ -545,7 +545,6 @@ Suggested package updates
 	o gtk-systrace-2003.06.23
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
-	o gtranslator-1.0.2
 	o guile-oops-1.0.2
 	o guile-pg-0.24
 	o guile-www-1.1.1
