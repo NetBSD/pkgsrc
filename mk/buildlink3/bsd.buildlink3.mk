@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.3 2003/08/16 10:15:39 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.4 2003/08/16 11:01:39 jlam Exp $
 #
 # Assume PKG_INSTALLATION_TYPE == "pkgviews".
 
@@ -438,7 +438,7 @@ _BLNK_WRAP_CACHE_TRANSFORM=	${BUILDLINK_DIR}/bin/.cache-trans
 _BLNK_WRAP_POST_CACHE=		${BUILDLINK_DIR}/bin/.post-cache
 _BLNK_WRAP_LOGIC=		${BUILDLINK_DIR}/bin/.logic
 _BLNK_WRAP_LOGIC_TRANSFORM=	${BUILDLINK_DIR}/bin/.logic-trans
-_BLNK_WRAP_LOG=			${BUILDLINK_DIR}/.wrapper.log
+_BLNK_WRAP_LOG=			${WRKLOG}
 _BLNK_LIBTOOL_DO_INSTALL=	${BUILDLINK_DIR}/bin/.libtool-do-install
 _BLNK_LIBTOOL_FIX_LA=		${BUILDLINK_DIR}/bin/.libtool-fix-la
 _BLNK_FAKE_LA=			${BUILDLINK_DIR}/bin/.fake-la
