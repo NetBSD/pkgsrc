@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2003/09/17 19:51:09 grant Exp $
+# $NetBSD: Makefile,v 1.104 2003/09/17 19:51:35 grant Exp $
 
 .include "Makefile.common"
 
@@ -32,7 +32,7 @@ GCC_REQD=		3.0
 .endif
 
 # Avoid compiler bug on "mipsel" (cobalt?)
-.if (${MACHINE_ARCH} == mipsel)
+.if ${MACHINE_ARCH} == "mipsel"
 CFLAGS=			-O
 .endif
 
