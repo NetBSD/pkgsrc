@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2001/08/10 18:29:35 zuntum Exp $
+$NetBSD: distinfo,v 1.8 2001/08/14 19:59:50 zuntum Exp $
 
-SHA1 (avifile-0.6.20010810.tar.bz2) = 243c85defacb1653ad80ff9d203686efa8f9b5a0
-Size (avifile-0.6.20010810.tar.bz2) = 1064780 bytes
+SHA1 (avifile-0.6.20010814.tar.bz2) = 695227679dd09e9b9d1fb71caf58a9d92204b262
+Size (avifile-0.6.20010814.tar.bz2) = 1067753 bytes
