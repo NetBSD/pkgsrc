@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2005/02/24 03:20:57 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.43 2005/03/13 02:52:10 dmcmahill Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGNAME=	octave-current-${OCTAVE_VER}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/ \
 		ftp://ftp.eos.hokudai.ac.jp/pub/GNU/misc/octave/ \
@@ -57,13 +58,16 @@ post-extract:
 
 # substitute in the real path to various bits of the toolchain because
 # mkoctfile will be used potentially by users and it needs to point
-# at the same compilers as were used in building octave
+# at the same compilers as were used in building octave.  We also
+# fix up the path to sed otherwise we end up with the buildlink directory
+# in mkoctfile
 post-build:
 	${MV} ${WRKSRC}/mkoctfile ${WRKSRC}/mkoctfile.bak
 	${SED} \
 		-e 's;"${CC}";"${CCPATH}";g' \
 		-e 's;"${CXX}";"${CXXPATH}";g' \
 		-e 's;"${FC}";"${FCPATH}";g' \
+		-e 's@^:[ \t]*\$${SED=.*@: \$$\{SED="${SED}"\}@g' \
 		${WRKSRC}/mkoctfile.bak > ${WRKSRC}/mkoctfile
 	${CHMOD} a+x ${WRKSRC}/mkoctfile
 
