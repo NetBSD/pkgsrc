@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:08 tv Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/10 20:34:24 minskim Exp $
 
 DISTNAME=		ncmpc-0.11.0
 PKGREVISION=	1
@@ -20,5 +20,6 @@ INCOMPAT_CURSES+=	NetBSD-1.6.*-* NetBSD-1.6_*-*
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
