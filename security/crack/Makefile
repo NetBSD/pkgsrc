@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/09/09 19:40:20 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2000/10/20 14:45:58 rh Exp $
 # FreeBSD Id: ports/security/crack/Makefile,v 1.11 1999/09/04 19:24:50 obrien Exp
 
 DISTNAME=	crack5.0
@@ -10,6 +10,7 @@ MASTER_SITES=	ftp://ftp.win.tue.nl/pub/security/  \
 		ftp://ftp.riken.go.jp/pub/net/cert_security_tools/crack/
 
 MAINTAINER=	bouyer@netbsd.org
+HOMEPAGE=	http://www.users.dircon.co.uk/~crypto/
 
 WRKSRC=		${WRKDIR}/c50a
 
