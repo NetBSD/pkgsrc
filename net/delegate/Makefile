@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/05/21 12:42:38 kim Exp $
+# $NetBSD: Makefile,v 1.22 2001/05/28 16:32:01 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/11/09 09:24:20 max Exp
 #
 
@@ -20,8 +20,6 @@ MASTER_SITES=	ftp://ftp.delegate.org/pub/DeleGate/ \
 MAINTAINER=	rh@NetBSD.ORG
 HOMEPAGE=	http://www.delegate.org/
 COMMENT=	General purpose TCP/IP proxy system
-
-DEPENDS+=	readline>=4.0:../../devel/readline
 
 DELEGATE_MANAGER?=	root@localhost
 
