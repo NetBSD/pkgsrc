@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/12/03 12:38:26 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/03/02 13:42:53 wiz Exp $
 
 DISTNAME=	napshare-1.3
 CATEGORIES=	net
@@ -11,7 +11,9 @@ COMMENT=	Fully featured Gnutella P2P client made to run 24/7 unattended
 USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
-CFLAGS+=	`${BUILDLINK_PREFIX.gtk}/bin/gtk-config --cflags`
+CFLAGS+=	${GTKCFLAGS}
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+GTKCFLAGS!=	${PREFIX}/bin/gtk-config --cflags
