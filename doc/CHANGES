@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3498 2003/09/23 19:05:21 reinoud Exp $
+$NetBSD: CHANGES,v 1.3499 2003/09/23 21:40:34 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3904,3 +3904,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated snort-pgsql to 2.0.2 [salo 2003-09-23]
 	Updated openssh to 3.7.1.2 [jschauma 2003-09-23]
 	Added udfclient-ro1 [reinoud 2003-09-23]
+	Updated hylafax to 4.1.7 [abs 2003-09-23]
+
