@@ -1,5 +1,5 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.22 2004/08/12 22:18:07 sketch Exp $
+# $NetBSD: build.conf-example,v 1.22.6.1 2005/01/31 00:25:32 salo Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #
@@ -56,6 +56,12 @@ RSYNC_OPTS='-e ssh'
 
 # Nice level for builds
 NICE_LEVEL="nice -n 20"
+
+# Whether or not to create checksum files
+MKSUMS=yes
+
+# If you want to PGP sign the checksum files, set and correct
+#SIGN_AS=username@NetBSD.org
 
 ###########################################################################
 ### No changes should be needed below this line !!!
