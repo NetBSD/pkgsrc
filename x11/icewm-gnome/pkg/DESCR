@@ -14,5 +14,7 @@ and by mouse (this is not currently possible when using mouse focus).
 Extreme configurability similiar to fvwm and many other window
 managers is NOT the goal.
 
+This version of IceWM is built with GNOME support.
+
 Author: Marko Macek <Marko.Macek@gmx.net>
 Released under the GPL.
