@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2236 2004/10/20 21:35:22 xtraeme Exp $
+$NetBSD: TODO,v 1.2237 2004/10/20 21:56:10 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -260,7 +260,6 @@ Suggested package updates
 	o fsviewer-0.2.5
 	o gdm-2.6.0.5
 	o generator-0.35
-	o getmail-4.2.2
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)

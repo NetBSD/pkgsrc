@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7500 2004/10/20 21:26:49 jmmv Exp $
+$NetBSD: CHANGES,v 1.7501 2004/10/20 21:56:10 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4791,3 +4791,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated seahorse to 0.7.4 [jmmv 2004-10-20]
 	Updated gnome2-terminal to 2.8.0 [jmmv 2004-10-20]
 	Updated gnome2-system-monitor to 2.8.0 [jmmv 2004-10-20]
+	Updated getmail to 4.2.2 [schmonz 2004-10-20]
