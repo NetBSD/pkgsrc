@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.1 2002/09/19 13:15:38 lukem Exp $
+# $NetBSD: HACKS,v 1.2 2002/12/22 14:15:29 agc Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -295,3 +295,14 @@ descr
 	With -O2 optimization, a "if {} else if {} else {}" C statement
 	isn't converted into the correct code.
 kcah
+
+hack	cc -O* bug
+mdate	28 Nov 2002
+who	agc
+port	arm
+file	emulators/simh/Makefile : 1.3 :
+descr
+	Usual arm optimisation problem. The first problem occurs around
+	compilation of altairz80
+kcah
+
