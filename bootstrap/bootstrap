@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.2 2004/03/11 13:08:06 grant Exp $
+# $NetBSD: bootstrap,v 1.3 2004/03/11 17:29:11 tv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -172,6 +172,7 @@ echo_msg "bootstrap command: $0 $@"
 echo_msg "bootstrap started: $build_start"
 
 overpath=""
+root_user=root
 case "$opsys" in
 Darwin)
 	root_group=wheel
@@ -274,7 +275,13 @@ AIX)
 	set_opsys=no
 	;;
 Interix)
-	ignoreusercheck=yes
+	is_root () {
+		if id -Gn | grep -q +Administrators; then
+			return 1
+		fi
+		return 0
+	}
+	root_user=`id -un`
 	root_group=+Administrators
 	need_pax=no
 	need_mtree=yes
@@ -335,7 +342,7 @@ done
 
 is_root
 if [ $? = 1 ]; then
-	user=root
+	user=$root_user
 	group=$root_group
 else
 	if [ $ignoreusercheck = "no" ]; then
@@ -429,10 +436,14 @@ if [ -f mods/mk/$opsys.bsd.man.mk ] ;  then
 	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk $prefix/share/mk/bsd.man.mk"
 fi
 
-if [ -f mods/mk/$opsys.bsd.prog.mk ] ; then
+if [ -f mods/mk/$opsys.bsd.own.mk ] ; then
 	run_cmd "$cpprog mods/mk/$opsys.bsd.own.mk $prefix/share/mk/bsd.own.mk"
 else
-	run_cmd "$sedprog -e 's|@ROOT_GROUP@|'$root_group'|g' mods/mk/bsd.own.mk.in > $prefix/share/mk/bsd.own.mk"
+	run_cmd "$sedprog -e 's|@ROOT_GROUP@|'$root_group'|g;s|@ROOT_USER@|'$root_user'|g' mods/mk/bsd.own.mk.in > $prefix/share/mk/bsd.own.mk"
+fi
+
+if [ -f mods/mk/$opsys.bsd.prog.mk ] ; then
+	run_cmd "$cpprog mods/mk/$opsys.bsd.prog.mk $prefix/share/mk/bsd.prog.mk"
 fi
 
 if [ -f mods/mk/$opsys.bsd.sys.mk ]; then
