@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2000/08/25 21:49:29 tron Exp $
+
+--- sdcc51inc/Makefile.in.orig	Fri Aug 25 23:17:26 2000
++++ sdcc51inc/Makefile.in	Fri Aug 25 23:17:26 2000
+@@ -26,7 +26,7 @@
+ infodir         = @infodir@
+ srcdir          = @srcdir@
+ 
+-CPPFLAGS        = @CPPFLAGS@ -I$(PRJDIR)
++CPPFLAGS        = @CPPFLAGS@ -I$(PRJDIR) -Dunix
+ 
+ 
+ # Compiling entire program or any subproject
