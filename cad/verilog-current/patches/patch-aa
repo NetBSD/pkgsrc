@@ -1,10 +1,11 @@
-$NetBSD: patch-aa,v 1.6 2001/03/31 00:00:35 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.7 2001/04/14 14:47:31 dmcmahill Exp $
 
---- vvp/vpi_mcd.cc.orig	Wed Mar 21 21:24:05 2001
-+++ vvp/vpi_mcd.cc	Fri Mar 30 09:47:26 2001
-@@ -79,4 +79,5 @@
- 	return NULL;
- }
-+static unsigned int vpi_mcd_open_x(char *name, char *mode);
+--- tgt-null/Makefile.in.orig	Thu Dec 14 21:00:31 2000
++++ tgt-null/Makefile.in	Sat Apr 14 09:35:39 2001
+@@ -48,5 +48,5 @@
+ %.o: %.c
+ 	@[ -d dep ] || mkdir dep
+-	$(CC) -Wall $(CPPFLAGS) -I$(srcdir)/.. -MD -c $< -o $*.o
++	$(CC) -Wall -I$(srcdir)/.. $(CPPFLAGS) -MD -c $< -o $*.o
+ 	mv $*.d dep
  
- unsigned int vpi_mcd_open(char *name)
