@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/23 02:35:12 hamajima Exp $
+bin/ov519shot
+bin/ov519view
+man/man1/ov519shot.1
+man/man1/ov519view.1
