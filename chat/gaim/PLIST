@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/02/17 22:31:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/03/30 23:43:03 reinoud Exp $
 bin/gaim
 lib/gaim/autorecon.so
 lib/gaim/chatlist.so
@@ -32,11 +32,14 @@ lib/gaim/spellchk.so
 man/man1/gaim.1
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gaim.mo
 share/gnome/apps/Internet/gaim.desktop
