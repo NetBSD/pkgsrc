@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2001/09/24 20:45:25 tron Exp $
+@comment $NetBSD: PLIST,v 1.14 2001/10/05 06:58:46 rh Exp $
 include/gal/util/e-util.h
 include/gal/util/e-xml-utils.h
 include/gal/util/e-cache.h
@@ -126,8 +126,8 @@ include/gal/widgets/e-categories-master-list-dialog-model.h
 include/gal/widgets/e-categories-master-list-dialog.h
 include/gal/widgets/e-categories-master-list.h
 include/gal/widgets/e-reflow-model.h
-lib/libgal.so.12.0
-lib/libgal.so.12
+lib/libgal.so.13.0
+lib/libgal.so.13
 lib/libgal.so
 lib/libgal.la
 lib/libgal.a
