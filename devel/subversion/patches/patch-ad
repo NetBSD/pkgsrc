@@ -1,16 +1,21 @@
-$NetBSD: patch-ad,v 1.5 2003/08/15 19:27:45 recht Exp $
+$NetBSD: patch-ad,v 1.6 2003/08/15 23:42:59 epg Exp $
 
---- Makefile.in.orig	2003-08-14 14:21:35.000000000 +0200
-+++ Makefile.in	2003-08-15 18:05:39.000000000 +0200
-@@ -74,8 +74,9 @@
- swig_pl_libdir = @libdir@
+--- Makefile.in.orig	Thu Aug 14 07:21:35 2003
++++ Makefile.in
+@@ -107,13 +107,13 @@ SWIG_INCLUDES = -I$(SWIG_SRC_DIR) \
+                 $(SVN_APR_INCLUDES)
+ SWIG_LDFLAGS = @SWIG_LDFLAGS@
+ SWIG_PY_INCLUDES = @SWIG_PY_INCLUDES@
+-SWIG_PY_COMPILE = @SWIG_PY_COMPILE@
++SWIG_PY_COMPILE = @SWIG_PY_COMPILE@ $(CPPFLAGS)
+ SWIG_PY_LINK = @SWIG_PY_LINK@
+ SWIG_JAVA_INCLUDES = @SWIG_JAVA_INCLUDES@
+-SWIG_JAVA_COMPILE = $(CC) -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC
++SWIG_JAVA_COMPILE = $(CC) -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC $(CPPFLAGS)
+ SWIG_JAVA_LINK = $(CC) -shared
+ SWIG_PL_INCLUDES = @SWIG_PL_INCLUDES@
+-SWIG_PL_COMPILE = @SWIG_PL_COMPILE@
++SWIG_PL_COMPILE = @SWIG_PL_COMPILE@  $(CPPFLAGS)
+ SWIG_PL_LINK = @SWIG_PL_LINK@
  
- ### these possibly need further discussion
--swig_pydir = @libdir@/svn-python/libsvn
--swig_pydir_extra = @libdir@/svn-python/svn
-+# XXX pkgsrc: take swig_pydir from the environment
-+#swig_pydir = @libdir@/svn-python/svn
-+swig_pydir_extra = ${swig_pydir}
- swig_javadir = @libdir@/svn-java
- swig_pldir = @libdir@/svn-perl
- 
+ SVN_APR_INCLUDES = @SVN_APR_INCLUDES@
