@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: clamd.sh,v 1.7 2004/08/03 11:57:32 tv Exp $
+# $NetBSD: clamd.sh,v 1.8 2004/10/30 12:09:12 recht Exp $
 #
 # clamd does anti-virus checking.
 #
@@ -17,7 +17,7 @@ name="clamd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
 scan_command="@PREFIX@/bin/clamdscan"
-required_files="@PKG_SYSCONFDIR@/clamav.conf"
+required_files="@PKG_SYSCONFDIR@/clamd.conf"
 start_precmd="clamd_precmd"
 stop_cmd="clamd_stopcmd"
 
