@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 1999/12/07 20:00:17 rh Exp $
+# $NetBSD: Makefile,v 1.69 1999/12/10 00:07:25 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -27,6 +27,7 @@
     SUBDIR += get_ds7
 #    SUBDIR += gfont
     SUBDIR += gif2png
+    SUBDIR += gif320
     SUBDIR += giflib
 #    SUBDIR += gifmerge
 #    SUBDIR += giftool
