@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8105 2004/11/28 15:13:39 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.8106 2004/11/28 15:19:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5587,3 +5587,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pycurl to 7.12.2 [recht 2004-11-28]
 	Updated cyrus-imapd22 to 2.2.10 [recht 2004-11-28]
 	Updated hp2xx to 3.4.4 [dmcmahill 2004-11-28]
+	Added smalleiffel-0.77 [wiz 2004-11-28]
