@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4682 2004/02/04 22:40:24 snj Exp $
+$NetBSD: CHANGES,v 1.4683 2004/02/05 09:32:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -572,3 +572,25 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rt-pgsql to 2.0.15 [abs 2004-02-04]
 	Updated menu2wm to 0.2 [jmmv 2004-02-04]
 	Updated gqview-devel to 1.3.9 [snj 2004-02-04]
+	Added xdg-dirs-1.0 [markd 2004-02-05]
+	Updated gnome2-dirs to 1.2nb1 [markd 2004-02-05]
+	Updated arts to 1.2.0 [markd 2004-02-05]
+	Updated kde3 to 3.2.0 [markd 2004-02-05]
+	Updated kdeaddons3 to 3.2.0 [markd 2004-02-05]
+	Updated kdeadmin3 to 3.2.0 [markd 2004-02-05]
+	Updated kdeartwork3 to 3.2.0 [markd 2004-02-05]
+	Updated kdebase3 to 3.2.0 [markd 2004-02-05]
+	Updated kdeedu3 to 3.2.0 [markd 2004-02-05]
+	Updated kdegames3 to 3.2.0 [markd 2004-02-05]
+	Updated kdegraphics3 to 3.2.0 [markd 2004-02-05]
+	Updated kdelibs3 to 3.2.0 [markd 2004-02-05]
+	Updated kdemultimedia3 to 3.2.0 [markd 2004-02-05]
+	Updated kdenetwork3 to 3.2.0 [markd 2004-02-05]
+	Updated kdepim3 to 3.2.0 [markd 2004-02-05]
+	Updated kdetoys3 to 3.2.0 [markd 2004-02-05]
+	Updated kdeutils3 to 3.2.0 [markd 2004-02-05]
+	Updated kdesdk3 to 3.2.0 [markd 2004-02-05]
+	Updated quanta3 to 3.2.0 [markd 2004-02-05]
+	Removed kopete [markd 2004-02-05]
+	Removed umbrello [markd 2004-02-05]
+	Added kdeaccessibility-3.2.0 [markd 2004-02-05]
