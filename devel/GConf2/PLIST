@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/22 16:08:42 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/17 17:48:04 wiz Exp $
 bin/gconf-sanity-check-2
 bin/gconfd-2
 bin/gconftool-2
@@ -55,9 +55,9 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/GConf2.mo
 @exec ${MKDIR} %D/share/gtk-doc/html/gconf
 @dirrm share/gtk-doc/html/gconf
 @dirrm lib/GConf/2
-@dirrm lib/GConf
+@unexec ${RMDIR} lib/GConf 2>/dev/null || ${TRUE}
 @dirrm include/gconf/2/gconf
 @dirrm include/gconf/2
-@dirrm include/gconf
+@unexec ${RMDIR} include/gconf 2>/dev/null || ${TRUE}
 @dirrm etc/gconf/2
-@dirrm etc/gconf
+@unexec ${RMDIR} etc/gconf 2>/dev/null || ${TRUE}
