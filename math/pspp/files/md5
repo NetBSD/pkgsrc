@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1998/10/26 18:54:42 frueauf Exp $
+$NetBSD: md5,v 1.2 1999/03/15 15:04:13 rh Exp $
 
-MD5 (pspp-0.2.0.tar.gz) = 972ec9a3c8874181001738ac471d7edf
+MD5 (pspp-0.2.3.tar.gz) = 443ff3b375439e3251dd3603bf8fae5d
