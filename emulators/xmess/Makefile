@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/06/25 09:21:35 cjep Exp $
+# $NetBSD: Makefile,v 1.23.6.1 2002/11/12 11:02:20 agc Exp $
 #
 
 DISTNAME=		xmame-0.56.2
@@ -23,11 +23,11 @@ UNLIMIT_RESOURCES=	datasize
 
 .include "../../mk/bsd.prefs.mk"
 
-# XXX On arm(32), the src/unix/video_drivers/x11_window.c causes problems
-.if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm") 
-.if (${CFLAGS:M-O2} == "-O2")
+# XXX On arm(32)/sparc, the src/unix/video_drivers/x11_window.c causes problems
+.if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "sparc") 
+.  if (${CFLAGS:M-O2} == "-O2")
 CFLAGS:=		${CFLAGS:S/-O2/-O0/}
-.endif
+.  endif
 .endif
 
 ROMPATH=		${PREFIX}/share/${TARGET}
