@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 1999/04/23 23:02:21 tron Exp $
+$NetBSD: patch-ac,v 1.5 1999/04/23 23:16:56 tron Exp $
 
---- Makefile.in.orig	Wed Sep 24 01:57:18 1997
-+++ Makefile.in	Wed Oct  1 13:23:24 1997
+--- Makefile.in.orig	Thu Sep 25 20:32:45 1997
++++ Makefile.in	Sat Apr 24 01:03:47 1999
 @@ -29,7 +29,7 @@
  # Directory in which to install the library of Tix scripts and demos
  # (note: you can set the TIX_LIBRARY environment variable at run-time to
@@ -34,7 +34,7 @@ $NetBSD: patch-ac,v 1.4 1999/04/23 23:02:21 tron Exp $
  
  
  #----------------------------------------------------------------
-@@ -210,29 +212,29 @@
+@@ -211,29 +211,29 @@
  # scripts of TK must be included in the fixed order.
  #----------------------------------------------------------------------
  
@@ -85,3 +85,12 @@ $NetBSD: patch-ac,v 1.4 1999/04/23 23:02:21 tron Exp $
      $(SRC_DIR)/generic/tk8.0/console.tcl
  
  TIX_SCRIPTS = \
+@@ -265,7 +265,7 @@
+ 
+ $(TIX_EXE_FILE): tixAppInit.o $(TIX_LIB_FILE)
+ 	$(CC) @LD_FLAGS@ tixAppInit.o @TIX_BUILD_LIB_SPEC@ $(LIBS) \
+-		@TIX_LD_SEARCH_FLAGS@ -o $(TIX_EXE_FILE)
++		@TIX_LD_SEARCH_FLAGS@ @LDFLAGS@ -o $(TIX_EXE_FILE)
+ 
+ $(TCL_SAMEXE_FILE): $(UNIX_DIR)/samAppInit.c $(TCL_SAM_FILE)
+ 	$(CC) $(CC_SWITCHES) @LD_FLAGS@ -DUSE_TCL $(UNIX_DIR)/samAppInit.c \
