@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 1999/11/03 23:50:08 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.2 2000/02/15 18:12:16 garbled Exp $
 #
 
 #
@@ -12,6 +12,12 @@ MASTER_SITES=	http://hive.me.gu.edu.au/not_lame/
 DISTFILES=	dist10.tar.gz.a dist10.tar.gz.b
 PATCHFILES=	lame${VERS}.patch.gz
 PATCH_SITES=	${MASTER_SITES}
+
+.include "../../mk/bsd.prefs.mk"
+.if (${MACHINE_ARCH} == "alpha")
+DEPENDS+=	libffm-*:../../math/libffm
+MAKE_ENV+=	MACHINE_ARCH=${MACHINE_ARCH}
+.endif
 
 WRKSRC=		${WRKDIR}/lame${VERS}
 DIST_SUBDIR=	notlame
