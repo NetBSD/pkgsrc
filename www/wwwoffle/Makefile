@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/08/07 09:15:43 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2002/08/10 17:03:26 fredb Exp $
 
 DISTNAME=	wwwoffle-2.7c
 PKGREVISION=	2
@@ -8,33 +8,41 @@ MASTER_SITES=	ftp://ftp.demon.co.uk/pub/unix/httpd/ \
 		${MASTER_SITE_SUNSITE:=apps/www/servers/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	fredb@netbsd.org
 HOMEPAGE=	http://www.gedanken.demon.co.uk/wwwoffle/
 COMMENT=	WWW proxy with support for offline browsing
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+= --with-confdir=${PKG_SYSCONFDIR}/wwwoffle
+CONFIGURE_ARGS+= --with-confdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+= --with-spooldir=/var/wwwoffle
 
+PKG_SYSCONFSUBDIR= wwwoffle
 PLIST_SUBST+=	GTAR="${GTAR}" PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
+INSTALL_FILE=	${WRKDIR}/INSTALL
 
 post-build:
 	cd ${WRKSRC}/cache/search/htdig/scripts; \
 	for f in wwwoffle-ht*; do \
 		${MV} $$f $$f.old; \
 		${SED} -e '/htsearch/s#^#${PREFIX}/libexec/cgi-bin/#' \
-		  -e 's#/usr/local#${PREFIX}#' <$$f.old >$$f; \
+		  -e 's#/usr/local#${PREFIX}#' $$f.old > $$f; \
 		${RM} $$f.old; \
 	done
-	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${FILESDIR}/wwwoffled \
-	  >${WRKDIR}/wwwoffled
+	${SED} -e 's#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g' \
+		-e 's#@PREFIX@#${PREFIX}#g' \
+		${FILESDIR}/wwwoffled > ${WRKDIR}/wwwoffled
+	${SED} -e 's#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g' \
+	  	INSTALL > ${WRKDIR}/INSTALL
 
 post-install:
-	if [ ! -f ${PREFIX}/etc/wwwoffle/wwwoffle.conf.install ]; then \
-		${CP} -p ${PREFIX}/etc/wwwoffle/wwwoffle.conf \
-		  ${PREFIX}/etc/wwwoffle/wwwoffle.conf.install; \
+	if [ -f ${PKG_SYSCONFDIR}/wwwoffle.conf.install ]; then \
+		${CP} -p ${PKG_SYSCONFDIR}/wwwoffle.conf.install \
+		  ${PREFIX}/share/examples/wwwoffle.conf; \
+	elif [ -f ${PKG_SYSCONFDIR}/wwwoffle.conf ]; then \
+		${CP} -p ${PKG_SYSCONFDIR}/wwwoffle.conf \
+		  ${PREFIX}/share/examples/wwwoffle.conf; \
 	fi
 	${INSTALL_PROGRAM} ${WRKSRC}/src/convert-cache \
 	  ${PREFIX}/sbin/wwwoffle-convert-cache
@@ -65,7 +73,8 @@ post-install:
 # package build machines, not to mention putting the wrong information
 # into the "wwwoffle.pac" files.
 finish:
-	${SH} INSTALL _ POST-INSTALL
+	${SETENV} CONFDIR="${PKG_SYSCONFDIR}" PKG_PREFIX="${PREFIX}" \
+		${SH} INSTALL _ POST-INSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
