@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 1998/11/05 05:32:38 mycroft Exp $
+
+--- src/random.c.orig	Wed Aug  5 11:16:03 1998
++++ src/random.c	Thu Nov  5 00:21:35 1998
+@@ -48,7 +48,7 @@
+ static int randseed = 1;
+ 
+ void
+-srandom(unsigned int seed)
++srandom(unsigned long seed)
+ {
+ 	randseed = seed;
+ }
