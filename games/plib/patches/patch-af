@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/02/19 22:32:45 rh Exp $
+
+--- src/sl/sl.h.orig	Sun Oct 10 18:45:06 1999
++++ src/sl/sl.h	Sat Feb 19 22:45:03 2000
+@@ -46,7 +46,7 @@
+   int error ;
+   int fd ;
+ 
+-#ifdef __OpenBSD__
++#if defined (__NetBSD__) || defined(__OpenBSD__)
+   audio_info_t    ainfo;        // ioctl structure
+   audio_offset_t  audio_offset; // offset in audiostream
+   long            counter;      // counter-written packets
