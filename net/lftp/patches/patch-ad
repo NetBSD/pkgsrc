@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2003/02/06 14:22:16 seb Exp $
+
+--- src/NetAccess.cc.orig	Wed Dec 25 13:44:31 2002
++++ src/NetAccess.cc
+@@ -24,6 +24,9 @@
+ 
+ #include <errno.h>
+ #include <assert.h>
++#ifdef HAVE_SYS_TYPES_H
++#include <sys/types.h>
++#endif
+ #include <math.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
