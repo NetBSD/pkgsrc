@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2000/11/27 01:05:44 wiz Exp $
+# $NetBSD: Makefile,v 1.186 2000/11/28 16:35:30 agc Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -62,6 +62,7 @@
     SUBDIR += lesstif
     SUBDIR += lesstif12
     SUBDIR += lwm
+    SUBDIR += modeline
     SUBDIR += olvwm
     SUBDIR += oneko
     SUBDIR += openmotif
