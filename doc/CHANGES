@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6884 2004/08/15 11:27:01 wiz Exp $
+$NetBSD: CHANGES,v 1.6885 2004/08/15 12:07:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3840,3 +3840,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated filerunner to 2.5.1nb1 [minskim 2004-08-15]
 	Updated XaoS to 3.1nb1 [minskim 2004-08-15]
 	Updated doclifter to 1.13 [wiz 2004-08-15]
+	Updated nut to 10.1 [wiz 2004-08-15]
