@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2001/07/26 15:43:29 taca Exp $
+#
+
+PKGNAME=$1
+STAGE=$2
+
+QPOPPER_USER=@QPOPPER_USER@
+
+case "${STAGE}" in
+DEINSTALL)
+	cat <<EOF
+===========================================================================
+
+If you won't be using ${PKGNAME} any longer, you may want to remove
+user "${QPOPPER_USER}".
+
+===========================================================================
+EOF
+	;;
+esac
