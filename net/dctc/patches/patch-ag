@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
+
+--- src/mydb.c.orig	Sun Apr 14 17:13:47 2002
++++ src/mydb.c
+@@ -1079,7 +1079,7 @@ static void send_a_db_result(int output_
+ /*                (if dest_nick==NULL, dest_addr is the destination)           */
+ /*                (if dest_addr==NULL, dest_nick is the destination)           */
+ /*******************************************************************************/
+-void search_in_db(int sck, char *dest_nick, int file_type, SIZE_ATTRIB size_matter, unsigned long size, char *pattern, unsigned char *md5sum, struct sockaddr_in *dest_addr)
++void search_in_db(int sck, char *dest_nick, int file_type, SIZE_ATTRIB size_matter, unsigned long size, char *pattern, unsigned char *md5sum, struct sockaddr *dest_addr)
+ {
+ 	int i;
+ 	int nb_result=0;
