@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.50 2003/04/15 05:29:47 grant Exp $
+# $NetBSD: defs.Linux.mk,v 1.51 2003/04/20 12:06:01 cjep Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -14,7 +14,11 @@ CHOWN?=		/bin/chown
 CHGRP?=		/bin/chgrp
 CMP?=		cmp
 CP?=		/bin/cp
+.if exists(/bin/cut)
 CUT?=		/bin/cut
+.else
+CUT?=		/usr/bin/cut
+.endif
 DATE?=		/bin/date
 DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
@@ -54,7 +58,11 @@ M4?=		/usr/bin/m4
 MKDIR?=		/bin/mkdir -p
 MTREE?=		${ZOULARISBASE}/sbin/mtree
 MV?=		/bin/mv
+.if exists(/bin/nice)
 NICE?=		/bin/nice
+.else
+NICE?=		/usr/bin/nice
+.endif
 PATCH?=		/usr/bin/patch
 PAX?=		${ZOULARISBASE}/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
@@ -80,7 +88,11 @@ SU?=		/bin/su
 TAIL?=		/usr/bin/tail
 TEE?=		/usr/bin/tee
 TEST?=		/usr/bin/test
+.if exists(/bin/touch)
 TOUCH?=		/bin/touch
+.else
+TOUCH?=		/usr/bin/touch
+.endif
 TR?=		/usr/bin/tr
 TRUE?=		/bin/true
 TSORT?=		/usr/bin/tsort
