@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
+$NetBSD: patch-ab,v 1.11 2003/03/16 18:37:43 jschauma Exp $
 
---- configure.orig	Sat Oct 20 02:24:40 2001
-+++ configure	Sun Jan  6 00:38:35 2002
+--- configure.orig	Fri Oct 19 20:24:40 2001
++++ configure	Sun Mar 16 13:25:15 2003
 @@ -1746,6 +1746,7 @@
  
      do64bit_ok=no
@@ -100,7 +100,13 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -2139,17 +2140,17 @@
+@@ -2136,20 +2137,23 @@
+ 		DL_LIBS="-ldl"
+ 		LDFLAGS="-rdynamic"
+ 		LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
++	    	UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
++	  	SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
++	    	TCL_LIB_VERSIONS_OK=nodots
  	    else
  		ac_safe=`echo "dld.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dld.h""... $ac_c" 1>&6
@@ -121,7 +127,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -2206,17 +2207,17 @@
+@@ -2206,17 +2210,17 @@
  	    else
  		ac_safe=`echo "dld.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dld.h""... $ac_c" 1>&6
@@ -142,7 +148,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -2271,17 +2272,17 @@
+@@ -2271,17 +2275,17 @@
  	    # Not available on all versions:  check for include file.
  	    ac_safe=`echo "dlfcn.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dlfcn.h""... $ac_c" 1>&6
@@ -163,7 +169,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -2300,7 +2301,6 @@
+@@ -2300,7 +2304,6 @@
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
@@ -171,13 +177,12 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  		SHLIB_LD_LIBS=""
  		SHLIB_SUFFIX=".so"
  		DL_OBJS="tclLoadDl.o"
-@@ -2321,13 +2321,23 @@
+@@ -2321,13 +2324,23 @@
  if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
    egrep "yes" >/dev/null 2>&1; then
    rm -rf conftest*
--  echo "$ac_t""yes" 1>&6
 +  
-+		    echo "$ac_t""yes" 1>&6
+   echo "$ac_t""yes" 1>&6
 +		    SHLIB_LD='${TCL_CC} -shared -Wl,-x'
 +		    RPATH_FLAG='-Wl,-R'
 +		    LD_SEARCH_FLAGS='-Wl,-R${LIB_RUNTIME_DIR}'
@@ -185,9 +190,8 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
 +		
  else
    rm -rf conftest*
--  echo "$ac_t""no" 1>&6
 +  
-+		    echo "$ac_t""no" 1>&6
+   echo "$ac_t""no" 1>&6
 +		    SHLIB_LD="ld -Bshareable -x"
 +		    RPATH_FLAG='-R'
 +		    LD_SEARCH_FLAGS='-R${LIB_RUNTIME_DIR}'
@@ -197,7 +201,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  fi
  rm -f conftest*
  
-@@ -2539,6 +2549,9 @@
+@@ -2539,6 +2552,9 @@
  	    DL_LIBS="-ldl"
  	    LDFLAGS=""
  	    LD_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
@@ -207,7 +211,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  	    ;;
  	SunOS-5*)
  
-@@ -2586,6 +2599,9 @@
+@@ -2586,6 +2602,9 @@
  	    else
  		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
  	    fi
@@ -217,7 +221,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
-@@ -2611,10 +2627,10 @@
+@@ -2611,17 +2630,17 @@
  	    # that don't grok the -Bexport option.  Test that it does.
  	    hold_ldflags=$LDFLAGS
  	    echo $ac_n "checking for ld accepts -Bexport flag""... $ac_c" 1>&6
@@ -230,7 +234,6 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  
  int main() {
-@@ -2621,7 +2637,7 @@
  int i;
  ; return 0; }
  EOF
@@ -239,7 +242,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    found=yes
  else
-@@ -2667,9 +2683,9 @@
+@@ -2667,9 +2686,9 @@
  
      if test "x$DL_OBJS" = "xtclLoadAout.o" ; then
  	echo $ac_n "checking sys/exec.h""... $ac_c" 1>&6
@@ -251,7 +254,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <sys/exec.h>
  int main() {
-@@ -2687,7 +2703,7 @@
+@@ -2687,7 +2706,7 @@
      
  ; return 0; }
  EOF
@@ -260,7 +263,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    tcl_ok=usable
  else
-@@ -2705,9 +2721,9 @@
+@@ -2705,9 +2724,9 @@
  
  	else
  	    echo $ac_n "checking a.out.h""... $ac_c" 1>&6
@@ -272,7 +275,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <a.out.h>
  int main() {
-@@ -2725,7 +2741,7 @@
+@@ -2725,7 +2744,7 @@
  	    
  ; return 0; }
  EOF
@@ -281,7 +284,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    tcl_ok=usable
  else
-@@ -2743,9 +2759,9 @@
+@@ -2743,9 +2762,9 @@
  
  	    else
  		echo $ac_n "checking sys/exec_aout.h""... $ac_c" 1>&6
@@ -293,7 +296,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <sys/exec_aout.h>
  int main() {
-@@ -2763,7 +2779,7 @@
+@@ -2763,7 +2782,7 @@
  		
  ; return 0; }
  EOF
@@ -302,7 +305,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    tcl_ok=usable
  else
-@@ -2860,7 +2876,7 @@
+@@ -2860,7 +2879,7 @@
  
  
      echo $ac_n "checking for build with symbols""... $ac_c" 1>&6
@@ -311,7 +314,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
      # Check whether --enable-symbols or --disable-symbols was given.
  if test "${enable_symbols+set}" = set; then
    enableval="$enable_symbols"
-@@ -2904,12 +2920,12 @@
+@@ -2904,12 +2923,12 @@
  #--------------------------------------------------------------------
  
  echo $ac_n "checking for sin""... $ac_c" 1>&6
@@ -326,7 +329,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  /* System header to define __stub macros and hopefully few prototypes,
      which can conflict with char sin(); below.  */
-@@ -2932,7 +2948,7 @@
+@@ -2932,7 +2951,7 @@
  
  ; return 0; }
  EOF
@@ -335,7 +338,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_func_sin=yes"
  else
-@@ -2953,7 +2969,7 @@
+@@ -2953,7 +2972,7 @@
  fi
  
  echo $ac_n "checking for main in -lieee""... $ac_c" 1>&6
@@ -344,7 +347,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_lib_var=`echo ieee'_'main | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -2961,7 +2977,7 @@
+@@ -2961,14 +2980,14 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lieee  $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -353,7 +356,6 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  
  int main() {
-@@ -2968,7 +2984,7 @@
  main()
  ; return 0; }
  EOF
@@ -362,7 +364,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -2999,7 +3015,7 @@
+@@ -2999,7 +3018,7 @@
  libbsd=no
  if test "`uname -s`" = "AIX" ; then
      echo $ac_n "checking for gettimeofday in -lbsd""... $ac_c" 1>&6
@@ -371,7 +373,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_lib_var=`echo bsd'_'gettimeofday | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -3007,7 +3023,7 @@
+@@ -3007,7 +3026,7 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lbsd  $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -380,7 +382,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
-@@ -3018,7 +3034,7 @@
+@@ -3018,7 +3037,7 @@
  gettimeofday()
  ; return 0; }
  EOF
@@ -389,7 +391,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -3049,9 +3065,9 @@
+@@ -3049,9 +3068,9 @@
  #--------------------------------------------------------------------
  
  echo $ac_n "checking stdlib.h""... $ac_c" 1>&6
@@ -401,7 +403,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <stdlib.h>
  EOF
-@@ -3066,7 +3082,7 @@
+@@ -3066,7 +3085,7 @@
  rm -f conftest*
  
  cat > conftest.$ac_ext <<EOF
@@ -410,7 +412,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <stdlib.h>
  EOF
-@@ -3080,7 +3096,7 @@
+@@ -3080,7 +3099,7 @@
  rm -f conftest*
  
  cat > conftest.$ac_ext <<EOF
@@ -419,7 +421,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <stdlib.h>
  EOF
-@@ -3112,9 +3128,9 @@
+@@ -3112,16 +3131,16 @@
  #--------------------------------------------------------------------
  
  echo $ac_n "checking fd_set and sys/select""... $ac_c" 1>&6
@@ -431,7 +433,6 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <sys/types.h>
  int main() {
-@@ -3121,7 +3137,7 @@
  fd_set readMask, writeMask;
  ; return 0; }
  EOF
@@ -440,7 +441,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    tk_ok=yes
  else
-@@ -3133,7 +3149,7 @@
+@@ -3133,7 +3152,7 @@
  rm -f conftest*
  if test $tk_ok = no; then
      cat > conftest.$ac_ext <<EOF
@@ -449,7 +450,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <sys/select.h>
  EOF
-@@ -3165,12 +3181,12 @@
+@@ -3165,12 +3184,12 @@
  #--------------------------------------------------------------------
  
  echo $ac_n "checking for ANSI C header files""... $ac_c" 1>&6
@@ -464,7 +465,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <stdlib.h>
  #include <stdarg.h>
-@@ -3178,7 +3194,7 @@
+@@ -3178,7 +3197,7 @@
  #include <float.h>
  EOF
  ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
@@ -473,7 +474,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -3195,7 +3211,7 @@
+@@ -3195,7 +3214,7 @@
  if test $ac_cv_header_stdc = yes; then
    # SunOS 4.x string.h does not declare mem*, contrary to ANSI.
  cat > conftest.$ac_ext <<EOF
@@ -482,7 +483,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <string.h>
  EOF
-@@ -3213,7 +3229,7 @@
+@@ -3213,7 +3232,7 @@
  if test $ac_cv_header_stdc = yes; then
    # ISC 2.0.2 stdlib.h does not declare free, contrary to ANSI.
  cat > conftest.$ac_ext <<EOF
@@ -491,7 +492,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <stdlib.h>
  EOF
-@@ -3234,7 +3250,7 @@
+@@ -3234,7 +3253,7 @@
    :
  else
    cat > conftest.$ac_ext <<EOF
@@ -500,7 +501,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <ctype.h>
  #define ISLOWER(c) ('a' <= (c) && (c) <= 'z')
-@@ -3245,7 +3261,7 @@
+@@ -3245,7 +3264,7 @@
  exit (0); }
  
  EOF
@@ -509,7 +510,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  then
    :
  else
-@@ -3269,12 +3285,12 @@
+@@ -3269,12 +3288,12 @@
  fi
  
  echo $ac_n "checking for mode_t""... $ac_c" 1>&6
@@ -524,7 +525,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <sys/types.h>
  #if STDC_HEADERS
-@@ -3302,12 +3318,12 @@
+@@ -3302,12 +3321,12 @@
  fi
  
  echo $ac_n "checking for pid_t""... $ac_c" 1>&6
@@ -539,7 +540,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <sys/types.h>
  #if STDC_HEADERS
-@@ -3335,12 +3351,12 @@
+@@ -3335,12 +3354,12 @@
  fi
  
  echo $ac_n "checking for size_t""... $ac_c" 1>&6
@@ -554,7 +555,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <sys/types.h>
  #if STDC_HEADERS
-@@ -3368,12 +3384,12 @@
+@@ -3368,12 +3387,12 @@
  fi
  
  echo $ac_n "checking for uid_t in sys/types.h""... $ac_c" 1>&6
@@ -569,7 +570,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <sys/types.h>
  EOF
-@@ -3410,17 +3426,17 @@
+@@ -3410,17 +3429,17 @@
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
@@ -590,7 +591,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -3447,12 +3463,12 @@
+@@ -3447,12 +3466,12 @@
  done
  
  echo $ac_n "checking whether time.h and sys/time.h may both be included""... $ac_c" 1>&6
@@ -605,7 +606,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <sys/types.h>
  #include <sys/time.h>
-@@ -3461,7 +3477,7 @@
+@@ -3461,7 +3480,7 @@
  struct tm *tp;
  ; return 0; }
  EOF
@@ -614,7 +615,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    ac_cv_header_time=yes
  else
-@@ -3487,9 +3503,9 @@
+@@ -3487,16 +3506,16 @@
  #-------------------------------------------
  
  echo $ac_n "checking pw_gecos in struct pwd""... $ac_c" 1>&6
@@ -626,7 +627,6 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #include <pwd.h>
  int main() {
-@@ -3496,7 +3512,7 @@
  struct passwd pwd; pwd.pw_gecos;
  ; return 0; }
  EOF
@@ -635,7 +635,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    tk_ok=yes
  else
-@@ -3529,7 +3545,7 @@
+@@ -3529,7 +3548,7 @@
  # Uses ac_ vars as temps to allow command line to override cache and checks.
  # --without-x overrides everything else, but does not touch the cache.
  echo $ac_n "checking for X""... $ac_c" 1>&6
@@ -644,7 +644,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  
  # Check whether --with-x or --without-x was given.
  if test "${with_x+set}" = set; then
-@@ -3591,12 +3607,12 @@
+@@ -3591,12 +3610,12 @@
  
    # First, try using that file with no special directory specified.
  cat > conftest.$ac_ext <<EOF
@@ -659,7 +659,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -3665,7 +3681,7 @@
+@@ -3665,14 +3684,14 @@
    ac_save_LIBS="$LIBS"
    LIBS="-l$x_direct_test_library $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -668,7 +668,6 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  
  int main() {
-@@ -3672,7 +3688,7 @@
  ${x_direct_test_function}()
  ; return 0; }
  EOF
@@ -677,7 +676,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    LIBS="$ac_save_LIBS"
  # We can link X programs with no special library path.
-@@ -3762,12 +3778,12 @@
+@@ -3762,12 +3781,12 @@
      if test "$no_x" = ""; then
  	if test "$x_includes" = ""; then
  	    cat > conftest.$ac_ext <<EOF
@@ -692,7 +691,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    :
-@@ -3787,15 +3803,15 @@
+@@ -3787,15 +3806,15 @@
      fi
      if test "$no_x" = "yes" -o "$not_really_there" = "yes"; then
  	echo $ac_n "checking for X11 header files""... $ac_c" 1>&6
@@ -711,7 +710,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    :
-@@ -3831,13 +3847,17 @@
+@@ -3831,13 +3850,17 @@
  
      if test "$no_x" = yes; then
  	echo $ac_n "checking for X11 libraries""... $ac_c" 1>&6
@@ -722,27 +721,25 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  	for i in $dirs ; do
  	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl; then
  		echo "$ac_t""$i" 1>&6
--		XLIBSW="-L$i -lX11"
 +		if test "${RPATH_FLAG}" != ""; then
 +		    XLIBSW="-L$i ${RPATH_FLAG}$i -lX11"
 +		else
-+		    XLIBSW="-L$i -lX11"
+ 		XLIBSW="-L$i -lX11"
 +		fi
  		x_libraries="$i"
  		break
  	    fi
-@@ -3846,12 +3866,16 @@
+@@ -3846,12 +3869,16 @@
  	if test "$x_libraries" = ""; then
  	    XLIBSW=-lX11
  	else
--	    XLIBSW="-L$x_libraries -lX11"
 +	    if test "${RPATH_FLAG}" != ""; then
 +		XLIBSW="-L$x_libraries ${RPATH_FLAG}$x_libraries -lX11"
 +	    else
-+		XLIBSW="-L$x_libraries -lX11"
-+	    fi
+ 	    XLIBSW="-L$x_libraries -lX11"
  	fi
      fi
++    fi
      if test "$XLIBSW" = nope ; then
  	echo $ac_n "checking for XCreateWindow in -lXwindow""... $ac_c" 1>&6
 -echo "configure:3855: checking for XCreateWindow in -lXwindow" >&5
@@ -750,7 +747,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_lib_var=`echo Xwindow'_'XCreateWindow | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -3859,7 +3883,7 @@
+@@ -3859,7 +3886,7 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lXwindow  $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -759,7 +756,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
-@@ -3870,7 +3894,7 @@
+@@ -3870,7 +3897,7 @@
  XCreateWindow()
  ; return 0; }
  EOF
@@ -768,7 +765,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -3916,6 +3940,10 @@
+@@ -3916,6 +3943,10 @@
  fi
  if test "${TCL_LD_SEARCH_FLAGS}" = '-L${LIB_RUNTIME_DIR}'; then
      LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
@@ -779,7 +776,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  fi
  
  # The statement below is very tricky!  It actually *evaluates* the
-@@ -3955,7 +3983,7 @@
+@@ -3955,7 +3986,7 @@
  #--------------------------------------------------------------------
  
  echo $ac_n "checking for main in -lXbsd""... $ac_c" 1>&6
@@ -788,7 +785,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_lib_var=`echo Xbsd'_'main | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -3963,7 +3991,7 @@
+@@ -3963,14 +3994,14 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lXbsd  $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -797,7 +794,6 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  
  int main() {
-@@ -3970,7 +3998,7 @@
  main()
  ; return 0; }
  EOF
@@ -806,7 +802,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -3993,12 +4021,12 @@
+@@ -3993,12 +4024,12 @@
  
  tk_checkBoth=0
  echo $ac_n "checking for connect""... $ac_c" 1>&6
@@ -821,7 +817,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  /* System header to define __stub macros and hopefully few prototypes,
      which can conflict with char connect(); below.  */
-@@ -4021,7 +4049,7 @@
+@@ -4021,7 +4052,7 @@
  
  ; return 0; }
  EOF
@@ -830,7 +826,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_func_connect=yes"
  else
-@@ -4043,7 +4071,7 @@
+@@ -4043,7 +4074,7 @@
  
  if test "$tk_checkSocket" = 1; then
      echo $ac_n "checking for main in -lsocket""... $ac_c" 1>&6
@@ -839,7 +835,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_lib_var=`echo socket'_'main | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -4051,7 +4079,7 @@
+@@ -4051,14 +4082,14 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lsocket  $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -848,7 +844,6 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  
  int main() {
-@@ -4058,7 +4086,7 @@
  main()
  ; return 0; }
  EOF
@@ -857,7 +852,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -4084,12 +4112,12 @@
+@@ -4084,12 +4115,12 @@
      tk_oldLibs=$LIBS
      LIBS="$LIBS -lsocket -lnsl"
      echo $ac_n "checking for accept""... $ac_c" 1>&6
@@ -872,7 +867,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  /* System header to define __stub macros and hopefully few prototypes,
      which can conflict with char accept(); below.  */
-@@ -4112,7 +4140,7 @@
+@@ -4112,7 +4143,7 @@
  
  ; return 0; }
  EOF
@@ -881,7 +876,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_func_accept=yes"
  else
-@@ -4134,12 +4162,12 @@
+@@ -4134,12 +4165,12 @@
  
  fi
  echo $ac_n "checking for gethostbyname""... $ac_c" 1>&6
@@ -896,7 +891,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  /* System header to define __stub macros and hopefully few prototypes,
      which can conflict with char gethostbyname(); below.  */
-@@ -4162,7 +4190,7 @@
+@@ -4162,7 +4193,7 @@
  
  ; return 0; }
  EOF
@@ -905,7 +900,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_func_gethostbyname=yes"
  else
-@@ -4180,7 +4208,7 @@
+@@ -4180,7 +4211,7 @@
  else
    echo "$ac_t""no" 1>&6
  echo $ac_n "checking for main in -lnsl""... $ac_c" 1>&6
@@ -914,7 +909,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_lib_var=`echo nsl'_'main | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -4188,7 +4216,7 @@
+@@ -4188,14 +4219,14 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lnsl  $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -923,7 +918,6 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  
  int main() {
-@@ -4195,7 +4223,7 @@
  main()
  ; return 0; }
  EOF
@@ -932,7 +926,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -4235,13 +4263,13 @@
+@@ -4235,13 +4266,13 @@
  
  if test -d /usr/include/mit ; then
      echo $ac_n "checking MIT X libraries""... $ac_c" 1>&6
@@ -948,7 +942,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  
  	#include <X11/Xlib.h>
-@@ -4252,7 +4280,7 @@
+@@ -4252,7 +4283,7 @@
      
  ; return 0; }
  EOF
@@ -957,7 +951,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    
  	echo "$ac_t""yes" 1>&6
-@@ -4279,12 +4307,12 @@
+@@ -4279,12 +4310,12 @@
  
  MATH_LIBS=""
  echo $ac_n "checking for sin""... $ac_c" 1>&6
@@ -972,7 +966,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  /* System header to define __stub macros and hopefully few prototypes,
      which can conflict with char sin(); below.  */
-@@ -4307,7 +4335,7 @@
+@@ -4307,7 +4338,7 @@
  
  ; return 0; }
  EOF
@@ -981,7 +975,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_func_sin=yes"
  else
-@@ -4328,7 +4356,7 @@
+@@ -4328,7 +4359,7 @@
  fi
  
  echo $ac_n "checking for main in -lieee""... $ac_c" 1>&6
@@ -990,7 +984,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  ac_lib_var=`echo ieee'_'main | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -4336,7 +4364,7 @@
+@@ -4336,14 +4367,14 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lieee  $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -999,7 +993,6 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  
  int main() {
-@@ -4343,7 +4371,7 @@
  main()
  ; return 0; }
  EOF
@@ -1008,7 +1001,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -4370,7 +4398,7 @@
+@@ -4370,14 +4401,14 @@
  #--------------------------------------------------------------------
  
  echo $ac_n "checking whether char is unsigned""... $ac_c" 1>&6
@@ -1017,7 +1010,6 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  if eval "test \"`echo '$''{'ac_cv_c_char_unsigned'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -4377,7 +4405,7 @@
    if test "$GCC" = yes; then
    # GCC predefines this symbol on systems where it applies.
  cat > conftest.$ac_ext <<EOF
@@ -1026,7 +1018,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  #ifdef __CHAR_UNSIGNED__
    yes
-@@ -4399,7 +4427,7 @@
+@@ -4399,7 +4430,7 @@
      { echo "configure: error: can not run test program while cross compiling" 1>&2; exit 1; }
  else
    cat > conftest.$ac_ext <<EOF
@@ -1035,7 +1027,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  /* volatile prevents gcc2 from optimizing the test away on sparcs.  */
  #if !defined(__STDC__) || __STDC__ != 1
-@@ -4409,7 +4437,7 @@
+@@ -4409,7 +4440,7 @@
    volatile char c = 255; exit(c < 0);
  }
  EOF
@@ -1044,7 +1036,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  then
    ac_cv_c_char_unsigned=yes
  else
-@@ -4442,12 +4470,12 @@
+@@ -4442,12 +4473,12 @@
  
  
      echo $ac_n "checking for strtod""... $ac_c" 1>&6
@@ -1059,7 +1051,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  /* System header to define __stub macros and hopefully few prototypes,
      which can conflict with char strtod(); below.  */
-@@ -4470,7 +4498,7 @@
+@@ -4470,7 +4501,7 @@
  
  ; return 0; }
  EOF
@@ -1068,7 +1060,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
    rm -rf conftest*
    eval "ac_cv_func_strtod=yes"
  else
-@@ -4492,12 +4520,12 @@
+@@ -4492,12 +4523,12 @@
  
      if test "$tcl_strtod" = 1; then
  	echo $ac_n "checking for Solaris2.4/Tru64 strtod bugs""... $ac_c" 1>&6
@@ -1083,7 +1075,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  #include "confdefs.h"
  
  	    extern double strtod();
-@@ -4517,7 +4545,7 @@
+@@ -4517,7 +4548,7 @@
  		exit(0);
  	    }
  EOF
@@ -1092,7 +1084,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
  then
    tcl_ok=1
  else
-@@ -4549,7 +4577,7 @@
+@@ -4549,7 +4580,7 @@
  
  
      echo $ac_n "checking how to build libraries""... $ac_c" 1>&6
@@ -1101,7 +1093,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
      # Check whether --enable-shared or --disable-shared was given.
  if test "${enable_shared+set}" = set; then
    enableval="$enable_shared"
-@@ -4588,7 +4616,7 @@
+@@ -4588,7 +4619,7 @@
  if test "${SHARED_BUILD}" = "1" -a "${SHLIB_SUFFIX}" != ""; then
      TK_SHLIB_CFLAGS="${SHLIB_CFLAGS}"
      TK_LIB_FILE=libtk${TK_SHARED_LIB_SUFFIX}
@@ -1110,7 +1102,7 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
      RANLIB=":"
  
  #    TCL_STUB_FLAGS="-DUSE_TCL_STUBS"
-@@ -4611,11 +4639,17 @@
+@@ -4611,11 +4642,17 @@
  if test "$SHARED_BUILD" = 0 -o $TCL_NEEDS_EXP_FILE = 0; then
      if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
  	eval TK_LIB_FLAG="-ltk${VERSION}\${TK_DBGX}"
@@ -1118,14 +1110,14 @@ $NetBSD: patch-ab,v 1.10 2002/01/05 23:47:19 tron Exp $
      else
  	eval TK_LIB_FLAG="-ltk`echo ${VERSION} | tr -d .`\${TK_DBGX}"
 +	eval TK_BUILD_LIB_SPEC="libtk`echo ${VERSION} | tr -d .`\${TK_DBGX}.la"
-     fi
--    TK_BUILD_LIB_SPEC="-L`pwd` ${TK_LIB_FLAG}"
--    TK_LIB_SPEC="-L${exec_prefix}/lib ${TK_LIB_FLAG}"
++    fi
 +    if test "${RPATH_FLAG}" != ""; then
 +	TK_LIB_SPEC_RPATH="${RPATH_FLAG}${exec_prefix}/lib"
 +    else
 +	TK_LIB_SPEC_RPATH=""
-+    fi
+     fi
+-    TK_BUILD_LIB_SPEC="-L`pwd` ${TK_LIB_FLAG}"
+-    TK_LIB_SPEC="-L${exec_prefix}/lib ${TK_LIB_FLAG}"
 +    TK_LIB_SPEC="-L${exec_prefix}/lib ${TK_LIB_SPEC_RPATH} ${TK_LIB_FLAG}"
      TK_BUILD_EXP_FILE=""
      TK_EXP_FILE=""
