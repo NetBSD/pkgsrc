@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:19:43 agc Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/06 22:34:35 minskim Exp $
 # FreeBSD: ports/mail/distribute/Makefile,v 1.2 1999/08/25 06:50:06 obrien Exp
 #
 
@@ -21,6 +21,7 @@ USE_PERL5=	YES
 
 MAN1=		distribute.1
 DIST_SUBDIR=	distribute
+PATCH_DIST_STRIP=	-p1
 
 # customize below if you would like to
 # mail/majordomo likes this
