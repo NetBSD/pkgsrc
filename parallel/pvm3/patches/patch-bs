@@ -1,8 +1,20 @@
-$NetBSD: patch-bs,v 1.1 2004/07/19 22:41:16 dmcmahill Exp $
+$NetBSD: patch-bs,v 1.2 2004/07/30 13:07:25 dmcmahill Exp $
 
 --- console/Makefile.aimk.orig	Thu Aug 28 18:12:54 1997
-+++ console/Makefile.aimk	Wed Mar 24 18:39:55 2004
-@@ -37,17 +37,21 @@
++++ console/Makefile.aimk
+@@ -20,8 +20,8 @@ TRCLDIR		=	$(TRCDIR)/$(PVM_ARCH)
+ PVMLIB		=	pvm3
+ TRCLIB		=	pvmtrc
+ LIBPREFIX	=	lib
+-PVMLIBDEP	=	$(PVMLDIR)/$(LIBPREFIX)$(PVMLIB).a
+-TRCLIBDEP	=	$(TRCLDIR)/$(LIBPREFIX)$(TRCLIB).a
++PVMLIBDEP	=	$(PVMLDIR)/$(LIBPREFIX)$(PVMLIB).la
++TRCLIBDEP	=	$(TRCLDIR)/$(LIBPREFIX)$(TRCLIB).la
+ CFLAGS		=	$(CFLOPTS) -DIMA_$(PVM_ARCH) -I$(PVMIDIR) -I$(TRCIDIR) \
+ 				-I$(PVMSDIR) $(ARCHCFLAGS)
+ LIBS		=	$(LOPT) -L$(TRCLDIR) -L$(PVMLDIR) \
+@@ -36,19 +36,23 @@ $(PVMLDIR):
+ 	- mkdir $(PVMLDIR)
  
  $(PVMLDIR)/pvm$(EXESFX):	pvm$(EXESFX)
 +	${MKDIR} $(PVMLDIR)/.libs
@@ -29,3 +41,4 @@ $NetBSD: patch-bs,v 1.1 2004/07/19 22:41:16 dmcmahill Exp $
 +	$(LTCC) $(CFLAGS) -c $(SDIR)/trc.c
  
  clean:
+ 	rm -f *.o pvm$(EXESFX)
