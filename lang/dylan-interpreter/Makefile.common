@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2002/01/16 10:42:49 agc Exp $
+# $NetBSD: Makefile.common,v 1.3 2002/01/16 11:52:45 agc Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
@@ -23,7 +23,7 @@ ALL_TARGET=		default
 DYLAN_VERSION=		2.3.6
 
 # other architecture changes will be gratefully received
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-powerpc
 
 USE_PERL5=		yes
 
@@ -34,6 +34,8 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .if ${MACHINE_ARCH} == "i386"
 ALT_ARCH=		x86
+.elif ${MACHINE_ARCH} == "powerpc"
+ALT_ARCH=		ppc
 .else
 ALT_ARCH=		${MACHINE_ARCH}
 .endif

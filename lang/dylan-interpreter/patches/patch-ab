@@ -1,12 +1,14 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/01/15 20:08:43 agc Exp $
+$NetBSD: patch-ab,v 1.2 2002/01/16 11:52:45 agc Exp $
 
 --- configure.in	2002/01/14 11:35:39	1.1
 +++ configure.in	2002/01/14 11:36:17
-@@ -102,6 +102,7 @@
+@@ -102,6 +102,9 @@
      sparc*-openbsd*) $2=sparc-openbsd-gcc ;;
      i*86-*-freebsd2.*) $2=x86-freebsd-aout-gcc ;;
      i*86-*-freebsd*) $2=x86-freebsd-elf-gcc ;;
 +    i*86-*-netbsd*) $2=x86-netbsd-gcc ;;
++    powerpc-*-netbsd*) $2=ppc-netbsd-gcc ;;
++    sparc*-*-netbsd*) $2=sparc-netbsd-gcc ;;
      i*86-pc-cygwin*) $2=x86-cygnus-gcc ;;
      i*86-pc-none) $2=x86-win32-vc ;;
      i*86-pc-beos) $2=x86-beos-gcc ;;
