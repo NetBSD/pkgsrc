@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 14:05:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/27 15:17:36 dmcmahill Exp $
 #
 
 DISTVERSION=		1.3.0.0
@@ -17,5 +17,7 @@ USE_CROSS_EGCS=		yes
 EGCS_FAKE_RUNTIME=	yes
 
 TARGET_ARCH=		m68k-netbsd
+
+MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 .include "../COMMON/cross.mk"
