@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2000/09/13 20:31:43 fredb Exp $
+# $NetBSD: Makefile,v 1.8 2000/10/01 03:25:03 kim Exp $
 #
 
 DISTNAME=	irrd-1.5-beta-Sept-24-1999
 PKGNAME=	irrd-1.5-beta-19990924
 CATEGORIES=	net
-MASTER_SITES=	http://www.merit.edu/radb/irrd/source/
+MASTER_SITES=	ftp://ftp.merit.edu/radb/irrd/source/ \
+		ftp://ftp.merit.edu/radb/irrd/source/old_releases/
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.irrd.net/
