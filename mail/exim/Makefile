@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/04/27 17:21:59 cjep Exp $
+# $NetBSD: Makefile,v 1.33 2003/05/03 12:16:28 dmcmahill Exp $
 
 DISTNAME=	exim-4.10
 CATEGORIES=	mail net
@@ -13,8 +13,9 @@ COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
 USE_PERL5=	yes
 USE_BUILDLINK2=	yes
-INTERACTIVE_STAGE=	build 	# actually, needs "mail" user
-				# before configure step, see below
+# actually, needs "mail" user before configure step, see below
+INTERACTIVE_STAGE=	build
+
 MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
 
 pre-patch:
