@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/12/03 16:13:29 epg Exp $
+
+--- lib/SVN/Web/Log.pm.orig	Tue Aug 26 10:17:16 2003
++++ lib/SVN/Web/Log.pm
+@@ -27,9 +27,8 @@ sub run {
+     $self->{repos}->get_logs ([$self->{path}], $fs->youngest_rev, 0, 0, 0,
+ 			      sub { $self->_log(@_)});
+     return {template => 'log',
+-	    data => { isdir => (SVN::Fs::check_path
+-				($fs->revision_root ($fs->youngest_rev),
+-				 $self->{path}) == $SVN::Core::node_dir),
++	    data => { isdir => ($fs->revision_root ($fs->youngest_rev)->
++				is_dir($self->{path})),
+ 		      revs => $self->{REVS},
+ 		      branchpoints => $self->{branch}->branchpoints ($self->{path}),
+ 		    }};
