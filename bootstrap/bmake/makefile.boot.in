@@ -1,5 +1,5 @@
 # RCSid:
-#	$Id: makefile.boot.in,v 1.1.1.1 2004/03/11 13:04:10 grant Exp $
+#	$Id: makefile.boot.in,v 1.2 2004/08/23 03:44:34 jlam Exp $
 
 #
 # modify MACHINE and MACHINE_ARCH as appropriate for your target architecture
@@ -27,7 +27,7 @@ bmake:	bmake.boot
 
 bmake.boot: ${OBJ}
 	(cd lst.lib; $(MAKE) -f makefile.boot CC="$(CC)" CFLAGS="-I.. -I${srcdir}/.. ${CFLAGS}" )
-	${CC} *.o -o $@ @LIBS@
+	${CC} *.o -o $@ @LDFLAGS@ @LIBS@
 	rm -f *.[ado] */*.[ado] 
 
 bootstrap:	bmake.boot
