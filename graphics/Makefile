@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.347 2004/11/29 14:19:24 wiz Exp $
+# $NetBSD: Makefile,v 1.348 2004/11/30 15:37:45 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -40,6 +40,7 @@ SUBDIR+=	cambevao
 SUBDIR+=	camediaplay
 SUBDIR+=	camlimages
 SUBDIR+=	cdlabelgen
+SUBDIR+=	cinepaint
 SUBDIR+=	clanlib
 SUBDIR+=	claraocr
 SUBDIR+=	cnxtview
@@ -62,7 +63,6 @@ SUBDIR+=	exif
 SUBDIR+=	exiftags
 SUBDIR+=	fbm
 SUBDIR+=	feh
-SUBDIR+=	filmgimp
 SUBDIR+=	fly
 SUBDIR+=	fnlib
 SUBDIR+=	freeglut
