@@ -1,0 +1,12 @@
+Kopete is a flexible and extendable multiple protocol instant messaging
+system designed as a plugin-based system.  All protocols are plugins and
+allow modular installation, configuration, and usage without the main
+application knowing anything about the plugin being loaded.
+
+The goal of Kopete is to provide users with a standard and easy to use
+interface between all of their instant messaging systems, but at the same
+time also providing developers with the ease of writing plugins to support
+a new protocol.
+
+Kopete is a big project which already supports messaging protocols like
+Jabber, ICQ, AIM, MSN, Yahoo, IRC, Windows LANs, GaduGadu, IRC and SMS.
