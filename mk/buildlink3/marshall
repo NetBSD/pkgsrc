@@ -1,4 +1,4 @@
-# $NetBSD: marshall,v 1.11 2004/03/29 06:02:53 jlam Exp $
+# $NetBSD: marshall,v 1.12 2004/08/29 14:25:10 wiz Exp $
 #
 # Handle cases where multiple consecutive arguments must be processed
 # together, either by merging the arguments or "skipping" the extra
@@ -14,8 +14,8 @@ case $arg in
 	shift
 	;;
 #
-# Merge "-Wl,R -Wl,/path/to/dir" into a single argument
-# "-Wl,R/path/to/dir" and merge "-Wl,--rpath -Wl,/path/to/dir" into
+# Merge "-Wl,-R -Wl,/path/to/dir" into a single argument
+# "-Wl,-R/path/to/dir" and merge "-Wl,--rpath -Wl,/path/to/dir" into
 # "-Wl,--rpath,/path/to/dir" so that we can look them up in the cache.
 # Also deal with "-Xlinker" being equivalent to "-Wl,".
 #
