@@ -1,0 +1,3 @@
+DTDparse reads an SGML or XML DTD and constructs an XML database of
+its content. This database can be examined to construct other views of
+the DTD.
