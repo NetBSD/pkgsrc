@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1309 2003/02/03 17:52:22 wiz Exp $
+$NetBSD: CHANGES,v 1.1310 2003/02/03 20:29:19 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -541,3 +541,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gmplayer to 0.90rc13nb1 [fredb 2003-02-02]
 	Updated htmllint to 20030203 [jschauma 2003-02-03]
 	Updated Xft2 to 2.1nb3 [wiz 2003-02-03]
+	Updated ap2-perl to 1.99.8 [drochner 2003-02-03]
