@@ -1,0 +1,134 @@
+.\"	$NetBSD: pkgchk.8,v 1.1.1.1 2001/07/02 14:12:30 abs Exp $
+.\"
+.\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
+.\" Absolutely no warranty.
+.\"
+.Dd June 28, 2001
+.Dt PKGCHK 1
+.Sh NAME
+.Nm pkgchk
+.Nd check, and optionally update, installed packages
+.Sh SYNOPSIS
+.Nm
+.Op Fl abhisv
+.Op Fl D Ar tags
+.Op Fl U Ar tags
+.Sh DESCRIPTION
+.Nm
+verifies that the versions of installed packages matches those in
+pkgsrc, optionally adding missing or updating mismatched packages.
+.Pp
+It can verify all installed packages, or check against a set of packages
+based on the hostname, architecture, and other characteristics.
+.Pp
+.Sy Options
+.Bl -tag -width xxxxxxxx
+.It Fl D Ar tags
+Add the comma separated list of tags to those checked when parsing
+pkgchk.conf.
+.It Fl U Ar tags
+Remove the comma separated list of tags from those checked when
+parsing pkgchk.conf.
+.It Fl a
+Automatically add any missing packages. If a binary package exists
+in
+.Ev ${PACKAGES}
+it will be used in preference to building from source, unless the
+.Fl b
+or
+.Fl s
+options are given.
+.It Fl b
+Limit additions or updates to using binary packages. If
+DEPENDS_TARGET=package
+is set in
+.Pa /etc/mk.conf ,
+then
+.Nm
+will automatically generate binary packages for later reuse.
+.It Fl h
+Brief help.
+.It Fl i
+Check versions of installed packages, ignoring pkgchk.conf.
+.It Fl s
+Limit additions or updates to building from source.
+.It Fl u
+Automatically update any missing packages. If a binary package exists
+in PACKAGES it will be used in preference to building from source, unless the
+.Fl b
+or
+.Fl s
+options are given.
+.Pp
+Note: If the update fails (particularly when building from source), the system
+will be left with missing packaged.
+.It Fl v
+Verbose - list the tags set, and all packages checked.
+.El
+.Sh FILE FORMAT
+.Pp
+Each non comment line in pkgsrc.conf should contain a package directory
+(such as sysutils/skill) followed by a list of 'tags'. If a tag starts with
+a hyphen (-), then any machine matching will be excluded, otherwise if any
+tags match the current machine the package will be included. The tag
+.Em *
+matches all machines.
+.Pp
+The default set of tags used to determine which packages to match in
+pkgsrc.conf are equivalent to the output of the following with any spaces
+converted to hypens (-): hostname -s, hostname, uname -srm, uname -sr, uname -sm, uname -s, uname -r, uname -m. If 
+.Pa /usr/X11R6/lib/libX11.so
+or
+.Pa /usr/X11R6/lib/libX11.a
+is present,
+.Em x11
+is added to the list of tags.
+To see tags for the current machine, run
+.Nm
+with the
+.Fl v
+option.
+.Sh ENVIRONMENT
+.Nm
+uses the following environment variables.
+.Bl -tag -width xxxx
+.It Ev PKGSRCDIR
+Base of pkgsrc tree. If not set in environment then read from
+.Pa /etc/mk.conf .
+Defaults to
+.Pa /usr/pkgsrc
+.It Ev PACKAGES
+Location of binary packages. If not set in environment then read from
+.Pa /etc/mk.conf .
+Defaults to
+.Pa ${PKGSRCDIR}/packages.
+.Pp
+Unless in a completely homogeneous environment (every machine running
+exactly the same OS version and architecture) setting
+.Ev ${PACKAGES}
+in
+.Pa /etc/mk.conf
+to a value such as
+.Bd -literal
+${PKGSRCDIR}/packages/${LOWER_OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
+
+.Ed
+is strongly recommended. If 
+.Em cpuflags
+(devel/cpuflags) is being used to optimally target individual CPU types,
+then
+.Ev ${CPU_DIR}
+should be appended to 
+.Ev ${PACKAGES} .
+.It Ev PKGCHK_CONF
+Pathname to pkgchk configuration file. If not set in environment
+then read from
+.Pa /etc/mk.conf .
+Defaults to
+.Pa ${PKGSRCDIR}/pkgchk.conf .
+.El
+.Sh AUTHOR
+David Brownlee <abs@netbsd.org>
+.Sh CAVEATS
+Updating packages on which other packages depend can currently only be done
+via source (not binary packages).
