@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2001/05/08 23:23:49 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.6 2004/05/29 23:32:19 kristerw Exp $
 
 Set up compilation flags for NetBSD
 
@@ -45,8 +45,8 @@ Set up compilation flags for NetBSD
 -#CFLAGS  += -I/usr/pkg/pthreads/include -I/usr/pkg/include
 -#LFLAGS	 += -L/usr/pkg/pthreads/lib -R/usr/pkg/pthreads
 -#LFLAGS	 += -L/usr/pkg/lib -R/usr/pkg/pthreads/lib
-+CFLAGS  += -I${PREFIX}/pthreads/include -I${PREFIX}/include
-+LFLAGS	 += -L${PREFIX}/pthreads/lib -R${PREFIX}/pthreads
-+LFLAGS	 += -L${PREFIX}/lib -R${PREFIX}/pthreads/lib
++CFLAGS  += -I${PREFIX}/include
++LFLAGS	 += -L${PREFIX}/lib -R${PREFIX}/lib
++LFLAGS	 += -L${PREFIX}/lib
  
  # Reverse the comments below to disable Compressed CKD Dasd support
