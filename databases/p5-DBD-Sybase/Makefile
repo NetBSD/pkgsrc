@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2004/05/14 18:49:52 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/19 21:07:39 heinz Exp $
 #
 
 DISTNAME=		DBD-Sybase-0.94
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 SVR4_PKGNAME=		p5dsy
 CATEGORIES=		databases perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DBD/}
@@ -37,5 +37,6 @@ MAKE_ENV+=		SYBASE=${_SYBASE}
 .endif
 
 .include "../../databases/p5-DBI/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
