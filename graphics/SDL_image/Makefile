@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/09/09 13:36:56 adam Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/09 13:41:11 adam Exp $
 #
 
 DISTNAME=		SDL_image-1.2.3
-#PKGREVISION=		2
 CATEGORIES=		graphics devel
 MASTER_SITES=		http://www.libsdl.org/projects/SDL_image/release/
 
@@ -12,12 +11,12 @@ COMMENT=		Load images as SDL surfaces
 
 CONFLICTS=		SDL-image-[0-9]*
 
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
-USE_BUILDLINK2=		YES
-USE_X11=		YES
+CONFIGURE_ARGS+=	--enable-tif
 
 post-install:
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/showimage \
