@@ -1,0 +1,22 @@
+$NetBSD: patch-er,v 1.1 2002/06/25 22:14:13 skrll Exp $
+
+--- konqueror/sidebar/trees/Makefile.in.orig	Tue Jun 25 19:31:48 2002
++++ konqueror/sidebar/trees/Makefile.in
+@@ -576,7 +576,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=konq_sidebartreetoplevelitem.h konq_sidebartree.h konq_sidebartreemodule.h konqsidebar_tree.h konq_sidebartreeitem.h 
++KDE_DIST=konq_sidebartree.h konq_sidebartreemodule.h konqsidebar_tree.h konq_sidebartreetoplevelitem.h konq_sidebartreeitem.h 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -672,7 +672,7 @@
+ 
+ #>- install-exec-am: install-libLTLIBRARIES
+ #>+ 1
+-install-exec-am: install-kde_moduleLTLIBRARIES install-libLTLIBRARIES
++install-exec-am: install-libLTLIBRARIES install-kde_moduleLTLIBRARIES
+ 
+ install-info: install-info-recursive
+ 
