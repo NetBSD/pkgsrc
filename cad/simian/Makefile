@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/12/07 21:02:18 jmc Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/26 21:28:48 fredb Exp $
 #
 
 DISTNAME=	simian_12_98
@@ -20,12 +20,21 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 WRKSRC=		${WRKDIR}/Simian/src
 ALL_TARGET=	simian
 
+_FETCH_MESSAGE= \
+	${ECHO} '======================================================='; \
+	${ECHO} '  To build this package, please request a password on'; \
+	${ECHO} '    ${HOMEPAGE},'; \
+	${ECHO} '  with which to fetch "${DISTNAME}${EXTRACT_SUFX}" manually.'; \
+	${ECHO} '======================================================='
+
 do-fetch:
 	@if ${TEST} \! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}; then \
-		${ECHO} "===> You need to request a password on ${HOMEPAGE}"; \
-		${ECHO} "     and fetch on your own source file."; \
+		${_FETCH_MESSAGE}; \
 		exit 1; \
 	fi
+
+fetch-list-one-pkg:
+	@${ECHO} ${_FETCH_MESSAGE:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/simian ${PREFIX}/bin

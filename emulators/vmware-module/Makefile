@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:23 agc Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/26 21:28:48 fredb Exp $
 
 DISTNAME=	vmware-netbsd-1.0
 PKGNAME=	vmware-module-1.0
@@ -22,15 +22,21 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 DOWNLOAD=	http://www.wasabisystems.com/vmware-survey.html
 
+_FETCH_MESSAGE=	\
+	${ECHO} "==============================================================="; \
+	${ECHO} "  The VMware kernel module must be fetched into \"${DISTDIR}\""; \
+	${ECHO} "  via the Web formular available under this URL:"; \
+	${ECHO} "  ${DOWNLOAD}"; \
+	${ECHO} "==============================================================="
+
 do-fetch:
 	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
-	    ${ECHO_MSG} "==============================================================="; \
-	    ${ECHO_MSG} "  The VMware kernel module must be fetched into \"${DISTDIR}\""; \
-	    ${ECHO_MSG} "  via the Web formular available under this URL:"; \
-	    ${ECHO_MSG} "  ${DOWNLOAD}"; \
-	    ${ECHO_MSG} "==============================================================="; \
+	    ${_FETCH_MESSAGE}; \
 	    ${FALSE}; \
 	fi
+
+fetch-list-one-pkg:
+	@${ECHO} ${_FETCH_MESSAGE:Q}
 
 # to override <bsd.own.mk>, MUST be set this way BEFORE bsd.prefs.mk
 BSDSRCDIR?=	/nonexistent

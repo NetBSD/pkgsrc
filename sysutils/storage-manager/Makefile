@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/10/23 16:07:56 lukem Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/26 21:28:49 fredb Exp $
 
 DISTNAME=		sm_linux_v314_install
 PKGNAME=		storage-manager-3.14
@@ -30,15 +30,21 @@ NO_BUILD=		# defined
 
 DOWNLOAD=		http://www.adaptec.com/worldwide/support/driverdetail.html?cat=%2fOperating+System%2fLinux&filekey=sm_linux_v314_install.rpm
 
+_FETCH_MESSAGE= \
+	${ECHO} "================================================================="; \
+	${ECHO} "  Adaptec Storage Manager 3.14 for RedHat Linux must be fetched"; \
+	${ECHO} "  into ${DISTDIR} from"; \
+	${ECHO} "  ${DOWNLOAD}."; \
+	${ECHO} "================================================================="
+
 do-fetch:
 	@if [ ! -f ${DISTDIR}/${DISTFILES} ]; then \
-	    ${ECHO_MSG} "==============================================================="; \
-	    ${ECHO_MSG} "  Adaptec Storage Manager 3.14 for RedHat Linux must be fetched"; \
-	    ${ECHO_MSG} "  into ${DISTDIR} from"; \
-	    ${ECHO_MSG} "  ${DOWNLOAD}."; \
-	    ${ECHO_MSG} "==============================================================="; \
+	    ${_FETCH_MESSAGE}; \
 	    ${FALSE}; \
 	fi
+
+fetch-list-one-pkg:
+	@${ECHO} ${_FETCH_MESSAGE:Q}
 
 do-extract:
 	${MKDIR} ${WRKSRC}

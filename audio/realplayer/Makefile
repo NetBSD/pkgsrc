@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/10/25 19:42:43 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/26 21:28:47 fredb Exp $
 
 DISTNAME=		rp8_linux20_libc6_i386_cs2
 PKGNAME=		realplayer-8.0.1
@@ -38,15 +38,21 @@ REALPLAYER_HOME=	${PREFIX}/lib/RealPlayer8
 NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
 MESSAGE_SUBST+=		REALPLAYER_HOME=${REALPLAYER_HOME}
 
+_FETCH_MESSAGE= \
+	    ${ECHO} "==============================================================="; \
+	    ${ECHO} "  RealPlayer 8 for Linux 2.x (libc6 i386, Self-Extracting) must"; \
+	    ${ECHO} "  be fetched into ${DISTDIR} from"; \
+	    ${ECHO} "  ${DOWNLOAD}."; \
+	    ${ECHO} "==============================================================="
+
 do-fetch:
 	@if [ ! -f ${RP_INSTALLER} ]; then \
-	    ${ECHO_MSG} "==============================================================="; \
-	    ${ECHO_MSG} "  RealPlayer 8 for Linux 2.x (libc6 i386, Self-Extracting) must"; \
-	    ${ECHO_MSG} "  be fetched into ${DISTDIR} from"; \
-	    ${ECHO_MSG} "  ${DOWNLOAD}."; \
-	    ${ECHO_MSG} "==============================================================="; \
+	    ${_FETCH_MESSAGE}; \
 	    ${FALSE}; \
 	fi
+
+fetch-list-one-pkg:
+	@${ECHO} ${_FETCH_MESSAGE:Q}
 
 pre-extract:
 	@delay=15;							\
