@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/03/16 02:01:11 taca Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/28 04:27:13 taca Exp $
 #
 
-DISTNAME=	erb-1.4.3
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+DISTNAME=	erb-2.0.4
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www2a.biglobe.ne.jp/~seki/ruby/
 
@@ -10,14 +10,14 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www2a.biglobe.ne.jp/~seki/ruby/
 COMMENT=	Implementation of eRuby (embedded ruby)
 
-DIST_SUBDIR=	ruby
-USE_RUBY=	# defined
-NO_BUILD=	# defined
+RUBY_VERSION=		${RUBY16_VERSION}
+USE_RUBY_INSTALL=	yes
+NO_BUILD=		yes
+REPLACE_RUBY=		bin/erb sample/erbcgi
 
-REPLACE_RUBY=	lib/erb/erbcgi.rb
+post-install:
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/erb
+	${INSTALL_DATA} ${WRKSRC}/sample/* ${RUBY_EXAMPLESDIR}/erb
 
-do-install:
-	cd ${WRKSRC}; ${RUBY} install.rb
-
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
