@@ -1,0 +1,11 @@
+--- makefile	1997/11/14 09:49:34	1.1
++++ makefile	1997/11/14 09:51:01
+@@ -10,3 +10,8 @@
+ pddet.o: pddet.c
+ 	cc -c pddet.c
+ 
++
++install: crashme pddet
++	${INSTALL} -c -m 0755 crashme ${PREFIX}/sbin/crashme
++	${INSTALL} -c -m 0755 pddet ${PREFIX}/sbin/pddet
++	${INSTALL} -c -m 0444 crashme.1 ${PREFIX}/man/man1
