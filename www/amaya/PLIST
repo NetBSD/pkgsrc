@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/05/24 14:38:17 salo Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/03 01:36:12 xtraeme Exp $
 bin/amaya
 lib/Amaya/amaya/Amaya.svg
 lib/Amaya/amaya/AmayaPage.html
@@ -53,6 +53,7 @@ lib/Amaya/amaya/Timeline.en
 lib/Amaya/amaya/TimelineP.PRS
 lib/Amaya/amaya/TimelineT.TRA
 lib/Amaya/amaya/TimelineTX.TRA
+lib/Amaya/amaya/Topics.conf
 lib/Amaya/amaya/XLink.STR
 lib/Amaya/amaya/XLink.en
 lib/Amaya/amaya/XLinkP.PRS
@@ -99,6 +100,12 @@ lib/Amaya/amaya/toggle.gif
 lib/Amaya/annotlib/Annot.STR
 lib/Amaya/annotlib/AnnotP.PRS
 lib/Amaya/annotlib/AnnotT.TRA
+lib/Amaya/annotlib/Topics.STR
+lib/Amaya/annotlib/Topics.en
+lib/Amaya/annotlib/TopicsP.PRS
+lib/Amaya/annotlib/closed.png
+lib/Amaya/annotlib/open.png
+lib/Amaya/annotlib/selected.gif
 lib/Amaya/applis/bin/amaya
 lib/Amaya/applis/bin/print
 lib/Amaya/config/XKeysymDB
@@ -126,6 +133,7 @@ lib/Amaya/config/fi-corrdialogue
 lib/Amaya/config/fi-libdialogue
 lib/Amaya/config/fonts.gl
 lib/Amaya/config/fonts.gl.deb
+lib/Amaya/config/fonts.gl.win
 lib/Amaya/config/fonts.tmpl
 lib/Amaya/config/fonts.unix
 lib/Amaya/config/fonts.unix.deb
@@ -347,19 +355,6 @@ lib/Amaya/doc/html/accessibility_in_amaya/about_producing_accessible_content.htm
 lib/Amaya/doc/html/accessibility_in_amaya/accessibility_in_amaya.html
 lib/Amaya/doc/html/accessibility_in_amaya/accessibility_in_amaya.html.de
 lib/Amaya/doc/html/accessibility_in_amaya/accessibility_in_amaya.html.es
-lib/Amaya/doc/html/attaching_annotations/About_Reading_Annotations.html.de
-lib/Amaya/doc/html/attaching_annotations/About_Storing_Local_Annotations.html.de
-lib/Amaya/doc/html/attaching_annotations/About_Storing_Remote_Annotations.html.de
-lib/Amaya/doc/html/attaching_annotations/Annotation_Issues.html.de
-lib/Amaya/doc/html/attaching_annotations/Annotation_Menu.html.de
-lib/Amaya/doc/html/attaching_annotations/Configuring_Annotation_Settings.html.de
-lib/Amaya/doc/html/attaching_annotations/Configuring_Icons.html.de
-lib/Amaya/doc/html/attaching_annotations/Creating_an_Annotation.html.de
-lib/Amaya/doc/html/attaching_annotations/Loading_and_Presenting_Annotations.html.de
-lib/Amaya/doc/html/attaching_annotations/Moving_Annotations.html.de
-lib/Amaya/doc/html/attaching_annotations/Navigating_Annotations.html.de
-lib/Amaya/doc/html/attaching_annotations/Replying_To_Annotations.html.de
-lib/Amaya/doc/html/attaching_annotations/What_is_an_Annotation.html.de
 lib/Amaya/doc/html/attaching_annotations/about_reading_annotations.html
 lib/Amaya/doc/html/attaching_annotations/about_reading_annotations.html.de
 lib/Amaya/doc/html/attaching_annotations/about_reading_annotations.html.es
@@ -402,6 +397,8 @@ lib/Amaya/doc/html/attaching_annotations/replying_to_annotations.html.es
 lib/Amaya/doc/html/attaching_annotations/what_is_an_annotation.html
 lib/Amaya/doc/html/attaching_annotations/what_is_an_annotation.html.de
 lib/Amaya/doc/html/attaching_annotations/what_is_an_annotation.html.es
+lib/Amaya/doc/html/bookmarks.html
+lib/Amaya/doc/html/bookmarks.html.es
 lib/Amaya/doc/html/browsing/about_access_keys.html
 lib/Amaya/doc/html/browsing/about_access_keys.html.de
 lib/Amaya/doc/html/browsing/about_access_keys.html.es
@@ -465,9 +462,6 @@ lib/Amaya/doc/html/editing_documents/creating_new_documents.html.es
 lib/Amaya/doc/html/editing_documents/the_transform_command.html
 lib/Amaya/doc/html/editing_documents/the_transform_command.html.de
 lib/Amaya/doc/html/editing_documents/the_transform_command.html.es
-lib/Amaya/doc/html/editing_iso-latin-1_characters/about_optional_multikey_support.html
-lib/Amaya/doc/html/editing_iso-latin-1_characters/about_optional_multikey_support.html.de
-lib/Amaya/doc/html/editing_iso-latin-1_characters/about_optional_multikey_support.html.es
 lib/Amaya/doc/html/editing_iso-latin-1_characters/about_standard_multikey_support.html
 lib/Amaya/doc/html/editing_iso-latin-1_characters/about_standard_multikey_support.html.de
 lib/Amaya/doc/html/editing_iso-latin-1_characters/about_standard_multikey_support.html.es
@@ -718,7 +712,6 @@ lib/Amaya/doc/images/Editor.gif
 lib/Amaya/doc/images/Em.gif
 lib/Amaya/doc/images/Forward.gif
 lib/Amaya/doc/images/GeneralMenu-fr.gif
-lib/Amaya/doc/images/GeneralMenu.gif
 lib/Amaya/doc/images/GeomMenu-fr.gif
 lib/Amaya/doc/images/GeomMenu.gif
 lib/Amaya/doc/images/Graph.gif
@@ -768,6 +761,11 @@ lib/Amaya/doc/images/annotationwindow-es.png
 lib/Amaya/doc/images/annotationwindow.png
 lib/Amaya/doc/images/annotorp.png
 lib/Amaya/doc/images/background-de.png
+lib/Amaya/doc/images/bmbprop.png
+lib/Amaya/doc/images/bmmenu.png
+lib/Amaya/doc/images/bmtprop.png
+lib/Amaya/doc/images/bmview1.png
+lib/Amaya/doc/images/bmview2.png
 lib/Amaya/doc/images/browser_preferences-de.png
 lib/Amaya/doc/images/browsing_preferences-es.png
 lib/Amaya/doc/images/browsing_preferences.png
@@ -775,6 +773,7 @@ lib/Amaya/doc/images/cache_preferences-de.png
 lib/Amaya/doc/images/cache_preferences-es.png
 lib/Amaya/doc/images/cache_preferences.png
 lib/Amaya/doc/images/check.gif
+lib/Amaya/doc/images/closed.png
 lib/Amaya/doc/images/code.gif
 lib/Amaya/doc/images/color-de.png
 lib/Amaya/doc/images/color_preferences-de.png
@@ -814,6 +813,7 @@ lib/Amaya/doc/images/linkwindow.png
 lib/Amaya/doc/images/localfilter-es.png
 lib/Amaya/doc/images/localfilter.png
 lib/Amaya/doc/images/math_palette-de.png
+lib/Amaya/doc/images/open.png
 lib/Amaya/doc/images/printoptions_w32-de.png
 lib/Amaya/doc/images/profiles_preferences-de.png
 lib/Amaya/doc/images/profiles_preferences-es.png
