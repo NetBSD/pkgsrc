@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/07 12:13:04 drochner Exp $
+include/expat.h
+lib/libexpat.a
+lib/libexpat.la
+lib/libexpat.so
+lib/libexpat.so.0
+lib/libexpat.so.0.1
