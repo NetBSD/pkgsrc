@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:46 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/08/28 05:29:41 jlam Exp $
 
 .if !defined(AVIFILE_BUILDLINK2_MK)
 AVIFILE_BUILDLINK2_MK=	# defined
@@ -14,7 +14,7 @@ BUILDLINK_FILES.avifile+=	lib/avifile-0.6/*
 BUILDLINK_FILES.avifile+=	include/avifile/*
 BUILDLINK_FILES.avifile+=	include/avifile/wine/*
 
-BUILDLINK_TARGETS.avifile=	avifile-buildlink
+BUILDLINK_TARGETS+=	avifile-buildlink
 
 avifile-buildlink: _BUILDLINK_USE
 
