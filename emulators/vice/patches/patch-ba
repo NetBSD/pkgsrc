@@ -1,0 +1,30 @@
+$NetBSD: patch-ba,v 1.1 2004/07/26 17:22:40 dillo Exp $
+
+--- configure.in.orig	Sun Jan 25 16:42:36 2004
++++ configure.in
+@@ -531,8 +531,24 @@ if test x"$host_vendor" != "xgo32" -a x"
+                     AC_DEFINE(BSD_JOYSTICK,,
+                               [Enable support for BSD style joysticks.])
+                     JOY_OBJS='$(ARCHDIR)/joystick.o' ], )
+-  AC_SUBST(JOY_OBJS)
+ 
++  dnl NetBSD/FreeBSD USB joystick support
++  usbhid_header=no
++  AC_CHECK_LIB(usbhid, hid_get_report_desc,
++  	[AC_CHECK_HEADER(usbhid.h,
++	    [AC_DEFINE(HAVE_USBHID_H,1,
++		[Define to 1 if you have the <usbhid.h> header file.])
++	     usb_header=yes],
++ 	     [AC_CHECK_HEADER(libusbhid.h,
++	    	[AC_DEFINE(HAVE_LIBUSBHID_H,1,
++		 [Define to 1 if you have the <libusbhid.h> header file.])],
++	        usbhid_header=no)])
++	if test x"$usb_header" = "xyes" ; then
++	    AC_DEFINE(HAS_USB_JOYSTICK,,[Enable emulation for USB joysticks.])
++	    LIBS="$LIBS -lusbhid"
++	fi])
++
++  AC_SUBST(JOY_OBJS)
+ fi
+ 
+ dnl Check for math library

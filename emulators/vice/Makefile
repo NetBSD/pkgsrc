@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2004/07/16 22:59:11 kristerw Exp $
+# $NetBSD: Makefile,v 1.46 2004/07/26 17:22:40 dillo Exp $
 #
 
 DISTNAME=		vice-1.14
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/ \
 			http://www.nic.funet.fi/pub/cbm/crossplatform/emulators/VICE/
@@ -27,10 +27,12 @@ USE_X11=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 USE_GCC_SHLIB=		YES
+CONFIGURE_ARGS+=	--enable-fullscreen
 
 INFO_FILES=		vice.info
 
 BUILD_DEFS+=		VICE_USE_FFMPEG
+BUILD_DEFS+=		USE_ESOUND
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,10 +55,13 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/vice
 	${MV} ${PREFIX}/share/doc/vice/*.html ${PREFIX}/share/doc/html/vice
 
+.if !empty(USE_ESOUND:M[Yy][Ee][Ss])
 .include "../../audio/esound/buildlink3.mk"
+.endif
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .if !empty(VICE_USE_FFMPEG:M[Yy][Ee][Ss])
 .include "../../multimedia/ffmpeg/buildlink3.mk"
