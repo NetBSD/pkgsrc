@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/04/25 05:01:46 snj Exp $
+# $NetBSD: Makefile,v 1.18 2004/05/08 15:09:14 uebayasi Exp $
 #
 
 DISTNAME=	sed-4.0.9
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_GNU:=sed/}
 MAINTAINER=	seb@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/sed/sed.html
 COMMENT=	GNU implementation of sed, the POSIX stream editor
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
