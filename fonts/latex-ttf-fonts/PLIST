@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/22 17:33:29 jmmv Exp $
+lib/X11/fonts/latex-ttf-fonts/cmex10.ttf
+lib/X11/fonts/latex-ttf-fonts/cmmi10.ttf
+lib/X11/fonts/latex-ttf-fonts/cmr10.ttf
+lib/X11/fonts/latex-ttf-fonts/cmsy10.ttf
+lib/X11/fonts/latex-ttf-fonts/msam10.ttf
+lib/X11/fonts/latex-ttf-fonts/msbm10.ttf
+share/doc/latex-ttf-fonts/BaKoMa-CM.Fonts
+@dirrm share/doc/latex-ttf-fonts
