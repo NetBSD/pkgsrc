@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/28 10:33:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/30 05:53:29 jlam Exp $
 
 DISTNAME=	horde-1.2.4
 CATEGORIES=	www
@@ -15,13 +15,19 @@ NO_CONFIGURE=	# defined
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
 
-CONFDIR=	${PREFIX}/etc/httpd
 DOCDIR=		${PREFIX}/share/doc/horde
+EGDIR=		${PREFIX}/share/examples/horde
 HORDEDIR=	${PREFIX}/share/horde
 PHPLIBDIR=	${PREFIX}/share/horde/phplib
 
 MESSAGE_SUBST+=	HORDEDIR=${HORDEDIR}
 MESSAGE_SUBST+=	PHPLIBDIR=${PHPLIBDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
+BUILD_DEFS+=		APACHE_SYSCONFDIR
+MESSAGE_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
 
 post-extract:
 	cd ${WRKSRC}/phplib;						\
@@ -65,6 +71,7 @@ pre-install:
 		${FILESDIR}/horde_secure.sh > ${WRKDIR}/horde_secure.sh
 	${SED}	-e "s|@HORDEDIR@|${HORDEDIR:S/^${PREFIX}\///}|g"	\
 		-e "s|@PHPLIBDIR@|${PHPLIBDIR:S/^${PREFIX}\///}|g"	\
+		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
 		-e "s|@CAT@|${CAT}|g"					\
 		-e "s|@RM@|${RM}|g"					\
 		-e "s|@RMDIR@|${RMDIR}|g"				\
@@ -72,6 +79,7 @@ pre-install:
 		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED}	-e "s|@HORDEDIR@|${HORDEDIR:S/^${PREFIX}\///}|g"	\
 		-e "s|@PHPLIBDIR@|${PHPLIBDIR:S/^${PREFIX}\///}|g"	\
+		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
 		-e "s|@CAT@|${CAT}|g"					\
 		-e "s|@CHMOD@|${CHMOD}|g"				\
 		-e "s|@CP@|${CP}|g"					\
@@ -81,8 +89,8 @@ pre-install:
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/horde_setup.sh ${PREFIX}/sbin/horde_setup
 	${INSTALL_SCRIPT} ${WRKDIR}/horde_secure.sh ${PREFIX}/sbin/horde_secure
-	${INSTALL_DATA_DIR} ${CONFDIR} ${DOCDIR} ${HORDEDIR} ${PHPLIBDIR}
-	cd ${WRKDIR}; ${INSTALL_DATA} horde.conf.dist ${CONFDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR} ${HORDEDIR} ${PHPLIBDIR}
+	cd ${WRKDIR}; ${INSTALL_DATA} horde.conf.dist ${EGDIR}/horde.conf
 	cd ${WRKSRC}; ${INSTALL_DATA} COPYING README docs/* ${DOCDIR}
 	cd ${WRKSRC}/phplib; ${INSTALL_DATA} * ${PHPLIBDIR}
 	cd ${WRKSRC}; ${CP} -R graphics lib locale scripts templates ${HORDEDIR}
