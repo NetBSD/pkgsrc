@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9443 2005/03/06 16:49:45 chris Exp $
+$NetBSD: CHANGES,v 1.9444 2005/03/06 17:05:30 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1301,3 +1301,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sylpheed-claws-dillo-viewer to 1.0.1 [chris 2005-03-06]
 	Updated sylpheed-claws-image-viewer to 1.0.1 [chris 2005-03-06]
 	Updated sylpheed-claws-trayicon to 1.0.1 [chris 2005-03-06]
+	Updated imap-uw to 2004c1nb2 [thorpej 2005-03-06]
