@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/03/19 08:34:01 bouyer Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/26 10:34:09 recht Exp $
 
 DISTNAME=	jade-1.2.1
 PKGREVISION=	8
@@ -17,7 +17,7 @@ PATCH_DIST_STRIP=	-p1
 
 CONFLICTS+=	sp-[0-9]*
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
@@ -50,7 +50,7 @@ post-install:
 # Installed by print/tex-jadetex
 	${RM} ${PREFIX}/share/sgml/jade/*jadetex.*
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
 
