@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.4 2001/06/25 19:28:42 jtb Exp $
+$NetBSD: patch-ag,v 1.5 2003/03/24 12:12:10 jtb Exp $
 
 --- /dev/null	Sat Jun 23 16:45:07 2001
-+++ config/unix/netbsd/rswitch.c.sparc
++++ config/unix/netbsd/sparc.c
 @@ -0,0 +1,39 @@
 +/*
 + * coswitch for Sun-4 Sparc.

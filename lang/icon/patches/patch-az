@@ -1,8 +1,0 @@
-$NetBSD: patch-az,v 1.4 2001/06/25 18:00:17 jtb Exp $
-
---- /dev/null	Mon Jun 25 14:20:55 2001
-+++ config/unix/netbsd/define.h.graphics.in
-@@ -0,0 +1,3 @@
-+#undef COpts
-+#define COpts "-O2 -I@X11BASE@/include"
-+#define ICONC_XLIB "-Wl,-R@X11BASE@/lib -L@X11BASE@/lib -lX11"

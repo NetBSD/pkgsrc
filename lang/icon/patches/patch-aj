@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.4 2001/06/25 19:28:42 jtb Exp $
+$NetBSD: patch-aj,v 1.5 2003/03/24 12:12:10 jtb Exp $
 
---- Makefile.orig	Mon Jun 11 18:04:42 2001
+--- Makefile.orig	Thu Mar 28 02:45:33 2002
 +++ Makefile
-@@ -14,7 +14,7 @@
+@@ -15,7 +15,7 @@ dest=/must/specify/dest/
  #
  # Default targets.
  
@@ -11,7 +11,16 @@ $NetBSD: patch-aj,v 1.4 2001/06/25 19:28:42 jtb Exp $
  
  config/unix/$(name)/status src/h/define.h:
  	:
-@@ -97,18 +97,21 @@
+@@ -62,7 +62,7 @@ Status:
+ 
+ Icont bin/icont: Common
+ 		cd src/icont;		$(MAKE)
+-		cd src/runtime;		$(MAKE) 
++		cd src/runtime;		$(MAKE)
+ 
+ 
+ # The compiler: rtt, the run-time system, and iconc.
+@@ -98,21 +98,23 @@ Ibin:		bin/icont
  
  D=$(dest)
  Install:
@@ -21,16 +30,20 @@ $NetBSD: patch-aj,v 1.4 2001/06/25 19:28:42 jtb Exp $
 -		test -d $D/doc || mkdir $D/doc
 -		test -d $D/man || mkdir $D/man
 -		test -d $D/man/man1 || mkdir $D/man/man1
+-		rm -f $D/bin/icon* $D/doc/* $D/man/man1/*
+-		cd $D/lib; rm -f *
 -		cp README $D
--		cp bin/[a-qs-z]* $D/bin
--		rm -f $D/bin/libXpm*
+-		cp bin/[abcdefghijklmnopqrstuvwxyz]* $D/bin
+-		rm -f $D/bin/libXpm* $D/bin/rt* $D/bin/icon
+-		(cd $D/bin; ln -s icont icon)
 -		cp lib/*.* $D/lib
 -		cp doc/*.* $D/doc
--		cp man/man1/icont.1 $D/man/man1
-+		./bin/patchstr ./bin/icont ${PREFIX}/bin/iconx
-+		./bin/patchstr ./bin/iconc ${PREFIX}/lib/icon/
+-		cp man/man1/*.* $D/man/man1
++		./bin/patchstr ./bin/icont $(PREFIX)/bin/iconx
++		./bin/patchstr ./bin/iconc $(PREFIX)/lib/icon/
 +		cd bin; $(BSD_INSTALL_PROGRAM) icont iconx iconc	\
 +			patchstr rtt $D/bin
++		cd $(PREFIX)/bin && ln -sf icont icon
 +		$(BSD_INSTALL_DATA_DIR) $D/lib/icon
 +		$(BSD_INSTALL_DATA) lib/icon/*.* $D/lib/icon
 +		$(BSD_INSTALL_DATA_DIR) $D/share/doc/icon
@@ -41,7 +54,8 @@ $NetBSD: patch-aj,v 1.4 2001/06/25 19:28:42 jtb Exp $
 +		fi;							\
 +		done
 +		$(BSD_INSTALL_DATA) doc/*.* $D/share/doc/icon
-+		$(BSD_INSTALL_MAN) man/man1/icont.1 $D/man/man1
++		$(BSD_INSTALL_MAN) man/man1/* $D/man/man1
++
  
  
  # Bundle up for binary distribution.
