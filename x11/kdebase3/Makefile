@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2004/10/15 13:56:27 seb Exp $
+# $NetBSD: Makefile,v 1.61 2004/10/15 17:19:03 seb Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -63,7 +63,7 @@ PKG_SUPPORTED_OPTIONS=	samba
 .include "../../mk/bsd.options.mk"
 
 .if exists(${X11BASE}/include/X11/extensions/Xrandr.h)
-HAVE_RANDR!=		${GREP} XRRSetScreenConfigAndRateX  ${X11BASE}/include/X11/extensions/Xrandr.h; ${ECHO}
+HAVE_RANDR!=		${GREP} XRRSetScreenConfigAndRate  ${X11BASE}/include/X11/extensions/Xrandr.h; ${ECHO}
 .endif
 .if defined(HAVE_RANDR) && !empty(HAVE_RANDR)
 PLIST_SUBST+=		HAVE_RANDR=""
