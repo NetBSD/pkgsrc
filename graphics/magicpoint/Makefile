@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2003/03/02 19:47:23 jschauma Exp $
+# $NetBSD: Makefile,v 1.35 2003/09/11 16:09:40 jmmv Exp $
 
-DISTNAME=		magicpoint-1.09a
-PKGREVISION=		2
+DISTNAME=		magicpoint-1.10a
 CATEGORIES=		x11 graphics
 MASTER_SITES=		ftp://ftp.mew.org/pub/MagicPoint/
 
@@ -14,6 +13,8 @@ CONFLICTS=		mgp-[0-9]*
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_IMAKE=		yes
+USE_PERL5=		build
+
 CONFIGURE_ARGS+=	--enable-freetype-charset16
 CONFIGURE_ARGS+=	--disable-vflib
 CONFIGURE_ARGS+=	--enable-locale
@@ -44,7 +45,9 @@ post-install:
 	${INSTALL_DATA} README* *.jpg *.eps *.mgp *.xbm mgprc-sample \
 		${PREFIX}/share/examples/mgp
 
-.include "../../graphics/freetype-lib/buildlink2.mk"
+.include "../../fonts/Xft2/buildlink2.mk"
+.include "../../fonts/fontconfig/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/libungif/buildlink2.mk"
 .include "../../graphics/mng/buildlink2.mk"
 .include "../../graphics/netpbm/buildlink2.mk"
