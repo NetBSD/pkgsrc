@@ -1,0 +1,39 @@
+*** Makefile.orig	Tue May 12 22:09:14 1998
+--- Makefile	Tue Jul 21 11:16:26 1998
+***************
+*** 2,4 ****
+  
+! BASENAME= /usr
+  
+--- 2,4 ----
+  
+! BASENAME= ${PREFIX}
+  
+***************
+*** 12,18 ****
+  
+! CFLAGS	= -O -DUSE_DB #$(GCC_WARNINGS)
+! LDFLAGS = -lcrypt -ldb2
+  
+  # If you change this, edit config.h as well
+! CUCIPOPLIB=/var/lib/cucipop
+  CUCIPOPBULLETINS=$(CUCIPOPLIB)/bulletins
+--- 12,18 ----
+  
+! CFLAGS	= -O #-DUSE_DB $(GCC_WARNINGS)
+! LDFLAGS = -lcrypt
+  
+  # If you change this, edit config.h as well
+! CUCIPOPLIB=${PREFIX}/share/cucipop
+  CUCIPOPBULLETINS=$(CUCIPOPLIB)/bulletins
+***************
+*** 24,27 ****
+  
+! INSTALL=install -o root -m
+! BINPERM=02755 -s -g mail
+  REGPERM=0644
+--- 24,27 ----
+  
+! INSTALL=install -c -o root -m
+! BINPERM=02755 -s -g wheel
+  REGPERM=0644
