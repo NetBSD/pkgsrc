@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3727 2003/10/24 01:46:11 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3728 2003/10/24 02:03:28 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4241,3 +4241,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dgd to 1.2.0.3 [xtraeme 2003-10-24]
 	Updated xpdf to 2.03 [xtraeme 2003-10-24]
 	Updated exiftags to 0.98 [xtraeme 2003-10-24]
+	Updated rosegarden to 2.1.4 [xtraeme 2003-10-24]
