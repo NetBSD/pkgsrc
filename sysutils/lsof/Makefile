@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/07/07 18:13:56 agc Exp $
+# $NetBSD: Makefile,v 1.22 1999/07/08 08:06:59 agc Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
@@ -17,7 +17,7 @@ HOMEPAGE=		http://www-rcd.cc.purdue.edu/~abe/
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	Configure
-CONFIGURE_ARGS=		-n ${REAL_LOWER_OPSYS}
+CONFIGURE_ARGS=		-n ${LOWER_OPSYS}
 
 SRCBALL_NAME=		${DISTNAME:S/_W$//}
 
@@ -27,10 +27,7 @@ SRCBALL_NAME=		${DISTNAME:S/_W$//}
 REAL_GROUP=		-g kmem
 .elif ${OPSYS} == "SunOS"
 MAKE_ENV+=		CPPFLAGS=
-REAL_LOWER_OPSYS=	solaris
 .endif
-
-REAL_LOWER_OPSYS?=	${LOWER_OPSYS}
 
 post-extract:
 	@(cd ${WRKDIR} ; \
