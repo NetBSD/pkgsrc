@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/12/02 13:24:15 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2004/12/14 18:15:40 minskim Exp $
 #
 
 DISTNAME=		asc-source-1.15.2.1
@@ -34,6 +34,7 @@ post-extract:
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDLmm/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
 .include "../../x11/paragui/buildlink3.mk"
