@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/07/10 16:03:48 agc Exp $
+# $NetBSD: Makefile,v 1.17 2000/07/11 14:53:41 agc Exp $
 #
 
 DISTNAME=		nethack-3.3.0
@@ -21,8 +21,8 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 ALL_TARGET=		x11tiles nethack
 INSTALL_TARGET=		binfiles
-PATH=   		`${PKG_INFO} -qp qt2 | ${AWK} '{print $$2}'`/qt2/bin:$$PATH
-MAKE_ENV+=		GTYPE=-qt QTDIR=`${PKG_INFO} -qp qt2 | ${AWK} '{print $$2}'`/qt2
+PATH=   		`${MAKE} show-qt2-prefix`/qt2/bin:$$PATH
+MAKE_ENV+=		GTYPE=-qt QTDIR=`${MAKE} show-qt2-prefix`/qt2
 
 PATCHFILES+=		${PKGSRCDIR}/games/nethack-lib/patches/patch-*
 ALLFILES=		${DISTFILES}	# don't checksum shared patches
