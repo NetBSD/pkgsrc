@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/10/13 21:33:06 jwise Exp $
+# $NetBSD: Makefile,v 1.10 2000/10/16 17:21:37 hubertf Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -34,11 +34,12 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 TEMPDIR?=	/tmp
 TEMPFILE!=echo ${TEMPDIR}/jsdk20.location.$$$$
 
+BUILD_DEPENDS+=        ${LOCALBASE}/bin/urlget:../../www/urlget
 pre-fetch:
-	@if [ ! -x ${LOCALBASE}/bin/urlget ];\
+	if [ ! -x ${LOCALBASE}/bin/urlget ]; \
 	then \
 		${ECHO} '==> Installing urlget to fetch jsdk20' ; \
-		(cd ../../www/urlget && make install) ; \
+		${MAKE} ${MAKEFLAGS} install-build-depends ; \
 	fi
 
 do-fetch:
