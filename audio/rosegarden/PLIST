@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:48 zuntum Exp $
+bin/rosegarden
+lib/rosegarden/bin/sequencer
+lib/rosegarden/bin/editor
+lib/rosegarden/example/glazunov.rose
+lib/rosegarden/synth-patches/std.sb
+lib/rosegarden/synth-patches/drums.sb
+lib/rosegarden/help/rosehelp.info
+lib/rosegarden/help/rosehelp.hnx
+lib/X11/app-defaults/Rosegarden
+@dirrm lib/rosegarden/bin
+@dirrm lib/rosegarden/example
+@dirrm lib/rosegarden/synth-patches
+@dirrm lib/rosegarden/help
+@dirrm lib/rosegarden

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 1998/01/19 01:23:36 hubertf Exp $
-bin/xmmix
-lib/X11/app-defaults/XMmix
-lib/X11/xmmix.hlp
-man/cat1/xmmix.0
