@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/16 21:37:30 minskim Exp $
+
+SHA1 (WWW-Mechanize-1.02.tar.gz) = 839e4b36eab00a741f14d60b45703108ac93417a
+Size (WWW-Mechanize-1.02.tar.gz) = 86219 bytes
+SHA1 (patch-aa) = 1c72f07c8796b7f8593e7222dfd00f5c93a1c863
