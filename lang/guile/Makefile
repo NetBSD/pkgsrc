@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2004/02/14 17:21:43 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2004/05/03 15:58:20 wiz Exp $
 
 DISTNAME=		guile-1.6.4
 CATEGORIES=		lang
@@ -8,7 +8,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/guile/guile.html
 COMMENT=		GNU's Ubiquitous Intelligent Language for Extension
 
-CONFLICTS=		guile14<1.4.1nb1
+CONFLICTS=		guile14<1.4.1nb1 guile-oops-[0-9]*
 
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
