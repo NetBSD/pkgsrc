@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST-client,v 1.1 1998/07/20 14:49:51 tv Exp $
+bin/add_file_priv
+bin/add_func_table
+bin/add_long_password
+bin/make_binary_distribution
+bin/msql2mysql
+bin/mysql
+bin/mysqlaccess
+bin/mysqladmin
+bin/mysqlbug
+bin/mysqldump
+bin/mysqlimport
+bin/mysqlshow
+bin/which1
+bin/zap
+include/mysql/chardefs.h
+include/mysql/dbug.h
+include/mysql/errmsg.h
+include/mysql/history.h
+include/mysql/keymaps.h
+include/mysql/m_ctype.h.in
+include/mysql/m_string.h
+include/mysql/my_sys.h
+include/mysql/mysql.h
+include/mysql/mysql_com.h
+include/mysql/mysql_version.h
+include/mysql/readline.h
+include/mysql/tilde.h
+@unexec %D/bin/install-info --delete %D/info/mysql.info %D/info/dir
+info/mysql.info
+@exec %D/bin/install-info %D/info/mysql.info %D/info/dir
+lib/libmysqlclient.a
+lib/libmysqlclient.so.321.32
+man/man1/mysql.1
+@dirrm include/mysql
