@@ -1,0 +1,67 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/14 12:10:22 agc Exp $
+
+--- Makefile.orig	Sat Jan  1 20:32:31 2000
++++ Makefile	Sat Jan  1 20:38:02 2000
+@@ -240,31 +240,15 @@
+ 	  set $(SHELLDEBUG); \
+ 	  if [ -d $$TEXINFODIR -a -r ispell.info ]; then \
+ 	    set -ex; \
+-	    rm -f $$TEXINFODIR/ispell; \
+-	    $$INSTALL ispell.info $$TEXINFODIR/ispell; \
+-	    chmod 644 $$TEXINFODIR/ispell; \
++	    rm -f $$TEXINFODIR/ispell.info; \
++	    $$INSTALL ispell.info $$TEXINFODIR/ispell.info; \
++	    chmod 644 $$TEXINFODIR/ispell.info; \
+ 	  else \
+ 	    : ; \
+ 	  fi
+ 	@set +e; \
+ 	  . ./config.sh; \
+ 	  set $(SHELLDEBUG); \
+-	  if [ -d $$ELISPDIR ]; then \
+-	    set -ex; \
+-	    rm -f $$ELISPDIR/ispell.el; \
+-	    $$INSTALL ispell.el $$ELISPDIR; \
+-	    if sh iwhich $$EMACS >/dev/null; then \
+-		echo '(byte-compile-file "'"$$ELISPDIR/ispell.el"'")' \
+-		  > /tmp/emi$$$$; \
+-		$$EMACS -batch -l /tmp/emi$$$$; \
+-		rm -f /tmp/emi$$$$; \
+-		chmod 644 $$ELISPDIR/ispell.el $$ELISPDIR/ispell.elc; \
+-	    else \
+-		chmod 644 $$ELISPDIR/ispell.el; \
+-	    fi; \
+-	  else \
+-	    : ; \
+-	  fi
+ 
+ install-dictbuild:
+ 	@. ./config.sh; \
+@@ -324,7 +308,7 @@
+ 	  set $(SHELLDEBUG); \
+ 	  if [ -d $$TEXINFODIR ]; then \
+ 	    if sh iwhich makeinfo >/dev/null \
+-	      &&  makeinfo ispell.texinfo 2>/dev/null; then \
++	      && makeinfo --no-split --force ispell.texinfo 2>/dev/null; true; then \
+ 		:; \
+ 	    elif sh iwhich $$EMACS >/dev/null; then \
+ 		set -e; \
+@@ -508,7 +492,7 @@
+ local.h:
+ 	set +e; [ -r local.h ]  ||  cp local.h.samp local.h
+ 
+-msgs.h:	config.sh FRC
++msgs.h:	config.sh 
+ 	@. ./config.sh; \
+ 	  set $(SHELLDEBUG); \
+ 	  set +e; \
+@@ -522,7 +506,8 @@
+ 	  else \
+ 	    set -x; \
+ 	    rm -f msgs.h; ln $$msgs msgs.h  ||  cp $$msgs msgs.h; \
+-	  fi
++	  fi; \
++	touch msgs.h
+ 
+ FRC:
+ 
