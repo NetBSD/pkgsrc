@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/11/30 13:29:21 taca Exp $
+$NetBSD: distinfo,v 1.4 2003/06/29 13:37:45 uebayasi Exp $
 
-SHA1 (ddskk-20021124.tar.bz2) = b5fdf1843417923a4da1c568fa534fb164382be5
-Size (ddskk-20021124.tar.bz2) = 475373 bytes
+SHA1 (ddskk-20030629.tar.bz2) = 4bbdd3e38fa46b7537ce469d824276b954f19cd4
+Size (ddskk-20030629.tar.bz2) = 512576 bytes
