@@ -1,30 +1,37 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:24 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/12/03 17:06:58 wiz Exp $
 bin/g-wrap-config
-guile/1.4/share/guile/g-wrap.scm
-guile/1.4/share/guile/g-wrap/enumeration.scm
-guile/1.4/share/guile/g-wrap/g-translate.scm
-guile/1.4/share/guile/g-wrap/gtkobj.scm
-guile/1.4/share/guile/g-wrap/gw-glib-spec.scm
-guile/1.4/share/guile/g-wrap/gw-glib.scm
-guile/1.4/share/guile/g-wrap/gw-gtk-spec.scm
-guile/1.4/share/guile/g-wrap/gw-gtk.scm
-guile/1.4/share/guile/g-wrap/gw-standard-spec.scm
-guile/1.4/share/guile/g-wrap/gw-standard.scm
-guile/1.4/share/guile/g-wrap/gw-wct-spec.scm
-guile/1.4/share/guile/g-wrap/gw-wct.scm
-guile/1.4/share/guile/g-wrap/output-file.scm
-guile/1.4/share/guile/g-wrap/runtime.scm
-guile/1.4/share/guile/g-wrap/simple-type.scm
-guile/1.4/share/guile/g-wrap/sorting.scm
-include/g-wrap/g-wrap-compatibility.h
-include/g-wrap/g-wrap-glib.h
-include/g-wrap/g-wrap-wct.h
-lib/libgw-glib.la
-lib/libgw-gtk.la
-lib/libgw-standard.la
-lib/libgw-wct.la
-lib/libgwrap-glib.la
-lib/libgwrap-wct.la
-share/aclocal/g-wrap.m4
+include/ffi.h
+include/ffitarget.h
+include/g-wrap-wct.h
+include/g-wrap/core-runtime.h
+include/g-wrap/ffi-support.h
+include/g-wrap/guile-compatibility.h
+include/g-wrap/guile-runtime.h
+include/g-wrap/guile-wct.h
+lib/libffi.la
+lib/libgw-guile-gw-glib.la
+lib/libgw-guile-standard.la
+lib/libgwrap-core-runtime.la
+lib/libgwrap-guile-runtime.la
+lib/pkgconfig/g-wrap-2.0-guile.pc
+share/guile/site/g-wrap.scm
+share/guile/site/g-wrap/c-types.scm
+share/guile/site/g-wrap/compat.scm
+share/guile/site/g-wrap/enumeration.scm
+share/guile/site/g-wrap/guile.scm
+share/guile/site/g-wrap/guile/ws/standard.scm
+share/guile/site/g-wrap/gw-glib-spec.scm
+share/guile/site/g-wrap/gw-standard-spec.scm
+share/guile/site/g-wrap/gw-wct-spec.scm
+share/guile/site/g-wrap/gw/glib.scm
+share/guile/site/g-wrap/gw/standard.scm
+share/guile/site/g-wrap/rti.scm
+share/guile/site/g-wrap/simple-type.scm
+share/guile/site/g-wrap/util.scm
+share/guile/site/g-wrap/ws/standard.scm
+@dirrm share/guile/site/g-wrap/ws
+@dirrm share/guile/site/g-wrap/gw
+@dirrm share/guile/site/g-wrap/guile/ws
+@dirrm share/guile/site/g-wrap/guile
+@dirrm share/guile/site/g-wrap
 @dirrm include/g-wrap
-@dirrm guile/1.4/share/guile/g-wrap
