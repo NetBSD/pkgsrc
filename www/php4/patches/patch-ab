@@ -1,39 +1,14 @@
-$NetBSD: patch-ab,v 1.7 2001/05/14 14:12:29 jlam Exp $
+$NetBSD: patch-ab,v 1.8 2001/10/16 04:54:24 jlam Exp $
 
---- configure.orig	Mon Apr 30 09:47:59 2001
-+++ configure
-@@ -6392,6 +6392,7 @@
-   cat > conftest.$ac_ext <<EOF
- #line 6394 "configure"
- #include "confdefs.h"
-+#include <sys/types.h>
- #include <sys/socket.h>
- #include <netinet/in.h>
- int main() {
-@@ -43649,6 +43650,7 @@
- fi
- 
- 
-+if false; then
- echo $ac_n "checking for pam_start in -lpam""... $ac_c" 1>&6
- echo "configure:43654: checking for pam_start in -lpam" >&5
- ac_lib_var=`echo pam'_'pam_start | sed 'y%./+-%__p_%'`
-@@ -43693,6 +43695,8 @@
- else
-   echo "$ac_t""no" 1>&6
- fi
-+
-+fi # if false
-  
- 
- for ac_func in getcwd getwd
-@@ -51503,9 +51507,6 @@
- 
-     $SHELL $srcdir/ltconfig --output=shlibtool --disable-static --srcdir=$srcdir --cache-file=./config.cache $srcdir/ltmain.sh
-     SHARED_LIBTOOL='$(SHELL) $(top_builddir)/shlibtool'
--  else
--    PHP_COMPILE='$(COMPILE) -c $< && touch $@'
--    CXX_PHP_COMPILE='$(CXX_COMPILE) -c $< && touch $@'
-   fi
- fi
- 
+--- Zend/zend_alloc.c.orig	Tue Jun 19 14:04:53 2001
++++ Zend/zend_alloc.c
+@@ -446,6 +446,9 @@
+ 		for (i=1; i<MAX_CACHED_MEMORY; i++) {
+ 			for (j=0; j<AG(cache_count)[i]; j++) {
+ 				ptr = (zend_mem_header *) AG(cache)[i][j];
++#if MEMORY_LIMIT
++				AG(allocated_memory) -= REAL_SIZE(ptr->size);
++#endif
+ 				REMOVE_POINTER_FROM_LIST(ptr);
+ 				free(ptr);
+ 			}
