@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3122 2005/02/26 17:22:53 wiz Exp $
+$NetBSD: TODO,v 1.3123 2005/02/26 17:48:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -308,7 +308,6 @@ Suggested package updates
 	o aspell-faroese-0.2.20
 	o ast-ksh-20040229
 	o astyle-1.15.3
-	o at-spi-1.6.2
 	o auctex-11.54
 	o autogen-5.6.6
 	o avidemux-2.0.36
@@ -396,7 +395,6 @@ Suggested package updates
 	o dact-0.8.37
 	o dante-1.1.15
 	o dar-2.2.0
-	o dasher-3.2.13
 	o dbench-3.03
 	o dbh-1.0.22
 	o dbus-0.23.2
@@ -462,7 +460,6 @@ Suggested package updates
 	o fdgw-20040609
 	o fhist-1.14
 	o fidogate-4.4.10
-	o file-roller-2.8.4
 	o findutils-4.2.18
 	o firefox-1.0.1
 	o firefox-bin-1.0.1
@@ -486,7 +483,6 @@ Suggested package updates
 	o fvwm2-themes-0.7.0
 	o g-wrap-1.9.4
 	o g2-0.50
-	o gail-1.8.2
 	o galeon-1.3.19
 	o gap-4r4p3
 	o garmin-utils-2.2
@@ -525,7 +521,6 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnocatan-0.8.1.30
 	o gnome-applets-1.4.1
-	o gnome-keyring-0.4.1
 	o gnome-pilot-2.0.12
 	o gnome-utils-1.4.1.3
 	o gnome-vfsmm26-2.8.0?
@@ -581,7 +576,6 @@ Suggested package updates
 	o inkscape-0.41
 	o inn-2.4.2
 	o intercal-0.24 [dillo]
-	o intltool-0.33
 	o ion3-devel-20050116
 	o iozone-3.233
 	o ipcheck-0.219
@@ -628,7 +622,6 @@ Suggested package updates
 	o leafnode-1.10.8
 	o leafpad-0.7.9
 	o libarchive-1.02.009
-	o libart2-2.3.17
 	o libcdio-0.72
 	o libcomprex-0.3.3
 	o libdnet-1.9
@@ -643,7 +636,6 @@ Suggested package updates
 	o libgnomecups-0.1.14
 	o libgnomemm26-2.8.0?
 	o libgnomeuimm26-2.8.0?
-	o libgtop-2.8.3
 	o libhydrogen-0.9.0
 	o libjit-0.0.4
 	o libksba-0.9.9
@@ -1079,7 +1071,6 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o ssam-1.10
 	o staroffice-7p1
-	o startup-notification-0.8
 	o stella-1.4.2
 	o stellarium-0.6.1
 	o stlport-4.6.2
