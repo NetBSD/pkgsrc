@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/07 08:09:16 skrll Exp $
+qt3/bin/assistant
+qt3/bin/designer
+qt3/bin/linguist
+qt3/bin/qm2ts
+qt3/bin/qtconfig
+qt3/bin/uic
+qt3/lib/libeditor.a
+qt3/lib/libeditor.la
+qt3/lib/libeditor.so
+qt3/lib/libeditor.so.1
+qt3/lib/libeditor.so.1.0
+qt3/lib/libqui.a
+qt3/lib/libqui.la
+qt3/lib/libqui.so
+qt3/lib/libqui.so.1
+qt3/lib/libqui.so.1.0
+qt3/plugins/designer/libdlgplugin.a
+qt3/plugins/designer/libdlgplugin.la
+qt3/plugins/designer/libdlgplugin.so
+qt3/plugins/designer/librcplugin.a
+qt3/plugins/designer/librcplugin.la
+qt3/plugins/designer/librcplugin.so
+qt3/plugins/designer/libwizards.a
+qt3/plugins/designer/libwizards.la
+qt3/plugins/designer/libwizards.so
+qt3/plugins/imageformats/libqjpeg.a
+qt3/plugins/imageformats/libqjpeg.la
+qt3/plugins/imageformats/libqjpeg.so
+qt3/plugins/imageformats/libqmng.a
+qt3/plugins/imageformats/libqmng.la
+qt3/plugins/imageformats/libqmng.so
+@dirrm qt3/plugins/imageformats
+@dirrm qt3/plugins/designer
+@dirrm qt3/plugins
