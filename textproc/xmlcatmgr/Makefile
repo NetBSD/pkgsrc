@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/12/23 11:56:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/05 23:43:06 jlam Exp $
 #
 
 DISTNAME=	xmlcatmgr-2.0alpha1
@@ -9,8 +9,10 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://xmlcatmgr.sourceforge.net/
 COMMENT=	XML (and SGML) catalog manager
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 HAS_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 
 CONFIGURE_ARGS+=	-p ${PREFIX}
