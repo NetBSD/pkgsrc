@@ -1,11 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/12/23 03:10:59 itohy Exp $
+$NetBSD: patch-ab,v 1.2 2000/01/19 07:24:07 itohy Exp $
 
 --- uwm.c.orig	Sun Oct 23 22:21:55 1988
-+++ uwm.c	Thu Dec 23 00:21:02 1999
-@@ -42,6 +42,15 @@
++++ uwm.c	Wed Jan 19 08:20:54 2000
+@@ -41,9 +41,18 @@
+ 
  #include "uwm.h"
  #include <ctype.h>
- 
++#include <signal.h>
++
 +#ifdef CSRG_BASED
 +#undef MIN
 +#undef MAX
@@ -14,11 +16,52 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/12/23 03:10:59 itohy Exp $
 +#define HAVE_MKSTEMP
 +#endif
 +#endif
-+
+ 
  #ifdef PROFIL
- #include <signal.h>
+-#include <signal.h>
  /*
-@@ -369,7 +378,7 @@
+  * Dummy handler for profiling.
+  */
+@@ -53,6 +62,27 @@
+ }
+ #endif
+ 
++#ifdef SIGCHLD
++#include <sys/wait.h>
++/*
++ * clear (probably inherited) children which are dead or will die.
++ */
++clear_children()
++{
++	int status, pid;
++
++	do {
++#ifdef CSRG_BASED
++		pid = wait3(&status, WNOHANG, (struct rusage *) 0);
++#else	/* SVR4 */
++		pid = waitpid(-1, &status, WNOHANG);
++#endif
++	} while (pid != 0 && pid != -1);
++
++	signal(SIGCHLD, clear_children);
++}
++#endif
++
+ #define gray_width 16
+ #define gray_height 16
+ static char gray_bits[] = {
+@@ -115,6 +145,10 @@
+ #ifdef PROFIL
+     signal(SIGTERM, ptrap);
+ #endif
++#ifdef SIGCHLD
++    /* no zombies */
++    clear_children();
++#endif
+ 
+     /*
+      * Set up internal defaults.
+@@ -369,7 +403,7 @@
      if (IFontInfo == NULL) {
          fprintf(stderr, "uwm: Unable to open icon font '%s', using server default.\n",
                  IFontName);
@@ -27,7 +70,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/12/23 03:10:59 itohy Exp $
  	fallbackIFont = True;
      }
      PFontInfo = XLoadQueryFont(dpy, PFontName);
-@@ -379,7 +388,7 @@
+@@ -379,7 +413,7 @@
  	if (fallbackIFont)
  	    PFontInfo = IFontInfo;
  	else
@@ -36,7 +79,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/12/23 03:10:59 itohy Exp $
  	fallbackPFont = True;
      }
      MFontInfo = XLoadQueryFont(dpy, MFontName);
-@@ -389,7 +398,7 @@
+@@ -389,7 +423,7 @@
  	if (fallbackIFont || fallbackPFont)
  	    MFontInfo = fallbackPFont ? PFontInfo : IFontInfo;
  	else
@@ -45,7 +88,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/12/23 03:10:59 itohy Exp $
  	fallbackMFont = True;
      }
  
-@@ -685,7 +694,11 @@
+@@ -685,7 +719,11 @@
   */
  InitBindings()
  {
@@ -57,7 +100,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/12/23 03:10:59 itohy Exp $
      char *tempfile;		/* Temporary filename. */
      register FILE *fp;		/* Temporary file pointer. */
      register char **ptr;	/* Default bindings string array pointer. */
-@@ -699,15 +712,26 @@
+@@ -699,15 +737,26 @@
  	exit (1);
      }
      strcpy (tempfile, TEMPFILE);
@@ -84,7 +127,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/12/23 03:10:59 itohy Exp $
      fclose(fp);
  
      /*
-@@ -717,6 +741,7 @@
+@@ -717,6 +766,7 @@
          perror("uwm: cannot open temp file");
          exit(1);
      }
