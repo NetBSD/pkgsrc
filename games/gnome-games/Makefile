@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2003/05/05 16:27:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.52 2003/05/30 16:19:57 jmmv Exp $
 
 DISTNAME=		gnome-games-1.4.0.4
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/1.4/}\
 			${MASTER_SITE_LOCAL}
@@ -13,6 +13,7 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME games collection
 
+DEPENDS+=		gnome1-dirs>=1.2:../../misc/gnome1-dirs
 BUILD_USES_MSGFMT=	YES
 BUILD_USES_GETTEXT_M4=	YES
 

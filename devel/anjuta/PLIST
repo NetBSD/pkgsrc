@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/18 14:55:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/05/30 16:19:54 jmmv Exp $
 bin/anjuta
 bin/anjuta_import.sh
 bin/anjuta_launcher
@@ -469,6 +469,7 @@ share/pixmaps/anjuta/wizard.xpm
 @comment in scrollkeeper: @dirrm share/omf
 @dirrm share/mimelnk/application
 @dirrm share/mimelnk
+@comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/gnome/help/anjuta/ja/anjuta-manual/figures
 @dirrm share/gnome/help/anjuta/ja/anjuta-manual
 @exec ${MKDIR} %D/share/gnome/help/anjuta/ja/anjuta-faqs/figures

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/19 04:49:58 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/05/30 16:20:05 jmmv Exp $
 bin/gmc
 bin/gmc-client
 bin/mc
@@ -209,6 +209,7 @@ share/pixmaps/mc/makefile.xpm
 share/pixmaps/mc/sound.xpm
 share/pixmaps/mc/trash.xpm
 @dirrm share/pixmaps/mc
+@comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/gnome/help/gmc/C
 @dirrm share/gnome/help/gmc
 @dirrm lib/mc/term

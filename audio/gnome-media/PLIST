@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/02/18 14:55:55 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/05/30 16:19:51 jmmv Exp $
 bin/cddbslave
 bin/cddbsubmit
 bin/gmix
@@ -71,6 +71,7 @@ share/mime-info/grecord.keys
 share/mime-info/grecord.mime
 @dirrm share/omf/gnome-media
 @comment in scrollkeeper: @dirrm share/omf
+@comment in gnome-dirs: @dirrm share/mime-info
 @exec ${MKDIR} %D/share/gnome/help/gmix/it/stylesheet-images
 @dirrm share/gnome/help/gmix/it/stylesheet-images
 @dirrm share/gnome/help/gmix/it/figures

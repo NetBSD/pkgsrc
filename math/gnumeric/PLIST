@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2003/02/18 14:56:00 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.21 2003/05/30 16:20:01 jmmv Exp $
 bin/gnumeric
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.la
@@ -979,6 +979,7 @@ share/pixmaps/gnumeric/top_border
 @dirrm share/pixmaps/gnumeric
 @dirrm share/omf/gnumeric
 @comment in scrollkeeper: @dirrm share/omf
+@comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/templates
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/idl
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/guile

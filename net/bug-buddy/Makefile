@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/05/05 16:59:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/30 16:20:03 jmmv Exp $
 #
 
 DISTNAME=		bug-buddy-2.2.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		net gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/bug-buddy/2.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		graphical GNOME2 bug reporting tool
 
 BUILD_USES_MSGFMT=	YES
+DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/05/05 16:21:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/30 16:19:55 jmmv Exp $
 #
 
 DISTNAME=		gedit-2.2.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		editors gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -12,7 +12,7 @@ HOMEPAGE=		http://gedit.sourceforge.net/
 COMMENT=		lightweight GNOME2 text editor
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 USE_PERL5=		build
 USE_BUILDLINK2=		YES
