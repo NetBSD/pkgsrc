@@ -1,9 +1,8 @@
-$NetBSD: patch-at,v 1.3 2000/07/08 12:47:09 tron Exp $
+$NetBSD: patch-at,v 1.4 2001/02/03 01:53:03 dmcmahill Exp $
 
---- x11.c.orig	Tue Nov 19 05:00:50 1991
-+++ x11.c	Sat Jul  8 14:25:27 2000
-@@ -18,10 +18,10 @@
-  
+--- x11.c.orig	Mon Nov 18 23:00:50 1991
++++ x11.c	Fri Feb  2 20:01:06 2001
+@@ -19,8 +19,9 @@
  #include <stdio.h>
  #include <ctype.h>
 -#if ( !defined(mips) && !defined(TOPIX) ) || defined(ultrix)
@@ -12,11 +11,10 @@ $NetBSD: patch-at,v 1.3 2000/07/08 12:47:09 tron Exp $
  #include <sys/types.h>
  #include <sys/time.h>
 -#include <sys/param.h>
++#include <string.h>
  #else
  #ifdef SYSTYPE_BSD43
- #include <sys/types.h>
-@@ -30,15 +30,16 @@
- #ifndef TOPIX
+@@ -31,13 +32,14 @@
  #include <bsd/sys/types.h>
  #include <bsd/sys/time.h>
 -#include <sys/param.h>
@@ -33,17 +31,13 @@ $NetBSD: patch-at,v 1.3 2000/07/08 12:47:09 tron Exp $
 +
  #ifdef HASPOLL
  #include <poll.h>
- #endif /*HASPOLL*/
-@@ -58,7 +59,6 @@
- 
+@@ -59,5 +61,4 @@
  #define  F_ICON              0         /* Icon index to frame array. */
  #define  F_WINDOW            1         /* Window index to frame array. */
 -#define  FACES_BORDER_WIDTH  2
  #define  FRAME_MASK          (ButtonPressMask  | ExposureMask | \
                                ButtonMotionMask | KeyPressMask)
- #define  ICON_MASK            ExposureMask
-@@ -364,11 +364,13 @@
-   init_font() ;
+@@ -365,9 +366,11 @@
    gc_mask = GCFont | GCForeground | GCBackground | GCGraphicsExposures ;
    gc_val.font = sfont->fid ;
 -  gc_val.foreground = foregnd ;
@@ -57,9 +51,7 @@ $NetBSD: patch-at,v 1.3 2000/07/08 12:47:09 tron Exp $
 +  gc_val.background = backgnd ;
    tilegc = XCreateGC(dpy, root, gc_mask, &gc_val) ;
    if (depth == 1) XSetFillStyle(dpy, tilegc, FillOpaqueStippled) ;
-   else            XSetFillStyle(dpy, tilegc, FillTiled) ;
-@@ -459,7 +461,11 @@
- 
+@@ -460,5 +463,9 @@
    home = getenv("HOME") ;
    XrmInitialize() ;
 +#if (defined(BSD) && BSD >= 199306)
@@ -69,29 +61,23 @@ $NetBSD: patch-at,v 1.3 2000/07/08 12:47:09 tron Exp $
 +#endif
   
  /* Get applications defaults file, if any. */
-  
-@@ -576,14 +582,14 @@
-   winattrs.event_mask = FRAME_MASK ;
+@@ -577,5 +584,5 @@
  
    frame[F_WINDOW] = XCreateWindow(dpy, root, size.x, size.y,
 -                        size.width, size.height, FACES_BORDER_WIDTH,
 +                        size.width, size.height, border_width,
                          CopyFromParent, InputOutput, CopyFromParent,
                          CWBackPixel | CWBorderPixel | CWEventMask, &winattrs) ;
- 
-   winattrs.event_mask = ICON_MASK ;
+@@ -584,5 +591,5 @@
  
    frame[F_ICON] = XCreateWindow(dpy, root,
 -                        ix, iy, imagewidth, imageheight, FACES_BORDER_WIDTH,
 +                        ix, iy, imagewidth, imageheight, border_width,
                          CopyFromParent, InputOutput, CopyFromParent, 
                          CWBackPixel | CWBorderPixel | CWEventMask, &winattrs) ;
- 
-@@ -856,6 +862,7 @@
-   XFillRectangle(dpy, pr[(int) dtype], gc, x, y-9,
+@@ -857,4 +864,5 @@
                   (unsigned int) textwidth+2, 13) ;
    XSetFunction(dpy, gc, GXxor) ;
 +  XSetForeground(dpy, gc, WhitePixel(dpy, screen));
    XDrawImageString(dpy, pr[(int) dtype], gc, x, y, str, len) ;
    XSetFunction(dpy, gc, GXcopy) ;
- }
