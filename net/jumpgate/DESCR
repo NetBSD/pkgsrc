@@ -1,0 +1,7 @@
+Jumpgate is a TCP connection forwarder that provides many enhancements
+and improvements over the existing programs that do the same thing. It
+provides an interactive mode that queries the connected party for the
+forwarding information it needs. Also, there is the option to log the
+entire forwarded session in a file for later inspection. Furthermore,
+it can log information about the forwarded session via the syslog(3)
+facility.
