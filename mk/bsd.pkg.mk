@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.3 2003/07/24 22:00:08 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.4 2003/07/24 22:35:53 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2433,6 +2433,17 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install
+	${_PKG_SILENT}#
+	${_PKG_SILENT}# PLIST must be generated at this late point (instead of
+	${_PKG_SILENT}# depending on it somewhere earlier), because it needs
+	${_PKG_SILENT}# to be created _after_ the {pre,do,post}-install
+	${_PKG_SILENT}# targets are run.
+	${_PKG_SILENT}# 
+	${_PKG_SILENT}# We generate _before_ post-install-script is run so
+	${_PKG_SILENT}# that the real config files and rc.d scripts aren't
+	${_PKG_SILENT}# listed in the PLIST.
+	${_PKG_SILENT}#
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install-script
 .if !defined(USE_NEW_TEXINFO)
 .  for f in ${INFO_FILES}
@@ -2441,10 +2452,6 @@ real-su-install: ${MESSAGE}
 	${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
 .  endfor
 .endif # !USE_NEW_TEXINFO
-	@# PLIST must be generated at this late point (instead of
-	@# depending on it somewhere earlier), as the
-	@# pre/do/post-install aren't run then yet:
-	@${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
