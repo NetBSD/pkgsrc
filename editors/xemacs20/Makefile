@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 1998/08/20 15:16:52 tsarna Exp $
+# $NetBSD: Makefile,v 1.33 1998/08/30 10:59:43 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -44,13 +44,20 @@ REALPLIST=	PLIST.mule
 REALPLIST=	PLIST.nomule
 .endif
 
+.if defined(USE_XFACE)
+WITH_XFACE=	--with-xface
+DEPENDS+=	faces-1.6.1:../../mail/faces
+.else
+WITH_XFACE=	--with-xface=no
+.endif
+
 CONFIGURE_ARGS+=${MACHINE_GNU_ARCH}--netbsd --prefix=${PREFIX} \
 		--site-includes=${PREFIX}/include \
 		${WITH_SOUND} \
 		--infopath="${PREFIX}/info:${X11BASE}/info:/usr/local/info" \
 		--site-libraries=${PREFIX}/lib \
 		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp ${PREFIX}/share/xemacs/site-lisp" \
-		${WITH_MULE} ${WITH_DIALOGS}
+		${WITH_MULE} ${WITH_DIALOGS} ${WITH_XFACE}
 
 MAKE_ENV+=	INSTALL_MAN="${INSTALL_MAN}" INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
