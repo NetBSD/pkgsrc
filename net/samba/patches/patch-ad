@@ -1,31 +1,55 @@
-$NetBSD: patch-ad,v 1.12 2003/03/16 07:57:46 martti Exp $
+$NetBSD: patch-ad,v 1.13 2004/01/11 02:26:31 jlam Exp $
 
---- Makefile.in.orig	Fri Feb 28 15:56:06 2003
-+++ Makefile.in	Sun Mar 16 09:02:19 2003
-@@ -91,6 +91,8 @@
- FLAGS  = $(ISA) $(FLAGS5) $(PASSWD_FLAGS)
- FLAGS32  = $(ISA32) $(FLAGS5) $(PASSWD_FLAGS)
- 
-+PAM_NEEDS_LIBC = @PAM_NEEDS_LIBC@
+--- lib/util_getent.c.orig	Sat Jun  7 13:57:33 2003
++++ lib/util_getent.c
+@@ -133,6 +133,11 @@ struct sys_pwent * getpwent_list(void)
+ 	struct sys_pwent *plist;
+ 	struct sys_pwent *pent;
+ 	struct passwd *pwd;
++#ifdef BSD
++# define BUFLEN 1024
++	char *bp, *gecos, *p, buf[BUFLEN];
++	int buflen;
++#endif
+ 	
+ 	pent = (struct sys_pwent *) malloc(sizeof(struct sys_pwent));
+ 	if (pent == NULL) {
+@@ -156,9 +161,38 @@ struct sys_pwent * getpwent_list(void)
+ 		pent->pw_uid = pwd->pw_uid;
+ 		pent->pw_gid = pwd->pw_gid;
+ 		if (pwd->pw_gecos) {
++#ifdef BSD
++			gecos = pwd->pw_gecos;
++			if (*gecos == '*')
++				gecos++;
++			bp = buf;
 +
- WINBIND_PROGS = @WINBIND_TARGETS@
- WINBIND_SPROGS = @WINBIND_STARGETS@
- WINBIND_PAM_PROGS = @WINBIND_PAM_TARGETS@
-@@ -658,7 +660,7 @@
- 
- bin/pam_smbpass.@SHLIBEXT@: $(PAM_SMBPASS_OBJ) bin/.dummy
- 	@echo Linking shared library $@
--	$(SHLD) @LDSHFLAGS@ -o $@ $(PAM_SMBPASS_OBJ) $(LDFLAGS) -lpam $(DYNEXP) $(LIBS) $(LDAPLIBS) -lc \
-+	$(SHLD) @LDSHFLAGS@ -o $@ $(PAM_SMBPASS_OBJ) $(LDFLAGS) -lpam $(DYNEXP) $(LIBS) $(LDAPLIBS) $(PAM_NEEDS_LIBC) \
- 		@SONAMEFLAG@`basename $@`
- 
- nsswitch/libnss_wins.so: $(NSS_OBJ)
-@@ -682,7 +684,7 @@
- 
- nsswitch/pam_winbind.so: $(PAM_WINBIND_OBJ)
- 	@echo Linking $@
--	@$(SHLD) @LDSHFLAGS@ -o $@ $(PAM_WINBIND_OBJ) \
-+	@$(SHLD) @LDSHFLAGS@ -o $@ $(PAM_WINBIND_OBJ) $(LDFLAGS) $(DYNEXP) $(PAM_NEEDS_LIBC) \
- 		@SONAMEFLAG@`basename $@`
- 
- bin/wbinfo: $(WBINFO_OBJ) $(PARAM_OBJ) $(LIB_OBJ) $(NOPROTO_OBJ) \
++			/* copy gecos, interpolating & to be full name */
++			for (p = gecos; *p != '\0'; p++) {
++				if (bp >= &buf[BUFLEN - 1])
++					/* buffer overflow */
++					goto gecos_done;
++				if (*p == '&') {
++					/* interpolate full name */
++					snprintf(bp, BUFLEN - (bp - buf),
++						 "%s", pwd->pw_name);
++					*bp = toupper(*bp);
++					bp += strlen(bp);
++				}
++				else
++					*bp++ = *p;
++			}
++			*bp = '\0';
++			if ((pent->pw_name = strdup(buf)) == NULL)
++				goto err;
++#else
+ 			if ((pent->pw_name = strdup(pwd->pw_gecos)) == NULL)
+ 				goto err;
++#endif
+ 		}
++#ifdef BSD
++  gecos_done:
++#endif
+ 		if (pwd->pw_dir) {
+ 			if ((pent->pw_name = strdup(pwd->pw_dir)) == NULL)
+ 				goto err;

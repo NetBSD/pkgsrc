@@ -1,68 +1,104 @@
-# $NetBSD: Makefile,v 1.108 2004/01/11 00:33:03 jlam Exp $
+# $NetBSD: Makefile,v 1.109 2004/01/11 02:26:30 jlam Exp $
 
-.include "Makefile.common"
-PKGREVISION=		6
+DISTNAME=		samba-3.0.1
+WRKSRC=			${WRKDIR}/${DISTNAME}/source
+CATEGORIES=		net
+MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
+			ftp://ring.asahi-net.or.jp/pub/net/samba/ \
+			ftp://samba.anu.edu.au/pub/samba/ \
+			ftp://ftp.sunet.se/pub/unix/utilities/samba/
+COUNTRY_MIRRORS=	au1 ca fi fr de it pl ru sg se us1 us6
+.for COUNTRY in ${COUNTRY_MIRRORS}
+MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/
+.endfor
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		kim@tac.nyc.ny.us
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.samba.org/
-COMMENT=		SMB/CIFS protocol server suite for UNIX
+COMMENT=		SMB/CIFS protocol server suite
+
+CONFLICTS+=		winbind-[0-9]*
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
-USE_PKGINSTALL=		yes
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		PERL="${PERL5}"
 
-USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
-CONFIGURE_ARGS+=	--with-readline
+.include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--with-ssl
-CONFIGURE_ARGS+=	--with-sslinc=${SSLBASE}
-CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
+PKG_SYSCONFSUBDIR?=	samba
+PKG_SYSCONFVAR=		samba
 
-REPLACE_PERL+=		script/findsmb.in
+SAMBA_ETCDIR?=		${PKG_SYSCONFDIR}
+SAMBA_LIBDIR?=		${PREFIX}/lib/samba
+SAMBA_LOCKDIR?=		${SAMBA_VARDIR}/db/samba
+SAMBA_LOGDIR?=		${SAMBA_VARDIR}/log
+SAMBA_PIDDIR?=		${SAMBA_VARDIR}/run
+SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
+SAMBA_VARDIR?=		/var
 
-.if defined(USE_CUPS) && (${USE_CUPS} == "YES")
-.include "../../print/cups/buildlink3.mk"
-BUILD_DEFS+=		USE_CUPS
+FILES_SUBST=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
+FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR}
+FILES_SUBST+=		SAMBA_LOGDIR=${SAMBA_LOGDIR}
+FILES_SUBST+=		SAMBA_PIDDIR=${SAMBA_PIDDIR}
+FILES_SUBST+=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
+FILES_SUBST+=		SAMBA_VARDIR=${SAMBA_VARDIR}
+
+CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
+CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
+CONFIGURE_ARGS+=	--with-logfilebase=${SAMBA_LOGDIR}
+CONFIGURE_ARGS+=	--with-piddir=${SAMBA_PIDDIR}
+CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE}
+CONFIGURE_ARGS+=	--localstatedir=${SAMBA_VARDIR}
+CONFIGURE_ARGS+=	--libdir=${SAMBA_LIBDIR}
+
+CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/samba/swat
+CONFIGURE_ARGS+=	--with-libsmbclient
+CONFIGURE_ARGS+=	--with-winbind
+
+.include "../../converters/libiconv/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
+
+BUILDLINK_USE_BUILTIN.readline=	no
+.include "../../devel/readline/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
+
+.if defined(SAMBA_WITH_ADS) && !empty(SAMBA_WITH_ADS:M[yY][eE][sS])
+.  include "../../mk/krb5.buildlink3.mk"
+SAMBA_USE_LDAP=		yes
+CONFIGURE_ARGS+=	--with-ads
+CONFIGURE_ARGS+=	--with-krb5=${KRB5BASE}
+.else
+CONFIGURE_ARGS+=	--without-ads
+CONFIGURE_ARGS+=	--without-krb5
+.endif
+BUILD_DEFS+=		SAMBA_WITH_ADS
+
+.if defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS])
+.  include "../../print/cups/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cups
 .endif
+BUILD_DEFS+=		USE_CUPS
 
 .if defined(USE_PAM)
-.include "../../security/PAM/buildlink3.mk"
-BUILD_DEFS+=		USE_PAM
+.  include "../../security/PAM/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam
 .endif
+BUILD_DEFS+=		USE_PAM
 
-.if defined(SAMBA_USE_LDAP) && ${SAMBA_USE_LDAP} == "YES"
-.include "../../databases/openldap/buildlink3.mk"
-BUILD_DEFS+=		SAMBA_USE_LDAP
+.if defined(SAMBA_USE_LDAP) && !empty(SAMBA_USE_LDAP:M[yY][eE][sS])
+.  include "../../databases/openldap/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ldap
+.  if defined(SAMBA_USE_LDAP_COMPAT) && \
+   !empty(SAMBA_USE_LDAP_COMPAT:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--with-ldapsam
-PLIST_SUBST+=		SAMBA_LDAP=""
+.  endif
 .else
-PLIST_SUBST+=		SAMBA_LDAP="@comment "
-MESSAGE_SRC=		${.CURDIR}/MESSAGE.smbpasswd
-SMBPASSWD_FILE=		/dev/null ${SAMBA_PRIVATE}/smbpasswd		\
-			${ROOT_USER} ${ROOT_GROUP} 0600
+CONFIGURE_ARGS+=	--without-ldap
 .endif
-
-# Microsoft DFS support
-CONFIGURE_ARGS+=	--with-msdfs
-
-MESSAGE_SUBST+=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
-MESSAGE_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
-MESSAGE_SUBST+=		ROOT_USER=${ROOT_USER}
-
-DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
-EXAMPLESDIR=		${PREFIX}/share/examples/${PKGBASE}
-
-CONF_FILES=		${EXAMPLESDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
-SUPPORT_FILES_PERMS=	${SMBPASSWD_FILE}
-SUPPORT_FILES_PERMS+=	${EXAMPLESDIR}/adduser.sh ${SAMBA_ETCDIR}/adduser \
-			${ROOT_USER} ${ROOT_GROUP} 0555
-SUPPORT_FILES_PERMS+=	${EXAMPLESDIR}/deluser.sh ${SAMBA_ETCDIR}/deluser \
-			${ROOT_USER} ${ROOT_GROUP} 0555
-RCD_SCRIPTS=		samba nmbd smbd
-OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}
-OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0500
+BUILD_DEFS+=		SAMBA_USE_LDAP
+BUILD_DEFS+=		SAMBA_USE_LDAP_COMPAT
 
 .if !defined(MKTEMP)
 MKTEMP!=	${TYPE} mktemp 2>&1 | \
@@ -77,44 +113,37 @@ MAKEFLAGS+=	PWD_MKDB="${PWD_MKDB}"
 FILES_SUBST+=	MKTEMP=${MKTEMP:Q}
 FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 
-# Remove irrelevant files for this package.
-post-extract:
-	${FIND} ${WRKDIR}/${DISTNAME} -name ".cvsignore" -print |	\
-		${XARGS} ${RM} -f
-	${RM} -r ${WRKDIR}/${DISTNAME}/docs/textdocs/outdated
-	${RM} -r ${WRKDIR}/${DISTNAME}/examples/VFS
-	${RM} -r ${WRKDIR}/${DISTNAME}/examples/appliance
-	${RM} -r ${WRKDIR}/${DISTNAME}/examples/autofs
-	${RM} -r ${WRKDIR}/${DISTNAME}/examples/dce-dfs
-	${RM} -r ${WRKDIR}/${DISTNAME}/examples/libsmbclient
-	${RM} -r ${WRKDIR}/${DISTNAME}/examples/svr4-startup
+DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+
+USE_PKGINSTALL=		yes
+CONF_FILES=		${EGDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
+SUPPORT_FILES_PERMS=	${EGDIR}/adduser.sh ${SAMBA_ETCDIR}/adduser	\
+			${ROOT_USER} ${ROOT_GROUP} 0755
+SUPPORT_FILES_PERMS+=	${EGDIR}/deluser.sh ${SAMBA_ETCDIR}/deluser	\
+			${ROOT_USER} ${ROOT_GROUP} 0755
+OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}		\
+			${SAMBA_VARDIR} ${SAMBA_LOGDIR} ${SAMBA_PIDDIR}
+OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0700
+RCD_SCRIPTS=		samba nmbd smbd winbindd
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/adduser.sh > ${WRKDIR}/adduser.sh
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/deluser.sh > ${WRKDIR}/deluser.sh
 
 post-install:
-	# Install Samba documentation.
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKDIR}/${DISTNAME}/docs;					\
-	for file in announce textdocs/* Registry/*.reg; do		\
-		${INSTALL_DATA} $$file ${DOCDIR};			\
+	cd ${WRKSRC}/../docs/Registry; for file in *.reg; do		\
+		${INSTALL_DATA} $$file ${DOCDIR}/$$file;		\
 	done
-
-	# Install Samba examples.
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/adduser.sh ${EXAMPLESDIR}/adduser.sh
-	${INSTALL_SCRIPT} ${WRKDIR}/deluser.sh ${EXAMPLESDIR}/deluser.sh
-	${CP} -R ${WRKDIR}/${DISTNAME}/examples/* ${EXAMPLESDIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${EXAMPLESDIR}
-	${CHMOD} -R ugo-w ${EXAMPLESDIR}
-
-	${INSTALL_SCRIPT} ${WRKSRC}/script/convert_smbpasswd		\
-		${EXAMPLESDIR}/misc
-	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
-		${PREFIX}/sbin/mksmbpasswd
-
-.include "../../devel/readline/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/adduser.sh ${EGDIR}/adduser.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/deluser.sh ${EGDIR}/deluser.sh
+	cd ${WRKSRC}/../examples; ${INSTALL_DATA} LDAP/samba.schema ${EGDIR}
+	cd ${WRKSRC}/../examples; ${INSTALL_DATA} smb.conf.default ${EGDIR}
+	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mknissmbpasswd.sh ${EGDIR}
+	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mknissmbpwdtbl.sh ${EGDIR}
+	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mksmbpasswd.sh ${EGDIR}
+	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} updatesmbpasswd.sh ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

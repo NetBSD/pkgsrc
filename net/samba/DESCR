@@ -1,13 +1,7 @@
-Samba is a suite of programs which work together to allow clients to
-access to a server's filespace and printers via the SMB (Server
-Message Block) protocol.
-
-In practice, this means that you can redirect disks and printers to
-Unix disks and printers from Lan Manager clients, Windows for
-Workgroups 3.11 clients, Windows NT clients, Linux clients and OS/2
-clients. There is also a generic Unix client program supplied as part
-of the suite which allows Unix users to use an ftp-like interface to
-access filespace and printers on any other SMB servers. This gives the
-capability for these operating systems to behave much like a LAN
-Server or Windows NT Server machine, only with added functionality and
-flexibility designed to make life easier for administrators.
+Samba is a suite of applications that speak the Server Message Block (SMB)
+protocol.  Samba allows a UNIX machine to perform client-server networking
+for file and printer sharing with Microsoft Windows systems using their
+native network protocol and to appear as another Windows system on the
+network from the perspective of a Windows client.  The Samba suite also
+includes client tools that allow users to access folders and printers that
+Windows systems and Samba servers offer on the network.
