@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2001/04/22 12:07:13 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2002/03/15 00:22:42 jmc Exp $
 
 DISTNAME=		vslisp-4.0-1
 PKGNAME=		vslisp-4.0.1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://vslisp.sourceforge.net/pub/vslisp/
+PKGREVISION=		1
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://vslisp.sourceforge.net/
