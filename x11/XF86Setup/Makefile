@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/05/05 19:52:30 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/07/22 21:26:40 agc Exp $
 
 DISTNAME=		XF86Setup-3.3.6
 CATEGORIES=		x11
@@ -32,6 +32,8 @@ IGNORE=		"This package doesn't work with your X11 distribution."
 
 pre-configure:
 	@${TOUCH} ${WRKSRC}/res_cpp_symbol
+	${CP} ${WRKSRC}/main.c ${WRKSRC}/main.c.orig
+	${SED} -e 's:PKG_PREFIX:${PREFIX}:g' ${WRKSRC}/main.c.orig > ${WRKSRC}/main.c
 
 .include "../../mk/bsd.pkg.mk"
 
