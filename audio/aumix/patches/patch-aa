@@ -1,7 +1,7 @@
-$NetBSD: patch-src_common_h,v 1.1 2000/08/03 18:45:13 rh Exp $
+$NetBSD: patch-aa,v 1.1 2001/04/05 13:50:43 wiz Exp $
 
---- src/common.h.orig	Mon Jun 26 22:51:42 2000
-+++ src/common.h	Wed Jul 12 06:22:32 2000
+--- src/common.h.orig	Tue Jun 27 07:51:42 2000
++++ src/common.h
 @@ -61,14 +61,14 @@
   * Our `LOCAL_TEXT(STRING)' macro stands in for gettext (STRING)' when using
   * NLS, and simply returns STRING otherwise.
