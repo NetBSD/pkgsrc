@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2000/08/29 11:37:17 rh Exp $
+$NetBSD: patch-aa,v 1.5 2000/10/22 09:33:24 rh Exp $
 
---- configure.orig	Mon Aug 28 20:05:57 2000
+--- configure.orig	Wed Oct 18 11:06:28 2000
 +++ configure
-@@ -4805,7 +4805,7 @@
+@@ -3436,7 +3436,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lpspell  $LIBS"
++LIBS="-lpspell  $LIBS -lm"
+ cat > conftest.$ac_ext <<EOF
+ #line 3442 "configure"
+ #include "confdefs.h"
+@@ -5018,7 +5018,7 @@
    cat conftest.$ac_ext >&5
    rm -rf conftest*
    CATOBJEXT=.mo
@@ -11,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2000/08/29 11:37:17 rh Exp $
  fi
  rm -f conftest*
  		INSTOBJEXT=.mo
-@@ -5067,7 +5067,7 @@
+@@ -5280,7 +5280,7 @@
  		 USE_INCLUDED_LIBINTL=yes
  		 CATOBJEXT=.cat
  		 INSTOBJEXT=.cat

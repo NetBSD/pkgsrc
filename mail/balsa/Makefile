@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2000/08/29 11:37:15 rh Exp $
+# $NetBSD: Makefile,v 1.8 2000/10/22 09:33:23 rh Exp $
 #
 
-DISTNAME=	balsa-0.9.3
+DISTNAME=	balsa-1.0.pre3
+PKGNAME=	${DISTNAME:S/pre/p/}
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://www.theochem.kth.se/~pawsa/balsa/ \
 		ftp://ftp.newton.cx/pub/balsa/
@@ -9,6 +10,7 @@ MASTER_SITES=	http://www.theochem.kth.se/~pawsa/balsa/ \
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.balsa.net/
 
+DEPENDS+=	libpspell-*:../../textproc/libpspell
 DEPENDS+=	pth-*:../../devel/pth
 DEPENDS+=	libproplist-*:../../devel/libproplist
 DEPENDS+=	gnome-core-*:../../x11/gnome-core
