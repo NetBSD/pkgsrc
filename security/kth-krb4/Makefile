@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2001/04/12 14:53:39 wennmach Exp $
+# $NetBSD: Makefile,v 1.13 2001/08/02 12:46:48 wennmach Exp $
 #
 
-DISTNAME=		krb4-1.0.1
-PKGNAME=		kth-krb4-1.0.1
+DISTNAME=		krb4-1.0.9
+PKGNAME=		kth-krb4-1.0.9
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.pdc.kth.se/pub/krb/src/
 
@@ -29,6 +29,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/krb.conf ${PREFIX}/share/examples/kth-krb4
 	${INSTALL_DATA} ${WRKSRC}/etc/krb.realms ${PREFIX}/share/examples/kth-krb4
 	${INSTALL_DATA} ${WRKSRC}/etc/inetd.conf.changes ${PREFIX}/share/examples/kth-krb4
-	${INSTALL_DATA} ${FILESDIR}/services.diff ${PREFIX}/share/examples/kth-krb4
+	${INSTALL_DATA} ${FILESDIR}/services-1.4.2.diff ${PREFIX}/share/examples/kth-krb4
+	${INSTALL_DATA} ${FILESDIR}/services-1.5.diff ${PREFIX}/share/examples/kth-krb4
 
 .include "../../mk/bsd.pkg.mk"

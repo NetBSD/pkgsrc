@@ -1,4 +1,4 @@
-$NetBSD: services.diff,v 1.1 2000/06/08 14:03:47 wennmach Exp $
+$NetBSD: services-1.4.2.diff,v 1.1 2001/08/02 12:46:48 wennmach Exp $
 This patch is relative to NetBSD-1.4.2.
 
 --- /etc/services.orig	Thu Apr 20 10:29:34 2000
