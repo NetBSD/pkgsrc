@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2000/08/11 12:13:46 wiz Exp $
 sbin/arpredirect
 sbin/dsniff
 sbin/filesnarf
