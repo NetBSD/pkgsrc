@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.846 2002/12/19 20:34:00 jlam Exp $
+$NetBSD: CHANGES,v 1.847 2002/12/19 21:28:41 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4021,3 +4021,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated libnasl to 1.2.7 [frueauf 2002-12-19]
 	Added wampager-0.9.1 [jmmv 2002-12-19]
 	Updated openslp to 1.0.10 [jlam 2002-12-19]
+	Updated png to 1.2.5nb1 [fredb 2002-12-19]
