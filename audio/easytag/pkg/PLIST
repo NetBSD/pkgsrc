@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/20 23:11:53 wiz Exp $
+bin/easytag
+share/easytag/EasyTAG_logo.xpm
+share/gnome/apps/Multimedia/easytag.desktop
+share/locale/de/LC_MESSAGES/easytag.mo
+share/locale/fr/LC_MESSAGES/easytag.mo
+share/pixmaps/EasyTAG.xpm
+@dirrm share/easytag
