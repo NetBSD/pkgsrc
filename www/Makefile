@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2001/04/27 20:43:13 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2001/05/03 16:10:29 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -15,8 +15,8 @@ SUBDIR+=	ap-auth-postgresql
 SUBDIR+=	ap-csacek
 SUBDIR+=	ap-dtcl
 SUBDIR+=	ap-fastcgi
-SUBDIR+=	ap-jserv
 SUBDIR+=	ap-jk
+SUBDIR+=	ap-jserv
 SUBDIR+=	ap-perl
 SUBDIR+=	ap-php3
 SUBDIR+=	ap-php4
@@ -86,6 +86,7 @@ SUBDIR+=	p5-HTML-Table
 SUBDIR+=	p5-HTML-Tagset
 SUBDIR+=	p5-HTML-Template
 SUBDIR+=	p5-HTML-Tree
+SUBDIR+=	p5-HTTP-Request-Form
 SUBDIR+=	p5-URI
 SUBDIR+=	p5-VRML
 SUBDIR+=	p5-libapreq
@@ -100,6 +101,7 @@ SUBDIR+=	php4
 SUBDIR+=	php4-gd
 SUBDIR+=	php4-imap
 SUBDIR+=	php4-ldap
+SUBDIR+=	php4-mcrypt
 SUBDIR+=	php4-mysql
 SUBDIR+=	php4-pgsql
 SUBDIR+=	py-pcgi
@@ -116,7 +118,6 @@ SUBDIR+=	urlget
 SUBDIR+=	w3
 SUBDIR+=	w3c-httpd
 SUBDIR+=	w3m
-SUBDIR+=	w3m-m17n
 SUBDIR+=	waplet
 SUBDIR+=	web500gw
 SUBDIR+=	webalizer
