@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1 2004/06/08 22:10:04 jmmv Exp $
+
+--- io/posix/htsys.cc.orig	2003-04-25 00:22:38.000000000 +0200
++++ io/posix/htsys.cc
+@@ -157,7 +157,11 @@ int sys_filename_cmp(const char *a, cons
+  
+ static int child_pid = -1;
+ 
++#ifdef SA_SIGINFO
+ void SIGCHLD_sigaction(int i, siginfo_t *info, void *v)
++#else
++void SIGCHLD_signal(int i)
++#endif
+ {
+ 	int j;
+ 	waitpid(child_pid, &j, WNOHANG);
+@@ -241,6 +245,8 @@ int sys_get_caps()
+ bool init_system()
+ {
+ 	setuid( getuid() );
++
++#ifdef SA_SIGINFO
+ 	struct sigaction sa;
+ 	
+ 	sa.sa_sigaction = SIGCHLD_sigaction;
+@@ -248,6 +254,9 @@ bool init_system()
+ 	sa.sa_flags = SA_SIGINFO;
+ 	
+ 	sigaction(SIGCHLD, &sa, NULL);
++#else
++	(void)signal(SIGCHLD, SIGCHLD_signal);
++#endif
+ 	return true;
+ }
+ 
