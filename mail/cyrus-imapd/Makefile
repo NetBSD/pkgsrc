@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/09/19 09:04:11 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2002/10/09 21:50:24 wiz Exp $
 
 DISTNAME=		cyrus-imapd-2.0.16
 PKGREVISION=		1
@@ -11,7 +11,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://asg.web.cmu.edu/cyrus/imapd/
 COMMENT=		Cyrus IMAP server
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
@@ -35,15 +35,15 @@ CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
 CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
 CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
 CONFIGURE_ARGS+=	--with-statedir=/var/run
-CONFIGURE_ARGS+=	--with-dbdir=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-dbdir=${BUILDLINK_PREFIX.db3}
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 CONFIGURE_ARGS+=	--without-ucdsnmp
 CONFIGURE_ARGS+=	--without-notify
 CONFIGURE_ARGS+=	--without-zephyr
 CONFIGURE_ARGS+=	--enable-netscapehack
 
-CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ENV+=		ac_cv_lib_wrap_request_init=yes
 
 .if exists(/usr/include/krb5/com_err.h)
@@ -61,7 +61,7 @@ CONFIGURE_ARGS+=	--with-auth=unix
 CONFIGURE_ARGS+=	--without-krb
 .endif
 
-LIBS+=			`${SASL_CONFIG} --libs`
+LIBS+=			`sasl-config --libs`
 
 HTMLDIR=		${PREFIX}/share/doc/html/cyrus-imapd
 EGDIR=			${PREFIX}/share/examples/cyrus-imapd
@@ -106,10 +106,10 @@ post-install:
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html cyrusv2.mc ${HTMLDIR}
 
-.include "../../databases/db3/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
-.include "../../security/cyrus-sasl/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
-.include "../../security/tcp_wrappers/buildlink.mk"
+.include "../../databases/db3/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../security/cyrus-sasl/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../security/tcp_wrappers/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
