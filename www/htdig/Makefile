@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/10/05 19:25:54 fredb Exp $
+# $NetBSD: Makefile,v 1.4 1999/11/23 16:10:05 fredb Exp $
 #
 
 DISTNAME=	htdig-3.1.3
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/www/indexing/} \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.htdig.org/
 
-DEPENDS+=	db-2.7.3:../../databases/db
+DEPENDS+=	db-2.7.7:../../databases/db
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
