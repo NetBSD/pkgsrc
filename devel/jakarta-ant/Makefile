@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/03 03:50:11 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/27 20:41:14 jwise Exp $
 
 DISTNAME=	jakarta-ant
 PKGNAME=	jakarta-ant-3.1
@@ -24,6 +24,7 @@ post-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/ant ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/antRun ${PREFIX}/bin
+	-${MKDIR} ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/lib/xml.jar ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/lib/ant.jar ${PREFIX}/lib/java
 	${MKDIR} ${PREFIX}/share/doc/java/ant
