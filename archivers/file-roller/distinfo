@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/01/05 21:59:46 xtraeme Exp $
+$NetBSD: distinfo,v 1.6 2004/01/22 12:31:41 xtraeme Exp $
 
-SHA1 (file-roller-2.4.2.tar.gz) = 05b4e87800780cdf1dec901ecfb9d3e7c2e3d163
-Size (file-roller-2.4.2.tar.gz) = 1143163 bytes
+SHA1 (file-roller-2.4.3.tar.gz) = d4b63233ec57635d22e90102f43dba5ac792a4d9
+Size (file-roller-2.4.3.tar.gz) = 1119507 bytes
