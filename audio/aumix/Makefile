@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/04/02 20:06:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/19 15:55:08 jlam Exp $
 
 DISTNAME=	aumix-2.7
 CATEGORIES=	audio
@@ -12,22 +12,19 @@ MAINTAINER=	trevor@jpj.net
 HOMEPAGE=	http://jpj.net/~trevor/aumix.html
 COMMENT=	Set mix levels
 
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 BUILD_USES_MSGFMT=	yes
 
-USE_CURSES=	yes
-REPLACE_NCURSES=	${WRKSRC}/configure ${WRKSRC}/src/curses.h \
-			${WRKSRC}/src/gpm-xterm.h
-USE_LIBINTL=	yes
+#USE_CURSES=		yes
+#USE_LIBINTL=		yes
 
-GNU_CONFIGURE=	yes
+USE_BUILDLINK_ONLY=	yes
+USE_CONFIG_WRAPPER=	yes
 
-CONFIGURE_ARGS= --enable-own-labels
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-own-labels
+CONFIGURE_ARGS+=	--enable-nls
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${NEED_NCURSES} == "YES"
-CFLAGS+=        -I${WRKSRC}/src -I${LOCALBASE}/include
-.endif
-
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/ncurses/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
