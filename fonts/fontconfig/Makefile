@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2005/03/01 23:38:14 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2005/03/22 14:05:54 wiz Exp $
 #
 
-DISTNAME=	fontconfig-2.3.0
+DISTNAME=	fontconfig-2.3.1
 CATEGORIES=	fonts gnome
 MASTER_SITES=	http://www.fontconfig.org/release/
 
@@ -45,8 +45,11 @@ EGDIR=		${PREFIX}/share/examples/fontconfig
 CONF_FILES=	${EGDIR}/fonts.conf ${PKG_SYSCONFDIR}/fonts.conf
 CONF_FILES+=	${EGDIR}/fonts.dtd ${PKG_SYSCONFDIR}/fonts.dtd
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/conf.d
+CONF_FILES+=	${EGDIR}/conf.d/autohint.conf ${PKG_SYSCONFDIR}/conf.d/autohint.conf
 CONF_FILES+=	${EGDIR}/conf.d/no-bitmaps.conf ${PKG_SYSCONFDIR}/conf.d/no-bitmaps.conf
+CONF_FILES+=	${EGDIR}/conf.d/no-sub-pixel.conf ${PKG_SYSCONFDIR}/conf.d/no-sub-pixel.conf
 CONF_FILES+=	${EGDIR}/conf.d/sub-pixel.conf ${PKG_SYSCONFDIR}/conf.d/sub-pixel.conf
+CONF_FILES+=	${EGDIR}/conf.d/unhinted.conf ${PKG_SYSCONFDIR}/conf.d/unhinted.conf
 CONF_FILES+=	${EGDIR}/conf.d/yes-bitmaps.conf ${PKG_SYSCONFDIR}/conf.d/yes-bitmaps.conf
 
 .include "../../devel/zlib/buildlink3.mk"
