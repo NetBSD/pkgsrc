@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/06 16:27:03 cjep Exp $
+
+SHA1 (ftplibpp-1.0.1.tar.gz) = 51bfa48cf54efd23becdc83eb0f5d16f3e7bec21
+Size (ftplibpp-1.0.1.tar.gz) = 26688 bytes
+SHA1 (patch-aa) = cee3f7f31cf7d429249fcb80bf57966339fab0c2
