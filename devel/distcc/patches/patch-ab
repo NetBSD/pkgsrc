@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2003/12/12 23:10:57 jmmv Exp $
+
+--- src/distcc.c.orig	2003-10-13 11:59:25.000000000 +0200
++++ src/distcc.c
+@@ -96,7 +96,7 @@ static void dcc_show_usage(void)
+ "\n"
+ "Server specification:\n"
+ "A list of servers is taken from the environment variable $DISTCC_HOSTS, or\n"
+-"the file $HOME/.distcc/hosts, or the file %s/distcc/hosts.\n"
++"the file $HOME/.distcc/hosts, or the file %s/hosts.\n"
+ "Each host can be given in any of these forms, see the manual for details:\n"
+ "\n"
+ "   localhost                  run in place\n"
