@@ -1,6 +1,6 @@
-# $NetBSD: defs.UnixWare.mk,v 1.8 2004/09/21 15:01:40 jlam Exp $
+# $NetBSD: SunOS.mk,v 1.1 2004/10/06 20:51:47 jlam Exp $
 #
-# Variable definitions for the UnixWare 7 operating system.
+# Variable definitions for the SunOS/Solaris operating system.
 
 AWK?=		/usr/bin/nawk
 BASENAME?=	/usr/bin/basename
@@ -8,22 +8,22 @@ CAT?=		/usr/bin/cat
 CHMOD?=		/usr/bin/chmod
 CHOWN?=		/usr/bin/chown
 CHGRP?=		/usr/bin/chgrp
-CMP?=		/usr/bin/cmp
+CMP?=		cmp
 CP?=		/usr/bin/cp
 CUT?=		/usr/bin/cut
-DATE?=		/usr/bin/date
+DATE?=		/usr/xpg4/bin/date
 DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		/usr/ucb/echo
 ECHO_N?=	${ECHO} -n
-EGREP?=		/usr/bin/grep -E
-EXPR?=		/usr/bin/expr
+EGREP?=		/usr/xpg4/bin/grep -E
+EXPR?=		/usr/xpg4/bin/expr
 FALSE?=		/usr/bin/false
-FGREP?=		/usr/bin/grep -F
+FGREP?=		/usr/xpg4/bin/fgrep
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
 GMAKE?=		${LOCALBASE}/bin/gmake
-GREP?=		/usr/bin/grep
+GREP?=		/usr/xpg4/bin/grep
 .if exists(${LOCALBASE}/bin/gtar)
 GTAR?=		${LOCALBASE}/bin/gtar
 .else
@@ -34,31 +34,35 @@ GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
 GZCAT?=		${LOCALBASE}/bin/zcat
 GZIP?=		-9
 GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
-.elif exists(/usr/local/bin/gzip)
-GUNZIP_CMD?=	/usr/local/bin/gzip -df
-GZCAT?=		/usr/local/bin/gzip -cd
+.elif exists(/usr/bin/gzip)
+GUNZIP_CMD?=	/usr/bin/gzip -df
+GZCAT?=		/usr/bin/gzip -cd
 GZIP?=		-9
-GZIP_CMD?=	/usr/local/bin/gzip -nf ${GZIP}
+GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 .endif
 HEAD?=		/usr/bin/head
-HOSTNAME_CMD?=	/usr/bin/hostname
-ID?=		/usr/bin/id
-IMAKE?=		# XXX only available in the SDK? what about xmkmf?
+HOSTNAME_CMD?=	/bin/hostname
+ID?=		/usr/xpg4/bin/id
+IMAKE?=		${X11BASE}/bin/imake ${IMAKEOPTS}
 LDCONFIG?=	/usr/bin/true
 LN?=		/usr/bin/ln
 LS?=		/usr/bin/ls
 M4?=		/usr/ccs/bin/m4
 MAIL_CMD?=	/usr/bin/mailx
-MKDIR?=		${LOCALBASE}/sbin/mkdir-sh -p
+MKDIR?=		/usr/bin/mkdir -p
 MTREE?=		${LOCALBASE}/sbin/mtree
 MV?=		/usr/bin/mv
-NICE?=		/usr/bin/nice
+NICE?=		/usr/xpg4/bin/nice
+.if exists(/usr/bin/gpatch)
+PATCH?=		/usr/bin/gpatch
+.else
 PATCH?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}patch
+.endif
 PAX?=		${LOCALBASE}/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
 PKGLOCALEDIR?=	lib
-PS?=		/usr/bin/ps
-PWD_CMD?=	/usr/bin/pwd	# needs to print physical path
+PS?=		/bin/ps
+PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/usr/bin/rm
 RMDIR?=		/usr/bin/rmdir
 # XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
@@ -67,17 +71,17 @@ RSH?=		/usr/bin/rsh
 .if exists(${LOCALBASE}/bin/nbsed)
 SED?=		${LOCALBASE}/bin/nbsed
 .else
-SED?=		/usr/bin/sed
+SED?=		/usr/xpg4/bin/sed
 .endif
 SETENV?=	/usr/bin/env
-SH?=		/usr/bin/ksh
+SH?=		/bin/ksh
 SHLOCK=		${LOCALBASE}/bin/shlock
 SORT?=		/usr/bin/sort
 SU?=		/usr/bin/su
-TAIL?=		/usr/bin/tail
+TAIL?=		/usr/xpg4/bin/tail
 TAR?=		${LOCALBASE}/bin/tar
 TEE?=		/usr/bin/tee
-TEST?=		test				# Shell builtin
+TEST?=		test
 TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
@@ -114,7 +118,7 @@ IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
 _IMAKE_MAKE=	/usr/ccs/bin/make	# program which gets invoked by imake
-.if exists(/usr/include/netinet/in6.h)
+.if exists(/usr/include/netinet/ip6.h)
 _OPSYS_HAS_INET6=	yes		# IPv6 is standard
 .else
 _OPSYS_HAS_INET6=	no		# IPv6 is not standard
@@ -129,33 +133,60 @@ _PATCH_CAN_BACKUP=	yes		# native patch(1) can make backups
 _PATCH_BACKUP_ARG?= 	-b -V simple -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
 _USE_GNU_GETTEXT=	yes		# Use GNU gettext
-#
-# The native linker for UnixWare doesn't really support an option to pass
-# rpath directives, but pretend it does anyway since the wrapper scripts
-# will correctly convert it into the the proper LD_RUN_PATH variable.
-#
 _USE_RPATH=		yes		# add rpath to LDFLAGS
 
 # flags passed to the linker to extract all symbols from static archives.
 # this is the standard Solaris linker, /usr/ccs/bin/ld. The use of GNU
 # ld is not currently supported.
-# XXX is this needed for UnixWare?
-_OPSYS_WHOLE_ARCHIVE_FLAG=
-_OPSYS_NO_WHOLE_ARCHIVE_FLAG=
+_OPSYS_WHOLE_ARCHIVE_FLAG=	-z allextract
+_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-z defaultextract
 
-# UnixWare has /usr/include/iconv.h, but it's not GNU iconv, so mark it
+# Solaris has /usr/include/iconv.h, but it's not GNU iconv, so mark it
 # incompatible.
-_INCOMPAT_ICONV=	UnixWare-*-*
+_INCOMPAT_ICONV=	SunOS-*-*
 
-# XXX Where are those variables used?
 .if !defined(DEBUG_FLAGS)
-_STRIPFLAG_CC?=			# cc(1) option to strip
-_STRIPFLAG_INSTALL?=		# install(1) option to strip
+_STRIPFLAG_CC?=		-s	# cc(1) option to strip
+_STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
+.endif
+
+# Migration aid for old /usr/local LOCALBASE
+.if !defined(LOCALBASE) && exists(${DESTDIR}/usr/local/libexec/cgi-bin) && \
+	!exists(${DESTDIR}/usr/pkg/libexec/cgi-bin)
+.BEGIN:
+	@echo "On Solaris and /usr/local/libexec/cgi-bin found:"
+	@echo "- If you have an existing pkgsrc installation & wish to continue"
+	@echo "  using /usr/local, append LOCALBASE=/usr/local to /etc/mk.conf."
+	@echo "- Otherwise set LOCALBASE=/usr/pkg in your environment for the"
+	@echo "  first package install."
+	@false
+.endif
+
+.if !exists(${SED}) || ${SED} == "/usr/xpg4/bin/sed"
+.BEGIN:
+	@echo ""
+	@echo "==========================================================================="
+	@echo ""
+	@echo "ERROR: pkgsrc now requires a more functional sed(1) than Solaris provides."
+	@echo "you can satisfy this requirement by running:"
+	@echo ""
+	@echo "    cd ${_PKGSRCDIR}/textproc/nbsed; ${MAKE} install"
+	@echo ""
+	@echo "this will install ${LOCALBASE}/bin/nbsed and eliminate this message."
+	@echo "(nbsed is already installed by recent bootstrap-pkgsrc)."
+	@echo ""
+	@echo "==========================================================================="
+	@echo ""
+	@false
 .endif
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
 
+.if exists(${LOCALBASE}/sbin/pkg_info)
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
+.else
+PKG_TOOLS_BIN?=		${LOCALBASE}/bin
+.endif
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
