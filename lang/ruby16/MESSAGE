@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
+$NetBSD: MESSAGE,v 1.2 2004/12/01 00:24:04 cube Exp $
 
 Note that a number of packages which are installed as default with
 the Ruby 1.6.8 distribution are provided as separate packages:
@@ -12,7 +12,7 @@ the Ruby 1.6.8 distribution are provided as separate packages:
 	x11/ruby16-tcltklib:		Tcl/Tk libraries
 	x11/ruby16-tk:			Tk modules
 
-Note: make sure to set "RUBY_DEFAULT_VERSION=1.6" in /etc/mk.conf to
+Note: make sure to set "RUBY_VERSION_DEFAULT=1.6" in /etc/mk.conf to
 create Ruby 1.6.8 based packages.
 
 ===========================================================================
