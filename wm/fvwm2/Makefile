@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/10/01 11:15:16 martti Exp $
+# $NetBSD: Makefile,v 1.9 2001/10/09 12:19:06 martti Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -18,8 +18,9 @@ DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
 
 CONFLICTS=	fvwm-2.*
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
-FVWM_VER=	2.4.2
+FVWM_VER=	2.4.3
 
+## USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
@@ -56,8 +57,16 @@ post-install:
 			${PREFIX}/lib/X11/fvwm2/system.fvwm2rc ; \
 	fi
 
-.include "../../audio/rplay/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
-.include "../../graphics/imlib/buildlink.mk"
+.if defined(FVWM2_USE_GTK) && ${FVWM2_USE_GTK} == "YES"
 .include "../../x11/gtk/buildlink.mk"
+PLIST_SUBST+=	GTK=""
+.else
+PLIST_SUBST+=	GTK="@comment "
+.endif
+
+.if defined(FVWM2_USE_RPLAY) && ${FVWM2_USE_RPLAY} == "YES"
+.include "../../audio/rplay/buildlink.mk"
+.endif
+
+.include "../../devel/readline/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
