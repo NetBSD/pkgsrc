@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/06 14:04:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/06 14:50:22 wiz Exp $
 #
 
 DISTNAME=	xpdf-cyrillic
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME}-20020521
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
-MAINTAINER=	rxg@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	xpdf support files for Cyrillic
 
