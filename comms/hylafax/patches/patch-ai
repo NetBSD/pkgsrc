@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.7 2001/07/16 13:30:38 wiz Exp $
+$NetBSD: patch-ai,v 1.8 2003/09/23 21:39:48 abs Exp $
 
---- etc/faxsetup.sh.in.orig	Thu Jun 14 07:36:16 2001
+--- etc/faxsetup.sh.in.orig	Tue May  6 21:41:17 2003
 +++ etc/faxsetup.sh.in
 @@ -41,7 +41,9 @@
  # This script interactively prepares and verifies 
@@ -13,7 +13,7 @@ $NetBSD: patch-ai,v 1.7 2001/07/16 13:30:38 wiz Exp $
  test -d /usr/ucb  && PATH=$PATH:/usr/ucb		# Sun and others
  test -d /usr/bsd  && PATH=$PATH:/usr/bsd		# Silicon Graphics
  test -d /usr/5bin && PATH=/usr/5bin:$PATH:/usr/etc	# Sun and others
-@@ -59,13 +61,14 @@
+@@ -59,13 +61,14 @@ FUSER=@FUSER@			# fuser command to dump 
  GREP=@GREP@			# grep command for use below
  LN=@LN@				# ln command for use below
  LN_S=@LN_S@			# ln option for creating a symbolic link
@@ -29,7 +29,7 @@ $NetBSD: patch-ai,v 1.7 2001/07/16 13:30:38 wiz Exp $
  SERVICES=/etc/services		# location of services database
  INETDCONF=/usr/etc/inetd.conf	# default location of inetd configuration file
  ALIASES=/usr/lib/aliases	# default location of mail aliases database file
-@@ -143,6 +146,7 @@
+@@ -143,6 +146,7 @@ LIBDATA		DIR_LIBDATA
  LIBEXEC		DIR_LIBEXEC
  LN
  MANDIR		DIR_MAN
@@ -37,7 +37,7 @@ $NetBSD: patch-ai,v 1.7 2001/07/16 13:30:38 wiz Exp $
  MKFIFO
  MV
  PATH
-@@ -748,6 +752,61 @@
+@@ -757,6 +761,61 @@ if [ "$euid" != "root" ]; then
      boom
  fi
  
@@ -99,7 +99,7 @@ $NetBSD: patch-ai,v 1.7 2001/07/16 13:30:38 wiz Exp $
  onClient && Note "Checking system for proper client configuration."
  onServer && Note "Checking system for proper server configuration."
  
-@@ -2083,12 +2142,7 @@
+@@ -2199,12 +2258,7 @@ if onServer; then
  
      findproc()
      {
