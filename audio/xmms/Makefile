@@ -1,72 +1,10 @@
-# $NetBSD: Makefile,v 1.51 2003/07/22 23:23:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.52 2003/07/25 09:22:50 jmmv Exp $
 #
 
-DISTNAME=	xmms-1.2.7
-PKGREVISION=	8
-CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.2.x/ \
-		ftp://ftp.sunet.se/pub/multimedia/xmms/1.2.x/
+.include "Makefile.common"
 
-MAINTAINER=	rh@NetBSD.org
-HOMEPAGE=	http://www.xmms.org/
-COMMENT=	X Multimedia System --- An audio player with a Winamp GUI
+PKGREVISION=		9
 
-USE_BUILDLINK2=		yes
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
-USE_GMAKE=		yes
-USE_X11=		yes
-GNU_CONFIGURE=		yes
-
-CONFIGURE_ARGS+=	--without-gnome
-LIBTOOL_OVERRIDE=	${WRKSRC}/libxmms/libtool
-SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-
-# Broken configure script assumes that iconv_open lives in libc; work around. 
-CPPFLAGS+=		-DHAVE_ICONV_OPEN=1
-CONFIGURE_ENV+=		ac_cv_func_iconv_open=yes
-LIBS+=			${BUILDLINK_LIBICONV_LDADD}
-
-.include "../../mk/bsd.prefs.mk"
-
-PTHREAD_OPTS+=		require
-
-.if defined(USE_INET6) && ${USE_INET6} == YES
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-
-.if ${OPSYS} == "NetBSD"
-RAWPART!=               /sbin/sysctl -n kern.rawpartition | tr 0-9 a-j
-CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND}		\
-			--with-cdda-device=/dev/rcd0${RAWPART}	\
-			--with-cdda-dir=/cdrom/
-CPPFLAGS+=		-DHAVE_NANOSLEEP=1
-
-.  if ${MACHINE_ARCH} == "i386"
-post-patch:
-.    if ${OBJECT_FMT} == "a.out"
-	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}/Input/mpg123/decode_i586.s
-.    endif
-	cd ${WRKSRC}/Input/mpg123 && \
-	${MV} decode_i586.s decode_i586.s.orig && \
-	${SED} -e 's@^/@#/@g' <decode_i586.s.orig >decode_i586.s
-.  endif
-.endif
-
-.if ${OPSYS} == "SunOS"
-PLIST_SUBST+=	LIBAUDIO=libSolaris
-.else
-PLIST_SUBST+=	LIBAUDIO=libOSS
-.endif
-
-.include "../../audio/esound/buildlink2.mk"
-.include "../../audio/libmikmod/buildlink2.mk"
-.include "../../audio/libvorbis/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../graphics/Mesa/buildlink2.mk"
-.include "../../textproc/libxml/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+CONFIGURE_ARGS+=	--disable-esd
 
 .include "../../mk/bsd.pkg.mk"
