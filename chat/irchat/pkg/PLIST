@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/02 02:07:20 jun Exp $
+bin/dcc
+share/emacs/site-lisp/irchat-pj/irchat-commands.elc
+share/emacs/site-lisp/irchat-pj/irchat-copyright.elc
+share/emacs/site-lisp/irchat-pj/irchat-dcc.elc
+share/emacs/site-lisp/irchat-pj/irchat-filter.elc
+share/emacs/site-lisp/irchat-pj/irchat-globals.elc
+share/emacs/site-lisp/irchat-pj/irchat-handle.elc
+share/emacs/site-lisp/irchat-pj/irchat-inlines.elc
+share/emacs/site-lisp/irchat-pj/irchat-pj-action.elc
+share/emacs/site-lisp/irchat-pj/irchat-pj-coding-system.elc
+share/emacs/site-lisp/irchat-pj/irchat-pj-jisx0201.elc
+share/emacs/site-lisp/irchat-pj/irchat-pj-mode-line-format.elc
+share/emacs/site-lisp/irchat-pj/irchat-pj-sound.elc
+share/emacs/site-lisp/irchat-pj/irchat-pj-specific-emacs20.elc
+share/emacs/site-lisp/irchat-pj/irchat-pj-version-string.elc
+share/emacs/site-lisp/irchat-pj/irchat-vars.elc
+share/emacs/site-lisp/irchat-pj/irchat.elc
+@comment dirrm share/emacs/site-lisp/irchat-pj
