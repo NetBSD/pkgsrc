@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2004/04/14 16:15:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2004/04/21 17:34:41 tron Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
