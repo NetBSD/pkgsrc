@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2000/03/17 21:05:20 he Exp $
+$NetBSD: patch-aa,v 1.7 2000/03/17 23:16:18 tron Exp $
 
 --- Makefile.orig	Mon Mar 13 19:25:57 2000
-+++ Makefile	Fri Mar 17 21:44:01 2000
++++ Makefile	Sat Mar 18 00:14:22 2000
 @@ -11,27 +11,27 @@
  
  #If the install command is not in your path, provide
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.6 2000/03/17 21:05:20 he Exp $
  #variation of this and comment out the line above. Note that
  #Xpm requires X11. See also CFLAGS above.
 -#LIBS=-lm -lgd -lpng -lz -ljpeg -lttf -lXpm -lX11
-+LIBS=$(LIBGD) -lm -lpng -lz -ljpeg -lttf -lXpm -lX11
++LIBS=$(LIBGD) -lm -lpng -lz -ljpeg -lttf -lXpm -lX11 -lintl
  
  #Typical install locations for freetype, zlib, xpm, libjpeg and libpng header files.
  #If yours are somewhere else, change this. 
@@ -91,8 +91,9 @@ $NetBSD: patch-aa,v 1.6 2000/03/17 21:05:20 he Exp $
  	$(CC) gddemo.o -o gddemo	$(LIBDIRS) $(LIBS)
  
 -pngtogd: pngtogd.o libgd.a
+-	$(CC) pngtogd.o -o pngtogd	$(LIBDIRS) $(LIBS) 
 +pngtogd: pngtogd.o $(LIBGD)
- 	$(CC) pngtogd.o -o pngtogd	$(LIBDIRS) $(LIBS) 
++	$(CC) pngtogd.o -o pngtogd	$(LIBDIRS) $(LIBS)
  
 -webpng: webpng.o libgd.a
 +webpng: webpng.o $(LIBGD)
