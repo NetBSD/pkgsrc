@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/03/22 01:45:15 salo Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/09/03 18:19:43 xtraeme Exp $
 bin/sylpheed
 man/man1/sylpheed.1
 share/examples/sylpheed/mime.types
@@ -20,6 +20,7 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sylpheed.mo
+${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/sylpheed.mo
 share/sylpheed/faq/de/sylpheed-faq-1.html
 share/sylpheed/faq/de/sylpheed-faq-2.html
 share/sylpheed/faq/de/sylpheed-faq-3.html
