@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2002/09/25 23:17:26 jwise Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/08/29 15:29:29 xtraeme Exp $
 bin/sabcmd
+bin/sablot-config
 include/sabcfg.h
 include/sabdbg.h
 include/sablot.h
@@ -9,6 +10,6 @@ include/sxpath.h
 lib/libsablot.a
 lib/libsablot.la
 lib/libsablot.so
-lib/libsablot.so.96
-lib/libsablot.so.96.0
+lib/libsablot.so.100
+lib/libsablot.so.100.0
 man/man1/sabcmd.1
