@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:36:16 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/18 16:25:29 jmmv Exp $
 
 DISTNAME=		fileutils-4.1-154.i386
 PKGNAME=		suse_vmware-${SUSE_VERSION}
@@ -10,8 +10,8 @@ MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package to support running VMware
 
-DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
-DEPENDS+= 		suse_x11>=${SUSE_VERSION}:../suse_x11
+DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse_base
+DEPENDS+= 		suse_x11>=${SUSE_VERSION}:../../emulators/suse_x11
 
 ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
@@ -35,5 +35,5 @@ post-install:
 	${AWK} '{print("@unexec rm -f %D/${EMULSUBDIR}/dev/"$$2)}' \
 	  >>${PLIST_SRC}
 
-.include "../suse_linux/Makefile.common"
+.include "../../emulators/suse_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

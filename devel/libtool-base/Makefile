@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2003/02/17 15:27:59 dillo Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/18 16:25:12 jmmv Exp $
 #
 
-.include "../libtool/Makefile.common"
+.include "../../devel/libtool/Makefile.common"
 
 PKGNAME=        ${PKGPFX:C/-/-base-/}
 SVR4_PKGNAME=	ltoob

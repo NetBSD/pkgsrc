@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2003/07/21 16:51:41 martti Exp $
+# $NetBSD: Makefile,v 1.23 2003/09/18 16:25:10 jmmv Exp $
 
-.include "../gdk-pixbuf/Makefile.common"
+.include "../../graphics/gdk-pixbuf/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/gdk-pixbuf-/gdk-pixbuf-gnome-/}
 PKGREVISION=	1
