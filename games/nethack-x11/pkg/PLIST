@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2000/11/27 22:31:04 pooka Exp $
-bin/nethack-x11
-share/nethackdir/x11tiles
