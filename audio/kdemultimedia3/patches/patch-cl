@@ -1,0 +1,22 @@
+$NetBSD: patch-cl,v 1.1 2002/06/25 06:34:42 skrll Exp $
+
+--- admin/am_edit.orig	Mon Jun 24 18:10:00 2002
++++ admin/am_edit
+@@ -384,7 +384,16 @@
+     # all modules are installed.  automake doesn't know this, so we need to move
+     # this here from install-data to install-exec.
+     if ($MakefileData =~ m/\nkde_module_LTLIBRARIES\s*=/) {
+-      $target_adds{"install-exec-am"} .= "install-kde_moduleLTLIBRARIES";
++      my $lookup2 = 'install-exec-am:\s*(.*)';
++      if ($MakefileData =~ /\n$lookup2\n/) {
++        my $newdeps = $1;
++        if ($newdeps =~ m/.*install-libLTLIBRARIES.*/) {
++	  $newdeps =~ s/install-libLTLIBRARIES/install-libLTLIBRARIES install-kde_moduleLTLIBRARIES/g;
++        } else {
++          $newdeps .= "kde_module_LTLIBRARIES";
++        }
++	substituteLine($lookup2, "install-exec-am: " . $newdeps);
++      }
+       my $lookup = 'install-data-am:\s*(.*)';
+       if ($MakefileData =~ /\n$lookup\n/) {
+         my $newdeps = $1;
