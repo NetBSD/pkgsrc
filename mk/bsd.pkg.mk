@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1338 2004/01/06 14:43:02 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1339 2004/01/06 23:00:51 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -174,17 +174,26 @@ USE_X11?=		implied
 #
 .if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) ||		\
     exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
-_OPSYS_NEEDS_XPKGWEDGE=		yes
+USE_XPKGWEDGE=	yes
 .else
-_OPSYS_NEEDS_XPKGWEDGE?=	no
+USE_XPKGWEDGE?=	no
+.endif
+
+.if defined(_OPSYS_NEEDS_XPKGWEDGE) &&					\
+    !empty(_OPSYS_NEEDS_XPKGWEDGE:M[yY][eE][sS])
+USE_XPKGWEDGE=	yes
+.endif
+
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+USE_XPKGWEDGE=		yes
+_XPKGWEDGE_REQD=	1.9
+.else
+_XPKGWEDGE_REQD=	1.5
 .endif
 
 # Set the PREFIX appropriately.
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
 .  if defined(USE_X11BASE)
-.    if !empty(_OPSYS_NEEDS_XPKGWEDGE:M[yY][eE][sS])
-BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
-.    endif
 PREFIX=			${X11PREFIX}
 .  elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
@@ -195,6 +204,12 @@ PREFIX=			${LOCALBASE}
 .elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
 PREFIX=			${DEPOTBASE}/${PKGNAME}
 NO_MTREE=		yes
+.endif
+
+.if defined(USE_X11BASE)
+.  if !empty(USE_XPKGWEDGE:M[yY][eE][sS])
+BUILD_DEPENDS+=		xpkgwedge>=${_XPKGWEDGE_REQD}:../../pkgtools/xpkgwedge
+.  endif
 .endif
 
 .if empty(DEPOT_SUBDIR)
