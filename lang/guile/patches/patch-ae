@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2003/01/21 15:17:55 wiz Exp $
+$NetBSD: patch-ae,v 1.5 2003/11/26 22:13:58 dmcmahill Exp $
 
---- libguile/gc_os_dep.c.orig	Sat Dec  7 23:41:31 2002
+--- libguile/gc_os_dep.c.orig	Sat Dec  7 22:41:31 2002
 +++ libguile/gc_os_dep.c
-@@ -93,6 +93,11 @@ typedef int GC_bool;
+@@ -93,11 +93,26 @@ typedef int GC_bool;
  #    define OPENBSD
  #    define mach_type_known
  # endif
@@ -14,3 +14,27 @@ $NetBSD: patch-ae,v 1.4 2003/01/21 15:17:55 wiz Exp $
  # if defined(__NetBSD__) && defined(m68k)
  #    define M68K
  #    define NETBSD
+ #    define mach_type_known
+ # endif
++# if defined(__NetBSD__) && (defined(__sparc__) || defined(__sparc_v9__))
++#    define SPARC
++#    define NETBSD
++#    define mach_type_known
++# endif
++# if defined(__NetBSD__) && defined(__alpha__)
++#    define ALPHA
++#    define NETBSD
++#    define mach_type_known
++# endif
+ # if defined(__NetBSD__) && defined(arm32)
+ #    define ARM32
+ #    define NETBSD
+@@ -217,7 +232,7 @@ typedef int GC_bool;
+ # endif
+ # if defined(__alpha) || defined(__alpha__)
+ #   define ALPHA
+-#   if !defined(LINUX)
++#   if !defined(LINUX) && !defined(NETBSD)
+ #     define OSF1	/* a.k.a Digital Unix */
+ #   endif
+ #   define mach_type_known
