@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/24 16:32:48 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/24 16:34:28 minskim Exp $
 
 DISTNAME=		randrext-1.0
 CATEGORIES=		x11 devel
@@ -6,7 +6,7 @@ MASTER_SITES=		http://freedesktop.org/~xlibs/release/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		xtraeme@NetBSD.org
-HOMEPAGE=		http://freedesktop.org/
+HOMEPAGE=		http://xlibs.freedesktop.org/
 COMMENT=		X RandR extension (Headers and documentation files)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
