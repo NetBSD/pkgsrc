@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 14:02:54 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/20 10:03:46 skrll Exp $
 bin/kasteroids
 bin/katomic
 bin/kbackgammon
@@ -57,30 +57,24 @@ include/kgameprogress.h
 include/khighscore.h
 include/kscoredialog.h
 include/kstdgameaction.h
-lib/kbackgammon.a
 lib/kbackgammon.la
 lib/kbackgammon.so
-lib/libkbackgammon_main.a
 lib/libkbackgammon_main.la
 lib/libkbackgammon_main.so
 lib/libkbackgammon_main.so.0
 lib/libkbackgammon_main.so.0.0
-lib/libkdegames.a
 lib/libkdegames.la
 lib/libkdegames.so
 lib/libkdegames.so.1
 lib/libkdegames.so.1.1
-lib/libkdehighscores.a
 lib/libkdehighscores.la
 lib/libkdehighscores.so
 lib/libkdehighscores.so.0
 lib/libkdehighscores.so.0.1
-lib/libksirtetbase.a
 lib/libksirtetbase.la
 lib/libksirtetbase.so
 lib/libksirtetbase.so.0
 lib/libksirtetbase.so.0.1
-lib/libksirtetcommon.a
 lib/libksirtetcommon.la
 lib/libksirtetcommon.so
 lib/libksirtetcommon.so.0

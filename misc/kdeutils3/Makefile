@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/01/17 03:34:03 markd Exp $
+# $NetBSD: Makefile,v 1.14 2003/01/20 10:03:54 skrll Exp $
 
 DISTNAME=	kdeutils-3.0.5a
 COMMENT=	Utilities for the KDE integrated X11 desktop
@@ -20,6 +20,13 @@ SPECIAL_PERMS+=	${PREFIX}/bin/efax ${_KDE_SETUID_ROOT}
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/machine/apmvar.h)
 CPPFLAGS+=             -D__NetBSD_APM__
 .endif
+
+FOO_MAIN_FILES= \
+	kcalc/kcalc_main.cpp \
+	kedit/kedit_main.cpp \
+	klaptopdaemon/klaptopdaemon_main.cpp
+
+.include "../../x11/kde3/Makefile.foo_main"
 
 .include "../../x11/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"

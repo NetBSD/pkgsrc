@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/02 09:12:27 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/20 10:03:53 skrll Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kbouboule.kss
@@ -19,22 +19,16 @@ bin/kswarm.kss
 bin/kvm.kss
 bin/kxsconfig
 bin/kxsrun
-lib/kde3/kwin_cde.a
 lib/kde3/kwin_cde.la
 lib/kde3/kwin_cde.so
-lib/kde3/kwin_cde_config.a
 lib/kde3/kwin_cde_config.la
 lib/kde3/kwin_cde_config.so
-lib/kde3/kwin_glow.a
 lib/kde3/kwin_glow.la
 lib/kde3/kwin_glow.so
-lib/kde3/kwin_glow_config.a
 lib/kde3/kwin_glow_config.la
 lib/kde3/kwin_glow_config.so
-lib/kde3/kwin_openlook.a
 lib/kde3/kwin_openlook.la
 lib/kde3/kwin_openlook.so
-lib/kde3/plugins/styles/dotnet.a
 lib/kde3/plugins/styles/dotnet.la
 lib/kde3/plugins/styles/dotnet.so
 share/kde/applnk/System/ScreenSavers/KBanner.desktop
@@ -2868,12 +2862,12 @@ share/kde/wallpapers/winter_theme_1.jpg
 @dirrm share/kde/icons/Locolor
 @dirrm share/kde/apps/kworldclock/maps/rainfall
 @dirrm share/kde/apps/kworldclock/maps/mggd
-@unexec ${RMDIR} -p %D hare/kde/apps/kworldclock/maps/depths >/dev/null || true
+@unexec ${RMDIR} -p %D/share/kde/apps/kworldclock/maps/depths 2>/dev/null || true
 @dirrm share/kde/apps/kworldclock/maps/caida_bw
 @dirrm share/kde/apps/kworldclock/maps/caida
 @dirrm share/kde/apps/kworldclock/maps/bio
 @dirrm share/kde/apps/kworldclock/maps/alt
-@unexec ${RMDIR} -p %D hare/kde/apps/kworldclock/maps >/dev/null || true
-@unexec ${RMDIR} -p %D hare/kde/apps/kworldclock >/dev/null || true
+@unexec ${RMDIR} -p %D/share/kde/apps/kworldclock/maps 2>/dev/null || true
+@unexec ${RMDIR} -p %D/share/kde/apps/kworldclock 2>/dev/null || true
 @dirrm share/kde/apps/kwin/icewm-themes/Model
 @dirrm share/kde/apps/kwin/icewm-themes/MenschMaschine
