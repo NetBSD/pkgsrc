@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:20:14 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/25 12:46:51 seb Exp $
 
 DISTNAME=	sml-mode-3.9.5
 CATEGORIES=	devel editors
@@ -11,6 +11,7 @@ DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 
 ALL_TARGET=	default
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	sml-mode.info
 
 do-install:
@@ -19,5 +20,4 @@ do-install:
 		ChangeLog ${PREFIX}/share/emacs/site-lisp/sml-mode
 	${INSTALL_DATA} ${WRKSRC}/sml-mode.info ${PREFIX}/info
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
