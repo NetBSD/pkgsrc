@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/29 04:57:51 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/21 17:38:52 xtraeme Exp $
 ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/adobe-dingbats.enc.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/adobe-standard.enc.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/adobe-symbol.enc.gz
@@ -28,6 +28,9 @@ ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/large/jisx0212.1990-0.enc.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/large/ksc5601.1987-0.enc.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/large/ksc5601.1992-3.enc.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/large/sun.unicode.india-0.enc.gz
+${X11ROOT_PREFIX}/lib/X11/fonts/encodings/large/cns11643-1.enc.gz
+${X11ROOT_PREFIX}/lib/X11/fonts/encodings/large/cns11643-2.enc.gz
+${X11ROOT_PREFIX}/lib/X11/fonts/encodings/large/cns11643-3.enc.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/microsoft-cp1250.enc
 ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/microsoft-cp1251.enc
 ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/microsoft-cp1252.enc
@@ -45,5 +48,6 @@ ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/mulelao-1.enc
 ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/tcvn-0.enc
 ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/tis620-2.enc
 ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/viscii1.1-1.enc.gz
+${X11ROOT_PREFIX}/lib/X11/fonts/encodings/suneu-greek.enc
 @dirrm ${X11ROOT_PREFIX}/lib/X11/fonts/encodings/large
 @dirrm ${X11ROOT_PREFIX}/lib/X11/fonts/encodings
