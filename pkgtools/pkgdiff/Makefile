@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/02/10 23:53:33 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2004/04/11 21:35:21 jschauma Exp $
 #
 
 DISTNAME=	pkgdiff-0.113
@@ -33,7 +33,6 @@ DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
 DIFF?=		gdiff
 MANINSTALL=
 .else
-NROFF=		nroff
 DIFF?=		diff
 .endif
 
@@ -60,7 +59,11 @@ do-build:
 	${CP} ${FILESDIR}/pkgvi ${WRKSRC}
 .if !empty(MANINSTALL:Mcatinstall)
 .  for FILE in mkpatches patchdiff pkgdiff pkgvi
-	${NROFF} -mandoc ${FILESDIR}/${FILE}.1 >${WRKSRC}/${FILE}.0
+.    if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
+	nroff -man ${FILESDIR}/${FILE}.1 >${WRKSRC}/${FILE}.0
+.    else
+	${CP} ${FILESDIR}/${FILE}.0 ${WRKSRC}/${FILE}.0
+.    endif
 .  endfor
 .endif
 
