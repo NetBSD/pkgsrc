@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2001/04/16 23:20:39 zuntum Exp $
+# $NetBSD: Makefile,v 1.98 2001/05/03 17:33:07 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -58,6 +58,7 @@ SUBDIR+=	nxtvepg
 SUBDIR+=	p5-Array-PrintCols
 SUBDIR+=	p5-Business-CreditCard
 SUBDIR+=	p5-Business-ISBN
+SUBDIR+=	p5-Business-UPS
 SUBDIR+=	p5-ControlX10-CM11
 SUBDIR+=	p5-File-MMagic
 SUBDIR+=	p5-Locale-Codes
