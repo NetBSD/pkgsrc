@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2001/06/20 10:19:27 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/02 09:04:03 jtb Exp $
 
-DISTNAME=		ntl-5.1a
+DISTNAME=		ntl-5.3.1
 CATEGORIES=		math devel
 MASTER_SITES=		http://www.shoup.net/ntl/
 
@@ -16,8 +16,5 @@ NO_CONFIGURE=		# defined
 USE_LIBTOOL=		yes
 MAKEFILE=		makefile
 
-GMP_PREFIX_DEFAULT=	${LOCALBASE}
-EVAL_PREFIX+=		GMP_PREFIX=gmp
-
+.include "../../devel/gmp/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
-
