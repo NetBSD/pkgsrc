@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2000/07/16 18:17:30 kim Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/12 15:12:40 deberg Exp $
 #
 
-DISTNAME=	gnut-0.3.29
+DISTNAME=	gnut-0.4.12
 CATEGORIES=	net
-MASTER_SITES=	http://www.umr.edu/~jjp/
+MASTER_SITES=	http://www.mrob.com/gnut/tars/
 
 MAINTAINER=	deberg@netbsd.org
-HOMEPAGE=	http://www.umr.edu/~jjp/
+HOMEPAGE=	http://www.mrob.com/gnut/
 
-BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
+#BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
+#BUILD_DEPENDS+=	automake:../../devel/automake
 #DEPENDS+=	pth>=1.3.6:../../devel/pth
 
 # Sync these with devel/unproven-pthreads:
@@ -30,8 +31,8 @@ GNUTDOCDIR=	${PREFIX}/share/doc/gnut
 LDFLAGS=	-Wl,-R${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
 .endif
 
-post-patch:
-	cd ${WRKSRC} && autoreconf
+#post-patch:
+#	cd ${WRKSRC} && ${CP} aclocal.m4 acinclude.m4 && autoreconf
 
 GNUTDOCS=	TUTORIAL \
 		gnut-1.html \
