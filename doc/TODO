@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.259 2003/02/15 02:03:49 salo Exp $
+$NetBSD: TODO,v 1.260 2003/02/15 04:22:11 salo Exp $
 
 Suggested new packages
 ======================
@@ -197,7 +197,6 @@ Suggested package updates
 	o mcrypt-2.6.3
 	o memtest86-3.0
 	o mhonarc-2.5.13 [pkg/19366]
-	o micq-0.4.10.1 [pkg/20294]
 	o midnight-commander-4.6.0
 	o mixer.app-1.8.0
 	o mkfontscale-20020618
