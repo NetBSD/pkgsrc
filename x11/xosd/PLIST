@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/07 14:46:28 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/12 09:21:24 jmmv Exp $
 bin/osd_cat
 bin/xosd-config
 include/xosd.h
 lib/libxosd.a
 lib/libxosd.la
 lib/libxosd.so
-lib/libxosd.so.3
-lib/libxosd.so.3.3
+lib/libxosd.so.4
+lib/libxosd.so.4.0
 lib/xmms/General/libxmms_osd.a
 lib/xmms/General/libxmms_osd.la
 lib/xmms/General/libxmms_osd.so
@@ -20,6 +20,7 @@ man/man3/xosd_get_number_lines.3
 man/man3/xosd_hide.3
 man/man3/xosd_is_onscreen.3
 man/man3/xosd_set_align.3
+man/man3/xosd_set_bar_length.3
 man/man3/xosd_set_horizontal_offset.3
 man/man3/xosd_set_pos.3
 man/man3/xosd_set_shadow_offset.3
