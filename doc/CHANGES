@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.582 2002/11/23 19:04:56 pooka Exp $
+$NetBSD: CHANGES,v 1.583 2002/11/23 22:35:10 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3693,3 +3693,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gtexinfo to 4.3nb1 [seb 2002-11-23]
 	Updated libsidplay to 1.36.57 [pooka 2002-11-23]
 	Updated sidplay to 1.0.9 [pooka 2002-11-23]
+	Updated aap to 0.107 [cjep 2002-11-23]
