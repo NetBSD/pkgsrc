@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:26 tv Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/28 13:02:26 wiz Exp $
 #
 
 DISTNAME=		florist-3.15p-src
@@ -40,7 +40,7 @@ pre-configure:
 	cd ${WRKSRC}; ${AUTOCONF}
 
 do-install:
-	@${MKDIR} ${PREFIX}/lib/florist
+	@${INSTALL_DATA_DIR} ${PREFIX}/lib/florist
 	@${INSTALL_DATA} ${WRKSRC}/floristlib/*.ad[sb] \
 		${WRKSRC}/floristlib/*.ali \
 		${PREFIX}/lib/florist
