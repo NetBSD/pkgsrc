@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/07/15 01:27:42 tv Exp $
+# $NetBSD: Makefile,v 1.4 1998/07/15 11:45:53 tv Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -10,7 +10,7 @@ MAINTAINER=	tv@netbsd.org
 
 DEPENDS=	libwww-5.1m1:../../www/libwww \
 		jpeg-6b:../../graphics/jpeg \
-		png-0.96:../../graphics/png \
+		png-1.0.2:../../graphics/png \
 		xpm-3.4k:../../graphics/xpm
 
 USE_GMAKE=	yes
