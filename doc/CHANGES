@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4667 2004/02/02 08:48:40 uebayasi Exp $
+$NetBSD: CHANGES,v 1.4668 2004/02/02 14:26:21 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -552,3 +552,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mutt to 1.4.1nb5 [tron 2004-02-02]
 	Updated cmake to 1.6.6nb2 [grant 2004-02-02]
 	Updated zsh to 4.0.9 [uebayasi 2004-02-02]
+	Updated XFree86 to 4.3.0nb1 [xtraeme 2004-02-02]
