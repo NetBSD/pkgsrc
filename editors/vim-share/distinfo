@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2002/01/17 11:37:01 martti Exp $
+$NetBSD: distinfo,v 1.21 2002/01/28 14:06:49 martti Exp $
 
 SHA1 (vim/vim-6.0.tar.bz2) = 65f3a54e2d04c20b7ffb0ae59741f97021dac49a
 Size (vim/vim-6.0.tar.bz2) = 2776551 bytes
@@ -28,6 +28,24 @@ SHA1 (vim/6.0.139) = a620577defa499c19b9290d6a26b26ac800bf43d
 Size (vim/6.0.139) = 3171 bytes
 SHA1 (vim/6.0.140) = e27f22892bc34e209224c5e38d452717e6986829
 Size (vim/6.0.140) = 4881 bytes
+SHA1 (vim/6.0.141) = edbd992ffb43969b1cd2fbc838be84b4d88e8596
+Size (vim/6.0.141) = 4726 bytes
+SHA1 (vim/6.0.142) = 66b26d04c49dbea7a35a6ec0d3b1d95b85213209
+Size (vim/6.0.142) = 3470 bytes
+SHA1 (vim/6.0.143) = 4358138f9189e82fd74f30f0b2cfebc8b2bfc004
+Size (vim/6.0.143) = 10224 bytes
+SHA1 (vim/6.0.145) = 3e640cdecf53e1299d8e97337c27343acdaee511
+Size (vim/6.0.145) = 2097 bytes
+SHA1 (vim/6.0.146) = 2d0f0720e60ee21249fa07bb8ad74b6e0daa2341
+Size (vim/6.0.146) = 1488 bytes
+SHA1 (vim/6.0.148) = deef56e2e87b96f3d69bc05e300ea6acdd30d5c1
+Size (vim/6.0.148) = 2909 bytes
+SHA1 (vim/6.0.149) = a7d6343b2146f4dc910da5cb22740c19a734e3f1
+Size (vim/6.0.149) = 2932 bytes
+SHA1 (vim/6.0.150) = fec9fc8c764ae545804795b1f41810b305546847
+Size (vim/6.0.150) = 2051 bytes
+SHA1 (vim/6.0.151) = 7062e774ebd7523e0aeaa86704d550d70486574a
+Size (vim/6.0.151) = 2621 bytes
 SHA1 (vim/vim-6.0-001-120.diff.gz) = dc096c4d9454d73a236eccd11caf0dc4f78d38e7
 Size (vim/vim-6.0-001-120.diff.gz) = 36179 bytes
 SHA1 (patch-aa) = 8176260aff9176f350c4534f52bce0080fedd28b
