@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2002/12/11 22:26:07 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2002/12/12 00:57:15 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -10,7 +10,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/gettext/gettext.html
 COMMENT=		tools for providing messages in different languages
 
-DEPENDS+=		gettext-m4-0.11.5:../../devel/gettext-m4
+DEPENDS+=			gettext-m4-0.11.5:../../devel/gettext-m4
+BUILDLINK_DEPENDS.gettext=	gettext-lib-0.11.5
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
