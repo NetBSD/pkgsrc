@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/08/22 19:32:52 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/09/07 01:47:28 jlam Exp $
 
 DISTNAME=	krb5-1.3.4
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 
 MAINTAINER=	jlam@NetBSD.org
@@ -27,6 +27,16 @@ MASTER_SITES=	http://www.crypto-publish.org/dist/mit-kerberos5/ \
 		http://www.mirrors.wiretapped.net/security/cryptography/apps/kerberos/krb5-mit/unix/
 EXTRACT_SUFX=	.tar.gz
 .endif
+
+# Patches to fix MIT-krb5 security advisories.
+MITKRB5_SA_2004_002_PATCH=	2004-002-patch_1.3.4.txt
+MITKRB5_SA_2004_003_PATCH=	2004-003-patch_1.3.4.txt
+.for _patch_ in ${MITKRB5_SA_2004_002_PATCH} ${MITKRB5_SA_2004_003_PATCH}
+PATCHFILES+=			${_patch_}
+SITES_${_patch_}=		http://web.mit.edu/kerberos/advisories/
+PATCH_DIST_STRIP.${_patch_}=	-p1
+PATCH_DIST_CAT.${_patch_}=	${CAT} ${_patch_}
+.endfor
 
 CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
