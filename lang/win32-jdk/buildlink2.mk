@@ -1,0 +1,16 @@
+# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/10/11 13:37:10 tv Exp $
+
+.if !defined(WIN32_JDK_BUILDLINK2_MK)
+WIN32_JDK_BUILDLINK2_MK=	# defined
+
+BUILDLINK_PACKAGES+=		win32-jdk
+BUILDLINK_DEPENDS.win32-jdk?=	win32-jre>=0.1
+BUILDLINK_PKGSRCDIR.win32-jdk?=	../../lang/win32-jre
+
+EVAL_PREFIX+=	BUILDLINK_PREFIX.win32-jdk=win32-jre
+BUILDLINK_PREFIX.win32-jdk_DEFAULT=	${LOCALBASE}
+BUILDLINK_TARGETS+=	win32-jdk-buildlink
+
+win32-jdk-buildlink: _BUILDLINK_USE
+
+.endif	# WIN32_JDK_BUILDLINK2_MK
