@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2280 2003/05/22 15:08:03 taya Exp $
+$NetBSD: CHANGES,v 1.2281 2003/05/22 15:16:49 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2075,3 +2075,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated spamassassin to 2.55 [abs 2003-05-22]
 	Updated glade2 to 2.0.0nb2 [wiz 2003-05-22]
 	Updated phoenix to 0.6 [taya 2003-05-22]
+	Updated xdvipresent to 0.6.1.14 [jschauma 2003-05-22]
