@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.51 2003/04/20 12:06:01 cjep Exp $
+# $NetBSD: defs.Linux.mk,v 1.52 2003/06/06 17:57:36 jschauma Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -44,11 +44,23 @@ GREP?=		/bin/grep
 GREP?=		/usr/bin/grep
 .endif
 GTAR?=		/bin/tar
+.if exists(/usr/bin/gunzip)
 GUNZIP_CMD?=	/usr/bin/gunzip -f
+.else
+GUNZIP_CMD?=	/bin/gunzip -f
+.endif
+.if exists(/usr/bin/gzip)
+GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
+.else
+GZIP_CMD?=	/bin/gzip -nf ${GZIP}
+.endif
 GZCAT?=		/bin/zcat
 GZIP?=		-9
-GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
+.if exists(/bin/head)
+HEAD?=		/bin/head
+.else
 HEAD?=		/usr/bin/head
+.endif
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
 LDCONFIG?=	/sbin/ldconfig
