@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1313 2003/12/04 11:17:40 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1314 2003/12/05 08:38:15 jdolecek Exp $
 #
 # This file is in the public domain.
 #
@@ -1154,6 +1154,7 @@ MASTER_SITE_DEBIAN+= \
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
 	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/ \
+	ftp://ftp.cz.netbsd.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
 .if defined(DIST_SUBDIR)
