@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/06/03 20:02:02 shannonjr Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/03 22:07:50 shannonjr Exp $
 #
 
 DISTNAME=		gdb-6.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		ftp://sources.redhat.com/pub/gdb/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -29,9 +29,6 @@ INFO_FILES+=		stabs.info standards.info
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS=	USE_GCC_34
-USE_GCC_34?=	NO
-
 pre-patch:
 	${CP} ${FILESDIR}/nbsd-nat.c ${WRKSRC}/gdb
 
@@ -41,12 +38,6 @@ do-test:
 	else						\
 		${ECHO} dejagnu is required for the test target;	\
 	fi
-
-.if !empty(USE_GCC_34:M[Yy][Ee][Ss])
-.include "../../lang/gcc-3.4/buildlink3.mk"
-pre-configure:
-.  include "../../lang/gcc-3.4/preconfigure.mk"
-.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
