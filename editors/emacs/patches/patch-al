@@ -1,0 +1,17 @@
+$NetBSD: patch-al,v 1.1 1998/09/04 02:28:54 tron Exp $
+
+--- man/cc-mode.texi.orig	Sat May 16 20:55:23 1998
++++ man/cc-mode.texi	Fri Sep  4 01:56:10 1998
+@@ -14,6 +14,12 @@
+ 			  and Java code.
+ @end direntry
+ 
++@dircategory The Emacs editor and associated tools 
++@direntry 
++* CC mode: (ccmode).		The GNU Emacs mode for editing C, C++,
++				Objective-C and Java code.
++@end direntry
++
+ @comment !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ @comment @setchapternewpage odd !! we don't want blank pages !!
+ @comment %**end of header (This is for running Texinfo on a region)

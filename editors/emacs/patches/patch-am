@@ -1,0 +1,17 @@
+$NetBSD: patch-am,v 1.1 1998/09/04 02:28:54 tron Exp $
+
+--- man/cl.texi.orig	Sat May 16 20:51:46 1998
++++ man/cl.texi	Fri Sep  4 01:56:10 1998
+@@ -7,6 +7,12 @@
+ * CL: (cl).		Partial Common Lisp support for Emacs Lisp.
+ @end direntry
+ 
++@dircategory The Emacs editor and associated tools
++@direntry
++* CL: (cl).			Partial Common Lisp support for Emacs Lisp.
++@end direntry
++
++
+ @iftex
+ @finalout
+ @end iftex

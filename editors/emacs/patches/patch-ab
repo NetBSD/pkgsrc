@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.6 1998/09/04 02:28:53 tron Exp $
+
 --- ./configure.orig	Fri Aug 28 13:38:44 1998
 +++ ./configure	Sun Aug 16 03:48:36 1998
 @@ -759,6 +748,7 @@

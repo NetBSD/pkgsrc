@@ -1,0 +1,15 @@
+$NetBSD: patch-ar,v 1.1 1998/09/04 02:28:54 tron Exp $
+
+--- man/mh-e.texi.orig	Sat May 16 20:51:15 1998
++++ man/mh-e.texi	Fri Sep  4 01:56:10 1998
+@@ -4,6 +4,10 @@
+ @setfilename ../info/mh-e
+ @settitle mh-e
+ @c %**end of header
++@dircategory The Emacs editor and associated tools
++@direntry
++* MH-E: (mh-e).			Emacs interface to the MH mail system.
++@end direntry
+ 
+ @setchapternewpage odd
+ 
