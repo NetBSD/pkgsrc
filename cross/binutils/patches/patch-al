@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1 2000/06/11 18:27:29 mycroft Exp $
+$NetBSD: patch-al,v 1.2 2000/06/11 18:40:26 mycroft Exp $
 
---- elflink.h.orig	Fri May  1 11:48:10 1998
-+++ elflink.h	Sun Jun 11 14:22:40 2000
+--- bfd/elflink.h.orig	Fri May  1 11:48:10 1998
++++ bfd/elflink.h	Sun Jun 11 14:22:40 2000
 @@ -719,12 +719,13 @@
  		}
  
