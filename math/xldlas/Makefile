@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2002/09/21 00:41:06 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/12/28 21:24:22 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/09/26 23:18:07 steve Exp
 #
 
 DISTNAME=		xldlas-0.85
-PKGREVISION=		1
+PKGREVISION=		2
 WRKSRC=			${WRKDIR}/xldlas
 CATEGORIES=		math
 MASTER_SITES=		http://sunsite.math.klte.hu/mirrors/xldlas/	\
