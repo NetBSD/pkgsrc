@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8031 2004/11/26 23:26:09 abs Exp $
+$NetBSD: CHANGES,v 1.8032 2004/11/26 23:31:59 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5468,4 +5468,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated epydoc to 2.1 [darcy 2004-11-26]
 	Updated p5-IO-Interface to 0.98 [he 2004-11-26]
 	Updated brandybasic to 1.0.16 [abs 2004-11-26]
+	Updated cambeva to 2.2 [abs 2004-11-26]
 
