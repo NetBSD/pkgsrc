@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4286 2003/12/29 12:54:16 recht Exp $
+$NetBSD: CHANGES,v 1.4287 2003/12/29 13:21:32 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5475,3 +5475,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Log-Dispatch to 2.08 [grant 2003-12-29]
 	Removed metacity-setup [recht 2003-12-29]
 	Updated win32-codecs to 031029nb1 [recht 2003-12-29]
+	Added p5-Log-Dispatch-FileRotate-1.11 [grant 2003-12-29]
