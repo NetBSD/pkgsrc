@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/06 14:32:11 taca Exp $
+
+--- config/config_default.php.orig	Thu Apr 22 02:21:54 2004
++++ config/config_default.php
+@@ -442,7 +442,7 @@ $default_charset = 'iso-8859-1';
+  *   $data_dir = SM_PATH . 'data/';
+  * @global string $data_dir
+  */
+-$data_dir = SM_PATH . 'data/';
++$data_dir = '@USER_PREFS_DIR@/';
+ 
+ /**
+  * Attachments directory
+@@ -460,7 +460,7 @@ $data_dir = SM_PATH . 'data/';
+  *    + It should probably be another directory than data_dir.
+  * @global string $attachment_dir
+  */
+-$attachment_dir = $data_dir;
++$attachment_dir = "@ATTACHMENTS_DIR@/";
+ 
+ /**
+  * Hash level used for data directory.
