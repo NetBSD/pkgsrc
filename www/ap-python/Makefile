@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/02/17 20:09:33 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/21 07:44:09 snj Exp $
 #
 
 DISTNAME=		mod_python-2.7.8
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.modpython.org/
-COMMENT=		Python interpretter embedded into Apache
+COMMENT=		Python interpreter embedded into Apache
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 
