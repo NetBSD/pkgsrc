@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.7 1999/12/23 23:48:27 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/01/31 16:10:13 wiz Exp $
 
-DISTNAME=	unrar-2.50
+DISTNAME=	unrar-2.71
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.kiarchive.ru/pub/unix/arcers/
+MASTER_SITES=	ftp://sunsite.univie.ac.at/pub/distfiles/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.rarsoft.com/
-
-NO_WRKSUBDIR=
 
 do-build:
 	cd ${WRKSRC} && ${LINK.c} -o unrar -D_UNIX unrar.c
