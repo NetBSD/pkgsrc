@@ -1,14 +1,14 @@
-$NetBSD: patch-ad,v 1.2 2002/01/22 22:08:54 jlam Exp $
+$NetBSD: patch-ad,v 1.3 2004/02/22 03:13:07 jlam Exp $
 
---- configure.orig	Tue Jan 22 14:53:01 2002
+--- configure.orig	Thu Nov 27 15:51:08 2003
 +++ configure
-@@ -1719,9 +1719,6 @@
- fi
- 
+@@ -3607,9 +3607,6 @@ else
+   ac_configure_args="$ac_configure_args --with-authchangepwdir=/var/tmp/dev/null"
+ fi;
  
 -INSTALL_DATA='${INSTALL} -m 0600'
 -INSTALL_SCRIPT='${INSTALL}'
 -
- #
- # autoconf bug
- #
+ if ulimit -v 2>/dev/null
+ then
+ 	ULIMIT='ulimit -v'
