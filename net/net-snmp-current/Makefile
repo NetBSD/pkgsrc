@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/14 06:29:01 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/17 10:37:45 wiz Exp $
 
 DISTNAME=	net-snmp-5.0.pre2
 PKGNAME=	net-snmp-5.0.0.2
@@ -88,7 +88,7 @@ post-install:
 CFLAGS+=	-Dnetbsd1
 .endif
 
-.include "../../security/openssl/buildlink.mk"	# USE_SSL=	yes
+.include "../../security/openssl/buildlink.mk"
 .include "../../security/tcp_wrappers/buildlink.mk"
 
 .include "../../mk/bsd.pkg.mk"
