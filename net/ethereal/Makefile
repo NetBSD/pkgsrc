@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2000/11/23 21:29:22 abs Exp $
+# $NetBSD: Makefile,v 1.38 2000/11/27 20:16:56 mycroft Exp $
 #
 
 ETHEREAL_VERSION=	0.8.14
@@ -14,6 +14,9 @@ DEPENDS=		gtk+-1.2.*:../../x11/gtk
 BUILD_DEPENDS+=		${PERL5}:../../lang/perl5-base
 
 USE_X11=		yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
 GNU_CONFIGURE=		yes
 EVAL_PREFIX+=		GTKDIR=gtk+
 CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}"
