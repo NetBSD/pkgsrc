@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/06/01 11:23:26 rh Exp $
+# $NetBSD: Makefile,v 1.15 2000/06/21 02:11:42 jlam Exp $
 
 DISTNAME=		ee-0.3.11
 CATEGORIES=		x11 gnome
@@ -7,12 +7,13 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/ee/}
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.gnome.org/
 
-DEPENDS=		gnome-core-*:../../x11/gnome-core
+DEPENDS+=		gnome-core-*:../../x11/gnome-core
 
-GNU_CONFIGURE=		yes
-USE_X11BASE=		yes
-USE_GMAKE=		yes
-USE_PKGLIBTOOL=		yes
+GNU_CONFIGURE=		# defined
+USE_X11BASE=		# defined
+USE_GMAKE=		# defined
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 LOCALSTATEDIR=		/var/gnome
 
