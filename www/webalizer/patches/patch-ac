@@ -1,16 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2000/10/18 16:41:26 mjl Exp $
+$NetBSD: patch-ac,v 1.5 2001/12/01 15:08:03 jlam Exp $
 
---- webalizer.1.orig	Wed Oct 18 18:13:37 2000
-+++ webalizer.1	Wed Oct 18 18:14:46 2000
-@@ -45,8 +45,9 @@
+--- webalizer.1.orig	Thu Sep 28 23:51:42 2000
++++ webalizer.1
+@@ -45,7 +45,7 @@
  A default configuration file is scanned for.  A file named
  \fIwebalizer.conf\fP is searched for in the current directory, and if
  found, it's configuration data is parsed.  If the file is not
 -present in the current directory,  the file \fI/etc/webalizer.conf\fP
--is searched for and, if found, is used instead.
-+present in the current directory,  the files \fI@@prefix@@/etc/webalizer.conf\fP
-+and then \fI/etc/webalizer.conf\fP
-+are searched for and, if found, are used instead.
++present in the current directory,  the file \fI@PKG_SYSCONFDIR@/webalizer.conf\fP
+ is searched for and, if found, is used instead.
  .TP 8
  .B o
- Any command line arguments given to the program are parsed.  This
