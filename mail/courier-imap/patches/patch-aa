@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2002/01/22 22:08:53 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2002/01/23 02:22:21 jlam Exp $
 
 --- Makefile.in.orig	Fri Jan 18 22:19:33 2002
 +++ Makefile.in
@@ -19,7 +19,11 @@ $NetBSD: patch-aa,v 1.6 2002/01/22 22:08:53 jlam Exp $
 +sbin_PROGRAMS = imaplogin pop3login
 +man_MANS = couriertcpd.1 courier-imapd.8 mkimapdcert.8 mkpop3dcert.8
  
-@@ -112,3 +112,3 @@
+@@ -109,6 +109,6 @@
+ sysconf_DATA = imapd.dist imapd-ssl.dist pop3d.dist pop3d-ssl.dist \
+-	imapd.cnf pop3d.cnf quotawarnmsg.example
++	imapd.cnf pop3d.cnf
+ 
  libexec_SCRIPTS = imapd.rc imapd-ssl.rc pop3d.rc pop3d-ssl.rc
 -libexec_PROGRAMS = makedatprog couriertcpd deliverquota logger
 +libexec_PROGRAMS = couriertcpd logger
@@ -50,7 +54,11 @@ $NetBSD: patch-aa,v 1.6 2002/01/22 22:08:53 jlam Exp $
 -	for f in mkimapdcert mkpop3dcert vchkpw2userdb makeuserdb pw2userdb userdb ; \
 +	for f in mkimapdcert mkpop3dcert ; \
  		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
-@@ -842,30 +831,6 @@
+@@ -837,3 +826,2 @@
+ install-exec-hook:
+-	chmod 444 $(DESTDIR)$(sysconfdir)/quotawarnmsg.example
+ 
+@@ -842,30 +830,6 @@
  install-data-local: install-man
 -	for f in `cat authlib/modulelist ; . authlib/authdaemonrc ; echo $$authmodulelist ` ; do \
 -		test "$$f" = "authpam" || continue ; \
