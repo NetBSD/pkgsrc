@@ -1,19 +1,40 @@
-$NetBSD: patch-ad,v 1.4 2002/09/02 11:43:39 abs Exp $
+$NetBSD: patch-ad,v 1.5 2002/09/30 09:25:24 abs Exp $
 
---- etc/atalkd/main.c.orig	Wed Mar 13 20:50:26 2002
-+++ etc/atalkd/main.c
-@@ -274,12 +274,12 @@ void as_timer(void)
- 		    syslog( LOG_INFO, "config for no router" );
- 		      
- 		    if ( iface->i_flags & IFACE_PHASE2 ) {
--			iface->i_rt->rt_firstnet = 0;
-+			iface->i_rt->rt_firstnet = htons(1);
- 			iface->i_rt->rt_lastnet = htons( STARTUP_LASTNET );
- 			setaddr( iface, IFACE_PHASE2,
- 				iface->i_addr.sat_addr.s_net,
- 				iface->i_addr.sat_addr.s_node,
--				0, htons( STARTUP_LASTNET ));
-+				htons(1), htons( STARTUP_LASTNET ));
- 		    }
- 		    if ( looproute( iface, RTMP_ADD ) ) { /* -1 or 1 */
- 			syslog( LOG_ERR,
+--- include/atalk/paths.h.orig	Wed Sep 25 18:36:24 2002
++++ include/atalk/paths.h
+@@ -16,7 +16,7 @@
+ 
+ /* lock file path. this should be re-organized a bit. */
+ #if ! defined (_PATH_LOCKDIR)
+-#  if defined (FHS_COMPATIBILITY)
++#  if defined (FHS_COMPATIBILITY) || defined (__NetBSD__)
+ #    define _PATH_LOCKDIR	"/var/run/"
+ #  elif defined (BSD4_4)
+ #    ifdef MACOSX_SERVER
+@@ -51,7 +51,7 @@
+  */
+ #define _PATH_ATALKDEBUG	"/tmp/atalkd.debug"
+ #define _PATH_ATALKDTMP		"atalkd.tmp"
+-#ifdef FHS_COMPATIBILITY
++#if defined (FHS_COMPATIBILITY) || defined (__NetBSD__)
+ #  define _PATH_ATALKDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"atalkd.pid")
+ #else
+ #  define _PATH_ATALKDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"atalkd")
+@@ -61,7 +61,7 @@
+  * psorder paths
+  */
+ #define _PATH_TMPPAGEORDER	"/tmp/psorderXXXXXX"
+-#ifdef FHS_COMPATIBILITY
++#if defined (FHS_COMPATIBILITY) || defined (__NetBSD__)
+ #  define _PATH_PAPDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"papd.pid")
+ #else
+ #  define _PATH_PAPDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"papd")
+@@ -71,7 +71,7 @@
+  * afpd paths
+  */
+ #define _PATH_AFPTKT		"/tmp/AFPtktXXXXXX"
+-#ifdef FHS_COMPATIBILITY
++#if defined (FHS_COMPATIBILITY) || defined (__NetBSD__)
+ #  define _PATH_AFPDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"afpd.pid")
+ #else
+ #  define _PATH_AFPDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"afpd")

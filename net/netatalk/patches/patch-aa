@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2002/09/02 11:43:38 abs Exp $
+$NetBSD: patch-aa,v 1.6 2002/09/30 09:25:23 abs Exp $
 
---- configure.orig	Wed Mar 27 22:20:55 2002
+--- configure.orig	Sun Sep  1 17:50:59 2002
 +++ configure
-@@ -8267,7 +8267,7 @@ if test "${with_pkgconfdir+set}" = set; 
- fi
+@@ -12460,7 +12460,7 @@ if test "${with_pkgconfdir+set}" = set; 
  
+ fi;
  
 -	NLSDIR="${PKGCONFDIR}/nls"
 +	NLSDIR="${prefix}/share/netatalk/nls"
  
- 	# Check whether --with-nls-dir or --without-nls-dir was given.
- if test "${with_nls_dir+set}" = set; then
+ 
+ # Check whether --with-nls-dir or --without-nls-dir was given.

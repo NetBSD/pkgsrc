@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.5 2002/09/02 11:52:58 abs Exp $
+$NetBSD: distinfo,v 1.6 2002/09/30 09:25:22 abs Exp $
 
-SHA1 (netatalk-1.5.3.1.tar.gz) = 584fc2329559138d05ee5da985837e298b027cd9
-Size (netatalk-1.5.3.1.tar.gz) = 790547 bytes
-SHA1 (patch-aa) = 546ada3aaa44e396a049972573b6743b4f5dd6c7
-SHA1 (patch-ab) = b83b7dc303ae5958a726d124ca3539e02527607b
-SHA1 (patch-ac) = c7d8a724db0ad149d3816d0555328726f6701d81
-SHA1 (patch-ad) = 2eb551644d08da9e59d675d1a61296f21ad69d90
-SHA1 (patch-ae) = 9fa2f74e1e33f011724125d85b5e40c2300536b9
-SHA1 (patch-af) = 9bae8aef01e7b23fb26c9deddc53386b294d1e1c
+SHA1 (netatalk-1.5.5.tar.gz) = 3d4def4231f1630fb596d7f8c8ca70c7dc661b9a
+Size (netatalk-1.5.5.tar.gz) = 835649 bytes
+SHA1 (patch-aa) = 0d533245bc01003ecfa4e6b5c6403a82387aa2c4
+SHA1 (patch-ab) = 0921842982de335732e8c0618b66caa27ee9f6fb
+SHA1 (patch-ac) = 2eb551644d08da9e59d675d1a61296f21ad69d90
+SHA1 (patch-ad) = 311d00d165688d4baa1365ba6c4147bd6293f3d8
+SHA1 (patch-ae) = 9bae8aef01e7b23fb26c9deddc53386b294d1e1c
