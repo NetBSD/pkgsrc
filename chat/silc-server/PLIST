@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/02/05 20:14:05 skrll Exp $
-etc/rc.d/silcd
+@comment $NetBSD: PLIST,v 1.14 2004/04/23 22:07:52 reed Exp $
 lib/silcd/libsilc-1.0.so.3
 lib/silcd/libsilc-1.0.so.3.0
 lib/silcd/libsilc.la

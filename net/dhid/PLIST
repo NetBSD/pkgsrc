@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:55 reed Exp $
 sbin/dhid
 sbin/dhid-genkeys
-etc/rc.d/dhid
 share/doc/dhid/COPYRIGHT
 share/doc/dhid/README
 share/doc/dhid/AUTHORS

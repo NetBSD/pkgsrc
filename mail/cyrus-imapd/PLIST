@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/03/28 21:05:04 atatat Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/23 22:07:54 reed Exp $
 bin/imtest
 bin/installsieve
 bin/sieveshell
@@ -18,7 +18,6 @@ cyrus/bin/pop3d
 cyrus/bin/quota
 cyrus/bin/reconstruct
 cyrus/bin/timsieved
-etc/rc.d/cyrus
 include/cyrus/acap.h
 include/cyrus/acl.h
 include/cyrus/assert.h

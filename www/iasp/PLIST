@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/02 06:40:33 jlam Exp $
-etc/rc.d/iasp
-etc/rc.d/iasp_admin
+@comment $NetBSD: PLIST,v 1.3 2004/04/23 22:07:59 reed Exp $
 ${IASP}/README_EN
 ${IASP}/WEB-INF/web.xml
 ${IASP}/admin/JSManager.jar

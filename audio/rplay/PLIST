@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/02 18:06:57 seb Exp $
-etc/rc.d/rplayd
+@comment $NetBSD: PLIST,v 1.6 2004/04/23 22:07:52 reed Exp $
 bin/rplay
 bin/rptp
 include/rplay.h

@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/04 04:24:49 grant Exp $
-etc/rc.d/exim
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:54 reed Exp $
 man/man8/exim.8
 sbin/exicyclog
 sbin/exigrep

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/16 10:25:21 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/23 22:07:53 reed Exp $
 bin/isdcat
 bin/isdcfgck
 bin/isdclient
@@ -7,7 +7,6 @@ bin/isdeat
 bin/isdecho
 bin/isdlp
 bin/isdlink
-etc/rc.d/isect
 include/isdio.h
 include/isect_io_IsdIO.h
 include/libisect.h

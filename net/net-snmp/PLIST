@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/09/12 12:07:18 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/23 22:07:56 reed Exp $
 bin/encode_keychange
 bin/fixproc
 bin/ipf-mod.pl
@@ -25,8 +25,6 @@ bin/snmpvacm
 bin/snmpwalk
 bin/tkmib
 bin/traptoemail
-etc/rc.d/snmpd
-etc/rc.d/snmptrapd
 include/net-snmp/agent/agent_callbacks.h
 include/net-snmp/agent/agent_handler.h
 include/net-snmp/agent/agent_index.h
