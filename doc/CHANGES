@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7402 2004/10/11 13:40:38 tv Exp $
+$NetBSD: CHANGES,v 1.7403 2004/10/11 15:57:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4612,3 +4612,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Lchown-0.07 [kim 2004-10-11]
 	Updated libksba to 0.9.7 [shannonjr 2004-10-11]
 	Added win32-jdk-0.1 [tv 2004-10-11]
+	Added ccze-0.2.1 [minskim 2004-10-11]
