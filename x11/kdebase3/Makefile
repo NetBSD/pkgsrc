@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/03/09 11:33:08 markd Exp $
+# $NetBSD: Makefile,v 1.44 2004/03/14 00:38:19 wiz Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -83,7 +83,7 @@ PLIST_SUBST+=		FONTENC_SUFFIX="so"
 .if exists(${X11BASE}/include/X11/extensions/Xrandr.h)
 HAVE_RANDR!=		${GREP} XRRSetScreenConfigAndRateX  ${X11BASE}/include/X11/extensions/Xrandr.h; ${ECHO}
 .endif
-.if !empty(HAVE_RANDR)
+.if defined(HAVE_RANDR) && !empty(HAVE_RANDR)
 PLIST_SUBST+=		HAVE_RANDR=""
 .else
 PLIST_SUBST+=		HAVE_RANDR="@comment "
