@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.274 2002/12/10 15:02:24 schmonz Exp $
+# $NetBSD: Packages.txt,v 1.275 2002/12/27 06:53:42 uebayasi Exp $
 ###########################################################################
 
 			==========================
@@ -1866,7 +1866,7 @@ directly by typing:
 If you even decide to ignore NO_{SRC,BIN}_ON_{FTP,CDROM}, then you can 
 get all & everything by typing
 
-	% make fetch NO_IGNORE=yes
+	% make fetch NO_SKIP=yes
 
 
  10.7 How to fetch files from behind a firewall
