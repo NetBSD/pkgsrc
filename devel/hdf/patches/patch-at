@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.1 2001/04/19 00:56:34 jtb Exp $
+$NetBSD: patch-at,v 1.2 2002/05/03 23:14:53 jtb Exp $
 
 --- mfhdf/libsrc/xdrposix.c.orig	Thu Apr 19 00:27:10 2001
 +++ mfhdf/libsrc/xdrposix.c
@@ -16,12 +16,3 @@ $NetBSD: patch-at,v 1.1 2001/04/19 00:56:34 jtb Exp $
  #ifdef CRAY
  #   undef  NETLONG
  #   define NETLONG  long
-@@ -58,7 +65,7 @@
- #include "local_nc.h" /* prototypes for NCadvis, nc_error */
- 		      /* also obtains <stdio.h>, <rpc/types.h>, &
- 		       * <rpc/xdr.h> */
--#include "netcdf.h" /* NC_ */
-+#include "netcdf_hdf.h" /* NC_ */
- #include "mfhdf.h"
- 
- #if !(defined DOS_FS || defined(macintosh) || defined (SYMANTEC_C))
