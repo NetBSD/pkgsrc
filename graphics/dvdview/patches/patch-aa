@@ -1,23 +1,15 @@
-$NetBSD: patch-aa,v 1.2 2001/04/23 20:28:05 tron Exp $
+$NetBSD: patch-aa,v 1.3 2003/02/13 19:04:48 drochner Exp $
 
---- ../ulib/Makefile.in.orig	Mon Sep 25 15:30:05 2000
-+++ ../ulib/Makefile.in	Mon Apr 23 22:25:49 2001
-@@ -41,13 +41,13 @@
+--- src/guis/shell/main_shell.cc.orig	Tue Feb  4 13:01:17 2003
++++ src/guis/shell/main_shell.cc	Tue Feb  4 13:07:30 2003
+@@ -463,8 +463,10 @@
+ #if HAVE_X11
+   outputobject = &videosink_x11;
  
- CC = @CC@
- AR = ar
--SHELL = /bin/bash
-+#SHELL = /bin/bash
- PROFILEFLAGS =
- DEBUGFLAGS = -g
--CFLAGS = $(PROFILEFLAGS) $(DEBUGFLAGS)
--OPTIMIZE = -O99
--INCLUDES = -I/usr/include/g++ -I$(ULIBROOT) -I. # -I$(QTROOT)/include
--LNPATH   = -L/usr/X11R6/lib # -L$(QTROOT)/lib
-+#CFLAGS = $(PROFILEFLAGS) $(DEBUGFLAGS)
-+#OPTIMIZE = -O99
-+INCLUDES = -I$(X11BASE)/include -I$(ULIBROOT) -I. # -I$(QTROOT)/include
-+LNPATH   = -L$(X11BASE)/lib # -L$(QTROOT)/lib
- CPPFLAGS = $(INCLUDES)
- LNFLAGS  = $(LNPATH) $(PROFILEFLAGS) $(DEBUGFLAGS)
- DEFS = # -DNDEBUG # -DLINUX_VCD # -DUSE_MMX
++#if 0
+   if (!default_x11server.AskDisplay())
+     { cerr << "Cannot open display.\n"; throw "no display"; }
++#endif
+ #endif
+   resizer = &pp_resize;
+ #endif
