@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/02/20 19:26:04 soren Exp $
+# $NetBSD: Makefile,v 1.12 2000/02/20 20:10:12 soren Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
 
 PKGNAME=	acroread-4.05
@@ -47,6 +47,8 @@ post-patch:
 
 PLIST_SRC=	${WRKDIR}/PLIST-src
 
+NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
+
 pre-install:
 	${SED} -e 's|@PLATFORM@|${PLATFORM}|g' ${PKGDIR}/PLIST > ${PLIST_SRC}
 
@@ -58,8 +60,12 @@ post-install:
 	@cd ${PREFIX}/Acrobat4/bin && \
 	  ${PATCH} --quiet < ${FILESDIR}/acroread.diff && \
 	  ${INSTALL_SCRIPT} ${PREFIX}/Acrobat4/bin/acroread \
-	     ${PREFIX}/bin/acroread4 && ${RM} acroread.orig
-	@chmod +x ${PREFIX}/bin/acroread4
+	     ${PREFIX}/bin/acroread && ${RM} acroread.orig
+	${CHMOD} +x ${PREFIX}/bin/acroread
+	${LN} -f ${PREFIX}/bin/acroread ${PREFIX}/bin/acroread4
+	${INSTALL_PROGRAM_DIR} ${NS_PLUGINS_DIR}
+	${INSTALL_PROGRAM} ${PREFIX}/Acrobat4/Browsers/${PLATFORM}/nppdf.so \
+		${NS_PLUGINS_DIR}
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${PREFIX}/Acrobat4/Reader/License.pdf"
 
