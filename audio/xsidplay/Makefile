@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/06/20 21:13:59 pooka Exp $
+# $NetBSD: Makefile,v 1.9 2000/07/10 15:08:14 agc Exp $
 #
 
 DISTNAME=	xsidplay-1_3_9
@@ -20,13 +20,13 @@ USE_GMAKE=	yes
 
 CONFIGURE_ARGS+= --with-sidplay-includes=${LOCALBASE}/include \
 		--with-sidplay-library=${LOCALBASE}/lib \
-		--with-qt-dir=${LOCALBASE}/qt1/lib \
+		--with-qt-dir=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1/lib \
 		--with-qt-dir=${X11BASE}/qt1
 
 LDFLAGS+=	-Wl,-R${LOCALBASE}/qt1/lib -Wl,-R${X11BASE}/qt1/lib
 CONFIGURE_ENV+=	LDFLAGS="${LDFLAGS}"
 
-CONFIGURE_ENV+=	"MOC=${PREFIX}/qt1/bin/moc"
+CONFIGURE_ENV+=	"MOC=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1/bin/moc"
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/src/xsidplay ${PREFIX}/bin
