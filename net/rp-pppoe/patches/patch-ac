@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2000/07/11 21:32:45 tron Exp $
+
+--- adsl-setup.in.orig	Fri May 26 01:16:21 2000
++++ adsl-setup.in	Tue Jul 11 23:30:35 2000
+@@ -16,7 +16,7 @@
+ 
+ # Paths to programs
+ IFCONFIG=/sbin/ifconfig
+-PPPD=/usr/sbin/pppd
++PPPD=@sbindir@/pppd
+ PPPOE=@sbindir@/pppoe
+ LOGGER=/usr/bin/logger
+ 
