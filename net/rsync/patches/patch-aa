@@ -1,25 +1,20 @@
---- rsync.c	1998/01/22 13:23:54	1.1
-+++ rsync.c	1998/01/22 13:28:29
-@@ -756,17 +756,11 @@
-       } else {
- 	      sprintf(fnametmp,"%s.XXXXXX",fname);
-       }
--      if (NULL == mktemp(fnametmp)) {
--	fprintf(FERROR,"mktemp %s failed\n",fnametmp);
--	receive_data(f_in,buf,-1,NULL);
--	if (buf) unmap_file(buf);
--	close(fd1);
--	continue;
--      }
--      fd2 = open(fnametmp,O_WRONLY|O_CREAT|O_EXCL,file->mode);
--      if (fd2 == -1 && relative_paths && errno == ENOENT && 
--	  create_directory_path(fnametmp) == 0) {
--	      fd2 = open(fnametmp,O_WRONLY|O_CREAT|O_EXCL,file->mode);
-+      if ((fd2 = mkstemp(fnametmp)) < 0) {
-+        if (relative_paths && errno == ENOENT && 
-+	    create_directory_path(fnametmp) == 0) {
-+	        fd2 = open(fnametmp,O_WRONLY|O_CREAT|O_EXCL,file->mode);
-+        }
-       }
-       if (fd2 == -1) {
- 	fprintf(FERROR,"open %s : %s\n",fnametmp,strerror(errno));
+--- rsync.c.orig	Thu Jun 18 09:27:56 1998
++++ rsync.c	Sat Jul  4 05:49:43 1998
+@@ -879,6 +879,9 @@
+ 			continue;
+ 		}
+ 
++#ifdef HAVE_MKSTEMP
++		fd2 = mkstemp(fnametmp);
++#else
+ 		if (NULL == do_mktemp(fnametmp)) {
+ 			rprintf(FERROR,"mktemp %s failed\n",fnametmp);
+ 			receive_data(f_in,buf,-1,NULL);
+@@ -894,6 +897,7 @@
+ 		   this out */
+ 		fd2 = do_open(fnametmp,O_WRONLY|O_CREAT|O_EXCL,
+ 			      file->mode & ACCESSPERMS);
++#endif
+ 
+ 		if (fd2 == -1 && relative_paths && errno == ENOENT && 
+ 		    create_directory_path(fnametmp) == 0) {
