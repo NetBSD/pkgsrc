@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.840 2003/09/09 12:02:25 recht Exp $
+$NetBSD: TODO,v 1.841 2003/09/09 13:11:00 recht Exp $
 
 Suggested new packages
 ======================
@@ -131,7 +131,6 @@ Suggested package updates
 	o gliblib-1.2.3 [pkg/21776]
 	o global-4.6
 	o gnats-4.0
-	o gnome-python-2.0.0 [pkgsrc-wip]
 	o gnomeicu-0.99
 	o gnucash-1.8.5
 	o gnuchess-5.06
