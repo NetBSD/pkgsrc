@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 1999/05/03 19:51:26 tv Exp $
+
+To add this to your Apache server, you will need to add the following
+lines to the appropriate place in your httpd.conf file:
+
+    LoadModule php3_module lib/httpd/mod_php3.so
+
+    AddModule mod_php3.c
+    AddType application/x-httpd-php3 .php3
+
+===========================================================================
