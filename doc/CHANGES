@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7115 2004/09/07 17:13:20 jschauma Exp $
+$NetBSD: CHANGES,v 1.7116 2004/09/07 19:46:21 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4213,3 +4213,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-acme to 2.4.2nb7 [minskim 2004-09-07]
 	Updated libsidplay to 1.36.59 [wiz 2004-09-07]
 	Updated GridSim to 3.0.2 [jschauma 2004-09-07]
+	Updated apache to 2.0.50nb1 [adrianp 2004-09-07]
