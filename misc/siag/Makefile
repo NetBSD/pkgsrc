@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/08/25 13:37:36 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/08/29 21:50:21 jlam Exp $
 
 DISTNAME=       siag-3.1.20
 CATEGORIES=     misc textproc math
@@ -9,7 +9,7 @@ HOMEPAGE=       http://www.edu.stockholm.se/siag/
 
 DEPENDS+=	gv-3.5.8:../../print/gv
 DEPENDS+=	gnuplot-3.7:../../graphics/gnuplot
-DEPENDS+=	guile-1.3:../../lang/guile
+DEPENDS+=	guile-1.3.2:../../lang/guile
 DEPENDS+=	ncurses-4.2:../../devel/ncurses
 
 CONFIGURE_ARGS=	--with-x --with-guile --includedir=${PREFIX}/include

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/08/24 14:24:26 agc Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/29 21:50:20 jlam Exp $
 #
 
 DISTNAME=		cassowary-0.50
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.cs.washington.edu/research/constraints/cassowary/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.washington.edu/research/constraints/cassowary/
 
-DEPENDS+=		guile-1.3:../../lang/guile
+DEPENDS+=		guile-1.3.2:../../lang/guile
 BUILD_DEPENDS+=		${LOCALBASE}/bin/bison:../../devel/bison
 
 GNU_CONFIGURE=		yes
