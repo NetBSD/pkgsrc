@@ -4,7 +4,7 @@
 # Date created:         18 Mar 1998
 # Whom:                 cjs@netbsd.org
 #
-# $NetBSD: Makefile,v 1.4 1998/03/18 19:16:27 cjs Exp $
+# $NetBSD: Makefile,v 1.5 1998/03/24 20:34:57 cjs Exp $
 # FreeBSD Id: Makefile,v 1.45 1998/02/25 06:23:55 asami Exp
 #
 
@@ -63,8 +63,9 @@ do-install:
 		${HTTP_ROOT}/icons ${HTTP_ROOT}/cgi-bin ${HTTP_ROOT}/logs
 	${INSTALL_PROGRAM} ${WRKSRC}/httpd ${PREFIX}/sbin
 	cd ${WRKSRC}/support && \
-		${INSTALL_PROGRAM} htdigest htpasswd dbmmanage logresolve \
-		${PREFIX}/bin
+		${INSTALL_PROGRAM} htdigest htpasswd logresolve ${PREFIX}/bin
+	cd ${WRKSRC}/support && \
+		${INSTALL_SCRIPT} dbmmanage ${PREFIX}/bin
 	cd ${WRKSRC}/support && \
 		${INSTALL_SCRIPT} rotatelogs apachectl log_server_status \
 		${PREFIX}/sbin
