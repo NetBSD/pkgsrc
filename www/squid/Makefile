@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 1999/11/12 22:56:31 tron Exp $
+# $NetBSD: Makefile,v 1.23 2000/02/27 23:11:12 tron Exp $
 
-DISTNAME=	squid-2.2.STABLE5-src
-PKGNAME=	squid-2.2s5
+DISTNAME=	squid-2.3.STABLE1-src
+PKGNAME=	squid-2.3s1
 CATEGORIES=	www
 MASTER_SITES=  \
 	ftp://squid.nlanr.net/pub/squid-2/STABLE/ \
@@ -32,9 +32,11 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 .include "../../mk/bsd.prefs.mk"
 # Configuration options which can be overwritten by the user.
 SQUID_CONFIGURE_ARGS?=	--enable-cachemgr-hostname=localhost \
+			--enable-delay-pool \
 			--enable-icmp \
 			--enable-ipf-transparent \
-			--enable-snmp
+			--enable-snmp \
+			--enable-underscores
 SQUID_HTTP_PORT?=	3128
 SQUID_ICP_PORT?=	3130
 
