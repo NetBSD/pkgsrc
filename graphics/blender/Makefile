@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/08/03 14:02:00 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.14 2002/09/25 12:53:20 dmcmahill Exp $
 
 PKGNAME=	blender-2.11
 PKGREVISION=	5
@@ -20,6 +20,8 @@ CHECK_SHLIBS=	NO
 # To be updated as other platforms PLIST will be built
 ONLY_FOR_PLATFORM= *-*-i386 *-*-powerpc *-*-sparc
 
+.include "../../mk/bsd.prefs.mk"
+
 .if (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/linux/lib/ld.so.1)
 IGNORE=		"${PKGNAME} requires Linux libraries - see compat_linux(8)"
@@ -32,10 +34,13 @@ DISTNAME=	blender2.11-linux-glibc2.1.2-i386-static
 PLIST_ARCH=	linux-i386
 #
 .elif (${MACHINE_ARCH} == "sparc")
+.if ${OPSYS} == "NetBSD"
 .if !exists(/emul/svr4/usr/lib/ld.so)
 IGNORE=		"${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
 .endif
+.endif
 DISTNAME=	blender2.11-solaris-2.6-sparc
+PLIST_ARCH=	solaris-sparc
 EXTRACT_SUFX=	.tar.Z
 #
 .elif (${MACHINE_ARCH} == "powerpc")
