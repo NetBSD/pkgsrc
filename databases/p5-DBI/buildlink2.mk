@@ -1,8 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/09/20 00:43:33 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/03/12 22:01:08 heinz Exp $
 
 .if !defined(P5_DBI_BUILDLINK2_MK)
 P5_DBI_BUILDLINK2_MK=	# defined
 
+PERL5_REQD+=			5.6.0
 BUILDLINK_PACKAGES+=		p5-DBI
 BUILDLINK_DEPENDS.p5-DBI?=	p5-DBI>=1.30
 BUILDLINK_PKGSRCDIR.p5-DBI?=	../../databases/p5-DBI
