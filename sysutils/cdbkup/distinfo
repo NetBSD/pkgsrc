@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/07/11 11:37:52 tron Exp $
+
+SHA1 (cdbkup-1.0.tar.gz) = 78d02726eaa8e55138639b4b6a0164251a3d0766
+Size (cdbkup-1.0.tar.gz) = 38252 bytes
+SHA1 (patch-aa) = 96084141e52169a1759891d12f77ec6111c4ee78
