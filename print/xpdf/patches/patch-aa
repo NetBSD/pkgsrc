@@ -1,26 +1,25 @@
-$NetBSD: patch-aa,v 1.2 2001/10/30 06:32:21 simonb Exp $
+$NetBSD: patch-aa,v 1.3 2002/02/03 05:28:51 mjl Exp $
 
-Avoid a toolchain bug on mipsel noted in NetBSD-1.4.2/pmax
-
---- xpdf/Makefile.in.orig	Sat Oct 27 03:52:54 2001
-+++ xpdf/Makefile.in	Tue Oct 30 17:23:05 2001
-@@ -20,6 +20,9 @@
+--- xpdf/Makefile.in.orig	Sat Feb  2 00:15:45 2002
++++ xpdf/Makefile.in	Sun Feb  3 06:15:00 2002
+@@ -21,6 +21,8 @@
  
- CXXFLAGS = @CXXFLAGS@ @DEFS@ @OPTIONS@ -I$(GOOSRCDIR) -I$(LTKSRCDIR) -I$(srcdir) @X_CFLAGS@ @Xpm_CFLAGS@ @t1_CFLAGS@ @freetype_CFLAGS@ @freetype2_CFLAGS@ -DSYSTEM_XPDFRC=\"$(sysconfdir)/xpdfrc\"
- 
-+CXXFLAGS_NOOPT!=	${ECHO} ${CXXFLAGS} | ${SED} 's/-O[0-9]*//g'
-+
-+
  LDFLAGS = @LDFLAGS@
  
++CXXFLAGS_NOOPT!= ${ECHO} ${CXXFLAGS} | ${SED} 's/-O[0-9]*//g'
++
  XLIBS = @Xpm_LIBS@ @t1_LIBS@ @freetype_LIBS@ @freetype2_LIBS@ @X_PRE_LIBS@ @X_LIBS@ -lX11 @X_EXTRA_LIBS@
-@@ -268,6 +271,9 @@
-  Link.h GfxState.h Function.h GfxFont.h FontEncoding.h FontFile.h \
-  Error.h config.h Params.h TextOutputDev.h OutputDev.h XOutputDev.h \
-  T1Font.h SFont.h TTFont.h XOutputFontInfo.h
+ 
+ OTHERLIBS = @LIBS@ @libpaper_LIBS@
+@@ -36,6 +38,11 @@
+ 
+ .cc.o:
+ 	$(CXX) $(CXXFLAGS) -c $<
++
 +.if (${MACHINE_ARCH} == "mipsel")
++XOutputDev.o:	XOutputDev.cc
 +	${CXX}  ${CXXFLAGS_NOOPT} -c XOutputDev.cc
 +.endif
- XRef.o: ./XRef.cc ../goo/gmem.h Object.h ../goo/gtypes.h \
-  ../goo/GString.h Array.h Dict.h Stream.h Lexer.h Parser.h Decrypt.h \
-  Error.h config.h XRef.h
+ 
+ #------------------------------------------------------------------------
+ 

@@ -1,14 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:28:14 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/03 05:28:51 mjl Exp $
 bin/xpdf
+bin/pdffonts
 bin/pdftops
 bin/pdftotext
 bin/pdfinfo
 bin/pdftopbm
 bin/pdfimages
+etc/xpdfrc
 man/man1/xpdf.1
+man/man1/pdffonts.1
 man/man1/pdftops.1
 man/man1/pdftotext.1
 man/man1/pdfinfo.1
 man/man1/pdftopbm.1
 man/man1/pdfimages.1
+man/man5/xpdfrc.5
 lib/X11/app-defaults/Xpdf
