@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/11/29 19:46:11 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/10/03 00:30:17 wiz Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 CATEGORIES=		games x11
@@ -9,10 +9,10 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 COMMENT=		Tetris-like puzzle game
 
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		libmikmod>=3.1.9:../../audio/libmikmod
 
+AUTOMAKE_REQD=		1.4
 USE_GMAKE=		YES
 USE_X11BASE=		YES
 USE_XPM=		YES
@@ -26,9 +26,11 @@ CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="${GNOME_CONFIG}"
 GNOME_CONFIG=		${WRKDIR}/gnome-config
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoheader && ${LOCALBASE}/bin/automake --gnu && ${LOCALBASE}/bin/autoreconf --force
+	cd ${WRKSRC} && ${AUTOHEADER} && ${AUTOMAKE} --gnu && \
+		${AUTORECONF} --force
 	${SED} -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/gnome-config \
 		> ${GNOME_CONFIG}
 	${CHMOD} +x ${GNOME_CONFIG}
 
+.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
