@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/03 18:49:52 reed Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/25 19:15:44 minskim Exp $
 #
 
 DISTNAME=	gpa-0.7.0
@@ -11,9 +11,10 @@ HOMEPAGE=	http://www.gnupg.org/gpa.html
 COMMENT=	GUI frontend to gnupg
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 
-.include "../../security/gpgme/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../security/gpgme/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
