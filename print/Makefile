@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2002/08/01 11:59:43 grant Exp $
+# $NetBSD: Makefile,v 1.81 2002/08/06 14:07:20 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -73,6 +73,15 @@ SUBDIR+=	texfamily
 SUBDIR+=	texfamily-share
 SUBDIR+=	transfig
 SUBDIR+=	xpdf
+SUBDIR+=	xpdf-chinese-simplified
+SUBDIR+=	xpdf-chinese-traditional
+SUBDIR+=	xpdf-cyrillic
+SUBDIR+=	xpdf-greek
+SUBDIR+=	xpdf-japanese
+SUBDIR+=	xpdf-korean
+SUBDIR+=	xpdf-latin2
+SUBDIR+=	xpdf-thai
+SUBDIR+=	xpdf-turkish
 SUBDIR+=	xpp
 SUBDIR+=	yup
 
