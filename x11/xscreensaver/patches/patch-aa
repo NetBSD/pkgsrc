@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.19 2002/04/06 11:16:43 wiz Exp $
+$NetBSD: patch-aa,v 1.20 2002/04/09 22:50:02 jlam Exp $
 
---- configure.orig	Tue Mar 19 00:42:35 2002
+--- configure.orig	Mon Mar 18 18:42:35 2002
 +++ configure
 @@ -1638,7 +1638,7 @@
  # implement the "install-strip" target properly (strip executables,
@@ -29,7 +29,23 @@ $NetBSD: patch-aa,v 1.19 2002/04/06 11:16:43 wiz Exp $
       if test -d $d; then
         X_CFLAGS="-I$d $X_CFLAGS"
         echo "$ac_t""$d" 1>&6
-@@ -10745,7 +10745,7 @@
+@@ -10635,15 +10635,6 @@
+ DEPEND_DEFINES=
+ 
+ 
+-if test \! -z "$includedir" ; then 
+-  INCLUDES="$INCLUDES -I$includedir"
+-fi
+-
+-if test \! -z "$libdir" ; then
+-  LDFLAGS="$LDFLAGS -L$libdir"
+-fi
+-
+-
+ PREFERRED_DEMO_PROGRAM=xscreensaver-demo-Xm
+ ALL_DEMO_PROGRAMS=
+ if test "$have_motif" = yes; then
+@@ -10745,7 +10736,7 @@
    GTK_ICONDIR='$(GNOME_DATADIR)/pixmaps'
  elif test "$have_gtk" = yes; then
    # should this be "$(prefix)/share/pixmaps"? But /usr/X11R6/share/ is wrong...
