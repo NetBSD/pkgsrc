@@ -1,0 +1,11 @@
+--- libgnome/gnome-score..orig	Thu Aug 19 21:35:44 1999
++++ libgnome/gnome-score.c	Fri Nov 19 01:04:44 1999
+@@ -26,7 +26,7 @@
+ #define NSCORES 10
+ #endif
+ 
+-#define SCORE_PATH GNOMELOCALSTATEDIR "/games"
++#define SCORE_PATH "/var/games"
+ 
+ struct command
+ {
