@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2003/07/13 13:51:44 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/18 18:04:07 jmmv Exp $
 
 DISTNAME=		dopewars-1.5.9
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/ \
 			${MASTER_SITE_SOURCEFORGE:=dopewars/} \
@@ -10,8 +10,6 @@ MASTER_SITES=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/ \
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/
 COMMENT=		Make a fortune dealing drugs on the streets of New York
-
-DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
