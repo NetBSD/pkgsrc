@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3008 2005/02/09 11:54:33 markd Exp $
+$NetBSD: TODO,v 1.3009 2005/02/09 12:34:42 markd Exp $
 
 Suggested new packages
 ======================
@@ -926,9 +926,7 @@ Suggested package updates
 	o py-mad-0.5.2
 	o py-matplotlib-0.70.1
 	o py-mysqldb-1.1.7
-	o py-numarray-1.1.1
 	o py-psycopg-1.1.18
-	o py-pytables-0.9
 	o py-qt3-base-3.13
 	o py-qt3-modules-3.13
 	o py-qt3-qscintilla-3.13

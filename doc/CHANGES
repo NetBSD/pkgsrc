@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9086 2005/02/09 11:54:33 markd Exp $
+$NetBSD: CHANGES,v 1.9087 2005/02/09 12:34:42 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -808,4 +808,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkg_chk to 1.55 [abs 2005-02-09]
 	Updated wget to 1.9.1nb5 [bouyer 2005-02-09]
 	Updated krusader to 1.51 [markd 2005-02-09]
+	Updated py-numarray to 1.1.1 [markd 2005-02-09]
+	Updated py-pytables to 0.9.1 [markd 2005-02-09]
 
