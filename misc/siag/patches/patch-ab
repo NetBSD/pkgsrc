@@ -1,0 +1,48 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/12/04 03:48:34 hubertf Exp $
+
+--- xcommon/DragAndDrop.c.BAK	Thu Dec  3 04:51:21 1998
++++ xcommon/DragAndDrop.c	Thu Dec  3 04:57:07 1998
+@@ -22,7 +22,11 @@
+ #include <X11/Xmu/WinUtil.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#ifdef __NetBSD__
++#include <machine/limits.h>
++#else
+ #include <values.h>
++#endif
+ 
+ /* Local variables */
+ static Display		*dpy;		/* current display		*/
+@@ -463,13 +467,13 @@
+ 		
+     /* Set the data */
+     AuxData = Data;
+-    AuxSize = ( Size <= MAXINT ? (int)Size : MAXINT ); 
++    AuxSize = ( Size <= INT_MAX ? (int)Size : INT_MAX ); 
+     XChangeProperty(dpy,root,DndSelection,XA_STRING,8,
+ 		    PropModeReplace,Data,AuxSize);
+     for(Size-=(unsigned long)AuxSize;Size;Size-=(unsigned long)AuxSize)
+     {
+ 	Data+=AuxSize;
+-	AuxSize = ( (Size<=(MAXINT)) ? (int)Size : (MAXINT) );
++	AuxSize = ( (Size<=(INT_MAX)) ? (int)Size : (INT_MAX) );
+ 	XChangeProperty(dpy,root,DndSelection,XA_STRING,8,
+ 			PropModeAppend,Data,AuxSize);
+     }
+@@ -477,13 +481,13 @@
+     /* Set the data for old DND version */
+     Size = BackSize;
+     AuxData = Data;
+-    AuxSize = ( Size <= MAXINT ? (int)Size : MAXINT ); 
++    AuxSize = ( Size <= INT_MAX ? (int)Size : INT_MAX ); 
+     XChangeProperty(dpy,root,OldDndSelection,XA_STRING,8,
+ 		    PropModeReplace,Data,AuxSize);
+     for(Size-=(unsigned long)AuxSize;Size;Size-=(unsigned long)AuxSize)
+     {
+ 	Data+=AuxSize;
+-	AuxSize = ( (Size<=(MAXINT)) ? (int)Size : (MAXINT) );
++	AuxSize = ( (Size<=(INT_MAX)) ? (int)Size : (INT_MAX) );
+ 	XChangeProperty(dpy,root,OldDndSelection,XA_STRING,8,
+ 			PropModeAppend,Data,AuxSize);
+     }

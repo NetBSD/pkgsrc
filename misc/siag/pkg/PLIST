@@ -1,0 +1,275 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/04 03:48:34 hubertf Exp $
+bin/siag
+bin/pw
+bin/egon
+man/man1/siod.1
+man/man1/siag.1
+man/man1/pw.1
+man/man1/egon.1
+man/man1/dummy_plugin.1
+share/siag/siod/docs/siod.html
+share/siag/common/docs/siaghelp
+share/siag/common/docs/COPYING.LIB
+share/siag/common/docs/Copyright
+share/siag/common/docs/credits.html
+share/siag/common/docs/embedding.html
+share/siag/common/docs/form.html
+share/siag/common/docs/interpreters.html
+share/siag/common/docs/office.html
+share/siag/common/docs/plugins.html
+share/siag/common/docs/search.html
+share/siag/common/docs/siaghelp.html
+share/siag/common/bitmaps/bold.gif
+share/siag/common/bitmaps/borders.gif
+share/siag/common/bitmaps/copyright.gif
+share/siag/common/bitmaps/egon_fg.gif
+share/siag/common/bitmaps/fld_open.gif
+share/siag/common/bitmaps/floppy3.gif
+share/siag/common/bitmaps/grid.gif
+share/siag/common/bitmaps/hcenter.gif
+share/siag/common/bitmaps/hleft.gif
+share/siag/common/bitmaps/hright.gif
+share/siag/common/bitmaps/info.gif
+share/siag/common/bitmaps/italic.gif
+share/siag/common/bitmaps/new.gif
+share/siag/common/bitmaps/next.gif
+share/siag/common/bitmaps/none.gif
+share/siag/common/bitmaps/play.gif
+share/siag/common/bitmaps/plotter.gif
+share/siag/common/bitmaps/preview.gif
+share/siag/common/bitmaps/previous.gif
+share/siag/common/bitmaps/printer.gif
+share/siag/common/bitmaps/pw_fg.gif
+share/siag/common/bitmaps/siag_fg.gif
+share/siag/common/bitmaps/sigma.gif
+share/siag/common/bitmaps/stop.gif
+share/siag/common/bitmaps/uchar.gif
+share/siag/common/bitmaps/uline.gif
+share/siag/common/bitmaps/vbottom.gif
+share/siag/common/bitmaps/vtop.gif
+share/siag/xcommon/docs/CHANGES
+share/siag/xcommon/docs/TODO
+share/siag/xcommon/docs/filesel.html
+share/siag/xcommon/form.scm
+share/siag/siag/docs/BUGS
+share/siag/siag/docs/CHANGES
+share/siag/siag/docs/COPYING
+share/siag/siag/docs/Makefile.am
+share/siag/siag/docs/README
+share/siag/siag/docs/TODO
+share/siag/siag/docs/c-expr.html
+share/siag/siag/docs/commands.html
+share/siag/siag/docs/concepts.html
+share/siag/siag/docs/fileformats.html
+share/siag/siag/docs/form.html
+share/siag/siag/docs/gnuplot.html
+share/siag/siag/docs/howto.html
+share/siag/siag/docs/intro.html
+share/siag/siag/docs/invocation.html
+share/siag/siag/docs/keys.html
+share/siag/siag/docs/mouse.html
+share/siag/siag/docs/scheme.html
+share/siag/siag/docs/scrollbars.html
+share/siag/siag/docs/siag.gif
+share/siag/siag/docs/siag.html
+share/siag/siag/docs/strings.html
+share/siag/siag/docs/toolbar.html
+share/siag/siag/data.scm
+share/siag/examples/siag/allfuncs.wk1
+share/siag/examples/siag/cheeses.siag
+share/siag/examples/siag/emprestimo.wk1
+share/siag/examples/siag/example.wk1
+share/siag/examples/siag/fibonacci-c.siag
+share/siag/examples/siag/fibonacci.siag
+share/siag/examples/siag/fonts.siag
+share/siag/examples/siag/foo.siag
+share/siag/examples/siag/foo.wk1
+share/siag/examples/siag/formtest.siag
+share/siag/examples/siag/group.siag
+share/siag/examples/siag/heaven-c.siag
+share/siag/examples/siag/heaven-guile.siag
+share/siag/examples/siag/heaven-tcl.siag
+share/siag/examples/siag/heaven.siag
+share/siag/examples/siag/hyperhelp.siag
+share/siag/examples/siag/image_plugin.siag
+share/siag/examples/siag/kalkyl.siag
+share/siag/examples/siag/mailaddr.csv
+share/siag/examples/siag/morefonts.siag
+share/siag/examples/siag/multtabl-c.siag
+share/siag/examples/siag/multtabl.siag
+share/siag/examples/siag/obras.wk1
+share/siag/examples/siag/passwd.siag
+share/siag/examples/siag/plot.siag
+share/siag/examples/siag/prestacao.wk1
+share/siag/examples/siag/property.siag
+share/siag/examples/siag/sincos.siag
+share/siag/examples/siag/strfib.siag
+share/siag/examples/siag/strings.siag
+share/siag/examples/siag/surface1.siag
+share/siag/examples/siag/surface2.siag
+share/siag/examples/siag/tables.wk1
+share/siag/examples/siag/tcltest.siag
+share/siag/examples/pw/changes.pw
+share/siag/examples/pw/chead.doc
+share/siag/examples/pw/chead.html
+share/siag/examples/pw/chead.pw
+share/siag/examples/pw/chead.rtf
+share/siag/examples/pw/chead.txt
+share/siag/examples/pw/color.pw
+share/siag/examples/pw/egon.pw
+share/siag/examples/pw/egon.rtf
+share/siag/examples/pw/morefonts.pw
+share/siag/examples/pw/newpw.pw
+share/siag/examples/pw/rtfex.rtf
+share/siag/examples/pw/rtftest.rtf
+share/siag/examples/pw/rtftest2.rtf
+share/siag/examples/pw/rtftest3.rtf
+share/siag/examples/pw/standard.bmk
+share/siag/examples/pw/styles.html
+share/siag/examples/pw/styles.pw
+share/siag/examples/pw/styles2.pw
+share/siag/examples/pw/svenska.pw
+share/siag/examples/pw/svenska.rtf
+share/siag/examples/egon/bounce.egon
+share/siag/examples/egon/ms.egon
+share/siag/examples/egon/propeller.egon
+share/siag/examples/egon/rondo.egon
+share/siag/pw/docs/BUGS
+share/siag/pw/docs/CHANGES
+share/siag/pw/docs/COPYING
+share/siag/pw/docs/TODO
+share/siag/pw/docs/commands.html
+share/siag/pw/docs/concepts.html
+share/siag/pw/docs/fileformats.html
+share/siag/pw/docs/intro.html
+share/siag/pw/docs/invocation.html
+share/siag/pw/docs/keys.html
+share/siag/pw/docs/mouse.html
+share/siag/pw/docs/pw.gif
+share/siag/pw/docs/pw.html
+share/siag/pw/docs/scheme.html
+share/siag/pw/docs/scrollbars.html
+share/siag/pw/docs/spell.html
+share/siag/pw/docs/strings.html
+share/siag/pw/docs/toolbar.html
+share/siag/egon/docs/BUGS
+share/siag/egon/docs/CHANGES
+share/siag/egon/docs/COPYING
+share/siag/egon/docs/TODO
+share/siag/egon/docs/commands.html
+share/siag/egon/docs/concepts.html
+share/siag/egon/docs/egon.gif
+share/siag/egon/docs/egon.html
+share/siag/egon/docs/fileformats.html
+share/siag/egon/docs/intro.html
+share/siag/egon/docs/invocation.html
+share/siag/egon/docs/keys.html
+share/siag/egon/docs/mouse.html
+share/siag/egon/docs/scheme.html
+share/siag/egon/docs/scrollbars.html
+share/siag/egon/docs/strings.html
+share/siag/egon/docs/toolbar.html
+lib/siag/siod/siod.scm
+lib/siag/common/bitmaps/blank.xpm
+lib/siag/common/bitmaps/bold.xpm
+lib/siag/common/bitmaps/borders.xpm
+lib/siag/common/bitmaps/copy.xpm
+lib/siag/common/bitmaps/copyright.xpm
+lib/siag/common/bitmaps/cut.xpm
+lib/siag/common/bitmaps/egon_fg.xpm
+lib/siag/common/bitmaps/fld_open.xpm
+lib/siag/common/bitmaps/floppy3.xpm
+lib/siag/common/bitmaps/grid.xpm
+lib/siag/common/bitmaps/hcenter.xpm
+lib/siag/common/bitmaps/hleft.xpm
+lib/siag/common/bitmaps/hright.xpm
+lib/siag/common/bitmaps/info.xpm
+lib/siag/common/bitmaps/italic.xpm
+lib/siag/common/bitmaps/new.xpm
+lib/siag/common/bitmaps/next.xpm
+lib/siag/common/bitmaps/none.xpm
+lib/siag/common/bitmaps/paste.xpm
+lib/siag/common/bitmaps/play.xpm
+lib/siag/common/bitmaps/plotter.xpm
+lib/siag/common/bitmaps/preview.xpm
+lib/siag/common/bitmaps/previous.xpm
+lib/siag/common/bitmaps/printer.xpm
+lib/siag/common/bitmaps/pw_fg.xpm
+lib/siag/common/bitmaps/redo.xpm
+lib/siag/common/bitmaps/siag_fg.xpm
+lib/siag/common/bitmaps/sigma.xpm
+lib/siag/common/bitmaps/sortaz.xpm
+lib/siag/common/bitmaps/sortza.xpm
+lib/siag/common/bitmaps/spell.xpm
+lib/siag/common/bitmaps/stop.xpm
+lib/siag/common/bitmaps/uchar.xpm
+lib/siag/common/bitmaps/uline.xpm
+lib/siag/common/bitmaps/undo.xpm
+lib/siag/common/bitmaps/vbottom.xpm
+lib/siag/common/bitmaps/vtop.xpm
+lib/siag/common/any2xpm
+lib/siag/common/colors.scm
+lib/siag/common/fonts.scm
+lib/siag/common/tools.scm
+lib/siag/common/dictionary.sv
+lib/siag/xcommon/StringDefs.scm
+lib/siag/xcommon/form.scm
+lib/siag/siag/123.scm
+lib/siag/siag/data.scm
+lib/siag/siag/external.load
+lib/siag/siag/external.save
+lib/siag/siag/filemgr.scm
+lib/siag/siag/find.scm
+lib/siag/siag/keytable.scm
+lib/siag/siag/mailto.scm
+lib/siag/siag/menu.scm
+lib/siag/siag/plot.scm
+lib/siag/siag/siag-http.scm
+lib/siag/siag/siag-net.scm
+lib/siag/siag/siag.scm
+lib/siag/siag/sort.scm
+lib/siag/siag/splot.scm
+lib/siag/siag/styles.scm
+lib/siag/siag/usermgr.scm
+lib/siag/pw/external.load
+lib/siag/pw/external.save
+lib/siag/pw/menu.scm
+lib/siag/pw/pw.scm
+lib/siag/pw/styles.scm
+lib/siag/egon/animator.scm
+lib/siag/egon/egon.scm
+lib/siag/egon/menu.scm
+lib/siag/egon/external.load
+lib/siag/egon/external.save
+lib/siag/plugins/dummy
+lib/siag/plugins/image
+lib/siag/plugins/hello
+lib/siag/plugins/dummy.scm
+lib/siag/plugins/plugin.scm
+@dirrm lib/siag/common/bitmaps
+@dirrm lib/siag/common
+@dirrm lib/siag/xcommon
+@dirrm lib/siag/siag
+@dirrm lib/siag/siod
+@dirrm lib/siag/pw
+@dirrm lib/siag/egon
+@dirrm lib/siag/plugins
+@dirrm lib/siag
+@dirrm share/siag/egon/docs
+@dirrm share/siag/egon
+@dirrm share/siag/pw/docs
+@dirrm share/siag/pw
+@dirrm share/siag/examples/siag
+@dirrm share/siag/examples/pw
+@dirrm share/siag/examples/egon
+@dirrm share/siag/examples
+@dirrm share/siag/siag/docs
+@dirrm share/siag/siag
+@dirrm share/siag/xcommon/docs
+@dirrm share/siag/xcommon
+@dirrm share/siag/common/docs
+@dirrm share/siag/common/bitmaps
+@dirrm share/siag/common
+@dirrm share/siag/siod/docs
+@dirrm share/siag/siod
+@dirrm share/siag
