@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.240 2002/03/24 20:35:47 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.241 2002/03/25 16:20:18 atatat Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -7,6 +7,7 @@ SUBDIR+=	9term
 SUBDIR+=	XF86Setup
 SUBDIR+=	Xaw-Xpm
 SUBDIR+=	Xaw3d
+SUBDIR+=	XaoS
 SUBDIR+=	Xbae
 SUBDIR+=	XmHTML
 SUBDIR+=	aterm
@@ -141,6 +142,7 @@ SUBDIR+=	xp
 SUBDIR+=	xpaste
 SUBDIR+=	xpenguins
 SUBDIR+=	xphoon
+SUBDIR+=	xplanet
 SUBDIR+=	xpmicons
 SUBDIR+=	xpmroot
 SUBDIR+=	xpns
