@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8280 2004/12/05 15:23:06 taca Exp $
+$NetBSD: CHANGES,v 1.8281 2004/12/05 15:25:59 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5783,3 +5783,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dgpsip to 1.35 [wiz 2004-12-05]
 	Updated python-mode to 4.54 [ben 2004-12-05]
 	Updated ruby-rexml to 3.1.2nb1 [taca 2004-12-05]
+	Updated mummer to 3.15 [cube 2004-12-05]
