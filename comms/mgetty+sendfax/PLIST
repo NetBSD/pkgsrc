@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/01/12 20:37:56 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/01/12 20:52:19 seb Exp $
 bin/autopvf
 bin/basictopvf
 bin/faxspool
@@ -53,6 +53,7 @@ man/man8/sendfax.8
 man/man8/mgetty.8
 man/man8/callback.8
 man/man8/faxrunqd.8
+man/man8/vgetty.8
 sbin/faxrunqd
 sbin/mgetty
 sbin/sendfax
