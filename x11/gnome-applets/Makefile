@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/04/14 16:15:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.41 2004/04/14 19:30:23 jmmv Exp $
 #
 
 DISTNAME=		gnome-applets-1.4.0.4
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=		xml-i18n-tools-[0-9]*:../../textproc/xml-i18n-tools
 BUILDLINK_DEPENDS.gnome-panel=	gnome-panel<2.0
 
 USE_BUILDLINK2=		YES
-USE_DIRS+=		xdg-x11-1.1
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
