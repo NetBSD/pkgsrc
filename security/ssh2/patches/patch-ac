@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2003/08/12 19:08:57 seb Exp $
+$NetBSD: patch-ac,v 1.3 2004/07/25 12:29:19 grant Exp $
 
---- apps/ssh/Makefile.in.orig	2003-06-30 12:22:38.000000000 +0000
+--- apps/ssh/Makefile.in.orig	2003-12-04 00:17:48.000000000 +1100
 +++ apps/ssh/Makefile.in
-@@ -124,7 +124,8 @@ WINCONF_OPTIONS = maintainer=sjl@ssh.com
+@@ -127,7 +127,8 @@ WINCONF_OPTIONS = maintainer=sjl@ssh.com
  etcdir = @ETCDIR@
  known_hosts_dir = $(etcdir)/knownhosts
  host_keys_dir = $(etcdir)/hostkeys
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.2 2003/08/12 19:08:57 seb Exp $
  STATIC_FLAG = @STATIC_FLAG@
  
  #
-@@ -456,6 +457,8 @@ SSH_DEFS = -DETCDIR=\"$(etcdir)\" -DSSH_
+@@ -459,6 +460,8 @@ SSH_DEFS = -DETCDIR=\"$(etcdir)\" -DSSH_
  COMPILE = $(CC) $(KERBEROS_INCS) $(INCLUDES) $(SSH_DEFS) $(DEFS) $(CPPFLAGS) $(CFLAGS) $(X_CFLAGS)
  #
  LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS)
@@ -21,7 +21,7 @@ $NetBSD: patch-ac,v 1.2 2003/08/12 19:08:57 seb Exp $
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = ../../sshconf.h
  CONFIG_CLEAN_FILES = 
-@@ -871,7 +874,7 @@ TAGS: tags-recursive $(HEADERS) $(SOURCE
+@@ -874,7 +877,7 @@ TAGS: tags-recursive $(HEADERS) $(SOURCE
  	  awk '    { files[$$0] = 1; } \
  	       END { for (i in files) print i; }'`; \
  	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.2 2003/08/12 19:08:57 seb Exp $
  
  mostlyclean-tags:
  
-@@ -1002,10 +1005,8 @@ maintainer-clean-generic clean mostlycle
+@@ -1005,10 +1008,8 @@ maintainer-clean-generic clean mostlycle
  includes:
  
  make-install-dirs:
@@ -43,7 +43,7 @@ $NetBSD: patch-ac,v 1.2 2003/08/12 19:08:57 seb Exp $
  
  generate-host-key:
  	-@if test -f $(DESTDIR)$(etcdir)/hostkey; \
-@@ -1016,36 +1017,20 @@ generate-host-key:
+@@ -1019,45 +1020,28 @@ generate-host-key:
  	  fi
  
  install-symlinks:
@@ -58,22 +58,18 @@ $NetBSD: patch-ac,v 1.2 2003/08/12 19:08:57 seb Exp $
 -	-mv -f $(DESTDIR)$(bindir)/ssh-signer $(DESTDIR)$(bindir)/ssh-signer.old
 -	-mv -f $(DESTDIR)$(bindir)/ssh-probe $(DESTDIR)$(bindir)/ssh-probe.old
 -
- 	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh2 ssh)
- 	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh-agent2 ssh-agent)
- 	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh-add2 ssh-add)
+-	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh2 ssh)
+-	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh-agent2 ssh-agent)
+-	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh-add2 ssh-add)
 -	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh-askpass2 ssh-askpass)
-+	case x"@CONFPROGRAMS@" in 					\
-+	x*askpass*)							\
-+	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh-askpass2 ssh-askpass) ;;	\
-+	esac
- 	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh-keygen2 ssh-keygen)
- 	(cd $(DESTDIR)$(bindir) && $(LN_S) scp2 scp)
- 	(cd $(DESTDIR)$(bindir) && $(LN_S) sftp2 sftp)
- 	(cd $(DESTDIR)$(bindir) && $(LN_S) sftp-server2 sftp-server)
- 	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh-signer2 ssh-signer)
- 	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh-probe2 ssh-probe)
+-	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh-keygen2 ssh-keygen)
+-	(cd $(DESTDIR)$(bindir) && $(LN_S) scp2 scp)
+-	(cd $(DESTDIR)$(bindir) && $(LN_S) sftp2 sftp)
+-	(cd $(DESTDIR)$(bindir) && $(LN_S) sftp-server2 sftp-server)
+-	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh-signer2 ssh-signer)
+-	(cd $(DESTDIR)$(bindir) && $(LN_S) ssh-probe2 ssh-probe)
 -	-mv -f $(DESTDIR)$(sbindir)/sshd $(DESTDIR)$(sbindir)/sshd.old
- 	(cd $(DESTDIR)$(sbindir) && $(LN_S) sshd2 sshd)
+-	(cd $(DESTDIR)$(sbindir) && $(LN_S) sshd2 sshd)
 -	-mv -f $(DESTDIR)$(mandir)/man1/ssh.1 $(DESTDIR)$(mandir)/man1/ssh.old.1
 -	-mv -f $(DESTDIR)$(mandir)/man1/ssh-add.1 $(DESTDIR)$(mandir)/man1/ssh-add.old.1
 -	-mv -f $(DESTDIR)$(mandir)/man1/ssh-agent.1 $(DESTDIR)$(mandir)/man1/ssh-agent.old.1
@@ -81,31 +77,54 @@ $NetBSD: patch-ac,v 1.2 2003/08/12 19:08:57 seb Exp $
 -	-mv -f $(DESTDIR)$(mandir)/man1/scp.1 $(DESTDIR)$(mandir)/man1/scp.old.1
 -	-mv -f $(DESTDIR)$(mandir)/man1/sftp.1 $(DESTDIR)$(mandir)/man1/sftp.old.1
 -	-mv -f $(DESTDIR)$(mandir)/man1/ssh-probe.1 $(DESTDIR)$(mandir)/man1/ssh-probe.old.1
- 	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) ssh2.1 ssh.1)
- 	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) ssh-add2.1 ssh-add.1)
- 	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) ssh-agent2.1 ssh-agent.1)
-@@ -1053,7 +1038,6 @@ install-symlinks:
- 	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) scp2.1 scp.1)
- 	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) sftp2.1 sftp.1)
- 	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) ssh-probe2.1 ssh-probe.1)
+-	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) ssh2.1 ssh.1)
+-	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) ssh-add2.1 ssh-add.1)
+-	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) ssh-agent2.1 ssh-agent.1)
+-	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) ssh-keygen2.1 ssh-keygen.1)
+-	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) scp2.1 scp.1)
+-	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) sftp2.1 sftp.1)
+-	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) ssh-probe2.1 ssh-probe.1)
 -	-mv -f $(DESTDIR)$(mandir)/man8/sshd.8 $(DESTDIR)$(mandir)/man8/sshd.old.8
- 	(cd $(DESTDIR)$(mandir)/man8 && $(LN_S) sshd2.8 sshd.8)
+-	(cd $(DESTDIR)$(mandir)/man8 && $(LN_S) sshd2.8 sshd.8)
++	(cd $(DESTDIR)$(bindir) && $(RM) -f ssh && $(LN_S) ssh2 ssh)
++	(cd $(DESTDIR)$(bindir) && $(RM) -f ssh-agent && $(LN_S) ssh-agent2 ssh-agent)
++	(cd $(DESTDIR)$(bindir) && $(RM) -f ssh-add && $(LN_S) ssh-add2 ssh-add)
++	case x"@CONFPROGRAMS@" in 					\
++	x*askpass*)							\
++	(cd $(DESTDIR)$(bindir) && $(RM) -f ssh-askpass && $(LN_S) ssh-askpass2 ssh-askpass) ;;	\
++	esac
++	(cd $(DESTDIR)$(bindir) && $(RM) -f ssh-keygen && $(LN_S) ssh-keygen2 ssh-keygen)
++	(cd $(DESTDIR)$(bindir) && $(RM) -f scp && $(LN_S) scp2 scp)
++	(cd $(DESTDIR)$(bindir) && $(RM) -f sftp && $(LN_S) sftp2 sftp)
++	(cd $(DESTDIR)$(bindir) && $(RM) -f sftp-server && $(LN_S) sftp-server2 sftp-server)
++	(cd $(DESTDIR)$(bindir) && $(RM) -f ssh-signer && $(LN_S) ssh-signer2 ssh-signer)
++	(cd $(DESTDIR)$(bindir) && $(RM) -f ssh-probe && $(LN_S) ssh-probe2 ssh-probe)
++	(cd $(DESTDIR)$(sbindir) && $(RM) -f sshd && $(LN_S) sshd2 sshd)
++	(cd $(DESTDIR)$(mandir)/man1 && $(RM) -f ssh.1 && $(LN_S) ssh2.1 ssh.1)
++	(cd $(DESTDIR)$(mandir)/man1 && $(RM) -f ssh-add.1 && $(LN_S) ssh-add2.1 ssh-add.1)
++	(cd $(DESTDIR)$(mandir)/man1 && $(RM) -f ssh-agent.1 && $(LN_S) ssh-agent2.1 ssh-agent.1)
++	(cd $(DESTDIR)$(mandir)/man1 && $(RM) -f ssh-keygen.1 && $(LN_S) ssh-keygen2.1 ssh-keygen.1)
++	(cd $(DESTDIR)$(mandir)/man1 && $(RM) -f scp.1 && $(LN_S) scp2.1 scp.1)
++	(cd $(DESTDIR)$(mandir)/man1 && $(RM) -f sftp.1 && $(LN_S) sftp2.1 sftp.1)
++	(cd $(DESTDIR)$(mandir)/man1 && $(RM) -f sshprobe.1 && $(LN_S) ssh-probe2.1 ssh-probe.1)
++	(cd $(DESTDIR)$(mandir)/man8 && $(RM) -f sshd.8 && $(LN_S) sshd2.8 sshd.8)
  
  clean-up-old:
-@@ -1072,23 +1056,13 @@ install-exec-hook:
+ 	 -rm -f $(DESTDIR)$(bindir)/ssh.old $(DESTDIR)$(bindir)/ssh-agent.old \
+@@ -1075,23 +1059,13 @@ install-exec-hook:
  	-chown root $(DESTDIR)$(bindir)/ssh-signer2
  	-chmod $(SSH_SIGNER_INSTALL_MODE) $(DESTDIR)$(bindir)/ssh-signer2
  
 -install-data-hook: make-install-dirs generate-host-key install-symlinks
 -	-@if test '!' -f $(DESTDIR)$(etcdir)/sshd2_config ; then \
 -	 echo Installing $(DESTDIR)$(etcdir)/sshd2_config ; \
-+install-data-hook: make-install-dirs install-symlinks
-+	 echo Installing $(DESTDIR)$(egdir)/sshd2_config ; \
- 	 $(INSTALL_DATA) $(srcdir)/sshd2_config \
+-	 $(INSTALL_DATA) $(srcdir)/sshd2_config \
 -                         $(DESTDIR)$(etcdir)/sshd2_config ; \
 -	fi
 -	 echo Updating $(DESTDIR)$(etcdir)/sshd2_config.example ;
--	 $(INSTALL_DATA) $(srcdir)/sshd2_config \
++install-data-hook: make-install-dirs install-symlinks
++	 echo Installing $(DESTDIR)$(egdir)/sshd2_config ; \
+ 	 $(INSTALL_DATA) $(srcdir)/sshd2_config \
 -                         $(DESTDIR)$(etcdir)/sshd2_config.example ;
 -	-@if test '!' -f $(DESTDIR)$(etcdir)/ssh2_config ; then \
 -	 echo Installing $(DESTDIR)$(etcdir)/ssh2_config ; \
@@ -121,7 +140,7 @@ $NetBSD: patch-ac,v 1.2 2003/08/12 19:08:57 seb Exp $
  	 echo Updating $(DESTDIR)$(subconfig_dir)/host_ext.example ;
  	 $(INSTALL_DATA) $(srcdir)/subconfig/host_ext.example \
                           $(DESTDIR)$(subconfig_dir)/host_ext.example ;
-@@ -1101,11 +1075,9 @@ install-data-hook: make-install-dirs gen
+@@ -1104,11 +1078,9 @@ install-data-hook: make-install-dirs gen
  	 echo Updating $(DESTDIR)$(subconfig_dir)/user.example ;
  	 $(INSTALL_DATA) $(srcdir)/subconfig/user.example \
                           $(DESTDIR)$(subconfig_dir)/user.example ;

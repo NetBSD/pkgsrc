@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/05/28 12:00:10 kivinen Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/07/25 12:29:19 grant Exp $
 #
 
 DISTNAME=	ssh-3.2.9.1
@@ -66,6 +66,7 @@ CONFIGURE_ARGS+=	--with-foreign-etcdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 
 MAKE_ENV+=		PKGBASE=${PKGBASE}
+MAKE_ENV+=		RM="${RM}"
 
 RCD_SCRIPTS=		ssh2_secure_shell
 
