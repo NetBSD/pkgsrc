@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/15 23:10:09 peter Exp $
+$NetBSD: distinfo,v 1.5 2005/02/17 19:32:40 peter Exp $
 
-SHA1 (CriticalMass-0.99.tar.bz2) = 9b339750e3de0ab06f63d4c9f10c9fc3fc7aaae6
-Size (CriticalMass-0.99.tar.bz2) = 2293579 bytes
-SHA1 (patch-aa) = 21b418b711cb34c1ead6436596fa63599f625a0c
-SHA1 (patch-ab) = f1a6b77e563f3914de7aba5cd48a373db202924d
+SHA1 (CriticalMass-0.9.10.tar.bz2) = de2215c94f96d688b232436f296a76113ebc108b
+Size (CriticalMass-0.9.10.tar.bz2) = 2394911 bytes
