@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 14:47:14 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/07/03 20:35:32 jlam Exp $
 
 SHA1 (plan-1.8.4.tar.gz) = 0b4c5f2d078d3ad48f734c89a316258a56a5749a
 Size (plan-1.8.4.tar.gz) = 422458 bytes
-SHA1 (patch-aa) = 520a49985d52b3278df3be39a8979346bf3c05f3
+SHA1 (patch-aa) = cfcd2e515118c19770bd2a8ce63cb585b80b5907
 SHA1 (patch-ab) = 6670c398271e5ee6d32194c0b69850f381b5cc5c
 SHA1 (patch-ac) = 3e78546544e2b55e296068be4de31f6366cab2b0
 SHA1 (patch-ad) = f50e8e46e1ed503bf6f16c6cd31dd935e9251772

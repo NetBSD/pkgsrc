@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/20 11:40:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/07/03 20:43:22 jlam Exp $
 #
 
 DISTNAME=	catclock
@@ -13,12 +13,13 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Variant of the MIT xclock with a "cat" mode
 
-USE_IMAKE=	yes
-USE_MOTIF=	yes
+USE_BUILDLINK_ONLY=	yes
+USE_IMAKE=		yes
 
 post-extract:
 	${RM} ${WRKSRC}/makefile ${WRKSRC}/pwd.h
 	${MV} ${WRKSRC}/xclock.man ${WRKSRC}/catclock.man
 	${SED} 's/^XClock/Catclock/g' <${WRKSRC}/xclock.ad >${WRKSRC}/Catclock.ad
 
+.include "../../x11/lesstif/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

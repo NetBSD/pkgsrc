@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:23 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/03 20:35:32 jlam Exp $
 
---- Makefile.orig	Mon Jul 17 22:07:03 2000
+--- Makefile.orig	Mon Jul 17 16:07:03 2000
 +++ Makefile
 @@ -8,19 +8,19 @@
  # after "=", this is parsed and rewritten by the configure script.
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:23 wiz Exp $
  BSDIG_C	= -DBSD -DRABBITS -I/usr/X11/include -DFLOCK -DNOREGEX -Dbsdi -ansi 
 -NBSD_C	= -ansi -I/usr/X11R6/include -DBSD -DRABBITS -DNOLOCK -DNOREGEX\
 -	  -DNO_MOTIF
-+NBSD_C	= ${CFLAGS} -ansi -I${PREFIX}/include -I${X11BASE}/include -DBSD -DRABBITS -DNOLOCK -DNOREGEX
++NBSD_C	= ${CFLAGS} -ansi -DBSD -DRABBITS -DNOLOCK -DNOREGEX
  FBSD_C	= -ansi -I/usr/X11R6/include -DBSD -DNOLOCK -DNOREGEX -DRABBITS\
  	  -DSTDLIBMALLOC
  LINUX_C	= -I/usr/X11R6/include -D_POSIX_SOURCE -DNOLOCK -DLINUX
@@ -70,8 +70,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:23 wiz Exp $
  BSDIG_L2= -L/usr/X11/lib -lc
 -NBSD_L1	= -L/usr/X11R6/lib -lXm -lXt -lX11
 -NBSD_L2	= -L/usr/X11R6/lib -lc
-+NBSD_L1	= -Wl,-rpath ${PREFIX}/lib -L${PREFIX}/lib -Wl,-rpath ${X11BASE}/lib -L${X11BASE}/lib -lXm -lXt -lX11
-+NBSD_L2	= -Wl,-rpath ${PREFIX}/lib -L${PREFIX}/lib -Wl,-rpath ${X11BASE}/lib -L${X11BASE}/lib -lc
++NBSD_L1	= ${LDFLAGS} -lXm -lXt -lX11
++NBSD_L2	= ${LDFLAGS} -lc
  FBSD_L1	= -L/usr/X11R6/lib -lXm -lXt -lX11 -lXext -lSM -lICE -lXpm
  FBSD_L2	= -L/usr/X11R6/lib -lc
  LINUX_L1= -L/usr/X11R6/lib -L/usr/lib/X11R6/lib -lSM -lXm -lXt -lX11 -lXpm -lc -lXext -lSM -lICE -lX11

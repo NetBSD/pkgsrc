@@ -1,20 +1,23 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:16 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/03 20:43:22 jlam Exp $
+
 --- imakefile.orig	Sun Dec 20 21:24:08 1992
-+++ imakefile	Sat Sep  4 19:55:15 1999
-@@ -2,9 +2,9 @@
++++ imakefile
+@@ -2,18 +2,17 @@
  SRCS = xclock.c alarm.c
  OBJS = xclock.o alarm.o
  
 -     MOTIF = /usr/lib/DXM
 -MOTIF_LIBS = $(MOTIF)/lib/Xm/libXm.a $(MOTIF)/lib/Xt/libXt.a
 -MOTIF_INCS = -I$(MOTIF)/lib -I$(MOTIF)/lib/Xt
-+     MOTIF = ${X11BASE}
+-  INCLUDES = -I. $(MOTIF_INCS) -I$(TOP)
++     MOTIF = ${BUILDLINK_DIR}
 +MOTIF_LIBS = -lXm -lXt -lSM -lICE
 +MOTIF_INCS = -I$(MOTIF)/include
-   INCLUDES = -I. $(MOTIF_INCS) -I$(TOP)
++  INCLUDES = -I. $(MOTIF_INCS) -I$(TOP_X_INCLUDES)
     DEFINES = -DHAS_GNU_EMACS
-     CFLAGS = $(DEFINES) $(INCLUDES)
-@@ -13,7 +13,7 @@
+-    CFLAGS = $(DEFINES) $(INCLUDES)
+ 
+ LOCAL_LIBRARIES = $(MOTIF_LIBS)
    SYS_LIBRARIES = -lX11 -lm
  
  
