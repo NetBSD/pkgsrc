@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/11/18 07:49:25 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/12/07 02:38:56 schmonz Exp $
 
 PKGNAME=		${DISTNAME:C/MesaLib/glu/}
 WRKSRC=			${WRKDIR}/${DISTNAME:C/Lib//}
@@ -25,7 +25,7 @@ _IS_BUILTIN_GLU=	0
 .endif
 
 .if (${X11PREFIX} == ${X11BASE}) && (${_IS_BUILTIN_GLU} != "0")
-IGNORE=		"GLU has already been installed as part of XFree86-4.x"
+PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
 .endif
 
 post-install:

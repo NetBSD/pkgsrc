@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/11/19 07:42:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/07 02:39:02 schmonz Exp $
 
 PKGNAME=	acroread5-5.06
 CATEGORIES=	print
@@ -32,7 +32,7 @@ DISTNAME=	linux-506
 PLATFORM=	intellinux
 . elif (${MACHINE_ARCH} == "sparc")
 .  if !exists(/emul/svr4/usr/lib/ld.so)
-IGNORE=		'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
+PKG_FAIL_REASON= '${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 .  endif
 DISTNAME=	solaris-506
 PLATFORM=	sparcsolaris

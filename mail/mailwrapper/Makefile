@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/25 04:17:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2002/12/07 02:38:59 schmonz Exp $
 
 DISTNAME=	mailwrapper-19990412
 CATEGORIES=	mail
@@ -13,7 +13,7 @@ NO_CONFIGURE=		yes
 MANCOMPRESSED_IF_MANZ=	yes
 
 .if exists(/usr/sbin/mailwrapper)
-IGNORE=         "${PKGNAME} is part of your NetBSD distribution"
+PKG_SKIP_REASON= "${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
 WRKSRC=		${WRKDIR}/mailwrapper
