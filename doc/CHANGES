@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3879 2003/11/29 16:27:24 junyoung Exp $
+$NetBSD: CHANGES,v 1.3880 2003/11/29 17:09:55 junyoung Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4672,3 +4672,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated glut to 5.0.2nb3 [jschauma 2003-11-28]
 	Updated cvsync to 0.24.13 [gehenna 2003-11-28]
 	Updated subversion to 0.32.1 [junyoung 2003-11-29]
+	Updated nabi to 0.11 [junyoung 2003-11-29]
