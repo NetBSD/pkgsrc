@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.1 2000/04/28 09:04:57 wennmach Exp $
+$NetBSD: patch-ag,v 1.2 2000/09/09 02:44:34 wiz Exp $
 --- kpathsea/Makefile.in.orig	Thu Apr 27 10:05:26 2000
 +++ kpathsea/Makefile.in	Thu Apr 27 10:08:11 2000
 @@ -148,6 +148,7 @@
  INSTALL_SCRIPT = $(INSTALL_PROGRAM)
  INSTALL_DATA = @INSTALL_DATA@
  INSTALL_LIBTOOL_LIBS = INSTALL_DATA='$(INSTALL_DATA)' $(LIBTOOL) install-lib
-+INSTALL_LIBTOOL_THISLIB = INSTALL_DATA='$(INSTALL)' $(LIBTOOL) install-lib
++INSTALL_LIBTOOL_THISLIB = INSTALL_DATA='$(LN)' $(LIBTOOL) install-lib
  INSTALL_LIBTOOL_PROG = INSTALL_PROGRAM='$(INSTALL_PROGRAM)' $(LIBTOOL) install-prog
  
  # Creating (symbolic) links.
