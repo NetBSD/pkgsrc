@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/05/30 16:19:50 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/12 13:28:58 wiz Exp $
 bin/file-roller
 lib/bonobo/libfile-roller-component.a
 lib/bonobo/libfile-roller-component.la
@@ -22,6 +22,8 @@ share/gnome/help/file-roller/ru/figures/fr-prefs.png
 share/gnome/help/file-roller/ru/file-roller.xml
 share/gnome/help/file-roller/ru/legal.xml
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/file-roller.mo
@@ -30,15 +32,21 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/file-roller.mo
@@ -51,10 +59,14 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/file-roller.mo
 share/mime-info/file-roller.keys
 share/mime-info/file-roller.mime
 share/omf/file-roller/file-roller-C.omf
