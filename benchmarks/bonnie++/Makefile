@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/10 10:00:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/10/31 11:17:55 gavan Exp $
 #
 
 DISTNAME=       bonnie++-1.03a
@@ -12,6 +12,7 @@ COMMENT=	Enhanced performance Test of Filesystem I/O
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
+USE_GCC_SHLIB=		YES
 REPLACE_PERL=		bon_csv2txt.in bon_csv2html.in
 
 benchmark:
