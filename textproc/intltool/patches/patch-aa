@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 2003/02/19 13:22:55 jmmv Exp $
+
+--- Makefile.in.orig	2003-01-06 20:50:41.000000000 +0100
++++ Makefile.in
+@@ -69,7 +69,7 @@ SUBDIRS = . tests doc doc-i18n-tool
+ 
+ NULL = 
+ 
+-aclocal_macros = intltool.m4 xml-i18n-tools.m4
++aclocal_macros = intltool.m4
+ 
+ CLEANFILES = \
+ 	intltoolize				\
+@@ -97,9 +97,6 @@ pkgdata_DATA = \
+ 	intltool-po-Makefile.in.in-patch-4	\
+ 	intltool-po-Makefile.in.in-patch-5	\
+ 	intltool-po-Makefile.in.in-patch-6	\
+-	xml-i18n-po-Makefile.in.in-patch-1	\
+-	xml-i18n-po-Makefile.in.in-patch-2	\
+-	xml-i18n-po-Makefile.in.in-patch-5	\
+ 	$(NULL)
+ 
+ 
+@@ -110,7 +107,6 @@ aclocal_DATA = $(aclocal_macros)
+ 
+ bin_SCRIPTS = \
+ 	intltoolize				\
+-	xml-i18n-toolize			\
+ 	intltool-update				\
+ 	intltool-merge				\
+ 	intltool-extract			\
