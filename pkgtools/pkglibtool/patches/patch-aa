@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/11/12 23:44:05 frueauf Exp $
+
 --- ltconfig.orig	Fri Mar 20 03:00:29 1998
 +++ ltconfig	Sun Sep 27 11:47:30 1998
 @@ -808,7 +808,11 @@
