@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7927 2004/11/20 12:47:40 rh Exp $
+$NetBSD: CHANGES,v 1.7928 2004/11/20 16:00:35 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5356,3 +5356,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Log-LogLite-0.82 [minskim 2004-11-20]
 	Updated cgoban-java to 2.6.7 [rh 2004-11-20]
 	Added RealPlayerGold-10.0.1 [rh 2004-11-20]
+	Updated eb to 4.1.1 [uebayasi 2004-11-20]
