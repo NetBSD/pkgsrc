@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/10/19 10:54:47 rh Exp $
+# $NetBSD: Makefile,v 1.30 2002/11/02 02:42:03 rh Exp $
 #
 
 DISTNAME=	glade-0.6.2
@@ -17,7 +17,7 @@ USE_BUILDLINK2=	yes
 
 CONFIGURE_ENV+=	LOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=--with-bonobo
-CONFIGURE_ARGS+=--localstatedir=${X11PREFIX}/var/lib
+CONFIGURE_ARGS+=--localstatedir=${SCROLLKEEPER_DATADIR}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/glade
@@ -31,5 +31,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/portability.txt ${PREFIX}/share/doc/glade
 	${INSTALL_DATA} ${WRKSRC}/doc/source_code.txt ${PREFIX}/share/doc/glade
 
+.include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

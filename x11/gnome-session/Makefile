@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/10/19 10:55:01 rh Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/02 02:42:06 rh Exp $
 #
 
 DISTNAME=		gnome-session-2.0.7
@@ -21,12 +21,13 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--program-transform-name=s,gnome,gnome2,
-CONFIGURE_ARGS+=	--localstatedir=${X11PREFIX}/var/gnome
+CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR}
 
 .include "../../audio/esound/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/GConf2/buildlink2.mk"
 .include "../../devel/libgnome/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../x11/gnome2-control-center/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
