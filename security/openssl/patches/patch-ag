@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.1.1.1 1999/04/30 15:19:13 tv Exp $
+$NetBSD: patch-ag,v 1.2 1999/11/25 18:51:47 erh Exp $
 
---- apps/Makefile.ssl.orig	Tue Apr 27 14:38:49 1999
-+++ apps/Makefile.ssl	Tue Apr 27 14:39:13 1999
-@@ -16,7 +16,7 @@
+--- apps/Makefile.ssl.orig	Mon Jun 21 05:04:37 1999
++++ apps/Makefile.ssl	Thu Oct 21 00:09:56 1999
+@@ -18,7 +18,7 @@
  PEX_LIBS=
  EX_LIBS= 
  
 -CFLAGS= -DMONOLITH $(INCLUDES) $(CFLAG)
 +CFLAGS= -DMONOLITH $(INCLUDES) $(CFLAG:N*PIC)
  
- GENERAL=Makefile
+ GENERAL=Makefile makeapps.com install.com
  

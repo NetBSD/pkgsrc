@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 1999/11/25 18:51:47 erh Exp $
+
+--- crypto/bn/bn_div.c.orig	Tue Aug  3 05:18:27 1999
++++ crypto/bn/bn_div.c	Wed Oct 20 17:12:41 1999
+@@ -62,7 +62,7 @@
+ #include "bn_lcl.h"
+ 
+ /* The old slow way */
+-#if 0
++#if defined(__NetBSD__) && defined(__m68k__) && (__GNUC_MINOR__ == 91)
+ int BN_div(BIGNUM *dv, BIGNUM *rem, BIGNUM *m, BIGNUM *d, BN_CTX *ctx)
+ 	{
+ 	int i,nm,nd;
