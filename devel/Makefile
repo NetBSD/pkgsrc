@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.99 2000/01/17 03:46:21 jlam Exp $
+# $NetBSD: Makefile,v 1.100 2000/01/20 01:40:38 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
 #    SUBDIR += SWIG
 #    SUBDIR += asl
+    SUBDIR += avltree
     SUBDIR += autoconf
     SUBDIR += automake
     SUBDIR += bcc
