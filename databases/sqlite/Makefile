@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2004/04/24 22:46:09 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2004/06/30 08:37:11 pooka Exp $
 
 DISTNAME=		sqlite-2.8.13
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		http://www.hwaci.com/sw/sqlite/ \
 			http://www.sqlite.org/
@@ -26,6 +27,9 @@ PKGCONFIG_OVERRIDE=	${WRKDIR}/sqlite/sqlite.pc.in
 
 post-extract:
 	${MKDIR} ${WRKSRC}
+
+post-install:
+	${INSTALL_MAN} ${WRKDIR}/sqlite/sqlite.1 ${PREFIX}/man/man1
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
