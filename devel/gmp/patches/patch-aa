@@ -1,0 +1,14 @@
+--- /dev/null	Mon Apr 26 18:22:36 1999
++++ config/mt-mips-netbsd	Mon Apr 26 17:59:43 1999
+@@ -0,0 +1 @@
++CFLAGS=-Wa,-KPIC
+--- configure.in.orig	Fri Jun  7 04:07:01 1996
++++ configure.in	Mon Apr 26 18:33:02 1999
+@@ -31,5 +31,7 @@
+     ;;
+   *-*-linux*)
+     target_makefile_frag=config/mt-linux ;;
++  mips*-*-netbsd*)
++    target_makefile_frag=config/mt-mips-netbsd ;;
+     
+ esac
