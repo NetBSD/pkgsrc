@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.10 2003/07/20 16:05:04 jmmv Exp $
+.\" $NetBSD: pkg_comp.8,v 1.11 2003/08/30 21:11:30 jmmv Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, Julio Merino <jmmv@netbsd.org>
@@ -323,6 +323,20 @@ Defaults to
 Mount options.
 Defaults to
 .Sy -t null -o ro .
+.It MOUNT_SCRIPT
+Pathname to a script to run after the file systems are mounted.
+Two arguments are given to it: 
+.Ar $DESTDIR ,
+and the word
+.Ar mount .
+Defaults to the empty value i.e. no script is to be run.
+.It UMOUNT_SCRIPT
+Pathname to a script to run before the file systems are unmounted.
+Two arguments are given to it: 
+.Ar $DESTDIR ,
+and the word
+.Ar umount .
+Defaults to the empty value i.e. no script is to be run.
 .El
 .Sh TARGETS
 A target specifies what
