@@ -1,4 +1,4 @@
-# $NetBSD: language.mk,v 1.6 2004/02/20 06:52:43 jlam Exp $
+# $NetBSD: language.mk,v 1.7 2004/02/21 08:38:45 seb Exp $
 
 BUILDLINK_DEPENDS.gcc3c+=	gcc3${GCC3_PKGMODIF}-c-${GCC_VERSION}{,nb*}
 BUILDLINK_DEPMETHOD.gcc3c+=	full
@@ -7,7 +7,8 @@ BUILDLINK_DEPMETHOD.gcc3c+=	full
 
 pre-build:
 	cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} tconfig.h
-	${LN} -sf ${GCC_PREFIX}/lib/libiberty.a ${WRKSRC}/libiberty
-	${LN} -sf ${GCC_PREFIX}/bin/gcc ${WRKSRC}/gcc/xgcc
+	${RM} -f ${WRKSRC}/libiberty ${WRKSRC}/gcc/xgcc
+	${LN} -s ${GCC_PREFIX}/lib/libiberty.a ${WRKSRC}/libiberty
+	${LN} -s ${GCC_PREFIX}/bin/gcc ${WRKSRC}/gcc/xgcc
 
 .include "../gcc3-c/buildlink3.mk"
