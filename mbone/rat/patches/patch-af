@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1 1998/09/13 17:06:10 garbled Exp $
+*** src/bat_include.h~	Tue May 27 06:27:48 1997
+--- src/bat_include.h	Thu Mar  5 16:22:59 1998
+***************
+*** 71,75 ****
+  #include <arpa/inet.h>
+  extern int h_errno;
+! #if !defined(HPUX) && !defined(Linux) && !defined(__FreeBSD__)
+  #include <stropts.h>
+  #include <sys/filio.h>  
+--- 71,75 ----
+  #include <arpa/inet.h>
+  extern int h_errno;
+! #if !defined(HPUX) && !defined(Linux) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+  #include <stropts.h>
+  #include <sys/filio.h>  

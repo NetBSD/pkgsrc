@@ -1,0 +1,11 @@
+$NetBSD: patch-ah,v 1.1 1998/09/13 17:06:10 garbled Exp $
+--- /dev/null	Sun Sep 13 09:01:39 1998
++++ Makefile_NetBSD_1	Sun Sep 13 09:32:37 1998
+@@ -0,0 +1,7 @@
++INCS   = -I${X11BASE}/include \
++         -I${LOCALBASE}/include/tcl8.0 \
++         -I${LOCALBASE}/include/tk8.0
++LDLIBS = -L${LOCALBASE}/lib -ltk80 -ltcl80 \
++         -L${X11BASE}/lib -lXext -lX11 \
++         -lm
++
