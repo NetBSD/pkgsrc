@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.27 2004/08/23 03:32:12 jlam Exp $
+# $NetBSD: Makefile.in,v 1.28 2005/02/15 08:55:55 grant Exp $
 #
 
 srcdir=		@srcdir@
@@ -7,6 +7,7 @@ VPATH=		@srcdir@
 SHELL=		/bin/sh
 
 CC=		@CC@
+CCLD=		@CC@
 CFLAGS=		-I$(srcdir) -I. @INCLUDES@ @CFLAGS@
 CPPFLAGS=	@CPPFLAGS@
 DEFS=		@DEFS@
@@ -76,8 +77,8 @@ nbcompat/nbconfig.h: nbcompat/config.h nbcompat.awk
 nbcompat/nbtypes.h: bits
 	./bits $@
 
-bits: bits.c
-	$(COMPILE) $(DEFS) -o bits bits.c
+bits: bits.o
+	$(LINK) $<
 
 install:
 	$(INSTALL) -m 755 -d $(prefix)/lib
