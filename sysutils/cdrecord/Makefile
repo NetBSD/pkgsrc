@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2004/07/09 12:32:27 drochner Exp $
+# $NetBSD: Makefile,v 1.60 2004/07/09 12:41:29 xtraeme Exp $
 
 DISTNAME=	cdrtools-2.00.3
 PKGNAME=	cdrecord-2.00.3
@@ -42,17 +42,7 @@ MESSAGE_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV}
 MESSAGE_SUBST+=	CDRECORD_CONF=${CDRECORD_CONF}
 .endif
 
-CDRECORD_CONF_FILES=	cdrecord/defaults.c cdrecord/cdrecord.1
-CDRECORD_CONF_FILES+=	readcd/readcd.1
-
 INSTALLATION_DIRS=	bin man/man1 man/man8
-
-post-patch:
-	@cd ${WRKSRC}; for file in ${CDRECORD_CONF_FILES}; do		\
-		${MV} ${WRKSRC}/$$file ${WRKSRC}/$${file}.old &&	\
-		${SED} -e 's|@CDRECORD_CONF@|${CDRECORD_CONF}|'	\
-			${WRKSRC}/$${file}.old > ${WRKSRC}/$$file;	\
-	done
 
 do-configure:
 	cd ${WRKSRC}/RULES;						\
@@ -87,6 +77,13 @@ do-install:
 	cd ${WRKSRC}/readcd;						\
 		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
 		${INSTALL_MAN} readcd.1 ${PREFIX}/man/man1
+
+SUBST_CLASSES=		fix
+SUBST_STAGE.fix=	post-patch
+SUBST_FILES.fix=	cdrecord/defaults.c cdrecord/cdrecord.1 \
+			readcd/readcd.1
+SUBST_SED.fix=		-e "s,@CDRECORD_CONF@,${CDRECORD_CONF},g"
+SUBST_MESSAGE.fix=	"Fixing paths."
 
 .include "../../textproc/groff/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
