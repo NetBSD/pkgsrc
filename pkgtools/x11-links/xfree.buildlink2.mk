@@ -1,20 +1,8 @@
-# $NetBSD: xfree.buildlink.mk,v 1.2 2002/08/23 05:22:59 jlam Exp $
-#
-# This Makefile fragment is included by packages that use XFree.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Include this Makefile fragment in the package Makefile,
-# (2) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
-#     search path, and
-# (3) Add ${BUILDLINK_DIR}/lib to the front of the linker's library search
-#     path.
+# $NetBSD: xfree.buildlink2.mk,v 1.2 2002/08/23 05:22:59 jlam Exp $
 
 .if defined(_FOR_X11_LINKS_ONLY)
 .if !defined(X11_LINKS_BUILDLINK_MK)
 X11_LINKS_BUILDLINK_MK=	# defined
-
-.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_PREFIX.XFree=	${X11BASE}
 
@@ -540,22 +528,20 @@ BUILDLINK_FILES.XFree+=	lib/libxf86config.a
 BUILDLINK_FILES.XFree+=	lib/libxkbfile.a
 BUILDLINK_FILES.XFree+=	lib/libxkbui.a
 
-BUILDLINK_TARGETS.XFree=	XFree-buildlink
-BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.XFree}
+BUILDLINK_TARGETS+=	XFree-buildlink
 
 _REQUIRE_BUILTIN_MESALIB=	YES
-.include "../../graphics/MesaLib/buildlink.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
 
 _REQUIRE_BUILTIN_GLU=		YES
-.include "../../graphics/glu/buildlink.mk"
+.include "../../graphics/glu/buildlink2.mk"
 
 _REQUIRE_BUILTIN_FREETYPE2=	YES
-.include "../../graphics/freetype2/buildlink.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
 
 _REQUIRE_BUILTIN_XPM=		YES
-.include "../../graphics/xpm/buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 
-pre-configure: ${BUILDLINK_TARGETS.XFree}
 XFree-buildlink: _BUILDLINK_USE
 
 .endif	# X11_LINKS_BUILDLINK_MK
