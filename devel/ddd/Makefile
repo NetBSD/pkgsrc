@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 1999/04/13 15:31:05 agc Exp $
+# $NetBSD: Makefile,v 1.22 1999/05/30 15:05:27 frueauf Exp $
 # $FreeBSD Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
-DISTNAME=	ddd-3.1.4
+DISTNAME=	ddd-3.1.5
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.ips.cs.tu-bs.de/pub/local/softech/ddd/  \
 		ftp://richb-pc.acc.qc.edu/pub/ddd/  \
