@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# $NetBSD: REQ,v 1.2 1999/10/11 13:39:34 wennmach Exp $
 
 JB_USER=@JB_USER@
 JB_USERID=@JB_USERID@
@@ -77,3 +79,4 @@ else
 		echo " "
 	fi
 fi
+exit 0
