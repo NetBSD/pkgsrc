@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/03 10:32:25 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/03 10:36:02 jlam Exp $
 #
 
 DISTNAME=	XML-Writer-0.4
@@ -15,5 +15,4 @@ PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/Writer/.packlist
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
-.include "../../textproc/expat/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
