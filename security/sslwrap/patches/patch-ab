@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/30 20:04:25 rh Exp $
+$NetBSD: patch-ab,v 1.2 2000/12/30 20:12:18 rh Exp $
 
 --- apps.h.orig	Sat Nov 11 23:01:25 2000
 +++ apps.h
