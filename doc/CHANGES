@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2247 2003/05/16 21:27:54 jdolecek Exp $
+$NetBSD: CHANGES,v 1.2248 2003/05/16 22:32:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1972,3 +1972,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added yaz-2.0 [dmcmahill 2003-05-16]
 	Updated xemacs-current to 21.5.13 [magick 2003-05-16]
 	Updated opera7 to 7.11beta2 [jdolecek 2003-05-16]
+	Updated wxGTK to 2.4.0nb2 [martin 2003-05-16]
