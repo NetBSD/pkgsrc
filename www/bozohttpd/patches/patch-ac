@@ -1,0 +1,93 @@
+$NetBSD: patch-ac,v 1.1 2000/08/23 12:24:42 jlam Exp $
+
+itojun's patch for IPv6 support as provided tech-pkg@netbsd.org at 20000815.
+
+--- bozohttpd.c.orig	Tue May 23 03:14:30 2000
++++ bozohttpd.c
+@@ -913,14 +913,20 @@
+ 	http_req *request;
+ {
+ 	struct	_headers *headp;
++#ifdef INET6
++	char    hbuf[NI_MAXHOST], abuf[NI_MAXSERV];
++	struct  sockaddr_storage ss;
++#else
++	struct  sockaddr ss;
++	struct  sockaddr_in *sin;
+ 	struct	hostent *hp;
+-	struct	sockaddr_in in;
++#endif
+ 	char	*host, *addr, *port, *info, *type, *clen, *query, *s, *t,
+ 		    *path, *env, *command = NULL,
+ 		    *url = strdup(request->url + strlen("/cgi-bin"));
+ 	char	**envp, *argv[3];
+ 	char	bufport[10];
+-	int	envpsize, ix, slen = sizeof(in);
++	int	envpsize, ix, slen = sizeof(ss);
+ 
+ 	debug((DEBUG_FAT, "process_cgi:  writing HTTP header .."));
+ 
+@@ -952,23 +958,52 @@
+ 	type = request->content_type;
+ 	clen = request->content_length;
+ 
+-	if (getpeername(0, (struct sockaddr *)&in, &slen) < 0)
++	if (getpeername(0, (struct sockaddr *)&ss, &slen) < 0)
+ 		host = addr = NULL;
+ 	else {
+-		addr = inet_ntoa(in.sin_addr);
+-
+-		if (nflag == 0 || (hp = gethostbyaddr((char *)&in.sin_addr,
+-		    sizeof(in.sin_addr), AF_INET)) == NULL)
+-			host = NULL;
+-		else
+-			host = hp->h_name;
++#ifdef INET6
++		addr = host = NULL;
++		if (getnameinfo((struct sockaddr *)&ss, slen,
++		    abuf, sizeof abuf, NULL, 0, NI_NUMERICHOST) == 0)
++			addr = abuf;
++		if (nflag != 0 && getnameinfo((struct sockaddr *)&ss, slen,
++		    hbuf, sizeof hbuf, NULL, 0, 0) == 0)
++			host = hbuf;
++#else
++		switch (((struct sockaddr *)&ss)->sa_family) {
++		case AF_INET:
++			sin = (struct sockaddr_in *)&ss;
++			addr = inet_ntoa(sin->sin_addr);
++			if (nflag == 0 ||
++			    (hp = gethostbyaddr((char *)&sin->sin_addr,
++			     sizeof(sin->sin_addr), AF_INET)) == NULL)
++				host = NULL;
++			else
++				host = hp->h_name;
++			break;
++		default:
++			host = addr = NULL;
++			break;
++		}
++#endif
+ 	}
+ 
+-	if (getsockname(0, (struct sockaddr *)&in, &slen) < 0)
++	slen = sizeof(ss);
++	if (getsockname(0, (struct sockaddr *)&ss, &slen) < 0)
+ 		port = NULL;
+-	else
++	else {
++#ifdef INET6
++		if (getnameinfo((struct sockaddr *)&ss, slen, NULL, 0,
++		    bufport, sizeof bufport, NI_NUMERICSERV) == 0)
++			port = bufport;
++		else
++			port = NULL;
++#else
++		sin = (struct sockaddr_in *)&ss;
+ 		(void)snprintf(port = bufport, sizeof bufport, "%d",
+-		    ntohs(in.sin_port));
++		    ntohs(sin->sin_port));
++#endif
++	}
+ 
+ 	envpsize = 10 + request->nheaders + 
+ 	    (info && *info ? 1 : 0) +
