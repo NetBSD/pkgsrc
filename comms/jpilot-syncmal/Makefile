@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/27 18:07:54 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/29 04:54:50 jlam Exp $
 
 DISTNAME=		jpilot-syncmal_0.60
 PKGNAME=		jpilot-syncmal-0.60
@@ -14,8 +14,6 @@ COMMENT=		MAL synchronization plugin for J-Pilot
 DEPENDS+=		jpilot>=0.99:../../comms/jpilot
 
 USE_BUILDLINK_ONLY=	# defined
-USE_CONFIG_WRAPPER=	# defined
-
 GNU_CONFIGURE=		# defined
 USE_X11=		# defined
 USE_GMAKE=		# defined

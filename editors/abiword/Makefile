@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/06/11 06:34:30 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2001/06/29 04:54:52 jlam Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -24,15 +24,13 @@ COMMENT=	Open Source cross-platform word processor
 
 BUILD_DEPENDS+=	unzip-*:../../archivers/unzip
 DEPENDS+=	ispell-base-*:../../textproc/ispell-base
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
+
+USE_BUILDLINK_ONLY=	# defined
 
 USE_X11=	# defined
 USE_XPM=	# defined
 USE_GMAKE=	# defined
 ALL_TARGET=	compile canonical
-
-.include "../../converters/libiconv/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
 
 OS_CFLAGS=	${CFLAGS}
 
@@ -62,4 +60,7 @@ post-install:
 	${LN} -sf ../../../lib/american.hash				\
 		${PREFIX}/share/AbiSuite/dictionary/american.hash
 
+.include "../../converters/libiconv/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

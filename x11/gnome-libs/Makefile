@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2001/06/26 16:30:58 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2001/06/29 04:54:56 jlam Exp $
 
 DISTNAME=		gnome-libs-1.2.13
 CATEGORIES=		x11 gnome
@@ -23,17 +23,9 @@ CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} \
 			X11BASE=${X11BASE} \
 			PKGLOCALEDIR=${PKGLOCALEDIR}
 
-USE_CONFIG_WRAPPER=	YES
 USE_BUILDLINK_ONLY=	YES
 REPLACE_BUILDLINK=	gnomeConf.sh
 REPLACE_BUILDLINK+=	gnome-config
-
-.include "../../audio/esound/buildlink.mk"
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../graphics/imlib/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../net/ORBit/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
 
 LOCALSTATEDIR=		/var/gnome
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE} \
@@ -73,4 +65,10 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/libart.m4 \
 		${LOCALBASE}/share/aclocal/libart.m4
 
+.include "../../audio/esound/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../graphics/imlib/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../net/ORBit/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
