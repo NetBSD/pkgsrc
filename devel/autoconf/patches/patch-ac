@@ -1,17 +1,19 @@
-$NetBSD: patch-ac,v 1.7 2003/03/05 12:01:44 grant Exp $
+$NetBSD: patch-ac,v 1.8 2003/12/06 18:26:36 wiz Exp $
 
---- doc/Makefile.in.orig	Tue Dec  3 17:33:55 2002
+--- doc/Makefile.in.orig	Tue Nov  4 09:47:19 2003
 +++ doc/Makefile.in
-@@ -144,9 +144,9 @@ Makefile:  $(srcdir)/Makefile.in  $(top_
- 	TEXINPUTS="$(am__TEXINFO_TEX_DIR)$(PATH_SEPARATOR)$$TEXINPUTS" \
- 	MAKEINFO='$(MAKEINFO) $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) -I $(srcdir)' \
- 	$(TEXI2PDF) `test -f '$<' || echo '$(srcdir)/'`$<
+@@ -194,10 +194,10 @@ $(ACLOCAL_M4):  $(top_srcdir)/configure.
+ .texi.html:
+ 	$(MAKEINFO) $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) --html -I $(srcdir) \
+ 	 -o $@ $<
 -autoconf.info: autoconf.texi version.texi $(autoconf_TEXINFOS)
 -autoconf.dvi: autoconf.texi version.texi $(autoconf_TEXINFOS)
 -autoconf.pdf: autoconf.texi version.texi $(autoconf_TEXINFOS)
+-autoconf.html: autoconf.texi version.texi $(autoconf_TEXINFOS)
 +autoconf.info: autoconf.texi $(autoconf_TEXINFOS)
 +autoconf.dvi: autoconf.texi $(autoconf_TEXINFOS)
 +autoconf.pdf: autoconf.texi $(autoconf_TEXINFOS)
++autoconf.html: autoconf.texi $(autoconf_TEXINFOS)
  version.texi:  stamp-vti
  stamp-vti: autoconf.texi $(top_srcdir)/configure
  	@(dir=.; test -f ./autoconf.texi || dir=$(srcdir); \
