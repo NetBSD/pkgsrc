@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2002/11/30 11:46:04 salo Exp $
+# $NetBSD: Makefile,v 1.21 2003/01/27 12:31:29 jmmv Exp $
 
 DISTNAME=		gnome-media-1.2.3
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		audio gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/1.2/}
 
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR}
 CONFIGURE_ENV+=	XGETTEXT="${LOCALBASE}/bin/xgettext"
 
 .include "../../www/libghttp/buildlink2.mk"
+.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
