@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:06:35 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/30 19:08:22 jlam Exp $
 
-PKGNAME=		lesstif12-${LESSTIF_VERSION}
+.include "../../x11/lesstif/Makefile.common"
 
-COMMENT=		API compatible clone of the OSF/Motif toolkit, version 1.2
+PKGNAME=	lesstif12-${LESSTIF_VERSION}
+COMMENT=	API compatible clone of the OSF/Motif toolkit, version 1.2
 
-CONFLICTS+=		lesstif-0.[0-8]*
-CONFLICTS+=		lesstif-0.90*
-CONFLICTS+=		lesstif-0.91 lesstif-0.91.[0-3]
-CONFLICTS+=		openmotif-*
+CONFLICTS+=	lesstif-0.[0-8]*
+CONFLICTS+=	lesstif-0.90*
+CONFLICTS+=	lesstif-0.91 lesstif-0.91.[0-3]
+CONFLICTS+=	openmotif-*
 
 CONFIGURE_ARGS+=	--enable-build-12
 CONFIGURE_ARGS+=	--disable-build-20
+CONFIGURE_ARGS+=	--disable-build-21
 CONFIGURE_ARGS+=	--enable-default-12
 
 # We don't install any documentation, but the installation process creates
@@ -19,4 +21,4 @@ CONFIGURE_ARGS+=	--enable-default-12
 post-install:
 	${RMDIR} -p ${PREFIX}/share/doc/html/lesstif 2> /dev/null || ${TRUE}
 
-.include "../../x11/lesstif/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
