@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/10/01 05:57:05 itojun Exp $
+$NetBSD: patch-aa,v 1.2 2004/10/27 19:43:25 drochner Exp $
 
---- configure-	2003-10-01 01:09:30.000000000 +0900
-+++ configure	2003-10-01 01:09:54.000000000 +0900
-@@ -11299,7 +11299,7 @@
+--- configure.orig	2004-05-27 19:45:02.000000000 +0200
++++ configure
+@@ -21197,7 +21197,7 @@ if test "${ac_cv_lib_popt_poptResetConte
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lpopt  $LIBS"
 +LIBS="-lpopt -lintl $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
- #include "confdefs.h"
+ /* confdefs.h.  */
+ _ACEOF
