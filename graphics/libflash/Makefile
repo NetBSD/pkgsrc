@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2002/07/11 14:24:00 abs Exp $
+# $NetBSD: Makefile,v 1.7 2003/01/30 12:22:47 jlam Exp $
 #
 
+.include "Makefile.common"
+
 PKGNAME=	lib${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
+COMMENT=	open source Flash(tm) library
 
-COMMENT=	open source flash(tm) library
-
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-
+USE_BUILDLINK2=	yes
 USE_LIBTOOL=	yes
+BUILD_DIRS=	${WRKSRC}/Lib
+MAKE_ENV+=	LIBOSSAUDIO="${LIBOSSAUDIO}"
 
-do-build:
-		cd ${WRKSRC}/Lib && ${SETENV} ${MAKE_ENV} ${MAKE}
-
-do-install:
-		cd ${WRKSRC}/Lib && ${SETENV} ${MAKE_ENV} ${MAKE} install
-
-.include	"Makefile.common"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../mk/bsd.pkg.mk"
