@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.42 2001/03/08 10:14:50 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.43 2001/04/02 19:02:34 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -710,6 +710,7 @@ sub checkmakefile {
 	$digestfile = "$filesdir/md5";
 	$digestfile = $1 if ($whole =~ /\nDIGEST_FILE[+?]?=[ \t]*([^\n]+)\n/);
 	$digestfile =~ s/\$\{.CURDIR\}/./;
+	$digestfile =~ s/\${PKGSRCDIR}/..\/../;
 
 	$patchsumfile = "$filesdir/patch-sum";
 	$patchsumfile = $1
@@ -1208,7 +1209,8 @@ EOF
 
 	# NOTE: EXEC_DEPENDS is obsolete, so it should not be listed.
 	@linestocheck = split(/\s+/, <<EOF);
-LIB_DEPENDS BUILD_DEPENDS RUN_DEPENDS FETCH_DEPENDS DEPENDS DEPENDS_TARGET
+BUILD_USES_MSGFMT BUILD_DEPENDS DEPENDS DEPENDS_TARGET FETCH_DEPENDS
+LIB_DEPENDS RUN_DEPENDS
 EOF
         $warn_lib_depends_backslashes=0
             if $osname eq "NetBSD";
@@ -1218,7 +1220,8 @@ EOF
         if ($tmp =~ /(LIB_DEPENDS).*=/) {
 		&perror("WARN: $1 is deprecated, please use DEPENDS.");
 	}
-	if ($tmp =~ /(LIB_|BUILD_|RUN_|FETCH_)?DEPENDS/) {
+	if ($tmp =~ /(LIB_|BUILD_|RUN_|FETCH_)?DEPENDS/ or
+	    $tmp =~ /BUILD_USES_MSGFMT/) {
 		&checkearlier($tmp, @varnames);
 
 		if (!defined $ENV{'PORTSDIR'}) {
@@ -1230,19 +1233,25 @@ EOF
 			print "OK: checking packages listed in $j.\n"
 				if ($verbose);
 			foreach $k (split(/\s+/, $i)) {
+				# check BUILD_USES_MSGFMT
+				if ($l =~ /^(msgfmt|gettext)$/) {
+					&perror("WARN: dependency to $1 ".
+						"listed in $j. Consider using".
+						" BUILD_USES_MSGFMT.");
+				}
 				# check USE_PERL5
 				$l = (split(':', $k))[0];
 				if ($l =~ /^perl5(\.\d+)?$/) {
 					&perror("WARN: dependency to perl5 ".
-						"listed in $j. Consider using ".
-						"USE_PERL5.");
+						"listed in $j. Consider using".
+						" USE_PERL5.");
 				}
 
 				# check USE_GMAKE
 				if ($l =~ /^(gmake|\${GMAKE})$/) {
 					&perror("WARN: dependency to $1 ".
-						"listed in $j. Consider using ".
-						"USE_GMAKE.");
+						"listed in $j. Consider using".
+						" USE_GMAKE.");
 				}
                                 # check for LIB_DEPENDS w/o backslashes
                                 if ($osname eq "NetBSD") {
