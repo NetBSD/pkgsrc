@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2003/10/31 23:38:46 kristerw Exp $
+
+--- ssh_v1_iactive_server.c.orig	Sat Nov  1 00:21:03 2003
++++ ssh_v1_iactive_server.c	Sat Nov  1 00:21:01 2003
+@@ -160,7 +160,7 @@
+ 		context->win.ws_xpixel = x_pix;
+ 		context->win.ws_ypixel = y_pix;
+ 
+-		if (ssh_sys_set_tty_size(find_channel(context, 0)->fd_normal,
++		if (ssh_sys_set_tty_size((find_channel(context, 0))->fd_normal,
+ 					 &context->win) == -1) {
+ 			EVT_V1_DISCONNECT(ev, context, "Window change failed");
+ 			EVT_SEND(&ev, context);
