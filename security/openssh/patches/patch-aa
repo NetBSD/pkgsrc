@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.15 2001/06/28 23:12:16 jlam Exp $
+
+--- configure.orig	Sun Jun 17 00:09:50 2001
++++ configure
+@@ -1796,7 +1796,7 @@
+ 
+ 	;;
+ *-*-netbsd*)
+-	need_dash_r=1
++	#need_dash_r=1		# buildlink.mk
+ 	;;
+ *-*-freebsd*)
+ 	check_for_libcrypt_later=1
+@@ -1828,7 +1828,7 @@
+ *-*-solaris*)
+ 	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+ 	LDFLAGS="$LDFLAGS -L/usr/local/lib -R/usr/local/lib" 
+-	need_dash_r=1
++	#need_dash_r=1		# buildlink.mk
+ 	cat >> confdefs.h <<\EOF
+ #define PAM_SUN_CODEBASE 1
+ EOF
