@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2002/08/25 19:22:38 jlam Exp $
+$NetBSD: distinfo,v 1.9 2002/09/25 15:54:23 tron Exp $
 
 SHA1 (PTL-2.1.8.tar.gz) = b62ba82f12dd99e2ff8a20b15c2b02c809c07d16
 Size (PTL-2.1.8.tar.gz) = 678474 bytes
@@ -8,3 +8,4 @@ SHA1 (patch-ac) = 9f72f1bfdb5b37e834de6494be10781f91d025e9
 SHA1 (patch-ad) = c42cb8aa563787f4da73e08bcc7f03189236e480
 SHA1 (patch-ae) = b513392a233c126e424164560f6a93d23dc2ae80
 SHA1 (patch-af) = 55beff08977e374e37e44188757771f6eeedc999
+SHA1 (patch-ag) = 4702253d80a8d35ccf01b1fc23cba3df03281201
