@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/05/09 00:15:03 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/09/18 17:45:09 agc Exp $
 bin/ntping
 bin/straps
 bin/scotty
@@ -205,7 +205,8 @@ lib/tnm2.1.8/examples/pcnfs
 lib/tnm2.1.8/examples/pcnfs.n
 lib/tnm2.1.8/examples/mibgrep
 lib/tnm2.1.8/examples/mibgrep.n
-lib/tnm2.1.8.so
+lib/libtnm2.1.8.a
+lib/libtnm2.1.8.so.1.0
 lib/tkined1.4.8/pkgIndex.tcl
 lib/tkined1.4.8/tkined.defaults
 lib/tkined1.4.8/library/Editor.tcl
@@ -361,7 +362,8 @@ lib/tkined1.4.8/apps/usa-map.xbm
 lib/tkined1.4.8/apps/germany-map.xbm
 lib/tkined1.4.8/apps/locations
 lib/tkined1.4.8/apps/tclIndex
-lib/tkined1.4.8.so
+lib/libtkined1.4.8.so.1.0
+lib/libtkined1.4.8.a
 @dirrm lib/tkined1.4.8/library
 @dirrm lib/tkined1.4.8/bitmaps
 @dirrm lib/tkined1.4.8/apps
