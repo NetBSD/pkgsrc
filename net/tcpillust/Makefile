@@ -1,26 +1,23 @@
-# New ports collection makefile for:	tcpillust
-# Date created:		14 April 2000
-# Whom:			nishida@csl.sony.co.jp
-#
+# $NetBSD: Makefile,v 1.2 2000/07/31 20:24:15 itojun Exp $
 # $FreeBSD: ports/net/tcpillust/Makefile,v 1.1.1.1 2000/07/29 06:26:00 sada Exp $
 #
 
-PORTNAME=	tcpillust
-PORTVERSION=	1.0a
-CATEGORIES=	net tk82 tcl82
+DISTNAME=	tcpillust-1.0a
+CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.csl.sony.co.jp/CSL/nishida/
 
-MAINTAINER=	nishida@csl.sony.co.jp
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.csl.sony.co.jp/person/nishida/tcpillust.html
 
-LIB_DEPENDS=	tk82.1:${PORTSDIR}/x11-toolkits/tk82 \
-				tcl82.1:${PORTSDIR}/lang/tcl82
+DEPENDS+=	tk-*:../../x11/tk80
+DEPENDS+=	tcl-*:../../lang/tcl80
 
 USE_IMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=
-REQUIRES_MOTIF=	yes
-
-MAN1=	tcpillust.1
+CONFIGURE_ARGS+=--with-tcl-include=${LOCALBASE}/include/tcl8.0 \
+		--with-tk-include=${LOCALBASE}/include/tk8.0 \
+		--with-tcl-lib=${LOCALBASE}/lib \
+		--with-tk-lib=${LOCALBASE}/lib
 
 DOCS=	README
 
@@ -38,4 +35,4 @@ post-install:
 	done
 .endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
