@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.4 2004/01/24 13:30:56 grant Exp $
-#
+# $NetBSD: Makefile,v 1.5 2005/02/04 09:38:43 adam Exp $
 
-DISTNAME=	powwow-1.2.4
+DISTNAME=	powwow-1.2.5
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SUNSITE:=games/muds/}	\
-		ftp://Linuz.sns.it/pub/Linux/max/powwow/
+MASTER_SITES=	http://linuz.sns.it/~max/powwow/
 
 MAINTAINER=	jdolecek@NetBSD.org
-HOMEPAGE=	http://Linuz.sns.it/~max/powwow.html
+HOMEPAGE=	http://linuz.sns.it/~max/powwow.html
 COMMENT=	Client to play MUDs
 
 USE_GNU_TOOLS+=	make
 POWWOW_DIR=	${PREFIX}/share/powwow
 
 do-build:
-	cd ${WRKSRC} && POWWOW_DIR="${POWWOW_DIR}" ./make_it
+	cd ${WRKSRC} && POWWOW_DIR="${POWWOW_DIR}" CFLAGS="${CFLAGS}" ./make_it
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/powwow ${PREFIX}/bin
