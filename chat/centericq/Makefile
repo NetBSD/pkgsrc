@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/03/18 02:24:30 itojun Exp $
+# $NetBSD: Makefile,v 1.5 2002/03/25 01:41:04 jmc Exp $
 #
 
 DISTNAME=	centericq-4.6.5
@@ -14,6 +14,6 @@ USE_NCURSES=	yes
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/ncurses/buildlink.mk"
-#.include "../../lang/gcc/Makefile.gcc"
+.include "../../lang/gcc/Makefile.gcc"
 .include "../../devel/libsigc++/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
