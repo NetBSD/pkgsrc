@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.439 2003/12/07 04:14:45 epg Exp $
+# $NetBSD: Makefile,v 1.440 2003/12/09 04:54:44 grant Exp $
 #
 
 COMMENT=	Development utilities
@@ -297,6 +297,7 @@ SUBDIR+=	p5-Make
 SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Module-Build
 SUBDIR+=	p5-Module-Dependency
+SUBDIR+=	p5-Net-CIDR
 SUBDIR+=	p5-OLE-Storage_Lite
 SUBDIR+=	p5-PV
 SUBDIR+=	p5-Params-Validate
