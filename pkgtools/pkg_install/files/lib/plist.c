@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.9 2004/06/01 17:32:21 minskim Exp $	*/
+/*	$NetBSD: plist.c,v 1.10 2004/08/06 16:57:03 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.9 2004/06/01 17:32:21 minskim Exp $");
+__RCSID("$NetBSD: plist.c,v 1.10 2004/08/06 16:57:03 jlam Exp $");
 #endif
 #endif
 
@@ -403,7 +403,7 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg)
 						(void) strlcpy(buf, SYMLINK_HEADER,
 						    sizeof(buf));
 						if ((cc = readlink(tmp, &buf[SymlinkHeaderLen],
-							  sizeof(buf) - SymlinkHeaderLen)) < 0) {
+							  sizeof(buf) - SymlinkHeaderLen - 1)) < 0) {
 							warnx("can't readlink `%s'", tmp);
 							continue;
 						}

@@ -1,4 +1,4 @@
-/*	$NetBSD: pl.c,v 1.7 2004/02/07 10:37:52 grant Exp $	*/
+/*	$NetBSD: pl.c,v 1.8 2004/08/06 16:57:03 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: pl.c,v 1.11 1997/10/08 07:46:35 charnier Exp";
 #else
-__RCSID("$NetBSD: pl.c,v 1.7 2004/02/07 10:37:52 grant Exp $");
+__RCSID("$NetBSD: pl.c,v 1.8 2004/08/06 16:57:03 jlam Exp $");
 #endif
 #endif
 
@@ -208,7 +208,7 @@ check_list(char *home, package_t *pkg, const char *PkgName)
 				(void) strlcpy(target, SYMLINK_HEADER,
 				    sizeof(target));
 				if ((cc = readlink(name, &target[SymlinkHeaderLen],
-					  sizeof(target) - SymlinkHeaderLen)) < 0) {
+					  sizeof(target) - SymlinkHeaderLen - 1)) < 0) {
 					warnx("can't readlink `%s'", name);
 					continue;
 				}

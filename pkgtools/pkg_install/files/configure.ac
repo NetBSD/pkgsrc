@@ -87,7 +87,7 @@ AH_BOTTOM(
 #endif
 )
 
-AC_CONFIG_FILES([Makefile add/Makefile admin/Makefile create/Makefile \
-	delete/Makefile info/Makefile lib/Makefile view/Makefile \
-	view/linkfarm.sh view/pkg_view.sh])
+AC_CONFIG_FILES([Makefile add/Makefile admin/Makefile bpm/bpm.sh \
+	create/Makefile delete/Makefile info/Makefile lib/Makefile \
+	view/Makefile view/linkfarm.sh view/pkg_view.sh])
 AC_OUTPUT

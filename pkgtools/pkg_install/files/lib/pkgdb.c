@@ -1,4 +1,4 @@
-/*	$NetBSD: pkgdb.c,v 1.19 2003/09/09 13:34:21 jlam Exp $	*/
+/*	$NetBSD: pkgdb.c,v 1.20 2004/08/06 16:57:03 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: pkgdb.c,v 1.19 2003/09/09 13:34:21 jlam Exp $");
+__RCSID("$NetBSD: pkgdb.c,v 1.20 2004/08/06 16:57:03 jlam Exp $");
 #endif
 
 /*
