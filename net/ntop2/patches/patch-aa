@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/07/23 11:34:00 agc Exp $
+
+The ac_mysql variable really means "ac_disable_mysql"
+
+Remove an extraneous ','
+
+--- configure	2002/07/23 10:17:28	1.1
++++ configure	2002/07/23 10:17:52
+@@ -2475,9 +2475,9 @@
+ # Check whether --enable-mysql or --disable-mysql was given.
+ if test "${enable_mysql+set}" = set; then
+   enableval="$enable_mysql"
+-  ac_mysql="yes"
+-else
+   ac_mysql="no"
++else
++  ac_mysql="yes"
+ fi
+ 
+ 
+@@ -2909,7 +2909,7 @@
+ #include "confdefs.h"
+ 
+ #       include <sys/types.h>
+-#       include <netinet/in.h>,
++#       include <netinet/in.h>
+ #include <netinet/in_systm.h>
+ #       include <sys/socket.h>
+ #       include <netinet/ip.h>
