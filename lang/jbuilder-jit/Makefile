@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/08/16 00:06:23 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/10 01:01:11 jlam Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -16,7 +16,7 @@ COMMENT=	Just-In-Time compiler for Linux Java Virtual Machine
 
 USE_JAVA=	run
 PKG_JVM=	sun-jdk13 # works with both 1.2.2 and 1.3 JVMs
-PLIST_SUBST+=	JAVADIR=${JAVA_HOME:C|${PREFIX}/||}
+PLIST_SUBST+=	JAVADIR=${PKG_JAVA_HOME:C|${PREFIX}/||}
 
 WRKSRC=		${WRKDIR}/javacomp-1.2.15
 EXTRACT_ELEMENTS=	LinuxJIT/javacomp-1.2.15.tar.gz
@@ -45,7 +45,7 @@ post-extract:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/libjavacomp.so ${WRKSRC}/libjavacomp_g.so \
-		${JAVA_HOME}/lib/i386/
+		${PKG_JAVA_HOME}/lib/i386/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jbuilder-jit
 	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/jbuilder-jit/README.javacomp
 	${INSTALL_DATA} ${WRKSRC}/LICENSE.TXT ${PREFIX}/share/doc/jbuilder-jit/LICENSE.javacomp

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/09/08 06:19:00 tron Exp $
+# $NetBSD: Makefile,v 1.17 2002/10/10 01:01:11 jlam Exp $
 
 DISTNAME=	configurator_152-128
 PKGNAME=	${BINNAME}-1.5.2
@@ -44,7 +44,7 @@ post-extract:
 
 do-build:
 	${ECHO} "#!/bin/sh" >${WRKSRC}/${BINNAME}
-	${ECHO} "PATH=${JAVA_HOME}/bin:\$${PATH}; export PATH" >>${WRKSRC}/${BINNAME}
+	${ECHO} "PATH=${PKG_JAVA_HOME}/bin:\$${PATH}; export PATH" >>${WRKSRC}/${BINNAME}
 .if defined(CLASSPATH)
 	${ECHO} "CLASSPATH=${CLASSPATH}:\$${CLASSPATH}; export CLASSPATH" >>${WRKSRC}/${BINNAME}
 .endif

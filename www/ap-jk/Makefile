@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/07/29 22:23:29 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/10 01:01:11 jlam Exp $
 
 DISTNAME=	jakarta-tomcat-3.2.4-src
 PKGNAME=	ap-jk-3.2.4
@@ -20,9 +20,9 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src/native/apache1.3
 do-build:
 	(cd ${WRKSRC} && \
 		${LOCALBASE}/sbin/apxs -o mod_jk.so \
-		-I../jk -I${JAVA_HOME}/include \
-		-I${JAVA_HOME}/include/netbsd \
-		-I${JAVA_HOME}/include/linux \
+		-I../jk -I${PKG_JAVA_HOME}/include \
+		-I${PKG_JAVA_HOME}/include/netbsd \
+		-I${PKG_JAVA_HOME}/include/linux \
 		-c *.c ../jk/*.c)
 
 do-install:
