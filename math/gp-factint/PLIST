@@ -1,0 +1,60 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/23 01:26:24 cjep Exp $
+lib/gap4.3/pkg/factint/PkgInfo.g
+lib/gap4.3/pkg/factint/banner.g
+lib/gap4.3/pkg/factint/doc/about.tex
+lib/gap4.3/pkg/factint/doc/factint.bib
+lib/gap4.3/pkg/factint/doc/general.tex
+lib/gap4.3/pkg/factint/doc/info.tex
+lib/gap4.3/pkg/factint/doc/manual.bbl
+lib/gap4.3/pkg/factint/doc/manual.dvi
+lib/gap4.3/pkg/factint/doc/manual.ilg
+lib/gap4.3/pkg/factint/doc/manual.ind
+lib/gap4.3/pkg/factint/doc/manual.lab
+lib/gap4.3/pkg/factint/doc/manual.mst
+lib/gap4.3/pkg/factint/doc/manual.pdf
+lib/gap4.3/pkg/factint/doc/manual.ps
+lib/gap4.3/pkg/factint/doc/manual.six
+lib/gap4.3/pkg/factint/doc/manual.tex
+lib/gap4.3/pkg/factint/doc/manual.toc
+lib/gap4.3/pkg/factint/doc/methods.tex
+lib/gap4.3/pkg/factint/doc/preface.tex
+lib/gap4.3/pkg/factint/doc/timings.tex
+lib/gap4.3/pkg/factint/factint.tst
+lib/gap4.3/pkg/factint/gap/cfrac.gi
+lib/gap4.3/pkg/factint/gap/ecm.gi
+lib/gap4.3/pkg/factint/gap/factint.gd
+lib/gap4.3/pkg/factint/gap/general.gi
+lib/gap4.3/pkg/factint/gap/mpqs.gi
+lib/gap4.3/pkg/factint/gap/pminus1.gi
+lib/gap4.3/pkg/factint/gap/pplus1.gi
+lib/gap4.3/pkg/factint/htm/CHAP001.htm
+lib/gap4.3/pkg/factint/htm/CHAP002.htm
+lib/gap4.3/pkg/factint/htm/CHAP003.htm
+lib/gap4.3/pkg/factint/htm/CHAP004.htm
+lib/gap4.3/pkg/factint/htm/CHAP005.htm
+lib/gap4.3/pkg/factint/htm/biblio.htm
+lib/gap4.3/pkg/factint/htm/chapters.htm
+lib/gap4.3/pkg/factint/htm/indxC.htm
+lib/gap4.3/pkg/factint/htm/indxE.htm
+lib/gap4.3/pkg/factint/htm/indxF.htm
+lib/gap4.3/pkg/factint/htm/indxG.htm
+lib/gap4.3/pkg/factint/htm/indxH.htm
+lib/gap4.3/pkg/factint/htm/indxI.htm
+lib/gap4.3/pkg/factint/htm/indxL.htm
+lib/gap4.3/pkg/factint/htm/indxM.htm
+lib/gap4.3/pkg/factint/htm/indxP.htm
+lib/gap4.3/pkg/factint/htm/indxR.htm
+lib/gap4.3/pkg/factint/htm/indxS.htm
+lib/gap4.3/pkg/factint/htm/indxT.htm
+lib/gap4.3/pkg/factint/htm/indxU.htm
+lib/gap4.3/pkg/factint/htm/indxW.htm
+lib/gap4.3/pkg/factint/htm/theindex.htm
+lib/gap4.3/pkg/factint/init.g
+lib/gap4.3/pkg/factint/make_zoo
+lib/gap4.3/pkg/factint/read.g
+lib/gap4.3/pkg/factint/readme.txt
+lib/gap4.3/pkg/factint/relnotes.txt
+@dirrm lib/gap4.3/pkg/factint/htm
+@dirrm lib/gap4.3/pkg/factint/gap
+@dirrm lib/gap4.3/pkg/factint/doc
+@dirrm lib/gap4.3/pkg/factint
