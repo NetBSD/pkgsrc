@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1236 2003/12/23 11:04:11 xtraeme Exp $
+$NetBSD: TODO,v 1.1237 2003/12/23 23:01:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -146,7 +146,6 @@ Suggested package updates
 	o ddd-3.3.8
 	o dlcompat-20030629 [grant]
 	o dnetc-2.9004-482 [pkg/22390]
-	o docbook-simple-1.1b1
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o eclipse-2.1.2
@@ -249,6 +248,7 @@ Suggested package updates
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
+	o p5-XML-Xerces-2.3.0-4 [pkg/23862]
 	o pdmenu-1.2.81
 	o plib-1.7.0
 	o ploticus-2.20
@@ -314,7 +314,8 @@ Suggested package updates
 	o xboard-4.2.7
 	o xdaliclock-2.20
 	o xephem-3.5.2
-	o xerces-c-2.2.0 [heinz]
+	o xerces-c-2.3.0 [pkg/23861|heinz?]
+	o xerces-c-2.4.0 [heinz?]
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.5.0
 	o xfstt-1.6
