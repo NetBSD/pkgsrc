@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1476 2004/07/25 06:51:33 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1477 2004/07/27 03:59:26 xtraeme Exp $
 #
 # This file is in the public domain.
 #
@@ -475,12 +475,6 @@ MAKE_ENV+=		CPP="${CPP}"
 # export the flags needed to compile and link pthreaded code
 MAKE_ENV+=		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
 MAKE_ENV+=		PTHREAD_LDFLAGS="${PTHREAD_LDFLAGS}"
-
-.if exists(${LOCALBASE}/bin/ftp)
-FETCH_CMD?=		${LOCALBASE}/bin/ftp
-.else
-FETCH_CMD?=		/usr/bin/ftp
-.endif
 
 TOUCH_FLAGS?=		-f
 
@@ -1418,6 +1412,26 @@ package:
 # adding pre-* or post-* targets/scripts, override these.
 ################################################################
 
+# Resume a previous transfer not finished totally.
+_RESUME_TRANSFER=							\
+	dsize=`${LS} -l ${_DISTDIR}/$$bfile | ${AWK} '{print $$5}'`;	\
+	tsize=`${AWK} '/^Size/ && $$2 == '"\"($$bfile)\""' { print $$4 }' ${DISTINFO_FILE}` || true; \
+	if [ -n "$$ftp_proxy" -o -n "$$http_proxy" ]; then		\
+		${ECHO_MSG} "===> Resume is not supported by ftp(1) using http/ftp proxies.";	\
+		break;							\
+	else								\
+		if [ `echo $$dsize` != `echo $$tsize` ]; then		\
+			for res_site in $$sites; do			\
+				${ECHO_MSG} "===> $$bfile not completed, resuming...";	\
+				cd ${_DISTDIR};				\
+				${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS}	\
+					$${res_site}$${bfile};		\
+				if [ $$? -eq 0 ]; then			\
+					break;				\
+				fi;					\
+			done;						\
+		fi;							\
+	fi
 #
 # Define the elementary fetch macros.
 #
@@ -1598,7 +1612,8 @@ do-fetch:
 	unsorted_sites="${SITES_${fetchfile:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"; \
 	sites="${ORDERED_SITES}";					\
 	${_CHECK_DIST_PATH};						\
-	${_FETCH_FILE};
+	${_FETCH_FILE};							\
+	${_RESUME_TRANSFER}
 .        endif # defined(_FETCH_MESSAGE)
 .      endfor
 .    endif # INTERACTIVE_STAGE == fetch
