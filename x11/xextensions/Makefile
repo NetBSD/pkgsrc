@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/13 09:58:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/08 21:56:00 minskim Exp $
 #
 
 DISTNAME=		xextensions-1.0.1
@@ -15,8 +15,7 @@ CONFLICTS+=		XFree86-libs-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
-PKGCONFIG_OVERRIDE=	${WRKSRC}/xextensions.pc.in
+PKGCONFIG_OVERRIDE=	xextensions.pc.in
 GNU_CONFIGURE=		yes
 
-.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
