@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+$NetBSD: patch-ad,v 1.2 1999/09/14 02:19:15 jlam Exp $
 
 --- src/config/platforms/netbsd.mk.orig	Fri Jul  9 15:13:57 1999
 +++ src/config/platforms/netbsd.mk	Sat Sep 11 11:17:45 1999
@@ -7,9 +7,9 @@ $NetBSD: patch-ad,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
  ## in constructing the name object file destination directory.
  
 -OS_ARCH		:= $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ | sed "s/\//-/")
-+# Get value of MACHINE_ARCH from environment.
++# Get value of OS_ARCH from environment variable MACHINE.
 +#
-+OS_ARCH		= ${MACHINE_ARCH}
++OS_ARCH		= ${MACHINE}
 +
 +# Set OS_ENDIAN to appropriate value.  For NetBSD, most architectures are
 +# big-endian, so test for the architectures which are little-endian and
