@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2004/11/18 10:14:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2004/11/18 10:32:22 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -1103,4 +1103,4 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @comment dirrm lib/kde3
 @dirrm include/libtext2path-0.1
 @dirrm include/ksvg
-@dirrm include/dom
+@comment dirrm include/dom
