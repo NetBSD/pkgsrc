@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/03/18 12:11:56 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/03/28 20:28:56 wiz Exp $
 
 .if !defined(NETPBM_BUILDLINK2_MK)
 NETPBM_BUILDLINK2_MK=	# defined
@@ -40,5 +40,5 @@ netpbm-buildlink-lib:
 	  ${LN} -fs libnetpbm.a lib$${_NETPBM_LIB}.a;		\
 	  ${LN} -fs libnetpbm.so.*.* lib$${_NETPBM_LIB}.so;	\
 	done
-	
+
 .endif	# NETPBM_BUILDLINK2_MK

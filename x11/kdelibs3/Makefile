@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/03/11 13:10:32 markd Exp $
+# $NetBSD: Makefile,v 1.23 2003/03/28 20:36:56 wiz Exp $
 
 DISTNAME=	kdelibs-3.1
 CATEGORIES=	x11
@@ -137,7 +137,7 @@ post-install:
 #
 .if ${OPSYS} == "NetBSD"
 .  if (${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc")
-CXXFLAGS:=      ${CXXFLAGS:C/-O[0-9]*/-O/g} 
+CXXFLAGS:=      ${CXXFLAGS:C/-O[0-9]*/-O/g}
 CFLAGS:=        ${CFLAGS:C/-O[0-9]*/-O/g}
 CONFIGURE_ENV+= CXXFLAGS="${CXXFLAGS}"
 CONFIGURE_ENV+= CFLAGS="${CFLAGS}"
