@@ -1,19 +1,22 @@
-*** Makefile.in.orig	Thu Oct 17 04:37:03 1996
---- Makefile.in	Fri Oct 18 02:12:57 1996
-***************
-*** 34,40 ****
-  VPATH=@srcdir@
-  CPPFLAGS=-I. -I@srcdir@ @CPPFLAGS@
-  
-! LIBS=@LIBS@
-  SHARED_LDFLAGS=@LDFLAGS@
-  STATIC_LDFLAGS=@LDFLAGS@ @SLDFLAGS@
-  
---- 34,40 ----
-  VPATH=@srcdir@
-  CPPFLAGS=-I. -I@srcdir@ @CPPFLAGS@
-  
-! LIBS= -lreadline -lncurses -lmytinfo
-  SHARED_LDFLAGS=@LDFLAGS@
-  STATIC_LDFLAGS=@LDFLAGS@ @SLDFLAGS@
-  
+--- Main.c.orig	Fri Oct 18 07:01:58 1996
++++ Main.c	Fri Feb 20 14:46:28 1998
+@@ -22,6 +22,9 @@
+ #include <pwd.h>
+ #include <errno.h>
+ #include <ctype.h>
++#if defined(__FreeBSD__) || defined(__NetBSD__)
++#include <locale.h>
++#endif
+ #include <signal.h>
+ #include <setjmp.h>
+ #include <stdlib.h>
+@@ -866,6 +869,9 @@
+ 	int opt, result;
+ 	OpenOptions openopt;
+ 
++#ifdef __FreeBSD__
++	setlocale(LC_ALL, "");
++#endif
+ 	Init();
+ 	RunStartupScript();
+ 
