@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/01/19 10:20:12 taca Exp $
+$NetBSD: distinfo,v 1.3 2002/02/01 14:04:50 taca Exp $
 
-SHA1 (ruby/mod_ruby-0.9.5.tar.gz) = 5bdef67af3f20a953b8020c2e0ac3d85f8133663
-Size (ruby/mod_ruby-0.9.5.tar.gz) = 40733 bytes
+SHA1 (ruby/mod_ruby-0.9.6.tar.gz) = f42e016165ce4570556dcc88f7c905929468b8e0
+Size (ruby/mod_ruby-0.9.6.tar.gz) = 41275 bytes
