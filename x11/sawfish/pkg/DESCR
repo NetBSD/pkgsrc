@@ -1,9 +1,3 @@
-This is sawfish, a highly configurable window manager for X11. It is
-known to compile on at least Solaris/sparc and Linux/ix86; it is
-released under the terms of the GNU GPL, copyright John Harper
-<jsh@users.sourceforge.net>
-
-
 Sawfish is an extensible window manager using an Emacs Lisp-like
 scripting language--all window decorations are configurable, the basic
 idea is to have as much user-interface policy as possible controlled
