@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.4 1999/01/04 13:05:02 frueauf Exp $
+
+--- GNUmakefile.in-orig	Sun Oct 18 06:16:07 1998
++++ GNUmakefile.in	Tue Dec 29 14:40:02 1998
+@@ -34,7 +34,7 @@
+ 	echo All of PostgreSQL is successfully made.  Ready to install. ;\
+         fi
+ 
+-install:
++install: install-man
+ 	$(MAKE) lexverify
+ 	$(MAKE) -C utils install
+ 	$(MAKE) -C backend install
