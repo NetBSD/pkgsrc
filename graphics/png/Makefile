@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2000/07/03 12:06:47 rh Exp $
+# $NetBSD: Makefile,v 1.22 2000/08/01 15:58:23 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:44 max Exp
 
-DISTNAME=       libpng-1.0.7
-PKGNAME=        png-1.0.7
+DISTNAME=       libpng-1.0.8
+PKGNAME=        png-1.0.8
 CATEGORIES=     graphics
 MASTER_SITES=   ftp://ftp.cdrom.com/pub/png/src/ \
 		ftp://swrinde.nde.swri.edu/pub/png/src/ \
