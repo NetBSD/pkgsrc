@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4354 2004/01/05 04:35:04 lha Exp $
+$NetBSD: CHANGES,v 1.4355 2004/01/05 04:38:19 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -56,3 +56,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgii to 0.8.4 [xtraeme 2003-01-05]
 	Updated libggi to 2.0.4 [xtraeme 2003-01-05]
 	Updated gnus to 5.10.6 [lha 2003-01-05]
+	Updated p5-Net-Server to 0.86 [grant 2003-01-05]
