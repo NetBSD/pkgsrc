@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.7 2005/03/29 11:03:18 markd Exp $
+
+--- kpdf/ui/presentationwidget.cpp.orig	2005-03-29 11:58:40.224750000 +1200
++++ kpdf/ui/presentationwidget.cpp
+@@ -320,7 +320,7 @@ void PresentationWidget::overlayClick( c
+         return;
+ 
+     // compute angle relative to indicator (note coord transformation)
+-    float angle = 0.5 + 0.5 * atan2f( -xPos, -yPos ) / M_PI;
++    float angle = 0.5 + 0.5 * atan2( -xPos, -yPos ) / M_PI;
+     int pageIndex = (int)( angle * ( m_frames.count() - 1 ) + 0.5 );
+ 
+     // go to selected page
