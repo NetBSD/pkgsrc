@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/02/21 20:26:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/05 10:44:06 wiz Exp $
 #
 
 DISTNAME=	lavaps-1.20
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
 COMMENT=	Lava lamp of currently running processes
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk83
 USE_PERL5=	build
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
@@ -21,4 +20,5 @@ CONFIGURE_ARGS=	--with-additional-includes='-I${LOCALBASE}/include' \
 		--with-tcl-ver=8.3.2 --with-tk-ver=8.3.2 \
 		--with-tcltk-lib-suffix-type=nodot
 
+.include "../../x11/tk83/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
