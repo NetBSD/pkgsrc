@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/27 03:20:20 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/05/22 09:32:25 wiz Exp $
 
 DISTNAME=		WindowMaker-0.64.0
 PKGNAME=		windowmaker-0.64.0
@@ -16,7 +16,7 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS+=		libproplist-0.10.*:../../devel/libproplist
 DEPENDS+=		libungif-*:../../graphics/libungif
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		png>1.0.9:../../graphics/png
+DEPENDS+=		png>=1.0.11:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
 
 USE_LIBTOOL=		YES
