@@ -1,4 +1,4 @@
-#	$NetBSD: FreeBSD.pkg.dist,v 1.1 2002/11/17 15:11:40 grant Exp $
+#	$NetBSD: FreeBSD.pkg.dist,v 1.2 2002/11/29 17:22:01 wiz Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -133,6 +133,10 @@
 	games
         ..
 	locale
+            am
+                LC_MESSAGES
+                ..
+            ..
             ar
                 LC_MESSAGES
                 ..
