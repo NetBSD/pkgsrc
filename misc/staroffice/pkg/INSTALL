@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 1999/11/22 21:23:49 rh Exp $
+#
+
+case $2 in
+    PRE-INSTALL)
+        ;;
+    POST-INSTALL)
+    	for i in backup store store/trash download work ; do
+	    mkdir -p @@PREFIX@@/$i
+	done
+	;;
+    *)
+	echo "Unexpected Argument $2!!"
+	exit 1
+	;;
+esac
+
+exit 0
