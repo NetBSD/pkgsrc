@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1365 2004/01/29 10:22:01 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1366 2004/01/31 07:07:33 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1253,7 +1253,7 @@ CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
 
 .if defined(GNU_CONFIGURE)
 #
-# CONFIGURE_PREFIX is the argument to the --prefix option passed to the
+# GNU_CONFIGURE_PREFIX is the argument to the --prefix option passed to the
 # GNU configure script.
 #
 GNU_CONFIGURE_PREFIX?=	${PREFIX}
