@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2003/07/17 21:47:01 grant Exp $
+# $NetBSD: Makefile.common,v 1.9 2003/09/15 11:59:12 markd Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -27,7 +27,7 @@ MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
 BUILD_DEFS+=    USE_INET6 USE_TCPWRAPPERS USE_LDAP USE_DB2 \
-		USE_SASL USE_STARTTLS USE_MILTER USE_DB4
+		USE_SASL USE_STARTTLS USE_DB4
 DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
 USE_BUILDLINK2=	YES
@@ -67,7 +67,5 @@ make-sendmail-siteconfig:
 .if ${OPSYS} == "SunOS"
 	${CAT} ${FILESDIR}/site.config.m4-solaris >>${SITECONFIG}
 .endif
-.if defined(USE_MILTER) && ${USE_MILTER} == YES
 	${CAT} ${FILESDIR}/site.config.m4-milter >>${SITECONFIG}
 	${ECHO} -n ' MILTER' >>${DESCR_SRC}
-.endif
