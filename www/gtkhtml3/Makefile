@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2004/04/02 18:15:11 recht Exp $
+# $NetBSD: Makefile,v 1.13 2004/09/21 16:52:41 jmmv Exp $
 #
 
-DISTNAME=	gtkhtml-3.0.10
+DISTNAME=	gtkhtml-3.2.1
 PKGNAME=	${DISTNAME:S/gtkhtml/gtkhtml3/}
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkhtml/3.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkhtml/3.2/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
@@ -19,9 +19,15 @@ PKGCONFIG_OVERRIDE+=	src/libgtkhtml.pc.in
 GNU_CONFIGURE=		yes
 
 .include "../../devel/gail/buildlink3.mk"
-.include "../../devel/gal2/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
+.include "../../print/libgnomeprint/buildlink3.mk"
+.include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
-.include "../../net/libsoup/buildlink3.mk"
+.include "../../net/libsoup-devel/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
