@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2003/03/31 16:18:04 bouyer Exp $
+# $NetBSD: Makefile,v 1.56 2003/04/10 14:56:21 fredb Exp $
 
 DISTNAME=       imap-2002b
 PKGNAME=        imap-uw-2002.2
@@ -29,10 +29,14 @@ ALL_TARGET=	lrh
 ALL_TARGET=	osx
 .else
 ALL_TARGET=	neb
-.if defined(USE_KERBEROS) && (${USE_KERBEROS} != "no")
+. if defined(USE_KERBEROS) && (${USE_KERBEROS} != "no")
 PKG_USE_KERBEROS=	#defined
 ALL_TARGET+=	EXTRAAUTHENTICATORS="gss"
-.endif
+.  if !empty(MACHINE_PLATFORM:MNetBSD-1.5*)
+# NetBSD-1.5 didn't have "des_new_random_key" in libcrypto
+MAKE_ENV+=	GSS_EXTRA_LDFLAGS= -ldes
+.  endif
+. endif
 .endif
 
 BUILD_DEFS+=	IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_NO_CLEARTEXT
