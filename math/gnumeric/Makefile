@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2001/08/13 19:55:51 rh Exp $
+# $NetBSD: Makefile,v 1.35 2001/08/23 22:40:40 mjl Exp $
 #
 
-DISTNAME=		gnumeric-0.68
+DISTNAME=		gnumeric-0.70
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnumeric/}
 
