@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9318 2005/02/26 13:25:26 dsainty Exp $
+$NetBSD: CHANGES,v 1.9319 2005/02/26 15:40:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -718,7 +718,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Kwiki-Revisions to 0.14 [jlam 2005-02-02]
 	Updated p5-Kwiki-UserName to 0.14 [jlam 2005-02-02]
 	Updated p5-Kwiki-UserPreferences to 0.13 [jlam 2005-02-02]
-	Added libarchive-102.002 [xtraeme 2005-02-02]
+	Added libarchive-1.02.002 [xtraeme 2005-02-02]
 	Added gaim-encryption [jschauma 2005-02-02]
 	Updated speedtouch to 1.3.1nb2 [tron 2005-02-02]
 	Updated dcraw to 1.233 [drochner 2005-02-02]
@@ -1097,7 +1097,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated hdf5 to 1.6.3 [adam 2005-02-25]
 	Updated ngrep to 1.43 [adam 2005-02-25]
 	Updated netcdf to 3.6.0p1 [adam 2005-02-25]
-	Updated cyrus-imapd to 2.2.12 [adrianp 2005-02-25]
+	Updated cyrus-imapd22 to 2.2.12 [adrianp 2005-02-25]
 	Updated nasm to 0.98.39 [adam 2005-02-25]
 	Updated libusb to 0.1.10a [adam 2005-02-25]
 	Updated p5-Log-Dispatch-Config to 1.01 [wiz 2005-02-25]
