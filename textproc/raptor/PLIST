@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/30 16:18:58 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/25 04:13:06 xtraeme Exp $
 bin/rapper
 bin/raptor-config
-include/ntriples.h
 include/raptor.h
 lib/libraptor.a
 lib/libraptor.la
 lib/libraptor.so
-lib/libraptor.so.0
-lib/libraptor.so.0.0
+lib/libraptor.so.1
+lib/libraptor.so.1.0
 lib/pkgconfig/raptor.pc
 man/man1/rapper.1
 man/man1/raptor-config.1
