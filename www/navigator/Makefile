@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/06/14 21:43:38 cgd Exp $
+# $NetBSD: Makefile,v 1.9 1999/06/18 16:48:46 cgd Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -37,7 +37,7 @@ SUB=		english/unix/${DIST_DIR_NAME}/navigator_standalone
 MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/${NS_VERS}/${SUB}/ \
 		ftp://sunsite.utk.edu/pub/netscape/communicator/${NS_VERS}/${SUB}/ \
 		ftp://ftp-uk.netscape.com/pub/communicator/${SUB}/
-ONLY_FOR_PLATFORM=	*-*-{i386,sparc}
+ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-sparc
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://home.netscape.com/browsers/index.html
