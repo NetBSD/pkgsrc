@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/09 01:51:11 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 03:32:31 minskim Exp $
 
 DISTNAME=	Net-Netmask-1.9007
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,9 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 MAINTAINER=	charlie@rubberduck.com
 COMMENT=	Perl5 module to parse and manipulate IP network blocks
 
-USE_BUILDLINK2=	YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/Netmask/.packlist
 
 .include "../../lang/perl5/module.mk"
