@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2001/08/24 05:35:17 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2001/09/09 03:37:02 jlam Exp $
 #
 
 DISTNAME=	icewm-1.0.4
@@ -10,7 +10,6 @@ EXTRACT_SUFX=	.src.tar.gz
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://icewm.sourceforge.net/
 
-USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=	# defined
 USE_X11BASE=	# defined
 
