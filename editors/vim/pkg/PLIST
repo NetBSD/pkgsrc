@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/08/24 10:12:22 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/09/01 09:33:42 agc Exp $
 bin/vim-ctags
 bin/vim-etags
 bin/ex
@@ -102,6 +102,7 @@ share/vim/syntax/diff.vim
 share/vim/syntax/dosbatch.vim
 share/vim/syntax/dosini.vim
 share/vim/syntax/dracula.vim
+share/vim/syntax/dtd.vim
 share/vim/syntax/eiffel.vim
 share/vim/syntax/elmfilt.vim
 share/vim/syntax/esqlc.vim
@@ -129,9 +130,11 @@ share/vim/syntax/modula2.vim
 share/vim/syntax/muttrc.vim
 share/vim/syntax/nosyntax.vim
 share/vim/syntax/objc.vim
+share/vim/syntax/ocaml.vim
 share/vim/syntax/pascal.vim
 share/vim/syntax/perl.vim
 share/vim/syntax/pike.vim
+share/vim/syntax/pmfile.vim
 share/vim/syntax/pod.vim
 share/vim/syntax/postscr.vim
 share/vim/syntax/pov.vim
