@@ -1,20 +1,77 @@
-$NetBSD: patch-aa,v 1.7 2003/10/14 23:46:46 hubertf Exp $
+$NetBSD: patch-aa,v 1.8 2004/11/23 21:32:11 hubertf Exp $
 
---- Makefile.in.orig	Sat Sep  6 15:15:17 2003
+--- Makefile.in.orig	2004-11-21 17:03:11.000000000 +0100
 +++ Makefile.in
-@@ -55,11 +55,10 @@ install:
- 		make installonly
+@@ -32,7 +32,10 @@ distclean:
+ 		make clean
+ 		rm -f config.cache config.status config.log
+ 		for dir in ipv6logconv ipv6logstats ipv6calcweb ipv6calc man lib md5 getopt databases/ieee-oui databases/ipv4-assignment; do \
+-			pushd $$dir && make distclean; popd; \
++			ocwd=`pwd`; \
++			cd $$dir; \
++			make $@ ; \
++			cd $$ocwd ; \
+ 		done
+ 
+ autoclean:
+@@ -42,12 +45,18 @@ autoclean:
+ 		rm -f contrib/ipv6calc.spec
+ 		rm config.h
+ 		for dir in ipv6logconv ipv6logstats ipv6calcweb ipv6calc man lib md5 getopt; do \
+-			pushd $$dir && make autoclean; popd;\
++			ocwd=`pwd`; \
++			cd $$dir; \
++			make $@ ; \
++			cd $$ocwd ; \
+ 		done
+ 
+ clean:
+ 		for dir in ipv6logconv ipv6logstats ipv6calcweb ipv6calc man lib md5 getopt; do \
+-			pushd $$dir && make clean; popd; \
++			ocwd=`pwd`; \
++			cd $$dir; \
++			make $@ ; \
++			cd $$ocwd ; \
+ 		done
+ 
+ install:
+@@ -56,7 +65,10 @@ install:
  
  installonly:
--		mkdir -p $(root)/bin/
--		install -m 755 ipv6calc/ipv6calc $(root)/bin/
--		mkdir -p $(root)/usr/bin/
--		install -m 755 ipv6logconv/ipv6logconv $(root)/usr/bin/
--		install -m 755 ipv6logstats/ipv6logstats $(root)/usr/bin/
-+		${BSD_INSTALL_PROGRAM_DIR} $(PREFIX)/bin
-+		${BSD_INSTALL_PROGRAM} ipv6calc/ipv6calc $(PREFIX)/bin
-+		${BSD_INSTALL_PROGRAM} ipv6logconv/ipv6logconv $(PREFIX)/bin
-+		${BSD_INSTALL_PROGRAM} ipv6logstats/ipv6logstats $(PREFIX)/bin
+ 		for dir in ipv6logconv ipv6logstats ipv6calcweb ipv6calc man lib md5 getopt; do \
+-			pushd $$dir && make install; popd; \
++			ocwd=`pwd`; \
++			cd $$dir; \
++			make install ; \
++			cd $$ocwd ; \
+ 		done
  
  getopt-make:
- 		cd getopt/ && make
+@@ -91,15 +103,24 @@ db-ipv4-assignment-make:
+ 
+ update:
+ 		for dir in databases/ieee-oui databases/ieee-iab databases/ipv4-assignment; do \
+-			pushd $$dir && make update; popd; \
++			ocwd=`pwd`; \
++			cd $$dir; \
++			make $@ ; \
++			cd $$ocwd ; \
+ 		done
+ 
+ static:		ipv6logconv-make ipv6logstats-make ipv6calc-make	
+ 		for dir in ipv6logconv ipv6logstats ipv6calc; do \
+-			pushd $$dir && make static; popd; \
++			ocwd=`pwd`; \
++			cd $$dir; \
++			make $@ ; \
++			cd $$ocwd ; \
+ 		done
+ 
+ test:
+ 		for dir in ipv6logconv ipv6logstats ipv6calcweb ipv6calc man lib; do \
+-			pushd $$dir && make test; popd; \
++			ocwd=`pwd`; \
++			cd $$dir; \
++			make $@ ; \
++			cd $$ocwd ; \
+ 		done
