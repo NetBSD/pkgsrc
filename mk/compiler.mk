@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.5 2003/09/12 20:10:17 grant Exp $
+# $NetBSD: compiler.mk,v 1.6 2003/09/12 22:53:18 salo Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -15,14 +15,14 @@
 #	Indicates that a package uses GCC shared libraries, so we
 #	register a runtime dependency on the compiler package.
 #
-# The following variables are reserved for future use:
-#
-# USE_MIPSPRO
-#	Use the Silicon Graphics, Inc. MIPSpro compiler.
-#
 # USE_SUNPRO
 #	Use the Sun Microsystems Inc. WorkShop/Forte/Sun ONE Studio
 #	compiler collection.
+#
+# The following variable is reserved for future use:
+#
+# USE_MIPSPRO
+#	Use the Silicon Graphics, Inc. MIPSpro compiler.
 #
 
 .if !defined(COMPILER_MK)
