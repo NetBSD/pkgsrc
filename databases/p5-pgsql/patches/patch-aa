@@ -1,0 +1,11 @@
+--- Makefile.PL.orig	Fri Apr 21 17:04:12 2000
++++ Makefile.PL	Fri Apr 21 17:03:37 2000
+@@ -29,7 +29,7 @@
+ my %opts = (
+     NAME         => 'Pg',
+     VERSION_FROM => 'Pg.pm',
+-    INC          => "-I$ENV{POSTGRES_HOME}/include",
++    INC          => "-I$ENV{POSTGRES_HOME}/include/pgsql",
+     OBJECT       => "Pg\$(OBJ_EXT)",
+     LIBS         => ["-L$ENV{POSTGRES_HOME}/lib -lpq"],
+ );
