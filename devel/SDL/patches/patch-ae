@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
+
+--- src/audio/SDL_sysaudio.h.orig	Thu Mar 16 16:20:37 2000
++++ src/audio/SDL_sysaudio.h	Fri Jun 23 03:53:51 2000
+@@ -102,6 +102,9 @@
+ #ifdef unix
+ extern AudioBootStrap AUDIO_bootstrap;
+ #endif
++#ifdef __NetBSD__
++extern AudioBootStrap AUDIO_bootstrap;
++#endif
+ #ifdef ENABLE_WINDIB
+ extern AudioBootStrap WAVEOUT_bootstrap;
+ #endif

@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
+
+--- sdl-config.in.orig	Mon May 22 20:01:18 2000
++++ sdl-config.in	Sun Jun 25 16:19:04 2000
+@@ -46,7 +46,7 @@
+       ;;
+     --libs)
+       libdirs="-L@libdir@ @SDL_RLD_FLAGS@"
+-      echo $libdirs @SDL_LIBS@
++      echo $libdirs @SDL_LIBS@ @SYSTEM_LIBS@
+       ;;
+     --static-libs)
+       libdirs="-L@libdir@ @SDL_RLD_FLAGS@"

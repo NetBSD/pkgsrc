@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/06/26 01:09:08 wiz Exp $
+bin/sdl-config
+include/SDL/SDL.h
+include/SDL/SDL_active.h
+include/SDL/SDL_audio.h
+include/SDL/SDL_byteorder.h
+include/SDL/SDL_cdrom.h
+include/SDL/SDL_copying.h
+include/SDL/SDL_endian.h
+include/SDL/SDL_error.h
+include/SDL/SDL_events.h
+include/SDL/SDL_joystick.h
+include/SDL/SDL_keyboard.h
+include/SDL/SDL_keysym.h
+include/SDL/SDL_main.h
+include/SDL/SDL_mouse.h
+include/SDL/SDL_mutex.h
+include/SDL/SDL_quit.h
+include/SDL/SDL_rwops.h
+include/SDL/SDL_syswm.h
+include/SDL/SDL_thread.h
+include/SDL/SDL_timer.h
+include/SDL/SDL_types.h
+include/SDL/SDL_version.h
+include/SDL/SDL_video.h
+include/SDL/begin_code.h
+include/SDL/close_code.h
+@dirrm include/SDL
+lib/libSDL.a
+lib/libSDL.la
+lib/libSDL.so
+lib/libSDL-1.1.so.3.0
+lib/libSDLmain.a
+share/aclocal/sdl.m4
+@comment libSDL.so doesn't get deleted correctly for some reason
+@unexec rm -f %D/lib/libSDL.so

@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
+
+--- src/video/SDL_yuv_sw.c.orig	Wed May 24 04:33:58 2000
++++ src/video/SDL_yuv_sw.c	Fri Jun 23 04:00:45 2000
+@@ -905,7 +905,7 @@
+ 	    case SDL_IYUV_OVERLAY:
+ 		cpu_mmx = CPU_Flags() & MMX_CPU;
+ 		if ( display->format->BytesPerPixel == 2 ) {
+-#if defined(i386) && defined(__GNUC__) /* inline assembly functions */
++#if defined(i386) && defined(__GNUC__) && !defined(__NetBSD__) /* inline assembly functions */
+ 			if ( cpu_mmx && (Rmask == 0xF800) &&
+ 			                (Gmask == 0x07E0) &&
+ 				        (Bmask == 0x001F) ) {
+@@ -920,7 +920,7 @@
+ #endif
+ 			swdata->Display2X = Color16DitherYV12Mod2X;
+ 		} else {
+-#if defined(i386) && defined(__GNUC__) /* inline assembly functions */
++#if defined(i386) && defined(__GNUC__) && !defined(__NetBSD__) /* inline assembly functions */
+ 			if ( cpu_mmx && (Rmask == 0x00FF0000) &&
+ 			                (Gmask == 0x0000FF00) &&
+ 				        (Bmask == 0x000000FF) ) {
