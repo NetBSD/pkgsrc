@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2004/03/08 19:52:52 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2005/01/12 22:31:44 minskim Exp $
 
 DISTNAME=	mod_dtcl-0.11.6
 PKGNAME=	ap-dtcl-0.11.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://tcl.apache.org/mod_dtcl/download/
 
@@ -9,19 +10,22 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://tcl.apache.org/
 COMMENT=	Simple, fast Tcl server side scripting for apache
 
-DEPENDS+=	apache{,6}-1.3.*:../../www/apache
-DEPENDS+=	tcl>=8.3.2nb2:../../lang/tcl83
-
 WRKSRC=		${WRKDIR}/mod_dtcl
-TCLSH=		${LOCALBASE}/bin/tclsh
-CPPFLAGS+=	-I${PREFIX}/include/httpd -DEAPI
+USE_BUILDLINK3=	yes
+
+TCLSH=		${BUILDLINK_PREFIX.tcl}/bin/tclsh
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.apache}/include/httpd -DEAPI
 
 MAKE_ENV+=	TCLSH="${TCLSH}"
 MAKE_ENV+=	INCLUDES="${CPPFLAGS}"
 
+APACHE_MODULE=	yes
 APACHEMODDIR=	${PREFIX}/lib/httpd
 HTMLDIR=	${PREFIX}/share/doc/html/mod_dtcl
 EGDIR=		${PREFIX}/share/examples/mod_dtcl
+
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../www/apache/buildlink3.mk"
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} builddtcl.sh
