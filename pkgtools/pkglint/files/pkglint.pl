@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.26 2000/02/05 17:19:06 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.27 2000/02/12 17:13:53 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -117,6 +117,7 @@ $sharedocused = 0;
 %manlangs = ();
 $seen_PLIST_SRC = 0;
 $seen_NO_PKG_REGISTER = 0;
+$seen_NO_CHECKSUM = 0;
 
 %predefined = ();
 foreach $i (split("\n", <<EOF)) {
@@ -200,8 +201,6 @@ if (-e <$portdir/files/md5>) {
 	next if (defined $checker{$i});
 	push(@checker, $i);
 	$checker{$i} = 'checkmd5';
-} else {
-	&perror("WARN: no $portdir/files/md5 file. Please run 'make makesum'.");
 }
 foreach $i (@checker) {
 	print "OK: checking $i.\n";
@@ -214,6 +213,15 @@ foreach $i (@checker) {
 			&checklastline($i) ||
 				&perror("Cannot open the file $i\n");
 		}
+	}
+}
+if (-e <$portdir/files/md5> ) {
+	if ( $seen_NO_CHECKSUM ) {
+		&perror("WARN: NO_CHECKSUM set, but files/md5 exists. Please remove it.");
+	}
+} else {
+	if ( ! $seen_NO_CHECKSUM ) {
+		&perror("WARN: no $portdir/files/md5 file. Please run 'make makesum'.");
 	}
 }
 if (! -f "$portdir/pkg/PLIST"
@@ -680,6 +688,10 @@ sub checkmakefile {
 	print "OK: checking for NO_PKG_REGISTER.\n" if ($verbose);
 	if ($whole =~ /\nNO_PKG_REGISTER/) {
 		$seen_NO_PKG_REGISTER=1;
+	}
+	print "OK: checking for NO_CHECKSUM.\n" if ($verbose);
+	if ($whole =~ /\nNO_CHECKSUM/) {
+		$seen_NO_CHECKSUM=1;
 	}
 
 	#
