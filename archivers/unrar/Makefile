@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/07/28 02:47:35 minskim Exp $
+# $NetBSD: Makefile,v 1.35 2004/07/31 03:48:30 xtraeme Exp $
 #
 
 DISTNAME=	unrarsrc-3.3.6
@@ -13,7 +13,6 @@ COMMENT=	Extract, view & test RAR archives
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	# defined
-USE_GCC_SHLIB=	# defined
 USE_LANGUAGES=	c++
 
 MAKEFILE=	makefile.unix
