@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/12/13 00:45:25 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/12/14 23:09:02 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use nautilus.
 #
@@ -9,7 +9,7 @@
 NAUTILUS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			nautilus
-BUILDLINK_DEPENDS.nautilus?=		nautilus>=2.2.3.1nb9
+BUILDLINK_DEPENDS.nautilus?=		nautilus>=2.4.1
 BUILDLINK_PKGSRCDIR.nautilus?=		../../sysutils/nautilus
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.nautilus=nautilus
