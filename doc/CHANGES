@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8256 2004/12/04 20:45:35 minskim Exp $
+$NetBSD: CHANGES,v 1.8257 2004/12/04 20:46:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5760,3 +5760,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated proxsmtp to 1.0 [jlam 2004-12-04]
 	Added lablgtk2-2.4.0 [jmmv 2004-12-04]
 	Updated nabi to 0.15 [minskim 2004-12-04]
+	Added bmp-musepack-1.1 [wiz 2004-12-04]
