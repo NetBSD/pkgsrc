@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.7 1998/06/22 12:39:46 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/07/04 04:59:29 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/17 15:12:43 max Exp
 #
 
-DISTNAME=       jpegsrc.v6a
-PKGNAME=        jpeg-6a
+DISTNAME=       jpegsrc.v6b
+PKGNAME=        jpeg-6b
 CATEGORIES=     graphics
 MASTER_SITES=   ftp://ftp.uu.net/graphics/jpeg/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	mycroft@netbsd.org
 
-WRKSRC=         ${WRKDIR}/jpeg-6a
+WRKSRC=         ${WRKDIR}/jpeg-6b
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--enable-shared --enable-static
 INSTALL_TARGET= install install-lib
-
-post-install:
-	${LDCONFIG} || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"
