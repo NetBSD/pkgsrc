@@ -1,4 +1,4 @@
-# $NetBSD: STATUS,v 1.11 2003/05/24 19:27:03 jschauma Exp $
+# $NetBSD: STATUS,v 1.12 2003/06/04 01:39:02 jschauma Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -70,13 +70,14 @@ shells/tcsh                N        Y        Y      Y        Y         Y
 wm/blackbox                                         Y
 www/apache                 Y        Y        Y      Y        Y         Y
 www/links                  Y        Y        Y      Y                  Y
-www/lynx                   Y        Y               Y                  Y
+www/lynx                   Y        Y        N*     Y                  Y
 ---------------------------------------------------------------------------
 'supported'                                         Y
 ---------------------------------------------------------------------------
 notes:
 
 OpenBSD/ncurses: does not install a shared libncurses++ library.
+IRIX/lynx: only builds without "--enable-nls"
 
 
 
