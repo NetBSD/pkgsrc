@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1926 2003/04/13 13:03:11 cjep Exp $
+$NetBSD: CHANGES,v 1.1927 2003/04/13 13:50:57 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1582,3 +1582,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added file-4.02 [cjep 2003-04-13]
 	Updated pen to 0.10.1 [cjep 2003-04-13]
 	Added p5-Net-Server-0.84 [cjep 2003-04-13]
+	Updated smimemsg to 1.5 [cjep 2003-04-13]
