@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/06 23:53:32 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/03/02 17:58:28 wiz Exp $
 share/enlightenment/themes/Absolute_E/ABOUT/aircut3.ttf
 share/enlightenment/themes/Absolute_E/ABOUT/MAIN
 share/enlightenment/themes/Absolute_E/Absolute_E.lsm
@@ -189,7 +189,6 @@ share/enlightenment/themes/Absolute_E/tooltips/imageclasses.cfg
 share/enlightenment/themes/Absolute_E/tooltips/tooltips.cfg
 share/enlightenment/themes/Absolute_E/tooltips.cfg
 share/enlightenment/themes/Absolute_E/windowmatches.cfg
-share/enlightenment/themes/ApplePlatinum/ApplePlatinum.etheme
 share/enlightenment/themes/ApplePlatinum/ChangeLog
 share/enlightenment/themes/ApplePlatinum/README
 share/enlightenment/themes/ApplePlatinum/actionclasses.cfg
@@ -199,6 +198,73 @@ share/enlightenment/themes/ApplePlatinum/colormodifiers.cfg
 share/enlightenment/themes/ApplePlatinum/credits
 share/enlightenment/themes/ApplePlatinum/cursors.cfg
 share/enlightenment/themes/ApplePlatinum/desktops.cfg
+share/enlightenment/themes/ApplePlatinum/epplets/images/ar_d1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/b1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/b2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/b3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/bb1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/bb2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/bg_v.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/da.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/pb_h.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/pb_v.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/s_h.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/s_k1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/s_k2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/s_v.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/bg.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ar_d2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ar_d3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ar_l1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ar_l2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ar_l3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ar_r1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ar_r2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ar_r3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ar_u1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ar_u2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ar_u3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/close1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/close2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/close3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/config1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/config2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/config3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/eject1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/eject2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/eject3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ff1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ff2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/ff3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/help1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/help2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/help3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/next1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/next2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/next3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/pause1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/pause2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/pause3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/play1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/play2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/play3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/prev1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/rw1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/prev2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/prev3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/repeat1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/repeat2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/repeat3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/rw2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/rw3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/skip1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/skip2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/skip3.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/stop1.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/stop2.png
+share/enlightenment/themes/ApplePlatinum/epplets/images/stop3.png
+share/enlightenment/themes/ApplePlatinum/epplets/epplets.cfg
+share/enlightenment/themes/ApplePlatinum/epplets/epplets.cfg~
 share/enlightenment/themes/ApplePlatinum/icons/apple_hd.xpm
 share/enlightenment/themes/ApplePlatinum/icons/apple_folder.xpm
 share/enlightenment/themes/ApplePlatinum/icons/apple_hd_unmount.xpm
@@ -1247,6 +1313,8 @@ share/enlightenment/themes/Evisio-Green/CircuitE/t5b.png
 share/enlightenment/themes/Evisio-Green/CircuitE/textclasses.cfg
 share/enlightenment/themes/Evisio-Green/CircuitE/tooltips.cfg
 share/enlightenment/themes/Evisio-Green/CircuitE/windowmatches.cfg
+share/enlightenment/themes/FinalE/ABOUT/MAIN
+share/enlightenment/themes/FinalE/ABOUT/decker.ttf
 share/enlightenment/themes/FinalE/backgrounds/backgrounds.cfg
 share/enlightenment/themes/FinalE/backgrounds/default.png
 share/enlightenment/themes/FinalE/borders/DEFAULT/border.cfg
@@ -1428,6 +1496,7 @@ share/enlightenment/themes/GTK+/borders/FIXED_SIZE/border.cfg
 share/enlightenment/themes/GTK+/borders/GIMP/border.cfg
 share/enlightenment/themes/GTK+/borders/MENU/border.cfg
 share/enlightenment/themes/GTK+/borders/PAGER/border.cfg
+share/enlightenment/themes/GTK+/borders/SIDE/images/grippy.png
 share/enlightenment/themes/GTK+/borders/SIDE/border.cfg
 share/enlightenment/themes/GTK+/borders/TRANSIENT/border.cfg
 share/enlightenment/themes/GTK+/borders/TRANSIENT_FIXED/border.cfg
@@ -1436,18 +1505,13 @@ share/enlightenment/themes/GTK+/borders/common/images/e_normal.png
 share/enlightenment/themes/GTK+/borders/common/images/e_normal_active.png
 share/enlightenment/themes/GTK+/borders/common/images/e_normal_active_sticky.png
 share/enlightenment/themes/GTK+/borders/common/images/e_normal_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/fixed_e_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/fixed_e_normal_active_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/fixed_n_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/fixed_n_normal_active_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/fixed_s_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/fixed_s_normal_active_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/fixed_w_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/fixed_w_normal_active_sticky.png
+share/enlightenment/themes/GTK+/borders/common/images/s_normal_active.png
+share/enlightenment/themes/GTK+/borders/common/images/s_normal_active_sticky.png
+share/enlightenment/themes/GTK+/borders/common/images/w_normal_active.png
+share/enlightenment/themes/GTK+/borders/common/images/w_normal_active_sticky.png
+share/enlightenment/themes/GTK+/borders/common/images/n_normal_active_sticky.png
 share/enlightenment/themes/GTK+/borders/common/images/menu_title_bar.png
 share/enlightenment/themes/GTK+/borders/common/images/n_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/n_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/n_normal_active_sticky.png
 share/enlightenment/themes/GTK+/borders/common/images/n_normal_sticky.png
 share/enlightenment/themes/GTK+/borders/common/images/ne_normal.png
 share/enlightenment/themes/GTK+/borders/common/images/ne_normal_active.png
@@ -1458,8 +1522,6 @@ share/enlightenment/themes/GTK+/borders/common/images/nw_normal_active.png
 share/enlightenment/themes/GTK+/borders/common/images/nw_normal_active_sticky.png
 share/enlightenment/themes/GTK+/borders/common/images/nw_normal_sticky.png
 share/enlightenment/themes/GTK+/borders/common/images/s_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/s_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/s_normal_active_sticky.png
 share/enlightenment/themes/GTK+/borders/common/images/s_normal_sticky.png
 share/enlightenment/themes/GTK+/borders/common/images/se_normal.png
 share/enlightenment/themes/GTK+/borders/common/images/se_normal_active.png
@@ -1470,8 +1532,7 @@ share/enlightenment/themes/GTK+/borders/common/images/sw_normal_active.png
 share/enlightenment/themes/GTK+/borders/common/images/sw_normal_active_sticky.png
 share/enlightenment/themes/GTK+/borders/common/images/sw_normal_sticky.png
 share/enlightenment/themes/GTK+/borders/common/images/w_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/w_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/w_normal_active_sticky.png
+share/enlightenment/themes/GTK+/borders/common/images/n_normal_active.png
 share/enlightenment/themes/GTK+/borders/common/images/w_normal_sticky.png
 share/enlightenment/themes/GTK+/borders/common/images/iconify_hilited.png
 share/enlightenment/themes/GTK+/borders/common/images/iconify_normal.png
@@ -1500,6 +1561,8 @@ share/enlightenment/themes/GTK+/borders/common/images/stick_normal_active.png
 share/enlightenment/themes/GTK+/borders/common/images/unshade_hilited.png
 share/enlightenment/themes/GTK+/borders/common/images/iconify_clicked.png
 share/enlightenment/themes/GTK+/borders/borders.cfg
+share/enlightenment/themes/GTK+/borders/TRANSIENT_FIXED_GTK/border.cfg
+share/enlightenment/themes/GTK+/borders/FIXED_SIZE_GTK/border.cfg
 share/enlightenment/themes/GTK+/borders.cfg
 share/enlightenment/themes/GTK+/buttons.cfg
 share/enlightenment/themes/GTK+/colormodifiers.cfg
@@ -2653,7 +2716,48 @@ share/enlightenment/themes/arctic/ABOUT/title.png
 share/enlightenment/themes/arctic/BG/elogo-blue.png
 share/enlightenment/themes/arctic/BG/7c.png
 share/enlightenment/themes/arctic/BG/7d.png
-share/enlightenment/themes/arctic/BOTTOM/border.cfg
+share/enlightenment/themes/arctic/BG/black.png
+share/enlightenment/themes/arctic/BG/elogo-black.png
+share/enlightenment/themes/arctic/BG/black2.png
+share/enlightenment/themes/arctic/BG/smoke.png
+share/enlightenment/themes/arctic/BG/bluefish.jpg
+share/enlightenment/themes/arctic/BORDERS/ETERM/border.cfg
+share/enlightenment/themes/arctic/BORDERS/LICQ/border.cfg
+share/enlightenment/themes/arctic/BORDERS/ICONBOX/border.cfg
+share/enlightenment/themes/arctic/BORDERS/MENU/border.cfg
+share/enlightenment/themes/arctic/BORDERS/MENU/images/top_flat_s.png
+share/enlightenment/themes/arctic/BORDERS/MENU/images/top_flat_u.png
+share/enlightenment/themes/arctic/BORDERS/MENU/images/top_s.png
+share/enlightenment/themes/arctic/BORDERS/MENU/images/top_u.png
+share/enlightenment/themes/arctic/BORDERS/MENU/images/right_s.png
+share/enlightenment/themes/arctic/BORDERS/MENU/images/right_u.png
+share/enlightenment/themes/arctic/BORDERS/MENU/images/left_s.png
+share/enlightenment/themes/arctic/BORDERS/MENU/images/left_u.png
+share/enlightenment/themes/arctic/BORDERS/MENU/images/bottom_s.png
+share/enlightenment/themes/arctic/BORDERS/MENU/images/bottom_u.png
+share/enlightenment/themes/arctic/BORDERS/MENU_BORDER_ONLY/border.cfg
+share/enlightenment/themes/arctic/BORDERS/PAGER/border.cfg
+share/enlightenment/themes/arctic/BORDERS/PAGER/images/pb1.png
+share/enlightenment/themes/arctic/BORDERS/PAGER/images/pb2.png
+share/enlightenment/themes/arctic/BORDERS/PAGER/images/pb3.png
+share/enlightenment/themes/arctic/BORDERS/PAGER/images/pb4.png
+share/enlightenment/themes/arctic/BORDERS/PAGER/images/pb5.png
+share/enlightenment/themes/arctic/BORDERS/PAGER/images/pb6.png
+share/enlightenment/themes/arctic/BORDERS/PAGER/images/pb8.png
+share/enlightenment/themes/arctic/BORDERS/PAGER/images/pb9.png
+share/enlightenment/themes/arctic/BORDERS/RIGHT_PAGER/border.cfg
+share/enlightenment/themes/arctic/BORDERS/RIGHT_PAGER/images/pb1.png
+share/enlightenment/themes/arctic/BORDERS/RIGHT_PAGER/images/pb2.png
+share/enlightenment/themes/arctic/BORDERS/RIGHT_PAGER/images/pb3.png
+share/enlightenment/themes/arctic/BORDERS/RIGHT_PAGER/images/pb4.png
+share/enlightenment/themes/arctic/BORDERS/RIGHT_PAGER/images/pb5.png
+share/enlightenment/themes/arctic/BORDERS/RIGHT_PAGER/images/pb6.png
+share/enlightenment/themes/arctic/BORDERS/RIGHT_PAGER/images/pb8.png
+share/enlightenment/themes/arctic/BORDERS/RIGHT_PAGER/images/pb9.png
+share/enlightenment/themes/arctic/BORDERS/RIGHT_PAGER/images/pb3normal.png
+share/enlightenment/themes/arctic/BORDERS/SIDE/border.cfg
+share/enlightenment/themes/arctic/BORDERS/BOTTOM/border.cfg
+share/enlightenment/themes/arctic/BORDERS/BOTTOM/#border.cfg#
 share/enlightenment/themes/arctic/Eterm/images/downarrow_fg.png
 share/enlightenment/themes/arctic/Eterm/images/downarrow_cl.png
 share/enlightenment/themes/arctic/Eterm/images/uparrow_fg.png
@@ -2675,80 +2779,101 @@ share/enlightenment/themes/arctic/Eterm/images/leftarrow_hl.png
 share/enlightenment/themes/arctic/Eterm/images/leftarrow_fg.png
 share/enlightenment/themes/arctic/Eterm/images/leftarrow_cl.png
 share/enlightenment/themes/arctic/Eterm/Eterm.cfg
-share/enlightenment/themes/arctic/ICONBOX/border.cfg
-share/enlightenment/themes/arctic/MENU/border.cfg
-share/enlightenment/themes/arctic/MENU/images/top_flat_s.png
-share/enlightenment/themes/arctic/MENU/images/top_flat_u.png
-share/enlightenment/themes/arctic/MENU/images/top_s.png
-share/enlightenment/themes/arctic/MENU/images/top_u.png
-share/enlightenment/themes/arctic/MENU/images/right_s.png
-share/enlightenment/themes/arctic/MENU/images/right_u.png
-share/enlightenment/themes/arctic/MENU/images/left_s.png
-share/enlightenment/themes/arctic/MENU/images/left_u.png
-share/enlightenment/themes/arctic/MENU/images/bottom_s.png
-share/enlightenment/themes/arctic/MENU/images/bottom_u.png
-share/enlightenment/themes/arctic/MENU_BORDER_ONLY/border.cfg
-share/enlightenment/themes/arctic/PAGER/border.cfg
-share/enlightenment/themes/arctic/PAGER/images/pb1.png
-share/enlightenment/themes/arctic/PAGER/images/pb2.png
-share/enlightenment/themes/arctic/PAGER/images/pb3.png
-share/enlightenment/themes/arctic/PAGER/images/pb4.png
-share/enlightenment/themes/arctic/PAGER/images/pb5.png
-share/enlightenment/themes/arctic/PAGER/images/pb6.png
-share/enlightenment/themes/arctic/PAGER/images/pb8.png
-share/enlightenment/themes/arctic/PAGER/images/pb9.png
-share/enlightenment/themes/arctic/RIGHT_PAGER/border.cfg
-share/enlightenment/themes/arctic/RIGHT_PAGER/images/pb1.png
-share/enlightenment/themes/arctic/RIGHT_PAGER/images/pb2.png
-share/enlightenment/themes/arctic/RIGHT_PAGER/images/pb3.png
-share/enlightenment/themes/arctic/RIGHT_PAGER/images/pb4.png
-share/enlightenment/themes/arctic/RIGHT_PAGER/images/pb5.png
-share/enlightenment/themes/arctic/RIGHT_PAGER/images/pb6.png
-share/enlightenment/themes/arctic/RIGHT_PAGER/images/pb8.png
-share/enlightenment/themes/arctic/RIGHT_PAGER/images/pb9.png
-share/enlightenment/themes/arctic/RIGHT_PAGER/images/pb3normal.png
-share/enlightenment/themes/arctic/SIDE/border.cfg
-share/enlightenment/themes/arctic/a1.png
-share/enlightenment/themes/arctic/a1b.png
-share/enlightenment/themes/arctic/a1c.png
-share/enlightenment/themes/arctic/a2.png
-share/enlightenment/themes/arctic/a2b.png
-share/enlightenment/themes/arctic/a2c.png
+share/enlightenment/themes/arctic/GRAPHICS/a1.png
+share/enlightenment/themes/arctic/GRAPHICS/a1b.png
+share/enlightenment/themes/arctic/GRAPHICS/a1c.png
+share/enlightenment/themes/arctic/GRAPHICS/a2.png
+share/enlightenment/themes/arctic/GRAPHICS/a2b.png
+share/enlightenment/themes/arctic/GRAPHICS/a2c.png
+share/enlightenment/themes/arctic/GRAPHICS/ar_d1.png
+share/enlightenment/themes/arctic/GRAPHICS/ar_d2.png
+share/enlightenment/themes/arctic/GRAPHICS/ar_l1.png
+share/enlightenment/themes/arctic/GRAPHICS/ar_l2.png
+share/enlightenment/themes/arctic/GRAPHICS/ar_r1.png
+share/enlightenment/themes/arctic/GRAPHICS/ar_r2.png
+share/enlightenment/themes/arctic/GRAPHICS/ar_u1.png
+share/enlightenment/themes/arctic/GRAPHICS/ar_u2.png
+share/enlightenment/themes/arctic/GRAPHICS/b1.png
+share/enlightenment/themes/arctic/GRAPHICS/b2.png
+share/enlightenment/themes/arctic/GRAPHICS/bg.png
+share/enlightenment/themes/arctic/GRAPHICS/bl-.png
+share/enlightenment/themes/arctic/GRAPHICS/bl.png
+share/enlightenment/themes/arctic/GRAPHICS/blank.png
+share/enlightenment/themes/arctic/GRAPHICS/bottom.png
+share/enlightenment/themes/arctic/GRAPHICS/br-.png
+share/enlightenment/themes/arctic/GRAPHICS/br.png
+share/enlightenment/themes/arctic/GRAPHICS/bt1.png
+share/enlightenment/themes/arctic/GRAPHICS/bt2.png
+share/enlightenment/themes/arctic/GRAPHICS/bt3.png
+share/enlightenment/themes/arctic/GRAPHICS/bt4.png
+share/enlightenment/themes/arctic/GRAPHICS/mb1.png
+share/enlightenment/themes/arctic/GRAPHICS/close_active.png
+share/enlightenment/themes/arctic/GRAPHICS/close_clicked.png
+share/enlightenment/themes/arctic/GRAPHICS/close_normal.png
+share/enlightenment/themes/arctic/GRAPHICS/deskbutton_audio_clicked.png
+share/enlightenment/themes/arctic/GRAPHICS/deskbutton_e.png
+share/enlightenment/themes/arctic/GRAPHICS/deskbutton_gnome.png
+share/enlightenment/themes/arctic/GRAPHICS/deskbutton_graphics_clicked.png
+share/enlightenment/themes/arctic/GRAPHICS/deskbutton_icq.png
+share/enlightenment/themes/arctic/GRAPHICS/deskbutton_net_clicked.png
+share/enlightenment/themes/arctic/GRAPHICS/deskbutton_term_clicked.png
+share/enlightenment/themes/arctic/GRAPHICS/etermtop.png
+share/enlightenment/themes/arctic/GRAPHICS/ib_cover_h.png
+share/enlightenment/themes/arctic/GRAPHICS/ib_cover_v.png
+share/enlightenment/themes/arctic/GRAPHICS/ib_h.png
+share/enlightenment/themes/arctic/GRAPHICS/ib_v.png
+share/enlightenment/themes/arctic/GRAPHICS/maximise_active.png
+share/enlightenment/themes/arctic/GRAPHICS/maximise_clicked.png
+share/enlightenment/themes/arctic/GRAPHICS/mb2.png
+share/enlightenment/themes/arctic/GRAPHICS/maximise_normal.png
+share/enlightenment/themes/arctic/GRAPHICS/mb3.png
+share/enlightenment/themes/arctic/GRAPHICS/mb4.png
+share/enlightenment/themes/arctic/GRAPHICS/mb5.png
+share/enlightenment/themes/arctic/GRAPHICS/menu_active.png
+share/enlightenment/themes/arctic/GRAPHICS/menu_active_sticky.png
+share/enlightenment/themes/arctic/GRAPHICS/menu_clicked.png
+share/enlightenment/themes/arctic/GRAPHICS/menu_clicked_sticky.png
+share/enlightenment/themes/arctic/GRAPHICS/menu_normal.png
+share/enlightenment/themes/arctic/GRAPHICS/minimise_active.png
+share/enlightenment/themes/arctic/GRAPHICS/minimise_clicked.png
+share/enlightenment/themes/arctic/GRAPHICS/minimise_normal.png
+share/enlightenment/themes/arctic/GRAPHICS/no.png
+share/enlightenment/themes/arctic/GRAPHICS/option_menu_clicked.png
+share/enlightenment/themes/arctic/GRAPHICS/option_menu_clicked_sticky.png
+share/enlightenment/themes/arctic/GRAPHICS/option_menu_normal.png
+share/enlightenment/themes/arctic/GRAPHICS/option_menu_normal_sticky.png
+share/enlightenment/themes/arctic/GRAPHICS/p_sel.png
+share/enlightenment/themes/arctic/GRAPHICS/p_win.png
+share/enlightenment/themes/arctic/GRAPHICS/plbrdr.png
+share/enlightenment/themes/arctic/GRAPHICS/right_edge.png
+share/enlightenment/themes/arctic/GRAPHICS/set-but-down.png
+share/enlightenment/themes/arctic/GRAPHICS/set-but.png
+share/enlightenment/themes/arctic/GRAPHICS/side.png
+share/enlightenment/themes/arctic/GRAPHICS/side_active.png
+share/enlightenment/themes/arctic/GRAPHICS/side_right.png
+share/enlightenment/themes/arctic/GRAPHICS/side_stickey.png
+share/enlightenment/themes/arctic/GRAPHICS/sidelt.png
+share/enlightenment/themes/arctic/GRAPHICS/sl.png
+share/enlightenment/themes/arctic/GRAPHICS/sl1.png
+share/enlightenment/themes/arctic/GRAPHICS/sl2.png
+share/enlightenment/themes/arctic/GRAPHICS/slh.png
+share/enlightenment/themes/arctic/GRAPHICS/slv.png
+share/enlightenment/themes/arctic/GRAPHICS/sr.png
+share/enlightenment/themes/arctic/GRAPHICS/tl-.png
+share/enlightenment/themes/arctic/GRAPHICS/tl.png
+share/enlightenment/themes/arctic/GRAPHICS/tl1.png
+share/enlightenment/themes/arctic/GRAPHICS/tl_stickey.png
+share/enlightenment/themes/arctic/GRAPHICS/top.png
+share/enlightenment/themes/arctic/GRAPHICS/tr-.png
+share/enlightenment/themes/arctic/GRAPHICS/tr.png
+share/enlightenment/themes/arctic/GRAPHICS/w7.png
+share/enlightenment/themes/arctic/GRAPHICS/etermtop-.png
 share/enlightenment/themes/arctic/actionclasses.cfg
-share/enlightenment/themes/arctic/ar_d1.png
-share/enlightenment/themes/arctic/ar_d2.png
-share/enlightenment/themes/arctic/ar_l1.png
-share/enlightenment/themes/arctic/ar_l2.png
-share/enlightenment/themes/arctic/ar_r1.png
-share/enlightenment/themes/arctic/ar_r2.png
-share/enlightenment/themes/arctic/ar_u1.png
-share/enlightenment/themes/arctic/ar_u2.png
-share/enlightenment/themes/arctic/b1.png
-share/enlightenment/themes/arctic/b2.png
-share/enlightenment/themes/arctic/bg.png
-share/enlightenment/themes/arctic/bl.png
-share/enlightenment/themes/arctic/blank.png
+share/enlightenment/themes/arctic/borders
 share/enlightenment/themes/arctic/borders.cfg
-share/enlightenment/themes/arctic/bottom.png
-share/enlightenment/themes/arctic/br-.png
-share/enlightenment/themes/arctic/br.png
-share/enlightenment/themes/arctic/bt1.png
-share/enlightenment/themes/arctic/bt2.png
-share/enlightenment/themes/arctic/bt3.png
-share/enlightenment/themes/arctic/bt4.png
 share/enlightenment/themes/arctic/buttons.cfg
-share/enlightenment/themes/arctic/close_active.png
-share/enlightenment/themes/arctic/close_clicked.png
-share/enlightenment/themes/arctic/close_normal.png
 share/enlightenment/themes/arctic/colormodifiers.cfg
 share/enlightenment/themes/arctic/cursors.cfg
-share/enlightenment/themes/arctic/deskbutton_audio_clicked.png
-share/enlightenment/themes/arctic/deskbutton_e.png
-share/enlightenment/themes/arctic/deskbutton_gnome.png
-share/enlightenment/themes/arctic/deskbutton_graphics_clicked.png
-share/enlightenment/themes/arctic/deskbutton_icq.png
-share/enlightenment/themes/arctic/deskbutton_net_clicked.png
-share/enlightenment/themes/arctic/deskbutton_term_clicked.png
 share/enlightenment/themes/arctic/desktops.cfg
 share/enlightenment/themes/arctic/epplets/epplets.cfg
 share/enlightenment/themes/arctic/epplets/images/arrow_down_cl.png
@@ -2797,23 +2922,9 @@ share/enlightenment/themes/arctic/epplets/images/stop_cl.png
 share/enlightenment/themes/arctic/epplets/images/stop_fg.png
 share/enlightenment/themes/arctic/epplets/images/togglebutton_down.png
 share/enlightenment/themes/arctic/epplets/images/togglebutton_up.png
-share/enlightenment/themes/arctic/ib_cover_h.png
-share/enlightenment/themes/arctic/ib_cover_v.png
-share/enlightenment/themes/arctic/ib_h.png
-share/enlightenment/themes/arctic/ib_v.png
 share/enlightenment/themes/arctic/imageclasses.cfg
 share/enlightenment/themes/arctic/init.cfg
-share/enlightenment/themes/arctic/maximise_active.png
-share/enlightenment/themes/arctic/maximise_clicked.png
-share/enlightenment/themes/arctic/maximise_normal.png
-share/enlightenment/themes/arctic/mb1.png
-share/enlightenment/themes/arctic/mb2.png
-share/enlightenment/themes/arctic/mb3.png
-share/enlightenment/themes/arctic/mb4.png
-share/enlightenment/themes/arctic/mb5.png
-share/enlightenment/themes/arctic/menu_active.png
-share/enlightenment/themes/arctic/menu_active_sticky.png
-share/enlightenment/themes/arctic/menu_clicked.png
+share/enlightenment/themes/arctic/menustyles.cfg
 share/enlightenment/themes/arctic/pix/cursor.xbm
 share/enlightenment/themes/arctic/pix/cursor.xbm.mask
 share/enlightenment/themes/arctic/pix/iconify.xbm
@@ -2834,48 +2945,10 @@ share/enlightenment/themes/arctic/pix/settings/dialog_button.png
 share/enlightenment/themes/arctic/pix/settings/knob_H.png
 share/enlightenment/themes/arctic/pix/settings/knob.png
 share/enlightenment/themes/arctic/pix/settings/dialog_button_clicked.png
-share/enlightenment/themes/arctic/menu_clicked_sticky.png
-share/enlightenment/themes/arctic/menu_normal.png
-share/enlightenment/themes/arctic/menustyles.cfg
-share/enlightenment/themes/arctic/minimise_active.png
-share/enlightenment/themes/arctic/minimise_clicked.png
-share/enlightenment/themes/arctic/minimise_normal.png
-share/enlightenment/themes/arctic/no.png
-share/enlightenment/themes/arctic/option_menu_clicked.png
-share/enlightenment/themes/arctic/option_menu_clicked_sticky.png
-share/enlightenment/themes/arctic/option_menu_normal.png
-share/enlightenment/themes/arctic/option_menu_normal_sticky.png
-share/enlightenment/themes/arctic/p_sel.png
-share/enlightenment/themes/arctic/p_win.png
-share/enlightenment/themes/arctic/pebbles.png
-share/enlightenment/themes/arctic/plbrdr.png
-share/enlightenment/themes/arctic/right_edge.png
-share/enlightenment/themes/arctic/set-but-down.png
-share/enlightenment/themes/arctic/set-but.png
-share/enlightenment/themes/arctic/side.png
-share/enlightenment/themes/arctic/side_active.png
-share/enlightenment/themes/arctic/side_right.png
-share/enlightenment/themes/arctic/side_stickey.png
-share/enlightenment/themes/arctic/sidelt.png
-share/enlightenment/themes/arctic/sl.png
-share/enlightenment/themes/arctic/sl1.png
-share/enlightenment/themes/arctic/sl2.png
-share/enlightenment/themes/arctic/slh.png
 share/enlightenment/themes/arctic/slideouts.cfg
-share/enlightenment/themes/arctic/slv.png
-share/enlightenment/themes/arctic/smoke.png
 share/enlightenment/themes/arctic/sound.cfg
-share/enlightenment/themes/arctic/sr.png
 share/enlightenment/themes/arctic/textclasses.cfg
-share/enlightenment/themes/arctic/tl-.png
-share/enlightenment/themes/arctic/tl.png
-share/enlightenment/themes/arctic/tl1.png
-share/enlightenment/themes/arctic/tl_stickey.png
 share/enlightenment/themes/arctic/tooltips.cfg
-share/enlightenment/themes/arctic/top.png
-share/enlightenment/themes/arctic/tr-.png
-share/enlightenment/themes/arctic/tr.png
-share/enlightenment/themes/arctic/w7.png
 share/enlightenment/themes/arctic/windowmatches.cfg
 share/enlightenment/themes/eMac/actionclasses.cfg
 share/enlightenment/themes/eMac/borders.cfg
@@ -3252,21 +3325,25 @@ share/enlightenment/themes/small-e/windowmatches.cfg
 @dirrm share/enlightenment/themes/arctic/pix
 @dirrm share/enlightenment/themes/arctic/epplets/images
 @dirrm share/enlightenment/themes/arctic/epplets
-@dirrm share/enlightenment/themes/arctic/SIDE
-@dirrm share/enlightenment/themes/arctic/RIGHT_PAGER/images
-@dirrm share/enlightenment/themes/arctic/RIGHT_PAGER
-@dirrm share/enlightenment/themes/arctic/PAGER/images
-@dirrm share/enlightenment/themes/arctic/PAGER
-@dirrm share/enlightenment/themes/arctic/MENU_BORDER_ONLY/images
-@dirrm share/enlightenment/themes/arctic/MENU_BORDER_ONLY
-@dirrm share/enlightenment/themes/arctic/MENU/images
-@dirrm share/enlightenment/themes/arctic/MENU
-@dirrm share/enlightenment/themes/arctic/ICONBOX/images
-@dirrm share/enlightenment/themes/arctic/ICONBOX
+@dirrm share/enlightenment/themes/arctic/GRAPHICS
 @dirrm share/enlightenment/themes/arctic/Eterm/images
 @dirrm share/enlightenment/themes/arctic/Eterm
-@dirrm share/enlightenment/themes/arctic/BOTTOM/images
-@dirrm share/enlightenment/themes/arctic/BOTTOM
+@dirrm share/enlightenment/themes/arctic/BORDERS/SIDE
+@dirrm share/enlightenment/themes/arctic/BORDERS/RIGHT_PAGER/images
+@dirrm share/enlightenment/themes/arctic/BORDERS/RIGHT_PAGER
+@dirrm share/enlightenment/themes/arctic/BORDERS/PAGER/images
+@dirrm share/enlightenment/themes/arctic/BORDERS/PAGER
+@dirrm share/enlightenment/themes/arctic/BORDERS/MENU_BORDER_ONLY/images
+@dirrm share/enlightenment/themes/arctic/BORDERS/MENU_BORDER_ONLY
+@dirrm share/enlightenment/themes/arctic/BORDERS/MENU/images
+@dirrm share/enlightenment/themes/arctic/BORDERS/MENU
+@dirrm share/enlightenment/themes/arctic/BORDERS/LICQ
+@dirrm share/enlightenment/themes/arctic/BORDERS/ICONBOX/images
+@dirrm share/enlightenment/themes/arctic/BORDERS/ICONBOX
+@dirrm share/enlightenment/themes/arctic/BORDERS/ETERM
+@dirrm share/enlightenment/themes/arctic/BORDERS/BOTTOM/images
+@dirrm share/enlightenment/themes/arctic/BORDERS/BOTTOM
+@dirrm share/enlightenment/themes/arctic/BORDERS
 @dirrm share/enlightenment/themes/arctic/BG
 @dirrm share/enlightenment/themes/arctic/ABOUT
 @dirrm share/enlightenment/themes/arctic
@@ -3440,6 +3517,8 @@ share/enlightenment/themes/small-e/windowmatches.cfg
 @dirrm share/enlightenment/themes/GTK+/buttons
 @dirrm share/enlightenment/themes/GTK+/borders/common/images
 @dirrm share/enlightenment/themes/GTK+/borders/common
+@dirrm share/enlightenment/themes/GTK+/borders/TRANSIENT_FIXED_GTK/images
+@dirrm share/enlightenment/themes/GTK+/borders/TRANSIENT_FIXED_GTK
 @dirrm share/enlightenment/themes/GTK+/borders/TRANSIENT_FIXED/images
 @dirrm share/enlightenment/themes/GTK+/borders/TRANSIENT_FIXED
 @dirrm share/enlightenment/themes/GTK+/borders/TRANSIENT/images
@@ -3452,6 +3531,8 @@ share/enlightenment/themes/small-e/windowmatches.cfg
 @dirrm share/enlightenment/themes/GTK+/borders/MENU
 @dirrm share/enlightenment/themes/GTK+/borders/GIMP/images
 @dirrm share/enlightenment/themes/GTK+/borders/GIMP
+@dirrm share/enlightenment/themes/GTK+/borders/FIXED_SIZE_GTK/images
+@dirrm share/enlightenment/themes/GTK+/borders/FIXED_SIZE_GTK
 @dirrm share/enlightenment/themes/GTK+/borders/FIXED_SIZE/images
 @dirrm share/enlightenment/themes/GTK+/borders/FIXED_SIZE
 @dirrm share/enlightenment/themes/GTK+/borders/DIALOG/images
@@ -3504,6 +3585,7 @@ share/enlightenment/themes/small-e/windowmatches.cfg
 @dirrm share/enlightenment/themes/FinalE/borders/BORDERLESS
 @dirrm share/enlightenment/themes/FinalE/borders
 @dirrm share/enlightenment/themes/FinalE/backgrounds
+@dirrm share/enlightenment/themes/FinalE/ABOUT
 @dirrm share/enlightenment/themes/FinalE
 @dirrm share/enlightenment/themes/Evisio-Green/CircuitE/pix
 @dirrm share/enlightenment/themes/Evisio-Green/CircuitE/backgrounds
@@ -3674,6 +3756,8 @@ share/enlightenment/themes/small-e/windowmatches.cfg
 @dirrm share/enlightenment/themes/ApplePlatinum/images/back
 @dirrm share/enlightenment/themes/ApplePlatinum/images
 @dirrm share/enlightenment/themes/ApplePlatinum/icons
+@dirrm share/enlightenment/themes/ApplePlatinum/epplets/images
+@dirrm share/enlightenment/themes/ApplePlatinum/epplets
 @dirrm share/enlightenment/themes/ApplePlatinum
 @dirrm share/enlightenment/themes/Absolute_E/ttfonts
 @dirrm share/enlightenment/themes/Absolute_E/tooltips/images
