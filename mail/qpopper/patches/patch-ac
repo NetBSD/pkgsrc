@@ -1,0 +1,74 @@
+*** configure	Wed Nov 19 13:20:39 1997
+--- configure	Thu Feb 12 17:27:17 1998
+***************
+*** 1418,1421 ****
+--- 1418,1424 ----
+  gdbm.h \
+  dbm.h \
++ stdlib.h \
++ string.h \
++ time.h \
+  
+  do
+***************
+*** 1630,1634 ****
+  else
+    ac_save_LIBS="$LIBS"
+! LIBS="-lkrb  $LIBS"
+  cat > conftest.$ac_ext <<EOF
+  #line 1635 "configure"
+--- 1631,1635 ----
+  else
+    ac_save_LIBS="$LIBS"
+! LIBS="-lkrb -ldes $LIBS"
+  cat > conftest.$ac_ext <<EOF
+  #line 1635 "configure"
+***************
+*** 1658,1662 ****
+  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+    echo "$ac_t""yes" 1>&6
+!   KERBEROS_LIBS="$KERBEROS_LIBS -lkrb"
+  else
+    echo "$ac_t""no" 1>&6
+--- 1659,1666 ----
+  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+    echo "$ac_t""yes" 1>&6
+!   KERBEROS_LIBS="$KERBEROS_LIBS -lkrb -ldes"
+!   cat >> confdefs.h <<\EOF
+! #define KERBEROS 1
+! EOF
+  else
+    echo "$ac_t""no" 1>&6
+*** configure.in	Wed Nov 19 13:20:38 1997
+--- configure.in	Thu Feb 12 17:26:54 1998
+***************
+*** 166,169 ****
+--- 166,172 ----
+  gdbm.h \
+  dbm.h \
++ stdlib.h \
++ string.h \
++ time.h \
+  )
+  
+***************
+*** 174,181 ****
+  AC_CHECK_LIB(resolv, res_init, NETWORK_LIBS="$NETWORK_LIBS -lresolv")
+  AC_CHECK_LIB(mail, maillock, NETWORK_LIBS="$NETWORK_LIBS -lmail"; AC_DEFINE(MAILOCK))
+! AC_CHECK_LIB(krb, krb_recvauth, KERBEROS_LIBS="$KERBEROS_LIBS -lkrb")
+  AC_CHECK_LIB(ndbm, dbm_open, DBM_LIBS="-lndbm")
+  AC_CHECK_LIB(dbm, dbm_open, DBM_LIBS="-ldbm")
+! AC_CHECK_LIB(gdbm, gdbm_open, DBM_LIBS="-lgdbm" AC_DEFINE(GDBM))
+  AC_CHECK_LIB(security, set_auth_parameters, LIBS="$LIBS -lsecurity")
+  AC_CHECK_LIB(crypt, crypt, LIBS="$LIBS -lcrypt")
+--- 175,184 ----
+  AC_CHECK_LIB(resolv, res_init, NETWORK_LIBS="$NETWORK_LIBS -lresolv")
+  AC_CHECK_LIB(mail, maillock, NETWORK_LIBS="$NETWORK_LIBS -lmail"; AC_DEFINE(MAILOCK))
+! AC_CHECK_LIB(krb, krb_recvauth, KERBEROS_LIBS="-lkrb -ldes"
+!   AC_DEFINE(KERBEROS))
+  AC_CHECK_LIB(ndbm, dbm_open, DBM_LIBS="-lndbm")
+  AC_CHECK_LIB(dbm, dbm_open, DBM_LIBS="-ldbm")
+! AC_CHECK_LIB(gdbm, gdbm_open, DBM_LIBS="-lgdbm"
+!   AC_DEFINE(GDBM))
+  AC_CHECK_LIB(security, set_auth_parameters, LIBS="$LIBS -lsecurity")
+  AC_CHECK_LIB(crypt, crypt, LIBS="$LIBS -lcrypt")
