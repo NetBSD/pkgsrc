@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2003/09/07 19:36:26 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2003/09/13 23:21:19 jlam Exp $
 
 .if !defined(MESALIB_BUILDLINK3_MK)
 MESALIB_BUILDLINK3_MK=	# defined
@@ -66,5 +66,5 @@ BUILDLINK_PACKAGES+=		MesaLib
 BUILDLINK_CPPFLAGS.MesaLib=	-DGLX_GLXEXT_LEGACY
 .endif
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/\+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
 .endif	# MESALIB_BUILDLINK3_MK
