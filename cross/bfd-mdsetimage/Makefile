@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/09/09 01:33:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/05 11:06:40 wiz Exp $
 
 DISTNAME=	bfd-mdsetimage-1.15.1
 CATEGORIES=	cross
@@ -6,9 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	sakamoto@NetBSD.org
-COMMENT=	mdsetimage using libbfd. Used for cross-building distributions
-
-DEPENDS=	cross-binutils>=2.9.1.1:../binutils
+COMMENT=	Mdsetimage using libbfd, used for cross-building distributions
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
@@ -32,4 +30,5 @@ do-extract:
 pre-install:
 	@if [ ! -d ${PREFIX}/bin ]; then ${INSTALL_PROGRAM_DIR} ${PREFIX}/bin; fi
 
+.include "../../cross/binutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
