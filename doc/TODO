@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2098 2004/09/05 20:44:37 kristerw Exp $
+$NetBSD: TODO,v 1.2099 2004/09/06 15:26:40 reed Exp $
 
 Suggested new packages
 ======================
@@ -385,7 +385,7 @@ Suggested package updates
 	o rep-gtk-0.17
 	o rox-1.2.2
 	o rox-session-0.1.24
-	o rrdtool-1.0.48
+	o rrdtool-1.0.49 [pkg/26353]
 	o ruby-1.8.1 [taca]
 	o sablecc-2.18.1
 	o sawfish-1.3
