@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.17 2003/09/23 19:48:22 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.18 2003/09/28 10:38:03 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -1093,18 +1093,92 @@ buildlink-${_BLNK_OPSYS}-wrappers: buildlink-wrappers
 	fi
 .endfor
 
+.if !target(${_BLNK_EMPTY_FILE})
 ${_BLNK_EMPTY_FILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+.endif
 
+.if !target(${_BLNK_WRAP_MARSHALL})
 ${_BLNK_WRAP_MARSHALL}: ${.CURDIR}/../../mk/buildlink3/marshall
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
+.endif
+
+.if !target(${_BLNK_WRAP_PRE_CACHE})
+${_BLNK_WRAP_PRE_CACHE}: ${.CURDIR}/../../mk/buildlink3/pre-cache
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
+.endif
+
+.if !target(${_BLNK_WRAP_CACHE_ADD})
+${_BLNK_WRAP_CACHE_ADD}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+.endif
+
+.if !target(${_BLNK_WRAP_CACHE})
+${_BLNK_WRAP_CACHE}:							\
+		${_BLNK_WRAP_PRE_CACHE}					\
+		${_BLNK_WRAP_CACHE_ADD}					\
+		${_BLNK_WRAP_POST_CACHE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+.endif
+
+.if !target(${_BLNK_WRAP_CACHE_TRANSFORM})
+${_BLNK_WRAP_CACHE_TRANSFORM}:						\
+		${_BLNK_WRAP_PRE_CACHE}					\
+		${_BLNK_WRAP_CACHE_ADD_TRANSFORM}			\
+		${_BLNK_WRAP_POST_CACHE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+.endif
+
+.if !target(${_BLNK_WRAP_POST_CACHE})
+${_BLNK_WRAP_POST_CACHE}: ${.CURDIR}/../../mk/buildlink3/post-cache
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
+.endif
+
+${BUILDLINK_DIR}/bin/.sunpro-cc-post-cache:				\
+		${.CURDIR}/../../mk/buildlink3/sunpro-cc-post-cache
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${BUILDLINK_DIR}/bin/.ld-post-cache:					\
+		${.CURDIR}/../../mk/buildlink3/ld-post-cache
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${BUILDLINK_DIR}/bin/.libtool-post-cache:				\
+		${.CURDIR}/../../mk/buildlink3/libtool-post-cache
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
+.  if !target(${_BLNK_WRAP_PRIVATE_PRE_CACHE.${_wrappee_}})
+${_BLNK_WRAP_PRIVATE_PRE_CACHE.${_wrappee_}}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+.  endif
 .  if !target(${_BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}})
 ${_BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+.  endif
+.  if !target(${_BLNK_WRAP_PRIVATE_POST_CACHE.${_wrappee_}})
+${_BLNK_WRAP_PRIVATE_POST_CACHE.${_wrappee_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
 .  endif
@@ -1120,50 +1194,7 @@ ${_BLNK_WRAP_PRIVATE_CACHE.${_wrappee_}}:				\
 .  endif
 .endfor
 
-${_BLNK_WRAP_PRIVATE_POST_CACHE.LD}:					\
-		${.CURDIR}/../../mk/buildlink3/ld-post-cache
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${_BLNK_WRAP_PRIVATE_POST_CACHE.LIBTOOL}:				\
-		${.CURDIR}/../../mk/buildlink3/libtool-post-cache
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${_BLNK_WRAP_PRE_CACHE}: ${.CURDIR}/../../mk/buildlink3/pre-cache
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${_BLNK_WRAP_CACHE_ADD}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
-
-${_BLNK_WRAP_CACHE}:							\
-		${_BLNK_WRAP_PRE_CACHE}					\
-		${_BLNK_WRAP_CACHE_ADD}					\
-		${_BLNK_WRAP_POST_CACHE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
-
-${_BLNK_WRAP_CACHE_TRANSFORM}:						\
-		${_BLNK_WRAP_PRE_CACHE}					\
-		${_BLNK_WRAP_CACHE_ADD_TRANSFORM}			\
-		${_BLNK_WRAP_POST_CACHE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
-
-${_BLNK_WRAP_POST_CACHE}: ${.CURDIR}/../../mk/buildlink3/post-cache
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
-
+.if !target(${_BLNK_WRAP_LOGIC})
 ${_BLNK_WRAP_LOGIC}: ${.CURDIR}/../../mk/buildlink3/logic
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
@@ -1172,7 +1203,9 @@ ${_BLNK_WRAP_LOGIC}: ${.CURDIR}/../../mk/buildlink3/logic
 		-e 's|@_BLNK_TRANSFORM_SED@||g'				\
 		${.ALLSRC} | ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+.endif
 
+.if !target(${_BLNK_WRAP_LOGIC_TRANSFORM})
 ${_BLNK_WRAP_LOGIC_TRANSFORM}:						\
 		${.CURDIR}/../../mk/buildlink3/logic			\
 		${_BLNK_TRANSFORM_SEDFILE}
@@ -1184,24 +1217,41 @@ ${_BLNK_WRAP_LOGIC_TRANSFORM}:						\
 		${.CURDIR}/../../mk/buildlink3/logic			\
 		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+.endif
 
-${_BLNK_WRAP_POST_LOGIC.LD}: ${.CURDIR}/../../mk/buildlink3/ld-post-logic
+${BUILDLINK_DIR}/bin/.sunpro-cc-post-logic:				\
+		${.CURDIR}/../../mk/buildlink3/sunpro-cc-post-logic
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
 
-${_BLNK_WRAP_POST_LOGIC.LIBTOOL}:					\
+${BUILDLINK_DIR}/bin/.ld-post-logic:					\
+		${.CURDIR}/../../mk/buildlink3/ld-post-logic
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${BUILDLINK_DIR}/bin/.libtool-post-logic:				\
 		${.CURDIR}/../../mk/buildlink3/libtool-post-logic
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
 
-${_BLNK_LIBTOOL_DO_INSTALL}: ${.CURDIR}/../../mk/buildlink3/libtool-do-install
+.for _wrappee_ in ${_BLNK_WRAPPEES}
+.  if !target(${_BLNK_WRAP_PRIVATE_POST_LOGIC.${_wrappee_}})
+${_BLNK_WRAP_PRIVATE_POST_LOGIC.${_wrappee_}}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+.  endif
+.endfor
+
+${BUILDLINK_DIR}/bin/.libtool-do-install:				\
+		${.CURDIR}/../../mk/buildlink3/libtool-do-install
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
 
-${_BLNK_LIBTOOL_FIX_LA}:						\
+${BUILDLINK_DIR}/bin/.libtool-fix-la:					\
 		${.CURDIR}/../../mk/buildlink3/libtool-fix-la		\
 		${_BLNK_UNTRANSFORM_SEDFILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
