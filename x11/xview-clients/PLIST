@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:27 jschauma Exp $
 bin/clock
 bin/cmdtool
 bin/olwm
@@ -10,8 +10,8 @@ lib/openwin-menu-demo
 lib/help/clock.info
 lib/help/olwm.info
 lib/help/workspace.info
-man/cat1/clock.0
-man/cat1/cmdtool.0
-man/cat1/olwm.0
-man/cat1/olwmslave.0
-man/cat1/shelltool.0
+${IMAKE_MAN_DIR}/clock.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/cmdtool.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/olwm.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/olwmslave.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/shelltool.${IMAKE_MANNEWSUFFIX}

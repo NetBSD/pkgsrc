@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2002/12/28 19:47:07 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/03 04:17:38 jschauma Exp $
 #
 
 DISTNAME=	xearth-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://cag.lcs.mit.edu/pub/tuna/ \
 		ftp://ftp.cs.colorado.edu/users/tuna/

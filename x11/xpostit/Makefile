@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/03 08:16:14 agc Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/03 04:17:29 jschauma Exp $
 #
 
 DISTNAME=	xpostit3.3.1
 PKGNAME=	xpostit-3.3.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.x.org/R5contrib/ \
 		ftp://ftp.freesoftware.com/pub/X11/R5contrib/
