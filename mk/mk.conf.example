@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.92 1999/10/28 20:10:34 kim Exp $
+# $NetBSD: mk.conf.example,v 1.93 1999/10/28 20:13:07 kim Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -233,6 +233,12 @@
                                 # layout.
                                 # Possible: US, FI, FR, GER, DV
                                 # Default: FI
+
+#IRRD_USE_PGP=			# Used by irrd package to specify the version
+                                # of PGP to use, if any.
+                                # Possible: 5, 2, not defined
+                                # Default: not defined
+				# [XXX: configure will locate pgpv or pgp]
 
 #ISPELL_EXTRA_DICT=		# Used by ispell package to specify an extra
                                 # national dictionary.
