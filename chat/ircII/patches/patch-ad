@@ -1,0 +1,63 @@
+$NetBSD: patch-ad,v 1.5 2003/02/18 02:29:15 lukem Exp $
+
+--- source/server.c.orig	2002-09-07 02:04:38.000000000 +1000
++++ source/server.c
+@@ -58,7 +58,9 @@ int	connect_to_unix _((int, u_char *));
+ #include "icb.h"
+ #include "server.h"
+ 
++#if 0
+ static	void	server_list_garbage_collect _((void));
++#endif
+ static	void	add_to_server_buffer _((int, u_char *));
+ static	void	login_to_server _((int));
+ static	int	connect_to_server_direct _((u_char *, int, u_char *, int));
+@@ -95,6 +97,7 @@ extern	int	dgets_errno;
+ 
+ #define DEFAULT_SERVER_VERSION Server2_8
+ 
++#if 0
+ /*
+  * clean out the SERVER_FAKE entries
+  */
+@@ -109,6 +112,7 @@ server_list_garbage_collect()
+ 		else
+ 			i++;
+ }
++#endif
+ 
+ /*
+  * close_server: Given an index into the server list, this closes the
+@@ -684,7 +688,7 @@ remove_from_server_list(i)
+ 	if (i < from_server)
+ 		--from_server;
+ 	while ((tmp = traverse_all_windows(&flag)) != NULL)
+-		if (tmp->server > i)
++		if (tmp->server > i && tmp->server > 0)
+ 			tmp->server--;
+ 
+ 	bcopy((char *) &server_list[i + 1], (char *) &server_list[i], (number_of_servers - i - 1) * sizeof(Server));
+@@ -1171,7 +1175,9 @@ connect_to_server(server_name, port, nic
+ 			server_index = connect_to_server_process(server_name, port, nick, server_index);
+ 		else
+ 			server_index = connect_to_server_direct(server_name, port, nick, server_index);
++#if 0
+ 		server_list_garbage_collect();
++#endif
+ 		if (server_index)
+ 		{
+ 			server_list[server_index].attempting_to_connect = 0;
+@@ -1423,9 +1429,11 @@ display_server_list()
+ 		say("Server list:");
+ 		for (i = 0; i < number_of_servers; i++)
+ 		{
+-			u_char	*icb_msg = server_list[i].version == ServerICB ? (u_char *) " (ICB connection)" : empty_string;
+-			u_char	*group_msg, lbuf[BIG_BUFFER_SIZE];
++			u_char	*icb_msg, *group_msg, lbuf[BIG_BUFFER_SIZE];
+ 
++			if (server_list[i].flags & SERVER_FAKE)
++				continue;
++			icb_msg = server_list[i].version == ServerICB ? (u_char *) " (ICB connection)" : empty_string;
+ 			if (server_list[i].server_group)
+ 			{
+ 				snprintf(CP(lbuf), sizeof lbuf, " [group: %s]",
