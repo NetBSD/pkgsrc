@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/09/24 21:16:02 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.2 2004/09/25 06:43:04 dmcmahill Exp $
 
 --- itcl/Makefile.in.orig	Tue Aug 17 17:47:18 2004
 +++ itcl/Makefile.in
+@@ -58,7 +58,7 @@ PKG_HEADERS	= @PKG_HEADERS@
+ PKG_LIB_FILE	= @PKG_LIB_FILE@
+ PKG_STUB_LIB_FILE = @PKG_STUB_LIB_FILE@
+ 
+-lib_BINARIES	= $(PKG_LIB_FILE) $(PKG_STUB_LIB_FILE)
++lib_BINARIES	= ${PKG_LIB_FILE:C/\.so.*/.la/} ${PKG_STUB_LIB_FILE}
+ BINARIES	= $(lib_BINARIES)
+ 
+ SHELL		= @SHELL@
 @@ -77,19 +77,19 @@ DESTDIR		=
  
  PKG_DIR		= $(PACKAGE_NAME)$(PACKAGE_VERSION)
@@ -40,25 +49,21 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/09/24 21:16:02 dmcmahill Exp $
  STLIB_LD	= @STLIB_LD@
  TCL_DEFS	= @TCL_DEFS@
  TCL_BIN_DIR	= @TCL_BIN_DIR@
-@@ -231,12 +231,10 @@ depend:
- $(PKG_LIB_FILE): $(PKG_OBJECTS)
+@@ -228,15 +228,13 @@ depend:
+ # source files above.
+ #========================================================================
+ 
+-$(PKG_LIB_FILE): $(PKG_OBJECTS)
++${PKG_LIB_FILE:C/\.so.*/.la/}: $(PKG_OBJECTS)
  	-rm -f $(PKG_LIB_FILE)
  	${MAKE_LIB}
 -	$(RANLIB) $(PKG_LIB_FILE)
  
- $(PKG_STUB_LIB_FILE): $(PKG_STUB_OBJECTS)
+-$(PKG_STUB_LIB_FILE): $(PKG_STUB_OBJECTS)
++${PKG_STUB_LIB_FILE}: $(PKG_STUB_OBJECTS)
  	-rm -f $(PKG_STUB_LIB_FILE)
  	${MAKE_STUB_LIB}
 -	$(RANLIB_STUB) $(PKG_STUB_LIB_FILE)
  
  #========================================================================
  # We need to enumerate the list of .c to .o lines here.
-@@ -292,7 +290,7 @@ distclean: clean
- 
- install-lib-binaries:
- 	@mkdir -p $(DESTDIR)$(pkglibdir)
--	@list='$(lib_BINARIES)'; for p in $$list; do \
-+	@list='${PKG_LIB_FILE:C/\.so.*/.la/} ${PKG_STUB_LIB_FILE:C/\.so.*/.la/} $(lib_BINARIES)'; for p in $$list; do \
- 	  if test -f $$p; then \
- 	    echo " $(INSTALL_PROGRAM) $$p $(DESTDIR)$(pkglibdir)/$$p"; \
- 	    $(INSTALL_PROGRAM) $$p $(DESTDIR)$(pkglibdir)/$$p; \
