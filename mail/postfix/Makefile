@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2003/12/18 03:37:17 grant Exp $
+# $NetBSD: Makefile,v 1.112 2004/01/11 07:40:13 jlam Exp $
 
 DISTNAME=	postfix-2.0.16
 CATEGORIES=	mail
@@ -9,7 +9,9 @@ MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
 COMMENT=	Postfix SMTP server and tools
 
-USE_BUILDLINK2=	yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 
 PKG_SYSCONFSUBDIR=	postfix
@@ -29,7 +31,7 @@ CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
 FIX_RPATH+=	AUXLIBS
 
 .if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
-.  include "../../security/openssl/buildlink2.mk"
+.  include "../../security/openssl/buildlink3.mk"
 PATCHFILES+=		tls+ipv6-1.18a-pf-2.0.16.patch.gz
 PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.18/
 PATCH_DIST_STRIP=	-p1
@@ -46,7 +48,7 @@ MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
 .endif
 
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"
-.  include "../../devel/pcre/buildlink2.mk"
+.  include "../../devel/pcre/buildlink3.mk"
 CCARGS+=	-DHAS_PCRE
 AUXLIBS+=	-L${BUILDLINK_PREFIX.pcre}/lib				\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.pcre}/lib		\
@@ -57,7 +59,7 @@ CCARGS+=	-DNO_PCRE
 .endif
 
 .if defined(POSTFIX_USE_LDAP) && ${POSTFIX_USE_LDAP} == "YES"
-.  include "../../databases/openldap/buildlink2.mk"
+.  include "../../databases/openldap/buildlink3.mk"
 CCARGS+=	-DHAS_LDAP
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openldap}/lib	\
@@ -66,7 +68,7 @@ BUILD_DEFS+=	POSTFIX_USE_LDAP
 .endif
 
 .if defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"
-.  include "../../databases/mysql-client/buildlink2.mk"
+.  include "../../databases/mysql-client/buildlink3.mk"
 CCARGS+=	-DHAS_MYSQL -I${BUILDLINK_PREFIX.mysql-client}/include/mysql
 AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql	\
@@ -76,7 +78,7 @@ BUILD_DEFS+=	POSTFIX_USE_MYSQL
 
 .if defined(USE_SASL2) && ${USE_SASL2} == "YES"
 USING_SASL=YES
-.  include "../../security/cyrus-sasl2/buildlink2.mk"
+.  include "../../security/cyrus-sasl2/buildlink3.mk"
 CCARGS+=	-DUSE_SASL2_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
@@ -84,7 +86,7 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 BUILD_DEFS+=	USE_SASL2
 .elif defined(USE_SASL) && ${USE_SASL} == "YES"
 USING_SASL=YES
-.  include "../../security/cyrus-sasl/buildlink2.mk"
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
@@ -121,8 +123,10 @@ CONF_FILES=	${SHAREDIR}/main.cf ${PKG_SYSCONFDIR}/main.cf
 CONF_FILES+=	${SHAREDIR}/master.cf ${PKG_SYSCONFDIR}/master.cf
 .if defined(USING_SASL)
 .  if defined(USE_SASL2)
+MAKE_DIRS+=	${PREFIX}/lib/sasl2
 CONF_FILES+=	${SHAREDIR}/smtpd.conf	${PREFIX}/lib/sasl2/smtpd.conf
 .  else
+MAKE_DIRS+=	${PREFIX}/lib/sasl
 CONF_FILES+=	${SHAREDIR}/smtpd.conf	${PREFIX}/lib/sasl/smtpd.conf
 .  endif
 .endif
