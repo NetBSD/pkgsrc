@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.6 2005/01/23 09:02:54 wulf Exp $
+$NetBSD: distinfo,v 1.7 2005/02/22 21:06:07 agc Exp $
 
 SHA1 (xlog-1.0.tar.gz) = bbc5d38d2d105a1cdf0890de92702895565123ea
+RMD160 (xlog-1.0.tar.gz) = 65c116f950707940122990035a46a7f934a39921
 Size (xlog-1.0.tar.gz) = 432066 bytes

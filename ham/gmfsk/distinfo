@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/24 18:05:18 wulf Exp $
+$NetBSD: distinfo,v 1.2 2005/02/22 21:06:06 agc Exp $
 
 SHA1 (gmfsk-0.6.tar.gz) = 2738bc2b83eb8f2001ed2503c466123ce4b258a5
+RMD160 (gmfsk-0.6.tar.gz) = 532d2454ccc7fab36e707002c6fda7f9e2ec14cd
 Size (gmfsk-0.6.tar.gz) = 540765 bytes

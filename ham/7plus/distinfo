@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.3 2004/08/02 21:12:48 minskim Exp $
+$NetBSD: distinfo,v 1.4 2005/02/22 21:06:06 agc Exp $
 
 SHA1 (7pl225sr.tgz) = 9c393e8f6968d24ec469fbca45ade65a5c6d52fc
+RMD160 (7pl225sr.tgz) = 23fe71c10ab4e006c49c7b0e7fbf96d498b2ccf7
 Size (7pl225sr.tgz) = 65122 bytes
 SHA1 (7pl210mg.tgz) = 7acc708cabf8d166f74bd398940fb71aac2c7495
+RMD160 (7pl210mg.tgz) = ffaf7b5dd4c55fb847a6b5fd87cdfaecf904e53e
 Size (7pl210mg.tgz) = 31095 bytes
 SHA1 (patch-aa) = 73efc40a0dc294fdce0abc52dd8810c8d2ff9ba6
