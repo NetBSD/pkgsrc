@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2000/08/31 03:58:14 fredb Exp $
+$NetBSD: patch-aa,v 1.7 2000/09/01 03:14:16 fredb Exp $
 
 --- Makefile.orig	Thu Jun 22 17:39:42 2000
 +++ Makefile	Thu Aug 17 20:10:04 2000
@@ -77,3 +77,13 @@ $NetBSD: patch-aa,v 1.6 2000/08/31 03:58:14 fredb Exp $
  	echo 'set man(zcat) $(zcat)' >> tkman
  	echo 'set man(compress) $(compress)' >> tkman
  	echo 'set man(apropos) $(apropos)' >> tkman
+@@ -429,6 +444,9 @@
+ 	echo '}' >> tkman
+ 	echo 'image create bitmap texRebus -data {' >> tkman
+ 	cat xbm/tex.xbm >> tkman
++	echo '}' >> tkman
++	echo 'set manx(netbsd-bindings) {' >> tkman
++	cat contrib/netbsd_bindings.tcl >> tkman
+ 	echo '}' >> tkman
+ 	echo 'set manx(solaris-bindings) {' >> tkman
+ 	cat contrib/solaris_bindings.tcl >> tkman
