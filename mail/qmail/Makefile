@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/09/18 21:15:12 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/09/19 09:04:12 jlam Exp $
 #
 
 DISTNAME=	qmail-1.03
@@ -43,17 +43,12 @@ do-configure:
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
 
 pre-install:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/qmail.sh			\
-		> ${WRKDIR}/qmail
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf		\
 		> ${WRKDIR}/mailer.conf.qmail
 
 post-install:
 	${INSTALL_DATA_DIR} ${QMAILDIR}/etc
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.qmail ${QMAILDIR}/etc
-
-	${INSTALL_SCRIPT_DIR} ${RCD_SCRIPTS_EXAMPLEDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/qmail ${RCD_SCRIPTS_EXAMPLEDIR}
 
 	${INSTALL_DATA_DIR} ${QMAILDIR}/alias
 	cd ${QMAILDIR}/alias && 					\

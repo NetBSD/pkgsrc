@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/08/29 14:12:27 martti Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/19 09:04:29 jlam Exp $
 
 DISTNAME=		httpd-${APACHE_VERSION}
 PKGNAME=		apache-${APACHE_VERSION}
@@ -115,9 +115,6 @@ CONFIGURE_ARGS+=	${_AP_CFG_ARGS.${_ap_mod}}
 .  endif
 .endfor
 
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
-
 AP_CONF_FILE_SED=	-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g"
 AP_CONF_FILE_SED+=	-e "s|${PREFIX}/htdocs|${PREFIX}/share/httpd/htdocs|g"
 AP_CONF_FILE_SED+=	-e "s|${PREFIX}/conf|${PKG_SYSCONFDIR}|g"
@@ -152,7 +149,6 @@ post-install:
 			' >> $${file}.new;				\
 		${MV} -f $${file}.new $${file};				\
 	done
-	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"

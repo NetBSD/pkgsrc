@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/08/25 18:38:23 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2002/09/19 09:04:07 jlam Exp $
 
 DISTNAME=	openldap-2.0.25
 SVR4_PKGNAME=	oldap
@@ -81,17 +81,7 @@ SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
 RCD_SCRIPTS=		slapd
 
-post-build:
-	@for script in ${RCD_SCRIPTS}; do				\
-		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
-			> ${WRKDIR}/$${script};				\
-	done
-
 post-install:
-	for script in ${RCD_SCRIPTS}; do				\
-		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
-			${PREFIX}/etc/rc.d/$${script};			\
-	done
 	${INSTALL_DATA_DIR} ${EGDIR}/schema
 	for file in ${CNFS} ${CNFS_PERMS} ${SUPPS}; do			\
 		if [ ! -e ${PKG_SYSCONFDIR}/$${file}.default ]; then	\

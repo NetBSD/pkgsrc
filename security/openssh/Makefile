@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2002/09/18 21:15:17 jlam Exp $
+# $NetBSD: Makefile,v 1.91 2002/09/19 09:04:22 jlam Exp $
 
 DISTNAME=		openssh-3.4p1
 PKGNAME=		openssh-3.4.0.1
@@ -130,9 +130,6 @@ MESSAGE_SUBST+=		OPENSSH_GROUP=${OPENSSH_GROUP}
 .  include "Makefile.intree"
 .endif
 
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/sshd.sh > ${WRKDIR}/sshd
-
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}; for file in ${CONFS} ${SUPPS}; do			\
@@ -141,7 +138,6 @@ post-install:
 #.if defined(USE_PAM)
 #	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.freebsd ${EGDIR}/sshd.pam
 #.endif
-	${INSTALL_SCRIPT} ${WRKDIR}/sshd ${PREFIX}/${RCD_SCRIPTS_EGDIR}/sshd
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/30 23:05:14 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/19 09:04:26 jlam Exp $
 
 PKGNAME=		winbind-${SAMBA_DIST_VERS}
 CATEGORIES=		security
@@ -34,14 +34,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/winbindd ${PREFIX}/sbin
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/pam_winbind.so ${PAMDIR}
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/libnss_winbind.so ${PREFIX}/lib
-
-post-install:
-	@for file in ${RCD_SCRIPTS}; do					\
-		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${file}.sh	\
-			> ${WRKDIR}/$${file}.sh;			\
-		${INSTALL_SCRIPT} ${WRKDIR}/$${file}.sh			\
-			${PREFIX}/etc/rc.d/$${file};			\
-	done
 
 .include "../../security/PAM/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"

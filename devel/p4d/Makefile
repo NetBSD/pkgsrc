@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/01 05:00:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/19 09:04:09 jlam Exp $
 #
 
 DISTNAME=	p4d
@@ -29,8 +29,6 @@ P4JOURNAL?=	journal
 
 do-install:
 	${INSTALL_PROGRAM} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} ${PREFIX}/sbin
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/p4d.sh > ${WRKDIR}/p4d
-	${INSTALL_SCRIPT} ${WRKDIR}/p4d ${RCD_SCRIPTS_EXAMPLEDIR}
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

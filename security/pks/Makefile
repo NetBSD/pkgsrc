@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/08/25 21:50:41 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/19 09:04:25 jlam Exp $
 
 DISTNAME=		pks-0.9.4
 CATEGORIES=		security www
@@ -30,12 +30,6 @@ EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/pksd.conf ${PKG_SYSCONFDIR}/pksd.conf
 RCD_SCRIPTS=	pksd
 OWN_DIRS=	/var/pks /var/pks/db /var/pks/incoming
-
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/pksd.sh > ${WRKDIR}/pksd.sh
-
-post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/pksd.sh ${PREFIX}/etc/rc.d/pksd
 
 .include "../../databases/db/buildlink2.mk"
 

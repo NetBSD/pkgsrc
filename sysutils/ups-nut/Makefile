@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/08/25 21:51:04 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2002/09/19 09:04:27 jlam Exp $
 #
 
 DISTNAME=		nut-0.50.0
@@ -63,16 +63,8 @@ pre-configure:
 
 pre-install:
 	@${INSTALL_DATA_DIR} ${NUT_EGDIR}
-	@for script in ${RCD_SCRIPTS}; do				\
-		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
-			> ${WRKDIR}/$${script};				\
-	done
 
 post-install:
-	for script in ${RCD_SCRIPTS}; do				\
-		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
-			${PREFIX}/etc/rc.d/$${script};			\
-	done
 	${INSTALL_DATA_DIR} ${NUT_DOCDIR}
 	${INSTALL_DATA_DIR} ${NUT_DOCDIR}/cables ${NUT_DOCDIR}/drivers
 	${INSTALL_DATA} ${WRKSRC}/README ${NUT_DOCDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/09/18 21:15:10 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/19 09:04:10 jlam Exp $
 
 PKGNAME=	courier-auth-${BASE_VERS}
 PKGREVISION?=	1
@@ -37,12 +37,6 @@ do-install:
 .endfor
 
 post-install:
-	@for file in ${RCD_SCRIPTS}; do					\
-		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${file}.sh	\
-			> ${WRKDIR}/$${file}.sh;			\
-		${INSTALL_SCRIPT} ${WRKDIR}/$${file}.sh			\
-			${PREFIX}/etc/rc.d/$${file};			\
-	done
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${SYSCONFTOOL}
 	for file in authdaemonrc.dist; do				\

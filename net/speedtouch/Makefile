@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/07/18 00:10:07 abs Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/19 09:04:19 jlam Exp $
 #
 
 DISTNAME=	speedtouch-1.1
@@ -17,12 +17,8 @@ GNU_CONFIGURE=	yes
 
 RCD_SCRIPTS=	adsl
 
-pre-install:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/adsl.sh > ${WRKDIR}/adsl.sh
-
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mgmt/mgmt.o ${PREFIX}/libdata/alcaudsl.sys
-	${INSTALL_SCRIPT} ${WRKDIR}/adsl.sh ${PREFIX}/etc/rc.d/adsl
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

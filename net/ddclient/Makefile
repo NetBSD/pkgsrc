@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/18 21:15:14 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/19 09:04:15 jlam Exp $
 
 DISTNAME=	ddclient-3.6.2
 CATEGORIES=	net
@@ -30,17 +30,7 @@ do-configure:
 
 do-build:	# empty
 
-pre-install:
-	@for script in ${RCD_SCRIPTS}; do				\
-		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
-			> ${WRKDIR}/$${script};				\
-	done
-
 do-install:
-	for script in ${RCD_SCRIPTS}; do				\
-		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
-			${PREFIX}/etc/rc.d/$${script};			\
-	done
 	${INSTALL_SCRIPT} ${WRKSRC}/ddclient ${PREFIX}/sbin
 	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCDIR}

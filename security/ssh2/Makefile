@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/06 00:48:09 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/19 09:04:26 jlam Exp $
 #
 
 DISTNAME=	ssh-3.2.0
@@ -67,10 +67,6 @@ DOCS=			CHANGES FAQ HOWTO.anonymous.sftp INSTALL LICENSE \
 			RFC.authorization_program_protocol \
 			RFC.kbdint_plugin_protocol
 
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/ssh2_secure_shell.sh \
-	   > ${WRKDIR}/ssh2_secure_shell
-
 post-install:
 	${INSTALL_DATA_DIR} ${DOCSDIR}
 .for FILE in ${DOCS}
@@ -79,7 +75,6 @@ post-install:
 .for FILE in ${EGFILES}
 	${INSTALL_DATA} ${WRKSRC}/${FILE} ${EGDIR}
 .endfor
-	${INSTALL_SCRIPT} ${WRKDIR}/ssh2_secure_shell ${PREFIX}/etc/rc.d/ssh2_secure_shell
 
 .include "../../security/tcp_wrappers/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"

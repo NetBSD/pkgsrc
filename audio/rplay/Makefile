@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/08/31 14:46:21 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2002/09/19 09:04:02 jlam Exp $
 #
 
 DISTNAME=	rplay-3.3.2
@@ -27,13 +27,10 @@ pre-configure:
 		${MV} -f $${manpage}.pdone $${manpage};			\
 	done
 
-post-install:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/rplayd.sh > ${WRKDIR}/rplayd
-	${INSTALL_SCRIPT} ${WRKDIR}/rplayd ${PREFIX}/etc/rc.d/rplayd
-
 .include "../../audio/gsm/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/rx/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
