@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/03/14 17:27:05 agc Exp $
+# $NetBSD: Makefile,v 1.13 2001/03/16 22:20:59 tron Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -28,6 +28,7 @@ MAKE_ENV+=	VERSION="${VERSION}"
 
 .if (${OPSYS} == SunOS)
 MAKE_ENV+=	NETBSD_COMPATIBLE=YES
+MANINSTALL=
 .endif
 
 post-extract:
