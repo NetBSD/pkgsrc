@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.64 2004/10/11 21:49:00 reed Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.65 2004/10/11 22:04:19 reed Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -161,9 +161,9 @@ FILES_SUBST+=		SPECIAL_PERMS=${SPECIAL_PERMS:Q}
 #	at post-install time.
 #
 # RCD_SCRIPTS works lists the basenames of the rc.d scripts.  They are
-#	expected to be found in ${RCD_SCRIPTS_EXAMPLEDIR}, and the scripts
-#	will be copied into ${RCD_SCRIPTS_DIR} with ${RCD_SCRIPTS_MODE}
-#	permissions.
+#	expected to be found in ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}, and
+#	the scripts will be copied into ${RCD_SCRIPTS_DIR} with
+#	${RCD_SCRIPTS_MODE} permissions.
 #
 CONF_FILES?=		# empty
 CONF_FILES_MODE?=	0644
@@ -173,7 +173,11 @@ SUPPORT_FILES_MODE?=	0644
 SUPPORT_FILES_PERMS?=	# empty
 RCD_SCRIPTS?=		# empty
 RCD_SCRIPTS_MODE?=	0755
-RCD_SCRIPTS_EXAMPLEDIR?=	${PREFIX}/etc/rc.d
+RCD_SCRIPTS_EXAMPLEDIR?=	etc/rc.d
+.if !empty(RCD_SCRIPTS_EXAMPLEDIR:M/*)
+PKG_FAIL_REASON+= \
+	"bsd.pkg.install.mk: RCD_SCRIPTS_EXAMPLEDIR can't be an absolute path."
+.endif
 RCD_SCRIPTS_SHELL?=	${SH}
 FILES_SUBST+=		CONF_FILES=${CONF_FILES:Q}
 FILES_SUBST+=		CONF_FILES_MODE=${CONF_FILES_MODE}
@@ -333,10 +337,11 @@ ${INSTALL_FILE}: ${INSTALL_SRC}
 #
 # RCD_SCRIPT_SRC.<script>	the source file for <script>; this will
 #				be run through FILES_SUBST to generate
-#				the rc.d script
+#				the rc.d script (defaults to
+#				${FILESDIR}/<script>.sh)
 #
-# RCD_SCRIPTS_EXAMPLEDIR	the directory in which to install the
-#				example rc.d scripts
+# RCD_SCRIPTS_EXAMPLEDIR	the directory relative to ${PREFIX} in
+#				which to install the example rc.d scripts
 #
 # If the source rc.d script is not present, then the automatic handling
 # doesn't occur.
@@ -353,12 +358,13 @@ install-rcd-scripts:	# do nothing
 RCD_SCRIPT_SRC.${_script_}?=	${FILESDIR}/${_script_}.sh
 RCD_SCRIPT_WRK.${_script_}?=	${WRKDIR}/${_script_}
 
-GENERATE_PLIST+=	${ECHO} ${RCD_SCRIPTS_EXAMPLEDIR:S|${PREFIX}/||}/${_script_};
+GENERATE_PLIST+=	${ECHO} ${RCD_SCRIPTS_EXAMPLEDIR}/${_script_};
 
 .  if !empty(RCD_SCRIPT_SRC.${_script_})
 .    if exists(${RCD_SCRIPT_SRC.${_script_}})
 generate-rcd-scripts: ${RCD_SCRIPT_WRK.${_script_}}
 ${RCD_SCRIPT_WRK.${_script_}}: ${RCD_SCRIPT_SRC.${_script_}}
+	@${ECHO_MSG} "${_PKGSRC_IN}> Creating ${.TARGET}"
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} |			\
 		${SED} ${FILES_SUBST_SED} > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
@@ -366,14 +372,14 @@ ${RCD_SCRIPT_WRK.${_script_}}: ${RCD_SCRIPT_SRC.${_script_}}
 install-rcd-scripts: install-rcd-${_script_}
 install-rcd-${_script_}: ${RCD_SCRIPT_WRK.${_script_}}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -d ${RCD_SCRIPTS_EXAMPLEDIR} ]; then			\
+	if [ ! -d ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR} ]; then		\
 		${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} \
-			-m 0755	${RCD_SCRIPTS_EXAMPLEDIR};		\
+			-m 0755	${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR};	\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${RCD_SCRIPT_WRK.${_script_}} ]; then			\
 		${INSTALL_SCRIPT} ${RCD_SCRIPT_WRK.${_script_}}		\
-			${RCD_SCRIPTS_EXAMPLEDIR}/${_script_};		\
+			${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/${_script_}; \
 	fi
 .    endif
 .  endif
