@@ -1,13 +1,9 @@
-$NetBSD: patch-am,v 1.1 2003/11/07 16:36:12 christos Exp $
+$NetBSD: patch-am,v 1.2 2003/11/11 10:42:32 wiz Exp $
 
---- fep_vi.c.orig	1991-05-29 01:31:27.000000000 -0400
-+++ fep_vi.c	2003-11-07 11:19:21.000000000 -0500
-@@ -3,10 +3,20 @@
- #ifndef lint
- static char rcsid[]=
- "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-am,v 1.1 2003/11/07 16:36:12 christos Exp $ (SRA)";
--#endif lint
-+#endif /* lint */
+--- fep_vi.c.orig	Wed May 29 07:31:27 1991
++++ fep_vi.c
+@@ -6,7 +6,17 @@ static char rcsid[]=
+ #endif lint
  
  #include <stdio.h>
 +#include <sys/ioctl.h>
@@ -24,7 +20,7 @@ $NetBSD: patch-am,v 1.1 2003/11/07 16:36:12 christos Exp $
  #include <ctype.h>
  #include "fep_defs.h"
  #include "fep_glob.h"
-@@ -107,7 +117,7 @@
+@@ -107,7 +117,7 @@ BINDENT viComBindings[] = {
  	/* ^X-^V   */	{"\\^X\\^V",	view_buffer},
  	/* ^X-^X   */	{"\\^X\\^X",	expand_file_name},
  	/* ^X-?    */	{"\\^X?",	show_bindings},
@@ -33,7 +29,7 @@ $NetBSD: patch-am,v 1.1 2003/11/07 16:36:12 christos Exp $
  	/* ^X-^D   */	{"\\^X\\^D",	send_eof},
  	/* ^X-(	   */	{"\\^X(",	fep_start_script},
  	/* ^X-)	   */	{"\\^X)",	fep_end_script},
-@@ -138,7 +148,7 @@
+@@ -138,7 +148,7 @@ BINDENT viInsertBindings[] = {
  	/* ^X-^L   */	{"\\^X\\^L",	fep_repaint},
  	/* ^X-^X   */	{"\\^X\\^X",	expand_file_name},
  	/* ^X-?    */	{"\\^X?",	show_bindings},
@@ -42,7 +38,7 @@ $NetBSD: patch-am,v 1.1 2003/11/07 16:36:12 christos Exp $
  	/* ^X-^D   */	{"\\^X\\^D",	send_eof},
  	/* ^X-^V   */	{"\\^X\\^V",	view_buffer},
  	/* ^X-(	   */	{"\\^X(",	fep_start_script},
-@@ -161,7 +171,29 @@
+@@ -161,7 +171,29 @@ FUNC cft[], aft[];
  	cft[i] = self_insert;
  
  #define import(table,key,fn) if((int)key>0)table[(int)key]=fn
@@ -73,7 +69,7 @@ $NetBSD: patch-am,v 1.1 2003/11/07 16:36:12 christos Exp $
      /* Now, using cbreak mode
      import (cft, tchars_buf.t_startx, ignore);
      import (cft, tchars_buf.t_stopc, ignore);
-@@ -179,6 +211,7 @@
+@@ -179,6 +211,7 @@ FUNC cft[], aft[];
      import (cft, ltchars_buf.t_lnextc, literal_next);
      import (cft, initial_ttymode.sg_erase, delete_previous_character);
      import (cft, initial_ttymode.sg_kill, delete_line);

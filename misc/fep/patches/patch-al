@@ -1,17 +1,8 @@
-$NetBSD: patch-al,v 1.1 2003/11/07 16:36:12 christos Exp $
+$NetBSD: patch-al,v 1.2 2003/11/11 10:42:32 wiz Exp $
 
---- fep_util.c.orig	1988-12-28 07:24:01.000000000 -0500
-+++ fep_util.c	2003-11-07 11:26:03.000000000 -0500
-@@ -3,7 +3,7 @@
- #ifndef lint
- static char rcsid[]=
- "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-al,v 1.1 2003/11/07 16:36:12 christos Exp $ (SRA)";
--#endif lint
-+#endif /* lint */
- 
- #ifndef MKARGDEBUG
- 
-@@ -178,9 +178,9 @@
+--- fep_util.c.orig	Wed Dec 28 13:24:01 1988
++++ fep_util.c
+@@ -178,9 +178,9 @@ max (d1, d2)
  {
      return (d1 > d2 ? d1 : d2);
  }
@@ -23,7 +14,7 @@ $NetBSD: patch-al,v 1.1 2003/11/07 16:36:12 christos Exp $
  
  #include <stdio.h>
  #include <ctype.h>
-@@ -198,7 +198,7 @@
+@@ -198,7 +198,7 @@ main()
  	showArgs (s);
      }
  }
@@ -32,7 +23,7 @@ $NetBSD: patch-al,v 1.1 2003/11/07 16:36:12 christos Exp $
  
  showArgs (comline)
      char *comline;
-@@ -402,4 +402,4 @@
+@@ -402,4 +402,4 @@ iskanji_in_string (s, i)
      else
  	return (iskanji (*cp));
  }
