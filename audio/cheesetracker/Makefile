@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2002/08/01 05:48:02 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/08/08 16:17:05 jlam Exp $
 #
 
 DISTNAME=		cheesetracker-0.5.5
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://www.reduz.com.ar/cheesetracker/
 

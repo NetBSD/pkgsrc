@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2002/08/08 14:45:50 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2002/08/08 16:17:06 jlam Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.2.7
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.2.x/ \
 		ftp://ftp.sunet.se/pub/multimedia/xmms/1.2.x/
