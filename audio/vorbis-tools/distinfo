@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2001/08/14 15:11:59 lukem Exp $
+$NetBSD: distinfo,v 1.5 2002/01/02 12:45:42 lukem Exp $
 
-SHA1 (vorbis-tools-1.0rc2.tar.gz) = 06b7744b6285507304cade21b2d9a5eeeb123584
-Size (vorbis-tools-1.0rc2.tar.gz) = 209432 bytes
+SHA1 (vorbis-tools-1.0rc3.tar.gz) = e5c08f24eb143f0790b37b4cf49a4905a37c6e44
+Size (vorbis-tools-1.0rc3.tar.gz) = 259239 bytes
