@@ -1,80 +1,27 @@
-$NetBSD: patch-aa,v 1.2 2004/04/17 17:08:37 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2004/05/04 17:20:49 minskim Exp $
 
---- makefile.orig	2004-04-12 14:05:50.000000000 -0500
+--- makefile.orig	2004-05-01 20:43:07.000000000 -0500
 +++ makefile
-@@ -1,18 +1,21 @@
+@@ -1,16 +1,16 @@
  # Makefile for compiling Mathomatic for UNIX or Linux.
  
--CFLAGS		= -c -O -DUNIX
+-CFLAGS		= -O -DUNIX
 -LDFLAGS		= -s
-+#CFLAGS		= -c -O -DUNIX
++CFLAGS		+= -O -DUNIX
 +#LDFLAGS		= -s
+ LIBS		= -lm
  
- # To use readline, uncomment the following two lines:
- #CFLAGS		+= -DREADLINE
- #LDFLAGS	+= -lreadline -lcurses
+ # Comment out the following lines if you are not using GNU make.
+-ifdef READLINE
++#ifdef READLINE
+ CFLAGS		+= -DREADLINE
+-LIBS		+= -lreadline -lcurses
+-endif
++LIBS		+= -lreadline #-lcurses
++#endif
  
--PREFIX	= /usr/local
-+#PREFIX	= /usr/local
+-PREFIX		= /usr/local
++#PREFIX		= /usr/local
  
  AOUT	=am
  OBJECTS	=main.o am.o parse.o cmds.o simplify.o factor.o super.o \
- 	unfactor.o diff.o complex.o list.o
- 
-+.c.o:
-+	${CC} ${CFLAGS} -c $<
-+
- all: $(AOUT)
- 	@echo Make completed.
- 
-@@ -20,46 +23,15 @@ test: $(AOUT)
- 	./$(AOUT) -c all.in >test.out
- 	diff all.out test.out
- 
--main.o: main.c am.h
--	$(CC) $(CFLAGS) $*.c
--
--am.o: am.c am.h externs.h
--	$(CC) $(CFLAGS) $*.c
--
--parse.o: parse.c parse.h am.h externs.h
--	$(CC) $(CFLAGS) $*.c
--
--cmds.o: cmds.c am.h externs.h
--	$(CC) $(CFLAGS) $*.c
--
--simplify.o: simplify.c am.h externs.h
--	$(CC) $(CFLAGS) $*.c
--
--factor.o: factor.c am.h externs.h
--	$(CC) $(CFLAGS) $*.c
--
--super.o: super.c am.h externs.h
--	$(CC) $(CFLAGS) $*.c
--
--unfactor.o: unfactor.c am.h externs.h
--	$(CC) $(CFLAGS) $*.c
--
--diff.o: diff.c am.h externs.h
--	$(CC) $(CFLAGS) $*.c
--
--complex.o: complex.c am.h externs.h
--	$(CC) $(CFLAGS) $*.c
--
--list.o: list.c am.h externs.h
--	$(CC) $(CFLAGS) $*.c
-+${OBJECTS}: am.h externs.h
- 
- $(AOUT): $(OBJECTS)
- 	$(CC) $(LDFLAGS) $(OBJECTS) -lm -o $(AOUT)
- 
- install: $(AOUT)
--	install -m 0755 $(AOUT) $(PREFIX)/bin
--	install -m 0644 am.1 $(PREFIX)/man/man1
-+	${BSD_INSTALL_PROGRAM} $(AOUT) $(PREFIX)/bin
-+	${BSD_INSTALL_MAN} am.1 $(PREFIX)/man/man1
- 	@echo Install completed.
- 
- clean:
--	rm -f *.o
-+	rm -f ${OBJECTS}
