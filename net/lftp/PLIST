@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/01/31 17:01:57 salo Exp $
+@comment $NetBSD: PLIST,v 1.5.4.1 2004/01/12 17:36:50 agc Exp $
 bin/lftp
 bin/lftpget
 lib/lftp/${PKGVERSION}/cmd-mirror.la
@@ -16,7 +16,7 @@ lib/lftp/${PKGVERSION}/proto-ftp.so
 lib/lftp/${PKGVERSION}/proto-http.la
 lib/lftp/${PKGVERSION}/proto-http.so
 man/man1/lftp.1
-share/examples/lftp/lftp.conf
+share/examples/lftp/lftp.conf.default
 share/lftp/import-ncftp
 share/lftp/import-netscape
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lftp.mo
