@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:10 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/10/25 19:57:34 wiz Exp $
 
-DISTNAME=		stuffit-5.2.0.603-linux
-PKGNAME=		stuffit-5.2.0.603
+DISTNAME=		stuffit520.611linux-i386
+PKGNAME=		stuffit-5.2.0.611
 CATEGORIES=		archivers
 MASTER_SITES=		ftp://ftp.aladdinsys.com/pub/linux/StuffIt_for_Linux/ \
 			ftp://ftp2.aladdinsys.com/pub/linux/StuffIt_for_Linux/
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		collver@linuxfreemail.com
 HOMEPAGE=		http://www.aladdinsys.com/expander
