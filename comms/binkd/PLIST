@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:43:56 zuntum Exp $
+etc/binkd.conf-dist
+man/man8/binkd.8
+sbin/binkd
+sbin/binkd-0.9.4
