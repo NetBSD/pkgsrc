@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2001/09/11 16:47:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/09/22 11:06:13 wiz Exp $
 #
 
 DISTNAME=	popa3d-0.4.9.4
+PKGNAME=	${DISTNAME}nb1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.openwall.com/popa3d/ \
 		ftp://ftp.openwall.com/pub/projects/popa3d/ \
@@ -20,6 +21,12 @@ USER_CMD=	${LOCALBASE}/sbin/user
 GROUP_CMD=	${LOCALBASE}/sbin/group
 .endif
 
+post-patch:
+	cd ${WRKSRC} && \
+		${SED} "s,/usr/share/empty,${PREFIX}/share/empty," \
+			params.h > params.h.new && \
+		${MV} params.h.new params.h
+
 do-install:
 	@if `${GROUP_CMD} info -e popa3d`; then \
 		${ECHO} Group \'popa3d\' already exists.; \
@@ -37,5 +44,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/popa3d
 	cd ${WRKSRC} && ${INSTALL_DATA} DESIGN INSTALL LICENSE \
 		${PREFIX}/share/doc/popa3d
+	${INSTALL_DATA_DIR} ${PREFIX}/share/empty
 
 .include "../../mk/bsd.pkg.mk"
