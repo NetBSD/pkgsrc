@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink2.mk,v 1.12 2003/07/10 23:12:40 grant Exp $
+# $NetBSD: pthread.buildlink2.mk,v 1.13 2003/07/11 23:37:13 grant Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -191,6 +191,7 @@ BUILDLINK_DEPENDS.${_PKG_PTHREAD}=	${_PKG_PTHREAD_DEPENDS}
 .    endif
 BUILDLINK_PREFIX.pthread=		${BUILDLINK_PREFIX.${_PKG_PTHREAD}}
 BUILDLINK_CFLAGS.pthread=		${BUILDLINK_CFLAGS.${_PKG_PTHREAD}}
+BUILDLINK_LDFLAGS.pthread=		-lpthread
 .    include "${_PKG_PTHREAD_BUILDLINK2_MK}"
 .  else
 PKG_FAIL_REASON= "${PKGNAME} needs pthreads, but ${_PKG_PTHREAD_BUILDLINK2_MK} is missing."
