@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/06/30 15:03:11 wennmach Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/01 09:31:00 wennmach Exp $
 #
 
 DISTNAME=		arla-0.33
@@ -9,6 +9,10 @@ MAINTAINER=		wennmach@netbsd.org
 HOMEPAGE=		http://www.stacken.kth.se/project/arla/
 
 DEPENDS+=		kth-krb4-1.0.1:../../security/kth-krb4
+
+.if !exists(/sys/lib/libkern/libkern.h)
+IGNORE=			"requires kernel sources available under /sys"
+.endif  
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-krb4=${PREFIX}
