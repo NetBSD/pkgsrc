@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/12/02 20:29:48 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2002/12/03 11:14:01 drochner Exp $
 
 DISTNAME=	xcdroast-0.98alpha11
 PKGNAME=	xcdroast-0.98a11
@@ -18,21 +18,19 @@ USE_X11=	YES
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
 
-#.if ${_OPSYS_HAS_OSSAUDIO} == "yes"
+.if ${_OPSYS_HAS_OSSAUDIO} == "yes"
 CFLAGS+=	-DHAVE_OSS
-#.endif
+.endif
 
 DOCDIR=		${PREFIX}/share/doc/xcdroast
 SUPPORT_FILES=	/dev/null ${PKG_SYSCONFDIR}/xcdroast.conf
 
-#pre-build:
-#	cd ${WRKSRC}; for file in io.c wavplay.c xcdroast.h; do		\
-#		${SED}	-e "s|@PREFIX@|${PREFIX}|g"			\
-#			-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
-#			-e "s|@DEVOSSAUDIO@|${DEVOSSAUDIO}|g"		\
-#			$${file} > $${file}.fixed;			\
-#		${MV} -f $${file}.fixed $${file};			\
-#	done
+pre-build:
+	cd ${WRKSRC}/src; for file in io.c wavplay.c; do		\
+		${SED} -e "s|@DEVOSSAUDIO@|${DEVOSSAUDIO}|g"		\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
