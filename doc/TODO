@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1358 2004/02/09 11:49:04 markd Exp $
+$NetBSD: TODO,v 1.1359 2004/02/09 12:06:42 seb Exp $
 
 Suggested new packages
 ======================
@@ -215,7 +215,6 @@ Suggested package updates
 	o kaffe-1.1.3 [pkg/24148]
 	o kdevelop-3.0
 	o lavaps-2.4
-	o lcms-1.0.9
 	o libcaca-0.9
 	o libesmtp-1.0.2
 	o libgphoto2-2.1.4
