@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/06/19 13:51:17 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/06/20 03:08:15 uebayasi Exp $
 bin/mlclient
 bin/mlterm
 etc/mlterm/aafont
@@ -24,18 +24,22 @@ lib/libmkf.so.12
 lib/libmkf.so.12.0
 lib/mlterm/libathena.a
 lib/mlterm/libathena.la
+lib/mlterm/libathena.so
 lib/mlterm/libathena.so.0
 lib/mlterm/libathena.so.0.0
 lib/mlterm/libmotif.a
 lib/mlterm/libmotif.la
+lib/mlterm/libmotif.so
 lib/mlterm/libmotif.so.0
 lib/mlterm/libmotif.so.0.0
 lib/mlterm/libmozmodern.a
 lib/mlterm/libmozmodern.la
+lib/mlterm/libmozmodern.so
 lib/mlterm/libmozmodern.so.0
 lib/mlterm/libmozmodern.so.0.0
 lib/mlterm/libnext.a
 lib/mlterm/libnext.la
+lib/mlterm/libnext.so
 lib/mlterm/libnext.so.0
 lib/mlterm/libnext.so.0.0
 lib/mlterm/libsample.a
