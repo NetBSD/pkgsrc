@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.285 2003/02/21 08:33:35 salo Exp $
+$NetBSD: TODO,v 1.286 2003/02/21 11:09:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -102,6 +102,7 @@ Suggested package updates
 	o dante-1.1.13
 	o db4-4.1.25 [pkg/20289]
 	o dillo-0.7.0
+	o drac [pkg/20449]
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elm-me-2.4pl100
@@ -122,6 +123,7 @@ Suggested package updates
 	o gdb-5.3
 	o gdm-2.4.1.1
 	o getmail-2.3.11 [pkg/19707]
+	o getmail-3.0.4 [pkg/19707]
 	o gftp-2.0.14 [pkg/20250]
 	o ghostscript-8.00 (apfl)
 	o gimp-print-4.2.5
@@ -169,7 +171,7 @@ Suggested package updates
 	o koth-0.8.0 [http://www.nongnu.org/koth/]
 	o lbreakout2-2.4
 	o lcms-1.0.9
-	o leafnode-1.9.34
+	o leafnode-1.9.35
 	o lesstif-0.93.40
 	o libbonobo-2.0.1
 	o libdvdcss-1.2.5
@@ -199,7 +201,6 @@ Suggested package updates
 	o mng-1.0.5rc2
 	o mowitz-0.2.2
 	o mpgtx-1.3 [pkg/19082]
-	o mplayer-0.90rc4 [pkg/20307]
 	o mrproject-0.9
 	o mysql-3.23.54
 	o naim-0.11.5.4
@@ -212,14 +213,15 @@ Suggested package updates
 	o openh323-1.11.2
 	o openoffice-1.0.2 [skrll]
 	o openoffice-643 [post-1.0.1]
-	o openssl-0.9.7
+	o openssl-0.9.7a
 	o oss-3.9.7h
 	o p0f-1.8.3
 	o p5-CGI-2.88 [pkg/20323]
 	o pen-0.9.5 [pkg/19216]
-	o php4-4.3.0
+	o php4-4.3.1
 	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12
+	o postfix-2.0.4
 	o povray-3.5
 	o pth-2.0 [skrll]
 	o pureftpd-0.13a [pkg/19233]
@@ -255,6 +257,7 @@ Suggested package updates
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
 	o sodipodi-0.30
+	o spamassassin-2.50
 	o speex-1.0rc2
 	o sqlite-2.7.5 [pkg/19719]
 	o sqlite-2.7.6
@@ -271,7 +274,7 @@ Suggested package updates
 	o tcl/tk-8.4.1 [bjoern]
 	o ted-2.12
 	o teTeX-2.0
-	o texmacs-1.0.1.4
+	o texmacs-1.0.1.5
 	o tightvnc-1.2.8
 	o ttf2pt1-3.4.3
 	o tuxpaint-0.9.7
@@ -279,7 +282,8 @@ Suggested package updates
 	o vfu-4.00
 	o vice-1.11
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
-	o wdm-1.22
+	o wdm-1.22.1
+	o webalizer-2.01-10 [pkg/20445]
 	o wine-20021219 [pkg/19747]
 	o wine-20030219
 	o wwwoffle-2.7h
@@ -290,7 +294,7 @@ Suggested package updates
 	o xfstt-1.4
 	o xmcd-3.2.0
 	o xosview-1.8.0 [pkg/20265]
-	o xpaint-2.6.8
+	o xpaint-2.6.9
 	o xpuyopuyo-0.9.5
 	o xsane-0.90
 	o xscreensaver-4.08
