@@ -1,0 +1,24 @@
+$NetBSD: patch-af,v 1.1 2005/03/16 15:32:12 rillig Exp $
+
+Needed for g++-2.95.3.
+
+--- src/linpsk.cpp.orig	Fri Jul 23 16:41:47 2004
++++ src/linpsk.cpp	Wed Mar 16 03:01:04 2005
+@@ -44,6 +44,8 @@
+ 
+ #include <vector>
+ 
++#include <pkgsrc_fixes.h>
++
+ #include "controlpanel.h"
+ #include "crxdisplay.h"
+ #include "ctxdisplay.h"
+@@ -421,7 +423,7 @@ if ( Channel->exec() != 0)
+                          (Mode) Channel->RxMode->currentItem(),
+                          Channel->TitleText->text());
+ 
+-  settings.ActChannel->setWindowColor(WindowColors.at(settings.RxChannels));
++  settings.ActChannel->setWindowColor(at_replacement(WindowColors,settings.RxChannels));
+   settings.RxChannels++;
+   RxDisplay->RxFreq->setAFCWide(settings.ActChannel->getAFCWide());
+     

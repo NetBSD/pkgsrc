@@ -1,0 +1,24 @@
+$NetBSD: patch-ai,v 1.1 2005/03/16 15:32:12 rillig Exp $
+
+Needed for g++-2.95.3.
+
+--- src/spectrumdisplay.cpp.orig	Sun Jul 25 18:00:51 2004
++++ src/spectrumdisplay.cpp	Wed Mar 16 03:25:07 2005
+@@ -21,6 +21,8 @@
+ #include <qpainter.h>
+ #include <qsplitter.h>
+ 
++#include <pkgsrc_fixes.h>
++
+ #include "spectrumdisplay.h"
+ #include "crxchannel.h"
+ #include "parameter.h"
+@@ -181,7 +183,7 @@ paintLineal(&p,xmax,ymax);
+      {
+        int ID = pRx->getID();
+        if ( ID >= 0 && ID < Farbe->size() )
+-         p.setPen(Farbe->at(ID));
++         p.setPen(at_replacement(*Farbe, ID));
+      } 
+     // Calculate Centerfrequency Coordinates
+     z=(( (int) pRx->getRxFrequency()-minfreq)*xmax)/(maxfreq-minfreq);
