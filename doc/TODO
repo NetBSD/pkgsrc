@@ -217,7 +217,7 @@ Suggested package updates
 	o gcvs-1.0-1
 	o gdb-6.1 [pkgsrc-wip]
 	o generator-0.35
-	o getmail-3.2.3
+	o getmail-3.2.4
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
@@ -279,6 +279,7 @@ Suggested package updates
 	o maradns-1.0.21
 	o marbles-1.0.6
 	o matchbox-0.8.2 [pkgsrc-wip]
+	o mathomatic-11.1b
 	o mhonarc-2.6.9
 	o micq-0.4.11
 	o midnight-commander-4.6.0
@@ -402,6 +403,7 @@ Suggested package updates
 	o xpuyopuyo-0.9.5
 	o xscreensaver-4.16
 	o xsidplay-1.6.5pre20
+	o xterm-188
 	o xzgv-0.8
 	o yacas-1.0.55
 	o yaz-2.0.12
