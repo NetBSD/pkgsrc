@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2003/10/08 02:00:44 danw Exp $
+
+--- src/Unix/vm_alloc.cpp.orig	Tue Oct  7 21:54:33 2003
++++ src/Unix/vm_alloc.cpp	Tue Oct  7 21:54:19 2003
+@@ -29,6 +29,7 @@
+ #include "vm_alloc.h"
+ 
+ #ifdef HAVE_MACH_VM
++#include <mach/mach.h>
+ #ifndef HAVE_MACH_TASK_SELF
+ #ifdef HAVE_TASK_SELF
+ #define mach_task_self task_self
