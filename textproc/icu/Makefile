@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/04/06 16:36:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2004/04/13 16:39:11 sketch Exp $
 #
 
 DISTNAME=	icu-2.8
@@ -41,6 +41,8 @@ SUPPORT_FILES+=		${CONVRTRS_EG} ${PKG_SYSCONFDIR}/convrtrs.txt
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "native"
 CONFIGURE_ARGS+=	--disable-threads
 .endif
+
+.include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 PLIST_SUBST+=		MH_NAME=mh-bsd-gcc
