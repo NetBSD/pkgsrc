@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/10 17:58:22 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/25 02:19:17 snj Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -23,7 +23,7 @@ ABIWORD_VERS=	1.0.5
 CONFLICTS=	abiword-[0-9]* abiword2-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/abi
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	yes
 USE_X11=	# defined
 USE_GNU_TOOLS+=	make
 USE_GNU_ICONV=	# defined
@@ -50,11 +50,11 @@ MAKE_ENV+=	OS_CFLAGS="${OS_CFLAGS}"
 MAKE_FLAGS+=	ABI_BUILD_VERSION="${ABIWORD_VERS}"
 MAKE_FLAGS+=	UNIX_CAN_BUILD_STATIC=0
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../converters/psiconv/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../textproc/expat/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../converters/psiconv/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
