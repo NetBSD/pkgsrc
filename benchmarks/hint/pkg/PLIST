@@ -1,2 +1,3 @@
+@comment $NetBSD: PLIST,v 1.3 1999/02/10 14:59:51 frueauf Exp $
 bin/hint
 man/man1/hint.1
