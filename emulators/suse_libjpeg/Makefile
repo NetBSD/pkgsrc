@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/25 09:23:57 tron Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 18:38:28 wiz Exp $
 
 DISTNAME=		suse_libjpeg-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -7,6 +7,7 @@ DISTFILES=		${RPMFILES}
 
 MAINTAINER=		hubertf@netbsd.org
 HOMEPAGE=		http://www.suse.com/
+COMMENT=		Linux compatibility package for jpeg binary
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
 
