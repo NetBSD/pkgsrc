@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/01/28 12:21:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.28 2004/04/11 18:59:52 snj Exp $
 #
 
 DISTNAME=	dinotrace-9.1k
@@ -10,11 +10,11 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE= 	http://www.veripool.com/dinotrace/
 COMMENT=	Tool for viewing the output of digital simulators
 
-USE_BUILDLINK2=		YES
-USE_X11=		YES
 GNU_CONFIGURE=		YES
-USE_PERL5=		build
 INFO_FILES=		dinotrace.info
+USE_BUILDLINK3=		YES
+USE_PERL5=		build
+USE_X11=		YES
 
-.include "../../mk/motif.buildlink2.mk"
+.include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
