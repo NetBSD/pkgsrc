@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/01 21:51:12 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/03 18:05:40 jschauma Exp $
 include/nss/dbm/cdefs.h
 include/nss/dbm/mcom_db.h
 include/nss/dbm/ncompat.h
@@ -97,14 +97,15 @@ include/nss/nss/watcomfx.h
 include/nss/seccmd/secutil.h
 include/nss/seccmd/zconf.h
 include/nss/seccmd/zlib.h
-lib/libfort.${SO_SUFFIX}
-lib/libnss3.${SO_SUFFIX}
-lib/libnssckbi.${SO_SUFFIX}
-lib/libsmime3.${SO_SUFFIX}
-lib/libsoftokn3.${SO_SUFFIX}
-lib/libssl3.${SO_SUFFIX}
-lib/libswft.${SO_SUFFIX}
+lib/nss/libfort.${SO_SUFFIX}
+lib/nss/libnss3.${SO_SUFFIX}
+lib/nss/libnssckbi.${SO_SUFFIX}
+lib/nss/libsmime3.${SO_SUFFIX}
+lib/nss/libsoftokn3.${SO_SUFFIX}
+lib/nss/libssl3.${SO_SUFFIX}
+lib/nss/libswft.${SO_SUFFIX}
 @dirrm include/nss/seccmd
 @dirrm include/nss/nss
 @dirrm include/nss/dbm
 @dirrm include/nss
+@dirrm lib/nss

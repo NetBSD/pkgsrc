@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/01 21:51:12 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2005/02/03 18:05:40 jschauma Exp $
 
 SHA1 (nss-3.9.2.tar.gz) = 017b748d92c5f7376bda78915d1b78b260b44133
 Size (nss-3.9.2.tar.gz) = 4734817 bytes
