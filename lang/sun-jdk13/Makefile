@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/03/19 16:33:58 tron Exp $
+# $NetBSD: Makefile,v 1.14 2002/06/30 15:01:48 schmonz Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 DISTNAME=	j2sdk-1_3_1_02-linux-i386
@@ -28,6 +28,13 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "Darwin"
+DISTFILES=	# empty
+NO_PATCH=	# defined
+NO_CONFIGURE=	# defined
+PLIST_SRC=	${PKGDIR}/PLIST.Darwin
+.endif
+
 .if !defined(JDK_HOME)
 JDK_HOME:=	${LOCALBASE}/java
 .endif
@@ -36,11 +43,13 @@ NO_BUILD=	yes
 # since we change PREFIX:
 NO_MTREE=	yes
 
-ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i[3-6]86
+ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i[3-6]86 Darwin-*-*
 LDD=		${TRUE}
 
 post-fetch:
+.	if ${OPSYS} != "Darwin"
 	@${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+.	endif
 
 post-extract:
 	@${RM} -rf ${WRKSRC}/jre ${WRKSRC}/bin/java
@@ -51,9 +60,13 @@ post-patch:
 # This is ugly.  The chown should happen after copying, ot tar should have
 # a way to override permissions.
 do-install:
+.	if ${OPSYS} == "Darwin"
+	@${ECHO_MSG} "Darwin ships with a JDK based on Sun's 1.3.1 release."
+.	else
 	${INSTALL_PROGRAM_DIR} ${PREFIX}
 	${CHOWN} -hR ${BINOWN}:${BINGRP} ${WRKSRC}
 	${GTAR} -C ${WRKSRC} -cf- . | ${GTAR} -C ${PREFIX} -xpf-
+.	endif
 
 .include "../../mk/bsd.pkg.mk"
 
