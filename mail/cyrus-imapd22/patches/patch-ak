@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1.1.1 2004/01/18 12:42:11 recht Exp $
+$NetBSD: patch-ak,v 1.2 2004/05/26 22:18:05 recht Exp $
 
---- imap/ctl_cyrusdb.c~	2003-10-22 20:50:07.000000000 +0200
-+++ imap/ctl_cyrusdb.c	2003-11-03 11:09:25.000000000 +0100
-@@ -226,9 +226,9 @@
+--- imap/ctl_cyrusdb.c.orig	2004-01-26 18:46:54.000000000 +0100
++++ imap/ctl_cyrusdb.c	2004-05-26 23:57:04.000000000 +0200
+@@ -227,9 +227,9 @@
  
      /* create the names of the backup directories */
      strcpy(backup1, dirname);
@@ -14,7 +14,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2004/01/18 12:42:11 recht Exp $
  
      syslog(LOG_NOTICE, "%s", msg);
  
-@@ -273,6 +273,7 @@
+@@ -274,6 +274,7 @@
  		struct dirent *dirent;
  
  		tail = backup2 + strlen(backup2);
@@ -22,7 +22,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2004/01/18 12:42:11 recht Exp $
  
  		/* remove db.backup2 */
  		dirp = opendir(backup2);
-@@ -286,7 +287,7 @@
+@@ -287,7 +288,7 @@
  
  		    closedir(dirp);
  		}
