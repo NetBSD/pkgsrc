@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 16:33:06 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 19:18:57 drochner Exp $
 
-SHA1 (mergeant-0.12.1.tar.bz2) = 486b47b81122489c859603b45edfade25c858f93
-RMD160 (mergeant-0.12.1.tar.bz2) = 9e6629b0e0d9b74856aaad29e29e0627bb1de4a0
-Size (mergeant-0.12.1.tar.bz2) = 1204581 bytes
-SHA1 (patch-aa) = 44c5ccfb615f35f7102cf3324f7a304a43e89218
-SHA1 (patch-ab) = f8675a317f867dc9996f6e5ac51ab2dd41500f06
+SHA1 (mergeant-0.52.tar.bz2) = a762127ce6cc6faa6b4b481e97668d9ee6e53f86
+Size (mergeant-0.52.tar.bz2) = 2058623 bytes
+SHA1 (patch-aa) = 9de4817eda5d142dffe23193bbeef84fb8c81e70
+SHA1 (patch-ac) = 3f01d90b642f94ac6a5863bed3c09b7e6778dec6
+SHA1 (patch-ad) = 130ca358b813e2d146784e41616e36cb5a063c68
