@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2002/02/18 15:14:29 seb Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/22 15:11:40 minoura Exp $
 
 DISTNAME=	wl-2.8.1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.ring.gr.jp/pub/text/elisp/wl/stable/
 
@@ -8,10 +9,23 @@ MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://www.gohome.org/wl/
 COMMENT=	mail/news management system with IMAP4rev1 support for Emacs
 
-DEPENDS+=	semi>=1.13.7:../../devel/semi
+DEPENDS+=	${PKGNAME_PREFIX}semi>=1.13.7:../../devel/semi
+# XXX please someone adjust paths and PLIST for XEmacs...
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20
 
 INSTALL_TARGET=	install install-info
 INFO_FILES=	wl.info wl-ja.info
+
+.include "../../mk/emacs.mk"
+
+.ifdef ${EMACS_FLAVOR} == "emacs"
+ETCDIR=		share/emacs/${EMACS_VERSION}/etc/wl
+.else
+# XXX where to go?
+.endif
+ICONDIR=	${ETCDIR}/icons
+PLIST_SUBST+=	ETCDIR=${ETCDIR}
+PLIST_SUBST+=	ICONDIR=${ICONDIR}
 
 DOCDIR=		${PREFIX}/share/doc/wl
 EXAMPLESDIR=	${PREFIX}/share/examples/wl
