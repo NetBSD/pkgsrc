@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/02/09 18:14:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/11 00:39:29 xtraeme Exp $
 #
 
 DISTNAME=		fam-2.6.10
@@ -11,7 +11,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://oss.sgi.com/projects/fam/
 COMMENT=		File Alteration Monitor
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
