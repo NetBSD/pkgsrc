@@ -4,8 +4,8 @@
 +# Snd make file for NetBSD, assuming Motif is available (audio currently stubbed out)
 +
 +CC = gcc
-+#CFLAGS = -O2 -DXPM -DHAVE_OSS -I/usr/X11R6/include -I/usr/pkg/include
-+CFLAGS = -DXPM -DHAVE_OSS -I/usr/X11R6/include -I/usr/pkg/include
++#CFLAGS = -O2 -DXPM -DHAVE_OSS -I@X11BASE@/include -I@LOCALBASE@/include
++CFLAGS = -DXPM -DHAVE_OSS -I@X11BASE@/include -I@LOCALBASE@/include
 +CFLAGS += -g
 +
 +LIBS = -L/usr/X11R6/lib -lMrm -lXm -lXpm -lXmu -lXt -lXext -lX11 -lm -lossaudio
