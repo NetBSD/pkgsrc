@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/08 19:52:50 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/11 05:48:49 snj Exp $
 #
 
 DISTNAME=	i2cb-6.0_ALPHA
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.draga.com/~jwise/i2cb/
 COMMENT=	Next generation Internet Citicen's Band chat client
 
 WRKSRC=		${WRKDIR}/icb
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_READLINE=	yes
 
 post-extract:
@@ -28,6 +28,6 @@ do-install:
 		${WRKSRC}/contrib/echofile \
 		${PREFIX}/libdata/i2cb
 
-.include "../../lang/tcl83/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
+.include "../../lang/tcl83/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
