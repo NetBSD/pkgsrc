@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/22 08:36:03 grant Exp $
+# $NetBSD: Makefile,v 1.25 2004/04/19 00:11:17 wiz Exp $
 #
 
 DISTNAME=	atari800-1.3.2
@@ -17,7 +17,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
 GNU_CONFIGURE=		YES
@@ -36,5 +36,5 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/*.rom ${WRKDIR}/*.xfd ${WRKDIR}/*.atr \
 		${WRKSRC}/atari800.cfg ${PREFIX}/share/atari800/
 
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
