@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2001/03/04 09:06:10 tron Exp $
+# $NetBSD: Makefile,v 1.65 2001/03/31 18:40:25 jtb Exp $
 
 DISTNAME=		ImageMagick-5.2.8
 CATEGORIES=		graphics
@@ -8,6 +8,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.simplesystems.org/ImageMagick/
 COMMENT=		Package for display and interactive manipulation of images
+
+CONFLICTS=		geomview-*    # both have a program named 'animate'
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec
