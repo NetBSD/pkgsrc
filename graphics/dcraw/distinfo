@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.14 2005/02/24 08:45:04 agc Exp $
+$NetBSD: distinfo,v 1.15 2005/04/07 09:16:47 seb Exp $
 
-SHA1 (dcraw-1.234/dcraw.c) = f663894c111e459076920117cb18fb2b06135974
-RMD160 (dcraw-1.234/dcraw.c) = d626a49bf2ba807a81b5e1d9eaf07d9c74f54f94
-Size (dcraw-1.234/dcraw.c) = 117836 bytes
-SHA1 (dcraw-1.234/dcraw.1) = 1d39e4de2072c42ebe73846f24be8d1098b64d0d
-RMD160 (dcraw-1.234/dcraw.1) = 796ca9f2c2fb28b767a97e0d58ad4519e1f6f8bf
-Size (dcraw-1.234/dcraw.1) = 3435 bytes
+SHA1 (dcraw-7.12/dcraw.c) = fb8d6ebbeb9ae29536b05c23e7c1ad90fcfb409a
+RMD160 (dcraw-7.12/dcraw.c) = 91438e26b6b5436af5c6f0ee527aa7bd1ce221a8
+Size (dcraw-7.12/dcraw.c) = 137294 bytes
+SHA1 (dcraw-7.12/dcraw.1) = 172a93d434c5352086b0e909267275276324ba7c
+RMD160 (dcraw-7.12/dcraw.1) = 96d18acc298c54f487961631b7d5b2947d76ab27
+Size (dcraw-7.12/dcraw.1) = 3612 bytes
+SHA1 (patch-aa) = 796166f137d12b3d49eb09fda50b8871d4683092
