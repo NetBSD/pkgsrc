@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9787 2005/04/07 23:13:50 hira Exp $
+$NetBSD: CHANGES,v 1.9788 2005/04/07 23:49:45 taya Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1938,3 +1938,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gxemul to 0.3.1 [xtraeme 2005-04-07]
 	Updated pkglint to 4.11 [riz 2005-04-07]
 	Updated magicpoint to 1.10anb6 [hira 2005-04-07]
+	Updated mozilla to 1.7.6nb1 [taya 2005-04-07]
+	Updated mozilla-gtk2 to 1.7.6nb1 [taya 2005-04-07]
