@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.136 2005/03/28 02:16:55 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.137 2005/04/07 18:31:09 riz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -638,10 +638,10 @@ EOF
 		log_warning("$opt_packagedir/scripts", NO_LINE_NUMBER, "this directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
 	}
 	if (! -f "$opt_packagedir/$pkgdir/PLIST"
-	    and ! -f "$opt_packagedir/$pkgdir/PLIST-mi"
+	    and ! -f "$opt_packagedir/$pkgdir/PLIST.common"
 	    and ! $seen_PLIST_SRC
 	    and ! $seen_NO_PKG_REGISTER ) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "no PLIST or PLIST-mi, and PLIST_SRC and NO_PKG_REGISTER unset. Are you sure PLIST handling is ok?");
+		log_warning(NO_FILE, NO_LINE_NUMBER, "no PLIST or PLIST.common, and PLIST_SRC and NO_PKG_REGISTER unset. Are you sure PLIST handling is ok?");
 	}
 	if ($opt_committer) {
 		foreach my $wrkdir (<$opt_packagedir/work*>) {
