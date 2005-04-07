@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2005/04/07 12:07:44 markd Exp $
+
+--- src/kmplayerplaylist.cpp.orig	Wed Apr  6 12:18:34 2005
++++ src/kmplayerplaylist.cpp	Wed Apr  6 12:15:24 2005
+@@ -503,7 +503,7 @@
+         else
+             kdError () << "Warning: unhandled MediaType attr: " << cname << "=" << a->nodeValue () << endl;
+     }
+-    kdDebug () << "MediaType attr found bitrate: " << bitrate << " src: " << (src.isEmpty() ? "-" : src) << " type: " << (mimetype.isEmpty() ? "-" : mimetype) << endl;
++    kdDebug () << "MediaType attr found bitrate: " << bitrate << " src: " << (src.isEmpty() ? QString("-") : src) << " type: " << (mimetype.isEmpty() ? QString("-") : mimetype) << endl;
+ }
+ 
+ //-----------------------------------------------------------------------------
