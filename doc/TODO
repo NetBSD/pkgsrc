@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3372 2005/04/07 07:44:21 reed Exp $
+$NetBSD: TODO,v 1.3373 2005/04/07 10:19:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -99,7 +99,7 @@ Suggested new packages
 	http://www.linphone.org/
 	Telephony on Linux (and NetBSD?)
 
-	vnc2swf
+	vnc2swf [wip/vnc2swf]
 	http://www.unixuser.org/~euske/vnc2swf/
 	Vnc2swf captures the live motion of a screen with VNC protocol
 	and generates a Macromedia Flash(TM) movie (.swf).
@@ -509,7 +509,7 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.3.78
 	o gtetrinet-0.7.8
-	o gtk-send-pr-0.4.5
+	o gtk-send-pr-0.4.5 [pkg/29904]
 	o gtk-systrace-2003.06.23
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -630,6 +630,7 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.26
+	o mathomatic-12.2c
 	o mdd-20050318
 	o memcached-1.2
 	o memtest86-3.2
@@ -958,7 +959,7 @@ Suggested package updates
 	o rtcw-1.41.3
 	o ruby-fox-1.2.5 [needs to update of fox-1.4.6]
 	o ruby-mysql-2.5.2
-	o rudiments-0.27
+	o rudiments-0.28.1
 	o sablecc-2.18.2
 	o sablevm-1.11
 	o sablevm-classpath-1.11
@@ -984,6 +985,8 @@ Suggested package updates
 	o shmux-1.0b6
 	o siag-3.6.0
 	o sign-1.0.7
+	o silc-server-0.9.19
+	o silc-toolkit-0.9.19
 	o simh-3.3.2
 	o sitecopy-0.15.0
 	o sitescooper-3.1.2
@@ -1100,6 +1103,7 @@ Suggested package updates
 	o vsftpd-2.0.3
 	o vttest-20050107
 	o w32api-3.2
+	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o wdm-1.28
 	o webmin-1.190
