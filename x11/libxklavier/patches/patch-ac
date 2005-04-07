@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.3 2005/04/07 09:33:55 rillig Exp $
+
+--- libxklavier/xklavier.c.orig	Sat Jan  8 00:54:36 2005
++++ libxklavier/xklavier.c	Sun Apr  3 17:42:44 2005
+@@ -1,3 +1,4 @@
++#include <stdlib.h>
+ #include <time.h>
+ 
+ #include <X11/Xatom.h>
+@@ -773,8 +774,7 @@ void _XklEnsureVTableInited( void )
+   if ( xklVTable == NULL )
+   {
+     XklDebug( 0, "ERROR: XKL VTable is NOT initialized.\n" );
+-    /* force the crash! */
+-    char *p = NULL; *p = '\0';
++    abort();
+   }
+ }
+ 
