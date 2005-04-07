@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/30 00:30:44 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/07 17:29:19 xtraeme Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20041024-netbsd-arc-installed.gif
@@ -9,8 +9,8 @@ share/doc/gxemul/20041129-redhat_mips.png
 share/doc/gxemul/20041129-redhat_mips_small.png
 share/doc/gxemul/20041213-debian_4.png
 share/doc/gxemul/20041213-debian_4_small.gif
-share/doc/gxemul/20050329-netbsd-hpcmips-6.png
-share/doc/gxemul/20050329-netbsd-hpcmips-6_small.png
+share/doc/gxemul/20050331-netbsd-hpcmips.png
+share/doc/gxemul/20050331-netbsd-hpcmips_small.png
 share/doc/gxemul/BUGS
 share/doc/gxemul/HISTORY
 share/doc/gxemul/LICENSE
