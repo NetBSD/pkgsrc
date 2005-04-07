@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3371 2005/04/06 17:54:32 xtraeme Exp $
+$NetBSD: TODO,v 1.3372 2005/04/07 07:44:21 reed Exp $
 
 Suggested new packages
 ======================
@@ -266,6 +266,7 @@ Suggested package updates
 	o XaoS-3.1.1
 	o YoSucker-65
 	o aap-0.144
+	o abiword-2.2.7
 	o acpi-iasl-20040715
 	o advancecomp-1.14
 	o aewm++-1.0.27
