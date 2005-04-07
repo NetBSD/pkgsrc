@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9779 2005/04/07 09:19:04 seb Exp $
+$NetBSD: CHANGES,v 1.9780 2005/04/07 11:28:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1929,3 +1929,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dspam to 3.4.2 [xtraeme 2005-04-06]
 	Updated putty to 0.58 [xtraeme 2005-04-06]
 	Updated dcraw to 7.12 [seb 2005-04-07]
+	Updated spamass-milter to 0.3.0nb1 [wiz 2005-04-07]
