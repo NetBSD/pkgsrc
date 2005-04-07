@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2005/04/07 14:33:56 markd Exp $
+
+--- lib/audio/Imakefile.orig	2005-04-08 01:55:21.000000000 +1200
++++ lib/audio/Imakefile
+@@ -59,7 +59,7 @@
+ #endif
+ 
+ XCOMM JET - hmmm.
+-#if (defined(FreeBSDArchitecture) || defined(BSDArchitecture)) && defined(HasBSD44Sockets)
++#if (defined(FreeBSDArchitecture) || defined(NetBSDArchitecture) || defined(BSDArchitecture)) && defined(HasBSD44Sockets)
+ 	EXTRA_DEFINES = -DBSD44SOCKETS
+ #endif
+ 
