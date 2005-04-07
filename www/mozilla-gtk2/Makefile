@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2005/04/02 14:38:15 abs Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/07 23:48:36 taya Exp $
 
 MOZILLA=	mozilla-gtk2
 MOZILLA_BIN=	mozilla-bin
 MOZ_VER=	1.7.6
+PKGREVISION=	1
 EXTRACT_SUFX=	.tar.bz2
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
