@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2005/02/05 12:30:46 seb Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/07 09:16:47 seb Exp $
 #
 
 DISTNAME=	dcraw
-PKGNAME=	dcraw-1.234
+PKGNAME=	dcraw-7.12
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.cybercom.net/~dcoffin/dcraw/
 DISTFILES=	dcraw.c dcraw.1
