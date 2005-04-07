@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3374 2005/04/07 11:27:05 salo Exp $
+$NetBSD: TODO,v 1.3375 2005/04/07 14:17:24 adam Exp $
 
 Suggested new packages
 ======================
@@ -1190,7 +1190,6 @@ Suggested package updates
 	o zope25-Photo-1.2.4
 	o zope25-ZWiki-0.39.0
 	o zopeedit-0.8
-	o zsh-4.2.5
 	o zziplib-0.13.37
 
 Infrastructure problems which need addressing
