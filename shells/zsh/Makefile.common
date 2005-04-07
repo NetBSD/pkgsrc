@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2005/03/04 03:59:32 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.22 2005/04/07 14:16:41 adam Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -14,11 +14,11 @@ MAINTAINER=	${ZSH_MAINTAINER}
 HOMEPAGE=	http://sunsite.dk/zsh/
 COMMENT=	The Z shell
 
-USE_BUILDLINK3=		YES
-USE_PKGINSTALL=		YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
+GNU_CONFIGURE=		yes
 
-USE_MAKEINFO=		YES
+USE_MAKEINFO=		yes
 INFO_FILES=		zsh.info
 TEXINFO_REQD=		4.0
 
@@ -61,7 +61,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.${OPSYS}
 PLIST_SRC=	# empty
 .    endif
 .    if ${OPSYS} != "IRIX"
-PLIST_SRC+=	${PKGDIR}/PLIST.shlibs 
+PLIST_SRC+=	${PKGDIR}/PLIST.shlibs
 .    endif
 PLIST_SRC+=	${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
 .  endif

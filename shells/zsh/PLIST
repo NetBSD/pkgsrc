@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.15 2005/02/21 11:07:37 adam Exp $
-bin/zsh
+@comment $NetBSD: PLIST,v 1.16 2005/04/07 14:16:41 adam Exp $
 bin/${PKGNAME}
+bin/zsh
 man/man1/zsh.1
 man/man1/zshall.1
 man/man1/zshbuiltins.1
@@ -194,7 +194,6 @@ share/zsh/${PKGVERSION}/functions/_kfmclient
 share/zsh/${PKGVERSION}/functions/_kill
 share/zsh/${PKGVERSION}/functions/_killall
 share/zsh/${PKGVERSION}/functions/_kld
-share/zsh/${PKGVERSION}/functions/_larch
 share/zsh/${PKGVERSION}/functions/_last
 share/zsh/${PKGVERSION}/functions/_less
 share/zsh/${PKGVERSION}/functions/_limit
@@ -240,6 +239,7 @@ share/zsh/${PKGVERSION}/functions/_mondo
 share/zsh/${PKGVERSION}/functions/_most_recent_file
 share/zsh/${PKGVERSION}/functions/_mount
 share/zsh/${PKGVERSION}/functions/_mozilla
+share/zsh/${PKGVERSION}/functions/_mpc
 share/zsh/${PKGVERSION}/functions/_mplayer
 share/zsh/${PKGVERSION}/functions/_mt
 share/zsh/${PKGVERSION}/functions/_mtools
@@ -369,6 +369,7 @@ share/zsh/${PKGVERSION}/functions/_ttyctl
 share/zsh/${PKGVERSION}/functions/_typeset
 share/zsh/${PKGVERSION}/functions/_ulimit
 share/zsh/${PKGVERSION}/functions/_uml
+share/zsh/${PKGVERSION}/functions/_unace
 share/zsh/${PKGVERSION}/functions/_unhash
 share/zsh/${PKGVERSION}/functions/_uniq
 share/zsh/${PKGVERSION}/functions/_unsetopt
