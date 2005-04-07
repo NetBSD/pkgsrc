@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9781 2005/04/07 12:17:34 markd Exp $
+$NetBSD: CHANGES,v 1.9782 2005/04/07 13:44:20 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1931,3 +1931,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dcraw to 7.12 [seb 2005-04-07]
 	Updated spamass-milter to 0.3.0nb1 [wiz 2005-04-07]
 	Updated kmplayer to 0.8.4b [markd 2005-04-07]
+	Updated libmatchbox to 1.6 [ben 2005-04-07]
+	Updated matchbox to 0.9.3 [ben 2005-04-07]
