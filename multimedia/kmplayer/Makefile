@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2004/12/10 06:40:11 markd Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/07 12:07:43 markd Exp $
 #
 
-DISTNAME=	kmplayer-0.8.3a
-PKGREVISION=	1
+DISTNAME=	kmplayer-0.8.4b
 CATEGORIES=	multimedia kde
 MASTER_SITES=	http://www.xs4all.nl/~jjvrieze/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	murray@river-styx.org
+MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.xs4all.nl/~jjvrieze/
 COMMENT=	KDE frontend to mplayer
 
@@ -23,6 +22,8 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PERL5=		build
 
+CONFIGURE_ARGS+=	--without-gstreamer
+
 SHLIBTOOL_OVERRIDE=	libtool
 
 SUBST_CLASSES+=		desktop
@@ -31,6 +32,7 @@ SUBST_STAGE.desktop=	pre-configure
 SUBST_FILES.desktop=	src/kmplayer.desktop
 SUBST_SED.desktop=	-e 's|@PREFIX@|${PREFIX}|g'
 
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

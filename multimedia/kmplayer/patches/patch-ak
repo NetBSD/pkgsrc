@@ -1,0 +1,52 @@
+$NetBSD: patch-ak,v 1.1 2005/04/07 12:07:44 markd Exp $
+
+--- doc/pt/Makefile.in.orig	2005-03-14 22:46:51.000000000 +1300
++++ doc/pt/Makefile.in
+@@ -430,19 +430,19 @@ index.cache.bz2: $(srcdir)/index.docbook
+ docs-am: index.cache.bz2
+ 
+ install-docs: docs-am install-nls
+-	$(mkinstalldirs) $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/pt
++	$(mkinstalldirs) $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/kmplayer
+ 	@if test -f index.cache.bz2; then \
+-	echo $(INSTALL_DATA) index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/pt/; \
+-	$(INSTALL_DATA) index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/pt/; \
++	echo $(INSTALL_DATA) index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/kmplayer/; \
++	$(INSTALL_DATA) index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/kmplayer/; \
+ 	elif test -f  $(srcdir)/index.cache.bz2; then \
+-	echo $(INSTALL_DATA) $(srcdir)/index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/pt/; \
+-	$(INSTALL_DATA) $(srcdir)/index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/pt/; \
++	echo $(INSTALL_DATA) $(srcdir)/index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/kmplayer/; \
++	$(INSTALL_DATA) $(srcdir)/index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/kmplayer/; \
+ 	fi
+-	-rm -f $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/pt/common
+-	$(LN_S) $(kde_libs_htmldir)/$(KDE_LANG)/common $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/pt/common
++	-rm -f $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/kmplayer/common
++	$(LN_S) $(kde_libs_htmldir)/$(KDE_LANG)/common $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/kmplayer/common
+ 
+ uninstall-docs:
+-	-rm -rf $(kde_htmldir)/$(KDE_LANG)/pt
++	-rm -rf $(kde_htmldir)/$(KDE_LANG)/kmplayer
+ 
+ clean-docs:
+ 	-rm -f index.cache.bz2
+@@ -450,15 +450,15 @@ clean-docs:
+ 
+ #>+ 13
+ install-nls:
+-	$(mkinstalldirs) $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/pt
++	$(mkinstalldirs) $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/kmplayer
+ 	@for base in index.docbook ; do \
+-	  echo $(INSTALL_DATA) $$base $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/pt/$$base ;\
+-	  $(INSTALL_DATA) $(srcdir)/$$base $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/pt/$$base ;\
++	  echo $(INSTALL_DATA) $$base $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/kmplayer/$$base ;\
++	  $(INSTALL_DATA) $(srcdir)/$$base $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/kmplayer/$$base ;\
+ 	done
+ 
+ uninstall-nls:
+ 	for base in index.docbook ; do \
+-	  rm -f $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/pt/$$base ;\
++	  rm -f $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/kmplayer/$$base ;\
+ 	done
+ 
+ 

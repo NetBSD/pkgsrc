@@ -1,9 +1,17 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 11:24:03 agc Exp $
+$NetBSD: distinfo,v 1.8 2005/04/07 12:07:43 markd Exp $
 
-SHA1 (kmplayer-0.8.3a.tar.bz2) = 45a5739201ac5cc5b375d37fd79c7f8264081ce3
-RMD160 (kmplayer-0.8.3a.tar.bz2) = b878f46edbae0bb09b547b9c29447c8fe4346e02
-Size (kmplayer-0.8.3a.tar.bz2) = 628073 bytes
-SHA1 (patch-ab) = 333935386b0b465092ad42651d1078563da082b0
-SHA1 (patch-ac) = c78491f92550579cfe17d858f0e3c5f84792aa17
+SHA1 (kmplayer-0.8.4b.tar.bz2) = da29cd73e4127cb20af0d15e0af9b10cc2584907
+RMD160 (kmplayer-0.8.4b.tar.bz2) = 3a2f171a58a84fdda77fffe4495a72f2207ab0ba
+Size (kmplayer-0.8.4b.tar.bz2) = 745194 bytes
+SHA1 (patch-ab) = 6d0635e5d9ea62de7363f761493d80d9d9734857
 SHA1 (patch-ad) = a17431819fafd89cb1c4abf0c8d3fe6481017c35
-SHA1 (patch-ae) = 18e699fcc55964efbbb9edfc584820b3177c7a55
+SHA1 (patch-ae) = 7dd2ee12dd68ad9d408b4faba35014bbc37f361c
+SHA1 (patch-af) = 42c744f10ab04692eb9a66ae1d343e980a141700
+SHA1 (patch-ag) = de52a195bdf6f5ec648bc5784345ae405e29d74c
+SHA1 (patch-ah) = 406273c146c86402dd8deed72daf9ddf454faad0
+SHA1 (patch-ai) = ecac63ab7207c82cb1b11470a5e1c2cba8eadb27
+SHA1 (patch-aj) = 0b90de986ccb33bb1a94192be7cdc6efd697ac27
+SHA1 (patch-ak) = b421f60d9765efd16de125661951f7c078689f0e
+SHA1 (patch-al) = 04fb2b9c95af089fd8a24d0a14f3c57da1051890
+SHA1 (patch-am) = 8652b0d21ed9351fcb4a57ea5ec3c8d67dc9cafe
+SHA1 (patch-an) = ae4c578b42951adfe846bf347e15cb98c198d5d4
