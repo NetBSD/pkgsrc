@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9783 2005/04/07 14:17:24 adam Exp $
+$NetBSD: CHANGES,v 1.9784 2005/04/07 16:22:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1934,3 +1934,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libmatchbox to 1.6 [ben 2005-04-07]
 	Updated matchbox to 0.9.3 [ben 2005-04-07]
 	Updated zsh to 4.2.5 [adam 2005-04-07]
+	Updated elinks to 0.10.4 [wiz 2005-04-07]
