@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/10/05 10:24:13 agc Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/07 13:43:15 ben Exp $
 #
 
-DISTNAME=	libmatchbox-1.4
-PKGREVISION=	1
+DISTNAME=	libmatchbox-1.6
 CATEGORIES=	devel
-MASTER_SITES=	http://matchbox.handhelds.org/sources/libmatchbox/1.4/
+MASTER_SITES=	http://matchbox.handhelds.org/sources/libmatchbox/1.6/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://matchbox.handhelds.org/
