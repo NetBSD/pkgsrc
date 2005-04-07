@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9785 2005/04/07 17:30:47 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9786 2005/04/07 18:47:12 riz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1936,3 +1936,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated zsh to 4.2.5 [adam 2005-04-07]
 	Updated elinks to 0.10.4 [wiz 2005-04-07]
 	Updated gxemul to 0.3.1 [xtraeme 2005-04-07]
+	Updated pkglint to 4.11 [riz 2005-04-07]
