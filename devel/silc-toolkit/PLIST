@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/04/08 15:15:17 salo Exp $
 include/silc/aes.h
 include/silc/blowfish.h
 include/silc/cast.h
@@ -7,7 +7,6 @@ include/silc/ciphers_def.h
 include/silc/client.h
 include/silc/command.h
 include/silc/command_reply.h
-include/silc/getopt.h
 include/silc/idlist.h
 include/silc/md5.h
 include/silc/mp_gmp.h
@@ -18,7 +17,6 @@ include/silc/mplogic.h
 include/silc/none.h
 include/silc/protocol.h
 include/silc/rc5.h
-include/silc/regex.h
 include/silc/rsa.h
 include/silc/sha1.h
 include/silc/silcapputil.h
@@ -70,9 +68,11 @@ include/silc/silcske_payload.h
 include/silc/silcske_status.h
 include/silc/silcsockconn.h
 include/silc/silcstatus.h
+include/silc/silcstringprep.h
 include/silc/silcstrutil.h
 include/silc/silcthread.h
 include/silc/silctypes.h
+include/silc/silcutf8.h
 include/silc/silcutil.h
 include/silc/silcvcard.h
 include/silc/silcversion.h
@@ -306,11 +306,11 @@ share/doc/html/silc-toolkit/manual/silcclient-silc_client_get_channel_by_id_reso
 share/doc/html/silc-toolkit/manual/silcclient-silc_client_get_channel_resolve.html
 share/doc/html/silc-toolkit/manual/silcclient-silc_client_get_client_by_id.html
 share/doc/html/silc-toolkit/manual/silcclient-silc_client_get_client_by_id_resolve.html
-share/doc/html/silc-toolkit/manual/silcclient-silc_client_get_clients(1).html
 share/doc/html/silc-toolkit/manual/silcclient-silc_client_get_clients.html
 share/doc/html/silc-toolkit/manual/silcclient-silc_client_get_clients_by_channel.html
 share/doc/html/silc-toolkit/manual/silcclient-silc_client_get_clients_by_list.html
 share/doc/html/silc-toolkit/manual/silcclient-silc_client_get_clients_local.html
+share/doc/html/silc-toolkit/manual/silcclient-silc_client_get_clients_whois.html
 share/doc/html/silc-toolkit/manual/silcclient-silc_client_get_server.html
 share/doc/html/silc-toolkit/manual/silcclient-silc_client_get_server_by_id.html
 share/doc/html/silc-toolkit/manual/silcclient-silc_client_init.html
@@ -332,6 +332,7 @@ share/doc/html/silc-toolkit/manual/silcclient-silc_client_start_key_exchange.htm
 share/doc/html/silc-toolkit/manual/silcclient-silc_client_stop.html
 share/doc/html/silc-toolkit/manual/silcclient.html
 share/doc/html/silc-toolkit/manual/silcclient.xref
+share/doc/html/silc-toolkit/manual/silcclient_unicode.html
 share/doc/html/silc-toolkit/manual/silcclient_using.html
 share/doc/html/silc-toolkit/manual/silcclientlib.html
 share/doc/html/silc-toolkit/manual/silccommand-SilcCommand.html
@@ -1005,17 +1006,19 @@ share/doc/html/silc-toolkit/manual/silcstatus-silc_status_get_args.html
 share/doc/html/silc-toolkit/manual/silcstatus.html
 share/doc/html/silc-toolkit/manual/silcstatus.xref
 share/doc/html/silc-toolkit/manual/silcstatus_args.html
+share/doc/html/silc-toolkit/manual/silcstringprep-SilcStringprepFlags.html
+share/doc/html/silc-toolkit/manual/silcstringprep-SilcStringprepStatus.html
+share/doc/html/silc-toolkit/manual/silcstringprep-silc_stringprep.html
+share/doc/html/silc-toolkit/manual/silcstringprep.html
+share/doc/html/silc-toolkit/manual/silcstringprep.xref
 share/doc/html/silc-toolkit/manual/silcstrutil-SilcStringEncoding.html
+share/doc/html/silc-toolkit/manual/silcstrutil-silc_identifier_check.html
+share/doc/html/silc-toolkit/manual/silcstrutil-silc_identifier_verify.html
 share/doc/html/silc-toolkit/manual/silcstrutil-silc_mime_parse.html
 share/doc/html/silc-toolkit/manual/silcstrutil-silc_pem_decode.html
 share/doc/html/silc-toolkit/manual/silcstrutil-silc_pem_encode.html
 share/doc/html/silc-toolkit/manual/silcstrutil-silc_pem_encode_file.html
 share/doc/html/silc-toolkit/manual/silcstrutil-silc_strncat.html
-share/doc/html/silc-toolkit/manual/silcstrutil-silc_utf8_decode.html
-share/doc/html/silc-toolkit/manual/silcstrutil-silc_utf8_decoded_len.html
-share/doc/html/silc-toolkit/manual/silcstrutil-silc_utf8_encode.html
-share/doc/html/silc-toolkit/manual/silcstrutil-silc_utf8_encoded_len.html
-share/doc/html/silc-toolkit/manual/silcstrutil-silc_utf8_valid.html
 share/doc/html/silc-toolkit/manual/silcstrutil.html
 share/doc/html/silc-toolkit/manual/silcstrutil.xref
 share/doc/html/silc-toolkit/manual/silcthread-SilcThread.html
@@ -1055,6 +1058,15 @@ share/doc/html/silc-toolkit/manual/silctypes-TRUE.html
 share/doc/html/silc-toolkit/manual/silctypes-bool.html
 share/doc/html/silc-toolkit/manual/silctypes.html
 share/doc/html/silc-toolkit/manual/silctypes.xref
+share/doc/html/silc-toolkit/manual/silcutf8-silc_utf8_decode.html
+share/doc/html/silc-toolkit/manual/silcutf8-silc_utf8_decoded_len.html
+share/doc/html/silc-toolkit/manual/silcutf8-silc_utf8_encode.html
+share/doc/html/silc-toolkit/manual/silcutf8-silc_utf8_encoded_len.html
+share/doc/html/silc-toolkit/manual/silcutf8-silc_utf8_strcasecmp.html
+share/doc/html/silc-toolkit/manual/silcutf8-silc_utf8_strncasecmp.html
+share/doc/html/silc-toolkit/manual/silcutf8-silc_utf8_valid.html
+share/doc/html/silc-toolkit/manual/silcutf8.html
+share/doc/html/silc-toolkit/manual/silcutf8.xref
 share/doc/html/silc-toolkit/manual/silcutil-silc_check_line.html
 share/doc/html/silc-toolkit/manual/silcutil-silc_client_chmode.html
 share/doc/html/silc-toolkit/manual/silcutil-silc_client_chumode.html
@@ -1084,6 +1096,8 @@ share/doc/html/silc-toolkit/manual/silcutil-silc_hash_public_key_compare.html
 share/doc/html/silc-toolkit/manual/silcutil-silc_hash_string.html
 share/doc/html/silc-toolkit/manual/silcutil-silc_hash_string_compare.html
 share/doc/html/silc-toolkit/manual/silcutil-silc_hash_uint.html
+share/doc/html/silc-toolkit/manual/silcutil-silc_hash_utf8_compare.html
+share/doc/html/silc-toolkit/manual/silcutil-silc_hash_utf8_string.html
 share/doc/html/silc-toolkit/manual/silcutil-silc_id_render.html
 share/doc/html/silc-toolkit/manual/silcutil-silc_parse_command_line.html
 share/doc/html/silc-toolkit/manual/silcutil-silc_parse_userfqdn.html
