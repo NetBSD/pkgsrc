@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2004/10/03 00:13:15 tv Exp $
+# $NetBSD: Makefile,v 1.37 2005/04/08 15:12:48 salo Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
@@ -42,8 +41,6 @@ CONFIGURE_ARGS+=	--without-libtoolfix
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=		USE_INET6 SILC_CLIENT_WITH_PERL
-
 # Use native curses library.
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS")
 CONFIGURE_ARGS+=	--with-vcurses
@@ -54,41 +51,20 @@ CONFIGURE_ARGS+=        --with-ncurses
 CONFIGURE_ARGS+=        --with-ncurses
 .endif
 
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-
-# Optional support for perl scripting.
-# If you want to disable it, set SILC_CLIENT_WITH_PERL to NO
-# in your /etc/mk.conf
-
-.if defined(SILC_CLIENT_WITH_PERL) && !empty(SILC_CLIENT_WITH_PERL:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--with-perl-lib=${PREFIX}/lib/${PKGBASE}/perl5
-PERL5_REQD+=		5.6.1nb10
-.include "../../lang/perl5/buildlink3.mk"
-DEPENDS+=		p5-File-MMagic>=1.20:../../misc/p5-File-MMagic
-PLIST_SRC+=		${PKGDIR}/PLIST.perl
-PLIST_SRC+=		${WRKDIR}/PLIST.perl
-.else
-CONFIGURE_ARGS+=	--with-perl=no
-.endif
-
 # Assembler optimizations.
 #
 .if (${MACHINE_ARCH} != "i386")
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
-# If you want to debug silc-client, uncomment this.
-#
-#CONFIGURE_ARGS+=	--enable-debug
+.include "options.mk"
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/irssi/config.h ${SILC_CLIENT_CONFIG_H}
 	${INSTALL_DATA} ${WRKSRC}/irssi/irssi-config ${SILC_CLIENT_CONFIG}
-.if defined(SILC_CLIENT_WITH_PERL) && !empty(SILC_CLIENT_WITH_PERL:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Mperl)
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/${PKGBASE}/scripts
 	${INSTALL_DATA} ${WRKSRC}/irssi/scripts/*.pl	\
 		${PREFIX}/libexec/${PKGBASE}/scripts
