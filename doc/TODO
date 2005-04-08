@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3381 2005/04/08 15:51:08 wiz Exp $
+$NetBSD: TODO,v 1.3382 2005/04/08 15:59:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -496,7 +496,6 @@ Suggested package updates
 	o gocr-0.39
 	o gogo-3.11p1
 	o gperiodic-2.0.8
-	o gpgme-1.0.2
 	o gpsdrive-2.09
 	o gpsim-devel-20041104
 	o gputils-0.13.0
