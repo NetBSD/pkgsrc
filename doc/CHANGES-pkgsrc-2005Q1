@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.46 2005/04/08 11:08:04 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.47 2005/04/08 12:06:02 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -95,3 +95,5 @@ Pullup ticket 432 - requested by Shin'ichiro TAYA
 security fix for firefox
 Pullup ticket 435 - requested by Shin'ichiro TAYA
 security fix for mozilla
+Pullup ticket 433 - requested by Juan Romero Pardines
+portability fix for cdrecord
