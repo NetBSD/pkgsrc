@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3378 2005/04/08 12:46:25 salo Exp $
+$NetBSD: TODO,v 1.3379 2005/04/08 13:08:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -406,6 +406,7 @@ Suggested package updates
 	o dylan-interpreter-2.4.0
 	o e2fsprogs-1.36
 	o eagle-4.13r1
+	o easytag-1.1
 	o ec-fonts-mftraced-1.0.11
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
@@ -666,6 +667,8 @@ Suggested package updates
 	o nap-1.5.3
 	o navi2ch-1.7.5
 	o nawk-20041222
+	o ncftp2-2.8.2
+	o ncftp3-3.1.9
 	o ncview-1.92e
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
@@ -720,7 +723,7 @@ Suggested package updates
 	o p5-CDDB-1.15
 	o p5-CGI-3.07
 	o p5-Cache-Cache-1.04
-	o p5-Class-Trigger-0.09
+	o p5-Class-Trigger-0.09 [pkg/29923]
 	o p5-Compress-Bzip2-1.03
 	o p5-Convert-BER-1.3101
 	o p5-Crypt-CBC-2.12
@@ -934,6 +937,7 @@ Suggested package updates
 	o rayshade-4.0.6
 	o rblcheck-1.5
 	o rc-1.7.1
+	o rdiff-backup-0.12.8
 	o rdp-1.6
 	o rep-gtk-0.18
 	o resize_image-0.7
@@ -992,6 +996,7 @@ Suggested package updates
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skampi-4.1
+	o skill-4.1.2
 	o skkinput-2.06.4
 	o slib-3a1
 	o sma-1.4
