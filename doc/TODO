@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3380 2005/04/08 15:30:46 salo Exp $
+$NetBSD: TODO,v 1.3381 2005/04/08 15:51:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -492,7 +492,6 @@ Suggested package updates
 	o gnustep-back-0.9.5
 	o gnustep-base-1.10.2
 	o gnustep-gui-0.9.5
-	o gnutls-1.2.1
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.39
 	o gogo-3.11p1
