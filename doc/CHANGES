@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9792 2005/04/08 11:55:31 adam Exp $
+$NetBSD: CHANGES,v 1.9793 2005/04/08 12:46:24 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1947,3 +1947,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cgoban-java to 2.6.11 [rh 2005-04-08]
 	Updated tcl-expect to 5.43.0 [adam 2005-04-08]
 	Updated tk-expect to 5.43.0 [adam 2005-04-08]
+	Updated lftp to 3.1.2 [salo 2005-04-08]
