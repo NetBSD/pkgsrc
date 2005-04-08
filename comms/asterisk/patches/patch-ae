@@ -1,0 +1,19 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/04/08 03:10:52 riz Exp $
+--- apps/Makefile.orig	2005-03-30 12:40:19.000000000 -0800
++++ apps/Makefile	2005-03-30 12:41:21.000000000 -0800
+@@ -39,9 +39,12 @@
+ #APPS+=app_sql_odbc.so
+ #APPS+=app_rpt.so
+ 
+-APPS+=$(shell if [ -f /usr/include/linux/zaptel.h ]; then echo "app_zapras.so app_meetme.so app_flash.so app_zapbarge.so app_zapscan.so" ; fi)
+-APPS+=$(shell if [ -f /usr/local/include/zaptel.h ]; then echo "app_zapras.so app_meetme.so app_flash.so app_zapbarge.so app_zapscan.so" ; fi)
+-APPS+=$(shell if [ -f /usr/include/osp/osp.h ]; then echo "app_osplookup.so" ; fi)
++#APPS+=$(shell if [ -f /usr/include/linux/zaptel.h ]; then echo "app_zapras.so app_meetme.so app_flash.so app_zapbarge.so app_zapscan.so" ; fi)
++#APPS+=$(shell if [ -f /usr/local/include/zaptel.h ]; then echo "app_zapras.so app_meetme.so app_flash.so app_zapbarge.so app_zapscan.so" ; fi)
++#APPS+=$(shell if [ -f /usr/include/osp/osp.h ]; then echo "app_osplookup.so" ; fi)
++ifdef ASTERISK_USE_ZAPTEL
++APPS+= app_zapras.so app_meetme.so app_flash.so app_zapbarge.so app_zapscan.so
++endif
+ 
+ CFLAGS+=-fPIC
+ 
