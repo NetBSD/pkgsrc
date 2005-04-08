@@ -1,0 +1,88 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/04/08 03:10:52 riz Exp $
+--- channels/Makefile.orig	2004-08-31 09:33:00.000000000 -0700
++++ channels/Makefile	2005-03-30 12:32:50.000000000 -0800
+@@ -38,11 +38,11 @@
+ #CHANNEL_LIBS+=chan_vofr
+ 
+ ifeq (${OSARCH},OpenBSD)
+-MYSQLLIB=-L/usr/local/lib/mysql -lmysqlclient
+-CFLAGS+=-I/usr/local/include
++MYSQLLIB=-L${PREFIX}/lib/mysql -lmysqlclient
++CFLAGS+=-I${PREFIX}/include
+ PTLIB=-lpt_OpenBSD_x86_r
+ H323LIB=-lh323_OpenBSD_x86_r
+-CHANH323LIB=-L/usr/local/lib
++CHANH323LIB=-L${PREFIX}/lib
+ endif
+ ifeq (${OSARCH},Linux)
+ MYSQLLIB=-L/usr/lib/mysql -lmysqlclient
+@@ -60,33 +60,36 @@
+ PTLIB=-lpt_FreeBSD_x86_r
+ H323LIB=-lh323_FreeBSD_x86_r
+ CHANH323LIB=-pthread
+-SOLINK+=-L/usr/local/lib
++SOLINK+=-L${PREFIX}/lib -R${PREFIX}/lib
+ endif
+ ifeq (${OSARCH},NetBSD)
+ PTLIB=-lpt_NetBSD_x86_r
+ H323LIB=-lh323_NetBSD_x86_r
+-SOLINK+=-L/usr/local/lib
++SOLINK+=-L${PREFIX}/lib -R${PREFIX}/lib
+ endif
+ ifneq (${OSARCH},Darwin)
+ CHANNEL_LIBS+=chan_oss.so
+ endif
+ 
+-CHANNEL_LIBS+=$(shell [ -f /usr/include/linux/ixjuser.h ] && echo chan_phone.so)
+-CHANNEL_LIBS+=$(shell [ -f /usr/local/include/ixjuser.h ] && echo chan_phone.so)
+-CHANNEL_LIBS+=$(shell [ -f h323/libchanh323.a ] && echo chan_h323.so)
++#CHANNEL_LIBS+=$(shell [ -f /usr/include/linux/ixjuser.h ] && echo chan_phone.so)
++CHANNEL_LIBS+=$(shell [ -f ${PREFIX}/include/ixjuser.h ] && echo chan_phone.so)
++#CHANNEL_LIBS+=$(shell [ -f h323/libchanh323.a ] && echo chan_h323.so)
+ 
+ CFLAGS+=-Wno-missing-prototypes -Wno-missing-declarations
+-CFLAGS+=$(shell [ ! -f /usr/include/linux/if_wanpipe.h ] && echo " -DOLD_SANGOMA_API")
+-CHANNEL_LIBS+=$(shell [ -f /usr/include/alsa/asoundlib.h ] && echo "chan_alsa.so")
+-CFLAGS+=$(shell [ -f /usr/lib/libpri.so.1 ] && echo " -DZAPATA_PRI")
+-CFLAGS+=$(shell [ -f /usr/lib/libmfcr2.so.1 ] && echo " -DZAPATA_R2")
+-CFLAGS+=$(shell [ -f alsa-monitor.h ] && echo " -DALSA_MONITOR")
+-ZAPPRI=$(shell [ -f /usr/lib/libpri.so.1 ] && echo "-lpri")
+-ZAPR2=$(shell [ -f /usr/lib/libmfcr2.so.1 ] && echo "-lmfcr2")
+-CFLAGS+=$(shell [ -f /usr/include/linux/zaptel.h ] && echo "-DIAX_TRUNKING")
+-CFLAGS+=$(shell [ -f /usr/local/include/zaptel.h ] && echo "-DIAX_TRUNKING")
+-CHANNEL_LIBS+=$(shell [ -f /usr/include/vpbapi.h ] && echo "chan_vpb.so" )
+-CFLAGS+=$(shell [ -f /usr/include/vpbapi.h ] && echo " -DLINUX")
++#CFLAGS+=$(shell [ ! -f /usr/include/linux/if_wanpipe.h ] && echo " -DOLD_SANGOMA_API")
++#CHANNEL_LIBS+=$(shell [ -f /usr/include/alsa/asoundlib.h ] && echo "chan_alsa.so")
++#CFLAGS+=$(shell [ -f /usr/lib/libpri.so.1 ] && echo " -DZAPATA_PRI")
++#CFLAGS+=$(shell [ -f /usr/lib/libmfcr2.so.1 ] && echo " -DZAPATA_R2")
++#CFLAGS+=$(shell [ -f alsa-monitor.h ] && echo " -DALSA_MONITOR")
++#ZAPPRI=$(shell [ -f /usr/lib/libpri.so.1 ] && echo "-lpri")
++#ZAPR2=$(shell [ -f /usr/lib/libmfcr2.so.1 ] && echo "-lmfcr2")
++#CFLAGS+=$(shell [ -f /usr/include/linux/zaptel.h ] && echo "-DIAX_TRUNKING")
++#CFLAGS+=$(shell [ -f /usr/local/include/zaptel.h ] && echo "-DIAX_TRUNKING")
++ifdef ASTERISK_USE_ZAPTEL
++CFLAGS+= -DIAX_TRUNKING
++endif
++#CHANNEL_LIBS+=$(shell [ -f /usr/include/vpbapi.h ] && echo "chan_vpb.so" )
++#CFLAGS+=$(shell [ -f /usr/include/vpbapi.h ] && echo " -DLINUX")
+ 
+ ALSA_SRC=chan_alsa.c
+ ALSA_SRC+=$(shell [ -f alsa-monitor.h ] && echo "alsa-monitor.h")
+@@ -106,10 +109,13 @@
+ 
+ ZAPDIR=/usr/lib
+ 
+-CHANNEL_LIBS+=$(shell [ -f /usr/include/linux/zaptel.h ] && echo "chan_zap.so")
+-CHANNEL_LIBS+=$(shell [ -f /usr/local/include/zaptel.h ] && echo "chan_zap.so")
++#CHANNEL_LIBS+=$(shell [ -f /usr/include/linux/zaptel.h ] && echo "chan_zap.so")
++#CHANNEL_LIBS+=$(shell [ -f /usr/local/include/zaptel.h ] && echo "chan_zap.so")
++ifdef ASTERISK_USE_ZAPTEL
++CHANNEL_LIBS+=chan_zap.so
++endif
+ 
+-CHANNEL_LIBS+=$(shell [ -f /usr/include/nbs.h ] && echo "chan_nbs.so" )
++#CHANNEL_LIBS+=$(shell [ -f /usr/include/nbs.h ] && echo "chan_nbs.so" )
+ 
+ ifndef OPENH323DIR
+ OPENH323DIR=$(HOME)/openh323
