@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.Linux,v 1.12 2004/12/22 15:12:18 abs Exp $
+# $NetBSD: cpuflags.Linux,v 1.13 2005/04/08 07:24:25 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
@@ -22,7 +22,9 @@ else
 fi
 
 case $hw_machine_arch in
-    # i386
+    parisc) case $hw_model in
+	"Mirage 100+")			FLAGS='-march=1.1'		;;
+    esac ;;
     i386)				FLAGS='-march=i386'		;;
     i486)				FLAGS='-march=i486'		;;
     i686) case $hw_model in
@@ -39,9 +41,8 @@ case $hw_machine_arch in
 					FLAGS='-march=pentium4'		;;
 	    esac 
 
-    esac
-    ;;
-    #
+    esac ;;
+
 esac
 
 ############
