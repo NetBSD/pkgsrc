@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.625 2005/04/03 01:04:23 epg Exp $
+# $NetBSD: Makefile,v 1.626 2005/04/08 02:56:07 riz Exp $
 #
 
 COMMENT=	Development utilities
@@ -291,6 +291,7 @@ SUBDIR+=	netbeans-ide
 SUBDIR+=	netcdf
 SUBDIR+=	newfile
 SUBDIR+=	newmkdep
+SUBDIR+=	newt
 SUBDIR+=	noweb
 SUBDIR+=	nqc
 SUBDIR+=	nspr
