@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/03/24 21:12:55 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2005/04/08 16:03:37 wiz Exp $
 
 DISTNAME=		elk-3.0
 PKGNAME=		elk-3.0.3
@@ -7,7 +7,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://www-rn.informatik.uni-bremen.de/software/elk/dist/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www-rn.informatik.uni-bremen.de/software/elk/
+HOMEPAGE=		http://sam.zoy.org/elk/
 COMMENT=		Embeddable Scheme interpreter
 
 # ELF loading problems, LP64
