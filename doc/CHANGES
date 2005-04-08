@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9788 2005/04/07 23:49:45 taya Exp $
+$NetBSD: CHANGES,v 1.9789 2005/04/08 03:16:38 riz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1940,3 +1940,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated magicpoint to 1.10anb6 [hira 2005-04-07]
 	Updated mozilla to 1.7.6nb1 [taya 2005-04-07]
 	Updated mozilla-gtk2 to 1.7.6nb1 [taya 2005-04-07]
+	Added newt-0.51.6nb1 [riz 2005-04-07]
+	Added asterisk-1.0.7nb1 [riz 2005-04-07]
+	Added zaptel-netbsd-20050404 [riz 2005-04-07]
