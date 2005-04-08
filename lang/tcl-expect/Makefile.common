@@ -1,21 +1,22 @@
-# $NetBSD: Makefile.common,v 1.5 2005/03/01 21:05:46 schwarz Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/04/08 11:54:05 adam Exp $
 
 DISTNAME=	expect-${EXPECT_VERSION}
 MASTER_SITES=	http://expect.nist.gov/src/
 HOMEPAGE=	http://expect.nist.gov/
 
-EXPECT_VERSION=	5.42.1
+EXPECT_VERSION=	5.43.0
 
-WRKSRC=		${WRKDIR}/expect-5.42
-USE_BUILDLINK3=	yes
-USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
-TEST_TARGET=	test
+WRKSRC=		${WRKDIR}/expect-5.43
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"
-.if $(OPSYS) == "IRIX" && $(OS_VERSION) == 5.3
-# on IRIX 5.3 inttypes.h and sys/types.h are known to conflict.
-CONFIGURE_ENV+=	ac_cv_header_inttypes_h="no"
+
+# on IRIX 5.3 inttypes.h and sys/types.h are known to conflict
+.if ${OPSYS} == "IRIX" && ${OS_VERSION} == 5.3
+CONFIGURE_ENV+=		ac_cv_header_inttypes_h="no"
 .endif
 
 DISTINFO_FILE=	${.CURDIR}/../../lang/tcl-expect/distinfo
