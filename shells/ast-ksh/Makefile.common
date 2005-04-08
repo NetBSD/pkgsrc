@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2005/03/24 21:16:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.12 2005/04/08 12:56:33 tv Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -10,6 +10,8 @@ DISTFILES=	INIT.${ASTKSH_VERSION}.tgz ast-ksh.${ASTKSH_VERSION}.tgz
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.kornshell.com/
 COMMENT=	Official AT&T release of KornShell 93
+
+NOT_FOR_PLATFORM= Interix-*-* # taking nearly a day to build and crash!
 
 CONFLICTS=	static-ast-ksh-[0-9]*
 KSH93_MAKEFLAGS=
