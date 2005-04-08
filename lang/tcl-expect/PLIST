@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2004/11/18 16:47:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/04/08 11:54:05 adam Exp $
 bin/expect
 include/expect.h
 include/expect_comm.h
 include/expect_tcl.h
 include/tcldbg.h
-lib/tcl/expect5.42/pkgIndex.tcl
-lib/libexpect542.la
+lib/libexpect543.la
+lib/tcl/expect5.43/pkgIndex.tcl
 man/man1/expect.1.gz
 man/man3/libexpect.3.gz
 share/examples/tcl/expect/autoexpect
@@ -40,6 +40,6 @@ share/examples/tcl/expect/weather
 share/examples/tcl/expect/xkibitz
 share/examples/tcl/expect/xkibitz.1
 share/examples/tcl/expect/xpstat
-@dirrm lib/tcl/expect5.42
+@dirrm lib/tcl/expect5.43
 @dirrm share/examples/tcl/expect
 @unexec ${RMDIR} %D/share/examples/tcl 2>/dev/null || ${TRUE}
