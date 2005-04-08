@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2004/12/29 15:42:37 minskim Exp $
+# $NetBSD: Makefile,v 1.38 2005/04/08 15:09:43 salo Exp $
 #
 
-DISTNAME=		silc-server-0.9.18
-PKGREVISION=		3
+DISTNAME=		silc-server-0.9.19p1
+PKGNAME=		${DISTNAME:S/p1/.1/}
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
@@ -20,6 +20,7 @@ USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	libtool */*/*/libtool
+WRKSRC=			${WRKDIR}/${DISTNAME:S/p1//}
 
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
@@ -67,19 +68,11 @@ CONFIGURE_ARGS+=	--without-libtoolfix
 #
 CONFIGURE_ENV+=		F77=${FALSE}
 
-BUILD_DEFS+=		USE_INET6
-
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-
-# If you want to debug silc-server, uncomment the line below.
-#
-#CONFIGURE_ARGS+=       --enable-debug
-
 .if ${MACHINE_ARCH} != "i386"
 CONFIGURE_ARGS+=	--disable-asm
 .endif
+
+.include "options.mk"
 
 post-install:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/motd.txt \
