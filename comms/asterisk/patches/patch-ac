@@ -1,0 +1,28 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/04/08 03:10:52 riz Exp $
+--- res/Makefile.orig	2004-07-17 13:58:01.000000000 -0700
++++ res/Makefile	2005-03-30 12:48:37.000000000 -0800
+@@ -13,15 +13,18 @@
+ 
+ MODS=res_adsi.so res_features.so res_crypto.so res_musiconhold.so res_indications.so res_monitor.so \
+      res_agi.so
+-MODS+=$(shell if [ -f "/usr/include/odbcinst.h" ]; then echo "res_odbc.so res_config_odbc.so"; fi)
+-MODS+=$(shell if [ -f "/usr/local/include/odbcinst.h" ]; then echo "res_odbc.so res_config_odbc.so"; fi)
+-MODS+=$(shell if [ -f "/usr/include/osp/osp.h" ]; then echo "res_osp.so"; fi)
++#MODS+=$(shell if [ -f "/usr/include/odbcinst.h" ]; then echo "res_odbc.so res_config_odbc.so"; fi)
++#MODS+=$(shell if [ -f "/usr/local/include/odbcinst.h" ]; then echo "res_odbc.so res_config_odbc.so"; fi)
++#MODS+=$(shell if [ -f "/usr/include/osp/osp.h" ]; then echo "res_osp.so"; fi)
+ 
+ CRYPTO_LIBS=-lssl -lcrypto
+ 
+-CFLAGS+=
+-CFLAGS+=$(shell [ -f /usr/include/linux/zaptel.h ] && echo " -DZAPATA_MOH")
+-CFLAGS+=$(shell [ -f /usr/local/include/zaptel.h ] && echo " -DZAPATA_MOH")
++#CFLAGS+=
++#CFLAGS+=$(shell [ -f /usr/include/linux/zaptel.h ] && echo " -DZAPATA_MOH")
++#CFLAGS+=$(shell [ -f /usr/local/include/zaptel.h ] && echo " -DZAPATA_MOH")
++ifdef ASTERISK_USE_ZAPTEL
++CFLAGS+=-DZAPATA_MOH
++endif
+ #
+ # Work around buggy RedHat 9.0
+ #
