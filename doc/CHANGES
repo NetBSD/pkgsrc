@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9791 2005/04/08 08:33:36 rh Exp $
+$NetBSD: CHANGES,v 1.9792 2005/04/08 11:55:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1945,3 +1945,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added zaptel-netbsd-20050404 [riz 2005-04-07]
 	Updated cpuflags to 0.84 [abs 2005-04-08]
 	Updated cgoban-java to 2.6.11 [rh 2005-04-08]
+	Updated tcl-expect to 5.43.0 [adam 2005-04-08]
+	Updated tk-expect to 5.43.0 [adam 2005-04-08]
