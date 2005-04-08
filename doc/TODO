@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3376 2005/04/07 16:22:09 wiz Exp $
+$NetBSD: TODO,v 1.3377 2005/04/08 11:55:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -1034,7 +1034,6 @@ Suggested package updates
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-4.1.5
 	o sysinfo-4.2.2
-	o tcl-expect-5.43.0
 	o tcl-itcl-3.2.1
 	o tcl83-8.3.5
 	o tcm-2.20
