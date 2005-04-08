@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/03/30 16:41:47 erh Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/08 01:21:47 erh Exp $
 
 DISTNAME=	jakarta-tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	ap-jk-${JK_VERSION}
@@ -6,7 +6,7 @@ JK_VERSION=	1.2.8
 CATEGORIES=	www java
 MASTER_SITES=	http://www.apache.org/dist/jakarta/tomcat-connectors/jk/source/jk-${JK_VERSION}/
 
-MAINTAINER=	jwise@NetBSD.org
+MAINTAINER=	erh@NetBSD.org
 HOMEPAGE=	http://jakarta.apache.org/tomcat/connectors-doc/
 COMMENT=	Apache connector for accessing Jakarta Tomcat
 
@@ -21,7 +21,7 @@ USE_GNU_TOOLS+=	make
 SUBST_CLASSES+=		jk-lt
 SUBST_STAGE.jk-lt=	post-configure
 SUBST_FILES.jk-lt=	Makefile common/Makefile apache-2.0/Makefile
-SUBST_SED.jk-lt=	-e "s|^\(LIBTOOL =\) [^ ]*|\1 \$$(SHELL) \$$(top_builddir)/libtool|g"
+SUBST_SED.jk-lt=	-e "s|^\(LIBTOOL =\) [^ ]*$$|\1 \$$(SHELL) \$$(top_builddir)/libtool|g"
 SUBST_MESSAGE.jk-lt=	"Fixing libtool references."
 
 # XXX The standard --with-apxs2 when using apache2 doesn't work
