@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/02/19 00:14:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/04/08 15:50:41 wiz Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -23,8 +23,6 @@ man/man1/gnutls-cli-debug.1
 man/man1/gnutls-cli.1
 man/man1/gnutls-serv.1
 man/man1/srptool.1
-man/man3/_gnutls_x509_get_raw_crt_activation_time.3
-man/man3/_gnutls_x509_get_raw_crt_expiration_time.3
 man/man3/gnutls_alert_get.3
 man/man3/gnutls_alert_get_name.3
 man/man3/gnutls_alert_send.3
@@ -286,6 +284,7 @@ man/man3/gnutls_x509_crl_sign2.3
 man/man3/gnutls_x509_crl_verify.3
 man/man3/gnutls_x509_crq_deinit.3
 man/man3/gnutls_x509_crq_export.3
+man/man3/gnutls_x509_crq_get_attribute_by_oid.3
 man/man3/gnutls_x509_crq_get_challenge_password.3
 man/man3/gnutls_x509_crq_get_dn.3
 man/man3/gnutls_x509_crq_get_dn_by_oid.3
@@ -294,6 +293,7 @@ man/man3/gnutls_x509_crq_get_pk_algorithm.3
 man/man3/gnutls_x509_crq_get_version.3
 man/man3/gnutls_x509_crq_import.3
 man/man3/gnutls_x509_crq_init.3
+man/man3/gnutls_x509_crq_set_attribute_by_oid.3
 man/man3/gnutls_x509_crq_set_challenge_password.3
 man/man3/gnutls_x509_crq_set_dn_by_oid.3
 man/man3/gnutls_x509_crq_set_key.3
@@ -333,6 +333,7 @@ man/man3/gnutls_x509_crt_get_subject_key_id.3
 man/man3/gnutls_x509_crt_get_version.3
 man/man3/gnutls_x509_crt_import.3
 man/man3/gnutls_x509_crt_init.3
+man/man3/gnutls_x509_crt_list_import.3
 man/man3/gnutls_x509_crt_list_verify.3
 man/man3/gnutls_x509_crt_set_activation_time.3
 man/man3/gnutls_x509_crt_set_authority_key_id.3
@@ -341,6 +342,7 @@ man/man3/gnutls_x509_crt_set_crl_dist_points.3
 man/man3/gnutls_x509_crt_set_crq.3
 man/man3/gnutls_x509_crt_set_dn_by_oid.3
 man/man3/gnutls_x509_crt_set_expiration_time.3
+man/man3/gnutls_x509_crt_set_extension_by_oid.3
 man/man3/gnutls_x509_crt_set_issuer_dn_by_oid.3
 man/man3/gnutls_x509_crt_set_key.3
 man/man3/gnutls_x509_crt_set_key_purpose_oid.3
