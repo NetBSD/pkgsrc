@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/12/18 18:13:53 grant Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/08 15:15:17 salo Exp $
 #
 
-DISTNAME=		silc-toolkit-0.9.12
-PKGREVISION=		1
+DISTNAME=		silc-toolkit-0.9.13
 CATEGORIES=		devel chat security
 MASTER_SITES=		http://www.silcnet.org/download/toolkit/sources/ \
 			ftp://ftp.silcnet.org/silc/toolkit/sources/ \
@@ -40,19 +39,10 @@ CONFIGURE_ENV+=		F77=${FALSE}
 # lib/silcclient/client_attrs.c causes an ICE with xlc on Darwin.
 NOT_FOR_COMPILER+=	xlc
 
-BUILD_DEFS+=		USE_INET6
-
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-
-# If you want to build debugging version of libraries in silc-toolkit,
-# uncomment the line below.
-#
-#CONFIGURE_ARGS+=       --enable-debug
-
 .if ${MACHINE_ARCH} != "i386"
 CONFIGURE_ARGS+=	--disable-asm
 .endif
+
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
