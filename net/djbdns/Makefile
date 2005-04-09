@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/03/24 21:12:58 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2005/04/09 22:36:56 schmonz Exp $
 
 DISTNAME=		djbdns-1.05
 PKGREVISION=		6
@@ -10,7 +10,7 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/djbdns.html
 COMMENT=		Collection of secure and reliable DNS tools
 
-MANPAGES=		djbdns-1.05-man-20031023.tar.gz
+MANPAGES=		${DISTNAME}-man-20031023.tar.gz
 SITES_${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -38,7 +38,7 @@ INSTALLATION_DIRS=	bin man man/man1 man/man5 man/man8 share/examples/djbdns
 .include "options.mk"
 
 post-install:
-	cd ${WRKDIR}/djbdns-man; for i in 1 5 8; do			 \
+	cd ${WRKDIR}/*-man; for i in 1 5 8; do		 		\
 	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/man/man$$i; done \
 	done
 
