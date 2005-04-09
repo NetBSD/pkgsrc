@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2005/03/30 10:00:36 schmonz Exp $
+$NetBSD: distinfo,v 1.15 2005/04/09 22:39:44 schmonz Exp $
 
 SHA1 (djbdns-1.05.tar.gz) = 2efdb3a039d0c548f40936aa9cb30829e0ce8c3d
 RMD160 (djbdns-1.05.tar.gz) = a832cbfd93e4ccec6a565492a4ee0b3c1b4b68ed
@@ -10,6 +10,7 @@ SHA1 (djbdns-1.05-ipv6.diff.bz2) = 225484ea34f8cdefa501e22640c67d093d2f5169
 RMD160 (djbdns-1.05-ipv6.diff.bz2) = 9c6e0087d4b99620775224d66b06f148fc016e53
 Size (djbdns-1.05-ipv6.diff.bz2) = 7306 bytes
 SHA1 (djbdns-1.05-ignoreip2.patch) = ec4281a6864bd044a84fbfcaaf42baa6b003976d
+RMD160 (djbdns-1.05-ignoreip2.patch) = bf8a0d38ae7bfb09a8ab2a04600680613db10aaa
 Size (djbdns-1.05-ignoreip2.patch) = 3890 bytes
 SHA1 (tinydns64.diff) = 5a06ba9968ddd905ef69ce036bdc9d18bb738982
 RMD160 (tinydns64.diff) = 7eb8ea387731385576fb1c933c18e0957477c3e0
