@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.20 2005/03/24 21:13:01 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/09 22:36:56 schmonz Exp $
 
 DISTNAME=		daemontools-0.76
 CATEGORIES=		sysutils
-MASTER_SITES=		http://cr.yp.to/daemontools/			\
-			ftp://cr.yp.to/daemontools/			\
-			http://smarden.org/pape/djb/manpages/
-DISTFILES=		${DISTNAME}.tar.gz				\
-			${DISTNAME}-man.tar.gz
+MASTER_SITES=		http://cr.yp.to/daemontools/ ftp://cr.yp.to/daemontools/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/daemontools.html
 COMMENT=		Service monitoring and logging utilities by djb
+
+MANPAGES=		${DISTNAME}-man-20020131.tar.gz
+SITES_${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 DJB_RESTRICTED=		YES
 
@@ -54,7 +54,9 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/${SAMPLERC}				\
 		${PREFIX}/share/examples/daemontools
 	${INSTALL_DATA_DIR} ${SERVICEDIR}
-	cd ${WRKDIR}/${PKGBASE}-man && ${INSTALL_MAN} *.8 ${PREFIX}/man/man8
+	cd ${WRKDIR}/*-man; for i in 8; do		 		\
+	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/man/man$$i; done \
+	done
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
