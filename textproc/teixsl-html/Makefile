@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/06 18:24:23 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/09 18:34:37 wiz Exp $
 
 DISTNAME=	teixsl-html
 PKGNAME=	${DISTNAME}-3.3
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.tei-c.org/Stylesheets/teixsl.html
 COMMENT=	XSLT Stylesheets to convert TEI to HTML
 
 WRKSRC=		${WRKDIR}
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 USE_BUILDLINK3=	YES
