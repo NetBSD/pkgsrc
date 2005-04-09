@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9796 2005/04/08 15:59:37 wiz Exp $
+$NetBSD: CHANGES,v 1.9797 2005/04/09 15:51:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1953,3 +1953,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated silc-toolkit to 0.9.13 [salo 2005-04-08]
 	Updated gnutls to 1.2.1 [wiz 2005-04-08]
 	Updated gpgme to 1.0.2 [wiz 2005-04-08]
+	Updated p5-Class-Trigger to 0.9 [minskim 2005-04-09]
