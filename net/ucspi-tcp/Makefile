@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2005/04/09 22:36:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/09 22:44:15 schmonz Exp $
 
 DISTNAME=		ucspi-tcp-0.88
+PKGREVISION=		1
 CATEGORIES=		sysutils net
 MASTER_SITES=		http://cr.yp.to/ucspi-tcp/ ftp://cr.yp.to/ucspi-tcp/
 DISTFILES=		${DISTNAME}.tar.gz ${MANPAGES}
@@ -9,7 +10,7 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/ucspi-tcp.html
 COMMENT=		Command-line tools for building TCP client-server applications
 
-MANPAGES=		${DISTNAME}-man-20010502.tar.gz
+MANPAGES=		${DISTNAME}-man-20020317.tar.gz
 SITES_${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 DJB_RESTRICTED=		YES
