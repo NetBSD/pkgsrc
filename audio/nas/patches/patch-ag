@@ -1,13 +1,15 @@
-$NetBSD: patch-ag,v 1.1 2005/04/07 14:33:56 markd Exp $
+$NetBSD: patch-ag,v 1.2 2005/04/09 01:47:02 markd Exp $
 
---- lib/audio/Imakefile.orig	2005-04-08 01:55:21.000000000 +1200
+--- lib/audio/Imakefile.orig	2004-09-12 07:23:33.000000000 +1200
 +++ lib/audio/Imakefile
-@@ -59,7 +59,7 @@
+@@ -59,8 +59,8 @@
  #endif
  
  XCOMM JET - hmmm.
 -#if (defined(FreeBSDArchitecture) || defined(BSDArchitecture)) && defined(HasBSD44Sockets)
+-	EXTRA_DEFINES = -DBSD44SOCKETS
 +#if (defined(FreeBSDArchitecture) || defined(NetBSDArchitecture) || defined(BSDArchitecture)) && defined(HasBSD44Sockets)
- 	EXTRA_DEFINES = -DBSD44SOCKETS
++  EXTRA_DEFINES = -DBSD44SOCKETS
  #endif
  
+ XCOMM JET - see if we should avoid streams
