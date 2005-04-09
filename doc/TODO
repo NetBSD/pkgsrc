@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3383 2005/04/08 16:03:59 wiz Exp $
+$NetBSD: TODO,v 1.3384 2005/04/09 18:09:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -458,6 +458,7 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdeskcal-0.57.1
 	o gdm1-2.2.5.5
+	o getmail-4.3.6
 	o gettext-0.14.2
 	o gfract-0.3.2
 	o ghc-6.2.2
@@ -687,6 +688,7 @@ Suggested package updates
 	o nslint-2.1a3
 	o nullmailer-1.0.0
 	o nut-10.17
+	o nxtvepg-2.7.5
 	o obexftp-0.10.6
 	o odbc-postgresql-7.4.7
 	o offlineimap-4.0.8
@@ -1061,7 +1063,7 @@ Suggested package updates
 	o tnef-1.3.2
 	o tob-0.26
 	o top-3.6alpha9
-	o tor-0.0.9.7
+	o tor-0.0.9.8
 	o totd-1.5
 	o totem-1.0.1
 	o totem-xine-1.0.1
@@ -1149,6 +1151,7 @@ Suggested package updates
 	o xmcd-3.3.0
 	o xmlsec1-1.2.8
 	o xmlstarlet-1.0.1
+	o xmms-alarm-0.3.7
 	o xmms-crossfade-0.3.7
 	o xmms-dspectogram-1.2.1
 	o xmms-fmradio-1.5
