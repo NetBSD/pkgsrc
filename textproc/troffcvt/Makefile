@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/27 00:53:10 heinz Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/09 18:39:01 wiz Exp $
 #
 
 DISTNAME=		troffcvt-1.04
@@ -9,10 +9,6 @@ MASTER_SITES=		http://www.snake.net/software/troffcvt/
 MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Troff/groff to RTF/HTML/TEXT converter
-
-BUILD_DEPENDS+=		libts-1.08:../../devel/libts
-BUILD_DEPENDS+=		libmemmgr-1.04:../../devel/libmemmgr
-BUILD_DEPENDS+=		libportlib-1.01:../../devel/libportlib
 
 USE_PERL5=		yes
 
@@ -57,4 +53,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/tc2html.man ${PREFIX}/man/man1/tc2html.1
 	${INSTALL_MAN} ${WRKSRC}/man/troffcvt.man ${PREFIX}/man/man1/troffcvt.1
 
+.include "../../devel/libmemmgr/buildlink3.mk"
+.include "../../devel/libportlib/buildlink3.mk"
+.include "../../devel/libts/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
