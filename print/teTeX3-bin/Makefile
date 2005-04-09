@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/08 23:06:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/09 13:18:32 schwarz Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
@@ -32,9 +32,9 @@ post-install:
 .if defined(PAPERSIZE)
 	${LOCALBASE}/bin/texconfig dvips paper ${LOWER_PAPERSIZE}
 .  if ${PAPERSIZE} == "Letter"
-	${LOCALBASE}/bin/texconfig xdvi us
+	${LOCALBASE}/bin/texconfig xdvi paper us
 .  else
-	${LOCALBASE}/bin/texconfig xdvi ${LOWER_PAPERSIZE}
+	${LOCALBASE}/bin/texconfig xdvi paper ${LOWER_PAPERSIZE}
 .  endif
 .endif
 	${LOCALBASE}/bin/texconfig font rw
