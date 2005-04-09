@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/04/09 19:38:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/09 19:53:09 jmmv Exp $
 #
 
-DISTNAME=		skype_staticQT-1.0.0.1
+DISTNAME=		skype_staticQT-1.0.0.20
 PKGNAME=		${DISTNAME:S/_staticQT//}
 CATEGORIES=		net
 MASTER_SITES=		http://download.skype.com/linux/
@@ -27,6 +27,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 
 NO_CONFIGURE=		yes
 CHECK_SHLIBS=		no
+USE_DIRS+=		xdg-1.1
 
 RESTRICTED=             "Redistribution not allowed yet."
 NO_SRC_ON_CDROM=        ${RESTRICTED}
@@ -35,14 +36,22 @@ NO_BIN_ON_CDROM=        ${RESTRICTED}
 LICENSE=                skype-license
 
 DATADIR=		${PREFIX}/share/skype
+DOCDIR=			${PREFIX}/share/doc/skype
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	@${ECHO} "#!${SH}" > ${WRKSRC}/skype.sh
 	@${ECHO} 'cd ${DATADIR} && exec ./skype $$@' >> ${WRKSRC}/skype.sh
 
 do-install:
-	${INSTALL_DATA_DIR} ${DATADIR}
-	cd ${WRKSRC} && ${PAX} -rwppm . ${DATADIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/skype.sh ${PREFIX}/bin/skype
+	${INSTALL_DATA} ${WRKSRC}/skype.desktop ${PREFIX}/share/applications
+	${INSTALL_DATA_DIR} ${DATADIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/skype ${DATADIR}
+	cd ${WRKSRC} && ${PAX} -rwppm icons lang sound ${DATADIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
