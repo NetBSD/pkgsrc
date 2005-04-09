@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.24 2005/03/24 21:12:59 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2005/04/09 22:36:56 schmonz Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 CATEGORIES=		sysutils net
-MASTER_SITES=		http://cr.yp.to/ucspi-tcp/			\
-			ftp://cr.yp.to/djbdns/				\
-			ftp://ftp.innominate.org/pub/pape/djb/
-DISTFILES=		${DISTNAME}.tar.gz				\
-			${DISTNAME}-man-20010502.tar.gz
+MASTER_SITES=		http://cr.yp.to/ucspi-tcp/ ftp://cr.yp.to/ucspi-tcp/
+DISTFILES=		${DISTNAME}.tar.gz ${MANPAGES}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/ucspi-tcp.html
 COMMENT=		Command-line tools for building TCP client-server applications
+
+MANPAGES=		${DISTNAME}-man-20010502.tar.gz
+SITES_${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 DJB_RESTRICTED=		YES
 
@@ -25,9 +25,8 @@ GCC_REQD+=		3.0
 INSTALLATION_DIRS=	bin man man/man1
 
 post-install:
-	cd ${WRKDIR}/${DISTNAME}-man &&					\
-	for i in *.1; do						\
-		${INSTALL_MAN} $${i} ${PREFIX}/man/man1;		\
+	cd ${WRKDIR}/*-man; for i in 1; do		 		\
+	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/man/man$$i; done \
 	done
 
 .include "../../mk/djbware.mk"
