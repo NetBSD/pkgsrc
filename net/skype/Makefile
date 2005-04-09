@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/18 12:48:10 martti Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/09 19:33:03 jmmv Exp $
 #
 
 DISTNAME=		skype_staticQT-${DIST_VERSION}
@@ -25,7 +25,6 @@ USE_X11=	yes
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
-NO_BUILD=		yes
 NO_CONFIGURE=		yes
 CHECK_SHLIBS=		no
 
@@ -39,11 +38,13 @@ LICENSE=                skype-license
 
 DATADIR=		${PREFIX}/share/skype
 
+do-build:
+	@${ECHO} "#!${SH}" > ${WRKSRC}/skype.sh
+	@${ECHO} 'cd ${DATADIR} && exec ./skype $$@' >> ${WRKSRC}/skype.sh
+
 do-install:
 	${INSTALL_DATA_DIR} ${DATADIR}
 	cd ${WRKSRC} && ${PAX} -rwppm . ${DATADIR}
-	@${ECHO} "#!${SH}" > ${WRKSRC}/skype.sh
-	@${ECHO} 'cd ${DATADIR} && exec ./skype $$@' >> ${WRKSRC}/skype.sh
 	${INSTALL_SCRIPT} ${WRKSRC}/skype.sh ${PREFIX}/bin/skype
 
 .include "../../mk/bsd.pkg.mk"
