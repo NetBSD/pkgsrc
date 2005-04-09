@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9797 2005/04/09 15:51:34 minskim Exp $
+$NetBSD: CHANGES,v 1.9798 2005/04/09 16:02:32 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1954,3 +1954,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnutls to 1.2.1 [wiz 2005-04-08]
 	Updated gpgme to 1.0.2 [wiz 2005-04-08]
 	Updated p5-Class-Trigger to 0.9 [minskim 2005-04-09]
+	Updated libxml2 to 2.6.19 [recht 2005-04-09]
+	Updated libxslt to 1.1.4 [recht 2005-04-09]
