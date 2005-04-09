@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.7 2005/03/24 17:46:00 tv Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.8 2005/04/09 23:16:45 markd Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -187,7 +187,6 @@ RMAN?=			${X11BASE}/bin/rman
 .if defined(USE_X11)
 X11_LDFLAGS+=		${COMPILER_RPATH_FLAG}${X11BASE}/lib${LIBABISUFFIX}
 X11_LDFLAGS+=		-L${X11BASE}/lib${LIBABISUFFIX}
-LDFLAGS+=		${X11_LDFLAGS}
 .endif
 
 ### USE_XPKGWEDGE
