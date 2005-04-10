@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/04/10 04:45:59 minskim Exp $
+
+SHA1 (ruby/activerecord-1.9.1.tgz) = d2f44005537fe35ad4e832088d3bd144b0f4dd77
+RMD160 (ruby/activerecord-1.9.1.tgz) = 3c268a7e0cfd8a959ee166fdbd1a83dc51ca4c8b
+Size (ruby/activerecord-1.9.1.tgz) = 242962 bytes
+SHA1 (patch-aa) = 85322e97f80b9da7287aa11a7b08dbfe7d34554f
