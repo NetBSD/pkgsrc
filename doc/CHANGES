@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9803 2005/04/09 22:45:07 schmonz Exp $
+$NetBSD: CHANGES,v 1.9804 2005/04/10 00:42:49 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1961,3 +1961,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated skype to 1.0.0.20 [jmmv 2005-04-09]
 	Updated djbdns to 1.05nb7 [schmonz 2005-04-09]
 	Updated ucspi-tcp to 0.88nb1 [schmonz 2005-04-09]
+	Updated udfclient to 0.3.5 [reinoud 2005-04-10]
