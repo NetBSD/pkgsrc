@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.32 2005/03/08 15:43:10 tv Exp $
+# $NetBSD: bootstrap,v 1.33 2005/04/10 21:54:13 jschauma Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -35,7 +35,7 @@
 #
 #set -x
 
-BOOTSTRAP_VERSION=20041008
+BOOTSTRAP_VERSION=20050410
 
 # set defaults for system locations
 prefix=/usr/pkg
@@ -45,18 +45,21 @@ sysconfdir=${prefix}/etc
 ignorecasecheck=no
 ignoreusercheck=no
 
+preserve_path=no
+
 # where the building takes place
 wrkdir=work # default: relative to pkgsrc/bootstrap
 bootstrapdir=`pwd`
 pkgsrcdir=`dirname $bootstrapdir`
 
 usage="Usage: $0 "'
-    [ --workdir=<workdir> ]
-    [ --prefix=<prefix> ]
-    [ --pkgdbdir=<pkgdbdir> ]
-    [ --sysconfdir=<sysconfdir> ]
+    [ --workdir <workdir> ]
+    [ --prefix <prefix> ]
+    [ --pkgdbdir <pkgdbdir> ]
+    [ --sysconfdir <sysconfdir> ]
     [ --ignore-case-check ]
     [ --ignore-user-check ]
+    [ --preserve-path ]
     [ --help ]'
 
 # this replicates some of the logic in bsd.prefs.mk. until
@@ -77,6 +80,34 @@ echo_msg()
 	echo "===> $@"
 }
 
+# see if we're using gcc.  If so, set $compiler_is_gnu to '1'.
+get_compiler()
+{
+	testcc="${CC}"
+	# normally, we'd just use 'cc', but certain configure tools look
+	# for gcc specifically, so we have to see if that comes first
+	if [ -z "${testcc}" ]; then
+		save_IFS="${IFS}"
+		IFS=':'
+		for dir in ${PATH}; do
+			test -z "$dir" && dir=.
+			if [ -x "$dir/gcc" ]; then
+				testcc="$dir/gcc"
+				break
+			fi
+		done
+		IFS="${save_IFS}"
+	fi
+
+	cat >${wrkdir}/$$.c <<EOF
+#ifdef __GNUC__
+indeed
+#endif
+EOF
+	compiler_is_gnu=`${testcc:-cc} -E ${wrkdir}/$$.c 2>/dev/null | grep -c indeed`
+	rm -f ${wrkdir}/$$.c
+
+}
 get_abi()
 {
 	abi_opsys=$@
@@ -198,8 +229,25 @@ build_start=`date`
 echo_msg "bootstrap command: $0 $@"
 echo_msg "bootstrap started: $build_start"
 
-if [ "x${PRESERVE_PATH}" != "xyes" ]; then
-	PATH="${PATH}:/sbin:/usr/sbin"
+while [ $# -gt 0 ]; do
+	case $1 in
+	--workdir)	wrkdir="$2"; shift ;;
+	--prefix)	prefix="$2"; shift;
+			sysconfdir=${prefix}/etc ;;
+	--pkgdbdir)	pkgdbdir="$2"; shift ;;
+	--sysconfdir)	sysconfdir="$2"; shift ;;
+	--ignore-case-check) ignorecasecheck=yes ;;
+	--ignore-user-check) ignoreusercheck=yes ;;
+	--preserve-path) preserve_path=yes ;;
+	--help)		echo "$usage"; exit ;;
+	-h)		echo "$usage"; exit ;;
+	--*)		echo "$usage"; exit 1 ;;
+	esac
+	shift
+done
+
+if [ "x$preserve_path" != "xyes" ]; then
+	PATH="$PATH:/sbin:/usr/sbin"
 fi
 
 overpath=""
@@ -260,6 +308,7 @@ IRIX*)
 	need_sed=yes
 	set_opsys=yes
 	machine_arch=mipseb
+	check_compiler=yes
 	;;
 Linux)
 	if [ -f /etc/debian_version ]; then
@@ -383,7 +432,7 @@ if [ "${machine_arch}" != "" ]; then
 	export MACHINE_ARCH
 fi
 
-if [ "x${PRESERVE_PATH}" != "xyes" ]; then
+if [ "x$preserve_path" != "xyes" ]; then
 	PATH="$overpath:$PATH"
 fi
 
@@ -398,21 +447,6 @@ check_prog sedprog sed
 check_prog shprog sh
 check_prog whoamiprog whoami
 
-while [ $# -gt 0 ]; do
-	case $1 in
-	--workdir=*)	wrkdir=`echo $1 | $sedprog -e 's|--workdir=||'` ;;
-	--prefix=*)	prefix=`echo $1 | $sedprog -e 's|--prefix=||'`
-			sysconfdir=${prefix}/etc ;;
-	--pkgdbdir=*)	pkgdbdir=`echo $1 | $sedprog -e 's|--pkgdbdir=||'` ;;
-	--sysconfdir=*)	sysconfdir=`echo $1 | $sedprog -e 's|--sysconfdir=||'`;;
-	--ignore-case-check) ignorecasecheck=yes ;;
-	--ignore-user-check) ignoreusercheck=yes ;;
-	--help)		echo "$usage"; exit ;;
-	-h)		echo "$usage"; exit ;;
-	--*)		echo "$usage"; exit 1 ;;
-	esac
-	shift
-done
 
 if [ ! -d ${wrkdir} ]; then
 	if mkdir ${wrkdir}; then
@@ -429,6 +463,19 @@ else
 	exit 1
 fi
 echo "Working directory is: ${wrkdir}"
+
+if [ x"$check_compiler" = x"yes" ]; then
+	get_compiler
+	if [ $compiler_is_gnu -gt 0 ]; then
+		compiler="gcc"
+	else
+		case "$opsys" in
+		IRIX)
+			compiler="mipspro"
+			;;
+		esac
+	fi
+fi
 
 if [ ! -x ${wrkdir}/install-sh ]; then
 	run_cmd "$sedprog -e 's|@DEFAULT_INSTALL_MODE@|'${default_install_mode-0755}'|' files/install-sh.in > $wrkdir/install-sh"
@@ -507,6 +554,10 @@ fi
 if [ ! -z "$abi" ]; then
 	echo "ABI=$abi" >> ${MKCONF_EXAMPLE}
 fi
+if [ ! -z "$compiler" ]; then
+	echo "PKGSRC_COMPILER=$compiler" >> ${MKCONF_EXAMPLE}
+fi
+			
 
 # save environment in example mk.conf
 echo "PKG_DBDIR=$pkgdbdir" >> ${MKCONF_EXAMPLE}
