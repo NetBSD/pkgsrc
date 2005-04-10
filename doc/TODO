@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3387 2005/04/10 15:56:31 wiz Exp $
+$NetBSD: TODO,v 1.3388 2005/04/10 16:50:55 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -1009,7 +1009,6 @@ Suggested package updates
 	o snownews-1.5.6.1
 	o sox-12.17.7
 	o spim-7.1
-	o splint-3.1.1
 	o spruce-0.6.5
 	o sqlite3-3.2.0
 	o sqlitemanager-1.0.5
