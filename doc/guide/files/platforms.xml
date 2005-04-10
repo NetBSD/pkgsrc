@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.6 2005/04/10 22:21:54 jschauma Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.7 2005/04/10 22:45:25 jschauma Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -331,7 +331,7 @@
 
       <para>If you are using SGI's MIPSPro compiler, please set
          <programlisting>PKGSRC_COMPILER=mipspro</programlisting>
-        in <filename>/etc/mk.conf</filename> &emdash; otherwise, pkgsrc will assume you
+        in <filename>/etc/mk.conf</filename>.  Otherwise, pkgsrc will assume you
         are using gcc and may end up passing invalid flags to the compiler.  Note that
         bootstrap should create an appropriate <filename>mk.conf.example</filename> by
         default.</para>
@@ -343,14 +343,58 @@
         '--preserve-path' flag.</para>
     </sect2>
 
-<!--
-<sect2>
-<title>Linux</title>
-<para>
-... XXX
-</para>
-</sect2>
--->
+    <sect2>
+      <title>Linux</title>
+
+      <para>
+        Some versions of Linux (for example Debian GNU/Linux) need either
+        libtermcap or libcurses (libncurses).  Installing the distributions
+        libncurses-dev package (or equivalent) should fix the problem.</para>
+
+      <para>
+        pkgsrc supports both gcc (GNU Compiler Collection) and icc (Intel C++
+        Compiler). gcc is the default. icc 8.0 and 8.1 on i386 have been tested.
+      </para>
+
+      <para>To bootstrap using icc, assuming the default icc installation
+        directory:
+        <programlisting>env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
+		ac_cv___attribute__=yes ./bootstrap</programlisting></para>
+
+      <note>
+        <para>icc 8.1 needs the `-i-static' argument instead of -static-libcxa.</para>
+      </note>
+
+      <para>icc supports __attribute__, but the GNU configure test uses a nested
+        function, which icc does not support. #undef'ing __attribute__ has the
+        unfortunate side-effect of breaking many of the Linux header files, which
+        cannot be compiled properly without __attribute__. The test must be
+        overridden so that __attribute__ is assumed supported by the
+        compiler.</para>
+
+     <para>After bootstrapping, you should set <varname>PKGSRC_COMPILER</varname>
+        in <filename>/etc/mk.conf</filename>:
+	<programlisting>PKGSRC_COMPILER=icc</programlisting></para>
+
+     <para>The default installation directory for icc is
+        <filename>/opt/intel_cc_80</filename>, which
+        is also the pkgsrc default. If you have installed it into a different
+        directory, set <varname>ICCBASE</varname> in
+        <filename>/etc/mk.conf</filename>:
+        <programlisting>ICCBASE=/opt/icc</programlisting></para>
+
+     <para>pkgsrc uses the static linking method of the runtime libraries
+        provided by icc, so binaries can be run on other systems which do not
+        have the shared libraries installed.</para>
+
+     <para>Libtool, however, extracts a list of libraries from the ld(1)
+        command run when linking a C++ shared library and records it, throwing
+        away the -Bstatic and -Bdynamic options interspersed between the libraries.
+        This means that libtool-linked C++ shared libraries will have a
+        runtime dependency on the icc libraries until this is fixed in libtool.
+      </para>
+
+    </sect2>
 
     <sect2>
       <title>OpenBSD</title>
