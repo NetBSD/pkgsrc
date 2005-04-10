@@ -1,0 +1,38 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/10 04:45:59 minskim Exp $
+${RUBY_SITELIBDIR}/active_record.rb
+${RUBY_SITELIBDIR}/active_record/acts/list.rb
+${RUBY_SITELIBDIR}/active_record/acts/tree.rb
+${RUBY_SITELIBDIR}/active_record/aggregations.rb
+${RUBY_SITELIBDIR}/active_record/associations.rb
+${RUBY_SITELIBDIR}/active_record/associations/association_collection.rb
+${RUBY_SITELIBDIR}/active_record/associations/has_and_belongs_to_many_association.rb
+${RUBY_SITELIBDIR}/active_record/associations/has_many_association.rb
+${RUBY_SITELIBDIR}/active_record/base.rb
+${RUBY_SITELIBDIR}/active_record/callbacks.rb
+${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract_adapter.rb
+${RUBY_SITELIBDIR}/active_record/connection_adapters/db2_adapter.rb
+${RUBY_SITELIBDIR}/active_record/connection_adapters/mysql_adapter.rb
+${RUBY_SITELIBDIR}/active_record/connection_adapters/postgresql_adapter.rb
+${RUBY_SITELIBDIR}/active_record/connection_adapters/sqlite_adapter.rb
+${RUBY_SITELIBDIR}/active_record/connection_adapters/sqlserver_adapter.rb
+${RUBY_SITELIBDIR}/active_record/deprecated_associations.rb
+${RUBY_SITELIBDIR}/active_record/fixtures.rb
+${RUBY_SITELIBDIR}/active_record/locking.rb
+${RUBY_SITELIBDIR}/active_record/observer.rb
+${RUBY_SITELIBDIR}/active_record/reflection.rb
+${RUBY_SITELIBDIR}/active_record/timestamp.rb
+${RUBY_SITELIBDIR}/active_record/transactions.rb
+${RUBY_SITELIBDIR}/active_record/validations.rb
+${RUBY_SITELIBDIR}/active_record/vendor/db2.rb
+${RUBY_SITELIBDIR}/active_record/vendor/mysql.rb
+${RUBY_SITELIBDIR}/active_record/vendor/mysql411.rb
+${RUBY_SITELIBDIR}/active_record/vendor/simple.rb
+${RUBY_DOCDIR}/active_record/README
+@dirrm ${RUBY_DOCDIR}/active_record
+@dirrm ${RUBY_SITELIBDIR}/active_record/vendor
+@exec ${MKDIR} %D/lib/ruby/site_ruby/1.8/active_record/support
+@dirrm ${RUBY_SITELIBDIR}/active_record/support
+@dirrm ${RUBY_SITELIBDIR}/active_record/connection_adapters
+@dirrm ${RUBY_SITELIBDIR}/active_record/associations
+@dirrm ${RUBY_SITELIBDIR}/active_record/acts
+@dirrm ${RUBY_SITELIBDIR}/active_record
