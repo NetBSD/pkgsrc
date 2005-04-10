@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9811 2005/04/10 05:13:02 minskim Exp $
+$NetBSD: CHANGES,v 1.9812 2005/04/10 07:15:26 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1969,3 +1969,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ruby-actionmailer to 0.8.1nb1 [minskim 2005-04-10]
 	Added ruby-activerecord-1.9.1 [minskim 2005-04-10]
 	Added ruby-actionwebservice-0.6.2 [minskim 2005-04-10]
+	Updated mit-krb5 to 1.4 [jlam 2005-04-10]
