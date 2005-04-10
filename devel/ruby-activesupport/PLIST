@@ -1,0 +1,38 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/10 02:47:00 minskim Exp $
+${RUBY_SITELIBDIR}/active_support.rb
+${RUBY_SITELIBDIR}/active_support/binding_of_caller.rb
+${RUBY_SITELIBDIR}/active_support/breakpoint.rb
+${RUBY_SITELIBDIR}/active_support/class_attribute_accessors.rb
+${RUBY_SITELIBDIR}/active_support/class_inheritable_attributes.rb
+${RUBY_SITELIBDIR}/active_support/clean_logger.rb
+${RUBY_SITELIBDIR}/active_support/core_ext.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/date.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/date/conversions.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/hash.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/hash/indifferent_access.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/hash/keys.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/kernel.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/load_error.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/numeric.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/numeric/bytes.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/numeric/time.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/object_and_class.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/string.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/string/conversions.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/string/inflections.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/time.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/time/calculations.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/time/conversions.rb
+${RUBY_SITELIBDIR}/active_support/dependencies.rb
+${RUBY_SITELIBDIR}/active_support/inflector.rb
+${RUBY_SITELIBDIR}/active_support/misc.rb
+${RUBY_SITELIBDIR}/active_support/module_attribute_accessors.rb
+${RUBY_SITELIBDIR}/active_support/values/time_zone.rb
+@dirrm ${RUBY_SITELIBDIR}/active_support/values
+@dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/time
+@dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/string
+@dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/numeric
+@dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/hash
+@dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/date
+@dirrm ${RUBY_SITELIBDIR}/active_support/core_ext
+@dirrm ${RUBY_SITELIBDIR}/active_support
