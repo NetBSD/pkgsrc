@@ -1,11 +1,17 @@
-$NetBSD: README,v 1.4 2004/06/23 19:06:40 wiz Exp $
+$NetBSD: README,v 1.5 2005/04/10 22:03:35 jschauma Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
 
-# ./bootstrap [ --prefix=${PREFIX} ] [ --pkgdbdir=${PKG_DBDIR} ] \
-	[ --sysconfdir=${PKG_SYSCONFBASE} ] [ --workdir=working directory] \
-	[ --ignore-case-check ] [ --ignore-user-check ] [ --help ]
+# ./bootstrap 
+    [ --workdir <workdir> ]
+    [ --prefix <prefix> ]
+    [ --pkgdbdir <pkgdbdir> ]
+    [ --sysconfdir <sysconfdir> ]
+    [ --ignore-case-check ]
+    [ --ignore-user-check ]
+    [ --preserve-path ]
+    [ --help ]
 
 The defaults for the arguments are as follows:
 
@@ -14,13 +20,17 @@ The defaults for the arguments are as follows:
 	--sysconfdir	/usr/pkg/etc
 	--workdir	work
 
-It is perfectly acceptable to place ${PKG_DBDIR} under ${PREFIX}.
+It is perfectly acceptable to place 'pkgdbdir' under 'prefix'.
 
 The working directory will be created if it doesn't exist and has to be
 writable by the user executing ./bootstrap.
 
 Make sure that you have a working C compiler and make(1) binary in
-your path.
+your path.  Please note that on some systems (IRIX and SunOS, for example),
+the bootstrap script will look into a number of common directories for
+alternative implementations of some tools.  If they are found, these
+directories will be prepended to the PATH variable, unless the
+'--preserve-path' flag is given.
 
 See http://www.netbsd.org/Documentation/software/packages.html for
 more information about bootstrapping and using pkgsrc.
