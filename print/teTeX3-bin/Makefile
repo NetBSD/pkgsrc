@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/04/09 13:18:32 schwarz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/10 21:52:37 schwarz Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -41,6 +42,7 @@ post-install:
 	${LOCALBASE}/bin/texconfig font vardir ${VARBASE}/spool/texfonts
 
 .include "../../print/teTeX3-bin/Makefile.common"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
