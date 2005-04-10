@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: files,v 1.3 2005/02/14 16:31:41 tv Exp $
+# $NetBSD: files,v 1.4 2005/04/10 11:01:29 jmmv Exp $
 #
 # +FILES - reference-counted configuration file management script
 #
@@ -250,7 +250,7 @@ CHECK-REMOVE)
 		yes)	;;
 		*)	printed_header=yes
 			${ECHO} "==========================================================================="
-			${ECHO} "The following file are no longer being used by ${PKGNAME},"
+			${ECHO} "The following files are no longer being used by ${PKGNAME},"
 			${ECHO} "and they can be removed if no other packages are using them:"
 			${ECHO} ""
 			;;
