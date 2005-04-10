@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:34 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/04/10 16:49:59 jschauma Exp $
 
-SHA1 (splint-3.0.1.6.src.tgz) = 65c15cef2b2a554c484127b86668efd4e76e9604
-RMD160 (splint-3.0.1.6.src.tgz) = 17db2e2ee5cac5716e417aa2029a33d4a2520a00
-Size (splint-3.0.1.6.src.tgz) = 1592456 bytes
+SHA1 (splint-3.1.1.src.tgz) = 1192e8f18e8ef63fdc7a0b0fa26c35b46d59e4e6
+RMD160 (splint-3.1.1.src.tgz) = 8a0d04b20ccdfd50f99e3ef6abd59e7b25814912
+Size (splint-3.1.1.src.tgz) = 2425108 bytes
