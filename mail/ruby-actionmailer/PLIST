@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/10 02:04:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/10 04:15:44 minskim Exp $
 ${RUBY_SITELIBDIR}/action_mailer.rb
 ${RUBY_SITELIBDIR}/action_mailer/base.rb
 ${RUBY_SITELIBDIR}/action_mailer/mail_helper.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/text/format.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/address.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/attachments.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/base64.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/config.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/encode.rb
@@ -19,6 +20,7 @@ ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/net.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/obsolete.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/parser.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/port.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/quoting.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/scanner.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/scanner_r.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/stringio.rb
