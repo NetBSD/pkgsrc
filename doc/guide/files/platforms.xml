@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.5 2005/03/21 21:40:28 tv Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.6 2005/04/10 22:21:54 jschauma Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -129,7 +129,7 @@
 	  place the package database directory outside the
 	  <emphasis>prefix</emphasis>. e.g.</para>
 
-	<screen>&rprompt; <userinput>./bootstrap --pkgdbdir=/usr/pkg/pkgdb --pkgsrcdir=/Volumes/ufs/pkgsrc</userinput></screen>
+	<screen>&rprompt; <userinput>./bootstrap --pkgdbdir /usr/pkg/pkgdb --pkgsrcdir /Volumes/ufs/pkgsrc</userinput></screen>
 
 	<para>If you created your partitions at the time of installing Mac OS X
 	  and formatted the target partition as UFS, it should automatically
@@ -328,6 +328,19 @@
 	as imake(1), but you may want to set some options depending on your local
 	setup.  Please see <filename>pkgsrc/mk/defaults/mk.conf</filename> and, of
 	course, your compilers man pages for details.</para>
+
+      <para>If you are using SGI's MIPSPro compiler, please set
+         <programlisting>PKGSRC_COMPILER=mipspro</programlisting>
+        in <filename>/etc/mk.conf</filename> &emdash; otherwise, pkgsrc will assume you
+        are using gcc and may end up passing invalid flags to the compiler.  Note that
+        bootstrap should create an appropriate <filename>mk.conf.example</filename> by
+        default.</para>
+
+      <para>If you have both the MIPSPro compiler chain installed as well as gcc,
+        but want to make sure that MIPRPro is used, please set your <varname>PATH</varname>
+        to <emphasis>not</emphasis> include the location of gcc (often
+        <filename>/usr/freeware/bin</filename>), and (important) pass the
+        '--preserve-path' flag.</para>
     </sect2>
 
 <!--
