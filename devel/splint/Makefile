@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/01/22 08:24:31 grant Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/10 16:49:59 jschauma Exp $
 #
 
-VERSION=	3.0.1.6
+VERSION=	3.1.1
 DISTNAME=	splint-${VERSION}.src
 PKGNAME=	splint-${VERSION}
 CATEGORIES=	devel
