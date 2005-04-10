@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2005/04/10 07:15:24 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/04/10 07:46:50 jlam Exp $
 
 DISTNAME=	krb5-1.4
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/1.4/
 DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
