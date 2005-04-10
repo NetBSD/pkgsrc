@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/02/11 12:22:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/10 20:14:44 cube Exp $
 #
 
-DISTNAME=		gtk-send-pr-0.4.4
+DISTNAME=		gtk-send-pr-0.4.5
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.energyhq.es.eu.org/files/
 EXTRACT_SUFX=		.tar.bz2
