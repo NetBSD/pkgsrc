@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9813 2005/04/10 16:50:55 jschauma Exp $
+$NetBSD: CHANGES,v 1.9814 2005/04/10 20:16:35 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1971,3 +1971,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ruby-actionwebservice-0.6.2 [minskim 2005-04-10]
 	Updated mit-krb5 to 1.4 [jlam 2005-04-10]
 	Updated splint to 3.1.1 [jschauma 2005-04-10]
+	Updated gtk-send-pr to 0.4.5 [cube 2005-04-10]
