@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/10 02:04:54 minskim Exp $
+${RUBY_SITELIBDIR}/action_mailer.rb
+${RUBY_SITELIBDIR}/action_mailer/base.rb
+${RUBY_SITELIBDIR}/action_mailer/mail_helper.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/text/format.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/address.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/base64.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/config.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/encode.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/facade.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/header.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/info.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/loader.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/mail.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/mailbox.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/mbox.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/net.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/obsolete.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/parser.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/port.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/scanner.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/scanner_r.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/stringio.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/tmail.rb
+${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/utils.rb
+${RUBY_DOCDIR}/action_mailer/README
+@dirrm ${RUBY_DOCDIR}/action_mailer
+@dirrm ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail
+@dirrm ${RUBY_SITELIBDIR}/action_mailer/vendor/text
+@dirrm ${RUBY_SITELIBDIR}/action_mailer/vendor
+@dirrm ${RUBY_SITELIBDIR}/action_mailer
