@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9804 2005/04/10 00:42:49 reinoud Exp $
+$NetBSD: CHANGES,v 1.9805 2005/04/10 01:03:42 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1962,3 +1962,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated djbdns to 1.05nb7 [schmonz 2005-04-09]
 	Updated ucspi-tcp to 0.88nb1 [schmonz 2005-04-09]
 	Updated udfclient to 0.3.5 [reinoud 2005-04-10]
+	Added rubygems-0.8.10 [minskim 2005-04-10]
