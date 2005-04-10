@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.2 2005/03/23 01:45:34 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.3 2005/04/10 02:25:54 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -10,7 +10,6 @@
 #
 # TODO:
 # * set RESTRICTED automatically iff patches or other mods are applied
-# * do the <errno.h> dance only where needed (glibc>=2.3)
 #
 
 .if !defined(DJBWARE_MK)
