@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2005/03/29 12:34:16 schmonz Exp $
+# $NetBSD: options.mk,v 1.10 2005/04/10 02:59:23 schmonz Exp $
 
 .if ${OPSYS} == "Darwin"
 PKG_DEFAULT_OPTIONS+=	darwin
@@ -112,7 +112,7 @@ PATCHFILES+=            ${TLSSASL_PATCH}
 SITES_${TLSSASL_PATCH}=	http://shupp.org/patches/
 .  if !empty(PKG_OPTIONS:Mtls)
 CFLAGS+=		-DTLS=20040419			# from the patch
-INSTALL_TARGET+=	cert tmprsadh
+DJB_INSTALL_TARGETS=	cert tmprsadh
 USE_GNU_TOOLS+=		make
 PLIST_SRC+=             ${PKGDIR}/PLIST.tls
 .  endif
