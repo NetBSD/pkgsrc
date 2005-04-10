@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9806 2005/04/10 02:06:31 minskim Exp $
+$NetBSD: CHANGES,v 1.9807 2005/04/10 02:54:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1964,3 +1964,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated udfclient to 0.3.5 [reinoud 2005-04-10]
 	Added rubygems-0.8.10 [minskim 2005-04-10]
 	Added ruby-actionmailer-0.8.1 [minskim 2005-04-10]
+	Added ruby-activesupport-1.0.3 [minskim 2005-04-10]
