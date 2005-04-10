@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.388 2005/04/10 04:13:35 minskim Exp $
+# $NetBSD: Makefile,v 1.389 2005/04/10 05:13:02 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -254,6 +254,7 @@ SUBDIR+=	py-pcgi
 SUBDIR+=	py-zpublisher
 SUBDIR+=	qDecoder
 SUBDIR+=	ruby-actionpack
+SUBDIR+=	ruby-actionwebservice
 SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-clearsilver
 SUBDIR+=	ruby-fcgi
