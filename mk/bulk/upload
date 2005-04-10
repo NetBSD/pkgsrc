@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.23 2005/03/30 22:36:18 hubertf Exp $
+# $NetBSD: upload,v 1.24 2005/04/10 21:44:04 jschauma Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -16,9 +16,9 @@ NetBSD)	BMAKE=make;
 	SYSVSUM="sum -o 2";
 	;;
 IRIX*)  BMAKE=bmake;
-#	BSDSUM="sum -r";
-#	CKSUM="cksum";
-#	SYSVSUM="sum";
+	BSDSUM="sum -r";
+	CKSUM="cksum";
+	SYSVSUM="sum";
 	;;
 *)	BMAKE=bmake ;;
 esac
