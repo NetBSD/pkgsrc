@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2005/03/22 16:01:28 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.13 2005/04/10 15:37:13 jmmv Exp $
 #
 
 DISTNAME=		gnome-vfs-2.10.0
@@ -26,6 +26,7 @@ USE_PKGINSTALL=		YES
 
 CONFIGURE_ARGS+= 	--disable-fam
 CONFIGURE_ARGS+= 	--disable-gtk
+CONFIGURE_ARGS+= 	--disable-howl
 CONFIGURE_ARGS+= 	--disable-openssl
 CONFIGURE_ARGS+= 	--disable-samba
 CONFIGURE_ARGS+= 	--enable-gnutls
