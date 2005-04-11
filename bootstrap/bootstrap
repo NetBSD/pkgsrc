@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.33 2005/04/10 21:54:13 jschauma Exp $
+# $NetBSD: bootstrap,v 1.34 2005/04/11 21:03:21 jschauma Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -616,6 +616,7 @@ if [ "$need_bsd_install" = "yes" ]; then
 	echo_msg "Installing BSD compatible install script"
 	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/install-sh $prefix/bin/install-sh"
 	BSTRAP_ENV="INSTALL='$prefix/bin/install-sh -c' $BSTRAP_ENV"
+	echo "INSTALL=$prefix/bin/install-sh" >> ${MKCONF_EXAMPLE}
 fi
 
 if [ "$need_fixed_strip" = "yes" ] ; then
