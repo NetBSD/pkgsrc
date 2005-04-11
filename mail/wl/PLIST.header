@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST.header,v 1.4 2005/03/06 19:24:55 hira Exp $
+@comment $NetBSD: PLIST.header,v 1.5 2005/04/11 18:06:00 hira Exp $
 share/doc/wl/en/BUGS
 share/doc/wl/en/NEWS
 share/doc/wl/en/README
 share/doc/wl/ja/BUGS.ja
 share/doc/wl/ja/NEWS.ja
 share/doc/wl/ja/README.ja
+${FOR_emacs21}share/wl/access.xpm
 ${FOR_emacs21}share/wl/archive.xpm
 ${FOR_emacs21}share/wl/closed.xpm
 ${FOR_emacs21}share/wl/draft.xpm
