@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2005/02/23 14:16:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2005/04/11 09:32:45 adam Exp $
 bin/gimp
 bin/gimp-2.2
 bin/gimp-remote
@@ -829,6 +829,7 @@ share/doc/html/${PKGNAME}/libgimpwidgets/stock-wilber-48.png
 share/doc/html/${PKGNAME}/libgimpwidgets/stock-wilber-64.png
 share/doc/html/${PKGNAME}/libgimpwidgets/stock-wilber-eek-64.png
 share/doc/html/${PKGNAME}/libgimpwidgets/stock-zoom-follow-window-12.png
+share/doc/html/${PKGNAME}/libgimpwidgets/style.css
 share/doc/html/${PKGNAME}/libgimpwidgets/up.png
 share/examples/gimp-2.0/controllerrc
 share/examples/gimp-2.0/gimprc
