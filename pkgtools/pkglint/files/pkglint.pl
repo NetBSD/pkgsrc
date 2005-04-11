@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.137 2005/04/07 18:31:09 riz Exp $
+# $NetBSD: pkglint.pl,v 1.138 2005/04/11 19:01:31 tv Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -302,7 +302,6 @@ my $seen_PLIST_SRC	= false;
 my $seen_NO_PKG_REGISTER= false;
 my $seen_NO_CHECKSUM	= false;
 my $seen_USE_PKGLOCALEDIR = false;
-my $seen_USE_BUILDLINK3 = false;
 my %seen_Makefile_include = ();
 my %predefined;
 my $pkgname		= "";
@@ -892,7 +891,7 @@ sub checkfile_PLIST($) {
 				"deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 		}
 
-		if ($line->text =~ /\${PKGLOCALEDIR}/ && $seen_USE_BUILDLINK3 && !$seen_USE_PKGLOCALEDIR) {
+		if ($line->text =~ /\${PKGLOCALEDIR}/ && !$seen_USE_PKGLOCALEDIR) {
 			log_warning($line->file, $line->lineno, "PLIST contains \${PKGLOCALEDIR}, ".
 				"but USE_PKGLOCALEDIR was not found.");
 		}
@@ -1270,10 +1269,10 @@ sub checkfile_Makefile($) {
 				"FOR_CDROM.");
 		}
 	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking USE_BUILDLINK2.");
-	if ($whole =~ /\nUSE_BUILDLINK2/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "USE_BUILDLINK2 is deprecated, ".
-			"use USE_BUILDLINK3 instead.");
+	log_info(NO_FILE, NO_LINE_NUMBER, "checking USE_BUILDLINK[23].");
+	if ($whole =~ /\n(USE_BUILDLINK[23])/) {
+		log_error(NO_FILE, NO_LINE_NUMBER, "$1 is deprecated, ".
+			"and no longer used.");
 	}
 	if ($whole =~ /\nALL_TARGET/) {
 		log_error(NO_FILE, NO_LINE_NUMBER, "ALL_TARGET is deprecated, ".
@@ -1303,10 +1302,6 @@ sub checkfile_Makefile($) {
 	if ($whole =~ /\nUSE_PKGLIBTOOL/) {
 		log_error(NO_FILE, NO_LINE_NUMBER, "USE_PKGLIBTOOL is deprecated, ".
 			"use USE_LIBTOOL instead.");
-	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking for USE_BUILDLINK3.");
-	if ($whole =~ /\nUSE_BUILDLINK3/) {
-		$seen_USE_BUILDLINK3 = true;
 	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking for USE_PKGLOCALEDIR.");
 	if ($whole =~ /\nUSE_PKGLOCALEDIR/) {
