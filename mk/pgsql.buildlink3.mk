@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.8 2005/03/24 17:46:01 tv Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.9 2005/04/11 20:35:24 recht Exp $
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
@@ -13,8 +13,25 @@ PGSQL_VERSIONS_ACCEPTED?=	80 74 73
 _PGSQL_VERSION_${pv}_OK=	yes
 .endfor
 
+.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+PG_LIB_EXT=dylib
+.else
+PG_LIB_EXT=so
+.endif
+
 # check what is installed
-.if exists(${LOCALBASE}/lib/libecpg.so.4.2)
+.if ${OPSYS} == "Darwin"
+.if exists(${LOCALBASE}/lib/libecpg.5.0.dylib)
+_PGSQL_VERSION_80_INSTALLED=	yes
+.endif
+.if exists(${LOCALBASE}/lib/libecpg.4.1.dylib)
+_PGSQL_VERSION_74_INSTALLED=	yes
+.endif
+.if exists(${LOCALBASE}/lib/libecpg.3.dylib)
+_PGSQL_VERSION_73_INSTALLED=yes
+.endif
+.else
+.if exists(${LOCALBASE}/lib/libecpg.so.5.0)
 _PGSQL_VERSION_80_INSTALLED=	yes
 .endif
 .if exists(${LOCALBASE}/lib/libecpg.so.4.1)
@@ -22,6 +39,7 @@ _PGSQL_VERSION_74_INSTALLED=	yes
 .endif
 .if exists(${LOCALBASE}/lib/libecpg.so.3)
 _PGSQL_VERSION_73_INSTALLED=yes
+.endif
 .endif
 
 # if a version is explicitely required, take it
@@ -63,7 +81,7 @@ _PGSQL_VERSION=	${_PGSQL_VERSION_FIRSTACCEPTED}
 #
 .if ${_PGSQL_VERSION} == "80"
 PGSQL_TYPE=	postgresql80-lib
-PGPKGSRCDIR=	../../databases/postgresql80-lib
+PGPKGSRCDIR=	../../databases/postgresql80-client
 .elif ${_PGSQL_VERSION} == "74"
 PGSQL_TYPE=	postgresql74-lib
 PGPKGSRCDIR=	../../databases/postgresql74-lib
