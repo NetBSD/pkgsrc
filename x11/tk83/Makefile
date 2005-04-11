@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/08 17:24:45 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 02:44:26 jschauma Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -49,12 +49,17 @@ post-patch:
 	${RM} -f mkLinks.tmp;						\
 	${CHMOD} +x mkLinks;
 
-pre-install:
+post-build:
 	cd ${WRKSRC}; for file in					\
 		tkUnixInit.o libtk83.so wish;				\
 	do								\
 		${TOUCH} $${file};					\
 	done
+	${SED} -e "s|^\(.*\)='\(.*\)'|\1=\"\2\"|"			\
+		-e "s|${WRKSRC}|${PREFIX}/lib|"				\
+		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}|"	\
+		${WRKSRC}/tkConfig.sh > ${WRKSRC}/tkConfig.sh.tmp &&	\
+		${MV} ${WRKSRC}/tkConfig.sh.tmp ${WRKSRC}/tkConfig.sh
 
 post-install:
 	cd ${WRKDIR} && ${PAX} -rwpm man ${PREFIX}
