@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3392 2005/04/11 11:06:51 schwarz Exp $
+$NetBSD: TODO,v 1.3393 2005/04/11 12:58:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -508,7 +508,7 @@ Suggested package updates
 	o gsharutils-4.3.78
 	o gtetrinet-0.7.8
 	o gtk-systrace-2003.06.23
-	o gtk2+-2.6.5
+	o gtk2+-2.6.6
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o guile-oops-1.0.2
@@ -575,6 +575,7 @@ Suggested package updates
 	o kmymoney2-0.6.4
 	o kodos-2.4.5
 	o kphone-4.1.0
+	o krusader-1.60.0
 	o ksi-3.4.2
 	o kth-krb4-1.2.2
 	o latd-1.21
@@ -914,6 +915,7 @@ Suggested package updates
 	o pysol-4.82
 	o qDecoder-7.1
 	o qcad-2.0.4.0 [pkgsrc-wip]
+	o qnetwalk-1.2 [pkg/29941]
 	o qgreylist-0.3
 	o qt1-1.45
 	o qt2-designer-2.3.2
@@ -1180,6 +1182,7 @@ Suggested package updates
 	o ysm-2.9.6
 	o ytalk-3.2.0 [pkg/28840]
 	o yudit-2.7.8
+	o zebra-0.95
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zenity-2.10.0
 	o zile-2.0.1
