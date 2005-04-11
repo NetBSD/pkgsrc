@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:18:09 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:12 tv Exp $
 #
 
 DISTNAME=	gtk-systrace-2002-12-01
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=	NetBSD-1.6[H-Z]*-* NetBSD-[2-9]*
 
 WRKSRC=			${WRKDIR}/notification-0.1
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 
 pre-configure:

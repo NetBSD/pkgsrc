@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:14:43 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:49 tv Exp $
 #
 
 DISTNAME=	crack-attack-1.1.10
@@ -11,7 +11,6 @@ HOMEPAGE=	http://aluminumangel.org/attack/
 COMMENT=	Tetris Attack inspired game
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_LANGUAGES=	c c++
 USE_X11=	YES
 

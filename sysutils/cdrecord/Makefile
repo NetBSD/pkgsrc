@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2005/04/06 20:49:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.65 2005/04/11 21:47:22 tv Exp $
 
 DISTNAME=	cdrtools-2.00.3
 PKGNAME=	cdrecord-2.00.3
@@ -16,7 +16,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_TBL=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/01/27 05:19:13 snj Exp $
+# $NetBSD: Makefile,v 1.39 2005/04/11 21:45:05 tv Exp $
 
 DISTNAME=	naim-0.11.7.2
 PKGREVISION=	1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://site.n.ml.org/info/naim/
 COMMENT=	Ncurses-based AIM, ICQ, IRC, and Lily client
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man

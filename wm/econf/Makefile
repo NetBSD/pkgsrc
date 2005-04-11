@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/11/30 18:26:40 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:47:47 tv Exp $
 #
 
 DISTNAME=		enlightenment-conf-0.15
@@ -11,7 +11,6 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.enlightenment.org/
 COMMENT=		Configuration tool for easily setting up Enlightenment
 
-USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 USE_X11=		yes
 USE_GNU_TOOLS+=		make

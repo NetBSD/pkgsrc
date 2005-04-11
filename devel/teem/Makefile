@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/06 18:58:17 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:39 tv Exp $
 #
 
 DISTNAME=		teem-1.8.0-src
@@ -10,7 +10,6 @@ MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://teem.sourceforge.net/
 COMMENT=		Libraries for manipulation of Structured Scientific Data
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 .include "../../mk/bsd.prefs.mk"

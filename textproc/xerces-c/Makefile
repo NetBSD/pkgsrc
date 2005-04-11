@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/10/03 00:18:21 tv Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:47:43 tv Exp $
 #
 
 DISTNAME=	xerces-c-src_2_3_0
@@ -14,7 +14,6 @@ COMMENT=	Validating C++ XML parser with DOM and SAX support
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/xercesc
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 

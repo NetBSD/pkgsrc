@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/02/14 22:47:48 chris Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:44:57 tv Exp $
 #
 
 DISTNAME=	taglib-1.3.1
@@ -11,7 +11,6 @@ COMMENT=	Library for accessing id tags in mp3 and ogg files
 
 USE_LANGUAGES=		c c++
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 

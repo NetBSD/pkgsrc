@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/28 02:21:20 kim Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:44:54 tv Exp $
 #
 
 DISTNAME=	libshout-2.1
@@ -9,7 +9,6 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.gnu.org/directory/audio/ogg/libshout.html
 COMMENT=	Connects and sends data to icecast servers
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 PTHREAD_OPTS+=		require
 

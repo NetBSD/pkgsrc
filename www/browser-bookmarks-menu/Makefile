@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/05 10:54:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:52 tv Exp $
 #
 
 DISTNAME=	browser-bookmarks-menu-0.3
@@ -9,7 +9,6 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://browserbookapp.sourceforge.net/
 COMMENT=	Easy access to web bookmarks through a GNOME Panel Applet
 
-USE_BUILDLINK3=		YES
 USE_LANGUAGES=		# empty
 
 PYTHON_PATCH_SCRIPTS=	browser-bookmarks-menu.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/10/03 00:14:51 tv Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:46:03 tv Exp $
 #
 
 DISTNAME=		gnome-iconedit-1.2.0
@@ -11,7 +11,6 @@ COMMENT=		Icon editor based on GNOME libraries
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES

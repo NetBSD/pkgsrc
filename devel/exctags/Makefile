@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/02/17 05:58:28 uebayasi Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:20 tv Exp $
 #
 
 DISTNAME=	ctags-5.5.4
@@ -12,7 +12,6 @@ COMMENT=	Exuberant (feature-filled) tagfile generator for vi, emacs and clones
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-macro-patterns
 CONFIGURE_ARGS+=	--with-readlib

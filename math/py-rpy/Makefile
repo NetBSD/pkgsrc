@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/21 05:31:03 markd Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:31 tv Exp $
 #
 
 DISTNAME=	rpy-0.3.1
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=       http://rpy.sourceforge.net/
 COMMENT=	R interface for Python
 
-USE_BUILDLINK3=		YES
 PYDISTUTILSPKG=		YES
 
 .include "../../lang/python/extension.mk"

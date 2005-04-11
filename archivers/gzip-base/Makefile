@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/10/12 18:28:28 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/04/11 21:44:48 tv Exp $
 #
 
 DISTNAME=	gzip-1.2.4a
@@ -14,7 +14,6 @@ COMMENT=	Compress or expand files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 BUILD_TARGET=	all manlinks=so

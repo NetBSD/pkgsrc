@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/10/03 00:13:15 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:45:04 tv Exp $
 #
 
 DISTNAME=	kmess-1.1
@@ -13,7 +13,6 @@ COMMENT=	MSN Messenger Client for KDE3
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 

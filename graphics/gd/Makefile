@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2004/11/29 19:56:16 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2005/04/11 21:46:02 tv Exp $
 
 DISTNAME=	gd-2.0.33
 CATEGORIES=	graphics
@@ -10,7 +10,6 @@ COMMENT=	Graphics library for the dynamic creation of images
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 REPLACE_PERL=		bdftogd

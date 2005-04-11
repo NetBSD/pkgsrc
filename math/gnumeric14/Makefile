@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/24 20:02:51 recht Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:29 tv Exp $
 #
 
 DISTNAME=		gnumeric-1.4.2
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.gnome.org/gnumeric/
 COMMENT=		Spreadsheet program from the GNOME project
 
 BUILD_USES_MSGFMT=	YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES

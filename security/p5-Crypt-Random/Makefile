@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/20 11:31:08 grant Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:16 tv Exp $
 #
 
 DISTNAME=		Crypt-Random-1.13
@@ -18,7 +18,6 @@ DEPENDS+=		p5-Math-Pari>=2.001804:../../math/p5-Math-Pari
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/Random/.packlist
 

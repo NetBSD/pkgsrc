@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/03/30 12:10:58 adam Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 21:46:51 tv Exp $
 
 DISTNAME=	net-snmp-5.2.1
 CATEGORIES=	net
@@ -20,7 +20,6 @@ NET_SNMP_SYS_LOCATION?=		defaultlocation
 NET_SNMP_PERSISTENTDIR?=	${VARBASE}/net-snmp
 NET_SNMP_MIBDIRS?=		\$$HOME/.snmp/mibs:${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm2.1.10/mibs:/usr/local/share/snmp/mibs
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
 # The self-test of Perl modules only works after installation because perl

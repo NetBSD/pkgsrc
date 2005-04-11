@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:14:49 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:01 tv Exp $
 
 DISTNAME=	dvdbackup-0.1.1
 PKGREVISION=	2
@@ -10,7 +10,6 @@ HOMEPAGE=	http://dvd-create.sourceforge.net/
 COMMENT=	DVD backup utility
 
 WRKSRC=		${WRKDIR}/dvdbackup/src
-USE_BUILDLINK3=	yes
 
 do-build:
 	cd ${WRKSRC}; \

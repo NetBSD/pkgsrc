@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/31 21:35:05 kim Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:38 tv Exp $
 
 DISTNAME=	File-Tail-0.99.1
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Perl5 module for reading from continuously updated files
 
 DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/File/Tail/.packlist
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/28 22:14:34 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:28 tv Exp $
 
 DISTNAME=	mantis-0.19.1
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	PHP/MySQL/web based bugtracking system
 DEPENDS+=	ap-php>=4.0.6:../../www/ap-php
 DEPENDS+=	php-mysql>=4.0.6:../../databases/php-mysql
 
-USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 NO_BUILD=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/04/08 14:35:08 jwise Exp $
+# $NetBSD: Makefile,v 1.32 2005/04/11 21:45:13 tv Exp $
 #
 
 VER=		1.41
@@ -14,7 +14,6 @@ COMMENT=	Perl DBI/DBD driver for PostgreSQL databases
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/DBD/Pg/.packlist
 
 PGUSER?=	pgsql

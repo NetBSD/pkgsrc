@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/03/02 21:49:45 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2005/04/11 21:45:20 tv Exp $
 
 DISTNAME=	g-wrap-1.9.5
 CATEGORIES=	devel
@@ -10,7 +10,6 @@ COMMENT=	Tool for generating guile wrappers for C code
 
 DEPENDS+=	guile-lib>=0.1.2:../../devel/guile-lib
 
-USE_BUILDLINK3=		YES
 
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make

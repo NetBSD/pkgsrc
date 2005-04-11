@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/10/03 00:14:57 tv Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:46:08 tv Exp $
 
 DISTNAME=	Imaging-1.1.4
 PKGNAME=	${PYPKGPREFIX}-imaging-1.1.4
@@ -14,7 +14,6 @@ DIST_SUBDIR=    python
 PYDISTUTILSPKG= yes
 PY_PATCHPLIST=	yes
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 
 do-configure:
 	(cd ${WRKSRC}/libImaging && ${SETENV} ${CONFIGURE_ENV} ./configure \

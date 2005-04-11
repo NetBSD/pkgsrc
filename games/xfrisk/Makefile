@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:14:47 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:58 tv Exp $
 #
 
 DISTNAME=	xfrisk-1.2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.tuxick.net/xfrisk/
 COMMENT=	X11 version of the classic Risk board game
 
 WRKSRC=		${WRKDIR}/XFrisk
-USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_X11=	yes
 

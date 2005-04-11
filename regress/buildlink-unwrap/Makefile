@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/08/28 23:54:21 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:10 tv Exp $
 
 DISTNAME=	regress-buildlink-unwrap-0.0
 CATEGORIES=	regress
@@ -10,7 +10,6 @@ COMMENT=	test buildlink unwrapping of text files
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK3=	yes
 EXTRACT_ONLY=	# empty
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/03/22 16:32:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/11 21:47:07 tv Exp $
 #
 
 DISTNAME=	gpdf-2.10.0
@@ -12,7 +12,6 @@ COMMENT=	GNOME 2 version of xpdf
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes

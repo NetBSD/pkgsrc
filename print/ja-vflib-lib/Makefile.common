@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/03/24 21:13:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/04/11 21:47:08 tv Exp $
 
 DISTNAME=		VFlib2-${VFLIB_VERSION}
 CATEGORIES+=		japanese print
@@ -14,7 +14,6 @@ VFLIB_VERSION=		2.24.2
 PLIST_SUBST+=		VFLIB_VERSION=${VFLIB_VERSION}
 PLIST_SUBST+=		VFLIB_SO_VERSION=${VFLIB_VERSION:C/^2.//}
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 

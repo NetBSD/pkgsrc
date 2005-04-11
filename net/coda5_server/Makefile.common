@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/09/10 12:19:13 drochner Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/04/11 21:46:45 tv Exp $
 
 DISTNAME?=		coda-${DIST_VERS}
 DIST_VERS?=		5.3.20
@@ -17,7 +17,6 @@ HOMEPAGE?=		http://www.coda.cs.cmu.edu/
 DISTINFO_FILE?=		${.CURDIR}/../../net/coda5_server/distinfo
 PATCHDIR?=		${.CURDIR}/../../net/coda5_server/patches
 
-USE_BUILDLINK3=		yes
 USE_PERL5=		yes
 USE_GNU_TOOLS+=		make
 

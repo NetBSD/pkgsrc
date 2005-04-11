@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/01/09 22:52:13 recht Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/11 21:44:48 tv Exp $
 
 DISTNAME=	gtar-1.15.1
 CATEGORIES=	archivers
@@ -14,7 +14,6 @@ DEPENDS+=	gtar-info-1.15.1:../../archivers/gtar-info
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-NO_BUILDLINK=	yes
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/01/06 17:22:52 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:41 tv Exp $
 #
 
 DISTNAME=		gxine-0.4.1
@@ -10,7 +10,6 @@ HOMEPAGE=		http://xinehq.de/
 COMMENT=		Gtk-based media player
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
 

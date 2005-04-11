@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2005/03/15 17:03:17 kim Exp $
+# $NetBSD: Makefile,v 1.103 2005/04/11 21:46:22 tv Exp $
 
 DISTNAME=	pine4.62
 PKGNAME=	pine-4.62
@@ -14,7 +14,6 @@ COMMENT=	Program for Internet News and E-mail
 
 LICENSE=	pine-license
 
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 
 CONF_FILES=    ${PREFIX}/share/examples/pine/pine.conf ${PKG_SYSCONFDIR}/pine.conf

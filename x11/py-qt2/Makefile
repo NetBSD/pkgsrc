@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:18:37 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:48:12 tv Exp $
 #
 
 DISTNAME=	PyQt-3.1-Qt-2.3.1
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.riverbankcomputing.co.uk/pyqt/index.php
 COMMENT=	Python bindings for the Qt toolkit
 
 WRKSRC=			${WRKDIR}/PyQt-3.1
-USE_BUILDLINK3=		yes
 USE_X11=		# defined
 USE_LIBTOOL=		# defined
 

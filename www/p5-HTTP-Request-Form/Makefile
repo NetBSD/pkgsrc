@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/20 11:31:14 grant Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:59 tv Exp $
 #
 
 DISTNAME=	HTTP-Request-Form-0.7
@@ -16,7 +16,6 @@ DEPENDS+=       p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=       p5-HTML-Tagset-[0-9]*:../../www/p5-HTML-Tagset
 DEPENDS+=       p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTTP/Request/Form/.packlist
 
 .include "../../lang/perl5/module.mk"

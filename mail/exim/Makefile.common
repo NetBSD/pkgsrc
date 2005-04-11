@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.common,v 1.26 2005/02/17 06:26:51 grant Exp $
+# $NetBSD: Makefile.common,v 1.27 2005/04/11 21:46:18 tv Exp $
 
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
 		ftp://ftp.esat.net/pub/networking/mail/mta/exim/exim4/
 
 USE_PERL5=	yes
-USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 
 MAKE_ENV+=	SSLBASE=${SSLBASE:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/07/22 09:16:01 recht Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:37 tv Exp $
 
 DISTNAME=	pyunit-1.4.1
 PKGNAME=	${PYPKGPREFIX}-unit-1.4.1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://pyunit.sourceforge.net/
 COMMENT=	Unit testing framework for python
 
 PYDISTUTILSPKG=	# defined
-USE_BUILDLINK3=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

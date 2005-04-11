@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:13:28 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:45:24 tv Exp $
 #
 
 DISTNAME=		gscope-0.4.1
@@ -12,7 +12,6 @@ COMMENT=		Software oscilloscope library
 
 BUILD_DEPENDS+=		gtk-doc-[0-9]*:../../textproc/gtk-doc
 
-USE_BUILDLINK3=		yes
 USE_X11=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined

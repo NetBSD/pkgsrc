@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/04/08 01:21:47 erh Exp $
+# $NetBSD: Makefile,v 1.27 2005/04/11 21:47:50 tv Exp $
 
 DISTNAME=	jakarta-tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	ap-jk-${JK_VERSION}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://jakarta.apache.org/tomcat/connectors-doc/
 COMMENT=	Apache connector for accessing Jakarta Tomcat
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/jk/native
-USE_BUILDLINK3=		yes
 APACHE_MODULE=	YES
 BUILD_DEFS+=	JK_ENABLE_JNI
 

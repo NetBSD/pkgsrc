@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/03 15:14:55 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:37 tv Exp $
 #
 
 DISTNAME=		PQueue-0.2
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.csse.monash.edu.au/hons/projects/1999/Andrew.Snare/
 COMMENT=		Priority-queues using fibonacci heaps
 
 WRKSRC=		${WRKDIR}/PQueue
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 BUILD_TARGET=		default

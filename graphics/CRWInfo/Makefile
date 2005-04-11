@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/14 16:02:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:59 tv Exp $
 #
 
 DISTNAME=	CRWInfo-0.2
@@ -10,7 +10,6 @@ HOMEPAGE=	http://neuemuenze.heim1.tu-clausthal.de/~sven/crwinfo/
 COMMENT=	Extracts exposure information and thumbnails from Canon RAW files
 
 NO_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 
 INSTALLATION_DIRS=	bin
 

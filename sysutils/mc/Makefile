@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2005/03/22 15:29:53 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2005/04/11 21:47:25 tv Exp $
 
 DISTNAME=	mc-4.6.1-pre4a
 PKGNAME=	mc-4.6.1rc4
@@ -11,7 +11,6 @@ MAINTAINER=	pavel.arnost@clnet.cz
 HOMEPAGE=	http://www.ibiblio.org/mc/
 COMMENT=	User-friendly file manager and visual shell
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES

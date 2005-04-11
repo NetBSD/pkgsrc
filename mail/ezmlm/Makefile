@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/23 00:51:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:46:19 tv Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -14,7 +14,6 @@ CONFLICTS=		ezmlm-idx-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 
 # We change conf-bin and conf-man from the default "/usr/local"
 # and don't provide compatibility symlinks.

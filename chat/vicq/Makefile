@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/05/31 16:47:47 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:45:06 tv Exp $
 
 DISTNAME=	vicq-0.4.1
 PKGREVISION=	1
@@ -15,7 +15,6 @@ DEPENDS+=	p5-Term-ReadLine>=1.11:../../devel/p5-Term-ReadLine
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/vicq
-USE_BUILDLINK3=		YES
 NO_BUILD=		YES
 
 REPLACE_PERL=		vicq
