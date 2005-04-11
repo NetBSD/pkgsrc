@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.4 2004/12/23 18:57:03 ben Exp $ -->
+<!-- $NetBSD: using.xml,v 1.5 2005/04/11 16:38:21 reed Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
   <title>Using pkgsrc</title>
@@ -182,10 +182,10 @@
         </listitem>
 
         <listitem>
-          <para>If you want to know the value of a certain make(1) definition, then
+          <para>If you want to know the value of a certain &man.make.1; definition, then
             the <varname>VARNAME</varname> definition should be used, in conjunction
             with the show-var target. e.g. to show the expansion of the &man.make.1; variable
-            <varname>DISTFILES</varname>:</para>  
+            <varname>LOCALBASE</varname>:</para>  
 
           <screen>&cprompt; <userinput>make show-var VARNAME=LOCALBASE</userinput>
 /usr/pkg
