@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/06/27 22:59:48 recht Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:31 tv Exp $
 #
 
 DISTNAME=	fpconst-0.7.0
@@ -10,7 +10,6 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.analytics.washington.edu/statcomp/projects/rzope/fpconst/
 COMMENT=	IEEE 754 floating point special handling for Python
 
-USE_BUILDLINK3=	yes
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"

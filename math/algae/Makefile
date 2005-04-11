@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/01/12 15:32:00 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:28 tv Exp $
 
 DISTNAME=		algae-4.1.3
 PKGREVISION=		2
@@ -13,7 +13,6 @@ DEPENDS+=		gnuplot>=3.5:../../graphics/gnuplot
 
 GNU_CONFIGURE=		# defined
 USE_LANGUAGES=		fortran
-USE_BUILDLINK3=		yes
 USE_GNU_READLINE=	# uses history_truncate_file
 
 INFO_FILES=		algae.info

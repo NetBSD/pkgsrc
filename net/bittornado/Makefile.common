@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/01/28 16:19:17 veego Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/04/11 21:46:44 tv Exp $
 #
 
 DISTNAME=		BitTornado-0.3.10
@@ -14,6 +14,5 @@ FILESDIR=		${.CURDIR}/../../net/bittornado/files
 PATCHDIR=		${.CURDIR}/../../net/bittornado/patches
 
 WRKSRC=			${WRKDIR}/BitTornado-CVS
-USE_BUILDLINK3=		yes
 
 PYTHON_VERSIONS_ACCEPTED=	24 23 22

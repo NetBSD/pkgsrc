@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/12/28 23:18:17 reed Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/11 21:46:04 tv Exp $
 #
 
 DISTNAME=	hp2xx-3.4.4
@@ -12,7 +12,6 @@ COMMENT=	HPGL converter and previewer
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/sources
 USE_X11=	yes
-USE_BUILDLINK3=	YES
 USE_MAKEINFO=	YES
 INFO_FILES=	hp2xx.info
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/02/21 23:26:24 bad Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:53 tv Exp $
 
 DISTNAME=	openvpn-1.6.0
 CATEGORIES=	net security
@@ -8,7 +8,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://openvpn.sourceforge.net/
 COMMENT=	Easy-to-use, robust, and highly configurable VPN over UDP
 
-USE_BUILDLINK3=		YES
 #USE_PKGINSTALL=		YES
 
 GNU_CONFIGURE=		YES

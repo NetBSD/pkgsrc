@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/06/28 17:28:57 abs Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:47:43 tv Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of Xerces-J,
 # because although Xerces runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -15,7 +15,6 @@ COMMENT=	The Apache Project's validating XML parser with DOM and SAX support
 
 WRKSRC=		${WRKDIR}/xerces-1_2_0
 USE_JAVA=	run
-USE_BUILDLINK3= YES
 NO_CONFIGURE=
 NO_BUILD=
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2005/01/20 14:17:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.64 2005/04/11 21:45:12 tv Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
@@ -8,7 +8,6 @@ CONFLICTS=		{mysql-server-[0-9]*,mysql3-server-[0-9]*}
 
 .include "../mysql-client/Makefile.common"
 
-USE_BUILDLINK3=		yes
 
 CONFIGURE_ARGS+=	--with-libwrap
 CONFIGURE_ARGS+=	--with-raid

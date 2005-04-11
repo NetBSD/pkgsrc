@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/04 13:53:31 manu Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:16 tv Exp $
 #
 
 DISTNAME=		SQLiteManager-1.0.4
@@ -11,7 +11,6 @@ COMMENT=		Web frontend for managing SQLite databases
 
 DEPENDS+=		php>=5.0.3nb1:../../lang/php5
 
-USE_BUILDLINK3=		yes
 
 APACHE_USER?=		www
 

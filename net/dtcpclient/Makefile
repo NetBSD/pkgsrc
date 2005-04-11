@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/21 14:36:52 hamajima Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:46 tv Exp $
 #
 
 DISTNAME=	dtcpclient-20040923
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* Darwin-*-*
 
 RCD_SCRIPTS=	dtcpclient
 USE_PKGINSTALL=	YES
-USE_BUILDLINK3= YES
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	"Fixing hardcoded paths."

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.vtkdist,v 1.4 2004/09/10 11:21:24 drochner Exp $
+# $NetBSD: Makefile.vtkdist,v 1.5 2005/04/11 21:46:10 tv Exp $
 
 .include "../../graphics/vtk/Makefile.common"
 
@@ -10,8 +10,6 @@ WRKSRC=       		${WRKDIR}/VTK
 
 DISTINFO_FILE=		${.CURDIR}/../vtk/distinfo
 PATCHDIR=		${.CURDIR}/../vtk/patches
-
-USE_BUILDLINK3=		yes
 
 VTK_LIBDIR=	${PREFIX}/lib/vtk
 

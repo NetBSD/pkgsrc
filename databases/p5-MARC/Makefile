@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/20 11:30:57 grant Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:13 tv Exp $
 #
 
 DISTNAME=	MARC-1.15
@@ -11,7 +11,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MARC/}
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Perl5 module for manipulating MARC (MAchine Readable Cataloging) data
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/MARC/.packlist
 
 .include "../../lang/perl5/module.mk"

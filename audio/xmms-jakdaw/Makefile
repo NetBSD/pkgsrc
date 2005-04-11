@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/02/21 20:26:09 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:44:59 tv Exp $
 
 DISTNAME=	jakdaw-0.0.4
 PKGNAME=	xmms-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.jakdaw.ucam.org/xmms
 COMMENT=	Very customizable XMMS plugin with nice effects
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 
 .include "../../audio/xmms/buildlink3.mk"

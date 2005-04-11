@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/01 03:07:57 reed Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:59 tv Exp $
 
 DISTNAME=	zombies-1.0
 PKGREVISION=	1
@@ -10,7 +10,6 @@ MAINTAINER=	simonb@NetBSD.org
 HOMEPAGE=	http://www.thistledown.com.au/software/
 COMMENT=	Simple robots-like game where you destroy the zombies
 
-USE_BUILDLINK3=		yes
 INSTALLATION_DIRS=	bin man/man6 share/games
 
 .include "../../mk/curses.buildlink3.mk"

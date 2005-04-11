@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/27 10:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:38 tv Exp $
 #
 
 DISTNAME=	Text-WikiFormat-0.72
@@ -13,7 +13,6 @@ COMMENT=	Translate Wiki formatted text into other formats
 
 DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
 
-USE_BUILDLINK3=		YES
 USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Build
 

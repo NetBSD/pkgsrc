@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/08/19 16:47:01 ben Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:00 tv Exp $
 #
 
 DISTNAME=		glimmer213
@@ -10,7 +10,6 @@ MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		ftp://ftp.tigr.org/pub/software/Glimmer/
 COMMENT=		System for finding genes in microbial DNA
 
-USE_BUILDLINK3=		yes
 WRKSRC=                 ${WRKDIR}/glimmer2.13
 
 do-install:

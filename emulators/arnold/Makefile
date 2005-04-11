@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/03/27 15:43:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:43 tv Exp $
 #
 
 DISTNAME=		arnsrc27012002
@@ -16,7 +16,6 @@ COMMENT=		Amstrad CPC, Amstrad CPC+ and KC Compact emulator
 EXTRACT_CMD_OPTS.zip=	-aqo
 
 WRKSRC=			${WRKDIR}/arnold/src
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		arnold
 

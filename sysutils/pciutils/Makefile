@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/06/15 14:05:28 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:28 tv Exp $
 
 DISTNAME=	pciutils-2.1.11
 CATEGORIES=	sysutils
@@ -10,7 +10,6 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
 COMMENT=	PCI bus manipulation utility similar to NetBSD pcictl(8)
 
-USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 
 ONLY_FOR_PLATFORM+=	AIX-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*

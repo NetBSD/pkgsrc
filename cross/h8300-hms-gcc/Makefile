@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/12/03 15:14:53 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:10 tv Exp $
 
 DISTNAME=		gcc-core-3.1
 PKGNAME=		cross-h8300-hms-gcc-3.1
@@ -20,7 +20,6 @@ DEPENDS+=	cross-h8300-hms-binutils-[0-9]*:../../cross/h8300-hms-binutils
 H8300_PREFIX=		${LOCALBASE}/libexec/cross-h8300-hms
 
 WRKSRC=			${WRKDIR}/objdir
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${H8300_PREFIX}

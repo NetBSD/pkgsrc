@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/23 20:41:48 recht Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:58 tv Exp $
 #
 
 DISTNAME=	SpreadModule-1.4
@@ -13,7 +13,6 @@ HOMEPAGE=	http://www.python.org/other/spread/
 COMMENT=	Python bindings for the Spread messaging service
 
 PYDISTUTILSPKG=	YES
-USE_BUILDLINK3=	YES
 
 PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 

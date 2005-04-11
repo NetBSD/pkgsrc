@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:18:23 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:49 tv Exp $
 
 DISTNAME=		wmctrl-1.05
 PKGREVISION=	1
@@ -10,7 +10,6 @@ HOMEPAGE=		http://sweb.cz/tripie/utils/wmctrl/
 COMMENT=		Command line interface to an EWMH-compliant WM
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/03/24 21:12:51 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2005/04/11 21:45:02 tv Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
@@ -13,7 +13,6 @@ COMMENT=	General-purpose circuit simulation program
 
 
 WRKSRC=			${WRKDIR}
-USE_BUILDLINK3=		yes
 USE_X11=		# defined
 # GPL license used by GNU readline is not compatible
 # with 4 clause BSD license used by spice.

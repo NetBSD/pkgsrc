@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2005/04/04 04:32:11 martti Exp $
+# $NetBSD: Makefile.common,v 1.44 2005/04/11 21:45:42 tv Exp $
 
 VIM_VERSION=		6.3
 VIM_PATCHLEVEL=		068
@@ -27,7 +27,6 @@ HOMEPAGE=		http://www.vim.org/
 CONFLICTS+=		vim-kde-[0-9]*
 
 WRKSRC=			${WRKDIR}/vim63/src
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 # See "configure --help" extra options. These might affect the installed

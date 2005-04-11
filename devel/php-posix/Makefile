@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2004/11/05 17:11:39 jdolecek Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:36 tv Exp $
 
 MODNAME=		posix
 CATEGORIES+=		devel
 PKGREVISION=		# empty
 COMMENT=		PHP extension for POSIX-like functions
 
-USE_BUILDLINK3=		YES
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}=shared
 

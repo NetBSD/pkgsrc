@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/23 20:41:49 recht Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:23 tv Exp $
 #
 
 DISTNAME=		duplicity-0.4.1
@@ -15,7 +15,6 @@ DEPENDS=		gnupg>=1.2.3:../../security/gnupg
 BUILDLINK_DEPENDS.librsync=	librsync>=0.9.6
 PYDISTUTILSPKG=		yes
 PYTHON_VERSIONS_ACCEPTED= 22 23
-USE_BUILDLINK3=		yes
 
 .include "../../devel/librsync/buildlink3.mk"
 .include "../../lang/python/application.mk"

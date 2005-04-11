@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/12/20 11:30:57 grant Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:45:13 tv Exp $
 #
 
 DISTNAME=		MLDBM-2.01
@@ -16,7 +16,6 @@ DEPENDS+= 		{p5-Data-Dumper>=2.08,perl{,-thread}>=5.6.1nb2}:${PERL5_PKGSRCDIR}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/MLDBM/.packlist
 

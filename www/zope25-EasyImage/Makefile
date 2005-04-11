@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:27 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:48:03 tv Exp $
 
 DISTNAME=	EasyImage15
 PKGREVISION=	2
@@ -14,7 +14,6 @@ HOMEPAGE=	http://www.zope.org/Members/regebro/easyimage
 COMMENT=	Image extension for Zope
 
 ZOPE_COPYPRODUCT= zope-std-copyproduct-short
-USE_BUILDLINK3=	yes
 
 post-extract:
 	${RM} -r ${WRKSRC}/easyimage/cvs ${WRKSRC}/easyimage/icons/cvs \

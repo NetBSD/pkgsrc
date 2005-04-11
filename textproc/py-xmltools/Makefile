@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:18:21 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:42 tv Exp $
 #
 
 DISTNAME=	xmltools-1.3.7
@@ -14,7 +14,6 @@ COMMENT=	High level tools to help using XML in python
 DEPENDS=	${PYPKGPREFIX}-FourSuite>=0.12:../../textproc/py-FourSuite
 
 PYDISTUTILSPKG=	yes
-USE_BUILDLINK3=	yes
 
 .include "../../textproc/py-xml/buildlink3.mk"
 .include "../../x11/pygtk/buildlink3.mk"

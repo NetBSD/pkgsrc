@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2004/10/03 00:13:32 tv Exp $
+# $NetBSD: Makefile,v 1.66 2005/04/11 21:45:37 tv Exp $
 #
 
 DISTNAME=		pth-2.0.0
@@ -14,7 +14,6 @@ CONFLICTS=		pth-current-[0-9]* pth-syscall<1.4.1nb1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-pthread

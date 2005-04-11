@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/01/06 05:38:56 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:36 tv Exp $
 
 DISTNAME=		nbsed-20040821
 CATEGORIES=		textproc pkgtools
@@ -9,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		NetBSD-current's sed(1)
 
-USE_BUILDLINK3=		yes
 NO_CHECKSUM=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--program-transform-name="s,sed,nbsed,"

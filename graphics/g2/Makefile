@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/10/03 00:14:50 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:46:02 tv Exp $
 
 DISTNAME=		g2-0.49a
 PKGREVISION=		3
@@ -13,7 +13,6 @@ GNU_CONFIGURE=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes
 
-USE_BUILDLINK3=		yes
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/G2/.packlist
 PERL5_CONFIGURE=	no
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/g2_perl

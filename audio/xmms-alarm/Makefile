@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/26 21:04:59 snj Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:44:58 tv Exp $
 #
 
 DISTNAME=		xmms-alarm-0.3.6
@@ -9,7 +9,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.snika.uklinux.net/index.php?show=xmms-alarm
 COMMENT=		Plugin which allows XMMS to be used as an alarm clock
 
-USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:18:21 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:43 tv Exp $
 #
 
 DISTNAME=		xmlstarlet-0.9.3
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://xmlstar.sourceforge.net/
 COMMENT=		Command line utilities for XML manipulation
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.libxml2}

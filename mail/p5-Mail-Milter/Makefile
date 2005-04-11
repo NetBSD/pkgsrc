@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/20 11:31:04 grant Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:21 tv Exp $
 #
 
 DISTNAME=	Mail-Milter-0.06
@@ -14,7 +14,6 @@ COMMENT=	Sendmail::Milter enhancement API modules
 
 DEPENDS+=	p5-Sendmail-PMilter>=0.90:../../mail/p5-Sendmail-PMilter
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Mail/Milter/.packlist
 PERL5_REQD+=	5.6.0
 

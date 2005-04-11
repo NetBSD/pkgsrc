@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/12/28 23:18:18 reed Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/11 21:46:08 tv Exp $
 
 DISTNAME=	povray-3.6.1
 PKGREVISION=	1
@@ -13,7 +13,6 @@ COMMENT=	Persistence of Vision Ray Tracer
 
 LICENSE=	povray-license
 
-USE_BUILDLINK3=		YES
 USE_LANGUAGES=		c c++
 USE_PKGINSTALL=		YES
 USE_X11=		YES

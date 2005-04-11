@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/11/24 02:37:32 rh Exp $
+# $NetBSD: Makefile,v 1.18 2005/04/11 21:45:24 tv Exp $
 
 DISTNAME=	gnustep-make-1.10.0
 PKGREVISION=	1
@@ -11,7 +11,6 @@ COMMENT=	GNUstep makefile package
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
 USE_X11=	yes
 CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL_SCRIPT}"
 

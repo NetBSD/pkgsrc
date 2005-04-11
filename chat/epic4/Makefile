@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/04/04 08:56:54 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/11 21:45:03 tv Exp $
 #
 
 DISTNAME=	epic4-2.2
@@ -20,7 +20,6 @@ HOMEPAGE=	http://www.epicsol.org/
 COMMENT=	The (E)nhanced (P)rogrammable (I)RC-II (C)lient
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/04/11 02:44:26 jschauma Exp $
+# $NetBSD: Makefile,v 1.42 2005/04/11 21:48:14 tv Exp $
 
 DISTNAME=	tk8.4.9-src
 PKGNAME=	tk-8.4.9
@@ -15,7 +15,6 @@ WRKSRC=			${WRKDIR}/${DISTNAME:C/-src//}/unix
 
 USE_X11=		yes
 USE_LIBTOOL=		yes
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--enable-threads

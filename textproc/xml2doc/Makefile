@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/28 23:18:20 reed Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:43 tv Exp $
 #
 
 DISTNAME=	xml2doc-20030510
@@ -12,7 +12,6 @@ HOMEPAGE=	http://xml2doc.sourceforge.net/
 COMMENT=	Xml to document formats converter
 
 WRKSRC=			${WRKDIR}/xml2doc
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make

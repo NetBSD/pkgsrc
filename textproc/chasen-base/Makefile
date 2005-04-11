@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/02/13 16:41:59 taca Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:33 tv Exp $
 #
 
 DISTNAME=		chasen-${CHASEN_VERSION}
@@ -19,7 +19,6 @@ COMMENT=		ChaSen, Japanese Morphological Analysis System
 GNU_CONFIGURE=		yes
 USE_LANGUAGE=		c c++
 USE_LIBTOOL=		yes
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 OWN_DIRS=		${CHASEN_DICDIR}
 

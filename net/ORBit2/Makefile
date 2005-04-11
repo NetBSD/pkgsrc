@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/02/05 12:30:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2005/04/11 21:46:44 tv Exp $
 #
 
 DISTNAME=		ORBit2-2.12.1
@@ -16,7 +16,6 @@ CONFLICTS=		linc>=1.1
 
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

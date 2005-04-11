@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/12/29 15:31:24 minskim Exp $
+# $NetBSD: Makefile,v 1.33 2005/04/11 21:45:49 tv Exp $
 
 DISTNAME=	dopewars-1.5.10
 CATEGORIES=	games
@@ -8,7 +8,6 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://dopewars.sourceforge.net/
 COMMENT=	Make a fortune dealing drugs on the streets of New York
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES

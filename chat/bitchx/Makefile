@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/03/24 23:43:44 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2005/04/11 21:45:03 tv Exp $
 
 DISTNAME=	ircii-pana-1.1-final
 PKGNAME=	bitchx-1.1
@@ -15,7 +15,6 @@ COMMENT=	IRC client based on ircII
 NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64 *-*-x86_64
 
 WRKSRC=			${WRKDIR}/BitchX
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS=		--with-ssl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/12/03 15:15:11 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/11 21:47:45 tv Exp $
 
 DISTNAME=	plan-1.8.4
 PKGREVISION=	1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.in-berlin.de/User/bitrot/plan.html
 COMMENT=	Schedule planner based on X/Motif
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
-USE_BUILDLINK3=	YES
 USE_X11BASE=	YES
 BUILD_TARGET=	${LOWER_OPSYS}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/19 19:25:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:09 tv Exp $
 #
 
 DISTNAME=	Unicode-Map8-0.12
@@ -13,7 +13,6 @@ COMMENT=	Perl5 module providing mapping tables between charsets
 
 DEPENDS+=	p5-Unicode-String-[0-9]*:../../converters/p5-Unicode-String
 
-USE_BUILDLINK3=		yes
 PERL5_PACKLIST=         ${PERL5_SITEARCH}/auto/Unicode/Map8/.packlist
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/14 18:47:09 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:02 tv Exp $
 #
 
 DISTNAME=	gsmc-1.1
@@ -13,7 +13,6 @@ COMMENT=	Smith charting program
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 
 .include "../../devel/pkgconfig/buildlink3.mk"

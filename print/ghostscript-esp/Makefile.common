@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2004/11/20 20:35:06 jlam Exp $
+# $NetBSD: Makefile.common,v 1.21 2005/04/11 21:47:07 tv Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 BASEGS_VERS=	7.07
@@ -22,7 +22,6 @@ CONFLICTS+=	ghostscript-gnu{,-nox11,-x11}-[0-9]*
 DEPENDS+=	ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes

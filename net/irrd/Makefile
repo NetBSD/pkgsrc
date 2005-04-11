@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/12/31 23:01:33 kim Exp $
+# $NetBSD: Makefile,v 1.27 2005/04/11 21:46:48 tv Exp $
 
 DISTNAME=		irrd2.2.3
 PKGNAME=		irrd-2.2.3
@@ -15,7 +15,6 @@ COMMENT=		Internet Routing Registry Daemon
 DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=		wget-[0-9]*:../../net/wget
 
-USE_BUILDLINK3=		YES
 USE_PERL5=		# defined
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/23 11:41:35 recht Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:48:03 tv Exp $
 
 DISTNAME=	ZWeatherApplet-1.51
 PKGREVISION=	1
@@ -13,7 +13,6 @@ COMMENT=	Zope Weather applet
 DEPENDS+=	${PYPKGPREFIX}-pymetar-[0-9]*:../../net/py-METAR
 
 ZOPE_COPYPRODUCT= zope-std-copyproduct-short
-USE_BUILDLINK3=	yes
 
 .include "../../www/zope25/product.mk"
 .include "../../mk/bsd.pkg.mk"

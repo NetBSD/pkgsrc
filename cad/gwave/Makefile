@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/12/03 14:31:29 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:45:02 tv Exp $
 #
 
 DISTNAME=	gwave-20030804
@@ -10,7 +10,6 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.cs.unc.edu/~tell/gwave/
 COMMENT=	Viewer for spice-like simulator output and other analog data
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 EVAL_PREFIX+=	GRAPHDIR=plotutils

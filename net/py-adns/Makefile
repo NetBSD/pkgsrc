@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:17:57 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:58 tv Exp $
 #
 
 DISTNAME=       adns-python-1.0.0
@@ -12,7 +12,6 @@ HOMEPAGE=       http://dustman.net/andy/python/adns-python/
 COMMENT=        Python interface to the GNU asynchronous DNS resolver library
 
 PYDISTUTILSPKG=
-USE_BUILDLINK3= yes
 
 .include "../../net/adns/buildlink3.mk"
 .include "../../lang/python/extension.mk"

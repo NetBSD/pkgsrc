@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/10/03 00:14:56 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:46:06 tv Exp $
 #
 
 DISTNAME=       mgl2-alpha-020
@@ -14,7 +14,6 @@ COMMENT=	Graphics library for NEC Mobilegear/PocketBSD, NetBSD/hpcmips
 DEPENDS+=	mglfonts>=0.1:../../fonts/mglfonts
 
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK3=	yes
 USE_X11=	yes
 
 MGLDOCS=	im.doc mgl1.doc shlib.doc

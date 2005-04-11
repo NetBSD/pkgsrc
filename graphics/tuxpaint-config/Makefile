@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/07 15:40:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:09 tv Exp $
 #
 
 DISTNAME=		tuxpaint-config-0.0.5
@@ -9,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		ftp://ftp.sonic.net/pub/users/nbs/unix/x/tuxpaint/config/
 COMMENT=		Configuration program for tuxpaint
 
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
 

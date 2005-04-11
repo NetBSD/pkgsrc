@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/20 11:31:10 grant Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:39 tv Exp $
 #
 
 DISTNAME=	XML-LibXML-XPathContext-0.06
@@ -13,7 +13,6 @@ COMMENT=	Perl interface to libxml2's xmlXPathContext
 
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
 
-USE_BUILDLINK3= yes
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/LibXML/XPathContext/.packlist
 
 .include "../../lang/perl5/module.mk"

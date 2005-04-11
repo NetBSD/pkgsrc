@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/07/22 09:16:00 recht Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:09 tv Exp $
 
 DISTNAME=	ChineseCodecs1.2.0
 PKGNAME=	${PYPKGPREFIX}-zhCodecs-1.2.0
@@ -13,7 +13,6 @@ COMMENT=	Python Unicode codecs for Chinese charsets
 WRKSRC=		${WRKDIR}/${DISTNAME}/Python
 PYDISTUTILSPKG=	# defined
 PYBINMODULE=	# defined
-USE_BUILDLINK3=	yes
 
 post-extract:
 	@${CHMOD} 711 ${WRKSRC}/chinesetw

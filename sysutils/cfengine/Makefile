@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/03/31 01:39:51 seb Exp $
+# $NetBSD: Makefile,v 1.18 2005/04/11 21:47:22 tv Exp $
 #
 
 DISTNAME=	cfengine-1.6.5
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cfengine.org/
 COMMENT=	Automate configuration and administration of large systems
 
-USE_BUILDLINK3=		YES
 USE_OLD_DES_API=	YES
 USE_GNU_TOOLS+=		lex
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/22 16:34:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:42 tv Exp $
 #
 
 DISTNAME=		rinfo23
@@ -11,7 +11,6 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.logiqx.com/Tools/ROMInfo/ROMInfo.shtml
 COMMENT=		Identify arcade ROM sets
 
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 WRKSRC=			${WRKDIR}
 MAKEFILE=		makefile

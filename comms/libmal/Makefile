@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/13 21:28:27 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:07 tv Exp $
 
 DISTNAME=		libmal-0.40
 PKGREVISION=		1
@@ -11,7 +11,6 @@ COMMENT=		MAL convenience library
 
 CONFLICTS+=		malsync-[0-9]*
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		# defined
 

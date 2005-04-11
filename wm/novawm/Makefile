@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/07 01:14:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:48 tv Exp $
 #
 
 DISTNAME=	NovaWM-0.8_alpha
@@ -11,7 +11,6 @@ HOMEPAGE=	http://novawm.sourceforge.net/
 COMMENT=	Nova window manager
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_X11=	YES
 

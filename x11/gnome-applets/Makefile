@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/11/30 18:26:41 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2005/04/11 21:48:07 tv Exp $
 #
 
 DISTNAME=		gnome-applets-1.4.0.4
@@ -13,7 +13,6 @@ COMMENT=		Applets for GNOME
 
 BUILDLINK_DEPENDS.gnome-panel=	gnome-panel<2.0
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make

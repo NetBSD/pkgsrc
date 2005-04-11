@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/14 21:29:47 shannonjr Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:17 tv Exp $
 #
 
 DISTNAME=		pinentry-0.7.1
@@ -11,7 +11,6 @@ HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 COMMENT=		Applications for entering PINs or Passphrases
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 
 INFO_FILES=		pinentry.info

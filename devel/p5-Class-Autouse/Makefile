@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/03 04:21:33 epg Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:29 tv Exp $
 
 DISTNAME=	Class-Autouse-1.16
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,6 @@ COMMENT=	Run-time class loading on first method call
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Class/Autouse/.packlist
 
 MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skip

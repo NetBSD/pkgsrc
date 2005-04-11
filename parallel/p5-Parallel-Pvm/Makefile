@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/20 11:31:07 grant Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:04 tv Exp $
 #
 
 DISTNAME=	Parallel-Pvm-1.3.0
@@ -19,7 +19,6 @@ MAKE_ENV+=		PVM_ROOT=${PVM_ROOT} PVM_ARCH=${PVM_ARCH}
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Parallel/Pvm/.packlist
 MESSAGE_SUBST+=		PVM_ROOT=${PVM_ROOT}
 EXAMPLES_DIR=		${PREFIX}/share/examples/p5-Parallel-Pvm
-USE_BUILDLINK3=		YES
 
 post-build:
 .for f in hello.pl hello_other.pl

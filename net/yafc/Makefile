@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/11/27 00:32:53 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:03 tv Exp $
 
 DISTNAME=	yafc-0.7.10
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Yet another FTP client
 
 GNU_CONFIGURE=		yes
 USE_GNU_READLINE=	yes
-USE_BUILDLINK3=		yes
 
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 INFO_FILES=		yafc.info

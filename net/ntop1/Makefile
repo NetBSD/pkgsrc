@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/09 07:13:31 kim Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:52 tv Exp $
 
 DISTNAME=		ntop-1.1
 PKGREVISION=		4
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.ntop.org/
 COMMENT=		Shows network usage (similar to "top" for processes)
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-threads=no
 

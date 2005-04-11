@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/20 11:30:58 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:29 tv Exp $
 
 DISTNAME=	Algorithm-Diff-1.1901
 PKGNAME=	p5-${DISTNAME:S/1901/19.01/}
@@ -13,7 +13,6 @@ COMMENT=	Perl module for diffing similar to diff(1)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Algorithm/Diff/.packlist
 
 .include "../../lang/perl5/module.mk"

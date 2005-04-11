@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/12/28 02:47:51 reed Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:48:02 tv Exp $
 #
 
 DISTNAME=	tinyproxy-1.6.2
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tinyproxy.sourceforge.net/
 COMMENT=	Lightweight HTTP/SSL proxy
 
-USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 

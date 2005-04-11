@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/11/12 12:13:44 mjl Exp $
+# $NetBSD: Makefile,v 1.38 2005/04/11 21:47:22 tv Exp $
 #
 
 PKGNAME=		amanda-client-${VERS}
@@ -7,7 +7,6 @@ SVR4_PKGNAME=		amacl
 
 COMMENT=		Client part of Amanda, a network backup system
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"

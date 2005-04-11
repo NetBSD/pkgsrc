@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/10/03 00:18:28 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:48:04 tv Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-libs-${XF_VER}
@@ -26,7 +26,6 @@ BUILD_DEPENDS=		imake>=${XF_VER}:../../x11/imake
 CONFLICTS+=		MesaLib-[0-9]* glu-[0-9]*
 .endif
 
-USE_BUILDLINK3=			yes
 BUILDLINK_PASSTHRU_DIRS+=	${X11ROOT}/lib
 
 XBUILD_DIRS=		lib nls programs/Xserver/include \

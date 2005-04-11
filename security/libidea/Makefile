@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/04/18 18:48:41 snj Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:13 tv Exp $
 #
 
 DISTNAME=	libidea-0.8.2b
@@ -20,7 +20,6 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
-USE_BUILDLINK3=	yes
 
 do-install:
 	cd ${WRKSRC} &&							\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/03 17:54:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:29 tv Exp $
 
 DISTNAME=		nspr-4.4.1
 PKGREVISION=		1
@@ -11,7 +11,6 @@ COMMENT=		Platform-neutral API for system level and libc like functions
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla/nsprpub/build
 
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 

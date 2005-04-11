@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/20 11:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:44:56 tv Exp $
 
 DISTNAME=	MP3-Info-1.01
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/search?module=MP3::Info
 COMMENT=	Manipulate / fetch info from MP3 audio files
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/MP3/Info/.packlist
 
 .include "../../lang/perl5/module.mk"

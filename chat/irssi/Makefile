@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/03/19 15:32:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2005/04/11 21:45:04 tv Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 PKGREVISION=		3
@@ -16,7 +16,6 @@ COMMENT=                Secure and modular IRC client with text mode user interf
 BUILD_DEFS+=		USE_INET6 IRSSI_USE_PERL IRSSI_USE_SSL
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 

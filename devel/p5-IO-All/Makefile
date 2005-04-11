@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/26 23:18:29 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:32 tv Exp $
 
 DISTNAME=	IO-All-0.33
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Spiffy OO interface to Perl IO
 DEPENDS+=	p5-Filter-[0-9]*:../../textproc/p5-Filter
 DEPENDS+=	p5-Spiffy>=0.21:../../devel/p5-Spiffy
 
-USE_BUILDLINK3=		yes
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/IO/All/.packlist
 
 .include "../../lang/perl5/module.mk"

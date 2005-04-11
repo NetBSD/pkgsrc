@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/04/11 11:50:03 tron Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:45:58 tv Exp $
 
 DISTNAME=		xgalaga-2.0.34
 PKGREVISION=		2
@@ -10,7 +10,6 @@ COMMENT=		Very fast true-to-the-original port of galaga for X11
 
 NO_SRC_ON_FTP=		"already in MASTER_SITE_LOCAL"
 
-USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${PREFIX}/share/xgalaga

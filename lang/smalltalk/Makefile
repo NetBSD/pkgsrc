@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/03/20 13:32:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2005/04/11 21:46:16 tv Exp $
 
 DISTNAME=	smalltalk-2.1.9
 CATEGORIES=	lang
@@ -11,7 +11,6 @@ COMMENT=	GNU Smalltalk: A smalltalk-80 implementation
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-powerpc
 
 LIBTOOLIZE_PLIST=	NO # Manually created libc.la breaks PLIST.
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		awk make
 USE_GNU_READLINE=	YES
 USE_LIBTOOL=		YES

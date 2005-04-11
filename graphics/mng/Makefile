@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/02/20 00:51:27 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/11 21:46:06 tv Exp $
 
 DISTNAME=	lm1009
 PKGNAME=	mng-1.0.9
@@ -16,7 +16,6 @@ COMMENT=	Multiple-image Network Graphics (MNG) reference library
 # Waiting for automake to be pkgviews-enabled
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 

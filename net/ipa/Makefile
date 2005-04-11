@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/02/17 03:00:33 uebayasi Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:48 tv Exp $
 #
 
 DISTNAME=	ipa-1.3.6
@@ -20,7 +20,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_PACKAGE=		${RESTRICTED}
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 BUILD_TARGET=		# empty
 

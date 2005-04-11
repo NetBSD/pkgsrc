@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:13:15 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:04 tv Exp $
 
 DISTNAME=	libyahoo-0.18.4
 PKGREVISION=	1
@@ -9,7 +9,6 @@ MAINTAINER=	ken@246gt.com
 HOMEPAGE=	http://sourceforge.net/projects/libyahoo/
 COMMENT=	Yahoo! Messenger client library
 
-USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 

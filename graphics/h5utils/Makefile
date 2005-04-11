@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/15 14:50:06 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:04 tv Exp $
 #
 
 DISTNAME=		h5utils-1.9.1
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ab-initio.mit.edu/h5utils/
 COMMENT=		Utilities for conversion from/to HDF5
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/14 23:36:38 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:14 tv Exp $
 #
 
 DISTNAME=	framework-2.3
@@ -26,7 +26,6 @@ PERL_FILES=	msfcli msfconsole msfdldebug msfencode msflogdump msfpayload \
 REPLACE_PERL+=	${PERL_FILES} tools/socketNinja.pl sdk/formatGen.pl \
 		sdk/patternOffset.pl sdk/spitCode.pl src/shellcode/import.pl
 
-NO_BUILDLINK=	YES
 NO_BUILD=	YES
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.msf

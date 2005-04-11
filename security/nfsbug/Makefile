@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/12/18 19:24:26 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:14 tv Exp $
 
 DISTNAME=	nfsshell-1.0
 CATEGORIES=	net security
@@ -12,7 +12,6 @@ COMMENT=	NFS security verification suite
 EXTRACT_ONLY=   nfsBugFerret.tgz
 WRKSRC=		${WRKDIR}/nfsbug
 
-USE_BUILDLINK3=	yes
 
 # Only works on 1.5B or greater on most platforms but will work on any x86
 # since struct pmap didn't get exposed through vm.h there.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/03/14 21:55:38 tv Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/11 21:46:08 tv Exp $
 
 DISTNAME=	pl231src
 PKGNAME=	ploticus-2.31
@@ -11,7 +11,6 @@ COMMENT=	Versatile data visualization engine
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_X11=		yes
-USE_BUILDLINK3=		yes
 NO_CONFIGURE=		yes
 
 BUILD_TARGET=	ploticus

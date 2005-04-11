@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/12/24 04:32:55 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2005/04/11 21:46:17 tv Exp $
 
 DISTNAME=	balsa-2.2.6
 PKGREVISION=	1
@@ -17,7 +17,6 @@ USE_DIRS+=		gnome2-1.5
 USE_PERL5=		build
 USE_X11=		yes
 USE_PKGINSTALL=		yes
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

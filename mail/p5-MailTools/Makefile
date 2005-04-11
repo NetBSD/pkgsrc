@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/02/27 23:52:01 adrianp Exp $
+# $NetBSD: Makefile,v 1.31 2005/04/11 21:46:22 tv Exp $
 
 DISTNAME=	MailTools-1.66
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,6 @@ BUILD_DEPENDS+=	p5-Net>=1.09:../../net/p5-Net
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/02/09 20:37:08 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:52 tv Exp $
 #
 
 DISTNAME=	minami-1.0.2
@@ -10,7 +10,6 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.guru.gr.jp/~issei/minami/
 COMMENT=	Text adventure
 
-USE_BUILDLINK3=	YES
 REPLACE_PERL=	gen_act gen_dun gen_itm gen_scn minflag
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/16 20:03:57 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:05 tv Exp $
 #
 
 DISTNAME=	kphotools-0.2.1
@@ -11,7 +11,6 @@ MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://kphotools.sourceforge.net/
 COMMENT=	KDE app which helps you creating fast online photo galleries in HTML
 
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES

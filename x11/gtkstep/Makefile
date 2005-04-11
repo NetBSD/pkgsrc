@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:18:33 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:48:08 tv Exp $
 
 DISTNAME=		gtkstep-1.10
 PKGREVISION=		5
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ulli.linuxave.net/gtkstep/index.html
 COMMENT=		GTK theme-engine to yield a NEXTSTEP(tm) look and feel
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined

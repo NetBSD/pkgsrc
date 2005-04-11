@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2004/11/15 21:58:17 jlam Exp $
+# $NetBSD: Makefile.common,v 1.27 2005/04/11 21:47:11 tv Exp $
 #
 # This file is currently included by:
 #
@@ -40,7 +40,6 @@ DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.cyrus-sasl}
 .  endif
 .endif
 
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make

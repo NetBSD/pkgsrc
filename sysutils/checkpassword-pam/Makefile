@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/14 05:15:40 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:23 tv Exp $
 #
 
 DISTNAME=		checkpassword-pam-0.99
@@ -11,7 +11,6 @@ COMMENT=		PAM checkpassword-compatible authentication program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:18:04 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:06 tv Exp $
 
 DISTNAME=	bg5ps-1.3.0
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Convert Big5/GB encoded files to postscript
 
 DEPENDS+=	arphic-ttf>=2.11:../../fonts/arphic-ttf
 
-USE_BUILDLINK3=		yes
 PKG_SYSCONFSUBDIR?=	bg5ps
 
 post-patch:

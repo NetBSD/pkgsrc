@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:14:47 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:59 tv Exp $
 #
 
 DISTNAME=	zoom-1.0.1
@@ -15,7 +15,6 @@ MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://www.logicalshift.demon.co.uk/unix/zoom/
 COMMENT=		Plays Infocom-compatible games, with graphics support
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

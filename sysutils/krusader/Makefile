@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/09 11:52:03 markd Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:25 tv Exp $
 #
 
 DISTNAME=	krusader-1.51
@@ -9,7 +9,6 @@ MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://krusader.sourceforge.net/
 COMMENT=	Advanced twin-panel (commander-style) file-manager for KDE 3.x
 
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES

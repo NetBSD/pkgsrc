@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/12/28 02:47:43 reed Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/11 21:45:19 tv Exp $
 
 DISTNAME=		distcc-2.18.2
 PKGREVISION=		2
@@ -10,7 +10,6 @@ MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://distcc.samba.org/
 COMMENT=		Tool for distributed C/C++ compiling
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		yes
 

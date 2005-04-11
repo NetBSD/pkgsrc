@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/02/14 09:12:06 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:44:59 tv Exp $
 #
 
 DISTNAME=	liveice-xmms
@@ -13,7 +13,6 @@ COMMENT=	Audio streaming plugin for XMMS
 
 WRKSRC=         	${WRKDIR}/LiveIce-1.0.0
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
 CFLAGS+=		-DLAME="\"${BUILDLINK_PREFIX.lame}/bin/lame\""

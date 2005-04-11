@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/22 07:37:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:32 tv Exp $
 #
 
 DISTNAME=	IPC-ShareLite-0.09
@@ -12,7 +12,6 @@ COMMENT=	Light-weight interface to shared memory
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		 YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/IPC/ShareLite/.packlist
 
 post-extract:

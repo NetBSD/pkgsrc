@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/28 23:18:17 reed Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:59 tv Exp $
 
 DISTNAME=	gpsdrive-1.31
 PKGREVISION=	7
@@ -12,7 +12,6 @@ COMMENT=	GPS Navigation system
 DEPENDS+=	gpsd>=1.07:../../geography/gpsd
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 
 USE_LANGUAGE=	c c++

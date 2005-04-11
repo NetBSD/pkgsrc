@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/01/19 02:11:24 itojun Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/11 21:46:52 tv Exp $
 
 DISTNAME=	nsd-2.2.0
 CATEGORIES=	net
@@ -13,7 +13,6 @@ BUILD_DEFS+=	USE_INET6
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 
 CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=--enable-bind8-stats

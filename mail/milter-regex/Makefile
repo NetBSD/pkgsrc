@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/06/11 23:17:50 jdarrow Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:20 tv Exp $
 #
 
 DISTNAME=	milter-regex-1.5
@@ -9,7 +9,6 @@ MAINTAINER=	jdarrow@NetBSD.org
 HOMEPAGE=	http://www.benzedrine.cx/milter-regex.html
 COMMENT=	Milter enabling regular expression filtering
 
-USE_BUILDLINK3=	YES
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/milter-regex ${PREFIX}/sbin

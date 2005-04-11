@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/12/28 02:47:45 reed Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:46:28 tv Exp $
 
 DISTNAME=	teapop-0.3.8
 PKGREVISION=	2
@@ -10,7 +10,6 @@ MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://www.toontown.org/teapop/
 COMMENT=	Yet another RFC1939 compliant POP3 server
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 

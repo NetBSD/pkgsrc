@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/03/23 22:11:57 markd Exp $
+# $NetBSD: Makefile,v 1.31 2005/04/11 21:46:35 tv Exp $
 
 DISTNAME=	kdeedu-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -10,7 +10,6 @@ REPLACE_PERL=	\
 	kvoctrain/kvoctrain/langen2kvtml \
 	kvoctrain/kvoctrain/spotlight2kvtml
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 
 .include "../../meta-pkgs/kde3/kde3.mk"

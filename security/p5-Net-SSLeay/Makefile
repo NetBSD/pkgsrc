@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/02/23 10:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2005/04/11 21:47:17 tv Exp $
 
 DISTNAME=	Net_SSLeay.pm-1.26
 PKGNAME=	p5-${DISTNAME:S/Net_/Net-/:S/.pm//}
@@ -13,7 +13,6 @@ COMMENT=	Perl5 module for using OpenSSL
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/SSLeay/.packlist
 MAKE_PARAMS=		${SSLBASE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/04/25 05:08:53 snj Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/11 21:47:20 tv Exp $
 #
 
 DISTNAME=	tripwire-1.2
@@ -12,7 +12,6 @@ COMMENT=	File and directory integrity checker
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* SunOS-*-*
 
-USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 
 PKG_SYSCONFSUBDIR=	tripwire

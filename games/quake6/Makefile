@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/10/03 00:14:46 tv Exp $
+# $NetBSD: Makefile,v 1.27 2005/04/11 21:45:56 tv Exp $
 
 DISTNAME=	quake-v6-bsd-kame
 PKGNAME=	quake6-0.0
@@ -13,7 +13,6 @@ COMMENT=	Quake over IPv6
 DEPENDS=	quakedata-[0-9]*:../../games/quakedata
 
 WRKSRC=		${WRKDIR}/quakeforge
-USE_BUILDLINK3=	yes
 USE_X11=	yes
 
 post-extract:

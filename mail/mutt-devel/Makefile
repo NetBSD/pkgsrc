@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/10/03 00:12:54 tv Exp $
+# $NetBSD: Makefile,v 1.30 2005/04/11 21:46:21 tv Exp $
 
 DISTNAME=		mutt-1.5.6i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -20,7 +20,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
 BUILD_USES_MSGFMT=	yes
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_PERL5=		yes
 REPLACE_PERL=		smime_keys */*.pl

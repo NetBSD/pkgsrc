@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/29 13:58:21 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:48:06 tv Exp $
 #
 
 DISTNAME=		ggiterm-0.7.0
@@ -9,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ggiterm.sourceforge.net/
 COMMENT=		Libggi-based terminal emulator
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

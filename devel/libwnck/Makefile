@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/03/22 16:05:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2005/04/11 21:45:28 tv Exp $
 #
 
 DISTNAME=	libwnck-2.10.0
@@ -13,7 +13,6 @@ COMMENT=	Library to write pagers and tasklists
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes

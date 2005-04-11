@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/02/21 03:14:36 uebayasi Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:42 tv Exp $
 #
 
 .include "../../multimedia/libflash/Makefile.common"
@@ -12,7 +12,6 @@ COMMENT=	Mozilla open source Flash(tm) plugin
 
 DEPENDS+=	mozilla>=0.9.9:../../www/mozilla
 
-USE_BUILDLINK3=	YES
 USE_X11=	YES
 USE_LIBTOOL=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2004/12/28 23:18:19 reed Exp $
+# $NetBSD: Makefile,v 1.51 2005/04/11 21:47:49 tv Exp $
 
 DISTNAME=	WindowMaker-0.91.0
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
@@ -14,7 +14,6 @@ COMMENT=	GNUStep-compliant NEXTSTEP(tm) window manager clone
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
 USE_PKGLOCALEDIR=	YES

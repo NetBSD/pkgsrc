@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/20 23:03:57 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:27 tv Exp $
 
 DISTNAME=	libnet-1.1.2.1
 CATEGORIES=	devel net
@@ -12,7 +12,6 @@ CONFLICTS=	libnet-1.0.[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/libnet

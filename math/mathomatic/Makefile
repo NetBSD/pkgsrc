@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/04/11 03:45:43 minskim Exp $
+# $NetBSD: Makefile,v 1.35 2005/04/11 21:46:29 tv Exp $
 #
 
 DISTNAME=		mathomatic-12.2c
@@ -12,7 +12,6 @@ COMMENT=		Small portable symbolic math program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 NO_CONFIGURE=		yes
 MAKEFILE=		makefile
 

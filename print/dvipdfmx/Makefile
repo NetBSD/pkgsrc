@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:18:04 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:06 tv Exp $
 
 DISTNAME=	dvipdfmx-20031116
 PKGNAME=	${DISTNAME:S/-/-0.0.0./}
@@ -16,7 +16,6 @@ DEPENDS+=	teTeX-bin>=2.0.2:../../print/teTeX-bin
 CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL

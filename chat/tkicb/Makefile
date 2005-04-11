@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/12 01:07:05 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:06 tv Exp $
 #
 
 DISTNAME=	icb.2.1.4
@@ -23,7 +23,6 @@ DEPENDS+=	tk-[0-9]*:../../x11/tk
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
-NO_BUILDLINK=	YES
 NO_CONFIGURE=	YES
 USE_LANGUAGES=	# empty
 

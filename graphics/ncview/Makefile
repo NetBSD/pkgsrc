@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:14:56 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:06 tv Exp $
 
 DISTNAME=		ncview-1.92d
 PKGREVISION=	1
@@ -9,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://meteora.ucsd.edu/~pierce/ncview_home_page.html
 COMMENT=		Visual browser for netCDF format files
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/04 13:57:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:25 tv Exp $
 
 DISTNAME=	guile-slib-2.4.2
 PKGREVISION=	5
@@ -12,7 +12,6 @@ COMMENT=	SLIB installation for guile 1.4 Scheme interpreter
 
 DEPENDS+=	slib>=2.4.2:../../devel/slib
 
-USE_BUILDLINK3=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 

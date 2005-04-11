@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/01/21 12:57:45 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:08 tv Exp $
 #
 
 DISTNAME=	chef.l
@@ -13,7 +13,6 @@ COMMENT=	Convert from English to (mock) Swedish - Bork Bork Bork!
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}
 

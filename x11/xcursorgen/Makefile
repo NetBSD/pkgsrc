@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:18:39 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:48:14 tv Exp $
 
 DISTNAME=	xcursorgen-4.3.0
 PKGREVISION=	1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	Create an X cursor file from a collection of PNG images
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/-.*//}
-USE_BUILDLINK3=	YES
 USE_IMAKE=	YES
 
 .include "../../mk/bsd.prefs.mk"

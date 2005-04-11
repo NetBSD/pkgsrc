@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/12/20 11:31:07 grant Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:46:57 tv Exp $
 #
 
 DISTNAME=	Wais-2.311
@@ -13,7 +13,6 @@ COMMENT=	Perl5 module for accessing WAIS servers
 
 DEPENDS+=	p5-Curses>=1.02:../../devel/p5-Curses
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Wais/.packlist
 
 post-patch:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/06 11:10:29 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:25 tv Exp $
 
 DISTNAME=	libol-0.3.15
 CATEGORIES=	sysutils
@@ -10,7 +10,6 @@ COMMENT=	Support library for syslog-ng
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/03/24 21:12:58 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:46:40 tv Exp $
 
 DISTNAME=		splitvt-1.6.3
 CATEGORIES=		misc
@@ -10,7 +10,6 @@ COMMENT=		Run two shells in a split window/terminal
 BUILD_TARGET=
 CONFIGURE_SCRIPT=	./Configure
 HAS_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/splitvt ${PREFIX}/bin

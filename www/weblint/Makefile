@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/02/17 02:11:30 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:48:03 tv Exp $
 #
 
 DISTNAME=	weblint-1.020
@@ -15,7 +15,6 @@ COMMENT=	HTML validator and sanity checker
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 
 INSTALLATION_DIRS+=	bin man/man1
 

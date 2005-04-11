@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/10/03 00:14:51 tv Exp $
+# $NetBSD: Makefile,v 1.40 2005/04/11 21:46:03 tv Exp $
 #
 
 DISTNAME=	giram-0.3.5
@@ -13,7 +13,6 @@ COMMENT=	Giram Is Really A Modeller
 DEPENDS+=	povray-[0-9]*:../../graphics/povray
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
-USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES

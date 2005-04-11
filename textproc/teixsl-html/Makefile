@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/09 18:34:37 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:47:42 tv Exp $
 
 DISTNAME=	teixsl-html
 PKGNAME=	${DISTNAME}-3.3
@@ -15,7 +15,6 @@ WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
-USE_BUILDLINK3=	YES
 
 TEIDIR=		${PREFIX}/share/xsl/tei
 

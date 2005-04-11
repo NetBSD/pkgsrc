@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/27 20:58:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:38 tv Exp $
 #
 
 DISTNAME=		Text-Shellwords-1.07
@@ -12,7 +12,6 @@ COMMENT=		Wrapper around shellwords.pl package
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 PERL5_PACKLIST=         ${PERL5_SITEARCH}/auto/Text/Shellwords/.packlist
 
 .include "../../lang/perl5/module.mk"

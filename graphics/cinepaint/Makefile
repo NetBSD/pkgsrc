@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/26 00:34:55 reed Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:01 tv Exp $
 
 DISTNAME=	cinepaint-0.19-0
 PKGNAME=	cinepaint-0.19.0
@@ -11,7 +11,6 @@ COMMENT=	Motion picture painting and image retouching program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 

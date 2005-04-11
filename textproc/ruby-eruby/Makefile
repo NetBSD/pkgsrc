@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/03/24 21:13:02 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:42 tv Exp $
 
 DISTNAME=	eruby-${ERUBY_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Interprets Ruby code embedded in a text file
 # manual page conflicts.
 CONFLICTS+=	ruby[1-9][0-9]-eruby-*
 
-USE_BUILDLINK3=		yes
 RUBY_HAS_ARCHLIB=	yes
 ERUBY_VERSION=		1.0.5
 HAS_CONFIGURE=		yes

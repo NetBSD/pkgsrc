@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:14:50 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:02 tv Exp $
 #
 
 DISTNAME=	g3d-0.0.2
@@ -16,7 +16,6 @@ USE_LIBTOOL=	YES
 USE_GNU_TOOLS+=	make
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	yes
 
 post-configure:
 	@${LN} -s ${WRKSRC}/b3d/src ${WRKSRC}/g3d/b3d

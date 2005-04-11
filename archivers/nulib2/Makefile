@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/11/29 04:50:34 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:44:49 tv Exp $
 #
 
 DISTNAME=	nulibdist-203
@@ -13,7 +13,6 @@ COMMENT=	Handles Apple II ShrinkIt (NuFX) file/disk archives
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/dist/2/}
-USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--cache-file=${WRKDIR}/config.cache
 

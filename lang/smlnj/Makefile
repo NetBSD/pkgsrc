@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/06/06 04:38:29 snj Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:16 tv Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -37,7 +37,6 @@ SML_VERSION=	110.42
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	smlnj-${SML_VERSION}
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 
 # previous versions of the package had an additional '-'

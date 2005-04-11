@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/25 19:40:34 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:12 tv Exp $
 #
 
 DISTNAME=	CgLinux-1.3.0408-0400
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=  *-*-i386
 WRKSRC=		${WRKDIR}
 CHECK_SHLIBS=	no
 NO_BUILD=	yes
-NO_BUILDLINK=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

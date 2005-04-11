@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2005/03/18 07:59:09 martti Exp $
+# $NetBSD: Makefile.common,v 1.19 2005/04/11 21:46:33 tv Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce-4.2.1.1/src/ \
 			http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-4.2.1.1/src/ \
@@ -11,7 +11,6 @@ XFCE4_VERSION=		4.2.1
 
 # Do NOT put a PKGREVISION statement in this file!
 
-USE_BUILDLINK3=		yes
 USE_X11=		# defined
 USE_PKGLOCALEDIR=	# defined
 USE_LIBTOOL=		# defined

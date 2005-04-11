@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/08/26 01:01:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:45 tv Exp $
 
 DISTNAME=		suse_openmotif-${SUSE_VERSION}
 PKGREVISION=		1
@@ -16,7 +16,6 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386 FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
-NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		openmotif-libs-2.2.2-515.${SUSE_ARCH}.rpm \

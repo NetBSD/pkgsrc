@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/10 00:47:44 epg Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:30 tv Exp $
 #
 
 DISTNAME=		xapply-3.4
@@ -11,7 +11,6 @@ COMMENT=		Parallel Execution tool a la xargs/apply
 
 BUILD_DEPENDS+=		mkcmd>=8.14:../../devel/mkcmd
 
-USE_BUILDLINK3=		yes
 
 INSTALLATION_DIRS=	bin man/man1
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/03 15:15:10 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:29 tv Exp $
 #
 
 DISTNAME=		sredird-2.0.0
@@ -9,7 +9,6 @@ MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://www.pcmicro.com/sredird/
 COMMENT=		RFC2217 compliant serial port redirector
 
-USE_BUILDLINK3=		yes
 
 MAKE_FLAGS=		CC="${CC}" CFLAGS="${CFLAGS}"
 BUILD_TARGET=		sredird

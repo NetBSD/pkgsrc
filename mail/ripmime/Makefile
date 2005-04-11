@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/04 14:51:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:27 tv Exp $
 #
 
 DISTNAME=       ripmime-1.4.0.2
@@ -13,6 +13,5 @@ PKGMANDIR?=	man
 MAKE_ENV+=	PKGMANDIR=${PKGMANDIR}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}
 
-USE_BUILDLINK3=	YES
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/21 20:34:14 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:25 tv Exp $
 
 DISTNAME=	guile-lib-0.1.2
 CATEGORIES=	devel
@@ -17,7 +17,6 @@ BUILD_DIRS=	${WRKSRC}/build
 CONFIGURE_SCRIPT=	../src/configure
 CONFIGURE_ARGS=	--prefix=${PREFIX}
 
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS=	make
 USE_MAKEINFO=	yes
 TEXINFO_REQD=	4.2

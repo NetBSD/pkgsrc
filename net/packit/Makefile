@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/20 22:46:37 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:57 tv Exp $
 
 DISTNAME=	packit-1.0
 CATEGORIES=	net
@@ -10,7 +10,6 @@ HOMEPAGE=	http://packit.sourceforge.net/
 COMMENT=	Network auditing tool with the ability to manipulate IP traffic
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_BUILTIN.libpcap=    YES
 
 CONFIGURE_ARGS+=	--with-libpcap-includes=${BUILDLINK_PREFIX.libpcap}/include

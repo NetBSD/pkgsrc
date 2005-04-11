@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/11/07 21:44:22 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/04/11 21:47:02 tv Exp $
 #
 
 DISTNAME=	wistumbler2.00-pre9
@@ -19,7 +19,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-*
 
 HAS_CONFIGURE=		YES
 MANCOMPRESSED=		YES
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 
 CONFIGURE_ENV+=		PREFIX=${PREFIX}

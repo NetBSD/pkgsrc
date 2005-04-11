@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/20 11:31:08 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:15 tv Exp $
 #
 
 DISTNAME=		Crypt-RandPasswd-0.02
@@ -11,7 +11,6 @@ MAINTAINER=		he@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-RandPasswd/
 COMMENT=		Random password generator based on FIPS-181
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/RandPasswd/.packlist
 
 .include "../../lang/perl5/module.mk"

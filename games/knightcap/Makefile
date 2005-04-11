@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/03/13 16:48:43 uebayasi Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:45:51 tv Exp $
 
 DISTNAME=		KnightCap-3.6
 PKGNAME=		knightcap-3.6
@@ -13,7 +13,6 @@ COMMENT=		Chess engine with 3D OpenGL-rendered chessboard
 BUILD_TARGET=		KnightCap
 
 WRKSRC=			${WRKDIR}/Export
-USE_BUILDLINK3=		yes
 USE_X11=		# defined
 
 MAKE_ENV+=		MESA=${BUILDLINK_PREFIX.MesaLib}

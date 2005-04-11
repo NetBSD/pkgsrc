@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/01/09 13:09:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.48 2005/04/11 21:47:20 tv Exp $
 
 DISTNAME=		stunnel-4.07
 PKGREVISION=		1
@@ -11,7 +11,6 @@ MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.stunnel.org/
 COMMENT=		Universal SSL tunnel
 
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \

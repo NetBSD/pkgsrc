@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/05 00:12:10 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:44:52 tv Exp $
 #
 
 DISTNAME=		distmp3-0.1.9
@@ -9,7 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		grant@NetBSD.org
 COMMENT=		Distributed mp3 encoding across multiple hosts
 
-USE_BUILDLINK3=		yes
 USE_LANGUAGES=		# empty
 USE_PERL5=		# defined
 USE_PKGINSTALL=		yes

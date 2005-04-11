@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/12/28 02:47:47 reed Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:46:59 tv Exp $
 
 DISTNAME=	radiusd-cistron-1.6.7
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	RADIUS-compliant remote authentication and accounting server
 
 CONFLICTS+=	freeradius-[0-9]*
 
-USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 
 MAKEFILE=	Makefile.BSD

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/03 15:14:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:46 tv Exp $
 #
 
 DISTNAME=	xtrs-4.9
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	${MASTER_SITES}
 COMMENT=	TRS-80 Model I/III/4 Emulator for Unix
 
-USE_BUILDLINK3=	yes
 USE_X11=	yes
 
 BUILD_TARGET=	default

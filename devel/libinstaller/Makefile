@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/20 00:57:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:27 tv Exp $
 #
 
 DISTNAME=	libinstaller-4.0
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.bsdinstaller.org/
 COMMENT=	Library of support functions for the BSD Installer application
 
 WRKSRC=		${WRKDIR}/libinstaller
-USE_BUILDLINK3=	yes
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-patch

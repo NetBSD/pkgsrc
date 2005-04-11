@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/08 15:14:23 grant Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:50 tv Exp $
 #
 
 DISTNAME=	mod_mp3-0.35
@@ -11,7 +11,6 @@ MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://software.tangent.org/media/
 COMMENT=	Apache module for streaming mp3 files
 
-USE_BUILDLINK3=	yes
 
 APACHE_MODULE_NAME=	${DISTNAME:C|-.*||}.so
 APACHE_MODULE_SRCDIR=	${WRKSRC}/src

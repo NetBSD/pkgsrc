@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/03/18 13:02:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:53 tv Exp $
 #
 
 DISTNAME=	galway-0.33
@@ -13,7 +13,6 @@ COMMENT=	Web editor programmed in Scheme
 
 DEPENDS+=	guile-gtk-0.19*:../../devel/guile14-gtk
 
-USE_BUILDLINK3=	yes
 NO_BUILD=	yes
 
 do-configure:

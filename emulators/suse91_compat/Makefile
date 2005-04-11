@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/31 10:46:25 jdolecek Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:44 tv Exp $
 
 DISTNAME=		suse_compat-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386 FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
-NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		compat-2004.4.2-3.${SUSE_ARCH}.rpm

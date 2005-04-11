@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/20 11:31:10 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:39 tv Exp $
 #
 
 DISTNAME=	XML-NodeFilter-0.01
@@ -13,7 +13,6 @@ COMMENT=	Object that know how to "filter out" nodes
 
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
 
-USE_BUILDLINK3= yes
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/NodeFilter/.packlist
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/14 10:04:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:05 tv Exp $
 #
 
 DISTNAME=	pkg_notify-0.4.2
@@ -14,7 +14,6 @@ DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_BUILD=		yes
-NO_BUILDLINK=		yes
 NO_CONFIGURE=		yes
 USE_PERL5=		yes
 USE_PKGINSTALL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/04/11 18:44:54 salo Exp $
+# $NetBSD: Makefile,v 1.27 2005/04/11 21:44:48 tv Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -14,7 +14,6 @@ BUILD_USES_MSGFMT=	yes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

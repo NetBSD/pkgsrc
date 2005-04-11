@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/03/27 10:29:20 recht Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:46:05 tv Exp $
 #
 
 DISTNAME=	libgdiplus-1.1.5
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Implementation of the GDI+ API
 
 USE_X11=		yes
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes

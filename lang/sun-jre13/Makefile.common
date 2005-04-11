@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2004/06/15 12:00:09 abs Exp $
+# $NetBSD: Makefile.common,v 1.23 2005/04/11 21:46:16 tv Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang java
@@ -46,7 +46,6 @@ PLIST_SRC=	${PKGDIR}/PLIST.Darwin
 NO_PATCH=	yes	# no need for patches on Linux
 .endif
 
-USE_BUILDLINK3=	yes
 NO_MTREE=	yes	# since we change PREFIX
 LDD=		${TRUE}
 

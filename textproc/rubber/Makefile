@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/03 20:39:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:42 tv Exp $
 #
 
 DISTNAME=		rubber-0.99.8
@@ -12,7 +12,6 @@ COMMENT=		Automated system for building LaTeX documents
 
 DEPENDS+=		teTeX-bin-[0-9]*:../../print/teTeX-bin
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 USE_GNU_TOOLS+=         make

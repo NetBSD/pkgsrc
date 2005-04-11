@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/21 20:26:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:23 tv Exp $
 #
 
 DISTNAME=	dmidecode-2.5
@@ -9,7 +9,6 @@ MAINTAINER=	shattered@users.sourceforge.net,tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/dmidecode/
 COMMENT=	Print out DMI (SMBIOS) table in human-readable format
 
-NO_BUILDLINK=	YES
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
 .include "../../mk/bsd.pkg.mk"

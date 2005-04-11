@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/23 00:51:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:18 tv Exp $
 #
 
 DISTNAME=		bglibs-1.019
@@ -9,7 +9,6 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/bglibs/
 COMMENT=		Collection of libraries by Bruce Guenter
 
-USE_BUILDLINK3=		yes
 
 BUILD_TARGET=		all
 

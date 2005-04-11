@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/02/16 09:53:35 grant Exp $
+# $NetBSD: Makefile,v 1.33 2005/04/11 21:45:17 tv Exp $
 
 .include "../../www/apache2/Makefile.common"
 
@@ -14,7 +14,6 @@ CONFLICTS=		apache2<=2.0.45
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/srclib

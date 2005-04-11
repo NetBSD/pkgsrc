@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/11/04 00:10:08 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:46:02 tv Exp $
 #
 
 DISTNAME=	exif-0.6.9
@@ -13,7 +13,6 @@ COMMENT=	Grab Exif information from digital camera images
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 

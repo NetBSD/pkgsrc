@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/01/23 20:41:49 recht Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:18 tv Exp $
 
 DISTNAME=		python-gnutls-0.2
 PKGNAME=		${PYPKGPREFIX}${DISTNAME:S/python//}
@@ -11,7 +11,6 @@ HOMEPAGE=		http://home.o2w.net/~ivo/wiki/moin.cgi/PythonGnutls
 COMMENT=		Python bindings for GNUTLS
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
-USE_BUILDLINK3=		yes
 PYDISTUTILSPKG=		yes
 NO_CONFIGURE=		yes
 

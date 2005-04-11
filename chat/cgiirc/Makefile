@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/26 09:26:12 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:03 tv Exp $
 
 DISTNAME=	cgiirc-0.5.6
 CATEGORIES=	chat
@@ -8,7 +8,6 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://cgiirc.sourceforge.net/
 COMMENT=	Access IRC from a web browser
 
-NO_BUILDLINK=	YES
 USE_PERL5=	run
 NO_BUILD=	YES
 USE_PKGINSTALL=	YES

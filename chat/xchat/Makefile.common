@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2004/12/28 23:18:19 reed Exp $
+# $NetBSD: Makefile.common,v 1.36 2005/04/11 21:45:06 tv Exp $
 
 DISTNAME=	xchat-1.8.11
 PKGREVISION=	11
@@ -18,7 +18,6 @@ PATCHDIR=	${.CURDIR}/../xchat/patches
 PKGDIR=		${.CURDIR}/../xchat
 PLIST_SRC=	${.CURDIR}/../xchat/PLIST
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES

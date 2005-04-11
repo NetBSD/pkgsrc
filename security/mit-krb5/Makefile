@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/10 07:46:50 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:47:13 tv Exp $
 
 DISTNAME=	krb5-1.4
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
@@ -26,7 +26,6 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 YACC=			${LOCALBASE}/bin/bison -y
 .endif
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 

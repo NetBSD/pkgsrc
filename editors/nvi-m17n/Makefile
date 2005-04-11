@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/03/24 21:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 21:45:41 tv Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.19991117
@@ -16,7 +16,6 @@ COMMENT=	Clone of vi/ex, with multilingual patch
 CONFLICTS=	vigor-[0-9]* nvi-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -E -p1 -f
 CONFIGURE_ENV=	OPTFLAG='-D_PATH_SYSEXRC=\"${PREFIX}/etc/vi.exrc\"'

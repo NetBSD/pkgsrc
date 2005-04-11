@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:17:55 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:49 tv Exp $
 #
 
 DISTNAME=		llnlxdir2_1_2
@@ -12,7 +12,6 @@ MAINTAINER=		tor@stormwall.org
 HOMEPAGE=		http://www.llnl.gov/ia/xdir.html
 COMMENT=		Advanced graphical FTP client
 
-USE_BUILDLINK3= 	yes
 USE_IMAKE=      	yes
 WRKSRC=         	${WRKDIR}/llnlxdir2_1_2/sources
 

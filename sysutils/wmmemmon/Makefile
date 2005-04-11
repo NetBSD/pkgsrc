@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/29 22:13:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:30 tv Exp $
 #
 
 DISTNAME=	wmmemmon-1.0.1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.sh.rim.or.jp/~ssato/dockapp/
 COMMENT=	Dockapp to monitor memory and swap usages
 
 GNU_CONFIGURE= 	YES
-USE_BUILDLINK3=	YES
 USE_X11=	YES
 
 .include "../../graphics/xpm/buildlink3.mk"

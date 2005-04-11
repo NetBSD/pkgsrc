@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/02/21 20:26:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:45 tv Exp $
 
 DISTNAME=	ddclient-3.6.2
 PKGREVISION=	1
@@ -11,7 +11,6 @@ COMMENT=	Client to update dynamic DNS entries
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_LANGUAGES=		# empty
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL

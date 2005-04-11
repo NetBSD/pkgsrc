@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/04/30 05:26:00 snj Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/04/11 21:47:53 tv Exp $
 #
 
 HTMLDOC_VERSION=	1.8.23
@@ -17,7 +17,6 @@ PATCHDIR=		${.CURDIR}/../htmldoc/patches
 PLIST_SRC=		${.CURDIR}/../htmldoc/PLIST
 
 WRKSRC=			${WRKDIR}/htmldoc-${HTMLDOC_VERSION}
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 
 .include "../../graphics/jpeg/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:13:02 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:42 tv Exp $
 
 DISTNAME=	libdvdread-0.9.4
 PKGREVISION=	1
@@ -14,7 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
-USE_BUILDLINK3=	yes
 
 MESSAGE_SUBST+=	PKGBASE=${PKGBASE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:02 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:41 tv Exp $
 #
 # Unfortunately, some reading of the United States law (DMCA) means
 # that we are not able to provide pointers to the source or homepage
@@ -25,7 +25,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 

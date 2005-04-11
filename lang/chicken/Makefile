@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/01/16 15:11:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:46:12 tv Exp $
 #
 
 DISTNAME=	chicken-1.89
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.call-with-current-continuation.org/chicken.html
 COMMENT=	Scheme to C compiler, handling R5RS
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 TEST_TARGET=	test

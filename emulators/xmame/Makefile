@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2005/04/02 20:56:28 kristerw Exp $
+# $NetBSD: Makefile,v 1.127 2005/04/11 21:45:46 tv Exp $
 #
 
 DISTNAME=		xmame-0.95
@@ -14,7 +14,6 @@ RESTRICTED=		"selling is not allowed"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/23 11:41:35 recht Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:48:03 tv Exp $
 #
 
 DISTNAME=	ZopeBook
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Documentation/Books/ZopeBook/current/index_html
 COMMENT=	Documentation for Zope-2.5
 
-USE_BUILDLINK3=	yes
 NO_BUILD=	yes
 
 ZBDIR=	${PREFIX}/share/doc/html/ZopeBook-2.5

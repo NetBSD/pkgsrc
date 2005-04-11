@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/03/10 22:21:56 salo Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:46:05 tv Exp $
 
 DISTNAME=	libexif-0.6.11
 PKGREVISION=	1
@@ -11,7 +11,6 @@ COMMENT=	EXIF file library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

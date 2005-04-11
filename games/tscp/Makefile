@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/04/01 18:52:11 snj Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:57 tv Exp $
 #
 
 DISTNAME=	tscp181
@@ -11,7 +11,6 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://home.comcast.net/~tckerrigan/
 COMMENT=	Tom Kerrigan's Simple Chess Program
 
-USE_BUILDLINK3=	YES
 
 RESTRICTED= No distribtion without authorisation from Tom Kerrigan
 

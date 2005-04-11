@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/28 00:00:51 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:37 tv Exp $
 
 DISTNAME=	urwid-0.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Curses-based Python user interface library
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 
 PYDISTUTILSPKG=	yes
-USE_BUILDLINK3=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	20 15
 

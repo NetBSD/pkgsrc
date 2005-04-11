@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/10/03 00:14:42 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/04/11 21:45:48 tv Exp $
 #
 
 DISTNAME=	angband-3.0.3
@@ -16,7 +16,6 @@ CONFLICTS=	angband-tty-[0-9]*
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_BUILDLINK3=	yes
 USE_X11=	# defined
 INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-M]-*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:18:22 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:47:47 tv Exp $
 #
 
 DISTNAME=	flwm-1.00
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://flwm.sourceforge.net/
 COMMENT=	The Fast, Light Window Manager
 
-USE_BUILDLINK3=	yes
 USE_X11=	# defined
 
 GNU_CONFIGURE=	# defined

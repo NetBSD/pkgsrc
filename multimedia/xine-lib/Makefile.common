@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2005/01/06 17:04:42 drochner Exp $
+# $NetBSD: Makefile.common,v 1.17 2005/04/11 21:46:43 tv Exp $
 #
 
 DISTNAME=		xine-lib-1.0
@@ -19,7 +19,6 @@ BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		YES
 AUTOCONF_REQD=		2.58
 USE_PKGLOCALEDIR=	YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	libtool libtool-nofpic
 PKGCONFIG_OVERRIDE=	misc/libxine.pc.in

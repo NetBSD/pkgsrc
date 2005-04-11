@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/09/15 07:10:48 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2005/04/11 21:46:14 tv Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -13,7 +13,6 @@ COMMENT=	Perl DynaLoader as a shared object
 CONFLICTS+=	perl>=5.8
 
 WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
-USE_BUILDLINK3=		yes
 EXTRACT_ELEMENTS=	${DISTNAME}/ext/DynaLoader
 
 BUILDLINK_DEPENDS.perl=		perl-${PERL5_DIST_VERS}{,nb*}

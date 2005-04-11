@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/23 18:32:35 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:55 tv Exp $
 #
 
 DISTNAME=		Apache-Test-1.20
@@ -11,7 +11,6 @@ MAINTAINER=		adam@migus.org
 HOMEPAGE=		http://search.cpan.org/dist/Apache-Test/
 COMMENT=		Wrapper for Test.pm to test an Apache server
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/Test/.packlist
 
 .include "../../lang/perl5/module.mk"

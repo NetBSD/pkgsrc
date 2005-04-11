@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/30 12:22:20 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:48:04 tv Exp $
 #
 
 DISTNAME=		compositeext-2.0
@@ -12,7 +12,6 @@ COMMENT=		Headers and specification for X Composite extension
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	compositeext.pc.in

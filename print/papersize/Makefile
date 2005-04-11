@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/17 12:50:30 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:47:08 tv Exp $
 #
 
 DISTNAME=	papersize-1.0.8
@@ -14,7 +14,6 @@ EXTRACT_ONLY=	# empty
 USE_LANGUAGES=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
-NO_BUILDLINK=	yes
 USE_PKGINSTALL=	yes
 
 do-build:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/01/23 20:41:49 recht Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:48:03 tv Exp $
 #
 
 DISTNAME=	Zope-2.6.2-src
@@ -14,7 +14,6 @@ COMMENT=	Zope, the Z Object Publishing Environment
 DIST_SUBDIR=	zope
 
 PYTHON_VERSIONS_ACCEPTED=	21
-USE_BUILDLINK3=	yes
 
 ZOPEDIR=	${PREFIX}/lib/zope
 ZOPEPY=		pcgi lib/python ZServer z2.py zpasswd.py

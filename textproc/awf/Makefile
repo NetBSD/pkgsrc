@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/18 22:20:08 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:33 tv Exp $
 #
 
 DISTNAME=	nroff-clone
@@ -15,7 +15,6 @@ COMMENT=	Text formatter (nroff-clone) written in awk
 EXTRACT_CMD=	${DECOMPRESS_CMD.shar.Z} ${DOWNLOADED_DISTFILE} | ${SED} -e '1,/^\#!/d' | ${SH}
 WRKSRC=		${WRKDIR}
 
-NO_BUILDLINK=	# defined
 NO_TOOLS=	# defined
 NO_WRAPPER=	# defined
 

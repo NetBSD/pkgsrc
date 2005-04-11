@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/03/14 04:36:52 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/11 21:47:34 tv Exp $
 #
 
 DISTNAME=	groff-1.19.1
@@ -16,7 +16,6 @@ DEPENDS+=	psutils>=1.17:../../print/psutils
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_PERL5=		YES
-USE_BUILDLINK3=		YES
 
 INFO_FILES=	groff
 

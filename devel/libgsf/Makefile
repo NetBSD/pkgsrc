@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/12/22 11:44:41 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:45:27 tv Exp $
 #
 
 DISTNAME=	libgsf-1.11.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 structured file library
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	libgsf-1.pc.in

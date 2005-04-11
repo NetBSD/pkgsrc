@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/02/19 18:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:40 tv Exp $
 #
 
 DISTNAME=	XML-Simple-2.14
@@ -19,7 +19,6 @@ DEPENDS+=       p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/Simple/.packlist
 
 .include "../../lang/perl5/module.mk"

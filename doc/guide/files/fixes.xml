@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.10 2005/03/17 15:11:23 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.11 2005/04/11 21:45:39 tv Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -649,8 +649,7 @@ dynamic linker chooses the library with the greater REVISION number. </programli
 
       <para>If your package makes use of the platform independent library
         for loading dynamic shared objects, that comes with libtool
-        (libltdl), you should include the libtool buildlink3.mk (and
-        set <varname>USE_BUILDLINK3=YES</varname>).</para>
+        (libltdl), you should include devel/libltdl/buildlink3.mk.</para>
 
       <para>Some packages use libtool incorrectly so that the package may not work or
         build in some circumstances. Some of the more common errors are:</para>

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/25 00:18:39 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:48 tv Exp $
 
 DISTNAME=	hesiod-3.0.2
 CATEGORIES=	net
@@ -13,7 +13,6 @@ COMMENT=	Hesiod network database client and library
 PKG_SKIP_REASON= "${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/27 15:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:49 tv Exp $
 
 DISTNAME=	defendguin-0.0.10
 PKGREVISION=	4
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.newbreedsoftware.com/defendguin/
 COMMENT=	Clone of the arcade game Defender
 
 USE_X11=	YES
-USE_BUILDLINK3=	YES
 
 USE_GNU_TOOLS+=	make
 

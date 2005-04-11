@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 23:46:27 rh Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:43 tv Exp $
 #
 
 DISTNAME=	${W2L}beta2
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.hj-gym.dk/~hj/writer2latex/
 COMMENT=	Convert OpenOffice.org/StarOffice documents to LaTeX and other formats
 
 WRKSRC=		${WRKDIR}/${W2L}
-USE_BUILDLINK3=	yes
 USE_JAVA2=	yes
 USE_JAVA=	run
 

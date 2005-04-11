@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:14:46 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:45:56 tv Exp $
 #
 
 DISTNAME=	plib-1.6.0
@@ -10,7 +10,6 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://plib.sourceforge.net/
 COMMENT=	Libraries for writing portable games/realtime interactive apps
 
-USE_BUILDLINK3=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/03/22 16:19:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.40 2005/04/11 21:48:07 tv Exp $
 #
 
 DISTNAME=		gnome-applets-2.10.0
@@ -13,7 +13,6 @@ COMMENT=		GNOME2 panel applets
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
 USE_X11=		yes
 USE_GNU_TOOLS+=		make

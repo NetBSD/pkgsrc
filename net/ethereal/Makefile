@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2005/03/14 15:34:57 tron Exp $
+# $NetBSD: Makefile,v 1.106 2005/04/11 21:46:46 tv Exp $
 
 DISTNAME=		ethereal-0.10.10
 CATEGORIES=		net
@@ -21,7 +21,6 @@ MAINTAINER=		frueauf@NetBSD.org
 HOMEPAGE=		http://www.ethereal.com/
 COMMENT=		Network protocol analyzer
 
-USE_BUILDLINK3=		YES
 USE_X11=		YES
 USE_PERL5=		build
 

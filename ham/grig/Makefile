@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/30 18:26:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:10 tv Exp $
 #
 
 DISTNAME=	grig-0.2.2
@@ -10,7 +10,6 @@ MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=       http://groundstation.sourceforge.net/
 COMMENT=	Graphical user interface to the Hamlib libraries
 
-USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
 BUILD_USES_MSGFMT=  YES

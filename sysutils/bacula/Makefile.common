@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/01/15 08:33:23 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/04/11 21:47:22 tv Exp $
 #
 
 DISTNAME=		bacula-1.36.0
@@ -11,7 +11,6 @@ COMMENT=		Network Backup Solution
 
 .include "Makefile.options"
 
-USE_BUILDLINK3=		yes
 USE_LANGUAGES+=		c++
 USE_PKGLOCALEDIR=	yes
 USE_PKGINSTALL=		yes

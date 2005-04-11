@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/14 13:39:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:45 tv Exp $
 
 DISTNAME=	AfterStep-1.8.11
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
@@ -16,7 +16,6 @@ DEPENDS+=		asclock-[0-9]*:../../time/asclock
 DEPENDS+=		xp-[0-9]*:../../x11/xp
 
 AUTOCONF_REQD=		2.13
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/12/03 15:14:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:01 tv Exp $
 #
 
 DISTNAME=	atlc-4.6.0
@@ -10,7 +10,6 @@ HOMEPAGE=	http://atlc.sourceforge.net/
 COMMENT=	Calculates the impedance of arbitrary cross section transmission lines
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 # note:  the check target builds some of the
 # example files which get installed.
 BUILD_TARGET=	all check

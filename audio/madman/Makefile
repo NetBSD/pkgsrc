@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/13 21:28:27 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:44:54 tv Exp $
 
 DISTNAME=	madman-0.93
 PKGREVISION=	2
@@ -11,7 +11,6 @@ COMMENT=	Powerful audio manager for large collections
 
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 
-USE_BUILDLINK3=		yes
 USE_X11=		# defined
 
 GCC_REQD=		3.0

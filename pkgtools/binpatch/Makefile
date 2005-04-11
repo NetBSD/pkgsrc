@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/06 05:32:29 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:04 tv Exp $
 #
 
 DISTNAME=	binpatch-1.0
@@ -10,7 +10,6 @@ MAINTAINER=	atatat@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/Packages.txt
 COMMENT=	Trivial binary patch applicator
 
-USE_BUILDLINK3=	yes
 
 NO_CHECKSUM=	# defined
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/03/25 10:10:31 recht Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:03 tv Exp $
 
 DISTNAME=	glitz-0.4.0
 CATEGORIES=	graphics
@@ -8,7 +8,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://freedesktop.org/Software/glitz
 COMMENT=	OpenGL 2D graphics library and a backend for gl output in cairo
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	glitz-agl.pc.in glitz-glx.pc.in glitz.pc.in

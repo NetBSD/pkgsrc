@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/03/24 21:12:51 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/11 21:45:02 tv Exp $
 
 DISTNAME=	pcb-1.6.3
 PKGREVISION=	3
@@ -17,7 +17,6 @@ DEPENDS+=	m4>=1.4:../../devel/m4
 
 CONFLICTS+=	pcb-current-[0-9]*
 
-USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 USE_IMAKE=	yes
 

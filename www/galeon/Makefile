@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2005/04/04 10:25:02 abs Exp $
+# $NetBSD: Makefile,v 1.76 2005/04/11 21:47:53 tv Exp $
 #
 
 DISTNAME=	galeon-1.3.20
@@ -14,7 +14,6 @@ BUILD_USES_MSGFMT=	yes
 
 CONFLICTS+=		galeon-devel-[0-9]*
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		yes

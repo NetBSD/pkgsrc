@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/31 23:47:32 jdolecek Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:10 tv Exp $
 #
 
 DISTNAME=	acid-0.9.6b23
@@ -16,7 +16,6 @@ DEPENDS+=	php-gd>=4.0.4:../../graphics/php-gd
 DEPENDS+=	php-sockets>=4.0.4:../../net/php-sockets
 
 NO_BUILD=	yes
-NO_BUILDLINK=	yes
 WRKSRC=		${WRKDIR}/acid
 
 .include "../../mk/bsd.prefs.mk"

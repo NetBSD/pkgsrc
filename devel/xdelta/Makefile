@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/10/03 00:13:34 tv Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/11 21:45:39 tv Exp $
 #
 
 DISTNAME=		xdelta-1.1.1
@@ -10,7 +10,6 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.xcf.berkeley.edu/~jmacd/xdelta.html
 COMMENT=		Enhanced diff that works on binary files
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_GNU_TOOLS+=		make

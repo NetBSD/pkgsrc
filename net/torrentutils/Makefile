@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/18 14:42:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:01 tv Exp $
 #
 
 DISTNAME=		torrentutils-0.3.0
@@ -14,7 +14,6 @@ DEPENDS+=		bash-[0-9]*:../../shells/bash
 DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS=		make
 USE_PERL5=		yes
 

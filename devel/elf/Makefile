@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/12/28 23:31:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:20 tv Exp $
 #
 
 DISTNAME=	elf-0.5.3
@@ -11,7 +11,6 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://www.kerneled.com/projects/elf/
 COMMENT=	ELF header analyzer
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 BUILD_DIRS=	${WRKSRC}/src

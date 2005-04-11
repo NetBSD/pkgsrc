@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2005/03/30 21:54:19 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.4 2005/04/11 21:46:27 tv Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -30,7 +30,6 @@ BUILD_DEFS+=    USE_INET6 USE_TCPWRAPPERS USE_OPENLDAP USE_DB2 \
 DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
 WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	m4
 MAKE_ENV+=	M4="${M4}"
 

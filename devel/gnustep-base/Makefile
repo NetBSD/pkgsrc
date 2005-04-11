@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/11/16 01:16:06 rh Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/11 21:45:24 tv Exp $
 
 DISTNAME=		gnustep-base-1.10.1
 PKGREVISION=		1
@@ -11,7 +11,6 @@ COMMENT=		GNUstep foundation classes
 
 PTHREAD_LIBS=		-lpthread
 
-USE_BUILDLINK3=		yes
 USE_X11=		yes
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
 CONFIGURE_ENV+=		INSTALL_PROGRAM="${INSTALL_SCRIPT}"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/09/01 09:43:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/11 21:47:43 tv Exp $
 #
 
 DISTNAME=	xmlcatmgr-2.2
@@ -12,7 +12,6 @@ COMMENT=	XML and SGML catalog manager
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 
 CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR}

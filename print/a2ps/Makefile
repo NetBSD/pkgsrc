@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2004/12/31 13:27:06 minskim Exp $
+# $NetBSD: Makefile,v 1.52 2005/04/11 21:47:06 tv Exp $
 
 DISTNAME=		a2ps-4.13b
 PKGNAME=		a2ps-4.13.0.2
@@ -17,7 +17,6 @@ DEPENDS+=		psutils>=1.17:../../print/psutils
 WRKSRC=			${WRKDIR}/a2ps-4.13
 STRIP=			# empty
 
-USE_BUILDLINK3=		yes
 USE_PERL5=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes

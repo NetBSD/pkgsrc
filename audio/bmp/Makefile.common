@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/03/16 16:33:25 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/04/11 21:44:51 tv Exp $
 #
 
 DISTNAME=	bmp-0.9.7
@@ -14,7 +14,6 @@ FILESDIR=		${.CURDIR}/../../audio/xmms/files
 PATCHDIR=		${.CURDIR}/../../audio/bmp/patches
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

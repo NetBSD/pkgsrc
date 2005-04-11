@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/03 15:14:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:06 tv Exp $
 #
 
 DISTNAME=		ljpg
@@ -14,7 +14,6 @@ COMMENT=		Lossless JPEG codec
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
-USE_BUILDLINK3=		yes
 BUILD_TARGET=		default
 
 post-install:

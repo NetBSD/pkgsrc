@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/12/03 15:14:54 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2005/04/11 21:45:18 tv Exp $
 #
 
 DISTNAME=		latestCDK
@@ -13,7 +13,6 @@ HOMEPAGE=		http://www.vexus.ca/CDK.html
 COMMENT=		Curses Development Kit
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK3=		yes
 USE_NCURSES=		# uses ncurses internals
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

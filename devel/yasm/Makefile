@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:13:34 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:39 tv Exp $
 #
 
 DISTNAME=	yasm-0.2.2
@@ -12,7 +12,6 @@ COMMENT=	Complete rewrite of the NASM assembler with BSD license
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PERL5=		build

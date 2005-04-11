@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/28 02:47:45 reed Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:22 tv Exp $
 #
 
 DISTNAME=	postgrey-1.17
@@ -11,7 +11,6 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://isg.ee.ethz.ch/tools/postgrey/
 COMMENT=	Postfix Greylist Policy Server
 
-USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 USE_PERL5=	yes
 

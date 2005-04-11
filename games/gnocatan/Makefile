@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/10/03 00:14:44 tv Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 21:45:50 tv Exp $
 #
 
 DISTNAME=	gnocatan-0.8.1.16
@@ -11,7 +11,6 @@ HOMEPAGE=	http://gnocatan.sourceforge.net/
 COMMENT=	GNOME version of the Settlers of Catan board game
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES

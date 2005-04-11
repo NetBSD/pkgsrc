@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/07/02 22:06:19 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:47:54 tv Exp $
 
 DISTNAME=	jakarta-servletapi-${TOMCAT_VERSION}-src
 PKGNAME=	${DISTNAME:S/-src$//}
@@ -13,7 +13,6 @@ COMMENT=	The Apache project's implementation of the JSP and Java Servlet APIs
 BUILD_DEPENDS+=	apache-ant>=1.4.1:../../devel/apache-ant
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_BUILDLINK3=	yes
 USE_JAVA2=	yes
 MAKEFILE=	build.xml
 PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.javadoc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/01/06 14:25:56 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:48:01 tv Exp $
 
 DISTNAME=	SVN-Web-0.35
 PKGNAME=	p5-${DISTNAME}
@@ -28,7 +28,6 @@ DEPENDS+=	p5-XML-RSS>=0.9:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-XML-XPath>=1.08:../../textproc/p5-XML-XPath
 DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SVN/Web/.packlist
 
 .include "../../lang/perl5/module.mk"

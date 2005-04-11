@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/11/20 22:10:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 21:46:09 tv Exp $
 #
 
 DISTNAME=	scigraphica-0.8.0
@@ -10,7 +10,6 @@ MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://scigraphica.sourceforge.net/
 COMMENT=	Data analysis and technical graphics
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome1-1.5
 USE_X11=		YES
 USE_GNU_TOOLS+=		make

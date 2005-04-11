@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/01/29 10:17:07 mjl Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:47:41 tv Exp $
 #
 
 DISTNAME=	postgresql_autodoc-1.24
@@ -16,7 +16,6 @@ DEPENDS+=	p5-HTML-Template-[0-9]*:../../www/p5-HTML-Template
 WRKSRC=		${WRKDIR}/postgresql_autodoc
 USE_PERL5=	yes
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datadir=${PREFIX}/share/${PKGBASE}
 

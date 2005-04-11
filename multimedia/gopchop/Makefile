@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/25 23:42:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:41 tv Exp $
 #
 
 DISTNAME=		gopchop-1.1.3
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://outflux.net/unix/software/GOPchop/
 COMMENT=		MPEG2 GOP-accurate editor
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1

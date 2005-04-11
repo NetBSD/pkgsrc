@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/03/24 21:13:03 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2005/04/11 21:48:01 tv Exp $
 
 DISTNAME=	libwww-perl-5.803
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
@@ -20,7 +20,6 @@ DEPENDS+=	p5-MIME-Base64>=2.1:../../converters/p5-MIME-Base64
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/libwww-perl/.packlist
 MAKE_PARAMS=		-n
 

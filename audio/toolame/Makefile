@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:14:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:44:57 tv Exp $
 #
 
 DISTNAME=	toolame-02l
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/toolame/
 COMMENT=	Optimized MPEG 1/2 layer 2 audio encoder
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 TOOLAME_ARCH?=

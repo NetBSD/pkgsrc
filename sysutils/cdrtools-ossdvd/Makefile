@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/02/19 21:09:04 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:22 tv Exp $
 
 DISTNAME=	cdrtools-2.01a32
 PKGNAME=	cdrtools-ossdvd-2.01.1.32
@@ -20,7 +20,6 @@ CONFLICTS=	mkisofs-[0-9]* cdrecord-[0-9]* cdrtools-*
 .include "../../mk/bsd.prefs.mk"
 
 WRKSRC=			${WRKDIR}/cdrtools-2.01
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_TBL=		yes
 

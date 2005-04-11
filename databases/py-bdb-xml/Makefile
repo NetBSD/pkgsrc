@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/02 05:35:27 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:15 tv Exp $
 
 DISTNAME=	dbxml-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/db/bdb-/}
@@ -16,7 +16,6 @@ BUILDLINK_DEPENDS.db4+=	db4>=4.3
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src/python
 PYDISTUTILSPKG=	YES
-USE_BUILDLINK3=	YES
 NO_CONFIGURE=	YES
 
 .include "../../lang/python/extension.mk"

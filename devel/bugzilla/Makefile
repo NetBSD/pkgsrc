@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/17 23:03:17 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:18 tv Exp $
 #
 
 DISTNAME=	bugzilla-2.18
@@ -21,7 +21,6 @@ DEPENDS+=	p5-DBD-mysql>=2.1010:../../databases/p5-DBD-mysql
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-USE_BUILDLINK3=	YES
 NO_BUILD=	YES
 USE_PKGINSTALL=	YES
 PERL5_REQD+=	5.6.0

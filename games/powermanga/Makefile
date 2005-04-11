@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/27 15:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:56 tv Exp $
 #
 
 DISTNAME=	powermanga-0.79
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://linux.tlk.fr/games/Powermanga/
 COMMENT=	Arcade 2D shoot-em-up game
 
-USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 

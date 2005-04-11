@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/16 09:48:37 cube Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:03 tv Exp $
 #
 
 DISTNAME=	newsx-1.6
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.kvaleberg.com/newsx.html
 COMMENT=	NNTP news exchange program
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 
 .include "../../news/inn/Makefile.common"
 CONFIGURE_ARGS+=	--with-newshome=${INN_PREFIX}/lib

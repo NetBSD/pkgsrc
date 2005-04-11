@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/11/19 19:15:46 jdolecek Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:47:07 tv Exp $
 
 DISTNAME=	hpijs-1.7.1
 PKGREVISION=	# empty
@@ -11,7 +11,6 @@ COMMENT=	HP inkjet printer driver server
 
 CONFLICTS=	ghostscript<=6.01nb4 ghostscript-nox11<=6.01nb4
 
-USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		# defined
 CPPFLAGS+=		-DAPDK_BUFFER_SEND

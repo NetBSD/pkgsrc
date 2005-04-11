@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/01/30 05:34:16 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/11 21:46:13 tv Exp $
 #
 
 DISTNAME=	gawk-3.1.4
@@ -15,7 +15,6 @@ CONFLICTS=	ja-gawk-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 USE_PKGLOCALEDIR=	# defined
 TEST_DIRS=		${WRKSRC}

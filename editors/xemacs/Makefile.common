@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/03/03 16:16:03 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/04/11 21:45:42 tv Exp $
 
 DISTNAME=	xemacs-21.4.17
 CATEGORIES=	editors
@@ -12,7 +12,6 @@ CONFLICTS+=	gnuclient-[0-9]*
 
 NOT_FOR_PLATFORM=	*-*-mips*	# fails purespace dumping
 
-USE_BUILDLINK3=	YES
 
 DIST_SUBDIR=	xemacs
 EXTRA_FILES=	${DISTNAME}-elc.tar.gz ${DISTNAME}-info.tar.gz

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/12/28 23:18:20 reed Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:31 tv Exp $
 #
 
 DISTNAME=	xfe-0.54.2
@@ -12,7 +12,6 @@ COMMENT=	Fast MS-Explorer like filemanager for X
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

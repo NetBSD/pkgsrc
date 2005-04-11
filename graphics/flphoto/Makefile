@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/24 16:00:14 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:02 tv Exp $
 #
 
 DISTNAME=		flphoto-1.2-source
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.easysw.com/~mike/flphoto/index.html
 COMMENT=		Image management and display program
 
 WRKSRC=		${WRKDIR}/flphoto-1.2
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_X11=		yes

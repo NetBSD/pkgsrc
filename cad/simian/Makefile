@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/21 17:35:53 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:02 tv Exp $
 #
 
 DISTNAME=	simian_12_98
@@ -17,7 +17,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 USE_LANGUAGES=		c++
-USE_BUILDLINK3=		yes
 GCC_REQD=		3.0
 
 WRKSRC=		${WRKDIR}/Simian/src

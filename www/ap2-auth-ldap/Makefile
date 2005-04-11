@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/26 01:06:08 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:51 tv Exp $
 
 DISTNAME=	mod_auth_ldap3.3
 PKGNAME=	ap2-auth-ldap-3.3
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.muquit.com/muquit/software/mod_auth_ldap/mod_auth_ldap_apac
 COMMENT=	Module to allow apache2 authentication against an LDAP directory
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 APACHE_MODULE=		YES
 APACHE_MODULE_NAME=	mm_auth_ldap_module
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/12/28 23:18:21 reed Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 21:46:02 tv Exp $
 
 DISTNAME=	dx-4.3.2
 PKGREVISION=	2
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.opendx.org/
 COMMENT=	Open Visualization Data Explorer
 
-USE_BUILDLINK3=		yes
 USE_X11BASE=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes

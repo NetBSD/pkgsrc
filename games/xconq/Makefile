@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/12/29 15:42:37 minskim Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/11 21:45:58 tv Exp $
 
 DISTNAME=		xconq-7.4.1
 PKGREVISION=		4
@@ -9,7 +9,6 @@ MAINTAINER=		kleink@NetBSD.org
 HOMEPAGE=		http://sources.redhat.com/xconq/
 COMMENT=		Xconq is a general strategy game system
 
-USE_BUILDLINK3=		YES
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2005/02/15 12:25:07 drochner Exp $
+# $NetBSD: Makefile.common,v 1.26 2005/04/11 21:46:16 tv Exp $
 #
 
 DISTNAME=	Python-2.3.5
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
 
 USE_LANGUAGES=		c c++
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	OPT="${CFLAGS}"

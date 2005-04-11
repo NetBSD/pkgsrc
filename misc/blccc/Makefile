@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/14 20:36:54 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:33 tv Exp $
 #
 
 DISTNAME=		blccc-1.99
@@ -10,7 +10,6 @@ MAINTAINER=		salo@NetBSD.org
 HOMEPAGE=		http://www.blinkenlights.de/
 COMMENT=		Blinkenlights Chaos Control Center
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 SHLIBTOOL_OVERRIDE=	libtool

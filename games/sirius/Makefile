@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:14:46 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:45:57 tv Exp $
 #
 
 DISTNAME=	sirius-0.8.0
@@ -13,7 +13,6 @@ COMMENT=	Othello game for GNOME2
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES

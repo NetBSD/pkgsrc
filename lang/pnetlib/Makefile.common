@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/05/29 12:20:21 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/04/11 21:46:15 tv Exp $
 #
 
 DISTNAME=	pnetlib-0.6.6
@@ -12,7 +12,6 @@ COMMENT=	DotGNU Portable .NET C SHARP class libraries
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
-USE_BUILDLINK3=	yes
 
 DESCR_SRC=	${.CURDIR}/../pnetlib/DESCR
 DISTINFO_FILE=	${.CURDIR}/../pnetlib/distinfo

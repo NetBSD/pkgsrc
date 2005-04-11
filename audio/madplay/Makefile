@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/11/22 22:58:42 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/11 21:44:54 tv Exp $
 #
 
 DISTNAME=	madplay-0.15.2b
@@ -13,7 +13,6 @@ COMMENT=	High-quality MPEG audio decoder
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

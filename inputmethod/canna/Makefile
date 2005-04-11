@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/05 19:04:30 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:11 tv Exp $
 #
 .include "Makefile.common"
 
@@ -9,7 +9,6 @@ DEPENDS+=	Canna-dict>=${CANNA_VERSION}:../canna-dict
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
-NO_BUILDLINK=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 

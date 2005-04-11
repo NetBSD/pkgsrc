@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:14:55 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:05 tv Exp $
 #
 
 DISTNAME=		libcaca-0.9
@@ -11,7 +11,6 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://sam.zoy.org/projects/libcaca/
 COMMENT=		Graphics library that outputs text instead of pixels, in colour
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

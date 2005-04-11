@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/01/17 18:32:47 shannonjr Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:11 tv Exp $
 #
 
 DISTNAME=		gnupg-1.9.15
@@ -18,7 +18,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 

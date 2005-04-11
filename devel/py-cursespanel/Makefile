@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/01/23 20:41:45 recht Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:37 tv Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-cursespanel-0
@@ -9,7 +9,6 @@ MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.python.org/doc/current/lib/module-curses.html
 COMMENT=	Curses panel module for Python
 
-USE_BUILDLINK3=	yes
 USE_NCURSES=	# filter getsyx getwin has_key immedok mvwinsnstr mvwinsstr ...
 # noqiflush pechochar putp putwin qiflush redrawwin setsyx syncok termattrs
 # termname tigetflag tigetnum tigetstr tparm typeahead use_env wcursyncup

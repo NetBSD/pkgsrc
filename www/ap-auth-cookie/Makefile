@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/05/08 19:48:27 snj Exp $
+# $NetBSD: Makefile,v 1.33 2005/04/11 21:47:49 tv Exp $
 #
 # There are a few more mod_auth_cookie's out there doing slightly
 # different things.  This one pkg would be a good place to dump them all in
@@ -15,7 +15,6 @@ HOMEPAGE=	ftp://ftp.kciLink.com/pub/mod_auth_cookie.txt
 COMMENT=	Cookie-based authentication for Apache
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK3=	YES
 
 EXTRACT_CMD=	${DO_NADA}
 

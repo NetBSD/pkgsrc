@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/03/24 21:12:55 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/11 21:46:08 tv Exp $
 
 DISTNAME=		pixmap2.6
 PKGNAME=		pixmap-2.6.4
@@ -16,7 +16,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Pixmap editor based on XPM library
 
 WRKSRC=			${WRKDIR}/pixmap
-USE_BUILDLINK3=		YES
 USE_IMAKE=		YES
 
 MAKE_ENV+=		LOCAL_LDFLAGS="${LDFLAGS}"

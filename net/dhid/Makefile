@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/02/21 20:26:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:46:45 tv Exp $
 #
 
 DISTNAME=	dhid-5.2
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.dhis.org/
 COMMENT=	Dynamic Host Information System client daemon
 
-USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 RCD_SCRIPTS=	dhid
 

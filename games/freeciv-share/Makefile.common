@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2004/11/03 14:18:36 adam Exp $
+# $NetBSD: Makefile.common,v 1.19 2005/04/11 21:45:50 tv Exp $
 
 DISTNAME=	freeciv-${FC_VERS}
 FC_VERS=	1.14.2
@@ -14,7 +14,6 @@ HOMEPAGE=	http://www.freeciv.org/
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

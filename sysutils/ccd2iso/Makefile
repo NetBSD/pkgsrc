@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/24 18:44:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:22 tv Exp $
 #
 
 DISTNAME=		ccd2iso
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ccd2iso.sourceforge.net/
 COMMENT=		CloneCD to ISO converter
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 

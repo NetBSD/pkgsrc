@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/03/25 15:06:23 markd Exp $
+# $NetBSD: Makefile,v 1.32 2005/04/11 21:46:35 tv Exp $
 
 DISTNAME=	kdeaddons-${_KDE_VERSION}
 PKGREVISION=	1
@@ -7,7 +7,6 @@ COMMENT=	Add ons for the KDE integrated X11 desktop
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 
 REPLACE_PERL=		knewsticker-scripts/bbc.pl \

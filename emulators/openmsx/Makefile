@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/27 15:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:44 tv Exp $
 #
 
 DISTNAME=		openmsx-0.5.0
@@ -10,7 +10,6 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://openmsx.sourceforge.net/
 COMMENT=		MSX emulator that aims for perfection
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 USE_X11=		yes

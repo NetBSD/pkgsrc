@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/11/24 11:15:30 adam Exp $
+# $NetBSD: Makefile,v 1.33 2005/04/11 21:45:08 tv Exp $
 
 DISTNAME=	libiconv-1.9.2
 PKGREVISION=	1
@@ -15,7 +15,6 @@ PATCH_DIST_STRIP=	-p1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/31 19:41:41 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:47 tv Exp $
 #
 
 DISTNAME=		ec-fonts-mftraced-1.0.8
@@ -11,7 +11,6 @@ COMMENT=		EC PostScript Type1 fonts with TFMs for TeX
 
 DEPENDS+=		teTeX>=2.0.2:../../print/teTeX
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make

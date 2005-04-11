@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/27 15:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:48 tv Exp $
 
 DISTNAME=	KoboDeluxe-0.4pre8
 PKGNAME=	${DISTNAME:S/pre/rc/}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://olofson.net/kobodl/
 COMMENT=	Multi-way scrolling shoot 'em up game for X
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_X11=	YES
 

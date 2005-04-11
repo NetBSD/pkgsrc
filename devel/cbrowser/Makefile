@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/31 11:21:16 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:18 tv Exp $
 #
 
 DISTNAME=       cbrowser-0.6
@@ -13,7 +13,6 @@ COMMENT=        Graphical C/C++ source code browsing tool, and call graph viewer
 DEPENDS+=	cscope-[0-9]*:../../devel/cscope
 DEPENDS+=	tk-[0-9]*:../../x11/tk
 
-USE_BUILDLINK3=	yes
 NO_BUILD=	# defined
 
 post-patch:

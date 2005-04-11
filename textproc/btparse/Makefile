@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:11 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:33 tv Exp $
 #
 
 DISTNAME=	btparse-0.33
@@ -12,7 +12,6 @@ COMMENT=	BibTeX parsing library
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PERL5=	build
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 BUILD_TARGET=	lib
 TEST_TARGET=	test
