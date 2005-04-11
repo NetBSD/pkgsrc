@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2005/04/11 21:46:00 tv Exp $
+# $NetBSD: Makefile,v 1.41 2005/04/11 23:01:21 reinoud Exp $
 #
 
 DISTNAME=		blender-2.36
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.cs.umn.edu/pub/blender.org/source/ \
 			http://download.blender.org/source/
@@ -38,12 +38,12 @@ do-build:
 
 do-install:
 	${CP} -f ${WRKSRC}/blender ${WRKSRC}/blender-bin
-	${SED} -e "s|__PREFIX__|${PREFIX}|g" files/blender > ${TMP}/blender
-	${CHMOD} +x ${TMP}/blender
+	${SED} -e "s|__PREFIX__|${PREFIX}|g" files/blender > ${WRKDIR}/blender/bin/blender
+	${CHMOD} +x ${WRKDIR}/blender/bin/blender
 	${INSTALL_PROGRAM} ${WRKSRC}/blender-bin ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/blender/scripts
 	${INSTALL_DATA} ${WRKSRC}/release/scripts/* ${PREFIX}/share/blender/scripts
-	${INSTALL} ${TMP}/blender ${PREFIX}/bin
+	${INSTALL} ${WRKDIR}/blender/bin/blender ${PREFIX}/bin
 
 .if defined(BLENDER_INSTALL_DOC)
 DEPENDS+=		blender-doc:../../graphics/blender-doc
