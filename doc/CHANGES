@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9824 2005/04/11 16:18:39 jschauma Exp $
+$NetBSD: CHANGES,v 1.9825 2005/04/11 17:43:14 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1982,3 +1982,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated jwhois to 3.2.2nb15 [taca 2005-04-11]
 	Updated ruby-fcgi to 0.8.6 [taca 2005-04-11]
 	Updated netscape7 to 7.2 [jschauma 2005-04-11]
+	Updated md-whois to 4.7.2 [reed 2005-04-11]
