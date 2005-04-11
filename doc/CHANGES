@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9819 2005/04/11 09:33:31 adam Exp $
+$NetBSD: CHANGES,v 1.9820 2005/04/11 11:06:51 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1977,3 +1977,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added rake-0.5.3 [minskim 2005-04-11]
 	Updated cgoban-java to 2.6.12 [rh 2005-04-11]
 	Updated gimp to 2.2.6 [adam 2005-04-11]
+	Updated nn to 6.6.5 [schwarz 2005-04-11]
