@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/08 13:04:14 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 02:44:26 jschauma Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -65,12 +65,17 @@ post-patch:
 	${RM} -f mkLinks.tmp;						\
 	${CHMOD} +x mkLinks;
 
-pre-install:
+post-build:
 	cd ${WRKSRC}; for file in					\
 		tclUnixInit.o libtcl83.so tclsh;			\
 	do								\
 		${TOUCH} $${file};					\
 	done
+	${SED} -e "s|^\(.*\)='\(.*\)'|\1=\"\2\"|"			\
+		-e "s|${WRKSRC}|${PREFIX}/lib|"				\
+		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}|"	\
+		${WRKSRC}/tclConfig.sh > ${WRKSRC}/tclConfig.sh.tmp &&	\
+		${MV} ${WRKSRC}/tclConfig.sh.tmp ${WRKSRC}/tclConfig.sh
 
 post-install:
 	cd ${WRKDIR} && ${PAX} -rwpm man ${PREFIX}
