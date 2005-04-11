@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2005/01/19 19:13:21 reed Exp $
+# $NetBSD: Makefile.common,v 1.18 2005/04/11 21:45:16 tv Exp $
 
 DISTNAME=	unixODBC-${ODBC_DIST_VERS}
 CATEGORIES=	databases
@@ -15,7 +15,6 @@ HOMEPAGE?=	http://www.unixodbc.org/
 ODBC_DIST_VERS=		2.0.11
 ODBC_BASE_VERS=		${ODBC_DIST_VERS}
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES

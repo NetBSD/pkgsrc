@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/12/10 06:40:11 markd Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:47:25 tv Exp $
 
 DISTNAME=	kdirstat-2.4.0
 PKGREVISION=	3
@@ -10,7 +10,6 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://kdirstat.sourceforge.net/
 COMMENT= 	A graphical disk usage utility
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

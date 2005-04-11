@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/02/28 13:29:31 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:47:12 tv Exp $
 
 DISTNAME=		gsasl-0.2.5
 CATEGORIES=		security
@@ -12,7 +12,6 @@ COMMENT=		GNU implementation of the Simple Authentication and Security Layer
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 TEST_TARGET=		check

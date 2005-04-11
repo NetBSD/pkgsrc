@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/10/03 00:12:57 tv Exp $
+# $NetBSD: Makefile,v 1.31 2005/04/11 21:46:30 tv Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -19,7 +19,6 @@ COMMENT=	Program for statistical analysis of sampled data
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-Dunix=1

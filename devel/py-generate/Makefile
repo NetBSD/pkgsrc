@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/04 13:29:54 darcy Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:37 tv Exp $
 #
 
 DISTNAME=	generate-2.2
@@ -13,7 +13,6 @@ COMMENT=	Python interface to Generate
 
 MAKE_ENV+=		MANDIR=${LOCALBASE}/man
 MAKE_ENV+=		BINDIR=${LOCALBASE}/bin
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 PYDISTUTILSPKG=	yes

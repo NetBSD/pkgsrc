@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/02/22 22:18:20 jwise Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:04 tv Exp $
 #
 
 DISTNAME=	i2cbd-2.0_BETA1
@@ -10,7 +10,6 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.draga.com/~jwise/i2cb/
 COMMENT=	Next generation Internet Citizens Band chat server
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/11/22 21:14:29 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/04/11 21:45:24 tv Exp $
 #
 
 DISTNAME=	gperf-3.0.1
@@ -11,7 +11,6 @@ COMMENT=	GNU perfect hash function generator
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--mandir="${PREFIX}/man"

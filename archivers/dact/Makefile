@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:13:04 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:44:48 tv Exp $
 #
 
 DISTNAME=	dact-0.8.3
@@ -12,7 +12,6 @@ COMMENT=	Dynamic adaptive compression tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
 

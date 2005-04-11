@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/10/03 00:14:52 tv Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:46:04 tv Exp $
 
 DISTNAME=	gphoto-0.4.3
 PKGREVISION=	7
@@ -9,7 +9,6 @@ MAINTAINER=	jmcm@cs.cmu.edu
 HOMEPAGE=	http://www.gphoto.org/
 COMMENT=	Download and view files from various digital cameras
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome1-1.0
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES

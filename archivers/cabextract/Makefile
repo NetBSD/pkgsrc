@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/29 14:32:38 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:44:48 tv Exp $
 #
 
 DISTNAME=		cabextract-1.1
@@ -11,7 +11,6 @@ COMMENT=		Microsoft cabinet (.CAB) file extractor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 

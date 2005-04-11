@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/03/27 15:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:45:51 tv Exp $
 
 DISTNAME=	lbreakout2-2.5.2
 PKGREVISION=	1
@@ -9,7 +9,6 @@ MAINTAINER=	xs@nitric.net
 HOMEPAGE=	http://lgames.sourceforge.net/
 COMMENT=	Breakout-style arcade game
 
-USE_BUILDLINK3=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-highscore-path=${LOCALBASE}/share/games/ \

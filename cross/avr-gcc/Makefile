@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/24 21:12:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:10 tv Exp $
 
 DISTNAME=		gcc-3.3.2003.05.11
 PKGNAME=		avr-gcc-3.3.2003.05.11
@@ -21,7 +21,6 @@ EXTRACT_ONLY=		gcc-core+g++-3.3.2003.05.11${EXTRACT_SUFX}
 # Unfortunately, only some mirrors have it as a .bz2 file, while
 # the original master site still uses .gz.
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_PERL5=		build
 USE_BZIP2=		yes
 USE_GNU_TOOLS+=		lex make yacc

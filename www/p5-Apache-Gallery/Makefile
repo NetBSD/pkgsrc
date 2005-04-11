@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/01/23 18:30:11 kim Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/11 21:47:55 tv Exp $
 #
 
 DISTNAME=	Apache-Gallery-0.9.1
@@ -20,7 +20,6 @@ DEPENDS+=	p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size
 DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
 DEPENDS+=	p5-libapreq{,2}-[0-9]*:../../www/${LIBAPREQ}
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
 USE_PERL5=		run

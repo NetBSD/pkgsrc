@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/11/05 23:26:35 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.15 2005/04/11 21:47:08 tv Exp $
 
 DISTNAME=		pdflib-${PDFLIB_DIST_VERS}
 PKGREVISION=		1
@@ -19,7 +19,6 @@ PDFLIB_BASE_VERS=	4.0.3
 DISTINFO_FILE=		${.CURDIR}/../pdflib/distinfo
 PATCHDIR=		${.CURDIR}/../pdflib/patches
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES

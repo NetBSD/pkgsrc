@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/22 14:58:55 cube Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:44:52 tv Exp $
 
 DISTNAME=	gkrellm-volume-2.1.13
 CATEGORIES=	audio
@@ -10,7 +10,6 @@ COMMENT=	Gkrellm2 volume mixer plugin
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
 WRKSRC=			${WRKDIR}/gkrellm-volume

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/04/03 21:24:34 jdolecek Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 21:45:45 tv Exp $
 
 DISTNAME=		shlibs5
 PKGNAME=		suse_libc5-${SUSE_VERSION}
@@ -17,7 +17,6 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386 FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
-NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}

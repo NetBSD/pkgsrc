@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:12:57 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/11 21:46:31 tv Exp $
 
 DISTNAME=	ScientificPython-2.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python//}
@@ -16,7 +16,6 @@ CONFLICTS+=	py-Scientific-*
 BUILDLINK_DEPENDS.python20=	python20>=2.0.1nb1
 BUILDLINK_DEPENDS.python21=	python21>=2.1.1nb1
 
-USE_BUILDLINK3=	yes
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 

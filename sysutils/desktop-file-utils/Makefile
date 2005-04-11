@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/03 21:43:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:23 tv Exp $
 #
 
 DISTNAME=	desktop-file-utils-0.10
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.freedesktop.org/Software/desktop-file-utils
 COMMENT=	Utilities to manage desktop entries
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES

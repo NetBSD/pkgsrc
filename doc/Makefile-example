@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.8 2005/02/12 11:05:05 rillig Exp $
+# $NetBSD: Makefile-example,v 1.9 2005/04/11 21:45:39 tv Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
@@ -28,14 +28,13 @@ LICENSE=		hptools-license
 PKG_INSTALLATION_TYPES=	overwrite pkgviews	# needed for package views-ready packages
 
 # Fifth paragraph - all build definitions that describe things used by
-# the package.  These include: WRKSRC, USE_BUILDLINK3, GNU_CONFIGURE,
+# the package.  These include: WRKSRC, GNU_CONFIGURE,
 # HAS_CONFIGURE, USE_PKGLOCALEDIR, USE_INSTALL, TEXINFO_REQD, USE_JAVA,
 # USE_PERL5, INFO_FILES, DIST_SUBDIR, etc.
 DIST_SUBDIR=		gmake
 GNU_CONFIGURE=		yes
 INFO_FILES=		make.info	# any info files, whitespace delimited
 TEXINFO_REQD=		4.0		# version of texinfo which is necessary
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 WRKSRC=			${WRKDIR}/src
 

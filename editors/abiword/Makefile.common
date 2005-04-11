@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2005/04/04 15:33:30 adam Exp $
+# $NetBSD: Makefile.common,v 1.16 2005/04/11 21:45:40 tv Exp $
 
 # Be sure to update PLIST and distinfo for editors/abiword-plugins when updating
 ABIWORD_VERSION=	2.2.6
@@ -16,7 +16,6 @@ BUILD_USES_MSGFMT=	yes
 
 MAKEFILE=		GNUmakefile
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make

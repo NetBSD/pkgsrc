@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/03/24 21:13:03 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:48:03 tv Exp $
 
 DISTNAME=		9term.1.6.3
 PKGNAME=		9term-1.6.3
@@ -14,7 +14,6 @@ BUILDLINK_DEPMETHOD.sam=	full
 NOT_FOR_PLATFORM=	*-*-alpha	#LP64 Problems
 
 WRKSRC=			${WRKDIR}
-USE_BUILDLINK3=		yes
 USE_X11=		yes
 
 MANCOMPRESSED=		yes

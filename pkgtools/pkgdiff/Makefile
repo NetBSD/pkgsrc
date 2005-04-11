@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2004/11/23 22:00:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.53 2005/04/11 21:47:05 tv Exp $
 #
 
 DISTNAME=	pkgdiff-0.116
@@ -19,7 +19,6 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK3=	yes
 USE_LANGUAGES=	# empty
 
 MAKE_ENV=	PKGSRCDIR=${_PKGSRCDIR:Q}

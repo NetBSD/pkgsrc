@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2004/11/08 15:09:13 tron Exp $
+# $NetBSD: Makefile.common,v 1.17 2005/04/11 21:46:09 tv Exp $
 
 CATEGORIES?=	graphics
 MASTER_SITES?=	ftp://ftp.mostang.com/pub/sane/${DISTNAME}/ \
@@ -21,7 +21,6 @@ PLIST_SUBST+=	SANE_VERSION=${SANE_VERSION}
 CONFLICTS+=	sane<=1.0.3
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 CONFIGURE_ENV+=		ac_cv_path_LATEX="no"

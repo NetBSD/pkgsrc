@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/03/22 16:34:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:41 tv Exp $
 
 DISTNAME=		gnome-media-2.10.0
 CATEGORIES=		multimedia gnome
@@ -15,7 +15,6 @@ DEPENDS+=		gst-plugins-esound>=0.8.8:../../audio/gst-plugins-esound
 DEPENDS+=		gst-plugins-oss>=0.8.8:../../audio/gst-plugins-oss
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

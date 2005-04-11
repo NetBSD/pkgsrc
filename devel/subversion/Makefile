@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/10/05 07:18:58 seb Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:45:38 tv Exp $
 
 PKGNAME=	subversion-${SVNVER}
 COMMENT=	Version control system, meta-package
@@ -12,7 +12,6 @@ DEPENDS+=	${PYPKGPREFIX}-subversion-${SVNVER}{,nb[0-9]*}:../../devel/py-subversi
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
-NO_BUILDLINK=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 NO_MTREE=	YES

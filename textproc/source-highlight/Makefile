@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/21 00:15:47 seb Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:47:42 tv Exp $
 #
 
 DISTNAME=	source-highlight-1.11
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.gnu.org/software/src-highlite/
 COMMENT=	Highlight syntax of various languages source into HTML document
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_LANGUAGES=	c c++
 
 TEST_TARGET=	check

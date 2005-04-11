@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/27 15:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:43 tv Exp $
 #
 
 DISTNAME=	smpeg-xmms-0.3.5
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.xmms.org/
 COMMENT=	MPEG video plugin using SDL/smpeg as the backend
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 

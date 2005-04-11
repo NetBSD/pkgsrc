@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/11/13 22:04:52 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:45:48 tv Exp $
 
 DISTNAME=	battleball.21.src
 PKGNAME=	battleball-2.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.cs.utexas.edu/users/pahardin/bb.html
 COMMENT=	3d game of soccer, with tanks
 
 WRKSRC=		${WRKDIR}/battleball-2.1-src
-USE_BUILDLINK3=	YES
 USE_X11=	YES
 USE_LANGUAGES=	c c++
 

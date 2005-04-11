@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2005/03/22 16:16:33 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.17 2005/04/11 21:46:41 tv Exp $
 #
 
 DISTNAME=		gst-plugins-0.8.8
@@ -18,7 +18,6 @@ PATCHDIR=		${.CURDIR}/../../multimedia/gst-plugins/patches
 BUILD_DEPENDS+=		nasm>=0.98.38:../../devel/nasm
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

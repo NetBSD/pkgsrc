@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/12 19:09:19 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:28 tv Exp $
 #
 
 DISTNAME=		mkcmd-8.14
@@ -10,7 +10,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		epg@NetBSD.org
 COMMENT=		Command-line parser and manual page generator
 
-USE_BUILDLINK3=		yes
 
 INSTALLATION_DIRS=	bin man/man1 man/man5
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/20 14:15:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:12 tv Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 PKGREVISION=		3
@@ -8,7 +8,6 @@ COMMENT=		MySQL 3, a free SQL database (client)
 .include "Makefile.common"
 
 CONFIGURE_ARGS+=	--without-server
-USE_BUILDLINK3=		YES
 
 USE_NEW_TEXINFO=	YES
 INFO_FILES=		mysql.info

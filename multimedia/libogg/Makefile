@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:13:03 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:42 tv Exp $
 #
 
 DISTNAME=	libogg-1.1.2
@@ -12,7 +12,6 @@ COMMENT=	Ogg project codecs library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 

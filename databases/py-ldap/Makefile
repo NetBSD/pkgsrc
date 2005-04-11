@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/01/23 20:41:45 recht Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/11 21:45:15 tv Exp $
 
 DISTNAME=	python-ldap-2.0.2
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -12,7 +12,6 @@ COMMENT=	LDAP client API for Python
 
 PYTHON_VERSIONS_ACCEPTED=	21 22 23
 PYDISTUTILSPKG=			yes
-USE_BUILDLINK3=			yes
 
 SUBST_CLASSES+=			setup
 SUBST_STAGE.setup=		pre-configure

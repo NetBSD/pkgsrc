@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/23 15:57:20 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:43 tv Exp $
 
 DISTNAME=	xmltv-0.5.39
 PKGNAME=	p5-${DISTNAME}
@@ -44,7 +44,6 @@ PERL5_REQD?=	5.6.0
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XMLTV/.packlist
 
 MAKE_PARAMS+=	PREFIX=${PREFIX:Q}

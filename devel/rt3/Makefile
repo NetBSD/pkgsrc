@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/24 20:42:03 cube Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:38 tv Exp $
 
 DISTNAME=		rt-3.2.3
 CATEGORIES=		devel
@@ -75,7 +75,6 @@ DEPENDS+=	p5-Regexp-Common>=2.113:../../textproc/p5-Regexp-Common
 DEPENDS+=	p5-Apache-Test-[0-9]*:../../www/p5-Apache-Test
 DEPENDS+=	p5-WWW-Mechanize>=0.72:../../www/p5-WWW-Mechanize
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 NO_BUILD=		yes

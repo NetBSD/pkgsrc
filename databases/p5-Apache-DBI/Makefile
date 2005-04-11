@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/20 11:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:12 tv Exp $
 #
 
 DISTNAME=	Apache-DBI-0.94
@@ -15,7 +15,6 @@ COMMENT=	DBI support for Apache+mod_perl
 DEPENDS+=	p5-DBI>=1.13:../../databases/p5-DBI
 DEPENDS+=	p5-Test-Simple>=0.47:../../devel/p5-Test-Simple
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/DBI/.packlist
 
 .include "../../lang/perl5/module.mk"

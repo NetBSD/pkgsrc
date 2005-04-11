@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/20 11:31:01 grant Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:32 tv Exp $
 #
 
 DISTNAME=	IPC-Shareable-0.60
@@ -14,7 +14,6 @@ DEPENDS+=	p5-Storable>=1.0.14:../../devel/p5-Storable
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		 YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/IPC/Shareable/.packlist
 
 .include "../../lang/perl5/module.mk"

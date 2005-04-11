@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2005/03/22 10:55:13 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.4 2005/04/11 21:47:23 tv Exp $
 #
 
 # XXX Do not update to 0.30 or above yet.  The API in the 0.2x series is
@@ -18,7 +18,6 @@ DISTINFO_FILE=	${.CURDIR}/../../sysutils/dbus/distinfo
 PATCHDIR=	${.CURDIR}/../../sysutils/dbus/patches
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES

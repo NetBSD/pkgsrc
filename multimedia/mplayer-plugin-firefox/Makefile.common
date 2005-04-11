@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/11/28 19:19:52 jlam Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/04/11 21:46:42 tv Exp $
 #
 
 DISTNAME=		mplayerplug-in-2.70
@@ -14,7 +14,6 @@ DEPENDS+=		mplayer>=0.92:../../multimedia/mplayer
 
 WRKSRC=			${WRKDIR}/mplayerplug-in
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES+=		c++
 USE_PKGINSTALL=		yes

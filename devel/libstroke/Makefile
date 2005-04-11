@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:13:31 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:28 tv Exp $
 #
 
 DISTNAME=		libstroke-0.5.1
@@ -15,7 +15,6 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS=		make
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

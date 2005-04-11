@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2005/01/23 12:06:07 tron Exp $
+# $NetBSD: Makefile,v 1.53 2005/04/11 21:45:45 tv Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 PKGREVISION=		6
@@ -18,7 +18,6 @@ ONLY_FOR_PLATFORM+=	NetBSD-1.6[L-Z]-powerpc NetBSD-1.6Z[A-Z]-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386
 
-NO_BUILDLINK=		YES
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 

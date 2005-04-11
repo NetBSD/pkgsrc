@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/12/03 15:15:06 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2005/04/11 21:47:00 tv Exp $
 #
 
 DISTNAME=	tcptrace-6.6.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.tcptrace.org/
 COMMENT=	TCP dump file analysis tool
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 
 BUILD_TARGET=	tcptrace
 

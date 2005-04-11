@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/03/22 16:13:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2005/04/11 21:47:19 tv Exp $
 
 DISTNAME=	seahorse-0.7.5
 PKGREVISION=	1
@@ -14,7 +14,6 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS+=		gnupg>=1.2.1:../../security/gnupg
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes

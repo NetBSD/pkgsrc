@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/02/21 20:26:09 hubertf Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:45:00 tv Exp $
 
 DISTNAME=	xmradio-1.2
 PKGREVISION=	1
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-i386 \
 			NetBSD-1.5_ALPHA-i386 NetBSD-1.[5-9]*-* \
 			NetBSD-[2-9]*.*-*
 
-USE_BUILDLINK3=	YES
 USE_IMAKE=	YES
 
 post-install:

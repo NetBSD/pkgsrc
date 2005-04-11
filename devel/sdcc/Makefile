@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/03/24 21:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 21:45:38 tv Exp $
 
 DISTNAME=	sdcc-2.4.0
 PKGNAME=	${DISTNAME:S/-src//}
@@ -21,7 +21,6 @@ YACC=		bison
 BUILD_TARGET=	dep all
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-2.4.0//}
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/03/09 23:29:06 snj Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:45:58 tv Exp $
 #
 
 DISTNAME=       xdemineur-2.1.1
@@ -11,7 +11,6 @@ MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.spinne.com/x/games/xdemineur/
 COMMENT=	Minesweeper game for the X Window System
 
-USE_BUILDLINK3=	YES
 USE_IMAKE=	YES
 
 .include "../../graphics/xpm/buildlink3.mk"

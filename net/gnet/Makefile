@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/03/23 22:26:44 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/11 21:46:47 tv Exp $
 #
 
 DISTNAME=		gnet-2.0.7
@@ -12,7 +12,6 @@ COMMENT=		Simple network library
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	gnet-2.0.pc.in
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 CONFIGURE_ARGS=		--enable-glib2
 TEST_TARGET=		check
 

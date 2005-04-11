@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:18:19 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:33 tv Exp $
 #
 
 DISTNAME=	bsdgrep-200405051607
@@ -11,7 +11,6 @@ MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	# none
 COMMENT=	BSD version of grep as in NetBSD src/usr.bin/grep
 
-USE_BUILDLINK3=	yes
 
 post-patch:
 	@${SED} -e 's|grep|bgrep|g' ${WRKSRC}/grep.1 > ${WRKSRC}/bgrep.1

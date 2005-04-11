@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/10/03 00:18:03 tv Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/11 21:47:06 tv Exp $
 
 DISTNAME=	rpm2pkg-2.1
 PKGREVISION=	1
@@ -13,7 +13,6 @@ COMMENT=	Convert RPM archives to NetBSD packages
 CONFLICTS+=	suse-base<=6.4
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK3=	YES
 NO_CHECKSUM=	YES
 
 CPPFLAGS+=	${BUILDLINK_CPPFLAGS.bzip2} ${BUILDLINK_CPPFLAGS.rpm} \

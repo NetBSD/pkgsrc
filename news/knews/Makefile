@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2004/10/03 00:18:02 tv Exp $
+# $NetBSD: Makefile,v 1.45 2005/04/11 21:47:03 tv Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0
@@ -12,7 +12,6 @@ COMMENT=	X11 newsreader with support for threading and MIME
 
 CONFLICTS=	knews-1.0b0
 
-USE_BUILDLINK3=	YES
 USE_IMAKE=	YES
 
 BUILD_DEFS+=	KNEWS_DOMAIN_NAME KNEWS_DOMAIN_FILE USE_INET6

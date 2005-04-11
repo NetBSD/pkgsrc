@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/10/22 18:30:43 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/04/11 21:44:51 tv Exp $
 
 DISTNAME=	aumix-2.8
 CATEGORIES=	audio
@@ -19,7 +19,6 @@ DISTINFO_FILE=		${.CURDIR}/../../audio/aumix/distinfo
 PATCHDIR=		${.CURDIR}/../../audio/aumix/patches
 PLIST_SRC=		${.CURDIR}/../../audio/aumix/PLIST
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

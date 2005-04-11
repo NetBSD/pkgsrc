@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:18:27 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:48:03 tv Exp $
 
 DISTNAME=	ParsedXML-1.3.1
 PKGREVISION=	3
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.zope.org/Members/faassen/ParsedXML
 COMMENT=	Allows you to use XML objects in the Zope environment
 
 ZOPE_COPYPRODUCT= zope-std-copyproduct-short
-USE_BUILDLINK3=	yes
 
 .include "../../www/zope25/product.mk"
 .include "../../textproc/py-xml/buildlink3.mk"

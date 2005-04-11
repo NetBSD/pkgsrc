@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2005/02/18 17:22:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2005/04/11 21:44:53 tv Exp $
 
 DISTNAME=	libao-0.8.6
 CATEGORIES=	audio devel
@@ -12,7 +12,6 @@ DISTINFO_FILE=	${.CURDIR}/../../audio/libao/distinfo
 PATCHDIR=	${.CURDIR}/../../audio/libao/patches
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/20 23:30:31 he Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:12 tv Exp $
 #
 
 DISTNAME=	Class-DBI-AbstractSearch-0.05
@@ -14,7 +14,6 @@ COMMENT=	Abstract Class::DBI's SQL with SQL::Abstract
 DEPENDS+=	p5-Class-DBI>=0.9:../../databases/p5-Class-DBI
 DEPENDS+=	p5-SQL-Abstract>=1.1:../../databases/p5-SQL-Abstract
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Class/DBI/AbstractSearch/.packlist
 
 .include "../../lang/perl5/module.mk"

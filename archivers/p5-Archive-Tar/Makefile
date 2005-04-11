@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/12/20 11:30:55 grant Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:44:49 tv Exp $
 
 DISTNAME=		Archive-Tar-1.22
 PKGNAME=		p5-${DISTNAME}
@@ -17,7 +17,6 @@ DEPENDS+=		p5-IO-String-[0-9]*:../../devel/p5-IO-String
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
-USE_BUILDLINK3=		yes
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Archive/Tar/.packlist
 
 .include "../../lang/perl5/module.mk"

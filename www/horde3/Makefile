@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/30 21:58:08 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:53 tv Exp $
 
 DISTNAME=	horde-3.0.4
 CATEGORIES=	www
@@ -28,7 +28,6 @@ HORDEDIR=	${PREFIX}/share/horde
 PAXDIRS=	js lib locale po scripts services templates themes util admin
 SENDMAIL?=      /usr/sbin/sendmail
 
-USE_BUILDLINK3=		YES
 PKG_SYSCONFSUBDIR?=	httpd
 USE_PKGINSTALL=		YES
 MESSAGE_SUBST+=		HORDEDIR=${HORDEDIR}

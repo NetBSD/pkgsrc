@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/21 21:48:32 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:44:49 tv Exp $
 #
 
 DISTNAME=		par2cmdline-0.3
@@ -12,7 +12,6 @@ COMMENT=		Create or use PAR2 parity volumes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

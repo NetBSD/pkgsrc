@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/03/22 16:31:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.41 2005/04/11 21:47:07 tv Exp $
 #
 
 DISTNAME=		ggv-2.8.4
@@ -13,7 +13,6 @@ COMMENT=		GNOME2 GhostScript frontend and PDF viewer
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES

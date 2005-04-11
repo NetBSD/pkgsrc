@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/28 16:04:28 adam Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:12 tv Exp $
 
 DISTNAME=	ike-scan-1.7.1
 CATEGORIES=	security
@@ -8,7 +8,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nta-monitor.com/ike-scan/
 COMMENT=	Fingerprinting IKE implementation
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-openssl
 

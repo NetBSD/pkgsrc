@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.common,v 1.6 2005/02/04 01:48:51 minskim Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/04/11 21:47:09 tv Exp $
 
 TETEX_BIN_VERS=		2.0.2
 DIST_SUBDIR=		teTeX
 BUILD_TARGET=		all
 INSTALL_TARGET=		install strip
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 USE_PKGINSTALL=		yes

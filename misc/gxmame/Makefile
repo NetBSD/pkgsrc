@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/03/15 15:55:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:46:35 tv Exp $
 #
 
 DISTNAME=	gxmame-0.35beta1
@@ -14,7 +14,6 @@ DEPENDS+=		xmame>=0.87:../../emulators/xmame
 DEPENDS+=               p5-XML-Parser>=2.34:../../textproc/p5-XML-Parser
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes

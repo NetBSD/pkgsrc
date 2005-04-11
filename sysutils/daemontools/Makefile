@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/04/09 22:36:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/11 21:47:23 tv Exp $
 
 DISTNAME=		daemontools-0.76
 CATEGORIES=		sysutils
@@ -16,7 +16,6 @@ DJB_RESTRICTED=		YES
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 
 SAMPLERC=		svscan.sh.sample
 SERVICEDIR?=		${VARBASE}/spool/service

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/25 03:02:53 snj Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:10 tv Exp $
 #
 
 DISTNAME=		bitstir-0.2
@@ -9,7 +9,6 @@ MAINTAINER=		pdh@wiredyne.com
 HOMEPAGE=		http://www.wiredyne.com/software/bitstir.html
 COMMENT=		Entropy restoration daemon
 
-USE_BUILDLINK3=		yes
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 

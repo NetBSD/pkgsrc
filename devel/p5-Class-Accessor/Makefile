@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/20 11:30:58 grant Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:29 tv Exp $
 #
 
 DISTNAME=	Class-Accessor-0.19
@@ -14,7 +14,6 @@ COMMENT=	Automated accessor generation
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Class/Accessor/.packlist
 
 .include "../../lang/perl5/module.mk"

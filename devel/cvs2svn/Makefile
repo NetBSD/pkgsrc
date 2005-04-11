@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:13:26 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:19 tv Exp $
 
 DISTNAME=	cvs2svn-1.0.0
 PKGREVISION=	1
@@ -14,7 +14,6 @@ DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
 CONFLICTS+=	py*-subversion<1.0.1
 
 PYDISTUTILSPKG=			yes
-USE_BUILDLINK3=			YES
 PYTHON_PATCH_SCRIPTS=		run-tests.py
 
 # XXX cvs2svn depends on sort(1) with '-T' option. A dependency and a patch

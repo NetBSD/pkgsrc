@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/01/30 23:18:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:44:48 tv Exp $
 #
 
 DISTNAME=	fastjar-0.93
@@ -14,7 +14,6 @@ COMMENT=	C language version of the 'jar' archiver normally used by Java
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 
 INSTALLATION_DIRS=	man/man1
 

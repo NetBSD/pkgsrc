@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/01 11:47:44 markd Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:44:58 tv Exp $
 #
 
 DISTNAME=	arts_output-0.7.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.xmms.org/plugins.php?category=output
 COMMENT=	XMMS plugin to output sound through the aRts sound daemon
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool
 

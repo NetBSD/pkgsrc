@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/02/17 03:12:27 uebayasi Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/11 21:46:09 tv Exp $
 
 DISTNAME=		tcm-2.01.src
 PKGNAME=		tcm-2.01
@@ -11,7 +11,6 @@ HOMEPAGE=		http://wwwhome.cs.utwente.nl/~tcm/index.html
 COMMENT=		TCM - Toolkit for Conceptual Modeling
 
 WRKSRC=			${WRKDIR}/tcm-2.01/src
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 

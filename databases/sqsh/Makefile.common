@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2004/12/03 15:14:53 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/04/11 21:45:16 tv Exp $
 
 DISTNAME=	sqsh-2.1-src
 CATEGORIES=	databases
@@ -11,7 +11,6 @@ COMMENT?=	SQL shell for Sybase and MS-SQL servers
 BUILD_TARGET=		build
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C|-src||}
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-readline

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/12/28 23:18:18 reed Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:47:48 tv Exp $
 #
 
 DISTNAME=	qvwm-1.1.12
@@ -13,7 +13,6 @@ COMMENT=	Windows 95/98/NT like window manager for X11
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK3=	yes
 USE_LANGUAGES=	c++
 
 post-install:

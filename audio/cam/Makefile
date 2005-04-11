@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/10/03 00:13:05 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:44:51 tv Exp $
 #
 
 DISTNAME=	cam-1.02
@@ -14,7 +14,6 @@ CONFLICTS+=	feh<1.2.6nb3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin man/man1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/01 09:43:06 cube Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:19 tv Exp $
 #
 
 DISTNAME=		srm-1.2.8
@@ -9,7 +9,6 @@ MAINTAINER=		cube@NetBSD.org
 HOMEPAGE=		http://srm.sourceforge.net/
 COMMENT=		Secure replacement for rm(1)
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.pkg.mk"

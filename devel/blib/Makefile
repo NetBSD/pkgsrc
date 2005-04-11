@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/10/03 00:13:25 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:18 tv Exp $
 #
 
 DISTNAME=		blib-1.0.2
@@ -10,7 +10,6 @@ MAINTAINER=		salo@NetBSD.org
 HOMEPAGE=		http://www.blinkenlights.de/
 COMMENT=		Blinkenlights library
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 

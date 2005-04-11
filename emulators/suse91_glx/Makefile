@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/02 19:50:01 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:44 tv Exp $
 
 DISTNAME=		suse_glx-${SUSE_VERSION}
 PKGREVISION=		# empty
@@ -16,7 +16,6 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386 FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
-NO_BUILDLINK=		YES
 LIBTOOLIZE_PLIST=	NO
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/02/19 20:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:47:39 tv Exp $
 #
 
 DISTNAME=	XML-LibXML-1.58
@@ -15,7 +15,6 @@ DEPENDS+=	p5-XML-SAX>=0.03:../../textproc/p5-XML-SAX
 DEPENDS+=	p5-XML-Checker-[0-9]*:../../textproc/p5-XML-Checker
 DEPENDS+=	p5-XML-LibXML-Common-[0-9]*:../../textproc/p5-XML-LibXML-Common
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/LibXML/.packlist
 
 .include "../../textproc/libxml2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/04/17 00:26:48 rh Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/04/11 21:48:08 tv Exp $
 #
 
 DISTNAME=		gtoolkit-0.9.5
@@ -8,7 +8,6 @@ MASTER_SITES?=		ftp://ftp.inf.uos.de/pub/elmar/gtk/objc-gtoolkit/
 MAINTAINER?=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.informatik.uni-osnabrueck.de/elmar/projects/gtoolkit/
 
-USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--with-gnustep

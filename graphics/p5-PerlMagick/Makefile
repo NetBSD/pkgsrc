@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/01/18 11:22:10 drochner Exp $
+# $NetBSD: Makefile,v 1.39 2005/04/11 21:46:07 tv Exp $
 
 .include "../../graphics/ImageMagick/Makefile.common"
 
@@ -16,7 +16,6 @@ PATCHDIR=	${.CURDIR}/../../graphics/ImageMagick/patches
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 
 USE_PERL5=		run

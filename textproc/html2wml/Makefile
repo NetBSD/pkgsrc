@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/06/21 08:58:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:35 tv Exp $
 
 DISTNAME=	html2wml-0.4.8r2
 PKGNAME=	html2wml-0.4.8.2
@@ -15,7 +15,6 @@ DEPENDS+=	p5-XML-Parser>=2.30:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Text-Template>=1.31:../../textproc/p5-Text-Template
 DEPENDS+=	p5-XML-LibXML>=1.31:../../textproc/p5-XML-LibXML
 
-USE_BUILDLINK3=	yes
 NO_BUILD=	# defined
 
 REPLACE_PERL=	${WRKSRC}/html2wml.cgi

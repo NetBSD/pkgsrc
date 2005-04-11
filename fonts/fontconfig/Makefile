@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/03/22 14:05:54 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2005/04/11 21:45:47 tv Exp $
 #
 
 DISTNAME=	fontconfig-2.3.1
@@ -16,7 +16,6 @@ BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.0.9
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make

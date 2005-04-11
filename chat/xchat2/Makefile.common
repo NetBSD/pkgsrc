@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/11/29 17:36:10 minskim Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/04/11 21:45:06 tv Exp $
 #
 
 DISTNAME=	xchat-2.4.1
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.xchat.org/
 DISTINFO_FILE=	${.CURDIR}/../../chat/xchat2/distinfo
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:18:36 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:48:11 tv Exp $
 
 DISTNAME=	Mowitz-0.2.2
 PKGREVISION=	1
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://siag.nu/mowitz/
 COMMENT=	"More widgets" library
 
-USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_X11=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:14:57 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:08 tv Exp $
 #
 
 DISTNAME=	python-biggles-1.6.3
@@ -14,7 +14,6 @@ COMMENT= 	Python module for creating 2D scientific plots
 USE_X11=	yes
 PYDISTUTILSPKG= yes
 PYBINMODULE=	yes
-USE_BUILDLINK3=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-Numeric/buildlink3.mk"

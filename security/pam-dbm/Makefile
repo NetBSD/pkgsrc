@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/14 05:15:40 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:17 tv Exp $
 #
 
 DISTNAME=		pam_dbm-0.2
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www-dev.cites.uiuc.edu/pam_dbm/
 COMMENT=		PAM module for DBM authentication
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 BDB_ACCEPTED=		db1

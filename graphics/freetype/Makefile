@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/10/06 09:36:17 tron Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/11 21:46:02 tv Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.3.1
@@ -18,7 +18,6 @@ EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		# defined
 NO_CONFIGURE=		# defined
 NO_BUILD=		# defined
-NO_BUILDLINK=		# defined
 
 do-install:		# empty
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/02/18 18:23:30 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2005/04/11 21:45:08 tv Exp $
 #
 
 DISTNAME=		scmxx-0.7.5
@@ -10,7 +10,6 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.hendrik-sattler.de/scmxx/
 COMMENT=		Data exchange utility for Siemens mobile phones
 
-USE_BUILDLINK3=		yes
 
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make

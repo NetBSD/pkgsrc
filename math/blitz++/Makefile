@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/11 09:02:04 snj Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:28 tv Exp $
 
 DISTNAME=		blitz-0.6
 PKGNAME=		blitz++-0.6
@@ -11,7 +11,6 @@ COMMENT=		C++ template class library providing array objects
 
 CONFIGURE_ARGS+=	--with-cxx=gcc
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 post-install:

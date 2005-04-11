@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/10/03 00:18:39 tv Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/11 21:48:14 tv Exp $
 
 DISTNAME=	wterm-6.2.9
 PKGREVISION=	4
@@ -12,7 +12,6 @@ COMMENT=	NeXTStep(tm) style X11 terminal emulator for WindowMaker
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
-USE_BUILDLINK3=	YES
 
 CONFIGURE_ARGS+= --enable-utmp --enable-wtmp
 CONFIGURE_ARGS+= --enable-xpm-background --enable-transparency

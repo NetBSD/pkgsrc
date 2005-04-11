@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/20 11:31:04 grant Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:21 tv Exp $
 
 DISTNAME=		Mail-ListDetector-0.18
 PKGNAME=		p5-${DISTNAME}
@@ -15,7 +15,6 @@ DEPENDS+=		p5-Email-Valid-[0-9]*:../../mail/p5-Email-Valid
 DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=		p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/ListDetector/.packlist
 
 .include "../../lang/perl5/module.mk"

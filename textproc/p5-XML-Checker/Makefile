@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/20 11:31:10 grant Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:39 tv Exp $
 
 DISTNAME=	XML-Checker-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,6 @@ DEPENDS+=	p5-XML-DOM-[0-9]*:../../textproc/p5-XML-DOM
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/Checker/.packlist
 
 .include "../../lang/perl5/module.mk"

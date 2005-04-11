@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/12/29 11:37:39 adrianp Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:45:19 tv Exp $
 #
 
 DISTNAME=	cvsgraph-1.5.1
@@ -9,7 +9,6 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.akhphd.au.dk/~bertho/cvsgraph/
 COMMENT=	Graphically represents CVS/RCS branches and file revisions
 
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		lex
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES

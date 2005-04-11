@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/01/22 15:59:58 ben Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:20 tv Exp $
 #
 
 DISTNAME=	tct-1.09
@@ -12,7 +12,6 @@ COMMENT=	Programs to aid post-mortem after a break-in
 
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 
-USE_BUILDLINK3=	yes
 REPLACE_PERL=	bin/grave-robber bin/mactime bin/strip_tct_home
 REPLACE_PERL+=	extras/bdf extras/ils2mac extras/realpath
 REPLACE_PERL+=	lazarus/lazarus

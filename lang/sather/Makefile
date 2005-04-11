@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/12/03 15:15:01 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/11 21:46:16 tv Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		5
@@ -9,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/directory/devel/prog/sather.html
 COMMENT=		Compiler for the Sather object oriented programming language
 
-USE_BUILDLINK3=		yes
 USE_X11=		# defined
 USE_GNU_TOOLS+=		make
 

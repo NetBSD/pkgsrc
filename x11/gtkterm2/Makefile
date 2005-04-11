@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/19 09:55:13 adam Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:48:08 tv Exp $
 
 DISTNAME=	gtkterm2-0.2.3
 CATEGORIES=	x11
@@ -9,7 +9,6 @@ HOMEPAGE=	http://gtkterm.feige.net/
 COMMENT=	Simple GTK-2 terminal with tabs
 
 USE_LIBTOOL=		YES
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_PKGLOCALEDIR=	YES

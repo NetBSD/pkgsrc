@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/04/18 07:41:02 snj Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:48:16 tv Exp $
 
 DISTNAME=	xteddy-1.1
 CATEGORIES=	x11 games
@@ -8,7 +8,6 @@ MAINTAINER=	johnam@mail.kemper.org
 HOMEPAGE=	http://www.ITN.LiU.SE/~stegu/xteddy
 COMMENT=	Xteddy is a cuddly teddy bear for your X Windows desktop
 
-USE_BUILDLINK3=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 

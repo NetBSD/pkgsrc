@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/09/22 22:37:27 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.25 2005/04/11 21:45:01 tv Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
@@ -14,7 +14,6 @@ COMMENT=	Three-dimensional inductance extraction program
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 WRKSRC=			${WRKDIR}/fasthenry-3.0
-USE_BUILDLINK3=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS=		default

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/12 20:46:28 snj Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:13 tv Exp $
 
 DISTNAME=	libdes-4.04b
 CATEGORIES=	security
@@ -9,6 +9,5 @@ COMMENT=	Small DES (Data Encryption Standard) lib & standalone program
 
 WRKSRC=         ${WRKDIR}/des
 CRYPTO=		YES
-USE_BUILDLINK3=	YES
 
 .include "../../mk/bsd.pkg.mk"

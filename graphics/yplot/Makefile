@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:14:59 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/11 21:46:10 tv Exp $
 
 DISTNAME=		yplot-1.1.2
 PKGREVISION=		2
@@ -15,7 +15,6 @@ BUILD_DEPENDS+=		teTeX>=1.0:../../print/teTeX
 BROKEN=			Compiling hangs, needs attention.
 .endif
 
-USE_BUILDLINK3=		yes
 CONFIGURE_ENV+=		PLPLOT_PREFIX=${BUILDLINK_PREFIX.plplot}
 EVAL_PREFIX+=		YORICK_PREFIX=yorick
 CONFIGURE_ENV+=		YORICK_HOME=${YORICK_PREFIX}

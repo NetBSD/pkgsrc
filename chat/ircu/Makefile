@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/12/28 02:47:41 reed Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:04 tv Exp $
 #
 
 DISTNAME=	ircu2.10.11.07
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://coder-com.undernet.org/
 COMMENT=	Internet Relay Chat server customized for Undernet
 
-USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/02/14 09:08:48 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:41 tv Exp $
 #
 
 DISTNAME=	lpe-1.2.6
@@ -13,7 +13,6 @@ COMMENT=	Small and efficient programmer's editor for UNIX systems
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES

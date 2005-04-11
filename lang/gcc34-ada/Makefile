@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/11/15 11:39:14 shannonjr Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:13 tv Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -16,7 +16,6 @@ BUILD_USES_MSGFMT=	YES
 
 GCC_VERSION=		3.4.3
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES

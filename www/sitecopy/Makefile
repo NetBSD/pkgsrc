@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/02/13 23:12:13 zuntum Exp $
+# $NetBSD: Makefile,v 1.30 2005/04/11 21:48:02 tv Exp $
 
 DISTNAME=		sitecopy-0.13.4
 PKGREVISION=		5
@@ -12,7 +12,6 @@ COMMENT=		Utility for synchronizing remote and local web sites
 BUILD_USES_MSGFMT=	# defined
 
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	# defined
 
 GNU_CONFIGURE=		# defined

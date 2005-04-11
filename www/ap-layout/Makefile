@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/05/08 15:14:23 grant Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:50 tv Exp $
 #
 
 DISTNAME=	mod_layout-3.2
@@ -11,7 +11,6 @@ MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://software.tangent.org/
 COMMENT=	Apache module to wrap static or dynamic content
 
-USE_BUILDLINK3=	yes
 
 APACHE_MODULE_NAME=	mod_layout.so
 

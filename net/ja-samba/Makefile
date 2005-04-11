@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/02/07 11:35:45 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2005/04/11 21:46:48 tv Exp $
 
 .include "Makefile.common"
 
@@ -12,7 +12,6 @@ COMMENT=		Samba supporting I18N swat and L10N for Japanese
 
 CONFLICTS+=		samba-[0-9]*
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 

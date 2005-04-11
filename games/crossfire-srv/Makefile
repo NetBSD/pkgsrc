@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/03 00:14:43 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:49 tv Exp $
 #
 
 DISTNAME=	crossfire-1.0.0
@@ -17,7 +17,6 @@ EXTRACT_ONLY=	${CF_SRC}
 CF_SRC=		crossfire-1.0.0.tar.bz2
 CF_MAPS=	crossfire-1.0.0-maps.tar.bz2
 
-USE_BUILDLINK3=	yes
 USE_X11=	yes
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes

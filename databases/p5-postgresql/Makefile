@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/12/20 11:30:57 grant Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:13 tv Exp $
 
 DISTNAME=	pgsql_perl5-1.9.0
 PKGNAME=	p5-postgresql-1.9.0
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gborg.postgresql.org/project/pgperl/projdisplay.php
 COMMENT=	Perl interface class for PostgreSQL
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Pg/.packlist
 
 # Until the source catches up to the current Perl API, we need PERL_POLLUTE

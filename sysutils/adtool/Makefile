@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/06 17:16:52 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:22 tv Exp $
 #
 
 DISTNAME=	adtool-1.2
@@ -12,7 +12,6 @@ COMMENT=	Active Directory administration utility for Unix
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes

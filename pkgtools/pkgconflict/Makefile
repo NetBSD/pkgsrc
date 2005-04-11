@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/01/05 21:15:15 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:05 tv Exp $
 #
 
 DISTNAME=	pkgconflict-0.4
@@ -13,7 +13,6 @@ WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-USE_BUILDLINK3=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

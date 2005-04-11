@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/06/28 17:03:17 abs Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:05 tv Exp $
 #
 
 DISTNAME=	pircbot-0.9.11
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.jibble.org/pircbot.php
 COMMENT=	Java IRC Bot Framework
 
-USE_BUILDLINK3=	YES
 USE_JAVA=	run
 NO_CONFIGURE=	YES
 NO_BUILD=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/04/06 17:52:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/11 21:46:18 tv Exp $
 
 DISTNAME=	dspam-3.4.2
 CATEGORIES=	mail
@@ -8,7 +8,6 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.nuclearelephant.com/projects/dspam/
 COMMENT=	Extremely scalable, statistical-hybrid anti-spam filter
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 

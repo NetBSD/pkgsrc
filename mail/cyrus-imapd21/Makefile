@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/12/29 15:42:37 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/11 21:46:18 tv Exp $
 
 DISTNAME=		cyrus-imapd-2.1.15
 PKGREVISION=		5
@@ -13,7 +13,6 @@ COMMENT=		Cyrus IMAP server
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
 AUTOCONF_REQD=		2.13

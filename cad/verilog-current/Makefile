@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/12/01 12:36:21 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.46 2005/04/11 21:45:02 tv Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
@@ -14,7 +14,6 @@ PKG_INSTALLATION_TYPES=        overwrite pkgviews
 
 CONFLICTS+=	verilog-[0-9]*
 
-USE_BUILDLINK3=	yes
 BUILD_DEPENDS+= bison-[0-9]*:../../devel/bison
 
 SNAPDATE=	20041004

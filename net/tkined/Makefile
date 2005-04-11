@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:18:00 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:01 tv Exp $
 #
 
 DISTNAME=	scotty-2.1.11
@@ -14,7 +14,6 @@ COMMENT=	Graphical network discovery and monitoring tool based on scotty
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/unix
-USE_BUILDLINK3=	yes
 GNU_CONFIGURE=  yes
 CONFIGURE_ARGS+=--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib	\
 		--with-tk-config=${BUILDLINK_PREFIX.tk}/lib	\

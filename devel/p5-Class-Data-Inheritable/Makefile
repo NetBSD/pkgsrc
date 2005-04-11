@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/20 11:30:58 grant Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:29 tv Exp $
 
 DISTNAME=	Class-Data-Inheritable-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Inheritable, overridable class data
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Class/Data/Inheritable/.packlist
 
 .include "../../lang/perl5/module.mk"

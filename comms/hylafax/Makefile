@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/01/27 16:22:37 adam Exp $
+# $NetBSD: Makefile,v 1.43 2005/04/11 21:45:07 tv Exp $
 
 DISTNAME=	hylafax-4.2.1
 CATEGORIES=	comms
@@ -16,7 +16,6 @@ DIST_SUBDIR=	hylafax
 CONFLICTS=	mgetty-[0-9]*
 
 USE_PKGINSTALL=		yes
-USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-MAKE=${MAKE_PROGRAM}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/03/24 21:12:51 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2005/04/11 21:45:07 tv Exp $
 
 DISTNAME=	mgetty1.1.31-Jul24
 PKGNAME=	mgetty-1.1.31
@@ -15,7 +15,6 @@ BUILD_DEPENDS+=	texi2roff-[0-9]*:../../textproc/texi2roff
 CONFLICTS=	hylafax-[0-9]*
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK3=		yes
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL

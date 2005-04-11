@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/07/22 09:16:04 recht Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:18 tv Exp $
 
 # Date-based distfile name for pre-releases leading to 0.6.6.
 DISTNAME=	pyca-20031021
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.pyca.de/
 COMMENT=	Administration tools for X.509/PKIX CA
 
-USE_BUILDLINK3=	yes
 NO_BUILD=	# defined
 
 .include "../../mk/bsd.prefs.mk"

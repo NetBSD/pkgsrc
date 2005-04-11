@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2004/12/03 15:15:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2005/04/11 21:46:13 tv Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
@@ -16,7 +16,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gwydiondylan.org/
 COMMENT=		Functional language
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 MAKEFILE=		GNUmakefile

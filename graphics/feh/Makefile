@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/01/18 12:40:26 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/11 21:46:02 tv Exp $
 #
 
 DISTNAME=	feh-1.3.0
@@ -12,7 +12,6 @@ COMMENT=	Advanced image viewer
 DEPENDS+=	wget-[0-9]*:../../net/wget
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_X11=	YES
 
 CONFIGURE_ARGS+=	--program-transform-name=s,cam,feh_cam,

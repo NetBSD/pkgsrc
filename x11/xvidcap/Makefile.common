@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2005/01/12 19:45:50 reed Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/04/11 21:48:17 tv Exp $
 #
 
 # Note: when upgrading version, be sure to update distinfo in xvidcap-gtk2 also
@@ -9,7 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xvidcap/}
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://xvidcap.sourceforge.net/
 
-USE_BUILDLINK3=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 

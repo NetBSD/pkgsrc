@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/11/07 21:45:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:47:02 tv Exp $
 
 DISTNAME=	wistumbler-20020816
 PKGNAME=	wistumbler-20020816.0
@@ -11,7 +11,6 @@ HOMEPAGE=	http://gongon.com/persons/iseki/wistumbler/
 COMMENT=	Network stumbler for WaveLAN/IEEE wireless networking
 
 WRKSRC=		${WRKDIR}/wistumbler
-USE_BUILDLINK3=	YES
 USE_X11=	YES
 
 NOT_FOR_PLATFORM=	NetBSD-0.*-* NetBSD-1.[01234]*-* NetBSD-1.5-*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/03 20:23:51 garbled Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:00 tv Exp $
 #
 
 PKGNAME=		cal3d-examples-${CAL3D_VERSION}
@@ -12,7 +12,6 @@ DISTFILES=		TheCallyDemo-0.9.1b.zip \
 COMMENT=	        Tools and demos for cal3d library
 
 USE_X11=		YES
-USE_BUILDLINK3=		yes
 CONFIGURE_ARGS+=	--with-cal3d=${PREFIX}
 CONFIGURE_ARGS+=	--with-glut=${PREFIX}
 CONFIGURE_DIRS=		${WRKSRC}/examples/cally \

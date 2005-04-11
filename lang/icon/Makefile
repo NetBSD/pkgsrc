@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/03/02 10:31:23 grant Exp $
+# $NetBSD: Makefile,v 1.34 2005/04/11 21:46:14 tv Exp $
 
 DISTNAME=       	icon.v942src
 PKGNAME=		icon-9.4.2
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.cs.arizona.edu/icon/index.htm
 COMMENT=		The Icon programming language
 
-USE_BUILDLINK3=		YES
 USE_X11=		YES
 CONFIGURE_TARGET=	X-Configure
 BUILD_TARGET=		All

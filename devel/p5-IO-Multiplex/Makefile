@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/22 15:49:27 kim Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:32 tv Exp $
 #
 
 DISTNAME=		IO-Multiplex-1.08
@@ -12,7 +12,6 @@ COMMENT=		Perl module to manage IO on many file handles
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/IO/Multiplex/.packlist
 
 .include "../../lang/perl5/module.mk"

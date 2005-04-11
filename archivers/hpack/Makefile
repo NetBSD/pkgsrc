@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/03/13 15:08:19 uebayasi Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/11 21:44:49 tv Exp $
 
 DISTNAME=       hpack79src
 PKGNAME=        hpack-0.79
@@ -12,7 +12,6 @@ COMMENT=	Multi-System Archiver with open keys PGP-based security
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 
 CRYPTO=		yes

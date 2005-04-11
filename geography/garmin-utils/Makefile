@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/09/08 22:20:17 salo Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:59 tv Exp $
 #
 
 DISTNAME=		garmin-utils-2.1
@@ -14,6 +14,5 @@ ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 MAKE_FLAGS+=		MKCATPAGES=no
 
-USE_BUILDLINK3=		yes
 
 .include "../../mk/bsd.pkg.mk"

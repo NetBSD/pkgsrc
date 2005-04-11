@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:14:39 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:41 tv Exp $
 #
 
 DISTNAME=	mined-2000.7
@@ -11,7 +11,6 @@ HOMEPAGE=	http://towo.net/mined/
 COMMENT=	Html-aware editor
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
-USE_BUILDLINK3=	yes
 
 MAKEFILE=	makefile.bsd
 

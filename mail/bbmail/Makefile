@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/11/22 21:09:25 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:46:17 tv Exp $
 #
 
 DISTNAME=	bbmail-0.8.3
@@ -11,7 +11,6 @@ COMMENT=	Mailbox monitor (not only) for the blackbox windowmanager
 
 GNU_CONFIGURE=	YES
 USE_X11=	YES
-USE_BUILDLINK3=	YES
 USE_LANGUAGES=	c++
 
 do-install:

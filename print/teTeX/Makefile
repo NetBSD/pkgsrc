@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/06/05 21:56:47 reed Exp $
+# $NetBSD: Makefile,v 1.37 2005/04/11 21:47:09 tv Exp $
 #
 
 DISTNAME=	teTeX-2.0.2
@@ -17,7 +17,6 @@ DEPENDS+=	texi2html>=1.52:../../textproc/texi2html
 
 CONFLICTS+=	teTeX2-[0-9]*
 
-NO_BUILDLINK=	yes
 USE_X11=        yes
 EXTRACT_ONLY=   # empty
 NO_CHECKSUM=    yes

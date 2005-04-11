@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2005/04/06 12:34:23 markd Exp $
+# $NetBSD: Makefile,v 1.75 2005/04/11 21:48:11 tv Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	2
@@ -15,7 +15,6 @@ SITES_NetBSD-flag.png=	http://www.NetBSD.org/images/
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		awk

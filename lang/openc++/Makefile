@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:15:02 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:15 tv Exp $
 #
 
 DISTNAME=	opencxx2512
@@ -17,7 +17,6 @@ MAKE_FLAGS+=	CXXFLAGS=-I${PREFIX}/include
 MAKE_FLAGS+=	GCLIBDIR=${BUILDLINK_DIR}
 
 WRKSRC=		${WRKDIR}/openc++2.5.12/src/Unix
-USE_BUILDLINK3= YES
 
 OPENCXX_SHAREDIR=	${PREFIX}/share/openc++
 

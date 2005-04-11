@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/18 21:13:48 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:01 tv Exp $
 
 DISTNAME=		sewer
 PKGNAME=		sewer-2.6
@@ -12,7 +12,6 @@ COMMENT=		SEquence Analysis using WEb Resources
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-NO_BUILDLINK=		YES
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
 

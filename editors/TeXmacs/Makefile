@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/02/25 19:49:44 drochner Exp $
+# $NetBSD: Makefile,v 1.39 2005/04/11 21:45:39 tv Exp $
 
 DISTNAME=	TeXmacs-1.0.4.6-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -13,7 +13,6 @@ DEPENDS+=	teTeX>=1.0:../../print/teTeX
 
 BUILD_TARGET=	TEXMACS
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 USE_X11=		yes

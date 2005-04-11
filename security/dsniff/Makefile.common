@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2005/03/22 01:07:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/04/11 21:47:11 tv Exp $
 
 DISTNAME=	dsniff-${VERS}
 VERS=		2.3
@@ -8,7 +8,6 @@ MASTER_SITES+=	http://monkey.org/~dugsong/dsniff/
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://monkey.org/~dugsong/dsniff/
 
-USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 
 BUILDLINK_DEPENDS.libnet+=	libnet-1.0.*

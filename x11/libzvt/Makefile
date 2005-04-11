@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/03/14 22:54:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:48:11 tv Exp $
 #
 
 DISTNAME=		libzvt-2.0.1
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Virtual Terminal Widget Library for GNOME2
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_LIBTOOL=		YES

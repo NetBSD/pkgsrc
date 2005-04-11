@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/03/29 10:50:14 markd Exp $
+# $NetBSD: Makefile,v 1.33 2005/04/11 21:45:25 tv Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 CATEGORIES=	devel
@@ -9,7 +9,6 @@ CONFLICTS+=	umbrello-[0-9]*
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		lex
 USE_PERL5=		run

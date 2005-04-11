@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/08/05 22:20:11 recht Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:15 tv Exp $
 #
 
 DISTNAME=	pyPgSQL-2.4
@@ -12,7 +12,6 @@ HOMEPAGE=	http://pypgsql.sourceforge.net/
 COMMENT=	Python DB-API 2.0 compliant interface to PostgreSQL
 
 WRKSRC=		${WRKDIR}/pypgsql
-USE_BUILDLINK3=	YES
 PYDISTUTILSPKG=	YES
 PYBINMODULE=	YES
 PY_PATCHPLIST=	YES

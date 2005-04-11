@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/03/23 21:50:41 markd Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 21:48:11 tv Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGNAME=	kdelibdocs-${_KDE_VERSION}
@@ -12,7 +12,6 @@ BUILD_DEPENDS+=		doxygen>=1.4.0:../../devel/doxygen
 BUILD_DEPENDS+=		graphviz-[0-9]*:../../graphics/graphviz
 BUILD_DEPENDS+=		qt3-docs>=3.1.1:../../x11/qt3-docs
 
-USE_BUILDLINK3=		YES
 BUILD_TARGET=		apidox
 INSTALL_TARGET=		install-data-local
 

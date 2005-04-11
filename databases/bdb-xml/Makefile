@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:17 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:11 tv Exp $
 
 DISTNAME=	dbxml-1.2.1
 PKGNAME=	${DISTNAME:S/db/bdb-/}
@@ -13,7 +13,6 @@ COMMENT=	Native XML data manager built on Berkeley DB
 CONFLITCS=	dbxml<=1.2.1
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	../dist/configure
 USE_LIBTOOL=		YES

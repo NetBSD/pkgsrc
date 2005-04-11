@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2005/02/03 23:46:58 tron Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/04/11 21:47:53 tv Exp $
 
 DISTNAME=		${MOZ_BIN}-java-1.1
 PKGREVISION=		2
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 
 WRKSRC=			${WRKDIR}
 NO_CHECKSUM=		YES
-NO_BUILDLINK=		YES
 NO_EXTRACT=		YES
 NO_CONFIGURE=		YES
 NO_BUILD=		YES

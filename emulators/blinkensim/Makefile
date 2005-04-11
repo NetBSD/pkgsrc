@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:14:40 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:43 tv Exp $
 #
 
 DISTNAME=	blinkensim-2.2
@@ -12,7 +12,6 @@ COMMENT=	Blinkenlights graphics simulator
 
 DEPENDS+=	blinkenthemes>=0.8:../../graphics/blinkenthemes
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 post-install:

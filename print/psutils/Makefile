@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/03/24 21:13:00 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2005/04/11 21:47:09 tv Exp $
 
 DISTNAME=	psutils-p17
 PKGNAME=	psutils-1.17
@@ -13,7 +13,6 @@ COMMENT=	Utilities for manipulating PostScript documents
 DEPENDS+=	papersize-[0-9]*:../../print/papersize
 
 WRKSRC=		${WRKDIR}/psutils
-USE_BUILDLINK3=	yes
 USE_PERL5=	yes
 USE_PKGINSTALL=	yes
 

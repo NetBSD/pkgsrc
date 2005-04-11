@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/12/28 22:50:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:48:07 tv Exp $
 #
 
 DISTNAME=	gnome-themes-extras-0.8.0
@@ -13,7 +13,6 @@ COMMENT=	Collection of metathemes for the GNOME desktop environment
 DEPENDS+=		librsvg2-gtk2>=2.6.1:../../graphics/librsvg2-gtk2
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

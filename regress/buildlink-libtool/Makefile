@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/30 04:44:14 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:09 tv Exp $
 
 DISTNAME=	regress-buildlink-libtool-0.0
 CATEGORIES=	regress
@@ -8,7 +8,6 @@ DISTFILES=	# empty
 MAINTAINER=	jlam@NetBSD.org
 COMMENT=	test buildlink libtool
 
-USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes

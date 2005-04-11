@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/12/28 21:51:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/11 21:46:40 tv Exp $
 #
 
 DISTNAME=		yelp-2.6.5
@@ -15,7 +15,6 @@ BUILD_USES_MSGFMT=	yes
 
 BUILDLINK_DEPENDS.libxslt+=	libxslt>=1.1.4
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes

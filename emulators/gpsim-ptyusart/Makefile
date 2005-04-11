@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/29 20:55:51 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:43 tv Exp $
 #
 
 DISTNAME=	ptyusart-0.3.1
@@ -12,7 +12,6 @@ COMMENT=	Pseudo-tty module for gpsim
 ONLY_FOR_PLATFORM=      NetBSD-*-*
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_LANGUAGES=	c c++
 
 USE_LIBTOOL=	YES

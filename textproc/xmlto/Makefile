@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/22 22:33:45 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:43 tv Exp $
 #
 
 DISTNAME=		xmlto-0.0.18
@@ -15,7 +15,6 @@ DEPENDS+=		bash-[0-9]*:../../shells/bash
 DEPENDS+=		docbook-xsl>=1.67.0nb1:../../textproc/docbook-xsl
 DEPENDS+=		libxml2>=2.6.2:../../textproc/libxml2
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		SGML_CATALOG_FILES=${PREFIX}/share/xml/catalog

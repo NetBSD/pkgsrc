@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/03/27 15:43:32 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:44:59 tv Exp $
 #
 
 DISTNAME=	FunTimeDancer-0.1
@@ -13,7 +13,6 @@ HOMEPAGE=	http://sourceforge.net/projects/ftd/
 COMMENT=	XMMS plugin displaying an animation
 
 USE_X11=	yes
-USE_BUILDLINK3=	yes
 
 post-install:
 	cd ${WRKDIR} && \

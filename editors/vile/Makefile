@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/03/24 21:12:54 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2005/04/11 21:45:42 tv Exp $
 
 DISTNAME=		vile-9.4
 PKGREVISION=	1
@@ -11,7 +11,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://dickey.his.com/vile/vile.html
 COMMENT=		VI Like Emacs.  a vi "workalike", with many additional features
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-perl
 CONFIGURE_ARGS+=	--datadir=${DATADIR}

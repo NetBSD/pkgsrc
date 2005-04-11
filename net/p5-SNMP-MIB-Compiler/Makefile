@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/20 11:31:07 grant Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:56 tv Exp $
 #
 
 DISTNAME=	SNMP-MIB-Compiler-0.06
@@ -11,7 +11,6 @@ MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/SNMP-MIB-Compiler/
 COMMENT=	MIB Compiler supporting SMIv1 and SMIv2
 
-USE_BUILDLINK3=		yes
 
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/SNMP/Mib/Compiler/.packlist
 

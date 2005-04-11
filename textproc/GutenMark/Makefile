@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/12/03 15:15:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:31 tv Exp $
 #
 
 DISTNAME=	GutenMark_source_${GVER}
@@ -15,7 +15,6 @@ DEPENDS+=	GutenMark-words-[0-9]*:../../textproc/GutenMark-words
 
 WRKSRC=		${WRKDIR}/GutenMark-source
 GVER=		20020714
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 BUILD_TARGET=	GutenMark
 

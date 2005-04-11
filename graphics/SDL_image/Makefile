@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/03/27 15:43:37 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:00 tv Exp $
 
 DISTNAME=	SDL_image-1.2.4
 PKGREVISION=	1
@@ -13,7 +13,6 @@ CONFLICTS=		SDL-image-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES

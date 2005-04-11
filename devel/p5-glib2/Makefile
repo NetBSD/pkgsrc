@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/20 11:31:03 grant Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:36 tv Exp $
 #
 
 DISTNAME=	Glib-${DIST_VERSION}
@@ -16,7 +16,6 @@ DEPENDS+=	p5-ExtUtils-PkgConfig>=1.03:../../devel/p5-ExtUtils-PkgConfig
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 PERL5_REQD=	5.8
 MAKE_PARAMS+=	disable-threadsafe

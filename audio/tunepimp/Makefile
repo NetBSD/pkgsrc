@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/01 12:47:22 markd Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:44:57 tv Exp $
 
 DISTNAME=	libtunepimp-0.3.0
 PKGNAME=	${DISTNAME:S/lib//}
@@ -16,7 +16,6 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
 

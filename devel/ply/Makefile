@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/24 21:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:36 tv Exp $
 
 DISTNAME=	ply-1.5
 CATEGORIES=	devel
@@ -8,7 +8,6 @@ MAINTAINER=	aw9k-nnk@asahi-net.or.jp
 HOMEPAGE=	http://systems.cs.uchicago.edu/ply/
 COMMENT=	Python Lex-Yacc
 
-NO_BUILDLINK=	yes
 PYDISTUTILSPKG=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	15 # 2.0 or greater

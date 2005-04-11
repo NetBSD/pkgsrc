@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/28 02:47:43 reed Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:43 tv Exp $
 #
 
 DISTNAME=		esound-0.2.35-1
@@ -20,7 +20,6 @@ ONLY_FOR_PLATFORM=	Interix-*-*
 
 DIST_SUBDIR=		cygwin
 WRKSRC=			${WRKDIR}
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 
 RCD_SCRIPTS=		cygwin_esd

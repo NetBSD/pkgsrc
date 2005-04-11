@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/04/11 05:29:15 kim Exp $
+# $NetBSD: Makefile,v 1.31 2005/04/11 21:46:04 tv Exp $
 
 DISTNAME=	imlib2-1.2.0
 PKGREVISION=	3
@@ -9,7 +9,6 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.enlightenment.org/pages/imlib2.html
 COMMENT=	Image manipulation library
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES

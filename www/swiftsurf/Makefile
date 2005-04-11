@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/24 17:21:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:48:02 tv Exp $
 
 DISTNAME=		swiftsurf-1.2.5
 PKGREVISION=		2
@@ -9,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://swiftsurf.sourceforge.net/
 COMMENT=		Web proxy that can handle http and https
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")

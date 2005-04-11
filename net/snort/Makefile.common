@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2005/03/25 18:28:28 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.19 2005/04/11 21:46:59 tv Exp $
 #
 
 DISTNAME=		snort-2.3.2
@@ -10,7 +10,6 @@ MASTER_SITES=		http://www.snort.org/dl/current/ \
 MAINTAINER=		adrianp@NetBSD.org
 HOMEPAGE=		http://www.snort.org/
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 

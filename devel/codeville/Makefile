@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/22 15:35:56 adam Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:19 tv Exp $
 
 DISTNAME=	Codeville-0.1.10
 PKGNAME=	codeville-0.1.10
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://codeville.org/
 COMMENT=	Distributed revision control system
 
-USE_BUILDLINK3=		yes
 PYDISTUTILSPKG=		yes
 
 # XXX we don't need threads, but db3 is linked against libread

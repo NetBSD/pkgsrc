@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/28 16:20:37 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:44:56 tv Exp $
 #
 
 DISTNAME=	rio007
@@ -13,7 +13,6 @@ COMMENT=	Utility to display and manage files on the Diamond Rio PMP300
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-USE_BUILDLINK3=	yes
 WRKSRC=		${WRKDIR}/rio107
 MAKEFILE=	makefile
 

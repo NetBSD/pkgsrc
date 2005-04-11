@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/03/30 12:26:45 markd Exp $
+# $NetBSD: Makefile,v 1.40 2005/04/11 21:46:48 tv Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 PKGREVISION=	1
@@ -9,7 +9,6 @@ CONFLICTS=	kopete-[0-9]*
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 PTHREAD_OPTS+=		require
 

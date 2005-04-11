@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/03 15:14:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:00 tv Exp $
 #
 
 DISTNAME=	fluctuate1.4.src.doc
@@ -11,7 +11,6 @@ HOMEPAGE=	http://evolution.genetics.washington.edu/lamarc/fluctuate.html
 COMMENT=	Estimation of population growth rate
 
 WRKSRC=		${WRKDIR}/fluctuate1.4
-USE_BUILDLINK3=	YES
 BUILD_TARGET=	fluctuate
 
 DOCDIR=		${PREFIX}/share/doc/fluctuate

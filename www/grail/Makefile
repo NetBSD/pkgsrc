@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:18:26 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:47:53 tv Exp $
 #
 
 DISTNAME=	grail-0.6
@@ -18,7 +18,6 @@ NO_BUILD=       yes
 GRAILDIR=	share/misc/grail-0.6
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 PYTHON_VERSIONS_ACCEPTED= 15
-USE_BUILDLINK3=	yes
 
 do-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}

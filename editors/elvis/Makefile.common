@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/05/31 09:17:38 seb Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/04/11 21:45:40 tv Exp $
 #
 
 DISTNAME=	elvis-2.2_0
@@ -12,7 +12,6 @@ PLIST_SRC=	${.CURDIR}/../elvis/PLIST.common
 PATCHDIR=	${.CURDIR}/../elvis/patches
 DISTINFO_FILE=	${.CURDIR}/../elvis/distinfo
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX}

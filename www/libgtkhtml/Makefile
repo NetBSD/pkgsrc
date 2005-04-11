@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/02/26 17:24:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/11 21:47:54 tv Exp $
 #
 
 DISTNAME=	libgtkhtml-2.6.3
@@ -13,7 +13,6 @@ COMMENT=	Lightweight HTML rendering GTK2 widget
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_X11=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/01/09 00:07:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:22 tv Exp $
 #
 
 DISTNAME=	prayer-1.0.12
@@ -9,7 +9,6 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www-uxsup.csx.cam.ac.uk/~dpc22/prayer/
 COMMENT=	Small, fast, web mail interface
 
-USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 USE_GNU_TOOLS+=	make
 USE_PERL5=	build

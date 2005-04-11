@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/27 15:43:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:10 tv Exp $
 #
 
 DISTNAME=		vp-1.5
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://math.smsu.edu/~erik/software.php?id=63
 COMMENT=		Image viewer
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes

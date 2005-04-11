@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/14 22:05:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:00 tv Exp $
 #
 
 DISTNAME=	blogbench-1.0
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://blogbench.pureftpd.org/
 COMMENT=	Portable filesystem benchmark
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../mk/pthread.buildlink3.mk"

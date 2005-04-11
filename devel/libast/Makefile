@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/02/05 10:34:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:26 tv Exp $
 
 DISTNAME=	libast-0.6.1
 CATEGORIES=	devel
@@ -8,7 +8,6 @@ MAINTAINER=	gendalia@NetBSD.org
 HOMEPAGE=	http://freshmeat.net/projects/libast/?topic_id=809%2C861
 COMMENT=	The Library of Assorted Spiffy Things
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES

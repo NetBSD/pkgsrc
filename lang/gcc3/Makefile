@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2005/01/21 15:08:14 drochner Exp $
+# $NetBSD: Makefile,v 1.58 2005/04/11 21:46:13 tv Exp $
 
 GCC_VERSION=	3.3.5
 DISTNAME=	gcc3-${GCC_VERSION}
@@ -20,7 +20,6 @@ DEPENDS+=	gcc3-objc-${GCC_VERSION}{,nb*}:../../lang/gcc3-objc
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
-NO_BUILDLINK=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

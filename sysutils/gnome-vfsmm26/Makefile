@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:18:15 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:24 tv Exp $
 #
 
 DISTNAME=		gnome-vfsmm-2.6.1
@@ -12,7 +12,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://gtkmm.sourceforge.net/
 COMMENT=		C++ bindings for gnome-vfs
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgnomevfs/gnome-vfsmm-2.6.pc.in

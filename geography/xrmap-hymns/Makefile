@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/27 12:28:04 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:59 tv Exp $
 #
 
 DISTNAME=		hymns-1.2
@@ -12,7 +12,6 @@ HOMEPAGE=		http://frmas.free.fr/li_1.htm
 COMMENT=		National anthems (MIDI) for xrmap
 
 WRKSRC=			${WRKDIR}
-USE_BUILDLINK3=		yes
 NO_BUILD=		yes
 DEPENDS+=		xrmap-base>=2.29:../../geography/xrmap-base
 

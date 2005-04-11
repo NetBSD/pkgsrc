@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/10/03 00:13:14 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/11 21:45:03 tv Exp $
 #
 
 DISTNAME=	gale-0.99a
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gale.org/
 COMMENT=	Secure instant messaging system
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_READLINE=	# needs rl_named_function()
 USE_LIBTOOL=		YES

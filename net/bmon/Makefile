@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/07 18:49:13 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:45 tv Exp $
 #
 
 DISTNAME=	bmon-2.0.1
@@ -13,7 +13,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 MAKEFILE=	GNUmakefile
-USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_PKGINSTALL=	YES
 

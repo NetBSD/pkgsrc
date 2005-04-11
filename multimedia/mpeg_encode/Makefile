@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/21 20:26:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:42 tv Exp $
 #
 
 DISTNAME=	mpeg_encode-1.5b-src
@@ -12,7 +12,6 @@ HOMEPAGE=	http://bmrc.berkeley.edu/frame/research/mpeg/mpeg_encode.html
 COMMENT=	The Parallel Berkeley MPEG Encoder
 
 WRKSRC=			${WRKDIR}/mpeg_encode
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 
 post-build:

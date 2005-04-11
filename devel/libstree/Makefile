@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:31 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:28 tv Exp $
 #
 
 DISTNAME=	libstree-0.4.0
@@ -12,6 +12,5 @@ COMMENT=	Suffix tree library
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc/html
-USE_BUILDLINK3=	yes
 
 .include "../../mk/bsd.pkg.mk"

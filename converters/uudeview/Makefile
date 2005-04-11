@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/10/03 00:13:17 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/11 21:45:10 tv Exp $
 #
 
 DISTNAME=       uudeview-0.5.20
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.fpx.de/fp/Software/UUDeview/
 COMMENT=	Program for uu/xx/Base64/BinHex de-/encoding
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-inews=inews --disable-tcl
 LDFLAGS+=		${_STRIPFLAG_CC}

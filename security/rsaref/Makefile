@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/12/03 15:15:08 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2005/04/11 21:47:18 tv Exp $
 #
 
 DISTNAME=		rsaref
@@ -17,7 +17,6 @@ LICENSE=		no-commercial-use
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 MAKEFILE=		unix/makefile
 BUILD_TARGET=		librsaref.la

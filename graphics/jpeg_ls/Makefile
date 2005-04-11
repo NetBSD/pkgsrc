@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/18 19:24:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:05 tv Exp $
 #
 
 DISTNAME=		jpeg_ls_v2.2
@@ -10,7 +10,6 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.ece.ubc.ca/spmg/research/jpeg/jpeg_ls/jpegls.html
 COMMENT=		JPEG-LS codec (lossless/near-lossless codec)
 
-USE_BUILDLINK3=		yes
 BUILD_DIRS=		${WRKSRC}/Decoder ${WRKSRC}/Encoder
 MAKEFILE=		makefile
 

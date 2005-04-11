@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/03/20 21:47:35 schwarz Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:07 tv Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -9,7 +9,6 @@ COMMENT=		Libraries for talking to the 3Com Pilot PDA
 
 CONFLICTS+=		pilot-link-0.8.* pilot-link-0.9.[0-3]
 
-USE_BUILDLINK3=		yes
 
 MAKE_ENV+=		PILIB="libsock/libpisock.la"
 MAKE_ENV+=		PICCLIB="libcc/libpicc.a"

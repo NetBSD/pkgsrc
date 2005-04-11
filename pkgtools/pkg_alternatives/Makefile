@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/10 10:18:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:05 tv Exp $
 #
 
 DISTNAME=	pkg_alternatives-1.3
@@ -14,7 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		YES
 NO_BUILD=		YES
-NO_BUILDLINK=		YES
 USE_PKGINSTALL=		YES
 WRKSRC=			${WRKDIR}
 

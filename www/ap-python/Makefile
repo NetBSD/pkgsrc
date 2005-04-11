@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/07/20 21:22:24 recht Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:50 tv Exp $
 #
 
 DISTNAME=		mod_python-2.7.10
@@ -13,7 +13,6 @@ COMMENT=		Python interpreter embedded into Apache
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON_BIN=${PYTHONBIN}
 MAKE_ENV+=		PYTHONBIN=${PYTHONBIN}

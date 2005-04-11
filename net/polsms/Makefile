@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/12/26 22:13:33 zuntum Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:57 tv Exp $
 #
 
 DISTNAME=	sms-2.0.2
@@ -10,7 +10,6 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.ceti.pl/~miki/komputery/sms.html
 COMMENT=	Send SMS to cellular phones in Poland (Plus, Idea, Era)
 
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/03/24 21:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:38 tv Exp $
 
 DISTNAME=	rubyunit-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-unit-${VERSION}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://homepage1.nifty.com/markey/ruby/rubyunit/index_e.html
 COMMENT=	Ruby implementation of eXtreme Programming
 
 VERSION=		0.5.6
-USE_BUILDLINK3=		yes
 USE_RUBY_INSTALL=	yes
 RUBY_VERSION=		${RUBY16_VERSION}
 REPLACE_RUBY=		bin/c2t.rb bin/runtest.rb

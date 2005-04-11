@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:18:23 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:49 tv Exp $
 #
 
 DISTNAME=	windowlab-1.12
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nickgravgaard.com/windowlab/
 COMMENT=	Small and simple window manager
 
-USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 USE_GNU_TOOLS+=	make
 USE_X11=	YES

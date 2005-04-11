@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/02 00:00:17 snj Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:29 tv Exp $
 #
 
 DISTNAME=	Archive-0.1.2
@@ -18,7 +18,6 @@ DEPENDS+=	rox-lib>=0.1.4nb1:../../sysutils/rox-lib
 WRKSRC=		${WRKDIR}/Archive
 DIST_SUBDIR=	rox
 
-USE_BUILDLINK3=	yes
 USE_PERL5=	yes
 
 NO_CONFIGURE=	yes

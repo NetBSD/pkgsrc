@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/22 20:16:50 abs Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:41 tv Exp $
 #
 
 .include "../../multimedia/libflash/Makefile.common"
@@ -7,7 +7,6 @@ PKGNAME=	${DISTNAME:C/-/player-/}
 PKGREVISION=	3
 COMMENT=	Standalone open source Flash(tm) player
 
-USE_BUILDLINK3=	yes
 BUILD_DIRS=	${WRKSRC}/Player
 CPPFLAGS+=	-DDEV_DSP="\"${DEVOSSSOUND}\""
 

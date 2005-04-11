@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/11/18 12:46:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:46:27 tv Exp $
 
 DISTNAME=	spamprobe-1.0a
 CATEGORIES=	mail
@@ -10,7 +10,6 @@ COMMENT=	Spam detector using Bayesian analysis of word counts
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/06 05:38:56 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:31 tv Exp $
 
 DISTNAME=	xenvstat-20041127
 CATEGORIES=	sysutils
@@ -14,7 +14,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-*
 NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
 USE_X11=	yes
-USE_BUILDLINK3=	yes
 
 LIBS=		-lXmu -lXext -lXt -lX11 -lm
 

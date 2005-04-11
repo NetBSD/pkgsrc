@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/10/03 00:13:14 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:45:03 tv Exp $
 #
 
 DISTNAME=	fugu-1.0
@@ -12,7 +12,6 @@ COMMENT=	Graphical client for the gale secure instant messaging system
 
 PYTHON_VERSIONS_ACCEPTED= 20 21 # no 22 - uses Makefile.pre.in
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE= 	YES
 CONFIGURE_ENV+=	vi_cv_path_python=${PYTHONBIN}
 LDFLAGS+=	-L${BUILDLINK_PREFIX.py-Pmw}/lib \

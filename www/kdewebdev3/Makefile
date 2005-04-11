@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/10 06:07:49 markd Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:54 tv Exp $
 
 DISTNAME=	kdewebdev-${_KDE_VERSION}
 CATEGORIES=	www
@@ -6,7 +6,6 @@ COMMENT= 	HTML editor and tools suitable for experienced web developers
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-USE_BUILDLINK3=		YES
 USE_PERL5=		build
 
 REPLACE_PERL=		quanta/scripts/TemplateMagic.pl \

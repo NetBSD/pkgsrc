@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/05/23 16:48:12 recht Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/11 21:45:16 tv Exp $
 #
 
 DISTNAME=	ZMySQLDA-1.1.3-nonbin
@@ -15,7 +15,6 @@ DEPENDS+=	zope-2.*:../../www/zope
 DEPENDS+=	${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
 
 WRKSRC=		${WRKDIR}/lib
-USE_BUILDLINK3=	yes
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 

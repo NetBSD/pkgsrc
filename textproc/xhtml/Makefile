@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/06 18:24:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:43 tv Exp $
 #
 
 DISTNAME=	xhtml1
@@ -14,7 +14,6 @@ COMMENT=	DTDs for the Extensible Hypertext Markup Language
 
 NO_BUILD=	yes
 NO_MTREE=	yes
-USE_BUILDLINK3=	yes
 USE_LANGUAGES=	# empty
 WRKSRC=		${WRKDIR}/xhtml1-20020801
 

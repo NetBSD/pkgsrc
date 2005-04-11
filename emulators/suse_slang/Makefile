@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/04/19 00:28:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:45 tv Exp $
 
 DISTNAME=		slang
 PKGREVISION=		1
@@ -17,7 +17,6 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
-NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}

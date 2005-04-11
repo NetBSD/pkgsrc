@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2004/12/05 11:17:12 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2005/04/11 21:46:08 tv Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -18,7 +18,6 @@ COMMENT=	Library for manipulating PNG images
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 TEST_TARGET=	test
 

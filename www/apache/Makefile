@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2005/02/28 23:30:48 abs Exp $
+# $NetBSD: Makefile,v 1.161 2005/04/11 21:47:51 tv Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -29,7 +29,6 @@ SITES_${MODSSL_DIST}=	http://www.modssl.org/source/ \
 CONFLICTS=		apache-*ssl-[0-9]* apache6-[0-9]*
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
-USE_BUILDLINK3=		YES
 # Actually, apache is only written in C, but we need this so that
 # a dlopen()ed apache module that's written in C++ will have static
 # objects constructed properly.

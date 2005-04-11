@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/02/21 20:26:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:46:52 tv Exp $
 #
 
 DISTNAME=	nicotine-1.0.8
@@ -11,7 +11,6 @@ HOMEPAGE=	http://nicotine.thegraveyard.org/
 COMMENT=	Client for soulseek, a peer-to-peer network for music
 
 PYTHON_VERSIONS_ACCEPTED=       23
-USE_BUILDLINK3=	yes
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG=	yes
 

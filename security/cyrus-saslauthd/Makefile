@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/02/21 22:10:18 adam Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/11 21:47:11 tv Exp $
 
 DISTNAME=	cyrus-sasl-2.1.20
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -20,7 +20,6 @@ MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://asg.web.cmu.edu/sasl/
 COMMENT=		Cyrus SASL plaintext authentication daemon
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:15:01 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:14 tv Exp $
 
 DISTNAME=		ksi-3.4.1
 PKGREVISION=		3
@@ -13,7 +13,6 @@ CPPFLAGS+=		-Dunix
 GNU_CONFIGURE=		yes
 INFO_FILES=		ksi-lang.info ksi-lib.info ksi.info
 MAKE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
-USE_BUILDLINK3=		yes
 USE_GNU_READLINE=	# uses rl_event_hook() interface
 USE_LIBTOOL=		yes
 USE_MAKEINFO=		YES

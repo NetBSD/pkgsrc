@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/10/03 00:13:11 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:44:59 tv Exp $
 #
 
 DISTNAME=		xmms-mad-0.5.5
@@ -11,7 +11,6 @@ HOMEPAGE=		http://sourceforge.net/projects/xmms-mad/
 COMMENT=		Input plugin for XMMS that uses libmad
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 
 CPPFLAGS.NetBSD+=	-DHAVE_NANOSLEEP=1
 

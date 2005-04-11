@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/03/23 00:57:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:47:23 tv Exp $
 #
 
 DISTNAME=		checkpassword-0.90
@@ -13,7 +13,6 @@ DJB_RESTRICTED=		YES
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 
 INSTALLATION_DIRS=	bin
 

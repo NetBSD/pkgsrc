@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/10/03 00:18:27 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:48:03 tv Exp $
 
 DISTNAME=	ZPhotoSlides-1.1b
 PKGNAME=	zope25-ZPhotoSlides-1.1b
@@ -13,7 +13,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/p3b/ZPhotoSlides
 COMMENT=	Present your photos quickly in zope
 
-USE_BUILDLINK3=	yes
 
 .include "../../www/zope25/product.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"

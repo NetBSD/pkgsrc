@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/11 18:07:53 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:25 tv Exp $
 #
 
 DISTNAME=		ipw2200-fw-2.2
@@ -13,7 +13,6 @@ COMMENT=		Firmware binary images for iwi(4) driver
 
 LICENSE=		intel-ipw-license
 
-USE_BUILDLINK3=		yes
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 

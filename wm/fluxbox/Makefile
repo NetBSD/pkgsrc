@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/03/30 11:57:57 jmcneill Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/11 21:47:47 tv Exp $
 #
 
 DISTNAME=	fluxbox-0.9.12
@@ -12,7 +12,6 @@ COMMENT=	Window Manager for X based on Blackbox
 
 DEPENDS=	bsetroot>=0.1nb1:../../wm/bsetroot
 
-USE_BUILDLINK3=	YES
 USE_X11=	YES
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES

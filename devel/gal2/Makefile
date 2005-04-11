@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/03/26 16:16:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2005/04/11 21:45:20 tv Exp $
 #
 # Check the API before updating this package!  gal-2.5 and above should
 # get their own gal26 package!
@@ -16,7 +16,6 @@ COMMENT=	Library functions that came from Gnumeric and Evolution (gal-2.4 API)
 
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

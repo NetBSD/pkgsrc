@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/02/24 01:42:46 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:46:41 tv Exp $
 
 DISTNAME=	libdv-0.104
 CATEGORIES=	multimedia
@@ -8,7 +8,6 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://libdv.sourceforge.net/
 COMMENT=	DV video codec library
 
-USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

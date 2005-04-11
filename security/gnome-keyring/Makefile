@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/22 15:58:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:11 tv Exp $
 #
 
 DISTNAME=	gnome-keyring-0.4.2
@@ -13,7 +13,6 @@ COMMENT=	GNOME password and secret manager
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 

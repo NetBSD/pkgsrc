@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/20 11:31:06 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:53 tv Exp $
 #
 
 DISTNAME=		IO-Socket-Multicast-0.25
@@ -13,7 +13,6 @@ COMMENT=		IO::Socket::Multicast - perl multicast socket IO
 
 DEPENDS+=		p5-IO-Interface>=0.94:../../net/p5-IO-Interface
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/IO/Socket/Multicast/.packlist
 
 .include "../../lang/perl5/module.mk"

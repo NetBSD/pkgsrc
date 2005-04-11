@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/02/24 22:38:42 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:33 tv Exp $
 
 DISTNAME=	Module-Build-0.2608
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Build and install Perl modules
 
 DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
 
-USE_BUILDLINK3=		yes
 BUILDING_MODULE_BUILD=	yes
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Module/Build/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/12/28 23:18:18 reed Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 21:45:09 tv Exp $
 
 DISTNAME=	psiconv-0.9.6
 PKGREVISION=	1
@@ -9,7 +9,6 @@ MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://huizen.dds.nl/~frodol/psiconv/
 COMMENT=	PSION 5 file format data conversion utilities
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

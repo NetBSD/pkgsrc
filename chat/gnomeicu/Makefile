@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/01/01 16:49:01 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/11 21:45:04 tv Exp $
 
 DISTNAME=	gnomeicu-0.99.5
 CATEGORIES=	chat gnome
@@ -10,7 +10,6 @@ HOMEPAGE=	http://gnomeicu.sourceforge.net/
 COMMENT=	GNOME ICQ client
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		YES

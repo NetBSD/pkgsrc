@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/10/03 00:14:47 tv Exp $
+# $NetBSD: Makefile,v 1.30 2005/04/11 21:45:58 tv Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 PKGREVISION=		5
@@ -11,7 +11,6 @@ HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 COMMENT=		Tetris-like puzzle game
 
 AUTOMAKE_REQD=		1.4
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome1-1.5
 USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES

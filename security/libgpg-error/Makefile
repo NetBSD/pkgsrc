@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/12/29 03:43:23 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:13 tv Exp $
 #
 
 DISTNAME=	libgpg-error-1.0
@@ -11,7 +11,6 @@ COMMENT=	Definitions of common error values for all GnuPG components
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES

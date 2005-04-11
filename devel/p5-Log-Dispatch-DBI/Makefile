@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/20 11:31:01 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:33 tv Exp $
 
 DISTNAME=	Log-Dispatch-DBI-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Perl module for logging messages via the DBI interface
 DEPENDS+=	p5-DBD-CSV-[0-9]*:../../databases/p5-DBD-CSV
 DEPENDS+=	p5-Log-Dispatch-[0-9]*:../../devel/p5-Log-Dispatch
 
-USE_BUILDLINK3=	yes
 USE_LANGUAGES=	# empty
 
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Log/Dispatch/DBI/.packlist

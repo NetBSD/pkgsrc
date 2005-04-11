@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/03/24 21:12:50 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/11 21:44:48 tv Exp $
 
 DISTNAME=       arc521e.pl8
 PKGNAME=        arc-5.21e
@@ -18,7 +18,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
 
-USE_BUILDLINK3=	yes
 
 INSTALLATION_DIRS=	bin man/man1
 

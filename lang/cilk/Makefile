@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:14:59 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/11 21:46:12 tv Exp $
 
 DISTNAME=		cilk-5.3.1
 PKGREVISION=		3
@@ -13,7 +13,6 @@ COMMENT=		Multithreaded parallel programming language based on ANSI C
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386 -*-*mipse[bl] *-*-powerpc *-*-sparc
 
 GNU_CONFIGURE=		# defined
-USE_BUILDLINK3=	 	yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
 USE_LIBTOOL=		yes

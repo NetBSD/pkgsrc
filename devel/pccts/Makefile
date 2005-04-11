@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/02/23 04:09:50 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:36 tv Exp $
 #
 
 DISTNAME=	pccts133mr22
@@ -19,7 +19,6 @@ DIST_SUBDIR=	${PKGNAME}
 MAKEFILE=	makefile
 BUILD_TARGET=
 
-USE_BUILDLINK3=	yes
 
 INSTALLATION_DIRS=	bin
 

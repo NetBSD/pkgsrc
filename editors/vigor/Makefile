@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/02/21 20:26:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 2005/04/11 21:45:42 tv Exp $
 #
 
 DISTNAME=	vigor-0.016
@@ -14,7 +14,6 @@ CONFLICTS+=	nvi-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
 USE_X11=	yes
-USE_BUILDLINK3=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-x

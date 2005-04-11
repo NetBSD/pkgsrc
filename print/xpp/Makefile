@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/10/03 00:18:07 tv Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/11 21:47:09 tv Exp $
 
 DISTNAME=	xpp-1.1
 PKGREVISION=	5
@@ -9,7 +9,6 @@ MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://cups.sourceforge.net/xpp/index.html
 COMMENT=	X Printing Panel
 
-USE_BUILDLINK3=	yes
 USE_X11=	yes
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes

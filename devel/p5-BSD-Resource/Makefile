@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/02/11 18:07:50 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:45:29 tv Exp $
 
 DISTNAME=	BSD-Resource-1.24
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Perl interface to BSD process resources library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/BSD/Resource/.packlist
 
 post-extract:

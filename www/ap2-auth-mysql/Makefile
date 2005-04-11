@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/11/18 15:58:22 cube Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:51 tv Exp $
 #
 
 DISTNAME=		mod_auth_mysql.c
@@ -18,7 +18,6 @@ DIST_SUBDIR=		ap2-auth-mysql
 EXTRACT_ONLY=		${DISTNAME}.gz
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK3=		yes
 NO_CONFIGURE=		yes
 
 APACHE_MODULE_NAME=	mod_auth_mysql

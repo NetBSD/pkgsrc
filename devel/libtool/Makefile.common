@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2005/03/22 15:12:07 tv Exp $
+# $NetBSD: Makefile.common,v 1.61 2005/04/11 21:45:28 tv Exp $
 #
 
 DISTNAME=	libtool-1.5.14
@@ -13,7 +13,6 @@ CONFLICTS=	glibtool-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 
 DISTINFO_FILE=	${.CURDIR}/../libtool/distinfo
 FILESDIR=	${.CURDIR}/../libtool/files

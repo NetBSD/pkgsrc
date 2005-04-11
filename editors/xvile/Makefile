@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/03/24 21:12:54 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2005/04/11 21:45:42 tv Exp $
 
 DISTNAME=		vile-9.4
 PKGNAME=		xvile-9.4
@@ -12,7 +12,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://dickey.his.com/vile/vile.html
 COMMENT=		VI Like Emacs, X11 version -- a fully "X aware" vi work-alike
 
-USE_BUILDLINK3=		yes
 USE_X11=		# defined
 
 GNU_CONFIGURE=		# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/12/20 11:31:07 grant Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:15 tv Exp $
 #
 
 DISTNAME=		Crypt-Blowfish-2.09
@@ -17,7 +17,6 @@ BUILD_DEPENDS+=		p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CRYPTO=			YES
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/Blowfish/.packlist
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/31 14:28:24 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:32 tv Exp $
 #
 
 DISTNAME=	aspell-ro-0.50-2
@@ -12,7 +12,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://aspell.net/
 COMMENT=	Romanian language support for aspell
 
-USE_BUILDLINK3=	YES
 HAS_CONFIGURE=	YES
 
 .include "../../textproc/aspell/buildlink3.mk"

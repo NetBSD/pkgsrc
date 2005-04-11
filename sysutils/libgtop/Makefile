@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:15 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:25 tv Exp $
 
 DISTNAME=		libgtop-1.0.13
 PKGREVISION=		5
@@ -31,7 +31,6 @@ PKG_FAIL_REASON+=	"(More information can be found in libgtop.info.)"
 .endif
 
 USE_PERL5=		build
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make

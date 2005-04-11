@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/27 15:43:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:46:00 tv Exp $
 #
 
 DISTNAME=	GUIlib-1.1.0
@@ -10,7 +10,6 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/GUIlib/
 COMMENT=	Very simple GUI framework library
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/03/24 21:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/11 21:46:31 tv Exp $
 
 DISTNAME=		xldlas-0.85
 PKGREVISION=		4
@@ -16,7 +16,6 @@ ONLY_FOR_PLATFORM=      NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
 			NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
 
 WRKSRC=			${WRKDIR}/xldlas
-USE_BUILDLINK3=		yes
 USE_X11BASE=		yes
 
 do-install:

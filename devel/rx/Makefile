@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/10/03 00:13:33 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:45:38 tv Exp $
 
 DISTNAME=	rx-1.5
 PKGREVISION=	1
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/rx/rx.html
 COMMENT=	Fast replacement for the GNU regex library
 
-USE_BUILDLINK3=	yes
 USE_LIBTOOL=	# defined
 GNU_CONFIGURE=	# defined
 

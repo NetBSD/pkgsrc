@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/03/13 16:29:51 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/04/11 21:45:43 tv Exp $
 
 DISTNAME=	dn9b0401
 CATEGORIES=	emulators
@@ -11,7 +11,6 @@ LICENSE=	no-commercial-use
 
 WRKSRC=		${WRKDIR}/darcnes
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK3=	yes
 PATCHDIR=	${.CURDIR}/../../emulators/darcnes/patches
 DISTINFO_FILE=	${.CURDIR}/../../emulators/darcnes/distinfo
 

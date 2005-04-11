@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/12/10 06:40:11 markd Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:45:46 tv Exp $
 
 DISTNAME=	kmymoney2-0.6.2
 PKGREVISION=	1
@@ -10,7 +10,6 @@ MAINTAINER=	jnr@cwru.edu
 HOMEPAGE=	http://kmymoney2.sourceforge.net/
 COMMENT=	Personal finance manager for kde3
 
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=            YES

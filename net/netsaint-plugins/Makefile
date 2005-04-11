@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/10/03 00:17:56 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/11 21:46:52 tv Exp $
 #
 
 DISTNAME=		netsaint-plugins-1.2.9-4
@@ -16,7 +16,6 @@ DEPENDS+=		netsaint-base-[0-9]*:../../net/netsaint-base
 DEPENDS+=		{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
 .endif
 
-USE_BUILDLINK3=		YES
 CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX}
 CPPFLAGS+=		-I${PGSQL_PREFIX}/include/postgresql
 

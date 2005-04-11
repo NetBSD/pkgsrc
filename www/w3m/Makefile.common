@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2005/03/25 18:08:55 minskim Exp $
+# $NetBSD: Makefile.common,v 1.32 2005/04/11 21:48:02 tv Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://w3m.sourceforge.net/
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	# defined
 USE_GNU_TOOLS+=	make	# Needed for some combinations of options...
 

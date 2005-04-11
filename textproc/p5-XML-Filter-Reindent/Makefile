@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/20 11:31:10 grant Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:39 tv Exp $
 
 DISTNAME=	XML-Filter-Reindent-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,6 @@ CONFLICTS+=	p5-libxml-enno-[0-9]*
 
 DEPENDS+=	p5-XML-Filter-DetectWS>=0.01:../../textproc/p5-XML-Filter-DetectWS
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/Filter/Reindent/.packlist
 
 .include "../../lang/perl5/module.mk"

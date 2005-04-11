@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/18 22:26:17 recht Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:16 tv Exp $
 #
 
 DISTNAME=	Python-2.4
@@ -15,7 +15,6 @@ COMMENT=	Interpreted, interactive, object-oriented programming language
 CONFLICTS+=	python-[0-9]*
 
 USE_LANGUAGES=		c c++
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	OPT="${CFLAGS}"

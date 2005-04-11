@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/10 19:25:08 shannonjr Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:23 tv Exp $
 
 DISTNAME=	gdbada-5.3
 PKGREVISION=	1
@@ -14,7 +14,6 @@ COMMENT=        GNAT GDB : An Ada 95 Debugger
 NOT_FOR_PLATFORM=	*-*-x86_64
 
 WRKSRC=		${WRKDIR}/gdb-5.3
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GDB_SUBPREFIX=	gdbada

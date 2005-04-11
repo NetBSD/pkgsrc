@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/23 20:58:42 danw Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:48:15 tv Exp $
 #
 
 DISTNAME=	xkbset-0.3
@@ -12,7 +12,6 @@ COMMENT=	Manages XKB features of the X window system
 
 USE_PERL5=	build
 USE_X11BASE=	yes
-USE_BUILDLINK3=	yes
 REPLACE_PERL=	mskacc-gui
 
 .include "../../mk/bsd.pkg.mk"

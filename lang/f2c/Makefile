@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/01/28 23:37:42 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.34 2005/04/11 21:46:13 tv Exp $
 
 DISTNAME=	f2c-20001205
 PKGREVISION=	8
@@ -32,7 +32,6 @@ MAKE_ENV+=	AWK=${AWK}
 MAKE_ENV+=	ECHO=${ECHO}
 
 WRKSRC=		${WRKDIR}/f2c
-USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 
 post-extract:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/02/21 20:26:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.31 2005/04/11 21:45:57 tv Exp $
 #
 
 DISTNAME=	xarchon-0.60
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://xarchon.seul.org/
 COMMENT=	Chess-like strategy game with battle options
 
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 USE_X11=	YES

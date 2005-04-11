@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:18:40 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:48:17 tv Exp $
 
 DISTNAME=	xvattr-1.3
 PKGREVISION=	3
@@ -9,7 +9,6 @@ MAINTAINER=	veego@NetBSD.org
 HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/
 COMMENT=	Modify Xv attributes
 
-USE_BUILDLINK3=		yes
 USE_X11=		# defined
 GNU_CONFIGURE=		# defined
 

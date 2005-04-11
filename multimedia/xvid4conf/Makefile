@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/14 20:34:42 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:43 tv Exp $
 
 DISTNAME=	xvid4conf-1.12
 PKGREVISION=	1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://zebra.fh-weingarten.de/~transcode/
 COMMENT=	XviD Configuration Panel
                                                                                 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_X11=	YES
 
 .include "../../devel/pkgconfig/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/01/22 15:45:59 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:34 tv Exp $
 #
 
 DISTNAME=	dirdiff-1.6
@@ -12,7 +12,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://samba.org/ftp/paulus/
 COMMENT=	Displays differences between directories
 
-USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 
 .include "../../lang/tcl/buildlink3.mk"

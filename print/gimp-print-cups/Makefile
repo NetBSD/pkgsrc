@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/12/28 23:18:16 reed Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:47:07 tv Exp $
 
 DISTNAME=	gimp-print-4.2.7
 PKGNAME=	gimp-print-cups-4.2.7
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gimp-print.sourceforge.net/
 COMMENT=	GIMP print plugin
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes

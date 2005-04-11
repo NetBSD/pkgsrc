@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/29 08:06:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:06 tv Exp $
 
 DISTNAME=	ysmv7_2_8_1
 PKGNAME=	ysm-2.8.1
@@ -12,7 +12,6 @@ HOMEPAGE=	http://ysmv7.sourceforge.net/
 COMMENT=	The 'You Sick Me' terminal based ICQ client
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

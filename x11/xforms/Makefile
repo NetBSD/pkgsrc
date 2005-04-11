@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2004/12/28 23:18:20 reed Exp $
+# $NetBSD: Makefile,v 1.53 2005/04/11 21:48:15 tv Exp $
 #
 
 DISTNAME=	xforms-1.0-release
@@ -13,7 +13,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://world.std.com/~xforms/
 COMMENT=	Graphical user interface toolkit for X Window System
 
-USE_BUILDLINK3=	YES
 USE_IMAKE=	YES
 
 MAKE_ENV=	DEPEND_DEFINES="${CPPFLAGS}"

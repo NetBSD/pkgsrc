@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/12/18 16:12:41 grant Exp $
+# $NetBSD: Makefile,v 1.31 2005/04/11 21:45:11 tv Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
@@ -18,7 +18,6 @@ PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -p0
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes

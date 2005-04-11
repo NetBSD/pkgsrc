@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/09 10:37:57 seb Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:06 tv Exp $
 
 DISTNAME=	libkipi-0.1
 CATEGORIES=	graphics
@@ -9,7 +9,6 @@ MAINTAINER=	seb@NetBSD.ORG
 HOMEPAGE=	http://extragear.kde.org/apps/kipi.php
 COMMENT=	KDE Image Plugin Interface
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++

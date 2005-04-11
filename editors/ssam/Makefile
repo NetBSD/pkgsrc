@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/12/03 15:14:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:41 tv Exp $
 #
 
 DISTNAME=	ssam-1.9
@@ -12,7 +12,6 @@ COMMENT=	UTF-8-aware stream editor like sed(1), using the sam command set
 
 GNU_CONFIGURE=	yes
 BUILD_TARGET=	tst
-USE_BUILDLINK3=	yes
 
 .include "../../misc/libutf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

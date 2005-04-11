@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/04/07 23:11:56 hira Exp $
+# $NetBSD: Makefile,v 1.46 2005/04/11 21:46:06 tv Exp $
 
 DISTNAME=		magicpoint-1.10a
 PKGREVISION=		6
@@ -14,7 +14,6 @@ COMMENT=		X11 based presentation tool
 CONFLICTS=		mgp-[0-9]*
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_IMAKE=		yes
 USE_PERL5=		build
 

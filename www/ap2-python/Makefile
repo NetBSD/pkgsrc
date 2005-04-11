@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/24 21:13:03 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:51 tv Exp $
 
 DISTNAME=	mod_python-${VERSION}
 PKGNAME=	ap2-${PYPKGPREFIX}-python-${VERSION}
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.modpython.org/
 COMMENT=	Apache module that embeds the Python interpreter
 
-USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 USE_PKGINSTALL=	YES
 APACHE_MODULE=	YES

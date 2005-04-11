@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/01/21 15:28:36 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:46:31 tv Exp $
 #
 
 DISTNAME=	yacas-1.0.57
@@ -10,7 +10,6 @@ HOMEPAGE=	http://yacas.sourceforge.net
 COMMENT=	Yet Another Computer Algebra System
 
 USE_LANGUAGES=	c c++
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	YES

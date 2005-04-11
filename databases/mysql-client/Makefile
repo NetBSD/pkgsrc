@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/01/20 14:17:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.43 2005/04/11 21:45:12 tv Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 SVR4_PKGNAME=		mysqc
@@ -11,7 +11,6 @@ CONFLICTS=		{mysql-client-[0-9]*,mysql3-client-[0-9]*}
 CONFIGURE_ARGS+=	--without-extra-tools
 CONFIGURE_ARGS+=	--without-server
 CONFIGURE_ARGS+=	--enable-thread-safe-client
-USE_BUILDLINK3=		yes
 UNWRAP_FILES=		scripts/mysql_config
 
 INFO_FILES=		mysql.info

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/01/05 15:56:42 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2005/04/11 21:46:04 tv Exp $
 
 DISTNAME=	gphoto2-2.1.5
 CATEGORIES=	graphics
@@ -10,7 +10,6 @@ COMMENT=	Digital camera access command line client
 
 CONFLICTS=	gphoto-[0-9]*
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

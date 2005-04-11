@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/04 23:09:07 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:47 tv Exp $
 #
 
 DISTNAME=	gkrellm-multiping-2.0.8
@@ -11,7 +11,6 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/index.html
 COMMENT=	Pings several machines and prints out stats
 
-USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 SPECIAL_PERMS+=	${PREFIX}/lib/gkrellm2/plugins/pinger ${SETUID_ROOT_PERMS}
 

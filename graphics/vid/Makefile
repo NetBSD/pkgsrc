@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/12/03 15:14:59 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:46:10 tv Exp $
 #
 
 DISTNAME=	vid-1.0.1
@@ -12,7 +12,6 @@ COMMENT=	Simple-minded image capture program for some USB webcams
 
 BUILD_TARGET=	vid
 
-USE_BUILDLINK3=		YES
 
 DOCDIR=		share/doc/${PKGBASE}
 PLIST_SUBST+=	DOCDIR=${DOCDIR}

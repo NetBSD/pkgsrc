@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/17 01:25:00 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:36 tv Exp $
 #
 
 DISTNAME=	lq-sp-1.3.4.10
@@ -11,7 +11,6 @@ COMMENT=	Modified SP package
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 USE_LANGUAGES=	c c++
 
 # doesn't build (LP64 bugs)

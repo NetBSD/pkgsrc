@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/23 17:53:33 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:00 tv Exp $
 
 DISTNAME= 	tcpick-0.1.19
 CATEGORIES=	net
@@ -8,7 +8,6 @@ MAINTAINER=	josediazfer@yahoo.es
 HOMEPAGE=	http://tcpick.sourceforge.net/
 COMMENT=	Simple tcp sniffer with tcpdump-style rules
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 .include "../../net/libpcap/buildlink3.mk"

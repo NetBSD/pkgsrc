@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/12/03 15:15:00 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:12 tv Exp $
 
 DISTNAME=		rs-0.7.3.2
 PKGNAME=		RScheme-0.7.3.2
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.rscheme.org/
 COMMENT=		Object-oriented Scheme implementation
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 BUILD_TARGET=		base
 AUTOMAKE_OVERRIDE=	NO

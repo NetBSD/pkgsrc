@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/03/22 16:09:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2005/04/11 21:48:07 tv Exp $
 #
 
 DISTNAME=		gnome-desktop-2.10.0
@@ -13,7 +13,6 @@ COMMENT=		Common GNOME2 desktop files and libgnome-desktop library
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/12/16 11:52:41 dillo Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/11 21:47:03 tv Exp $
 #
 
 DISTNAME=	tin-1.6.2
@@ -21,7 +21,6 @@ LICENSE=	no-profit
 RESTRICTED=	"Profit from use, sale, trade, or reproduction disallowed"
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 USE_PKGLOCALEDIR=yes
 
 .include "../../mk/bsd.prefs.mk"
