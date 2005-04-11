@@ -1,7 +1,16 @@
-$NetBSD: patch-ae,v 1.1 2005/02/26 20:34:43 reinoud Exp $
+$NetBSD: patch-ae,v 1.2 2005/04/11 23:01:21 reinoud Exp $
 
 --- SConstruct.orig	2004-12-21 18:00:25.000000000 +0100
 +++ SConstruct
+@@ -31,7 +31,7 @@ else:
+ 	playername = 'blenderplayer$PROGSUFFIX'
+ 
+ # Build directory.
+-# root_build_dir = '..' + os.sep + 'build' + os.sep + sys.platform + os.sep
++root_build_dir = '..' + os.sep + 'build' + os.sep + sys.platform + os.sep
+ 
+ bs_config.parseOpts()
+ 
 @@ -50,7 +50,92 @@ sdl_env = Environment ()
  freetype_env = Environment ()
  env = Environment ()
