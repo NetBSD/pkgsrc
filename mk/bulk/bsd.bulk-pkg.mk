@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.78 2005/03/28 15:04:07 tv Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.79 2005/04/11 11:18:01 agc Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -308,7 +308,7 @@ bulk-package:
 			done ;\
 		fi; \
 		${ECHO_MSG} "BULK> Full rebuild in progress..." ; \
-		${ECHO_MSG} "BULK> Cleaning package and its depends" ;\
+		${ECHO_MSG} "BULK> Cleaning package ${PKGNAME} and pre-requisite packages" ;\
 		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 			for pkgdir in ${PKGPATH} `${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:;;p" ${DEPENDSFILE}`; do \
 				${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
@@ -450,7 +450,7 @@ bulk-package:
 		fi ; \
 		case ${_PRESERVE_WRKDIR} in				\
 		yes|YES)	;;					\
-		*)	${ECHO_MSG} "BULK> Cleaning packages and its depends"; \
+		*)	${ECHO_MSG} "BULK> Cleaning package ${PKGNAME} and pre-requisite packages"; \
 		 	if [ "${USE_BULK_CACHE}" = "yes" ]; then	\
 				for pkgdir in ${PKGPATH} `${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:;;p" ${DEPENDSFILE}`; do \
 					${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
