@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/03/03 04:38:36 epg Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:39 tv Exp $
 
 DISTNAME=	SVK-0.30
 PKGNAME=	${DISTNAME:S/SVK/svk/}
@@ -11,7 +11,6 @@ COMMENT=	A decentralized version control system built on Subversion
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SVK/.packlist
 
 MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skip

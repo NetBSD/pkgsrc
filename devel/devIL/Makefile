@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/27 15:43:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:19 tv Exp $
 #
 
 DISTNAME=	DevIL-1.6.6
@@ -13,7 +13,6 @@ COMMENT=	Developer's Image Library
 
 WRKSRC=		${WRKDIR}/DevIL
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 USE_X11=	yes
 

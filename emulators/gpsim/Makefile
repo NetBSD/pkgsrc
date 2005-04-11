@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:14:40 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:43 tv Exp $
 #
 
 DISTNAME=	gpsim-0.21.2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.dattalo.com/gnupic/gpsim.html
 COMMENT=	PIC emulator with X interface
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_LANGUAGES=	c c++
 
 USE_GNU_TOOLS+=	make

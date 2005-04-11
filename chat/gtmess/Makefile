@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/02 23:32:12 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:04 tv Exp $
 #
 
 DISTNAME=		gtmess-0.9
@@ -11,7 +11,6 @@ COMMENT=		Console-based MSN Messenger client
 
 DEPENDS+=		tk-[0-9]*:../../x11/tk
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

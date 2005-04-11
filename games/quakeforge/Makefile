@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/27 15:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:56 tv Exp $
 
 DISTNAME=		quakeforge-0.5.5
 PKGREVISION=		2
@@ -15,7 +15,6 @@ CONFIGURE_ARGS+=	--with-cpp="${CPP} %d %i %o"
 CONFIGURE_ARGS+=	--disable-ogg
 CONFIGURE_ARGS+=	--disable-xmms
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_X11=		YES

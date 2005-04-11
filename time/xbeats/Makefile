@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/02/21 20:26:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:45 tv Exp $
 #
 
 DISTNAME=	xbeats-0.4
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://iznogood.bohemians.org/
 COMMENT=	Beats clock dockable in both Window Maker and AfterStep
 
-USE_BUILDLINK3=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 

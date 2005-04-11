@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/02 18:01:46 snj Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:50 tv Exp $
 
 .include "../iasp/Makefile.common"
 
@@ -10,7 +10,6 @@ DEPENDS+=	{iasp-${IASP_VERSION},iasp-${IASP_VERSION}nb*}:../../www/iasp
 IASP_SRCDIR=	${IASP_DIR}/bin/apache/source/1.3
 
 WRKSRC=		${WRKDIR}/${IASP_SRCDIR}
-USE_BUILDLINK3=	yes
 APACHE_MODULE=	# defined
 MESSAGE_SUBST+=	IASP_DESTDIR=${IASP_DESTDIR}
 

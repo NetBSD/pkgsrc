@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/18 23:34:27 snj Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:39 tv Exp $
 #
 
 DISTNAME=	z80-asm-1.0
@@ -10,7 +10,6 @@ HOMEPAGE=	http://artax.karlin.mff.cuni.cz/~brain/
 COMMENT=	Z80 assembly code assembler and disassembler
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 
 do-install:

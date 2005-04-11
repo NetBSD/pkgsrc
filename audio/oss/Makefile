@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/12/28 02:47:41 reed Exp $
+# $NetBSD: Makefile,v 1.31 2005/04/11 21:44:55 tv Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
@@ -28,7 +28,6 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
 WRKSRC=			${WRKDIR}
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/11/30 15:26:03 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:17 tv Exp $
 #
 
 DISTNAME=	priv-1.0-beta2
@@ -12,7 +12,6 @@ COMMENT=	Execute commands as a different user
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 

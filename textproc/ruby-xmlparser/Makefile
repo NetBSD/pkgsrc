@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/06 17:19:07 taca Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:42 tv Exp $
 #
 
 DISTNAME=	xmlparser-0.6.8
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.yoshidam.net/Ruby.html#xmlparser
 COMMENT=	expat interface module for Ruby
 
 RUBY_HAS_ARCHLIB=	yes
-USE_BUILDLINK3=		yes
 USE_RUBY_EXTCONF=	yes
 CONFIGURE_ARGS+=	--with-perl-enc-map
 WRKSRC=			${WRKDIR}/xmlparser

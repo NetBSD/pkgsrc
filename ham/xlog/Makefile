@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/01/23 09:02:54 wulf Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:11 tv Exp $
 #
 
 DISTNAME=	xlog-1.0
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.qsl.net/pg4i/linux/xlog.html
 COMMENT=	Amateur Radio logging program
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 USE_PKGLOCALEDIR=yes
 USE_GNU_TOOLS+=	make
 

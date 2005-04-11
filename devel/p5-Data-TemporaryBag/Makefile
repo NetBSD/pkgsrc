@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/20 11:30:59 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:30 tv Exp $
 #
 
 DISTNAME=	Data-TemporaryBag-0.04
@@ -13,7 +13,6 @@ COMMENT=	Handle long size data using temporary file
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Data/TemporaryBag/.packlist
 
 .include "../../lang/perl5/module.mk"

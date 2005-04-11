@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/02/07 11:35:45 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:59 tv Exp $
 
 .include "Makefile.common"
 PKGREVISION=		# empty1
@@ -8,7 +8,6 @@ HOMEPAGE=		http://www.samba.org/
 PKGREVISION=		1
 COMMENT=		SMB/CIFS protocol server suite for UNIX
 
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 

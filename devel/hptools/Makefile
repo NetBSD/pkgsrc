@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/27 03:09:58 snj Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:25 tv Exp $
 #
 
 DISTNAME=	hptools-src-3.0.8
@@ -18,7 +18,6 @@ LICENSE=	hptools-license
 
 WRKSRC=		${WRKDIR}/Hptools/support
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 
 post-build:
 	${CHMOD} ${SHAREMODE} ${WRKSRC}/../doc/*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/03 15:15:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:14 tv Exp $
 #
 
 DISTNAME=		tcl8.4.6-src
@@ -18,7 +18,6 @@ GNU_CONFIGURE=		yes
 MAKE_ENV+=		TOUCH="${TOUCH}"
 MAKE_ENV+=		NOTHREAD_SUFX=-nothread
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
 TCLLIB=			libtcl84-nothread.la

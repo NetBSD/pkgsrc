@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2005/02/23 03:28:49 minskim Exp $
+# $NetBSD: Makefile.common,v 1.20 2005/04/11 21:44:55 tv Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -21,7 +21,6 @@ LICENSE=	no-commercial-use
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"

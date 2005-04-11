@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/22 17:00:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:47 tv Exp $
 #
 
 DISTNAME=	fvwm-themes-${THEM_VER}
@@ -19,7 +19,6 @@ DEPENDS+=	{fvwm2,fvwm-devel}>=2.4.8:../../wm/fvwm2
 THEM_VER=	0.6.2
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_BUILDLINK3=	YES
 USE_PERL5=	YES
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/22 16:02:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:08 tv Exp $
 #
 
 DISTNAME=	libgnomecups-0.2.0
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME interface to CUPS
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	libgnomecups-1.0.pc.in

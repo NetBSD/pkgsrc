@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/18 17:46:31 peter Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:52 tv Exp $
 
 DISTNAME=	crawl-0.4
 CATEGORIES=	www
@@ -10,7 +10,6 @@ COMMENT=	Small and efficient HTTP crawler
 
 GNU_CONFIGURE=	yes
 USE_PKGINSTALL=	yes
-USE_BUILDLINK3=	yes
 USE_DB185=	yes
 
 CONF_FILES=	${PREFIX}/share/examples/${PKGBASE}/crawl.conf ${PKG_SYSCONFDIR}/crawl.conf

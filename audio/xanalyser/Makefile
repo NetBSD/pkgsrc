@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/01/09 08:37:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:44:58 tv Exp $
 #
 
 DISTNAME=	xanalyser-1.24
@@ -10,7 +10,6 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.suse.de/~arvin/xanalyser/
 COMMENT=	Frequency spectrum analyser for X
 
-USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c++
 USE_X11=		# defined
 GNU_CONFIGURE=		# defined

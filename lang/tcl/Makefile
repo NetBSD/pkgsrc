@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/04/11 02:44:26 jschauma Exp $
+# $NetBSD: Makefile,v 1.50 2005/04/11 21:46:16 tv Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -17,7 +17,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/-src//}/unix
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		TOUCH="${TOUCH}"

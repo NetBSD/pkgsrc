@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/03 00:13:12 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:00 tv Exp $
 
 DISTNAME=	yamt-0.5
 PKGREVISION=	7
@@ -11,7 +11,6 @@ COMMENT=	Yet Another MP3 Tool
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes

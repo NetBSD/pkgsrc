@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/31 11:22:38 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:44 tv Exp $
 
 DISTNAME=		suse_freetype2-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386 FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
-NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		freetype2-2.1.7-53.${SUSE_ARCH}.rpm

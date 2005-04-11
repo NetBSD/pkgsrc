@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/30 11:56:01 rh Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:20 tv Exp $
 #
 
 DISTNAME=		${PKGNAME}-s
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.mulle-kybernetik.com/software/EDFrameworks/Downloads/
 COMMENT=		Foundation and AppKit extensions
 
 WRKSRC=			${WRKDIR}/ed/EDCommon
-USE_BUILDLINK3=		yes
 USE_X11=		yes
 
 MAKE_ENV+=		ADDITIONAL_OBJCFLAGS="-Wno-import -I${WRKSRC}/.."

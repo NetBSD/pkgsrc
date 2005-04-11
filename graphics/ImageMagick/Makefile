@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2005/01/05 09:25:18 adam Exp $
+# $NetBSD: Makefile,v 1.126 2005/04/11 21:46:00 tv Exp $
 
 .include "Makefile.common"
 
@@ -12,7 +12,6 @@ CONFLICTS=	geomview<1.8.1nb2  # used to have a program named 'animate'
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++

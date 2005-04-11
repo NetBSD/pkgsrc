@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/09 10:33:37 seb Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:06 tv Exp $
 
 DISTNAME=	libkexif-0.2.1
 CATEGORIES=	graphics
@@ -9,7 +9,6 @@ MAINTAINER=	seb@NetBSD.ORG
 HOMEPAGE=	http://digikam.sourceforge.net/
 COMMENT=	Image EXIF information library manipulation
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++

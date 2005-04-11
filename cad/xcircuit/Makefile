@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/12/06 16:37:47 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/11 21:45:03 tv Exp $
 
 DISTNAME=	xcircuit-3.3.0
 CATEGORIES=	cad graphics
@@ -10,7 +10,6 @@ HOMEPAGE=	http://xcircuit.ece.jhu.edu/
 COMMENT=	Drawing program for X11 (especially for circuits)
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-tcl
 CONFIGURE_ARGS+=--with-tclincls=${BUILDLINK_PREFIX.tcl}/include

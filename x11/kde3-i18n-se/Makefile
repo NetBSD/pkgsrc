@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/23 23:06:35 markd Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:48:10 tv Exp $
 
 DISTNAME=	kde-i18n-se-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -8,7 +8,6 @@ COMMENT=	Language bindings for the KDE desktop
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-USE_BUILDLINK3=		YES
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"

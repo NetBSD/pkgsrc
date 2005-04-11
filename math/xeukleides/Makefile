@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/03/24 21:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:31 tv Exp $
 
 DISTNAME=	xeukleides.1.0.0
 PKGNAME=	xeukleides-1.0.0
@@ -12,7 +12,6 @@ COMMENT=	X-Frontend for A Euclidean geometry drawing language
 BUILD_DEPENDS+=	bison>=1.35:../../devel/bison
 DEPENDS+=	eukleides>=1.0.1:../../math/eukleides
 
-USE_BUILDLINK3=	yes
 USE_X11BASE=	yes
 BUILD_TARGET=	xeukleides
 USE_GNU_TOOLS+=	make

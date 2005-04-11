@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/18 21:46:56 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:46 tv Exp $
 
 DISTNAME=		ed2k-gtk-gui-0.6.3
 PKGREVISION=		1
@@ -9,7 +9,6 @@ MAINTAINER=		minskim@NetBSD.org
 HOMEPAGE=		http://ed2k-gtk-gui.sourceforge.net/
 COMMENT=		GUI for the eDonkey2000 and Overnet
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 USE_X11=		yes
 USE_PKGLOCALEDIR=	yes

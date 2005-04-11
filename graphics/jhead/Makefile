@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/02/02 21:31:24 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:46:05 tv Exp $
 #
 
 DISTNAME=	jhead-2.3
@@ -11,7 +11,6 @@ COMMENT=	Extract EXIF header from JPEG image
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 
 INSTALLATION_DIRS=	bin man/man1 share/doc/html/jhead
 

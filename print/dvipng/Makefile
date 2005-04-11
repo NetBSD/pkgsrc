@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/03/23 21:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:47:06 tv Exp $
 
 DISTNAME=	dvipng-1.0
 PKGREVISION=	2
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://dvipng.sourceforge.net/dvipng.html
 COMMENT=	Convert DVI files to PNG files
 
-USE_BUILDLINK3=		yes
 USE_MAKEINFO=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

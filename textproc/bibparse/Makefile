@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/23 16:30:10 seb Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:33 tv Exp $
 #
 
 DISTNAME=	bibparse-1.06
@@ -12,7 +12,6 @@ COMMENT=	Syntax checking tools for BibTeX bibliography databases
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 
 TEST_TARGET=	check
 

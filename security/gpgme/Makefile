@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/04/08 15:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2005/04/11 21:47:12 tv Exp $
 #
 
 DISTNAME=	gpgme-1.0.2
@@ -10,7 +10,6 @@ MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.gnupg.org/gpgme.html
 COMMENT=	GnuPG Made Easy
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PTHREAD_OPTS+=		require

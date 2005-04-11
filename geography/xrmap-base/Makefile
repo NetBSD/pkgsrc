@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/27 12:21:28 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:59 tv Exp $
 #
 
 DISTNAME=		xrmap-2.29
@@ -11,7 +11,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://frmas.free.fr/li_1.htm
 COMMENT=		Earth map viewer - base program
 
-USE_BUILDLINK3=		yes
 USE_IMAKE=		yes
 
 # directory shared by factbook_text and factbook_html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/03/25 18:30:28 tv Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/04/11 21:46:16 tv Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -35,7 +35,6 @@ DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 # new class sharing in J2SE 5.0... -tvierling
 EXTRACT_ENV.bin+= UNPACK200_FLAGS=-Htrue
 
-USE_BUILDLINK3=	yes
 NO_MTREE=	yes	# since we change PREFIX
 LDD=		${TRUE}
 

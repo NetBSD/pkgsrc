@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/27 15:43:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:40 tv Exp $
 #
 
 DISTNAME=	dumpmpeg-0.6
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/dumpmpeg
 COMMENT=	Splits an MPEG stream into single images
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 
 .include "../../multimedia/smpeg/buildlink3.mk"

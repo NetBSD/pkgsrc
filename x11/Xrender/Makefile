@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/11/11 17:49:07 sketch Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/11 21:48:04 tv Exp $
 
 DISTNAME=	libXrender-0.8.4
 PKGNAME=	${DISTNAME:S/lib//}
@@ -13,7 +13,6 @@ COMMENT=	Client library for the X Rendering Extension protocol
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	xrender.pc.in

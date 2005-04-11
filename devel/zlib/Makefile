@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/11/04 14:17:55 adam Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 21:45:39 tv Exp $
 
 DISTNAME=	zlib-1.2.2
 CATEGORIES=	devel
@@ -13,7 +13,6 @@ COMMENT=	General purpose data compression library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 HAS_CONFIGURE=		yes
 INSTALLATION_DIRS=	include lib man/man3

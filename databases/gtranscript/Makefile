@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/11/30 18:26:39 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 21:45:11 tv Exp $
 #
 
 DISTNAME=	gtranscript-0.0.1
@@ -18,7 +18,6 @@ HOMEPAGE=	http://gtranscript.sourceforge.net/
 COMMENT=	SQL Database Client with GNOME frontend
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_X11BASE=	YES
 
 #CPPFLAGS+=	-I${LOCALBASE}/include		# <postgresql/*.h>

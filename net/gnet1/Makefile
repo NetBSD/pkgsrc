@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/03 00:17:53 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:46:47 tv Exp $
 #
 
 DISTNAME=		gnet-1.1.8
@@ -16,7 +16,6 @@ CONFLICTS=		gnet<=1.1.8
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	gnet.pc.in
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 CONFIGURE_ARGS=		--enable-glib2
 TEST_TARGET=		check
 

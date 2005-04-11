@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/06/05 12:18:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:40 tv Exp $
 #
 
 DISTNAME=	xdg-dirs-1.1
@@ -13,7 +13,6 @@ COMMENT=	Shared XDG directories
 CONFLICTS=	gnome2-dirs<=1.2
 
 NO_BUILD=	# defined
-NO_BUILDLINK=	# defined
 NO_CONFIGURE=	# defined
 NO_CHECKSUM=	# defined
 NO_EXTRACT=	# defined

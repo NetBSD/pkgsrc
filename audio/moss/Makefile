@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/01/23 20:41:45 recht Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:44:55 tv Exp $
 
 DISTNAME=	moss-0.1.13
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	MP3/OGG Streaming Server
 DEPENDS+=	${PYPKGPREFIX}-ogg>=1.3:../../audio/py-ogg
 DEPENDS+=	${PYPKGPREFIX}-vorbis>=1.3:../../audio/py-vorbis
 
-USE_BUILDLINK3=	yes
 USE_PKGINSTALL= yes
 
 PYTHON_VERSIONS_ACCEPTED=	23 22 21

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/12/28 23:18:18 reed Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:45:38 tv Exp $
 
 DISTNAME=		rapidsvn-0.7.0
 PKGREVISION=		2
@@ -9,7 +9,6 @@ MAINTAINER=		epg@NetBSD.org
 HOMEPAGE=		http://rapidsvn.tigris.org/
 COMMENT=		Cross-platform Subversion GUI
 
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

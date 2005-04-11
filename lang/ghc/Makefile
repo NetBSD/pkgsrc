@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/12/19 20:06:32 kristerw Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:13 tv Exp $
 
 DISTNAME=	ghc-6.2.1
 PKGREVISION=	1
@@ -20,7 +20,6 @@ CONFIGURE_SCRIPT=	./distrib/hc-build
 CONFIGURE_ARGS+=	--enable-hc-boot-unregisterised
 INSTALL_MAKE_FLAGS+=	stage=1
 
-USE_BUILDLINK3=		yes
 
 USE_GNU_READLINE=	yes	# uses the UNDO_ constants
 USE_PERL5=		yes

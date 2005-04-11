@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/03/06 14:37:15 adrianp Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/11 21:46:19 tv Exp $
 
 DISTNAME=	imap-utils
 PKGNAME=	imap-uw-utils-20050108
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.washington.edu/imap/
 COMMENT=	UW IMAP mailbox utilities
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
-USE_BUILDLINK3=	yes
 
 BUILDLINK_DEPENDS.imap-uw+=	imap-uw>=2004c1nb1
 

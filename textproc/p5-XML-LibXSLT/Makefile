@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/20 11:31:10 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:39 tv Exp $
 #
 
 DISTNAME=	XML-LibXSLT-1.53
@@ -14,7 +14,6 @@ COMMENT=	Perl interface to the libxslt library
 
 DEPENDS+=	p5-XML-LibXML>=1.49:../../textproc/p5-XML-LibXML
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/LibXSLT/.packlist
 
 .include "../../textproc/libxslt/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/02/09 15:17:27 dillo Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:48:11 tv Exp $
 
 DISTNAME=	lablgtk-1.2.7
 CATEGORIES=	x11
@@ -8,7 +8,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html
 COMMENT=	GTK+ bindings for ocaml
 
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_X11=	YES
 

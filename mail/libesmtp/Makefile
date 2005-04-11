@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/12/18 16:02:28 grant Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:20 tv Exp $
 
 DISTNAME=	libesmtp-1.0.3r1
 PKGNAME=	${DISTNAME:S/r1//}
@@ -13,7 +13,6 @@ MAINTAINER=	dolemite@wuli.nu
 HOMEPAGE=	http://www.stafford.uklinux.net/libesmtp/
 COMMENT=	Library to manage posting of electronic mail
 
-USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/28 02:47:41 reed Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:44:57 tv Exp $
 #
 
 DISTNAME=		ubs-0.17
@@ -11,7 +11,6 @@ HOMEPAGE=		http://aboleo.net/software/ubs/
 COMMENT=		Uninterrupted Broadcasting System
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 
 RCD_SCRIPTS=		ubs

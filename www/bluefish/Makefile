@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/03/08 17:27:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.50 2005/04/11 21:47:52 tv Exp $
 
 DISTNAME=	bluefish-1.0
 PKGREVISION=	1
@@ -17,7 +17,6 @@ COMMENT=	GTK HTML editor for the experienced web designer
 DEPENDS+=		weblint-[0-9]*:../../www/weblint
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes

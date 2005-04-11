@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/03/29 00:55:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:45:22 tv Exp $
 #
 
 DISTNAME=       gdb-5.3
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
 COMMENT=	Symbolic debugger for multiple language frontends
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make

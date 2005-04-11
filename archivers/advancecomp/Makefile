@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/01/21 21:48:32 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:44:48 tv Exp $
 
 DISTNAME=	advancecomp-1.13
 CATEGORIES=	archivers
@@ -10,7 +10,6 @@ COMMENT=	Recompression utilities for .zip, .png, .mng and .gz files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c++
 
