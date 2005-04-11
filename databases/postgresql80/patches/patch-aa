@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/06 12:32:05 jdolecek Exp $
+$NetBSD: patch-aa,v 1.2 2005/04/11 20:34:43 recht Exp $
 
---- src/Makefile.shlib.orig	Tue Nov  9 17:02:42 2004
-+++ src/Makefile.shlib
-@@ -132,7 +132,7 @@ endif
+--- src/Makefile.shlib.orig	Sat Nov 20 22:13:04 2004
++++ src/Makefile.shlib	Sun Apr 10 15:58:34 2005
+@@ -132,7 +132,7 @@
  
  ifeq ($(PORTNAME), freebsd)
    ifdef ELF_SYSTEM
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/06 12:32:05 jdolecek Exp $
      LINK.shared		= $(COMPILER) -shared -Wl,-x,-soname,$(soname)
    else
      shlib		= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
-@@ -149,7 +149,7 @@ ifeq ($(PORTNAME), netbsd)
+@@ -149,7 +149,7 @@
  endif
  
  ifeq ($(PORTNAME), hpux)
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/06 12:32:05 jdolecek Exp $
    ifeq ($(GCC), yes)
      SHLIB_LINK		+= `$(CC) $(LDFLAGS) -print-libgcc-file-name`
    endif
-@@ -161,7 +161,7 @@ ifeq ($(PORTNAME), hpux)
+@@ -167,7 +167,7 @@
  endif
  
  ifeq ($(PORTNAME), irix)

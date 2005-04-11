@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2005/02/21 06:15:10 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 20:34:44 recht Exp $
 
 PKGNAME=		postgresql80-server-${BASE_VERS}
-PKGREVISION=		1
 COMMENT=		PostgreSQL database server programs
 
 DEPENDS+=		postgresql80-client>=${BASE_VERS}:../../databases/postgresql80-client
@@ -15,10 +14,10 @@ USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 MESSAGE_SRC=		${.CURDIR}/MESSAGE
 
-CONFIGURE_ARGS+=	--with-openssl
 BUILD_DIRS=		${WRKSRC}/src/backend
 BUILD_DIRS+=		${WRKSRC}/src/backend/utils/mb/conversion_procs
 BUILD_DIRS+=		${WRKSRC}/src/timezone
+BUILD_DIRS+=		${WRKSRC}/src/pl
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql80-server
 PKG_SUPPORTED_OPTIONS=	PAM
@@ -76,10 +75,10 @@ pre-install:
 		;;							\
 	esac
 
-post-install:
-	${EGREP} -v "^#" ${FILESDIR}/man.server > ${WRKDIR}/man_tar
-	cd ${PG_DIR}/man && ${TAR} -zxm -T ${WRKDIR}/man_tar  		\
-		-f ${WRKSRC}/doc/man.tar.gz
+#post-install:
+#	${EGREP} -v "^#" ${FILESDIR}/man.server > ${WRKDIR}/man_tar
+#	cd ${PG_DIR}/man && ${TAR} -zxm -T ${WRKDIR}/man_tar  		\
+#		-f ${WRKSRC}/doc/man.tar.gz
 
-.include "../../databases/postgresql80-lib/buildlink3.mk"
+.include "../../databases/postgresql80-client/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
