@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/11 04:07:44 minskim Exp $
+bin/rake
+${RUBY_SITELIBDIR}/rake.rb
+${RUBY_SITELIBDIR}/rake/clean.rb
+${RUBY_SITELIBDIR}/rake/contrib/compositepublisher.rb
+${RUBY_SITELIBDIR}/rake/contrib/ftptools.rb
+${RUBY_SITELIBDIR}/rake/contrib/publisher.rb
+${RUBY_SITELIBDIR}/rake/contrib/rubyforgepublisher.rb
+${RUBY_SITELIBDIR}/rake/contrib/sshpublisher.rb
+${RUBY_SITELIBDIR}/rake/contrib/sys.rb
+${RUBY_SITELIBDIR}/rake/gempackagetask.rb
+${RUBY_SITELIBDIR}/rake/loaders/makefile.rb
+${RUBY_SITELIBDIR}/rake/packagetask.rb
+${RUBY_SITELIBDIR}/rake/rake_test_loader.rb
+${RUBY_SITELIBDIR}/rake/rdoctask.rb
+${RUBY_SITELIBDIR}/rake/ruby182_test_unit_fix.rb
+${RUBY_SITELIBDIR}/rake/runtest.rb
+${RUBY_SITELIBDIR}/rake/tasklib.rb
+${RUBY_SITELIBDIR}/rake/testtask.rb
+@dirrm ${RUBY_SITELIBDIR}/rake/loaders
+@dirrm ${RUBY_SITELIBDIR}/rake/contrib
+@dirrm ${RUBY_SITELIBDIR}/rake
