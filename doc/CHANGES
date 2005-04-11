@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9821 2005/04/11 15:34:06 taca Exp $
+$NetBSD: CHANGES,v 1.9822 2005/04/11 15:39:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1979,3 +1979,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gimp to 2.2.6 [adam 2005-04-11]
 	Updated nn to 6.6.5 [schwarz 2005-04-11]
 	Updated ftpproxy to 1.2.3 [taca 2005-04-11]
+	Updated jwhois to 3.2.2nb15 [taca 2005-04-11]
