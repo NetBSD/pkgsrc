@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/04/10 07:45:31 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/04/11 22:44:54 jlam Exp $
 bin/compile_et
 bin/gss-client
 bin/kdestroy
@@ -87,7 +87,7 @@ sbin/kadmin
 sbin/kadmin.local
 sbin/kadmind
 sbin/kdb5_util
-sbin/${KRB5_PREFIX}ftpd
+sbin/kftpd
 sbin/klogind
 sbin/kprop
 sbin/kpropd
