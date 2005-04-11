@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/11 03:26:55 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 03:53:57 minskim Exp $
 
 DISTNAME=	cmd-0.7.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -7,8 +7,8 @@ MASTER_SITES=	http://code.vernix.org/cmd/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://code.vernix.org/cmd/download/
-COMMENT=	Library for building  line-oriented command interpreters
+HOMEPAGE=	http://cmd.rubyforge.org/
+COMMENT=	Library for building line-oriented command interpreters
 
 DEPENDS+=	${RUBY_PKGPREFIX}-readline-[0-9]*:../../devel/ruby-readline
 
