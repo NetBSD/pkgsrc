@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9828 2005/04/11 20:02:56 jdolecek Exp $
+$NetBSD: CHANGES,v 1.9829 2005/04/11 20:16:02 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1987,3 +1987,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkglint to 4.12 [tv 2005-04-11]
 	Updated url2pkg to 1.28 [tv 2005-04-11]
 	Updated php4 to 4.3.11 [jdolecek 2005-04-11]
+	Updated php5 to 5.0.4 [jdolecek 2005-04-11]

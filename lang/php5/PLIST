@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/12/17 07:53:06 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/04/11 20:16:02 jdolecek Exp $
 bin/pear
 bin/php
 bin/php-config
@@ -67,6 +67,7 @@ include/php/Zend/zend_ts_hash.h
 include/php/Zend/zend_types.h
 include/php/Zend/zend_variables.h
 include/php/acconfig.h
+include/php/ext/dom/xml_common.h
 include/php/ext/iconv/php_iconv.h
 include/php/ext/libxml/php_libxml.h
 include/php/ext/mbstring/mb_gpc.h
@@ -74,6 +75,21 @@ include/php/ext/mbstring/mbstring.h
 include/php/ext/mbstring/php_mbregex.h
 include/php/ext/mbstring/php_unicode.h
 include/php/ext/mbstring/unicode_data.h
+include/php/ext/mbstring/libmbfl/mbfl/eaw_table.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfl_string.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfl_memory_device.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfl_language.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfl_ident.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfl_filter_output.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfl_encoding.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfl_defs.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfl_convert.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfl_consts.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfl_allocators.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfilter_wchar.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfilter_pass.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfilter_8bit.h
+include/php/ext/mbstring/libmbfl/mbfl/mbfilter.h
 include/php/ext/session/mod_files.h
 include/php/ext/session/mod_mm.h
 include/php/ext/session/mod_user.h
@@ -193,10 +209,16 @@ lib/php/.filemap
 lib/php/.lock
 lib/php/.registry/archive_tar.reg
 lib/php/.registry/console_getopt.reg
+lib/php/.registry/html_template_it.reg
+lib/php/.registry/net_useragent_detect.reg
 lib/php/.registry/pear.reg
 lib/php/.registry/xml_rpc.reg
 lib/php/Archive/Tar.php
 lib/php/Console/Getopt.php
+lib/php/HTML/Template/IT.php
+lib/php/HTML/Template/ITX.php
+lib/php/HTML/Template/IT_Error.php
+lib/php/Net/UserAgent/Detect.php
 lib/php/OS/Guess.php
 lib/php/PEAR.php
 lib/php/PEAR/Autoloader.php
@@ -222,11 +244,17 @@ lib/php/PEAR/Installer.php
 lib/php/PEAR/Packager.php
 lib/php/PEAR/Registry.php
 lib/php/PEAR/Remote.php
+lib/php/PEAR/RunTest.php
 lib/php/System.php
 lib/php/XML/RPC.php
+lib/php/XML/RPC/Dump.php
 lib/php/XML/RPC/Server.php
 lib/php/build/Makefile.global
 lib/php/build/acinclude.m4
+lib/php/build/config.guess
+lib/php/build/config.sub
+lib/php/build/libtool.m4
+lib/php/build/ltmain.sh
 lib/php/build/mkdep.awk
 lib/php/build/phpize.m4
 lib/php/build/scan_makefile_in.awk
@@ -234,7 +262,25 @@ lib/php/build/shtool
 lib/php/data/PEAR/package.dtd
 lib/php/data/PEAR/template.spec
 lib/php/doc/Archive_Tar/docs/Archive_Tar.txt
+lib/php/doc/HTML_Template_IT/examples/templates/main.tpl.htm
+lib/php/doc/HTML_Template_IT/examples/sample_it.php
 lib/php/pearcmd.php
+lib/php/test/HTML_Template_IT/tests/Console_TestListener.php
+lib/php/test/HTML_Template_IT/tests/ITX_api_testcase.php
+lib/php/test/HTML_Template_IT/tests/ITX_usage_testcase.php
+lib/php/test/HTML_Template_IT/tests/IT_api_testcase.php
+lib/php/test/HTML_Template_IT/tests/IT_usage_testcase.php
+lib/php/test/HTML_Template_IT/tests/templates/__include.html
+lib/php/test/HTML_Template_IT/tests/templates/addblock.html
+lib/php/test/HTML_Template_IT/tests/templates/blockiteration.html
+lib/php/test/HTML_Template_IT/tests/templates/blocks.html
+lib/php/test/HTML_Template_IT/tests/templates/globals.html
+lib/php/test/HTML_Template_IT/tests/templates/include.html
+lib/php/test/HTML_Template_IT/tests/templates/loadtemplatefile.html
+lib/php/test/HTML_Template_IT/tests/templates/replaceblock.html
+lib/php/test/HTML_Template_IT/tests/test.php
+lib/php/test/XML_RPC/tests/protoport.php
+lib/php/test/XML_RPC/tests/test_Dump.php
 libexec/cgi-bin/php
 man/man1/php.1
 share/examples/php/php.ini-dist
@@ -242,6 +288,14 @@ share/examples/php/php.ini-recommended
 share/php/php.gif
 @dirrm share/php
 @dirrm share/examples/php
+@dirrm lib/php/test/XML_RPC/tests
+@dirrm lib/php/test/XML_RPC
+@dirrm lib/php/test/HTML_Template_IT/tests/templates
+@dirrm lib/php/test/HTML_Template_IT/tests
+@dirrm lib/php/test/HTML_Template_IT
+@dirrm lib/php/doc/HTML_Template_IT/examples/templates
+@dirrm lib/php/doc/HTML_Template_IT/examples
+@dirrm lib/php/doc/HTML_Template_IT
 @dirrm lib/php/doc/Archive_Tar/docs
 @dirrm lib/php/doc/Archive_Tar
 @dirrm lib/php/doc
@@ -254,6 +308,8 @@ share/php/php.gif
 @dirrm lib/php/PEAR/Command
 @dirrm lib/php/PEAR
 @dirrm lib/php/OS
+@dirrm lib/php/HTML/Template
+@dirrm lib/php/HTML
 @dirrm lib/php/Console
 @dirrm lib/php/Archive
 @dirrm lib/php/.registry
@@ -270,9 +326,12 @@ share/php/php.gif
 @dirrm include/php/ext/sqlite/libsqlite/src
 @dirrm include/php/ext/sqlite/libsqlite
 @dirrm include/php/ext/sqlite
+@dirrm include/php/ext/mbstring/libmbfl/mbfl
+@dirrm include/php/ext/mbstring/libmbfl
 @dirrm include/php/ext/mbstring
 @dirrm include/php/ext/libxml
 @dirrm include/php/ext/iconv
+@dirrm include/php/ext/dom
 @dirrm include/php/ext
 @dirrm include/php/Zend
 @dirrm include/php/TSRM
