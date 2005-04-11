@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.28 2005/03/21 22:33:05 wiz Exp $
+# $NetBSD: url2pkg,v 1.29 2005/04/11 19:02:07 tv Exp $
 #
 # url2pkg
 # (c) 1999-2002 Hubert Feyrer <hubert@feyrer.de>
@@ -149,8 +149,6 @@ echo "Fixing up Makefile."
 	if [ "${WRKSRC}" != "" ]; then
 		echo "WRKSRC=		$WRKSRC"
 	fi
-
-	echo "USE_BUILDLINK3=		yes"
 
 	if [ "${USE_PKGLOCALEDIR}" != "" ]; then
 		echo "USE_PKGLOCALEDIR=	$USE_PKGLOCALEDIR"
