@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2004/07/27 04:36:06 atatat Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 16:17:34 jschauma Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
 PKGNAME=		netscape${VERS_MAJ}-${VERS_MAJ}.${VERS_MIN}
-PKGREVISION=		3
+PKGREVISION=		# none
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.netscape.com/pub/netscape7/${SUB}/ \
 			ftp://sunsite.utk.edu/pub/netscape/netscape7/${SUB}/ \
@@ -15,7 +15,7 @@ MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://channels.netscape.com/ns/browsers/default.jsp
 COMMENT=		Netscape Browser, Mail and Newsreader suite, version 7
 
-BUILD_DEPENDS=		binpatch>=1.0:../../pkgtools/binpatch
+#BUILD_DEPENDS=		binpatch>=1.0:../../pkgtools/binpatch
 
 RESTRICTED=		"No re-distribution without agreement from Netscape"
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -29,7 +29,7 @@ INTERACTIVE_STAGE=	build
 WRKSRC=			${WRKDIR}/netscape-installer
 PKG_LANG?=		english
 VERS_MAJ=		7
-VERS_MIN=		1
+VERS_MIN=		2
 SUB=			${PKG_LANG}/${VERS_MAJ}.${VERS_MIN}/unix/${DIST_DIR_NAME}/sea
 DIST_SUBDIR=		netscape/${VERS_MAJ}.${VERS_MIN}/${PKG_LANG}
 
@@ -84,9 +84,9 @@ pre-install:
 	@${ECHO} "@unexec \$${RMDIR} %D/lib/netscape 2>/dev/null || \$${TRUE}" \
 		>> ${PLIST_SRC}
 
-post-build:
-	${SH} ../../www/netscape7/files/binpatch-x86-unknown-linux2.2.5-7.1.sh \
-	    ${LOCALBASE} ${WRKSRC}/dest/libsoftokn3.so
+#post-build:
+#	${SH} ../../www/netscape7/files/binpatch-x86-unknown-linux2.2.5-7.1.sh \
+#	    ${LOCALBASE} ${WRKSRC}/dest/libsoftokn3.so
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/netscape/netscape7

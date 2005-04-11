@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.Linux.i386,v 1.11 2004/06/26 10:43:49 grant Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.12 2005/04/11 16:17:34 jschauma Exp $
 #
 
-DIST_DIR_NAME=		linux22
+DIST_DIR_NAME=		linux
 
 DEPENDS+=		gtk+>=1.2.10:../../x11/gtk
 INSTDIR=		${WRKSRC}/dest
