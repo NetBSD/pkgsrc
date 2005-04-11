@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/11 03:26:55 minskim Exp $
+${RUBY_SITELIBDIR}/cmd.rb
+${RUBY_DOCDIR}/cmd/README
+@dirrm ${RUBY_DOCDIR}/cmd
