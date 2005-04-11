@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 17:39:22 reed Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 17:41:09 reed Exp $
 #
 # todo: set location of [md-]whois.conf and fix in man page too
 # todo: build and install the po/ files and add to PLIST
@@ -19,6 +19,7 @@ VERSION=	4.7.2
 WRKSRC=		${WRKDIR}/whois-${VERSION}
 USE_PERL5=	build
 USE_GNU_TOOLS+=	make
+INSTALLATION_DIRS+=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/whois ${PREFIX}/bin/md-whois
