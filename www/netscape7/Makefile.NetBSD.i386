@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.NetBSD.i386,v 1.9 2002/12/05 05:51:20 grant Exp $
+# $NetBSD: Makefile.NetBSD.i386,v 1.10 2005/04/11 16:17:34 jschauma Exp $
 #
 
-DIST_DIR_NAME=		linux22
+DIST_DIR_NAME=		linux
 
 DEPENDS+=		suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=		suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
