@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3393 2005/04/11 12:58:35 wiz Exp $
+$NetBSD: TODO,v 1.3394 2005/04/11 16:18:39 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -672,7 +672,6 @@ Suggested package updates
 	o netio-1.23
 	o netpipe-3.6.2
 	o netramet-50
-	o netscape7-7.2
 	o neverball-1.4.0
 	o newmail-1.0.2
 	o newscache-1.1.92
