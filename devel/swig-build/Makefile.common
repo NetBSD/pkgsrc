@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/12/03 15:14:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/04/11 21:45:39 tv Exp $
 
 DISTNAME=       swig-${SWIG_VERSION}
 CATEGORIES=	devel
@@ -16,7 +16,6 @@ PATCHDIR=		${.CURDIR}/../swig-build/patches
 BUILD_TARGET=		swig
 WRKSRC=			${WRKDIR}/SWIG-${SWIG_VERSION}
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/01 19:50:42 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:27 tv Exp $
 #
 
 DISTNAME=	libosip2-2.2.0
@@ -11,7 +11,6 @@ COMMENT=	Implementation of SIP
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 

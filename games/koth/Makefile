@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/03/25 02:55:49 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:45:51 tv Exp $
 #
 
 DISTNAME=	koth-0.8.0
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/koth/
 COMMENT=	The classic "shoot the other tank" artillery game, networked
 
-USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 CPPFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR:Q}\""

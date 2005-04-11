@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/19 19:32:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:40 tv Exp $
 #
 
 DISTNAME=	XML-Twig-3.16
@@ -18,7 +18,6 @@ DEPENDS+=	p5-File-Temp>=0.12:../../devel/p5-File-Temp
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/Twig/.packlist
 
 .include "../../lang/perl5/module.mk"

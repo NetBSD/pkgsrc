@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/12/20 11:31:02 grant Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:35 tv Exp $
 
 DISTNAME=	Term-ReadLine-Gnu-1.14
 PKGNAME=	p5-${DISTNAME:S/-Gnu//}
@@ -13,7 +13,6 @@ COMMENT=	Interface to the GNU Readline Library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_GNU_READLINE=	yes
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Term/ReadLine/Gnu/.packlist
 

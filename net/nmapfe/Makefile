@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/02/09 13:58:41 salo Exp $
+# $NetBSD: Makefile,v 1.31 2005/04/11 21:46:52 tv Exp $
 #
 
 DISTNAME=	nmap-3.81
@@ -14,7 +14,6 @@ COMMENT=	Graphical front end to the nmap port scanner
 
 DEPENDS+=	nmap-[23].*:../../net/nmap
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 PATCHDIR=	${.CURDIR}/../../net/nmap/patches

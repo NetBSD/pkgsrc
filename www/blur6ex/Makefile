@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/18 07:07:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:52 tv Exp $
 #
 
 DISTNAME=	blur6ex-0.1.198
@@ -13,7 +13,6 @@ DEPENDS+=	ap{,2}-php>=4.0.0:../../www/ap-php
 DEPENDS+=	php-mysql-[0-9]*:../../databases/php-mysql
 DEPENDS+=	mysql{,4}-server>=4.0:../../databases/mysql4-server
 
-NO_BUILDLINK=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_PKGINSTALL=	yes

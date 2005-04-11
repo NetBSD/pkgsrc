@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/25 20:58:05 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:04 tv Exp $
 
 DISTNAME=		autoswc-1.5
 CATEGORIES=		pkgtools sysutils
@@ -12,7 +12,6 @@ DEPENDS+=		autoconf>=2.59:../../devel/autoconf
 DEPENDS+=		automake>=1.8.2:../../devel/automake
 DEPENDS+=		libtool-base>=1.5.2:../../devel/libtool-base
 
-NO_BUILDLINK=		YES
 NO_CHECKSUM=		YES
 NO_CONFIGURE=		YES
 NO_MTREE=		YES

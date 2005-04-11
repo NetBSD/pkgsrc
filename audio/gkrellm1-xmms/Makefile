@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:05 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:44:52 tv Exp $
 
 DISTNAME=	gkrellmms-0.5.6
 PKGNAME=	gkrellm-xmms-0.5.6
@@ -11,7 +11,6 @@ HOMEPAGE=	http://gkrellm.luon.net/gkrellmms.phtml
 COMMENT=	gkrellm xmms plugin
 
 WRKSRC=		${WRKDIR}/gkrellmms
-USE_BUILDLINK3=	YES
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/03/06 16:52:40 taca Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/11 21:47:18 tv Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-openssl-${RUBY_VERSION}
@@ -12,7 +12,6 @@ COMMENT=	OpenSSL interface module for Ruby
 
 RUBY_HAS_ARCHLIB=	yes
 RUBY_VERSION_SUPPORTED=	18
-USE_BUILDLINK3=		yes
 USE_RUBY_EXTCONF=	yes
 WRKSRC=			${RUBY_WRKSRC}/ext/openssl
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/openssl \

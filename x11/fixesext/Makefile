@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/13 16:18:37 reed Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:48:05 tv Exp $
 #
 
 DISTNAME=		fixesext-2.0.1
@@ -13,7 +13,6 @@ COMMENT=		X Fixes extension headers and specification
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_X11=		yes
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=    fixesext.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/02/22 22:18:20 jwise Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:04 tv Exp $
 #
 
 DISTNAME=	i2cb-6.0_ALPHA
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.draga.com/~jwise/i2cb/
 COMMENT=	Next generation Internet Citicen's Band chat client
 
 WRKSRC=		${WRKDIR}/icb
-USE_BUILDLINK3=		yes
 USE_GNU_READLINE=	yes
 
 post-extract:

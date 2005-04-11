@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/12/18 15:53:29 jdolecek Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:48:01 tv Exp $
 
 MODNAME=	apc
 PECL_VERSION=	2.0.4
@@ -7,7 +7,6 @@ COMMENT=	Alternative PHP Cache for PHP4
 
 MAINTAINER=	tech-pkg@NetBSD.org
 
-USE_BUILDLINK3=		YES
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 WRKSRC=		${WRKDIR}/APC-${PECL_VERSION}

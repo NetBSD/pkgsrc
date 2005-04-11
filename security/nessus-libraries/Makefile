@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/04/04 09:32:25 adam Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:47:14 tv Exp $
 
 .include 	"../nessus/Makefile.common"
 
@@ -8,7 +8,6 @@ COMMENT=	Libs required by the Nessus Network security scanner
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
 WRKSRC=		${WRKDIR}/nessus-libraries
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-zlib=${BUILDLINK_PREFIX.zlib}/lib \

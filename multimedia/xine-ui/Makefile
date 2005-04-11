@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/03/27 15:42:53 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:46:43 tv Exp $
 #
 
 DISTNAME=		xine-ui-0.99.2
@@ -15,7 +15,6 @@ BUILD_USES_MSGFMT=	YES
 BUILDLINK_DEPENDS.curl=	curl>7.10.2
 
 USE_PKGLOCALEDIR=	YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_X11=		YES
 USE_LIBTOOL=		YES

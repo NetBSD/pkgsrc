@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/24 11:14:13 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:48 tv Exp $
 
 DISTNAME=	bzflag-1.10.6.20040515
 PKGNAME=	${DISTNAME:S/.20040515//}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.bzflag.org/
 COMMENT=	OpenGL tank game
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_LANGUAGES=	c c++
 USE_NCURSES=	# resize_term()

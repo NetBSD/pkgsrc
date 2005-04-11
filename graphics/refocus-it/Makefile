@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/21 23:59:17 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:09 tv Exp $
 #
 
 DISTNAME=		refocus-it-2.0.0
@@ -9,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://refocus-it.sourceforge.net/
 COMMENT=		Refocus images
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 #just build the command line tool
 CONFIGURE_ARGS+=	--without-gimp

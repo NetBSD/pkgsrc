@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/20 11:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:07 tv Exp $
 #
 
 DISTNAME=	Device-Modem-1.36
@@ -13,7 +13,6 @@ COMMENT=	Perl module to talk to modem devices connected via serial port
 
 DEPENDS+=	p5-Device-SerialPort-[0-9]*:../p5-Device-SerialPort
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Device/Modem/.packlist
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/03/30 14:23:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2005/04/11 21:47:25 tv Exp $
 
 DISTNAME=	mklivecd-0.11
 CATEGORIES=	sysutils
@@ -19,7 +19,6 @@ WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
 NO_CONFIGURE=	YES
-NO_BUILDLINK=	YES
 NO_BUILD=	YES
 
 INSTALLATION_DIRS=	man/man8 sbin share/mklivecd

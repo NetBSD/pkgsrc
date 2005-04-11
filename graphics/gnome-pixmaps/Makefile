@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:14:51 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:46:03 tv Exp $
 #
 
 DISTNAME=		gnome-core-1.4.2
@@ -19,7 +19,6 @@ CONFLICTS=		gnome-core<1.4.2
 CONFLICTS+=		gnome2-pixmaps-[0-9]*
 .endif
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_X11BASE=		YES
 NO_CONFIGURE=		YES

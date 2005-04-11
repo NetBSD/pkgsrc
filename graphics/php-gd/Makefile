@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 20:02:57 jdolecek Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:07 tv Exp $
 
 MODNAME=		gd
 PKGREVISION=		# empty
 CATEGORIES+=		graphics
 COMMENT=		PHP extension for GD graphics library
 
-USE_BUILDLINK3=		YES
 
 # XXX we use bundled GD so that extension is usable also by non-threaded
 # PHP, such as CLI/CGI version or ap-php on Apache 1.x.

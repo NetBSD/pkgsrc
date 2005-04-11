@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/03/23 11:01:56 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2005/04/11 21:46:14 tv Exp $
 #
 
 DISTNAME=	jikes-1.22
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://jikes.sourceforge.net/
 COMMENT=	Java source to byte-code compiler
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 UNLIMIT_RESOURCES=      datasize

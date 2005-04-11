@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:14:42 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:47 tv Exp $
 #
 
 DISTNAME=	ttmkfdir
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.joerg-pommnitz.de/TrueType/xfsft.html
 COMMENT=	Tool that creates a fonts.scale file
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK3=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ttmkfdir ${PREFIX}/bin

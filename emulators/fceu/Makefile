@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/27 15:43:33 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:43 tv Exp $
 #
 
 DISTNAME=		fceu-0.98.12.src
@@ -13,7 +13,6 @@ HOMEPAGE=		http://fceultra.sourceforge.net/
 COMMENT=		Portable NES and Famicom emulator
 
 WRKSRC=			${WRKDIR}/fceu
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/03/22 16:18:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.49 2005/04/11 21:48:07 tv Exp $
 #
 
 DISTNAME=		gnome-panel-2.10.0
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 panel application
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_PERL5=		YES

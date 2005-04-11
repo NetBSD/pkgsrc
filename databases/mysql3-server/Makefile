@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/01 00:37:56 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:12 tv Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 PKGREVISION=		3
@@ -8,7 +8,6 @@ COMMENT=		MySQL 3, a free SQL database (server)
 .include "../../databases/mysql3-client/Makefile.common"
 
 CONFIGURE_ARGS+=	--without-berkeley-db
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 
 USE_PKGINSTALL=		YES

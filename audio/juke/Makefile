@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/10/03 00:13:06 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:44:53 tv Exp $
 #
 
 DISTNAME=	juke-0.7
@@ -10,7 +10,6 @@ MAINTAINER=	mob@bicekru.org
 HOMEPAGE=	http://johan.nocrew.org/nav10/unix/juke/
 COMMENT=	Simple ncurses based jukebox
 
-USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 

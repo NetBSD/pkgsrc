@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/20 09:49:33 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:11 tv Exp $
 #
 
 DISTNAME=	adodb400
@@ -16,7 +16,6 @@ DEPENDS+=       php>=4.0.5:../../www/php4
 WRKSRC=		${WRKDIR}/adodb
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
-NO_BUILDLINK=	YES
 
 DOC_FILES=	license.txt readme.htm readme.txt tips_portable_sql.htm \
 		tute.htm docs-datadict.htm old-changelog.htm docs-adodb.htm \

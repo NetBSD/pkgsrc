@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/02/22 10:48:36 hira Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:46:11 tv Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4
@@ -15,7 +15,6 @@ HOMEPAGE=	http://skk.kuis.kyoto-u.ac.jp/
 COMMENT=	Dictionary server for Simple Kana-Kanji conversion programs
 
 WRKSRC=			${WRKDIR}/skk-9.6
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 

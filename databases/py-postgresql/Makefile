@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/02/23 12:13:35 darcy Exp $
+# $NetBSD: Makefile,v 1.40 2005/04/11 21:45:15 tv Exp $
 
 DISTNAME=		PyGreSQL-3.6.2
 PKGNAME=		${PYPKGPREFIX}-postgresql-3.6.2
@@ -12,7 +12,6 @@ COMMENT=		Python interface to PostgreSQL
 
 MAKE_ENV+=		MANDIR=${LOCALBASE}/man
 MAKE_ENV+=		BINDIR=${LOCALBASE}/bin
-USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 
 MAKEFILE=		GNUmakefile

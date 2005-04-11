@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/24 21:13:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:21 tv Exp $
 
 DISTNAME=	nologinmsg-1.0
 CATEGORIES=	shells sysutils
@@ -8,7 +8,6 @@ MAINTAINER=	cjep@NetBSD.org
 #HOMEPAGE=
 COMMENT=	More functional native binary replacement for /sbin/nologin
 
-USE_BUILDLINK3=	yes
 LIBS.Linux+=	-lnbcompat
 LIBS.IRIX+=	-lnbcompat
 MAKE_FLAGS+=	LDADD="${LIBS:Q}"

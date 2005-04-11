@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/12/29 12:56:50 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/04/11 21:45:23 tv Exp $
 
 DISTNAME=	glade-2.6.5
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -15,7 +15,6 @@ PATCHDIR=	${.CURDIR}/../../devel/glade2/patches
 PLIST_SRC=	${.CURDIR}/../../devel/glade2/PLIST
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES

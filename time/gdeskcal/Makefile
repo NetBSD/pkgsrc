@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/01/23 20:41:49 recht Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/11 21:47:44 tv Exp $
 #
 
 DISTNAME=		gDeskCal-0_57
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.pycage.de/software_gdeskcal.html
 COMMENT=		Desktop calendar
 
 WRKSRC=		${WRKDIR}/gDeskCal-0.57
-USE_BUILDLINK3=	yes
 NO_BUILD=	yes
 
 PYTHON_VERSIONS_ACCEPTED=	23

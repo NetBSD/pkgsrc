@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/01 17:39:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:10 tv Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -70,7 +70,6 @@ PKG_SUPPORTED_OPTIONS=	milter
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mmilter)
-USE_BUILDLINK3= 	yes
 GNU_CONFIGURE=  	yes
 CONFIGURE_ARGS+=	--with-runtime-dir=${AMAVIS_DIR}
 CONFIGURE_ARGS+=	--with-sockname=${AMAVIS_DIR}/amavisd.sock
@@ -88,7 +87,6 @@ PTHREAD_OPTS+=          require native	# doesn't work with pth
 .  include "../../mk/pthread.buildlink3.mk"
 .else
 USE_LANGUAGES=		# empty
-NO_BUILDLINK=		yes
 NO_CONFIGURE=		yes
 PLIST_SUBST+=		MILTER="@comment "
 

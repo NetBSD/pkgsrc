@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/01/06 05:35:14 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:44:49 tv Exp $
 #
 
 DISTNAME=		pax-20040802
@@ -10,7 +10,6 @@ MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		POSIX standard archiver with many extensions
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 
 NO_PKGTOOLS_REQD_CHECK=	# defined

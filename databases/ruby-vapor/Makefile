@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/03/06 17:19:05 taca Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:16 tv Exp $
 
 DISTNAME=	vapor-0.81
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -18,7 +18,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rexml>=2.4.0:../../textproc/ruby-rexml
 DEPENDS+=	${RUBY_PKGPREFIX}-racc>=1.4.3:../../devel/ruby-racc
 .endif
 
-USE_BUILDLINK3=	yes
 USE_RUBY_SETUP= yes
 RUBY_SETUP= 	install.rb
 REPLACE_RUBY=	doc/examples/university/createperson \

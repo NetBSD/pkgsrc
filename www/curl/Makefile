@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2005/03/27 13:21:07 recht Exp $
+# $NetBSD: Makefile,v 1.52 2005/04/11 21:47:52 tv Exp $
 
 DISTNAME=	curl-7.13.1
 CATEGORIES=	www
@@ -16,7 +16,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 # list it into IPv6-ready packages
 BUILD_DEFS+=	USE_INET6
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}

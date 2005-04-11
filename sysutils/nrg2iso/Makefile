@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/19 14:38:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:28 tv Exp $
 #
 
 DISTNAME=	nrg2iso-0.4
@@ -11,7 +11,6 @@ COMMENT=	Converts Nero Burning Roms to ISO images
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 
 INSTALLATION_DIRS=	bin
 

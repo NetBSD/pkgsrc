@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/15 14:50:06 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:25 tv Exp $
 #
 
 DISTNAME=	guile-oops-0.9.0
@@ -12,7 +12,6 @@ COMMENT=	CLOS-like object system for Guile
 
 CONFLICTS=	guile>1.4
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 INFO_FILES=		goops.info

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/20 11:31:11 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:40 tv Exp $
 #
 
 DISTNAME=	XML-XUpdate-LibXML-0.2.3
@@ -13,7 +13,6 @@ COMMENT=	Simple implementation of XUpdate format based on and XML::LibXML
 
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
 
-USE_BUILDLINK3= yes
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/XUpdate/LibXML/.packlist
 
 .include "../../lang/perl5/module.mk"

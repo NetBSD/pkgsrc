@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/08/28 07:50:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:27 tv Exp $
 #
 
 DISTNAME=		rss2email-${RVER}
@@ -21,7 +21,6 @@ SITES_html2text-${HVER}.py=	http://www.aaronsw.com/2002/html2text/
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
 NO_BUILD=		# defined
-USE_BUILDLINK3=		yes
 PYTHON_PATCH_SCRIPTS=	*.py
 
 SUBST_CLASSES+=		bin

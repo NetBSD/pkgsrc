@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:16 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:26 tv Exp $
 #
 
 DISTNAME=	MToolsFM-1.9-3
@@ -13,7 +13,6 @@ COMMENT=	Easy MS-DOS disk access without learning MS-DOS commands
 
 DEPENDS+=	mtools>=3.9.7:../../sysutils/mtools
 
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-conffile=${PKG_SYSCONFDIR}/mtoolsfm.conf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/30 01:16:27 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:48:02 tv Exp $
 
 DISTNAME=	swiggle-0.3.3
 CATEGORIES=	www graphics
@@ -10,7 +10,6 @@ COMMENT=	Lightweight image gallery generator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
 
 SUBST_CLASSES+=		mf
 SUBST_STAGE.mf=		post-patch

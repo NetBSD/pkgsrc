@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/15 20:28:25 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:44:54 tv Exp $
 #
 
 DISTNAME=		libvisual-0.2.0
@@ -9,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://libvisual.sourceforge.net/
 COMMENT=		Abstraction library between applications and audio visualisation plugins
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libvisual.pc.in

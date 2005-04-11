@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:14:46 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:57 tv Exp $
 
 DISTNAME=	Sjeng-Free-11.0
 PKGNAME=	sjeng-11.0
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.sjeng.org/
 COMMENT=	Engine for chess variations (bughouse, suicide, etc.)
 
-USE_BUILDLINK3=	YES
 
 GNU_CONFIGURE=	YES
 LIBS+=		-lm	# floor()

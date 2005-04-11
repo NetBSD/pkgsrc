@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/25 19:11:58 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:34 tv Exp $
 #
 
 DISTNAME=	dtdparse-2.0beta6
@@ -14,7 +14,6 @@ DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-XML-DOM-[0-9]*:../../textproc/p5-XML-DOM
 DEPENDS+=	p5-Text-DelimMatch-[0-9]*:../../textproc/p5-Text-DelimMatch
 
-USE_BUILDLINK3=	yes
 
 DOCDIR=		${PREFIX}/share/doc/dtdparse
 EGDIR=		${PREFIX}/share/examples/dtdparse

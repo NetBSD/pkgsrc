@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2005/01/24 16:25:05 tv Exp $
+# $NetBSD: Makefile,v 1.59 2005/04/11 21:46:50 tv Exp $
 
 DISTNAME=	mrtg-2.11.1
 PKGREVISION=	1
@@ -26,7 +26,6 @@ MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 COMMENT=	The Multi-Router Traffic Grapher
 
-USE_BUILDLINK3=	YES
 USE_PERL5=	YES
 PERL5_REQD+=	5.6.1
 GNU_CONFIGURE=	YES

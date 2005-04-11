@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/02/07 11:35:47 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/11 21:47:14 tv Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -55,7 +55,6 @@ MANDIR=			man
 
 PLIST_SUBST+=		MANDIR=${MANDIR}
 
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

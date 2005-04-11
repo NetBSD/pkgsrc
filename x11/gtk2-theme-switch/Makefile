@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:33 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:48:08 tv Exp $
 #
 
 DISTNAME=		gtk-theme-switch-2.0.0rc2
@@ -11,7 +11,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.muhri.net/
 COMMENT=		Allows quick & easy switching of GTK+ 2.x themes
 
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED

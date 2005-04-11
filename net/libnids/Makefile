@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/05 22:13:29 adrianp Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:49 tv Exp $
 #
 
 DISTNAME=	libnids-1.20
@@ -9,7 +9,6 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://libnids.sourceforge.net/
 COMMENT=	Network monitoring library with TCP/IP reassembly
 
-USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 
 BUILDLINK_DEPMETHOD.libnet=	build

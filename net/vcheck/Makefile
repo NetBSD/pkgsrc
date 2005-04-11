@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/04/25 07:41:13 snj Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:01 tv Exp $
 #
 
 DISTNAME=		vcheck-1.2.1
@@ -12,7 +12,6 @@ COMMENT=		Latest program version checker and auto-downloader
 
 DEPENDS+=		p5-libwww>=5.69nb1:../../www/p5-libwww
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/vcheck/.packlist
 
 .include "../../lang/perl5/module.mk"

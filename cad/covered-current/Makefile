@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/27 17:52:09 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:01 tv Exp $
 #
 
 DISTNAME=	covered-${SNAPDATE}
@@ -12,7 +12,6 @@ COMMENT=	Verilog code coverage analyzer (development snapshot)
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-USE_BUILDLINK3=	yes
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	verilog{,-current}-[0-9]*:../../cad/verilog
 

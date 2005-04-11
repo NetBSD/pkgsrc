@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:18:16 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:29 tv Exp $
 #
 
 DISTNAME=	Memo-1.0.0
@@ -19,7 +19,6 @@ WRKSRC=		${WRKDIR}/Memo
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-USE_BUILDLINK3=	yes
 
 PYTHON_PATCH_SCRIPTS=	AppRun
 

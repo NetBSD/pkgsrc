@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/08/02 21:32:12 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:46:10 tv Exp $
 #
 
 DISTNAME=	tnt-1.9.1
@@ -16,7 +16,6 @@ DEPENDS+=	dialog>=0.6z:../../misc/dialog
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
