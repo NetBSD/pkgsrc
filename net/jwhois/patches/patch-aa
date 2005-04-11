@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2005/04/11 15:38:16 taca Exp $
-
---- example/jwhois.conf.orig	2003-07-01 02:16:45.000000000 +0900
-+++ example/jwhois.conf
-@@ -55,7 +55,42 @@ whois-servers {
+--- example/jwhois.conf.orig	2003-06-30 19:16:45.000000000 +0200
++++ example/jwhois.conf	2005-04-11 18:02:28.000000000 +0200
+@@ -55,7 +55,42 @@
  	"^[0-9]+\\.[0-9]+\\.[0-9]+/[0-9]+-[0-9]+$" = "whois.nic.br";
   
  	#
@@ -46,7 +44,7 @@ $NetBSD: patch-aa,v 1.7 2005/04/11 15:38:16 taca Exp $
  	#
  	".*:.*" = "whois.6bone.net";
  
-@@ -147,7 +182,7 @@ whois-servers {
+@@ -147,7 +182,7 @@
  	"\\.ee$" = "whois.eenet.ee";
  	"\\.eg$" = "whois.ripe.net";
  	"\\.es$" = "www.nic.es";
@@ -55,7 +53,7 @@ $NetBSD: patch-aa,v 1.7 2005/04/11 15:38:16 taca Exp $
  	"\\.fj$" = "whois.usp.ac.fj";
  	"\\.fm$" = "www.dot.fm";
  	"\\.fo$" = "whois.ripe.net";
-@@ -176,7 +211,7 @@ whois-servers {
+@@ -176,7 +211,7 @@
  	"\\.it$" = "whois.nic.it";
  	"\\.je$" = "whois.isles.net";
  	"\\.jp$" {
@@ -64,7 +62,7 @@ $NetBSD: patch-aa,v 1.7 2005/04/11 15:38:16 taca Exp $
  		query-format = "$* /e";
  	}
  	"\\.kg$" = "whois.domain.kg";
-@@ -242,7 +277,7 @@ whois-servers {
+@@ -242,7 +277,7 @@
  	"\\.to$" = "whois.tonic.to";
  	"\\.tr$" = "whois.metu.edu.tr";
  	"\\.tt$" = "www.nic.tt";
@@ -73,7 +71,15 @@ $NetBSD: patch-aa,v 1.7 2005/04/11 15:38:16 taca Exp $
  	"\\.tw$" = "whois.twnic.net";
  	"\\.ua$" = "whois.com.ua";
  	"\\.ug$" = "whois.co.ug";
-@@ -371,6 +406,15 @@ cidr-blocks {
+@@ -366,11 +401,23 @@
+ 
+ 	"24.232.0.0/16" = "whois.lacnic.net";
+ 	"43.0.0.0/8" = "whois.v6nic.net";
++	"58.0.0.0/8" = "whois.apnic.net";
++	"59.0.0.0/8" = "whois.apnic.net";
++	"60.0.0.0/8" = "whois.apnic.net";
+ 	"61.0.0.0/8" = "whois.apnic.net";
+ 	"62.0.0.0/8" = "whois.ripe.net";
  	"80.0.0.0/8" = "whois.ripe.net";
  	"81.0.0.0/8" = "whois.ripe.net";
  	"82.0.0.0/8" = "whois.ripe.net";
@@ -89,7 +95,7 @@ $NetBSD: patch-aa,v 1.7 2005/04/11 15:38:16 taca Exp $
  	"150.217.0.0/16" = "whois.ripe.net";
  	"151.3.0.0/16" = "whois.ripe.net";
  	"151.4.0.0/15" = "whois.ripe.net";
-@@ -491,6 +535,10 @@ server-options {
+@@ -491,6 +538,10 @@
  		whois-redirect = ".*Whois Server: \\(.*\\)";
  	}
  
@@ -100,7 +106,7 @@ $NetBSD: patch-aa,v 1.7 2005/04/11 15:38:16 taca Exp $
  	"whois\\.apnic\\.net" {
  		whois-redirect = ".*http://\\(whois\\.nic\\.or\\.kr\\)/";
  		whois-redirect = ".*at \\([Ww][Hh][Oo][Ii][Ss]\\.[A-Za-z]*\\.[Nn][Ee][Tt]\\)";
-@@ -693,14 +741,6 @@ server-options {
+@@ -693,14 +744,6 @@
  		form-element = "whois";
  	}
  
@@ -115,7 +121,7 @@ $NetBSD: patch-aa,v 1.7 2005/04/11 15:38:16 taca Exp $
  	"whois\\.lacnic\\.net" {
  		whois-redirect = ".*\\(whois.nic.br\\)";
  		whois-redirect = ".*\\(whois.registro.br\\)";
-@@ -724,10 +764,10 @@ server-options {
+@@ -724,10 +767,10 @@
  
  #
  # The cache feature is used to provide a local cache with Whois information.
@@ -128,7 +134,7 @@ $NetBSD: patch-aa,v 1.7 2005/04/11 15:38:16 taca Exp $
  
  #
  # This is the time after which an entry expires from the cache in hours.
-@@ -743,7 +783,7 @@ server-options {
+@@ -743,7 +786,7 @@
  #
  # Path to the browser to use for HTTP servers.
  #
