@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2005/04/05 13:16:50 jschauma Exp $
+$NetBSD: patch-aa,v 1.3 2005/04/11 13:37:28 jschauma Exp $
 
 --- /dev/null	2005-04-01 11:19:18.000000000 -0500
 +++ src/make/netbsd.mk	2005-04-01 11:14:31.000000000 -0500
@@ -37,17 +37,17 @@ $NetBSD: patch-aa,v 1.2 2005/04/05 13:16:50 jschauma Exp $
 +TEEM_DIO = 0
 +ifeq ($(SUBARCH),ia64)
 +  TEEM_32BIT = 0
-+  ARCH_CFLAG = -fPIC -W -Wall -Wno-unused-parameter
++  ARCH_CFLAG = -fPIC -W -Wall
 +  ARCH_LDFLAG =
 +else
 +  ifeq ($(SUBARCH),64)
 +    TEEM_32BIT = 0
-+    ARCH_CFLAG = -fPIC -W -Wall -Wno-unused-parameter
++    ARCH_CFLAG = -fPIC -W -Wall
 +    ARCH_LDFLAG =
 +  else
 +    ifeq ($(SUBARCH),32)
 +      TEEM_32BIT = 1
-+      ARCH_CFLAG = -W -Wall -Wno-unused-parameter
++      ARCH_CFLAG = -W -Wall
 +      ARCH_LDFLAG = 
 +    else
 +      $(error netbsd sub-architecture "$(SUBARCH)" not recognized)
