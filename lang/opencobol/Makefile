@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/15 12:03:52 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:15 tv Exp $
 #
 
 DISTNAME=		open-cobol-0.23
@@ -14,7 +14,6 @@ COMMENT=		Open-source COBOL compiler
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes

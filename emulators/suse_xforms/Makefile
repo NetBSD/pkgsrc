@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/01/23 12:06:08 tron Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:45:45 tv Exp $
 
 DISTNAME=		xforms
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
@@ -16,7 +16,6 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
-NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}

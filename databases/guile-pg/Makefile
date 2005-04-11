@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/12/22 23:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/11 21:45:11 tv Exp $
 #
 
 DISTNAME=	guile-pg-0.23
@@ -9,7 +9,6 @@ MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://www.glug.org/people/ttn/software/guile-pg/
 COMMENT=	PostgreSQL interface for Guile
 
-USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES

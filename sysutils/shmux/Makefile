@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:29 tv Exp $
 
 DISTNAME=	shmux-1.0b5
 CATEGORIES=	sysutils
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://web.taranis.org/shmux/
 COMMENT=	Shell Multiplexor
 
-USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 BUILD_TARGET=	shmux
 TEST_TARGET=	test

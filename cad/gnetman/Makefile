@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/20 13:53:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:01 tv Exp $
 #
 
 DISTNAME=		gnetman-11Feb05
@@ -10,7 +10,6 @@ MAINTAINER=		dmcmahill@NetBSD.org
 HOMEPAGE=		http://www.viasic.com/opensource/
 COMMENT=		Advanced Netlister and Netlist Manipulation Database for gEDA
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

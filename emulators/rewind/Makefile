@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:14:41 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:45:44 tv Exp $
 
 DISTNAME=		rewind-20020420
 PKGREVISION=		5
@@ -14,7 +14,6 @@ CONFLICTS=		wine-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 
-USE_BUILDLINK3=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 

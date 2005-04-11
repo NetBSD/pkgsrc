@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/01/03 15:59:12 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:44:57 tv Exp $
 #
 
 DISTNAME=	streamtuner-0.99
@@ -14,7 +14,6 @@ BUILD_DEPENDS+=	hicolor-icon-theme-[0-9]*:../../graphics/hicolor-icon-theme
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:13:06 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:44:53 tv Exp $
 #
 
 DISTNAME=	a52dec-0.7.4
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://liba52.sourceforge.net/
 COMMENT=	Free ATSC A/52 stream decoder library
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=  	yes
 USE_LIBTOOL=		yes
 

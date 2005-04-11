@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:25 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:52 tv Exp $
 #
 
 DISTNAME=		bk_edit-0.6.23
@@ -13,7 +13,6 @@ COMMENT=		Bookmark manager and editor
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
-USE_BUILDLINK3=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 

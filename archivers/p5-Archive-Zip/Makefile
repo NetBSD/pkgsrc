@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/12/20 11:30:55 grant Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:44:49 tv Exp $
 
 DISTNAME=		Archive-Zip-1.14
 PKGNAME=		p5-${DISTNAME}
@@ -16,7 +16,6 @@ DEPENDS+=		p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Archive/Zip/.packlist
 
 .include "../../lang/perl5/module.mk"

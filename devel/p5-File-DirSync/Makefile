@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/20 11:30:59 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:31 tv Exp $
 #
 
 DISTNAME=	File-DirSync-1.11
@@ -12,7 +12,6 @@ COMMENT=	Perl5 module to synchronize two directories rapidly
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/File/DirSync/.packlist
 
 .include "../../lang/perl5/module.mk"

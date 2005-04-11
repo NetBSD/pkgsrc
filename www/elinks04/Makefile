@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:18:25 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:52 tv Exp $
 
 DISTNAME=		elinks-0.4.3
 PKGREVISION=		3
@@ -10,7 +10,6 @@ MAINTAINER=		dawszy@arhea.net
 HOMEPAGE=		http://elinks.or.cz/
 COMMENT=		Extended/Enhanced Links
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--without-x

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/06 17:50:09 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:06 tv Exp $
 #
 
 DISTNAME=	weechat-0.0.6
@@ -15,7 +15,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

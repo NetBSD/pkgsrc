@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/04/26 07:10:16 fredb Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/11 21:46:16 tv Exp $
 #
 
 DISTNAME=	Squeak-3.6-3
@@ -13,7 +13,6 @@ HOMEPAGE=	http://www-sor.inria.fr/~piumarta/squeak/
 COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 USE_X11=	yes
 

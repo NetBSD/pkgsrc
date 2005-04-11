@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2005/03/13 15:21:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.54 2005/04/11 21:45:36 tv Exp $
 #
 
 DISTNAME=		pango-1.8.1
@@ -14,7 +14,6 @@ COMMENT=		Library for layout and rendering of text
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes

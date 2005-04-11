@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:14:57 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:09 tv Exp $
 #
 
 DISTNAME=	qce-ga-0.40d
@@ -15,7 +15,6 @@ MAINTAINER=	hamajima@NetBSD.org
 HOMEPAGE=	http://www2.starcat.ne.jp/~takam/bsd/NetBSD.html#qcam
 COMMENT=	Logitech Quickcam Express USB Utilities
 
-USE_BUILDLINK3=		yes
 
 do-build:
 	for f in qcamshot qcamview ; do				\

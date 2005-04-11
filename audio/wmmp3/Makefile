@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/11 18:58:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:44:58 tv Exp $
 
 DISTNAME=	wmmp3-0.12
 PKGREVISION=	1
@@ -11,7 +11,6 @@ COMMENT=	Front-end for mpg123 in a Window Maker dockapp
 
 DEPENDS+=	mpg123>=0.59.18:../../audio/mpg123
 
-USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 

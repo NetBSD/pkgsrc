@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/11/15 17:54:49 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:46:18 tv Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -13,7 +13,6 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	The Cubic Circle POP3 mail server
 
-USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 
 LICENSE=	shareware

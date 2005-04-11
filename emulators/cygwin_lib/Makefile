@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/29 23:30:26 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:43 tv Exp $
 #
 
 DISTNAME=		cygwin-1.5.13-1
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=	Interix-*-*
 
 DIST_SUBDIR=		cygwin
 WRKSRC=			${WRKDIR}
-USE_BUILDLINK3=		yes
 
 SYMLINKS=		cygpath ipcrm ipcs kill mount ps regtool umount
 

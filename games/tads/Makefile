@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/22 20:02:11 dillo Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:57 tv Exp $
 #
 
 DISTNAME=	tads23-unix
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 BUILD_DIRS=	${WRKSRC}/tads2 ${WRKSRC}/tads3
 USE_LANGUAGES=	c c++

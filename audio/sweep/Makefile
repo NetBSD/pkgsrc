@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/02/14 08:16:35 uebayasi Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/11 21:44:57 tv Exp $
 #
 
 DISTNAME=	sweep-0.8.3
@@ -12,7 +12,6 @@ COMMENT=	Full-featured digital sound editor
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome1-1.5
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make

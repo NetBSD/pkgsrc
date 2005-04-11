@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/03/27 15:42:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:42 tv Exp $
 #
 
 DISTNAME=		aranym-0.8.9beta
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://aranym.sourceforge.net/
 COMMENT=		Atari Running on Any Machine
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 USE_X11=		yes

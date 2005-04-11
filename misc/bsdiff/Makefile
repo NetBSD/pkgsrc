@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:12:58 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:33 tv Exp $
 #
 
 DISTNAME=		bsdiff-4.2
@@ -10,7 +10,6 @@ MAINTAINER=		cjep@NetBSD.org
 HOMEPAGE=		http://www.daemonology.net/bsdiff/
 COMMENT=		Size efficient binary diff and patch tools
 
-USE_BUILDLINK3=		yes
 
 .if !exists(/usr/bin/bzip2)
 MAKE_ENV+=		BZIP2=${LOCALBASE}/bin/bzip2

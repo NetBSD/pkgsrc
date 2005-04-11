@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/10 00:42:49 reinoud Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:46:40 tv Exp $
 #
 
 DISTNAME=		UDFclient.0.3.5
@@ -14,7 +14,6 @@ COMMENT=		UDF file system reader/writer for CD/CD-RW/DVD*RW/DVD-RAM and images
 
 GNU_CONFIGURE=		yes
 
-USE_BUILDLINK3=		yes
 PTHREAD_OPTS+=		require
 
 .include "../../mk/pthread.buildlink3.mk"

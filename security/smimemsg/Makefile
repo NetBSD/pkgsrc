@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/06/27 11:40:07 grant Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:19 tv Exp $
 #
 
 DISTNAME=	smimemsg15
@@ -12,7 +12,6 @@ COMMENT=	Generate and read S/MIME messages
 
 WRKSRC=		${WRKDIR}/smimemsg
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 
 RESTRICTED=             "Source code redistribution is not permitted.consult okuno@mars.elcom.nitech.ac.jp."
 NO_SRC_ON_FTP=          ${RESTRICTED}

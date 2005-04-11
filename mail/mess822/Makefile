@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/03/23 00:51:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:20 tv Exp $
 #
 
 DISTNAME=		mess822-0.58
@@ -19,7 +19,6 @@ DJB_RESTRICTED=		YES
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 
 EGDIR=			${PREFIX}/share/examples/mess822
 CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/19 21:54:51 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:54 tv Exp $
 
 DISTNAME=	mini_httpd-1.19
 PKGREVISION=	2
@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc@bjan.freeshell.org
 HOMEPAGE=	http://www.acme.com/software/mini_httpd/
 COMMENT=	Small, forking webserver with IPv6 and SSL support
 
-USE_BUILDLINK3=	yes
 MAKE_ENV+=	PKG_CFLAGS="${CFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"

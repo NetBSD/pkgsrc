@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2004/11/21 02:43:36 jlam Exp $
+# $NetBSD: Makefile,v 1.60 2005/04/11 21:45:24 tv Exp $
 
 DISTNAME=	make-3.80
 PKGNAME=	gmake-3.80
@@ -12,7 +12,6 @@ COMMENT=	GNU version of 'make' utility
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 TEXINFO_REQD=		4.0
 INFO_FILES=		make.info

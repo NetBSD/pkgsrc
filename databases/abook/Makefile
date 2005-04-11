@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/11/29 01:39:17 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:10 tv Exp $
 #
 
 DISTNAME=	abook-0.5.3
@@ -11,7 +11,6 @@ COMMENT=	Text-based addressbook program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_GNU_READLINE=	yes
 GNU_CONFIGURE=		yes
 

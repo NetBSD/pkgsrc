@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/11/14 09:14:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:44:56 tv Exp $
 #
 
 DISTNAME=	rhythmbox-0.8.8
@@ -20,7 +20,6 @@ BUILDLINK_DEPENDS.gstreamer+=	gstreamer>=0.8.1
 BUILDLINK_DEPENDS.gst-plugins+=	gst-plugins>=0.8.1
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES

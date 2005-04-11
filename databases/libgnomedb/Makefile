@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/03/06 21:27:13 kristerw Exp $
+# $NetBSD: Makefile,v 1.34 2005/04/11 21:45:12 tv Exp $
 #
 
 DISTNAME=		libgnomedb-1.2.0
@@ -15,7 +15,6 @@ BUILD_USES_MSGFMT=	yes
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

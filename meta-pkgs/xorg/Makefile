@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/22 09:44:33 adam Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:33 tv Exp $
 
 DISTNAME=	# empty
 PKGNAME=	xorg-${XORG_VER}
@@ -24,7 +24,6 @@ DEPENDS+=	xorg-fontsType1>=${XORG_VER}:../../fonts/xorg-fontsType1
 #DEPENDS+=	xorg-docs>=${XORG_VER}:../../misc/xorg-docs
 
 NO_BUILD=		yes
-NO_BUILDLINK=		yes
 NO_CHECKSUM=		yes
 NO_MTREE=		yes
 NO_XORG_TARGETS=	yes

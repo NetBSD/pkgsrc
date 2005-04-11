@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/26 17:50:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:48:01 tv Exp $
 #
 
 DISTNAME=	WWW-Mechanize-1.12
@@ -16,7 +16,6 @@ DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/WWW/Mechanize/.packlist
 

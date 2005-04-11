@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/03 14:27:07 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:58 tv Exp $
 #
 
 DISTNAME=		xsc-1.5
@@ -9,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.panix.com/~mbh/xsc/
 COMMENT=		Star Castle clone
 
-USE_BUILDLINK3=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/04/09 22:39:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.46 2005/04/11 21:46:45 tv Exp $
 
 DISTNAME=		djbdns-1.05
 PKGREVISION=		7
@@ -15,7 +15,6 @@ SITES_${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 
 # We change conf-home from the default "/usr/local" and don't
 # provide compatibility symlinks. We also patch to honor PKG_SYSCONFDIR

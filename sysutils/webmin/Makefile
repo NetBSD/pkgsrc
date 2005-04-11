@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/23 06:20:43 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:30 tv Exp $
 
 DISTNAME=	webmin-1.170-minimal
 PKGNAME=	${DISTNAME:S/-minimal$//}
@@ -14,7 +14,6 @@ DEPENDS+=	p5-Net-SSLeay-[0-9]*:../../security/p5-Net-SSLeay
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	# empty
-USE_BUILDLINK3=	yes
 NO_BUILD=	yes
 
 USE_PERL5=	yes

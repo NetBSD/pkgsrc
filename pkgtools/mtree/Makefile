@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/01/06 05:32:29 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:47:05 tv Exp $
 #
 
 DISTNAME=		mtree-20040722
@@ -10,7 +10,6 @@ MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		Utility for mapping and checking directory hierarchies
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 
 NO_PKGTOOLS_REQD_CHECK=	# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/08 15:19:18 grant Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:50 tv Exp $
 #
 
 DISTNAME=	mod_auth_script-alpha1.3
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mod-auth-script.sourceforge.net/
 COMMENT=	Apache module for script-based authentication
 
-USE_BUILDLINK3=	yes
 
 APACHE_MODULE_NAME=	mod_auth_script.so
 

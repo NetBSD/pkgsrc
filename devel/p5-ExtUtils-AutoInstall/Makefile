@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/03 04:12:37 epg Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:31 tv Exp $
 
 DISTNAME=	ExtUtils-AutoInstall-0.61
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,6 @@ COMMENT=	Lets Makefile.PL automatically install dependencies
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/ExtUtils/AutoInstall/.packlist
 
 MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skip

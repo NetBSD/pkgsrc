@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/12/14 20:34:42 minskim Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 21:46:35 tv Exp $
 
 DISTNAME=		gperiodic-2.0.7
 PKGREVISION=		3
@@ -11,7 +11,6 @@ COMMENT=		Displays a periodic table of the elements
 
 BUILD_USES_MSGFMT=	# defined
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	# defined
 USE_X11=		# defined

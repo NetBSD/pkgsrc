@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/12/03 15:14:55 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2005/04/11 21:45:38 tv Exp $
 #
 
 DISTNAME=	readline-5.0
@@ -11,7 +11,6 @@ COMMENT=	GNU library that can recall and edit previous input
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 

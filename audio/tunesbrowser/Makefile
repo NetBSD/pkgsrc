@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/20 15:21:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:44:57 tv Exp $
 #
 
 DISTNAME=		tunesbrowser-0.2.0
@@ -11,7 +11,6 @@ HOMEPAGE=		http://crazney.net/programs/itunes/libopendaap.html
 COMMENT=		Front-end for DAAP client
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
