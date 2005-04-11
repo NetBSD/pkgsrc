@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9815 2005/04/11 03:29:21 minskim Exp $
+$NetBSD: CHANGES,v 1.9816 2005/04/11 03:46:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1973,3 +1973,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated splint to 3.1.1 [jschauma 2005-04-10]
 	Updated gtk-send-pr to 0.4.5 [cube 2005-04-10]
 	Added ruby-cmd-0.7.0 [minskim 2005-04-11]
+	Updated mathomatic to 12.2c [minskim 2005-04-11]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3389 2005/04/10 20:16:35 cube Exp $
+$NetBSD: TODO,v 1.3390 2005/04/11 03:46:37 minskim Exp $
 
 Suggested new packages
 ======================
@@ -629,7 +629,6 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.26
-	o mathomatic-12.2c
 	o mdd-20050318
 	o memcached-1.2
 	o memtest86-3.2
