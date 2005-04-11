@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/05 18:16:21 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:48:13 tv Exp $
 
 DISTNAME=		randrext-1.0
 PKGREVISION=		1
@@ -12,7 +12,6 @@ COMMENT=		X RandR extension (Headers and documentation files)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=    randr.pc.in

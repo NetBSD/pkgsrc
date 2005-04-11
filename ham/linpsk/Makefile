@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/16 20:00:52 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:10 tv Exp $
 #
 
 DISTNAME=	linpsk-0.8.0.4
@@ -11,7 +11,6 @@ COMMENT=	PSK31 terminal program using QT3
 
 BUILD_DEPENDS+=	qt3-tools-3.*:../../x11/qt3-tools
 
-USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 USE_GNU_TOOLS+=	make
 USE_GNUMAKE=	yes

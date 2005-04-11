@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2005/02/27 08:42:05 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/04/11 21:46:32 tv Exp $
 #
 
 BOOST_PACKAGE?=		undefined
@@ -30,7 +30,6 @@ CONFLICTS+=		boost<1.32.0
 DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
 
-USE_BUILDLINK3=		yes
 USE_LANGUAGES+=		c++
 GCC_REQD+=		3.2 # if using gcc; ignored otherwise
 

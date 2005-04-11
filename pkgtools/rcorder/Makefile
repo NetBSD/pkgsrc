@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/01/06 05:32:30 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:05 tv Exp $
 #
 
 DISTNAME=		rcorder-20031013
@@ -10,7 +10,6 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		Print a dependency ordering of interdependent files
 
-USE_BUILDLINK3=		yes
 NO_CHECKSUM=		yes
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2005/03/15 13:48:28 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2005/04/11 21:46:20 tv Exp $
 
 DISTNAME=	mew-4.2
 CATEGORIES=	mail
@@ -12,7 +12,6 @@ CONFLICTS=+	mew-xemacs-[0-9]* incm-[0-9]*
 
 INFO_FILES=	mew.info
 
-USE_BUILDLINK3=	yes
 HAS_CONFIGURE=	yes
 
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215

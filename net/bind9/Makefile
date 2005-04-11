@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2005/03/18 01:14:32 tron Exp $
+# $NetBSD: Makefile,v 1.69 2005/04/11 21:46:44 tv Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	bind-${BIND_VERSION}pl1
@@ -22,7 +22,6 @@ DIST_SUBDIR=	bind/${BIND_VERSION}
 BUILD_DEFS+=	USE_INET6
 # No need to set USE_INET6, will auto-detect.
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 

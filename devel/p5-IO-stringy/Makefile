@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/12/20 11:31:01 grant Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:45:32 tv Exp $
 #
 
 DISTNAME=	IO-stringy-2.109
@@ -14,7 +14,6 @@ COMMENT=	Perl class for I/O on in-core objects like strings and arrays
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/IO-stringy/.packlist
 

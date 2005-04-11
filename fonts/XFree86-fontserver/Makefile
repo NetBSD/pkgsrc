@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:14:41 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:47 tv Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-fontserver-${XF_VER}
@@ -13,7 +13,6 @@ HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 font server
 
 USE_X11=		yes
-USE_BUILDLINK3=		yes
 DISTINFO_FILE=		${.CURDIR}/../../x11/XFree86-libs/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/XFree86-libs/patches
 

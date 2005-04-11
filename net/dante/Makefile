@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/04 10:00:54 adam Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:46:45 tv Exp $
 
 DISTNAME=	dante-1.1.15
 CATEGORIES=	net security
@@ -10,7 +10,6 @@ COMMENT=	BSD-licensed socks 4/5 proxy suite
 
 CONFLICTS=	socks4-[0-9]*
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-socks-conf=${PKG_SYSCONFDIR}/socks.conf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/11 13:11:12 markd Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:44 tv Exp $
 #
 
 DISTNAME=	argus-3.3
@@ -18,7 +18,6 @@ BUILD_DEPENDS+=	p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
 BUILD_DEPENDS+=	p5-Crypt-DES-[0-9]*:../../security/p5-Crypt-DES
 BUILD_DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 
-USE_BUILDLINK3=		yes
 USE_PERL5=		yes
 USE_PKGINSTALL=		yes
 HAS_CONFIGURE= 		yes

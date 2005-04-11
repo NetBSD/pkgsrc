@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/03/26 16:20:35 adam Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/04/11 21:46:14 tv Exp $
 
 DISTNAME=	ocaml-3.08.3
 CATEGORIES=	lang
@@ -12,7 +12,6 @@ COMMENT=	The latest implementation of the Caml dialect of ML
 DISTINFO_FILE=		${.CURDIR}/../../lang/ocaml/distinfo
 PATCHDIR=		${.CURDIR}/../../lang/ocaml/patches
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-prefix ${PREFIX}

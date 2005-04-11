@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/20 11:30:58 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:30 tv Exp $
 #
 
 DISTNAME=	Class-Fields-0.201
@@ -14,7 +14,6 @@ COMMENT=	Set of modules to operate with class fields and members access
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Class/Fields/.packlist
 
 .include "../../lang/perl5/module.mk"

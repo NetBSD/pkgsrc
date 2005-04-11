@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/04 20:28:31 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:44:54 tv Exp $
 #
 
 DISTNAME=		libmusepack-1.0.3
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.musepack.net/
 COMMENT=		Portable Musepack decoder library
 
-USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c++
 GNU_CONFIGURE=		yes
 

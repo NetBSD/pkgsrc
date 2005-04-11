@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/20 11:31:02 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:34 tv Exp $
 
 DISTNAME=	POE-0.29
 PKGNAME=	p5-${DISTNAME}
@@ -22,7 +22,6 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 MAKE_PARAMS+=	--default
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/POE/.packlist
 

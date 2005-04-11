@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2005/02/05 08:47:33 jklos Exp $
+# $NetBSD: Makefile,v 1.53 2005/04/11 21:46:06 tv Exp $
 #
 
 DISTNAME=	libwmf-0.2.8.3
@@ -12,7 +12,6 @@ COMMENT=	Library for reading and converting WMF (Windows Meta Files)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES

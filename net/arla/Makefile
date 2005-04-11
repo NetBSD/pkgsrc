@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/03/26 16:50:59 wennmach Exp $
+# $NetBSD: Makefile,v 1.44 2005/04/11 21:46:44 tv Exp $
 
 DISTNAME=		arla-0.38
 PKGREVISION=		2
@@ -15,7 +15,6 @@ CONFLICTS+=		rx-[0-9]*
 OSVERSION_SPECIFIC=	yes
 INFO_FILES=		arla.info send-pr.info
 
-USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

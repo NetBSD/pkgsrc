@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2004/12/03 15:15:00 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2005/04/11 21:46:13 tv Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGREVISION=		5
@@ -17,7 +17,6 @@ COMMENT=		GNU Compiler Collection, version 2
 
 NOT_FOR_PLATFORM=	Darwin-*-* *-*-x86_64
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 MAKEFLAGS+=		GMAKE_LOCALE=no

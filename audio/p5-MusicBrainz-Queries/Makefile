@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/20 11:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:44:56 tv Exp $
 #
 
 DISTNAME=	MusicBrainz-Queries-0.07
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.musicbrainz.org/
 COMMENT=	Provide access to the Music Brainz RDF Query Constants
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/MusicBrainz/Queries/.packlist
 
 .include "../../audio/musicbrainz/buildlink3.mk"

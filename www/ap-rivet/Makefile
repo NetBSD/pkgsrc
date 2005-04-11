@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/27 23:49:49 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:50 tv Exp $
 
 DISTNAME=	rivet_0.4.0-1
 PKGNAME=	ap-rivet-0.4.0.1
@@ -11,7 +11,6 @@ COMMENT=	System for creating dynamic web content via Tcl
 
 WRKSRC=		${WRKDIR}/tcl-rivet/src
 HAS_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 
 CONFIGURE_SCRIPT=	./configure.tcl
 CONFIGURE_ARGS+=	-prefix ${PREFIX}/lib				\

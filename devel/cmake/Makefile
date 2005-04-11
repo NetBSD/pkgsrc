@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/01/06 13:07:59 adam Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:19 tv Exp $
 
 DISTNAME=	cmake-2.0.5
 CATEGORIES=	devel
@@ -8,7 +8,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cmake.org/
 COMMENT=	Cross platform make
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 USE_NCURSES=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/02/21 20:26:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:48:08 tv Exp $
 
 DISTNAME=	hot-babe-0.1.2
 PKGREVISION=	7
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://dindinx.net/hotbabe/
 COMMENT=	System load monitor
 
-USE_BUILDLINK3=	yes
 USE_X11=	yes
 
 .include "../../x11/gtk/buildlink3.mk"

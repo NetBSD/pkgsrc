@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/06/28 17:28:56 abs Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:00 tv Exp $
 #
 
 DISTNAME=		PanoTools
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 
 WRKSRC=			${WRKDIR}/PTLinux
 USE_JAVA=		run
-USE_BUILDLINK3=		YES
 USE_X11=		YES
 NO_BUILD=		YES
 

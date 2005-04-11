@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/31 21:36:59 kim Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:20 tv Exp $
 #
 
 DISTNAME=	mailgraph-1.10
@@ -16,7 +16,6 @@ USE_PERL5=	yes
 DEPENDS+=	rrdtool-1*:../../databases/rrdtool
 DEPENDS+=	p5-File-Tail-[0-9]*:../../misc/p5-File-Tail
 
-USE_BUILDLINK3=	yes
 USE_LANGUAGES=	yes
 USE_PERL5=	# defined
 

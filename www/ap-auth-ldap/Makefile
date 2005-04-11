@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:18:24 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/11 21:47:49 tv Exp $
 
 DISTNAME=	auth_ldap-1.6.0
 PKGREVISION=	3
@@ -11,7 +11,6 @@ MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://www.rudedog.org/auth_ldap/
 COMMENT=	Module to allow apache authentication against an LDAP directory
 
-USE_BUILDLINK3=	yes
 
 APACHE_MODULE_NAME=	auth_ldap.so
 CPPFLAGS+=		-DWITH_OPENLDAP

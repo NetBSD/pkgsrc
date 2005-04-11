@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/03/27 15:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/11 21:45:48 tv Exp $
 #
 
 DISTNAME=		asc-source-1.15.3.0
@@ -16,7 +16,6 @@ AUDIO_FILES=		frontiers.mp3 machine_wars.mp3 time_to_strike.mp3
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make

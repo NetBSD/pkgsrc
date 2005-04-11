@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2005/03/27 14:43:47 wiz Exp $
+# $NetBSD: Makefile.common,v 1.20 2005/04/11 21:45:17 tv Exp $
 
 DISTNAME=	SDL-1.2.8
 CATEGORIES=	devel games
@@ -11,7 +11,6 @@ COMMENT=	Simple DirectMedia Layer, a cross-platform multimedia library
 DISTINFO_FILE=		${.CURDIR}/../../devel/SDL/distinfo
 PATCHDIR=		${.CURDIR}/../../devel/SDL/patches
 
-USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make

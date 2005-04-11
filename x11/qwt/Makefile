@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:18:38 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/11 21:48:13 tv Exp $
 
 DISTNAME=	qwt-0.3.0
 PKGREVISION=	2
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/qwt
 COMMENT=	Qt widget library for technical purposes
 
-USE_BUILDLINK3=	yes
 USE_X11BASE=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes

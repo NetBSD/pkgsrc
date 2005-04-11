@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/27 15:23:19 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:48:00 tv Exp $
 
 DISTNAME=      	Kwiki-ParagraphBlocks-0.12
 PKGNAME=       	p5-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Kwiki plugin to display paragraphs with embedded whitespace
 
 DEPENDS+=	p5-Kwiki>=0.34:../../www/p5-Kwiki
 
-USE_BUILDLINK3=	yes
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Kwiki/ParagraphBlocks/.packlist
 
 .include "../../lang/perl5/module.mk"

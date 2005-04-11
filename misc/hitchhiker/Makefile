@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/12/28 23:18:17 reed Exp $
+# $NetBSD: Makefile,v 1.19 2005/04/11 21:46:35 tv Exp $
 #
 
 DISTNAME=	hh2000-0.6
@@ -13,7 +13,6 @@ COMMENT=	Astronomical simulation and visualization program
 
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
-USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	yes
 

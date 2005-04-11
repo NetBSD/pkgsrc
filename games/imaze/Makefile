@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:14:45 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:45:51 tv Exp $
 
 DISTNAME=		imaze1.3
 PKGNAME=		imaze-1.3
@@ -14,7 +14,6 @@ COMMENT=		Multiplayer, networked, action,x 3D maze game
 EXTRACT_ONLY=		imaze1.3.tar.Z
 
 WRKSRC=			${WRKDIR}/imaze
-USE_BUILDLINK3=		yes
 USE_X11BASE=		yes
 
 post-build:

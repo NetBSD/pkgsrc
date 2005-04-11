@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/12/20 11:31:13 grant Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/11 21:47:55 tv Exp $
 #
 
 DISTNAME=		Apache-Session-1.6
@@ -15,7 +15,6 @@ COMMENT=		Perl5 module to provide persistent storage
 DEPENDS+=		p5-Storable>=1.0.11:../../devel/p5-Storable
 DEPENDS+=		p5-Digest-MD5>=2.16:../../security/p5-Digest-MD5
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/Session/.packlist
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/27 12:28:08 recht Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:06 tv Exp $
 #
 
 DISTNAME=	libpixman-0.1.4
@@ -9,7 +9,6 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://cairographics.org/
 COMMENT=	Pixel manipulation library
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libpixman.pc.in

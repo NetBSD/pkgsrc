@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/26 17:49:35 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:20 tv Exp $
 #
 
 DISTNAME=	isync-0.9.2
@@ -12,7 +12,6 @@ COMMENT=	Synchronize a maildir with an imap server
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}

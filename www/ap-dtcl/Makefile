@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/01/12 22:31:44 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/11 21:47:50 tv Exp $
 
 DISTNAME=	mod_dtcl-0.11.6
 PKGNAME=	ap-dtcl-0.11.2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://tcl.apache.org/
 COMMENT=	Simple, fast Tcl server side scripting for apache
 
 WRKSRC=		${WRKDIR}/mod_dtcl
-USE_BUILDLINK3=	yes
 
 TCLSH=		${BUILDLINK_PREFIX.tcl}/bin/tclsh
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.apache}/include/httpd -DEAPI

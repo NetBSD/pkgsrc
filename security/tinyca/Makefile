@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/28 22:01:22 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:20 tv Exp $
 
 DISTNAME=	tinyca-0.6.8
 CATEGORIES=	security
@@ -14,7 +14,6 @@ DEPENDS+=	p5-Gnome>=0.7009:../../graphics/p5-Gnome
 DEPENDS+=	p5-gettext-[0-9]*:../../devel/p5-gettext
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
-USE_BUILDLINK3=	YES
 NO_BUILD=	YES
 USE_PERL5=	YES
 CADIR=		${PREFIX}/share/tinyca

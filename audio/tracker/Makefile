@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/03/24 21:12:51 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2005/04/11 21:44:57 tv Exp $
 
 DISTNAME=		tracker-5.3
 PKGREVISION=		1
@@ -16,7 +16,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 WRKSRC=			${WRKDIR}/tracker
 MAKE_FLAGS=		MACHINE=${LOWER_OPSYS} CC=${CC} INSTALL="${INSTALL}" \
 		INST_BIN_OPT="-c -s -m ${BINMODE} -o ${BINOWN} -g ${BINGRP}" \

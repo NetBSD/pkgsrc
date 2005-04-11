@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:14:57 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:09 tv Exp $
 #
 
 DISTNAME=	s10sh-0.2.0
@@ -10,7 +10,6 @@ MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.kyuzz.org/antirez/s10sh
 COMMENT=	USB/serial userspace driver for Canon PowerShot cameras
 
-USE_BUILDLINK3=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
 

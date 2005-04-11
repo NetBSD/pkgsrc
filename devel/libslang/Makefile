@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2005/03/13 02:18:48 tv Exp $
+# $NetBSD: Makefile,v 1.53 2005/04/11 21:45:27 tv Exp $
 #
 
 DISTNAME=	slang-1.4.9
@@ -19,7 +19,6 @@ COMMENT=	Routines for rapid alpha-numeric terminal applications development
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

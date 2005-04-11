@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2005/01/03 15:59:12 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2005/04/11 21:44:52 tv Exp $
 
 DISTNAME=		gqmpeg-0.20.0
 PKGREVISION=		8
@@ -14,7 +14,6 @@ DEPENDS+=		mpg123{,-esound,-nas}>=0.59.18:../../audio/mpg123
 DEPENDS+=		vorbis-tools>=1.0.0.6:../../audio/vorbis-tools
 DEPENDS+=		xmp>=2.0.2:../../audio/xmp
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome1-1.5
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES

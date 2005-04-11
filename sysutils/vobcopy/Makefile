@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/17 03:28:06 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:30 tv Exp $
 #
 
 DISTNAME=	vobcopy-0.5.13
@@ -13,7 +13,6 @@ COMMENT=	Copies DVD .vob files to harddisk
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_TARGET=	vobcopy
-USE_BUILDLINK3=	yes
 
 INSTALLATION_DIRS=	bin man/man1
 

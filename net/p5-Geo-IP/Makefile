@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/20 11:31:06 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:53 tv Exp $
 #
 
 DISTNAME=	Geo-IP-1.23
@@ -13,7 +13,6 @@ COMMENT=	Gets country name by IP or hostname
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Geo/IP/.packlist
 

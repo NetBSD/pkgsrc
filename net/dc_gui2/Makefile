@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:17:49 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:45 tv Exp $
 #
 
 DISTNAME=	dc_gui2-0.75
@@ -14,7 +14,6 @@ COMMENT=	Graphical user interface for DCTC
 DEPENDS+=	dctc>=0.85.4:../../net/dctc
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--enable-manual-db-detect

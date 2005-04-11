@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/02/23 16:07:34 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:05 tv Exp $
 
 DISTNAME=	loudmouth-0.17.2
 PKGREVISION=	1
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://loudmouth.imendio.org/
 COMMENT=	Lightweight Jabber client library
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

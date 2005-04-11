@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/03/20 14:14:26 ben Exp $
+# $NetBSD: Makefile,v 1.18 2005/04/11 21:47:11 tv Exp $
 #
 
 DISTNAME=		#defined
@@ -24,7 +24,6 @@ LICENSE=		fprot-workstation-license
 
 WRKSRC=			${WRKDIR}/f-prot
 NO_BUILD=		yes
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 
 DATDIR=			${PREFIX}/share/fprot-workstation-bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/20 11:31:05 grant Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:38 tv Exp $
 #
 
 DISTNAME=		Business-UPS-1.13
@@ -14,7 +14,6 @@ COMMENT=		Perl5 module to handle UPS rate calculation and package tracking
 
 DEPENDS+=		p5-libwww>=5.48:../../www/p5-libwww
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Business/UPS/.packlist
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/18 12:18:02 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:06 tv Exp $
 #
 
 DISTNAME=		libgnomecanvasmm-2.0.2
@@ -11,7 +11,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://gtkmm.sourceforge.net/
 COMMENT=		C++ bindings for libgnomecanvas
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgnomecanvas/libgnomecanvasmm-2.0.pc.in
