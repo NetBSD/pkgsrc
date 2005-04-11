@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9825 2005/04/11 17:43:14 reed Exp $
+$NetBSD: CHANGES,v 1.9826 2005/04/11 18:08:09 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1983,3 +1983,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ruby-fcgi to 0.8.6 [taca 2005-04-11]
 	Updated netscape7 to 7.2 [jschauma 2005-04-11]
 	Updated md-whois to 4.7.2 [reed 2005-04-11]
+	Updated wl to 2.14.0 [hira 2005-04-11]
