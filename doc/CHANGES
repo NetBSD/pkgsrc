@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9827 2005/04/11 19:02:54 tv Exp $
+$NetBSD: CHANGES,v 1.9828 2005/04/11 20:02:56 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1986,3 +1986,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wl to 2.14.0 [hira 2005-04-11]
 	Updated pkglint to 4.12 [tv 2005-04-11]
 	Updated url2pkg to 1.28 [tv 2005-04-11]
+	Updated php4 to 4.3.11 [jdolecek 2005-04-11]
