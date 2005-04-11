@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2005/02/09 14:57:52 tron Exp $
+# $NetBSD: Makefile,v 1.67 2005/04/11 18:56:05 martti Exp $
 
 .include "Makefile.common"
 
@@ -85,7 +85,7 @@ MAKE_DIRS+=		${PREFIX}/share/httpd/htdocs
 OWN_DIRS= 		${VARBASE}/log/httpd
 OWN_DIRS+=		${VARBASE}/db/httpd
 OWN_DIRS_PERMS+=	${VARBASE}/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
-FIX_PERMS=		apachectl apxs dbmmanage envvars-std
+FIX_PERMS=		apachectl apxs dbmmanage envvars-std mkcert
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -145,6 +145,10 @@ CONFIGURE_ARGS+=	${_AP_CFG_ARGS.${_ap_mod}}
 post-extract:
 	${TOUCH} ${WRKSRC}/libtool
 
+post-build:
+	${SED} "s#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g" \
+		< ${FILESDIR}/mkcert.sh > ${WRKDIR}/mkcert
+
 pre-install:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
 		${MAKE_PROGRAM} install-conf sysconfdir="${EGDIR}"
@@ -175,6 +179,8 @@ post-install:
 
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/manual
 	@cd ${WRKSRC}/docs/manual && ${PAX} -rw . ${PREFIX}/share/httpd/manual
+
+	@${INSTALL_SCRIPT} ${WRKDIR}/mkcert ${PREFIX}/sbin
 
 	for file in ${FIX_PERMS}; do \
 		${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/sbin/$$file && \
