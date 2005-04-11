@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2005/03/06 19:24:55 hira Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/11 18:06:00 hira Exp $
 
-DISTNAME=	wl-2.12.2
+DISTNAME=	wl-2.14.0
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.gohome.org/wl/stable/
 
