@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9835 2005/04/12 16:05:28 adam Exp $
+$NetBSD: CHANGES,v 1.9836 2005/04/12 20:21:32 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2000,3 +2000,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnustep-base to 1.10.2 [adam 2005-04-12]
 	Updated gnustep-gui 0.9.5 [adam 2005-04-12]
 	Updated gnustep-back 0.9.5 [adam 2005-04-12]
+	Updated gnome-vfs2-cdda to 2.10.0nb1 [jmmv 2005-04-12]
