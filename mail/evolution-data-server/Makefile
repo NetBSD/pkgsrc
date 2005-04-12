@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:46:18 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/12 01:18:12 rillig Exp $
 #
 
 DISTNAME=	evolution-data-server-1.2.1
@@ -25,6 +25,13 @@ YACC=			${LOCALBASE}/bin/bison # XXX
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution-data-server
 PKG_SUPPORTED_OPTIONS=	inet6
 .include "../../mk/bsd.options.mk"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.6.2)
+.include "../../devel/pthread-sem/buildlink3.mk"
+LIBS+=		-lsemaphore
+.endif
 
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
