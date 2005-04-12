@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9833 2005/04/12 11:34:11 jmmv Exp $
+$NetBSD: CHANGES,v 1.9834 2005/04/12 15:12:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1997,3 +1997,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated apache to 2.0.53nb1 [martti 2005-04-12]
 	Updated monotone to 0.18 [jmmv 2005-04-12]
 	Updated monotone-server to 0.18 [jmmv 2005-04-12]
+	Updated gnustep-base to 1.10.2 [adam 2005-04-12]
