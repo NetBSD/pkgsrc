@@ -1,0 +1,13 @@
+$NetBSD: patch-dg,v 1.1 2005/04/12 11:00:03 drochner Exp $
+
+--- kimgio/xview.cpp.orig	2004-11-22 04:52:18.000000000 +0100
++++ kimgio/xview.cpp
+@@ -62,6 +62,8 @@ KDE_EXPORT void kimgio_xv_read( QImageIO
+ 
+ 	// Create the image
+ 	QImage image( x, y, 8, maxval + 1, QImage::BigEndian );
++	if( image.isNull())
++		return;
+ 
+ 	// how do the color handling? they are absolute 24bpp
+ 	// or at least can be calculated as such.

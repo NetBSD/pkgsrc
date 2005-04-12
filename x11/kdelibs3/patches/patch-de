@@ -1,0 +1,197 @@
+$NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
+
+--- kimgio/xcf.cpp.orig	2004-11-22 04:48:27.000000000 +0100
++++ kimgio/xcf.cpp
+@@ -401,7 +401,8 @@ bool XCFImageFormat::loadLayer(QDataStre
+ 	// Allocate the individual tile QImages based on the size and type
+ 	// of this layer.
+ 
+-	composeTiles(xcf_image);
++	if( !composeTiles(xcf_image))
++		return false;
+ 	xcf_io.device()->at(layer.hierarchy_offset);
+ 
+ 	// As tiles are loaded, they are copied into the layers tiles by
+@@ -425,7 +426,8 @@ bool XCFImageFormat::loadLayer(QDataStre
+ 	// of the QImage.
+ 
+ 	if (!xcf_image.initialized) {
+-		initializeImage(xcf_image);
++		if( !initializeImage(xcf_image))
++			return false;
+ 		copyLayerToImage(xcf_image);
+ 		xcf_image.initialized = true;
+ 	} else
+@@ -516,7 +518,7 @@ bool XCFImageFormat::loadLayerProperties
+  * QImage structures for each of them.
+  * \param xcf_image contains the current layer.
+  */
+-void XCFImageFormat::composeTiles(XCFImage& xcf_image)
++bool XCFImageFormat::composeTiles(XCFImage& xcf_image)
+ {
+ 	Layer& layer(xcf_image.layer);
+ 
+@@ -556,48 +558,67 @@ void XCFImageFormat::composeTiles(XCFIma
+ 			switch (layer.type) {
+ 				case RGB_GIMAGE:
+ 					layer.image_tiles[j][i] = QImage(tile_width, tile_height, 32, 0);
++					if( layer.image_tiles[j][i].isNull())
++						return false;
+ 					layer.image_tiles[j][i].setAlphaBuffer(false);
+ 					break;
+ 
+ 				case RGBA_GIMAGE:
+ 					layer.image_tiles[j][i] = QImage(tile_width, tile_height, 32, 0);
++					if( layer.image_tiles[j][i].isNull())
++						return false;
+ 					layer.image_tiles[j][i].setAlphaBuffer(true);
+ 					break;
+ 
+ 				case GRAY_GIMAGE:
+ 					layer.image_tiles[j][i] = QImage(tile_width, tile_height, 8, 256);
++					if( layer.image_tiles[j][i].isNull())
++						return false;
+ 					setGrayPalette(layer.image_tiles[j][i]);
+ 					break;
+ 
+ 				case GRAYA_GIMAGE:
+ 					layer.image_tiles[j][i] = QImage(tile_width, tile_height, 8, 256);
++					if( layer.image_tiles[j][i].isNull())
++						return false;
+ 					setGrayPalette(layer.image_tiles[j][i]);
+ 
+ 					layer.alpha_tiles[j][i] = QImage( tile_width, tile_height, 8, 256);
++					if( layer.alpha_tiles[j][i].isNull())
++						return false;
+ 					setGrayPalette(layer.alpha_tiles[j][i]);
+ 					break;
+ 
+ 				case INDEXED_GIMAGE:
+ 					layer.image_tiles[j][i] = QImage(tile_width, tile_height, 8,
+ 							xcf_image.num_colors);
++					if( layer.image_tiles[j][i].isNull())
++						return false;
+ 					setPalette(xcf_image, layer.image_tiles[j][i]);
+ 					break;
+ 
+ 				case INDEXEDA_GIMAGE:
+ 					layer.image_tiles[j][i] = QImage(tile_width, tile_height,8,
+ 							xcf_image.num_colors);
++					if( layer.image_tiles[j][i].isNull())
++						return false;
+ 					setPalette(xcf_image, layer.image_tiles[j][i]);
+ 
+ 					layer.alpha_tiles[j][i] = QImage(tile_width, tile_height, 8, 256);
++					if( layer.alpha_tiles[j][i].isNull())
++						return false;
+ 					setGrayPalette(layer.alpha_tiles[j][i]);
+ 			}
+ 
+ 			if (layer.mask_offset != 0) {
+ 				layer.mask_tiles[j][i] = QImage(tile_width, tile_height, 8, 256);
++				if( layer.mask_tiles[j][i].isNull())
++					return false;
+ 				setGrayPalette(layer.mask_tiles[j][i]);
+ 			}
+ 		}
+ 	}
++	return true;
+ }
+ 
+ 
+@@ -1072,7 +1093,7 @@ void XCFImageFormat::assignMaskBytes(Lay
+  * For indexed images, translucency is an all or nothing effect.
+  * \param xcf_image contains image info and bottom-most layer.
+  */
+-void XCFImageFormat::initializeImage(XCFImage& xcf_image)
++bool XCFImageFormat::initializeImage(XCFImage& xcf_image)
+ {
+ 	// (Aliases to make the code look a little better.)
+ 	Layer& layer(xcf_image.layer);
+@@ -1082,12 +1103,16 @@ void XCFImageFormat::initializeImage(XCF
+ 		case RGB_GIMAGE:
+ 			if (layer.opacity == OPAQUE_OPACITY) {
+ 				image.create( xcf_image.width, xcf_image.height, 32);
++				if( image.isNull())
++					return false;
+ 				image.fill(qRgb(255, 255, 255));
+ 				break;
+ 			} // else, fall through to 32-bit representation
+ 
+ 		case RGBA_GIMAGE:
+ 			image.create(xcf_image.width, xcf_image.height, 32);
++			if( image.isNull())
++				return false;
+ 			image.fill(qRgba(255, 255, 255, 0));
+ 			// Turning this on prevents fill() from affecting the alpha channel,
+ 			// by the way.
+@@ -1097,6 +1122,8 @@ void XCFImageFormat::initializeImage(XCF
+ 		case GRAY_GIMAGE:
+ 			if (layer.opacity == OPAQUE_OPACITY) {
+ 				image.create(xcf_image.width, xcf_image.height, 8, 256);
++				if( image.isNull())
++					return false;
+ 				setGrayPalette(image);
+ 				image.fill(255);
+ 				break;
+@@ -1104,6 +1131,8 @@ void XCFImageFormat::initializeImage(XCF
+ 
+ 		case GRAYA_GIMAGE:
+ 			image.create(xcf_image.width, xcf_image.height, 32);
++			if( image.isNull())
++				return false;
+ 			image.fill(qRgba(255, 255, 255, 0));
+ 			image.setAlphaBuffer(true);
+ 			break;
+@@ -1125,12 +1154,16 @@ void XCFImageFormat::initializeImage(XCF
+ 				image.create(xcf_image.width, xcf_image.height,
+ 						1, xcf_image.num_colors,
+ 						QImage::LittleEndian);
++				if( image.isNull())
++					return false;
+ 				image.fill(0);
+ 				setPalette(xcf_image, image);
+ 			} else if (xcf_image.num_colors <= 256) {
+ 				image.create(xcf_image.width, xcf_image.height,
+ 				8, xcf_image.num_colors,
+ 				QImage::LittleEndian);
++				if( image.isNull())
++					return false;
+ 				image.fill(0);
+ 				setPalette(xcf_image, image);
+ 			}
+@@ -1147,6 +1180,8 @@ void XCFImageFormat::initializeImage(XCF
+ 				image.create(xcf_image.width, xcf_image.height,
+ 						1, xcf_image.num_colors,
+ 						QImage::LittleEndian);
++				if( image.isNull())
++					return false;
+ 				image.fill(0);
+ 				setPalette(xcf_image, image);
+ 				image.setAlphaBuffer(true);
+@@ -1160,6 +1195,8 @@ void XCFImageFormat::initializeImage(XCF
+ 				xcf_image.palette[0] = qRgba(255, 255, 255, 0);
+ 				image.create( xcf_image.width, xcf_image.height,
+ 						8, xcf_image.num_colors);
++				if( image.isNull())
++					return false;
+ 				image.fill(0);
+ 				setPalette(xcf_image, image);
+ 				image.setAlphaBuffer(true);
+@@ -1168,6 +1205,8 @@ void XCFImageFormat::initializeImage(XCF
+ 				// true color. (There is no equivalent PNG representation output
+ 				// from The GIMP as of v1.2.)
+ 				image.create(xcf_image.width, xcf_image.height, 32);
++				if( image.isNull())
++					return false;
+ 				image.fill(qRgba(255, 255, 255, 0));
+ 				image.setAlphaBuffer(true);
+ 			}
+@@ -1176,6 +1215,7 @@ void XCFImageFormat::initializeImage(XCF
+ 
+ 	image.setDotsPerMeterX((int)(xcf_image.x_resolution * INCHESPERMETER));
+ 	image.setDotsPerMeterY((int)(xcf_image.y_resolution * INCHESPERMETER));
++	return true;
+ }
+ 
+ 

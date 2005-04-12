@@ -1,0 +1,13 @@
+$NetBSD: patch-da,v 1.1 2005/04/12 11:00:03 drochner Exp $
+
+--- kimgio/exr.cpp.orig	2004-11-22 04:48:27.000000000 +0100
++++ kimgio/exr.cpp
+@@ -136,6 +136,8 @@ KDE_EXPORT void kimgio_exr_read( QImageI
+         file.readPixels (dw.min.y, dw.max.y);
+ 
+ 		QImage image(width, height, 32, 0, QImage::BigEndian);
++		if( image.isNull())
++			return;
+ 
+ 		// somehow copy pixels into image
+ 		for ( int y=0; y < height; y++ ) {
