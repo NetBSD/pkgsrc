@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.10 2004/11/16 01:16:06 rh Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/04/12 15:11:11 adam Exp $
 bin/openapp
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_5.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_6.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_7.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-1_0_0.dtd
+share/GNUstep/System/Library/DTDs/gsdoc-1_0_1.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-1_0_1.rnc
 share/GNUstep/System/Library/DTDs/plist-0_9.dtd
-share/GNUstep/System/Library/DTDs/gsdoc-1_0_1.dtd
-share/GNUstep/System/Library/Documentation/man/man1/gdnc.1
 share/GNUstep/System/Library/Documentation/man/man1/autogsdoc.1
 share/GNUstep/System/Library/Documentation/man/man1/cvtenc.1
 share/GNUstep/System/Library/Documentation/man/man1/defaults.1
+share/GNUstep/System/Library/Documentation/man/man1/gdnc.1
 share/GNUstep/System/Library/Documentation/man/man1/pldes.1
 share/GNUstep/System/Library/Documentation/man/man1/sfparse.1
 share/GNUstep/System/Library/Documentation/man/man1/xmlparse.1
@@ -51,8 +51,8 @@ share/GNUstep/System/Library/Headers/Foundation/NSHashTable.h
 share/GNUstep/System/Library/Headers/Foundation/NSHost.h
 share/GNUstep/System/Library/Headers/Foundation/NSIndexSet.h
 share/GNUstep/System/Library/Headers/Foundation/NSInvocation.h
-share/GNUstep/System/Library/Headers/Foundation/NSKeyedArchiver.h
 share/GNUstep/System/Library/Headers/Foundation/NSKeyValueCoding.h
+share/GNUstep/System/Library/Headers/Foundation/NSKeyedArchiver.h
 share/GNUstep/System/Library/Headers/Foundation/NSLock.h
 share/GNUstep/System/Library/Headers/Foundation/NSMapTable.h
 share/GNUstep/System/Library/Headers/Foundation/NSMethodSignature.h
@@ -164,11 +164,11 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/sy
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/uppercaseLetterCharSet.dat
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/whitespaceAndNlCharSet.dat
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/whitespaceCharSet.dat
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/.README.swp
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/GNUmakefile
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/GNUstep_zones
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/README
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/abbreviations
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/abbreviations.plist
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/create-abbrevs.m
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/create-regions.m
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/nstimezone.m
@@ -762,6 +762,7 @@ share/GNUstep/System/Tools/defaults
 share/GNUstep/System/Tools/gdnc
 share/GNUstep/System/Tools/gdomap
 share/GNUstep/System/Tools/make_strings
+share/GNUstep/System/Tools/pl
 share/GNUstep/System/Tools/pl2link
 share/GNUstep/System/Tools/pldes
 share/GNUstep/System/Tools/plmerge
