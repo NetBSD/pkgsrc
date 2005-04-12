@@ -50,8 +50,9 @@ I. The pkgsrc user's guide
             3.2.2. FreeBSD
             3.2.3. Interix
             3.2.4. IRIX
-            3.2.5. OpenBSD
-            3.2.6. Solaris
+            3.2.5. Linux
+            3.2.6. OpenBSD
+            3.2.7. Solaris
 
     4. Using pkgsrc
 
@@ -391,8 +392,9 @@ Table of Contents
         3.2.2. FreeBSD
         3.2.3. Interix
         3.2.4. IRIX
-        3.2.5. OpenBSD
-        3.2.6. Solaris
+        3.2.5. Linux
+        3.2.6. OpenBSD
+        3.2.7. Solaris
 
 4. Using pkgsrc
 
@@ -505,8 +507,9 @@ Table of Contents
     3.2.2. FreeBSD
     3.2.3. Interix
     3.2.4. IRIX
-    3.2.5. OpenBSD
-    3.2.6. Solaris
+    3.2.5. Linux
+    3.2.6. OpenBSD
+    3.2.7. Solaris
 
 3.1. Bootstrapping pkgsrc
 
@@ -594,7 +597,7 @@ possible to use the default prefix of /usr/pkg by symlinking /usr/pkg to a
 directory on a UFS file system. Obviously, another symlink is required if you
 want to place the package database directory outside the prefix. e.g.
 
-# ./bootstrap --pkgdbdir=/usr/pkg/pkgdb --pkgsrcdir=/Volumes/ufs/pkgsrc
+# ./bootstrap --pkgdbdir /usr/pkg/pkgdb --pkgsrcdir /Volumes/ufs/pkgsrc
 
 If you created your partitions at the time of installing Mac OS X and formatted
 the target partition as UFS, it should automatically mount on /Volumes/<volume
@@ -648,8 +651,8 @@ with the FreeBSD userland tools. There are several steps:
 Interix is a POSIX compatible subsystem for the Windows NT kernel, providing a
 Unix-like environment with a tighter kernel integration than available with
 Cygwin. It is part of the Windows Services for Unix package, available for free
-for any licensed copy of Windows 2000, XP, or 2003. SFU can be downloaded from
-http://www.microsoft.com/windows/sfu/.
+for any licensed copy of Windows 2000, XP (not including XP Home), or 2003. SFU
+can be downloaded from http://www.microsoft.com/windows/sfu/.
 
 Services for Unix 3.5, current as of this writing, has been tested. 3.0 or 3.1
 may work, but are not officially supported. (The main difference in 3.0/3.1 is
@@ -722,6 +725,13 @@ conjunction with pkgsrc. If you choose to use them at the same time as the
 pkgsrc packages, ensure that you use the proper pkg_* tools for each type of
 binary package.
 
+The TERM setting used for DOS-type console windows (including those invoked by
+the csh and ksh startup shortcuts) is "interix". Most systems don't have a
+termcap/terminfo entry for it, but the following .termcap entry provides
+adequate emulation in most cases:
+
+interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
+
 3.2.4. IRIX
 
 You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
@@ -753,7 +763,64 @@ imake(1), but you may want to set some options depending on your local setup.
 Please see pkgsrc/mk/defaults/mk.conf and, of course, your compilers man pages
 for details.
 
-3.2.5. OpenBSD
+If you are using SGI's MIPSPro compiler, please set
+
+PKGSRC_COMPILER=mipspro
+
+in /etc/mk.conf. Otherwise, pkgsrc will assume you are using gcc and may end up
+passing invalid flags to the compiler. Note that bootstrap should create an
+appropriate mk.conf.example by default.
+
+If you have both the MIPSPro compiler chain installed as well as gcc, but want
+to make sure that MIPRPro is used, please set your PATH to not include the
+location of gcc (often /usr/freeware/bin), and (important) pass the
+'--preserve-path' flag.
+
+3.2.5. Linux
+
+Some versions of Linux (for example Debian GNU/Linux) need either libtermcap or
+libcurses (libncurses). Installing the distributions libncurses-dev package (or
+equivalent) should fix the problem.
+
+pkgsrc supports both gcc (GNU Compiler Collection) and icc (Intel C++
+Compiler). gcc is the default. icc 8.0 and 8.1 on i386 have been tested.
+
+To bootstrap using icc, assuming the default icc installation directory:
+
+env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
+                ac_cv___attribute__=yes ./bootstrap
+
+Note
+
+icc 8.1 needs the `-i-static' argument instead of -static-libcxa.
+
+icc supports __attribute__, but the GNU configure test uses a nested function,
+which icc does not support. #undef'ing __attribute__ has the unfortunate
+side-effect of breaking many of the Linux header files, which cannot be
+compiled properly without __attribute__. The test must be overridden so that
+__attribute__ is assumed supported by the compiler.
+
+After bootstrapping, you should set PKGSRC_COMPILER in /etc/mk.conf:
+
+PKGSRC_COMPILER=icc
+
+The default installation directory for icc is /opt/intel_cc_80, which is also
+the pkgsrc default. If you have installed it into a different directory, set
+ICCBASE in /etc/mk.conf:
+
+ICCBASE=/opt/icc
+
+pkgsrc uses the static linking method of the runtime libraries provided by icc,
+so binaries can be run on other systems which do not have the shared libraries
+installed.
+
+Libtool, however, extracts a list of libraries from the ld(1) command run when
+linking a C++ shared library and records it, throwing away the -Bstatic and
+-Bdynamic options interspersed between the libraries. This means that
+libtool-linked C++ shared libraries will have a runtime dependency on the icc
+libraries until this is fixed in libtool.
+
+3.2.6. OpenBSD
 
 OpenBSD 3.0 and 3.2 are tested and supported.
 
@@ -785,7 +852,7 @@ with the OpenBSD userland tools. There are several steps:
     .endif
 
 
-3.2.6. Solaris
+3.2.7. Solaris
 
 Solaris 2.6 through 9 are supported on both x86 and sparc. You will need a
 working C compiler. Both gcc 2.95.3 and Sun WorkShop 5 have been tested.
@@ -805,7 +872,7 @@ to build packages.
 
 Please note the use of GNU binutils on Solaris is not supported.
 
-3.2.6.1. If you are using gcc
+3.2.7.1. If you are using gcc
 
 It makes life much simpler if you only use the same gcc consistently for
 building all packages.
@@ -817,7 +884,7 @@ used during bootstrapping.
 Binary packages of gcc can be found through http://www.sun.com/bigadmin/common/
 freewareSearch.html.
 
-3.2.6.2. If you are using Sun WorkShop
+3.2.7.2. If you are using Sun WorkShop
 
 You will need at least the following packages installed (from WorkShop 5.0)
 
@@ -988,7 +1055,7 @@ added to help with this.
 
  2. If you want to know the value of a certain make(1) definition, then the
     VARNAME definition should be used, in conjunction with the show-var target.
-    e.g. to show the expansion of the make(1) variable DISTFILES:
+    e.g. to show the expansion of the make(1) variable LOCALBASE:
 
     % make show-var VARNAME=LOCALBASE
     /usr/pkg
@@ -2412,18 +2479,16 @@ package build from non-system-supplied software.
 The process of converting packages to use the buildlink3 framework
 ("bl3ifying") is fairly straightforward. The things to keep in mind are:
 
- 1. Set USE_BUILDLINK3 to "yes".
-
- 2. Ensure that the build always calls the wrapper scripts instead of the
+ 1. Ensure that the build always calls the wrapper scripts instead of the
     actual toolchain. Some packages are tricky, and the only way to know for
     sure is the check ${WRKDIR}/.work.log to see if the wrappers are being
     invoked.
 
- 3. Don't override PREFIX from within the package Makefile, e.g. Java VMs,
+ 2. Don't override PREFIX from within the package Makefile, e.g. Java VMs,
     standalone shells, etc., because the code to symlink files into $
     {BUILDLINK_DIR} looks for files relative to "pkg_info -qp pkgname".
 
- 4. Remember that only the buildlink3.mk files that you list in a package's
+ 3. Remember that only the buildlink3.mk files that you list in a package's
     Makefile are added as dependencies for that package.
 
 If a dependency on a particular package is required for its libraries and
@@ -3752,7 +3817,7 @@ SHLIBTOOL_OVERRIDE instead.
 
 If your package makes use of the platform independent library for loading
 dynamic shared objects, that comes with libtool (libltdl), you should include
-the libtool buildlink3.mk (and set USE_BUILDLINK3=YES).
+devel/libltdl/buildlink3.mk.
 
 Some packages use libtool incorrectly so that the package may not work or build
 in some circumstances. Some of the more common errors are:
