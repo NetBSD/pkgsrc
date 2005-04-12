@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9832 2005/04/12 05:50:06 martti Exp $
+$NetBSD: CHANGES,v 1.9833 2005/04/12 11:34:11 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1995,3 +1995,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed postgresql80-docs [recht 2005-04-11]
 	Updated blender to 2.36nb2 [reinoud 2005-04-11]
 	Updated apache to 2.0.53nb1 [martti 2005-04-12]
+	Updated monotone to 0.18 [jmmv 2005-04-12]
+	Updated monotone-server to 0.18 [jmmv 2005-04-12]
