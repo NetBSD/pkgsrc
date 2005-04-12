@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/05 16:34:34 tv Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/12 15:11:18 tv Exp $
 #
 
 DISTNAME=		antonym-1.9
@@ -13,7 +13,6 @@ DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=		pgp-2.*:../../security/pgp2
 
 WRKSRC=			${WRKDIR}/antonym
-USE_BUILDLINK3=		yes
 USE_PERL5=		yes
 
 REPLACE_PERL=		antonym
