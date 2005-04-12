@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:47:42 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/12 12:14:10 wiz Exp $
 
 DISTNAME=	teixsl-fo
 PKGNAME=	${DISTNAME}-3.3
@@ -14,7 +14,7 @@ COMMENT=	XSLT Stylesheets to convert TEI to XSL Formatting Objects
 DEPENDS+=	teixsl-html-[0-9]*:../../textproc/teixsl-html
 
 WRKSRC=		${WRKDIR}
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
