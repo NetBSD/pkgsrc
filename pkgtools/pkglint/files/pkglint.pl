@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.138 2005/04/11 19:01:31 tv Exp $
+# $NetBSD: pkglint.pl,v 1.139 2005/04/12 01:06:58 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -169,9 +169,17 @@ package PkgLint::FileUtils::Line;
 	sub text($) {
 		return shift(@_)->{"text"};
 	}
-	sub toString($) {
-		my ($self) = @_;
-		return sprintf("%s:%d: %s", $self->file, $self->line, $self->text);
+	sub log_error($$) {
+		my ($self, $text) = @_;
+		PkgLint::Logging::log_error($self->file, $self->lineno, $text);
+	}
+	sub log_warning($$) {
+		my ($self, $text) = @_;
+		PkgLint::Logging::log_warning($self->file, $self->lineno, $text);
+	}
+	sub log_info($$) {
+		my ($self, $text) = @_;
+		PkgLint::Logging::log_info($self->file, $self->lineno, $text);
 	}
 # end of PkgLint::FileUtils::Line
 
@@ -465,7 +473,7 @@ sub load_make_vars_typemap() {
 		} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([\w_]+)$") {
 			$make_vars_typemap{$1} = $2;
 		} else {
-			log_error($line->file, $line->lineno, "unknown line format");
+			$line->log_error("[internal] unknown line format");
 		}
 	}
 	return true;
@@ -666,7 +674,7 @@ sub checkline_length($$) {
 	my ($line, $maxlength) = @_;
 
 	if (length($line->text) > $maxlength) {
-		log_warning($line->file, $line->lineno, "Line too long (should be no more than $maxlength characters).");
+		$line->log_warning("Line too long (should be no more than $maxlength characters).");
 	}
 	return true;
 }
@@ -678,7 +686,7 @@ sub checkline_valid_characters($$) {
 	($rest = $line->text) =~ s/$re_validchars//g;
 	if ($rest ne "") {
 		my @chars = map { $_ = sprintf("0x%02x", ord($_)); } split(//, $rest);
-		log_warning($line->file, $line->lineno,
+		$line->log_warning(
 			sprintf("Line contains invalid characters (%s).", join(", ", @chars)));
 	}
 	return true;
@@ -687,7 +695,7 @@ sub checkline_valid_characters($$) {
 sub checkline_trailing_whitespace($) {
 	my ($line) = @_;
 	if ($line->text =~ /\s+$/) {
-		log_warning($line->file, $line->lineno, "Trailing white space.");
+		$line->log_warning("Trailing white space.");
 	}
 	return true;
 }
@@ -745,7 +753,7 @@ sub checkfile_distinfo($) {
 		my ($alg, $patch, $sum) = ($1, $2, $3);
 
 		if ($patch =~ /~$/) {
-			log_warning($line->file, $line->lineno, "possible backup file \"$patch\"?");
+			$line->log_warning("possible backup file \"$patch\"?");
 		}
 
 		if ($patch =~ /^patch-[-A-Za-z0-9_.]+$/) {
@@ -753,10 +761,10 @@ sub checkfile_distinfo($) {
 				my $chksum = `sed -e '/\$NetBSD.*/d' $opt_packagedir/$patchdir/$patch | digest $alg`;
 				$chksum =~ s/\r*\n*\z//;
 				if ($sum ne $chksum) {
-					log_error($line->file, $line->lineno, "checksum of $patch differs. Rerun '$conf_make makepatchsum'.");
+					$line->log_error("checksum of $patch differs. Rerun '$conf_make makepatchsum'.");
 				}
 			} else {
-				log_error($line->file, $line->lineno, "$patch does not exist.");
+				$line->log_error("$patch does not exist.");
 			}
 			$in_distinfo{$patch} = true;
 		}
@@ -827,12 +835,12 @@ sub checkfile_PLIST($) {
 			if ($cmd eq "cwd" || $cmd eq "cd") {
 				$curdir = $arg;
 			} elsif ($cmd eq "unexec" && $arg =~ /^rmdir/) {
-				log_warning($line->file, $line->lineno, "use \"\@dirrm\" instead of \"\@unexec rmdir\".");
+				$line->log_warning("use \"\@dirrm\" instead of \"\@unexec rmdir\".");
 			} elsif (($cmd eq "exec" || $cmd eq "unexec")) {
 				if ($arg =~ /(?:install-info|\$\{INSTALL_INFO\})/) {
-					log_warning($line->file, $line->lineno, "\@exec/unexec install-info is deprecated.");
+					$line->log_warning("\@exec/unexec install-info is deprecated.");
 				} elsif ($arg =~ /ldconfig/ && $arg !~ qr"/usr/bin/true") {
-					log_error($line->file, $line->lineno, "ldconfig must be used with \"||/usr/bin/true\".");
+					$line->log_error("ldconfig must be used with \"||/usr/bin/true\".");
 				}
 			} elsif ($cmd eq "comment") {
 				if ($arg =~ /^$regex_rcsidstr$/) {
@@ -841,67 +849,67 @@ sub checkfile_PLIST($) {
 			} elsif ($cmd eq "dirrm" || $cmd eq "option") {
 				# no check made
 			} elsif ($cmd eq "mode" || $cmd eq "owner" || $cmd eq "group") {
-				log_warning($line->file, $line->lineno, "\"\@mode/owner/group\" are deprecated, please use chmod/".
+				$line->log_warning("\"\@mode/owner/group\" are deprecated, please use chmod/".
 					"chown/chgrp in the pkg Makefile and let tar do the rest.");
 			} else {
-				log_warning($line->file, $line->lineno, "unknown PLIST directive \"\@$cmd\"");
+				$line->log_warning("unknown PLIST directive \"\@$cmd\"");
 			}
 			next line;
 		}
 
 		if ($line->text =~ /^\//) {
-			log_error($line->file, $line->lineno, "use of full pathname disallowed.");
+			$line->log_error("use of full pathname disallowed.");
 		}
 
 		if ($line->text =~ qr"^[\w\d]") {
 			if (defined($last_file_seen)) {
 				if ($last_file_seen gt $line->text) {
-					log_warning($line->file, $line->lineno, $line->text." should be sorted before ${last_file_seen}.");
+					$line->log_warning( $line->text." should be sorted before ${last_file_seen}.");
 				}
 			}
 			$last_file_seen = $line->text;
 		}
 
 		if ($line->text =~ /^doc/) {
-			log_error($line->file, $line->lineno, "documentation must be installed under share/doc, not doc.");
+			$line->log_error("documentation must be installed under share/doc, not doc.");
 		}
 
 		if ($line->text =~ /^etc/ && $line->text !~ /^etc\/rc.d/) {
-			log_error($line->file, $line->lineno, "configuration files must not be ".
+			$line->log_error("configuration files must not be ".
 				"registered in the PLIST (don't you use the ".
 				"PKG_SYSCONFDIR framework?)");
 		}
 
 		if ($line->text =~ /^etc\/rc\.d/) {
-			log_error($line->file, $line->lineno, "RCD_SCRIPTS must not be ".
+			$line->log_error("RCD_SCRIPTS must not be ".
 				"registered in the PLIST (don't you use the ".
 				"RCD_SCRIPTS framework?)");
 		}
 
 		if ($line->text =~ /^info\/dir$/) {
-			log_error($line->file, $line->lineno, "\"info/dir\" should not be listed. Use install-info to add/remove an entry.");
+			$line->log_error("\"info/dir\" should not be listed. Use install-info to add/remove an entry.");
 		}
 
 		if ($line->text =~ /^lib\/locale/) {
-			log_error($line->file, $line->lineno, "\"lib/locale\" should not be listed. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
+			$line->log_error("\"lib/locale\" should not be listed. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 		}
 
 		if ($line->text =~ /^share\/locale/) {
-			log_warning($line->file, $line->lineno, "use of \"share/locale\" is ".
+			$line->log_warning("use of \"share/locale\" is ".
 				"deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 		}
 
 		if ($line->text =~ /\${PKGLOCALEDIR}/ && !$seen_USE_PKGLOCALEDIR) {
-			log_warning($line->file, $line->lineno, "PLIST contains \${PKGLOCALEDIR}, ".
+			$line->log_warning("PLIST contains \${PKGLOCALEDIR}, ".
 				"but USE_PKGLOCALEDIR was not found.");
 		}
 
 		if ($curdir !~ m:^$conf_localbase: && $curdir !~ m:^/usr/X11R6:) {
-			log_warning($line->file, $line->lineno, "installing to directory $curdir discouraged. could you please avoid it?");
+			$line->log_warning("installing to directory $curdir discouraged. could you please avoid it?");
 		}
 
 		if ("$curdir/".$line->text =~ m:^$conf_localbase/share/doc:) {
-			log_info($line->file, $line->lineno, "seen installation to share/doc.");
+			$line->log_info("seen installation to share/doc.");
 		}
 	}
 
@@ -991,14 +999,14 @@ sub check_for_multiple_patches($) {
 				$files_in_patch++;
 				$patch_state = "";
 			} else {
-				log_warning($line->file, $line->lineno, "unknown patch format (might be an internal error)");
+				$line->log_warning("unknown patch format (might be an internal error)");
 			}
 		} elsif ($patch_state eq "-") {
 			if ($line_type eq "+") {
 				$files_in_patch++;
 				$patch_state = "";
 			} else {
-				log_warning($line->file, $line->lineno, "unknown patch format (might be an internal error)");
+				$line->log_warning("unknown patch format (might be an internal error)");
 			}
 		} elsif ($patch_state eq "") {
 			$patch_state = $line_type;
@@ -1038,7 +1046,7 @@ sub checkfile_patches_patch($) {
 
 	foreach my $line (@$lines[1..scalar(@$lines)-1]) {
 		if ($opt_committer && $line->text =~ /$regex_known_rcs_tag/) {
-			log_warning($line->file, $line->lineno, "Possible RCS tag \"\$$1\$\". Use binary mode (-ko) on cvs add/import.");
+			$line->log_warning("Possible RCS tag \"\$$1\$\". Use binary mode (-ko) on cvs add/import.");
 		}
 	}
 
@@ -1060,7 +1068,7 @@ sub readmakefile($) {
 	foreach my $line (@$lines) {
 		checkline_trailing_whitespace($line);
 		if ($line->text =~ /^\040{8}/) {
-			log_warning($line->file, $line->lineno, "use tab (not spaces) to make indentation.");
+			$line->log_warning("use tab (not spaces) to make indentation.");
 		}
 		# try to get any included file
 		if ($line->text =~ /^.include\s+([^\n]+)$/) {
@@ -1089,9 +1097,9 @@ sub readmakefile($) {
 					$dirname = $opt_packagedir;
 				}
 				if (!-e "$dirname/$includefile") {
-					log_error($line->file, $line->lineno, "can't read $includefile");
+					$line->log_error("can't read $includefile");
 				} else {
-					log_info($line->file, $line->lineno, "including $dirname/$includefile");
+					$line->log_info("including $dirname/$includefile");
 					$contents .= readmakefile("$dirname/$includefile");
 				}
 			}
@@ -1114,22 +1122,22 @@ sub check_Makefile_vartype($) {
 			my ($type) = ($make_vars_typemap{$varname});
 			if ($type eq "Boolean") {
 				if ($value !~ $regex_boolean) {
-					log_warning($line->file, $line->lineno, "$varname should be set to YES, yes, NO, or no.");
+					$line->log_warning("$varname should be set to YES, yes, NO, or no.");
 				}
 			} elsif ($type eq "Yes_Or_Undefined") {
 				if ($value !~ $regex_yes_or_undef) {
-					log_warning($line->file, $line->lineno, "$varname should be set to YES or yes");
+					$line->log_warning("$varname should be set to YES or yes");
 				}
 			} elsif ($type eq "Mail_Address") {
 				if ($value !~ $regex_mail_address) {
-					log_warning($line->file, $line->lineno, "\"$value\" is not a valid mail address");
+					$line->log_warning("\"$value\" is not a valid mail address");
 				}
 			} elsif ($type eq "URL") {
 				if ($value !~ $regex_url) {
-					log_warning($line->file, $line->lineno, "\"$value\" is not a valid URL");
+					$line->log_warning("\"$value\" is not a valid URL");
 				}
 			} else {
-				log_error($line->file, $line->lineno, "internal error: type $type unknown");
+				$line->log_error("internal error: type $type unknown");
 			}
 		}
 	}
@@ -1143,7 +1151,7 @@ sub check_Makefile_variables($) {
 	foreach my $line (@$lines) {
 		if ($line->text =~ qr"^[^#]*[^\$]\$(\w+)") {
 			my ($varname) = ($1);
-			log_warning($line->file, $line->lineno, "please write either \${$varname} or \$\$$varname instead of \$$varname.");
+			$line->log_warning("please write either \${$varname} or \$\$$varname instead of \$$varname.");
 		}
 	}
 
@@ -2132,23 +2140,23 @@ sub category_check() {
 			my ($comment_flag, $operator, $subdir, $comment) = ($1, $2, $3, $4);
 			if ($comment_flag eq "#") {
 				if (defined($comment) && $comment eq "") {
-					log_warning($line->file, $line->lineno, "$subdir commented out without giving a reason.");
+					$line->log_warning("$subdir commented out without giving a reason.");
 				}
 				push(@makefile_subdirs, $subdir);
 			} elsif ($first) {
 				$first = false;
 				if ($operator ne "" && $operator ne "+") {
-					log_error($line->file, $line->lineno, "SUBDIR= or SUBDIR+= expected.");
+					$line->log_error("SUBDIR= or SUBDIR+= expected.");
 				}
 				push(@makefile_subdirs, $subdir);
 				$last_subdir = $subdir;
 			} else {
 				if ($operator ne "+") {
-					log_error($line->file, $line->lineno, "SUBDIR+= expected.");
+					$line->log_error("SUBDIR+= expected.");
 				}
 				push(@makefile_subdirs, $subdir);
 				if ($last_subdir ge $subdir) {
-					log_error($line->file, $line->lineno, "$subdir should come before $last_subdir.");
+					$line->log_error("$subdir should come before $last_subdir.");
 				}
 				$last_subdir = $subdir;
 			}
