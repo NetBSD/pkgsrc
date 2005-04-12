@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/09/27 01:07:23 rh Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/04/12 15:54:21 adam Exp $
 share/GNUstep/System/Library/Bundles/GSPrinting/GSLPR.bundle/GSLPR
 share/GNUstep/System/Library/Bundles/GSPrinting/GSLPR.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/GSPrinting/GSLPR.bundle/stamp.make
@@ -259,6 +259,7 @@ share/GNUstep/System/Library/Headers/gnustep/gui/IMLoading.h
 share/GNUstep/System/Library/Images/GNUstep.tiff
 share/GNUstep/System/Library/Images/GNUstepMenuImage.tiff
 share/GNUstep/System/Library/Images/GNUstep_Images_Copyright
+share/GNUstep/System/Library/Images/MagnifyGlass.tiff
 share/GNUstep/System/Library/Images/NSComboArrow.tiff
 share/GNUstep/System/Library/Images/common_2DCheckMark.tiff
 share/GNUstep/System/Library/Images/common_2DDash.tiff
@@ -278,6 +279,7 @@ share/GNUstep/System/Library/Images/common_Close.tiff
 share/GNUstep/System/Library/Images/common_CloseBroken.tiff
 share/GNUstep/System/Library/Images/common_CloseBrokenH.tiff
 share/GNUstep/System/Library/Images/common_CloseH.tiff
+share/GNUstep/System/Library/Images/common_ClosedHandCursor.tiff
 share/GNUstep/System/Library/Images/common_ColorSwatch.tiff
 share/GNUstep/System/Library/Images/common_ComboBoxEllipsis.tiff
 share/GNUstep/System/Library/Images/common_DecimalTabStop.tiff
@@ -293,6 +295,7 @@ share/GNUstep/System/Library/Images/common_Miniaturize.tiff
 share/GNUstep/System/Library/Images/common_MiniaturizeH.tiff
 share/GNUstep/System/Library/Images/common_Mount.tiff
 share/GNUstep/System/Library/Images/common_Nibble.tiff
+share/GNUstep/System/Library/Images/common_OpenHandCursor.tiff
 share/GNUstep/System/Library/Images/common_Printer.tiff
 share/GNUstep/System/Library/Images/common_RadioOff.tiff
 share/GNUstep/System/Library/Images/common_RadioOn.tiff
@@ -355,6 +358,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSPri
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSSpellPanel.gorm/data.classes
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSSpellPanel.gorm/objects.gorm
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/Localizable.strings
+share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/Info-gnustep.plist
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/Italian.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/libgnustep-gui.so
 share/GNUstep/System/Library/Libraries/libgnustep-gui.so.${PKGVERSION}
