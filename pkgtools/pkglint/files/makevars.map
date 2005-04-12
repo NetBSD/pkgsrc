@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.1 2005/02/12 10:59:21 rillig Exp $
+# $NetBSD: makevars.map,v 1.2 2005/04/12 15:12:33 tv Exp $
 #
 
 # This file tries to guess the type of some variables, according to their
@@ -49,7 +49,6 @@ USE_XFACE		Boolean
 GNU_CONFIGURE		Yes_Or_Undefined
 HOMEPAGE		URL
 MAINTAINER		Mail_Address
-NO_BUILDLINK		Yes_Or_Undefined
 NO_CHECKSUM		Yes_Or_Undefined
 NO_CONFIGURE		Yes_Or_Undefined
 #USE_PERL5		One_Of(build run)
