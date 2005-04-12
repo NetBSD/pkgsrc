@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:48 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/12 14:27:18 dmcmahill Exp $
 #
 
 DISTNAME=	ttmkfdir2.20021109
@@ -20,6 +20,7 @@ USE_GNU_TOOLS+=	lex make
 USE_LANGUAGES=	c c++
 
 MAKE_ENV+=	FREETYPE_CONFIG=${FREETYPE_CONFIG}
+LDFLAGS+=	${LIBGETOPT}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ttmkfdir ${PREFIX}/bin
