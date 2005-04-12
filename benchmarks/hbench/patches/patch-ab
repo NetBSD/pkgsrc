@@ -1,11 +1,8 @@
-$NetBSD: patch-ab,v 1.3 1999/11/15 13:19:52 rh Exp $
+$NetBSD: patch-ab,v 1.4 2005/04/12 01:00:42 rillig Exp $
 
 --- scripts/create-all-analyses.orig	Mon Nov 15 14:15:28 1999
 +++ scripts/create-all-analyses	Mon Nov 15 14:15:28 1999
-@@ -31,13 +31,10 @@
- #
- # $Id: patch-ab,v 1.3 1999/11/15 13:19:52 rh Exp $
- 
+@@ -34,10 +34,7 @@
 -# Step 1: Discover hbench root path
 -HBENCHROOT=`(cd \`dirname $0\`/.. ; pwd)`
 -
