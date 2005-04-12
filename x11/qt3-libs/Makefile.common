@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2004/11/24 16:08:48 gavan Exp $
+# $NetBSD: Makefile.common,v 1.44 2005/04/12 15:11:18 tv Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -17,7 +17,6 @@ USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_BUILDLINK3=		yes
 
 USE_GNU_TOOLS+=		awk
 
