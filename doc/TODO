@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3395 2005/04/11 18:08:09 hira Exp $
+$NetBSD: TODO,v 1.3396 2005/04/12 15:12:02 adam Exp $
 
 Suggested new packages
 ======================
@@ -489,7 +489,6 @@ Suggested package updates
 	o gnome-vfsmm26-2.8.0?
 	o gnumeric-1.4.3
 	o gnustep-back-0.9.5
-	o gnustep-base-1.10.2
 	o gnustep-gui-0.9.5
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.39
