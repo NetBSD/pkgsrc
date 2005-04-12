@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.7 2005/04/12 00:51:22 rillig Exp $
+
+Needed for gcc-2.95.
+
+--- gcalctool/functions.c.orig	Fri Feb 18 17:20:50 2005
++++ gcalctool/functions.c	Mon Apr 11 00:52:32 2005
+@@ -311,8 +311,6 @@ str_replace(char **str, char *from, char
+ void
+ trig_filter(char **func) 
+ {
+-    assert(func);
+-
+     enum mode {
+         normal = 0,
+         inv = 1,
+@@ -322,6 +320,8 @@ trig_filter(char **func) 
+   
+     int inverse;
+     int hyperbolic;
++
++    assert(func);
+ 
+     inverse = (v->inverse) ? inv : 0;
+     hyperbolic = (v->hyperbolic) ? hyp : 0;
