@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.1.1.1 2004/10/21 14:27:43 grant Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.2 2005/04/12 16:13:27 tv Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -41,11 +41,6 @@
       The things to keep in mind are:</para>
 
     <orderedlist>
-      <listitem>
-        <para>Set <varname>USE_BUILDLINK3</varname> to
-          <quote>yes</quote>.</para> 
-      </listitem>
-      
       <listitem>
         <para> Ensure that the build always calls the wrapper scripts
           instead of the actual toolchain.  Some packages are tricky,
