@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:48:14 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/13 20:41:03 jschauma Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -56,7 +56,7 @@ post-build:
 	done
 	${SED} -e "s|^\(.*\)='\(.*\)'|\1=\"\2\"|"			\
 		-e "s|${WRKSRC}|${PREFIX}/lib|"				\
-		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}|"	\
+		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}/include/tk|"	\
 		${WRKSRC}/tkConfig.sh > ${WRKSRC}/tkConfig.sh.tmp &&	\
 		${MV} ${WRKSRC}/tkConfig.sh.tmp ${WRKSRC}/tkConfig.sh
 
