@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/04/13 17:37:43 tron Exp $
+# $NetBSD: Makefile,v 1.45 2005/04/13 20:41:03 jschauma Exp $
 
 DISTNAME=	tk8.4.9-src
 PKGNAME=	tk-8.4.9
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--mandir=${WRKDIR:Q}/man
 post-build:
 	${SED} -e "s|^\(.*\)='\(.*\)'|\1=\"\2\"|"			\
 		-e "s|${WRKSRC}|${PREFIX}/lib|"				\
-		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}|"	\
+		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}/include/tk|"	\
 		${WRKSRC}/tkConfig.sh > ${WRKSRC}/tkConfig.sh.tmp &&	\
 		${MV} ${WRKSRC}/tkConfig.sh.tmp ${WRKSRC}/tkConfig.sh
 
