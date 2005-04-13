@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1 2005/04/06 21:51:13 xtraeme Exp $
+$NetBSD: patch-ah,v 1.2 2005/04/13 16:45:46 rillig Exp $
 
---- uxpty.c.orig	2005-04-06 23:16:28.000000000 +0200
-+++ uxpty.c	2005-04-06 23:28:38.000000000 +0200
+--- unix/uxpty.c.orig	2005-04-06 23:16:28.000000000 +0200
++++ unix/uxpty.c	2005-04-06 23:28:38.000000000 +0200
 @@ -2,8 +2,10 @@
   * Pseudo-tty backend for pterm.
   */
