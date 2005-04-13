@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.33 2005/03/18 13:18:00 wiz Exp $
+# $NetBSD: bsd.sites.mk,v 1.34 2005/04/13 01:57:14 uebayasi Exp $
 #
 # Default MASTER_SITES
 
@@ -144,8 +144,7 @@ MASTER_SITE_XEMACS+=    \
 	http://public.planetmirror.com.au/pub/xemacs/ \
 	ftp://mirror.aarnet.edu.au/pub/xemacs/ \
 	ftp://mirror.cict.fr/xemacs/ \
-	ftp://ring.aist.go.jp/pub/text/xemacs/ \
-	ftp://ring.asahi-net.or.jp/pub/text/xemacs/
+	ftp://ftp.t.ring.gr.jp/pub/text/xemacs/
 
 MASTER_SITE_APACHE+=    \
 	http://www.apache.org/dist/ \
@@ -252,7 +251,7 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://public.planetmirror.com.au/pub/openoffice/ \
 	http://komo.vlsm.org/openoffice/ \
 	ftp://ftp.kddlabs.co.jp/office/openoffice/ \
-	ftp://ftp.ring.gr.jp/pub/misc/openoffice/ \
+	ftp://ftp.t.ring.gr.jp/pub/misc/openoffice/ \
 	http://mymirror.asiaosc.org/openoffice/ \
 	ftp://ftp.kr.freebsd.org/pub/openoffice/ \
 	http://www.fs.tum.de/~mrauch/OpenOffice/download/
@@ -261,7 +260,7 @@ MASTER_SITE_CYGWIN+= \
 	http://mirrors.kernel.org/sources.redhat.com/cygwin/ \
 	http://mirrors.rcn.net/pub/sourceware/cygwin/ \
 	http://mirrors.xmission.com/cygwin/ \
-	ftp://ftp.ring.gr.jp/archives/pc/gnu-win32/ \
+	ftp://ftp.t.ring.gr.jp/archives/pc/gnu-win32/ \
 	ftp://ftp.funet.fi/pub/mirrors/cygwin.com/pub/cygwin/
 
 MASTER_SITE_IFARCHIVE+= \
@@ -270,6 +269,14 @@ MASTER_SITE_IFARCHIVE+= \
 	http://ifarchive.heanet.ie/if-archive/ \
 	http://ifarchive.giga.or.at/if-archive/
  
+MASTER_SITE_FREEBSD+= \
+	ftp://ftp.FreeBSD.org/pub/FreeBSD/distfiles/ \
+	ftp://ftp.jp.FreeBSD.org/pub/FreeBSD/distfiles/
+
+MASTER_SITE_FREEBSD_LOCAL+= \
+	ftp://ftp.FreeBSD.org/pub/FreeBSD/ports/local-distfiles/ \
+	ftp://ftp.jp.FreeBSD.org/pub/FreeBSD/ports/local-distfiles/
+
 # The primary backup site. 
 MASTER_SITE_BACKUP?=	\
 	http://ftp.fi.NetBSD.org/pub/NetBSD/packages/distfiles/ \
