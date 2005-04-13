@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1 2005/04/13 16:39:32 rillig Exp $
+
+Needed for ISO C90 compliance.
+
+--- src/utils.c.orig	Fri Dec 17 01:33:00 2004
++++ src/utils.c	Tue Apr 12 12:51:05 2005
+@@ -750,6 +750,7 @@ void ui_preferences_register (xine_t *th
+     N_("Top, visible"), N_("Bottom, visible"),
+     NULL
+   };
++  int i;
+ 
+   /* Register the experience level setting */
+   xine_config_register_enum
+@@ -759,7 +760,6 @@ void ui_preferences_register (xine_t *th
+      0, NULL, CONFIG_DATA_NONE);
+ 
+   /* Register a few audio/video config items */
+-  int i;
+   for (i = 0; i < sizeof (ranges) / sizeof (ranges[0]); ++i)
+   {
+     if (ranges[i].setting && !strncmp (ranges[i].setting, "gui.", 4))
