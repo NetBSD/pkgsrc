@@ -1,0 +1,17 @@
+$NetBSD: patch-bg,v 1.1 2005/04/13 16:54:03 rillig Exp $
+
+All files in $(DESTDIR) may be marked read-only, so better use the
+INSTALL_HEADER tools to overwrite them correctly.
+
+--- include/Makefile.in.orig	Sat Dec 25 23:34:48 2004
++++ include/Makefile.in	Tue Apr 12 11:04:43 2005
+@@ -727,7 +727,8 @@ maintainer-clean-generic:
+ 	-rm -f Makefile.in
+ 
+ install-data-local: install-includeHEADERS
+-	sed -e '/^\/\*_x_/d' xine.h > $(DESTDIR)$(includedir)/xine.h
++	sed -e '/^\/\*_x_/d' xine.h > installed-xine.h
++	$(INSTALL_HEADER) installed-xine.h $(DESTDIR)$(includedir)/xine.h
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
