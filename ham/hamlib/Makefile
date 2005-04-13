@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:10 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/13 23:24:43 wulf Exp $
 #
 
-DISTNAME=	hamlib-1.2.3
+DISTNAME=	hamlib-1.2.4
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
 #EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +15,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=--without-tcl-binding \
-		--without-perl-binding
+		--without-perl-binding \
+		--without-python-binding
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/hamlib
