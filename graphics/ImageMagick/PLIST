@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2005/03/29 14:31:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2005/04/13 08:10:18 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -154,7 +154,6 @@ share/ImageMagick-${IM_MAJOR_VER}/images/granite.png
 share/ImageMagick-${IM_MAJOR_VER}/images/label.gif
 share/ImageMagick-${IM_MAJOR_VER}/images/logo.jpg
 share/ImageMagick-${IM_MAJOR_VER}/images/montage.jpg
-share/ImageMagick-${IM_MAJOR_VER}/images/promote.jpg
 share/ImageMagick-${IM_MAJOR_VER}/images/reconstruct.jpg
 share/ImageMagick-${IM_MAJOR_VER}/images/red-ball.png
 share/ImageMagick-${IM_MAJOR_VER}/images/red-circle.png
@@ -164,6 +163,7 @@ share/ImageMagick-${IM_MAJOR_VER}/images/rose.jpg
 share/ImageMagick-${IM_MAJOR_VER}/images/rose.png
 share/ImageMagick-${IM_MAJOR_VER}/images/script.png
 share/ImageMagick-${IM_MAJOR_VER}/images/smile.gif
+share/ImageMagick-${IM_MAJOR_VER}/images/sponsor.jpg
 share/ImageMagick-${IM_MAJOR_VER}/images/sprite.jpg
 share/ImageMagick-${IM_MAJOR_VER}/images/travelsur.gif
 share/ImageMagick-${IM_MAJOR_VER}/images/white-highlight.png
@@ -250,6 +250,7 @@ share/ImageMagick-${IM_MAJOR_VER}/www/api/stream.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/transform.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/version.html
 share/ImageMagick-${IM_MAJOR_VER}/www/binary-releases.html
+share/ImageMagick-${IM_MAJOR_VER}/www/changelog.html
 share/ImageMagick-${IM_MAJOR_VER}/www/color.html
 share/ImageMagick-${IM_MAJOR_VER}/www/command-line-options.html
 share/ImageMagick-${IM_MAJOR_VER}/www/command-line-processing.html
