@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/04/11 20:34:44 recht Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/04/13 13:15:47 abs Exp $
 bin/postgres
 bin/postmaster
 lib/postgresql/ascii_and_mic.so
@@ -362,7 +362,7 @@ share/postgresql80/timezone/Australia/Adelaide
 share/postgresql80/timezone/Australia/Brisbane
 share/postgresql80/timezone/Australia/Broken_Hill
 share/postgresql80/timezone/Australia/Canberra
-share/postgresql80/timezone/Australia/${OPSYS}
+share/postgresql80/timezone/Australia/Darwin
 share/postgresql80/timezone/Australia/Hobart
 share/postgresql80/timezone/Australia/LHI
 share/postgresql80/timezone/Australia/Lindeman
