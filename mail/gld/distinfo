@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2005/04/13 17:12:08 salo Exp $
+$NetBSD: distinfo,v 1.8 2005/04/13 17:14:01 salo Exp $
 
 SHA1 (gld-1.5.tgz) = febc398be2e68bf7b4bc6e3015da2f225760204d
 RMD160 (gld-1.5.tgz) = dab09c1776fb014effdd3d87d4a6808274bbfdd9
 Size (gld-1.4.tgz) = 39030 bytes
-SHA1 (patch-aa) = 45c939204885d938e13f64bbf0c2348bca0fccae
+SHA1 (patch-aa) = 71bc915a5096a3d93cd7b5313f135b68312ec19a
 SHA1 (patch-ab) = 629b99be25d536ceb646d47f079455a4b092fe24
 SHA1 (patch-ac) = 8d484c0d6a5cbc88f2c4c66143e6aa9a91131bf1
 SHA1 (patch-ad) = 1083bdc0040696a5ac014204c1a4a8e35fdeda53
