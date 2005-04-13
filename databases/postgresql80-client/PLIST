@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/11 20:34:43 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/04/13 15:36:56 abs Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -383,20 +383,20 @@ include/postgresql/server/utils/typcache.h
 include/postgresql/server/utils/varbit.h
 include/sql3types.h
 include/sqlca.h
-lib/libecpg.5.0.so
-lib/libecpg.5.so
+lib/libecpg.so.5.0
+lib/libecpg.so.5
 lib/libecpg.a
 lib/libecpg.so
-lib/libecpg_compat.2.0.so
-lib/libecpg_compat.2.so
+lib/libecpg_compat.so.2.0
+lib/libecpg_compat.so.2
 lib/libecpg_compat.a
 lib/libecpg_compat.so
-lib/libpgtypes.2.0.so
-lib/libpgtypes.2.so
+lib/libpgtypes.so.2.0
+lib/libpgtypes.so.2
 lib/libpgtypes.a
 lib/libpgtypes.so
-lib/libpq.4.0.so
-lib/libpq.4.so
+lib/libpq.so.4.0
+lib/libpq.so.4
 lib/libpq.a
 lib/libpq.so
 man/man1/clusterdb.1
