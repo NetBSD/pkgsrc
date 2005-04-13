@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2005/04/13 13:59:10 wiz Exp $
+
+--- ufraw.c.orig	2005-02-08 15:04:59.000000000 +0000
++++ ufraw.c
+@@ -630,8 +630,8 @@ int ufraw_saver(GtkWidget *widget, gpoin
+ #ifndef NO_TIFF
+ void ufraw_tiff_message(const char *module, const char *fmt, va_list ap)
+ {
+-    module = module;
+     char buf[max_path];
++    module = module;
+     vsnprintf(buf, max_path, fmt, ap);
+     ufraw_message(UFRAW_VERBOSE, buf);
+ }
