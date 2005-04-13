@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2005/03/26 16:21:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.23 2005/04/13 17:16:25 jmmv Exp $
 bin/evolution-2.2
 include/evolution-2.2/calendar/gui/e-cal-config.h
 include/evolution-2.2/e-conduit/e-pilot-map.h
@@ -93,7 +93,7 @@ lib/evolution/2.2/libecontactlisteditor.la
 lib/evolution/2.2/libefilterbar.la
 lib/evolution/2.2/libemiscwidgets.la
 lib/evolution/2.2/libeshell.la
-lib/evolution/2.2/libessmime.la
+${HAVE_SMIME}lib/evolution/2.2/libessmime.la
 lib/evolution/2.2/libetimezonedialog.la
 lib/evolution/2.2/libeutil.la
 lib/evolution/2.2/libevolution-a11y.la
@@ -101,7 +101,7 @@ lib/evolution/2.2/libevolution-addressbook-a11y.la
 lib/evolution/2.2/libevolution-calendar-a11y.la
 lib/evolution/2.2/libevolution-importer.la
 lib/evolution/2.2/libevolution-mail-importers.la
-lib/evolution/2.2/libevolution-smime.la
+${HAVE_SMIME}lib/evolution/2.2/libevolution-smime.la
 lib/evolution/2.2/libevolution-widgets-a11y.la
 lib/evolution/2.2/libfilter.la
 lib/evolution/2.2/libmenus.la
@@ -231,7 +231,7 @@ share/evolution/2.2/glade/meeting-page.glade
 share/evolution/2.2/glade/properties.glade
 share/evolution/2.2/glade/recurrence-page.glade
 share/evolution/2.2/glade/schedule-page.glade
-share/evolution/2.2/glade/smime-ui.glade
+${HAVE_SMIME}share/evolution/2.2/glade/smime-ui.glade
 share/evolution/2.2/glade/task-details-page.glade
 share/evolution/2.2/glade/task-page.glade
 share/evolution/2.2/glade/url-editor-dialog.glade
