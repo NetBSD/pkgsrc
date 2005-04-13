@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:17 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/13 20:41:03 jschauma Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -72,7 +72,7 @@ post-build:
 	done
 	${SED} -e "s|^\(.*\)='\(.*\)'|\1=\"\2\"|"			\
 		-e "s|${WRKSRC}|${PREFIX}/lib|"				\
-		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}|"	\
+		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}/include/tcl|"	\
 		${WRKSRC}/tclConfig.sh > ${WRKSRC}/tclConfig.sh.tmp &&	\
 		${MV} ${WRKSRC}/tclConfig.sh.tmp ${WRKSRC}/tclConfig.sh
 
