@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:17 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/13 20:06:24 jschauma Exp $
 
 DISTNAME=	tcl-itcl-20040920
 PKGNAME=	${DISTNAME:S/itcl/itcl-current/}
@@ -14,7 +14,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	tcl-itcl-[0-9]*
 
-WRKSRC=		${WRKDIR}/tcl-itcl-3.3
+WRKSRC=		${WRKDIR}/tcl-itcl-${ITCL_VERS}
+ITCL_VERS=	3.3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 CONFIGURE_ARGS= --with-tcl=${BUILDLINK_PREFIX.tcl}/lib	\
@@ -22,6 +23,14 @@ CONFIGURE_ARGS= --with-tcl=${BUILDLINK_PREFIX.tcl}/lib	\
 		--enable-shared
 
 MAKE_ENV+=	TCL_HEADER_DIR=${BUILDLINK_PREFIX.tcl}/include/tcl
+
+post-build:
+	${SED} -e "s|^\(.*\)='\(.*\)'|\1=\"\2\"|"			\
+		-e "s|${WRKSRC}/itcl|${PREFIX}/lib/tcl/itcl${ITCL_VERS}|"\
+		-e "s|${PREFIX}/lib/itcl${ITCL_VERS}|${PREFIX}/lib/tcl/itcl${ITCL_VERS}|"\
+		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}|"	\
+		${WRKSRC}/itcl/itclConfig.sh > ${WRKSRC}/itcl/itclConfig.sh.tmp &&\
+		${MV} ${WRKSRC}/itcl/itclConfig.sh.tmp ${WRKSRC}/itcl/itclConfig.sh
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
