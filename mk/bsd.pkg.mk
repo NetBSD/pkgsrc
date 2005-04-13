@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1609 2005/04/13 14:07:30 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1610 2005/04/13 16:15:59 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -2241,6 +2241,7 @@ real-su-package: ${PLIST} ${DESCR}
 	if ${PKG_CREATE} ${PKG_ARGS_BINPKG} ${PKGFILE}; then		\
 		${MAKE} ${MAKEFLAGS} package-links;			\
 	else								\
+		${ECHO} "(pkg_create: exitcode $$?)";			\
 		${MAKE} ${MAKEFLAGS} delete-package;			\
 		exit 1;							\
 	fi
