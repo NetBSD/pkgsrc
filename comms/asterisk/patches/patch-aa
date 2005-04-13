@@ -1,6 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/04/08 03:10:52 riz Exp $
---- Makefile.orig	2005-03-10 00:15:05.000000000 -0800
-+++ Makefile	2005-03-30 13:22:17.000000000 -0800
+$NetBSD: patch-aa,v 1.2 2005/04/13 19:23:56 riz Exp $
+--- Makefile.orig	2005-03-10 09:15:05.000000000 +0100
++++ Makefile	2005-04-13 19:32:56.000000000 +0200
+@@ -42,7 +42,7 @@
+ endif
+ 
+ ifeq ($(findstring BSD,${OSARCH}),BSD)
+-PROC=$(shell uname -m)
++PROC=$(shell uname -p)
+ endif
+ 
+ # Pentium Pro Optimize
 @@ -122,6 +122,7 @@
  ASTSBINDIR=$(INSTALL_PREFIX)/usr/sbin
  ASTVARRUNDIR=$(INSTALL_PREFIX)/var/run
