@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/04/11 21:48:14 tv Exp $
+# $NetBSD: Makefile,v 1.43 2005/04/13 16:47:10 rillig Exp $
 
 DISTNAME=	tk8.4.9-src
 PKGNAME=	tk-8.4.9
@@ -18,15 +18,17 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--enable-threads
-MAKE_ENV+=		TOUCH="${TOUCH}"
+MAKE_ENV+=		TOUCH=${TOUCH:Q}
+PTHREAD_OPTS+=		require
 
 TEST_TARGET=		test
 
 # Initially install the man pages into ${WRKDIR}/man, as we need a staged
 # install to avoid overwriting existing manpages in ${PREFIX}/man.
-CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
+CONFIGURE_ARGS+=	--mandir=${WRKDIR:Q}/man
 
 .include "../../lang/tcl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 post-build:
 	${SED} -e "s|^\(.*\)='\(.*\)'|\1=\"\2\"|"			\
