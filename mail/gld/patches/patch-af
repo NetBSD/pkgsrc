@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2005/04/13 16:36:07 salo Exp $
+$NetBSD: patch-af,v 1.1 2005/04/13 16:36:07 salo Exp $
 
 --- sockets.h.orig	2005-04-13 12:13:23.000000000 -0400
 +++ sockets.h	2005-04-13 12:06:34.000000000 -0400
