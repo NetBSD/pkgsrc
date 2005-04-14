@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9846 2005/04/14 13:47:15 schwarz Exp $
+$NetBSD: CHANGES,v 1.9847 2005/04/14 22:24:59 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2011,3 +2011,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dspam to 3.4.4 [xtraeme 2005-04-14]
 	Updated sqlite3 to 3.2.1 [xtraeme 2005-04-14]
 	Updated kphone to 4.1.0 [schwarz 2005-04-14]
+	Updated gld to 1.5.1 [xtraeme 2005-04-14]
