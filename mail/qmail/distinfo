@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2005/04/10 04:53:36 schmonz Exp $
+$NetBSD: distinfo,v 1.12 2005/04/14 22:00:11 wiz Exp $
 
 SHA1 (netqmail-1.05.tar.gz) = fe4cbe97bd2f18a5ca1b36e4fbbd6c524256a829
 RMD160 (netqmail-1.05.tar.gz) = e5bd8557c58a2686233449254b146e74389a7652
@@ -12,9 +12,6 @@ Size (qmail-103.patch) = 2104 bytes
 SHA1 (panther.patch) = cc179e728b5596e4af83cd09b577065c27207db1
 RMD160 (panther.patch) = 41106fce27ad320bd01b80225c9b396f4be2b9c8
 Size (panther.patch) = 2553 bytes
-SHA1 (netqmail-1.05.tar.gz) = fe4cbe97bd2f18a5ca1b36e4fbbd6c524256a829
-RMD160 (netqmail-1.05.tar.gz) = e5bd8557c58a2686233449254b146e74389a7652
-Size (netqmail-1.05.tar.gz) = 252264 bytes
 SHA1 (nullenvsender-recipcount.patch) = e3c2c4767d8fd534c7633b06a5770204618ab134
 RMD160 (nullenvsender-recipcount.patch) = f9a634ddb14117fcf64020743410ef967ffed07c
 Size (nullenvsender-recipcount.patch) = 2440 bytes
