@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/04/11 21:48:04 tv Exp $
+# $NetBSD: Makefile,v 1.43 2005/04/14 01:41:27 dmcmahill Exp $
 #
 
 DISTNAME=	Xaw3d-1.5E
@@ -22,7 +22,11 @@ PLIST_SRC=	${WRKDIR}/PLIST-src
 .if empty(X11BASE:M*openwin)
 post-extract:
 	@(cd ${WRKSRC}; ${LN} -s .. X11)
+.else
+IMAKE_FLAGS+=	-DXISOPENWIN
 .endif
+
+XMKMF+=	${IMAKE_FLAGS}
 
 PLIST_SUBST+=	INCDIR=include/X11
 
