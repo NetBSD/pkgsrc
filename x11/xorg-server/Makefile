@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/04/14 21:38:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/14 21:40:47 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-server-${XORG_VER}
@@ -68,6 +68,9 @@ post-install:
 .if ${OPSYS} == "Linux"
 .  include "../../x11/Xrender/buildlink3.mk"
 .endif
+
+# Radeon driver fix applied on this version.
+BUILDLINK_DEPENDS.xorg-libs+=	xorg-libs>=6.8.2nb1
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
