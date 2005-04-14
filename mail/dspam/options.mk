@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2005/03/21 21:35:52 xtraeme Exp $
+# $NetBSD: options.mk,v 1.8 2005/04/14 05:32:37 xtraeme Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -40,7 +40,7 @@ PKG_FAIL_REASON+=	"${PKGBASE}: unknown delivery agent \`${DSPAM_DELIVERY_AGENT}'
 ### This is the backend database used to store the DSPAM signatures as
 ### well as other state information.  The recommended storage driver is
 ### "mysql", even for small installations.
-### Possible: mysql, pgsql, bdb or sqlite
+### Possible: mysql, pgsql, bdb, sqlite or sqlite3
 ### Default: sqlite
 ###
 DSPAM_STORAGE_DRIVER?=	sqlite
@@ -70,8 +70,18 @@ CONFIGURE_ARGS+=	--with-storage-driver=lib${BDB_TYPE}_drv
 .  include "../../databases/sqlite/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=sqlite_drv
 SQLITE_PLIST_SUBST=	SQLITE=
+.elif !empty(DSPAM_STORAGE_DRIVER:Msqlite3)
+.  include "../../databases/sqlite3/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-storage-driver=sqlite3_drv
+SQLITE_PLIST_SUBST+=	SQLITE=
 .else
 PKG_FAIL_REASON+=	"${PKGBASE}: unknown storage driver \`${DSPAM_STORAGE_DRIVER}\'"
+.endif
+
+# daemon mode only supports MySQL and PostgreSQL
+.if !empty(DSPAM_STORAGE_DRIVER:Mmysql) || \
+    !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
+CONFIGURE_ARGS+=	--enable-daemon
 .endif
 
 MYSQL_PLIST_SUBST?=	MYSQL="@comment "
