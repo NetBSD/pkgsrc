@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2005/04/14 05:32:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/14 20:39:59 xtraeme Exp $
 
 DISTNAME=	dspam-3.4.4
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
 
@@ -82,17 +83,18 @@ PKG_SYSCONFSUBDIR=	dspam
 CONF_FILES_PERMS=	${EGDIR}/dspam.conf ${PKG_SYSCONFDIR}/dspam.conf \
 			${BINOWN} ${DSPAM_GROUP} 0640
 CONF_FILES_PERMS+=	${EGDIR}/cgi-admins ${PKG_SYSCONFDIR}/cgi-admins \
-			www www 0640
+			${APACHE_USER} ${APACHE_GROUP} 0640
 CONF_FILES_PERMS+=	${EGDIR}/cgi-default.prefs \
-			${PKG_SYSCONFDIR}/cgi-default.prefs www www 0640
+			${PKG_SYSCONFDIR}/cgi-default.prefs \
+			${APACHE_USER} ${APACHE_GROUP} 0640
 CONF_FILES_PERMS+=	${EGDIR}/configure.pl ${PKG_SYSCONFDIR}/configure.pl \
-			www www 0640
+			${APACHE_USER} ${APACHE_GROUP} 0640
 
 PKG_GROUPS=		${DSPAM_GROUP}
 PKG_USERS=		${DSPAM_USER}:${DSPAM_GROUP}
 SPECIAL_PERMS=		${PREFIX}/bin/dspam ${DSPAM_USER} ${DSPAM_GROUP} \
 			${DSPAM_BINMODE}
-OWN_DIRS_PERMS=		${DSPAM_HOME} ${DSPAM_USER} ${DSPAM_GROUP} 0775
+OWN_DIRS_PERMS=		${DSPAM_HOME} ${DSPAM_USER} ${APACHE_GROUP} 0775
 OWN_DIRS_PERMS+=	${DSPAM_LOGDIR} ${DSPAM_USER} ${DSPAM_GROUP} 0775
 OWN_DIRS_PERMS+=	${DSPAM_PIDDIR} ${DSPAM_USER} ${DSPAM_GROUP} 0700
 
