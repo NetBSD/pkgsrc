@@ -1,8 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2004/11/13 18:33:44 tron Exp $
-
---- Makefile.in.orig	2004-11-13 19:12:23.000000000 +0100
-+++ Makefile.in	2004-11-13 19:13:07.000000000 +0100
-@@ -2,25 +2,25 @@
+--- Makefile.in.orig	Thu Apr  7 20:33:14 2005
++++ Makefile.in	Thu Apr  7 20:36:24 2005
+@@ -2,26 +2,26 @@
  SUBS	:=$(foreach sub,$(SUBDIRS), $(sub)/$(sub).a)
  
  all dep:
@@ -32,6 +30,7 @@ $NetBSD: patch-ae,v 1.2 2004/11/13 18:33:44 tron Exp $
  distclean:	clean
  	rm -f config.cache config.log config.status
  	rm -f Makefile
+ 	rm -f config.h
 -	@for T in $(SUBDIRS); do make -C $$T $@; done
 +	@for T in $(SUBDIRS); do $(MAKE) -C $$T $@; done
  	rm -f po/Makefile
