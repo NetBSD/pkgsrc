@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2005/04/11 21:48:11 tv Exp $
+# $NetBSD: Makefile,v 1.76 2005/04/14 20:53:30 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	2
@@ -102,6 +102,12 @@ pre-configure:
 		${SED} ${FILES_SUBST_SED} $${file} > $${file}.new;	\
 		${MV} -f $${file}.new $${file};				\
 	done
+
+.if ${OPSYS} == "SunOS"
+post-configure:
+	# will be done with a proper configure check in 3.4.1
+	${ECHO} "#define HAVE_SYS_LOADAVG_H 1" >> ${WRKSRC}/config.h
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kde/templates/.source/emptydir

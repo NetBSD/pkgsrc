@@ -1,16 +1,7 @@
-$NetBSD: patch-ae,v 1.7 2004/11/01 16:39:06 gavan Exp $
+$NetBSD: patch-ae,v 1.8 2005/04/14 20:53:30 markd Exp $
 
 --- kcontrol/krdb/krdb.cpp.orig	2004-07-17 18:52:04.000000000 +0100
 +++ kcontrol/krdb/krdb.cpp
-@@ -42,6 +42,8 @@
- 
- #include <X11/Xlib.h>
- 
-+#undef truncate
-+
- inline const char * gtkEnvVar(int version)
- {
-     return 2==version ? "GTK2_RC_FILES" : "GTK_RC_FILES";
 @@ -384,7 +386,14 @@ static void createGtkrc( bool exportColo
          // not every button, checkbox, etc.
          t << "style \"MenuItem\"" << endl;
