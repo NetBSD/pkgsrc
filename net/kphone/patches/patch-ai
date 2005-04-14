@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.3 2005/04/14 17:53:40 schwarz Exp $
+
 --- kphone/callaudio.cpp.orig	Thu Dec  9 10:08:32 2004
 +++ kphone/callaudio.cpp	Thu Apr  7 21:13:13 2005
 @@ -93,7 +93,7 @@
