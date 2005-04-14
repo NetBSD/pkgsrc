@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.1.2.2 2005/04/14 04:42:23 snj Exp $
+
+--- sockets.h.orig	2005-04-13 12:13:23.000000000 -0400
++++ sockets.h	2005-04-13 12:06:34.000000000 -0400
+@@ -118,10 +118,10 @@
+ 
+ /* DNS functions */
+ 
+-int DnsIp(char *host,char *ip);
+-int DnsFQDN(char *host,char *fqdn);
+-int DnsName(char *ip,char *fqdn);
+-void GetPeerIp(int sock,char *ip,char *fqdn);
++int DnsIp(char *host,char *ip,size_t);
++int DnsFQDN(char *host,char *fqdn,size_t);
++int DnsName(char *ip,char *fqdn,size_t);
++void GetPeerIp(int sock,char *ip,size_t,char *fqdn,size_t);
+ 
+ /* Special Functions */
+ 
