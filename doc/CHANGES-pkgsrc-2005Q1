@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.48 2005/04/14 04:22:39 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.49 2005/04/14 04:42:43 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -99,3 +99,5 @@ Pullup ticket 433 - requested by Juan Romero Pardines
 portability fix for cdrecord
 Pullup ticket 437 - requested by Lubomir Sedlacik
 security fix for gsharutils
+Pullup ticket 440 - requested by Lubomir Sedlacik
+security fix for gld
