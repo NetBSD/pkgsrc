@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2005/03/27 21:54:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.33 2005/04/14 21:01:48 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -211,6 +211,7 @@ lib/kde3/kcm_smserver.la
 lib/kde3/kcm_spellchecking.la
 lib/kde3/kcm_style.la
 lib/kde3/kcm_taskbar.la
+${HAVE_USBVIEW}lib/kde3/kcm_usb.la
 lib/kde3/kcm_useraccount.la
 lib/kde3/kcm_xinerama.la
 lib/kde3/kcminit.la
@@ -418,6 +419,7 @@ share/applications/kde/kcmnotify.desktop
 share/applications/kde/kcmperformance.desktop
 share/applications/kde/kcmsmserver.desktop
 share/applications/kde/kcmtaskbar.desktop
+${HAVE_USBVIEW}share/applications/kde/kcmusb.desktop
 share/applications/kde/kdepasswd.desktop
 share/applications/kde/kdeprintfax.desktop
 share/applications/kde/kdm.desktop
@@ -1388,6 +1390,7 @@ share/kde/apps/kcmkeys/win3.kksrc
 share/kde/apps/kcmkeys/win4.kksrc
 share/kde/apps/kcmkeys/wm3.kksrc
 share/kde/apps/kcmlocale/pics/background.png
+${HAVE_USBVIEW}share/kde/apps/kcmusb/usb.ids
 share/kde/apps/kconf_update/convertShortcuts.pl
 share/kde/apps/kconf_update/favicons.upd
 share/kde/apps/kconf_update/kaccel.upd
@@ -4286,6 +4289,7 @@ ${PKGLOCALEDIR}/locale/l10n/zw/flag.png
 @dirrm share/kde/apps/kcontrol/about
 @comment in kde: @dirrm share/kde/apps/kcontrol
 @comment in kde: @dirrm share/kde/apps/kconf_update
+${HAVE_USBVIEW}@dirrm share/kde/apps/kcmusb
 @dirrm share/kde/apps/kcmlocale/pics
 @dirrm share/kde/apps/kcmlocale
 @dirrm share/kde/apps/kcmkeys
