@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/04/14 04:59:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/14 05:32:37 xtraeme Exp $
 
 DISTNAME=	dspam-3.4.4
 CATEGORIES=	mail
@@ -64,8 +64,7 @@ CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME}			\
 			--with-dspam-group=${DSPAM_GROUP}		\
 			--with-dspam-mode=${DSPAM_BINMODE}		\
 			--with-logdir=${DSPAM_LOGDIR}			\
-			--sysconfdir=${PKG_SYSCONFDIR}			\
-			--enable-daemon
+			--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "options.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
@@ -127,7 +126,7 @@ post-install:
 		'-s|./configure.pl.*$$||' . ${DATADIR}/${d}
 .endfor
 .undef d
-.for drv in mysql pgsql sqlite
+.for drv in mysql pgsql
 .  if !empty(DSPAM_STORAGE_DRIVER:M${drv})
 	${INSTALL_DATA_DIR} ${DATADIR}/${drv}
 	cd ${WRKSRC}/src/tools.${drv}_drv && \
@@ -135,5 +134,10 @@ post-install:
 .  endif
 .endfor
 .undef drv
+.if !empty(DSPAM_STORAGE_DRIVER:Msqlite*)
+	${INSTALL_DATA_DIR} ${DATADIR}/sqlite
+	 cd ${WRKSRC}/src/tools.sqlite_drv && \
+	 	${PAX} -rwppm '-s|.*/Makefile.*$$||' . ${DATADIR}/sqlite
+.endif
 
 .include "../../mk/bsd.pkg.mk"
