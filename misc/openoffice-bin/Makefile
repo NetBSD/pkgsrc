@@ -1,12 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2005/04/02 15:46:39 mrauch Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/14 21:06:44 mrauch Exp $
 
 PKGNAME=		openoffice-bin-${OO_VER}
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		openoffice-linux-112-services.rdb.bz2
+DISTFILES+=		libsot645li.so
 SITES_openoffice-linux-112-services.rdb.bz2=http://www.fs.tum.de/~mrauch/OpenOffice/download/\
 			ftp://ftp.NetBSD.org/pub/NetBSD/misc/mrauch/
+SITES_libsot645li.so=	${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}secpatch/}
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}	\
+			openoffice-linux-112-services.rdb.bz2
 
 MAINTAINER=		mrauch@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
@@ -86,6 +91,8 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/openoffice-linux-112-services.rdb	\
 		${PREFIX}/OpenOffice.org${OO_VER}/program/services.rdb
 	${SH} -c "cd ${WRKSRC}; ./install --prefix=${PREFIX}"
+	${INSTALL_LIB} ${DISTDIR}/libsot645li.so 	\
+		${PREFIX}/OpenOffice.org${OO_VER}/program/libsot645li.so
 	${RM} -f ${PREFIX}/bin/soffice.orig
 	${SED}  -e "s|@@PREFIX@@|${PREFIX}|g" -e "s|@@OO_VER@@|${OO_VER}|g" \
 		< ${FILESDIR}/soffice > ${PREFIX}/bin/soffice
