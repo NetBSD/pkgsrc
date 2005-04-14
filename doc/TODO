@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3397 2005/04/12 16:05:28 adam Exp $
+$NetBSD: TODO,v 1.3398 2005/04/14 05:46:45 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1004,7 +1004,6 @@ Suggested package updates
 	o sox-12.17.7
 	o spim-7.1
 	o spruce-0.6.5
-	o sqlite3-3.2.0
 	o sqlitemanager-1.0.5
 	o sqlrelay-0.35
 	o srp_client-1.7.5 [jlam]
