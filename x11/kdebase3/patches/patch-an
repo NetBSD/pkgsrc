@@ -1,0 +1,15 @@
+$NetBSD: patch-an,v 1.5 2005/04/14 20:53:30 markd Exp $
+
+--- kcontrol/kfontinst/kfontinst/GetPid.c.orig	2005-04-13 01:05:50.467823000 +1200
++++ kcontrol/kfontinst/kfontinst/GetPid.c
+@@ -243,6 +243,10 @@ unsigned int kfi_getPid(const char *proc
+ #include <pwd.h>
+ #include <sys/resource.h>
+ #ifdef OS_Solaris
++#if !defined(_LP64) && _FILE_OFFSET_BITS == 64
++# undef _FILE_OFFSET_BITS
++# define _FILE_OFFSET_BITS 32
++#endif
+ #include <procfs.h>
+ #else
+ #include <sys/procfs.h>
