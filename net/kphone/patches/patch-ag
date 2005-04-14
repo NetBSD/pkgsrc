@@ -1,13 +1,11 @@
-$NetBSD: patch-ag,v 1.2 2004/11/13 18:33:44 tron Exp $
-
---- kphone/Makefile.in.orig	2004-11-08 10:28:49.000000000 +0100
-+++ kphone/Makefile.in	2004-11-13 19:23:10.000000000 +0100
+--- kphone/Makefile.in.orig	Thu Apr  7 21:10:26 2005
++++ kphone/Makefile.in	Thu Apr  7 21:11:15 2005
 @@ -6,7 +6,7 @@
  SHARE_DIR=@datadir@/apps/kphone
  BIN_DIR=@bindir@
  
--MOREDEFS=-DSHARE_DIR=\"$(SHARE_DIR)\" -DPO_DIR=\"$(SHARE_DIR)/translations//\" 
-+MOREDEFS=-DSHARE_DIR=\"$(SHARE_DIR)\" -DPO_DIR=\"$(SHARE_DIR)/translations//\"  -DDEVOSSAUDIO=\"$(DEVOSSAUDIO)\"
+-MOREDEFS=-DSHARE_DIR=\"$(SHARE_DIR)\" -DPO_DIR=\"${prefix}/share/kphone/translations//\" 
++MOREDEFS=-DSHARE_DIR=\"$(SHARE_DIR)\" -DPO_DIR=\"${prefix}/share/kphone/translations//\" -DDEVOSSAUDIO=\"$(DEVOSSAUDIO)\"
  
  CFLAGS=@CFLAGS@ -I. -I../gsm -I../ilbc -I../dissipate2 @DEFS@ $(MOREDEFS)
  CXXFLAGS=$(CFLAGS)
