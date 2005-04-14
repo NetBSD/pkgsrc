@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2004/02/04 14:25:58 markd Exp $
+$NetBSD: patch-aa,v 1.13 2005/04/14 21:01:48 markd Exp $
 
---- configure.orig	2004-01-26 08:22:39.000000000 +1300
+--- configure.orig	2005-03-05 02:15:11.000000000 +1300
 +++ configure
-@@ -27907,7 +27907,7 @@ if { (eval echo "$as_me:$LINENO: \"$kde_
+@@ -30682,7 +30682,7 @@ if { (eval echo "$as_me:$LINENO: \"$kde_
  	# if you're trying to debug this check and think it's incorrect,
  	# better check your installation. The check _is_ correct - your
  	# installation is not.
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.12 2004/02/04 14:25:58 markd Exp $
  		kde_cv_uic_plugins=yes
  	fi
  fi
-@@ -38076,6 +38076,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -42279,6 +42279,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
  
                    ac_cv_have_dpms="-lXdpms"
  
@@ -35,7 +35,17 @@ $NetBSD: patch-aa,v 1.12 2004/02/04 14:25:58 markd Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -45372,6 +45389,7 @@ fi
+@@ -44908,6 +44925,9 @@ case "$host" in
+   *-*-freebsd*)
+ 	FOUND_USBVIEW=yes
+ 	;;
++  *-*-netbsd*)
++	FOUND_USBVIEW=yes
++	;;
+ esac
+ 
+ 
+@@ -52928,6 +52948,7 @@ fi
  case "$UNAME" in
  	Linux) LIBHOSTS="$LIBSENSORS" ;;
  	FreeBSD) LIBHOSTS="$LIBSENSORS -lkvm" ;;
