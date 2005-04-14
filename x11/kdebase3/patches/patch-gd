@@ -1,0 +1,51 @@
+$NetBSD: patch-gd,v 1.1 2005/04/14 21:01:48 markd Exp $
+
+--- kcontrol/usbview/usbdevices.cpp.orig	2005-01-04 03:50:45.000000000 +1300
++++ kcontrol/usbview/usbdevices.cpp
+@@ -24,7 +24,7 @@
+ #include "usbdb.h"
+ #include "usbdevices.h"
+ 
+-#ifdef Q_OS_FREEBSD
++#if defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)
+ #include <sys/ioctl.h>
+ #endif
+ 
+@@ -133,7 +133,7 @@ QString USBDevice::dump()
+   if (!prname.isEmpty())
+     pr += "<td>(" + prname +")</td>";
+   r += i18n("<tr><td><i>Protocol</i></td>%1</tr>").arg(pr);
+-#ifndef Q_OS_FREEBSD
++#if !(defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD))
+   r += i18n("<tr><td><i>USB Version</i></td><td>%1.%2</td></tr>")
+     .arg(_verMajor,0,16)
+     .arg(QString::number(_verMinor,16).prepend('0').right(2));
+@@ -157,7 +157,7 @@ QString USBDevice::dump()
+ 
+   r += i18n("<tr><td><i>Speed</i></td><td>%1 Mbit/s</td></tr>").arg(_speed);
+   r += i18n("<tr><td><i>Channels</i></td><td>%1</td></tr>").arg(_channels);
+-#ifdef Q_OS_FREEBSD
++#if defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)
+ 	if ( _power )
+ 		r += i18n("<tr><td><i>Power Consumption</i></td><td>%1 mA</td></tr>").arg(_power);
+ 	else
+@@ -185,7 +185,7 @@ QString USBDevice::dump()
+ }
+ 
+ 
+-#ifndef Q_OS_FREEBSD
++#if !(defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD))
+ bool USBDevice::parse(QString fname)
+ {
+   _devices.clear();
+@@ -325,8 +325,10 @@ bool USBDevice::parse(QString fname)
+ 				}
+ 			}
+ 			controller.close();
++#ifndef Q_OS_NETBSD
+ 		} else {
+ 			error = true;
++#endif
+ 		}
+ 		controller.setName( QString::fromLocal8Bit("/dev/usb%1").arg(i++) );
+ 	}
