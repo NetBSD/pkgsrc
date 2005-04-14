@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:48:15 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/14 21:35:51 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG}
 DISTFILES=		X11R${XORG_VER}-src1.tar.gz X11R${XORG_VER}-src2.tar.gz \
