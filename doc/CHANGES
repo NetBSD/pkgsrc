@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9845 2005/04/14 05:46:45 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9846 2005/04/14 13:47:15 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2010,3 +2010,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated hamlib to 1.2.4 [wulf 2005-04-14]
 	Updated dspam to 3.4.4 [xtraeme 2005-04-14]
 	Updated sqlite3 to 3.2.1 [xtraeme 2005-04-14]
+	Updated kphone to 4.1.0 [schwarz 2005-04-14]
