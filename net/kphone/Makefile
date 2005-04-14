@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:49 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/14 13:46:04 schwarz Exp $
 
-DISTNAME=		kphone-4.0.5
+DISTNAME=		kphone-4.1.0
 CATEGORIES=		net comms
 MASTER_SITES=		http://www.wirlab.net/kphone/
 
@@ -14,7 +14,7 @@ WRKSRC=			${WRKDIR}/kphone
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
-CONFIGURE_ENV=		QTDIR="${QTDIR}"
+CONFIGURE_ENV+=		QTDIR="${QTDIR}"
 
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
@@ -25,6 +25,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/icons/*.png ${PREFIX}/share/kphone/icons
 
 .include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
