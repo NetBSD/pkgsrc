@@ -52,6 +52,7 @@ sslcrtdir="$confdir/ssl.crt"
 sslcsrdir="$confdir/ssl.csr"
 sslkeydir="$confdir/ssl.key"
 sslprmdir="$confdir/ssl.prm"
+sslcrldir="$confdir/ssl.crl"
 
 if [ ! -d "${sslcrtdir}" ]; then
     echo "Creating ${sslcrtdir}"
@@ -68,6 +69,10 @@ fi
 if [ ! -d "${sslprmdir}" ]; then
     echo "Creating ${sslprmdir}"
     mkdir "${sslprmdir}" || exit 1
+fi
+if [ ! -d "${sslcrldir}" ]; then
+    echo "Creating ${sslcrldir}"
+    mkdir "${sslcrldir}" || exit 1
 fi
 
 #   some optional terminal sequences
