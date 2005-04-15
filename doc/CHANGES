@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9855 2005/04/15 12:15:49 wiz Exp $
+$NetBSD: CHANGES,v 1.9856 2005/04/15 12:44:20 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2022,3 +2022,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ObjectiveLib-0.9 [rh 2005-04-15]
 	Updated curl to 7.13.2 [adam 2005-04-15]
 	Updated pkgconfig to 0.17.1 [wiz 2005-04-15]
+	Added selectwm-0.4.1 [agc 2005-04-15]
