@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9848 2005/04/15 04:55:57 rh Exp $
+$NetBSD: CHANGES,v 1.9849 2005/04/15 04:56:52 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2013,3 +2013,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated kphone to 4.1.0 [schwarz 2005-04-14]
 	Updated gld to 1.5.1 [xtraeme 2005-04-14]
 	Updated libcdaudio to 0.99.12nb1 [rh 2005-04-15]
+	Updated gnome-vfs to 1.0.5nb8 [rh 2005-04-15]
