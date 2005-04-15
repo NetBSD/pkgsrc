@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9856 2005/04/15 12:44:20 agc Exp $
+$NetBSD: CHANGES,v 1.9857 2005/04/15 12:55:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2023,3 +2023,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated curl to 7.13.2 [adam 2005-04-15]
 	Updated pkgconfig to 0.17.1 [wiz 2005-04-15]
 	Added selectwm-0.4.1 [agc 2005-04-15]
+	Updated glib2 to 2.6.4 [wiz 2005-04-15]
