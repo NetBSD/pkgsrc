@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/01/26 07:01:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/15 05:15:55 schmonz Exp $
 #
 
-DISTNAME=		djbdns-run-20050126
+DISTNAME=		djbdns-run-20050415
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -32,7 +32,7 @@ PKG_USERS+=		axfrdns:djbdns::axfrdns
 PKG_USERS+=		dnscache:djbdns::dnscache
 PKG_USERS+=		rbldns:djbdns::rbldns
 PKG_USERS+=		tinydns:djbdns::tinydns
-RCD_SCRIPTS=		axfrdns dnscache rbldns tinydns
+RCD_SCRIPTS=		axfrdns djbdns dnscache rbldns tinydns
 FILES_SUBST+=		PKGNAME=${PKGNAME}
 
 INSTALLATION_DIRS=	bin share/doc/djbdns-run

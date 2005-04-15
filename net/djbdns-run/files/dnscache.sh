@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dnscache.sh,v 1.3 2004/12/29 16:35:41 schmonz Exp $
+# $NetBSD: dnscache.sh,v 1.4 2005/04/15 05:15:55 schmonz Exp $
 #
 # @PKGNAME@ script to control dnscache (caching DNS resolver)
 #
@@ -12,11 +12,14 @@
 name="dnscache"
 
 # User-settable rc.conf variables and their default values:
-dnscache_ip=${dnscache_ip-"127.0.0.1"}
-dnscache_ipsend=${dnscache_ipsend-"0.0.0.0"}
-dnscache_size=${dnscache_size-"1000000"}
-dnscache_datalimit=${dnscache_datalimit-"3000000"}
-dnscache_logcmd=${dnscache_logcmd-"@LOCALBASE@/bin/setuidgid dnslog logger -t nb${name} -p daemon.info"}
+: ${dnscache_postenv:=""}
+: ${dnscache_ip:="127.0.0.1"}
+: ${dnscache_ipsend:="0.0.0.0"}
+: ${dnscache_size:="1000000"}
+: ${dnscache_datalimit:="3000000"}
+: ${dnscache_log:="YES"}
+: ${dnscache_logcmd:="logger -t nb${name} -p daemon.info"}
+: ${dnscache_nologcmd:="@LOCALBASE@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -30,7 +33,10 @@ start_precmd="dnscache_precmd"
 
 dnscache_precmd()
 {
- 	command="@SETENV@ - ROOT=@PKG_SYSCONFDIR@/dnscache IP=${dnscache_ip} IPSEND=${dnscache_ipsend} CACHESIZE=${dnscache_size} @LOCALBASE@/bin/envuidgid dnscache @LOCALBASE@/bin/softlimit -o250 -d ${dnscache_datalimit} @LOCALBASE@/bin/dnscache </dev/random 2>&1 | ${dnscache_logcmd}"
+	if [ -f /etc/rc.subr ]; then
+		checkyesno dnscache_log || dnscache_logcmd=${dnscache_nologcmd}
+	fi
+ 	command="@SETENV@ - ${dnscache_postenv} ROOT=@PKG_SYSCONFDIR@/dnscache IP=${dnscache_ip} IPSEND=${dnscache_ipsend} CACHESIZE=${dnscache_size} @LOCALBASE@/bin/envuidgid dnscache @LOCALBASE@/bin/softlimit -o250 -d ${dnscache_datalimit} @LOCALBASE@/bin/dnscache </dev/random 2>&1 | @LOCALBASE@/bin/setuidgid dnslog ${dnscache_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
