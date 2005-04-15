@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9859 2005/04/15 14:16:36 wiz Exp $
+$NetBSD: CHANGES,v 1.9860 2005/04/15 14:36:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2026,3 +2026,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated glib2 to 2.6.4 [wiz 2005-04-15]
 	Updated gtk2+ to 2.6.7 [wiz 2005-04-15]
 	Updated p7zip to 4.16 [wiz 2005-04-15]
+	Added acroread7-7.0 [markd 2005-04-15]
