@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9858 2005/04/15 13:48:24 wiz Exp $
+$NetBSD: CHANGES,v 1.9859 2005/04/15 14:16:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2025,3 +2025,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added selectwm-0.4.1 [agc 2005-04-15]
 	Updated glib2 to 2.6.4 [wiz 2005-04-15]
 	Updated gtk2+ to 2.6.7 [wiz 2005-04-15]
+	Updated p7zip to 4.16 [wiz 2005-04-15]
