@@ -1,0 +1,52 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/04/15 14:23:31 markd Exp $
+
+--- INSTALL.orig	2005-03-12 14:50:00.000000000 +1300
++++ INSTALL
+@@ -82,7 +82,7 @@ OutputLicense ()
+   fi
+ 
+  TypeCheck $PAGER 
+-  if  [ $? -ne 0 ] || [ -z "$PAGER" ] ; then
++  if  [ $? -eq 0 ] || [ -z "$PAGER" ] ; then
+     command=cat
+     TypeCheck pg
+     if [ $? -eq 0 ] ; then 
+@@ -143,6 +143,8 @@ PrintRequiredFree()
+ 
+         if [ `uname -s` = "Linux" ] ; then
+           size=`ls -lLn "$i" | ( read perm links owner group size date ; echo $size )`
++        elif [ `uname -s|sed -e 's|.*\(...\)|\\1|'` = "BSD" ] ; then
++          size=`ls -lL "$i" | ( read perm links owner group size date ; echo $size )`
+         else
+           size=`ls -lLon "$i" | ( read perm links owner size date ; echo $size )`
+         fi
+@@ -223,6 +225,8 @@ GetInstallDirectory ()
+     AIX)
+       defdir="/usr/lpp/Adobe/Acrobat7.0"
+       ;;
++    NetBSD)
++      ;;
+   esac
+ 
+   while [ -z "$InstallDir" ] ; do
+@@ -560,6 +564,20 @@ case "$OSname" in
+     ReadDefaultNum="$ReadIntelLinuxNum"
+     DefaultName="Intel/Linux"
+     ;;
++  NetBSD)
++    MachArch=`uname -p`
++    case "$MachArch" in
++      i386)
++        ReadDefaultNum="$ReadIntelLinuxNum"
++        DefaultName="Intel/Linux"
++        ;;
++      sparc*)
++        ReadDefaultNum="$ReadSparcSolarisNum"
++        DefaultName="SPARC/Solaris 2.x"
++        ;;
++    esac
++    ;;
++
+ esac
+ 
+ if  [ -z "$ReadDefaultNum" ] ; then

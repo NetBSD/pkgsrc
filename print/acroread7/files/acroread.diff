@@ -1,0 +1,40 @@
+--- acroread.orig	2005-03-12 14:50:00.000000000 +1300
++++ acroread	2005-03-16 23:59:20.000000000 +1300
+@@ -14,7 +14,7 @@
+  ScriptDirectory="`pwd 2> /dev/null`"
+  cd "$cwd"
+ fi
+-install_dir=`dirname "$ScriptDirectory"`/Reader
++install_dir=@PREFIX@/Acrobat7/Reader
+ 
+ 
+ #
+@@ -172,6 +172,19 @@
+     ACRO_CONFIG=intellinux
+     export ACRO_CONFIG
+     ;;
++   NetBSD)
++     machine_type=`uname -p`
++     case "$machine_type" in
++       i386)
++         ACRO_CONFIG=intellinux
++         export ACRO_CONFIG
++         ;;
++       sparc*)
++         ACRO_CONFIG=sparcsolaris
++         export ACRO_CONFIG
++         ;;
++     esac
++     ;;
+ esac
+ 
+ if [ -z "$ACRO_CONFIG" ] ; then
+@@ -202,7 +215,7 @@
+     ;;
+ esac
+ 
+-DefaultPSRESPATH="$HOME/psres:$HOME/fonts:/usr/psres"
++DefaultPSRESPATH="$HOME/psres:$HOME/fonts:/usr/psres:@ACROREAD_FONTPATH@"
+ if [ -z "$PSRESOURCEPATH" ] ; then
+   PSRESOURCEPATH="$DefaultPSRESPATH"
+ else
