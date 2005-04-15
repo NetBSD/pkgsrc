@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3399 2005/04/15 10:47:43 adam Exp $
+$NetBSD: TODO,v 1.3400 2005/04/15 11:33:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -326,6 +326,7 @@ Suggested package updates
 	o bonobo-conf-0.16
 	o boson-0.10
 	o browser-bookmarks-menu-0.4
+	o bsflite-0.80 [pkg/29964]
 	o btparse-0.34
 	o bugzilla-2.19.2
 	o bzflag-2.0.2
@@ -417,6 +418,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enigma-0.90
 	o enscript-1.6.4
+	o epiphany-1.6.2
 	o erlang-10b-3
 	o esh-0.8.5
 	o et-2.60
@@ -442,9 +444,9 @@ Suggested package updates
 	o fox-1.4.11
 	o freeciv-sounds-3.0
 	o freetds-0.62.4
-	o ftpproxy-1.2.3
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
+	o g-wrap-1.9.6
 	o g2-0.50
 	o galeon-1.3.20
 	o gap-4r4p3
@@ -454,6 +456,7 @@ Suggested package updates
 	o gcombust-0.1.55
 	o gconfmm26-2.8.0?
 	o gcpio-2.6
+	o gcube-0.4
 	o gdb6-6.3.0
 	o gdeskcal-0.57.1
 	o gdm1-2.2.5.5
@@ -504,7 +507,7 @@ Suggested package updates
 	o gsharutils-4.3.78
 	o gtetrinet-0.7.8
 	o gtk-systrace-2003.06.23
-	o gtk2+-2.6.6
+	o gtk2+-2.6.7
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o guile-oops-1.0.2
@@ -625,6 +628,7 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.26
+	o mathomatic-12.2d
 	o mdd-20050318
 	o memcached-1.2
 	o memtest86-3.2
@@ -845,6 +849,7 @@ Suggested package updates
 	o pim6sd-20040824a
 	o pinentry-0.7.2
 	o pircbot-1.4.2
+	o pkgconfig-0.17.1
 	o plan-1.9
 	o plib-1.8.4
 	o pload-0.9.5
@@ -863,6 +868,7 @@ Suggested package updates
 	o pscal-1.16
 	o psiconv-0.9.7
 	o psmisc-21.5
+	o pstoedit-3.40
 	o pstree-2.26
 	o pth-2.0.4
 	o puf-0.93.3
@@ -1099,9 +1105,10 @@ Suggested package updates
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o wdm-1.28
-	o webmin-1.190
+	o webmin-1.200
 	o weechat-0.1.1
 	o weewm-0.01
+	o wesnoth-0.9.0
 	o winbind-3.0.13
 	o windowlab-1.26
 	o wmakerconf-2.11
