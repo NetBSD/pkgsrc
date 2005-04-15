@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9861 2005/04/15 16:37:09 tron Exp $
+$NetBSD: CHANGES,v 1.9862 2005/04/15 20:43:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2028,3 +2028,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p7zip to 4.16 [wiz 2005-04-15]
 	Added acroread7-7.0 [markd 2005-04-15]
 	Updated pine to 4.62nb2 [tron 2005-04-15]
+	Updated ezmlm-idx to 0.440 [schmonz 2005-04-15]
