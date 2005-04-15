@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/04/15 15:26:48 hira Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/15 16:38:07 hira Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
@@ -20,8 +20,8 @@ PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 XORG_PLIST_ENTRY=	${OPSYS}
 .if ${OPSYS} != "Darwin"
 XORG_PLIST_ENTRY+=	i18n
-.  if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64) || \
-      !empty(MACHINE_ARCH:Msparc64)
+.  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
+      ${MACHINE_ARCH} == "sparc64"
 XORG_PLIST_ENTRY+=	DGA-common
 .  endif
 .endif
