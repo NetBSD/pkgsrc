@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3401 2005/04/15 12:15:49 wiz Exp $
+$NetBSD: TODO,v 1.3402 2005/04/15 12:55:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -477,7 +477,6 @@ Suggested package updates
 	o gkrellm1-moon-0.6
 	o gkrellm1-snmp-0.21
 	o gkrellm1-xmms-0.5.8
-	o glib-2.6.4
 	o gliv-1.9.2
 	o gnats-4.1.0
 	o gnet1-1.1.9
