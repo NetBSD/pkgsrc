@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.1 2005/04/15 00:00:21 jlam Exp $
+# $NetBSD: automake.mk,v 1.2 2005/04/15 05:30:48 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU automake.
 #
@@ -67,7 +67,10 @@ _TOOLS_AUTOMAKE.automake=	automake	automake-1.4		\
 
 _TOOLS_AUTOMAKE_LINKS=	# empty
 
-.if !empty(USE_TOOLS:Mautomake)
+.if !defined(TOOLS_IGNORE.automake) && !empty(USE_TOOLS:Mautomake)
+.  if !empty(PKGPATH:Mdevel/automake)
+MAKEFLAGS+=		TOOLS_IGNORE.automake=
+.  else
 AUTOMAKE_REQD?=		1.9
 BUILD_DEPENDS+=		automake>=${AUTOMAKE_REQD}:../../devel/automake
 USE_TOOLS+=		autoconf
@@ -86,9 +89,13 @@ TOOLS_REAL_CMD.automake=	${LOCALBASE}/bin/automake
 #
 ACLOCAL=	${TOOLS_CMD.aclocal}
 AUTOMAKE=	${TOOLS_CMD.automake}
+.  endif
 .endif
 
-.if !empty(USE_TOOLS:Mautomake14)
+.if !defined(TOOLS_IGNORE.automake14) && !empty(USE_TOOLS:Mautomake14)
+.  if !empty(PKGPATH:Mdevel/automake14)
+MAKEFLAGS+=		TOOLS_IGNORE.automake14=
+.  else
 AUTOMAKE_REQD?=		1.4
 BUILD_DEPENDS+=		automake14>=${AUTOMAKE_REQD}:../../devel/automake14
 USE_TOOLS+=		autoconf213
@@ -107,6 +114,7 @@ TOOLS_REAL_CMD.automake=	${LOCALBASE}/bin/automake-1.4
 #
 ACLOCAL=	${TOOLS_CMD.aclocal}
 AUTOMAKE=	${TOOLS_CMD.automake}
+.  endif
 .endif
 
 # For every script that hasn't already been symlinked, we mark it as
