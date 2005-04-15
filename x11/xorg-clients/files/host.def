@@ -1,4 +1,4 @@
-/* $NetBSD: host.def,v 1.5 2005/03/01 19:00:11 xtraeme Exp $ */
+/* $NetBSD: host.def,v 1.6 2005/04/15 15:31:14 hira Exp $ */
 
 #define ProjectRoot @PREFIX@
 #define BuildHtmlManPages NO
@@ -66,3 +66,12 @@
 
 #define XdmDir @PKG_SYSCONFDIR@
 #define XdmEgDir @EGDIR@
+
+#ifndef DarwinArchitecture
+#  if defined(i386Architecture) || defined(AMD64Architecture) || \
+      defined(Sparc64Architecture)
+#define BuildXF86DGA YES
+#  else
+#define BuildXF86DGA NO
+#  endif
+#endif
