@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/08/30 22:51:15 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/04/15 18:40:50 kristerw Exp $
 #
 
 DISTNAME=		compat12-${MACHINE_ARCH}
@@ -32,7 +32,7 @@ FILES_SUBST+=		LDCONFIG=${LDCONFIG}
     (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "sparc")
 EMULSUBDIR=		emul/aout
 COMPAT_LIBDIR=		${EMULSUBDIR}/usr/lib
-.else
+.elif ${OPSYS} == "NetBSD"
 LOCALBASE=		/usr
 COMPAT_LIBDIR=		lib
 .endif

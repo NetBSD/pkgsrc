@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/02/27 22:30:43 veego Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/15 18:40:50 kristerw Exp $
 #
 
 DISTNAME=		compat14-${MACHINE_ARCH}-${VERSION}
@@ -39,7 +39,7 @@ FILES_SUBST+=		LDCONFIG=${LDCONFIG}
 EMULSUBDIR=		emul/aout
 COMPAT_LIBDIR=		${EMULSUBDIR}/usr/lib
 COMPAT_XLIBDIR=		${EMULSUBDIR}/usr/X11R6/lib
-.else
+.elif ${OPSYS} == "NetBSD"
 LOCALBASE=		/usr
 COMPAT_LIBDIR=		lib
 COMPAT_XLIBDIR=		X11R6/lib
