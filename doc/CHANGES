@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9849 2005/04/15 04:56:52 rh Exp $
+$NetBSD: CHANGES,v 1.9850 2005/04/15 04:57:44 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2014,3 +2014,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gld to 1.5.1 [xtraeme 2005-04-14]
 	Updated libcdaudio to 0.99.12nb1 [rh 2005-04-15]
 	Updated gnome-vfs to 1.0.5nb8 [rh 2005-04-15]
+	Updated gnustep-base to 1.10.3 [rh 2005-04-15]
