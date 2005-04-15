@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/15 21:33:27 hira Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/04/15 21:53:38 hira Exp $
 ${X11ROOT_PREFIX}/bin/X
 ${X11ROOT_PREFIX}/bin/Xnest
 ${X11ROOT_PREFIX}/bin/Xprt
@@ -998,15 +998,15 @@ ${X11ROOT_PREFIX}/bin/Xorg
 ${X11ROOT_PREFIX}/bin/getconfig
 ${X11ROOT_PREFIX}/bin/getconfig.pl
 ${X11ROOT_PREFIX}/bin/gtf
-${X11ROOT_PREFIX}/bin/inb
-${X11ROOT_PREFIX}/bin/inl
-${X11ROOT_PREFIX}/bin/inw
-${X11ROOT_PREFIX}/bin/ioport
+${IOPORT}${X11ROOT_PREFIX}/bin/inb
+${IOPORT}${X11ROOT_PREFIX}/bin/inl
+${IOPORT}${X11ROOT_PREFIX}/bin/inw
+${IOPORT}${X11ROOT_PREFIX}/bin/ioport
 ${X11ROOT_PREFIX}/bin/mmapr
 ${X11ROOT_PREFIX}/bin/mmapw
-${X11ROOT_PREFIX}/bin/outb
-${X11ROOT_PREFIX}/bin/outl
-${X11ROOT_PREFIX}/bin/outw
+${IOPORT}${X11ROOT_PREFIX}/bin/outb
+${IOPORT}${X11ROOT_PREFIX}/bin/outl
+${IOPORT}${X11ROOT_PREFIX}/bin/outw
 ${X11ROOT_PREFIX}/bin/pcitweak
 ${SCANPCI}${X11ROOT_PREFIX}/bin/scanpci
 ${X11ROOT_PREFIX}/bin/xorgcfg
