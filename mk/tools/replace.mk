@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.1 2005/04/15 00:00:21 jlam Exp $
+# $NetBSD: replace.mk,v 1.2 2005/04/15 06:52:25 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied tools
 # with pkgsrc versions.  The replacements are placed under ${TOOLS_DIR}
@@ -19,6 +19,12 @@
 #
 # Adding either "yacc" or "bison" to USE_TOOLS will cause a "yacc" tool
 # to be generated that may be used as a yacc-replacement.
+#
+# By default, any dependencies on the pkgsrc tools are build dependencies,
+# but this may be changed by explicitly setting TOOLS_DEPENDS.<tool>,
+# e.g.:
+#
+#	TOOLS_DEPENDS.tbl=	DEPENDS
 #
 
 # Continue to allow USE_GNU_TOOLS and USE_TBL until packages have been
@@ -113,6 +119,12 @@ _TOOLS_USE_PKGSRC.${_t_}?=	yes
 .endfor
 .undef _t_
 
+# TOOLS_DEPENDS.<prog> defaults to BUILD_DEPENDS.
+.for _t_ in ${_TOOLS_REPLACE_LIST}
+TOOLS_DEPENDS.${_t_}?=	BUILD_DEPENDS
+.endfor
+.undef _t_
+
 ######################################################################
 
 # For each of the blocks below, we create either symlinks or wrappers
@@ -126,7 +138,7 @@ _TOOLS_USE_PKGSRC.${_t_}?=	yes
 MAKEFLAGS+=			TOOLS_IGNORE.awk=
 .  else
 .    if !empty(_TOOLS_USE_PKGSRC.awk:M[yY][eE][sS])
-BUILD_DEPENDS+=			gawk>=3.1.1:../../lang/gawk
+${TOOLS_DEPENDS.awk}+=		gawk>=3.1.1:../../lang/gawk
 TOOLS_REAL_CMD.awk=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
 ${_TOOLS_VARNAME.awk}=		${TOOLS_REAL_CMD.awk}
 .    endif
@@ -140,7 +152,7 @@ TOOLS_CMD.awk=			${TOOLS_DIR}/bin/awk
 MAKEFLAGS+=			TOOLS_IGNORE.bison=
 .  else
 .    if !empty(_TOOLS_USE_PKGSRC.bison:M[yY][eE][sS])
-BUILD_DEPENDS+=			bison>=1.0:../../devel/bison
+${TOOLS_DEPENDS.bison}+=	bison>=1.0:../../devel/bison
 TOOLS_REAL_CMD.bison=		${LOCALBASE}/bin/bison
 .    endif
 TOOLS_WRAP+=			bison
@@ -155,7 +167,7 @@ ${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_ARGS.bison}
 MAKEFLAGS+=			TOOLS_IGNORE.gmake=
 .  else
 .    if !empty(_TOOLS_USE_PKGSRC.gmake:M[yY][eE][sS])
-BUILD_DEPENDS+=			gmake>=3.78:../../devel/gmake
+${TOOLS_DEPENDS.gmake}+=	gmake>=3.78:../../devel/gmake
 TOOLS_REAL_CMD.gmake=		${LOCALBASE}/bin/gmake
 ${_TOOLS_VARNAME.gmake}=	${TOOLS_REAL_CMD.gmake}
 .    endif
@@ -169,7 +181,7 @@ TOOLS_CMD.gmake=		${TOOLS_DIR}/bin/gmake
 MAKEFLAGS+=			TOOLS_IGNORE.grep=
 .  else
 .    if !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
-BUILD_DEPENDS+=			grep>=2.5.1:../../textproc/grep
+${TOOLS_DEPENDS.grep}+=		grep>=2.5.1:../../textproc/grep
 TOOLS_REAL_CMD.grep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
 ${_TOOLS_VARNAME.grep}=		${TOOLS_REAL_CMD.grep}
 .    endif
@@ -197,7 +209,7 @@ TOOLS_CMD.lex=			${TOOLS_DIR}/bin/lex
 MAKEFLAGS+=			TOOLS_IGNORE.m4=
 .  else
 .    if !empty(_TOOLS_USE_PKGSRC.m4:M[yY][eE][sS])
-BUILD_DEPENDS+=			m4>=1.4:../../devel/m4
+${TOOLS_DEPENDS.m4}+=		m4>=1.4:../../devel/m4
 TOOLS_REAL_CMD.m4=		${LOCALBASE}/bin/gm4
 ${_TOOLS_VARNAME.m4}=		${TOOLS_REAL_CMD.m4}
 .    endif
@@ -211,7 +223,7 @@ TOOLS_CMD.m4=			${TOOLS_DIR}/bin/m4
 MAKEFLAGS+=			TOOLS_IGNORE.patch=
 .  else
 .    if !empty(_TOOLS_USE_PKGSRC.patch:M[yY][eE][sS])
-BUILD_DEPENDS+=			patch>=2.2:../../devel/patch
+${TOOLS_DEPENDS.patch}+=	patch>=2.2:../../devel/patch
 TOOLS_REAL_CMD.patch=		${LOCALBASE}/bin/gpatch
 ${_TOOLS_VARNAME.patch}=	${TOOLS_REAL_CMD.patch}
 .    endif
@@ -239,7 +251,7 @@ TOOLS_CMD.perl=			${TOOLS_DIR}/bin/perl
 MAKEFLAGS+=			TOOLS_IGNORE.sed=
 .  else
 .    if !empty(_TOOLS_USE_PKGSRC.sed:M[yY][eE][sS])
-BUILD_DEPENDS+=			gsed>=3.0.2:../../textproc/gsed
+${TOOLS_DEPENDS.sed}+=		gsed>=3.0.2:../../textproc/gsed
 TOOLS_REAL_CMD.sed=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sed
 ${_TOOLS_VARNAME.sed}=		${TOOLS_REAL_CMD.sed}
 .    endif
@@ -253,7 +265,7 @@ TOOLS_CMD.sed=			${TOOLS_DIR}/bin/sed
 MAKEFLAGS+=			TOOLS_IGNORE.tbl=
 .  else
 .    if !empty(_TOOLS_USE_PKGSRC.tbl:M[yY][eE][sS])
-BUILD_DEPENDS+=			groff>=1.19nb4:../../textproc/groff
+${TOOLS_DEPENDS.tbl}+=		groff>=1.19nb4:../../textproc/groff
 TOOLS_REAL_CMD.tbl=		${LOCALBASE}/bin/tbl
 ${_TOOLS_VARNAME.tbl}=		${TOOLS_REAL_CMD.tbl}
 .    endif
@@ -267,7 +279,7 @@ TOOLS_CMD.tbl=			${TOOLS_DIR}/bin/tbl
 MAKEFLAGS+=			TOOLS_IGNORE.yacc=
 .  else
 .    if !empty(_TOOLS_USE_PKGSRC.yacc:M[yY][eE][sS])
-BUILD_DEPENDS+=			bison>=1.0:../../devel/bison
+${TOOLS_DEPENDS.yacc}+=		bison>=1.0:../../devel/bison
 TOOLS_REAL_CMD.yacc=		${LOCALBASE}/bin/bison
 TOOLS_ARGS.yacc=		-y
 ${_TOOLS_VARNAME.yacc}=		${TOOLS_REAL_CMD.yacc} ${TOOLS_ARGS.yacc}
