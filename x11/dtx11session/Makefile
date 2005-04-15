@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 22:56:22 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/15 19:06:16 kristerw Exp $
 
 DISTNAME=	dtxsession-1.0
 CATEGORIES=	x11
@@ -13,7 +13,9 @@ ONLY_FOR_PLATFORM=	SunOS-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "SunOS"
 LOCALBASE=	/usr/dt
+.endif
 NO_BUILD=	YES
 NO_CHECKSUM=	YES
 NO_MTREE=	YES
