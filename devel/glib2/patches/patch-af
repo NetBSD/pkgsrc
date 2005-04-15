@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.6 2005/03/02 15:38:08 wiz Exp $
+$NetBSD: patch-af,v 1.7 2005/04/15 12:54:38 wiz Exp $
 
---- glib/libcharset/Makefile.in.orig	2005-02-28 06:29:39.000000000 +0100
+--- glib/libcharset/Makefile.in.orig	2005-04-06 16:20:44.000000000 +0200
 +++ glib/libcharset/Makefile.in
-@@ -537,18 +537,6 @@ uninstall-am: uninstall-info-am uninstal
+@@ -543,18 +543,6 @@ uninstall-am: uninstall-info-am uninstal
  	uninstall-am uninstall-info-am uninstall-local
  
  install-exec-local: all-local
