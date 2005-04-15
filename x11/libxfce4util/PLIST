@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/01/17 12:56:13 martti Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/04/15 04:23:20 martti Exp $
 include/xfce4/libxfce4util/debug.h
 include/xfce4/libxfce4util/i18n.h
 include/xfce4/libxfce4util/libxfce4util-config.h
@@ -44,7 +44,7 @@ share/xfce4/m4/i18n.m4
 @dirrm include/xfce4/libxfce4util
 @dirrm include/xfce4
 @dirrm share/xfce4/m4
-@dirrm share/xfce4
 @dirrm share/gtk-doc/html/libxfce4util
+@unexec ${RMDIR} %D/share/xfce4 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gtk-doc/html 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || ${TRUE}
