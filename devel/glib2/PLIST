@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2005/03/02 15:38:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2005/04/15 12:54:38 wiz Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -171,7 +171,6 @@ share/doc/glib/ix05.html
 share/doc/glib/left.png
 share/doc/glib/mainloop-states.gif
 share/doc/glib/right.png
-share/doc/glib/style.css
 share/doc/glib/tools.html
 share/doc/glib/up.png
 share/doc/gobject/GTypeModule.html
@@ -204,7 +203,6 @@ share/doc/gobject/pr01.html
 share/doc/gobject/right.png
 share/doc/gobject/rn01.html
 share/doc/gobject/rn02.html
-share/doc/gobject/style.css
 share/doc/gobject/up.png
 share/glib-2.0/gettext/mkinstalldirs
 share/glib-2.0/gettext/po/Makefile.in.in
@@ -236,6 +234,7 @@ ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/glib20.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/glib20.mo
@@ -258,6 +257,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/glib20.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/glib20.mo
