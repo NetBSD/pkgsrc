@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/03/18 07:59:09 martti Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/04/15 04:23:20 martti Exp $
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libxfcegui4.mo
@@ -110,4 +110,4 @@ share/xfce4/xfce-svg-test.svg
 @dirrm lib/xfce4/modules
 @dirrm lib/xfce4
 @dirrm share/gtk-doc/html/libxfcegui4
-@dirrm share/xfce4/mime
+@unexec ${RMDIR} %D/share/xfce4/mime 2>/dev/null || ${TRUE}
