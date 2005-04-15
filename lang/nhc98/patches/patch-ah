@@ -1,0 +1,96 @@
+$NetBSD: patch-ah,v 1.1 2005/04/15 21:58:32 kristerw Exp $
+
+--- Makefile.orig	Fri Apr 15 23:07:16 2005
++++ Makefile	Fri Apr 15 23:10:52 2005
+@@ -132,13 +132,13 @@
+ 
+ TARGDIR= targets
+ TARGETS= runtime prelude libraries greencard hp2graph \
+-	 profruntime profprelude profprelude-$(CC) \
+-	 timeruntime timeprelude timeprelude-$(CC) \
++	 profruntime profprelude profprelude-${BUILDCOMP} \
++	 timeruntime timeprelude timeprelude-${BUILDCOMP} \
+ 	 timetraceruntime timetraceprelude \
+-	 compiler-nhc compiler-hbc compiler-ghc compiler-$(CC) \
+-	 hmake-nhc hmake-hbc hmake-ghc hmake-$(CC) \
+-	 greencard-nhc greencard-hbc greencard-ghc greencard-$(CC) \
+-	 prelude-$(CC) pragma-$(CC) libraries-$(CC)
++	 compiler-nhc compiler-hbc compiler-ghc compiler-${BUILDCOMP} \
++	 hmake-nhc hmake-hbc hmake-ghc hmake-${BUILDCOMP} \
++	 greencard-nhc greencard-hbc greencard-ghc greencard-${BUILDCOMP} \
++	 prelude-${BUILDCOMP} pragma-${BUILDCOMP} libraries-${BUILDCOMP}
+ 
+ .PHONY: default basic all compiler help config install
+ 
+@@ -173,10 +173,10 @@
+ 								libraries
+ basic-ghc: $(PRAGMA) runtime hmake-ghc greencard-ghc compiler-ghc prelude \
+ 								libraries
+-basic-$(CC):   runtime prelude-$(CC) pragma-$(CC) compiler-$(CC) \
+-		 greencard-$(CC) hmake-$(CC) libraries-$(CC)
++basic-${BUILDCOMP}:   runtime prelude-${BUILDCOMP} pragma-${BUILDCOMP} compiler-${BUILDCOMP} \
++		 greencard-${BUILDCOMP} hmake-${BUILDCOMP} libraries-${BUILDCOMP}
+ 
+-all-$(BUILDCOMP): basic-$(BUILDCOMP) heapprofile timeprofile #hoodui
++all-${BUILDCOMP}: basic-$(BUILDCOMP) heapprofile timeprofile #hoodui
+ 
+ heapprofile: compiler profruntime profprelude-$(BUILDCOMP) hp2graph
+ timeprofile: compiler timeruntime timeprelude-$(BUILDCOMP)
+@@ -275,41 +275,41 @@
+ 	touch $(TARGDIR)/$(MACHINE)/timeprelude
+ 
+ 
+-$(TARGDIR)/$(MACHINE)/prelude-$(CC): $(PRELUDEC)
++$(TARGDIR)/$(MACHINE)/prelude-${BUILDCOMP}: $(PRELUDEC)
+ 	cd src/prelude;        $(MAKE) fromC relink
+-	touch $(TARGDIR)/$(MACHINE)/prelude-$(CC)
++	touch $(TARGDIR)/$(MACHINE)/prelude-${BUILDCOMP}
+ 	touch $(TARGDIR)/$(MACHINE)/prelude
+-$(TARGDIR)/$(MACHINE)/timeprelude-$(CC): $(PRELUDEC)
++$(TARGDIR)/$(MACHINE)/timeprelude-${BUILDCOMP}: $(PRELUDEC)
+ 	cd src/prelude;        $(MAKE) CFG=z fromC
+ 	cd src/prelude/$(MACHINE)/NHC; $(MAKE) CFG=z clean all
+ 	cd src/prelude;        $(MAKE) CFG=z relink
+-	touch $(TARGDIR)/$(MACHINE)/timeprelude-$(CC)
++	touch $(TARGDIR)/$(MACHINE)/timeprelude-${BUILDCOMP}
+ 	touch $(TARGDIR)/$(MACHINE)/timeprelude
+-$(TARGDIR)/$(MACHINE)/profprelude-$(CC): $(PRELUDEC)
++$(TARGDIR)/$(MACHINE)/profprelude-${BUILDCOMP}: $(PRELUDEC)
+ 	cd src/prelude;        $(MAKE) CFG=p fromC
+ 	cd src/prelude/$(MACHINE)/NHC; $(MAKE) CFG=p clean all
+ 	cd src/prelude;        $(MAKE) CFG=p relink
+-	touch $(TARGDIR)/$(MACHINE)/profprelude-$(CC)
++	touch $(TARGDIR)/$(MACHINE)/profprelude-${BUILDCOMP}
+ 	touch $(TARGDIR)/$(MACHINE)/profprelude
+-$(TARGDIR)/$(MACHINE)/compiler-$(CC): $(COMPILERC)
++$(TARGDIR)/$(MACHINE)/compiler-${BUILDCOMP}: $(COMPILERC)
+ 	cd src/compiler98;     $(MAKE) fromC
+ 	cd src/prelude/$(MACHINE)/NHC; $(MAKE) clean all	# Patch machine-specific parts.
+ 	cd src/prelude;        $(MAKE) relink
+ 	cd src/compiler98;     $(MAKE) relink
+-	touch $(TARGDIR)/$(MACHINE)/compiler-$(CC)
+-$(TARGDIR)/$(MACHINE)/greencard-$(CC): $(GREENCARDC)
++	touch $(TARGDIR)/$(MACHINE)/compiler-${BUILDCOMP}
++$(TARGDIR)/$(MACHINE)/greencard-${BUILDCOMP}: $(GREENCARDC)
+ 	cd src/greencard;      $(MAKE) fromC
+-	touch $(TARGDIR)/$(MACHINE)/greencard $(TARGDIR)/$(MACHINE)/greencard-$(CC)
+-$(TARGDIR)/$(MACHINE)/pragma-$(CC): script/hmake-PRAGMA.hc
++	touch $(TARGDIR)/$(MACHINE)/greencard $(TARGDIR)/$(MACHINE)/greencard-${BUILDCOMP}
++$(TARGDIR)/$(MACHINE)/pragma-${BUILDCOMP}: script/hmake-PRAGMA.hc
+ 	script/nhc98 -o $(PRAGMA) script/hmake-PRAGMA.hc
+-	touch $(TARGDIR)/$(MACHINE)/pragma-$(CC)
+-$(TARGDIR)/$(MACHINE)/hmake-$(CC): $(HMAKEC)
++	touch $(TARGDIR)/$(MACHINE)/pragma-${BUILDCOMP}
++$(TARGDIR)/$(MACHINE)/hmake-${BUILDCOMP}: $(HMAKEC)
+ 	cd src/hmake;          $(MAKE) fromC config
+ 	cd src/interpreter;    $(MAKE) fromC
+-	touch $(TARGDIR)/$(MACHINE)/hmake-$(CC)
+-$(TARGDIR)/$(MACHINE)/libraries-$(CC): $(LIBRARIES)
++	touch $(TARGDIR)/$(MACHINE)/hmake-${BUILDCOMP}
++$(TARGDIR)/$(MACHINE)/libraries-${BUILDCOMP}: $(LIBRARIES)
+ 	cd src/libraries/base; $(MAKE) -f Makefile.nhc98 fromC
+-	touch $(TARGDIR)/$(MACHINE)/libraries-$(CC)
++	touch $(TARGDIR)/$(MACHINE)/libraries-${BUILDCOMP}
+ 
+ 
+ script/errnogen.c: script/GenerateErrNo.hs
