@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: axfrdns.sh,v 1.3 2004/12/29 16:35:41 schmonz Exp $
+# $NetBSD: axfrdns.sh,v 1.4 2005/04/15 05:15:55 schmonz Exp $
 #
 # @PKGNAME@ script to control axfrdns (DNS zone-transfer and TCP service)
 #
@@ -12,9 +12,14 @@
 name="axfrdns"
 
 # User-settable rc.conf variables and their default values:
-axfrdns_tcpflags=${axfrdns_tcpflags-"-vDRHl0"}
-axfrdns_datalimit=${axfrdns_datalimit-"300000"}
-axfrdns_logcmd=${axfrdns_logcmd-"@LOCALBASE@/bin/setuidgid dnslog logger -t nb${name} -p daemon.info"}
+: ${axfrdns_postenv:=""}
+: ${axfrdns_tcpflags:="-vDRHl0"}
+: ${axfrdns_tcpport:="53"}
+: ${axfrdns_datalimit:="300000"}
+: ${axfrdns_pretcpserver:=""}
+: ${axfrdns_log:="YES"}
+: ${axfrdns_logcmd:="logger -t nb${name} -p daemon.info"}
+: ${axfrdns_nologcmd:="@LOCALBASE@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -25,12 +30,15 @@ required_files="@PKG_SYSCONFDIR@/axfrdns/tcp.cdb"
 command="@LOCALBASE@/bin/tcpserver"
 procname=${name}
 start_precmd="axfrdns_precmd"
-extra_commands="cdb"
-cdb_cmd="axfrdns_cdb"
+extra_commands="reload cdb"
+reload_cmd="axfrdns_cdb"; cdb_cmd=${reload_cmd}
 
 axfrdns_precmd()
 {
- 	command="@SETENV@ - ROOT=@PKG_SYSCONFDIR@/tinydns IP=${tinydns_ip} @LOCALBASE@/bin/envuidgid axfrdns @LOCALBASE@/bin/softlimit -d ${axfrdns_datalimit} @LOCALBASE@/bin/argv0 @LOCALBASE@/bin/tcpserver ${name} ${axfrdns_tcpflags} -x @PKG_SYSCONFDIR@/axfrdns/tcp.cdb -- ${tinydns_ip} 53 @LOCALBASE@/bin/axfrdns </dev/null 2>&1 | ${axfrdns_logcmd}"
+	if [ -f /etc/rc.subr ]; then
+		checkyesno axfrdns_log || axfrdns_logcmd=${axfrdns_nologcmd}
+	fi
+ 	command="@SETENV@ - ${axfrdns_postenv} ROOT=@PKG_SYSCONFDIR@/tinydns IP=${tinydns_ip} @LOCALBASE@/bin/envuidgid axfrdns @LOCALBASE@/bin/softlimit -d ${axfrdns_datalimit} ${axfrdns_pretcpserver} @LOCALBASE@/bin/argv0 @LOCALBASE@/bin/tcpserver ${name} ${axfrdns_tcpflags} -x @PKG_SYSCONFDIR@/axfrdns/tcp.cdb -- ${tinydns_ip} ${axfrdns_tcpport} @LOCALBASE@/bin/axfrdns </dev/null 2>&1 | @LOCALBASE@/bin/setuidgid dnslog ${axfrdns_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
