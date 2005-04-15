@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2005/03/30 20:29:20 hira Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/15 21:33:27 hira Exp $
 ${X11ROOT_PREFIX}/bin/X
 ${X11ROOT_PREFIX}/bin/Xnest
 ${X11ROOT_PREFIX}/bin/Xprt
@@ -990,7 +990,7 @@ ${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeValidateModeLine.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/getconfig.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/gtf.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/pcitweak.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/${MAN_DIR}/scanpci.${MAN_SUFFIX}
+${SCANPCI}${X11ROOT_PREFIX}/${MAN_DIR}/scanpci.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xorgcfg.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xorgconfig.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/bin/XFree86
@@ -1008,7 +1008,7 @@ ${X11ROOT_PREFIX}/bin/outb
 ${X11ROOT_PREFIX}/bin/outl
 ${X11ROOT_PREFIX}/bin/outw
 ${X11ROOT_PREFIX}/bin/pcitweak
-${X11ROOT_PREFIX}/bin/scanpci
+${SCANPCI}${X11ROOT_PREFIX}/bin/scanpci
 ${X11ROOT_PREFIX}/bin/xorgcfg
 ${X11ROOT_PREFIX}/bin/xorgconfig
 ${X11ROOT_PREFIX}/include/X11/bitmaps/card.xbm
