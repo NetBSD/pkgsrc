@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.2 2005/04/15 06:52:25 jlam Exp $
+# $NetBSD: replace.mk,v 1.3 2005/04/15 16:01:23 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied tools
 # with pkgsrc versions.  The replacements are placed under ${TOOLS_DIR}
@@ -53,11 +53,15 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`yacc'' conflict in USE_TOOLS."
 # This is an exhaustive list of tools for which we have pkgsrc
 # replacements.
 #
-_TOOLS_REPLACE_LIST=	awk bison gmake grep lex m4 patch perl sed tbl yacc
+_TOOLS_REPLACE_LIST=	awk bison egrep fgrep file gmake grep lex m4	\
+			patch perl sed tbl yacc
 
 # TOOL variable names associated with each of the tools
 _TOOLS_VARNAME.awk=	AWK
 _TOOLS_VARNAME.bison=	YACC
+_TOOLS_VARNAME.egrep=	EGREP
+_TOOLS_VARNAME.fgrep=	FGREP
+_TOOLS_VARNAME.file=	FILE_CMD
 _TOOLS_VARNAME.gmake=	GMAKE
 _TOOLS_VARNAME.grep=	GREP
 _TOOLS_VARNAME.lex=	LEX
@@ -81,6 +85,15 @@ _TOOLS_USE_PLATFORM.awk=	FreeBSD-*-* Linux-*-* OpenBSD-*-*	\
 				NetBSD-1.[0-6]*-* DragonFly-*-*		\
 				SunOS-*-* Interix-*-*
 _TOOLS_USE_PLATFORM.bison=	Linux-*-*
+_TOOLS_USE_PLATFORM.egrep=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
+				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
+				SunOS-*-*
+_TOOLS_USE_PLATFORM.fgrep=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
+				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
+				SunOS-*-*
+_TOOLS_USE_PLATFORM.file=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
+				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
+				SunOS-*-*
 _TOOLS_USE_PLATFORM.gmake=	Darwin-*-*
 _TOOLS_USE_PLATFORM.grep=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
 				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
@@ -159,6 +172,48 @@ TOOLS_WRAP+=			bison
 TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
 TOOLS_ARGS.bison=		-y
 ${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_ARGS.bison}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.egrep) && !empty(USE_TOOLS:Megrep)
+.  if !empty(PKGPATH:Mtextproc/grep)
+MAKEFLAGS+=			TOOLS_IGNORE.egrep=
+.  else
+.    if !empty(_TOOLS_USE_PKGSRC.egrep:M[yY][eE][sS])
+${TOOLS_DEPENDS.egrep}+=	grep>=2.5.1:../../textproc/grep
+TOOLS_REAL_CMD.egrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}egrep
+${_TOOLS_VARNAME.egrep}=	${TOOLS_REAL_CMD.egrep}
+.    endif
+TOOLS_SYMLINK+=			egrep
+TOOLS_CMD.egrep=		${TOOLS_DIR}/bin/egrep
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.fgrep) && !empty(USE_TOOLS:Mfgrep)
+.  if !empty(PKGPATH:Mtextproc/grep)
+MAKEFLAGS+=			TOOLS_IGNORE.fgrep=
+.  else
+.    if !empty(_TOOLS_USE_PKGSRC.fgrep:M[yY][eE][sS])
+${TOOLS_DEPENDS.fgrep}+=	grep>=2.5.1:../../textproc/grep
+TOOLS_REAL_CMD.fgrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}fgrep
+${_TOOLS_VARNAME.fgrep}=	${TOOLS_REAL_CMD.fgrep}
+.    endif
+TOOLS_SYMLINK+=			fgrep
+TOOLS_CMD.fgrep=		${TOOLS_DIR}/bin/fgrep
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.file) && !empty(USE_TOOLS:Mfile)
+.  if !empty(PKGPATH:Msysutils/file)
+MAKEFLAGS+=			TOOLS_IGNORE.file=
+.  else
+.    if !empty(_TOOLS_USE_PKGSRC.file:M[yY][eE][sS])
+${TOOLS_DEPENDS.file}+=		file>=4.13:../../sysutils/file
+TOOLS_REAL_CMD.file=		${LOCALBASE}/bin/file
+${_TOOLS_VARNAME.file}=	${TOOLS_REAL_CMD.file}
+.    endif
+TOOLS_SYMLINK+=			file
+TOOLS_CMD.file=			${TOOLS_DIR}/bin/file
 .  endif
 .endif
 
