@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2005/04/11 21:44:53 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/04/15 01:50:56 rh Exp $
 
 DISTNAME=	libcdaudio-0.99.12
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcdaudio/}
 
