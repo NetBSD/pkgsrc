@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.1 2005/04/15 00:00:21 jlam Exp $
+# $NetBSD: autoconf.mk,v 1.2 2005/04/15 05:30:48 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU autoconf.
 #
@@ -50,7 +50,10 @@ _TOOLS_AUTOCONF.ifnames=	ifnames		ifnames-2.13
 
 _TOOLS_AUTOCONF_LINKS=	# empty
 
-.if !empty(USE_TOOLS:Mautoconf)
+.if !defined(TOOLS_IGNORE.autoconf) && !empty(USE_TOOLS:Mautoconf)
+.  if !empty(PKGPATH:Mdevel/autoconf)
+MAKEFLAGS+=		TOOLS_IGNORE.autoconf=
+.  else
 AUTOCONF_REQD?=		2.50
 BUILD_DEPENDS+=		autoconf>=${AUTOCONF_REQD}:../../devel/autoconf
 
@@ -88,9 +91,13 @@ TOOLS_REAL_CMD.ifnames=		${LOCALBASE}/bin/ifnames
 AUTOCONF=	${TOOLS_CMD.autoconf}
 AUTOHEADER=	${TOOLS_CMD.autoheader}
 AUTORECONF=	${TOOLS_CMD.autoreconf}
+.  endif
 .endif
 
-.if !empty(USE_TOOLS:Mautoconf213)
+.if !defined(TOOLS_IGNORE.autoconf213) && !empty(USE_TOOLS:Mautoconf213)
+.  if !empty(PKGPATH:Mdevel/autoconf213)
+MAKEFLAGS+=		TOOLS_IGNORE.autoconf213=
+.  else
 AUTOCONF_REQD?=		2.13
 BUILD_DEPENDS+=		autoconf213>=${AUTOCONF_REQD}:../../devel/autoconf213
 
@@ -125,8 +132,9 @@ AUTOCONF=	${TOOLS_CMD.autoconf}
 AUTOHEADER=	${TOOLS_CMD.autoheader}
 AUTORECONF=	${TOOLS_CMD.autoreconf}
 
-.  if defined(USE_LIBTOOL)
+.    if defined(USE_LIBTOOL)
 pre-configure: tools-libtool-m4-override
+.    endif
 .  endif
 .endif
 
