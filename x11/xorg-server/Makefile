@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/15 21:33:27 hira Exp $
+# $NetBSD: Makefile,v 1.25 2005/04/15 21:53:38 hira Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-server-${XORG_VER}
@@ -63,6 +63,13 @@ BUILDLINK_PASSTHRU_DIRS+=	/System
 PLIST_SUBST+=	SCANPCI=
 .else
 PLIST_SUBST+=	SCANPCI='@comment '
+.endif
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "alpha" || \
+    ${MACHINE_ARCH} == "ia64" || ${MACHINE_ARCH} == "x86_64"
+PLIST_SUBST+=	IOPORT=
+.else
+PLIST_SUBST+=	IOPORT='@comment '
 .endif
 
 post-install:
