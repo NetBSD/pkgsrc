@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/02/07 14:13:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/04/15 14:16:08 wiz Exp $
 bin/7z
 bin/7za
 ${DYNAMIC_7Z}lib/7z/7z
@@ -24,6 +24,8 @@ ${DYNAMIC_7Z}lib/7z/Formats/deb.dll
 ${DYNAMIC_7Z}lib/7z/Formats/gz.dll
 ${DYNAMIC_7Z}lib/7z/Formats/rpm.dll
 ${DYNAMIC_7Z}lib/7z/Formats/split.dll
+man/man1/7z.1
+man/man1/7za.1
 share/doc/p7zip/README
 share/doc/p7zip/commands/add.htm
 share/doc/p7zip/commands/delete.htm
