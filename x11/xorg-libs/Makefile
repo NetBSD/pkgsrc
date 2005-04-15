@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/14 21:35:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/15 15:26:48 hira Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
@@ -18,13 +18,12 @@ BUILD_DEPENDS=		xorg-imake>=${XORG_VER}:../../x11/xorg-imake
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 XORG_PLIST_ENTRY=	${OPSYS}
-.if ${OPSYS} == "NetBSD"
-.  if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
-XORG_PLIST_ENTRY+=	NetBSD-i386
-.  endif
-.endif
 .if ${OPSYS} != "Darwin"
 XORG_PLIST_ENTRY+=	i18n
+.  if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64) || \
+      !empty(MACHINE_ARCH:Msparc64)
+XORG_PLIST_ENTRY+=	DGA-common
+.  endif
 .endif
 
 .include "../../meta-pkgs/xorg/Makefile.common"
