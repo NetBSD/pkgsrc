@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/04/14 21:40:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/15 21:33:27 hira Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-server-${XORG_VER}
@@ -55,6 +55,14 @@ USE_PERL5=	build # Yeah, we need this :-)
 BUILDLINK_PASSTHRU_DIRS+=	/System
 .else
 .include "options.mk"
+.endif
+
+.if ${MACHINE_ARCH} == "i386" || \
+    (${OPSYS} == "NetBSD" && \
+    (${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "powerpc"))
+PLIST_SUBST+=	SCANPCI=
+.else
+PLIST_SUBST+=	SCANPCI='@comment '
 .endif
 
 post-install:
