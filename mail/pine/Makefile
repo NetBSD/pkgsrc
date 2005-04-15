@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.103 2005/04/11 21:46:22 tv Exp $
+# $NetBSD: Makefile,v 1.104 2005/04/15 16:36:39 tron Exp $
 
 DISTNAME=	pine4.62
 PKGNAME=	pine-4.62
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
@@ -80,11 +80,13 @@ do-build:
 		EXTRALDFLAGS="${LDFLAGS} ${LIBS}"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/pine ${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/rpdump ${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/rpload ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/pine ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/rpdump ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/rpload ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pine
-	${INSTALL_MAN} ${WRKSRC}/doc/pine.1 ${PREFIX}/man/man1/pine.1
+	${INSTALL_MAN} ${WRKSRC}/doc/pine.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/rpdump.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/rpload.1 ${PREFIX}/man/man1
 	( ${ECHO} '# (This file is not part of the pine distribution! - HF)' ; \
 	  ${PREFIX}/bin/pine -conf ) | ${SED} \
 	    -e 's|^\(use-only-domain-name\)=.*$$|\1=No|g' \
