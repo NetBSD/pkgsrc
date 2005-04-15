@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9852 2005/04/15 06:59:16 rh Exp $
+$NetBSD: CHANGES,v 1.9853 2005/04/15 10:47:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2018,3 +2018,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated djbdns-run to 20050415 [schmonz 2005-04-15]
 	Updated qmail-run to 20050415 [schmonz 2005-04-15]
 	Added ObjectiveLib-0.9 [rh 2005-04-15]
+	Updated curl to 7.13.2 [adam 2005-04-15]
