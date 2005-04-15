@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.3 2005/04/15 16:01:23 jlam Exp $
+# $NetBSD: replace.mk,v 1.4 2005/04/15 17:55:33 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied tools
 # with pkgsrc versions.  The replacements are placed under ${TOOLS_DIR}
@@ -175,34 +175,6 @@ ${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_ARGS.bison}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.egrep) && !empty(USE_TOOLS:Megrep)
-.  if !empty(PKGPATH:Mtextproc/grep)
-MAKEFLAGS+=			TOOLS_IGNORE.egrep=
-.  else
-.    if !empty(_TOOLS_USE_PKGSRC.egrep:M[yY][eE][sS])
-${TOOLS_DEPENDS.egrep}+=	grep>=2.5.1:../../textproc/grep
-TOOLS_REAL_CMD.egrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}egrep
-${_TOOLS_VARNAME.egrep}=	${TOOLS_REAL_CMD.egrep}
-.    endif
-TOOLS_SYMLINK+=			egrep
-TOOLS_CMD.egrep=		${TOOLS_DIR}/bin/egrep
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.fgrep) && !empty(USE_TOOLS:Mfgrep)
-.  if !empty(PKGPATH:Mtextproc/grep)
-MAKEFLAGS+=			TOOLS_IGNORE.fgrep=
-.  else
-.    if !empty(_TOOLS_USE_PKGSRC.fgrep:M[yY][eE][sS])
-${TOOLS_DEPENDS.fgrep}+=	grep>=2.5.1:../../textproc/grep
-TOOLS_REAL_CMD.fgrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}fgrep
-${_TOOLS_VARNAME.fgrep}=	${TOOLS_REAL_CMD.fgrep}
-.    endif
-TOOLS_SYMLINK+=			fgrep
-TOOLS_CMD.fgrep=		${TOOLS_DIR}/bin/fgrep
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.file) && !empty(USE_TOOLS:Mfile)
 .  if !empty(PKGPATH:Msysutils/file)
 MAKEFLAGS+=			TOOLS_IGNORE.file=
@@ -231,16 +203,28 @@ TOOLS_CMD.gmake=		${TOOLS_DIR}/bin/gmake
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.grep) && !empty(USE_TOOLS:Mgrep)
+.if (!defined(TOOLS_IGNORE.egrep) && !empty(USE_TOOLS:Megrep)) || \
+    (!defined(TOOLS_IGNORE.fgrep) && !empty(USE_TOOLS:Mfgrep)) || \
+    (!defined(TOOLS_IGNORE.grep) && !empty(USE_TOOLS:Mgrep))
 .  if !empty(PKGPATH:Mtextproc/grep)
+MAKEFLAGS+=			TOOLS_IGNORE.egrep=
+MAKEFLAGS+=			TOOLS_IGNORE.fgrep=
 MAKEFLAGS+=			TOOLS_IGNORE.grep=
 .  else
-.    if !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
+.    if !empty(_TOOLS_USE_PKGSRC.egrep:M[yY][eE][sS]) || \
+        !empty(_TOOLS_USE_PKGSRC.fgrep:M[yY][eE][sS]) || \
+        !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
 ${TOOLS_DEPENDS.grep}+=		grep>=2.5.1:../../textproc/grep
+TOOLS_REAL_CMD.egrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}egrep
+TOOLS_REAL_CMD.fgrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}fgrep
 TOOLS_REAL_CMD.grep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
+${_TOOLS_VARNAME.egrep}=	${TOOLS_REAL_CMD.egrep}
+${_TOOLS_VARNAME.fgrep}=	${TOOLS_REAL_CMD.fgrep}
 ${_TOOLS_VARNAME.grep}=		${TOOLS_REAL_CMD.grep}
 .    endif
-TOOLS_SYMLINK+=			grep
+TOOLS_SYMLINK+=			egrep fgrep grep
+TOOLS_CMD.egrep=		${TOOLS_DIR}/bin/egrep
+TOOLS_CMD.fgrep=		${TOOLS_DIR}/bin/fgrep
 TOOLS_CMD.grep=			${TOOLS_DIR}/bin/grep
 .  endif
 .endif
