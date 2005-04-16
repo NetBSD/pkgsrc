@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/15 19:28:01 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/16 02:12:48 wiz Exp $
 #
 
 DISTNAME=	newmat10 # actually newmat10B, but no such distfile
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.robertnz.net/ol_doc.htm
 COMMENT=	Newmat C++ Matrix Library
 
 WRKSRC=		${WRKDIR}
+DIST_SUBDIR=	newmat10B
 MAKEFILE=	nm_cc.mak
 BUILD_TARGET=	garch
 
