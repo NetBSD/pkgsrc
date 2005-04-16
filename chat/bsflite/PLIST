@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 18:43:59 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/16 16:44:53 recht Exp $
 bin/bsflite
 share/doc/bsflite/COPYING
 share/doc/bsflite/ChangeLog
 share/doc/bsflite/README
+share/examples/bsflite/config-example
+@dirrm share/examples/bsflite
 @dirrm share/doc/bsflite
