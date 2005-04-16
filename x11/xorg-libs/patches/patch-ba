@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.1 2005/04/14 21:35:51 xtraeme Exp $
+$NetBSD: patch-ba,v 1.2 2005/04/16 03:48:47 reed Exp $
 
 Index: extras/Xpm/lib/scan.c
 ===================================================================
@@ -6,7 +6,7 @@ RCS file: /cvs/OpenBSD/XF4/xc/extras/Xpm/lib/scan.c,v
 retrieving revision 1.4
 diff -u -r1.4 scan.c
 --- scan.c	17 Nov 2004 20:22:05 -0000	1.4
-+++ scan.c	15 Feb 2005 21:34:05 -0000
++++ extras/Xpm/lib/scan.c	15 Feb 2005 21:34:05 -0000
 @@ -621,8 +621,8 @@
      char *dst;
      unsigned int *iptr;
@@ -34,7 +34,7 @@ RCS file: /cvs/OpenBSD/XF4/xc/extras/Xpm/lib/create.c,v
 retrieving revision 1.7
 diff -u -r1.7 create.c
 --- create.c	19 Dec 2004 17:45:01 -0000	1.7
-+++ create.c	15 Feb 2005 21:39:53 -0000
++++ extras/Xpm/lib/create.c	15 Feb 2005 21:39:53 -0000
 @@ -1215,10 +1215,10 @@
      register char *src;
      register char *dst;
