@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/15 22:38:16 kim Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/16 07:37:30 jdolecek Exp $
 
 MODNAME=		imap
 PKGREVISION=		# empty
@@ -10,10 +10,9 @@ USE_PHP_EXT_PATCHES=	yes
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.imap-uw}
 CONFIGURE_ARGS+=	--with-${MODNAME}-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-${MODNAME}-linkage
+
 CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 CONFIGURE_ENV+=		PHP_OPENSSL=${SSLBASE}
-
-LIBS+=			-lssl -lcrypto
 
 .include "../../mail/imap-uw/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
