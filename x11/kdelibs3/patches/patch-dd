@@ -1,0 +1,14 @@
+$NetBSD: patch-dd,v 1.1.2.2 2005/04/16 19:47:33 salo Exp $
+
+--- kimgio/tiffr.cpp.orig	2004-06-22 19:36:40.000000000 +0200
++++ kimgio/tiffr.cpp	2005-04-13 23:31:19.000000000 +0200
+@@ -83,6 +83,9 @@
+             return;
+ 
+ 	QImage image( width, height, 32 );
++	if( image.isNull()) {
++		return;
++	}
+ 	data = (uint32 *)image.bits();
+ 
+ 	//Sven: changed to %ld for 64bit machines
