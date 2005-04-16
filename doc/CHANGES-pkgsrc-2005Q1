@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.53 2005/04/16 14:10:47 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.54 2005/04/16 15:48:07 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -109,3 +109,5 @@ Pullup ticket 445 - requested by Matthias Scheler
 security fix for mozilla-bin
 Pullup ticket 446 - requested by Matthias Scheler
 security fix for firefox-gtk2-bin
+Pullup ticket 439 - requested by Julio M. Merino Vidal
+security fix for gnome-vfs2-cdda
