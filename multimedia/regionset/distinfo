@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/04/16 06:51:26 rumble Exp $
+
+SHA1 (regionset-0.1.tar.gz) = c60b973f44288264234d07be1fb418b6e7bf61a5
+Size (regionset-0.1.tar.gz) = 17095 bytes
+SHA1 (patch-aa) = a7247e9be9570ceb0a0e6266c1850adf01e22445
+SHA1 (patch-ab) = ded09a0e2d5703635e5a2d4260abdedde16a9e60
