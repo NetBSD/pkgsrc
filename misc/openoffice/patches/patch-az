@@ -1,0 +1,13 @@
+$NetBSD: patch-az,v 1.2.8.1 2005/04/16 12:55:16 salo Exp $
+
+--- ../sot/source/sdstor/stgole.cxx.orig	2002-07-22 14:28:43.000000000 +0200
++++ ../sot/source/sdstor/stgole.cxx
+@@ -156,6 +156,8 @@ BOOL StgCompObjStream::Load()
+ 		*this >> aClsId;
+ 		INT32 nLen1 = 0;
+ 		*this >> nLen1;
++		// the higher bits are ignored
++		nLen1 &= 0xFFFF;
+ 		sal_Char* p = new sal_Char[ (USHORT) nLen1 ];
+ 		if( Read( p, nLen1 ) == (ULONG) nLen1 )
+ 		{
