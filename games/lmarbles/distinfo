@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 23:12:00 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/04/16 14:43:49 cube Exp $
 
 SHA1 (lmarbles-1.0.7.tar.gz) = 25b0a635f53a3ab351247ac2820cbd6951d7050d
 RMD160 (lmarbles-1.0.7.tar.gz) = 5fc90ff923848496b1fbce63473a22fcc716c345
 Size (lmarbles-1.0.7.tar.gz) = 829635 bytes
 SHA1 (patch-aa) = b453e75a29848a470275d06bc97e9fe09a12e1b8
+SHA1 (patch-ab) = ddd9a96c56b40d4b392b1091d5f537c97e845559
