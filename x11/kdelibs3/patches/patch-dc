@@ -1,0 +1,44 @@
+$NetBSD: patch-dc,v 1.1.2.2 2005/04/16 19:47:33 salo Exp $
+
+--- kimgio/pcx.cpp.orig	2003-10-26 11:54:06.000000000 +0100
++++ kimgio/pcx.cpp	2005-04-13 23:29:10.000000000 +0200
+@@ -134,7 +134,8 @@
+ {
+   QByteArray buf( header.BytesPerLine );
+ 
+-  img.create( w, h, 1, 2, QImage::BigEndian );
++  if( !img.create( w, h, 1, 2, QImage::BigEndian ))
++    return;
+ 
+   for ( int y=0; y<h; ++y )
+   {
+@@ -160,7 +161,8 @@
+   QByteArray buf( header.BytesPerLine*4 );
+   QByteArray pixbuf( w );
+ 
+-  img.create( w, h, 8, 16, QImage::IgnoreEndian );
++  if( !img.create( w, h, 8, 16, QImage::IgnoreEndian ))
++    return;
+ 
+   for ( int y=0; y<h; ++y )
+   {
+@@ -196,7 +198,8 @@
+ {
+   QByteArray buf( header.BytesPerLine );
+ 
+-  img.create( w, h, 8, 256, QImage::IgnoreEndian );
++  if( !img.create( w, h, 8, 256, QImage::IgnoreEndian ))
++    return;
+ 
+   for ( int y=0; y<h; ++y )
+   {
+@@ -236,7 +239,8 @@
+   QByteArray g_buf( header.BytesPerLine );
+   QByteArray b_buf( header.BytesPerLine );
+ 
+-  img.create( w, h, 32 );
++  if( !img.create( w, h, 32 ))
++    return;
+ 
+   for ( int y=0; y<h; ++y )
+   {

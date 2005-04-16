@@ -1,0 +1,16 @@
+$NetBSD: patch-db,v 1.1.2.2 2005/04/16 19:47:33 salo Exp $
+
+--- kimgio/jp2.cpp.orig	2003-10-26 11:54:06.000000000 +0100
++++ kimgio/jp2.cpp	2005-04-13 23:27:40.000000000 +0200
+@@ -157,8 +157,9 @@
+ 	void
+ 	draw_view_gray( gs_t& gs, QImage& qti )
+ 	{
+-		qti.create( jas_image_width( gs.image ), jas_image_height( gs.image ),
+-			8, 256 );
++		if( !qti.create( jas_image_width( gs.image ), jas_image_height( gs.image ),
++			8, 256 ))
++			return;
+ 		for( int i = 0; i < 256; ++i )
+ 			qti.setColor( i, qRgb( i, i, i ) );
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-de,v 1.1.2.2 2005/04/16 19:47:33 salo Exp $
+
+--- kimgio/xview.cpp.orig	2003-09-07 14:17:55.000000000 +0200
++++ kimgio/xview.cpp	2005-04-13 23:34:18.000000000 +0200
+@@ -60,6 +60,8 @@
+ 
+ 	// Create the image
+ 	QImage image( x, y, 8, maxval + 1, QImage::BigEndian );
++	if( image.isNull())
++		return;
+ 
+ 	// how do the color handling? they are absolute 24bpp
+ 	// or at least can be calculated as such.
