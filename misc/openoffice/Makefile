@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2005/02/26 16:07:46 mrauch Exp $
+# $NetBSD: Makefile,v 1.61.2.1 2005/04/16 12:55:16 salo Exp $
 
 DISTNAME=		openoffice-1.1.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/1.1.4/}
 DISTFILES=		OOo_1.1.4_source.tar.gz
