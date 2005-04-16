@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.56 2005/04/16 19:32:33 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.57 2005/04/16 20:08:14 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -115,3 +115,5 @@ Pullup ticket 447 - requested by Lubomir Sedlacik
 security fix for libcdaudio
 Pullup ticket 448 - requested by Lubomir Sedlacik
 security fix for gnome-vfs
+Pullup ticket 438 - requested by Matthias Drochner
+security fix for kdelibs3
