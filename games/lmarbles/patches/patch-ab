@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/04/16 14:43:49 cube Exp $
+
+--- src/sdl.c.orig	2002-08-08 04:37:50.000000000 +0200
++++ src/sdl.c
+@@ -173,6 +173,8 @@ SFnt* SF_Ld(char *fname)
+ 	
+     //table
+     file = fopen(path, "r");
++    if (file == NULL)
++        err(1, "SF_Ld: %s", path);
+     fseek(file, -1, SEEK_END);
+     fread(&fnt->off, 1, 1, file);
+ #ifdef DEBUG
