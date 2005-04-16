@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.51 2005/04/16 13:25:10 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.52 2005/04/16 13:50:04 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -105,3 +105,5 @@ Pullup ticket 442 - requested by Michael Rauch
 security fix for openoffice
 Pullup ticket 443 - requested by Matthias Scheler
 security fix for pine
+Pullup ticket 445 - requested by Matthias Scheler
+security fix for mozilla-bin
