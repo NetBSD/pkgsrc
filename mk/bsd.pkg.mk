@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1612 2005/04/16 09:20:18 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1613 2005/04/16 09:26:22 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1305,7 +1305,7 @@ _FETCH_FILE=								\
 						alg=${PATCH_DIGEST_ALGORITHM};\
 					fi;				\
 					CKSUM=`${DIGEST} $$alg < ${_DISTDIR}/$$bfile`; \
-					CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')" {print $$4;}' <${DISTINFO_FILE}`; \
+					CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')" {print $$4; exit}' <${DISTINFO_FILE}`; \
 					if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
 						break;			\
 					else				\
@@ -3803,7 +3803,7 @@ checksum: fetch uptodate-digest
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
 			filesummed=false;				\
 			for a in ${DIGEST_ALGORITHMS}; do		\
-				CKSUM2=`${AWK} 'NF == 4 && $$1 == "'$$a'" && $$2 == "('$$file')" && $$3 == "=" {print $$4;}' ${DISTINFO_FILE}`; \
+				CKSUM2=`${AWK} 'NF == 4 && $$1 == "'$$a'" && $$2 == "('$$file')" && $$3 == "=" {print $$4; exit}' ${DISTINFO_FILE}`; \
 				case "$${CKSUM2}" in			\
 				"")	${ECHO_MSG} "=> No $$a checksum recorded for $$file."; \
 					;;				\
@@ -3828,7 +3828,7 @@ checksum: fetch uptodate-digest
 		  done;							\
 		  for file in "" ${_IGNOREFILES}; do			\
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
-			CKSUM2=`${AWK} 'NF == 4 && $$3 == "=" && $$2 == "('$$file')"{print $$4;}' ${DISTINFO_FILE}`; \
+			CKSUM2=`${AWK} 'NF == 4 && $$3 == "=" && $$2 == "('$$file')"{print $$4; exit}' ${DISTINFO_FILE}`; \
 			if [ "$$CKSUM2" = "" ]; then			\
 				${ECHO_MSG} "=> No checksum recorded for $$file, file is in "'$$'"{IGNOREFILES} list."; \
 				OK="false";				\
