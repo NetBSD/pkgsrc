@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9864 2005/04/16 06:56:17 rumble Exp $
+$NetBSD: CHANGES,v 1.9865 2005/04/16 12:41:01 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2031,3 +2031,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ezmlm-idx to 0.440 [schmonz 2005-04-15]
 	Updated p5-DBD-SQLite to 1.08 [kim 2005-04-16]
 	Added regionset-0.1 [rumble 2005-04-16]
+	Updated mozilla-bin to 1.7.7 [tron 2005-04-16]
