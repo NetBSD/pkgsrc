@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2004/05/07 20:00:53 reed Exp $
+@comment $NetBSD: PLIST,v 1.5.8.1 2005/04/16 13:24:16 salo Exp $
 bin/pine
 bin/rpdump
 bin/rpload
 man/man1/pine.1
+man/man1/rpdump.1
+man/man1/rpload.1
 share/pine/tech-notes.txt
 share/pine/contrib/krb5-setup
 share/pine/contrib/ldap-setup

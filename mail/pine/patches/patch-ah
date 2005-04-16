@@ -1,0 +1,48 @@
+$NetBSD: patch-ah,v 1.4.12.1 2005/04/16 13:24:16 salo Exp $
+
+--- pine/rpdump.c.orig	2004-05-07 23:55:32.000000000 +0100
++++ pine/rpdump.c	2005-04-15 17:31:21.000000000 +0100
+@@ -82,6 +82,7 @@
+     char *argv[];
+ {
+     MAILSTREAM *stream = NULL;
++    int        fd;
+     FILE       *fp;
+     int         usage = 0;
+     char        buf[10000];
+@@ -126,6 +127,7 @@
+ 	exit(-1);
+     }
+ 
++#ifdef UNSECURE_CODE_WITH_RACE_CONDITION
+     if(access(local, ACCESS_EXISTS) == 0){
+ 	if(access(local, WRITE_ACCESS) == 0){
+ 
+@@ -141,6 +143,7 @@
+ 	    exit(-1);
+ 	}
+     }
++#endif
+ 
+     /*
+      * Try opening the remote folder.
+@@ -206,11 +209,18 @@
+     /*
+      * Try opening the local file.
+      */
+-    if((fp = fopen(local, "w")) == NULL){
++    if ((fd = open(local, O_WRONLY|O_CREAT|O_EXCL,
++                   S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH)) < 0){
+ 	fprintf(stderr, "Can't open \"%s\": %s\n", local, err_desc(errno));
+ 	mail_close(stream);
+ 	exit(-1);
+     }
++    if((fp = fdopen(fd, "w")) == NULL){
++	fprintf(stderr, "Can't open \"%s\": %s\n", local, err_desc(errno));
++	mail_close(stream);
++        close(fd);
++	exit(-1);
++    }
+ 
+     p = data;
+     for(p = data; p < data+i; p++){
