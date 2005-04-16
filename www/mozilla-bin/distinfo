@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12.2.1 2005/03/22 19:05:17 snj Exp $
+$NetBSD: distinfo,v 1.12.2.2 2005/04/16 13:48:59 salo Exp $
 
-SHA1 (mozilla-i686-pc-linux-gnu-1.7.6.tar.gz) = 3bc3276e13b4d8a4174aaf88aec6b740a9a1ae1e
-RMD160 (mozilla-i686-pc-linux-gnu-1.7.6.tar.gz) = 56a5e914cfc49be3bd697c8a1123a58831d563a8
-Size (mozilla-i686-pc-linux-gnu-1.7.5.tar.gz) = 13889017 bytes
+SHA1 (mozilla-i686-pc-linux-gnu-1.7.7.tar.gz) = 24124a9473a9c8e1f36ddd10b606bdf5f9160d3b
+RMD160 (mozilla-i686-pc-linux-gnu-1.7.7.tar.gz) = 0b49ff7b1cb21b9f346bb09e5d46d97d4048ab22
+Size (mozilla-i686-pc-linux-gnu-1.7.7.tar.gz) = 13888040 bytes
