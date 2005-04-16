@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.4 2005/04/15 17:55:33 jlam Exp $
+# $NetBSD: replace.mk,v 1.5 2005/04/16 05:16:29 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied tools
 # with pkgsrc versions.  The replacements are placed under ${TOOLS_DIR}
@@ -211,6 +211,11 @@ MAKEFLAGS+=			TOOLS_IGNORE.egrep=
 MAKEFLAGS+=			TOOLS_IGNORE.fgrep=
 MAKEFLAGS+=			TOOLS_IGNORE.grep=
 .  else
+.    for _t_ in egrep fgrep grep
+.      if empty(USE_TOOLS:M${_t_})
+USE_TOOLS+=	${_t_}
+.      endif
+.    endfor
 .    if !empty(_TOOLS_USE_PKGSRC.egrep:M[yY][eE][sS]) || \
         !empty(_TOOLS_USE_PKGSRC.fgrep:M[yY][eE][sS]) || \
         !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
