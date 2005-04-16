@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2005/03/23 19:17:16 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2005/04/16 11:34:20 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -69,6 +69,7 @@ SUBDIR+=	openquicktime
 SUBDIR+=	p5-xmltv
 SUBDIR+=	realplayer
 SUBDIR+=	realplayer-codecs
+SUBDIR+=	regionset
 SUBDIR+=	smpeg
 SUBDIR+=	smpeg-xmms
 SUBDIR+=	totem
