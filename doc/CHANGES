@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9862 2005/04/15 20:43:24 schmonz Exp $
+$NetBSD: CHANGES,v 1.9863 2005/04/16 01:11:14 kim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2029,3 +2029,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added acroread7-7.0 [markd 2005-04-15]
 	Updated pine to 4.62nb2 [tron 2005-04-15]
 	Updated ezmlm-idx to 0.440 [schmonz 2005-04-15]
+	Updated p5-DBD-SQLite to 1.08 [kim 2005-04-16]
