@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/04/11 21:45:50 tv Exp $
+# $NetBSD: Makefile,v 1.26 2005/04/16 00:21:44 reed Exp $
 
 DISTNAME=	gnuchess-5.07
 PKGREVISION=	1
@@ -34,5 +34,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/README ${DOCDIR}
 
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
