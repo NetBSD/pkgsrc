@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9866 2005/04/16 12:47:47 tron Exp $
+$NetBSD: CHANGES,v 1.9867 2005/04/16 15:59:18 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2033,3 +2033,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added regionset-0.1 [rumble 2005-04-16]
 	Updated mozilla-bin to 1.7.7 [tron 2005-04-16]
 	Updated firefox-gtk2-bin to 1.0.3 [tron 2005-04-16]
+	Updated tor to 0.0.9.8 [jschauma 2005-04-16]
