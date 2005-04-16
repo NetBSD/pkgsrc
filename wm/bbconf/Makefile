@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:46 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/16 23:09:00 kristerw Exp $
 #
 
 DISTNAME=	bbconf-1.4
@@ -16,5 +16,6 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/admin/ltconfig
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/qt2-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
