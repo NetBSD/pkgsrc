@@ -1,0 +1,13 @@
+$NetBSD: patch-df,v 1.1.2.2 2005/04/16 19:47:33 salo Exp $
+
+--- kimgio/g3r.cpp.orig	2004-06-22 19:36:40.000000000 +0200
++++ kimgio/g3r.cpp	2005-04-16 21:39:11.000000000 +0200
+@@ -28,7 +28,7 @@
+ 
+   QImage image(width, height, 1, 0, QImage::BigEndian);
+   
+-  if (scanlength != image.bytesPerLine())
++  if (image.isNull() || (scanlength != image.bytesPerLine()))
+     {
+       TIFFClose(tiff);
+       return;
