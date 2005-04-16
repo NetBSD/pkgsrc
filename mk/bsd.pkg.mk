@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1611 2005/04/15 02:04:57 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1612 2005/04/16 09:20:18 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -849,7 +849,10 @@ _ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
 # GNU configure script.
 #
 GNU_CONFIGURE_PREFIX?=	${PREFIX}
+USE_GNU_CONFIGURE_HOST?=	yes
+.  if !empty(USE_GNU_CONFIGURE_HOST:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
+.  endif
 CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX}
 HAS_CONFIGURE=		yes
 .  if defined(USE_X11)
