@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/17 16:08:39 salo Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/17 16:32:10 kim Exp $
 #
 
 DISTNAME=	postgrey-1.21
@@ -15,10 +15,9 @@ DEPENDS+=	p5-BerkeleyDB-[0-9]*:../../databases/p5-BerkeleyDB
 DEPENDS+=	p5-IO-Multiplex-[0-9]*:../../devel/p5-IO-Multiplex
 DEPENDS+=	p5-Net-Server-[0-9]*:../../net/p5-Net-Server
 
+NO_CONFIGURE=	yes
 USE_PKGINSTALL=	yes
 USE_PERL5=	yes
-NO_CONFIGURE=	yes
-USE_PERL5=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
