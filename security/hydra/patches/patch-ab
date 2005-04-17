@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/04/17 12:19:54 adrianp Exp $
+
+--- configure.orig	2005-02-01 14:50:26.000000000 +0000
++++ configure
+@@ -130,7 +130,7 @@ if [ "$SAPR3_IPATH" = "/usr/include" ]; 
+ fi
+ 
+ echo "Checking for libssh (libssh/libssh.h) ..."
+-for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib .
++for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib /usr/pkg/lib .
+ do
+     if [ "X" = "X$SSH_PATH" ]; then
+         if [ -f "$i/libssh.so" -o -f "$i/libssh.dylib" ]; then
+@@ -144,7 +144,7 @@ do
+         fi
+     fi
+ done
+-for i in /usr/local/include /*ssl/include /usr/include .
++for i in /usr/local/include /*ssl/include /usr/include /usr/pkg/include .
+ do
+     if [ "X" = "X$SSH_IPATH" ]; then
+         if [ -f "$i/libssh/libssh.h" ]; then
+@@ -291,10 +291,3 @@ echo >> Makefile.in
+ cat Makefile.unix > Makefile
+ cat Makefile.in >> Makefile
+ cat Makefile.am >> Makefile
+-
+-echo
+-echo NOTES NOTES NOTES NOTES NOTES NOTES NOTES NOTES NOTES NOTES NOTES NOTES
+-echo =======================================================================
+-echo ARM/PalmPilot users: please run ./configure-arm or ./configure-palm respectivly
+-echo
+-echo "now type \"make\""
