@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.11 2005/04/11 21:45:39 tv Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.12 2005/04/17 09:38:26 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -617,11 +617,9 @@ dynamic linker chooses the library with the greater REVISION number. </programli
         </listitem>
 
         <listitem>
-          <para> In your <filename>PLIST</filename>, include all of
-            the <filename>.a</filename>, <filename>.la</filename>, and
-            <filename>.so</filename>, <filename>.so.CURRENT</filename>
-            and <filename>.so.CURRENT.REVISION</filename> files (this
-            is a change from the previous behaviour). </para>
+          <para> In your <filename>PLIST</filename>, include only
+            the <filename>.la</filename>
+            file (this is a change from previous behaviour). </para>
         </listitem>
       </orderedlist>
     </sect2>
