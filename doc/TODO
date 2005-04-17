@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3407 2005/04/17 09:21:59 wiz Exp $
+$NetBSD: TODO,v 1.3408 2005/04/17 11:40:33 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -327,7 +327,6 @@ Suggested package updates
 	o boson-0.10
 	o browser-bookmarks-menu-0.4
 	o btparse-0.34
-	o bugzilla-2.19.2
 	o bzflag-2.0.2
 	o c4-1.10
 	o cal3d-0.10.0
