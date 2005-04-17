@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/13 19:22:17 riz Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/17 03:48:59 minskim Exp $
 #
 
 DISTNAME=		asterisk-1.0.7
@@ -86,5 +86,6 @@ SUPPORT_FILES+= 	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
 PTHREAD_OPTS+=	require native
 
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
