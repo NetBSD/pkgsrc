@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:44:57 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/17 01:10:25 kristerw Exp $
 
 DISTNAME=	snack2.2.8
 PKGNAME=	tcl-snack-2.2.8
@@ -23,4 +23,5 @@ INSTALLATION_DIRS=	lib
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
