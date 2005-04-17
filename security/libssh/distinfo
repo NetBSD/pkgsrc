@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/04/17 11:34:16 adrianp Exp $
+
+SHA1 (libssh-0.1.tgz) = 900d4af824bd01a21c4db7c3cc36789e3f8ab525
+RMD160 (libssh-0.1.tgz) = dc195249bbf0e04390f0ecc88012e9b2f9be24fa
+Size (libssh-0.1.tgz) = 122663 bytes
