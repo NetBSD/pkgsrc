@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9872 2005/04/17 12:22:26 adrianp Exp $
+$NetBSD: CHANGES,v 1.9873 2005/04/17 13:06:34 hamajima Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2040,3 +2040,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added libssh-0.1 [adrianp 2005-04-17]
 	Updated win32-codecs to 050412 [salo 2005-04-17]
 	Added hydra-4.6 [adrianp 2005-04-17]
+	Added spcaview-0.3b [hamajima 2005-04-17]
