@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9874 2005/04/17 15:43:50 kim Exp $
+$NetBSD: CHANGES,v 1.9875 2005/04/17 20:26:13 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2042,3 +2042,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added hydra-4.6 [adrianp 2005-04-17]
 	Added spcaview-0.3b [hamajima 2005-04-17]
 	Updated postgrey to 1.21 [kim 2005-04-17]
+	Updated pkgconfig to 0.17.2 [hira 2005-04-17]
