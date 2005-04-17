@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/04/17 12:56:01 hamajima Exp $
+
+SHA1 (spca5xx-20050206.tar.gz) = 5f536e4a78d0b96eb500baa1498173404128bc35
+RMD160 (spca5xx-20050206.tar.gz) = 84eea377056db2b273b65c9e3248512a2b83ee71
+Size (spca5xx-20050206.tar.gz) = 147019 bytes
+SHA1 (spca5xx-bsd-0.3b.patch.gz) = 81eaf1246b6e0bf9bf1b8b50332b89e3f28b4b61
+RMD160 (spca5xx-bsd-0.3b.patch.gz) = 7fbbd508f04e0ca6d2443c2c7271ee177b7d417d
+Size (spca5xx-bsd-0.3b.patch.gz) = 25917 bytes
