@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9870 2005/04/17 11:37:03 adrianp Exp $
+$NetBSD: CHANGES,v 1.9871 2005/04/17 12:15:24 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2038,3 +2038,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated firefox to 1.0.3 [taya 2005-04-17]
 	Updated firefox-gtk1 to 1.0.3 [taya 2005-04-17]
 	Added libssh-0.1 [adrianp 2005-04-17]
+	Updated win32-codecs to 050412 [salo 2005-04-17]
