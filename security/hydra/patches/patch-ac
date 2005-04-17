@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/04/17 12:19:54 adrianp Exp $
+
+--- hydra-gtk/src/main.c.orig	2005-01-05 22:31:46.000000000 +0000
++++ hydra-gtk/src/main.c	2005-01-05 22:32:41.000000000 +0000
+@@ -30,7 +30,7 @@
+   gtk_set_locale ();
+   gtk_init (&argc, &argv);
+ 
+-  add_pixmap_directory (PACKAGE_DATA_DIR "/" PACKAGE "/pixmaps");
++  add_pixmap_directory ("@PREFIX@/share/xhydra/pixmaps");
+ 
+   /* initialize the message id */
+   message_id = 0;
