@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.233 2005/04/02 11:26:17 jdolecek Exp $
+# $NetBSD: Makefile,v 1.234 2005/04/17 11:37:05 adrianp Exp $
 #
 
 COMMENT=	Security tools
@@ -89,6 +89,7 @@ SUBDIR+=	libksba
 SUBDIR+=	libksba04
 SUBDIR+=	libmcrypt
 SUBDIR+=	libnasl
+SUBDIR+=	libssh
 SUBDIR+=	libtasn1
 SUBDIR+=	libtcpa
 SUBDIR+=	logcheck
