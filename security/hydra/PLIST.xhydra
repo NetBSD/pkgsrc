@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.xhydra,v 1.1.1.1 2005/04/17 12:19:54 adrianp Exp $
+bin/xhydra
