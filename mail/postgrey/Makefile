@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/17 15:42:53 kim Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/17 16:08:39 salo Exp $
 #
 
 DISTNAME=	postgrey-1.21
@@ -11,14 +11,13 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://isg.ee.ethz.ch/tools/postgrey/
 COMMENT=	Postfix Greylist Policy Server
 
-USE_PKGINSTALL=	yes
-USE_PERL5=	yes
-
 DEPENDS+=	p5-BerkeleyDB-[0-9]*:../../databases/p5-BerkeleyDB
 DEPENDS+=	p5-IO-Multiplex-[0-9]*:../../devel/p5-IO-Multiplex
 DEPENDS+=	p5-Net-Server-[0-9]*:../../net/p5-Net-Server
 
-NO_CONFIGURE=	# defined
+USE_PKGINSTALL=	yes
+USE_PERL5=	yes
+NO_CONFIGURE=	yes
 USE_PERL5=	# defined
 
 .include "../../mk/bsd.prefs.mk"
@@ -37,8 +36,8 @@ PKG_GROUPS=		${POSTGREY_GROUP}
 PKG_USERS=		${POSTGREY_USER}:${POSTGREY_GROUP}::Postgrey\\ Daemon
 
 .for i in postgrey_whitelist_clients postgrey_whitelist_recipients
-CONF_FILES+=		${PREFIX}/${EGDIR}/$i \
-			${PKG_SYSCONFDIR}/$i
+CONF_FILES+=		${PREFIX}/${EGDIR}/${i} \
+			${PKG_SYSCONFDIR}/${i}
 .endfor
 
 OWN_DIRS+=		${PREFIX}/${DOCDIR}
@@ -77,12 +76,11 @@ do-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/postgrey ${PREFIX}/sbin/postgrey
 .for i in COPYING Changes README
-	${INSTALL_DATA} ${WRKSRC}/$i ${PREFIX}/${DOCDIR}/$i
+	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/${DOCDIR}/${i}
 .endfor
 .for i in postgrey_whitelist_clients postgrey_whitelist_recipients
-	${INSTALL_DATA} ${WRKSRC}/$i ${PREFIX}/${EGDIR}/$i
+	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/${EGDIR}/${i}
 .endfor
-
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
