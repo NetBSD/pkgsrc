@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3406 2005/04/16 16:58:57 recht Exp $
+$NetBSD: TODO,v 1.3407 2005/04/17 09:21:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -433,7 +433,7 @@ Suggested package updates
 	o fhist-1.14
 	o fidogate-4.4.10
 	o findutils-4.2.20
-	o firefox-bin-1.0.2
+	o firefox-bin-1.0.3
 	o flac123-0.0.8
 	o flashplayer-0.4.13
 	o fmsx-3.0
@@ -646,6 +646,8 @@ Suggested package updates
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-5.1.3
 	o moz-flash-0.4.13
+	o mozilla-1.7.7
+	o mozilla-gtk2-1.7.7
 	o mpage-2.5.4
 	o mpc-0.11.2
 	o mpfr-2.1.1
@@ -656,6 +658,7 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.4.8
 	o muse-0.9.1
+	o mutt-devel-1.5.7
 	o nagios-2.0b3 [replacing netsaint]
 	o naim-0.11.7.3.1
 	o nap-1.5.3
@@ -725,7 +728,6 @@ Suggested package updates
 	o p5-Crypt-Random-1.25
 	o p5-Curses-1.12
 	o p5-DBD-Oracle-1.16
-	o p5-DBD-SQLite-1.08
 	o p5-DBD-Sybase-1.05
 	o p5-DBD-postgresql-1.32
 	o p5-DBD-Sybase-1.04
@@ -1019,6 +1021,7 @@ Suggested package updates
 	o subtitleripper-0.3.4
 	o sun-jdk15-5.0.2
 	o sun-jre15-5.0.2
+	o suse_base-9.3
 	o swfdec-0.3.2
 	o swi-prolog-5.5.11
 	o swig-build-1.3.24 [newer versions break subversion]
@@ -1156,6 +1159,7 @@ Suggested package updates
 	o xmmsctrl-1.8
 	o xmon-1.5.6
 	o xnap-2.5r3
+	o xorp-1.1
 	o xpad-2.6
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
