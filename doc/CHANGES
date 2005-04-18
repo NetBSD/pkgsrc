@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9889 2005/04/18 16:31:07 wiz Exp $
+$NetBSD: CHANGES,v 1.9890 2005/04/18 16:37:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2069,3 +2069,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added opera-acroread7-1.0 [jschauma 2005-04-18]
 	Added netscape7-acroread7-1.0 [jschauma 2005-04-18]
 	Added p5-Email-Simple-1.92 [wiz 2005-04-18]
+	Added p5-Module-Pluggable-2.8 [wiz 2005-04-18]
