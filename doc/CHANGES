@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9891 2005/04/18 16:41:27 wiz Exp $
+$NetBSD: CHANGES,v 1.9892 2005/04/18 16:47:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2071,3 +2071,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Email-Simple-1.92 [wiz 2005-04-18]
 	Added p5-Module-Pluggable-2.8 [wiz 2005-04-18]
 	Added p5-Email-Abstract-2.01 [wiz 2005-04-18]
+	Updated p5-Mail-ListDetector to 0.31 [wiz 2005-04-18]
