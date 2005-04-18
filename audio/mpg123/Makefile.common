@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2005/04/11 21:44:55 tv Exp $
+# $NetBSD: Makefile.common,v 1.21 2005/04/18 13:21:13 wiz Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.mpg123.de/mpg123/ \
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 PATCHFILES=	mpg123-059r-v6-20000713b.diff.gz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.mpg123.de/
 BUILD_DEFS+=	USE_INET6 MPG123_ARM_FIXED64
 DIST_SUBDIR=	mpg123
