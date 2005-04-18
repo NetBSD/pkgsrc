@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1613 2005/04/16 09:26:22 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1614 2005/04/18 10:06:47 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -842,6 +842,8 @@ _IGNOREFILES?=	${IGNOREFILES}
 _PATCHFILES?=	${PATCHFILES}
 .endif
 _ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
+
+BUILD_DEFS+=	_DISTFILES _PATCHFILES
 
 .if defined(GNU_CONFIGURE)
 #
