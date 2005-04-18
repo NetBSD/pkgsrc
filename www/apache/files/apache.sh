@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: apache.sh,v 1.26 2005/02/28 23:30:49 abs Exp $
+# $NetBSD: apache.sh,v 1.27 2005/04/18 14:40:17 wiz Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -25,7 +25,6 @@ required_files="@PKG_SYSCONFDIR@/httpd.conf"
 extra_commands="reload"
 start_cmd="apache_doit start"
 stop_cmd="apache_doit stop"
-restart_cmd="apache_doit restart"
 reload_cmd="apache_doit reload"
 
 apache_doit ()
@@ -34,7 +33,6 @@ apache_doit ()
 
 	case $1 in
 	start)	action=${apache_start} ;;
-	restart)action=re${apache_start} ;;	# For apache_start=startssl
 	reload)	action=graceful ;;
 	*)	action=$1 ;;
 	esac
