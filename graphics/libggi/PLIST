@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/03/25 02:47:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/04/18 15:54:18 wiz Exp $
 bin/cube3d
 bin/ggiteleserver
 bin/monitest
@@ -19,7 +19,6 @@ include/ggi/display/modelist.h
 include/ggi/display/monotext.h
 include/ggi/display/multi.h
 include/ggi/display/palemu.h
-include/ggi/display/quartz.h
 include/ggi/display/sub.h
 include/ggi/display/svgalib.h
 include/ggi/display/tele.h

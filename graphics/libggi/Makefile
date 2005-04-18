@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2005/04/11 21:46:05 tv Exp $
+# $NetBSD: Makefile,v 1.35 2005/04/18 15:54:18 wiz Exp $
 #
 
-DISTNAME=	libggi-2.1.0.src
+DISTNAME=	libggi-2.1.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.ggi-project.org/pub/packages/ggi/ggi/v2.1/ \
