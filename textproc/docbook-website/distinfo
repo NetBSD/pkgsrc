@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.7 2005/03/02 17:58:08 wiz Exp $
+$NetBSD: distinfo,v 1.8 2005/04/18 15:32:50 wiz Exp $
 
 SHA1 (website-2.5.0.tar.gz) = c36e345ff725c175407318fe878984f7ec5f0e56
 RMD160 (website-2.5.0.tar.gz) = fe67dfca0221751c310262d4d4658a3968d945ff
 Size (website-2.5.0.tar.gz) = 135313 bytes
 SHA1 (patch-aa) = 14249023b2b1b3f1891e5f8d973f86337a2e9eee
 SHA1 (patch-ab) = 32ef65364493b6fb01cf2106c7d0c9d6c66db2af
-SHA1 (patch-ac) = a4e23da7a1bd938c1a5468016705cd61d8df9e9d
+SHA1 (patch-ac) = c1c0cef0d3795011affd6e1e2ed9e0f683d2ec22
+SHA1 (patch-ad) = f3bfb2332e579ec0960d992d0250001a7ec4e3b5
