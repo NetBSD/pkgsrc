@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3411 2005/04/18 15:40:11 jschauma Exp $
+$NetBSD: TODO,v 1.3412 2005/04/18 15:56:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -593,11 +593,6 @@ Suggested package updates
 	o libextractor-0.4.2
 	o libflash-0.4.13
 	o libgda-1.2.1
-	o libggi-2.1.1
-	o libggigcp-0.9.1
-	o libggimisc-2.1.1
-	o libggiwmh-0.2.1
-	o libgii-0.9.1
 	o libgnomemm26-2.10.0
 	o libgnomeuimm26-2.10.0
 	o libhydrogen-0.9.0
