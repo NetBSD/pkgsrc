@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.390 2005/04/18 14:25:46 wiz Exp $
+# $NetBSD: Makefile,v 1.391 2005/04/18 16:23:05 jschauma Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -152,6 +152,7 @@ SUBDIR+=	netscape7
 SUBDIR+=	netscape7-acroread
 SUBDIR+=	netscape7-acroread3
 SUBDIR+=	netscape7-acroread5
+SUBDIR+=	netscape7-acroread7
 SUBDIR+=	ns-plugger-common
 SUBDIR+=	ns-plugger-communicator
 SUBDIR+=	ns-plugger-navigator
@@ -160,6 +161,7 @@ SUBDIR+=	openacs
 SUBDIR+=	opera-acroread
 SUBDIR+=	opera-acroread3
 SUBDIR+=	opera-acroread5
+SUBDIR+=	opera-acroread7
 SUBDIR+=	opera-plugins
 SUBDIR+=	opera7
 SUBDIR+=	p5-Apache-ASP
