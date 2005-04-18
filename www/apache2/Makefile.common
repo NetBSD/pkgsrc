@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2005/02/10 13:29:10 salo Exp $
+# $NetBSD: Makefile.common,v 1.15 2005/04/18 13:20:40 wiz Exp $
 
 DISTNAME=		httpd-${APACHE_VERSION}
 # When updating this version be sure to update the checksum and remove
@@ -8,4 +8,4 @@ APR_VERSION=            0.9.6
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
 			${MASTER_SITE_APACHE:=httpd/old/} \
 			http://www.NetBSD.org/images/logos/
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		tron@NetBSD.org
