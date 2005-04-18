@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2005/04/17 20:23:36 hira Exp $
+# $NetBSD: Makefile,v 1.25 2005/04/18 17:02:50 drochner Exp $
 #
 
 DISTNAME=	pkgconfig-0.17.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.freedesktop.org/software/pkgconfig/releases/
 
@@ -16,6 +17,10 @@ USE_LIBTOOL=		YES
 CONFIGURE_ARGS+=	--disable-threads
 
 .include "../../mk/bsd.prefs.mk"
+
+# without indirect-deps, it would rely on inter-library dependencies
+#  which we are not ready for
+CONFIGURE_ARGS+= 	--enable-indirect-deps
 
 .if ${OPSYS} == "IRIX"
 # configure bails out in subdir after re-parsing the cache
