@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.30 2004/10/07 02:01:37 jlam Exp $
+#	$NetBSD: cross.mk,v 1.31 2005/04/18 10:02:27 wiz Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -35,7 +35,7 @@ CFLAGS=			# empty
 CXXFLAGS=		# empty
 
 CROSS_DISTFILES+=	${BINUTILS_DISTNAME}.tar.gz
-MASTER_SITES+=		${MASTER_SITE_GNU:=binutils/}
+SITES_${BINUTILS_DISTNAME}.tar.gz+=		${MASTER_SITE_GNU:=binutils/}
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
 DEPENDS+=		cross-binutils>=2.15.0.0:../../cross/binutils
 PLIST_PRE+=		${COMMON_DIR}/PLIST-binutils
@@ -154,8 +154,8 @@ PLIST_PRE+=		${COMMON_DIR}/PLIST-egcs-objc-runtime
 # the main PLIST needs to go last to get the @dirrm's right
 PLIST_PRE+=		${COMMON_DIR}/PLIST-egcs
 CROSS_DISTFILES+=	${EGCS_DISTNAME}.tar.gz ${EGCS_PATCHBUNDLE}
-MASTER_SITES+=		ftp://egcs.cygnus.com/pub/egcs/${EGCS_DISTDIR}/ \
-			${MASTER_SITE_LOCAL}
+SITES_${EGCS_DISTNAME}.tar.gz=		# no known-good site; fall back to distfiles mirrors
+SITES_${EGCS_PATCHBUNDLE}=		${MASTER_SITE_LOCAL}
 USE_GNU_TOOLS+=		make
 
 CC_FOR_TARGET=		${EGCS_WRKSRC}/gcc/xgcc -B${EGCS_WRKSRC}/gcc/ ${CFLAGS_FOR_TARGET}
