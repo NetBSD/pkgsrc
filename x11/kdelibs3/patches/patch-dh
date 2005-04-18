@@ -1,0 +1,13 @@
+$NetBSD: patch-dh,v 1.1 2005/04/18 16:54:00 drochner Exp $
+
+--- kimgio/g3r.cpp.orig	2005-04-16 23:06:10.000000000 +0200
++++ kimgio/g3r.cpp
+@@ -28,7 +28,7 @@ KDE_EXPORT void kimgio_g3_read( QImageIO
+ 
+   QImage image(width, height, 1, 0, QImage::BigEndian);
+   
+-  if (scanlength != image.bytesPerLine())
++  if (image.isNull() || scanlength != image.bytesPerLine())
+     {
+       TIFFClose(tiff);
+       return;
