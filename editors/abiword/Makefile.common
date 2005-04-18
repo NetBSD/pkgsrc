@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2005/04/13 20:15:55 drochner Exp $
+# $NetBSD: Makefile.common,v 1.18 2005/04/18 13:20:14 wiz Exp $
 
 # Be sure to update PLIST and distinfo for editors/abiword-plugins when updating
 ABIWORD_VERSION=	2.2.7
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.abisource.com/downloads/abiword/${ABIWORD_VERSION}/sour
 		${MASTER_SITE_SOURCEFORGE:=abiword/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.abisource.com/
 
 BUILD_USES_MSGFMT=	yes
