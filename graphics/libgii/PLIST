@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/03/28 23:55:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/04/18 15:53:35 wiz Exp $
 ${GGTICK}bin/ggtick
 bin/mhub
 bin/xsendbut
@@ -112,6 +112,8 @@ man/man7/input-linux-mouse.7
 man/man7/input-lk201.7
 man/man7/input-mouse.7
 man/man7/input-tcp.7
+man/man7/input-x.7
+man/man7/input-xwin.7
 man/man7/libgg.7
 man/man7/libgii.7
 share/examples/ggi/filter/keytrans
