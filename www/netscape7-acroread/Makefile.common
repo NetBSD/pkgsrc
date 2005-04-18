@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/02/13 17:39:55 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/04/18 16:20:25 jschauma Exp $
 
 PKGNAME=		${DISTNAME:C|MozillaFirebird|firefox|}
 CATEGORIES=		www print
@@ -17,12 +17,13 @@ NO_BUILD=		YES
 
 PLIST_SRC=		../../www/netscape7-acroread/PLIST
 PLIST_SUBST+=		ACROREAD=${ACROREAD}
+PLIST_SUBST+=		ACRO_SUBDIR=${ACRO_SUBDIR}
 PLIST_SUBST+=		PLATFORM=${PLATFORM}
 NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/netscape7/plugins
 
 do-install:
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
-	${LN} -s ${PREFIX}/${ACROREAD}/Browsers/${PLATFORM}/nppdf.so \
+	${LN} -s ${PREFIX}/${ACROREAD}/${ACRO_SUBDIR}/${PLATFORM}/nppdf.so \
 		${NS_PLUGINS_DIR}/nppdf.so
 
 .include "../../mk/bsd.pkg.mk"
