@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/02/24 19:17:10 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/04/18 18:01:48 drochner Exp $
 bin/gnome-database-properties
 include/libgnomedb-1.2/libgnomedb/gnome-db-browser.h
 include/libgnomedb-1.2/libgnomedb/gnome-db-combo.h
@@ -86,6 +86,7 @@ share/doc/html/libgnomedb/libgnomedb-libgnomedb.html
 share/doc/html/libgnomedb/libgnomedb-widgets.html
 share/doc/html/libgnomedb/libgnomedb.devhelp
 share/doc/html/libgnomedb/right.png
+share/doc/html/libgnomedb/style.css
 share/doc/html/libgnomedb/up.png
 share/gconf/schemas/libgnomedb.schemas
 share/gnome-db/ui/db-shell.xml
