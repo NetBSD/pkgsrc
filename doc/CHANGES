@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9894 2005/04/18 16:57:46 wiz Exp $
+$NetBSD: CHANGES,v 1.9895 2005/04/18 22:58:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2074,3 +2074,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Mail-ListDetector to 0.31 [wiz 2005-04-18]
 	Updated p5-MIME-tools to 5.417 [wiz 2005-04-18]
 	Updated p5-Mail-Audit to 2.1 [wiz 2005-04-18]
+	Removed mozilla-stable [wiz 2005-04-18]
