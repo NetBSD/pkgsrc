@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.23 2005/01/30 23:18:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/18 15:39:04 jschauma Exp $
 
 # Note: Regen distinfo with SUN_JRE14_USE_JCE=YES
 
-DISTNAME=	j2re-1_4_2_07-linux-i586
-PKGNAME=	sun-jre14-2.7
-PKGREVISION=	1
+DISTNAME=	j2re-1_4_2_08-linux-i586
+PKGNAME=	sun-jre14-2.8
+PKGREVISION=	# none
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 Runtime Environment 1.4.2
 
 SHORT=		JRE
 
-WRKSRC=		${WRKDIR}/j2re1.4.2_07
+WRKSRC=		${WRKDIR}/j2re1.4.2_08
 USE_PKGINSTALL=	yes
 JAVA_WRAPPERS=	java keytool orbd policytool rmid rmiregistry \
 		servertool tnameserv
