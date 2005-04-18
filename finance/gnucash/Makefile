@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2005/04/11 21:45:46 tv Exp $
+# $NetBSD: Makefile,v 1.84 2005/04/18 15:13:55 wiz Exp $
 
 DISTNAME=		gnucash-1.8.11
 PKGREVISION=		2
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal double-entry accounting program
 
-DEPENDS+=		guile-slib-[0-9]*:../../finance/gnucash
+DEPENDS+=		guile-slib-[0-9]*:../../devel/guile-slib
 DEPENDS+=		p5-Date-Manip>=5.42a:../../devel/p5-Date-Manip
 DEPENDS+= 		p5-finance-quote>=1.06:../../finance/p5-finance-quote
 
