@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:06 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/18 15:55:12 wiz Exp $
 
-DISTNAME=		libggimisc-2.1.0.src
+DISTNAME=		libggimisc-2.1.1.src
 PKGNAME=		${DISTNAME:S/.src//}
-PKGREVISION=		1
 CATEGORIES=		graphics devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ggi/} \
 			http://www.ggi-project.org/ftp/ggi/v2.1/
