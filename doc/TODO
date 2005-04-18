@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3409 2005/04/18 13:17:43 wiz Exp $
+$NetBSD: TODO,v 1.3410 2005/04/18 14:30:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -432,7 +432,6 @@ Suggested package updates
 	o fhist-1.14
 	o fidogate-4.4.10
 	o findutils-4.2.20
-	o firefox-bin-1.0.3
 	o flac123-0.0.8
 	o flashplayer-0.4.13
 	o fmsx-3.0
@@ -1034,7 +1033,9 @@ Suggested package updates
 	o streamtuner-0.99.99
 	o stunnel-4.09
 	o subtitleripper-0.3.4
+	o sun-jdk14-2.8
 	o sun-jdk15-5.0.2
+	o sun-jre14-2.8
 	o sun-jre15-5.0.2
 	o suse_base-9.3
 	o swfdec-0.3.2
