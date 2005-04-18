@@ -6,4 +6,4 @@ power features such as pop-up blocking and tabbed browsing. Mozilla
 also provides a sophisticated platform for developing web applications
 using technologies such as XML, SOAP and XSLT.
 
-mozilla-gtk2 uses gtk2 widget.
+mozilla-gtk2 uses GTK2 widget set.
