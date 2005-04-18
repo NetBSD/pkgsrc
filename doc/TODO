@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3408 2005/04/17 11:40:33 adrianp Exp $
+$NetBSD: TODO,v 1.3409 2005/04/18 13:17:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -293,7 +293,7 @@ Suggested package updates
 	o apr-1.1.1
 	o apsfilter-7.2.6
 	o aqsis-0.9.2
-	o aranym-0.8.10
+	o aranym-0.9.0
 	o argtable-2.3
 	o arnold-20040104
 	o arpwatch-2.1a13
@@ -440,6 +440,9 @@ Suggested package updates
 	o fop-0.20.5
 	o fort77-1.18
 	o fox-1.4.11
+	o freeciv-client-2.0
+	o freeciv-server-2.0
+	o freeciv-share-2.0
 	o freeciv-sounds-3.0
 	o freetds-0.62.4
 	o fugu-1.2.3
@@ -476,6 +479,7 @@ Suggested package updates
 	o gkrellm1-snmp-0.21
 	o gkrellm1-xmms-0.5.8
 	o gliv-1.9.2
+	o gmplayer-1.0pre7
 	o gnats-4.1.0
 	o gnet1-1.1.9
 	o gnetman-20050325
@@ -498,7 +502,7 @@ Suggested package updates
 	o gramps-1.0.11
 	o grap-1.32
 	o grepmail-5.3030
-	o grhino-0.14.0
+	o grhino-0.15.0
 	o gri-2.12.8
 	o gsed-4.1.4
 	o gsharutils-4.3.78
@@ -560,6 +564,8 @@ Suggested package updates
 	o john-1.6.37
 	o jove-4.16.0.65
 	o jpilot-0.99.7 [pkg/24635]
+	o kaffe-1.1.5
+	o kaffe-nox11-1.1.5
 	o kajaani-kombat-0.6.6.6
 	o kapooka-0.3
 	o kdrill-6.4
@@ -580,12 +586,19 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.11.0
 	o leafpad-0.7.9
+	o lftp-3.1.3
+	o libcddb-1.0
 	o libcdio-0.72
 	o libcomprex-0.3.3
 	o libetpan-0.34b
 	o libextractor-0.4.2
 	o libflash-0.4.13
 	o libgda-1.2.1
+	o libggi-2.1.1
+	o libggigcp-0.9.1
+	o libggimisc-2.1.1
+	o libggiwmh-0.2.1
+	o libgii-0.9.1
 	o libgnomemm26-2.10.0
 	o libgnomeuimm26-2.10.0
 	o libhydrogen-0.9.0
@@ -628,6 +641,7 @@ Suggested package updates
 	o mdd-20050318
 	o memcached-1.2
 	o memtest86-3.2
+	o mencoder-1.0pre7
 	o mftrace-1.1.6
 	o mgetty+sendfax-1.1.32
 	o micq-0.4.12 [pkg/29063]
@@ -650,6 +664,7 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpc-0.11.2
 	o mpfr-2.1.1
+	o mplayer-1.0pre7
 	o mplayer-plugin-firefox-2.80
 	o mrproject-0.9.1
 	o mserv-devel-0.41
@@ -838,7 +853,8 @@ Suggested package updates
 	o phoon-20030120
 	o photopc-3.05
 	o php5-5.0.4
-	o phppgadmin-3.5.2
+	o phpmyadmin-2.6.2
+	o phppgadmin-3.5.3
 	o phylip-3.62
 	o piewm-1.03
 	o pilot-link-0.11.8
@@ -956,7 +972,7 @@ Suggested package updates
 	o rt-mysql-3.4.1
 	o rt-pgsql-3.4.1
 	o rtcw-1.41.3
-	o ruby-fox-1.2.5 [needs to update of fox-1.4.6]
+	o ruby-fox-1.2.6 [needs to update of fox-1.4.6]
 	o ruby-mysql-2.5.2
 	o rudiments-0.28.1
 	o sablecc-2.18.2
@@ -1151,7 +1167,7 @@ Suggested package updates
 	o xmms-dspectogram-1.2.1
 	o xmms-fmradio-1.5
 	o xmms-gdancer-0.4.6
-	o xmms-infinity-0.6.0
+	o xmms-infinity-0.6.1
 	o xmms-iris-0.12
 	o xmms-mad-0.5.7
 	o xmms-nebulus-0.7.0
