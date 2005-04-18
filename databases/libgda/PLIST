@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/02/24 19:17:10 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/04/18 18:01:48 drochner Exp $
 bin/gda-report-test
 bin/gda-run
 bin/gda-test
@@ -177,6 +177,7 @@ share/doc/html/libgda/migration-executing-commands.html
 share/doc/html/libgda/migration.html
 share/doc/html/libgda/processing-queries.html
 share/doc/html/libgda/right.png
+share/doc/html/libgda/style.css
 share/doc/html/libgda/up.png
 share/libgda/xml/gda-report-result.dtd
 share/libgda/xml/gda-report.dtd

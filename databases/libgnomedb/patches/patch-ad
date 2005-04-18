@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2005/02/25 17:46:45 drochner Exp $
+$NetBSD: patch-ad,v 1.2 2005/04/18 18:01:48 drochner Exp $
 
---- doc/C/Makefile.in.orig	2005-01-18 17:16:55.000000000 +0100
+--- doc/C/Makefile.in.orig	2005-03-03 12:35:56.000000000 +0100
 +++ doc/C/Makefile.in
 @@ -108,7 +108,7 @@ HAVE_GTKSOURCEVIEW_FALSE = @HAVE_GTKSOUR
  HAVE_GTKSOURCEVIEW_TRUE = @HAVE_GTKSOURCEVIEW_TRUE@
@@ -8,6 +8,6 @@ $NetBSD: patch-ad,v 1.1 2005/02/25 17:46:45 drochner Exp $
  HAVE_LIBGLADE_TRUE = @HAVE_LIBGLADE_TRUE@
 -HTML_DIR = $(datadir)/gtk-doc/html
 +HTML_DIR = $(datadir)/doc/html
- ICONV = @ICONV@
  INSTALL_DATA = @INSTALL_DATA@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
