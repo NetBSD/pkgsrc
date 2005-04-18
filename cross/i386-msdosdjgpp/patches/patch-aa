@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.5 2005/04/18 11:42:12 wiz Exp $
+
+--- ../egcs-1.1.1/libiberty/strsignal.c.orig	1998-05-16 01:42:42.000000000 +0200
++++ ../egcs-1.1.1/libiberty/strsignal.c
+@@ -244,7 +244,9 @@ static const char **sys_siglist;
+ #else
+ 
+ #ifdef NSIG
++#if !defined(__NetBSD__)
+ static int sys_nsig = NSIG;
++#endif
+ #else
+ #ifdef _NSIG
+ static int sys_nsig = _NSIG;
