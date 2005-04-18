@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:59:25 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/04/18 16:46:46 wiz Exp $
 
-SHA1 (Mail-ListDetector-0.18.tar.gz) = ca65c0f4b8492f4cc3381435f46f28429b86eaee
-RMD160 (Mail-ListDetector-0.18.tar.gz) = 904c41c49af2ad54428ffbd77d9513941476764b
-Size (Mail-ListDetector-0.18.tar.gz) = 16227 bytes
+SHA1 (Mail-ListDetector-0.31.tar.gz) = 81cf46d06b25c7b00f2f6290c3a05eb0bad3fb85
+RMD160 (Mail-ListDetector-0.31.tar.gz) = 99717b531e8075a679bf894f7f49337fac035a06
+Size (Mail-ListDetector-0.31.tar.gz) = 39687 bytes
