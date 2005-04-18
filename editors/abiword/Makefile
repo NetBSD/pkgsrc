@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2005/04/04 23:38:57 fredb Exp $
+# $NetBSD: Makefile,v 1.89 2005/04/18 16:58:06 drochner Exp $
 
 .include "Makefile.common"
 PKGNAME=	abiword-${ABIWORD_VERSION}
@@ -31,6 +31,7 @@ CONFIGURE_ARGS+=	--disable-Cocoa
 CONFIGURE_ARGS+=	--enable-threads --with-libxml2
 CONFIGURE_ARGS+=	--with-libjpeg-prefix=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+USE_GNU_ICONV=		yes
 
 post-install:
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/abiword-docs/man/abiword.1 \
