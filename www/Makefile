@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.391 2005/04/18 16:23:05 jschauma Exp $
+# $NetBSD: Makefile,v 1.392 2005/04/18 22:40:35 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -143,7 +143,6 @@ SUBDIR+=	mozilla
 SUBDIR+=	mozilla-bin
 SUBDIR+=	mozilla-bin-nightly
 SUBDIR+=	mozilla-gtk2
-SUBDIR+=	mozilla-stable
 SUBDIR+=	navigator
 SUBDIR+=	navigator3
 SUBDIR+=	neon
