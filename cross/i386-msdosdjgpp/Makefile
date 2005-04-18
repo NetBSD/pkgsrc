@@ -1,18 +1,27 @@
-# $NetBSD: Makefile,v 1.19 2004/07/09 20:48:16 kristerw Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/18 11:42:23 wiz Exp $
 #
 
 DISTVERSION=		2.02.0
 PKGREVISION=		1
 DISTFILES=		${DJGPP_FILES}
 EXTRACT_ONLY=		# none of the djgpp files
-MASTER_SITES=		ftp://ftp.simtel.net/pub/simtelnet/gnu/djgpp/v2/old/ \
-			ftp://ftp.simtel.net/pub/simtelnet/gnu/djgpp/v2misc/
+MASTER_SITES=		ftp://ftp.delorie.com/pub/djgpp/deleted/v2/ \
+			http://ftp.delorie.com/pub/djgpp/deleted/v2/ \
+			ftp://ftp.iij.ad.jp/pub/djgpp/deleted/v2/ \
+			ftp://gd.tuwien.ac.at/pc/dos/djgpp/deleted/v2/ \
+			http://gd.tuwien.ac.at/pc/dos/djgpp/deleted/v2/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.delorie.com/djgpp/
 COMMENT=		Cross-compile environment for MS-DOS on 386 and higher
 
 BUILD_DEPENDS=		unzip-[0-9]*:../../archivers/unzip
+
+SITES_wmemu2b.zip=	http://ftp.delorie.com/pub/djgpp/beta/ \
+			ftp://ftp.delorie.com/pub/djgpp/beta/ \
+			ftp://ftp.iij.ad.jp/pub/djgpp/beta/ \
+			ftp://gd.tuwien.ac.at/pc/dos/djgpp/beta/ \
+			http://gd.tuwien.ac.at/pc/dos/djgpp/beta/
 
 WRKSRC=			${WRKDIR}/djgpp
 USE_CROSS_BINUTILS=	yes
