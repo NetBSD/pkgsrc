@@ -1,15 +1,17 @@
-# $NetBSD: Makefile.NetBSD.i386,v 1.6 2005/01/22 11:36:48 jdolecek Exp $
+# $NetBSD: Makefile.NetBSD.i386,v 1.7 2005/04/18 14:24:15 wiz Exp $
 
 BUILD_DEFS+=	MOZILLA_USE_LINUX
 
 .if defined(MOZILLA_USE_LINUX)
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386
-.include "${.CURDIR}/Makefile.Linux.i386"
+.  include "Makefile.Linux.i386"
 .else
 PKG_SKIP_REASON=	"No native pre-built NetBSD binary available."
 PKG_SKIP_REASON+=	"Set MOZILLA_USE_LINUX if you want to use the Linux binary."
-DISTNAME=		${MOZILLA}-${MOZ_VER}-i386-unknown-netbsdelf1.6
+DISTNAME=		${MOZILLA}-${MOZ_DISTVER}-i386-unknown-netbsdelf1.6
 EXTRACT_SUFX=		.tar.bz2
 MOZ_PLATFORM=		netbsd
-ONLY_FOR_PLATFORM+=	NetBSD-1.6*-i386 NetBSD-2*-i386
+
+# no 1.0 build for NetBSD
+#ONLY_FOR_PLATFORM+=	NetBSD-1.6*-i386 NetBSD-2*-i386
 .endif
