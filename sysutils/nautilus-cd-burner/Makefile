@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:28 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/18 12:10:08 wiz Exp $
 #
 
 DISTNAME=	nautilus-cd-burner-2.10.0
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	CD burner view for Nautilus
 
-DEPENDS+=		cdrecord-[0-9]*:../../sysutils/cdrecord
+DEPENDS+=		{cdrecord,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrecord
 BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		gnome2-1.5
