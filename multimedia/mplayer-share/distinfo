@@ -1,21 +1,19 @@
-$NetBSD: distinfo,v 1.18 2005/04/16 17:43:09 drochner Exp $
+$NetBSD: distinfo,v 1.19 2005/04/18 17:49:41 drochner Exp $
 
-SHA1 (mplayer-1.0rc6/MPlayer-1.0pre6a.tar.bz2) = 15acd1edf1e6ebb1dada81cdfcbfd3bc62d6bc0c
-RMD160 (mplayer-1.0rc6/MPlayer-1.0pre6a.tar.bz2) = a0e866906bd9f87b93ad35e47aaa24f69ef7224e
-Size (mplayer-1.0rc6/MPlayer-1.0pre6a.tar.bz2) = 6380482 bytes
-SHA1 (mplayer-1.0rc6/font-arial-iso-8859-1.tar.bz2) = 152c40bf20de34aa8802d7f80d34d673b0b67212
-RMD160 (mplayer-1.0rc6/font-arial-iso-8859-1.tar.bz2) = 666697cd5efd9387057a898c714175e7c2aacbcd
-Size (mplayer-1.0rc6/font-arial-iso-8859-1.tar.bz2) = 234242 bytes
-SHA1 (mplayer-1.0rc6/font-arial-iso-8859-2.tar.bz2) = 7b99bbe0e9ba89a57eccbea8f93c453c4f268181
-RMD160 (mplayer-1.0rc6/font-arial-iso-8859-2.tar.bz2) = 562d4d92c4f5f3d537340fde3ad8d1495ac41acb
-Size (mplayer-1.0rc6/font-arial-iso-8859-2.tar.bz2) = 222208 bytes
-SHA1 (mplayer-1.0rc6/font-arial-cp1250.tar.bz2) = ccf11dce5d0fb72fd3af97f788b7471cd0cd0b68
-RMD160 (mplayer-1.0rc6/font-arial-cp1250.tar.bz2) = a2fc7ae07b0d80936ea58e168e1047efccb9eb91
-Size (mplayer-1.0rc6/font-arial-cp1250.tar.bz2) = 249705 bytes
+SHA1 (mplayer-1.0rc7/MPlayer-1.0pre7.tar.bz2) = df1e8d4f2f44d72c6f7989932f3b272e815ecb80
+RMD160 (mplayer-1.0rc7/MPlayer-1.0pre7.tar.bz2) = a4bac10df287c4b134ea49b3bc9bf7fb0126cae6
+Size (mplayer-1.0rc7/MPlayer-1.0pre7.tar.bz2) = 6868877 bytes
+SHA1 (mplayer-1.0rc7/font-arial-iso-8859-1.tar.bz2) = 152c40bf20de34aa8802d7f80d34d673b0b67212
+RMD160 (mplayer-1.0rc7/font-arial-iso-8859-1.tar.bz2) = 666697cd5efd9387057a898c714175e7c2aacbcd
+Size (mplayer-1.0rc7/font-arial-iso-8859-1.tar.bz2) = 234242 bytes
+SHA1 (mplayer-1.0rc7/font-arial-iso-8859-2.tar.bz2) = 7b99bbe0e9ba89a57eccbea8f93c453c4f268181
+RMD160 (mplayer-1.0rc7/font-arial-iso-8859-2.tar.bz2) = 562d4d92c4f5f3d537340fde3ad8d1495ac41acb
+Size (mplayer-1.0rc7/font-arial-iso-8859-2.tar.bz2) = 222208 bytes
+SHA1 (mplayer-1.0rc7/font-arial-cp1250.tar.bz2) = ccf11dce5d0fb72fd3af97f788b7471cd0cd0b68
+RMD160 (mplayer-1.0rc7/font-arial-cp1250.tar.bz2) = a2fc7ae07b0d80936ea58e168e1047efccb9eb91
+Size (mplayer-1.0rc7/font-arial-cp1250.tar.bz2) = 249705 bytes
 SHA1 (patch-aa) = 7f0a858c226fb0e1e0382bff4e31817d510ffca1
 SHA1 (patch-ab) = 68e81c67cd3902499f912d3ca8c6d6bc208a2433
 SHA1 (patch-ac) = 696183adc3777cb4d9bc4b6d96d5cb7c88ec489d
-SHA1 (patch-ad) = 95c8741263b822e20eea3da00ca64923ed91c53b
+SHA1 (patch-ad) = d705dd315e913593223b83e533c60a9620d34cc8
 SHA1 (patch-ae) = e3b1a98d86f377b84a4f92673f878d287ae5aa6d
-SHA1 (patch-ba) = be78ddba2d58230cf12f186b746d46b01c2836bc
-SHA1 (patch-bb) = 90e635cf521d8ba0f3f4e9dafc1e298abf8e315f
