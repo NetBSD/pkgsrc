@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9904 2005/04/19 09:07:03 wiz Exp $
+$NetBSD: CHANGES,v 1.9905 2005/04/19 09:49:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2074,6 +2074,18 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Mail-ListDetector to 0.31 [wiz 2005-04-18]
 	Updated p5-MIME-tools to 5.417 [wiz 2005-04-18]
 	Updated p5-Mail-Audit to 2.1 [wiz 2005-04-18]
+	Updated abiword to 2.2.7nb1 [drochner 2005-04-18]
+	Updated pkgconfig to 0.17.2nb1 [drochner 2005-04-18]
+	Updated libsigc++ to 1.2.7 [drochner 2005-04-18]
+	Updated libsigc++2 to 2.0.11 [drochner 2005-04-18]
+	Updated mplayer-share to 1.0pre7 [drochner 2005-04-18]
+	Updated mplayer to 1.0pre7 [drochner 2005-04-18]
+	Updated gmplayer to 1.0pre7 [drochner 2005-04-18]
+	Updated mencoder to 1.0pre7 [drochner 2005-04-18]
+	Updated libcddb to 1.0 [drochner 2005-04-18]
+	Updated libgda to 1.2.1 [drochner 2005-04-18]
+	Updated libgda-sqlite to 1.2.1 [drochner 2005-04-18]
+	Updated libgnomedb to 1.2.1 [drochner 2005-04-18]
 	Removed mozilla-stable [wiz 2005-04-18]
 	Removed coda5_client [wiz 2005-04-19]
 	Removed coda5_server [wiz 2005-04-19]
@@ -2085,3 +2097,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed coda_doc [wiz 2005-04-19]
 	Removed coda_intro [wiz 2005-04-19]
 	Updated wesnoth to 0.9.0 [wiz 2005-04-19]
+	Removed wonka [wiz 2005-04-19]
