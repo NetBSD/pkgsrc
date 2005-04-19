@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:44:51 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/19 20:22:52 ben Exp $
 #
 
-DISTNAME=		csound-4.23f12gbs.6
-PKGNAME=		csound4-4.23.12.6
+DISTNAME=		csound-4.23f12gbs.11
+PKGNAME=		csound4-4.23.12.11
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/}
 
