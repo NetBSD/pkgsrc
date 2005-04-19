@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/03/22 16:33:55 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/04/19 19:22:52 drochner Exp $
 bin/nautilus-cd-burner
 include/libnautilus-burn/nautilus-burn-drive-selection.h
 include/libnautilus-burn/nautilus-burn-drive.h
@@ -58,6 +58,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/nautilus-cd-burner.mo
@@ -69,6 +70,7 @@ ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/nautilus-cd-burner.mo
 share/nautilus-cd-burner/cdburn.glade
