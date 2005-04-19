@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9898 2005/04/19 00:24:42 wiz Exp $
+$NetBSD: CHANGES,v 1.9899 2005/04/19 00:28:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2079,3 +2079,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed coda5_server [wiz 2005-04-19]
 	Updated g-wrap to 1.9.6 [wiz 2005-04-19]
 	Updated easytag to 1.1 [wiz 2005-04-19]
+	Updated htdig to 3.1.6nb3 [wiz 2005-04-19]
