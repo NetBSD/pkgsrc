@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.2 2003/07/12 12:23:13 wiz Exp $
+$NetBSD: patch-ac,v 1.3 2005/04/19 10:45:19 wiz Exp $
 
---- Makefile.orig	Mon May 12 22:15:17 2003
+--- Makefile.orig	2005-04-17 23:44:02.000000000 +0200
 +++ Makefile
 @@ -1,6 +1,6 @@
  objects := $(patsubst %.c,%.o,$(wildcard *.c))
  
--CFLAGS= -O3 -Wall -pedantic -ansi -DNUTDIR=\".nutdb\" -DFOODDIR=\"/usr/local/lib/nut\"
-+CFLAGS= -O3 -Wall -pedantic -ansi -DNUTDIR=\".nutdb\" -DFOODDIR=\"${PREFIX}/share/nut\"
+-CFLAGS= -O3 -Wall -DNUTDIR=\".nutdb\" -DFOODDIR=\"/usr/local/lib/nut\" -ansi -pedantic -fno-strict-aliasing
++CFLAGS= -Wall -DNUTDIR=\".nutdb\" -DFOODDIR=\"${PREFIX}/share/nut\" -ansi -pedantic -fno-strict-aliasing
  
  nut:	$(objects)
  	gcc ${CFLAGS} -lm -o nut $(objects)
