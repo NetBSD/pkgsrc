@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:53 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/19 15:04:54 minskim Exp $
 
 DISTNAME=	horde-3.0.4
 CATEGORIES=	www
@@ -99,7 +99,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${HORDEDIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${HORDEDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${HORDEDIR}
-	${CHMOD} -R a-w ${HORDEDIR}
+	${FIND} ${HORDEDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${HORDEDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${HORDEDIR}/config
 	${CHMOD} 0750 ${HORDEDIR}/config
 
