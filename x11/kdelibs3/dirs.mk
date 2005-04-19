@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.4 2005/03/26 03:49:03 markd Exp $
+# $NetBSD: dirs.mk,v 1.5 2005/04/19 10:55:25 wiz Exp $
 #
 
 .if !defined(DIRS_KDE3_MK)
@@ -14,7 +14,6 @@ KDE3_DIRS+=	lib/kde3/plugins
 KDE3_DIRS+=	lib/kde3/plugins/designer
 KDE3_DIRS+=	lib/kde3/plugins/styles
 KDE3_DIRS+=	share/applications/kde
-KDE3_DIRS+=	share/desktop-directories
 KDE3_DIRS+=	share/doc/kde
 KDE3_DIRS+=	share/doc/kde/HTML
 KDE3_DIRS+=	share/doc/kde/HTML/en
