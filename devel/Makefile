@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.632 2005/04/18 16:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.633 2005/04/19 17:40:23 drochner Exp $
 #
 
 COMMENT=	Development utilities
 
 SUBDIR+=	ArX
+SUBDIR+=	ArX2
 SUBDIR+=	ExmanIDE
 SUBDIR+=	GConf
 SUBDIR+=	GConf2
