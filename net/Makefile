@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.550 2005/04/19 00:07:27 wiz Exp $
+# $NetBSD: Makefile,v 1.551 2005/04/19 01:05:45 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -49,8 +49,6 @@ SUBDIR+=	cidr
 SUBDIR+=	cisco-mibs
 SUBDIR+=	citrix_ica
 SUBDIR+=	cmu-dhcpd
-SUBDIR+=	coda_doc
-SUBDIR+=	coda_intro
 SUBDIR+=	connect
 SUBDIR+=	corkscrew
 SUBDIR+=	ctorrent
