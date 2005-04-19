@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/04/19 10:52:26 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2005/04/19 10:53:50 wiz Exp $
 
---- lib/driver/logging.c.orig	2004-12-18 18:29:32.000000000 +0100
-+++ lib/driver/logging.c
-@@ -45,7 +45,9 @@ default_cdio_log_handler (cdio_log_level
+--- lib/logging.c.orig	2004-04-18 17:24:27.000000000 +0000
++++ lib/logging.c	2004-04-18 17:25:33.000000000 +0000
+@@ -44,7 +44,9 @@
          fprintf (stderr, "**ERROR: %s\n", message);
          fflush (stderr);
        }
