@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2004/12/11 00:32:16 jlam Exp $
+# $NetBSD: builtin.mk,v 1.18 2005/04/19 14:55:30 epg Exp $
 
 .for _lib_ in intl
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -36,10 +36,6 @@ BUILTIN_PKG.gettext=	gettext-lib-0.10.35nb1
 BUILDLINK_VARS+=	BUILTIN_PKG.gettext
 .  endif
 .endif	# IS_BUILTIN.gettext
-
-#.if defined(USE_BUILTIN.iconv) && !empty(USE_BUILTIN.iconv:M[nN][oO])
-#USE_BUILTIN.gettext=	no
-#.endif
 
 .if !defined(USE_BUILTIN.gettext)
 USE_BUILTIN.gettext?=	${IS_BUILTIN.gettext}
@@ -82,7 +78,7 @@ USE_BUILTIN.gettext=	no
 # XXX By default, assume the native gettext on Linux systems using GLIBC
 # XXX supports the GNU gettext API, and use it.
 # XXX
-.    if (${OPSYS} == "Linux") && exists(${_LIBICONV_H})
+.    if (${OPSYS} == "Linux")
 USE_BUILTIN.gettext!=	\
 	if ${GREP} -q "This file is part of the GNU C Library" ${_LIBINTL_H}; then \
 		${ECHO} "yes";						\
@@ -130,41 +126,6 @@ BUILDLINK_TRANSFORM+=	rm:-lintl
 ######################################################################
 .if !empty(USE_BUILTIN.gettext:M[nN][oO])
 _BLNK_LIBINTL=		-lintl
-#
-# Determine if we need to include the libiconv buildlink3.mk file.
-# We need to if we're using the pkgsrc gettext, and the version is
-# at least gettext>=0.11.5nb1.
-#
-_GETTEXT_ICONV_DEPENDS=	gettext-lib>=0.11.5nb1
-.  if !defined(_GETTEXT_NEEDS_ICONV)
-_GETTEXT_NEEDS_ICONV?=	no
-.    for _depend_ in ${BUILDLINK_DEPENDS.gettext}
-.      if !empty(_GETTEXT_NEEDS_ICONV:M[nN][oO])
-_GETTEXT_NEEDS_ICONV!=	\
-	if ${PKG_INFO} -qe '${_depend_}'; then				\
-		pkg=`${PKG_BEST_EXISTS} '${_depend_}'`;			\
-		if ${PKG_INFO} -qN "$$pkg" | ${GREP} -q "libiconv-[0-9]"; then \
-			${ECHO} "yes";					\
-		else							\
-			${ECHO} "no";					\
-		fi;							\
-	else								\
-		${ECHO} "yes";						\
-	fi
-.      endif
-.    endfor
-.  endif
-.  if !empty(_GETTEXT_NEEDS_ICONV:M[yY][eE][sS])
-.    for _mkfile_ in buildlink3.mk builtin.mk
-.      if exists(../../converters/libiconv/${_mkfile_})
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-.        include "../../converters/libiconv/${_mkfile_}"
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
-.      endif
-.    endfor
-BUILDLINK_DEPENDS.gettext+=	${_GETTEXT_ICONV_DEPENDS}
-_BLNK_LIBINTL+=			${BUILDLINK_LDADD.iconv}
-.  endif
 .endif
 
 BUILDLINK_LDADD.gettext?=	${_BLNK_LIBINTL}
@@ -174,7 +135,7 @@ BUILDLINK_LDADD.gettext?=	${_BLNK_LIBINTL}
 # "-lintl" to the linker command line.
 #
 # If BROKEN_GETTEXT_DETECTION is "yes", then automatically add "-lintl"
-# (and "-liconv" if necessary) to LIBS to workaround this brokenness.
+# to LIBS to workaround this brokenness.
 #
 # XXX Nowadays, most packages' GNU configure scripts correctly detect
 # XXX -lintl, so this should really default to "no", but we'll leave it
