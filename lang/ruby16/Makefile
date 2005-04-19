@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/10 06:20:18 taca Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2005/04/19 16:05:40 salo Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+= ${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION}nb1:../../databases/ruby-gdbm
 DEPENDS+= ${RUBY_PKGPREFIX}-curses>=${RUBY_VERSION}nb2:../../devel/ruby16-curses
 DEPENDS+= ${RUBY_PKGPREFIX}-readline>=${RUBY_VERSION}nb1:../../devel/ruby-readline
 DEPENDS+= ${RUBY_PKGPREFIX}-digest>=${RUBY_VERSION}nb1:../../security/ruby16-digest
-DEPENDS+= ${RUBY_PKGPREFIX}-tcltllib>=${RUBY_VERSION}nb2:../../x11/ruby16-tcltklib
+DEPENDS+= ${RUBY_PKGPREFIX}-tcltklib>=${RUBY_VERSION}nb2:../../x11/ruby16-tcltklib
 DEPENDS+= ${RUBY_PKGPREFIX}-tk>=${RUBY_VERSION}nb2:../../x11/ruby16-tk
 
 RUBY_VERSION=		${RUBY16_VERSION}
