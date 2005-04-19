@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9910 2005/04/19 12:39:55 wiz Exp $
+$NetBSD: CHANGES,v 1.9911 2005/04/19 13:07:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2105,3 +2105,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated kdelibs to 3.4.0nb2 [wiz 2005-04-19]
 	Updated gnome-menus to 2.10.1nb1 [wiz 2005-04-19]
 	Updated cvs to 1.11.20 [wiz 2005-04-19]
+	Updated xdg-x11-dirs to 1.2 [wiz 2005-04-19]
