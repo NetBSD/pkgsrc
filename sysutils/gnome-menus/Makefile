@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/04/19 00:34:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/19 11:00:57 wiz Exp $
 #
 
 DISTNAME=	gnome-menus-2.10.1
+PKGREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-menus/2.10/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +12,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Implementation of the desktop menu specification for GNOME
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.1
+USE_DIRS+=		xdg-1.2
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
