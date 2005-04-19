@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.4 2005/04/19 15:38:21 rillig Exp $
+
+gcc-2.95 does not know the i386 MMX registers used in the assembler
+statements, do disable them.
+
+--- configure.orig	Sun Jan  9 23:17:45 2005
++++ configure	Tue Apr 19 17:04:54 2005
+@@ -25450,7 +25450,11 @@ _______EOF
+         if test x$lv_ix86 = xyes ; then
+                 cat >>$outfile <<_______EOF
+ 
++#if defined(__GNUC__) && __GNUC__ <= 2
++#define VISUAL_ARCH_UNKNOWN
++#else
+ #define VISUAL_ARCH_X86
++#endif
+ _______EOF
+         fi
+ 
