@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2005/04/14 21:01:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.34 2005/04/19 10:59:37 wiz Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -4463,7 +4463,7 @@ ${HAVE_USBVIEW}@dirrm share/kde/apps/kcmusb
 @dirrm share/doc/kde/HTML/en/kate
 @dirrm share/doc/kde/HTML/en/kappfinder
 @comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/desktop-directories
+@comment in xdg-dirs: @dirrm share/desktop-directories
 @comment in kde: @dirrm share/applications/kde
 @comment in kde: @dirrm lib/kde3
 @comment in kde: @dirrm lib/kconf_update_bin
