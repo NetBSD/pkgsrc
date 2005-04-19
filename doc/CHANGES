@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9907 2005/04/19 09:58:52 chris Exp $
+$NetBSD: CHANGES,v 1.9908 2005/04/19 10:45:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2100,3 +2100,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed wonka [wiz 2005-04-19]
 	Removed xdm-krb4 [wiz 2005-04-19]
 	Updated sylpheed-devel to 1.9.9 [chris 2005-04-19]
+	Updated nut to 10.18 [wiz 2005-04-19]
