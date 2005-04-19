@@ -9,4 +9,3 @@ Version: 0.1
 Libs: -L${libdir} -Wl,-R${libdir} -L@X11BASELIB@ -Wl,-R@X11BASELIB@ \
 	-lplds4 -lplc4 -lnspr4
 Cflags: -I${includedir}/nspr
-
