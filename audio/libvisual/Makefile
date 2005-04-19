@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:44:54 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/19 15:38:21 rillig Exp $
 #
 
 DISTNAME=		libvisual-0.2.0
@@ -13,9 +13,6 @@ USE_LIBTOOL=		yes
 USE_X11=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libvisual.pc.in
 GNU_CONFIGURE=		yes
-
-# works with gcc-3.3, so this might have to be increased to 3.3
-GCC_REQD+=		3.0
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
