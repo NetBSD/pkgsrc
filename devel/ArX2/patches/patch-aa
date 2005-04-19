@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/04/19 17:39:40 drochner Exp $
+
+--- SConstruct.in.orig	2005-04-19 18:46:01.000000000 +0200
++++ SConstruct.in
+@@ -22,7 +22,7 @@
+ 
+ import os
+ 
+-env=Environment(CXX='@CXX@',LINK='@CXX@',CPPPATH='#/build')
++env=Environment(CXX='@CXX@',LINK='@CXX@',CPPPATH='#/build',ENV={'PATH':os.environ['PATH']})
+ 
+ cxxflags='@CXXFLAGS@'
+ if len(cxxflags)!=0:
