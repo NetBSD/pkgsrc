@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9896 2005/04/19 00:09:12 wiz Exp $
+$NetBSD: CHANGES,v 1.9897 2005/04/19 00:18:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2077,3 +2077,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed mozilla-stable [wiz 2005-04-18]
 	Removed coda5_client [wiz 2005-04-19]
 	Removed coda5_server [wiz 2005-04-19]
+	Updated g-wrap to 1.9.6 [wiz 2005-04-19]
