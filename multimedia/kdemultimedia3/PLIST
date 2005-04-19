@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/03/23 21:59:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/04/19 11:00:18 wiz Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -1208,7 +1208,7 @@ share/kde/servicetypes/krec_exportitem.desktop
 @dirrm share/doc/kde/HTML/en/artsbuilder/images
 @dirrm share/doc/kde/HTML/en/artsbuilder
 @comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/desktop-directories
+@comment in xdg-dirs: @dirrm share/desktop-directories
 @comment in kde: @dirrm share/applications/kde
 @dirrm lib/mcop/Noatun
 @dirrm lib/mcop/Arts/Environment
