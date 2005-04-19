@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2005/04/07 23:48:36 taya Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/19 15:15:29 taya Exp $
 
 MOZILLA=	mozilla-gtk2
 MOZILLA_BIN=	mozilla-bin
-MOZ_VER=	1.7.6
-PKGREVISION=	1
+MOZ_VER=	1.7.7
 EXTRACT_SUFX=	.tar.bz2
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=	mozilla-source-1.7.3-libart_lgpl.tar.bz2
+SITES_mozilla-source-1.7.3-libart_lgpl.tar.bz2=${MASTER_SITE_LOCAL}
 DISTINFO_FILE=	${.CURDIR}/../../www/mozilla/distinfo
 PATCHDIR=	${.CURDIR}/../../www/mozilla/patches
 FILESDIR=	${.CURDIR}/../../www/mozilla/files
