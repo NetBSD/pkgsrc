@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2004/08/15 12:06:34 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2005/04/19 10:45:19 wiz Exp $
 
---- db.c.orig	2004-08-07 05:03:16.000000000 +0200
+--- db.c.orig	2005-04-16 18:08:41.000000000 +0200
 +++ db.c
-@@ -29,6 +29,7 @@
+@@ -28,6 +28,7 @@
  #include <string.h>
  #include <sys/stat.h>
  #include <ctype.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.5 2004/08/15 12:06:34 wiz Exp $
   
  #ifndef NUTDIR
  char nutdir1[]=".nutdb";
-@@ -739,9 +740,22 @@ strcpy(subuser,sub);
+@@ -881,9 +882,22 @@ strcpy(subuser,sub);
   sprintf(versionfile,"%s/%s/%s","NUTDB",subuser,versionfile1);
  #else
  sprintf(nutdir,"%s/%s",getenv("HOME"),nutdir1);
