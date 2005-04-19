@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9901 2005/04/19 00:50:27 wiz Exp $
+$NetBSD: CHANGES,v 1.9902 2005/04/19 01:06:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2082,3 +2082,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated htdig to 3.1.6nb3 [wiz 2005-04-19]
 	Updated gnome-menus to 2.10.1 [wiz 2005-04-19]
 	Updated ghrino to 0.15.0 [wiz 2005-04-19]
+	Removed coda_doc [wiz 2005-04-19]
+	Removed coda_intro [wiz 2005-04-19]
