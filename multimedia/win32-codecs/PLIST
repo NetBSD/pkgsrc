@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/01/27 23:53:13 ben Exp $
+@comment $NetBSD: PLIST,v 1.8.2.1 2005/04/19 00:16:05 snj Exp $
 lib/win32/3ivX.qtx
 lib/win32/ACTLComponent.qtx
 lib/win32/AvidQTAVUICodec.qtx
@@ -91,6 +91,7 @@ lib/win32/ultimo.dll
 lib/win32/vdowave.drv
 lib/win32/vgpix32d.dll
 lib/win32/vivog723.acm
+lib/win32/vmnc.dll
 lib/win32/voxmsdec.ax
 lib/win32/vp31vfw.dll
 lib/win32/vp4vfw.dll
