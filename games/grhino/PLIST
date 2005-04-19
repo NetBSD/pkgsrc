@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2004/08/15 21:42:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/04/19 00:49:49 wiz Exp $
 bin/grhino
+bin/gtp-rhino
+share/gnome/help/grhino/C/figures/gamelist.png
 share/gnome/help/grhino/C/figures/history.png
 share/gnome/help/grhino/C/figures/mainwindow.png
 share/gnome/help/grhino/C/figures/pattern.png
@@ -21,6 +23,7 @@ share/${PKGNAME}/pattern/row2.bin
 share/${PKGNAME}/pattern/row3.bin
 share/${PKGNAME}/pattern/row4.bin
 share/${PKGNAME}/theme/small/black.xpm
+share/${PKGNAME}/theme/small/black_last.xpm
 share/${PKGNAME}/theme/small/bottom.xpm
 share/${PKGNAME}/theme/small/empty.xpm
 share/${PKGNAME}/theme/small/hint_black.xpm
@@ -29,6 +32,7 @@ share/${PKGNAME}/theme/small/left.xpm
 share/${PKGNAME}/theme/small/right.xpm
 share/${PKGNAME}/theme/small/top.xpm
 share/${PKGNAME}/theme/small/white.xpm
+share/${PKGNAME}/theme/small/white_last.xpm
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/grhino.mo
 @dirrm share/${PKGNAME}/theme/small
 @dirrm share/${PKGNAME}/theme
