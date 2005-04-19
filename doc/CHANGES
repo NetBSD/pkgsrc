@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9902 2005/04/19 01:06:35 wiz Exp $
+$NetBSD: CHANGES,v 1.9903 2005/04/19 01:51:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2084,3 +2084,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ghrino to 0.15.0 [wiz 2005-04-19]
 	Removed coda_doc [wiz 2005-04-19]
 	Removed coda_intro [wiz 2005-04-19]
+	Updated wesnoth to 0.9.0 [wiz 2005-04-19]
