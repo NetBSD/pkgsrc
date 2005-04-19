@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9918 2005/04/19 19:49:10 drochner Exp $
+$NetBSD: CHANGES,v 1.9919 2005/04/19 20:23:46 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2120,3 +2120,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ArX2-2.2.1 [drochner 2005-04-19]
 	Updated nautilus to 2.10.1 [drochner 2005-04-19]
 	Updated nautilus-cd-burner to 2.10.1 [drochner 2005-04-19]
+	Updated csound4 to 4.23.12.11 [ben 2005-04-19]
