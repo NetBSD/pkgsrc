@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3421 2005/04/19 00:50:28 wiz Exp $
+$NetBSD: TODO,v 1.3422 2005/04/19 01:05:29 salo Exp $
 
 Suggested new packages
 ======================
@@ -584,6 +584,7 @@ Suggested package updates
 	o libcddb-1.0
 	o libcdio-0.72
 	o libcomprex-0.3.3
+	o libexif-0.6.12
 	o libetpan-0.34b
 	o libextractor-0.4.2
 	o libflash-0.4.13
