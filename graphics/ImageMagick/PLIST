@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2005/04/13 08:10:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2005/04/19 15:43:13 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -132,8 +132,6 @@ man/man1/identify.1
 man/man1/import.1
 man/man1/mogrify.1
 man/man1/montage.1
-man/man4/miff.4
-man/man5/quantize.5
 share/ImageMagick-${IM_MAJOR_VER}/ChangeLog
 share/ImageMagick-${IM_MAJOR_VER}/LICENSE
 share/ImageMagick-${IM_MAJOR_VER}/NEWS
@@ -274,9 +272,11 @@ share/ImageMagick-${IM_MAJOR_VER}/www/magick-core.html
 share/ImageMagick-${IM_MAJOR_VER}/www/magick-wand.html
 share/ImageMagick-${IM_MAJOR_VER}/www/magick.css
 share/ImageMagick-${IM_MAJOR_VER}/www/mailing-list.html
+share/ImageMagick-${IM_MAJOR_VER}/www/miff.html
 share/ImageMagick-${IM_MAJOR_VER}/www/mogrify.html
 share/ImageMagick-${IM_MAJOR_VER}/www/montage.html
 share/ImageMagick-${IM_MAJOR_VER}/www/perl-magick.html
+share/ImageMagick-${IM_MAJOR_VER}/www/quantize.html
 share/ImageMagick-${IM_MAJOR_VER}/www/resources.html
 share/ImageMagick-${IM_MAJOR_VER}/www/search.html
 share/ImageMagick-${IM_MAJOR_VER}/www/sponsors.html
