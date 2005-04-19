@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.60 2005/04/19 15:58:10 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.61 2005/04/19 16:08:02 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -123,3 +123,7 @@ Pullup ticket 449 - requested by Lubomir Sedlacik
 win32-codecs update
 Pullup ticket 452 - requested by Takahiro Kambe
 distfile update for squid
+Pullup ticket 453 - requested by Takahiro Kambe
+dependency fix for ruby16
+Pullup ticket 454 - requested by Takahiro Kambe
+dependency fix for ruby18
