@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9913 2005/04/19 14:42:58 minskim Exp $
+$NetBSD: CHANGES,v 1.9914 2005/04/19 15:15:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2108,3 +2108,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xdg-x11-dirs to 1.2 [wiz 2005-04-19]
 	Updated clamsmtp to 1.4.1 [xtraeme 2005-04-19]
 	Updated horde to 2.2.7nb1 [minskim 2005-04-19]
+	Updated squid to 2.5.9nb5 [taca 2005-04-19]
