@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.34 2005/04/13 01:57:14 uebayasi Exp $
+# $NetBSD: bsd.sites.mk,v 1.35 2005/04/19 15:18:44 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -97,7 +97,6 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://cogent.dl.sourceforge.net/sourceforge/ \
 	http://easynews.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
-	http://internap.dl.sourceforge.net/sourceforge/ \
 	http://jaist.dl.sourceforge.net/sourceforge/ \
 	http://kent.dl.sourceforge.net/sourceforge/ \
 	http://mesh.dl.sourceforge.net/sourceforge/ \
@@ -105,10 +104,8 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://optusnet.dl.sourceforge.net/sourceforge/ \
 	http://ovh.dl.sourceforge.net/sourceforge/ \
 	http://puzzle.dl.sourceforge.net/sourceforge/ \
-	http://switch.dl.sourceforge.net/sourceforge/ \
-	http://unc.dl.sourceforge.net/sourceforge/ \
-	http://voxel.dl.sourceforge.net/sourceforge/ \
-	ftp://ftp2.sourceforge.net/pub/sourceforge/
+	http://switch.dl.sourceforge.net/sourceforge/
+#	ftp://ftp2.sourceforge.net/pub/sourceforge/
 #	ftp://ftp.tuwien.ac.at/linux/sourceforge/
 #	http://sf.gds.tuwien.ac.at/
 
