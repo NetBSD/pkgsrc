@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/04/19 14:39:42 minskim Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/04/19 14:49:35 minskim Exp $
 share/horde/config/horde.php.dist
 share/horde/config/html.php.dist
 share/horde/config/lang.php.dist
@@ -323,12 +323,9 @@ share/doc/horde/CONTRIBUTING
 share/doc/horde/CREDITS
 share/doc/horde/HACKING
 share/doc/horde/INSTALL
-share/doc/horde/PERFORMANCE
 share/doc/horde/RELEASE_NOTES
 share/doc/horde/SECURITY
 share/doc/horde/TRANSLATIONS
-share/doc/horde/TODO
-share/doc/horde/UPGRADING
 share/examples/horde/horde.conf
 @dirrm share/horde/util
 @dirrm share/horde/templates/wml/login
