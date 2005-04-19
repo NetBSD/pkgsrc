@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9917 2005/04/19 15:44:13 adam Exp $
+$NetBSD: CHANGES,v 1.9918 2005/04/19 19:49:10 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2115,3 +2115,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Added mplayer-plugin-firefox-gtk1 [wiz 2005-04-19]
 	Removed mplayer-plugin-firefox-gtk2 [wiz 2005-04-19]
 	Updated ImageMagick to 6.2.1.6 [adam 2005-04-19]
+	Updated gnumeric14 to 1.4.3 [drochner 2005-04-19]
+	Updated eel2 to 2.10.1 [drochner 2005-04-19]
+	Added ArX2-2.2.1 [drochner 2005-04-19]
+	Updated nautilus to 2.10.1 [drochner 2005-04-19]
+	Updated nautilus-cd-burner to 2.10.1 [drochner 2005-04-19]
