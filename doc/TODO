@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3423 2005/04/19 01:51:52 wiz Exp $
+$NetBSD: TODO,v 1.3424 2005/04/19 10:45:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -476,7 +476,6 @@ Suggested package updates
 	o gkrellm1-snmp-0.21
 	o gkrellm1-xmms-0.5.8
 	o gliv-1.9.2
-	o gmplayer-1.0pre7
 	o gnats-4.1.0
 	o gnet1-1.1.9
 	o gnetman-20050325
@@ -581,14 +580,12 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.11.0
 	o leafpad-0.7.9
-	o libcddb-1.0
 	o libcdio-0.72
 	o libcomprex-0.3.3
 	o libexif-0.6.12
 	o libetpan-0.34b
 	o libextractor-0.4.2
 	o libflash-0.4.13
-	o libgda-1.2.1
 	o libgnomemm26-2.10.0
 	o libgnomeuimm26-2.10.0
 	o libhydrogen-0.9.0
@@ -631,7 +628,6 @@ Suggested package updates
 	o mdd-20050318
 	o memcached-1.2
 	o memtest86-3.2
-	o mencoder-1.0pre7
 	o mftrace-1.1.6
 	o mgetty+sendfax-1.1.32
 	o micq-0.4.12 [pkg/29063]
@@ -654,7 +650,6 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpc-0.11.2
 	o mpfr-2.1.1
-	o mplayer-1.0pre7
 	o mplayer-plugin-firefox-2.80
 	o mrproject-0.9.1
 	o mserv-devel-0.41
@@ -688,7 +683,6 @@ Suggested package updates
 	o nsd-2.2.1
 	o nslint-2.1a3
 	o nullmailer-1.0.0
-	o nut-10.17
 	o nxtvepg-2.7.5
 	o obexftp-0.10.6
 	o odbc-postgresql-7.4.7
