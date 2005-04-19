@@ -1,23 +1,41 @@
-@comment $NetBSD: PLIST,v 1.6 2004/10/05 14:23:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/04/19 10:52:26 wiz Exp $
 bin/cd-drive
 bin/cd-info
+bin/cd-paranoia
 bin/cd-read
 bin/iso-info
 bin/iso-read
+include/cdio/bytesex.h
+include/cdio/bytesex_asm.h
 include/cdio/cd_types.h
+include/cdio/cdda.h
 include/cdio/cdio.h
 include/cdio/cdtext.h
+include/cdio/device.h
+include/cdio/disc.h
+include/cdio/ds.h
 include/cdio/dvd.h
 include/cdio/iso9660.h
 include/cdio/logging.h
+include/cdio/paranoia.h
+include/cdio/read.h
 include/cdio/scsi_mmc.h
 include/cdio/sector.h
+include/cdio/track.h
 include/cdio/types.h
 include/cdio/util.h
 include/cdio/version.h
 include/cdio/xa.h
 lib/libcdio.la
+lib/libcdio_cdda.la
+lib/libcdio_paranoia.la
 lib/libiso9660.la
 lib/pkgconfig/libcdio.pc
+lib/pkgconfig/libcdio_cdda.pc
+lib/pkgconfig/libcdio_paranoia.pc
 lib/pkgconfig/libiso9660.pc
+man/jp/man1/cd-paranoia.1
+man/man1/cd-paranoia.1
+@unexec ${RMDIR} %D/man/jp/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/jp 2>/dev/null || ${TRUE}
 @dirrm include/cdio
