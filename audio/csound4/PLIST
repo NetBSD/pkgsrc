@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/28 17:16:48 ben Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/19 20:22:52 ben Exp $
 bin/csound
 bin/csound-config
 bin/cvanal
@@ -7,9 +7,14 @@ bin/envext
 bin/extract
 bin/extractor
 bin/flcsound
+bin/het_export
+bin/het_import
 bin/hetro
 bin/lpanal
+bin/lpc_export
 bin/mixer
+bin/pv_export
+bin/pv_import
 bin/pvanal
 bin/pvlook
 bin/scale
@@ -21,15 +26,28 @@ bin/srconv
 include/csound/OpcodeBase.hpp
 include/csound/autoheader.h
 include/csound/config.h
+include/csound/cs.h
 include/csound/cscore.h
 include/csound/csound.h
 include/csound/cwindow.h
+include/csound/midiops.h
+include/csound/midiops2.h
 include/csound/opcode.h
+include/csound/prototyp.h
+include/csound/sort.h
 include/csound/sysdep.h
+include/csound/text.h
+include/csound/version.h
+lib/csound/gabops.la
+lib/csound/metro.la
+lib/csound/newfils.la
+lib/csound/syncgrain.la
+lib/csound/vectorial.la
 lib/libcscore.a
 lib/libcsound.la
 share/csound/csound.xmg
 share/csound/csoundgbs.html
 share/csound/flcsound.html
-@dirrm include/csound
 @dirrm share/csound
+@dirrm lib/csound
+@dirrm include/csound
