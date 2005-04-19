@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9908 2005/04/19 10:45:47 wiz Exp $
+$NetBSD: CHANGES,v 1.9909 2005/04/19 11:02:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2101,3 +2101,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed xdm-krb4 [wiz 2005-04-19]
 	Updated sylpheed-devel to 1.9.9 [chris 2005-04-19]
 	Updated nut to 10.18 [wiz 2005-04-19]
+	Updated xdg-dirs to 1.2 [wiz 2005-04-19]
+	Updated kdelibs to 3.4.0nb2 [wiz 2005-04-19]
+	Updated gnome-menus to 2.10.1nb1 [wiz 2005-04-19]
