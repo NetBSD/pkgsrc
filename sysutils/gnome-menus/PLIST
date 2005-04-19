@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/22 16:10:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/19 00:34:32 wiz Exp $
 bin/gnome-menu-spec-test
 include/gnome-menus/menu-tree.h
 lib/libgnome-menu.la
@@ -72,5 +72,5 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-menus.mo
 @dirrm share/examples/gnome-menus/xdg/menus
 @dirrm share/examples/gnome-menus/xdg
 @dirrm share/examples/gnome-menus
-@dirrm share/desktop-directories
+@unexec ${RMDIR} %D/share/desktop-directories 2>/dev/null || ${TRUE}
 @dirrm include/gnome-menus
