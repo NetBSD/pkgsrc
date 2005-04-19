@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.58 2005/04/19 00:07:28 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.59 2005/04/19 00:16:16 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -119,3 +119,5 @@ Pullup ticket 438 - requested by Matthias Drochner
 security fix for kdelibs3
 Pullup ticket 450 - requested by Lubomir Sedlacik
 security fix for postgrey
+Pullup ticket 449 - requested by Lubomir Sedlacik
+win32-codecs update
