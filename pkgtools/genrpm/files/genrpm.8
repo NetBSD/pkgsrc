@@ -1,0 +1,60 @@
+.\" $NetBSD: genrpm.8,v 1.1.1.1 2005/04/20 09:36:00 agc Exp $
+.Dd April 20, 2005
+.Os
+.Dt GENRPM 8
+.Sh NAME
+.Nm genrpm
+.Sh SYNOPSIS
+.Nm
+.Op Fl s
+.Op Fl v
+package...
+.Sh DESCRIPTION
+The
+.Nm
+program takes an installed pkgsrc package and creates a
+Redhat Package Manager package from that, optionally creating
+an RPM-style src RPM in addition.
+If the
+.Fl v
+option is specified,
+.Nm
+will carry out its work in a verbose manner (the rpm utility is
+already a fairly verbose utility).
+.Pp
+Package version extension will be done automatically by
+.Nm
+so that rpm packages do not need to know the individual version
+numbers of pkgsrc packages.
+.Pp
+An optinoal source rpm package can also
+be created by using the appropriate switch.
+.Pp
+The
+.Nm
+package also requires that the
+.Xr pkg_tarup pkgsrc/pkgtools
+and 
+.Xr rpm pkgsrc/misc
+packages be installed.
+.Sh SEE ALSO
+.Xr pkg_tarup pkgsrc/pkgtools ,
+.Xr rpm pkgsrc/misc
+and
+.Rs
+.%T "Documentation on the NetBSD Package System"
+.Re
+@PKGSRCDIR@/Packages.txt
+.Sh HISTORY
+The
+.Nm
+command was added to
+.Nx Ns 's
+pkgsrc on April 20, 2005.
+.\" .Sh AUTHORS
+.Sh AUTHOR
+The
+.Nm
+command was written by
+.An Alistair Crooks (agc@NetBSD.org)
+.\" .Sh SECURITY CONSIDERATIONS
