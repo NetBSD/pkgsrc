@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9932 2005/04/20 15:33:00 abs Exp $
+$NetBSD: CHANGES,v 1.9933 2005/04/20 16:29:05 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2137,4 +2137,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated DatLib to 2.5 [wiz 2005-04-20]
 	Updated DatUtil to 2.17 [wiz 2005-04-20]
 	Updated pkg_chk to 1.57 [abs 2005-04-20]
-
+	Added rssh-2.2.3 [seb 2005-04-20]
