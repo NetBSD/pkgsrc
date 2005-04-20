@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2005/04/11 21:46:06 tv Exp $
+# $NetBSD: Makefile,v 1.54 2005/04/20 15:42:11 drochner Exp $
 #
 
 DISTNAME=	libwmf-0.2.8.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wvware/}
 
@@ -26,4 +26,6 @@ post-install:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+#.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
