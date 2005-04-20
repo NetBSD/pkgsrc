@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/03/27 18:13:22 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/04/20 15:30:29 wiz Exp $
 
-SHA1 (dutil216.zip) = 3e2255f1d2976c7167d1c57b282b96983e11f1d8
-RMD160 (dutil216.zip) = 8c4abe3936895ad33823a9827b4704217735cf1c
-Size (dutil216.zip) = 137021 bytes
+SHA1 (dutil217.zip) = adb2e656789b40940f453fd8af8b80794cb91c8b
+RMD160 (dutil217.zip) = 0c6a9d479a758fe1e1c4bc58da015f306cf2f55b
+Size (dutil217.zip) = 137076 bytes
 SHA1 (patch-aa) = a6f3eee2549bc795bdf16b3672ec770ee16794a0
 SHA1 (patch-ab) = 2926b8e6dda83ca30e20de6f27933a318a2db404
