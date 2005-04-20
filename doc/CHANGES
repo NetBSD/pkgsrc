@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9920 2005/04/19 21:06:45 kleink Exp $
+$NetBSD: CHANGES,v 1.9921 2005/04/20 00:56:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2122,3 +2122,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated nautilus-cd-burner to 2.10.1 [drochner 2005-04-19]
 	Updated csound4 to 4.23.12.11 [ben 2005-04-19]
 	Updated jwhois to 3.2.2nb17 [kleink 2005-04-19]
+	Updated squid to 2.5.9nb6 [taca 2005-04-20]
