@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9926 2005/04/20 11:03:13 schmonz Exp $
+$NetBSD: CHANGES,v 1.9927 2005/04/20 12:39:59 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2128,3 +2128,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Module-CoreList to 2.00 [seb 2005-04-20]
 	Added genrpm-1.0 [agc 2005-04-20]
 	Added mb2md-3.20 [schmonz 2005-04-20]
+	Updated graphviz to 2.2.1 [seb 2005-04-20]
