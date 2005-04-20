@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9924 2005/04/20 09:05:51 seb Exp $
+$NetBSD: CHANGES,v 1.9925 2005/04/20 09:37:51 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2126,3 +2126,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-NetAddr-IP to 3.24 [seb 2005-04-20]
 	Updated p5-GraphViz to 2.02 [seb 2005-04-20]
 	Updated p5-Module-CoreList to 2.00 [seb 2005-04-20]
+	Added genrpm-1.0 [agc 2005-04-20]
