@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9922 2005/04/20 07:45:39 seb Exp $
+$NetBSD: CHANGES,v 1.9923 2005/04/20 08:43:53 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2124,3 +2124,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated jwhois to 3.2.2nb17 [kleink 2005-04-19]
 	Updated squid to 2.5.9nb6 [taca 2005-04-20]
 	Updated p5-NetAddr-IP to 3.24 [seb 2005-04-20]
+	Updated p5-GraphViz to 2.02 [seb 2005-04-20]
