@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9930 2005/04/20 13:44:57 heinz Exp $
+$NetBSD: CHANGES,v 1.9931 2005/04/20 15:31:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2134,3 +2134,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Net-DNS to 0.49 [heinz 2005-04-20]
 	Updated psiconv to 0.9.7 [adam 2005-04-20]
 	Updated p5-razor-agents to 2.67 [heinz 2005-04-20]
+	Updated DatLib to 2.5 [wiz 2005-04-20]
+	Updated DatUtil to 2.17 [wiz 2005-04-20]
