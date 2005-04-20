@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.30 2005/03/28 15:04:07 tv Exp $
+# $NetBSD: Interix.mk,v 1.31 2005/04/20 21:40:30 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -136,7 +136,7 @@ ROOT_GROUP?=		131616 # +Administrators or native language equivalent
 TOUCH_FLAGS?=
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
-ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
+ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 
 # imake installs manpages in weird places
 IMAKE_MAN_SOURCE_PATH=	man/man
