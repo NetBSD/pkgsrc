@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9923 2005/04/20 08:43:53 seb Exp $
+$NetBSD: CHANGES,v 1.9924 2005/04/20 09:05:51 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2125,3 +2125,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated squid to 2.5.9nb6 [taca 2005-04-20]
 	Updated p5-NetAddr-IP to 3.24 [seb 2005-04-20]
 	Updated p5-GraphViz to 2.02 [seb 2005-04-20]
+	Updated p5-Module-CoreList to 2.00 [seb 2005-04-20]
