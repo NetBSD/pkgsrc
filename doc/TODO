@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3429 2005/04/20 12:41:30 adam Exp $
+$NetBSD: TODO,v 1.3430 2005/04/20 13:11:19 adam Exp $
 
 Suggested new packages
 ======================
@@ -861,7 +861,6 @@ Suggested package updates
 	o proj-4.4.9
 	o proxsmtp-1.2
 	o pscal-1.16
-	o psiconv-0.9.7
 	o psmisc-21.5
 	o pstoedit-3.40
 	o pstree-2.26
