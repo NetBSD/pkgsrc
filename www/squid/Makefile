@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.139.2.4 2005/04/19 15:50:56 salo Exp $
+# $NetBSD: Makefile,v 1.139.2.5 2005/04/20 01:16:48 salo Exp $
 
 DISTNAME=	squid-2.5.STABLE9
 PKGNAME=	squid-2.5.9
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -50,7 +50,7 @@ DATADIR=	${VARBASE}/squid
 
 # Update this time stamp pattern if any of official distfiles has changed.
 #
-DIST_STAMP=	2005041900
+DIST_STAMP=	2005042000
 
 DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
 
