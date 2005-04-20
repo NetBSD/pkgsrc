@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/02/10 13:21:40 adam Exp $
+# $NetBSD: Makefile,v 1.33 2005/04/20 23:50:25 kristerw Exp $
 
 .include "../qt3-libs/Makefile.common"
 
@@ -35,5 +35,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${QTPREFIX}/mkspecs
 	${CP} -R ${WRKSRC}/mkspecs ${QTPREFIX}
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
