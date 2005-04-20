@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.40 2005/04/19 11:54:50 wiz Exp $
+# $NetBSD: java-vm.mk,v 1.41 2005/04/20 13:17:40 tron Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -116,9 +116,9 @@ _JAVA_PKGBASE.blackdown-jdk13=	blackdown-jdk13
 _JAVA_PKGBASE.jdk=		jdk
 _JAVA_PKGBASE.jdk14=		jdk14
 _JAVA_PKGBASE.kaffe=		kaffe
-_JAVA_PKGBASE.sun-jdk13=	sun-jdk13
-_JAVA_PKGBASE.sun-jdk14=	sun-jdk14
-_JAVA_PKGBASE.sun-jdk15=	sun-jdk15
+_JAVA_PKGBASE.sun-jdk13=	sun-jre13
+_JAVA_PKGBASE.sun-jdk14=	sun-jre14
+_JAVA_PKGBASE.sun-jdk15=	sun-jre15
 #_JAVA_PKGBASE.win32-jdk=	win32-jdk
 
 # Mark the acceptable JVMs and check which JVM packages are installed.
