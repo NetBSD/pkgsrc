@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/04 00:33:02 heinz Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/20 16:22:38 heinz Exp $
 share/doc/${PKGBASE}/README
 share/examples/${PKGBASE}/getkeyset.pl
 share/examples/${PKGBASE}/key2ds
 share/examples/${PKGBASE}/make-signed-keyset
+@dirrm share/doc/${PKGBASE}
+@dirrm share/examples/${PKGBASE}
