@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.13 2005/02/28 00:43:48 wiz Exp $
+# $Id: pkg_chk.sh,v 1.14 2005/04/20 15:32:25 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -212,7 +212,7 @@ list_packages()
 	NEXTCHECK=' '
 	for pkg in $CHECKLIST ; do
 	    if [ ! -f $PACKAGES/$pkg.tgz ] ; then
-		fatal_maybe " ** $PKGNAME - binary package (dependency) missing"
+		fatal_maybe " ** $pkg.tgz - binary package dependency missing"
 		continue
 	    fi
 	    for dep in $(${PKG_INFO} -. -N $PACKAGES/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} ..) ; do
@@ -239,7 +239,11 @@ msg()
     if [ -n "$opt_L" ] ; then
 	echo "$@" >> "$opt_L"
     fi
-    echo "$@"
+    if [ -n "$opt_l" ] ; then
+	echo "$@" >&2
+    else
+	echo "$@"
+    fi
     }
 
 msg_progress()
