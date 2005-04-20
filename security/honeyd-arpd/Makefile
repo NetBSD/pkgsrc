@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:12 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/20 14:36:14 wiz Exp $
 #
 
 DISTNAME=	arpd-0.2
 PKGNAME=	honeyd-arpd-0.2
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}/arpd
 CATEGORIES=	security net
 MASTER_SITES=	http://niels.xtdnet.nl/honeyd/
 
@@ -15,6 +14,7 @@ COMMENT=	ARP daemon for honeyd
 USE_PKGINSTALL= yes
 RCD_SCRIPTS=	honeydarpd
 GNU_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}/arpd
 
 CONFIGURE_ARGS+=    --with-libevent=${BUILDLINK_PREFIX.libevent}
 
