@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2004/09/21 17:09:48 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2005/04/20 16:12:45 drochner Exp $
 
---- src/fr-command-tar.c.orig	2004-08-30 19:35:13.000000000 +0200
+--- src/fr-command-tar.c.orig	2005-04-11 22:54:35.000000000 +0200
 +++ src/fr-command-tar.c
-@@ -324,6 +324,7 @@ add_compress_arg (FRCommand *comm)
+@@ -212,6 +212,7 @@ add_compress_arg (FRCommand *comm)
  static void
  begin_tar_command (FRCommand *comm)
  {
@@ -10,10 +10,10 @@ $NetBSD: patch-aa,v 1.3 2004/09/21 17:09:48 jmmv Exp $
  	char       *path = NULL;
  	const char *prev_path = NULL;
  	char       *temp = NULL;
-@@ -344,6 +345,8 @@ begin_tar_command (FRCommand *comm)
+@@ -233,6 +234,8 @@ begin_tar_command (FRCommand *comm)
+ 	temp = g_strdup_printf ("PATH=%s", prev_path);
  	putenv (temp);
- 
- 	g_free (path);
+ 	g_free (temp);
 +#endif
 +	fr_process_begin_command (comm->process, FILEROLLER_TAR);
  }
