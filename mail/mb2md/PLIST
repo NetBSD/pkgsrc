@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/20 11:00:18 schmonz Exp $
+bin/mb2md
