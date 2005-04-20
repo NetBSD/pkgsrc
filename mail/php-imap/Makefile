@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/16 07:37:30 jdolecek Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/20 12:03:25 kim Exp $
 
 MODNAME=		imap
 PKGREVISION=		# empty
@@ -12,6 +12,12 @@ CONFIGURE_ARGS+=	--with-${MODNAME}-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-${MODNAME}-linkage
 
 CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
+
+# Imap extension's config.m4 calls m4 macro PHP_SETUP_OPENSSL() which
+# expects PHP_ARG_WITH(openssl, ...) being called beforehand so that
+# PHP_OPENSSL is set. For a self contained extension build like for
+# this package this is not the case of course.
+
 CONFIGURE_ENV+=		PHP_OPENSSL=${SSLBASE}
 
 .include "../../mail/imap-uw/buildlink3.mk"
