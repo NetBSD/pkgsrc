@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2003/09/02 17:27:18 taca Exp $
+$NetBSD: patch-aa,v 1.2.12.1 2005/04/20 15:44:39 salo Exp $
 
---- doc/ftp.proxy.1.orig	2003-01-24 01:18:47.000000000 +0900
+--- doc/ftp.proxy.1.orig	2004-07-30 21:50:28.000000000 +0900
 +++ doc/ftp.proxy.1
 @@ -13,7 +13,7 @@
  .in -0.5i
@@ -14,13 +14,13 @@ $NetBSD: patch-aa,v 1.2 2003/09/02 17:27:18 taca Exp $
 @@ -29,7 +29,7 @@ client.
  .PP
  .I ftp.proxy
- must be started from a TCP superserver like
+ can be started from a TCP superserver like
 -.IR inetd (1)
 +.IR inetd (8)
  or
  .IR tcpproxy (1).
- It can't bind to a TCP/IP port on it's own.
-@@ -291,7 +291,7 @@ Daemon log facility on other.
+ but can also bind to a TCP/IP port on it's own and run in standalone (or
+@@ -419,7 +419,7 @@ Daemon log facility on other.
  .SH "AUTHOR"
  Andreas Schoenberg <asg@ftpproxy.org>
  .SH "SEE ALSO"

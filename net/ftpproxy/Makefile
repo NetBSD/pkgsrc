@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/03/14 19:55:39 tv Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2005/04/20 15:44:39 salo Exp $
 #
 
-DISTNAME=	ftpproxy-1.2.2
-PKGREVISION=	1
+DISTNAME=	ftpproxy-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	http://www.ftpproxy.org/download/ \
 		http://www.ftpproxy.org/download/older_releases/
@@ -12,12 +11,16 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ftpproxy.org/
 COMMENT=	Application level gateway for FTP
 
+BUILD_DIRS=	${WRKSRC}/src
+VERSION=	1.2.3
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
 LIBS+=		"-lsocket -lnsl"
-MAKE_ENV+=	LIBS=${LIBS}
+OSFLAG=		-DSOLARIS
 .endif
+MAKE_ENV+=	OSFLAG=${OSFLAG} OSLIB=${LIBS} VERSION=${VERSION}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/ftp.proxy ${PREFIX}/libexec/
