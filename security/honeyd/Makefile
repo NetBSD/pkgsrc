@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/20 14:32:48 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/20 14:33:30 wiz Exp $
 #
 
 DISTNAME=	honeyd-1.0
@@ -33,10 +33,10 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 .undef f
 
-.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libdnet/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 
