@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9942 2005/04/21 15:07:17 wiz Exp $
+$NetBSD: CHANGES,v 1.9943 2005/04/21 15:50:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2155,3 +2155,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated heimdal to 0.6.4 [lha 2005-04-21]
 	Updated xscreensaver to 4.21nb1 [wiz 2005-04-21]
 	Updated xscreensaver-demo to 4.21nb1 [wiz 2005-04-21]
+	Updated squid to 2.5.9nb7 [taca 2005-04-21]
