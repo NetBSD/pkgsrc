@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:04 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/21 08:56:21 adam Exp $
 
-DISTNAME=	kadu-0.3.9
-PKGREVISION=	1
+DISTNAME=	kadu-0.4.0
 CATEGORIES=	chat
 MASTER_SITES=	http://www.kadu.net/download/stable/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +13,7 @@ USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-existing-libgadu=${BUILDLINK_PREFIX.ekg}
+CONFIGURE_ENV+=		X11BASE="${X11BASE}"
 LIBS+=			${LIBOSSAUDIO}
 WRKSRC=			${WRKDIR}/kadu
 
@@ -21,6 +21,7 @@ WRKSRC=			${WRKDIR}/kadu
 post-configure:
 	cd ${WRKSRC}; ${TOUCH} Makefile
 
+.include "../../audio/libsndfile/buildlink3.mk"
 .include "../../chat/ekg/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
