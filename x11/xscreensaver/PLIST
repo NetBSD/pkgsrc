@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2005/03/24 13:55:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2005/04/21 15:01:43 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -590,7 +590,6 @@ man/man1/xlyap.1
 man/man1/xmatrix.1
 man/man1/xrayswarm.1
 man/man1/xscreensaver-command.1
-man/man1/xscreensaver-demo.1
 man/man1/xscreensaver-getimage-file.1
 man/man1/xscreensaver-getimage-video.1
 man/man1/xscreensaver-getimage.1

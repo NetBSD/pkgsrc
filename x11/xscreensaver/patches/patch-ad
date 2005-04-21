@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.15 2005/04/04 09:14:45 wiz Exp $
+$NetBSD: patch-ad,v 1.16 2005/04/21 15:01:43 wiz Exp $
 
 --- driver/Makefile.in.orig	2005-03-21 16:18:18.000000000 +0900
-+++ driver/Makefile.in	2005-04-03 20:09:35.000000000 +0900
++++ driver/Makefile.in	2005-04-20 17:28:14.000000000 +0900
+@@ -222,7 +222,7 @@
+ 		  xscreensaver.h prefs.h remote.h \
+ 		  demo-Gtk-widgets.h demo-Gtk-stubs.h demo-Gtk-support.h \
+ 		  demo-Gtk-conf.h
+-MEN_1		= xscreensaver.man xscreensaver-demo.man \
++MEN_1		= xscreensaver.man \
+ 		  xscreensaver-command.man \
+ 		  xscreensaver-text.man \
+ 		  xscreensaver-getimage.man \
 @@ -288,7 +288,7 @@
  	fi ;								      \
  	echo $$inst xscreensaver $(install_prefix)$(bindir)/xscreensaver ;    \
