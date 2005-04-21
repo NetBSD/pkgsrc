@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9940 2005/04/21 14:41:55 lha Exp $
+$NetBSD: CHANGES,v 1.9941 2005/04/21 15:02:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2145,5 +2145,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ekg to 1.6 [adam 2005-04-21]
 	Updated kadu to 0.4.0 [adam 2005-04-21]
 	Updated abcde to 2.2.0nb1 [pooka 2005-04-21]
+	Removed racoon [itojun 2005-04-21]
 	Updated gld to 1.5.2 [xtraeme 2005-04-21]
 	Updated heimdal to 0.6.4 [lha 2005-04-21]
+	Updated xscreensaver to 4.21nb1 [wiz 2005-04-21]
+	Updated xscreensaver-demo to 4.21nb1 [wiz 2005-04-21]
