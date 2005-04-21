@@ -1,10 +1,10 @@
-# $NetBSD: apache.mk,v 1.8 2005/03/24 17:46:00 tv Exp $
+# $NetBSD: apache.mk,v 1.9 2005/04/21 23:05:41 sketch Exp $
 #
 # This Makefile fragment handles Apache dependencies and make variables,
 # and is meant to be included by packages that require Apache either at
 # build-time or at run-time.  apache.mk will:
 #
-#	* set PKG_APACHE to the name of the apache web serverused
+#	* set PKG_APACHE to the name of the apache web server used
 #
 #	* add a full dependency on the apache server
 #
