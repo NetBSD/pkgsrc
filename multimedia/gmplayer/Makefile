@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/03/02 06:19:28 minskim Exp $
+# $NetBSD: Makefile,v 1.28.2.1 2005/04/21 15:20:40 salo Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -9,6 +9,7 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
+PKGREVISION=	3
 
 SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp.mplayerhq.hu/MPlayer/Skin/		\
@@ -50,7 +51,7 @@ SITES_${skin}= ${SKIN_SITES}
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${SKINS}
 DISTINFO_FILE=	${.CURDIR}/distinfo
-DIST_SUBDIR=	${PKGNAME_NOREV}-20050302
+DIST_SUBDIR=	${PKGNAME_NOREV}-20050409
 
 USE_BUILDLINK3=		YES
 CONFIGURE_ARGS+=	--enable-gui --disable-mencoder \

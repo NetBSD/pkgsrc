@@ -1,0 +1,17 @@
+$NetBSD: patch-bb,v 1.2.6.1 2005/04/21 15:20:40 salo Exp $
+
+--- libmpdemux/asf_mmst_streaming.c.orig	2005-04-16 21:10:36.000000000 +0200
++++ libmpdemux/asf_mmst_streaming.c
+@@ -334,8 +334,12 @@ static int interp_header (uint8_t *heade
+ 
+       printf ("stream object, stream id: %d\n", stream_id);
+ 
++      if (num_stream_ids < 20) {
+       stream_ids[num_stream_ids] = stream_id;
+       num_stream_ids++;
++      } else {
++	printf ("too many id, stream skipped");
++      }
+       
+     } else {
+       printf ("unknown object\n");
