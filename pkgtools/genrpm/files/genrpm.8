@@ -1,4 +1,4 @@
-.\" $NetBSD: genrpm.8,v 1.1.1.1 2005/04/20 09:36:00 agc Exp $
+.\" $NetBSD: genrpm.8,v 1.2 2005/04/21 14:55:44 wiz Exp $
 .Dd April 20, 2005
 .Os
 .Dt GENRPM 8
@@ -6,9 +6,8 @@
 .Nm genrpm
 .Sh SYNOPSIS
 .Nm
-.Op Fl s
-.Op Fl v
-package...
+.Op Fl sv
+.Ar package ...
 .Sh DESCRIPTION
 The
 .Nm
@@ -27,34 +26,26 @@ Package version extension will be done automatically by
 so that rpm packages do not need to know the individual version
 numbers of pkgsrc packages.
 .Pp
-An optinoal source rpm package can also
-be created by using the appropriate switch.
-.Pp
-The
-.Nm
-package also requires that the
-.Xr pkg_tarup pkgsrc/pkgtools
-and 
-.Xr rpm pkgsrc/misc
-packages be installed.
+An optional source rpm package can also
+be created by using the
+.Fl s
+flag.
 .Sh SEE ALSO
-.Xr pkg_tarup pkgsrc/pkgtools ,
-.Xr rpm pkgsrc/misc
+.Xr pkg_tarup 1 ,
+.Xr rpm 8
 and
 .Rs
 .%T "Documentation on the NetBSD Package System"
 .Re
-@PKGSRCDIR@/Packages.txt
+@PKGSRCDIR@/doc/pkgsrc.txt
 .Sh HISTORY
 The
 .Nm
 command was added to
-.Nx Ns 's
+.Nx Ap s
 pkgsrc on April 20, 2005.
-.\" .Sh AUTHORS
-.Sh AUTHOR
+.Sh AUTHORS
 The
 .Nm
 command was written by
-.An Alistair Crooks (agc@NetBSD.org)
-.\" .Sh SECURITY CONSIDERATIONS
+.An Alistair Crooks Aq agc@NetBSD.org .
