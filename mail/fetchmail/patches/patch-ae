@@ -1,12 +1,12 @@
-$NetBSD: patch-ae,v 1.14 2005/01/21 15:46:39 frueauf Exp $
+$NetBSD: patch-ae,v 1.15 2005/04/21 10:55:48 frueauf Exp $
 
 --- configure.in.orig	Fri Oct 10 10:36:57 2003
-+++ configure.in	Fri Jan 21 15:50:47 2005
++++ configure.in	Thu Apr 21 12:49:43 2005
 @@ -434,10 +434,21 @@
    AC_DEFINE(KERBEROS_V5)
    CEFLAGS="$CEFLAGS -I/usr/include/kerberosV"
    LIBS="$LIBS -lasn1 -lkrb5 -lcom_err -lkafs"
-+elif test "$with_kerberos5" = "yes" && ( test `uname` = "NetBSD" )
++elif test "$with_kerberos5" != "no" && ( test `uname` = "NetBSD" )
 +then
 +  AC_CHECKING([kerberosV for NetBSD])
 +  AC_DEFINE(HEIMDAL)
@@ -45,6 +45,15 @@ $NetBSD: patch-ae,v 1.14 2005/01/21 15:46:39 frueauf Exp $
             AC_MSG_RESULT([Heimdal found])
            dnl Attempt to detect if we need to -ldb2 to link Heimdal
            dnl we assume we do if it is available
+@@ -503,7 +519,7 @@
+ if test "$with_kerberos" != "no"
+ then
+ # Check for a NetBSD/OpenBSD special case
+-if test "$with_kerberos" = "yes" && ( test `uname` = "NetBSD" || test `uname` = "OpenBSD" )
++if test "$with_kerberos" != "no" && ( test `uname` = "NetBSD" || test `uname` = "OpenBSD" )
+ then
+   AC_CHECKING([kerberosIV for `uname`])
+   AC_DEFINE(KERBEROS_V4)
 @@ -704,9 +720,14 @@
      LDFLAGS="$LDFLAGS -L$with_gssapi/lib"
    fi
@@ -77,7 +86,7 @@ $NetBSD: patch-ae,v 1.14 2005/01/21 15:46:39 frueauf Exp $
    if test "$ac_cv_header_gssapi_h" = "yes"; then
      AC_EGREP_HEADER(GSS_C_NT_HOSTBASED_SERVICE, gssapi.h, AC_DEFINE(HAVE_GSS_C_NT_HOSTBASED_SERVICE))
 --- configure.orig	Fri Oct 10 10:39:54 2003
-+++ configure	Fri Jan 21 15:53:40 2005
++++ configure	Thu Apr 21 12:50:44 2005
 @@ -1,9 +1,8 @@
  #! /bin/sh
  # Guess values for system-dependent variables and create Makefiles.
@@ -6094,7 +6103,7 @@ $NetBSD: patch-ae,v 1.14 2005/01/21 15:46:39 frueauf Exp $
  
    CEFLAGS="$CEFLAGS -I/usr/include/kerberosV"
    LIBS="$LIBS -lasn1 -lkrb5 -lcom_err -lkafs"
-+elif test "$with_kerberos5" = "yes" && ( test `uname` = "NetBSD" )
++elif test "$with_kerberos5" != "no" && ( test `uname` = "NetBSD" )
 +then
 +  { echo "$as_me:$LINENO: checking kerberosV for NetBSD..." >&5
 +echo "$as_me: checking kerberosV for NetBSD..." >&6;}
@@ -6392,6 +6401,15 @@ $NetBSD: patch-ae,v 1.14 2005/01/21 15:46:39 frueauf Exp $
  LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_krb5_krb5_init_context" >&5
+@@ -13229,7 +14418,7 @@
+ if test "$with_kerberos" != "no"
+ then
+ # Check for a NetBSD/OpenBSD special case
+-if test "$with_kerberos" = "yes" && ( test `uname` = "NetBSD" || test `uname` = "OpenBSD" )
++if test "$with_kerberos" != "no" && ( test `uname` = "NetBSD" || test `uname` = "OpenBSD" )
+ then
+   { echo "$as_me:$LINENO: checking kerberosIV for \`uname\`..." >&5
+ echo "$as_me: checking kerberosIV for \`uname\`..." >&6;}
 @@ -13274,7 +14463,6 @@
    ac_check_lib_save_LIBS=$LIBS
  LIBS="-l45  $LIBS"
