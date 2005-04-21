@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.18 2004/05/02 07:37:19 kim Exp $
+$NetBSD: patch-ac,v 1.19 2005/04/21 08:56:18 pooka Exp $
 
---- abcde.orig	2004-04-09 14:12:15.000000000 -0400
-+++ abcde	2004-04-25 23:19:43.000000000 -0400
-@@ -1129,7 +1129,11 @@
+--- abcde.orig	2004-11-08 16:40:30.000000000 +0200
++++ abcde	2005-04-21 11:55:39.000000000 +0300
+@@ -1215,7 +1215,11 @@
  do_cddbedit ()
  {
  	if checkstatus cddb-edit >/dev/null; then
@@ -14,7 +14,7 @@ $NetBSD: patch-ac,v 1.18 2004/05/02 07:37:19 kim Exp $
  		VARIOUSARTISTS="$(checkstatus variousartists)"
  		VARIOUSARTISTSTYLE="$(checkstatus variousartiststyle)"
  		return 0
-@@ -1373,7 +1377,7 @@
+@@ -1470,7 +1474,7 @@
  	echo "variousartiststyle=$VARIOUSARTISTSTYLE" >> "$ABCDETEMPDIR/status"
  
  	if [ "$EDITCDDB" = "y" ] && [ "$UNINTENTIONALLY_ANGER_THE_FREEDB_PEOPLE" = "y" ]; then
@@ -23,7 +23,25 @@ $NetBSD: patch-ac,v 1.18 2004/05/02 07:37:19 kim Exp $
  			# This works but does not have the necessary error checking
  			# yet. If you are familiar with the CDDB spec
  			# (see http://www.freedb.org/src/latest/DBFORMAT) 
-@@ -1703,8 +1707,8 @@
+@@ -1799,6 +1803,7 @@
+ 	HTTPGET=fetch
+ 	NEEDCDROMID=y
+ 	OSFLAVOUR=FBSD
++	MD5SUM=md5
+ elif [ X$(uname) = "XDarwin" ] ; then
+ 	HTTPGET=curl
+ 	OSFLAVOUR=OSX
+@@ -1807,6 +1812,9 @@
+ elif [ X$(uname) = "XOpenBSD" ] ; then
+ 	HTTPGET=wget
+ 	MD5SUM=md5
++elif [ X$(uname) = "XNetBSD" ] ; then
++	HTTPGET=wget
++	MD5SUM=md5
+ else
+ 	HTTPGET=wget
+ fi
+@@ -1825,8 +1833,8 @@
  fi
  
  # Load system defaults
@@ -34,7 +52,7 @@ $NetBSD: patch-ac,v 1.18 2004/05/02 07:37:19 kim Exp $
  fi
  # Load user preference defaults
  if [ -r $HOME/.abcde.conf ]; then
-@@ -1737,6 +1741,9 @@
+@@ -1859,6 +1867,9 @@
  		CDROM=/dev/acd0c
  	elif [ -e /dev/disk1 ]; then
  		CDROM=/dev/disk1
@@ -44,7 +62,7 @@ $NetBSD: patch-ac,v 1.18 2004/05/02 07:37:19 kim Exp $
  	fi
  fi
  
-@@ -1837,7 +1844,7 @@
+@@ -1997,7 +2008,7 @@
  case "$CDROMREADERSYNTAX" in
  	cdparanoia|debug)
  		CDROMREADER="$CDPARANOIA"
@@ -53,7 +71,7 @@ $NetBSD: patch-ac,v 1.18 2004/05/02 07:37:19 kim Exp $
  		;;
  	cdda2wav)
  		CDROMREADER="$CDDA2WAV"
-@@ -1979,7 +1986,8 @@
+@@ -2148,7 +2159,8 @@
  do
  	# Cut off the command-line options we just added in
  	X=$(echo $X | cut -d' ' -f2)
