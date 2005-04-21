@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.66 2005/04/21 16:17:02 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.67 2005/04/21 16:47:34 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -137,3 +137,7 @@ Pullup ticket 458 - requested by Love Hornquist-Astrand
 security fix for heimdal
 Pullup ticket 461 - requested by Takahiro Kambe
 distfile update for squid
+Pullup ticket 462 - requested by Takahiro Kambe
+md-whois update
+Pullup ticket 463 - requested by Takahiro Kambe
+jwhois update
