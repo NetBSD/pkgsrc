@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.2 2003/12/08 16:32:52 adam Exp $
+$NetBSD: patch-ac,v 1.3 2005/04/21 08:53:11 adam Exp $
 
---- lib/Makefile.in.orig	2003-11-14 14:58:43.000000000 +0000
+--- lib/Makefile.in.orig	2005-02-22 15:22:25.000000000 +0000
 +++ lib/Makefile.in
 @@ -11,7 +11,7 @@ VERSION_MAJOR=3
- VERSION_MINOR=0
+ VERSION_MINOR=2
  
  CC = @CC@ 
 -CFLAGS = @CFLAGS_LIBGADU@ -I. -I.. -Wall
@@ -33,7 +33,7 @@ $NetBSD: patch-ac,v 1.2 2003/12/08 16:32:52 adam Exp $
  
  install-static:	install-common
 -	$(INSTALL) -m 755 $(STATIC) $(DESTDIR)$(libdir)
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${STATIC:.a=.la} ${PREFIX}/lib
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${STATIC:.a=.la} ${PREFIX}/lib
  
  strip-libgadu-so:
  	$(STRIP) $(SHARED)
