@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.5 2005/04/21 08:22:32 xtraeme Exp $
+
+--- main.c.orig	2005-04-21 10:11:45.000000000 +0200
++++ main.c	2005-04-21 10:12:43.000000000 +0200
+@@ -278,13 +278,17 @@
+       debug_spew ("PKG_CONFIG_DEBUG_SPEW variable enabling debug spew\n");
+     }
+ 
+-  search_path = getenv ("PKG_CONFIG_PATH");
++  search_path = getenv("PKG_CONFIG_LIBDIR");
++
++  if (search_path)
++	add_search_dirs(search_path, G_SEARCHPATH_SEPARATOR_S);
++  else {
++	search_path = getenv("PKG_CONFIG_PATH");
+   if (search_path) 
+-    {
+       add_search_dirs(search_path, G_SEARCHPATH_SEPARATOR_S);
+-    }
+ 
+   add_search_dirs(PKG_CONFIG_PC_PATH, G_SEARCHPATH_SEPARATOR_S);
++  }
+ 
+ #ifdef G_OS_WIN32
+   {
