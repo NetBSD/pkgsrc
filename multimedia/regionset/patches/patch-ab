@@ -6,7 +6,7 @@
  
 +#if defined(__NetBSD__) || defined(__OpenBSD__)
 +#define DEFAULTDEVICE "/dev/cd0a"
-+#elif /* linux */
++#else /* linux */
  #define DEFAULTDEVICE "/dev/dvd"
 +#endif
  #define VERSION "0.1"
