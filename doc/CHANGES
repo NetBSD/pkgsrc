@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9934 2005/04/20 21:19:18 heinz Exp $
+$NetBSD: CHANGES,v 1.9935 2005/04/21 01:02:07 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2140,3 +2140,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkg_chk to 1.57 [abs 2005-04-20]
 	Updated p5-Net-DNS-SEC to 0.12 [heinz 2005-04-20]
 	Added rssh-2.2.3 [seb 2005-04-20]
+	Added serialmail-0.75 [schmonz 2005-04-21]
