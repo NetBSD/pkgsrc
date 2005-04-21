@@ -1,0 +1,21 @@
+$NetBSD: patch-ba,v 1.2.6.1 2005/04/21 15:20:40 salo Exp $
+
+--- libmpdemux/realrtsp/rtsp.c.orig	2005-04-16 21:08:44.000000000 +0200
++++ libmpdemux/realrtsp/rtsp.c
+@@ -397,6 +397,7 @@ static int rtsp_get_answers(rtsp_t *s) {
+   unsigned int answer_seq;
+   char **answer_ptr=s->answers;
+   int code;
++  int ans_count = 0;
+   
+   answer=rtsp_get(s);
+   if (!answer)
+@@ -448,7 +449,7 @@ static int rtsp_get_answers(rtsp_t *s) {
+     }
+     *answer_ptr=answer;
+     answer_ptr++;
+-  } while (strlen(answer)!=0);
++  } while ((strlen(answer)!=0) && (++ans_count < MAX_FIELDS));
+   
+   s->cseq++;
+   
