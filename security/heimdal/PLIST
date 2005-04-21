@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2004/10/19 04:03:05 reed Exp $
+@comment $NetBSD: PLIST,v 1.6.4.1 2005/04/21 15:55:34 salo Exp $
+bin/${KRB5_PREFIX}login
+bin/${KRB5_PREFIX}rcp
+bin/${KRB5_PREFIX}rsh
+bin/${KRB5_PREFIX}su
+bin/${KRB5_PREFIX}telnet
 bin/afslog
 bin/compile_et
 bin/kauth
@@ -10,17 +15,12 @@ bin/kinit
 bin/klist
 bin/kpasswd
 bin/krb5-config
-bin/${KRB5_PREFIX}login
 bin/mk_cmds
 bin/otp
 bin/otpprint
 bin/pagsh
 bin/pfrom
-bin/${KRB5_PREFIX}rcp
-bin/${KRB5_PREFIX}rsh
 bin/string2key
-bin/${KRB5_PREFIX}su
-bin/${KRB5_PREFIX}telnet
 bin/verify_krb5_conf
 include/krb5/asn1_err.h
 include/krb5/base64.h
@@ -74,6 +74,8 @@ lib/libotp.la
 lib/libroken.la
 lib/libsl.la
 lib/libss.la
+libexec/${KRB5_PREFIX}rshd
+libexec/${KRB5_PREFIX}telnetd
 libexec/hprop
 libexec/hpropd
 libexec/ipropd-master
@@ -85,8 +87,9 @@ libexec/kftpd
 libexec/kpasswdd
 libexec/popper
 libexec/push
-libexec/${KRB5_PREFIX}rshd
-libexec/${KRB5_PREFIX}telnetd
+man/man1/${KRB5_PREFIX}login.1
+man/man1/${KRB5_PREFIX}rsh.1
+man/man1/${KRB5_PREFIX}telnet.1
 man/man1/afslog.1
 man/man1/kauth.1
 man/man1/kdestroy.1
@@ -98,14 +101,11 @@ man/man1/klist.1
 man/man1/kpasswd.1
 man/man1/krb5-config.1
 man/man1/kx.1
-man/man1/${KRB5_PREFIX}login.1
 man/man1/otp.1
 man/man1/otpprint.1
 man/man1/pfrom.1
-man/man1/${KRB5_PREFIX}rsh.1
 man/man1/rxtelnet.1
 man/man1/rxterm.1
-man/man1/${KRB5_PREFIX}telnet.1
 man/man1/tenletxr.1
 man/man1/xnlock.1
 man/man3/arg_printusage.3
@@ -367,6 +367,8 @@ man/man3/krb_afslog_uid.3
 man/man5/kftpusers.5
 man/man5/krb5.conf.5
 man/man5/login.access.5
+man/man8/${KRB5_PREFIX}rshd.8
+man/man8/${KRB5_PREFIX}telnetd.8
 man/man8/hprop.8
 man/man8/hpropd.8
 man/man8/kadmin.8
@@ -381,9 +383,7 @@ man/man8/ktutil.8
 man/man8/kxd.8
 man/man8/popper.8
 man/man8/push.8
-man/man8/${KRB5_PREFIX}rshd.8
 man/man8/string2key.8
-man/man8/${KRB5_PREFIX}telnetd.8
 man/man8/verify_krb5_conf.8
 sbin/dump_log
 sbin/kadmin
