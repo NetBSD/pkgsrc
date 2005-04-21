@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.63 2005/04/20 15:45:27 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.64 2005/04/21 15:21:18 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -131,3 +131,5 @@ Pullup ticket 455 - requested by Takahiro Kambe
 distfile update for squid
 Pullup ticket 456 - requested by Takahiro Kambe
 portability fix for ftpproxy
+Pullup ticket 451 - requested by Matthias Drochner
+security fix for mplayer
