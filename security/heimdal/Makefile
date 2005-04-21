@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/11 21:47:12 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/04/21 14:00:36 wiz Exp $
 
 DISTNAME=	heimdal-0.6.3
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.pdc.kth.se/pub/heimdal/src/	\
 		ftp://ftp.sunet.se/pub/unix/admin/mirror-pdc/heimdal/src/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	lha@NetBSD.org
 HOMEPAGE=	http://www.pdc.kth.se/heimdal/
 COMMENT=	Kerberos 5 implementation
 
