@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9939 2005/04/21 11:47:12 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9940 2005/04/21 14:41:55 lha Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2146,3 +2146,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated kadu to 0.4.0 [adam 2005-04-21]
 	Updated abcde to 2.2.0nb1 [pooka 2005-04-21]
 	Updated gld to 1.5.2 [xtraeme 2005-04-21]
+	Updated heimdal to 0.6.4 [lha 2005-04-21]
