@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9941 2005/04/21 15:02:36 wiz Exp $
+$NetBSD: CHANGES,v 1.9942 2005/04/21 15:07:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2138,6 +2138,11 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated DatLib to 2.5 [wiz 2005-04-20]
 	Updated DatUtil to 2.17 [wiz 2005-04-20]
 	Updated pkg_chk to 1.57 [abs 2005-04-20]
+	Updated wv to 1.0.3nb2 [drochner 2005-04-20]
+	Updated libwmf to 0.2.8.3nb3 [drochner 2005-04-20]
+	Updated gcalctool to 5.5.42 [drochner 2005-04-20]
+	Updated file-roller to 2.10.2 [drochner 2005-04-20]
+	Updated eog2 to 2.10.0 [drochner 2005-04-20]
 	Updated p5-Net-DNS-SEC to 0.12 [heinz 2005-04-20]
 	Added rssh-2.2.3 [seb 2005-04-20]
 	Added serialmail-0.75 [schmonz 2005-04-21]
