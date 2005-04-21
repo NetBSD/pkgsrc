@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2005/01/29 17:45:35 kim Exp $
+$NetBSD: patch-aa,v 1.6.2.1 2005/04/21 16:46:20 salo Exp $
 
---- example/jwhois.conf.orig	2003-06-30 13:16:45.000000000 -0400
-+++ example/jwhois.conf	2005-01-29 12:36:50.000000000 -0500
-@@ -55,7 +55,42 @@
+--- example/jwhois.conf.orig	2003-06-30 19:16:45.000000000 +0200
++++ example/jwhois.conf	2005-04-19 22:59:57.000000000 +0200
+@@ -55,7 +55,52 @@
  	"^[0-9]+\\.[0-9]+\\.[0-9]+/[0-9]+-[0-9]+$" = "whois.nic.br";
   
  	#
@@ -40,13 +40,23 @@ $NetBSD: patch-aa,v 1.6 2005/01/29 17:45:35 kim Exp $
 +	"^2001:[89A][A-F0-9][A-F0-9][A-F0-9]:.+" = "whois.apnic.net";
 +	# ...
 +	"^2003:[0?1-3][A-F0-9][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	# ...
++	"^2600:0[0?1-3][A-F0-9][A-F0-9][A-F0-9]:.+" = "whois.arin.net";
++	# ...
++	"^2604:0[0?1-3][A-F0-9][A-F0-9][A-F0-9]:.+" = "whois.arin.net";
++	# ...
++	"^2608:0[0?1-3][A-F0-9][A-F0-9][A-F0-9]:.+" = "whois.arin.net";
++	# ...
++	"^260C:0[0?1-3][A-F0-9][A-F0-9][A-F0-9]:.+" = "whois.arin.net";
++	# ...
++	"^2A00:0[0-7][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
 +
 +	#
 +	# Historical IPv6 catch-all
  	#
  	".*:.*" = "whois.6bone.net";
  
-@@ -147,7 +182,7 @@
+@@ -147,7 +192,7 @@
  	"\\.ee$" = "whois.eenet.ee";
  	"\\.eg$" = "whois.ripe.net";
  	"\\.es$" = "www.nic.es";
@@ -55,7 +65,16 @@ $NetBSD: patch-aa,v 1.6 2005/01/29 17:45:35 kim Exp $
  	"\\.fj$" = "whois.usp.ac.fj";
  	"\\.fm$" = "www.dot.fm";
  	"\\.fo$" = "whois.ripe.net";
-@@ -242,7 +277,7 @@
+@@ -176,7 +221,7 @@
+ 	"\\.it$" = "whois.nic.it";
+ 	"\\.je$" = "whois.isles.net";
+ 	"\\.jp$" {
+-		whois-server = "whois.nic.ad.jp";
++		whois-server = "whois.jprs.jp";
+ 		query-format = "$* /e";
+ 	}
+ 	"\\.kg$" = "whois.domain.kg";
+@@ -242,7 +287,7 @@
  	"\\.to$" = "whois.tonic.to";
  	"\\.tr$" = "whois.metu.edu.tr";
  	"\\.tt$" = "www.nic.tt";
@@ -64,7 +83,17 @@ $NetBSD: patch-aa,v 1.6 2005/01/29 17:45:35 kim Exp $
  	"\\.tw$" = "whois.twnic.net";
  	"\\.ua$" = "whois.com.ua";
  	"\\.ug$" = "whois.co.ug";
-@@ -371,6 +406,15 @@
+@@ -365,12 +410,25 @@
+ 	"211.192.0.0/13" = "whois.nic.or.kr";
+ 
+ 	"24.232.0.0/16" = "whois.lacnic.net";
++	"41.0.0.0/8" = "whois.afrinic.net";
+ 	"43.0.0.0/8" = "whois.v6nic.net";
++	"58.0.0.0/8" = "whois.apnic.net";
++	"59.0.0.0/8" = "whois.apnic.net";
++	"60.0.0.0/8" = "whois.apnic.net";
+ 	"61.0.0.0/8" = "whois.apnic.net";
+ 	"62.0.0.0/8" = "whois.ripe.net";
  	"80.0.0.0/8" = "whois.ripe.net";
  	"81.0.0.0/8" = "whois.ripe.net";
  	"82.0.0.0/8" = "whois.ripe.net";
@@ -80,7 +109,7 @@ $NetBSD: patch-aa,v 1.6 2005/01/29 17:45:35 kim Exp $
  	"150.217.0.0/16" = "whois.ripe.net";
  	"151.3.0.0/16" = "whois.ripe.net";
  	"151.4.0.0/15" = "whois.ripe.net";
-@@ -491,6 +535,10 @@
+@@ -491,6 +549,10 @@
  		whois-redirect = ".*Whois Server: \\(.*\\)";
  	}
  
@@ -91,7 +120,7 @@ $NetBSD: patch-aa,v 1.6 2005/01/29 17:45:35 kim Exp $
  	"whois\\.apnic\\.net" {
  		whois-redirect = ".*http://\\(whois\\.nic\\.or\\.kr\\)/";
  		whois-redirect = ".*at \\([Ww][Hh][Oo][Ii][Ss]\\.[A-Za-z]*\\.[Nn][Ee][Tt]\\)";
-@@ -693,14 +741,6 @@
+@@ -693,14 +755,6 @@
  		form-element = "whois";
  	}
  
@@ -106,7 +135,7 @@ $NetBSD: patch-aa,v 1.6 2005/01/29 17:45:35 kim Exp $
  	"whois\\.lacnic\\.net" {
  		whois-redirect = ".*\\(whois.nic.br\\)";
  		whois-redirect = ".*\\(whois.registro.br\\)";
-@@ -724,10 +764,10 @@
+@@ -724,10 +778,10 @@
  
  #
  # The cache feature is used to provide a local cache with Whois information.
@@ -119,7 +148,7 @@ $NetBSD: patch-aa,v 1.6 2005/01/29 17:45:35 kim Exp $
  
  #
  # This is the time after which an entry expires from the cache in hours.
-@@ -743,7 +783,7 @@
+@@ -743,7 +797,7 @@
  #
  # Path to the browser to use for HTTP servers.
  #
