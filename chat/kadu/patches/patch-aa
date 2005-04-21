@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2004/07/09 10:46:23 adam Exp $
+$NetBSD: patch-aa,v 1.3 2005/04/21 08:56:21 adam Exp $
 
---- modules/voice/libgsm/Makefile.orig	2003-10-15 14:09:01.000000000 +0000
+--- modules/voice/libgsm/Makefile.orig	2005-03-08 17:42:25.000000000 +0000
 +++ modules/voice/libgsm/Makefile
 @@ -44,7 +44,7 @@ WAV49	= -DWAV49
  # CCFLAGS 	= -c -O
  
- CC		= gcc -ansi -pedantic
--CCFLAGS 	= -c -O2 -DNeedFunctionPrototypes=1
-+CCFLAGS 	= -c -DNeedFunctionPrototypes=1
+ CC		:= $(CC) -ansi -pedantic
+-CCFLAGS 	= -c -O2 -DNeedFunctionPrototypes=1 -fPIC
++CCFLAGS 	= -c -DNeedFunctionPrototypes=1 -fPIC
  
  LD 		= $(CC)
  
