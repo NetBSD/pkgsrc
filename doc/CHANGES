@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9935 2005/04/21 01:02:07 schmonz Exp $
+$NetBSD: CHANGES,v 1.9936 2005/04/21 03:17:32 itohy Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2141,3 +2141,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Net-DNS-SEC to 0.12 [heinz 2005-04-20]
 	Added rssh-2.2.3 [seb 2005-04-20]
 	Added serialmail-0.75 [schmonz 2005-04-21]
+	Added kyopon-0.1 [itohy 2005-04-21]
