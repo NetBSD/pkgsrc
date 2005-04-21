@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9937 2005/04/21 08:57:28 adam Exp $
+$NetBSD: CHANGES,v 1.9938 2005/04/21 09:06:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2144,3 +2144,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added kyopon-0.1 [itohy 2005-04-21]
 	Updated ekg to 1.6 [adam 2005-04-21]
 	Updated kadu to 0.4.0 [adam 2005-04-21]
+	Updated abcde to 2.2.0nb1 [pooka 2005-04-21]
