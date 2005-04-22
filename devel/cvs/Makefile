@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.82 2005/03/01 15:36:48 wiz Exp $
+# $NetBSD: Makefile,v 1.82.2.1 2005/04/22 14:39:14 salo Exp $
 #
 
-DISTNAME=	cvs-1.11.19
+DISTNAME=	cvs-1.11.20
 CATEGORIES=	devel
 # (SSL) download URL according to http://www.cvshome.org/ is
-# https://ccvs.cvshome.org/files/documents/19/742/cvs-1.11.19.tar.bz2
-MASTER_SITES=	http://distro.ibiblio.org/pub/linux/distributions/sorcerer/sources/cvs/1.11.19/ \
-		${MASTER_SITE_BACKUP}
+# https://ccvs.cvshome.org/files/documents/19/861/cvs-1.11.20.tar.bz2
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wiz@NetBSD.org
@@ -25,7 +24,8 @@ BUILD_DEFS+=		USE_INET6
 .if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS]) && \
     empty(MACHINE_PLATFORM:MSunOS-5.[89]-*) && \
     empty(MACHINE_PLATFORM:MSunOS-5.10-*) && \
-    empty(MACHINE_PLATFORM:MLinux-*)
+    empty(MACHINE_PLATFORM:MLinux-*) && \
+    defined(NOT_YET_AVAILABLE_FOR_CVS_1_11_20)
 CONFIGURE_ARGS+=	--enable-ipv6
 PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
 PATCHFILES=		cvs-1.11.19-v6-20050205.diff.gz
