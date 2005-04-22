@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/04/22 14:09:03 wiz Exp $
+
+--- doc/Makefile.in.orig	2004-01-19 00:58:29.000000000 +0100
++++ doc/Makefile.in
+@@ -472,7 +472,7 @@ install-ps: ps $(INSTALL_DOX_PS)
+ html: $(info_TEXINFOS) $(TARGET_DOX_HTML)
+ 	mkdir -p html
+ 	texi2html -split_node $(srcdir)/$(info_TEXINFOS)
+-	mv *.html html
++	mv simulavr/*.html html
+ 	if test -f html/simulavr.html ; then \
+ 	   cp html/simulavr.html html/index.html ; \
+ 	else \
