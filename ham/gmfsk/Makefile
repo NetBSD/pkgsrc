@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:10 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/22 12:50:25 wiz Exp $
 #
 
 DISTNAME=	gmfsk-0.6
@@ -21,4 +21,5 @@ CONFIGURE_ARGS+=--enable-hamlib
 .include "../../math/fftw2/buildlink3.mk"
 .include "../../ham/hamlib/buildlink3.mk"
 .include "../../textproc/scrollkeeper/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
