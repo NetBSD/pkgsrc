@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9943 2005/04/21 15:50:35 taca Exp $
+$NetBSD: CHANGES,v 1.9944 2005/04/22 19:36:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2156,3 +2156,18 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xscreensaver to 4.21nb1 [wiz 2005-04-21]
 	Updated xscreensaver-demo to 4.21nb1 [wiz 2005-04-21]
 	Updated squid to 2.5.9nb7 [taca 2005-04-21]
+	Removed ttmkfdir [wiz 2005-04-22]
+	Removed mkfontscale [wiz 2005-04-22]
+	Removed staroffice [wiz 2005-04-22]
+	Removed gtl0 [wiz 2005-04-22]
+	Removed cassowary [wiz 2005-04-22]
+	Removed cfengine [wiz 2005-04-22]
+	Removed mysql3-client [wiz 2005-04-22]
+	Removed mysql3-server [wiz 2005-04-22]
+	Removed i386-linuxglibc1 [wiz 2005-04-22]
+	Removed gbib [wiz 2005-04-22]
+	Removed rewind [wiz 2005-04-22]
+	Removed plplot [wiz 2005-04-22]
+	Removed yplot [wiz 2005-04-22]
+	Removed avifile [wiz 2005-04-22]
+	Removed newscache [wiz 2005-04-22]
