@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.633 2005/04/19 17:40:23 drochner Exp $
+# $NetBSD: Makefile,v 1.634 2005/04/22 19:00:33 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -175,7 +175,6 @@ SUBDIR+=	gscope
 SUBDIR+=	gtexinfo
 SUBDIR+=	gtkdiff
 SUBDIR+=	gtl
-SUBDIR+=	gtl0
 SUBDIR+=	gtoolkit-examples
 SUBDIR+=	guile-fcgi
 SUBDIR+=	guile-gtk
