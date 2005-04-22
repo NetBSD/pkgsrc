@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/04/11 21:47:08 tv Exp $
+# $NetBSD: Makefile,v 1.33 2005/04/22 12:54:18 wiz Exp $
 #
 
 DISTNAME=	lilypond-2.4.3
@@ -23,6 +23,7 @@ MAKEFILE=		GNUmakefile
 
 USE_MAKEINFO=	YES
 TEXINFO_REQD=	4.7
+GCC_REQD+=	3.0.5
 INFO_DIR=	info/lilypond
 INFO_FILES=	lilypond.info lilypond-internals.info music-glossary.info
 CONFIGURE_HAS_INFODIR=	NO
