@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.2 2005/04/15 07:33:43 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.3 2005/04/22 04:22:37 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -18,10 +18,6 @@
 #
 #    TOOLS_REAL_CMD.<tool> is the path to the actual command that is
 #	invoked when ${TOOLS_CMD.<tool>} is called.
-#
-# If TOOLS_REAL_CMD.<tool> isn't provided, then we search for the a tool
-# with the name "<tool>" in ${TOOLS_EXECDIRS.<tool>}, which defaults to
-# ${TOOLS_EXECDIRS} == "/bin /sbin /usr/bin /usr/sbin".
 #
 # The following variables specify further details of each <tool> and
 # are used only by tools listed in TOOLS_WRAP:
@@ -55,7 +51,6 @@ BSD_TOOLS_MK=	defined
 #
 TOOLS_DIR=	${WRKDIR}/.tools
 PREPEND_PATH+=	${TOOLS_DIR}/bin
-TOOLS_EXECDIRS=	/bin /sbin /usr/bin /usr/sbin
 
 TOOLS_SHELL?=		${SH}
 _TOOLS_WRAP_LOG=	${WRKLOG}
@@ -100,21 +95,14 @@ TOOLS_REAL_CMDLINE.${_t_}?=	${TOOLS_REAL_CMD.${_t_}} ${_t_:T:C/-[0-9].*$//}
 
 ######################################################################
 
-# If TOOLS_REAL_CMD.<tool> isn't defined, then search the directories
-# listed in TOOLS_EXECDIRS.<tool> for something called <tool>.  The
-# default wrapper script will invoke the real command, followed by
+# The default wrapper script will invoke the real command, followed by
 # any arguments specified in TOOLS_ARGS.*, followed by any command-line
 # arguments passed to the wrapper script.
 #
 .for _t_ in ${TOOLS_WRAP}
-.  if !defined(TOOLS_REAL_CMD.${_t_})
-TOOLS_EXECDIRS.${_t_}?=		${TOOLS_EXECDIRS}
-.    for _d_ in ${TOOLS_EXECDIRS.${_t_}}
-.      if exists(${_d_}/${_t_})
-TOOLS_REAL_CMD.${_t_}?=		${_d_}/${_t_}
-.      endif
-.    endfor
-.    undef _d_
+.  if defined(TOOLS_REAL_CMD.${_t_}) && !empty(TOOLS_REAL_CMD.${_t_}:M/*)
+# TOOLS_REAL_CMD.${_t_} is a full path, which is what we want.
+.  else
 TOOLS_REAL_CMD.${_t_}?=		${FALSE}
 .  endif
 TOOLS_ARGS.${_t_}?=		# empty
@@ -149,21 +137,14 @@ ${TOOLS_CMD.${_t_}}:
 
 ######################################################################
 
-# If TOOLS_REAL_CMD.<tool> isn't defined, then search the directories
-# listed in TOOLS_EXECDIRS.<tool> for something called <tool>.  By
-# default, the symlinked tool in ${TOOLS_DIR} will have the same name as
-# the real command.
+# By default, the symlinked tool in ${TOOLS_DIR} will have the same name
+# as the real command.
 #
 .for _t_ in ${TOOLS_SYMLINK}
-.  if !defined(TOOLS_REAL_CMD.${_t_})
-TOOLS_EXECDIRS.${_t_}?=		${TOOLS_EXECDIRS}
-.    for _d_ in ${TOOLS_EXECDIRS.${_t_}}
-.      if exists(${_d_}/${_t_})
-TOOLS_REAL_CMD.${_t_}?=		${_d_}/${_t_}
-.      endif
-.    endfor
-.    undef _d_
-TOOLS_REAL_CMD.${_t_}?=		${FALSE}
+.  if defined(TOOLS_REAL_CMD.${_t_}) && !empty(TOOLS_REAL_CMD.${_t_}:M/*)
+# TOOLS_REAL_CMD.${_t_} is a full path, which is what we want.
+.  else
+TOOLS_REAL_CMD.${_t_}?=	${FALSE}
 .  endif
 TOOLS_CMD.${_t_}?=	\
 	${TOOLS_REAL_CMD.${_t_}:C/.*\/${TOOLS_REAL_CMD.${_t_}:H:T}\//${TOOLS_DIR}\/${TOOLS_REAL_CMD.${_t_}:H:T}\//}
