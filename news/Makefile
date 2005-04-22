@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/12/24 00:43:14 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2005/04/22 19:33:49 wiz Exp $
 #
 
 COMMENT=	Network news
@@ -7,7 +7,6 @@ SUBDIR+=	cg
 SUBDIR+=	inn
 SUBDIR+=	knews
 SUBDIR+=	leafnode
-SUBDIR+=	newscache
 SUBDIR+=	newsfetch
 SUBDIR+=	newsx
 SUBDIR+=	nget
