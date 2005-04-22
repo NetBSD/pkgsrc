@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/12/17 00:36:09 tron Exp $
+@comment $NetBSD: PLIST,v 1.11.4.1 2005/04/22 14:17:33 salo Exp $
 bin/pear
 bin/php
 bin/php-config
@@ -132,6 +132,7 @@ include/php/ext/xml/expat/expat.h
 include/php/ext/xml/expat/asciitab.h
 include/php/ext/xml/expat/xmltok_impl.h
 include/php/ext/xml/php_xml.h
+include/php/ext/mbstring/libmbfl/mbfl/eaw_table.h
 include/php/ext/mbstring/libmbfl/mbfl/mbfl_string.h
 include/php/ext/mbstring/libmbfl/mbfl/mbfl_memory_device.h
 include/php/ext/mbstring/libmbfl/mbfl/mbfl_language.h
@@ -192,139 +193,82 @@ include/php/regex/regex.h
 include/php/regex/cname.h
 include/php/regex/cclass.h
 include/php/acconfig.h
+lib/php/.filemap
 lib/php/.lock
 lib/php/.registry/archive_tar.reg
 lib/php/.registry/console_getopt.reg
+lib/php/.registry/html_template_it.reg
+lib/php/.registry/net_useragent_detect.reg
 lib/php/.registry/pear.reg
-lib/php/.registry/db.reg
-lib/php/.registry/http.reg
-lib/php/.registry/mail.reg
-lib/php/.registry/net_smtp.reg
-lib/php/.registry/net_socket.reg
-lib/php/.registry/xml_parser.reg
 lib/php/.registry/xml_rpc.reg
-lib/php/.filemap
 lib/php/Archive/Tar.php
 lib/php/Console/Getopt.php
-lib/php/PEAR/Registry.php
-lib/php/PEAR/Packager.php
-lib/php/PEAR/Installer.php
-lib/php/PEAR/Frontend/CLI.php
-lib/php/PEAR/ErrorStack.php
-lib/php/PEAR/Downloader.php
-lib/php/PEAR/Dependency.php
-lib/php/PEAR/Config.php
-lib/php/PEAR/Common.php
-lib/php/PEAR/Command/Remote.php
-lib/php/PEAR/Command/Registry.php
-lib/php/PEAR/Command/Package.php
-lib/php/PEAR/Command/Mirror.php
-lib/php/PEAR/Command/Install.php
-lib/php/PEAR/Command/Config.php
-lib/php/PEAR/Command/Common.php
-lib/php/PEAR/Command/Build.php
-lib/php/PEAR/Command/Auth.php
-lib/php/PEAR/Command.php
-lib/php/PEAR/Builder.php
-lib/php/PEAR/Remote.php
-lib/php/PEAR/Autoloader.php
-lib/php/doc/Archive_Tar/docs/Archive_Tar.txt
-lib/php/doc/DB/doc/MAINTAINERS
-lib/php/doc/DB/doc/STATUS
-lib/php/doc/DB/doc/TESTERS
-lib/php/doc/DB/doc/IDEAS
-lib/php/doc/Net_SMTP/docs/guide.txt
-lib/php/doc/Net_SMTP/docs/examples/basic.php
-lib/php/DB/dbase.php
-lib/php/DB/fbsql.php
-lib/php/DB/ibase.php
-lib/php/DB/ifx.php
-lib/php/DB/msql.php
-lib/php/DB/mssql.php
-lib/php/DB/mysqli.php
-lib/php/DB/mysql.php
-lib/php/DB/oci8.php
-lib/php/DB/odbc.php
-lib/php/DB/pgsql.php
-lib/php/DB/sybase.php
-lib/php/DB/storage.php
-lib/php/DB/sqlite.php
-lib/php/DB/common.php
-lib/php/data/PEAR/template.spec
-lib/php/data/PEAR/package.dtd
-lib/php/System.php
-lib/php/pearcmd.php
-lib/php/Net/SMTP.php
-lib/php/Net/Socket.php
+lib/php/HTML/Template/IT.php
+lib/php/HTML/Template/ITX.php
+lib/php/HTML/Template/IT_Error.php
+lib/php/Net/UserAgent/Detect.php
 lib/php/OS/Guess.php
-lib/php/XML/Parser.php
-lib/php/XML/RPC/Server.php
-lib/php/XML/RPC.php
-lib/php/DB.php
-lib/php/Mail/sendmail.php
-lib/php/Mail/smtp.php
-lib/php/Mail/RFC822.php
-lib/php/Mail/null.php
-lib/php/Mail/mail.php
-lib/php/test/DB/tests/db_parsedsn.phpt
-lib/php/test/DB/tests/db_factory.phpt
-lib/php/test/DB/tests/db_ismanip.phpt
-lib/php/test/DB/tests/db_error2.phpt
-lib/php/test/DB/tests/errors.inc
-lib/php/test/DB/tests/fetchmode_object.inc
-lib/php/test/DB/tests/fetchmodes.inc
-lib/php/test/DB/tests/include.inc
-lib/php/test/DB/tests/limit.inc
-lib/php/test/DB/tests/numcols.inc
-lib/php/test/DB/tests/numrows.inc
-lib/php/test/DB/tests/prepexe.inc
-lib/php/test/DB/tests/run.cvs
-lib/php/test/DB/tests/sequences.inc
-lib/php/test/DB/tests/simplequery.inc
-lib/php/test/DB/tests/skipif.inc
-lib/php/test/DB/tests/transactions.inc
-lib/php/test/DB/tests/driver/01connect.phpt
-lib/php/test/DB/tests/driver/02fetch.phpt
-lib/php/test/DB/tests/driver/03simplequery.phpt
-lib/php/test/DB/tests/driver/04numcols.phpt
-lib/php/test/DB/tests/driver/05sequences.phpt
-lib/php/test/DB/tests/driver/06prepexec.phpt
-lib/php/test/DB/tests/driver/08affectedrows.phpt
-lib/php/test/DB/tests/driver/09numrows.phpt
-lib/php/test/DB/tests/driver/10errormap.phpt
-lib/php/test/DB/tests/driver/11transactions.phpt
-lib/php/test/DB/tests/driver/13limit.phpt
-lib/php/test/DB/tests/driver/14fetchmode_object.phpt
-lib/php/test/DB/tests/driver/15quote.phpt
-lib/php/test/DB/tests/driver/16tableinfo.phpt
-lib/php/test/DB/tests/driver/17query.phpt
-lib/php/test/DB/tests/driver/18get.phpt
-lib/php/test/DB/tests/driver/bug22328.phpt
-lib/php/test/DB/tests/driver/connect.inc
-lib/php/test/DB/tests/driver/mktable.inc
-lib/php/test/DB/tests/driver/run.cvs
-lib/php/test/DB/tests/driver/skipif.inc
-lib/php/test/DB/tests/driver/setup.inc.cvs
-lib/php/test/DB/tests/db_error.phpt
-lib/php/test/Net_SMTP/tests/auth.phpt
-lib/php/test/Net_SMTP/tests/basic.phpt
-lib/php/test/Net_SMTP/tests/config.php.dist
-lib/php/test/XML_Parser/tests/002.phpt
-lib/php/test/XML_Parser/tests/003.phpt
-lib/php/test/XML_Parser/tests/004.phpt
-lib/php/test/XML_Parser/tests/005.phpt
-lib/php/test/XML_Parser/tests/test2.xml
-lib/php/test/XML_Parser/tests/test3.xml
-lib/php/test/XML_Parser/tests/001.phpt
 lib/php/PEAR.php
-lib/php/HTTP.php
-lib/php/Mail.php
-lib/php/build/acinclude.m4
-lib/php/build/scan_makefile_in.awk
+lib/php/PEAR/Autoloader.php
+lib/php/PEAR/Builder.php
+lib/php/PEAR/Command.php
+lib/php/PEAR/Command/Auth.php
+lib/php/PEAR/Command/Build.php
+lib/php/PEAR/Command/Common.php
+lib/php/PEAR/Command/Config.php
+lib/php/PEAR/Command/Install.php
+lib/php/PEAR/Command/Mirror.php
+lib/php/PEAR/Command/Package.php
+lib/php/PEAR/Command/Registry.php
+lib/php/PEAR/Command/Remote.php
+lib/php/PEAR/Common.php
+lib/php/PEAR/Config.php
+lib/php/PEAR/Dependency.php
+lib/php/PEAR/Downloader.php
+lib/php/PEAR/ErrorStack.php
+lib/php/PEAR/Exception.php
+lib/php/PEAR/Frontend/CLI.php
+lib/php/PEAR/Installer.php
+lib/php/PEAR/Packager.php
+lib/php/PEAR/Registry.php
+lib/php/PEAR/Remote.php
+lib/php/PEAR/RunTest.php
+lib/php/System.php
+lib/php/XML/RPC.php
+lib/php/XML/RPC/Dump.php
+lib/php/XML/RPC/Server.php
 lib/php/build/Makefile.global
-lib/php/build/shtool
+lib/php/build/acinclude.m4
+lib/php/build/config.guess
+lib/php/build/config.sub
+lib/php/build/libtool.m4
+lib/php/build/ltmain.sh
 lib/php/build/mkdep.awk
 lib/php/build/phpize.m4
+lib/php/build/scan_makefile_in.awk
+lib/php/build/shtool
+lib/php/data/PEAR/package.dtd
+lib/php/data/PEAR/template.spec
+lib/php/doc/Archive_Tar/docs/Archive_Tar.txt
+lib/php/doc/HTML_Template_IT/examples/sample_it.php
+lib/php/doc/HTML_Template_IT/examples/templates/main.tpl.htm
+lib/php/pearcmd.php
+lib/php/test/HTML_Template_IT/tests/Console_TestListener.php
+lib/php/test/HTML_Template_IT/tests/ITX_api_testcase.php
+lib/php/test/HTML_Template_IT/tests/ITX_usage_testcase.php
+lib/php/test/HTML_Template_IT/tests/IT_api_testcase.php
+lib/php/test/HTML_Template_IT/tests/IT_usage_testcase.php
+lib/php/test/HTML_Template_IT/tests/templates/__include.html
+lib/php/test/HTML_Template_IT/tests/templates/addblock.html
+lib/php/test/HTML_Template_IT/tests/templates/blockiteration.html
+lib/php/test/HTML_Template_IT/tests/templates/blocks.html
+lib/php/test/HTML_Template_IT/tests/templates/globals.html
+lib/php/test/HTML_Template_IT/tests/templates/include.html
+lib/php/test/HTML_Template_IT/tests/templates/loadtemplatefile.html
+lib/php/test/HTML_Template_IT/tests/templates/replaceblock.html
+lib/php/test/HTML_Template_IT/tests/test.php
+lib/php/test/XML_RPC/tests/protoport.php
+lib/php/test/XML_RPC/tests/test_Dump.php
 libexec/cgi-bin/php
 man/man1/php.1
 share/examples/php/php.ini-dist
@@ -336,21 +280,17 @@ share/php/php.gif
 @dirrm lib/php/build
 @dirrm lib/php/data/PEAR
 @dirrm lib/php/data
+@dirrm lib/php/doc/HTML_Template_IT/examples/templates
+@dirrm lib/php/doc/HTML_Template_IT/examples
+@dirrm lib/php/doc/HTML_Template_IT
 @dirrm lib/php/doc/Archive_Tar/docs
 @dirrm lib/php/doc/Archive_Tar
-@dirrm lib/php/doc/Net_SMTP/docs/examples
-@dirrm lib/php/doc/Net_SMTP/docs
-@dirrm lib/php/doc/Net_SMTP
-@dirrm lib/php/doc/DB/doc
-@dirrm lib/php/doc/DB
 @dirrm lib/php/doc
-@dirrm lib/php/test/DB/tests/driver
-@dirrm lib/php/test/DB/tests
-@dirrm lib/php/test/DB
-@dirrm lib/php/test/Net_SMTP/tests
-@dirrm lib/php/test/Net_SMTP
-@dirrm lib/php/test/XML_Parser/tests
-@dirrm lib/php/test/XML_Parser
+@dirrm lib/php/test/HTML_Template_IT/tests/templates
+@dirrm lib/php/test/HTML_Template_IT/tests
+@dirrm lib/php/test/HTML_Template_IT
+@dirrm lib/php/test/XML_RPC/tests
+@dirrm lib/php/test/XML_RPC
 @dirrm lib/php/test
 @dirrm lib/php/XML/RPC
 @dirrm lib/php/XML
@@ -358,9 +298,10 @@ share/php/php.gif
 @dirrm lib/php/PEAR/Frontend
 @dirrm lib/php/PEAR
 @dirrm lib/php/OS
+@dirrm lib/php/Net/UserAgent
 @dirrm lib/php/Net
-@dirrm lib/php/Mail
-@dirrm lib/php/DB
+@dirrm lib/php/HTML/Template
+@dirrm lib/php/HTML
 @dirrm lib/php/Console
 @dirrm lib/php/Archive
 @dirrm include/php/regex

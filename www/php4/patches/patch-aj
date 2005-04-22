@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.8 2004/10/31 18:23:24 jdolecek Exp $
+$NetBSD: patch-aj,v 1.8.4.1 2005/04/22 14:17:33 salo Exp $
 
---- ext/imap/config.m4.orig	2004-01-17 01:01:06.000000000 +0100
-+++ ext/imap/config.m4	2004-10-31 18:49:03.000000000 +0100
+--- ext/imap/config.m4.orig	2005-04-08 20:55:11.000000000 +0200
++++ ext/imap/config.m4	2005-04-08 20:55:01.000000000 +0200
 @@ -54,6 +54,14 @@
    ])
  ])
@@ -14,13 +14,13 @@ $NetBSD: patch-aj,v 1.8 2004/10/31 18:23:24 jdolecek Exp $
 +	AC_DEFINE(HAVE_IMAP_LINKAGE, 1, [ ])
 +fi
 +
- AC_DEFUN(PHP_IMAP_KRB_CHK, [
-   AC_ARG_WITH(kerberos,
-   [  --with-kerberos[=DIR]     IMAP: Include Kerberos support. DIR is the Kerberos install dir.],[
-@@ -90,7 +98,7 @@
-     PHP_ADD_LIBRARY(k5crypto, 1, IMAP_SHARED_LIBADD)
-     PHP_ADD_LIBRARY(com_err,  1, IMAP_SHARED_LIBADD)
-     PHP_ADD_INCLUDE($PHP_KERBEROS_DIR/include)
+ AC_DEFUN([PHP_IMAP_KRB_CHK], [
+   if test "$PHP_KERBEROS" != "no"; then
+     PHP_SETUP_KERBEROS(IMAP_SHARED_LIBADD,
+@@ -65,7 +73,7 @@
+       Check the path given to --with-kerberos (if no path is given, searches in /usr/kerberos, /usr/local and /usr )
+       ])
+     ])
 -  else
 +  elif test "$PHP_IMAP_LINKAGE" != "yes"; then
      AC_EGREP_HEADER(auth_gss, $IMAP_INC_DIR/linkage.h, [
