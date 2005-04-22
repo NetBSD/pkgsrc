@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.5 2005/04/16 05:16:29 jlam Exp $
+# $NetBSD: replace.mk,v 1.6 2005/04/22 02:29:28 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied tools
 # with pkgsrc versions.  The replacements are placed under ${TOOLS_DIR}
@@ -30,13 +30,9 @@
 # Continue to allow USE_GNU_TOOLS and USE_TBL until packages have been
 # taught to use the new syntax.
 #
-.for _t_ in ${USE_GNU_TOOLS}
-.  if "${_t_}" == "make"
-USE_TOOLS+=	gmake
-.  else
-USE_TOOLS+=	${_t_}
-.  endif
-.endfor
+.if defined(USE_GNU_TOOLS) && !empty(USE_GNU_TOOLS)
+USE_TOOLS+=	${USE_GNU_TOOLS:S/make/gmake/}
+.endif
 .if defined(USE_TBL) && !empty(USE_TBL:M[yY][eE][sS])
 USE_TOOLS+=	tbl
 .endif
