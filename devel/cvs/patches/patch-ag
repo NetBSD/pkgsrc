@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.5 2005/03/01 15:36:48 wiz Exp $
+$NetBSD: patch-ag,v 1.5.2.1 2005/04/22 14:39:14 salo Exp $
 
---- lib/xtime.h.orig	2004-11-11 23:30:47.000000000 +0100
+--- lib/xtime.h.orig	2005-03-04 20:05:09.000000000 +0100
 +++ lib/xtime.h
-@@ -12,6 +12,9 @@
-  * functions
-  */
+@@ -14,6 +14,9 @@
+ #ifndef XTIME_HEADER_INCLUDED
+ #define XTIME_HEADER_INCLUDED
  
 +#ifndef _XTIME_H_                                                                                  
 +#define _XTIME_H_                                                                                  
@@ -12,9 +12,10 @@ $NetBSD: patch-ag,v 1.5 2005/03/01 15:36:48 wiz Exp $
  #ifdef vms
  # include <time.h>
  #else /* vms */
-@@ -55,3 +58,5 @@ extern long timezone;
- # endif /* !defined(HAVE_FTIME) && !defined(HAVE_TIMEZONE) */
+@@ -58,4 +61,6 @@ extern long timezone;
  
  #endif /* !vms */
-+
+ 
 +#endif /* !_XTIME_H_ */
++
+ #endif /* !XTIME_HEADER_INCLUDED */
