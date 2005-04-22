@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/12/17 07:40:45 jdolecek Exp $
+# $NetBSD: Makefile,v 1.41.4.1 2005/04/22 14:17:33 salo Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 CATEGORIES+=		lang
@@ -39,7 +39,7 @@ OWN_DIRS=	${PREFIX}/${PHP_EXTENSION_DIR}
 # some of the bundled Pear extensions have newer versions, which fix
 # some known bugs
 PEAR_CMD=	${PREFIX}/bin/pear
-UPGRADE_PKG=	Net_Socket-1.0.2
+UPGRADE_PKG=
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
