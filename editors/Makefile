@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2005/02/22 12:39:04 adam Exp $
+# $NetBSD: Makefile,v 1.106 2005/04/22 19:08:52 wiz Exp $
 #
 
 COMMENT=	Editors
@@ -25,7 +25,6 @@ SUBDIR+=	emacs-nox11
 SUBDIR+=	emacs-packages
 SUBDIR+=	emacs20
 SUBDIR+=	ex
-SUBDIR+=	gbib
 SUBDIR+=	gconf-editor
 SUBDIR+=	gedit
 SUBDIR+=	gice
