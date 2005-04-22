@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:12 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/22 19:26:30 wiz Exp $
 
 DISTNAME=		rs-0.7.3.2
 PKGNAME=		RScheme-0.7.3.2
 PKGREVISION=		2
 CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.rscheme.org/pub/rscheme/
+MASTER_SITES=		http://www.rscheme.org/rs/b/0.7.3.2/25/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.rscheme.org/
