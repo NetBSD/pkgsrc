@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2005/04/19 15:38:40 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2005/04/22 19:32:10 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -7,7 +7,6 @@ SUBDIR+=	RealPlayerGold
 SUBDIR+=	acidrip
 SUBDIR+=	alevt
 SUBDIR+=	avidemux
-SUBDIR+=	avifile
 SUBDIR+=	dirac
 SUBDIR+=	divxplayer
 SUBDIR+=	dumpmpeg
