@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/15 20:29:58 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/22 21:25:45 wiz Exp $
 
 DISTNAME=	ppp-lzs-1.2
 CATEGORIES=	net
@@ -16,6 +16,8 @@ ONLY_FOR_PLATFORM= 	NetBSD-*-*
 MAKE_ENV+=	NETBSDSRCDIR="${NETBSDSRCDIR}"
 MAKE_ENV+=	S="${NETBSDSRCDIR}/sys"
 MESSAGE_SUBST+= PREFIX="${PREFIX}"
+
+BUILDLINK_PASSTHRU_DIRS=	${NETBSDSRCDIR}/lib/libpcap
 
 pre-extract:
 .if !exists(${NETBSDSRCDIR}/usr.sbin/pppd/Makefile)
