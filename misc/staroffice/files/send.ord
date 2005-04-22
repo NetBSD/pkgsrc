@@ -1,5 +1,0 @@
-POST @@@SITE@@@/servlet/EComActionServlet/ECom.CatalogPageInfo;$sessionid$@@@SESS@@@ HTTP/1.0
-Content-type: application/x-www-form-urlencoded
-Content-length: 80
-
-form.catalogItem=8:STRIL-@@@LANGSUB@@@&CatalogPageAction/form.addToCart=Add+to+Order
