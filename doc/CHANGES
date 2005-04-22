@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9944 2005/04/22 19:36:30 wiz Exp $
+$NetBSD: CHANGES,v 1.9945 2005/04/22 19:53:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2171,3 +2171,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed yplot [wiz 2005-04-22]
 	Removed avifile [wiz 2005-04-22]
 	Removed newscache [wiz 2005-04-22]
+	Removed RScheme [wiz 2005-04-22]
