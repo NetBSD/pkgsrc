@@ -1,31 +1,31 @@
-$NetBSD: distinfo,v 1.25 2005/03/01 15:36:48 wiz Exp $
+$NetBSD: distinfo,v 1.25.2.1 2005/04/22 14:39:14 salo Exp $
 
-SHA1 (cvs-1.11.19.tar.bz2) = 0d5e93a4380d02d4b6b41259b538c05d04d9d633
-RMD160 (cvs-1.11.19.tar.bz2) = 3a499e4dd32e4302e61e282ede48598bab0997fa
-Size (cvs-1.11.19.tar.bz2) = 2392762 bytes
+SHA1 (cvs-1.11.20.tar.bz2) = 47f51a96b5a73e18c96f431f3c494735aa9c0236
+RMD160 (cvs-1.11.20.tar.bz2) = 4f926d661b35dc1bafb5ee5f98487289a907d34d
+Size (cvs-1.11.20.tar.bz2) = 2414744 bytes
 SHA1 (cvs-1.11.19-v6-20050205.diff.gz) = 5cd1519d99c8a6bc124fd5e4daaf5202cde87f07
 RMD160 (cvs-1.11.19-v6-20050205.diff.gz) = a6c304badf71464798311f121f3eb2df50501c2f
 Size (cvs-1.11.19-v6-20050205.diff.gz) = 13004 bytes
 SHA1 (patch-aa) = 57bcc59a51d44f436d2f79a0752e44e317589650
-SHA1 (patch-ab) = 4a539ac6e37e3dc48ab0c427487806e2f3ff78ae
+SHA1 (patch-ab) = 3c5ff65e7a087b2e73e933366aae99b6b5549371
 SHA1 (patch-ac) = 4da02fe019da9721afe6f9af0cd1db44214b575e
 SHA1 (patch-ad) = da297e6f5f1a8ad4cf0c47f7b57f6bbb860ea64c
-SHA1 (patch-ae) = 2fcd5c228c0e18a2ea54f0bcee29e200193544c0
-SHA1 (patch-af) = af7e1f8dba74b40129d623b096ddf5a6c5dbefb4
-SHA1 (patch-ag) = e5c273fb784c5e340cbdf7ff182a6ae09c93dc4f
+SHA1 (patch-ae) = 3c9083c3d6532505efc530845feaee70158569b5
+SHA1 (patch-af) = 2f809d054c0b215a6668eda3b18e3ea2c5dfab27
+SHA1 (patch-ag) = 5dd358a7dbf5db402d3e56faf49e8748afdd05f2
 SHA1 (patch-ah) = 47b9f55979ed65844efe22fb614b105ae247408d
-SHA1 (patch-ai) = ef52993cef430675f3efd09ae37cee522fd93369
+SHA1 (patch-ai) = d51b3f1429e73156cbfb7e0480a34ac6ce7a208d
 SHA1 (patch-ak) = dc51b6899005cbfdbad1876060c7ef53cce3156f
-SHA1 (patch-al) = 7f223fd872f96788af499743f07e49d45d64715f
+SHA1 (patch-al) = 3f20d43ed1423ae6e811d9ec2d35af4932e84b41
 SHA1 (patch-am) = a2a83f3a3788a99f008372f5a8d7ee9a3a6dbf72
 SHA1 (patch-an) = 5fda0f44ff5ee165f18cedd43c6adf97a51e6398
 SHA1 (patch-ao) = e19a61b0ccb0e71491fb53d553f03d85135ef5c6
 SHA1 (patch-ap) = 9aa44fc82540f86aefa14c47f1d2632377a0471f
 SHA1 (patch-aq) = bc828ae6c5eff55e7952752cb50317e268dcdd7b
-SHA1 (patch-ar) = 4c47f223205de1b6afd3858e4161f99550e1d099
-SHA1 (patch-as) = 35e59c65a544cdd8bd8c6808fdf3410c590dd827
+SHA1 (patch-ar) = 89c787d8725c6dc4a91268138749a2ec0ec255b1
+SHA1 (patch-as) = 095bab2722f1885db6c6d9e6f599e07444077c15
 SHA1 (patch-at) = 1cbed8c43bda54a851a7ff1b85e78a224cbeeca2
 SHA1 (patch-au) = ba788685ee842d07ac866183185e257ce2dcf749
 SHA1 (patch-av) = d381dbf50a59d78e0a4bf8fff09b2570988d5647
 SHA1 (patch-ay) = 7a0ee5bf1707afeaeb9092ce3faf7fc594044a2b
-SHA1 (patch-az) = e732ec022131d3ca23f7193625e4e2f305600fa9
+SHA1 (patch-az) = 4b773728b228af6c69d4e10cf59f1677feaa54ea
