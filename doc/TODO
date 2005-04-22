@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3434 2005/04/22 00:35:46 wiz Exp $
+$NetBSD: TODO,v 1.3435 2005/04/22 19:37:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -454,7 +454,6 @@ Suggested package updates
 	o gap-4r4p3
 	o garmin-utils-2.2
 	o gated-3.6
-	o gbib-0.1.3rc1
 	o gcc-4.0.0
 	o gcombust-0.1.55
 	o gconfmm26-2.8.0?
@@ -675,7 +674,6 @@ Suggested package updates
 	o netramet-50
 	o neverball-1.4.0
 	o newmail-1.0.2
-	o newscache-1.1.92
 	o ng-1.4.4
 	o nget-0.27.1
 	o nhc98-1.18
@@ -695,6 +693,7 @@ Suggested package updates
 	o open2300-1.8
 	o openacs-5.1.4
 	o openal-20050202
+	o openc++-2.8
 	o opencobol-0.31
 	o openh323-1.17.1
 	o openldap-2.2.24
@@ -847,7 +846,6 @@ Suggested package updates
 	o pload-0.9.5
 	o ploticus-2.31.03
 	o ploticus-examples-230
-	o plplot-5.3.1
 	o pnet-0.6.10 [pkg/28555]
 	o poedit-1.3.2
 	o poppy-4.01
@@ -953,7 +951,7 @@ Suggested package updates
 	o rtcw-1.41.3
 	o ruby-fox-1.2.6 [needs to update of fox-1.4.6]
 	o ruby-mysql-2.5.2
-	o rudiments-0.28.1
+	o rudiments-0.28.2
 	o sablecc-2.18.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-classpath-1.11.3 [pkg/30022]
@@ -1006,7 +1004,6 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o ssam-1.10
 	o ssh-askpass-1.2.4.1
-	o staroffice-7p1
 	o stella-1.4.2
 	o stellarium-0.6.1
 	o stlport-4.6.2
