@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.212 2005/04/19 09:49:07 wiz Exp $
+# $NetBSD: Makefile,v 1.213 2005/04/22 19:52:50 wiz Exp $
 #
 
 COMMENT=	Programming languages
 
 SUBDIR+=	Cg-compiler
-SUBDIR+=	RScheme
 SUBDIR+=	STk
 SUBDIR+=	SmartEiffel
 SUBDIR+=	a60
