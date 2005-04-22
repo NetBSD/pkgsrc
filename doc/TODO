@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3433 2005/04/21 07:26:59 grant Exp $
+$NetBSD: TODO,v 1.3434 2005/04/22 00:35:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -260,7 +260,7 @@ Suggested package updates
 	o MyPasswordSafe-20041210
 	o PAM-0.78
 	o R-2.1.0
-	o RealPlayerGold-10.0.3
+	o RealPlayerGold-10.0.4
 	o SmartEiffel-2.1
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
@@ -300,7 +300,7 @@ Suggested package updates
 	o arnold-20040104
 	o arpwatch-2.1a13
 	o asapm-2.13
-	o aspell-danish-1.4.48
+	o aspell-danish-1.4.49
 	o aspell-faroese-0.2.20
 	o ast-ksh-20040229
 	o astyle-1.15.3
@@ -340,8 +340,8 @@ Suggested package updates
 	o cdl3-1.2.6
 	o cdlabelgen-3.5.0
 	o cdrtools-2.01
-	o cfengine2-2.1.13
-	o cfengine2-doc-2.1.13
+	o cfengine2-2.1.14
+	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
 	o cgdb-0.5.1
 	o cgic-205
@@ -429,7 +429,7 @@ Suggested package updates
 	o exim-4.50
 	o exmh-2.7.2
 	o f2c-20031025
-	o fakeroot-1.2.8
+	o fakeroot-1.2.9 [pkg/30015]
 	o fd-2.06c
 	o fdgw-20040609
 	o fhist-1.14
@@ -455,6 +455,7 @@ Suggested package updates
 	o garmin-utils-2.2
 	o gated-3.6
 	o gbib-0.1.3rc1
+	o gcc-4.0.0
 	o gcombust-0.1.55
 	o gconfmm26-2.8.0?
 	o gcpio-2.6
@@ -627,7 +628,7 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.26
-	o mathomatic-12.2d
+	o mathomatic-12.2e
 	o mdd-20050318
 	o memcached-1.2
 	o memtest86-3.2
@@ -844,7 +845,7 @@ Suggested package updates
 	o plan-1.9
 	o plib-1.8.4
 	o pload-0.9.5
-	o ploticus-2.31.02
+	o ploticus-2.31.03
 	o ploticus-examples-230
 	o plplot-5.3.1
 	o pnet-0.6.10 [pkg/28555]
@@ -855,7 +856,7 @@ Suggested package updates
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o prc-tools-2.3
 	o proj-4.4.9
-	o proxsmtp-1.2
+	o proxsmtp-1.2.1
 	o pscal-1.16
 	o psmisc-21.5
 	o pstoedit-3.40
@@ -954,9 +955,9 @@ Suggested package updates
 	o ruby-mysql-2.5.2
 	o rudiments-0.28.1
 	o sablecc-2.18.2
-	o sablevm-1.11
-	o sablevm-classpath-1.11
-	o sablevm-classpath-gui-1.11
+	o sablevm-1.11.3 [pkg/30022]
+	o sablevm-classpath-1.11.3 [pkg/30022]
+	o sablevm-classpath-gui-1.11.3 [pkg/30022?]
 	o samba-3.0.14a
 	o same-1.8
 	o sarah-0.9.1b
@@ -1099,6 +1100,7 @@ Suggested package updates
 	o weewm-0.01
 	o winbind-3.0.13
 	o windowlab-1.26
+	o wine-20050419
 	o wmakerconf-2.11
 	o wmbiff-0.4.26
 	o wmctrl-1.07
