@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.70 2005/04/22 14:18:14 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.71 2005/04/22 14:40:17 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -147,3 +147,5 @@ Pullup ticket 460 - requested by Shin'ichiro TAYA
 security fix for mozilla and mozilla-gtk2
 Pullup ticket 457 - requested by Takahiro Kambe
 security update for php4
+Pullup ticket 464 - requested by Thomas Klausner
+security update for cvs
