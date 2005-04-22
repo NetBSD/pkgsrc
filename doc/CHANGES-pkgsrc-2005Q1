@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.68 2005/04/22 06:48:32 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.69 2005/04/22 07:22:51 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -143,3 +143,5 @@ Pullup ticket 463 - requested by Takahiro Kambe
 jwhois update
 Pullup ticket 459 - requested by Shin'ichiro TAYA
 security fix for firefox and firefox-gtk1
+Pullup ticket 460 - requested by Shin'ichiro TAYA
+security fix for mozilla and mozilla-gtk2
