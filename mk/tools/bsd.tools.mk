@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.3 2005/04/22 04:22:37 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.4 2005/04/22 05:23:12 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -14,20 +14,29 @@
 #
 # The following variables specify the details of each <tool>:
 #
-#    TOOLS_CMD.<tool> is the path to the tool under ${TOOLS_DIR}
+#    TOOLS_CMD.<tool> is the path to the tool under ${TOOLS_DIR}.  This
+#	variable is optional, and if left unspecified it is either
+#	derived from TOOLS_REAL_CMD.<tool> for symlinks, or placed in
+#	the "bin" directory for wrappers by default.
 #
 #    TOOLS_REAL_CMD.<tool> is the path to the actual command that is
-#	invoked when ${TOOLS_CMD.<tool>} is called.
+#	invoked when ${TOOLS_CMD.<tool>} is called.  If <tool> should
+#	be a symlink, then this variable is required and should be a
+#	full path.  If <tool> should be a wrapper, then this variable
+#	is required unless TOOLS_REAL_CMDLINE.<tool> is defined (see
+#	below).
 #
 # The following variables specify further details of each <tool> and
 # are used only by tools listed in TOOLS_WRAP:
 #
 #    TOOLS_ARGS.<tool> additional arguments that are passed to the real
-#	command ahead of any command-line arguments.
+#	command ahead of any command-line arguments.  This variable is
+#	optional.
 #
 #    TOOLS_REAL_CMDLINE.<tool> specifies the full command-line to invoke
-#	in the wrapper script when <tool> is called.  By default, this
-#	is built up from TOOLS_REAL_CMD.<tool> and TOOLS_ARGS.<tool>.
+#	in the wrapper script when <tool> is called.  This variable is
+#	optional, and if left unspecified, then this is built up from
+#	TOOLS_REAL_CMD.<tool> and TOOLS_ARGS.<tool> by default.
 #
 # The following variables provide shortcuts for creating certain classes
 # of tools:
@@ -61,6 +70,10 @@ override-tools: .OPTIONAL
 
 USE_TOOLS?=		# empty
 
+# Include the other mk/tools/*.mk files here that help specify the
+# wrappers and symlinks that will be created by this file.  Order
+# matters!
+#
 .include "../../mk/tools/automake.mk"
 .include "../../mk/tools/autoconf.mk"
 .include "../../mk/tools/coreutils.mk"
