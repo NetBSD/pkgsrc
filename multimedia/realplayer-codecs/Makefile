@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/03 21:13:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/23 10:32:16 jmmv Exp $
 #
 
 DISTNAME=	rp8codecs${RP_ARCH}-20050115
@@ -14,6 +14,8 @@ HOMEPAGE=	http://mplayerhq.hu/MPlayer/releases/codecs/
 COMMENT=	RealPlayer 8 shared libraries, primarily for use with MPlayer
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc *-*-alpha
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386"
 RP_ARCH=
