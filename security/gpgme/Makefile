@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2005/04/11 21:47:12 tv Exp $
+# $NetBSD: Makefile,v 1.33 2005/04/23 12:44:58 shannonjr Exp $
 #
 
 DISTNAME=	gpgme-1.0.2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/ \
 		ftp://ftp.gnupg.org/gcrypt/alpha/gpgme/
@@ -9,6 +10,8 @@ MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/ \
 MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.gnupg.org/gpgme.html
 COMMENT=	GnuPG Made Easy
+
+DEPENDS+=		gnupg>=1.2.2:../../security/gnupg
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
@@ -46,9 +49,7 @@ INFO_FILES=		gpgme.info
 .if !empty(PKG_OPTIONS:Mgpgsm)
 .  include "../../security/gnupg-devel/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gpgsm=${BUILDLINK_PREFIX.gnupg-devel}/bin/gpgsm
-CONFIGURE_ARGS+=	--with-gpg=${BUILDLINK_PREFIX.gnupg-devel}/bin/gpg2
 .else
-DEPENDS+=		gnupg>=1.2.2:../../security/gnupg
 CONFIGURE_ARGS+=	--without-gpgsm
 .endif
 
