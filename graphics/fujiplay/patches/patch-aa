@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/03/20 12:51:34 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2005/04/23 10:55:59 jmmv Exp $
 
 --- fujiplay.c.orig	1999-02-23 10:30:31.000000000 +0100
 +++ fujiplay.c	2005-03-20 13:49:59.000000000 +0100
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.4 2005/03/20 12:51:34 jmmv Exp $
 -";
 -
 -const char *Copyright = "\
--Fujiplay, $Id: patch-aa,v 1.4 2005/03/20 12:51:34 jmmv Exp $
+-Fujiplay, Id: fujiplay.c,v 1.33 1999/02/22 14:13:01 bousch Exp
 -Written by Thierry Bousch <bousch@topo.math.u-psud.fr>
 -Public domain. Absolutely no warranty.
 -";
@@ -89,7 +89,7 @@ $NetBSD: patch-aa,v 1.4 2005/03/20 12:51:34 jmmv Exp $
 +"  DSCxxxxx.JPG	Files to delete or to upload into the camera\n";
 +
 +const char *Copyright =
-+"Fujiplay, $Id: patch-aa,v 1.4 2005/03/20 12:51:34 jmmv Exp $\n"
++"Fujiplay, Id: fujiplay.c,v 1.33 1999/02/22 14:13:01 bousch Exp\n"
 +"Written by Thierry Bousch <bousch@topo.math.u-psud.fr>\n"
 +"Public domain. Absolutely no warranty.\n";
  
