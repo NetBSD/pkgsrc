@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:03 zuntum Exp $
-bin/fan
+@comment $NetBSD: PLIST,v 1.2 2005/04/23 20:39:50 riz Exp $
 bin/alarm
 bin/dispswitch
+bin/fan
+bin/hotkey
 bin/tdocked
 bin/thotswap
-bin/hotkey
 bin/tuxtime-conf
-man/man1/fan.1
-man/man1/svpw.1
-man/man1/hotkey.1
-man/man1/tpasswd.1
 man/man1/alarm.1
+man/man1/fan.1
+man/man1/hotkey.1
+man/man1/svpw.1
 man/man1/tdocked.1
+man/man1/tpasswd.1
 share/doc/toshutils/ac.gif
 share/doc/toshutils/battery.gif
 share/doc/toshutils/display.html
