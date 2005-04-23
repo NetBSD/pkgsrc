@@ -1,0 +1,85 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/04/23 17:38:58 adrianp Exp $
+
+--- Makefile.PL.orig	2005-04-23 00:12:41.000000000 +0100
++++ Makefile.PL
+@@ -161,78 +161,8 @@ FIX
+     exit 1;
+ }
+ 
+-print <<'OPTIONAL';
+-
+-* Now, let me ask you whether you want some optional modules to be
+-* installed as well.  You can always install these modules later, by
+-* hand, without a need to re-install MailBox.
+-*
+-OPTIONAL
+-
+-foreach my $optional (@optional)
+-{   my ($module, $version, %args) = @$optional;
+-    my $requirements = $args{requires} || sub {1};
+-    next unless $requirements->();
+-
+-    print "\n";
+-    eval "require $module";
+-    if($@)
+-    {   if($@ =~ m/^Can't locate /)
+-             { print "**** Optional $module is not installed\n"        }
+-        else { print "**** Optional $module compilation failed:\n$@\n" }
+-    }
+-    elsif($module->VERSION < $version )
+-    {   print "**** Optional $module too old: requires $version but is ",
+-            $module->VERSION,"\n";
+-    }
+-    else
+-    {   my $v = $module->VERSION;
+-        my $r = $v eq $version ? ''
+-              : $version == 0  ? " (any version will do)"
+-              :                  " (at least $version required)";
+-
+-        print "**** Found optional $module version $v$r\n";
+-        next;
+-    }
+-
+-    my $reason = $args{reason};
+-    $reason =~ s/^/     /gm;
+-    $reason =~ s/\A    /Use:/;
+-    print $reason;
+-
+-    if(my $warn = $args{warning})
+-    {   $warn =~ s/^/     /gm;
+-        $warn =~ s/\A    /WARN/;
+-        print $warn;
+-    }
+-    
+-    my $install  = $default_install_answer;
+-    my $key = prompt "Do you want to install $module? yes/no/all", $install;
+-
+-    if($key eq 'a')
+-    {   $default_install_answer = 'a';
+-        $install = 'y';
+-    }
+-    else
+-    {   $install = $key eq 'y' ? 'y' : 'n';
+-    }
+-
+-    next unless $install eq 'y';
+-
+-    my $distr = $args{distr} || $module;
+-
+-    $prereq{$distr} = $version;
+-    print "     Added $distr version $version to the requirements\n";
+-}
+-
+-my $tests = prompt "Do you want to run the (large set of) tests? yes/no", "yes";
+-if($tests =~ m/n/i)
+-{   open F, ">", "skiptests";
+-    close F;
+-}
+-else
+-{   unlink "skiptests";
+-}
++open F, ">", "skiptests";
++close F;
+ 
+ print <<'MAKEFILE';
+ 
