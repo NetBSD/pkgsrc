@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.634 2005/04/22 19:00:33 wiz Exp $
+# $NetBSD: Makefile,v 1.635 2005/04/24 02:49:19 rh Exp $
 #
 
 COMMENT=	Development utilities
@@ -205,6 +205,7 @@ SUBDIR+=	kdevelop-base
 SUBDIR+=	kscope
 SUBDIR+=	lcc
 SUBDIR+=	ldapsdk
+SUBDIR+=	libFoundation
 SUBDIR+=	libargparse
 SUBDIR+=	libast
 SUBDIR+=	libaura
