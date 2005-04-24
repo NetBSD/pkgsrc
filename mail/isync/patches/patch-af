@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2005/04/24 09:31:54 adrianp Exp $
+
+--- src/drv_imap.c.orig	2005-03-05 22:00:48.000000000 +0100
++++ src/drv_imap.c	2005-03-05 22:01:01.000000000 +0100
+@@ -41,6 +41,7 @@
+ #include <netinet/tcp.h>
+ #include <arpa/inet.h>
+ #include <netdb.h>
++#include <limits.h>
+ #if HAVE_LIBSSL
+ # include <openssl/ssl.h>
+ # include <openssl/err.h>
