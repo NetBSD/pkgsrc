@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/16 18:11:52 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/04/24 22:13:40 perry Exp $
 share/doc/slib/FAQ
 share/doc/slib/README
 share/slib/Bev2slib.scm
@@ -14,12 +14,14 @@ share/slib/batch.scm
 share/slib/bigloo.init
 share/slib/break.scm
 share/slib/byte.scm
+share/slib/bytenumb.scm
 share/slib/chap.scm
 share/slib/charplot.scm
 share/slib/chez.init
 share/slib/cltime.scm
 share/slib/coerce.scm
 share/slib/collect.scm
+share/slib/collectx.scm
 share/slib/color.scm
 share/slib/colornam.scm
 share/slib/colorspc.scm
@@ -31,6 +33,7 @@ share/slib/cvs.scm
 share/slib/daylight.scm
 share/slib/db2html.scm
 share/slib/dbcom.scm
+share/slib/dbinterp.scm
 share/slib/dbrowse.scm
 share/slib/dbsyn.scm
 share/slib/dbutil.scm
@@ -47,13 +50,12 @@ share/slib/eval.scm
 share/slib/factor.scm
 share/slib/fft.scm
 share/slib/fluidlet.scm
-share/slib/format.scm
-share/slib/formatst.scm
 share/slib/gambit.init
 share/slib/genwrite.scm
 share/slib/getopt.scm
 share/slib/getparam.scm
 share/slib/glob.scm
+share/slib/grapheps.scm
 share/slib/guile.init
 share/slib/hash.scm
 share/slib/hashtab.scm
@@ -65,10 +67,12 @@ share/slib/logical.scm
 share/slib/macrotst.scm
 share/slib/macscheme.init
 share/slib/macwork.scm
+share/slib/manifest.scm
 share/slib/matfile.scm
 share/slib/mbe.scm
 share/slib/minimize.scm
 share/slib/mitscheme.init
+share/slib/mkclrnam.scm
 share/slib/mklibcat.scm
 share/slib/modular.scm
 share/slib/mulapply.scm
@@ -103,7 +107,6 @@ share/slib/rdms.scm
 share/slib/recobj.scm
 share/slib/record.scm
 share/slib/repl.scm
-share/slib/report.scm
 share/slib/require.scm
 share/slib/root.scm
 share/slib/s48-0_57.init
@@ -129,6 +132,9 @@ share/slib/solid.scm
 share/slib/sort.scm
 share/slib/soundex.scm
 share/slib/srfi-1.scm
+share/slib/srfi-2.scm
+share/slib/srfi-8.scm
+share/slib/srfi-9.scm
 share/slib/srfi.scm
 share/slib/stdio.scm
 share/slib/strcase.scm
@@ -141,6 +147,7 @@ share/slib/synclo.scm
 share/slib/synrul.scm
 share/slib/t3.init
 share/slib/timezone.scm
+share/slib/top-refs.scm
 share/slib/trace.scm
 share/slib/transact.scm
 share/slib/tree.scm
@@ -150,6 +157,7 @@ share/slib/tzfile.scm
 share/slib/umbscheme.init
 share/slib/uri.scm
 share/slib/values.scm
+share/slib/vet.scm
 share/slib/vscm.init
 share/slib/withfile.scm
 share/slib/wttest.scm
