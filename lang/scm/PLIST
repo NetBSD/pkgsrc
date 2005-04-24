@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/07 13:30:16 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/04/24 22:06:22 perry Exp $
 bin/scm
 bin/scmlit
 include/patchlvl.h
@@ -10,7 +10,7 @@ lib/libscm.a
 man/man1/scm.1
 share/scm/COPYING
 share/scm/Iedline.scm
-share/scm/Init5d8.scm
+share/scm/Init${PKGVERSION}.scm
 share/scm/Link.scm
 share/scm/Macexp.scm
 share/scm/Macro.scm
