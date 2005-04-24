@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/04/24 12:10:48 adrianp Exp $
+
+--- Makefile.am.orig	2005-02-18 18:01:26.000000000 +0000
++++ Makefile.am
+@@ -1,7 +1,8 @@
+-CC=gcc
++#CC=gcc
+ LIB=-lpcre -L./pcre-3.9/ -I./pcre-3.9/
+-OPT=-O2
+-OPT_DEBUG=-ggdb -Wall -lefence
++SHAREDIR=${PREFIX}/share/amap
++OPT=${CFLAGS} -DSHAREDIR="\"$(SHAREDIR)/\""
++#OPT_DEBUG=-ggdb -Wall -lefence
+ BINDIR=/bin
+ DATADIR=/etc
+ MANDIR=/man/man1
