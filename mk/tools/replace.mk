@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.11 2005/04/24 22:42:00 jlam Exp $
+# $NetBSD: replace.mk,v 1.12 2005/04/24 23:28:20 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -82,12 +82,8 @@ _TOOLS_VARNAME.yacc=	YACC
 # files as they are ${OPSYS}-specific.
 #
 _TOOLS_USE_PLATFORM.bison=	Linux-*-*
-_TOOLS_USE_PLATFORM.egrep=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
-				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
-				SunOS-*-*
-_TOOLS_USE_PLATFORM.fgrep=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
-				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
-				SunOS-*-*
+_TOOLS_USE_PLATFORM.egrep=	${_TOOLS_USE_PLATFORM.grep}
+_TOOLS_USE_PLATFORM.fgrep=	${_TOOLS_USE_PLATFORM.grep}
 _TOOLS_USE_PLATFORM.file=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
 				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
 				SunOS-*-*
