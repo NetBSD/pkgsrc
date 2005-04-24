@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9951 2005/04/24 02:50:24 rh Exp $
+$NetBSD: CHANGES,v 1.9952 2005/04/24 03:03:01 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2180,3 +2180,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-File-Remove-0.20 [adrianp 2005-04-23]
 	Added p5-Mail-Box-2.060 [adrianp 2005-04-23]
 	Added libFoundation-1.0.72.107 [rh 2005-04-24]
+	Added sope-4.4rc6 [rh 2005-04-24]
