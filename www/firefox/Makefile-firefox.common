@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-firefox.common,v 1.15 2005/04/17 02:19:39 taya Exp $
+# $NetBSD: Makefile-firefox.common,v 1.16 2005/04/24 14:00:12 taya Exp $
 
 MOZILLA_BIN=	firefox-bin
 MOZ_VER=	1.0.3
@@ -24,17 +24,8 @@ CONFIGURE_ARGS+=	--disable-mailnews
 CONFIGURE_ARGS+=	--disable-composer
 CONFIGURE_ARGS+=	--enable-single-profile
 
-MOZILLA_EXTENSIONS+=	cookie
-MOZILLA_EXTENSIONS+=	gnomevfs
-MOZILLA_EXTENSIONS+=	inspector
-MOZILLA_EXTENSIONS+=	negotiateauth
-MOZILLA_EXTENSIONS+=	pref
-MOZILLA_EXTENSIONS+=	transformiix
-MOZILLA_EXTENSIONS+=	universalchardet
-MOZILLA_EXTENSIONS+=	webservices
-MOZILLA_EXTENSIONS+=	xml-rpc
-MOZILLA_EXTENSIONS+=	xmlextras
-CONFIGURE_ARGS+=	--enable-extensions=${MOZILLA_EXTENSIONS:ts,}
+MOZILLA_EXTENSIONS=	cookie,gnomevfs,inspector,negotiateauth,pref,transformiix,universalchardet,webservices,xml-rpc,xmlextras
+CONFIGURE_ARGS+=	--enable-extensions=${MOZILLA_EXTENSIONS}
 
 USE_LANGUAGES+=		c++
 BUILD_MATHML=		# defined
