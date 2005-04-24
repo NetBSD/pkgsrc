@@ -1,8 +1,14 @@
-$NetBSD: patch-aa,v 1.3 2002/06/01 04:41:31 deberg Exp $
+$NetBSD: patch-aa,v 1.4 2005/04/24 12:48:43 adrianp Exp $
 
---- Makefile.orig	Thu Apr 11 01:13:23 2002
-+++ Makefile	Sat Jun  1 00:29:22 2002
-@@ -62,14 +62,12 @@
+--- Makefile.orig	Mon Sep  6 20:15:46 2004
++++ Makefile
+@@ -55,19 +55,17 @@ all:: strings.ml buildexecutable
+ all:: INSTALL
+ 
+ INSTALL: $(NAME)$(EXEC_EXT)
+-	./$(NAME) -doc install > INSTALL
++##	./$(NAME) -doc install > INSTALL
+ 
  ######################################################################
  # Installation
  
@@ -20,12 +26,12 @@ $NetBSD: patch-aa,v 1.3 2002/06/01 04:41:31 deberg Exp $
  
  
  ######################################################################
-@@ -231,7 +229,7 @@
+@@ -345,7 +343,7 @@ testmerge:
  tags:
- 	-$(ETAGS) {*,*/*}.mli {*,*/*}.ml *.txt 
+ 	-$(ETAGS) *.mli */*.mli *.ml */*.ml *.m */*.m *.c */*.c *.txt
  
 -all:: TAGS
 +# all:: TAGS
  
- TAGS: 
+ TAGS:
  	$(MAKE) tags
