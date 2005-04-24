@@ -1,15 +1,26 @@
-$NetBSD: patch-ac,v 1.1 2005/02/04 22:54:52 adrianp Exp $
+$NetBSD: patch-ac,v 1.2 2005/04/24 12:48:43 adrianp Exp $
 
---- ubase/uprintf.ml.orig	2005-01-12 18:52:27.000000000 +0100
-+++ ubase/uprintf.ml	2005-01-12 18:52:53.000000000 +0100
-@@ -10,8 +10,8 @@
- (*                                                                     *)
- (***********************************************************************)
+--- pty.c.orig	2004-09-06 20:15:47.000000000 +0100
++++ pty.c
+@@ -18,7 +18,11 @@ CAMLprim value dumpFd(value fdVal) {
+ }
  
--external format_int: string -> int -> string = "format_int"
--external format_float: string -> float -> string = "format_float"
-+external format_int: string -> int -> string = "caml_format_int"
-+external format_float: string -> float -> string = "caml_format_float"
+ #include <caml/fail.h>     // failwith
++#ifdef __NetBSD__
++#include <errno.h>         // errno
++#else
+ #include <sys/errno.h>     // errno
++#endif
+ #include <string.h>        // strerror
+ #include <caml/alloc.h>    // alloc_tuple
+ #include <caml/memory.h>   // Store_field
+@@ -32,6 +36,9 @@ CAMLprim value dumpFd(value fdVal) {
+ #ifdef __APPLE__
+ #include <util.h>          // openpty
+ #endif
++#ifdef __NetBSD__
++#include <util.h>          // openpty
++#endif
  
- let fprintf outchan doafter format =
-   let format = (Obj.magic format : string) in
+ /* c_openpty: unit -> (int * Unix.file_descr) */
+ CAMLprim value c_openpty() {
