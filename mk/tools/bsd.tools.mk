@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.4 2005/04/22 05:23:12 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.5 2005/04/24 03:54:29 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -139,8 +139,8 @@ ${TOOLS_CMD.${_t_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	( ${ECHO} '#!'${TOOLS_SHELL:Q};					\
 	  ${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-'${_TOOLS_WRAP_LOG:Q}'}"'; \
-	  ${ECHO} '${ECHO} "[*] '${TOOLS_CMD.${_t_}:Q}' $$*" >> $$wrapperlog'; \
-	  ${ECHO} '${ECHO} "<.> '${TOOLS_REAL_CMDLINE.${_t_}:Q}'" >> $$wrapperlog'; \
+	  ${ECHO} '${ECHO} "[*] "'${TOOLS_CMD.${_t_}:Q}'" $$*" >> $$wrapperlog'; \
+	  ${ECHO} '${ECHO} "<.> "'${TOOLS_REAL_CMDLINE.${_t_}:Q}' >> $$wrapperlog'; \
 	  ${ECHO} ${_TOOLS_EXEC.${_t_}:Q} ${TOOLS_REAL_CMDLINE.${_t_}:Q}; \
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
