@@ -1,44 +1,46 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/01/27 10:56:57 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2005/04/24 13:06:03 adrianp Exp $
 
---- Makefile.OCaml.orig	Mon Aug 19 17:15:04 2002
-+++ Makefile.OCaml	Tue Jan 27 05:51:03 2004
-@@ -45,7 +45,7 @@
- ifeq ($(shell uname),Darwin)
-   OSARCH=osx
+--- Makefile.OCaml.orig	2005-04-24 09:08:08.000000000 +0100
++++ Makefile.OCaml
+@@ -29,6 +29,10 @@ ifeq ($(shell uname),Darwin)
  else
--  OSARCH=linux
-+  OSARCH=bsd
+ ifeq ($(shell uname),OpenBSD)
+   OSARCH=OpenBSD
++else
++ifeq ($(shell uname),NetBSD)
++  OSARCH=NetBSD
++endif
  endif
  endif
- ETAGS=etags
-@@ -178,7 +178,7 @@
- ifeq ($(OSARCH), win32gnuc)
-   GUILIBDIR=$(OCAMLLIBDIR)/lablgtk/cclibs
  endif
--ifeq ($(OSARCH), linux)
-+ifeq ($(OSARCH), bsd)
+@@ -240,6 +244,9 @@ endif
+ ifeq ($(OSARCH), osx)
    X11LIBDIR=/usr/X11R6/lib
  endif
- ifeq ($(OSARCH), osx)
-@@ -267,7 +267,7 @@
-     # libcurses is not in a standard place in older Solaris releases.
-     STATICLIBS+=-cclib -R/usr/xpg4/lib
-   endif
--  ifeq ($(OSARCH), linux)
-+  ifeq ($(OSARCH), bsd)
++ifeq ($(OSARCH), NetBSD)
++  X11LIBDIR=/usr/X11R6/lib
++endif
+ 
+ # Developer-only directories
+ ifeq ($(shell hostname), raptor.research.att.com)
+@@ -383,6 +390,9 @@ ifeq ($(STATIC), true)
+   ifeq ($(OSARCH), osx)
      STATICLIBS+=-cclib -static
    endif
-   ifeq ($(OSARCH), osx)
-@@ -304,9 +304,9 @@
- # Include an automatically generated list of dependencies
- include .depend
++  ifeq ($(OSARCH), NetBSD)
++    STATICLIBS+=-cclib -static
++  endif
+   CLIBS=$(STATICLIBS)
+ endif
  
--ifeq ($(shell echo type -t ocamldot | bash), file)
--  OCAMLDOT=true
--endif
-+#ifeq ($(shell echo type -t ocamldot | bash), file)
+@@ -424,6 +434,10 @@ else
+   endif
+ endif
+ 
++ifeq ($(OSARCH), NetBSD)
 +  OCAMLDOT=false
-+#endif
- 
++endif
++
  # Rebuild dependencies (must be invoked manually)
  .PHONY: depend
+ depend::
