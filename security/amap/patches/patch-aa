@@ -1,0 +1,62 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/04/24 12:10:48 adrianp Exp $
+
+--- configure.orig	2005-02-16 15:53:57.000000000 +0000
++++ configure
+@@ -35,7 +35,8 @@ echo
+ echo "Checking for openssl ..."
+ for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib \
+ /*ssl /usr/*ssl /opt/*ssl /usr/local/*ssl /opt/local/*ssl \
+-/*ssl/lib /usr/*ssl/lib /opt/*ssl/lib /usr/local/*ssl/lib /opt/local/*ssl/lib .
++/*ssl/lib /usr/*ssl/lib /opt/*ssl/lib /usr/local/*ssl/lib /opt/local/*ssl/lib \
++@SSLBASE@/lib.
+ do
+     if [ "X" = "X$SSL_PATH" ]; then
+         if [ -f "$i/libssl.so" -o -f "$i/libssl.dylib" ]; then
+@@ -62,7 +63,7 @@ do
+ done
+ 
+ for i in /usr/local/include /*ssl/include /usr/include \
+-/opt/*ssl/include /usr/*ssl/include /usr/local/*ssl/include .
++/opt/*ssl/include /usr/*ssl/include /usr/local/*ssl/include @SSLBASE@/include .
+ do
+     if [ "X" = "X$SSL_IPATH" ]; then
+         if [ -f "$i/openssl/ssl.h" ]; then
+@@ -89,7 +90,7 @@ if [ "$SSL_IPATH" = "/usr/include" ]; th
+     SSL_IPATH=""
+ fi
+ 
+-SYS=`uname`
++SYS=`@UNAME@`
+ if [ "$SYS" = "SunOS" ]; then
+     echo "Checking for Solaris libraries ..."
+     for i in  /lib /usr/lib /usr/local/lib $LIBDIRS
+@@ -152,7 +153,7 @@ if [ -n "$RESOLV_PATH" ]; then
+     XLIBS="$XLIBS -lresolv"
+ fi
+ 
+-for i in /usr/man /usr/share/man /usr/local/man /usr/local/share/man ; do
++for i in /usr/man /usr/share/man /usr/local/man /usr/local/share/man @MANDIR@; do
+   if [ -d $i ]; then
+     MANDIR=$i
+   fi
+@@ -168,9 +169,9 @@ if [ -d /usr/kerberos/include ]; then
+ fi
+ 
+ if [ -n "$PREFIX" ]; then
+-    XDEFINES="$XDEFINES -DAMAP_PREFIX=$PREFIX"
++    XDEFINES="$XDEFINES -DAMAP_PREFIX=\"\\\"$PREFIX/\\\"\""
+ else
+-    PREFIX="/usr/local"
++    PREFIX="@PREFIX@"
+ fi
+ echo "Amap will be installed into .../bin and .../etc of: $PREFIX"
+ echo "  (change this by running ./configure --prefix=path)"
+@@ -178,7 +179,7 @@ echo
+ 
+ echo "Writing Makefile.in ..."
+ echo "XDEFINES=$XDEFINES" >> Makefile.in
+-echo "XLIBS=$XLIBS" >> Makefile.in
++echo "XLIBS=$XLIBS @COMPILER_RPATH_FLAG@@PREFIX@/lib -L@PREFIX@/lib" >> Makefile.in >> Makefile.in
+ echo "XLIBPATHS=$XLIBPATHS" >> Makefile.in
+ echo "XIPATHS=$XIPATHS" >> Makefile.in
+ echo "MANDIR=$MANDIR/man1/" >> Makefile.in
