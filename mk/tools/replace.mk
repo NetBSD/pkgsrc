@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.10 2005/04/24 22:34:35 jlam Exp $
+# $NetBSD: replace.mk,v 1.11 2005/04/24 22:42:00 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -50,8 +50,8 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`yacc'' conflict in USE_TOOLS."
 # This is an exhaustive list of tools for which we have pkgsrc
 # replacements.
 #
-_TOOLS_REPLACE_LIST=	bison egrep fgrep file gawk gmake grep gunzip	\
-			gzcat gzip lex m4 patch perl sed tbl yacc
+_TOOLS_REPLACE_LIST=	bison egrep fgrep file gawk gm4 gmake grep	\
+			gunzip gzcat gzip lex patch perl sed tbl yacc
 
 # "TOOL" variable names associated with each of the tools
 _TOOLS_VARNAME.bison=	YACC
@@ -59,13 +59,13 @@ _TOOLS_VARNAME.egrep=	EGREP
 _TOOLS_VARNAME.fgrep=	FGREP
 _TOOLS_VARNAME.file=	FILE_CMD
 _TOOLS_VARNAME.gawk=	AWK
+_TOOLS_VARNAME.gm4=	M4
 _TOOLS_VARNAME.gmake=	GMAKE
 _TOOLS_VARNAME.grep=	GREP
 _TOOLS_VARNAME.gunzip=	GUNZIP_CMD
 _TOOLS_VARNAME.gzcat=	GZCAT
 _TOOLS_VARNAME.gzip=	GZIP_CMD
 _TOOLS_VARNAME.lex=	LEX
-_TOOLS_VARNAME.m4=	M4
 _TOOLS_VARNAME.patch=	PATCH
 _TOOLS_VARNAME.perl=	PERL5
 _TOOLS_VARNAME.sed=	SED
@@ -94,6 +94,7 @@ _TOOLS_USE_PLATFORM.file=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
 _TOOLS_USE_PLATFORM.gawk=	FreeBSD-*-* Linux-*-* OpenBSD-*-*	\
 				NetBSD-1.[0-6]*-* DragonFly-*-*		\
 				SunOS-*-* Interix-*-*
+_TOOLS_USE_PLATFORM.gm4=	# empty
 _TOOLS_USE_PLATFORM.gmake=	Darwin-*-*
 _TOOLS_USE_PLATFORM.grep=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
 				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
@@ -106,7 +107,6 @@ _TOOLS_USE_PLATFORM.gzip=	BSDOS-*-* Darwin-*-* DragonFly-*-*	\
 				OpenBSD-*-* SunOS-*-*
 _TOOLS_USE_PLATFORM.lex=	FreeBSD-*-* Linux-*-* NetBSD-*-*	\
 				OpenBSD-*-* DragonFly-*-*
-_TOOLS_USE_PLATFORM.m4=		# empty
 _TOOLS_USE_PLATFORM.patch=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
 				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
 				SunOS-*-*
@@ -193,6 +193,20 @@ ${_TOOLS_VARNAME.gawk}=		${TOOLS_REAL_CMD.gawk}
 .    endif
 .  endif
 TOOLS_CMD.gawk=			${TOOLS_DIR}/bin/awk
+.endif
+
+.if !defined(TOOLS_IGNORE.gm4) && !empty(USE_TOOLS:Mgm4)
+.  if !empty(PKGPATH:Mdevel/m4)
+MAKEFLAGS+=			TOOLS_IGNORE.gm4=
+.  elif !empty(_TOOLS_USE_PKGSRC.gm4:M[yY][eE][sS])
+${TOOLS_DEPENDS.gm4}+=		m4>=1.4:../../devel/m4
+TOOLS_SYMLINK+=			gm4
+TOOLS_REAL_CMD.gm4=		${LOCALBASE}/bin/gm4
+.    if exists(${TOOLS_REAL_CMD.gm4})
+${_TOOLS_VARNAME.gm4}=		${TOOLS_REAL_CMD.gm4}
+.    endif
+.  endif
+TOOLS_CMD.gm4=			${TOOLS_DIR}/bin/m4
 .endif
 
 .if !defined(TOOLS_IGNORE.gmake) && !empty(USE_TOOLS:Mgmake)
@@ -295,20 +309,6 @@ ${_TOOLS_VARNAME.lex}=		${TOOLS_REAL_CMD.lex}
 .    endif
 .  endif
 TOOLS_CMD.lex=			${TOOLS_DIR}/bin/lex
-.endif
-
-.if !defined(TOOLS_IGNORE.m4) && !empty(USE_TOOLS:Mm4)
-.  if !empty(PKGPATH:Mdevel/m4)
-MAKEFLAGS+=			TOOLS_IGNORE.m4=
-.  elif !empty(_TOOLS_USE_PKGSRC.m4:M[yY][eE][sS])
-${TOOLS_DEPENDS.m4}+=		m4>=1.4:../../devel/m4
-TOOLS_SYMLINK+=			m4
-TOOLS_REAL_CMD.m4=		${LOCALBASE}/bin/gm4
-.    if exists(${TOOLS_REAL_CMD.m4})
-${_TOOLS_VARNAME.m4}=		${TOOLS_REAL_CMD.m4}
-.    endif
-.  endif
-TOOLS_CMD.m4=			${TOOLS_DIR}/bin/m4
 .endif
 
 .if !defined(TOOLS_IGNORE.patch) && !empty(USE_TOOLS:Mpatch)
