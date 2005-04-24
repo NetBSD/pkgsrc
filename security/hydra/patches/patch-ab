@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/04/17 12:19:54 adrianp Exp $
+$NetBSD: patch-ab,v 1.2 2005/04/24 10:42:49 adrianp Exp $
 
 --- configure.orig	2005-02-01 14:50:26.000000000 +0000
 +++ configure
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/04/17 12:19:54 adrianp Exp $
  
  echo "Checking for libssh (libssh/libssh.h) ..."
 -for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib .
-+for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib /usr/pkg/lib .
++for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib @PREFIX@/lib .
  do
      if [ "X" = "X$SSH_PATH" ]; then
          if [ -f "$i/libssh.so" -o -f "$i/libssh.dylib" ]; then
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/04/17 12:19:54 adrianp Exp $
      fi
  done
 -for i in /usr/local/include /*ssl/include /usr/include .
-+for i in /usr/local/include /*ssl/include /usr/include /usr/pkg/include .
++for i in /usr/local/include /*ssl/include /usr/include @SSLBASE@/include .
  do
      if [ "X" = "X$SSH_IPATH" ]; then
          if [ -f "$i/libssh/libssh.h" ]; then
