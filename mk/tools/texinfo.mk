@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.1 2005/04/15 00:00:21 jlam Exp $
+# $NetBSD: texinfo.mk,v 1.2 2005/04/24 22:57:23 jlam Exp $
 
 # Create an install-info script that is a "no operation" command, as
 # registration of info files is handled by the INSTALL script.
@@ -13,8 +13,9 @@ MAKE_ENV+=		INSTALL_INFO=${TOOLS_CMD.install-info:Q}
 #
 USE_MAKEINFO?=			no
 .if empty(USE_MAKEINFO:M[nN][oO])
-TOOLS_SYMLINK+=			makeinfo
-TOOLS_REAL_CMD.makeinfo=	${MAKEINFO}
+TOOLS_WRAP+=			makeinfo
+TOOLS_CMD.makeinfo=		${TOOLS_DIR}/bin/makeinfo
+TOOLS_REAL_CMDLINE.makeinfo=	${MAKEINFO}
 .else
 TOOLS_BROKEN+=			makeinfo
 .endif
