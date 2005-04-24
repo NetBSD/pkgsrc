@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.8 2005/04/24 03:41:10 jlam Exp $
+# $NetBSD: replace.mk,v 1.9 2005/04/24 03:59:44 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -50,8 +50,8 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`yacc'' conflict in USE_TOOLS."
 # This is an exhaustive list of tools for which we have pkgsrc
 # replacements.
 #
-_TOOLS_REPLACE_LIST=	awk bison egrep fgrep file gmake grep lex m4	\
-			patch perl sed tbl yacc
+_TOOLS_REPLACE_LIST=	awk bison egrep fgrep file gmake grep gunzip	\
+			gzcat gzip lex m4 patch perl sed tbl yacc
 
 # "TOOL" variable names associated with each of the tools
 _TOOLS_VARNAME.awk=	AWK
@@ -61,6 +61,9 @@ _TOOLS_VARNAME.fgrep=	FGREP
 _TOOLS_VARNAME.file=	FILE_CMD
 _TOOLS_VARNAME.gmake=	GMAKE
 _TOOLS_VARNAME.grep=	GREP
+_TOOLS_VARNAME.gunzip=	GUNZIP_CMD
+_TOOLS_VARNAME.gzcat=	GZCAT
+_TOOLS_VARNAME.gzip=	GZIP_CMD
 _TOOLS_VARNAME.lex=	LEX
 _TOOLS_VARNAME.m4=	M4
 _TOOLS_VARNAME.patch=	PATCH
@@ -95,6 +98,12 @@ _TOOLS_USE_PLATFORM.gmake=	Darwin-*-*
 _TOOLS_USE_PLATFORM.grep=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
 				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
 				SunOS-*-*
+_TOOLS_USE_PLATFORM.gunzip=	${_TOOLS_USE_PLATFORM.gzip}
+_TOOLS_USE_PLATFORM.gzcat=	${_TOOLS_USE_PLATFORM.gzip}
+_TOOLS_USE_PLATFORM.gzip=	BSDOS-*-* Darwin-*-* DragonFly-*-*	\
+				FreeBSD-*-* IRIX-*-* Interix-*-*	\
+				Linux-*-* NetBSD-*-* OSF1-*-*		\
+				OpenBSD-*-* SunOS-*-*
 _TOOLS_USE_PLATFORM.lex=	FreeBSD-*-* Linux-*-* NetBSD-*-*	\
 				OpenBSD-*-* DragonFly-*-*
 _TOOLS_USE_PLATFORM.m4=		# empty
@@ -235,6 +244,43 @@ ${_TOOLS_VARNAME.grep}=		${TOOLS_REAL_CMD.grep}
 TOOLS_CMD.egrep=		${TOOLS_DIR}/bin/egrep
 TOOLS_CMD.fgrep=		${TOOLS_DIR}/bin/fgrep
 TOOLS_CMD.grep=			${TOOLS_DIR}/bin/grep
+.endif
+
+.if (!defined(TOOLS_IGNORE.gunzip) && !empty(USE_TOOLS:Mgunzip)) || \
+    (!defined(TOOLS_IGNORE.gzcat) && !empty(USE_TOOLS:Mgzcat)) || \
+    (!defined(TOOLS_IGNORE.gzip) && !empty(USE_TOOLS:Mgzip))
+.  if !empty(PKGPATH:Marchiver/gzip-base)
+MAKEFLAGS+=			TOOLS_IGNORE.gunzip=
+MAKEFLAGS+=			TOOLS_IGNORE.gzcat=
+MAKEFLAGS+=			TOOLS_IGNORE.gzip=
+.  else
+.    for _t_ in gunzip gzcat gzip
+.      if empty(USE_TOOLS:M${_t_})
+USE_TOOLS+=	${_t_}
+.      endif
+.    endfor
+.    if !empty(_TOOLS_USE_PKGSRC.gunzip:M[yY][eE][sS]) || \
+        !empty(_TOOLS_USE_PKGSRC.gzcat:M[yY][eE][sS]) || \
+        !empty(_TOOLS_USE_PKGSRC.gzip:M[yY][eE][sS])
+${TOOLS_DEPENDS.gzip}+=		gzip-base>=1.2.4b:../../archivers/gzip-base
+TOOLS_SYMLINK+=			gunzip gzcat gzip
+TOOLS_REAL_CMD.gunzip=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}gunzip
+TOOLS_REAL_CMD.gzcat=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}gzcat
+TOOLS_REAL_CMD.gzip=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}gzip
+.      if exists(${TOOLS_REAL_CMD.gunzip})
+${_TOOLS_VARNAME.gunzip}=	${TOOLS_REAL_CMD.gunzip}
+.      endif
+.      if exists(${TOOLS_REAL_CMD.gzcat})
+${_TOOLS_VARNAME.gzcat}=	${TOOLS_REAL_CMD.gzcat}
+.      endif
+.      if exists(${TOOLS_REAL_CMD.gzip})
+${_TOOLS_VARNAME.gzip}=		${TOOLS_REAL_CMD.gzip}
+.      endif
+.    endif
+.  endif
+TOOLS_CMD.gunzip=		${TOOLS_DIR}/bin/gunzip
+TOOLS_CMD.gzcat=		${TOOLS_DIR}/bin/gzcat
+TOOLS_CMD.gzip=			${TOOLS_DIR}/bin/gzip
 .endif
 
 .if !defined(TOOLS_IGNORE.lex) && !empty(USE_TOOLS:Mlex)
