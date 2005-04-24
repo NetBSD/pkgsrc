@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:20 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/24 09:31:54 adrianp Exp $
 #
 
-DISTNAME=	isync-0.9.2
-PKGREVISION=	2
+DISTNAME=	isync-1.0.1
 CATEGORIES=	mail net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=isync/}
 
@@ -14,13 +13,18 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	YES
 
+BDB_ACCEPTED=		db4
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 LDFLAGS+=		-lcrypto
 
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/isync
-	${INSTALL_DATA} ${WRKSRC}/isyncrc.sample ${PREFIX}/share/examples/isync/isyncrc.sample
+	${INSTALL_DATA} ${WRKSRC}/src/mbsyncrc.sample \
+		${PREFIX}/share/examples/isync/mbsyncrc.sample
+	${INSTALL_DATA} ${WRKSRC}/src/compat/isyncrc.sample \
+		${PREFIX}/share/examples/isync/isyncrc.sample
 
-.include "../../mk/bdb.buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

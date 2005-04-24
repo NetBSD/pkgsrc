@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/27 16:54:06 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/04/24 09:31:54 adrianp Exp $
+bin/get-cert
 bin/isync
+bin/mbsync
+bin/mdconvert
 man/man1/isync.1
+man/man1/mbsync.1
+man/man1/mdconvert.1
 share/examples/isync/isyncrc.sample
+share/examples/isync/mbsyncrc.sample
 @dirrm share/examples/isync
