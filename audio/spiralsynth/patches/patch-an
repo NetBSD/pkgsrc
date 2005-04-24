@@ -1,16 +1,51 @@
-$NetBSD: patch-an,v 1.1 2004/11/25 17:24:27 ben Exp $
+$NetBSD: patch-an,v 1.2 2005/04/24 14:41:28 ben Exp $
 
---- SpiralSound/Midi.C.orig	Tue Jun 11 15:08:56 2002
+--- SpiralSound/Midi.C.orig	2002-06-11 15:08:56.000000000 -0700
 +++ SpiralSound/Midi.C
-@@ -174,7 +174,10 @@ void MidiDevice::SendEvent(int Device,co
- void MidiDevice::ReadByte(unsigned char *c)
+@@ -76,12 +76,12 @@ MidiDevice::~MidiDevice() 
+ void MidiDevice::Close()
  {
- 	*c=MIDI_CLOCK;
--	do read(m_MidiFd,c,1);				
-+	do {
-+		read(m_MidiFd,c,1);				
-+		sched_yield();
-+	}
- 	while (*c>=STATUS_END);		
+ 	pthread_mutex_lock(m_Mutex);
+-	pthread_cancel(m_MidiReader); 
++	if (m_MidiReader != NULL)
++		pthread_cancel(m_MidiReader); 
+ 	pthread_mutex_unlock(m_Mutex);
+ 	pthread_mutex_destroy(m_Mutex);
+ 		
+ 	close(m_MidiFd);
+-	close(m_MidiWrFd);
+ 	cerr<<"Closed midi device"<<endl;
+ }
+ 
+@@ -90,24 +90,19 @@ void MidiDevice::Open()
+ {
+ 	//if (!SpiralInfo::WANTMIDI) return;
+ 	
+-	m_MidiFd = open(m_DeviceName.c_str(),O_RDONLY|O_SYNC);  
+-	if (!m_MidiFd) 
+-	{
+-		cerr<<"Couldn't open midi for reading ["<<m_DeviceName<<"]"<<endl;
+-		return;
+-	}
+-	
+-	m_MidiWrFd = open(m_DeviceName.c_str(),O_WRONLY);  
+-	if (!m_MidiWrFd) 
++	m_Mutex = new pthread_mutex_t;
++    pthread_mutex_init(m_Mutex, NULL);
++	m_MidiReader = NULL;
++
++	m_MidiWrFd = m_MidiFd = open(m_DeviceName.c_str(),O_RDWR|O_SYNC);  
++	if (m_MidiFd == -1) 
+ 	{
+-		cerr<<"Couldn't open midi for writing ["<<m_DeviceName<<"]"<<endl;
++		cerr<<"Couldn't open midi ["<<m_DeviceName<<"]"<<endl;
+ 		return;
+ 	}
+ 	
+ 	cerr<<"Opened midi device ["<<m_DeviceName<<"]"<<endl;
+ 	
+-	m_Mutex = new pthread_mutex_t;
+-    pthread_mutex_init(m_Mutex, NULL);
+     int ret=pthread_create(&m_MidiReader,NULL,(void*(*)(void*))MidiDevice::MidiReaderCallback,(void*)this);	
  }
  
