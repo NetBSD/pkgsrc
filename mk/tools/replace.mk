@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.12 2005/04/24 23:28:20 jlam Exp $
+# $NetBSD: replace.mk,v 1.13 2005/04/24 23:32:09 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -84,16 +84,16 @@ _TOOLS_VARNAME.yacc=	YACC
 _TOOLS_USE_PLATFORM.bison=	Linux-*-*
 _TOOLS_USE_PLATFORM.egrep=	${_TOOLS_USE_PLATFORM.grep}
 _TOOLS_USE_PLATFORM.fgrep=	${_TOOLS_USE_PLATFORM.grep}
-_TOOLS_USE_PLATFORM.file=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
-				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
+_TOOLS_USE_PLATFORM.file=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
+				Linux-*-* NetBSD-*-* OpenBSD-*-*	\
 				SunOS-*-*
-_TOOLS_USE_PLATFORM.gawk=	FreeBSD-*-* Linux-*-* OpenBSD-*-*	\
-				NetBSD-1.[0-6]*-* DragonFly-*-*		\
-				SunOS-*-* Interix-*-*
+_TOOLS_USE_PLATFORM.gawk=	DragonFly-*-* FreeBSD-*-* Interix-*-*	\
+				Linux-*-* NetBSD-1.[0-6]*-* OpenBSD-*-*	\
+				SunOS-*-*
 _TOOLS_USE_PLATFORM.gm4=	# empty
 _TOOLS_USE_PLATFORM.gmake=	Darwin-*-*
-_TOOLS_USE_PLATFORM.grep=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
-				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
+_TOOLS_USE_PLATFORM.grep=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
+				Linux-*-* NetBSD-*-* OpenBSD-*-*	\
 				SunOS-*-*
 _TOOLS_USE_PLATFORM.gunzip=	${_TOOLS_USE_PLATFORM.gzip}
 _TOOLS_USE_PLATFORM.gzcat=	${_TOOLS_USE_PLATFORM.gzip}
@@ -101,18 +101,18 @@ _TOOLS_USE_PLATFORM.gzip=	BSDOS-*-* Darwin-*-* DragonFly-*-*	\
 				FreeBSD-*-* IRIX-*-* Interix-*-*	\
 				Linux-*-* NetBSD-*-* OSF1-*-*		\
 				OpenBSD-*-* SunOS-*-*
-_TOOLS_USE_PLATFORM.lex=	FreeBSD-*-* Linux-*-* NetBSD-*-*	\
-				OpenBSD-*-* DragonFly-*-*
-_TOOLS_USE_PLATFORM.patch=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
-				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
+_TOOLS_USE_PLATFORM.lex=	DragonFly-*-* FreeBSD-*-* Linux-*-*	\
+				NetBSD-*-* OpenBSD-*-*
+_TOOLS_USE_PLATFORM.patch=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
+				Linux-*-* NetBSD-*-* OpenBSD-*-*	\
 				SunOS-*-*
 _TOOLS_USE_PLATFORM.perl=	# This should always be empty.
-_TOOLS_USE_PLATFORM.sed=	FreeBSD-*-* Linux-*-* NetBSD-*-*	\
-				DragonFly-*-* SunOS-*-* Interix-*-*
-_TOOLS_USE_PLATFORM.tbl=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-*	\
-				DragonFly-*-*
-_TOOLS_USE_PLATFORM.yacc=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-*	\
-				DragonFly-*-*
+_TOOLS_USE_PLATFORM.sed=	DragonFly-*-* FreeBSD-*-* Interix-*-*	\
+				Linux-*-* NetBSD-*-* SunOS-*-*
+_TOOLS_USE_PLATFORM.tbl=	DragonFly-*-* FreeBSD-*-* NetBSD-*-*	\
+				OpenBSD-*-*
+_TOOLS_USE_PLATFORM.yacc=	DragonFly-*-* FreeBSD-*-* NetBSD-*-*	\
+				OpenBSD-*-*
 
 ######################################################################
 
