@@ -1,9 +1,10 @@
-# $NetBSD: replace.mk,v 1.6 2005/04/22 02:29:28 jlam Exp $
+# $NetBSD: replace.mk,v 1.7 2005/04/24 03:07:36 jlam Exp $
 #
-# This Makefile fragment handles "replacements" of system-supplied tools
-# with pkgsrc versions.  The replacements are placed under ${TOOLS_DIR}
-# so that they appear earlier in the search path when invoked using the
-# bare name of the tool.
+# This Makefile fragment handles "replacements" of system-supplied
+# tools with pkgsrc versions.  The replacements are placed under
+# ${TOOLS_DIR} so that they appear earlier in the search path when
+# invoked using the bare name of the tool.  Also, any "TOOL" variables,
+# e.g. AWK, SED, etc. are set properly to the replacement tool.
 #
 # The tools that could be replaced with pkgsrc counterparts (usually
 # GNU versions of the tools) should be listed in each package Makefile
@@ -52,7 +53,7 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`yacc'' conflict in USE_TOOLS."
 _TOOLS_REPLACE_LIST=	awk bison egrep fgrep file gmake grep lex m4	\
 			patch perl sed tbl yacc
 
-# TOOL variable names associated with each of the tools
+# "TOOL" variable names associated with each of the tools
 _TOOLS_VARNAME.awk=	AWK
 _TOOLS_VARNAME.bison=	YACC
 _TOOLS_VARNAME.egrep=	EGREP
@@ -145,58 +146,58 @@ TOOLS_DEPENDS.${_t_}?=	BUILD_DEPENDS
 .if !defined(TOOLS_IGNORE.awk) && !empty(USE_TOOLS:Mawk)
 .  if !empty(PKGPATH:Mlang/gawk)
 MAKEFLAGS+=			TOOLS_IGNORE.awk=
-.  else
-.    if !empty(_TOOLS_USE_PKGSRC.awk:M[yY][eE][sS])
+.  elif !empty(_TOOLS_USE_PKGSRC.awk:M[yY][eE][sS])
 ${TOOLS_DEPENDS.awk}+=		gawk>=3.1.1:../../lang/gawk
+TOOLS_SYMLINK+=			awk
 TOOLS_REAL_CMD.awk=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
+.    if exists(${TOOLS_REAL_CMD.awk})
 ${_TOOLS_VARNAME.awk}=		${TOOLS_REAL_CMD.awk}
 .    endif
-TOOLS_SYMLINK+=			awk
-TOOLS_CMD.awk=			${TOOLS_DIR}/bin/awk
 .  endif
+TOOLS_CMD.awk=			${TOOLS_DIR}/bin/awk
 .endif
 
 .if !defined(TOOLS_IGNORE.bison) && !empty(USE_TOOLS:Mbison)
 .  if !empty(PKGPATH:Mdevel/bison)
 MAKEFLAGS+=			TOOLS_IGNORE.bison=
-.  else
-.    if !empty(_TOOLS_USE_PKGSRC.bison:M[yY][eE][sS])
+.  elif !empty(_TOOLS_USE_PKGSRC.bison:M[yY][eE][sS])
 ${TOOLS_DEPENDS.bison}+=	bison>=1.0:../../devel/bison
-TOOLS_REAL_CMD.bison=		${LOCALBASE}/bin/bison
-.    endif
 TOOLS_WRAP+=			bison
-TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
+TOOLS_REAL_CMD.bison=		${LOCALBASE}/bin/bison
 TOOLS_ARGS.bison=		-y
+.    if exists(${TOOLS_REAL_CMD.bison})
 ${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_ARGS.bison}
+.    endif
 .  endif
+TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
 .endif
 
 .if !defined(TOOLS_IGNORE.file) && !empty(USE_TOOLS:Mfile)
 .  if !empty(PKGPATH:Msysutils/file)
 MAKEFLAGS+=			TOOLS_IGNORE.file=
-.  else
-.    if !empty(_TOOLS_USE_PKGSRC.file:M[yY][eE][sS])
+.  elif !empty(_TOOLS_USE_PKGSRC.file:M[yY][eE][sS])
 ${TOOLS_DEPENDS.file}+=		file>=4.13:../../sysutils/file
+TOOLS_SYMLINK+=			file
 TOOLS_REAL_CMD.file=		${LOCALBASE}/bin/file
+.    if exists(${TOOLS_REAL_CMD.file})
 ${_TOOLS_VARNAME.file}=	${TOOLS_REAL_CMD.file}
 .    endif
-TOOLS_SYMLINK+=			file
-TOOLS_CMD.file=			${TOOLS_DIR}/bin/file
 .  endif
+TOOLS_CMD.file=			${TOOLS_DIR}/bin/file
 .endif
 
 .if !defined(TOOLS_IGNORE.gmake) && !empty(USE_TOOLS:Mgmake)
 .  if !empty(PKGPATH:Mdevel/gmake)
 MAKEFLAGS+=			TOOLS_IGNORE.gmake=
-.  else
-.    if !empty(_TOOLS_USE_PKGSRC.gmake:M[yY][eE][sS])
+.  elif !empty(_TOOLS_USE_PKGSRC.gmake:M[yY][eE][sS])
 ${TOOLS_DEPENDS.gmake}+=	gmake>=3.78:../../devel/gmake
+TOOLS_SYMLINK+=			gmake
 TOOLS_REAL_CMD.gmake=		${LOCALBASE}/bin/gmake
+.    if exists(${TOOLS_REAL_CMD.gmake})
 ${_TOOLS_VARNAME.gmake}=	${TOOLS_REAL_CMD.gmake}
 .    endif
-TOOLS_SYMLINK+=			gmake
-TOOLS_CMD.gmake=		${TOOLS_DIR}/bin/gmake
 .  endif
+TOOLS_CMD.gmake=		${TOOLS_DIR}/bin/gmake
 .endif
 
 .if (!defined(TOOLS_IGNORE.egrep) && !empty(USE_TOOLS:Megrep)) || \
@@ -216,143 +217,156 @@ USE_TOOLS+=	${_t_}
         !empty(_TOOLS_USE_PKGSRC.fgrep:M[yY][eE][sS]) || \
         !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
 ${TOOLS_DEPENDS.grep}+=		grep>=2.5.1:../../textproc/grep
+TOOLS_SYMLINK+=			egrep fgrep grep
 TOOLS_REAL_CMD.egrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}egrep
 TOOLS_REAL_CMD.fgrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}fgrep
 TOOLS_REAL_CMD.grep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
+.      if exists(${TOOLS_REAL_CMD.egrep})
 ${_TOOLS_VARNAME.egrep}=	${TOOLS_REAL_CMD.egrep}
+.      endif
+.      if exists(${TOOLS_REAL_CMD.fgrep})
 ${_TOOLS_VARNAME.fgrep}=	${TOOLS_REAL_CMD.fgrep}
+.      endif
+.      if exists(${TOOLS_REAL_CMD.grep})
 ${_TOOLS_VARNAME.grep}=		${TOOLS_REAL_CMD.grep}
+.      endif
 .    endif
-TOOLS_SYMLINK+=			egrep fgrep grep
+.  endif
 TOOLS_CMD.egrep=		${TOOLS_DIR}/bin/egrep
 TOOLS_CMD.fgrep=		${TOOLS_DIR}/bin/fgrep
 TOOLS_CMD.grep=			${TOOLS_DIR}/bin/grep
-.  endif
 .endif
 
 .if !defined(TOOLS_IGNORE.lex) && !empty(USE_TOOLS:Mlex)
 .  if !empty(PKGPATH:Mdevel/flex)
 MAKEFLAGS+=			TOOLS_IGNORE.lex=
-.  else
-.    if !empty(_TOOLS_USE_PKGSRC.lex:M[yY][eE][sS])
-.      include "../../devel/flex/buildlink3.mk"
+.  elif !empty(_TOOLS_USE_PKGSRC.lex:M[yY][eE][sS])
+.    include "../../devel/flex/buildlink3.mk"
+TOOLS_SYMLINK+=			lex
 TOOLS_REAL_CMD.lex=		${LOCALBASE}/bin/flex
+.    if exists(${TOOLS_REAL_CMD.lex})
 ${_TOOLS_VARNAME.lex}=		${TOOLS_REAL_CMD.lex}
 .    endif
-TOOLS_SYMLINK+=			lex
-TOOLS_CMD.lex=			${TOOLS_DIR}/bin/lex
 .  endif
+TOOLS_CMD.lex=			${TOOLS_DIR}/bin/lex
 .endif
 
 .if !defined(TOOLS_IGNORE.m4) && !empty(USE_TOOLS:Mm4)
 .  if !empty(PKGPATH:Mdevel/m4)
 MAKEFLAGS+=			TOOLS_IGNORE.m4=
-.  else
-.    if !empty(_TOOLS_USE_PKGSRC.m4:M[yY][eE][sS])
+.  elif !empty(_TOOLS_USE_PKGSRC.m4:M[yY][eE][sS])
 ${TOOLS_DEPENDS.m4}+=		m4>=1.4:../../devel/m4
+TOOLS_SYMLINK+=			m4
 TOOLS_REAL_CMD.m4=		${LOCALBASE}/bin/gm4
+.    if exists(${TOOLS_REAL_CMD.m4})
 ${_TOOLS_VARNAME.m4}=		${TOOLS_REAL_CMD.m4}
 .    endif
-TOOLS_SYMLINK+=			m4
-TOOLS_CMD.m4=			${TOOLS_DIR}/bin/m4
 .  endif
+TOOLS_CMD.m4=			${TOOLS_DIR}/bin/m4
 .endif
 
 .if !defined(TOOLS_IGNORE.patch) && !empty(USE_TOOLS:Mpatch)
 .  if !empty(PKGPATH:Mdevel/patch)
 MAKEFLAGS+=			TOOLS_IGNORE.patch=
-.  else
-.    if !empty(_TOOLS_USE_PKGSRC.patch:M[yY][eE][sS])
+.  elif !empty(_TOOLS_USE_PKGSRC.patch:M[yY][eE][sS])
 ${TOOLS_DEPENDS.patch}+=	patch>=2.2:../../devel/patch
+TOOLS_SYMLINK+=			patch
 TOOLS_REAL_CMD.patch=		${LOCALBASE}/bin/gpatch
+.    if exists(${TOOLS_REAL_CMD.patch})
 ${_TOOLS_VARNAME.patch}=	${TOOLS_REAL_CMD.patch}
 .    endif
-TOOLS_SYMLINK+=			patch
-TOOLS_CMD.patch=		${TOOLS_DIR}/bin/patch
 .  endif
+TOOLS_CMD.patch=		${TOOLS_DIR}/bin/patch
 .endif
 
 .if !defined(TOOLS_IGNORE.perl) && !empty(USE_TOOLS:Mperl)
 .  if !empty(PKGPATH:Mlang/perl5)
 MAKEFLAGS+=			TOOLS_IGNORE.perl=
-.  else
-.    if !empty(_TOOLS_USE_PKGSRC.perl:M[yY][eE][sS])
-.      include "../../lang/perl5/buildlink3.mk"
+.  elif !empty(_TOOLS_USE_PKGSRC.perl:M[yY][eE][sS])
+.    include "../../lang/perl5/buildlink3.mk"
+TOOLS_SYMLINK+=			perl
 TOOLS_REAL_CMD.perl=		${LOCALBASE}/bin/perl
+.    if exists(${TOOLS_REAL_CMD.perl})
 ${_TOOLS_VARNAME.perl}=		${TOOLS_REAL_CMD.perl}
 .    endif
-TOOLS_SYMLINK+=			perl
-TOOLS_CMD.perl=			${TOOLS_DIR}/bin/perl
 .  endif
+TOOLS_CMD.perl=			${TOOLS_DIR}/bin/perl
 .endif
 
 .if !defined(TOOLS_IGNORE.sed) && !empty(USE_TOOLS:Msed)
 .  if !empty(PKGPATH:Mtextproc/sed)
 MAKEFLAGS+=			TOOLS_IGNORE.sed=
-.  else
-.    if !empty(_TOOLS_USE_PKGSRC.sed:M[yY][eE][sS])
+.  elif !empty(_TOOLS_USE_PKGSRC.sed:M[yY][eE][sS])
 ${TOOLS_DEPENDS.sed}+=		gsed>=3.0.2:../../textproc/gsed
+TOOLS_SYMLINK+=			sed
 TOOLS_REAL_CMD.sed=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sed
+.    if exists(${TOOLS_REAL_CMD.sed})
 ${_TOOLS_VARNAME.sed}=		${TOOLS_REAL_CMD.sed}
 .    endif
-TOOLS_SYMLINK+=			sed
-TOOLS_CMD.sed=			${TOOLS_DIR}/bin/sed
 .  endif
+TOOLS_CMD.sed=			${TOOLS_DIR}/bin/sed
 .endif
 
 .if !defined(TOOLS_IGNORE.tbl) && !empty(USE_TOOLS:Mtbl)
 .  if !empty(PKGPATH:Mtextproc/groff)
 MAKEFLAGS+=			TOOLS_IGNORE.tbl=
-.  else
-.    if !empty(_TOOLS_USE_PKGSRC.tbl:M[yY][eE][sS])
+.  elif !empty(_TOOLS_USE_PKGSRC.tbl:M[yY][eE][sS])
 ${TOOLS_DEPENDS.tbl}+=		groff>=1.19nb4:../../textproc/groff
+TOOLS_SYMLINK+=			tbl
 TOOLS_REAL_CMD.tbl=		${LOCALBASE}/bin/tbl
+.    if exists(${TOOLS_REAL_CMD.tbl})
 ${_TOOLS_VARNAME.tbl}=		${TOOLS_REAL_CMD.tbl}
 .    endif
-TOOLS_SYMLINK+=			tbl
-TOOLS_CMD.tbl=			${TOOLS_DIR}/bin/tbl
 .  endif
+TOOLS_CMD.tbl=			${TOOLS_DIR}/bin/tbl
 .endif
 
 .if !defined(TOOLS_IGNORE.yacc) && !empty(USE_TOOLS:Myacc)
 .  if !empty(PKGPATH:Mdevel/bison)
 MAKEFLAGS+=			TOOLS_IGNORE.yacc=
-.  else
-.    if !empty(_TOOLS_USE_PKGSRC.yacc:M[yY][eE][sS])
+.  elif !empty(_TOOLS_USE_PKGSRC.yacc:M[yY][eE][sS])
 ${TOOLS_DEPENDS.yacc}+=		bison>=1.0:../../devel/bison
+TOOLS_WRAP+=			yacc
 TOOLS_REAL_CMD.yacc=		${LOCALBASE}/bin/bison
 TOOLS_ARGS.yacc=		-y
+.    if exists(${TOOLS_REAL_CMD.yacc})
 ${_TOOLS_VARNAME.yacc}=		${TOOLS_REAL_CMD.yacc} ${TOOLS_ARGS.yacc}
-TOOLS_WRAP+=			yacc
-.    else
-TOOLS_SYMLINK+=			yacc
 .    endif
-TOOLS_CMD.yacc=			${TOOLS_DIR}/bin/yacc
 .  endif
+TOOLS_CMD.yacc=			${TOOLS_DIR}/bin/yacc
 .endif
 
 ######################################################################
 
 # Set TOOLS_REAL_CMD.<tool> appropriately in the case where we are
 # using the system-supplied tool.  Here, we check to see if TOOL is
-# defined.  If it is, then use that as the path to the real command.
-# Otherwise, set TOOL to be TOOLS_REAL_CMD.<tool>, which we defer
-# until TOOLS_{WRAP,SYMLINK} is processed within bsd.tools.mk.
-#
-# Also, set the TOOL name for each tool to point to the real command
-# in the event that it's not predefined, e.g. TBL, YACC.
+# defined.  If it is, then use that as the path to the real command
+# and extract any arguments into TOOLS_ARGS.<tool>.  We also create
+# either a wrapper or a symlink depending on whether there are any
+# arguments or not.  Lastly, always set the TOOL name for each tool
+# to point to the real command, e.g., TBL, YACC, etc.
 #
 .for _t_ in ${_TOOLS_REPLACE_LIST}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(USE_TOOLS:M${_t_}) && \
       !empty(_TOOLS_USE_PKGSRC.${_t_}:M[nN][oO])
 .    if defined(${_TOOLS_VARNAME.${_t_}})
-.      if !empty(${_TOOLS_VARNAME.${_t_}}:M/*)
-TOOLS_REAL_CMD.${_t_}?=	\
+TOOLS_REAL_CMD.${_t_}?=		\
 	${${_TOOLS_VARNAME.${_t_}}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-.      endif
-.    else
+TOOLS_ARGS.${_t_}?=		\
+	${${_TOOLS_VARNAME.${_t_}}:C/^/_asdf_/1:N_asdf_*}
+.      if !empty(TOOLS_ARGS.${_t_})
+TOOLS_WRAP+=			${_t_}
+${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_ARGS.${_t_}}
+.      else
+TOOLS_SYMLINK+=			${_t_}
 ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}}
+.      endif
+.    elif defined(TOOLS_REAL_CMD.${_t_})
+${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_ARGS.${_t_}}
+.    else
+${_TOOLS_VARNAME.${_t_}}=	${_TOOLS_VARNAME.${_t_}}_not_defined_
 .    endif
+TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 .  endif
 .endfor
 .undef _t_
