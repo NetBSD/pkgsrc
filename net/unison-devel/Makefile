@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:01 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/24 13:06:03 adrianp Exp $
 
-DISTNAME=	src
-PKGNAME=	unison-2.9.20
-PKGREVISION=	3
+DISTNAME=	unison-2.12.0
 CATEGORIES=	net
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/beta-test/latest/
 
@@ -11,9 +9,9 @@ HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	File-synchronization tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-BUILDLINK_DEPENDS.ocaml+=	ocaml>=3.08.2
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
+BUILDLINK_DEPENDS.ocaml+=	ocaml>=3.08.2
 
 # docs: unison-manual.pdf/html/ps/dvi
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
@@ -37,7 +35,14 @@ MAKE_FLAGS+=	THREADS=true
 
 INSTALLATION_DIRS=	bin
 
+SUBST_CLASSES=		x11
+SUBST_STAGE.x11=	post-patch
+SUBST_FILES.x11=	Makefile.OCaml
+SUBST_SED.x11=		-e "s|/usr/X11R6|${X11BASE}|g"
+SUBST_MESSAGE.x11=	"Fixing X11 paths."
+
 post-install:
+	@cd ${WRKSRC} && ./unison -doc install > INSTALL
 	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/BUGS.txt ${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/CONTRIB ${PREFIX}/share/doc/unison
