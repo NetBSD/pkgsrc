@@ -1,0 +1,29 @@
+
+			LICENCE FOR AMAP (all version)
+                     by van Hauser <vh@thc.org>
+
+
+1. This software comes with no warrenty or promised features. If it works
+for you - fine. It just comes "AS-IS", which means as a bunch of bits and bytes.
+
+2. Anyone may use this software and pass it on to other persons or companies
+as long as it is not charged for! (except for a small transfer/medium fee)
+
+3. This tool may *NOT* be used for illegal purpose. Please check the law
+which affects your doing. I will have got no liability for any damage etc.
+done with this tool legally or illegaly.
+
+4. If this tool is used while providing a commercial service (e.g. as part
+of a penetration test) the report has to state the tools name and version,
+and additionally the authors (van Hauser and Dj RevMoon) and the distribution
+homepage (http://www.thc.org).
+
+5. If this tool is used within a commercial tool (being called out of such a
+tool or being incorporated), the report generated has to state the tools name
+and version, and additionally the authors (van Hauser and Dj RevMoon) and the
+distribution homepage (http://www.thc.org). A tool is "commercial" if it either
+costs money to purchase it, has a license fee, and/or has costs for upgrades.
+Additionally, a commercial version or license etc. must be made available to
+the author free of charge.
+
+6. In all other respects the GPL 2.0 applies
