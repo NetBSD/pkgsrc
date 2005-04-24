@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9953 2005/04/24 09:33:25 adrianp Exp $
+$NetBSD: CHANGES,v 1.9954 2005/04/24 12:16:19 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2182,3 +2182,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added libFoundation-1.0.72.107 [rh 2005-04-24]
 	Added sope-4.4rc6 [rh 2005-04-24]
 	Updated isync to 1.0.1 [adrianp 2005-04-24]
+	Added amap-5.0 [adrianp 2005-04-24]
