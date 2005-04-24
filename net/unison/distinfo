@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 12:14:06 agc Exp $
+$NetBSD: distinfo,v 1.9 2005/04/24 12:48:43 adrianp Exp $
 
-SHA1 (unison-2.9.1/src.tar.gz) = d355639b8191f5c74e652fe257fd98dcf76d4cc0
-RMD160 (unison-2.9.1/src.tar.gz) = f00ae5ab3e6e9bd04e184b3c1bc6a4c78b84fdc1
-Size (unison-2.9.1/src.tar.gz) = 319081 bytes
-SHA1 (patch-aa) = bb844e8070faab7d4c8aac30345881c1c66ca8d2
-SHA1 (patch-ab) = 0d391ffc0c47a16d24cda5e9f219665eeafb1553
-SHA1 (patch-ac) = e04d12ec7a25ff343bd0af41754508bc81326098
+SHA1 (unison-2.10.2/unison-2.10.2.tar.gz) = 1d378292d944981fb41504c8cea92cd3e1913c49
+RMD160 (unison-2.10.2/unison-2.10.2.tar.gz) = 593d71c39b49f30e82df58f62891d6d5540c2af7
+Size (unison-2.10.2/unison-2.10.2.tar.gz) = 458032 bytes
+SHA1 (patch-aa) = b6974657b864a75262562053185a7fd9b8df6b73
+SHA1 (patch-ab) = 0fe6bbb5f39f535c4b6a956978e75822528d7bdf
+SHA1 (patch-ac) = 4c080aaf879921f0120633ee37fa031c64e6a243
