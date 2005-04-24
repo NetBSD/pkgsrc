@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.9 2005/04/24 03:59:44 jlam Exp $
+# $NetBSD: replace.mk,v 1.10 2005/04/24 22:34:35 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -10,7 +10,7 @@
 # GNU versions of the tools) should be listed in each package Makefile
 # as:
 #
-#	USE_TOOLS+=	awk gmake lex
+#	USE_TOOLS+=	gawk gmake lex
 #
 # If a package requires yacc to generate a parser, then the package
 # Makefile should contain one of the following two lines:
@@ -32,7 +32,7 @@
 # taught to use the new syntax.
 #
 .if defined(USE_GNU_TOOLS) && !empty(USE_GNU_TOOLS)
-USE_TOOLS+=	${USE_GNU_TOOLS:S/make/gmake/}
+USE_TOOLS+=	${USE_GNU_TOOLS:S/^awk$/gawk/:S/^make$/gmake/}
 .endif
 .if defined(USE_TBL) && !empty(USE_TBL:M[yY][eE][sS])
 USE_TOOLS+=	tbl
@@ -50,15 +50,15 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`yacc'' conflict in USE_TOOLS."
 # This is an exhaustive list of tools for which we have pkgsrc
 # replacements.
 #
-_TOOLS_REPLACE_LIST=	awk bison egrep fgrep file gmake grep gunzip	\
+_TOOLS_REPLACE_LIST=	bison egrep fgrep file gawk gmake grep gunzip	\
 			gzcat gzip lex m4 patch perl sed tbl yacc
 
 # "TOOL" variable names associated with each of the tools
-_TOOLS_VARNAME.awk=	AWK
 _TOOLS_VARNAME.bison=	YACC
 _TOOLS_VARNAME.egrep=	EGREP
 _TOOLS_VARNAME.fgrep=	FGREP
 _TOOLS_VARNAME.file=	FILE_CMD
+_TOOLS_VARNAME.gawk=	AWK
 _TOOLS_VARNAME.gmake=	GMAKE
 _TOOLS_VARNAME.grep=	GREP
 _TOOLS_VARNAME.gunzip=	GUNZIP_CMD
@@ -81,9 +81,6 @@ _TOOLS_VARNAME.yacc=	YACC
 # This table should probably be split amongst the various mk/platform
 # files as they are ${OPSYS}-specific.
 #
-_TOOLS_USE_PLATFORM.awk=	FreeBSD-*-* Linux-*-* OpenBSD-*-*	\
-				NetBSD-1.[0-6]*-* DragonFly-*-*		\
-				SunOS-*-* Interix-*-*
 _TOOLS_USE_PLATFORM.bison=	Linux-*-*
 _TOOLS_USE_PLATFORM.egrep=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
 				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
@@ -94,6 +91,9 @@ _TOOLS_USE_PLATFORM.fgrep=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
 _TOOLS_USE_PLATFORM.file=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
 				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
 				SunOS-*-*
+_TOOLS_USE_PLATFORM.gawk=	FreeBSD-*-* Linux-*-* OpenBSD-*-*	\
+				NetBSD-1.[0-6]*-* DragonFly-*-*		\
+				SunOS-*-* Interix-*-*
 _TOOLS_USE_PLATFORM.gmake=	Darwin-*-*
 _TOOLS_USE_PLATFORM.grep=	Darwin-*-* FreeBSD-*-* Linux-*-*	\
 				NetBSD-*-* OpenBSD-*-* DragonFly-*-*	\
@@ -152,20 +152,6 @@ TOOLS_DEPENDS.${_t_}?=	BUILD_DEPENDS
 # of TOOLS_IGNORE.<tool>.  If we're using the system-supplied tool, we
 # defer the setting of TOOLS_REAL_CMD.<tool> until the loop at the end.
 #
-.if !defined(TOOLS_IGNORE.awk) && !empty(USE_TOOLS:Mawk)
-.  if !empty(PKGPATH:Mlang/gawk)
-MAKEFLAGS+=			TOOLS_IGNORE.awk=
-.  elif !empty(_TOOLS_USE_PKGSRC.awk:M[yY][eE][sS])
-${TOOLS_DEPENDS.awk}+=		gawk>=3.1.1:../../lang/gawk
-TOOLS_SYMLINK+=			awk
-TOOLS_REAL_CMD.awk=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
-.    if exists(${TOOLS_REAL_CMD.awk})
-${_TOOLS_VARNAME.awk}=		${TOOLS_REAL_CMD.awk}
-.    endif
-.  endif
-TOOLS_CMD.awk=			${TOOLS_DIR}/bin/awk
-.endif
-
 .if !defined(TOOLS_IGNORE.bison) && !empty(USE_TOOLS:Mbison)
 .  if !empty(PKGPATH:Mdevel/bison)
 MAKEFLAGS+=			TOOLS_IGNORE.bison=
@@ -193,6 +179,20 @@ ${_TOOLS_VARNAME.file}=	${TOOLS_REAL_CMD.file}
 .    endif
 .  endif
 TOOLS_CMD.file=			${TOOLS_DIR}/bin/file
+.endif
+
+.if !defined(TOOLS_IGNORE.gawk) && !empty(USE_TOOLS:Mgawk)
+.  if !empty(PKGPATH:Mlang/gawk)
+MAKEFLAGS+=			TOOLS_IGNORE.gawk=
+.  elif !empty(_TOOLS_USE_PKGSRC.gawk:M[yY][eE][sS])
+${TOOLS_DEPENDS.gawk}+=		gawk>=3.1.1:../../lang/gawk
+TOOLS_SYMLINK+=			gawk
+TOOLS_REAL_CMD.gawk=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
+.    if exists(${TOOLS_REAL_CMD.gawk})
+${_TOOLS_VARNAME.gawk}=		${TOOLS_REAL_CMD.gawk}
+.    endif
+.  endif
+TOOLS_CMD.gawk=			${TOOLS_DIR}/bin/awk
 .endif
 
 .if !defined(TOOLS_IGNORE.gmake) && !empty(USE_TOOLS:Mgmake)
