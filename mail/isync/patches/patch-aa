@@ -1,30 +1,18 @@
-$NetBSD: patch-aa,v 1.2 2003/12/27 16:54:06 seb Exp $
+$NetBSD: patch-aa,v 1.3 2005/04/24 09:31:54 adrianp Exp $
 
---- src/dotlock.c.orig	2003-05-07 00:06:37.000000000 +0000
-+++ src/dotlock.c
-@@ -34,13 +34,16 @@
- #include <stdio.h>
- #endif
+--- src/Makefile.am.orig	2005-03-05 21:49:31.000000000 +0100
++++ src/Makefile.am	2005-03-05 21:49:55.000000000 +0100
+@@ -6,11 +6,11 @@
+ bin_PROGRAMS = mbsync mdconvert
  
--static struct flock lck = { 0, SEEK_SET, 0, 0, 0 };
-+static struct flock lck;
-+
-+#define FLOCK_INIT(l) { (l).l_start = 0; (l).l_len = 0; (l).l_whence = SEEK_SET; }
+ mbsync_SOURCES = main.c sync.c config.c util.c drv_imap.c drv_maildir.c
+-mbsync_LDADD = -ldb $(SSL_LIBS) $(SOCK_LIBS)
++mbsync_LDADD = -ldb4 $(SSL_LIBS) $(SOCK_LIBS)
+ noinst_HEADERS = isync.h
  
- int dotlock_lock (const char *path, int *fd)
- {
-   *fd = open (path, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
-   if (*fd == -1)
-     return -1;
-+  FLOCK_INIT(lck);
-   lck.l_type = F_WRLCK;
-   if (fcntl (*fd, F_SETLK, &lck))
-   {
-@@ -57,6 +60,7 @@ int dotlock_unlock (int *fd)
+ mdconvert_SOURCES = mdconvert.c
+-mdconvert_LDADD = -ldb
++mdconvert_LDADD = -ldb4
  
-   if (*fd != -1)
-   {
-+    FLOCK_INIT(lck);
-     lck.l_type = F_UNLCK;
-     if (fcntl (*fd, F_SETLK, &lck))
-       r = -1;
+ man_MANS = mbsync.1 mdconvert.1
+ EXTRA_DIST = mbsyncrc.sample $(man_MANS)
