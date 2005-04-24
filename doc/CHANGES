@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9956 2005/04/24 13:07:53 adrianp Exp $
+$NetBSD: CHANGES,v 1.9957 2005/04/24 22:16:19 perry Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2185,3 +2185,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added amap-5.0 [adrianp 2005-04-24]
 	Updated unison to 2.10.2 [adrianp 2005-04-24]
 	Updated unison-devel to 2.12.0 [adrianp 2005-04-24]
+	Updated slib to 3.1.1 [perry 2005-04-24]
+	Updated scm to 5d9 [perry 2005-04-24]
