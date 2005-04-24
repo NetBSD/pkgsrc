@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.52 2005/04/11 21:47:54 tv Exp $
+# $NetBSD: Makefile.common,v 1.53 2005/04/24 14:05:06 taya Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -19,6 +19,16 @@ USE_PERL5=	build
 USE_GNU_TOOLS+=	make
 USE_X11=	yes
 GNU_CONFIGURE=	yes
+
+CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess
+CONFIG_GUESS_OVERRIDE+=	nsprpub/build/autoconf/config.guess
+CONFIG_GUESS_OVERRIDE+=	directory/c-sdk/config/autoconf/config.guess
+CONFIG_SUB_OVERRIDE=	build/autoconf/config.sub
+CONFIG_SUB_OVERRIDE+=	nsprpub/build/autoconf/config.sub
+CONFIG_SUB_OVERRIDE+=	directory/c-sdk/config/autoconf/config.sub
+CONFIG_STATUS_OVERRIDE=		build/config.status
+CONFIG_STATUS_OVERRIDE+=	nsprpub/config.status
+CONFIG_STATUS_OVERRIDE+=	directory/c-sdk/config.status
 
 PKGCONFIG_OVERRIDE+=	build/unix/mozilla-gtkmozembed.pc
 PKGCONFIG_OVERRIDE+=	build/unix/mozilla-js.pc
