@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9959 2005/04/25 09:14:27 adam Exp $
+$NetBSD: CHANGES,v 1.9960 2005/04/25 13:55:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2190,3 +2190,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xfce4-gtk2-engine to 2.2.6nb1 [hira 2005-04-25]
 	Updated apr to 0.9.6.2.0.54 [adam 2005-04-25]
 	Updated apache2 to 2.0.54 [adam 2005-04-25]
+	Added fluidsynth-1.0.5 [adam 2005-04-25]
