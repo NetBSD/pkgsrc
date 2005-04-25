@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: squid.sh,v 1.17 2003/08/18 16:03:03 taca Exp $
+# $NetBSD: squid.sh,v 1.18 2005/04/25 15:39:14 taca Exp $
 #
 
 # PROVIDE: squid
@@ -12,7 +12,7 @@ conf_file="@PKG_SYSCONFDIR@/squid.conf"
 name="squid"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
-pidfile="/var/run/${name}.pid"
+pidfile="@VARBASE@/run/${name}.pid"
 required_files="${conf_file} @PKG_SYSCONFDIR@/mime.conf"
 command_args="-Y -f $conf_file"
 
