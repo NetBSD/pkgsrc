@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2002/04/13 21:35:54 jlam Exp $
+$NetBSD: patch-am,v 1.2 2005/04/25 09:13:14 adam Exp $
 
---- include/scoreboard.h.orig	Fri Mar 29 11:21:48 2002
+--- include/scoreboard.h.orig	2005-02-04 20:21:18.000000000 +0000
 +++ include/scoreboard.h
-@@ -78,7 +78,7 @@
+@@ -36,7 +36,7 @@ extern "C" {
  
  /* Scoreboard file, if there is one */
  #ifndef DEFAULT_SCOREBOARD
