@@ -2,7 +2,7 @@
 # unix (unix) script created by SLIB/batch Thu Jul 17 21:20:04 2003
 # ================ Write file with C defines
 rm -f scmflags.h
-echo '#define IMPLINIT "%%PREFIX%%/share/scm/Init5d8.scm"'>>scmflags.h
+echo '#define IMPLINIT "%%PREFIX%%/share/scm/Init5d9.scm"'>>scmflags.h
 echo '#define INITS init_sc2();init_ramap();init_gsubr();init_ioext();init_posix();init_record();init_rgx();init_socket();init_unix();'>>scmflags.h
 echo '#define COMPILED_INITS init_edline();'>>scmflags.h
 echo '#define ARRAYS'>>scmflags.h
