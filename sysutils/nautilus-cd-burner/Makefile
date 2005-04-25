@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/19 19:22:52 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/25 16:21:39 drochner Exp $
 #
 
 DISTNAME=	nautilus-cd-burner-2.10.1
@@ -12,6 +12,9 @@ COMMENT=	CD burner view for Nautilus
 
 DEPENDS+=		{cdrecord,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrecord
 BUILD_USES_MSGFMT=	yes
+# force use of pkgsrc gettext -- NetBSD's is too old
+BUILD_DEPENDS+=		gettext>=0.11.5:../../devel/gettext
+CONFIGURE_ENV+=		MSGFMT=${LOCALBASE}/bin/msgfmt
 
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
