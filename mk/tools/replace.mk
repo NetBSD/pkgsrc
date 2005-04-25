@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.13 2005/04/24 23:32:09 jlam Exp $
+# $NetBSD: replace.mk,v 1.14 2005/04/25 06:16:38 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -116,15 +116,16 @@ _TOOLS_USE_PLATFORM.yacc=	DragonFly-*-* FreeBSD-*-* NetBSD-*-*	\
 
 ######################################################################
 
-# _TOOLS_USE_PKGSRC.<prog> is "yes" or "no" depending on whether we're
-# using a pkgsrc-supplied tool to replace the system-supplied one.
-#
-# This currently uses ${OPSYS}-based checking and ignores the scenario
-# where your kernel and userland aren't in sync.  This should be turned
-# into a bunch of feature tests in the future.
+# _TOOLS_USE_PKGSRC.<tool> is "yes" or "no" depending on whether we're
+# using a pkgsrc-supplied tool to replace the system-supplied one.  We
+# use the system-supplied one if PLATFORM_TOOL.<tool> is non-empty, or
+# otherwise if this is a particular ${MACHINE_PLATFORM} listed above.
 #
 .for _t_ in ${_TOOLS_REPLACE_LIST}
 .  for _pattern_ in ${_TOOLS_USE_PLATFORM.${_t_}}
+.    if defined(PLATFORM_TOOL.${_t_}) && !empty(PLATFORM_TOOL.${_t_})
+_TOOLS_USE_PKGSRC.${_t_}?=	no
+.    endif
 .    if !empty(MACHINE_PLATFORM:M${_pattern_})
 _TOOLS_USE_PKGSRC.${_t_}?=	no
 .    endif
@@ -134,7 +135,7 @@ _TOOLS_USE_PKGSRC.${_t_}?=	yes
 .endfor
 .undef _t_
 
-# TOOLS_DEPENDS.<prog> defaults to BUILD_DEPENDS.
+# TOOLS_DEPENDS.<tool> defaults to BUILD_DEPENDS.
 .for _t_ in ${_TOOLS_REPLACE_LIST}
 TOOLS_DEPENDS.${_t_}?=	BUILD_DEPENDS
 .endfor
@@ -391,7 +392,13 @@ TOOLS_CMD.yacc=			${TOOLS_DIR}/bin/yacc
 .for _t_ in ${_TOOLS_REPLACE_LIST}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(USE_TOOLS:M${_t_}) && \
       !empty(_TOOLS_USE_PKGSRC.${_t_}:M[nN][oO])
-.    if defined(${_TOOLS_VARNAME.${_t_}})
+.    if defined(PLATFORM_TOOL.${_t_}) && !empty(PLATFORM_TOOL.${_t_})
+TOOLS_REAL_CMD.${_t_}?=		\
+	${PLATFORM_TOOL.${_t_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+TOOLS_ARGS.${_t_}?=		\
+	${PLATFORM_TOOL.${_t_}:C/^/_asdf_/1:N_asdf_*}
+${_TOOLS_VARNAME.${_t_}}=	${PLATFORM_TOOL.${_t_}}
+.    elif defined(${_TOOLS_VARNAME.${_t_}})
 TOOLS_REAL_CMD.${_t_}?=		\
 	${${_TOOLS_VARNAME.${_t_}}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
 TOOLS_ARGS.${_t_}?=		\
