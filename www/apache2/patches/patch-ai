@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.6 2004/11/30 23:21:44 jlam Exp $
+$NetBSD: patch-ai,v 1.7 2005/04/25 09:13:14 adam Exp $
 
---- support/apxs.in.orig	2004-02-09 15:59:49.000000000 -0500
+--- support/apxs.in.orig	2005-02-04 20:21:18.000000000 +0000
 +++ support/apxs.in
-@@ -337,9 +337,12 @@ if (! -x "$apu_bindir/apu-config") {
+@@ -338,9 +338,12 @@ if (! -x "$apu_bindir/apu-config") {
      exit(1);
  }
  
