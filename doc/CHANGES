@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9962 2005/04/25 15:40:34 taca Exp $
+$NetBSD: CHANGES,v 1.9963 2005/04/25 17:31:27 magick Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2193,3 +2193,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added fluidsynth-1.0.5 [adam 2005-04-25]
 	Updated bozohttpd to 20050410 [mrg 2005-04-25]
 	Updated squid to 2.5.9nb8 [taca 2005-04-25]
+	Updated nxtvepg to 2.7.5 [magick 2005-04-25]
