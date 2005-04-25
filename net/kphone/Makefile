@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/14 13:46:04 schwarz Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/25 19:01:32 schwarz Exp $
 
 DISTNAME=		kphone-4.1.0
 CATEGORIES=		net comms
@@ -18,6 +18,17 @@ CONFIGURE_ENV+=		QTDIR="${QTDIR}"
 
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
+
+PKG_SUPPORTED_OPTIONS=	alsa
+PKG_OPTIONS_VAR=	PKG_OPTIONS.kphone
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Malsa)
+CONFIGURE_ARGS+=	--enable-alsa=yes
+.else
+CONFIGURE_ARGS+=	--enable-alsa=no
+.endif
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/kphone/kphone ${PREFIX}/bin
