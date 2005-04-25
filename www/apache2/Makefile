@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.70 2005/04/18 14:35:57 tron Exp $
+# $NetBSD: Makefile,v 1.71 2005/04/25 09:13:14 adam Exp $
 
 .include "Makefile.common"
 
-PKGNAME=		apache-${APACHE_VERSION}
-PKGREVISION=		2
-CATEGORIES=		www
+PKGNAME=	apache-${APACHE_VERSION}
+CATEGORIES=	www
 
-HOMEPAGE=		http://httpd.apache.org/
-COMMENT=		Apache HTTP (Web) server, version 2
+HOMEPAGE=	http://httpd.apache.org/
+COMMENT=	Apache HTTP (Web) server, version 2
 
-CONFLICTS=		apache-*ssl-[0-9]* apache-[0-9]* apache6-[0-9]*
+CONFLICTS=	apache-*ssl-[0-9]* apache-[0-9]* apache6-[0-9]*
 
-BUILD_DEFS+=		USE_INET6
+BUILD_DEFS+=	USE_INET6
 
-USE_PKGINSTALL=		YES
-USE_LIBTOOL=		YES
-
-GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
+USE_PKGINSTALL=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -89,7 +87,7 @@ FIX_PERMS=		apachectl apxs dbmmanage envvars-std mkcert
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	config.layout	
+SUBST_FILES.paths=	config.layout
 SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.paths=	"Fixing paths."
 
@@ -146,7 +144,7 @@ post-extract:
 	${TOUCH} ${WRKSRC}/libtool
 
 post-build:
-	${SED} "s#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g" \
+	${SED} "s#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g"			\
 		< ${FILESDIR}/mkcert.sh > ${WRKDIR}/mkcert
 
 pre-install:
