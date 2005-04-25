@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3440 2005/04/25 09:14:28 adam Exp $
+$NetBSD: TODO,v 1.3441 2005/04/25 14:44:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -274,6 +274,7 @@ Suggested package updates
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
 	o amavis-0.3.12
+	o amavisd-new-2.3.0
 	o amaya-9.1
 	o anomy-sanitizer-1.70
 	o ap-Embperl-1.3.6
@@ -299,7 +300,7 @@ Suggested package updates
 	o arpwatch-2.1a13
 	o asapm-2.13
 	o aspell-danish-1.4.49
-	o aspell-faroese-0.2.20
+	o aspell-faroese-0.2.22
 	o ast-ksh-20040229
 	o astyle-1.15.3
 	o auctex-11.55
@@ -417,7 +418,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enigma-0.90
 	o enscript-1.6.4
-	o epiphany-1.6.2
+	o epiphany-1.6.3
 	o erlang-10b-3
 	o esh-0.8.5
 	o et-2.60
@@ -553,6 +554,7 @@ Suggested package updates
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.3
+	o jabberd2-2.0s8
 	o jdbc-postgresql-7.3.9
 	o jessie-1.0.0
 	o jftpgw-0.13.5
@@ -630,7 +632,7 @@ Suggested package updates
 	o mftrace-1.1.6
 	o mgetty+sendfax-1.1.32
 	o micq-0.4.12 [pkg/29063]
-	o micq-0.5.0.1
+	o micq-0.5.0.2
 	o mimedefang-2.51
 	o mini_sendmail-1.3.5
 	o minicom-2.1
@@ -663,6 +665,7 @@ Suggested package updates
 	o ncftp2-2.8.2
 	o ncftp3-3.1.9
 	o ncview-1.92e
+	o neon-0.25.0
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
 	o netio-1.23
@@ -880,7 +883,7 @@ Suggested package updates
 	o py-libxml2-2.6.18
 	o py-logging-0.4.9.5
 	o py-m2crypto-0.13
-	o py-mad-0.5.2
+	o py-mad-0.5.3
 	o py-matplotlib-0.71
 	o py-mysqldb-1.1.7
 	o py-psycopg-1.1.18
@@ -958,7 +961,6 @@ Suggested package updates
 	o sawfish-replibs-1.3
 	o scew-0.4.0
 	o scheme48-1.2 [pkg/29788]
-	o scm-5d9
 	o scrollz-1.9.4
 	o sdig-0.40
 	o seahorse-0.7.6
@@ -973,13 +975,12 @@ Suggested package updates
 	o sign-1.0.7
 	o silc-toolkit-0.9.14
 	o simh-3.3.2
-	o sitecopy-0.15.0
+	o sitecopy-0.15.1
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skampi-4.1
 	o skill-4.1.2
 	o skkinput-2.06.4
-	o slib-3a1
 	o sma-1.4
 	o smalleiffel-0.90
 	o smalltalk-2.1.10
@@ -1003,7 +1004,7 @@ Suggested package updates
 	o stlport-4.6.2
 	o strace-4.5.8
 	o streamtuner-0.99.99
-	o stunnel-4.09
+	o stunnel-4.10
 	o subtitleripper-0.3.4
 	o suse_base-9.3
 	o swfdec-0.3.2
@@ -1042,6 +1043,7 @@ Suggested package updates
 	o tmake-1.13
 	o tob-0.26
 	o top-3.6alpha9
+	o tor-0.0.9.9
 	o totd-1.5
 	o totem-1.0.1
 	o totem-xine-1.0.1
