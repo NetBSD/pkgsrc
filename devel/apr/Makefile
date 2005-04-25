@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/11 21:45:17 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/04/25 09:13:02 adam Exp $
 
 .include "../../www/apache2/Makefile.common"
 
@@ -14,12 +14,11 @@ CONFLICTS=		apache2<=2.0.45
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LIBTOOL=		YES
-
 WRKSRC=			${WRKDIR}/${DISTNAME}/srclib
 BUILD_DIRS=		${WRKSRC}/apr ${WRKSRC}/apr-util
 
-GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 LIBS.SunOS+=		-lnsl
 
