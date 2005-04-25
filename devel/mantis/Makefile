@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:28 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/25 21:24:51 kristerw Exp $
 
 DISTNAME=	mantis-0.19.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
@@ -28,7 +28,7 @@ DEPENDS+=	php-jpgraph-[0-9]*:../../graphics/php-jpgraph
 
 BUILDLINK_DEPENDS.mysql-client+=	mysql-client>=3.23.2
 PHP_VERSIONS_ACCEPTED=			4
-MYSQL_VERSIONS_ACCEPTED=		30 40
+MYSQL_VERSIONS_ACCEPTED=		40 30
 
 APACHE_USER?=	www
 
