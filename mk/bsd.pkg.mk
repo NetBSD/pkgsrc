@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1616 2005/04/22 02:20:22 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1617 2005/04/25 16:47:18 drochner Exp $
 #
 # This file is in the public domain.
 #
@@ -2904,7 +2904,7 @@ check-files:
 	         ${WRKDIR}/.files.diff ${WRKDIR}/.files.expected;	\
 	${TEST} $$errors -eq 0
 .endif
-	
+
 .PHONY: acquire-extract-lock acquire-patch-lock acquire-tools-lock
 .PHONY: acquire-wrapper-lock acquire-configure-lock acquire-build-lock
 .PHONY: acquire-install-lock acquire-package-lock
