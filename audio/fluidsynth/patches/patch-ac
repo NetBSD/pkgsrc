@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/04/25 13:53:37 adam Exp $
+
+--- configure.orig	2005-04-22 15:45:10.000000000 +0000
++++ configure
+@@ -20182,7 +20182,7 @@ fi;
+ 
+ case "$ENABLE_DEBUG" in
+ no)
+-  CFLAGS="${CFLAGS} ${FCCFLAGS} -O2 -fomit-frame-pointer -funroll-all-loops -finline-functions -Wall -W -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wstrict-prototypes -Wno-unused -Winline"
++  CFLAGS="${CFLAGS} ${FCCFLAGS} -Wall -W -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wstrict-prototypes -Wno-unused -Winline"
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define DEBUG 0
