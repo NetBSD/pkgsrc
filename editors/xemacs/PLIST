@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/03/03 16:16:03 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/04/25 17:23:50 magick Exp $
 bin/${DISTNAME}
 bin/ellcc
 bin/gnuattach
@@ -1103,7 +1103,7 @@ lib/${DISTNAME}/lisp/mule/mule-misc.elc
 lib/${DISTNAME}/lisp/mule/mule-tty-init.el${ELSUFX}
 lib/${DISTNAME}/lisp/mule/mule-tty-init.elc
 lib/${DISTNAME}/lisp/mule/mule-x-init.el${ELSUFX}
-lib/${DISTNAME}/lisp/mule/mule-x-init.elc
+${X11ONLY}lib/${DISTNAME}/lisp/mule/mule-x-init.elc
 lib/${DISTNAME}/lisp/mule/thai-xtis-chars.el${ELSUFX}
 lib/${DISTNAME}/lisp/mule/thai-xtis-chars.elc
 lib/${DISTNAME}/lisp/mule/thai-xtis.el${ELSUFX}
