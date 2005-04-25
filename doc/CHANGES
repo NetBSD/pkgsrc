@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9957 2005/04/24 22:16:19 perry Exp $
+$NetBSD: CHANGES,v 1.9958 2005/04/25 05:14:06 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2187,3 +2187,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated unison-devel to 2.12.0 [adrianp 2005-04-24]
 	Updated slib to 3.1.1 [perry 2005-04-24]
 	Updated scm to 5d9 [perry 2005-04-24]
+	Updated xfce4-gtk2-engine to 2.2.6nb1 [hira 2005-04-25]
