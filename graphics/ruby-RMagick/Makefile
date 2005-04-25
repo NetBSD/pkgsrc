@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/06 14:54:02 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/25 14:42:25 minskim Exp $
 
 DISTNAME=	RMagick-1.7.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -17,7 +17,13 @@ USE_X11=		yes
 CONFIGURE_ARGS+=	--with-doc-dir=${RUBY_DOCDIR}/RMagick
 CONFIGURE_ARGS+=	--without-graphics-magick
 
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-2*)
+BUILDLINK_TRANSFORM+=	rm:-std=gnu99
+.endif
+
 post-install:
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/RMagick
 	cd ${WRKSRC}/examples && \
 		${PAX} -rw -pp -pm . ${RUBY_EXAMPLESDIR}/RMagick
 
