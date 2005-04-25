@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9963 2005/04/25 17:31:27 magick Exp $
+$NetBSD: CHANGES,v 1.9964 2005/04/25 18:03:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2194,3 +2194,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bozohttpd to 20050410 [mrg 2005-04-25]
 	Updated squid to 2.5.9nb8 [taca 2005-04-25]
 	Updated nxtvepg to 2.7.5 [magick 2005-04-25]
+	Updated libcddb to 1.0.1 [adam 2005-04-25]
