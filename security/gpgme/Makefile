@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/23 12:44:58 shannonjr Exp $
+# $NetBSD: Makefile,v 1.34 2005/04/25 09:37:09 shannonjr Exp $
 #
 
 DISTNAME=	gpgme-1.0.2
@@ -13,6 +13,7 @@ COMMENT=	GnuPG Made Easy
 
 DEPENDS+=		gnupg>=1.2.2:../../security/gnupg
 
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PTHREAD_OPTS+=		require
