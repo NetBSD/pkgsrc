@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9961 2005/04/25 14:31:35 mrg Exp $
+$NetBSD: CHANGES,v 1.9962 2005/04/25 15:40:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2192,3 +2192,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated apache2 to 2.0.54 [adam 2005-04-25]
 	Added fluidsynth-1.0.5 [adam 2005-04-25]
 	Updated bozohttpd to 20050410 [mrg 2005-04-25]
+	Updated squid to 2.5.9nb8 [taca 2005-04-25]
