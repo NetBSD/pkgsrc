@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2005/01/03 06:59:32 minskim Exp $
+$NetBSD: patch-ab,v 1.6 2005/04/25 09:13:14 adam Exp $
 
---- server/mpm_common.c.orig	Thu Feb 26 14:32:21 2004
+--- server/mpm_common.c.orig	2005-03-30 09:42:15.000000000 +0000
 +++ server/mpm_common.c
-@@ -322,7 +322,7 @@ AP_DECLARE(gid_t) ap_gname2id(const char
+@@ -420,7 +420,7 @@ AP_DECLARE(gid_t) ap_gname2id(const char
  #ifndef HAVE_INITGROUPS
  int initgroups(const char *name, gid_t basegid)
  {

@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/01/03 01:04:26 minskim Exp $
+$NetBSD: patch-ac,v 1.5 2005/04/25 09:13:14 adam Exp $
 
---- configure.orig	2004-09-23 13:35:39.000000000 -0500
+--- configure.orig	2005-04-11 21:04:54.000000000 +0000
 +++ configure
-@@ -16511,7 +16511,6 @@ cat >>confdefs.h <<_ACEOF
+@@ -17035,7 +17035,6 @@ cat >>confdefs.h <<_ACEOF
  _ACEOF
  
  

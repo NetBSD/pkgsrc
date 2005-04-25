@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1.1.1 2003/05/25 08:55:19 epg Exp $
+$NetBSD: patch-an,v 1.2 2005/04/25 09:13:02 adam Exp $
 
---- apr/configure.in.orig	2003-01-06 21:04:08.000000000 +0200
-+++ apr/configure.in	2003-01-28 16:11:24.000000000 +0200
-@@ -1635,7 +1635,7 @@
+--- apr/configure.in.orig	2005-02-04 16:58:13.000000000 +0000
++++ apr/configure.in
+@@ -1679,7 +1679,7 @@ if test "$rand" != "1"; then
    if test "$apr_devrandom" = "yes"; then
      # /dev/random on OpenBSD doesn't provide random data, so
      # prefer /dev/arandom, which does; see random(4).
