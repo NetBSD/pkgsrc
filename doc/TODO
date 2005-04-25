@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3441 2005/04/25 14:44:16 wiz Exp $
+$NetBSD: TODO,v 1.3442 2005/04/25 17:31:27 magick Exp $
 
 Suggested new packages
 ======================
@@ -682,7 +682,6 @@ Suggested package updates
 	o nsd-2.2.1
 	o nslint-2.1a3
 	o nullmailer-1.0.0
-	o nxtvepg-2.7.5
 	o obexftp-0.10.6
 	o odbc-postgresql-7.4.7
 	o offlineimap-4.0.8
