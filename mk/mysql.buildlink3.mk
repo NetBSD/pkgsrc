@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.2 2005/03/24 17:46:01 tv Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.3 2005/04/26 13:29:00 wiz Exp $
 
 .if !defined(MYSQL_VERSION_MK)
 MYSQL_VERSION_MK=	# defined
@@ -6,7 +6,7 @@ MYSQL_VERSION_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 MYSQL_VERSION_DEFAULT?=		41
-MYSQL_VERSIONS_ACCEPTED?=	41 40 30
+MYSQL_VERSIONS_ACCEPTED?=	41 40
 
 # transform the list into individual variables
 .for mv in ${MYSQL_VERSIONS_ACCEPTED}
@@ -20,10 +20,6 @@ _MYSQL_VERSION_41_INSTALLED=	yes
 
 .if exists(${LOCALBASE}/lib/mysql/libmysqlclient.so.12)
 _MYSQL_VERSION_40_INSTALLED=	yes
-.endif
-
-.if exists(${LOCALBASE}/lib/mysql/libmysqlclient.so.10)
-_MYSQL_VERSION_30_INSTALLED=	yes
 .endif
 
 # if a version is explicitely required, take it
@@ -67,8 +63,6 @@ _MYSQL_VERSION=	${_MYSQL_VERSION_FIRSTACCEPTED}
 MYSQL_PKGSRCDIR=	../../databases/mysql4-client
 .elif ${_MYSQL_VERSION} == "40"
 MYSQL_PKGSRCDIR=	../../databases/mysql-client
-.elif ${_MYSQL_VERSION} == "30"
-MYSQL_PKGSRCDIR=	../../databases/mysql3-client
 .else
 # force an error
 PKG_SKIP_REASON+=	"${_MYSQL_VERSION} is not a valid mysql package."
