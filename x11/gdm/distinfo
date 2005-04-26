@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2005/03/22 16:25:42 jmmv Exp $
+$NetBSD: distinfo,v 1.23 2005/04/26 20:20:32 drochner Exp $
 
-SHA1 (gdm-2.6.0.8.tar.bz2) = 1f263b777b005a67b75560e992900136bb614b4b
-RMD160 (gdm-2.6.0.8.tar.bz2) = d7a84e1b523bedbac5dc38c124a297f877c40be0
-Size (gdm-2.6.0.8.tar.bz2) = 3357597 bytes
+SHA1 (gdm-2.6.0.9.tar.bz2) = 89f9ec3ca6d22332edb8cbdd6603d5f7ab975736
+RMD160 (gdm-2.6.0.9.tar.bz2) = 818c3a0ac362afd73e568f05793b447895cf93dc
+Size (gdm-2.6.0.9.tar.bz2) = 3484460 bytes
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
 Size (Daemon.README) = 2191 bytes
