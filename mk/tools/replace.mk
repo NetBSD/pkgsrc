@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.21 2005/04/26 19:15:38 jlam Exp $
+# $NetBSD: replace.mk,v 1.22 2005/04/26 21:56:13 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -163,9 +163,12 @@ ${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_ARGS.bison}
 TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
 .endif
 
-.if (!defined(TOOLS_IGNORE.egrep) && !empty(USE_TOOLS:Megrep)) || \
-    (!defined(TOOLS_IGNORE.fgrep) && !empty(USE_TOOLS:Mfgrep)) || \
-    (!defined(TOOLS_IGNORE.grep) && !empty(USE_TOOLS:Mgrep))
+.if (!defined(TOOLS_IGNORE.egrep) && \
+     !defined(TOOLS_IGNORE.fgrep) && \
+     !defined(TOOLS_IGNORE.grep)) && \
+    (!empty(USE_TOOLS:Megrep) || \
+     !empty(USE_TOOLS:Mfgrep) || \
+     !empty(USE_TOOLS:Mgrep))
 .  if !empty(PKGPATH:Mtextproc/grep)
 MAKEFLAGS+=			TOOLS_IGNORE.egrep=
 MAKEFLAGS+=			TOOLS_IGNORE.fgrep=
@@ -264,9 +267,12 @@ ${_TOOLS_VARNAME.gsed}=		${TOOLS_REAL_CMD.gsed}
 TOOLS_CMD.gsed=			${TOOLS_DIR}/bin/sed
 .endif
 
-.if (!defined(TOOLS_IGNORE.gunzip) && !empty(USE_TOOLS:Mgunzip)) || \
-    (!defined(TOOLS_IGNORE.gzcat) && !empty(USE_TOOLS:Mgzcat)) || \
-    (!defined(TOOLS_IGNORE.gzip) && !empty(USE_TOOLS:Mgzip))
+.if (!defined(TOOLS_IGNORE.gunzip) && \
+     !defined(TOOLS_IGNORE.gzcat) && \
+     !defined(TOOLS_IGNORE.gzip)) && \
+    (!empty(USE_TOOLS:Mgunzip) || \
+     !empty(USE_TOOLS:Mgzcat) || \
+     !empty(USE_TOOLS:Mgzip))
 .  if !empty(PKGPATH:Marchiver/gzip-base)
 MAKEFLAGS+=			TOOLS_IGNORE.gunzip=
 MAKEFLAGS+=			TOOLS_IGNORE.gzcat=
