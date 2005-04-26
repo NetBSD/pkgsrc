@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2005/03/22 16:18:38 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.20 2005/04/26 20:05:24 drochner Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
@@ -295,6 +295,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-panel-2.0.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-panel-2.0.mo
@@ -308,6 +309,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-panel-2.0.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
