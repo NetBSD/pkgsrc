@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.29 2005/04/26 22:51:00 jlam Exp $
+# $NetBSD: replace.mk,v 1.30 2005/04/26 23:20:35 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -50,12 +50,13 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`yacc'' conflict in USE_TOOLS."
 # This is an exhaustive list of tools for which we have pkgsrc
 # replacements.
 #
-_TOOLS_REPLACE_LIST=	bison egrep fgrep file find gawk gm4 gmake grep	\
-			gsed gunzip gzcat gzip lex patch perl tbl xargs	\
-			yacc
+_TOOLS_REPLACE_LIST=	bison cmp egrep fgrep file find gawk gm4 gmake	\
+			grep gsed gunzip gzcat gzip lex patch perl tbl	\
+			xargs yacc
 
 # "TOOL" variable names associated with each of the tools
 _TOOLS_VARNAME.bison=	YACC
+_TOOLS_VARNAME.cmp=	CMP
 _TOOLS_VARNAME.egrep=	EGREP
 _TOOLS_VARNAME.fgrep=	FGREP
 _TOOLS_VARNAME.file=	FILE_CMD
@@ -85,6 +86,10 @@ _TOOLS_VARNAME.yacc=	YACC
 # files as they are ${OPSYS}-specific.
 #
 _TOOLS_USE_PLATFORM.bison=	Linux-*-*
+_TOOLS_USE_PLATFORM.cmp=	BSDOS-*-* Darwin-*-* DragonFly-*-*	\
+				FreeBSD-*-* IRIX-*-* Interix-*-*	\
+				Linux-*-* NetBSD-*-* OSF1-*-*		\
+				OpenBSD-*-* SunOS-*-*
 _TOOLS_USE_PLATFORM.egrep=	${_TOOLS_USE_PLATFORM.grep}
 _TOOLS_USE_PLATFORM.fgrep=	${_TOOLS_USE_PLATFORM.grep}
 _TOOLS_USE_PLATFORM.file=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
@@ -166,6 +171,19 @@ ${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_ARGS.bison}
 .    endif
 .  endif
 TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
+.endif
+
+.if !defined(TOOLS_IGNORE.cmp) && !empty(USE_TOOLS:Mcmp)
+.  if !empty(PKGPATH:Mdevel/diffutils)
+MAKEFLAGS+=			TOOLS_IGNORE.cmp=
+.  elif !empty(_TOOLS_USE_PKGSRC.cmp:M[yY][eE][sS])
+${TOOLS_DEPENDS.cmp}+=		diffutils>=2.8.1:../../devel/diffutils
+TOOLS_WRAP+=			cmp
+TOOLS_REAL_CMD.cmp=		${LOCALBASE}/bin/cmp
+.    if exists(${TOOLS_REAL_CMD.cmp})
+${_TOOLS_VARNAME.cmp}=		${TOOLS_REAL_CMD.cmp}
+.    endif
+.  endif
 .endif
 
 .if (!defined(TOOLS_IGNORE.egrep) && \
