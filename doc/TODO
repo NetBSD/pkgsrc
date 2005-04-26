@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3443 2005/04/25 18:03:30 adam Exp $
+$NetBSD: TODO,v 1.3444 2005/04/26 09:21:51 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -19,7 +19,7 @@ Suggested new packages
 	  http://www.livejournal.com/ .
 	http://loserjabber.sourceforge.net/
 
-	k3b
+	k3b [pkgsrc-wip]
 	CD and DVD burning application optimized for KDE.  (This
 	is a front-end for CLI utilities.  It claims to be comfortable
 	for beginners, yet advanced enough for experienced users.)
