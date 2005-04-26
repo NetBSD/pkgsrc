@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2005/04/14 20:39:59 xtraeme Exp $
+# $NetBSD: Makefile,v 1.30 2005/04/26 08:49:46 xtraeme Exp $
 
-DISTNAME=	dspam-3.4.4
-PKGREVISION=	1
+DISTNAME=	dspam-3.4.5
 CATEGORIES=	mail
 MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
 
