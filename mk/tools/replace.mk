@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.27 2005/04/26 22:28:03 jlam Exp $
+# $NetBSD: replace.mk,v 1.28 2005/04/26 22:31:34 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -269,6 +269,7 @@ TOOLS_REAL_CMD.gm4=		${LOCALBASE}/bin/gm4
 ${_TOOLS_VARNAME.gm4}=		${TOOLS_REAL_CMD.gm4}
 .    endif
 .  endif
+TOOLS_CMD.gm4=			${TOOLS_DIR}/bin/m4
 .endif
 
 .if !defined(TOOLS_IGNORE.gmake) && !empty(USE_TOOLS:Mgmake)
