@@ -1,19 +1,26 @@
-@comment $NetBSD: PLIST,v 1.3 2004/12/03 12:39:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/04/26 20:15:04 drochner Exp $
 include/gtkspell-2.0/gtkspell/gtkspell.h
 lib/libgtkspell.la
 lib/pkgconfig/gtkspell-2.0.pc
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gtkspell.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gtkspell.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtkspell.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gtkspell.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtkspell.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtkspell.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gtkspell.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gtkspell.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/rm/LC_MESSAGES/gtkspell.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gtkspell.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gtkspell.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gtkspell.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gtkspell.mo
 @dirrm include/gtkspell-2.0/gtkspell
 @dirrm include/gtkspell-2.0
