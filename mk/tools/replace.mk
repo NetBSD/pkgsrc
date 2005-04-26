@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.24 2005/04/26 22:10:53 jlam Exp $
+# $NetBSD: replace.mk,v 1.25 2005/04/26 22:18:14 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -184,19 +184,13 @@ USE_TOOLS+=	${_t_}
         !empty(_TOOLS_USE_PKGSRC.fgrep:M[yY][eE][sS]) || \
         !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
 ${TOOLS_DEPENDS.grep}+=		grep>=2.5.1:../../textproc/grep
-TOOLS_SYMLINK+=			${_TOOLS_GREPUTILS}
-TOOLS_REAL_CMD.egrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}egrep
-TOOLS_REAL_CMD.fgrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}fgrep
-TOOLS_REAL_CMD.grep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
-.      if exists(${TOOLS_REAL_CMD.egrep})
-${_TOOLS_VARNAME.egrep}=	${TOOLS_REAL_CMD.egrep}
-.      endif
-.      if exists(${TOOLS_REAL_CMD.fgrep})
-${_TOOLS_VARNAME.fgrep}=	${TOOLS_REAL_CMD.fgrep}
-.      endif
-.      if exists(${TOOLS_REAL_CMD.grep})
-${_TOOLS_VARNAME.grep}=		${TOOLS_REAL_CMD.grep}
-.      endif
+.      for _t_ in ${_TOOLS_GREPUTILS}
+TOOLS_SYMLINK+=			${_t_}
+TOOLS_REAL_CMD.${_t_}=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}${_t_}
+.        if exists(${TOOLS_REAL_CMD.${_t_}})
+${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}}
+.        endif
+.      endfor
 .    endif
 .  endif
 .endif
@@ -289,19 +283,13 @@ USE_TOOLS+=	${_t_}
         !empty(_TOOLS_USE_PKGSRC.gzcat:M[yY][eE][sS]) || \
         !empty(_TOOLS_USE_PKGSRC.gzip:M[yY][eE][sS])
 ${TOOLS_DEPENDS.gzip}+=		gzip-base>=1.2.4b:../../archivers/gzip-base
-TOOLS_SYMLINK+=			${_TOOLS_GZIPUTILS}
-TOOLS_REAL_CMD.gunzip=		${LOCALBASE}/bin/gunzip
-TOOLS_REAL_CMD.gzcat=		${LOCALBASE}/bin/gzcat
-TOOLS_REAL_CMD.gzip=		${LOCALBASE}/bin/gzip
-.      if exists(${TOOLS_REAL_CMD.gunzip})
-${_TOOLS_VARNAME.gunzip}=	${TOOLS_REAL_CMD.gunzip}
-.      endif
-.      if exists(${TOOLS_REAL_CMD.gzcat})
-${_TOOLS_VARNAME.gzcat}=	${TOOLS_REAL_CMD.gzcat}
-.      endif
-.      if exists(${TOOLS_REAL_CMD.gzip})
-${_TOOLS_VARNAME.gzip}=		${TOOLS_REAL_CMD.gzip}
-.      endif
+.      for _t_ in ${_TOOLS_GZIPUTILS}
+TOOLS_SYMLINK+=			${_t_}
+TOOLS_REAL_CMD.${_t_}=		${LOCALBASE}/bin/${_t_}
+.        if exists(${TOOLS_REAL_CMD.${_t_}})
+${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}}
+.        endif
+.      endfor
 .    endif
 .  endif
 .endif
