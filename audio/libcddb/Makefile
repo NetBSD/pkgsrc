@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/25 18:02:35 adam Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/26 21:10:20 drochner Exp $
 
 DISTNAME=	libcddb-1.0.1
 CATEGORIES=	audio
@@ -14,6 +14,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libcddb.pc.in
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-cdio
 GCC_REQD+=		2.95
 
 TEST_TARGET=		check
