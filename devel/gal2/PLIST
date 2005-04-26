@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/03/22 16:29:50 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/04/26 19:06:00 drochner Exp $
 include/gal-2.4/gal/a11y/e-table/gal-a11y-e-cell-popup.h
 include/gal-2.4/gal/a11y/e-table/gal-a11y-e-cell-registry.h
 include/gal-2.4/gal/a11y/e-table/gal-a11y-e-cell-text.h
@@ -203,6 +203,7 @@ ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gal-2.4.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gal-2.4.mo
@@ -211,6 +212,7 @@ ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gal-2.4.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gal-2.4.mo
@@ -228,6 +230,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gal-2.4.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gal-2.4.mo
@@ -239,6 +242,7 @@ ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gal-2.4.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gal-2.4.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gal-2.4.mo
 @dirrm share/gal-2.4/${PKGVERSION}/pixmaps/categories
