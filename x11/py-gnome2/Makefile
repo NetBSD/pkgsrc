@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2005/04/11 21:48:12 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/26 21:05:08 drochner Exp $
 #
 
-DISTNAME=	gnome-python-2.6.2
+DISTNAME=	gnome-python-2.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
 CATEGORIES=	x11 python
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python/2.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python/2.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
@@ -30,12 +30,7 @@ PYTHON_VERSIONS_ACCEPTED=	24 23
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../net/py-ORBit/buildlink3.mk"
-.include "../../print/libgnomeprint/buildlink3.mk"
-.include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../sysutils/nautilus/buildlink3.mk"
-.include "../../www/libgtkhtml/buildlink3.mk"
-.include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
