@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.19 2005/04/26 19:11:25 jlam Exp $
+# $NetBSD: replace.mk,v 1.20 2005/04/26 19:14:42 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -187,6 +187,7 @@ TOOLS_REAL_CMD.gawk=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
 ${_TOOLS_VARNAME.gawk}=		${TOOLS_REAL_CMD.gawk}
 .    endif
 .  endif
+TOOLS_CMD.gawk=			${TOOLS_DIR}/bin/awk
 .endif
 
 .if !defined(TOOLS_IGNORE.gm4) && !empty(USE_TOOLS:Mgm4)
@@ -333,6 +334,7 @@ TOOLS_REAL_CMD.gsed=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sed
 ${_TOOLS_VARNAME.gsed}=		${TOOLS_REAL_CMD.gsed}
 .    endif
 .  endif
+TOOLS_CMD.gsed=			${TOOLS_DIR}/bin/sed
 .endif
 
 .if !defined(TOOLS_IGNORE.tbl) && !empty(USE_TOOLS:Mtbl)
