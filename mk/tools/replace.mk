@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.20 2005/04/26 19:14:42 jlam Exp $
+# $NetBSD: replace.mk,v 1.21 2005/04/26 19:15:38 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -163,6 +163,40 @@ ${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_ARGS.bison}
 TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
 .endif
 
+.if (!defined(TOOLS_IGNORE.egrep) && !empty(USE_TOOLS:Megrep)) || \
+    (!defined(TOOLS_IGNORE.fgrep) && !empty(USE_TOOLS:Mfgrep)) || \
+    (!defined(TOOLS_IGNORE.grep) && !empty(USE_TOOLS:Mgrep))
+.  if !empty(PKGPATH:Mtextproc/grep)
+MAKEFLAGS+=			TOOLS_IGNORE.egrep=
+MAKEFLAGS+=			TOOLS_IGNORE.fgrep=
+MAKEFLAGS+=			TOOLS_IGNORE.grep=
+.  else
+.    for _t_ in egrep fgrep grep
+.      if empty(USE_TOOLS:M${_t_})
+USE_TOOLS+=	${_t_}
+.      endif
+.    endfor
+.    if !empty(_TOOLS_USE_PKGSRC.egrep:M[yY][eE][sS]) || \
+        !empty(_TOOLS_USE_PKGSRC.fgrep:M[yY][eE][sS]) || \
+        !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
+${TOOLS_DEPENDS.grep}+=		grep>=2.5.1:../../textproc/grep
+TOOLS_SYMLINK+=			egrep fgrep grep
+TOOLS_REAL_CMD.egrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}egrep
+TOOLS_REAL_CMD.fgrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}fgrep
+TOOLS_REAL_CMD.grep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
+.      if exists(${TOOLS_REAL_CMD.egrep})
+${_TOOLS_VARNAME.egrep}=	${TOOLS_REAL_CMD.egrep}
+.      endif
+.      if exists(${TOOLS_REAL_CMD.fgrep})
+${_TOOLS_VARNAME.fgrep}=	${TOOLS_REAL_CMD.fgrep}
+.      endif
+.      if exists(${TOOLS_REAL_CMD.grep})
+${_TOOLS_VARNAME.grep}=		${TOOLS_REAL_CMD.grep}
+.      endif
+.    endif
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.file) && !empty(USE_TOOLS:Mfile)
 .  if !empty(PKGPATH:Msysutils/file)
 MAKEFLAGS+=			TOOLS_IGNORE.file=
@@ -216,38 +250,18 @@ ${_TOOLS_VARNAME.gmake}=	${TOOLS_REAL_CMD.gmake}
 .  endif
 .endif
 
-.if (!defined(TOOLS_IGNORE.egrep) && !empty(USE_TOOLS:Megrep)) || \
-    (!defined(TOOLS_IGNORE.fgrep) && !empty(USE_TOOLS:Mfgrep)) || \
-    (!defined(TOOLS_IGNORE.grep) && !empty(USE_TOOLS:Mgrep))
-.  if !empty(PKGPATH:Mtextproc/grep)
-MAKEFLAGS+=			TOOLS_IGNORE.egrep=
-MAKEFLAGS+=			TOOLS_IGNORE.fgrep=
-MAKEFLAGS+=			TOOLS_IGNORE.grep=
-.  else
-.    for _t_ in egrep fgrep grep
-.      if empty(USE_TOOLS:M${_t_})
-USE_TOOLS+=	${_t_}
-.      endif
-.    endfor
-.    if !empty(_TOOLS_USE_PKGSRC.egrep:M[yY][eE][sS]) || \
-        !empty(_TOOLS_USE_PKGSRC.fgrep:M[yY][eE][sS]) || \
-        !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
-${TOOLS_DEPENDS.grep}+=		grep>=2.5.1:../../textproc/grep
-TOOLS_SYMLINK+=			egrep fgrep grep
-TOOLS_REAL_CMD.egrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}egrep
-TOOLS_REAL_CMD.fgrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}fgrep
-TOOLS_REAL_CMD.grep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
-.      if exists(${TOOLS_REAL_CMD.egrep})
-${_TOOLS_VARNAME.egrep}=	${TOOLS_REAL_CMD.egrep}
-.      endif
-.      if exists(${TOOLS_REAL_CMD.fgrep})
-${_TOOLS_VARNAME.fgrep}=	${TOOLS_REAL_CMD.fgrep}
-.      endif
-.      if exists(${TOOLS_REAL_CMD.grep})
-${_TOOLS_VARNAME.grep}=		${TOOLS_REAL_CMD.grep}
-.      endif
+.if !defined(TOOLS_IGNORE.gsed) && !empty(USE_TOOLS:Mgsed)
+.  if !empty(PKGPATH:Mtextproc/sed)
+MAKEFLAGS+=			TOOLS_IGNORE.gsed=
+.  elif !empty(_TOOLS_USE_PKGSRC.gsed:M[yY][eE][sS])
+${TOOLS_DEPENDS.gsed}+=		gsed>=3.0.2:../../textproc/gsed
+TOOLS_SYMLINK+=			gsed
+TOOLS_REAL_CMD.gsed=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sed
+.    if exists(${TOOLS_REAL_CMD.gsed})
+${_TOOLS_VARNAME.gsed}=		${TOOLS_REAL_CMD.gsed}
 .    endif
 .  endif
+TOOLS_CMD.gsed=			${TOOLS_DIR}/bin/sed
 .endif
 
 .if (!defined(TOOLS_IGNORE.gunzip) && !empty(USE_TOOLS:Mgunzip)) || \
@@ -321,20 +335,6 @@ TOOLS_REAL_CMD.perl=		${LOCALBASE}/bin/perl
 ${_TOOLS_VARNAME.perl}=		${TOOLS_REAL_CMD.perl}
 .    endif
 .  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.gsed) && !empty(USE_TOOLS:Mgsed)
-.  if !empty(PKGPATH:Mtextproc/sed)
-MAKEFLAGS+=			TOOLS_IGNORE.gsed=
-.  elif !empty(_TOOLS_USE_PKGSRC.gsed:M[yY][eE][sS])
-${TOOLS_DEPENDS.gsed}+=		gsed>=3.0.2:../../textproc/gsed
-TOOLS_SYMLINK+=			gsed
-TOOLS_REAL_CMD.gsed=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sed
-.    if exists(${TOOLS_REAL_CMD.gsed})
-${_TOOLS_VARNAME.gsed}=		${TOOLS_REAL_CMD.gsed}
-.    endif
-.  endif
-TOOLS_CMD.gsed=			${TOOLS_DIR}/bin/sed
 .endif
 
 .if !defined(TOOLS_IGNORE.tbl) && !empty(USE_TOOLS:Mtbl)
