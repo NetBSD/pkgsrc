@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.14 2005/04/25 06:16:38 jlam Exp $
+# $NetBSD: replace.mk,v 1.15 2005/04/26 15:32:05 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -175,7 +175,6 @@ TOOLS_REAL_CMD.file=		${LOCALBASE}/bin/file
 ${_TOOLS_VARNAME.file}=	${TOOLS_REAL_CMD.file}
 .    endif
 .  endif
-TOOLS_CMD.file=			${TOOLS_DIR}/bin/file
 .endif
 
 .if !defined(TOOLS_IGNORE.gawk) && !empty(USE_TOOLS:Mgawk)
@@ -189,7 +188,6 @@ TOOLS_REAL_CMD.gawk=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
 ${_TOOLS_VARNAME.gawk}=		${TOOLS_REAL_CMD.gawk}
 .    endif
 .  endif
-TOOLS_CMD.gawk=			${TOOLS_DIR}/bin/awk
 .endif
 
 .if !defined(TOOLS_IGNORE.gm4) && !empty(USE_TOOLS:Mgm4)
@@ -203,7 +201,6 @@ TOOLS_REAL_CMD.gm4=		${LOCALBASE}/bin/gm4
 ${_TOOLS_VARNAME.gm4}=		${TOOLS_REAL_CMD.gm4}
 .    endif
 .  endif
-TOOLS_CMD.gm4=			${TOOLS_DIR}/bin/m4
 .endif
 
 .if !defined(TOOLS_IGNORE.gmake) && !empty(USE_TOOLS:Mgmake)
@@ -217,7 +214,6 @@ TOOLS_REAL_CMD.gmake=		${LOCALBASE}/bin/gmake
 ${_TOOLS_VARNAME.gmake}=	${TOOLS_REAL_CMD.gmake}
 .    endif
 .  endif
-TOOLS_CMD.gmake=		${TOOLS_DIR}/bin/gmake
 .endif
 
 .if (!defined(TOOLS_IGNORE.egrep) && !empty(USE_TOOLS:Megrep)) || \
@@ -252,9 +248,6 @@ ${_TOOLS_VARNAME.grep}=		${TOOLS_REAL_CMD.grep}
 .      endif
 .    endif
 .  endif
-TOOLS_CMD.egrep=		${TOOLS_DIR}/bin/egrep
-TOOLS_CMD.fgrep=		${TOOLS_DIR}/bin/fgrep
-TOOLS_CMD.grep=			${TOOLS_DIR}/bin/grep
 .endif
 
 .if (!defined(TOOLS_IGNORE.gunzip) && !empty(USE_TOOLS:Mgunzip)) || \
@@ -289,9 +282,6 @@ ${_TOOLS_VARNAME.gzip}=		${TOOLS_REAL_CMD.gzip}
 .      endif
 .    endif
 .  endif
-TOOLS_CMD.gunzip=		${TOOLS_DIR}/bin/gunzip
-TOOLS_CMD.gzcat=		${TOOLS_DIR}/bin/gzcat
-TOOLS_CMD.gzip=			${TOOLS_DIR}/bin/gzip
 .endif
 
 .if !defined(TOOLS_IGNORE.lex) && !empty(USE_TOOLS:Mlex)
@@ -305,7 +295,6 @@ TOOLS_REAL_CMD.lex=		${LOCALBASE}/bin/flex
 ${_TOOLS_VARNAME.lex}=		${TOOLS_REAL_CMD.lex}
 .    endif
 .  endif
-TOOLS_CMD.lex=			${TOOLS_DIR}/bin/lex
 .endif
 
 .if !defined(TOOLS_IGNORE.patch) && !empty(USE_TOOLS:Mpatch)
@@ -319,7 +308,6 @@ TOOLS_REAL_CMD.patch=		${LOCALBASE}/bin/gpatch
 ${_TOOLS_VARNAME.patch}=	${TOOLS_REAL_CMD.patch}
 .    endif
 .  endif
-TOOLS_CMD.patch=		${TOOLS_DIR}/bin/patch
 .endif
 
 .if !defined(TOOLS_IGNORE.perl) && !empty(USE_TOOLS:Mperl)
@@ -333,7 +321,6 @@ TOOLS_REAL_CMD.perl=		${LOCALBASE}/bin/perl
 ${_TOOLS_VARNAME.perl}=		${TOOLS_REAL_CMD.perl}
 .    endif
 .  endif
-TOOLS_CMD.perl=			${TOOLS_DIR}/bin/perl
 .endif
 
 .if !defined(TOOLS_IGNORE.sed) && !empty(USE_TOOLS:Msed)
@@ -347,7 +334,6 @@ TOOLS_REAL_CMD.sed=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sed
 ${_TOOLS_VARNAME.sed}=		${TOOLS_REAL_CMD.sed}
 .    endif
 .  endif
-TOOLS_CMD.sed=			${TOOLS_DIR}/bin/sed
 .endif
 
 .if !defined(TOOLS_IGNORE.tbl) && !empty(USE_TOOLS:Mtbl)
@@ -361,7 +347,6 @@ TOOLS_REAL_CMD.tbl=		${LOCALBASE}/bin/tbl
 ${_TOOLS_VARNAME.tbl}=		${TOOLS_REAL_CMD.tbl}
 .    endif
 .  endif
-TOOLS_CMD.tbl=			${TOOLS_DIR}/bin/tbl
 .endif
 
 .if !defined(TOOLS_IGNORE.yacc) && !empty(USE_TOOLS:Myacc)
@@ -376,7 +361,6 @@ TOOLS_ARGS.yacc=		-y
 ${_TOOLS_VARNAME.yacc}=		${TOOLS_REAL_CMD.yacc} ${TOOLS_ARGS.yacc}
 .    endif
 .  endif
-TOOLS_CMD.yacc=			${TOOLS_DIR}/bin/yacc
 .endif
 
 ######################################################################
@@ -413,7 +397,6 @@ ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_ARGS.${_t_}}
 .    else
 ${_TOOLS_VARNAME.${_t_}}=	${_TOOLS_VARNAME.${_t_}}_not_defined_
 .    endif
-TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 .  endif
 .endfor
 .undef _t_

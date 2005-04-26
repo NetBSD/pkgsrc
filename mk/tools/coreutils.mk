@@ -1,4 +1,4 @@
-# $NetBSD: coreutils.mk,v 1.1 2005/04/15 07:33:43 jlam Exp $
+# $NetBSD: coreutils.mk,v 1.2 2005/04/26 15:32:05 jlam Exp $
 #
 # This Makefile fragment unconditionally replaces the system-supplied
 # "core" utilities with the ones from the GNU coreutils package when
@@ -28,7 +28,6 @@ _TOOLS_COREUTILS+=	[ basename cat chgrp chmod chown cp cut date	\
 # Create symlinks for each of the coreutils under ${TOOLS_DIR}.
 .    for _t_ in ${_TOOLS_COREUTILS}
 TOOLS_SYMLINK+=		${_t_}
-TOOLS_CMD.${_t_}=	${TOOLS_DIR}/bin/${_t_}
 TOOLS_REAL_CMD.${_t_}=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}${_t_}
 .    endfor
 .    undef _t_
