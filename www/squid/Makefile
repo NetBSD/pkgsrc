@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.147 2005/04/25 15:39:13 taca Exp $
+# $NetBSD: Makefile,v 1.148 2005/04/26 16:19:43 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE9
 PKGNAME=	squid-2.5.9
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -59,7 +59,7 @@ DATADIR=	${VARBASE}/squid
 
 # Update this time stamp pattern if any of official distfiles has changed.
 #
-DIST_STAMP=	2005042100
+DIST_STAMP=	2005042600
 
 DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
 
@@ -78,7 +78,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 
 BUILD_DEFS+=	SQUID_CONFIGURE_ARGS
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
-MAKE_ENV+=	PKG_PREFIX="${PREFIX}"
+MAKE_ENV+=	PKG_PREFIX="${PREFIX}" VARBASE="${VARBASE}"
 PLIST_SRC=	${WRKDIR}/PLIST
 RCD_SCRIPTS=	squid
 
