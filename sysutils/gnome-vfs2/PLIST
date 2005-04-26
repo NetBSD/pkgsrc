@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/03/22 15:56:41 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/04/26 18:03:18 drochner Exp $
 bin/gnomevfs-cat
 bin/gnomevfs-copy
 bin/gnomevfs-info
@@ -196,6 +196,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-vfs-2.0.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-vfs-2.0.mo
