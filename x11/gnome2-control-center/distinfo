@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.19 2005/04/12 00:56:19 rillig Exp $
+$NetBSD: distinfo,v 1.20 2005/04/26 20:07:45 drochner Exp $
 
-SHA1 (control-center-2.10.0.tar.bz2) = 586eaac12d2646ea4fbc5286c5d0d23839457e06
-RMD160 (control-center-2.10.0.tar.bz2) = 105a409eb7b74a78cb5d1999aa35ce338c1fc749
-Size (control-center-2.10.0.tar.bz2) = 2617716 bytes
+SHA1 (control-center-2.10.1.tar.bz2) = b2d6ea6f4e81b84b58ef7e3585922a87360ce667
+RMD160 (control-center-2.10.1.tar.bz2) = 7bf57aba9416c5c89169474ef65fa05cea6e9cd8
+Size (control-center-2.10.1.tar.bz2) = 2648247 bytes
 SHA1 (patch-aa) = 826bd6ef91135a61a86450ff150662156c833ae8
 SHA1 (patch-ab) = a522bf7b8d1108b2350bbc35125bc794a1fb0ac7
 SHA1 (patch-ac) = 0bec26fa35730ddd706ec8e80855d1bc72b1dd7d

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/03/22 16:17:10 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/04/26 20:07:45 drochner Exp $
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
 bin/gnome-background-properties
@@ -52,6 +52,7 @@ share/control-center-2.0/icons/display-capplet.png
 share/control-center-2.0/interfaces/acme.glade
 share/control-center-2.0/interfaces/apply-font.glade
 share/control-center-2.0/interfaces/at-enable-dialog.glade
+share/control-center-2.0/interfaces/file-types-properties.glade
 share/control-center-2.0/interfaces/font-properties.glade
 share/control-center-2.0/interfaces/gnome-accessibility-keyboard-properties.glade
 share/control-center-2.0/interfaces/gnome-background-properties.glade
@@ -177,6 +178,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/control-center-2.0.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/control-center-2.0.mo
@@ -189,6 +191,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/control-center-2.0.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/control-center-2.0.mo
