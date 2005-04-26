@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/12/29 11:10:56 recht Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/04/26 21:05:08 drochner Exp $
 lib/pkgconfig/gnome-python-2.0.pc
 ${PYSITELIB}/gtk-2.0/bonobo/__init__.py
 ${PYSITELIB}/gtk-2.0/bonobo/__init__.pyc
@@ -11,19 +11,21 @@ ${PYSITELIB}/gtk-2.0/gnome/__init__.py
 ${PYSITELIB}/gtk-2.0/gnome/__init__.pyc
 ${PYSITELIB}/gtk-2.0/gnome/__init__.pyo
 ${PYSITELIB}/gtk-2.0/gnome/_gnome.la
-${PYSITELIB}/gtk-2.0/gnome/applet.la
-${PYSITELIB}/gtk-2.0/gnome/canvas.la
-${PYSITELIB}/gtk-2.0/gnome/nautilus.la
+${PYSITELIB}/gtk-2.0/gnome/canvas.py
+${PYSITELIB}/gtk-2.0/gnome/canvas.pyc
+${PYSITELIB}/gtk-2.0/gnome/canvas.pyo
+${PYSITELIB}/gtk-2.0/gnome/vfs.py
+${PYSITELIB}/gtk-2.0/gnome/vfs.pyc
+${PYSITELIB}/gtk-2.0/gnome/vfs.pyo
 ${PYSITELIB}/gtk-2.0/gnome/ui.la
-${PYSITELIB}/gtk-2.0/gnome/vfs.la
-${PYSITELIB}/gtk-2.0/gnomeprint/__init__.py
-${PYSITELIB}/gtk-2.0/gnomeprint/__init__.pyc
-${PYSITELIB}/gtk-2.0/gnomeprint/__init__.pyo
-${PYSITELIB}/gtk-2.0/gnomeprint/_print.la
-${PYSITELIB}/gtk-2.0/gnomeprint/ui.la
-${PYSITELIB}/gtk-2.0/gtkhtml2.la
-share/pygtk/2.0/defs/applet.defs
-share/pygtk/2.0/defs/art.defs
+${PYSITELIB}/gtk-2.0/gnomecanvas.la
+${PYSITELIB}/gtk-2.0/gnomevfs.la
+share/pygtk/2.0/argtypes/bonobo-arg-types.py
+share/pygtk/2.0/argtypes/bonobo-arg-types.pyc
+share/pygtk/2.0/argtypes/bonobo-arg-types.pyo
+share/pygtk/2.0/argtypes/gconf-arg-types.py
+share/pygtk/2.0/argtypes/gconf-arg-types.pyc
+share/pygtk/2.0/argtypes/gconf-arg-types.pyo
 share/pygtk/2.0/defs/bonobo-types.defs
 share/pygtk/2.0/defs/bonobo.defs
 share/pygtk/2.0/defs/bonoboui-types.defs
@@ -32,13 +34,9 @@ share/pygtk/2.0/defs/canvas.defs
 share/pygtk/2.0/defs/gconf.defs
 share/pygtk/2.0/defs/gnome-types.defs
 share/pygtk/2.0/defs/gnome.defs
-share/pygtk/2.0/defs/gtkhtml2.defs
-share/pygtk/2.0/defs/nautilus.defs
-share/pygtk/2.0/defs/print.defs
-share/pygtk/2.0/defs/printui.defs
 share/pygtk/2.0/defs/ui.defs
 @comment in py-gtk2: @dirrm share/pygtk/2.0/defs
-@dirrm ${PYSITELIB}/gtk-2.0/gnomeprint
+@dirrm share/pygtk/2.0/argtypes
 @dirrm ${PYSITELIB}/gtk-2.0/gnome
 @dirrm ${PYSITELIB}/gtk-2.0/bonobo
 @comment in py-gtk2: @dirrm ${PYSITELIB}/gtk-2.0
