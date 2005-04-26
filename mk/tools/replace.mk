@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.28 2005/04/26 22:31:34 jlam Exp $
+# $NetBSD: replace.mk,v 1.29 2005/04/26 22:51:00 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -193,7 +193,7 @@ ${TOOLS_DEPENDS.grep}+=		grep>=2.5.1:../../textproc/grep
 _TOOLS_USE_PKGSRC.${_t_}=	yes
 TOOLS_SYMLINK+=			${_t_}
 TOOLS_REAL_CMD.${_t_}=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}${_t_}
-.        if exists(${TOOLS_REAL_CMD.${_t_}})
+.        if defined(_TOOLS_VARNAME.${_t_}) && exists(${TOOLS_REAL_CMD.${_t_}})
 ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}}
 .        endif
 .      endfor
@@ -236,7 +236,7 @@ ${TOOLS_DEPENDS.find}+=		findutils>=4.1:../../sysutils/findutils
 _TOOLS_USE_PKGSRC.${_t_}=	yes
 TOOLS_SYMLINK+=			${_t_}
 TOOLS_REAL_CMD.${_t_}=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}${_t_}
-.        if exists(${TOOLS_REAL_CMD.${_t_}})
+.        if defined(_TOOLS_VARNAME.${_t_}) && exists(${TOOLS_REAL_CMD.${_t_}})
 ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}}
 .        endif
 .      endfor
@@ -324,7 +324,7 @@ ${TOOLS_DEPENDS.gzip}+=		gzip-base>=1.2.4b:../../archivers/gzip-base
 _TOOLS_USE_PKGSRC.${_t_}=	yes
 TOOLS_SYMLINK+=			${_t_}
 TOOLS_REAL_CMD.${_t_}=		${LOCALBASE}/bin/${_t_}
-.        if exists(${TOOLS_REAL_CMD.${_t_}})
+.        if defined(_TOOLS_VARNAME.${_t_}) && exists(${TOOLS_REAL_CMD.${_t_}})
 ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}}
 .        endif
 .      endfor
