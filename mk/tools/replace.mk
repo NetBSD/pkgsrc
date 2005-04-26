@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.25 2005/04/26 22:18:14 jlam Exp $
+# $NetBSD: replace.mk,v 1.26 2005/04/26 22:20:42 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -185,6 +185,7 @@ USE_TOOLS+=	${_t_}
         !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
 ${TOOLS_DEPENDS.grep}+=		grep>=2.5.1:../../textproc/grep
 .      for _t_ in ${_TOOLS_GREPUTILS}
+_TOOLS_USE_PKGSRC.${_t_}=	yes
 TOOLS_SYMLINK+=			${_t_}
 TOOLS_REAL_CMD.${_t_}=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}${_t_}
 .        if exists(${TOOLS_REAL_CMD.${_t_}})
@@ -284,6 +285,7 @@ USE_TOOLS+=	${_t_}
         !empty(_TOOLS_USE_PKGSRC.gzip:M[yY][eE][sS])
 ${TOOLS_DEPENDS.gzip}+=		gzip-base>=1.2.4b:../../archivers/gzip-base
 .      for _t_ in ${_TOOLS_GZIPUTILS}
+_TOOLS_USE_PKGSRC.${_t_}=	yes
 TOOLS_SYMLINK+=			${_t_}
 TOOLS_REAL_CMD.${_t_}=		${LOCALBASE}/bin/${_t_}
 .        if exists(${TOOLS_REAL_CMD.${_t_}})
