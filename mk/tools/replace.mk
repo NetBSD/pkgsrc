@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.17 2005/04/26 18:59:48 jlam Exp $
+# $NetBSD: replace.mk,v 1.18 2005/04/26 19:01:30 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -368,7 +368,7 @@ ${_TOOLS_VARNAME.yacc}=		${TOOLS_REAL_CMD.yacc} ${TOOLS_ARGS.yacc}
 # Set TOOLS_REAL_CMD.<tool> appropriately in the case where we are
 # using the system-supplied tool.  Here, we first check to see if
 # PLATFORM_TOOL.<tool> is defined.  If it is, then use that as the path
-# to the real command and extract any arguments tino TOOLS_ARGS.<tool>.
+# to the real command and extract any arguments into TOOLS_ARGS.<tool>.
 # We also create either a wrapper or a symlink depending on whether
 # there are any arguments or not.  If PLATFORM_TOOL.<tool> is undefined
 # or emtpy, then we fall back to checking if TOOL is defined.  Lastly,
