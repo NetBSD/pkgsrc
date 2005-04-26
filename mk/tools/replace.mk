@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.23 2005/04/26 21:57:44 jlam Exp $
+# $NetBSD: replace.mk,v 1.24 2005/04/26 22:10:53 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -169,12 +169,13 @@ TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
     (!empty(USE_TOOLS:Megrep) || \
      !empty(USE_TOOLS:Mfgrep) || \
      !empty(USE_TOOLS:Mgrep))
+_TOOLS_GREPUTILS=		egrep fgrep grep
 .  if !empty(PKGPATH:Mtextproc/grep)
-MAKEFLAGS+=			TOOLS_IGNORE.egrep=
-MAKEFLAGS+=			TOOLS_IGNORE.fgrep=
-MAKEFLAGS+=			TOOLS_IGNORE.grep=
+.    for _t_ in ${_TOOLS_GREPUTILS}
+MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
+.    endfor
 .  else
-.    for _t_ in egrep fgrep grep
+.    for _t_ in ${_TOOLS_GREPUTILS}
 .      if empty(USE_TOOLS:M${_t_})
 USE_TOOLS+=	${_t_}
 .      endif
@@ -183,7 +184,7 @@ USE_TOOLS+=	${_t_}
         !empty(_TOOLS_USE_PKGSRC.fgrep:M[yY][eE][sS]) || \
         !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
 ${TOOLS_DEPENDS.grep}+=		grep>=2.5.1:../../textproc/grep
-TOOLS_SYMLINK+=			egrep fgrep grep
+TOOLS_SYMLINK+=			${_TOOLS_GREPUTILS}
 TOOLS_REAL_CMD.egrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}egrep
 TOOLS_REAL_CMD.fgrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}fgrep
 TOOLS_REAL_CMD.grep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
@@ -273,12 +274,13 @@ TOOLS_CMD.gsed=			${TOOLS_DIR}/bin/sed
     (!empty(USE_TOOLS:Mgunzip) || \
      !empty(USE_TOOLS:Mgzcat) || \
      !empty(USE_TOOLS:Mgzip))
+_TOOLS_GZIPUTILS=		gunzip gzcat gzip
 .  if !empty(PKGPATH:Marchiver/gzip-base)
-MAKEFLAGS+=			TOOLS_IGNORE.gunzip=
-MAKEFLAGS+=			TOOLS_IGNORE.gzcat=
-MAKEFLAGS+=			TOOLS_IGNORE.gzip=
+.    for _t_ in ${_TOOLS_GZIPUTILS}
+MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
+.    endfor
 .  else
-.    for _t_ in gunzip gzcat gzip
+.    for _t_ in ${_TOOLS_GZIPUTILS}
 .      if empty(USE_TOOLS:M${_t_})
 USE_TOOLS+=	${_t_}
 .      endif
@@ -287,7 +289,7 @@ USE_TOOLS+=	${_t_}
         !empty(_TOOLS_USE_PKGSRC.gzcat:M[yY][eE][sS]) || \
         !empty(_TOOLS_USE_PKGSRC.gzip:M[yY][eE][sS])
 ${TOOLS_DEPENDS.gzip}+=		gzip-base>=1.2.4b:../../archivers/gzip-base
-TOOLS_SYMLINK+=			gunzip gzcat gzip
+TOOLS_SYMLINK+=			${_TOOLS_GZIPUTILS}
 TOOLS_REAL_CMD.gunzip=		${LOCALBASE}/bin/gunzip
 TOOLS_REAL_CMD.gzcat=		${LOCALBASE}/bin/gzcat
 TOOLS_REAL_CMD.gzip=		${LOCALBASE}/bin/gzip
