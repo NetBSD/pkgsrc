@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.22 2005/04/26 21:56:13 jlam Exp $
+# $NetBSD: replace.mk,v 1.23 2005/04/26 21:57:44 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -288,9 +288,9 @@ USE_TOOLS+=	${_t_}
         !empty(_TOOLS_USE_PKGSRC.gzip:M[yY][eE][sS])
 ${TOOLS_DEPENDS.gzip}+=		gzip-base>=1.2.4b:../../archivers/gzip-base
 TOOLS_SYMLINK+=			gunzip gzcat gzip
-TOOLS_REAL_CMD.gunzip=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}gunzip
-TOOLS_REAL_CMD.gzcat=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}gzcat
-TOOLS_REAL_CMD.gzip=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}gzip
+TOOLS_REAL_CMD.gunzip=		${LOCALBASE}/bin/gunzip
+TOOLS_REAL_CMD.gzcat=		${LOCALBASE}/bin/gzcat
+TOOLS_REAL_CMD.gzip=		${LOCALBASE}/bin/gzip
 .      if exists(${TOOLS_REAL_CMD.gunzip})
 ${_TOOLS_VARNAME.gunzip}=	${TOOLS_REAL_CMD.gunzip}
 .      endif
