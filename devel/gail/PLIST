@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/12/28 21:43:44 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/04/26 19:03:59 drochner Exp $
 include/gail-1.0/libgail-util/gail-util.h
 include/gail-1.0/libgail-util/gailmisc.h
 include/gail-1.0/libgail-util/gailtextutil.h
@@ -6,14 +6,8 @@ lib/gtk-2.0/modules/libferret.la
 lib/gtk-2.0/modules/libgail.la
 lib/libgailutil.la
 lib/pkgconfig/gail.pc
-share/doc/gail-libgail-util/gail-libgail-util-GailMisc.html
-share/doc/gail-libgail-util/gail-libgail-util-GailTextUtil.html
-share/doc/gail-libgail-util/gail-libgail-util.devhelp
 share/doc/gail-libgail-util/home.png
-share/doc/gail-libgail-util/index.html
-share/doc/gail-libgail-util/index.sgml
 share/doc/gail-libgail-util/left.png
-share/doc/gail-libgail-util/libgail-util-main.html
 share/doc/gail-libgail-util/right.png
 share/doc/gail-libgail-util/up.png
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gail.mo
@@ -32,6 +26,7 @@ ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gail.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gail.mo
@@ -62,6 +57,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gail.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gail.mo
@@ -71,6 +67,7 @@ ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gail.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gail.mo
 @dirrm share/doc/gail-libgail-util
