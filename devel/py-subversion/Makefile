@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2005/04/22 17:54:41 epg Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/26 00:17:48 epg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-subversion-${SVNVER}
 COMMENT=	Python bindings and tools for Subversion
 
 .include "../../devel/subversion/Makefile.common"
+
+SHLIBTOOL_OVERRIDE=	libtool
 
 CONFIGURE_ENV+=		PYTHON2=${PYTHONBIN}
 
@@ -25,8 +27,6 @@ post-patch:
 	${CP} ${FILESDIR}/build-outputs.mk ${WRKSRC}/build-outputs.mk
 
 post-install:
-	${RM} -f ${LOCALBASE}/${PYSITELIB}/libsvn/*.a
-	${RM} -f ${LOCALBASE}/${PYSITELIB}/libsvn/*.la
 	${INSTALL_DATA_DIR} ${SVNEXAMPLES}/python
 	${INSTALL_DATA} ${WRKSRC}/tools/examples/*.py ${SVNEXAMPLES}/python
 	${INSTALL_DATA} ${WRKSRC}/tools/hook-scripts/mailer/mailer.py \
