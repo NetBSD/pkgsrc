@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.2 2005/04/15 05:30:48 jlam Exp $
+# $NetBSD: automake.mk,v 1.3 2005/04/26 15:32:05 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU automake.
 #
@@ -77,11 +77,9 @@ USE_TOOLS+=		autoconf
 AUTOCONF_REQD?=		2.58
 
 _TOOLS_AUTOMAKE_LINKS+=		aclocal
-TOOLS_CMD.aclocal=		${TOOLS_DIR}/bin/aclocal
 TOOLS_REAL_CMD.aclocal=		${LOCALBASE}/bin/aclocal
 
 _TOOLS_AUTOMAKE_LINKS+=		automake
-TOOLS_CMD.automake=		${TOOLS_DIR}/bin/automake
 TOOLS_REAL_CMD.automake=	${LOCALBASE}/bin/automake
 
 # Continue to define the following variables until packages have been
@@ -102,11 +100,9 @@ USE_TOOLS+=		autoconf213
 AUTOCONF_REQD?=		2.13
 
 _TOOLS_AUTOMAKE_LINKS+=		aclocal
-TOOLS_CMD.aclocal=		${TOOLS_DIR}/bin/aclocal
 TOOLS_REAL_CMD.aclocal=		${LOCALBASE}/bin/aclocal-1.4
 
 _TOOLS_AUTOMAKE_LINKS+=		automake
-TOOLS_CMD.automake=		${TOOLS_DIR}/bin/automake
 TOOLS_REAL_CMD.automake=	${LOCALBASE}/bin/automake-1.4
 
 # Continue to define the following variables until packages have been

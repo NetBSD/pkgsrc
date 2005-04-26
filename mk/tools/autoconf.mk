@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.2 2005/04/15 05:30:48 jlam Exp $
+# $NetBSD: autoconf.mk,v 1.3 2005/04/26 15:32:05 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU autoconf.
 #
@@ -58,31 +58,24 @@ AUTOCONF_REQD?=		2.50
 BUILD_DEPENDS+=		autoconf>=${AUTOCONF_REQD}:../../devel/autoconf
 
 _TOOLS_AUTOCONF_LINKS+=		autoconf
-TOOLS_CMD.autoconf=		${TOOLS_DIR}/bin/autoconf
 TOOLS_REAL_CMD.autoconf=	${LOCALBASE}/bin/autoconf
 
 _TOOLS_AUTOCONF_LINKS+=		autoheader
-TOOLS_CMD.autoheader=		${TOOLS_DIR}/bin/autoheader
 TOOLS_REAL_CMD.autoheader=	${LOCALBASE}/bin/autoheader
 
 _TOOLS_AUTOCONF_LINKS+=		autom4te
-TOOLS_CMD.autom4te=		${TOOLS_DIR}/bin/autom4te
 TOOLS_REAL_CMD.autom4te=	${LOCALBASE}/bin/autom4te
 
 _TOOLS_AUTOCONF_LINKS+=		autoreconf
-TOOLS_CMD.autoreconf=		${TOOLS_DIR}/bin/autoreconf
 TOOLS_REAL_CMD.autoreconf=	${LOCALBASE}/bin/autoreconf
 
 _TOOLS_AUTOCONF_LINKS+=		autoscan
-TOOLS_CMD.autoscan=		${TOOLS_DIR}/bin/autoscan
 TOOLS_REAL_CMD.autoscan=	${LOCALBASE}/bin/autoscan
 
 _TOOLS_AUTOCONF_LINKS+=		autoupdate
-TOOLS_CMD.autoupdate=		${TOOLS_DIR}/bin/autoupdate
 TOOLS_REAL_CMD.autoupdate=	${LOCALBASE}/bin/autoupdate
 
 _TOOLS_AUTOCONF_LINKS+=		ifnames
-TOOLS_CMD.ifnames=		${TOOLS_DIR}/bin/ifnames
 TOOLS_REAL_CMD.ifnames=		${LOCALBASE}/bin/ifnames
 
 # Continue to define the following variables until packages have been
@@ -102,27 +95,21 @@ AUTOCONF_REQD?=		2.13
 BUILD_DEPENDS+=		autoconf213>=${AUTOCONF_REQD}:../../devel/autoconf213
 
 _TOOLS_AUTOCONF_LINKS+=		autoconf
-TOOLS_CMD.autoconf=		${TOOLS_DIR}/bin/autoconf
 TOOLS_REAL_CMD.autoconf=	${LOCALBASE}/bin/autoconf-2.13
 
 _TOOLS_AUTOCONF_LINKS+=		autoheader
-TOOLS_CMD.autoheader=		${TOOLS_DIR}/bin/autoheader
 TOOLS_REAL_CMD.autoheader=	${LOCALBASE}/bin/autoheader-2.13
 
 _TOOLS_AUTOCONF_LINKS+=		autoreconf
-TOOLS_CMD.autoreconf=		${TOOLS_DIR}/bin/autoreconf
 TOOLS_REAL_CMD.autoreconf=	${LOCALBASE}/bin/autoreconf-2.13
 
 _TOOLS_AUTOCONF_LINKS+=		autoscan
-TOOLS_CMD.autoscan=		${TOOLS_DIR}/bin/autoscan
 TOOLS_REAL_CMD.autoscan=	${LOCALBASE}/bin/autoscan-2.13
 
 _TOOLS_AUTOCONF_LINKS+=		autoupdate
-TOOLS_CMD.autoupdate=		${TOOLS_DIR}/bin/autoupdate
 TOOLS_REAL_CMD.autoupdate=	${LOCALBASE}/bin/autoupdate-2.13
 
 _TOOLS_AUTOCONF_LINKS+=		ifnames
-TOOLS_CMD.ifnames=		${TOOLS_DIR}/bin/ifnames
 TOOLS_REAL_CMD.ifnames=		${LOCALBASE}/bin/ifnames-2.13
 
 # Continue to define the following variables until packages have been
