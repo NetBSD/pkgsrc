@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.14 2005/04/11 21:47:24 tv Exp $
+# $NetBSD: Makefile.common,v 1.15 2005/04/26 18:03:18 drochner Exp $
 #
 
-DISTNAME=		gnome-vfs-2.10.0
+DISTNAME=		gnome-vfs-2.10.1
 PKGNAME=		${DISTNAME:S/vfs/vfs2/}
 CATEGORIES?=		sysutils
 CATEGORIES+=		gnome
