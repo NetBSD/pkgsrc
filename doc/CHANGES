@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9969 2005/04/26 12:49:55 tron Exp $
+$NetBSD: CHANGES,v 1.9970 2005/04/26 16:20:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2199,3 +2199,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ImageMagick to 6.2.2.0 [adam 2005-04-26]
 	Updated dspam to 3.4.5 [xtraeme 2005-04-26]
 	Updated xine-lib to 1.0nb2 [tron 2005-04-26]
+	Updated squid to 2.5.9nb9 [taca 2005-04-26]
