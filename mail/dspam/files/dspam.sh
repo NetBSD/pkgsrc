@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dspam.sh,v 1.1 2005/03/21 21:35:52 xtraeme Exp $
+# $NetBSD: dspam.sh,v 1.2 2005/04/26 15:43:26 jwise Exp $
 #
 
 # PROVIDE: dspam
@@ -37,7 +37,7 @@ else
 		dspam_precmd
 		if [ -x ${command} ]; then
 			echo "Starting ${name}."
-			eval ${command} ${distccd_flags} ${command_args}
+			eval ${command} ${dspam_flags} ${command_args}
 		fi
 		;;
 	stop)
