@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2005/04/11 21:46:29 tv Exp $
+# $NetBSD: Makefile,v 1.93 2005/04/26 11:36:55 drochner Exp $
 #
 
 DISTNAME=		gnumeric-1.2.13
@@ -20,7 +20,7 @@ USE_PERL5=		YES
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-python=python2p3
+CONFIGURE_ARGS+=	--with-python=python2.3
 PYTHON_VERSION_REQD=	23
 GCONF2_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
 			gnumeric-plugins.schemas
