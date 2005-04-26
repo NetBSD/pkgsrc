@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.18 2005/04/26 19:01:30 jlam Exp $
+# $NetBSD: replace.mk,v 1.19 2005/04/26 19:11:25 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -32,7 +32,7 @@
 # taught to use the new syntax.
 #
 .if defined(USE_GNU_TOOLS) && !empty(USE_GNU_TOOLS)
-USE_TOOLS+=	${USE_GNU_TOOLS:S/^awk$/gawk/:S/^make$/gmake/}
+USE_TOOLS+=	${USE_GNU_TOOLS:S/^awk$/gawk/:S/^make$/gmake/:S/^sed$/gsed/}
 .endif
 .if defined(USE_TBL) && !empty(USE_TBL:M[yY][eE][sS])
 USE_TOOLS+=	tbl
@@ -50,8 +50,8 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`yacc'' conflict in USE_TOOLS."
 # This is an exhaustive list of tools for which we have pkgsrc
 # replacements.
 #
-_TOOLS_REPLACE_LIST=	bison egrep fgrep file gawk gm4 gmake grep	\
-			gunzip gzcat gzip lex patch perl sed tbl yacc
+_TOOLS_REPLACE_LIST=	bison egrep fgrep file gawk gm4 gmake grep gsed	\
+			gunzip gzcat gzip lex patch perl tbl yacc
 
 # "TOOL" variable names associated with each of the tools
 _TOOLS_VARNAME.bison=	YACC
@@ -62,13 +62,13 @@ _TOOLS_VARNAME.gawk=	AWK
 _TOOLS_VARNAME.gm4=	M4
 _TOOLS_VARNAME.gmake=	GMAKE
 _TOOLS_VARNAME.grep=	GREP
+_TOOLS_VARNAME.gsed=	SED
 _TOOLS_VARNAME.gunzip=	GUNZIP_CMD
 _TOOLS_VARNAME.gzcat=	GZCAT
 _TOOLS_VARNAME.gzip=	GZIP_CMD
 _TOOLS_VARNAME.lex=	LEX
 _TOOLS_VARNAME.patch=	PATCH
 _TOOLS_VARNAME.perl=	PERL5
-_TOOLS_VARNAME.sed=	SED
 _TOOLS_VARNAME.tbl=	TBL
 _TOOLS_VARNAME.yacc=	YACC
 
@@ -95,6 +95,7 @@ _TOOLS_USE_PLATFORM.gmake=	Darwin-*-*
 _TOOLS_USE_PLATFORM.grep=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
 				Linux-*-* NetBSD-*-* OpenBSD-*-*	\
 				SunOS-*-*
+_TOOLS_USE_PLATFORM.gsed=	Interix-*-* Linux-*-* SunOS-*-*
 _TOOLS_USE_PLATFORM.gunzip=	${_TOOLS_USE_PLATFORM.gzip}
 _TOOLS_USE_PLATFORM.gzcat=	${_TOOLS_USE_PLATFORM.gzip}
 _TOOLS_USE_PLATFORM.gzip=	BSDOS-*-* Darwin-*-* DragonFly-*-*	\
@@ -107,8 +108,6 @@ _TOOLS_USE_PLATFORM.patch=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
 				Linux-*-* NetBSD-*-* OpenBSD-*-*	\
 				SunOS-*-*
 _TOOLS_USE_PLATFORM.perl=	# This should always be empty.
-_TOOLS_USE_PLATFORM.sed=	DragonFly-*-* FreeBSD-*-* Interix-*-*	\
-				Linux-*-* NetBSD-*-* SunOS-*-*
 _TOOLS_USE_PLATFORM.tbl=	DragonFly-*-* FreeBSD-*-* NetBSD-*-*	\
 				OpenBSD-*-*
 _TOOLS_USE_PLATFORM.yacc=	DragonFly-*-* FreeBSD-*-* NetBSD-*-*	\
@@ -323,15 +322,15 @@ ${_TOOLS_VARNAME.perl}=		${TOOLS_REAL_CMD.perl}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.sed) && !empty(USE_TOOLS:Msed)
+.if !defined(TOOLS_IGNORE.gsed) && !empty(USE_TOOLS:Mgsed)
 .  if !empty(PKGPATH:Mtextproc/sed)
-MAKEFLAGS+=			TOOLS_IGNORE.sed=
-.  elif !empty(_TOOLS_USE_PKGSRC.sed:M[yY][eE][sS])
-${TOOLS_DEPENDS.sed}+=		gsed>=3.0.2:../../textproc/gsed
-TOOLS_SYMLINK+=			sed
-TOOLS_REAL_CMD.sed=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sed
-.    if exists(${TOOLS_REAL_CMD.sed})
-${_TOOLS_VARNAME.sed}=		${TOOLS_REAL_CMD.sed}
+MAKEFLAGS+=			TOOLS_IGNORE.gsed=
+.  elif !empty(_TOOLS_USE_PKGSRC.gsed:M[yY][eE][sS])
+${TOOLS_DEPENDS.gsed}+=		gsed>=3.0.2:../../textproc/gsed
+TOOLS_SYMLINK+=			gsed
+TOOLS_REAL_CMD.gsed=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sed
+.    if exists(${TOOLS_REAL_CMD.gsed})
+${_TOOLS_VARNAME.gsed}=		${TOOLS_REAL_CMD.gsed}
 .    endif
 .  endif
 .endif
