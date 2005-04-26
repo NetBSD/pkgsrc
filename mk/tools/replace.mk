@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.26 2005/04/26 22:20:42 jlam Exp $
+# $NetBSD: replace.mk,v 1.27 2005/04/26 22:28:03 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -50,14 +50,16 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`yacc'' conflict in USE_TOOLS."
 # This is an exhaustive list of tools for which we have pkgsrc
 # replacements.
 #
-_TOOLS_REPLACE_LIST=	bison egrep fgrep file gawk gm4 gmake grep gsed	\
-			gunzip gzcat gzip lex patch perl tbl yacc
+_TOOLS_REPLACE_LIST=	bison egrep fgrep file find gawk gm4 gmake grep	\
+			gsed gunzip gzcat gzip lex patch perl tbl xargs	\
+			yacc
 
 # "TOOL" variable names associated with each of the tools
 _TOOLS_VARNAME.bison=	YACC
 _TOOLS_VARNAME.egrep=	EGREP
 _TOOLS_VARNAME.fgrep=	FGREP
 _TOOLS_VARNAME.file=	FILE_CMD
+_TOOLS_VARNAME.find=	FIND
 _TOOLS_VARNAME.gawk=	AWK
 _TOOLS_VARNAME.gm4=	M4
 _TOOLS_VARNAME.gmake=	GMAKE
@@ -70,6 +72,7 @@ _TOOLS_VARNAME.lex=	LEX
 _TOOLS_VARNAME.patch=	PATCH
 _TOOLS_VARNAME.perl=	PERL5
 _TOOLS_VARNAME.tbl=	TBL
+_TOOLS_VARNAME.xargs=	XARGS
 _TOOLS_VARNAME.yacc=	YACC
 
 ######################################################################
@@ -87,6 +90,7 @@ _TOOLS_USE_PLATFORM.fgrep=	${_TOOLS_USE_PLATFORM.grep}
 _TOOLS_USE_PLATFORM.file=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
 				Linux-*-* NetBSD-*-* OpenBSD-*-*	\
 				SunOS-*-*
+_TOOLS_USE_PLATFORM.find=	Linux-*-*
 _TOOLS_USE_PLATFORM.gawk=	DragonFly-*-* FreeBSD-*-* Interix-*-*	\
 				Linux-*-* NetBSD-1.[0-6]*-* OpenBSD-*-*	\
 				SunOS-*-*
@@ -110,6 +114,7 @@ _TOOLS_USE_PLATFORM.patch=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
 _TOOLS_USE_PLATFORM.perl=	# This should always be empty.
 _TOOLS_USE_PLATFORM.tbl=	DragonFly-*-* FreeBSD-*-* NetBSD-*-*	\
 				OpenBSD-*-*
+_TOOLS_USE_PLATFORM.xargs=	${_TOOLS_USE_PLATFORM.find}
 _TOOLS_USE_PLATFORM.yacc=	DragonFly-*-* FreeBSD-*-* NetBSD-*-*	\
 				OpenBSD-*-*
 
@@ -205,6 +210,36 @@ TOOLS_SYMLINK+=			file
 TOOLS_REAL_CMD.file=		${LOCALBASE}/bin/file
 .    if exists(${TOOLS_REAL_CMD.file})
 ${_TOOLS_VARNAME.file}=	${TOOLS_REAL_CMD.file}
+.    endif
+.  endif
+.endif
+
+.if (!defined(TOOLS_IGNORE.find) && \
+     !defined(TOOLS_IGNORE.xargs)) && \
+    (!empty(USE_TOOLS:Mfind) || \
+     !empty(USE_TOOLS:Mxargs))
+_TOOLS_FINDUTILS=		find xargs
+.  if !empty(PKGPATH:Msysutils/findutils)
+.    for _t_ in ${_TOOLS_FINDUTILS}
+MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
+.    endfor
+.  else
+.    for _t_ in ${_TOOLS_FINDUTILS}
+.      if empty(USE_TOOLS:M${_t_})
+USE_TOOLS+=	${_t_}
+.      endif
+.    endfor
+.    if !empty(_TOOLS_USE_PKGSRC.find:M[yY][eE][sS]) || \
+        !empty(_TOOLS_USE_PKGSRC.xargs:M[yY][eE][sS])
+${TOOLS_DEPENDS.find}+=		findutils>=4.1:../../sysutils/findutils
+.      for _t_ in ${_TOOLS_FINDUTILS}
+_TOOLS_USE_PKGSRC.${_t_}=	yes
+TOOLS_SYMLINK+=			${_t_}
+TOOLS_REAL_CMD.${_t_}=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}${_t_}
+.        if exists(${TOOLS_REAL_CMD.${_t_}})
+${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}}
+.        endif
+.      endfor
 .    endif
 .  endif
 .endif
