@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9964 2005/04/25 18:03:30 adam Exp $
+$NetBSD: CHANGES,v 1.9965 2005/04/26 00:45:33 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2195,3 +2195,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated squid to 2.5.9nb8 [taca 2005-04-25]
 	Updated nxtvepg to 2.7.5 [magick 2005-04-25]
 	Updated libcddb to 1.0.1 [adam 2005-04-25]
+	Updated nget to 0.27.1 [reed 2005-4-26]
