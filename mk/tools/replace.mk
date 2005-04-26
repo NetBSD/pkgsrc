@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.16 2005/04/26 16:19:37 jlam Exp $
+# $NetBSD: replace.mk,v 1.17 2005/04/26 18:59:48 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -373,7 +373,8 @@ ${_TOOLS_VARNAME.yacc}=		${TOOLS_REAL_CMD.yacc} ${TOOLS_ARGS.yacc}
 # there are any arguments or not.  If PLATFORM_TOOL.<tool> is undefined
 # or emtpy, then we fall back to checking if TOOL is defined.  Lastly,
 # always set the TOOL name for each tool to point to the real command,
-# e.g., TBL, YACC, etc.
+# e.g., TBL, YACC, etc., provided that "TOOL" has been associated with
+# <tool>.
 #
 .for _t_ in ${_TOOLS_REPLACE_LIST}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(USE_TOOLS:M${_t_}) && \
@@ -399,10 +400,12 @@ TOOLS_WRAP+=			${_t_}
 .      else
 TOOLS_SYMLINK+=			${_t_}
 .      endif
-.    elif defined(TOOLS_REAL_CMD.${_t_})
+.    elif defined(_TOOLS_VARNAME.${_t_})
+.      if defined(TOOLS_REAL_CMD.${_t_})
 ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_ARGS.${_t_}}
-.    else
+.      else
 ${_TOOLS_VARNAME.${_t_}}=	${_TOOLS_VARNAME.${_t_}}_not_defined_
+.      endif
 .    endif
 .  endif
 .endfor
