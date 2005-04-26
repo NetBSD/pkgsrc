@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.5 2005/04/24 03:54:29 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.6 2005/04/26 14:47:15 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -110,7 +110,8 @@ TOOLS_REAL_CMDLINE.${_t_}?=	${TOOLS_REAL_CMD.${_t_}} ${_t_:T:C/-[0-9].*$//}
 
 # The default wrapper script will invoke the real command, followed by
 # any arguments specified in TOOLS_ARGS.*, followed by any command-line
-# arguments passed to the wrapper script.
+# arguments passed to the wrapper script.  By default, the wrapper in
+# ${TOOLS_DIR} will be in the "bin" directory and will be called <tool>.
 #
 .for _t_ in ${TOOLS_WRAP}
 .  if defined(TOOLS_REAL_CMD.${_t_}) && !empty(TOOLS_REAL_CMD.${_t_}:M/*)
@@ -150,8 +151,8 @@ ${TOOLS_CMD.${_t_}}:
 
 ######################################################################
 
-# By default, the symlinked tool in ${TOOLS_DIR} will have the same name
-# as the real command.
+# By default, the symlinked tool in ${TOOLS_DIR} will be in the "bin"
+# directory and will be called <tool>.
 #
 .for _t_ in ${TOOLS_SYMLINK}
 .  if defined(TOOLS_REAL_CMD.${_t_}) && !empty(TOOLS_REAL_CMD.${_t_}:M/*)
@@ -159,8 +160,7 @@ ${TOOLS_CMD.${_t_}}:
 .  else
 TOOLS_REAL_CMD.${_t_}?=	${FALSE}
 .  endif
-TOOLS_CMD.${_t_}?=	\
-	${TOOLS_REAL_CMD.${_t_}:C/.*\/${TOOLS_REAL_CMD.${_t_}:H:T}\//${TOOLS_DIR}\/${TOOLS_REAL_CMD.${_t_}:H:T}\//}
+TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 
 .  if !empty(TOOLS_CMD.${_t_}:M${TOOLS_DIR}/*) && \
       !target(${TOOLS_CMD.${_t_}}) && exists(${TOOLS_REAL_CMD.${_t_}})
