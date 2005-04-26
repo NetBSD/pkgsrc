@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/03/22 16:09:27 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/04/26 20:00:06 drochner Exp $
 bin/gnome-about
 include/gnome-desktop-2.0/libgnome/gnome-desktop-item.h
 include/gnome-desktop-2.0/libgnomeui/gnome-ditem-edit.h
@@ -84,6 +84,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-desktop-2.0.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-desktop-2.0.mo
