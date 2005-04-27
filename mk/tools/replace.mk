@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.38 2005/04/27 16:28:19 jlam Exp $
+# $NetBSD: replace.mk,v 1.39 2005/04/27 16:29:45 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -157,7 +157,7 @@ TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
 MAKEFLAGS+=			TOOLS_IGNORE.cmp=
 .  elif !empty(_TOOLS_USE_PKGSRC.cmp:M[yY][eE][sS])
 ${TOOLS_DEPENDS.cmp}+=		diffutils>=2.8.1:../../devel/diffutils
-TOOLS_WRAP+=			cmp
+TOOLS_SYMLINK+=			cmp
 TOOLS_REAL_CMD.cmp=		${LOCALBASE}/bin/cmp
 .    if exists(${TOOLS_REAL_CMD.cmp})
 ${_TOOLS_VARNAME.cmp}=		${TOOLS_REAL_CMD.cmp}
