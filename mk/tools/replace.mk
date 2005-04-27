@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.37 2005/04/27 16:02:08 jlam Exp $
+# $NetBSD: replace.mk,v 1.38 2005/04/27 16:28:19 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -59,11 +59,13 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`yacc'' conflict in USE_TOOLS."
 # This is an exhaustive list of tools for which we have pkgsrc
 # replacements.
 #
-_TOOLS_REPLACE_LIST=	bison cmp egrep fgrep file find gawk gm4 gmake	\
-			grep gsed gtar gunzip gzcat gzip lex mtree	\
-			patch pax perl sh shlock tbl xargs yacc
+_TOOLS_REPLACE_LIST=	awk bison cmp egrep fgrep file find gawk gm4	\
+			gmake grep gsed gtar gunzip gzcat gzip lex m4	\
+			mtree patch pax perl sed sh shlock tbl xargs	\
+			yacc
 
 # "TOOL" variable names associated with each of the tools
+_TOOLS_VARNAME.awk=	AWK
 _TOOLS_VARNAME.bison=	YACC
 _TOOLS_VARNAME.cmp=	CMP
 _TOOLS_VARNAME.egrep=	EGREP
@@ -80,10 +82,12 @@ _TOOLS_VARNAME.gunzip=	GUNZIP_CMD
 _TOOLS_VARNAME.gzcat=	GZCAT
 _TOOLS_VARNAME.gzip=	GZIP_CMD
 _TOOLS_VARNAME.lex=	LEX
+_TOOLS_VARNAME.m4=	M4
 _TOOLS_VARNAME.mtree=	MTREE
 _TOOLS_VARNAME.patch=	PATCH
 _TOOLS_VARNAME.pax=	PAX
 _TOOLS_VARNAME.perl=	PERL5
+_TOOLS_VARNAME.sed=	SED
 _TOOLS_VARNAME.sh=	SH
 _TOOLS_VARNAME.shlock=	SHLOCK
 _TOOLS_VARNAME.tbl=	TBL
@@ -119,6 +123,20 @@ TOOLS_DEPENDS.${_t_}?=	BUILD_DEPENDS
 # of TOOLS_IGNORE.<tool>.  If we're using the system-supplied tool, we
 # defer the setting of TOOLS_REAL_CMD.<tool> until the loop at the end.
 #
+.if !defined(TOOLS_IGNORE.awk) && !empty(USE_TOOLS:Mawk) && \
+    empty(USE_TOOLS:Mgawk)
+.  if !empty(PKGPATH:Mlang/gawk)
+MAKEFLAGS+=			TOOLS_IGNORE.awk=
+.  elif !empty(_TOOLS_USE_PKGSRC.awk:M[yY][eE][sS])
+${TOOLS_DEPENDS.awk}+=		gawk>=3.1.1:../../lang/gawk
+TOOLS_SYMLINK+=			awk
+TOOLS_REAL_CMD.awk=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
+.    if exists(${TOOLS_REAL_CMD.awk})
+${_TOOLS_VARNAME.awk}=		${TOOLS_REAL_CMD.awk}
+.    endif
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.bison) && !empty(USE_TOOLS:Mbison)
 .  if !empty(PKGPATH:Mdevel/bison)
 MAKEFLAGS+=			TOOLS_IGNORE.bison=
@@ -360,6 +378,20 @@ ${_TOOLS_VARNAME.lex}=		${TOOLS_REAL_CMD.lex}
 .  endif
 .endif
 
+.if !defined(TOOLS_IGNORE.m4) && !empty(USE_TOOLS:Mm4) && \
+    empty(USE_TOOLS:Mgm4)
+.  if !empty(PKGPATH:Mdevel/m4)
+MAKEFLAGS+=			TOOLS_IGNORE.m4=
+.  elif !empty(_TOOLS_USE_PKGSRC.m4:M[yY][eE][sS])
+${TOOLS_DEPENDS.m4}+=		m4>=1.4:../../devel/m4
+TOOLS_SYMLINK+=			m4
+TOOLS_REAL_CMD.m4=		${LOCALBASE}/bin/gm4
+.    if exists(${TOOLS_REAL_CMD.m4})
+${_TOOLS_VARNAME.m4}=		${TOOLS_REAL_CMD.m4}
+.    endif
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.mtree) && !empty(USE_TOOLS:Mmtree)
 .  if !empty(PKGPATH:Mpkgtools/mtree)
 MAKEFLAGS+=			TOOLS_IGNORE.mtree=
@@ -399,6 +431,20 @@ TOOLS_SYMLINK+=			perl
 TOOLS_REAL_CMD.perl=		${LOCALBASE}/bin/perl
 .    if exists(${TOOLS_REAL_CMD.perl})
 ${_TOOLS_VARNAME.perl}=		${TOOLS_REAL_CMD.perl}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.sed) && !empty(USE_TOOLS:Msed) && \
+    empty(USE_TOOLS:Mgsed)
+.  if !empty(PKGPATH:Mtextproc/nbsed)
+MAKEFLAGS+=			TOOLS_IGNORE.sed=
+.  elif !empty(_TOOLS_USE_PKGSRC.sed:M[yY][eE][sS])
+${TOOLS_DEPENDS.sed}+=		nbsed>=20040821:../../textproc/nbsed
+TOOLS_SYMLINK+=			sed
+TOOLS_REAL_CMD.sed=		${LOCALBASE}/bin/nbsed
+.    if exists(${TOOLS_REAL_CMD.sed})
+${_TOOLS_VARNAME.sed}=	${TOOLS_REAL_CMD.sed}
 .    endif
 .  endif
 .endif
