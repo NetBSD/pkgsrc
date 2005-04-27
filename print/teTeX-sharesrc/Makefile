@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/03/24 21:13:00 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/27 21:22:14 hira Exp $
 
 DISTNAME=	tetex-texmfsrc-2.0.2
 PKGNAME=	teTeX-sharesrc-2.0.2
@@ -15,7 +15,6 @@ DEPENDS+=	teTeX-share>=2.0.2:../teTeX-share
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	teTeX
-USE_BUILDINK2=	yes
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
