@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.36 2005/04/27 15:28:16 jlam Exp $
+# $NetBSD: replace.mk,v 1.37 2005/04/27 16:02:08 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -92,77 +92,15 @@ _TOOLS_VARNAME.yacc=	YACC
 
 ######################################################################
 
-# For each tool, _TOOLS_USE_PLATFORM.<tool> is a list of platforms for
-# which we will use the system-supplied tool instead of the pkgsrc
-# version.
-#
-# This table should probably be split amongst the various mk/platform
-# files as they are ${OPSYS}-specific.
-#
-_TOOLS_USE_PLATFORM.bison=	Linux-*-*
-_TOOLS_USE_PLATFORM.cmp=	BSDOS-*-* Darwin-*-* DragonFly-*-*	\
-				FreeBSD-*-* IRIX-*-* Interix-*-*	\
-				Linux-*-* NetBSD-*-* OSF1-*-*		\
-				OpenBSD-*-* SunOS-*-*
-_TOOLS_USE_PLATFORM.egrep=	${_TOOLS_USE_PLATFORM.grep}
-_TOOLS_USE_PLATFORM.fgrep=	${_TOOLS_USE_PLATFORM.grep}
-_TOOLS_USE_PLATFORM.file=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
-				Linux-*-* NetBSD-*-* OpenBSD-*-*	\
-				SunOS-*-*
-_TOOLS_USE_PLATFORM.find=	Linux-*-*
-_TOOLS_USE_PLATFORM.gawk=	DragonFly-*-* FreeBSD-*-* Interix-*-*	\
-				Linux-*-* NetBSD-1.[0-6]*-* OpenBSD-*-*	\
-				SunOS-*-*
-_TOOLS_USE_PLATFORM.gm4=	# empty
-_TOOLS_USE_PLATFORM.gmake=	Darwin-*-*
-_TOOLS_USE_PLATFORM.grep=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
-				Linux-*-* NetBSD-*-* OpenBSD-*-*	\
-				SunOS-*-*
-_TOOLS_USE_PLATFORM.gsed=	Interix-*-* Linux-*-* SunOS-*-*
-_TOOLS_USE_PLATFORM.gtar=	${_TOOLS_USE_PLATFORM.pax}
-_TOOLS_USE_PLATFORM.gunzip=	${_TOOLS_USE_PLATFORM.gzip}
-_TOOLS_USE_PLATFORM.gzcat=	${_TOOLS_USE_PLATFORM.gzip}
-_TOOLS_USE_PLATFORM.gzip=	BSDOS-*-* Darwin-*-* DragonFly-*-*	\
-				FreeBSD-*-* IRIX-*-* Interix-*-*	\
-				Linux-*-* NetBSD-*-* OSF1-*-*		\
-				OpenBSD-*-* SunOS-*-*
-_TOOLS_USE_PLATFORM.lex=	DragonFly-*-* FreeBSD-*-* Linux-*-*	\
-				NetBSD-*-* OpenBSD-*-*
-_TOOLS_USE_PLATFORM.mtree=	BSDOS-*-* Darwin-*-* DragonFly-*-*	\
-				FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
-_TOOLS_USE_PLATFORM.patch=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
-				Linux-*-* NetBSD-*-* OpenBSD-*-*	\
-				SunOS-*-*
-_TOOLS_USE_PLATFORM.pax=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
-				Interix-*-* Linux-*-* NetBSD-*-*	\
-				OpenBSD-*-*
-_TOOLS_USE_PLATFORM.perl=	# This should always be empty.
-_TOOLS_USE_PLATFORM.sh=		*-*-*	# every platform has a Bourne shell
-_TOOLS_USE_PLATFORM.shlock=	AIX-*-* Darwin-*-* DragonFly-*-*	\
-				FreeBSD-*-* NetBSD-*-*
-_TOOLS_USE_PLATFORM.tbl=	DragonFly-*-* FreeBSD-*-* NetBSD-*-*	\
-				OpenBSD-*-*
-_TOOLS_USE_PLATFORM.xargs=	${_TOOLS_USE_PLATFORM.find}
-_TOOLS_USE_PLATFORM.yacc=	DragonFly-*-* FreeBSD-*-* NetBSD-*-*	\
-				OpenBSD-*-*
-
-######################################################################
-
 # _TOOLS_USE_PKGSRC.<tool> is "yes" or "no" depending on whether we're
 # using a pkgsrc-supplied tool to replace the system-supplied one.  We
 # use the system-supplied one if PLATFORM_TOOL.<tool> is non-empty, or
 # otherwise if this is a particular ${MACHINE_PLATFORM} listed above.
 #
 .for _t_ in ${_TOOLS_REPLACE_LIST}
-.  for _pattern_ in ${_TOOLS_USE_PLATFORM.${_t_}}
-.    if defined(PLATFORM_TOOL.${_t_}) && !empty(PLATFORM_TOOL.${_t_})
+.  if defined(PLATFORM_TOOL.${_t_}) && !empty(PLATFORM_TOOL.${_t_})
 _TOOLS_USE_PKGSRC.${_t_}?=	no
-.    endif
-.    if !empty(MACHINE_PLATFORM:M${_pattern_})
-_TOOLS_USE_PKGSRC.${_t_}?=	no
-.    endif
-.  endfor
-.  undef _pattern_
+.  endif
 _TOOLS_USE_PKGSRC.${_t_}?=	yes
 .endfor
 .undef _t_
