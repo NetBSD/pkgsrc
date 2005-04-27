@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2005/02/23 20:39:47 agc Exp $
+$NetBSD: distinfo,v 1.11 2005/04/27 08:59:41 wiz Exp $
 
 SHA1 (audiofile-0.2.6.tar.gz) = 94a6ab8e5122bc1971cf186e5a52d032811c9bc5
 RMD160 (audiofile-0.2.6.tar.gz) = b61fbc856768a5838ca5c0fad602f35205e8d037
 Size (audiofile-0.2.6.tar.gz) = 374688 bytes
+SHA1 (patch-aa) = 7c498a63fe055f1f7e16f45f655341a9b6708f71
 SHA1 (patch-ab) = cd292a827aa18b9839305b2c62c3dbd526384430
