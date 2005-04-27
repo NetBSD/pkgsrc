@@ -1,15 +1,15 @@
 #!/bin/sh
-# $NetBSD: cpuflags.Linux,v 1.13 2005/04/08 07:24:25 abs Exp $
+# $NetBSD: cpuflags.Linux,v 1.14 2005/04/27 10:55:21 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
 
 display_hw_details()
     {
-    echo "  OS              : '$(uname)'"
-    echo "  proc model      : '$hw_model'"
+    echo "  OS		    : '$(uname)'"
+    echo "  proc model	    : '$hw_model'"
     echo "  machine_arch    : '$hw_machine_arch'"
-    echo "  proc flags      : '$hw_flags'"
+    echo "  proc flags	    : '$hw_flags'"
     }
 
 hw_machine_arch=$(uname -m)
@@ -33,6 +33,7 @@ case $hw_machine_arch in
 	"AMD Athlon(tm) XP "*)		FLAGS='-march=athlon-xp'	;;
 	"Celeron (Coppermine)")		FLAGS='-march=pentium3'		;;
 	"Pentium III (Coppermine)")	FLAGS='-march=pentium3'		;;
+	"Intel(R) Pentium(R) III Mobile CPU"*) FLAGS='-march=pentium3m' ;;
 	"Intel(R) Pentium(R) M processor"*) FLAGS='-march=pentium3m'	;;
 	"Intel(R) Pentium(R) 4 CPU "*)	FLAGS='-march=pentium4'		;;
 	"Intel(R) Celeron(R) CPU "*)
