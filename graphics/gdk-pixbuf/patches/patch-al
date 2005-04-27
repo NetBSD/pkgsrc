@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2005/04/27 11:05:42 wiz Exp $
+
+--- gdk-pixbuf.m4.orig	2001-02-22 23:57:21.000000000 +0100
++++ gdk-pixbuf.m4
+@@ -9,7 +9,7 @@
+ dnl AM_PATH_GDK_PIXBUF([MINIMUM-VERSION, [ACTION-IF-FOUND [, ACTION-IF-NOT-FOUND]]])
+ dnl Test for GDK_PIXBUF, and define GDK_PIXBUF_CFLAGS and GDK_PIXBUF_LIBS
+ dnl
+-AC_DEFUN(AM_PATH_GDK_PIXBUF,
++AC_DEFUN([AM_PATH_GDK_PIXBUF],
+ [dnl 
+ dnl Get the cflags and libraries from the gdk-pixbuf-config script
+ dnl

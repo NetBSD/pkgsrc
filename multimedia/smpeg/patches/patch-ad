@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2005/04/27 11:06:39 wiz Exp $
+
+--- smpeg.m4.orig	2001-04-04 22:28:14.000000000 +0200
++++ smpeg.m4
+@@ -10,7 +10,7 @@ dnl AM_PATH_SMPEG([MINIMUM-VERSION, [ACT
+ ACTION-IF-NOT-FOUND]]])
+ dnl Test for SMPEG, and define SMPEG_CFLAGS and SMPEG_LIBS
+ dnl
+-AC_DEFUN(AM_PATH_SMPEG,
++AC_DEFUN([AM_PATH_SMPEG],
+ [dnl
+ dnl Get the cflags and libraries from the smpeg-config script
+ dnl
