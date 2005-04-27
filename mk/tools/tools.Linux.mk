@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.1 2005/04/27 15:28:16 jlam Exp $
+# $NetBSD: tools.Linux.mk,v 1.2 2005/04/27 15:36:26 jlam Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -7,6 +7,9 @@ PLATFORM_TOOL.awk?=		${PLATFORM_TOOL.gawk}
 PLATFORM_TOOL.basename?=	/bin/basename
 .elif exists(/usr/bin/basename)
 PLATFORM_TOOL.basename?=	/usr/bin/basename
+.endif
+.if exists(/usr/bin/bison)
+PLATFORM_TOOL.bison?=		/usr/bin/bison
 .endif
 PLATFORM_TOOL.cat?=		/bin/cat
 PLATFORM_TOOL.chgrp?=		/bin/chgrp
@@ -52,7 +55,7 @@ PLATFORM_TOOL.grep?=		/bin/grep
 PLATFORM_TOOL.grep?=		/usr/bin/grep
 .endif
 .if exists(/bin/sed)
-PLATFORM_TOOL.gsed?=		/usr/bin/sed
+PLATFORM_TOOL.gsed?=		/bin/sed
 .elif exists(/usr/bin/sed)
 PLATFORM_TOOL.gsed?=		/usr/bin/sed
 .endif
