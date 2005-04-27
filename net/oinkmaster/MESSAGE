@@ -1,14 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/04/20 09:36:09 xtraeme Exp $
+$NetBSD: MESSAGE,v 1.2 2005/04/27 19:50:48 adrianp Exp $
 
 You will receive two false positives about classification.config and
 reference.config as oinkmaster expects these files to be in 
 ${PREFIX}/share/snort/rules.  To resolve this enter the following
 commands:
 
- ln -s ${PKG_SYSCONFDIR}/snort/classification.config \
+ ${LN} -s ${PKG_SYSCONFDIR}/snort/classification.config \
 	${PREFIX}/share/snort/rules/classification.config
- ln -s ${PKG_SYSCONFDIR}/snort/reference.config \
+ ${LN} -s ${PKG_SYSCONFDIR}/snort/reference.config \
 	${PREFIX}/share/snort/rules/reference.config
 
 ===========================================================================
