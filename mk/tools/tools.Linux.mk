@@ -1,121 +1,121 @@
-# $NetBSD: tools.Linux.mk,v 1.3 2005/04/27 15:59:57 jlam Exp $
+# $NetBSD: tools.Linux.mk,v 1.4 2005/04/27 16:52:28 jlam Exp $
 #
 # System-supplied tools for the Linux operating system.
 
-PLATFORM_TOOL.awk?=		${PLATFORM_TOOL.gawk}
+TOOLS_PLATFORM.awk?=		${TOOLS_PLATFORM.gawk}
 .if exists(/bin/basename)
-PLATFORM_TOOL.basename?=	/bin/basename
+TOOLS_PLATFORM.basename?=	/bin/basename
 .elif exists(/usr/bin/basename)
-PLATFORM_TOOL.basename?=	/usr/bin/basename
+TOOLS_PLATFORM.basename?=	/usr/bin/basename
 .endif
 .if exists(/usr/bin/bison)
-PLATFORM_TOOL.bison?=		/usr/bin/bison
+TOOLS_PLATFORM.bison?=		/usr/bin/bison
 .endif
-PLATFORM_TOOL.cat?=		/bin/cat
-PLATFORM_TOOL.chgrp?=		/bin/chgrp
-PLATFORM_TOOL.chmod?=		/bin/chmod
-PLATFORM_TOOL.chown?=		/bin/chown
+TOOLS_PLATFORM.cat?=		/bin/cat
+TOOLS_PLATFORM.chgrp?=		/bin/chgrp
+TOOLS_PLATFORM.chmod?=		/bin/chmod
+TOOLS_PLATFORM.chown?=		/bin/chown
 .if exists(/bin/cmp)
-PLATFORM_TOOL.cmp?=		/bin/cmp
+TOOLS_PLATFORM.cmp?=		/bin/cmp
 .elif exists(/usr/bin/cmp)
-PLATFORM_TOOL.cmp?=		/usr/bin/cmp
+TOOLS_PLATFORM.cmp?=		/usr/bin/cmp
 .endif
-PLATFORM_TOOL.cp?=		/bin/cp
+TOOLS_PLATFORM.cp?=		/bin/cp
 .if exists(/bin/cut)
-PLATFORM_TOOL.cut?=		/bin/cut
+TOOLS_PLATFORM.cut?=		/bin/cut
 .elif exists(/usr/bin/cut)
-PLATFORM_TOOL.cut?=		/usr/bin/cut
+TOOLS_PLATFORM.cut?=		/usr/bin/cut
 .endif
-PLATFORM_TOOL.date?=		/bin/date
-PLATFORM_TOOL.dirname?=		/usr/bin/dirname
-PLATFORM_TOOL.echo?=		echo			# shell builtin
+TOOLS_PLATFORM.date?=		/bin/date
+TOOLS_PLATFORM.dirname?=	/usr/bin/dirname
+TOOLS_PLATFORM.echo?=		echo			# shell builtin
 .if exists(/bin/egrep)
-PLATFORM_TOOL.egrep?=		/bin/egrep
+TOOLS_PLATFORM.egrep?=		/bin/egrep
 .elif exists(/usr/bin/egrep)
-PLATFORM_TOOL.egrep?=		/usr/bin/egrep
+TOOLS_PLATFORM.egrep?=		/usr/bin/egrep
 .endif
-PLATFORM_TOOL.env?=		/usr/bin/env
-PLATFORM_TOOL.expr?=		/usr/bin/expr
-PLATFORM_TOOL.false?=		false			# shell builtin
+TOOLS_PLATFORM.env?=		/usr/bin/env
+TOOLS_PLATFORM.expr?=		/usr/bin/expr
+TOOLS_PLATFORM.false?=		false			# shell builtin
 .if exists(/bin/fgrep)
-PLATFORM_TOOL.fgrep?=		/bin/fgrep
+TOOLS_PLATFORM.fgrep?=		/bin/fgrep
 .elif exists(/usr/bin/fgrep)
-PLATFORM_TOOL.fgrep?=		/usr/bin/fgrep
+TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 .endif
-PLATFORM_TOOL.file?=		/usr/bin/file
-PLATFORM_TOOL.find?=		/usr/bin/find
-PLATFORM_TOOL.gawk?=		/usr/bin/awk
-PLATFORM_TOOL.gm4?=		/usr/bin/m4
+TOOLS_PLATFORM.file?=		/usr/bin/file
+TOOLS_PLATFORM.find?=		/usr/bin/find
+TOOLS_PLATFORM.gawk?=		/usr/bin/awk
+TOOLS_PLATFORM.gm4?=		/usr/bin/m4
 .if exists(/usr/bin/make)
-PLATFORM_TOOL.gmake?=		/usr/bin/make
+TOOLS_PLATFORM.gmake?=		/usr/bin/make
 .endif
 .if exists(/bin/grep)
-PLATFORM_TOOL.grep?=		/bin/grep
+TOOLS_PLATFORM.grep?=		/bin/grep
 .elif exists(/bin/grep)
-PLATFORM_TOOL.grep?=		/usr/bin/grep
+TOOLS_PLATFORM.grep?=		/usr/bin/grep
 .endif
 .if exists(/bin/sed)
-PLATFORM_TOOL.gsed?=		/bin/sed
+TOOLS_PLATFORM.gsed?=		/bin/sed
 .elif exists(/usr/bin/sed)
-PLATFORM_TOOL.gsed?=		/usr/bin/sed
+TOOLS_PLATFORM.gsed?=		/usr/bin/sed
 .endif
-PLATFORM_TOOL.gtar?=		/bin/tar
+TOOLS_PLATFORM.gtar?=		/bin/tar
 .if exists(/bin/gunzip)
-PLATFORM_TOOL.gunzip?=		/bin/gunzip -f
+TOOLS_PLATFORM.gunzip?=		/bin/gunzip -f
 .elif exists(/usr/bin/gunzip)
-PLATFORM_TOOL.gunzip?=		/usr/bin/gunzip -f
+TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 .endif
-PLATFORM_TOOL.gzcat?=		/bin/zcat
+TOOLS_PLATFORM.gzcat?=		/bin/zcat
 .if exists(/bin/gzip)
-PLATFORM_TOOL.gzip?=		/usr/bin/gzip -nf ${GZIP}
+TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
 .elif exists(/usr/bin/gzip)
-PLATFORM_TOOL.gzip?=		/usr/bin/gzip -nf ${GZIP}
+TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
 .endif
 .if exists(/bin/head)
-PLATFORM_TOOL.head?=		/bin/head
+TOOLS_PLATFORM.head?=		/bin/head
 .elif exists(/usr/bin/head)
-PLATFORM_TOOL.head?=		/usr/bin/head
+TOOLS_PLATFORM.head?=		/usr/bin/head
 .endif
-PLATFORM_TOOL.hostname?=	/bin/hostname
+TOOLS_PLATFORM.hostname?=	/bin/hostname
 .if exists(/bin/id)
-PLATFORM_TOOL.id?=		/bin/id
+TOOLS_PLATFORM.id?=		/bin/id
 .elif exists(/usr/bin/id)
-PLATFORM_TOOL.id?=		/usr/bin/id
+TOOLS_PLATFORM.id?=		/usr/bin/id
 .endif
 .if exists(/usr/bin/lex)
-PLATFORM_TOOL.lex?=		/usr/bin/lex
+TOOLS_PLATFORM.lex?=		/usr/bin/lex
 .endif
-PLATFORM_TOOL.ln?=		/bin/ln
-PLATFORM_TOOL.ls?=		/bin/ls
-PLATFORM_TOOL.m4?=		${PLATFORM_TOOL.gm4}
-PLATFORM_TOOL.mkdir?=		/bin/mkdir -p
-PLATFORM_TOOL.mv?=		/bin/mv
+TOOLS_PLATFORM.ln?=		/bin/ln
+TOOLS_PLATFORM.ls?=		/bin/ls
+TOOLS_PLATFORM.m4?=		${TOOLS_PLATFORM.gm4}
+TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
+TOOLS_PLATFORM.mv?=		/bin/mv
 .if exists(/bin/nice)
-PLATFORM_TOOL.nice?=		/bin/nice
+TOOLS_PLATFORM.nice?=		/bin/nice
 .if exists(/usr/bin/nice)
-PLATFORM_TOOL.nice?=		/usr/bin/nice
+TOOLS_PLATFORM.nice?=		/usr/bin/nice
 .endif
-PLATFORM_TOOL.patch?=		/usr/bin/patch
-PLATFORM_TOOL.pwd?=		/bin/pwd
-PLATFORM_TOOL.rm?=		/bin/rm
-PLATFORM_TOOL.rmdir?=		/bin/rmdir
-PLATFORM_TOOL.sed?=		${PLATFORM_TOOL.gsed}
-PLATFORM_TOOL.sh?=		/bin/sh
+TOOLS_PLATFORM.patch?=		/usr/bin/patch
+TOOLS_PLATFORM.pwd?=		/bin/pwd
+TOOLS_PLATFORM.rm?=		/bin/rm
+TOOLS_PLATFORM.rmdir?=		/bin/rmdir
+TOOLS_PLATFORM.sed?=		${TOOLS_PLATFORM.gsed}
+TOOLS_PLATFORM.sh?=		/bin/sh
 .if exists(/bin/sort)
-PLATFORM_TOOL.sort?=		/bin/sort
+TOOLS_PLATFORM.sort?=		/bin/sort
 .elif exists(/usr/bin/sort)
-PLATFORM_TOOL.sort?=		/usr/bin/sort
+TOOLS_PLATFORM.sort?=		/usr/bin/sort
 .endif
-PLATFORM_TOOL.tail?=		/usr/bin/tail
-PLATFORM_TOOL.tee?=		/usr/bin/tee
-PLATFORM_TOOL.test?=		test			# shell builtin
+TOOLS_PLATFORM.tail?=		/usr/bin/tail
+TOOLS_PLATFORM.tee?=		/usr/bin/tee
+TOOLS_PLATFORM.test?=		test			# shell builtin
 .if exists(/bin/touch)
-PLATFORM_TOOL.touch?=		/bin/touch
+TOOLS_PLATFORM.touch?=		/bin/touch
 .elif exists(/usr/bin/touch)
-PLATFORM_TOOL.touch?=		/usr/bin/touch
+TOOLS_PLATFORM.touch?=		/usr/bin/touch
 .endif
-PLATFORM_TOOL.tr?=		/usr/bin/tr
-PLATFORM_TOOL.true?=		true			# shell builtin
-PLATFORM_TOOL.tsort?=		/usr/bin/tsort
-PLATFORM_TOOL.wc?=		/usr/bin/wc
-PLATFORM_TOOL.xargs?=		/usr/bin/xargs
+TOOLS_PLATFORM.tr?=		/usr/bin/tr
+TOOLS_PLATFORM.true?=		true			# shell builtin
+TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
+TOOLS_PLATFORM.wc?=		/usr/bin/wc
+TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
