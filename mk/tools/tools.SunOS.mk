@@ -1,59 +1,59 @@
-# $NetBSD: tools.SunOS.mk,v 1.2 2005/04/27 15:58:18 jlam Exp $
+# $NetBSD: tools.SunOS.mk,v 1.3 2005/04/27 16:52:28 jlam Exp $
 #
 # System-supplied tools for the Solaris operating system.
 
-PLATFORM_TOOL.awk?=		/usr/bin/nawk
-PLATFORM_TOOL.basename?=	/usr/bin/basename
-PLATFORM_TOOL.cat?=		/usr/bin/cat
-PLATFORM_TOOL.chgrp?=		/usr/bin/chgrp
-PLATFORM_TOOL.chmod?=		/usr/bin/chmod
-PLATFORM_TOOL.chown?=		/usr/bin/chown
+TOOLS_PLATFORM.awk?=		/usr/bin/nawk
+TOOLS_PLATFORM.basename?=	/usr/bin/basename
+TOOLS_PLATFORM.cat?=		/usr/bin/cat
+TOOLS_PLATFORM.chgrp?=		/usr/bin/chgrp
+TOOLS_PLATFORM.chmod?=		/usr/bin/chmod
+TOOLS_PLATFORM.chown?=		/usr/bin/chown
 .if exists(/bin/cmp).
-PLATFORM_TOOL.cmp?=		/bin/cmp
+TOOLS_PLATFORM.cmp?=		/bin/cmp
 .elif exists(/bin/cmp)
-PLATFORM_TOOL.cmp?=		/usr/bin/cmp
+TOOLS_PLATFORM.cmp?=		/usr/bin/cmp
 .endif
-PLATFORM_TOOL.cp?=		/bin/cp
-PLATFORM_TOOL.cut?=		/usr/bin/cut
-PLATFORM_TOOL.date?=		/usr/xpg4/bin/date
-PLATFORM_TOOL.dirname?=		/usr/bin/dirname
-PLATFORM_TOOL.echo?=		/usr/ucb/echo
-PLATFORM_TOOL.egrep?=		/usr/xpg4/bin/grep -E
-PLATFORM_TOOL.env?=		/usr/bin/env
-PLATFORM_TOOL.expr?=		/usr/xpg4/bin/expr
-PLATFORM_TOOL.false?=		/usr/bin/false
-PLATFORM_TOOL.fgrep?=		/usr/xpg4/bin/fgrep
-PLATFORM_TOOL.file?=		/usr/bin/file
-PLATFORM_TOOL.find?=		/usr/bin/find
-PLATFORM_TOOL.grep?=		/usr/xpg4/bin/grep
+TOOLS_PLATFORM.cp?=		/bin/cp
+TOOLS_PLATFORM.cut?=		/usr/bin/cut
+TOOLS_PLATFORM.date?=		/usr/xpg4/bin/date
+TOOLS_PLATFORM.dirname?=	/usr/bin/dirname
+TOOLS_PLATFORM.echo?=		/usr/ucb/echo
+TOOLS_PLATFORM.egrep?=		/usr/xpg4/bin/grep -E
+TOOLS_PLATFORM.env?=		/usr/bin/env
+TOOLS_PLATFORM.expr?=		/usr/xpg4/bin/expr
+TOOLS_PLATFORM.false?=		/usr/bin/false
+TOOLS_PLATFORM.fgrep?=		/usr/xpg4/bin/fgrep
+TOOLS_PLATFORM.file?=		/usr/bin/file
+TOOLS_PLATFORM.find?=		/usr/bin/find
+TOOLS_PLATFORM.grep?=		/usr/xpg4/bin/grep
 .if exists(/usr/bin/gzip)
-PLATFORM_TOOL.gunzip?=		/usr/bin/gzip -df
-PLATFORM_TOOL.gzcat?=		/usr/bin/gzip -cd
-PLATFORM_TOOL.gzip?=		/usr/bin/gzip -nf ${GZIP}
+TOOLS_PLATFORM.gunzip?=		/usr/bin/gzip -df
+TOOLS_PLATFORM.gzcat?=		/usr/bin/gzip -cd
+TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
 .endif
-PLATFORM_TOOL.head?=		/usr/bin/head
-PLATFORM_TOOL.hostname?=	/bin/hostname
-PLATFORM_TOOL.id?=		/usr/xpg4/bin/id
-PLATFORM_TOOL.ln?=		/usr/bin/ln
-PLATFORM_TOOL.ls?=		/usr/bin/ls
-PLATFORM_TOOL.m4?=		/usr/ccs/bin/m4
-PLATFORM_TOOL.mkdir?=		/usr/bin/mkdir -p
-PLATFORM_TOOL.mv?=		/usr/bin/mv
-PLATFORM_TOOL.nice?=		/usr/xpg4/bin/nice
+TOOLS_PLATFORM.head?=		/usr/bin/head
+TOOLS_PLATFORM.hostname?=	/bin/hostname
+TOOLS_PLATFORM.id?=		/usr/xpg4/bin/id
+TOOLS_PLATFORM.ln?=		/usr/bin/ln
+TOOLS_PLATFORM.ls?=		/usr/bin/ls
+TOOLS_PLATFORM.m4?=		/usr/ccs/bin/m4
+TOOLS_PLATFORM.mkdir?=		/usr/bin/mkdir -p
+TOOLS_PLATFORM.mv?=		/usr/bin/mv
+TOOLS_PLATFORM.nice?=		/usr/xpg4/bin/nice
 .if exists(/usr/bin/gpatch)
-PLATFORM_TOOL.patch?=		/usr/bin/gpatch
+TOOLS_PLATFORM.patch?=		/usr/bin/gpatch
 .endif
-PLATFORM_TOOL.pwd?=		/bin/pwd
-PLATFORM_TOOL.rm?=		/usr/bin/rm
-PLATFORM_TOOL.rmdir?=		/usr/bin/rmdir
-PLATFORM_TOOL.sh?=		/bin/ksh
-PLATFORM_TOOL.sort?=		/usr/bin/sort
-PLATFORM_TOOL.tail?=		/usr/xpg4/bin/tail
-PLATFORM_TOOL.tee?=		/usr/bin/tee
-PLATFORM_TOOL.test?=		test			# shell builtin
-PLATFORM_TOOL.touch?=		/usr/bin/touch
-PLATFORM_TOOL.tr?=		/usr/bin/tr
-PLATFORM_TOOL.true?=		/usr/bin/true
-PLATFORM_TOOL.tsort?=		/usr/ccs/bin/tsort
-PLATFORM_TOOL.wc?=		/usr/bin/wc
-PLATFORM_TOOL.xargs?=		/usr/bin/xargs
+TOOLS_PLATFORM.pwd?=		/bin/pwd
+TOOLS_PLATFORM.rm?=		/usr/bin/rm
+TOOLS_PLATFORM.rmdir?=		/usr/bin/rmdir
+TOOLS_PLATFORM.sh?=		/bin/ksh
+TOOLS_PLATFORM.sort?=		/usr/bin/sort
+TOOLS_PLATFORM.tail?=		/usr/xpg4/bin/tail
+TOOLS_PLATFORM.tee?=		/usr/bin/tee
+TOOLS_PLATFORM.test?=		test			# shell builtin
+TOOLS_PLATFORM.touch?=		/usr/bin/touch
+TOOLS_PLATFORM.tr?=		/usr/bin/tr
+TOOLS_PLATFORM.true?=		/usr/bin/true
+TOOLS_PLATFORM.tsort?=		/usr/ccs/bin/tsort
+TOOLS_PLATFORM.wc?=		/usr/bin/wc
+TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
