@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9977 2005/04/27 18:59:05 adrianp Exp $
+$NetBSD: CHANGES,v 1.9978 2005/04/27 19:51:49 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2221,3 +2221,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated octave-current to 2.9.2 [adam 2005-04-27]
 	Updated snort to 2.3.3 [adrianp 2005-04-27]
 	Updated sendmail to 8.13.4 [adrianp 2005-04-27]
+	Updated oinkmaster to 1.2 [adrianp 2005-04-27]
