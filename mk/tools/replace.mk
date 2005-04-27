@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.42 2005/04/27 17:15:13 jlam Exp $
+# $NetBSD: replace.mk,v 1.43 2005/04/27 17:29:06 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -38,10 +38,6 @@ USE_TOOLS+=	${USE_GNU_TOOLS:S/^awk$/gawk/:S/^make$/gmake/:S/^sed$/gsed/}
 USE_TOOLS+=	tbl
 .endif
 
-.if defined(USE_PERL5)
-USE_TOOLS+=	perl
-.endif
-
 # These are the platform-specific lists of system-supplied tools.
 #
 # XXX These should eventually just migrate over to the appropriate
@@ -57,8 +53,7 @@ USE_TOOLS+=	perl
 #
 _TOOLS_REPLACE_LIST=	awk bison cmp egrep fgrep file find gawk gm4	\
 			gmake grep gsed gtar gunzip gzcat gzip lex m4	\
-			mtree patch pax perl sed sh shlock tbl xargs	\
-			yacc
+			mtree patch pax sed sh shlock tbl xargs	yacc
 
 # "TOOL" variable names associated with each of the tools
 _TOOLS_VARNAME.awk=	AWK
@@ -82,7 +77,6 @@ _TOOLS_VARNAME.m4=	M4
 _TOOLS_VARNAME.mtree=	MTREE
 _TOOLS_VARNAME.patch=	PATCH
 _TOOLS_VARNAME.pax=	PAX
-_TOOLS_VARNAME.perl=	PERL5
 _TOOLS_VARNAME.sed=	SED
 _TOOLS_VARNAME.sh=	SH
 _TOOLS_VARNAME.shlock=	SHLOCK
@@ -416,19 +410,6 @@ TOOLS_SYMLINK+=			patch
 TOOLS_REAL_CMD.patch=		${LOCALBASE}/bin/gpatch
 .    if exists(${TOOLS_REAL_CMD.patch})
 ${_TOOLS_VARNAME.patch}=	${TOOLS_REAL_CMD.patch}
-.    endif
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.perl) && !empty(USE_TOOLS:Mperl)
-.  if !empty(PKGPATH:Mlang/perl5)
-MAKEFLAGS+=			TOOLS_IGNORE.perl=
-.  elif !empty(_TOOLS_USE_PKGSRC.perl:M[yY][eE][sS])
-.    include "../../lang/perl5/buildlink3.mk"
-TOOLS_SYMLINK+=			perl
-TOOLS_REAL_CMD.perl=		${LOCALBASE}/bin/perl
-.    if exists(${TOOLS_REAL_CMD.perl})
-${_TOOLS_VARNAME.perl}=		${TOOLS_REAL_CMD.perl}
 .    endif
 .  endif
 .endif
