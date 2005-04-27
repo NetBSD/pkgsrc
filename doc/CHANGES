@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9976 2005/04/27 18:38:10 adrianp Exp $
+$NetBSD: CHANGES,v 1.9977 2005/04/27 18:59:05 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2220,3 +2220,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cpuflags to 0.85 [abs 2005-04-27]
 	Updated octave-current to 2.9.2 [adam 2005-04-27]
 	Updated snort to 2.3.3 [adrianp 2005-04-27]
+	Updated sendmail to 8.13.4 [adrianp 2005-04-27]
