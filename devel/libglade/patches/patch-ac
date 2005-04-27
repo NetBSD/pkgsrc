@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/04/27 15:05:05 wiz Exp $
+
+--- libglade.m4.orig	2001-02-10 12:45:30.000000000 +0100
++++ libglade.m4
+@@ -4,7 +4,7 @@
+ dnl AM_PATH_LIBGLADE([ACTION-IF-FOUND [, ACTION-IF-NOT-FOUND [, MODULES]]])
+ dnl Test to see if libglade is installed, and define LIBGLADE_CFLAGS, LIBS
+ dnl
+-AC_DEFUN(AM_PATH_LIBGLADE,
++AC_DEFUN([AM_PATH_LIBGLADE],
+ [dnl
+ dnl Get the cflags and libraries from the libglade-config script
+ dnl

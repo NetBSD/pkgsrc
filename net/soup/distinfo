@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 12:14:04 agc Exp $
+$NetBSD: distinfo,v 1.9 2005/04/27 15:00:26 wiz Exp $
 
 SHA1 (soup-0.7.11.tar.bz2) = 47b185b57311053eb8a30c655981b7136c228923
 RMD160 (soup-0.7.11.tar.bz2) = d63a0af5a4739a6e529bd797e5cb570e872b6d6b
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 4a1ec8c278a3b1cc0343dc3edca2f7dec8d25583
 SHA1 (patch-ac) = da73ee261bd8e4247738d99210a2ed12c0315a13
 SHA1 (patch-ad) = 5d14207d9b8f6c634016f098f876c66438ebdabf
 SHA1 (patch-ae) = 9f33467fae553b666fb9890197fd7b15dde78722
+SHA1 (patch-af) = 27e30c8ae3ebdca706551b656bee6adcdc8f28ac
