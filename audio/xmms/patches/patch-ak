@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.7 2005/04/27 14:57:54 wiz Exp $
+
+--- xmms.m4.orig	2000-01-27 21:30:35.000000000 +0100
++++ xmms.m4
+@@ -14,7 +14,7 @@ dnl and XMMS_VERSION for your plugin ple
+ dnl
+ 
+ dnl XMMS_TEST_VERSION(AVAILABLE-VERSION, NEEDED-VERSION [, ACTION-IF-OKAY [, ACTION-IF-NOT-OKAY]])
+-AC_DEFUN(XMMS_TEST_VERSION, [
++AC_DEFUN([XMMS_TEST_VERSION], [
+ 
+ # Determine which version number is greater. Prints 2 to stdout if	
+ # the second number is greater, 1 if the first number is greater,	
+@@ -59,7 +59,7 @@ function vercmp(ver1, ver2,    ver1arr, 
+     fi
+ ])
+ 
+-AC_DEFUN(AM_PATH_XMMS,
++AC_DEFUN([AM_PATH_XMMS],
+ [
+ AC_ARG_WITH(xmms-prefix,[  --with-xmms-prefix=PFX  Prefix where XMMS is installed (optional)],
+ 	xmms_config_prefix="$withval", xmms_config_prefix="")
