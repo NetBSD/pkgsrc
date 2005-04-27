@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.39 2005/04/27 16:29:45 jlam Exp $
+# $NetBSD: replace.mk,v 1.40 2005/04/27 16:41:11 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -49,11 +49,6 @@ USE_TOOLS+=	perl
 #
 .if exists(../../mk/tools/tools.${OPSYS}.mk)
 .  include "../../mk/tools/tools.${OPSYS}.mk"
-.endif
-
-# Only allow one of "bison" and "yacc".
-.if !empty(USE_TOOLS:Mbison) && !empty(USE_TOOLS:Myacc)
-PKG_FAIL_REASON+=	"\`\`bison'' and \`\`yacc'' conflict in USE_TOOLS."
 .endif
 
 # This is an exhaustive list of tools for which we have pkgsrc
@@ -122,7 +117,8 @@ TOOLS_DEPENDS.${_t_}?=	BUILD_DEPENDS
 # get into dependency loops; do this by setting and checking the value
 # of TOOLS_IGNORE.<tool>.  If we're using the system-supplied tool, we
 # defer the setting of TOOLS_REAL_CMD.<tool> until the loop at the end.
-#
+
+# "gawk" overrides "awk"
 .if !defined(TOOLS_IGNORE.awk) && !empty(USE_TOOLS:Mawk) && \
     empty(USE_TOOLS:Mgawk)
 .  if !empty(PKGPATH:Mlang/gawk)
@@ -378,6 +374,7 @@ ${_TOOLS_VARNAME.lex}=		${TOOLS_REAL_CMD.lex}
 .  endif
 .endif
 
+# "gm4" overrides "m4"
 .if !defined(TOOLS_IGNORE.m4) && !empty(USE_TOOLS:Mm4) && \
     empty(USE_TOOLS:Mgm4)
 .  if !empty(PKGPATH:Mdevel/m4)
@@ -435,6 +432,7 @@ ${_TOOLS_VARNAME.perl}=		${TOOLS_REAL_CMD.perl}
 .  endif
 .endif
 
+# "gsed" overrides "sed"
 .if !defined(TOOLS_IGNORE.sed) && !empty(USE_TOOLS:Msed) && \
     empty(USE_TOOLS:Mgsed)
 .  if !empty(PKGPATH:Mtextproc/nbsed)
@@ -489,7 +487,9 @@ ${_TOOLS_VARNAME.tbl}=		${TOOLS_REAL_CMD.tbl}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.yacc) && !empty(USE_TOOLS:Myacc)
+# "bison" overrides "yacc"
+.if !defined(TOOLS_IGNORE.yacc) && !empty(USE_TOOLS:Myacc) && \
+   empty(USE_TOOLS:Mbison)
 .  if !empty(PKGPATH:Mdevel/bison)
 MAKEFLAGS+=			TOOLS_IGNORE.yacc=
 .  elif !empty(_TOOLS_USE_PKGSRC.yacc:M[yY][eE][sS])
