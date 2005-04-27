@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/03/29 14:28:05 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/04/27 08:58:17 wiz Exp $
 
 SHA1 (aalib-1.4rc5.tar.gz) = a23269e950a249d2ef93625837cace45ddbce03b
 RMD160 (aalib-1.4rc5.tar.gz) = a10bcab16d3aa0e60facca3e989f6a51846885f6
 Size (aalib-1.4rc5.tar.gz) = 391028 bytes
 SHA1 (patch-aa) = 927d69a8f499b99f0bd5f13cf220ce8cbb7ea591
+SHA1 (patch-ab) = 272f6f10dbe7a525c582a9b4c865f0ab9b2f9fba
