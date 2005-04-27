@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.34 2005/04/27 06:15:53 jlam Exp $
+# $NetBSD: replace.mk,v 1.35 2005/04/27 15:21:50 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -348,7 +348,11 @@ USE_TOOLS+=	${_t_}
 .    endfor
 .    if !empty(_TOOLS_USE_PKGSRC.gtar:M[yY][eE][sS]) || \
         !empty(_TOOLS_USE_PKGSRC.pax:M[yY][eE][sS])
-${TOOLS_DEPENDS.pax}+=		pax>=20040802:../../archivers/pax
+#
+# This is installed by pkgsrc bootstrap, and is never registered, so
+# comment out the dependency on it.
+#
+#${TOOLS_DEPENDS.pax}+=		pax>=20040802:../../archivers/pax
 TOOLS_REAL_CMD.gtar=		${LOCALBASE}/bin/tar
 TOOLS_REAL_CMD.pax=		${LOCALBASE}/bin/pax
 .      for _t_ in ${_TOOLS_PAXUTILS}
@@ -413,7 +417,11 @@ ${_TOOLS_VARNAME.lex}=		${TOOLS_REAL_CMD.lex}
 .  if !empty(PKGPATH:Mpkgtools/mtree)
 MAKEFLAGS+=			TOOLS_IGNORE.mtree=
 .  elif !empty(_TOOLS_USE_PKGSRC.mtree:M[yY][eE][sS])
-${TOOLS_DEPENDS.mtree}+=	mtree>=20040722:../../pkgtools/mtree
+#
+# This is installed by pkgsrc bootstrap, and is never registered, so
+# comment out the dependency on it.
+#
+#${TOOLS_DEPENDS.mtree}+=	mtree>=20040722:../../pkgtools/mtree
 TOOLS_SYMLINK+=			mtree
 TOOLS_REAL_CMD.mtree=		${LOCALBASE}/bin/mtree
 .    if exists(${TOOLS_REAL_CMD.mtree})
