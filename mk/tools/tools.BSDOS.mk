@@ -1,4 +1,4 @@
-# $NetBSD: tools.BSDOS.mk,v 1.1 2005/04/27 15:28:16 jlam Exp $
+# $NetBSD: tools.BSDOS.mk,v 1.2 2005/04/27 16:00:14 jlam Exp $
 #
 # System-supplied tools for the BSD/OS operating system.
 
@@ -34,6 +34,7 @@ PLATFORM_TOOL.ls?=		/bin/ls
 PLATFORM_TOOL.m4?=		/usr/bin/m4
 PLATFORM_TOOL.mkdir?=		/bin/mkdir -p
 PLATFORM_TOOL.mv?=		/bin/mv
+PLATFORM_TOOL.mtree?=		/usr/sbin/mtree
 PLATFORM_TOOL.nice?=		/usr/bin/nice
 PLATFORM_TOOL.patch?=		/usr/contrib/bin/patch
 PLATFORM_TOOL.pwd?=		/bin/pwd
