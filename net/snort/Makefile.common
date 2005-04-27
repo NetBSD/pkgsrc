@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.19 2005/04/11 21:46:59 tv Exp $
+# $NetBSD: Makefile.common,v 1.20 2005/04/27 18:36:25 adrianp Exp $
 #
 
-DISTNAME=		snort-2.3.2
+DISTNAME=		snort-2.3.3
 CATEGORIES=		net security
 MASTER_SITES=		http://www.snort.org/dl/current/ \
 			ftp://the.wiretapped.net/pub/security/network-intrusion-detection/snort/ \
@@ -27,7 +27,7 @@ PKG_GROUPS=		${SNORT_GROUP}
 PKG_USERS=		${SNORT_USER}:${SNORT_GROUP}::Snort\\ user
 FILES_SUBST+=		SNORT_USER="${SNORT_USER}" SNORT_GROUP="${SNORT_GROUP}"
 
-OWN_DIRS_PERMS=		/var/log/snort ${SNORT_USER} ${SNORT_GROUP} 700
+OWN_DIRS_PERMS=		${VARBASE}/log/snort ${SNORT_USER} ${SNORT_GROUP} 700
 CONF_FILES=		${EGDIR}/snort.conf.default \
 			${PKG_SYSCONFDIR}/snort.conf
 CONF_FILES+=		${EGDIR}/threshold.conf \
