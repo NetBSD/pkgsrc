@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9973 2005/04/27 10:56:00 abs Exp $
+$NetBSD: CHANGES,v 1.9974 2005/04/27 14:32:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2218,4 +2218,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libgtop2 to 2.10.1 [drochner 2005-04-26]
 	Updated p5-Tree-Simple to 1.14 [wiz 2005-04-27]
 	Updated cpuflags to 0.85 [abs 2005-04-27]
-
+	Updated octave-current to 2.9.2 [adam 2005-04-27]
