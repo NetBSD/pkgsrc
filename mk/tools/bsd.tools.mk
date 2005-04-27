@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.8 2005/04/27 20:35:01 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.9 2005/04/27 20:52:29 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -172,17 +172,14 @@ ${TOOLS_CMD.${_t_}}:
 .  else
 TOOLS_REAL_CMD.${_t_}?=	${FALSE}
 .  endif
-TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
+TOOLS_CMD.${_t_}?=	${TOOLS_DIR}/bin/${_t_}
 
 .  if !empty(TOOLS_CMD.${_t_}:M${TOOLS_DIR}/*) && \
       !target(${TOOLS_CMD.${_t_}}) && exists(${TOOLS_REAL_CMD.${_t_}})
 override-tools: ${TOOLS_CMD.${_t_}}
 ${TOOLS_CMD.${_t_}}: ${TOOLS_REAL_CMD.${_t_}}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ${TEST} -x "${TOOLS_REAL_CMD.${_t_}}"; then		\
-		${MKDIR} ${.TARGET:H};					\
-		${LN} -sf ${TOOLS_REAL_CMD.${_t_}} ${.TARGET};	\
-	fi
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${TOOLS_REAL_CMD.${_t_}} ${.TARGET}
 .  endif
 .endfor
 .undef _t_
