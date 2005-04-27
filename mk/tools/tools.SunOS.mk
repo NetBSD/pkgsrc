@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.1 2005/04/27 15:28:16 jlam Exp $
+# $NetBSD: tools.SunOS.mk,v 1.2 2005/04/27 15:58:18 jlam Exp $
 #
 # System-supplied tools for the Solaris operating system.
 
@@ -46,7 +46,6 @@ PLATFORM_TOOL.patch?=		/usr/bin/gpatch
 PLATFORM_TOOL.pwd?=		/bin/pwd
 PLATFORM_TOOL.rm?=		/usr/bin/rm
 PLATFORM_TOOL.rmdir?=		/usr/bin/rmdir
-PLATFORM_TOOL.sed?=		/usr/xpg4/bin/sed
 PLATFORM_TOOL.sh?=		/bin/ksh
 PLATFORM_TOOL.sort?=		/usr/bin/sort
 PLATFORM_TOOL.tail?=		/usr/xpg4/bin/tail
