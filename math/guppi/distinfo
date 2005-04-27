@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 12:06:55 agc Exp $
+$NetBSD: distinfo,v 1.9 2005/04/27 15:03:31 wiz Exp $
 
 SHA1 (Guppi-0.40.3.tar.bz2) = 7435bddddca9e3347efb006ad33198fbbe593ea7
 RMD160 (Guppi-0.40.3.tar.bz2) = c1e5575a992e40966749a8a18b2143ed69329495
 Size (Guppi-0.40.3.tar.bz2) = 1016831 bytes
 SHA1 (patch-aa) = 74b82a9fbf545d1c606f9b91c54259229f718c7d
+SHA1 (patch-ab) = 2ff86d16e39c9c3f842dbdcd2d85134f123511c4
