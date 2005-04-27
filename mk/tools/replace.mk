@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.31 2005/04/27 03:41:17 jlam Exp $
+# $NetBSD: replace.mk,v 1.32 2005/04/27 04:47:41 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -52,7 +52,7 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`yacc'' conflict in USE_TOOLS."
 #
 _TOOLS_REPLACE_LIST=	bison cmp egrep fgrep file find gawk gm4 gmake	\
 			grep gsed gtar gunzip gzcat gzip lex patch pax	\
-			perl tbl xargs yacc
+			perl sh shlock tbl xargs yacc
 
 # "TOOL" variable names associated with each of the tools
 _TOOLS_VARNAME.bison=	YACC
@@ -74,6 +74,8 @@ _TOOLS_VARNAME.lex=	LEX
 _TOOLS_VARNAME.patch=	PATCH
 _TOOLS_VARNAME.pax=	PAX
 _TOOLS_VARNAME.perl=	PERL5
+_TOOLS_VARNAME.sh=	SH
+_TOOLS_VARNAME.shlock=	SHLOCK
 _TOOLS_VARNAME.tbl=	TBL
 _TOOLS_VARNAME.xargs=	XARGS
 _TOOLS_VARNAME.yacc=	YACC
@@ -123,6 +125,9 @@ _TOOLS_USE_PLATFORM.pax=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
 				Interix-*-* Linux-*-* NetBSD-*-*	\
 				OpenBSD-*-*
 _TOOLS_USE_PLATFORM.perl=	# This should always be empty.
+_TOOLS_USE_PLATFORM.sh=		*-*-*	# every platform has a Bourne shell
+_TOOLS_USE_PLATFORM.shlock=	AIX-*-* Darwin-*-* DragonFly-*-*	\
+				FreeBSD-*-* NetBSD-*-*
 _TOOLS_USE_PLATFORM.tbl=	DragonFly-*-* FreeBSD-*-* NetBSD-*-*	\
 				OpenBSD-*-*
 _TOOLS_USE_PLATFORM.xargs=	${_TOOLS_USE_PLATFORM.find}
@@ -423,6 +428,33 @@ TOOLS_SYMLINK+=			perl
 TOOLS_REAL_CMD.perl=		${LOCALBASE}/bin/perl
 .    if exists(${TOOLS_REAL_CMD.perl})
 ${_TOOLS_VARNAME.perl}=		${TOOLS_REAL_CMD.perl}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.sh) && !empty(USE_TOOLS:Msh)
+.  if !empty(PKGPATH:Mshells/pdksh)
+MAKEFLAGS+=			TOOLS_IGNORE.sh=
+.  elif !empty(_TOOLS_USE_PKGSRC.sh:M[yY][eE][sS])
+${TOOLS_DEPENDS.sh}+=		pdksh>=5.2.14:../../shells/pdksh
+TOOLS_SYMLINK+=			sh
+TOOLS_REAL_CMD.sh=		${LOCALBASE}/bin/pdksh
+.    if exists(${TOOLS_REAL_CMD.sh})
+${_TOOLS_VARNAME.sh}=		${TOOLS_REAL_CMD.sh}
+.    endif
+.  endif
+TOOLS_CMD.sh=			${TOOLS_DIR}/bin/sh
+.endif
+
+.if !defined(TOOLS_IGNORE.shlock) && !empty(USE_TOOLS:Mshlock)
+.  if !empty(PKGPATH:Mpkgtools/shlock)
+MAKEFLAGS+=			TOOLS_IGNORE.shlock=
+.  elif !empty(_TOOLS_USE_PKGSRC.shlock:M[yY][eE][sS])
+${TOOLS_DEPENDS.shlock}+=	shlock>=20020114:../../pkgtools/shlock
+TOOLS_SYMLINK+=			shlock
+TOOLS_REAL_CMD.shlock=		${LOCALBASE}/bin/shlock
+.    if exists(${TOOLS_REAL_CMD.shlock})
+${_TOOLS_VARNAME.shlock}=	${TOOLS_REAL_CMD.shlock}
 .    endif
 .  endif
 .endif
