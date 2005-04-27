@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.35 2005/04/27 15:21:50 jlam Exp $
+# $NetBSD: replace.mk,v 1.36 2005/04/27 15:28:16 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -40,6 +40,15 @@ USE_TOOLS+=	tbl
 
 .if defined(USE_PERL5)
 USE_TOOLS+=	perl
+.endif
+
+# These are the platform-specific lists of system-supplied tools.
+#
+# XXX These should eventually just migrate over to the appropriate
+# XXX pkgsrc/mk/platform/${OPSYS}.mk file.
+#
+.if exists(../../mk/tools/tools.${OPSYS}.mk)
+.  include "../../mk/tools/tools.${OPSYS}.mk"
 .endif
 
 # Only allow one of "bison" and "yacc".
