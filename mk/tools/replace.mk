@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.41 2005/04/27 16:52:28 jlam Exp $
+# $NetBSD: replace.mk,v 1.42 2005/04/27 17:15:13 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -47,6 +47,7 @@ USE_TOOLS+=	perl
 # XXX These should eventually just migrate over to the appropriate
 # XXX pkgsrc/mk/platform/${OPSYS}.mk file.
 #
+.include "../../mk/tools/bootstrap.mk"
 .if exists(../../mk/tools/tools.${OPSYS}.mk)
 .  include "../../mk/tools/tools.${OPSYS}.mk"
 .endif
