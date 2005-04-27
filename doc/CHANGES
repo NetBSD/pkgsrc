@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9971 2005/04/27 09:42:21 drochner Exp $
+$NetBSD: CHANGES,v 1.9972 2005/04/27 10:52:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2216,3 +2216,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gdeskcal to 0.57.1 [drochner 2005-04-26]
 	Updated gramps to 1.0.11 [drochner 2005-04-26]
 	Updated libgtop2 to 2.10.1 [drochner 2005-04-26]
+	Updated p5-Tree-Simple to 1.14 [wiz 2005-04-27]
