@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:52 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/27 19:50:48 adrianp Exp $
 
-DISTNAME=	oinkmaster-1.1
+DISTNAME=	oinkmaster-1.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oinkmaster/}
 
@@ -22,6 +22,7 @@ DOCDIR=		${PREFIX}/share/doc/oinkmaster
 DOCS=		INSTALL LICENSE README README.templates UPGRADING FAQ
 
 REPLACE_PERL+=	${WRKSRC}/oinkmaster.pl
+MESSAGE_SUBST+=	LN=${LN}
 
 SUBST_CLASSES=	    pub
 SUBST_STAGE.pub=    post-patch
