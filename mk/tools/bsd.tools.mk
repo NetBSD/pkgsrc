@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.9 2005/04/27 20:52:29 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.10 2005/04/27 20:53:44 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -126,11 +126,7 @@ MKDIR?=         mkdir -p
 # ${TOOLS_DIR} will be in the "bin" directory and will be called <tool>.
 #
 .for _t_ in ${TOOLS_WRAP}
-.  if defined(TOOLS_REAL_CMD.${_t_}) && !empty(TOOLS_REAL_CMD.${_t_}:M/*)
-# TOOLS_REAL_CMD.${_t_} is a full path, which is what we want.
-.  else
 TOOLS_REAL_CMD.${_t_}?=		${FALSE}
-.  endif
 TOOLS_ARGS.${_t_}?=		# empty
 TOOLS_REAL_CMDLINE.${_t_}?=	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_ARGS.${_t_}} "$$@"
 TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
@@ -167,11 +163,7 @@ ${TOOLS_CMD.${_t_}}:
 # directory and will be called <tool>.
 #
 .for _t_ in ${TOOLS_SYMLINK}
-.  if defined(TOOLS_REAL_CMD.${_t_}) && !empty(TOOLS_REAL_CMD.${_t_}:M/*)
-# TOOLS_REAL_CMD.${_t_} is a full path, which is what we want.
-.  else
 TOOLS_REAL_CMD.${_t_}?=	${FALSE}
-.  endif
 TOOLS_CMD.${_t_}?=	${TOOLS_DIR}/bin/${_t_}
 
 .  if !empty(TOOLS_CMD.${_t_}:M${TOOLS_DIR}/*) && \
