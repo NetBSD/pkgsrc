@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/04/11 21:46:30 tv Exp $
+# $NetBSD: Makefile,v 1.47 2005/04/27 14:31:05 adam Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGNAME=	octave-current-${OCTAVE_VER}
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	bison>=1.875:../../devel/bison
 BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
-OCTAVE_VER=	2.9.1
+OCTAVE_VER=	2.9.2
 CONFLICTS+=	octave-2.*
 
 .if (${MACHINE_ARCH} == "arm32")
