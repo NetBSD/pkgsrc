@@ -1,4 +1,4 @@
-# $NetBSD: tools.OpenBSD.mk,v 1.1 2005/04/27 15:28:16 jlam Exp $
+# $NetBSD: tools.OpenBSD.mk,v 1.2 2005/04/27 15:59:25 jlam Exp $
 #
 # System-supplied tools for the OpenBSD operating system.
 
@@ -33,6 +33,7 @@ PLATFORM_TOOL.gzip?=		/usr/bin/gzip -nf ${GZIP}
 PLATFORM_TOOL.head?=		/usr/bin/head
 PLATFORM_TOOL.hostname?=	/bin/hostname
 PLATFORM_TOOL.id?=		/usr/bin/id
+PLATFORM_TOOL.lex?=		/usr/bin/lex
 PLATFORM_TOOL.ln?=		/bin/ln
 PLATFORM_TOOL.ls?=		/bin/ls
 PLATFORM_TOOL.m4?=		/usr/bin/m4
@@ -48,6 +49,7 @@ PLATFORM_TOOL.sed?=		/usr/bin/sed
 PLATFORM_TOOL.sh?=		/bin/sh
 PLATFORM_TOOL.sort?=		/usr/bin/sort
 PLATFORM_TOOL.tail?=		/usr/bin/tail
+PLATFORM_TOOL.tbl?=		/usr/bin/tbl
 PLATFORM_TOOL.tee?=		/usr/bin/tee
 PLATFORM_TOOL.test?=		test			# shell builtin
 PLATFORM_TOOL.touch?=		/usr/bin/touch
@@ -56,3 +58,4 @@ PLATFORM_TOOL.true?=		true			# shell builtin
 PLATFORM_TOOL.tsort?=		/usr/bin/tsort
 PLATFORM_TOOL.wc?=		/usr/bin/wc
 PLATFORM_TOOL.xargs?=		/usr/bin/xargs
+PLATFORM_TOOL.yacc?=		/usr/bin/yacc
