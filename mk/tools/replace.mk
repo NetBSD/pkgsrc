@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.33 2005/04/27 05:07:57 jlam Exp $
+# $NetBSD: replace.mk,v 1.34 2005/04/27 06:15:53 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -51,8 +51,8 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`yacc'' conflict in USE_TOOLS."
 # replacements.
 #
 _TOOLS_REPLACE_LIST=	bison cmp egrep fgrep file find gawk gm4 gmake	\
-			grep gsed gtar gunzip gzcat gzip lex patch pax	\
-			perl sh shlock tbl xargs yacc
+			grep gsed gtar gunzip gzcat gzip lex mtree	\
+			patch pax perl sh shlock tbl xargs yacc
 
 # "TOOL" variable names associated with each of the tools
 _TOOLS_VARNAME.bison=	YACC
@@ -71,6 +71,7 @@ _TOOLS_VARNAME.gunzip=	GUNZIP_CMD
 _TOOLS_VARNAME.gzcat=	GZCAT
 _TOOLS_VARNAME.gzip=	GZIP_CMD
 _TOOLS_VARNAME.lex=	LEX
+_TOOLS_VARNAME.mtree=	MTREE
 _TOOLS_VARNAME.patch=	PATCH
 _TOOLS_VARNAME.pax=	PAX
 _TOOLS_VARNAME.perl=	PERL5
@@ -118,6 +119,8 @@ _TOOLS_USE_PLATFORM.gzip=	BSDOS-*-* Darwin-*-* DragonFly-*-*	\
 				OpenBSD-*-* SunOS-*-*
 _TOOLS_USE_PLATFORM.lex=	DragonFly-*-* FreeBSD-*-* Linux-*-*	\
 				NetBSD-*-* OpenBSD-*-*
+_TOOLS_USE_PLATFORM.mtree=	BSDOS-*-* Darwin-*-* DragonFly-*-*	\
+				FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
 _TOOLS_USE_PLATFORM.patch=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
 				Linux-*-* NetBSD-*-* OpenBSD-*-*	\
 				SunOS-*-*
@@ -402,6 +405,19 @@ TOOLS_SYMLINK+=			lex
 TOOLS_REAL_CMD.lex=		${LOCALBASE}/bin/flex
 .    if exists(${TOOLS_REAL_CMD.lex})
 ${_TOOLS_VARNAME.lex}=		${TOOLS_REAL_CMD.lex}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.mtree) && !empty(USE_TOOLS:Mmtree)
+.  if !empty(PKGPATH:Mpkgtools/mtree)
+MAKEFLAGS+=			TOOLS_IGNORE.mtree=
+.  elif !empty(_TOOLS_USE_PKGSRC.mtree:M[yY][eE][sS])
+${TOOLS_DEPENDS.mtree}+=	mtree>=20040722:../../pkgtools/mtree
+TOOLS_SYMLINK+=			mtree
+TOOLS_REAL_CMD.mtree=		${LOCALBASE}/bin/mtree
+.    if exists(${TOOLS_REAL_CMD.mtree})
+${_TOOLS_VARNAME.mtree}=	${TOOLS_REAL_CMD.mtree}
 .    endif
 .  endif
 .endif
