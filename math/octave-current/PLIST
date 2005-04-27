@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/04/01 10:15:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/04/27 14:31:05 adam Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -444,6 +444,7 @@ include/octave-${PKGVERSION}/octave/oct-stream.h
 include/octave-${PKGVERSION}/octave/oct-strstrm.h
 include/octave-${PKGVERSION}/octave/oct-syscalls.h
 include/octave-${PKGVERSION}/octave/oct-time.h
+include/octave-${PKGVERSION}/octave/oct-types.h
 include/octave-${PKGVERSION}/octave/oct.h
 include/octave-${PKGVERSION}/octave/octave.h
 include/octave-${PKGVERSION}/octave/ops.h
@@ -585,6 +586,7 @@ include/octave-${PKGVERSION}/octave/vx-s-ccv.h
 include/octave-${PKGVERSION}/octave/vx-s-crv.h
 include/octave-${PKGVERSION}/octave/xdiv.h
 include/octave-${PKGVERSION}/octave/xpow.h
+include/octave-${PKGVERSION}/octave/zfstream.h
 lib/libcruft.la
 lib/liboctave.la
 lib/liboctinterp.la
@@ -599,6 +601,7 @@ libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__gnuplot_replot__.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__gnuplot_set__.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__gnuplot_show__.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__gnuplot_splot__.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__qp__.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/airy.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/balance.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/besselh.oct
@@ -669,6 +672,7 @@ libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/lpsolve_options.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/lsode.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/lsode_options.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/lu.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/luinc.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/max.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/min.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/minmax.oct
@@ -1142,6 +1146,8 @@ share/octave/${PKGVERSION}/m/miscellaneous/version.m
 share/octave/${PKGVERSION}/m/miscellaneous/xor.m
 share/octave/${PKGVERSION}/m/optimization/glpk.m
 share/octave/${PKGVERSION}/m/optimization/glpkmex.m
+share/octave/${PKGVERSION}/m/optimization/qp.m
+share/octave/${PKGVERSION}/m/optimization/sqp.m
 share/octave/${PKGVERSION}/m/plot/PKG_ADD
 share/octave/${PKGVERSION}/m/plot/__axis_label__.m
 share/octave/${PKGVERSION}/m/plot/__errcomm__.m
@@ -1469,8 +1475,6 @@ share/octave/${PKGVERSION}/m/time/date.m
 share/octave/ls-R
 share/octave/site/m/startup/octaverc
 @dirrm share/octave/site/m/startup
-@dirrm share/octave/site/api-v14/m
-@dirrm share/octave/site/api-v14
 @dirrm share/octave/${PKGVERSION}/site/m
 @dirrm share/octave/${PKGVERSION}/site
 @dirrm share/octave/${PKGVERSION}/m/time
@@ -1510,8 +1514,8 @@ share/octave/site/m/startup/octaverc
 @dirrm share/octave/${PKGVERSION}/doc
 @dirrm share/octave/${PKGVERSION}
 @dirrm share/doc/html/octave
-@dirrm libexec/octave/site/oct/api-v14/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/site/oct/api-v14
+@dirrm libexec/octave/site/oct/api-v15/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/site/oct/api-v15
 @dirrm libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/octave/site/oct
 @dirrm libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}

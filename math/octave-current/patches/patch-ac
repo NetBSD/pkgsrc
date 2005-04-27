@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2005/04/01 10:15:19 adam Exp $
+$NetBSD: patch-ac,v 1.6 2005/04/27 14:31:05 adam Exp $
 
---- Makeconf.in.orig	2005-03-27 12:38:19.000000000 +0000
+--- Makeconf.in.orig	2005-04-21 14:55:16.000000000 +0000
 +++ Makeconf.in
 @@ -73,7 +73,7 @@ SHLBIN = @SHLBIN@
  SHLBIN_VER = @SHLBIN_VER@
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.5 2005/04/01 10:15:19 adam Exp $
  DL_LDFLAGS = @DL_LDFLAGS@
  
  SONAME_FLAGS = @SONAME_FLAGS@
-@@ -344,10 +344,10 @@ NO_OCT_FILE_STRIP = @NO_OCT_FILE_STRIP@
+@@ -347,10 +347,10 @@ NO_OCT_FILE_STRIP = @NO_OCT_FILE_STRIP@
  # How to make .o files:
  
  %.o : %.c
