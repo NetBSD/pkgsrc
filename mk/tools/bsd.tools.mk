@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.7 2005/04/26 22:28:03 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.8 2005/04/27 20:35:01 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -104,6 +104,19 @@ TOOLS_REAL_CMD.${_t_}?=		${PKGSRCDIR}/mk/gnu-config/missing
 TOOLS_REAL_CMDLINE.${_t_}?=	${TOOLS_REAL_CMD.${_t_}} ${_t_:T:C/-[0-9].*$//}
 .endfor
 .undef _t_
+
+######################################################################
+
+# These tools are used in the targets that actually create the wrappers
+# and symlinks.  We define them here so that as a fallback, we'll just
+# use the ones in the PATH.  This makes the tools framework more
+# standalone.
+
+CHMOD?=         chmod
+ECHO?=          echo
+FALSE?=          echo
+LN?=            ln
+MKDIR?=         mkdir -p
 
 ######################################################################
 
