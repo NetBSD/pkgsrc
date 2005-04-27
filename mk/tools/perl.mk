@@ -1,8 +1,8 @@
-# $NetBSD: perl.mk,v 1.1 2005/04/27 17:29:06 jlam Exp $
+# $NetBSD: perl.mk,v 1.2 2005/04/27 17:59:09 jlam Exp $
 
 # Create a symlink from ${TOOLS_DIR}/bin/perl to ${PERL5} when USE_PERL5
-# is defined.  This ensures that the correct perl is executed when it's
-# invoked as a bare "perl".
+# is defined.  This ensures that when "perl" is invoked, the pkgsrc perl
+# is executed on systems that also provide a perl binary.
 #
 .if defined(USE_PERL5) && !defined(TOOLS_IGNORE.perl)
 .  if !empty(PKGPATH:Mlang/perl58)
