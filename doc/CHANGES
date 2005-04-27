@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9970 2005/04/26 16:20:48 taca Exp $
+$NetBSD: CHANGES,v 1.9971 2005/04/27 09:42:21 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2200,3 +2200,19 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dspam to 3.4.5 [xtraeme 2005-04-26]
 	Updated xine-lib to 1.0nb2 [tron 2005-04-26]
 	Updated squid to 2.5.9nb9 [taca 2005-04-26]
+	Updated ORBit2 to 2.12.2 [drochner 2005-04-26]
+	Updated gnome-vfs2 to 2.10.1 [drochner 2005-04-26]
+	Updated libgnomeprint to 2.10.3 [drochner 2005-04-26]
+	Updated gail to 1.8.3 [drochner 2005-04-26]
+	Updated gal2 to 2.4.2 [drochner 2005-04-26]
+	Updated gnome-desktop to 2.10.1 [drochner 2005-04-26]
+	Updated gnome-panel to 2.10.1 [drochner 2005-04-26]
+	Updated gnome2-control-center to 2.10.1 [drochner 2005-04-26]
+	Updated gtkspell to 2.0.10 [drochner 2005-04-26]
+	Updated metacity to 2.10.1 [drochner 2005-04-26]
+	Updated gdm to 2.6.0.9 [drochner 2005-04-26]
+	Updated py-gtk2 to 2.6.1 [drochner 2005-04-26]
+	Updated py-gnome2 to 2.10.0 [drochner 2005-04-26]
+	Updated gdeskcal to 0.57.1 [drochner 2005-04-26]
+	Updated gramps to 1.0.11 [drochner 2005-04-26]
+	Updated libgtop2 to 2.10.1 [drochner 2005-04-26]
