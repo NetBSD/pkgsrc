@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9974 2005/04/27 14:32:02 adam Exp $
+$NetBSD: CHANGES,v 1.9975 2005/04/27 17:25:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2112,7 +2112,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mozilla to 1.7.7 [taya 2005-04-19]
 	Updated mozilla-gtk2 to 1.7.7 [taya 2005-04-19]
 	Updated mplayer-plugin-firefox to 2.70nb3 [wiz 2005-04-19]
-	Added mplayer-plugin-firefox-gtk1 [wiz 2005-04-19]
+	Added mplayer-plugin-firefox-gtk1-2.70 [wiz 2005-04-19]
 	Removed mplayer-plugin-firefox-gtk2 [wiz 2005-04-19]
 	Updated ImageMagick to 6.2.1.6 [adam 2005-04-19]
 	Updated gnumeric14 to 1.4.3 [drochner 2005-04-19]
