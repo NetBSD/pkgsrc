@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.40 2005/04/27 16:41:11 jlam Exp $
+# $NetBSD: replace.mk,v 1.41 2005/04/27 16:52:28 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -93,11 +93,11 @@ _TOOLS_VARNAME.yacc=	YACC
 
 # _TOOLS_USE_PKGSRC.<tool> is "yes" or "no" depending on whether we're
 # using a pkgsrc-supplied tool to replace the system-supplied one.  We
-# use the system-supplied one if PLATFORM_TOOL.<tool> is non-empty, or
+# use the system-supplied one if TOOLS_PLATFORM.<tool> is non-empty, or
 # otherwise if this is a particular ${MACHINE_PLATFORM} listed above.
 #
 .for _t_ in ${_TOOLS_REPLACE_LIST}
-.  if defined(PLATFORM_TOOL.${_t_}) && !empty(PLATFORM_TOOL.${_t_})
+.  if defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
 _TOOLS_USE_PKGSRC.${_t_}?=	no
 .  endif
 _TOOLS_USE_PKGSRC.${_t_}?=	yes
@@ -507,10 +507,10 @@ ${_TOOLS_VARNAME.yacc}=		${TOOLS_REAL_CMD.yacc} ${TOOLS_ARGS.yacc}
 
 # Set TOOLS_REAL_CMD.<tool> appropriately in the case where we are
 # using the system-supplied tool.  Here, we first check to see if
-# PLATFORM_TOOL.<tool> is defined.  If it is, then use that as the path
+# TOOLS_PLATFORM.<tool> is defined.  If it is, then use that as the path
 # to the real command and extract any arguments into TOOLS_ARGS.<tool>.
 # We also create either a wrapper or a symlink depending on whether
-# there are any arguments or not.  If PLATFORM_TOOL.<tool> is undefined
+# there are any arguments or not.  If TOOLS_PLATFORM.<tool> is undefined
 # or empty, then we fall back to checking if TOOL is defined.  Lastly,
 # always set the TOOL name for each tool to point to the real command,
 # e.g., TBL, YACC, etc., provided that "TOOL" has been associated with
@@ -519,12 +519,12 @@ ${_TOOLS_VARNAME.yacc}=		${TOOLS_REAL_CMD.yacc} ${TOOLS_ARGS.yacc}
 .for _t_ in ${_TOOLS_REPLACE_LIST}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(USE_TOOLS:M${_t_}) && \
       !empty(_TOOLS_USE_PKGSRC.${_t_}:M[nN][oO])
-.    if defined(PLATFORM_TOOL.${_t_}) && !empty(PLATFORM_TOOL.${_t_})
+.    if defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
 TOOLS_REAL_CMD.${_t_}?=		\
-	${PLATFORM_TOOL.${_t_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+	${TOOLS_PLATFORM.${_t_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
 TOOLS_ARGS.${_t_}?=		\
-	${PLATFORM_TOOL.${_t_}:C/^/_asdf_/1:N_asdf_*}
-${_TOOLS_VARNAME.${_t_}}=	${PLATFORM_TOOL.${_t_}}
+	${TOOLS_PLATFORM.${_t_}:C/^/_asdf_/1:N_asdf_*}
+${_TOOLS_VARNAME.${_t_}}=	${TOOLS_PLATFORM.${_t_}}
 .      if !empty(TOOLS_ARGS.${_t_})
 TOOLS_WRAP+=			${_t_}
 .      else
