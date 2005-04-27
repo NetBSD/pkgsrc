@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.30 2005/04/26 23:20:35 jlam Exp $
+# $NetBSD: replace.mk,v 1.31 2005/04/27 03:41:17 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -51,8 +51,8 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`yacc'' conflict in USE_TOOLS."
 # replacements.
 #
 _TOOLS_REPLACE_LIST=	bison cmp egrep fgrep file find gawk gm4 gmake	\
-			grep gsed gunzip gzcat gzip lex patch perl tbl	\
-			xargs yacc
+			grep gsed gtar gunzip gzcat gzip lex patch pax	\
+			perl tbl xargs yacc
 
 # "TOOL" variable names associated with each of the tools
 _TOOLS_VARNAME.bison=	YACC
@@ -66,11 +66,13 @@ _TOOLS_VARNAME.gm4=	M4
 _TOOLS_VARNAME.gmake=	GMAKE
 _TOOLS_VARNAME.grep=	GREP
 _TOOLS_VARNAME.gsed=	SED
+_TOOLS_VARNAME.gtar=	GTAR
 _TOOLS_VARNAME.gunzip=	GUNZIP_CMD
 _TOOLS_VARNAME.gzcat=	GZCAT
 _TOOLS_VARNAME.gzip=	GZIP_CMD
 _TOOLS_VARNAME.lex=	LEX
 _TOOLS_VARNAME.patch=	PATCH
+_TOOLS_VARNAME.pax=	PAX
 _TOOLS_VARNAME.perl=	PERL5
 _TOOLS_VARNAME.tbl=	TBL
 _TOOLS_VARNAME.xargs=	XARGS
@@ -105,6 +107,7 @@ _TOOLS_USE_PLATFORM.grep=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
 				Linux-*-* NetBSD-*-* OpenBSD-*-*	\
 				SunOS-*-*
 _TOOLS_USE_PLATFORM.gsed=	Interix-*-* Linux-*-* SunOS-*-*
+_TOOLS_USE_PLATFORM.gtar=	${_TOOLS_USE_PLATFORM.pax}
 _TOOLS_USE_PLATFORM.gunzip=	${_TOOLS_USE_PLATFORM.gzip}
 _TOOLS_USE_PLATFORM.gzcat=	${_TOOLS_USE_PLATFORM.gzip}
 _TOOLS_USE_PLATFORM.gzip=	BSDOS-*-* Darwin-*-* DragonFly-*-*	\
@@ -116,6 +119,9 @@ _TOOLS_USE_PLATFORM.lex=	DragonFly-*-* FreeBSD-*-* Linux-*-*	\
 _TOOLS_USE_PLATFORM.patch=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
 				Linux-*-* NetBSD-*-* OpenBSD-*-*	\
 				SunOS-*-*
+_TOOLS_USE_PLATFORM.pax=	Darwin-*-* DragonFly-*-* FreeBSD-*-*	\
+				Interix-*-* Linux-*-* NetBSD-*-*	\
+				OpenBSD-*-*
 _TOOLS_USE_PLATFORM.perl=	# This should always be empty.
 _TOOLS_USE_PLATFORM.tbl=	DragonFly-*-* FreeBSD-*-* NetBSD-*-*	\
 				OpenBSD-*-*
@@ -315,6 +321,38 @@ ${_TOOLS_VARNAME.gsed}=		${TOOLS_REAL_CMD.gsed}
 .    endif
 .  endif
 TOOLS_CMD.gsed=			${TOOLS_DIR}/bin/sed
+.endif
+
+.if (!defined(TOOLS_IGNORE.gtar) && \
+     !defined(TOOLS_IGNORE.pax)) && \
+    (!empty(USE_TOOLS:Mgtar) || \
+     !empty(USE_TOOLS:Mpax))
+_TOOLS_PAXUTILS=		gtar pax
+.  if !empty(PKGPATH:Marchivers/pax)
+.    for _t_ in ${_TOOLS_PAXUTILS}
+MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
+.    endfor
+.  else
+.    for _t_ in ${_TOOLS_PAXUTILS}
+.      if empty(USE_TOOLS:M${_t_})
+USE_TOOLS+=	${_t_}
+.      endif
+.    endfor
+.    if !empty(_TOOLS_USE_PKGSRC.gtar:M[yY][eE][sS]) || \
+        !empty(_TOOLS_USE_PKGSRC.pax:M[yY][eE][sS])
+${TOOLS_DEPENDS.pax}+=		pax>=20040802:../../archivers/pax
+TOOLS_REAL_CMD.gtar=		${LOCALBASE}/bin/tar
+TOOLS_REAL_CMD.pax=		${LOCALBASE}/bin/pax
+.      for _t_ in ${_TOOLS_PAXUTILS}
+_TOOLS_USE_PKGSRC.${_t_}=	yes
+TOOLS_SYMLINK+=			${_t_}
+.        if defined(_TOOLS_VARNAME.${_t_}) && exists(${TOOLS_REAL_CMD.${_t_}})
+${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}}
+.        endif
+.      endfor
+.    endif
+.  endif
+TOOLS_CMD.gtar=			${TOOLS_DIR}/bin/tar
 .endif
 
 .if (!defined(TOOLS_IGNORE.gunzip) && \
