@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/19 13:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/28 23:06:01 jlam Exp $
 #
 
 DISTNAME=	xdg-x11-dirs-1.2
@@ -27,8 +27,7 @@ WRKSRC=		${WRKDIR}
 .if ${X11PREFIX} == ${LOCALBASE}
 DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
 .else
-_SORTED!=	${ECHO} ${XDG_X11_DIRS} | ${TR} -s ' \t' '\n' | ${SORT}
-MAKE_DIRS+=	${_SORTED:S/^/${PREFIX}\//}
+MAKE_DIRS+=	${XDG_X11_DIRS:O:S/^/${PREFIX}\//}
 .endif
 
 do-install:	# nothing
