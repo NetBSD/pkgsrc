@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2005/04/11 21:44:58 tv Exp $
+# $NetBSD: Makefile.common,v 1.16 2005/04/28 22:23:43 jlam Exp $
 #
 
 DISTNAME=	xmms-1.2.10
@@ -40,9 +40,9 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
 .if ${OPSYS} == "NetBSD"
-RAWPART!=               /sbin/sysctl -n kern.rawpartition | tr 0-9 a-j
-CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND}		\
-			--with-cdda-device=/dev/rcd0${RAWPART}	\
+RAWPART_cmd=		/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
+CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND}			\
+			--with-cdda-device=/dev/rcd0${RAWPART_cmd:sh}	\
 			--with-cdda-dir=/cdrom/
 CPPFLAGS+=		-DHAVE_NANOSLEEP=1
 
