@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/04/25 03:19:39 snj Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/28 22:36:44 reed Exp $
 
 DISTNAME=	foomatic-gswrapper
 PKGNAME=	foomatic-gswrapper-1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 EXTRACT_SUFX=	# empty
 MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}/}
@@ -15,6 +15,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}/}
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.linuxprinting.org/gswrapper.html
 COMMENT=	Foomatic Ghostscript Wrapper
+
+CONFLICTS+=	foomatic-filters-[0-9]
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
