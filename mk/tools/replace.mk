@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.47 2005/04/28 04:00:15 jlam Exp $
+# $NetBSD: replace.mk,v 1.48 2005/04/28 15:47:43 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -86,6 +86,25 @@ _TOOLS_VARNAME.yacc=	YACC
 
 ######################################################################
 
+# Create _USE_TOOLS, a sanitized version of USE_TOOLS that removes the
+# tools that are overridden by superseding ones.
+
+_USE_TOOLS:=	${USE_TOOLS}
+.if !empty(USE_TOOLS:Mbison)		# bison > yacc
+_USE_TOOLS:=	${_USE_TOOLS:Nyacc}
+.endif
+.if !empty(USE_TOOLS:Mgawk)		# gawk > awk
+_USE_TOOLS:=	${_USE_TOOLS:Nawk}
+.endif
+.if !empty(USE_TOOLS:Mgm4)		# gm4 > m4
+_USE_TOOLS:=	${_USE_TOOLS:Nm4}
+.endif
+.if !empty(USE_TOOLS:Mgsed)		# gsed > sed
+_USE_TOOLS:=	${_USE_TOOLS:Nsed}
+.endif
+
+######################################################################
+
 # _TOOLS_USE_PKGSRC.<tool> is "yes" or "no" depending on whether we're
 # using a pkgsrc-supplied tool to replace the system-supplied one.  We
 # use the system-supplied one if TOOLS_PLATFORM.<tool> is non-empty, or
@@ -113,9 +132,7 @@ TOOLS_DEPMETHOD.${_t_}?=	BUILD_DEPENDS
 # of TOOLS_IGNORE.<tool>.  If we're using the system-supplied tool, we
 # defer the setting of TOOLS_REAL_CMD.<tool> until the loop at the end.
 
-# "gawk" overrides "awk"
-.if !defined(TOOLS_IGNORE.awk) && !empty(USE_TOOLS:Mawk) && \
-    empty(USE_TOOLS:Mgawk)
+.if !defined(TOOLS_IGNORE.awk) && !empty(_USE_TOOLS:Mawk)
 .  if !empty(PKGPATH:Mlang/gawk)
 MAKEFLAGS+=			TOOLS_IGNORE.awk=
 .  elif !empty(_TOOLS_USE_PKGSRC.awk:M[yY][eE][sS])
@@ -128,7 +145,7 @@ ${_TOOLS_VARNAME.awk}=		${TOOLS_REAL_CMD.awk}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.bison) && !empty(USE_TOOLS:Mbison)
+.if !defined(TOOLS_IGNORE.bison) && !empty(_USE_TOOLS:Mbison)
 .  if !empty(PKGPATH:Mdevel/bison)
 MAKEFLAGS+=			TOOLS_IGNORE.bison=
 .  elif !empty(_TOOLS_USE_PKGSRC.bison:M[yY][eE][sS])
@@ -143,7 +160,7 @@ ${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_ARGS.bison}
 TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
 .endif
 
-.if !defined(TOOLS_IGNORE.cmp) && !empty(USE_TOOLS:Mcmp)
+.if !defined(TOOLS_IGNORE.cmp) && !empty(_USE_TOOLS:Mcmp)
 .  if !empty(PKGPATH:Mdevel/diffutils)
 MAKEFLAGS+=			TOOLS_IGNORE.cmp=
 .  elif !empty(_TOOLS_USE_PKGSRC.cmp:M[yY][eE][sS])
@@ -156,7 +173,7 @@ ${_TOOLS_VARNAME.cmp}=		${TOOLS_REAL_CMD.cmp}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.egrep) && !empty(USE_TOOLS:Megrep)
+.if !defined(TOOLS_IGNORE.egrep) && !empty(_USE_TOOLS:Megrep)
 .  if !empty(PKGPATH:Mtextproc/grep)
 MAKEFLAGS+=			TOOLS_IGNORE.egrep=
 .  elif !empty(_TOOLS_USE_PKGSRC.egrep:M[yY][eE][sS])
@@ -169,7 +186,7 @@ ${_TOOLS_VARNAME.egrep}=	${TOOLS_REAL_CMD.egrep}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.fgrep) && !empty(USE_TOOLS:Mfgrep)
+.if !defined(TOOLS_IGNORE.fgrep) && !empty(_USE_TOOLS:Mfgrep)
 .  if !empty(PKGPATH:Mtextproc/grep)
 MAKEFLAGS+=			TOOLS_IGNORE.fgrep=
 .  elif !empty(_TOOLS_USE_PKGSRC.fgrep:M[yY][eE][sS])
@@ -182,7 +199,7 @@ ${_TOOLS_VARNAME.fgrep}=	${TOOLS_REAL_CMD.fgrep}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.file) && !empty(USE_TOOLS:Mfile)
+.if !defined(TOOLS_IGNORE.file) && !empty(_USE_TOOLS:Mfile)
 .  if !empty(PKGPATH:Msysutils/file)
 MAKEFLAGS+=			TOOLS_IGNORE.file=
 .  elif !empty(_TOOLS_USE_PKGSRC.file:M[yY][eE][sS])
@@ -195,7 +212,7 @@ ${_TOOLS_VARNAME.file}=	${TOOLS_REAL_CMD.file}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.find) && !empty(USE_TOOLS:Mfind)
+.if !defined(TOOLS_IGNORE.find) && !empty(_USE_TOOLS:Mfind)
 .  if !empty(PKGPATH:Msysutils/findutils)
 MAKEFLAGS+=			TOOLS_IGNORE.find=
 .  elif !empty(_TOOLS_USE_PKGSRC.find:M[yY][eE][sS])
@@ -208,7 +225,7 @@ ${_TOOLS_VARNAME.find}=		${TOOLS_REAL_CMD.find}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.gawk) && !empty(USE_TOOLS:Mgawk)
+.if !defined(TOOLS_IGNORE.gawk) && !empty(_USE_TOOLS:Mgawk)
 .  if !empty(PKGPATH:Mlang/gawk)
 MAKEFLAGS+=			TOOLS_IGNORE.gawk=
 .  elif !empty(_TOOLS_USE_PKGSRC.gawk:M[yY][eE][sS])
@@ -222,7 +239,7 @@ ${_TOOLS_VARNAME.gawk}=		${TOOLS_REAL_CMD.gawk}
 TOOLS_CMD.gawk=			${TOOLS_DIR}/bin/awk
 .endif
 
-.if !defined(TOOLS_IGNORE.gm4) && !empty(USE_TOOLS:Mgm4)
+.if !defined(TOOLS_IGNORE.gm4) && !empty(_USE_TOOLS:Mgm4)
 .  if !empty(PKGPATH:Mdevel/m4)
 MAKEFLAGS+=			TOOLS_IGNORE.gm4=
 .  elif !empty(_TOOLS_USE_PKGSRC.gm4:M[yY][eE][sS])
@@ -236,7 +253,7 @@ ${_TOOLS_VARNAME.gm4}=		${TOOLS_REAL_CMD.gm4}
 TOOLS_CMD.gm4=			${TOOLS_DIR}/bin/m4
 .endif
 
-.if !defined(TOOLS_IGNORE.gmake) && !empty(USE_TOOLS:Mgmake)
+.if !defined(TOOLS_IGNORE.gmake) && !empty(_USE_TOOLS:Mgmake)
 .  if !empty(PKGPATH:Mdevel/gmake)
 MAKEFLAGS+=			TOOLS_IGNORE.gmake=
 .  elif !empty(_TOOLS_USE_PKGSRC.gmake:M[yY][eE][sS])
@@ -249,7 +266,7 @@ ${_TOOLS_VARNAME.gmake}=	${TOOLS_REAL_CMD.gmake}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.grep) && !empty(USE_TOOLS:Mgrep)
+.if !defined(TOOLS_IGNORE.grep) && !empty(_USE_TOOLS:Mgrep)
 .  if !empty(PKGPATH:Mtextproc/grep)
 MAKEFLAGS+=			TOOLS_IGNORE.grep=
 .  elif !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
@@ -262,7 +279,7 @@ ${_TOOLS_VARNAME.grep}=		${TOOLS_REAL_CMD.grep}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.gsed) && !empty(USE_TOOLS:Mgsed)
+.if !defined(TOOLS_IGNORE.gsed) && !empty(_USE_TOOLS:Mgsed)
 .  if !empty(PKGPATH:Mtextproc/gsed)
 MAKEFLAGS+=			TOOLS_IGNORE.gsed=
 .  elif !empty(_TOOLS_USE_PKGSRC.gsed:M[yY][eE][sS])
@@ -276,7 +293,7 @@ ${_TOOLS_VARNAME.gsed}=		${TOOLS_REAL_CMD.gsed}
 TOOLS_CMD.gsed=			${TOOLS_DIR}/bin/sed
 .endif
 
-.if !defined(TOOLS_IGNORE.gtar) && !empty(USE_TOOLS:Mgtar)
+.if !defined(TOOLS_IGNORE.gtar) && !empty(_USE_TOOLS:Mgtar)
 .  if !empty(PKGPATH:Marchivers/pax)
 MAKEFLAGS+=			TOOLS_IGNORE.gtar=
 .  elif !empty(_TOOLS_USE_PKGSRC.gtar:M[yY][eE][sS])
@@ -294,7 +311,7 @@ ${_TOOLS_VARNAME.gtar}=		${TOOLS_REAL_CMD.gtar}
 TOOLS_CMD.gtar=			${TOOLS_DIR}/bin/tar
 .endif
 
-.if !defined(TOOLS_IGNORE.gunzip) && !empty(USE_TOOLS:Mgunzip)
+.if !defined(TOOLS_IGNORE.gunzip) && !empty(_USE_TOOLS:Mgunzip)
 .  if !empty(PKGPATH:Marchivers/gzip)
 MAKEFLAGS+=			TOOLS_IGNORE.gunzip=
 .  elif !empty(_TOOLS_USE_PKGSRC.gunzip:M[yY][eE][sS])
@@ -307,7 +324,7 @@ ${_TOOLS_VARNAME.gunzip}=	${TOOLS_REAL_CMD.gunzip}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.gzcat) && !empty(USE_TOOLS:Mgzcat)
+.if !defined(TOOLS_IGNORE.gzcat) && !empty(_USE_TOOLS:Mgzcat)
 .  if !empty(PKGPATH:Marchivers/gzip)
 MAKEFLAGS+=			TOOLS_IGNORE.gzcat=
 .  elif !empty(_TOOLS_USE_PKGSRC.gzcat:M[yY][eE][sS])
@@ -320,7 +337,7 @@ ${_TOOLS_VARNAME.gzcat}=	${TOOLS_REAL_CMD.gzcat}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.gzip) && !empty(USE_TOOLS:Mgzip)
+.if !defined(TOOLS_IGNORE.gzip) && !empty(_USE_TOOLS:Mgzip)
 .  if !empty(PKGPATH:Marchivers/gzip)
 MAKEFLAGS+=			TOOLS_IGNORE.gzip=
 .  elif !empty(_TOOLS_USE_PKGSRC.gzip:M[yY][eE][sS])
@@ -333,7 +350,7 @@ ${_TOOLS_VARNAME.gzip}=		${TOOLS_REAL_CMD.gzip}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.lex) && !empty(USE_TOOLS:Mlex)
+.if !defined(TOOLS_IGNORE.lex) && !empty(_USE_TOOLS:Mlex)
 .  if !empty(PKGPATH:Mdevel/flex)
 MAKEFLAGS+=			TOOLS_IGNORE.lex=
 .  elif !empty(_TOOLS_USE_PKGSRC.lex:M[yY][eE][sS])
@@ -347,9 +364,7 @@ ${_TOOLS_VARNAME.lex}=		${TOOLS_REAL_CMD.lex}
 .  endif
 .endif
 
-# "gm4" overrides "m4"
-.if !defined(TOOLS_IGNORE.m4) && !empty(USE_TOOLS:Mm4) && \
-    empty(USE_TOOLS:Mgm4)
+.if !defined(TOOLS_IGNORE.m4) && !empty(_USE_TOOLS:Mm4)
 .  if !empty(PKGPATH:Mdevel/m4)
 MAKEFLAGS+=			TOOLS_IGNORE.m4=
 .  elif !empty(_TOOLS_USE_PKGSRC.m4:M[yY][eE][sS])
@@ -362,7 +377,7 @@ ${_TOOLS_VARNAME.m4}=		${TOOLS_REAL_CMD.m4}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.mtree) && !empty(USE_TOOLS:Mmtree)
+.if !defined(TOOLS_IGNORE.mtree) && !empty(_USE_TOOLS:Mmtree)
 .  if !empty(PKGPATH:Mpkgtools/mtree)
 MAKEFLAGS+=			TOOLS_IGNORE.mtree=
 .  elif !empty(_TOOLS_USE_PKGSRC.mtree:M[yY][eE][sS])
@@ -379,7 +394,7 @@ ${_TOOLS_VARNAME.mtree}=	${TOOLS_REAL_CMD.mtree}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.patch) && !empty(USE_TOOLS:Mpatch)
+.if !defined(TOOLS_IGNORE.patch) && !empty(_USE_TOOLS:Mpatch)
 .  if !empty(PKGPATH:Mdevel/patch)
 MAKEFLAGS+=			TOOLS_IGNORE.patch=
 .  elif !empty(_TOOLS_USE_PKGSRC.patch:M[yY][eE][sS])
@@ -392,7 +407,7 @@ ${_TOOLS_VARNAME.patch}=	${TOOLS_REAL_CMD.patch}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.pax) && !empty(USE_TOOLS:Mpax)
+.if !defined(TOOLS_IGNORE.pax) && !empty(_USE_TOOLS:Mpax)
 .  if !empty(PKGPATH:Marchivers/pax)
 MAKEFLAGS+=			TOOLS_IGNORE.pax=
 .  elif !empty(_TOOLS_USE_PKGSRC.pax:M[yY][eE][sS])
@@ -409,9 +424,7 @@ ${_TOOLS_VARNAME.pax}=		${TOOLS_REAL_CMD.pax}
 .  endif
 .endif
 
-# "gsed" overrides "sed"
-.if !defined(TOOLS_IGNORE.sed) && !empty(USE_TOOLS:Msed) && \
-    empty(USE_TOOLS:Mgsed)
+.if !defined(TOOLS_IGNORE.sed) && !empty(_USE_TOOLS:Msed)
 .  if !empty(PKGPATH:Mtextproc/nbsed)
 MAKEFLAGS+=			TOOLS_IGNORE.sed=
 .  elif !empty(_TOOLS_USE_PKGSRC.sed:M[yY][eE][sS])
@@ -424,7 +437,7 @@ ${_TOOLS_VARNAME.sed}=	${TOOLS_REAL_CMD.sed}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.sh) && !empty(USE_TOOLS:Msh)
+.if !defined(TOOLS_IGNORE.sh) && !empty(_USE_TOOLS:Msh)
 .  if !empty(PKGPATH:Mshells/pdksh)
 MAKEFLAGS+=			TOOLS_IGNORE.sh=
 .  elif !empty(_TOOLS_USE_PKGSRC.sh:M[yY][eE][sS])
@@ -438,7 +451,7 @@ ${_TOOLS_VARNAME.sh}=		${TOOLS_REAL_CMD.sh}
 TOOLS_CMD.sh=			${TOOLS_DIR}/bin/sh
 .endif
 
-.if !defined(TOOLS_IGNORE.shlock) && !empty(USE_TOOLS:Mshlock)
+.if !defined(TOOLS_IGNORE.shlock) && !empty(_USE_TOOLS:Mshlock)
 .  if !empty(PKGPATH:Mpkgtools/shlock)
 MAKEFLAGS+=			TOOLS_IGNORE.shlock=
 .  elif !empty(_TOOLS_USE_PKGSRC.shlock:M[yY][eE][sS])
@@ -451,7 +464,7 @@ ${_TOOLS_VARNAME.shlock}=	${TOOLS_REAL_CMD.shlock}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.tbl) && !empty(USE_TOOLS:Mtbl)
+.if !defined(TOOLS_IGNORE.tbl) && !empty(_USE_TOOLS:Mtbl)
 .  if !empty(PKGPATH:Mtextproc/groff)
 MAKEFLAGS+=			TOOLS_IGNORE.tbl=
 .  elif !empty(_TOOLS_USE_PKGSRC.tbl:M[yY][eE][sS])
@@ -464,7 +477,7 @@ ${_TOOLS_VARNAME.tbl}=		${TOOLS_REAL_CMD.tbl}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.xargs) && !empty(USE_TOOLS:Mxargs)
+.if !defined(TOOLS_IGNORE.xargs) && !empty(_USE_TOOLS:Mxargs)
 .  if !empty(PKGPATH:Msysutils/findutils)
 MAKEFLAGS+=			TOOLS_IGNORE.xargs=
 .  elif !empty(_TOOLS_USE_PKGSRC.xargs:M[yY][eE][sS])
@@ -477,9 +490,7 @@ ${_TOOLS_VARNAME.xargs}=	${TOOLS_REAL_CMD.xargs}
 .  endif
 .endif
 
-# "bison" overrides "yacc"
-.if !defined(TOOLS_IGNORE.yacc) && !empty(USE_TOOLS:Myacc) && \
-   empty(USE_TOOLS:Mbison)
+.if !defined(TOOLS_IGNORE.yacc) && !empty(_USE_TOOLS:Myacc)
 .  if !empty(PKGPATH:Mdevel/bison)
 MAKEFLAGS+=			TOOLS_IGNORE.yacc=
 .  elif !empty(_TOOLS_USE_PKGSRC.yacc:M[yY][eE][sS])
@@ -496,7 +507,7 @@ ${_TOOLS_VARNAME.yacc}=		${TOOLS_REAL_CMD.yacc} ${TOOLS_ARGS.yacc}
 # Add the dependencies for each pkgsrc-supplied tool.
 .for _t_ in ${_TOOLS_REPLACE_LIST}
 .  if defined(TOOLS_DEPMETHOD.${_t_}) && defined(TOOLS_DEPENDS.${_t_}) && \
-      !empty(USE_TOOLS:M${_t_})
+      !empty(_USE_TOOLS:M${_t_})
 .    if empty(${TOOLS_DEPMETHOD.${_t_}}:M${TOOLS_DEPENDS.${_t_}})
 ${TOOLS_DEPMETHOD.${_t_}}+=	${TOOLS_DEPENDS.${_t_}}
 .    endif
@@ -517,7 +528,7 @@ ${TOOLS_DEPMETHOD.${_t_}}+=	${TOOLS_DEPENDS.${_t_}}
 # <tool>.
 #
 .for _t_ in ${_TOOLS_REPLACE_LIST}
-.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(USE_TOOLS:M${_t_}) && \
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_}) && \
       !empty(_TOOLS_USE_PKGSRC.${_t_}:M[nN][oO])
 .    if defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
 TOOLS_REAL_CMD.${_t_}?=		\
