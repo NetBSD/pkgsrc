@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: NetBSD.pkg.dist,v 1.85 2005/04/07 11:51:32 markd Exp $
+#	$NetBSD: NetBSD.pkg.dist,v 1.86 2005/04/28 19:15:38 wiz Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -1043,8 +1043,6 @@
 	    sv_SE.ISO_8859-1
             ..
 	    uk_UA.KOI8-U
-	    ..
-	    uk_UA.ISO_8859-1
 	    ..
         ..
         skel
