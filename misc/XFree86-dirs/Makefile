@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/28 22:55:45 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/28 22:57:55 jlam Exp $
 #
 
 DISTNAME=	XFree86-dirs-1.1
@@ -23,8 +23,7 @@ XFREE86_ONLY_DIRS=	# defined
 .include "../../mk/bsd.prefs.mk"
 .include "dirs.mk"
 
-_SORTED!=	${ECHO} ${XFREE86_DIRS} | ${TR} -s ' \t' '\n' | ${SORT}
-MAKE_DIRS+=	${_SORTED:S/^/${X11ROOT}\//:C/\/\/\/*/\//g}
+MAKE_DIRS+=	${XFREE86_DIRS:O:S/^/${X11ROOT}\//:C/\/\/\/*/\//g}
 
 do-install:	# nothing
 
