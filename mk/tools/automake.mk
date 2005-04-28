@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.3 2005/04/26 15:32:05 jlam Exp $
+# $NetBSD: automake.mk,v 1.4 2005/04/28 03:01:11 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU automake.
 #
@@ -72,9 +72,12 @@ _TOOLS_AUTOMAKE_LINKS=	# empty
 MAKEFLAGS+=		TOOLS_IGNORE.automake=
 .  else
 AUTOMAKE_REQD?=		1.9
-BUILD_DEPENDS+=		automake>=${AUTOMAKE_REQD}:../../devel/automake
-USE_TOOLS+=		autoconf
-AUTOCONF_REQD?=		2.58
+
+TOOLS_DEPMETHOD.automake?=	BUILD_DEPENDS
+TOOLS_DEPENDS.automake?=	automake>=${AUTOMAKE_REQD}:../../devel/automake
+.    if empty(${TOOLS_DEPMETHOD.automake}:M${TOOLS_DEPENDS.automake})
+${TOOLS_DEPMETHOD.automake}+=	${TOOLS_DEPENDS.automake}
+.    endif
 
 _TOOLS_AUTOMAKE_LINKS+=		aclocal
 TOOLS_REAL_CMD.aclocal=		${LOCALBASE}/bin/aclocal
@@ -95,9 +98,12 @@ AUTOMAKE=	${TOOLS_CMD.automake}
 MAKEFLAGS+=		TOOLS_IGNORE.automake14=
 .  else
 AUTOMAKE_REQD?=		1.4
-BUILD_DEPENDS+=		automake14>=${AUTOMAKE_REQD}:../../devel/automake14
-USE_TOOLS+=		autoconf213
-AUTOCONF_REQD?=		2.13
+
+TOOLS_DEPMETHOD.automake14?=	BUILD_DEPENDS
+TOOLS_DEPENDS.automake14?=	automake14>=${AUTOMAKE_REQD}:../../devel/automake14
+.    if empty(${TOOLS_DEPMETHOD.automake14}:M${TOOLS_DEPENDS.automake14})
+${TOOLS_DEPMETHOD.automake14}+=	${TOOLS_DEPENDS.automake14}
+.    endif
 
 _TOOLS_AUTOMAKE_LINKS+=		aclocal
 TOOLS_REAL_CMD.aclocal=		${LOCALBASE}/bin/aclocal-1.4
