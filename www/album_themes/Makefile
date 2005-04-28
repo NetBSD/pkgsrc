@@ -37,5 +37,4 @@ do-install:
 	cd ${PREFIX}/${A_DATADIR}; \
 	${TAR} -xzf ${DISTDIR}/${DISTFILES}
 
-.include "../../www/apache/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
