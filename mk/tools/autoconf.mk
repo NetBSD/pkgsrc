@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.3 2005/04/26 15:32:05 jlam Exp $
+# $NetBSD: autoconf.mk,v 1.4 2005/04/28 03:01:11 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU autoconf.
 #
@@ -55,7 +55,12 @@ _TOOLS_AUTOCONF_LINKS=	# empty
 MAKEFLAGS+=		TOOLS_IGNORE.autoconf=
 .  else
 AUTOCONF_REQD?=		2.50
-BUILD_DEPENDS+=		autoconf>=${AUTOCONF_REQD}:../../devel/autoconf
+
+TOOLS_DEPMETHOD.autoconf?=	BUILD_DEPENDS
+TOOLS_DEPENDS.autoconf?=	autoconf>=${AUTOCONF_REQD}:../../devel/autoconf
+.    if empty(${TOOLS_DEPMETHOD.autoconf}:M${TOOLS_DEPENDS.autoconf})
+${TOOLS_DEPMETHOD.autoconf}+=	${TOOLS_DEPENDS.autoconf}
+.    endif
 
 _TOOLS_AUTOCONF_LINKS+=		autoconf
 TOOLS_REAL_CMD.autoconf=	${LOCALBASE}/bin/autoconf
@@ -92,7 +97,12 @@ AUTORECONF=	${TOOLS_CMD.autoreconf}
 MAKEFLAGS+=		TOOLS_IGNORE.autoconf213=
 .  else
 AUTOCONF_REQD?=		2.13
-BUILD_DEPENDS+=		autoconf213>=${AUTOCONF_REQD}:../../devel/autoconf213
+
+TOOLS_DEPMETHOD.autoconf213?=	BUILD_DEPENDS
+TOOLS_DEPENDS.autoconf213?=	autoconf213>=${AUTOCONF_REQD}:../../devel/autoconf213
+.    if empty(${TOOLS_DEPMETHOD.autoconf213}:M${TOOLS_DEPENDS.autoconf213})
+${TOOLS_DEPMETHOD.autoconf213}+=	${TOOLS_DEPENDS.autoconf213}
+.    endif
 
 _TOOLS_AUTOCONF_LINKS+=		autoconf
 TOOLS_REAL_CMD.autoconf=	${LOCALBASE}/bin/autoconf-2.13
