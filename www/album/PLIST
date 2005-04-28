@@ -1,0 +1,25 @@
+@comment $NetBSD $
+bin/album
+share/doc/album/Pics/Caption.gif
+share/doc/album/Section_1.html
+share/doc/album/conf.bak
+share/doc/album/conf
+share/doc/album/Section_2.html
+share/doc/album/Section_3.html
+share/doc/album/Section_4.html
+share/doc/album/Section_5.html
+share/doc/album/Section_6.html
+share/doc/album/Section_7.html
+share/doc/album/Section_8.html
+share/doc/album/Short.html
+share/doc/album/index.html
+share/doc/album/txt_1
+share/doc/album/txt_2
+share/doc/album/txt_3
+share/doc/album/txt_4
+share/doc/album/txt_5
+share/doc/album/txt_6
+share/doc/album/txt_7
+share/doc/album/txt_8
+@dirrm share/doc/album/Pics
+@dirrm share/doc/album
