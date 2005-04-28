@@ -1,10 +1,10 @@
-# $NetBSD: coreutils.mk,v 1.3 2005/04/26 23:02:48 jlam Exp $
+# $NetBSD: coreutils.mk,v 1.4 2005/04/28 02:10:56 jlam Exp $
 #
 # This Makefile fragment unconditionally replaces the system-supplied
 # "core" utilities with the ones from the GNU coreutils package when
 # "coreutils" is added to USE_TOOLS.
 #
-# Set TOOLS_DEPENDS.coreutils to "DEPENDS" to get a run-time dependency
+# Set TOOLS_DEPMETHOD.coreutils to "DEPENDS" to get a run-time dependency
 # on coreutils.
 #
 
@@ -12,8 +12,8 @@
 .  if !empty(PKGPATH:Msysutils/coreutils)
 MAKEFLAGS+=		TOOLS_IGNORE.coreutils=
 .  else
-TOOLS_DEPENDS.coreutils?=	BUILD_DEPENDS
-${TOOLS_DEPENDS.coreutils}+=	coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_DEPMETHOD.coreutils?=	BUILD_DEPENDS
+${TOOLS_DEPMETHOD.coreutils}+=	coreutils>=5.2.1:../../sysutils/coreutils
 
 # List of core utilities for which we'll create symlinks under
 # ${TOOLS_DIR}.  This isn't every utility provided by coreutils, but
