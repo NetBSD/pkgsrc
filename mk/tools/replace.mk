@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.51 2005/04/28 16:00:58 jlam Exp $
+# $NetBSD: replace.mk,v 1.52 2005/04/28 17:35:48 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -50,9 +50,22 @@ USE_TOOLS+=	tbl
 
 # "TOOL" variable names associated with each of the tools
 _TOOLS_VARNAME.awk=		AWK
+_TOOLS_VARNAME.basename=	BASENAME
 _TOOLS_VARNAME.bison=		YACC
+_TOOLS_VARNAME.cat=		CAT
+_TOOLS_VARNAME.chgrp=		CHGRP
+_TOOLS_VARNAME.chmod=		CHMOD
+_TOOLS_VARNAME.chown=		CHOWN
 _TOOLS_VARNAME.cmp=		CMP
+_TOOLS_VARNAME.cp=		CP
+_TOOLS_VARNAME.cut=		CUT
+_TOOLS_VARNAME.date=		DATE
+_TOOLS_VARNAME.dirname=		DIRNAME
+_TOOLS_VARNAME.echo=		ECHO
 _TOOLS_VARNAME.egrep=		EGREP
+_TOOLS_VARNAME.env=		SETENV
+_TOOLS_VARNAME.expr=		EXPR
+_TOOLS_VARNAME.false=		FALSE
 _TOOLS_VARNAME.fgrep=		FGREP
 _TOOLS_VARNAME.file=		FILE_CMD
 _TOOLS_VARNAME.find=		FIND
@@ -65,15 +78,35 @@ _TOOLS_VARNAME.gtar=		GTAR
 _TOOLS_VARNAME.gunzip=		GUNZIP_CMD
 _TOOLS_VARNAME.gzcat=		GZCAT
 _TOOLS_VARNAME.gzip=		GZIP_CMD
+_TOOLS_VARNAME.head=		HEAD
+_TOOLS_VARNAME.hostname=	HOSTNAME
+_TOOLS_VARNAME.id=		ID
 _TOOLS_VARNAME.lex=		LEX
+_TOOLS_VARNAME.ln=		LN
+_TOOLS_VARNAME.ls=		LS
 _TOOLS_VARNAME.m4=		M4
+_TOOLS_VARNAME.mkdir=		MKDIR
 _TOOLS_VARNAME.mtree=		MTREE
+_TOOLS_VARNAME.mv=		MV
+_TOOLS_VARNAME.nice=		NICE
 _TOOLS_VARNAME.patch=		PATCH
 _TOOLS_VARNAME.pax=		PAX
+_TOOLS_VARNAME.pwd=		PWD
+_TOOLS_VARNAME.rm=		RM
+_TOOLS_VARNAME.rmdir=		RMDIR
 _TOOLS_VARNAME.sed=		SED
 _TOOLS_VARNAME.sh=		SH
 _TOOLS_VARNAME.shlock=		SHLOCK
+_TOOLS_VARNAME.sort=		SORT
+_TOOLS_VARNAME.tail=		TAIL
 _TOOLS_VARNAME.tbl=		TBL
+_TOOLS_VARNAME.tee=		TEE
+_TOOLS_VARNAME.test=		TEST
+_TOOLS_VARNAME.touch=		TOUCH
+_TOOLS_VARNAME.tr=		TR
+_TOOLS_VARNAME.true=		TRUE
+_TOOLS_VARNAME.tsort=		TSORT
+_TOOLS_VARNAME.wc=		WC
 _TOOLS_VARNAME.xargs=		XARGS
 _TOOLS_VARNAME.yacc=		YACC
 
@@ -125,6 +158,16 @@ TOOLS_DEPMETHOD.${_t_}?=	BUILD_DEPENDS
 # of TOOLS_IGNORE.<tool>.  If we're using the system-supplied tool, we
 # defer the setting of TOOLS_REAL_CMD.<tool> until the loop at the end.
 
+.if !defined(TOOLS_IGNORE.[) && !empty(_USE_TOOLS:M\[)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.[=
+.  elif !empty(_TOOLS_USE_PKGSRC.[:M[yY][eE][sS])
+TOOLS_DEPENDS.[?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			[
+TOOLS_REAL_CMD.[=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}[
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.awk) && !empty(_USE_TOOLS:Mawk)
 .  if !empty(PKGPATH:Mlang/gawk)
 MAKEFLAGS+=			TOOLS_IGNORE.awk=
@@ -134,6 +177,19 @@ TOOLS_SYMLINK+=			awk
 TOOLS_REAL_CMD.awk=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
 .    if exists(${TOOLS_REAL_CMD.awk})
 ${_TOOLS_VARNAME.awk}=		${TOOLS_REAL_CMD.awk}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.basename) && !empty(_USE_TOOLS:Mbasename)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.basename=
+.  elif !empty(_TOOLS_USE_PKGSRC.basename:M[yY][eE][sS])
+TOOLS_DEPENDS.basename?=	coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			basename
+TOOLS_REAL_CMD.basename=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}basename
+.    if exists(${TOOLS_REAL_CMD.basename})
+${_TOOLS_VARNAME.basename}=	${TOOLS_REAL_CMD.basename}
 .    endif
 .  endif
 .endif
@@ -153,6 +209,58 @@ ${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_ARGS.bison}
 TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
 .endif
 
+.if !defined(TOOLS_IGNORE.cat) && !empty(_USE_TOOLS:Mcat)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.cat=
+.  elif !empty(_TOOLS_USE_PKGSRC.cat:M[yY][eE][sS])
+TOOLS_DEPENDS.cat?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			cat
+TOOLS_REAL_CMD.cat=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}cat
+.    if exists(${TOOLS_REAL_CMD.cat})
+${_TOOLS_VARNAME.cat}=		${TOOLS_REAL_CMD.cat}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.chgrp) && !empty(_USE_TOOLS:Mchgrp)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.chgrp=
+.  elif !empty(_TOOLS_USE_PKGSRC.chgrp:M[yY][eE][sS])
+TOOLS_DEPENDS.chgrp?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			chgrp
+TOOLS_REAL_CMD.chgrp=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}chgrp
+.    if exists(${TOOLS_REAL_CMD.chgrp})
+${_TOOLS_VARNAME.chgrp}=	${TOOLS_REAL_CMD.chgrp}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.chmod) && !empty(_USE_TOOLS:Mchmod)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.chmod=
+.  elif !empty(_TOOLS_USE_PKGSRC.chmod:M[yY][eE][sS])
+TOOLS_DEPENDS.chmod?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			chmod
+TOOLS_REAL_CMD.chmod=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}chmod
+.    if exists(${TOOLS_REAL_CMD.chmod})
+${_TOOLS_VARNAME.chmod}=	${TOOLS_REAL_CMD.chmod}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.chown) && !empty(_USE_TOOLS:Mchown)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.chown=
+.  elif !empty(_TOOLS_USE_PKGSRC.chown:M[yY][eE][sS])
+TOOLS_DEPENDS.chown?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			chown
+TOOLS_REAL_CMD.chown=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}chown
+.    if exists(${TOOLS_REAL_CMD.chown})
+${_TOOLS_VARNAME.chown}=	${TOOLS_REAL_CMD.chown}
+.    endif
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.cmp) && !empty(_USE_TOOLS:Mcmp)
 .  if !empty(PKGPATH:Mdevel/diffutils)
 MAKEFLAGS+=			TOOLS_IGNORE.cmp=
@@ -166,6 +274,71 @@ ${_TOOLS_VARNAME.cmp}=		${TOOLS_REAL_CMD.cmp}
 .  endif
 .endif
 
+.if !defined(TOOLS_IGNORE.cp) && !empty(_USE_TOOLS:Mcp)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.cp=
+.  elif !empty(_TOOLS_USE_PKGSRC.cp:M[yY][eE][sS])
+TOOLS_DEPENDS.cp?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			cp
+TOOLS_REAL_CMD.cp=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}cp
+.    if exists(${TOOLS_REAL_CMD.cp})
+${_TOOLS_VARNAME.cp}=		${TOOLS_REAL_CMD.cp}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.cut) && !empty(_USE_TOOLS:Mcut)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.cut=
+.  elif !empty(_TOOLS_USE_PKGSRC.cut:M[yY][eE][sS])
+TOOLS_DEPENDS.cut?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			cut
+TOOLS_REAL_CMD.cut=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}cut
+.    if exists(${TOOLS_REAL_CMD.cut})
+${_TOOLS_VARNAME.cut}=		${TOOLS_REAL_CMD.cut}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.date) && !empty(_USE_TOOLS:Mdate)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.date=
+.  elif !empty(_TOOLS_USE_PKGSRC.date:M[yY][eE][sS])
+TOOLS_DEPENDS.date?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			date
+TOOLS_REAL_CMD.date=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}date
+.    if exists(${TOOLS_REAL_CMD.date})
+${_TOOLS_VARNAME.date}=		${TOOLS_REAL_CMD.date}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.dirname) && !empty(_USE_TOOLS:Mdirname)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.dirname=
+.  elif !empty(_TOOLS_USE_PKGSRC.dirname:M[yY][eE][sS])
+TOOLS_DEPENDS.dirname?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			dirname
+TOOLS_REAL_CMD.dirname=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}dirname
+.    if exists(${TOOLS_REAL_CMD.dirname})
+${_TOOLS_VARNAME.dirname}=	${TOOLS_REAL_CMD.dirname}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.echo) && !empty(_USE_TOOLS:Mecho)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.echo=
+.  elif !empty(_TOOLS_USE_PKGSRC.echo:M[yY][eE][sS])
+TOOLS_DEPENDS.echo?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			echo
+TOOLS_REAL_CMD.echo=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}echo
+.    if exists(${TOOLS_REAL_CMD.echo})
+${_TOOLS_VARNAME.echo}=		${TOOLS_REAL_CMD.echo}
+.    endif
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.egrep) && !empty(_USE_TOOLS:Megrep)
 .  if !empty(PKGPATH:Mtextproc/grep)
 MAKEFLAGS+=			TOOLS_IGNORE.egrep=
@@ -175,6 +348,45 @@ TOOLS_SYMLINK+=			egrep
 TOOLS_REAL_CMD.egrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}egrep
 .    if exists(${TOOLS_REAL_CMD.egrep})
 ${_TOOLS_VARNAME.egrep}=	${TOOLS_REAL_CMD.egrep}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.env) && !empty(_USE_TOOLS:Menv)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.env=
+.  elif !empty(_TOOLS_USE_PKGSRC.env:M[yY][eE][sS])
+TOOLS_DEPENDS.env?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			env
+TOOLS_REAL_CMD.env=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}env
+.    if exists(${TOOLS_REAL_CMD.env})
+${_TOOLS_VARNAME.env}=		${TOOLS_REAL_CMD.env}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.expr) && !empty(_USE_TOOLS:Mexpr)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.expr=
+.  elif !empty(_TOOLS_USE_PKGSRC.expr:M[yY][eE][sS])
+TOOLS_DEPENDS.expr?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			expr
+TOOLS_REAL_CMD.expr=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}expr
+.    if exists(${TOOLS_REAL_CMD.expr})
+${_TOOLS_VARNAME.expr}=		${TOOLS_REAL_CMD.expr}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.false) && !empty(_USE_TOOLS:Mfalse)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.false=
+.  elif !empty(_TOOLS_USE_PKGSRC.false:M[yY][eE][sS])
+TOOLS_DEPENDS.false?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			false
+TOOLS_REAL_CMD.false=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}false
+.    if exists(${TOOLS_REAL_CMD.false})
+${_TOOLS_VARNAME.false}=	${TOOLS_REAL_CMD.false}
 .    endif
 .  endif
 .endif
@@ -343,6 +555,45 @@ ${_TOOLS_VARNAME.gzip}=		${TOOLS_REAL_CMD.gzip}
 .  endif
 .endif
 
+.if !defined(TOOLS_IGNORE.head) && !empty(_USE_TOOLS:Mhead)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.head=
+.  elif !empty(_TOOLS_USE_PKGSRC.head:M[yY][eE][sS])
+TOOLS_DEPENDS.head?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			head
+TOOLS_REAL_CMD.head=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}head
+.    if exists(${TOOLS_REAL_CMD.head})
+${_TOOLS_VARNAME.head}=		${TOOLS_REAL_CMD.head}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.hostname) && !empty(_USE_TOOLS:Mhostname)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.hostname=
+.  elif !empty(_TOOLS_USE_PKGSRC.hostname:M[yY][eE][sS])
+TOOLS_DEPENDS.hostname?=	coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			hostname
+TOOLS_REAL_CMD.hostname=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}hostname
+.    if exists(${TOOLS_REAL_CMD.hostname})
+${_TOOLS_VARNAME.hostname}=	${TOOLS_REAL_CMD.hostname}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.id) && !empty(_USE_TOOLS:Mid)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.id=
+.  elif !empty(_TOOLS_USE_PKGSRC.id:M[yY][eE][sS])
+TOOLS_DEPENDS.id?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			id
+TOOLS_REAL_CMD.id=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}id
+.    if exists(${TOOLS_REAL_CMD.id})
+${_TOOLS_VARNAME.id}=		${TOOLS_REAL_CMD.id}
+.    endif
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.lex) && !empty(_USE_TOOLS:Mlex)
 .  if !empty(PKGPATH:Mdevel/flex)
 MAKEFLAGS+=			TOOLS_IGNORE.lex=
@@ -353,6 +604,32 @@ TOOLS_SYMLINK+=			lex
 TOOLS_REAL_CMD.lex=		${LOCALBASE}/bin/flex
 .    if exists(${TOOLS_REAL_CMD.lex})
 ${_TOOLS_VARNAME.lex}=		${TOOLS_REAL_CMD.lex}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.ln) && !empty(_USE_TOOLS:Mln)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.ln=
+.  elif !empty(_TOOLS_USE_PKGSRC.ln:M[yY][eE][sS])
+TOOLS_DEPENDS.ln?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			ln
+TOOLS_REAL_CMD.ln=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}ln
+.    if exists(${TOOLS_REAL_CMD.ln})
+${_TOOLS_VARNAME.ln}=		${TOOLS_REAL_CMD.ln}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.ls) && !empty(_USE_TOOLS:Mls)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.ls=
+.  elif !empty(_TOOLS_USE_PKGSRC.ls:M[yY][eE][sS])
+TOOLS_DEPENDS.ls?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			ls
+TOOLS_REAL_CMD.ls=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}ls
+.    if exists(${TOOLS_REAL_CMD.ls})
+${_TOOLS_VARNAME.ls}=		${TOOLS_REAL_CMD.ls}
 .    endif
 .  endif
 .endif
@@ -370,6 +647,20 @@ ${_TOOLS_VARNAME.m4}=		${TOOLS_REAL_CMD.m4}
 .  endif
 .endif
 
+.if !defined(TOOLS_IGNORE.mkdir) && !empty(_USE_TOOLS:Mmkdir)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.mkdir=
+.  elif !empty(_TOOLS_USE_PKGSRC.mkdir:M[yY][eE][sS])
+TOOLS_DEPENDS.mkdir?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_WRAP+=			mkdir
+TOOLS_REAL_CMD.mkdir=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}mkdir
+TOOLS_ARGS.mkdir=		-p
+.    if exists(${TOOLS_REAL_CMD.mkdir})
+${_TOOLS_VARNAME.mkdir}=	${TOOLS_REAL_CMD.mkdir} ${TOOLS_ARGS.mkdir}
+.    endif
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.mtree) && !empty(_USE_TOOLS:Mmtree)
 .  if !empty(PKGPATH:Mpkgtools/mtree)
 MAKEFLAGS+=			TOOLS_IGNORE.mtree=
@@ -383,6 +674,32 @@ TOOLS_SYMLINK+=			mtree
 TOOLS_REAL_CMD.mtree=		${LOCALBASE}/bin/mtree
 .    if exists(${TOOLS_REAL_CMD.mtree})
 ${_TOOLS_VARNAME.mtree}=	${TOOLS_REAL_CMD.mtree}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.mv) && !empty(_USE_TOOLS:Mmv)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.mv=
+.  elif !empty(_TOOLS_USE_PKGSRC.mv:M[yY][eE][sS])
+TOOLS_DEPENDS.mv?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			mv
+TOOLS_REAL_CMD.mv=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}mv
+.    if exists(${TOOLS_REAL_CMD.mv})
+${_TOOLS_VARNAME.mv}=		${TOOLS_REAL_CMD.mv}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.nice) && !empty(_USE_TOOLS:Mnice)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.nice=
+.  elif !empty(_TOOLS_USE_PKGSRC.nice:M[yY][eE][sS])
+TOOLS_DEPENDS.nice?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			nice
+TOOLS_REAL_CMD.nice=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}nice
+.    if exists(${TOOLS_REAL_CMD.nice})
+${_TOOLS_VARNAME.nice}=		${TOOLS_REAL_CMD.nice}
 .    endif
 .  endif
 .endif
@@ -413,6 +730,45 @@ TOOLS_SYMLINK+=			pax
 TOOLS_REAL_CMD.pax=		${LOCALBASE}/bin/pax
 .    if exists(${TOOLS_REAL_CMD.pax})
 ${_TOOLS_VARNAME.pax}=		${TOOLS_REAL_CMD.pax}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.pwd) && !empty(_USE_TOOLS:Mpwd)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.pwd=
+.  elif !empty(_TOOLS_USE_PKGSRC.pwd:M[yY][eE][sS])
+TOOLS_DEPENDS.pwd?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			pwd
+TOOLS_REAL_CMD.pwd=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}pwd
+.    if exists(${TOOLS_REAL_CMD.pwd})
+${_TOOLS_VARNAME.pwd}=		${TOOLS_REAL_CMD.pwd}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.rm) && !empty(_USE_TOOLS:Mrm)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.rm=
+.  elif !empty(_TOOLS_USE_PKGSRC.rm:M[yY][eE][sS])
+TOOLS_DEPENDS.rm?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			rm
+TOOLS_REAL_CMD.rm=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}rm
+.    if exists(${TOOLS_REAL_CMD.rm})
+${_TOOLS_VARNAME.rm}=		${TOOLS_REAL_CMD.rm}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.rmdir) && !empty(_USE_TOOLS:Mrmdir)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.rmdir=
+.  elif !empty(_TOOLS_USE_PKGSRC.rmdir:M[yY][eE][sS])
+TOOLS_DEPENDS.rmdir?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			rmdir
+TOOLS_REAL_CMD.rmdir=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}rmdir
+.    if exists(${TOOLS_REAL_CMD.rmdir})
+${_TOOLS_VARNAME.rmdir}=	${TOOLS_REAL_CMD.rmdir}
 .    endif
 .  endif
 .endif
@@ -457,6 +813,32 @@ ${_TOOLS_VARNAME.shlock}=	${TOOLS_REAL_CMD.shlock}
 .  endif
 .endif
 
+.if !defined(TOOLS_IGNORE.sort) && !empty(_USE_TOOLS:Msort)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.sort=
+.  elif !empty(_TOOLS_USE_PKGSRC.sort:M[yY][eE][sS])
+TOOLS_DEPENDS.sort?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			sort
+TOOLS_REAL_CMD.sort=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sort
+.    if exists(${TOOLS_REAL_CMD.sort})
+${_TOOLS_VARNAME.sort}=		${TOOLS_REAL_CMD.sort}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.tail) && !empty(_USE_TOOLS:Mtail)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.tail=
+.  elif !empty(_TOOLS_USE_PKGSRC.tail:M[yY][eE][sS])
+TOOLS_DEPENDS.tail?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			tail
+TOOLS_REAL_CMD.tail=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}tail
+.    if exists(${TOOLS_REAL_CMD.tail})
+${_TOOLS_VARNAME.tail}=		${TOOLS_REAL_CMD.tail}
+.    endif
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.tbl) && !empty(_USE_TOOLS:Mtbl)
 .  if !empty(PKGPATH:Mtextproc/groff)
 MAKEFLAGS+=			TOOLS_IGNORE.tbl=
@@ -466,6 +848,97 @@ TOOLS_SYMLINK+=			tbl
 TOOLS_REAL_CMD.tbl=		${LOCALBASE}/bin/tbl
 .    if exists(${TOOLS_REAL_CMD.tbl})
 ${_TOOLS_VARNAME.tbl}=		${TOOLS_REAL_CMD.tbl}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.tee) && !empty(_USE_TOOLS:Mtee)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.tee=
+.  elif !empty(_TOOLS_USE_PKGSRC.tee:M[yY][eE][sS])
+TOOLS_DEPENDS.tee?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			tee
+TOOLS_REAL_CMD.tee=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}tee
+.    if exists(${TOOLS_REAL_CMD.tee})
+${_TOOLS_VARNAME.tee}=		${TOOLS_REAL_CMD.tee}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.test) && !empty(_USE_TOOLS:Mtest)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.test=
+.  elif !empty(_TOOLS_USE_PKGSRC.test:M[yY][eE][sS])
+TOOLS_DEPENDS.test?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			test
+TOOLS_REAL_CMD.test=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}test
+.    if exists(${TOOLS_REAL_CMD.test})
+${_TOOLS_VARNAME.test}=		${TOOLS_REAL_CMD.test}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.touch) && !empty(_USE_TOOLS:Mtouch)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.touch=
+.  elif !empty(_TOOLS_USE_PKGSRC.touch:M[yY][eE][sS])
+TOOLS_DEPENDS.touch?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			touch
+TOOLS_REAL_CMD.touch=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}touch
+.    if exists(${TOOLS_REAL_CMD.touch})
+${_TOOLS_VARNAME.touch}=	${TOOLS_REAL_CMD.touch}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.tr) && !empty(_USE_TOOLS:Mtr)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.tr=
+.  elif !empty(_TOOLS_USE_PKGSRC.tr:M[yY][eE][sS])
+TOOLS_DEPENDS.tr?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			tr
+TOOLS_REAL_CMD.tr=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}tr
+.    if exists(${TOOLS_REAL_CMD.tr})
+${_TOOLS_VARNAME.tr}=		${TOOLS_REAL_CMD.tr}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.true) && !empty(_USE_TOOLS:Mtrue)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.true=
+.  elif !empty(_TOOLS_USE_PKGSRC.true:M[yY][eE][sS])
+TOOLS_DEPENDS.true?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			true
+TOOLS_REAL_CMD.true=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}true
+.    if exists(${TOOLS_REAL_CMD.true})
+${_TOOLS_VARNAME.true}=		${TOOLS_REAL_CMD.true}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.tsort) && !empty(_USE_TOOLS:Mtsort)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.tsort=
+.  elif !empty(_TOOLS_USE_PKGSRC.tsort:M[yY][eE][sS])
+TOOLS_DEPENDS.tsort?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			tsort
+TOOLS_REAL_CMD.tsort=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}tsort
+.    if exists(${TOOLS_REAL_CMD.tsort})
+${_TOOLS_VARNAME.tsort}=	${TOOLS_REAL_CMD.tsort}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.wc) && !empty(_USE_TOOLS:Mwc)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.wc=
+.  elif !empty(_TOOLS_USE_PKGSRC.wc:M[yY][eE][sS])
+TOOLS_DEPENDS.wc?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			wc
+TOOLS_REAL_CMD.wc=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}wc
+.    if exists(${TOOLS_REAL_CMD.wc})
+${_TOOLS_VARNAME.wc}=		${TOOLS_REAL_CMD.wc}
 .    endif
 .  endif
 .endif
