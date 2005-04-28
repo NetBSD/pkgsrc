@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/04/28 22:29:43 reed Exp $
+
+--- foomatic-rip.in.orig	2004-01-21 20:42:35.000000000 -0700
++++ foomatic-rip.in
+@@ -48,5 +48,5 @@ my $execpath = "@prefix@/bin:/usr/local/
+ 
+ # CUPS raster drivers are searched here
+-my $cupsfilterpath = "@prefix@/lib/cups/filter:/usr/local/lib/cups/filter:/usr/local/libexec/cups/filter:/opt/cups/filter:/usr/lib/cups/filter";
++my $cupsfilterpath = "@CUPS_FILTERS@";
+ 
+ # Location of the configuration file "filter.conf", this file can be
