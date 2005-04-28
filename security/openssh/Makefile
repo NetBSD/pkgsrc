@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2005/04/11 21:47:14 tv Exp $
+# $NetBSD: Makefile,v 1.149 2005/04/28 14:11:13 wiz Exp $
 
 DISTNAME=		openssh-3.9p1
 PKGNAME=		openssh-3.9.1
@@ -22,6 +22,7 @@ CONFLICTS=		sftp-[0-9]*
 CONFLICTS+=		ssh-[0-9]* ssh6-[0-9]*
 CONFLICTS+=		ssh2-[0-9]* ssh2-nox11-[0-9]*
 CONFLICTS+=		openssh+gssapi-[0-9]*
+CONFLICTS+=		lsh>2.0
 
 USE_PERL5=		build
 
