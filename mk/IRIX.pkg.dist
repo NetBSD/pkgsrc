@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.pkg.dist,v 1.57 2005/04/07 11:51:32 markd Exp $
+# $NetBSD: IRIX.pkg.dist,v 1.58 2005/04/28 19:15:38 wiz Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -1046,8 +1046,6 @@
 	    sv_SE.ISO_8859-1
             ..
 	    uk_UA.KOI8-U
-	    ..
-	    uk_UA.ISO_8859-1
 	    ..
         ..
         skel
