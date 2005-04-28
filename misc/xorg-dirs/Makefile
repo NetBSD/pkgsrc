@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:40 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/28 23:04:08 jlam Exp $
 #
 
 DISTNAME=	xorg-dirs-1.1
@@ -23,8 +23,7 @@ XORG_ONLY_DIRS=		# defined
 .include "../../mk/bsd.prefs.mk"
 .include "dirs.mk"
 
-_SORTED!=	${ECHO} ${XORG_DIRS} | ${TR} -s ' \t' '\n' | ${SORT}
-MAKE_DIRS+=	${_SORTED:S/^/${X11ROOT}\//}
+MAKE_DIRS+=	${XORG_DIRS:O:S/^/${X11ROOT}\//}
 
 do-install:	# nothing
 
