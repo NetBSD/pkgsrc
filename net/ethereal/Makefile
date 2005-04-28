@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2005/04/11 21:46:46 tv Exp $
+# $NetBSD: Makefile,v 1.107 2005/04/28 16:46:44 tron Exp $
 
 DISTNAME=		ethereal-0.10.10
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.ethereal.com/distribution/ \
 			http://ethereal.planetmirror.com/distribution/ \
@@ -46,6 +47,11 @@ PTHREAD_OPTS=		require
 .if ${OPSYS} == "Darwin"
 USE_BUILTIN.libpcap=	no
 .endif
+
+# This work arround should be removed when the packages gets updated
+# to a newer version.
+post-patch:
+	${TOUCH} ${WRKSRC}/epan/dissectors/register.c
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
