@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3446 2005/04/27 18:59:05 adrianp Exp $
+$NetBSD: TODO,v 1.3447 2005/04/28 13:36:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -262,6 +262,7 @@ Suggested package updates
 	o R-2.1.0
 	o RealPlayerGold-10.0.4
 	o SmartEiffel-2.1
+	o TeXmacs-1.0.5
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
@@ -366,6 +367,7 @@ Suggested package updates
 	o coreutils-5.3.0
 	o cqcam-0.91
 	o crafty-19.5
+	o criticalmass-0.9.11
 	o crossfire-client-1.7.1
 	o crossfire-server-1.7.1
 	o cscope-15.5
@@ -901,6 +903,7 @@ Suggested package updates
 	o pysol-4.82
 	o qDecoder-7.1
 	o qcad-2.0.4.0 [pkgsrc-wip]
+	o qemu-0.7.0
 	o qnetwalk-1.2 [pkg/29941]
 	o qgreylist-0.3
 	o qt1-1.45
@@ -970,6 +973,7 @@ Suggested package updates
 	o shmux-1.0b6
 	o siag-3.6.0
 	o sign-1.0.7
+	o silc-server-0.9.20
 	o silc-toolkit-0.9.14
 	o simh-3.3.2
 	o sitecopy-0.15.1
