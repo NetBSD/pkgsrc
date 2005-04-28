@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9979 2005/04/28 13:36:57 wiz Exp $
+$NetBSD: CHANGES,v 1.9980 2005/04/28 14:11:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2223,3 +2223,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sendmail to 8.13.4 [adrianp 2005-04-27]
 	Updated oinkmaster to 1.2 [adrianp 2005-04-27]
 	Updated naim to 0.11.7.3.1 [wiz 2005-04-28]
+	Updated lsh to 2.0.1 [wiz 2005-04-28]
