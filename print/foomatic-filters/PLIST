@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/28 22:29:43 reed Exp $
+bin/foomatic-gswrapper
+bin/foomatic-rip
+man/man1/foomatic-gswrapper.1
+man/man1/foomatic-rip.1
+share/examples/foomatic-filters/filter.conf
+@dirrm share/examples/foomatic-filters
