@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.45 2005/04/28 03:01:11 jlam Exp $
+# $NetBSD: replace.mk,v 1.46 2005/04/28 03:57:39 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -156,35 +156,28 @@ ${_TOOLS_VARNAME.cmp}=		${TOOLS_REAL_CMD.cmp}
 .  endif
 .endif
 
-.if (!defined(TOOLS_IGNORE.egrep) && \
-     !defined(TOOLS_IGNORE.fgrep) && \
-     !defined(TOOLS_IGNORE.grep)) && \
-    (!empty(USE_TOOLS:Megrep) || \
-     !empty(USE_TOOLS:Mfgrep) || \
-     !empty(USE_TOOLS:Mgrep))
-_TOOLS_GREPUTILS=		egrep fgrep grep
+.if !defined(TOOLS_IGNORE.egrep) && !empty(USE_TOOLS:Megrep)
 .  if !empty(PKGPATH:Mtextproc/grep)
-.    for _t_ in ${_TOOLS_GREPUTILS}
-MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
-.    endfor
-.  else
-.    for _t_ in ${_TOOLS_GREPUTILS}
-.      if empty(USE_TOOLS:M${_t_})
-USE_TOOLS+=	${_t_}
-.      endif
-.    endfor
-.    if !empty(_TOOLS_USE_PKGSRC.egrep:M[yY][eE][sS]) || \
-        !empty(_TOOLS_USE_PKGSRC.fgrep:M[yY][eE][sS]) || \
-        !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
-TOOLS_DEPENDS.grep?=		grep>=2.5.1:../../textproc/grep
-.      for _t_ in ${_TOOLS_GREPUTILS}
-_TOOLS_USE_PKGSRC.${_t_}=	yes
-TOOLS_SYMLINK+=			${_t_}
-TOOLS_REAL_CMD.${_t_}=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}${_t_}
-.        if defined(_TOOLS_VARNAME.${_t_}) && exists(${TOOLS_REAL_CMD.${_t_}})
-${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}}
-.        endif
-.      endfor
+MAKEFLAGS+=			TOOLS_IGNORE.egrep=
+.  elif !empty(_TOOLS_USE_PKGSRC.egrep:M[yY][eE][sS])
+TOOLS_DEPENDS.egrep?=		grep>=2.5.1:../../textproc/grep
+TOOLS_SYMLINK+=			egrep
+TOOLS_REAL_CMD.egrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}egrep
+.    if exists(${TOOLS_REAL_CMD.egrep})
+${_TOOLS_VARNAME.egrep}=	${TOOLS_REAL_CMD.egrep}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.fgrep) && !empty(USE_TOOLS:Mfgrep)
+.  if !empty(PKGPATH:Mtextproc/grep)
+MAKEFLAGS+=			TOOLS_IGNORE.fgrep=
+.  elif !empty(_TOOLS_USE_PKGSRC.fgrep:M[yY][eE][sS])
+TOOLS_DEPENDS.fgrep?=		grep>=2.5.1:../../textproc/grep
+TOOLS_SYMLINK+=			fgrep
+TOOLS_REAL_CMD.fgrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}fgrep
+.    if exists(${TOOLS_REAL_CMD.fgrep})
+${_TOOLS_VARNAME.fgrep}=	${TOOLS_REAL_CMD.fgrep}
 .    endif
 .  endif
 .endif
@@ -202,32 +195,15 @@ ${_TOOLS_VARNAME.file}=	${TOOLS_REAL_CMD.file}
 .  endif
 .endif
 
-.if (!defined(TOOLS_IGNORE.find) && \
-     !defined(TOOLS_IGNORE.xargs)) && \
-    (!empty(USE_TOOLS:Mfind) || \
-     !empty(USE_TOOLS:Mxargs))
-_TOOLS_FINDUTILS=		find xargs
+.if !defined(TOOLS_IGNORE.find) && !empty(USE_TOOLS:Mfind)
 .  if !empty(PKGPATH:Msysutils/findutils)
-.    for _t_ in ${_TOOLS_FINDUTILS}
-MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
-.    endfor
-.  else
-.    for _t_ in ${_TOOLS_FINDUTILS}
-.      if empty(USE_TOOLS:M${_t_})
-USE_TOOLS+=	${_t_}
-.      endif
-.    endfor
-.    if !empty(_TOOLS_USE_PKGSRC.find:M[yY][eE][sS]) || \
-        !empty(_TOOLS_USE_PKGSRC.xargs:M[yY][eE][sS])
+MAKEFLAGS+=			TOOLS_IGNORE.find=
+.  elif !empty(_TOOLS_USE_PKGSRC.find:M[yY][eE][sS])
 TOOLS_DEPENDS.find?=		findutils>=4.1:../../sysutils/findutils
-.      for _t_ in ${_TOOLS_FINDUTILS}
-_TOOLS_USE_PKGSRC.${_t_}=	yes
-TOOLS_SYMLINK+=			${_t_}
-TOOLS_REAL_CMD.${_t_}=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}${_t_}
-.        if defined(_TOOLS_VARNAME.${_t_}) && exists(${TOOLS_REAL_CMD.${_t_}})
-${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}}
-.        endif
-.      endfor
+TOOLS_SYMLINK+=			find
+TOOLS_REAL_CMD.find=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}find
+.    if exists(${TOOLS_REAL_CMD.find})
+${_TOOLS_VARNAME.find}=		${TOOLS_REAL_CMD.find}
 .    endif
 .  endif
 .endif
@@ -273,6 +249,19 @@ ${_TOOLS_VARNAME.gmake}=	${TOOLS_REAL_CMD.gmake}
 .  endif
 .endif
 
+.if !defined(TOOLS_IGNORE.grep) && !empty(USE_TOOLS:Mgrep)
+.  if !empty(PKGPATH:Mtextproc/grep)
+MAKEFLAGS+=			TOOLS_IGNORE.grep=
+.  elif !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
+TOOLS_DEPENDS.grep?=		grep>=2.5.1:../../textproc/grep
+TOOLS_SYMLINK+=			grep
+TOOLS_REAL_CMD.grep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
+.    if exists(${TOOLS_REAL_CMD.grep})
+${_TOOLS_VARNAME.grep}=		${TOOLS_REAL_CMD.grep}
+.    endif
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.gsed) && !empty(USE_TOOLS:Mgsed)
 .  if !empty(PKGPATH:Mtextproc/sed)
 MAKEFLAGS+=			TOOLS_IGNORE.gsed=
@@ -287,71 +276,59 @@ ${_TOOLS_VARNAME.gsed}=		${TOOLS_REAL_CMD.gsed}
 TOOLS_CMD.gsed=			${TOOLS_DIR}/bin/sed
 .endif
 
-.if (!defined(TOOLS_IGNORE.gtar) && \
-     !defined(TOOLS_IGNORE.pax)) && \
-    (!empty(USE_TOOLS:Mgtar) || \
-     !empty(USE_TOOLS:Mpax))
-_TOOLS_PAXUTILS=		gtar pax
+.if !defined(TOOLS_IGNORE.gtar) && !empty(USE_TOOLS:Mgtar)
 .  if !empty(PKGPATH:Marchivers/pax)
-.    for _t_ in ${_TOOLS_PAXUTILS}
-MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
-.    endfor
-.  else
-.    for _t_ in ${_TOOLS_PAXUTILS}
-.      if empty(USE_TOOLS:M${_t_})
-USE_TOOLS+=	${_t_}
-.      endif
-.    endfor
-.    if !empty(_TOOLS_USE_PKGSRC.gtar:M[yY][eE][sS]) || \
-        !empty(_TOOLS_USE_PKGSRC.pax:M[yY][eE][sS])
+MAKEFLAGS+=			TOOLS_IGNORE.gtar=
+.  elif !empty(_TOOLS_USE_PKGSRC.gtar:M[yY][eE][sS])
 #
 # This is installed by pkgsrc bootstrap, and is never registered, so
 # comment out the dependency on it.
 #
-#TOOLS_DEPENDS.pax?=		pax>=20040802:../../archivers/pax
+#TOOLS_DEPENDS.gtar?=		pax>=20040802:../../archivers/pax
+TOOLS_SYMLINK+=			gtar
 TOOLS_REAL_CMD.gtar=		${LOCALBASE}/bin/tar
-TOOLS_REAL_CMD.pax=		${LOCALBASE}/bin/pax
-.      for _t_ in ${_TOOLS_PAXUTILS}
-_TOOLS_USE_PKGSRC.${_t_}=	yes
-TOOLS_SYMLINK+=			${_t_}
-.        if defined(_TOOLS_VARNAME.${_t_}) && exists(${TOOLS_REAL_CMD.${_t_}})
-${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}}
-.        endif
-.      endfor
+.    if exists(${TOOLS_REAL_CMD.gtar})
+${_TOOLS_VARNAME.gtar}=		${TOOLS_REAL_CMD.gtar}
 .    endif
 .  endif
 TOOLS_CMD.gtar=			${TOOLS_DIR}/bin/tar
 .endif
 
-.if (!defined(TOOLS_IGNORE.gunzip) && \
-     !defined(TOOLS_IGNORE.gzcat) && \
-     !defined(TOOLS_IGNORE.gzip)) && \
-    (!empty(USE_TOOLS:Mgunzip) || \
-     !empty(USE_TOOLS:Mgzcat) || \
-     !empty(USE_TOOLS:Mgzip))
-_TOOLS_GZIPUTILS=		gunzip gzcat gzip
-.  if !empty(PKGPATH:Marchiver/gzip-base)
-.    for _t_ in ${_TOOLS_GZIPUTILS}
-MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
-.    endfor
-.  else
-.    for _t_ in ${_TOOLS_GZIPUTILS}
-.      if empty(USE_TOOLS:M${_t_})
-USE_TOOLS+=	${_t_}
-.      endif
-.    endfor
-.    if !empty(_TOOLS_USE_PKGSRC.gunzip:M[yY][eE][sS]) || \
-        !empty(_TOOLS_USE_PKGSRC.gzcat:M[yY][eE][sS]) || \
-        !empty(_TOOLS_USE_PKGSRC.gzip:M[yY][eE][sS])
+.if !defined(TOOLS_IGNORE.gunzip) && !empty(USE_TOOLS:Mgunzip)
+.  if !empty(PKGPATH:Marchivers/gzip)
+MAKEFLAGS+=			TOOLS_IGNORE.gunzip=
+.  elif !empty(_TOOLS_USE_PKGSRC.gunzip:M[yY][eE][sS])
+TOOLS_DEPENDS.gunzip?=		gzip-base>=1.2.4b:../../archivers/gzip-base
+TOOLS_SYMLINK+=			gunzip
+TOOLS_REAL_CMD.gunzip=		${LOCALBASE}/bin/gunzip
+.    if exists(${TOOLS_REAL_CMD.gunzip})
+${_TOOLS_VARNAME.gunzip}=	${TOOLS_REAL_CMD.gunzip}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.gzcat) && !empty(USE_TOOLS:Mgzcat)
+.  if !empty(PKGPATH:Marchivers/gzip)
+MAKEFLAGS+=			TOOLS_IGNORE.gzcat=
+.  elif !empty(_TOOLS_USE_PKGSRC.gzcat:M[yY][eE][sS])
+TOOLS_DEPENDS.gzcat?=		gzip-base>=1.2.4b:../../archivers/gzip-base
+TOOLS_SYMLINK+=			gzcat
+TOOLS_REAL_CMD.gzcat=		${LOCALBASE}/bin/gzcat
+.    if exists(${TOOLS_REAL_CMD.gzcat})
+${_TOOLS_VARNAME.gzcat}=	${TOOLS_REAL_CMD.gzcat}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.gzip) && !empty(USE_TOOLS:Mgzip)
+.  if !empty(PKGPATH:Marchivers/gzip)
+MAKEFLAGS+=			TOOLS_IGNORE.gzip=
+.  elif !empty(_TOOLS_USE_PKGSRC.gzip:M[yY][eE][sS])
 TOOLS_DEPENDS.gzip?=		gzip-base>=1.2.4b:../../archivers/gzip-base
-.      for _t_ in ${_TOOLS_GZIPUTILS}
-_TOOLS_USE_PKGSRC.${_t_}=	yes
-TOOLS_SYMLINK+=			${_t_}
-TOOLS_REAL_CMD.${_t_}=		${LOCALBASE}/bin/${_t_}
-.        if defined(_TOOLS_VARNAME.${_t_}) && exists(${TOOLS_REAL_CMD.${_t_}})
-${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}}
-.        endif
-.      endfor
+TOOLS_SYMLINK+=			gzip
+TOOLS_REAL_CMD.gzip=		${LOCALBASE}/bin/gzip
+.    if exists(${TOOLS_REAL_CMD.gzip})
+${_TOOLS_VARNAME.gzip}=		${TOOLS_REAL_CMD.gzip}
 .    endif
 .  endif
 .endif
@@ -415,6 +392,23 @@ ${_TOOLS_VARNAME.patch}=	${TOOLS_REAL_CMD.patch}
 .  endif
 .endif
 
+.if !defined(TOOLS_IGNORE.pax) && !empty(USE_TOOLS:Mpax)
+.  if !empty(PKGPATH:Marchivers/pax)
+MAKEFLAGS+=			TOOLS_IGNORE.pax=
+.  elif !empty(_TOOLS_USE_PKGSRC.pax:M[yY][eE][sS])
+#
+# This is installed by pkgsrc bootstrap, and is never registered, so
+# comment out the dependency on it.
+#
+#TOOLS_DEPENDS.pax?=		pax>=20040802:../../archivers/pax
+TOOLS_SYMLINK+=			pax
+TOOLS_REAL_CMD.pax=		${LOCALBASE}/bin/pax
+.    if exists(${TOOLS_REAL_CMD.pax})
+${_TOOLS_VARNAME.pax}=		${TOOLS_REAL_CMD.pax}
+.    endif
+.  endif
+.endif
+
 # "gsed" overrides "sed"
 .if !defined(TOOLS_IGNORE.sed) && !empty(USE_TOOLS:Msed) && \
     empty(USE_TOOLS:Mgsed)
@@ -466,6 +460,19 @@ TOOLS_SYMLINK+=			tbl
 TOOLS_REAL_CMD.tbl=		${LOCALBASE}/bin/tbl
 .    if exists(${TOOLS_REAL_CMD.tbl})
 ${_TOOLS_VARNAME.tbl}=		${TOOLS_REAL_CMD.tbl}
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.xargs) && !empty(USE_TOOLS:Mxargs)
+.  if !empty(PKGPATH:Msysutils/findutils)
+MAKEFLAGS+=			TOOLS_IGNORE.xargs=
+.  elif !empty(_TOOLS_USE_PKGSRC.xargs:M[yY][eE][sS])
+TOOLS_DEPENDS.xargs?=		findutils>=4.1:../../sysutils/findutils
+TOOLS_SYMLINK+=			xargs
+TOOLS_REAL_CMD.xargs=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}xargs
+.    if exists(${TOOLS_REAL_CMD.xargs})
+${_TOOLS_VARNAME.xargs}=	${TOOLS_REAL_CMD.xargs}
 .    endif
 .  endif
 .endif
