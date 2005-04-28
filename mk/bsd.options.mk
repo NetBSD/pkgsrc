@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.17 2005/04/28 18:40:35 jlam Exp $
+# $NetBSD: bsd.options.mk,v 1.18 2005/04/28 21:48:14 jlam Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -176,18 +176,11 @@ _PKG_OPTIONS_WORDWRAP_FILTER=						\
 		END { if (length(line) > 0) print "	"line }		\
 	'
 
-_PKG_OPTIONS_AVAILABLE_CMD=	\
-	${ECHO} ${PKG_SUPPORTED_OPTIONS:Q} | ${XARGS} -n 1 | ${SORT}
-_PKG_OPTIONS_DEFAULT_CMD=	\
-	${ECHO} ${PKG_DEFAULT_OPTIONS:Q} | ${XARGS} -n 1 | ${SORT}
-_PKG_OPTIONS_ENABLED_CMD=	\
-	${ECHO} ${PKG_OPTIONS:Q} | ${XARGS} -n 1 | ${SORT}
-
 .PHONY: show-options
 show-options:
-	@${ECHO} "available: "${_PKG_OPTIONS_AVAILABLE_CMD:sh:Q}
-	@${ECHO} "default: "${_PKG_OPTIONS_DEFAULT_CMD:sh:Q}
-	@${ECHO} "enabled: "${_PKG_OPTIONS_ENABLED_CMD:sh:Q}
+	@${ECHO} "available: "${PKG_SUPPORTED_OPTIONS:O:Q}
+	@${ECHO} "default: "${PKG_DEFAULT_OPTIONS:O:Q}
+	@${ECHO} "enabled: "${PKG_OPTIONS:O:Q}
 
 .if defined(PKG_SUPPORTED_OPTIONS)
 .PHONY: supported-options-message
@@ -197,12 +190,12 @@ supported-options-message:
 	@${ECHO} "=========================================================================="
 	@${ECHO} "The supported build options for this package are:"
 	@${ECHO} ""
-	@${ECHO} ${_PKG_OPTIONS_AVAILABLE_CMD:sh:Q} | ${_PKG_OPTIONS_WORDWRAP_FILTER}
+	@${ECHO} ${PKG_SUPPORTED_OPTIONS:O:Q} | ${_PKG_OPTIONS_WORDWRAP_FILTER}
 .    if !empty(PKG_OPTIONS)
 	@${ECHO} ""
 	@${ECHO} "The currently selected options are:"
 	@${ECHO} ""
-	@${ECHO} ${_PKG_OPTIONS_ENABLED_CMD:sh:Q} | ${_PKG_OPTIONS_WORDWRAP_FILTER}
+	@${ECHO} ${PKG_OPTIONS:O:Q} | ${_PKG_OPTIONS_WORDWRAP_FILTER}
 .    endif
 	@${ECHO} ""
 	@${ECHO} "You can select which build options to use by setting the following"
