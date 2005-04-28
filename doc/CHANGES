@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9982 2005/04/28 15:15:18 augustss Exp $
+$NetBSD: CHANGES,v 1.9983 2005/04/28 16:47:16 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2227,3 +2227,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added darcs-1.0.2 [augustss 2005-04-28]
 	Added album-3.07 [augustss 2005-04-28]
 	Added album_themes [augustss 2005-04-28]
+	Updated ethereal to 0.10.10nb1 [tron 2005-04-28]
