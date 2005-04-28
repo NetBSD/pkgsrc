@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1 2005/04/28 19:05:25 drochner Exp $
+
+--- plugins/maxima/bin/maxima_detect.orig	2005-04-28 16:25:54.000000000 +0200
++++ plugins/maxima/bin/maxima_detect
+@@ -1,5 +1,5 @@
+-#!/bin/bash
+-MAXIMA=`type -p maxima 2>/dev/null`
++#!/bin/sh
++MAXIMA=`which maxima`
+ if [ $? -eq 0 ]
+ then
+   if grep -F list-avail $MAXIMA >/dev/null
