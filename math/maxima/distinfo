@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/04/28 19:07:53 drochner Exp $
+
+SHA1 (maxima-5.9.1.tar.gz) = 87dcf337f3f628ae78ef6bfaed694e98ad26f207
+RMD160 (maxima-5.9.1.tar.gz) = 26940d11d6cba4125319a3c83234964af81e4603
+Size (maxima-5.9.1.tar.gz) = 8093534 bytes
