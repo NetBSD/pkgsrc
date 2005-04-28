@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.49 2005/04/28 15:51:10 jlam Exp $
+# $NetBSD: replace.mk,v 1.50 2005/04/28 15:55:12 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -56,33 +56,33 @@ _TOOLS_REPLACE_LIST=	awk bison cmp egrep fgrep file find gawk gm4	\
 			mtree patch pax sed sh shlock tbl xargs	yacc
 
 # "TOOL" variable names associated with each of the tools
-_TOOLS_VARNAME.awk=	AWK
-_TOOLS_VARNAME.bison=	YACC
-_TOOLS_VARNAME.cmp=	CMP
-_TOOLS_VARNAME.egrep=	EGREP
-_TOOLS_VARNAME.fgrep=	FGREP
-_TOOLS_VARNAME.file=	FILE_CMD
-_TOOLS_VARNAME.find=	FIND
-_TOOLS_VARNAME.gawk=	AWK
-_TOOLS_VARNAME.gm4=	M4
-_TOOLS_VARNAME.gmake=	GMAKE
-_TOOLS_VARNAME.grep=	GREP
-_TOOLS_VARNAME.gsed=	SED
-_TOOLS_VARNAME.gtar=	GTAR
-_TOOLS_VARNAME.gunzip=	GUNZIP_CMD
-_TOOLS_VARNAME.gzcat=	GZCAT
-_TOOLS_VARNAME.gzip=	GZIP_CMD
-_TOOLS_VARNAME.lex=	LEX
-_TOOLS_VARNAME.m4=	M4
-_TOOLS_VARNAME.mtree=	MTREE
-_TOOLS_VARNAME.patch=	PATCH
-_TOOLS_VARNAME.pax=	PAX
-_TOOLS_VARNAME.sed=	SED
-_TOOLS_VARNAME.sh=	SH
-_TOOLS_VARNAME.shlock=	SHLOCK
-_TOOLS_VARNAME.tbl=	TBL
-_TOOLS_VARNAME.xargs=	XARGS
-_TOOLS_VARNAME.yacc=	YACC
+_TOOLS_VARNAME.awk=		AWK
+_TOOLS_VARNAME.bison=		YACC
+_TOOLS_VARNAME.cmp=		CMP
+_TOOLS_VARNAME.egrep=		EGREP
+_TOOLS_VARNAME.fgrep=		FGREP
+_TOOLS_VARNAME.file=		FILE_CMD
+_TOOLS_VARNAME.find=		FIND
+_TOOLS_VARNAME.gawk=		AWK
+_TOOLS_VARNAME.gm4=		M4
+_TOOLS_VARNAME.gmake=		GMAKE
+_TOOLS_VARNAME.grep=		GREP
+_TOOLS_VARNAME.gsed=		SED
+_TOOLS_VARNAME.gtar=		GTAR
+_TOOLS_VARNAME.gunzip=		GUNZIP_CMD
+_TOOLS_VARNAME.gzcat=		GZCAT
+_TOOLS_VARNAME.gzip=		GZIP_CMD
+_TOOLS_VARNAME.lex=		LEX
+_TOOLS_VARNAME.m4=		M4
+_TOOLS_VARNAME.mtree=		MTREE
+_TOOLS_VARNAME.patch=		PATCH
+_TOOLS_VARNAME.pax=		PAX
+_TOOLS_VARNAME.sed=		SED
+_TOOLS_VARNAME.sh=		SH
+_TOOLS_VARNAME.shlock=		SHLOCK
+_TOOLS_VARNAME.tbl=		TBL
+_TOOLS_VARNAME.xargs=		XARGS
+_TOOLS_VARNAME.yacc=		YACC
 
 ######################################################################
 
