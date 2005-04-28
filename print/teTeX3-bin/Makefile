@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/10 21:52:37 schwarz Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/28 23:25:14 jlam Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
@@ -25,7 +25,8 @@ REPLACE_PERL=	texk/xdvik/t1mapper \
 CONFIGURE_ARGS+=	--without-texinfo --without-texi2html
 
 .if defined(PAPERSIZE)
-LOWER_PAPERSIZE!=	${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'
+LOWER_PAPERSIZE_cmd=	${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'
+LOWER_PAPERSIZE=	${LOWER_PAPERSIZE_cmd:sh}
 .endif
 
 post-install:
