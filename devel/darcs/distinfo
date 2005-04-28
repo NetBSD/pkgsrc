@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2005/04/28 15:05:15 augustss Exp $
+
+SHA1 (darcs-1.0.2.tar.gz) = 657075a4e7a2f7457cf24bfe56b45da68035aa86
+RMD160 (darcs-1.0.2.tar.gz) = 8b067ac8756f6f05a84d388ff134b11378de31a2
+Size (darcs-1.0.2.tar.gz) = 765292 bytes
