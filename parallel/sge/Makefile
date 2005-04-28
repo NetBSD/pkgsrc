@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:04 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/28 23:17:53 jlam Exp $
 #
 
 DISTNAME=		sge-5.3p6
@@ -44,14 +44,15 @@ CONFIG_SUB_OVERRIDE=	source/3rdparty/qmake/config.sub \
 
 # SGE_ARCH should match the putput of ${WRKSRC}/source/dist/util/arch
 # SGE_BUILDARCH should match whats in ${WRKSRC}/source/aimk
-UPPER_OPSYS!=		${ECHO} "${OPSYS}" | ${TR} a-z A-Z
+UPPER_OPSYS_cmd=	${ECHO} "${OPSYS}" | ${TR} a-z A-Z
+UPPER_OPSYS=		${UPPER_OPSYS_cmd:sh}
 
 .if ${OPSYS} == "NetBSD"
 SGE_ARCH=		nbsd-${MACHINE_ARCH}
-SGE_BUILDARCH!=		${ECHO} "${OPSYS}_${MACHINE_ARCH}" | ${TR} a-z A-Z
+SGE_BUILDARCH_cmd=	${ECHO} "${OPSYS}_${MACHINE_ARCH}" | ${TR} a-z A-Z
 .elif ${OPSYS} == "FreeBSD"
 SGE_ARCH=		fbsd-${MACHINE_ARCH}
-SGE_BUILDARCH!=		${ECHO} "${OPSYS}_${MACHINE_ARCH}" | ${TR} a-z A-Z
+SGE_BUILDARCH_cmd=	${ECHO} "${OPSYS}_${MACHINE_ARCH}" | ${TR} a-z A-Z
 .elif ${OPSYS} == "SunOS"
 .  if ${MACHINE_ARCH} == "i386"
 SGE_ARCH=		solaris86
@@ -63,13 +64,14 @@ SGE_ARCH=		solaris64
 SGE_ARCH=		solaris
 .    endif
 .  endif
-SGE_BUILDARCH!=		${ECHO} "${SGE_ARCH}" | ${TR} a-z A-Z
+SGE_BUILDARCH_cmd=	${ECHO} "${SGE_ARCH}" | ${TR} a-z A-Z
 .elif ${OPSYS} == "Darwin"
 SGE_ARCH=		darwin
 SGE_BUILDARCH=		DARWIN
 .else
 PKG_FAIL_REASON=	"SGE_ARCH and SGE_BUILDARCH need to be confgured for your OS"
 .endif
+SGE_BUILDARCH?=		${SGE_BUILDARCH_cmd:sh}
 
 LDFLAGS+=	-R${SGE_ROOT}/lib/${SGE_ARCH}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${SGE_ROOT}/lib/${SGE_ARCH}
