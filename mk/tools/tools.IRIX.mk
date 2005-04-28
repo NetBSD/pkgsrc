@@ -1,7 +1,8 @@
-# $NetBSD: tools.IRIX.mk,v 1.2 2005/04/27 16:52:28 jlam Exp $
+# $NetBSD: tools.IRIX.mk,v 1.3 2005/04/28 17:30:24 jlam Exp $
 #
 # System-supplied tools for the IRIX operating system.
 
+TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/nawk
 TOOLS_PLATFORM.basename?=	/sbin/basename
 TOOLS_PLATFORM.cat?=		/sbin/cat

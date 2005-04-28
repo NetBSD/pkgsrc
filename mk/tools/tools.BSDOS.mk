@@ -1,7 +1,8 @@
-# $NetBSD: tools.BSDOS.mk,v 1.3 2005/04/27 16:52:28 jlam Exp $
+# $NetBSD: tools.BSDOS.mk,v 1.4 2005/04/28 17:30:24 jlam Exp $
 #
 # System-supplied tools for the BSD/OS operating system.
 
+TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
 TOOLS_PLATFORM.cat?=		/bin/cat

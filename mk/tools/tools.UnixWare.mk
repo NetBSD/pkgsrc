@@ -1,7 +1,8 @@
-# $NetBSD: tools.UnixWare.mk,v 1.2 2005/04/27 16:52:28 jlam Exp $
+# $NetBSD: tools.UnixWare.mk,v 1.3 2005/04/28 17:30:24 jlam Exp $
 #
 # System-supplied tools for the UnixWare 7 operating system.
 
+TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/nawk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
 TOOLS_PLATFORM.cat?=		/usr/bin/cat
