@@ -1,16 +1,9 @@
-# $NetBSD: Makefile.application,v 1.15 2005/04/03 21:23:15 jdolecek Exp $
+# $NetBSD: Makefile.application,v 1.16 2005/04/28 22:33:36 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "FreeBSD"
-_LINUX_SYSCTL_OSRELEASE?=      	compat.linux.osrelease
-.else
-_LINUX_SYSCTL_OSRELEASE?=      	emul.linux.kern.osrelease
-.endif
-
-.if ((${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && \
-	(${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc"))
-LINUX_KERNEL_OSRELEASE!=	(/sbin/sysctl -n ${_LINUX_SYSCTL_OSRELEASE} 2>/dev/null; ${ECHO} 2.0.38) | ${HEAD} -1
+.if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && \
+    (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc")
 
 .  if !empty(SUSE_PREFER:M9.1)
 .    include "../../emulators/suse91_linux/vars.mk"
