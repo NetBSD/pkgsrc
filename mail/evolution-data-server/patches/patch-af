@@ -1,11 +1,11 @@
-$NetBSD: patch-af,v 1.1 2004/11/18 14:20:26 sketch Exp $
+$NetBSD: patch-af,v 1.2 2005/04/28 18:37:29 jmmv Exp $
 
---- config.h.in.orig	2004-11-13 22:06:01.870247000 +0000
-+++ config.h.in	2004-11-13 22:07:10.887923000 +0000
-@@ -99,3 +99,8 @@
- #ifndef __cplusplus
- #undef inline
- #endif
+--- config.h.in.orig	2005-03-15 23:06:59.000000000 +0100
++++ config.h.in	2005-04-28 20:23:09.433789560 +0200
+@@ -238,3 +238,8 @@
+ 
+ /* Define to appropriate type if socklen_t is not defined */
+ #undef socklen_t
 +
 +/* __PRETTY_FUNCTION__ is a GNUism only */
 +#ifndef __GNUC__
