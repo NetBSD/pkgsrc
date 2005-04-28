@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/04/11 21:44:52 tv Exp $
+# $NetBSD: Makefile,v 1.38 2005/04/28 22:21:52 jlam Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
@@ -27,9 +27,9 @@ CONFIG_SUB_OVERRIDE=	${SPEECHTOOLS}/config.sub ${FESTIVAL}/config.sub
 .include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
-PKG_COMPILER?=	suncc
+PKG_COMPILER?=		suncc
 .else
-PKG_COMPILER!=	case "${CC_VERSION}" in					\
+PKG_COMPILER_cmd=	case "${CC_VERSION}" in				\
 			gcc-2.6.*)	${ECHO} gcc26;;			\
 			gcc-2.7.*)	${ECHO} gcc27;;			\
 			gcc-2.8.*)	${ECHO} gcc28;;			\
@@ -37,7 +37,8 @@ PKG_COMPILER!=	case "${CC_VERSION}" in					\
 			gcc-3.3.*)	${ECHO} gcc32;;			\
 			egcs*)		${ECHO} egcs;;			\
 			*)		${ECHO} ;;			\
-		esac
+			esac
+PKG_COMPILER=		${PKG_COMPILER_cmd:sh}
 .endif
 
 .if empty(PKG_COMPILER)
