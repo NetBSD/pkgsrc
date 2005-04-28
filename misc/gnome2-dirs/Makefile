@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:34 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/28 23:04:08 jlam Exp $
 #
 
 DISTNAME=	gnome2-dirs-1.5
@@ -23,13 +23,12 @@ NO_BUILD=	# defined
 
 .if ${X11PREFIX} == ${LOCALBASE}
 DEPENDS+=	gnome-dirs>=1.0:../../misc/gnome-dirs
-_SORTED!=	${ECHO} ${GNOME2_DIRS} | ${TR} -s ' \t' '\n' | ${SORT}
+ALL_GNOME_DIRS=	${GNOME2_DIRS}
 .else
-_SORTED!=	${ECHO} ${GNOME_DIRS} ${GNOME2_DIRS} | ${TR} -s ' \t' '\n' | \
-		${SORT}
+ALL_GNOME_DIRS=	${GNOME_DIRS} ${GNOME2_DIRS}
 .endif
 
-MAKE_DIRS+=	${_SORTED:S/^/${PREFIX}\//}
+MAKE_DIRS+=	${ALL_GNOME_DIRS:O:S/^/${PREFIX}\//}
 
 do-install:	# nothing
 
