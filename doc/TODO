@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3447 2005/04/28 13:36:25 wiz Exp $
+$NetBSD: TODO,v 1.3448 2005/04/28 13:36:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -661,7 +661,6 @@ Suggested package updates
 	o muse-0.9.1
 	o mutt-devel-1.5.7
 	o nagios-2.0b3 [replacing netsaint]
-	o naim-0.11.7.3.1
 	o nap-1.5.3
 	o navi2ch-1.7.5
 	o nawk-20041222
