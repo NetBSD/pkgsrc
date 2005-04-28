@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9981 2005/04/28 15:06:57 augustss Exp $
+$NetBSD: CHANGES,v 1.9982 2005/04/28 15:15:18 augustss Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2225,3 +2225,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated naim to 0.11.7.3.1 [wiz 2005-04-28]
 	Updated lsh to 2.0.1 [wiz 2005-04-28]
 	Added darcs-1.0.2 [augustss 2005-04-28]
+	Added album-3.07 [augustss 2005-04-28]
+	Added album_themes [augustss 2005-04-28]
