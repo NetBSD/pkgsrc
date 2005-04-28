@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.48 2005/04/28 15:47:43 jlam Exp $
+# $NetBSD: replace.mk,v 1.49 2005/04/28 15:51:10 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -110,7 +110,7 @@ _USE_TOOLS:=	${_USE_TOOLS:Nsed}
 # use the system-supplied one if TOOLS_PLATFORM.<tool> is non-empty, or
 # otherwise if this is a particular ${MACHINE_PLATFORM} listed above.
 #
-.for _t_ in ${_TOOLS_REPLACE_LIST}
+.for _t_ in ${_USE_TOOLS}
 .  if defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
 _TOOLS_USE_PKGSRC.${_t_}?=	no
 .  endif
@@ -119,7 +119,7 @@ _TOOLS_USE_PKGSRC.${_t_}?=	yes
 .undef _t_
 
 # TOOLS_DEPMETHOD.<tool> defaults to BUILD_DEPENDS.
-.for _t_ in ${_TOOLS_REPLACE_LIST}
+.for _t_ in ${_USE_TOOLS}
 TOOLS_DEPMETHOD.${_t_}?=	BUILD_DEPENDS
 .endfor
 .undef _t_
@@ -505,9 +505,8 @@ ${_TOOLS_VARNAME.yacc}=		${TOOLS_REAL_CMD.yacc} ${TOOLS_ARGS.yacc}
 .endif
 
 # Add the dependencies for each pkgsrc-supplied tool.
-.for _t_ in ${_TOOLS_REPLACE_LIST}
-.  if defined(TOOLS_DEPMETHOD.${_t_}) && defined(TOOLS_DEPENDS.${_t_}) && \
-      !empty(_USE_TOOLS:M${_t_})
+.for _t_ in ${_USE_TOOLS}
+.  if defined(TOOLS_DEPMETHOD.${_t_}) && defined(TOOLS_DEPENDS.${_t_})
 .    if empty(${TOOLS_DEPMETHOD.${_t_}}:M${TOOLS_DEPENDS.${_t_}})
 ${TOOLS_DEPMETHOD.${_t_}}+=	${TOOLS_DEPENDS.${_t_}}
 .    endif
@@ -527,8 +526,8 @@ ${TOOLS_DEPMETHOD.${_t_}}+=	${TOOLS_DEPENDS.${_t_}}
 # e.g., TBL, YACC, etc., provided that "TOOL" has been associated with
 # <tool>.
 #
-.for _t_ in ${_TOOLS_REPLACE_LIST}
-.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_}) && \
+.for _t_ in ${_USE_TOOLS}
+.  if !defined(TOOLS_IGNORE.${_t_}) && \
       !empty(_TOOLS_USE_PKGSRC.${_t_}:M[nN][oO])
 .    if defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
 TOOLS_REAL_CMD.${_t_}?=		\
