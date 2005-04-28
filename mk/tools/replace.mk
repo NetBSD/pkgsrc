@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.50 2005/04/28 15:55:12 jlam Exp $
+# $NetBSD: replace.mk,v 1.51 2005/04/28 16:00:58 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -47,13 +47,6 @@ USE_TOOLS+=	tbl
 .if exists(../../mk/tools/tools.${OPSYS}.mk)
 .  include "../../mk/tools/tools.${OPSYS}.mk"
 .endif
-
-# This is an exhaustive list of tools for which we have pkgsrc
-# replacements.
-#
-_TOOLS_REPLACE_LIST=	awk bison cmp egrep fgrep file find gawk gm4	\
-			gmake grep gsed gtar gunzip gzcat gzip lex m4	\
-			mtree patch pax sed sh shlock tbl xargs	yacc
 
 # "TOOL" variable names associated with each of the tools
 _TOOLS_VARNAME.awk=		AWK
