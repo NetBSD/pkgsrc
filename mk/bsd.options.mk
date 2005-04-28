@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.16 2005/01/24 18:04:24 tv Exp $
+# $NetBSD: bsd.options.mk,v 1.17 2005/04/28 18:40:35 jlam Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -176,21 +176,18 @@ _PKG_OPTIONS_WORDWRAP_FILTER=						\
 		END { if (length(line) > 0) print "	"line }		\
 	'
 
-.if !defined(_PKG_OPTIONS_AVAILABLE) && defined(PKG_SUPPORTED_OPTIONS) && !empty(PKG_SUPPORTED_OPTIONS)
-_PKG_OPTIONS_AVAILABLE!=	${ECHO} ${PKG_SUPPORTED_OPTIONS} | ${XARGS} -n 1 | ${SORT}
-.endif
-.if !defined(_PKG_OPTIONS_DEFAULT) && defined(PKG_DEFAULT_OPTIONS) && !empty(PKG_DEFAULT_OPTIONS)
-_PKG_OPTIONS_DEFAULT!=		${ECHO} ${PKG_DEFAULT_OPTIONS} | ${XARGS} -n 1 | ${SORT}
-.endif
-.if !defined(_PKG_OPTIONS_ENABLED) && defined(PKG_OPTIONS) && !empty(PKG_OPTIONS)
-_PKG_OPTIONS_ENABLED!=		${ECHO} ${PKG_OPTIONS} | ${XARGS} -n 1 | ${SORT}
-.endif
+_PKG_OPTIONS_AVAILABLE_CMD=	\
+	${ECHO} ${PKG_SUPPORTED_OPTIONS:Q} | ${XARGS} -n 1 | ${SORT}
+_PKG_OPTIONS_DEFAULT_CMD=	\
+	${ECHO} ${PKG_DEFAULT_OPTIONS:Q} | ${XARGS} -n 1 | ${SORT}
+_PKG_OPTIONS_ENABLED_CMD=	\
+	${ECHO} ${PKG_OPTIONS:Q} | ${XARGS} -n 1 | ${SORT}
 
 .PHONY: show-options
 show-options:
-	@${ECHO} "available: ${_PKG_OPTIONS_AVAILABLE}"
-	@${ECHO} "default: ${_PKG_OPTIONS_DEFAULT}"
-	@${ECHO} "enabled: ${_PKG_OPTIONS_ENABLED}"
+	@${ECHO} "available: "${_PKG_OPTIONS_AVAILABLE_CMD:sh:Q}
+	@${ECHO} "default: "${_PKG_OPTIONS_DEFAULT_CMD:sh:Q}
+	@${ECHO} "enabled: "${_PKG_OPTIONS_ENABLED_CMD:sh:Q}
 
 .if defined(PKG_SUPPORTED_OPTIONS)
 .PHONY: supported-options-message
@@ -200,14 +197,12 @@ supported-options-message:
 	@${ECHO} "=========================================================================="
 	@${ECHO} "The supported build options for this package are:"
 	@${ECHO} ""
-	@${ECHO} "${PKG_SUPPORTED_OPTIONS}" | ${XARGS} -n 1 | ${SORT} |	\
-		${_PKG_OPTIONS_WORDWRAP_FILTER}
+	@${ECHO} ${_PKG_OPTIONS_AVAILABLE_CMD:sh:Q} | ${_PKG_OPTIONS_WORDWRAP_FILTER}
 .    if !empty(PKG_OPTIONS)
 	@${ECHO} ""
 	@${ECHO} "The currently selected options are:"
 	@${ECHO} ""
-	@${ECHO} "${PKG_OPTIONS}" | ${XARGS} -n 1 | ${SORT} |		\
-		${_PKG_OPTIONS_WORDWRAP_FILTER}
+	@${ECHO} ${_PKG_OPTIONS_ENABLED_CMD:sh:Q} | ${_PKG_OPTIONS_WORDWRAP_FILTER}
 .    endif
 	@${ECHO} ""
 	@${ECHO} "You can select which build options to use by setting the following"
