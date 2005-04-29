@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:51 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/04/29 04:48:24 reed Exp $
 bin/glabels
 bin/glabels-batch
 include/libglabels/libglabels.h
@@ -47,6 +47,7 @@ share/mime-info/glabels.keys
 share/mime-info/glabels.mime
 share/mime/packages/glabels.xml
 share/omf/glabels/glabels-C.omf
+share/pixmaps/glabels-application-x-glabels.png
 share/pixmaps/glabels.png
 share/pixmaps/glabels/ex-1layout.png
 share/pixmaps/glabels/ex-2layouts.png
@@ -54,8 +55,7 @@ share/pixmaps/glabels/ex-cd-size.png
 share/pixmaps/glabels/ex-rect-size.png
 share/pixmaps/glabels/ex-round-size.png
 share/pixmaps/glabels/glabels-about-logo.png
-share/pixmaps/glabels/glabels-icon.png
-share/pixmaps/glabels/glabels-logo.png
+share/pixmaps/glabels/glabels-splash.png
 @dirrm share/pixmaps/glabels
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/glabels
