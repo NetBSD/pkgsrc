@@ -1,0 +1,23 @@
+$NetBSD: patch-ag,v 1.1 2005/04/29 22:18:30 rillig Exp $
+
+Needed for ISO C90 compliance.
+
+--- libmergeant/mg-form.c.orig	Fri Jul 16 21:47:26 2004
++++ libmergeant/mg-form.c	Tue Apr 26 13:04:05 2005
+@@ -586,6 +586,7 @@ mark_not_null_entry_labels (MgForm *form
+ {
+ 	PangoAttrList *attrs = NULL;
+ 	PangoAttribute *att;
++	GSList *list;
+ 
+ 	if (show_mark) {
+ 		attrs = pango_attr_list_new ();
+@@ -595,7 +596,7 @@ mark_not_null_entry_labels (MgForm *form
+ 		pango_attr_list_insert (attrs, att);
+ 	}
+ 
+-	GSList *list = form->priv->not_null_labels;
++	list = form->priv->not_null_labels;
+ 	while (list) {
+ 		gtk_label_set_attributes (GTK_LABEL (list->data), attrs);
+ 		list = g_slist_next (list);

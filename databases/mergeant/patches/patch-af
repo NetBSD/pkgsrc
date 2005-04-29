@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1 2005/04/29 22:18:30 rillig Exp $
+
+Needed for ISO C90 compliance.
+
+--- libmergeant/graph/mg-canvas-field.c.orig	Sat Jul 10 15:42:54 2004
++++ libmergeant/graph/mg-canvas-field.c	Tue Apr 26 13:27:20 2005
+@@ -146,13 +146,13 @@ mg_canvas_field_set_property    (GObject
+ 	gpointer ptr;
+ 	GString *string;
+ 	MgServerDataType *dtype;
++	MgEntity *ent;
+ 
+ 	cf = MG_CANVAS_FIELD (object);
+ 
+ 	switch (param_id) {
+ 	case PROP_FIELD:
+ 		ptr = g_value_get_pointer (value);
+-		MgEntity *ent;
+ 		g_return_if_fail (IS_MG_FIELD (ptr));
+ 
+ 		/* signals management */

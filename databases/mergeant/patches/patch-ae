@@ -1,0 +1,19 @@
+$NetBSD: patch-ae,v 1.1 2005/04/29 22:18:30 rillig Exp $
+
+Needed for ISO C90 compliance.
+
+--- libmergeant/mg-work-grid.c.orig	Sat Jul 10 15:42:54 2004
++++ libmergeant/mg-work-grid.c	Tue Apr 26 13:17:27 2005
+@@ -2299,10 +2299,11 @@ grid_modif_struct_set_status (MgWorkGrid
+ 			      GtkTreeModel *tree_model, GtkTreeIter *iter,
+ 			      MgWorkCore *core, MgDataEntryAttribute requested_status)
+ {
+-	g_return_if_fail (user_modif);
+ 	guint attrs;
+ 	GtkTreePath *path;
+ 	gint row;
++
++	g_return_if_fail (user_modif);
+ 
+ 	switch (requested_status) {
+ 	case MG_DATA_ENTRY_IS_NULL:
