@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2005/04/29 18:45:00 kristerw Exp $
+
+--- src/core/core.h.orig	Fri Apr 29 20:25:38 2005
++++ src/core/core.h	Fri Apr 29 20:26:17 2005
+@@ -51,7 +51,9 @@
+ 
+ #ifdef PTHREAD_COND_T_IN_PTHREAD_H
+ #include <pthread.h>                                          // For... thread.h
++# ifdef USE_SEM_T
+ #include <semaphore.h>                                           // For thread.h
++# endif
+ #endif
+ 
+ #ifdef HAVE_DLFCN_H
