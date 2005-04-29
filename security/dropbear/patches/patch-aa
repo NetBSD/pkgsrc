@@ -1,23 +1,23 @@
-$NetBSD: patch-aa,v 1.5 2005/01/18 17:30:59 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2005/04/29 16:14:41 drochner Exp $
 
---- Makefile.in.orig	2005-01-03 10:24:03.000000000 +0100
+--- Makefile.in.orig	2005-03-07 05:27:01.000000000 +0100
 +++ Makefile.in
-@@ -140,14 +140,14 @@ insmulti%: dropbearmulti
+@@ -137,14 +137,14 @@ insmulti%: dropbearmulti
  inst_dropbear: dropbear
  	$(INSTALL) -d -m 755 $(DESTDIR)$(sbindir)
- 	$(INSTALL) -m 755 $(SPREFIX)dropbear$(EXEEXT) $(DESTDIR)$(sbindir)
--	-chown root $(DESTDIR)$(sbindir)/$(SPREFIX)dropbear$(EXEEXT)
--	-chgrp 0 $(DESTDIR)$(sbindir)/$(SPREFIX)dropbear$(EXEEXT)
-+	-chown ${ROOT_USER} $(DESTDIR)$(sbindir)/$(SPREFIX)dropbear$(EXEEXT)
-+	-chgrp ${ROOT_GROUP} $(DESTDIR)$(sbindir)/$(SPREFIX)dropbear$(EXEEXT)
+ 	$(INSTALL) -m 755 dropbear$(EXEEXT) $(DESTDIR)$(sbindir)
+-	-chown root $(DESTDIR)$(sbindir)/dropbear$(EXEEXT)
+-	-chgrp 0 $(DESTDIR)$(sbindir)/dropbear$(EXEEXT)
++	-chown ${ROOT_USER} $(DESTDIR)$(sbindir)/dropbear$(EXEEXT)
++	-chgrp ${ROOT_GROUP} $(DESTDIR)$(sbindir)/dropbear$(EXEEXT)
  
  inst_%: $*
  	$(INSTALL) -d -m 755 $(DESTDIR)$(bindir)
- 	$(INSTALL) -m 755 $(SPREFIX)$*$(EXEEXT) $(DESTDIR)$(bindir)
--	-chown root $(DESTDIR)$(bindir)/$(SPREFIX)$*$(EXEEXT)
--	-chgrp 0 $(DESTDIR)$(bindir)/$(SPREFIX)$*$(EXEEXT)
-+	-chown ${ROOT_USER} $(DESTDIR)$(bindir)/$(SPREFIX)$*$(EXEEXT)
-+	-chgrp ${ROOT_GROUP} $(DESTDIR)$(bindir)/$(SPREFIX)$*$(EXEEXT)
+ 	$(INSTALL) -m 755 $*$(EXEEXT) $(DESTDIR)$(bindir)
+-	-chown root $(DESTDIR)$(bindir)/$*$(EXEEXT)
+-	-chgrp 0 $(DESTDIR)$(bindir)/$*$(EXEEXT)
++	-chown ${ROOT_USER} $(DESTDIR)$(bindir)/$*$(EXEEXT)
++	-chgrp ${ROOT_GROUP} $(DESTDIR)$(bindir)/$*$(EXEEXT)
  
  
  # for some reason the rule further down doesn't like $($@objs) as a prereq.
