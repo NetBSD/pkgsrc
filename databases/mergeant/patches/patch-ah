@@ -1,0 +1,18 @@
+$NetBSD: patch-ah,v 1.1 2005/04/29 22:18:30 rillig Exp $
+
+Needed for ISO C90 compliance.
+
+--- libmergeant/mg-parameter.c.orig	Sat Jul 10 15:43:03 2004
++++ libmergeant/mg-parameter.c	Tue Apr 26 13:05:11 2005
+@@ -608,9 +608,10 @@ void
+ mg_parameter_set_value (MgParameter *param, const GdaValue *value)
+ {
+ 	gboolean changed = TRUE;
++	const GdaValue *current_val;
++
+ 	g_return_if_fail (param && IS_MG_PARAMETER (param));
+ 	g_return_if_fail (param->priv);
+-	const GdaValue *current_val;
+ 
+ 	param->priv->invalid_forced = FALSE;
+ 
