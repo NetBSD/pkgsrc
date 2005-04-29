@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.3 2005/04/29 22:20:45 rillig Exp $
+
+Needed for snprintf(3).
+
+--- src/libprojection/ProjectionBonne.cpp.orig	Tue Nov 16 18:43:43 2004
++++ src/libprojection/ProjectionBonne.cpp	Tue Apr 26 12:35:18 2005
+@@ -8,6 +8,7 @@
+  */
+ 
+ #include <cmath>
++#include <cstdio>
+ #include <sstream>
+ #include <vector>
+ using namespace std;

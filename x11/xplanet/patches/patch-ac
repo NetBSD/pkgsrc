@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.3 2005/04/29 22:20:45 rillig Exp $
+
+Needed for snprintf(3).
+
+--- src/libprojection/ProjectionMercator.cpp.orig	Tue Nov 16 22:56:55 2004
++++ src/libprojection/ProjectionMercator.cpp	Tue Apr 26 12:35:43 2005
+@@ -1,4 +1,5 @@
+ #include <cmath>
++#include <cstdio>
+ #include <sstream>
+ using namespace std;
+ 
