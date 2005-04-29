@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2003/10/06 08:19:45 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2005/04/29 16:59:02 kristerw Exp $
 
 --- Crack.orig	Fri Dec 20 17:09:41 1996
 +++ Crack
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.3 2003/10/06 08:19:45 jlam Exp $
 -# nice, generic path (RedHat Linux, Solaris1, Solaris2)
 -CRACK_PATH=/usr/local/bin:/usr/ccs/bin:/usr/sbin:/sbin:/usr/bin:/bin:/usr/ucb:/usr/etc:$PATH
 +# Path for NetBSD
-+CRACK_PATH=/usr/local/bin:/bin:/usr/bin:/usr/sbin:/sbin:@@PREFIX@@/bin:$PATH
++CRACK_PATH=${PATH}:/usr/local/bin:/bin:/usr/bin:/usr/sbin:/sbin:@@PREFIX@@/bin
  
  # compiler options for crack 5.0
  #
