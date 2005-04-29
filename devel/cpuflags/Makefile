@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2005/04/27 10:55:21 abs Exp $
+# $NetBSD: Makefile,v 1.89 2005/04/29 12:56:05 abs Exp $
 #
 
-DISTNAME=	cpuflags-0.85
+DISTNAME=	cpuflags-0.86
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,24 +11,12 @@ COMMENT=	Determine compiler flags to best target current cpu
 
 ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-* SunOS-*-*
 
-EXTRACT_ONLY=	# empty
 USE_LANGUAGES=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
-FILES_SUBST+=	PREFIX="${PREFIX}"
-
-do-build:
+do-extract:
 	${MKDIR} ${WRKSRC}
-.for FILE in cpuflags.1 cpuflags.mk
-	${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/${FILE} \
-					 > ${WRKSRC}/${FILE}
-.endfor
-
-do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/cpuflags.${OPSYS} ${PREFIX}/bin/cpuflags
-	${INSTALL_DATA} ${FILESDIR}/optimize_gcc.mk ${PREFIX}/share/mk/optimize_gcc.mk
-	${INSTALL_DATA} ${WRKSRC}/cpuflags.mk ${PREFIX}/share/mk/cpuflags.mk
-	${INSTALL_MAN} ${WRKSRC}/cpuflags.1 ${PREFIX}/man/man1/cpuflags.1
+	${CP} ${FILESDIR}/Makefile ${FILESDIR}/*.* ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
