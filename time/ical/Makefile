@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:44 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/29 19:01:33 kristerw Exp $
 
 DISTNAME=	ical-2.3.1
 PKGREVISION=	1
@@ -27,4 +27,5 @@ post-configure:
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
