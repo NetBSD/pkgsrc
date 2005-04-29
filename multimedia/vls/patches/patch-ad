@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2005/04/29 18:45:00 kristerw Exp $
+
+--- src/core/thread.cpp.orig	Fri Apr 29 20:24:01 2005
++++ src/core/thread.cpp	Fri Apr 29 20:25:20 2005
+@@ -32,7 +32,9 @@
+ 
+ #ifdef PTHREAD_COND_T_IN_PTHREAD_H
+ #include <pthread.h>
++# ifdef USE_SEM_T
+ #include <semaphore.h>
++# endif
+ #include <errno.h>
+ #elif defined WIN32
+ #include <windows.h>
