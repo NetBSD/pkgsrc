@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.139 2005/04/12 01:06:58 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.140 2005/04/29 22:22:09 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -298,8 +298,10 @@ my $regex_boolean	= qr"^(?:YES|yes|NO|no)$";
 my $regex_yes_or_undef	= qr"^(?:YES|yes)$";
 my $regex_mail_address	= qr"^[-\w\d_.]+\@[-\w\d.]+$";
 my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
+my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
 
-# Global variables that should be eliminated by the next refactoring.
+# Global variables
+my $pkgsrc_rootdir	= undef;
 my $pkgdir		= ".";
 my $filesdir		= "files";
 my $patchdir		= "patches";
@@ -311,7 +313,7 @@ my $seen_NO_PKG_REGISTER= false;
 my $seen_NO_CHECKSUM	= false;
 my $seen_USE_PKGLOCALEDIR = false;
 my %seen_Makefile_include = ();
-my %predefined;
+my %predefined_sites	= ();
 my $pkgname		= "";
 my %make_vars_typemap	= ();
 
@@ -333,7 +335,7 @@ sub checkextra($$);
 sub checkorder($$@);
 sub checkearlier($@);
 sub abspathname($$);
-sub is_predefined($);
+sub check_predefined_sites($);
 sub category_check();
 sub check_package();
 
@@ -479,6 +481,43 @@ sub load_make_vars_typemap() {
 	return true;
 }
 
+sub load_predefined_sites() {
+	my ($fname) = ("$pkgsrc_rootdir/mk/bsd.sites.mk");
+	my ($lines) = load_file($fname);
+	my ($varname) = undef;
+	my ($ignoring) = false;
+
+	if (!$lines) {
+		log_error($fname, NO_LINE_NUMBER, "could not load file");
+		return false;
+	}
+	log_info($fname, NO_LINE_NUMBER, "Loading MASTER_SITE_* definitions");
+	foreach my $line (@{$lines}) {
+		if ($line->text =~ qr"^(MASTER_SITE_\w+)\+=\s*\\$"o) {
+			$varname = $1;
+			$ignoring = false;
+		} elsif ($line->text eq "MASTER_SITE_BACKUP?=\t\\") {
+			$ignoring = true;
+		} elsif ($line->text =~ qr"^\t($regex_url_directory)(?:|\s*\\)$"o) {
+			if (!$ignoring) {
+				if (defined($varname)) {
+					$predefined_sites{$1} = $varname;
+				} else {
+					$line->log_warning("Lonely URL found");
+				}
+			}
+		} elsif ($line->text =~ qr"^(?:#.*|\s*)$") {
+			# ignore empty and comment lines
+		} elsif ($line->text =~ qr"BSD_SITES_MK") {
+			# ignore multiple inclusion guards
+		} else {
+			$line->log_warning("Unknown line type: " . $line->text);
+		}
+	}
+	log_info($fname, NO_LINE_NUMBER, sprintf("Loaded %d MASTER_SITE_* definitions", scalar(keys(%predefined_sites))));
+	return true;
+}
+
 sub main() {
 	parse_command_line();
 	if ($opt_warn_types) {
@@ -490,9 +529,12 @@ sub main() {
 	log_info(NO_FILE, NO_LINE_NUMBER, "localbase: $conf_localbase");
 
 	if (-f "$opt_packagedir/../Packages.txt") {
+		$pkgsrc_rootdir = "$opt_packagedir/..";
 		log_info(NO_FILE, NO_LINE_NUMBER, "checking category Makefile.");
 		category_check();
 	} elsif (-f "$opt_packagedir/../../Packages.txt") {
+		$pkgsrc_rootdir = "$opt_packagedir/../..";
+		load_predefined_sites();
 		check_package();
 	} else {
 		log_error(NO_FILE, NO_LINE_NUMBER, "cannot check \"$opt_packagedir\".");
@@ -501,37 +543,6 @@ sub main() {
 }
 
 sub check_package() {
-	%predefined = ();
-	foreach my $i (split("\n", <<EOF)) {
-XCONTRIB	ftp://crl.dec.com/pub/X11/contrib/
-XCONTRIB	ftp://ftp.sunsite.auc.dk/pub/X/X.org/contrib/
-XCONTRIB	ftp://ftp.uni-paderborn.de/pub/X11/contrib/
-XCONTRIB	ftp://ftp.x.org/contrib/
-GNU		ftp://ftp.gnu.org/pub/gnu/
-GNU		ftp://ftp.wustl.edu/systems/gnu/
-GNU		ftp://ftp.informatik.tu-muenchen.de/pub/comp/os/unix/gnu/
-PERL_CPAN	ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/
-PERL_CPAN	ftp://ftp.cdrom.com/pub/perl/CPAN/modules/by-module/
-TEX_CTAN	ftp://ftp.cdrom.com/pub/tex/ctan/
-TEX_CTAN	ftp://ftp.wustl.edu/packages/TeX/
-TEX_CTAN	ftp://ftp.funet.fi/pub/TeX/CTAN/
-TEX_CTAN	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/
-TEX_CTAN	ftp://ftp.dante.de/tex-archive/
-SUNSITE		ftp://metalab.unc.edu/pub/Linux/
-SUNSITE		ftp://sunsite.unc.edu/pub/Linux/
-SUNSITE		ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/
-SUNSITE		ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/
-GNOME		ftp://ftp.gnome.org/pub/GNOME/
-GNOME		ftp://ftp.sunet.se/pub/X11/GNOME/
-GNOME		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/
-GNOME		ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/
-SOURCEFORGE	ftp://download.sourceforge.net/
-SOURCEFORGE	http://download.sourceforge.net/
-EOF
-		my ($j, $k) = split(/\t+/, $i);
-		$predefined{$k} = $j;
-	}
-
 	# we need to handle the Makefile first to get some variables
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking Makefile.");
 	if (! -f "$opt_packagedir/Makefile") {
@@ -987,6 +998,7 @@ sub check_for_multiple_patches($) {
 		if (index($line->text, "--- ") == 0 && $line->text !~ qr"^--- \d+(?:,\d+|) ----$") {
 			$line_type = "-";
 		} elsif (index($line->text, "*** ") == 0 && $line->text !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
+			$line->log_warning("please use unified diffs (diff -u) for patches");
 			$line_type = "*";
 		} elsif (index($line->text, "+++ ") == 0) {
 			$line_type = "+";
@@ -1554,9 +1566,7 @@ EOF
 					log_error(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" contains ".
 						"extra \":\".");
 				}
-				unless (&is_predefined($i)) {
-					log_info(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" ok.");
-				}
+				check_predefined_sites($i);
 			} else {
 				log_info(NO_FILE, NO_LINE_NUMBER, "non-URL \"$i\" ok.");
 			}
@@ -2094,19 +2104,17 @@ EOF
 	return true;
 }
 
-sub is_predefined($) {
+sub check_predefined_sites($) {
 	my ($url) = @_;
-	my ($site, $subdir);
 
-	if ($site = (grep($url =~ $_, keys %predefined))[0]) {
-		$url =~ /$site/;
-		$subdir = $';
-		$subdir =~ s/\/$//;
-		log_warning(NO_FILE, NO_LINE_NUMBER, "how about using ".
-			"\${MASTER_SITE_$predefined{$site}:=$subdir/} instead of \"$url\?");
+	foreach my $site (keys(%predefined_sites)) {
+		next unless (index($url, $site) == 0);
+		my $subdir = substr($url, length($site));
+		log_warning(NO_FILE, NO_LINE_NUMBER, "please use \${$predefined_sites{$site}:=$subdir} instead of \"$url\"");
 		return true;
 	}
-	return false;
+	log_info(NO_FILE, NO_LINE_NUMBER, "URL does not match any of the predefined URLS. Good.");
+	return true;
 }
 
 sub category_check() {
