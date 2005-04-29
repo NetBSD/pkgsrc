@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:43 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/29 00:59:00 xtraeme Exp $
 #
 
-DISTNAME=	gxemul-0.3.1
+DISTNAME=	gxemul-0.3.2
 CATEGORIES=	emulators
 MASTER_SITES=	http://gavare.se/gxemul/src/
 
@@ -12,6 +12,7 @@ COMMENT=	Machine emulator
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 HAS_CONFIGURE=	yes
+BUILD_TARGET=	build
 
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
