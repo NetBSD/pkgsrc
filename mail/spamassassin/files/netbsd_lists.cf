@@ -1,4 +1,4 @@
-# $NetBSD: netbsd_lists.cf,v 1.1 2002/10/08 00:49:20 heinz Exp $
+# $NetBSD: netbsd_lists.cf,v 1.2 2005/04/29 08:48:40 heinz Exp $
 
 #
 # Rules to minimize false positives of NetBSD related emails
@@ -14,17 +14,11 @@
 # netbsd-bugs@netbsd.org
 # compensate for problem reports with confusing content for SpamAssassin
 
-header	__NETBSD_PR_SUBJECT	Subject =~ /\b(?:admin|bin|install|kern|lib|misc|pkg|port-[a-z][a-z0-9]{1,15}|security|standards|toolchain|xsrc|y2k)\/\d{4,6}\b/i
+header	__NETBSD_PR_SUBJECT	Subject =~ /\b(?:bin|install|kern|lib|misc|pkg|port-[a-z][a-z0-9]{1,15}|pr|security|standards|toolchain|xsrc|y2k)\/\d{4,6}\b/i
 header	__NETBSD_BUGS_SENDER	Sender =~ /\bnetbsd-bugs-owner\@netbsd\.org\b/i
 header	__NETBSD_RCVD		Received =~ /\bby\s+(?:mail|narn)\.netbsd\.org\b/i
 header	__NETBSD_BUGS_DELIVERED	Delivered-To =~ /\bnetbsd-bugs\@netbsd\.org\b/i
-header	__NETBSD_SEND_PR	exists:X-Send-Pr-Version
 
-meta NETBSD_PR		(__NETBSD_SEND_PR && __NETBSD_PR_SUBJECT && __NETBSD_BUGS_SENDER && __NETBSD_RCVD && __NETBSD_BUGS_DELIVERED)
-describe NETBSD_PR	Message is a problem report from netbsd-bugs
-score NETBSD_PR		-5
-
-meta NETBSD_PR_COMMENT	(! __NETBSD_SEND_PR && __NETBSD_PR_SUBJECT && __NETBSD_BUGS_SENDER && __NETBSD_RCVD && __NETBSD_BUGS_DELIVERED)
-describe NETBSD_PR_COMMENT   Message concerns a problem report from netbsd-bugs
-score NETBSD_PR_COMMENT	-2.5
-
+meta NETBSD_PR		(__NETBSD_PR_SUBJECT && __NETBSD_BUGS_SENDER && __NETBSD_RCVD && __NETBSD_BUGS_DELIVERED)
+describe NETBSD_PR	Problem report or comment on the netbsd-bugs list
+score NETBSD_PR		-2.5
