@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/03 14:20:03 ben Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/29 22:16:12 rillig Exp $
 #
 
 DISTNAME=	dgguspat
@@ -16,10 +16,11 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EXTRACT_ONLY=	# empty
-NO_CONFIGURE=	yes
+NO_TOOLS=	yes
+NO_BUILD=	yes
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
-do-build:
+do-configure:
 	${SED} "s|@PREFIX@|${PREFIX}|" < ${FILESDIR}/gravis.cfg > \
 		${WRKDIR}/gravis.cfg
 	${SED} "s|@PREFIX@|${PREFIX}|" < ${FILESDIR}/timidity.cfg > \
