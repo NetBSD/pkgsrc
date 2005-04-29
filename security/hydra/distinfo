@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2005/04/24 10:42:49 adrianp Exp $
+$NetBSD: distinfo,v 1.3 2005/04/29 22:17:13 rillig Exp $
 
 SHA1 (hydra-4.6-src.tar.gz) = acf0f61f8dc2a5307e266c337231dbdb3a9b9d79
 RMD160 (hydra-4.6-src.tar.gz) = 72cffce9eda1659023b74f22baabfad43ac5933d
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 0ca0d1f6edf7bad05050c0a76ec6601044981c5b
 SHA1 (patch-ab) = 7c2697a746b6439bab35a801bbf30760920898fa
 SHA1 (patch-ac) = c9ba9d8b584ec92b940dbf2e69768dad4ff86d25
 SHA1 (patch-ad) = 3734123af4511161eee93f624b1b9dd575be0ae7
+SHA1 (patch-ae) = 68952bea6383a3f5fa6b94925710437be6aeea3a
