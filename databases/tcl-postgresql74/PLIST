@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/29 13:58:04 gson Exp $
+bin/pgtclsh
+include/libpgtcl.h
+lib/libpgtcl.a
+lib/libpgtcl.so
+lib/libpgtcl.so.2
+lib/libpgtcl.so.2.4
+man/man1/pgtclsh.1
