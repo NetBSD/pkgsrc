@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9987 2005/04/29 08:12:56 wiz Exp $
+$NetBSD: CHANGES,v 1.9988 2005/04/29 08:50:59 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2233,3 +2233,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added foomatic-filters-3.0.2 [reed 2005-04-28]
 	Updated gxemul to 0.3.2 [xtraeme 2005-04-29]
 	Updated glabels to 2.0.2 [reed 2005-04-29]
+	Updated spamassassin to 3.0.3 [heinz 2005-04-29]
