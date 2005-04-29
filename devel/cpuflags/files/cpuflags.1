@@ -1,4 +1,4 @@
-.\"	$NetBSD: cpuflags.1,v 1.14 2004/03/17 00:40:24 wiz Exp $
+.\"	$NetBSD: cpuflags.1,v 1.15 2005/04/29 12:56:05 abs Exp $
 .Dd May 31, 2001
 .Dt CPUFLAGS 1
 .Os
@@ -10,7 +10,7 @@
 .Op cc_pathname
 .Sh DESCRIPTION
 .Nm
-queries the current cpu type and gcc version, then outputs appropriate
+detemines the current cpu type and gcc version, then outputs appropriate
 compiler options to best target code for that cpu. If no options exist
 to target the current cpu then nothing is output.
 .Pp
@@ -22,7 +22,7 @@ is not specified it defaults to the first
 .Pa cc
 found in the path.
 .Sh ENVIRONMENT
-The makefile fragment
+The BSD makefile fragment
 .Pa @PREFIX@/share/mk/cpuflags.mk
 will set the following
 .Xr make 1
@@ -59,20 +59,10 @@ kernel or userland by adding the following to
  .sinclude "@PREFIX@/share/mk/cpuflags.mk"
 .Ed
 .Pp
-Those desiring further optimisation can install the lang/gcc3 package, and
-add the following to
-.Pa /etc/mk.conf
-instead:
-.Bd -literal -offset indent
- .sinclude "@PREFIX@/share/examples/gcc/mk.conf"
- .sinclude "@PREFIX@/share/mk/cpuflags.mk"
-.Ed
-.Pp
 To experiment with optimisations that can break generated code there is
 optimize_gcc.mk. This is unsupported, but for full effect add the following to
 .Pa /etc/mk.conf :
 .Bd -literal -offset indent
- .sinclude "@PREFIX@/share/examples/gcc/mk.conf"
  .sinclude "@PREFIX@/share/mk/cpuflags.mk"
  .sinclude "@PREFIX@/share/mk/optimize_gcc.mk"
 .Ed
@@ -87,7 +77,8 @@ CFLAGS+=-pipe
 .Nm
 still needs to learn about more cpu types - updates welcomed
 to
-.Aq abs@NetBSD.org .
+.Aq abs@NetBSD.org . Also the Makefile fragments and examples are BSD make
+specific - gmake examples welcomed.
 .Pp
 Currently
 .Nm
