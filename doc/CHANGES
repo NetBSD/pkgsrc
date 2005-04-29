@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9990 2005/04/29 13:06:21 minskim Exp $
+$NetBSD: CHANGES,v 1.9991 2005/04/29 14:02:40 gson Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2236,3 +2236,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated spamassassin to 3.0.3 [heinz 2005-04-29]
 	Updated cpuflags to 0.86 [abs 2005-04-29]
 	Updated mathomatic to 12.3 [minskim 2005-04-29]
+	Added tcl-postgresql74-7.4.7 [gson 2005-04-29]
