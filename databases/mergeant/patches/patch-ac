@@ -1,7 +1,9 @@
-$NetBSD: patch-ac,v 1.1 2005/02/25 17:51:45 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2005/04/29 22:18:30 rillig Exp $
 
---- libmergeant/mg-query.c.orig	2005-01-18 19:45:33.000000000 +0100
-+++ libmergeant/mg-query.c
+Needed for ISO C90 compliance.
+
+--- libmergeant/mg-query.c.orig	Sun Aug  8 17:20:06 2004
++++ libmergeant/mg-query.c	Tue Apr 26 13:07:06 2005
 @@ -44,7 +44,7 @@
  #include "mg-server-aggregate.h"
  #include "mg-data-handler.h"
@@ -11,3 +13,16 @@ $NetBSD: patch-ac,v 1.1 2005/02/25 17:51:45 drochner Exp $
  #include "mg-qf-func.h"
  
  /* 
+@@ -5117,9 +5117,10 @@ parsed_create_update_query (MgQuery *que
+ 				if (!cond)
+ 					has_error = TRUE;
+ 				else {
++					MgQfield *field_left, *field_right;
+ 					g_assert (mg_condition_get_cond_type (cond) == MG_CONDITION_LEAF_EQUAL);
+-					MgQfield *field_left = mg_condition_leaf_get_operator (cond, MG_CONDITION_OP_LEFT);
+-					MgQfield *field_right = mg_condition_leaf_get_operator (cond, MG_CONDITION_OP_RIGHT);
++					field_left = mg_condition_leaf_get_operator (cond, MG_CONDITION_OP_LEFT);
++					field_right = mg_condition_leaf_get_operator (cond, MG_CONDITION_OP_RIGHT);
+ 
+ 					if (IS_MG_QF_FIELD (field_left)) {
+ 						g_object_set (G_OBJECT (field_left), "value_provider", field_right, NULL);
