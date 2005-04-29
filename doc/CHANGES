@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9985 2005/04/29 01:00:09 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9986 2005/04/29 04:51:19 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2230,3 +2230,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ethereal to 0.10.10nb1 [tron 2005-04-28]
 	Added foomatic-filters-3.0.2 [reed 2005-04-28]
 	Updated gxemul to 0.3.2 [xtraeme 2005-04-29]
+	Updated glabels to 2.0.2 [reed 2005-04-29]
