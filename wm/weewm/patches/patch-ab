@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/04/29 02:31:48 minskim Exp $
+
+--- src/info.c.orig	Thu Jun 26 16:11:30 2003
++++ src/info.c
+@@ -25,7 +25,7 @@
+ 
+ #include <unistd.h>
+ #include <string.h>
+-#include <malloc.h>
++#include <stdlib.h>
+ #include <X11/Xlib.h>
+ 
+ #include "weewm.h"
