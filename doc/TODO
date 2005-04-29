@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3449 2005/04/28 14:11:43 wiz Exp $
+$NetBSD: TODO,v 1.3450 2005/04/29 08:12:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -262,7 +262,6 @@ Suggested package updates
 	o R-2.1.0
 	o RealPlayerGold-10.0.4
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.5
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
