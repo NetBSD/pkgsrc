@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9988 2005/04/29 08:50:59 heinz Exp $
+$NetBSD: CHANGES,v 1.9989 2005/04/29 12:56:37 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2234,3 +2234,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gxemul to 0.3.2 [xtraeme 2005-04-29]
 	Updated glabels to 2.0.2 [reed 2005-04-29]
 	Updated spamassassin to 3.0.3 [heinz 2005-04-29]
+	Updated cpuflags to 0.86 [abs 2005-04-29]
+
