@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/28 23:20:10 jdolecek Exp $
-bin/opera
-man/man1/opera.1
