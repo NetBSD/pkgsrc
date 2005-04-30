@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: files,v 1.3 2005/02/14 16:31:41 tv Exp $
+# $NetBSD: files,v 1.3.2.1 2005/04/30 04:45:47 salo Exp $
 #
 # +FILES - reference-counted configuration file management script
 #
@@ -118,10 +118,6 @@ ADD)
 				${ECHO} "	$file"
 				${ECHO} "	    [$f_eg]"
 				${CP} $f_eg $file
-				case $f_mode in
-				"")	;;
-				*)	${CHMOD} $f_mode $file ;;
-				esac
 				case $f_user in
 				"")	;;
 				*)	${CHOWN} $f_user $file ;;
@@ -129,6 +125,10 @@ ADD)
 				case $f_group in
 				"")	;;
 				*)	${CHGRP} $f_group $file ;;
+				esac
+				case $f_mode in
+				"")	;;
+				*)	${CHMOD} $f_mode $file ;;
 				esac
 			fi
 		fi
