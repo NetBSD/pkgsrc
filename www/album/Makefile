@@ -9,7 +9,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://marginalhacks.com/bin/
 
 MAINTAINER=	augustss@NetBSD.org
-HOMEPAGE=	http://marginalhacks.com/Hacks/album/Download.html
+HOMEPAGE=	http://marginalhacks.com/Hacks/album/
 COMMENT=	Generate HTML albums of images
 
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
