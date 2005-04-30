@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9992 2005/04/30 22:27:18 tron Exp $
+$NetBSD: CHANGES,v 1.9993 2005/04/30 23:07:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2239,3 +2239,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added tcl-postgresql74-7.4.7 [gson 2005-04-29]
 	Removed opera7 [tron 2005-04-30]
 	Added opera-8.0 [tron 2005-04-30]
+	Updated gopchop to 1.1.6 [wiz 2005-04-30]
