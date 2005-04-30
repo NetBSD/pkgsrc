@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.73 2005/04/27 02:54:09 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.74 2005/04/30 04:46:30 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -153,3 +153,5 @@ Pullup ticket 467 - requested by Thor Lancelot Simon
 infrastructure fix for xemacs packages
 Pullup ticket 469 - requested by Matthias Scheler
 security fix for xine-lib
+Pullup ticket 470 - requested by Stoned Elipot
+permissions fix for install framework
