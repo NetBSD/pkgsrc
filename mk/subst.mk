@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.16 2004/08/23 16:37:09 jlam Exp $
+# $NetBSD: subst.mk,v 1.17 2005/04/30 15:05:06 jlam Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a paricular
@@ -43,11 +43,7 @@ _SUBST_BACKUP_SUFFIX=	.subst.sav
 .for _class_ in ${SUBST_CLASSES}
 _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
 
-.  if defined(SUBST_SED.${_class_}) && !empty(SUBST_SED.${_class_})
 SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}}
-.  else
-SUBST_FILTER_CMD.${_class_}?=	# empty
-.  endif
 SUBST_POSTCMD.${_class_}?=	${RM} -f $$file${_SUBST_BACKUP_SUFFIX}
 
 SUBST_TARGETS+=			subst-${_class_}
@@ -77,7 +73,6 @@ subst-${_class_}: ${_SUBST_TARGETS.${_class_}}
 	${TOUCH} ${TOUCH_FLAGS} ${_SUBST_COOKIE.${_class_}}
 
 ${_SUBST_COOKIE.${_class_}}:
-.  if !empty(SUBST_FILTER_CMD.${_class_})
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${WRKSRC};							\
 	files="${SUBST_FILES.${_class_}}";				\
@@ -101,5 +96,4 @@ ${_SUBST_COOKIE.${_class_}}:
 			fi;						\
 		done ;;							\
 	esac
-.  endif
 .endfor
