@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.5 2005/04/30 04:56:10 schmonz Exp $
+
+--- readwrite.h.orig	1997-06-29 23:11:54.000000000 -0400
++++ readwrite.h
+@@ -1,7 +1,8 @@
+ #ifndef READWRITE_H
+ #define READWRITE_H
+ 
+-extern int read();
+-extern int write();
++#include <sys/types.h>
++extern ssize_t read();
++extern ssize_t write();
+ 
+ #endif
