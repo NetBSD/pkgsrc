@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.74 2005/04/30 04:46:30 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.75 2005/04/30 05:22:39 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -155,3 +155,5 @@ Pullup ticket 469 - requested by Matthias Scheler
 security fix for xine-lib
 Pullup ticket 470 - requested by Stoned Elipot
 permissions fix for install framework
+Pullup ticket 473 - requested by Matthias Scheler
+security fix for ethereal
