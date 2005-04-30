@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/04/28 14:10:04 wiz Exp $
+$NetBSD: distinfo,v 1.4 2005/04/30 12:23:42 drochner Exp $
 
-SHA1 (lsh-2.0.1.tar.gz) = 58f4829f29b12c1b96463c2b0efcba6d6e553081
-RMD160 (lsh-2.0.1.tar.gz) = 61541e8e8b6fb8f026059eaf0a2dc6f396aaa4cf
-Size (lsh-2.0.1.tar.gz) = 1866063 bytes
+SHA1 (lsh-1.4.3.tar.gz) = 25cb15a0851b3209cc5b3552344fedf80221ad6f
+RMD160 (lsh-1.4.3.tar.gz) = c5bc410396f6426e2e609ded97296424d8a3bd46
+Size (lsh-1.4.3.tar.gz) = 1414008 bytes
 SHA1 (patch-aa) = 08cb6cf3f28ae2281d109e20dc9585111009ea50
 SHA1 (patch-ab) = 179647434ecf7a4b42e301f1ac1c794f217d69d0
+SHA1 (patch-ac) = af2659ae7edb797481172c467936383e6d5a7f8a
