@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:47:34 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/30 19:18:25 jmmv Exp $
 #
 
 DISTNAME=	gtk-doc-1.3
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/1.3/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	schmonz@NetBSD.org
+MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gtk.org/rdp/
 COMMENT=	Tools for authors of the GTK+ reference documentation
 
