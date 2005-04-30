@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1617 2005/04/25 16:47:18 drochner Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1618 2005/04/30 04:35:54 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -931,7 +931,16 @@ USE_LANGUAGES?=		# empty
 #
 .include "../../mk/compiler.mk"
 
-_USE_NEW_TOOLS?=	no
+# These are all of the tools use by pkgsrc Makefiles.  This should
+# eventually be split up into lists of tools required by different
+# phases of a pkgsrc build.
+#
+USE_TOOLS+=	[ awk basename cat chgrp chmod chown cmp cp cut date	\
+		dirname echo egrep env expr false fgrep file find grep	\
+		gtar gunzip gzcat gzip head hostname id ln ls m4 mkdir	\
+		mtree mv nice pax pwd rm rmdir sed sh shlock sort tail	\
+		tee test touch tr true tsort wc xargs
+
 .if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 .include "../../mk/tools/bsd.tools.mk"
 .else
@@ -1740,7 +1749,12 @@ BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
     !empty(EXTRACT_SUFX:M*.lzh) || !empty(EXTRACT_SUFX:M*.lha)
 BUILD_DEPENDS+=		lha>=114.9:../../archivers/lha
 .endif
-.if !defined(GZCAT)
+.if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+.  if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
+      !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz)
+USE_TOOLS+=		gzcat
+.  endif
+.elif !defined(GZCAT)
 .  if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
       !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz)
 BUILD_DEPENDS+=         gzip-base>=1.2.4b:../../archivers/gzip-base
