@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/04/30 12:23:42 drochner Exp $
+
+--- src/keyexchange.c.orig	2005-04-29 17:39:35.000000000 +0200
++++ src/keyexchange.c
+@@ -113,7 +113,7 @@ parse_kexinit(struct lsh_string *packet)
+       /* Bad format */
+       int j;
+       for (j = 0; j<i; j++)
+-	KILL(lists[i]);
++	KILL(lists[j]);
+       KILL(res);
+       return NULL;
+     }
