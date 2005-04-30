@@ -1,0 +1,7 @@
+* --autofix
+* pkglint <package>...
+* fix false positive warnings
+* @deprecated_variables
+* add checks for buildlink3.mk files
+* stricter type checking
+* quoting check for Makefile variables
