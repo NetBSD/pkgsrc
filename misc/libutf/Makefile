@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:46:38 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/30 08:54:59 agc Exp $
 #
 
 DISTNAME=	libutf-2.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
-MASTER_SITES=	http://www.westley.demon.co.uk/src/
+MASTER_SITES=	http://www.alistaircrooks.co.uk/src/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.westley.demon.co.uk/software.html
+HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
 COMMENT=	UTF-8 character set support library, including regular expressions
 
 USE_PKGINSTALL=	yes
