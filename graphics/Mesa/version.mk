@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.9 2004/04/11 19:26:01 jschauma Exp $
+# $NetBSD: version.mk,v 1.10 2005/04/30 02:16:12 jlam Exp $
 #
 # This file computes the version number of the Mesa distributed with
 # XFree86 and stores it in ${_MESA_VERSION}.
@@ -17,7 +17,7 @@ _MESA_GL_VERSIONS=	1.2 1.3 1.4 1.5
 _MESA_GL_VERSION_${_glvers_}?=	no
 .    if exists(${_GL_GL_H})
 _MESA_GL_VERSION_${_glvers_}!= \
-	if ${EGREP} "\#define[ 	]*GL_VERSION_${_glvers_:S/./_/}[ 	]*1" ${_GL_GL_H} >/dev/null 2>&1; then \
+	if ${GREP} "\#define[ 	]*GL_VERSION_${_glvers_:S/./_/}[ 	]*1" ${_GL_GL_H} >/dev/null 2>&1; then \
 		${ECHO} "yes";						\
 	else								\
 		${ECHO} "no";						\
