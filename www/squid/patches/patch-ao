@@ -1,0 +1,28 @@
+$NetBSD: patch-ao,v 1.1.2.2 2005/04/30 05:35:57 salo Exp $
+
+--- doc/Makefile.in.orig	2005-04-27 00:32:57.000000000 +0900
++++ doc/Makefile.in
+@@ -161,7 +161,10 @@ MANS = $(man_MANS)
+ DIST_COMMON = Makefile.am Makefile.in
+ all: all-am
+ 
+-.SUFFIXES:
++.SUFFIXES: .in
++.in:
++	$(SUBSTITUTE) < $< > $@
++
+ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+ 	  $(AUTOMAKE) --foreign  doc/Makefile
+@@ -314,10 +317,8 @@ uninstall-man: uninstall-man8
+ 
+ 
+ squid.8: squid.8.in Makefile
+-	$(SUBSTITUTE) < $< > $@
+-
+ cachemgr.cgi.8: cachemgr.cgi.8.in Makefile
+-	$(SUBSTITUTE) < $< > $@
++
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
