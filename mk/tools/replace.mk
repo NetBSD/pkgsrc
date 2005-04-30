@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.53 2005/04/28 17:40:52 jlam Exp $
+# $NetBSD: replace.mk,v 1.54 2005/04/30 04:35:54 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -38,84 +38,12 @@ USE_TOOLS+=	${USE_GNU_TOOLS:S/^awk$/gawk/:S/^make$/gmake/:S/^sed$/gsed/}
 USE_TOOLS+=	tbl
 .endif
 
-# These are the platform-specific lists of system-supplied tools.
-#
-# XXX These should eventually just migrate over to the appropriate
-# XXX pkgsrc/mk/platform/${OPSYS}.mk file.
-#
-.include "../../mk/tools/bootstrap.mk"
-.if exists(../../mk/tools/tools.${OPSYS}.mk)
-.  include "../../mk/tools/tools.${OPSYS}.mk"
-.endif
-
-# "TOOL" variable names associated with each of the tools
-_TOOLS_VARNAME.awk=		AWK
-_TOOLS_VARNAME.basename=	BASENAME
-_TOOLS_VARNAME.bison=		YACC
-_TOOLS_VARNAME.cat=		CAT
-_TOOLS_VARNAME.chgrp=		CHGRP
-_TOOLS_VARNAME.chmod=		CHMOD
-_TOOLS_VARNAME.chown=		CHOWN
-_TOOLS_VARNAME.cmp=		CMP
-_TOOLS_VARNAME.cp=		CP
-_TOOLS_VARNAME.cut=		CUT
-_TOOLS_VARNAME.date=		DATE
-_TOOLS_VARNAME.dirname=		DIRNAME
-_TOOLS_VARNAME.echo=		ECHO
-_TOOLS_VARNAME.egrep=		EGREP
-_TOOLS_VARNAME.env=		SETENV
-_TOOLS_VARNAME.expr=		EXPR
-_TOOLS_VARNAME.false=		FALSE
-_TOOLS_VARNAME.fgrep=		FGREP
-_TOOLS_VARNAME.file=		FILE_CMD
-_TOOLS_VARNAME.find=		FIND
-_TOOLS_VARNAME.gawk=		AWK
-_TOOLS_VARNAME.gm4=		M4
-_TOOLS_VARNAME.gmake=		GMAKE
-_TOOLS_VARNAME.grep=		GREP
-_TOOLS_VARNAME.gsed=		SED
-_TOOLS_VARNAME.gtar=		GTAR
-_TOOLS_VARNAME.gunzip=		GUNZIP_CMD
-_TOOLS_VARNAME.gzcat=		GZCAT
-_TOOLS_VARNAME.gzip=		GZIP_CMD
-_TOOLS_VARNAME.head=		HEAD
-_TOOLS_VARNAME.hostname=	HOSTNAME
-_TOOLS_VARNAME.id=		ID
-_TOOLS_VARNAME.lex=		LEX
-_TOOLS_VARNAME.ln=		LN
-_TOOLS_VARNAME.ls=		LS
-_TOOLS_VARNAME.m4=		M4
-_TOOLS_VARNAME.mkdir=		MKDIR
-_TOOLS_VARNAME.mtree=		MTREE
-_TOOLS_VARNAME.mv=		MV
-_TOOLS_VARNAME.nice=		NICE
-_TOOLS_VARNAME.patch=		PATCH
-_TOOLS_VARNAME.pax=		PAX
-_TOOLS_VARNAME.pwd=		PWD
-_TOOLS_VARNAME.rm=		RM
-_TOOLS_VARNAME.rmdir=		RMDIR
-_TOOLS_VARNAME.sed=		SED
-_TOOLS_VARNAME.sh=		SH
-_TOOLS_VARNAME.shlock=		SHLOCK
-_TOOLS_VARNAME.sort=		SORT
-_TOOLS_VARNAME.tail=		TAIL
-_TOOLS_VARNAME.tbl=		TBL
-_TOOLS_VARNAME.tee=		TEE
-_TOOLS_VARNAME.test=		TEST
-_TOOLS_VARNAME.touch=		TOUCH
-_TOOLS_VARNAME.tr=		TR
-_TOOLS_VARNAME.true=		TRUE
-_TOOLS_VARNAME.tsort=		TSORT
-_TOOLS_VARNAME.wc=		WC
-_TOOLS_VARNAME.xargs=		XARGS
-_TOOLS_VARNAME.yacc=		YACC
-
 ######################################################################
 
 # Create _USE_TOOLS, a sanitized version of USE_TOOLS that removes the
 # tools that are overridden by superseding ones.
 
-_USE_TOOLS:=	${USE_TOOLS}
+_USE_TOOLS:=	${USE_TOOLS:O:u}
 .if !empty(USE_TOOLS:Mbison)		# bison > yacc
 _USE_TOOLS:=	${_USE_TOOLS:Nyacc}
 .endif
@@ -983,11 +911,10 @@ ${TOOLS_DEPMETHOD.${_t_}}+=	${TOOLS_DEPENDS.${_t_}}
 
 # Set TOOLS_REAL_CMD.<tool> appropriately in the case where we are
 # using the system-supplied tool.  Here, we first check to see if
-# TOOLS_PLATFORM.<tool> is defined.  If it is, then use that as the path
-# to the real command and extract any arguments into TOOLS_ARGS.<tool>.
-# We also create either a wrapper or a symlink depending on whether
-# there are any arguments or not.  If TOOLS_PLATFORM.<tool> is undefined
-# or empty, then we fall back to checking if TOOL is defined.  Lastly,
+# TOOLS_PLATFORM.<tool> is defined.  If it is, then use that as the
+# path to the real command and extract any arguments into
+# TOOLS_ARGS.<tool>.  We also create either a wrapper or a symlink
+# depending on whether # there are any arguments or not.  Lastly,
 # always set the TOOL name for each tool to point to the real command,
 # e.g., TBL, YACC, etc., provided that "TOOL" has been associated with
 # <tool>.
@@ -1003,16 +930,6 @@ TOOLS_ARGS.${_t_}?=		\
 .      if defined(_TOOLS_VARNAME.${_t_})
 ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_PLATFORM.${_t_}}
 .      endif
-.      if !empty(TOOLS_ARGS.${_t_})
-TOOLS_WRAP+=			${_t_}
-.      else
-TOOLS_SYMLINK+=			${_t_}
-.      endif
-.    elif defined(${_TOOLS_VARNAME.${_t_}})
-TOOLS_REAL_CMD.${_t_}?=		\
-	${${_TOOLS_VARNAME.${_t_}}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-TOOLS_ARGS.${_t_}?=		\
-	${${_TOOLS_VARNAME.${_t_}}:C/^/_asdf_/1:N_asdf_*}
 .      if !empty(TOOLS_ARGS.${_t_})
 TOOLS_WRAP+=			${_t_}
 .      else
