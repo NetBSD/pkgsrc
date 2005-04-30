@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.15 2004/12/14 14:27:07 taca Exp $
+$NetBSD: patch-aa,v 1.15.4.1 2005/04/30 05:35:57 salo Exp $
 
---- src/Makefile.in.orig	2004-09-26 06:37:59.000000000 +0900
+--- src/Makefile.in.orig	2005-04-25 23:25:05.000000000 +0900
 +++ src/Makefile.in
-@@ -380,14 +380,15 @@ DEFAULT_LOG_PREFIX = $(localstatedir)/lo
+@@ -383,14 +383,15 @@ DEFAULT_LOG_PREFIX = $(localstatedir)/lo
  DEFAULT_CACHE_LOG = $(DEFAULT_LOG_PREFIX)/cache.log
  DEFAULT_ACCESS_LOG = $(DEFAULT_LOG_PREFIX)/access.log
  DEFAULT_STORE_LOG = $(DEFAULT_LOG_PREFIX)/store.log
 -DEFAULT_PID_FILE = $(DEFAULT_LOG_PREFIX)/squid.pid
-+DEFAULT_PID_FILE = /var/run/squid.pid
++DEFAULT_PID_FILE = $(VARBASE)/run/squid.pid
  DEFAULT_SWAP_DIR = $(localstatedir)/cache
  DEFAULT_PINGER = $(libexecdir)/`echo pinger | sed '$(transform);s/$$/$(EXEEXT)/'`
  DEFAULT_UNLINKD = $(libexecdir)/`echo unlinkd | sed '$(transform);s/$$/$(EXEEXT)/'`
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.15 2004/12/14 14:27:07 taca Exp $
  
  DEFS = @DEFS@ -DDEFAULT_CONFIG_FILE=\"$(DEFAULT_CONFIG_FILE)\"
  
-@@ -838,20 +839,20 @@ CCDEPMODE = @CCDEPMODE@
+@@ -855,20 +856,20 @@ CCDEPMODE = @CCDEPMODE@
  uninstall-info-am:
  install-dataDATA: $(data_DATA)
  	@$(NORMAL_INSTALL)
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.15 2004/12/14 14:27:07 taca Exp $
  	done
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
-@@ -1050,7 +1051,7 @@ info-am:
+@@ -1067,7 +1068,7 @@ info-am:
  install-data-am: install-data-local install-dataDATA
  
  install-exec-am: install-binPROGRAMS install-libexecPROGRAMS \
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.15 2004/12/14 14:27:07 taca Exp $
  
  install-info: install-info-recursive
  
-@@ -1068,7 +1069,7 @@ mostlyclean-am: mostlyclean-compile most
+@@ -1085,7 +1086,7 @@ mostlyclean-am: mostlyclean-compile most
  
  uninstall-am: uninstall-binPROGRAMS uninstall-dataDATA uninstall-info-am \
  	uninstall-libexecPROGRAMS uninstall-local \
@@ -66,7 +66,7 @@ $NetBSD: patch-aa,v 1.15 2004/12/14 14:27:07 taca Exp $
  
  uninstall-info: uninstall-info-recursive
  
-@@ -1151,20 +1152,12 @@ repl_modules.c: repl_modules.sh Makefile
+@@ -1168,26 +1169,12 @@ repl_modules.c: repl_modules.sh Makefile
  auth_modules.c: auth_modules.sh Makefile
  	@$(SHELL) $(srcdir)/auth_modules.sh $(AUTH_MODULES) >auth_modules.c
  
@@ -82,6 +82,12 @@ $NetBSD: patch-aa,v 1.15 2004/12/14 14:27:07 taca Exp $
 -	else \
 -	        echo "$(INSTALL_DATA) squid.conf.default $(DESTDIR)$(DEFAULT_CONFIG_FILE)"; \
 -	        $(INSTALL_DATA) squid.conf.default $(DESTDIR)$(DEFAULT_CONFIG_FILE); \
+-	fi
+-	@if test -f $(DESTDIR)$(DEFAULT_CACHEMGR_CONFIG) ; then \
+-	        echo "$@ will not overwrite existing $(DESTDIR)$(DEFAULT_CACHEMGR_CONFIG)" ; \
+-	else \
+-	        echo "$(INSTALL_DATA) $(srcdir)/cachemgr.conf $(DESTDIR)$(DEFAULT_CACHEMGR_CONFIG)"; \
+-	        $(INSTALL_DATA) $(srcdir)/cachemgr.conf $(DESTDIR)$(DEFAULT_CACHEMGR_CONFIG); \
 -	fi
 -	$(mkinstalldirs) $(DESTDIR)$(DEFAULT_LOG_PREFIX)
 +install-data-local: install-dataDATA
