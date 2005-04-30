@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/04/30 12:23:42 drochner Exp $
+
+--- src/unix_interact.c.orig	2003-10-14 19:12:21.000000000 +0200
++++ src/unix_interact.c	2003-10-14 19:12:36.000000000 +0200
+@@ -261,7 +261,7 @@ do_make_raw(struct terminal_attributes *
+ 
+   /* Modify VMIN and VTIME, to save some bandwidth and make traffic
+    * analysis of interactive sessions a little harder. */
+-  res->ios.c_cc[VMIN] = 4;
++  res->ios.c_cc[VMIN] = 1;
+   /* Inter-character timer, in units of 0.1s */
+   res->ios.c_cc[VTIME] = 1;
+   
