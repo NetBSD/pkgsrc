@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/23 19:16:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/30 23:06:25 wiz Exp $
 bin/gopchop
 bin/gtkspu
 bin/mpegcat
@@ -12,4 +12,5 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gopchop.mo
 share/pixmaps/gopchop.png
 share/pixmaps/gopchop/about.xpm
 share/pixmaps/gopchop/error.xpm
+share/pixmaps/gopchop/menu_about.png
 @dirrm share/pixmaps/gopchop
