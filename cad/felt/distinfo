@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2005/02/23 14:59:24 agc Exp $
+$NetBSD: distinfo,v 1.11 2005/04/30 17:26:43 minskim Exp $
 
 SHA1 (felt-3.05.src.tar.gz) = da3e1ced626cc1c65a570d3e6e242252c039c28b
 RMD160 (felt-3.05.src.tar.gz) = 0d2a363a6ef09f3b3a0e2be186c4c051ac1ea19a
@@ -9,3 +9,4 @@ Size (felt-3.05.ps.gz) = 626985 bytes
 SHA1 (patch-aa) = fbf4c14dec40fc1e5aa5009625c6465bc8d763ab
 SHA1 (patch-ab) = 60feea9b0b0af2b71b2a8780227eccbd223b12c5
 SHA1 (patch-ac) = 4bbdbf6c4fd597cbdaa355c5da9d6a46d649b66e
+SHA1 (patch-ad) = b39e8556168d434dc156915e5f33b1eaf5745144

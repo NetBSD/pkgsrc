@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2005/04/30 17:26:43 minskim Exp $
+
+--- include/allocate.h.orig	Mon Feb 21 16:44:25 2000
++++ include/allocate.h
+@@ -25,7 +25,7 @@
+ 
+ # ifndef _ALLOCATE_H
+ # define _ALLOCATE_H
+-# include "malloc.h"
++# include <stdlib.h>
+ 
+ # define AllocNew(type) \
+ 	(type *) malloc (sizeof (type))
