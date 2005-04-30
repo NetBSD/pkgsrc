@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.185 2005/04/30 04:35:54 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.186 2005/04/30 15:07:57 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -273,7 +273,7 @@ USE_TOOLS+=	[ awk dirname echo grep pwd sed test true
 # These tools are used by the top-level make only in certain packages and
 # should eventually be moved into those particular package Makefiles.
 #
-USE_TOOLS+=	date expr find wc tr
+USE_TOOLS+=	date find tr
 
 _USE_NEW_TOOLS?=	no
 .if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
