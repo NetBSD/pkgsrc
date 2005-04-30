@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.3 2005/04/30 22:25:15 tron Exp $
+bin/opera
+man/man1/opera.1
