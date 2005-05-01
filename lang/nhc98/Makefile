@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2005/04/11 21:46:14 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/05/01 22:55:07 kristerw Exp $
 
-DISTNAME=		nhc98src-1.16
-PKGNAME=		nhc98-1.16
-PKGREVISION=		3
+DISTNAME=		nhc98src-1.18.tar.gz
+PKGNAME=		nhc98-1.18
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.cs.york.ac.uk/pub/haskell/nhc98/
+DISTFILES=		nhc98src-1.18.tar.gz \
+			nhc98-1.18-library-interfaces.tar.gz
 
 MAINTAINER=		kristerw@NetBSD.org
 HOMEPAGE=		http://www.cs.york.ac.uk/fp/nhc98/
@@ -21,9 +22,6 @@ INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX} \
 			+docs --docdir=${PREFIX}/share/doc/nhc98
-
-# Note that you can also build with ghc (Glasgow Haskell Compiler) or
-# hbc (Chalmers Haskell).
 
 USE_GNU_TOOLS+=		make
 BUILD_TARGET=		default
