@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:32 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/01 12:24:08 wiz Exp $
 
 DISTNAME=	gnome-1.4.2.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -32,7 +32,6 @@ DEPENDS+=	gnumeric>=0.75nb5:../../math/gnumeric0
 DEPENDS+=	gtk-->=1.2.10:../../x11/gtk--
 DEPENDS+=	gtk-engines>=0.12:../../x11/gtk-engines
 DEPENDS+=	gtop>=1.0.13nb2:../../sysutils/gtop
-DEPENDS+=	pan>=0.11.4nb2:../../news/pan
 DEPENDS+=	xchat-gnome>=1.8.10nb3:../../chat/xchat-gnome
 
 USE_X11=	yes
