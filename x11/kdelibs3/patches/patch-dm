@@ -1,0 +1,76 @@
+$NetBSD: patch-dm,v 1.1.2.1 2005/05/01 22:06:21 salo Exp $
+
+--- kimgio/ico.cpp.orig	2004-06-23 05:36:40.000000000 +1200
++++ kimgio/ico.cpp
+@@ -113,6 +113,8 @@ namespace
+             // closest size match precedes everything else
+             if ( std::abs( int( lhs.width - size ) ) <
+                  std::abs( int( rhs.width - size ) ) ) return true;
++            else if ( std::abs( int( lhs.width - size ) ) >
++                 std::abs( int( rhs.width - size ) ) ) return false;
+             else if ( colors == 0 )
+             {
+                 // high/true color requested
+@@ -144,17 +146,31 @@ namespace
+                header.biBitCount != 8 && header.biBitCount != 24 &&
+                header.biBitCount != 32 ) ) return false;
+ 
+-        unsigned colors = header.biBitCount >= 24 ?
+-                          0 : header.biClrUsed ?
+-                          header.biClrUsed : 1 << header.biBitCount;
++        unsigned paletteSize, paletteEntries;
++
++        if (header.biBitCount > 8)
++        {
++            paletteEntries = 0;
++            paletteSize    = 0;
++        }
++        else
++        {
++            paletteSize    = (1 << header.biBitCount);
++            paletteEntries = paletteSize;
++            if (header.biClrUsed && header.biClrUsed < paletteSize)
++                paletteEntries = header.biClrUsed;
++        }
++        
+         // Always create a 32-bit image to get the mask right
++        // Note: this is safe as rec.width, rec.height are bytes
+         icon.create( rec.width, rec.height, 32 );
+         if ( icon.isNull() ) return false;
+         icon.setAlphaBuffer( true );
+ 
+-        QMemArray< QRgb > colorTable( 1 << header.biBitCount );
++        QMemArray< QRgb > colorTable( paletteSize );
++        
+         colorTable.fill( QRgb( 0 ) );
+-        for ( unsigned i = 0; i < colors; ++i )
++        for ( unsigned i = 0; i < paletteEntries; ++i )
+         {
+             unsigned char rgb[ 4 ];
+             stream.readRawBytes( reinterpret_cast< char* >( &rgb ),
+@@ -163,6 +179,7 @@ namespace
+         }
+ 
+         unsigned bpl = ( rec.width * header.biBitCount + 31 ) / 32 * 4;
++        
+         unsigned char* buf = new unsigned char[ bpl ];
+         unsigned char** lines = icon.jumpTable();
+         for ( unsigned y = rec.height; !stream.atEnd() && y--; )
+@@ -265,11 +282,13 @@ extern "C" void kimgio_ico_read( QImageI
+         stream >> rec;
+         icons.push_back( rec );
+     }
+-    IconList::const_iterator selected =
+-        requestedIndex >= 0 ?
+-        std::min( icons.begin() + requestedIndex, icons.end() ) :
+-        std::min_element( icons.begin(), icons.end(),
++    IconList::const_iterator selected;
++    if (requestedIndex >= 0) {
++        selected = std::min( icons.begin() + requestedIndex, icons.end() );
++    } else {
++        selected = std::min_element( icons.begin(), icons.end(),
+                           LessDifference( requestedSize, requestedColors ) );
++    }
+     if ( stream.atEnd() || selected == icons.end() ||
+          offset + selected->offset > io->ioDevice()->size() )
+         return;

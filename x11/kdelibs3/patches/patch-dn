@@ -1,0 +1,551 @@
+$NetBSD: patch-dn,v 1.1.2.1 2005/05/01 22:06:21 salo Exp $
+
+--- kimgio/tga.cpp.orig	2004-08-06 07:24:17.000000000 +1200
++++ kimgio/tga.cpp
+@@ -1,5 +1,6 @@
+ /* This file is part of the KDE project
+    Copyright (C) 2003 Dominik Seichter <domseichter@web.de>
++   Copyright (C) 2004 Ignacio Castaño <castano@ludicon.com>
+ 
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the Lesser GNU General Public
+@@ -9,213 +10,347 @@
+ 
+ /* this code supports:
+  * reading:
+- *     run length encoded true color tga files
+- *     uncompressed true color tga files
++ *     uncompressed and run length encoded indexed, grey and color tga files.
++ *     image types 1, 2, 3, 9, 10 and 11.
++ *     only RGB color maps with no more than 256 colors.
++ *     pixel formats 8, 15, 24 and 32.
+  * writing:
+  *     uncompressed true color tga files
+  */
+ 
+ #include "tga.h"
+ 
++#include <assert.h>
++
+ #include <qimage.h>
+ #include <qdatastream.h>
+ 
+-/*
+- * uncompressed TGA magic header
+- */
+-unsigned char targaMagic[12] = { 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+-
+-/* 
+- * compressed TGA magic header
+- */
+-unsigned char compMagic[12] = { 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+-
+-/*
+- * the origin of the image (default is TOP_LEFT)
+- */
+-enum { TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT };
+-
+-/*
+- * Read one pixel and return its color 
+- */
+-int getData( QDataStream* s, int bpp )
+-{
+-    unsigned char* data = new unsigned char[bpp];
++#include <kdebug.h>
+ 
+-    for( int d = 0; d < bpp; d++ )
+-        *s >> data[d];
++typedef Q_UINT32 uint;
++typedef Q_UINT16 ushort;
++typedef Q_UINT8 uchar;
++
++namespace {	// Private.
++
++	// Header format of saved files.
++	uchar targaMagic[12] = { 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
++
++	enum TGAType {
++		TGA_TYPE_INDEXED		= 1,
++		TGA_TYPE_RGB			= 2,
++		TGA_TYPE_GREY			= 3,
++		TGA_TYPE_RLE_INDEXED	= 9,
++		TGA_TYPE_RLE_RGB		= 10,
++		TGA_TYPE_RLE_GREY		= 11
++	};
++
++#define TGA_INTERLEAVE_MASK	0xc0
++#define TGA_INTERLEAVE_NONE	0x00
++#define TGA_INTERLEAVE_2WAY	0x40
++#define TGA_INTERLEAVE_4WAY	0x80
++
++#define TGA_ORIGIN_MASK		0x30
++#define TGA_ORIGIN_LEFT		0x00
++#define TGA_ORIGIN_RIGHT	0x10
++#define TGA_ORIGIN_LOWER	0x00
++#define TGA_ORIGIN_UPPER	0x20
++
++	/** Tga Header. */
++	struct TgaHeader {
++		uchar id_length;
++		uchar colormap_type;
++		uchar image_type;
++		ushort colormap_index;
++		ushort colormap_length;
++		uchar colormap_size;
++		ushort x_origin;
++		ushort y_origin;
++		ushort width;
++		ushort height;
++		uchar pixel_size;
++		uchar flags;
++	
++		enum { SIZE = 18 }; // const static int SIZE = 18;
++	};
++
++	static QDataStream & operator>> ( QDataStream & s, TgaHeader & head )
++	{
++		s >> head.id_length;
++		s >> head.colormap_type;
++		s >> head.image_type;
++		s >> head.colormap_index;
++		s >> head.colormap_length;
++		s >> head.colormap_size;
++		s >> head.x_origin;
++		s >> head.y_origin;
++		s >> head.width;
++		s >> head.height;
++		s >> head.pixel_size;
++		s >> head.flags;
++		return s;
++	}
++
++	static bool IsSupported( const TgaHeader & head )
++	{
++		if( head.image_type != TGA_TYPE_INDEXED &&
++			head.image_type != TGA_TYPE_RGB &&
++			head.image_type != TGA_TYPE_GREY &&
++			head.image_type != TGA_TYPE_RLE_INDEXED &&
++			head.image_type != TGA_TYPE_RLE_RGB &&
++			head.image_type != TGA_TYPE_RLE_GREY )
++		{
++			return false;
++		}
++		if( head.image_type == TGA_TYPE_INDEXED ||
++			head.image_type == TGA_TYPE_RLE_INDEXED )
++		{
++			if( head.colormap_length > 256 || head.colormap_size != 24 )
++			{
++				return false;
++			}
++		}
++		if( head.width == 0 || head.height == 0 )
++		{
++			return false;
++		}
++		if( head.pixel_size != 8 && head.pixel_size != 16 &&
++			head.pixel_size != 24 && head.pixel_size != 32 )
++		{
++			return false;
++		}
++		return true;
++	}
++
++	struct Color555 {
++		ushort b : 5;
++		ushort g : 5;
++		ushort r : 5;
++	};
++	
++	static bool HasAlpha( const TgaHeader & tga )
++	{
++		return tga.pixel_size == 32;
++	}
++
++	struct TgaHeaderInfo {
++		bool rle;
++		bool pal;
++		bool rgb;
++		bool grey;
++		bool supported;
++	
++		TgaHeaderInfo( const TgaHeader & tga ) : rle(false), pal(false), rgb(false), grey(false), supported(true)
++		{
++			switch( tga.image_type ) {
++				case TGA_TYPE_RLE_INDEXED:
++					rle = true;
++					// no break is intended!
++				case TGA_TYPE_INDEXED:
++					if( tga.colormap_type!=1 || tga.colormap_size!=24 || tga.colormap_length>256 ) {
++						supported = false;
++					}
++					pal = true;
++					break;
++		
++				case TGA_TYPE_RLE_RGB:
++					rle = true;
++					// no break is intended!
++				case TGA_TYPE_RGB:
++					rgb = true;
++					break;
++		
++				case TGA_TYPE_RLE_GREY:
++					rle = true;
++					// no break is intended!
++				case TGA_TYPE_GREY:
++					grey = true;
++					break;
++		
++				default:
++					// Error, unknown image type.
++					supported = false;
++			}
++		}
++	};
++	
++
++
++	static bool LoadTGA( QDataStream & s, const TgaHeader & tga, QImage &img )
++	{
++		// Create image.
++		if( !img.create( tga.width, tga.height, 32 )) {
++			return false;
++		}
++
++		TgaHeaderInfo info(tga);
++		if( !info.supported ) {
++			// File not supported.
++  			kdDebug(399) << "This TGA file is not supported." << endl;
++			return false;
++		}
++		
++		// Enable alpha buffer for transparent images.
++		if( HasAlpha( tga ) ) {
++			img.setAlphaBuffer( true );
++		}
++
++		uint pixel_size = (tga.pixel_size/8);
++		uint size = tga.width * tga.height * pixel_size;
++
++		
++		// Read palette.
++		char palette[768];
++		if( info.pal ) {
++			// @todo Support palettes in other formats!
++			s.readRawBytes( palette, 3 * tga.colormap_length );
++		}
++
++		// Allocate image.
++		uchar * const image = new uchar[size];
++
++		if( info.rle ) {
++			// Decode image.
++			char * dst = (char *)image;
++			int num = size;
++	
++			while (num > 0) {
++				// Get packet header.
++				uchar c; 
++				s >> c;
++	
++				uint count = (c & 0x7f) + 1;
++				num -= count * pixel_size;
++	
++				if (c & 0x80) {
++					// RLE pixels.
++                                        assert(pixel_size <= 8);
++					char pixel[8];
++					s.readRawBytes( pixel, pixel_size );
++					do {
++						memcpy(dst, pixel, pixel_size);
++						dst += pixel_size;
++					} while (--count);
++				}
++				else {
++					// Raw pixels.
++					count *= pixel_size;
++					s.readRawBytes( dst, count );
++					dst += count;
++				}
++			}
++		}
++		else {
++			// Read raw image.
++			s.readRawBytes( (char *)image, size );
++		}
++
++		// Convert image to internal format.				
++		int y_start, y_step, y_end;
++		if( tga.flags & TGA_ORIGIN_UPPER ) {
++			y_start = 0;
++			y_step = 1;
++			y_end = tga.height - 1;
++		}
++		else {
++			y_start = tga.height - 1;
++			y_step = -1;
++			y_end = 0;
++		}
++
++		uchar * src = image;
++
++		for( int y = y_start; y != y_end; y += y_step ) {
++			QRgb * scanline = (QRgb *) img.scanLine( y );
++		
++			if( info.pal ) {
++				// Paletted.
++				for( int x = 0; x < tga.width; x++ ) {
++					uchar idx = *src++;
++					scanline[x] = qRgb( palette[3*idx+2], palette[3*idx+1], palette[3*idx+0] );
++				}
++			}
++			else if( info.grey ) {
++				// Greyscale.
++				for( int x = 0; x < tga.width; x++ ) {
++					scanline[x] = qRgb( *src, *src, *src );
++					src++;
++				}
++			}
++			else {
++				// True Color.
++				if( tga.pixel_size == 16 ) {
++					for( int x = 0; x < tga.width; x++ ) {
++						Color555 c = *reinterpret_cast<Color555 *>(src);
++						scanline[x] = qRgb( (c.r << 3) | (c.r >> 2), (c.g << 3) | (c.g >> 2), (c.b << 3) | (c.b >> 2) );
++						src += 2;
++					}
++				}
++				else if( tga.pixel_size == 24 ) {
++					for( int x = 0; x < tga.width; x++ ) {
++						scanline[x] = qRgb( src[2], src[1], src[0] );
++						src += 3;
++					}
++				}
++				else if( tga.pixel_size == 32 ) {
++					for( int x = 0; x < tga.width; x++ ) {
++						scanline[x] = qRgba( src[2], src[1], src[0], src[3] );
++						src += 4;
++					}
++				}
++			}
++		}
++
++		// Free image.
++		delete [] image;
++		
++		return true;
++	}
++	
++} // namespace
+ 
+-    int color = 0;
+-    if( bpp == 4 )
+-        color = qRgba( data[0], data[1], data[2], data[3] );
+-    else 
+-        color = qRgb( data[0], data[1], data[2] );
+-
+-    delete [] data;
+-    return color;
+-}
+ 
+-/*
+- * checks wether y is inside of the image
+- * when origin is of mode m
+- */
+-bool checky( int y, int h, int m ) 
++void kimgio_tga_read( QImageIO *io )
+ {
+-    if( m == TOP_LEFT ) 
+-	return (y < h);
+-    else if( m == BOTTOM_LEFT || m == BOTTOM_RIGHT )
+-	return ( y >= 0 );
+-
+-    return false;
+-}
++	//kdDebug(399) << "Loading TGA file!" << endl;
++	
++	QDataStream s( io->ioDevice() );
++	s.setByteOrder( QDataStream::LittleEndian );
++
++
++	// Read image header.
++	TgaHeader tga;
++	s >> tga;
++	s.device()->at( TgaHeader::SIZE + tga.id_length );
++
++	// Check image file format.
++	if( s.atEnd() ) {
++		kdDebug(399) << "This TGA file is not valid." << endl;
++		io->setImage( 0 );
++		io->setStatus( -1 );
++		return;
++	}
++
++	// Check supported file types.
++	if( !IsSupported(tga) ) {
++		kdDebug(399) << "This TGA file is not supported." << endl;
++		io->setImage( 0 );
++		io->setStatus( -1 );
++		return;
++	}
++				
++
++	QImage img;
++	bool result = LoadTGA(s, tga, img);
++		
++	if( result == false ) {
++  		kdDebug(399) << "Error loading TGA file." << endl;
++		io->setImage( 0 );
++		io->setStatus( -1 );
++		return;
++	}
+ 
+-  /*
+-   * checks wether x is inside of the image
+-   * when origin is of mode m
+-   */
+-  bool checkx( int x, int w, int m ) 
+-  {
+-      if( m == TOP_LEFT || m == BOTTOM_LEFT ) 
+-	  return (x < w);
+-      else if( m == BOTTOM_RIGHT )
+-	  return ( x >= 0 );
+-
+-      return false;
+-  }
+-
+-  void kimgio_tga_read( QImageIO *io )
+-  {
+-      unsigned char header[6];
+-      bool compressed = false;
+-
+-      QDataStream s( io->ioDevice() );
+-      s.setByteOrder( QDataStream::LittleEndian );
+-
+-      /*
+-       * check whether it is a targa file or not
+-       */
+-      for( int i = 0; i < 12; i++ ) {
+-	  unsigned char a;
+-	  s >> a;
+-	  if( a != targaMagic[i] && a!= compMagic[i]) {
+-	      io->setImage( 0 );
+-	      io->setStatus( -1 );            
+-	      return;
+-	  }
+-
+-	  // check if it is a compressed targa file
+-	  if( i == 2 && a == compMagic[i] )
+-	      compressed = true;
+-      }
+-
+-      for( int i = 0; i < 6; i++ )
+-	  s >> header[i];
+-      if( s.atEnd()) {
+-	  io->setImage( 0 );
+-	  io->setStatus( -1 );            
+-	  return;
+-      }
+-
+-      int width  = header[1] * 256 + header[0];
+-      int height = header[3] * 256 + header[2];
+-      int bpp = header[4];
+-      int bit = header[5];
+-      int bytesPerPixel = bpp / 8;
+-
+-    /* Bit values:
+-     * bit 0-3: number of alpha bits per fixel 
+-     * bit 4-5: origin of image:
+-     *  - 0 0 bottom left
+-     *  - 1 0 bottom right
+-     *  - 0 1 top left // that's what we write
+-     *  - 1 1 top right
+-     */
+-
+-    int mode;
+-    if( (bit | 0)  == 0 )
+-	mode = BOTTOM_LEFT;
+-    else if( (bit & 8) == 8 )
+-	/*
+-	 * should be BOTTOM_RIGHT,
+-	 * but GIMP writes them this way.
+-	 */
+-	mode = BOTTOM_LEFT;
+-    else if( (bit & 32) == 32 )
+-	mode = TOP_LEFT;
+-    else
+-	mode = TOP_LEFT;
+-
+-    if( bytesPerPixel != 3 &&  bytesPerPixel != 4 ) {	
+-	io->setImage( 0 );
+-	io->setStatus( -1 );
+-	return;
+-    }
+-
+-    QImage img;
+-    if( !img.create( width, height, (bpp == 24 ? 32 : bpp) )) {
+-        io->setImage( 0 );
+-        io->setStatus( -1 );
+-        return;
+-    }
+-
+-    /*
+-     * Enable alpha buffer for transparent images
+-     */
+-    if( img.depth() == 32 ) 
+-	img.setAlphaBuffer( true );
+-
+-
+-    int x = 0;
+-    int y = 0;
+-    int addy = 1;
+-    int addx = 1;
+-    if( mode == BOTTOM_LEFT || mode == BOTTOM_RIGHT ) {
+-	y = height - 1;
+-	addy = -1;
+-    }
+-
+-    if( mode == BOTTOM_RIGHT || mode == TOP_RIGHT ) {
+-	x = width - 1;
+-	addx = -1;
+-    }
+-
+-    /*
+-     * we have to restore the value of x after each loop
+-     */
+-    int oldx = x;
+-    if( !compressed ) {
+-	for( ; !s.atEnd() && checky( y, height, mode ); y += addy )
+-	    for( x = oldx; checkx( x, width, mode ); x += addx  ) {
+-		img.setPixel( x, y, getData( &s, bytesPerPixel ) );
+-	    }
+-    } else {
+-        unsigned char cur;
+-        while( !s.atEnd() && checky( y, height, mode ) ) {
+-            while( checkx( x, width, mode ) ) {
+-                s >> cur;
+-                if( (cur & 128) == 128 ) {
+-                    // found a RLE chunk
+-                    int length = (cur & 127) + 1;
+-                    int color = getData( &s, bytesPerPixel );
+-                    for( int i = 0; i < length; i++ ) {
+-                        img.setPixel( x, y, color );
+-                        x += addx;
+-                    }
+-                } else {
+-                    int length = (cur & 127) + 1;
+-                    for( int i = 0; i < length; i++ ) {
+-                        img.setPixel( x, y, getData( &s, bytesPerPixel ) );
+-                        x += addx;
+-                   }
+-                }
+-            }
+-            y += addy;
+-            x = oldx;
+-        }
+-    }
+ 
+-    img = img.swapRGB();
+-    
+     io->setImage( img );
+     io->setStatus( 0 );
+ }
