@@ -1,0 +1,39 @@
+$NetBSD: patch-di,v 1.1 2005/05/01 04:35:40 markd Exp $
+
+--- kimgio/pcx.h.orig	2003-01-04 13:48:25.000000000 +1300
++++ kimgio/pcx.h
+@@ -49,7 +49,7 @@ class Palette
+       rgb[ i ] = RGB( color );
+     }
+ 
+-    QRgb color( int i )
++    QRgb color( int i ) const
+     {
+       return qRgb( rgb[ i ].r, rgb[ i ].g, rgb[ i ].b );
+     }
+@@ -60,12 +60,11 @@ class Palette
+ class PCXHEADER
+ {
+   public:
+-    PCXHEADER()
+-    {
+-      reset();
+-    }
++    PCXHEADER();
+ 
+-    void reset();
++    inline int width() const { return ( XMax-XMin ) + 1; }
++    inline int height() const { return ( YMax-YMin ) + 1; }
++    inline bool isCompressed() const { return ( Encoding==1 ); }
+ 
+     Q_UINT8  Manufacturer;    // Constant Flag, 10 = ZSoft .pcx
+     Q_UINT8  Version;         // Version information·
+@@ -99,7 +98,7 @@ class PCXHEADER
+                               // found only in PB IV/IV Plus
+     Q_UINT16 VScreenSize;     // Vertical screen size in pixels. New field
+                               // found only in PB IV/IV Plus
+-};
++} KDE_PACKED;
+ 
+ #endif // PCX_H
+ 

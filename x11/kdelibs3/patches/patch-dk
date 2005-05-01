@@ -1,0 +1,55 @@
+$NetBSD: patch-dk,v 1.1 2005/05/01 04:35:40 markd Exp $
+
+--- kimgio/rgb.cpp.orig	2005-02-04 12:33:17.000000000 +1300
++++ kimgio/rgb.cpp
+@@ -87,7 +87,9 @@ bool SGIImage::getRow(uchar *dest)
+ 	int n, i;
+ 	if (!m_rle) {
+ 		for (i = 0; i < m_xsize; i++) {
+-			*dest++ = uchar(*m_pos);
++			if(m_pos >= m_data.end())
++				return false;
++			dest[i] = uchar(*m_pos);
+ 			m_pos += m_bpc;
+ 		}
+ 		return true;
+@@ -120,7 +122,7 @@ bool SGIImage::readData(QImage& img)
+ {
+ 	QRgb *c;
+ 	Q_UINT32 *start = m_starttab;
+-	QCString lguard(m_xsize);
++	QByteArray lguard(m_xsize);
+ 	uchar *line = (uchar *)lguard.data();
+ 	unsigned x, y;
+ 
+@@ -128,7 +130,7 @@ bool SGIImage::readData(QImage& img)
+ 		m_pos = m_data.begin();
+ 
+ 	for (y = 0; y < m_ysize; y++) {
+-		c = reinterpret_cast<QRgb *>(img.scanLine(m_ysize - y - 1));
++		c = (QRgb *) img.scanLine(m_ysize - y - 1);
+ 		if (m_rle)
+ 			m_pos = m_data.begin() + *start++;
+ 		if (!getRow(line))
+@@ -166,11 +168,11 @@ bool SGIImage::readData(QImage& img)
+ 	}
+ 
+ 	for (y = 0; y < m_ysize; y++) {
+-		c = reinterpret_cast<QRgb *>(img.scanLine(m_ysize - y - 1));
+ 		if (m_rle)
+ 			m_pos = m_data.begin() + *start++;
+ 		if (!getRow(line))
+ 			return false;
++		c = (QRgb*) img.scanLine(m_ysize - y - 1);
+ 		for (x = 0; x < m_xsize; x++, c++)
+ 			*c = qRgba(qRed(*c), qGreen(*c), qBlue(*c), line[x]);
+ 	}
+@@ -270,7 +272,7 @@ bool SGIImage::readImage(QImage& img)
+ 	// sanity ckeck
+ 	if (m_rle)
+ 		for (uint o = 0; o < m_numrows; o++)
+-			if (m_starttab[o] + m_lengthtab[o] > m_data.size()) {
++			if (m_starttab[o] + m_lengthtab[o] >= m_data.size()) {
+ 				kdDebug(399) << "image corrupt (sanity check failed)" << endl;
+ 				return false;
+ 			}
