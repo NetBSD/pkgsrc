@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2003/03/30 22:33:43 jmc Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/05/01 22:55:07 kristerw Exp $
+bin/cpphs
 bin/greencard-nhc98
 bin/harch
 bin/hi
@@ -12,11 +13,7 @@ include/nhc98/Array.hi
 include/nhc98/CPUTime.hi
 include/nhc98/Char.hi
 include/nhc98/Complex.hi
-include/nhc98/DPrelude.hi
-include/nhc98/DbgIface.hi
-include/nhc98/DbgStub.hi
 include/nhc98/Directory.hi
-include/nhc98/Haskell.hi
 include/nhc98/HatBuiltin.hi
 include/nhc98/HsFFI.h
 include/nhc98/IO.hi
@@ -50,72 +47,6 @@ include/nhc98/Ratio.hi
 include/nhc98/System.hi
 include/nhc98/Time.hi
 include/nhc98/Warning.hi
-include/nhc98/base/Control/Arrow.hi
-include/nhc98/base/Control/Monad.hi
-include/nhc98/base/Control/Monad/Fix.hi
-include/nhc98/base/Control/Monad/Trans.hi
-include/nhc98/base/Data/Array.hi
-include/nhc98/base/Data/Bits.hi
-include/nhc98/base/Data/Bool.hi
-include/nhc98/base/Data/Char.hi
-include/nhc98/base/Data/Complex.hi
-include/nhc98/base/Data/Dynamic.hi
-include/nhc98/base/Data/Either.hi
-include/nhc98/base/Data/FiniteMap.hi
-include/nhc98/base/Data/IORef.hi
-include/nhc98/base/Data/Int.hi
-include/nhc98/base/Data/Ix.hi
-include/nhc98/base/Data/List.hi
-include/nhc98/base/Data/Maybe.hi
-include/nhc98/base/Data/PackedString.hi
-include/nhc98/base/Data/Ratio.hi
-include/nhc98/base/Data/Set.hi
-include/nhc98/base/Data/Tuple.hi
-include/nhc98/base/Data/Word.hi
-include/nhc98/base/Debug/Trace.hi
-include/nhc98/base/Foreign.hi
-include/nhc98/base/Foreign/C.hi
-include/nhc98/base/Foreign/C/Error.hi
-include/nhc98/base/Foreign/C/String.hi
-include/nhc98/base/Foreign/C/Types.hi
-include/nhc98/base/Foreign/C/TypesISO.hi
-include/nhc98/base/Foreign/ForeignPtr.hi
-include/nhc98/base/Foreign/Marshal.hi
-include/nhc98/base/Foreign/Marshal/Alloc.hi
-include/nhc98/base/Foreign/Marshal/Array.hi
-include/nhc98/base/Foreign/Marshal/Error.hi
-include/nhc98/base/Foreign/Marshal/Pool.hi
-include/nhc98/base/Foreign/Marshal/Utils.hi
-include/nhc98/base/Foreign/Ptr.hi
-include/nhc98/base/Foreign/StablePtr.hi
-include/nhc98/base/Foreign/Storable.hi
-include/nhc98/base/System/Cmd.hi
-include/nhc98/base/System/Console/GetOpt.hi
-include/nhc98/base/System/Directory.hi
-include/nhc98/base/System/Environment.hi
-include/nhc98/base/System/Exit.hi
-include/nhc98/base/System/IO.hi
-include/nhc98/base/System/IO/Error.hi
-include/nhc98/base/System/IO/Unsafe.hi
-include/nhc98/base/System/Info.hi
-include/nhc98/base/System/Locale.hi
-include/nhc98/base/System/Mem.hi
-include/nhc98/base/System/Random.hi
-include/nhc98/base/Text/Html.hi
-include/nhc98/base/Text/Html/BlockTable.hi
-include/nhc98/base/Text/ParserCombinators/Parsec.hi
-include/nhc98/base/Text/ParserCombinators/Parsec/Char.hi
-include/nhc98/base/Text/ParserCombinators/Parsec/Combinator.hi
-include/nhc98/base/Text/ParserCombinators/Parsec/Error.hi
-include/nhc98/base/Text/ParserCombinators/Parsec/Expr.hi
-include/nhc98/base/Text/ParserCombinators/Parsec/Perm.hi
-include/nhc98/base/Text/ParserCombinators/Parsec/Pos.hi
-include/nhc98/base/Text/ParserCombinators/Parsec/Prim.hi
-include/nhc98/base/Text/PrettyPrint.hi
-include/nhc98/base/Text/PrettyPrint/HughesPJ.hi
-include/nhc98/base/Text/Read.hi
-include/nhc98/base/Text/Show.hi
-include/nhc98/base/Text/Show/Functions.hi
 include/nhc98/bytecode.h
 include/nhc98/bytecode_o.h
 include/nhc98/cinterface.h
@@ -123,7 +54,6 @@ include/nhc98/codemacros.h
 include/nhc98/flt.h
 include/nhc98/greencard.h
 include/nhc98/haskell2c.h
-include/nhc98/localmalloc.h
 include/nhc98/macros_o.h
 include/nhc98/mk.h
 include/nhc98/mkByHand.h
@@ -132,76 +62,248 @@ include/nhc98/mutlib.h
 include/nhc98/newbytecode.h
 include/nhc98/newmacros.h
 include/nhc98/node.h
+include/nhc98/packages/Cabal/Distribution/Compat/Directory.hi
+include/nhc98/packages/Cabal/Distribution/Compat/Exception.hi
+include/nhc98/packages/Cabal/Distribution/Compat/FilePath.hi
+include/nhc98/packages/Cabal/Distribution/Compat/RawSystem.hi
+include/nhc98/packages/Cabal/Distribution/Compat/ReadP.hi
+include/nhc98/packages/Cabal/Distribution/Extension.hi
+include/nhc98/packages/Cabal/Distribution/GetOpt.hi
+include/nhc98/packages/Cabal/Distribution/InstalledPackageInfo.hi
+include/nhc98/packages/Cabal/Distribution/License.hi
+include/nhc98/packages/Cabal/Distribution/Make.hi
+include/nhc98/packages/Cabal/Distribution/Package.hi
+include/nhc98/packages/Cabal/Distribution/PackageDescription.hi
+include/nhc98/packages/Cabal/Distribution/ParseUtils.hi
+include/nhc98/packages/Cabal/Distribution/PreProcess.hi
+include/nhc98/packages/Cabal/Distribution/PreProcess/Unlit.hi
+include/nhc98/packages/Cabal/Distribution/Setup.hi
+include/nhc98/packages/Cabal/Distribution/Simple.hi
+include/nhc98/packages/Cabal/Distribution/Simple/Build.hi
+include/nhc98/packages/Cabal/Distribution/Simple/Configure.hi
+include/nhc98/packages/Cabal/Distribution/Simple/GHCPackageConfig.hi
+include/nhc98/packages/Cabal/Distribution/Simple/Install.hi
+include/nhc98/packages/Cabal/Distribution/Simple/LocalBuildInfo.hi
+include/nhc98/packages/Cabal/Distribution/Simple/Register.hi
+include/nhc98/packages/Cabal/Distribution/Simple/SrcDist.hi
+include/nhc98/packages/Cabal/Distribution/Simple/Utils.hi
+include/nhc98/packages/Cabal/Distribution/Version.hi
+include/nhc98/packages/HUnit/Test/HUnit.hi
+include/nhc98/packages/HUnit/Test/HUnit/Base.hi
+include/nhc98/packages/HUnit/Test/HUnit/Lang.hi
+include/nhc98/packages/HUnit/Test/HUnit/Terminal.hi
+include/nhc98/packages/HUnit/Test/HUnit/Text.hi
+include/nhc98/packages/HaXml/Text/ParserCombinators/HuttonMeijerWallace.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Combinators.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Escape.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Haskell2Xml.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Html/Generate.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Html/Parse.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Html/Pretty.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Lex.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/OneOfN.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Parse.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Pretty.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Types.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Validate.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Verbatim.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Wrappers.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Xml2Haskell.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Xtract/Combinators.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Xtract/Lex.hi
+include/nhc98/packages/HaXml/Text/XML/HaXml/Xtract/Parse.hi
+include/nhc98/packages/QuickCheck/Debug/QuickCheck.hi
+include/nhc98/packages/QuickCheck/Debug/QuickCheck/Poly.hi
+include/nhc98/packages/QuickCheck/Debug/QuickCheck/Utils.hi
+include/nhc98/packages/QuickCheck/Test/QuickCheck.hi
+include/nhc98/packages/QuickCheck/Test/QuickCheck/Poly.hi
+include/nhc98/packages/QuickCheck/Test/QuickCheck/Utils.hi
+include/nhc98/packages/base/Control/Arrow.hi
+include/nhc98/packages/base/Control/Monad.hi
+include/nhc98/packages/base/Control/Monad/Fix.hi
+include/nhc98/packages/base/Data/Array.hi
+include/nhc98/packages/base/Data/Bits.hi
+include/nhc98/packages/base/Data/Bool.hi
+include/nhc98/packages/base/Data/Char.hi
+include/nhc98/packages/base/Data/Complex.hi
+include/nhc98/packages/base/Data/Dynamic.hi
+include/nhc98/packages/base/Data/Either.hi
+include/nhc98/packages/base/Data/Eq.hi
+include/nhc98/packages/base/Data/FiniteMap.hi
+include/nhc98/packages/base/Data/FunctorM.hi
+include/nhc98/packages/base/Data/HashTable.hi
+include/nhc98/packages/base/Data/IORef.hi
+include/nhc98/packages/base/Data/Int.hi
+include/nhc98/packages/base/Data/IntMap.hi
+include/nhc98/packages/base/Data/IntSet.hi
+include/nhc98/packages/base/Data/Ix.hi
+include/nhc98/packages/base/Data/List.hi
+include/nhc98/packages/base/Data/Map.hi
+include/nhc98/packages/base/Data/Maybe.hi
+include/nhc98/packages/base/Data/Monoid.hi
+include/nhc98/packages/base/Data/Ord.hi
+include/nhc98/packages/base/Data/PackedString.hi
+include/nhc98/packages/base/Data/Queue.hi
+include/nhc98/packages/base/Data/Ratio.hi
+include/nhc98/packages/base/Data/Set.hi
+include/nhc98/packages/base/Data/Tree.hi
+include/nhc98/packages/base/Data/Tuple.hi
+include/nhc98/packages/base/Data/Typeable.hi
+include/nhc98/packages/base/Data/Version.hi
+include/nhc98/packages/base/Data/Word.hi
+include/nhc98/packages/base/Debug/Trace.hi
+include/nhc98/packages/base/Foreign.hi
+include/nhc98/packages/base/Foreign/C.hi
+include/nhc98/packages/base/Foreign/C/Error.hi
+include/nhc98/packages/base/Foreign/C/String.hi
+include/nhc98/packages/base/Foreign/C/Types.hi
+include/nhc98/packages/base/Foreign/ForeignPtr.hi
+include/nhc98/packages/base/Foreign/Marshal.hi
+include/nhc98/packages/base/Foreign/Marshal/Alloc.hi
+include/nhc98/packages/base/Foreign/Marshal/Array.hi
+include/nhc98/packages/base/Foreign/Marshal/Error.hi
+include/nhc98/packages/base/Foreign/Marshal/Pool.hi
+include/nhc98/packages/base/Foreign/Marshal/Utils.hi
+include/nhc98/packages/base/Foreign/Ptr.hi
+include/nhc98/packages/base/Foreign/StablePtr.hi
+include/nhc98/packages/base/Foreign/Storable.hi
+include/nhc98/packages/base/NHC/SizedTypes.hi
+include/nhc98/packages/base/System/CPUTime.hi
+include/nhc98/packages/base/System/Cmd.hi
+include/nhc98/packages/base/System/Console/GetOpt.hi
+include/nhc98/packages/base/System/Directory.hi
+include/nhc98/packages/base/System/Directory/Internals.hi
+include/nhc98/packages/base/System/Environment.hi
+include/nhc98/packages/base/System/Exit.hi
+include/nhc98/packages/base/System/IO.hi
+include/nhc98/packages/base/System/IO/Error.hi
+include/nhc98/packages/base/System/IO/Unsafe.hi
+include/nhc98/packages/base/System/Info.hi
+include/nhc98/packages/base/System/Locale.hi
+include/nhc98/packages/base/System/Mem.hi
+include/nhc98/packages/base/System/Random.hi
+include/nhc98/packages/base/System/Time.hi
+include/nhc98/packages/base/Text/Html.hi
+include/nhc98/packages/base/Text/Html/BlockTable.hi
+include/nhc98/packages/base/Text/ParserCombinators/ReadP.hi
+include/nhc98/packages/base/Text/PrettyPrint.hi
+include/nhc98/packages/base/Text/PrettyPrint/HughesPJ.hi
+include/nhc98/packages/base/Text/Printf.hi
+include/nhc98/packages/base/Text/Read.hi
+include/nhc98/packages/base/Text/Regex.hi
+include/nhc98/packages/base/Text/Regex/Posix.hi
+include/nhc98/packages/base/Text/Show.hi
+include/nhc98/packages/base/Text/Show/Functions.hi
+include/nhc98/packages/haskell-src/Language/Haskell/Lexer.hi
+include/nhc98/packages/haskell-src/Language/Haskell/ParseMonad.hi
+include/nhc98/packages/haskell-src/Language/Haskell/ParseUtils.hi
+include/nhc98/packages/haskell-src/Language/Haskell/Parser.hi
+include/nhc98/packages/haskell-src/Language/Haskell/Pretty.hi
+include/nhc98/packages/haskell-src/Language/Haskell/Syntax.hi
+include/nhc98/packages/parsec/Text/ParserCombinators/Parsec.hi
+include/nhc98/packages/parsec/Text/ParserCombinators/Parsec/Char.hi
+include/nhc98/packages/parsec/Text/ParserCombinators/Parsec/Combinator.hi
+include/nhc98/packages/parsec/Text/ParserCombinators/Parsec/Error.hi
+include/nhc98/packages/parsec/Text/ParserCombinators/Parsec/Expr.hi
+include/nhc98/packages/parsec/Text/ParserCombinators/Parsec/Perm.hi
+include/nhc98/packages/parsec/Text/ParserCombinators/Parsec/Pos.hi
+include/nhc98/packages/parsec/Text/ParserCombinators/Parsec/Prim.hi
 include/nhc98/runtime.h
 include/nhc98/stableptr.h
 include/nhc98/twopass.h
-lib/hmake/${HARCH}/HInteractive
-lib/hmake/${HARCH}/MkConfig
-lib/hmake/${HARCH}/MkProg
-lib/hmake/${HARCH}/Older
-lib/hmake/${HARCH}/hmakerc
+lib/hmake/ix86-${OPSYS}/HInteractive
+lib/hmake/ix86-${OPSYS}/MkConfig
+lib/hmake/ix86-${OPSYS}/MkProg
+lib/hmake/ix86-${OPSYS}/Older
+lib/hmake/ix86-${OPSYS}/hmakerc
 lib/nhc98/hood.jar
-lib/nhc98/${HARCH}/Array.z.a
-lib/nhc98/${HARCH}/BinArray.z.a
-lib/nhc98/${HARCH}/Binary.z.a
-lib/nhc98/${HARCH}/Bit.z.a
-lib/nhc98/${HARCH}/CPUTime.z.a
-lib/nhc98/${HARCH}/CString.z.a
-lib/nhc98/${HARCH}/Char.z.a
-lib/nhc98/${HARCH}/Complex.z.a
-lib/nhc98/${HARCH}/DErrNo.z.a
-lib/nhc98/${HARCH}/DbgIface.z.a
-lib/nhc98/${HARCH}/Directory.z.a
-lib/nhc98/${HARCH}/Driver.z.a
-lib/nhc98/${HARCH}/FFI.z.a
-lib/nhc98/${HARCH}/GreenCard.z.a
-lib/nhc98/${HARCH}/Haskell.z.a
-lib/nhc98/${HARCH}/IO.z.a
-lib/nhc98/${HARCH}/IOExtras.z.a
-lib/nhc98/${HARCH}/Ix.z.a
-lib/nhc98/${HARCH}/List.z.a
-lib/nhc98/${HARCH}/Locale.z.a
-lib/nhc98/${HARCH}/Maybe.z.a
-lib/nhc98/${HARCH}/Monad.z.a
-lib/nhc98/${HARCH}/NonStdEval.z.a
-lib/nhc98/${HARCH}/NonStdGetPID.z.a
-lib/nhc98/${HARCH}/NonStdProfile.z.a
-lib/nhc98/${HARCH}/NonStdTrace.z.a
-lib/nhc98/${HARCH}/NonStdUnsafeCoerce.z.a
-lib/nhc98/${HARCH}/Numeric.z.a
-lib/nhc98/${HARCH}/Observe.z.a
-lib/nhc98/${HARCH}/PackedString.z.a
-lib/nhc98/${HARCH}/Prelude.a
-lib/nhc98/${HARCH}/Prelude.p.a
-lib/nhc98/${HARCH}/PreludeAll.z.a
-lib/nhc98/${HARCH}/Random.z.a
-lib/nhc98/${HARCH}/Ratio.z.a
-lib/nhc98/${HARCH}/Runtime.a
-lib/nhc98/${HARCH}/Runtime.p.a
-lib/nhc98/${HARCH}/Runtime.z.a
-lib/nhc98/${HARCH}/System.z.a
-lib/nhc98/${HARCH}/Time.z.a
-lib/nhc98/${HARCH}/UnboxedArray.z.a
-lib/nhc98/${HARCH}/Warning.z.a
-lib/nhc98/${HARCH}/config
-lib/nhc98/${HARCH}/greencard-nhc98
-lib/nhc98/${HARCH}/hmake-PRAGMA
-lib/nhc98/${HARCH}/hp2graph
-lib/nhc98/${HARCH}/libHSbase.a
-lib/nhc98/${HARCH}/main.o
-lib/nhc98/${HARCH}/main.p.o
-lib/nhc98/${HARCH}/main.z.o
-lib/nhc98/${HARCH}/mutator.o
-lib/nhc98/${HARCH}/mutator.p.o
-lib/nhc98/${HARCH}/mutator.z.o
-lib/nhc98/${HARCH}/mutlib.o
-lib/nhc98/${HARCH}/mutlib.p.o
-lib/nhc98/${HARCH}/mutlib.z.o
-lib/nhc98/${HARCH}/nhc98comp
-lib/nhc98/${HARCH}/nhc98heap
-lib/nhc98/${HARCH}/tprofprel1.z.o
-lib/nhc98/${HARCH}/tprofprel2.z.o
-lib/nhc98/${HARCH}/tprofprel3.z.o
+lib/nhc98/ix86-${OPSYS}/Array.z.a
+lib/nhc98/ix86-${OPSYS}/BinArray.z.a
+lib/nhc98/ix86-${OPSYS}/Binary.z.a
+lib/nhc98/ix86-${OPSYS}/Bit.z.a
+lib/nhc98/ix86-${OPSYS}/CPUTime.z.a
+lib/nhc98/ix86-${OPSYS}/CString.z.a
+lib/nhc98/ix86-${OPSYS}/Char.z.a
+lib/nhc98/ix86-${OPSYS}/Complex.z.a
+lib/nhc98/ix86-${OPSYS}/DErrNo.z.a
+lib/nhc98/ix86-${OPSYS}/Directory.z.a
+lib/nhc98/ix86-${OPSYS}/Driver.z.a
+lib/nhc98/ix86-${OPSYS}/FFI.z.a
+lib/nhc98/ix86-${OPSYS}/GreenCard.z.a
+lib/nhc98/ix86-${OPSYS}/IO.z.a
+lib/nhc98/ix86-${OPSYS}/IOExtras.z.a
+lib/nhc98/ix86-${OPSYS}/Ix.z.a
+lib/nhc98/ix86-${OPSYS}/List.z.a
+lib/nhc98/ix86-${OPSYS}/Locale.z.a
+lib/nhc98/ix86-${OPSYS}/Maybe.z.a
+lib/nhc98/ix86-${OPSYS}/Monad.z.a
+lib/nhc98/ix86-${OPSYS}/NonStdEval.z.a
+lib/nhc98/ix86-${OPSYS}/NonStdGetPID.z.a
+lib/nhc98/ix86-${OPSYS}/NonStdProfile.z.a
+lib/nhc98/ix86-${OPSYS}/NonStdTrace.z.a
+lib/nhc98/ix86-${OPSYS}/NonStdUnsafeCoerce.z.a
+lib/nhc98/ix86-${OPSYS}/Numeric.z.a
+lib/nhc98/ix86-${OPSYS}/Observe.z.a
+lib/nhc98/ix86-${OPSYS}/PackedString.z.a
+lib/nhc98/ix86-${OPSYS}/Prelude.a
+lib/nhc98/ix86-${OPSYS}/Prelude.p.a
+lib/nhc98/ix86-${OPSYS}/PreludeAll.z.a
+lib/nhc98/ix86-${OPSYS}/Random.z.a
+lib/nhc98/ix86-${OPSYS}/Ratio.z.a
+lib/nhc98/ix86-${OPSYS}/Runtime.a
+lib/nhc98/ix86-${OPSYS}/Runtime.p.a
+lib/nhc98/ix86-${OPSYS}/Runtime.z.a
+lib/nhc98/ix86-${OPSYS}/System.z.a
+lib/nhc98/ix86-${OPSYS}/Time.z.a
+lib/nhc98/ix86-${OPSYS}/UnboxedArray.z.a
+lib/nhc98/ix86-${OPSYS}/Warning.z.a
+lib/nhc98/ix86-${OPSYS}/config
+lib/nhc98/ix86-${OPSYS}/cpphs
+lib/nhc98/ix86-${OPSYS}/greencard-nhc98
+lib/nhc98/ix86-${OPSYS}/hmake-PRAGMA
+lib/nhc98/ix86-${OPSYS}/hp2graph
+lib/nhc98/ix86-${OPSYS}/hsc2hs
+lib/nhc98/ix86-${OPSYS}/libHSCabal.a
+lib/nhc98/ix86-${OPSYS}/libHSCabal.p.a
+lib/nhc98/ix86-${OPSYS}/libHSCabal.z.a
+lib/nhc98/ix86-${OPSYS}/libHSHUnit.a
+lib/nhc98/ix86-${OPSYS}/libHSHUnit.p.a
+lib/nhc98/ix86-${OPSYS}/libHSHUnit.z.a
+lib/nhc98/ix86-${OPSYS}/libHSHaXml.a
+lib/nhc98/ix86-${OPSYS}/libHSHaXml.p.a
+lib/nhc98/ix86-${OPSYS}/libHSHaXml.z.a
+lib/nhc98/ix86-${OPSYS}/libHSQuickCheck.a
+lib/nhc98/ix86-${OPSYS}/libHSQuickCheck.p.a
+lib/nhc98/ix86-${OPSYS}/libHSQuickCheck.z.a
+lib/nhc98/ix86-${OPSYS}/libHSbase.a
+lib/nhc98/ix86-${OPSYS}/libHSbase.p.a
+lib/nhc98/ix86-${OPSYS}/libHSbase.z.a
+lib/nhc98/ix86-${OPSYS}/libHShaskell-src.a
+lib/nhc98/ix86-${OPSYS}/libHShaskell-src.p.a
+lib/nhc98/ix86-${OPSYS}/libHShaskell-src.z.a
+lib/nhc98/ix86-${OPSYS}/libHSparsec.a
+lib/nhc98/ix86-${OPSYS}/libHSparsec.p.a
+lib/nhc98/ix86-${OPSYS}/libHSparsec.z.a
+lib/nhc98/ix86-${OPSYS}/main.o
+lib/nhc98/ix86-${OPSYS}/main.p.o
+lib/nhc98/ix86-${OPSYS}/main.z.o
+lib/nhc98/ix86-${OPSYS}/mutator.o
+lib/nhc98/ix86-${OPSYS}/mutator.p.o
+lib/nhc98/ix86-${OPSYS}/mutator.z.o
+lib/nhc98/ix86-${OPSYS}/mutlib.o
+lib/nhc98/ix86-${OPSYS}/mutlib.p.o
+lib/nhc98/ix86-${OPSYS}/mutlib.z.o
+lib/nhc98/ix86-${OPSYS}/nhc98comp
+lib/nhc98/ix86-${OPSYS}/nhc98heap
+lib/nhc98/ix86-${OPSYS}/tprofprel1.z.o
+lib/nhc98/ix86-${OPSYS}/tprofprel2.z.o
+lib/nhc98/ix86-${OPSYS}/tprofprel3.z.o
+man/man1/harch.1
+man/man1/hi.1
+man/man1/hmake.1
+man/man1/hp2graph.1
+man/man1/nhc98.1
 share/doc/nhc98/98.html
 share/doc/nhc98/CcallingHaskell.html
 share/doc/nhc98/bugs.html
@@ -262,8 +364,11 @@ share/doc/nhc98/hmake/index.html
 share/doc/nhc98/hmake/interactive.html
 share/doc/nhc98/hmake/lineedit.html
 share/doc/nhc98/implementation-notes/build-system
+share/doc/nhc98/implementation-notes/bytecode
+share/doc/nhc98/implementation-notes/gc
 share/doc/nhc98/implementation-notes/index.html
 share/doc/nhc98/implementation-notes/intro
+share/doc/nhc98/implementation-notes/memorylayout
 share/doc/nhc98/implementation-notes/phases
 share/doc/nhc98/implementation-notes/space-efficient
 share/doc/nhc98/index.html
@@ -284,6 +389,8 @@ share/doc/nhc98/maillist.html
 share/doc/nhc98/new_tiny.gif
 share/doc/nhc98/nhc13.gif
 share/doc/nhc98/nhc98.gif
+share/doc/nhc98/oldlicence.html
+share/doc/nhc98/papers.html
 share/doc/nhc98/runtime-options.html
 share/doc/nhc98/status.html
 share/doc/nhc98/todo.html
@@ -291,36 +398,62 @@ share/doc/nhc98/tprof.html
 share/doc/nhc98/tracer.html
 share/doc/nhc98/windows.html
 share/doc/nhc98/york-release.html
-man/man1/harch.1
-man/man1/hmake.1
-man/man1/hp2graph.1
-man/man1/nhc98.1
 @dirrm share/doc/nhc98/bugs
 @dirrm share/doc/nhc98/examples
 @dirrm share/doc/nhc98/hmake
 @dirrm share/doc/nhc98/implementation-notes
 @dirrm share/doc/nhc98/libs
 @dirrm share/doc/nhc98
-@dirrm lib/nhc98/${HARCH}
+@dirrm lib/nhc98/ix86-${OPSYS}
 @dirrm lib/nhc98
-@dirrm lib/hmake/${HARCH}
+@dirrm lib/hmake/ix86-${OPSYS}
 @dirrm lib/hmake
-@dirrm include/nhc98/base/Text/Show
-@dirrm include/nhc98/base/Text/PrettyPrint
-@dirrm include/nhc98/base/Text/ParserCombinators/Parsec
-@dirrm include/nhc98/base/Text/ParserCombinators
-@dirrm include/nhc98/base/Text/Html
-@dirrm include/nhc98/base/Text
-@dirrm include/nhc98/base/System/IO
-@dirrm include/nhc98/base/System/Console
-@dirrm include/nhc98/base/System
-@dirrm include/nhc98/base/Foreign/Marshal
-@dirrm include/nhc98/base/Foreign/C
-@dirrm include/nhc98/base/Foreign
-@dirrm include/nhc98/base/Debug
-@dirrm include/nhc98/base/Data
-@dirrm include/nhc98/base/Control/Monad
-@dirrm include/nhc98/base/Control
-@dirrm include/nhc98/base
+@dirrm include/nhc98/packages/parsec/Text/ParserCombinators/Parsec
+@dirrm include/nhc98/packages/parsec/Text/ParserCombinators
+@dirrm include/nhc98/packages/parsec/Text
+@dirrm include/nhc98/packages/parsec
+@dirrm include/nhc98/packages/haskell-src/Language/Haskell
+@dirrm include/nhc98/packages/haskell-src/Language
+@dirrm include/nhc98/packages/haskell-src
+@dirrm include/nhc98/packages/base/Text/Show
+@dirrm include/nhc98/packages/base/Text/Regex
+@dirrm include/nhc98/packages/base/Text/PrettyPrint
+@dirrm include/nhc98/packages/base/Text/ParserCombinators
+@dirrm include/nhc98/packages/base/Text/Html
+@dirrm include/nhc98/packages/base/Text
+@dirrm include/nhc98/packages/base/System/IO
+@dirrm include/nhc98/packages/base/System/Directory
+@dirrm include/nhc98/packages/base/System/Console
+@dirrm include/nhc98/packages/base/System
+@dirrm include/nhc98/packages/base/NHC
+@dirrm include/nhc98/packages/base/Foreign/Marshal
+@dirrm include/nhc98/packages/base/Foreign/C
+@dirrm include/nhc98/packages/base/Foreign
+@dirrm include/nhc98/packages/base/Debug
+@dirrm include/nhc98/packages/base/Data
+@dirrm include/nhc98/packages/base/Control/Monad
+@dirrm include/nhc98/packages/base/Control
+@dirrm include/nhc98/packages/base
+@dirrm include/nhc98/packages/QuickCheck/Test/QuickCheck
+@dirrm include/nhc98/packages/QuickCheck/Test
+@dirrm include/nhc98/packages/QuickCheck/Debug/QuickCheck
+@dirrm include/nhc98/packages/QuickCheck/Debug
+@dirrm include/nhc98/packages/QuickCheck
+@dirrm include/nhc98/packages/HaXml/Text/XML/HaXml/Xtract
+@dirrm include/nhc98/packages/HaXml/Text/XML/HaXml/Html
+@dirrm include/nhc98/packages/HaXml/Text/XML/HaXml
+@dirrm include/nhc98/packages/HaXml/Text/XML
+@dirrm include/nhc98/packages/HaXml/Text/ParserCombinators
+@dirrm include/nhc98/packages/HaXml/Text
+@dirrm include/nhc98/packages/HaXml
+@dirrm include/nhc98/packages/HUnit/Test/HUnit
+@dirrm include/nhc98/packages/HUnit/Test
+@dirrm include/nhc98/packages/HUnit
+@dirrm include/nhc98/packages/Cabal/Distribution/Simple
+@dirrm include/nhc98/packages/Cabal/Distribution/PreProcess
+@dirrm include/nhc98/packages/Cabal/Distribution/Compat
+@dirrm include/nhc98/packages/Cabal/Distribution
+@dirrm include/nhc98/packages/Cabal
+@dirrm include/nhc98/packages
 @dirrm include/nhc98/NHC
 @dirrm include/nhc98
