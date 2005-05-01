@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3453 2005/05/01 11:56:26 wiz Exp $
+$NetBSD: TODO,v 1.3454 2005/05/01 17:37:30 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -539,7 +539,6 @@ Suggested package updates
 	o idesk-0.7.0
 	o ifile-1.3.5
 	o ijs-0.35
-	o imp-3.2.8
 	o imp4-4.0.3
 	o inkscape-0.41
 	o inn-2.4.2
