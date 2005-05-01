@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.140 2005/04/29 22:22:09 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.141 2005/05/01 11:41:17 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -273,7 +273,6 @@ my (%checks) = (
 	"newpkg"	=> [\$opt_check_newpkg, "special checks for uncommitted packages"],
 );
 
-my $opt_warn_patches	= true;
 my $opt_warn_exec	= true;
 my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
@@ -281,11 +280,10 @@ my $opt_warn_paren	= true;
 my $opt_warn_workdir	= true;
 my $opt_warn_types	= true;
 my (%warnings) = (
-	"patches"	=> [\$opt_warn_patches, "warn on non-optimal patch files"],
 	"exec"		=> [\$opt_warn_exec, "warn if source files are executable"],
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
-	"paren"		=> [\$opt_warn_paren, "warn about usa of \$(VAR) instead of \${VAR} in Makefiles"],
+	"paren"		=> [\$opt_warn_paren, "warn about use of \$(VAR) instead of \${VAR} in Makefiles"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
 	"workdir"	=> [\$opt_warn_workdir, "warn that work* should not be committed into CVS"],
 );
@@ -872,7 +870,7 @@ sub checkfile_PLIST($) {
 			$line->log_error("use of full pathname disallowed.");
 		}
 
-		if ($line->text =~ qr"^[\w\d]") {
+		if ($line->text =~ qr"^\w") {
 			if (defined($last_file_seen)) {
 				if ($last_file_seen gt $line->text) {
 					$line->log_warning( $line->text." should be sorted before ${last_file_seen}.");
@@ -988,10 +986,6 @@ sub check_for_multiple_patches($) {
 	my ($lines) = @_;
 	my ($files_in_patch, $patch_state, $line_type);
 
-	if (!$opt_warn_patches) {
-		# all warnings are disabled, so why should we check?
-		return;
-	}
 	$files_in_patch = 0;
 	$patch_state = "";
 	foreach my $line (@$lines) {
@@ -1185,7 +1179,7 @@ sub checkfile_Makefile($) {
 	my (@varnames) = ();
 	my ($distfiles, $svrpkgname, $distname, $extractsufx) = ('', '', '', '', '');
 	my ($bogusdistfiles) = (0);
-	my ($realwrksrc, $wrksrc, $nowrksubdir) = ('', '', '');
+	my ($realwrksrc, $wrksrc) = ('', '');
 	my ($includefile);
 	my ($category);
 
@@ -1893,7 +1887,7 @@ EOF
 
 	&checkearlier($tmp, @varnames);
 
-	# check WRKSRC/NO_WRKSUBDIR
+	# check WRKSRC
 	#
 	# do not use DISTFILES/DISTNAME to control over WRKSRC.
 	# DISTNAME is for controlling distribution filename.
@@ -1907,41 +1901,21 @@ EOF
 	#	WRKSRC=      ${WRKDIR}/package
 	#
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking WRKSRC.");
-	$wrksrc = $nowrksubdir = '';
+	$wrksrc = '';
 	$wrksrc = $1 if ($tmp =~ /\nWRKSRC[+?]?=[ \t]*([^\n]*)\n/);
-	$nowrksubdir = $1 if ($tmp =~ /\nNO_WRKSUBDIR[+?]?=[ \t]*([^\n]*)\n/);
-	if ($nowrksubdir eq '') {
-		$realwrksrc = $wrksrc ? "$wrksrc/$distname"
-				      : "\${WRKDIR}/$distname";
-	} else {
-		$realwrksrc = $wrksrc ? $wrksrc : '${WRKDIR}';
-	}
+	$realwrksrc = $wrksrc ? "$wrksrc/$distname"
+			      : "\${WRKDIR}/$distname";
 	log_info(NO_FILE, NO_LINE_NUMBER, "WRKSRC seems to be $realwrksrc.");
 
-	if ($nowrksubdir eq '') {
-		log_info(NO_FILE, NO_LINE_NUMBER, "no NO_WRKSUBDIR, checking value of WRKSRC.");
-		if ($wrksrc eq 'work' || $wrksrc =~ /^$[\{\(]WRKDIR[\}\)]/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "WRKSRC is set to meaningless value ".
-				"\"$1\".".
-				($nowrksubdir eq ''
-					? " use \"NO_WRKSUBDIR=yes\" instead."
-					: ""));
-		}
-		if ($bogusdistfiles) {
-			if ($distname ne '' && $wrksrc eq '') {
-			    log_warning(NO_FILE, NO_LINE_NUMBER, "do not use DISTFILES and DISTNAME ".
-				"to control WRKSRC. how about ".
-				"\"WRKSRC=\${WRKDIR}/$distname\"?");
-			} else {
-			    log_warning(NO_FILE, NO_LINE_NUMBER, "DISTFILES/DISTNAME affects WRKSRC. ".
-				"Use caution when changing them.");
-			}
-		}
-	} else {
-		log_info(NO_FILE, NO_LINE_NUMBER, "seen NO_WRKSUBDIR, checking value of WRKSRC.");
-		if ($wrksrc eq 'work' || $wrksrc =~ /^$[\{\(]WRKDIR[\}\)]/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "definition of WRKSRC not necessary. ".
-				"WRKSRC is \${WRKDIR} by default.");
+	log_info(NO_FILE, NO_LINE_NUMBER, "checking value of WRKSRC.");
+	if ($bogusdistfiles) {
+		if ($distname ne '' && $wrksrc eq '') {
+		    log_warning(NO_FILE, NO_LINE_NUMBER, "do not use DISTFILES and DISTNAME ".
+			"to control WRKSRC. how about ".
+			"\"WRKSRC=\${WRKDIR}/$distname\"?");
+		} else {
+		    log_warning(NO_FILE, NO_LINE_NUMBER, "DISTFILES/DISTNAME affects WRKSRC. ".
+			"Use caution when changing them.");
 		}
 	}
 
