@@ -1,8 +1,30 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/08/29 10:09:44 jdc Exp $
-
---- iocntl.c.dist	Mon Mar 21 21:42:49 1994
-+++ iocntl.c	Fri Jan  7 11:28:43 2000
-@@ -63,7 +63,7 @@
+$NetBSD: patch-ac,v 1.2 2005/05/01 10:34:49 jdc Exp $
+--- iocntl.c.dist	1994-03-21 21:42:49.000000000 +0000
++++ iocntl.c	2005-04-05 15:15:23.000000000 +0100
+@@ -4,7 +4,7 @@
+ 
+ #include "netmaze.h"
+ 
+-#ifdef RS6000
++#if (RS6000 || Linux)
+  #include <sys/select.h>
+ #endif
+ 
+@@ -16,8 +16,13 @@
+ #include <sys/ioctl.h>
+ 
+ #ifdef HAVE_FDSET
++# ifdef Linux
++ fd_set readmask;
++ fd_set writemask;
++# else
+  struct fd_set readmask;
+  struct fd_set writemask;
++# endif
+ #else
+  struct fd_mask readmask;
+  struct fd_mask writemask;
+@@ -63,7 +68,7 @@
   #ifdef RS6000 /* ibm rs/6000 */
     sigemptyset(&vec.sa_mask);
   #else
@@ -11,3 +33,17 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/08/29 10:09:44 jdc Exp $
   #endif
    vec.sa_flags = 0;
    if ( sigaction(SIGIO, &vec, (struct sigaction *) 0) == -1)
+@@ -144,8 +149,13 @@
+   static char	buf[256];
+ 
+ #ifdef HAVE_FDSET
++# ifdef Linux
++ fd_set readmask1;
++ fd_set writemask1;
++# else
+   struct fd_set	 readmask1;
+   struct fd_set	 writemask1;
++# endif
+ #else
+   struct fd_mask readmask1;
+   struct fd_mask writemask1;
