@@ -1,12 +1,13 @@
-$NetBSD: patch-dd,v 1.1 2005/04/12 11:00:03 drochner Exp $
+$NetBSD: patch-dd,v 1.2 2005/05/01 04:35:40 markd Exp $
 
---- kimgio/tiffr.cpp.orig	2004-11-22 04:52:18.000000000 +0100
+--- kimgio/tiffr.cpp.orig	2004-11-22 16:52:18.000000000 +1300
 +++ kimgio/tiffr.cpp
-@@ -84,6 +84,9 @@ KDE_EXPORT void kimgio_tiff_read( QImage
+@@ -84,6 +84,10 @@ KDE_EXPORT void kimgio_tiff_read( QImage
              return;
  
  	QImage image( width, height, 32 );
 +	if( image.isNull()) {
++		TIFFClose( tiff );
 +		return;
 +	}
  	data = (uint32 *)image.bits();
