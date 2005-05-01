@@ -1,0 +1,586 @@
+$NetBSD: patch-dl,v 1.1.2.1 2005/05/01 22:06:21 salo Exp $
+
+--- kimgio/dds.cpp.orig	2004-08-06 07:24:16.000000000 +1200
++++ kimgio/dds.cpp
+@@ -26,6 +26,12 @@
+ 
+ #include <kdebug.h>
+ 
++#include <math.h> // sqrtf
++
++#ifndef __USE_ISOC99
++#define sqrtf(x) ((float)sqrt(x))
++#endif
++
+ typedef Q_UINT32 uint;
+ typedef Q_UINT16 ushort;
+ typedef Q_UINT8 uchar;
+@@ -44,34 +50,71 @@ namespace {	// Private.
+ #define VERTICAL 2
+ #define CUBE_LAYOUT	HORIZONTAL
+ 
++	struct Color8888
++	{
++		uchar r, g, b, a;
++	};
+ 
+-	const uint FOURCC_DDS = MAKEFOURCC('D', 'D', 'S', ' ');
+-	const uint FOURCC_DXT1 = MAKEFOURCC('D', 'X', 'T', '1');
+-	const uint FOURCC_DXT2 = MAKEFOURCC('D', 'X', 'T', '2');
+-	const uint FOURCC_DXT3 = MAKEFOURCC('D', 'X', 'T', '3');
+-	const uint FOURCC_DXT4 = MAKEFOURCC('D', 'X', 'T', '4');
+-	const uint FOURCC_DXT5 = MAKEFOURCC('D', 'X', 'T', '5');
+-
+-	const uint DDSD_CAPS = 0x00000001l;
+-	const uint DDSD_PIXELFORMAT = 0x00001000l;
+-	const uint DDSD_WIDTH = 0x00000004l;
+-	const uint DDSD_HEIGHT = 0x00000002l;
+-	const uint DDSD_PITCH = 0x00000008l;
+-
+-	const uint DDSCAPS_TEXTURE = 0x00001000l;
+-	const uint DDSCAPS2_VOLUME = 0x00200000l;
+-	const uint DDSCAPS2_CUBEMAP = 0x00000200l;
+-
+-	const uint DDSCAPS2_CUBEMAP_POSITIVEX = 0x00000400l;
+-	const uint DDSCAPS2_CUBEMAP_NEGATIVEX = 0x00000800l;
+-	const uint DDSCAPS2_CUBEMAP_POSITIVEY = 0x00001000l;
+-	const uint DDSCAPS2_CUBEMAP_NEGATIVEY = 0x00002000l;
+-	const uint DDSCAPS2_CUBEMAP_POSITIVEZ = 0x00004000l;
+-	const uint DDSCAPS2_CUBEMAP_NEGATIVEZ = 0x00008000l;
+-
+-	const uint DDPF_RGB = 0x00000040l;
+- 	const uint DDPF_FOURCC = 0x00000004l;
+- 	const uint DDPF_ALPHAPIXELS = 0x00000001l;
++	union Color565
++	{
++		struct {
++			ushort b : 5;
++			ushort g : 6;
++			ushort r : 5;
++		} c;
++		ushort u;
++	};
++
++	union Color1555 {
++		struct {
++			ushort b : 5;
++			ushort g : 5;
++			ushort r : 5;
++			ushort a : 1;
++		} c;
++		ushort u;
++	};
++
++	union Color4444 {
++		struct {
++			ushort b : 4;
++			ushort g : 4;
++			ushort r : 4;
++			ushort a : 4;
++		} c;
++		ushort u;
++	};
++
++
++	static const uint FOURCC_DDS = MAKEFOURCC('D', 'D', 'S', ' ');
++	static const uint FOURCC_DXT1 = MAKEFOURCC('D', 'X', 'T', '1');
++	static const uint FOURCC_DXT2 = MAKEFOURCC('D', 'X', 'T', '2');
++	static const uint FOURCC_DXT3 = MAKEFOURCC('D', 'X', 'T', '3');
++	static const uint FOURCC_DXT4 = MAKEFOURCC('D', 'X', 'T', '4');
++	static const uint FOURCC_DXT5 = MAKEFOURCC('D', 'X', 'T', '5');
++	static const uint FOURCC_RXGB = MAKEFOURCC('R', 'X', 'G', 'B');
++	static const uint FOURCC_ATI2 = MAKEFOURCC('A', 'T', 'I', '2');
++
++	static const uint DDSD_CAPS = 0x00000001l;
++	static const uint DDSD_PIXELFORMAT = 0x00001000l;
++	static const uint DDSD_WIDTH = 0x00000004l;
++	static const uint DDSD_HEIGHT = 0x00000002l;
++	static const uint DDSD_PITCH = 0x00000008l;
++
++	static const uint DDSCAPS_TEXTURE = 0x00001000l;
++	static const uint DDSCAPS2_VOLUME = 0x00200000l;
++	static const uint DDSCAPS2_CUBEMAP = 0x00000200l;
++
++	static const uint DDSCAPS2_CUBEMAP_POSITIVEX = 0x00000400l;
++	static const uint DDSCAPS2_CUBEMAP_NEGATIVEX = 0x00000800l;
++	static const uint DDSCAPS2_CUBEMAP_POSITIVEY = 0x00001000l;
++	static const uint DDSCAPS2_CUBEMAP_NEGATIVEY = 0x00002000l;
++	static const uint DDSCAPS2_CUBEMAP_POSITIVEZ = 0x00004000l;
++	static const uint DDSCAPS2_CUBEMAP_NEGATIVEZ = 0x00008000l;
++
++	static const uint DDPF_RGB = 0x00000040l;
++ 	static const uint DDPF_FOURCC = 0x00000004l;
++ 	static const uint DDPF_ALPHAPIXELS = 0x00000001l;
+ 
+ 	enum DDSType {
+ 		DDS_A8R8G8B8 = 0,
+@@ -84,6 +127,8 @@ namespace {	// Private.
+ 		DDS_DXT3 = 7,
+ 		DDS_DXT4 = 8,
+ 		DDS_DXT5 = 9,
++		DDS_RXGB = 10,
++		DDS_ATI2 = 11,
+ 		DDS_UNKNOWN
+ 	};
+ 
+@@ -99,7 +144,7 @@ namespace {	// Private.
+ 		uint amask;
+ 	};
+ 
+-	QDataStream & operator>> ( QDataStream & s, DDSPixelFormat & pf )
++	static QDataStream & operator>> ( QDataStream & s, DDSPixelFormat & pf )
+ 	{
+ 		s >> pf.size;
+ 		s >> pf.flags;
+@@ -119,7 +164,7 @@ namespace {	// Private.
+ 		uint caps4;
+ 	};
+ 
+-	QDataStream & operator>> ( QDataStream & s, DDSCaps & caps )
++	static QDataStream & operator>> ( QDataStream & s, DDSCaps & caps )
+ 	{
+ 		s >> caps.caps1;
+ 		s >> caps.caps2;
+@@ -142,7 +187,7 @@ namespace {	// Private.
+ 		uint notused;
+ 	};
+ 
+-	QDataStream & operator>> ( QDataStream & s, DDSHeader & header )
++	static QDataStream & operator>> ( QDataStream & s, DDSHeader & header )
+ 	{
+ 		s >> header.size;
+ 		s >> header.flags;
+@@ -160,7 +205,7 @@ namespace {	// Private.
+ 		return s;
+ 	}
+ 
+-	bool IsValid( const DDSHeader & header )
++	static bool IsValid( const DDSHeader & header )
+ 	{
+ 		if( header.size != 124 ) {
+ 			return false;
+@@ -180,7 +225,7 @@ namespace {	// Private.
+ 
+ 
+ 	// Get supported type. We currently support 10 different types.
+-	DDSType GetType( const DDSHeader & header )
++	static DDSType GetType( const DDSHeader & header )
+ 	{
+ 		if( header.pf.flags & DDPF_RGB ) {
+ 			if( header.pf.flags & DDPF_ALPHAPIXELS ) {
+@@ -212,27 +257,28 @@ namespace {	// Private.
+ 					return DDS_DXT4;
+ 				case FOURCC_DXT5:
+ 					return DDS_DXT5;
++				case FOURCC_RXGB:
++					return DDS_RXGB;
++				case FOURCC_ATI2:
++					return DDS_ATI2;
+ 			}
+ 		}
+ 		return DDS_UNKNOWN;
+ 	}
+ 
+ 
+-	bool HasAlpha( const DDSHeader & header )
++	static bool HasAlpha( const DDSHeader & header )
+ 	{
+ 		return header.pf.flags & DDPF_ALPHAPIXELS;
+ 	}
+ 
+-	bool IsCubeMap( const DDSHeader & header )
++	static bool IsCubeMap( const DDSHeader & header )
+ 	{
+ 		return header.caps.caps2 & DDSCAPS2_CUBEMAP;
+ 	}
+ 
+-	bool IsSupported( const DDSHeader & header )
++	static bool IsSupported( const DDSHeader & header )
+ 	{
+-		/*if( IsCubeMap(header) ) {
+-			return false;
+-		}*/
+ 		if( header.caps.caps2 & DDSCAPS2_VOLUME ) {
+ 			return false;
+ 		}
+@@ -243,7 +289,7 @@ namespace {	// Private.
+ 	}
+ 
+ 
+-	bool LoadA8R8G8B8( QDataStream & s, const DDSHeader & header, QImage img  )
++	static bool LoadA8R8G8B8( QDataStream & s, const DDSHeader & header, QImage & img  )
+ 	{
+ 		const uint w = header.width;
+ 		const uint h = header.height;
+@@ -260,7 +306,7 @@ namespace {	// Private.
+ 		return true;
+ 	}
+ 
+-	bool LoadR8G8B8( QDataStream & s, const DDSHeader & header, QImage img )
++	static bool LoadR8G8B8( QDataStream & s, const DDSHeader & header, QImage & img )
+ 	{
+ 		const uint w = header.width;
+ 		const uint h = header.height;
+@@ -277,7 +323,7 @@ namespace {	// Private.
+ 		return true;
+ 	}
+ 
+-	bool LoadA1R5G5B5( QDataStream & s, const DDSHeader & header, QImage img )
++	static bool LoadA1R5G5B5( QDataStream & s, const DDSHeader & header, QImage & img )
+ 	{
+ 		const uint w = header.width;
+ 		const uint h = header.height;
+@@ -285,13 +331,12 @@ namespace {	// Private.
+ 		for( uint y = 0; y < h; y++ ) {
+ 			QRgb * scanline = (QRgb *) img.scanLine( y );
+ 			for( uint x = 0; x < w; x++ ) {
+-				ushort u;
+-				s >> u;
+-				uchar r, g, b, a;
+-				a = (u & header.pf.amask) != 0 ? 0xFF : 0;
+-				r = ((u & header.pf.rmask) >> 10) << 3;
+-				g = ((u & header.pf.gmask) >> 5) << 3;
+-				b = (u & header.pf.bmask) << 3;
++				Color1555 color;
++				s >> color.u;
++				uchar a = (color.c.a != 0) ? 0xFF : 0;
++				uchar r = (color.c.r << 3) | (color.c.r >> 2);
++				uchar g = (color.c.g << 3) | (color.c.g >> 2);
++				uchar b = (color.c.b << 3) | (color.c.b >> 2);
+ 				scanline[x] = qRgba(r, g, b, a);
+ 			}
+ 		}
+@@ -299,7 +344,7 @@ namespace {	// Private.
+ 		return true;
+ 	}
+ 
+-	bool LoadA4R4G4B4( QDataStream & s, const DDSHeader & header, QImage img )
++	static bool LoadA4R4G4B4( QDataStream & s, const DDSHeader & header, QImage & img )
+ 	{
+ 		const uint w = header.width;
+ 		const uint h = header.height;
+@@ -307,13 +352,12 @@ namespace {	// Private.
+ 		for( uint y = 0; y < h; y++ ) {
+ 			QRgb * scanline = (QRgb *) img.scanLine( y );
+ 			for( uint x = 0; x < w; x++ ) {
+-				unsigned short u;
+-				s >> u;
+-				uchar r, g, b, a;
+-				a = ((u & header.pf.amask) >> 12) << 4;
+-				r = ((u & header.pf.rmask) >> 8) << 4;
+-				g = ((u & header.pf.gmask) >> 4) << 4;
+-				b = (u & header.pf.bmask) << 4;
++				Color4444 color;
++				s >> color.u;
++				uchar a = (color.c.a << 4) | color.c.a;
++				uchar r = (color.c.r << 4) | color.c.r;
++				uchar g = (color.c.g << 4) | color.c.g;
++				uchar b = (color.c.b << 4) | color.c.b;
+ 				scanline[x] = qRgba(r, g, b, a);
+ 			}
+ 		}
+@@ -321,7 +365,7 @@ namespace {	// Private.
+ 		return true;
+ 	}
+ 
+-	bool LoadR5G6B5( QDataStream & s, const DDSHeader & header, QImage img )
++	static bool LoadR5G6B5( QDataStream & s, const DDSHeader & header, QImage & img )
+ 	{
+ 		const uint w = header.width;
+ 		const uint h = header.height;
+@@ -329,12 +373,11 @@ namespace {	// Private.
+ 		for( uint y = 0; y < h; y++ ) {
+ 			QRgb * scanline = (QRgb *) img.scanLine( y );
+ 			for( uint x = 0; x < w; x++ ) {
+-				unsigned short u;
+-				s >> u;
+-				uchar r, g, b;
+-				r = ((u & header.pf.rmask) >> 11) << 3;
+-				g = ((u & header.pf.gmask) >> 5) << 2;
+-				b = (u & header.pf.bmask) << 3;
++				Color565 color;
++				s >> color.u;
++				uchar r = (color.c.r << 3) | (color.c.r >> 2);
++				uchar g = (color.c.g << 2) | (color.c.g >> 4);
++				uchar b = (color.c.b << 3) | (color.c.b >> 2);
+ 				scanline[x] = qRgb(r, g, b);
+ 			}
+ 		}
+@@ -342,22 +385,7 @@ namespace {	// Private.
+ 		return true;
+ 	}
+ 
+-	struct Color8888
+-	{
+-		uchar r, g, b, a;
+-	};
+-
+-	union Color565
+-	{
+-		struct {
+-			ushort b : 5;
+-			ushort g : 6;
+-			ushort r : 5;
+-		} c;
+-		ushort u;
+-	};
+-
+-	QDataStream & operator>> ( QDataStream & s, Color565 & c )
++	static QDataStream & operator>> ( QDataStream & s, Color565 & c )
+ 	{
+ 		return s >> c.u;
+ 	}
+@@ -400,17 +428,17 @@ namespace {	// Private.
+ 				color_array[2].b = (color_array[0].b + color_array[1].b) / 2;
+ 				color_array[2].a = 0xFF;
+ 
+-				// magenta to indicate transparent color.
+-				color_array[3].r = color_array[2].r;
+-				color_array[3].g = color_array[2].g;
+-				color_array[3].b = color_array[2].b;
++				// Set all components to 0 to match DXT specs.
++				color_array[3].r = 0x00; // color_array[2].r;
++				color_array[3].g = 0x00; // color_array[2].g;
++				color_array[3].b = 0x00; // color_array[2].b;
+ 				color_array[3].a = 0x00;
+ 			}
+ 		}
+ 	};
+ 
+ 
+-	QDataStream & operator>> ( QDataStream & s, BlockDXT & c )
++	static QDataStream & operator>> ( QDataStream & s, BlockDXT & c )
+ 	{
+ 		return s >> c.col0 >> c.col1 >> c.row[0] >> c.row[1] >> c.row[2] >> c.row[3];
+ 	}
+@@ -419,7 +447,7 @@ namespace {	// Private.
+ 		ushort row[4];
+ 	};
+ 
+-	QDataStream & operator>> ( QDataStream & s, BlockDXTAlphaExplicit & c )
++	static QDataStream & operator>> ( QDataStream & s, BlockDXTAlphaExplicit & c )
+ 	{
+ 		return s >> c.row[0] >> c.row[1] >> c.row[2] >> c.row[3];
+ 	}
+@@ -485,13 +513,13 @@ namespace {	// Private.
+ 		}
+ 	};
+ 
+-	QDataStream & operator>> ( QDataStream & s, BlockDXTAlphaLinear & c )
++	static QDataStream & operator>> ( QDataStream & s, BlockDXTAlphaLinear & c )
+ 	{
+ 		s >> c.alpha0 >> c.alpha1;
+ 		return s >> c.bits[0] >> c.bits[1] >> c.bits[2] >> c.bits[3] >> c.bits[4] >> c.bits[5];
+ 	}
+ 
+-	bool LoadDXT1( QDataStream & s, const DDSHeader & header, QImage img )
++	static bool LoadDXT1( QDataStream & s, const DDSHeader & header, QImage & img )
+ 	{
+ 		const uint w = header.width;
+ 		const uint h = header.height;
+@@ -530,7 +558,7 @@ namespace {	// Private.
+ 		return true;
+ 	}
+ 
+-	bool LoadDXT3( QDataStream & s, const DDSHeader & header, QImage img )
++	static bool LoadDXT3( QDataStream & s, const DDSHeader & header, QImage & img )
+ 	{
+ 		const uint w = header.width;
+ 		const uint h = header.height;
+@@ -575,14 +603,14 @@ namespace {	// Private.
+ 		return true;
+ 	}
+ 
+-	bool LoadDXT2( QDataStream & s, const DDSHeader & header, QImage img )
++	static bool LoadDXT2( QDataStream & s, const DDSHeader & header, QImage & img )
+ 	{
+ 		if( !LoadDXT3(s, header, img) ) return false;
+ 		//UndoPremultiplyAlpha(img);
+ 		return true;
+ 	}
+ 
+-	bool LoadDXT5( QDataStream & s, const DDSHeader & header, QImage img )
++	static bool LoadDXT5( QDataStream & s, const DDSHeader & header, QImage & img )
+ 	{
+ 		const uint w = header.width;
+ 		const uint h = header.height;
+@@ -630,19 +658,122 @@ namespace {	// Private.
+ 
+ 		return true;
+ 	}
+-	
+-	bool LoadDXT4( QDataStream & s, const DDSHeader & header, QImage img )
++	static bool LoadDXT4( QDataStream & s, const DDSHeader & header, QImage & img )
+ 	{
+ 		if( !LoadDXT5(s, header, img) ) return false;
+ 		//UndoPremultiplyAlpha(img);
+ 		return true;
+ 	}
+ 
++	static bool LoadRXGB( QDataStream & s, const DDSHeader & header, QImage & img )
++	{
++		const uint w = header.width;
++		const uint h = header.height;
++
++		BlockDXT block;
++		BlockDXTAlphaLinear alpha;
++		QRgb * scanline[4];
++
++		for( uint y = 0; y < h; y += 4 ) {
++			for( uint j = 0; j < 4; j++ ) {
++				scanline[j] = (QRgb *) img.scanLine( y + j );
++			}
++			for( uint x = 0; x < w; x += 4 ) {
++
++				// Read 128bit color block.
++				s >> alpha;
++				s >> block;
++
++				// Decode color block.
++				Color8888 color_array[4];
++				block.GetColors(color_array);
++
++				uchar alpha_array[8];
++				alpha.GetAlphas(alpha_array);
++
++				uchar bit_array[16];
++				alpha.GetBits(bit_array);
++
++				// bit masks = 00000011, 00001100, 00110000, 11000000
++				const uint masks[4] = { 3, 3<<2, 3<<4, 3<<6 };
++				const int shift[4] = { 0, 2, 4, 6 };
++
++				// Write color block.
++				for( uint j = 0; j < 4; j++ ) {
++					for( uint i = 0; i < 4; i++ ) {
++						if( img.valid( x+i, y+j ) ) {
++							uint idx = (block.row[j] & masks[i]) >> shift[i];
++							color_array[idx].a = alpha_array[bit_array[j*4+i]];
++							scanline[j][x+i] = qRgb(color_array[idx].a, color_array[idx].g, color_array[idx].b);
++						}
++					}
++				}
++			}
++		}
++
++		return true;
++	}
++
++	static bool LoadATI2( QDataStream & s, const DDSHeader & header, QImage & img )
++	{
++		const uint w = header.width;
++		const uint h = header.height;
++
++		BlockDXTAlphaLinear xblock;
++		BlockDXTAlphaLinear yblock;
++		QRgb * scanline[4];
++
++		for( uint y = 0; y < h; y += 4 ) {
++			for( uint j = 0; j < 4; j++ ) {
++				scanline[j] = (QRgb *) img.scanLine( y + j );
++			}
++			for( uint x = 0; x < w; x += 4 ) {
++
++				// Read 128bit color block.
++				s >> xblock;
++				s >> yblock;
++
++				// Decode color block.
++				uchar xblock_array[8];
++				xblock.GetAlphas(xblock_array);
++
++				uchar xbit_array[16];
++				xblock.GetBits(xbit_array);
++
++				uchar yblock_array[8];
++				yblock.GetAlphas(yblock_array);
++
++				uchar ybit_array[16];
++				yblock.GetBits(ybit_array);
++
++				// Write color block.
++				for( uint j = 0; j < 4; j++ ) {
++					for( uint i = 0; i < 4; i++ ) {
++						if( img.valid( x+i, y+j ) ) {
++							const uchar nx = xblock_array[xbit_array[j*4+i]];
++							const uchar ny = yblock_array[ybit_array[j*4+i]];
++							
++							const float fx = float(nx) / 127.5f - 1.0f;
++							const float fy = float(ny) / 127.5f - 1.0f;
++							const float fz = sqrtf(1.0f - fx*fx - fy*fy);
++							const uchar nz = uchar((fz + 1.0f) * 127.5f);
++							
++							scanline[j][x+i] = qRgb(nx, ny, nz);
++						}
++					}
++				}
++			}
++		}
++
++		return true;
++	}
++
++
+ 
+-	typedef bool (* TextureLoader)( QDataStream & s, const DDSHeader & header, QImage img );
++	typedef bool (* TextureLoader)( QDataStream & s, const DDSHeader & header, QImage & img );
+ 
+ 	// Get an appropiate texture loader for the given type.
+-	TextureLoader GetTextureLoader( DDSType type ) {
++	static TextureLoader GetTextureLoader( DDSType type ) {
+ 		switch( type ) {
+ 			case DDS_A8R8G8B8:
+ 				return LoadA8R8G8B8;
+@@ -664,6 +795,10 @@ namespace {	// Private.
+ 				return LoadDXT4;
+ 			case DDS_DXT5:
+ 				return LoadDXT5;
++			case DDS_RXGB:
++				return LoadRXGB;
++			case DDS_ATI2:
++				return LoadATI2;
+ 			default:
+ 				return NULL;
+ 		};
+@@ -671,7 +806,7 @@ namespace {	// Private.
+ 
+ 
+ 	// Load a 2d texture.
+-	bool LoadTexture( QDataStream & s, const DDSHeader & header, QImage img )
++	static bool LoadTexture( QDataStream & s, const DDSHeader & header, QImage & img )
+ 	{
+ 		// Create dst image.
+ 		if( !img.create( header.width, header.height, 32 )) {
+@@ -695,7 +830,7 @@ namespace {	// Private.
+ 	}
+ 
+ 
+-	int FaceOffset( const DDSHeader & header ) {
++	static int FaceOffset( const DDSHeader & header ) {
+ 
+ 		DDSType type = GetType( header );
+ 
+@@ -727,11 +862,11 @@ namespace {	// Private.
+ 	}
+ 
+ #if CUBE_LAYOUT == HORIZONTAL
+-	int face_offset[6][2] = { {2, 1}, {0, 1}, {1, 0}, {1, 2}, {1, 1}, {3, 1} };
++	static int face_offset[6][2] = { {2, 1}, {0, 1}, {1, 0}, {1, 2}, {1, 1}, {3, 1} };
+ #elif CUBE_LAYOUT == VERTICAL
+-	int face_offset[6][2] = { {2, 1}, {0, 1}, {1, 0}, {1, 2}, {1, 1}, {1, 3} };
++	static int face_offset[6][2] = { {2, 1}, {0, 1}, {1, 0}, {1, 2}, {1, 1}, {1, 3} };
+ #endif
+-	int face_flags[6] = {
++	static int face_flags[6] = {
+ 		DDSCAPS2_CUBEMAP_POSITIVEX,
+ 		DDSCAPS2_CUBEMAP_NEGATIVEX,
+ 		DDSCAPS2_CUBEMAP_POSITIVEY,
+@@ -741,7 +876,7 @@ namespace {	// Private.
+ 	};
+ 
+ 	// Load unwrapped cube map.
+-	bool LoadCubeMap( QDataStream & s, const DDSHeader & header, QImage img )
++	static bool LoadCubeMap( QDataStream & s, const DDSHeader & header, QImage & img )
+ 	{
+ 		// Create dst image.
+ #if CUBE_LAYOUT == HORIZONTAL

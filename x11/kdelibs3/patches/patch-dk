@@ -1,0 +1,145 @@
+$NetBSD: patch-dk,v 1.1.2.2 2005/05/01 22:06:21 salo Exp $
+
+--- kimgio/rgb.cpp.orig	2004-06-23 05:36:40.000000000 +1200
++++ kimgio/rgb.cpp
+@@ -87,7 +87,9 @@ bool SGIImage::getRow(uchar *dest)
+ 	int n, i;
+ 	if (!m_rle) {
+ 		for (i = 0; i < m_xsize; i++) {
+-			*dest++ = uchar(*m_pos);
++			if(m_pos >= m_data.end())
++				return false;
++			dest[i] = uchar(*m_pos);
+ 			m_pos += m_bpc;
+ 		}
+ 		return true;
+@@ -120,7 +122,7 @@ bool SGIImage::readData(QImage& img)
+ {
+ 	QRgb *c;
+ 	Q_UINT32 *start = m_starttab;
+-	QCString lguard(m_xsize);
++	QByteArray lguard(m_xsize);
+ 	uchar *line = (uchar *)lguard.data();
+ 	unsigned x, y;
+ 
+@@ -128,7 +130,7 @@ bool SGIImage::readData(QImage& img)
+ 		m_pos = m_data.begin();
+ 
+ 	for (y = 0; y < m_ysize; y++) {
+-		c = reinterpret_cast<QRgb *>(img.scanLine(m_ysize - y - 1));
++		c = (QRgb *) img.scanLine(m_ysize - y - 1);
+ 		if (m_rle)
+ 			m_pos = m_data.begin() + *start++;
+ 		if (!getRow(line))
+@@ -166,11 +168,11 @@ bool SGIImage::readData(QImage& img)
+ 	}
+ 
+ 	for (y = 0; y < m_ysize; y++) {
+-		c = reinterpret_cast<QRgb *>(img.scanLine(m_ysize - y - 1));
+ 		if (m_rle)
+ 			m_pos = m_data.begin() + *start++;
+ 		if (!getRow(line))
+ 			return false;
++		c = (QRgb*) img.scanLine(m_ysize - y - 1);
+ 		for (x = 0; x < m_xsize; x++, c++)
+ 			*c = qRgba(qRed(*c), qGreen(*c), qBlue(*c), line[x]);
+ 	}
+@@ -270,7 +272,7 @@ bool SGIImage::readImage(QImage& img)
+ 	// sanity ckeck
+ 	if (m_rle)
+ 		for (uint o = 0; o < m_numrows; o++)
+-			if (m_starttab[o] + m_lengthtab[o] > m_data.size()) {
++			if (m_starttab[o] + m_lengthtab[o] >= m_data.size()) {
+ 				kdDebug(399) << "image corrupt (sanity check failed)" << endl;
+ 				return false;
+ 			}
+@@ -351,24 +353,32 @@ uchar SGIImage::intensity(uchar c)
+ 
+ uint SGIImage::compact(uchar *d, uchar *s)
+ {
+-	uchar *dest = d, *src = s, patt, *cnt;
+-	int n;
+-	while (src - s < m_xsize) {
+-		if (src - s + 1 == m_xsize) {		// last bit
+-			*dest++ = 0x81;
+-			*dest++ = *src;
++	uchar *dest = d, *src = s, patt, *t, *end = s + m_xsize;
++	int i, n;
++	while (src < end) {
++		for (n = 0, t = src; t + 2 < end && !(*t == t[1] && *t == t[2]); t++)
++			n++;
++
++		while (n) {
++			i = n > 126 ? 126 : n;
++			n -= i;
++			*dest++ = 0x80 | i;
++			while (i--)
++				*dest++ = *src++;
++		}
++
++		if (src == end)
+ 			break;
+-		} else if (*src == src[1]) {
+-			patt = *src++;
+-			for (n = 1; src - s < m_xsize && n < 126 && *src == patt; src++)
+-				n++;
+-			*dest++ = n;
++
++		patt = *src++;
++		for (n = 1; src < end && *src == patt; src++)
++			n++;
++
++		while (n) {
++			i = n > 126 ? 126 : n;
++			n -= i;
++			*dest++ = i;
+ 			*dest++ = patt;
+-		} else {
+-			cnt = dest++;
+-			for (n = 0; src - s < m_xsize && n < 126 && *src != src[1]; n++)
+-				*dest++ = *src++;
+-			*cnt = 0x80 | n;
+ 		}
+ 	}
+ 	*dest++ = 0;
+@@ -444,16 +454,12 @@ void SGIImage::writeHeader()
+ 	kdDebug(399) << "Description: " << desc << endl;
+ 	desc.truncate(79);
+ 
+-	char id[] = "KDE kimgio", *s = id;
+ 	for (i = 0; i < desc.length(); i++)
+ 		m_imagename[i] = desc.latin1()[i];
+ 	for (; i < 80; i++)
+ 		m_imagename[i] = '\0';
+-	if (desc.length() < 68)
+-		for (i = 69; *s; i++)
+-			m_imagename[i] = *s++;
+-
+ 	m_stream.writeRawBytes(m_imagename, 80);
++
+ 	m_stream << m_colormap;
+ 	for (i = 0; i < 404; i++)
+ 		m_stream << Q_UINT8(0);
+@@ -551,13 +557,6 @@ bool SGIImage::writeImage(QImage& img)
+ 
+ 	m_numrows = m_ysize * m_zsize;
+ 
+-	// compressing a row with up to 11 pixels takes 11 or more bytes
+-	// (start/length table: 8, smallest possible RLE packet: 3)
+-	if (m_xsize <= 11) {
+-		writeVerbatim(img);
+-		return true;
+-	}
+-
+ 	m_starttab = new Q_UINT32[m_numrows];
+ 	m_rlemap.setBaseOffset(512 + m_numrows * 2 * sizeof(Q_UINT32));
+ 
+@@ -579,7 +578,7 @@ bool SGIImage::writeImage(QImage& img)
+ 	kdDebug(399) << "total savings: " << (verbatim_size - rle_size) << " bytes" << endl;
+ 	kdDebug(399) << "compression: " << (rle_size * 100.0 / verbatim_size) << '%' << endl;
+ 
+-	if (verbatim_size <= rle_size)
++	if (verbatim_size <= rle_size || m_io->quality() > 50)
+ 		writeVerbatim(img);
+ 	else
+ 		writeRle();
