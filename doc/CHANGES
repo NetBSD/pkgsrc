@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9994 2005/05/01 17:30:06 schmonz Exp $
+$NetBSD: CHANGES,v 1.9995 2005/05/01 17:37:30 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2241,3 +2241,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added opera-8.0 [tron 2005-04-30]
 	Updated gopchop to 1.1.6 [wiz 2005-04-30]
 	Updated getmail to 4.3.7 [schmonz 2005-05-01]
+	Updated imp to 3.2.8 [adrianp 2005-05-01]
