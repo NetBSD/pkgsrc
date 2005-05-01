@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9997 2005/05/01 22:05:37 abs Exp $
+$NetBSD: CHANGES,v 1.9998 2005/05/01 22:57:48 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2244,4 +2244,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated imp to 3.2.8 [adrianp 2005-05-01]
 	Updated imp to 4.0.3 [adrianp 2005-05-01]
 	Updated cpuflags to 0.87 [abs 2005-05-01]
-
+	Updated nhc98 to 1.18 [kristerw 2005-05-01]
