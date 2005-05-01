@@ -1,8 +1,19 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/08/29 10:09:44 jdc Exp $
-
---- netserv.c.dist	Sun Apr 10 11:07:23 1994
-+++ netserv.c	Fri Mar  3 15:07:05 2000
-@@ -629,7 +629,7 @@
+$NetBSD: patch-ae,v 1.2 2005/05/01 10:34:49 jdc Exp $
+--- netserv.c.dist	1994-04-10 11:07:23.000000000 +0100
++++ netserv.c	2005-04-05 15:25:17.000000000 +0100
+@@ -106,7 +106,11 @@
+ 
+ 
+ #ifdef HAVE_FDSET
++#  ifdef Linux
++  fd_set readmask;
++#  else
+   struct fd_set readmask;
++#  endif
+ #else
+   struct fd_mask readmask;
+ #endif
+@@ -629,7 +633,7 @@
   #ifdef RS6000 /* ibm rs/6000 */
     sigemptyset(&vec1.sa_mask);
   #else
@@ -11,7 +22,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2000/08/29 10:09:44 jdc Exp $
   #endif
    vec1.sa_flags = 0;
    if ( sigaction(SIGALRM, &vec1, (struct sigaction *) 0) == -1) perror("SIGALRM\n");
-@@ -652,7 +652,7 @@
+@@ -652,7 +656,7 @@
   #ifdef RS6000 /* ibm rs/6000 */
     sigemptyset(&svec1.sa_mask);
   #else
@@ -20,7 +31,19 @@ $NetBSD: patch-ae,v 1.1.1.1 2000/08/29 10:09:44 jdc Exp $
   #endif
    svec1.sa_flags = 0;
    if(sigaction(SIGCHLD,&svec1,(struct sigaction *)0) == -1) perror("SIGCHLD\n");
-@@ -914,7 +914,7 @@
+@@ -779,7 +783,11 @@
+ void io_cntl(void)
+ {
+ #ifdef HAVE_FDSET
++#  ifdef Linux
++  fd_set readmask1;
++#  else
+   struct fd_set readmask1;
++#  endif
+ #else
+   struct fd_mask readmask1;
+ #endif
+@@ -914,7 +922,7 @@
    char *saddr = (char *) &(((struct sockaddr_in *) &(q->remoteaddr))->sin_addr.s_addr);
    hp = gethostbyaddr(saddr,4,AF_INET);
  
