@@ -1,0 +1,13 @@
+$NetBSD: patch-cd,v 1.7 2005/05/01 23:17:49 taca Exp $
+
+--- src/client_side.c.orig	2005-05-02 01:31:18.000000000 +0900
++++ src/client_side.c
+@@ -2782,7 +2782,7 @@ parseHttpRequest(ConnStateData * conn, m
+ 	    if (natfd < 0) {
+ 		int save_errno;
+ 		enter_suid();
+-		natfd = open(IPL_NAT, O_RDONLY, 0);
++		natfd = open(IPNAT_NAME, O_RDONLY, 0);
+ 		save_errno = errno;
+ 		leave_suid();
+ 		errno = save_errno;
