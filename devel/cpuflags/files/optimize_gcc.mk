@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.20 2005/04/08 07:24:25 abs Exp $
+# $Id: optimize_gcc.mk,v 1.21 2005/05/01 22:03:37 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and probably quite broken by design.
@@ -6,7 +6,7 @@
 # The intention is to pass additional flags to gcc to further optimise
 # generated code. It _will_ make it impossible to debug, may fail to
 # compile some code, and even generate curdled binaries. It is completely
-# unsupported. Any questions should be directed to <abs@netbsd.org>.
+# unsupported. Any questions should be directed to <abs@absd.org>.
 
 # -O3 would give -finline-functions and -frename-registers
 # As of gcc3-3.3nb4 -frename-registers still causes problems with xdm

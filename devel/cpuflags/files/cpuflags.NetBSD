@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.59 2005/03/22 08:17:26 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.60 2005/05/01 22:03:37 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
@@ -187,7 +187,7 @@ if [ -n "$opt_v" ] ; then
     exit
 fi
 if [ -z "$FLAGS" -a -z "$NONE" ] ; then
-    echo 'Unknown machine - please send details to abs@netbsd.org'	>&2
+    echo 'Unknown machine - please send details to abs@absd.org'	>&2
     display_hw_details							>&2
 fi
 
