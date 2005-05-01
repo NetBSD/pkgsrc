@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/01 12:24:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/01 12:30:11 wiz Exp $
 
 DISTNAME=	gnome-1.4.2.1
 PKGREVISION=	9
@@ -24,11 +24,6 @@ DEPENDS+=	gnome-pim>=1.4.6:../../misc/gnome-pim
 DEPENDS+=	gnome-users-guide>=1.2:../../x11/gnome-users-guide
 DEPENDS+=	gnome-utils>=1.4.1.2:../../misc/gnome-utils
 DEPENDS+=	evolution>=1.2.1:../../mail/evolution12
-.if exists(/usr/include/wctype.h)
-DEPENDS+=	gnumeric>=0.75nb5:../../math/gnumeric
-.else
-DEPENDS+=	gnumeric>=0.75nb5:../../math/gnumeric0
-.endif
 DEPENDS+=	gtk-->=1.2.10:../../x11/gtk--
 DEPENDS+=	gtk-engines>=0.12:../../x11/gtk-engines
 DEPENDS+=	gtop>=1.0.13nb2:../../sysutils/gtop
