@@ -1,8 +1,70 @@
-$NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
+$NetBSD: patch-de,v 1.2 2005/05/01 04:35:40 markd Exp $
 
---- kimgio/xcf.cpp.orig	2004-11-22 04:48:27.000000000 +0100
+--- kimgio/xcf.cpp.orig	2004-11-22 16:48:27.000000000 +1300
 +++ kimgio/xcf.cpp
-@@ -401,7 +401,8 @@ bool XCFImageFormat::loadLayer(QDataStre
+@@ -234,10 +234,10 @@ bool XCFImageFormat::loadImageProperties
+ 					property.readBytes(tag, size);
+ 
+ 					Q_UINT32 flags;
+-					char* data;
++					char* data=0;
+ 					property >> flags >> data;
+ 
+-					if (strcmp(tag, "gimp-comment") == 0)
++					if (tag && strncmp(tag, "gimp-comment", strlen("gimp-comment")) == 0)
+ 						xcf_image.image.setText("Comment", 0, data);
+ 
+ 					delete[] tag;
+@@ -257,6 +257,9 @@ bool XCFImageFormat::loadImageProperties
+ 
+ 				case PROP_COLORMAP:
+ 					property >> xcf_image.num_colors;
++                                        if(xcf_image.num_colors < 0 || xcf_image.num_colors > 65535)
++                                            return false;
++
+ 					xcf_image.palette.reserve(xcf_image.num_colors);
+ 
+ 					for (int i = 0; i < xcf_image.num_colors; i++) {
+@@ -307,6 +310,9 @@ bool XCFImageFormat::loadProperty(QDataS
+ 			return false;
+ 		}
+ 
++                if(size > 65535 || size < 4)
++                    return false;
++
+ 		size = 3 * (size - 4) + 4;
+ 		data = new char[size];
+ 
+@@ -336,19 +342,21 @@ bool XCFImageFormat::loadProperty(QDataS
+ 		}
+ 
+ 		size = 0;
+-	} else
+-		xcf_io.readBytes(data, size);
++	} else {
++                xcf_io >> size;
++                if(size >256000)
++                    return false;
++                data = new char[size];
++		xcf_io.readRawBytes(data, size);
++        }
+ 
+ 	if (xcf_io.device()->status() != IO_Ok) {
+ 		kdDebug(399) << "XCF: read failure on property " << type << " data, size " << size << endl;
+ 		return false;
+ 	}
+ 
+-	if (size != 0) {
+-		bytes.resize(size);
+-		for (uint i = 0; i < size; i++)
+-			bytes[i] = data[i];
+-		delete[] data;
++	if (size != 0 && data) {
++                bytes.assign(data,size);
+ 	}
+ 
+ 	return true;
+@@ -401,7 +409,8 @@ bool XCFImageFormat::loadLayer(QDataStre
  	// Allocate the individual tile QImages based on the size and type
  	// of this layer.
  
@@ -12,7 +74,7 @@ $NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
  	xcf_io.device()->at(layer.hierarchy_offset);
  
  	// As tiles are loaded, they are copied into the layers tiles by
-@@ -425,7 +426,8 @@ bool XCFImageFormat::loadLayer(QDataStre
+@@ -425,7 +434,8 @@ bool XCFImageFormat::loadLayer(QDataStre
  	// of the QImage.
  
  	if (!xcf_image.initialized) {
@@ -22,7 +84,7 @@ $NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
  		copyLayerToImage(xcf_image);
  		xcf_image.initialized = true;
  	} else
-@@ -516,7 +518,7 @@ bool XCFImageFormat::loadLayerProperties
+@@ -516,7 +526,7 @@ bool XCFImageFormat::loadLayerProperties
   * QImage structures for each of them.
   * \param xcf_image contains the current layer.
   */
@@ -31,7 +93,7 @@ $NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
  {
  	Layer& layer(xcf_image.layer);
  
-@@ -556,48 +558,67 @@ void XCFImageFormat::composeTiles(XCFIma
+@@ -556,48 +566,67 @@ void XCFImageFormat::composeTiles(XCFIma
  			switch (layer.type) {
  				case RGB_GIMAGE:
  					layer.image_tiles[j][i] = QImage(tile_width, tile_height, 32, 0);
@@ -99,7 +161,7 @@ $NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
  }
  
  
-@@ -1072,7 +1093,7 @@ void XCFImageFormat::assignMaskBytes(Lay
+@@ -1072,7 +1101,7 @@ void XCFImageFormat::assignMaskBytes(Lay
   * For indexed images, translucency is an all or nothing effect.
   * \param xcf_image contains image info and bottom-most layer.
   */
@@ -108,7 +170,7 @@ $NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
  {
  	// (Aliases to make the code look a little better.)
  	Layer& layer(xcf_image.layer);
-@@ -1082,12 +1103,16 @@ void XCFImageFormat::initializeImage(XCF
+@@ -1082,12 +1111,16 @@ void XCFImageFormat::initializeImage(XCF
  		case RGB_GIMAGE:
  			if (layer.opacity == OPAQUE_OPACITY) {
  				image.create( xcf_image.width, xcf_image.height, 32);
@@ -125,7 +187,7 @@ $NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
  			image.fill(qRgba(255, 255, 255, 0));
  			// Turning this on prevents fill() from affecting the alpha channel,
  			// by the way.
-@@ -1097,6 +1122,8 @@ void XCFImageFormat::initializeImage(XCF
+@@ -1097,6 +1130,8 @@ void XCFImageFormat::initializeImage(XCF
  		case GRAY_GIMAGE:
  			if (layer.opacity == OPAQUE_OPACITY) {
  				image.create(xcf_image.width, xcf_image.height, 8, 256);
@@ -134,7 +196,7 @@ $NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
  				setGrayPalette(image);
  				image.fill(255);
  				break;
-@@ -1104,6 +1131,8 @@ void XCFImageFormat::initializeImage(XCF
+@@ -1104,6 +1139,8 @@ void XCFImageFormat::initializeImage(XCF
  
  		case GRAYA_GIMAGE:
  			image.create(xcf_image.width, xcf_image.height, 32);
@@ -143,7 +205,7 @@ $NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
  			image.fill(qRgba(255, 255, 255, 0));
  			image.setAlphaBuffer(true);
  			break;
-@@ -1125,12 +1154,16 @@ void XCFImageFormat::initializeImage(XCF
+@@ -1125,12 +1162,16 @@ void XCFImageFormat::initializeImage(XCF
  				image.create(xcf_image.width, xcf_image.height,
  						1, xcf_image.num_colors,
  						QImage::LittleEndian);
@@ -160,7 +222,7 @@ $NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
  				image.fill(0);
  				setPalette(xcf_image, image);
  			}
-@@ -1147,6 +1180,8 @@ void XCFImageFormat::initializeImage(XCF
+@@ -1147,6 +1188,8 @@ void XCFImageFormat::initializeImage(XCF
  				image.create(xcf_image.width, xcf_image.height,
  						1, xcf_image.num_colors,
  						QImage::LittleEndian);
@@ -169,7 +231,7 @@ $NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
  				image.fill(0);
  				setPalette(xcf_image, image);
  				image.setAlphaBuffer(true);
-@@ -1160,6 +1195,8 @@ void XCFImageFormat::initializeImage(XCF
+@@ -1160,6 +1203,8 @@ void XCFImageFormat::initializeImage(XCF
  				xcf_image.palette[0] = qRgba(255, 255, 255, 0);
  				image.create( xcf_image.width, xcf_image.height,
  						8, xcf_image.num_colors);
@@ -178,7 +240,7 @@ $NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
  				image.fill(0);
  				setPalette(xcf_image, image);
  				image.setAlphaBuffer(true);
-@@ -1168,6 +1205,8 @@ void XCFImageFormat::initializeImage(XCF
+@@ -1168,6 +1213,8 @@ void XCFImageFormat::initializeImage(XCF
  				// true color. (There is no equivalent PNG representation output
  				// from The GIMP as of v1.2.)
  				image.create(xcf_image.width, xcf_image.height, 32);
@@ -187,7 +249,7 @@ $NetBSD: patch-de,v 1.1 2005/04/12 11:00:03 drochner Exp $
  				image.fill(qRgba(255, 255, 255, 0));
  				image.setAlphaBuffer(true);
  			}
-@@ -1176,6 +1215,7 @@ void XCFImageFormat::initializeImage(XCF
+@@ -1176,6 +1223,7 @@ void XCFImageFormat::initializeImage(XCF
  
  	image.setDotsPerMeterX((int)(xcf_image.x_resolution * INCHESPERMETER));
  	image.setDotsPerMeterY((int)(xcf_image.y_resolution * INCHESPERMETER));

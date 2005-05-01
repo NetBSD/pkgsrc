@@ -1,0 +1,65 @@
+$NetBSD: patch-dj,v 1.1 2005/05/01 04:35:40 markd Exp $
+
+--- kimgio/psd.cpp.orig	2004-12-16 22:59:07.000000000 +1300
++++ kimgio/psd.cpp
+@@ -66,6 +66,19 @@ namespace {	// Private.
+ 		s >> header.color_mode;
+ 		return s;
+ 	}
++        static bool seekBy(QDataStream& s, unsigned int bytes)
++        {
++                char buf[4096];
++                while (bytes) {
++                        unsigned int num= QMIN(bytes,sizeof(buf));
++                        unsigned int l = num;
++                        s.readRawBytes(buf, l);
++                        if(l != num)
++                          return false;
++                        bytes -= num;
++                }
++                return true;
++        }
+ 
+ 	// Check that the header is a valid PSD.
+ 	static bool IsValid( const PSDHeader & header )
+@@ -149,10 +162,8 @@ namespace {	// Private.
+ 		if( compression ) {
+ 		
+ 			// Skip row lengths.
+-			ushort w;
+-			for(uint i = 0; i < header.height * header.channel_count; i++) {
+-	  			s >> w;
+-			}	
++                        if(!seekBy(s, header.height*header.channel_count*sizeof(ushort)))
++                                return false;
+ 
+ 			// Read RLE data.						
+ 			for(uint channel = 0; channel < channel_num; channel++) {
+@@ -162,6 +173,8 @@ namespace {	// Private.
+ 				uint count = 0;
+ 				while( count < pixel_count ) {
+ 					uchar c;
++                                        if(s.atEnd())
++                                                return false;
+ 					s >> c;
+ 					uint len = c;
+ 					
+@@ -169,6 +182,9 @@ namespace {	// Private.
+ 						// Copy next len+1 bytes literally.
+ 						len++;
+ 						count += len;
++                                                if ( count > pixel_count )
++                                                        return false;
++
+ 						while( len != 0 ) {
+ 							s >> *ptr;
+ 							ptr += 4;
+@@ -181,6 +197,8 @@ namespace {	// Private.
+ 						len ^= 0xFF;
+ 						len += 2;
+ 						count += len;
++                                                if(s.atEnd() || count > pixel_count)
++                                                        return false;
+ 						uchar val;
+ 						s >> val;
+ 						while( len != 0 ) {
