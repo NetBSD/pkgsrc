@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2005/01/16 21:46:05 adrianp Exp $
+# $NetBSD: Makefile,v 1.29 2005/05/01 17:36:26 adrianp Exp $
 
-DISTNAME=	imp-3.2.6
+DISTNAME=	imp-3.2.8
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.horde.org/pub/imp/tarballs/
 
