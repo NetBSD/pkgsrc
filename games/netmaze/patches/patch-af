@@ -1,8 +1,19 @@
-$NetBSD: patch-af,v 1.1.1.1 2000/08/29 10:09:44 jdc Exp $
-
---- robot.c.dist	Tue Mar 22 11:06:17 1994
-+++ robot.c	Fri Jan  7 11:38:30 2000
-@@ -97,7 +97,7 @@
+$NetBSD: patch-af,v 1.2 2005/05/01 10:34:49 jdc Exp $
+--- robot.c.dist	1994-03-22 11:06:17.000000000 +0000
++++ robot.c	2005-04-05 15:25:37.000000000 +0100
+@@ -49,7 +49,11 @@
+ extern void ident_player(void);
+ 
+ #ifdef HAVE_FDSET
++#  ifdef Linux
++  fd_set readmask;
++#  else
+ struct fd_set readmask;
++#  endif
+ #else
+ struct fd_mask readmask;
+ #endif
+@@ -97,7 +101,7 @@
   #ifdef RS6000 /* ibm rs/6000 */
     sigemptyset(&vec.sa_mask);
   #else
@@ -11,3 +22,15 @@ $NetBSD: patch-af,v 1.1.1.1 2000/08/29 10:09:44 jdc Exp $
   #endif
    vec.sa_flags = 0;
    if ( sigaction(SIGIO, &vec, (struct sigaction *) 0) == -1)
+@@ -139,7 +143,11 @@
+   int	numfds;
+ 
+ #ifdef HAVE_FDSET
++#  ifdef Linux
++  fd_set readmask1;
++#  else
+   struct fd_set readmask1;
++#  endif
+ #else
+   struct fd_mask readmask1;
+ #endif
