@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.Linux,v 1.15 2005/04/29 12:56:05 abs Exp $
+# $NetBSD: cpuflags.Linux,v 1.16 2005/05/01 22:03:37 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
@@ -28,15 +28,16 @@ case $hw_machine_arch in
     i386)				FLAGS='-march=i386'		;;
     i486)				FLAGS='-march=i486'		;;
     i686) case $hw_model in
-	"AMD Duron(tm) ")		FLAGS='-march=athlon'		;;
-	"AMD Duron(TM)")		FLAGS='-march=athlon'		;;
 	"AMD Athlon(tm) XP "*)		FLAGS='-march=athlon-xp'	;;
+	"AMD Duron(TM)")		FLAGS='-march=athlon'		;;
+	"AMD Duron(tm) ")		FLAGS='-march=athlon'		;;
 	"Celeron (Coppermine)")		FLAGS='-march=pentium3'		;;
-	"Pentium III (Katmai)")		FLAGS='-march=pentium3'		;;
-	"Pentium III (Coppermine)")	FLAGS='-march=pentium3'		;;
+	"Intel(R) Pentium(R) 4 CPU "*)	FLAGS='-march=pentium4'		;;
 	"Intel(R) Pentium(R) III Mobile CPU"*) FLAGS='-march=pentium3m' ;;
 	"Intel(R) Pentium(R) M processor"*) FLAGS='-march=pentium3m'	;;
-	"Intel(R) Pentium(R) 4 CPU "*)	FLAGS='-march=pentium4'		;;
+	"Mobile Intel(R) Pentium(R) 4 - M "*) FLAGS='-march=pentium4m'	;;
+	"Pentium III (Coppermine)")	FLAGS='-march=pentium3'		;;
+	"Pentium III (Katmai)")		FLAGS='-march=pentium3'		;;
 	"Intel(R) Celeron(R) CPU "*)
 	    case "$hw_flags" in
 		*" sse2 "*)
@@ -70,7 +71,7 @@ if [ -n "$opt_v" ] ; then
     exit
 fi
 if [ -z "$FLAGS" -a -z "$NONE" ] ; then
-    echo 'Unknown machine - please send details to abs@netbsd.org'	>&2
+    echo 'Unknown machine - please send details to abs@absd.org'	>&2
     display_hw_details							>&2
 fi
 
