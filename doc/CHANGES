@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9998 2005/05/01 22:57:48 kristerw Exp $
+$NetBSD: CHANGES,v 1.9999 2005/05/01 23:18:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2245,3 +2245,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated imp to 4.0.3 [adrianp 2005-05-01]
 	Updated cpuflags to 0.87 [abs 2005-05-01]
 	Updated nhc98 to 1.18 [kristerw 2005-05-01]
+	Updated squid to 2.5.9nb10 [taca 2005-05-01]
