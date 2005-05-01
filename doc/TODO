@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3452 2005/04/30 09:52:32 wiz Exp $
+$NetBSD: TODO,v 1.3453 2005/05/01 11:56:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -300,6 +300,7 @@ Suggested package updates
 	o arnold-20040104
 	o arpwatch-2.1a13
 	o asapm-2.13
+	o asc-1.16.0
 	o aspell-danish-1.4.49
 	o aspell-faroese-0.2.22
 	o ast-ksh-20040229
@@ -434,6 +435,7 @@ Suggested package updates
 	o fakeroot-1.2.9 [pkg/30015]
 	o fd-2.06c
 	o fdgw-20040609
+	o feh-1.3.1
 	o fhist-1.14
 	o fidogate-4.4.10
 	o findutils-4.2.20
@@ -582,6 +584,7 @@ Suggested package updates
 	o latd-1.21
 	o latex2rtf-1.9.16a
 	o lavaps-2.7
+	o lbdb-0.30
 	o lcab-1.0b11
 	o lcc-4.2
 	o leafnode-1.11.1
