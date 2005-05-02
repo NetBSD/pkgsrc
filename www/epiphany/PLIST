@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/03/22 16:26:14 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/05/02 11:48:51 drochner Exp $
 bin/epiphany
 include/epiphany-1.6/epiphany/ephy-bookmarks-type-builtins.h
 include/epiphany-1.6/epiphany/ephy-bookmarks.h
@@ -39,17 +39,17 @@ share/applications/bme.desktop
 share/applications/epiphany.desktop
 share/doc/epiphany/EphyCommandManager.html
 share/doc/epiphany/EphyEmbed.html
-share/doc/epiphany/EphyEmbedPersist.html
-share/doc/epiphany/EphyEmbedSingle.html
 share/doc/epiphany/EphyNodeDb.html
-share/doc/epiphany/EphyPermissionManager.html
 share/doc/epiphany/EphyTab.html
 share/doc/epiphany/EphyWindow.html
 share/doc/epiphany/ch01.html
 share/doc/epiphany/ch02.html
 share/doc/epiphany/epiphany-EphyEmbedFactory.html
+share/doc/epiphany/epiphany-EphyEmbedPersist.html
+share/doc/epiphany/epiphany-EphyEmbedSingle.html
 share/doc/epiphany/epiphany-EphyExtensionsManager.html
 share/doc/epiphany/epiphany-EphyGlade.html
+share/doc/epiphany/epiphany-EphyPermissionManager.html
 share/doc/epiphany/epiphany-ephy-cookie-manager.html
 share/doc/epiphany/epiphany-ephy-password-manager.html
 share/doc/epiphany/epiphany-ephy-session.html
@@ -60,6 +60,7 @@ share/doc/epiphany/index.html
 share/doc/epiphany/index.sgml
 share/doc/epiphany/left.png
 share/doc/epiphany/right.png
+share/doc/epiphany/style.css
 share/doc/epiphany/up.png
 share/epiphany/art/epiphany-bookmarks.png
 share/epiphany/art/epiphany-close-tab.png
@@ -169,6 +170,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/epiphany.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/epiphany.mo
