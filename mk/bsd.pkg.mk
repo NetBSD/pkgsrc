@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1619 2005/05/02 02:50:33 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1620 2005/05/02 03:09:04 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1753,14 +1753,11 @@ BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
     !empty(EXTRACT_SUFX:M*.lzh) || !empty(EXTRACT_SUFX:M*.lha)
 BUILD_DEPENDS+=		lha>=114.9:../../archivers/lha
 .endif
-.if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-.  if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
-      !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz)
+.if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
+    !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz)
+.  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 USE_TOOLS+=		gzcat
-.  endif
-.elif !defined(GZCAT)
-.  if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
-      !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz)
+.  elif !defined(GZCAT)
 BUILD_DEPENDS+=         gzip-base>=1.2.4b:../../archivers/gzip-base
 GZCAT=                  ${LOCALBASE}/bin/zcat
 .  endif
