@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/22 10:55:13 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:05 reed Exp $
 bin/dbus-cleanup-sockets
 bin/dbus-daemon-1
 bin/dbus-launch
@@ -26,6 +26,7 @@ man/man1/dbus-launch.1
 man/man1/dbus-send.1
 share/examples/dbus/session.conf
 share/examples/dbus/system.conf
+share/examples/rc.d/dbus
 @dirrm share/examples/dbus
 @exec ${MKDIR} %D/share/dbus-1/services
 @dirrm share/dbus-1/services

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:26 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/05/02 20:33:59 reed Exp $
 bin/isdcat
 bin/isdcfgck
 bin/isdclient
@@ -39,5 +39,6 @@ share/doc/isect/isect_stoc.html
 share/doc/isect/isect_toc.html
 share/doc/isect/whatsnew.html
 share/examples/isect/COPYING
+share/examples/rc.d/isect
 @dirrm share/examples/isect
 @dirrm share/doc/isect

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2004/04/23 22:07:55 reed Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2005/05/02 20:34:01 reed Exp $
 bin/addr
 bin/dig
 bin/dnsquery
@@ -73,3 +73,4 @@ share/doc/html/bind8/options.html
 share/doc/html/bind8/server.html
 share/doc/html/bind8/trusted-keys.html
 share/doc/html/bind8/zone.html
+share/examples/rc.d/named

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/03/02 21:42:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/05/02 20:33:59 reed Exp $
 bin/imtest
 bin/installsieve
 bin/lmtptest
@@ -158,6 +158,7 @@ share/examples/cyrus-imapd/imapd.conf
 share/examples/cyrus-imapd/normal.conf
 share/examples/cyrus-imapd/prefork.conf
 share/examples/cyrus-imapd/small.conf
+share/examples/rc.d/cyrus
 @dirrm share/examples/cyrus-imapd
 @dirrm share/doc/html/cyrus-imapd
 @dirrm include/cyrus

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/06 16:17:38 mjl Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:05 reed Exp $
 share/examples/bacula/bacula-dir.conf
 share/examples/bacula/bacula-fd.conf
 share/examples/bacula/bacula-sd.conf
@@ -38,5 +38,9 @@ sbin/bsmtp
 sbin/btape
 sbin/btraceback
 sbin/dbcheck
+share/examples/rc.d/bacula-fd
+share/examples/rc.d/bacula-sd
+share/examples/rc.d/bacula-dir
+share/examples/rc.d/bacula
 @dirrm share/examples/bacula
 @dirrm libexec/bacula

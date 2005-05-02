@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2005/04/25 09:13:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2005/05/02 20:34:06 reed Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -83,6 +83,7 @@ share/examples/httpd/httpd-std.conf
 share/examples/httpd/magic
 share/examples/httpd/mime.types
 share/examples/httpd/ssl-std.conf
+share/examples/rc.d/apache
 share/httpd/build/config.nice
 share/httpd/build/config_vars.mk
 share/httpd/build/instdso.sh

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/23 22:07:57 reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:04 reed Exp $
 libexec/vsftpd
 man/man5/vsftpd.conf.5
 man/man8/vsftpd.8
@@ -6,6 +6,7 @@ share/doc/vsftpd/FAQ
 share/doc/vsftpd/INSTALL
 share/doc/vsftpd/README
 share/doc/vsftpd/TUNING
+share/examples/rc.d/vsftpd
 share/examples/vsftpd/vsftpd.conf.default
 @dirrm share/examples/vsftpd
 @dirrm share/doc/vsftpd

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/01/09 00:07:46 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/05/02 20:34:00 reed Exp $
 sbin/prayer
 sbin/prayer-cyclog
 sbin/prayer-sem-prune
@@ -8,6 +8,7 @@ share/examples/prayer/motd.html
 share/examples/prayer/prayer-accountd.cf
 share/examples/prayer/prayer.cf
 share/examples/prayer/welcome.html
+share/examples/rc.d/prayer
 share/prayer/help/abook_add.html
 share/prayer/help/abook_list.html
 share/prayer/help/abook_search.html

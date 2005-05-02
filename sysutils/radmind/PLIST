@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/28 14:04:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:06 reed Exp $
 bin/fsdiff
 bin/ktcheck
 bin/lapply
@@ -19,3 +19,4 @@ man/man1/twhich.1
 man/man5/applefile.5
 man/man8/radmind.8
 sbin/radmind
+share/examples/rc.d/radmind

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/02/18 22:12:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:01 reed Exp $
 bin/mimegpg
 libexec/cgi-bin/sqwebmail
 libexec/courier/pcpd
@@ -115,6 +115,7 @@ share/examples/courier/calendarmode
 share/examples/courier/ldapaddressbook.dist
 share/examples/courier/sqwebmaild.dist
 share/examples/courier/webmail.pam
+share/examples/rc.d/sqwebmail
 @unexec ${RMDIR} -p %D/share/examples/courier 2>/dev/null || ${TRUE}
 @dirrm share/doc/courier/sqwebmail
 @unexec ${RMDIR} -p %D/share/doc/html/courier 2>/dev/null || ${TRUE}

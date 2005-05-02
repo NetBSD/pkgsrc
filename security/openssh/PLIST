@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/23 22:07:58 reed Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/05/02 20:34:05 reed Exp $
 bin/scp
 bin/sftp
 bin/slogin
@@ -26,4 +26,5 @@ sbin/sshd
 share/examples/openssh/moduli
 share/examples/openssh/ssh_config
 share/examples/openssh/sshd_config
+share/examples/rc.d/sshd
 @dirrm share/examples/openssh

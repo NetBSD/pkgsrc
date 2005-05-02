@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/03 14:18:01 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:33:58 reed Exp $
 bin/dircproxy
 bin/dircproxy-crypt
 man/man1/dircproxy-crypt.1
@@ -7,5 +7,6 @@ share/dircproxy/cronchk.sh
 share/dircproxy/log.pl
 share/dircproxy/privmsg-log.pl
 share/examples/dircproxy/dircproxyrc
+share/examples/rc.d/dircproxy
 @dirrm share/examples/dircproxy
 @dirrm share/dircproxy

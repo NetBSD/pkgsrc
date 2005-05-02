@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/04/14 04:59:14 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/05/02 20:34:00 reed Exp $
 bin/dspam
 bin/dspam_2sql
 bin/dspam_admin
@@ -91,6 +91,7 @@ share/examples/dspam/cgi-admins
 share/examples/dspam/cgi-default.prefs
 share/examples/dspam/configure.pl
 share/examples/dspam/dspam.conf
+share/examples/rc.d/dspam
 @dirrm share/examples/dspam
 @dirrm share/dspam/txt
 ${PGSQL}@dirrm share/dspam/pgsql

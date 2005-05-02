@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.82 2005/02/09 23:56:10 tv Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.83 2005/05/02 20:33:57 reed Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -223,7 +223,7 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 #	at post-install time.
 #
 # RCD_SCRIPTS works lists the basenames of the rc.d scripts.  They are
-#	expected to be found in ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}, and
+#	expected to be found in ${PREFIX}/share/examples/rc.d, and
 #	the scripts will be copied into ${RCD_SCRIPTS_DIR} with
 #	${RCD_SCRIPTS_MODE} permissions.
 #
@@ -235,11 +235,7 @@ SUPPORT_FILES_MODE?=	0644
 SUPPORT_FILES_PERMS?=	# empty
 RCD_SCRIPTS?=		# empty
 RCD_SCRIPTS_MODE?=	0755
-RCD_SCRIPTS_EXAMPLEDIR?=	share/examples/rc.d
-.if !empty(RCD_SCRIPTS_EXAMPLEDIR:M/*)
-PKG_FAIL_REASON+= \
-	"bsd.pkg.install.mk: RCD_SCRIPTS_EXAMPLEDIR can't be an absolute path."
-.endif
+RCD_SCRIPTS_EXAMPLEDIR=	share/examples/rc.d
 RCD_SCRIPTS_SHELL?=	${SH}
 FILES_SUBST+=		RCD_SCRIPTS_SHELL=${RCD_SCRIPTS_SHELL}
 MESSAGE_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
@@ -528,10 +524,6 @@ ${INSTALL_FILE}: ${INSTALL_SRC}
 #				the rc.d script (defaults to
 #				${FILESDIR}/<script>.sh)
 #
-# RCD_SCRIPTS_EXAMPLEDIR	the directory relative to ${PREFIX} in
-#				which to install the example rc.d scripts
-#				(defaults to share/examples/rc.d)
-#
 # If the source rc.d script is not present, then the automatic handling
 # doesn't occur.
 
@@ -546,8 +538,6 @@ install-rcd-scripts:	# do nothing
 .for _script_ in ${RCD_SCRIPTS}
 RCD_SCRIPT_SRC.${_script_}?=	${FILESDIR}/${_script_}.sh
 RCD_SCRIPT_WRK.${_script_}?=	${WRKDIR}/${_script_}
-
-GENERATE_PLIST+=	${ECHO} ${RCD_SCRIPTS_EXAMPLEDIR}/${_script_};
 
 .  if !empty(RCD_SCRIPT_SRC.${_script_})
 .    if exists(${RCD_SCRIPT_SRC.${_script_}})

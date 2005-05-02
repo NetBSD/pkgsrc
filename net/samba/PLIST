@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2004/12/17 18:55:47 tron Exp $
+@comment $NetBSD: PLIST,v 1.29 2005/05/02 20:34:03 reed Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -115,6 +115,10 @@ share/doc/samba/WinME_PlainPassword.reg
 share/doc/samba/WinXP_PlainPassword.reg
 share/doc/samba/WinXP_SignOrSeal.reg
 share/doc/samba/WindowsTerminalServer.reg
+share/examples/rc.d/winbindd
+share/examples/rc.d/smbd
+share/examples/rc.d/nmbd
+share/examples/rc.d/samba
 share/examples/samba/adduser.sh
 share/examples/samba/deluser.sh
 share/examples/samba/mknissmbpasswd.sh

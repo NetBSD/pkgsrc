@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/04/23 22:07:52 reed Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/05/02 20:33:57 reed Exp $
 bin/ossplay
 bin/ossmixer
 bin/ossmplay
@@ -95,6 +95,7 @@ lib/oss/za2v2.dat
 sbin/soundconf
 sbin/soundoff
 sbin/soundon
+share/examples/rc.d/oss
 @dirrm lib/oss/include/sys
 @dirrm lib/oss/include
 @dirrm lib/oss/docs

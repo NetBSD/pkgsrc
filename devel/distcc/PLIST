@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/05/02 19:11:38 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/02 20:33:59 reed Exp $
 bin/distcc
 bin/distccd
 bin/distccmon-text
@@ -20,5 +20,6 @@ share/doc/distcc/protocol-2.txt
 share/doc/distcc/reporting-bugs.txt
 share/doc/distcc/status-1.txt
 share/doc/distcc/survey.txt
+share/examples/rc.d/distccd
 @dirrm share/doc/distcc/example
 @dirrm share/doc/distcc

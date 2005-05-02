@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2004/10/29 12:56:24 abs Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:01 reed Exp $
 bin/setiathome
 bin/xsetiathome
 man/cat1/setiathome.0
 man/cat1/xsetiathome.0
+share/examples/rc.d/setiathome
