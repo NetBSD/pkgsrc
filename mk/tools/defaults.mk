@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.1 2005/04/30 04:35:54 jlam Exp $
+# $NetBSD: defaults.mk,v 1.2 2005/05/02 02:50:34 jlam Exp $
 
 .if !defined(TOOLS_DEFAULTS_MK)
 TOOLS_DEFAULTS_MK=	defined
@@ -17,6 +17,7 @@ TOOLS_DEFAULTS_MK=	defined
 _TOOLS_VARNAME.awk=		AWK
 _TOOLS_VARNAME.basename=	BASENAME
 _TOOLS_VARNAME.bison=		YACC
+_TOOLS_VARNAME.bzcat=		BZCAT
 _TOOLS_VARNAME.cat=		CAT
 _TOOLS_VARNAME.chgrp=		CHGRP
 _TOOLS_VARNAME.chmod=		CHMOD

@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.54 2005/04/30 04:35:54 jlam Exp $
+# $NetBSD: replace.mk,v 1.55 2005/05/02 02:50:34 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -135,6 +135,19 @@ ${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_ARGS.bison}
 .    endif
 .  endif
 TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
+.endif
+
+.if !defined(TOOLS_IGNORE.bzcat) && !empty(_USE_TOOLS:Mbzcat)
+.  if !empty(PKGPATH:Marchivers/bzip2)
+MAKEFLAGS+=			TOOLS_IGNORE.bzcat=
+.  elif !empty(_TOOLS_USE_PKGSRC.bzcat:M[yY][eE][sS])
+TOOLS_DEPENDS.bzcat?=		bzip2>=0.9.0b:../../archivers/bzip2
+TOOLS_SYMLINK+=			bzcat
+TOOLS_REAL_CMD.bzcat=		${LOCALBASE}/bin/bzcat
+.    if exists(${TOOLS_REAL_CMD.bzcat})
+${_TOOLS_VARNAME.bzcat}=	${TOOLS_REAL_CMD.bzcat}
+.    endif
+.  endif
 .endif
 
 .if !defined(TOOLS_IGNORE.cat) && !empty(_USE_TOOLS:Mcat)
