@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1620 2005/05/02 03:09:04 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1621 2005/05/02 05:45:15 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -939,9 +939,9 @@ USE_LANGUAGES?=		# empty
 #
 USE_TOOLS+=	[ awk basename cat chgrp chmod chown cmp cp cut date	\
 		dirname echo egrep env expr false fgrep file find grep	\
-		gtar gunzip gzcat gzip head hostname id ln ls m4 mkdir	\
-		mtree mv nice pax pwd rm rmdir sed sh shlock sort tail	\
-		tee test touch tr true tsort wc xargs
+		gtar gunzip gzcat gzip head hostname id ldconfig ln ls	\
+		m4 mkdir mtree mv nice pax pwd rm rmdir sed sh shlock	\
+		sort tail tee test touch tr true tsort wc xargs
 
 .if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 .include "../../mk/tools/bsd.tools.mk"
