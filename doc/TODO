@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3458 2005/05/02 15:19:10 wiz Exp $
+$NetBSD: TODO,v 1.3459 2005/05/02 20:42:25 drochner Exp $
 
 Suggested new packages
 ======================
@@ -249,7 +249,6 @@ Suggested package updates
 =========================
 
 	o 0verkill-0.16
-	o ArX-2.2.1
 	o BasiliskII-1.0.20050322
 	o Chinput-3.0.1
 	o GMT-4.0
@@ -259,7 +258,6 @@ Suggested package updates
 	o MayaVi-1.4
 	o MyPasswordSafe-20041210
 	o PAM-0.78
-	o R-2.1.0
 	o RealPlayerGold-10.0.4
 	o SmartEiffel-2.1
 	o ViPEC-3.2.0
@@ -360,7 +358,6 @@ Suggested package updates
 	o clanlib-0.7.8
 	o classpath-0.15
 	o classpath-gui-0.15
-	o clisp-2.33.2
 	o cocoon-2.1.7
 	o columba-1.0RC1
 	o common-mml-1.2.16
@@ -404,7 +401,6 @@ Suggested package updates
 	o docbook-website-2.6.0
 	o doxygen-1.4.2
 	o dpkg-1.13.3
-	o dropbear-0.45
 	o dvdrip-0.52.3
 	o dvipdfmx-20050201
 	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
@@ -423,7 +419,6 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enigma-0.90
 	o enscript-1.6.4
-	o epiphany-1.6.3
 	o erlang-10b-4
 	o esh-0.8.5
 	o et-2.60
@@ -464,7 +459,6 @@ Suggested package updates
 	o gcpio-2.6
 	o gcube-0.4
 	o gdb6-6.3.0
-	o gdeskcal-0.57.1
 	o gdm1-2.2.5.5
 	o gettext-0.14.4
 	o gfract-0.3.2
@@ -489,20 +483,16 @@ Suggested package updates
 	o gnetman-20050325
 	o gnocatan-0.8.1.30
 	o gnome-applets-1.4.1
-	o gnome-media-2.10.0
 	o gnome-pilot-2.0.12
 	o gnome-utils-1.4.1.3
 	o gnome-vfsmm26-2.8.0?
-	o gnumeric-1.4.3
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.40
 	o gogo-3.11p1
-	o gperiodic-2.0.8
 	o gpsdrive-2.09
 	o gpsim-devel-20041104
 	o gputils-0.13.0
 	o grace-5.1.18
-	o gramps-1.0.11
 	o grap-1.32
 	o grepmail-5.3030
 	o gri-2.12.8
@@ -516,7 +506,6 @@ Suggested package updates
 	o guile-pg-0.27
 	o guile-www-1.1.1
 	o gwenview-1.2.0 [pkg/29878]
-	o gworkspace-0.7.0
 	o gzrecover-0.3
 	o hackbot-2.21
 	o hashcash-1.16
@@ -587,7 +576,6 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.11.1
 	o leafpad-0.7.9
-	o libcdio-0.72
 	o libcomprex-0.3.3
 	o libetpan-0.34b
 	o libextractor-0.4.2
@@ -840,7 +828,6 @@ Suggested package updates
 	o plan-1.9
 	o plib-1.8.4
 	o pload-0.9.5
-	o ploticus-2.31.03
 	o ploticus-examples-230
 	o plptools-0.13
 	o pnet-0.6.10 [pkg/28555]
@@ -874,7 +861,6 @@ Suggested package updates
 	o py-amkCrypto-2.0
 	o py-bdb-xml-2.0.9
 	o py-curl-7.13.2
-	o py-gnome2-2.10.0
 	o py-gnuplot-1.7
 	o py-imaging-1.1.5c2
 	o py-kenosis-0.95
@@ -886,10 +872,6 @@ Suggested package updates
 	o py-matplotlib-0.71
 	o py-mysqldb-1.1.7
 	o py-psycopg-1.1.18
-	o py-qt3-base-3.14.1
-	o py-qt3-modules-3.14.1
-	o py-qt3-qscintilla-3.14.1
-	o py-qt3-sip-4.2.1
 	o py-rpy-0.4.0
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.6
@@ -1047,8 +1029,6 @@ Suggested package updates
 	o top-3.6alpha9
 	o tor-0.0.9.9
 	o totd-1.5
-	o totem-1.0.1
-	o totem-xine-1.0.1
 	o tpasm-1.2
 	o tpb-0.6.3
 	o trac-0.8.1
@@ -1070,7 +1050,6 @@ Suggested package updates
 	o userppp-030706
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
-	o vcdimager-0.7.21
 	o vera-1.14
 	o vfu-4.03
 	o vifm-0.2
