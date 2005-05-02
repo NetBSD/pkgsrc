@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/28 23:31:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:04 reed Exp $
 ${MILTER}sbin/amavis
 ${MILTER}sbin/amavis-milter
 sbin/amavisd
@@ -32,5 +32,7 @@ share/doc/amavisd-new/amavisd-new-docs.html
 share/examples/amavisd-new/amavisd.conf-default
 share/examples/amavisd-new/amavisd.conf-minimal
 share/examples/amavisd-new/amavisd.conf-sample
+share/examples/rc.d/amavismilter
+share/examples/rc.d/amavisd
 @dirrm share/examples/amavisd-new
 @dirrm share/doc/amavisd-new

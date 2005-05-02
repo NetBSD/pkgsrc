@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/01/08 06:24:41 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:02 reed Exp $
 bin/mDNSBrowse
 bin/mDNSPublish
 bin/mDNSQuery
@@ -28,6 +28,7 @@ lib/libhowl.la
 lib/libmDNSResponder.la
 lib/pkgconfig/howl.pc
 man/man8/mDNSResponder.8
+share/examples/rc.d/howl
 share/howl/help/address-summary.html
 share/howl/help/address.html
 share/howl/help/discovery-summary.html

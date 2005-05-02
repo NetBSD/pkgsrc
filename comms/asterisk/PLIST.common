@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2005/04/08 03:10:52 riz Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2005/05/02 20:33:58 reed Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -520,6 +520,7 @@ share/examples/asterisk/telcordia-1.adsi
 share/examples/asterisk/voicemail.conf
 share/examples/asterisk/vpb.conf
 share/examples/asterisk/zapata.conf
+share/examples/rc.d/asterisk
 @dirrm share/examples/asterisk
 @dirrm libdata/asterisk/sounds/phonetic
 @dirrm libdata/asterisk/sounds/letters

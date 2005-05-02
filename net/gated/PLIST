@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/10 21:00:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:02 reed Exp $
 bin/gdc
 bin/ospf_monitor
 bin/ripquery
@@ -93,6 +93,7 @@ share/doc/gated/operation_guide/operation.html
 share/doc/gated/operation_guide/ospf_monitor.html
 share/doc/gated/operation_guide/ripquery.html
 share/doc/gated/warning.gif
+share/examples/rc.d/gated
 @dirrm share/doc/gated/config_guide
 @dirrm share/doc/gated/installation_guide
 @dirrm share/doc/gated/member_info/licenses

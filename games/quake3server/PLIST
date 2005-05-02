@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/23 22:07:53 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:33:59 reed Exp $
 lib/lokigames/quake3server/baseq3/pak1.pk3
 lib/lokigames/quake3server/baseq3/pak2.pk3
 lib/lokigames/quake3server/baseq3/pak3.pk3
@@ -85,6 +85,7 @@ share/doc/lokigames/quake3server/pb/htm/wa001293.htm
 share/doc/lokigames/quake3server/pb/htm/wc000993.htm
 share/doc/lokigames/quake3server/pb/htm/ws000993.htm
 share/doc/lokigames/quake3server/quake3.xpm
+share/examples/rc.d/quake3server
 @dirrm share/doc/lokigames/quake3server/pb/htm
 @dirrm share/doc/lokigames/quake3server/pb
 @dirrm share/doc/lokigames/quake3server/Docs/PunkBuster/players
