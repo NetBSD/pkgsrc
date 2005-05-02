@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.8 2004/11/24 10:14:10 markd Exp $
+$NetBSD: patch-ad,v 1.9 2005/05/02 16:57:19 drochner Exp $
 
---- src/main/Makefile.in.orig	2004-11-16 01:31:44.000000000 +1300
+--- src/main/Makefile.in.orig	2005-04-18 23:29:59.000000000 +0200
 +++ src/main/Makefile.in
 @@ -144,7 +144,7 @@ R: Makefile
  
  $(R_binary): $(R_bin_OBJECTS) $(R_bin_DEPENDENCIES)
- @WANT_R_SHLIB_FALSE@	$(MAIN_LINK) -o $@ $(R_bin_LDFLAGS) $(R_bin_OBJECTS) $(R_bin_LDADD) $(LIBS)
+ @WANT_R_SHLIB_FALSE@	$(MAIN_LINK) -o $@ $(R_bin_LDFLAGS) $(R_bin_OBJECTS) $(R_bin_LDADD) $(READLINE_LIBS) $(LIBS)
 -@WANT_R_SHLIB_TRUE@	$(MAIN_LINK) -o $@ $(R_bin_LDFLAGS) $(R_bin_OBJECTS) -L../../lib -lR
 +@WANT_R_SHLIB_TRUE@	$(MAIN_LINK) -o $@ $(R_bin_LDFLAGS) $(R_bin_OBJECTS) -L../../lib ${COMPILER_RPATH_FLAG}$(Rexeclibdir) -lR
  
