@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/02 22:33:37 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 22:49:09 reed Exp $
 bin/dirmngr
 bin/dirmngr-client
 libexec/dirmngr_ldap
 sbin/runDirmngr
+share/examples/rc.d/dirmngr
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/dirmngr.mo
 @exec ${MKDIR} %D/libdata/dirmngr/extra-certs
 @dirrm libdata/dirmngr/extra-certs
