@@ -1,4 +1,4 @@
-# $NetBSD: tools.UnixWare.mk,v 1.3 2005/04/28 17:30:24 jlam Exp $
+# $NetBSD: tools.UnixWare.mk,v 1.4 2005/05/02 04:42:08 jlam Exp $
 #
 # System-supplied tools for the UnixWare 7 operating system.
 
@@ -26,6 +26,7 @@ TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/usr/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
+TOOLS_PLATFORM.ldconfig?=	${TOOLS_PLATFORM.true}
 TOOLS_PLATFORM.ln?=		/usr/bin/ln
 TOOLS_PLATFORM.ls?=		/usr/bin/ls
 TOOLS_PLATFORM.m4?=		/usr/ccs/bin/m4

@@ -1,4 +1,4 @@
-# $NetBSD: tools.IRIX.mk,v 1.3 2005/04/28 17:30:24 jlam Exp $
+# $NetBSD: tools.IRIX.mk,v 1.4 2005/05/02 04:42:08 jlam Exp $
 #
 # System-supplied tools for the IRIX operating system.
 
@@ -33,6 +33,7 @@ TOOLS_PLATFORM.gzip?=		/usr/sbin/gzip -nf ${GZIP}
 TOOLS_PLATFORM.head?=		/usr/bsd/head
 TOOLS_PLATFORM.hostname?=	/usr/bsd/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
+TOOLS_PLATFORM.ldconfig?=	${TOOLS_PLATFORM.true}
 TOOLS_PLATFORM.ln?=		/sbin/ln
 TOOLS_PLATFORM.ls?=		/sbin/ls
 TOOLS_PLATFORM.m4?=		/sbin/m4
