@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10005 2005/05/02 20:56:34 wiz Exp $
+$NetBSD: CHANGES,v 1.10006 2005/05/02 21:05:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -459,7 +459,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ethereal to 0.10.9 [salo 2005-01-21]
 	Updated aribas to 1.53 [adam 2005-01-21]
 	Updated ImageMagick to 6.1.9-0 [adam 2005-01-21]
-	Updated gnumeric to 1.4.2 [drochner 2005-01-21]
+	Updated gnumeric14 to 1.4.2 [drochner 2005-01-21]
 	Updated dropbear to 0.44 [drochner 2005-01-21]
 	Updated gtksourceview to 1.1.90 [drochner 2005-01-21]
 	Updated xvidcore to 1.0.3 [drochner 2005-01-21]
@@ -2216,6 +2216,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gdeskcal to 0.57.1 [drochner 2005-04-26]
 	Updated gramps to 1.0.11 [drochner 2005-04-26]
 	Updated libgtop2 to 2.10.1 [drochner 2005-04-26]
+	Updated gperiodic to 2.0.8 [drochner 2005-04-26]
 	Updated p5-Tree-Simple to 1.14 [wiz 2005-04-27]
 	Updated cpuflags to 0.85 [abs 2005-04-27]
 	Updated octave-current to 2.9.2 [adam 2005-04-27]
@@ -2259,6 +2260,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated py-qt3-sip to 4.2.1 [drochner 2005-05-02]
 	Updated py-qt3 to 3.14.1 [drochner 2005-05-02]
 	Updated totem to 1.0.1 [drochner 2005-05-02]
+	Updated totem-xine to 1.0.1 [drochner 2005-05-02]
 	Updated R to 2.1.0 [drochner 2005-05-02]
 	Updated cint to 5.15.169 [drochner 2005-05-02]
 	Updated libcdio to 0.73 [drochner 2005-05-02]
