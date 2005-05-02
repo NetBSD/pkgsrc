@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:48:12 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/02 15:36:53 drochner Exp $
 #
 
-DISTNAME=		PyQt-x11-gpl-3.14
-PKGNAME=		${PYPKGPREFIX}-qt3-modules-3.14
+DISTNAME=		PyQt-x11-gpl-3.14.1
+PKGNAME=		${PYPKGPREFIX}-qt3-modules-3.14.1
 CATEGORIES=		x11 python
 MASTER_SITES=		http://www.river-bank.demon.co.uk/download/PyQt/
 
