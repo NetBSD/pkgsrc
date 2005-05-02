@@ -1,17 +1,8 @@
-$NetBSD: patch-ao,v 1.6 2005/01/06 17:04:42 drochner Exp $
+$NetBSD: patch-ao,v 1.7 2005/05/02 11:29:35 drochner Exp $
 
---- src/libw32dll/wine/Makefile.in.orig	2004-12-25 23:36:16.000000000 +0100
+--- src/libw32dll/wine/Makefile.in.orig	2005-04-26 10:16:53.000000000 +0200
 +++ src/libw32dll/wine/Makefile.in
-@@ -65,7 +65,7 @@ mkinstalldirs = $(install_sh) -d
- CONFIG_HEADER = $(top_builddir)/config.h
- CONFIG_CLEAN_FILES =
- LTLIBRARIES = $(noinst_LTLIBRARIES)
--libwine_la_LIBADD =
-+libwine_la_LIBADD = ${WINE_LIBS}
- am_libwine_la_OBJECTS = afl.lo driver.lo elfdll.lo ext.lo \
- 	ldt_keeper.lo module.lo pe_image.lo pe_resource.lo resource.lo \
- 	registry.lo vfl.lo win32.lo stubs.lo wrapper.lo
-@@ -421,6 +421,7 @@ VORBIS_LIBS = @VORBIS_LIBS@
+@@ -364,6 +364,7 @@ VORBIS_LIBS = @VORBIS_LIBS@
  W32DLL_DEP = @W32DLL_DEP@
  W32_NO_OPTIMIZE = @W32_NO_OPTIMIZE@
  WIN32_CPPFLAGS = @WIN32_CPPFLAGS@
@@ -19,3 +10,12 @@ $NetBSD: patch-ao,v 1.6 2005/01/06 17:04:42 drochner Exp $
  WIN32_FALSE = @WIN32_FALSE@
  WIN32_TRUE = @WIN32_TRUE@
  XGETTEXT = @XGETTEXT@
+@@ -527,7 +528,7 @@ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(noinst_LTLIBRARIES)
+ 
+ libwine_la_LDFLAGS =
+-libwine_la_LIBADD =
++libwine_la_LIBADD = ${WINE_LIBS}
+ am_libwine_la_OBJECTS = afl.lo driver.lo elfdll.lo ext.lo ldt_keeper.lo \
+ 	module.lo pe_image.lo pe_resource.lo resource.lo registry.lo \
+ 	vfl.lo win32.lo stubs.lo wrapper.lo

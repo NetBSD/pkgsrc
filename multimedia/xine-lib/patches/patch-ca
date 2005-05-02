@@ -1,0 +1,19 @@
+$NetBSD: patch-ca,v 1.1 2005/05/02 11:29:35 drochner Exp $
+
+--- aclocal.m4.orig	2005-04-30 22:09:14.000000000 +0200
++++ aclocal.m4
+@@ -7869,14 +7869,6 @@ if test x"$external_ffmpeg" != "xno"; th
+         CPPFLAGS="${FFMPEG_CPPFLAGS} ${ac_save_CPPFLAGS}"
+         LDFLAGS="${FFMPEG_LIBS} ${ac_save_LDFLAGS}"
+   
+-        dnl drop the cache
+-        for i in "ac_cv_header_avcodec_h" "ac_cv_header_postprocess_h" \
+-                 "ac_cv_lib_avcodec_pp_get_context" \
+-                 "ac_cv_lib_postproc_pp_get_context" \
+-                 "ac_cv_lib_avcodec_register_avcodec"; do
+-          $as_unset $i || test "${$i+set}" != set || { $i=; export $i; }
+-        done
+-
+         dnl look for headers
+         AC_CHECK_HEADER(avcodec.h, , continue)
+         AC_CHECK_HEADER(postprocess.h, , continue)
