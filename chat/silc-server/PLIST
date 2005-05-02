@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2004/09/22 08:09:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/05/02 20:33:58 reed Exp $
 lib/silc-server/libsilc.la
 lib/silc-server/modules/aes.sim.so
 lib/silc-server/modules/blowfish.sim.so
@@ -20,6 +20,7 @@ share/doc/silc-server/FAQ
 share/doc/silc-server/INSTALL
 share/doc/silc-server/README
 share/doc/silc-server/TODO
+share/examples/rc.d/silcd
 share/examples/silc-server/README
 share/examples/silc-server/cell_backup.conf
 share/examples/silc-server/cell_router.conf

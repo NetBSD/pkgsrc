@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:57 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:03 reed Exp $
 man/man5/pppoe.conf.5
 man/man8/adsl-connect.8
 man/man8/adsl-setup.8
@@ -20,6 +20,7 @@ share/doc/rp-pppoe/LICENSE
 share/doc/rp-pppoe/README
 share/doc/rp-pppoe/SERVPOET
 share/doc/rp-pppoe/pap-secrets
+share/examples/rc.d/pppoe
 share/examples/rp-pppoe/pppoe.conf
 share/examples/rp-pppoe/pppoe-server-options
 @dirrm share/examples/rp-pppoe

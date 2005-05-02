@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/06/06 05:08:34 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/02 20:34:01 reed Exp $
 bin/tmda-address
 bin/tmda-check-address
 bin/tmda-filter
@@ -140,6 +140,7 @@ ${DOCDIR}/contrib/wrapfd3.sh
 ${SHAREDIR}/bounce.txt
 ${SHAREDIR}/confirm_accept.txt
 ${SHAREDIR}/confirm_request.txt
+share/examples/rc.d/tofmipd
 @dirrm ${SHAREDIR}
 @dirrm ${DOCDIR}/contrib
 @dirrm ${DOCDIR}

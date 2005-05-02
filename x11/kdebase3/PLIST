@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2005/04/19 10:59:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.35 2005/05/02 20:34:08 reed Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -1086,6 +1086,7 @@ share/examples/kdebase3/kde-information.menu
 share/examples/kdebase3/kde-screensavers.menu
 share/examples/kdebase3/kde-settings.menu
 share/examples/kdebase3/ksysguarddrc
+share/examples/rc.d/kdm
 share/kde/applnk/.hidden/.directory
 share/kde/applnk/.hidden/battery.desktop
 share/kde/applnk/.hidden/bwarning.desktop

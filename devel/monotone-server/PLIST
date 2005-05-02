@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/12 12:52:50 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:33:59 reed Exp $
 sbin/monotone-server-init
 share/examples/monotone-server/branches.conf
 share/examples/monotone-server/hooks.conf
+share/examples/rc.d/monotone
 @dirrm share/examples/monotone-server

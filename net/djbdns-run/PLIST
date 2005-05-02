@@ -1,3 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/29 16:35:41 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:02 reed Exp $
 share/doc/djbdns-run/README.pkgsrc
+share/examples/rc.d/tinydns
+share/examples/rc.d/rbldns
+share/examples/rc.d/dnscache
+share/examples/rc.d/djbdns
+share/examples/rc.d/axfrdns
 @dirrm share/doc/djbdns-run

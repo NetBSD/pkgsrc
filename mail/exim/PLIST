@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/02/17 06:20:36 grant Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/02 20:34:00 reed Exp $
 man/man8/exim.8
 sbin/${DISTNAME}-1
 sbin/exicyclog
@@ -19,4 +19,5 @@ sbin/exiwhat
 share/examples/exim/aliases
 share/examples/exim/configure
 share/examples/exim/mailer.conf
+share/examples/rc.d/exim
 @dirrm share/examples/exim
