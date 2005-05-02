@@ -1,24 +1,18 @@
-*** album.orig	Wed Mar  9 14:59:01 2005
---- album	Wed Mar  9 15:01:17 2005
-***************
-*** 1308,1318 ****
-  
-    unless ($themes) {
-      # Try to guess path
-!     $themes = '/var/www/html' unless -x $themes;
-!     $themes = '/var/www' unless -x $themes;
-!     $themes = '/home/httpd' unless -x $themes;
-!     $themes = '/home/http' unless -x $themes;
-!     $themes = "$ENV{HOME}/public_html" unless -x $themes;
-      $themes = '' unless -x $themes;
-      $themes .= "/Themes" if $themes;
-    }
---- 1308,1314 ----
-  
-    unless ($themes) {
-      # Try to guess path
-!     $themes = '/usr/pkg/share/httpd/htdocs/Album' unless -x $themes;
-!     $themes = '/usr/pkg/share/Album' unless -x $themes;
-      $themes = '' unless -x $themes;
-      $themes .= "/Themes" if $themes;
-    }
+$NetBSD: patch-aa,v 1.2 2005/05/02 13:37:16 wiz Exp $
+
+--- album.orig	2004-12-31 10:24:04.000000000 +0100
++++ album
+@@ -1308,11 +1308,8 @@ sub install_theme_path {
+ 
+   unless ($themes) {
+     # Try to guess path
+-    $themes = '/var/www/html' unless -x $themes;
+-    $themes = '/var/www' unless -x $themes;
+-    $themes = '/home/httpd' unless -x $themes;
+-    $themes = '/home/http' unless -x $themes;
+-    $themes = "$ENV{HOME}/public_html" unless -x $themes;
++    $themes = '/usr/pkg/share/httpd/htdocs/Album' unless -x $themes;
++    $themes = '/usr/pkg/share/Album' unless -x $themes;
+     $themes = '' unless -x $themes;
+     $themes .= "/Themes" if $themes;
+   }
