@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2005/04/19 10:53:49 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/05/02 17:11:17 drochner Exp $
 #
 
-DISTNAME=	libcdio-0.70
+DISTNAME=	libcdio-0.73
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=libcdio/}
 
@@ -14,6 +14,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libcdio.pc.in
+PKGCONFIG_OVERRIDE+=	libcdio_cdda.pc.in
+PKGCONFIG_OVERRIDE+=	libcdio_paranoia.pc.in
 PKGCONFIG_OVERRIDE+=	libiso9660.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-versioned-libs
@@ -25,7 +27,7 @@ INFO_FILES=		libcdio.info
 .if ${OPSYS} == "NetBSD"
 # XXX we just replace the freebsd module so save patches
 pre-patch:
-	${CP} ${FILESDIR}/_cdio_netbsd.c ${WRKSRC}/lib/FreeBSD/freebsd.c
+	${CP} ${FILESDIR}/_cdio_netbsd.c ${WRKSRC}/lib/driver/FreeBSD/freebsd.c
 .endif
 
 .include "../../devel/pkgconfig/buildlink3.mk"
