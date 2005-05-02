@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3459 2005/05/02 20:42:25 drochner Exp $
+$NetBSD: TODO,v 1.3460 2005/05/02 21:05:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1050,6 +1050,7 @@ Suggested package updates
 	o userppp-030706
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
+	o vcdimager-0.7.21
 	o vera-1.14
 	o vfu-4.03
 	o vifm-0.2
