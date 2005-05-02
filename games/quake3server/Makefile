@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/28 02:47:43 reed Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/02 23:02:06 reed Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGNAME=	quake3server-1.32b
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.bluesnews.com/idstuff/quake3/linux/ \
 		ftp://ftp.idsoftware.com/idstuff/quake3/linux/
 EXTRACT_SUFX=	.run
 
-MAINTAINER=	david@netbsd-fr.org
+MAINTAINER=	david@silicium.ath.cx
 COMMENT=	Quake III Arena Dedicated Server for Linux
 
 .include "../../games/quake3server/Makefile.common"
