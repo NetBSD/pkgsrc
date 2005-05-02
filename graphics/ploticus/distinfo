@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.9 2005/02/24 08:45:11 agc Exp $
+$NetBSD: distinfo,v 1.10 2005/05/02 17:58:00 drochner Exp $
 
 SHA1 (pl231src.tar.gz) = 9b7219acb31231efcf1200ad586e526814ae8283
 RMD160 (pl231src.tar.gz) = 379e6c3d2d6482cda2a76726c439b4e6f5395b1f
 Size (pl231src.tar.gz) = 443596 bytes
 SHA1 (patch-aa) = 322dc993492291f74b19f865cf149c8b50c5b9e5
+SHA1 (patch-ba) = 69043093a1a77e14b776e3166eb874a508ae11d7
+SHA1 (patch-bb) = cd27de0c5c9d20d7909e0e3b7c0d8d0c662b232f
+SHA1 (patch-bc) = eafd9ec5a0c7856a208df17a0a45e547239b66ac
+SHA1 (patch-bd) = 7f269658b3eefdc26b36b395f657168dac8c25f4
