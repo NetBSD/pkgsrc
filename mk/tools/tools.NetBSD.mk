@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.5 2005/05/02 02:50:34 jlam Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.6 2005/05/02 04:42:08 jlam Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -41,6 +41,11 @@ TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
 TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
+.if exists(/sbin/ldconfig)
+TOOLS_PLATFORM.ldconfig?=	/sbin/ldconfig
+.else
+TOOLS_PLATFORM.ldconfig?=	${TOOLS_PLATFORM.true}
+.endif
 TOOLS_PLATFORM.lex?=		/usr/bin/lex
 TOOLS_PLATFORM.ln?=		/bin/ln
 TOOLS_PLATFORM.ls?=		/bin/ls
