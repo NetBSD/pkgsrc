@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10002 2005/05/02 12:02:36 wiz Exp $
+$NetBSD: CHANGES,v 1.10003 2005/05/02 13:02:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2250,3 +2250,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed GWLib [rh 2005-05-02]
 	Updated oinkmaster to 1.2nb1 [adrianp 2005-05-02]
 	Updated p5-Convert-UUlib to 1.051 [wiz 2005-05-02]
+	Updated gnutls to 1.2.3 [wiz 2005-05-02]
