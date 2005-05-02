@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:47:09 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/02 05:09:16 jlam Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -15,7 +15,6 @@ COMMENT=	test buildlink wrapper transformation
 
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
-NO_BUILD=	yes
 NO_INSTALL=	yes
 NO_PACKAGE=	yes
 
