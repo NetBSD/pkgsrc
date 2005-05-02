@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 13:40:53 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/05/02 06:35:55 rh Exp $
 
-SHA1 (gworkspace-0.6.5.tar.gz) = 3732e520bd604d19db98a0f732f85247fab707d2
-RMD160 (gworkspace-0.6.5.tar.gz) = 7aec1fd3ad71431f133825ac05b2641ffbb06195
-Size (gworkspace-0.6.5.tar.gz) = 1525038 bytes
-SHA1 (patch-aa) = b3d4d2a2cf03404feca394e999d97f966f5dcd72
-SHA1 (patch-ab) = edcc56f067bdcf06e918da9fac4ed23f55791d50
+SHA1 (gworkspace-0.7.1.tar.gz) = f1679a2d507e2ccc35e1cb06bbdea7e2864c4528
+RMD160 (gworkspace-0.7.1.tar.gz) = 5fb43c7faaf0a2a46a150011a34ac21ab074bb39
+Size (gworkspace-0.7.1.tar.gz) = 1412129 bytes
+SHA1 (patch-aa) = dc897d3e32a1e020557e489e36781088e8767a3e
+SHA1 (patch-ab) = 421fdbb920f5efc4c91969a6391e098e489dd1ce
