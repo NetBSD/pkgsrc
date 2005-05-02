@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/01/27 16:22:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/05/02 20:33:58 reed Exp $
 bin/faxalter
 bin/faxcover
 bin/faxmail
@@ -131,6 +131,7 @@ sbin/tsitest
 sbin/typetest
 sbin/xferfaxstats
 share/doc/hylafax/COPYRIGHT
+share/examples/rc.d/hylafax
 share/hylafax/config_template/agere-mp-2
 share/hylafax/config_template/agere-mp-21
 share/hylafax/config_template/att-dataport

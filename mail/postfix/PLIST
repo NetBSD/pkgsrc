@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/03/28 08:53:07 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/05/02 20:34:00 reed Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
@@ -161,6 +161,7 @@ share/examples/postfix/relocated
 ${SASL}share/examples/postfix/smtpd.conf
 share/examples/postfix/transport
 share/examples/postfix/virtual
+share/examples/rc.d/postfix
 @dirrm share/examples/postfix
 @dirrm share/doc/postfix
 @dirrm libexec/postfix

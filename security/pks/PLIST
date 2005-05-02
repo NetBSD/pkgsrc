@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:58 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:05 reed Exp $
 bin/pgpsplit
 bin/pks-mail.sh
 bin/pks-queue-run.sh
@@ -11,5 +11,6 @@ man/man8/pksclient.8
 man/man8/pksd.8
 man/man8/pksdctl.8
 share/examples/pksd.conf
+share/examples/rc.d/pksd
 share/pks/mail_intro
 share/pks/pks_help.en

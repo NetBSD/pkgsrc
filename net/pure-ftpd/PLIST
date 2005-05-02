@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/07/20 22:04:15 recht Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:03 reed Exp $
 bin/pure-pw
 bin/pure-pwconvert
 bin/pure-statsdecode
@@ -23,4 +23,5 @@ share/doc/pure-ftpd/README.Configuration-File
 share/doc/pure-ftpd/README.Contrib
 share/doc/pure-ftpd/README.TLS
 share/doc/pure-ftpd/README.Virtual-Users
+share/examples/rc.d/pure_ftpd
 @dirrm share/doc/pure-ftpd

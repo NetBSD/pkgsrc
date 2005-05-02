@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/23 22:07:57 reed Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/05/02 20:34:03 reed Exp $
 bin/radclient
 bin/radlast
 bin/radtest
@@ -50,6 +50,7 @@ share/examples/raddb/naslist.sample
 share/examples/raddb/naspasswd.sample
 share/examples/raddb/realms.sample
 share/examples/raddb/users.sample
+share/examples/rc.d/radiusd
 @dirrm share/examples/raddb
 @dirrm share/doc/radiusd-cistron
 @unexec ${RM} -f /var/log/radius.log
