@@ -1,22 +1,20 @@
-$NetBSD: distinfo,v 1.17 2005/04/26 12:48:35 tron Exp $
+$NetBSD: distinfo,v 1.18 2005/05/02 11:29:35 drochner Exp $
 
-SHA1 (xine-lib-1.0.tar.gz) = dd02fb31c68ae68e2283d02e16bb8e80fcced9fd
-RMD160 (xine-lib-1.0.tar.gz) = ad84871d50d51552ba8913c0744e4a2b2b21f124
-Size (xine-lib-1.0.tar.gz) = 7384258 bytes
+SHA1 (xine-lib-1.0.1.tar.gz) = 9973c4674a433baccd81988df0746d9e2d111df8
+RMD160 (xine-lib-1.0.1.tar.gz) = 1e4de9b222a914b516d6cfa08695a9ccad3f3db8
+Size (xine-lib-1.0.1.tar.gz) = 7774954 bytes
 SHA1 (patch-aa) = beb7617b8361c06cf5224f0027731f025f7dc519
 SHA1 (patch-ab) = a5205d23d02dff84b0e8a9f850f3833cacc28c5a
 SHA1 (patch-ac) = 7959d6d3599c9debe79b1b4a5749b6af714588a0
 SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
 SHA1 (patch-ae) = cf7486ed50a782fcfb17ad0985e76a7ae09a2938
-SHA1 (patch-ag) = 7be1e3d83e3757cf955523245be2deb4cea12998
+SHA1 (patch-ag) = 536e98365a149624083b23cc65af8d4c2320b8d8
 SHA1 (patch-ah) = 3f9b23c4a7994259056b73209a9e194db759f06d
 SHA1 (patch-ai) = f71e3cb57bf30cbf9653a469c040b6e3f717ba97
-SHA1 (patch-aj) = e9a26ede23d53d83c2799076770e49562a4fc1ea
-SHA1 (patch-ak) = 1dfd2c3d86904ef4869dde4f4309564ac6c9323c
 SHA1 (patch-am) = 10f6433a8549bdce60ace5dcbd51df85eaa7ea16
-SHA1 (patch-ao) = 1247ba7ef23f2b28b2c0a177208c912e2fc259a0
+SHA1 (patch-ao) = 425257d43fb0f2c42590401ad17d829b03a28773
 SHA1 (patch-ap) = aaf63024c1049c1f2175d9974367a6b84ac3028f
-SHA1 (patch-aq) = f4e37c33cd4653542b53bd8b4c2c7bf2620cbb0e
+SHA1 (patch-aq) = 18d1f40634e76e0d05c1dd431142618fe98cf7ce
 SHA1 (patch-ar) = c0053ebca44544c42e39aab775e8441b6e9faa30
 SHA1 (patch-as) = ad09d98ba79cdaa0367589658d7fa05a78d075ba
 SHA1 (patch-au) = 569ac1d00402eb3679bf99f0afe5832f425b3b0e
@@ -24,6 +22,7 @@ SHA1 (patch-av) = 56f462e6091a72e87544ece689557d60fbb749aa
 SHA1 (patch-ba) = a527975fe9675358090bddc1361b707aa122f89b
 SHA1 (patch-bb) = 40978e50dcb060a2b8314b310a68684e62e90bc2
 SHA1 (patch-bd) = 5352293022da25b08598d42655af2524ff99b28a
-SHA1 (patch-be) = de3f7fe1f595ef5696379b183b661197745971a2
-SHA1 (patch-bf) = ea84b3c64dbec8f0559127f9fa28e4afa3e5dc14
+SHA1 (patch-be) = 8e755cd956c6c1987e57497f25354de7796345e0
 SHA1 (patch-bg) = c905cbac881a8f623bb0f465194673dcdaf373c0
+SHA1 (patch-ca) = 07696bef0623fcef8dcffe70ba81587f2f147343
+SHA1 (patch-cb) = 654779bd2f41f3fae1ff074f260b3a5f5e8ecda2
