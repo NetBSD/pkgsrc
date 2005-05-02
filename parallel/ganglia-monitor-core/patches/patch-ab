@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2005/04/13 01:57:29 jschauma Exp $
+$NetBSD: patch-ab,v 1.4 2005/05/02 18:15:57 jschauma Exp $
 
 --- /dev/null	2005-04-12 21:39:02.000000000 -0400
 +++ srclib/libmetrics/netbsd/metrics.c	2005-04-12 21:34:24.000000000 -0400
-@@ -0,0 +1,1279 @@
+@@ -0,0 +1,1291 @@
 +/*
 + *  First stab at support for metrics in NetBSD
 + *  by Jan Schaumann <jschauma@netbsd.org>
@@ -36,6 +36,10 @@ $NetBSD: patch-ab,v 1.3 2005/04/13 01:57:29 jschauma Exp $
 +
 +#include "interface.h"
 +#include "libmetrics.h"
++
++#ifdef HAVE_SYS_STATVFS_H
++#define statfs statvfs
++#endif
 +
 +#define MIB_SWAPINFO_SIZE 3
 +
@@ -932,7 +936,11 @@ $NetBSD: patch-ab,v 1.3 2005/04/13 01:57:29 jschauma Exp $
 +	mntsize = getmntinfo(&mntbuf, MNT_NOWAIT);
 +	mntsize = regetmntinfo(&mntbuf, mntsize, vfslist);
 +	for (i = 0; i < mntsize; i++) {
++#ifdef HAVE_SYS_STATVFS_H
++		if ((mntbuf[i].f_flag & MNT_IGNORE) == 0) {
++#else
 +		if ((mntbuf[i].f_flags & MNT_IGNORE) == 0) {
++#endif
 +			used = mntbuf[i].f_blocks - mntbuf[i].f_bfree;
 +			availblks = mntbuf[i].f_bavail + used;
 +			pct = (availblks == 0 ? 100.0 :
@@ -940,7 +948,11 @@ $NetBSD: patch-ab,v 1.3 2005/04/13 01:57:29 jschauma Exp $
 +			if (pct > most_full)
 +				most_full = pct;
 +
++#ifdef HAVE_SYS_STATVFS_H
++			toru = reported_units/mntbuf[i].f_frsize;
++#else
 +			toru = reported_units/mntbuf[i].f_bsize;
++#endif
 +			*total += mntbuf[i].f_blocks / toru;
 +			*tot_avail += mntbuf[i].f_bavail / toru;
 +		}
