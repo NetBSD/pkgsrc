@@ -1,7 +1,7 @@
-Oinkmaster is simple Perl script released under the BSD license to help you 
-update/manage your Snort 2.0+ rules and comment out the unwanted ones after 
-each update (among other things). It will tell you exactly what had changed 
+Oinkmaster is simple Perl script released under the BSD license to help you
+update/manage your Snort 2.0+ rules and comment out the unwanted ones after
+each update (among other things). It will tell you exactly what had changed
 since the last update, hence giving you good control of your rules.
-Oinkmaster can be used to manage the official rules from www.snort.org, but 
-can just as well be used for managing your homemade rules and distribute 
-them between sensors. 
+Oinkmaster can be used to manage the official rules from www.snort.org, but
+can just as well be used for managing your homemade rules and distribute
+them between sensors.
