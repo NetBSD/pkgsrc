@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1 2005/03/17 21:38:32 jschauma Exp $
+$NetBSD: patch-al,v 1.2 2005/05/02 02:14:23 markd Exp $
 
 --- src/pl/plpgsql/src/gram.y.orig	2005-01-26 20:44:42.000000000 -0500
 +++ src/pl/plpgsql/src/gram.y	2005-03-17 16:34:50.000000000 -0500
@@ -23,7 +23,7 @@ $NetBSD: patch-al,v 1.1 2005/03/17 21:38:32 jschauma Exp $
 +						/* Check for array overflow */
 +						if (nfields >= 1024)
 +						{
-+							plpgsql_error_lineno = plpgsql_scanner_lineno();
++							plpgsql_error_lineno = yylineno;
 +							elog(ERROR, "too many variables specified in SQL statement");
 +						}
 +
@@ -38,7 +38,7 @@ $NetBSD: patch-al,v 1.1 2005/03/17 21:38:32 jschauma Exp $
 +		/* Check for array overflow */
 +		if (nparams >= 1024)
 +		{
-+			plpgsql_error_lineno = plpgsql_scanner_lineno();
++			plpgsql_error_lineno = yylineno;
 +			elog(ERROR, "too many variables specified in SQL statement");
 +		}
  	}
@@ -51,7 +51,7 @@ $NetBSD: patch-al,v 1.1 2005/03/17 21:38:32 jschauma Exp $
 +					/* Check for array overflow */
 +					if (nfields >= 1024)
 +					{
-+						plpgsql_error_lineno = plpgsql_scanner_lineno();
++						plpgsql_error_lineno = yylineno;
 +						elog(ERROR, "too many variables specified in SQL statement");
 +					}
 +
