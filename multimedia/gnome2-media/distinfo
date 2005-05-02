@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/03/22 16:34:36 jmmv Exp $
+$NetBSD: distinfo,v 1.9 2005/05/02 11:56:53 drochner Exp $
 
-SHA1 (gnome-media-2.10.0.tar.bz2) = 73cd651242f4463d09b4b114e36a1b1fdd693c31
-RMD160 (gnome-media-2.10.0.tar.bz2) = fe4799d7076822e063be453989cdebab87abe95b
-Size (gnome-media-2.10.0.tar.bz2) = 3286571 bytes
+SHA1 (gnome-media-2.10.2.tar.bz2) = 7e668effbfd35f731f57709b834023540cc8894e
+RMD160 (gnome-media-2.10.2.tar.bz2) = 2019031e5f8cbb9d3c3556c6ecb5f0922997dddf
+Size (gnome-media-2.10.2.tar.bz2) = 3328141 bytes

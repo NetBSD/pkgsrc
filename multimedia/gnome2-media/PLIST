@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/03/22 16:34:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/05/02 11:56:53 drochner Exp $
 bin/cddb-slave2-properties
 bin/gnome-audio-profiles-properties
 bin/gnome-cd
@@ -355,6 +355,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-media-2.0.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-media-2.0.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-media-2.0.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-media-2.0.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnome-media-2.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-media-2.0.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnome-media-2.0.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-media-2.0.mo
@@ -368,6 +369,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-media-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-media-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-media-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-media-2.0.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gnome-media-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-media-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 share/omf/gnome-media/gnome-cd-C.omf
