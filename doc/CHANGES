@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9999 2005/05/01 23:18:48 taca Exp $
+$NetBSD: CHANGES,v 1.10000 2005/05/02 06:37:31 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2246,3 +2246,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cpuflags to 0.87 [abs 2005-05-01]
 	Updated nhc98 to 1.18 [kristerw 2005-05-01]
 	Updated squid to 2.5.9nb10 [taca 2005-05-01]
+	Updated gworkspace to 0.7.1 [rh 2005-05-02]
+	Removed GWLib [rh 2005-05-02]
