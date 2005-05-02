@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10001 2005/05/02 10:49:35 adrianp Exp $
+$NetBSD: CHANGES,v 1.10002 2005/05/02 12:02:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2249,3 +2249,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gworkspace to 0.7.1 [rh 2005-05-02]
 	Removed GWLib [rh 2005-05-02]
 	Updated oinkmaster to 1.2nb1 [adrianp 2005-05-02]
+	Updated p5-Convert-UUlib to 1.051 [wiz 2005-05-02]
