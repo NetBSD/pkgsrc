@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/21 13:10:18 cube Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/05/02 20:34:03 reed Exp $
 bin/ftpcount
 bin/ftpwho
 bin/ftpdctl
@@ -27,5 +27,6 @@ share/examples/proftpd/basic.conf
 share/examples/proftpd/complex-virtual.conf
 share/examples/proftpd/mod_sql.conf
 share/examples/proftpd/virtual.conf
+share/examples/rc.d/proftpd
 @dirrm share/doc/proftpd
 @dirrm share/examples/proftpd
