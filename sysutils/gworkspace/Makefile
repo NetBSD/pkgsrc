@@ -1,12 +1,21 @@
-# $NetBSD: Makefile,v 1.10 2004/11/16 07:58:21 rh Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/02 06:35:55 rh Exp $
 #
 
-.include "Makefile.common"
+DISTNAME=	gworkspace-0.7.1
+CATEGORIES=	sysutils gnustep
+MASTER_SITES=	http://www.gnustep.it/enrico/gworkspace/	\
+		http://www.imago.ro/gworkspace/
 
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.gnustep.it/enrico/gworkspace/
 COMMENT=	GNUstep Workspace manager
 
-pre-install:
-	${CP} ${FILESDIR}/GNUmakefile ${WRKSRC}/GWLib
+CONFLICTS+=	GWLib-[0-9]*
 
-.include "../../sysutils/GWLib/buildlink3.mk"
+WRKSRC=		${WRKDIR}/${DISTNAME:S/gw/GW/}
+USE_X11=	yes
+
+.include "../../x11/gnustep-back/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
