@@ -1,9 +1,7 @@
-@comment $NetBSD $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 13:37:42 wiz Exp $
 bin/album
 share/doc/album/Pics/Caption.gif
 share/doc/album/Section_1.html
-share/doc/album/conf.bak
-share/doc/album/conf
 share/doc/album/Section_2.html
 share/doc/album/Section_3.html
 share/doc/album/Section_4.html
@@ -12,6 +10,8 @@ share/doc/album/Section_6.html
 share/doc/album/Section_7.html
 share/doc/album/Section_8.html
 share/doc/album/Short.html
+share/doc/album/conf
+share/doc/album/conf.bak
 share/doc/album/index.html
 share/doc/album/txt_1
 share/doc/album/txt_2
