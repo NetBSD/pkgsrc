@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:19:16 agc Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/02 17:01:34 drochner Exp $
 
-DISTNAME=		cint5.14
-PKGNAME=		cint-5.14.40
+DISTNAME=		cint5.15
+PKGNAME=		cint-5.15.169
 CATEGORIES=		lang
-MASTER_SITES=		${MASTER_SITE_BACKUP}
+MASTER_SITES=		ftp://root.cern.ch/root/
+#MASTER_SITES=		${MASTER_SITE_BACKUP}
 
 MAINTAINER=		drochner@NetBSD.org
 HOMEPAGE=		http://root.cern.ch/root/Cint.html
