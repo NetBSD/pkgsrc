@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3456 2005/05/01 22:57:48 kristerw Exp $
+$NetBSD: TODO,v 1.3457 2005/05/02 15:15:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -305,6 +305,7 @@ Suggested package updates
 	o aspell-faroese-0.2.22
 	o ast-ksh-20040229
 	o astyle-1.15.3
+	o atari800-1.3.6
 	o auctex-11.55
 	o autogen-5.7
 	o avidemux-2.0.36
@@ -357,8 +358,8 @@ Suggested package updates
 	o cjk-lyx-1.3.3
 	o clamav-0.84
 	o clanlib-0.7.8
-	o classpath-0.14
-	o classpath-gui-0.14
+	o classpath-0.15
+	o classpath-gui-0.15
 	o clisp-2.33.2
 	o cocoon-2.1.7
 	o columba-1.0RC1
@@ -423,7 +424,7 @@ Suggested package updates
 	o enigma-0.90
 	o enscript-1.6.4
 	o epiphany-1.6.3
-	o erlang-10b-3
+	o erlang-10b-4
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.0
@@ -493,7 +494,6 @@ Suggested package updates
 	o gnome-utils-1.4.1.3
 	o gnome-vfsmm26-2.8.0?
 	o gnumeric-1.4.3
-	o gnutls-1.2.3
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.40
 	o gogo-3.11p1
