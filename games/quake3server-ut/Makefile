@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/07 15:25:13 cjep Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/02 23:02:06 reed Exp $
 
 DISTNAME=	urbanterror3
 PKGNAME=	quake3server-ut-3.0
@@ -13,7 +13,7 @@ MASTER_SITES=	http://64.159.80.11/ \
 		ftp://ftp.edome.net/online/clientit/ \
 		http://atrivo.wofut.com/~zac/
 
-MAINTAINER=	david@netbsd-fr.org
+MAINTAINER=	david@silicium.ath.cx
 COMMENT=	Quake III Arena Mod: Urban Terror 3 for Linux
 
 .include "../../games/quake3server/Makefile.common"

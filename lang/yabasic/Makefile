@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:17 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/02 23:02:06 reed Exp $
 
 DISTNAME=		yabasic-2.722
 PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		http://www.yabasic.de/download/
 
-MAINTAINER=		david@netbsd-fr.org
+MAINTAINER=		david@silicium.ath.cx
 HOMEPAGE=		http://www.yabasic.de/
 COMMENT=		Yet another Basic for Unix and Windows
 

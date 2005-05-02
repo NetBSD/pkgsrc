@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 13:28:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/02 23:02:06 reed Exp $
 
 DISTNAME=	divx-player-installer
 PKGNAME=	divxplayer-0.2.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME}/}
 
-MAINTAINER=	david@netbsd-fr.org
+MAINTAINER=	david@silicium.ath.cx
 HOMEPAGE=	http://www.divx.com/
 COMMENT=	DivX(TM) Video Player for Linux from DivX.com
 
