@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10006 2005/05/02 21:05:27 wiz Exp $
+$NetBSD: CHANGES,v 1.10007 2005/05/02 21:21:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2258,7 +2258,9 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated epiphany to 1.6.3 [drochner 2005-05-02]
 	Updated gnome2-media to 2.10.2 [drochner 2005-05-02]
 	Updated py-qt3-sip to 4.2.1 [drochner 2005-05-02]
-	Updated py-qt3 to 3.14.1 [drochner 2005-05-02]
+	Updated py-qt3-qscintilla to 3.14.1 [drochner 2005-05-02]
+	Updated py-qt3-modules to 3.14.1 [drochner 2005-05-02]
+	Updated py-qt3-base to 3.14.1 [drochner 2005-05-02]
 	Updated totem to 1.0.1 [drochner 2005-05-02]
 	Updated totem-xine to 1.0.1 [drochner 2005-05-02]
 	Updated R to 2.1.0 [drochner 2005-05-02]
