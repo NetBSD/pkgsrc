@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/07 17:22:30 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:01 reed Exp $
 bin/argus-config
 lib/argus/Alias.pm
 lib/argus/ArgusCtl.pm
@@ -52,4 +52,5 @@ lib/argus/web_misc.pl
 sbin/arguscgi
 sbin/argusctl
 sbin/argusd
+share/examples/rc.d/argusd
 @dirrm lib/argus

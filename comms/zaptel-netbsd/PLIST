@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/08 03:03:42 riz Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:33:58 reed Exp $
 bin/fxo_test
 bin/ztcfg
 bin/ztmonitor
@@ -12,6 +12,7 @@ lkm/mod_wcfxs.o
 lkm/mod_zaptel.o
 lkm/mod_ztdummy.o
 sbin/zaptel_postinstall
+share/examples/rc.d/ztcfg
 share/examples/zaptel/zaptel.conf
 @dirrm share/examples/zaptel
 @unexec ${RMDIR} %D/lkm 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/28 22:06:15 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:07 reed Exp $
 ${X11ROOT_PREFIX}/bin/Xmark
 ${X11ROOT_PREFIX}/bin/appres
 ${X11ROOT_PREFIX}/bin/atobm
@@ -848,6 +848,7 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/xvinfo.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xwd.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xwininfo.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xwud.${MAN_SUFFIX}
+share/examples/rc.d/xdm
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xsm
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xkb/types
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/xfree68

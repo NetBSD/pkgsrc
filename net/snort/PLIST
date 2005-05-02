@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2005/04/27 18:36:25 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.21 2005/05/02 20:34:04 reed Exp $
 bin/snort
 man/man8/snort.8
 share/doc/snort/AUTHORS
@@ -2911,6 +2911,7 @@ share/doc/snort/signatures/snort-sid-template.txt
 share/doc/snort/snort_manual.pdf
 share/doc/snort/snort_manual.tex
 share/doc/snort/snort_schema_v106.pdf
+share/examples/rc.d/snort
 share/examples/snort/classification.config
 share/examples/snort/gen-msg.map
 share/examples/snort/generators

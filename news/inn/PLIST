@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/06/02 11:43:55 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/05/02 20:34:04 reed Exp $
 bin/inews
 include/inn/config.h
 include/inn/dbz.h
@@ -276,6 +276,7 @@ share/examples/inn/startup.tcl
 share/examples/inn/startup_innd.pl
 share/examples/inn/storage.conf
 share/examples/inn/subscriptions
+share/examples/rc.d/innd
 @dirrm share/examples/inn
 @dirrm inn/lib
 @dirrm inn/include/inn

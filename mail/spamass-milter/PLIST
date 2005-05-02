@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/23 22:07:55 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:34:01 reed Exp $
 man/man1/spamass-milter.1
 sbin/spamass-milter
+share/examples/rc.d/spamass-milter

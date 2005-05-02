@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/25 14:19:41 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:04 reed Exp $
 bin/trickle
 bin/tricklectl
 bin/trickled
@@ -6,6 +6,7 @@ lib/trickle/trickle-overload.so
 man/man1/trickle.1
 man/man5/trickled.conf.5
 man/man8/trickled.8
+share/examples/rc.d/trickled
 share/examples/trickle/trickled.conf
 @dirrm share/examples/trickle
 @dirrm lib/trickle

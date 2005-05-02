@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/11/09 06:44:32 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/05/02 20:33:58 reed Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
@@ -31,6 +31,7 @@ libexec/mysqld
 man/man1/mysqld.1
 man/man1/mysqld_multi.1
 @comment man/man1/mysqld_safe.1
+share/examples/rc.d/mysqld
 share/mysql/charsets/Index
 share/mysql/charsets/README
 share/mysql/charsets/cp1251.conf

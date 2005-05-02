@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/04/04 09:32:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/05/02 20:34:05 reed Exp $
 bin/nessus
 bin/nessus-fetch
 bin/nessus-mkcert-client
@@ -25,6 +25,7 @@ sbin/nessus-check-signature
 sbin/nessus-mkcert
 sbin/nessus-rmuser
 sbin/nessusd
+share/examples/rc.d/nessusd
 @exec ${MKDIR} %D/lib/nessus/reports
 @unexec ${RMDIR} %D/lib/nessus/reports 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/lib/nessus 2>/dev/null || ${TRUE}

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/23 22:07:55 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/05/02 20:34:00 reed Exp $
 libexec/nullmailer/mailq
+share/examples/rc.d/nullmailer
 @exec ${CHMOD} u+s %D/libexec/nullmailer/mailq
 @exec ${CHOWN} ${NULLMAILER_USER}:${NULLMAILER_GROUP} %D/libexec/nullmailer/mailq
 libexec/nullmailer/nullmailer-inject

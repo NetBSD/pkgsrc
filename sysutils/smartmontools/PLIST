@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/15 20:17:45 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:06 reed Exp $
 man/man5/smartd.conf.5
 man/man8/smartctl.8
 man/man8/smartd.8
@@ -16,6 +16,7 @@ share/doc/smartmontools/examplescripts/Example1
 share/doc/smartmontools/examplescripts/Example2
 share/doc/smartmontools/examplescripts/Example3
 share/doc/smartmontools/examplescripts/README
+share/examples/rc.d/smartd
 share/examples/smartmontools/smartd.conf
 @dirrm share/doc/smartmontools/examplescripts
 @dirrm share/doc/smartmontools

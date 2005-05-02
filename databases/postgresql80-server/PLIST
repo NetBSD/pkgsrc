@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/04/13 13:15:47 abs Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:33:59 reed Exp $
 bin/postgres
 bin/postmaster
 lib/postgresql/ascii_and_mic.so
@@ -47,6 +47,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/postgres.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/postgres.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/postgres.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/postgres.mo
+share/examples/rc.d/pgsql
 share/postgresql80/conversion_create.sql
 share/postgresql80/information_schema.sql
 share/postgresql80/pg_hba.conf.sample

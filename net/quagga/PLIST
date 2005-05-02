@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/02 19:15:07 reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:03 reed Exp $
 include/quagga/buffer.h
 include/quagga/command.h
 include/quagga/distribute.h
@@ -63,6 +63,12 @@ share/examples/quagga/log_syslog.conf
 share/examples/quagga/ospfd.conf.sample
 share/examples/quagga/ripd.conf.sample
 share/examples/quagga/zebra.conf.sample
+share/examples/rc.d/ripngd
+share/examples/rc.d/ospf6d
+share/examples/rc.d/ripd
+share/examples/rc.d/ospfd
+share/examples/rc.d/bgpd
+share/examples/rc.d/zebra
 @dirrm share/examples/quagga
 @dirrm include/quagga/ospfd
 @dirrm include/quagga

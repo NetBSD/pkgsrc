@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/23 22:07:59 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:34:05 reed Exp $
 sbin/apcaccess
 sbin/apcnisd
 sbin/apctest
@@ -82,6 +82,7 @@ share/examples/apcupsd/commfailure
 share/examples/apcupsd/commok
 share/examples/apcupsd/onbattery
 share/examples/apcupsd/mainsback
+share/examples/rc.d/apcupsd
 share/locale/it/LC_MESSAGES/apcupsd.mo
 @dirrm share/doc/apcupsd
 @dirrm share/doc/html/apcupsd

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/01/22 21:50:54 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:04 reed Exp $
 bin/smokeping
 lib/smokeping/BER.pm
 lib/smokeping/ISG/ParseConfig.pm
@@ -77,6 +77,7 @@ share/doc/smokeping/probes/basefork.pm.txt
 share/doc/smokeping/probes/basevars.pm.txt
 share/doc/smokeping/probes/passwordchecker.pm.txt
 share/doc/smokeping/probes/telnetIOSPing.pm.txt
+share/examples/rc.d/smokeping
 share/examples/smokeping/basepage.html.dist
 share/examples/smokeping/config-echoping.dist
 share/examples/smokeping/config.dist

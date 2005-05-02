@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/23 22:08:00 reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:08 reed Exp $
 bin/wdm
 bin/wdmLogin
 man/man1/wdm.1
 man/man1/wdmLogin.1
+share/examples/rc.d/wdm
 share/examples/wdm/GiveConsole
 share/examples/wdm/TakeConsole
 share/examples/wdm/Xaccess

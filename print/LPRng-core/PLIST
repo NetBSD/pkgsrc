@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/12/31 08:14:35 martti Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/05/02 20:34:04 reed Exp $
 bin/cancel
 bin/lp
 bin/lpq
@@ -37,5 +37,6 @@ sbin/lprng_index_certs
 share/examples/LPRng/lpd.conf.example
 share/examples/LPRng/lpd.perms.example
 share/examples/LPRng/printcap.example
+share/examples/rc.d/LPRng
 @dirrm share/examples/LPRng
 @dirrm libexec/LPRng

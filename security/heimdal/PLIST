@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/04/21 14:35:47 lha Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/05/02 20:34:04 reed Exp $
 bin/${KRB5_PREFIX}login
 bin/${KRB5_PREFIX}rcp
 bin/${KRB5_PREFIX}rsh
@@ -391,6 +391,7 @@ sbin/kstash
 sbin/ktutil
 sbin/replay_log
 sbin/truncate_log
+share/examples/rc.d/kdc
 @dirrm include/krb5/ss
 @dirrm include/krb5/kadm5
 @dirrm include/krb5

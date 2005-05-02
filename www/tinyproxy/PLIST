@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:08:00 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:07 reed Exp $
 man/man8/tinyproxy.8
 sbin/tinyproxy
 share/doc/tinyproxy/filter-howto.txt
+share/examples/rc.d/tinyproxy
 share/examples/tinyproxy/tinyproxy.conf.default
 @dirrm share/examples/tinyproxy
 @dirrm share/doc/tinyproxy

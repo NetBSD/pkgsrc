@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:53 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:33:59 reed Exp $
 sbin/p4d
+share/examples/rc.d/p4d

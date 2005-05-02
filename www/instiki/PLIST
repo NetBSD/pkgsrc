@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/15 16:18:39 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:07 reed Exp $
 share/doc/instiki/README
+share/examples/rc.d/instiki
 share/instiki/app/controllers/wiki.rb
 share/instiki/app/models/author.rb
 share/instiki/app/models/chunks/category.rb

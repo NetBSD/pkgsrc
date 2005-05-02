@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2005/01/06 07:26:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/05/02 20:34:04 reed Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestppd
@@ -722,6 +722,7 @@ ${PKGLOCALEDIR}/locale/sv/cups_sv
 ${PKGLOCALEDIR}/locale/uk/cups_uk
 ${PKGLOCALEDIR}/locale/uk_UA/cups_uk_UA
 ${PKGLOCALEDIR}/locale/zh_CN/cups_zh_CN
+share/examples/rc.d/cupsd
 @unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/uk_UA 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/ru_RU 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/C 2>/dev/null || ${TRUE}

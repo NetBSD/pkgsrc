@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/01/08 19:58:16 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/05/02 20:33:59 reed Exp $
 libexec/dovecot/dovecot-auth
 libexec/dovecot/imap
 libexec/dovecot/imap-login
@@ -20,6 +20,7 @@ share/examples/dovecot/dovecot-mysql.conf
 share/examples/dovecot/dovecot-pgsql.conf
 share/examples/dovecot/dovecot.conf.default
 share/examples/dovecot/mkcert.sh
+share/examples/rc.d/dovecot
 @dirrm share/examples/dovecot
 @dirrm share/doc/dovecot
 @dirrm libexec/dovecot

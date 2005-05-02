@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/23 22:07:57 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:34:03 reed Exp $
 bin/pygopherd
 ${PYSITELIB}/pygopherd/GopherExceptions.py
 ${PYSITELIB}/pygopherd/GopherExceptions.pyc
@@ -133,6 +133,7 @@ man/man8/pygopherd.8
 share/examples/pygopherd/gophermap
 share/examples/pygopherd/mime.types
 share/examples/pygopherd/pygopherd.conf
+share/examples/rc.d/pygopherd
 @dirrm share/examples/pygopherd
 @dirrm ${PYSITELIB}/pygopherd/protocols
 @dirrm ${PYSITELIB}/pygopherd/handlers

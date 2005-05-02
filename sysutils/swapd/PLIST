@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/30 05:06:14 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:06 reed Exp $
 man/man5/swapd.conf.5
 man/man8/swapd.8
 sbin/swapd
+share/examples/rc.d/swapd
 share/examples/swapd/swapd.conf
 @dirrm share/examples/swapd
