@@ -2,9 +2,9 @@
 #
 
 DISTNAME=	album
-PKGREVISION=	1
 ALBUMREV=	3.07
 PKGNAME=	${DISTNAME}-${ALBUMREV}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://marginalhacks.com/bin/
 
@@ -14,7 +14,7 @@ COMMENT=	Generate HTML albums of images
 
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	jhead-[2-9]*:../../graphics/jhead
-DEPENDS+=	ffmpeg*:../../multimedia/ffmpeg
+DEPENDS+=	ffmpeg-[0-9]*:../../multimedia/ffmpeg
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
@@ -23,8 +23,8 @@ MY_SCRIPT=	album
 USE_PERL5=	# defined
 REPLACE_PERL=	${MY_SCRIPT}
 
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
+NO_CONFIGURE=	YES
+NO_BUILD=	YES
 
 do-install:	replace-interpreter
 	${INSTALL_SCRIPT} ${WRKSRC}/${MY_SCRIPT} ${PREFIX}/bin
