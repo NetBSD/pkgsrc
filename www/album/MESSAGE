@@ -1,4 +1,6 @@
-$NetBSD: MESSAGE,v 1.1 2005/04/28 15:12:00 augustss Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2005/05/02 13:38:04 wiz Exp $
 
-To use `album' you also need themes.  There are some sample themes in the
-album_themes package.
+To use `album' you also need themes.  There are some sample themes
+in the album_themes package.
+===========================================================================
