@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/02 05:09:16 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/05/02 05:16:21 jlam Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -96,15 +96,41 @@ TEST_DIR=	${.CURDIR}/tests
 # If RUNTESTS is defined, then just run those tests, otherwise run them all.
 .if defined(RUNTESTS)
 TEST_MAKEFILES=	${RUNTESTS:S/^/${TEST_DIR}\//:S/$/.mk/}
+.  for _mkfile_ in ${TEST_MAKEFILES}
+.    if exists(${_mkfile_})
+.      include "${_mkfile_}"
+.    endif
+.  endfor
 .else
-TEST_MAKEFILES!= \
-	${FIND} ${TEST_DIR} -name "*.mk" -print || ${ECHO} "none"
+.  include "tests/include-pkgdir-slashdot.mk"
+.  include "tests/include-pkgdir.mk"
+.  include "tests/include-pkgsubdir.mk"
+.  include "tests/include-usr-include-slashdot.mk"
+.  include "tests/include-usr-include-subdir.mk"
+.  include "tests/include-usr-include.mk"
+.  include "tests/lib-expand.mk"
+.  include "tests/libdir-pkgdir-slashdot.mk"
+.  include "tests/libdir-pkgdir.mk"
+.  include "tests/libdir-pkgsubdir.mk"
+.  include "tests/libdir-usr-lib-slashdot.mk"
+.  include "tests/libdir-usr-lib-subdir.mk"
+.  include "tests/libdir-usr-lib.mk"
+.  include "tests/libpath.mk"
+.  include "tests/libpath-in-define.mk"
+.  include "tests/no-abspath.mk"
+.  include "tests/preserve-option.mk"
+.  include "tests/quoted-arg.mk"
+.  include "tests/remove-dir.mk"
+.  include "tests/remove-option.mk"
+.  include "tests/repeated-arg.mk"
+.  include "tests/rpath-pkgdir-slashdot.mk"
+.  include "tests/rpath-pkgdir.mk"
+.  include "tests/rpath-pkgsubdir.mk"
+.  include "tests/rpath-usr-lib-slashdot.mk"
+.  include "tests/rpath-usr-lib-subdir.mk"
+.  include "tests/rpath-usr-lib.mk"
+.  include "tests/libpath-shlib.mk"
+.  include "tests/libpath-shmod.mk"
 .endif
-
-.for _mkfile_ in ${TEST_MAKEFILES}
-.  if exists(${_mkfile_})
-.    include "${_mkfile_}"
-.  endif
-.endfor
 
 .include "../../mk/bsd.pkg.mk"
