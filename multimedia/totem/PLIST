@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/22 16:37:32 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 16:21:21 drochner Exp $
 bin/totem
 bin/totem-video-thumbnailer
 include/totem/1/plparser/totem-disc.h
@@ -8,6 +8,7 @@ lib/libtotem-plparser.la
 lib/nautilus/extensions-1.0/libtotem-properties-page.la
 lib/pkgconfig/totem-plparser.pc
 man/man1/totem.1
+man/man1/totem-video-thumbnailer.1
 share/applications/totem.desktop
 share/gconf/schemas/totem-handlers.schemas
 share/gconf/schemas/totem-video-thumbnail.schemas
@@ -90,6 +91,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/totem.mo
@@ -100,6 +102,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/totem.mo
 share/omf/totem/totem-C.omf
