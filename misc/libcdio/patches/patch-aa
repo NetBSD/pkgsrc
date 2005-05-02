@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2005/04/19 10:53:50 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2005/05/02 17:11:18 drochner Exp $
 
---- lib/logging.c.orig	2004-04-18 17:24:27.000000000 +0000
-+++ lib/logging.c	2004-04-18 17:25:33.000000000 +0000
+--- lib/driver/logging.c.orig	2004-04-18 17:24:27.000000000 +0000
++++ lib/driver/logging.c	2004-04-18 17:25:33.000000000 +0000
 @@ -44,7 +44,9 @@
          fprintf (stderr, "**ERROR: %s\n", message);
          fflush (stderr);
