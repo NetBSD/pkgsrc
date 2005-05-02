@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/25 09:54:04 shannonjr Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/02 22:33:37 shannonjr Exp $
 #
 
 DISTNAME=		dirmngr-0.9.1
@@ -22,6 +22,8 @@ GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		awk
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
+RCD_SCRIPTS=		dirmngr
+PKG_RCD_SCRIPTS=	yes
 
 CONFIGURE_ARGS+=	--localstatedir="${VARBASE}"
 CONFIGURE_ARGS+=	--sharedstatedir="${VARBASE}"
@@ -54,8 +56,6 @@ pre-install:
 	${CHOWN} -R ${DIRMNGR_USER}:${DIRMNGR_GROUP} ${PREFIX}/libdata/dirmngr
 
 post-install:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/dirmngr > ${WRKDIR}/dirmngr
-	${INSTALL_SCRIPT} ${WRKDIR}/dirmngr ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/dirmngr
 	${INSTALL_PROGRAM} ${WRKDIR}/runDirmngr ${PREFIX}/sbin
 
 INFO_FILES=		dirmngr.info
