@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.4 2005/04/28 17:30:24 jlam Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.5 2005/05/02 02:50:34 jlam Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -6,6 +6,7 @@ TOOLS_PLATFORM.[?=		/bin/[
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
 TOOLS_PLATFORM.cat?=		/bin/cat
+TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
 TOOLS_PLATFORM.chgrp?=		/usr/bin/chgrp
 TOOLS_PLATFORM.chmod?=		/bin/chmod
 TOOLS_PLATFORM.chown?=		/usr/sbin/chown

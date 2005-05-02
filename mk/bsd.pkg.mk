@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1618 2005/04/30 04:35:54 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1619 2005/05/02 02:50:33 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -533,7 +533,9 @@ fi; exit 1
 # We need bzip2 for PATCHFILES with .bz2 suffix.
 .if defined(PATCHFILES)
 .  if !empty(PATCHFILES:M*.bz2) && ${EXTRACT_SUFX} != ".tar.bz2"
-.    if exists(/usr/bin/bzcat)
+.    if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+USE_TOOLS+=		bzcat
+.    elif exists(/usr/bin/bzcat)
 BZCAT=			/usr/bin/bzcat
 .    else
 BZCAT=			${LOCALBASE}/bin/bzcat
@@ -1735,7 +1737,9 @@ _EXTRACT_SUFFIXES+=	.rar
 #
 .if !empty(EXTRACT_ONLY:M*.bz2) || !empty(EXTRACT_ONLY:M*.tbz) || \
     !empty(EXTRACT_SUFX:M*.bz2) || !empty(EXTRACT_SUFX:M*.tbz)
-.  if exists(/usr/bin/bzcat)
+.  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+USE_TOOLS+=		bzcat
+.  elif exists(/usr/bin/bzcat)
 BZCAT=			/usr/bin/bzcat <
 .  else
 BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
