@@ -1,0 +1,12 @@
+$NetBSD: patch-ba,v 1.1 2005/05/02 17:58:00 drochner Exp $
+
+--- ../prefabs/processdata.pl.orig	2005-04-20 21:12:35.000000000 +0200
++++ ../prefabs/processdata.pl
+@@ -1,6 +1,7 @@
+ #musthave action 
+ 
+ #setifnotgiven data = "-"
++#setifnotgiven inlinedata = ""
+ 
+ #include $chunk_read
+ 
