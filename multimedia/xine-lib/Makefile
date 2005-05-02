@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2005/04/26 12:48:34 tron Exp $
+# $NetBSD: Makefile,v 1.21 2005/05/02 11:29:35 drochner Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=		2
 
 .if ${MACHINE_ARCH} == "i386"
 DEPENDS+=       	win32-codecs>=011227:../../multimedia/win32-codecs
@@ -13,7 +11,8 @@ PLIST_SUBST+=		I386="@comment "
 
 BUILDLINK_DEPENDS.vcdimager+= vcdimager>=0.7.20nb1
 
-SUBST_CLASSES+=		oss
+SUBST_CLASSES+=		oss w32path
+
 SUBST_STAGE.oss=	post-patch
 SUBST_FILES.oss=	src/audio_out/audio_oss_out.c
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
@@ -21,6 +20,11 @@ SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_SED.oss+=		-e "s,\"dsp\",\"audio\",g"
 .endif
 SUBST_MESSAGE.oss=	"Fixing hardcoded audio device."
+
+SUBST_STAGE.w32path=	post-patch
+SUBST_FILES.w32path=	src/libw32dll/wine/module.c
+SUBST_SED.w32path=	-e "s,@W32PATH@,${PREFIX}/lib/win32,"
+SUBST_MESSAGE.w32path=	"Fixing win32 dll path."
 
 # This needs to come before checking the values, otherwise the builtin.mk
 # files are not doing its work.
