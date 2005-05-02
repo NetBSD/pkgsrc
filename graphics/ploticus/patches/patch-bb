@@ -1,0 +1,16 @@
+$NetBSD: patch-bb,v 1.1 2005/05/02 17:58:00 drochner Exp $
+
+--- proc_processdata.c.orig	2005-04-20 21:12:59.000000000 +0200
++++ proc_processdata.c
+@@ -602,9 +602,9 @@ else if( strcmp( action, "stats" )==0 ) 
+ 		if( n > 1 ) setfloatvar( "SD", sqrt( ( accum[1] - (accum[0]*accum[0]/(double)n )) / ((double)n-1.0) ) );
+ 		else setcharvar( "SD", "n/a" ); 
+ 		setfloatvar( "MAX", max );
+-		if( nfld > 1 ) setcharvar( "MAX_ID", breakbuf[0] );
++		if( tagfld >= 0 ) setcharvar( "MAX_ID", breakbuf[0] );
+ 		setfloatvar( "MIN", min );
+-		if( nfld > 1 ) setcharvar( "MIN_ID", breakbuf[1] );
++		if( tagfld >= 0 ) setcharvar( "MIN_ID", breakbuf[1] );
+ 		}
+ 	return( 0 );
+ 	}
