@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.78 2005/05/01 22:19:35 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.79 2005/05/02 00:19:10 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -165,3 +165,5 @@ Pullup ticket 475 - requested by Mark Davies
 security fix for kdelibs3
 Pullup ticket 476 - requested by Adrian Portelli
 security update for imp
+Pullup ticket 477 - requested by Takahiro Kambe
+disable transparent proxy in squid
