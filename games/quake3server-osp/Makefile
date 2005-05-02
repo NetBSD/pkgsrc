@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/21 07:20:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/02 23:02:06 reed Exp $
 
 DISTNAME=	osp-Quake3-1.03a_full
 PKGNAME=	quake3server-osp-1.03a
@@ -7,7 +7,7 @@ MASTER_SITES=	http://files.l33tgames.com/files/q3/mods/osp/ \
 		http://www.flatlands.ch/filebase/mods/left/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	david@netbsd-fr.org
+MAINTAINER=	david@silicium.ath.cx
 COMMENT=	Quake III Arena Mod: OSP Tourney DM/CA/CTF for Linux
 
 .include "../../games/quake3server/Makefile.common"
