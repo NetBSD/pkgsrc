@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1621 2005/05/02 05:45:15 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1622 2005/05/02 21:10:02 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -375,6 +375,7 @@ BUILD_DEFS+=		_PLIST_IGNORE_FILES
 _USE_GMAKE=		yes
 .endif
 
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 .if defined(_USE_GMAKE)
 MAKE_PROGRAM=		${GMAKE}
 .elif defined(USE_IMAKE)
@@ -386,6 +387,7 @@ MAKE_PROGRAM=		${_IMAKE_MAKE}
 MAKE_PROGRAM=		${MAKE}
 .endif
 CONFIGURE_ENV+=		MAKE="${MAKE_PROGRAM:T}"
+.endif
 
 # Automatically increase process limit where necessary for building.
 _ULIMIT_CMD=
@@ -2135,7 +2137,7 @@ do-configure:
 	    ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 .    endfor
 .  endif
-.  if defined(USE_IMAKE)
+.  if defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake)
 .    for DIR in ${CONFIGURE_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${DIR} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF}
 .    endfor
@@ -4995,7 +4997,7 @@ _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_STRIP_MANZ}
 # Deal with MANINSTALL and man entries
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_MANINSTALL}
 # Deal with "imake installed" catman pages
-.if defined(USE_IMAKE) && ${_PREFORMATTED_MAN_DIR} == "man"
+.if defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake) && ${_PREFORMATTED_MAN_DIR} == "man"
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_IMAKE_MAN}
 .endif
 # Add '.gz' suffixes on man entries if needed
