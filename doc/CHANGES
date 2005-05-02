@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10004 2005/05/02 20:40:01 drochner Exp $
+$NetBSD: CHANGES,v 1.10005 2005/05/02 20:56:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2237,6 +2237,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cpuflags to 0.86 [abs 2005-04-29]
 	Updated mathomatic to 12.3 [minskim 2005-04-29]
 	Added tcl-postgresql74-7.4.7 [gson 2005-04-29]
+	Updated dropbear to 0.45 [drochner 2005-04-29]
 	Removed opera7 [tron 2005-04-30]
 	Added opera-8.0 [tron 2005-04-30]
 	Updated gopchop to 1.1.6 [wiz 2005-04-30]
