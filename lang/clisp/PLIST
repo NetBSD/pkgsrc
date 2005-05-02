@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/29 02:46:18 perry Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/05/02 17:42:06 drochner Exp $
 bin/clisp
 lib/clisp/base/libavcall.a
 lib/clisp/base/libcallback.a
@@ -48,26 +48,18 @@ share/doc/clisp/clisp.ps
 share/doc/clisp/editors.txt
 share/doc/clisp/impnotes.css
 share/doc/clisp/impnotes.html
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/clisp.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/clisplow.mo
-${PKGLOCALEDIR}/locale/en/LC_MESSAGES
 ${PKGLOCALEDIR}/locale/en/LC_MESSAGES/clisp.mo
 ${PKGLOCALEDIR}/locale/en/LC_MESSAGES/clisplow.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/clisp.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/clisplow.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/clisp.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/clisplow.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/clisp.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/clisplow.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/clisp.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/clisplow.mo
-${PKGLOCALEDIR}/locale/sr@ije
-${PKGLOCALEDIR}/locale/sr@ije/LC_MESSAGES
 @dirrm share/doc/clisp
 @dirrm lib/clisp/linkkit
 @dirrm lib/clisp/full
