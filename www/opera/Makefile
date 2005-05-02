@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/04/30 22:25:15 tron Exp $
+# $NetBSD: Makefile,v 1.33 2005/05/02 08:59:08 tron Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 PKGREVISION=	# empty
@@ -89,10 +89,10 @@ PLIST_SUBST+=		OPERA_PKG_VERSION=${OPERA_PKG_VERSION:C/u.*//}
 NO_BUILD=               YES
 USE_PKGINSTALL=		YES
 
-SUBST_CLASSES+=		opera7
-SUBST_STAGE.opera7=	pre-install
-SUBST_FILES.opera7=	${WRKSRC}/man/opera.1
-SUBST_SED.opera7=	-e 's,/usr/,${PREFIX}/,g'
+SUBST_CLASSES+=		opera
+SUBST_STAGE.opera=	pre-install
+SUBST_FILES.opera=	${WRKSRC}/man/opera.1
+SUBST_SED.opera=	-e 's,/usr/,${PREFIX}/,g'
 
 .endif
 
@@ -130,7 +130,7 @@ post-install:
 
 # regenerate distinfo for all ports supported by this package
 opera-distinfo:
-	( echo '$$NetBSD: Makefile,v 1.32 2005/04/30 22:25:15 tron Exp $$'; echo ''; \
+	( echo '$$NetBSD: Makefile,v 1.33 2005/05/02 08:59:08 tron Exp $$'; echo ''; \
 	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
 		${GREP} opera distinfo; \
 	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \
