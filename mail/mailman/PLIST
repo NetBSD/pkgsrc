@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/03/02 21:09:56 kim Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/05/02 20:34:00 reed Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -1806,6 +1806,7 @@ share/doc/mailman/STYLEGUIDE.txt
 share/doc/mailman/TODO
 share/doc/mailman/UPGRADING
 share/examples/mailman/mailman.conf
+share/examples/rc.d/mailman
 @dirrm share/examples/mailman
 @dirrm share/doc/mailman
 @dirrm lib/mailman/tests/msgs

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/23 22:07:59 reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:05 reed Exp $
 bin/scp
 bin/scp2
 bin/sftp
@@ -65,6 +65,7 @@ share/examples/${PKGBASE}/subconfig/anonymous.example
 share/examples/${PKGBASE}/subconfig/host_ext.example
 share/examples/${PKGBASE}/subconfig/host_int.example
 share/examples/${PKGBASE}/subconfig/user.example
+share/examples/rc.d/ssh2_secure_shell
 @dirrm share/examples/${PKGBASE}/subconfig
 @dirrm share/examples/${PKGBASE}
 @dirrm share/doc/${PKGBASE}
