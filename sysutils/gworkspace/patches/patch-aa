@@ -1,11 +1,93 @@
---- Finder/GNUmakefile.preamble.orig	2004-11-08 13:41:09.000000000 -0500
-+++ Finder/GNUmakefile.preamble	2004-11-08 13:41:32.000000000 -0500
-@@ -15,7 +15,7 @@
- ADDITIONAL_LDFLAGS +=  
+$NetBSD: patch-aa,v 1.4 2005/05/02 06:35:55 rh Exp $
+
+--- GWorkspace/Desktop/GWDesktopManager.m.orig	2005-04-01 09:43:39.000000000 +1000
++++ GWorkspace/Desktop/GWDesktopManager.m
+@@ -31,6 +31,12 @@
+ #include "GWorkspace.h"
+ #include "GWViewersManager.h"
+ #include "TShelf/TShelfWin.h"
++#include <sys/types.h>
++#include <sys/param.h>
++
++#if (defined(BSD) && BSD >= 199306)
++#include <sys/statvfs.h>
++#endif
  
- # Additional library directories the linker should search
--ADDITIONAL_LIB_DIRS += -L../FSNode/$(GNUSTEP_OBJ_DIR) 
-+ADDITIONAL_LIB_DIRS += -L../FSNode/FSNode.framework/Versions/Current
+ #define RESV_MARGIN 10
  
- ADDITIONAL_TOOL_LIBS +=
+@@ -748,9 +754,31 @@ static GWDesktopManager *desktopManager 
+   }
  
+   if (removables == nil) {
++#if (defined(BSD) && BSD >= 199306)
++    removables = [NSArray arrayWithObjects: @"/mnt", nil];
++#else
+     removables = [NSArray arrayWithObjects: @"/mnt/floppy", @"/mnt/cdrom", nil];
++#endif
+   }
+   
++#if (defined(BSD) && BSD >= 199306)
++  struct statvfs *mntbuf;
++  int mntsize = getmntinfo(&mntbuf, MNT_NOWAIT);
++
++  for (i = 0; i < mntsize; i++) {
++    if (strcmp(mntbuf[i].f_mntfromname, [fullPath cString]) == 0 ||
++        strcmp(mntbuf[i].f_mntonname,   [fullPath cString]) == 0) {
++      *removableFlag = [removables containsObject:
++                        [NSString stringWithCString: mntbuf[i].f_mntonname]];
++      *writableFlag = ( mntbuf[i].f_flag & MNT_RDONLY ) ? NO : YES;
++      *unmountableFlag = YES;
++      *fileSystemType = [NSString stringWithCString: mntbuf[i].f_fstypename];
++      *description = *fileSystemType;
++          
++      return YES;
++    }
++  }
++#else /* !BSD */
+   mtab = [NSString stringWithContentsOfFile: mtabpath];
+   mounts = [mtab componentsSeparatedByString: @"\n"];
+ 
+@@ -782,6 +810,7 @@ static GWDesktopManager *desktopManager 
+       }
+     }
+   }
++#endif
+ 
+   return NO;
+ }
+@@ -801,11 +830,27 @@ static GWDesktopManager *desktopManager 
+   }
+ 
+   if (reserved == nil) {
++#if (defined(BSD) && BSD >= 199306)
++    reserved = [NSArray arrayWithObjects: @"procfs", @"kernfs", nil];
++#else
+     reserved = [NSArray arrayWithObjects: @"proc", @"devpts", @"shm", 
+                                     @"usbdevfs", @"devpts", 
+                                     @"sysfs", @"tmpfs", nil];
++#endif
+   }
+ 
++#if (defined(BSD) && BSD >= 199306)
++  names = [NSMutableArray array];
++  struct statvfs *mntbuf;
++  int mntsize = getmntinfo(&mntbuf, MNT_NOWAIT);
++
++  for (i = 0; i < mntsize; i++) {
++    if ([reserved containsObject: [NSString stringWithCString:
++                                  mntbuf[i].f_fstypename]] == NO) {
++      [names addObject: [NSString stringWithCString: mntbuf[i].f_mntonname]];
++    }
++  }
++#else
+   mtab = [NSString stringWithContentsOfFile: mtabpath];
+   mounts = [mtab componentsSeparatedByString: @"\n"];
+   names = [NSMutableArray array];
+@@ -825,6 +870,7 @@ static GWDesktopManager *desktopManager 
+       }
+     } 
+   }
++#endif
+ 
+   return names;
+ }

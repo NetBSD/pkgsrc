@@ -1,11 +1,26 @@
---- Desktop/GNUmakefile.preamble.orig	2004-11-08 13:41:41.000000000 -0500
-+++ Desktop/GNUmakefile.preamble	2004-11-08 13:42:24.000000000 -0500
-@@ -15,6 +15,8 @@
- # Additional LDFLAGS to pass to the linker
- ADDITIONAL_LDFLAGS +=  
+$NetBSD: patch-ab,v 1.4 2005/05/02 06:35:55 rh Exp $
+
+--- GWorkspace/Preferences/VolumesPref.m.orig	2005-01-18 01:07:39.000000000 +1000
++++ GWorkspace/Preferences/VolumesPref.m
+@@ -26,6 +26,7 @@
+ #include <AppKit/AppKit.h>
+ #include "VolumesPref.h"
+ #include "FSNodeRep.h"
++#include <sys/param.h>
  
-+ADDITIONAL_LIB_DIRS += -L../FSNode/FSNode.framework/Versions/Current
-+
- # Additional library directories the linker should search
- #ifneq ($(FOUNDATION_LIB), apple)
- #  ADDITIONAL_LIB_DIRS += -LGWLib/$(GNUSTEP_OBJ_DIR) \
+ #define CHECKSIZE(sz) \
+ if (sz.width < 0) sz.width = 0; \
+@@ -64,11 +65,13 @@ static NSString *nibName = @"VolumesPref
+       
+       if (mtabpath == nil) {
+         mtabpath = @"/etc/mtab";
++#if (!defined(BSD) || BSD < 199306)
+         NSRunAlertPanel(nil, 
+                NSLocalizedString(@"The mtab path is not set. Using default value.", @""), 
+                NSLocalizedString(@"OK", @""), 
+                nil, 
+                nil);                                     
++#endif
+       }
+ 
+       [mtabField setStringValue: mtabpath];
