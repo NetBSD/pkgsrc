@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/25 18:50:31 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 11:40:40 drochner Exp $
 bin/gthumb
 lib/bonobo/servers/GNOME_GThumb_CatalogView.server
 lib/bonobo/servers/GNOME_GThumb_Viewer.server
@@ -28,11 +28,13 @@ share/gthumb/albumthemes/BlueStripes/background.png
 share/gthumb/albumthemes/BlueStripes/bottom.png
 share/gthumb/albumthemes/BlueStripes/image.gthtml
 share/gthumb/albumthemes/BlueStripes/index.gthtml
+share/gthumb/albumthemes/BlueStripes/layout.css
 share/gthumb/albumthemes/BlueStripes/left.png
 share/gthumb/albumthemes/BlueStripes/next.png
 share/gthumb/albumthemes/BlueStripes/prev.png
 share/gthumb/albumthemes/BlueStripes/preview.png
 share/gthumb/albumthemes/BlueStripes/right.png
+share/gthumb/albumthemes/BlueStripes/style.css
 share/gthumb/albumthemes/BlueStripes/thumbnail.gthtml
 share/gthumb/albumthemes/BlueStripes/top.png
 share/gthumb/albumthemes/BlueStripes/transparent.png
@@ -43,11 +45,13 @@ share/gthumb/albumthemes/Classic/background.gif
 share/gthumb/albumthemes/Classic/bot.png
 share/gthumb/albumthemes/Classic/image.gthtml
 share/gthumb/albumthemes/Classic/index.gthtml
+share/gthumb/albumthemes/Classic/layout.css
 share/gthumb/albumthemes/Classic/left.png
 share/gthumb/albumthemes/Classic/next.png
 share/gthumb/albumthemes/Classic/prev.png
 share/gthumb/albumthemes/Classic/preview.png
 share/gthumb/albumthemes/Classic/right.png
+share/gthumb/albumthemes/Classic/style.css
 share/gthumb/albumthemes/Classic/thumbnail.gthtml
 share/gthumb/albumthemes/Classic/top.png
 share/gthumb/albumthemes/ClassicClips/1.gif
@@ -56,11 +60,13 @@ share/gthumb/albumthemes/ClassicClips/background.gif
 share/gthumb/albumthemes/ClassicClips/bot.png
 share/gthumb/albumthemes/ClassicClips/image.gthtml
 share/gthumb/albumthemes/ClassicClips/index.gthtml
+share/gthumb/albumthemes/ClassicClips/layout.css
 share/gthumb/albumthemes/ClassicClips/left.png
 share/gthumb/albumthemes/ClassicClips/next.png
 share/gthumb/albumthemes/ClassicClips/prev.png
 share/gthumb/albumthemes/ClassicClips/preview.png
 share/gthumb/albumthemes/ClassicClips/right.png
+share/gthumb/albumthemes/ClassicClips/style.css
 share/gthumb/albumthemes/ClassicClips/thumbnail.gthtml
 share/gthumb/albumthemes/ClassicClips/top.png
 share/gthumb/albumthemes/Clean/1.gif
@@ -69,11 +75,13 @@ share/gthumb/albumthemes/Clean/background.gif
 share/gthumb/albumthemes/Clean/bot.png
 share/gthumb/albumthemes/Clean/image.gthtml
 share/gthumb/albumthemes/Clean/index.gthtml
+share/gthumb/albumthemes/Clean/layout.css
 share/gthumb/albumthemes/Clean/left.png
 share/gthumb/albumthemes/Clean/left_arrow.png
 share/gthumb/albumthemes/Clean/preview.png
 share/gthumb/albumthemes/Clean/right.png
 share/gthumb/albumthemes/Clean/right_arrow.png
+share/gthumb/albumthemes/Clean/style.css
 share/gthumb/albumthemes/Clean/thumbnail.gthtml
 share/gthumb/albumthemes/Clean/top.png
 share/gthumb/albumthemes/Clean/up_arrow.png
@@ -83,11 +91,13 @@ share/gthumb/albumthemes/NeatRound/background.gif
 share/gthumb/albumthemes/NeatRound/bot.png
 share/gthumb/albumthemes/NeatRound/image.gthtml
 share/gthumb/albumthemes/NeatRound/index.gthtml
+share/gthumb/albumthemes/NeatRound/layout.css
 share/gthumb/albumthemes/NeatRound/left.png
 share/gthumb/albumthemes/NeatRound/next.png
 share/gthumb/albumthemes/NeatRound/prev.png
 share/gthumb/albumthemes/NeatRound/preview.png
 share/gthumb/albumthemes/NeatRound/right.png
+share/gthumb/albumthemes/NeatRound/style.css
 share/gthumb/albumthemes/NeatRound/thumbnail.gthtml
 share/gthumb/albumthemes/NeatRound/top.png
 share/gthumb/albumthemes/NeatSquare/1.gif
@@ -96,11 +106,13 @@ share/gthumb/albumthemes/NeatSquare/background.gif
 share/gthumb/albumthemes/NeatSquare/bot.png
 share/gthumb/albumthemes/NeatSquare/image.gthtml
 share/gthumb/albumthemes/NeatSquare/index.gthtml
+share/gthumb/albumthemes/NeatSquare/layout.css
 share/gthumb/albumthemes/NeatSquare/left.png
 share/gthumb/albumthemes/NeatSquare/next.png
 share/gthumb/albumthemes/NeatSquare/prev.png
 share/gthumb/albumthemes/NeatSquare/preview.png
 share/gthumb/albumthemes/NeatSquare/right.png
+share/gthumb/albumthemes/NeatSquare/style.css
 share/gthumb/albumthemes/NeatSquare/thumbnail.gthtml
 share/gthumb/albumthemes/NeatSquare/top.png
 share/gthumb/glade/ftp-client-48.png
@@ -133,6 +145,7 @@ ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gthumb.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gthumb.mo
@@ -141,6 +154,7 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gthumb.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gthumb.mo
@@ -161,16 +175,20 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gthumb.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gthumb.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gthumb.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gthumb.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gthumb.mo
 share/omf/gthumb/gthumb-C.omf
 share/pixmaps/gthumb.png
+share/pixmaps/gthumb-logo.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gthumb
 @comment in scrollkeeper: @dirrm share/omf
