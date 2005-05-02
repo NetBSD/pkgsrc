@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.56 2005/05/02 06:36:29 jlam Exp $
+# $NetBSD: replace.mk,v 1.57 2005/05/02 21:10:03 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -37,6 +37,8 @@ USE_TOOLS+=	${USE_GNU_TOOLS:S/^awk$/gawk/:S/^make$/gmake/:S/^sed$/gsed/}
 .if defined(USE_TBL) && !empty(USE_TBL:M[yY][eE][sS])
 USE_TOOLS+=	tbl
 .endif
+
+.include "../../mk/tools/imake.mk"
 
 ######################################################################
 
