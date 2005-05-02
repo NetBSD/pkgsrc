@@ -1,0 +1,21 @@
+$NetBSD: patch-bd,v 1.1 2005/05/02 17:58:00 drochner Exp $
+
+--- proc_pie.c.orig	2005-05-02 21:46:37.000000000 +0200
++++ proc_pie.c
+@@ -225,7 +225,7 @@ for( j = 0; j < 2; j++ ) { /* first time
+ 			
+ 		first = 1;
+ 		stheta = theta;
+-		if( j == 1 && strnicmp( outlinedetails, "no", 2 )==0 ) break; /* goto DOLAB; */
++		if( j == 1 && strnicmp( outlinedetails, "no", 2 )==0 ) /* break; */ goto DOLAB;  /* changed again, scg 4/29/05 */
+ 		for( ; theta > stop; theta -= 0.03 ) {
+ 			if( theta - stop < 0.03 ) theta = stop;
+ 			x = cx + (radius * cos( theta ));
+@@ -273,6 +273,7 @@ for( j = 0; j < 2; j++ ) { /* first time
+ 
+ 		/* labeling */  /* if doing legend, handle this during j == 0 because color is available;
+ 				   otherwise do labeling during j == 1 to avoid color fill obliterating labels.. */
++		DOLAB:
+ 		if( ( j == 0 && ilabmode == LEGEND ) || ( j == 1 && ilabmode != 0 ) ) {
+ 			strcpy( label, "" );
+ 
