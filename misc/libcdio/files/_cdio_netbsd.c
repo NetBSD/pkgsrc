@@ -1,4 +1,4 @@
-/* $NetBSD: _cdio_netbsd.c,v 1.2 2004/10/05 14:23:18 drochner Exp $ */
+/* $NetBSD: _cdio_netbsd.c,v 1.3 2005/05/02 17:11:17 drochner Exp $ */
 
 /*
  * Copyright (c) 2003
@@ -72,10 +72,10 @@ typedef struct {
 	int sessionformat[100]; /* format of the session the track is in */
 } _img_private_t;
 
-static int
+static driver_return_code_t
 run_scsi_cmd_freebsd(const void *p_user_data, unsigned int i_timeout_ms,
-		     unsigned int i_cdb, const scsi_mmc_cdb_t *p_cdb, 
-		     scsi_mmc_direction_t e_direction, 
+		     unsigned int i_cdb, const mmc_cdb_t *p_cdb, 
+		     mmc_direction_t e_direction, 
 		     unsigned int i_buf, void *p_buf )
 {
 	const _img_private_t *_obj = p_user_data;
@@ -487,7 +487,14 @@ cdio_get_default_device_freebsd()
 	return strdup(DEFAULT_CDIO_DEVICE);
 }
 
-static cdio_funcs _funcs = {
+driver_return_code_t 
+close_tray_freebsd (const char *psz_device)
+{
+
+	return DRIVER_OP_SUCCESS;
+}
+
+static cdio_funcs_t _funcs = {
 	.eject_media        = _cdio_eject_media,
 	.free               = cdio_generic_free,
 	.get_arg            = _cdio_get_arg,
@@ -495,9 +502,9 @@ static cdio_funcs _funcs = {
 	.get_default_device = cdio_get_default_device_freebsd,
 	.get_devices        = cdio_get_devices_freebsd,
 	.get_discmode       = get_discmode_generic,
-	.get_drive_cap      = scsi_mmc_get_drive_cap_generic,
+	.get_drive_cap      = get_drive_cap_mmc,
 	.get_first_track_num= _cdio_get_first_track_num,
-	.get_mcn            = scsi_mmc_get_mcn_generic,
+	.get_mcn            = get_mcn_mmc,
 	.get_num_tracks     = _cdio_get_num_tracks,
 	.get_track_format   = _cdio_get_track_format,
 	.get_track_green    = _cdio_get_track_green,
@@ -509,9 +516,13 @@ static cdio_funcs _funcs = {
 	.read_mode2_sector  = _cdio_read_mode2_sector,
 	.read_mode2_sectors = _cdio_read_mode2_sectors,
 	.read_toc           = read_toc_freebsd,
-	.run_scsi_mmc_cmd   = run_scsi_cmd_freebsd,
+#if 1
+	.run_mmc_cmd   = run_scsi_cmd_freebsd,
+#endif
 	.set_arg            = _cdio_set_arg,
+#if 0
 	.stat_size          = _cdio_stat_size
+#endif
 };
 
 CdIo *
@@ -520,7 +531,7 @@ cdio_open_freebsd(const char *source_name)
 	CdIo *ret;
 	_img_private_t *_data;
 
-	_data = _cdio_malloc(sizeof(_img_private_t));
+	_data = calloc(1, sizeof(_img_private_t));
 	_data->gen.init = false;
 	_data->gen.fd = -1;
 	_data->toc_valid = false;
