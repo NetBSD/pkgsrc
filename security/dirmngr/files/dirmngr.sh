@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dirmngr,v 1.1 2005/01/04 13:40:38 shannonjr Exp $
+# $NetBSD: dirmngr.sh,v 1.1 2005/05/02 22:33:37 shannonjr Exp $
 #
 # PROVIDE: dirmngr
 # REQUIRE: DAEMON
