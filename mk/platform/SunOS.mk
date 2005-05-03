@@ -1,7 +1,17 @@
-# $NetBSD: SunOS.mk,v 1.11 2005/05/03 15:10:59 jlam Exp $
+# $NetBSD: SunOS.mk,v 1.12 2005/05/03 18:30:12 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
+ECHO_N?=	${ECHO} -n
+PKGLOCALEDIR?=	lib
+PS?=		/bin/ps
+# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
+# and remove this comment.
+RSH?=		/usr/bin/rsh
+SU?=		/usr/bin/su
+TYPE?=		/usr/bin/type
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 AWK?=		/usr/bin/nawk
 BASENAME?=	/usr/bin/basename
 CAT?=		/usr/bin/cat
@@ -14,7 +24,6 @@ CUT?=		/usr/bin/cut
 DATE?=		/usr/xpg4/bin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		/usr/ucb/echo
-ECHO_N?=	${ECHO} -n
 EGREP?=		/usr/xpg4/bin/grep -E
 EXPR?=		/usr/xpg4/bin/expr
 FALSE?=		/usr/bin/false
@@ -58,14 +67,9 @@ PATCH?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}patch
 .endif
 PAX?=		${LOCALBASE}/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
-PKGLOCALEDIR?=	lib
-PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/usr/bin/rm
 RMDIR?=		/usr/bin/rmdir
-# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
-# and remove this comment.
-RSH?=		/usr/bin/rsh
 .if exists(${LOCALBASE}/bin/nbsed)
 SED?=		${LOCALBASE}/bin/nbsed
 .else
@@ -75,7 +79,6 @@ SETENV?=	/usr/bin/env
 SH?=		/bin/ksh
 SHLOCK=		${LOCALBASE}/bin/shlock
 SORT?=		/usr/bin/sort
-SU?=		/usr/bin/su
 TAIL?=		/usr/xpg4/bin/tail
 TAR?=		${LOCALBASE}/bin/tar
 TEE?=		/usr/bin/tee
@@ -84,9 +87,9 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
 TSORT?=		/usr/ccs/bin/tsort
-TYPE?=		/usr/bin/type
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
+.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
