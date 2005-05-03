@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/05/03 19:30:40 agc Exp $
+
+--- configure	2005/04/16 07:40:21	1.1
++++ configure	2005/04/16 07:40:51
+@@ -2511,6 +2511,10 @@
+ 			AFS_PARAM_COMMON=param.nbsd30.h
+ 			AFS_SYSNAME="i386_nbsd30"
+ 			;;
++		i?86-*-netbsd*3.99*)
++			AFS_PARAM_COMMON=param.nbsd30.h
++			AFS_SYSNAME="i386_nbsd30"
++			;;
+ 		hppa*-hp-hpux11.0*)
+ 			AFS_SYSNAME="hp_ux110"
+ 			;;

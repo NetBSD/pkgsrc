@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/03 19:30:40 agc Exp $
+
+SHA1 (openafs-1.3.81-src.tar.bz2) = f1294a04d5faa206d863b6645db6d96fb4862b16
+RMD160 (openafs-1.3.81-src.tar.bz2) = ef9c89ebdf916022b96e95c0ef6889c314dd337a
+Size (openafs-1.3.81-src.tar.bz2) = 10959284 bytes
+SHA1 (patch-aa) = 8137c7f77b63fdc376f464310d84ccc8e491c196
