@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1624 2005/05/03 20:41:53 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1625 2005/05/03 21:30:42 kristerw Exp $
 #
 # This file is in the public domain.
 #
@@ -2384,7 +2384,8 @@ real-su-install: ${MESSAGE}
 	fi
 .if defined(PKG_DEVELOPER) && (${CHECK_FILES} == "YES")
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Generating pre-install file lists"
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} -type f -or -type l -print \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} \
+		\( -type f -or -type l \) -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.prefix.pre \
 		|| ${TRUE}
 .  if ${CHECK_FILES_STRICT} == "YES"
@@ -2450,7 +2451,8 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 .if defined(PKG_DEVELOPER) && (${CHECK_FILES} == "YES")
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Generating post-install file lists"
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} -type f -or -type l -print \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} \
+		\( -type f -or -type l \) -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.prefix.post \
 		|| ${TRUE}
 .  if ${CHECK_FILES_STRICT} == "YES"
