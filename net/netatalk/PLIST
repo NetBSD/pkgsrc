@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/05/02 20:34:02 reed Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/05/03 15:41:42 wiz Exp $
 bin/achfile
 bin/acleandir.rc
 bin/adv1tov2
@@ -161,10 +161,10 @@ share/examples/netatalk/afpd.conf
 share/examples/netatalk/atalkd.conf
 share/examples/netatalk/netatalk.conf
 share/examples/netatalk/papd.conf
-share/examples/rc.d/timelord
-share/examples/rc.d/papd
 share/examples/rc.d/afpd
 share/examples/rc.d/atalkd
+share/examples/rc.d/papd
+share/examples/rc.d/timelord
 share/netatalk/pagecount.ps
 @dirrm share/netatalk
 @dirrm share/examples/netatalk
