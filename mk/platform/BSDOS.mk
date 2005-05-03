@@ -1,4 +1,4 @@
-# $NetBSD: BSDOS.mk,v 1.8 2005/03/18 18:16:35 tv Exp $
+# $NetBSD: BSDOS.mk,v 1.9 2005/05/03 15:10:59 jlam Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -39,7 +39,6 @@ GTAR?=		/bin/tar
 .endif
 GUNZIP_CMD?=	/usr/contrib/bin/gunzip -f
 GZCAT?=		/usr/contrib/bin/gzcat
-GZIP?=		-9
 GZIP_CMD?=	/usr/contrib/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
