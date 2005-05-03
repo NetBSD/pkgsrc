@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1623 2005/05/03 16:30:34 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1624 2005/05/03 20:41:53 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -941,9 +941,10 @@ USE_LANGUAGES?=		# empty
 #
 USE_TOOLS+=	[ awk basename cat chgrp chmod chown cmp cp cut date	\
 		dirname echo egrep env expr false fgrep file find grep	\
-		gtar gunzip gzcat gzip head hostname id ldconfig ln ls	\
-		m4 mkdir mtree mv nice pax pwd rm rmdir sed sh shlock	\
-		sort tail tee test touch tr true tsort wc xargs
+		gtar gunzip gzcat gzip head hostname id install		\
+		ldconfig ln ls m4 mkdir mtree mv nice pax pwd rm rmdir	\
+		sed sh shlock sort tail tee test touch tr true tsort wc	\
+		xargs
 
 # We need a mail command to send mail to ${PKGSRC_MESSAGE_RECIPIENTS}.
 .if !empty(PKGSRC_MESSAGE_RECIPIENTS)
@@ -2124,6 +2125,12 @@ SUBST_SED.pkgconfig=		${PKGCONFIG_OVERRIDE_SED}
 pre-configure-override: ${_CONFIGURE_PREREQ}
 	@${DO_NADA}
 
+.if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+_INSTALL_CMD=	${INSTALL}
+.else
+_INSTALL_CMD=	`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'`
+.endif
+
 .PHONY: do-configure
 .if !target(do-configure)
 do-configure:
@@ -2131,8 +2138,8 @@ do-configure:
 .    for DIR in ${CONFIGURE_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} \
 	    AWK="${AWK}" \
-	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
-	    ac_given_INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
+	    INSTALL="${_INSTALL_CMD} -c -o ${BINOWN} -g ${BINGRP}" \
+	    ac_given_INSTALL="${_INSTALL_CMD} -c -o ${BINOWN} -g ${BINGRP}" \
 	    INSTALL_DATA="${INSTALL_DATA}"				\
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}"			\
 	    INSTALL_GAME="${INSTALL_GAME}"				\

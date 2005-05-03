@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.5 2005/05/03 18:30:12 jlam Exp $
+# $NetBSD: OSF1.mk,v 1.6 2005/05/03 20:41:53 jlam Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -12,7 +12,6 @@
 CPP?=		/usr/bin/cpp
 ECHO_N?=	${SETENV} CMD_ENV=bsd /usr/bin/echo -n
 FETCH_CMD?= ${LOCALBASE}/bin/ftp
-INSTALL=	${LOCALBASE}/bin/install-sh
 PKGLOCALEDIR=	share
 PS?=		/bin/ps
 STRIP?=		/usr/bin/strip
@@ -51,6 +50,7 @@ GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
+INSTALL=	${LOCALBASE}/bin/install-sh
 LDCONFIG?=	${TRUE}
 LN?=		/bin/ln
 LS?=		/bin/ls

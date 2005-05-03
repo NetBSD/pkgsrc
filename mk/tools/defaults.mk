@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.5 2005/05/03 16:30:34 jlam Exp $
+# $NetBSD: defaults.mk,v 1.6 2005/05/03 20:41:53 jlam Exp $
 
 .if !defined(TOOLS_DEFAULTS_MK)
 TOOLS_DEFAULTS_MK=	defined
@@ -48,6 +48,7 @@ _TOOLS_VARNAME.head=		HEAD
 _TOOLS_VARNAME.hostname=	HOSTNAME_CMD
 _TOOLS_VARNAME.id=		ID
 _TOOLS_VARNAME.imake=		IMAKE
+_TOOLS_VARNAME.install=		INSTALL
 _TOOLS_VARNAME.ldconfig=	LDCONFIG
 _TOOLS_VARNAME.lex=		LEX
 _TOOLS_VARNAME.ln=		LN

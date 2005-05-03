@@ -1,12 +1,9 @@
-# $NetBSD: AIX.mk,v 1.15 2005/05/03 18:30:12 jlam Exp $
+# $NetBSD: AIX.mk,v 1.16 2005/05/03 20:41:53 jlam Exp $
 #
 # Variable definitions for the AIX operating system.
 
 CPP?=		${LOCALBASE}/bin/cpp
 ECHO_N?=	${ECHO} -n
-#.if ${INSTALL} == "install"
-INSTALL=	${LOCALBASE}/bin/install-sh
-#.endif
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 # XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
@@ -68,6 +65,9 @@ GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
+#.if ${INSTALL} == "install"
+INSTALL=	${LOCALBASE}/bin/install-sh
+#.endif
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 LS?=		/bin/ls

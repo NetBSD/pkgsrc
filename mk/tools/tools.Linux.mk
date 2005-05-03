@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.8 2005/05/03 16:30:34 jlam Exp $
+# $NetBSD: tools.Linux.mk,v 1.9 2005/05/03 20:41:53 jlam Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -83,6 +83,7 @@ TOOLS_PLATFORM.id?=		/bin/id
 .elif exists(/usr/bin/id)
 TOOLS_PLATFORM.id?=		/usr/bin/id
 .endif
+TOOLS_PLATFORM.install?=	/usr/bin/install
 TOOLS_PLATFORM.ldconfig?=	/sbin/ldconfig
 TOOLS_PLATFORM.ln?=		/bin/ln
 TOOLS_PLATFORM.ls?=		/bin/ls
