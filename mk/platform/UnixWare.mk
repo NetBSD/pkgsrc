@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.8 2005/03/18 18:16:35 tv Exp $
+# $NetBSD: UnixWare.mk,v 1.9 2005/05/03 15:10:59 jlam Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -31,7 +31,6 @@ GTAR?=		${LOCALBASE}/bin/tar
 .if exists(${LOCALBASE}/bin/gzip)
 GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
 GZCAT?=		${LOCALBASE}/bin/zcat
-GZIP?=		-9
 GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
 .elif exists(/usr/local/bin/gzip)
 GUNZIP_CMD?=	/usr/local/bin/gzip -df

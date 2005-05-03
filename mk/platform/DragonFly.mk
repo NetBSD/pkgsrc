@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.11 2005/03/22 15:40:06 tv Exp $
+# $NetBSD: DragonFly.mk,v 1.12 2005/05/03 15:10:59 jlam Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -31,7 +31,6 @@ GTAR?=		/usr/bin/tar
 .endif
 GUNZIP_CMD?=	/usr/bin/gunzip -f
 GZCAT?=		/usr/bin/gzcat
-GZIP?=		-9
 GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname

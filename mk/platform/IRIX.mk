@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.11 2005/04/16 20:03:02 schwarz Exp $
+# $NetBSD: IRIX.mk,v 1.12 2005/05/03 15:10:59 jlam Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -36,7 +36,6 @@ GZCAT?=		/usr/sbin/gzcat
 .else
 GZCAT?=		/usr/bsd/zcat
 .endif
-GZIP?=		-9
 GZIP_CMD?=	/usr/sbin/gzip -nf ${GZIP}
 HEAD?=		/usr/bsd/head
 HOSTNAME_CMD?=	/usr/bsd/hostname

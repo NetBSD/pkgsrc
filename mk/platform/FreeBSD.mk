@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.8 2005/03/18 18:16:35 tv Exp $
+# $NetBSD: FreeBSD.mk,v 1.9 2005/05/03 15:10:59 jlam Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -31,7 +31,6 @@ GTAR?=		/usr/bin/tar
 .endif
 GUNZIP_CMD?=	/usr/bin/gunzip -f
 GZCAT?=		/usr/bin/gzcat
-GZIP?=		-9
 GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
