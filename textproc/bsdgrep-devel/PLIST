@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/31 09:37:51 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/03 21:42:53 kristerw Exp $
 bin/bgrep
 bin/ebgrep
 bin/fbgrep
 bin/zbgrep
+bin/zebgrep
+bin/zfbgrep
 man/man1/bgrep.1
 man/man1/ebgrep.1
 man/man1/fbgrep.1
 man/man1/zbgrep.1
+man/man1/zebgrep.1
+man/man1/zfbgrep.1

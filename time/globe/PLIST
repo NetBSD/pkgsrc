@@ -1,1 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/26 20:39:14 is Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/03 21:38:14 kristerw Exp $
+bin/globe
+man/man1/globe.1
