@@ -1,0 +1,76 @@
+$NetBSD: patch-au,v 1.1 2005/05/03 11:18:47 xtraeme Exp $
+
+--- fpu/softfloat-native.h.orig	2005-04-27 22:52:05.000000000 +0200
++++ fpu/softfloat-native.h	2005-04-29 01:23:27.000000000 +0200
+@@ -36,9 +36,9 @@
+ #if defined(_BSD) && !defined(__APPLE__)
+ enum {
+     float_round_nearest_even = FP_RN,
+-    float_round_down         = FE_RM,
+-    float_round_up           = FE_RP,
+-    float_round_to_zero      = FE_RZ
++    float_round_down         = FP_RM,
++    float_round_up           = FP_RP,
++    float_round_to_zero      = FP_RZ
+ };
+ #elif defined(__arm__)
+ enum {
+@@ -143,15 +143,15 @@
+ }
+ INLINE char float32_le_quiet( float32 a, float32 b STATUS_PARAM)
+ {
+-    return islessequal(a, b);
++    return __builtin_islessequal(a, b);
+ }
+ INLINE char float32_lt_quiet( float32 a, float32 b STATUS_PARAM)
+ {
+-    return isless(a, b);
++    return __builtin_isless(a, b);
+ }
+ INLINE char float32_unordered( float32 a, float32 b STATUS_PARAM)
+ {
+-    return isunordered(a, b);
++    return __builtin_isunordered(a, b);
+ 
+ }
+ char float32_compare( float32, float32 STATUS_PARAM );
+@@ -223,16 +223,16 @@
+ }
+ INLINE char float64_le_quiet( float64 a, float64 b STATUS_PARAM)
+ {
+-    return islessequal(a, b);
++    return __builtin_islessequal(a, b);
+ }
+ INLINE char float64_lt_quiet( float64 a, float64 b STATUS_PARAM)
+ {
+-    return isless(a, b);
++    return __builtin_isless(a, b);
+ 
+ }
+ INLINE char float64_unordered( float64 a, float64 b STATUS_PARAM)
+ {
+-    return isunordered(a, b);
++    return __builtin_isunordered(a, b);
+ 
+ }
+ char float64_compare( float64, float64 STATUS_PARAM );
+@@ -304,16 +304,16 @@
+ }
+ INLINE char floatx80_le_quiet( floatx80 a, floatx80 b STATUS_PARAM)
+ {
+-    return islessequal(a, b);
++    return __builtin_islessequal(a, b);
+ }
+ INLINE char floatx80_lt_quiet( floatx80 a, floatx80 b STATUS_PARAM)
+ {
+-    return isless(a, b);
++    return __builtin_isless(a, b);
+ 
+ }
+ INLINE char floatx80_unordered( floatx80 a, floatx80 b STATUS_PARAM)
+ {
+-    return isunordered(a, b);
++    return __builtin_isunordered(a, b);
+ 
+ }
+ char floatx80_compare( floatx80, floatx80 STATUS_PARAM );

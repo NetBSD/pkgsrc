@@ -1,10 +1,10 @@
-$NetBSD: patch-ap,v 1.1 2004/11/15 11:35:30 xtraeme Exp $
+$NetBSD: patch-ap,v 1.2 2005/05/03 11:18:47 xtraeme Exp $
 
---- target-sparc/cpu.h	9 Oct 2004 18:08:01 -0000	1.8
-+++ target-sparc/cpu.h	15 Nov 2004 09:09:31 -0000
-@@ -145,8 +145,7 @@
- int cpu_sparc_exec(CPUSPARCState *s);
- int cpu_sparc_close(CPUSPARCState *s);
+--- target-sparc/cpu.h.orig	2005-04-27 22:52:05.000000000 +0200
++++ target-sparc/cpu.h	2005-04-29 01:11:35.000000000 +0200
+@@ -194,8 +194,7 @@
+ 	cpu_set_cwp(env, _tmp & PSR_CWP & (NWINDOWS - 1));		\
+     } while (0)
  
 -struct siginfo;
 -int cpu_sparc_signal_handler(int hostsignum, struct siginfo *info, void *puc);

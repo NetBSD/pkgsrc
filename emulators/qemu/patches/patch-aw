@@ -1,0 +1,19 @@
+$NetBSD: patch-aw,v 1.1 2005/05/03 11:18:47 xtraeme Exp $
+
+Workaround for x86_64 target, patch from Hubert Feyrer.
+
+Index: dyngen.c
+===================================================================
+RCS file: /cvsroot/qemu/qemu/dyngen.c,v
+retrieving revision 1.40
+diff -u -r1.40 dyngen.c
+--- dyngen.c	27 Apr 2005 19:55:58 -0000	1.40
++++ dyngen.c	1 May 2005 20:22:09 -0000
+@@ -1587,6 +1587,7 @@
+                 if(!sym_name)
+                     continue;
+                 if (*sym_name && 
++                    !strstart(sym_name, "bswap64", NULL) && /* HF hack */
+                     !strstart(sym_name, "__op_param", NULL) &&
+                     !strstart(sym_name, "__op_jmp", NULL) &&
+                     !strstart(sym_name, "__op_gen_label", NULL)) {

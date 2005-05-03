@@ -1,11 +1,11 @@
-QEMU is a FAST! processor emulator using dynamic translation to achieve 
+QEMU is a FAST! processor emulator using dynamic translation to achieve
 good emulation speed, QEMU has two operating modes:
 
-    * Full system emulation. In this mode, QEMU emulates a full system 
+    * Full system emulation. In this mode, QEMU emulates a full system
       (for example a PC), including a processor and various peripherals.
       It can be used to launch different Operating Systems without rebooting
       the PC or to debug system code.
-    * User mode emulation (Linux host only). In this mode, QEMU can launch 
-      Linux processes compiled for one CPU on another CPU. It can be used 
+    * User mode emulation (Linux host only). In this mode, QEMU can launch
+      Linux processes compiled for one CPU on another CPU. It can be used
       to launch the Wine Windows API emulator or to ease cross-compilation
-      and cross-debugging. 
+      and cross-debugging.
