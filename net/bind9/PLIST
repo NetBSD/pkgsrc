@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/05/02 20:34:01 reed Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/05/03 15:38:17 wiz Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -315,8 +315,8 @@ sbin/named-checkconf
 sbin/named-checkzone
 sbin/rndc
 sbin/rndc-confgen
-share/examples/rc.d/named9
 share/examples/rc.d/lwresd
+share/examples/rc.d/named9
 @dirrm include/lwres
 @dirrm include/isccfg
 @dirrm include/isccc
