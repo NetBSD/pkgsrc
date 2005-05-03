@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/02/07 11:35:45 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2005/05/03 15:40:30 wiz Exp $
 
 # Global and legacy options
 
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--enable-cups
 BUILD_DEFS+=		USE_OPENLDAP
 CONFIGURE_ARGS+=	--with-ldapsam
 PLIST_SUBST+=		SAMBA_LDAP=""
-.else   
+.else
 PLIST_SUBST+=		SAMBA_LDAP="@comment "
 MESSAGE_SRC=		${.CURDIR}/MESSAGE.common ${.CURDIR}/MESSAGE.smbpasswd
 SMBPASSWD_FILE=		/dev/null ${SAMBA_PRIVATE}/smbpasswd		\
