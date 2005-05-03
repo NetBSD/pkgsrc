@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10012 2005/05/03 20:08:24 drochner Exp $
+$NetBSD: CHANGES,v 1.10013 2005/05/03 22:22:26 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2273,3 +2273,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Added openafs-1.3.81 [agc 2005-05-03]
 	Updated vcdimager-devel to 0.7.21 [drochner 2005-05-03]
 	Added py-gnome2-extras-2.10.1 [drochner 2005-05-03]
+	Updated globe to 19940326nb1 [kristerw 2005-05-03]
+	Updated bsdgrep-devel to 20040505nb2 [kristerw 2005-05-03]
+	Updated setquota to 0.1nb1 [kristerw 2005-05-03]
