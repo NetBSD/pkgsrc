@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.59 2005/05/03 16:30:34 jlam Exp $
+# $NetBSD: replace.mk,v 1.60 2005/05/03 17:14:14 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -786,9 +786,10 @@ ${_TOOLS_VARNAME.wc}=		${TOOLS_REAL_CMD.wc}
 MAKEFLAGS+=			TOOLS_IGNORE.xargs=
 .  elif !empty(_TOOLS_USE_PKGSRC.xargs:M[yY][eE][sS])
 TOOLS_DEPENDS.xargs?=		findutils>=4.1:../../sysutils/findutils
-TOOLS_SYMLINK+=			xargs
+TOOLS_WRAP+=			xargs
 TOOLS_REAL_CMD.xargs=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}xargs
-${_TOOLS_VARNAME.xargs}=	${TOOLS_REAL_CMD.xargs}
+TOOLS_ARGS.xargs=		-r	# don't run command if stdin is empty
+${_TOOLS_VARNAME.xargs}=	${TOOLS_REAL_CMD.xargs} ${TOOLS_ARGS.xargs}
 .  endif
 .endif
 
