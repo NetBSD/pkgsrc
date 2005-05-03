@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3463 2005/05/03 12:01:41 wiz Exp $
+$NetBSD: TODO,v 1.3464 2005/05/03 12:44:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -490,7 +490,6 @@ Suggested package updates
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.40
 	o gogo-3.11p1
-	o gopchop-1.1.7
 	o gpsdrive-2.09
 	o gpsim-devel-20041104
 	o gputils-0.13.0
