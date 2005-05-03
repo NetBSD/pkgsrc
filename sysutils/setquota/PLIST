@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/15 15:46:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/03 21:52:33 kristerw Exp $
+man/cat8/getquota.0
+man/cat8/setquota.0
 man/man8/getquota.8
 man/man8/setquota.8
 sbin/getquota
