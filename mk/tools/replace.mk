@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.57 2005/05/02 21:10:03 jlam Exp $
+# $NetBSD: replace.mk,v 1.58 2005/05/03 15:17:26 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -410,9 +410,10 @@ TOOLS_CMD.gtar=			${TOOLS_DIR}/bin/tar
 MAKEFLAGS+=			TOOLS_IGNORE.gunzip=
 .  elif !empty(_TOOLS_USE_PKGSRC.gunzip:M[yY][eE][sS])
 TOOLS_DEPENDS.gunzip?=		gzip-base>=1.2.4b:../../archivers/gzip-base
-TOOLS_SYMLINK+=			gunzip
+TOOLS_WRAP+=			gunzip
 TOOLS_REAL_CMD.gunzip=		${LOCALBASE}/bin/gunzip
-${_TOOLS_VARNAME.gunzip}=	${TOOLS_REAL_CMD.gunzip}
+TOOLS_ARGS.gunzip=		-f
+${_TOOLS_VARNAME.gunzip}=	${TOOLS_REAL_CMD.gunzip} ${TOOLS_ARGS.gunzip}
 .  endif
 .endif
 
@@ -432,9 +433,10 @@ ${_TOOLS_VARNAME.gzcat}=	${TOOLS_REAL_CMD.gzcat}
 MAKEFLAGS+=			TOOLS_IGNORE.gzip=
 .  elif !empty(_TOOLS_USE_PKGSRC.gzip:M[yY][eE][sS])
 TOOLS_DEPENDS.gzip?=		gzip-base>=1.2.4b:../../archivers/gzip-base
-TOOLS_SYMLINK+=			gzip
+TOOLS_WRAP+=			gzip
 TOOLS_REAL_CMD.gzip=		${LOCALBASE}/bin/gzip
-${_TOOLS_VARNAME.gzip}=		${TOOLS_REAL_CMD.gzip}
+TOOLS_ARGS.gzip=		-nf ${GZIP}
+${_TOOLS_VARNAME.gzip}=		${TOOLS_REAL_CMD.gzip} ${TOOLS_ARGS.gzip}
 .  endif
 .endif
 
