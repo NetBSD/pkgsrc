@@ -1,7 +1,19 @@
-# $NetBSD: NetBSD.mk,v 1.11 2005/05/03 15:10:59 jlam Exp $
+# $NetBSD: NetBSD.mk,v 1.12 2005/05/03 18:30:12 jlam Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
+# Needed for 1.6.1 and earlier due to rpcgen bugs and paths
+.if defined(CPP) && ${CPP} == "cpp"
+CPP=		/usr/bin/cpp
+.endif
+ECHO_N?=	${ECHO} -n
+PKGLOCALEDIR?=	share
+PS?=		/bin/ps
+RSH?=		/usr/bin/rsh
+SU?=		/usr/bin/su
+TYPE?=		type				# Shell builtin
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
 CAT?=		/bin/cat
@@ -10,15 +22,10 @@ CHOWN?=		/usr/sbin/chown
 CHGRP?=		/usr/bin/chgrp
 CMP?=		/usr/bin/cmp
 CP?=		/bin/cp
-# Needed for 1.6.1 and earlier due to rpcgen bugs and paths
-.if defined(CPP) && ${CPP} == "cpp"
-CPP=		/usr/bin/cpp
-.endif
 CUT?=		/usr/bin/cut
 DATE?=		/bin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
-ECHO_N?=	${ECHO} -n
 EGREP?=		/usr/bin/egrep
 EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
@@ -54,18 +61,14 @@ NICE?=		/usr/bin/nice
 PATCH?=		/usr/bin/patch
 PAX?=		/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
-PKGLOCALEDIR?=	share
-PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
-RSH?=		/usr/bin/rsh
 SED?=		/usr/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/sh
 SHLOCK=		/usr/bin/shlock
 SORT?=		/usr/bin/sort
-SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
 .if exists(/bin/tar)
 TAR?=		/bin/tar
@@ -78,9 +81,9 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		true				# Shell builtin
 TSORT?=		/usr/bin/tsort
-TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
+.endif
 
 .if exists(/usr/sbin/user)
 USERADD?=	/usr/sbin/useradd
