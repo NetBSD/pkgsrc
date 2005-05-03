@@ -1,4 +1,4 @@
-# $NetBSD: tools.OSF1.mk,v 1.4 2005/05/02 04:42:08 jlam Exp $
+# $NetBSD: tools.OSF1.mk,v 1.5 2005/05/03 16:30:34 jlam Exp $
 #
 # System-supplied tools for the OSF/1 operating system.
 
@@ -33,6 +33,7 @@ TOOLS_PLATFORM.ldconfig?=	${TOOLS_PLATFORM.true}
 TOOLS_PLATFORM.ln?=		/bin/ln
 TOOLS_PLATFORM.ls?=		/bin/ls
 TOOLS_PLATFORM.m4?=		/usr/bin/m4
+TOOLS_PLATFORM.mail?=		/usr/bin/mailx
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 TOOLS_PLATFORM.mv?=		/bin/mv
 TOOLS_PLATFORM.nice?=		/usr/bin/nice

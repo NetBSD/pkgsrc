@@ -1,4 +1,4 @@
-# $NetBSD: tools.IRIX.mk,v 1.4 2005/05/02 04:42:08 jlam Exp $
+# $NetBSD: tools.IRIX.mk,v 1.5 2005/05/03 16:30:34 jlam Exp $
 #
 # System-supplied tools for the IRIX operating system.
 
@@ -37,6 +37,7 @@ TOOLS_PLATFORM.ldconfig?=	${TOOLS_PLATFORM.true}
 TOOLS_PLATFORM.ln?=		/sbin/ln
 TOOLS_PLATFORM.ls?=		/sbin/ls
 TOOLS_PLATFORM.m4?=		/sbin/m4
+TOOLS_PLATFORM.mail?=		/usr/sbin/mailx
 TOOLS_PLATFORM.mkdir?=		/sbin/mkdir -p
 TOOLS_PLATFORM.mv?=		/sbin/mv
 TOOLS_PLATFORM.nice?=		/sbin/nice
