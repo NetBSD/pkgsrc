@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/06 21:16:15 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/05/03 18:04:10 seb Exp $
 share/examples/websvn/distconfig.inc
+${HTTPD_ROOT}/websvn/blame.php
 ${HTTPD_ROOT}/websvn/cache/tmp
 ${HTTPD_ROOT}/websvn/changes.txt
+${HTTPD_ROOT}/websvn/comp.php
 ${HTTPD_ROOT}/websvn/diff.php
+${HTTPD_ROOT}/websvn/dl.php
 ${HTTPD_ROOT}/websvn/filedetails.php
 ${HTTPD_ROOT}/websvn/form.php
+${HTTPD_ROOT}/websvn/include/bugtraq.inc
 ${HTTPD_ROOT}/websvn/include/command.inc
 ${HTTPD_ROOT}/websvn/include/configclass.inc
 ${HTTPD_ROOT}/websvn/include/feedcreator.class.php
@@ -50,8 +54,8 @@ ${HTTPD_ROOT}/websvn/templates/BlueGrey/footer.tmpl
 ${HTTPD_ROOT}/websvn/templates/BlueGrey/header.tmpl
 ${HTTPD_ROOT}/websvn/templates/BlueGrey/i-node.png
 ${HTTPD_ROOT}/websvn/templates/BlueGrey/index.tmpl
-${HTTPD_ROOT}/websvn/templates/BlueGrey/log.tmpl
 ${HTTPD_ROOT}/websvn/templates/BlueGrey/l-node.png
+${HTTPD_ROOT}/websvn/templates/BlueGrey/log.tmpl
 ${HTTPD_ROOT}/websvn/templates/BlueGrey/png.js
 ${HTTPD_ROOT}/websvn/templates/BlueGrey/repo.png
 ${HTTPD_ROOT}/websvn/templates/BlueGrey/styles.css
