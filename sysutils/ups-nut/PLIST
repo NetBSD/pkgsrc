@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/05/02 20:34:06 reed Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/05/03 15:52:25 wiz Exp $
 bin/upsc
 bin/upscmd
 bin/upslog
@@ -116,11 +116,11 @@ share/examples/nut/upsd.conf.sample
 share/examples/nut/upsd.users.sample
 share/examples/nut/upsmon.conf.sample
 share/examples/nut/upssched.conf.sample
-share/examples/rc.d/upsmon
-share/examples/rc.d/upslog
-share/examples/rc.d/upsdriver
-share/examples/rc.d/upsd
 share/examples/rc.d/ups
+share/examples/rc.d/upsd
+share/examples/rc.d/upsdriver
+share/examples/rc.d/upslog
+share/examples/rc.d/upsmon
 share/nut/cmdvartab
 share/nut/driver.list
 @dirrm share/nut
