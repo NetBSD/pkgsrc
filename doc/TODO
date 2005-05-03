@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3461 2005/05/03 11:20:24 xtraeme Exp $
+$NetBSD: TODO,v 1.3462 2005/05/03 11:24:46 darcy Exp $
 
 Suggested new packages
 ======================
@@ -876,6 +876,7 @@ Suggested package updates
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.6
 	o py-textile-2.0.10
+	o py-twisted-2.0.0 
 	o py-urwid-0.8.6
 	o py-wxWidgets-2.5.3.1
 	o py-xmltools-1.4.0
