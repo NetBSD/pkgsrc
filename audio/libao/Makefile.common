@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2005/04/11 21:44:53 tv Exp $
+# $NetBSD: Makefile.common,v 1.18 2005/05/03 14:50:28 xtraeme Exp $
 
 DISTNAME=	libao-0.8.6
 CATEGORIES=	audio devel
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	ao.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "FreeBSD"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 PLIST_SUBST+=		LIBOSS=""
 PLIST_SUBST+=		LIBSUN="@comment "
 .elif ${OPSYS} == "SunOS"
