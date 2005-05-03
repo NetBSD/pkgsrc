@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/05/02 20:34:05 reed Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/05/03 15:50:26 wiz Exp $
 bin/dirsearch
 bin/newaid
 bin/rex
@@ -174,15 +174,15 @@ sbin/funmount
 sbin/sfscd
 sbin/sfssd
 sbin/vidb
-share/examples/rc.d/sfssd
 share/examples/rc.d/sfscd
+share/examples/rc.d/sfssd
+share/examples/sfs/sfsrwsd_config.sample
 share/sfs/agentrc
 share/sfs/sfs_config
 share/sfs/sfs_srp_parms
 share/sfs/sfsauthd_config
 share/sfs/sfscd_config
 share/sfs/sfssd_config
-share/examples/sfs/sfsrwsd_config.sample
 @exec ${MKDIR} %D/var/sfs
 @dirrm share/examples/sfs
 @dirrm share/sfs
