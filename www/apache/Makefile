@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2005/04/18 14:40:17 wiz Exp $
+# $NetBSD: Makefile,v 1.163 2005/05/03 22:17:17 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -186,7 +186,7 @@ pre-patch:
 
 post-patch:
 	@cd ${WRKSRC}/src/support;					\
-	${SED}	-e "s|@INSTALL@|"`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'`" -c -o ${LIBOWN} -g ${LIBGRP}|" \
+	${SED}	-e "s|@INSTALL@|"${_INSTALL_CMD:Q}" -c -o ${LIBOWN} -g ${LIBGRP}|" \
 		apxs.pl > apxs.pl.sed;					\
 	${MV} apxs.pl.sed apxs.pl
 
