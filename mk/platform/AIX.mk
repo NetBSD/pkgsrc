@@ -1,7 +1,25 @@
-# $NetBSD: AIX.mk,v 1.14 2005/05/03 15:10:59 jlam Exp $
+# $NetBSD: AIX.mk,v 1.15 2005/05/03 18:30:12 jlam Exp $
 #
 # Variable definitions for the AIX operating system.
 
+CPP?=		${LOCALBASE}/bin/cpp
+ECHO_N?=	${ECHO} -n
+#.if ${INSTALL} == "install"
+INSTALL=	${LOCALBASE}/bin/install-sh
+#.endif
+PKGLOCALEDIR?=	share
+PS?=		/bin/ps
+# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
+# and remove this comment.
+RSH?=		/usr/bin/rsh
+# AIX strip fails too easily.  Use a wrapper script instead
+.if exists(${LOCALBASE}/bin/strip)
+STRIP?=     ${LOCALBASE}/bin/strip
+.endif
+SU?=		/usr/bin/su
+TYPE?=		type				# Shell builtin
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
 CAT?=		/bin/cat
@@ -10,12 +28,10 @@ CHOWN?=		/usr/bin/chown
 CHGRP?=		/usr/bin/chgrp
 CMP?=		/usr/bin/cmp
 CP?=		/bin/cp
-CPP?=		${LOCALBASE}/bin/cpp
 CUT?=		/usr/bin/cut
 DATE?=		/bin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
-ECHO_N?=	${ECHO} -n
 .if exists(${LOCALBASE}/bin/gegrep)
 EGREP?=		${LOCALBASE}/bin/gegrep
 .else
@@ -52,9 +68,6 @@ GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
-#.if ${INSTALL} == "install"
-INSTALL=	${LOCALBASE}/bin/install-sh
-#.endif
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 LS?=		/bin/ls
@@ -75,14 +88,9 @@ PERL5?=		${LOCALBASE}/bin/perl
 .else
 PERL5?=		/usr/bin/perl
 .endif
-PKGLOCALEDIR?=	share
-PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
-# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
-# and remove this comment.
-RSH?=		/usr/bin/rsh
 .if exists(${LOCALBASE}/bin/nbsed)
 SED?=		${LOCALBASE}/bin/nbsed
 .else
@@ -92,11 +100,6 @@ SETENV?=	/usr/bin/env
 SH?=		/bin/sh
 SHLOCK=		/usr/bin/shlock
 SORT?=		/usr/bin/sort
-# AIX strip fails too easily.  Use a wrapper script instead
-.if exists(${LOCALBASE}/bin/strip)
-STRIP?=     ${LOCALBASE}/bin/strip
-.endif
-SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
 .if exists(${LOCALBASE}/bin/tar)
 TAR?=		${LOCALBASE}/bin/tar
@@ -109,9 +112,9 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		true				# Shell builtin
 TSORT?=		/usr/bin/tsort
-TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
+.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022

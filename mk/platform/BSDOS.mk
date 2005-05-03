@@ -1,7 +1,23 @@
-# $NetBSD: BSDOS.mk,v 1.9 2005/05/03 15:10:59 jlam Exp $
+# $NetBSD: BSDOS.mk,v 1.10 2005/05/03 18:30:12 jlam Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
+#CPP=		/usr/bin/cpp
+# BSD/OS doesn't have c++ command
+.if !exists(${CXX})
+CXX=		/usr/bin/g++
+.endif
+ECHO_N?=	${ECHO} -n
+PKGLOCALEDIR?=	share
+PS?=		/bin/ps
+# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
+# and remove this comment.
+RSH?=		/usr/bin/rsh
+SU?=		/usr/bin/su
+# sh doesn't have built-in type
+TYPE?=		which
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
 CAT?=		/bin/cat
@@ -10,16 +26,10 @@ CHOWN?=		/usr/sbin/chown
 CHGRP?=		/usr/bin/chgrp
 CMP?=		/usr/bin/cmp
 CP?=		/bin/cp
-#CPP=		/usr/bin/cpp
-# BSD/OS doesn't have c++ command
-.if !exists(${CXX})
-CXX=		/usr/bin/g++
-.endif
 CUT?=		/usr/bin/cut
 DATE?=		/bin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
-ECHO_N?=	${ECHO} -n
 EGREP?=		/bin/egrep
 EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
@@ -60,14 +70,9 @@ PATCH?=		/usr/contrib/bin/patch
 # native /bin/pax doesn't support -O
 PAX?=		${LOCALBASE}/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
-PKGLOCALEDIR?=	share
-PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
-# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
-# and remove this comment.
-RSH?=		/usr/bin/rsh
 SED?=		/usr/bin/sed
 SETENV?=	/usr/bin/env
 # native sh and ksh both have problems under BSD/OS 4.3.1
@@ -75,7 +80,6 @@ SETENV?=	/usr/bin/env
 SH?=		/bin/bash
 SHLOCK=		${LOCALBASE}/bin/shlock
 SORT?=		/usr/bin/sort
-SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
 .if exists(/bin/tar)
 TAR?=		/bin/tar
@@ -88,10 +92,9 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		true				# Shell builtin
 TSORT?=		/usr/bin/tsort
-# sh doesn't have built-in type
-TYPE?=		which
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
+.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022

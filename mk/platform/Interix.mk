@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.32 2005/05/03 15:10:59 jlam Exp $
+# $NetBSD: Interix.mk,v 1.33 2005/05/03 18:30:12 jlam Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -40,6 +40,16 @@ BULK_PREREQ+=	lang/gawk sysutils/coreutils
 MANINSTALL=	maninstall
 MAKE_FLAGS+=	MKCATPAGES=no NOLINT=1
 
+ECHO_N?=	/bin/printf %s			# does not support "echo -n"
+IMAKEOPTS+=	-DBuildHtmlManPages=NO
+PKGLOCALEDIR?=	share
+PS?=		/bin/ps
+RSH?=		/usr/bin/rsh
+SU?=		/bin/su
+TYPE?=		type				# Shell builtin
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+
 # Use some pkgsrc versions as "better" replacements, if installed
 .if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk)
 AWK?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
@@ -60,7 +70,6 @@ CUT?=		/bin/cut
 DATE?=		/bin/date
 DIRNAME?=	/bin/dirname
 ECHO?=		echo				# Shell builtin
-ECHO_N?=	/bin/printf %s			# does not support "echo -n"
 EGREP?=		/bin/egrep
 EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
@@ -77,7 +86,6 @@ HEAD?=		/bin/head
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/bin/id
 IMAKE?=		${X11BASE}/bin/imake ${IMAKEOPTS}
-IMAKEOPTS+=	-DBuildHtmlManPages=NO
 LDCONFIG?=	/bin/true
 LN?=		/bin/ln
 LS?=		/bin/ls
@@ -90,18 +98,14 @@ NICE?=		/bin/nice
 PATCH?=		${LOCALBASE}/bin/gpatch
 PAX?=		${LOCALBASE}/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
-PKGLOCALEDIR?=	share
-PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
-RSH?=		/usr/bin/rsh
 SED?=		${LOCALBASE}/bin/nbsed
 SETENV?=	/bin/env
 SH?=		/bin/sh
 SHLOCK=		${LOCALBASE}/bin/shlock
 SORT?=		/bin/sort
-SU?=		/bin/su
 TAIL?=		/bin/tail
 TAR?=		${LOCALBASE}/bin/tar
 TEE?=		/bin/tee
@@ -110,9 +114,9 @@ TOUCH?=		/bin/touch
 TR?=		/bin/tr
 TRUE?=		true				# Shell builtin
 TSORT?=		/bin/tsort
-TYPE?=		type				# Shell builtin
 WC?=		/bin/wc
 XARGS?=		/bin/xargs
+.endif
 
 USERADD?=		${LOCALBASE}/sbin/useradd
 GROUPADD?=		${LOCALBASE}/sbin/groupadd

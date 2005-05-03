@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.4 2005/05/03 15:10:59 jlam Exp $
+# $NetBSD: OSF1.mk,v 1.5 2005/05/03 18:30:12 jlam Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -9,6 +9,17 @@
 #	echo="set -v" quiet="set +v" filter="set +v" \
 #	echoFlag=v errFlag=e
 
+CPP?=		/usr/bin/cpp
+ECHO_N?=	${SETENV} CMD_ENV=bsd /usr/bin/echo -n
+FETCH_CMD?= ${LOCALBASE}/bin/ftp
+INSTALL=	${LOCALBASE}/bin/install-sh
+PKGLOCALEDIR=	share
+PS?=		/bin/ps
+STRIP?=		/usr/bin/strip
+SU?=		/usr/bin/su
+TYPE?=		type				# Shell builtin
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
 CAT?=		/bin/cat
@@ -17,16 +28,13 @@ CHOWN?=		/bin/chown
 CHGRP?=		/usr/bin/chgrp
 CMP?=		/usr/bin/cmp
 CP?=		/bin/cp
-CPP?=		/usr/bin/cpp
 CUT?=		/usr/bin/cut
 DATE?=		/bin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		/usr/bin/echo				
-ECHO_N?=	${SETENV} CMD_ENV=bsd /usr/bin/echo -n
 EGREP?=		/usr/bin/grep -E
 EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
-FETCH_CMD?= ${LOCALBASE}/bin/ftp
 FGREP?=		/usr/bin/grep -F
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
@@ -43,7 +51,6 @@ GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
-INSTALL=	${LOCALBASE}/bin/install-sh
 LDCONFIG?=	${TRUE}
 LN?=		/bin/ln
 LS?=		/bin/ls
@@ -60,8 +67,6 @@ PERL5?=		${LOCALBASE}/bin/perl
 .else
 PERL5?=		/usr/bin/perl
 .endif
-PKGLOCALEDIR=	share
-PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
@@ -70,8 +75,6 @@ SETENV?=	/usr/bin/env
 SH?=		/bin/ksh			# recommendend on Tru64
 #SHLOCK=	${LOCALBASE}/bin/shlock		# need to make this work
 SORT?=		/usr/bin/sort
-STRIP?=		/usr/bin/strip
-SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
 TAR?=		/usr/bin/tar
 TEE?=		/usr/bin/tee
@@ -80,9 +83,9 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		true				# Shell builtin
 TSORT?=		/usr/bin/tsort
-TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
+.endif
 
 USERADD?=	/usr/sbin/useradd
 GROUPADD?=	/usr/sbin/groupadd

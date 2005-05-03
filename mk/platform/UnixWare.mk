@@ -1,7 +1,17 @@
-# $NetBSD: UnixWare.mk,v 1.9 2005/05/03 15:10:59 jlam Exp $
+# $NetBSD: UnixWare.mk,v 1.10 2005/05/03 18:30:12 jlam Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
+ECHO_N?=	${ECHO} -n
+PKGLOCALEDIR?=	lib
+PS?=		/usr/bin/ps
+# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
+# and remove this comment.
+RSH?=		/usr/bin/rsh
+SU?=		/usr/bin/su
+TYPE?=		/usr/bin/type
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 AWK?=		/usr/bin/nawk
 BASENAME?=	/usr/bin/basename
 CAT?=		/usr/bin/cat
@@ -14,7 +24,6 @@ CUT?=		/usr/bin/cut
 DATE?=		/usr/bin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		/usr/ucb/echo
-ECHO_N?=	${ECHO} -n
 EGREP?=		/usr/bin/grep -E
 EXPR?=		/usr/bin/expr
 FALSE?=		/usr/bin/false
@@ -54,14 +63,9 @@ NICE?=		/usr/bin/nice
 PATCH?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}patch
 PAX?=		${LOCALBASE}/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
-PKGLOCALEDIR?=	lib
-PS?=		/usr/bin/ps
 PWD_CMD?=	/usr/bin/pwd	# needs to print physical path
 RM?=		/usr/bin/rm
 RMDIR?=		/usr/bin/rmdir
-# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
-# and remove this comment.
-RSH?=		/usr/bin/rsh
 .if exists(${LOCALBASE}/bin/nbsed)
 SED?=		${LOCALBASE}/bin/nbsed
 .else
@@ -71,7 +75,6 @@ SETENV?=	/usr/bin/env
 SH?=		/usr/bin/ksh
 SHLOCK=		${LOCALBASE}/bin/shlock
 SORT?=		/usr/bin/sort
-SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
 TAR?=		${LOCALBASE}/bin/tar
 TEE?=		/usr/bin/tee
@@ -80,9 +83,9 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
 TSORT?=		/usr/ccs/bin/tsort
-TYPE?=		/usr/bin/type
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
+.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
