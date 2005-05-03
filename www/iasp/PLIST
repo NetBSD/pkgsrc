@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:34:07 reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/03 16:00:39 wiz Exp $
 ${IASP}/README_EN
 ${IASP}/WEB-INF/web.xml
 ${IASP}/admin/JSManager.jar
@@ -1167,8 +1167,8 @@ ${IASP}/start-admin.sh
 ${IASP}/start-server.sh
 ${IASP}/stop-admin.sh
 ${IASP}/stop-server.sh
-share/examples/rc.d/iasp_admin
 share/examples/rc.d/iasp
+share/examples/rc.d/iasp_admin
 @dirrm ${IASP}/servlets
 @dirrm ${IASP}/properties
 @dirrm ${IASP}/lib
