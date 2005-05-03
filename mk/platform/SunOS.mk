@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.12 2005/05/03 18:30:12 jlam Exp $
+# $NetBSD: SunOS.mk,v 1.13 2005/05/03 19:35:24 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -44,7 +44,6 @@ GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
 .elif exists(/usr/bin/gzip)
 GUNZIP_CMD?=	/usr/bin/gzip -df
 GZCAT?=		/usr/bin/gzip -cd
-GZIP?=		-9
 GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 .endif
 HEAD?=		/usr/bin/head
