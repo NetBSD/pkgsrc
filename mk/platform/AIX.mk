@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.13 2005/03/29 08:17:42 garbled Exp $
+# $NetBSD: AIX.mk,v 1.14 2005/05/03 15:10:59 jlam Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -48,7 +48,6 @@ GTAR?=		/usr/bin/tar
 .endif
 GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
 GZCAT?=		${LOCALBASE}/bin/zcat
-GZIP?=		-9
 GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
