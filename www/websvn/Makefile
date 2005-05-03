@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2005/01/25 17:34:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/03 18:04:10 seb Exp $
 #
 
 DISTNAME=	WebSVN_161
 PKGNAME=	websvn-1.61
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://websvn.tigris.org/files/documents/1380/14334/
 
