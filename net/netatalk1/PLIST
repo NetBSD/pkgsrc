@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:02 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/03 15:43:17 wiz Exp $
 bin/achfile
 bin/acleandir.rc
 bin/add_netatalk_printer
@@ -149,10 +149,10 @@ share/examples/netatalk/afpd.conf
 share/examples/netatalk/atalkd.conf
 share/examples/netatalk/netatalk.conf
 share/examples/netatalk/papd.conf
-share/examples/rc.d/timelord
-share/examples/rc.d/papd
 share/examples/rc.d/afpd
 share/examples/rc.d/atalkd
+share/examples/rc.d/papd
+share/examples/rc.d/timelord
 share/netatalk/nls/maccode.437
 share/netatalk/nls/maccode.850
 share/netatalk/nls/maccode.iso8859-1
