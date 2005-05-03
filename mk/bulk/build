@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.48 2005/01/14 15:32:34 tv Exp $
+# $NetBSD: build,v 1.49 2005/05/03 16:34:02 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -200,10 +200,10 @@ if [ -d pkgtools/pkglint ]; then
 	BROKENWRKLOG=`${BMAKE} show-var VARNAME=BROKENWRKLOG ` || fail=yes
 	BUILDLOG=`${BMAKE} show-var VARNAME=BUILDLOG` || fail=yes
 	STARTFILE=`${BMAKE} show-var VARNAME=STARTFILE` || fail=yes
-	AWK=`${BMAKE} show-var VARNAME=AWK` || fail=yes
-	GREP=`${BMAKE} show-var VARNAME=GREP` || fail=yes
-	SED=`${BMAKE} show-var VARNAME=SED` || fail=yes
-	MAIL_CMD=`${BMAKE} show-var VARNAME=MAIL_CMD` || fail=yes
+	AWK=`${BMAKE} show-var VARNAME=AWK USE_TOOLS=awk` || fail=yes
+	GREP=`${BMAKE} show-var VARNAME=GREP USE_TOOLS=grep` || fail=yes
+	SED=`${BMAKE} show-var VARNAME=SED USE_TOOLS=sed` || fail=yes
+	MAIL_CMD=`${BMAKE} show-var VARNAME=MAIL_CMD USE_TOOLS=mail` || fail=yes
 	MACHINE_ARCH=`${BMAKE} show-var VARNAME=MACHINE_ARCH` || fail=yes
 	OPSYS=`${BMAKE} show-var VARNAME=OPSYS` || fail=yes
 	OS_VERSION=`${BMAKE} show-var VARNAME=OS_VERSION` || fail=yes
