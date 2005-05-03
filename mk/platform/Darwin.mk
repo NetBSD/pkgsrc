@@ -1,7 +1,22 @@
-# $NetBSD: Darwin.mk,v 1.9 2005/05/03 15:10:59 jlam Exp $
+# $NetBSD: Darwin.mk,v 1.10 2005/05/03 18:30:12 jlam Exp $
 #
 # Variable definitions for the Darwin operating system.
 
+.if !defined(CPP) || ${CPP} == "cpp"
+CPP=		${CC} -E ${CPP_PRECOMP_FLAGS}
+.endif
+ECHO_N?=	${ECHO} -n
+LDD?=		/usr/bin/otool -L
+PKGLOCALEDIR?=	share
+PS?=		/bin/ps
+# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
+# and remove this comment.
+RSH?=		/usr/bin/rsh
+SU?=		/usr/bin/su
+TYPE?=		type				# Shell builtin
+IMAKEOPTS+=	-DBuildHtmlManPages=NO
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
 CAT?=		/bin/cat
@@ -10,14 +25,10 @@ CHOWN?=		/usr/sbin/chown
 CHGRP?=		/usr/bin/chgrp
 CMP?=		/usr/bin/cmp
 CP?=		/bin/cp
-.if !defined(CPP) || ${CPP} == "cpp"
-CPP=		${CC} -E ${CPP_PRECOMP_FLAGS}
-.endif
 CUT?=		/usr/bin/cut
 DATE?=		/bin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
-ECHO_N?=	${ECHO} -n
 EGREP?=		/usr/bin/egrep
 EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
@@ -34,9 +45,7 @@ HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
 IMAKE?=		${X11BASE}/bin/imake ${IMAKEOPTS}
-IMAKEOPTS+=	-DBuildHtmlManPages=NO
 LDCONFIG?=	/sbin/ldconfig
-LDD?=		/usr/bin/otool -L
 LN?=		/bin/ln
 LS?=		/bin/ls
 M4?=		/usr/bin/m4 
@@ -52,20 +61,14 @@ PAX?=		${LOCALBASE}/bin/pax
 PAX?=		/bin/pax
 .endif
 PERL5?=		${LOCALBASE}/bin/perl
-PKGLOCALEDIR?=	share
-PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
-# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
-# and remove this comment.
-RSH?=		/usr/bin/rsh
 SED?=		/usr/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/sh
 SHLOCK=		/usr/bin/shlock
 SORT?=		/usr/bin/sort
-SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
 .if exists(${LOCALBASE}/bin/tar)
 TAR?=		${LOCALBASE}/bin/tar
@@ -78,9 +81,9 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		true				# Shell builtin
 TSORT?=		/usr/bin/tsort
-TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
+.endif
 
 .if !defined(PKGSRC_COMPILER) || !empty(PKGSRC_COMPILER:Mgcc)
 CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	# use the GNU cpp, not the OS X cpp
