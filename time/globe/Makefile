@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:27:16 agc Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/03 21:38:14 kristerw Exp $
 #
 
 DISTNAME=	globe_26mar94
 PKGNAME=	globe-19940326
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	http://www.acme.com/software/globe/
 
