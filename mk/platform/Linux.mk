@@ -1,7 +1,18 @@
-# $NetBSD: Linux.mk,v 1.12 2005/05/03 15:10:59 jlam Exp $
+# $NetBSD: Linux.mk,v 1.13 2005/05/03 18:30:12 jlam Exp $
 #
 # Variable definitions for the Linux operating system.
 
+ECHO_N?=	${ECHO} -n
+IMAKEOPTS+=	-DBuildHtmlManPages=NO
+PKGLOCALEDIR?=	share
+PS?=		/bin/ps
+# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
+# and remove this comment.
+RSH?=		/usr/bin/rsh
+SU?=		/bin/su
+TYPE?=		type			# Shell builtin
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 AWK?=		/usr/bin/awk
 .if exists(/bin/basename)
 BASENAME?=	/bin/basename
@@ -22,7 +33,6 @@ CUT?=		/usr/bin/cut
 DATE?=		/bin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
-ECHO_N?=	${ECHO} -n
 .if exists(/bin/egrep)
 EGREP?=		/bin/egrep
 .elif exists(/usr/bin/egrep)
@@ -72,7 +82,6 @@ ID?=		/bin/id
 ID?=		/usr/bin/id
 .endif
 IMAKE?=		${X11BASE}/bin/imake ${IMAKEOPTS}
-IMAKEOPTS+=	-DBuildHtmlManPages=NO
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 LS?=		/bin/ls
@@ -93,14 +102,9 @@ NICE?=		/usr/bin/nice
 PATCH?=		/usr/bin/patch
 PAX?=		${LOCALBASE}/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
-PKGLOCALEDIR?=	share
-PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
-# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
-# and remove this comment.
-RSH?=		/usr/bin/rsh
 .if exists(/bin/sed)
 SED?=		/bin/sed
 .elif exists(/usr/bin/sed)
@@ -114,7 +118,6 @@ SORT?=		/bin/sort
 .else
 SORT?=		/usr/bin/sort
 .endif
-SU?=		/bin/su
 TAIL?=		/usr/bin/tail
 TAR?=		${LOCALBASE}/bin/tar
 TEE?=		/usr/bin/tee
@@ -127,9 +130,9 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		true			# Shell builtin
 TSORT?=		/usr/bin/tsort
-TYPE?=		type			# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs -r
+.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
