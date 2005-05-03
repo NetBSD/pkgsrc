@@ -1,4 +1,4 @@
-# $NetBSD: tools.UnixWare.mk,v 1.4 2005/05/02 04:42:08 jlam Exp $
+# $NetBSD: tools.UnixWare.mk,v 1.5 2005/05/03 16:30:34 jlam Exp $
 #
 # System-supplied tools for the UnixWare 7 operating system.
 
@@ -30,6 +30,7 @@ TOOLS_PLATFORM.ldconfig?=	${TOOLS_PLATFORM.true}
 TOOLS_PLATFORM.ln?=		/usr/bin/ln
 TOOLS_PLATFORM.ls?=		/usr/bin/ls
 TOOLS_PLATFORM.m4?=		/usr/ccs/bin/m4
+TOOLS_PLATFORM.mail?=		/usr/bin/mailx
 TOOLS_PLATFORM.mv?=		/usr/bin/mv
 TOOLS_PLATFORM.nice?=		/usr/bin/nice
 TOOLS_PLATFORM.pwd?=		/usr/bin/pwd

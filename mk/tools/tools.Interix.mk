@@ -1,4 +1,4 @@
-# $NetBSD: tools.Interix.mk,v 1.4 2005/05/02 04:42:08 jlam Exp $
+# $NetBSD: tools.Interix.mk,v 1.5 2005/05/03 16:30:34 jlam Exp $
 #
 # System-supplied tools for the Interix operating system.
 
@@ -33,6 +33,7 @@ TOOLS_PLATFORM.ldconfig?=	/bin/true
 TOOLS_PLATFORM.ln?=		/bin/ln
 TOOLS_PLATFORM.ls?=		/bin/ls
 TOOLS_PLATFORM.m4?=		/bin/m4
+TOOLS_PLATFORM.mail?=		/bin/mail
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 TOOLS_PLATFORM.mv?=		/bin/mv
 TOOLS_PLATFORM.nice?=		/bin/nice

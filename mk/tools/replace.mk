@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.58 2005/05/03 15:17:26 jlam Exp $
+# $NetBSD: replace.mk,v 1.59 2005/05/03 16:30:34 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -515,6 +515,17 @@ TOOLS_DEPENDS.m4?=		m4>=1.4:../../devel/m4
 TOOLS_SYMLINK+=			m4
 TOOLS_REAL_CMD.m4=		${LOCALBASE}/bin/gm4
 ${_TOOLS_VARNAME.m4}=		${TOOLS_REAL_CMD.m4}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.mail) && !empty(_USE_TOOLS:Mmail)
+.  if !empty(PKGPATH:Mmail/nail)
+MAKEFLAGS+=			TOOLS_IGNORE.mail=
+.  elif !empty(_TOOLS_USE_PKGSRC.mail:M[yY][eE][sS])
+TOOLS_DEPENDS.mail?=		nail>=11.22:../../mail/nail
+TOOLS_SYMLINK+=			mail
+TOOLS_REAL_CMD.mail=		${LOCALBASE}/bin/nail
+${_TOOLS_VARNAME.mail}=		${TOOLS_REAL_CMD.mail}
 .  endif
 .endif
 
