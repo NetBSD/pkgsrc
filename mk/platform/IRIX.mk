@@ -1,7 +1,17 @@
-# $NetBSD: IRIX.mk,v 1.12 2005/05/03 15:10:59 jlam Exp $
+# $NetBSD: IRIX.mk,v 1.13 2005/05/03 18:30:12 jlam Exp $
 #
 # Variable definitions for the IRIX operating system.
 
+ECHO_N?=	${ECHO} -n
+IMAKEOPTS+=	-DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE}
+IMAKEOPTS+=	-DManUsr=${PREFIX}
+PKGLOCALEDIR?=	share
+PS?=		/sbin/ps
+RSH?=		/usr/bsd/rsh
+SU?=		/sbin/su
+TYPE?=		/sbin/type
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 AWK?=		/usr/bin/nawk
 BASENAME?=	/sbin/basename
 CAT?=		/sbin/cat
@@ -14,7 +24,6 @@ CUT?=		/usr/bin/cut
 DATE?=		/sbin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo			# Shell builtin
-ECHO_N?=	${ECHO} -n
 EGREP?=		/usr/bin/egrep
 EXPR?=		/bin/expr
 FALSE?=		false			# Shell builtin
@@ -41,8 +50,6 @@ HEAD?=		/usr/bsd/head
 HOSTNAME_CMD?=	/usr/bsd/hostname
 ID?=		/usr/bin/id
 IMAKE?=		/usr/bin/X11/imake ${IMAKEOPTS}
-IMAKEOPTS+=	-DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE}
-IMAKEOPTS+=	-DManUsr=${PREFIX}
 LDCONFIG?=	/usr/bin/true
 LN?=		/sbin/ln
 LS?=		/sbin/ls
@@ -66,18 +73,14 @@ PATCH?=		/usr/sbin/patch -b
 .endif
 PAX?=		${LOCALBASE}/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
-PKGLOCALEDIR?=	share
-PS?=		/sbin/ps
 PWD_CMD?=	/sbin/pwd		# needs to print physical path
 RM?=		/sbin/rm
 RMDIR?=		/usr/bin/rmdir
-RSH?=		/usr/bsd/rsh
 SED?=		/sbin/sed
 SETENV?=	/sbin/env
 SH?=		/bin/ksh
 SHLOCK=		${LOCALBASE}/bin/shlock
 SORT?=		/usr/bin/sort
-SU?=		/sbin/su
 TAIL?=		/usr/bin/tail
 TAR?=		${LOCALBASE}/bin/tar
 TEE?=		/usr/bin/tee
@@ -86,9 +89,9 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		true			# Shell builtin
 TSORT?=		/usr/bin/tsort
-TYPE?=		/sbin/type
 WC?=		/sbin/wc
 XARGS?=		/sbin/xargs
+.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022

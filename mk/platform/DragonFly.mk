@@ -1,10 +1,19 @@
-# $NetBSD: DragonFly.mk,v 1.12 2005/05/03 15:10:59 jlam Exp $
+# $NetBSD: DragonFly.mk,v 1.13 2005/05/03 18:30:12 jlam Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
+BRANDELF?=	/usr/bin/brandelf		# used by linux compat layer
+ECHO_N?=	${ECHO} -n
+IMAKEOPTS+=	-DBuildHtmlManPages=NO
+PKGLOCALEDIR?=	share
+PS?=		/bin/ps
+RSH?=		/usr/bin/rsh
+SU?=		/usr/bin/su
+TYPE?=		type				# Shell builtin
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
-BRANDELF?=	/usr/bin/brandelf		# used by linux compat layer
 CAT?=		/bin/cat
 CHMOD?=		/bin/chmod
 CHOWN?=		/usr/sbin/chown
@@ -15,7 +24,6 @@ CUT?=		/usr/bin/cut
 DATE?=		/bin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
-ECHO_N?=	${ECHO} -n
 EGREP?=		/usr/bin/egrep
 EXPR?=		/bin/expr
 FALSE?=		/usr/bin/false
@@ -36,7 +44,6 @@ HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
 IMAKE?=		${X11BASE}/bin/imake ${IMAKEOPTS}
-IMAKEOPTS+=	-DBuildHtmlManPages=NO
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 LS?=		/bin/ls
@@ -57,18 +64,14 @@ PAX?=		${LOCALBASE}/bin/pax
 PAX?=		/bin/pax
 .endif
 PERL5?=		${LOCALBASE}/bin/perl
-PKGLOCALEDIR?=	share
-PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
-RSH?=		/usr/bin/rsh
 SED?=		/usr/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/sh
 SHLOCK=		/usr/bin/shlock
 SORT?=		/usr/bin/sort
-SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
 .if exists(${LOCALBASE}/bin/tar)
 TAR?=		${LOCALBASE}/bin/tar
@@ -81,9 +84,9 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
 TSORT?=		/usr/bin/tsort
-TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
+.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
