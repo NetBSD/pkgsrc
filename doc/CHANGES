@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10007 2005/05/02 21:21:29 wiz Exp $
+$NetBSD: CHANGES,v 1.10008 2005/05/03 11:20:23 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2267,3 +2267,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cint to 5.15.169 [drochner 2005-05-02]
 	Updated libcdio to 0.73 [drochner 2005-05-02]
 	Updated clisp to 2.33.2 [drochner 2005-05-02]
+	Updated qemu to 0.7.0 [xtraeme 2005-05-03]
