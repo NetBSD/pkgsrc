@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.15 2004/04/09 18:43:14 jschauma Exp $
+# $NetBSD: printindex,v 1.16 2005/05/03 16:34:02 jlam Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -59,8 +59,8 @@ cwd=$PWD
 
 # get some initial variables
 cd $cwd/pkgtools/pkglint
-GREP=`${BMAKE} show-var VARNAME=GREP`
-SED=`${BMAKE} show-var VARNAME=SED`
+GREP=`${BMAKE} show-var VARNAME=GREP USE_TOOLS=grep`
+SED=`${BMAKE} show-var VARNAME=SED USE_TOOLS=sed`
 cd $cwd
 
 if [ -r ${cwd}/.pkglist ]; then
