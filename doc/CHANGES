@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10009 2005/05/03 12:44:47 wiz Exp $
+$NetBSD: CHANGES,v 1.10010 2005/05/03 18:06:30 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2269,3 +2269,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated clisp to 2.33.2 [drochner 2005-05-02]
 	Updated qemu to 0.7.0 [xtraeme 2005-05-03]
 	Updated gopchop to 1.1.7 [wiz 2005-05-03]
+	Updated websvn to 1.61nb2 [seb 2005-05-03]
