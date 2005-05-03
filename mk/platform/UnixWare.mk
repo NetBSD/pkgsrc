@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.10 2005/05/03 18:30:12 jlam Exp $
+# $NetBSD: UnixWare.mk,v 1.11 2005/05/03 19:35:24 jlam Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -44,7 +44,6 @@ GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
 .elif exists(/usr/local/bin/gzip)
 GUNZIP_CMD?=	/usr/local/bin/gzip -df
 GZCAT?=		/usr/local/bin/gzip -cd
-GZIP?=		-9
 GZIP_CMD?=	/usr/local/bin/gzip -nf ${GZIP}
 .endif
 HEAD?=		/usr/bin/head
