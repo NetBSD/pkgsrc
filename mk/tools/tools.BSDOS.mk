@@ -1,4 +1,4 @@
-# $NetBSD: tools.BSDOS.mk,v 1.6 2005/05/03 16:30:34 jlam Exp $
+# $NetBSD: tools.BSDOS.mk,v 1.7 2005/05/03 20:41:53 jlam Exp $
 #
 # System-supplied tools for the BSD/OS operating system.
 
@@ -30,6 +30,7 @@ TOOLS_PLATFORM.gzip?=		/usr/contrib/bin/gzip -nf ${GZIP}
 TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
+TOOLS_PLATFORM.install?=	/usr/bin/install
 TOOLS_PLATFORM.ldconfig?=	/sbin/ldconfig
 TOOLS_PLATFORM.ln?=		/bin/ln
 TOOLS_PLATFORM.ls?=		/bin/ls

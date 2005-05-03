@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.60 2005/05/03 17:14:14 jlam Exp $
+# $NetBSD: replace.mk,v 1.61 2005/05/03 20:41:53 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -470,6 +470,17 @@ TOOLS_DEPENDS.id?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_SYMLINK+=			id
 TOOLS_REAL_CMD.id=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}id
 ${_TOOLS_VARNAME.id}=		${TOOLS_REAL_CMD.id}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.install) && !empty(_USE_TOOLS:Minstall)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.install=
+.  elif !empty(_TOOLS_USE_PKGSRC.install:M[yY][eE][sS])
+TOOLS_DEPENDS.install?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_SYMLINK+=			install
+TOOLS_REAL_CMD.install=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}install
+${_TOOLS_VARNAME.install}=	${TOOLS_REAL_CMD.install}
 .  endif
 .endif
 
