@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/05/02 08:59:08 tron Exp $
+# $NetBSD: Makefile,v 1.34 2005/05/03 09:13:26 tron Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 PKGREVISION=	# empty
@@ -31,6 +31,7 @@ USE_LANGUAGES=          # empty
 OPERA_LANG=		en
 OPERA_VER_DATE=		20050415
 OPERA_PKG_VERSION=	8.0
+OPERA_PKG_VERSION_DIR=	800
 
 _OPERA_OPSYS?=		${OPSYS}
 _OPERA_MACHINE_ARCH?=	${MACHINE_ARCH}
@@ -45,7 +46,7 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 EXTRACT_SUFX=		.rpm
 OPERA_ARCH=		.i386
-OPERA_DIR=		linux/${OPERA_PKG_VERSION:S/.//g:C/beta.*//}/final/${OPERA_LANG}/${OPERA_ARCH:S/.//}/static
+OPERA_DIR=		linux/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/${OPERA_ARCH:S/.//}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
 RPMFILES=	${DISTFILES}
@@ -54,7 +55,7 @@ RPM2PKGSTRIP=	0
 .elif (${_OPERA_OPSYS} == FreeBSD)
 EXTRACT_SUFX=		.tar.bz2
 OPERA_ARCH=		.i386.freebsd
-OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION:S/.//g:}/final/${OPERA_LANG}/static
+OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
 WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
@@ -64,7 +65,7 @@ OWN_DIRS=		${PREFIX}/share/opera/plugins
 .elif (${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)
 EXTRACT_SUFX=		.tar.bz2
 OPERA_ARCH=		-sol8-sparc-local
-OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION:S/.//g}/final/${OPERA_LANG}/static
+OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
 WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
@@ -130,7 +131,7 @@ post-install:
 
 # regenerate distinfo for all ports supported by this package
 opera-distinfo:
-	( echo '$$NetBSD: Makefile,v 1.33 2005/05/02 08:59:08 tron Exp $$'; echo ''; \
+	( echo '$$NetBSD: Makefile,v 1.34 2005/05/03 09:13:26 tron Exp $$'; echo ''; \
 	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
 		${GREP} opera distinfo; \
 	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \
