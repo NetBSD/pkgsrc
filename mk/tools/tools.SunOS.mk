@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.6 2005/05/02 04:42:08 jlam Exp $
+# $NetBSD: tools.SunOS.mk,v 1.7 2005/05/03 16:30:34 jlam Exp $
 #
 # System-supplied tools for the Solaris operating system.
 
@@ -42,6 +42,7 @@ TOOLS_PLATFORM.ldconfig?=	${TOOLS_PLATFORM.true}
 TOOLS_PLATFORM.ln?=		/usr/bin/ln
 TOOLS_PLATFORM.ls?=		/usr/bin/ls
 TOOLS_PLATFORM.m4?=		/usr/ccs/bin/m4
+TOOLS_PLATFORM.mail?=		/usr/bin/mailx
 TOOLS_PLATFORM.mkdir?=		/usr/bin/mkdir -p
 TOOLS_PLATFORM.mv?=		/usr/bin/mv
 TOOLS_PLATFORM.nice?=		/usr/xpg4/bin/nice
