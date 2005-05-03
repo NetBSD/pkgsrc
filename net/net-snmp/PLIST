@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/05/02 20:34:02 reed Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/05/03 15:40:57 wiz Exp $
 bin/encode_keychange
 bin/fixproc
 bin/ipf-mod.pl
@@ -323,8 +323,8 @@ man/man8/snmptrapd.8
 sbin/snmpd
 sbin/snmptrapd
 share/examples/net-snmp/EXAMPLE.conf
-share/examples/rc.d/snmptrapd
 share/examples/rc.d/snmpd
+share/examples/rc.d/snmptrapd
 share/snmp/mib2c-data/default-mfd-top.m2c
 share/snmp/mib2c-data/details-enums.m2i
 share/snmp/mib2c-data/details-node.m2i
