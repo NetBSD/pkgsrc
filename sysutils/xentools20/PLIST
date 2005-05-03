@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:34:06 reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/03 15:59:55 wiz Exp $
 bin/miniterm
 bin/xencons
 bin/xenperf
@@ -180,7 +180,6 @@ ${PYSITELIB}/xen/xm/__init__.pyc
 ${PYSITELIB}/xen/xm/shutdown.pyc
 ${PYSITELIB}/xen/xm/main.pyc
 ${PYSITELIB}/xen/__init__.pyc
-
 share/examples/rc.d/xend
 @dirrm ${PYSITELIB}/xen/lowlevel
 @dirrm ${PYSITELIB}/xen/util
