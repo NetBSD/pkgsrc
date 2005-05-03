@@ -1,0 +1,6 @@
+The gnome-python package contains the source packages for the Python
+bindings for GNOME called PyGNOME.
+
+PyGNOME is an extension module for Python that provides access to the
+base GNOME libraries, so you have access to more widgets, a simple
+configuration interface, and metadata support.
