@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10011 2005/05/03 19:32:24 agc Exp $
+$NetBSD: CHANGES,v 1.10012 2005/05/03 20:08:24 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2271,3 +2271,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gopchop to 1.1.7 [wiz 2005-05-03]
 	Updated websvn to 1.61nb2 [seb 2005-05-03]
 	Added openafs-1.3.81 [agc 2005-05-03]
+	Updated vcdimager-devel to 0.7.21 [drochner 2005-05-03]
+	Added py-gnome2-extras-2.10.1 [drochner 2005-05-03]
