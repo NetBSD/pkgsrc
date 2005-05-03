@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.2 2004/11/15 11:35:30 xtraeme Exp $
+$NetBSD: patch-ak,v 1.3 2005/05/03 11:18:47 xtraeme Exp $
 
---- Makefile.orig	2004-11-15 11:54:34.000000000 +0100
-+++ Makefile	2004-11-15 11:56:25.000000000 +0100
-@@ -1,13 +1,13 @@
+--- Makefile.orig	2005-04-28 22:38:00.000000000 +0200
++++ Makefile	2005-04-28 22:39:40.000000000 +0200
+@@ -1,10 +1,10 @@
  -include config-host.mak
  
 -CFLAGS=-Wall -O2 -g -fno-strict-aliasing 
@@ -10,36 +10,31 @@ $NetBSD: patch-ak,v 1.2 2004/11/15 11:35:30 xtraeme Exp $
  ifdef CONFIG_DARWIN
  CFLAGS+= -mdynamic-no-pic
  endif
- ifdef CONFIG_WIN32
- CFLAGS+=-fpack-struct 
- endif
 -LDFLAGS=-g
 +#LDFLAGS=-g
  LIBS=
  DEFINES+=-D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
- TOOLS=qemu-img
-@@ -43,18 +43,18 @@
-         done
+ TOOLS=qemu-img$(EXESUF)
+@@ -54,16 +54,16 @@
+ common  de-ch  es     fo  fr-ca  hu     ja  mk  nl-be      pt  sl     tr
  
  install: all 
 -	mkdir -p "$(bindir)"
-+	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
- ifndef CONFIG_WIN32
- 	install -m 755 -s $(TOOLS) "$(bindir)"
- endif
+-	install -m 755 -s $(TOOLS) "$(bindir)"
 -	mkdir -p "$(datadir)"
 -	install -m 644 pc-bios/bios.bin pc-bios/vgabios.bin \
-+	$(BSD_INSTALL_DATA_DIR) $(datadir)
++	$(BSD_INSTALL_PROGRAM_DIR) "$(bindir)"
++	$(BSD_INSTALL_PROGRAM) $(TOOLS) "$(bindir)"
++	$(BSD_INSTALL_DATA_DIR) "$(datadir)"
 +	$(BSD_INSTALL_DATA) pc-bios/bios.bin pc-bios/vgabios.bin \
                         pc-bios/vgabios-cirrus.bin \
                         pc-bios/ppc_rom.bin \
-                        pc-bios/proll.bin \
--                       pc-bios/linux_boot.bin "$(datadir)"
+                        pc-bios/proll.elf \
+                        pc-bios/linux_boot.bin "$(datadir)"
 -	mkdir -p "$(docdir)"
 -	install -m 644 qemu-doc.html  qemu-tech.html "$(docdir)"
-+                       pc-bios/linux_boot.bin $(datadir)
-+	$(BSD_INSTALL_DATA_DIR) $(docdir)
-+	$(BSD_INSTALL_DATA) qemu-doc.html qemu-tech.html $(docdir)
++	$(BSD_INSTALL_DATA_DIR) "$(docdir)"
++	$(BSD_INSTALL_DATA) qemu-doc.html  qemu-tech.html "$(docdir)"
  ifndef CONFIG_WIN32
  	mkdir -p "$(mandir)/man1"
- 	install qemu.1 qemu-mkcow.1 "$(mandir)/man1"
+ 	install qemu.1 qemu-img.1 "$(mandir)/man1"
