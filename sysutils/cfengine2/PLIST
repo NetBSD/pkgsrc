@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/05/02 20:34:05 reed Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/05/03 15:51:24 wiz Exp $
 man/man8/cfagent.8
 man/man8/cfengine.8
 man/man8/cfenvd.8
@@ -37,7 +37,7 @@ share/examples/cfengine/cfservd.conf.example
 share/examples/cfengine/update.conf.example
 share/examples/cfengine/vicf
 share/examples/rc.d/cfenvd
-share/examples/rc.d/cfservd
 share/examples/rc.d/cfexecd
+share/examples/rc.d/cfservd
 @dirrm share/examples/cfengine
 @dirrm share/cfengine
