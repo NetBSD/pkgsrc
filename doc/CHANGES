@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10013 2005/05/03 22:22:26 kristerw Exp $
+$NetBSD: CHANGES,v 1.10014 2005/05/04 05:20:47 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2276,3 +2276,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated globe to 19940326nb1 [kristerw 2005-05-03]
 	Updated bsdgrep-devel to 20040505nb2 [kristerw 2005-05-03]
 	Updated setquota to 0.1nb1 [kristerw 2005-05-03]
+	Updated postfix to 2.2.3 [martti 2005-05-04]
