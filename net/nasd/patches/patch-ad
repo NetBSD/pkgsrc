@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/05/04 08:56:49 agc Exp $
+
+Index: common/nasd_common.c
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/common/nasd_common.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- common/nasd_common.c	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ common/nasd_common.c	21 Mar 2005 17:07:18 -0000	1.2
+@@ -35,6 +35,10 @@
+ #include <dce/rpc.h>
+ #endif /* NASD_RPC_PACKAGE == NASD_RPC_PACKAGE_DCE */
+ 
++#ifdef NETBSD
++#include <errno.h>
++#endif
++
+ /* external utility routines */
+ extern char* nasd_error_string(nasd_status_t error);
+ 

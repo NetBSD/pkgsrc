@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/05/04 08:56:49 agc Exp $
+
+--- client/nasd_pdrive_client_kpdev.c	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ client/nasd_pdrive_client_kpdev.c	21 Mar 2005 17:07:17 -0000	1.2
+@@ -37,6 +37,7 @@
+ #include <unistd.h>
+ #include <ctype.h>
+ #include <string.h>
++#include <errno.h>
+ 
+ #define KEYCPY(_src_,_dest_) bcopy((char *)(_src_), (char *)(_dest_), NASD_KEY_SZ)
+ 
