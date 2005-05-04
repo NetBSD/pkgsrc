@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10016 2005/05/04 12:19:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.10017 2005/05/04 12:37:02 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2280,3 +2280,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added nasd-1.3 [agc 2005-05-04]
 	Updated monotone to 0.19 [jmmv 2005-05-04]
 	Updated monotone-server to 0.19 [jmmv 2005-05-04]
+	Updated adzap to 20050504 [simonb 2005-05-04]
