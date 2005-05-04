@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.552 2005/05/03 19:31:42 agc Exp $
+# $NetBSD: Makefile,v 1.553 2005/05/04 08:58:04 agc Exp $
 #
 
 COMMENT=	Networking tools
@@ -188,6 +188,7 @@ SUBDIR+=	mtr-gtk
 SUBDIR+=	nam
 SUBDIR+=	nap
 SUBDIR+=	napshare
+SUBDIR+=	nasd
 SUBDIR+=	nbtscan
 SUBDIR+=	ncftp2
 SUBDIR+=	ncftp3
