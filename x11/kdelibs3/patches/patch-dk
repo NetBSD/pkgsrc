@@ -1,4 +1,4 @@
-$NetBSD: patch-dk,v 1.1 2005/05/01 04:35:40 markd Exp $
+$NetBSD: patch-dk,v 1.2 2005/05/04 13:45:51 markd Exp $
 
 --- kimgio/rgb.cpp.orig	2005-02-04 12:33:17.000000000 +1300
 +++ kimgio/rgb.cpp
@@ -44,12 +44,3 @@ $NetBSD: patch-dk,v 1.1 2005/05/01 04:35:40 markd Exp $
  		for (x = 0; x < m_xsize; x++, c++)
  			*c = qRgba(qRed(*c), qGreen(*c), qBlue(*c), line[x]);
  	}
-@@ -270,7 +272,7 @@ bool SGIImage::readImage(QImage& img)
- 	// sanity ckeck
- 	if (m_rle)
- 		for (uint o = 0; o < m_numrows; o++)
--			if (m_starttab[o] + m_lengthtab[o] > m_data.size()) {
-+			if (m_starttab[o] + m_lengthtab[o] >= m_data.size()) {
- 				kdDebug(399) << "image corrupt (sanity check failed)" << endl;
- 				return false;
- 			}
