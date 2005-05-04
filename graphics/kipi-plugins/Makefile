@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:05 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/04 16:50:34 drochner Exp $
 
-DISTNAME=	kipi-plugins-0.1-beta1
-PKGNAME=	kipi-plugins-0.1beta1
-PKGREVISION=	1
+DISTNAME=	kipi-plugins-0.1.0-beta2
+PKGNAME=	kipi-plugins-0.1.0beta2
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/unstable/apps/KDE3.x/graphics/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	seb@NetBSD.ORG
-HOMEPAGE=	http://extragear.kde.org/apps/kipi.php
+HOMEPAGE=	http://extragear.kde.org/apps/kipi/
 COMMENT=	Kipi (KDE Image Plugin Interface) plugins
 
 DEPENDS+=	dcraw-[0-9]*:../../graphics/dcraw
@@ -38,5 +37,5 @@ pre-build:
 .include "../../graphics/libkipi/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../x11/kdebase3/buildlink3.mk"
+#.include "../../x11/kdebase3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
