@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10017 2005/05/04 12:37:02 simonb Exp $
+$NetBSD: CHANGES,v 1.10018 2005/05/04 17:23:31 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2281,3 +2281,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated monotone to 0.19 [jmmv 2005-05-04]
 	Updated monotone-server to 0.19 [jmmv 2005-05-04]
 	Updated adzap to 20050504 [simonb 2005-05-04]
+	Added gromit-20041213 [drochner 2005-05-04]
+	Updated libdvdnav to 0.1.10 [drochner 2005-05-04]
+	Updated gstreamer to 0.8.10 [drochner 2005-05-04]
+	Updated libkipi to 0.1.1 [drochner 2005-05-04]
+	Updated kipi-plugins to 0.1.0beta2 [drochner 2005-05-04]
