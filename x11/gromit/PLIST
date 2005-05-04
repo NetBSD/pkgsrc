@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/04 16:14:10 drochner Exp $
+bin/gromit
+share/doc/gromit/README
+@dirrm share/doc/gromit
