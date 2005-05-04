@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/04 16:14:10 drochner Exp $
+
+SHA1 (gromit-20041213.tar.gz) = f83bdadc90988634a27865eac5da9e847febec37
+RMD160 (gromit-20041213.tar.gz) = e20e1cea9fb5245143f0dd24b209cc17d3becd3f
+Size (gromit-20041213.tar.gz) = 21970 bytes
+SHA1 (patch-aa) = 7777f5d13c812f4dd203676683dd9a0d3e773512
