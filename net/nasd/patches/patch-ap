@@ -1,0 +1,184 @@
+$NetBSD: patch-ap,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+
+Index: drive/nasd_layout.c
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/drive/nasd_layout.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.3
+diff -u -r1.1.1.1 -r1.3
+--- drive/nasd_layout.c	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ drive/nasd_layout.c	21 Mar 2005 23:26:12 -0000	1.3
+@@ -118,10 +118,10 @@
+   \
+   NASD_TM_START(&tm);
+ 
+-#define LAYOUT_TIMING_DONE(_func_) \
++#define LAYOUT_TIMING_DONE(_functime_) \
+   NASD_TM_STOP(&tm); \
+   NASD_TM_ELAPSED_TS(&tm, &ts); \
+-  NASD_ATOMIC_TIMESPEC_ADD(&nasd_drive_layout_stats.##_func_##_time, &ts);
++  NASD_ATOMIC_TIMESPEC_ADD(&nasd_drive_layout_stats._functime_, &ts);
+ 
+ nasd_status_t
+ nasd_od_layout_init(
+@@ -179,14 +179,14 @@
+ 
+   want_blocks = prealloc_blocks + 1;
+   if (want_blocks > (part->part_size - part->blocks_allocated)) {
+-    LAYOUT_TIMING_DONE(get_node_block);
++    LAYOUT_TIMING_DONE(get_node_block_time);
+     return(NASD_NO_SPACE);
+   }
+ 
+   rc = nasd_nl_cur->nl_get_node_block(partnum, prealloc_blocks,
+     layout_hint, &exle, &pre_exle);
+   if (rc) {
+-    LAYOUT_TIMING_DONE(get_node_block);
++    LAYOUT_TIMING_DONE(get_node_block_time);
+     return(rc);
+   }
+ 
+@@ -204,7 +204,7 @@
+   *exle_p = exle;
+   *pre_exle_p = pre_exle;
+ 
+-  LAYOUT_TIMING_DONE(get_node_block);
++  LAYOUT_TIMING_DONE(get_node_block_time);
+   return(rc);
+ }
+ 
+@@ -233,7 +233,7 @@
+ 
+   rc = nasd_nl_cur->nl_node_fail_create(partnum, exle, pre_exle);
+ 
+-  LAYOUT_TIMING_DONE(node_fail_create);
++  LAYOUT_TIMING_DONE(node_fail_create_time);
+   return(rc);
+ }
+ 
+@@ -262,7 +262,7 @@
+ 
+   rc = nasd_nl_cur->nl_release_oneblock(partnum, blknum, layout_handle);
+ 
+-  LAYOUT_TIMING_DONE(release_oneblock);
++  LAYOUT_TIMING_DONE(release_oneblock_time);
+   return(rc);
+ }
+ 
+@@ -288,7 +288,7 @@
+   rc = nasd_nl_cur->nl_release_blocks(partnum, exle, &blocks_released,
+     layout_handle);
+   if (rc) {
+-    LAYOUT_TIMING_DONE(release_blocks);
++    LAYOUT_TIMING_DONE(release_blocks_time);
+     return(rc);
+   }
+ 
+@@ -297,7 +297,7 @@
+ 
+   nasd_part_modified(partnum);
+ 
+-  LAYOUT_TIMING_DONE(release_blocks);
++  LAYOUT_TIMING_DONE(release_blocks_time);
+   return(NASD_SUCCESS);
+ }
+ 
+@@ -335,7 +335,7 @@
+     pb_avail = part->part_size - part->blocks_allocated;
+     if (pah->pb_need > pb_avail) {
+       NASD_ODC_ICPART_UNLOCK_WRITE(icp);
+-      LAYOUT_TIMING_DONE(init_adj_prealloc);
++      LAYOUT_TIMING_DONE(init_adj_prealloc_time);
+       return(NASD_NO_SPACE);
+     }
+     part->blocks_allocated += pah->pb_need;
+@@ -347,7 +347,7 @@
+     pah->pb_need = 0;
+   }
+ 
+-  LAYOUT_TIMING_DONE(init_adj_prealloc);
++  LAYOUT_TIMING_DONE(init_adj_prealloc_time);
+   return(NASD_SUCCESS);
+ }
+ 
+@@ -381,7 +381,7 @@
+     NASD_ODC_ICPART_UNLOCK_WRITE(icp);
+   }
+ 
+-  LAYOUT_TIMING_DONE(cancel_adj_prealloc);
++  LAYOUT_TIMING_DONE(cancel_adj_prealloc_time);
+   return(NASD_SUCCESS);
+ }
+ 
+@@ -424,7 +424,7 @@
+ 
+   NASD_ODC_ICPART_UNLOCK_WRITE(icp);
+ 
+-  LAYOUT_TIMING_DONE(adj_prealloc);
++  LAYOUT_TIMING_DONE(adj_prealloc_time);
+   return(rc);
+ }
+ 
+@@ -448,7 +448,7 @@
+ 
+   rc = nasd_nl_cur->nl_surrender_prealloc(partnum, ne);
+ 
+-  LAYOUT_TIMING_DONE(surrender_prealloc);
++  LAYOUT_TIMING_DONE(surrender_prealloc_time);
+   return(rc);
+ }
+ 
+@@ -468,7 +468,7 @@
+ 
+   rc = nasd_odc_obj_disassoc(ne);
+   if (rc) {
+-    LAYOUT_TIMING_DONE(node_deleting);
++    LAYOUT_TIMING_DONE(node_deleting_time);
+     return(rc);
+   }
+ 
+@@ -476,7 +476,7 @@
+ 
+   rc = nasd_nl_cur->nl_node_deleting(partnum, ne);
+ 
+-  LAYOUT_TIMING_DONE(node_deleting);
++  LAYOUT_TIMING_DONE(node_deleting_time);
+   return(rc);
+ }
+ 
+@@ -510,7 +510,7 @@
+     exle_p, &blocks_allocated);
+   if (rc) {
+     *blocks_allocated_p = 0;
+-    LAYOUT_TIMING_DONE(alloc_blocks);
++    LAYOUT_TIMING_DONE(alloc_blocks_time);
+     return(rc);
+   }
+ 
+@@ -520,7 +520,7 @@
+ 
+   *blocks_allocated_p = blocks_allocated;
+ 
+-  LAYOUT_TIMING_DONE(alloc_blocks);
++  LAYOUT_TIMING_DONE(alloc_blocks_time);
+   return(NASD_SUCCESS);
+ }
+ 
+@@ -568,7 +568,7 @@
+     pbs_got = NASD_MIN(preallocblks_used, pbs_avail);
+     rc = nasd_odc_get_extent_list(&pre_exle);
+     if (rc != NASD_SUCCESS) {
+-      LAYOUT_TIMING_DONE(get_prealloc);
++      LAYOUT_TIMING_DONE(get_prealloc_time);
+       return(rc);
+     }
+     pre_exle->range.first = np->prealloc_ex.first;
+@@ -599,7 +599,7 @@
+ 
+   part->blocks_used += preallocblks_used;
+ 
+-  LAYOUT_TIMING_DONE(get_prealloc);
++  LAYOUT_TIMING_DONE(get_prealloc_time);
+   return(NASD_SUCCESS);
+ }
+ 

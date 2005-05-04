@@ -1,0 +1,18 @@
+$NetBSD: patch-aw,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+
+Index: edrfs/utils/nasd_edrfs_cat.c
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/edrfs/utils/nasd_edrfs_cat.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- edrfs/utils/nasd_edrfs_cat.c	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ edrfs/utils/nasd_edrfs_cat.c	21 Mar 2005 23:03:51 -0000	1.2
+@@ -24,6 +24,7 @@
+  */
+ 
+ 
++#include <errno.h>
+ #include <string.h>
+ #include <libgen.h>
+ 

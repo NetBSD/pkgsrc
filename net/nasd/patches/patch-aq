@@ -1,0 +1,37 @@
+$NetBSD: patch-aq,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+
+Index: drive/nasd_obj.c
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/drive/nasd_obj.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- drive/nasd_obj.c	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ drive/nasd_obj.c	21 Mar 2005 17:07:23 -0000	1.2
+@@ -1688,7 +1688,7 @@
+         g = 0;
+ 
+         if(protection & NASD_INTEGRITY_DATA) {
+-          NASD_ODC_Q_INS_NOLOCK(&commit_queue, ents[i], s);
++          NASD_ODC_Q_INS_NOLOCK(&commit_queue, ents[i], snext, sprev);
+ #if NASD_OD_EXT_PTR > 0
+           digestp = ents[i]->digest;
+           digest_valid = 0;
+@@ -1799,7 +1799,7 @@
+        be trusted.  usually this will happen because we got a bad
+        digest in the middle of the stream.  clean up. */
+     while(NASD_ODC_Q_SIZE(&commit_queue) > 0) {
+-      NASD_ODC_Q_DEQ_TAIL_NOLOCK(&commit_queue, ne, s);
++      NASD_ODC_Q_DEQ_TAIL_NOLOCK(&commit_queue, ne, snext, sprev);
+       NASD_ODC_LOCK_BLOCK(ne);
+       /* XXX the cache will need to be fixed before this will work */
+       nasd_printf("write_simple: invalidating nid 0x%" NASD_ID_FMT
+@@ -1838,7 +1838,7 @@
+   cq = (nasd_odc_oq_t *) commit_rock;
+   
+   do {
+-    NASD_ODC_Q_DEQ_TAIL_NOLOCK(cq, ent, s);
++    NASD_ODC_Q_DEQ_TAIL_NOLOCK(cq, ent, snext, sprev);
+ 
+     /* head of the queue should be the correct block */
+     NASD_ASSERT(ent->offset <= start);

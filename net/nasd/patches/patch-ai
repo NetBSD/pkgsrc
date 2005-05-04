@@ -1,0 +1,105 @@
+$NetBSD: patch-ai,v 1.1.1.1 2005/05/04 08:56:49 agc Exp $
+
+Index: common/netbsd/nasd_netbsd_basic.c
+===================================================================
+RCS file: common/netbsd/nasd_netbsd_basic.c
+diff -N common/netbsd/nasd_netbsd_basic.c
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ common/netbsd/nasd_netbsd_basic.c	21 Mar 2005 08:55:38 -0000	1.1
+@@ -0,0 +1,96 @@
++/*
++ * nasd_netbsd_basic.c
++ *
++ * Basic system support stuff
++ *
++ * Authors: Marc Unangst, Jim Zelenka, Sean Levy
++ */
++/*
++ * Copyright (c) of Carnegie Mellon University, 1998,1999.
++ *
++ * Permission to reproduce, use, and prepare derivative works of
++ * this software for internal use is granted provided the copyright
++ * and "No Warranty" statements are included with all reproductions
++ * and derivative works. This software may also be redistributed
++ * without charge provided that the copyright and "No Warranty"
++ * statements are included in all redistributions.
++ *
++ * NO WARRANTY. THIS SOFTWARE IS FURNISHED ON AN "AS IS" BASIS.
++ * CARNEGIE MELLON UNIVERSITY MAKES NO WARRANTIES OF ANY KIND, EITHER
++ * EXPRESSED OR IMPLIED AS TO THE MATTER INCLUDING, BUT NOT LIMITED
++ * TO: WARRANTY OF FITNESS FOR PURPOSE OR MERCHANTABILITY, EXCLUSIVITY
++ * OF RESULTS OR RESULTS OBTAINED FROM USE OF THIS SOFTWARE. CARNEGIE
++ * MELLON UNIVERSITY DOES NOT MAKE ANY WARRANTY OF ANY KIND WITH RESPECT
++ * TO FREEDOM FROM PATENT, TRADEMARK, OR COPYRIGHT INFRINGEMENT.
++ */
++
++
++#include <nasd/nasd_options.h>
++#include <nasd/nasd_types.h>
++#include <nasd/nasd_mem.h>
++#include <nasd/nasd_threadstuff.h>
++#include <nasd/nasd_timer.h>
++#include <nasd/nasd_common.h>
++#include <nasd/nasd_sys.h>
++#include <sys/time.h>
++#include <fcntl.h>
++#include <netdb.h>
++#include <netinet/in.h>
++#include <arpa/inet.h>
++#include <unistd.h>
++#include <ctype.h>
++
++static nasd_timespec_t nasd_netbsd_last_time = {0,0};
++static nasd_timespec_t nasd_netbsd_uniq_time = {0,0};
++
++NASD_DECLARE_MUTEX(nasd_netbsd_dns_lock);
++
++void
++nasd_gettime(
++  nasd_timespec_t  *tm)
++{
++  struct timeval tv;
++
++  gettimeofday(&tv, NULL);
++
++  tm->ts_sec = tv.tv_sec;
++  tm->ts_nsec = tv.tv_usec*1000;
++  if ((tm->ts_sec == nasd_netbsd_last_time.ts_sec)
++    && (tm->ts_nsec == nasd_netbsd_last_time.ts_nsec))
++  {
++    nasd_netbsd_uniq_time.ts_nsec++;
++    if (nasd_netbsd_uniq_time.ts_nsec >= NASD_NSEC_PER_SEC) {
++      nasd_netbsd_uniq_time.ts_nsec -= NASD_NSEC_PER_SEC;
++      nasd_netbsd_uniq_time.ts_sec++;
++    }
++    *tm = nasd_netbsd_uniq_time;
++  }
++  else {
++    nasd_netbsd_last_time = *tm;
++    nasd_netbsd_uniq_time = nasd_netbsd_last_time;
++  }
++}
++
++nasd_status_t
++nasd_sys_init()
++{
++  nasd_status_t rc;
++
++  nasd_get_clock_speed(&nasd_ctimer_ticks);
++  rc = pthread_mutex_init(&nasd_netbsd_dns_lock, NULL);
++  if(rc)
++    return NASD_FAIL;
++
++  return(NASD_SUCCESS);
++}
++
++void
++nasd_sys_shutdown(void)
++{
++  return;
++}
++
++/* Local Variables:  */
++/* indent-tabs-mode: nil */
++/* tab-width: 2 */
++/* End: */

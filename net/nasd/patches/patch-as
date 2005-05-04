@@ -1,0 +1,75 @@
+$NetBSD: patch-as,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+
+Index: drive/nasd_security_dr.c
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/drive/nasd_security_dr.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- drive/nasd_security_dr.c	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ drive/nasd_security_dr.c	21 Mar 2005 17:07:23 -0000	1.2
+@@ -465,8 +465,8 @@
+   NASD_KC_LOCK();
+   for(kp = bucket->head.cnext; kp != &bucket->head; kp = kp->cnext) {
+     if(bcmp(capability, &kp->capability, sizeof(nasd_capability_t)) == 0) {
+-      NASD_KCQ_DEQ(kp, l);
+-      NASD_KCQ_INS(&nasd_sec_kc_lru, kp, l);
++      NASD_KCQ_DEQ(kp, lnext, lprev);
++      NASD_KCQ_INS(&nasd_sec_kc_lru, kp, lnext, lprev);
+       bcopy(kp, ke, sizeof(nasd_sec_kc_ent_t));
+       rc = NASD_SUCCESS;
+       break;
+@@ -494,16 +494,16 @@
+ 
+   /* try to get an unused buf first */
+   if(NASD_KCQ_SIZE(&nasd_sec_kc_free) > 0) {
+-    NASD_KCQ_DEQ_TAIL(&nasd_sec_kc_free, ke, f);
++    NASD_KCQ_DEQ_TAIL(&nasd_sec_kc_free, ke, fnext, fprev);
+   }
+ 
+   if(!ke) {
+     /* need to steal from LRU */
+     NASD_ASSERT(NASD_KCQ_SIZE(&nasd_sec_kc_lru) > 0);
+-    NASD_KCQ_DEQ_TAIL(&nasd_sec_kc_lru, ke, l);
++    NASD_KCQ_DEQ_TAIL(&nasd_sec_kc_lru, ke, lnext, lprev);
+     NASD_ASSERT(ke->cnext != NULL);
+     /* remove from old bucket */
+-    NASD_KCQ_DEQ(ke, c);
++    NASD_KCQ_DEQ(ke, cnext, cprev);
+   }
+ 
+   bcopy(capability, &ke->capability, sizeof(nasd_capability_t));
+@@ -513,10 +513,10 @@
+ 
+   /* put in new bucket */
+   bucket = &nasd_sec_kc_bucket_ents[NASD_KC_BUCKET(capability->ni)];
+-  NASD_KCQ_INS(bucket, ke, c);
++  NASD_KCQ_INS(bucket, ke, cnext, cprev);
+ 
+   /* put on LRU queue */
+-  NASD_KCQ_INS(&nasd_sec_kc_lru, ke, l);
++  NASD_KCQ_INS(&nasd_sec_kc_lru, ke, lnext, lprev);
+ 
+   NASD_KC_UNLOCK();
+   return NASD_SUCCESS;
+@@ -535,9 +535,9 @@
+   for(ke = bucket->head.cnext; ke != &bucket->head; ke = ke->cnext) {
+     if(ke->capability.ni == identifier) {
+       /* remove from bucket */
+-      NASD_KCQ_DEQ(ke, c);
++      NASD_KCQ_DEQ(ke, cnext, cprev);
+       /* add to free queue */
+-      NASD_KCQ_INS(&nasd_sec_kc_free, ke, f);
++      NASD_KCQ_INS(&nasd_sec_kc_free, ke, fnext, fprev);
+     }
+   }
+ 
+@@ -581,7 +581,7 @@
+       NASD_Free(ke, sizeof(nasd_sec_kc_ent_t));
+       return rc;
+     }
+-    NASD_KCQ_INS(&nasd_sec_kc_free, ke, f);
++    NASD_KCQ_INS(&nasd_sec_kc_free, ke, fnext, fprev);
+   }
+ 
+   rc = nasd_mutex_init(&nasd_sec_kc_lock);

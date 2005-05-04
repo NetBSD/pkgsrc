@@ -1,0 +1,92 @@
+$NetBSD: patch-bo,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+
+Index: include/nasd/netbsd/nasd_netbsd_general_simple.h
+===================================================================
+RCS file: include/nasd/netbsd/nasd_netbsd_general_simple.h
+diff -N include/nasd/netbsd/nasd_netbsd_general_simple.h
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ include/nasd/netbsd/nasd_netbsd_general_simple.h	21 Mar 2005 17:07:29 -0000	1.2
+@@ -0,0 +1,83 @@
++/*
++ * nasd_netbsd_general_simple.h
++ *
++ * Generic definitions useful to pretty much all NASD code
++ *
++ * Authors: Jim Zelenka, Marc Unangst
++ */
++/*
++ * Copyright (c) of Carnegie Mellon University, 1999.
++ *
++ * Permission to reproduce, use, and prepare derivative works of
++ * this software for internal use is granted provided the copyright
++ * and "No Warranty" statements are included with all reproductions
++ * and derivative works. This software may also be redistributed
++ * without charge provided that the copyright and "No Warranty"
++ * statements are included in all redistributions.
++ *
++ * NO WARRANTY. THIS SOFTWARE IS FURNISHED ON AN "AS IS" BASIS.
++ * CARNEGIE MELLON UNIVERSITY MAKES NO WARRANTIES OF ANY KIND, EITHER
++ * EXPRESSED OR IMPLIED AS TO THE MATTER INCLUDING, BUT NOT LIMITED
++ * TO: WARRANTY OF FITNESS FOR PURPOSE OR MERCHANTABILITY, EXCLUSIVITY
++ * OF RESULTS OR RESULTS OBTAINED FROM USE OF THIS SOFTWARE. CARNEGIE
++ * MELLON UNIVERSITY DOES NOT MAKE ANY WARRANTY OF ANY KIND WITH RESPECT
++ * TO FREEDOM FROM PATENT, TRADEMARK, OR COPYRIGHT INFRINGEMENT.
++ */
++
++
++#ifndef _NASD__NASD_NETBSD_GENERAL_SIMPLE_H_
++#define _NASD__NASD_NETBSD_GENERAL_SIMPLE_H_
++
++#if !defined(KERNEL) && (NASD_NOASSERT == 0)
++#include <assert.h>
++#endif /* !KERNEL && (NASD_NOASSERT == 0) */
++
++#ifndef KERNEL
++#include <stdio.h>
++#include <limits.h>
++#include <string.h>
++#include <unistd.h>
++#endif /* !KERNEL */
++
++#include <sys/time.h>
++#include <sys/types.h>
++#include <sys/param.h>
++
++#ifndef KERNEL
++
++#include <stdio.h>
++
++#if NASD_NOASSERT == 0
++#define NASD_ASSERT(_x_) { \
++  if (!(_x_)) { \
++    printf("Assertion check at file %s line %d\n", __FILE__, __LINE__); \
++    printf("Assertion failed: %s\n", NASD_STRING(_x_)); \
++    fflush(stdout); \
++    abort(); \
++    exit(1); \
++  } \
++}
++#else /* NASD_NOASSERT == 0 */
++#define NASD_ASSERT(x)   {/*noop*/}
++#endif /* NASD_NOASSERT == 0 */
++#define NASD_PANIC() { \
++  printf("D'oh! Fatal error file %s line %d\n", __FILE__, __LINE__); \
++  fflush(stdout); \
++  fprintf(stderr, "D'oh! Fatal error file %s line %d\n", __FILE__, __LINE__); \
++  fflush(stderr); \
++  abort(); \
++  exit(1); \
++}
++
++#endif /* !KERNEL */
++
++#define NASD_MAXPATHLEN  MAXPATHLEN
++
++#define NASD_UIO_MAXIOV 1024
++
++#endif /* !_NASD__NASD_NETBSD_GENERAL_SIMPLE_H_ */
++
++/* Local Variables:  */
++/* indent-tabs-mode: nil */
++/* tab-width: 2 */
++/* End: */
