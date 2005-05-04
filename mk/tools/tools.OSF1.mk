@@ -1,4 +1,4 @@
-# $NetBSD: tools.OSF1.mk,v 1.5 2005/05/03 16:30:34 jlam Exp $
+# $NetBSD: tools.OSF1.mk,v 1.6 2005/05/04 06:42:43 jlam Exp $
 #
 # System-supplied tools for the OSF/1 operating system.
 
@@ -42,6 +42,8 @@ TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sh?=		/bin/ksh
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
+TOOLS_PLATFORM.strip?=		\
+	${_INSTALL_UNSTRIPPED:D${TOOLS_PLATFORM.true}:U/usr/ccs/bin/strip}
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
 TOOLS_PLATFORM.tee?=		/usr/bin/tee
 TOOLS_PLATFORM.test?=		test			# shell builtin
