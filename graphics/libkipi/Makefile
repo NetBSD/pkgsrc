@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:06 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/04 16:47:18 drochner Exp $
 
-DISTNAME=	libkipi-0.1
+DISTNAME=	libkipi-0.1.1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/unstable/apps/KDE3.x/graphics/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	seb@NetBSD.ORG
-HOMEPAGE=	http://extragear.kde.org/apps/kipi.php
+HOMEPAGE=	http://extragear.kde.org/apps/kipi/
 COMMENT=	KDE Image Plugin Interface
 
 USE_DIRS+=		xdg-1.1
