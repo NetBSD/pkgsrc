@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:17 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/05/04 20:57:04 reed Exp $
 bin/sweep
 include/sweep/sweep.h
 include/sweep/sweep_filter.h
@@ -30,6 +30,7 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sweep.mo
 share/pixmaps/sweep.png
 share/sweep/sweep_logo.ppm
 @dirrm share/sweep
+@comment in xdg-x11-dirs: @dirrm share/pixmaps
 @comment in gnome-dirs: @dirrm share/gnome/apps/Multimedia
 @dirrm lib/sweep
 @dirrm include/sweep
