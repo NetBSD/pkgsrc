@@ -1,0 +1,3 @@
+Xrestop uses the X-Resource extension (included with newer X libraries)
+to provide 'top' like statistics of each connected X11 clients' server-
+side resource usage.
