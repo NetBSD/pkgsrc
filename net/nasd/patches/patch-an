@@ -1,0 +1,355 @@
+$NetBSD: patch-an,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+
+Index: drive/nasd_cblock.c
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/drive/nasd_cblock.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- drive/nasd_cblock.c	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ drive/nasd_cblock.c	21 Mar 2005 17:07:23 -0000	1.2
+@@ -72,7 +72,7 @@
+ 
+ #define NASD_ODC_LOGICAL_INDEX_DEL(_ent_) { \
+   NASD_ASSERT((_ent_)->lru_flags&NASD_CL_LINDEX); \
+-  NASD_ODC_Q_DEQ_NOLOCK(ent,lh); \
++  NASD_ODC_Q_DEQ_NOLOCK(ent,lhnext,lhprev); \
+   (_ent_)->lru_flags &= ~NASD_CL_LINDEX; \
+ }
+ 
+@@ -103,7 +103,7 @@
+       NASD_ASSERT(!((_ne_)->dirty_flags&NASD_CR_DIRTY_Q)); \
+       NASD_ASSERT((_ne_)->refcnt == 1); \
+       (_ne_)->lru_flags &= ~NASD_CL_LRU_Q; \
+-      NASD_ODC_Q_DEQ_NOLOCK((_ne_),l); \
++      NASD_ODC_Q_DEQ_NOLOCK((_ne_),lnext,lprev); \
+       nasd_odc_lru[(_ne_)->lru_num].size--; \
+       (_ne_)->lru_num = NASD_ODC_LRU_NONE; \
+     } \
+@@ -194,7 +194,7 @@
+   }
+   else {
+     /* protected by LRU lock */
+-    NASD_ODC_Q_DEQ_TAIL_NOLOCK(&nasd_odc_unusedq,ent,l);
++    NASD_ODC_Q_DEQ_TAIL_NOLOCK(&nasd_odc_unusedq,ent,lnext,lprev);
+     *entp = ent;
+     NASD_ODC_CSINC(alloc_succeed);
+     rc = NASD_SUCCESS;
+@@ -278,7 +278,7 @@
+       if (NASD_ODC_Q_SIZE(&nasd_odc_lru[lru_num]) == 0)
+         continue;
+       /* found an entry, dequeue it into ent */
+-      NASD_ODC_Q_DEQ_TAIL_NOLOCK(&nasd_odc_lru[lru_num],ent,l);
++      NASD_ODC_Q_DEQ_TAIL_NOLOCK(&nasd_odc_lru[lru_num],ent,lnext,lprev);
+       ent->chances++;
+ #if NASD_DRIVE_BLOCK_REPLACEMENT == 1
+       /*
+@@ -287,7 +287,7 @@
+        * because it's in the LRU.
+        */
+       if (ent->chances < nasd_odc_chances[ent->type]) {
+-        NASD_ODC_Q_INS_NOLOCK(&nasd_odc_lru[lru_num],ent,l);
++        NASD_ODC_Q_INS_NOLOCK(&nasd_odc_lru[lru_num],ent,lnext,lprev);
+         goto find_block;
+       }
+ #endif /* NASD_DRIVE_BLOCK_REPLACEMENT == 1 */
+@@ -310,14 +310,14 @@
+         /* node block with child blocks in cache (or deleting) */
+         NASD_ASSERT(ent->type == NASD_ODC_T_NODE);
+         ent->lru_num = lru_num;
+-        NASD_ODC_Q_INS_NOLOCK(&nasd_odc_lru[lru_num],ent,l);
++        NASD_ODC_Q_INS_NOLOCK(&nasd_odc_lru[lru_num],ent,lnext,lprev);
+         ent->lru_flags |= NASD_CL_LRU_Q;
+         NASD_ODC_CSINC(grab_stillref);
+         goto find_block;
+       }
+       ent->chances = 0;
+       /* remove from hash bucket */
+-      NASD_ODC_Q_DEQ_NOLOCK(ent,h);
++      NASD_ODC_Q_DEQ_NOLOCK(ent,hnext,hprev);
+       ent->hbucket->size--;
+       ent->hbucket = NULL;
+       *entp = ent;
+@@ -332,7 +332,7 @@
+       }
+       /* remove from node-member list if applicable */
+       if (ent->node_ent) {
+-        NASD_ODC_Q_DEQ_NOLOCK(ent,o);
++        NASD_ODC_Q_DEQ_NOLOCK(ent,onext,oprev);
+         ne = ent->node_ent;
+         ent->node_ent = NULL;
+         LOSE_IREF(ne);
+@@ -527,7 +527,7 @@
+       NASD_ASSERT(!(ent->lru_flags&NASD_CL_LRU_Q));
+       ent->lru_num = lru_num;
+       ent->chances = 0;
+-      NASD_ODC_Q_INS_NOLOCK(&nasd_odc_lru[lru_num],ent,l);
++      NASD_ODC_Q_INS_NOLOCK(&nasd_odc_lru[lru_num],ent,lnext,lprev);
+       ent->lru_flags |= NASD_CL_LRU_Q;
+       /*
+        * We used to only broadcast this when the queue size went
+@@ -737,7 +737,7 @@
+           ent->lru_flags &= ~NASD_CL_REMOVING;
+           if (ent->node_ent) {
+             NASD_ODC_CHECK_NODE_ENT(ent->node_ent);
+-            NASD_ODC_Q_DEQ_NOLOCK(ent,o);
++            NASD_ODC_Q_DEQ_NOLOCK(ent,onext,oprev);
+             LOSE_IREF(ent->node_ent);
+             ent->node_ent = NULL;
+           }
+@@ -782,7 +782,7 @@
+             /* mark it wired */
+             ent->lru_flags |= NASD_CL_WIRED;
+             /* record in wireq (list of wired blocks) */
+-            NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,w);
++            NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,wnext,wprev);
+           }
+ #endif /* NASD_DRIVE_WIRE_NPT == 1 */
+ #if NASD_DRIVE_WIRE_NPT == 2
+@@ -790,7 +790,7 @@
+             /* mark it wired */
+             ent->lru_flags |= NASD_CL_WIRED;
+             /* record in wireq (list of wired blocks) */
+-            NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,w);
++            NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,wnext,wprev);
+           }
+ #endif /* NASD_DRIVE_WIRE_NPT == 2 */
+ #if NASD_DRIVE_WIRE_REFCNT > 0
+@@ -798,7 +798,7 @@
+             /* mark it wired */
+             ent->lru_flags |= NASD_CL_WIRED;
+             /* record in wireq (list of wired blocks) */
+-            NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,w);
++            NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,wnext,wprev);
+           }
+ #endif /* NASD_DRIVE_WIRE_REFCNT > 0 */
+           if (node_ent) {
+@@ -823,7 +823,7 @@
+           NASD_ASSERT(!(ent->dirty_flags&NASD_CR_DIRTY_Q));
+           NASD_ASSERT(ent->refcnt == 1);
+           ent->lru_flags &= ~NASD_CL_LRU_Q;
+-          NASD_ODC_Q_DEQ_NOLOCK(ent,l);
++          NASD_ODC_Q_DEQ_NOLOCK(ent,lnext,lprev);
+           nasd_odc_lru[ent->lru_num].size--;
+           ent->lru_num = NASD_ODC_LRU_NONE;
+         }
+@@ -832,7 +832,7 @@
+           NASD_ASSERT(!(ent->lru_flags&NASD_CL_LRU_Q));
+           NASD_ASSERT(ent->refcnt == 2);
+           ent->dirty_flags &= ~NASD_CR_DIRTY_Q;
+-          NASD_ODC_Q_DEQ_NOLOCK(ent,d);
++          NASD_ODC_Q_DEQ_NOLOCK(ent,dnext,dprev);
+           ent->refcnt--;
+         }
+       }
+@@ -885,7 +885,7 @@
+       nasd_nl_reg_init_ent(e);
+ #endif /* NASD_NL_REG_SCOREBOARD > 0 */
+       e->hbucket = bucket;
+-      NASD_ODC_Q_INS_NOLOCK(bucket,e,h);
++      NASD_ODC_Q_INS_NOLOCK(bucket,e,hnext,hprev);
+ unghost_lookup:
+       /* try to alloc an entry */
+       rc = nasd_odc_block_grab(&ent, ((flags&NASD_ODC_L_BLOCK) ? 1 : 0));
+@@ -925,7 +925,7 @@
+           /* mark it wired */
+           ent->lru_flags |= NASD_CL_WIRED;
+           /* record in wireq (list of wired blocks) */
+-          NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,w);
++          NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,wnext,wprev);
+         }
+ #endif /* NASD_DRIVE_WIRE_NPT == 1 */
+ #if NASD_DRIVE_WIRE_NPT == 2
+@@ -933,7 +933,7 @@
+           /* mark it wired */
+           ent->lru_flags |= NASD_CL_WIRED;
+           /* record in wireq (list of wired blocks) */
+-          NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,w);
++          NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,wnext,wprev);
+         }
+ #endif /* NASD_DRIVE_WIRE_NPT == 2 */
+       }
+@@ -971,7 +971,7 @@
+ we_give_up:
+         NASD_ASSERT(e->refcnt == 1);
+         e->refcnt = 0;
+-        NASD_ODC_Q_DEQ_NOLOCK(e,h);
++        NASD_ODC_Q_DEQ_NOLOCK(e,hnext,hprev);
+         e->hbucket->size--;
+         e->hbucket = NULL;
+         otype = e->type;
+@@ -1087,7 +1087,7 @@
+     /* mark it wired */
+     ent->lru_flags |= NASD_CL_WIRED;
+     /* record in wireq (list of wired blocks) */
+-    NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,w);
++    NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,wnext,wprev);
+   }
+ #endif /* NASD_DRIVE_WIRE_NPT == 1 */
+ #if NASD_DRIVE_WIRE_NPT == 2
+@@ -1095,7 +1095,7 @@
+     /* mark it wired */
+     ent->lru_flags |= NASD_CL_WIRED;
+     /* record in wireq (list of wired blocks) */
+-    NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,w);
++    NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,wnext,wprev);
+   }
+ #endif /* NASD_DRIVE_WIRE_NPT == 2 */
+   return(NASD_SUCCESS);
+@@ -1172,7 +1172,7 @@
+         ent->lru_flags &= ~NASD_CL_REMOVING;
+         if (ent->node_ent && (ent->node_ent != node_ent)) {
+           NASD_ODC_CHECK_NODE_ENT(ent->node_ent);
+-          NASD_ODC_Q_DEQ_NOLOCK(ent,o);
++          NASD_ODC_Q_DEQ_NOLOCK(ent,onext,oprev);
+           LOSE_IREF(ent->node_ent);
+           ent->node_ent = NULL;
+           if (node_ent) {
+@@ -1195,7 +1195,7 @@
+           NASD_ASSERT(!(ent->dirty_flags&NASD_CR_DIRTY_Q));
+           NASD_ASSERT(ent->refcnt == 1);
+           ent->lru_flags &= ~NASD_CL_LRU_Q;
+-          NASD_ODC_Q_DEQ_NOLOCK(ent,l);
++          NASD_ODC_Q_DEQ_NOLOCK(ent,lnext,lprev);
+           nasd_odc_lru[ent->lru_num].size--;
+           ent->lru_num = NASD_ODC_LRU_NONE;
+         }
+@@ -1204,7 +1204,7 @@
+           NASD_ASSERT(!(ent->lru_flags&NASD_CL_LRU_Q));
+           NASD_ASSERT(ent->refcnt == 2);
+           ent->dirty_flags &= ~NASD_CR_DIRTY_Q;
+-          NASD_ODC_Q_DEQ_NOLOCK(ent,d);
++          NASD_ODC_Q_DEQ_NOLOCK(ent,dnext,dprev);
+           ent->refcnt--;
+         }
+       }
+@@ -1256,7 +1256,7 @@
+         /* mark it wired */
+         ent->lru_flags |= NASD_CL_WIRED;
+         /* record in wireq (list of wired blocks) */
+-        NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,w);
++        NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,wnext,wprev);
+       }
+ #endif /* NASD_DRIVE_WIRE_NPT == 1 */
+ #if NASD_DRIVE_WIRE_NPT == 2
+@@ -1264,7 +1264,7 @@
+         /* mark it wired */
+         ent->lru_flags |= NASD_CL_WIRED;
+         /* record in wireq (list of wired blocks) */
+-        NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,w);
++        NASD_ODC_Q_INS_NOLOCK(&nasd_odc_wireq,ent,wnext,wprev);
+       }
+ #endif /* NASD_DRIVE_WIRE_NPT == 2 */
+     }
+@@ -1346,7 +1346,7 @@
+           NASD_WAIT_COND(ent->cond,nasd_odc_lru_mutex);
+         }
+         ent->refcnt = 0;
+-        NASD_ODC_Q_DEQ_NOLOCK(ent,h);
++        NASD_ODC_Q_DEQ_NOLOCK(ent,hnext,hprev);
+         ent->hbucket->size--;
+         ent->hbucket = NULL;
+         nasd_odc_put_ent(ent);
+@@ -1453,7 +1453,7 @@
+           NASD_WAIT_COND(ent->cond,nasd_odc_lru_mutex);
+         }
+         ent->refcnt = 0;
+-        NASD_ODC_Q_DEQ_NOLOCK(ent,h);
++        NASD_ODC_Q_DEQ_NOLOCK(ent,hnext,hprev);
+         ent->hbucket->size--;
+         ent->hbucket = NULL;
+         otype = ent->type;
+@@ -1989,10 +1989,10 @@
+   NASD_DIRTY_UNLOCK();
+   ent->data_flags |= NASD_CD_INVALID;
+   ent->type = NASD_ODC_T_FREE;
+-  NASD_ODC_Q_INS(&nasd_odc_unusedq,ent,l);
++  NASD_ODC_Q_INS(&nasd_odc_unusedq,ent,lnext,lprev);
+   ent->lru_flags &= ~NASD_CL_REMOVING;
+   /* remove from hash bucket */
+-  NASD_ODC_Q_DEQ_NOLOCK(ent,h);
++  NASD_ODC_Q_DEQ_NOLOCK(ent,hnext,hprev);
+   ent->hbucket->size--;
+   ent->hbucket = NULL;
+   /* remove from identity hash */
+@@ -2004,7 +2004,7 @@
+   }
+   /* remove from node-member list iff applicable */
+   if (ent->node_ent) {
+-    NASD_ODC_Q_DEQ_NOLOCK(ent,o);
++    NASD_ODC_Q_DEQ_NOLOCK(ent,onext,oprev);
+     ne = ent->node_ent;
+     ent->node_ent = NULL;
+     LOSE_IREF(ne);
+@@ -2075,7 +2075,7 @@
+          */
+         NASD_ASSERT(e->lru_flags&NASD_CL_LRU_Q);
+         e->lru_flags &= ~NASD_CL_LRU_Q;
+-        NASD_ODC_Q_DEQ_NOLOCK(e,l);
++        NASD_ODC_Q_DEQ_NOLOCK(e,lnext,lprev);
+ irefonly:
+         NASD_ASSERT((e->lru_num >= 0) && (e->lru_num < NASD_ODC_NLRUS));
+         nasd_odc_lru[e->lru_num].size--;
+@@ -2086,7 +2086,7 @@
+       else {
+         NASD_ASSERT(e->lru_flags&NASD_CL_LRU_Q);
+         e->lru_flags &= ~NASD_CL_LRU_Q;
+-        NASD_ODC_Q_DEQ_NOLOCK(e,l);
++        NASD_ODC_Q_DEQ_NOLOCK(e,lnext,lprev);
+         nasd_odc_lru[e->lru_num].size--;
+         e->lru_num = NASD_ODC_LRU_NONE;
+ noref:
+@@ -2113,7 +2113,7 @@
+   NASD_ODC_LRU_LOCK();
+ 
+   ent->hbucket = bucket;
+-  NASD_ODC_Q_INS_NOLOCK(bucket,ent,h);
++  NASD_ODC_Q_INS_NOLOCK(bucket,ent,hnext,hprev);
+ 
+   NASD_ODC_LRU_UNLOCK();
+ }
+@@ -2172,7 +2172,7 @@
+           NASD_ASSERT(!(e->dirty_flags&NASD_CR_DIRTY_Q));
+           NASD_ASSERT(e->refcnt == 0);
+           e->lru_flags &= ~NASD_CL_LRU_Q;
+-          NASD_ODC_Q_DEQ_NOLOCK(e,l);
++          NASD_ODC_Q_DEQ_NOLOCK(e,lnext,lprev);
+           nasd_odc_lru[e->lru_num].size--;
+           e->lru_num = NASD_ODC_LRU_NONE;
+         }
+@@ -2181,7 +2181,7 @@
+           NASD_ASSERT(!(e->lru_flags&NASD_CL_LRU_Q));
+           NASD_ASSERT(e->refcnt == 1);
+           e->dirty_flags &= ~NASD_CR_DIRTY_Q;
+-          NASD_ODC_Q_DEQ_NOLOCK(e,d);
++          NASD_ODC_Q_DEQ_NOLOCK(e,dnext,dprev);
+           /* we now "own" the ref on this block */
+           wait_ent = e;
+           goto check_complete;
+@@ -2298,7 +2298,7 @@
+       NASD_ASSERT(!(e->dirty_flags&NASD_CR_DIRTY_Q));
+       NASD_ASSERT(e->refcnt == 0);
+       e->lru_flags &= ~NASD_CL_LRU_Q;
+-      NASD_ODC_Q_DEQ_NOLOCK(e,l);
++      NASD_ODC_Q_DEQ_NOLOCK(e,lnext,lprev);
+       nasd_odc_lru[e->lru_num].size--;
+       e->lru_num = NASD_ODC_LRU_NONE;
+     }
+@@ -2307,7 +2307,7 @@
+       NASD_ASSERT(!(e->lru_flags&NASD_CL_LRU_Q));
+       NASD_ASSERT(e->refcnt == 1);
+       e->dirty_flags &= ~NASD_CR_DIRTY_Q;
+-      NASD_ODC_Q_DEQ_NOLOCK(e,d);
++      NASD_ODC_Q_DEQ_NOLOCK(e,dnext,dprev);
+       /* we now "own" the ref on this block */
+       wait_ent = e;
+       goto check_complete;
+@@ -2402,7 +2402,7 @@
+   for(e=ne->onext;e!=ne;e=next) {
+     next = e->onext;
+     NASD_ASSERT(e->node_ent == ne);
+-    NASD_ODC_Q_DEQ_NOLOCK(e,o);
++    NASD_ODC_Q_DEQ_NOLOCK(e,onext,oprev);
+     LOSE_IREF(ne);
+     e->node_ent = NULL;
+   }

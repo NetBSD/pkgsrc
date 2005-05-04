@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/05/04 08:56:49 agc Exp $
+
+Index: common/Imakefile
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/common/Imakefile,v
+retrieving revision 1.1.1.1
+retrieving revision 1.3
+diff -u -r1.1.1.1 -r1.3
+--- common/Imakefile	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ common/Imakefile	21 Mar 2005 17:07:18 -0000	1.3
+@@ -76,6 +76,19 @@
+ 	i386/nasd_rpcc.o
+ #endif /* FreeBSDArchitecture */
+ 
++#ifdef NetBSDArchitecture
++ARCHOBJS = \
++	generic/incstat.o \
++	generic/nasd_generic_addts.o \
++	generic/nasd_generic_timeout.o \
++	generic/nasd_pthread_support.o \
++	generic/nasd_generic_gethostbyname.o \
++	netbsd/nasd_netbsd_basic.o \
++	netbsd/nasd_netbsd_lseek.o \
++	netbsd/nasd_netbsd_srv.o \
++	i386/nasd_rpcc.o
++#endif /* NetBSDArchitecture */
++
+ #ifdef SolarisArchitecture
+ 
+ #ifdef i386Architecture
+@@ -112,6 +125,7 @@
+ 	i386 \
+ 	irix \
+ 	linux \
++	netbsd \
+ 	solaris \
+ 	vxworks
+ 

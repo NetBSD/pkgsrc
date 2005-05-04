@@ -1,0 +1,18 @@
+$NetBSD: patch-br,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+
+Index: kernel_generate/Imakefile
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/kernel_generate/Imakefile,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- kernel_generate/Imakefile	21 Mar 2005 08:52:03 -0000	1.1.1.1
++++ kernel_generate/Imakefile	21 Mar 2005 17:07:31 -0000	1.2
+@@ -33,6 +33,7 @@
+ #define NASD_dosubdirs 1
+ #endif /* LinuxArchitecture */
+ 
++
+ #include "NASD.tmpl"
+ 
+ #if NASD_dosubdirs == 1

@@ -1,0 +1,39 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/05/04 08:56:49 agc Exp $
+
+Index: common/generic/Imakefile
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/common/generic/Imakefile,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- common/generic/Imakefile	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ common/generic/Imakefile	21 Mar 2005 17:07:19 -0000	1.2
+@@ -32,13 +32,13 @@
+ THREAD_SRCS = nasd_pthread_support.c
+ THREAD_OBJS = nasd_pthread_support.o
+ 
+-#if defined(IRIXArchitecture) || defined(FreeBSDArchitecture)
++#if defined(IRIXArchitecture) || defined(FreeBSDArchitecture) || defined(NetBSDArchitecture)
+ GHBN_SRCS = nasd_generic_gethostbyname.c
+ GHBN_OBJS = nasd_generic_gethostbyname.o
+-#endif /* IRIXArchitecture || FreeBSDArchitecture */
++#endif /* IRIXArchitecture || FreeBSDArchitecture || NetBSDArchitecture */
+ 
+-GHBN_SRCS := nasd_generic_hostlocal.c
+-GHBN_OBJS := nasd_generic_hostlocal.o
++GHLOCAL_SRCS := nasd_generic_hostlocal.c
++GHLOCAL_OBJS := nasd_generic_hostlocal.o
+ 
+ #if !defined(AlphaArchitecture)
+ ATOMIC_SRCS = incstat.c nasd_generic_addts.c
+@@ -62,8 +62,8 @@
+ 
+ #endif /* BUILD_NASD_RPC_PACKAGE == NASD_RPC_PACKAGE_SRPC */
+ 
+-SRCS = $(ATOMIC_SRCS) $(TIMEOUT_SRCS) $(THREAD_SRCS) $(RPC_SRCS) $(GHBN_SRCS)
+-OBJS = $(ATOMIC_OBJS) $(TIMEOUT_OBJS) $(THREAD_OBJS) $(RPC_OBJS) $(GHBN_OBJS)
++SRCS = $(ATOMIC_SRCS) $(TIMEOUT_SRCS) $(THREAD_SRCS) $(RPC_SRCS) $(GHBN_SRCS) $(GHLOCAL_SRCS)
++OBJS = $(ATOMIC_OBJS) $(TIMEOUT_OBJS) $(THREAD_OBJS) $(RPC_OBJS) $(GHBN_OBJS) $(GHLOCAL_OBJS)
+ 
+ all:: $(OBJS)
+ 

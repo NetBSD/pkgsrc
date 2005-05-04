@@ -1,0 +1,1567 @@
+$NetBSD: patch-bs,v 1.1.1.1 2005/05/04 08:56:51 agc Exp $
+
+Index: tests/premote_string.c
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/tests/premote_string.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- tests/premote_string.c	21 Mar 2005 08:52:03 -0000	1.1.1.1
++++ tests/premote_string.c	21 Mar 2005 17:07:32 -0000	1.2
+@@ -1,781 +1,781 @@
+ /* Constants for the rot13 "encryption" active disk test */
+ 
+-char nasd_premote_plaintext[]="<h2>The compilation environment</h2>
++char nasd_premote_plaintext[]="<h2>The compilation environment</h2>\n"
++"\n"
++"  <p>\n"
++"    The compilation environment of the NASD tree itself uses\n"
++"    <kbd>imake</kbd>. To generate Makefiles, run the <kbd>itomf</kbd>\n"
++"    script at the top of the NASD tree. On some platforms, this may\n"
++"    require platform-specific arguments. Additional arguments may be\n"
++"    specified to instruct the system that it should also build\n"
++"    portions of the tree which are not built by default.\n"
++"  <p>\n"
++"    After the Makefiles are generated, a <kbd>make depend</kbd> from\n"
++"    the top of the tree will create all automatically-generated source\n"
++"    files, and add dependencies to all of the Makefiles.\n"
++"\n"
++"  <p>\n"
++"    Finally, <kbd>make</kbd> from the top of the tree will build all\n"
++"    default components, and whatever non-default components were\n"
++"    specified to <kbd>itomf</kbd> as well.\n"
++"\n"
++"  <p>\n"
++"    At any time, <kbd>make Makefile</kbd> in a directory will\n"
++"    regenerate the Makefile from its corresponding\n"
++"    <code>Imakefile</code>. Note that this new <code>Makefile</code>\n"
++"    will not include dependencies; another <kbd>make depend</kbd> is\n"
++"    necessary for that. <kbd>make Makefiles</kbd> will regenerate\n"
++"    Makefiles in all subdirectories of the current directory, but not\n"
++"    in the directory itself. <kbd>make depend</kbd> will regenerate\n"
++"    dependencies for all subdirectories as well as the current\n"
++"    directory.\n"
++"\n"
++"  <p>\n"
++"    The <kbd>make clean</kbd> production will remove any generated\n"
++"    objects and executables, most editor backup files, and\n"
++"    locally-generated source files in the current directory and all\n"
++"    subdirectories. The <kbd>make sterile</kbd> production will remove\n"
++"    all generated files (including Makefiles) in the current directory\n"
++"    and all subdirectories, along with most editor backup files.\n"
++"\n"
++"  <h2>Configuring the compilation environment for your system</h2>\n"
++"\n"
++"    Names, locations, and arguments of system-local executables are\n"
++"    specified in <code>config/NASD_site.def</code>. For instance, if\n"
++"    your platform has located <kbd>sed</kbd> in a nonstandard\n"
++"    location, the path to find it is specified by setting the\n"
++"    <code>SED</code> variable in this file. All system-specific\n"
++"    compilation options should be handled here, such as compiler\n"
++"    flags, locations of executables, library paths, extra libraries to\n"
++"    link against, et cetera. Modifications to this file will not take\n"
++"    effect until the relevant Makefiles are regenerated (see above).\n"
++"\n"
++"<h3>Introduction</h3>\n"
++"<p>\n"
++"Many applications and subsystems within the NASD tree have a need to\n"
++"dynamically allocate and deallocate fixed-size structures. The preferred\n"
++"mechanism for doing so is the <i>freelist</i> mechanism. This set of\n"
++"interfaces provides support for maintaining pools of fixed-size chunks\n"
++"of memory, which may require explicit initialization and deinitialization\n"
++"to use.\n"
++"\n"
++"<p>\n"
++"If a programmer wishes to maintain caches of allocated\n"
++"but unused memory, the freelist mechanism should be used. There are\n"
++"several reasons for this. One is that using a consistent set of interfaces\n"
++"to do so helps others to read code they are unfamiliar with and identify\n"
++"what it does. Another is that the freelist mechanism is capable of collecting\n"
++"and reporting statistics on how each pool of memory was used, allowing\n"
++"better tuning of the system. A third is that by using a common, unified\n"
++"mechanism for managing allocated but currently unused chunks of memory,\n"
++"the NASD system is capable of reclaiming chunks of memory which are currently\n"
++"unused. This is especially useful in low-memory environments.\n"
++"\n"
++"<h3>Using freelists</h3>\n"
++"<p>\n"
++"To use freelists, be sure the <a href=memory.html>memory</a>\n"
++"module is properly initialized, and include <code>nasd/nasd_freelist.h</code>.\n"
++"Freelists have type <code>nasd_freelist_t</code>.\n"
++"The freelist interface is implemented as a set of macros for efficiency.\n"
++"To minimize overhead and debugging complexity, the freelist mechanism does\n"
++"not maintain additional data for individual allocations. Instead, it requires\n"
++"that users of the freelist interface provide for it typing and dereferencing\n"
++"information for the items in the freelist. This means that many of the\n"
++"freelist macros take as arguments the cast of the item type maintained in\n"
++"the list. The name of the structure or union element within this cast type\n"
++"is a pointer to the item type itself. For example, if one were\n"
++"maintaining a list of <code>nasd_foo_t</code>, that could mean that:\n"
++"<menu>\n"
++"Given<br>\n"
++"<code>\n"
++"typedef struct nasd_foo_s nasd_foo_t;<br>\n"
++"struct nasd_foo_s {<br>\n"
++"&nbsp;&nbsp;/* actual data for nasd_foo_t here */<br>\n"
++"&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;*another_foo;<br>\n"
++"};<br>\n"
++"<p>\n"
++"</code></menu>\n"
++"The cast for items in the freelist is <code>(nasd_foo_t *)</code>. The\n"
++"pointer to the item type, henceforth referred to as the <i>next</i>\n"
++"pointer, is <code>another_foo</code>. To minimize overhead, the freelist\n"
++"mechanism allows users to set the next pointer arbitrarily whenever\n"
++"items are <b>not</b> in the freelist. This is handy for items which are\n"
++"maintained in lists when they are allocated - the list pointer can then\n"
++"be reused as the next pointer.\n"
++"\n"
++"<p>\n"
++"Sometimes, it is desirable to maintain freelists of items which do not\n"
++"naturally contain fields which are correctly-formed next pointers.\n"
++"If there is a void pointer in the item type, it is acceptable to use\n"
++"this in place of the next pointer. The preferred mechanism for dealing\n"
++"with this is to create a <code>union</code>. For instance, to\n"
++"maintain a freelist of arrays of eight kilobytes of memory:<br>\n"
++"<menu><code>\n"
++"typedef union nasd_foo_u nasd_foo_t;<br>\n"
++"union nasd_foo_u {<br>\n"
++"&nbsp;&nbsp;char&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data[8192];<br>\n"
++"&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;*next;<br>\n"
++"};<br>\n"
++"</code></menu>\n"
++"In this example, <code>next</code> is a valid next pointer for the freelist\n"
++"mechanism, and the data field of <code>nasd_foo_t</code> is an eight kilobyte\n"
++"array.\n"
++"\n"
++"<h3>Basic freelists</h3>\n"
++"<p>\n"
++"The most basic kind of freelist is one which maintains chunks of data whose\n"
++"contents may be arbitrary, but require no special initialization or\n"
++"deinitialization. To use such a freelist, first declare a pointer to\n"
++"type <code>nasd_freelist_t</code>. Create the empty freelist by calling\n"
++"<code>NASD_FREELIST_CREATE()</code>. This takes four arguments. The\n"
++"first is the freelist pointer. The second is the maximum number of these\n"
++"items which should ever reside in the freelist at a particular time (extras will be\n"
++"returned to the system immediately). The third is how many additional\n"
++"items to allocate whenever the freelist is empty and an allocation is\n"
++"desired. The final argument is the size of the item. If the freelist\n"
++"pointer is <code>NULL</code> after evaluating <code>NASD_FREELIST_CREATE()</code>,\n"
++"the list itself could not be created.\n"
++"\n"
++"<p>\n"
++"It is often desirable at this point to make this newly-created freelist\n"
++"be non-empty, so that when the code begins executing, initial trips through\n"
++"not-yet-executed codepaths do not incur tremendous allocation costs. Do\n"
++"this by calling <code>NASD_FREELIST_PRIME()</code>, which takes four\n"
++"arguments. The first argument is the freelist pointer. The second is the\n"
++"number of items to create and add to the list. The third is the next\n"
++"pointer, and the fourth is the item cast.\n"
++"\n"
++"<p>\n"
++"To retrieve an item from the freelist, call <code>NASD_FREELIST_GET()</code>.\n"
++"This takes four arguments. The first is the freelist pointer. The second\n"
++"is a pointer to be assigned with the address of the object retrieved from\n"
++"the freelist. The third is the next pointer, and the fourth is the item\n"
++"cast.\n"
++"\n"
++"<p>\n"
++"To return an item to a freelist, call <code>NASD_FREELIST_FREE()</code>.\n"
++"This takes three arguments. The first is the freelist pointer. The\n"
++"second is the address of the item to return. The third is the next\n"
++"pointer.\n"
++"\n"
++"<p>\n"
++"When a freelist is no longer needed, it (along with its current contents)\n"
++"may be deallocated with <code>NASD_FREELIST_DESTROY()</code>. This\n"
++"macro takes three arguments. The first is the freelist pointer. The\n"
++"second is the next pointer. The third is the item cast.\n"
++"\n"
++"<p>\n"
++"<b>Example:</b> Let's say we have a type <code>nasd_foo_t</code>, for which we\n"
++"wish to maintain a freelist. We might have something like:<br>\n"
++"<menu><pre><code>\n"
++"typedef struct nasd_foo_s nasd_foo_t;\n"
++"struct nasd_foo_s {\n"
++"&nbsp;&nbsp;/* actual data for nasd_foo_t here */\n"
++"&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;*another_foo;\n"
++"};\n"
++"<p>\n"
++"nasd_freelist_t *nasd_foo_freelist;\n"
++"#define NASD_MAX_FREE_FOO 1024 /* Maximum number of foos\n"
++"                                * to have in the freelist\n"
++"                                * at a time\n"
++"                                */\n"
++"#define NASD_FOO_INC        64 /* How many foos to add to\n"
++"                                * the freelist at a time\n"
++"                                * when we run out\n"
++"                                */\n"
++"#define NASD_FOO_INITIAL    32 /* How many foos to create\n"
++"                                * at start of day\n"
++"                                */\n"
++"<p>\n"
++"nasd_status_t\n"
++"nasd_init_foo_freelist()\n"
++"{\n"
++"  NASD_FREELIST_CREATE(nasd_foo_freelist, NASD_MAX_FREE_FOO,\n"
++"    NASD_FOO_INC, sizeof(nasd_foo_t));\n"
++"  if (nasd_foo_freelist == NULL) {\n"
++"    return(NASD_NO_MEM);\n"
++"  }\n"
++"\n"
++"  NASD_FREELIST_PRIME(nasd_foo_freelist, NASD_FOO_INITIAL,next,\n"
++"    (nasd_foo_t *));\n"
++"\n"
++"  return(NASD_SUCCESS);\n"
++"}\n"
++"<p>\n"
++"nasd_status_t\n"
++"nasd_get_foo(\n"
++"&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;**foo_p)\n"
++"{\n"
++"  NASD_FREELIST_GET(nasd_foo_freelist,*foo_p,next,(nasd_foo_t *));\n"
++"  if (*foo_p == NULL)\n"
++"    return(NASD_NO_MEM);\n"
++"  return(NASD_SUCCESS);\n"
++"}\n"
++"<p>\n"
++"void\n"
++"nasd_free_foo(\n"
++"&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;*foo)\n"
++"{\n"
++"  NASD_FREELIST_FREE(nasd_foo_freelist,foo,next);\n"
++"}\n"
++"<p>\n"
++"void\n"
++"nasd_shutdown_foo_freelist()\n"
++"{\n"
++"  NASD_FREELIST_DESTROY(nasd_foo_freelist,next,(nasd_foo_t *));\n"
++"}\n"
++"</code></pre></menu>\n"
++"\n"
++"<br>\n"
++"<p>\n"
++"<h3>Freelists with initialized items</h3>\n"
++"\n"
++"Sometimes, it is desirable to have the items in a freelist maintain\n"
++"state across allocate and free operations. For instance, each item\n"
++"might contain a mutex. Rather than initialize and destroy a mutex\n"
++"each time an item is allocated from or freed to the freelist, it is\n"
++"more desirable to initialize a mutex each time an item is created for\n"
++"the freelist, and deinitialize it whenever the item is returned to\n"
++"the system. To that end, the freelist mechanism provides variants\n"
++"on the above interfaces: <code>NASD_FREELIST_PRIME_INIT()</code>,\n"
++"<code>NASD_FREELIST_GET_INIT()</code>, <code>NASD_FREELIST_FREE_CLEAN()</code>,\n"
++"and <code>NASD_FREELIST_DESTROY_CLEAN()</code>.\n"
++"\n"
++"<p>\n"
++"<code>NASD_FREELIST_PRIME_INIT()</code> and <code>NASD_FREELIST_GET_INIT()</code>\n"
++"are very similar to <code>NASD_FREELIST_PRIME()</code> and <code>NASD_FREELIST_GET()</code>,\n"
++"respectively. Each takes an additional argument, however, which is an\n"
++"initialization function. This function should take a pointer to\n"
++"the item type as its sole argument, and return <code>nasd_status_t</code>.\n"
++"If the initialization is successful, it should return <code>NASD_SUCCESS</code>.\n"
++"Otherwise, it should return a meaningful error code. Likewise,\n"
++"<code>NASD_FREELIST_FREE_CLEAN()</code>, and <code>NASD_FREELIST_DESTROY_CLEAN()</code>\n"
++"take an additional argument which is a function returning void that takes\n"
++"a pointer to the item type as its sole argument. This function is responsible\n"
++"for reversing the action of the init function. For example, if we added a mutex\n"
++"and a condition variable to <code>nasd_foo_t</code> in our earlier example, we would\n"
++"get:\n"
++"<menu><pre><code>\n"
++"typedef struct nasd_foo_s nasd_foo_t;\n"
++"struct nasd_foo_s {\n"
++"&nbsp;&nbsp;NASD_DECLARE_MUTEX(mutex)\n"
++"&nbsp;&nbsp;NASD_DECLARE_COND(cond)\n"
++"&nbsp;&nbsp;/* other data for nasd_foo_t here */\n"
++"&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;*another_foo;\n"
++"};\n"
++"<p>\n"
++"nasd_freelist_t *nasd_foo_freelist;\n"
++"#define NASD_MAX_FREE_FOO 1024 /* Maximum number of foos\n"
++"                                * to have in the freelist\n"
++"                                * at a time\n"
++"                                */\n"
++"#define NASD_FOO_INC        64 /* How many foos to add to\n"
++"                                * the freelist at a time\n"
++"                                * when we run out\n"
++"                                */\n"
++"#define NASD_FOO_INITIAL    32 /* How many foos to create\n"
++"                                * at start of day\n"
++"                                */\n"
++"<p>\n"
++"static nasd_status_t\n"
++"init_foo(\n"
++"  nasd_foo_t  *foo)\n"
++"{\n"
++"  nasd_status_t rc;\n"
++"\n"
++"  rc = nasd_mutex_init(&foo->lock);\n"
++"  if (rc)\n"
++"    return(rc);\n"
++"  rc = nasd_cond_init(&foo->cond);\n"
++"  if (rc) {\n"
++"    nasd_mutex_destroy(&foo->lock);\n"
++"    return(rc);\n"
++"  }\n"
++"  return(NASD_SUCCESS);\n"
++"}\n"
++"\n"
++"static void\n"
++"clean_foo(\n"
++"  nasd_foo_t  *foo)\n"
++"{\n"
++"  nasd_status_t rc;\n"
++"\n"
++"  rc = nasd_mutex_destroy(&foo->lock);\n"
++"  if (rc) {\n"
++"    printf(WARNING: got 0x%x (%s) destroying foo lockn,\n"
++"      rc, nasd_error_string(rc));\n"
++"  }\n"
++"  rc = nasd_cond_destroy(&foo->cond);\n"
++"  if (rc) {\n"
++"    printf(WARNING: got 0x%x (%s) destroying foo condn,\n"
++"      rc, nasd_error_string(rc));\n"
++"  }\n"
++"}\n"
++"\n"
++"nasd_status_t\n"
++"nasd_init_foo_freelist()\n"
++"{\n"
++"  NASD_FREELIST_CREATE(nasd_foo_freelist, NASD_MAX_FREE_FOO,\n"
++"    NASD_FOO_INC, sizeof(nasd_foo_t));\n"
++"  if (nasd_foo_freelist == NULL) {\n"
++"    return(NASD_NO_MEM);\n"
++"  }\n"
++"\n"
++"  NASD_FREELIST_PRIME_INIT(nasd_foo_freelist, NASD_FOO_INITIAL, next,\n"
++"    (nasd_foo_t *), init_foo);\n"
++"\n"
++"  return(NASD_SUCCESS);\n"
++"}\n"
++"<p>\n"
++"nasd_status_t\n"
++"nasd_get_foo(\n"
++"&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;**foo_p)\n"
++"{\n"
++"  NASD_FREELIST_GET_INIT(nasd_foo_freelist, *foo_p,\n"
++"    next, (nasd_foo_t *), init_foo);\n"
++"  if (*foo_p == NULL)\n"
++"    return(NASD_NO_MEM);\n"
++"  return(NASD_SUCCESS);\n"
++"}\n"
++"<p>\n"
++"void\n"
++"nasd_free_foo(\n"
++"&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;*foo)\n"
++"{\n"
++"  NASD_FREELIST_FREE_CLEAN(nasd_foo_freelist, foo, next, clean_foo);\n"
++"}\n"
++"<p>\n"
++"void\n"
++"nasd_shutdown_foo_freelist()\n"
++"{\n"
++"  NASD_FREELIST_DESTROY(nasd_foo_freelist, next, (nasd_foo_t *), clean_foo);\n"
++"}\n"
++"</code></pre></menu>\n"
++"\n"
++"Now every <code>nasd_foo_t</code> resulting from a call to <code>nasd_get_foo()</code>\n"
++"contains validly-initialized mutex and condition variables.\n"
++"\n"
++"<br><p>\n"
++"<h3>Advanced topics</h3>\n"
++"\n"
++"Sometimes item initialization and cleanup functions might desire additional\n"
++"out-of-band data. For this reason, the <code>_INIT</code> and <code>_CLEAN</code>\n"
++"macros also have <code>_INIT_ARG</code> and <code>_CLEAN_ARG</code> variants.\n"
++"These variants take an additional argument after the init or clean function\n"
++"which is passed as a second argument to the init or clean functions themselves.\n"
++"Because the freelist interface is entirely macroized, these arguments may have\n"
++"any type.\n"
++"\n"
++"<p>\n"
++"Freelists protect against accesses by multiple threads by using internal\n"
++"mutexes. These mutexes may be accessed directly by operationg on\n"
++"<code>NASD_FREELIST_MUTEX_OF(<i>freelist_pointer</i>)</code>. To lock\n"
++"this mutex, use <code>NASD_FREELIST_DO_LOCK(<i>freelist_pointer</i>)</code>.\n"
++"To unlock it, use <code>NASD_FREELIST_DO_UNLOCK(<i>freelist_pointer</i>)</code>.\n"
++"The header file <code>nasd_freelist.h</code> provides variants of many of\n"
++"the freelist interfaces which do not take or release locks themselves. If\n"
++"you use this, you are responsible for correctly synchronizing access to the\n"
++"freelist. This has the opportunity for providing greater efficiency when\n"
++"batching operations, or when performing operations already protected by\n"
++"other locks.\n"
++"\n"
++"<p>\n"
++"If <code>NASD_FREELIST_STATS</code> is defined nonzero in <code>nasd_options.h</code>,\n"
++"when each freelist is destroyed, statistics about operations performed on it\n"
++"are printed, including the number of times items were allocated and freed\n"
++"from the list, how many times the list ran empty and how many more items had to be\n"
++"allocated, the largest number of unused items that was ever in the list, and\n"
++"the largest number of items that was ever allocated at a time, among others.\n"
++;
++
++char nasd_premote_ciphertext[] = "<u2>Gur pbzcvyngvba raivebazrag</u2>\n"
++"\n"
++"  <c>\n"
++"    Gur pbzcvyngvba raivebazrag bs gur ANFQ gerr vgfrys hfrf\n"
++"    <xoq>vznxr</xoq>. Gb trarengr Znxrsvyrf, eha gur <xoq>vgbzs</xoq>\n"
++"    fpevcg ng gur gbc bs gur ANFQ gerr. Ba fbzr cyngsbezf, guvf znl\n"
++"    erdhver cyngsbez-fcrpvsvp nethzragf. Nqqvgvbany nethzragf znl or\n"
++"    fcrpvsvrq gb vafgehpg gur flfgrz gung vg fubhyq nyfb ohvyq\n"
++"    cbegvbaf bs gur gerr juvpu ner abg ohvyg ol qrsnhyg.\n"
++"  <c>\n"
++"    Nsgre gur Znxrsvyrf ner trarengrq, n <xoq>znxr qrcraq</xoq> sebz\n"
++"    gur gbc bs gur gerr jvyy perngr nyy nhgbzngvpnyyl-trarengrq fbhepr\n"
++"    svyrf, naq nqq qrcraqrapvrf gb nyy bs gur Znxrsvyrf.\n"
++"\n"
++"  <c>\n"
++"    Svanyyl, <xoq>znxr</xoq> sebz gur gbc bs gur gerr jvyy ohvyq nyy\n"
++"    qrsnhyg pbzcbaragf, naq jungrire aba-qrsnhyg pbzcbaragf jrer\n"
++"    fcrpvsvrq gb <xoq>vgbzs</xoq> nf jryy.\n"
++"\n"
++"  <c>\n"
++"    Ng nal gvzr, <xoq>znxr Znxrsvyr</xoq> va n qverpgbel jvyy\n"
++"    ertrarengr gur Znxrsvyr sebz vgf pbeerfcbaqvat\n"
++"    <pbqr>Vznxrsvyr</pbqr>. Abgr gung guvf arj <pbqr>Znxrsvyr</pbqr>\n"
++"    jvyy abg vapyhqr qrcraqrapvrf; nabgure <xoq>znxr qrcraq</xoq> vf\n"
++"    arprffnel sbe gung. <xoq>znxr Znxrsvyrf</xoq> jvyy ertrarengr\n"
++"    Znxrsvyrf va nyy fhoqverpgbevrf bs gur pheerag qverpgbel, ohg abg\n"
++"    va gur qverpgbel vgfrys. <xoq>znxr qrcraq</xoq> jvyy ertrarengr\n"
++"    qrcraqrapvrf sbe nyy fhoqverpgbevrf nf jryy nf gur pheerag\n"
++"    qverpgbel.\n"
++"\n"
++"  <c>\n"
++"    Gur <xoq>znxr pyrna</xoq> cebqhpgvba jvyy erzbir nal trarengrq\n"
++"    bowrpgf naq rkrphgnoyrf, zbfg rqvgbe onpxhc svyrf, naq\n"
++"    ybpnyyl-trarengrq fbhepr svyrf va gur pheerag qverpgbel naq nyy\n"
++"    fhoqverpgbevrf. Gur <xoq>znxr fgrevyr</xoq> cebqhpgvba jvyy erzbir\n"
++"    nyy trarengrq svyrf (vapyhqvat Znxrsvyrf) va gur pheerag qverpgbel\n"
++"    naq nyy fhoqverpgbevrf, nybat jvgu zbfg rqvgbe onpxhc svyrf.\n"
++"\n"
++"  <u2>Pbasvthevat gur pbzcvyngvba raivebazrag sbe lbhe flfgrz</u2>\n"
++"\n"
++"    Anzrf, ybpngvbaf, naq nethzragf bs flfgrz-ybpny rkrphgnoyrf ner\n"
++"    fcrpvsvrq va <pbqr>pbasvt/ANFQ_fvgr.qrs</pbqr>. Sbe vafgnapr, vs\n"
++"    lbhe cyngsbez unf ybpngrq <xoq>frq</xoq> va n abafgnaqneq\n"
++"    ybpngvba, gur cngu gb svaq vg vf fcrpvsvrq ol frggvat gur\n"
++"    <pbqr>FRQ</pbqr> inevnoyr va guvf svyr. Nyy flfgrz-fcrpvsvp\n"
++"    pbzcvyngvba bcgvbaf fubhyq or unaqyrq urer, fhpu nf pbzcvyre\n"
++"    syntf, ybpngvbaf bs rkrphgnoyrf, yvoenel cnguf, rkgen yvoenevrf gb\n"
++"    yvax ntnvafg, rg prgren. Zbqvsvpngvbaf gb guvf svyr jvyy abg gnxr\n"
++"    rssrpg hagvy gur eryrinag Znxrsvyrf ner ertrarengrq (frr nobir).\n"
++"\n"
++"<u3>Vagebqhpgvba</u3>\n"
++"<c>\n"
++"Znal nccyvpngvbaf naq fhoflfgrzf jvguva gur ANFQ gerr unir n arrq gb\n"
++"qlanzvpnyyl nyybpngr naq qrnyybpngr svkrq-fvmr fgehpgherf. Gur cersreerq\n"
++"zrpunavfz sbe qbvat fb vf gur <v>serryvfg</v> zrpunavfz. Guvf frg bs\n"
++"vagresnprf cebivqrf fhccbeg sbe znvagnvavat cbbyf bs svkrq-fvmr puhaxf\n"
++"bs zrzbel, juvpu znl erdhver rkcyvpvg vavgvnyvmngvba naq qrvavgvnyvmngvba\n"
++"gb hfr.\n"
++"\n"
++"<c>\n"
++"Vs n cebtenzzre jvfurf gb znvagnva pnpurf bs nyybpngrq\n"
++"ohg hahfrq zrzbel, gur serryvfg zrpunavfz fubhyq or hfrq. Gurer ner\n"
++"frireny ernfbaf sbe guvf. Bar vf gung hfvat n pbafvfgrag frg bs vagresnprf\n"
++"gb qb fb urycf bguref gb ernq pbqr gurl ner hasnzvyvne jvgu naq vqragvsl\n"
++"jung vg qbrf. Nabgure vf gung gur serryvfg zrpunavfz vf pncnoyr bs pbyyrpgvat\n"
++"naq ercbegvat fgngvfgvpf ba ubj rnpu cbby bs zrzbel jnf hfrq, nyybjvat\n"
++"orggre ghavat bs gur flfgrz. N guveq vf gung ol hfvat n pbzzba, havsvrq\n"
++"zrpunavfz sbe znantvat nyybpngrq ohg pheeragyl hahfrq puhaxf bs zrzbel,\n"
++"gur ANFQ flfgrz vf pncnoyr bs erpynvzvat puhaxf bs zrzbel juvpu ner pheeragyl\n"
++"hahfrq. Guvf vf rfcrpvnyyl hfrshy va ybj-zrzbel raivebazragf.\n"
++"\n"
++"<u3>Hfvat serryvfgf</u3>\n"
++"<c>\n"
++"Gb hfr serryvfgf, or fher gur <n uers=zrzbel.ugzy>zrzbel</n>\n"
++"zbqhyr vf cebcreyl vavgvnyvmrq, naq vapyhqr <pbqr>anfq/anfq_serryvfg.u</pbqr>.\n"
++"Serryvfgf unir glcr <pbqr>anfq_serryvfg_g</pbqr>.\n"
++"Gur serryvfg vagresnpr vf vzcyrzragrq nf n frg bs znpebf sbe rssvpvrapl.\n"
++"Gb zvavzvmr bireurnq naq qrohttvat pbzcyrkvgl, gur serryvfg zrpunavfz qbrf\n"
++"abg znvagnva nqqvgvbany qngn sbe vaqvivqhny nyybpngvbaf. Vafgrnq, vg erdhverf\n"
++"gung hfref bs gur serryvfg vagresnpr cebivqr sbe vg glcvat naq qrersrerapvat\n"
++"vasbezngvba sbe gur vgrzf va gur serryvfg. Guvf zrnaf gung znal bs gur\n"
++"serryvfg znpebf gnxr nf nethzragf gur pnfg bs gur vgrz glcr znvagnvarq va\n"
++"gur yvfg. Gur anzr bs gur fgehpgher be havba ryrzrag jvguva guvf pnfg glcr\n"
++"vf n cbvagre gb gur vgrz glcr vgfrys. Sbe rknzcyr, vs bar jrer\n"
++"znvagnvavat n yvfg bs <pbqr>anfq_sbb_g</pbqr>, gung pbhyq zrna gung:\n"
++"<zrah>\n"
++"Tvira<oe>\n"
++"<pbqr>\n"
++"glcrqrs fgehpg anfq_sbb_f anfq_sbb_g;<oe>\n"
++"fgehpg anfq_sbb_f {<oe>\n"
++"&aofc;&aofc;/* npghny qngn sbe anfq_sbb_g urer */<oe>\n"
++"&aofc;&aofc;anfq_sbb_g&aofc;&aofc;*nabgure_sbb;<oe>\n"
++"};<oe>\n"
++"<c>\n"
++"</pbqr></zrah>\n"
++"Gur pnfg sbe vgrzf va gur serryvfg vf <pbqr>(anfq_sbb_g *)</pbqr>. Gur\n"
++"cbvagre gb gur vgrz glcr, uraprsbegu ersreerq gb nf gur <v>arkg</v>\n"
++"cbvagre, vf <pbqr>nabgure_sbb</pbqr>. Gb zvavzvmr bireurnq, gur serryvfg\n"
++"zrpunavfz nyybjf hfref gb frg gur arkg cbvagre neovgenevyl jurarire\n"
++"vgrzf ner <o>abg</o> va gur serryvfg. Guvf vf unaql sbe vgrzf juvpu ner\n"
++"znvagnvarq va yvfgf jura gurl ner nyybpngrq - gur yvfg cbvagre pna gura\n"
++"or erhfrq nf gur arkg cbvagre.\n"
++"\n"
++"<c>\n"
++"Fbzrgvzrf, vg vf qrfvenoyr gb znvagnva serryvfgf bs vgrzf juvpu qb abg\n"
++"anghenyyl pbagnva svryqf juvpu ner pbeerpgyl-sbezrq arkg cbvagref.\n"
++"Vs gurer vf n ibvq cbvagre va gur vgrz glcr, vg vf npprcgnoyr gb hfr\n"
++"guvf va cynpr bs gur arkg cbvagre. Gur cersreerq zrpunavfz sbe qrnyvat\n"
++"jvgu guvf vf gb perngr n <pbqr>havba</pbqr>. Sbe vafgnapr, gb\n"
++"znvagnva n serryvfg bs neenlf bs rvtug xvybolgrf bs zrzbel:<oe>\n"
++"<zrah><pbqr>\n"
++"glcrqrs havba anfq_sbb_h anfq_sbb_g;<oe>\n"
++"havba anfq_sbb_h {<oe>\n"
++"&aofc;&aofc;pune&aofc;&aofc;&aofc;&aofc;&aofc;&aofc;&aofc;&aofc;&aofc;qngn[8192];<oe>\n"
++"&aofc;&aofc;anfq_sbb_g&aofc;&aofc;*arkg;<oe>\n"
++"};<oe>\n"
++"</pbqr></zrah>\n"
++"Va guvf rknzcyr, <pbqr>arkg</pbqr> vf n inyvq arkg cbvagre sbe gur serryvfg\n"
++"zrpunavfz, naq gur qngn svryq bs <pbqr>anfq_sbb_g</pbqr> vf na rvtug xvybolgr\n"
++"neenl.\n"
++"\n"
++"<u3>Onfvp serryvfgf</u3>\n"
++"<c>\n"
++"Gur zbfg onfvp xvaq bs serryvfg vf bar juvpu znvagnvaf puhaxf bs qngn jubfr\n"
++"pbagragf znl or neovgenel, ohg erdhver ab fcrpvny vavgvnyvmngvba be\n"
++"qrvavgvnyvmngvba. Gb hfr fhpu n serryvfg, svefg qrpyner n cbvagre gb\n"
++"glcr <pbqr>anfq_serryvfg_g</pbqr>. Perngr gur rzcgl serryvfg ol pnyyvat\n"
++"<pbqr>ANFQ_SERRYVFG_PERNGR()</pbqr>. Guvf gnxrf sbhe nethzragf. Gur\n"
++"svefg vf gur serryvfg cbvagre. Gur frpbaq vf gur znkvzhz ahzore bs gurfr\n"
++"vgrzf juvpu fubhyq rire erfvqr va gur serryvfg ng n cnegvphyne gvzr (rkgenf jvyy or\n"
++"erghearq gb gur flfgrz vzzrqvngryl). Gur guveq vf ubj znal nqqvgvbany\n"
++"vgrzf gb nyybpngr jurarire gur serryvfg vf rzcgl naq na nyybpngvba vf\n"
++"qrfverq. Gur svany nethzrag vf gur fvmr bs gur vgrz. Vs gur serryvfg\n"
++"cbvagre vf <pbqr>AHYY</pbqr> nsgre rinyhngvat <pbqr>ANFQ_SERRYVFG_PERNGR()</pbqr>,\n"
++"gur yvfg vgfrys pbhyq abg or perngrq.\n"
++"\n"
++"<c>\n"
++"Vg vf bsgra qrfvenoyr ng guvf cbvag gb znxr guvf arjyl-perngrq serryvfg\n"
++"or aba-rzcgl, fb gung jura gur pbqr ortvaf rkrphgvat, vavgvny gevcf guebhtu\n"
++"abg-lrg-rkrphgrq pbqrcnguf qb abg vaphe gerzraqbhf nyybpngvba pbfgf. Qb\n"
++"guvf ol pnyyvat <pbqr>ANFQ_SERRYVFG_CEVZR()</pbqr>, juvpu gnxrf sbhe\n"
++"nethzragf. Gur svefg nethzrag vf gur serryvfg cbvagre. Gur frpbaq vf gur\n"
++"ahzore bs vgrzf gb perngr naq nqq gb gur yvfg. Gur guveq vf gur arkg\n"
++"cbvagre, naq gur sbhegu vf gur vgrz pnfg.\n"
++"\n"
++"<c>\n"
++"Gb ergevrir na vgrz sebz gur serryvfg, pnyy <pbqr>ANFQ_SERRYVFG_TRG()</pbqr>.\n"
++"Guvf gnxrf sbhe nethzragf. Gur svefg vf gur serryvfg cbvagre. Gur frpbaq\n"
++"vf n cbvagre gb or nffvtarq jvgu gur nqqerff bs gur bowrpg ergevrirq sebz\n"
++"gur serryvfg. Gur guveq vf gur arkg cbvagre, naq gur sbhegu vf gur vgrz\n"
++"pnfg.\n"
++"\n"
++"<c>\n"
++"Gb erghea na vgrz gb n serryvfg, pnyy <pbqr>ANFQ_SERRYVFG_SERR()</pbqr>.\n"
++"Guvf gnxrf guerr nethzragf. Gur svefg vf gur serryvfg cbvagre. Gur\n"
++"frpbaq vf gur nqqerff bs gur vgrz gb erghea. Gur guveq vf gur arkg\n"
++"cbvagre.\n"
++"\n"
++"<c>\n"
++"Jura n serryvfg vf ab ybatre arrqrq, vg (nybat jvgu vgf pheerag pbagragf)\n"
++"znl or qrnyybpngrq jvgu <pbqr>ANFQ_SERRYVFG_QRFGEBL()</pbqr>. Guvf\n"
++"znpeb gnxrf guerr nethzragf. Gur svefg vf gur serryvfg cbvagre. Gur\n"
++"frpbaq vf gur arkg cbvagre. Gur guveq vf gur vgrz pnfg.\n"
++"\n"
++"<c>\n"
++"<o>Rknzcyr:</o> Yrg'f fnl jr unir n glcr <pbqr>anfq_sbb_g</pbqr>, sbe juvpu jr\n"
++"jvfu gb znvagnva n serryvfg. Jr zvtug unir fbzrguvat yvxr:<oe>\n"
++"<zrah><cer><pbqr>\n"
++"glcrqrs fgehpg anfq_sbb_f anfq_sbb_g;\n"
++"fgehpg anfq_sbb_f {\n"
++"&aofc;&aofc;/* npghny qngn sbe anfq_sbb_g urer */\n"
++"&aofc;&aofc;anfq_sbb_g&aofc;&aofc;*nabgure_sbb;\n"
++"};\n"
++"<c>\n"
++"anfq_serryvfg_g *anfq_sbb_serryvfg;\n"
++"#qrsvar ANFQ_ZNK_SERR_SBB 1024 /* Znkvzhz ahzore bs sbbf\n"
++"                                * gb unir va gur serryvfg\n"
++"                                * ng n gvzr\n"
++"                                */\n"
++"#qrsvar ANFQ_SBB_VAP        64 /* Ubj znal sbbf gb nqq gb\n"
++"                                * gur serryvfg ng n gvzr\n"
++"                                * jura jr eha bhg\n"
++"                                */\n"
++"#qrsvar ANFQ_SBB_VAVGVNY    32 /* Ubj znal sbbf gb perngr\n"
++"                                * ng fgneg bs qnl\n"
++"                                */\n"
++"<c>\n"
++"anfq_fgnghf_g\n"
++"anfq_vavg_sbb_serryvfg()\n"
++"{\n"
++"  ANFQ_SERRYVFG_PERNGR(anfq_sbb_serryvfg, ANFQ_ZNK_SERR_SBB,\n"
++"    ANFQ_SBB_VAP, fvmrbs(anfq_sbb_g));\n"
++"  vs (anfq_sbb_serryvfg == AHYY) {\n"
++"    erghea(ANFQ_AB_ZRZ);\n"
++"  }\n"
++"\n"
++"  ANFQ_SERRYVFG_CEVZR(anfq_sbb_serryvfg, ANFQ_SBB_VAVGVNY,arkg,\n"
++"    (anfq_sbb_g *));\n"
++"\n"
++"  erghea(ANFQ_FHPPRFF);\n"
++"}\n"
++"<c>\n"
++"anfq_fgnghf_g\n"
++"anfq_trg_sbb(\n"
++"&aofc;&aofc;anfq_sbb_g&aofc;&aofc;**sbb_c)\n"
++"{\n"
++"  ANFQ_SERRYVFG_TRG(anfq_sbb_serryvfg,*sbb_c,arkg,(anfq_sbb_g *));\n"
++"  vs (*sbb_c == AHYY)\n"
++"    erghea(ANFQ_AB_ZRZ);\n"
++"  erghea(ANFQ_FHPPRFF);\n"
++"}\n"
++"<c>\n"
++"ibvq\n"
++"anfq_serr_sbb(\n"
++"&aofc;&aofc;anfq_sbb_g&aofc;&aofc;*sbb)\n"
++"{\n"
++"  ANFQ_SERRYVFG_SERR(anfq_sbb_serryvfg,sbb,arkg);\n"
++"}\n"
++"<c>\n"
++"ibvq\n"
++"anfq_fuhgqbja_sbb_serryvfg()\n"
++"{\n"
++"  ANFQ_SERRYVFG_QRFGEBL(anfq_sbb_serryvfg,arkg,(anfq_sbb_g *));\n"
++"}\n"
++"</pbqr></cer></zrah>\n"
++"\n"
++"<oe>\n"
++"<c>\n"
++"<u3>Serryvfgf jvgu vavgvnyvmrq vgrzf</u3>\n"
++"\n"
++"Fbzrgvzrf, vg vf qrfvenoyr gb unir gur vgrzf va n serryvfg znvagnva\n"
++"fgngr npebff nyybpngr naq serr bcrengvbaf. Sbe vafgnapr, rnpu vgrz\n"
++"zvtug pbagnva n zhgrk. Engure guna vavgvnyvmr naq qrfgebl n zhgrk\n"
++"rnpu gvzr na vgrz vf nyybpngrq sebz be serrq gb gur serryvfg, vg vf\n"
++"zber qrfvenoyr gb vavgvnyvmr n zhgrk rnpu gvzr na vgrz vf perngrq sbe\n"
++"gur serryvfg, naq qrvavgvnyvmr vg jurarire gur vgrz vf erghearq gb\n"
++"gur flfgrz. Gb gung raq, gur serryvfg zrpunavfz cebivqrf inevnagf\n"
++"ba gur nobir vagresnprf: <pbqr>ANFQ_SERRYVFG_CEVZR_VAVG()</pbqr>,\n"
++"<pbqr>ANFQ_SERRYVFG_TRG_VAVG()</pbqr>, <pbqr>ANFQ_SERRYVFG_SERR_PYRNA()</pbqr>,\n"
++"naq <pbqr>ANFQ_SERRYVFG_QRFGEBL_PYRNA()</pbqr>.\n"
++"\n"
++"<c>\n"
++"<pbqr>ANFQ_SERRYVFG_CEVZR_VAVG()</pbqr> naq <pbqr>ANFQ_SERRYVFG_TRG_VAVG()</pbqr>\n"
++"ner irel fvzvyne gb <pbqr>ANFQ_SERRYVFG_CEVZR()</pbqr> naq <pbqr>ANFQ_SERRYVFG_TRG()</pbqr>,\n"
++"erfcrpgviryl. Rnpu gnxrf na nqqvgvbany nethzrag, ubjrire, juvpu vf na\n"
++"vavgvnyvmngvba shapgvba. Guvf shapgvba fubhyq gnxr n cbvagre gb\n"
++"gur vgrz glcr nf vgf fbyr nethzrag, naq erghea <pbqr>anfq_fgnghf_g</pbqr>.\n"
++"Vs gur vavgvnyvmngvba vf fhpprffshy, vg fubhyq erghea <pbqr>ANFQ_FHPPRFF</pbqr>.\n"
++"Bgurejvfr, vg fubhyq erghea n zrnavatshy reebe pbqr. Yvxrjvfr,\n"
++"<pbqr>ANFQ_SERRYVFG_SERR_PYRNA()</pbqr>, naq <pbqr>ANFQ_SERRYVFG_QRFGEBL_PYRNA()</pbqr>\n"
++"gnxr na nqqvgvbany nethzrag juvpu vf n shapgvba ergheavat ibvq gung gnxrf\n"
++"n cbvagre gb gur vgrz glcr nf vgf fbyr nethzrag. Guvf shapgvba vf erfcbafvoyr\n"
++"sbe erirefvat gur npgvba bs gur vavg shapgvba. Sbe rknzcyr, vs jr nqqrq n zhgrk\n"
++"naq n pbaqvgvba inevnoyr gb <pbqr>anfq_sbb_g</pbqr> va bhe rneyvre rknzcyr, jr jbhyq\n"
++"trg:\n"
++"<zrah><cer><pbqr>\n"
++"glcrqrs fgehpg anfq_sbb_f anfq_sbb_g;\n"
++"fgehpg anfq_sbb_f {\n"
++"&aofc;&aofc;ANFQ_QRPYNER_ZHGRK(zhgrk)\n"
++"&aofc;&aofc;ANFQ_QRPYNER_PBAQ(pbaq)\n"
++"&aofc;&aofc;/* bgure qngn sbe anfq_sbb_g urer */\n"
++"&aofc;&aofc;anfq_sbb_g&aofc;&aofc;*nabgure_sbb;\n"
++"};\n"
++"<c>\n"
++"anfq_serryvfg_g *anfq_sbb_serryvfg;\n"
++"#qrsvar ANFQ_ZNK_SERR_SBB 1024 /* Znkvzhz ahzore bs sbbf\n"
++"                                * gb unir va gur serryvfg\n"
++"                                * ng n gvzr\n"
++"                                */\n"
++"#qrsvar ANFQ_SBB_VAP        64 /* Ubj znal sbbf gb nqq gb\n"
++"                                * gur serryvfg ng n gvzr\n"
++"                                * jura jr eha bhg\n"
++"                                */\n"
++"#qrsvar ANFQ_SBB_VAVGVNY    32 /* Ubj znal sbbf gb perngr\n"
++"                                * ng fgneg bs qnl\n"
++"                                */\n"
++"<c>\n"
++"fgngvp anfq_fgnghf_g\n"
++"vavg_sbb(\n"
++"  anfq_sbb_g  *sbb)\n"
++"{\n"
++"  anfq_fgnghf_g ep;\n"
++"\n"
++"  ep = anfq_zhgrk_vavg(&sbb->ybpx);\n"
++"  vs (ep)\n"
++"    erghea(ep);\n"
++"  ep = anfq_pbaq_vavg(&sbb->pbaq);\n"
++"  vs (ep) {\n"
++"    anfq_zhgrk_qrfgebl(&sbb->ybpx);\n"
++"    erghea(ep);\n"
++"  }\n"
++"  erghea(ANFQ_FHPPRFF);\n"
++"}\n"
++"\n"
++"fgngvp ibvq\n"
++"pyrna_sbb(\n"
++"  anfq_sbb_g  *sbb)\n"
++"{\n"
++"  anfq_fgnghf_g ep;\n"
++"\n"
++"  ep = anfq_zhgrk_qrfgebl(&sbb->ybpx);\n"
++"  vs (ep) {\n"
++"    cevags(JNEAVAT: tbg 0k%k (%f) qrfgeblvat sbb ybpxa,\n"
++"      ep, anfq_reebe_fgevat(ep));\n"
++"  }\n"
++"  ep = anfq_pbaq_qrfgebl(&sbb->pbaq);\n"
++"  vs (ep) {\n"
++"    cevags(JNEAVAT: tbg 0k%k (%f) qrfgeblvat sbb pbaqa,\n"
++"      ep, anfq_reebe_fgevat(ep));\n"
++"  }\n"
++"}\n"
++"\n"
++"anfq_fgnghf_g\n"
++"anfq_vavg_sbb_serryvfg()\n"
++"{\n"
++"  ANFQ_SERRYVFG_PERNGR(anfq_sbb_serryvfg, ANFQ_ZNK_SERR_SBB,\n"
++"    ANFQ_SBB_VAP, fvmrbs(anfq_sbb_g));\n"
++"  vs (anfq_sbb_serryvfg == AHYY) {\n"
++"    erghea(ANFQ_AB_ZRZ);\n"
++"  }\n"
++"\n"
++"  ANFQ_SERRYVFG_CEVZR_VAVG(anfq_sbb_serryvfg, ANFQ_SBB_VAVGVNY, arkg,\n"
++"    (anfq_sbb_g *), vavg_sbb);\n"
++"\n"
++"  erghea(ANFQ_FHPPRFF);\n"
++"}\n"
++"<c>\n"
++"anfq_fgnghf_g\n"
++"anfq_trg_sbb(\n"
++"&aofc;&aofc;anfq_sbb_g&aofc;&aofc;**sbb_c)\n"
++"{\n"
++"  ANFQ_SERRYVFG_TRG_VAVG(anfq_sbb_serryvfg, *sbb_c,\n"
++"    arkg, (anfq_sbb_g *), vavg_sbb);\n"
++"  vs (*sbb_c == AHYY)\n"
++"    erghea(ANFQ_AB_ZRZ);\n"
++"  erghea(ANFQ_FHPPRFF);\n"
++"}\n"
++"<c>\n"
++"ibvq\n"
++"anfq_serr_sbb(\n"
++"&aofc;&aofc;anfq_sbb_g&aofc;&aofc;*sbb)\n"
++"{\n"
++"  ANFQ_SERRYVFG_SERR_PYRNA(anfq_sbb_serryvfg, sbb, arkg, pyrna_sbb);\n"
++"}\n"
++"<c>\n"
++"ibvq\n"
++"anfq_fuhgqbja_sbb_serryvfg()\n"
++"{\n"
++"  ANFQ_SERRYVFG_QRFGEBL(anfq_sbb_serryvfg, arkg, (anfq_sbb_g *), pyrna_sbb);\n"
++"}\n"
++"</pbqr></cer></zrah>\n"
++"\n"
++"Abj rirel <pbqr>anfq_sbb_g</pbqr> erfhygvat sebz n pnyy gb <pbqr>anfq_trg_sbb()</pbqr>\n"
++"pbagnvaf inyvqyl-vavgvnyvmrq zhgrk naq pbaqvgvba inevnoyrf.\n"
++"\n"
++"<oe><c>\n"
++"<u3>Nqinaprq gbcvpf</u3>\n"
++"\n"
++"Fbzrgvzrf vgrz vavgvnyvmngvba naq pyrnahc shapgvbaf zvtug qrfver nqqvgvbany\n"
++"bhg-bs-onaq qngn. Sbe guvf ernfba, gur <pbqr>_VAVG</pbqr> naq <pbqr>_PYRNA</pbqr>\n"
++"znpebf nyfb unir <pbqr>_VAVG_NET</pbqr> naq <pbqr>_PYRNA_NET</pbqr> inevnagf.\n"
++"Gurfr inevnagf gnxr na nqqvgvbany nethzrag nsgre gur vavg be pyrna shapgvba\n"
++"juvpu vf cnffrq nf n frpbaq nethzrag gb gur vavg be pyrna shapgvbaf gurzfryirf.\n"
++"Orpnhfr gur serryvfg vagresnpr vf ragveryl znpebvmrq, gurfr nethzragf znl unir\n"
++"nal glcr.\n"
++"\n"
++"<c>\n"
++"Serryvfgf cebgrpg ntnvafg npprffrf ol zhygvcyr guernqf ol hfvat vagreany\n"
++"zhgrkrf. Gurfr zhgrkrf znl or npprffrq qverpgyl ol bcrengvbat ba\n"
++"<pbqr>ANFQ_SERRYVFG_ZHGRK_BS(<v>serryvfg_cbvagre</v>)</pbqr>. Gb ybpx\n"
++"guvf zhgrk, hfr <pbqr>ANFQ_SERRYVFG_QB_YBPX(<v>serryvfg_cbvagre</v>)</pbqr>.\n"
++"Gb haybpx vg, hfr <pbqr>ANFQ_SERRYVFG_QB_HAYBPX(<v>serryvfg_cbvagre</v>)</pbqr>.\n"
++"Gur urnqre svyr <pbqr>anfq_serryvfg.u</pbqr> cebivqrf inevnagf bs znal bs\n"
++"gur serryvfg vagresnprf juvpu qb abg gnxr be eryrnfr ybpxf gurzfryirf. Vs\n"
++"lbh hfr guvf, lbh ner erfcbafvoyr sbe pbeerpgyl flapuebavmvat npprff gb gur\n"
++"serryvfg. Guvf unf gur bccbeghavgl sbe cebivqvat terngre rssvpvrapl jura\n"
++"ongpuvat bcrengvbaf, be jura cresbezvat bcrengvbaf nyernql cebgrpgrq ol\n"
++"bgure ybpxf.\n"
++"\n"
++"<c>\n"
++"Vs <pbqr>ANFQ_SERRYVFG_FGNGF</pbqr> vf qrsvarq abamreb va <pbqr>anfq_bcgvbaf.u</pbqr>,\n"
++"jura rnpu serryvfg vf qrfgeblrq, fgngvfgvpf nobhg bcrengvbaf cresbezrq ba vg\n"
++"ner cevagrq, vapyhqvat gur ahzore bs gvzrf vgrzf jrer nyybpngrq naq serrq\n"
++"sebz gur yvfg, ubj znal gvzrf gur yvfg ena rzcgl naq ubj znal zber vgrzf unq gb or\n"
++"nyybpngrq, gur ynetrfg ahzore bs hahfrq vgrzf gung jnf rire va gur yvfg, naq\n"
++"gur ynetrfg ahzore bs vgrzf gung jnf rire nyybpngrq ng n gvzr, nzbat bguref.\n"
++;
+ 
+-  <p>
+-    The compilation environment of the NASD tree itself uses
+-    <kbd>imake</kbd>. To generate Makefiles, run the <kbd>itomf</kbd>
+-    script at the top of the NASD tree. On some platforms, this may
+-    require platform-specific arguments. Additional arguments may be
+-    specified to instruct the system that it should also build
+-    portions of the tree which are not built by default.
+-  <p>
+-    After the Makefiles are generated, a <kbd>make depend</kbd> from
+-    the top of the tree will create all automatically-generated source
+-    files, and add dependencies to all of the Makefiles.
+ 
+-  <p>
+-    Finally, <kbd>make</kbd> from the top of the tree will build all
+-    default components, and whatever non-default components were
+-    specified to <kbd>itomf</kbd> as well.
+ 
+-  <p>
+-    At any time, <kbd>make Makefile</kbd> in a directory will
+-    regenerate the Makefile from its corresponding
+-    <code>Imakefile</code>. Note that this new <code>Makefile</code>
+-    will not include dependencies; another <kbd>make depend</kbd> is
+-    necessary for that. <kbd>make Makefiles</kbd> will regenerate
+-    Makefiles in all subdirectories of the current directory, but not
+-    in the directory itself. <kbd>make depend</kbd> will regenerate
+-    dependencies for all subdirectories as well as the current
+-    directory.
+ 
+-  <p>
+-    The <kbd>make clean</kbd> production will remove any generated
+-    objects and executables, most editor backup files, and
+-    locally-generated source files in the current directory and all
+-    subdirectories. The <kbd>make sterile</kbd> production will remove
+-    all generated files (including Makefiles) in the current directory
+-    and all subdirectories, along with most editor backup files.
+-
+-  <h2>Configuring the compilation environment for your system</h2>
+-
+-    Names, locations, and arguments of system-local executables are
+-    specified in <code>config/NASD_site.def</code>. For instance, if
+-    your platform has located <kbd>sed</kbd> in a nonstandard
+-    location, the path to find it is specified by setting the
+-    <code>SED</code> variable in this file. All system-specific
+-    compilation options should be handled here, such as compiler
+-    flags, locations of executables, library paths, extra libraries to
+-    link against, et cetera. Modifications to this file will not take
+-    effect until the relevant Makefiles are regenerated (see above).
+-
+-<h3>Introduction</h3>
+-<p>
+-Many applications and subsystems within the NASD tree have a need to
+-dynamically allocate and deallocate fixed-size structures. The preferred
+-mechanism for doing so is the <i>freelist</i> mechanism. This set of
+-interfaces provides support for maintaining pools of fixed-size chunks
+-of memory, which may require explicit initialization and deinitialization
+-to use.
+-
+-<p>
+-If a programmer wishes to maintain caches of allocated
+-but unused memory, the freelist mechanism should be used. There are
+-several reasons for this. One is that using a consistent set of interfaces
+-to do so helps others to read code they are unfamiliar with and identify
+-what it does. Another is that the freelist mechanism is capable of collecting
+-and reporting statistics on how each pool of memory was used, allowing
+-better tuning of the system. A third is that by using a common, unified
+-mechanism for managing allocated but currently unused chunks of memory,
+-the NASD system is capable of reclaiming chunks of memory which are currently
+-unused. This is especially useful in low-memory environments.
+-
+-<h3>Using freelists</h3>
+-<p>
+-To use freelists, be sure the <a href=memory.html>memory</a>
+-module is properly initialized, and include <code>nasd/nasd_freelist.h</code>.
+-Freelists have type <code>nasd_freelist_t</code>.
+-The freelist interface is implemented as a set of macros for efficiency.
+-To minimize overhead and debugging complexity, the freelist mechanism does
+-not maintain additional data for individual allocations. Instead, it requires
+-that users of the freelist interface provide for it typing and dereferencing
+-information for the items in the freelist. This means that many of the
+-freelist macros take as arguments the cast of the item type maintained in
+-the list. The name of the structure or union element within this cast type
+-is a pointer to the item type itself. For example, if one were
+-maintaining a list of <code>nasd_foo_t</code>, that could mean that:
+-<menu>
+-Given<br>
+-<code>
+-typedef struct nasd_foo_s nasd_foo_t;<br>
+-struct nasd_foo_s {<br>
+-&nbsp;&nbsp;/* actual data for nasd_foo_t here */<br>
+-&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;*another_foo;<br>
+-};<br>
+-<p>
+-</code></menu>
+-The cast for items in the freelist is <code>(nasd_foo_t *)</code>. The
+-pointer to the item type, henceforth referred to as the <i>next</i>
+-pointer, is <code>another_foo</code>. To minimize overhead, the freelist
+-mechanism allows users to set the next pointer arbitrarily whenever
+-items are <b>not</b> in the freelist. This is handy for items which are
+-maintained in lists when they are allocated - the list pointer can then
+-be reused as the next pointer.
+-
+-<p>
+-Sometimes, it is desirable to maintain freelists of items which do not
+-naturally contain fields which are correctly-formed next pointers.
+-If there is a void pointer in the item type, it is acceptable to use
+-this in place of the next pointer. The preferred mechanism for dealing
+-with this is to create a <code>union</code>. For instance, to
+-maintain a freelist of arrays of eight kilobytes of memory:<br>
+-<menu><code>
+-typedef union nasd_foo_u nasd_foo_t;<br>
+-union nasd_foo_u {<br>
+-&nbsp;&nbsp;char&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data[8192];<br>
+-&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;*next;<br>
+-};<br>
+-</code></menu>
+-In this example, <code>next</code> is a valid next pointer for the freelist
+-mechanism, and the data field of <code>nasd_foo_t</code> is an eight kilobyte
+-array.
+-
+-<h3>Basic freelists</h3>
+-<p>
+-The most basic kind of freelist is one which maintains chunks of data whose
+-contents may be arbitrary, but require no special initialization or
+-deinitialization. To use such a freelist, first declare a pointer to
+-type <code>nasd_freelist_t</code>. Create the empty freelist by calling
+-<code>NASD_FREELIST_CREATE()</code>. This takes four arguments. The
+-first is the freelist pointer. The second is the maximum number of these
+-items which should ever reside in the freelist at a particular time (extras will be
+-returned to the system immediately). The third is how many additional
+-items to allocate whenever the freelist is empty and an allocation is
+-desired. The final argument is the size of the item. If the freelist
+-pointer is <code>NULL</code> after evaluating <code>NASD_FREELIST_CREATE()</code>,
+-the list itself could not be created.
+-
+-<p>
+-It is often desirable at this point to make this newly-created freelist
+-be non-empty, so that when the code begins executing, initial trips through
+-not-yet-executed codepaths do not incur tremendous allocation costs. Do
+-this by calling <code>NASD_FREELIST_PRIME()</code>, which takes four
+-arguments. The first argument is the freelist pointer. The second is the
+-number of items to create and add to the list. The third is the next
+-pointer, and the fourth is the item cast.
+-
+-<p>
+-To retrieve an item from the freelist, call <code>NASD_FREELIST_GET()</code>.
+-This takes four arguments. The first is the freelist pointer. The second
+-is a pointer to be assigned with the address of the object retrieved from
+-the freelist. The third is the next pointer, and the fourth is the item
+-cast.
+-
+-<p>
+-To return an item to a freelist, call <code>NASD_FREELIST_FREE()</code>.
+-This takes three arguments. The first is the freelist pointer. The
+-second is the address of the item to return. The third is the next
+-pointer.
+-
+-<p>
+-When a freelist is no longer needed, it (along with its current contents)
+-may be deallocated with <code>NASD_FREELIST_DESTROY()</code>. This
+-macro takes three arguments. The first is the freelist pointer. The
+-second is the next pointer. The third is the item cast.
+-
+-<p>
+-<b>Example:</b> Let's say we have a type <code>nasd_foo_t</code>, for which we
+-wish to maintain a freelist. We might have something like:<br>
+-<menu><pre><code>
+-typedef struct nasd_foo_s nasd_foo_t;
+-struct nasd_foo_s {
+-&nbsp;&nbsp;/* actual data for nasd_foo_t here */
+-&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;*another_foo;
+-};
+-<p>
+-nasd_freelist_t *nasd_foo_freelist;
+-#define NASD_MAX_FREE_FOO 1024 /* Maximum number of foos
+-                                * to have in the freelist
+-                                * at a time
+-                                */
+-#define NASD_FOO_INC        64 /* How many foos to add to
+-                                * the freelist at a time
+-                                * when we run out
+-                                */
+-#define NASD_FOO_INITIAL    32 /* How many foos to create
+-                                * at start of day
+-                                */
+-<p>
+-nasd_status_t
+-nasd_init_foo_freelist()
+-{
+-  NASD_FREELIST_CREATE(nasd_foo_freelist, NASD_MAX_FREE_FOO,
+-    NASD_FOO_INC, sizeof(nasd_foo_t));
+-  if (nasd_foo_freelist == NULL) {
+-    return(NASD_NO_MEM);
+-  }
+-
+-  NASD_FREELIST_PRIME(nasd_foo_freelist, NASD_FOO_INITIAL,next,
+-    (nasd_foo_t *));
+-
+-  return(NASD_SUCCESS);
+-}
+-<p>
+-nasd_status_t
+-nasd_get_foo(
+-&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;**foo_p)
+-{
+-  NASD_FREELIST_GET(nasd_foo_freelist,*foo_p,next,(nasd_foo_t *));
+-  if (*foo_p == NULL)
+-    return(NASD_NO_MEM);
+-  return(NASD_SUCCESS);
+-}
+-<p>
+-void
+-nasd_free_foo(
+-&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;*foo)
+-{
+-  NASD_FREELIST_FREE(nasd_foo_freelist,foo,next);
+-}
+-<p>
+-void
+-nasd_shutdown_foo_freelist()
+-{
+-  NASD_FREELIST_DESTROY(nasd_foo_freelist,next,(nasd_foo_t *));
+-}
+-</code></pre></menu>
+-
+-<br>
+-<p>
+-<h3>Freelists with initialized items</h3>
+-
+-Sometimes, it is desirable to have the items in a freelist maintain
+-state across allocate and free operations. For instance, each item
+-might contain a mutex. Rather than initialize and destroy a mutex
+-each time an item is allocated from or freed to the freelist, it is
+-more desirable to initialize a mutex each time an item is created for
+-the freelist, and deinitialize it whenever the item is returned to
+-the system. To that end, the freelist mechanism provides variants
+-on the above interfaces: <code>NASD_FREELIST_PRIME_INIT()</code>,
+-<code>NASD_FREELIST_GET_INIT()</code>, <code>NASD_FREELIST_FREE_CLEAN()</code>,
+-and <code>NASD_FREELIST_DESTROY_CLEAN()</code>.
+-
+-<p>
+-<code>NASD_FREELIST_PRIME_INIT()</code> and <code>NASD_FREELIST_GET_INIT()</code>
+-are very similar to <code>NASD_FREELIST_PRIME()</code> and <code>NASD_FREELIST_GET()</code>,
+-respectively. Each takes an additional argument, however, which is an
+-initialization function. This function should take a pointer to
+-the item type as its sole argument, and return <code>nasd_status_t</code>.
+-If the initialization is successful, it should return <code>NASD_SUCCESS</code>.
+-Otherwise, it should return a meaningful error code. Likewise,
+-<code>NASD_FREELIST_FREE_CLEAN()</code>, and <code>NASD_FREELIST_DESTROY_CLEAN()</code>
+-take an additional argument which is a function returning void that takes
+-a pointer to the item type as its sole argument. This function is responsible
+-for reversing the action of the init function. For example, if we added a mutex
+-and a condition variable to <code>nasd_foo_t</code> in our earlier example, we would
+-get:
+-<menu><pre><code>
+-typedef struct nasd_foo_s nasd_foo_t;
+-struct nasd_foo_s {
+-&nbsp;&nbsp;NASD_DECLARE_MUTEX(mutex)
+-&nbsp;&nbsp;NASD_DECLARE_COND(cond)
+-&nbsp;&nbsp;/* other data for nasd_foo_t here */
+-&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;*another_foo;
+-};
+-<p>
+-nasd_freelist_t *nasd_foo_freelist;
+-#define NASD_MAX_FREE_FOO 1024 /* Maximum number of foos
+-                                * to have in the freelist
+-                                * at a time
+-                                */
+-#define NASD_FOO_INC        64 /* How many foos to add to
+-                                * the freelist at a time
+-                                * when we run out
+-                                */
+-#define NASD_FOO_INITIAL    32 /* How many foos to create
+-                                * at start of day
+-                                */
+-<p>
+-static nasd_status_t
+-init_foo(
+-  nasd_foo_t  *foo)
+-{
+-  nasd_status_t rc;
+-
+-  rc = nasd_mutex_init(&foo->lock);
+-  if (rc)
+-    return(rc);
+-  rc = nasd_cond_init(&foo->cond);
+-  if (rc) {
+-    nasd_mutex_destroy(&foo->lock);
+-    return(rc);
+-  }
+-  return(NASD_SUCCESS);
+-}
+-
+-static void
+-clean_foo(
+-  nasd_foo_t  *foo)
+-{
+-  nasd_status_t rc;
+-
+-  rc = nasd_mutex_destroy(&foo->lock);
+-  if (rc) {
+-    printf(WARNING: got 0x%x (%s) destroying foo lockn,
+-      rc, nasd_error_string(rc));
+-  }
+-  rc = nasd_cond_destroy(&foo->cond);
+-  if (rc) {
+-    printf(WARNING: got 0x%x (%s) destroying foo condn,
+-      rc, nasd_error_string(rc));
+-  }
+-}
+-
+-nasd_status_t
+-nasd_init_foo_freelist()
+-{
+-  NASD_FREELIST_CREATE(nasd_foo_freelist, NASD_MAX_FREE_FOO,
+-    NASD_FOO_INC, sizeof(nasd_foo_t));
+-  if (nasd_foo_freelist == NULL) {
+-    return(NASD_NO_MEM);
+-  }
+-
+-  NASD_FREELIST_PRIME_INIT(nasd_foo_freelist, NASD_FOO_INITIAL, next,
+-    (nasd_foo_t *), init_foo);
+-
+-  return(NASD_SUCCESS);
+-}
+-<p>
+-nasd_status_t
+-nasd_get_foo(
+-&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;**foo_p)
+-{
+-  NASD_FREELIST_GET_INIT(nasd_foo_freelist, *foo_p,
+-    next, (nasd_foo_t *), init_foo);
+-  if (*foo_p == NULL)
+-    return(NASD_NO_MEM);
+-  return(NASD_SUCCESS);
+-}
+-<p>
+-void
+-nasd_free_foo(
+-&nbsp;&nbsp;nasd_foo_t&nbsp;&nbsp;*foo)
+-{
+-  NASD_FREELIST_FREE_CLEAN(nasd_foo_freelist, foo, next, clean_foo);
+-}
+-<p>
+-void
+-nasd_shutdown_foo_freelist()
+-{
+-  NASD_FREELIST_DESTROY(nasd_foo_freelist, next, (nasd_foo_t *), clean_foo);
+-}
+-</code></pre></menu>
+-
+-Now every <code>nasd_foo_t</code> resulting from a call to <code>nasd_get_foo()</code>
+-contains validly-initialized mutex and condition variables.
+-
+-<br><p>
+-<h3>Advanced topics</h3>
+-
+-Sometimes item initialization and cleanup functions might desire additional
+-out-of-band data. For this reason, the <code>_INIT</code> and <code>_CLEAN</code>
+-macros also have <code>_INIT_ARG</code> and <code>_CLEAN_ARG</code> variants.
+-These variants take an additional argument after the init or clean function
+-which is passed as a second argument to the init or clean functions themselves.
+-Because the freelist interface is entirely macroized, these arguments may have
+-any type.
+-
+-<p>
+-Freelists protect against accesses by multiple threads by using internal
+-mutexes. These mutexes may be accessed directly by operationg on
+-<code>NASD_FREELIST_MUTEX_OF(<i>freelist_pointer</i>)</code>. To lock
+-this mutex, use <code>NASD_FREELIST_DO_LOCK(<i>freelist_pointer</i>)</code>.
+-To unlock it, use <code>NASD_FREELIST_DO_UNLOCK(<i>freelist_pointer</i>)</code>.
+-The header file <code>nasd_freelist.h</code> provides variants of many of
+-the freelist interfaces which do not take or release locks themselves. If
+-you use this, you are responsible for correctly synchronizing access to the
+-freelist. This has the opportunity for providing greater efficiency when
+-batching operations, or when performing operations already protected by
+-other locks.
+-
+-<p>
+-If <code>NASD_FREELIST_STATS</code> is defined nonzero in <code>nasd_options.h</code>,
+-when each freelist is destroyed, statistics about operations performed on it
+-are printed, including the number of times items were allocated and freed
+-from the list, how many times the list ran empty and how many more items had to be
+-allocated, the largest number of unused items that was ever in the list, and
+-the largest number of items that was ever allocated at a time, among others.
+-";
+-
+-char nasd_premote_ciphertext[] = "<u2>Gur pbzcvyngvba raivebazrag</u2>
+-
+-  <c>
+-    Gur pbzcvyngvba raivebazrag bs gur ANFQ gerr vgfrys hfrf
+-    <xoq>vznxr</xoq>. Gb trarengr Znxrsvyrf, eha gur <xoq>vgbzs</xoq>
+-    fpevcg ng gur gbc bs gur ANFQ gerr. Ba fbzr cyngsbezf, guvf znl
+-    erdhver cyngsbez-fcrpvsvp nethzragf. Nqqvgvbany nethzragf znl or
+-    fcrpvsvrq gb vafgehpg gur flfgrz gung vg fubhyq nyfb ohvyq
+-    cbegvbaf bs gur gerr juvpu ner abg ohvyg ol qrsnhyg.
+-  <c>
+-    Nsgre gur Znxrsvyrf ner trarengrq, n <xoq>znxr qrcraq</xoq> sebz
+-    gur gbc bs gur gerr jvyy perngr nyy nhgbzngvpnyyl-trarengrq fbhepr
+-    svyrf, naq nqq qrcraqrapvrf gb nyy bs gur Znxrsvyrf.
+-
+-  <c>
+-    Svanyyl, <xoq>znxr</xoq> sebz gur gbc bs gur gerr jvyy ohvyq nyy
+-    qrsnhyg pbzcbaragf, naq jungrire aba-qrsnhyg pbzcbaragf jrer
+-    fcrpvsvrq gb <xoq>vgbzs</xoq> nf jryy.
+-
+-  <c>
+-    Ng nal gvzr, <xoq>znxr Znxrsvyr</xoq> va n qverpgbel jvyy
+-    ertrarengr gur Znxrsvyr sebz vgf pbeerfcbaqvat
+-    <pbqr>Vznxrsvyr</pbqr>. Abgr gung guvf arj <pbqr>Znxrsvyr</pbqr>
+-    jvyy abg vapyhqr qrcraqrapvrf; nabgure <xoq>znxr qrcraq</xoq> vf
+-    arprffnel sbe gung. <xoq>znxr Znxrsvyrf</xoq> jvyy ertrarengr
+-    Znxrsvyrf va nyy fhoqverpgbevrf bs gur pheerag qverpgbel, ohg abg
+-    va gur qverpgbel vgfrys. <xoq>znxr qrcraq</xoq> jvyy ertrarengr
+-    qrcraqrapvrf sbe nyy fhoqverpgbevrf nf jryy nf gur pheerag
+-    qverpgbel.
+-
+-  <c>
+-    Gur <xoq>znxr pyrna</xoq> cebqhpgvba jvyy erzbir nal trarengrq
+-    bowrpgf naq rkrphgnoyrf, zbfg rqvgbe onpxhc svyrf, naq
+-    ybpnyyl-trarengrq fbhepr svyrf va gur pheerag qverpgbel naq nyy
+-    fhoqverpgbevrf. Gur <xoq>znxr fgrevyr</xoq> cebqhpgvba jvyy erzbir
+-    nyy trarengrq svyrf (vapyhqvat Znxrsvyrf) va gur pheerag qverpgbel
+-    naq nyy fhoqverpgbevrf, nybat jvgu zbfg rqvgbe onpxhc svyrf.
+-
+-  <u2>Pbasvthevat gur pbzcvyngvba raivebazrag sbe lbhe flfgrz</u2>
+-
+-    Anzrf, ybpngvbaf, naq nethzragf bs flfgrz-ybpny rkrphgnoyrf ner
+-    fcrpvsvrq va <pbqr>pbasvt/ANFQ_fvgr.qrs</pbqr>. Sbe vafgnapr, vs
+-    lbhe cyngsbez unf ybpngrq <xoq>frq</xoq> va n abafgnaqneq
+-    ybpngvba, gur cngu gb svaq vg vf fcrpvsvrq ol frggvat gur
+-    <pbqr>FRQ</pbqr> inevnoyr va guvf svyr. Nyy flfgrz-fcrpvsvp
+-    pbzcvyngvba bcgvbaf fubhyq or unaqyrq urer, fhpu nf pbzcvyre
+-    syntf, ybpngvbaf bs rkrphgnoyrf, yvoenel cnguf, rkgen yvoenevrf gb
+-    yvax ntnvafg, rg prgren. Zbqvsvpngvbaf gb guvf svyr jvyy abg gnxr
+-    rssrpg hagvy gur eryrinag Znxrsvyrf ner ertrarengrq (frr nobir).
+-
+-<u3>Vagebqhpgvba</u3>
+-<c>
+-Znal nccyvpngvbaf naq fhoflfgrzf jvguva gur ANFQ gerr unir n arrq gb
+-qlanzvpnyyl nyybpngr naq qrnyybpngr svkrq-fvmr fgehpgherf. Gur cersreerq
+-zrpunavfz sbe qbvat fb vf gur <v>serryvfg</v> zrpunavfz. Guvf frg bs
+-vagresnprf cebivqrf fhccbeg sbe znvagnvavat cbbyf bs svkrq-fvmr puhaxf
+-bs zrzbel, juvpu znl erdhver rkcyvpvg vavgvnyvmngvba naq qrvavgvnyvmngvba
+-gb hfr.
+-
+-<c>
+-Vs n cebtenzzre jvfurf gb znvagnva pnpurf bs nyybpngrq
+-ohg hahfrq zrzbel, gur serryvfg zrpunavfz fubhyq or hfrq. Gurer ner
+-frireny ernfbaf sbe guvf. Bar vf gung hfvat n pbafvfgrag frg bs vagresnprf
+-gb qb fb urycf bguref gb ernq pbqr gurl ner hasnzvyvne jvgu naq vqragvsl
+-jung vg qbrf. Nabgure vf gung gur serryvfg zrpunavfz vf pncnoyr bs pbyyrpgvat
+-naq ercbegvat fgngvfgvpf ba ubj rnpu cbby bs zrzbel jnf hfrq, nyybjvat
+-orggre ghavat bs gur flfgrz. N guveq vf gung ol hfvat n pbzzba, havsvrq
+-zrpunavfz sbe znantvat nyybpngrq ohg pheeragyl hahfrq puhaxf bs zrzbel,
+-gur ANFQ flfgrz vf pncnoyr bs erpynvzvat puhaxf bs zrzbel juvpu ner pheeragyl
+-hahfrq. Guvf vf rfcrpvnyyl hfrshy va ybj-zrzbel raivebazragf.
+-
+-<u3>Hfvat serryvfgf</u3>
+-<c>
+-Gb hfr serryvfgf, or fher gur <n uers=zrzbel.ugzy>zrzbel</n>
+-zbqhyr vf cebcreyl vavgvnyvmrq, naq vapyhqr <pbqr>anfq/anfq_serryvfg.u</pbqr>.
+-Serryvfgf unir glcr <pbqr>anfq_serryvfg_g</pbqr>.
+-Gur serryvfg vagresnpr vf vzcyrzragrq nf n frg bs znpebf sbe rssvpvrapl.
+-Gb zvavzvmr bireurnq naq qrohttvat pbzcyrkvgl, gur serryvfg zrpunavfz qbrf
+-abg znvagnva nqqvgvbany qngn sbe vaqvivqhny nyybpngvbaf. Vafgrnq, vg erdhverf
+-gung hfref bs gur serryvfg vagresnpr cebivqr sbe vg glcvat naq qrersrerapvat
+-vasbezngvba sbe gur vgrzf va gur serryvfg. Guvf zrnaf gung znal bs gur
+-serryvfg znpebf gnxr nf nethzragf gur pnfg bs gur vgrz glcr znvagnvarq va
+-gur yvfg. Gur anzr bs gur fgehpgher be havba ryrzrag jvguva guvf pnfg glcr
+-vf n cbvagre gb gur vgrz glcr vgfrys. Sbe rknzcyr, vs bar jrer
+-znvagnvavat n yvfg bs <pbqr>anfq_sbb_g</pbqr>, gung pbhyq zrna gung:
+-<zrah>
+-Tvira<oe>
+-<pbqr>
+-glcrqrs fgehpg anfq_sbb_f anfq_sbb_g;<oe>
+-fgehpg anfq_sbb_f {<oe>
+-&aofc;&aofc;/* npghny qngn sbe anfq_sbb_g urer */<oe>
+-&aofc;&aofc;anfq_sbb_g&aofc;&aofc;*nabgure_sbb;<oe>
+-};<oe>
+-<c>
+-</pbqr></zrah>
+-Gur pnfg sbe vgrzf va gur serryvfg vf <pbqr>(anfq_sbb_g *)</pbqr>. Gur
+-cbvagre gb gur vgrz glcr, uraprsbegu ersreerq gb nf gur <v>arkg</v>
+-cbvagre, vf <pbqr>nabgure_sbb</pbqr>. Gb zvavzvmr bireurnq, gur serryvfg
+-zrpunavfz nyybjf hfref gb frg gur arkg cbvagre neovgenevyl jurarire
+-vgrzf ner <o>abg</o> va gur serryvfg. Guvf vf unaql sbe vgrzf juvpu ner
+-znvagnvarq va yvfgf jura gurl ner nyybpngrq - gur yvfg cbvagre pna gura
+-or erhfrq nf gur arkg cbvagre.
+-
+-<c>
+-Fbzrgvzrf, vg vf qrfvenoyr gb znvagnva serryvfgf bs vgrzf juvpu qb abg
+-anghenyyl pbagnva svryqf juvpu ner pbeerpgyl-sbezrq arkg cbvagref.
+-Vs gurer vf n ibvq cbvagre va gur vgrz glcr, vg vf npprcgnoyr gb hfr
+-guvf va cynpr bs gur arkg cbvagre. Gur cersreerq zrpunavfz sbe qrnyvat
+-jvgu guvf vf gb perngr n <pbqr>havba</pbqr>. Sbe vafgnapr, gb
+-znvagnva n serryvfg bs neenlf bs rvtug xvybolgrf bs zrzbel:<oe>
+-<zrah><pbqr>
+-glcrqrs havba anfq_sbb_h anfq_sbb_g;<oe>
+-havba anfq_sbb_h {<oe>
+-&aofc;&aofc;pune&aofc;&aofc;&aofc;&aofc;&aofc;&aofc;&aofc;&aofc;&aofc;qngn[8192];<oe>
+-&aofc;&aofc;anfq_sbb_g&aofc;&aofc;*arkg;<oe>
+-};<oe>
+-</pbqr></zrah>
+-Va guvf rknzcyr, <pbqr>arkg</pbqr> vf n inyvq arkg cbvagre sbe gur serryvfg
+-zrpunavfz, naq gur qngn svryq bs <pbqr>anfq_sbb_g</pbqr> vf na rvtug xvybolgr
+-neenl.
+-
+-<u3>Onfvp serryvfgf</u3>
+-<c>
+-Gur zbfg onfvp xvaq bs serryvfg vf bar juvpu znvagnvaf puhaxf bs qngn jubfr
+-pbagragf znl or neovgenel, ohg erdhver ab fcrpvny vavgvnyvmngvba be
+-qrvavgvnyvmngvba. Gb hfr fhpu n serryvfg, svefg qrpyner n cbvagre gb
+-glcr <pbqr>anfq_serryvfg_g</pbqr>. Perngr gur rzcgl serryvfg ol pnyyvat
+-<pbqr>ANFQ_SERRYVFG_PERNGR()</pbqr>. Guvf gnxrf sbhe nethzragf. Gur
+-svefg vf gur serryvfg cbvagre. Gur frpbaq vf gur znkvzhz ahzore bs gurfr
+-vgrzf juvpu fubhyq rire erfvqr va gur serryvfg ng n cnegvphyne gvzr (rkgenf jvyy or
+-erghearq gb gur flfgrz vzzrqvngryl). Gur guveq vf ubj znal nqqvgvbany
+-vgrzf gb nyybpngr jurarire gur serryvfg vf rzcgl naq na nyybpngvba vf
+-qrfverq. Gur svany nethzrag vf gur fvmr bs gur vgrz. Vs gur serryvfg
+-cbvagre vf <pbqr>AHYY</pbqr> nsgre rinyhngvat <pbqr>ANFQ_SERRYVFG_PERNGR()</pbqr>,
+-gur yvfg vgfrys pbhyq abg or perngrq.
+-
+-<c>
+-Vg vf bsgra qrfvenoyr ng guvf cbvag gb znxr guvf arjyl-perngrq serryvfg
+-or aba-rzcgl, fb gung jura gur pbqr ortvaf rkrphgvat, vavgvny gevcf guebhtu
+-abg-lrg-rkrphgrq pbqrcnguf qb abg vaphe gerzraqbhf nyybpngvba pbfgf. Qb
+-guvf ol pnyyvat <pbqr>ANFQ_SERRYVFG_CEVZR()</pbqr>, juvpu gnxrf sbhe
+-nethzragf. Gur svefg nethzrag vf gur serryvfg cbvagre. Gur frpbaq vf gur
+-ahzore bs vgrzf gb perngr naq nqq gb gur yvfg. Gur guveq vf gur arkg
+-cbvagre, naq gur sbhegu vf gur vgrz pnfg.
+-
+-<c>
+-Gb ergevrir na vgrz sebz gur serryvfg, pnyy <pbqr>ANFQ_SERRYVFG_TRG()</pbqr>.
+-Guvf gnxrf sbhe nethzragf. Gur svefg vf gur serryvfg cbvagre. Gur frpbaq
+-vf n cbvagre gb or nffvtarq jvgu gur nqqerff bs gur bowrpg ergevrirq sebz
+-gur serryvfg. Gur guveq vf gur arkg cbvagre, naq gur sbhegu vf gur vgrz
+-pnfg.
+-
+-<c>
+-Gb erghea na vgrz gb n serryvfg, pnyy <pbqr>ANFQ_SERRYVFG_SERR()</pbqr>.
+-Guvf gnxrf guerr nethzragf. Gur svefg vf gur serryvfg cbvagre. Gur
+-frpbaq vf gur nqqerff bs gur vgrz gb erghea. Gur guveq vf gur arkg
+-cbvagre.
+-
+-<c>
+-Jura n serryvfg vf ab ybatre arrqrq, vg (nybat jvgu vgf pheerag pbagragf)
+-znl or qrnyybpngrq jvgu <pbqr>ANFQ_SERRYVFG_QRFGEBL()</pbqr>. Guvf
+-znpeb gnxrf guerr nethzragf. Gur svefg vf gur serryvfg cbvagre. Gur
+-frpbaq vf gur arkg cbvagre. Gur guveq vf gur vgrz pnfg.
+-
+-<c>
+-<o>Rknzcyr:</o> Yrg'f fnl jr unir n glcr <pbqr>anfq_sbb_g</pbqr>, sbe juvpu jr
+-jvfu gb znvagnva n serryvfg. Jr zvtug unir fbzrguvat yvxr:<oe>
+-<zrah><cer><pbqr>
+-glcrqrs fgehpg anfq_sbb_f anfq_sbb_g;
+-fgehpg anfq_sbb_f {
+-&aofc;&aofc;/* npghny qngn sbe anfq_sbb_g urer */
+-&aofc;&aofc;anfq_sbb_g&aofc;&aofc;*nabgure_sbb;
+-};
+-<c>
+-anfq_serryvfg_g *anfq_sbb_serryvfg;
+-#qrsvar ANFQ_ZNK_SERR_SBB 1024 /* Znkvzhz ahzore bs sbbf
+-                                * gb unir va gur serryvfg
+-                                * ng n gvzr
+-                                */
+-#qrsvar ANFQ_SBB_VAP        64 /* Ubj znal sbbf gb nqq gb
+-                                * gur serryvfg ng n gvzr
+-                                * jura jr eha bhg
+-                                */
+-#qrsvar ANFQ_SBB_VAVGVNY    32 /* Ubj znal sbbf gb perngr
+-                                * ng fgneg bs qnl
+-                                */
+-<c>
+-anfq_fgnghf_g
+-anfq_vavg_sbb_serryvfg()
+-{
+-  ANFQ_SERRYVFG_PERNGR(anfq_sbb_serryvfg, ANFQ_ZNK_SERR_SBB,
+-    ANFQ_SBB_VAP, fvmrbs(anfq_sbb_g));
+-  vs (anfq_sbb_serryvfg == AHYY) {
+-    erghea(ANFQ_AB_ZRZ);
+-  }
+-
+-  ANFQ_SERRYVFG_CEVZR(anfq_sbb_serryvfg, ANFQ_SBB_VAVGVNY,arkg,
+-    (anfq_sbb_g *));
+-
+-  erghea(ANFQ_FHPPRFF);
+-}
+-<c>
+-anfq_fgnghf_g
+-anfq_trg_sbb(
+-&aofc;&aofc;anfq_sbb_g&aofc;&aofc;**sbb_c)
+-{
+-  ANFQ_SERRYVFG_TRG(anfq_sbb_serryvfg,*sbb_c,arkg,(anfq_sbb_g *));
+-  vs (*sbb_c == AHYY)
+-    erghea(ANFQ_AB_ZRZ);
+-  erghea(ANFQ_FHPPRFF);
+-}
+-<c>
+-ibvq
+-anfq_serr_sbb(
+-&aofc;&aofc;anfq_sbb_g&aofc;&aofc;*sbb)
+-{
+-  ANFQ_SERRYVFG_SERR(anfq_sbb_serryvfg,sbb,arkg);
+-}
+-<c>
+-ibvq
+-anfq_fuhgqbja_sbb_serryvfg()
+-{
+-  ANFQ_SERRYVFG_QRFGEBL(anfq_sbb_serryvfg,arkg,(anfq_sbb_g *));
+-}
+-</pbqr></cer></zrah>
+-
+-<oe>
+-<c>
+-<u3>Serryvfgf jvgu vavgvnyvmrq vgrzf</u3>
+-
+-Fbzrgvzrf, vg vf qrfvenoyr gb unir gur vgrzf va n serryvfg znvagnva
+-fgngr npebff nyybpngr naq serr bcrengvbaf. Sbe vafgnapr, rnpu vgrz
+-zvtug pbagnva n zhgrk. Engure guna vavgvnyvmr naq qrfgebl n zhgrk
+-rnpu gvzr na vgrz vf nyybpngrq sebz be serrq gb gur serryvfg, vg vf
+-zber qrfvenoyr gb vavgvnyvmr n zhgrk rnpu gvzr na vgrz vf perngrq sbe
+-gur serryvfg, naq qrvavgvnyvmr vg jurarire gur vgrz vf erghearq gb
+-gur flfgrz. Gb gung raq, gur serryvfg zrpunavfz cebivqrf inevnagf
+-ba gur nobir vagresnprf: <pbqr>ANFQ_SERRYVFG_CEVZR_VAVG()</pbqr>,
+-<pbqr>ANFQ_SERRYVFG_TRG_VAVG()</pbqr>, <pbqr>ANFQ_SERRYVFG_SERR_PYRNA()</pbqr>,
+-naq <pbqr>ANFQ_SERRYVFG_QRFGEBL_PYRNA()</pbqr>.
+-
+-<c>
+-<pbqr>ANFQ_SERRYVFG_CEVZR_VAVG()</pbqr> naq <pbqr>ANFQ_SERRYVFG_TRG_VAVG()</pbqr>
+-ner irel fvzvyne gb <pbqr>ANFQ_SERRYVFG_CEVZR()</pbqr> naq <pbqr>ANFQ_SERRYVFG_TRG()</pbqr>,
+-erfcrpgviryl. Rnpu gnxrf na nqqvgvbany nethzrag, ubjrire, juvpu vf na
+-vavgvnyvmngvba shapgvba. Guvf shapgvba fubhyq gnxr n cbvagre gb
+-gur vgrz glcr nf vgf fbyr nethzrag, naq erghea <pbqr>anfq_fgnghf_g</pbqr>.
+-Vs gur vavgvnyvmngvba vf fhpprffshy, vg fubhyq erghea <pbqr>ANFQ_FHPPRFF</pbqr>.
+-Bgurejvfr, vg fubhyq erghea n zrnavatshy reebe pbqr. Yvxrjvfr,
+-<pbqr>ANFQ_SERRYVFG_SERR_PYRNA()</pbqr>, naq <pbqr>ANFQ_SERRYVFG_QRFGEBL_PYRNA()</pbqr>
+-gnxr na nqqvgvbany nethzrag juvpu vf n shapgvba ergheavat ibvq gung gnxrf
+-n cbvagre gb gur vgrz glcr nf vgf fbyr nethzrag. Guvf shapgvba vf erfcbafvoyr
+-sbe erirefvat gur npgvba bs gur vavg shapgvba. Sbe rknzcyr, vs jr nqqrq n zhgrk
+-naq n pbaqvgvba inevnoyr gb <pbqr>anfq_sbb_g</pbqr> va bhe rneyvre rknzcyr, jr jbhyq
+-trg:
+-<zrah><cer><pbqr>
+-glcrqrs fgehpg anfq_sbb_f anfq_sbb_g;
+-fgehpg anfq_sbb_f {
+-&aofc;&aofc;ANFQ_QRPYNER_ZHGRK(zhgrk)
+-&aofc;&aofc;ANFQ_QRPYNER_PBAQ(pbaq)
+-&aofc;&aofc;/* bgure qngn sbe anfq_sbb_g urer */
+-&aofc;&aofc;anfq_sbb_g&aofc;&aofc;*nabgure_sbb;
+-};
+-<c>
+-anfq_serryvfg_g *anfq_sbb_serryvfg;
+-#qrsvar ANFQ_ZNK_SERR_SBB 1024 /* Znkvzhz ahzore bs sbbf
+-                                * gb unir va gur serryvfg
+-                                * ng n gvzr
+-                                */
+-#qrsvar ANFQ_SBB_VAP        64 /* Ubj znal sbbf gb nqq gb
+-                                * gur serryvfg ng n gvzr
+-                                * jura jr eha bhg
+-                                */
+-#qrsvar ANFQ_SBB_VAVGVNY    32 /* Ubj znal sbbf gb perngr
+-                                * ng fgneg bs qnl
+-                                */
+-<c>
+-fgngvp anfq_fgnghf_g
+-vavg_sbb(
+-  anfq_sbb_g  *sbb)
+-{
+-  anfq_fgnghf_g ep;
+-
+-  ep = anfq_zhgrk_vavg(&sbb->ybpx);
+-  vs (ep)
+-    erghea(ep);
+-  ep = anfq_pbaq_vavg(&sbb->pbaq);
+-  vs (ep) {
+-    anfq_zhgrk_qrfgebl(&sbb->ybpx);
+-    erghea(ep);
+-  }
+-  erghea(ANFQ_FHPPRFF);
+-}
+-
+-fgngvp ibvq
+-pyrna_sbb(
+-  anfq_sbb_g  *sbb)
+-{
+-  anfq_fgnghf_g ep;
+-
+-  ep = anfq_zhgrk_qrfgebl(&sbb->ybpx);
+-  vs (ep) {
+-    cevags(JNEAVAT: tbg 0k%k (%f) qrfgeblvat sbb ybpxa,
+-      ep, anfq_reebe_fgevat(ep));
+-  }
+-  ep = anfq_pbaq_qrfgebl(&sbb->pbaq);
+-  vs (ep) {
+-    cevags(JNEAVAT: tbg 0k%k (%f) qrfgeblvat sbb pbaqa,
+-      ep, anfq_reebe_fgevat(ep));
+-  }
+-}
+-
+-anfq_fgnghf_g
+-anfq_vavg_sbb_serryvfg()
+-{
+-  ANFQ_SERRYVFG_PERNGR(anfq_sbb_serryvfg, ANFQ_ZNK_SERR_SBB,
+-    ANFQ_SBB_VAP, fvmrbs(anfq_sbb_g));
+-  vs (anfq_sbb_serryvfg == AHYY) {
+-    erghea(ANFQ_AB_ZRZ);
+-  }
+-
+-  ANFQ_SERRYVFG_CEVZR_VAVG(anfq_sbb_serryvfg, ANFQ_SBB_VAVGVNY, arkg,
+-    (anfq_sbb_g *), vavg_sbb);
+-
+-  erghea(ANFQ_FHPPRFF);
+-}
+-<c>
+-anfq_fgnghf_g
+-anfq_trg_sbb(
+-&aofc;&aofc;anfq_sbb_g&aofc;&aofc;**sbb_c)
+-{
+-  ANFQ_SERRYVFG_TRG_VAVG(anfq_sbb_serryvfg, *sbb_c,
+-    arkg, (anfq_sbb_g *), vavg_sbb);
+-  vs (*sbb_c == AHYY)
+-    erghea(ANFQ_AB_ZRZ);
+-  erghea(ANFQ_FHPPRFF);
+-}
+-<c>
+-ibvq
+-anfq_serr_sbb(
+-&aofc;&aofc;anfq_sbb_g&aofc;&aofc;*sbb)
+-{
+-  ANFQ_SERRYVFG_SERR_PYRNA(anfq_sbb_serryvfg, sbb, arkg, pyrna_sbb);
+-}
+-<c>
+-ibvq
+-anfq_fuhgqbja_sbb_serryvfg()
+-{
+-  ANFQ_SERRYVFG_QRFGEBL(anfq_sbb_serryvfg, arkg, (anfq_sbb_g *), pyrna_sbb);
+-}
+-</pbqr></cer></zrah>
+-
+-Abj rirel <pbqr>anfq_sbb_g</pbqr> erfhygvat sebz n pnyy gb <pbqr>anfq_trg_sbb()</pbqr>
+-pbagnvaf inyvqyl-vavgvnyvmrq zhgrk naq pbaqvgvba inevnoyrf.
+-
+-<oe><c>
+-<u3>Nqinaprq gbcvpf</u3>
+-
+-Fbzrgvzrf vgrz vavgvnyvmngvba naq pyrnahc shapgvbaf zvtug qrfver nqqvgvbany
+-bhg-bs-onaq qngn. Sbe guvf ernfba, gur <pbqr>_VAVG</pbqr> naq <pbqr>_PYRNA</pbqr>
+-znpebf nyfb unir <pbqr>_VAVG_NET</pbqr> naq <pbqr>_PYRNA_NET</pbqr> inevnagf.
+-Gurfr inevnagf gnxr na nqqvgvbany nethzrag nsgre gur vavg be pyrna shapgvba
+-juvpu vf cnffrq nf n frpbaq nethzrag gb gur vavg be pyrna shapgvbaf gurzfryirf.
+-Orpnhfr gur serryvfg vagresnpr vf ragveryl znpebvmrq, gurfr nethzragf znl unir
+-nal glcr.
+-
+-<c>
+-Serryvfgf cebgrpg ntnvafg npprffrf ol zhygvcyr guernqf ol hfvat vagreany
+-zhgrkrf. Gurfr zhgrkrf znl or npprffrq qverpgyl ol bcrengvbat ba
+-<pbqr>ANFQ_SERRYVFG_ZHGRK_BS(<v>serryvfg_cbvagre</v>)</pbqr>. Gb ybpx
+-guvf zhgrk, hfr <pbqr>ANFQ_SERRYVFG_QB_YBPX(<v>serryvfg_cbvagre</v>)</pbqr>.
+-Gb haybpx vg, hfr <pbqr>ANFQ_SERRYVFG_QB_HAYBPX(<v>serryvfg_cbvagre</v>)</pbqr>.
+-Gur urnqre svyr <pbqr>anfq_serryvfg.u</pbqr> cebivqrf inevnagf bs znal bs
+-gur serryvfg vagresnprf juvpu qb abg gnxr be eryrnfr ybpxf gurzfryirf. Vs
+-lbh hfr guvf, lbh ner erfcbafvoyr sbe pbeerpgyl flapuebavmvat npprff gb gur
+-serryvfg. Guvf unf gur bccbeghavgl sbe cebivqvat terngre rssvpvrapl jura
+-ongpuvat bcrengvbaf, be jura cresbezvat bcrengvbaf nyernql cebgrpgrq ol
+-bgure ybpxf.
+-
+-<c>
+-Vs <pbqr>ANFQ_SERRYVFG_FGNGF</pbqr> vf qrsvarq abamreb va <pbqr>anfq_bcgvbaf.u</pbqr>,
+-jura rnpu serryvfg vf qrfgeblrq, fgngvfgvpf nobhg bcrengvbaf cresbezrq ba vg
+-ner cevagrq, vapyhqvat gur ahzore bs gvzrf vgrzf jrer nyybpngrq naq serrq
+-sebz gur yvfg, ubj znal gvzrf gur yvfg ena rzcgl naq ubj znal zber vgrzf unq gb or
+-nyybpngrq, gur ynetrfg ahzore bs hahfrq vgrzf gung jnf rire va gur yvfg, naq
+-gur ynetrfg ahzore bs vgrzf gung jnf rire nyybpngrq ng n gvzr, nzbat bguref.
+-";
+-
+-
+-
+-    

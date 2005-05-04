@@ -1,0 +1,9 @@
+This is release 1.3 of the Parallel Data Laboratory NASD software
+prototype.  The release includes the NASD drive prototype, the
+NASD-NFS filemanager, simple client APIs, a regression-testing suite,
+sample programs, a snapshot of Cheops (which is one implementation of
+aggregation over multiple NASDs), and some basic documentation.  This
+release includes ports to run on user-level Linux, user-level Digital
+Unix, and in the Digital Unix kernel.  A more complete enumeration of
+the contents of the release may be found in the ReleaseHistory file at
+the root of the distribution.

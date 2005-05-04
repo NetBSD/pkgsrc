@@ -1,0 +1,144 @@
+$NetBSD: patch-ag,v 1.1.1.1 2005/05/04 08:56:49 agc Exp $
+
+Index: common/generic/nasd_pthread_support.c
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/common/generic/nasd_pthread_support.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- common/generic/nasd_pthread_support.c	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ common/generic/nasd_pthread_support.c	21 Mar 2005 17:07:19 -0000	1.2
+@@ -34,10 +34,10 @@
+ pthread_condattr_t nasd_pthread_cond_attr;
+ int nasd_pthread_mutex_attr_good = 0;
+ int nasd_pthread_cond_attr_good = 0;
+-#ifdef SOLARIS
++#if defined(SOLARIS) || defined(NETBSD)
+ int nasd_pthread_thread_attr_good = 0;
+ pthread_attr_t nasd_pthread_thread_attr;
+-#endif /* SOLARIS */
++#endif /* SOLARIS || NETBSD */
+ 
+ nasd_status_t
+ nasd_sys_threads_init()
+@@ -65,7 +65,7 @@
+   ret = pthread_mutexattr_create(&nasd_pthread_mutex_attr);
+   if (ret)
+     return(NASD_FAIL);
+-#if !defined(FREEBSD) && !defined(SOLARIS) && !defined(IRIX) && !defined(LINUX)
++#if !defined(FREEBSD) && !defined(SOLARIS) && !defined(IRIX) && !defined(LINUX) && !defined(NETBSD)
+   /* XXX - RH61 port */
+   /* not supported by FreeBSD's threads library */
+   ret = pthread_mutexattr_setkind_np(&nasd_pthread_mutex_attr, MUTEX_FAST_NP);
+@@ -73,7 +73,7 @@
+     pthread_mutexattr_delete(&nasd_pthread_mutex_attr);
+     return(NASD_FAIL);
+   }
+-#endif /* !FREEBSD && !SOLARIS && !IRIX */
++#endif /* !FREEBSD && !SOLARIS && !IRIX && !NETBSD */
+   ret = pthread_condattr_create(&nasd_pthread_cond_attr);
+   if (ret) {
+     pthread_mutexattr_delete(&nasd_pthread_mutex_attr);
+@@ -127,13 +127,13 @@
+   if (rc)
+     return(NASD_FAIL);
+ #else /* DEC_OSF || (LINUX && (NASD_RPC_PACKAGE == NASD_RPC_PACKAGE_DCE)) */
+-#if defined(LINUX) || defined(FREEBSD) || defined(SOLARIS) || defined(IRIX)
++#if defined(LINUX) || defined(FREEBSD) || defined(SOLARIS) || defined(IRIX) || defined(NETBSD)
+   if (nasd_pthread_mutex_attr_good == 0)
+     return(NASD_FAIL);
+   rc = pthread_mutex_init(m, &nasd_pthread_mutex_attr);
+   if (rc)
+     return(NASD_FAIL);
+-#else /* LINUX || FREEBSD || SOLARIS || IRIX */
++#else /* LINUX || FREEBSD || SOLARIS || IRIX || NETBSD */
+ #ifdef AIX
+ 	rc = pthread_mutex_init(m, &pthread_mutexattr_default);
+   if (rc)
+@@ -141,7 +141,7 @@
+ #else
+ #error "don't know how to call pthread_mutex_init on your platform"
+ #endif /* AIX */
+-#endif /* LINUX || FREEBSD || SOLARIS || IRIX */
++#endif /* LINUX || FREEBSD || SOLARIS || IRIX || NETBSD */
+ #endif /* DEC_OSF || (LINUX && (NASD_RPC_PACKAGE == NASD_RPC_PACKAGE_DCE)) */
+ #endif /* PTHREAD_EXC */
+   return(NASD_SUCCESS);
+@@ -180,7 +180,7 @@
+ #ifdef DEC_OSF
+   rc = pthread_cond_init(c, pthread_condattr_default);
+ #else /* DEC_OSF */
+-#if defined(LINUX) || defined(FREEBSD) || defined(SOLARIS) || defined(IRIX)
++#if defined(LINUX) || defined(FREEBSD) || defined(SOLARIS) || defined(IRIX) || defined(NETBSD)
+   if (nasd_pthread_cond_attr_good == 0)
+     return(NASD_FAIL);
+ #if NASD_RPC_PACKAGE == NASD_RPC_PACKAGE_DCE
+@@ -188,13 +188,13 @@
+ #else /* NASD_RPC_PACKAGE == NASD_RPC_PACKAGE_DCE */
+   rc = pthread_cond_init(c, &nasd_pthread_cond_attr);
+ #endif /* NASD_RPC_PACKAGE == NASD_RPC_PACKAGE_DCE */
+-#else /* LINUX || FREEBSD || SOLARIS || IRIX */
++#else /* LINUX || FREEBSD || SOLARIS || IRIX || NETBSD */
+ #ifdef AIX
+   rc = pthread_cond_init(c, &pthread_condattr_default);
+ #else /* AIX */
+ #error "don't know how to call pthread_cond_init on your platform"
+ #endif /* AIX */
+-#endif /* LINUX || FREEBSD || SOLARIS || IRIX*/
++#endif /* LINUX || FREEBSD || SOLARIS || IRIX || NETBSD */
+ #endif /* DEC_OSF */
+   if (rc)
+     return(NASD_FAIL);
+@@ -335,14 +335,14 @@
+   *sizep = size;
+   return(NASD_SUCCESS);
+ #else /* IRIX */
+-#if defined(FREEBSD) || defined(SOLARIS)
++#if defined(FREEBSD) || defined(SOLARIS) || defined(NETBSD)
+   int ret;
+ 
+   ret = pthread_attr_getstacksize(attrp, sizep);
+   if (ret != 0)
+     return NASD_FAIL;
+   return NASD_SUCCESS;
+-#else /* FREEBSD || SOLARIS */
++#else /* FREEBSD || SOLARIS || NETBSD */
+   long size;
+ 
+   size = pthread_attr_getstacksize(*attrp);
+@@ -350,7 +350,7 @@
+     return(NASD_FAIL);
+   *sizep = (int)size;
+   return(NASD_SUCCESS);
+-#endif /* FREEBSD || SOLARIS */
++#endif /* FREEBSD || SOLARIS || NETBSD */
+ #endif /* IRIX */
+ }
+ 
+@@ -387,20 +387,20 @@
+   ret = pthread_create(threadp, NULL,
+     (pthread_startroutine_t)func, arg);
+ #else /* LINUX && (NASD_RPC_PACKAGE != NASD_RPC_PACKAGE_DCE) */
+-#ifdef SOLARIS
++#  if defined(SOLARIS) || defined(NETBSD)
+   if (nasd_pthread_thread_attr_good == 0)
+     return(NASD_FAIL);
+   ret = pthread_create(threadp, &nasd_pthread_thread_attr,
+     (pthread_startroutine_t)func, arg);
+-#else /* SOLARIS */
+-#ifdef IRIX
++#  else /* SOLARIS || NETBSD */
++#    ifdef IRIX
+   ret = pthread_create(threadp, NULL,
+     (pthread_startroutine_t)func, arg);
+-#else /* IRIX */
++#    else /* IRIX */
+   ret = pthread_create(threadp, pthread_attr_default,
+     (pthread_startroutine_t)func, arg);
+-#endif /* IRIX */
+-#endif /* SOLARIS */
++#    endif /* IRIX */
++#  endif /* SOLARIS || NETBSD */
+ #endif /* LINUX && (NASD_RPC_PACKAGE != NASD_RPC_PACKAGE_DCE) */
+   if (ret)
+     return(NASD_FAIL);

@@ -1,0 +1,289 @@
+$NetBSD: patch-at,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+
+Index: edrfs/client/nasd_edrfs_client_mq.c
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/edrfs/client/nasd_edrfs_client_mq.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- edrfs/client/nasd_edrfs_client_mq.c	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ edrfs/client/nasd_edrfs_client_mq.c	21 Mar 2005 17:07:25 -0000	1.2
+@@ -39,13 +39,13 @@
+ 
+ /* I am, in all likelihood, going to go to hell for these macros. */
+ 
+-#define NASD_EDRFSMQ_DEFINE_VARS(n) \
+-        nasd_edrfs_mq_buf_t mb;\
+-        NASDMQ_edrfs_##n##_msg_t *msg = &(mb.un.##n##_msg);\
+-        NASDMQ_edrfs_##n##_rep_t *rep = &(mb.un.##n##_rep);\
+-        nasd_edrfscli_handle_msgq_t *rpch =\
+-          (nasd_edrfscli_handle_msgq_t *)handle->rpc_specific_handle;\
+-        int seqnum;\
++#define NASD_EDRFSMQ_DEFINE_VARS(msgtype, msgfield, reptype, repfield)	\
++        nasd_edrfs_mq_buf_t mb;						\
++	msgtype *msg = &(mb.un.msgfield);				\
++	reptype *rep = &(mb.un.repfield);				\
++        nasd_edrfscli_handle_msgq_t *rpch =				\
++          (nasd_edrfscli_handle_msgq_t *)handle->rpc_specific_handle;	\
++        int seqnum;							\
+         int rc;
+ 
+ #define NASD_EDRFSMQ_INC_SEQNUM() \
+@@ -70,8 +70,8 @@
+         }\
+         *op_status = rep->op_status;
+ 
+-#define NASD_EDRFSMQ_MARSHALL(n)  bcopy(args, &mb.un.##n##_msg.args, sizeof(nasd_edrfs_##n##_args_t))
+-#define NASD_EDRFSMQ_UNMARSHALL(n) bcopy(&mb.un.##n##_rep.res, res, sizeof(nasd_edrfs_##n##_res_t))
++#define NASD_EDRFSMQ_MARSHALL(msgfield, argstype)  bcopy(args, &mb.un.msgfield.args, sizeof(argstype))
++#define NASD_EDRFSMQ_UNMARSHALL(repfield, restype) bcopy(&mb.un.repfield.res, res, sizeof(restype))
+ 
+ nasd_status_t
+ nasd_edrfsmq_bind(
+@@ -129,7 +129,7 @@
+   nasd_res_t         *res,
+   nasd_rpc_status_t  *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(null);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_null_msg_t, null_msg, NASDMQ_edrfs_null_rep_t, null_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_NULL);
+   res->nasd_status = mb.un.null_rep.nasd_status;
+@@ -143,11 +143,11 @@
+   nasd_edrfs_mount_res_t   *res,
+   nasd_rpc_status_t      *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(mount);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_mount_msg_t, mount_msg, NASDMQ_edrfs_mount_rep_t, mount_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(mount);
++  NASD_EDRFSMQ_MARSHALL(mount_msg, nasd_edrfs_mount_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_MOUNT);
+-  NASD_EDRFSMQ_UNMARSHALL(mount);
++  NASD_EDRFSMQ_UNMARSHALL(mount_rep, nasd_edrfs_mount_res_t);
+ }
+ 
+ 
+@@ -158,11 +158,11 @@
+   nasd_edrfs_fsstat_res_t   *res,
+   nasd_rpc_status_t       *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(fsstat);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_fsstat_msg_t, fsstat_msg, NASDMQ_edrfs_fsstat_rep_t, fsstat_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(fsstat);
++  NASD_EDRFSMQ_MARSHALL(fsstat_msg, nasd_edrfs_fsstat_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_FSSTAT);
+-  NASD_EDRFSMQ_UNMARSHALL(fsstat);
++  NASD_EDRFSMQ_UNMARSHALL(fsstat_rep, nasd_edrfs_fsstat_res_t);
+ }
+ 
+ 
+@@ -173,11 +173,11 @@
+   nasd_edrfs_fsinfo_res_t   *res,
+   nasd_rpc_status_t          *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(fsinfo);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_fsinfo_msg_t, fsinfo_msg, NASDMQ_edrfs_fsinfo_rep_t, fsinfo_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(fsinfo);
++  NASD_EDRFSMQ_MARSHALL(fsinfo_msg, nasd_edrfs_fsinfo_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_FSINFO);
+-  NASD_EDRFSMQ_UNMARSHALL(fsinfo);
++  NASD_EDRFSMQ_UNMARSHALL(fsinfo_rep, nasd_edrfs_fsinfo_res_t);
+ }
+ 
+ 
+@@ -188,11 +188,11 @@
+   nasd_edrfs_lookup_res_t   *res,
+   nasd_rpc_status_t          *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(lookup);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_lookup_msg_t, lookup_msg, NASDMQ_edrfs_lookup_rep_t, lookup_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(lookup);
++  NASD_EDRFSMQ_MARSHALL(lookup_msg, nasd_edrfs_lookup_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_LOOKUP);
+-  NASD_EDRFSMQ_UNMARSHALL(lookup);
++  NASD_EDRFSMQ_UNMARSHALL(lookup_rep, nasd_edrfs_lookup_res_t);
+ }
+ 
+ 
+@@ -217,7 +217,7 @@
+   nasd_edrfs_readdir_res_t   *res,
+   nasd_rpc_status_t           *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(readdir)
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_readdir_msg_t, readdir_msg, NASDMQ_edrfs_readdir_rep_t, readdir_rep);
+   nasd_byte_t *shmbuf;
+   int shmid;
+   nasd_len_t len;
+@@ -240,9 +240,9 @@
+   }
+ 
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(readdir);
++  NASD_EDRFSMQ_MARSHALL(readdir_msg, nasd_edrfs_readdir_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_READDIR);
+-  NASD_EDRFSMQ_UNMARSHALL(readdir);
++  NASD_EDRFSMQ_UNMARSHALL(readdir_rep, nasd_edrfs_readdir_res_t);
+   bcopy(shmbuf, out_entries, len);
+   rc = nasd_shmpipe_complete_cs(shmid, shmbuf, op_status);
+   if(rc)
+@@ -257,11 +257,11 @@
+   nasd_edrfs_access_res_t   *res,
+   nasd_rpc_status_t          *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(access);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_access_msg_t, access_msg, NASDMQ_edrfs_access_rep_t, access_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(access);
++  NASD_EDRFSMQ_MARSHALL(access_msg, nasd_edrfs_access_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_ACCESS);
+-  NASD_EDRFSMQ_UNMARSHALL(access);
++  NASD_EDRFSMQ_UNMARSHALL(access_rep, nasd_edrfs_access_res_t);
+ }
+ 
+ 
+@@ -272,11 +272,11 @@
+   nasd_edrfs_setattr_res_t   *res,
+   nasd_rpc_status_t           *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(setattr);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_setattr_msg_t, setattr_msg, NASDMQ_edrfs_setattr_rep_t, setattr_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(setattr);
++  NASD_EDRFSMQ_MARSHALL(setattr_msg, nasd_edrfs_setattr_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_SETATTR);
+-  NASD_EDRFSMQ_UNMARSHALL(setattr);
++  NASD_EDRFSMQ_UNMARSHALL(setattr_rep, nasd_edrfs_setattr_res_t);
+ }
+ 
+ 
+@@ -287,11 +287,11 @@
+   nasd_edrfs_create_res_t   *res,
+   nasd_rpc_status_t          *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(create);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_create_msg_t, create_msg, NASDMQ_edrfs_create_rep_t, create_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(create);
++  NASD_EDRFSMQ_MARSHALL(create_msg, nasd_edrfs_create_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_CREATE);
+-  NASD_EDRFSMQ_UNMARSHALL(create);
++  NASD_EDRFSMQ_UNMARSHALL(create_rep, nasd_edrfs_create_res_t);
+ }
+ 
+ 
+@@ -315,11 +315,11 @@
+   nasd_edrfs_symlink_res_t   *res,
+   nasd_rpc_status_t           *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(symlink);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_symlink_msg_t, symlink_msg, NASDMQ_edrfs_symlink_rep_t, symlink_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(symlink);
++  NASD_EDRFSMQ_MARSHALL(symlink_msg, nasd_edrfs_symlink_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_SYMLINK);
+-  NASD_EDRFSMQ_UNMARSHALL(symlink);
++  NASD_EDRFSMQ_UNMARSHALL(symlink_rep, nasd_edrfs_symlink_res_t);
+ }
+ 
+ 
+@@ -330,11 +330,11 @@
+   nasd_edrfs_remove_res_t   *res,
+   nasd_rpc_status_t          *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(remove);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_remove_msg_t, remove_msg, NASDMQ_edrfs_remove_rep_t, remove_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(remove);
++  NASD_EDRFSMQ_MARSHALL(remove_msg, nasd_edrfs_remove_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_REMOVE);
+-  NASD_EDRFSMQ_UNMARSHALL(remove);
++  NASD_EDRFSMQ_UNMARSHALL(remove_rep, nasd_edrfs_remove_res_t);
+ }
+ 
+ 
+@@ -345,11 +345,11 @@
+   nasd_edrfs_mkdir_res_t   *res,
+   nasd_rpc_status_t         *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(mkdir);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_mkdir_msg_t, mkdir_msg, NASDMQ_edrfs_mkdir_rep_t, mkdir_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(mkdir);
++  NASD_EDRFSMQ_MARSHALL(mkdir_msg, nasd_edrfs_mkdir_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_MKDIR);
+-  NASD_EDRFSMQ_UNMARSHALL(mkdir);
++  NASD_EDRFSMQ_UNMARSHALL(mkdir_rep, nasd_edrfs_mkdir_res_t);
+ }
+ 
+ 
+@@ -360,11 +360,11 @@
+   nasd_edrfs_rmdir_res_t   *res,
+   nasd_rpc_status_t         *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(rmdir);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_rmdir_msg_t, rmdir_msg, NASDMQ_edrfs_rmdir_rep_t, rmdir_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(rmdir);
++  NASD_EDRFSMQ_MARSHALL(rmdir_msg, nasd_edrfs_rmdir_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_RMDIR);
+-  NASD_EDRFSMQ_UNMARSHALL(rmdir);
++  NASD_EDRFSMQ_UNMARSHALL(rmdir_rep, nasd_edrfs_rmdir_res_t);
+ }
+ 
+ 
+@@ -375,11 +375,11 @@
+   nasd_edrfs_newcookie_res_t   *res,
+   nasd_rpc_status_t             *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(newcookie);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_newcookie_msg_t, newcookie_msg, NASDMQ_edrfs_newcookie_rep_t, newcookie_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(newcookie);
++  NASD_EDRFSMQ_MARSHALL(newcookie_msg, nasd_edrfs_newcookie_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_NEWCOOKIE);
+-  NASD_EDRFSMQ_UNMARSHALL(newcookie);
++  NASD_EDRFSMQ_UNMARSHALL(newcookie_rep, nasd_edrfs_newcookie_res_t);
+ }
+ 
+ 
+@@ -390,11 +390,11 @@
+   nasd_edrfs_rename_res_t   *res,
+   nasd_rpc_status_t          *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(rename);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_rename_msg_t, rename_msg, NASDMQ_edrfs_rename_rep_t, rename_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+-  NASD_EDRFSMQ_MARSHALL(rename);
++  NASD_EDRFSMQ_MARSHALL(rename_msg, nasd_edrfs_rename_args_t);
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_RENAME);
+-  NASD_EDRFSMQ_UNMARSHALL(rename);
++  NASD_EDRFSMQ_UNMARSHALL(rename_rep, nasd_edrfs_rename_res_t);
+ }
+ 
+ 
+@@ -404,10 +404,10 @@
+   nasd_edrfs_getstats_res_t  *res,
+   nasd_rpc_status_t           *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(getstats);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_getstats_msg_t, getstats_msg, NASDMQ_edrfs_getstats_rep_t, getstats_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_GETSTATS);
+-  NASD_EDRFSMQ_UNMARSHALL(getstats);
++  NASD_EDRFSMQ_UNMARSHALL(getstats_rep, nasd_edrfs_getstats_res_t);
+ }
+ 
+ void
+@@ -416,7 +416,7 @@
+   nasd_res_t           *res,
+   nasd_rpc_status_t    *op_status)
+ {
+-  NASD_EDRFSMQ_DEFINE_VARS(resetstats);
++  NASD_EDRFSMQ_DEFINE_VARS(NASDMQ_edrfs_resetstats_msg_t, resetstats_msg, NASDMQ_edrfs_resetstats_rep_t, resetstats_rep);
+   NASD_EDRFSMQ_INC_SEQNUM();
+   NASD_EDRFSMQ_DOCALL(NASD_EDRFS_MQ_RESETSTATS);
+   res->nasd_status = mb.un.resetstats_rep.nasd_status;
