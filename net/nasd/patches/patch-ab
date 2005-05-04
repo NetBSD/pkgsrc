@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/05/04 08:56:49 agc Exp $
+
+diff -u -r1.1.1.1 -r1.2
+Index: client/nasd_pdrive_client_srpc.c
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/client/nasd_pdrive_client_srpc.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- client/nasd_pdrive_client_srpc.c	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ client/nasd_pdrive_client_srpc.c	21 Mar 2005 17:07:17 -0000	1.2
+@@ -1091,10 +1091,10 @@
+   mem_list.next = NULL;
+   
+   if(sec_param->actual_protection != NASD_NO_PROTECTION) {
+-    nasd_printf("Security is not enabled for this.  To enable security, you would want to:
+-        1.  Factor out the code to set up a secure pipe write from nasd_cl_srpc_range_write_dr
+-        2.  put a call to that factored-out code here.
+-        3.  put appropriate cleanup code at the end of this function\n");
++    nasd_printf("Security is not enabled for this.  To enable security, you would want to:\n"
++        "1.  Factor out the code to set up a secure pipe write from nasd_cl_srpc_range_write_dr\n"
++        "2.  put a call to that factored-out code here.\n"
++        "3.  put appropriate cleanup code at the end of this function\n");
+     NASD_ASSERT(0);
+   } else {
+     pull_func = nasd_srpc_client_run_serverpull;
