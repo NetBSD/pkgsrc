@@ -1,0 +1,159 @@
+$NetBSD: patch-au,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+
+Index: edrfs/server/nasd_edrfs_mq.c
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/edrfs/server/nasd_edrfs_mq.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- edrfs/server/nasd_edrfs_mq.c	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ edrfs/server/nasd_edrfs_mq.c	21 Mar 2005 17:07:26 -0000	1.2
+@@ -623,10 +623,10 @@
+   return(NASD_OP_NOT_SUPPORTED);
+ }
+ 
+-#define DECLARE_VARS(_opname_) \
+-        NASDMQ_edrfs_##_opname_##_msg_t *msg = &(mb.un.##_opname_##_msg);\
+-        NASDMQ_edrfs_##_opname_##_rep_t *rep = &(mr.un.##_opname_##_rep);
+-#define DO_CALL(_opname_) nasd_edrfs_mq_op_##_opname_##(&msg->args, &rep->res, &rep->op_status)
++#define DECLARE_VARS(msgtype, msgfield, reptype, repfield) \
++        msgtype *msg = &(mb.un.msgfield);\
++        reptype *rep = &(mr.un.repfield);
++#define DO_CALL(callname) callname(&msg->args, &rep->res, &rep->op_status)
+ #define SETUP_REPLY()   mr.mtype = msg->seqnum; replyq = msg->replyq;
+ 
+ void
+@@ -665,103 +665,103 @@
+       break;
+ 
+     case NASD_EDRFS_MQ_NULL: {
+-      DECLARE_VARS(null);
++      DECLARE_VARS(NASDMQ_edrfs_null_msg_t, null_msg, NASDMQ_edrfs_null_rep_t, null_rep);
+       nasd_edrfs_mq_op_null(&rep->nasd_status, &rep->op_status);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_MOUNT: {
+-      DECLARE_VARS(mount);
+-      DO_CALL(mount);
++      DECLARE_VARS(NASDMQ_edrfs_mount_msg_t, mount_msg, NASDMQ_edrfs_mount_rep_t, mount_rep);
++      DO_CALL(nasd_edrfs_mq_op_mount);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_FSSTAT: {
+-      DECLARE_VARS(fsstat);
+-      DO_CALL(fsstat);
++      DECLARE_VARS(NASDMQ_edrfs_fsstat_msg_t, fsstat_msg, NASDMQ_edrfs_fsstat_rep_t, fsstat_rep);
++      DO_CALL(nasd_edrfs_mq_op_fsstat);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_FSINFO: {
+-      DECLARE_VARS(fsinfo);
+-      DO_CALL(fsinfo);
++      DECLARE_VARS(NASDMQ_edrfs_fsinfo_msg_t, fsinfo_msg, NASDMQ_edrfs_fsinfo_rep_t, fsinfo_rep);
++      DO_CALL(nasd_edrfs_mq_op_fsinfo);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_LOOKUP: {
+-      DECLARE_VARS(lookup);
+-      DO_CALL(lookup);
++      DECLARE_VARS(NASDMQ_edrfs_lookup_msg_t, lookup_msg, NASDMQ_edrfs_lookup_rep_t, lookup_rep);
++      DO_CALL(nasd_edrfs_mq_op_lookup);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_READDIR: {
+-      DECLARE_VARS(readdir);
++      DECLARE_VARS(NASDMQ_edrfs_readdir_msg_t, readdir_msg, NASDMQ_edrfs_readdir_rep_t, readdir_rep);
+       nasd_edrfs_mq_op_readdir(msg->shmid, &msg->args, &rep->res, &rep->op_status);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_ACCESS: {
+-      DECLARE_VARS(access);
+-      DO_CALL(access);
++      DECLARE_VARS(NASDMQ_edrfs_access_msg_t, access_msg, NASDMQ_edrfs_access_rep_t, access_rep);
++      DO_CALL(nasd_edrfs_mq_op_access);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_SETATTR: {
+-      DECLARE_VARS(setattr);
+-      DO_CALL(setattr);
++      DECLARE_VARS(NASDMQ_edrfs_setattr_msg_t, setattr_msg, NASDMQ_edrfs_setattr_rep_t, setattr_rep);
++      DO_CALL(nasd_edrfs_mq_op_setattr);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_CREATE: {
+-      DECLARE_VARS(create);
+-      DO_CALL(create);
++      DECLARE_VARS(NASDMQ_edrfs_create_msg_t, create_msg, NASDMQ_edrfs_create_rep_t, create_rep);
++      DO_CALL(nasd_edrfs_mq_op_create);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_SYMLINK: {
+-      DECLARE_VARS(symlink);
+-      DO_CALL(symlink);
++      DECLARE_VARS(NASDMQ_edrfs_symlink_msg_t, symlink_msg, NASDMQ_edrfs_symlink_rep_t, symlink_rep);
++      DO_CALL(nasd_edrfs_mq_op_symlink);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_REMOVE: {
+-      DECLARE_VARS(remove);
+-      DO_CALL(remove);
++      DECLARE_VARS(NASDMQ_edrfs_remove_msg_t, remove_msg, NASDMQ_edrfs_remove_rep_t, remove_rep);
++      DO_CALL(nasd_edrfs_mq_op_remove);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_MKDIR: {
+-      DECLARE_VARS(mkdir);
+-      DO_CALL(mkdir);
++      DECLARE_VARS(NASDMQ_edrfs_mkdir_msg_t, mkdir_msg, NASDMQ_edrfs_mkdir_rep_t, mkdir_rep);
++      DO_CALL(nasd_edrfs_mq_op_mkdir);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_RMDIR: {
+-      DECLARE_VARS(rmdir);
+-      DO_CALL(rmdir);
++      DECLARE_VARS(NASDMQ_edrfs_rmdir_msg_t, rmdir_msg, NASDMQ_edrfs_rmdir_rep_t, rmdir_rep);
++      DO_CALL(nasd_edrfs_mq_op_rmdir);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_NEWCOOKIE: {
+-      DECLARE_VARS(newcookie);
+-      DO_CALL(newcookie);
++      DECLARE_VARS(NASDMQ_edrfs_newcookie_msg_t, newcookie_msg, NASDMQ_edrfs_newcookie_rep_t, newcookie_rep);
++      DO_CALL(nasd_edrfs_mq_op_newcookie);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_RENAME: {
+-      DECLARE_VARS(rename);
+-      DO_CALL(rename);
++      DECLARE_VARS(NASDMQ_edrfs_rename_msg_t, rename_msg, NASDMQ_edrfs_rename_rep_t, rename_rep);
++      DO_CALL(nasd_edrfs_mq_op_rename);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_GETSTATS: {
+-      DECLARE_VARS(getstats);
++      DECLARE_VARS(NASDMQ_edrfs_getstats_msg_t, getstats_msg, NASDMQ_edrfs_getstats_rep_t, getstats_rep);
+       nasd_edrfs_mq_op_getstats(&rep->res, &rep->op_status);
+       SETUP_REPLY();
+       break; }
+ 
+     case NASD_EDRFS_MQ_RESETSTATS: {
+-      DECLARE_VARS(resetstats);
++      DECLARE_VARS(NASDMQ_edrfs_resetstats_msg_t, resetstats_msg, NASDMQ_edrfs_resetstats_rep_t, resetstats_rep);
+       nasd_edrfs_mq_op_resetstats(&rep->nasd_status, &rep->op_status);
+       SETUP_REPLY();
+       break; }

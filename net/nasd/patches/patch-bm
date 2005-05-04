@@ -1,0 +1,48 @@
+$NetBSD: patch-bm,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+
+Index: include/nasd/netbsd/Imakefile
+===================================================================
+RCS file: include/nasd/netbsd/Imakefile
+diff -N include/nasd/netbsd/Imakefile
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ include/nasd/netbsd/Imakefile	21 Mar 2005 08:56:24 -0000	1.1
+@@ -0,0 +1,39 @@
++/*
++ * Imakefile
++ *
++ * Author: Marc Unangst
++ */
++/*
++ * Copyright (c) of Carnegie Mellon University, 1999.
++ *
++ * Permission to reproduce, use, and prepare derivative works of
++ * this software for internal use is granted provided the copyright
++ * and "No Warranty" statements are included with all reproductions
++ * and derivative works. This software may also be redistributed
++ * without charge provided that the copyright and "No Warranty"
++ * statements are included in all redistributions.
++ *
++ * NO WARRANTY. THIS SOFTWARE IS FURNISHED ON AN "AS IS" BASIS.
++ * CARNEGIE MELLON UNIVERSITY MAKES NO WARRANTIES OF ANY KIND, EITHER
++ * EXPRESSED OR IMPLIED AS TO THE MATTER INCLUDING, BUT NOT LIMITED
++ * TO: WARRANTY OF FITNESS FOR PURPOSE OR MERCHANTABILITY, EXCLUSIVITY
++ * OF RESULTS OR RESULTS OBTAINED FROM USE OF THIS SOFTWARE. CARNEGIE
++ * MELLON UNIVERSITY DOES NOT MAKE ANY WARRANTY OF ANY KIND WITH RESPECT
++ * TO FREEDOM FROM PATENT, TRADEMARK, OR COPYRIGHT INFRINGEMENT.
++ */
++
++#include "NASD.tmpl"
++
++FILES = \
++	nasd_netbsd_general_simple.h \
++	nasd_netbsd_platform.h \
++	nasd_netbsd_sys.h
++
++NDEST = $(NASD_DESTINC)/nasd/netbsd
++
++InstallMultiple($(FILES),$(NDEST))
++
++/*
++ * Don't put anything after this
++ */
++#include "NASD.trailer"

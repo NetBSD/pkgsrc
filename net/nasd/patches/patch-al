@@ -1,0 +1,56 @@
+$NetBSD: patch-al,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+
+Index: config/NASD.tmpl
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/config/NASD.tmpl,v
+retrieving revision 1.1.1.1
+retrieving revision 1.3
+diff -u -r1.1.1.1 -r1.3
+--- config/NASD.tmpl	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ config/NASD.tmpl	21 Mar 2005 22:36:25 -0000	1.3
+@@ -167,7 +167,7 @@
+  */
+ #define NASD_MakeSubdirs(_dirs_) NamedTargetSubdirs(all,_dirs_,"Making",PassCDebugFlags,all)
+ #else /* AIXArchitecture && (NASD_OSMajorVersion == 4) */
+-#if defined(LinuxArchitecture) || defined(FreeBSDArchitecture)
++#if defined(LinuxArchitecture) || defined(FreeBSDArchitecture) || defined(NetBSDArchitecture)
+ /*
+  * The XFree86 NamedTargetSubdirs macro was written by
+  * some weeder who just didn't grasp the beauty of
+@@ -188,7 +188,7 @@
+ 			exit $$status; \ @@\
+ 		fi \ @@\
+ 	done
+-#endif /* LinuxArchitecture || FreeBSDArchitecture */
++#endif /* LinuxArchitecture || FreeBSDArchitecture || NetBSDArchitecture */
+ /*
+  * Everything else
+  */
+@@ -407,7 +407,7 @@
+ PULLINSYMS = -include ${NASD_KMOD_INCDIR}/nasd/nasd_linux_common_syms.ver.h
+ 
+ .c.o:
+-	$(CC) -c $(CFLAGS) $(NASD_DEFAULTCFLAGS) $(PULLINSYMS) $(NASD_LCFLAGS) $<
++	$(CC) -c $(CFLAGS) -pthread $(NASD_DEFAULTCFLAGS) $(PULLINSYMS) $(NASD_LCFLAGS) $<
+ 
+ #ifndef NASD_OverrideCOTarget
+ #define NASD_OverrideCOTarget
+@@ -432,7 +432,7 @@
+ program: objects deplibs @@\
+ 	RemoveTargetProgram($@) @@\
+ 	RemoveTargetProgram(a.out) @@\
+-	$(CC) -o a.out objects $(LDOPTIONS) locallibs $(LDLIBS) syslibs $(ARCHLIBS) $(EXTRA_LOAD_FLAGS) @@\
++	$(CC) -o a.out objects $(LDOPTIONS) locallibs $(LDLIBS) syslibs $(ARCHLIBS) -lpthread $(EXTRA_LOAD_FLAGS) @@\
+ 	$(MV) a.out $@ @@\
+ @@\
+ clean:: @@\
+@@ -821,7 +821,8 @@
+ 	NASD_SayVar(NASD_RPC_PACKAGE_DEFINES)
+ 	NASD_SayVar(NASD_CMU_PDLDEFINES)
+ 
+-#ifdef FreeBSDArchitecture
++
++#if defined(FreeBSDArchitecture) || defined(NetBSDArchitecture)
+ /* FreeBSD's make automatically looks for .depend, but gmake doesn't. */
+ #undef IncludeMakefile
+ #define IncludeMakefile(file) @@-include file

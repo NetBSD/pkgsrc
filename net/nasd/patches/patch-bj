@@ -1,0 +1,21 @@
+$NetBSD: patch-bj,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+
+Index: include/nasd/nasd_sys.h
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/include/nasd/nasd_sys.h,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- include/nasd/nasd_sys.h	21 Mar 2005 08:52:03 -0000	1.1.1.1
++++ include/nasd/nasd_sys.h	21 Mar 2005 17:07:28 -0000	1.2
+@@ -49,6 +49,10 @@
+ #include <nasd/freebsd/nasd_freebsd_sys.h>
+ #endif /* FREEBSD */
+ 
++#ifdef NETBSD
++#include <nasd/netbsd/nasd_netbsd_sys.h>
++#endif /* NETBSD */
++
+ #ifdef SOLARIS
+ #include <nasd/solaris/nasd_solaris_sys.h>
+ #endif /* SOLARIS */

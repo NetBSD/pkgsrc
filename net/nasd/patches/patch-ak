@@ -1,0 +1,49 @@
+$NetBSD: patch-ak,v 1.1.1.1 2005/05/04 08:56:49 agc Exp $
+
+Index: common/netbsd/nasd_netbsd_srv.c
+===================================================================
+RCS file: common/netbsd/nasd_netbsd_srv.c
+diff -N common/netbsd/nasd_netbsd_srv.c
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ common/netbsd/nasd_netbsd_srv.c	21 Mar 2005 08:55:38 -0000	1.1
+@@ -0,0 +1,40 @@
++/*
++ * nasd_freebsd_srv.c
++ *
++ * nasd_srv() for NetBSD
++ *
++ * Author: Marc Unangst
++ */
++/*
++ * Copyright (c) of Carnegie Mellon University, 1998,1999.
++ *
++ * Permission to reproduce, use, and prepare derivative works of
++ * this software for internal use is granted provided the copyright
++ * and "No Warranty" statements are included with all reproductions
++ * and derivative works. This software may also be redistributed
++ * without charge provided that the copyright and "No Warranty"
++ * statements are included in all redistributions.
++ *
++ * NO WARRANTY. THIS SOFTWARE IS FURNISHED ON AN "AS IS" BASIS.
++ * CARNEGIE MELLON UNIVERSITY MAKES NO WARRANTIES OF ANY KIND, EITHER
++ * EXPRESSED OR IMPLIED AS TO THE MATTER INCLUDING, BUT NOT LIMITED
++ * TO: WARRANTY OF FITNESS FOR PURPOSE OR MERCHANTABILITY, EXCLUSIVITY
++ * OF RESULTS OR RESULTS OBTAINED FROM USE OF THIS SOFTWARE. CARNEGIE
++ * MELLON UNIVERSITY DOES NOT MAKE ANY WARRANTY OF ANY KIND WITH RESPECT
++ * TO FREEDOM FROM PATENT, TRADEMARK, OR COPYRIGHT INFRINGEMENT.
++ */
++
++
++#include <nasd/nasd_options.h>
++#include <nasd/nasd_sys.h>
++
++int
++nasd_srv(int cmd, void *arg)
++{
++  return ENOSYS;
++}
++
++/* Local Variables:  */
++/* indent-tabs-mode: nil */
++/* tab-width: 2 */
++/* End: */
