@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1625 2005/05/03 21:30:42 kristerw Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1626 2005/05/04 04:23:34 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -5011,7 +5011,7 @@ _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_STRIP_MANZ}
 # Deal with MANINSTALL and man entries
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_MANINSTALL}
 # Deal with "imake installed" catman pages
-.if defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake) && ${_PREFORMATTED_MAN_DIR} == "man"
+.if (defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake)) && ${_PREFORMATTED_MAN_DIR} == "man"
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_IMAKE_MAN}
 .endif
 # Add '.gz' suffixes on man entries if needed
