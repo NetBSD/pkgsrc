@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/02/09 13:37:17 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/05/04 16:27:08 drochner Exp $
 bin/gst-complete
 bin/gst-complete-0.8
 bin/gst-compprep
@@ -36,6 +36,7 @@ include/gstreamer-0.8/gst/gstatomic.h
 include/gstreamer-0.8/gst/gstbin.h
 include/gstreamer-0.8/gst/gstbuffer.h
 include/gstreamer-0.8/gst/gstcaps.h
+include/gstreamer-0.8/gst/gstchildproxy.h
 include/gstreamer-0.8/gst/gstclock.h
 include/gstreamer-0.8/gst/gstcompat.h
 include/gstreamer-0.8/gst/gstconfig.h
@@ -196,6 +197,7 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gstreamer-0.8.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gstreamer-0.8.mo
