@@ -1,60 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/10 06:40:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/04 17:00:06 drochner Exp $
 bin/showimg
+lib/kde3/libshowimgpart.la
+lib/libshowimgcore.la
 man/man1/showimg.1
-share/doc/kde/HTML/da/showimg/but-back.png
-share/doc/kde/HTML/da/showimg/but-copy.png
-share/doc/kde/HTML/da/showimg/but-cut.png
-share/doc/kde/HTML/da/showimg/but-forward.png
-share/doc/kde/HTML/da/showimg/but-fullscreen.png
-share/doc/kde/HTML/da/showimg/but-go_up.png
-share/doc/kde/HTML/da/showimg/but-home.png
-share/doc/kde/HTML/da/showimg/but-horizontal_flip.png
-share/doc/kde/HTML/da/showimg/but-next_image.png
-share/doc/kde/HTML/da/showimg/but-original_size.png
-share/doc/kde/HTML/da/showimg/but-paste.png
-share/doc/kde/HTML/da/showimg/but-previous_image.png
-share/doc/kde/HTML/da/showimg/but-refresh.png
-share/doc/kde/HTML/da/showimg/but-rotate_left.png
-share/doc/kde/HTML/da/showimg/but-rotate_right.png
-share/doc/kde/HTML/da/showimg/but-slide_show.png
-share/doc/kde/HTML/da/showimg/but-stop.png
-share/doc/kde/HTML/da/showimg/but-toggle_thumbnails.png
-share/doc/kde/HTML/da/showimg/but-vertical_flip.png
-share/doc/kde/HTML/da/showimg/but-zoom_in.png
-share/doc/kde/HTML/da/showimg/but-zoom_out.png
-share/doc/kde/HTML/da/showimg/but-zoom_to_fit.png
 share/doc/kde/HTML/da/showimg/common
-share/doc/kde/HTML/da/showimg/comparison.png
 share/doc/kde/HTML/da/showimg/index.cache.bz2
 share/doc/kde/HTML/da/showimg/index.docbook
-share/doc/kde/HTML/da/showimg/main-window.png
-share/doc/kde/HTML/de/showimg/but-back.png
-share/doc/kde/HTML/de/showimg/but-copy.png
-share/doc/kde/HTML/de/showimg/but-cut.png
-share/doc/kde/HTML/de/showimg/but-forward.png
-share/doc/kde/HTML/de/showimg/but-fullscreen.png
-share/doc/kde/HTML/de/showimg/but-go_up.png
-share/doc/kde/HTML/de/showimg/but-home.png
-share/doc/kde/HTML/de/showimg/but-horizontal_flip.png
-share/doc/kde/HTML/de/showimg/but-next_image.png
-share/doc/kde/HTML/de/showimg/but-original_size.png
-share/doc/kde/HTML/de/showimg/but-paste.png
-share/doc/kde/HTML/de/showimg/but-previous_image.png
-share/doc/kde/HTML/de/showimg/but-refresh.png
-share/doc/kde/HTML/de/showimg/but-rotate_left.png
-share/doc/kde/HTML/de/showimg/but-rotate_right.png
-share/doc/kde/HTML/de/showimg/but-slide_show.png
-share/doc/kde/HTML/de/showimg/but-stop.png
-share/doc/kde/HTML/de/showimg/but-toggle_thumbnails.png
-share/doc/kde/HTML/de/showimg/but-vertical_flip.png
-share/doc/kde/HTML/de/showimg/but-zoom_in.png
-share/doc/kde/HTML/de/showimg/but-zoom_out.png
-share/doc/kde/HTML/de/showimg/but-zoom_to_fit.png
-share/doc/kde/HTML/de/showimg/common
-share/doc/kde/HTML/de/showimg/comparison.png
-share/doc/kde/HTML/de/showimg/index.cache.bz2
-share/doc/kde/HTML/de/showimg/index.docbook
-share/doc/kde/HTML/de/showimg/main-window.png
 share/doc/kde/HTML/en/showimg/but-back.png
 share/doc/kde/HTML/en/showimg/but-copy.png
 share/doc/kde/HTML/en/showimg/but-cut.png
@@ -62,18 +13,32 @@ share/doc/kde/HTML/en/showimg/but-forward.png
 share/doc/kde/HTML/en/showimg/but-fullscreen.png
 share/doc/kde/HTML/en/showimg/but-go_up.png
 share/doc/kde/HTML/en/showimg/but-home.png
+share/doc/kde/HTML/en/showimg/but-horiz-flip.png
 share/doc/kde/HTML/en/showimg/but-horizontal_flip.png
+share/doc/kde/HTML/en/showimg/but-next-image.png
 share/doc/kde/HTML/en/showimg/but-next_image.png
 share/doc/kde/HTML/en/showimg/but-original_size.png
 share/doc/kde/HTML/en/showimg/but-paste.png
+share/doc/kde/HTML/en/showimg/but-prev-image.png
 share/doc/kde/HTML/en/showimg/but-previous_image.png
 share/doc/kde/HTML/en/showimg/but-refresh.png
+share/doc/kde/HTML/en/showimg/but-reload.png
+share/doc/kde/HTML/en/showimg/but-rotate-left.png
+share/doc/kde/HTML/en/showimg/but-rotate-right.png
 share/doc/kde/HTML/en/showimg/but-rotate_left.png
 share/doc/kde/HTML/en/showimg/but-rotate_right.png
+share/doc/kde/HTML/en/showimg/but-slide-show.png
 share/doc/kde/HTML/en/showimg/but-slide_show.png
+share/doc/kde/HTML/en/showimg/but-stop-thumbs.png
 share/doc/kde/HTML/en/showimg/but-stop.png
+share/doc/kde/HTML/en/showimg/but-toggle-thumbs.png
 share/doc/kde/HTML/en/showimg/but-toggle_thumbnails.png
+share/doc/kde/HTML/en/showimg/but-vert-flip.png
 share/doc/kde/HTML/en/showimg/but-vertical_flip.png
+share/doc/kde/HTML/en/showimg/but-zoom-fit-screen.png
+share/doc/kde/HTML/en/showimg/but-zoom-in.png
+share/doc/kde/HTML/en/showimg/but-zoom-original.png
+share/doc/kde/HTML/en/showimg/but-zoom-out.png
 share/doc/kde/HTML/en/showimg/but-zoom_in.png
 share/doc/kde/HTML/en/showimg/but-zoom_out.png
 share/doc/kde/HTML/en/showimg/but-zoom_to_fit.png
@@ -82,141 +47,24 @@ share/doc/kde/HTML/en/showimg/comparison.png
 share/doc/kde/HTML/en/showimg/index.cache.bz2
 share/doc/kde/HTML/en/showimg/index.docbook
 share/doc/kde/HTML/en/showimg/main-window.png
-share/doc/kde/HTML/es/showimg/but-back.png
-share/doc/kde/HTML/es/showimg/but-copy.png
-share/doc/kde/HTML/es/showimg/but-cut.png
-share/doc/kde/HTML/es/showimg/but-forward.png
-share/doc/kde/HTML/es/showimg/but-fullscreen.png
-share/doc/kde/HTML/es/showimg/but-go_up.png
-share/doc/kde/HTML/es/showimg/but-home.png
-share/doc/kde/HTML/es/showimg/but-horizontal_flip.png
-share/doc/kde/HTML/es/showimg/but-next_image.png
-share/doc/kde/HTML/es/showimg/but-original_size.png
-share/doc/kde/HTML/es/showimg/but-paste.png
-share/doc/kde/HTML/es/showimg/but-previous_image.png
-share/doc/kde/HTML/es/showimg/but-refresh.png
-share/doc/kde/HTML/es/showimg/but-rotate_left.png
-share/doc/kde/HTML/es/showimg/but-rotate_right.png
-share/doc/kde/HTML/es/showimg/but-slide_show.png
-share/doc/kde/HTML/es/showimg/but-stop.png
-share/doc/kde/HTML/es/showimg/but-toggle_thumbnails.png
-share/doc/kde/HTML/es/showimg/but-vertical_flip.png
-share/doc/kde/HTML/es/showimg/but-zoom_in.png
-share/doc/kde/HTML/es/showimg/but-zoom_out.png
-share/doc/kde/HTML/es/showimg/but-zoom_to_fit.png
 share/doc/kde/HTML/es/showimg/common
-share/doc/kde/HTML/es/showimg/comparison.png
 share/doc/kde/HTML/es/showimg/index.cache.bz2
 share/doc/kde/HTML/es/showimg/index.docbook
-share/doc/kde/HTML/es/showimg/main-window.png
-share/doc/kde/HTML/et/showimg/but-back.png
-share/doc/kde/HTML/et/showimg/but-copy.png
-share/doc/kde/HTML/et/showimg/but-cut.png
-share/doc/kde/HTML/et/showimg/but-forward.png
-share/doc/kde/HTML/et/showimg/but-fullscreen.png
-share/doc/kde/HTML/et/showimg/but-go_up.png
-share/doc/kde/HTML/et/showimg/but-home.png
-share/doc/kde/HTML/et/showimg/but-horizontal_flip.png
-share/doc/kde/HTML/et/showimg/but-next_image.png
-share/doc/kde/HTML/et/showimg/but-original_size.png
-share/doc/kde/HTML/et/showimg/but-paste.png
-share/doc/kde/HTML/et/showimg/but-previous_image.png
-share/doc/kde/HTML/et/showimg/but-refresh.png
-share/doc/kde/HTML/et/showimg/but-rotate_left.png
-share/doc/kde/HTML/et/showimg/but-rotate_right.png
-share/doc/kde/HTML/et/showimg/but-slide_show.png
-share/doc/kde/HTML/et/showimg/but-stop.png
-share/doc/kde/HTML/et/showimg/but-toggle_thumbnails.png
-share/doc/kde/HTML/et/showimg/but-vertical_flip.png
-share/doc/kde/HTML/et/showimg/but-zoom_in.png
-share/doc/kde/HTML/et/showimg/but-zoom_out.png
-share/doc/kde/HTML/et/showimg/but-zoom_to_fit.png
 share/doc/kde/HTML/et/showimg/common
-share/doc/kde/HTML/et/showimg/comparison.png
 share/doc/kde/HTML/et/showimg/index.cache.bz2
 share/doc/kde/HTML/et/showimg/index.docbook
-share/doc/kde/HTML/et/showimg/main-window.png
-share/doc/kde/HTML/fr/showimg/but-back.png
-share/doc/kde/HTML/fr/showimg/but-copy.png
-share/doc/kde/HTML/fr/showimg/but-cut.png
-share/doc/kde/HTML/fr/showimg/but-forward.png
-share/doc/kde/HTML/fr/showimg/but-fullscreen.png
-share/doc/kde/HTML/fr/showimg/but-go_up.png
-share/doc/kde/HTML/fr/showimg/but-home.png
-share/doc/kde/HTML/fr/showimg/but-horizontal_flip.png
-share/doc/kde/HTML/fr/showimg/but-next_image.png
-share/doc/kde/HTML/fr/showimg/but-original_size.png
-share/doc/kde/HTML/fr/showimg/but-paste.png
-share/doc/kde/HTML/fr/showimg/but-previous_image.png
-share/doc/kde/HTML/fr/showimg/but-refresh.png
-share/doc/kde/HTML/fr/showimg/but-rotate_left.png
-share/doc/kde/HTML/fr/showimg/but-rotate_right.png
-share/doc/kde/HTML/fr/showimg/but-slide_show.png
-share/doc/kde/HTML/fr/showimg/but-stop.png
-share/doc/kde/HTML/fr/showimg/but-toggle_thumbnails.png
-share/doc/kde/HTML/fr/showimg/but-vertical_flip.png
-share/doc/kde/HTML/fr/showimg/but-zoom_in.png
-share/doc/kde/HTML/fr/showimg/but-zoom_out.png
-share/doc/kde/HTML/fr/showimg/but-zoom_to_fit.png
 share/doc/kde/HTML/fr/showimg/common
-share/doc/kde/HTML/fr/showimg/comparison.png
 share/doc/kde/HTML/fr/showimg/index.cache.bz2
 share/doc/kde/HTML/fr/showimg/index.docbook
-share/doc/kde/HTML/fr/showimg/main-window.png
-share/doc/kde/HTML/it/showimg/but-back.png
-share/doc/kde/HTML/it/showimg/but-copy.png
-share/doc/kde/HTML/it/showimg/but-cut.png
-share/doc/kde/HTML/it/showimg/but-forward.png
-share/doc/kde/HTML/it/showimg/but-fullscreen.png
-share/doc/kde/HTML/it/showimg/but-go_up.png
-share/doc/kde/HTML/it/showimg/but-home.png
-share/doc/kde/HTML/it/showimg/but-horizontal_flip.png
-share/doc/kde/HTML/it/showimg/but-next_image.png
-share/doc/kde/HTML/it/showimg/but-original_size.png
-share/doc/kde/HTML/it/showimg/but-paste.png
-share/doc/kde/HTML/it/showimg/but-previous_image.png
-share/doc/kde/HTML/it/showimg/but-refresh.png
-share/doc/kde/HTML/it/showimg/but-rotate_left.png
-share/doc/kde/HTML/it/showimg/but-rotate_right.png
-share/doc/kde/HTML/it/showimg/but-slide_show.png
-share/doc/kde/HTML/it/showimg/but-stop.png
-share/doc/kde/HTML/it/showimg/but-toggle_thumbnails.png
-share/doc/kde/HTML/it/showimg/but-vertical_flip.png
-share/doc/kde/HTML/it/showimg/but-zoom_in.png
-share/doc/kde/HTML/it/showimg/but-zoom_out.png
-share/doc/kde/HTML/it/showimg/but-zoom_to_fit.png
 share/doc/kde/HTML/it/showimg/common
-share/doc/kde/HTML/it/showimg/comparison.png
 share/doc/kde/HTML/it/showimg/index.cache.bz2
 share/doc/kde/HTML/it/showimg/index.docbook
-share/doc/kde/HTML/it/showimg/main-window.png
-share/doc/kde/HTML/sv/showimg/but-back.png
-share/doc/kde/HTML/sv/showimg/but-copy.png
-share/doc/kde/HTML/sv/showimg/but-cut.png
-share/doc/kde/HTML/sv/showimg/but-forward.png
-share/doc/kde/HTML/sv/showimg/but-fullscreen.png
-share/doc/kde/HTML/sv/showimg/but-go_up.png
-share/doc/kde/HTML/sv/showimg/but-home.png
-share/doc/kde/HTML/sv/showimg/but-horizontal_flip.png
-share/doc/kde/HTML/sv/showimg/but-next_image.png
-share/doc/kde/HTML/sv/showimg/but-original_size.png
-share/doc/kde/HTML/sv/showimg/but-paste.png
-share/doc/kde/HTML/sv/showimg/but-previous_image.png
-share/doc/kde/HTML/sv/showimg/but-refresh.png
-share/doc/kde/HTML/sv/showimg/but-rotate_left.png
-share/doc/kde/HTML/sv/showimg/but-rotate_right.png
-share/doc/kde/HTML/sv/showimg/but-slide_show.png
-share/doc/kde/HTML/sv/showimg/but-stop.png
-share/doc/kde/HTML/sv/showimg/but-toggle_thumbnails.png
-share/doc/kde/HTML/sv/showimg/but-vertical_flip.png
-share/doc/kde/HTML/sv/showimg/but-zoom_in.png
-share/doc/kde/HTML/sv/showimg/but-zoom_out.png
-share/doc/kde/HTML/sv/showimg/but-zoom_to_fit.png
+share/doc/kde/HTML/pt/showimg/common
+share/doc/kde/HTML/pt/showimg/index.cache.bz2
+share/doc/kde/HTML/pt/showimg/index.docbook
 share/doc/kde/HTML/sv/showimg/common
-share/doc/kde/HTML/sv/showimg/comparison.png
 share/doc/kde/HTML/sv/showimg/index.cache.bz2
 share/doc/kde/HTML/sv/showimg/index.docbook
-share/doc/kde/HTML/sv/showimg/main-window.png
 share/kde/applnk/Graphics/showimg.desktop
 share/kde/apps/konqueror/servicemenus/konqshowimg.desktop
 share/kde/apps/showimg/convert2png.pl
@@ -279,6 +127,7 @@ share/kde/apps/showimg/icons/hicolor/32x32/actions/viewmag_w.png
 share/kde/apps/showimg/icons/hicolor/32x32/mimetypes/psd.png
 share/kde/apps/showimg/icons/hicolor/48x48/mimetypes/psd.png
 share/kde/apps/showimg/icons/hicolor/64x64/mimetypes/psd.png
+share/kde/apps/showimg/pics/No-Ones-Laughing-3.jpg
 share/kde/apps/showimg/pics/bgxpm.png
 share/kde/apps/showimg/pics/border.png
 share/kde/apps/showimg/pics/gradient.png
@@ -289,24 +138,31 @@ share/kde/apps/showimg/pics/layout4.png
 share/kde/apps/showimg/pics/logo.png
 share/kde/apps/showimg/showimgui.rc
 share/kde/apps/showimg/tips
+share/kde/apps/showimgpart/showimgpart.rc
 share/kde/icons/hicolor/32x32/apps/showimg.png
 share/kde/icons/hicolor/48x48/apps/showimg.png
 share/kde/icons/hicolor/64x64/apps/showimg.png
 share/kde/mimelnk/image/x-psd.desktop
 share/kde/mimelnk/image/x-sia.desktop
+share/kde/services/showimgpart.desktop
+${PKGLOCALEDIR}/locale/br/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/showimg.mo
@@ -314,6 +170,12 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/showimg.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/showimg.mo
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/mimelnk/image
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@dirrm share/kde/apps/showimgpart
 @dirrm share/kde/apps/showimg/pics
 @dirrm share/kde/apps/showimg/icons/hicolor/64x64/mimetypes
 @dirrm share/kde/apps/showimg/icons/hicolor/64x64
@@ -337,11 +199,23 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/showimg.mo
 @dirrm share/kde/apps/showimg/icons/crystalsvg
 @dirrm share/kde/apps/showimg/icons
 @dirrm share/kde/apps/showimg
+@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/applnk/Graphics
 @dirrm share/doc/kde/HTML/sv/showimg
+@comment in kde: @dirrm share/doc/kde/HTML/sv
+@dirrm share/doc/kde/HTML/pt/showimg
+@comment in kde: @dirrm share/doc/kde/HTML/pt
 @dirrm share/doc/kde/HTML/it/showimg
+@comment in kde: @dirrm share/doc/kde/HTML/it
 @dirrm share/doc/kde/HTML/fr/showimg
+@comment in kde: @dirrm share/doc/kde/HTML/fr
 @dirrm share/doc/kde/HTML/et/showimg
+@comment in kde: @dirrm share/doc/kde/HTML/et
 @dirrm share/doc/kde/HTML/es/showimg
+@comment in kde: @dirrm share/doc/kde/HTML/es
 @dirrm share/doc/kde/HTML/en/showimg
-@dirrm share/doc/kde/HTML/de/showimg
+@comment in kde: @dirrm share/doc/kde/HTML/en
 @dirrm share/doc/kde/HTML/da/showimg
+@comment in kde: @dirrm share/doc/kde/HTML/da
+@comment in kde: @dirrm lib/kde3
