@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10019 2005/05/04 20:08:23 reed Exp $
+$NetBSD: CHANGES,v 1.10020 2005/05/04 20:43:28 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2287,3 +2287,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libkipi to 0.1.1 [drochner 2005-05-04]
 	Updated kipi-plugins to 0.1.0beta2 [drochner 2005-05-04]
 	Added xrestop-0.3 [reed 2005-05-04]
+	Updated libarchive to 1.02.023 [xtraeme 2005-05-04]
