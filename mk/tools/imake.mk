@@ -1,4 +1,4 @@
-# $NetBSD: imake.mk,v 1.1 2005/05/02 21:10:03 jlam Exp $
+# $NetBSD: imake.mk,v 1.2 2005/05/04 06:25:59 jlam Exp $
 #
 # This Makefile fragment handles packages that need imake and xmkmf
 # to build X11-related packages.  The correct imake and xmkmf tools
@@ -60,18 +60,18 @@ TOOLS_REAL_CMD.xmkmf?=		${X11PREFIX}/bin/pkgxmkmf
 #
 .    if defined(X11_TYPE) && (${X11_TYPE} == "XFree86")
 TOOLS_DEPENDS.imake?=		imake>=4.4.0:../../x11/imake
-TOOLS_REAL_CMD.imake?=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/imake
-TOOLS_REAL_CMD.xmkmf?=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/xmkmf
+TOOLS_REAL_CMD.imake=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/imake
+TOOLS_REAL_CMD.xmkmf=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/xmkmf
 .    elif defined(X11_TYPE) && (${X11_TYPE} == "xorg")
 TOOLS_DEPENDS.imake?=		xorg-imake>=6.8:../../x11/xorg-imake
-TOOLS_REAL_CMD.imake?=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/imake
-TOOLS_REAL_CMD.xmkmf?=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/xmkmf
+TOOLS_REAL_CMD.imake=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/imake
+TOOLS_REAL_CMD.xmkmf=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/xmkmf
 .    else # ${X11_TYPE} == "native"
-TOOLS_REAL_CMD.imake?=		${X11BASE}/bin/imake
-TOOLS_REAL_CMD.xmkmf?=		${X11BASE}/bin/xmkmf
+TOOLS_REAL_CMD.imake=		${X11BASE}/bin/imake
+TOOLS_REAL_CMD.xmkmf=		${X11BASE}/bin/xmkmf
 .    endif
-TOOLS_ARGS.imake?=		${IMAKEOPTS}
-TOOLS_ARGS.xmkmf?=		${XMKMF_FLAGS}
+TOOLS_ARGS.imake=		${IMAKEOPTS}
+TOOLS_ARGS.xmkmf=		${XMKMF_FLAGS}
 #
 # Add any extra tools that may be required when using imake, e.g. gmake.
 #
