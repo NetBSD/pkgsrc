@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2003/08/13 03:05:49 simonb Exp $
+$NetBSD: patch-aa,v 1.13 2005/05/04 12:35:54 simonb Exp $
 
---- scripts/wrapzap.orig	Sun Jul 20 21:38:48 2003
+--- scripts/wrapzap.orig	2005-04-07 21:41:33.000000000 +1000
 +++ scripts/wrapzap
-@@ -15,39 +15,9 @@
+@@ -15,40 +15,9 @@
  #	- Cameron Simpson <cs@zip.com.au> 21apr2000
  #
  
@@ -23,6 +23,7 @@ $NetBSD: patch-aa,v 1.12 2003/08/13 03:05:49 simonb Exp $
 -ZAP_MATCH=				# pathname of extra pattern file
 -					# for patterns to use instead of the
 -					# inbuilt pattern list
+-ZAP_NO_CHANGE=				# set to "NULL" is your proxy is Apache2 instead of Squid
 -
 -STUBURL_AD=$ZAP_BASE/ad.gif
 -STUBURL_ADSSL=$ZAP_BASE_SSL/ad.gif
@@ -43,5 +44,5 @@ $NetBSD: patch-aa,v 1.12 2003/08/13 03:05:49 simonb Exp $
 +   
 +. /etc/adzap.conf
  
- export ZAP_MODE ZAP_BASE ZAP_BASE_SSL ZAP_PREMATCH ZAP_POSTMATCH ZAP_MATCH
+ export ZAP_MODE ZAP_BASE ZAP_BASE_SSL ZAP_PREMATCH ZAP_POSTMATCH ZAP_MATCH ZAP_NO_CHANGE
  export STUBURL_AD STUBURL_ADSSL STUBURL_ADJS STUBURL_ADHTML STUBURL_ADMP3 \
