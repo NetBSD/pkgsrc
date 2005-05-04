@@ -1,0 +1,67 @@
+$NetBSD: patch-az,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+
+Index: include/nasd/nasd_cache.h
+===================================================================
+RCS file: /usr/cvsroot/nasd/nasd-1.3/include/nasd/nasd_cache.h,v
+retrieving revision 1.1.1.1
+retrieving revision 1.3
+diff -u -r1.1.1.1 -r1.3
+--- include/nasd/nasd_cache.h	21 Mar 2005 08:52:02 -0000	1.1.1.1
++++ include/nasd/nasd_cache.h	21 Mar 2005 17:12:47 -0000	1.3
+@@ -523,40 +523,40 @@
+  * head->prev is oldest entry
+  */
+ 
+-#define NASD_ODC_Q_INS_NOLOCK(_q_,_ent_,_list_) { \
+-  (_ent_)->##_list_##next = (_q_)->head.##_list_##next; \
+-  (_ent_)->##_list_##prev = &((_q_)->head); \
+-  (_ent_)->##_list_##next->##_list_##prev = (_ent_); \
+-  (_ent_)->##_list_##prev->##_list_##next = (_ent_); \
++#define NASD_ODC_Q_INS_NOLOCK(_q_,_ent_,_nxt_,_prv_) { \
++  (_ent_)->_nxt_ = (_q_)->head._nxt_; \
++  (_ent_)->_prv_ = &((_q_)->head); \
++  (_ent_)->_nxt_->_prv_ = (_ent_); \
++  (_ent_)->_prv_->_nxt_ = (_ent_); \
+   (_q_)->size++; \
+ }
+ 
+-#define NASD_ODC_Q_INS(_q_,_ent_,_list_) { \
++#define NASD_ODC_Q_INS(_q_,_ent_,_nxt_,_prv_) { \
+   NASD_ODC_Q_LOCK(_q_); \
+-  NASD_ODC_Q_INS_NOLOCK(_q_,_ent_,_list_); \
++  NASD_ODC_Q_INS_NOLOCK(_q_,_ent_,_nxt_,_prv_); \
+   NASD_ODC_Q_UNLOCK(_q_); \
+ }
+ 
+-#define NASD_ODC_Q_DEQ_NOLOCK(_ent_,_list_) { \
+-  (_ent_)->##_list_##next->##_list_##prev = (_ent_)->##_list_##prev; \
+-  (_ent_)->##_list_##prev->##_list_##next = (_ent_)->##_list_##next; \
+-  (_ent_)->##_list_##prev = (_ent_)->##_list_##next = NULL; \
++#define NASD_ODC_Q_DEQ_NOLOCK(_ent_,_nxt_,_prv_) { \
++  (_ent_)->_nxt_->_prv_ = (_ent_)->_prv_; \
++  (_ent_)->_prv_->_nxt_ = (_ent_)->_nxt_; \
++  (_ent_)->_prv_ = (_ent_)->_nxt_ = NULL; \
+ }
+ 
+ /*
+  * The tail (oldest) entry in queue is assigned to _ent_
+  * and removed from the queue
+  */
+-#define NASD_ODC_Q_DEQ_TAIL_NOLOCK(_q_,_ent_,_list_) { \
+-  _ent_ = (_q_)->head.##_list_##prev; \
++#define NASD_ODC_Q_DEQ_TAIL_NOLOCK(_q_,_ent_,_nxt_,_prv_) { \
++  _ent_ = (_q_)->head._prv_; \
+   NASD_ASSERT((_ent_) != (&((_q_)->head))); \
+-  NASD_ODC_Q_DEQ_NOLOCK(_ent_,_list_); \
++  NASD_ODC_Q_DEQ_NOLOCK(_ent_,_nxt_,_prv_); \
+   (_q_)->size--; \
+ }
+ 
+-#define NASD_ODC_Q_DEQ_TAIL(_q_,_ent_,_list_) { \
++#define NASD_ODC_Q_DEQ_TAIL(_q_,_ent_,_nxt_,_prv_) { \
+   NASD_ODC_Q_LOCK(_q_); \
+-  NASD_ODC_Q_DEQ_TAIL_NOLOCK(_q_,_ent_,_list_); \
++  NASD_ODC_Q_DEQ_TAIL_NOLOCK(_q_,_ent_,_nxt_,_prv_); \
+   NASD_ODC_Q_UNLOCK(_q_); \
+ }
+ 
