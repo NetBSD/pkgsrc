@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2004/10/28 14:22:48 jmmv Exp $
+$NetBSD: patch-aa,v 1.9 2005/05/04 16:22:31 drochner Exp $
 
---- configure.orig	2004-10-06 18:15:54.000000000 +0200
+--- configure.orig	2005-03-07 17:41:29.000000000 +0100
 +++ configure
-@@ -28571,6 +28571,10 @@ else
+@@ -27852,6 +27852,10 @@ else
  fi
  
  
@@ -13,3 +13,12 @@ $NetBSD: patch-aa,v 1.8 2004/10/28 14:22:48 jmmv Exp $
  
  echo "$as_me: ***" >&6
  echo "$as_me: *** checking plugin:  ***" >&6
+@@ -41970,7 +41974,7 @@ fi
+     DVDNAV_CFLAGS=
+     HAVE_DVDNAV=no
+   else
+-    if dvdnav-config --plugin-libs  &> /dev/null; then
++    if dvdnav-config --plugin-libs  > /dev/null 2>&1; then
+       DVDNAV_LIBS=`dvdnav-config --plugin-libs `
+     else
+       DVDNAV_LIBS=`dvdnav-config --libs `
