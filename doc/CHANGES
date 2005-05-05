@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10030 2005/05/05 20:07:23 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10031 2005/05/05 20:14:35 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2300,3 +2300,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ja-FreeWnn-server to 1.10nb2 [kei 2005-05-05]
 	Updated ja-FreeWnn-server-bin to 1.10nb4 [kei 2005-05-05]
 	Added x11rec-0.3 [xtraeme 2005-05-05]
+	Updated nasm to 0.98.39nb1 [adrianp 2005-05-05]
