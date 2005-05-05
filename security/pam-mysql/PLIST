@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/05 20:16:42 xtraeme Exp $
+lib/pam_mysql.so
+share/doc/pam-mysql/CREDITS
+share/doc/pam-mysql/Changelog
+share/doc/pam-mysql/Readme
+@dirrm share/doc/pam-mysql
