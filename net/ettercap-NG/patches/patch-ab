@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/05/05 19:34:44 xtraeme Exp $
+
+--- include/ec_resolv.h.orig	2004-07-24 12:43:21.000000000 +0200
++++ include/ec_resolv.h
+@@ -8,7 +8,7 @@
+ 
+ #ifdef HAVE_ARPA_NAMESER_H
+    #include <arpa/nameser.h>
+-   #ifndef OS_BSD_OPEN
++   #if (!defined OS_BSD_OPEN && !defined OS_BSD_NET) || defined __APPLE__ 
+       #include <arpa/nameser_compat.h>
+    #endif
+    #include <resolv.h>

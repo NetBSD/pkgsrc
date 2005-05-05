@@ -1,0 +1,101 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/05/05 19:34:44 xtraeme Exp $
+
+--- src/ec_threads.c.orig	2004-11-05 15:12:01.000000000 +0100
++++ src/ec_threads.c
+@@ -48,6 +48,10 @@ static pthread_mutex_t init_mtx = PTHREA
+    #define BROKEN_PTHREAD_JOIN
+ #endif
+ 
++#ifdef OS_BSD_NET
++   int init_lock_helper;
++#endif
++
+ /* protos... */
+ 
+ char * ec_thread_getname(pthread_t id);
+@@ -190,6 +194,39 @@ pthread_t ec_thread_new(char *name, char
+    pthread_t id;
+ 
+    DEBUG_MSG("ec_thread_new -- %s", name);
++   
++#ifdef OS_BSD_NET
++   /* 
++    * Since unlocking a mutex from a thread other than the locking
++    * is a NO-NO, use a helper lockflag. The new thread will set this
++    * to "1" when finished.
++    */
++   INIT_LOCK;
++   init_lock_helper = 0;
++   INIT_UNLOCK;   
++
++   if (pthread_create(&id, NULL, function, args) != 0)
++      ERROR_MSG("not enough resources to create a new thread in this process");
++
++   ec_thread_register(id, name, desc);
++
++   DEBUG_MSG("ec_thread_new -- %lu created ", PTHREAD_ID(id));
++
++   /* The new thread will set the variable to "1" */
++   for (;;) {
++      INIT_LOCK;
++	  
++      if (init_lock_helper == 1) {
++         INIT_UNLOCK;
++         break;
++      }
++	  
++      INIT_UNLOCK;
++	   
++      /* Wait for next term */
++      sched_yield();
++   }
++#else
+ 
+    /* 
+     * lock the mutex to syncronize with the new thread.
+@@ -209,6 +246,7 @@ pthread_t ec_thread_new(char *name, char
+    /* the new thread will unlock this */
+    INIT_LOCK; 
+    INIT_UNLOCK;
++#endif
+    
+    return id;
+ }
+@@ -219,6 +257,9 @@ pthread_t ec_thread_new(char *name, char
+  */
+ void ec_thread_init(void)
+ {
++#ifdef OS_BSD_NET
++   INIT_LOCK; 
++
+    pthread_t id = pthread_self(); 
+    
+    DEBUG_MSG("ec_thread_init -- %lu", PTHREAD_ID(id));
+@@ -231,9 +272,27 @@ void ec_thread_init(void)
+    pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
+ 
+    /* sync with the creator */ 
++   init_lock_helper = 1;
+    INIT_UNLOCK;
+    
+    DEBUG_MSG("ec_thread_init -- (%lu) ready and syncronized",  PTHREAD_ID(id));
++#else
++   pthread_t id = pthread_self(); 
++   
++   DEBUG_MSG("ec_thread_init -- %lu", PTHREAD_ID(id));
++   
++   /* 
++    * allow a thread to be cancelled as soon as the
++    * cancellation  request  is received
++    */
++   pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
++   pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
++
++   /* sync with the creator */ 
++   INIT_UNLOCK;
++   
++   DEBUG_MSG("ec_thread_init -- (%lu) ready and syncronized",  PTHREAD_ID(id));
++#endif
+ }
+ 
+ 
