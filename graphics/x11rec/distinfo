@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/05 20:03:55 xtraeme Exp $
+
+SHA1 (ruby/x11rec-0.3.tar.gz) = c8f9d5ac9f80424c59adc3eba9fc333d90665e25
+RMD160 (ruby/x11rec-0.3.tar.gz) = f942af6462cda842dc96089680f4a1a10ddaa255
+Size (ruby/x11rec-0.3.tar.gz) = 3758 bytes
+SHA1 (patch-aa) = 4ac6fbb5613ed346e8bae054c8638fc13f718a1f
