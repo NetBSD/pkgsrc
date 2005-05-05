@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/18 23:47:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/05/05 19:37:22 kei Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 JA_FREEWNN_LIB_BUILDLINK3_MK:=	${JA_FREEWNN_LIB_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nja-FreeWnn-lib}
 BUILDLINK_PACKAGES+=	ja-FreeWnn-lib
 
 .if !empty(JA_FREEWNN_LIB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.ja-FreeWnn-lib+=	ja-FreeWnn-lib>=1.10
+BUILDLINK_DEPENDS.ja-FreeWnn-lib+=	ja-FreeWnn-lib>=1.10nb3
 BUILDLINK_PKGSRCDIR.ja-FreeWnn-lib?=	../../inputmethod/ja-freewnn-lib
 BUILDLINK_DEPMETHOD.ja-freewnn?=	build
 .endif	# JA_FREEWNN_LIB_BUILDLINK3_MK

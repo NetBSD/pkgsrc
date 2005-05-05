@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:33:59 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/05/05 19:37:22 kei Exp $
 include/wnn/commonhd.h
 include/wnn/config.h
 include/wnn/cplib.h
@@ -168,7 +168,6 @@ man/ja_JP.EUC/man3/romkan_getc.3
 man/ja_JP.EUC/man3/romkan_init.3
 man/ja_JP.EUC/man3/romkan_next.3
 man/ja_JP.EUC/man3/romkan_ungetc.3
-share/examples/rc.d/ja_freewnn
 share/wnn/cvt_key_empty
 share/wnn/cvt_key_tbl
 share/wnn/cvt_key_tbl.ST
