@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3467 2005/05/05 00:44:53 xtraeme Exp $
+$NetBSD: TODO,v 1.3468 2005/05/05 19:36:57 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -424,7 +424,6 @@ Suggested package updates
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.0
-	o ettercap-0.7.2 [wip/ettercap-NG|adrianp]
 	o exiftags-1.00
 	o exim-4.50
 	o exmh-2.7.2
