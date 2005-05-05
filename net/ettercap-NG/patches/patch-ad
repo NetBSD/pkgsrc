@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/05/05 19:34:44 xtraeme Exp $
+
+--- src/os/ec_bsd.c.orig	2004-07-13 11:35:44.000000000 +0200
++++ src/os/ec_bsd.c
+@@ -22,6 +22,11 @@
+ 
+ #include <sys/socket.h>
+ #include <sys/param.h>
++
++#ifdef OS_BSD_NET
++   #undef _SYS_QUEUE_H_
++#endif
++
+ #include <sys/sysctl.h>
+ 
+ #include <sys/ioctl.h>
