@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2004/12/03 15:15:11 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/05 05:59:56 hrs Exp $
 
-DISTNAME=		psgml-1.2.5
+DISTNAME=		psgml-1.3.2
 PKGNAME=		${DISTNAME:S/-/-mode-/}
 CATEGORIES=		textproc editors
-MASTER_SITES=		http://www.lysator.liu.se/~lenst/about_psgml/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=psgml/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.lysator.liu.se/~lenst/about_psgml/
@@ -16,8 +16,9 @@ BUILD_TARGET=	xemacs
 .endif
 
 SRCS=	psgml-api.el psgml-charent.el psgml-debug.el psgml-dtd.el	\
-	psgml-edit.el psgml-fs.el psgml-info.el psgml-lucid.el		\
-	psgml-maint.el psgml-other.el psgml-parse.el psgml.el
+	psgml-edit.el psgml-fs.el psgml-ids.el psgml-info.el 		\
+	psgml-lucid.el psgml-maint.el psgml-other.el psgml-parse.el	\
+	psgml-sysdep.el	psgml.el
 INFO_FILES=	psgml-api.info psgml.info
 
 do-install:
