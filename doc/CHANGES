@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10022 2005/05/05 03:24:45 rh Exp $
+$NetBSD: CHANGES,v 1.10023 2005/05/05 05:43:37 hrs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2290,3 +2290,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libarchive to 1.02.023 [xtraeme 2005-05-04]
 	Updated clamav to 0.84 [xtraeme 2005-05-05]
 	Updated sope to 4.4rc6.758 [rh 2005-05-05]
+	Updated docbook-website to 2.6.0 [hrs 2005-05-05]
