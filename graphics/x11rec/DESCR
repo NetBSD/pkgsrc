@@ -1,0 +1,4 @@
+x11rec is a very ad hoc X11 recorder which creates a movie.
+x11rec sequentially runs xwd to capture a sequence of window images and finally
+creates a movie file in an MNG or animated GIF format with ImageMagick and
+Gifsicle.
