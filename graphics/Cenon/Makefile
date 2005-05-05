@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/05 05:49:28 rh Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/05 05:59:17 rh Exp $
 #
 
 DISTNAME=		Cenon-3.67
@@ -13,6 +13,12 @@ COMMENT=		Vector graphics / CAD / DTP program
 WRKSRC=			${WRKDIR}/Cenon
 USE_X11=		yes
 NO_CONFIGURE=		yes
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Cenon
+.for doc in LICENSE README
+	${INSTALL_DATA} ${WRKSRC}/${doc} ${PREFIX}/share/doc/Cenon
+.endfor
 
 .include "../../x11/gnustep-back/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
