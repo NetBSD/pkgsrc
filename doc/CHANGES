@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10025 2005/05/05 05:52:36 hrs Exp $
+$NetBSD: CHANGES,v 1.10026 2005/05/05 06:01:10 hrs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2293,3 +2293,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated docbook-website to 2.6.0 [hrs 2005-05-05]
 	Added Cenon-3.67 [rh 2005-05-05]
 	Updated openjade to 1.3.2nb3 [hrs 2005-05-05]
+	Updated psgml-mode to 1.3.2 [hrs 2005-05-05]
