@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.3 2005/05/05 20:12:46 adrianp Exp $
+
+--- output/outieee.c.orig	2005-05-05 21:05:26.000000000 +0100
++++ output/outieee.c
+@@ -1120,7 +1120,7 @@ static void ieee_putascii(char *format, 
+     va_list ap;
+ 
+     va_start(ap, format);
+-    vsprintf(buffer, format, ap);
++    vsnprintf(buffer, sizeof(buffer), format, ap);
+     l = strlen(buffer);
+     for (i = 0; i < l; i++)
+         if ((buffer[i] & 0xff) > 31)
