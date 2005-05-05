@@ -1,4 +1,4 @@
-# $NetBSD: tools.Interix.mk,v 1.7 2005/05/04 06:42:43 jlam Exp $
+# $NetBSD: tools.Interix.mk,v 1.8 2005/05/05 18:47:00 jlam Exp $
 #
 # System-supplied tools for the Interix operating system.
 
@@ -43,7 +43,7 @@ TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.sort?=		/bin/sort
-TOOLS_PLATFORM.strip?=		${TOOLS_PLATFORM.true}	# XXX
+TOOLS_PLATFORM.strip?=		/bin/strip
 TOOLS_PLATFORM.tail?=		/bin/tail
 TOOLS_PLATFORM.tee?=		/bin/tee
 TOOLS_PLATFORM.test?=		/bin/test
