@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10029 2005/05/05 19:41:49 kei Exp $
+$NetBSD: CHANGES,v 1.10030 2005/05/05 20:07:23 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2299,3 +2299,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ja-FreeWnn-lib to 1.10nb3 [kei 2005-05-05]
 	Updated ja-FreeWnn-server to 1.10nb2 [kei 2005-05-05]
 	Updated ja-FreeWnn-server-bin to 1.10nb4 [kei 2005-05-05]
+	Added x11rec-0.3 [xtraeme 2005-05-05]
