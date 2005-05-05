@@ -1,0 +1,19 @@
+  Cenon is a vector graphics tool for GNUstep, OpenStep and Apple.  It is
+built upon a modular graphical core, and offers a variety of applications
+beyond desktop publishing.  It can convert, import, and export DXF,
+PostScript, DIN form ats, HPGL, Gerber, etc.
+
+Key Features:
+
+- Import of many graphic formats like PostScript (PS, EPS), DXF, Gerber,
+  HPGL, PDF, Drill Data (Excellon, Sieb & Meyer etc.), Type 1-Fonts,
+  as well as most bitmap formats.
+- Export of many formats like PostScript (PS, EPS), DXF, Gerber, HPGL
+- Vector graphics conversion in all directions
+- complete set of DTP functions like color shading, image clipping, rich
+  text and many many more.
+- Raster image to vector conversion
+- Type 1 Font Editing. Not very comfortable yet, but it works, and
+  integrates nicely into Cenon. All of the vhf engraving fonts are created
+  with Cenon.
+- Free Software
