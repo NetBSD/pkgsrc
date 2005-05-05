@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/24 03:01:15 rh Exp $
+$NetBSD: distinfo,v 1.2 2005/05/05 03:23:08 rh Exp $
 
-SHA1 (sope-4.4beta.6-voyager-r756.tar.gz) = e731f2a1dd197891f98ffccbe19186954b49826c
-RMD160 (sope-4.4beta.6-voyager-r756.tar.gz) = 0070fc2fcf41d94e0954d9e01fa12bedab73905e
-Size (sope-4.4beta.6-voyager-r756.tar.gz) = 2626822 bytes
+SHA1 (sope-4.4beta.6-voyager-r758.tar.gz) = cc045055ed946d89649d9088fa4eaaabe0816fb4
+RMD160 (sope-4.4beta.6-voyager-r758.tar.gz) = 223c8b6eff004273f0dd8fe8f2f6aa777df3f8e8
+Size (sope-4.4beta.6-voyager-r758.tar.gz) = 2626839 bytes
 SHA1 (patch-aa) = 5c0120114205b226ee81ccad896dd0ab79eefe68
 SHA1 (patch-ab) = 6bbb0f4008bcbc1c4d8fc06a12621f4bc013fbf7
