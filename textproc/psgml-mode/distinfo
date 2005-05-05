@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:48:48 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/05/05 05:59:56 hrs Exp $
 
-SHA1 (psgml-1.2.5.tar.gz) = 36b4966febf3186bdb1fe62878a6dd017fa25a02
-RMD160 (psgml-1.2.5.tar.gz) = bf856175220c4a1af3f47745e501dfab57b95c7b
-Size (psgml-1.2.5.tar.gz) = 243668 bytes
+SHA1 (psgml-1.3.2.tar.gz) = ef51464bd7db40d7baa69cd4dd49053c4c7ef4aa
+RMD160 (psgml-1.3.2.tar.gz) = fc7561259045fc15395689a3daf8eb828a0d947d
+Size (psgml-1.3.2.tar.gz) = 252394 bytes
