@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.82 2005/05/05 23:21:11 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.83 2005/05/05 23:51:35 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -173,3 +173,5 @@ Pullup ticket 479 - requested by Thomas Klausner
 security update for gnutls
 Pullup ticket 482 - requested by Adrian Portelli
 security fix for nasm
+Pullup ticket 465 - requested by Thomas Klausner
+manual pages build fix for fontconfig
