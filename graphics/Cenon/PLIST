@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/05 05:49:28 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/05 05:59:17 rh Exp $
 share/GNUstep/Local/Applications/Cenon.app/Cenon
 share/GNUstep/Local/Applications/Cenon.app/Resources/Cenon.desktop
 share/GNUstep/Local/Applications/Cenon.app/Resources/Cenon.tiff
@@ -244,6 +244,9 @@ share/GNUstep/Local/Library/Cenon/Projects/.dir.tiff
 share/GNUstep/Local/Library/Cenon/Projects/Cenon.cenon/document
 share/GNUstep/Local/Library/Cenon/Projects/Cenon.cenon/output
 share/GNUstep/Local/Library/Cenon/README
+share/doc/Cenon/LICENSE
+share/doc/Cenon/README
+@dirrm share/doc/Cenon
 @dirrm share/GNUstep/Local/Library/Cenon/Projects/Cenon.cenon
 @dirrm share/GNUstep/Local/Library/Cenon/Projects
 @dirrm share/GNUstep/Local/Library/Cenon/Devices/hpgl
