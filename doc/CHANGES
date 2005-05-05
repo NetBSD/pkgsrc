@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10027 2005/05/05 19:21:02 hrs Exp $
+$NetBSD: CHANGES,v 1.10028 2005/05/05 19:36:57 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2295,3 +2295,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated openjade to 1.3.2nb3 [hrs 2005-05-05]
 	Updated psgml-mode to 1.3.2 [hrs 2005-05-05]
 	Updated docbook-simple to 1.1 [hrs 2005-05-05]
+	Added ettercap-NG-0.7.2 [xtraeme 2005-05-05]
