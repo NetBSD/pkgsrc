@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3466 2005/05/04 17:58:57 wiz Exp $
+$NetBSD: TODO,v 1.3467 2005/05/05 00:44:53 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -355,7 +355,6 @@ Suggested package updates
 	o cilk-5.3.2
 	o cint-5.15
 	o cjk-lyx-1.3.3
-	o clamav-0.84
 	o clanlib-0.7.8
 	o classpath-0.15
 	o classpath-gui-0.15
