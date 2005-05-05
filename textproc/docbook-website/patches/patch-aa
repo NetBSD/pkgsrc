@@ -1,13 +1,87 @@
-$NetBSD: patch-aa,v 1.1 2003/01/28 10:43:44 grant Exp $
+$NetBSD: patch-aa,v 1.2 2005/05/05 05:43:05 hrs Exp $
 
---- xsl/website-common.xsl.orig	Mon Sep 16 23:21:16 2002
-+++ xsl/website-common.xsl
-@@ -17,7 +17,7 @@
+--- catalog.orig	2005-05-03 04:24:46.000000000 +0900
++++ catalog	2005-05-03 04:25:02.000000000 +0900
+@@ -2,12 +2,12 @@
+ OVERRIDE YES
  
- <!-- ==================================================================== -->
+ PUBLIC "-//Norman Walsh//DTD Website V2.6//EN" "schema/dtd/website.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.6/schema/website.dtd" "schema/dtd/website.dtd"/>
+-SYSTEM "http://docbook.sourceforge.net/release/website/current/schema/website.dtd" "schema/dtd/website.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.6/schema/website.dtd" "schema/dtd/website.dtd"
++SYSTEM "http://docbook.sourceforge.net/release/website/current/schema/website.dtd" "schema/dtd/website.dtd"
  
--<xsl:import href="http://docbook.sourceforge.net/release/xsl/current/html/docbook.xsl"/>
-+<xsl:import href="../../../xsl/docbook/html/docbook.xsl"/>
- <xsl:import href="xbel.xsl"/>
- <xsl:include href="VERSION"/>
- <xsl:include href="param.xsl"/>
+ PUBLIC "-//Norman Walsh//DTD Website Full V2.6//EN" "schema/dtd/website-full.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.6/schema/website-full.dtd" "schema/dtd/website-full.dtd"/>
+-SYSTEM "http://docbook.sourceforge.net/release/website/current/schema/website-full.dtd" "schema/dtd/website-full.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.6/schema/website-full.dtd" "schema/dtd/website-full.dtd"
++SYSTEM "http://docbook.sourceforge.net/release/website/current/schema/website-full.dtd" "schema/dtd/website-full.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website Autolayout V2.5.0//EN" "schema/dtd/autolayout.dtd"
+ SYSTEM "http://docbook.sourceforge.net/release/website/2.5.0/autolayout.dtd" "schema/dtd/autolayout.dtd"
+@@ -21,49 +21,49 @@
+ -- the URIs in all their existing Website document instances --
+ 
+ PUBLIC "-//Norman Walsh//DTD Website V2.5.0//EN" "schema/dtd/website.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.5.0/schema/website.dtd" "schema/dtd/website.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.5.0/schema/website.dtd" "schema/dtd/website.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website Full V2.5.0//EN" "schema/dtd/website-full.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.5.0/schema/website-full.dtd" "schema/dtd/website-full.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.5.0/schema/website-full.dtd" "schema/dtd/website-full.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN" "schema/dtd/website.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.4.1/schema/website.dtd" "schema/dtd/website.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.4.1/schema/website.dtd" "schema/dtd/website.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website Full V2.4.1//EN" "schema/dtd/website-full.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.4.1/schema/website-full.dtd" "schema/dtd/website-full.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.4.1/schema/website-full.dtd" "schema/dtd/website-full.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website V2.4.0//EN" "schema/dtd/website.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.4.0/schema/website.dtd" "schema/dtd/website.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.4.0/schema/website.dtd" "schema/dtd/website.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website Full V2.4.0//EN" "schema/dtd/website-full.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.4.0/schema/website-full.dtd" "schema/dtd/website-full.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.4.0/schema/website-full.dtd" "schema/dtd/website-full.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website V2.3//EN" "schema/dtd/website.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.3/schema/website.dtd" "schema/dtd/website.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.3/schema/website.dtd" "schema/dtd/website.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website Full V2.3//EN" "schema/dtd/website-full.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.3/schema/website-full.dtd" "schema/dtd/website-full.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.3/schema/website-full.dtd" "schema/dtd/website-full.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website V2.2//EN" "schema/dtd/website.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.2/schema/website.dtd" "schema/dtd/website.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.2/schema/website.dtd" "schema/dtd/website.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website Full V2.2//EN" "schema/dtd/website-full.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.2/schema/website-full.dtd" "schema/dtd/website-full.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.2/schema/website-full.dtd" "schema/dtd/website-full.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website V2.1//EN" "schema/dtd/website.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.1/schema/website.dtd" "schema/dtd/website.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.1/schema/website.dtd" "schema/dtd/website.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website Full V2.1//EN" "schema/dtd/website-full.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.1/schema/website-full.dtd" "schema/dtd/website-full.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.1/schema/website-full.dtd" "schema/dtd/website-full.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website V2.1b1//EN" "schema/dtd/website.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.1b1/schema/website.dtd" "schema/dtd/website.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.1b1/schema/website.dtd" "schema/dtd/website.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website Full V2.1b1//EN" "schema/dtd/website-full.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.1b1/schema/website-full.dtd" "schema/dtd/website-full.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.1b1/schema/website-full.dtd" "schema/dtd/website-full.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website V2.0//EN" "schema/dtd/website.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.0/schema/website.dtd" "schema/dtd/website.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.0/schema/website.dtd" "schema/dtd/website.dtd"
+ 
+ PUBLIC "-//Norman Walsh//DTD Website V2.0b1//EN" "schema/dtd/website.dtd"
+-SYSTEM "http://docbook.sourceforge.net/release/website/2.0b1/schema/website.dtd" "schema/dtd/website.dtd"/>
++SYSTEM "http://docbook.sourceforge.net/release/website/2.0b1/schema/website.dtd" "schema/dtd/website.dtd"

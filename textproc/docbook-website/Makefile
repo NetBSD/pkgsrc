@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2005/04/18 15:32:50 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2005/05/05 05:43:05 hrs Exp $
 #
 
-DISTNAME=	website-2.5.0
-PKGNAME=	docbook-${DISTNAME}
-PKGREVISION=	2
+DISTNAME=	docbook-website-2.6.0
+PKGREVISION=	0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 
@@ -22,20 +21,20 @@ DTDDIR=		${PREFIX}/share/xml/website
 EGDIR=		${PREFIX}/share/examples/docbook-website
 
 XML_CATALOGS=	${DTDDIR}/catalog.xml
+SGML_CATALOGS=	${DTDDIR}/catalog
 
 do-install:
 	cd ${WRKSRC} && ${FIND} . -name "*.orig" -exec ${RM} {} \;
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${DTDDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC} && ${PAX} -rwpm ChangeLog README VERSION WhatsNew	\
-		${DOCDIR}
+	cd ${WRKSRC} && ${PAX} -rwpm ChangeLog README VERSION \
+		RELEASE-NOTES.html RELEASE-NOTES.txt RELEASE-NOTES.xml \
+		TODO ${DOCDIR}
 	cd ${WRKSRC}/example && ${PAX} -rwpm . ${EGDIR}
-	${RM} ${PREFIX}/share/examples/docbook-website/graphics/.xvpics/spacer.png
-	${RMDIR} ${PREFIX}/share/examples/docbook-website/graphics/.xvpics
-	cd ${WRKSRC} && ${PAX} -rwpm VERSION extensions schema tests xsl \
+	cd ${WRKSRC} && ${PAX} -rwpm VERSION extensions schema xsl \
 		${DTDDIR}
-	${INSTALL_DATA} ${WRKSRC}/catalog.xml ${DTDDIR}
+	${INSTALL_DATA} ${WRKSRC}/catalog.xml ${WRKSRC}/catalog ${DTDDIR}
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
