@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN"
+    "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+
+<!-- $NetBSD: catalog.xml.in,v 1.1 2005/05/05 19:20:45 hrs Exp $ -->
+
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+<rewriteSystem systemIdStartString="http://www.oasis-open.org/docbook/xml/simple/1.1/"
+            rewritePrefix="./" />
+
+<rewriteURI uriStartString="http://www.oasis-open.org/docbook/xml/simple/1.1/"
+            rewritePrefix="./" />
+
+<rewriteSystem systemIdStartString="http://docbook.org/xml/simple/1.1/"
+            rewritePrefix="./" />
+
+<rewriteURI uriStartString="http://docbook.org/xml/simple/1.1/"
+            rewritePrefix="./" />
+
+
+<public publicId="-//OASIS//DTD Simplified DocBook XML V1.1//EN"
+        uri="http://docbook.org/xml/simple/1.1/sdocbook.dtd" />
+
+<public publicId="-//OASIS//DTD Simplified DocBook RefEntry XML V1.1//EN"
+        uri="http://docbook.org/xml/simple/1.1/sdocbookref.dtd" />
+
+</catalog>
