@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/05 19:34:44 xtraeme Exp $
+
+SHA1 (ettercap-NG-0.7.2.tar.gz) = 514760efdca27a45d6486c18679d2b6e9ba67452
+Size (ettercap-NG-0.7.2.tar.gz) = 1114060 bytes
+SHA1 (patch-aa) = 0745cd8e124ee11fbda8d5e0deb16ad0dab4b499
+SHA1 (patch-ab) = 7cf863797abac4b67dbca55f6f763bf7b9830259
+SHA1 (patch-ac) = ad04400499dcfdb4067079a58c849c287a34d12f
+SHA1 (patch-ad) = f39de66feb894ef2f1134abd3a3ca36677bea2b4

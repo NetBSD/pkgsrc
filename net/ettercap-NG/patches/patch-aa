@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/05/05 19:34:44 xtraeme Exp $
+
+--- share/Makefile.in.orig	2004-12-17 09:50:34.000000000 +0100
++++ share/Makefile.in
+@@ -329,8 +329,6 @@ install-sysconfDATA: $(sysconf_DATA)
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
+-	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
+ 	done
+ 
+ uninstall-sysconfDATA:
