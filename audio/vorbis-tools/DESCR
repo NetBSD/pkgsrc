@@ -6,5 +6,3 @@ systems.
   * oggenc encodes audio into the Ogg Vorbis format
   * ogg123 plays Ogg Vorbis files or URLs streamed via HTTP
   * vorbiscomment can list or set comments in an .ogg file
-
-This package is vorbis-tools 1.0
