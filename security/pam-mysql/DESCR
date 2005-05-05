@@ -1,0 +1,4 @@
+This is a module that allows people to login to PAM aware applications
+by authenticating to a MySQL db. Now configurable in terms of which
+host the database reside upon, which table and username and password
+column to interrogate.

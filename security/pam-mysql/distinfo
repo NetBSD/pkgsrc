@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/05 20:16:42 xtraeme Exp $
+
+SHA1 (pam_mysql-0.5.tar.gz) = 6e974a3ee78a968b0069c4abbd1d8602c145e177
+RMD160 (pam_mysql-0.5.tar.gz) = 788246f050ce0b531799af3e8d816248b974638f
+Size (pam_mysql-0.5.tar.gz) = 11587 bytes
+SHA1 (patch-aa) = 05300eb46da816015567195dc755f39522d1f5d8
