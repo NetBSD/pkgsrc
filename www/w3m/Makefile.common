@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2005/04/11 21:48:02 tv Exp $
+# $NetBSD: Makefile.common,v 1.33 2005/05/05 20:50:49 kei Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -70,6 +70,9 @@ CONFIGURE_ARGS+=	--disable-image
 
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-termlib=curses
+.elif ${OPSYS} == "Linux"
+.include "../../mk/curses.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-termlib=ncurses
 .else
 CONFIGURE_ARGS+=	--with-termlib=termcap
 .endif
@@ -87,8 +90,9 @@ CONFIGURE_ARGS+=	--enable-mouse
 CONFIGURE_ARGS+=	--with-browser=
 CONFIGURE_ARGS+=	--with-editor=vi
 CONFIGURE_ARGS+=	--with-gc=${BUILDLINK_PREFIX.boehm-gc}
-CONFIGURE_ARGS+=	--with-mailer=Mail
+CONFIGURE_ARGS+=	--with-mailer=${MAIL_CMD}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .if ${_W3M_USE_IMAGE} == YES
 PLIST_SUBST+=		USE_IMAGE=''
