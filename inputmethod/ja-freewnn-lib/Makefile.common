@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/04/27 20:51:10 reed Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/05/05 19:37:22 kei Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
@@ -68,8 +68,6 @@ post-patch:
 			config.h.orig > config.h)
 
 .if defined(WNN_TARGET) && (${WNN_TARGET} == "SERVER")
-RCD_SCRIPTS=	ja_freewnn
-
 post-build:
 	@${MV} ${WRKSRC}/Wnn/jd/jserverrc ${WRKSRC}/Wnn/jd/jserverrc.orig
 	@${SED} -e 's|^\(jserver_dir\).*|\1 ${IMDICTDIR}/wnn/${WNN_LANG}|' \
