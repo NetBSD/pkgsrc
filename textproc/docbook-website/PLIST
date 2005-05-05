@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2005/03/02 17:58:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/05/05 05:43:05 hrs Exp $
 share/doc/docbook-website/ChangeLog
 share/doc/docbook-website/README
+share/doc/docbook-website/RELEASE-NOTES.html
+share/doc/docbook-website/RELEASE-NOTES.txt
+share/doc/docbook-website/RELEASE-NOTES.xml
+share/doc/docbook-website/TODO
 share/doc/docbook-website/VERSION
-share/doc/docbook-website/WhatsNew
-share/examples/docbook-website/.tabular
-share/examples/docbook-website/.textonly
 share/examples/docbook-website/ChangeLog
+share/examples/docbook-website/Makefile-example.txt
 share/examples/docbook-website/about.html
 share/examples/docbook-website/about.xml
 share/examples/docbook-website/autolayout.xml
@@ -15,7 +17,7 @@ share/examples/docbook-website/bookmark/catalog
 share/examples/docbook-website/bookmark/xml.dcl
 share/examples/docbook-website/build-ext.xml
 share/examples/docbook-website/build-make.xml
-share/examples/docbook-website/build-textonly.xml
+share/examples/docbook-website/build-nontab.xml
 share/examples/docbook-website/build.xml
 share/examples/docbook-website/buildext.html
 share/examples/docbook-website/building.html
@@ -24,6 +26,8 @@ share/examples/docbook-website/buildmake.html
 share/examples/docbook-website/catalog.xml
 share/examples/docbook-website/custom.html
 share/examples/docbook-website/custom.xml
+share/examples/docbook-website/depends.nontabular
+share/examples/docbook-website/depends.tabular
 share/examples/docbook-website/dynxbel.js
 share/examples/docbook-website/example.css
 share/examples/docbook-website/formtest.html
@@ -93,11 +97,33 @@ share/examples/docbook-website/graphics/navicons/triangle/other/ChangeLog
 share/examples/docbook-website/graphics/navicons/triangle/other/closed.gif
 share/examples/docbook-website/graphics/navicons/triangle/other/leaf.gif
 share/examples/docbook-website/graphics/navicons/triangle/other/open.gif
+share/examples/docbook-website/graphics/note.gif
+share/examples/docbook-website/graphics/note.png
+share/examples/docbook-website/graphics/note.svg
+share/examples/docbook-website/graphics/note.tif
 share/examples/docbook-website/graphics/spacer.gif
 share/examples/docbook-website/index.html
 share/examples/docbook-website/layout.html
 share/examples/docbook-website/layout.xml
 share/examples/docbook-website/linking.html
+share/examples/docbook-website/n-about.html
+share/examples/docbook-website/n-buildext.html
+share/examples/docbook-website/n-building.html
+share/examples/docbook-website/n-buildmake.html
+share/examples/docbook-website/n-custom.html
+share/examples/docbook-website/n-formtest.html
+share/examples/docbook-website/n-full.html
+share/examples/docbook-website/n-index.html
+share/examples/docbook-website/n-layout.html
+share/examples/docbook-website/n-linking.html
+share/examples/docbook-website/n-nontab.html
+share/examples/docbook-website/n-php.html
+share/examples/docbook-website/n-rddl.html
+share/examples/docbook-website/n-revflag.html
+share/examples/docbook-website/n-rss.html
+share/examples/docbook-website/n-test1.html
+share/examples/docbook-website/n-test3.html
+share/examples/docbook-website/nontab.html
 share/examples/docbook-website/olink.xml
 share/examples/docbook-website/param.xml
 share/examples/docbook-website/php.html
@@ -108,11 +134,12 @@ share/examples/docbook-website/revflag.html
 share/examples/docbook-website/revflag.xml
 share/examples/docbook-website/rss.html
 share/examples/docbook-website/rss.xml
+share/examples/docbook-website/subdir/.cvskeepemptydir
 share/examples/docbook-website/subdir/ChangeLog
+share/examples/docbook-website/subdir/n-test1a.html
+share/examples/docbook-website/subdir/n-test1b.html
 share/examples/docbook-website/subdir/test1a.html
 share/examples/docbook-website/subdir/test1b.html
-share/examples/docbook-website/subdir/txttest1a.html
-share/examples/docbook-website/subdir/txttest1b.html
 share/examples/docbook-website/test1.html
 share/examples/docbook-website/test1.xml
 share/examples/docbook-website/test1a.xml
@@ -120,23 +147,23 @@ share/examples/docbook-website/test1b.xml
 share/examples/docbook-website/test2.xml
 share/examples/docbook-website/test3.html
 share/examples/docbook-website/test3.xml
-share/examples/docbook-website/textonly.html
+share/examples/docbook-website/website.database.xml
 share/examples/docbook-website/website.xml
 share/examples/docbook-website/wslayout.xml
 @comment in xmlcatmgr: share/xml/catalog
+@comment in xmlcatmgr: share/sgml/catalog
 share/xml/website/VERSION
+share/xml/website/catalog
 share/xml/website/catalog.xml
 share/xml/website/extensions/ChangeLog
 share/xml/website/extensions/saxon64.jar
 share/xml/website/extensions/saxon64/ChangeLog
 share/xml/website/extensions/saxon64/com/nwalsh/saxon/ChangeLog
 share/xml/website/extensions/saxon64/com/nwalsh/saxon/Website.java
-share/xml/website/extensions/saxon64/prj.el
 share/xml/website/extensions/xalan2.jar
 share/xml/website/extensions/xalan2/ChangeLog
 share/xml/website/extensions/xalan2/com/nwalsh/xalan/ChangeLog
 share/xml/website/extensions/xalan2/com/nwalsh/xalan/Website.java
-share/xml/website/extensions/xalan2/prj.el
 share/xml/website/schema/ChangeLog
 share/xml/website/schema/dtd/ChangeLog
 share/xml/website/schema/dtd/autolayout.dtd
@@ -150,22 +177,35 @@ share/xml/website/schema/dtd/website-full.dtd
 share/xml/website/schema/dtd/website.dtd
 share/xml/website/schema/dtd/website.mod
 share/xml/website/schema/relaxng/ChangeLog
+share/xml/website/schema/relaxng/autolayout.rnc
 share/xml/website/schema/relaxng/autolayout.rng
-share/xml/website/schema/relaxng/config.xml
-share/xml/website/schema/relaxng/extensions.rng
-share/xml/website/schema/relaxng/forms.rng
+share/xml/website/schema/relaxng/calstblx.rnc
+share/xml/website/schema/relaxng/calstblx.rng
+share/xml/website/schema/relaxng/dbhierx.mod.rnc
+share/xml/website/schema/relaxng/dbhierx.mod.rng
+share/xml/website/schema/relaxng/dbpoolx.mod.rnc
+share/xml/website/schema/relaxng/dbpoolx.mod.rng
+share/xml/website/schema/relaxng/docbookx.rnc
+share/xml/website/schema/relaxng/docbookx.rng
+share/xml/website/schema/relaxng/extensions.mod.rnc
+share/xml/website/schema/relaxng/extensions.mod.rng
+share/xml/website/schema/relaxng/forms.mod.rnc
+share/xml/website/schema/relaxng/forms.mod.rng
+share/xml/website/schema/relaxng/htmltblx.mod.rnc
+share/xml/website/schema/relaxng/htmltblx.mod.rng
+share/xml/website/schema/relaxng/layout.rnc
 share/xml/website/schema/relaxng/layout.rng
-share/xml/website/schema/relaxng/rddl.rng
-share/xml/website/schema/relaxng/union.xml
+share/xml/website/schema/relaxng/namespaces.mod.rnc
+share/xml/website/schema/relaxng/namespaces.mod.rng
+share/xml/website/schema/relaxng/rddl.mod.rnc
+share/xml/website/schema/relaxng/rddl.mod.rng
+share/xml/website/schema/relaxng/website-full.rnc
 share/xml/website/schema/relaxng/website-full.rng
+share/xml/website/schema/relaxng/website.mod.rnc
+share/xml/website/schema/relaxng/website.mod.rng
+share/xml/website/schema/relaxng/website.rnc
 share/xml/website/schema/relaxng/website.rng
-share/xml/website/schema/relaxng/websitedb.rng
-share/xml/website/tests/ChangeLog
-share/xml/website/tests/test.xml
-share/xml/website/tests/testcust.xml
-share/xml/website/tests/testfull.xml
 share/xml/website/xsl/ChangeLog
-share/xml/website/xsl/VERSION
 share/xml/website/xsl/autolayout.xsl
 share/xml/website/xsl/chunk-common.xsl
 share/xml/website/xsl/chunk-tabular.xsl
@@ -183,7 +223,6 @@ share/xml/website/xsl/website-targets.xsl
 share/xml/website/xsl/website.xsl
 share/xml/website/xsl/xbel.xsl
 @dirrm share/xml/website/xsl
-@dirrm share/xml/website/tests
 @dirrm share/xml/website/schema/relaxng
 @dirrm share/xml/website/schema/dtd
 @dirrm share/xml/website/schema
@@ -198,6 +237,7 @@ share/xml/website/xsl/xbel.xsl
 @dirrm share/xml/website/extensions
 @dirrm share/xml/website
 @comment in xmlcatmgr: @dirrm share/xml
+@comment in xmlcatmgr: @dirrm share/sgml
 @dirrm share/examples/docbook-website/subdir
 @dirrm share/examples/docbook-website/graphics/navicons/triangle/other
 @dirrm share/examples/docbook-website/graphics/navicons/triangle/current
