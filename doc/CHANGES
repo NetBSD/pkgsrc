@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10032 2005/05/05 20:18:50 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10033 2005/05/05 20:53:12 kei Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2302,3 +2302,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added x11rec-0.3 [xtraeme 2005-05-05]
 	Updated nasm to 0.98.39nb1 [adrianp 2005-05-05]
 	Added pam-mysql-0.5 [xtraeme 2005-05-05]
+	Updated w3m to 0.5.1nb2 [kei 2005-05-05]
+	Updated w3m-img to 0.5.1nb3 [kei 2005-05-05]
