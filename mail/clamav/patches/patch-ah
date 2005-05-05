@@ -1,26 +1,26 @@
-$NetBSD: patch-ah,v 1.3 2005/02/14 11:20:13 grant Exp $
+$NetBSD: patch-ah,v 1.4 2005/05/05 00:42:56 xtraeme Exp $
 
---- clamav-milter/clamav-milter.c.orig	2005-02-14 08:44:28.000000000 +1100
-+++ clamav-milter/clamav-milter.c
-@@ -3328,7 +3328,7 @@ clamfi_eom(SMFICTX *ctx)
+--- clamav-milter/clamav-milter.c.orig	2005-05-05 02:31:54.000000000 +0200
++++ clamav-milter/clamav-milter.c	2005-05-05 02:33:45.000000000 +0200
+@@ -2892,7 +2892,7 @@
  						 * the postmaster, so include
  						 * some useful information
  						 */
 -						fprintf(sendmail, _("The message %1$s sent from %2$s to\n"),
 +						fprintf(sendmail, _("The message %s sent from %s to\n"),
- 							sendmailId, sender);
+ 							sendmailId, privdata->from);
  					else
  						fprintf(sendmail, _("A message sent from %s to\n"),
-@@ -3342,7 +3342,7 @@ clamfi_eom(SMFICTX *ctx)
+@@ -2906,7 +2906,7 @@
  						fprintf(sendmail, _("\nThe message in question has been quarantined as %s\n"), privdata->filename);
  
  					if(hflag) {
 -						fprintf(sendmail, _("\nThe message was received by %1$s from %2$s via %3$s\n\n"),
 +						fprintf(sendmail, _("\nThe message was received by %s from %s via %s\n\n"),
- 							smfi_getsymval(ctx, "j"), sender,
+ 							smfi_getsymval(ctx, "j"), privdata->from,
  							smfi_getsymval(ctx, "_"));
  						fputs(_("For your information, the original message headers were:\n\n"), sendmail);
-@@ -4455,7 +4455,7 @@ qfile(struct privdata *privdata, const c
+@@ -4047,7 +4047,7 @@
  
  	if(move(privdata->filename, newname) < 0) {
  		if(use_syslog)
