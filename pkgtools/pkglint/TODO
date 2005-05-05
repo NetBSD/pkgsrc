@@ -5,3 +5,4 @@
 * add checks for buildlink3.mk files
 * stricter type checking
 * quoting check for Makefile variables
+* -E/--explain
