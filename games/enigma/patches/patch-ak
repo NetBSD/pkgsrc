@@ -1,4 +1,5 @@
-diff -Nur enigma-0.81-orig/src/px/alist.hh enigma-0.81/src/px/alist.hh
+$NetBSD: patch-ak,v 1.2 2005/05/06 00:03:25 salo Exp $
+
 --- src/px/alist.hh	2003-01-12 20:32:43.000000000 +0100
 +++ src/px/alist.hh	2004-11-11 00:04:26.855388248 +0100
 @@ -43,7 +43,7 @@

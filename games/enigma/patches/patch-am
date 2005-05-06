@@ -1,4 +1,5 @@
-diff -Nur enigma-0.81-orig/src/px/dict.hh enigma-0.81/src/px/dict.hh
+$NetBSD: patch-am,v 1.2 2005/05/06 00:03:25 salo Exp $
+
 --- src/px/dict.hh.orig	Sun May 18 20:45:07 2003
 +++ src/px/dict.hh
 @@ -101,8 +101,11 @@ namespace px
