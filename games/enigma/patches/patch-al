@@ -1,4 +1,5 @@
-diff -Nur enigma-0.81-orig/src/px/array2.hh enigma-0.81/src/px/array2.hh
+$NetBSD: patch-al,v 1.2 2005/05/06 00:03:25 salo Exp $
+
 --- src/px/array2.hh	2003-05-19 14:14:36.000000000 +0200
 +++ src/px/array2.hh	2004-11-11 00:04:26.855388248 +0100
 @@ -70,14 +70,14 @@
