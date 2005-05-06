@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10034 2005/05/06 00:15:14 wiz Exp $
+$NetBSD: CHANGES,v 1.10035 2005/05/06 01:26:39 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2305,3 +2305,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated w3m to 0.5.1nb2 [kei 2005-05-05]
 	Updated w3m-img to 0.5.1nb3 [kei 2005-05-05]
 	Updated apache to 1.3.33nb5 [wiz 2005-05-06]
+	Updated paragui to 1.1.8 [xtraeme 2005-05-06]
