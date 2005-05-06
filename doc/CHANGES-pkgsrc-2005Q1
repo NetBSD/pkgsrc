@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.84 2005/05/06 00:30:42 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.85 2005/05/06 03:57:27 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -177,3 +177,5 @@ Pullup ticket 465 - requested by Thomas Klausner
 manual pages build fix for fontconfig
 Pullup ticket 472 - requested by Klaus Heinz
 gcc fixes for enigma
+Pullup ticket 483 - requested by Juan Romero Pardines
+portability fix for libao
