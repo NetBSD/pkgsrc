@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10037 2005/05/06 13:55:24 tron Exp $
+$NetBSD: CHANGES,v 1.10038 2005/05/06 19:50:47 epg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2308,3 +2308,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated paragui to 1.1.8 [xtraeme 2005-05-06]
 	Updated dcraw to 7.20 [markd 2005-05-06]
 	Updated ethereal to 0.10.11 [tron 2005-05-06]
+	Added p5-Schedule-Cron-Events-1.8 [epg 2005-05-06]
