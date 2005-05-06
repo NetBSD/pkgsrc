@@ -1,0 +1,25 @@
+$NetBSD: patch-an,v 1.2.2.2 2005/05/06 00:30:17 salo Exp $
+
+--- src/px/video.cc	2003-07-31 09:28:04.000000000 +0200
++++ src/px/video.cc	2004-11-11 00:04:26.855388248 +0100
+@@ -207,16 +207,16 @@
+         void set_pixels(int n, const int* xlist, const int* ylist, Uint32 color)
+         {
+             const int *xp = xlist, *yp = ylist;
+-            if (NOCLIP(gs)) {
++            if (NOCLIP(this->gs)) {
+                 for (int i=n; i > 0; --i) {
+                     int x = *xp++, y = *yp++;
+-                    *pixel_pointer(x,y) = gs.pcolor;
++                    *pixel_pointer(x,y) = this->gs.pcolor;
+                 }
+             } else {
+                 for (int i=n; i > 0; --i) {
+                     int x = *xp++, y = *yp++;
+-                    if (clip_pixel (gs, x, y))
+-                        *pixel_pointer(x,y) = gs.pcolor;
++                    if (clip_pixel (this->gs, x, y))
++                        *pixel_pointer(x,y) = this->gs.pcolor;
+                 }
+             }
+         }

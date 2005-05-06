@@ -1,0 +1,28 @@
+$NetBSD: patch-am,v 1.2.2.2 2005/05/06 00:30:17 salo Exp $
+
+--- src/px/dict.hh.orig	Sun May 18 20:45:07 2003
++++ src/px/dict.hh
+@@ -101,8 +101,11 @@ namespace px
+     public:
+ 	typedef Iter<value_type>                iterator;
+   	typedef Iter<const value_type>          const_iterator;
+-        friend class iterator;
+-        friend class const_iterator;        
++	// pkgsrc: In order to still support gcc 2.95 we do not remove those
++	// two friends (like the Fedora patch does). OTOH gcc3.4.3 does not
++	// like using the typedef'ed types from above as friends.
++	friend class Iter<value_type>;
++	friend class Iter<const value_type>;        
+ 
+ 	Dict(size_type table_size = 257);
+         ~Dict();
+@@ -126,7 +129,8 @@ namespace px
+ 	
+ 	const T& lookup(const std::string &key) const {
+ 	    Entry *e = find_entry(key);
+-	    if (!e) throw XInvalidKey();
++// rational: see above + XInvalidKey is not declared anywhere
++//	    if (!e) throw XInvalidKey();
+ 	    return e->pair.second;
+ 	}
+ 
