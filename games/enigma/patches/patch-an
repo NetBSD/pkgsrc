@@ -1,4 +1,5 @@
-diff -Nur enigma-0.81-orig/src/px/video.cc enigma-0.81/src/px/video.cc
+$NetBSD: patch-an,v 1.2 2005/05/06 00:03:25 salo Exp $
+
 --- src/px/video.cc	2003-07-31 09:28:04.000000000 +0200
 +++ src/px/video.cc	2004-11-11 00:04:26.855388248 +0100
 @@ -207,16 +207,16 @@
