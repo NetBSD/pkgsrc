@@ -1,4 +1,4 @@
-<!-- $NetBSD: options.xml,v 1.1.1.1 2004/10/21 14:27:40 grant Exp $ -->
+<!-- $NetBSD: options.xml,v 1.2 2005/05/06 23:28:50 wiz Exp $ -->
 
 <chapter id="options">
   <title>Options handling</title>
@@ -25,7 +25,7 @@
       <title>Converting packages to use <filename>bsd.options.mk</filename></title>
 
       <para> The following example shows how
-        <filename>bsd.options.mk</filename> should be use in a package
+        <filename>bsd.options.mk</filename> should be used in a package
         <filename>Makefile</filename>, or in a file,
         e.g. <filename>options.mk</filename>, that is included by the
         main package <filename>Makefile</filename>.
