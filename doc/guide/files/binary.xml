@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.8 2005/01/24 14:44:39 jschauma Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.9 2005/05/06 23:04:16 wiz Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -47,14 +47,15 @@
   <sect1 id="bulkbuild">
     <title>Doing a bulk build of all packages</title>
 
-    <para>If you want to get a full set of precompiled binary packages, this section
-      describes how to get them. Beware that the bulk build will remove all
-      currently installed packages from your system! Having a FTP server
-      configured either on the machine doing the bulk builds or on a nearby NFS
-      server can help to make the packages available to everyone. See
-      &man.ftpd.8; for
-      more information. If you use a remote NFS server's storage, be sure to not
-      actually compile on NFS storage, as this slows things down a lot.</para>
+    <para>If you want to get a full set of precompiled binary
+      packages, this section describes how to get them. Beware that
+      the bulk build will remove all currently installed packages from
+      your system! Having an FTP server configured either on the
+      machine doing the bulk builds or on a nearby NFS server can help
+      to make the packages available to everyone. See &man.ftpd.8; for
+      more information. If you use a remote NFS server's storage, be
+      sure to not actually compile on NFS storage, as this slows
+      things down a lot.</para>
 
     <sect2 id="binary.configuration">
       <title>Configuration</title>
@@ -62,7 +63,8 @@
       <sect3 id="binary.mk.conf">
 	<title>/etc/mk.conf</title>
 
-	<para>You may want to set things in <filename>/etc/mk.conf</filename>.
+	<para>You may want to set variables in
+	  <filename>/etc/mk.conf</filename>.
 	  Look at <filename>pkgsrc/mk/defaults/mk.conf</filename> for
 	  details of the default settings. You will want to ensure that
 	  <varname>ACCEPTABLE_LICENSES</varname> meet your local policy.
@@ -87,23 +89,25 @@ _ACCEPTABLE=    yes</programlisting>
 	  <filename>build.conf</filename> and
 	  edit it, following the comments in that file. This is the config
 	  file that determines where log files are generated after the build,
-	  where to mail the build report to, where your pkgsrc tree is located and
-	  which user to &man.su.8; to to do a <command>cvs update</command>.</para>
+	  where to mail the build report to, where your pkgsrc tree is
+	  located and the user to which user to &man.su.8; to do a
+	  <command>cvs update</command>.</para>
       </sect3>
 
       <sect3>
 	<title><filename>pre-build.local</filename></title>
 
-	<para>It is possible to configure the bulk build to perform certain site
-	  specific tasks at the end of the pre-build stage.  If the file
+	<para>It is possible to configure the bulk build to perform
+	  certain site specific tasks at the end of the pre-build
+	  stage.  If the file 
 	  <filename>pre-build.local</filename> exists in
-	  <filename>/usr/pkgsrc/mk/bulk</filename> it will be executed
-	  (as a sh(1) script) at the end of the usual pre-build stage.  An
-	  example use of <filename>pre-build.local</filename> is to have the
-	  line:</para>
+	  <filename>/usr/pkgsrc/mk/bulk</filename>, it will be executed
+	  (as a &man.sh.1; script) at the end of the usual pre-build
+	  stage.  An example use of
+	  <filename>pre-build.local</filename> is to have the line:</para>
 
 	<screen>&rprompt; <userinput>echo "I do not have enough disk space to build this pig." \
-    &gt; pkgsrc/games/crafty-book-enormous/$BROKENF</userinput></screen>
+    &gt; pkgsrc/misc/openoffice/$BROKENF</userinput></screen>
 
 	<para>to prevent the system from trying to build a particular package
 	  which requires nearly 3 GB of disk space.</para>
@@ -269,7 +273,7 @@ fi</programlisting>
       <para>
         If you don't want all the packages nuked from a machine
         (rendering it useless for anything but pkg compiling), there
-        is the possibility of doing the pkg 	bulk build inside a
+        is the possibility of doing the package bulk build inside a
         chroot environment.
       </para>
 	
@@ -334,7 +338,7 @@ fi</programlisting>
 	    <pkg>net/ppp-mppe</pkg>):</para>
 
 	  <screen>&rprompt; <userinput>ln -s ../disk1/cvs .</userinput>
-&rprompt; <userinput>ln -s cvs/src-1.6 src</userinput></screen>
+&rprompt; <userinput>ln -s cvs/src-2.0 src</userinput></screen>
 	</step>
 
 	<step>
@@ -448,7 +452,7 @@ fi</programlisting>
 	recommended!), remember to set
 	<varname>SIGN_AS=username@NetBSD.org</varname> in your
 	<filename>mk/bulk/build.conf</filename>.  This will prompt you for
-	your gpg password to sign the files before uploading everything.
+	your GPG password to sign the files before uploading everything.
       </para>
 
       <para>
@@ -460,7 +464,7 @@ fi</programlisting>
       <screen>RSYNC_DST=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload </screen>
 
       <para>
-        Please use appropviate values for "pkgsrc-200xQ4",
+        Please use appropviate values for "pkgsrc-200xQy",
         "NetBSD-a.b.c" and "arch" here. If your login on
         ftp.NetBSD.org is different from <varname>CVS_USER</varname>,
         write your login directly into the variable, e.g. my local
@@ -486,7 +490,7 @@ fi</programlisting>
 
       <para>
         Before uploading the binary pkgs, ssh authentication needs to
-        be setup next. This example shows how to setup temporary keys
+        be set up. This example shows how to setup temporary keys
         for the root account <emphasis>inside the sandbox</emphasis>
         (assuming that no keys should be present there usually):
       </para>
