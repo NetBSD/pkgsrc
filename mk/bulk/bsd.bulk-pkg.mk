@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.79 2005/04/11 11:18:01 agc Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.80 2005/05/06 00:52:30 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -44,6 +44,7 @@
 
 LS?=	ls
 WC?=	wc
+TO_HTML?=	${SED} -e 's,&,\&amp;,g' -e 's,<,\&lt;,g' -e 's,>,\&gt;,g'
 
 # A sort(1) capable of very long lines is needed for full builds in "tflat".
 # Some platforms (namely, Interix) may not provide one, so override here.
@@ -391,7 +392,7 @@ bulk-package:
 			if [ -f "${WRKLOG}" ]; then \
 				(${ECHO_MSG} "<pre>"; \
 				${ECHO_MSG} ""; \
-				${CAT} ${WRKLOG}; \
+				${TO_HTML} ${WRKLOG}; \
 				${ECHO_MSG} "</pre>"; \
 				) >> ${BROKENWRKLOG}; \
 			fi; \
