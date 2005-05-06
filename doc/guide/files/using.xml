@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.5 2005/04/11 16:38:21 reed Exp $ -->
+<!-- $NetBSD: using.xml,v 1.6 2005/05/06 00:46:43 wiz Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
   <title>Using pkgsrc</title>
@@ -36,7 +36,7 @@
       <title>How to use binary packages</title>
       
       <para> If you have the files on a CDROM or downloaded them to
-        your hard disk, youcan install them with the following command
+        your hard disk, you can install them with the following command
         (be sure to<command>su</command> to root first):</para>
 
         <screen><prompt>#</prompt> <userinput>pkg_add /path/to/package.tgz</userinput></screen>
@@ -55,6 +55,23 @@
       <para>Also note that any prerequisite packages needed to run the
         package in question will be installed, too, assuming they are
         present where you install from. </para>
+
+      <para>To save some typing, you can set the
+        <varname>PKG_PATH</varname> environment variable to a semicolon
+        separated list of paths (including remote URLs); trailing
+        slashes are not allowed. </para>
+
+      <para>Additionally to the <filename>All</filename> directory
+        there exists a <filename>vulnerable</filename> directory to
+        which binary packages with known vulnerabilities are
+        moved, since removing them could cause missing dependencies. To
+        use these packages, add the <filename>vulnerable</filename>
+        directory to your <varname>PKG_PATH</varname>. However, you should run
+        <pkg>security/audit-packages</pkg> regularly, and especially after
+        installing new packages, and verify that the vulnerabilities are
+        acceptable for your configuration. An example
+        <varname>PKG_PATH</varname> would be:
+      <filename>ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSvers&gt;/&lt;arch&gt;/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSvers&gt;/&lt;arch&gt;/vulnerable</filename></para>
 
       <para>After you've installed packages, be sure to have
         <filename>/usr/pkg/bin</filename> in your
