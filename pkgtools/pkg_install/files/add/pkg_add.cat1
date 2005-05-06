@@ -119,7 +119,7 @@ OOPPTTIIOONNSS
 
      --tt _t_e_m_p_l_a_t_e
              Use _t_e_m_p_l_a_t_e as the input to mktemp(3) when creating a ``staging
-             area.''  By default, this is the string _/_v_a_r_/_t_m_p_/_i_n_s_t_m_p_._X_X_X_X_X_X,
+             area''.  By default, this is the string _/_v_a_r_/_t_m_p_/_i_n_s_t_m_p_._X_X_X_X_X_X,
              but it may be necessary to override it in the situation where
              space in your _/_v_a_r_/_t_m_p directory is limited.  Be sure to leave
              some number of `X' characters for mktemp(3) to fill in with a
@@ -163,7 +163,7 @@ OOPPTTIIOONNSS
      that demands the usage of _p_a_s_s_i_v_e _m_o_d_e ftp.
 
 TTEECCHHNNIICCAALL DDEETTAAIILLSS
-     ppkkgg__aadddd extracts each package's "packing list" into a special staging
+     ppkkgg__aadddd extracts each package's ``packing list'' into a special staging
      directory in /var/tmp (or $PKG_TMPDIR if set) and then runs through the
      following sequence to fully extract the contents of the package:
 
@@ -327,20 +327,31 @@ EEXXAAMMPPLLEESS
 
      You can specify a compiled binary package explicitly on the command line.
 
-     # pkg_add /usr/pkgsrc/packages/All/tcsh-6.10.00.tgz
+     # pkg_add /usr/pkgsrc/packages/All/tcsh-6.14.00.tgz
 
      If you omit the version number, ppkkgg__aadddd will install the latest version
      available.  With --vv, ppkkgg__aadddd emits more messages to terminal.
 
      # pkg_add -v /usr/pkgsrc/packages/All/unzip
 
-     You can grab a compiled binary package from remote location, by specify-
-     ing a URL.  The URL can be put into an environment variable, PKG_PATH.
+     You can grab a compiled binary package from remote location by specifying
+     a URL.  The URL can be put into an environment variable, PKG_PATH.
 
-     # pkg_add -v ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/All/mozilla-1.7.3nb2.tgz
+     # pkg_add -v ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/All/firefox-1.0.3.tgz
 
      # export PKG_PATH=ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/All
-     # pkg_add -v mozilla
+     # pkg_add -v firefox
+
+     Over time, as problems are found in packages, they will be moved from the
+     _A_l_l subdirectory into the _v_u_l_n_e_r_a_b_l_e subdirectory.  If you want to accept
+     vulnerable packages by default (and know what you are doing), you can add
+     the _v_u_l_n_e_r_a_b_l_e directory to your PKG_PATH like this:
+
+     # export PKG_PATH="ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/vulnerable"
+
+     (The quotes are needed because semicolon (`;') is a shell meta-charac-
+     ter.)  If you do this, consider installing and using the
+     _s_e_c_u_r_i_t_y_/_a_u_d_i_t_-_p_a_c_k_a_g_e_s package and running it after every ppkkgg__aadddd.
 
 SSEEEE AALLSSOO
      pkg_admin(1), pkg_create(1), pkg_delete(1), pkg_info(1), mktemp(3),
@@ -365,8 +376,8 @@ BBUUGGSS
      exec argument-space limitations--this depends on the value returned by
      ssyyssccoonnff(___S_C___A_R_G___M_A_X)).
 
-     Pkg upgrading needs a lot more work to be really universal.
+     Package upgrading needs a lot more work to be really universal.
 
      Sure to be others.
 
-NetBSD 2.0                     February 4, 2005                     NetBSD 2.0
+NetBSD 2.0                        May 7, 2005                       NetBSD 2.0

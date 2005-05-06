@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.13 2005/02/05 00:28:58 jlam Exp $
+.\" $NetBSD: pkg_add.1,v 1.14 2005/05/06 23:03:41 wiz Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -17,7 +17,7 @@
 .\"
 .\"     @(#)pkg_add.1
 .\"
-.Dd February 4, 2005
+.Dd May 7, 2005
 .Dt PKG_ADD 1
 .Os
 .Sh NAME
@@ -62,7 +62,9 @@ depends on or requires from both local disk and via FTP or HTTP.
 Since the
 .Nm
 command may execute scripts or programs contained within a package file,
-your system may be susceptible to ``Trojan horses'' or other subtle
+your system may be susceptible to
+.Dq Trojan horses
+or other subtle
 attacks from miscreants who create dangerous package files.
 .Pp
 You are advised to verify the competence and identity of those who
@@ -228,14 +230,17 @@ Use
 .Ar template
 as the input to
 .Xr mktemp 3
-when creating a ``staging area.''
+when creating a
+.Dq staging area .
 By default, this is the string
 .Pa /var/tmp/instmp.XXXXXX ,
 but it may be necessary to override it in the situation where
 space in your
 .Pa /var/tmp
 directory is limited.
-Be sure to leave some number of `X' characters for
+Be sure to leave some number of
+.Sq X
+characters for
 .Xr mktemp 3
 to fill in with a unique ID.
 .Pp
@@ -281,7 +286,9 @@ environment variable.
 One or more
 .Ar pkg-name
 arguments may be specified, each being either a file containing the
-package (these usually ending with the ``.tgz'' suffix) or a
+package (these usually ending with the
+.Dq .tgz
+suffix) or a
 URL pointing at a file available on an ftp or web site.
 Thus you may extract files directly from their anonymous ftp or WWW
 locations (e.g.,
@@ -310,7 +317,8 @@ passive mode
 ftp.
 .Sh TECHNICAL DETAILS
 .Nm
-extracts each package's "packing list"
+extracts each package's
+.Dq packing list
 into a special staging directory in /var/tmp (or $PKG_TMPDIR if set)
 and then runs through the following sequence to fully extract the contents
 of the package:
@@ -573,7 +581,7 @@ will try to install binary packages listed in dependencies list.
 .Pp
 You can specify a compiled binary package explicitly on the command line.
 .Bd -literal
-# pkg_add /usr/pkgsrc/packages/All/tcsh-6.10.00.tgz
+# pkg_add /usr/pkgsrc/packages/All/tcsh-6.14.00.tgz
 .Ed
 .Pp
 If you omit the version number,
@@ -587,16 +595,41 @@ emits more messages to terminal.
 # pkg_add -v /usr/pkgsrc/packages/All/unzip
 .Ed
 .Pp
-You can grab a compiled binary package from remote location, by specifying
+You can grab a compiled binary package from remote location by specifying
 a URL.
 The URL can be put into an environment variable,
 .Ev PKG_PATH .
 .Bd -literal
-# pkg_add -v ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/All/mozilla-1.7.3nb2.tgz
+# pkg_add -v ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/All/firefox-1.0.3.tgz
 
 # export PKG_PATH=ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/All
-# pkg_add -v mozilla
+# pkg_add -v firefox
 .Ed
+.Pp
+Over time, as problems are found in packages, they will be moved
+from the
+.Pa All
+subdirectory into the
+.Pa vulnerable
+subdirectory.
+If you want to accept vulnerable packages by default
+(and know what you are doing),
+you can add the
+.Pa vulnerable
+directory to your
+.Ev PKG_PATH
+like this:
+.Bd -literal
+# export PKG_PATH="ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/vulnerable"
+.Ed
+.Pp
+(The quotes are needed because semicolon
+.Pq Sq \&;
+is a shell meta-character.)
+If you do this, consider installing and using the
+.Pa security/audit-packages
+package and running it after every
+.Nm .
 .Sh SEE ALSO
 .Xr pkg_admin 1 ,
 .Xr pkg_create 1 ,
@@ -633,6 +666,6 @@ invocations due to exec argument-space limitations--this depends on the
 value returned by
 .Fn sysconf _SC_ARG_MAX ) .
 .Pp
-Pkg upgrading needs a lot more work to be really universal.
+Package upgrading needs a lot more work to be really universal.
 .Pp
 Sure to be others.
