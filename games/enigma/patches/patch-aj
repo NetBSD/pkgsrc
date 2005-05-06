@@ -1,4 +1,5 @@
-diff -Nur enigma-0.81-orig/src/object_mixins.hh enigma-0.81/src/object_mixins.hh
+$NetBSD: patch-aj,v 1.2 2005/05/06 00:03:25 salo Exp $
+
 --- src/object_mixins.hh	2003-07-12 12:04:47.000000000 +0200
 +++ src/object_mixins.hh	2004-11-11 00:05:24.000000000 +0100
 @@ -80,14 +80,14 @@
