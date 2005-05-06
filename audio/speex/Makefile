@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:44:57 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/06 04:26:58 markd Exp $
 #
 
 DISTNAME=	speex-1.0.4
@@ -22,6 +22,9 @@ CONFIGURE_ARGS+=	--with-ogg-dir="${BUILDLINK_PREFIX.libogg}"
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=         F77=${FALSE}
 
+BUILDLINK_TRANSFORM+=	rename:-lgnugetopt:-lgetopt
+
+.include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 
