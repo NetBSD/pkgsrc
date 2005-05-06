@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.6 2005/05/06 00:46:43 wiz Exp $ -->
+<!-- $NetBSD: using.xml,v 1.7 2005/05/06 21:24:21 wiz Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
   <title>Using pkgsrc</title>
@@ -72,6 +72,8 @@
         acceptable for your configuration. An example
         <varname>PKG_PATH</varname> would be:
       <filename>ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSvers&gt;/&lt;arch&gt;/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSvers&gt;/&lt;arch&gt;/vulnerable</filename></para>
+        Please note that semicolon (';') is a shell meta-character, so
+        you'll probably have to quote it.
 
       <para>After you've installed packages, be sure to have
         <filename>/usr/pkg/bin</filename> in your
