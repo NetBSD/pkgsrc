@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3469 2005/05/06 00:15:44 wiz Exp $
+$NetBSD: TODO,v 1.3470 2005/05/06 21:12:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -319,9 +319,9 @@ Suggested package updates
 	o bchunk-1.2.0
 	o bdb-xml-2.0.9 [requires xerces-c>=2.6.0]
 	o benchfft-3.1
-	o bind-9.3.1
+	o bind-9.3.1 [pkg/30152]
 	o bioperl-1.5.0
-	o bitlbee-0.92
+	o bitlbee-0.92 [pkg/30096]
 	o blackbox-0.70
 	o blitz++-0.8
 	o bmake-20050322
@@ -414,7 +414,7 @@ Suggested package updates
 	o egtk-0.3.6
 	o electricfence-2.4.13
 	o elf-0.5.4
-	o elinks-0.10.5
+	o elinks-0.10.5 [pkg/30125]
 	o elm-me-2.4pl121e
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
@@ -500,6 +500,7 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.3.78
 	o gtetrinet-0.7.8
+	o gtk-gnutella-0.95.1 [pkg/30157]
 	o gtk-send-pr-0.4.6
 	o gtk-systrace-2003.06.23
 	o gtkyahoo-0.18.3
@@ -556,8 +557,8 @@ Suggested package updates
 	o john-1.6.37
 	o jove-4.16.0.65
 	o jpilot-0.99.7 [pkg/24635]
-	o kaffe-1.1.5
-	o kaffe-nox11-1.1.5
+	o kaffe-1.1.5 [pkg/30017]
+	o kaffe-nox11-1.1.5 [pkg/30017]
 	o kajaani-kombat-0.6.6.6
 	o kapooka-0.3
 	o kdrill-6.4
@@ -700,7 +701,7 @@ Suggested package updates
 	o p5-Audio-Wav-0.04
 	o p5-Authen-SASL-2.08
 	o p5-Authen-SASL-Cyrus-0.12
-	o p5-Business-CreditCard-0.28
+	o p5-Business-CreditCard-0.28 [pkg/30111]
 	o p5-Business-ISBN-1.80
 	o p5-Business-ISBN-Data-1.10
 	o p5-CDDB-1.15
@@ -836,7 +837,7 @@ Suggested package updates
 	o poppy-4.01
 	o poptop-1.2.3
 	o potrace-1.7
-	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
+	o pptp-1.6.0 [pkg/26842]
 	o prc-tools-2.3
 	o proj-4.4.9
 	o proxsmtp-1.2.1
