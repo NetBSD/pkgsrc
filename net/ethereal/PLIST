@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2005/03/14 15:09:28 salo Exp $
+@comment $NetBSD: PLIST,v 1.21 2005/05/06 13:54:48 tron Exp $
 bin/capinfos
 bin/dftest
 bin/editcap
@@ -24,6 +24,7 @@ lib/ethereal/plugins/${PKGVERSION}/megaco.la
 lib/ethereal/plugins/${PKGVERSION}/mgcp.la
 lib/ethereal/plugins/${PKGVERSION}/opsi.la
 lib/ethereal/plugins/${PKGVERSION}/pcli.la
+lib/ethereal/plugins/${PKGVERSION}/profinet.la
 lib/ethereal/plugins/${PKGVERSION}/rdm.la
 lib/ethereal/plugins/${PKGVERSION}/rlm.la
 lib/ethereal/plugins/${PKGVERSION}/rtnet.la
