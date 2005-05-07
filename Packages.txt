@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.366 2004/11/30 21:05:24 jlam Exp $
+# $NetBSD: Packages.txt,v 1.367 2005/05/07 22:53:52 wiz Exp $
 ###########################################################################
 
 The "Documentation on the NetBSD Packages System" is now known as 
@@ -11,6 +11,4 @@ The "Documentation on the NetBSD Packages System" is now known as
  * PDF:        http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.pdf
  * PostScript: http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.ps
 
-
-This notice will be removed at some point in time when people got used
-to the new path. - HF
+This file will be removed after 2005Q2.
