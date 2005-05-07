@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/28 19:07:52 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/07 15:21:19 kristerw Exp $
 #
 
 DISTNAME=		maxima-5.9.1
@@ -14,5 +14,6 @@ DEPENDS+=		tk-[0-9]*:../../x11/tk
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-clisp
+USE_PERL5=		build
 
 .include "../../mk/bsd.pkg.mk"
