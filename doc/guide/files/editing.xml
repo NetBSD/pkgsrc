@@ -1,4 +1,4 @@
-<!-- $NetBSD: editing.xml,v 1.5 2005/03/08 01:22:41 xtraeme Exp $ -->
+<!-- $NetBSD: editing.xml,v 1.6 2005/05/07 22:28:47 wiz Exp $ -->
 
 <appendix id="editing">
   <title>Editing guidelines for the pkgsrc guide</title>
@@ -20,8 +20,7 @@
     <itemizedlist>
       <listitem>
         <para>
-          <filename>pkgsrc/doc/pkgsrc.txt</filename>, which replaces
-  	<filename>pkgsrc/Packages.txt</filename>
+          <filename>pkgsrc/doc/pkgsrc.txt</filename>
         </para>
       </listitem>
       
