@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/20 15:32:25 abs Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/07 22:24:04 wiz Exp $
 
 DISTNAME=	pkg_chk-1.57
 CATEGORIES=	pkgtools
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/Packages.txt
+HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Check installed package versions against pkgsrc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

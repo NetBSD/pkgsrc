@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/14 20:23:50 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/07 22:24:50 wiz Exp $
 #
 
 DISTNAME=	gpg2dot-1.4
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	lukem@NetBSD.org
-HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/Packages.txt
+HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Converts your GnuPG keyring to a graph of associations
 
 USE_LANGUAGES=	# empty
