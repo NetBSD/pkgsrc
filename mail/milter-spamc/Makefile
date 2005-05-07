@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/24 22:57:16 snj Exp $
+# $NetBSD: Makefile,v 1.5.8.1 2005/05/07 00:26:23 snj Exp $
 #
 
 DISTNAME=		milter-spamc-0.10
@@ -14,6 +14,13 @@ WRKSRC=			${WRKDIR}/com/snert/src/milter-spamc
 GNU_CONFIGURE=		yes
 MAKEFILE=		makefile
 USE_BUILDLINK3=		yes
+
+LICENSE=		snert-license
+RESTRICTED=		"Redistribution not permitted"
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/milter-spamc.sh ${PREFIX}/etc/rc.d
