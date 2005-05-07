@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10039 2005/05/06 20:58:59 wiz Exp $
+$NetBSD: CHANGES,v 1.10040 2005/05/07 02:22:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2308,3 +2308,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dcraw to 7.20 [markd 2005-05-06]
 	Updated ethereal to 0.10.11 [tron 2005-05-06]
 	Added p5-Schedule-Cron-Events-1.8 [epg 2005-05-06]
+	Updated getmail to 4.3.8 [schmonz 2005-05-07]
