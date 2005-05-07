@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.29 2005/04/11 19:02:07 tv Exp $
+# $NetBSD: url2pkg,v 1.30 2005/05/07 22:14:32 wiz Exp $
 #
 # url2pkg
 # (c) 1999-2002 Hubert Feyrer <hubert@feyrer.de>
@@ -203,4 +203,4 @@ fi
 echo ""
 echo "Remember to correct CATEGORIES, HOMEPAGE, COMMENT, and DESCR when you're done!"
 echo ""
-echo "Good luck! (See pkgsrc/Packages.txt for some more help :-)"
+echo "Good luck! (See pkgsrc/doc/pkgsrc.txt for some more help :-)"
