@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.8 2004/11/19 12:35:22 sketch Exp $
+$NetBSD: patch-ap,v 1.9 2005/05/07 08:31:16 recht Exp $
 
---- src/mntent_compat.c++.orig	2004-04-30 14:24:58.000000000 +0200
-+++ src/mntent_compat.c++	2004-04-30 14:28:45.000000000 +0200
+--- src/mntent_compat.c++.orig	2005-05-07 10:22:00.000000000 +0200
++++ src/mntent_compat.c++	2005-05-07 10:26:09.000000000 +0200
 @@ -0,0 +1,191 @@
 +/*
 + * Copyright (c) 1980, 1989, 1993, 1994
@@ -48,7 +48,7 @@ $NetBSD: patch-ap,v 1.8 2004/11/19 12:35:22 sketch Exp $
 +#include <sys/param.h>
 +#include <sys/ucred.h>
 +#include <sys/mount.h>
-+#ifdef HAVE_SYS_STATVFS_H
++#if defined(HAVE_SYS_STATVFS_H) && !defined(__APPLE__)
 +# include <sys/statvfs.h>
 +#endif
 +
@@ -144,7 +144,7 @@ $NetBSD: patch-ap,v 1.8 2004/11/19 12:35:22 sketch Exp $
 +}
 +
 +static struct mntent *
-+#ifdef HAVE_SYS_STATVFS_H
++#if defined(HAVE_SYS_STATVFS_H) && !defined(__APPLE__)
 +statfs_to_mntent (struct statvfs *mntbuf)
 +#else
 +statfs_to_mntent (struct statfs *mntbuf)
@@ -155,7 +155,7 @@ $NetBSD: patch-ap,v 1.8 2004/11/19 12:35:22 sketch Exp $
 +	_mntent.mnt_fsname = mntbuf->f_mntfromname;
 +	_mntent.mnt_dir = mntbuf->f_mntonname;
 +	_mntent.mnt_type = mntbuf->f_fstypename;
-+#ifdef HAVE_SYS_STATVFS_H
++#if defined(HAVE_SYS_STATVFS_H) && !defined(__APPLE__)
 +	tmp = flags2opts (mntbuf->f_flag);
 +#else
 +	tmp = flags2opts (mntbuf->f_flags);
@@ -175,7 +175,7 @@ $NetBSD: patch-ap,v 1.8 2004/11/19 12:35:22 sketch Exp $
 +struct mntent *
 +getmntent (FILE *fp)
 +{
-+#ifdef HAVE_SYS_STATVFS_H
++#if defined(HAVE_SYS_STATVFS_H) && !defined(__APPLE__)
 +	static struct statvfs *mntbuf;
 +#else
 +	static struct statfs *mntbuf;
