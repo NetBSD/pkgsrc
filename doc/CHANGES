@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10041 2005/05/07 11:03:56 abs Exp $
+$NetBSD: CHANGES,v 1.10042 2005/05/07 15:17:50 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2310,4 +2310,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Schedule-Cron-Events-1.8 [epg 2005-05-06]
 	Updated getmail to 4.3.8 [schmonz 2005-05-07]
 	Updated wwwoffle to 2.8e [abs 2005-05-06]
-
+	Updated ncftp3 to 3.1.9 [recht 2005-05-07]
