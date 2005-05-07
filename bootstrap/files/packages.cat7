@@ -33,7 +33,7 @@ CCOOMMMMOONN VVAARRIIAABBLLEESS
            MASTER_SITE_BACKUP
                       Backup location(s) for distribution files and patch
                       files if not found locally and ${MAS-
-                      TER_SITES}/${PATCH_SITES}.  The Defaults are
+                      TER_SITES}/${PATCH_SITES}.  The defaults are
                       _f_t_p_:_/_/_f_t_p_._N_e_t_B_S_D_._o_r_g_/_p_u_b_/_N_e_t_B_S_D_/_p_a_c_k_a_g_e_s_/_d_i_s_t_f_i_l_e_s_/_$_{_D_I_S_T___S_U_B_D_I_R_}_/
                       and
                       _f_t_p_:_/_/_f_t_p_._f_r_e_e_b_s_d_._o_r_g_/_p_u_b_/_F_r_e_e_B_S_D_/_d_i_s_t_f_i_l_e_s_/_$_{_D_I_S_T___S_U_B_D_I_R_}_/.
@@ -63,7 +63,7 @@ CCOOMMMMOONN VVAARRIIAABBLLEESS
                       local to every arch.  (It should be noted that
                       _$_{_P_K_G_S_R_C_D_I_R_} should not be set by the user - it is an
                       internal definition which refers to the root of the
-                      pkgsrc tree. It is possible to have many pkgsrc tree
+                      pkgsrc tree.  It is possible to have many pkgsrc tree
                       instances.)
 
            PKG_DEVELOPER
@@ -83,15 +83,15 @@ CCOOMMMMOONN VVAARRIIAABBLLEESS
 
            LOCALPATCHES
                       Directory for local patches that aren't part of pkgsrc.
-                      See pkgsrc/Packages.txt for more information.  ``rel''
+                      See _p_k_g_s_r_c_/_d_o_c_/_p_k_g_s_r_c_._t_x_t for more information.  ``rel''
                       and ``arch'' are replaced with OS release ( ``1.5'',
                       etc.) and architecture ( ``mipsel'', etc.).
 
            PKGMAKECONF
-                      Location of the mk.conf file used by a package's BSD-
+                      Location of the _m_k_._c_o_n_f file used by a package's BSD-
                       style Makefile.  If this is not set, MAKECONF is set to
                       _/_d_e_v_/_n_u_l_l to avoid picking up settings used by builds in
-                      /usr/src.
+                      _/_u_s_r_/_s_r_c.
 
 PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
      This section documents variables that typically apply to an individual
@@ -113,8 +113,8 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
                      and who is most likely to look at problems or questions
                      regarding this package which have been reported with
                      send-pr(1).  The right person to contact before making
-                     major changes to the package.  The default is pack-
-                     ages@NetBSD.org.
+                     major changes to the package.  The default is tech-
+                     pkg@NetBSD.org.
 
            CATEGORIES
                      A list of descriptive categories into which this package
@@ -161,8 +161,8 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
 
            PATCHFILES
                      Name(s) of additional files that contain distribution
-                     patches There is no default.  Make will look for them at
-                     PATCH_SITES (see above).  They will automatically be
+                     patches.  There is no default.  Make will look for them
+                     at PATCH_SITES (see above).  They will automatically be
                      uncompressed before patching if the names end with
                      ``.gz'' or ``.Z''.
 
@@ -183,7 +183,7 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
 
            SVR4_PKGNAME
                      Name of the package file to create if the _$_{_P_K_G_N_A_M_E_}
-                     isn't unique enough on a SVR4 system. The default is
+                     isn't unique enough on a SVR4 system.  The default is
                      _$_{_P_K_G_N_A_M_E_} which may be shortened when you use gensolpkg.
                      Only add SVR4_PKGNAME if _$_{_P_K_G_N_A_M_E_} does not produce an
                      unique package name on a SVR4 system.  The length of
@@ -191,8 +191,9 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
 
            PKGREVISION
                      This number indicates the package's revision within the
-                     NetBSD Packages Collection (pkgsrc). If set, this will be
-                     attached to the PKGNAME variable separated by a "nb".
+                     NetBSD Packages Collection (pkgsrc).  If set, this will
+                     be attached to the PKGNAME variable separated by a
+                     ``nb''.
 
            EXTRACT_ONLY
                      If defined, a subset of _$_{_D_I_S_T_F_I_L_E_S_} you want to actually
@@ -246,22 +247,22 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
 
            INSTALL_FILE
                      The name of a script which will be invoked when
-                     installing binary packages. If there is a file called
+                     installing binary packages.  If there is a file called
                      _$_{_P_K_G_D_I_R_}_/_I_N_S_T_A_L_L, that file will be used.
 
            DEINSTALL_FILE
                      The name of a script which will be invoked when de-
-                     installing binary packages. If there is a file called
+                     installing binary packages.  If there is a file called
                      _$_{_P_K_G_D_I_R_}_/_D_E_I_N_S_T_A_L_L, that file will be used.
 
            MESSAGE   The name of a file which will be displayed during the
-                     installation of a package. No substitution according to
-                     MESSAGE_SUBST takes place. Overrides MESSAGE_SRC. Should
-                     not be used.
+                     installation of a package.  No substitution according to
+                     MESSAGE_SUBST takes place.  Overrides MESSAGE_SRC.
+                     Should not be used.
 
            MESSAGE_SRC
                      The name of a file which will be displayed when
-                     installing a package. If neither MESSAGE_SRC nor MESSAGE
+                     installing a package.  If neither MESSAGE_SRC nor MESSAGE
                      are set, and there is a file called _$_{_P_K_G_D_I_R_}_/_M_E_S_S_A_G_E,
                      that file will be used.  Before displaying the file, sub-
                      stitution according to MESSAGE_SUBST takes place.
@@ -314,7 +315,7 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
                      binaries, ...).
 
            MAKEFILE  Name of the Makefile in ${WRKSRC}, used in the default
-                     build and install targets. Default: ``Makefile''.
+                     build and install targets.  Default: ``Makefile''.
 
            BROKEN    Package is broken.  Set this string to the reason why.
 
@@ -323,9 +324,9 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
                      why.
 
            LICENCE   The package has a non-standard licence, such as share-
-                     ware, or non-commercial-use only. This string should be
+                     ware, or non-commercial-use only.  This string should be
                      set to the type of licence the package has, like "share-
-                     ware", or "non-commercial-use". If LICENCE is set, the
+                     ware", or "non-commercial-use".  If LICENCE is set, the
                      ACCEPTABLE_LICENCES variable will be searched, if set,
                      for a string matching the licence.
 
@@ -342,7 +343,7 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
 
            UNLIMIT_RESOURCES
                      List of process limits which need to be raised to hard
-                     limits for building this package. So far "datasize" and
+                     limits for building this package.  So far "datasize" and
                      "stacksize" are supported.
 
            USE_LIBTOOL
@@ -367,7 +368,7 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
                      ning.
 
            PERL5_REQD
-                     Sets the minimum _p_e_r_l_5 version required. The default is
+                     Sets the minimum _p_e_r_l_5 version required.  The default is
                      5.0.
 
            USE_IMAKE
@@ -377,8 +378,8 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
                      include all Mesa components that are not included in the
                      installed X11 distribution.
 
-           USE_SSL   Says that the package uses a SSL library. The location of
-                     the SSL installation can be found in ${SSLBASE}.
+           USE_SSL   Says that the package uses a SSL library.  The location
+                     of the SSL installation can be found in ${SSLBASE}.
 
            USE_X11BASE
                      Says that the package installs itself into the X11 base
@@ -388,7 +389,7 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
 
            USE_XAW   Says that the package uses the Athena widget set.
 
-           USE_XPM   Says that the package uses the Xpm library. If it is not
+           USE_XPM   Says that the package uses the Xpm library.  If it is not
                      included in the installed X11 distribution the xpm pack-
                      age will be used.
 
@@ -458,23 +459,37 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
 
            RUN_DEPENDS
                      This definition is deprecated, and is no longer used in
-                     the packages collection. It should be replaced by a sim-
+                     the packages collection.  It should be replaced by a sim-
                      ple ``DEPENDS'' definition.
 
            LIB_DEPENDS
                      This definition is deprecated, and is no longer used in
-                     the packages collection. It should be replaced by a sim-
+                     the packages collection.  It should be replaced by a sim-
                      ple ``DEPENDS'' definition.
 
-           DEPENDS   A list of prerequisite packages. The format of this entry
-                     is ``pkgname:dir''.  If the ``pkgname'' package is not
-                     installed, then it will be built and installed from the
-                     source package in ``dir''.
+           DEPENDS   A list of pre-requisite packages.  The format of this
+                     entry is ``pkgname:dir''.  If the ``pkgname'' package is
+                     not installed, then it will be built and installed from
+                     the source package in ``dir''.
 
            CONFLICTS
-                     A list of other ports this package conflicts with. Use
+                     A list of other ports this package conflicts with.  Use
                      this for packages that install identical set of files.
                      The format of this entry is ``pkgname''.
+
+           RECOMMENDED
+                     A list of recommended versions of pre-requisite packages.
+                     This should be used together with ``DEPENDS'' to denote
+                     which version of a pre-requisite is required and which
+                     version is recommended.  The format of this entry is
+                     ``pkgname:dir'', the same as for ``DEPENDS''.
+
+           IGNORE_RECOMMENDED
+                     If this is set to ``NO'' (the default), then RECOMMENDED
+                     pre-requisites will be turned into dependencies.  If set
+                     to ``YES'', recommendations will be ignored and a warning
+                     will be printed that packages created with this option
+                     are not suitable for distribution.
 
            EXTRACT_CMD
                      Command for extracting archive.  The default is tar(1).
@@ -494,7 +509,7 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
 
            __PLATFORM_OK
                      Internal variable set if the package is ok to build on
-                     this architecture. Set to ``YES'' to insist on e.g.
+                     this architecture.  Set to ``YES'' to insist on e.g.
                      fetching all distfiles (for interactive use in
                      _$_{_P_K_G_S_R_C_D_I_R_}, mostly.
 
@@ -660,7 +675,7 @@ MMAANNUUAALL PPAAGGEE VVAARRIIAABBLLEESS
 
            INFO_FILES
                      set to the base names of the info files you wish to be
-                     installed in the info dir file. Automatically sets
+                     installed in the info dir file.  Automatically sets
                      USE_GTEXINFO.
 
 PPAACCKKAAGGEE TTAARRGGEETTSS
@@ -691,7 +706,7 @@ PPAACCKKAAGGEE TTAARRGGEETTSS
                      Install a binary package from local disk and via FTP from
                      a list of sites (see ``BINPKG_SITES'' variable), and do a
                      ``make package'' if no binary package is available any-
-                     where. The arguments given to pkg_add(1) can be set via
+                     where.  The arguments given to pkg_add(1) can be set via
                      ``BIN_INSTALL_FLAGS'', e.g., to do verbose operation,
                      etc.
 
@@ -730,11 +745,12 @@ PPAACCKKAAGGEE TTAARRGGEETTSS
            makesum   Generate _f_i_l_e_s_/_m_d_5 (only do this for your own packages!).
 
            readme    Create a README.html file describing the category or
-                     package. See _$_{_P_K_G_S_R_C_D_I_R_}_/_P_a_c_k_a_g_e_s_._t_x_t for more details.
+                     package.  See _$_{_P_K_G_S_R_C_D_I_R_}_/_d_o_c_/_p_k_g_s_r_c_._t_x_t for more
+                     details.
 
            mirror-distfiles
                      Mirror the distfile(s) if they are freely re-dis-
-                     tributable. If NO_SRC_ON_FTP is set in the package's
+                     tributable.  If NO_SRC_ON_FTP is set in the package's
                      Makefile (usually to _$_{_R_E_S_T_R_I_C_T_E_D_}) then that reason is
                      printed, and the distfile is not mirrored.
 
@@ -745,13 +761,13 @@ PPAACCKKAAGGEE TTAARRGGEETTSS
      can of worms.
 
 SSEEEE AALLSSOO
-     make(1), mk.conf(5), _$_{_P_K_G_S_R_C_D_I_R_}_/_m_k_/_b_s_d_._p_k_g_._d_e_f_a_u_l_t_s_._m_k and
+     make(1), mk.conf(5), _$_{_P_K_G_S_R_C_D_I_R_}_/_m_k_/_d_e_f_a_u_l_t_s_/_m_k_._c_o_n_f and
 
-     _D_o_c_u_m_e_n_t_a_t_i_o_n _o_n _t_h_e _N_e_t_B_S_D _P_a_c_k_a_g_e _S_y_s_t_e_m.  _$_{_P_K_G_S_R_C_D_I_R_}_/_P_a_c_k_a_g_e_s_._t_x_t
+     _D_o_c_u_m_e_n_t_a_t_i_o_n _o_n _t_h_e _N_e_t_B_S_D _P_a_c_k_a_g_e _S_y_s_t_e_m.  _$_{_P_K_G_S_R_C_D_I_R_}_/_d_o_c_/_p_k_g_s_r_c_._t_x_t
 
 HHIISSTTOORRYY
      This manual page is based upon the comments in the _b_s_d_._p_k_g_._m_k file, as
      distributed with NetBSD.  The sources to this are far and varied across
      all free BSD projects.
 
-NetBSD 1.6                    September 15, 2003                    NetBSD 1.6
+NetBSD 2.0                      March 12, 2005                      NetBSD 2.0
