@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.3 2004/12/02 22:20:34 dillo Exp $ -->
+<!-- $NetBSD: components.xml,v 1.4 2005/05/07 15:28:40 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -11,27 +11,54 @@
     <title><filename>Makefile</filename></title>
 
     <para>Building, installation and creation of a binary package are all
-      controlled by the package's <filename>Makefile</filename>.</para>
+      controlled by the package's <filename>Makefile</filename>.
+      The <filename>Makefile</filename> describes various things about
+      a package, for example from where to get it, how to configure,
+      build, and install it.
+    </para>
 
-    <para>There is a <filename>Makefile</filename> for each package.
-      This file includes the standard
-      <filename>bsd.pkg.mk</filename> file (referenced as
-      <filename>../../mk/bsd.pkg.mk</filename>), which sets all the
-      definitions and actions necessary for the package to compile and
-      install itself. The mandatory variables are the
-      <varname>DISTNAME</varname> which specifies the base name
-      of the distribution file to be downloaded from the site on the
-      Internet, <varname>MASTER_SITES</varname> which specifies that site,
-      <varname>CATEGORIES</varname> which denotes the
-      categories into which the package falls, <varname>PKGNAME</varname>
-      which is the name of the package, the <varname>MAINTAINER</varname>'s
-      name, and the <varname>COMMENT</varname> variable, which should
-      contain a one-line description of the package (the package name
-      should not appear, it will be added automatically). The maintainer
-      variable is there so that anyone who quibbles with the (always
-      completely correct) decisions taken by the guy who maintains the
-      package can complain vigorously, or send chocolate as a sign of
-      appreciation.</para>
+    <para>A package <filename>Makefile</filename> contains several
+     sections that describe the package.</para>
+
+    <para>In the first section there are the following variables, which
+      should appear exactly in the order given here.
+      <itemizedlist>
+
+      <listitem><para><varname>DISTNAME</varname> is the basename of the
+      distribution file to be downloaded from the package's
+      website.</para></listitem>
+
+      <listitem><para><varname>PKGNAME</varname> is the name of the package,
+      as used by pkgsrc. You only need to provide it if it differs from
+      DISTNAME. Usually it is the directory name together with the
+      version number.</para></listitem>
+
+      <listitem><para><varname>CATEGORIES</varname> is a list of categories
+      which the package fits in. You can choose any of the top-level
+      directories of pkgsrc for it.</para></listitem>
+
+      <listitem><para><varname>MASTER_SITES</varname> is a list of URLs where
+      the distribution files can be downloaded. Each URL must end with a
+      slash.</para></listitem>
+
+      </itemizedlist>
+    </para>
+
+    <para>The second section contains the following variables.
+      <itemizedlist>
+
+      <listitem><para><varname>MAINTAINER</varname> is the mail address of the
+      package's maintainer, which is the person you can contact when the
+      package does not work.</para></listitem>
+
+      <listitem><para><varname>HOMEPAGE</varname> is a URL where users can
+      find more information about the package.</para></listitem>
+
+      <listitem><para><varname>COMMENT</varname> is a one-line comment about
+      the purpose of the package.</para></listitem>
+
+      </itemizedlist>
+    </para>
 
     <para>The <varname>MASTER_SITES</varname> may be set to one of the
       predefined sites:</para>
