@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3470 2005/05/06 21:12:09 wiz Exp $
+$NetBSD: TODO,v 1.3471 2005/05/07 02:51:49 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1248,3 +1248,6 @@ Suggested cleanups in pkgsrc
 
 	o Fix packages installing manual pages under share/man to install
 	  them directly under man.
+
+	o Convert packages to use generic install scripts where possible
+	  (for example, mail/majordomo).
