@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $NetBSD: pkg_regress.sh,v 1.2 2004/10/13 13:42:23 gavan Exp $
+# $NetBSD: pkg_regress.sh,v 1.3 2005/05/07 15:46:00 gavan Exp $
 #
 
 if [ -z "$PKGSRCDIR" ]
@@ -21,6 +21,23 @@ do_setup()
 do_cleanup()
 {
 	return
+}
+
+do_test()
+{
+	do_test_default
+}
+
+do_test_default()
+{
+	# Run the test. We use an if statement to ensure that the script
+	# isn't terminated if it is executed with sh -e.
+	if ${TEST_MAKE} ${MAKEARGS_TEST} >${TEST_OUTFILE} 2>&1
+	then
+	    TEST_EXITSTATUS=$?
+	else
+	    TEST_EXITSTATUS=$?
+	fi
 }
 
 check_result()
@@ -75,14 +92,7 @@ runtest() {
 
 	do_setup
 
-	# Run the test. We use an if statement to ensure that the script
-	# isn't terminated if it is executed with sh -e.
-	if ${TEST_MAKE} ${MAKEARGS_TEST} >${TEST_OUTFILE} 2>&1
-	then
-	    TEST_EXITSTATUS=$?
-	else
-	    TEST_EXITSTATUS=$?
-	fi
+	do_test
 
 	check_result
 
