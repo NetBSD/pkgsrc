@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.5 2005/02/24 14:24:32 jschauma Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.6 2005/05/07 15:28:40 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
   <title>Frequently Asked Questions</title>
@@ -348,7 +348,7 @@ http_proxy=http://orpheus.amdahl.com:80/</programlisting>
     <para> The answer here is to do a <command>make
       fetch-list</command> in <filename>/usr/pkgsrc</filename> or one
       of it's subdirectories, carry the resulting list to your machine
-      at work/school and use it there If you don't have a
+      at work/school and use it there. If you don't have a
       NetBSD-compatible ftp(1) (like lukemftp) at work, don't forget
       to set <varname>FETCH_CMD</varname> to something that fetches a
       URL: </para>
@@ -388,8 +388,9 @@ http_proxy=http://orpheus.amdahl.com:80/</programlisting>
     <para> When compiling the <pkg>pkgtools/pkg_install</pkg> package,
       you get the error from make that it doesn't know how to make
       <filename>/usr/share/tmac/tmac.andoc</filename>? This indicates
-      that you don't have installed the <quote>text</quote> set on
-      your machine (nroff, ...). It is recommended to do that to
+      that you don't have installed the <quote>text</quote> set
+      (nroff, ...) from the NetBSD base distribution on
+      your machine. It is recommended to do that to
       format manpages.  </para>
 
     <para> In the case of the <pkg>pkgtools/pkg_install</pkg> package,
@@ -430,8 +431,8 @@ http_proxy=http://orpheus.amdahl.com:80/</programlisting>
       <filename>/etc/mk.conf</filename>: </para>
 
     <programlisting>
-        .if exists(/usr/pkg/bin/sudo)
-        SU_CMD=/usr/pkg/bin/sudo /bin/sh -c
+        .if exists(${LOCALBASE}/bin/sudo)
+        SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
         .endif
     </programlisting>
 </sect1>
@@ -573,44 +574,21 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc</programlisting>
 
       <listitem>
         <para> <quote>audit-packages</quote>, an easy way to audit the
-          current machine, checking       each vulnerability which is
-          known. If a vulnerable package is       installed, it will
-          be shown by output to stdout, including a       description
+          current machine, checking each vulnerability which is
+          known. If a vulnerable package is installed, it will
+          be shown by output to stdout, including a description
           of the type of vulnerability, and a URL containing more
           information.  </para> 
       </listitem>
     </orderedlist>
 
-    <para> Use of the audit-packages package is strongly recommended!
+    <para> Use of the <pkg>security/audit-packages</pkg> package is
+        strongly recommended!
+        After <quote>audit-packages</quote> is installed, please read
+        the package's message, which you can get by running
+        <userinput>pkg_info -D audit-package</userinput>.
       </para>
 
-    <para> The following message is displayed as part of the
-      audit-packages installation procedure: </para>
-
-    <screen>
-===========================================================================
-$NetBSD: faq.xml,v 1.5 2005/02/24 14:24:32 jschauma Exp $
-
-You may wish to have the vulnerabilities file downloaded daily so that
-it remains current.  This may be done by adding an appropriate entry
-to the root users crontab(5) entry.  For example the entry
-
-# download vulnerabilities file
-0 3 * * * ${PREFIX}/sbin/download-vulnerability-list >/dev/null 2>&1
-
-will update the vulnerability list every day at 3AM. You may wish to do
-this more often than once a day.
-
-In addition, you may wish to run the package audit from the daily
-security script.  This may be accomplished by adding the following
-lines to /etc/security.local
-
-if [ -x ${PREFIX}/sbin/audit-packages ]; then
-          ${PREFIX}/sbin/audit-packages
-fi
-
-===========================================================================
-    </screen>
   </sect1>
 
 </chapter>
