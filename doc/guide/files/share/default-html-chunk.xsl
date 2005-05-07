@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding="iso-8859-1"?>
 
-<!-- $NetBSD: default-html-chunk.xsl,v 1.1.1.1 2004/10/21 14:27:43 grant Exp $ -->
+<!-- $NetBSD: default-html-chunk.xsl,v 1.2 2005/05/07 22:40:25 wiz Exp $ -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 version='1.0'
                 xmlns="http://www.w3.org/TR/xhtml1/transitional"
                 exclude-result-prefixes="#default">
 
-  <xsl:import href="../master-chunk.xsl"/>
+  <xsl:import href="http://www.NetBSD.org/XML/htdocs/share/xsl/netbsd-docbook-html-chunk.xsl" />
 </xsl:stylesheet>
