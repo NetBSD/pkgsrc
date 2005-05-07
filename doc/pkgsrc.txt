@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright (C) 1994-2004 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.3 2004/10/22 00:24:48 hubertf Exp $
+$NetBSD: pkgsrc.xml,v 1.4 2005/05/07 22:28:47 wiz Exp $
 
 Abstract
 
@@ -946,7 +946,7 @@ consult your CDROMs documentation for the exact location.
 
 4.1.2. How to use binary packages
 
-If you have the files on a CDROM or downloaded them to your hard disk, youcan
+If you have the files on a CDROM or downloaded them to your hard disk, you can
 install them with the following command (be sure tosu to root first):
 
 # pkg_add /path/to/package.tgz
@@ -962,6 +962,20 @@ and <arch> by running uname -rp.
 
 Also note that any prerequisite packages needed to run the package in question
 will be installed, too, assuming they are present where you install from.
+
+To save some typing, you can set the PKG_PATH environment variable to a
+semicolon separated list of paths (including remote URLs); trailing slashes are
+not allowed.
+
+Additionally to the All directory there exists a vulnerable directory to which
+binary packages with known vulnerabilities are moved, since removing them could
+cause missing dependencies. To use these packages, add the vulnerable directory
+to your PKG_PATH. However, you should run security/audit-packages regularly,
+and especially after installing new packages, and verify that the
+vulnerabilities are acceptable for your configuration. An example PKG_PATH
+would be: ftp://ftp.NetBSD.org/pub/NetBSD/packages/<OSvers>/<arch>/All;ftp://
+ftp.NetBSD.org/pub/NetBSD/packages/<OSvers>/<arch>/vulnerable Please note that
+semicolon (';') is a shell meta-character, so you'll probably have to quote it.
 
 After you've installed packages, be sure to have /usr/pkg/bin in your PATH so
 you can actually start the just installed program.
@@ -1164,7 +1178,7 @@ See Section 11.3, "Other helpful targets".
 
 If you want to get a full set of precompiled binary packages, this section
 describes how to get them. Beware that the bulk build will remove all currently
-installed packages from your system! Having a FTP server configured either on
+installed packages from your system! Having an FTP server configured either on
 the machine doing the bulk builds or on a nearby NFS server can help to make
 the packages available to everyone. See ftpd(8) for more information. If you
 use a remote NFS server's storage, be sure to not actually compile on NFS
@@ -1174,8 +1188,8 @@ storage, as this slows things down a lot.
 
 5.3.1.1. /etc/mk.conf
 
-You may want to set things in /etc/mk.conf. Look at pkgsrc/mk/defaults/mk.conf
-for details of the default settings. You will want to ensure that
+You may want to set variables in /etc/mk.conf. Look at pkgsrc/mk/defaults/
+mk.conf for details of the default settings. You will want to ensure that
 ACCEPTABLE_LICENSES meet your local policy. As used in this example,
 _ACCEPTABLE=yes accepts all licenses.
 
@@ -1193,17 +1207,18 @@ _ACCEPTABLE=    yes
 In pkgsrc/mk/bulk, copy build.conf-example to build.conf and edit it, following
 the comments in that file. This is the config file that determines where log
 files are generated after the build, where to mail the build report to, where
-your pkgsrc tree is located and which user to su(8) to to do a cvs update.
+your pkgsrc tree is located and the user to which user to su(8) to do a cvs
+update.
 
 5.3.1.3. pre-build.local
 
 It is possible to configure the bulk build to perform certain site specific
 tasks at the end of the pre-build stage. If the file pre-build.local exists in
-/usr/pkgsrc/mk/bulk it will be executed (as a sh(1) script) at the end of the
+/usr/pkgsrc/mk/bulk, it will be executed (as a sh(1) script) at the end of the
 usual pre-build stage. An example use of pre-build.local is to have the line:
 
 # echo "I do not have enough disk space to build this pig." \
-    > pkgsrc/games/crafty-book-enormous/$BROKENF
+    > pkgsrc/misc/openoffice/$BROKENF
 
 to prevent the system from trying to build a particular package which requires
 nearly 3 GB of disk space.
@@ -1296,8 +1311,8 @@ wasted by recompiling.
 5.3.6. Setting up a sandbox for chroot'ed builds
 
 If you don't want all the packages nuked from a machine (rendering it useless
-for anything but pkg compiling), there is the possibility of doing the pkg bulk
-build inside a chroot environment.
+for anything but pkg compiling), there is the possibility of doing the package
+bulk build inside a chroot environment.
 
 The first step is to set up a chroot sandbox, e.g. /usr/sandbox. This can be
 done by using null mounts, or manually.
@@ -1335,7 +1350,7 @@ src/etc, be sure the following items are present and properly configured:
  6. /usr/src (system sources, for sysutils/aperture, net/ppp-mppe):
 
     # ln -s ../disk1/cvs .
-    # ln -s cvs/src-1.6 src
+    # ln -s cvs/src-2.0 src
 
  7. Create /var/db/pkg (not part of default install):
 
@@ -1407,7 +1422,7 @@ build.conf.
 
 If you would like to PGP sign the checksum files (highly recommended!),
 remember to set SIGN_AS=username@NetBSD.org in your mk/bulk/build.conf. This
-will prompt you for your gpg password to sign the files before uploading
+will prompt you for your GPG password to sign the files before uploading
 everything.
 
 Then, make sure that you have RSYNC_DST set properly in your mk/bulk/build.conf
@@ -1415,7 +1430,7 @@ file, i.e. adjust it to something like one of the following:
 
 RSYNC_DST=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload
 
-Please use appropviate values for "pkgsrc-200xQ4", "NetBSD-a.b.c" and "arch"
+Please use appropviate values for "pkgsrc-200xQy", "NetBSD-a.b.c" and "arch"
 here. If your login on ftp.NetBSD.org is different from CVS_USER, write your
 login directly into the variable, e.g. my local account is "feyrer", but for my
 login "hubertf", I use:
@@ -1431,8 +1446,8 @@ Please note that /pub/NetBSD/packages is only appropriate for packages for the
 NetBSD operating system. Binary packages for other operating systems should go
 into /pub/pkgsrc.
 
-Before uploading the binary pkgs, ssh authentication needs to be setup next.
-This example shows how to setup temporary keys for the root account inside the
+Before uploading the binary pkgs, ssh authentication needs to be set up. This
+example shows how to setup temporary keys for the root account inside the
 sandbox (assuming that no keys should be present there usually):
 
 # chroot /usr/sandbox
@@ -1709,7 +1724,7 @@ on ftp.NetBSD.org, but downloading the entire directory may not be appropriate.
 
 The answer here is to do a make fetch-list in /usr/pkgsrc or one of it's
 subdirectories, carry the resulting list to your machine at work/school and use
-it there If you don't have a NetBSD-compatible ftp(1) (like lukemftp) at work,
+it there. If you don't have a NetBSD-compatible ftp(1) (like lukemftp) at work,
 don't forget to set FETCH_CMD to something that fetches a URL:
 
 At home:
@@ -1740,8 +1755,8 @@ everything by running:
 
 When compiling the pkgtools/pkg_install package, you get the error from make
 that it doesn't know how to make /usr/share/tmac/tmac.andoc? This indicates
-that you don't have installed the "text" set on your machine (nroff, ...). It
-is recommended to do that to format manpages.
+that you don't have installed the "text" set (nroff, ...) from the NetBSD base
+distribution on your machine. It is recommended to do that to format manpages.
 
 In the case of the pkgtools/pkg_install package, you can get away with setting
 NOMAN=YES either in the environment or in /etc/mk.conf.
@@ -1766,8 +1781,8 @@ does password caching over a limited time. To use it, install sudo (either as
 binary package or from security/sudo) and then put the following into your /etc
 /mk.conf:
 
-        .if exists(/usr/pkg/bin/sudo)
-        SU_CMD=/usr/pkg/bin/sudo /bin/sh -c
+        .if exists(${LOCALBASE}/bin/sudo)
+        SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
         .endif
 
 
@@ -1855,34 +1870,9 @@ packages installed on a system can take place. To do this, install the security
     be shown by output to stdout, including a description of the type of
     vulnerability, and a URL containing more information.
 
-Use of the audit-packages package is strongly recommended!
-
-The following message is displayed as part of the audit-packages installation
-procedure:
-
-===========================================================================
-$NetBSD: faq.xml,v 1.5 2005/02/24 14:24:32 jschauma Exp $
-
-You may wish to have the vulnerabilities file downloaded daily so that
-it remains current.  This may be done by adding an appropriate entry
-to the root users crontab(5) entry.  For example the entry
-
-# download vulnerabilities file
-0 3 * * * ${PREFIX}/sbin/download-vulnerability-list >/dev/null 2>&1
-
-will update the vulnerability list every day at 3AM. You may wish to do
-this more often than once a day.
-
-In addition, you may wish to run the package audit from the daily
-security script.  This may be accomplished by adding the following
-lines to /etc/security.local
-
-if [ -x ${PREFIX}/sbin/audit-packages ]; then
-          ${PREFIX}/sbin/audit-packages
-fi
-
-===========================================================================
-
+Use of the security/audit-packages package is strongly recommended! After
+"audit-packages" is installed, please read the package's message, which you can
+get by running pkg_info -D audit-package.
 
 The pkgsrc developer's guide
 
@@ -2013,21 +2003,35 @@ are described in the following sections.
 7.1. Makefile
 
 Building, installation and creation of a binary package are all controlled by
-the package's Makefile.
+the package's Makefile. The Makefile describes various things about a package,
+for example from where to get it, how to configure, build, and install it.
 
-There is a Makefile for each package. This file includes the standard
-bsd.pkg.mk file (referenced as ../../mk/bsd.pkg.mk), which sets all the
-definitions and actions necessary for the package to compile and install
-itself. The mandatory variables are the DISTNAME which specifies the base name
-of the distribution file to be downloaded from the site on the Internet,
-MASTER_SITES which specifies that site, CATEGORIES which denotes the categories
-into which the package falls, PKGNAME which is the name of the package, the
-MAINTAINER's name, and the COMMENT variable, which should contain a one-line
-description of the package (the package name should not appear, it will be
-added automatically). The maintainer variable is there so that anyone who
-quibbles with the (always completely correct) decisions taken by the guy who
-maintains the package can complain vigorously, or send chocolate as a sign of
-appreciation.
+A package Makefile contains several sections that describe the package.
+
+In the first section there are the following variables, which should appear
+exactly in the order given here.
+
+  * DISTNAME is the basename of the distribution file to be downloaded from the
+    package's website.
+
+  * PKGNAME is the name of the package, as used by pkgsrc. You only need to
+    provide it if it differs from DISTNAME. Usually it is the directory name
+    together with the version number.
+
+  * CATEGORIES is a list of categories which the package fits in. You can
+    choose any of the top-level directories of pkgsrc for it.
+
+  * MASTER_SITES is a list of URLs where the distribution files can be
+    downloaded. Each URL must end with a slash.
+
+The second section contains the following variables.
+
+  * MAINTAINER is the mail address of the package's maintainer, which is the
+    person you can contact when the package does not work.
+
+  * HOMEPAGE is a URL where users can find more information about the package.
+
+  * COMMENT is a one-line comment about the purpose of the package.
 
 The MASTER_SITES may be set to one of the predefined sites:
 
@@ -2796,7 +2800,7 @@ supported. This variable should be set in /etc/mk.conf.
 
 10.2. Converting packages to use bsd.options.mk
 
-The following example shows how bsd.options.mk should be use in a package
+The following example shows how bsd.options.mk should be used in a package
 Makefile, or in a file, e.g. options.mk, that is included by the main package
 Makefile.
 
@@ -3797,8 +3801,8 @@ Here's how to use libtool in a pkg in seven simple steps:
     This will install the static .a, shared library, any needed symlinks, and
     run ldconfig(8).
 
- 7. In your PLIST, include all of the .a, .la, and .so, .so.CURRENT and
-    .so.CURRENT.REVISION files (this is a change from the previous behaviour).
+ 7. In your PLIST, include only the .la file (this is a change from previous
+    behaviour).
 
 12.3.2. Using libtool on GNU packages that already support libtool
 
@@ -4885,7 +4889,7 @@ D.1. Targets
 The pkgsrc guide's source code is stored in pkgsrc/doc/guide/files, and several
 files are created from it:
 
-  * pkgsrc/doc/pkgsrc.txt, which replaces pkgsrc/Packages.txt
+  * pkgsrc/doc/pkgsrc.txt
 
   * pkgsrc/doc/pkgsrc.html
 
