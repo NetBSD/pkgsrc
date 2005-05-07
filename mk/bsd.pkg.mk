@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1628 2005/05/07 19:32:56 reed Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1629 2005/05/07 22:17:40 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -891,7 +891,7 @@ CONFIG_STATUS_OVERRIDE?=	\
 .endif
 
 #
-# Config file related settings - see Packages.txt
+# Config file related settings - see doc/pkgsrc.txt
 #
 PKG_SYSCONFVAR?=	${PKGBASE}
 PKG_SYSCONFSUBDIR?=	# empty

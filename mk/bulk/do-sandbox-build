@@ -1,10 +1,10 @@
 #!/bin/sh
-#	$NetBSD: do-sandbox-build,v 1.9 2005/01/25 08:47:55 grant Exp $
+#	$NetBSD: do-sandbox-build,v 1.10 2005/05/07 22:16:38 wiz Exp $
 
 #
 # Script to start a sandbox build
 #
-# See pkgsrc/Packages.txt for documentation!
+# See pkgsrc/doc/pkgsrc.txt for documentation!
 #
 
 sh=`which sh`
