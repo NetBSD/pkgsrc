@@ -1,6 +1,4 @@
-<!-- $NetBSD: pkgsrc.xml,v 1.3 2004/10/22 00:24:48 hubertf Exp $ -->
-<!-- From: -->
-<!-- NetBSD: Packages.txt,v 1.362 2004/10/16 00:41:40 dan Exp $ -->
+<!-- $NetBSD: pkgsrc.xml,v 1.4 2005/05/07 22:28:47 wiz Exp $ -->
 
 
 <?xml version="1.0"?>
@@ -47,7 +45,7 @@
       <holder role="mailto:www@NetBSD.org">The NetBSD Foundation, Inc</holder>
     </copyright>
 
-    <pubdate>$NetBSD: pkgsrc.xml,v 1.3 2004/10/22 00:24:48 hubertf Exp $</pubdate>
+    <pubdate>$NetBSD: pkgsrc.xml,v 1.4 2005/05/07 22:28:47 wiz Exp $</pubdate>
 
     <abstract>
       <para>Information about using the NetBSD package system (pkgsrc)
