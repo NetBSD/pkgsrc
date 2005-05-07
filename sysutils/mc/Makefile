@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2005/04/11 21:47:25 tv Exp $
+# $NetBSD: Makefile,v 1.54 2005/05/07 22:07:39 rillig Exp $
 
 DISTNAME=	mc-4.6.1-pre4a
 PKGNAME=	mc-4.6.1rc4
@@ -14,7 +14,6 @@ COMMENT=	User-friendly file manager and visual shell
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
-CPPFLAGS.NetBSD+=	-D__unix__
 
 # see options.mk for an explanation of these options
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mc
