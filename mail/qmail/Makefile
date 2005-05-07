@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/04/30 15:06:58 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2005/05/07 21:37:42 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -39,7 +39,7 @@ NO_PACKAGE=		"needs work to function properly as a binary package"
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${PKGDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${PKGDIR}/INSTALL
-MAKE_DIRS+=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/alias ${EGDIR}/boot
+MAKE_DIRS+=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/alias
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/control ${DOCDIR}
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/users
 OWN_DIRS+=		${QMAILDIR} ${QMAIL_QUEUE_DIR}
@@ -67,7 +67,7 @@ MANDIRS+=		man/${i}${j}
 .  endfor
 .endfor
 INSTALLATION_DIRS=	bin ${MANDIRS}
-INSTALLATION_DIRS+=	share/doc/qmail share/examples/qmail share/qmail
+INSTALLATION_DIRS+=	share/doc/qmail share/examples/qmail/boot share/qmail
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -81,7 +81,7 @@ PKG_FAIL_REASON+=	"QMAIL_QUEUE_DIR must not be under ${QMAILDIR}"
 
 .if !empty(QMAIL_QUEUE_EXTRA)
 QUEUE_EXTRA=		"T${QMAIL_QUEUE_EXTRA}\\0"
-QUEUE_EXTRALEN_cmd=	${EXPR} `${ECHO} ${QUEUE_EXTRA} | ${WC} -c` - 2
+QUEUE_EXTRALEN_cmd=	${EXPR} `${ECHO_N} ${QMAIL_QUEUE_EXTRA} | ${WC} -c` + 2
 SUBST_CLASSES+=		logging
 SUBST_STAGE.logging=	do-configure
 SUBST_FILES.logging=	extra.h
