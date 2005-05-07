@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3472 2005/05/07 11:03:56 abs Exp $
+$NetBSD: TODO,v 1.3473 2005/05/07 22:36:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -810,7 +810,6 @@ Suggested package updates
 	o pdmenu-1.2.85
 	o pear-HTTP_Request-1.2.4
 	o pear-Net_Socket-1.0.6
-	o pear-SOAP-0.8.1
 	o pen-0.15.0
 	o perl-5.6.2
 	o pfqueue-0.3.6
