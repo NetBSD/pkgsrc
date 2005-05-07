@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/07 15:45:59 gavan Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/07 22:24:04 wiz Exp $
 
 DISTNAME=	pkg_regress-0.1
 CATEGORIES=	pkgtools
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	gavan@NetBSD.org
-HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/Packages.txt
+HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Run pkgsrc infrastructure regression test suite
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

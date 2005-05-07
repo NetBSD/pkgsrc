@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2005/04/11 21:47:05 tv Exp $
+# $NetBSD: Makefile,v 1.54 2005/05/07 22:24:04 wiz Exp $
 #
 
 DISTNAME=	pkgdiff-0.116
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/Packages.txt
+HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Tools to create, maintain and send back patches for pkgsrc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
