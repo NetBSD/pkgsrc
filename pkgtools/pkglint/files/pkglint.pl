@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.142 2005/05/07 15:10:24 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.143 2005/05/07 21:22:40 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1354,12 +1354,14 @@ sub checkfile_Makefile($) {
 	# whole file: direct use of command names
 	#
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking direct use of command names.");
-	foreach my $i (split(/\s+/, <<EOF)) {
-awk basename cat chmod chown chgrp cmp cp cut digest dirname echo egrep false
-file find gmake grep gtar gzcat id ident install ldconfig ln md5 mkdir mtree mv
-patch pax pkg_add pkg_create pkg_delete pkg_info rm rmdir sed setenv sh sort
-su tail test touch tr true type wc xmkmf
-EOF
+	my @command_names = qw(
+		awk basename cat chmod chown chgrp cmp cp cut digest
+		dirname echo egrep false file find gmake grep gtar gzcat
+		id ident install ldconfig ln md5 mkdir mtree mv patch
+		pax pkg_add pkg_create pkg_delete pkg_info rm rmdir sed
+		setenv sh sort su tail test touch tr true type wc
+		xmkmf);
+	foreach my $i (@command_names) {
 		$cmdnames{$i} = "\$\{\U$i\E\}";
 	}
 	$cmdnames{'file'} = '${FILE_CMD}';
@@ -1482,15 +1484,11 @@ EOF
 	$tmp = $sections[$idx++];
 
 	# check the order of items.
-	{ my @tocheck=split(/\s+/, <<EOF);
-DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
-DYNAMIC_MASTER_SITES MASTER_SITE_SUBDIR EXTRACT_SUFX DISTFILES
-EOF
-	push(@tocheck,"ONLY_FOR_ARCHS");
-	push(@tocheck,"NO_SRC_ON_FTP");
-	push(@tocheck,"NO_BIN_ON_FTP");
-        &checkorder('DISTNAME', $tmp, @tocheck);
-	}
+	&checkorder('DISTNAME', $tmp, qw(
+		DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES
+		MASTER_SITES DYNAMIC_MASTER_SITES MASTER_SITE_SUBDIR
+		EXTRACT_SUFX DISTFILES ONLY_FOR_ARCHS NO_SRC_ON_FTP
+		NO_BIN_ON_FTP));
 
 	# check the items that has to be there.
 	$tmp = "\n" . $tmp;
@@ -1654,10 +1652,9 @@ EOF
 			"before committing the package.");
 	}
 
-	push(@varnames, split(/\s+/, <<EOF));
-DISTNAME PKGNAME SVR4_PKGNAME CATEGORIES MASTER_SITES MASTER_SITE_SUBDIR
-EXTRACT_SUFX DISTFILES
-EOF
+	push(@varnames, qw(
+		DISTNAME PKGNAME SVR4_PKGNAME CATEGORIES MASTER_SITES
+		MASTER_SITE_SUBDIR EXTRACT_SUFX DISTFILES));
 
 	#
 	# section 3: PATCH_SITES/PATCHFILES(optional)
@@ -1696,9 +1693,7 @@ EOF
 		$idx++;
 	}
 
-	push(@varnames, split(/\s+/, <<EOF));
-PATCH_SITES PATCHFILES PATCH_DIST_STRIP
-EOF
+	push(@varnames, qw(PATCH_SITES PATCHFILES PATCH_DIST_STRIP));
 
 	#
 	# section 4: MAINTAINER
@@ -1707,9 +1702,7 @@ EOF
 	$tmp = $sections[$idx++];
 
 	# check the order of items.
-        my @tocheck=split(/\s+/, <<EOF);
-MAINTAINER HOMEPAGE COMMENT
-EOF
+        my @tocheck = qw(MAINTAINER HOMEPAGE COMMENT);
 
         &checkorder('MAINTAINER', $tmp, @tocheck);
 
@@ -1759,9 +1752,7 @@ EOF
 	}
 	$tmp =~ s/\n\n+/\n/g;
 
-	push(@varnames, split(/\s+/, <<EOF));
-MAINTAINER HOMEPAGE COMMENT
-EOF
+	push(@varnames, qw(MAINTAINER HOMEPAGE COMMENT));
 
 	#
 	# section 5: *_DEPENDS (may not be there)
@@ -1769,9 +1760,7 @@ EOF
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking fourth section of $file(*_DEPENDS).");
 	$tmp = $sections[$idx];
 
-	my @linestocheck = split(/\s+/, <<EOF);
-BUILD_USES_MSGFMT BUILD_DEPENDS DEPENDS
-EOF
+	my @linestocheck = qw(BUILD_USES_MSGFMT BUILD_DEPENDS DEPENDS);
         if ($tmp =~ /(DEPENDS_TARGET|FETCH_DEPENDS|LIB_DEPENDS|RUN_DEPENDS).*=/) {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "$1 is deprecated, please use DEPENDS.");
 	}
@@ -2011,13 +2000,12 @@ sub abspathname($$) {
 	}
 
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking direct use of pathnames, phase 1.");
-	my %abspathnames = split(/\n|\t+/, <<EOF);
-/usr/pkgsrc	\${PKGSRCDIR} instead
-$conf_pkgsrcdir	\${PKGSRCDIR} instead
-$conf_localbase	\${PREFIX} or \${LOCALBASE}, as appropriate
-/usr/X11	\${PREFIX} or \${X11BASE}, as appropriate
-/usr/X11R6	\${PREFIX} or \${X11BASE}, as appropriate
-EOF
+	my %abspathnames = (
+		"/usr/pkgsrc"   => "\${PKGSRCDIR} instead",
+		$conf_pkgsrcdir => "\${PKGSRCDIR} instead",
+		$conf_localbase	=> "\${PREFIX} or \${LOCALBASE}, as appropriate",
+		"/usr/X11"      => "\${PREFIX} or \${X11BASE}, as appropriate",
+		"/usr/X11R6"    => "\${PREFIX} or \${X11BASE}, as appropriate");
 	foreach my $i (keys %abspathnames) {
 		if ($str =~ /$i/) {
 			log_warning(NO_FILE, NO_LINE_NUMBER, "possible direct use of \"$&\" ".
@@ -2026,18 +2014,17 @@ EOF
 	}
 
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking direct use of pathnames, phase 2.");
-	my %relpathnames = split(/\n|\t+/, <<EOF);
-distfiles	\${DISTDIR} instead
-pkg		\${PKGDIR} instead
-files		\${FILESDIR} instead
-scripts		\${SCRIPTDIR} instead
-patches		\${PATCHDIR} instead
-work		\${WRKDIR} instead
-EOF
+	my %relpathnames = (
+		"distfiles" => "DISTDIR",
+		"pkg"       => "PKGDIR",
+		"files"     => "FILESDIR",
+		"scripts"   => "SCRIPTSDIR",
+		"patches"   => "PATCHDIR",
+		"work"      => "WRKDIR");
 	foreach my $i (keys %relpathnames) {
 		if ($str =~ /(\.\/|\$[\{\(]\.CURDIR[\}\)]\/|[ \t])(\b$i)\//) {
 			log_warning(NO_FILE, NO_LINE_NUMBER, "possible direct use of \"$i\" ".
-				"found in $file. if so, use $relpathnames{$i}.");
+				"found in $file. If so, use \${$relpathnames{$i}} instead.");
 		}
 	}
 	return true;
