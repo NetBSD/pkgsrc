@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2005/01/10 19:43:54 dillo Exp $
+$NetBSD: patch-aa,v 1.4 2005/05/07 23:04:17 dillo Exp $
 
---- Makefile.orig	2004-08-07 21:32:02.000000000 +0200
+--- Makefile.orig	2005-01-16 20:25:50.000000000 +0100
 +++ Makefile
-@@ -15,12 +15,12 @@
+@@ -12,7 +12,7 @@
  # (The wxWindows file locations should really be taken from wx-config.)
  HUGOSOURCEDIR = ../source
  MIKMODINCLUDEDIR = /usr/local/include
@@ -11,33 +11,37 @@ $NetBSD: patch-aa,v 1.3 2005/01/10 19:43:54 dillo Exp $
  
  # Libraries to be linked:
  # If a working libmikmod.so has been compiled on the runtime system
- # and the wxGTK library is installed:
--LDFLAGS = `wx-config --libs` -lgtk -lgdk -lmikmod
-+LDFLAGS += `wx-config --libs` -lmikmod
- STATICLIBS =
- # Otherwise, use these LDFLAGS and STATICLIBS:
- #LDFLAGS = -lwx_gtk -lgtk -lgdk -lpthread -lmikmod
-@@ -34,7 +34,7 @@ MYCODEDIR := .
+@@ -23,7 +23,7 @@ STATICLIBS =
+ # Uncomment the following if compiling with GTK 1.2 support:
+ #LDFLAGS = `wx-config --libs` -lgtk -lgdk -lmikmod
+ # Uncomment the following if compiling with GTK 2 support:
+-LDFLAGS = `wx-config --libs` -lgtk-x11-2.0 -lgdk-x11-2.0 -lmikmod
++LDFLAGS = `wx-config --libs` -lmikmod
  
- # Directories to search for header files
- 
--SEARCHDIRS := -I- -I${MYCODEDIR} -I${HUGOSOURCEDIR} -I${MIKMODINCLUDEDIR} -I${CXXINCLUDEDIR}
+ # Use these LDFLAGS and STATICLIBS for static building:
+ #STATICLIBS = /usr/local/lib/libmikmod.a /usr/local/lib/libwx_gtk2-2.4.a
+@@ -39,7 +39,7 @@ MYCODEDIR := .
+ # Uncomment the following if compiling with GTK 1.2 support:
+ #SEARCHDIRS := -I- -I${MYCODEDIR} -I${HUGOSOURCEDIR} -I${MIKMODINCLUDEDIR} -I${CXXINCLUDEDIR}
+ # Uncomment the following if compiling with GTK 2 support:
+-SEARCHDIRS := -I- -I${MYCODEDIR} -I${HUGOSOURCEDIR} -I${MIKMODINCLUDEDIR} -I${CXXINCLUDEDIR} -I/usr/include/gtk-2.0
 +SEARCHDIRS := -I${MYCODEDIR} -I${HUGOSOURCEDIR} -I${MIKMODINCLUDEDIR}
  
- # makemake variables
  
-@@ -44,17 +44,18 @@ TOUCHHEADERS := ${MYCODEDIR}/*.h
+ # Hopefully nothing below here will need to be changed:
+@@ -52,17 +52,19 @@ TOUCHHEADERS := ${MYCODEDIR}/*.h
  
  # C
  
 -CC     := gcc
 +#CC     := gcc
  # Debugging:
- #CFLAGS  = ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET -fwritable-strings -g3 -Wall `wx-config --cflags`
+ #CFLAGS  = ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET -g3 -Wall `wx-config --cflags`
  # Release build:
--CFLAGS  = ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET -fwritable-strings -O2 -Wall `wx-config --cflags`
-+CPPFLAGS  += ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET
-+CFLAGS  += -fwritable-strings `wx-config --cflags`
+-CFLAGS  = ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET -O2 -Wall `wx-config --cflags`
++CPPFLAGS+=${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET
++HUGO_CFLAGS=-O2 -Wall `wx-config --cflags`
++CFLAGS  += ${HUGO_CFLAGS}
  
  # C++
  
@@ -45,11 +49,11 @@ $NetBSD: patch-aa,v 1.3 2005/01/10 19:43:54 dillo Exp $
 +#CXX      := g++
  #CXXFLAGS  = ${DEPENDFLAGS}
 -CXXFLAGS = ${CFLAGS} -fno-rtti
-+CXXFLAGS += ${CFLAGS} -fno-rtti
++CXXFLAGS += ${HUGO_CFLAGS} -fno-rtti
  
  %.o : %.cpp
  	${CXX} ${CPPFLAGS} -c $< ${CXXFLAGS}
-@@ -64,7 +65,7 @@ CXXFLAGS = ${CFLAGS} -fno-rtti
+@@ -72,7 +74,7 @@ CXXFLAGS = ${CFLAGS} -fno-rtti
  
  # C preprocessor
  

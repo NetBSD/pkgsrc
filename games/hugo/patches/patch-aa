@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2004/08/27 06:29:07 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2005/05/07 23:04:17 dillo Exp $
 
---- Makefile.orig	2001-11-26 19:54:04.000000000 +1100
+--- Makefile.orig	2005-01-18 08:28:22.000000000 +0100
 +++ Makefile
 @@ -50,9 +50,9 @@ CFG_OPTIONS=-DDO_COLOR
  # Standard optimizations
@@ -32,8 +32,8 @@ $NetBSD: patch-aa,v 1.3 2004/08/27 06:29:07 jlam Exp $
 +HE_LIBS=-L$(PREFIX)/lib ${COMPILER_RPATH_FLAG}$(PREFIX)/lib -lncurses 
  
  # Shouldn't need to change anything below here.
- HC_H=source/hcheader.h source/htokens.h
-@@ -97,17 +98,17 @@ clean:
+ HC_H=$(SOURCE)/hcheader.h $(SOURCE)/htokens.h
+@@ -100,17 +101,17 @@ clean:
  
  hc:	$(HC_OBJS)
  #	gcc -g -o hc $(HC_OBJS)
@@ -52,5 +52,5 @@ $NetBSD: patch-aa,v 1.3 2004/08/27 06:29:07 jlam Exp $
 -	gcc -o hd $(HE_OBJS) $(HD_OBJS) $(HE_LIBS)
 +	$(CC) -o hd $(HE_OBJS) $(HD_OBJS) $(HE_LIBS)
  
- iotest:	source/iotest.c gcc/hegcc.c $(HE_H)
- 	$(CC) -o iotest source/iotest.c hegcc.o stringfn.o $(HE_LIBS)
+ iotest:	$(SOURCE)/iotest.c gcc/hegcc.c $(HE_H)
+ 	$(CC) -o iotest $(SOURCE)/iotest.c hegcc.o stringfn.o $(HE_LIBS)

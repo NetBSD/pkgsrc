@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2004/05/28 14:24:04 dillo Exp $
+$NetBSD: patch-ac,v 1.2 2005/05/07 23:04:17 dillo Exp $
 
---- source/hdinter.h.orig	2004-01-05 20:22:00.000000000 +0100
+--- source/hdinter.h.orig	2005-01-17 21:10:00.000000000 +0100
 +++ source/hdinter.h
 @@ -63,7 +63,7 @@ enum D_ACTION_TYPE
  /* ...and (some) object types */
