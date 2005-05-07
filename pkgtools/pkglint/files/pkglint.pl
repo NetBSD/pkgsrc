@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.143 2005/05/07 21:22:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.144 2005/05/07 22:21:23 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -526,11 +526,11 @@ sub main() {
 	log_info(NO_FILE, NO_LINE_NUMBER, "rcsidstr: $conf_rcsidstr");
 	log_info(NO_FILE, NO_LINE_NUMBER, "localbase: $conf_localbase");
 
-	if (-f "$opt_packagedir/../Packages.txt") {
+	if (-f "$opt_packagedir/../mk/bsd.pkg.mk") {
 		$pkgsrc_rootdir = "$opt_packagedir/..";
 		log_info(NO_FILE, NO_LINE_NUMBER, "checking category Makefile.");
 		category_check();
-	} elsif (-f "$opt_packagedir/../../Packages.txt") {
+	} elsif (-f "$opt_packagedir/../../mk/bsd.pkg.mk") {
 		$pkgsrc_rootdir = "$opt_packagedir/../..";
 		load_predefined_sites();
 		check_package();
