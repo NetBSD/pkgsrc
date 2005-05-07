@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	album_themes
+PKGNAME=	album_themes-20050507
 CATEGORIES=	www
 MASTER_SITES=	http://marginalhacks.com/bin/
 
@@ -9,7 +10,7 @@ MAINTAINER=	augustss@NetBSD.org
 HOMEPAGE=	http://marginalhacks.com/Hacks/album/Download.html
 COMMENT=	Themes for the album generator
 
-DEPENDS+=	album-*:../../www/album
+DEPENDS+=	album-[0-9]*:../../www/album
 
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
