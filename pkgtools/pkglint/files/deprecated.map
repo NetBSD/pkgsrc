@@ -1,0 +1,22 @@
+# $NetBSD
+#
+
+# This file contains names of Makefile variables and a short explanation
+# what to do to make the warning disappear.
+
+ALL_TARGET		Use BUILD_TARGET instead.
+DIGEST_FILE		Use DISTINFO_FILE instead.
+IGNORE			Use PKG_FAIL_REASON or PKG_SKIP_REASON instead.
+IS_INTERACTIVE		Use INTERACTIVE_STAGE instead.
+MD5_FILE		Use DISTINFO_FILE instead.
+MIRROR_DISTFILE		Use NO_BIN_ON_FTP and/or NO_SRC_ON_FTP instead.
+NO_CDROM		Use NO_BIN_ON_CDROM and/or NO_SRC_ON_CDROM instead.
+NO_PACKAGE		Don't use it to enforce license restrictions.
+NO_PATCH		You can just remove it.
+NO_WRKSUBDIR		Use WRKSRC=${WRKDIR} instead.
+PATCH_SUM_FILE		Use DISTINFO_FILE instead.
+USE_BUILDLINK2		You can just remove it.
+USE_BUILDLINK3		You can just remove it.
+USE_GMAKE		Use USE_GNU_TOOLS+=make instead.
+USE_PKGLIBTOOL		Use USE_LIBTOOL instead.
+USE_SSL			Include "../../security/openssl/buildlink3.mk" instead.

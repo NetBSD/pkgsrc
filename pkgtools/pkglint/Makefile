@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.231 2005/04/12 15:12:33 tv Exp $
+# $NetBSD: Makefile,v 1.232 2005/05/07 15:10:24 rillig Exp $
 #
 
-DISTNAME=	pkglint-4.12.1
+DISTNAME=	pkglint-4.13
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -62,5 +62,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/pkglint.0 ${PREFIX}/man/cat1
 	${INSTALL_MAN} ${WRKSRC}/pkglint.1 ${PREFIX}/man/man1
 	${INSTALL_DATA} ${FILESDIR}/makevars.map ${PREFIX}/share/pkglint/
+	${INSTALL_DATA} ${FILESDIR}/deprecated.map ${PREFIX}/share/pkglint/
 
 .include "../../mk/bsd.pkg.mk"
