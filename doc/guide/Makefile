@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/12/24 13:35:54 ben Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/07 22:40:25 wiz Exp $
 #
 
-DISTNAME=		htdocs-share-20041021
+DISTNAME=		htdocs-share-20050507
 PKGNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
 MASTER_SITES=		${MASTER_SITE_LOCAL}
@@ -60,10 +60,6 @@ GHOSTSCRIPT_REQD=	7.05
 pre-extract:
 	${MKDIR} ${WRKSRC}
 	@cd ${FILESDIR} && ${PAX} -rw . ${WRKSRC}
-	${RM} -f ${WRKSRC}/share/netbsd.dsl \
-	&& ${LN} -s ../../htdocs/share/xml/netbsd.dsl ${WRKSRC}/share/netbsd.dsl
-	${RM} -f ${WRKSRC}/share/default.dsl \
-	&& ${LN} -s ../../htdocs/share/xml/default.dsl ${WRKSRC}/share/default.dsl
 
 do-build:
 .for _output_ in ${OUTPUTS}

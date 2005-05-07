@@ -1,4 +1,1 @@
--- $NetBSD: catalog,v 1.1.1.1 2004/10/21 14:27:43 grant Exp $ --
-
-PUBLIC "-//NetBSD//DOCUMENT DocBook DSSSL Stylesheet//EN"
-       "netbsd.dsl"
+-- $NetBSD: catalog,v 1.2 2005/05/07 22:40:25 wiz Exp $ --
