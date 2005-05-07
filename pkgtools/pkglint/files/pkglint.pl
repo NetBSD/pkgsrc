@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.141 2005/05/01 11:41:17 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.142 2005/05/07 15:10:24 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1171,6 +1171,31 @@ sub check_Makefile_variables($) {
 	return true;
 }
 
+sub checkfile_Makefile_deprecated($) {
+	my ($whole) = @_;
+	my ($fname) = ("${conf_datadir}/deprecated.map");
+	my ($deprecated) = load_file($fname);
+
+	if (!$deprecated) {
+		log_error($fname, NO_LINE_NUMBER, "Cannot be loaded.");
+		return false;
+	}
+
+	foreach my $line (@{$deprecated}) {
+		if ($line->text =~ qr"^#" || $line->text =~ qr"^\s*$") {
+			next;
+		} elsif ($line->text =~ qr"^(\S+)\s+(.*)$") {
+			my ($varname, $howto_fix) = ($1, $2);
+			if ($whole =~ qr"\n\Q$varname\E\b") {
+				log_warning(NO_FILE, NO_LINE_NUMBER, "${varname} is deprecated. ${howto_fix}");
+			}
+		} else {
+			$line->log_error("internal error: Unknown line format.");
+		}
+	}
+	return true;
+}
+
 sub checkfile_Makefile($) {
 	my ($file) = @_;
 	my ($fname) = ("$opt_packagedir/$file");
@@ -1270,6 +1295,8 @@ sub checkfile_Makefile($) {
 	      "FILESDIR: $filesdir, PKGDIR: $pkgdir, ".
 	      "DISTINFO: $distinfo\n");
 
+	checkfile_Makefile_deprecated($whole);
+
 	#
 	# whole file: INTERACTIVE_STAGE
 	#
@@ -1283,19 +1310,7 @@ sub checkfile_Makefile($) {
 				"FOR_CDROM.");
 		}
 	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking USE_BUILDLINK[23].");
-	if ($whole =~ /\n(USE_BUILDLINK[23])/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "$1 is deprecated, ".
-			"and no longer used.");
-	}
-	if ($whole =~ /\nALL_TARGET/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "ALL_TARGET is deprecated, ".
-			"use BUILD_TARGET instead.");
-	}
-	if ($whole =~ /\nIS_INTERACTIVE/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "IS_INTERACTIVE is deprecated, ".
-			"use INTERACTIVE_STAGE instead.");
-	}
+
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking for PLIST_SRC.");
 	if ($whole =~ /\nPLIST_SRC/) {
 		$seen_PLIST_SRC = true;
@@ -1312,59 +1327,9 @@ sub checkfile_Makefile($) {
 	if ($whole =~ /\nUSE_PERL[^5]/) {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "USE_PERL found -- you probably mean USE_PERL5.");
 	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking USE_PKGLIBTOOL.");
-	if ($whole =~ /\nUSE_PKGLIBTOOL/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "USE_PKGLIBTOOL is deprecated, ".
-			"use USE_LIBTOOL instead.");
-	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking for USE_PKGLOCALEDIR.");
 	if ($whole =~ /\nUSE_PKGLOCALEDIR/) {
 		$seen_USE_PKGLOCALEDIR = true;
-	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking USE_SSL.");
-	if ($whole =~ /\nUSE_SSL/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "USE_SSL is deprecated, ".
-			"use the openssl buildlink3.mk instead.");
-	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking NO_WRKSUBDIR.");
-	if ($whole =~ /\nNO_WRKSUBDIR/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "NO_WRKSUBDIR is deprecated, ".
-			"use WRKSRC=\$\{WRKDIR\} instead.");
-	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking MD5_FILE, DIGEST_FILE and PATCH_SUM_FILE.");
-	if ($whole =~ /\n(MD5_FILE)/ or $whole =~ /\n(DIGEST_FILE)/ or
-		$whole =~ /\n(PATCH_SUM_FILE)/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "$1 is deprecated, ".
-			"use DISTINFO_FILE instead.");
-	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking MIRROR_DISTFILE.");
-	if ($whole =~ /\nMIRROR_DISTFILE/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "use of MIRROR_DISTFILE deprecated, ".
-			"use NO_BIN_ON_FTP and/or NO_SRC_ON_FTP instead.");
-	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking NO_CDROM.");
-	if ($whole =~ /\nNO_CDROM/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "use of NO_CDROM discouraged, ".
-			"use NO_BIN_ON_CDROM and/or NO_SRC_ON_CDROM instead.");
-	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking NO_PACKAGE.");
-	if ($whole =~ /\nNO_PACKAGE/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "use of NO_PACKAGE to enforce license ".
-			"restrictions is deprecated.");
-	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking NO_PATCH.");
-	if ($whole =~ /\nNO_PATCH/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "use of NO_PATCH deprecated.");
-	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking IGNORE.");
-	if ($whole =~ /\nIGNORE/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "use of IGNORE deprecated, ".
-			"use PKG_FAIL_REASON or PKG_SKIP_REASON instead.");
-	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking USE_GMAKE.");
-	if ($whole =~ /\nUSE_GMAKE/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "use of USE_GMAKE deprecated, ".
-			"use USE_GNU_TOOLS+=make instead.");
 	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking for MKDIR.");
 	if ($whole =~ m|\${MKDIR}.*(\${PREFIX}[/0-9a-zA-Z\${}]*)|) {
