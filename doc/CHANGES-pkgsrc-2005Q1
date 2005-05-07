@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.86 2005/05/06 15:49:43 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.87 2005/05/07 00:26:42 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -181,3 +181,5 @@ Pullup ticket 483 - requested by Juan Romero Pardines
 portability fix for libao
 Pullup ticket 484 - requested by Matthias Scheler
 security fix for ethereal
+Pullup ticket 485 - requested by Thomas Klausner
+license fix for milter-spamc
