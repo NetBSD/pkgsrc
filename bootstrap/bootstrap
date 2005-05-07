@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.35 2005/04/19 18:24:17 minskim Exp $
+# $NetBSD: bootstrap,v 1.36 2005/05/07 22:19:16 wiz Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -722,7 +722,7 @@ echo "provided to \"bootstrap\" has been created for you."
 echo "Please copy ${MKCONF_EXAMPLE} to ${sysconfdir}/mk.conf."
 echo ""
 echo "You can find extensive documentation of the NetBSD Packages Collection"
-echo "in $pkgsrcdir/Packages.txt and packages(7)."
+echo "in $pkgsrcdir/doc/pkgsrc.txt and packages(7)."
 echo ""
 echo "Hopefully everything is now complete."
 echo "Thank you"
