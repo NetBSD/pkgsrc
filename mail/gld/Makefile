@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3.2.1 2005/04/14 04:42:23 snj Exp $
+# $NetBSD: Makefile,v 1.3.2.2 2005/05/07 16:11:59 salo Exp $
 #
 
-DISTNAME=		gld-1.5
+DISTNAME=		gld-1.5.1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.gasmi.net/down/
 EXTRACT_SUFX=		.tgz
@@ -13,8 +13,6 @@ COMMENT=		Standalone greylisting server for Postfix
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-
-CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES_PERMS=	${EGDIR}/gld.conf ${PKG_SYSCONFDIR}/gld.conf	\
@@ -37,5 +35,5 @@ SUBST_SED.users+=	-e "s|\#USER=nobody|USER=${GLD_USER}|"
 SUBST_SED.users+=	-e "s|\#GROUP=nobody|GROUP=${GLD_GROUP}|"
 SUBST_MESSAGE.users=	"Adjusting user/group in configuration file."
 
-.include "../../mk/mysql.buildlink3.mk"
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
