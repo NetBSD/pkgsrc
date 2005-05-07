@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1627 2005/05/04 06:42:43 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1628 2005/05/07 19:32:56 reed Exp $
 #
 # This file is in the public domain.
 #
@@ -698,6 +698,7 @@ MESSAGE=		${PKG_DB_TMPDIR}/+DISPLAY
 
 # Set MESSAGE_SUBST to substitute "${variable}" to "value" in MESSAGE
 MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
+		PKGBASE=${PKGBASE}					\
 		PREFIX=${PREFIX}					\
 		LOCALBASE=${LOCALBASE}					\
 		VIEWBASE=${VIEWBASE}					\
