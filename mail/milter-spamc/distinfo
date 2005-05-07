@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:59:24 agc Exp $
-
-SHA1 (milter-spamc-0.10.tgz) = c7f61dea56ea80945ef0b537e5fdb8a060870483
-RMD160 (milter-spamc-0.10.tgz) = 3f73728cd87770404ae556b5b4a256888eed80b1
-Size (milter-spamc-0.10.tgz) = 177508 bytes
-SHA1 (patch-aa) = 722ac42f18cd4288f2d81a17039d35ddbc5e6f77
-SHA1 (patch-ab) = b1c22b8f485cb1eab165c87be8ea49eae0a1e430
-SHA1 (patch-ad) = 6aad61235bbd0918fb4c78a9b7e9056eb3fbdafe
