@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:28:04 zuntum Exp $
-bin/fastDNAml
+@comment $NetBSD: PLIST,v 1.2 2005/05/07 20:54:05 kristerw Exp $
 bin/ae2dnaml
 bin/bootstrap
 bin/categories
@@ -8,6 +7,7 @@ bin/checkpoint_summary
 bin/clean_checkpoints
 bin/clean_jumbles
 bin/dnaml_progress
+bin/fastDNAml
 bin/fastDNAml_boot
 bin/fastDNAml_loop
 bin/frequencies
