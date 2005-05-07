@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 23:11:59 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/05/07 23:04:17 dillo Exp $
 
-SHA1 (hugo-3.1.01/hugov31_unix_source.tar.gz) = bd14b180e26cd0d39e164839da27313e79939a9b
-RMD160 (hugo-3.1.01/hugov31_unix_source.tar.gz) = 3f130b7c0ffe1f7d27551c8fe716400390450d70
-Size (hugo-3.1.01/hugov31_unix_source.tar.gz) = 214461 bytes
-SHA1 (hugo-3.1.01/hugolib.zip) = a27ee9591cee8932a92b087b3b22ff5047a48749
-RMD160 (hugo-3.1.01/hugolib.zip) = b72f8a017341d43bc1708c3ef6f77a953147918b
-Size (hugo-3.1.01/hugolib.zip) = 70455 bytes
-SHA1 (patch-aa) = cc0d06b3abec10feb882f6a87af8bd5def10a8b7
-SHA1 (patch-ab) = 4d2753b45b1e16c7213e1ee99860519bf889e11d
-SHA1 (patch-ac) = 43df8bc8b35cb5525f582a6d11eba89d063fbe76
-SHA1 (patch-ad) = 454c364a4fe45d1fc94b768db85443fcc8ef8204
-SHA1 (patch-ae) = fcbfdbc54507eacdb1486fa1de6a0729764edce0
-SHA1 (patch-af) = d97e6efb61472637f8680bf9cd94a1541ab2eb14
+SHA1 (hugo-3.1.02/hugov31_unix_source.tar.gz) = 7c3785da668e1deb9fe222b6014c402b00fc4256
+RMD160 (hugo-3.1.02/hugov31_unix_source.tar.gz) = 205c3a26456eabe6e72116be6a2120a00e118385
+Size (hugo-3.1.02/hugov31_unix_source.tar.gz) = 214617 bytes
+SHA1 (hugo-3.1.02/hugolib.zip) = 7c16ed0cea3edc73fd0f704b4cb8284bb794c4ea
+RMD160 (hugo-3.1.02/hugolib.zip) = d1d51bb2f0d56ca27e558b1a9ac15e8837a0d72e
+Size (hugo-3.1.02/hugolib.zip) = 69728 bytes
+SHA1 (patch-aa) = e13b502092b5e762fb853f800ec82ff2a220683b
+SHA1 (patch-ab) = 7b87e47c11bda2b1e57eff97cdae45991150238b
+SHA1 (patch-ac) = 7d0b631f7599e4f3761fccf7ac0b12a2d28703b7
+SHA1 (patch-ad) = 50d1ab40bdffb44f531786d5d3ed41aea2602348
+SHA1 (patch-ae) = b4ba87f4b1e3c4aec3f8ee0af45981c3a975ae5c
+SHA1 (patch-af) = 3668c54b6725db7f411a94f721d38c4e4d99baff
 SHA1 (patch-ag) = 5ad2dad3afa263160d5d70431dc7a7e1bd542969
