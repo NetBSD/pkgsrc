@@ -23,7 +23,7 @@ EEXXAAMMPPLLEESS
            /usr/pkgsrc/<category>/foo
 
 SSEEEE AALLSSOO
-     Read _P_a_c_k_a_g_e _C_o_n_s_t_r_u_c_t_o_r_'_s _G_u_i_d_e in _p_k_g_s_r_c_/_P_a_c_k_a_g_e_s_._t_x_t.
+     Read _P_a_c_k_a_g_e _C_o_n_s_t_r_u_c_t_o_r_'_s _G_u_i_d_e in _p_k_g_s_r_c_/_d_o_c_/_p_k_g_s_r_c_._t_x_t.
 
 AAUUTTHHOORRSS
      Kazuki Sakamoto <sakamoto@netbsd.org>
@@ -31,4 +31,4 @@ AAUUTTHHOORRSS
 BBUUGGSS
      ppoorrtt22ppkkgg is not a magic wand, please double-check converted pkgsrc.
 
-NetBSD 1.6                     January 10, 2004                     NetBSD 1.6
+NetBSD 2.0                     January 10, 2004                     NetBSD 2.0
