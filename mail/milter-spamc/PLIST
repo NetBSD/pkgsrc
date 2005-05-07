@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/11 17:32:24 manu Exp $
-sbin/milter-spamc
-etc/rc.d/milter-spamc.sh
