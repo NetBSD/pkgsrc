@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3471 2005/05/07 02:51:49 schmonz Exp $
+$NetBSD: TODO,v 1.3472 2005/05/07 11:03:56 abs Exp $
 
 Suggested new packages
 ======================
@@ -1078,7 +1078,6 @@ Suggested package updates
 	o wmctrl-1.07
 	o wmweather-2.4.3
 	o www6to4-1.6
-	o wwwoffle-2.8d
 	o x2vnc-1.6.1
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xalan-c-1.8.0
