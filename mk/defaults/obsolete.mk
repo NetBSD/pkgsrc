@@ -1,4 +1,4 @@
-# $NetBSD: obsolete.mk,v 1.5 2005/03/28 09:39:57 jlam Exp $
+# $NetBSD: obsolete.mk,v 1.6 2005/05/08 13:43:31 dillo Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -9,73 +9,43 @@ PKG_SYSCONFDIR.priv?=	${PRIV_CONF_DIR}
 .endif
 
 ###
-### Set PKG_DEFAULT_OPTIONS based on to-be-deprecated global variables.
+### Set _PKG_LEGACY_OPTIONS based on to-be-deprecated global variables.
 ###
+
 .if defined(KERBEROS)
-.  if ${KERBEROS} == "4"
-PKG_DEFAULT_OPTIONS+=	kerberos4
-.  else
-PKG_DEFAULT_OPTIONS+=	kerberos
+.  if ${KERBEROS} == "4" && !empty(PKG_SUPPORTED_OPTIONS:Mkerberos4)
+_PKG_LEGACY_OPTIONS+=	kerberos4
+_DEPRECATED_WARNING+="Deprecated variable KERBEROS used, use PKG_DEFAULT_OPTIONS+=kerberos4 instead."
+.  elif !empty(PKG_SUPPORTED_OPTIONS:Mkerberos)
+_PKG_LEGACY_OPTIONS+=	kerberos
+_DEPRECATED_WARNING+="Deprecated variable KERBEROS used, use PKG_DEFAULT_OPTIONS+=kerberos instead."
 .  endif
-.endif
-.if defined(USE_CANNA) && !empty(USE_CANNA:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	canna
-.endif
-.if defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	cups
-.endif
-.if defined(USE_DB4) && !empty(USE_DB4:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	db4
-.endif
-.if defined(USE_ESOUND) && !empty(USE_ESOUND:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	esound
-.endif
-.if defined(USE_GIF)
-PKG_DEFAULT_OPTIONS+=	gif
-.endif
-.if defined(USE_I586) && !empty(USE_I586:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	i586
-.endif
-.if defined(USE_IDEA) && !empty(USE_IDEA:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	idea
-.endif
-.if defined(USE_INN) && !empty(USE_INN:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	inn
-.endif
-.if defined(USE_LIBCRACK) && !empty(USE_LIBCRACK:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	libcrack
-.endif
-.if defined(USE_MMX) && !empty(USE_MMX:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	mmx
-.endif
-.if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	ldap
-.endif
-.if defined(USE_OSS)
-PKG_DEFAULT_OPTIONS+=	oss
-.endif
-.if defined(USE_RSAREF2) && !empty(USE_RSAREF2:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	rsaref
-.endif
-.if defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	sasl
-.endif
-.if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	sasl
-.endif
-.if defined(USE_SJ3) && !empty(USE_SJ3:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	sj3
 .endif
 .if defined(USE_SOCKS)
-.  if ${USE_SOCKS} == "4"
-PKG_DEFAULT_OPTIONS+=	socks4
-.  elif ${USE_SOCKS} == "5"
-PKG_DEFAULT_OPTIONS+=	socks5
+.  if ${USE_SOCKS} == "4" && !empty(PKG_SUPPORTED_OPTIONS:Msocks4)
+_PKG_LEGACY_OPTIONS+=	socks4
+_DEPRECATED_WARNING+="Deprecated variable SOCKS used, use PKG_DEFAULT_OPTIONS+=socks4 instead."
+.  elif ${USE_SOCKS} == "5 && !empty(PKG_SUPPORTED_OPTIONS:Msocks5)"
+_PKG_LEGACY_OPTIONS+=	socks5
+_DEPRECATED_WARNING+="Deprecated variable SOCKS used, use PKG_DEFAULT_OPTIONS+=socks5 instead."
 .  endif
 .endif
-.if defined(USE_WNN4) && !empty(USE_WNN4:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	wnn4
-.endif
-.if defined(USE_XFACE) && !empty(USE_XFACE:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	xface
-.endif
+
+PKG_OPTIONS_LEGACY_VARS+=	USE_CANNA:canna
+PKG_OPTIONS_LEGACY_VARS+=	USE_CUPS:cups
+PKG_OPTIONS_LEGACY_VARS+=	USE_DB4:db4
+PKG_OPTIONS_LEGACY_VARS+=	USE_ESOUND:esound
+PKG_OPTIONS_LEGACY_VARS+=	USE_GIF:gif
+PKG_OPTIONS_LEGACY_VARS+=	USE_I586:i586
+PKG_OPTIONS_LEGACY_VARS+=	USE_IDEA:idea
+PKG_OPTIONS_LEGACY_VARS+=	USE_INN:inn
+PKG_OPTIONS_LEGACY_VARS+=	USE_LIBCRACK:libcrack
+PKG_OPTIONS_LEGACY_VARS+=	USE_MMX:mmx
+PKG_OPTIONS_LEGACY_VARS+=	USE_OPENLDAP:ldap
+PKG_OPTIONS_LEGACY_VARS+=	USE_OSS:oss
+PKG_OPTIONS_LEGACY_VARS+=	USE_RSAREF2:rsaref
+PKG_OPTIONS_LEGACY_VARS+=	USE_SASL:sasl
+PKG_OPTIONS_LEGACY_VARS+=	USE_SASL2:sasl
+PKG_OPTIONS_LEGACY_VARS+=	USE_SJ3:sj3
+PKG_OPTIONS_LEGACY_VARS+=	USE_WNN4:wnn4
+PKG_OPTIONS_LEGACY_VARS+=	USE_XFACE:xface
