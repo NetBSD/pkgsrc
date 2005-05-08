@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:47:53 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/05/08 09:49:28 recht Exp $
 #
 
 DISTNAME=	gtkhtml-3.2.5
@@ -7,7 +7,7 @@ CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkhtml/3.2/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Lightweight HTML rendering/printing/editing engine
 
