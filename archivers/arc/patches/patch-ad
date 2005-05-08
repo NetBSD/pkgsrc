@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1 2005/05/08 05:45:42 minskim Exp $
+
+--- marc.c.orig	1992-04-14 17:59:21.000000000 -0500
++++ marc.c
+@@ -42,12 +42,13 @@ char srcname[STRLEN];		       /* source 
+ static char **lst;		       /* files list */
+ static int lnum;		       /* length of files list */
+ 
++char *makefnam(char*, char*, char*);   /* filename fixup routine */
++
+ int
+ main(nargs,arg)			       /* system entry point */
+ int nargs;			       /* number of arguments */
+ char *arg[];			       /* pointers to arguments */
+ {
+-    char *makefnam();		       /* filename fixup routine */
+     char *envfind();
+ #if	!_MTS
+     char *arctemp2, *mktemp();		/* temp file stuff */
