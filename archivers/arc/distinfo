@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2005/02/23 14:45:22 agc Exp $
+$NetBSD: distinfo,v 1.8 2005/05/08 05:45:42 minskim Exp $
 
 SHA1 (arc521e.pl8.tar.Z) = 34210f9aeaac39a15b34e6aa400b38127b6a2a20
 RMD160 (arc521e.pl8.tar.Z) = 1fcd823b93b4e633244797ed231318c5bc741965
@@ -6,3 +6,4 @@ Size (arc521e.pl8.tar.Z) = 100821 bytes
 SHA1 (patch-aa) = 62324f346559b2997eba56698b1c0c1c29a328c3
 SHA1 (patch-ab) = 64fba2f0b5d03f26e427ecddc70e2a9b6b2fc521
 SHA1 (patch-ac) = 64d87af431c6bc0ded0b26167782309a7bfadd8a
+SHA1 (patch-ad) = 6f82d17b8eb2f2353d7ebfffaec1d52673acc7a0
