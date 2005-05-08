@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.2 2005/01/06 17:22:52 drochner Exp $
+$NetBSD: patch-ac,v 1.3 2005/05/08 06:33:35 reed Exp $
 
---- src/desktop_integration.c.orig	2004-11-10 02:43:13.000000000 +0100
-+++ src/desktop_integration.c
+--- src/desktop_integration.c.orig	Tue Nov  9 17:43:13 2004
++++ src/desktop_integration.c	Sat May  7 18:57:38 2005
 @@ -31,7 +31,9 @@
  #include <stdlib.h>
  #include <stdio.h>
  #include <dlfcn.h>
-+#ifndef __NetBSD__
++#if !defined(__NetBSD__) && !defined(__FreeBSD__)
  #include <alloca.h>
 +#endif
  #include <string.h>
