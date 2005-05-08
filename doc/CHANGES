@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10048 2005/05/07 23:05:48 dillo Exp $
+$NetBSD: CHANGES,v 1.10049 2005/05/08 03:16:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2320,3 +2320,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added php-soap-5.0.4 [jdolecek 2005-05-07]
 	Updated hugo to 3.1.02 [dillo 2005-05-07]
 	Updated wxhugo to 3.1.02 [dillo 2005-05-07]
+	Updated nbitools to 6.3nb2 [minskim 2005-05-08]
