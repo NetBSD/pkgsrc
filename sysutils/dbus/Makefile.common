@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/04/11 21:47:23 tv Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/05/08 12:55:45 kristerw Exp $
 #
 
 # XXX Do not update to 0.30 or above yet.  The API in the 0.2x series is
@@ -43,6 +43,9 @@ CONFIGURE_ARGS+=	--with-xml=expat
 CONFIGURE_ARGS+=	--without-x
 
 PKG_SYSCONFSUBDIR=	dbus-1
+
+# gcc 2.95 does not understand -Wfloat-equal
+BUILDLINK_TRANSFORM+=	rm:-Wfloat-equal
 
 .if defined(DBUS_INTERFACE)
 DBUS_ARGS?=		${DBUS_INTERFACE}
