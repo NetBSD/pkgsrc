@@ -1,8 +1,20 @@
-$NetBSD: patch-ah,v 1.2 2005/04/05 15:22:11 minskim Exp $
+$NetBSD: patch-ah,v 1.3 2005/05/08 03:14:35 minskim Exp $
 
---- config/imake/imakemdep.h.orig	2004-02-21 08:06:05.000000000 +0100
-+++ config/imake/imakemdep.h	2004-02-21 08:06:50.000000000 +0100
-@@ -253,7 +253,7 @@
+--- config/imake/imakemdep.h.orig	2002-02-12 13:36:00.000000000 -0600
++++ config/imake/imakemdep.h
+@@ -234,6 +234,11 @@ in this Software without prior written a
+  *     If use cc -E but want a different compiler, define DEFAULT_CC.
+  *     If the cpp you need is not in /lib/cpp, define DEFAULT_CPP.
+  */
++
++#if defined(__APPLE__)
++#define DEFAULT_CPP "/usr/bin/cpp"
++#define DEFAULT_CC "cc"
++#endif
+ #ifdef hpux
+ #define USE_CC_E
+ #endif
+@@ -253,7 +258,7 @@ in this Software without prior written a
  #if defined(sun) && (defined(SVR4) || defined(__svr4__) || defined(__SVR4) || defined(__sol__))
  #define DEFAULT_CPP "/usr/ccs/lib/cpp"
  #endif
@@ -11,3 +23,16 @@ $NetBSD: patch-ah,v 1.2 2005/04/05 15:22:11 minskim Exp $
  #define DEFAULT_CPP "/usr/bin/cpp"
  #endif
  #ifdef __uxp__
+@@ -639,6 +644,12 @@ char *cpp_argv[ARGUMENTS] = {
+ # define DEFAULT_OS_MINOR_REV	"v %*d.%1s"
+ # define DEFAULT_OS_TEENY_REV	"v %*d.%*c%[.0-9]"
+ # define DEFAULT_OS_NAME	"srvm %[^\n]"
++# elif defined(__APPLE__)
++/* uname -v returns "x.yz" or "x.y.z", e.g. "2.02" or "2.1.2". */
++#  define DEFAULT_OS_MAJOR_REV  "r %[0-9]"
++#  define DEFAULT_OS_MINOR_REV  "r %*d.%[0-9]"
++#  define DEFAULT_OS_TEENY_REV  "r %*d.%*d.%[0-9]" /* this will just get 0 */
++#  define DEFAULT_OS_NAME       "s %[^\n]"
+ #elif defined(__osf__)
+ /* uname -r returns "Wx.y", e.g. "V3.2" or "T4.0" */
+ # define DEFAULT_OS_MAJOR_REV	"r %*[^0-9]%[0-9]"
