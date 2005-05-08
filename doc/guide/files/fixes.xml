@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.12 2005/04/17 09:38:26 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.13 2005/05/08 13:53:06 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -261,7 +261,7 @@
       <para> Please also note the <varname>BUILD_USES_MSGFMT</varname>
         and <varname>BUILD_USES_GETTEXT_M4</varname> definitions, which
         are provided as convenience definitions.  The former works out
-        whether msgfmt(1) is part of the base system, and, if it isn't,
+        whether &man.msgfmt.1; is part of the base system, and, if it isn't,
         installs the <pkg>devel/gettext</pkg> package.  The latter adds
         a build dependency on either an installed version of an older
         gettext package, or if it isn't, installs the
@@ -574,7 +574,7 @@ dynamic linker chooses the library with the greater REVISION number. </programli
 
         <listitem>
           <para>When linking shared object (<filename>.so</filename>)
-            files, i.e. files that are loaded via dlopen(3), NOT
+            files, i.e. files that are loaded via &man.dlopen.3;, NOT
             shared libraries, use <quote>-module
             -avoid-version</quote> to prevent them getting version
             tacked on.</para>

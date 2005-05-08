@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.3 2005/03/24 05:05:34 ben Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.4 2005/05/08 13:53:06 wiz Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -183,7 +183,7 @@
     <para>To use one or more files as source for the <filename>PLIST</filename> used
       in generating the binary package, set the variable
       <varname>PLIST_SRC</varname> to the names of that file(s).
-      The files are later concatenated using cat(1), and order of things is
+      The files are later concatenated using &man.cat.1;, and order of things is
       important.</para>
   </sect1>
 
