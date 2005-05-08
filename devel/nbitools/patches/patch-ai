@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2005/05/08 03:14:35 minskim Exp $
+
+--- config/cf/Darwin.cf.orig	2001-07-02 22:54:07.000000000 -0500
++++ config/cf/Darwin.cf
+@@ -64,7 +64,7 @@ XCOMM operating system:  OSName (OSMajor
+ #define IncludeMakefile(file)	@@# dependencies are in .depend
+ #define DependFileName		.depend
+ #ifndef ExtraLibraries
+-#define ExtraLibraries		-lgnumalloc
++#define ExtraLibraries		/* -lgnumalloc */
+ #endif
+ #else
+ #define ServerOSDefines		XFree86ServerOSDefines -DDDXTIME -DXNO_SYSCONF
