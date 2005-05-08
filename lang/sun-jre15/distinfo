@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2005/03/25 19:17:39 tv Exp $
+$NetBSD: distinfo,v 1.5 2005/05/08 16:13:46 abs Exp $
 
-SHA1 (jre-1_5_0_02-linux-i586.bin) = 09c2075667eae21ed3ae32aae0e100f5cf87a490
-RMD160 (jre-1_5_0_02-linux-i586.bin) = e08ad90583ed6108a866f7bff9522d32b6b0a476
-Size (jre-1_5_0_02-linux-i586.bin) = 16542512 bytes
+SHA1 (jre-1_5_0_03-linux-i586.bin) = fb9f6b2cdb01a6d3757c6a61f10a57a574799f95
+RMD160 (jre-1_5_0_03-linux-i586.bin) = 611eac44daf197a183a72c2b82da96a74af6f85b
+Size (jre-1_5_0_03-linux-i586.bin) = 16565948 bytes
 SHA1 (jce_policy-1_5_0.zip) = f0e887b91b4499142285633e65c5710c3a133a16
 RMD160 (jce_policy-1_5_0.zip) = eb12d0333c3ddbbba57a0e825a6891a75ec485c0
 Size (jce_policy-1_5_0.zip) = 8826 bytes

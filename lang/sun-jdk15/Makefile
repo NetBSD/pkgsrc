@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2005/03/25 19:17:39 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/08 16:13:46 abs Exp $
 
-DISTNAME=	jdk-1_5_0_02-linux-i586
-PKGNAME=	sun-jdk15-5.0.2
+DISTNAME=	jdk-1_5_0_03-linux-i586
+PKGNAME=	sun-jdk15-5.0.3
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 SDK, Standard Edition 1.5.0
 
 SHORT=		SDK
 
-DEPENDS=	sun-jre15-5.0.2*:../../lang/sun-jre15
+DEPENDS=	sun-jre15-5.0.3*:../../lang/sun-jre15
 
-WRKSRC=		${WRKDIR}/jdk1.5.0_02
+WRKSRC=		${WRKDIR}/jdk1.5.0_03
 JAVA_WRAPPERS=	appletviewer apt extcheck idlj jar jarsigner \
 		javac javadoc javah javap jdb rmic serialver
 
