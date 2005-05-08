@@ -1,0 +1,26 @@
+$NetBSD: patch-aj,v 1.1 2005/05/08 03:14:35 minskim Exp $
+
+--- config/cf/Imake.cf.orig	2005-05-07 21:33:29.000000000 -0500
++++ config/cf/Imake.cf
+@@ -19,6 +19,21 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
+  *     4.  Create a .cf file with the name given by MacroFile.
+  */
+ 
++#if defined(__APPLE__)
++# undef __APPLE__
++# define MacroIncludeFile <Darwin.cf>
++# define MacroFile Darwin.cf
++# define DarwinArchitecture
++# ifdef __ppc__
++#  define PpcDarwinArchitecture
++#  undef __ppc__
++# endif
++# ifdef __i386__
++#  define i386DarwinArchitecture
++#  undef __i386__
++# endif
++#endif
++
+ #if defined(clipper) || defined(__clipper__)
+ # undef clipper
+ # define MacroIncludeFile <ingr.cf>
