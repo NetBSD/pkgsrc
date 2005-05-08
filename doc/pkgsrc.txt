@@ -1470,8 +1470,10 @@ chroot-# exit
 # cd /usr/sandbox/usr/pkgsrc
 # sh mk/bulk/do-sandbox-upload
 
-The upload process may take quite some time. Use "ls" or "du" on the FTP server
-to monitor progress of the upload.
+The upload process may take quite some time. Use ls(1) or du(1) on the FTP
+server to monitor progress of the upload. The upload script will take care of
+not uploading restricted packages and putting vulnerable packages into the
+vulnerable subdirectory.
 
 After the upload has ended, first thing is to revoke ssh access:
 
