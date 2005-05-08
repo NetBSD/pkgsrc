@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.7 2005/04/10 22:45:25 jschauma Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.8 2005/05/08 13:53:06 wiz Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -305,7 +305,7 @@
 	  url="http://freeware.sgi.com/">http://freeware.sgi.com/</ulink>.</para>
 
       <para>Please note that you will need IRIX 6.5.17 or higher, as this is the earliest
-	version of IRIX providing support for if_indextoname(3), if_nametoindex(3),
+	version of IRIX providing support for &man.if.indextoname.3;, &man.if.nametoindex.3;,
 	etc.</para>
 
       <para>At this point in time, pkgsrc only supports one ABI.  That is, you can not
@@ -387,7 +387,7 @@
         provided by icc, so binaries can be run on other systems which do not
         have the shared libraries installed.</para>
 
-     <para>Libtool, however, extracts a list of libraries from the ld(1)
+     <para>Libtool, however, extracts a list of libraries from the &man.ld.1;
         command run when linking a C++ shared library and records it, throwing
         away the -Bstatic and -Bdynamic options interspersed between the libraries.
         This means that libtool-linked C++ shared libraries will have a

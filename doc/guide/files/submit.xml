@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.4 2005/02/10 13:39:15 grant Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.5 2005/05/08 13:53:06 wiz Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -28,7 +28,7 @@ packages here:
 <para>
   First, check that your package is complete, compiles and runs well;
   see <xref linkend="debug"/> and the rest of this document. Next,
-  generate an uuencoded gzipped tar(1) archive, preferably with all files
+  generate an uuencoded gzipped &man.tar.1; archive, preferably with all files
   in a single directory.
   Finally, <command>send-pr</command> with category <quote>pkg</quote>, a
   synopsis which includes the package name and version number, a short
