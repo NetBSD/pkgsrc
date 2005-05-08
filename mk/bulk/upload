@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.25 2005/04/30 21:35:06 jschauma Exp $
+# $NetBSD: upload,v 1.26 2005/05/08 13:29:09 wiz Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -39,35 +39,30 @@ fi
 
 cd $USR_PKGSRC
 
-if [ "$RSYNC_DST_SPECIFIC" != "" -o "$RSYNC_DST_OTHER" != "" ]; then
-	echo Use of RSYNC_DST_SPECIFIC and RSYNC_DST_OTHER is deprecated.
-	echo Please just set RSYNC_DST in build.conf.
-	exit 1
-fi
-
 if [ -z "$RSYNC_DST" ]; then
 	echo "You must set the variable RSYNC_DST, see build.conf-example."
 	exit 1
 fi
 
-# Paths for both OS-version-specific and general pkgs:
-RSYNC_DST_SPECIFIC=${RSYNC_DST}
-RSYNC_DST_OTHER=${RSYNC_DST}
-
 #
 # Some temp files
 #
 
-umask 22
-TMPDIR=${TMPDIR:-/tmp}
-TMP=${TMPDIR}/pkg_upload.$$
-mkdir $TMP
+umask 022
+TMPDIR="${TMPDIR:-/tmp}"
+TMP="${TMPDIR}"/pkg_upload.$$
+(umask 077 && mkdir "${TMP}")
+if [ $? -ne 0 ]
+then
+        echo $0: cannot create temporary directory \""${TMP}"\" >&2
+        exit 1
+fi
 
-exf=$TMP/exclude
-osf=$TMP/osversion_specific
-upload=$TMP/upload
-upload_specific=$TMP/upload_specific
-upload_others=$TMP/upload_others
+exf="$TMP"/exclude
+vf="$TMP"/vulnerable
+upload="$TMP"/upload
+upload_general="$TMP"/upload_general
+upload_vulnerable="$TMP"/upload_vulnerable
 
 # May be different than $USR_PKGSRC:
 pkgsrcdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=_PKGSRCDIR`
@@ -96,14 +91,13 @@ yes|YES)
 	;;
 esac
 
-echo "Checking for restricted, out of date, and vulnerable packages:"
+echo "Checking for restricted and out of date packages:"
 # -p  =  report old versions of packages
 # -R  =  report restricted packages
-# -V  =  report vulnerable packages
-lintpkgsrc $lintpkgsrc_cache -K $packages -P $pkgsrcdir -pRV  | sed 's@'$packages'/@@' > $exf
+lintpkgsrc $lintpkgsrc_cache -K $packages -P $pkgsrcdir -pR  | sed 's@'$packages'/@@' > "$exf"
 
-echo "Checking for OSVERSION_SPECIFIC pkgs:"
-lintpkgsrc $lintpkgsrc_cache -K $packages -P $pkgsrcdir -O  | sed 's@'$packages'/@@' > $osf
+echo "Checking for vulnerable packages:"
+lintpkgsrc $lintpkgsrc_cache -K $packages -P $pkgsrcdir -V  | sed 's@'$packages'/@@' > "$vf"
 
 RSFLAGS="-vap --progress $RSYNC_OPTS"
 
@@ -152,7 +146,6 @@ if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
 			if [ -s $i ]; then
 				echo "Signing $i"
 				gpg --clearsign $i && rm $i
-				echo ${i}.asc >> $osf
 			fi
 		done
 	else
@@ -162,43 +155,44 @@ if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
 fi
 
 
-echo "#!/bin/sh" > $upload
-echo "packages=$packages" >> $upload
-echo "if ! cd $packages ; then" >> $upload
-echo "	echo \"could not cd to $packages\"" >> $upload
-echo "	exit 1" >> $upload
-echo "fi" >> $upload
+echo "#!/bin/sh" > "$upload"
+echo "packages=$packages" >> "$upload"
+echo "if ! cd $packages ; then" >> "$upload"
+echo "	echo \"could not cd to $packages\"" >> "$upload"
+echo "	exit 1" >> "$upload"
+echo "fi" >> "$upload"
 
-echo "Uploading OSVERSION_SPECIFIC pkgs"
-cmd="rsync $RSFLAGS --include '*/' --exclude-from=$exf --include-from=$osf \
-	--exclude '*' . $RSYNC_DST_SPECIFIC"
-cp -f $upload $upload_specific
-echo $cmd >> $upload_specific
-chmod 755 $upload_specific
-echo $cmd
-. $upload_specific
+echo "Uploading non-vulnerable pkgs"
+cmd="rsync $RSFLAGS --exclude-from=\"$exf\" --exclude-from=\"$vf\" . \"$RSYNC_DST\""
+cp -f "$upload" "$upload_general"
+echo "$cmd" >> "$upload_general"
+chmod 755 "$upload_general"
+echo "$cmd"
+sh "$upload_general"
 if [ $? != 0 ]; then
 	echo "--------------------------------------------------"
 	echo " "
-	echo "WARNING rsync failed.  To retry later, you can run"
-	echo "    $upload_specific"
+	echo "WARNING: rsync failed.  To retry later, you can run"
+	echo "    $upload_general"
 	echo " "
 	echo "--------------------------------------------------"
 	failed=yes
 fi
 
-echo "Uploading non-OSVERSION_SPECIFIC pkgs"
-cmd="rsync $RSFLAGS --exclude-from=$exf --exclude-from=$osf . $RSYNC_DST_OTHER"
-cp -f $upload $upload_others
-echo $cmd >> $upload_others
-chmod 755 $upload_others
-echo $cmd
-. $upload_others
+echo "Uploading vulnerable pkgs"
+sed -n "s@All/@@p" "$exf" > "$exf.new"
+sed -n "s@All/@@p" "$vf" > "$vf.new"
+cmd="rsync $RSFLAGS --exclude-from=\"$exf.new\" --include-from=\"$vf.new\" --exclude='*' All/ \"$RSYNC_DST/vulnerable/\""
+cp -f "$upload" "$upload_vulnerable"
+echo "$cmd" >> "$upload_vulnerable"
+chmod 755 "$upload_vulnerable"
+echo "$cmd"
+sh "$upload_vulnerable"
 if [ $? != 0 ]; then
 	echo "--------------------------------------------------"
 	echo " "
-	echo "WARNING rsync failed.  To retry later, you can run"
-	echo "    $upload_others"
+	echo "WARNING: rsync failed.  To retry later, you can run"
+	echo "    $upload_vulnerable"
 	echo " "
 	echo "--------------------------------------------------"
 	failed=yes
@@ -206,5 +200,5 @@ fi
 
 # clean up temp files
 if [ "$failed" = "no" ]; then
-	rm -fr $TMP
+	rm -fr "$TMP"
 fi
