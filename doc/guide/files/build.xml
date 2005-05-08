@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.3 2004/12/03 12:48:15 wiz Exp $ -->
+<!-- $NetBSD: build.xml,v 1.4 2005/05/08 13:53:06 wiz Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -93,7 +93,7 @@
 	  in <varname>X11BASE</varname> and some in <varname>LOCALBASE</varname>.
 	  To determine the prefix of an installed package, the
 	  <varname>EVAL_PREFIX</varname> definition can be used. It takes pairs in the
-	  format <quote>DIRNAME=&lt;package&gt;</quote>, and the make(1) variable
+	  format <quote>DIRNAME=&lt;package&gt;</quote>, and the &man.make.1; variable
 	  <varname>DIRNAME</varname> will be set to the prefix of the installed
 	  package &lt;package&gt;, or <quote>${X11PREFIX}</quote> if the package is
 	  not installed.</para>
@@ -120,7 +120,7 @@ CONFIGURE_ARGS+=	--with-guile-prefix=${LOCALBASE}	\
       
       <listitem>
         <para>Within <filename>${PREFIX}</filename>, packages should
-          install files according to hier(7), with the exception that
+          install files according to &man.hier.7;, with the exception that
           manual pages go into <filename>${PREFIX}/man</filename>, not
           <filename>${PREFIX}/share/man</filename>.</para> 
       </listitem>
@@ -225,11 +225,11 @@ CONFIGURE_ARGS+=	--with-guile-prefix=${LOCALBASE}	\
 	    Patchfiles ending in <filename>.Z</filename> or
 	    <filename>.gz</filename> are uncompressed before they are applied,
 	    files ending in <filename>.orig</filename> or
-	    <filename>.rej</filename> are ignored. Any special options to patch(1)
+	    <filename>.rej</filename> are ignored. Any special options to &man.patch.1;
 	    can be handed in <varname>PATCH_DIST_ARGS</varname>.
 	    See <xref linkend="components.patches"/> for more details.</para>
 
-	  <para>By default patch(1) is given special args to make it fail if the
+	  <para>By default &man.patch.1; is given special args to make it fail if the
 	    patches apply with some lines of fuzz. Please fix (regen) the patches
 	    so that they apply cleanly. The rationale behind this is that
 	    patches that don't apply cleanly may end up being applied in the wrong
@@ -363,7 +363,7 @@ make build</programlisting>
 	<term>deinstall</term>
 
 	<listitem>
-	  <para>This target does a pkg_delete(1) in the current directory,
+	  <para>This target does a &man.pkg.delete.1; in the current directory,
 	    effectively de-installing the package. The following variables can
 	    be used to tune the behaviour:</para>
 
@@ -648,7 +648,7 @@ make build</programlisting>
 	    diff the output of this command against an already
 	    existing <filename>PLIST</filename> file.</para>
 
-	  <para>If the package installs files via tar(1) or other
+	  <para>If the package installs files via &man.tar.1; or other
 	    methods that don't update file access times, be sure to
 	    add these files manually to your
 	    <filename>PLIST</filename>, as the <quote>find
