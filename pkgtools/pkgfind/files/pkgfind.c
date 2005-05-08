@@ -58,7 +58,7 @@ static const char * const skip[] = {
 	"licenses", "mk", "packages", NULL
 };
 
-static void		pkgfind(const char *, const char *);
+static void		pkgfind(const char *, const char *, int);
 static void		showpkg(const char *, const char *, const char *);
 static int		getstring(const char *, const char *, char **);
 static int		checkskip(const struct dirent *);
@@ -69,13 +69,13 @@ static void		usage(void);
 static int		(*match)(const char *, const char *);
 
 static const char	*search;
-static int		cflag, qflag, xflag;
+static int		cflag, qflag;
 
 int
 main(int argc, char *argv[])
 {
 	const char *path;
-	int ch;
+	int ch, count = 0;
 
 	setprogname("pkgfind");
 
@@ -84,15 +84,18 @@ main(int argc, char *argv[])
 	/* no special searches by default */
 	search = NULL;
 
-	cflag = qflag = xflag = 0;
+	cflag = qflag = 0;
 
-	while ((ch = getopt(argc, argv, "CcMqx")) != -1) {
+	while ((ch = getopt(argc, argv, "Ccn:Mqx")) != -1) {
 		switch (ch) {
 		case 'C':	/* search in comments */
 			search = "COMMENT";
 			break;
 		case 'c':	/* case sensitive */
 			cflag = 1;
+			break;
+		case 'n':
+			count = atoi(optarg);
 			break;
 		case 'M':	/* search for maintainer */
 			search = "MAINTAINER";
@@ -118,15 +121,15 @@ main(int argc, char *argv[])
 		path = PKGSRCDIR;
 
 	for (; *argv != NULL; ++argv)
-		pkgfind(path, *argv);
+		pkgfind(path, *argv, count);
 
 	return 0;
 }
 
 static void
-pkgfind(const char *path, const char *pkg)
+pkgfind(const char *path, const char *pkg, int count)
 {
-	struct dirent **cat, **list;
+	struct dirent **cat, **list = NULL;
 	int ncat, nlist, i, j;
 	char tmp[PATH_MAX];
 	char *text = NULL;
@@ -162,8 +165,13 @@ pkgfind(const char *path, const char *pkg)
 			} else {
 				text = list[j]->d_name;
 			}
-			if ((*match)(text, pkg))
+			if ((*match)(text, pkg)) {
 				showpkg(path, cat[i]->d_name, list[j]->d_name);
+				if (count != 0 && --count < 1) {
+					i = ncat;
+					break;
+				}
+			}
 			free(list[j]);
 		}
 		free(cat[i]);
@@ -178,7 +186,8 @@ showpkg(const char *path, const char *cat, const char *pkg)
 	char *mk, *comment = NULL;
 	size_t len;
 
-	len = strlen(path) + strlen(cat) + strlen(pkg) + strlen("Makefile") + 3 + 1;
+	len = strlen(path) + strlen(cat) + strlen(pkg) +
+	   strlen("Makefile") + 3 + 1;
 
 	if (!qflag) {
 		if ((mk = malloc(len)) == NULL)
@@ -274,6 +283,7 @@ exactmatch(const char *s, const char *find)
 static void
 usage(void)
 {
-	(void)fprintf(stderr, "Usage: %s [-CcMqx] keyword [...]\n", getprogname());
+	(void)fprintf(stderr, "Usage: %s [-CcMqx] [-n number] keyword [...]\n",
+	    getprogname());
 	exit(EXIT_FAILURE);
 }
