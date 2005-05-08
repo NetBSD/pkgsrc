@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2005/04/05 15:22:11 minskim Exp $
+$NetBSD: distinfo,v 1.7 2005/05/08 03:14:35 minskim Exp $
 
 SHA1 (nbitools-R6.3.tar.gz) = 0f6751417d7ef412be04611fbe4f56386a04322a
 RMD160 (nbitools-R6.3.tar.gz) = 047f64b113a0307b045573bfe429b59063ae38ea
@@ -10,4 +10,6 @@ SHA1 (patch-ad) = b0c18505891834182c57819489b7d9890802d550
 SHA1 (patch-ae) = 0a0acf8798055a7b1b292e8d2edf998857641550
 SHA1 (patch-af) = 9a7e4bd19863d086a1e57f1cd9484b05189cbda6
 SHA1 (patch-ag) = cd7da1a5c47fc37ee8ade78903cc9195219a4c66
-SHA1 (patch-ah) = 4fc71b5dbf370f3d48b4b0ed95fef3cc249434c5
+SHA1 (patch-ah) = 1048c4cda63de7bd23213785d7614ec8e00f0c9c
+SHA1 (patch-ai) = 9085fda5360c672865561e2c0aeafdc34596eb66
+SHA1 (patch-aj) = ab3f2807a92bf228ec1aa8bfb8a586de964e3a1c
