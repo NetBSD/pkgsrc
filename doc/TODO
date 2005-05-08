@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3473 2005/05/07 22:36:46 wiz Exp $
+$NetBSD: TODO,v 1.3474 2005/05/08 01:02:26 rh Exp $
 
 Suggested new packages
 ======================
@@ -183,10 +183,6 @@ Suggested new packages
 	http://www.immunitysec.com/resources-freesoftware.shtml
 	http://lwn.net/Articles/98988/?format=printable
 	Python library that will disassemble X86.
-
-	cenon
-	http://www.cenon.info/
-	Vector graphics and desktop publishing tool that supports many formats.
 
 	pdftk
 	http://www.accesspdf.com/pdftk/
