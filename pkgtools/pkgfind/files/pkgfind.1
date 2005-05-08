@@ -1,4 +1,4 @@
-.\" $NetBSD: pkgfind.1,v 1.6 2005/02/15 21:24:36 peter Exp $
+.\" $NetBSD: pkgfind.1,v 1.7 2005/05/08 15:26:36 peter Exp $
 .\"
 .\" Copyright (c) 2004 Peter Postma <peter@pointless.nl>
 .\" All rights reserved.
@@ -24,7 +24,7 @@
 .\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 .\" SUCH DAMAGE.
 .\"
-.Dd February 5, 2005
+.Dd May 8, 2005
 .Dt PKGFIND 1
 .Sh NAME
 .Nm pkgfind
@@ -32,6 +32,7 @@
 .Sh SYNOPSIS
 .Nm
 .Op Fl CcMqx
+.Op Fl n Ar number
 .Ar keyword
 .Op Ar ...
 .Sh DESCRIPTION
@@ -57,6 +58,10 @@ Search in the
 field, instead of looking at package names.
 .It Fl c
 Do case sensitive searches.
+.It Fl n Ar number
+Stop searching after
+.Ar number
+packages are found.
 .It Fl M
 Search in the
 .Dq MAINTAINER
