@@ -1,0 +1,9 @@
+# $NetBSD: spec,v 1.1.1.1 2005/05/08 09:51:26 jlam Exp $
+
+MAKEARGS_TEST=regress	# target to invoke for regression tests
+MAKEARGS_CLEAN=clean	# need to remove work directory afterwards
+
+check_result()
+{
+	exit_status 0
+}
