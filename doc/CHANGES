@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10050 2005/05/08 15:27:45 peter Exp $
+$NetBSD: CHANGES,v 1.10051 2005/05/08 16:16:01 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2322,3 +2322,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wxhugo to 3.1.02 [dillo 2005-05-07]
 	Updated nbitools to 6.3nb2 [minskim 2005-05-08]
 	Updated pkgfind to 20050508 [peter 2005-05-08]
+	Updated sun-jdk15 to 5.0.3 [abs 2005-05-08]
+	Updated sun-jre15 to 5.0.3 [abs 2005-05-08]
