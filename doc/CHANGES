@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10049 2005/05/08 03:16:48 minskim Exp $
+$NetBSD: CHANGES,v 1.10050 2005/05/08 15:27:45 peter Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2321,3 +2321,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated hugo to 3.1.02 [dillo 2005-05-07]
 	Updated wxhugo to 3.1.02 [dillo 2005-05-07]
 	Updated nbitools to 6.3nb2 [minskim 2005-05-08]
+	Updated pkgfind to 20050508 [peter 2005-05-08]
