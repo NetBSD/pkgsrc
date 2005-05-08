@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3474 2005/05/08 01:02:26 rh Exp $
+$NetBSD: TODO,v 1.3475 2005/05/08 16:16:01 abs Exp $
 
 Suggested new packages
 ======================
@@ -985,8 +985,6 @@ Suggested package updates
 	o streamtuner-0.99.99
 	o stunnel-4.10
 	o subtitleripper-0.3.4
-	o sun-jdk15-5.0.3
-	o sun-jre15-5.0.3
 	o suse_base-9.3
 	o swfdec-0.3.2
 	o swi-prolog-5.5.11
