@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1629 2005/05/07 22:17:40 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1630 2005/05/08 13:52:25 dillo Exp $
 #
 # This file is in the public domain.
 #
@@ -4373,6 +4373,14 @@ show-license show-licence:
 			${ECHO} "See the package description (pkg_info -d ${PKGNAME}) for more information."; \
 		fi							\
 	fi
+.endif
+
+# This target is defined in bsd.options.mk for packages that use
+# the options framework.
+.if !target(describe-options)
+.PHONY: describe-options
+describe-options:
+	@${ECHO} This package does not use the options framework.
 .endif
 
 # Stat all the files of one pkg and sum the sizes up.
