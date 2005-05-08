@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.13 2005/04/15 13:47:25 wiz Exp $
+$NetBSD: patch-aa,v 1.14 2005/05/08 09:07:08 jmmv Exp $
 
 --- gdk-pixbuf/Makefile.in.orig	2005-04-12 22:31:06.000000000 +0200
 +++ gdk-pixbuf/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.13 2005/04/15 13:47:25 wiz Exp $
  
  gdk_pixbuf_query_loaders_DEPENDENCIES = $(DEPS)
 -gdk_pixbuf_query_loaders_LDADD = $(LDADDS)
-+gdk_pixbuf_query_loaders_LDADD = $(LDADDS) -lpthread
++gdk_pixbuf_query_loaders_LDADD = $(LDADDS) __PTHREAD_FLAGS__
  
  gdk_pixbuf_query_loaders_SOURCES = queryloaders.c
  
