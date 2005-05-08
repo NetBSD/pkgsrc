@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.6 2005/05/07 15:28:40 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.7 2005/05/08 13:53:06 wiz Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
   <title>Frequently Asked Questions</title>
@@ -249,7 +249,7 @@
 	<varname>PKG_RESUME_TRANSFERS=YES</varname> into 
 	<filename>/etc/mk.conf</filename>. If, during a fetch step, an
 	incomplete distfile is found, pkgsrc will try to resume it.</para>
-    <para>You can also use a different program than the default ftp(1) by
+    <para>You can also use a different program than the default &man.ftp.1; by
 	changing the <varname>FETCH_CMD</varname> variable.
 	Don't forget to set <varname>FETCH_RESUME_ARGS</varname> and
 	<varname>FETCH_OUTPUT_ARGS</varname> if you are not using default
@@ -349,7 +349,7 @@ http_proxy=http://orpheus.amdahl.com:80/</programlisting>
       fetch-list</command> in <filename>/usr/pkgsrc</filename> or one
       of it's subdirectories, carry the resulting list to your machine
       at work/school and use it there. If you don't have a
-      NetBSD-compatible ftp(1) (like lukemftp) at work, don't forget
+      NetBSD-compatible &man.ftp.1; (like lukemftp) at work, don't forget
       to set <varname>FETCH_CMD</varname> to something that fetches a
       URL: </para>
 
@@ -422,7 +422,7 @@ http_proxy=http://orpheus.amdahl.com:80/</programlisting>
 
     <para>
       When installing packages as non-root user and using the
-      just-in-time su(1) feature of pkgsrc, it can become annoying to
+      just-in-time &man.su.1; feature of pkgsrc, it can become annoying to
       type in the root password for each required package
       installed. To avoid this, the sudo package can be used, which
       does password caching over a limited time.  To use it, install
