@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2005/05/09 05:06:55 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2005/05/09 05:14:08 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APR_BUILDLINK3_MK:=	${APR_BUILDLINK3_MK}+
@@ -24,18 +24,18 @@ BUILDLINK_FILES.apr+=	bin/apu-config
 BUILDLINK_FILES.apr+=	lib/*.exp
 .endif	# APR_BUILDLINK3_MK
 
-.if !defined(PKG_OPTIONS.apr)
-PKG_OPTIONS.apr!=	cd ${BUILDLINK_PKGSRCDIR.apr} && \
+.if !defined(PKG_BUILD_OPTIONS.apr)
+PKG_BUILD_OPTIONS.apr!=	cd ${BUILDLINK_PKGSRCDIR.apr} && \
 			${MAKE} show-var ${MAKE_FLAGS} VARNAME=PKG_OPTIONS
-MAKE_FLAGS+=		PKG_OPTIONS.apr=${PKG_OPTIONS.apr:Q}
+MAKE_FLAGS+=	PKG_BUILD_OPTIONS.apr=${PKG_BUILD_OPTIONS.apr:Q}
 .endif
-MAKE_VARS+=		PKG_OPTIONS.apr
+MAKE_VARS+=	PKG_BUILD_OPTIONS.apr
 
-.if !empty(PKG_OPTIONS.apr:Mdb4)
+.if !empty(PKG_BUILD_OPTIONS.apr:Mdb4)
 .  include "../../databases/db4/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS.apr:Mldap)
+.if !empty(PKG_BUILD_OPTIONS.apr:Mldap)
 .  include "../../databases/openldap/buildlink3.mk"
 .endif
 

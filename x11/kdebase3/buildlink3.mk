@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2005/05/09 05:06:56 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2005/05/09 05:14:09 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDEBASE_BUILDLINK3_MK:=	${KDEBASE_BUILDLINK3_MK}+
@@ -16,13 +16,13 @@ BUILDLINK_RECOMMENDED.kdebase?=	kdebase>=3.4.0
 BUILDLINK_PKGSRCDIR.kdebase?=	../../x11/kdebase3
 .endif	# KDEBASE_BUILDLINK3_MK
 
-.if !defined(PKG_OPTIONS.kdebase)
-PKG_OPTIONS.kdebase!=							\
+.if !defined(PKG_BUILD_OPTIONS.kdebase)
+PKG_BUILD_OPTIONS.kdebase!=						\
 	cd ${BUILDLINK_PKGSRCDIR.kdebase} &&				\
 	${MAKE} show-var ${MAKE_FLAGS} VARNAME=PKG_OPTIONS
-MAKE_FLAGS+=		PKG_OPTIONS.kdebase=${PKG_OPTIONS.kdebase:Q}
+MAKE_FLAGS+=	PKG_BUILD_OPTIONS.kdebase=${PKG_BUILD_OPTIONS.kdebase:Q}
 .endif
-MAKE_VARS+=		PKG_OPTIONS.kdebase
+MAKE_VARS+=	PKG_BUILD_OPTIONS.kdebase
 
 BUILDLINK_DEPENDS.Xrandr+=      Xrandr>=1.0
 
@@ -30,10 +30,10 @@ BUILDLINK_DEPENDS.Xrandr+=      Xrandr>=1.0
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
-.if !empty(PKG_OPTIONS.kdebase:Msamba)
+.if !empty(PKG_BUILD_OPTIONS.kdebase:Msamba)
 .  include "../../net/samba/buildlink3.mk"
 .endif
-.if !empty(PKG_OPTIONS.kdebase:Msasl)
+.if !empty(PKG_BUILD_OPTIONS.kdebase:Msasl)
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
 .endif
 .include "../../x11/Xrandr/buildlink3.mk"
