@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/03/21 20:40:01 minskim Exp $
+# $NetBSD: Makefile,v 1.25 2005/05/09 12:53:23 seb Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
@@ -9,7 +9,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_USES_MSGFMT=	yes
 
-BUILD_DEFS+=		PKG_OPTIONS.apr
+BUILD_DEFS+=		PKG_BUILD_OPTIONS.apr
 
 CONFIGURE_ARGS+=	--without-apache
 CONFIGURE_ARGS+=	--without-apxs
@@ -20,7 +20,7 @@ BUILDLINK_DEPENDS.neon+=	neon>=0.24.7
 .include "../../devel/apr/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"
 
-.if !empty(PKG_OPTIONS.apr:Mdb4)
+.if !empty(PKG_BUILD_OPTIONS.apr:Mdb4)
 PLIST_SRC=		${PKGDIR}/PLIST ${PKGDIR}/PLIST.bdb
 .else
 CONFIGURE_ARGS+=	--without-berkeley-db
