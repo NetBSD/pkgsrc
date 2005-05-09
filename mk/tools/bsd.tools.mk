@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.13 2005/05/02 04:35:59 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.14 2005/05/09 00:13:03 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -29,14 +29,14 @@
 # The following variables specify further details of each <tool> and
 # are used only by tools listed in TOOLS_WRAP:
 #
-#    TOOLS_ARGS.<tool> additional arguments that are passed to the real
-#	command ahead of any command-line arguments.  This variable is
-#	optional.
+#    TOOLS_REAL_ARGS.<tool> additional arguments that are passed to the
+#	real command ahead of any command-line arguments.  This variable
+#	is optional.
 #
 #    TOOLS_REAL_CMDLINE.<tool> specifies the full command-line to invoke
 #	in the wrapper script when <tool> is called.  This variable is
 #	optional, and if left unspecified, then this is built up from
-#	TOOLS_REAL_CMD.<tool> and TOOLS_ARGS.<tool> by default.
+#	TOOLS_REAL_CMD.<tool> and TOOLS_REAL_ARGS.<tool> by default.
 #
 # The following variables provide shortcuts for creating certain classes
 # of tools:
@@ -120,25 +120,17 @@ MKDIR?=         mkdir -p
 
 ######################################################################
 
-# The default wrapper script will invoke the real command, followed by
-# any arguments specified in TOOLS_ARGS.*, followed by any command-line
-# arguments passed to the wrapper script.  By default, the wrapper in
-# ${TOOLS_DIR} will be in the "bin" directory and will be called <tool>.
+# The default wrapper script will invoke the real command, followed
+# by any arguments specified in TOOLS_REAL_ARGS.*, followed by any
+# command-line arguments passed to the wrapper script.  By default,
+# the wrapper in ${TOOLS_DIR} will be in the "bin" directory and will
+# be called <tool>.
 #
 .for _t_ in ${TOOLS_WRAP}
 TOOLS_REAL_CMD.${_t_}?=		${FALSE}
-TOOLS_ARGS.${_t_}?=		# empty
-TOOLS_REAL_CMDLINE.${_t_}?=	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_ARGS.${_t_}} "$$@"
+TOOLS_REAL_ARGS.${_t_}?=	# empty
+TOOLS_REAL_CMDLINE.${_t_}?=	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_REAL_ARGS.${_t_}} "$$@"
 TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
-
-# Small optimization: exec the command if it points to a real command
-# (specified by a full path).
-#
-.  if !empty(TOOLS_REAL_CMDLINE.${_t_}:C/^/_asdf_/1:M_asdf_/*)
-_TOOLS_EXEC.${_t_}=		exec
-.  else
-_TOOLS_EXEC.${_t_}=		# empty
-.  endif
 
 .  if !empty(TOOLS_CMD.${_t_}:M${TOOLS_DIR}/*) && \
       !target(${TOOLS_CMD.${_t_}})
@@ -150,7 +142,7 @@ ${TOOLS_CMD.${_t_}}:
 	  ${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-'${_TOOLS_WRAP_LOG:Q}'}"'; \
 	  ${ECHO} '${ECHO} "[*] "'${TOOLS_CMD.${_t_}:Q}'" $$*" >> $$wrapperlog'; \
 	  ${ECHO} '${ECHO} "<.> "'${TOOLS_REAL_CMDLINE.${_t_}:Q}' >> $$wrapperlog'; \
-	  ${ECHO} ${_TOOLS_EXEC.${_t_}:Q} ${TOOLS_REAL_CMDLINE.${_t_}:Q}; \
+	  ${ECHO} ${TOOLS_REAL_CMDLINE.${_t_}:Q};			\
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .  endif
