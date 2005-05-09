@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.2 2004/11/04 18:40:39 jdolecek Exp $
+# $NetBSD: phpversion.mk,v 1.3 2005/05/09 19:24:46 jdolecek Exp $
 # PHP wrapper, for module builds
 
 .if !defined(PHPVERSION_MK)
@@ -57,12 +57,15 @@ _PHP_VERSION=	${_PHP_VERSION_FIRSTACCEPTED}
 .endif
 
 # export some of internal variables
-PKG_PHP_VERSION=	${_PHP_VERSION}
-PKG_PHP=		PHP${_PHP_VERSION}
+PKG_PHP_VERSION:=	${_PHP_VERSION}
+PKG_PHP:=		PHP${_PHP_VERSION}
 
 MESSAGE_SUBST+=		PKG_PHP_VERSION=${PKG_PHP_VERSION} \
 			PKG_PHP=${PKG_PHP}
 PLIST_SUBST+=		PKG_PHP_VERSION=${PKG_PHP_VERSION}
+
+# force the selected PHP version for recursive builds
+PHP_VERSION_REQD:=	${PKG_PHP_VERSION}
 
 #
 # set variables for the version we decided to use:
