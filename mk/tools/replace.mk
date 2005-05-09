@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.62 2005/05/04 04:46:48 jlam Exp $
+# $NetBSD: replace.mk,v 1.63 2005/05/09 00:13:03 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.  The replacements are placed under
@@ -127,8 +127,8 @@ MAKEFLAGS+=			TOOLS_IGNORE.bison=
 TOOLS_DEPENDS.bison?=		bison>=1.0:../../devel/bison
 TOOLS_WRAP+=			bison
 TOOLS_REAL_CMD.bison=		${LOCALBASE}/bin/bison
-TOOLS_ARGS.bison=		-y
-${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_ARGS.bison}
+TOOLS_REAL_ARGS.bison=		-y
+${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_REAL_ARGS.bison}
 .  endif
 TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
 .endif
@@ -412,8 +412,8 @@ MAKEFLAGS+=			TOOLS_IGNORE.gunzip=
 TOOLS_DEPENDS.gunzip?=		gzip-base>=1.2.4b:../../archivers/gzip-base
 TOOLS_WRAP+=			gunzip
 TOOLS_REAL_CMD.gunzip=		${LOCALBASE}/bin/gunzip
-TOOLS_ARGS.gunzip=		-f
-${_TOOLS_VARNAME.gunzip}=	${TOOLS_REAL_CMD.gunzip} ${TOOLS_ARGS.gunzip}
+TOOLS_REAL_ARGS.gunzip=		-f
+${_TOOLS_VARNAME.gunzip}=	${TOOLS_REAL_CMD.gunzip} ${TOOLS_REAL_ARGS.gunzip}
 .  endif
 .endif
 
@@ -435,8 +435,8 @@ MAKEFLAGS+=			TOOLS_IGNORE.gzip=
 TOOLS_DEPENDS.gzip?=		gzip-base>=1.2.4b:../../archivers/gzip-base
 TOOLS_WRAP+=			gzip
 TOOLS_REAL_CMD.gzip=		${LOCALBASE}/bin/gzip
-TOOLS_ARGS.gzip=		-nf ${GZIP}
-${_TOOLS_VARNAME.gzip}=		${TOOLS_REAL_CMD.gzip} ${TOOLS_ARGS.gzip}
+TOOLS_REAL_ARGS.gzip=		-nf ${GZIP}
+${_TOOLS_VARNAME.gzip}=		${TOOLS_REAL_CMD.gzip} ${TOOLS_REAL_ARGS.gzip}
 .  endif
 .endif
 
@@ -547,8 +547,8 @@ MAKEFLAGS+=			TOOLS_IGNORE.mkdir=
 TOOLS_DEPENDS.mkdir?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_WRAP+=			mkdir
 TOOLS_REAL_CMD.mkdir=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}mkdir
-TOOLS_ARGS.mkdir=		-p
-${_TOOLS_VARNAME.mkdir}=	${TOOLS_REAL_CMD.mkdir} ${TOOLS_ARGS.mkdir}
+TOOLS_REAL_ARGS.mkdir=		-p
+${_TOOLS_VARNAME.mkdir}=	${TOOLS_REAL_CMD.mkdir} ${TOOLS_REAL_ARGS.mkdir}
 .  endif
 .endif
 
@@ -799,8 +799,8 @@ MAKEFLAGS+=			TOOLS_IGNORE.xargs=
 TOOLS_DEPENDS.xargs?=		findutils>=4.1:../../sysutils/findutils
 TOOLS_WRAP+=			xargs
 TOOLS_REAL_CMD.xargs=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}xargs
-TOOLS_ARGS.xargs=		-r	# don't run command if stdin is empty
-${_TOOLS_VARNAME.xargs}=	${TOOLS_REAL_CMD.xargs} ${TOOLS_ARGS.xargs}
+TOOLS_REAL_ARGS.xargs=		-r	# don't run command if stdin is empty
+${_TOOLS_VARNAME.xargs}=	${TOOLS_REAL_CMD.xargs} ${TOOLS_REAL_ARGS.xargs}
 .  endif
 .endif
 
@@ -811,8 +811,8 @@ MAKEFLAGS+=			TOOLS_IGNORE.yacc=
 TOOLS_DEPENDS.yacc?=		bison>=1.0:../../devel/bison
 TOOLS_WRAP+=			yacc
 TOOLS_REAL_CMD.yacc=		${LOCALBASE}/bin/bison
-TOOLS_ARGS.yacc=		-y
-${_TOOLS_VARNAME.yacc}=		${TOOLS_REAL_CMD.yacc} ${TOOLS_ARGS.yacc}
+TOOLS_REAL_ARGS.yacc=		-y
+${_TOOLS_VARNAME.yacc}=		${TOOLS_REAL_CMD.yacc} ${TOOLS_REAL_ARGS.yacc}
 .  endif
 .endif
 
@@ -831,10 +831,10 @@ ${TOOLS_DEPMETHOD.${_t_}}+=	${TOOLS_DEPENDS.${_t_}}
 # using the system-supplied tool.  Here, we first check to see if
 # TOOLS_PLATFORM.<tool> is defined.  If it is, then use that as the
 # path to the real command and extract any arguments into
-# TOOLS_ARGS.<tool>.  We also create either a wrapper or a symlink
-# depending on whether # there are any arguments or not.  Lastly,
-# always set the TOOL name for each tool to point to the real command,
-# e.g., TBL, YACC, etc., provided that "TOOL" has been associated with
+# TOOLS_REAL_ARGS.<tool>.  We also create either a wrapper or a symlink
+# depending on whether there are any arguments or not.  Lastly, always
+# set the TOOL name for each tool to point to the real command, e.g.,
+# TBL, YACC, etc., provided that "TOOL" has been associated with
 # <tool>.
 #
 .for _t_ in ${_USE_TOOLS}
@@ -843,19 +843,19 @@ ${TOOLS_DEPMETHOD.${_t_}}+=	${TOOLS_DEPENDS.${_t_}}
 .    if defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
 TOOLS_REAL_CMD.${_t_}?=		\
 	${TOOLS_PLATFORM.${_t_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-TOOLS_ARGS.${_t_}?=		\
+TOOLS_REAL_ARGS.${_t_}?=	\
 	${TOOLS_PLATFORM.${_t_}:C/^/_asdf_/1:N_asdf_*}
 .      if defined(_TOOLS_VARNAME.${_t_})
 ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_PLATFORM.${_t_}}
 .      endif
-.      if empty(TOOLS_REAL_CMD.${_t_}:M/*) || !empty(TOOLS_ARGS.${_t_})
+.      if empty(TOOLS_REAL_CMD.${_t_}:M/*) || !empty(TOOLS_REAL_ARGS.${_t_})
 TOOLS_WRAP+=			${_t_}
 .      else
 TOOLS_SYMLINK+=			${_t_}
 .      endif
 .    elif defined(_TOOLS_VARNAME.${_t_})
 .      if defined(TOOLS_REAL_CMD.${_t_})
-${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_ARGS.${_t_}}
+${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_REAL_ARGS.${_t_}}
 .      else
 ${_TOOLS_VARNAME.${_t_}}=	${_TOOLS_VARNAME.${_t_}}_not_defined_
 .      endif

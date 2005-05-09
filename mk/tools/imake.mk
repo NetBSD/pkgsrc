@@ -1,4 +1,4 @@
-# $NetBSD: imake.mk,v 1.2 2005/05/04 06:25:59 jlam Exp $
+# $NetBSD: imake.mk,v 1.3 2005/05/09 00:13:03 jlam Exp $
 #
 # This Makefile fragment handles packages that need imake and xmkmf
 # to build X11-related packages.  The correct imake and xmkmf tools
@@ -70,8 +70,8 @@ TOOLS_REAL_CMD.xmkmf=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/xmkmf
 TOOLS_REAL_CMD.imake=		${X11BASE}/bin/imake
 TOOLS_REAL_CMD.xmkmf=		${X11BASE}/bin/xmkmf
 .    endif
-TOOLS_ARGS.imake=		${IMAKEOPTS}
-TOOLS_ARGS.xmkmf=		${XMKMF_FLAGS}
+TOOLS_REAL_ARGS.imake=		${IMAKEOPTS}
+TOOLS_REAL_ARGS.xmkmf=		${XMKMF_FLAGS}
 #
 # Add any extra tools that may be required when using imake, e.g. gmake.
 #
@@ -80,18 +80,18 @@ USE_TOOLS+=			${_IMAKE_TOOLS:Nimake}
 # Define IMAKE and XMKMF_CMD and create wrappers/symlinks corresponding
 # to imake and xmkmf.
 #
-.    if !empty(TOOLS_ARGS.imake)
+.    if !empty(TOOLS_REAL_ARGS.imake)
 TOOLS_WRAP+=			imake
 .    else
 TOOLS_SYMLINK+=			imake
 .    endif
-.    if !empty(TOOLS_ARGS.xmkmf)
+.    if !empty(TOOLS_REAL_ARGS.xmkmf)
 TOOLS_WRAP+=			xmkmf
 .    else
 TOOLS_SYMLINK+=			xmkmf
 .    endif
-${_TOOLS_VARNAME.imake}=	${TOOLS_REAL_CMD.imake} ${TOOLS_ARGS.imake}
-${_TOOLS_VARNAME.xmkmf}=	${TOOLS_REAL_CMD.xmkmf} ${TOOLS_ARGS.xmkmf}
+${_TOOLS_VARNAME.imake}=	${TOOLS_REAL_CMD.imake} ${TOOLS_REAL_ARGS.imake}
+${_TOOLS_VARNAME.xmkmf}=	${TOOLS_REAL_CMD.xmkmf} ${TOOLS_REAL_ARGS.xmkmf}
 XMKMF=				${${_TOOLS_VARNAME.xmkmf}} -a
 .  endif
 .endif
