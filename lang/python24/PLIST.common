@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.3 2005/02/18 22:25:22 recht Exp $
+@comment $NetBSD: PLIST.common,v 1.4 2005/05/09 20:37:51 recht Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 bin/smtpd${PY_VER_SUFFIX}.py
@@ -493,6 +493,27 @@ lib/python${PY_VER_SUFFIX}/distutils/spawn.pyo
 lib/python${PY_VER_SUFFIX}/distutils/sysconfig.py
 lib/python${PY_VER_SUFFIX}/distutils/sysconfig.pyc
 lib/python${PY_VER_SUFFIX}/distutils/sysconfig.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/__init__.py
+lib/python${PY_VER_SUFFIX}/distutils/tests/__init__.pyc
+lib/python${PY_VER_SUFFIX}/distutils/tests/__init__.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/support.py
+lib/python${PY_VER_SUFFIX}/distutils/tests/support.pyc
+lib/python${PY_VER_SUFFIX}/distutils/tests/support.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_build_py.py
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_build_py.pyc
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_build_py.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_build_scripts.py
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_build_scripts.pyc
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_build_scripts.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_dist.py
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_dist.pyc
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_dist.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_install.py
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_install.pyc
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_install.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_install_scripts.py
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_install_scripts.pyc
+lib/python${PY_VER_SUFFIX}/distutils/tests/test_install_scripts.pyo
 lib/python${PY_VER_SUFFIX}/distutils/text_file.py
 lib/python${PY_VER_SUFFIX}/distutils/text_file.pyc
 lib/python${PY_VER_SUFFIX}/distutils/text_file.pyo
@@ -628,6 +649,7 @@ lib/python${PY_VER_SUFFIX}/email/test/data/msg_39.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_40.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_41.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_42.txt
+lib/python${PY_VER_SUFFIX}/email/test/data/msg_43.txt
 lib/python${PY_VER_SUFFIX}/email/test/test_email.py
 lib/python${PY_VER_SUFFIX}/email/test/test_email.pyc
 lib/python${PY_VER_SUFFIX}/email/test/test_email.pyo
