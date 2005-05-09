@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/04/11 21:47:03 tv Exp $
+# $NetBSD: Makefile,v 1.40 2005/05/09 05:27:58 minskim Exp $
 #
 
 DISTNAME=		pan-0.14.2
@@ -19,7 +19,7 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
-.if (${OPSYS} != "SunOS" && ${OPSYS} != "Linux")
+.if (${OPSYS} != "Darwin" && ${OPSYS} != "SunOS" && ${OPSYS} != "Linux")
 LIBS+=			-lcompat
 .endif
 
