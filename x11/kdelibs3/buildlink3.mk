@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2005/05/08 12:03:57 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2005/05/09 05:06:56 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDELIBS_BUILDLINK3_MK:=	${KDELIBS_BUILDLINK3_MK}+
@@ -24,9 +24,9 @@ BUILDLINK_PKGSRCDIR.kdelibs?=	../../x11/kdelibs3
 PKG_OPTIONS.kdelibs!=							\
 	cd ${BUILDLINK_PKGSRCDIR.kdelibs} &&				\
 	${MAKE} show-var ${MAKE_FLAGS} VARNAME=PKG_OPTIONS
-MAKE_FLAGS+=			PKG_OPTIONS.kdelibs=${PKG_OPTIONS.kdelibs:Q}
-WRAPPER_VARS+=			PKG_OPTIONS.kdelibs
+MAKE_FLAGS+=		PKG_OPTIONS.kdelibs=${PKG_OPTIONS.kdelibs:Q}
 .endif
+MAKE_VARS+=		PKG_OPTIONS.kdelibs
 
 .if !empty(PKG_OPTIONS.kdelibs:Mcups)
 .  include "../../print/cups/buildlink3.mk"
