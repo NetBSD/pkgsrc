@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2005/05/09 05:06:56 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2005/05/09 05:14:09 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDELIBS_BUILDLINK3_MK:=	${KDELIBS_BUILDLINK3_MK}+
@@ -20,15 +20,15 @@ BUILDLINK_PKGSRCDIR.kdelibs?=	../../x11/kdelibs3
 .include "../../x11/kdelibs3/dirs.mk"
 .endif	# KDELIBS_BUILDLINK3_MK
 
-.if !defined(PKG_OPTIONS.kdelibs)
-PKG_OPTIONS.kdelibs!=							\
+.if !defined(PKG_BUILD_OPTIONS.kdelibs)
+PKG_BUILD_OPTIONS.kdelibs!=						\
 	cd ${BUILDLINK_PKGSRCDIR.kdelibs} &&				\
 	${MAKE} show-var ${MAKE_FLAGS} VARNAME=PKG_OPTIONS
-MAKE_FLAGS+=		PKG_OPTIONS.kdelibs=${PKG_OPTIONS.kdelibs:Q}
+MAKE_FLAGS+=	PKG_BUILD_OPTIONS.kdelibs=${PKG_BUILD_OPTIONS.kdelibs:Q}
 .endif
-MAKE_VARS+=		PKG_OPTIONS.kdelibs
+MAKE_VARS+=	PKG_BUILD_OPTIONS.kdelibs
 
-.if !empty(PKG_OPTIONS.kdelibs:Mcups)
+.if !empty(PKG_BUILD_OPTIONS.kdelibs:Mcups)
 .  include "../../print/cups/buildlink3.mk"
 .endif
 .include "../../archivers/bzip2/buildlink3.mk"

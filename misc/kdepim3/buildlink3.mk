@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2005/05/09 05:06:56 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2005/05/09 05:14:08 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDEPIM_BUILDLINK3_MK:=	${KDEPIM_BUILDLINK3_MK}+
@@ -16,18 +16,18 @@ BUILDLINK_RECOMMENDED.kdepim+=	kdepim>=3.4.0
 BUILDLINK_PKGSRCDIR.kdepim?=	../../misc/kdepim3
 .endif	# KDEPIM_BUILDLINK3_MK
 
-.if !defined(PKG_OPTIONS.kdepim)
-PKG_OPTIONS.kdepim!=							\
+.if !defined(PKG_BUILD_OPTIONS.kdepim)
+PKG_BUILD_OPTIONS.kdepim!=						\
 	cd ${BUILDLINK_PKGSRCDIR.kdepim} &&				\
 	${MAKE} show-var ${MAKE_FLAGS} VARNAME=PKG_OPTIONS
-MAKE_FLAGS+=		PKG_OPTIONS.kdepim=${PKG_OPTIONS.kdepim:Q}
+MAKE_FLAGS+=	PKG_BUILD_OPTIONS.kdepim=${PKG_BUILD_OPTIONS.kdepim:Q}
 .endif
-MAKE_VARS+=		PKG_OPTIONS.kdepim
+MAKE_VARS+=	PKG_BUILD_OPTIONS.kdepim
 
 .include "../../comms/libmal/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
-.if !empty(PKG_OPTIONS.kdepim:Msasl)
+.if !empty(PKG_BUILD_OPTIONS.kdepim:Msasl)
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
 .endif
 .include "../../x11/kdebase3/buildlink3.mk"
