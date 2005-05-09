@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2005/05/09 15:14:01 minskim Exp $
+
+--- pdflib/p_config.h.orig	2002-06-19 11:01:15.000000000 -0500
++++ pdflib/p_config.h
+@@ -127,7 +127,7 @@
+ /* try to identify Mac OS 9 compilers */
+ 
+ #if (defined macintosh || defined __POWERPC__ || defined __CFM68K__ || \
+-	defined __MC68K__) && !defined MAC
++	defined __MC68K__) && !defined MAC && !defined(MACOSX)
+ #define MAC
+ #endif
+ 
