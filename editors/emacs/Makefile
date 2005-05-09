@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2005/04/11 21:45:40 tv Exp $
+# $NetBSD: Makefile,v 1.83 2005/05/09 05:23:40 minskim Exp $
 
 DISTNAME=	emacs-21.4a
 PKGREVISION=	1
@@ -16,8 +16,9 @@ USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 
 # needed for 21.4a, can probably go away on next update
-WRKSRC=		${WRKDIR}/emacs-21.4
-PLIST_SUBST+=	EMACSVERSION=21.4
+EMACSVERSION=	21.4
+WRKSRC=		${WRKDIR}/emacs-${EMACSVERSION}
+PLIST_SUBST+=	EMACSVERSION=${EMACSVERSION}
 
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
@@ -55,6 +56,14 @@ MAKEFLAGS+=	EMACSLOADPATH=${WRKSRC}/lisp
 # sections and .data reloc sections, both of which Emacs can't handle
 # properly.  Analyzed by Stephen Ma.
 LDFLAGS+=	-Wl,-z,nocombreloc
+.endif
+
+.if ${OPSYS} == "Darwin"
+PLIST_SUBST+=	FNS_EL="@comment "
+PLIST_SUBST+=	DOCTAIL=""
+.else
+PLIST_SUBST+=	FNS_EL=""
+PLIST_SUBST+=	DOCTAIL="-${EMACSVERSION}.1"
 .endif
 
 .include "../../mk/compiler.mk"
