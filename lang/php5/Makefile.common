@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2005/05/07 18:50:24 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/05/09 18:36:57 jdolecek Exp $
 #
 
 DISTNAME?=		php-${PHP_BASE_VERS}
-CATEGORIES+=		www
+CATEGORIES+=		www php5
 
 .if !defined(PECL_VERSION)
 MASTER_SITES?=		http://www.php.net/distributions/ \
