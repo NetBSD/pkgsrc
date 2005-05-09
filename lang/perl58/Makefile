@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2005/04/11 21:46:15 tv Exp $
+# $NetBSD: Makefile,v 1.79 2005/05/09 15:35:44 xtraeme Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -50,7 +50,11 @@ CONFIGURE_ARGS+=	-Dprefix="${PREFIX}"
 CONFIGURE_ARGS+=	-Dscriptdir="${PREFIX}/bin"
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
 CONFIGURE_ARGS+=	-Dcc="${CC}"
+.if !empty(MACHINE_ARCH:Marm)
+CONFIGURE_ARGS+=	-Doptimize="${CFLAGS} -fno-cse-skip-blocks"
+.else
 CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
+.endif
 CONFIGURE_ARGS+=	-Dinstallstyle="lib/perl5"
 CONFIGURE_ARGS+=	-Duseshrplib
 CONFIGURE_ARGS+=	-Ui_malloc
