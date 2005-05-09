@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/04/11 21:47:23 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/05/09 23:13:33 jschauma Exp $
 #
 
 DISTNAME=		fam-2.7.0
@@ -13,6 +13,9 @@ HOMEPAGE=		http://oss.sgi.com/projects/fam/
 COMMENT=		File Alteration Monitor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+# fam is bundled with IRIX
+NOT_FOR_PLATFORM=	IRIX-*-*
 
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
