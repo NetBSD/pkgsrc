@@ -1,14 +1,10 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 09:03:06 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/05/09 12:23:23 xtraeme Exp $
 
 SHA1 (ezm3/ezm3-1.1-src.tar.bz2) = fbca999ef121c7893d3bb7480b538a54f72fad0e
 RMD160 (ezm3/ezm3-1.1-src.tar.bz2) = 07f07169e2b09aeef4b1d25e2fb515e952b48de4
 Size (ezm3/ezm3-1.1-src.tar.bz2) = 10705295 bytes
-SHA1 (ezm3/ezm3-1.1-FreeBSD4-boot.tar.bz2) = db12938fb76f6e8187b30c9c9db6ccf029100238
-Size (ezm3/ezm3-1.1-FreeBSD4-boot.tar.bz2) = 1365809 bytes
 SHA1 (ezm3/ezm3-1.1-NetBSDi386-boot.tar.bz2) = 1a8c10544fadc618012bd0efd7d9267f7b210ccc
 RMD160 (ezm3/ezm3-1.1-NetBSDi386-boot.tar.bz2) = b25508a74a813d4e8f49a172834bbdd19ec3b36e
 Size (ezm3/ezm3-1.1-NetBSDi386-boot.tar.bz2) = 1375659 bytes
-SHA1 (ezm3/ezm3-1.1-LINUXLIBC6-boot.tar.bz2) = 602d37277e8c94743fa9a6ac79e4e7a46f9c9234
-Size (ezm3/ezm3-1.1-LINUXLIBC6-boot.tar.bz2) = 1444815 bytes
 SHA1 (patch-aa) = fac6afee90c6d5518ccaf4a02e4846917a24136e
 SHA1 (patch-ab) = d7ca4b997caacdd9a6eb16d13530dc1e9343ea1a
