@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.12 2005/05/09 04:29:16 minskim Exp $
+
+--- gtk/xdgmime/xdgmimecache.c.orig	2005-04-08 16:02:28.000000000 -0500
++++ gtk/xdgmime/xdgmimecache.c
+@@ -28,6 +28,9 @@
+ #include <config.h>
+ #endif
+ 
++#ifdef HAVE_STDINT_H
++#include <stdint.h>
++#endif
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
