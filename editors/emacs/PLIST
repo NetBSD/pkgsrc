@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/02/26 16:01:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/09 05:23:40 minskim Exp $
 bin/emacs
 bin/emacs-${EMACSVERSION}
 bin/emacs-b2m
@@ -12,7 +12,7 @@ libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/cvtmail
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/digest-doc
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/emacsserver
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/fakemail
-libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/fns-${EMACSVERSION}.1.el
+${FNS_EL}libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/fns-${EMACSVERSION}.1.el
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/hexl
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/movemail
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/profile
@@ -31,7 +31,7 @@ share/emacs/${EMACSVERSION}/etc/COOKIES
 share/emacs/${EMACSVERSION}/etc/COPYING
 share/emacs/${EMACSVERSION}/etc/DEBUG
 share/emacs/${EMACSVERSION}/etc/DISTRIB
-share/emacs/${EMACSVERSION}/etc/DOC-${EMACSVERSION}.1
+share/emacs/${EMACSVERSION}/etc/DOC${DOCTAIL}
 share/emacs/${EMACSVERSION}/etc/FTP
 share/emacs/${EMACSVERSION}/etc/GNU
 share/emacs/${EMACSVERSION}/etc/HELLO
