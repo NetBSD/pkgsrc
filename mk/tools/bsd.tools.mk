@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.15 2005/05/09 01:11:58 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.16 2005/05/09 02:43:06 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -82,14 +82,12 @@ USE_TOOLS?=		# empty
 
 .for _t_ in ${TOOLS_NOOP}
 TOOLS_CREATE+=			${_t_}
-TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 TOOLS_REAL_CMDLINE.${_t_}?=	exit 0
 .endfor
 .undef _t_
 
 .for _t_ in ${TOOLS_BROKEN}
 TOOLS_CREATE+=			${_t_}
-TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 TOOLS_REAL_CMDLINE.${_t_}?=	exit 1
 .endfor
 .undef _t_
