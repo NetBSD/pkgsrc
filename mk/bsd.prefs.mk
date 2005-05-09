@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.188 2005/05/02 21:10:02 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.189 2005/05/09 05:06:55 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -324,6 +324,7 @@ PKG_PHASE?=		none
 # The PHASES_AFTER_<phase> variables list every phase "greater than or
 # equal to" <phase>.
 #
+ALL_PHASES=		${PHASES_AFTER_FETCH}
 PHASES_AFTER_FETCH=	fetch ${PHASES_AFTER_EXTRACT}
 PHASES_AFTER_EXTRACT=	extract ${PHASES_AFTER_PATCH}
 PHASES_AFTER_PATCH=	patch ${PHASES_AFTER_TOOLS}
