@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2005/04/25 09:13:14 adam Exp $
+# $NetBSD: Makefile,v 1.72 2005/05/09 21:57:05 dillo Exp $
 
 .include "Makefile.common"
 
@@ -51,7 +51,7 @@ DFLT_APACHE_MODULES+=	proxy proxy_connect proxy_ftp proxy_http
 DFLT_APACHE_MODULES+=	ssl deflate
 
 # LDAP support
-.if !empty(PKG_OPTIONS.apr:Mldap)
+.if defined(PKG_OPTIONS.apr) && !empty(PKG_OPTIONS.apr:Mldap)
 DFLT_APACHE_MODULES+=	ldap auth_ldap
 .endif
 
