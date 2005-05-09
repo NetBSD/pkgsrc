@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.5 2005/01/24 21:46:33 tv Exp $
+$NetBSD: patch-al,v 1.6 2005/05/09 20:37:51 recht Exp $
 
---- configure.orig	2004-11-06 20:24:12.000000000 -0500
-+++ configure
-@@ -1479,6 +1479,8 @@ case $ac_sys_system/$ac_sys_release in
+--- configure.orig	2005-03-29 01:23:02.000000000 +0200
++++ configure	2005-05-09 21:14:53.000000000 +0200
+@@ -1482,6 +1482,8 @@
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    OpenBSD/2.* | OpenBSD/3.[0123456])
      define_xopen_source=no;;
@@ -11,31 +11,16 @@ $NetBSD: patch-al,v 1.5 2005/01/24 21:46:33 tv Exp $
    # On Solaris 2.6, sys/wait.h is inconsistent in the usage
    # of union __?sigval. Reported by Stuart Bishop.
    SunOS/5.6)
-@@ -3392,7 +3394,7 @@ _ACEOF
+@@ -3402,7 +3404,7 @@
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
 -    Linux*|GNU*|NetBSD*|FreeBSD*)
-+    Linux*|GNU*|NetBSD*|FreeBSD*|Interix*)
++    Linux*|GNU*|NetBSD*|FreeBSD*|Interix*|DragonFly*)
  	  LDLIBRARY='libpython$(VERSION).so'
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
-@@ -3418,6 +3420,14 @@ _ACEOF
- 	  BLDLIBRARY='-L. -lpython$(VERSION)'
- 	  RUNSHARED=DLL_PATH=`pwd`:${DLL_PATH:-/atheos/sys/libs:/atheos/autolnk/lib}
- 	  ;;
-+    Darwin*)
-+         if test -z "$enable_framework"; then
-+           LDLIBRARY='libpython$(VERSION).dylib'
-+           BLDLIBRARY='-L. -lpython$(VERSION)'
-+           RUNSHARED=DYLD_LIBRARY_PATH=`pwd`:${DYLD_LIBRARY_PATH}
-+         fi
-+         ;;
-+
-   esac
- else # shared is disabled
-   case $ac_sys_system in
-@@ -3816,7 +3826,12 @@ echo "${ECHO_T}$ac_cv_no_strict_aliasing
+@@ -3826,7 +3828,12 @@
  	    ;;
  	# is there any other compiler on Darwin besides gcc?
  	Darwin*)
@@ -49,7 +34,7 @@ $NetBSD: patch-al,v 1.5 2005/01/24 21:46:33 tv Exp $
  	    ;;
      esac
      ;;
-@@ -10165,7 +10180,10 @@ fi
+@@ -10186,7 +10193,10 @@
  case "$enable_toolbox_glue" in
  yes)
  	extra_machdep_objs="Python/mactoolboxglue.o"
@@ -61,8 +46,8 @@ $NetBSD: patch-al,v 1.5 2005/01/24 21:46:33 tv Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define USE_TOOLBOX_OBJECT_GLUE 1
-@@ -10295,7 +10313,7 @@ then
- 			LDSHARED="$LDSHARED "'-Wl,-F$(PYTHONFRAMEWORKPREFIX) -framework $(PYTHONFRAMEWORK)'
+@@ -10332,7 +10342,7 @@
+ 			LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework. Ignore undefined symbols, assuming they come from Python
 -			LDSHARED="$LDSHARED -undefined suppress"
@@ -70,8 +55,8 @@ $NetBSD: patch-al,v 1.5 2005/01/24 21:46:33 tv Exp $
  		fi ;;
  	Darwin/1.4*|Darwin/5.*|Darwin/6.*)
  		LDSHARED='$(CC) $(LDFLAGS) -bundle'
-@@ -10305,8 +10323,8 @@ then
- 			LDSHARED="$LDSHARED "'-Wl,-F$(PYTHONFRAMEWORKPREFIX) -framework $(PYTHONFRAMEWORK)'
+@@ -10342,8 +10352,8 @@
+ 			LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
 -			BLDSHARED="$LDSHARED "'-bundle_loader $(BUILDPYTHON)'
@@ -81,8 +66,8 @@ $NetBSD: patch-al,v 1.5 2005/01/24 21:46:33 tv Exp $
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -10324,12 +10342,12 @@ then
- 				LDSHARED="$LDSHARED "'-Wl,-F$(PYTHONFRAMEWORKPREFIX) -framework $(PYTHONFRAMEWORK)'
+@@ -10362,12 +10372,12 @@
+ 				LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
 -				BLDSHARED="$LDSHARED "'-bundle_loader $(BUILDPYTHON)'
@@ -97,27 +82,34 @@ $NetBSD: patch-al,v 1.5 2005/01/24 21:46:33 tv Exp $
  	BSD/OS*/4*) LDSHARED="gcc -shared";;
  	OpenBSD*|FreeBSD*)
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
-@@ -10338,7 +10356,8 @@ then
+@@ -10376,7 +10386,8 @@
  		else
  			LDSHARED="ld -Bshareable ${LDFLAGS}"
  		fi;;
 -	NetBSD*) LDSHARED="cc -shared ${LDFLAGS}";;
-+	NetBSD*) LDSHARED='$(CC) -shared ${LDFLAGS}';;
++	NetBSD*|DragonFly*) LDSHARED='$(CC) -shared ${LDFLAGS}';;
 +	Interix*) LDSHARED='$(CC) -shared ${LDFLAGS}';; # XXX tv needs image-base hack
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then LDSHARED='$(CC) -shared'
-@@ -10370,7 +10389,9 @@ then
+@@ -10408,7 +10419,9 @@
  		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
+-	FreeBSD*|NetBSD*|OpenBSD*) CCSHARED="-fPIC";;
 +	Darwin/7*) CCSHARED="-fPIC -fno-common";;
- 	FreeBSD*|NetBSD*|OpenBSD*) CCSHARED="-fPIC";;
++	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
 +	Interix*) CCSHARED="";;
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -10428,6 +10449,7 @@ then
+@@ -10461,11 +10474,12 @@
+ 	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
+ 	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
+ 	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
+-	FreeBSD*|NetBSD*|OpenBSD*)
++	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*)
+ 		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
  		fi;;
@@ -125,7 +117,7 @@ $NetBSD: patch-al,v 1.5 2005/01/24 21:46:33 tv Exp $
  	SunOS/5*) case $CC in
  		  *gcc*)
  		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
-@@ -14297,6 +14319,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -14335,6 +14349,7 @@
  /* end confdefs.h.  */
  
  #include "confdefs.h"

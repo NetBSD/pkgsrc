@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/12/05 23:27:49 recht Exp $
+$NetBSD: patch-af,v 1.2 2005/05/09 20:37:51 recht Exp $
 
 --- Makefile.pre.in.orig	Sun Sep 26 19:26:55 2004
 +++ Makefile.pre.in
@@ -25,7 +25,7 @@ $NetBSD: patch-af,v 1.1.1.1 2004/12/05 23:27:49 recht Exp $
  	$(LDSHARED) -o $@ $(LIBRARY_OBJS) $(LIBC) $(LIBM)
  
 +libpython$(VERSION).dylib: $(LIBRARY_OBJS)
-+	$(LINKCC) -dynamiclib -install_name $(LIBDIR)/$@ -current_version 2.4.0 -compatibility_version 2.4 -o $@ -flat_namespace -undefined suppress $(LIBRARY_OBJS) $(SHLIBS) $(LIBC) $(LIBM)
++	$(LINKCC) -dynamiclib -install_name $(LIBDIR)/$@ -current_version 2.4.1 -compatibility_version 2.4 -o $@ -flat_namespace -undefined suppress $(LIBRARY_OBJS) $(SHLIBS) $(LIBC) $(LIBM)
 +
  # This rule is here for OPENSTEP/Rhapsody/MacOSX. It builds a temporary
  # minimal framework (not including the Lib directory and such) in the current
