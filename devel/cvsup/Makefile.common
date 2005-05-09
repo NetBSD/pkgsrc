@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.4 2004/06/04 18:19:50 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/05/09 12:24:38 xtraeme Exp $
 
 DISTNAME=	cvsup-snap-16.1h
+PKGREVISION=	1
 CATEGORIES=	devel net
 MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/development/CVSup/snapshots/
 
@@ -11,8 +12,6 @@ COMMENT=	cvsup daemon and client
 ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386 Linux-*-i386
 
 .include "../../mk/bsd.prefs.mk"
-
-BUILD_DEPENDS=	ezm3>=1.1:../../lang/ezm3
 
 MAKE_FLAGS+=	PREFIX=${PREFIX} M3FLAGS="${M3FLAGS}"
 
@@ -48,3 +47,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/License ${PREFIX}/share/doc/cvsup
 	${INSTALL_DATA} ${FILESDIR}/*cvsup* \
 		${EGDIR}
+
+.include "../../lang/ezm3/buildlink3.mk"
