@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3476 2005/05/09 22:23:01 epg Exp $
+$NetBSD: TODO,v 1.3477 2005/05/09 22:43:43 epg Exp $
 
 Suggested new packages
 ======================
@@ -986,7 +986,6 @@ Suggested package updates
 	o stunnel-4.10
 	o subtitleripper-0.3.4
 	o suse_base-9.3
-	o svk-1.00 [epg]
 	o swfdec-0.3.2
 	o swi-prolog-5.5.11
 	o swig-build-1.3.24 [newer versions break subversion]
