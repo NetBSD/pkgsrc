@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2005/05/08 12:03:56 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2005/05/09 05:06:56 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDEBASE_BUILDLINK3_MK:=	${KDEBASE_BUILDLINK3_MK}+
@@ -20,9 +20,9 @@ BUILDLINK_PKGSRCDIR.kdebase?=	../../x11/kdebase3
 PKG_OPTIONS.kdebase!=							\
 	cd ${BUILDLINK_PKGSRCDIR.kdebase} &&				\
 	${MAKE} show-var ${MAKE_FLAGS} VARNAME=PKG_OPTIONS
-MAKE_FLAGS+=			PKG_OPTIONS.kdebase=${PKG_OPTIONS.kdebase:Q}
-WRAPPER_VARS+=			PKG_OPTIONS.kdebase
+MAKE_FLAGS+=		PKG_OPTIONS.kdebase=${PKG_OPTIONS.kdebase:Q}
 .endif
+MAKE_VARS+=		PKG_OPTIONS.kdebase
 
 BUILDLINK_DEPENDS.Xrandr+=      Xrandr>=1.0
 

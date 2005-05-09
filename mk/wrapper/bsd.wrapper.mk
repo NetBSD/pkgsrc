@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.28 2005/04/07 16:56:00 tv Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.29 2005/05/09 05:06:56 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -44,20 +44,10 @@ ECHO_WRAPPER_MSG?=	${ECHO}
 .else
 ECHO_WRAPPER_MSG?=	${TRUE}
 .endif
-_WRAP_VARS_MK=		${WRAPPER_DIR}/vars.mk
-
-.if exists(${_WRAP_VARS_MK})
-.  include "${_WRAP_VARS_MK}"
-.endif
 
 .PHONY: do-wrapper
 
 .include "../../mk/buildlink3/bsd.buildlink3.mk"
-
-# Create the saved variables Makefile fragment to pass variables
-# through to sub-make processes invoked on the same Makefile.
-#
-do-wrapper: ${_WRAP_VARS_MK}
 
 # Prepend ${WRAPPER_BINDIR} to the PATH so that the wrappers are found
 # first when searching for executables.
@@ -111,9 +101,9 @@ _WRAP_TRANSFORM_CMDS+=	${WRAPPER_TRANSFORM_CMDS}
 # are already being called with the correct arguments.
 #
 .if !defined(_WRAP_PATH)
-_WRAP_PATH=		${PATH:S/${WRAPPER_BINDIR}://:S/:${WRAPPER_BINDIR}//}
-WRAPPER_VARS+=		_WRAP_PATH
+_WRAP_PATH=	${PATH:S/${WRAPPER_BINDIR}://:S/:${WRAPPER_BINDIR}//}
 .endif
+MAKE_VARS+=	_WRAP_PATH
 
 # Generate wrapper scripts for the compiler tools.  These wrapper
 # scripts are to be used instead of the actual compiler tools when
@@ -696,22 +686,6 @@ ${_WRAP_SCAN.${_wrappee_}}: ${WRAPPER_SRCDIR}/scan
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 .  endif
 .endfor	# _WRAPPEES
-
-.if !target(${_WRAP_VARS_MK})
-${_WRAP_VARS_MK}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
-.  for _var_ in ${WRAPPER_VARS}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "${_var_}=	${${_var_}}" >> ${.TARGET}.tmp
-.  endfor
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${.TARGET}.tmp ]; then					\
-		${SORT} -u ${.TARGET}.tmp > ${.TARGET};			\
-		${RM} -f ${.TARGET}.tmp;				\
-	fi 
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-.endif
 
 # UNWRAP_PATTERNS and UNWRAP_FILES list shell globs and files relative to
 # ${WRKSRC} that need to be "unwrapped".
