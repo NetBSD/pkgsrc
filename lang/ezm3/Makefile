@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/06/04 17:34:36 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/09 12:23:23 xtraeme Exp $
 
 DISTNAME=	ezm3-1.1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.FreeBSD.org/pub/FreeBSD/development/CVSup/ezm3/
 DISTFILES=	${DISTNAME}-src.tar.bz2 ${BOOTSTRAP}
@@ -21,6 +22,7 @@ PLIST_SUBST+=		TARGET=${TARGET} TARGETDIR=${TARGETDIR}
 .include "../../mk/bsd.prefs.mk"
 CFLAGS:=
 EZM3ROOT=		${PREFIX}/ezm3
+BUILDLINK_PASSTHRU_DIRS+=	${EZM3ROOT}
 
 # XXX: This may well work for some others.
 ONLY_FOR_PLATFORM=      FreeBSD-*-i386 NetBSD-*-i386 Linux-*-i386
