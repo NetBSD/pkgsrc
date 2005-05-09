@@ -1,4 +1,4 @@
-# $NetBSD: imake.mk,v 1.3 2005/05/09 00:13:03 jlam Exp $
+# $NetBSD: imake.mk,v 1.4 2005/05/09 01:11:58 jlam Exp $
 #
 # This Makefile fragment handles packages that need imake and xmkmf
 # to build X11-related packages.  The correct imake and xmkmf tools
@@ -80,16 +80,7 @@ USE_TOOLS+=			${_IMAKE_TOOLS:Nimake}
 # Define IMAKE and XMKMF_CMD and create wrappers/symlinks corresponding
 # to imake and xmkmf.
 #
-.    if !empty(TOOLS_REAL_ARGS.imake)
-TOOLS_WRAP+=			imake
-.    else
-TOOLS_SYMLINK+=			imake
-.    endif
-.    if !empty(TOOLS_REAL_ARGS.xmkmf)
-TOOLS_WRAP+=			xmkmf
-.    else
-TOOLS_SYMLINK+=			xmkmf
-.    endif
+TOOLS_CREATE+=			imake xmkmf
 ${_TOOLS_VARNAME.imake}=	${TOOLS_REAL_CMD.imake} ${TOOLS_REAL_ARGS.imake}
 ${_TOOLS_VARNAME.xmkmf}=	${TOOLS_REAL_CMD.xmkmf} ${TOOLS_REAL_ARGS.xmkmf}
 XMKMF=				${${_TOOLS_VARNAME.xmkmf}} -a
