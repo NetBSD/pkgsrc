@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.16 2005/05/03 16:34:02 jlam Exp $
+# $NetBSD: printdepends,v 1.17 2005/05/09 16:03:58 kristerw Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -72,7 +72,7 @@ if [ -n "${PKGLIST}" ]; then
 	list="${PKGLIST}"
 else
 	# List of all pkgs, from pkgsrc/*/Makefile
-	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
+	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${GREP} -v regress/ | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
 fi
 
 # cache the package list for printindex
