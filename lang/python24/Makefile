@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:16 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/09 20:37:51 recht Exp $
 #
 
-DISTNAME=	Python-2.4
-PKGNAME=	python24-2.4
-PKGREVISION=	5
+DISTNAME=	Python-2.4.1
+PKGNAME=	python24-2.4.1
 CATEGORIES=	lang python
-MASTER_SITES=	ftp://ftp.python.org/pub/python/2.4/
+MASTER_SITES=	ftp://ftp.python.org/pub/python/2.4.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
