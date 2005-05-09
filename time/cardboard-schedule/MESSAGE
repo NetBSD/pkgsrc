@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2003/05/06 17:42:53 jmmv Exp $
+$NetBSD: MESSAGE,v 1.4 2005/05/09 20:40:07 kristerw Exp $
 
   A demo version of Cardboard Schedule has been installed.
 
   Please read ${PREFIX}/lib/cardboard-schedule/license.txt
-  before using Cardboard Schedule. 
+  before using Cardboard Schedule.
 
 ===========================================================================
