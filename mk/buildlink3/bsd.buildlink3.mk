@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.168 2005/02/17 12:15:44 seb Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.169 2005/05/09 05:06:55 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -313,9 +313,9 @@ _BLNK_PKG_DBDIR.${_pkg_}!=	\
 	${ECHO} $$dir
 .      endif
 .    endfor
-.    if empty(_BLNK_PKG_DBDIR.${_pkg_}:M*not_found)
-WRAPPER_VARS+=	_BLNK_PKG_DBDIR.${_pkg_}
-.    endif
+.  endif
+.  if empty(_BLNK_PKG_DBDIR.${_pkg_}:M*not_found)
+MAKE_VARS+=	_BLNK_PKG_DBDIR.${_pkg_}
 .  endif
 
 .  if empty(_BLNK_PKG_DBDIR.${_pkg_}:M*not_found)
@@ -344,9 +344,9 @@ BUILDLINK_PREFIX.${_pkg_}!=	\
 BUILDLINK_PREFIX.${_pkg_}=	BUILDLINK_PREFIX.${_pkg_}_not_found
 .      endif
 .    endif
-.    if empty(BUILDLINK_PREFIX.${_pkg_}:M*not_found)
-WRAPPER_VARS+=	BUILDLINK_PREFIX.${_pkg_}
-.    endif
+.  endif
+.  if empty(BUILDLINK_PREFIX.${_pkg_}:M*not_found)
+MAKE_VARS+=	BUILDLINK_PREFIX.${_pkg_}
 .  endif
 
 BUILDLINK_AUTO_VARS.${_pkg_}?=	yes
@@ -865,8 +865,8 @@ _BLNK_PHYSICAL_PATH.${_var_}!=						\
 	else								\
 		${ECHO} ${${_var_}};					\
 	fi
-WRAPPER_VARS+=	_BLNK_PHYSICAL_PATH.${_var_}
 .  endif
+MAKE_VARS+=	_BLNK_PHYSICAL_PATH.${_var_}
 .endfor
 
 # Transform all references to the physical paths to some important

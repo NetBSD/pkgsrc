@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1630 2005/05/08 13:52:25 dillo Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1631 2005/05/09 05:06:55 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -20,6 +20,27 @@
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.hacks.mk"
+
+.if !defined(_REV_ALL_PHASES)
+_REV_ALL_PHASES=	# empty
+.  for _phase_ in ${ALL_PHASES}
+_REV_ALL_PHASES:=	${_phase_} ${_REV_ALL_PHASES}
+.  endfor
+.  undef _phase_
+.endif
+MAKE_VARS+=		_REV_ALL_PHASES
+
+# Try including the .makevars.mk.* files in reverse order so that the
+# latest file is included and no more.
+#
+.for _phase_ in ${_REV_ALL_PHASES}
+_MAKE_VARS_MK.${_phase_}=	${WRKDIR}/.${_phase_}_makevars.mk
+${_phase_}-vars: ${_MAKE_VARS_MK.${_phase_}}
+.  if !defined(_MAKE_VARS_MK)
+.    sinclude "${_MAKE_VARS_MK.${_phase_}}"
+.  endif
+.endfor
+.undef _phase_
 
 # This has to come first to avoid showing all BUILD_DEFS added by this
 # Makefile, which are usually not customizable.
@@ -3161,12 +3182,12 @@ test-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${TEST_COOKIE}
 
 .ORDER: pre-fetch do-fetch post-fetch
-.ORDER: extract-message install-depends pre-extract do-extract post-extract extract-cookie
-.ORDER: patch-message pre-patch do-patch post-patch patch-cookie
-.ORDER: tools-message pre-tools do-tools post-tools tools-cookie
-.ORDER: wrapper-message pre-wrapper do-wrapper post-wrapper wrapper-cookie
-.ORDER: configure-message pre-configure pre-configure-override do-configure post-configure configure-cookie
-.ORDER: build-message pre-build do-build post-build build-cookie
+.ORDER: extract-message extract-vars install-depends pre-extract do-extract post-extract extract-cookie
+.ORDER: patch-message patch-vars pre-patch do-patch post-patch patch-cookie
+.ORDER: tools-message tools-vars pre-tools do-tools post-tools tools-cookie
+.ORDER: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie
+.ORDER: configure-message configure-vars pre-configure pre-configure-override do-configure post-configure configure-cookie
+.ORDER: build-message build-vars pre-build do-build post-build build-cookie
 .ORDER: test-message pre-test do-test post-test test-cookie
 
 # Please note that the order of the following targets is important, and
@@ -3177,15 +3198,15 @@ test-cookie:
 .PHONY: real-configure real-build real-test real-install real-package
 .PHONY: real-replace real-undo-replace
 real-fetch: pre-fetch do-fetch post-fetch
-real-extract: extract-message install-depends pre-extract do-extract post-extract extract-cookie
-real-patch: patch-message pre-patch do-patch post-patch patch-cookie
-real-tools: tools-message pre-tools do-tools post-tools tools-cookie
-real-wrapper: wrapper-message pre-wrapper do-wrapper post-wrapper wrapper-cookie
-real-configure: configure-message pre-configure pre-configure-override do-configure post-configure configure-cookie
-real-build: build-message pre-build do-build post-build build-cookie
+real-extract: extract-message extract-vars install-depends pre-extract do-extract post-extract extract-cookie
+real-patch: patch-message patch-vars pre-patch do-patch post-patch patch-cookie
+real-tools: tools-message tools-vars pre-tools do-tools post-tools tools-cookie
+real-wrapper: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie
+real-configure: configure-message configure-vars pre-configure pre-configure-override do-configure post-configure configure-cookie
+real-build: build-message build-vars pre-build do-build post-build build-cookie
 real-test: test-message pre-test do-test post-test test-cookie
-real-install: do-su-install
-real-package: do-su-package
+real-install: install-vars do-su-install
+real-package: package-vars do-su-package
 real-replace: do-su-replace
 real-undo-replace: do-su-undo-replace
 
@@ -5128,3 +5149,31 @@ PKG_ERROR_HANDLER.${_class_}?=	{					\
 		exit $$ec;						\
 	}
 .endfor
+
+# Cache variables listed in MAKE_VARS in a phase-specific "makevars.mk"
+# file.  These variables are effectively passed to sub-make processes
+# that are invoked on the same Makefile.
+#
+.for _phase_ in ${ALL_PHASES}
+${_MAKE_VARS_MK.${_phase_}}: ${WRKDIR}
+.  if !empty(PKG_PHASE:M${_phase_})
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
+.    for _var_ in ${MAKE_VARS:O:u}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} ${_var_}"=	"${${_var_}:Q} >> ${.TARGET}.tmp
+.    endfor
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${TEST} -f ${.TARGET}.tmp; then				\
+		( ${ECHO} ".if !defined(_MAKE_VARS_MK)";		\
+		  ${ECHO} "_MAKE_VARS_MK=	defined";		\
+		  ${ECHO} "";						\
+		  ${CAT} ${.TARGET}.tmp;				\
+		  ${ECHO} "";						\
+		  ${ECHO} ".endif # _MAKE_VARS_MK";			\
+		) > ${.TARGET};						\
+		${RM} -f ${.TARGET}.tmp;				\
+	fi
+.  endif
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.endfor
+.undef _phase_
