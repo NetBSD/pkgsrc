@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1 2005/05/09 05:52:59 minskim Exp $
+
+--- ../configure.orig	2005-05-09 00:44:03.000000000 -0500
++++ ../configure
+@@ -822,9 +822,13 @@ case "${canonical}" in
+       sparc*-*-netbsd*)	machine=sparc ;;
+       vax-*-netbsd*)	machine=vax ;;
+       arm-*-netbsd*)	machine=arm ;;
++      x86_64-*-netbsd*)	machine=amd64 ;;
+     esac
+   ;;
+ 
++  ## Darwin / Mac OS X
++  powerpc-apple-darwin* )
++    machine=powermac opsys=darwin ;;
+   ## OpenBSD ports
+   *-*-openbsd* )
+     opsys=openbsd
