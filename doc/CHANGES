@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10052 2005/05/08 17:49:05 minskim Exp $
+$NetBSD: CHANGES,v 1.10053 2005/05/09 11:12:05 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2325,3 +2325,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sun-jdk15 to 5.0.3 [abs 2005-05-08]
 	Updated sun-jre15 to 5.0.3 [abs 2005-05-08]
 	Updated docbook-website to 2.6.0nb1 [minskim 2005-05-08]
+	Updated dspam to 3.4.6 [xtraeme 2005-05-09]
