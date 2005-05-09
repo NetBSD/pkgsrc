@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/03/03 04:38:36 epg Exp $
+$NetBSD: distinfo,v 1.8 2005/05/09 22:35:27 epg Exp $
 
-SHA1 (SVK-0.30.tar.gz) = adce506657433bdf2e341a35987918ef838ff361
-RMD160 (SVK-0.30.tar.gz) = 5f4c1f94057d7ea3b3b8bbeb7c2d3f552ae4382b
-Size (SVK-0.30.tar.gz) = 219461 bytes
-SHA1 (patch-aa) = b8a95604f2089998e5f2707c3c2366e7c63b6de8
+SHA1 (SVK-1.00.tar.gz) = af672a4f0b44efcd92042f683f063973a672d668
+RMD160 (SVK-1.00.tar.gz) = 1546e80b8e054017cc2e79c5e6b9630077735899
+Size (SVK-1.00.tar.gz) = 235278 bytes
