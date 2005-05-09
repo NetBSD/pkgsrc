@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10055 2005/05/09 20:40:32 recht Exp $
+$NetBSD: CHANGES,v 1.10056 2005/05/09 22:43:42 epg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2328,3 +2328,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dspam to 3.4.6 [xtraeme 2005-05-09]
 	Updated grub to 0.97 [xtraeme 2005-05-09]
 	Updated python24 to 2.4.1 [recht 2005-05-09]
+	Updated p5-SVN-Mirror to 0.60 [epg 2005-05-09]
+	Updated svk to 1.00 [epg 2005-05-09]
+	Updated p5-YAML to 0.38 [epg 2005-05-09]
