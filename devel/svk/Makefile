@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/09 22:35:27 epg Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/09 22:40:52 epg Exp $
 
 DISTNAME=	SVK-1.00
 PKGNAME=	${DISTNAME:S/SVK/svk/}
@@ -37,7 +37,7 @@ DEPENDS+=	p5-SVN-Mirror>=0.58:../../devel/p5-SVN-Mirror
 DEPENDS+=	p5-SVN-Simple>=0.27:../../devel/p5-SVN-Simple
 DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
 DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
-DEPENDS+=	p5-YAML>=0.36:../../textproc/p5-YAML
+DEPENDS+=	p5-YAML>=0.38:../../textproc/p5-YAML
 DEPENDS+=	p5-Class-Autouse>=1.15:../../devel/p5-Class-Autouse
 
 .include "../../lang/perl5/module.mk"
