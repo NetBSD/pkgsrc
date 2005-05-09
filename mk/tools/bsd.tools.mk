@@ -1,16 +1,12 @@
-# $NetBSD: bsd.tools.mk,v 1.14 2005/05/09 00:13:03 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.15 2005/05/09 01:11:58 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
 #
-# There are two ways to generate the tool: either create a wrapper script
-# or create a symlink:
-#
-#    TOOLS_WRAP is a whitespace-separated list of tools for which a
-#	wrapper script is created.
-#
-#    TOOLS_SYMLINK is a whitespace-separated list of tools for which a
-#	symlink is created.
+#    TOOLS_CREATE is a whitespace-separated list of tools for which a
+#       corresponding tool is created.  Either a wrapper script or a
+#       symlink is created depending on the tool that is being
+#	overridden.
 #
 # The following variables specify the details of each <tool>:
 #
@@ -27,7 +23,7 @@
 #	below).
 #
 # The following variables specify further details of each <tool> and
-# are used only by tools listed in TOOLS_WRAP:
+# if set, cause a wrapper script to be created.
 #
 #    TOOLS_REAL_ARGS.<tool> additional arguments that are passed to the
 #	real command ahead of any command-line arguments.  This variable
@@ -85,21 +81,21 @@ USE_TOOLS?=		# empty
 ######################################################################
 
 .for _t_ in ${TOOLS_NOOP}
-TOOLS_WRAP+=			${_t_}
+TOOLS_CREATE+=			${_t_}
 TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 TOOLS_REAL_CMDLINE.${_t_}?=	exit 0
 .endfor
 .undef _t_
 
 .for _t_ in ${TOOLS_BROKEN}
-TOOLS_WRAP+=			${_t_}
+TOOLS_CREATE+=			${_t_}
 TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 TOOLS_REAL_CMDLINE.${_t_}?=	exit 1
 .endfor
 .undef _t_
 
 .for _t_ in ${TOOLS_GNU_MISSING}
-TOOLS_WRAP+=			${_t_}
+TOOLS_CREATE+=			${_t_}
 TOOLS_REAL_CMD.${_t_}?=		${PKGSRCDIR}/mk/gnu-config/missing
 TOOLS_REAL_CMDLINE.${_t_}?=	${TOOLS_REAL_CMD.${_t_}} ${_t_:T:C/-[0-9].*$//}
 .endfor
@@ -120,21 +116,28 @@ MKDIR?=         mkdir -p
 
 ######################################################################
 
+# If the command line was defined, then we create a wrapper.
+# If the real command isn't a full path, then we create a wrapper.
+# If some command arguments were given, then we create a wrapper.
+# Otherwise, we create a symlink.
+#
+# By default, the tool in ${TOOLS_DIR} will be in the "bin" directory
+# and will be called <tool>.
+#
 # The default wrapper script will invoke the real command, followed
 # by any arguments specified in TOOLS_REAL_ARGS.*, followed by any
-# command-line arguments passed to the wrapper script.  By default,
-# the wrapper in ${TOOLS_DIR} will be in the "bin" directory and will
-# be called <tool>.
+# command-line arguments passed to the wrapper script.
 #
-.for _t_ in ${TOOLS_WRAP}
-TOOLS_REAL_CMD.${_t_}?=		${FALSE}
-TOOLS_REAL_ARGS.${_t_}?=	# empty
-TOOLS_REAL_CMDLINE.${_t_}?=	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_REAL_ARGS.${_t_}} "$$@"
+.for _t_ in ${TOOLS_CREATE}
 TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
-
-.  if !empty(TOOLS_CMD.${_t_}:M${TOOLS_DIR}/*) && \
-      !target(${TOOLS_CMD.${_t_}})
+TOOLS_REAL_CMD.${_t_}?=		${FALSE}
 override-tools: ${TOOLS_CMD.${_t_}}
+
+.  if defined(TOOLS_REAL_CMDLINE.${_t_}) || \
+      (defined(TOOLS_REAL_CMD.${_t_}) && empty(TOOLS_REAL_CMD.${_t_}:M/*)) || \
+      (defined(TOOLS_REAL_ARGS.${_t_}) && !empty(TOOLS_REAL_ARGS.${_t_}))
+TOOLS_REAL_CMDLINE.${_t_}?=	\
+	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_REAL_ARGS.${_t_}} "$$@"
 ${TOOLS_CMD.${_t_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -145,22 +148,7 @@ ${TOOLS_CMD.${_t_}}:
 	  ${ECHO} ${TOOLS_REAL_CMDLINE.${_t_}:Q};			\
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-.  endif
-.endfor
-.undef _t_
-
-######################################################################
-
-# By default, the symlinked tool in ${TOOLS_DIR} will be in the "bin"
-# directory and will be called <tool>.
-#
-.for _t_ in ${TOOLS_SYMLINK}
-TOOLS_REAL_CMD.${_t_}?=	${FALSE}
-TOOLS_CMD.${_t_}?=	${TOOLS_DIR}/bin/${_t_}
-
-.  if !empty(TOOLS_CMD.${_t_}:M${TOOLS_DIR}/*) && \
-      !target(${TOOLS_CMD.${_t_}}) && exists(${TOOLS_REAL_CMD.${_t_}})
-override-tools: ${TOOLS_CMD.${_t_}}
+.  else
 ${TOOLS_CMD.${_t_}}: ${TOOLS_REAL_CMD.${_t_}}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${TOOLS_REAL_CMD.${_t_}} ${.TARGET}
