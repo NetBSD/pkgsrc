@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/28 22:30:50 shannonjr Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/05/09 23:46:46 rillig Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCC3_ADA_BUILDLINK3_MK:=  ${GCC3_ADA_BUILDLINK3_MK}+
@@ -23,7 +23,7 @@ BUILDLINK_INCDIRS.gcc3-ada+=       include ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.
 .  endif
 .endif  # GCC3_ADA_BUILDLINK3_MK
 
-BUILDLINK_PKGSRCDIR.gcc3-ada?=     ../../wip/gcc3-ada
+BUILDLINK_PKGSRCDIR.gcc3-ada?=     ../../lang/gcc3-ada
 BUILDLINK_FILES_CMD.gcc3-ada=	(cd  ${BUILDLINK_PREFIX.gcc3-ada} && \
 	${FIND} bin libexec lib \( -type file -o -type link \) -print)
 BUILDLINK_TRANSFORM.gcc3-ada=	-e s:\buildlink:buildlink/gcc3:
