@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.8 2005/05/10 19:06:59 jlam Exp $
+# $NetBSD: defaults.mk,v 1.9 2005/05/10 19:52:30 jlam Exp $
 
 .if !defined(TOOLS_DEFAULTS_MK)
 TOOLS_DEFAULTS_MK=	defined
@@ -68,7 +68,6 @@ _TOOLS_VARNAME.sed=		SED
 _TOOLS_VARNAME.sh=		SH
 _TOOLS_VARNAME.shlock=		SHLOCK
 _TOOLS_VARNAME.sort=		SORT
-_TOOLS_VARNAME.strip=		STRIP
 _TOOLS_VARNAME.tail=		TAIL
 _TOOLS_VARNAME.tbl=		TBL
 _TOOLS_VARNAME.tee=		TEE
