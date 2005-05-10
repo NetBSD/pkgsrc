@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.1.1.1 2004/12/24 10:05:53 jmmv Exp $
+# $NetBSD: dirs.mk,v 1.2 2005/05/10 20:21:57 jmmv Exp $
 #
 # This file is intended to be included by mk/dirs.mk, not directly by packages.
 #
@@ -9,6 +9,7 @@ DIRS_THEME_MK=		# defined
 THEME_DIRS=		share/themes/AgingGorilla
 THEME_DIRS+=		share/themes/Atlanta
 THEME_DIRS+=		share/themes/Bright
+THEME_DIRS+=		share/themes/Clearlooks
 THEME_DIRS+=		share/themes/Crux
 THEME_DIRS+=		share/themes/Esco
 THEME_DIRS+=		share/themes/Glider
