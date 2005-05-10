@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2005/05/02 11:29:35 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2005/05/10 00:16:42 reed Exp $
 
 .include "Makefile.common"
 
-.if ${MACHINE_ARCH} == "i386"
-DEPENDS+=       	win32-codecs>=011227:../../multimedia/win32-codecs
-PLIST_SUBST+=		I386=""
-.else
-PLIST_SUBST+=		I386="@comment "
-.endif
+PKGREVISION=		1
+COMMENT=		Multimedia player library
 
 BUILDLINK_DEPENDS.vcdimager+= vcdimager>=0.7.20nb1
 
