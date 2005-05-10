@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3478 2005/05/10 00:44:46 xtraeme Exp $
+$NetBSD: TODO,v 1.3479 2005/05/10 01:09:30 reed Exp $
 
 Suggested new packages
 ======================
@@ -246,6 +246,47 @@ Suggested new packages
 	server daemon. It lets users run messages through filters like
 	ClamAV and SpamAssassin during SMTP transactions, so the server
 	can reject mail before assuming responsibility for its delivery.
+
+	Nvu - Complete Web Authoring System
+	http://www.nvu.com/
+	Nvu is based on the Mozilla Composer and development
+	is financially supported by Linspire.
+
+	TROPHY
+	http://trophy.sourceforge.net/
+	A 2D car racing action game with untypical racing game features
+	such as shooting at other players.
+
+	The Open Racing Car Simulator
+	http://torcs.sf.net/
+	TORCS is a 3D racing cars simulator using OpenGL. The goal
+	is to have programmed robots drivers racing against each
+	others.  You can also drive yourself with either a wheel or
+	keyboard or mouse.
+
+	Space Racer
+	http://spaceracer.sourceforge.net/
+	A 3D car racing game. The circuit is a road in a galactic
+	environment. It aims to be a clone of the well known Stunt
+	Car Racer.
+
+	CarWorld driving simulator
+	http://carworld.sourceforge.net/
+	A small driving simulator/demo.
+
+	Road Fighter remake
+	http://www.braingames.getput.com/roadf/
+	Unofficial remake of Konami's ROAD FIGHTER which was
+	originally released in 1985 for the MSX home computer
+	systems.  In Road Fighter you drive a car in a death
+	race between you and a group of crazy  drivers.
+
+	XRally
+	http://www.linuxgames.com/xrally/
+	Clone of the classic Rally X arcade game using basic Xlib
+	and Xpm. You control a blue (good) car, that has to collect
+	yellow flags around a maze-like map, while avoiding the
+	red (bad) cars.
 
 Suggested package updates
 =========================
