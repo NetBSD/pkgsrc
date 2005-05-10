@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:12 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/10 12:39:28 manu Exp $
 #
 
-DISTNAME=		ipsec-tools-0.6b1
+DISTNAME=		ipsec-tools-0.6b2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ipsec-tools/}
-EXTRACT_SUFX=		.tgz
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		manu@NetBSD.org
 HOMEPAGE=		http://ipsec-tools.sourceforge.net/
@@ -66,8 +66,6 @@ post-install:
 	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/server/racoon.conf \
 	    ${EXAMPLE_DIR}/roadwarrior/server
 	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/server/racoon.conf-radius \
-	    ${EXAMPLE_DIR}/roadwarrior/server
-	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/server/phase1-down.sh \
 	    ${EXAMPLE_DIR}/roadwarrior/server
 
 .include "../../security/openssl/buildlink3.mk"
