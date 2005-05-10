@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.89 2005/05/10 08:00:58 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.90 2005/05/10 13:51:22 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -187,3 +187,5 @@ Pullup ticket 486 - requested by Juan Romero Pardines
 gld update
 Pullup ticket 487 - requested by Min Sik Kim
 portability fix for tcpslice
+Pullup ticket 489 - requested by Min Sik Kim
+portability fix for pdflib
