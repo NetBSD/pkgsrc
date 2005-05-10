@@ -1,0 +1,5 @@
+bw_mod is an Apache 2 module to limit bandwidth consumed by browsers,
+based in concept on the widely used Apache 1 "mod_bandwidth".
+
+[The package maintainer has elected to use the Apache 2.0 license for
+binary distributions of this package, as allowed by the software author.]
