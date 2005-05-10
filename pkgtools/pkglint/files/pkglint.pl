@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.145 2005/05/10 00:09:18 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.146 2005/05/10 19:04:53 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -117,12 +117,16 @@ sub log_info($$$)
 	}
 }
 
-sub print_summary_and_exit()
+sub print_summary_and_exit($)
 {
-	if ($errors != 0 || $warnings != 0) {
-		print("$errors errors and $warnings warnings found.\n");
-	} else {
-		print "looks fine.\n";
+	my ($quiet) = @_;
+
+	if (!$quiet) {
+		if ($errors != 0 || $warnings != 0) {
+			print("$errors errors and $warnings warnings found.\n");
+		} else {
+			print "looks fine.\n";
+		}
 	}
 	exit($errors != 0);
 }
@@ -246,8 +250,10 @@ my $opt_committer	= true;
 my $opt_dumpmakefile	= false;
 my $opt_contblank	= 1;
 my $opt_packagedir	= ".";
+my $opt_quiet		= false;
 my (%options) = (
 	"-p"		=> "warn about use of \$(VAR) instead of \${VAR}",
+	"-q"		=> "don't print a summary line when finishing",
 	"-I"		=> "dump the Makefile after parsing",
 	"-N"		=> "assume a new (still uncommitted) package",
 	"-B#"		=> "allow # contiguous blank lines in Makefiles",
@@ -324,7 +330,6 @@ sub checkfile_MESSAGE($);
 sub checkfile_patches_patch($);
 sub checkfile_PLIST($);
 
-sub print_summary_and_exit();
 sub checkperms($);
 sub checkpathname($);
 sub checklastline($);
@@ -449,6 +454,7 @@ sub parse_command_line() {
 		"version|V" => sub { print("$conf_distver\n"); exit(0); },
 		"conblank|B=i" => \$opt_contblank,
 		"dumpmakefile|I" => \$opt_dumpmakefile,
+		"quiet|q" => \$opt_quiet,
 	);
 	{
 		local $SIG{__WARN__} = sub {};
@@ -537,7 +543,7 @@ sub main() {
 	} else {
 		log_error(NO_FILE, NO_LINE_NUMBER, "cannot check \"$opt_packagedir\".");
 	}
-	print_summary_and_exit();
+	print_summary_and_exit($opt_quiet);
 }
 
 sub check_package() {

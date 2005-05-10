@@ -1,10 +1,10 @@
-PKGLINT(1)              NetBSD General Commands Manual              PKGLINT(1)
+PKGLINT(1)                  NetBSD Reference Manual                 PKGLINT(1)
 
 NNAAMMEE
      ppkkgglliinntt - a verifier for pkgsrc directories
 
 SSYYNNOOPPSSIISS
-     ppkkgglliinntt [--hhvvIINN] [--BB _n] [_d_i_r]
+     ppkkgglliinntt [--ooppttiioonnss] [_d_i_r]
 
 DDEESSCCRRIIPPTTIIOONN
      ppkkgglliinntt tries to verify the content of a pkgsrc directory.  The purpose
@@ -14,15 +14,19 @@ DDEESSCCRRIIPPTTIIOONN
 
      ppkkgglliinntt uses very simple regular-expression matching for verifying files
      that make up a pkgsrc directory.  Note that it does NOT implement a com-
-     plete parser for those files.  Because of this the user may see some
-     extra warnings, especially when checking complex _M_a_k_e_f_i_l_es.
+     plete parser for those files.  Because of this the user may see some ex-
+     tra warnings, especially when checking complex _M_a_k_e_f_i_l_es.
 
      OOppttiioonnss
 
      --BB _n        Set the number of contiguous blank lines allowed in _M_a_k_e_f_i_l_e
                  to _n (by default, _n is 1.)
 
-     --hh          Show the summary of command line options, then exit.
+     --CC{{[[nnoo--]]cchheecckk,,......}}
+                 Enable or disable specific checks. For a list of checks, see
+                 below.
+
+     --hh|----hheellpp   Show the summary of command line options, then exit.
 
      --II          Show the Makefile that is constructed by including all the
                  files that are slurped in via .include directives.  This flag
@@ -30,10 +34,71 @@ DDEESSCCRRIIPPTTIIOONN
 
      --NN          New package flag.  Adds several checks specific to newly sub-
                  mitted packages.  If you are willing to submit the directory
-                 to be checked as a new package, use this option.
+                 to be checked as a new package, use this option.  This option
+                 is deprecated.  Use --CC_n_e_w_p_k_g instead.
 
-     --vv          Be verbose.  Show the progress report for items that are
-                 being checked.
+     --qq|----qquuiieett  Don't print the errors and warnings summary before terminat-
+                 ing.
+
+     --vv|----vveerrbboossee
+                 Be verbose.  Show the progress report for items that are be-
+                 ing checked.
+
+     --WW{{[[nnoo--]]wwaarrnn,,......}}
+                 Enable or disable specific warnings.  For a list of warnings,
+                 see below.
+
+     CChheecckkss
+
+     all         Enable all checks.
+
+     none        Disable all checks.  Currently the Makefile is checked in ev-
+                 ery case to get meta information about the package structure.
+
+     [no-]MESSAGE
+                 Check MESSAGE files.
+
+     [no-]PLIST  Check PLIST files.
+
+     [no-]distinfo
+                 Check the distinfo file.
+
+     [no-]extra  Check remaining files in the package directory.
+
+     [no-]newpkg
+                 Enable special checks for uncommitted packages.
+
+     [no-]patches
+                 Check the pkgsrc specific patch files.
+
+     WWaarrnniinnggss
+
+     all         Enable all warnings.
+
+     none        Disable all warnings.
+
+     [no-]absname
+                 Warn if a file contains an absolute pathname.
+
+     [no-]directcmd
+                 Warn if a system command name is used instead of a variable
+                 (e.g. sed instead of ${SED}).
+
+     [no-]exec   Warn if a file in the package directory is executable.  Most
+                 files should not be executable until they are installed.
+
+     [no-]paren  Warn if variables are used like $(VAR) in Makefiles.  They
+                 should always be used like ${VAR}.
+
+     [no-]patches
+                 Warn if a patch file patches more than one file or if the
+                 patches differ from what is recorded in the distinfo file.
+
+     [no-]workdir
+                 Warn about existing _w_o_r_k_* directories.  They might be commit-
+                 ted to CVS accidentally.
+
+     OOtthheerr aarrgguummeennttss
 
      dir         The pkgsrc directory to be checked.  If omitted, all checks
                  will be performed on the current directory.
@@ -42,15 +107,19 @@ FFIILLEESS
      /usr/pkgsrc/mk/bsd.pkg.mk  master Makefile for pkgsrc
      /usr/pkgsrc/*              pkgsrc collection
 
+EEXXAAMMPPLLEESS
+     ppkkgglliinntt --CCnnoonnee,,ppaattcchheess.  Checks the patches of the package in the current
+     directory.  ppkkgglliinntt --WWaallll //uussrr//ppkkggssrrcc//ddeevveell Checks the category Makefile
+     and reports any warnings it can find.
+
 DDIIAAGGNNOOSSTTIICCSS
      Messages will be sent to standard output, not standard error.
 
-     FATAL: ...    This type of error messages suggests that there is some
-                   fatal error in the pkgsrc directory.  For example, if some
+     FATAL: ...    This type of error messages suggests that there is some fa-
+                   tal error in the pkgsrc directory.  For example, if some
                    files need a rewrite, or if some necessary files are miss-
                    ing, this message will show up.  This kind of error should
-                   be fixed BEFORE submitting a pkgsrc via send-pr to the
-                   comitters.
+                   be fixed BEFORE submitting a package via send-pr(1).
 
      WARN: ...     This type of error messages suggests that some files may
                    (or may not) need some fixes.  Basically, warnings are pro-
@@ -63,11 +132,13 @@ DDIIAAGGNNOOSSTTIICCSS
      OK: ...       This type of messages is used in verbose mode (--vv).
 
 AAUUTTHHOORRSS
-     Jun-ichiro Itoh <itojun@itojun.org> and Yoshishige Arai
-     <ryo2@on.rim.or.jp>.  Many people have contributed patches and com-
-     ments/suggestions.
+     Jun-ichiro Itoh <itojun@itojun.org>, Yoshishige Arai <ryo2@on.rim.or.jp>,
+     and Roland Illig <roland.illig@gmx.de>.  Many people have contributed
+     patches and comments/suggestions.
 
 BBUUGGSS
-     ppkkgglliinntt is not a magic wand, as described above.
+     ppkkgglliinntt still emits too many false positive warnings.  Many of the warn-
+     ings concerning Makefiles do not print the file and line number where the
+     warning originated.
 
-NetBSD 1.6                     September 5, 2000                    NetBSD 1.6
+                               October 16, 2004                              3
