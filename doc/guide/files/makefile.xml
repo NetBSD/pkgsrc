@@ -1,0 +1,156 @@
+<!-- $NetBSD: makefile.xml,v 1.1 2005/05/10 00:27:43 rillig Exp $ -->
+
+<chapter id="makefile"> <?dbhtml filename="makefile.html"?>
+  <title>Programming in <filename>Makefile</filename>s</title>
+
+  <para>Pkgsrc consists of many <filename>Makefile</filename> fragments,
+  each of which forms a well-defined part of the pkgsrc system. Using
+  the &man.make.1; system as a programming language for a big system
+  like pkgsrc requires some discipline to keep the code correct and
+  understandable.</para>
+
+  <para>The basic ingredients for <filename>Makefile</filename>
+  programming are variables (which are actually macros) and shell
+  commands. Among these shell commands may even be more complex ones
+  like &man.awk.1; programs. To make sure that every shell command runs
+  as intended it is necessary to quote all variables correctly when they
+  are used.</para>
+
+  <para>This chapter describes some patterns, that appear quite often in
+  <filename>Makefile</filename>s, including the pitfalls that come along
+  with them.</para>
+
+  <sect1 id="makefile.variables">
+    <title><filename>Makefile</filename> variables</title>
+
+    <para>A restriction common to all types of variables is that they
+    can neither contain a newline character nor the '\0' character nor
+    the '#' character. The effects of the backslash character is not
+    documented, so you should not use it at the moment. As the $ is used
+    to get values of a <filename>Makefile</filename> variable, it must
+    be quoted as $$.</para>
+
+    <para>There are several types of variables that must be handled
+    differently.</para>
+
+    <itemizedlist>
+
+      <listitem><para><emphasis>Simple values</emphasis> (which I will
+      call atoms) can contain any string, which does not have to be
+      quoted in any way. All other types are somewhat restricted in
+      their possible values.</para></listitem>
+
+      <listitem><para><emphasis>Internal lists</emphasis> are lists that
+      are never exported to any shell command. Their elements are
+      separated by whitespace. Therefore the elements themselves cannot
+      have embedded whitespace. Any other characters are allowed.
+      Internal lists can be used in <!-- FIXME
+      --><varname>.for</varname> loops. Examples are
+      <varname>DEPENDS</varname>,
+      <varname>BUILD_DEPENDS</varname>.</para></listitem>
+      
+      <listitem><para><emphasis>External lists</emphasis> are lists that
+      may be exported to a shell command. Their elements can contain any
+      characters, including whitespace. That's why they cannot be used
+      in <!-- FIXME --><varname>.for</varname> loops. Examples are
+      <varname>DISTFILES</varname>,
+      <varname>MASTER_SITES</varname>.</para></listitem>
+
+    </itemizedlist>
+  </sect1>
+
+  <sect1 id="makefile.code">
+    <title>Code snippets</title>
+
+    <para>This section presents you with some code snippets you should
+    use in your own code. If you don't find anything appropriate here,
+    you should test your code and add it here.</para>
+
+    <sect2>
+      <title>Adding things to a list</title>
+      
+      <programlisting>
+ATOM=			foo * bar `date`
+INT_LIST=		# empty
+ANOTHER_INT_LIST=	apache-[0-9]*:../../www/apache
+EXT_LIST=		# empty
+ANOTHER_EXT_LIST=	a=b c=d
+
+INT_LIST+=		${ATOM}			# 1
+INT_LIST+=		${ANOTHER_INT_LIST}	# 2
+EXT_LIST+=		${ATOM:Q}		# 3
+EXT_LIST+=		${ANOTHER_EXT_LIST}	# 4
+      </programlisting>
+
+      <para>When you add an atom to an external list (example 3), it
+      must be quoted. In all other cases, you must not add a quoting
+      level. You must not merge internal and external lists, unless you
+      are sure that all entries are correctly interpreted in both
+      lists.</para>
+
+    </sect2>
+
+    <sect2>
+      <title>Converting an internal list into an external list</title>
+
+      <programlisting>
+EXT_LIST=	# empty
+.for i in ${INT_LIST}
+EXT_LIST+=	${i:Q}
+.endfor
+      </programlisting>
+
+      <para>This code converts the internal list
+      <varname>INT_LIST</varname> into the external list
+      <varname>EXT_LIST</varname>. As the elements of an internal list
+      are unquoted they must be quoted here.</para>
+
+    </sect2>
+
+    <sect2>
+      <title>Passing variables to a shell command</title>
+
+      <programlisting>
+ATOM=		foo bar <    > * `date` $$HOME ' "
+EXT_LIST=	atom=${ATOM:Q} x=second\ item
+
+all:
+	echo ${ATOM}			# 1
+	echo "${ATOM}"			# 2
+	echo "${ATOM:Q}"		# 3
+	echo ${ATOM:Q}			# 4
+	echo x${ATOM:Q} | sed 1s,.,,	# 5
+	env ${EXT_LIST} /bin/sh -c 'echo "$$atom"; echo "$$x"'
+      </programlisting>
+
+      <para>Example 1 leads to a syntax error in the shell, as the
+      characters are just copied.</para>
+      
+      <para>Example 2 leads to a syntax error too, and when you leave
+      out the last " character from <varname>${ATOM}</varname> the
+      &man.date.1; would be executed. The <varname>$HOME</varname> shell
+      variable would be evaluated, too.</para>
+      
+      <para>Example 3 would output precede each space character with a
+      backslash (or not), depending on the implementation of the
+      &man.echo.1; command.</para>
+      
+      <para>Example 4 handles correctly every string that does not start
+      with a dash. In that case, the result depends on the
+      implementation of the &man.echo.1; command. As long as you can
+      guarantee that your input does not start with a dash this form is
+      appropriate.</para>
+
+      <para>Example 5 handles even the case of a leading dash
+      correctly.</para>
+
+      <para>The <varname>EXT_LIST</varname> does not need to be quoted
+      because the quoting has already be done when adding elements to
+      the list.</para>
+
+      <para>As internal lists shall not be passed to the shell, there is
+      no example for it.</para>
+
+    </sect2>
+  </sect1>
+</chapter>
