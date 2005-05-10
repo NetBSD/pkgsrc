@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3477 2005/05/09 22:43:43 epg Exp $
+$NetBSD: TODO,v 1.3478 2005/05/10 00:44:46 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -240,6 +240,12 @@ Suggested new packages
 	Suite of software components for developing object-oriented,
 	web-based applications.
 
+	Mail Avenger
+	http://www.mailavenger.org/
+	Mail Avenger is a highly-configurable, MTA-independent SMTP
+	server daemon. It lets users run messages through filters like
+	ClamAV and SpamAssassin during SMTP transactions, so the server
+	can reject mail before assuming responsibility for its delivery.
 
 Suggested package updates
 =========================
