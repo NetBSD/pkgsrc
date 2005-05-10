@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/03/23 17:27:17 manu Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/05/10 12:39:28 manu Exp $
 lib/libipsec.la
 include/libipsec/libpfkey.h
 sbin/setkey
@@ -27,7 +27,6 @@ share/examples/ipsec-tools/roadwarrior/client/phase1-up.sh
 share/examples/ipsec-tools/roadwarrior/client/phase1-down.sh
 share/examples/ipsec-tools/roadwarrior/server/racoon.conf
 share/examples/ipsec-tools/roadwarrior/server/racoon.conf-radius
-share/examples/ipsec-tools/roadwarrior/server/phase1-down.sh
 include/racoon/racoonctl.h
 include/racoon/var.h
 include/racoon/vmbuf.h
