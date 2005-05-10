@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/14 09:43:50 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/10 01:33:50 jschauma Exp $
 #
 
 DISTNAME=	suse-9.1
@@ -18,6 +18,7 @@ DEPENDS+=	suse_libjpeg>=9.1:../../emulators/suse91_libjpeg
 DEPENDS+=	suse_freetype2>=9.1:../../emulators/suse91_freetype2
 DEPENDS+=	suse_openmotif>=9.1:../../emulators/suse91_openmotif
 DEPENDS+=	suse_gtk>=9.1:../../emulators/suse91_gtk
+DEPENDS+=	suse_locale>=9.1:../../emulators/suse91_locale
 
 # these could possibly be installed too, but probably of less
 # general interested, so commented out for now
