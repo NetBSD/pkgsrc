@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10059 2005/05/10 18:43:53 drochner Exp $
+$NetBSD: CHANGES,v 1.10060 2005/05/10 20:31:49 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2337,3 +2337,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated codeville to 0.1.12 [drochner 2005-05-10]
 	Updated atk to 0.10.1 [drochner 2005-05-10]
 	Updated inkscape to 0.41 [drochner 2005-05-10]
+	Updated theme-dirs to 1.1 [jmmv 2005-05-10]
+	Updated gtk2-engines to 2.6.3 [jmmv 2005-05-10]
+	Removed gtk2-engines-clearlooks [jmmv 2005-05-10]
+	Added clearlooks-metacity-0.5.2a [jmmv 2005-05-10]
