@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.9 2004/10/16 15:04:26 wiz Exp $
+.\"	$NetBSD: pkglint.1,v 1.10 2005/05/10 19:04:53 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -61,6 +61,8 @@ This option is deprecated.
 Use
 .Fl C Ns Ar newpkg
 instead.
+.It Fl q Ns | Ns Fl -quiet
+Don't print the errors and warnings summary before terminating.
 .It Fl v Ns | Ns Fl -verbose
 Be verbose.
 Show the progress report for items that are being checked.
