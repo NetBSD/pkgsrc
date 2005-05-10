@@ -1,4 +1,4 @@
-<!-- $NetBSD: examples.xml,v 1.2 2004/12/09 18:21:15 wiz Exp $ -->
+<!-- $NetBSD: examples.xml,v 1.3 2005/05/10 00:05:03 rillig Exp $ -->
 
 <appendix id="examples">
   <title>A simple example package: bison</title>
@@ -60,10 +60,6 @@ share/bison.hairy</programlisting>
 	<command>pkglint</command>:</para>
 
       <screen>&uprompt; <userinput>pkglint</userinput>
-OK: checking ./DESCR.
-OK: checking Makefile.
-OK: checking distinfo.
-OK: checking patches/patch-aa.
 looks fine.</screen>
 
       <para>Depending on the supplied command line arguments (see pkglint(1))
