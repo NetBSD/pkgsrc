@@ -1,0 +1,3 @@
+The vis program can be used to convert a string into a visual format.
+The unvis program can be used to convert from such a visual format
+to the original string.
