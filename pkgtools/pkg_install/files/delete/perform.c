@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.14 2005/02/04 09:10:13 jlam Exp $	*/
+/*	$NetBSD: perform.c,v 1.15 2005/05/10 00:04:09 rillig Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.14 2005/02/04 09:10:13 jlam Exp $");
+__RCSID("$NetBSD: perform.c,v 1.15 2005/05/10 00:04:09 rillig Exp $");
 #endif
 #endif
 
@@ -167,7 +167,7 @@ undepend(const char *deppkgname, void *vp)
 		return 0;
 	}
 	if (rename(ftmp, fname) == -1)
-		warnx("error renaming `%s' to `%s'", ftmp, fname);
+		warn("error renaming `%s' to `%s'", ftmp, fname);
 	remove(ftmp);		/* just in case */
 
 	return 0;
