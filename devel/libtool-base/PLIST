@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/10/14 19:04:56 tv Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/05/10 16:49:22 tv Exp $
 bin/libtool
 bin/libtoolize
 ${SHLIBTOOL}bin/shlibtool
@@ -6,6 +6,7 @@ share/aclocal/libtool.m4
 share/aclocal/ltdl.m4
 share/libtool/config.guess
 share/libtool/config.sub
+share/libtool/install-sh
 share/libtool/libltdl/COPYING.LIB
 share/libtool/libltdl/Makefile.am
 share/libtool/libltdl/Makefile.in
