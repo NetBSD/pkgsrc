@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2005/02/22 15:35:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/05/10 16:31:34 drochner Exp $
 bin/cdv
 bin/cdv-agent
 bin/cdvpasswd
 bin/cdvserver
 bin/cdvupgrade
+${PYSITELIB}/Codeville/DFS.py
+${PYSITELIB}/Codeville/DFS.pyc
+${PYSITELIB}/Codeville/DFS.pyo
 ${PYSITELIB}/Codeville/RawServer.py
 ${PYSITELIB}/Codeville/RawServer.pyc
 ${PYSITELIB}/Codeville/RawServer.pyo
@@ -49,12 +52,27 @@ ${PYSITELIB}/Codeville/entropy.pyo
 ${PYSITELIB}/Codeville/history.py
 ${PYSITELIB}/Codeville/history.pyc
 ${PYSITELIB}/Codeville/history.pyo
+${PYSITELIB}/Codeville/lcsmatch.py
+${PYSITELIB}/Codeville/lcsmatch.pyc
+${PYSITELIB}/Codeville/lcsmatch.pyo
 ${PYSITELIB}/Codeville/merge.py
 ${PYSITELIB}/Codeville/merge.pyc
 ${PYSITELIB}/Codeville/merge.pyo
+${PYSITELIB}/Codeville/mergelcs.py
+${PYSITELIB}/Codeville/mergelcs.pyc
+${PYSITELIB}/Codeville/mergelcs.pyo
 ${PYSITELIB}/Codeville/network.py
 ${PYSITELIB}/Codeville/network.pyc
 ${PYSITELIB}/Codeville/network.pyo
+${PYSITELIB}/Codeville/old/__init__.py
+${PYSITELIB}/Codeville/old/__init__.pyc
+${PYSITELIB}/Codeville/old/__init__.pyo
+${PYSITELIB}/Codeville/old/history.py
+${PYSITELIB}/Codeville/old/history.pyc
+${PYSITELIB}/Codeville/old/history.pyo
+${PYSITELIB}/Codeville/old/merge.py
+${PYSITELIB}/Codeville/old/merge.pyc
+${PYSITELIB}/Codeville/old/merge.pyo
 ${PYSITELIB}/Codeville/passwd.py
 ${PYSITELIB}/Codeville/passwd.pyc
 ${PYSITELIB}/Codeville/passwd.pyo
@@ -67,7 +85,11 @@ ${PYSITELIB}/Codeville/server.pyo
 ${PYSITELIB}/Codeville/testtest.py
 ${PYSITELIB}/Codeville/testtest.pyc
 ${PYSITELIB}/Codeville/testtest.pyo
+${PYSITELIB}/Codeville/upgrade.py
+${PYSITELIB}/Codeville/upgrade.pyc
+${PYSITELIB}/Codeville/upgrade.pyo
 share/doc/Codeville-${PKGVERSION}/LICENSE.txt
 share/doc/Codeville-${PKGVERSION}/cdvserver.conf.sample
 @dirrm share/doc/Codeville-${PKGVERSION}
+@dirrm ${PYSITELIB}/Codeville/old
 @dirrm ${PYSITELIB}/Codeville
