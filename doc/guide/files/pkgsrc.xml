@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkgsrc.xml,v 1.4 2005/05/07 22:28:47 wiz Exp $ -->
+<!-- $NetBSD: pkgsrc.xml,v 1.5 2005/05/10 00:27:43 rillig Exp $ -->
 
 
 <?xml version="1.0"?>
@@ -45,7 +45,7 @@
       <holder role="mailto:www@NetBSD.org">The NetBSD Foundation, Inc</holder>
     </copyright>
 
-    <pubdate>$NetBSD: pkgsrc.xml,v 1.4 2005/05/07 22:28:47 wiz Exp $</pubdate>
+    <pubdate>$NetBSD: pkgsrc.xml,v 1.5 2005/05/10 00:27:43 rillig Exp $</pubdate>
 
     <abstract>
       <para>Information about using the NetBSD package system (pkgsrc)
@@ -70,6 +70,7 @@
   <part id="developers-guide"> <?dbhtml filename="developers-guide.html"?>
     <title id="developers-guide.title">The pkgsrc developer's guide</title>
 
+    &chap.makefile;
     &chap.components;
     &chap.plist;
     &chap.buildlink;
