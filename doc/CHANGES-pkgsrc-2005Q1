@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.88 2005/05/07 16:12:35 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.89 2005/05/10 08:00:58 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -185,3 +185,5 @@ Pullup ticket 485 - requested by Thomas Klausner
 license fix for milter-spamc
 Pullup ticket 486 - requested by Juan Romero Pardines
 gld update
+Pullup ticket 487 - requested by Min Sik Kim
+portability fix for tcpslice
