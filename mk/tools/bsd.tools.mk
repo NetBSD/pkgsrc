@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.16 2005/05/09 02:43:06 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.17 2005/05/10 18:42:59 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -11,9 +11,11 @@
 # The following variables specify the details of each <tool>:
 #
 #    TOOLS_CMD.<tool> is the path to the tool under ${TOOLS_DIR}.  This
-#	variable is optional, and if left unspecified it is either
-#	derived from TOOLS_REAL_CMD.<tool> for symlinks, or placed in
-#	the "bin" directory for wrappers by default.
+#	variable is optional, and if left unspecified it defaults to
+#	${TOOLS_DIRS}/bin/<tool>.
+#
+#    TOOLS_ALIASES.<tool> is a whitespace-separated list of names for
+#	which <tool> should also be created under ${TOOLS_DIR}.
 #
 #    TOOLS_REAL_CMD.<tool> is the path to the actual command that is
 #	invoked when ${TOOLS_CMD.<tool>} is called.  If <tool> should
@@ -147,10 +149,17 @@ ${TOOLS_CMD.${_t_}}:
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .  else
-${TOOLS_CMD.${_t_}}: ${TOOLS_REAL_CMD.${_t_}}
+${TOOLS_CMD.${_t_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${TOOLS_REAL_CMD.${_t_}} ${.TARGET}
 .  endif
+.  for _a_ in ${TOOLS_ALIASES.${_t_}}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${TEST} ${.TARGET} != ${.TARGET:H}/${_a_}; then		\
+		${MKDIR} ${.TARGET:H};					\
+		${LN} -sf ${.TARGET:T} ${.TARGET:H}/${_a_};		\
+	fi
+.  endfor
 .endfor
 .undef _t_
 
