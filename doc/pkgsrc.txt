@@ -2037,7 +2037,7 @@ including the pitfalls that come along with them.
 
 A restriction common to all types of variables is that they can neither contain
 a newline character nor the '\0' character nor the '#' character. The effects
-of the backslash character is not documented, so you should not use it at the
+of the backslash character are not documented, so you should not use it at the
 moment. As the $ is used to get values of a Makefile variable, it must be
 quoted as $$.
 
@@ -2055,7 +2055,7 @@ There are several types of variables that must be handled differently.
 
   * External lists are lists that may be exported to a shell command. Their
     elements can contain any characters, including whitespace. That's why they
-    cannot be used in .for loops. Examples are DISTFILES, MASTER_SITES.
+    cannot be used in .for loops. Examples are DISTFILES and MASTER_SITES.
 
 7.2. Code snippets
 
@@ -2110,11 +2110,11 @@ all:
 Example 1 leads to a syntax error in the shell, as the characters are just
 copied.
 
-Example 2 leads to a syntax error too, and when you leave out the last "
-character from ${ATOM} the date(1) would be executed. The $HOME shell variable
+Example 2 leads to a syntax error too, and if you leave out the last "
+character from ${ATOM}, date(1) would be executed. The $HOME shell variable
 would be evaluated, too.
 
-Example 3 would output precede each space character with a backslash (or not),
+Example 3 would output each space character preceded by a backslash (or not),
 depending on the implementation of the echo(1) command.
 
 Example 4 handles correctly every string that does not start with a dash. In
