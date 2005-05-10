@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.99 2005/05/07 00:04:33 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.100 2005/05/10 19:07:07 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -73,7 +73,7 @@ if ($opt{D} && @ARGV)
 
     $pkgsrcdir = $default_vars->{PKGSRCDIR};
     $pkgdistdir = $default_vars->{DISTDIR};
-    $pkglint_flags = '-v';
+    $pkglint_flags = '-q -Wno-workdir';
 
     if ($opt{r} && !$opt{o} && !$opt{m} && !$opt{p})
 	{ $opt{o} = $opt{m} = $opt{p} = 1; }
@@ -1153,16 +1153,12 @@ sub pkglint_all_pkgsrc
 	    {
 	    if (-f "$pkgdir/Makefile")
 		{
-		if (!open(PKGLINT, "cd $pkgdir ; pkglint $pkglint_flags|"))
+		if (!open(PKGLINT, "cd $pkgdir && pkglint $pkglint_flags |"))
 		    { fail("Unable to run pkglint: $!"); }
-		@output = grep(!/^OK:/ &&
-			     !/^WARN: be sure to cleanup .*work.* before/ &&
-			     !/^WARN: is it a new package/ &&
-			     !/^\d+ fatal errors and \d+ warnings found/
-			     , <PKGLINT> );
+		@output = <PKGLINT>;
 		close(PKGLINT);
 		if (@output)
-		    { print "===> $cat/$pkgdir\n", @output, "\n"; }
+		    { print "===> $cat/$pkgdir\n\n", @output, "\n"; }
 		}
 	    }
 	}
