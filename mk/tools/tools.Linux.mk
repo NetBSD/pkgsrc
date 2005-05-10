@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.10 2005/05/04 06:42:43 jlam Exp $
+# $NetBSD: tools.Linux.mk,v 1.11 2005/05/10 19:56:51 jlam Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -111,8 +111,7 @@ TOOLS_PLATFORM.sort?=		/bin/sort
 .elif exists(/usr/bin/sort)
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
 .endif
-TOOLS_PLATFORM.strip?=		\
-	${_INSTALL_UNSTRIPPED:D${TOOLS_PLATFORM.true}:U/usr/bin/strip}
+TOOLS_PLATFORM.strip?=		/usr/bin/strip
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
 TOOLS_PLATFORM.tee?=		/usr/bin/tee
 TOOLS_PLATFORM.test?=		test			# shell builtin
