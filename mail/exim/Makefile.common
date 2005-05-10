@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2005/04/11 21:46:18 tv Exp $
+# $NetBSD: Makefile.common,v 1.28 2005/05/10 22:52:06 abs Exp $
 
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -18,7 +18,7 @@ EXTRACT_SUFX=	.tar.bz2
 BUILD_DEFS=	EXIM_USER EXIM_GROUP EXIM_DB EXIM_USE_LOOKUP_WHOSON
 
 PKG_GROUPS=	${EXIM_GROUP}
-PKG_USERS=	${EXIM_USER}:${EXIM_GROUP}:8:Exim\\ mail\\ server\\ user:/var/mail:/sbin/nologin
+PKG_USERS=	${EXIM_USER}:${EXIM_GROUP}::Exim\\ mail\\ server\\ user:/var/mail:/sbin/nologin
 
 WRKSRC=		${WRKDIR}/exim-${EXIM_VERSION}
 PKG_SYSCONFSUBDIR?=	exim
