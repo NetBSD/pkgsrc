@@ -1,0 +1,3 @@
+The error program inserts errors from the compiler, lint, etc.
+tools in the source files as comments, optionally invoking
+$EDITOR on the files that had errors.
