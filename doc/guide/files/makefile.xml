@@ -1,7 +1,11 @@
-<!-- $NetBSD: makefile.xml,v 1.1 2005/05/10 00:27:43 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.2 2005/05/10 01:15:54 rillig Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
+
+  <para>WARNING: The &man.make.1; man page is wrong. After the man page
+  has been corrected, this chapter will be updated. Until that, don't
+  take it too serious.</para>
 
   <para>Pkgsrc consists of many <filename>Makefile</filename> fragments,
   each of which forms a well-defined part of the pkgsrc system. Using
