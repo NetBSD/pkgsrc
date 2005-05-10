@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2005/04/11 21:48:08 tv Exp $
+# $NetBSD: Makefile,v 1.30 2005/05/10 20:24:07 jmmv Exp $
 
-DISTNAME=		gtk-engines-2.6.2
+DISTNAME=		gtk-engines-2.6.3
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gtk-engines/2.6/}
@@ -10,14 +10,15 @@ MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Theme engines for GTK+ version 2
 
-CONFLICTS+=		gtk-engines-*
-CONFLICTS+=		gtk2-engines-industrial-*
+CONFLICTS+=		gtk-engines-[0-9]*
+CONFLICTS+=		gtk2-engines-clearlooks-[0-9]*
+CONFLICTS+=		gtk2-engines-industrial-[0-9]*
 CONFLICTS+=		gnome-themes-extras<0.8
 
 BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.6.4
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		theme-1.0 xdg-1.1
+USE_DIRS+=		theme-1.1 xdg-1.1
 USE_X11=		yes
 USE_LIBTOOL=		yes
 
