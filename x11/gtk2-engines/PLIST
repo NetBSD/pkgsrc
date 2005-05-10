@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/03/22 16:08:35 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/05/10 20:24:07 jmmv Exp $
 lib/gtk-2.0/2.4.0/engines/libcrux-engine.la
 lib/gtk-2.0/2.4.0/engines/libhcengine.la
 lib/gtk-2.0/2.4.0/engines/libindustrial.la
@@ -8,7 +8,9 @@ lib/gtk-2.0/2.4.0/engines/libmist.la
 lib/gtk-2.0/2.4.0/engines/libredmond95.la
 lib/gtk-2.0/2.4.0/engines/libsmooth.la
 lib/gtk-2.0/2.4.0/engines/libthinice.la
+lib/gtk-2.0/engines/libclearlooks.la
 lib/pkgconfig/gtk-engines-2.pc
+share/themes/Clearlooks/gtk-2.0/gtkrc
 share/themes/Crux/gtk-2.0/gtkrc
 share/themes/Crux/pixmaps/arrow_down-spinner.png
 share/themes/Crux/pixmaps/arrow_down.png
@@ -108,4 +110,8 @@ share/themes/ThinIce/gtk-2.0/gtkrc
 @dirrm share/themes/Crux/pixmaps
 @dirrm share/themes/Crux/gtk-2.0
 @comment in theme-dirs: @dirrm share/themes/Crux
+@dirrm share/themes/Clearlooks/gtk-2.0
+@comment in theme-dirs: @dirrm share/themes/Clearlooks
+@comment in xdg-dirs: @dirrm share/themes
+@comment in gtk2: @dirrm lib/gtk-2.0/engines
 @comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/engines
