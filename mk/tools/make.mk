@@ -1,4 +1,4 @@
-# $NetBSD: make.mk,v 1.6 2005/05/04 06:44:45 jlam Exp $
+# $NetBSD: make.mk,v 1.7 2005/05/10 19:34:02 jlam Exp $
 #
 # This Makefile fragment creates a tool called "make" under ${TOOLS_DIR}
 # that corresponds to the make program used to build the package.
@@ -19,7 +19,7 @@ MAKE_PROGRAM=		${_IMAKE_MAKE}
 MAKE_PROGRAM=		${MAKE}
 .endif
 
-TOOLS_SYMLINK+=		make
+TOOLS_CREATE+=		make
 TOOLS_REAL_CMD.make=	${MAKE_PROGRAM}
 
 CONFIGURE_ENV+=		MAKE=${MAKE_PROGRAM:T:Q}
