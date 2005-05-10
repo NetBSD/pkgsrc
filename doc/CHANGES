@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10058 2005/05/10 17:01:47 tv Exp $
+$NetBSD: CHANGES,v 1.10059 2005/05/10 18:43:53 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2331,5 +2331,9 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-SVN-Mirror to 0.60 [epg 2005-05-09]
 	Updated svk to 1.00 [epg 2005-05-09]
 	Updated p5-YAML to 0.38 [epg 2005-05-09]
-	Updated ArX2 to 2.2.2 [drochner 2005-05-10]
+	Updated ArX2 to 2.2.2 [recht 2005-05-10]
 	Added ap2-bw-0.6 [tv 2005-05-10]
+	Updated db4 to 4.3.28 [drochner 2005-05-10]
+	Updated codeville to 0.1.12 [drochner 2005-05-10]
+	Updated atk to 0.10.1 [drochner 2005-05-10]
+	Updated inkscape to 0.41 [drochner 2005-05-10]
