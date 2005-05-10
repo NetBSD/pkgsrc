@@ -1,5 +1,3 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.3 2005/05/02 11:29:35 drochner Exp $
-lib/xine/plugins/1.0.1/xineplug_ao_out_sun.a
-lib/xine/plugins/1.0.1/xineplug_ao_out_sun.so
-${HAVE_XV}lib/xine/plugins/1.0.1/xineplug_vo_out_xv.a
-${HAVE_XV}lib/xine/plugins/1.0.1/xineplug_vo_out_xv.so
+@comment $NetBSD: PLIST.NetBSD,v 1.4 2005/05/10 00:16:42 reed Exp $
+lib/xine/plugins/${PKGVERSION}/xineplug_ao_out_sun.a
+lib/xine/plugins/${PKGVERSION}/xineplug_ao_out_sun.so
