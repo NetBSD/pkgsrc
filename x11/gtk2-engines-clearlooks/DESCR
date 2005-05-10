@@ -1,6 +1,0 @@
-Clearlooks is new and modern-looking GTK2+ engine, based on Bluecurve.
-It has the looks of various themes blended together, resulting in a
-theme that's easy on the eyes and visually pleasing.
-
-The difference with pixmap based themes is that it does not sacrifice
-a lot of speed.  In fact, it is roughly as fast as Bluecurve.
