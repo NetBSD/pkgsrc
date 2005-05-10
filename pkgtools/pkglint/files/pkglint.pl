@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.144 2005/05/07 22:21:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.145 2005/05/10 00:09:18 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1090,9 +1090,8 @@ sub readmakefile($) {
 			if ($includefile =~ /\/mk\/texinfo\.mk/) {
 				log_error($line->text, $line->lineno, "do not include $includefile");
 			}
-			if ($includefile =~ /\/mk\/bsd/) {
-				# we don't want to include the whole
-				# bsd.pkg.mk or bsd.prefs.mk files
+			if ($includefile =~ /\/mk\/(?:bsd|java)/) {
+				# skip these files
 				$contents .= $line->text . "\n";
 			} else {
 				$dirname = dirname($file);
