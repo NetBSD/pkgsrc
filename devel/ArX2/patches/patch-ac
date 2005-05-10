@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/05/10 07:23:25 recht Exp $
+
+--- src/arx/include/gvfs.hpp.orig	2005-05-09 15:55:51.000000000 +0200
++++ src/arx/include/gvfs.hpp	2005-05-09 16:02:18.000000000 +0200
+@@ -112,7 +112,7 @@
+ 
+           char *escaped(gnome_vfs_escape_host_and_path_string
+                         (location.c_str()));
+-          std::string result(*escaped);
++          std::string result((const char*)*escaped);
+           g_free(escaped);
+           return result;
+           
