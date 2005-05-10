@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.2 2005/05/10 00:12:18 rillig Exp $
+# $NetBSD: deprecated.map,v 1.3 2005/05/10 22:30:15 wiz Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -17,7 +17,7 @@ NO_CDROM		Use NO_BIN_ON_CDROM and/or NO_SRC_ON_CDROM instead.
 NO_PACKAGE		Don't use it to enforce license restrictions.
 NO_PATCH		You can just remove it.
 NO_WRKSUBDIR		Use WRKSRC=${WRKDIR} instead.
-PATCH_SITE_SUBDIR	Use dome form of PATCHES_SITES instead.
+PATCH_SITE_SUBDIR	Use some form of PATCHES_SITES instead.
 PATCH_SUM_FILE		Use DISTINFO_FILE instead.
 PKG_JVM			Use PKG_DEFAULT_JVM instead.
 USE_BUILDLINK2		You can just remove it.
