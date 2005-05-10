@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/05/10 21:10:24 recht Exp $
+
+--- ../libneon/src/Makefile.in.orig	2005-05-03 01:46:54.000000000 +0200
++++ ../libneon/src/Makefile.in	2005-05-08 12:31:18.000000000 +0200
+@@ -26,7 +26,7 @@
+ # Flags
+ CPPFLAGS = @DEFS@ @CPPFLAGS@
+ CFLAGS = @CFLAGS@  -I$(top_builddir) -I$(top_srcdir)/../expat/lib @NEON_CFLAGS@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -L../../expat @LDFLAGS@
+ NEON_LINK_FLAGS = @NEON_LINK_FLAGS@
+ # Note: don't substitute @LIBS@ in here; during a bundled
+ # build of this directory, @LIBS@ may include -lneon.
