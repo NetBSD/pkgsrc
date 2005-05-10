@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2005/04/11 21:46:16 tv Exp $
+# $NetBSD: Makefile.common,v 1.25 2005/05/10 01:51:13 jschauma Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -24,11 +24,6 @@ JAVA_NAME=	sun14
 JAVA_UNLIMIT=	datasize
 
 MESSAGE_SUBST+=	JAVA_HOME="${JAVA_HOME}"
-
-.if ${OPSYS} == "NetBSD"
-DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
-.endif
 
 NO_MTREE=	yes	# since we change PREFIX
 LDD=		${TRUE}
@@ -72,6 +67,11 @@ do-install:
 
 .if ${OPSYS} == "NetBSD"
 .  include "../../emulators/suse_linux/Makefile.application"
+.  if ${SUSE_DIR_PREFIX} == "suse91"
+DEPENDS+=	suse_locale-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_locale
+.  endif
+DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
 .include "../../mk/java-env.mk"
