@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.10 2005/05/10 19:56:51 jlam Exp $
+# $NetBSD: tools.SunOS.mk,v 1.11 2005/05/10 20:14:27 jlam Exp $
 #
 # System-supplied tools for the Solaris operating system.
 
@@ -39,7 +39,6 @@ TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/xpg4/bin/id
 TOOLS_PLATFORM.install?=	/usr/ucb/install
-TOOLS_PLATFORM.ldconfig?=	${TOOLS_PLATFORM.true}
 TOOLS_PLATFORM.ln?=		/usr/bin/ln
 TOOLS_PLATFORM.ls?=		/usr/bin/ls
 TOOLS_PLATFORM.m4?=		/usr/ccs/bin/m4
