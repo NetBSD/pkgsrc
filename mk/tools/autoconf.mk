@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.4 2005/04/28 03:01:11 jlam Exp $
+# $NetBSD: autoconf.mk,v 1.5 2005/05/10 19:34:02 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU autoconf.
 #
@@ -140,7 +140,7 @@ pre-configure: tools-libtool-m4-override
 #
 AUTOMAKE_OVERRIDE?=	yes
 .if !empty(AUTOMAKE_OVERRIDE:M[yY][eE][sS])
-TOOLS_SYMLINK+=		${_TOOLS_AUTOCONF_LINKS}
+TOOLS_CREATE+=		${_TOOLS_AUTOCONF_LINKS}
 .  for _t_ in ${_TOOLS_AUTOCONF_LINKS}
 .    for _s_ in ${_TOOLS_AUTOCONF.${_t_}}
 .      if empty(TOOLS_REAL_CMD.${_t_}:M*/${_s_})
