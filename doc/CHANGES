@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10057 2005/05/10 07:24:50 recht Exp $
+$NetBSD: CHANGES,v 1.10058 2005/05/10 17:01:47 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2332,3 +2332,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated svk to 1.00 [epg 2005-05-09]
 	Updated p5-YAML to 0.38 [epg 2005-05-09]
 	Updated ArX2 to 2.2.2 [drochner 2005-05-10]
+	Added ap2-bw-0.6 [tv 2005-05-10]
