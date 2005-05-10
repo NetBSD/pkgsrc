@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2005/05/02 11:29:35 drochner Exp $
+# $NetBSD: Makefile.common,v 1.20 2005/05/10 00:16:42 reed Exp $
 #
 
 DISTNAME=		xine-lib-1.0.1
@@ -9,7 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://xinehq.de/
-COMMENT=		Multimedia player library
 
 DISTINFO_FILE=		${.CURDIR}/../../multimedia/xine-lib/distinfo
 PATCHDIR=		${.CURDIR}/../../multimedia/xine-lib/patches
