@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1632 2005/05/10 01:34:04 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1633 2005/05/10 19:06:58 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -453,27 +453,28 @@ CONFIGURE_ENV+=		M4="${M4}" YACC="${YACC}"
 
 TOUCH_FLAGS?=		-f
 
-# determine if we need a working patch(1).
-.if defined(_OPSYS_GPATCH_REQD) && !empty(_OPSYS_GPATCH_REQD:M[yY][eE][sS])
-_NEED_PATCH=		YES
-.else
-_NEED_PATCH!=		if [ -d ${PATCHDIR} ]; then \
-				if [ "`${ECHO} ${PATCHDIR}/patch-*`" != "${PATCHDIR}/patch-*" ]; then \
-					${ECHO} YES; \
-				else \
-					${ECHO} NO; \
-				fi \
-			else \
-				${ECHO} NO; \
-			fi
+.if !defined(_PKGSRC_USE_PATCH)
+.  if defined(PATCHFILES) && !empty(PATCHFILES)
+_PKGSRC_USE_PATCH=	yes
+.  elif !exists(${PATCHDIR})
+_PKGSRC_USE_PATCH=	no
+.  else
+_PKGSRC_USE_PATCH!=	\
+	if ${TEST} "`${ECHO} ${PATCHDIR}/patch-*`" != "${PATCHDIR}/patch-*"; then \
+		${ECHO} yes;					\
+	else							\
+		${ECHO} no;					\
+	fi
+.  endif
 .endif
+MAKE_VARS+=	_PKGSRC_USE_PATCH
 
-.if defined(PATCHFILES)
-_NEED_PATCH=		YES
-.endif
-
-.if ${_NEED_PATCH} == "YES"
+.if !empty(_PKGSRC_USE_PATCH:M[yY][eE][sS])
+.  if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 USE_GNU_TOOLS+=		patch
+.  else
+PKGSRC_USE_TOOLS+=	patch
+.  endif
 .endif
 
 .if defined(PATCH_DEBUG) || defined(PKG_VERBOSE)
@@ -557,7 +558,7 @@ fi; exit 1
 .if defined(PATCHFILES)
 .  if !empty(PATCHFILES:M*.bz2) && ${EXTRACT_SUFX} != ".tar.bz2"
 .    if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-USE_TOOLS+=		bzcat
+PKGSRC_USE_TOOLS+=	bzcat
 .    elif exists(/usr/bin/bzcat)
 BZCAT=			/usr/bin/bzcat
 .    else
@@ -961,16 +962,16 @@ USE_LANGUAGES?=		# empty
 # eventually be split up into lists of tools required by different
 # phases of a pkgsrc build.
 #
-USE_TOOLS+=	[ awk basename cat chgrp chmod chown cmp cp cut date	\
-		dirname echo egrep env expr false fgrep file find grep	\
-		gtar gunzip gzcat gzip head hostname id install		\
-		ldconfig ln ls m4 mkdir mtree mv nice pax pwd rm rmdir	\
-		sed sh shlock sort strip tail tee test touch tr true	\
-		tsort wc xargs
+PKGSRC_USE_TOOLS+=							\
+	[ awk basename cat chgrp chmod chown cmp cp cut date dirname	\
+	echo egrep env expr false fgrep file find grep gtar gunzip	\
+	gzcat gzip head hostname id install ldconfig ln ls m4 mkdir	\
+	mtree mv nice pax pwd rm rmdir sed sh shlock sort strip tail	\
+	tee test touch tr true tsort wc xargs
 
 # We need a mail command to send mail to ${PKGSRC_MESSAGE_RECIPIENTS}.
 .if !empty(PKGSRC_MESSAGE_RECIPIENTS)
-USE_TOOLS+=	mail
+PKGSRC_USE_TOOLS+=	mail
 .endif
 
 .if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
@@ -1768,7 +1769,7 @@ _EXTRACT_SUFFIXES+=	.rar
 .if !empty(EXTRACT_ONLY:M*.bz2) || !empty(EXTRACT_ONLY:M*.tbz) || \
     !empty(EXTRACT_SUFX:M*.bz2) || !empty(EXTRACT_SUFX:M*.tbz)
 .  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-USE_TOOLS+=		bzcat
+PKGSRC_USE_TOOLS+=	bzcat
 .  elif exists(/usr/bin/bzcat)
 BZCAT=			/usr/bin/bzcat <
 .  else
@@ -1786,7 +1787,7 @@ BUILD_DEPENDS+=		lha>=114.9:../../archivers/lha
 .if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
     !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz)
 .  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-USE_TOOLS+=		gzcat
+PKGSRC_USE_TOOLS+=	gzcat
 .  elif !defined(GZCAT)
 BUILD_DEPENDS+=         gzip-base>=1.2.4b:../../archivers/gzip-base
 GZCAT=                  ${LOCALBASE}/bin/zcat
