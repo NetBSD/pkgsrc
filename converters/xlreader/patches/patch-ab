@@ -1,0 +1,44 @@
+$NetBSD: patch-ab,v 1.1 2005/05/10 05:53:48 cjs Exp $
+
+--- format.c.orig	2005-05-10 13:51:38.000000000 +0900
++++ format.c	2005-05-10 14:46:25.000000000 +0900
+@@ -138,27 +138,33 @@
+ 	char *str;
+ 	char *quotedstr;
+ 	char *delim;
+-	char insert_start[1024 * 4];
++#define INSERT_START_SIZE (1024 * 4)
++#define INSERT_START_REMAINING (INSERT_START_SIZE - (strlen(insert_start) + 2))
++	char insert_start[INSERT_START_SIZE];
+ 
+ 	cell_setdateformat(dateformat);
+ 	for (i = 0; i < bk->sheetcount; i++) {
+ 		delim = "";
+ 		s = bk->sheet[i];
+ 		if (s->name != NULL) {
+-			sprintf(insert_start,"INSERT INTO %s (",s->name);
++			snprintf(insert_start,INSERT_START_SIZE,"INSERT INTO %s (",s->name);
+ 		} else {
+-			sprintf(insert_start,"INSERT INTO ?TABLE? (");
++			snprintf(insert_start,INSERT_START_SIZE,"INSERT INTO ?TABLE? (");
+ 		}
+ 		for (y = 0; y < s->cols; y++) {
+ 			str = cell_data_string(bk,s,0,y);
+ 			if (str != NULL) {
+-				strcat(insert_start,delim);
+-				strcat(insert_start,str);
++				strncat(insert_start,delim,INSERT_START_REMAINING);
++				strncat(insert_start,str,INSERT_START_REMAINING);
+ 			} else {
+-				strcat(insert_start,delim);
++				strncat(insert_start,delim,INSERT_START_REMAINING);
+ 			}
+ 			delim = ",";
+ 		}
++		if (strlen(insert_start) >= (INSERT_START_SIZE - 1)) {
++			fprintf(stderr, "insert_start buffer overflow\n");
++			exit(1);
++		}
+ 		for (x = 1; x < s->rows; x++) {
+ 			delim = "";
+ 			printf("%s) values (",insert_start);
