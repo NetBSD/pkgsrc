@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/04/28 23:04:08 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/10 20:21:57 jmmv Exp $
 #
 
-DISTNAME=	theme-dirs-1.0
+DISTNAME=	theme-dirs-1.1
 CATEGORIES=	misc gnome kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
