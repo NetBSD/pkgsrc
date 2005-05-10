@@ -1,4 +1,4 @@
-# $NetBSD: imake.mk,v 1.4 2005/05/09 01:11:58 jlam Exp $
+# $NetBSD: imake.mk,v 1.5 2005/05/10 19:06:59 jlam Exp $
 #
 # This Makefile fragment handles packages that need imake and xmkmf
 # to build X11-related packages.  The correct imake and xmkmf tools
@@ -12,6 +12,9 @@
 #	XMKMF_CMD	path to xmkmf tool + any xmkmf-specific args
 #	XMKMF		command to create all Makefiles from Imakefiles,
 #			usually "xmkmf -a".
+#
+# TOOLS_IMAKE, TOOLS_XMKMF_CMD and TOOLS_XMKMF are set to the same
+# corresponding values.
 #
 # Optional variables that may be defined by the package are:
 #
@@ -81,8 +84,11 @@ USE_TOOLS+=			${_IMAKE_TOOLS:Nimake}
 # to imake and xmkmf.
 #
 TOOLS_CREATE+=			imake xmkmf
-${_TOOLS_VARNAME.imake}=	${TOOLS_REAL_CMD.imake} ${TOOLS_REAL_ARGS.imake}
-${_TOOLS_VARNAME.xmkmf}=	${TOOLS_REAL_CMD.xmkmf} ${TOOLS_REAL_ARGS.xmkmf}
-XMKMF=				${${_TOOLS_VARNAME.xmkmf}} -a
+TOOLS_${_TOOLS_VARNAME.imake}=	${TOOLS_REAL_CMD.imake} ${TOOLS_REAL_ARGS.imake}
+TOOLS_${_TOOLS_VARNAME.xmkmf}=	${TOOLS_REAL_CMD.xmkmf} ${TOOLS_REAL_ARGS.xmkmf}
+TOOLS_XMKMF=			${${_TOOLS_VARNAME.xmkmf}} -a
+${_TOOLS_VARNAME.imake}=	${TOOLS_${_TOOLS_VARNAME.imake}}
+${_TOOLS_VARNAME.xmkmf}=	${TOOLS_${_TOOLS_VARNAME.xmkmf}}
+XMKMF=				${TOOLS_XMKMF}
 .  endif
 .endif
