@@ -1,14 +1,29 @@
-# $NetBSD: replace.mk,v 1.64 2005/05/09 01:11:58 jlam Exp $
+# $NetBSD: replace.mk,v 1.65 2005/05/10 19:06:59 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
-# tools with pkgsrc versions.  The replacements are placed under
-# ${TOOLS_DIR} so that they appear earlier in the search path when
-# invoked using the bare name of the tool.  Also, any "TOOL" variables,
-# e.g. AWK, SED, etc. are set properly to the replacement tool.
+# tools with pkgsrc versions.
+#
+# The replacement tools are placed under ${TOOLS_DIR} so that they
+# appear earlier in the search path when invoked using the bare name
+# of the tool.
+#
+# "TOOLS_TOOL" variables, e.g. TOOLS_AWK, TOOLS_SED, etc. are set to
+# the full command lines necessary to invoke the real tools on the
+# filesystem, and represent the tools required by the package.
+#
+# "TOOL" variables, e.g. AWK, SED, etc. are set to the full command
+# lines necessary to invoke the real tools on the filesystem, and
+# represent the tools required by pkgsrc itself.
 #
 # The tools that could be replaced with pkgsrc counterparts (usually
-# GNU versions of the tools) should be listed in each package Makefile
-# as:
+# GNU versions of the tools) that are required by pkgsrc itself, i.e.
+# in targets that are part of pkgsrc infrastructure or part of the
+# package Makefile, should be listed as:
+#
+#	PKGSRC_USE_TOOLS+=	awk sed
+#
+# The tools that are required by the package itself, i.e. within the
+# software's own build system, should be listed as:
 #
 #	USE_TOOLS+=	gawk gmake lex
 #
@@ -42,22 +57,27 @@ USE_TOOLS+=	tbl
 
 ######################################################################
 
-# Create _USE_TOOLS, a sanitized version of USE_TOOLS that removes the
-# tools that are overridden by superseding ones.
-
-_USE_TOOLS:=	${USE_TOOLS:O:u}
-.if !empty(USE_TOOLS:Mbison)		# bison > yacc
+# Create _USE_TOOLS, a sanitized version of PKGSRC_USE_TOOLS and
+# USE_TOOLS that removes the ones that are overridden by superseding
+# ones.
+#
+.if !defined(_USE_TOOLS)
+_USE_TOOLS:=	${PKGSRC_USE_TOOLS} ${USE_TOOLS}
+_USE_TOOLS:=	${_USE_TOOLS:O:u}
+.  if !empty(USE_TOOLS:Mbison)		# bison > yacc
 _USE_TOOLS:=	${_USE_TOOLS:Nyacc}
-.endif
-.if !empty(USE_TOOLS:Mgawk)		# gawk > awk
+.  endif
+.  if !empty(USE_TOOLS:Mgawk)		# gawk > awk
 _USE_TOOLS:=	${_USE_TOOLS:Nawk}
-.endif
-.if !empty(USE_TOOLS:Mgm4)		# gm4 > m4
+.  endif
+.  if !empty(USE_TOOLS:Mgm4)		# gm4 > m4
 _USE_TOOLS:=	${_USE_TOOLS:Nm4}
-.endif
-.if !empty(USE_TOOLS:Mgsed)		# gsed > sed
+.  endif
+.  if !empty(USE_TOOLS:Mgsed)		# gsed > sed
 _USE_TOOLS:=	${_USE_TOOLS:Nsed}
+.  endif
 .endif
+MAKE_VARS+=	_USE_TOOLS
 
 ######################################################################
 
@@ -85,9 +105,13 @@ TOOLS_DEPMETHOD.${_t_}?=	BUILD_DEPENDS
 # For each of the blocks below, we create either symlinks or wrappers
 # for each of the tools requested.  We need to be careful that we don't
 # get into dependency loops; do this by setting and checking the value
-# of TOOLS_IGNORE.<tool>.  If we're using the system-supplied tool, we
-# defer the setting of TOOLS_REAL_CMD.<tool> until the loop at the end.
-
+# of TOOLS_IGNORE.<tool>.  These blocks handle the case where we are
+# using the pkgsrc-supplied tool.
+#
+# Always set the "TOOLS_TOOL" name for each tool to point to the real
+# command, e.g., TOOLS_TBL, TOOLS_YACC, etc., provided that "TOOL" has
+# been associated with <tool>.
+#
 .if !defined(TOOLS_IGNORE.[) && !empty(_USE_TOOLS:M\[)
 .  if !empty(PKGPATH:Msysutils/coreutils)
 MAKEFLAGS+=			TOOLS_IGNORE.[=
@@ -105,7 +129,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.awk=
 TOOLS_DEPENDS.awk?=		gawk>=3.1.1:../../lang/gawk
 TOOLS_CREATE+=			awk
 TOOLS_REAL_CMD.awk=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
-${_TOOLS_VARNAME.awk}=		${TOOLS_REAL_CMD.awk}
+TOOLS_${_TOOLS_VARNAME.awk}=	${TOOLS_REAL_CMD.awk}
 .  endif
 .endif
 
@@ -116,7 +140,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.basename=
 TOOLS_DEPENDS.basename?=	coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			basename
 TOOLS_REAL_CMD.basename=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}basename
-${_TOOLS_VARNAME.basename}=	${TOOLS_REAL_CMD.basename}
+TOOLS_${_TOOLS_VARNAME.basename}=	${TOOLS_REAL_CMD.basename}
 .  endif
 .endif
 
@@ -128,7 +152,7 @@ TOOLS_DEPENDS.bison?=		bison>=1.0:../../devel/bison
 TOOLS_CREATE+=			bison
 TOOLS_REAL_CMD.bison=		${LOCALBASE}/bin/bison
 TOOLS_REAL_ARGS.bison=		-y
-${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_REAL_ARGS.bison}
+TOOLS_${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_REAL_ARGS.bison}
 .  endif
 TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
 .endif
@@ -140,7 +164,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.bzcat=
 TOOLS_DEPENDS.bzcat?=		bzip2>=0.9.0b:../../archivers/bzip2
 TOOLS_CREATE+=			bzcat
 TOOLS_REAL_CMD.bzcat=		${LOCALBASE}/bin/bzcat
-${_TOOLS_VARNAME.bzcat}=	${TOOLS_REAL_CMD.bzcat}
+TOOLS_${_TOOLS_VARNAME.bzcat}=	${TOOLS_REAL_CMD.bzcat}
 .  endif
 .endif
 
@@ -151,7 +175,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.cat=
 TOOLS_DEPENDS.cat?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			cat
 TOOLS_REAL_CMD.cat=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}cat
-${_TOOLS_VARNAME.cat}=		${TOOLS_REAL_CMD.cat}
+TOOLS_${_TOOLS_VARNAME.cat}=	${TOOLS_REAL_CMD.cat}
 .  endif
 .endif
 
@@ -162,7 +186,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.chgrp=
 TOOLS_DEPENDS.chgrp?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			chgrp
 TOOLS_REAL_CMD.chgrp=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}chgrp
-${_TOOLS_VARNAME.chgrp}=	${TOOLS_REAL_CMD.chgrp}
+TOOLS_${_TOOLS_VARNAME.chgrp}=	${TOOLS_REAL_CMD.chgrp}
 .  endif
 .endif
 
@@ -173,7 +197,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.chmod=
 TOOLS_DEPENDS.chmod?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			chmod
 TOOLS_REAL_CMD.chmod=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}chmod
-${_TOOLS_VARNAME.chmod}=	${TOOLS_REAL_CMD.chmod}
+TOOLS_${_TOOLS_VARNAME.chmod}=	${TOOLS_REAL_CMD.chmod}
 .  endif
 .endif
 
@@ -184,7 +208,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.chown=
 TOOLS_DEPENDS.chown?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			chown
 TOOLS_REAL_CMD.chown=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}chown
-${_TOOLS_VARNAME.chown}=	${TOOLS_REAL_CMD.chown}
+TOOLS_${_TOOLS_VARNAME.chown}=	${TOOLS_REAL_CMD.chown}
 .  endif
 .endif
 
@@ -195,7 +219,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.cmp=
 TOOLS_DEPENDS.cmp?=		diffutils>=2.8.1:../../devel/diffutils
 TOOLS_CREATE+=			cmp
 TOOLS_REAL_CMD.cmp=		${LOCALBASE}/bin/cmp
-${_TOOLS_VARNAME.cmp}=		${TOOLS_REAL_CMD.cmp}
+TOOLS_${_TOOLS_VARNAME.cmp}=	${TOOLS_REAL_CMD.cmp}
 .  endif
 .endif
 
@@ -206,7 +230,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.cp=
 TOOLS_DEPENDS.cp?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			cp
 TOOLS_REAL_CMD.cp=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}cp
-${_TOOLS_VARNAME.cp}=		${TOOLS_REAL_CMD.cp}
+TOOLS_${_TOOLS_VARNAME.cp}=	${TOOLS_REAL_CMD.cp}
 .  endif
 .endif
 
@@ -217,7 +241,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.cut=
 TOOLS_DEPENDS.cut?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			cut
 TOOLS_REAL_CMD.cut=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}cut
-${_TOOLS_VARNAME.cut}=		${TOOLS_REAL_CMD.cut}
+TOOLS_${_TOOLS_VARNAME.cut}=	${TOOLS_REAL_CMD.cut}
 .  endif
 .endif
 
@@ -228,7 +252,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.date=
 TOOLS_DEPENDS.date?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			date
 TOOLS_REAL_CMD.date=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}date
-${_TOOLS_VARNAME.date}=		${TOOLS_REAL_CMD.date}
+TOOLS_${_TOOLS_VARNAME.date}=	${TOOLS_REAL_CMD.date}
 .  endif
 .endif
 
@@ -239,7 +263,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.dirname=
 TOOLS_DEPENDS.dirname?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			dirname
 TOOLS_REAL_CMD.dirname=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}dirname
-${_TOOLS_VARNAME.dirname}=	${TOOLS_REAL_CMD.dirname}
+TOOLS_${_TOOLS_VARNAME.dirname}=	${TOOLS_REAL_CMD.dirname}
 .  endif
 .endif
 
@@ -250,7 +274,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.echo=
 TOOLS_DEPENDS.echo?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			echo
 TOOLS_REAL_CMD.echo=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}echo
-${_TOOLS_VARNAME.echo}=		${TOOLS_REAL_CMD.echo}
+TOOLS_${_TOOLS_VARNAME.echo}=	${TOOLS_REAL_CMD.echo}
 .  endif
 .endif
 
@@ -261,7 +285,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.egrep=
 TOOLS_DEPENDS.egrep?=		grep>=2.5.1:../../textproc/grep
 TOOLS_CREATE+=			egrep
 TOOLS_REAL_CMD.egrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}egrep
-${_TOOLS_VARNAME.egrep}=	${TOOLS_REAL_CMD.egrep}
+TOOLS_${_TOOLS_VARNAME.egrep}=	${TOOLS_REAL_CMD.egrep}
 .  endif
 .endif
 
@@ -272,7 +296,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.env=
 TOOLS_DEPENDS.env?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			env
 TOOLS_REAL_CMD.env=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}env
-${_TOOLS_VARNAME.env}=		${TOOLS_REAL_CMD.env}
+TOOLS_${_TOOLS_VARNAME.env}=	${TOOLS_REAL_CMD.env}
 .  endif
 .endif
 
@@ -283,7 +307,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.expr=
 TOOLS_DEPENDS.expr?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			expr
 TOOLS_REAL_CMD.expr=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}expr
-${_TOOLS_VARNAME.expr}=		${TOOLS_REAL_CMD.expr}
+TOOLS_${_TOOLS_VARNAME.expr}=	${TOOLS_REAL_CMD.expr}
 .  endif
 .endif
 
@@ -294,7 +318,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.false=
 TOOLS_DEPENDS.false?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			false
 TOOLS_REAL_CMD.false=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}false
-${_TOOLS_VARNAME.false}=	${TOOLS_REAL_CMD.false}
+TOOLS_${_TOOLS_VARNAME.false}=	${TOOLS_REAL_CMD.false}
 .  endif
 .endif
 
@@ -305,7 +329,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.fgrep=
 TOOLS_DEPENDS.fgrep?=		grep>=2.5.1:../../textproc/grep
 TOOLS_CREATE+=			fgrep
 TOOLS_REAL_CMD.fgrep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}fgrep
-${_TOOLS_VARNAME.fgrep}=	${TOOLS_REAL_CMD.fgrep}
+TOOLS_${_TOOLS_VARNAME.fgrep}=	${TOOLS_REAL_CMD.fgrep}
 .  endif
 .endif
 
@@ -316,7 +340,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.file=
 TOOLS_DEPENDS.file?=		file>=4.13:../../sysutils/file
 TOOLS_CREATE+=			file
 TOOLS_REAL_CMD.file=		${LOCALBASE}/bin/file
-${_TOOLS_VARNAME.file}=	${TOOLS_REAL_CMD.file}
+TOOLS_${_TOOLS_VARNAME.file}=	${TOOLS_REAL_CMD.file}
 .  endif
 .endif
 
@@ -327,7 +351,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.find=
 TOOLS_DEPENDS.find?=		findutils>=4.1:../../sysutils/findutils
 TOOLS_CREATE+=			find
 TOOLS_REAL_CMD.find=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}find
-${_TOOLS_VARNAME.find}=		${TOOLS_REAL_CMD.find}
+TOOLS_${_TOOLS_VARNAME.find}=	${TOOLS_REAL_CMD.find}
 .  endif
 .endif
 
@@ -338,9 +362,9 @@ MAKEFLAGS+=			TOOLS_IGNORE.gawk=
 TOOLS_DEPENDS.gawk?=		gawk>=3.1.1:../../lang/gawk
 TOOLS_CREATE+=			gawk
 TOOLS_REAL_CMD.gawk=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
-${_TOOLS_VARNAME.gawk}=		${TOOLS_REAL_CMD.gawk}
+TOOLS_${_TOOLS_VARNAME.gawk}=	${TOOLS_REAL_CMD.gawk}
 .  endif
-TOOLS_CMD.gawk=			${TOOLS_DIR}/bin/awk
+TOOLS_ALIASES.gawk=		awk
 .endif
 
 .if !defined(TOOLS_IGNORE.gm4) && !empty(_USE_TOOLS:Mgm4)
@@ -350,9 +374,9 @@ MAKEFLAGS+=			TOOLS_IGNORE.gm4=
 TOOLS_DEPENDS.gm4?=		m4>=1.4:../../devel/m4
 TOOLS_CREATE+=			gm4
 TOOLS_REAL_CMD.gm4=		${LOCALBASE}/bin/gm4
-${_TOOLS_VARNAME.gm4}=		${TOOLS_REAL_CMD.gm4}
+TOOLS_${_TOOLS_VARNAME.gm4}=	${TOOLS_REAL_CMD.gm4}
 .  endif
-TOOLS_CMD.gm4=			${TOOLS_DIR}/bin/m4
+TOOLS_ALIASES.gm4=		m4
 .endif
 
 .if !defined(TOOLS_IGNORE.gmake) && !empty(_USE_TOOLS:Mgmake)
@@ -362,7 +386,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gmake=
 TOOLS_DEPENDS.gmake?=		gmake>=3.78:../../devel/gmake
 TOOLS_CREATE+=			gmake
 TOOLS_REAL_CMD.gmake=		${LOCALBASE}/bin/gmake
-${_TOOLS_VARNAME.gmake}=	${TOOLS_REAL_CMD.gmake}
+TOOLS_${_TOOLS_VARNAME.gmake}=	${TOOLS_REAL_CMD.gmake}
 .  endif
 .endif
 
@@ -373,7 +397,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.grep=
 TOOLS_DEPENDS.grep?=		grep>=2.5.1:../../textproc/grep
 TOOLS_CREATE+=			grep
 TOOLS_REAL_CMD.grep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
-${_TOOLS_VARNAME.grep}=		${TOOLS_REAL_CMD.grep}
+TOOLS_${_TOOLS_VARNAME.grep}=	${TOOLS_REAL_CMD.grep}
 .  endif
 .endif
 
@@ -384,9 +408,9 @@ MAKEFLAGS+=			TOOLS_IGNORE.gsed=
 TOOLS_DEPENDS.gsed?=		gsed>=3.0.2:../../textproc/gsed
 TOOLS_CREATE+=			gsed
 TOOLS_REAL_CMD.gsed=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sed
-${_TOOLS_VARNAME.gsed}=		${TOOLS_REAL_CMD.gsed}
+TOOLS_${_TOOLS_VARNAME.gsed}=	${TOOLS_REAL_CMD.gsed}
 .  endif
-TOOLS_CMD.gsed=			${TOOLS_DIR}/bin/sed
+TOOLS_ALIASES.gsed=		sed
 .endif
 
 .if !defined(TOOLS_IGNORE.gtar) && !empty(_USE_TOOLS:Mgtar)
@@ -400,9 +424,9 @@ MAKEFLAGS+=			TOOLS_IGNORE.gtar=
 #TOOLS_DEPENDS.gtar?=		pax>=20040802:../../archivers/pax
 TOOLS_CREATE+=			gtar
 TOOLS_REAL_CMD.gtar=		${LOCALBASE}/bin/tar
-${_TOOLS_VARNAME.gtar}=		${TOOLS_REAL_CMD.gtar}
+TOOLS_${_TOOLS_VARNAME.gtar}=	${TOOLS_REAL_CMD.gtar}
 .  endif
-TOOLS_CMD.gtar=			${TOOLS_DIR}/bin/tar
+TOOLS_ALIASES.gtar=		tar
 .endif
 
 .if !defined(TOOLS_IGNORE.gunzip) && !empty(_USE_TOOLS:Mgunzip)
@@ -413,7 +437,7 @@ TOOLS_DEPENDS.gunzip?=		gzip-base>=1.2.4b:../../archivers/gzip-base
 TOOLS_CREATE+=			gunzip
 TOOLS_REAL_CMD.gunzip=		${LOCALBASE}/bin/gunzip
 TOOLS_REAL_ARGS.gunzip=		-f
-${_TOOLS_VARNAME.gunzip}=	${TOOLS_REAL_CMD.gunzip} ${TOOLS_REAL_ARGS.gunzip}
+TOOLS_${_TOOLS_VARNAME.gunzip}=	${TOOLS_REAL_CMD.gunzip} ${TOOLS_REAL_ARGS.gunzip}
 .  endif
 .endif
 
@@ -424,7 +448,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gzcat=
 TOOLS_DEPENDS.gzcat?=		gzip-base>=1.2.4b:../../archivers/gzip-base
 TOOLS_CREATE+=			gzcat
 TOOLS_REAL_CMD.gzcat=		${LOCALBASE}/bin/gzcat
-${_TOOLS_VARNAME.gzcat}=	${TOOLS_REAL_CMD.gzcat}
+TOOLS_${_TOOLS_VARNAME.gzcat}=	${TOOLS_REAL_CMD.gzcat}
 .  endif
 .endif
 
@@ -436,7 +460,7 @@ TOOLS_DEPENDS.gzip?=		gzip-base>=1.2.4b:../../archivers/gzip-base
 TOOLS_CREATE+=			gzip
 TOOLS_REAL_CMD.gzip=		${LOCALBASE}/bin/gzip
 TOOLS_REAL_ARGS.gzip=		-nf ${GZIP}
-${_TOOLS_VARNAME.gzip}=		${TOOLS_REAL_CMD.gzip} ${TOOLS_REAL_ARGS.gzip}
+TOOLS_${_TOOLS_VARNAME.gzip}=	${TOOLS_REAL_CMD.gzip} ${TOOLS_REAL_ARGS.gzip}
 .  endif
 .endif
 
@@ -447,7 +471,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.head=
 TOOLS_DEPENDS.head?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			head
 TOOLS_REAL_CMD.head=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}head
-${_TOOLS_VARNAME.head}=		${TOOLS_REAL_CMD.head}
+TOOLS_${_TOOLS_VARNAME.head}=	${TOOLS_REAL_CMD.head}
 .  endif
 .endif
 
@@ -458,7 +482,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.hostname=
 TOOLS_DEPENDS.hostname?=	coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			hostname
 TOOLS_REAL_CMD.hostname=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}hostname
-${_TOOLS_VARNAME.hostname}=	${TOOLS_REAL_CMD.hostname}
+TOOLS_${_TOOLS_VARNAME.hostname}=	${TOOLS_REAL_CMD.hostname}
 .  endif
 .endif
 
@@ -469,7 +493,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.id=
 TOOLS_DEPENDS.id?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			id
 TOOLS_REAL_CMD.id=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}id
-${_TOOLS_VARNAME.id}=		${TOOLS_REAL_CMD.id}
+TOOLS_${_TOOLS_VARNAME.id}=	${TOOLS_REAL_CMD.id}
 .  endif
 .endif
 
@@ -480,7 +504,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.install=
 TOOLS_DEPENDS.install?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			install
 TOOLS_REAL_CMD.install=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}install
-${_TOOLS_VARNAME.install}=	${TOOLS_REAL_CMD.install}
+TOOLS_${_TOOLS_VARNAME.install}=	${TOOLS_REAL_CMD.install}
 .  endif
 .endif
 
@@ -492,7 +516,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.lex=
 TOOLS_DEPENDS.lex?=	${BUILDLINK_DEPENDS.flex}:${BUILDLINK_PKGSRCDIR.flex}
 TOOLS_CREATE+=			lex
 TOOLS_REAL_CMD.lex=		${LOCALBASE}/bin/flex
-${_TOOLS_VARNAME.lex}=		${TOOLS_REAL_CMD.lex}
+TOOLS_${_TOOLS_VARNAME.lex}=	${TOOLS_REAL_CMD.lex}
 .  endif
 .endif
 
@@ -503,7 +527,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.ln=
 TOOLS_DEPENDS.ln?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			ln
 TOOLS_REAL_CMD.ln=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}ln
-${_TOOLS_VARNAME.ln}=		${TOOLS_REAL_CMD.ln}
+TOOLS_${_TOOLS_VARNAME.ln}=	${TOOLS_REAL_CMD.ln}
 .  endif
 .endif
 
@@ -514,7 +538,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.ls=
 TOOLS_DEPENDS.ls?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			ls
 TOOLS_REAL_CMD.ls=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}ls
-${_TOOLS_VARNAME.ls}=		${TOOLS_REAL_CMD.ls}
+TOOLS_${_TOOLS_VARNAME.ls}=	${TOOLS_REAL_CMD.ls}
 .  endif
 .endif
 
@@ -525,7 +549,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.m4=
 TOOLS_DEPENDS.m4?=		m4>=1.4:../../devel/m4
 TOOLS_CREATE+=			m4
 TOOLS_REAL_CMD.m4=		${LOCALBASE}/bin/gm4
-${_TOOLS_VARNAME.m4}=		${TOOLS_REAL_CMD.m4}
+TOOLS_${_TOOLS_VARNAME.m4}=	${TOOLS_REAL_CMD.m4}
 .  endif
 .endif
 
@@ -536,7 +560,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.mail=
 TOOLS_DEPENDS.mail?=		nail>=11.22:../../mail/nail
 TOOLS_CREATE+=			mail
 TOOLS_REAL_CMD.mail=		${LOCALBASE}/bin/nail
-${_TOOLS_VARNAME.mail}=		${TOOLS_REAL_CMD.mail}
+TOOLS_${_TOOLS_VARNAME.mail}=	${TOOLS_REAL_CMD.mail}
 .  endif
 .endif
 
@@ -548,7 +572,7 @@ TOOLS_DEPENDS.mkdir?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			mkdir
 TOOLS_REAL_CMD.mkdir=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}mkdir
 TOOLS_REAL_ARGS.mkdir=		-p
-${_TOOLS_VARNAME.mkdir}=	${TOOLS_REAL_CMD.mkdir} ${TOOLS_REAL_ARGS.mkdir}
+TOOLS_${_TOOLS_VARNAME.mkdir}=	${TOOLS_REAL_CMD.mkdir} ${TOOLS_REAL_ARGS.mkdir}
 .  endif
 .endif
 
@@ -563,7 +587,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.mtree=
 #TOOLS_DEPENDS.mtree?=		mtree>=20040722:../../pkgtools/mtree
 TOOLS_CREATE+=			mtree
 TOOLS_REAL_CMD.mtree=		${LOCALBASE}/bin/mtree
-${_TOOLS_VARNAME.mtree}=	${TOOLS_REAL_CMD.mtree}
+TOOLS_${_TOOLS_VARNAME.mtree}=	${TOOLS_REAL_CMD.mtree}
 .  endif
 .endif
 
@@ -574,7 +598,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.mv=
 TOOLS_DEPENDS.mv?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			mv
 TOOLS_REAL_CMD.mv=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}mv
-${_TOOLS_VARNAME.mv}=		${TOOLS_REAL_CMD.mv}
+TOOLS_${_TOOLS_VARNAME.mv}=	${TOOLS_REAL_CMD.mv}
 .  endif
 .endif
 
@@ -585,7 +609,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.nice=
 TOOLS_DEPENDS.nice?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			nice
 TOOLS_REAL_CMD.nice=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}nice
-${_TOOLS_VARNAME.nice}=		${TOOLS_REAL_CMD.nice}
+TOOLS_${_TOOLS_VARNAME.nice}=	${TOOLS_REAL_CMD.nice}
 .  endif
 .endif
 
@@ -596,7 +620,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.patch=
 TOOLS_DEPENDS.patch?=		patch>=2.2:../../devel/patch
 TOOLS_CREATE+=			patch
 TOOLS_REAL_CMD.patch=		${LOCALBASE}/bin/gpatch
-${_TOOLS_VARNAME.patch}=	${TOOLS_REAL_CMD.patch}
+TOOLS_${_TOOLS_VARNAME.patch}=	${TOOLS_REAL_CMD.patch}
 .  endif
 .endif
 
@@ -611,7 +635,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.pax=
 #TOOLS_DEPENDS.pax?=		pax>=20040802:../../archivers/pax
 TOOLS_CREATE+=			pax
 TOOLS_REAL_CMD.pax=		${LOCALBASE}/bin/pax
-${_TOOLS_VARNAME.pax}=		${TOOLS_REAL_CMD.pax}
+TOOLS_${_TOOLS_VARNAME.pax}=	${TOOLS_REAL_CMD.pax}
 .  endif
 .endif
 
@@ -622,7 +646,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.pwd=
 TOOLS_DEPENDS.pwd?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			pwd
 TOOLS_REAL_CMD.pwd=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}pwd
-${_TOOLS_VARNAME.pwd}=		${TOOLS_REAL_CMD.pwd}
+TOOLS_${_TOOLS_VARNAME.pwd}=	${TOOLS_REAL_CMD.pwd}
 .  endif
 .endif
 
@@ -633,7 +657,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.rm=
 TOOLS_DEPENDS.rm?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			rm
 TOOLS_REAL_CMD.rm=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}rm
-${_TOOLS_VARNAME.rm}=		${TOOLS_REAL_CMD.rm}
+TOOLS_${_TOOLS_VARNAME.rm}=	${TOOLS_REAL_CMD.rm}
 .  endif
 .endif
 
@@ -644,7 +668,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.rmdir=
 TOOLS_DEPENDS.rmdir?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			rmdir
 TOOLS_REAL_CMD.rmdir=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}rmdir
-${_TOOLS_VARNAME.rmdir}=	${TOOLS_REAL_CMD.rmdir}
+TOOLS_${_TOOLS_VARNAME.rmdir}=	${TOOLS_REAL_CMD.rmdir}
 .  endif
 .endif
 
@@ -655,7 +679,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.sed=
 TOOLS_DEPENDS.sed?=		nbsed>=20040821:../../textproc/nbsed
 TOOLS_CREATE+=			sed
 TOOLS_REAL_CMD.sed=		${LOCALBASE}/bin/nbsed
-${_TOOLS_VARNAME.sed}=	${TOOLS_REAL_CMD.sed}
+TOOLS_${_TOOLS_VARNAME.sed}=	${TOOLS_REAL_CMD.sed}
 .  endif
 .endif
 
@@ -666,7 +690,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.sh=
 TOOLS_DEPENDS.sh?=		pdksh>=5.2.14:../../shells/pdksh
 TOOLS_CREATE+=			sh
 TOOLS_REAL_CMD.sh=		${LOCALBASE}/bin/pdksh
-${_TOOLS_VARNAME.sh}=		${TOOLS_REAL_CMD.sh}
+TOOLS_${_TOOLS_VARNAME.sh}=	${TOOLS_REAL_CMD.sh}
 .  endif
 TOOLS_CMD.sh=			${TOOLS_DIR}/bin/sh
 .endif
@@ -678,7 +702,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.shlock=
 TOOLS_DEPENDS.shlock?=		shlock>=20020114:../../pkgtools/shlock
 TOOLS_CREATE+=			shlock
 TOOLS_REAL_CMD.shlock=		${LOCALBASE}/bin/shlock
-${_TOOLS_VARNAME.shlock}=	${TOOLS_REAL_CMD.shlock}
+TOOLS_${_TOOLS_VARNAME.shlock}=	${TOOLS_REAL_CMD.shlock}
 .  endif
 .endif
 
@@ -689,7 +713,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.sort=
 TOOLS_DEPENDS.sort?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			sort
 TOOLS_REAL_CMD.sort=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sort
-${_TOOLS_VARNAME.sort}=		${TOOLS_REAL_CMD.sort}
+TOOLS_${_TOOLS_VARNAME.sort}=	${TOOLS_REAL_CMD.sort}
 .  endif
 .endif
 
@@ -700,7 +724,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.tail=
 TOOLS_DEPENDS.tail?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			tail
 TOOLS_REAL_CMD.tail=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}tail
-${_TOOLS_VARNAME.tail}=		${TOOLS_REAL_CMD.tail}
+TOOLS_${_TOOLS_VARNAME.tail}=	${TOOLS_REAL_CMD.tail}
 .  endif
 .endif
 
@@ -711,7 +735,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.tbl=
 TOOLS_DEPENDS.tbl?=		groff>=1.19nb4:../../textproc/groff
 TOOLS_CREATE+=			tbl
 TOOLS_REAL_CMD.tbl=		${LOCALBASE}/bin/tbl
-${_TOOLS_VARNAME.tbl}=		${TOOLS_REAL_CMD.tbl}
+TOOLS_${_TOOLS_VARNAME.tbl}=	${TOOLS_REAL_CMD.tbl}
 .  endif
 .endif
 
@@ -722,7 +746,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.tee=
 TOOLS_DEPENDS.tee?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			tee
 TOOLS_REAL_CMD.tee=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}tee
-${_TOOLS_VARNAME.tee}=		${TOOLS_REAL_CMD.tee}
+TOOLS_${_TOOLS_VARNAME.tee}=	${TOOLS_REAL_CMD.tee}
 .  endif
 .endif
 
@@ -733,7 +757,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.test=
 TOOLS_DEPENDS.test?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			test
 TOOLS_REAL_CMD.test=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}test
-${_TOOLS_VARNAME.test}=		${TOOLS_REAL_CMD.test}
+TOOLS_${_TOOLS_VARNAME.test}=	${TOOLS_REAL_CMD.test}
 .  endif
 .endif
 
@@ -744,7 +768,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.touch=
 TOOLS_DEPENDS.touch?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			touch
 TOOLS_REAL_CMD.touch=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}touch
-${_TOOLS_VARNAME.touch}=	${TOOLS_REAL_CMD.touch}
+TOOLS_${_TOOLS_VARNAME.touch}=	${TOOLS_REAL_CMD.touch}
 .  endif
 .endif
 
@@ -755,7 +779,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.tr=
 TOOLS_DEPENDS.tr?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			tr
 TOOLS_REAL_CMD.tr=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}tr
-${_TOOLS_VARNAME.tr}=		${TOOLS_REAL_CMD.tr}
+TOOLS_${_TOOLS_VARNAME.tr}=	${TOOLS_REAL_CMD.tr}
 .  endif
 .endif
 
@@ -766,7 +790,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.true=
 TOOLS_DEPENDS.true?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			true
 TOOLS_REAL_CMD.true=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}true
-${_TOOLS_VARNAME.true}=		${TOOLS_REAL_CMD.true}
+TOOLS_${_TOOLS_VARNAME.true}=	${TOOLS_REAL_CMD.true}
 .  endif
 .endif
 
@@ -777,7 +801,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.tsort=
 TOOLS_DEPENDS.tsort?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			tsort
 TOOLS_REAL_CMD.tsort=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}tsort
-${_TOOLS_VARNAME.tsort}=	${TOOLS_REAL_CMD.tsort}
+TOOLS_${_TOOLS_VARNAME.tsort}=	${TOOLS_REAL_CMD.tsort}
 .  endif
 .endif
 
@@ -788,7 +812,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.wc=
 TOOLS_DEPENDS.wc?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			wc
 TOOLS_REAL_CMD.wc=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}wc
-${_TOOLS_VARNAME.wc}=		${TOOLS_REAL_CMD.wc}
+TOOLS_${_TOOLS_VARNAME.wc}=	${TOOLS_REAL_CMD.wc}
 .  endif
 .endif
 
@@ -800,7 +824,7 @@ TOOLS_DEPENDS.xargs?=		findutils>=4.1:../../sysutils/findutils
 TOOLS_CREATE+=			xargs
 TOOLS_REAL_CMD.xargs=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}xargs
 TOOLS_REAL_ARGS.xargs=		-r	# don't run command if stdin is empty
-${_TOOLS_VARNAME.xargs}=	${TOOLS_REAL_CMD.xargs} ${TOOLS_REAL_ARGS.xargs}
+TOOLS_${_TOOLS_VARNAME.xargs}=	${TOOLS_REAL_CMD.xargs} ${TOOLS_REAL_ARGS.xargs}
 .  endif
 .endif
 
@@ -812,11 +836,14 @@ TOOLS_DEPENDS.yacc?=		bison>=1.0:../../devel/bison
 TOOLS_CREATE+=			yacc
 TOOLS_REAL_CMD.yacc=		${LOCALBASE}/bin/bison
 TOOLS_REAL_ARGS.yacc=		-y
-${_TOOLS_VARNAME.yacc}=		${TOOLS_REAL_CMD.yacc} ${TOOLS_REAL_ARGS.yacc}
+TOOLS_${_TOOLS_VARNAME.yacc}=	${TOOLS_REAL_CMD.yacc} ${TOOLS_REAL_ARGS.yacc}
 .  endif
 .endif
 
+######################################################################
+
 # Add the dependencies for each pkgsrc-supplied tool.
+#
 .for _t_ in ${_USE_TOOLS}
 .  if defined(TOOLS_DEPMETHOD.${_t_}) && defined(TOOLS_DEPENDS.${_t_})
 .    if empty(${TOOLS_DEPMETHOD.${_t_}}:M${TOOLS_DEPENDS.${_t_}})
@@ -827,15 +854,18 @@ ${TOOLS_DEPMETHOD.${_t_}}+=	${TOOLS_DEPENDS.${_t_}}
 
 ######################################################################
 
+# If we are using the system-supplied tool, create symlinks or wrappers
+# for each of the tools requested.
+#
 # Set TOOLS_REAL_CMD.<tool> appropriately in the case where we are
 # using the system-supplied tool.  Here, we first check to see if
 # TOOLS_PLATFORM.<tool> is defined.  If it is, then use that as the
 # path to the real command and extract any arguments into
-# TOOLS_REAL_ARGS.<tool>.  We also create either a wrapper or a symlink
-# depending on whether there are any arguments or not.  Lastly, always
-# set the TOOL name for each tool to point to the real command, e.g.,
-# TBL, YACC, etc., provided that "TOOL" has been associated with
-# <tool>.
+# TOOLS_REAL_ARGS.<tool>.
+#
+# Always set the "TOOLS_TOOL" name for each tool to point to the real
+# command, e.g., TOOLS_TBL, TOOLS_YACC, etc., provided that "TOOL" has
+# been associated with <tool>.
 #
 .for _t_ in ${_USE_TOOLS}
 .  if !defined(TOOLS_IGNORE.${_t_}) && \
@@ -846,15 +876,35 @@ TOOLS_REAL_CMD.${_t_}?=		\
 TOOLS_REAL_ARGS.${_t_}?=	\
 	${TOOLS_PLATFORM.${_t_}:C/^/_asdf_/1:N_asdf_*}
 .      if defined(_TOOLS_VARNAME.${_t_})
-${_TOOLS_VARNAME.${_t_}}=	${TOOLS_PLATFORM.${_t_}}
+TOOLS_${_TOOLS_VARNAME.${_t_}}=	${TOOLS_PLATFORM.${_t_}}
 .      endif
 TOOLS_CREATE+=			${_t_}
 .    elif defined(_TOOLS_VARNAME.${_t_})
 .      if defined(TOOLS_REAL_CMD.${_t_})
-${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_REAL_ARGS.${_t_}}
+TOOLS_${_TOOLS_VARNAME.${_t_}}=	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_REAL_ARGS.${_t_}}
 .      else
-${_TOOLS_VARNAME.${_t_}}=	${_TOOLS_VARNAME.${_t_}}_not_defined_
+TOOLS_${_TOOLS_VARNAME.${_t_}}=	${_TOOLS_VARNAME.${_t_}}_not_defined_
 .      endif
+.    endif
+.  endif
+.endfor
+.undef _t_
+
+######################################################################
+
+# For each tool that pkgsrc requires, make sure that the "TOOL" name
+# points to the real command, e.g., AWK, SED, etc., provided that
+# "TOOL" has been associated with <tool>.
+#
+.for _t_ in ${PKGSRC_USE_TOOLS:O:u}
+_TOOLS_USE_PKGSRC.${_t_}?=	no
+.  if defined(_TOOLS_VARNAME.${_t_})
+.    if !empty(_TOOLS_USE_PKGSRC.${_t_}:M[nN][oO])
+.      if defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
+${_TOOLS_VARNAME.${_t_}}?=	${TOOLS_PLATFORM.${_t_}}
+.      endif
+.    else
+${_TOOLS_VARNAME.${_t_}}?=	${TOOLS_${TOOLS_PLATFORM.${_t_}}}
 .    endif
 .  endif
 .endfor
