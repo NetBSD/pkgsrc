@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE.i386,v 1.1 2005/05/10 00:16:42 reed Exp $
+
+To watch or listen to Windows Media (.asf/.wmv/.wma), such as MS
+WMV 8 or 9 ASF video, or Quicktime files or streams, install the
+multimedia/win32-codecs package.  It is not required by default
+due to unclear licensing.
+
+The win32-codecs package is not needed for MS Windows Media Audio 2
+and MS Windows Media 7 ASF video, because xine-lib already supports
+these formats using built-in ffmpeg.
+
+===========================================================================
