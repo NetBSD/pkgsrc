@@ -1,4 +1,4 @@
-# $NetBSD: tools.OSF1.mk,v 1.7 2005/05/10 19:56:51 jlam Exp $
+# $NetBSD: tools.OSF1.mk,v 1.8 2005/05/10 20:14:27 jlam Exp $
 #
 # System-supplied tools for the OSF/1 operating system.
 
@@ -29,7 +29,6 @@ TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
 TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
-TOOLS_PLATFORM.ldconfig?=	${TOOLS_PLATFORM.true}
 TOOLS_PLATFORM.ln?=		/bin/ln
 TOOLS_PLATFORM.ls?=		/bin/ls
 TOOLS_PLATFORM.m4?=		/usr/bin/m4
