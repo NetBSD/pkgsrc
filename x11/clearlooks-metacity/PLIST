@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/10 20:27:54 jmmv Exp $
+share/themes/Clearlooks/metacity-1/metacity-theme-1.xml
+@dirrm share/themes/Clearlooks/metacity-1
+@comment in theme-dirs: @dirrm share/themes/Clearlooks
