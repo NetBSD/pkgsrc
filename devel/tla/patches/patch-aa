@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/05/10 21:10:24 recht Exp $
+
+--- ../libneon/Makefile.in.orig	2005-05-03 01:46:50.000000000 +0200
++++ ../libneon/Makefile.in	2005-05-08 12:31:16.000000000 +0200
+@@ -33,7 +33,7 @@
+ 
+ @SET_MAKE@
+ 
+-LDFLAGS = -L. @LDFLAGS@
++LDFLAGS = -L. -L../expat @LDFLAGS@
+ LIBS = @LIBS@
+ CC = @CC@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
