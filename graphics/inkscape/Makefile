@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:04 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/10 18:38:15 drochner Exp $
 #
 
-DISTNAME=		inkscape-0.40
+DISTNAME=		inkscape-0.41
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=inkscape/}
 EXTRACT_SUFX=		.tar.bz2
@@ -33,6 +33,7 @@ USE_GNU_TOOLS+=		make
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtkmm24/buildlink3.mk"
 

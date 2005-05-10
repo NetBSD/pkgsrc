@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/05/10 18:38:15 drochner Exp $
+
+--- src/object-edit.cpp.orig	2005-03-16 18:16:43.000000000 +0100
++++ src/object-edit.cpp
+@@ -839,7 +839,7 @@ sp_spiral_outer_set (SPItem *item, const
+ 			spiral->rad = rad_new;
+ 			spiral->t0 = pow (r0 / spiral->rad, 1/spiral->exp);
+ 		}
+-		if (!std::isfinite(spiral->t0)) spiral->t0 = 0.0;
++		if (!finite(spiral->t0)) spiral->t0 = 0.0;
+ 		spiral->t0 = CLAMP (spiral->t0, 0.0, 0.999);	
+ 	}
+ 
