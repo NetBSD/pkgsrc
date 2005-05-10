@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/04/11 21:46:16 tv Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/05/10 02:02:20 jschauma Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -24,11 +24,6 @@ JAVA_NAME=	sun15
 JAVA_UNLIMIT=	datasize
 
 MESSAGE_SUBST+=	JAVA_HOME=${JAVA_HOME:Q}
-
-.if ${OPSYS} == "NetBSD"
-DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
-.endif
 
 # the following forces compression of jarfiles, which is a huge disk
 # space win and trivial to no speed reduction in the face of the
@@ -71,6 +66,11 @@ do-install:
 
 .if ${OPSYS} == "NetBSD"
 .  include "../../emulators/suse_linux/Makefile.application"
+.  if ${SUSE_DIR_PREFIX} == "suse91"
+DEPENDS+=	suse_local-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_locale
+.  endif
+DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
 .include "../../mk/java-env.mk"
