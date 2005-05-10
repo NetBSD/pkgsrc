@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3479 2005/05/10 01:09:30 reed Exp $
+$NetBSD: TODO,v 1.3480 2005/05/10 05:39:14 dan Exp $
 
 Suggested new packages
 ======================
@@ -452,6 +452,7 @@ Suggested package updates
 	o e2fsprogs-1.36
 	o eagle-4.13r1
 	o ec-fonts-mftraced-1.0.11
+	o eclipse-3.0.2
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o egtk-0.3.6
