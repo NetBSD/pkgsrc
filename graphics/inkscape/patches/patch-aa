@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2005/05/10 20:22:39 drochner Exp $
+
+--- configure.orig	2005-05-11 00:15:17.000000000 +0200
++++ configure
+@@ -21905,7 +21905,7 @@ fi
+ 
+ done
+ 
+-if test "x$gc_ok" == "xyes"; then
++if test "x$gc_ok" = "xyes"; then
+ 	echo "$as_me:$LINENO: checking libgc version 6.4+" >&5
+ echo $ECHO_N "checking libgc version 6.4+... $ECHO_C" >&6
+ 	if test "$cross_compiling" = yes; then
