@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.3 2005/05/10 02:31:38 jschauma Exp $
+
+--- configure.orig	Mon May  9 22:09:19 2005
++++ configure	Mon May  9 22:10:00 2005
+@@ -2269,7 +2269,7 @@
+ echo "include_mpn(\`mips32/mips-defs.m4')" >> $gmp_tmpconfigm4i
+ 
+     case $host in
+-      mips64*-*-* | mips*-*-irix6789*)
++      mips64*-*-* | mips*-*-irix6*)
+         abilist="n32 64 o32"
+ 
+         cclist_n32="gcc cc"
