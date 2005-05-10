@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2005/04/11 21:45:11 tv Exp $
+# $NetBSD: Makefile,v 1.38 2005/05/10 16:24:48 drochner Exp $
 
-DISTNAME=		db-4.3.27
+DISTNAME=		db-4.3.28
 PKGNAME=		${DISTNAME:S/db/db4/}
-PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.sleepycat.com/releases/
 
