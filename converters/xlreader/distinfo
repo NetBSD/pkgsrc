@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/14 17:33:16 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2005/05/10 05:53:48 cjs Exp $
 
 SHA1 (xlreader-0.9.0.tgz) = 233c8663e345f9f09c326e8e303acf463e6017e3
 Size (xlreader-0.9.0.tgz) = 45838 bytes
 SHA1 (patch-aa) = 3acdc2956379bbd2c8f0871c1875ba9c1f6600f8
+SHA1 (patch-ab) = 138ec332e1691129b3336243fc7a6b88d650396a
