@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2005/02/17 22:50:06 reed Exp $
+# $NetBSD: Makefile,v 1.20 2005/05/10 22:52:06 abs Exp $
 
 DISTNAME=	exim-${EXIM_VERSION}
 PKGNAME=	exim-exiscan-${EXIM_VERSION}_${EXISCAN_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail net
 
 MAINTAINER=	abs@NetBSD.org
