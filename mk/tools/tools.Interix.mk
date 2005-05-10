@@ -1,4 +1,4 @@
-# $NetBSD: tools.Interix.mk,v 1.9 2005/05/05 18:59:25 jlam Exp $
+# $NetBSD: tools.Interix.mk,v 1.10 2005/05/10 20:14:27 jlam Exp $
 #
 # System-supplied tools for the Interix operating system.
 
@@ -29,7 +29,6 @@ TOOLS_PLATFORM.gzip?=		/usr/contrib/bin/gzip -nf ${GZIP}
 TOOLS_PLATFORM.head?=		/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/bin/id
-TOOLS_PLATFORM.ldconfig?=	/bin/true
 TOOLS_PLATFORM.ln?=		/bin/ln
 TOOLS_PLATFORM.ls?=		/bin/ls
 TOOLS_PLATFORM.m4?=		/bin/m4
