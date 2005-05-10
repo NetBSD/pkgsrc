@@ -1,8 +1,8 @@
-# $NetBSD: imake.mk,v 1.5 2005/05/10 19:06:59 jlam Exp $
+# $NetBSD: imake.mk,v 1.6 2005/05/10 19:25:06 jlam Exp $
 #
 # This Makefile fragment handles packages that need imake and xmkmf
 # to build X11-related packages.  The correct imake and xmkmf tools
-# are placed under ${TOOLS_DIRS}/bin, so that they may be invoked by
+# are placed under ${TOOLS_DIR}/bin, so that they may be invoked by
 # their bare names.  The tools are chosen based on which type of X11
 # distribution pkgsrc will be using, e.g. X11_TYPE.
 #
