@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10061 2005/05/10 21:13:29 recht Exp $
+$NetBSD: CHANGES,v 1.10062 2005/05/10 22:04:30 christos Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2342,3 +2342,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed gtk2-engines-clearlooks [jmmv 2005-05-10]
 	Added clearlooks-metacity-0.5.2a [jmmv 2005-05-10]
 	Updated tla to 1.3.2 [recht 2005-05-10]
+	Added error-0.0 [christos 2005-05-10]
+	Added vis-0.0 [christos 2005-05-10]
