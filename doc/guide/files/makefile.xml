@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.2 2005/05/10 01:15:54 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.3 2005/05/10 22:41:10 wiz Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
@@ -29,7 +29,7 @@
 
     <para>A restriction common to all types of variables is that they
     can neither contain a newline character nor the '\0' character nor
-    the '#' character. The effects of the backslash character is not
+    the '#' character. The effects of the backslash character are not
     documented, so you should not use it at the moment. As the $ is used
     to get values of a <filename>Makefile</filename> variable, it must
     be quoted as $$.</para>
@@ -57,7 +57,7 @@
       may be exported to a shell command. Their elements can contain any
       characters, including whitespace. That's why they cannot be used
       in <!-- FIXME --><varname>.for</varname> loops. Examples are
-      <varname>DISTFILES</varname>,
+      <varname>DISTFILES</varname> and
       <varname>MASTER_SITES</varname>.</para></listitem>
 
     </itemizedlist>
@@ -130,12 +130,12 @@ all:
       <para>Example 1 leads to a syntax error in the shell, as the
       characters are just copied.</para>
       
-      <para>Example 2 leads to a syntax error too, and when you leave
-      out the last " character from <varname>${ATOM}</varname> the
+      <para>Example 2 leads to a syntax error too, and if you leave
+      out the last " character from <varname>${ATOM}</varname>,
       &man.date.1; would be executed. The <varname>$HOME</varname> shell
       variable would be evaluated, too.</para>
       
-      <para>Example 3 would output precede each space character with a
+      <para>Example 3 would output each space character preceded by a
       backslash (or not), depending on the implementation of the
       &man.echo.1; command.</para>
       
