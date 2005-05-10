@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/08 20:07:40 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2005/05/10 16:17:07 agc Exp $
 
---- Makefile.in.orig	Sat Oct 20 02:24:40 2001
-+++ Makefile.in
+--- Makefile.in.orig	2001-10-20 01:24:40.000000000 +0100
++++ Makefile.in	2005-05-10 17:01:34.000000000 +0100
 @@ -76,7 +76,7 @@
  # The directory containing the Tcl sources and headers appropriate
  # for this version of Tk ("srcdir" will be replaced or has already
@@ -58,15 +58,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/08 20:07:40 minskim Exp $
  
  ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
  	rm -f ${STUB_LIB_FILE}
-@@ -391,7 +393,7 @@
+@@ -391,9 +393,9 @@
  
  
  wish: $(WISH_OBJS) $(TK_LIB_FILE) $(TK_STUB_LIB_FILE)
 -	$(CC) $(LDFLAGS) $(WISH_OBJS) \
 +	$(LD) $(LDFLAGS) $(WISH_OBJS) \
  		@TK_BUILD_LIB_SPEC@ \
- 		$(WISH_LIBS) $(TK_CC_SEARCH_FLAGS) -o wish
+-		$(WISH_LIBS) $(TK_CC_SEARCH_FLAGS) -o wish
++		$(WISH_LIBS) -o wish
  
+ # This rule is executed if the user tried to run tktest without first
+ # building tcltest in the Tcl bin directory. Just do it for them.
 @@ -402,12 +404,12 @@
  	make tcltest
  
@@ -74,7 +77,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/08 20:07:40 minskim Exp $
 -	${CC} $(LDFLAGS) $(TKTEST_OBJS) \
 +	${LD} $(LDFLAGS) $(TKTEST_OBJS) \
  		@TK_BUILD_LIB_SPEC@ \
- 		$(WISH_LIBS) $(TK_CC_SEARCH_FLAGS) -o tktest
+-		$(WISH_LIBS) $(TK_CC_SEARCH_FLAGS) -o tktest
++		$(WISH_LIBS) -o tktest
  
  xttest: test.o tkTest.o tkSquare.o $(TK_LIB_FILE)
 -	${CC} $(LDFLAGS) test.o tkTest.o tkSquare.o \
