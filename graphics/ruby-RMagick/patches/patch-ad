@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2005/05/11 15:57:32 taca Exp $
+
+--- ext/RMagick/rmimage.c.orig	2005-05-01 00:26:45.000000000 +0900
++++ ext/RMagick/rmimage.c
+@@ -6476,8 +6476,8 @@ Image_shadow(int argc, VALUE *argv, VALU
+             {
+                 rb_warning("shadow will be transparent - opacity %g very small", opacity);
+             }
+-            opacity = fmin(opacity, 1.0);
+-            opacity = fmax(opacity, 0.01);
++            opacity = FMIN(opacity, 1.0);
++            opacity = FMAX(opacity, 0.01);
+             opacity *= 100.0;
+         case 3:
+             sigma = NUM2DBL(argv[2]);
