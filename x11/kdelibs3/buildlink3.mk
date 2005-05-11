@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2005/05/09 05:14:09 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2005/05/11 22:03:53 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDELIBS_BUILDLINK3_MK:=	${KDELIBS_BUILDLINK3_MK}+
@@ -23,8 +23,8 @@ BUILDLINK_PKGSRCDIR.kdelibs?=	../../x11/kdelibs3
 .if !defined(PKG_BUILD_OPTIONS.kdelibs)
 PKG_BUILD_OPTIONS.kdelibs!=						\
 	cd ${BUILDLINK_PKGSRCDIR.kdelibs} &&				\
-	${MAKE} show-var ${MAKE_FLAGS} VARNAME=PKG_OPTIONS
-MAKE_FLAGS+=	PKG_BUILD_OPTIONS.kdelibs=${PKG_BUILD_OPTIONS.kdelibs:Q}
+	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
+MAKEFLAGS+=	PKG_BUILD_OPTIONS.kdelibs=${PKG_BUILD_OPTIONS.kdelibs:Q}
 .endif
 MAKE_VARS+=	PKG_BUILD_OPTIONS.kdelibs
 
