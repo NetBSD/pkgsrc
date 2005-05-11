@@ -1,7 +1,7 @@
 #!/bin/sh -
 # @configure_input@
 #
-#	NetBSD: makelist.in,v 1.2 2005/01/05 04:40:05 lukem Exp
+#	$NetBSD: makelist.in,v 1.1.1.3 2005/05/11 09:40:05 lukem Exp $
 #
 # Copyright (c) 1992, 1993
 #	The Regents of the University of California.  All rights reserved.
