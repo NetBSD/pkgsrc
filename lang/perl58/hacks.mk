@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.5 2004/12/10 23:48:50 jlam Exp $
+# $NetBSD: hacks.mk,v 1.6 2005/05/11 16:15:50 jlam Exp $
 
 .include "../../mk/compiler.mk"
 
@@ -60,4 +60,13 @@ NaN-vax-exception:
 .if !empty(CC_VERSION:Mgcc*) && !empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
 PKG_HACKS+=		alpha-mieee
 BUILDLINK_TRANSFORM+=	rm:-mieee
+.endif
+
+### [Mon May 9 15:35:44 UTC 2005 : jlam]
+### On NetBSD/arm, skipping one part of the optimization pass empirically
+### "fixes" the build of perl using gcc-3.x.
+###
+.if !empty(CC_VERSION:Mgcc-3.*) && !empty(MACHINE_ARCH:Marm*)
+PKG_HACKS+=	arm-codegen
+CFLAGS+=	-fno-cse-skip-blocks
 .endif
