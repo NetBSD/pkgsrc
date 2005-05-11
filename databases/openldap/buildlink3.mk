@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2005/05/09 05:14:08 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2005/05/11 22:03:52 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENLDAP_BUILDLINK3_MK:=	${OPENLDAP_BUILDLINK3_MK}+
@@ -21,8 +21,8 @@ BUILDLINK_PKGSRCDIR.openldap?=		../../databases/openldap
 .if !defined(PKG_BUILD_OPTIONS.openldap)
 PKG_BUILD_OPTIONS.openldap!=						\
 	cd ${BUILDLINK_PKGSRCDIR.openldap} &&				\
-	${MAKE} show-var ${MAKE_FLAGS} VARNAME=PKG_OPTIONS
-MAKE_FLAGS+=	PKG_BUILD_OPTIONS.openldap=${PKG_BUILD_OPTIONS.openldap:Q}
+	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
+MAKEFLAGS+=	PKG_BUILD_OPTIONS.openldap=${PKG_BUILD_OPTIONS.openldap:Q}
 .endif
 MAKE_VARS+=	PKG_BUILD_OPTIONS.openldap
 
