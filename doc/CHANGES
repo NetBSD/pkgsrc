@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10064 2005/05/11 10:05:27 lukem Exp $
+$NetBSD: CHANGES,v 1.10065 2005/05/11 16:00:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2346,3 +2346,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added vis-0.0 [christos 2005-05-10]
 	Updated gtk-gnutella to 0.95.2 [adam 2005-05-11]
 	Updated tnftp to 20050511 [lukem 2005-05-11]
+	Updated ruby-RMagick to 1.8.0 [taca 2005-05-11]
