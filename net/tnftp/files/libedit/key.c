@@ -1,4 +1,5 @@
-/*	$NetBSD: key.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	NetBSD: key.c,v 1.4 2005/05/11 01:17:39 lukem Exp	*/
+/*	from	NetBSD: key.c,v 1.15 2003/10/18 23:48:42 christos Exp	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -15,11 +16,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -38,6 +35,17 @@
 
 #include "tnftp.h"
 #include "sys.h"
+
+#if 0
+#include "config.h"
+#if !defined(lint) && !defined(SCCSID)
+#if 0
+static char sccsid[] = "@(#)key.c	8.1 (Berkeley) 6/4/93";
+#else
+__RCSID("NetBSD: key.c,v 1.4 2005/05/11 01:17:39 lukem Exp");
+#endif
+#endif /* not lint && not SCCSID */
+#endif
 
 /*
  * key.c: This module contains the procedures for maintaining
@@ -350,7 +358,8 @@ node__try(EditLine *el, key_node_t *ptr, const char *str, key_value_t *val, int 
 			break;
 		case XK_STR:
 		case XK_EXE:
-			ptr->val.str = strdup(val->str);
+			if ((ptr->val.str = el_strdup(val->str)) == NULL)
+				return -1;
 			break;
 		default:
 			EL_ABORT((el->el_errfile, "Bad XK_ type %d\n", ntype));

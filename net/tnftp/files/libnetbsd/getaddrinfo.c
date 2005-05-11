@@ -1,5 +1,5 @@
-/*	$Id: getaddrinfo.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
-/*	$KAME: getaddrinfo.c,v 1.77 2000/07/09 04:35:14 itojun Exp $	*/
+/*	NetBSD: getaddrinfo.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	from	?	*/
 
 /*
  * Copyright (C) 1995, 1996, 1997, and 1998 WIDE Project.

@@ -1,4 +1,4 @@
-/*	$Id: strerror.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	NetBSD: strerror.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
 
 #include "tnftp.h"
 

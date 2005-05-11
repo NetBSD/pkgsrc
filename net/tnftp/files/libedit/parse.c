@@ -1,4 +1,5 @@
-/*	$NetBSD: parse.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	NetBSD: parse.c,v 1.4 2005/05/11 01:17:39 lukem Exp	*/
+/*	from	NetBSD: parse.c,v 1.20 2003/12/05 13:37:48 lukem Exp	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -15,11 +16,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -39,6 +36,17 @@
 #include "tnftp.h"
 #include "sys.h"
 
+#if 0
+#include "config.h"
+#if !defined(lint) && !defined(SCCSID)
+#if 0
+static char sccsid[] = "@(#)parse.c	8.1 (Berkeley) 6/4/93";
+#else
+__RCSID("NetBSD: parse.c,v 1.4 2005/05/11 01:17:39 lukem Exp");
+#endif
+#endif /* not lint && not SCCSID */
+#endif
+
 /*
  * parse.c: parse an editline extended command
  *
@@ -53,7 +61,6 @@
  *	setty
  */
 #include "el.h"
-#include "tokenizer.h"
 #include <stdlib.h>
 
 private const struct {
@@ -63,7 +70,7 @@ private const struct {
 	{ "bind",	map_bind	},
 	{ "echotc",	term_echotc	},
 	{ "edit",	el_editmode	},
-	{ "history",	hist_list	},
+	{ "history",	hist_command	},
 	{ "telltc",	term_telltc	},
 	{ "settc",	term_settc	},
 	{ "setty",	tty_stty	},
@@ -82,7 +89,7 @@ parse_line(EditLine *el, const char *line)
 	Tokenizer *tok;
 
 	tok = tok_init(NULL);
-	tok_line(tok, line, &argc, &argv);
+	tok_str(tok, line, &argc, &argv);
 	argc = el_parse(el, argc, argv);
 	tok_end(tok);
 	return (argc);
@@ -200,7 +207,7 @@ parse__escape(const char **const ptr)
 			c = *p;
 			break;
 		}
-	} else if (*p == '^' && isalpha((unsigned char) p[1])) {
+	} else if (*p == '^') {
 		p++;
 		c = (*p == '?') ? '\177' : (*p & 0237);
 	} else
@@ -208,6 +215,7 @@ parse__escape(const char **const ptr)
 	*ptr = ++p;
 	return (c);
 }
+
 /* parse__string():
  *	Parse the escapes from in and put the raw string out
  */
@@ -229,6 +237,14 @@ parse__string(char *out, const char *in)
 				return (NULL);
 			*out++ = n;
 			break;
+
+		case 'M':
+			if (in[1] == '-' && in[2] != '\0') {
+				*out++ = '\033';
+				in += 2;
+				break;
+			}
+			/*FALLTHROUGH*/
 
 		default:
 			*out++ = *in++;
