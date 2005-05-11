@@ -1,4 +1,5 @@
-/*	$NetBSD: read.h,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	NetBSD: read.h,v 1.2 2005/05/11 01:17:39 lukem Exp	*/
+/*	from	NetBSD: read.h,v 1.4 2004/02/27 14:52:18 christos Exp	*/
 
 /*-
  * Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -49,6 +50,8 @@ typedef struct el_read_t {
 } el_read_t;
  
 protected int		read_init(EditLine *);
+protected void		read_prepare(EditLine *);
+protected void		read_finish(EditLine *);
 protected int		el_read_setfn(EditLine *, el_rfunc_t);
 protected el_rfunc_t	el_read_getfn(EditLine *);
 
