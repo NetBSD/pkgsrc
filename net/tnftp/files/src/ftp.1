@@ -1,6 +1,7 @@
-.\" 	$NetBSD: ftp.1,v 1.2 2005/01/04 23:44:24 lukem Exp $
+.\" 	NetBSD: ftp.1,v 1.7 2005/05/11 02:41:28 lukem Exp
+.\" 	from	NetBSD: ftp.1,v 1.109 2005/02/20 20:54:01 wiz Exp
 .\"
-.\" Copyright (c) 1996-2003 The NetBSD Foundation, Inc.
+.\" Copyright (c) 1996-2004 The NetBSD Foundation, Inc.
 .\" All rights reserved.
 .\"
 .\" This code is derived from software contributed to The NetBSD Foundation
@@ -64,7 +65,7 @@
 .\"
 .\"	@(#)ftp.1	8.3 (Berkeley) 10/9/94
 .\"
-.Dd October 7, 2004
+.Dd January 15, 2005
 .Dt FTP 1
 .Os
 .Sh NAME
@@ -951,7 +952,9 @@ traffic.
 .Tn FTP
 servers are required to support the
 .Dv PASV
-command by RFC 1123, some do not.)
+command by
+.Li RFC 1123 ,
+some do not.)
 .It Ic pdir Op Ar remote-path
 Perform
 .Ic dir
@@ -1563,7 +1566,7 @@ ascii or binary (respectively).
 The default transfer type is binary.
 .Pp
 In order to be compliant with
-.Cm RFC 1738 ,
+.Li RFC 1738 ,
 .Nm
 interprets the
 .Ar path
@@ -1614,7 +1617,10 @@ This is unlikely to be useful.
 .It
 Any
 .Sq Li \&% Ns Ar XX
-codes within the path components are decoded, with
+codes
+(per
+.Li RFC 1738 )
+within the path components are decoded, with
 .Ar XX
 representing a character code in hexadecimal.
 This decoding takes place after the
@@ -2222,9 +2228,9 @@ URL requests
 .Tn FTP
 protocol).
 .Pp
-.Em NOTE :
-this is not used for interactive sessions, only for command-line
-fetches.
+See
+.Ev http_proxy
+for further notes about proxy use.
 .It Ev http_proxy
 URL of
 .Tn HTTP
@@ -2234,6 +2240,18 @@ URL requests.
 If proxy authentication is required and there is a username and
 password in this URL, they will automatically be used in the first
 attempt to authenticate to the proxy.
+.Pp
+If
+.Dq unsafe
+URL characters are required in the username or password
+(for example
+.Sq @
+or
+.Sq / ) ,
+encode them with
+.Li RFC 1738
+.Sq Li \&% Ns Ar XX
+encoding.
 .Pp
 Note that the use of a username and password in
 .Ev ftp_proxy
@@ -2275,13 +2293,13 @@ for an example of how to make this automatic.
 .Sh STANDARDS
 .Nm
 attempts to be compliant with
-.Cm RFC 959 ,
-.Cm RFC 1123 ,
-.Cm RFC 1738 ,
-.Cm RFC 2068 ,
-.Cm RFC 2389 ,
-.Cm RFC 2428 ,
-.Cm RFC 2732 ,
+.Li RFC 959 ,
+.Li RFC 1123 ,
+.Li RFC 1738 ,
+.Li RFC 2068 ,
+.Li RFC 2389 ,
+.Li RFC 2428 ,
+.Li RFC 2732 ,
 and
 .Cm draft-ietf-ftpext-mlst-11 .
 .Sh HISTORY
