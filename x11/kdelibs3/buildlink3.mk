@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2005/05/11 22:03:53 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2005/05/11 22:08:19 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDELIBS_BUILDLINK3_MK:=	${KDELIBS_BUILDLINK3_MK}+
@@ -26,7 +26,7 @@ PKG_BUILD_OPTIONS.kdelibs!=						\
 	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
 MAKEFLAGS+=	PKG_BUILD_OPTIONS.kdelibs=${PKG_BUILD_OPTIONS.kdelibs:Q}
 .endif
-MAKE_VARS+=	PKG_BUILD_OPTIONS.kdelibs
+MAKEVARS+=	PKG_BUILD_OPTIONS.kdelibs
 
 .if !empty(PKG_BUILD_OPTIONS.kdelibs:Mcups)
 .  include "../../print/cups/buildlink3.mk"

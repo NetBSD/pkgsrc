@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2005/05/11 22:03:52 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2005/05/11 22:08:18 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDEPIM_BUILDLINK3_MK:=	${KDEPIM_BUILDLINK3_MK}+
@@ -22,7 +22,7 @@ PKG_BUILD_OPTIONS.kdepim!=						\
 	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
 MAKEFLAGS+=	PKG_BUILD_OPTIONS.kdepim=${PKG_BUILD_OPTIONS.kdepim:Q}
 .endif
-MAKE_VARS+=	PKG_BUILD_OPTIONS.kdepim
+MAKEVARS+=	PKG_BUILD_OPTIONS.kdepim
 
 .include "../../comms/libmal/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
