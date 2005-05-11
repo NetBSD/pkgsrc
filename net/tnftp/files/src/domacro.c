@@ -1,4 +1,5 @@
-/*	$NetBSD: domacro.c,v 1.2 2005/01/04 23:44:24 lukem Exp $	*/
+/*	NetBSD: domacro.c,v 1.4 2005/05/11 02:41:28 lukem Exp	*/
+/*	from	NetBSD: domacro.c,v 1.20 2003/08/07 11:13:53 agc Exp	*/
 
 /*
  * Copyright (c) 1985, 1993, 1994
@@ -28,6 +29,17 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
+
+#if 0
+#include <sys/cdefs.h>
+#ifndef lint
+#if 0
+static char sccsid[] = "@(#)domacro.c	8.3 (Berkeley) 4/2/94";
+#else
+__RCSID("NetBSD: domacro.c,v 1.4 2005/05/11 02:41:28 lukem Exp");
+#endif
+#endif /* not lint */
+#endif
 
 #include "tnftp.h"
 

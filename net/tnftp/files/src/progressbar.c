@@ -1,4 +1,6 @@
-/*	$NetBSD: progressbar.c,v 1.3 2005/01/04 23:44:24 lukem Exp $	*/
+/* pkgsrc $NetBSD $/
+/*	NetBSD: progressbar.c,v 1.6 2005/05/11 02:41:28 lukem Exp	*/
+/*	from	NetBSD: progressbar.c,v 1.7 2005/04/11 01:49:31 lukem Exp	*/
 
 /*-
  * Copyright (c) 1997-2003 The NetBSD Foundation, Inc.
@@ -39,7 +41,7 @@
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: progressbar.c,v 1.3 2005/01/04 23:44:24 lukem Exp $");
+__RCSID("NetBSD: progressbar.c,v 1.6 2005/05/11 02:41:28 lukem Exp");
 #endif /* not lint */
 #endif
 
@@ -72,7 +74,6 @@ foregroundproc(void)
 #endif	/* !defined(NO_PROGRESS) */
 
 
-#ifndef	NO_PROGRESS
 static void updateprogressmeter(int);
 
 /*
@@ -86,8 +87,6 @@ updateprogressmeter(int dummy)
 	progressmeter(0);
 	errno = oerrno;
 }
-#endif	/* NO_PROGRESS */
-
 
 /*
  * List of order of magnitude prefixes.
@@ -120,7 +119,7 @@ progressmeter(int flag)
 	struct timeval td;
 	off_t abbrevsize, bytespersec;
 	double elapsed;
-	int ratio, barlength, i, len, remaining;
+	int ratio, barlength, i, remaining;
 
 			/*
 			 * Work variables for progress bar.
@@ -130,7 +129,10 @@ progressmeter(int flag)
 			 *	`static' portion of it), be sure to update
 			 *	these appropriately.
 			 */
+#endif
+	int len;
 	char		buf[256];	/* workspace for progress bar */
+#ifndef NO_PROGRESS
 #define	BAROVERHEAD	43		/* non `*' portion of progress bar */
 					/*
 					 * stars should contain at least
@@ -207,11 +209,11 @@ progressmeter(int flag)
 
 			/*
 			 * calculate the length of the `*' bar, ensuring that
-			 * the number of stars won't exceed the buffer size 
+			 * the number of stars won't exceed the buffer size
 			 */
 		barlength = MIN(sizeof(buf) - 1, ttywidth) - BAROVERHEAD;
 		if (prefix)
-		  	barlength -= strlen(prefix);
+			barlength -= strlen(prefix);
 		if (barlength > 0) {
 			i = barlength * ratio / 100;
 			len += snprintf(buf + len, BUFLEFT,
