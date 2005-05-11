@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3481 2005/05/10 21:13:29 recht Exp $
+$NetBSD: TODO,v 1.3482 2005/05/11 09:51:27 adam Exp $
 
 Suggested new packages
 ======================
@@ -544,7 +544,6 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.3.78
 	o gtetrinet-0.7.8
-	o gtk-gnutella-0.95.1 [pkg/30157]
 	o gtk-send-pr-0.4.6
 	o gtk-systrace-2003.06.23
 	o gtkyahoo-0.18.3
