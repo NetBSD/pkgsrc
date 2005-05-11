@@ -1,4 +1,4 @@
-/*	NetBSD: sig.h,v 1.2 2005/05/11 01:17:39 lukem Exp	*/
+/*	$NetBSD: sig.h,v 1.1.1.3 2005/05/11 09:17:39 lukem Exp $	*/
 /*	from	NetBSD: sig.h,v 1.5 2003/08/07 16:44:33 agc Exp	*/
 
 /*-
