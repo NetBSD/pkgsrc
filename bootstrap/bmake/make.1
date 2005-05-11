@@ -1,4 +1,4 @@
-.\"	$NetBSD: make.1,v 1.1.1.1 2004/03/11 13:04:10 grant Exp $
+.\"	$NetBSD: make.1,v 1.2 2005/05/11 14:31:10 rillig Exp $
 .\"
 .\" Copyright (c) 1990, 1993
 .\"	The Regents of the University of California.  All rights reserved.
@@ -541,7 +541,24 @@ could be done as ${MAKE_PRINT_VAR_ON_ERROR:@v@$v='${$v}'${.newline}@}.
 .El
 .Pp
 Variable expansion may be modified to select or modify each word of the
-variable (where a ``word'' is white-space delimited sequence of characters).
+variable.
+A
+.Dq word
+is delimited by whitespace (which is not part of the word),
+unless the whitespace is inside single or double quotes, in which case
+it is preserved.
+The quotes are interpreted like in the Bourne shell.
+.Pp
+Example:
+.Bl -tag -width ABCDEFG
+.It Dv EXAMPLE_1= abc def g"hi jkl" 'm\ \ \ n'
+These are four words:
+.Dq Li abc ,
+.Dq Li def ,
+.Dq Li g"hi\ jkl" ,
+.Dq Li 'm\ \ \ n' .
+.El
+.Pp
 The general format of a variable expansion is as follows:
 .Pp
 .Dl {variable[:modifier[:...]]}
