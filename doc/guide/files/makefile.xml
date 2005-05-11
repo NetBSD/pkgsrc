@@ -1,11 +1,7 @@
-<!-- $NetBSD: makefile.xml,v 1.3 2005/05/10 22:41:10 wiz Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.4 2005/05/11 20:53:27 rillig Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
-
-  <para>WARNING: The &man.make.1; man page is wrong. After the man page
-  has been corrected, this chapter will be updated. Until that, don't
-  take it too serious.</para>
 
   <para>Pkgsrc consists of many <filename>Makefile</filename> fragments,
   each of which forms a well-defined part of the pkgsrc system. Using
@@ -27,12 +23,41 @@
   <sect1 id="makefile.variables">
     <title><filename>Makefile</filename> variables</title>
 
-    <para>A restriction common to all types of variables is that they
-    can neither contain a newline character nor the '\0' character nor
-    the '#' character. The effects of the backslash character are not
-    documented, so you should not use it at the moment. As the $ is used
-    to get values of a <filename>Makefile</filename> variable, it must
-    be quoted as $$.</para>
+    <para><filename>Makefile</filename> variables contain strings that
+    can be processed using the five operators ``='', ``+='', ``?='',
+    ``:='', and ``!='', which are described in the &man.make.1; man
+    page.</para>
+
+    <para>When a variable's value is parsed from a
+    <filename>Makefile</filename>, the hash character ``#'' and the
+    backslash character ``\'' are handled specially. If a backslash is
+    followed by a newline, any whitespace immediately before the
+    backslash, the backslash, the newline, and any whitespace
+    immediately the newline are replaced with a single space. A
+    backspace character followed by a hash character are replaced with a
+    single hash character. Otherwise the backslash is passed as is. In a
+    variable assignment, any hash character that is not preceded by a
+    backslash starts a comment that reaches upto the end of the logical
+    line.</para>
+
+    <para><emphasis>Note:</emphasis> Because of this parsing algorithm
+    the only way to create a variable consisting of a single backslash
+    can only be constructed using the ``!='' operator.</para>
+
+    <para>So far for defining variables. The other thing you can do with
+    variables is evaluating them. A variable is evaluated when it is
+    part of the right side of the ``:='' or the ``!='' operator, or
+    directly before executing a shell command which this variable is
+    part of. In all other cases &man.make.1; performs lazy evaluation,
+    that is variables are not evaluated until there's no other way. The
+    ``modifiers'' mentioned in the man page also evaluate the
+    variable.</para>
+
+    <para>Some of the modifiers split the string into words and then
+    operate on the words, others operate on the string as a whole. When
+    a string is splitted into words, it is splitted as you would expect
+    it from
+    &man.sh.1;.</para>
 
     <para>There are several types of variables that must be handled
     differently.</para>
