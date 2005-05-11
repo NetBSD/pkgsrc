@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.5 2005/05/11 21:19:45 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.6 2005/05/11 21:29:13 rillig Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
@@ -31,25 +31,26 @@
     <para>When a variable's value is parsed from a
     <filename>Makefile</filename>, the hash character ``#'' and the
     backslash character ``\'' are handled specially. If a backslash is
-    followed by a newline, any whitespace immediately before the
+    followed by a newline, any whitespace immediately in front of the
     backslash, the backslash, the newline, and any whitespace
-    immediately the newline are replaced with a single space. A
-    backspace character followed by a hash character are replaced with a
-    single hash character. Otherwise the backslash is passed as is. In a
-    variable assignment, any hash character that is not preceded by a
-    backslash starts a comment that reaches upto the end of the logical
-    line.</para>
+    immediately behind the newline are replaced with a single space. A
+    backspace character and an immediately following hash character are
+    replaced with a single hash character. Otherwise the backslash is
+    passed as is. In a variable assignment, any hash character that is
+    not preceded by a backslash starts a comment that continues upto the
+    end of the logical line.</para>
 
     <para><emphasis>Note:</emphasis> Because of this parsing algorithm
     the only way to create a variable consisting of a single backslash
-    can only be constructed using the ``!='' operator.</para>
+    is using the ``!='' operator, for example: <!-- FIXME
+    --><varname>BACKSLASH!=echo "\\"</varname>.</para>
 
     <para>So far for defining variables. The other thing you can do with
     variables is evaluating them. A variable is evaluated when it is
     part of the right side of the ``:='' or the ``!='' operator, or
-    directly before executing a shell command which this variable is
-    part of. In all other cases &man.make.1; performs lazy evaluation,
-    that is variables are not evaluated until there's no other way. The
+    directly before executing a shell command which the variable is part
+    of. In all other cases &man.make.1; performs lazy evaluation, that
+    is, variables are not evaluated until there's no other way. The
     ``modifiers'' mentioned in the man page also evaluate the
     variable.</para>
 
@@ -59,8 +60,8 @@
     it from &man.sh.1;.</para>
 
     <para>No rule without exception&mdash;the ``.for'' loop does not
-    follow the shell quoting rules but splits at whitespace
-    sequences.</para>
+    follow the shell quoting rules but splits at sequences of
+    whitespace.</para>
 
     <para>There are several types of variables that should be handled
     differently. Strings and two types of lists.</para>
@@ -70,7 +71,7 @@
       <listitem><para><emphasis>Strings</emphasis> can contain arbitrary
       characters. Nevertheless you should restrict yourself to only
       using printable characters. Examples are
-      <varname>PREFIX</varname>,
+      <varname>PREFIX</varname> and
       <varname>COMMENT</varname>.</para></listitem>
 
       <listitem><para><emphasis>Internal lists</emphasis> are lists that
@@ -79,7 +80,7 @@
       have embedded whitespace. Any other characters are allowed.
       Internal lists can be used in <!-- FIXME
       --><varname>.for</varname> loops. Examples are
-      <varname>DEPENDS</varname>,
+      <varname>DEPENDS</varname> and
       <varname>BUILD_DEPENDS</varname>.</para></listitem>
 
       <listitem><para><emphasis>External lists</emphasis> are lists that
@@ -159,12 +160,12 @@ all:
       <para>Example 1 leads to a syntax error in the shell, as the
       characters are just copied.</para>
 
-      <para>Example 2 leads to a syntax error too, and if you leave
-      out the last " character from <varname>${STRING}</varname>,
-      &man.date.1; would be executed. The <varname>$HOME</varname> shell
+      <para>Example 2 leads to a syntax error too, and if you leave out
+      the last " character from <varname>${STRING}</varname>,
+      &man.date.1; will be executed. The <varname>$HOME</varname> shell
       variable would be evaluated, too.</para>
 
-      <para>Example 3 would output each space character preceded by a
+      <para>Example 3 outputs each space character preceded by a
       backslash (or not), depending on the implementation of the
       &man.echo.1; command.</para>
 
