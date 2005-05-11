@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:17 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/11 22:01:28 peter Exp $
 
-DISTNAME=		pflkm-20050118
+DISTNAME=		pflkm-20050511
 CATEGORIES=		security ipv6
 MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
 
@@ -23,18 +23,36 @@ CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/pf.os \
 			${PKG_SYSCONFDIR}/pf.os
 CONF_FILES_MODE=	0600
 
-OWN_DIRS=		${PREFIX}/lkm ${VARBASE}/chroot/pflogd
+OWN_DIRS=		${VARBASE}/chroot/pflogd
 OWN_DIRS+=		${PREFIX}/share/examples/${PKGBASE}
-MAKE_DIRS=		${PREFIX}/include/net
+INSTALLATION_DIRS=	lkm include/net
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pf
-PKG_SUPPORTED_OPTIONS=	ifevents
+PKG_SUPPORTED_OPTIONS=	altq ifevents
 
 .include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.prefs.mk"
 
+.if !empty(PKG_OPTIONS:Maltq)
+# Check if the kernel source was patched.
+_IS_PATCHED_!=	${GREP} -c altq_pfattach ${NETBSDSRCDIR}/sys/altq/altq_subr.c || ${TRUE}
+.if ${_IS_PATCHED_} == "1"
+MAKE_ENV+=		ALTQ=yes
+.else
+PKG_FAIL_REASON+=	"It appears that you didn't applied the ALTQ patch to your kernel sources."
+PKG_FAIL_REASON+=	"Please see: http://nedbsd.nl/~ppostma/pf/\#altq"
+.endif
+.endif
+
 .if !empty(PKG_OPTIONS:Mifevents)
+# Check if the kernel source was patched.
+_IS_PATCHED_!=	${GREP} -c if_event_add ${NETBSDSRCDIR}/sys/net/if.c || ${TRUE}
+.if ${_IS_PATCHED_} == "1"
 MAKE_ENV+=		IFEVENTS=yes
+.else
+PKG_FAIL_REASON+=	"It appears that you didn't applied the if_events patch to your kernel sources."
+PKG_FAIL_REASON+=	"Please see: http://nedbsd.nl/~ppostma/pf/\#if_events"
+.endif
 .endif
 
 post-install:
