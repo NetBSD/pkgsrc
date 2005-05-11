@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1638 2005/05/11 22:08:18 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1639 2005/05/11 22:19:00 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2017,6 +2017,7 @@ pre-configure-override: ${_CONFIGURE_PREREQ}
 _INSTALL_CMD=	${INSTALL}
 .else
 _INSTALL_CMD=	`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'`
+TOOLS_AWK=	${AWK}
 .endif
 
 .PHONY: do-configure
@@ -2025,7 +2026,7 @@ do-configure:
 .  if defined(HAS_CONFIGURE)
 .    for DIR in ${CONFIGURE_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} \
-	    AWK="${AWK}" \
+	    AWK="${TOOLS_AWK}" \
 	    INSTALL="${_INSTALL_CMD} -c -o ${BINOWN} -g ${BINGRP}" \
 	    ac_given_INSTALL="${_INSTALL_CMD} -c -o ${BINOWN} -g ${BINGRP}" \
 	    INSTALL_DATA="${INSTALL_DATA}"				\
