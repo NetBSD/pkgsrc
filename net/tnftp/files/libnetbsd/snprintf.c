@@ -1,4 +1,4 @@
-/*	$Id: snprintf.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	NetBSD: snprintf.c,v 1.4 2005/05/11 01:01:56 lukem Exp	*/
 
 /*
  * Copyright Patrick Powell 1995

@@ -1,5 +1,5 @@
-/*	$Id: inet_ntop.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
-/*	$NetBSD: inet_ntop.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	NetBSD: inet_ntop.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	from	NetBSD: inet_ntop.c,v 1.9 2000/01/22 22:19:16 mycroft Exp	*/
 
 /* Copyright (c) 1996 by Internet Software Consortium.
  *

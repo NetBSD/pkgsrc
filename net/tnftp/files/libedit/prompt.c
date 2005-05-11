@@ -1,4 +1,5 @@
-/*	$NetBSD: prompt.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	NetBSD: prompt.c,v 1.4 2005/05/11 01:17:39 lukem Exp	*/
+/*	from	NetBSD: prompt.c,v 1.11 2003/08/07 16:44:32 agc Exp	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -15,11 +16,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -39,6 +36,17 @@
 #include "tnftp.h"
 #include "sys.h"
 
+#if 0
+#include "config.h"
+#if !defined(lint) && !defined(SCCSID)
+#if 0
+static char sccsid[] = "@(#)prompt.c	8.1 (Berkeley) 6/4/93";
+#else
+__RCSID("NetBSD: prompt.c,v 1.4 2005/05/11 01:17:39 lukem Exp");
+#endif
+#endif /* not lint && not SCCSID */
+#endif
+
 /*
  * prompt.c: Prompt printing functions
  */
@@ -53,7 +61,7 @@ private char	*prompt_default_r(EditLine *);
  */
 private char *
 /*ARGSUSED*/
-prompt_default(EditLine *el)
+prompt_default(EditLine *el __attribute__((__unused__)))
 {
 	static char a[3] = {'?', ' ', '\0'};
 
@@ -66,7 +74,7 @@ prompt_default(EditLine *el)
  */
 private char *
 /*ARGSUSED*/
-prompt_default_r(EditLine *el)
+prompt_default_r(EditLine *el __attribute__((__unused__)))
 {
 	static char a[1] = {'\0'};
 
@@ -121,7 +129,7 @@ prompt_init(EditLine *el)
  */
 protected void
 /*ARGSUSED*/
-prompt_end(EditLine *el)
+prompt_end(EditLine *el __attribute__((__unused__)))
 {
 }
 

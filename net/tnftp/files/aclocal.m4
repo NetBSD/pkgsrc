@@ -1,4 +1,4 @@
-dnl $Id: aclocal.m4,v 1.1 2004/03/11 13:01:01 grant Exp $
+dnl	NetBSD: aclocal.m4,v 1.3 2005/05/11 03:03:42 lukem Exp
 dnl
 
 dnl

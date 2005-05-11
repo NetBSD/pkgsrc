@@ -1,5 +1,5 @@
-/*	$Id: strlcat.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
-/*	$NetBSD: strlcat.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	NetBSD: strlcat.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	from	NetBSD: strlcat.c,v 1.5 1999/09/20 04:39:47 lukem Exp	*/
 /*	from OpenBSD: strlcat.c,v 1.2 1999/06/17 16:28:58 millert Exp 	*/
 
 /*

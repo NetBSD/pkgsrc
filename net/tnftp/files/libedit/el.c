@@ -1,4 +1,5 @@
-/*	$NetBSD: el.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	NetBSD: el.c,v 1.4 2005/05/11 01:17:39 lukem Exp	*/
+/*	from	NetBSD: el.c,v 1.39 2004/07/08 00:51:36 christos Exp	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -15,11 +16,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -38,6 +35,17 @@
 
 #include "tnftp.h"
 #include "sys.h"
+
+#if 0
+#include "config.h"
+#if !defined(lint) && !defined(SCCSID)
+#if 0
+static char sccsid[] = "@(#)el.c	8.2 (Berkeley) 1/3/94";
+#else
+__RCSID("NetBSD: el.c,v 1.4 2005/05/11 01:17:39 lukem Exp");
+#endif
+#endif /* not lint && not SCCSID */
+#endif
 
 /*
  * el.c: EditLine interface functions
@@ -66,7 +74,10 @@ el_init(const char *prog, FILE *fin, FILE *fout, FILE *ferr)
 	el->el_infd = fileno(fin);
 	el->el_outfile = fout;
 	el->el_errfile = ferr;
-	el->el_prog = strdup(prog);
+	if ((el->el_prog = el_strdup(prog)) == NULL) {
+		el_free(el);
+		return NULL;
+	}
 
 	/*
          * Initialize all the modules. Order is important!!!
@@ -74,7 +85,7 @@ el_init(const char *prog, FILE *fin, FILE *fout, FILE *ferr)
 	el->el_flags = 0;
 
 	if (term_init(el) == -1) {
-		free(el->el_prog);
+		el_free(el->el_prog);
 		el_free(el);
 		return NULL;
 	}
@@ -251,6 +262,27 @@ el_set(EditLine *el, int op, ...)
 		el->el_data = va_arg(va, void *);
 		break;
 
+	case EL_UNBUFFERED:
+		rv = va_arg(va, int);
+		if (rv && !(el->el_flags & UNBUFFERED)) {
+			el->el_flags |= UNBUFFERED;
+			read_prepare(el);
+		} else if (!rv && (el->el_flags & UNBUFFERED)) {
+			el->el_flags &= ~UNBUFFERED;
+			read_finish(el);
+		}
+		rv = 0;
+		break;
+
+	case EL_PREP_TERM:
+		rv = va_arg(va, int);
+		if (rv)
+			(void) tty_rawmode(el);
+		else
+			(void) tty_cookedmode(el);
+		rv = 0;
+		break;
+
 	default:
 		rv = -1;
 		break;
@@ -274,11 +306,11 @@ el_get(EditLine *el, int op, void *ret)
 	switch (op) {
 	case EL_PROMPT:
 	case EL_RPROMPT:
-		rv = prompt_get(el, (el_pfunc_t *) & ret, op);
+		rv = prompt_get(el, (void *) &ret, op);
 		break;
 
 	case EL_EDITOR:
-		rv = map_get_editor(el, (const char **) &ret);
+		rv = map_get_editor(el, (void *) &ret);
 		break;
 
 	case EL_SIGNAL:
@@ -291,21 +323,22 @@ el_get(EditLine *el, int op, void *ret)
 		rv = 0;
 		break;
 
-#if 0				/* XXX */
 	case EL_TERMINAL:
-		rv = term_get(el, (const char *) &ret);
+		term_get(el, (const char **)ret);
+		rv = 0;
 		break;
 
+#if 0				/* XXX */
 	case EL_BIND:
 	case EL_TELLTC:
 	case EL_SETTC:
 	case EL_ECHOTC:
 	case EL_SETTY:
 	{
-		char *argv[20];
+		const char *argv[20];
 		int i;
 
-		for (i = 1; i < 20; i++)
+ 		for (i = 1; i < sizeof(argv) / sizeof(argv[0]); i++)
 			if ((argv[i] = va_arg(va, char *)) == NULL)
 				break;
 
@@ -369,6 +402,11 @@ el_get(EditLine *el, int op, void *ret)
 
 	case EL_CLIENTDATA:
 		*((void **)ret) = el->el_data;
+		rv = 0;
+		break;
+
+	case EL_UNBUFFERED:
+		*((int *) ret) = (!(el->el_flags & UNBUFFERED));
 		rv = 0;
 		break;
 
@@ -479,10 +517,13 @@ el_editmode(EditLine *el, int argc, const char **argv)
 		return (-1);
 
 	how = argv[1];
-	if (strcmp(how, "on") == 0)
+	if (strcmp(how, "on") == 0) {
 		el->el_flags &= ~EDIT_DISABLED;
-	else if (strcmp(how, "off") == 0)
+		tty_rawmode(el);
+	} else if (strcmp(how, "off") == 0) {
+		tty_cookedmode(el);
 		el->el_flags |= EDIT_DISABLED;
+	}
 	else {
 		(void) fprintf(el->el_errfile, "edit: Bad value `%s'.\n", how);
 		return (-1);

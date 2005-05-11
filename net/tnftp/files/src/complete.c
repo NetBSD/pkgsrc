@@ -1,4 +1,5 @@
-/*	$NetBSD: complete.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	NetBSD: complete.c,v 1.3 2005/05/11 02:41:28 lukem Exp	*/
+/*	from	NetBSD: complete.c,v 1.38 2000/05/01 10:35:17 lukem Exp	*/
 
 /*-
  * Copyright (c) 1997-2000 The NetBSD Foundation, Inc.
@@ -35,6 +36,13 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+
+#if 0
+#include <sys/cdefs.h>
+#ifndef lint
+__RCSID("NetBSD: complete.c,v 1.3 2005/05/11 02:41:28 lukem Exp");
+#endif /* not lint */
+#endif
 
 /*
  * FTP user program - command and file completion routines
