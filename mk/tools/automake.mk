@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.6 2005/05/11 20:09:44 jlam Exp $
+# $NetBSD: automake.mk,v 1.7 2005/05/11 20:21:32 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU automake.
 #
@@ -73,6 +73,8 @@ _TOOLS_AM_TYPE.${_t_}?=	TOOLS_GNU_MISSING
 MAKEFLAGS+=		TOOLS_IGNORE.automake=
 .  else
 AUTOMAKE_REQD?=		1.9
+AUTOCONF_REQD?=		2.58
+USE_TOOLS+=		autoconf
 
 TOOLS_DEPMETHOD.automake?=	BUILD_DEPENDS
 TOOLS_DEPENDS.automake?=	automake>=${AUTOMAKE_REQD}:../../devel/automake
@@ -100,6 +102,8 @@ AUTOMAKE=	${TOOLS_CMD.automake}
 MAKEFLAGS+=		TOOLS_IGNORE.automake14=
 .  else
 AUTOMAKE_REQD?=		1.4
+AUTOCONF_REQD?=		2.13
+USE_TOOLS+=		autoconf213
 
 TOOLS_DEPMETHOD.automake14?=	BUILD_DEPENDS
 TOOLS_DEPENDS.automake14?=	automake14>=${AUTOMAKE_REQD}:../../devel/automake14
