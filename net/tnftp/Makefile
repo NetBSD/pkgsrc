@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2005/01/06 05:38:56 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/11 10:00:57 lukem Exp $
 #
 
-DISTNAME=		tnftp-20050103
+DISTNAME=		tnftp-20050511
 SVR4_PKGNAME=		tnftp
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
+
+# distfile obtained from: ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp
 
 MAINTAINER=		lukem@NetBSD.org
 COMMENT=		The enhanced FTP client in NetBSD
