@@ -1,4 +1,5 @@
-/*	$NetBSD: progressbar.h,v 1.2 2005/01/04 23:44:24 lukem Exp $	*/
+/*	NetBSD: progressbar.h,v 1.5 2005/05/11 02:41:28 lukem Exp	*/
+/*	from	NetBSD: progressbar.h,v 1.5 2005/02/10 16:00:38 jmc Exp	*/
 
 /*-
  * Copyright (c) 1996-2003 The NetBSD Foundation, Inc.
@@ -81,7 +82,6 @@ sigfunc	xsignal_restart(int, sigfunc, int);
 void	psummary(int);
 void	ptransfer(int);
 #endif	/* !STANDALONE_PROGRESS */
-
 
 #ifdef NO_LONG_LONG
 # define LLF		"%ld"

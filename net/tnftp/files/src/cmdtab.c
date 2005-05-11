@@ -1,4 +1,5 @@
-/*	$NetBSD: cmdtab.c,v 1.2 2005/01/04 23:44:24 lukem Exp $	*/
+/*	NetBSD: cmdtab.c,v 1.5 2005/05/11 02:41:28 lukem Exp	*/
+/*	from	NetBSD: cmdtab.c,v 1.44 2005/04/11 01:49:31 lukem Exp	*/
 
 /*-
  * Copyright (c) 1996-2000 The NetBSD Foundation, Inc.
@@ -64,6 +65,17 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
+
+#if 0
+#include <sys/cdefs.h>
+#ifndef lint
+#if 0
+static char sccsid[] = "@(#)cmdtab.c	8.4 (Berkeley) 10/9/94";
+#else
+__RCSID("NetBSD: cmdtab.c,v 1.5 2005/05/11 02:41:28 lukem Exp");
+#endif
+#endif /* not lint */
+#endif
 
 #include "tnftp.h"
 
@@ -180,7 +192,7 @@ HSTR	empty[] = "";
 #define	CMPL0
 #else  /* !NO_EDITCOMPLETE */
 #define	CMPL(x)	#x,
-#define	CMPL0	empty,	
+#define	CMPL0	empty,
 #endif /* !NO_EDITCOMPLETE */
 
 struct cmd cmdtab[] = {

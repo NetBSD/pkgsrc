@@ -1,4 +1,4 @@
-$Id: todo,v 1.2 2005/01/04 23:44:24 lukem Exp $
+NetBSD: todo,v 1.7 2005/05/11 03:03:42 lukem Exp
 
 Current Items
 -------------
@@ -6,12 +6,15 @@ Current Items
 autoconf test for HAVE_GETADDRINFO_D (declaration) if providing
 getaddrinfo() override.  (required for UnixWare 7.1.1)
 
+Interix may need hack to fix detection of getpgrp() void args.
+(See pkgsrc/net/tnftp/files/src/progressbar.c 1.2)
+
 Update:  INSTALL NEWS README
 
 Old Items
 ---------
 
-macosx install notes / configure fixes
+macosx install notes
 
 at end of configure, show summary of options used and features found
 
@@ -26,8 +29,6 @@ test doesn't include <sys/types.h>. fix autoconf?
 in configure, check for ansi c compiler and barf if it fails
 
 check if we need #defines for memcpy() et al
-
-check for utimes() decls [which system?]
 
 possibly install editline.3 and editrc.5
 

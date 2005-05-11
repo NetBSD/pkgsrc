@@ -1,4 +1,5 @@
-/*	$NetBSD: fetch.c,v 1.3 2005/01/04 23:44:24 lukem Exp $	*/
+/*	NetBSD: fetch.c,v 1.7 2005/05/11 02:41:28 lukem Exp	*/
+/*	from	NetBSD: fetch.c,v 1.157 2005/04/11 01:49:31 lukem Exp	*/
 
 /*-
  * Copyright (c) 1997-2004 The NetBSD Foundation, Inc.
@@ -42,7 +43,7 @@
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: fetch.c,v 1.3 2005/01/04 23:44:24 lukem Exp $");
+__RCSID("NetBSD: fetch.c,v 1.7 2005/05/11 02:41:28 lukem Exp");
 #endif /* not lint */
 #endif
 
@@ -714,7 +715,6 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 			/* success */
 			break;
 		}
-		freeaddrinfo(res0);
 
 		if (s < 0) {
 			warn("Can't connect to %s", host);
@@ -956,7 +956,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 				|| match_token(&cp, "WWW-Authenticate:")) {
 				if (! (token = match_token(&cp, "Basic"))) {
 					if (debug)
-					 	fprintf(ttyout,
+						fprintf(ttyout,
 				"skipping unknown auth scheme `%s'\n",
 						    token);
 					continue;
@@ -1257,6 +1257,8 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		close(s);
 	if (closefunc != NULL && fout != NULL)
 		(*closefunc)(fout);
+	if (res0)
+		freeaddrinfo(res0);
 	FREEPTR(savefile);
 	FREEPTR(user);
 	FREEPTR(pass);
@@ -1397,7 +1399,7 @@ fetch_ftp(const char *url)
 	} else
 		dir = NULL;
 	if (urltype == FTP_URL_T && file != NULL) {
-		url_decode(file);	
+		url_decode(file);
 		/* but still don't url_decode(dir) */
 	}
 	if (debug)
@@ -1578,7 +1580,10 @@ fetch_ftp(const char *url)
 
 		ointeractive = interactive;
 		interactive = 0;
-		xargv[0] = "mget";
+		if (restartautofetch)
+			xargv[0] = "mreget";
+		else
+			xargv[0] = "mget";
 		mget(xargc, xargv);
 		interactive = ointeractive;
 	} else {
@@ -1775,7 +1780,7 @@ auto_put(int argc, char **argv, const char *uploadserver)
 				pathsep++;
 				uargv[2] = xstrdup(pathsep);
 				pathsep[0] = '/';
-			} else 
+			} else
 				uargv[2] = xstrdup(pathsep + 1);
 			pathsep[1] = '\0';
 			uargc++;
@@ -1784,8 +1789,8 @@ auto_put(int argc, char **argv, const char *uploadserver)
 	if (debug)
 		fprintf(ttyout, "auto_put: URL `%s' argv[2] `%s'\n",
 		    path, uargv[2] ? uargv[2] : "<null>");
-		
-			/* connect and cwd */		 
+
+			/* connect and cwd */
 	rval = auto_fetch(1, &path);
 	free(path);
 	if(rval >= 0)
@@ -1799,7 +1804,7 @@ auto_put(int argc, char **argv, const char *uploadserver)
 	}
 
 	for(; argv[0] != NULL; argv++) {
-		uargv[1] = argv[0];	
+		uargv[1] = argv[0];
 		mput(uargc, uargv);
 	}
 	rval = 0;

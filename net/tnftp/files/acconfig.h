@@ -1,4 +1,4 @@
-/* $Id: acconfig.h,v 1.2 2004/04/25 02:48:12 grant Exp $ */
+/*	NetBSD: acconfig.h,v 1.6 2005/05/11 03:10:05 lukem Exp	*/
 
 @TOP@
 @BOTTOM@
@@ -68,6 +68,9 @@
 
 /* Define if we have poll() and it is not emulated */
 #undef HAVE_POLL
+
+/* Define if we have struct pollfd in <poll.h> or <sys/poll.h> */
+#undef HAVE_STRUCT_POLLFD
 
 /*
  * Define this if compiling with SOCKS (the firewall traversal library).

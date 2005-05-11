@@ -1,5 +1,5 @@
 /* config.h.in.  Generated automatically from configure.in by autoheader.  */
-/* $Id: config.h.in,v 1.4 2005/01/04 23:51:00 lukem Exp $ */
+/*	NetBSD: config.h.in,v 1.8 2005/05/11 03:10:26 lukem Exp	*/
 
 
 /* Define if on AIX 3.
@@ -254,6 +254,9 @@
 
 /* Define if we have poll() and it is not emulated */
 #undef HAVE_POLL
+
+/* Define if we have struct pollfd in <poll.h> or <sys/poll.h> */
+#undef HAVE_STRUCT_POLLFD
 
 /*
  * Define this if compiling with SOCKS (the firewall traversal library).

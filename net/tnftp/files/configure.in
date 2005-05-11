@@ -1,10 +1,10 @@
-dnl $Id: configure.in,v 1.4 2005/01/04 23:44:24 lukem Exp $
+dnl	NetBSD: configure.in,v 1.12 2005/05/11 03:10:05 lukem Exp
 dnl
 dnl configure.in --
 dnl	process this file with autoconf to produce a configure script.
 dnl
 
-AC_REVISION($Revision: 1.4 $)dnl
+AC_REVISION(Revision: 1.12)dnl
 
 AC_INIT(tnftp.h)
 
@@ -60,8 +60,8 @@ dnl
 AC_CONFIG_HEADER(config.h)
 AC_HEADER_DIRENT
 AC_HEADER_STDC
-AC_CHECK_HEADERS(arpa/nameser.h err.h regex.h paths.h \
-		sys/syslimits.h termcap.h util.h libutil.h vis.h)
+AC_CHECK_HEADERS([arpa/nameser.h err.h regex.h paths.h poll.h sys/poll.h \
+		sys/syslimits.h termcap.h util.h libutil.h vis.h])
 
 
 dnl Checks for typedefs, structures, and compiler characteristics.
@@ -69,7 +69,7 @@ dnl
 AC_HEADER_TIME
 AC_TYPE_OFF_T
 AC_CHECK_SIZEOF(off_t, 0)
-AC_MSG_TRY_LINK(for long long, ftp_cv_HAVE_LONG_LONG, [
+AC_MSG_TRY_LINK([for long long], ftp_cv_HAVE_LONG_LONG, [
 #include <sys/types.h>
     ] , [
 	long long X = 2, Y = 1, Z;
@@ -79,17 +79,17 @@ AC_MSG_TRY_LINK(for long long, ftp_cv_HAVE_LONG_LONG, [
 	have_long_long=yes
     ], [have_long_long=no])
 
-AC_MSG_TRY_COMPILE(for in_port_t, ftp_cv_HAVE_IN_PORT_T, [
+AC_MSG_TRY_COMPILE([for in_port_t], ftp_cv_HAVE_IN_PORT_T, [
 #include <sys/types.h>
 #include <netinet/in.h>
     ], [ in_port_t X ], [AC_DEFINE(HAVE_IN_PORT_T, 1)])
 
-AC_MSG_TRY_COMPILE(for sa_family_t, ftp_cv_HAVE_SA_FAMILY_T, [
+AC_MSG_TRY_COMPILE([for sa_family_t], ftp_cv_HAVE_SA_FAMILY_T, [
 #include <sys/types.h>
 #include <sys/socket.h>
     ], [ sa_family_t X ], [AC_DEFINE(HAVE_SA_FAMILY_T, 1)])
 
-AC_MSG_TRY_COMPILE(for sockaddr_in.sin_len, ftp_cv_HAVE_SOCKADDR_SA_LEN, [
+AC_MSG_TRY_COMPILE([for sockaddr_in.sin_len], ftp_cv_HAVE_SOCKADDR_SA_LEN, [
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -98,19 +98,20 @@ AC_MSG_TRY_COMPILE(for sockaddr_in.sin_len, ftp_cv_HAVE_SOCKADDR_SA_LEN, [
 	int X = sin.sin_len
     ], [AC_DEFINE(HAVE_SOCKADDR_SA_LEN, 1)])
 
-AC_MSG_TRY_COMPILE(for socklen_t, ftp_cv_HAVE_SOCKLEN_T, [
+AC_MSG_TRY_COMPILE([for socklen_t], ftp_cv_HAVE_SOCKLEN_T, [
 #include <sys/types.h>
 #include <sys/socket.h>
     ], [ socklen_t X ], [AC_DEFINE(HAVE_SOCKLEN_T, 1)])
 
 if test $opt_ipv6 = yes; then
 
-	AC_MSG_TRY_COMPILE(for AF_INET6, ftp_cv_HAVE_AF_INET6, [
+	AC_MSG_TRY_COMPILE([for AF_INET6], ftp_cv_HAVE_AF_INET6, [
 #include <sys/types.h>
 #include <sys/socket.h>
 	    ], [ int X = AF_INET6 ], [AC_DEFINE(HAVE_AF_INET6, 1)])
 
-	AC_MSG_TRY_COMPILE(for struct sockaddr_in6, ftp_cv_HAVE_SOCKADDR_IN6, [
+	AC_MSG_TRY_COMPILE([for struct sockaddr_in6],
+	    ftp_cv_HAVE_SOCKADDR_IN6, [
 #include <sys/types.h>
 #include <netinet/in.h>
 	    ], [
@@ -119,7 +120,7 @@ if test $opt_ipv6 = yes; then
 	    ], [AC_DEFINE(HAVE_SOCKADDR_IN6, 1)])
 
 	if test $ac_cv_header_arpa_nameser_h = yes; then
-		AC_MSG_TRY_COMPILE(for IN6ADDRSZ in arpa/nameser.h,
+		AC_MSG_TRY_COMPILE([for IN6ADDRSZ in arpa/nameser.h],
 				    ftp_cv_HAVE_IN6ADDRSZ, [ 
 #include <sys/types.h>
 #include <arpa/nameser.h>
@@ -128,13 +129,13 @@ if test $opt_ipv6 = yes; then
 
 fi
 
-AC_MSG_TRY_COMPILE(for struct addrinfo, ftp_cv_HAVE_ADDRINFO, [
+AC_MSG_TRY_COMPILE([for struct addrinfo], ftp_cv_HAVE_ADDRINFO, [
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netdb.h>
     ], [ struct addrinfo X ], [AC_DEFINE(HAVE_ADDRINFO, 1)])
 
-AC_MSG_TRY_COMPILE(for d_namlen in struct dirent, ftp_cv_HAVE_D_NAMLEN, [
+AC_MSG_TRY_COMPILE([for d_namlen in struct dirent], ftp_cv_HAVE_D_NAMLEN, [
 #if HAVE_DIRENT_H
 # include <dirent.h>
 #else
@@ -154,30 +155,30 @@ AC_MSG_TRY_COMPILE(for d_namlen in struct dirent, ftp_cv_HAVE_D_NAMLEN, [
 	int X = dp.d_namlen;
     ], [AC_DEFINE(HAVE_D_NAMLEN, 1)])
 
-AC_MSG_TRY_COMPILE(for h_errno declaration, ftp_cv_HAVE_H_ERRNO_D, [
+AC_MSG_TRY_COMPILE([for h_errno declaration], ftp_cv_HAVE_H_ERRNO_D, [
 #include <netdb.h>
     ], [ int X = h_errno ], [AC_DEFINE(HAVE_H_ERRNO_D, 1)])
 
-AC_MSG_TRY_COMPILE(for fclose() declaration, ftp_cv_HAVE_FCLOSE_D, [
+AC_MSG_TRY_COMPILE([for fclose() declaration], ftp_cv_HAVE_FCLOSE_D, [
 #include <stdio.h>
     ], [ int (*X)() = fclose ], [AC_DEFINE(HAVE_FCLOSE_D, 1)])
 
-AC_MSG_TRY_COMPILE(for getpass() declaration, ftp_cv_HAVE_GETPASS_D, [
+AC_MSG_TRY_COMPILE([for getpass() declaration], ftp_cv_HAVE_GETPASS_D, [
 #include <stdlib.h>
 #include <unistd.h>
     ], [ char *(*X)() = getpass ], [ AC_DEFINE(HAVE_GETPASS_D, 1)])
 
-AC_MSG_TRY_COMPILE(for optarg declaration, ftp_cv_HAVE_OPTARG_D, [
+AC_MSG_TRY_COMPILE([for optarg declaration], ftp_cv_HAVE_OPTARG_D, [
 #include <stdlib.h>
 #include <unistd.h>
     ], [ char *X = optarg ], [AC_DEFINE(HAVE_OPTARG_D, 1)])
 
-AC_MSG_TRY_COMPILE(for optind declaration, ftp_cv_HAVE_OPTIND_D, [
+AC_MSG_TRY_COMPILE([for optind declaration], ftp_cv_HAVE_OPTIND_D, [
 #include <stdlib.h>
 #include <unistd.h>
     ], [ int X = optind ], [AC_DEFINE(HAVE_OPTIND_D, 1)])
 
-AC_MSG_TRY_COMPILE(for pclose() declaration, ftp_cv_HAVE_PCLOSE_D, [
+AC_MSG_TRY_COMPILE([for pclose() declaration], ftp_cv_HAVE_PCLOSE_D, [
 #include <stdio.h>
     ], [ int (*X)() = pclose ], [AC_DEFINE(HAVE_PCLOSE_D, 1)])
 
@@ -198,7 +199,8 @@ fi
 LIBOBJS="$LIBOBJS glob.o"
 
 if test $ac_cv_func_strptime = yes; then
-	AC_MSG_TRY_COMPILE(for strptime() declaration, ftp_cv_HAVE_STRPTIME_D, [
+	AC_MSG_TRY_COMPILE([for strptime() declaration],
+	    ftp_cv_HAVE_STRPTIME_D, [
 #include <time.h>
 	    ], [
 	char *X = strptime("", "", NULL)
@@ -252,40 +254,54 @@ int main() {
 
 fi
 
-# handle Darwin 7 having a poll() compatibility function. be
-# conservative, if we don't find one of poll.h or sys/poll.h, don't
-# attempt to use poll().
-AC_CHECK_HEADERS([poll.h sys/poll.h])
-
+dnl Handle Darwin 7 having a poll() compatibility function.
+dnl Be conservative, if we don't find one of poll.h or sys/poll.h,
+dnl don't attempt to use poll().
+dnl
 if test $ac_cv_header_poll_h = yes || test $ac_cv_header_sys_poll_h = yes; then
 	AC_CHECK_FUNC(poll,
 		AC_MSG_TRY_COMPILE([if poll() is implemented natively],
-		ftp_cv_POLL_NATIVE,
-		[ #if HAVE_POLL_H
-		  #include <poll.h>
-		  #endif
-		  #if HAVE_SYS_POLL_H
-		  #include <sys/poll.h>
-		  #endif
-		],
-		[ #ifdef _POLL_EMUL_H_
-		  #error "poll() is emulated"
-		  #endif
-		],
-		[AC_DEFINE(HAVE_POLL, 1)], [:])
+		    ftp_cv_POLL_NATIVE, [
+#if HAVE_POLL_H
+#include <poll.h>
+#endif
+#if HAVE_SYS_POLL_H
+#include <sys/poll.h>
+#endif
+		    ], [
+#ifdef _POLL_EMUL_H_
+#error "poll() is emulated"
+#endif
+		    ], [ AC_DEFINE(HAVE_POLL, 1)], [:])
 	)
+
+dnl Detect if struct pollfd is present.
+dnl
+AC_MSG_TRY_COMPILE([for struct pollfd], ftp_cv_HAVE_STRUCT_POLLFD, [
+#if HAVE_POLL_H
+#include <poll.h>
+#endif
+#if HAVE_SYS_POLL_H
+#include <sys/poll.h>
+#endif
+    ], [ struct pollfd X ], [ AC_DEFINE(HAVE_STRUCT_POLLFD, 1)], [:])
 fi
+
 
 if test $opt_editcomplete = yes; then
 	if test $have_libedit = yes; then
-		AC_MSG_TRY_COMPILE(for EL_RPROMPT in libedit,
+		AC_MSG_TRY_COMPILE([for EL_RPROMPT in libedit],
 		    ftp_cv_have_libedit, [
 #include <histedit.h>
 		    ], [ int X = EL_RPROMPT ], [:],
 		have_libedit=no )
 	fi
 
-	AC_MSG_CHECKING(for working libedit)
+dnl 		For now, assume libedit is not up-to-date and force own version.
+dnl
+	have_libedit=no
+
+	AC_MSG_CHECKING(for up-to-date libedit)
 	if test $have_libedit = no; then
 		AC_MSG_RESULT(no - using my own)
 		INCLUDES="-I\${srcdir}/../libedit $INCLUDES"
@@ -301,7 +317,7 @@ else
 fi
 
 if test $ac_cv_func_sl_init = yes; then
-	AC_MSG_TRY_COMPILE(if sl_add() returns int, ftp_cv_INT_SL_ADD, [
+	AC_MSG_TRY_COMPILE([if sl_add() returns int], ftp_cv_INT_SL_ADD, [
 #include <stringlist.h>
 	    ], [
 	int f = sl_add((StringList *)0, "foo")
@@ -311,7 +327,7 @@ fi
 
 have_rfc2553_netdb=no
 if test $ac_cv_func_getaddrinfo = yes -a ! -n "$socks"; then
-	AC_MSG_TRY_COMPILE(for AI_NUMERICHOST,
+	AC_MSG_TRY_COMPILE([for AI_NUMERICHOST],
 	    ftp_cv_have_ai_numerichost, [
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -333,7 +349,7 @@ fi
 
 
 if test $ac_cv_header_vis_h = yes; then
-	AC_MSG_TRY_COMPILE(for VIS_WHITE in vis.h,
+	AC_MSG_TRY_COMPILE([for VIS_WHITE in vis.h],
 	    ftp_cv_have_vis_white, [
 #include <sys/types.h>
 #include <vis.h>

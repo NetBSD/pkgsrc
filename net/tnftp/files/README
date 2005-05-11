@@ -42,7 +42,8 @@ Refer to `INSTALL' for more information on how to compile and install tnftp.
 FEEDBACK / BUG REPORTS
 ----------------------
 
-Please email feedback back to the maintainer: <lukem@NetBSD.org>.
+Please email feedback back to the maintainer:
+	Luke Mewburn <lukem@NetBSD.org>.
 
 
 COPYRIGHT
@@ -57,3 +58,8 @@ AVAILABILITY
 
 The primary ftp site for tnftp is:
 	ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
+
+
+DOCUMENT REFERENCE
+------------------
+NetBSD: README,v 1.6 2005/05/11 03:05:52 lukem Exp
