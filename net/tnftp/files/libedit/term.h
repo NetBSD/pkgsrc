@@ -1,4 +1,5 @@
-/*	$NetBSD: term.h,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	NetBSD: term.h,v 1.2 2005/05/11 01:17:39 lukem Exp	*/
+/*	from	NetBSD: term.h,v 1.15 2003/09/14 21:48:55 christos Exp	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -15,11 +16,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -54,6 +51,7 @@ typedef struct {		/* Symbolic function key bindings	*/
 } fkey_t;
 
 typedef struct {
+	const char *t_name;		/* the terminal name	*/
 	coord_t	  t_size;		/* # lines and cols	*/
 	int	  t_flags;
 #define	TERM_CAN_INSERT		0x001	/* Has insert cap	*/
@@ -100,6 +98,7 @@ protected void	term_print_arrow(EditLine *, const char *);
 protected int	term_clear_arrow(EditLine *, const char *);
 protected int	term_set_arrow(EditLine *, const char *, key_value_t *, int);
 protected void	term_end(EditLine *);
+protected void	term_get(EditLine *, const char **);
 protected int	term_set(EditLine *, const char *);
 protected int	term_settc(EditLine *, int, const char **);
 protected int	term_telltc(EditLine *, int, const char **);

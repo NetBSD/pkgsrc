@@ -1,5 +1,5 @@
-/*	$Id: inet_pton.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
-/*	$NetBSD: inet_pton.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	NetBSD: inet_pton.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	from	NetBSD: inet_pton.c,v 1.16 2000/02/07 18:51:02 itojun Exp	*/
 
 /* Copyright (c) 1996 by Internet Software Consortium.
  *

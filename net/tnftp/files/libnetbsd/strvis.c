@@ -1,5 +1,5 @@
-/*	$Id: strvis.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
-/*	$NetBSD: strvis.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	NetBSD: strvis.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	from	NetBSD: vis.c,v 1.13 1999/09/20 04:39:07 lukem Exp	*/
 
 /*-
  * Copyright (c) 1989, 1993
