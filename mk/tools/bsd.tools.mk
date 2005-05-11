@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.19 2005/05/10 20:14:27 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.20 2005/05/11 08:41:50 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -133,35 +133,48 @@ MKDIR?=         mkdir -p
 .for _t_ in ${TOOLS_CREATE}
 TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 TOOLS_REAL_CMD.${_t_}?=		${FALSE}
+_TOOLS_REAL_CMDLINE_DFLT.${_t_}= \
+	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_REAL_ARGS.${_t_}} "$$@"
+
 override-tools: ${TOOLS_CMD.${_t_}}
 
-.  if defined(TOOLS_REAL_CMDLINE.${_t_}) || \
-      (defined(TOOLS_REAL_CMD.${_t_}) && empty(TOOLS_REAL_CMD.${_t_}:M/*)) || \
-      (defined(TOOLS_REAL_ARGS.${_t_}) && !empty(TOOLS_REAL_ARGS.${_t_}))
-TOOLS_REAL_CMDLINE.${_t_}?=	\
-	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_REAL_ARGS.${_t_}} "$$@"
 ${TOOLS_CMD.${_t_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H:Q}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	( ${ECHO} '#!'${TOOLS_SHELL:Q};					\
-	  ${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-'${_TOOLS_WRAP_LOG:Q}'}"'; \
-	  ${ECHO} '${ECHO} "[*] "'${TOOLS_CMD.${_t_}:Q}'" $$*" >> $$wrapperlog'; \
-	  ${ECHO} '${ECHO} "<.> "'${TOOLS_REAL_CMDLINE.${_t_}:Q}' >> $$wrapperlog'; \
-	  ${ECHO} ${TOOLS_REAL_CMDLINE.${_t_}:Q};			\
-	) > ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-.  else
-${TOOLS_CMD.${_t_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${TOOLS_REAL_CMD.${_t_}} ${.TARGET}
-.  endif
+	if ${TEST} -n ${TOOLS_REAL_CMDLINE.${_t_}:Q}""; then		\
+		create=wrapper;						\
+		cmdline=${TOOLS_REAL_CMDLINE.${_t_}:Q};			\
+	elif ${TEST} -n ${TOOLS_REAL_CMD.${_t_}:Q}"" -a			\
+		     -z ${TOOLS_ARGS.${_t_}:Q}""; then			\
+		case ${TOOLS_REAL_CMD.${_t_}:Q}"" in			\
+		/*)	create=symlink ;;				\
+		*)	create=wrapper;					\
+			cmdline=${_TOOLS_REAL_CMDLINE_DFLT.${_t_}:Q};	\
+			;;						\
+		esac;							\
+	else								\
+		create=symlink;						\
+	fi;								\
+	case "$$create" in						\
+	wrapper)							\
+		{ ${ECHO} '#!'${TOOLS_SHELL:Q};				\
+		  ${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-'${_TOOLS_WRAP_LOG:Q}'}"'; \
+		  ${ECHO} '${ECHO} "[*] "'${.TARGET:Q}'" $$@" >> $$wrapperlog'; \
+		  ${ECHO} "${ECHO} \"<.> $$cmdline\" >> \$$wrapperlog"; \
+		  ${ECHO} "$$cmdline";					\
+		} > ${.TARGET:Q};					\
+		${CHMOD} +x ${.TARGET:Q};				\
+		;;							\
+	*)								\
+		${LN} -fs ${TOOLS_REAL_CMD.${_t_}:Q} ${.TARGET:Q};	\
+		;;							\
+	esac
 .  for _a_ in ${TOOLS_ALIASES.${_t_}}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ${TEST} ${.TARGET} != ${.TARGET:H}/${_a_}; then		\
-		${MKDIR} ${.TARGET:H};					\
-		${LN} -sf ${.TARGET:T} ${.TARGET:H}/${_a_};		\
-	fi
+	${TEST} ${.TARGET:Q} = ${.TARGET:H:Q}/${_a_} ||			\
+		${LN} -fs ${.TARGET:T:Q} ${.TARGET:H:Q}/${_a_}
 .  endfor
+.  undef _a_
 .endfor
 .undef _t_
 
