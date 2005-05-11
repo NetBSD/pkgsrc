@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.169 2005/05/09 05:06:55 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.170 2005/05/11 22:08:18 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -315,7 +315,7 @@ _BLNK_PKG_DBDIR.${_pkg_}!=	\
 .    endfor
 .  endif
 .  if empty(_BLNK_PKG_DBDIR.${_pkg_}:M*not_found)
-MAKE_VARS+=	_BLNK_PKG_DBDIR.${_pkg_}
+MAKEVARS+=	_BLNK_PKG_DBDIR.${_pkg_}
 .  endif
 
 .  if empty(_BLNK_PKG_DBDIR.${_pkg_}:M*not_found)
@@ -346,7 +346,7 @@ BUILDLINK_PREFIX.${_pkg_}=	BUILDLINK_PREFIX.${_pkg_}_not_found
 .    endif
 .  endif
 .  if empty(BUILDLINK_PREFIX.${_pkg_}:M*not_found)
-MAKE_VARS+=	BUILDLINK_PREFIX.${_pkg_}
+MAKEVARS+=	BUILDLINK_PREFIX.${_pkg_}
 .  endif
 
 BUILDLINK_AUTO_VARS.${_pkg_}?=	yes
@@ -866,7 +866,7 @@ _BLNK_PHYSICAL_PATH.${_var_}!=						\
 		${ECHO} ${${_var_}};					\
 	fi
 .  endif
-MAKE_VARS+=	_BLNK_PHYSICAL_PATH.${_var_}
+MAKEVARS+=	_BLNK_PHYSICAL_PATH.${_var_}
 .endfor
 
 # Transform all references to the physical paths to some important

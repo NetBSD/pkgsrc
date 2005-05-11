@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.67 2005/05/11 19:42:17 jlam Exp $
+# $NetBSD: replace.mk,v 1.68 2005/05/11 22:08:18 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -77,7 +77,7 @@ _USE_TOOLS:=	${_USE_TOOLS:Nm4}
 _USE_TOOLS:=	${_USE_TOOLS:Nsed}
 .  endif
 .endif
-MAKE_VARS+=	_USE_TOOLS
+MAKEVARS+=	_USE_TOOLS
 
 ######################################################################
 
