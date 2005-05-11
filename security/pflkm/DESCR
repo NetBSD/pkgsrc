@@ -6,4 +6,4 @@ PF was originally developed by Daniel Hartmeier and is now maintained and
 developed by Daniel and the rest of the OpenBSD team.
 
 This package includes a complete port (LKM and userland utilities) from
-OpenBSD 3.6 to NetBSD 2.0.
+OpenBSD 3.7 to NetBSD 2.0.
