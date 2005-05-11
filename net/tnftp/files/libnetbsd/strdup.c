@@ -1,5 +1,5 @@
-/*	$Id: strdup.c,v 1.1.1.1 2003/02/28 10:44:48 lukem Exp $	*/
-/*	$NetBSD: strdup.c,v 1.1.1.1 2003/02/28 10:44:48 lukem Exp $	*/
+/*	NetBSD: strdup.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	from	NetBSD: strdup.c,v 1.11 1999/09/20 04:3 9:46 lukem Exp	*/
 
 /*
  * Copyright (c) 1988, 1993

@@ -1,7 +1,7 @@
-/* $Id: tnftp.h,v 1.1.1.2 2005/01/03 10:23:21 lukem Exp $ */
+/*	NetBSD: tnftp.h,v 1.12 2005/05/11 04:21:53 lukem Exp	*/
 
 #define	FTP_PRODUCT	"tnftp"
-#define	FTP_VERSION	"20050103"
+#define	FTP_VERSION	"20050511"
 
 #include "config.h"
 
@@ -23,7 +23,13 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <limits.h>
+#ifdef HAVE_RFC2553_NETDB
 #include <netdb.h>
+#else
+#define getaddrinfo non_rfc2553_getaddrinfo
+#include <netdb.h>
+#undef getaddrinfo
+#endif
 #include <pwd.h>
 #include <setjmp.h>
 #include <signal.h>
@@ -42,9 +48,25 @@
 #  include <sys/poll.h>
 # endif
 #elif HAVE_SELECT
-# define USE_SELECT
-#else
+# ifndef POLLIN
+#  define POLLIN 1
+# endif
+# ifndef POLLOUT
+#  define POLLOUT 4
+# endif
+/* we use select */
+#else /* ! HAVE_POLL && ! HAVE_SELECT */
 # error "no poll() or select() found"
+#endif
+#ifndef INFTIM
+# define INFTIM -1
+#endif
+#if ! HAVE_STRUCT_POLLFD
+struct pollfd {
+	int	fd;
+	short	events;
+	short	revents;
+};
 #endif
 
 #if HAVE_DIRENT_H
@@ -367,6 +389,10 @@ size_t	strlcpy(char *, const char *, size_t);
 
 #if ! HAVE_STRSEP
 char   *strsep(char **stringp, const char *delim);
+#endif
+
+#if ! HAVE_UTIMES
+int utimes(const char *, const struct timeval *);
 #endif
 
 #if ! HAVE_MEMMOVE

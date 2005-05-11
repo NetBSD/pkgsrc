@@ -1,6 +1,5 @@
-/*	$Id: getnameinfo.c,v 1.1.1.1 2003/02/28 10:44:46 lukem Exp $	*/
-/*	$NetBSD: getnameinfo.c,v 1.1.1.1 2003/02/28 10:44:46 lukem Exp $	*/
-/*	$KAME: getnameinfo.c,v 1.43 2000/06/12 04:27:03 itojun Exp $	*/
+/*	NetBSD: getnameinfo.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	from	?	*/
 
 /*
  * Copyright (C) 1995, 1996, 1997, and 1998 WIDE Project.

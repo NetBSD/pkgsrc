@@ -1,5 +1,5 @@
-/*	$Id: strunvis.c,v 1.1.1.1 2003/02/28 10:44:49 lukem Exp $	*/
-/*	$NetBSD: strunvis.c,v 1.1.1.1 2003/02/28 10:44:49 lukem Exp $	*/
+/*	NetBSD: strunvis.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	from	NetBSD: unvis.c,v 1.16 1999/09/20 04:39:06 lukem Exp	*/
 
 /*-
  * Copyright (c) 1989, 1993

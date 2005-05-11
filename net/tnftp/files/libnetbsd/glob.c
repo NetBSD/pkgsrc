@@ -1,5 +1,5 @@
-/*	$Id: glob.c,v 1.1.1.1 2003/02/28 10:44:46 lukem Exp $	*/
-/*	$NetBSD: glob.c,v 1.1.1.1 2003/02/28 10:44:46 lukem Exp $	*/
+/*	NetBSD: glob.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	from	NetBSD: __glob13.c,v 1.23 2001/09/18 16:37:26 christos Exp	*/
 
 /*
  * Copyright (c) 1989, 1993

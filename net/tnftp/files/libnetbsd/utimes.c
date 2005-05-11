@@ -1,11 +1,8 @@
-/*	NetBSD: fgetln.c,v 1.2 2003/02/28 10:44:46 lukem Exp	*/
+/*	NetBSD: utimes.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
 
 /*-
- * Copyright (c) 1998 The NetBSD Foundation, Inc.
+ * Copyright (c) 2004 The NetBSD Foundation, Inc.
  * All rights reserved.
- *
- * This code is derived from software contributed to The NetBSD Foundation
- * by Christos Zoulas.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -36,49 +33,26 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "tnftp.h"
+/*
+ * Your OS is old, eh?
+ * Emulate utimes(2) using utime(2), but losing sub-second granularity.
+ */
 
-char *
-fgetln(fp, len)
-	FILE *fp;
-	size_t *len;
+#include <sys/types.h>
+#include <sys/time.h>
+#include <utime.h>
+
+int
+utimes(const char *path, const struct timeval *times)
 {
-	static char *buf = NULL;
-	static size_t bufsiz = 0;
-	char *ptr;
+	if (times != NULL) {
+		struct utimbuf ut;
 
+		ut.actime = times[0].tv_sec;
+		ut.modtime = times[1].tv_sec;
 
-	if (buf == NULL) {
-		bufsiz = BUFSIZ;
-		if ((buf = malloc(bufsiz)) == NULL)
-			return NULL;
+		return (utime(path, &ut));
 	}
 
-	if (fgets(buf, bufsiz, fp) == NULL)
-		return NULL;
-	*len = 0;
-
-	while ((ptr = strchr(&buf[*len], '\n')) == NULL) {
-		size_t nbufsiz = bufsiz + BUFSIZ;
-		char *nbuf = realloc(buf, nbufsiz);
-
-		if (nbuf == NULL) {
-			int oerrno = errno;
-			free(buf);
-			errno = oerrno;
-			buf = NULL;
-			return NULL;
-		} else
-			buf = nbuf;
-
-		*len = bufsiz;
-		if (fgets(&buf[bufsiz], BUFSIZ, fp) == NULL)
-			return buf;
-
-		bufsiz = nbufsiz;
-	}
-
-	*len = (ptr - buf) + 1;
-	return buf;
+	return (utime(path, NULL));
 }
-

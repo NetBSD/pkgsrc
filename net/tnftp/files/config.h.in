@@ -1,5 +1,5 @@
 /* config.h.in.  Generated automatically from configure.in by autoheader.  */
-/* $Id: config.h.in,v 1.1.1.1 2003/08/25 11:52:56 lukem Exp $ */
+/*	NetBSD: config.h.in,v 1.8 2005/05/11 03:10:26 lukem Exp	*/
 
 
 /* Define if on AIX 3.
@@ -84,9 +84,6 @@
 /* Define if you have the mkstemp function.  */
 #undef HAVE_MKSTEMP
 
-/* Define if you have the poll function.  */
-#undef HAVE_POLL
-
 /* Define if you have the select function.  */
 #undef HAVE_SELECT
 
@@ -131,6 +128,9 @@
 
 /* Define if you have the usleep function.  */
 #undef HAVE_USLEEP
+
+/* Define if you have the utimes function.  */
+#undef HAVE_UTIMES
 
 /* Define if you have the <arpa/nameser.h> header file.  */
 #undef HAVE_ARPA_NAMESER_H
@@ -251,6 +251,12 @@
 
 /* Define if strptime() is declared in <time.h> */
 #undef HAVE_STRPTIME_D
+
+/* Define if we have poll() and it is not emulated */
+#undef HAVE_POLL
+
+/* Define if we have struct pollfd in <poll.h> or <sys/poll.h> */
+#undef HAVE_STRUCT_POLLFD
 
 /*
  * Define this if compiling with SOCKS (the firewall traversal library).

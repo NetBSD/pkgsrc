@@ -1,4 +1,4 @@
-/* $Id: acconfig.h,v 1.1.1.1 2003/07/31 04:22:54 lukem Exp $ */
+/*	NetBSD: acconfig.h,v 1.6 2005/05/11 03:10:05 lukem Exp	*/
 
 @TOP@
 @BOTTOM@
@@ -65,6 +65,12 @@
 
 /* Define if strptime() is declared in <time.h> */
 #undef HAVE_STRPTIME_D
+
+/* Define if we have poll() and it is not emulated */
+#undef HAVE_POLL
+
+/* Define if we have struct pollfd in <poll.h> or <sys/poll.h> */
+#undef HAVE_STRUCT_POLLFD
 
 /*
  * Define this if compiling with SOCKS (the firewall traversal library).
