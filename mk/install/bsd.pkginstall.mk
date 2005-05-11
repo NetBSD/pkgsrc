@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.83 2005/05/02 20:33:57 reed Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.1 2005/05/11 02:07:37 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:

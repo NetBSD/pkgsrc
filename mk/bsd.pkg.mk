@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1635 2005/05/10 20:14:27 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1636 2005/05/11 02:07:37 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -680,7 +680,7 @@ USE_PKGINSTALL=		yes
 .endif
 
 .if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
-.  include "../../mk/bsd.pkg.install.mk"
+.  include "../../mk/install/bsd.pkginstall.mk"
 .endif
 
 # Set INSTALL_FILE to be the name of any INSTALL file
