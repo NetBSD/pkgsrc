@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2005/04/11 21:46:47 tv Exp $
+# $NetBSD: Makefile,v 1.40 2005/05/11 09:50:11 adam Exp $
 
-DISTNAME=	gtk-gnutella-0.95
+DISTNAME=	gtk-gnutella-0.95.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-gnutella/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,21 +20,18 @@ CONFIGURE_ARGS+=	-d -e -r -s \
 			-D sysman="${PREFIX}/man" \
 			-D locale="${PREFIX}/${PKGLOCALEDIR}/locale" \
 			-D cc="${CC}" \
-			-D cflags="${CFLAGS:Unone}" \
-			-D optimize="${CFLAGS:Unone}" \
+			-D ccflags="${CFLAGS:Unone}" \
 			-D gtkversion=2 \
 			-D yacc="yacc" \
-			-D official="true"
-#			-D optimize="${COPTS}" \
+			-D official="true" \
+			-U optimize
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 post-configure:
-	@if [ -f ${BUILDLINK_PREFIX.gtk2}/include/gtk-2.0/gtk/gtkcellrendererprogress.h ]; then \
-	  cd ${WRKSRC}/src/ui/gtk/gtk2 && 			\
-	  ${RM} pbarcellrenderer.c pbarcellrenderer.h &&	\
-	  ${TOUCH} pbarcellrenderer.c pbarcellrenderer.h;	\
-	fi
+	cd "${WRKSRC}/src/ui/gtk/gtk2" && \
+	${TOUCH} interface-glade.c interface-glade.h \
+		support-glade.c support-glade.h
 
 .include "../../mk/bsd.pkg.mk"
