@@ -1,4 +1,4 @@
-/*	NetBSD: utimes.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	$NetBSD: utimes.c,v 1.1.1.2 2005/05/11 09:01:56 lukem Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
