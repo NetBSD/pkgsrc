@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.4 2005/05/11 20:53:27 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.5 2005/05/11 21:19:45 rillig Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
@@ -56,18 +56,22 @@
     <para>Some of the modifiers split the string into words and then
     operate on the words, others operate on the string as a whole. When
     a string is splitted into words, it is splitted as you would expect
-    it from
-    &man.sh.1;.</para>
+    it from &man.sh.1;.</para>
 
-    <para>There are several types of variables that must be handled
-    differently.</para>
+    <para>No rule without exception&mdash;the ``.for'' loop does not
+    follow the shell quoting rules but splits at whitespace
+    sequences.</para>
+
+    <para>There are several types of variables that should be handled
+    differently. Strings and two types of lists.</para>
 
     <itemizedlist>
 
-      <listitem><para><emphasis>Simple values</emphasis> (which I will
-      call atoms) can contain any string, which does not have to be
-      quoted in any way. All other types are somewhat restricted in
-      their possible values.</para></listitem>
+      <listitem><para><emphasis>Strings</emphasis> can contain arbitrary
+      characters. Nevertheless you should restrict yourself to only
+      using printable characters. Examples are
+      <varname>PREFIX</varname>,
+      <varname>COMMENT</varname>.</para></listitem>
 
       <listitem><para><emphasis>Internal lists</emphasis> are lists that
       are never exported to any shell command. Their elements are
@@ -77,7 +81,7 @@
       --><varname>.for</varname> loops. Examples are
       <varname>DEPENDS</varname>,
       <varname>BUILD_DEPENDS</varname>.</para></listitem>
-      
+
       <listitem><para><emphasis>External lists</emphasis> are lists that
       may be exported to a shell command. Their elements can contain any
       characters, including whitespace. That's why they cannot be used
@@ -97,21 +101,21 @@
 
     <sect2>
       <title>Adding things to a list</title>
-      
+
       <programlisting>
-ATOM=			foo * bar `date`
+STRING=			foo * bar `date`
 INT_LIST=		# empty
 ANOTHER_INT_LIST=	apache-[0-9]*:../../www/apache
 EXT_LIST=		# empty
 ANOTHER_EXT_LIST=	a=b c=d
 
-INT_LIST+=		${ATOM}			# 1
+INT_LIST+=		${STRING}		# 1
 INT_LIST+=		${ANOTHER_INT_LIST}	# 2
-EXT_LIST+=		${ATOM:Q}		# 3
+EXT_LIST+=		${STRING:Q}		# 3
 EXT_LIST+=		${ANOTHER_EXT_LIST}	# 4
       </programlisting>
 
-      <para>When you add an atom to an external list (example 3), it
+      <para>When you add a string to an external list (example 3), it
       must be quoted. In all other cases, you must not add a quoting
       level. You must not merge internal and external lists, unless you
       are sure that all entries are correctly interpreted in both
@@ -140,30 +144,30 @@ EXT_LIST+=	${i:Q}
       <title>Passing variables to a shell command</title>
 
       <programlisting>
-ATOM=		foo bar <    > * `date` $$HOME ' "
-EXT_LIST=	atom=${ATOM:Q} x=second\ item
+STRING=		foo bar <    > * `date` $$HOME ' "
+EXT_LIST=	string=${STRING:Q} x=second\ item
 
 all:
-	echo ${ATOM}			# 1
-	echo "${ATOM}"			# 2
-	echo "${ATOM:Q}"		# 3
-	echo ${ATOM:Q}			# 4
-	echo x${ATOM:Q} | sed 1s,.,,	# 5
-	env ${EXT_LIST} /bin/sh -c 'echo "$$atom"; echo "$$x"'
+	echo ${STRING}			# 1
+	echo "${STRING}"		# 2
+	echo "${STRING:Q}"		# 3
+	echo ${STRING:Q}		# 4
+	echo x${STRING:Q} | sed 1s,.,,	# 5
+	env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
       </programlisting>
 
       <para>Example 1 leads to a syntax error in the shell, as the
       characters are just copied.</para>
-      
+
       <para>Example 2 leads to a syntax error too, and if you leave
-      out the last " character from <varname>${ATOM}</varname>,
+      out the last " character from <varname>${STRING}</varname>,
       &man.date.1; would be executed. The <varname>$HOME</varname> shell
       variable would be evaluated, too.</para>
-      
+
       <para>Example 3 would output each space character preceded by a
       backslash (or not), depending on the implementation of the
       &man.echo.1; command.</para>
-      
+
       <para>Example 4 handles correctly every string that does not start
       with a dash. In that case, the result depends on the
       implementation of the &man.echo.1; command. As long as you can
