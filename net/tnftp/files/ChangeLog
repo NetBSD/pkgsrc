@@ -1,4 +1,103 @@
-$Id: ChangeLog,v 1.2 2005/01/04 23:44:24 lukem Exp $
+NetBSD: ChangeLog,v 1.16 2005/05/11 04:21:53 lukem Exp
+
+Wed May 11 04:19:43 UTC 2005	lukem
+
+	* Release "tnftp 20050511"
+
+Wed May 11 04:10:01 UTC 2005	lukem
+
+	* Update the THANKS file.
+
+	* Only use poll() to implement xpoll() if it's available,
+	  otherwise attempt to use select() if that's available,
+	  otherwise #error.
+
+	* Detect if struct pollfd is available in <poll.h> or <sys/poll.h>.
+	  Improve consistency in use of autoconf macros.
+
+Wed May 11 02:42:08 UTC 2005	lukem
+
+	* Merge NetBSD-ftp 20050511:
+		- Use socklen_t instead of int as the 5th argument to
+		  getsockopt().  Improve invocation of setsockopt() and
+		  associated failure messages.
+
+Wed May 11 01:46:29 UTC 2005	lukem
+
+	* Clean up RCSID usage in vendor-derived code, restoring original
+	  IDs where possible.
+
+Wed May 11 00:08:16 UTC 2005	lukem
+
+	* Merge NetBSD-ftp 20050510:
+		- Prevent an overly-long input line causing a core dump when
+		  editing is enabled.
+		  Issue noted by Ryoji Kanai in FreeBSD Problem Report # 77158.
+		- Implement a timeout on the accept(2) in dataconn() and the
+		  connect(2) in xconnect() by temporarily setting O_NONBLOCK
+		  on the socket and using xpoll() to wait for the operation
+		  to succeed.  The timeout used is the '-q quittime' argument
+		  (defaults to 60s for accept(2), and the system default for
+		  connect(2)).  Idea inspired by discussion with Chuck Cranor.
+		  This may (indirectly) fix various problems with timeouts in
+		  active mode through broken firewalls.
+		- Implement xpoll() as a wrapper around poll(2), to make it
+		  easier to replace on systems without a functional poll(2). 
+		  Unconditionally use xpoll() instead of conditionally using
+		  select(2) or poll(2).
+		- In fetch_url(), don't call freeaddrinfo(res0) too early, as
+		  we use pointers to its contents later in the function.
+		  Problem found by Onno van der Linden.
+		- Fix ftp url reget when globs are being used.
+		  Provided by Mathieu Arnold <mat@FreeBSD.org>.
+		- Factor out common string processing code eliminating static
+		  buffers, making functions that should be static be static,
+		  and cleaning up const usage. Added a guard against buffer
+		  overflow, but the domap function is a bit too complicated
+		  to tackle right now.
+		- Clean up whitespace.
+		- Expand description of http_proxy by suggesting the use of
+		  RFC 1738 '%xx' encoding for "unsafe URL" characters in
+		  usernames and passwords.
+
+Wed Jan  5 05:53:59 UTC 2005	lukem
+
+	* For now, assume libedit is not up-to-date and use our own version.
+
+	* Merge libedit from NetBSD 20020605 to 20050105.  Changes include:
+		- Improve vi-mode.
+		- Delete-previous-char and delete-next-char without an
+		  argument are not supposed to modify the yank buffer in
+		  emacs-mode.
+		- Improve incremental searching.
+		- Improve memory allocation & usage.
+		- Move UCB-licensed code from 4-clause to 3-clause.
+		- Make the tokenization functions publically available.
+		- Various tty access bug-fixes.
+		- Improve readline emulation.
+
+Tue Jan  4 13:33:40 UTC 2005	lukem
+
+	* Unixware 7.1.1 implements RFC 2133 (Basic Socket Interface
+	  Extensions for IPv6) but not the successor RFC 2553. The configure
+	  script detects this and decides that tnftp needs to compile its own
+	  version of getaddrinfo().  This produces the error message
+	    /usr/include/netdb.h:248: `getaddrinfo' previously defined here
+	  because Unixware provides an implementation of getaddrinfo() in
+	  netdb.h instead of a prototype declaration :-/. Since netdb.h
+	  cannot be omitted, we will always get this definition and tnftp's
+	  version of getaddrinfo will always create a conflict.  This ugly
+	  preprocessor hack works around the problem. Hints for a better
+	  solution welcome.  Fix from pkgsrc/net/tnftp.
+
+	* Workaround poll() being a compatibility function on Darwin 7
+	  (MacOSX 10.3) by adding a custom test for _POLL_EMUL_H_ which
+	  is defined in poll.h on some MacOSX 10.3 systems.  Not all 10.3
+	  systems have poll.h, so only do the poll() test if at least one
+	  of the header files is found.  Fix from pkgsrc/net/tnftp.
+
+	* Add a utimes() replacement (using utime()) for Interix.
+	  From pkgsrc/net/tnftp.
 
 Mon Jan  3 10:21:57 UTC 2005	lukem
 

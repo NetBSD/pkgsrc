@@ -770,7 +770,7 @@ AAUUTTOO--FFEETTCCHHIINNGG FFIILLEESS
            fer type will take place as ascii or binary (respectively).  The
            default transfer type is binary.
 
-           In order to be compliant with RRFFCC 11773388, ffttpp interprets the _p_a_t_h
+           In order to be compliant with RFC 1738, ffttpp interprets the _p_a_t_h
            part of an ``ftp://'' auto-fetch URL as follows:
 
            ++oo   The `/' immediately after the _h_o_s_t[:_p_o_r_t] is interpreted as a
@@ -786,12 +786,12 @@ AAUUTTOO--FFEETTCCHHIINNGG FFIILLEESS
                the equivalent of a ccdd command without a directory name.  This
                is unlikely to be useful.
 
-           ++oo   Any `%_X_X' codes within the path components are decoded, with _X_X
-               representing a character code in hexadecimal.  This decoding
-               takes place after the _p_a_t_h has been split into components, but
-               before each component is used in the equivalent of a ccdd or ggeett
-               command.  Some often-used codes are `%2F' (which represents
-               `/') and `%7E' (which represents `~').
+           ++oo   Any `%_X_X' codes (per RFC 1738) within the path components are
+               decoded, with _X_X representing a character code in hexadecimal.
+               This decoding takes place after the _p_a_t_h has been split into
+               components, but before each component is used in the equivalent
+               of a ccdd or ggeett command.  Some often-used codes are `%2F' (which
+               represents `/') and `%7E' (which represents `~').
 
            The above interpretation has the following consequences:
 
@@ -1066,13 +1066,16 @@ EENNVVIIRROONNMMEENNTT
      ftp_proxy      URL of FTP proxy to use when making FTP URL requests (if
                     not defined, use the standard FTP protocol).
 
-                    _N_O_T_E: this is not used for interactive sessions, only for
-                    command-line fetches.
+                    See http_proxy for further notes about proxy use.
 
      http_proxy     URL of HTTP proxy to use when making HTTP URL requests.
                     If proxy authentication is required and there is a user-
                     name and password in this URL, they will automatically be
                     used in the first attempt to authenticate to the proxy.
+
+                    If ``unsafe'' URL characters are required in the username
+                    or password (for example `@' or `/'), encode them with RFC
+                    1738 `%_X_X' encoding.
 
                     Note that the use of a username and password in ftp_proxy
                     and http_proxy may be incompatible with other programs
@@ -1101,8 +1104,8 @@ SSEEEE AALLSSOO
      getservbyname(3), editrc(5), services(5), ftpd(8)
 
 SSTTAANNDDAARRDDSS
-     ffttpp attempts to be compliant with RRFFCC 995599, RRFFCC 11112233, RRFFCC 11773388, RRFFCC 22006688,
-     RRFFCC 22338899, RRFFCC 22442288, RRFFCC 22773322, and ddrraafftt--iieettff--ffttppeexxtt--mmllsstt--1111.
+     ffttpp attempts to be compliant with RFC 959, RFC 1123, RFC 1738, RFC 2068,
+     RFC 2389, RFC 2428, RFC 2732, and ddrraafftt--iieettff--ffttppeexxtt--mmllsstt--1111.
 
 HHIISSTTOORRYY
      The ffttpp command appeared in 4.2BSD.
@@ -1135,4 +1138,4 @@ BBUUGGSS
      uses a SIIT translator for IPv6-to-IPv4 translation, ffttpp is unable to
      support your configuration.
 
-NetBSD 2.0                      October 7, 2004                     NetBSD 2.0
+NetBSD 3.0_BETA                January 15, 2005                NetBSD 3.0_BETA

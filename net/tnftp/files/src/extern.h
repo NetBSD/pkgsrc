@@ -1,4 +1,5 @@
-/*	$NetBSD: extern.h,v 1.2 2005/01/04 23:44:24 lukem Exp $	*/
+/*	NetBSD: extern.h,v 1.5 2005/05/11 02:41:28 lukem Exp	*/
+/*	from	NetBSD: extern.h,v 1.66 2005/04/11 01:49:31 lukem Exp	*/
 
 /*-
  * Copyright (c) 1996-2005 The NetBSD Foundation, Inc.
@@ -70,7 +71,7 @@
 /*
  * Copyright (C) 1997 and 1998 WIDE Project.
  * All rights reserved.
- * 
+ *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
  * are met:
@@ -82,7 +83,7 @@
  * 3. Neither the name of the project nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND
  * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
@@ -129,11 +130,8 @@ void	delete(int, char **);
 void	disconnect(int, char **);
 void	do_chmod(int, char **);
 void	do_umask(int, char **);
-char   *docase(char *);
 void	domacro(int, char **);
-char   *domap(char *);
 void	doproxy(int, char **);
-char   *dotrans(char *);
 void	feat(int, char **);
 void	fget(int, char **);
 int	fileindir(const char *, const char *);
@@ -253,6 +251,7 @@ void	usage(void);
 void	user(int, char **);
 int	xconnect(int, const struct sockaddr *, int);
 int	xlisten(int, int);
+int	xpoll(struct pollfd *, int, int);
 void   *xmalloc(size_t);
 StringList *xsl_init(void);
 void	xsl_add(StringList *, char *);
