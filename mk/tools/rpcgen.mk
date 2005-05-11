@@ -1,4 +1,4 @@
-# $NetBSD: rpcgen.mk,v 1.4 2005/05/09 01:11:58 jlam Exp $
+# $NetBSD: rpcgen.mk,v 1.5 2005/05/11 05:44:58 jlam Exp $
 
 # Create an rpcgen script that correctly sets the CPP environment
 # variable to a stat(2)able path to a C preprocessor, then invokes
@@ -20,7 +20,7 @@ TOOLS_CMD.rpcgen=	${TOOLS_DIR}/bin/rpcgen
 TOOLS_REAL_ARGS.rpcgen?=	-b
 .endif
 TOOLS_REAL_CMDLINE.rpcgen=	\
-	CPP=${WRAPPER_BINDIR:Q}/cpp ${TOOLS_REAL_CMD.rpcgen} ${TOOLS_REAL_ARGS.rpcgen}
+	CPP=${WRAPPER_BINDIR:Q}/cpp ${TOOLS_REAL_CMD.rpcgen} ${TOOLS_REAL_ARGS.rpcgen} "$$@"
 
 # Make ${RPCGEN} call the "rpcgen" through the PATH, which should find
 # the rpcgen tool wrapper.
