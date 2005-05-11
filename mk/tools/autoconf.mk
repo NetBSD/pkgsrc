@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.5 2005/05/10 19:34:02 jlam Exp $
+# $NetBSD: autoconf.mk,v 1.6 2005/05/11 20:09:44 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU autoconf.
 #
@@ -37,18 +37,18 @@ PKG_FAIL_REASON+=	"\`\`autoconf'' and \`\`autoconf213'' conflict in USE_TOOLS."
 # This is an exhaustive list of all of the scripts supplied by GNU
 # autoconf.
 #
-_TOOLS_AUTOCONF=		autoconf autoheader autom4te autoreconf	\
-				autoscan autoupdate ifnames
+_TOOLS_AC_NAMES=	autoconf	autoconf-2.13
+_TOOLS_AC_NAMES+=	autoheader	autoheader-2.13	
+_TOOLS_AC_NAMES+=	autom4te
+_TOOLS_AC_NAMES+=	autoreconf	autoreconf-2.13
+_TOOLS_AC_NAMES+=	autoscan	autoscan-2.13
+_TOOLS_AC_NAMES+=	autoupdate	autoupdate-2.13
+_TOOLS_AC_NAMES+=	ifnames		ifnames-2.13
 
-_TOOLS_AUTOCONF.autoconf=	autoconf	autoconf-2.13
-_TOOLS_AUTOCONF.autoheader=	autoheader	autoheader-2.13	
-_TOOLS_AUTOCONF.autom4te=	autom4te
-_TOOLS_AUTOCONF.autoreconf=	autoreconf	autoreconf-2.13
-_TOOLS_AUTOCONF.autoscan=	autoscan	autoscan-2.13
-_TOOLS_AUTOCONF.autoupdate=	autoupdate	autoupdate-2.13
-_TOOLS_AUTOCONF.ifnames=	ifnames		ifnames-2.13
-
-_TOOLS_AUTOCONF_LINKS=	# empty
+.for _t_ in ${_TOOLS_AC_NAMES}
+_TOOLS_AC_TYPE.${_t_}?=	TOOLS_GNU_MISSING
+.endfor _t_
+.undef _t_
 
 .if !defined(TOOLS_IGNORE.autoconf) && !empty(USE_TOOLS:Mautoconf)
 .  if !empty(PKGPATH:Mdevel/autoconf)
@@ -61,27 +61,28 @@ TOOLS_DEPENDS.autoconf?=	autoconf>=${AUTOCONF_REQD}:../../devel/autoconf
 .    if empty(${TOOLS_DEPMETHOD.autoconf}:M${TOOLS_DEPENDS.autoconf})
 ${TOOLS_DEPMETHOD.autoconf}+=	${TOOLS_DEPENDS.autoconf}
 .    endif
+EVAL_PREFIX+=			_TOOLS_AC_PREFIX=autoconf
 
-_TOOLS_AUTOCONF_LINKS+=		autoconf
-TOOLS_REAL_CMD.autoconf=	${LOCALBASE}/bin/autoconf
+_TOOLS_AC_TYPE.autoconf=	TOOLS_CREATE
+TOOLS_REAL_CMD.autoconf=	${_TOOLS_AC_PREFIX}/bin/autoconf
 
-_TOOLS_AUTOCONF_LINKS+=		autoheader
-TOOLS_REAL_CMD.autoheader=	${LOCALBASE}/bin/autoheader
+_TOOLS_AC_TYPE.autoheader=	TOOLS_CREATE
+TOOLS_REAL_CMD.autoheader=	${_TOOLS_AC_PREFIX}/bin/autoheader
 
-_TOOLS_AUTOCONF_LINKS+=		autom4te
-TOOLS_REAL_CMD.autom4te=	${LOCALBASE}/bin/autom4te
+_TOOLS_AC_TYPE.autom4te=	TOOLS_CREATE
+TOOLS_REAL_CMD.autom4te=	${_TOOLS_AC_PREFIX}/bin/autom4te
 
-_TOOLS_AUTOCONF_LINKS+=		autoreconf
-TOOLS_REAL_CMD.autoreconf=	${LOCALBASE}/bin/autoreconf
+_TOOLS_AC_TYPE.autoreconf=	TOOLS_CREATE
+TOOLS_REAL_CMD.autoreconf=	${_TOOLS_AC_PREFIX}/bin/autoreconf
 
-_TOOLS_AUTOCONF_LINKS+=		autoscan
-TOOLS_REAL_CMD.autoscan=	${LOCALBASE}/bin/autoscan
+_TOOLS_AC_TYPE.autoscan=	TOOLS_CREATE
+TOOLS_REAL_CMD.autoscan=	${_TOOLS_AC_PREFIX}/bin/autoscan
 
-_TOOLS_AUTOCONF_LINKS+=		autoupdate
-TOOLS_REAL_CMD.autoupdate=	${LOCALBASE}/bin/autoupdate
+_TOOLS_AC_TYPE.autoupdate=	TOOLS_CREATE
+TOOLS_REAL_CMD.autoupdate=	${_TOOLS_AC_PREFIX}/bin/autoupdate
 
-_TOOLS_AUTOCONF_LINKS+=		ifnames
-TOOLS_REAL_CMD.ifnames=		${LOCALBASE}/bin/ifnames
+_TOOLS_AC_TYPE.ifnames=		TOOLS_CREATE
+TOOLS_REAL_CMD.ifnames=		${_TOOLS_AC_PREFIX}/bin/ifnames
 
 # Continue to define the following variables until packages have been
 # taught to just use "autoconf", "autoheader", and "autoreconf" instead.
@@ -103,24 +104,37 @@ TOOLS_DEPENDS.autoconf213?=	autoconf213>=${AUTOCONF_REQD}:../../devel/autoconf21
 .    if empty(${TOOLS_DEPMETHOD.autoconf213}:M${TOOLS_DEPENDS.autoconf213})
 ${TOOLS_DEPMETHOD.autoconf213}+=	${TOOLS_DEPENDS.autoconf213}
 .    endif
+EVAL_PREFIX+=			_TOOLS_AC_PREFIX=autoconf213
 
-_TOOLS_AUTOCONF_LINKS+=		autoconf
-TOOLS_REAL_CMD.autoconf=	${LOCALBASE}/bin/autoconf-2.13
+_TOOLS_AC_TYPE.autoconf-2.13=	TOOLS_CREATE
+_TOOLS_AC_TYPE.autoconf=	# empty
+TOOLS_REAL_CMD.autoconf-2.13=	${_TOOLS_AC_PREFIX}/bin/autoconf-2.13
+TOOLS_ALIASES.autoconf-2.13=	autoconf
 
-_TOOLS_AUTOCONF_LINKS+=		autoheader
-TOOLS_REAL_CMD.autoheader=	${LOCALBASE}/bin/autoheader-2.13
+_TOOLS_AC_TYPE.autoheader-2.13=	TOOLS_CREATE
+_TOOLS_AC_TYPE.autoheader=	# empty
+TOOLS_REAL_CMD.autoheader-2.13=	${_TOOLS_AC_PREFIX}/bin/autoheader-2.13
+TOOLS_ALIASES.autoheader-2.13=	autoheader
 
-_TOOLS_AUTOCONF_LINKS+=		autoreconf
-TOOLS_REAL_CMD.autoreconf=	${LOCALBASE}/bin/autoreconf-2.13
+_TOOLS_AC_TYPE.autoreconf-2.13=	TOOLS_CREATE
+_TOOLS_AC_TYPE.autoreconf=	# empty
+TOOLS_REAL_CMD.autoreconf-2.13=	${_TOOLS_AC_PREFIX}/bin/autoreconf-2.13
+TOOLS_ALIASES.autoreconf-2.13=	autoreconf
 
-_TOOLS_AUTOCONF_LINKS+=		autoscan
-TOOLS_REAL_CMD.autoscan=	${LOCALBASE}/bin/autoscan-2.13
+_TOOLS_AC_TYPE.autoscan-2.13=	TOOLS_CREATE
+_TOOLS_AC_TYPE.autoscan=	# empty
+TOOLS_REAL_CMD.autoscan-2.13=	${_TOOLS_AC_PREFIX}/bin/autoscan-2.13
+TOOLS_ALIASES.autoscan-2.13=	autoscan
 
-_TOOLS_AUTOCONF_LINKS+=		autoupdate
-TOOLS_REAL_CMD.autoupdate=	${LOCALBASE}/bin/autoupdate-2.13
+_TOOLS_AC_TYPE.autoupdate-2.13=	TOOLS_CREATE
+_TOOLS_AC_TYPE.autoupdate=	# empty
+TOOLS_REAL_CMD.autoupdate-2.13=	${_TOOLS_AC_PREFIX}/bin/autoupdate-2.13
+TOOLS_ALIASES.autoupdate-2.13=	autoupdate
 
-_TOOLS_AUTOCONF_LINKS+=		ifnames
-TOOLS_REAL_CMD.ifnames=		${LOCALBASE}/bin/ifnames-2.13
+_TOOLS_AC_TYPE.ifnames-2.13=	TOOLS_CREATE
+_TOOLS_AC_TYPE.ifnames=		# empty
+TOOLS_REAL_CMD.ifnames-2.13=	${_TOOLS_AC_PREFIX}/bin/ifnames-2.13
+TOOLS_ALIASES.ifnames-2.13=	ifnames
 
 # Continue to define the following variables until packages have been
 # taught to just use "autoconf", "autoheader", and "autoreconf" instead.
@@ -135,27 +149,14 @@ pre-configure: tools-libtool-m4-override
 .  endif
 .endif
 
-# For every script that hasn't already been symlinked, we mark it as
-# "GNU missing".
-#
+# If the package wants to override the GNU auto* tools, then do it.
 AUTOMAKE_OVERRIDE?=	yes
 .if !empty(AUTOMAKE_OVERRIDE:M[yY][eE][sS])
-TOOLS_CREATE+=		${_TOOLS_AUTOCONF_LINKS}
-.  for _t_ in ${_TOOLS_AUTOCONF_LINKS}
-.    for _s_ in ${_TOOLS_AUTOCONF.${_t_}}
-.      if empty(TOOLS_REAL_CMD.${_t_}:M*/${_s_})
-TOOLS_GNU_MISSING+=	${_s_}
-.      endif
-.    endfor
-.  endfor
-.  for _t_ in ${_TOOLS_AUTOCONF}
-.    if empty(_TOOLS_AUTOCONF_LINKS:M${_t_})
-.      for _s_ in ${_TOOLS_AUTOCONF.${_t_}}
-TOOLS_GNU_MISSING+=	${_s_}
-.      endfor
+.  for _t_ in ${_TOOLS_AC_NAMES}
+.    if !empty(_TOOLS_AC_TYPE.${_t_})
+${_TOOLS_AC_TYPE.${_t_}}+=	${_t_}
 .    endif
 .  endfor
-.  undef _s_
 .  undef _t_
 .endif
 

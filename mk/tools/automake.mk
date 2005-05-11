@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.5 2005/05/10 19:34:02 jlam Exp $
+# $NetBSD: automake.mk,v 1.6 2005/05/11 20:09:44 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU automake.
 #
@@ -50,22 +50,23 @@ PKG_FAIL_REASON+=	"\`\`automake'' and \`\`automake14'' conflict in USE_TOOLS."
 # This is an exhaustive list of all of the scripts supplied by GNU
 # automake.
 #
-_TOOLS_AUTOMAKE=		aclocal automake
+_TOOLS_AM_NAMES=	aclocal		aclocal-1.4			\
+					aclocal-1.5			\
+					aclocal-1.6			\
+					aclocal-1.7			\
+					aclocal-1.8			\
+					aclocal-1.9
+_TOOLS_AM_NAMES+=	automake	automake-1.4			\
+					automake-1.5			\
+					automake-1.6			\
+					automake-1.7			\
+					automake-1.8			\
+					automake-1.9
 
-_TOOLS_AUTOMAKE.aclocal=	aclocal		aclocal-1.4		\
-						aclocal-1.5		\
-						aclocal-1.6		\
-						aclocal-1.7		\
-						aclocal-1.8		\
-						aclocal-1.9
-_TOOLS_AUTOMAKE.automake=	automake	automake-1.4		\
-						automake-1.5		\
-						automake-1.6		\
-						automake-1.7		\
-						automake-1.8		\
-						automake-1.9
-
-_TOOLS_AUTOMAKE_LINKS=	# empty
+.for _t_ in ${_TOOLS_AM_NAMES}
+_TOOLS_AM_TYPE.${_t_}?=	TOOLS_GNU_MISSING
+.endfor
+.undef _t_
 
 .if !defined(TOOLS_IGNORE.automake) && !empty(USE_TOOLS:Mautomake)
 .  if !empty(PKGPATH:Mdevel/automake)
@@ -78,12 +79,13 @@ TOOLS_DEPENDS.automake?=	automake>=${AUTOMAKE_REQD}:../../devel/automake
 .    if empty(${TOOLS_DEPMETHOD.automake}:M${TOOLS_DEPENDS.automake})
 ${TOOLS_DEPMETHOD.automake}+=	${TOOLS_DEPENDS.automake}
 .    endif
+EVAL_PREFIX+=			_TOOLS_AM_PREFIX=automake
 
-_TOOLS_AUTOMAKE_LINKS+=		aclocal
-TOOLS_REAL_CMD.aclocal=		${LOCALBASE}/bin/aclocal
+_TOOLS_AM_TYPE.aclocal=		TOOLS_CREATE
+TOOLS_REAL_CMD.aclocal=		${_TOOLS_AM_PREFIX}/bin/aclocal
 
-_TOOLS_AUTOMAKE_LINKS+=		automake
-TOOLS_REAL_CMD.automake=	${LOCALBASE}/bin/automake
+_TOOLS_AM_TYPE.automake=	TOOLS_CREATE
+TOOLS_REAL_CMD.automake=	${_TOOLS_AM_PREFIX}/bin/automake
 
 # Continue to define the following variables until packages have been
 # taught to just use "aclocal" and "automake" instead.
@@ -104,42 +106,34 @@ TOOLS_DEPENDS.automake14?=	automake14>=${AUTOMAKE_REQD}:../../devel/automake14
 .    if empty(${TOOLS_DEPMETHOD.automake14}:M${TOOLS_DEPENDS.automake14})
 ${TOOLS_DEPMETHOD.automake14}+=	${TOOLS_DEPENDS.automake14}
 .    endif
+EVAL_PREFIX+=			_TOOLS_AM_PREFIX=automake14
 
-_TOOLS_AUTOMAKE_LINKS+=		aclocal
-TOOLS_REAL_CMD.aclocal=		${LOCALBASE}/bin/aclocal-1.4
+_TOOLS_AM_TYPE.aclocal-1.4=	TOOLS_CREATE
+_TOOLS_AM_TYPE.aclocal=		# empty
+TOOLS_REAL_CMD.aclocal-1.4=	${_TOOLS_AM_PREFIX}/bin/aclocal-1.4
+TOOLS_ALIASES.aclocal-1.4=	aclocal
 
-_TOOLS_AUTOMAKE_LINKS+=		automake
-TOOLS_REAL_CMD.automake=	${LOCALBASE}/bin/automake-1.4
+_TOOLS_AM_TYPE.automake-1.4=	TOOLS_CREATE
+_TOOLS_AM_TYPE.automake=	# empty
+TOOLS_REAL_CMD.automake-1.4=	${_TOOLS_AM_PREFIX}/bin/automake-1.4
+TOOLS_ALIASES.automake-1.4=	automake
 
 # Continue to define the following variables until packages have been
 # taught to just use "aclocal" and "automake" instead.
 #
-ACLOCAL=	${TOOLS_CMD.aclocal}
-AUTOMAKE=	${TOOLS_CMD.automake}
+ACLOCAL=	${TOOLS_CMD.aclocal-1.4}
+AUTOMAKE=	${TOOLS_CMD.automake-1.4}
 .  endif
 .endif
 
-# For every script that hasn't already been symlinked, we mark it as
-# "GNU missing".
-#
+# If the package wants to override the GNU auto* tools, then do it.
 AUTOMAKE_OVERRIDE?=	yes
 .if !empty(AUTOMAKE_OVERRIDE:M[yY][eE][sS])
-TOOLS_CREATE+=		${_TOOLS_AUTOMAKE_LINKS}
-.  for _t_ in ${_TOOLS_AUTOMAKE_LINKS}
-.    for _s_ in ${_TOOLS_AUTOMAKE.${_t_}}
-.      if empty(TOOLS_REAL_CMD.${_t_}:M*/${_s_})
-TOOLS_GNU_MISSING+=	${_s_}
-.      endif
-.    endfor
-.  endfor
-.  for _t_ in ${_TOOLS_AUTOMAKE}
-.    if empty(_TOOLS_AUTOMAKE_LINKS:M${_t_})
-.      for _s_ in ${_TOOLS_AUTOMAKE.${_t_}}
-TOOLS_GNU_MISSING+=	${_s_}
-.      endfor
+.  for _t_ in ${_TOOLS_AM_NAMES}
+.    if !empty(_TOOLS_AM_TYPE.${_t_})
+${_TOOLS_AM_TYPE.${_t_}}+=	${_t_}
 .    endif
 .  endfor
-.  undef _s_
 .  undef _t_
 .endif
 
