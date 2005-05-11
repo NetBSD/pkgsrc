@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1637 2005/05/11 04:01:49 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1638 2005/05/11 22:08:18 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -28,16 +28,16 @@ _REV_ALL_PHASES:=	${_phase_} ${_REV_ALL_PHASES}
 .  endfor
 .  undef _phase_
 .endif
-MAKE_VARS+=		_REV_ALL_PHASES
+MAKEVARS+=		_REV_ALL_PHASES
 
 # Try including the .makevars.mk.* files in reverse order so that the
 # latest file is included and no more.
 #
 .for _phase_ in ${_REV_ALL_PHASES}
-_MAKE_VARS_MK.${_phase_}=	${WRKDIR}/.${_phase_}_makevars.mk
-${_phase_}-vars: ${_MAKE_VARS_MK.${_phase_}}
-.  if !defined(_MAKE_VARS_MK)
-.    sinclude "${_MAKE_VARS_MK.${_phase_}}"
+_MAKEVARS_MK.${_phase_}=	${WRKDIR}/.${_phase_}_makevars.mk
+${_phase_}-vars: ${_MAKEVARS_MK.${_phase_}}
+.  if !defined(_MAKEVARS_MK)
+.    sinclude "${_MAKEVARS_MK.${_phase_}}"
 .  endif
 .endfor
 .undef _phase_
@@ -447,7 +447,9 @@ SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 
 LIBABISUFFIX?=
 
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 CONFIGURE_ENV+=		M4="${M4}" YACC="${YACC}"
+.endif
 
 TOUCH_FLAGS?=		-f
 
@@ -465,7 +467,7 @@ _PKGSRC_USE_PATCH!=	\
 	fi
 .  endif
 .endif
-MAKE_VARS+=	_PKGSRC_USE_PATCH
+MAKEVARS+=	_PKGSRC_USE_PATCH
 
 .if !empty(_PKGSRC_USE_PATCH:M[yY][eE][sS])
 .  if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
@@ -5014,26 +5016,26 @@ PKG_ERROR_HANDLER.${_class_}?=	{					\
 	}
 .endfor
 
-# Cache variables listed in MAKE_VARS in a phase-specific "makevars.mk"
+# Cache variables listed in MAKEVARS in a phase-specific "makevars.mk"
 # file.  These variables are effectively passed to sub-make processes
 # that are invoked on the same Makefile.
 #
 .for _phase_ in ${ALL_PHASES}
-${_MAKE_VARS_MK.${_phase_}}: ${WRKDIR}
+${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 .  if !empty(PKG_PHASE:M${_phase_})
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
-.    for _var_ in ${MAKE_VARS:O:u}
+.    for _var_ in ${MAKEVARS:O:u}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} ${_var_}"=	"${${_var_}:Q} >> ${.TARGET}.tmp
 .    endfor
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} -f ${.TARGET}.tmp; then				\
-		( ${ECHO} ".if !defined(_MAKE_VARS_MK)";		\
-		  ${ECHO} "_MAKE_VARS_MK=	defined";		\
+		( ${ECHO} ".if !defined(_MAKEVARS_MK)";			\
+		  ${ECHO} "_MAKEVARS_MK=	defined";		\
 		  ${ECHO} "";						\
 		  ${CAT} ${.TARGET}.tmp;				\
 		  ${ECHO} "";						\
-		  ${ECHO} ".endif # _MAKE_VARS_MK";			\
+		  ${ECHO} ".endif # _MAKEVARS_MK";			\
 		) > ${.TARGET};						\
 		${RM} -f ${.TARGET}.tmp;				\
 	fi

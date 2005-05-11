@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2005/05/11 22:03:52 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2005/05/11 22:08:18 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENLDAP_BUILDLINK3_MK:=	${OPENLDAP_BUILDLINK3_MK}+
@@ -24,7 +24,7 @@ PKG_BUILD_OPTIONS.openldap!=						\
 	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
 MAKEFLAGS+=	PKG_BUILD_OPTIONS.openldap=${PKG_BUILD_OPTIONS.openldap:Q}
 .endif
-MAKE_VARS+=	PKG_BUILD_OPTIONS.openldap
+MAKEVARS+=	PKG_BUILD_OPTIONS.openldap
 
 .if !empty(PKG_BUILD_OPTIONS.openldap:Mkerberos) || \
     !empty(PKG_BUILD_OPTIONS.openldap:Msasl)

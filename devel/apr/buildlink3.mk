@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2005/05/11 22:03:52 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2005/05/11 22:08:18 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APR_BUILDLINK3_MK:=	${APR_BUILDLINK3_MK}+
@@ -29,7 +29,7 @@ PKG_BUILD_OPTIONS.apr!=	cd ${BUILDLINK_PKGSRCDIR.apr} && \
 			${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
 MAKEFLAGS+=	PKG_BUILD_OPTIONS.apr=${PKG_BUILD_OPTIONS.apr:Q}
 .endif
-MAKE_VARS+=	PKG_BUILD_OPTIONS.apr
+MAKEVARS+=	PKG_BUILD_OPTIONS.apr
 
 .if !empty(PKG_BUILD_OPTIONS.apr:Mdb4)
 .  include "../../databases/db4/buildlink3.mk"
