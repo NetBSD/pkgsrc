@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.27 2005/01/15 10:50:18 jmmv Exp $
+# $NetBSD: texinfo.mk,v 1.28 2005/05/11 02:07:37 jlam Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -48,8 +48,9 @@ TEXINFO_MK=	# defined
 # Handle install-info.
 # 
 
-# Use bsd.pkg.install.mk framework i.e. INSTALL/DEINSTALL scripts
-# to handle install-info execution.
+# Use pkginstall framework i.e. INSTALL/DEINSTALL scripts to handle
+# install-info execution.
+#
 USE_PKGINSTALL=		YES
 
 # Pathname relative to ${PREFIX} of directory holding the info

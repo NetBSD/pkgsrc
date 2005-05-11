@@ -1,4 +1,4 @@
-# $NetBSD: catalogs.mk,v 1.10 2005/03/29 14:39:15 jmmv Exp $
+# $NetBSD: catalogs.mk,v 1.11 2005/05/11 02:07:37 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # catalog files or DTDs.  It takes care of registering them into the right
@@ -44,7 +44,8 @@ XML_ENTRIES+=	nextCatalog ${PREFIX:=$c} --
 .endif
 
 # If there are any entries to register, export required variables and
-# use bsd.pkg.install.mk.
+# use pkginstall framework.
+#
 .if !empty(SGML_ENTRIES) || !empty(XML_ENTRIES)
 FILES_SUBST+=	XMLCATMGR="${XMLCATMGR}"
 FILES_SUBST+=	SGML_CATALOG="${XMLCATMGR_PREFIX}/share/sgml/catalog"
