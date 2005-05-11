@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.29 2005/05/09 05:06:56 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.30 2005/05/11 22:08:19 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -103,7 +103,7 @@ _WRAP_TRANSFORM_CMDS+=	${WRAPPER_TRANSFORM_CMDS}
 .if !defined(_WRAP_PATH)
 _WRAP_PATH=	${PATH:S/${WRAPPER_BINDIR}://:S/:${WRAPPER_BINDIR}//}
 .endif
-MAKE_VARS+=	_WRAP_PATH
+MAKEVARS+=	_WRAP_PATH
 
 # Generate wrapper scripts for the compiler tools.  These wrapper
 # scripts are to be used instead of the actual compiler tools when
