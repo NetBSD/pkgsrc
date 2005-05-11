@@ -1,7 +1,7 @@
-/* $Id: tnftp.h,v 1.4 2005/01/04 23:44:24 lukem Exp $ */
+/*	NetBSD: tnftp.h,v 1.12 2005/05/11 04:21:53 lukem Exp	*/
 
 #define	FTP_PRODUCT	"tnftp"
-#define	FTP_VERSION	"20050103"
+#define	FTP_VERSION	"20050511"
 
 #include "config.h"
 
@@ -48,9 +48,25 @@
 #  include <sys/poll.h>
 # endif
 #elif HAVE_SELECT
-# define USE_SELECT
-#else
+# ifndef POLLIN
+#  define POLLIN 1
+# endif
+# ifndef POLLOUT
+#  define POLLOUT 4
+# endif
+/* we use select */
+#else /* ! HAVE_POLL && ! HAVE_SELECT */
 # error "no poll() or select() found"
+#endif
+#ifndef INFTIM
+# define INFTIM -1
+#endif
+#if ! HAVE_STRUCT_POLLFD
+struct pollfd {
+	int	fd;
+	short	events;
+	short	revents;
+};
 #endif
 
 #if HAVE_DIRENT_H

@@ -1,4 +1,5 @@
-/*	$NetBSD: ruserpass.c,v 1.2 2005/01/04 23:44:24 lukem Exp $	*/
+/*	NetBSD: ruserpass.c,v 1.4 2005/05/11 02:41:28 lukem Exp	*/
+/*	from	NetBSD: ruserpass.c,v 1.29 2003/08/07 11:13:57 agc Exp	*/
 
 /*
  * Copyright (c) 1985, 1993, 1994
@@ -28,6 +29,17 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
+
+#if 0
+#include <sys/cdefs.h>
+#ifndef lint
+#if 0
+static char sccsid[] = "@(#)ruserpass.c	8.4 (Berkeley) 4/27/95";
+#else
+__RCSID("NetBSD: ruserpass.c,v 1.4 2005/05/11 02:41:28 lukem Exp");
+#endif
+#endif /* not lint */
+#endif
 
 #include "tnftp.h"
 
