@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:10:11 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/05/11 22:01:28 peter Exp $
 
-SHA1 (pflkm-20050118.tar.gz) = 1f03fa4656f23594a260dafd6373b289daad4775
-RMD160 (pflkm-20050118.tar.gz) = 3ac6b17e95ae141b1dd2e4bd44a6124a4863cd1e
-Size (pflkm-20050118.tar.gz) = 886852 bytes
+SHA1 (pflkm-20050511.tar.gz) = 83e9ea9a4c666ddea69a18d63f3f9f8a55e92f0c
+RMD160 (pflkm-20050511.tar.gz) = 8243fed8cbe7eebd9da6e83851700eea6f8d5275
+Size (pflkm-20050511.tar.gz) = 892106 bytes
