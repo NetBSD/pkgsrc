@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2005/05/11 15:57:32 taca Exp $
+
+--- ext/RMagick/rmagick.h.orig	2005-04-29 08:41:54.000000000 +0900
++++ ext/RMagick/rmagick.h
+@@ -61,6 +61,10 @@
+ #undef DegreesToRadians     // defined in ImageMagick.h in 6.0.2
+ #define DegreesToRadians(x) ((x)*3.14159265358979323846/180.0)
+ 
++#define LMAX(a,b) ((((long)(a))>((long)(b)))?((long)(a)):((long)(b))) 
++#define FMAX(a,b) ((((double)(a))>((double)(b)))?((double)(a)):((double)(b))) 
++#define FMIN(a,b) ((((double)(a))<=((double)(b)))?((double)(a)):((double)(b))) 
++
+ typedef ImageInfo Info; // Make type name match class name
+ typedef PixelPacket Pixel;
+ 
