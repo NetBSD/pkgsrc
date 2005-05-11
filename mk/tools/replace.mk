@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.65 2005/05/10 19:06:59 jlam Exp $
+# $NetBSD: replace.mk,v 1.66 2005/05/11 05:05:03 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -854,6 +854,26 @@ ${TOOLS_DEPMETHOD.${_t_}}+=	${TOOLS_DEPENDS.${_t_}}
 
 ######################################################################
 
+# For each tool that pkgsrc requires, make sure that the "TOOL" name
+# points to the real command, e.g., AWK, SED, etc., provided that
+# "TOOL" has been associated with <tool>.
+#
+.for _t_ in ${PKGSRC_USE_TOOLS:O:u}
+_TOOLS_USE_PKGSRC.${_t_}?=	no
+.  if defined(_TOOLS_VARNAME.${_t_})
+.    if !empty(_TOOLS_USE_PKGSRC.${_t_}:M[nN][oO])
+.      if defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
+${_TOOLS_VARNAME.${_t_}}?=	${TOOLS_PLATFORM.${_t_}}
+.      endif
+.    else
+${_TOOLS_VARNAME.${_t_}}?=	${TOOLS_${TOOLS_PLATFORM.${_t_}}}
+.    endif
+.  endif
+.endfor
+.undef _t_
+
+######################################################################
+
 # If we are using the system-supplied tool, create symlinks or wrappers
 # for each of the tools requested.
 #
@@ -865,7 +885,9 @@ ${TOOLS_DEPMETHOD.${_t_}}+=	${TOOLS_DEPENDS.${_t_}}
 #
 # Always set the "TOOLS_TOOL" name for each tool to point to the real
 # command, e.g., TOOLS_TBL, TOOLS_YACC, etc., provided that "TOOL" has
-# been associated with <tool>.
+# been associated with <tool>.  If the "TOOL" name is undefined, then
+# set it to the same value to provide a simple name for use by package
+# Makefiles.
 #
 .for _t_ in ${_USE_TOOLS}
 .  if !defined(TOOLS_IGNORE.${_t_}) && \
@@ -887,24 +909,9 @@ TOOLS_${_TOOLS_VARNAME.${_t_}}=	${_TOOLS_VARNAME.${_t_}}_not_defined_
 .      endif
 .    endif
 .  endif
-.endfor
-.undef _t_
-
-######################################################################
-
-# For each tool that pkgsrc requires, make sure that the "TOOL" name
-# points to the real command, e.g., AWK, SED, etc., provided that
-# "TOOL" has been associated with <tool>.
-#
-.for _t_ in ${PKGSRC_USE_TOOLS:O:u}
-_TOOLS_USE_PKGSRC.${_t_}?=	no
 .  if defined(_TOOLS_VARNAME.${_t_})
-.    if !empty(_TOOLS_USE_PKGSRC.${_t_}:M[nN][oO])
-.      if defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
-${_TOOLS_VARNAME.${_t_}}?=	${TOOLS_PLATFORM.${_t_}}
-.      endif
-.    else
-${_TOOLS_VARNAME.${_t_}}?=	${TOOLS_${TOOLS_PLATFORM.${_t_}}}
+.    if defined(TOOLS_${_TOOLS_VARNAME.${_t_}})
+${_TOOLS_VARNAME.${_t_}}?=	${TOOLS_${_TOOLS_VARNAME.${_t_}}}
 .    endif
 .  endif
 .endfor
