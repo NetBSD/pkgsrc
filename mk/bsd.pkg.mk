@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1641 2005/05/12 18:07:30 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1642 2005/05/12 20:41:10 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -999,14 +999,8 @@ DEPENDS:=	${REDUCED_DEPENDS}
 
 # Find out the PREFIX of dependencies where the PREFIX is needed at build time.
 .if defined(EVAL_PREFIX)
-.  for def in ${EVAL_PREFIX}
-.    if !defined(${def:C/=.*$//})
-${def:C/=.*$//}_DEFAULT?=${LOCALBASE}
-_${def:C/=.*$//}_CMD=	${PKG_INFO} -qp ${def:C/^.*=//} 2>/dev/null | ${AWK} '{ print $$2; exit }' | ${GREP} . || ${ECHO} ${${def:C/=.*$//}_DEFAULT}
-${def:C/=.*$//}=	${_${def:C/=.*$//}_CMD:sh}
-MAKEFLAGS+=		${def:C/=.*//}=${_${def:C/=.*$//}_CMD:sh}
-.    endif
-.  endfor
+FIND_PREFIX:=	${EVAL_PREFIX}
+.  include "../../mk/find-prefix.mk"
 .endif
 
 .if !defined(_PATH_ORIG)
