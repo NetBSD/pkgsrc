@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24.2.1 2005/04/16 13:48:59 salo Exp $
+# $NetBSD: Makefile.common,v 1.24.2.2 2005/05/12 14:44:19 salo Exp $
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -47,13 +47,6 @@ MASTER_SITES+=		${_site_}contrib/
 .  endfor
 .endif
 
-# suffix gtk2 builds with -gtk2
-.if defined(MOZ_GTK2) && ${MOZ_GTK2} == "YES"
-MOZ_EXTRA?=	-gtk2
-.else
-MOZ_EXTRA?=	# empty
-.endif
-
 MOZILLA_LIB=	${PREFIX}/lib/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM}
 
 FILES_SUBST+=	MOZILLA=${MOZILLA}
@@ -81,7 +74,7 @@ _COMPAT16_LIBSTDCXX=	YES
 .    endif
 .  endif
 
-# gtk2 builds.
+# GTK2 builds.
 .  if defined(MOZ_GTK2) && ${MOZ_GTK2} == "YES"
 .    if ${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "netbsd"
 DEPENDS+=	gtk2+>=2.4:../../x11/gtk2
@@ -166,6 +159,7 @@ post-install:
 	@cd ${MOZILLA_LIB} && \
 		${LN} -s ${PREFIX}/emul/netbsd16/usr/lib/libstdc++.so* .
 .endif
+	@${INSTALL_DATA_DIR} ${PREFIX}/lib/mozilla-linux/plugins
 	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${ECHO} bin/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM} >> ${PLIST_SRC}
 	@${FIND} ${MOZILLA_LIB} \( -type f -o -type l \) -print		\
@@ -174,5 +168,6 @@ post-install:
 	@${FIND} ${MOZILLA_LIB} -type d -print				\
 		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
+	@${ECHO} @exec ${MKDIR} %D/lib/mozilla-linux/plugins >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
