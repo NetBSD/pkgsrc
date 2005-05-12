@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10069 2005/05/12 13:40:02 tron Exp $
+$NetBSD: CHANGES,v 1.10070 2005/05/12 15:07:26 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2351,3 +2351,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated suse91_x11 to 9.1nb2 [skrll 2005-05-12]
 	Updated gaim to 1.3.0 [salo 2005-05-12]
 	Updated mozilla-bin to 1.7.8 [tron 2005-05-12]
+	Updated firefox-bin to 1.0.4 [tron 2005-05-12]
