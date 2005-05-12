@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.9 2005/05/10 19:52:30 jlam Exp $
+# $NetBSD: defaults.mk,v 1.10 2005/05/12 03:57:40 jlam Exp $
 
 .if !defined(TOOLS_DEFAULTS_MK)
 TOOLS_DEFAULTS_MK=	defined
@@ -92,7 +92,10 @@ _TOOLS_VARNAME.yacc=		YACC
 .for _t_ in ${PKGSRC_USE_TOOLS:O:u}
 .  if defined(_TOOLS_VARNAME.${_t_}) && \
       defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
-${_TOOLS_VARNAME.${_t_}}?=	${TOOLS_PLATFORM.${_t_}}
+.    for _v_ in ${_TOOLS_VARNAME.${_t_}}
+${_v_}?=	${TOOLS_PLATFORM.${_t_}}
+.    endfor
+.    undef _v_
 .  endif
 .endfor
 .undef _t_
