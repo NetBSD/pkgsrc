@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10072 2005/05/12 17:55:33 kristerw Exp $
+$NetBSD: CHANGES,v 1.10073 2005/05/12 20:20:21 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2354,3 +2354,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated firefox-bin to 1.0.4 [tron 2005-05-12]
 	Updated squid to 2.5.9nb11 [taca 2005-05-12]
 	Updated nhc98 to 1.18nb1 [kristerw 2005-05-12]
+	Updated ht to 0.9.0 [jmmv 2005-05-12]
