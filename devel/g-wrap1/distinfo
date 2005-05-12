@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:14 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/05/12 07:15:31 minskim Exp $
 
 SHA1 (g-wrap-1.3.4.tar.gz) = 764f1c878e18341bf437f3e1ddc5f8618019bfc2
 RMD160 (g-wrap-1.3.4.tar.gz) = 64eddd127e24df11067b498d0986d8823f012d76
 Size (g-wrap-1.3.4.tar.gz) = 403570 bytes
 SHA1 (patch-aa) = 284e62e9a3456ab03a8337298fde587b2729c786
 SHA1 (patch-ab) = 92f8e1ed55a3ba563837b36e2f39888734aebefe
-SHA1 (patch-ac) = bc59b2fe1aee409f16ad5d8a95bc9ce061499518
+SHA1 (patch-ac) = deac47a7593aeac719f96a881e2e5651a9c661fb
