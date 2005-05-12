@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1640 2005/05/12 01:14:05 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1641 2005/05/12 18:07:30 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -5026,8 +5026,10 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 .  if !empty(PKG_PHASE:M${_phase_})
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
 .    for _var_ in ${MAKEVARS:O:u}
+.      if defined(${_var_})
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} ${_var_}"=	"${${_var_}:Q} >> ${.TARGET}.tmp
+.      endif
 .    endfor
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} -f ${.TARGET}.tmp; then				\
