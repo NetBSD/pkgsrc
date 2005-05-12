@@ -1,0 +1,17 @@
+$NetBSD: patch-ai,v 1.1 2005/05/12 08:32:51 rillig Exp $
+
+These macros hide the crypt(3) function on NetBSD.
+
+--- ircd/ircd_xopen.c.orig	Sat Apr 21 23:49:12 2001
++++ ircd/ircd_xopen.c	Thu May 12 10:17:41 2005
+@@ -20,8 +20,10 @@
+  */
+ #include "config.h"
+ 
++#ifndef __NetBSD__
+ #define _XOPEN_SOURCE
+ #define _XOPEN_VERSION 4
++#endif
+ #include "ircd_xopen.h"
+ 
+ #include <assert.h>

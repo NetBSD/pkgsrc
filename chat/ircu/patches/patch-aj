@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1 2005/05/12 08:32:51 rillig Exp $
+
+These macros hide the crypt(3) function.
+
+--- tools/mkpasswd.c.orig	Fri Apr  7 16:53:35 2000
++++ tools/mkpasswd.c	Sat Apr  9 00:53:30 2005
+@@ -2,9 +2,15 @@
+  * copyright 1991, all rights reserved.
+  * You can use this code as long as my name stays with it.
+  */
++#ifndef __NetBSD__
+ #define _XOPEN_SOURCE
+ #define _XOPEN_VERSION 4
+ #define _XOPEN_SOURCE_EXTENDED
++#endif
++
++#ifdef __NetBSD__
++#include <pwd.h>
++#endif
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
