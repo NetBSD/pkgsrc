@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.91 2005/05/11 14:19:02 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.92 2005/05/12 14:46:05 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -191,3 +191,9 @@ Pullup ticket 489 - requested by Min Sik Kim
 portability fix for pdflib
 Pullup ticket 490 - requested by Takahiro Kambe
 security update for ipsec-tools
+Pullup ticket 480 - requested by Mark Davies
+fir for regression in kdelibs3
+Pullup ticket 481 - requested by Mark Davies
+security fix for kdewebdev3
+Pullup ticket 496 - requested by Matthias Scheler
+security update for mozilla-bin
