@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.3 2004/07/13 22:01:03 kristerw Exp $
+# $NetBSD: depends.mk,v 1.4 2005/05/12 06:04:09 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -15,6 +15,6 @@
 # perl will be installed, so the DEPENDS line is not needed...
 # This hack should be removed when the bulk-build dependency-
 # tracking has been fixed.
-.if exists(${PERL5}) || defined(${PERL5_PKGSRCDIR})
+.if exists(${PERL5}) || defined(PERL5_PKGSRCDIR)
 DEPENDS+=	{perl{,-thread}>=5.8.3,p5-Test-Harness-[0-9]*}:../../devel/p5-Test-Harness
 .endif
