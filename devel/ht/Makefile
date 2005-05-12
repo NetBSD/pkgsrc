@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:25 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/12 20:19:47 jmmv Exp $
 #
 
-DISTNAME=	ht-0.8.0
+DISTNAME=	ht-0.9.0
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hte/}
