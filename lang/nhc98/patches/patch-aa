@@ -1,7 +1,17 @@
-$NetBSD: patch-aa,v 1.6 2003/03/19 23:14:35 kristerw Exp $
---- configure.orig	Wed Mar 12 23:55:24 2003
-+++ configure	Wed Mar 12 23:57:47 2003
-@@ -363,13 +363,13 @@
+$NetBSD: patch-aa,v 1.7 2005/05/12 17:53:29 kristerw Exp $
+
+--- configure.orig	Fri Mar 11 10:32:56 2005
++++ configure	Wed May 11 20:49:48 2005
+@@ -42,7 +42,7 @@
+ USER=${USER-`whoami 2>/dev/null`}
+ MACHINE=`script/harch`
+ case $MACHINE in
+-  powerpc-Darwin[56]) CCC=${CC-cc};;
++  powerpc-Darwin*)    CCC=gcc;;
+   *)                  CCC=${CC-gcc};;
+ esac
+ PWD=`pwd`
+@@ -382,13 +382,13 @@
        if $CCC -o curses curses.c >/dev/null 2>/dev/null
        then CURSES=""
        else
@@ -18,7 +28,7 @@ $NetBSD: patch-aa,v 1.6 2003/03/19 23:14:35 kristerw Exp $
              then CURSES="-lcurses -ltermcap"
              else CURSES="-ltermcap -lcurses"	# don't know a good default?
              fi
-@@ -386,10 +386,10 @@
+@@ -405,10 +405,10 @@
  
      echo -n "Testing for the readline library: "
      echo 'main(){readline();}' >rd.c
