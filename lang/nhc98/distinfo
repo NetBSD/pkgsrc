@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2005/05/01 22:55:07 kristerw Exp $
+$NetBSD: distinfo,v 1.15 2005/05/12 17:53:29 kristerw Exp $
 
 SHA1 (nhc98src-1.18.tar.gz) = 7de78b449f1e7efc9a12107ff26b441e35b34625
 RMD160 (nhc98src-1.18.tar.gz) = 7b643958cd68c7417c50a66374e1ab20d90d433d
@@ -6,6 +6,6 @@ Size (nhc98src-1.18.tar.gz) = 14509719 bytes
 SHA1 (nhc98-1.18-library-interfaces.tar.gz) = 1a149fc6d01a4fcab4ec65f07b00f1d13cdbe3d5
 RMD160 (nhc98-1.18-library-interfaces.tar.gz) = 480e8c8f9985d396e29661dedf489a5e1bb9c9ba
 Size (nhc98-1.18-library-interfaces.tar.gz) = 116668 bytes
-SHA1 (patch-aa) = ba484e67af2574abda0708f882e4c5f973ef125e
+SHA1 (patch-aa) = b7fe50f0a79c935e980daa9b2d5bb163bf31124e
 SHA1 (patch-ag) = 0c92edc1d6938afe178b5acaacec889e699f4b51
 SHA1 (patch-ah) = 9121f63bbc3d1de26a1b57bab53787e4e8f9a327
