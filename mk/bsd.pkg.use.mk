@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.8 2005/04/09 23:16:45 markd Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.9 2005/05/12 20:31:56 jlam Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -160,13 +160,9 @@ CONFIGURE_ENV+=		PERL=${PERL5:Q}
 .  include "../../lang/perl5/vars.mk"
 .endif       # USE_PERL5 == run
 
-.if defined(PERL5_SUB_INSTALLSITELIB)
+.if defined(USE_PERL5)
 PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SUB_INSTALLSITELIB}
-.endif
-.if defined(PERL5_SUB_INSTALLSITEARCH)
 PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SUB_INSTALLSITEARCH}
-.endif
-.if defined(PERL5_SUB_INSTALLARCHLIB)
 PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_SUB_INSTALLARCHLIB}
 .endif
 
