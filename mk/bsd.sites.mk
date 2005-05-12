@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.33 2005/03/18 13:18:00 wiz Exp $
+# $NetBSD: bsd.sites.mk,v 1.33.2.1 2005/05/12 23:52:23 snj Exp $
 #
 # Default MASTER_SITES
 
@@ -92,8 +92,6 @@ MASTER_SITE_GNOME+=     \
 	ftp://ftp.mirror.ac.uk/sites/ftp.gnome.org/pub/
 
 MASTER_SITE_SOURCEFORGE+=	\
-	http://belnet.dl.sourceforge.net/sourceforge/ \
-	http://citkit.dl.sourceforge.net/sourceforge/ \
 	http://cogent.dl.sourceforge.net/sourceforge/ \
 	http://easynews.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
