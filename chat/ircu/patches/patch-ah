@@ -1,15 +1,14 @@
-$NetBSD: patch-ah,v 1.1 2005/05/12 08:32:51 rillig Exp $
+$NetBSD: patch-ah,v 1.2 2005/05/12 11:09:10 rillig Exp $
 
-Strip debugging CFLAGS correctly. Has been reported upstream.
+Don't strip debugging flags. It is too error-prone.
 
 --- configure.orig	Sat Sep 18 04:17:45 2004
 +++ configure	Thu May 12 09:56:30 2005
-@@ -2370,7 +2370,7 @@ if test x"$CFLAGS" != x; then
+@@ -2370,7 +2370,6 @@ if test x"$CFLAGS" != x; then
  fi
  if test x"$CFLAGS" != x; then
      unet_old_cflags=$CFLAGS
 -    CFLAGS=`echo "$CFLAGS" | sed -e 's/-g//g'`
-+    CFLAGS=`echo "$CFLAGS" | sed -e 's/-g.*//g'`
  fi
  if test x"$CFLAGS" != x"$unet_old_cflags"; then
      # If -g was already there, force symbols to be enabled
