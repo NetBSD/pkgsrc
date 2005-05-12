@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2005/05/07 22:07:39 rillig Exp $
+# $NetBSD: Makefile,v 1.55 2005/05/12 07:12:14 rillig Exp $
 
 DISTNAME=	mc-4.6.1-pre4a
 PKGNAME=	mc-4.6.1rc4
@@ -19,7 +19,7 @@ USE_PKGLOCALEDIR=	YES
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mc
 PKG_SUPPORTED_OPTIONS=	charset edit largefile ncurses samba slang	\
 			subshell vfs x11
-PKG_DEFAULT_OPTIONS=	charset edit largefile slang subshell vfs
+PKG_SUGGESTED_OPTIONS=	charset edit largefile slang subshell vfs
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
