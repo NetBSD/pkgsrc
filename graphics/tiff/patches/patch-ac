@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.14 2004/12/28 23:10:10 reed Exp $
+$NetBSD: patch-ac,v 1.14.2.1 2005/05/12 23:21:16 snj Exp $
 
---- html/man/Makefile.in.orig	Mon Dec 20 11:29:26 2004
-+++ html/man/Makefile.in
-@@ -213,7 +213,7 @@ target_alias = @target_alias@
- target_cpu = @target_cpu@
- target_os = @target_os@
- target_vendor = @target_vendor@
--docdir = $(prefix)/share/doc/$(PACKAGE)-$(VERSION)/html/man
-+docdir = $(prefix)/share/doc/$(PACKAGE)/html/man
- docfiles = \
- 	fax2ps.1.html \
- 	fax2ps.1.html \
+--- libtiff/tiff.h.orig	2005-05-07 09:26:00.000000000 +0900
++++ libtiff/tiff.h
+@@ -81,7 +81,7 @@ typedef	signed char int8;	/* NB: non-ANS
+ typedef	unsigned char uint8;
+ typedef	short int16;
+ typedef	unsigned short uint16;	/* sizeof (uint16) must == 2 */
+-#if defined(__alpha) || (defined(_MIPS_SZLONG) && _MIPS_SZLONG == 64) || defined(__LP64__) || defined(__arch64__)
++#if defined(__alpha) || (defined(_MIPS_SZLONG) && _MIPS_SZLONG == 64) || defined(__LP64__) || defined(__arch64__) || defined(_LP64)
+ typedef	int int32;
+ typedef	unsigned int uint32;	/* sizeof (uint32) must == 4 */
+ #else
