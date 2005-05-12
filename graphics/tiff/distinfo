@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2005/05/07 00:47:29 toshii Exp $
+$NetBSD: distinfo,v 1.29 2005/05/12 12:53:21 salo Exp $
 
 SHA1 (tiff-3.7.2.tar.gz) = 0eb69e88bf6c430160ad2897cd0ae637d507ed66
 RMD160 (tiff-3.7.2.tar.gz) = fb156e17f55b1d565adbc5247f01d836d5f25824
@@ -6,3 +6,4 @@ Size (tiff-3.7.2.tar.gz) = 1260598 bytes
 SHA1 (patch-aa) = 06ecb34e5eeae5650020b456dddd40c8b9fe9647
 SHA1 (patch-ab) = 0363e36d8c7575b4a55fee587aa4d92ee6c6db0b
 SHA1 (patch-ac) = 80c0abc2e8111a9b7608514cce239c8195e44cee
+SHA1 (patch-ad) = 2e448a0491c4137820ec81cf566cf1962fab6045
