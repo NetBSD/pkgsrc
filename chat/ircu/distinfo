@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2005/05/12 08:32:51 rillig Exp $
+$NetBSD: distinfo,v 1.8 2005/05/12 11:09:09 rillig Exp $
 
 SHA1 (ircu2.10.11.07.tar.gz) = 1e1518cbbdf096aaaabf5f56a1ec266769d847ad
 RMD160 (ircu2.10.11.07.tar.gz) = 359f92bb7a4464baf9af571865ee4bf9fbe56426
 Size (ircu2.10.11.07.tar.gz) = 844971 bytes
 SHA1 (patch-af) = da533f03542c268c9e3502278f51777c3b85824d
 SHA1 (patch-ag) = f34df6342c8e26b4cdf59e56c893b4845f7d3974
-SHA1 (patch-ah) = 4a90f7c547d87fe757e4e36dcc23d923a466158c
+SHA1 (patch-ah) = 2124f451c8fa510316f5ff8d80a3cfe89c14ad15
 SHA1 (patch-ai) = 83119426e72a4833460bced3cd11bf47829e8992
 SHA1 (patch-aj) = ac16fd3e8a4c6d7da7e6f5383c746a9cfc2674ea
 SHA1 (patch-ak) = dec69de5c6b678cb5736173cccc34907d16b1ab8
