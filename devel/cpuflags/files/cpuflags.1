@@ -1,4 +1,4 @@
-.\"	$NetBSD: cpuflags.1,v 1.15 2005/04/29 12:56:05 abs Exp $
+.\"	$NetBSD: cpuflags.1,v 1.16 2005/05/12 10:53:07 abs Exp $
 .Dd May 31, 2001
 .Dt CPUFLAGS 1
 .Os
@@ -70,7 +70,7 @@ optimize_gcc.mk. This is unsupported, but for full effect add the following to
 On all except low memory machines compliation can be speeded up by adding the
 following to /etc/mk.conf. (Note this will not affect the binaries produced)
 .Bd -literal -offset indent
-COPTS+=-pipe
+COPTS?= -pipe ${DEFCOPTS}
 CFLAGS+=-pipe
 .Ed
 .Sh BUGS
