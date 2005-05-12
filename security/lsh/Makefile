@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:18:10 tv Exp $
+# $NetBSD: Makefile,v 1.5.4.1 2005/05/12 22:36:02 snj Exp $
 #
 
 DISTNAME=		lsh-1.4.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.lysator.liu.se/pub/security/lsh/
 
