@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 18:49:20 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/05/12 06:12:51 skrll Exp $
 
-SHA1 (suse91/i586/XFree86-libs-4.3.99.902-43.35.3.i586.rpm) = 15a3cf59b38fbdc1b341b4df7e2a972ba3c437e7
-RMD160 (suse91/i586/XFree86-libs-4.3.99.902-43.35.3.i586.rpm) = 69fe99792dba937d70b5d8de42a11ffd6b0af32c
-Size (suse91/i586/XFree86-libs-4.3.99.902-43.35.3.i586.rpm) = 2404743 bytes
+SHA1 (suse91/i586/XFree86-libs-4.3.99.902-43.42.5.i586.rpm) = 49f0132b77de5f95f79b13d83eb78428e4132068
+RMD160 (suse91/i586/XFree86-libs-4.3.99.902-43.42.5.i586.rpm) = aeac575e06a2e52d78f1c5c5c4a225049d5eeb47
+Size (suse91/i586/XFree86-libs-4.3.99.902-43.42.5.i586.rpm) = 2405156 bytes
