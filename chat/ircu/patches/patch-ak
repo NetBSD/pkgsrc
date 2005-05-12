@@ -1,0 +1,19 @@
+$NetBSD: patch-ak,v 1.1 2005/05/12 08:32:51 rillig Exp $
+
+A va_list may be an array type which cannot be copied using plain ISO
+C90.
+
+--- ircd/ircd_log.c.orig	Sat Aug 24 18:08:48 2002
++++ ircd/ircd_log.c	Sat Apr  9 01:00:57 2005
+@@ -395,7 +395,11 @@ log_vwrite(enum LogSys subsys, enum LogL
+ 
+   /* Build the basic log string */
+   vd.vd_format = fmt;
++#ifdef va_copy
++  va_copy(vd.vd_args, vl);
++#else
+   vd.vd_args = vl;
++#endif
+ 
+   /* save the length for writev */
+   /* Log format: "SYSTEM [SEVERITY]: log message" */
