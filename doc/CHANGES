@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10070 2005/05/12 15:07:26 tron Exp $
+$NetBSD: CHANGES,v 1.10071 2005/05/12 16:10:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2352,3 +2352,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gaim to 1.3.0 [salo 2005-05-12]
 	Updated mozilla-bin to 1.7.8 [tron 2005-05-12]
 	Updated firefox-bin to 1.0.4 [tron 2005-05-12]
+	Updated squid to 2.5.9nb11 [taca 2005-05-12]
