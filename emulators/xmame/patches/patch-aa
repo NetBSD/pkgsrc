@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.35 2004/11/06 21:41:52 kristerw Exp $
+$NetBSD: patch-aa,v 1.36 2005/05/12 22:35:18 kristerw Exp $
 
---- makefile.unix.orig	Sat Nov  6 21:34:15 2004
-+++ makefile.unix	Sat Nov  6 21:37:27 2004
+--- makefile.unix.orig	2005-05-12 23:02:10.000000000 +0200
++++ makefile.unix	2005-05-12 23:07:19.000000000 +0200
 @@ -33,7 +33,7 @@
  ###########################################################################
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.35 2004/11/06 21:41:52 kristerw Exp $
  # TARGET = mess
  # TARGET = mage
  # TARGET = mmsnd
-@@ -89,7 +89,7 @@
+@@ -88,7 +88,7 @@
  # just as well.  However, stay away from the `cc' Ultrix compiler if 
  # possible.
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.35 2004/11/06 21:41:52 kristerw Exp $
  # CC    = cc
  # CC	= icc
  # CC	= c89
-@@ -110,7 +110,7 @@
+@@ -109,7 +109,7 @@
  
  # If you want to use whatever CFLAGS are currently set in your 
  # environment, then comment this out.
@@ -29,16 +29,16 @@ $NetBSD: patch-aa,v 1.35 2004/11/06 21:41:52 kristerw Exp $
  
  
  ###########################################################################
-@@ -119,7 +119,7 @@
+@@ -118,7 +118,7 @@
  ###########################################################################
  
  # GCC on x86
--CFLAGS = -O -Wall -Wno-unused
-+# CFLAGS = -O -Wall -Wno-unused
+-CFLAGS = -O2 -Wall -Wno-unused
++# CFLAGS = -O2 -Wall -Wno-unused
  
  # GCC on x86 with some optimizations
  # CFLAGS = -O2 -Wall -Wno-unused -mcpu=i686 -fomit-frame-pointer \
-@@ -508,7 +508,7 @@
+@@ -523,7 +523,7 @@
  ###########################################################################
  
  # i386, GNU asm
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.35 2004/11/06 21:41:52 kristerw Exp $
  
  # i386, no asm -- needed for the Intel C++ compiler, which does not fully
  # understand GCC's inline assembly syntax, though you may still enable 
-@@ -543,7 +543,7 @@
+@@ -558,7 +558,7 @@
  ###########################################################################
  
  # Linux 
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.35 2004/11/06 21:41:52 kristerw Exp $
  
  # FreeBSD
  # ARCH  = freebsd
-@@ -694,7 +694,7 @@
+@@ -701,7 +701,7 @@
  X11_MITSHM = 1
  
  # Use Xv extension for hardware scaling.
@@ -65,7 +65,7 @@ $NetBSD: patch-aa,v 1.35 2004/11/06 21:41:52 kristerw Exp $
  
  # Enable XFree86 DGA.  This also causes "make install" to set the suid bit 
  # on the executable.
-@@ -716,8 +716,8 @@
+@@ -725,8 +725,8 @@
  # X11LIB		= -L/usr/lib/X11
  
  # Standard location for XFree86
