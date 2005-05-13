@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.70 2005/05/13 21:57:13 jlam Exp $
+# $NetBSD: replace.mk,v 1.71 2005/05/13 22:08:20 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -556,6 +556,18 @@ TOOLS_${_TOOLS_VARNAME.lex}=	${TOOLS_REAL_CMD.lex}
 .  endif
 .endif
 
+.if !defined(TOOLS_IGNORE.lha) && !empty(_USE_TOOLS:Mlha)
+.  if !empty(PKGPATH:Marchivers/lha)
+MAKEFLAGS+=			TOOLS_IGNORE.lha=
+.  elif !empty(_TOOLS_USE_PKGSRC.lha:M[yY][eE][sS])
+TOOLS_DEPENDS.lha?=		lha>=114.9:../../archivers/lha
+TOOLS_CREATE+=			lha
+EVAL_PREFIX+=			TOOLS_PREFIX.lha=lha
+TOOLS_REAL_CMD.lha=		${TOOLS_PREFIX.lha}/bin/lha
+TOOLS_${_TOOLS_VARNAME.lha}=	${TOOLS_REAL_CMD.lha}
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.ln) && !empty(_USE_TOOLS:Mln)
 .  if !empty(PKGPATH:Msysutils/coreutils)
 MAKEFLAGS+=			TOOLS_IGNORE.ln=
@@ -863,6 +875,42 @@ TOOLS_CREATE+=			tsort
 EVAL_PREFIX+=			TOOLS_PREFIX.tsort=coreutils
 TOOLS_REAL_CMD.tsort=		${TOOLS_PREFIX.tsort}/bin/${GNU_PROGRAM_PREFIX}tsort
 TOOLS_${_TOOLS_VARNAME.tsort}=	${TOOLS_REAL_CMD.tsort}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.unrar) && !empty(_USE_TOOLS:Munrar)
+.  if !empty(PKGPATH:Marchivers/unrar)
+MAKEFLAGS+=			TOOLS_IGNORE.unrar=
+.  elif !empty(_TOOLS_USE_PKGSRC.unrar:M[yY][eE][sS])
+TOOLS_DEPENDS.unrar?=		unrar>=3.3.4:../../archivers/unrar
+TOOLS_CREATE+=			unrar
+EVAL_PREFIX+=			TOOLS_PREFIX.unrar=unrar
+TOOLS_REAL_CMD.unrar=		${TOOLS_PREFIX.unrar}/bin/unrar
+TOOLS_${_TOOLS_VARNAME.unrar}=	${TOOLS_REAL_CMD.unrar}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.unzip) && !empty(_USE_TOOLS:Munzip)
+.  if !empty(PKGPATH:Marchivers/unzip)
+MAKEFLAGS+=			TOOLS_IGNORE.unzip=
+.  elif !empty(_TOOLS_USE_PKGSRC.unzip:M[yY][eE][sS])
+TOOLS_DEPENDS.unzip?=		unzip-[0-9]*:../../archivers/unzip
+TOOLS_CREATE+=			unzip
+EVAL_PREFIX+=			TOOLS_PREFIX.unzip=unzip
+TOOLS_REAL_CMD.unzip=		${TOOLS_PREFIX.unzip}/bin/unzip
+TOOLS_${_TOOLS_VARNAME.unzip}=	${TOOLS_REAL_CMD.unzip}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.unzoo) && !empty(_USE_TOOLS:Munzoo)
+.  if !empty(PKGPATH:Marchivers/unzoo)
+MAKEFLAGS+=			TOOLS_IGNORE.unzoo=
+.  elif !empty(_TOOLS_USE_PKGSRC.unzoo:M[yY][eE][sS])
+TOOLS_DEPENDS.unzoo?=		unzoo-[0-9]*:../../archivers/unzoo
+TOOLS_CREATE+=			unzoo
+EVAL_PREFIX+=			TOOLS_PREFIX.unzoo=unzoo
+TOOLS_REAL_CMD.unzoo=		${TOOLS_PREFIX.unzoo}/bin/unzoo
+TOOLS_${_TOOLS_VARNAME.unzoo}=	${TOOLS_REAL_CMD.unzoo}
 .  endif
 .endif
 
