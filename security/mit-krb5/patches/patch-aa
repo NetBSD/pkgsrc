@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
+$NetBSD: patch-aa,v 1.1.1.1.8.1 2005/05/13 10:08:52 salo Exp $
 
---- aclocal.m4.orig	Wed May 28 00:06:24 2003
+--- aclocal.m4.orig	2005-01-14 19:10:44.000000000 -0500
 +++ aclocal.m4
-@@ -970,8 +970,10 @@ dnl Pull in the necessary stuff to creat
+@@ -1113,8 +1113,10 @@ dnl Pull in the necessary stuff to creat
  
  AC_DEFUN(KRB5_BUILD_LIBRARY,
  [KRB5_BUILD_LIBRARY_WITH_DEPS
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
  
  dnl
  dnl KRB5_BUILD_LIBRARY_STATIC
-@@ -1015,6 +1017,9 @@ AC_SUBST(SHLIBVEXT)
+@@ -1162,6 +1164,9 @@ AC_SUBST(SHLIBVEXT)
  AC_SUBST(SHLIBSEXT)
  AC_SUBST(DEPLIBEXT)
  AC_SUBST(PFLIBEXT)
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
  AC_SUBST(LIBINSTLIST)])
  
  dnl
-@@ -1028,6 +1033,7 @@ AC_SUBST(OBJLISTS)
+@@ -1175,6 +1180,7 @@ AC_SUBST(OBJLISTS)
  AC_SUBST(STOBJEXT)
  AC_SUBST(SHOBJEXT)
  AC_SUBST(PFOBJEXT)
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
  AC_SUBST(PICFLAGS)
  AC_SUBST(PROFFLAGS)])
  
-@@ -1077,6 +1083,8 @@ else
+@@ -1226,6 +1232,8 @@ else
  	LIBINSTLIST=install-static
  	DEPLIBEXT=$STLIBEXT
  fi
@@ -42,9 +42,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
  
  # Check whether to build shared libraries.
  AC_ARG_ENABLE([shared],
-@@ -1138,8 +1146,35 @@ fi],
+@@ -1284,8 +1292,35 @@ else
  	SHLIBSEXT=.so.s-nobuild
- )dnl
+ fi
  
 +# Check whether to build libtool archives.
 +AC_ARG_ENABLE([pkgsrc-libtool],
@@ -55,8 +55,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
 +	*)	LIBTOOL=libtool ;;
 +	esac
 +	AC_MSG_RESULT([Enabling libtool archives.])
-+	LIBLIST='lib$(LIB)$(LALIBEXT)'
-+	LIBLINKS='$(TOPLIBD)/lib$(LIB)$(LALIBEXT)'
++	LIBLIST='lib$(LIBBASE)$(LALIBEXT)'
++	LIBLINKS='$(TOPLIBD)/lib$(LIBBASE)$(LALIBEXT)'
 +	OBJLISTS=OBJS.LA
 +	LIBINSTLIST=install-libtool
 +	DEPLIBEXT=$LALIBEXT

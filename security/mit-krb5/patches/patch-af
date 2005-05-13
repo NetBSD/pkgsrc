@@ -1,20 +1,21 @@
-$NetBSD: patch-af,v 1.2 2004/03/30 20:17:42 jlam Exp $
+$NetBSD: patch-af,v 1.2.8.1 2005/05/13 10:08:52 salo Exp $
 
---- config/pre.in.orig	Fri Feb 13 16:36:22 2004
+--- config/pre.in.orig	2004-11-19 16:47:51.000000000 -0500
 +++ config/pre.in
-@@ -138,6 +138,7 @@ ALL_CFLAGS = $(DEFS) $(DEFINES) $(KRB_IN
- CFLAGS = @CFLAGS@
+@@ -159,6 +159,7 @@ CFLAGS = @CFLAGS@
+ PTHREAD_CFLAGS = @PTHREAD_CFLAGS@
  CPPFLAGS = @CPPFLAGS@
  DEFS = @DEFS@
 +LIBTOOL = @LIBTOOL@
  CC = @CC@
  LD = $(PURE) @LD@
  DEPLIBS = @DEPLIBS@
-@@ -155,10 +156,12 @@ CLNTDEPLIBS = @CLNTDEPLIBS@
+@@ -176,11 +177,12 @@ CLNTDEPLIBS = @CLNTDEPLIBS@
  
  INSTALL=@INSTALL@
  INSTALL_STRIP=
 -INSTALL_PROGRAM=@INSTALL_PROGRAM@ $(INSTALL_STRIP)
+-INSTALL_SCRIPT=@INSTALL_PROGRAM@
 +INSTALL_LIBTOOL=@INSTALL_LIBTOOL@
 +INSTALL_PROGRAM=$(INSTALL_LIBTOOL) @INSTALL_PROGRAM@ $(INSTALL_STRIP)
 +INSTALL_SCRIPT=@INSTALL_SCRIPT@
@@ -25,7 +26,7 @@ $NetBSD: patch-af,v 1.2 2004/03/30 20:17:42 jlam Exp $
  ## This is needed because autoconf will sometimes define @exec_prefix@ to be
  ## ${prefix}.
  prefix=@prefix@
-@@ -274,6 +277,10 @@ RPATH_FLAG=@RPATH_FLAG@
+@@ -298,6 +300,10 @@ RPATH_FLAG=@RPATH_FLAG@
  # depending on whether we're building with shared libraries.
  DEPLIBEXT=@DEPLIBEXT@
  
@@ -36,23 +37,25 @@ $NetBSD: patch-af,v 1.2 2004/03/30 20:17:42 jlam Exp $
  KADMCLNT_DEPLIB	= $(TOPLIBD)/libkadm5clnt$(DEPLIBEXT)
  KADMSRV_DEPLIB	= $(TOPLIBD)/libkadm5srv$(DEPLIBEXT)
  KDB5_DEPLIB	= $(TOPLIBD)/libkdb5$(DEPLIBEXT)
-@@ -290,12 +297,12 @@ COM_ERR_DEPLIB	= $(COM_ERR_DEPLIB-@COM_E
- COM_ERR_DEPLIB-sys = # empty
- COM_ERR_DEPLIB-k5 = $(TOPLIBD)/libcom_err$(DEPLIBEXT)
+@@ -316,13 +322,13 @@ COM_ERR_DEPLIB-k5 = $(TOPLIBD)/libcom_er
+ SUPPORT_LIBNAME=krb5support
+ SUPPORT_DEPLIB	= $(TOPLIBD)/lib$(SUPPORT_LIBNAME)$(DEPLIBEXT)
  
 -# These are forced to use ".a" as an extension because they're never
-+# These are forced to use "@DEPSTLIBEXT@" as an extension because they're never
++# These are forced to use "@DEPSTLIBEXT" as an extension because they're never
  # built shared.
  SS_DEPLIB	= $(SS_DEPLIB-@SS_VERSION@)
 -SS_DEPLIB-k5	= $(TOPLIBD)/libss.a
 +SS_DEPLIB-k5	= $(TOPLIBD)/libss$(DEPSTLIBEXT)
  SS_DEPLIB-sys	=
 -PTY_DEPLIB	= $(TOPLIBD)/libpty.a
+-APPUTILS_DEPLIB	= $(TOPLIBD)/libapputils.a
 +PTY_DEPLIB	= $(TOPLIBD)/libpty$(DEPSTLIBEXT)
++APPUTILS_DEPLIB	= $(TOPLIBD)/libapputils$(DEPSTLIBEXT)
  
- KRB5_BASE_DEPLIBS	= $(KRB5_DEPLIB) $(CRYPTO_DEPLIB) $(COM_ERR_DEPLIB)
+ KRB5_BASE_DEPLIBS	= $(KRB5_DEPLIB) $(CRYPTO_DEPLIB) $(COM_ERR_DEPLIB) $(SUPPORT_DEPLIB)
  KRB4COMPAT_DEPLIBS	= $(KRB4_DEPLIB) $(DES425_DEPLIB) $(KRB5_BASE_DEPLIBS)
-@@ -336,7 +343,7 @@ GEN_LIB		= @GEN_LIB@
+@@ -363,7 +369,7 @@ GEN_LIB		= @GEN_LIB@
  
  SS_LIB		= $(SS_LIB-@SS_VERSION@)
  SS_LIB-sys	= @SS_LIB@
@@ -61,23 +64,17 @@ $NetBSD: patch-af,v 1.2 2004/03/30 20:17:42 jlam Exp $
  KDB5_LIB	= -lkdb5
  DB_LIB		= @DB_LIB@
  KDB5_DB_LIB	= @KDB5_DB_LIB@
-@@ -459,15 +466,23 @@ SHLIBEXT=@SHLIBEXT@
+@@ -494,6 +500,9 @@ SHLIBEXT=@SHLIBEXT@
  # usually _p.a
  PFLIBEXT=@PFLIBEXT@
  
 +# usually .la
 +LALIBEXT=@LALIBEXT@
 +
- # "cc -G", "ld -Bshareable", etc.
- LDCOMBINE=@LDCOMBINE@
- 
- # Misc args to tack on the tail of LDCOMBINE
- LDCOMBINE_TAIL=@LDCOMBINE_TAIL@
- 
-+# Args to tack on the tail of LIBTOOL to generate versioned, installable
-+# libtool archives.
-+LIBTOOL_TAIL=@LIBTOOL_TAIL@
-+
+ # File with symbol names to be exported, both functions and data,
+ # currently not distinguished.
+ SHLIB_EXPORT_FILE=$(srcdir)/lib$(LIBBASE).exports
+@@ -511,6 +520,7 @@ MAKE_SHLIB_COMMAND=@MAKE_SHLIB_COMMAND@
  # flags for explicit libraries depending on this one,
  # e.g. "-R$(SHLIB_RPATH) $(SHLIB_SHLIB_DIRFLAGS) $(SHLIB_EXPLIBS)"
  SHLIB_EXPFLAGS=@SHLIB_EXPFLAGS@
@@ -85,7 +82,7 @@ $NetBSD: patch-af,v 1.2 2004/03/30 20:17:42 jlam Exp $
  
  ## Parameters to be set by configure for use in libobj.in:
  
-@@ -479,6 +494,7 @@ OBJLISTS=@OBJLISTS@
+@@ -522,6 +532,7 @@ OBJLISTS=@OBJLISTS@
  # the suffix substitution will break on some platforms!
  SHLIBOBJS=$(STLIBOBJS:.o=@SHOBJEXT@)
  PFLIBOBJS=$(STLIBOBJS:.o=@PFOBJEXT@)
@@ -93,3 +90,14 @@ $NetBSD: patch-af,v 1.2 2004/03/30 20:17:42 jlam Exp $
  
  # "$(CC) -G", "$(LD) -Bshareable", etc.
  LDCOMBINE=@LDCOMBINE@
+@@ -529,6 +540,10 @@ LDCOMBINE=@LDCOMBINE@
+ # "-h $@", "-h lib$(LIBNAME).$(LIBMAJOR)", etc.
+ SONAME=@SONAME@
+ 
++# Args to tack on the tail of LIBTOOL to generate versioned, installable
++# libtool archives.
++LIBTOOL_TAIL=@LIBTOOL_TAIL@
++
+ #
+ # rules to make various types of object files
+ #
