@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.190 2005/05/10 19:06:58 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.191 2005/05/13 17:22:43 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -278,7 +278,7 @@ PKGSRC_USE_TOOLS+=	[ awk dirname echo grep pwd sed test true
 #
 PKGSRC_USE_TOOLS+=	date tr
 
-_USE_NEW_TOOLS?=	no
+_USE_NEW_TOOLS?=	yes
 .if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 .include "${_PKGSRC_TOPDIR}/mk/tools/defaults.mk"
 .endif
