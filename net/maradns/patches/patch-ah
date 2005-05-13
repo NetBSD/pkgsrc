@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2005/05/13 13:25:55 salo Exp $
+
+--- tools/Makefile.orig	2003-08-02 21:39:36.000000000 +0200
++++ tools/Makefile	2005-05-13 14:56:09.000000000 +0200
+@@ -7,7 +7,7 @@
+ POBJECTS=../parse/ParseCsv1.o ../parse/ParseMaraRc.o
+ EXECS=askmara strip.control benchmark 
+ 
+-FLAGS = -g -O2 $(DEBUG)
++FLAGS = -g -O2 $(DEBUG) $(CFLAGS) $(LDFLAGS)
+ #FLAGS = -g $(DEBUG)
+ 
+ all: $(EXECS)

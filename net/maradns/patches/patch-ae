@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2005/05/13 13:25:55 salo Exp $
+
+--- dns/Makefile.orig	2003-08-02 21:39:36.000000000 +0200
++++ dns/Makefile	2005-05-13 14:52:40.000000000 +0200
+@@ -3,7 +3,7 @@
+ MJOBJS=../libs/MaraHash.o
+ OBJECTS=$(DOBJECTS) $(JOBJS) $(MJOBJS)
+ 
+-FLAGS = -g -O2 -Wall $(DEBUG)
++FLAGS = -g -O2 -Wall $(DEBUG) $(CFLAGS)
+ #FLAGS = -g $(DEBUG)
+ 
+ all: Queries.o Compress.o bobbit.o Decompress.o
