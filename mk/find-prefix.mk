@@ -1,4 +1,4 @@
-# $NetBSD: find-prefix.mk,v 1.2 2005/05/12 21:56:11 jlam Exp $
+# $NetBSD: find-prefix.mk,v 1.3 2005/05/13 23:37:54 jlam Exp $
 #
 # This is a "subroutine" that can be included to find the installation
 # prefix of a package.
@@ -20,8 +20,11 @@
 ${_def_:C/=.*$//}_DEFAULT?=	${LOCALBASE}
 _${_def_:C/=.*$//}_cmd=		\
 	${PKG_INFO} -qp ${_def_:C/^.*=//} 2>/dev/null |			\
-	${AWK} '{ print $$2; exit }' | ${GREP} . ||			\
-	${ECHO} ${${_def_:C/=.*$//}_DEFAULT:Q}
+	{ read cmd arg;							\
+	  case "$$arg" in						\
+	  "")	${ECHO} ${${_def_:C/=.*$//}_DEFAULT:Q} ;;		\
+	  *)	${ECHO} "$$arg" ;;					\
+	  esac; }
 ${_def_:C/=.*$//}=		${_${_def_:C/=.*$//}_cmd:sh}
 .  endif
 MAKEVARS+=	${_def_:C/=.*$//}
