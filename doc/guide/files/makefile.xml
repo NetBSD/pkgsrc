@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.7 2005/05/13 22:48:09 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.8 2005/05/13 23:28:08 rillig Exp $ -->
 
 <!-- based on:
 pkgsrc/bootstrap/bmake/for.c 1.1.1.1
@@ -98,6 +98,24 @@ pkgsrc/bootstrap/bmake/var.c 1.2
       <varname>MASTER_SITES</varname>.</para></listitem>
 
     </itemizedlist>
+
+    <sect2 id="makefile.variables.names">
+      <title>Naming conventions</title>
+
+      <itemizedlist>
+
+        <listitem><para>All variable names starting with an underscore
+	are reserved for use by the pkgsrc infrastructure. They shall
+	not be used by package
+	<filename>Makefile</filename>s.</para></listitem>
+
+        <listitem><para>In <!-- FIXME --><varname>.for</varname> loops
+	you should use lowercase variable names for the iteration
+	variables.</para></listitem>
+
+      </itemizedlist>
+    </sect2>
+
   </sect1>
 
   <sect1 id="makefile.code">
