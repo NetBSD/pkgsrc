@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/01/18 22:37:04 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/13 19:01:18 minskim Exp $
 #
 
 DISTNAME=	shlock-20020114
@@ -20,6 +20,8 @@ PLIST_SRC=	${WRKDIR}/PLIST
 BUILD_DEFS+=	MANINSTALL
 
 MAKE_ENV+=	BINDIR=${LOCALBASE}/bin MANDIR=${LOCALBASE}/man
+MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
+MAKE_ENV+=	MANOWN=${BINOWN} MANGRP=${BINGRP}
 
 .include "../../mk/bsd.prefs.mk"
 
