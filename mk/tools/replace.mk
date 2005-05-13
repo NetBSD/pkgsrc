@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.69 2005/05/12 03:57:40 jlam Exp $
+# $NetBSD: replace.mk,v 1.70 2005/05/13 21:57:13 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -927,10 +927,10 @@ _TOOLS_USE_PKGSRC.${_t_}?=	no
 .  if defined(_TOOLS_VARNAME.${_t_})
 .    if !empty(_TOOLS_USE_PKGSRC.${_t_}:M[nN][oO])
 .      if defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
-${_TOOLS_VARNAME.${_t_}}?=	${TOOLS_PLATFORM.${_t_}}
+${_TOOLS_VARNAME.${_t_}}=	${TOOLS_PLATFORM.${_t_}}
 .      endif
 .    else
-${_TOOLS_VARNAME.${_t_}}?=	${TOOLS_${TOOLS_PLATFORM.${_t_}}}
+${_TOOLS_VARNAME.${_t_}}=	${TOOLS_${_TOOLS_VARNAME.${_t_}}}
 .    endif
 .  endif
 .endfor
