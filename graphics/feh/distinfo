@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2005/02/24 08:45:05 agc Exp $
+$NetBSD: distinfo,v 1.12 2005/05/13 13:43:33 drochner Exp $
 
-SHA1 (feh-1.3.0.tar.gz) = 8fef17f807182657da1c25238f181d4816957f1d
-RMD160 (feh-1.3.0.tar.gz) = 25135eadca59bbfc97f2b1bc15b0f5ac2531d919
-Size (feh-1.3.0.tar.gz) = 373405 bytes
+SHA1 (feh-1.3.2.tar.gz) = 132979d9f72fc71957511cd1fa66854ce0c085d6
+RMD160 (feh-1.3.2.tar.gz) = 9b61ea59dc2b99dbe745e18262dea14c726e16bb
+Size (feh-1.3.2.tar.gz) = 376771 bytes
 SHA1 (patch-aa) = 745c9ca77355a0beaacbe32bc33174e8dc057cbd
 SHA1 (patch-ab) = 1899f65deb3a5c3d9825b381298b752f0bec54cc
