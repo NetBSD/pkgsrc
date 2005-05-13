@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/04/11 21:46:27 tv Exp $
+# $NetBSD: Makefile,v 1.31 2005/05/13 02:35:40 jlam Exp $
 
 DISTNAME=	sqwebmail-5.0.1
 PKGBASE=	${DISTNAME:C/-[^-]*$//}
@@ -21,7 +21,8 @@ USE_PERL5=		yes
 .include "../../mail/courier-maildir/Makefile.common"
 .include "../../security/courier-authlib/Makefile.common"
 
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
+INSTALL_AM_MAKEFLAGS=	sysconfdir=${EGDIR}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
 
 SQWEBMAIL_STATEDIR=	${VARBASE}/sqwebmail
 SQWEBMAIL_CACHEDIR=	${SQWEBMAIL_STATEDIR}/logincache
