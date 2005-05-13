@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1643 2005/05/13 16:54:13 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1644 2005/05/13 21:13:01 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -291,9 +291,13 @@ PKG_FAIL_REASON+='ONLY/NOT_FOR_ARCHS/OPSYS are deprecated and must be replaced w
 .if (${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once")
 .  if !defined(OBJHOSTNAME)
 PKG_FAIL_REASON+='PKGSRC_LOCKTYPE needs OBJHOSTNAME defined.'
-.  elif !exists(${SHLOCK})
+.  elif empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+.    if !exists(${SHLOCK})
 PKG_FAIL_REASON+='The ${SHLOCK} utility does not exist, and is necessary for locking.'
 PKG_FAIL_REASON+='Please "${MAKE} install" in ../../pkgtools/shlock.'
+.    endif
+.  else
+PKGSRC_USE_TOOLS+=	shlock
 .  endif
 .endif
 
@@ -968,8 +972,8 @@ PKGSRC_USE_TOOLS+=							\
 	[ awk basename cat chgrp chmod chown cmp cp cut date dirname	\
 	echo egrep env expr false fgrep file find grep gtar gunzip	\
 	gzcat gzip head hostname id install ln ls m4 mkdir mtree mv	\
-	nice pax pwd rm rmdir sed sh shlock sort tail tee test touch tr	\
-	true tsort wc xargs
+	nice pax pwd rm rmdir sed sh sort tail tee test touch tr true	\
+	tsort wc xargs
 
 # We need a mail command to send mail to ${PKGSRC_MESSAGE_RECIPIENTS}.
 .if !empty(PKGSRC_MESSAGE_RECIPIENTS)
