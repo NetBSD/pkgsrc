@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2004/12/28 02:47:49 reed Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2005/05/13 10:08:52 salo Exp $
 
-DISTNAME=	krb5-1.3.6
+DISTNAME=	krb5-1.4
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
 PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/1.3/
+MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/1.4/
 DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tar
 
@@ -44,14 +44,6 @@ CONFIGURE_ARGS+=	--without-krb4
 CONFIGURE_ARGS+=	--without-tcl
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
 
-# XXX Force using the BSD utmp interface on NetBSD until the configure
-# XXX scripts can be taught how to properly detect our utmpx
-# XXX implementation.
-#
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ENV+=		ac_cv_func_setutent=no
-.endif
-
 .if defined(KERBEROS_PREFIX_CMDS) && !empty(KERBEROS_PREFIX_CMDS:M[yY][eE][sS])
 PKG_DEFAULT_OPTIONS+=	prefix-cmds
 .endif
@@ -82,7 +74,7 @@ CONFIGURE_ARGS+=	--program-transform-name="${MIT_KRB5_TRANSFORM}"
 #
 SUBST_CLASSES+=		mit-krb5
 SUBST_STAGE.mit-krb5=	pre-configure
-SUBST_FILES.mit-krb5=	include/krb5/stock/osconf.h
+SUBST_FILES.mit-krb5=	appl/bsd/Makefile.in include/krb5/stock/osconf.h
 SUBST_SED.mit-krb5=	-e "/KRB5_PATH_RLOGIN/s,/rlogin,/${KRB5_PREFIX}rlogin,g"
 
 INFO_FILES=	krb425.info krb5-admin.info krb5-install.info krb5-user.info
@@ -92,7 +84,9 @@ OWN_DIRS_PERMS=		${MIT_KRB5_STATEDIR}/krb5kdc			\
 			${ROOT_USER} ${ROOT_GROUP} 0700
 RCD_SCRIPTS=		kadmind kdc
 
-INSTALLATION_DIRS=	bin info lib sbin
+INSTALLATION_DIRS=	bin include/gssapi include/gssrpc info lib	\
+			man/man1 man/man5 man/man8 sbin			\
+			share/examples/krb5
 
 # The MIT krb5 distribution is actually a tar file that contains the
 # real .tar.gz distfile and a PGP signature.
@@ -110,11 +104,11 @@ pre-configure:
 	done
 
 post-install:
-	cd ${WRKSRC}/../doc; for info in ${INFO_FILES}; do		\
-		${INSTALL_MAN} $$info ${PREFIX}/${INFO_DIR} ;		\
-		for file in $$info-[0-9]*; do				\
-			if [ -f "$$file" ]; then			\
-				${INSTALL_MAN} $$file ${PREFIX}/${INFO_DIR}; \
+	cd ${WRKSRC}/../doc; for i in ${INFO_FILES}; do			\
+		${INSTALL_MAN} $$i ${PREFIX}/${INFO_DIR};		\
+		for f in $$i-[0-9]*; do					\
+			if ${TEST} -f "$$f"; then			\
+				${INSTALL_MAN} "$$f" ${PREFIX}/${INFO_DIR}; \
 			fi;						\
 		done;							\
 	done
