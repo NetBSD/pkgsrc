@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2004/12/29 12:56:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2005/05/13 15:19:27 drochner Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=		1
 
 CONFLICTS+=		glade2-gnome-[0-9]*
 
