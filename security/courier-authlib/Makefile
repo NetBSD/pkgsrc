@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:11 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/13 03:26:44 jlam Exp $
 
 .include "Makefile.common"
 
@@ -56,11 +56,12 @@ AUTHLIB_PLIST=		${AUTHEXAMPLEDIR}/authdaemonrc.dist
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 # Install the example config files into ${EGDIR}.
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
-			authdaemonrc=${EGDIR}/authdaemonrc		\
+INSTALL_AM_MAKEFLAGS=	authdaemonrc=${EGDIR}/authdaemonrc		\
 			authldaprc=${EGDIR}/authldaprc			\
 			authmysqlrc=${EGDIR}/authmysqlrc		\
 			authpgsqlrc=${EGDIR}/authpgsqlrc
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
+			AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
 
 POST_INSTALL_TARGETS=	post-install-common
 
