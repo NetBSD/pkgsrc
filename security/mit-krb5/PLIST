@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/05/03 15:49:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/13 03:54:35 jlam Exp $
 bin/compile_et
 bin/gss-client
 bin/kdestroy
@@ -48,6 +48,7 @@ lib/libkadm5srv.la
 lib/libkdb5.la
 lib/libkrb5.la
 lib/libkrb5support.la
+man/man1/compile_et.1
 man/man1/kdestroy.1
 man/man1/kerberos.1
 man/man1/kftp.1
