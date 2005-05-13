@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1642 2005/05/12 20:41:10 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1643 2005/05/13 16:54:13 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -448,7 +448,9 @@ SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 LIBABISUFFIX?=
 
 .if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-CONFIGURE_ENV+=		M4="${M4}" YACC="${YACC}"
+TOOLS_M4?=		${M4}
+TOOLS_YACC?=		${YACC}
+CONFIGURE_ENV+=		M4=${TOOLS_M4:Q} YACC=${TOOLS_YACC:Q}
 .endif
 
 TOUCH_FLAGS?=		-f

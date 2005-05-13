@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2005/04/12 15:11:18 tv Exp $
+# $NetBSD: Makefile.common,v 1.45 2005/05/13 16:54:13 jlam Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -100,7 +100,7 @@ post-patch:
 		-e 's:@CXXFLAGS@:${CXXFLAGS}:g' \
 		-e 's:@SYS_LIBS@:${SYS_LIBS}:g' \
 		-e 's:@LEX@:${LEX}:g' \
-		-e 's:@YACC@:${YACC}:g' \
+		-e 's:@YACC@:${TOOLS_YACC}:g' \
 		-e 's:@AR@:${AR}:g' \
 		-e 's:@MKDIR@:${MKDIR}:g' \
 		-e 's:@LIBQT@:${LIBQT}:g' \

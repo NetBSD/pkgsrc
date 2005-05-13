@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2005/04/27 18:57:54 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.27 2005/05/13 16:54:13 jlam Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -29,7 +29,7 @@ BUILD_DEFS+=    SMRSH_CMDDIR
 
 WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
 USE_GNU_TOOLS+=	m4
-MAKE_ENV+=	M4="${M4}"
+MAKE_ENV+=	M4=${TOOLS_M4:Q}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"

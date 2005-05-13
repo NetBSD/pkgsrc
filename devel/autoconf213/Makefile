@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:17 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/13 16:54:12 jlam Exp $
 
 DISTNAME=       autoconf-2.13
 PKGNAME=	autoconf213-2.13
@@ -18,9 +18,8 @@ CONFLICTS=		autoconf<2.50
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		AWK="${AWK}"
 CONFIGURE_ARGS+=	--program-transform-name='s/$$/-2.13/'
-M4=			${LOCALBASE}/bin/gm4
+TOOLS_M4=		${LOCALBASE}/bin/gm4
 
 USE_MAKEINFO=		YES
 INFO_FILES=		autoconf213.info
