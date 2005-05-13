@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.94 2005/05/13 10:10:13 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.95 2005/05/13 10:23:48 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -211,3 +211,5 @@ Pullup ticket 493 - requested by Lubomir Sedlacik
 remove dead mirrors from bsd.sites.mk
 Pullup ticket 444 - requested by Johnny C. Lam
 security update for mit-krb5
+Pullup ticket 498 - requested by Takahiro Kambe
+security fix for squid
