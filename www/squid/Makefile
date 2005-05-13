@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.139.2.8 2005/05/02 00:18:13 salo Exp $
+# $NetBSD: Makefile,v 1.139.2.9 2005/05/13 10:23:22 salo Exp $
 
 DISTNAME=	squid-2.5.STABLE9
 PKGNAME=	squid-2.5.9
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -42,7 +42,16 @@ PATCHFILES=	squid-2.5.STABLE9-setcookie.patch \
 		squid-2.5.STABLE9-forwardcc.patch \
 		squid-2.5.STABLE9-authinfo.patch \
 		squid-2.5.STABLE9-chroot_pidfile.patch \
-		squid-2.5.STABLE9-cachemgr_conf.patch
+		squid-2.5.STABLE9-cachemgr_conf.patch \
+		squid-2.5.STABLE9-aufs_improvement.patch \
+		squid-2.5.STABLE9_2GB-hot_cache.patch \
+		squid-2.5.STABLE9-diskd.patch \
+		squid-2.5.STABLE9-snmp.patch \
+		squid-2.5.STABLE9-arpacl.patch \
+		squid-2.5.STABLE9-dstdomain_ip.patch \
+		squid-2.5.STABLE9-dns_query-5.patch \
+		squid-2.5.STABLE9-2GB_assert.patch \
+		squid-2.5.STABLE9-always_direct_documentation.patch
 #		squid-2.5.STABLE9-transparent_port.patch
 PATCH_DIST_STRIP=       -p1
 
