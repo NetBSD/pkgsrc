@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.1 2005/05/11 04:01:49 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.2 2005/05/13 22:08:20 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -61,11 +61,21 @@ BZCAT=			${LOCALBASE}/bin/bzcat
 .  endif
 .endif
 .if !empty(EXTRACT_ONLY:M*.zip) || !empty(EXTRACT_SUFX:M*.zip)
+.  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+PKGSRC_USE_TOOLS+=	unzip
+.  else
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
+UNZIP=			${LOCALBASE}/bin/unzip
+.  endif
 .endif
 .if !empty(EXTRACT_ONLY:M*.lzh) || !empty(EXTRACT_ONLY:M*.lha) || \
     !empty(EXTRACT_SUFX:M*.lzh) || !empty(EXTRACT_SUFX:M*.lha)
+.  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+PKGSRC_USE_TOOLS+=	lha
+.  else
 BUILD_DEPENDS+=		lha>=114.9:../../archivers/lha
+LHA=			${LOCALBASE}/bin/lha
+.  endif
 .endif
 .if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
     !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz)
@@ -77,10 +87,20 @@ GZCAT=                  ${LOCALBASE}/bin/zcat
 .  endif
 .endif
 .if !empty(EXTRACT_ONLY:M*.zoo) || !empty(EXTRACT_SUFX:M*.zoo)
+.  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+PKGSRC_USE_TOOLS+=	unzoo
+.  else
 BUILD_DEPENDS+=		unzoo-[0-9]*:../../archivers/unzoo
+UNZOO=			${LOCALBASE}/bin/unzoo
+.  endif
 .endif
 .if !empty(EXTRACT_ONLY:M*.rar) || !empty(EXTRACT_SUFX:M*.rar)
+.  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+PKGSRC_USE_TOOLS+=	unrar
+.  else
 BUILD_DEPENDS+=		unrar>=3.3.4:../../archivers/unrar
+UNRAR=			${LOCALBASE}/bin/unrar
+.  endif
 .endif
 
 DECOMPRESS_CMD.tar.gz?=		${GZCAT}
@@ -111,15 +131,15 @@ EXTRACT_ELEMENTS?=	# empty
 
 DOWNLOADED_DISTFILE=	$${extract_file}
 
-EXTRACT_CMD.zip?=	${LOCALBASE}/bin/unzip ${EXTRACT_CMD_OPTS.zip} $${extract_file}
+EXTRACT_CMD.zip?=	${UNZIP} ${EXTRACT_CMD_OPTS.zip} $${extract_file}
 EXTRACT_CMD_OPTS.zip?=	-Laqo
-EXTRACT_CMD.lha?=	${LOCALBASE}/bin/lha ${EXTRACT_CMD_OPTS.lha} $${extract_file}
+EXTRACT_CMD.lha?=	${LHA} ${EXTRACT_CMD_OPTS.lha} $${extract_file}
 EXTRACT_CMD_OPTS.lha?=	xq
 EXTRACT_CMD.lzh?=	${EXTRACT_CMD.lha}
 EXTRACT_CMD_OPTS.lzh?=	${EXTRACT_CMD_OPTS.lha}
-EXTRACT_CMD.zoo?=	${LOCALBASE}/bin/unzoo ${EXTRACT_CMD_OPTS.zoo} $${extract_file}
+EXTRACT_CMD.zoo?=	${UNZOO} ${EXTRACT_CMD_OPTS.zoo} $${extract_file}
 EXTRACT_CMD_OPTS.zoo?=	-x
-EXTRACT_CMD.rar?=	${LOCALBASE}/bin/unrar ${EXTRACT_CMD_OPTS.rar} $${extract_file}
+EXTRACT_CMD.rar?=	${UNRAR} ${EXTRACT_CMD_OPTS.rar} $${extract_file}
 EXTRACT_CMD_OPTS.rar?=	x -inul
 EXTRACT_ENV.bin?=	# empty
 EXTRACT_CMD.bin?=	${ECHO} yes | ${SETENV} ${EXTRACT_ENV.bin} $${extract_file} ${EXTRACT_CMD_OPTS.bin} >/dev/null
