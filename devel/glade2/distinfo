@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 22:24:15 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/05/13 15:19:27 drochner Exp $
 
-SHA1 (glade-2.6.5.tar.bz2) = b0d40b1296f0ee12cd5f5c725cc36c0b6656ee4d
-RMD160 (glade-2.6.5.tar.bz2) = 284c7571a25f60341f905925b92cbe06aaf96d3b
-Size (glade-2.6.5.tar.bz2) = 2393158 bytes
+SHA1 (glade-2.10.0.tar.bz2) = f599bfd62001f5b94be472679f5013eee7d75c3a
+RMD160 (glade-2.10.0.tar.bz2) = 8bb2faeb738c737021ca1fb4724bfa4ad959706b
+Size (glade-2.10.0.tar.bz2) = 2491657 bytes
