@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:52 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5.4.1 2005/05/13 10:08:52 salo Exp $
 bin/compile_et
 bin/gss-client
 bin/kdestroy
@@ -16,11 +16,26 @@ bin/kvno
 bin/sclient
 bin/sim_client
 bin/uuclient
-bin/v5passwd
 include/com_err.h
 include/gssapi/gssapi.h
 include/gssapi/gssapi_generic.h
 include/gssapi/gssapi_krb5.h
+include/gssrpc/auth.h
+include/gssrpc/auth_gss.h
+include/gssrpc/auth_gssapi.h
+include/gssrpc/auth_unix.h
+include/gssrpc/clnt.h
+include/gssrpc/netdb.h
+include/gssrpc/pmap_clnt.h
+include/gssrpc/pmap_prot.h
+include/gssrpc/pmap_rmt.h
+include/gssrpc/rename.h
+include/gssrpc/rpc.h
+include/gssrpc/rpc_msg.h
+include/gssrpc/svc.h
+include/gssrpc/svc_auth.h
+include/gssrpc/types.h
+include/gssrpc/xdr.h
 include/krb5.h
 include/profile.h
 lib/libcom_err.la
@@ -32,13 +47,14 @@ lib/libkadm5clnt.la
 lib/libkadm5srv.la
 lib/libkdb5.la
 lib/libkrb5.la
-man/man1/compile_et.1
+lib/libkrb5support.la
 man/man1/kdestroy.1
 man/man1/kerberos.1
 man/man1/kftp.1
 man/man1/kinit.1
 man/man1/klist.1
 man/man1/kpasswd.1
+man/man1/krb5-config.1
 man/man1/krb5-send-pr.1
 man/man1/${KRB5_PREFIX}rcp.1
 man/man1/${KRB5_PREFIX}rlogin.1
@@ -47,7 +63,6 @@ man/man1/ksu.1
 man/man1/${KRB5_PREFIX}telnet.1
 man/man1/kvno.1
 man/man1/sclient.1
-man/man1/v5passwd.1
 man/man5/.k5login.5
 man/man5/kdc.conf.5
 man/man5/krb5.conf.5
@@ -85,10 +100,14 @@ sbin/login.krb5
 sbin/sim_server
 sbin/sserver
 sbin/uuserver
-sbin/v5passwdd
 share/et/et_c.awk
 share/et/et_h.awk
+share/examples/krb5/kdc.conf
+share/examples/krb5/krb5.conf
+share/examples/krb5/services.append
 share/gnats/mit
 @dirrm share/gnats
+@dirrm share/examples/krb5
 @dirrm share/et
+@dirrm include/gssrpc
 @dirrm include/gssapi
