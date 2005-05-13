@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2005/02/24 12:19:55 agc Exp $
+$NetBSD: distinfo,v 1.14 2005/05/13 15:08:04 kim Exp $
 
-SHA1 (leafnode-1.10.7.rel.tar.bz2) = 5bfd2a363961ffa8535e9761feba9825a0c2cb6e
-RMD160 (leafnode-1.10.7.rel.tar.bz2) = 82867c8f9a6e902d920d68950fbcca66cf31ade3
-Size (leafnode-1.10.7.rel.tar.bz2) = 384931 bytes
-SHA1 (patch-aa) = 4d3e37a36cd63428fb3c392128eef933b3499d8c
+SHA1 (leafnode-1.11.2.rel.tar.bz2) = 138904683e9fa7f8630bc7e0273f2085ad4e7784
+RMD160 (leafnode-1.11.2.rel.tar.bz2) = be14a2be86e9efcbc25d4f473f8514254a8ffa54
+Size (leafnode-1.11.2.rel.tar.bz2) = 391034 bytes
+SHA1 (patch-aa) = 6820ab420cb656e61848f9eb29d4674bccb856a6
