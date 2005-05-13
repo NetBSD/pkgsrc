@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/04/11 21:46:27 tv Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/05/13 16:54:13 jlam Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -31,7 +31,7 @@ DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
 WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
 USE_GNU_TOOLS+=	m4
-MAKE_ENV+=	M4="${M4}"
+MAKE_ENV+=	M4=${TOOLS_M4:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

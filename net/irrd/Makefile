@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/04/11 21:46:48 tv Exp $
+# $NetBSD: Makefile,v 1.28 2005/05/13 16:54:13 jlam Exp $
 
 DISTNAME=		irrd2.2.3
 PKGNAME=		irrd-2.2.3
@@ -25,7 +25,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-thread
 CONFIGURE_ENV+=		EGREP=${EGREP}
-CONFIGURE_ENV+=		YACC=${YACC}
+CONFIGURE_ENV+=		YACC=${TOOLS_YACC:Q}
 
 BUILD_DEFS+=		USE_INET6
 
