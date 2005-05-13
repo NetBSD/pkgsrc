@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10075 2005/05/13 13:26:56 salo Exp $
+$NetBSD: CHANGES,v 1.10076 2005/05/13 18:38:55 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2358,3 +2358,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xmame to 0.96 [kristerw 2005-05-12]
 	Updated xmess to 0.96 [kristerw 2005-05-12]
 	Updated maradns to 1.0.28 [salo 2005-05-13]
+	Updated leafnode to 1.11.2 [kim 2005-05-13]
