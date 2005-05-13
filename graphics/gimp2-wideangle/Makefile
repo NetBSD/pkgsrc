@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:03 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/13 15:44:20 drochner Exp $
 #
 
 DISTNAME=	wideangle
@@ -19,8 +19,7 @@ do-build:
 	(cd ${WRKSRC} && gimptool-2.0 --build wideangle.c)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wideangle \
-		${PREFIX}/lib/gimp/2.0/plug-ins
+	(cd ${WRKSRC} && gimptool-2.0 --install-admin-bin wideangle)
 
 .include "../../graphics/gimp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
