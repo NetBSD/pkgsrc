@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2005/05/04 13:45:51 markd Exp $
+# $NetBSD: Makefile,v 1.86 2005/05/13 19:26:47 reed Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGREVISION=	4
@@ -79,8 +79,6 @@ PLIST_SUBST+=		KDED_WORKAROUND=""
 
 .include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gssapi=yes
-
-
 
 post-install:
 .if ${OPSYS} == "NetBSD"
