@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1644 2005/05/13 21:13:01 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1645 2005/05/13 22:22:44 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -286,19 +286,6 @@ PKG_FAIL_REASON+='PATCH_SITE_SUBDIR is deprecated and must be replaced with PATC
 .if defined(ONLY_FOR_ARCHS) || defined(NOT_FOR_ARCHS) \
 	|| defined(ONLY_FOR_OPSYS) || defined(NOT_FOR_OPSYS)
 PKG_FAIL_REASON+='ONLY/NOT_FOR_ARCHS/OPSYS are deprecated and must be replaced with ONLY/NOT_FOR_PLATFORM.'
-.endif
-
-.if (${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once")
-.  if !defined(OBJHOSTNAME)
-PKG_FAIL_REASON+='PKGSRC_LOCKTYPE needs OBJHOSTNAME defined.'
-.  elif empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-.    if !exists(${SHLOCK})
-PKG_FAIL_REASON+='The ${SHLOCK} utility does not exist, and is necessary for locking.'
-PKG_FAIL_REASON+='Please "${MAKE} install" in ../../pkgtools/shlock.'
-.    endif
-.  else
-PKGSRC_USE_TOOLS+=	shlock
-.  endif
 .endif
 
 # Allow variables to be set on a per-OS basis
@@ -982,6 +969,11 @@ PKGSRC_USE_TOOLS+=	mail
 
 # Extract
 .include "../../mk/bsd.pkg.extract.mk"
+
+# this must come before tools/bsd.tools.mk is included
+.if ${PKGSRC_LOCKTYPE} != "none"
+PKGSRC_USE_TOOLS+=	shlock
+.endif
 
 .if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 .include "../../mk/tools/bsd.tools.mk"
@@ -1698,6 +1690,17 @@ LOCKFILE=	${WRKDIR}/.lockfile
 
 _ACQUIRE_LOCK=								\
 	${_PKG_SILENT}${_PKG_DEBUG}					\
+	SHLOCK=${SHLOCK:Q};						\
+	if ${TEST} ! -f "$$SHLOCK" || ${TEST} ! -x "$$SHLOCK"; then	\
+		{ ${ECHO} "The \"$$SHLOCK\" utility does not exist, and is necessary for locking."; \
+		  ${ECHO} "Please \""${MAKE:Q}" install\" in ../../pkgtools/shlock."; \
+		} 1>&2;							\
+		${FALSE};						\
+	fi;								\
+	if ${TEST} x${OBJHOSTNAME:Ddefined} != x"defined"; then		\
+		${ECHO} "PKGSRC_LOCKTYPE needs OBJHOSTNAME defined." 1>&2; \
+		${FALSE};						\
+	fi;								\
 	ppid=`${PS} -p $$$$ -o ppid | ${AWK} 'NR == 2 { print $$1 }'`;	\
 	if ${TEST} "$$ppid" = ""; then					\
 		${ECHO} "No parent process ID found.";			\
