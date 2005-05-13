@@ -1,24 +1,17 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: kdc.sh,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
+# $NetBSD: kdc.sh,v 1.1.1.1.8.1 2005/05/13 10:08:52 salo Exp $
 #
 # PROVIDE: kdc
 # REQUIRE: NETWORKING
 # BEFORE:  SERVERS
 
-if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
-fi
+. /etc/rc.subr
 
 name="kdc"
 rcvar=$name
 command="@PREFIX@/sbin/krb5kdc"
 required_files="@PKG_SYSCONFDIR@/krb5.conf @MIT_KRB5_STATEDIR@/krb5kdc/kdc.conf"
 
-if [ -f /etc/rc.subr ]; then
-	load_rc_config $name
-	run_rc_command "$1"
-else
-	@ECHO@ -n " ${name}"
-	${command} ${kdc_flags}
-fi
+load_rc_config $name
+run_rc_command "$1"
