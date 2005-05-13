@@ -2,7 +2,7 @@ MaraDNS is a package that implements the Domain Name Service (DNS), an
 essential internet service. MaraDNS is intended for environments where a DNS
 server must be secure and where the server must use the absolute minimum
 number of resources possible. MaraDNS was created in response to issues
-people had with the DNS servers available in early 2001; and has the 
+people had with the DNS servers available in early 2001; and has the
 following design goals:
 
 Security-aware programming. A DNS server needs to be secure. I have a number
