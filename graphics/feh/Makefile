@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2005/04/11 21:46:02 tv Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/13 13:43:33 drochner Exp $
 #
 
-DISTNAME=	feh-1.3.0
+DISTNAME=	feh-1.3.2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.linuxbrit.co.uk/downloads/
 
