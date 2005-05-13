@@ -1,4 +1,4 @@
-# $NetBSD: make.mk,v 1.7 2005/05/10 19:34:02 jlam Exp $
+# $NetBSD: make.mk,v 1.8 2005/05/13 21:00:12 rillig Exp $
 #
 # This Makefile fragment creates a tool called "make" under ${TOOLS_DIR}
 # that corresponds to the make program used to build the package.
@@ -6,7 +6,7 @@
 # within a makefile or script.  It also sets MAKE_PROGRAM to the path
 # of that make program.  Lastly, pass ${MAKE_PROGRAM} to GNU configure
 # scripts in the MAKE variable so that the scripts will embed the
-# correct correct path to the make program used to build the package
+# correct path to the make program used to build the package
 # into the generated Makefiles.
 #
 
