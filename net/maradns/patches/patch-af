@@ -1,0 +1,11 @@
+$NetBSD: patch-af,v 1.1 2005/05/13 13:25:55 salo Exp $
+
+--- libs/Makefile.orig	2003-08-02 21:39:36.000000000 +0200
++++ libs/Makefile	2005-05-13 14:53:39.000000000 +0200
+@@ -1,5 +1,5 @@
+ OBJECTS = JsStr.o JsStrOS.o JsStrCP.o MaraHash.o
+-FLAGS = -g -O2 -Wall $(DEBUG)
++FLAGS = -g -O2 -Wall $(DEBUG) $(CFLAGS)
+ #FLAGS = -g -DDEBUG -DTHREADS
+ #FLAGS = -g $(DEBUG)
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2005/05/13 13:25:55 salo Exp $
+
+--- tuzona/Makefile.orig	2003-08-02 21:39:36.000000000 +0200
++++ tuzona/Makefile	2005-05-13 14:57:53.000000000 +0200
+@@ -6,7 +6,7 @@
+ OBJECTS=$(JOBJS) $(MJOBJS) $(DOBJECTS) $(POBJECTS) $(SOBJECTS)
+ EXECS=getzone zoneserver
+ 
+-FLAGS = -g -O2 -Wall $(DEBUG)
++FLAGS = -g -O2 -Wall $(DEBUG) $(CFLAGS) $(LDFLAGS)
+ #FLAGS = -g $(DEBUG)
+ 
+ all: $(EXECS)

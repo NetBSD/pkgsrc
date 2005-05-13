@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/23 22:07:56 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/05/13 13:25:55 salo Exp $
 bin/askmara
 bin/getzone
 man/man1/askmara.1
@@ -15,7 +15,6 @@ share/doc/maradns/README
 share/doc/maradns/changelog.html
 share/doc/maradns/changelog.txt
 share/doc/maradns/credits.txt
-share/doc/maradns/download.html
 share/doc/maradns/faq.html
 share/doc/maradns/faq.txt
 share/doc/maradns/files.txt
@@ -32,6 +31,10 @@ share/doc/maradns/man/zoneserver.8
 share/doc/maradns/maradns.pgp.key
 share/doc/maradns/misc/0README
 share/doc/maradns/misc/RFC1035.compliance
+share/doc/maradns/misc/TODO.done
+share/doc/maradns/misc/TODO.first
+share/doc/maradns/misc/TODO.second
+share/doc/maradns/misc/TODO.third
 share/doc/maradns/misc/cache.poison.protection
 share/doc/maradns/misc/decompress_api.abw
 share/doc/maradns/misc/decompress_api.html
@@ -121,7 +124,6 @@ share/doc/maradns/source/credits.ej
 share/doc/maradns/source/credits.embed
 share/doc/maradns/source/csv1.ej
 share/doc/maradns/source/data_structures.ej
-share/doc/maradns/source/download.ej
 share/doc/maradns/source/ej.doc.format
 share/doc/maradns/source/ej.template
 share/doc/maradns/source/example_auth_mararc
@@ -163,14 +165,14 @@ share/examples/maradns/example_full_mararc
 share/examples/maradns/example_mararc
 share/examples/maradns/example_recursive_mararc.txt
 @dirrm share/examples/maradns
-@dirrm share/doc/maradns/man
-@dirrm share/doc/maradns/misc/js-manpages
-@dirrm share/doc/maradns/misc/man_macros
-@dirrm share/doc/maradns/misc/rfc
+@dirrm share/doc/maradns/tutorial
+@dirrm share/doc/maradns/source
+@dirrm share/doc/maradns/ps
 @dirrm share/doc/maradns/misc/spammers/hiddenonline
 @dirrm share/doc/maradns/misc/spammers
+@dirrm share/doc/maradns/misc/rfc
+@dirrm share/doc/maradns/misc/man_macros
+@dirrm share/doc/maradns/misc/js-manpages
 @dirrm share/doc/maradns/misc
-@dirrm share/doc/maradns/ps
-@dirrm share/doc/maradns/source
-@dirrm share/doc/maradns/tutorial
+@dirrm share/doc/maradns/man
 @dirrm share/doc/maradns
