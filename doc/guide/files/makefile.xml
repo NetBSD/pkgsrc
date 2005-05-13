@@ -1,4 +1,11 @@
-<!-- $NetBSD: makefile.xml,v 1.6 2005/05/11 21:29:13 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.7 2005/05/13 22:48:09 rillig Exp $ -->
+
+<!-- based on:
+pkgsrc/bootstrap/bmake/for.c 1.1.1.1
+pkgsrc/bootstrap/bmake/make.1 1.3
+pkgsrc/bootstrap/bmake/str.c 1.1.1.1
+pkgsrc/bootstrap/bmake/var.c 1.2
+-->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
