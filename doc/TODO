@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3483 2005/05/11 16:13:54 reed Exp $
+$NetBSD: TODO,v 1.3484 2005/05/13 13:26:57 salo Exp $
 
 Suggested new packages
 ======================
@@ -669,7 +669,6 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-0.19.2
 	o mapserver-4.2.5
-	o maradns-1.0.27
 	o mdd-20050318
 	o memcached-1.2
 	o memtest86-3.2
