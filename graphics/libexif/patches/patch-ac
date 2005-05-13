@@ -1,0 +1,71 @@
+$NetBSD: patch-ac,v 1.1 2005/05/13 11:57:59 salo Exp $
+
+--- libexif/exif-data.c.orig	2005-03-13 03:27:13.000000000 +0100
++++ libexif/exif-data.c	2005-05-13 13:48:13.000000000 +0200
+@@ -284,9 +284,10 @@
+ }
+ 
+ static void
+-exif_data_load_data_content (ExifData *data, ExifContent *ifd,
++exif_data_load_data_content_recurse (ExifData *data, ExifContent *ifd,
+ 			     const unsigned char *d,
+-			     unsigned int ds, unsigned int offset)
++				     unsigned int ds, unsigned int offset,
++				     unsigned int level)
+ {
+ 	ExifLong o, thumbnail_offset = 0, thumbnail_length = 0;
+ 	ExifShort n;
+@@ -296,6 +297,13 @@
+ 
+ 	if (!data || !data->priv) return;
+ 
++	if (level > 150)
++	  {
++	    exif_log (data->priv->log, EXIF_LOG_CODE_CORRUPT_DATA, "ExifData",
++		      "Deep recursion in exif_data_load_data_content");
++	    return 0;
++	  }
++
+ 	/* Read the number of entries */
+ 	if (offset >= ds - 1) return;
+ 	n = exif_get_short (d + offset, data->priv->order);
+@@ -320,18 +328,18 @@
+ 			switch (tag) {
+ 			case EXIF_TAG_EXIF_IFD_POINTER:
+ 				CHECK_REC (EXIF_IFD_EXIF);
+-				exif_data_load_data_content (data,
+-					data->ifd[EXIF_IFD_EXIF], d, ds, o);
++				exif_data_load_data_content_recurse (data,
++					data->ifd[EXIF_IFD_EXIF], d, ds, o, level + 1);
+ 				break;
+ 			case EXIF_TAG_GPS_INFO_IFD_POINTER:
+ 				CHECK_REC (EXIF_IFD_GPS);
+-				exif_data_load_data_content (data,
+-					data->ifd[EXIF_IFD_GPS], d, ds, o);
++				exif_data_load_data_content_recurse (data,
++					data->ifd[EXIF_IFD_GPS], d, ds, o, level + 1);
+ 				break;
+ 			case EXIF_TAG_INTEROPERABILITY_IFD_POINTER:
+ 				CHECK_REC (EXIF_IFD_INTEROPERABILITY);
+-				exif_data_load_data_content (data,
+-					data->ifd[EXIF_IFD_INTEROPERABILITY], d, ds, o);
++				exif_data_load_data_content_recurse (data,
++					data->ifd[EXIF_IFD_INTEROPERABILITY], d, ds, o, level + 1);
+ 				break;
+ 			case EXIF_TAG_JPEG_INTERCHANGE_FORMAT:
+ 				thumbnail_offset = o;
+@@ -373,6 +381,14 @@
+ }
+ 
+ static void
++exif_data_load_data_content (ExifData *data, ExifContent *ifd,
++			     const unsigned char *d,
++			     unsigned int ds, unsigned int offset)
++{
++  exif_data_load_data_content_recurse (data, ifd, d, ds, offset, 0);
++}
++
++static void
+ exif_data_save_data_content (ExifData *data, ExifContent *ifd,
+ 			     unsigned char **d, unsigned int *ds,
+ 			     unsigned int offset)
