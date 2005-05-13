@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2005/04/11 21:45:17 tv Exp $
+# $NetBSD: Makefile,v 1.52 2005/05/13 16:54:12 jlam Exp $
 
 DISTNAME=		autoconf-2.59
 PKGREVISION=		1
@@ -21,8 +21,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=		# empty
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-lispdir
-CONFIGURE_ENV+=		AWK="${AWK}"
-M4=			${LOCALBASE}/bin/gm4
+TOOLS_M4=		${LOCALBASE}/bin/gm4
 
 INFO_FILES=		autoconf.info standards.info
 
