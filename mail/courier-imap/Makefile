@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/04/11 21:46:18 tv Exp $
+# $NetBSD: Makefile,v 1.37 2005/05/13 05:20:48 jlam Exp $
 
 DISTNAME=	courier-imap-4.0.2
 PKGBASE=	${DISTNAME:C/-[^-]*$//}
@@ -27,7 +27,8 @@ CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 CONFIGURE_ARGS+=	--program-transform-name='s/\.rc$$//'
 CONFIGURE_ENV+=		OPENSSL=${SSLBASE}/bin/openssl
 
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
+INSTALL_AM_MAKEFLAGS=	sysconfdir=${EGDIR}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
 
 GEN_FILES=		imapd imapd-ssl pop3d pop3d-ssl
 SSLCNF_FILES=		imapd.cnf pop3d.cnf
