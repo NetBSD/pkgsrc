@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.191 2005/05/13 17:22:43 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.192 2005/05/14 01:51:52 rillig Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -7,7 +7,7 @@
 # the system defaults (sys.mk and bsd.own.mk) are used.
 
 # Do not recursively include mk.conf, redefine OPSYS, include bsd.own.mk, etc.
-.ifndef BSD_PKG_MK
+.if !defined(BSD_PKG_MK)
 
 # Let mk.conf know that this is pkgsrc.
 BSD_PKG_MK=1
@@ -45,14 +45,14 @@ CUT=/bin/cut
 CUT=echo Unknown
 .endif
 
-.ifndef OPSYS
+.if !defined(OPSYS)
 OPSYS!=			${UNAME} -s | tr -d /
 .endif
 MAKEFLAGS+=		OPSYS=${OPSYS}
-.ifndef OS_VERSION
+.if !defined(OS_VERSION)
 OS_VERSION!=		${UNAME} -r
 .endif
-.ifndef LOWER_OS_VERSION
+.if !defined(LOWER_OS_VERSION)
 LOWER_OS_VERSION!=	echo ${OS_VERSION} | tr 'A-Z' 'a-z'
 .endif
 MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
@@ -439,7 +439,7 @@ COMPILER_RPATH_FLAG?=	${_COMPILER_RPATH_FLAG}
 WHOLE_ARCHIVE_FLAG?=	${_OPSYS_WHOLE_ARCHIVE_FLAG}
 NO_WHOLE_ARCHIVE_FLAG?=	${_OPSYS_NO_WHOLE_ARCHIVE_FLAG}
 
-.ifndef DIGEST
+.if !defined(DIGEST)
 DIGEST:=		${LOCALBASE}/bin/digest
 MAKEFLAGS+=		DIGEST=${DIGEST}
 .endif
