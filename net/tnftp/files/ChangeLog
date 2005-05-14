@@ -1,4 +1,19 @@
-NetBSD: ChangeLog,v 1.16 2005/05/11 04:21:53 lukem Exp
+NetBSD: ChangeLog,v 1.17 2005/05/14 04:46:26 lukem Exp
+
+Sat May 14 04:44:35 UTC 2005	lukem
+
+	* Release "tnftp 20050514"
+
+	* Fail if we can't find a library with tgetent (needed for libedit).
+	  NetBSD PR pkg/28925.
+	* Improve quoting when using various autoconf macros.
+
+	* Merge NetBSD-ftp 20050513:
+		- Correct the "optlen" argument passed to getsockopt(3) and
+		  setsockopt(3) in various places.  Fixes a problem noted by
+		  Allen Briggs.
+		- Improve warning printed when connect(2) for the data
+		  channel fails.
 
 Wed May 11 04:19:43 UTC 2005	lukem
 
@@ -42,7 +57,7 @@ Wed May 11 00:08:16 UTC 2005	lukem
 		  This may (indirectly) fix various problems with timeouts in
 		  active mode through broken firewalls.
 		- Implement xpoll() as a wrapper around poll(2), to make it
-		  easier to replace on systems without a functional poll(2). 
+		  easier to replace on systems without a functional poll(2).
 		  Unconditionally use xpoll() instead of conditionally using
 		  select(2) or poll(2).
 		- In fetch_url(), don't call freeaddrinfo(res0) too early, as
