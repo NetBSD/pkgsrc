@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.11 2005/05/13 22:08:20 jlam Exp $
+# $NetBSD: defaults.mk,v 1.12 2005/05/14 19:01:14 jlam Exp $
 
 .if !defined(TOOLS_DEFAULTS_MK)
 TOOLS_DEFAULTS_MK=	defined
@@ -8,9 +8,9 @@ TOOLS_DEFAULTS_MK=	defined
 # XXX These should eventually just migrate over to the appropriate
 # XXX pkgsrc/mk/platform/${OPSYS}.mk file.
 #
-.include "../../mk/tools/bootstrap.mk"
-.if exists(../../mk/tools/tools.${OPSYS}.mk)
-.  include "../../mk/tools/tools.${OPSYS}.mk"
+.include "${_PKGSRC_TOPDIR}/mk/tools/bootstrap.mk"
+.if exists(${_PKGSRC_TOPDIR}/mk/tools/tools.${OPSYS}.mk)
+.  include "${_PKGSRC_TOPDIR}/mk/tools/tools.${OPSYS}.mk"
 .endif
 
 # "TOOL" variable names associated with each of the tools
