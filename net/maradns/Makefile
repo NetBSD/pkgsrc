@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2005/03/14 23:41:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2005/05/14 06:00:25 snj Exp $
 
-DISTNAME=	maradns-1.0.18
-PKGREVISION=	3
+DISTNAME=	maradns-1.0.28
 CATEGORIES=	net
 MASTER_SITES=	http://www.maradns.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,12 +23,12 @@ CONF_FILES=	${EGDIR}/example_mararc ${PKG_SYSCONFDIR}/mararc
 LDFLAGS+=	${PTHREAD_LIBS}
 
 post-patch:
-	${SED} -e s,@@PKGSYSCONFDIR@@,${PKG_SYSCONFDIR},			\
+	@${SED} -e s,@@PKGSYSCONFDIR@@,${PKG_SYSCONFDIR},			\
 	    ${WRKSRC}/parse/ParseMaraRc.c > ${WRKSRC}/parse/ParseMaraRc.sed
-	${MV} ${WRKSRC}/parse/ParseMaraRc.sed ${WRKSRC}/parse/ParseMaraRc.c
+	@${MV} ${WRKSRC}/parse/ParseMaraRc.sed ${WRKSRC}/parse/ParseMaraRc.c
 
 post-install:
-	${MV} ${PREFIX}/share/doc/maradns/examples \
+	@${MV} ${PREFIX}/share/doc/maradns/examples \
 		${PREFIX}/share/examples/maradns
 
 .include "../../mk/bsd.pkg.mk"
