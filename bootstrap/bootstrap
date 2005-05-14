@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.36 2005/05/07 22:19:16 wiz Exp $
+# $NetBSD: bootstrap,v 1.37 2005/05/14 02:12:48 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -231,10 +231,15 @@ echo_msg "bootstrap started: $build_start"
 
 while [ $# -gt 0 ]; do
 	case $1 in
+	--workdir=*)	wrkdir=`echo x"$1" | sed 's,^[^=]*=,,'` ;;
 	--workdir)	wrkdir="$2"; shift ;;
+	--prefix=*)	prefix=`echo x"$1" | sed 's,^[^=]*=,,'`;
+			sysconfdir=${prefix}/etc ;;
 	--prefix)	prefix="$2"; shift;
 			sysconfdir=${prefix}/etc ;;
+	--pkgdbdir=*)	pkgdbdir=`echo x"$1" | sed 's,^[^=]*=,,'` ;;
 	--pkgdbdir)	pkgdbdir="$2"; shift ;;
+	--sysconfdir=*)	sysconfdir=`echo x"$1" | sed 's,^[^=]*=,,'` ;;
 	--sysconfdir)	sysconfdir="$2"; shift ;;
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--ignore-user-check) ignoreusercheck=yes ;;
