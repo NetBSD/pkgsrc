@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.10 2005/05/14 03:26:09 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.11 2005/05/14 03:30:56 rillig Exp $ -->
 
 <!-- based on:
 pkgsrc/bootstrap/bmake/for.c 1.1.1.1
@@ -155,14 +155,15 @@ EXT_LIST+=		${ANOTHER_EXT_LIST}	# 4
       <programlisting>
 EXT_LIST=	# empty
 .for i in ${INT_LIST}
-EXT_LIST+=	${i:Q}
+EXT_LIST+=	${i:Q}""
 .endfor
       </programlisting>
 
       <para>This code converts the internal list
       <varname>INT_LIST</varname> into the external list
       <varname>EXT_LIST</varname>. As the elements of an internal list
-      are unquoted they must be quoted here.</para>
+      are unquoted they must be quoted here. The reason for appending
+      <varname>""</varname> is explained below.</para>
 
     </sect2>
 
