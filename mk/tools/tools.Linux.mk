@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.12 2005/05/13 19:53:08 minskim Exp $
+# $NetBSD: tools.Linux.mk,v 1.13 2005/05/14 01:25:19 rillig Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -52,7 +52,7 @@ TOOLS_PLATFORM.gmake?=		/usr/bin/make
 .endif
 .if exists(/bin/grep)
 TOOLS_PLATFORM.grep?=		/bin/grep
-.elif exists(/bin/grep)
+.elif exists(/usr/bin/grep)
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 .endif
 .if exists(/bin/sed)
