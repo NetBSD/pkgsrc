@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/04/15 12:42:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/05/14 15:27:10 taya Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -96,6 +96,14 @@ lib/${MOZILLA}/libxpcom_compat.${SO_SUFFIX}
 lib/${MOZILLA}/libxpistub.${SO_SUFFIX}
 ${SUNOSLIB}lib/${MOZILLA}/libfreebl_hybrid_3.${SO_SUFFIX}
 @comment end DSO
+@comment begin PKGCONFIG
+lib/pkgconfig/firefox-gtkmozembed.pc
+lib/pkgconfig/firefox-js.pc
+lib/pkgconfig/firefox-nspr.pc
+lib/pkgconfig/firefox-nss.pc
+lib/pkgconfig/firefox-plugin.pc
+lib/pkgconfig/firefox-xpcom.pc
+@comment end PKGCONFIG
 @comment begin DATA
 lib/${MOZILLA}/LICENSE
 lib/${MOZILLA}/README.txt
