@@ -1,4 +1,4 @@
-# $NetBSD: tools.OpenBSD.mk,v 1.9 2005/05/10 19:56:51 jlam Exp $
+# $NetBSD: tools.OpenBSD.mk,v 1.10 2005/05/14 21:15:07 jlam Exp $
 #
 # System-supplied tools for the OpenBSD operating system.
 
@@ -23,11 +23,7 @@ TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
-.if exists(/bin/tar)
-TOOLS_PLATFORM.gtar?=		/bin/tar
-.elif exists(/usr/bin/tar)
-TOOLS_PLATFORM.gtar?=		/usr/bin/tar
-.endif
+TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
 TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
@@ -54,6 +50,11 @@ TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
+.if exists(/bin/tar)
+TOOLS_PLATFORM.tar?=		/bin/tar
+.elif exists(/usr/bin/tar)
+TOOLS_PLATFORM.tar?=		/usr/bin/tar
+.endif
 TOOLS_PLATFORM.tbl?=		/usr/bin/tbl
 TOOLS_PLATFORM.tee?=		/usr/bin/tee
 TOOLS_PLATFORM.test?=		test			# shell builtin

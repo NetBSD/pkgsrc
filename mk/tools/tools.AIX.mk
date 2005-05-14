@@ -1,4 +1,4 @@
-# $NetBSD: tools.AIX.mk,v 1.7 2005/05/10 19:56:51 jlam Exp $
+# $NetBSD: tools.AIX.mk,v 1.8 2005/05/14 21:15:07 jlam Exp $
 #
 # System-supplied tools for the AIX operating system.
 
@@ -42,6 +42,7 @@ TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.shlock?=		/usr/bin/shlock
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
+TOOLS_PLATFORM.tar?=		/usr/bin/tar
 TOOLS_PLATFORM.tee?=		/usr/bin/tee
 TOOLS_PLATFORM.test?=		test			# shell builtin
 TOOLS_PLATFORM.touch?=		/usr/bin/touch
