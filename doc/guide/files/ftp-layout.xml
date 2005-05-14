@@ -1,4 +1,4 @@
-<!-- $NetBSD: ftp-layout.xml,v 1.2 2005/01/10 21:00:38 hubertf Exp $ -->
+<!-- $NetBSD: ftp-layout.xml,v 1.3 2005/05/14 22:34:59 rillig Exp $ -->
 
 <appendix id="ftp-layout">
   <title>Layout of the FTP server's package archive</title>
@@ -64,7 +64,7 @@
                 SunOS-5.9/
                         sparc -> ../pkgsrc-2004Q1/SunOS-5.9/sparc
                         x86 -> ../pkgsrc-2004Q1/SunOS-5.9/x86
-			</programlisting>
+                        </programlisting>
 
   <para>
     To create:</para>
@@ -78,9 +78,9 @@
       <para> Upload /usr/pkgsrc/packages to </para>
 
       <programlisting>    ftp://ftp.NetBSD.org/pub/NetBSD/packages/\
-	pkgsrc-2004Q4/\				# pkgsrc-branch
-	`uname -s`-`uname -r`/			# OS & version
-	`uname -p`				# architecture
+        pkgsrc-2004Q4/\                         # pkgsrc-branch
+        `uname -s`-`uname -r`/                  # OS & version
+        `uname -p`                              # architecture
        </programlisting>
 
     </listitem>

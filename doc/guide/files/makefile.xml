@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.11 2005/05/14 03:30:56 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.12 2005/05/14 22:34:59 rillig Exp $ -->
 
 <!-- based on:
 pkgsrc/bootstrap/bmake/for.c 1.1.1.1
@@ -129,16 +129,16 @@ pkgsrc/bootstrap/bmake/var.c 1.2
       <title>Adding things to a list</title>
 
       <programlisting>
-STRING=			foo * bar `date`
-INT_LIST=		# empty
-ANOTHER_INT_LIST=	apache-[0-9]*:../../www/apache
-EXT_LIST=		# empty
-ANOTHER_EXT_LIST=	a=b c=d
+STRING=                 foo * bar `date`
+INT_LIST=               # empty
+ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
+EXT_LIST=               # empty
+ANOTHER_EXT_LIST=       a=b c=d
 
-INT_LIST+=		${STRING}		# 1
-INT_LIST+=		${ANOTHER_INT_LIST}	# 2
-EXT_LIST+=		${STRING:Q}		# 3
-EXT_LIST+=		${ANOTHER_EXT_LIST}	# 4
+INT_LIST+=              ${STRING}               # 1
+INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
+EXT_LIST+=              ${STRING:Q}             # 3
+EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
       </programlisting>
 
       <para>When you add a string to an external list (example 3), it
@@ -153,9 +153,9 @@ EXT_LIST+=		${ANOTHER_EXT_LIST}	# 4
       <title>Converting an internal list into an external list</title>
 
       <programlisting>
-EXT_LIST=	# empty
+EXT_LIST=       # empty
 .for i in ${INT_LIST}
-EXT_LIST+=	${i:Q}""
+EXT_LIST+=      ${i:Q}""
 .endfor
       </programlisting>
 
@@ -171,16 +171,16 @@ EXT_LIST+=	${i:Q}""
       <title>Passing variables to a shell command</title>
 
       <programlisting>
-STRING=		foo bar <    > * `date` $$HOME ' "
-EXT_LIST=	string=${STRING:Q} x=second\ item
+STRING=         foo bar <    > * `date` $$HOME ' "
+EXT_LIST=       string=${STRING:Q} x=second\ item
 
 all:
-	echo ${STRING}			# 1
-	echo "${STRING}"		# 2
-	echo "${STRING:Q}"		# 3
-	echo ${STRING:Q}		# 4
-	echo x${STRING:Q} | sed 1s,.,,	# 5
-	env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
+        echo ${STRING}                  # 1
+        echo "${STRING}"                # 2
+        echo "${STRING:Q}"              # 3
+        echo ${STRING:Q}                # 4
+        echo x${STRING:Q} | sed 1s,.,,  # 5
+        env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
       </programlisting>
 
       <para>Example 1 leads to a syntax error in the shell, as the
@@ -240,17 +240,17 @@ all:
 	pass the <varname>CPPFLAGS</varname> value properly trimmed. And
 	here is how we do it:</para>
 
-	<programlisting>
-CPPFLAGS=		# empty
-CPPFLAGS+=		-Wundef -DPREFIX=\"${PREFIX:Q}\"
-CPPFLAGS+=		${MY_CPPFLAGS}
+        <programlisting>
+CPPFLAGS=               # empty
+CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX:Q}\"
+CPPFLAGS+=              ${MY_CPPFLAGS}
 
-CONFIGURE_ARGS+=	CPPFLAGS=${CPPFLAGS:M*:Q}
+CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
 
 all:
-	echo x${CPPFLAGS:Q}x		# leading and trailing whitespace
-	echo x${CONFIGURE_ARGS}x	# properly trimmed
-	</programlisting></listitem>
+        echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
+        echo x${CONFIGURE_ARGS}x        # properly trimmed
+        </programlisting></listitem>
 
 	<listitem><para>The example above contains one bug: The
 	<varname>${PREFIX}</varname> is a properly quoted shell
@@ -269,19 +269,19 @@ all:
 	are two completely different cases which can be solved with the
 	same trick.</para>
 
-	<programlisting>
-EMPTY=			# empty
+        <programlisting>
+EMPTY=                  # empty
 empty_test:
-	for i in a ${EMPTY:Q} c; do \
-		echo "$$i"; \
-	done
+        for i in a ${EMPTY:Q} c; do \
+                echo "$$i"; \
+        done
 
 for_test:
 .for i in a:\ a:\test.txt
-	echo ${i:Q}
-	echo "foo"
+        echo ${i:Q}
+        echo "foo"
 .endfor
-	</programlisting>
+        </programlisting>
 
 	<para>The first example will only print two of the three lines
 	we might have expected. This is because

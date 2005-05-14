@@ -1,4 +1,4 @@
-<!-- $NetBSD: options.xml,v 1.2 2005/05/06 23:28:50 wiz Exp $ -->
+<!-- $NetBSD: options.xml,v 1.3 2005/05/14 22:34:59 rillig Exp $ -->
 
 <chapter id="options">
   <title>Options handling</title>
@@ -34,19 +34,19 @@
       <programlisting>
 # Global and legacy options
 .if defined(WIBBLE_USE_OPENLDAP) && !empty(WIBBLE_USE_OPENLDAP:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	ldap
+PKG_DEFAULT_OPTIONS+=   ldap
 .endif
 .if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	sasl
+PKG_DEFAULT_OPTIONS+=   sasl
 .endif
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.wibble
-PKG_SUPPORTED_OPTIONS=	ldap sasl
+PKG_OPTIONS_VAR=        PKG_OPTIONS.wibble
+PKG_SUPPORTED_OPTIONS=  ldap sasl
 #
 # Default options for "wibble" package.
 #
 .if !defined(PKG_OPTIONS.wibble)
-PKG_DEFAULT_OPTIONS+=	sasl
+PKG_DEFAULT_OPTIONS+=   sasl
 endif
 .include "../../mk/bsd.options.mk"
 
@@ -65,7 +65,7 @@ CONFIGURE_ARGS+=      --enable-ldap=${BUILDLINK_PREFIX.openldap}
 ###
 .if !empty(PKG_OPTIONS:Msasl)
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-sasl=${BUILDLINK_PREFIX.sasl}
+CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
 .endif
       </programlisting>
 
@@ -108,20 +108,20 @@ CONFIGURE_ARGS+=	--enable-sasl=${BUILDLINK_PREFIX.sasl}
             always removed from the selected build options, e.g.
 	    </para>
 
-	  <programlisting>
-	PKG_DEFAULT_OPTIONS=	kerberos ldap sasl
-	PKG_OPTIONS_VAR=	WIBBLE_OPTIONS
-	WIBBLE_OPTIONS=		${PKG_DEFAULT_OPTIONS} -sasl
-	# implies PKG_OPTIONS == "kerberos ldap"
-	  </programlisting>
+          <programlisting>
+        PKG_DEFAULT_OPTIONS=    kerberos ldap sasl
+        PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
+        WIBBLE_OPTIONS=         ${PKG_DEFAULT_OPTIONS} -sasl
+        # implies PKG_OPTIONS == "kerberos ldap"
+          </programlisting>
 
           <para>or</para>
 
-	  <programlisting>
-	PKG_OPTIONS_VAR=	WIBBLE_OPTIONS
-	WIBBLE_OPTIONS=		kerberos -ldap ldap
-	# implies PKG_OPTIONS == "kerberos"
-	  </programlisting>
+          <programlisting>
+        PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
+        WIBBLE_OPTIONS=         kerberos -ldap ldap
+        # implies PKG_OPTIONS == "kerberos"
+          </programlisting>
 
 	  <para> This variable should be set in
             <filename>/etc/mk.conf</filename>. </para>
