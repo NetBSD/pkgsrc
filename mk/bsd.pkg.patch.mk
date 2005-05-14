@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.2 2005/05/14 22:12:01 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.3 2005/05/14 22:31:04 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -66,6 +66,26 @@
 USE_GNU_TOOLS+=		patch
 .  else
 PKGSRC_USE_TOOLS+=	patch
+.  endif
+.endif
+
+# These tools are used to output the contents of the distribution patches
+# to stdout.
+#
+.if defined(PATCHFILES)
+PKGSRC_USE_TOOLS+=	cat
+.  if !empty(PATCHFILES:M*.Z) || !empty(PATCHFILES:M*.gz)
+PKGSRC_USE_TOOLS+=	gzcat
+.  endif
+.  if !empty(PATCHFILES:M*.bz2)
+.    if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+PKGSRC_USE_TOOLS+=	bzcat
+.    elif exists(/usr/bin/bzcat)
+BZCAT=			/usr/bin/bzcat
+.    else
+BZCAT=			${LOCALBASE}/bin/bzcat
+BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
+.    endif
 .  endif
 .endif
 
@@ -145,20 +165,6 @@ if [ -n "${PKG_OPTIONS}" ] || [ -n "${_LOCALPATCHFILES}" ]; then	\
 	${ECHO} "=========================================================================="; \
 fi; exit 1
 .endif
-
-# We need bzip2 for PATCHFILES with .bz2 suffix.
-.if defined(PATCHFILES)
-.  if !empty(PATCHFILES:M*.bz2)
-.    if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-PKGSRC_USE_TOOLS+=	bzcat
-.    elif exists(/usr/bin/bzcat)
-BZCAT=			/usr/bin/bzcat
-.    else
-BZCAT=			${LOCALBASE}/bin/bzcat
-BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
-.    endif # !exists bzcat
-.  endif
-.endif # defined(PATCHFILES)
 
 # Patch
 
