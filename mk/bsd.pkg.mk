@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1648 2005/05/14 04:26:15 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1649 2005/05/14 06:04:44 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -926,16 +926,6 @@ PKG_SYSCONFDEPOTBASE=	# empty
 ALL_ENV+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
 
-# If NO_BUILD is defined, default to not needing a compiler.
-.if defined(NO_BUILD)
-USE_LANGUAGES?=		# empty
-.endif
-
-# Get the proper dependencies and set the PATH to use the compiler
-# named in PKGSRC_COMPILER.
-#
-.include "../../mk/compiler.mk"
-
 # These are all of the tools use by pkgsrc Makefiles.  This should
 # eventually be split up into lists of tools required by different
 # phases of a pkgsrc build.
@@ -965,6 +955,16 @@ PKGSRC_USE_TOOLS+=	shlock
 .else
 .include "../../mk/tools.mk"
 .endif
+
+# If NO_BUILD is defined, default to not needing a compiler.
+.if defined(NO_BUILD)
+USE_LANGUAGES?=		# empty
+.endif
+
+# Get the proper dependencies and set the PATH to use the compiler
+# named in PKGSRC_COMPILER.
+#
+.include "../../mk/compiler.mk"
 
 .include "../../mk/wrapper/bsd.wrapper.mk"
 
