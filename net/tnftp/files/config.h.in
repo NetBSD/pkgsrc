@@ -1,5 +1,5 @@
 /* config.h.in.  Generated automatically from configure.in by autoheader.  */
-/*	NetBSD: config.h.in,v 1.8 2005/05/11 03:10:26 lukem Exp	*/
+/*	NetBSD: config.h.in,v 1.9 2005/05/14 04:41:27 lukem Exp	*/
 
 
 /* Define if on AIX 3.
@@ -182,12 +182,6 @@
 
 /* Define if you have the socket library (-lsocket).  */
 #undef HAVE_LIBSOCKET
-
-/* Define if you have the tinfo library (-ltinfo).  */
-#undef HAVE_LIBTINFO
-
-/* Define if you have the util library (-lutil).  */
-#undef HAVE_LIBUTIL
 
 /* Define if your compiler supports `long long' */
 #undef HAVE_LONG_LONG
