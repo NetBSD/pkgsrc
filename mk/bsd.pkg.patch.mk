@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.3 2005/05/14 22:31:04 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.4 2005/05/14 22:32:59 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -61,7 +61,8 @@
 #
 
 .if (defined(PATCHFILES) && !empty(PATCHFILES)) || \
-    (defined(PATCHDIR) && exists(${PATCHDIR}))
+    (defined(PATCHDIR) && exists(${PATCHDIR})) || \
+    (defined(LOCALPATCHES) && exists(${LOCALPATCHES}/${PKGPATH}))
 .  if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 USE_GNU_TOOLS+=		patch
 .  else
@@ -168,11 +169,6 @@ fi; exit 1
 
 # Patch
 
-# LOCALPATCHES contains the location of local patches to packages
-#	that are maintained in a directory tree reflecting the same
-#	hierarchy as the pkgsrc tree, i.e. local patches for www/apache
-#	would be found as ${LOCALPATCHES}/www/apache/*.
-#
 .if defined(LOCALPATCHES)
 _DFLT_LOCALPATCHFILES=	${LOCALPATCHES}/${PKGPATH}/*
 _LOCALPATCHFILES=	${_DFLT_LOCALPATCHFILES}
