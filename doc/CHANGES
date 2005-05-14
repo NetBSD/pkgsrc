@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10078 2005/05/14 13:34:36 adrianp Exp $
+$NetBSD: CHANGES,v 1.10079 2005/05/14 15:28:25 taya Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2361,3 +2361,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated leafnode to 1.11.2 [kim 2005-05-13]
 	Updated tnftp to 20050514nb1 [lukem 2005-05-14]
 	Updated horde to 2.2.8 [adrianp 2005-05-14]
+	Updated firefox to 1.0.4 [taya 2005-05-14]
+	Updated firefox-gtk1 to 1.0.4 [taya 2005-05-14]
