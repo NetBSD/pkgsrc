@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.9 2005/05/14 03:23:20 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.10 2005/05/14 03:26:09 rillig Exp $ -->
 
 <!-- based on:
 pkgsrc/bootstrap/bmake/for.c 1.1.1.1
@@ -278,7 +278,7 @@ empty_test:
 for_test:
 .for i in a:\ a:\test.txt
 	echo ${i:Q}
-	echo "."
+	echo "foo"
 .endfor
 	</programlisting>
 
@@ -291,7 +291,7 @@ for_test:
 	-f ${FNAME:Q}</varname> (both of these are wrong).</para>
 
 	<para>The second example will only print three lines instead of
-	four. The first line looks like <varname>a:\ echo .</varname>.
+	four. The first line looks like <varname>a:\ echo foo</varname>.
 	This is because the backslash of the value
 	<varname>a:\</varname> is interpreted as a line-continuation by
 	&man.make.1;, which makes the second line the arguments of the
