@@ -1,7 +1,7 @@
-/*	NetBSD: tnftp.h,v 1.12 2005/05/11 04:21:53 lukem Exp	*/
+/*	NetBSD: tnftp.h,v 1.13 2005/05/14 04:46:26 lukem Exp	*/
 
 #define	FTP_PRODUCT	"tnftp"
-#define	FTP_VERSION	"20050511"
+#define	FTP_VERSION	"20050514"
 
 #include "config.h"
 
