@@ -1,4 +1,4 @@
-# $NetBSD: perl.mk,v 1.8 2005/05/12 21:03:46 jlam Exp $
+# $NetBSD: perl.mk,v 1.9 2005/05/14 21:38:18 jlam Exp $
 
 # Create a symlink from ${TOOLS_DIR}/bin/perl to ${PERL5} when USE_PERL5
 # is defined.  This ensures that when "perl" is invoked, the pkgsrc perl
@@ -10,7 +10,12 @@ MAKEFLAGS+=		TOOLS_IGNORE.perl=
 .  else
 .    include "../../lang/perl5/buildlink3.mk"
 TOOLS_DEPMETHOD.perl?=	BUILD_DEPENDS
-TOOLS_DEPENDS.perl?=	${BUILDLINK_DEPENDS.perl}:${BUILDLINK_PKGSRCDIR.perl}
+_TOOLS_DEPENDS.perl=	# empty
+.    for _dep_ in ${BUILDLINK_DEPENDS.perl}
+_TOOLS_DEPENDS.perl+=	${_dep_}:${BUILDLINK_PKGSRCDIR.perl}
+.    endfor
+.    undef _dep_
+TOOLS_DEPENDS.perl?=	${_TOOLS_DEPENDS.perl}
 TOOLS_CREATE+=		perl
 FIND_PREFIX:=		TOOLS_PREFIX.perl=perl
 .    include "../../mk/find-prefix.mk"
