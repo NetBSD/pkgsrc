@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.72 2005/05/14 05:57:43 jlam Exp $
+# $NetBSD: replace.mk,v 1.73 2005/05/14 21:15:07 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -441,20 +441,15 @@ TOOLS_ALIASES.gsed=		sed
 .endif
 
 .if !defined(TOOLS_IGNORE.gtar) && !empty(_USE_TOOLS:Mgtar)
-.  if !empty(PKGPATH:Marchivers/pax)
+.  if !empty(PKGPATH:Marchivers/gtar-base)
 MAKEFLAGS+=			TOOLS_IGNORE.gtar=
 .  elif !empty(_TOOLS_USE_PKGSRC.gtar:M[yY][eE][sS])
-#
-# This is installed by pkgsrc bootstrap, and is never registered, so
-# comment out the dependency on it.
-#
-#TOOLS_DEPENDS.gtar?=		pax>=20040802:../../archivers/pax
+TOOLS_DEPENDS.gtar?=		gtar-base>=1.13.25:../../archivers/gtar-base
 TOOLS_CREATE+=			gtar
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gtar=pax
-TOOLS_REAL_CMD.gtar=		${TOOLS_PREFIX.gtar}/bin/tar
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gtar=gtar-base
+TOOLS_REAL_CMD.gtar=		${TOOLS_PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar
 TOOLS_${_TOOLS_VARNAME.gtar}=	${TOOLS_REAL_CMD.gtar}
 .  endif
-TOOLS_ALIASES.gtar=		tar
 .endif
 
 .if !defined(TOOLS_IGNORE.gunzip) && !empty(_USE_TOOLS:Mgunzip)
@@ -791,6 +786,22 @@ TOOLS_CREATE+=			tail
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tail=coreutils
 TOOLS_REAL_CMD.tail=		${TOOLS_PREFIX.tail}/bin/${GNU_PROGRAM_PREFIX}tail
 TOOLS_${_TOOLS_VARNAME.tail}=	${TOOLS_REAL_CMD.tail}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.tar) && !empty(_USE_TOOLS:Mtar)
+.  if !empty(PKGPATH:Marchivers/pax)
+MAKEFLAGS+=			TOOLS_IGNORE.tar=
+.  elif !empty(_TOOLS_USE_PKGSRC.tar:M[yY][eE][sS])
+#
+# This is installed by pkgsrc bootstrap, and is never registered, so
+# comment out the dependency on it.
+#
+#TOOLS_DEPENDS.tar?=		pax>=20040802:../../archivers/pax
+TOOLS_CREATE+=			tar
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tar=pax
+TOOLS_REAL_CMD.tar=		${TOOLS_PREFIX.tar}/bin/tar
+TOOLS_${_TOOLS_VARNAME.tar}=	${TOOLS_REAL_CMD.tar}
 .  endif
 .endif
 

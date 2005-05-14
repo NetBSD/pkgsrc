@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.13 2005/05/14 20:05:05 jlam Exp $
+# $NetBSD: defaults.mk,v 1.14 2005/05/14 21:15:07 jlam Exp $
 
 .if !defined(TOOLS_DEFAULTS_MK)
 TOOLS_DEFAULTS_MK=	defined
@@ -70,6 +70,7 @@ _TOOLS_VARNAME.sh=		SH
 _TOOLS_VARNAME.shlock=		SHLOCK
 _TOOLS_VARNAME.sort=		SORT
 _TOOLS_VARNAME.tail=		TAIL
+_TOOLS_VARNAME.tar=		TAR
 _TOOLS_VARNAME.tbl=		TBL
 _TOOLS_VARNAME.tee=		TEE
 _TOOLS_VARNAME.test=		TEST
@@ -103,10 +104,5 @@ ${_v_}?=	${TOOLS_PLATFORM.${_t_}}
 .  endif
 .endfor
 .undef _t_
-
-# XXX Temporarily set this here until we figure out a better way to handle
-# XXX TAR/GTAR in a better way.
-#
-TAR?=	${GTAR}
 
 .endif	# TOOLS_DEFAULTS_MK
