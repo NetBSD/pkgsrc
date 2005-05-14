@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1645 2005/05/13 22:22:44 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1646 2005/05/14 01:50:38 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -759,7 +759,7 @@ uptodate-digest:
 	@${DO_NADA}
 .endif
 
-.ifndef PKG_ARGS_COMMON
+.if !defined(PKG_ARGS_COMMON)
 PKG_ARGS_COMMON=	-v -c -${COMMENT:Q}" " -d ${DESCR} -f ${PLIST}
 PKG_ARGS_COMMON+=	-l -b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
 PKG_ARGS_COMMON+=	-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
@@ -767,19 +767,19 @@ PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`"
 .  if defined(CONFLICTS) && (${PKG_INSTALLATION_TYPE} == "overwrite")
 PKG_ARGS_COMMON+=	-C "${CONFLICTS}"
 .  endif
-.  ifdef INSTALL_FILE
+.  if defined(INSTALL_FILE)
 PKG_ARGS_COMMON+=	-i ${INSTALL_FILE}
 .  endif
-.  ifdef DEINSTALL_FILE
+.  if defined(DEINSTALL_FILE)
 PKG_ARGS_COMMON+=	-k ${DEINSTALL_FILE}
 .  endif
-.  ifdef MESSAGE
+.  if defined(MESSAGE)
 PKG_ARGS_COMMON+=	-D ${MESSAGE}
 .  endif
-.  ifndef NO_MTREE
+.  if !defined(NO_MTREE)
 PKG_ARGS_COMMON+=	-m ${MTREE_FILE}
 .  endif
-.  ifdef PKG_PRESERVE
+.  if defined(PKG_PRESERVE)
 PKG_ARGS_COMMON+=	-n ${PRESERVE_FILE}
 .  endif
 
@@ -794,7 +794,7 @@ PKG_ARGS_BINPKG+=	-E	# create an empty views file in the binpkg
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
 # of dependencies for building, and the current target.
-.ifdef SMART_MESSAGES
+.if defined(SMART_MESSAGES)
 _PKGSRC_IN?=		===> ${.TARGET} [${PKGNAME}${_PKGSRC_DEPS}] ===
 .else
 _PKGSRC_IN?=		===
@@ -1744,7 +1744,7 @@ ${WRKDIR}:
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PKG_DB_TMPDIR}
-.ifdef WRKOBJDIR
+.if defined(WRKOBJDIR)
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
 .    if !exists(${LOCKFILE})
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2404,7 +2404,7 @@ real-su-install: ${MESSAGE}
 	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
 .  endif
 .endif
-.ifdef MESSAGE
+.if defined(MESSAGE)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
 	@${ECHO_MSG} ""
 	@${CAT} ${MESSAGE}
@@ -3199,10 +3199,10 @@ real-su-deinstall-flags+=	-r -R
 real-su-deinstall-flags+=	-r
 .    endif
 .  endif
-.  ifdef PKG_VERBOSE
+.  if defined(PKG_VERBOSE)
 real-su-deinstall-flags+=	-v
 .  endif
-.  ifdef PKG_PRESERVE
+.  if defined(PKG_PRESERVE)
 .    if (${UPDATE_RUNNING} == "YES")
 # used to update w/o removing any files
 real-su-deinstall-flags+=	-N -f
@@ -3323,12 +3323,12 @@ clean-update:
 .PHONY: update-dirlist
 update-dirlist:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} -p ${WRKDIR}
-.ifdef PKGLIST
+.if defined(PKGLIST)
 .  for __tmp__ in ${PKGLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} >>${DLIST} "${__tmp__}"
 .  endfor
 .endif
-.ifdef DIRLIST
+.if defined(DIRLIST)
 .  for __tmp__ in ${DIRLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} >>${DDIR} "${__tmp__}"
 .  endfor
@@ -3475,7 +3475,7 @@ clean: pre-clean
 			${ECHO_MSG} "${_PKGSRC_IN}> ${WRKDIR} not writable, skipping"; \
 		fi;							\
 	fi
-.  ifdef WRKOBJDIR
+.  if defined(WRKOBJDIR)
 	-${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RMDIR} ${BUILD_DIR} 2>/dev/null;				\
 	${RM} -f ${WRKDIR_BASENAME}
@@ -4115,14 +4115,14 @@ cdrom-readme:
 README_NAME=	${TEMPLATES}/README.pkg
 
 # set up the correct license information as a sed expression
-.ifdef LICENSE
+.if defined(LICENSE)
 SED_LICENSE_EXPR=       -e 's|%%LICENSE%%|<p>Please note that this package has a ${LICENSE} license.</p>|'
 .else
 SED_LICENSE_EXPR=       -e 's|%%LICENSE%%||'
 .endif
 
 # set up the "more info URL" information as a sed expression
-.ifdef HOMEPAGE
+.if defined(HOMEPAGE)
 SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%|<p>This package has a home page at <a HREF="${HOMEPAGE}">${HOMEPAGE}</a>.</p>|'
 .else
 SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
@@ -4545,7 +4545,7 @@ pre-install-fake-pkg:
 .  if defined(USE_PERL5) && (${USE_PERL5} == "run")
 	@${ECHO} "PERL=`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
 .  endif
-.  ifdef _USE_GMAKE
+.  if defined(_USE_GMAKE)
 	@${ECHO} "GMAKE=`${GMAKE} --version | ${GREP} Make`" >> ${BUILD_INFO_FILE}
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -4969,7 +4969,7 @@ ${PLIST}:
 
 .PHONY: message
 message: ${MESSAGE}
-.ifdef MESSAGE
+.if defined(MESSAGE)
 ${MESSAGE}: ${MESSAGE_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -z "${MESSAGE_SRC}" ]; then				\
