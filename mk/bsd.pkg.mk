@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1647 2005/05/14 02:03:00 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1648 2005/05/14 04:26:15 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -446,23 +446,8 @@ CONFIGURE_ENV+=		M4=${TOOLS_M4:Q} YACC=${TOOLS_YACC:Q}
 
 TOUCH_FLAGS?=		-f
 
-.if !defined(_PKGSRC_USE_PATCH)
-.  if defined(PATCHFILES) && !empty(PATCHFILES)
-_PKGSRC_USE_PATCH=	yes
-.  elif !exists(${PATCHDIR})
-_PKGSRC_USE_PATCH=	no
-.  else
-_PKGSRC_USE_PATCH!=	\
-	if ${TEST} "`${ECHO} ${PATCHDIR}/patch-*`" != "${PATCHDIR}/patch-*"; then \
-		${ECHO} yes;					\
-	else							\
-		${ECHO} no;					\
-	fi
-.  endif
-.endif
-MAKEVARS+=	_PKGSRC_USE_PATCH
-
-.if !empty(_PKGSRC_USE_PATCH:M[yY][eE][sS])
+.if (defined(PATCHFILES) && !empty(PATCHFILES)) || \
+    (defined(PATCHDIR) && exists(${PATCHDIR}))
 .  if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 USE_GNU_TOOLS+=		patch
 .  else
