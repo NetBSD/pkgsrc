@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.man.mk,v 1.1.1.1 2004/03/11 13:04:17 grant Exp $
+#	$NetBSD: bsd.man.mk,v 1.2 2005/05/14 19:16:16 christos Exp $
 #	@(#)bsd.man.mk	8.1 (Berkeley) 6/8/93
 
 .if !target(__initialized__)
@@ -20,8 +20,10 @@ cleandir: cleanman
 
 TMACDIR?=	${DESTDIR}/usr/share/groff/tmac
 HTMLDIR?=	${DESTDIR}/usr/share/man
+if exists(${TMACDIR}/tmac.andoc) && exists(${TMACDIR}/tmac.doc)
 CATDEPS?=	${TMACDIR}/tmac.andoc \
 		${TMACDIR}/tmac.doc
+.endif
 MANTARGET?=	cat
 NROFF?=		nroff -Tascii
 GROFF?=		groff -Tascii
