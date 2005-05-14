@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10077 2005/05/14 06:07:33 lukem Exp $
+$NetBSD: CHANGES,v 1.10078 2005/05/14 13:34:36 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2360,3 +2360,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated maradns to 1.0.28 [salo 2005-05-13]
 	Updated leafnode to 1.11.2 [kim 2005-05-13]
 	Updated tnftp to 20050514nb1 [lukem 2005-05-14]
+	Updated horde to 2.2.8 [adrianp 2005-05-14]
