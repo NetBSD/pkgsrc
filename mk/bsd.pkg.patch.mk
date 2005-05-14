@@ -1,7 +1,63 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.1 2005/05/14 19:37:53 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.2 2005/05/14 22:12:01 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
+#
+# The following variables may be set in a package Makefile and control
+# how pkgsrc patches are applied.
+#
+#    PATCH_STRIP is a patch(1) argument that sets the pathname strip
+#	count to help find the correct files to patch.  See the patch(1)
+#	man page for more details.  Defaults to "-p0".
+#
+#    PATCH_ARGS is the base set of arguments passed to patch(1).
+#	The default set of arguments will apply the patches to the
+#	files in ${WRKSRC} with any ${PATCH_STRIP} arguments set.
+#
+# The following variables may be set in a package Makefile and control
+# how "distribution" patches are applied.
+#
+#    PATCHFILES is a list of distribution patches relative to
+#	${_DISTDIR} that are applied first to the package.
+#
+#    PATCH_DIST_STRIP is a patch(1) argument that sets the pathname
+#	strip count to help find the correct files to patch.  See the
+#	patch(1) man page for more details.  Defaults to "-p0".
+#
+#    PATCH_DIST_ARGS is the base set of arguments passed to patch(1).
+#	The default set of arguments will apply the patches to the
+#	files in ${WRKSRC} with any ${PATCH_DIST_STRIP} arguments set.
+#
+#    PATCH_DIST_CAT is the command that outputs the contents of the
+#	"$patchfile" to stdout.  The default value is a command that
+#	can output gzipped, bzipped, or plain patches to stdout.
+#
+#    PATCH_DIST_STRIP.<patchfile>
+#    PATCH_DIST_ARGS.<patchfile>
+#    PATCH_DIST_CAT.<patchfile>
+#	These are versions of the previous three variables which allow
+#	for customization of their values for specific patchfiles.
+#
+# The following variables may be set by the user and affect how patching
+# occurs:
+#
+#    PATCH_DEBUG, if defined, causes the the patch process to be more
+#	verbose.
+#
+#    PATCH_FUZZ_FACTOR is a patch(1) argument that specifies how much
+#	fuzz to accept when applying pkgsrc patches.  See the patch(1)
+#	man page for more details.  Defaults to "-F0" for zero fuzz.
+#
+#    LOCALPATCHES is the location of local patches that are maintained
+#	in a directory tree reflecting the same hierarchy as the pkgsrc
+#	tree, e.g., local patches for www/apache would be found in
+#	${LOCALPATCHES}/www/apache.  These patches are applied after
+#	the patches in ${PATCHDIR}.
+#
+# The following targets are defined by bsd.pkg.patch.mk:
+#
+#    do-patch is the target that causes the actual patching of the
+#	extracted sources to occur during the "patch" phase.
 #
 
 .if (defined(PATCHFILES) && !empty(PATCHFILES)) || \
