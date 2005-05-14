@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1652 2005/05/14 21:15:07 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1653 2005/05/14 22:19:07 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1408,20 +1408,22 @@ do-fetch:
 # show both build and run depends directories (non-recursively)
 .PHONY: show-depends-dirs
 .if !target(show-depends-dirs)
+_ALL_DEPENDS=		${DEPENDS} ${BUILD_DEPENDS}
 show-depends-dirs:
 	@dlist="";							\
-	thisdir=`${PWD_CMD}`;						\
-	for reldir in "" ${DEPENDS:C/^[^:]*://:C/:.*$//} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*$//} ;\
-	do								\
-		if [ "X$$reldir" = "X" ]; then continue; fi;		\
-		cd $$thisdir/$$reldir;					\
-		WD=`${PWD_CMD}`;					\
+	depends=${_ALL_DEPENDS:C/^[^:]*://:O:u:Q};			\
+	for reldir in $$depends; do					\
+		case $$reldir in					\
+			*/*)	: "expected";;				\
+			*)	${ECHO} ${.TARGET:Q}": warning: missing directory in dependency \"$$reldir\". Check DEPENDS and BUILD_DEPENDS." 1>&2; \
+				continue;;				\
+		esac;							\
+		WD=`cd "$$reldir" && ${PWD_CMD}`;			\
 		d=`dirname $$WD`;					\
 		absdir=`basename $$d`/`basename $$WD`;			\
 		dlist="$$dlist $$absdir";				\
 	done;								\
-	cd $$thisdir;							\
-	${ECHO} "$$dlist"
+	${ECHO} $$dlist
 .endif
 
 # Show all build and run depends, reverse-breadth first, with options.
