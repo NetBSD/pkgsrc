@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.20 2005/05/08 13:43:30 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.21 2005/05/14 02:17:43 rillig Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -82,22 +82,19 @@
 
 .include "../../mk/bsd.prefs.mk"
 
+# Define PKG_OPTIONS, no matter if we have an error or not, to suppress
+# further make(1) warnings.
+PKG_OPTIONS=		# empty
+
 # Check for variable definitions required before including this file.
 .if !defined(PKG_SUPPORTED_OPTIONS)
 PKG_FAIL_REASON+=	"bsd.options.mk: PKG_SUPPORTED_OPTIONS is not defined."
-.endif
-.if !defined(PKG_OPTIONS_VAR)
+.elif !defined(PKG_OPTIONS_VAR)
 PKG_FAIL_REASON+=	"bsd.options.mk: PKG_OPTIONS_VAR is not defined."
-.endif
+.else # process the rest of the file
 
 # include deprecated variable to options mapping
-.if exists(${.CURDIR}/mk/defaults/obsolete.mk)
-.  include "${.CURDIR}/mk/defaults/obsolete.mk"
-.elif exists(${.CURDIR}/../mk/defaults/obsolete.mk)
-.  include "${.CURDIR}/../mk/defaults/obsolete.mk"
-.elif exists(${.CURDIR}/../../mk/defaults/obsolete.mk)
-.  include "${.CURDIR}/../../mk/defaults/obsolete.mk"
-.endif
+.include "${.CURDIR}/../../mk/defaults/obsolete.mk"
 
 .for _m_ in ${PKG_OPTIONS_LEGACY_VARS}
 .if !empty(PKG_SUPPORTED_OPTIONS:M${_m_:C/.*://}) && defined(${_m_:C/:.*//}) && !empty(${_m_:C/:.*//}:M[yY][eE][sS])
@@ -200,3 +197,5 @@ supported-options-message:
 	@${ECHO} "=========================================================================="
 .  endif
 .endif
+
+.endif # defined(PKG_OPTIONS_VAR) && defined(PKG_SUPPORTED_OPTIONS)
