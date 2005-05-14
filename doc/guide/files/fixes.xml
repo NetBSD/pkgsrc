@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.13 2005/05/08 13:53:06 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.14 2005/05/14 22:34:59 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -901,7 +901,7 @@ pre-configure:
           <filename>/etc/mk.conf</filename> to indicate acceptance of
           the particular license:</para>
 
-	<programlisting>ACCEPTABLE_LICENSES+=graphviz-license</programlisting>
+        <programlisting>ACCEPTABLE_LICENSES+=graphviz-license</programlisting>
 
 	<para>When adding a package with a new license, the license
           text should be added to <filename>pkgsrc/licenses</filename>
