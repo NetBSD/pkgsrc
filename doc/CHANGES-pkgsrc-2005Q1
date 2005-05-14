@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.95 2005/05/13 10:23:48 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.96 2005/05/14 06:17:06 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -213,3 +213,9 @@ Pullup ticket 444 - requested by Johnny C. Lam
 security update for mit-krb5
 Pullup ticket 498 - requested by Takahiro Kambe
 security fix for squid
+Pullup ticket 500 - requested by Lubomir Sedlacik
+security fix for libexif
+Pullup ticket 501 - requested by Lubomir Sedlacik
+security fix for maradns
+Pullup ticket 502 - requested by Lubomir Sedlacik
+security fix for leafnode
