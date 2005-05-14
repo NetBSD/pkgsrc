@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.8 2005/05/13 23:28:08 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.9 2005/05/14 03:23:20 rillig Exp $ -->
 
 <!-- based on:
 pkgsrc/bootstrap/bmake/for.c 1.1.1.1
@@ -104,12 +104,12 @@ pkgsrc/bootstrap/bmake/var.c 1.2
 
       <itemizedlist>
 
-        <listitem><para>All variable names starting with an underscore
+	<listitem><para>All variable names starting with an underscore
 	are reserved for use by the pkgsrc infrastructure. They shall
 	not be used by package
 	<filename>Makefile</filename>s.</para></listitem>
 
-        <listitem><para>In <!-- FIXME --><varname>.for</varname> loops
+	<listitem><para>In <!-- FIXME --><varname>.for</varname> loops
 	you should use lowercase variable names for the iteration
 	variables.</para></listitem>
 
@@ -211,5 +211,95 @@ all:
       no example for it.</para>
 
     </sect2>
+
+    <sect2>
+      <title>Quoting guideline</title>
+
+      <para>There are many possible sources of wrongly quoted variables.
+      This section lists some of the commonly known ones.</para>
+
+      <itemizedlist>
+
+	<listitem><para>Whenever you use the value of a list, think
+	about what happens to leading or trailing whitespace. If the
+	list is a well-formed shell expression you can apply the
+	<varname>:M*</varname> modifier to strip leading and trailing
+	whitespace from each word. The <varname>:M</varname> operator
+	first splits its argument according to the rules of the shell,
+	and then creates a new list consisting of all words that match
+	the shell glob expression <varname>*</varname>, that is: all.
+	One class of situations where this is needed is when adding a
+	variable like <varname>CPPFLAGS</varname> to
+	<varname>CONFIGURE_ARGS</varname>. If the configure script
+	invokes other configure scripts it strips the leading and
+	trailing whitespace from the variable and then passes it to the
+	other configure scripts. But these configure scripts expect the
+	(child) <varname>CPPFLAGS</varname> variable to be the same as
+	the parent <varname>CPPFLAGS</varname>. That's why we better
+	pass the <varname>CPPFLAGS</varname> value properly trimmed. And
+	here is how we do it:</para>
+
+	<programlisting>
+CPPFLAGS=		# empty
+CPPFLAGS+=		-Wundef -DPREFIX=\"${PREFIX:Q}\"
+CPPFLAGS+=		${MY_CPPFLAGS}
+
+CONFIGURE_ARGS+=	CPPFLAGS=${CPPFLAGS:M*:Q}
+
+all:
+	echo x${CPPFLAGS:Q}x		# leading and trailing whitespace
+	echo x${CONFIGURE_ARGS}x	# properly trimmed
+	</programlisting></listitem>
+
+	<listitem><para>The example above contains one bug: The
+	<varname>${PREFIX}</varname> is a properly quoted shell
+	expression, but there is the C compiler after it, which also
+	expects a properly quoted string (this time in C syntax). The
+	version above is therefore only correct if
+	<varname>${PREFIX}</varname> does not have embedded backslashes
+	or double quotes. If you want to allow these, you have to add
+	another layer of quoting to each variable that is used as a C
+	string literal. You cannot use the <varname>:Q</varname>
+	operator for it, as this operator only works for the
+	shell.</para></listitem>
+
+	<listitem><para>Whenever a variable can be empty the
+	<varname>:Q</varname> operator can have surprising results. Here
+	are two completely different cases which can be solved with the
+	same trick.</para>
+
+	<programlisting>
+EMPTY=			# empty
+empty_test:
+	for i in a ${EMPTY:Q} c; do \
+		echo "$$i"; \
+	done
+
+for_test:
+.for i in a:\ a:\test.txt
+	echo ${i:Q}
+	echo "."
+.endfor
+	</programlisting>
+
+	<para>The first example will only print two of the three lines
+	we might have expected. This is because
+	<varname>${EMPTY:Q}</varname> expands to the empty string, which
+	the shell cannot see. The workaround is to write
+	<varname>${EMPTY:Q}""</varname>. This pattern can be often found
+	as <varname>${TEST} -z ${VAR:Q}</varname> or as <varname>${TEST}
+	-f ${FNAME:Q}</varname> (both of these are wrong).</para>
+
+	<para>The second example will only print three lines instead of
+	four. The first line looks like <varname>a:\ echo .</varname>.
+	This is because the backslash of the value
+	<varname>a:\</varname> is interpreted as a line-continuation by
+	&man.make.1;, which makes the second line the arguments of the
+	&man.echo.1; command from the first line. To avoid this, write
+	<varname>${i:Q}""</varname>.</para></listitem>
+
+      </itemizedlist>
+    </sect2>
+
   </sect1>
 </chapter>
