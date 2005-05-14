@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/07 22:40:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/14 22:33:27 rillig Exp $
 #
 
 DISTNAME=		htdocs-share-20050507
@@ -111,5 +111,21 @@ install-htdocs: build
 
 do-lint:
 	cd ${WRKSRC} ; ${MAKE} lint
+
+DETAB_PROGRAM= \
+	if (/<programlisting>/ .. /<\/programlisting>/) {		\
+		while (/(.*?)\t(.*)/s) {				\
+			my $$filler = " " x (8 - (length($$1) % 8));	\
+			$$_ = "$$1$$filler$$2";				\
+		}							\
+	}
+
+# remove tabulators from the <programlisting> tags.
+# TeX does not like them.
+.PHONY: detab
+detab:
+	cd ${FILESDIR};							\
+	perl -p -i ".detab.tmp" -e '${DETAB_PROGRAM}' *.xml;		\
+	${RM} -f *.xml.detab.tmp
 
 .include "../../mk/bsd.pkg.mk"
