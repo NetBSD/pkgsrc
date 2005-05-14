@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1649 2005/05/14 06:04:44 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1650 2005/05/14 07:15:29 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -381,11 +381,10 @@ _PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
 .endif
 BUILD_DEFS+=		_PLIST_IGNORE_FILES
 
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 .if !empty(USE_GNU_TOOLS:Mmake)
 _USE_GMAKE=		yes
 .endif
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 .if defined(_USE_GMAKE)
 MAKE_PROGRAM=		${GMAKE}
 .elif defined(USE_IMAKE)
@@ -4530,7 +4529,7 @@ pre-install-fake-pkg:
 .  if defined(USE_PERL5) && (${USE_PERL5} == "run")
 	@${ECHO} "PERL=`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
 .  endif
-.  if defined(_USE_GMAKE)
+.  if defined(_USE_GMAKE) || !empty(USE_TOOLS:Mgmake)
 	@${ECHO} "GMAKE=`${GMAKE} --version | ${GREP} Make`" >> ${BUILD_INFO_FILE}
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
