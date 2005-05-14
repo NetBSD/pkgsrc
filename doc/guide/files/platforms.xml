@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.8 2005/05/08 13:53:06 wiz Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.9 2005/05/14 22:34:59 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -290,7 +290,7 @@
 	  invoked by the csh and ksh startup shortcuts) is "interix".  Most systems
 	  don't have a termcap/terminfo entry for it, but the following .termcap
 	  entry provides adequate emulation in most cases:
-	  <programlisting>interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:</programlisting></para>
+          <programlisting>interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:</programlisting></para>
 
       </sect3>
     </sect2>
@@ -359,7 +359,7 @@
       <para>To bootstrap using icc, assuming the default icc installation
         directory:
         <programlisting>env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
-		ac_cv___attribute__=yes ./bootstrap</programlisting></para>
+                ac_cv___attribute__=yes ./bootstrap</programlisting></para>
 
       <note>
         <para>icc 8.1 needs the `-i-static' argument instead of -static-libcxa.</para>
@@ -374,7 +374,7 @@
 
      <para>After bootstrapping, you should set <varname>PKGSRC_COMPILER</varname>
         in <filename>/etc/mk.conf</filename>:
-	<programlisting>PKGSRC_COMPILER=icc</programlisting></para>
+        <programlisting>PKGSRC_COMPILER=icc</programlisting></para>
 
      <para>The default installation directory for icc is
         <filename>/opt/intel_cc_80</filename>, which
@@ -432,7 +432,7 @@
 	    as well. You can work around this by enclosing all the pkgsrc specific parts 
 	    of the file with:</para>
 
-	  <programlisting>.ifdef BSD_PKG_MK
+          <programlisting>.ifdef BSD_PKG_MK
 # pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
 .else
 # OpenBSD stuff
@@ -517,13 +517,13 @@
 	  optionally, <varname>CPP</varname> in <filename>/etc/mk.conf</filename>,
 	  eg.</para>
 
-	<programlisting>CC=	cc
-CXX=	CC
-CPP=	/usr/ccs/lib/cpp</programlisting>
+        <programlisting>CC=     cc
+CXX=    CC
+CPP=    /usr/ccs/lib/cpp</programlisting>
 
 	<para>You may also want to build 64-bit binaries, eg.</para>
 
-	<programlisting>CFLAGS=	-xtarget=ultra -xarch=v9</programlisting>
+        <programlisting>CFLAGS= -xtarget=ultra -xarch=v9</programlisting>
 
 	<para>Whichever compiler you use, please ensure the compiler tools and
 	  your $prefix are in your <varname>PATH</varname>. This includes
