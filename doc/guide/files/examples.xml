@@ -1,4 +1,4 @@
-<!-- $NetBSD: examples.xml,v 1.3 2005/05/10 00:05:03 rillig Exp $ -->
+<!-- $NetBSD: examples.xml,v 1.4 2005/05/14 22:34:59 rillig Exp $ -->
 
 <appendix id="examples">
   <title>A simple example package: bison</title>
@@ -18,16 +18,16 @@
       <programlisting># &#36;NetBSD&#36;
 #
 
-DISTNAME=	bison-1.25
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNU}
+DISTNAME=       bison-1.25
+CATEGORIES=     devel
+MASTER_SITES=   ${MASTER_SITE_GNU}
 
-MAINTAINER=	thorpej@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/bison/bison.html
-COMMENT=	GNU yacc clone
+MAINTAINER=     thorpej@NetBSD.org
+HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
+COMMENT=        GNU yacc clone
 
-GNU_CONFIGURE=	yes
-INFO_FILES=	bison.info
+GNU_CONFIGURE=  yes
+INFO_FILES=     bison.info
 
 .include "../../mk/bsd.pkg.mk"</programlisting>
     </sect2>
