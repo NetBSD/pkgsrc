@@ -42,21 +42,23 @@
 #include <unistd.h>
 
 #if HAVE_POLL
-# if HAVE_POLL_H
-#  include <poll.h>
-# elif HAVE_SYS_POLL_H
-#  include <sys/poll.h>
-# endif
+/* we use poll */
 #elif HAVE_SELECT
-# ifndef POLLIN
-#  define POLLIN 1
-# endif
-# ifndef POLLOUT
-#  define POLLOUT 4
-# endif
 /* we use select */
 #else /* ! HAVE_POLL && ! HAVE_SELECT */
 # error "no poll() or select() found"
+#endif
+
+#if HAVE_POLL_H
+# include <poll.h>
+#elif HAVE_SYS_POLL_H
+# include <sys/poll.h>
+#endif
+#ifndef POLLIN
+# define POLLIN 1
+#endif
+#ifndef POLLOUT
+# define POLLOUT 4
 #endif
 #ifndef INFTIM
 # define INFTIM -1
