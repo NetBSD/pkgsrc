@@ -6,3 +6,6 @@
 * stricter type checking
 * quoting check for Makefile variables
 * -E/--explain
+* check for C/C++ style comments in Makefiles
+  rm -f *.o		/* delete unused files */
+  .ifdef foo		/* xyz */
