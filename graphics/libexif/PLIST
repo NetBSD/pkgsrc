@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/10/27 19:30:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11.4.1 2005/05/14 05:49:55 snj Exp $
 include/libexif/_stdint.h
 include/libexif/exif-byte-order.h
 include/libexif/exif-content.h
@@ -10,12 +10,11 @@ include/libexif/exif-loader.h
 include/libexif/exif-log.h
 include/libexif/exif-mem.h
 include/libexif/exif-mnote-data.h
-include/libexif/exif-result.h
 include/libexif/exif-tag.h
 include/libexif/exif-utils.h
 lib/libexif.la
 lib/pkgconfig/libexif.pc
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libexif.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libexif.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libexif.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libexif-12.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libexif-12.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libexif-12.mo
 @dirrm include/libexif

@@ -1,21 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2004/10/27 19:30:23 drochner Exp $
+$NetBSD: patch-aa,v 1.1.4.1 2005/05/14 05:49:56 snj Exp $
 
---- configure.orig	2004-10-27 15:07:12.000000000 +0200
-+++ configure
-@@ -25641,7 +25641,7 @@ if test "x$GCC" = "xyes"; then
+--- libexif/exif-utils.h.orig	2005-03-12 20:27:13.000000000 -0600
++++ libexif/exif-utils.h
+@@ -45,7 +45,6 @@ typedef struct {ExifSLong numerator; Exi
  
- fi
  
--                                                                                                    ac_config_files="$ac_config_files Makefile libexif.spec libexif/Makefile libexif/canon/Makefile libexif/olympus/Makefile libexif/pentax/Makefile libjpeg/Makefile test/Makefile m4/Makefile libexif/libexif.pc"
-+                                                                                                    ac_config_files="$ac_config_files Makefile libexif.spec libexif/Makefile libexif/canon/Makefile libexif/olympus/Makefile libexif/pentax/Makefile libjpeg/Makefile po/Makefile.in test/Makefile m4/Makefile libexif/libexif.pc"
- cat >confcache <<\_ACEOF
- # This file is a shell script that caches the results of configure
- # tests run on this system so they can be shared between configure
-@@ -26219,6 +26219,7 @@ do
-   "libexif/olympus/Makefile" ) CONFIG_FILES="$CONFIG_FILES libexif/olympus/Makefile" ;;
-   "libexif/pentax/Makefile" ) CONFIG_FILES="$CONFIG_FILES libexif/pentax/Makefile" ;;
-   "libjpeg/Makefile" ) CONFIG_FILES="$CONFIG_FILES libjpeg/Makefile" ;;
-+  "po/Makefile.in" ) CONFIG_FILES="$CONFIG_FILES po/Makefile.in" ;;
-   "test/Makefile" ) CONFIG_FILES="$CONFIG_FILES test/Makefile" ;;
-   "m4/Makefile" ) CONFIG_FILES="$CONFIG_FILES m4/Makefile" ;;
-   "libexif/libexif.pc" ) CONFIG_FILES="$CONFIG_FILES libexif/libexif.pc" ;;
+ ExifShort     exif_get_short     (const unsigned char *b, ExifByteOrder order);
+-ExifSShort    exif_get_sshort    (const unsigned char *b, ExifByteOrder order);
+ ExifLong      exif_get_long      (const unsigned char *b, ExifByteOrder order);
+ ExifSLong     exif_get_slong     (const unsigned char *b, ExifByteOrder order);
+ ExifRational  exif_get_rational  (const unsigned char *b, ExifByteOrder order);
