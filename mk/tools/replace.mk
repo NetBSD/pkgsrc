@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.73 2005/05/14 21:15:07 jlam Exp $
+# $NetBSD: replace.mk,v 1.74 2005/05/14 21:38:18 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -543,7 +543,12 @@ TOOLS_${_TOOLS_VARNAME.install}=	${TOOLS_REAL_CMD.install}
 MAKEFLAGS+=			TOOLS_IGNORE.lex=
 .  elif !empty(_TOOLS_USE_PKGSRC.lex:M[yY][eE][sS])
 .    include "../../devel/flex/buildlink3.mk"
-TOOLS_DEPENDS.lex?=	${BUILDLINK_DEPENDS.flex}:${BUILDLINK_PKGSRCDIR.flex}
+_TOOLS_DEPENDS.lex=		# empty
+.      for _dep_ in ${BUILDLINK_DEPENDS.flex}
+_TOOLS_DEPENDS.lex+=		${_dep_}:${BUILDLINK_PKGSRCDIR.flex}
+.      endfor
+.      undef _dep_
+TOOLS_DEPENDS.lex?=		${_TOOLS_DEPENDS.lex}
 TOOLS_CREATE+=			lex
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.lex=flex
 TOOLS_REAL_CMD.lex=		${TOOLS_PREFIX.lex}/bin/flex
