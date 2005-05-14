@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.4 2005/05/07 15:28:40 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.5 2005/05/14 22:34:59 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -354,7 +354,7 @@ converters    games         mbone         print         x11</programlisting>
       accordingly, e.g.   <pkg>editors/sam</pkg> again, but the quick
       answer is: </para>
 
-    <programlisting>WRKSRC=		${WRKDIR}</programlisting>
+    <programlisting>WRKSRC=             ${WRKDIR}</programlisting>
 
     <para> Please note that the old <varname>NO_WRKSUBDIR</varname>
       has been deprecated and should not be used. Also, if your

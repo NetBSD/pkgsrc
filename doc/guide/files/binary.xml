@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.11 2005/05/08 13:52:17 wiz Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.12 2005/05/14 22:34:59 rillig Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -71,7 +71,7 @@
 	  As used in this example, <varname>_ACCEPTABLE=yes</varname>
 	  accepts <emphasis>all</emphasis> licenses.</para>
 
-	<programlisting>PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
+        <programlisting>PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
 WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
 BSDSRCDIR=      /usr/src
 BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
@@ -131,7 +131,7 @@ _ACCEPTABLE=    yes</programlisting>
 	starting it from <filename>rc.local</filename>:</para>
 
       <programlisting>( cd /usr/pkgsrc/security/ssh ; make bulk-install )
-if [ -f	/usr/pkg/etc/rc.d/sshd ]; then
+if [ -f /usr/pkg/etc/rc.d/sshd ]; then
     /usr/pkg/etc/rc.d/sshd
 fi</programlisting>
 
