@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.22 2005/05/15 03:09:52 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.23 2005/05/15 22:53:57 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -139,7 +139,8 @@ TOOLS_REAL_CMDLINE_DFLT.${_t_}= \
 override-tools: ${TOOLS_CMD.${_t_}}
 
 ${TOOLS_CMD.${_t_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H:Q}
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -d ${.TARGET:H:Q} ||		\
+		${MKDIR} ${.TARGET:H:Q}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} -n ${TOOLS_REAL_CMDLINE.${_t_}:Q}""; then		\
 		create=wrapper;						\
