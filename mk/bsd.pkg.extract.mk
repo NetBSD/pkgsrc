@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.2 2005/05/13 22:08:20 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.3 2005/05/15 03:57:21 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -78,7 +78,8 @@ LHA=			${LOCALBASE}/bin/lha
 .  endif
 .endif
 .if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
-    !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz)
+    !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz) || \
+    !empty(EXTRACT_ONLY:M*.Z) || !empty(EXTRACT_SUFX:M*.Z)
 .  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 PKGSRC_USE_TOOLS+=	gzcat
 .  elif !defined(GZCAT)
