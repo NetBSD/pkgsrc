@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 15:59:14 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/05/15 14:07:21 veego Exp $
 
-SHA1 (./ymessenger-0.93.0-1.i386.rpm) = f88deab6388769804950f570d7915f50070d3fac
-RMD160 (./ymessenger-0.93.0-1.i386.rpm) = 3eebd0aa611ca377d7ffad82e536d0ef1be0d760
-Size (./ymessenger-0.93.0-1.i386.rpm) = 103686 bytes
+SHA1 (ymessenger-0.93.0-1.i386.rpm) = f88deab6388769804950f570d7915f50070d3fac
+RMD160 (ymessenger-0.93.0-1.i386.rpm) = 3eebd0aa611ca377d7ffad82e536d0ef1be0d760
+Size (ymessenger-0.93.0-1.i386.rpm) = 103686 bytes
