@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.12 2005/05/14 22:34:59 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.13 2005/05/15 20:31:45 rillig Exp $ -->
 
 <!-- based on:
 pkgsrc/bootstrap/bmake/for.c 1.1.1.1
@@ -66,9 +66,9 @@ pkgsrc/bootstrap/bmake/var.c 1.2
     a string is splitted into words, it is splitted as you would expect
     it from &man.sh.1;.</para>
 
-    <para>No rule without exception&mdash;the ``.for'' loop does not
-    follow the shell quoting rules but splits at sequences of
-    whitespace.</para>
+    <para>No rule without exception&mdash;the <command>.for</command>
+    loop does not follow the shell quoting rules but splits at sequences
+    of whitespace.</para>
 
     <para>There are several types of variables that should be handled
     differently. Strings and two types of lists.</para>
@@ -85,15 +85,14 @@ pkgsrc/bootstrap/bmake/var.c 1.2
       are never exported to any shell command. Their elements are
       separated by whitespace. Therefore the elements themselves cannot
       have embedded whitespace. Any other characters are allowed.
-      Internal lists can be used in <!-- FIXME
-      --><varname>.for</varname> loops. Examples are
-      <varname>DEPENDS</varname> and
+      Internal lists can be used in <command>.for</command> loops.
+      Examples are <varname>DEPENDS</varname> and
       <varname>BUILD_DEPENDS</varname>.</para></listitem>
 
       <listitem><para><emphasis>External lists</emphasis> are lists that
       may be exported to a shell command. Their elements can contain any
       characters, including whitespace. That's why they cannot be used
-      in <!-- FIXME --><varname>.for</varname> loops. Examples are
+      in <command>.for</command> loops. Examples are
       <varname>DISTFILES</varname> and
       <varname>MASTER_SITES</varname>.</para></listitem>
 
@@ -109,8 +108,8 @@ pkgsrc/bootstrap/bmake/var.c 1.2
 	not be used by package
 	<filename>Makefile</filename>s.</para></listitem>
 
-	<listitem><para>In <!-- FIXME --><varname>.for</varname> loops
-	you should use lowercase variable names for the iteration
+	<listitem><para>In <command>.for</command> loops you should use
+	lowercase variable names for the iteration
 	variables.</para></listitem>
 
       </itemizedlist>
