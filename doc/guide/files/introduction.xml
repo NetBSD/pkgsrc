@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.3 2005/01/16 02:31:33 grant Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.4 2005/05/15 20:30:54 rillig Exp $ -->
 
 <chapter id="introduction">
   <title>Introduction</title>
@@ -160,7 +160,7 @@
 	<listitem>
 	  <para>
 	    This is the former name of <quote>pkgsrc</quote>.  It is
-	    part of the &os; operating system and can be bootstrap to
+	    part of the &os; operating system and can be bootstrapped to
 	    run on non-&os; operating systems as well.  It handles
 	    building (compiling), installing, and removing of
 	    packages.
@@ -230,7 +230,7 @@
     <para>When giving examples for commands, shell prompts are used to
       show if the command should/can be issued as root, or if
       <quote>normal</quote> user privileges are sufficient. We use a
-      &rprompt; for root's shell prompt, and a &uprompt; for users'
+      &rprompt; for root's shell prompt, and a &cprompt; for users'
       shell prompt, assuming they use the C-shell or tcsh.</para>
   </sect1>
 </chapter>
