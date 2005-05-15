@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1654 2005/05/15 05:05:47 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1655 2005/05/15 21:32:42 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -831,14 +831,50 @@ BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
 #
 PKGSRC_USE_TOOLS+=							\
 	[ awk basename cat chgrp chmod chown cmp cp cut date dirname	\
-	echo egrep env expr false fgrep file find grep gtar gunzip gzip	\
-	head hostname id install ln ls m4 mkdir mtree mv nice pax pwd	\
-	rm rmdir sed sh sort tail tar tee test touch tr	true tsort wc	\
+	echo egrep env expr false fgrep file find grep gtar head	\
+	hostname id install ln ls m4 mkdir mtree mv nice pax pwd rm	\
+	rmdir sed sh sort tail tar tee test touch tr true tsort wc	\
 	xargs
 
 # We need a mail command to send mail to ${PKGSRC_MESSAGE_RECIPIENTS}.
 .if !empty(PKGSRC_MESSAGE_RECIPIENTS)
 PKGSRC_USE_TOOLS+=	mail
+.endif
+
+# If MANZ is defined, then we want the final man pages to be compressed.
+# If MANZ is not defined, then we want the final man pages to be 
+# uncompressed.
+#
+# We need to figure out if during installation, we need either gunzip or
+# gzip to decompress or compress the installed man pages.  If a package
+# sets MANCOMPRESSED to "yes" or "no", then it's an indication to the
+# install code that the package itself installed the man pages either
+# compressed or uncompressed.  If a package sets MANCOMPRESSED_IF_MANZ,
+# then the package uses BSD-style makefiles, so we need to determine if 
+# the BSD-style makefile causes the man pages to be compressed or not.
+#
+.if !defined(_MANCOMPRESSED)
+_MANCOMPRESSED?=	${MANCOMPRESSED:Uno}
+.  if defined(MANCOMPRESSED_IF_MANZ) && defined(PKGMAKECONF)
+_MANCOMPRESSED!=							\
+	{ ${ECHO} ".include \""${PKGMAKECONF:Q}"\"";			\
+	  ${ECHO} "all:";						\
+	  ${ECHO} ".if defined(MANZ)";					\
+	  ${ECHO} "	@${ECHO} yes";					\
+	  ${ECHO} ".else";						\
+	  ${ECHO} "	@${ECHO} no";					\
+	  ${ECHO} ".endif";						\
+	} | ${MAKE} -f - all
+.  endif
+.endif
+_MANZ=		${MANZ:Dyes:Uno}
+MAKEVARS+=	_MANCOMPRESSED _MANZ
+
+.if !empty(_MANCOMPRESSED:M[yY][eE][sS]) && empty(_MANZ:M[yY][eE][sS])
+PKGSRC_USE_TOOLS+=	gunzip
+.endif
+.if empty(_MANCOMPRESSED:M[yY][eE][sS]) && !empty(_MANZ:M[yY][eE][sS])
+PKGSRC_USE_TOOLS+=	gzip
 .endif
 
 # Extract
@@ -2139,7 +2175,7 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
-	if [ X"${MANCOMPRESSED}" != X"" -a X"${MANZ}" = X"" ]; then	\
+	if [ "${_MANCOMPRESSED}" = "yes" -a "${_MANZ}" != "yes" ]; then	\
 		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
 		${ECHO_MSG} "${_PKGSRC_IN}> Decompressing manual pages for ${PKGNAME}";	\
 		for manpage in $$newmanpages; do			\
@@ -2158,7 +2194,7 @@ real-su-install: ${MESSAGE}
 			fi;						\
 		done;							\
 	fi;								\
-	if [ X"${MANCOMPRESSED}" = X"" -a X"${MANZ}" != X"" ]; then	\
+	if [ "${_MANCOMPRESSED}" != "yes" -a "${_MANZ}" = "yes" ]; then	\
 		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
 		${ECHO_MSG} "${_PKGSRC_IN}> Compressing manual pages for ${PKGNAME}"; \
 		for manpage in $$newmanpages; do			\
@@ -4569,13 +4605,6 @@ depend:
 tags:
 .endif
 
-# if automatic manual page compression is done by the package according
-# to MANZ's value, set MANCOMPRESSED if MANZ is set
-.if defined(MANCOMPRESSED_IF_MANZ) && defined(MANZ)
-MANCOMPRESSED=	yes
-MAKE_ENV+=	MANZ="${MANZ}"
-.endif
-
 # generate ${PLIST} from ${PLIST_SRC} by:
 # - substituting for PLIST_SUBST entries
 # - fixing list of man-pages according to MANZ, MANINSTALL.
@@ -4694,7 +4723,7 @@ _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_MANINSTALL}
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_IMAKE_MAN}
 .endif
 # Add '.gz' suffixes on man entries if needed
-.if defined(MANZ)
+.if !empty(_MANZ:M[yY][eE][sS])
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_ADD_MANZ}
 .endif
 # Print the entry
