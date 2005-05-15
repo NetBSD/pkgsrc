@@ -1,4 +1,4 @@
-# $NetBSD: tools.IRIX.mk,v 1.11 2005/05/14 10:17:10 rillig Exp $
+# $NetBSD: tools.IRIX.mk,v 1.12 2005/05/15 22:31:50 jlam Exp $
 #
 # System-supplied tools for the IRIX operating system.
 
@@ -23,20 +23,26 @@ TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/sbin/find
 TOOLS_PLATFORM.grep?=		/sbin/grep
+.if exists(/usr/sbin/gunzip)
 TOOLS_PLATFORM.gunzip?=		/usr/sbin/gunzip -f
+.endif
 .if exists(/usr/sbin/gzcat)
 TOOLS_PLATFORM.gzcat?=		/usr/sbin/gzcat
-.elif exists(/usr/bsd/zcat)
-TOOLS_PLATFORM.gzcat?=		/usr/bsd/zcat
 .endif
+.if exists(/usr/sbin/gzip)
 TOOLS_PLATFORM.gzip?=		/usr/sbin/gzip -nf ${GZIP}
+.endif
 TOOLS_PLATFORM.head?=		/usr/bsd/head
 TOOLS_PLATFORM.hostname?=	/usr/bsd/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
 TOOLS_PLATFORM.ln?=		/sbin/ln
 TOOLS_PLATFORM.ls?=		/sbin/ls
 TOOLS_PLATFORM.m4?=		/sbin/m4
+.if exists(/usr/sbin/mailx)
 TOOLS_PLATFORM.mail?=		/usr/sbin/mailx
+.elif exists(/usr/bin/mail)
+TOOLS_PLATFORM.mail?=		/usr/bin/mail
+.endif
 TOOLS_PLATFORM.mkdir?=		/sbin/mkdir -p
 TOOLS_PLATFORM.mv?=		/sbin/mv
 TOOLS_PLATFORM.nice?=		/sbin/nice
