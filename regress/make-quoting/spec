@@ -1,0 +1,9 @@
+# $NetBSD: spec,v 1.1.1.1 2005/05/15 21:10:16 rillig Exp $
+#
+
+MAKEARGS_TEST=build
+MAKEARGS_CLEAN=clean
+
+check_result() {
+	exit_status 0
+}
