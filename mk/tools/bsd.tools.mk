@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.20 2005/05/11 08:41:50 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.21 2005/05/15 01:17:05 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -144,14 +144,17 @@ ${TOOLS_CMD.${_t_}}:
 	if ${TEST} -n ${TOOLS_REAL_CMDLINE.${_t_}:Q}""; then		\
 		create=wrapper;						\
 		cmdline=${TOOLS_REAL_CMDLINE.${_t_}:Q};			\
-	elif ${TEST} -n ${TOOLS_REAL_CMD.${_t_}:Q}"" -a			\
-		     -z ${TOOLS_ARGS.${_t_}:Q}""; then			\
-		case ${TOOLS_REAL_CMD.${_t_}:Q}"" in			\
-		/*)	create=symlink ;;				\
-		*)	create=wrapper;					\
+	elif ${TEST} -n ${TOOLS_REAL_CMD.${_t_}:Q}""; then		\
+		if ${TEST} -n ${TOOLS_REAL_ARGS.${_t_}:Q}""; then	\
+			create=wrapper;					\
 			cmdline=${_TOOLS_REAL_CMDLINE_DFLT.${_t_}:Q};	\
-			;;						\
-		esac;							\
+		else							\
+			case ${TOOLS_REAL_CMD.${_t_}:Q}"" in		\
+			/*)	create=symlink ;;			\
+			*)	create=wrapper;				\
+				cmdline=${_TOOLS_REAL_CMDLINE_DFLT.${_t_}:Q}; \
+			esac;						\
+		fi;							\
 	else								\
 		create=symlink;						\
 	fi;								\
