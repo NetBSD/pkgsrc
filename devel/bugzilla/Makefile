@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:18 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/15 17:04:32 adrianp Exp $
 #
 
-DISTNAME=	bugzilla-2.18
+DISTNAME=	bugzilla-2.18.1
 CATEGORIES=	www devel
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/webtools/
 
@@ -13,7 +13,7 @@ DEPENDS+=	p5-AppConfig>=1.52:../../devel/p5-AppConfig
 DEPENDS+=	p5-CGI>=2.93:../../www/p5-CGI
 DEPENDS+=	p5-File-Spec>=0.82:../../devel/p5-File-Spec
 DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
-#DEPENDS+=	p5-Template-Toolkit>=2.08:../../www/p5-Template-Toolkit
+DEPENDS+=	p5-Template-Toolkit>=2.08:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Text-Tabs+Wrap>=2001.0131:../../textproc/p5-Text-Tabs+Wrap
 DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
 DEPENDS+=	p5-DBD-mysql>=2.1010:../../databases/p5-DBD-mysql
@@ -108,6 +108,8 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${BZDIR}/template
 	${INSTALL_DATA} ${WRKSRC}/skins/standard/*.css ${BZDIR}/skins/standard
 	${INSTALL_DATA} ${WRKSRC}/docs/images/*.gif ${BZDIR}/docs/images
+	${INSTALL_DATA} ${WRKSRC}/docs/images/*.png ${BZDIR}/docs/images
+	${INSTALL_DATA} ${WRKSRC}/docs/images/*.xml ${BZDIR}/docs/images
 	${INSTALL_DATA} ${WRKSRC}/docs/images/callouts/*.gif \
 		${BZDIR}/docs/images/callouts
 
