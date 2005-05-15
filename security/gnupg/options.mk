@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/03/22 17:50:55 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2005/05/15 04:26:24 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg
 PKG_SUPPORTED_OPTIONS=	i586-optimized curl idea ldap m68060-optimized
@@ -25,6 +25,7 @@ LICENCE=	fee-based-commercial-use
 DISTFILES+=	idea.c.gz
 SITES_idea.c.gz=ftp://ftp.gnupg.dk/pub/contrib-dk/ \
 		http://www.gnupg.dk/contrib-dk/
+PKGSRC_USE_TOOLS+=	gzcat
 
 pre-configure:
 	${GZCAT} ${DISTDIR}/idea.c.gz > ${WRKSRC}/cipher/idea.c
