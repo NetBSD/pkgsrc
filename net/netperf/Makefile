@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:52 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/05/15 21:52:10 jlam Exp $
 # KAME Id: Makefile,v 1.3 2000/01/21 12:34:29 itojun Exp
 #
 
@@ -11,9 +11,8 @@ MAINTAINER=	itojun@kame.net
 HOMEPAGE=	http://www.netperf.org/
 COMMENT=	Rick Jones' network performance benchmarking package
 
-
-MAKEFILE=	makefile
-MAN1=		netperf.1 netserver.1
+PKGSRC_USE_TOOLS+=	gzip
+MAKEFILE=		makefile
 
 CFLAGS.IRIX+=	-DIRIX
 
@@ -24,6 +23,6 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/netserver.man ${PREFIX}/man/man1/netserver.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/netperf
 	${INSTALL_MAN} ${WRKSRC}/netperf.ps ${PREFIX}/share/doc/netperf
-	${GZIP_CMD} -9nf ${PREFIX}/share/doc/netperf/netperf.ps
+	${GZIP_CMD} ${PREFIX}/share/doc/netperf/netperf.ps
 
 .include "../../mk/bsd.pkg.mk"
