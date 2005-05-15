@@ -1,4 +1,4 @@
-# $NetBSD: imake.mk,v 1.6 2005/05/10 19:25:06 jlam Exp $
+# $NetBSD: imake.mk,v 1.7 2005/05/15 18:37:44 jlam Exp $
 #
 # This Makefile fragment handles packages that need imake and xmkmf
 # to build X11-related packages.  The correct imake and xmkmf tools
@@ -50,31 +50,31 @@ _TOOLS_USE_PKGSRC.imake=	yes
 MAKEFLAGS+=			TOOLS_IGNORE.imake=
 .  else
 #
-# If we're using xpkgwedge, then we need to invoke the special xmkmf
-# script that will find imake config files in both ${PREFIX} and in
-# ${X11BASE}.
-#
-.    if !empty(USE_XPKGWEDGE:M[yY][eE][sS])
-TOOLS_REAL_CMD.xmkmf?=		${X11PREFIX}/bin/pkgxmkmf
-.    endif
-#
 # Depending on which X11_TYPE we're using, depend on the correct package
 # to pull in imake and xmkmf.
 #
 .    if defined(X11_TYPE) && (${X11_TYPE} == "XFree86")
 TOOLS_DEPENDS.imake?=		imake>=4.4.0:../../x11/imake
-TOOLS_REAL_CMD.imake=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/imake
-TOOLS_REAL_CMD.xmkmf=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/xmkmf
+TOOLS_REAL_CMD.imake?=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/imake
+TOOLS_REAL_CMD.xmkmf?=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/xmkmf
 .    elif defined(X11_TYPE) && (${X11_TYPE} == "xorg")
 TOOLS_DEPENDS.imake?=		xorg-imake>=6.8:../../x11/xorg-imake
-TOOLS_REAL_CMD.imake=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/imake
-TOOLS_REAL_CMD.xmkmf=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/xmkmf
+TOOLS_REAL_CMD.imake?=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/imake
+TOOLS_REAL_CMD.xmkmf?=		${X11PREFIX}/${X11ROOT_PREFIX}/bin/xmkmf
 .    else # ${X11_TYPE} == "native"
-TOOLS_REAL_CMD.imake=		${X11BASE}/bin/imake
-TOOLS_REAL_CMD.xmkmf=		${X11BASE}/bin/xmkmf
+TOOLS_REAL_CMD.imake?=		${X11BASE}/bin/imake
+TOOLS_REAL_CMD.xmkmf?=		${X11BASE}/bin/xmkmf
 .    endif
-TOOLS_REAL_ARGS.imake=		${IMAKEOPTS}
-TOOLS_REAL_ARGS.xmkmf=		${XMKMF_FLAGS}
+TOOLS_REAL_ARGS.imake?=		${IMAKEOPTS}
+TOOLS_REAL_ARGS.xmkmf?=		${XMKMF_FLAGS}
+#
+# If we're using xpkgwedge, then we need to invoke the special xmkmf
+# script that will find imake config files in both ${PREFIX} and in
+# ${X11BASE}.
+#
+.    if !empty(USE_XPKGWEDGE:M[yY][eE][sS])
+TOOLS_REAL_CMD.xmkmf=		${X11PREFIX}/bin/pkgxmkmf
+.    endif
 #
 # Add any extra tools that may be required when using imake, e.g. gmake.
 #
