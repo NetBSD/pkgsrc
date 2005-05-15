@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.21 2005/05/15 01:17:05 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.22 2005/05/15 03:09:52 jlam Exp $
 #
 # This Makefile fragment creates tools under ${TOOLS_DIR} that are
 # found before similarly-named tools in the system path.
@@ -133,7 +133,7 @@ MKDIR?=         mkdir -p
 .for _t_ in ${TOOLS_CREATE}
 TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 TOOLS_REAL_CMD.${_t_}?=		${FALSE}
-_TOOLS_REAL_CMDLINE_DFLT.${_t_}= \
+TOOLS_REAL_CMDLINE_DFLT.${_t_}= \
 	${TOOLS_REAL_CMD.${_t_}} ${TOOLS_REAL_ARGS.${_t_}} "$$@"
 
 override-tools: ${TOOLS_CMD.${_t_}}
@@ -147,12 +147,12 @@ ${TOOLS_CMD.${_t_}}:
 	elif ${TEST} -n ${TOOLS_REAL_CMD.${_t_}:Q}""; then		\
 		if ${TEST} -n ${TOOLS_REAL_ARGS.${_t_}:Q}""; then	\
 			create=wrapper;					\
-			cmdline=${_TOOLS_REAL_CMDLINE_DFLT.${_t_}:Q};	\
+			cmdline=${TOOLS_REAL_CMDLINE_DFLT.${_t_}:Q};	\
 		else							\
 			case ${TOOLS_REAL_CMD.${_t_}:Q}"" in		\
 			/*)	create=symlink ;;			\
 			*)	create=wrapper;				\
-				cmdline=${_TOOLS_REAL_CMDLINE_DFLT.${_t_}:Q}; \
+				cmdline=${TOOLS_REAL_CMDLINE_DFLT.${_t_}:Q}; \
 			esac;						\
 		fi;							\
 	else								\
