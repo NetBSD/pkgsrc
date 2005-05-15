@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.9 2005/05/14 22:34:59 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.10 2005/05/15 20:33:01 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -6,7 +6,7 @@
   <sect1>
     <title>Bootstrapping pkgsrc</title>
 
-    <para>For Operating Systems other than &os;, we provide a bootstrap kit to
+    <para>For operating systems other than &os;, we provide a bootstrap kit to
       build the required tools to use pkgsrc on your platform. Besides
       support for native &os;, pkgsrc and the bootstrap kit have support for
       the following operating systems:</para>
@@ -65,9 +65,9 @@
       <filename>/usr/pkg</filename> for the
       <emphasis>prefix</emphasis> where programs will be installed in,
       and <filename>/var/db/pkg</filename> for the package database
-      directory where pkgsrc will do it's internal bookkeeping.
+      directory where pkgsrc will do its internal bookkeeping.
       However, these can also be set using command-line
-      parameters.</para>
+      arguments.</para>
 
     <para>Binary packages for the pkgsrc tools and an initial set of packages is
       available for supported platforms. An up-to-date list of these can be
@@ -308,7 +308,7 @@
 	version of IRIX providing support for &man.if.indextoname.3;, &man.if.nametoindex.3;,
 	etc.</para>
 
-      <para>At this point in time, pkgsrc only supports one ABI.  That is, you can not
+      <para>At this point in time, pkgsrc only supports one ABI at a time.  That is, you can not
 	switch between the old 32-bit ABI, the new 32-bit ABI and the 64-bit ABI.  If
 	you start out using "abi=n32", that's what all your packages will be built
 	with.</para>
@@ -327,7 +327,7 @@
       <para>The bootstrapping process should set all the right options for programs such
 	as imake(1), but you may want to set some options depending on your local
 	setup.  Please see <filename>pkgsrc/mk/defaults/mk.conf</filename> and, of
-	course, your compilers man pages for details.</para>
+	course, your compiler's man pages for details.</para>
 
       <para>If you are using SGI's MIPSPro compiler, please set
          <programlisting>PKGSRC_COMPILER=mipspro</programlisting>
