@@ -1,4 +1,16 @@
-@comment $NetBSD: PLIST,v 1.9 2005/04/19 14:49:35 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/05/15 21:39:07 salo Exp $
+share/doc/horde/CHANGES
+share/doc/horde/CODING_STANDARDS
+share/doc/horde/CONTRIBUTING
+share/doc/horde/COPYING
+share/doc/horde/CREDITS
+share/doc/horde/HACKING
+share/doc/horde/INSTALL
+share/doc/horde/README
+share/doc/horde/RELEASE_NOTES
+share/doc/horde/SECURITY
+share/doc/horde/TRANSLATIONS
+share/examples/horde/horde.conf
 share/horde/config/horde.php.dist
 share/horde/config/html.php.dist
 share/horde/config/lang.php.dist
@@ -88,10 +100,10 @@ share/horde/lib/Category/sql.php
 share/horde/lib/CategoryTree.php
 share/horde/lib/Cipher.php
 share/horde/lib/Cipher/BlockMode.php
+share/horde/lib/Cipher/BlockMode/cbc.php
+share/horde/lib/Cipher/BlockMode/cfb64.php
 share/horde/lib/Cipher/BlockMode/ecb.php
 share/horde/lib/Cipher/BlockMode/ofb64.php
-share/horde/lib/Cipher/BlockMode/cfb64.php
-share/horde/lib/Cipher/BlockMode/cbc.php
 share/horde/lib/Cipher/blowfish.php
 share/horde/lib/Cipher/cast128.php
 share/horde/lib/Cipher/rc2.php
@@ -140,21 +152,21 @@ share/horde/lib/Serialize.php
 share/horde/lib/SessionCache.php
 share/horde/lib/SessionHandler.php
 share/horde/lib/SessionHandler/dbm.php
+share/horde/lib/SessionHandler/mysql.php
+share/horde/lib/SessionHandler/pgsql.php
 share/horde/lib/SessionHandler/sapdb.php
 share/horde/lib/SessionHandler/sql.php
-share/horde/lib/SessionHandler/pgsql.php
-share/horde/lib/SessionHandler/mysql.php
 share/horde/lib/Text.php
 share/horde/lib/Token.php
 share/horde/lib/Token/file.php
 share/horde/lib/Token/sql.php
 share/horde/lib/VFS.php
-share/horde/lib/VFS/sql.php
+share/horde/lib/VFS/ListItem.php
 share/horde/lib/VFS/Object.php
 share/horde/lib/VFS/file.php
-share/horde/lib/VFS/ListItem.php
-share/horde/lib/VFS/musql.php
 share/horde/lib/VFS/ftp.php
+share/horde/lib/VFS/musql.php
+share/horde/lib/VFS/sql.php
 share/horde/lib/VFS/sql_file.php
 share/horde/lib/base.php
 share/horde/lib/version.php
@@ -255,10 +267,10 @@ share/horde/scripts/db/mysql_drop.sql
 share/horde/scripts/db/pgsql_create.sql
 share/horde/scripts/db/pgsql_drop.sql
 share/horde/scripts/db/prefs.sql
+share/horde/scripts/db/sessionhandler.sql
 share/horde/scripts/db/sessionhandler_oracle.sql
 share/horde/scripts/db/sessionhandler_pgsql.sql
 share/horde/scripts/db/sessionhandler_sapdb.sql
-share/horde/scripts/db/sessionhandler.sql
 share/horde/scripts/db/vfs.sql
 share/horde/scripts/horde-rsync.sh
 share/horde/scripts/ldap/horde.schema
@@ -315,18 +327,6 @@ share/horde/test.php
 share/horde/util/css2horde.php
 share/horde/util/go.php
 share/horde/util/special_characters.php
-share/doc/horde/COPYING
-share/doc/horde/README
-share/doc/horde/CHANGES
-share/doc/horde/CODING_STANDARDS
-share/doc/horde/CONTRIBUTING
-share/doc/horde/CREDITS
-share/doc/horde/HACKING
-share/doc/horde/INSTALL
-share/doc/horde/RELEASE_NOTES
-share/doc/horde/SECURITY
-share/doc/horde/TRANSLATIONS
-share/examples/horde/horde.conf
 @dirrm share/horde/util
 @dirrm share/horde/templates/wml/login
 @dirrm share/horde/templates/wml
@@ -438,5 +438,5 @@ share/examples/horde/horde.conf
 @dirrm share/horde/graphics
 @dirrm share/horde/config
 @dirrm share/horde
-@dirrm share/doc/horde
 @dirrm share/examples/horde
+@dirrm share/doc/horde
