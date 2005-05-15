@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/22 21:25:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/15 19:12:46 jlam Exp $
 
 DISTNAME=	ppp-lzs-1.2
 CATEGORIES=	net
@@ -34,15 +34,15 @@ post-extract:
 	@${CP} ${NETBSDSRCDIR}/usr.sbin/pppd/pppd/Makefile ${WRKSRC}/pppd
 
 do-patch:
-	@cd ${WRKSRC};									\
+	@cd ${WRKSRC};							\
 	v=`${SED} -n -e "/^#define.*VERSION.*\"\(.*\)\".*/s//\1/p" pppd/patchlevel.h`;	\
-	${ECHO} -n "pppd $${v} sources found, ";					\
-	if [ -d $${v} ]; then								\
-	    ${ECHO} "patching..";							\
-	    ${CAT} $${v}/patch.* | ${PATCH} --quiet;					\
-	else										\
-	    ${ECHO} "Have no patches for this version, sorry!";				\
-	    ${FALSE};									\
+	${ECHO} -n "pppd $${v} sources found, ";			\
+	if [ -d $${v} ]; then						\
+	    ${ECHO} "patching..";					\
+	    ${CAT} $${v}/patch.* | ${PATCH} --quiet;			\
+	else								\
+	    ${ECHO} "Have no patches for this version, sorry!";		\
+	    ${FALSE};							\
 	fi
 
 pre-install:
