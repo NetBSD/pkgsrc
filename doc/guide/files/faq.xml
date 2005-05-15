@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.8 2005/05/14 22:34:59 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.9 2005/05/15 20:27:15 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
   <title>Frequently Asked Questions</title>
@@ -98,12 +98,12 @@
     <itemizedlist>
       <listitem>
         <para> <pkg>pkgtools/digest</pkg>:
-          calculates SHA1 checksums (and other kinds)
+          calculates various kinds of checksums (including SHA1)
         </para>
       </listitem>
       <listitem>
         <para> <pkg>pkgtools/libnbcompat</pkg>:
-          compat library for pkg tools
+          compatibility library for pkgsrc tools
         </para>
       </listitem>
       <listitem>
@@ -126,7 +126,7 @@
       <listitem>
         <para> <pkg>pkgtools/pkg_tarup</pkg>:
           create a binary package from an already-installed package.
-          used by 'make replace' to save the old package
+          used by <command>make replace</command> to save the old package
         </para>
       </listitem>
       <listitem>
@@ -156,7 +156,7 @@
     <itemizedlist>
       <listitem>
         <para> <pkg>pkgtools/pkg_chk</pkg>:
-          installs pkg_chk, which reports on packages whose installed
+          reports on packages whose installed
           versions do not match the latest pkgsrc entries
         </para>
       </listitem>
@@ -168,15 +168,13 @@
       </listitem>
       <listitem>
         <para> <pkg>pkgtools/pkgdepgraph</pkg>:
-          make graph from above (uses graphviz)
+          makes graphs from the output of <pkg>pkgtools/pkgdep</pkg> (uses graphviz)
         </para>
       </listitem>
       <listitem>
         <para> <pkg>pkgtools/pkglint</pkg>:
-          This provides two distinct abilities:
-          check a pkgsrc entry for correctness (pkglint)
-          check for and remove out-of-date distfiles and binary
-          packages (lintpkgsrc)
+          the pkglint(1) program checks a pkgsrc entry for errors,
+          lintpkgsrc(1) does various checks on the complete pkgsrc system.
         </para>
       </listitem>
       <listitem>
@@ -259,11 +257,9 @@
 
     <programlisting>
         FETCH_CMD=wget
-        .if defined(FETCH_CMD) &amp;&amp; ${FETCH_CMD} == "wget"
         FETCH_BEFORE_ARGS=--passive-ftp
         FETCH_RESUME_ARGS=-c
         FETCH_OUTPUT_ARGS=-O
-        .endif
     </programlisting>
 
 </sect1>
