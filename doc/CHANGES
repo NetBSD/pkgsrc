@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10081 2005/05/15 02:45:25 rillig Exp $
+$NetBSD: CHANGES,v 1.10082 2005/05/15 02:59:10 taya Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2365,3 +2365,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated firefox-gtk1 to 1.0.4 [taya 2005-05-14]
 	Updated abcde to 2.2.6 [snj 2005-05-15]
 	Updated pkglint to 4.14 [rillig 2005-05-15]
+	Updated mozilla to 1.7.8 [taya 2005-05-15]
+	Updated mozilla-gtk2 to 1.7.8 [taya 2005-05-15]
