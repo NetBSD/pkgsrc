@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/11/08 10:28:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/05/15 03:13:10 reed Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -91,14 +91,14 @@ lib/sane/libsane-nec.la
 lib/sane/libsane-net.la
 lib/sane/libsane-niash.la
 lib/sane/libsane-pie.la
-${NOT_SUNOS}lib/sane/libsane-pint.la
+${SANE_PINT}lib/sane/libsane-pint.la
 lib/sane/libsane-plustek.la
 lib/sane/libsane-plustek_pp.la
 lib/sane/libsane-ricoh.la
 lib/sane/libsane-s9036.la
 lib/sane/libsane-sceptre.la
 lib/sane/libsane-sharp.la
-${NOT_SUNOS}lib/sane/libsane-sm3600.la
+${SANE_SM3600}lib/sane/libsane-sm3600.la
 lib/sane/libsane-snapscan.la
 lib/sane/libsane-sp15c.la
 lib/sane/libsane-st400.la
