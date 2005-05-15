@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/29 15:11:16 uebayasi Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/15 22:02:27 jlam Exp $
 
 DISTNAME=	efont-unicode-bdf-0.4.2
 PKGNAME=	${DISTNAME:S/-bdf//}
@@ -10,7 +10,8 @@ MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/efont/unicode/
 COMMENT=	Free unicode BDF font
 
-USE_X11BASE=	YES
+USE_X11BASE=		YES
+PKGSRC_USE_TOOLS+=	gzip
 
 MESSAGE_SUBST+=	FONTDIR=${FONTDIR}
 PLIST_SUBST+=	FONTDIR=${FONTDIR}
