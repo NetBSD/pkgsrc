@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3487 2005/05/15 18:29:09 rillig Exp $
+$NetBSD: TODO,v 1.3488 2005/05/15 18:31:52 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1250,6 +1250,9 @@ Suggested other platform enhancements
 =====================================
 
 	o platform independent bulk build infrastructure
+
+	o update the binary bootstrap kits on
+	  ftp://ftp.netbsd.org/pub/NetBSD/packages/bootstrap-pkgsrc/
 
 Suggested cleanups in pkgsrc
 ============================
