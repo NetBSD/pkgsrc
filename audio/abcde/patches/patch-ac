@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.19 2005/04/21 08:56:18 pooka Exp $
+$NetBSD: patch-ac,v 1.20 2005/05/15 00:36:28 snj Exp $
 
---- abcde.orig	2004-11-08 16:40:30.000000000 +0200
-+++ abcde	2005-04-21 11:55:39.000000000 +0300
-@@ -1215,7 +1215,11 @@
+--- abcde.orig	2005-04-03 11:50:28.000000000 -0700
++++ abcde	2005-05-14 09:21:24.000000000 -0700
+@@ -1227,7 +1227,11 @@ do_cddbread ()
  do_cddbedit ()
  {
  	if checkstatus cddb-edit >/dev/null; then
@@ -14,16 +14,25 @@ $NetBSD: patch-ac,v 1.19 2005/04/21 08:56:18 pooka Exp $
  		VARIOUSARTISTS="$(checkstatus variousartists)"
  		VARIOUSARTISTSTYLE="$(checkstatus variousartiststyle)"
  		return 0
-@@ -1470,7 +1474,7 @@
+@@ -1482,7 +1486,7 @@ do_cddbedit ()
  	echo "variousartiststyle=$VARIOUSARTISTSTYLE" >> "$ABCDETEMPDIR/status"
  
  	if [ "$EDITCDDB" = "y" ] && [ "$UNINTENTIONALLY_ANGER_THE_FREEDB_PEOPLE" = "y" ]; then
--		if [ $CDDBDATAMD5SUM != "" ]  && [ $CDDBDATAMD5SUM != $($MD5SUM "$CDDBDATA" | cut -d " " -f 1) ]; then
-+		if [ "$CDDBDATAMD5SUM" != "" ]  && [ "$CDDBDATAMD5SUM" != "$($MD5SUM '$CDDBDATA' | cut -d ' ' -f 1)" ]; then
+-		if [ $CDDBDATAMD5SUM != "" ]  && [ $CDDBDATAMD5SUM != $($MD5SUM "$CDDBDATA" | cut -d" " -f1) ]; then
++		if [ "$CDDBDATAMD5SUM" != "" ]  && [ "$CDDBDATAMD5SUM" != "$($MD5SUM '$CDDBDATA' | cut -d' ' -f1)" ]; then
  			# This works but does not have the necessary error checking
  			# yet. If you are familiar with the CDDB spec
  			# (see http://www.freedb.org/src/latest/DBFORMAT) 
-@@ -1799,6 +1803,7 @@
+@@ -1764,7 +1768,7 @@ MD5SUM=md5sum
+ DISTMP3=distmp3
+ VORBISCOMMENT=vorbiscomment
+ METAFLAC=metaflac
+-NORMALIZE=normalize-audio
++NORMALIZE=normalize
+ CDSPEED=eject
+ VORBISGAIN=vorbisgain
+ 
+@@ -1811,6 +1815,7 @@ if [ X$(uname) = "XFreeBSD" ] ; then
  	HTTPGET=fetch
  	NEEDCDROMID=y
  	OSFLAVOUR=FBSD
@@ -31,7 +40,7 @@ $NetBSD: patch-ac,v 1.19 2005/04/21 08:56:18 pooka Exp $
  elif [ X$(uname) = "XDarwin" ] ; then
  	HTTPGET=curl
  	OSFLAVOUR=OSX
-@@ -1807,6 +1812,9 @@
+@@ -1819,6 +1824,9 @@ elif [ X$(uname) = "XDarwin" ] ; then
  elif [ X$(uname) = "XOpenBSD" ] ; then
  	HTTPGET=wget
  	MD5SUM=md5
@@ -41,7 +50,7 @@ $NetBSD: patch-ac,v 1.19 2005/04/21 08:56:18 pooka Exp $
  else
  	HTTPGET=wget
  fi
-@@ -1825,8 +1833,8 @@
+@@ -1837,8 +1845,8 @@ if [ -z "$WAVOUTPUTDIR" ]; then
  fi
  
  # Load system defaults
@@ -52,7 +61,7 @@ $NetBSD: patch-ac,v 1.19 2005/04/21 08:56:18 pooka Exp $
  fi
  # Load user preference defaults
  if [ -r $HOME/.abcde.conf ]; then
-@@ -1859,6 +1867,9 @@
+@@ -1871,6 +1879,9 @@ if [ "$CDROM" = "" ] ; then
  		CDROM=/dev/acd0c
  	elif [ -e /dev/disk1 ]; then
  		CDROM=/dev/disk1
@@ -62,7 +71,7 @@ $NetBSD: patch-ac,v 1.19 2005/04/21 08:56:18 pooka Exp $
  	fi
  fi
  
-@@ -1997,7 +2008,7 @@
+@@ -2011,7 +2022,7 @@ fi
  case "$CDROMREADERSYNTAX" in
  	cdparanoia|debug)
  		CDROMREADER="$CDPARANOIA"
@@ -71,7 +80,7 @@ $NetBSD: patch-ac,v 1.19 2005/04/21 08:56:18 pooka Exp $
  		;;
  	cdda2wav)
  		CDROMREADER="$CDDA2WAV"
-@@ -2148,7 +2159,8 @@
+@@ -2185,7 +2196,8 @@ for X in $CDROMREADER $CDDISCID ${NEEDTA
  do
  	# Cut off the command-line options we just added in
  	X=$(echo $X | cut -d' ' -f2)

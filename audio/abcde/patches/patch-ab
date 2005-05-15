@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.7 2004/11/14 21:55:29 snj Exp $
+$NetBSD: patch-ab,v 1.8 2005/05/15 00:36:28 snj Exp $
 
---- abcde.conf.orig	2004-11-06 16:56:58.000000000 -0800
-+++ abcde.conf	2004-11-14 13:12:13.000000000 -0800
+--- abcde.conf.orig	2005-03-01 05:19:50.000000000 -0800
++++ abcde.conf	2005-05-14 08:15:50.000000000 -0700
 @@ -174,7 +174,7 @@
  #ACTIONS=cddb,read,encode,tag,move,clean
  
@@ -9,5 +9,5 @@ $NetBSD: patch-ab,v 1.7 2004/11/14 21:55:29 snj Exp $
 -#CDROM=/dev/cdrom
 +#CDROM=/dev/rcd0d
  
- # If you'd like to make a default location that overrides the current
- # directory for putting mp3's, uncomment this.
+ # Optional CDROM device-ID for readers requiring the SCSI-syntax Bus,ID,Lun
+ #CDROMID=0,3,0
