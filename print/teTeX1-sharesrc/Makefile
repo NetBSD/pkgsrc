@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/24 21:13:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/15 19:11:35 jlam Exp $
 
 DISTNAME=	teTeX-texmfsrc-1.0.1
 PKGNAME=	teTeX-sharesrc-1.0.1
@@ -19,6 +19,7 @@ EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
+PKGSRC_USE_TOOLS+=	patch
 
 FILESDIR=	${.CURDIR}/../../print/teTeX1-share/files
 EXTRA_PATCH=	${FILESDIR}/latex.ltx.diff
