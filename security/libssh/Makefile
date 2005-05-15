@@ -1,4 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/17 11:34:16 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/15 17:11:04 adrianp Exp $
+#
+# This package currently exists as a dependency for the hydra package but 
+# the later versions of it are not supported by hydra.
+# This package should not be updated to the latest version available.
 #
 
 DISTNAME=	libssh-0.1
