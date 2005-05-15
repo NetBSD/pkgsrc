@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:43 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/15 22:02:28 jlam Exp $
 
 DISTNAME=	xanim2801
 PKGNAME=	xanim-2.80.1
@@ -22,7 +22,8 @@ EXTRACT_ONLY=   ${DISTNAME}${EXTRACT_SUFX}
 
 .include "Makefile.codecs"
 
-USE_IMAKE=	YES
+USE_IMAKE=		YES
+PKGSRC_USE_TOOLS+=	gunzip
 
 .include "../../mk/bsd.prefs.mk"
 

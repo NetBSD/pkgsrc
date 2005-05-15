@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:46:05 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/05/15 22:02:27 jlam Exp $
 #
 
 DISTNAME=	jhead-2.3
@@ -10,14 +10,14 @@ HOMEPAGE=	http://www.sentex.net/~mwandel/jhead/
 COMMENT=	Extract EXIF header from JPEG image
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
+PKGSRC_USE_TOOLS+=	gunzip
 
 INSTALLATION_DIRS=	bin man/man1 share/doc/html/jhead
 
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -o jhead \
 		jhead.c exif.c jpgfile.c makernote.c -lm
-	${GZIP_CMD} -d ${WRKSRC}/jhead.1.gz
+	${GUNZIP_CMD} ${WRKSRC}/jhead.1.gz
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/jhead

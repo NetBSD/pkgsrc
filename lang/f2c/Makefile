@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/04/11 21:46:13 tv Exp $
+# $NetBSD: Makefile,v 1.35 2005/05/15 22:02:27 jlam Exp $
 
 DISTNAME=	f2c-20001205
 PKGREVISION=	8
@@ -33,6 +33,8 @@ MAKE_ENV+=	ECHO=${ECHO}
 
 WRKSRC=		${WRKDIR}/f2c
 USE_LIBTOOL=	yes
+
+PKGSRC_USE_TOOLS+=	gunzip
 
 post-extract:
 	@${RM} ${WRKSRC}/index.html

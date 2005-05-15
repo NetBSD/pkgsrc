@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:37:16 grant Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/15 22:02:27 jlam Exp $
 #
 
 DISTNAME=	baekmuk-2.0
@@ -14,6 +14,7 @@ COMMENT=	X11 fonts for KSX 1001 Korean standard (baekmuk foundry)
 CONFLICTS+=	ksc5601fonts-[0-9]*
 
 USE_X11BASE=	yes
+USE_TOOLS+=	gzip
 
 MAKE_ENV+=	FONTDIR=${FONTDIR} GZIP_CMD="${GZIP_CMD}"
 
