@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.10 2005/05/10 19:04:53 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.11 2005/05/15 02:38:56 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -6,7 +6,7 @@
 .\"
 .\" Roland Illig <roland.illig@gmx.de>, 2004.
 .\"
-.Dd October 16, 2004
+.Dd May 15, 2005
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
@@ -110,9 +110,12 @@ Most files should not be executable until they are installed.
 .It [no-]paren
 Warn if variables are used like $(VAR) in Makefiles.
 They should always be used like ${VAR}.
-.It [no-]patches
-Warn if a patch file patches more than one file or if the patches differ
-from what is recorded in the distinfo file.
+.It [no-]sort
+Warn if items of a list are not correctly sorted.
+Currently this affects PLISTs and the SUBDIRs in category Makefiles.
+.It [no-]types
+Warn for some Makefile variables if their assigned values do not match
+their type.
 .It [no-]workdir
 Warn about existing
 .Pa work*
