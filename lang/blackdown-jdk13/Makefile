@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2005/02/27 22:30:43 veego Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/15 11:53:20 veego Exp $
 #
 
-BASENAME=	j2sdk
+BD_BASENAME=	j2sdk
 DISTNAME=	${EXTNAME}-${BLACKDOWN_ARCH}
 PKGNAME=	blackdown-jdk13-1
 PKGREVISION=	5
