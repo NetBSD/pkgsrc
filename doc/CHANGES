@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10083 2005/05/15 12:37:09 recht Exp $
+$NetBSD: CHANGES,v 1.10084 2005/05/15 13:35:43 chris Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2370,3 +2370,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated postgresql80-client to 8.0.3 [recht 2005-05-15]
 	Updated postgresql80-server to 8.0.3 [recht 2005-05-15]
 	Updated postgresql80 to 8.0.3 [recht 2005-05-15]
+	Updated sylpheed-devel to 1.9.10 [chris 2005-05-15]
