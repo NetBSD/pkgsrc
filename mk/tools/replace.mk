@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.76 2005/05/15 22:33:08 jlam Exp $
+# $NetBSD: replace.mk,v 1.77 2005/05/15 22:34:43 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -479,7 +479,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gzcat=
 TOOLS_DEPENDS.gzcat?=		gzip-base>=1.2.4b:../../archivers/gzip-base
 TOOLS_CREATE+=			gzcat
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gzcat=gzip-base
-TOOLS_REAL_CMD.gzcat=		${TOOLS_PREFIX.gzcat}/bin/gzcat
+TOOLS_REAL_CMD.gzcat=		${TOOLS_PREFIX.gzcat}/bin/zcat
 TOOLS_${_TOOLS_VARNAME.gzcat}=	${TOOLS_REAL_CMD.gzcat}
 .  endif
 .endif
