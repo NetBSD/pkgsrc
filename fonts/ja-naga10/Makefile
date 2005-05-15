@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 21:37:11 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/15 22:02:27 jlam Exp $
 
 DISTNAME=		knj10-1.1
 PKGNAME=		ja-naga10-1.1
@@ -12,6 +12,7 @@ HOMEPAGE=		http://hp.vector.co.jp/authors/VA013391/fonts/#naga10
 COMMENT=		10x10 dots X11 bitmap font for JIS X 0208
 
 USE_X11BASE=		YES
+PKGSRC_USE_TOOLS+=	gzip
 DOCDIR=			${PREFIX}/share/doc
 FONTDIR=		${X11PREFIX}/lib/X11/fonts/local
 

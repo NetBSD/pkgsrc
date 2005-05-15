@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:46:33 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/15 22:02:27 jlam Exp $
 #
 
 DISTNAME=	bbweather-0.6.2
@@ -16,6 +16,7 @@ USE_X11=		YES
 GNU_CONFIGURE=		YES
 REPLACE_PERL=		GrabWeather
 USE_PERL5=		run
+PKGSRC_USE_TOOLS+=	gunzip
 
 post-install:
 	cd ${PREFIX}/man/man1 && ${GUNZIP_CMD} GrabWeather.1.gz
