@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/05/15 16:33:25 drochner Exp $
+
+--- Makefile.in.orig	2005-04-01 16:52:47.000000000 +0200
++++ Makefile.in
+@@ -183,7 +183,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = po src help
++SUBDIRS = po src #help
+ EXTRA_DIST = \
+ 	BUGS			\
+ 	HACKING			\
