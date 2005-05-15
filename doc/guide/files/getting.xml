@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.2 2004/12/10 22:20:18 hubertf Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.3 2005/05/15 20:28:15 rillig Exp $ -->
 
 <chapter id="getting">
   <title>Where to get pkgsrc</title>
@@ -34,8 +34,7 @@
   <sect1>
     <title>Via CVS</title>
     
-    <para>To get pkgsrc via CVS, make sure you have <quote>cvs</quote> installed. If not present on
-      your system, it can be found as precompiled binary on ftp.NetBSD.org.
+    <para>To get pkgsrc via CVS, make sure you have <quote>cvs</quote> installed.
       To do an initial (full) checkout of pkgsrc, do the following steps:</para>
   
     <screen>&cprompt; <userinput>setenv CVSROOT anoncvs@anoncvs.NetBSD.org:/cvsroot</userinput>
