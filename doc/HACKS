@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.29 2004/11/02 17:48:04 sketch Exp $
+# $NetBSD: HACKS,v 1.30 2005/05/15 22:23:09 jschauma Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -471,4 +471,22 @@ descr
 	using optimisation flags.  The resulting bison with optimsation
 	breaks on at least net/libIDL.  BUILDLINK_TRANSFORM -O* away until
 	the root cause can be fixed.
+kcah
+
+hack	security/libgpg-error awk on IRIX
+cdate	Sun May 15 18:08:48 EDT 2005
+who	jschauma
+port	mipseb (IRIX)
+file	security/libgpg-error/Makefile
+descr
+	Apparently, for as of yet undetermined reasons, gawk as built on IRIX
+	under pkgsrc croaks on regular expressions including a combination of
+	alpha- and numerical matches, such as the rather trivial
+	/^[ \t]*[0-9]+/
+	Let's use the system's AWK (ie nawk) for this package to avoid
+	breaking hundreds of dependents.
+	Speculation: somehow the regular expression library used to build gawk
+	conflicts with the systems regular expression library or some such.
+	Note: gawk from SGIs freeware collection depends on expat -- why is
+	that?  Does that have anything to do with anything?
 kcah
