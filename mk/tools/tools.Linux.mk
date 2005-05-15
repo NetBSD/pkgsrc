@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.16 2005/05/15 22:37:46 jlam Exp $
+# $NetBSD: tools.Linux.mk,v 1.17 2005/05/15 23:20:38 jlam Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -11,6 +11,7 @@ TOOLS_PLATFORM.basename?=	/usr/bin/basename
 .endif
 .if exists(/usr/bin/bison)
 TOOLS_PLATFORM.bison?=		/usr/bin/bison
+TOOLS_PLATFORM.bison-yacc?=	/usr/bin/bison -y
 .endif
 TOOLS_PLATFORM.cat?=		/bin/cat
 TOOLS_PLATFORM.chgrp?=		/bin/chgrp
