@@ -1,0 +1,3 @@
+This is a Gimp plugin that can apply ICC profiles to an image. This can e.g.
+be an input profile to remove the color problems introduced by a scanner or
+an output profile to prepare an image for color corrected printing.
