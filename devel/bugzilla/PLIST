@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/17 23:03:17 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/15 17:04:32 adrianp Exp $
+share/bugzilla/1x1.gif
 share/examples/bugzilla/bugzilla.conf
 share/examples/bugzilla/localconfig
-share/bugzilla/1x1.gif
 share/bugzilla/Bugzilla.pm
 share/bugzilla/Bugzilla/Attachment.pm
 share/bugzilla/Bugzilla/Auth.pm
+share/bugzilla/Bugzilla/Auth/CGI.pm
+share/bugzilla/Bugzilla/Auth/Cookie.pm
+share/bugzilla/Bugzilla/Auth/DB.pm
+share/bugzilla/Bugzilla/Auth/LDAP.pm
 share/bugzilla/Bugzilla/Bug.pm
 share/bugzilla/Bugzilla/BugMail.pm
 share/bugzilla/Bugzilla/CGI.pm
@@ -22,10 +26,6 @@ share/bugzilla/Bugzilla/Template.pm
 share/bugzilla/Bugzilla/Token.pm
 share/bugzilla/Bugzilla/User.pm
 share/bugzilla/Bugzilla/Util.pm
-share/bugzilla/Bugzilla/Auth/CGI.pm
-share/bugzilla/Bugzilla/Auth/Cookie.pm
-share/bugzilla/Bugzilla/Auth/DB.pm
-share/bugzilla/Bugzilla/Auth/LDAP.pm
 share/bugzilla/Bugzilla/Template/Plugin/Bugzilla.pm
 share/bugzilla/Bugzilla/Template/Plugin/Hook.pm
 share/bugzilla/CGI.pl
@@ -53,6 +53,7 @@ share/bugzilla/docs/html/administration.html
 share/bugzilla/docs/html/bug_page.html
 share/bugzilla/docs/html/bugreports.html
 share/bugzilla/docs/html/cmdline.html
+share/bugzilla/docs/html/cmdline-bugmail.html
 share/bugzilla/docs/html/components.html
 share/bugzilla/docs/html/configuration.html
 share/bugzilla/docs/html/conventions.html
@@ -68,6 +69,7 @@ share/bugzilla/docs/html/disclaimer.html
 share/bugzilla/docs/html/extraconfig.html
 share/bugzilla/docs/html/faq.html
 share/bugzilla/docs/html/flags.html
+share/bugzilla/docs/html/flags-overview.html
 share/bugzilla/docs/html/gfdl-0.html
 share/bugzilla/docs/html/gfdl-1.html
 share/bugzilla/docs/html/gfdl-10.html
@@ -112,8 +114,6 @@ share/bugzilla/docs/html/using-intro.html
 share/bugzilla/docs/html/using.html
 share/bugzilla/docs/html/versions.html
 share/bugzilla/docs/html/voting.html
-share/bugzilla/docs/html/cmdline-bugmail.html
-share/bugzilla/docs/html/flags-overview.html
 share/bugzilla/docs/html/general-advice.html
 share/bugzilla/docs/html/lifecycle.html
 share/bugzilla/docs/html/modules-manual-optional.html
@@ -125,12 +125,15 @@ share/bugzilla/docs/html/security-webserver.html
 share/bugzilla/docs/html/security.html
 share/bugzilla/docs/html/trbl-index.html
 share/bugzilla/docs/html/trbl-relogin-everyone.html
+share/bugzilla/docs/html/trbl-passwd-encryption.html
 share/bugzilla/docs/html/trouble-filetemp.html
-share/bugzilla/docs/html/x2868.html
-share/bugzilla/docs/html/x2875.html
-share/bugzilla/docs/html/x2885.html
-share/bugzilla/docs/html/x2890.html
-share/bugzilla/docs/html/x2944.html
+share/bugzilla/docs/html/x2918.html
+share/bugzilla/docs/html/x2925.html
+share/bugzilla/docs/html/x2935.html
+share/bugzilla/docs/html/x2940.html
+share/bugzilla/docs/html/x2994.html
+share/bugzilla/docs/images/bzLifecycle.png
+share/bugzilla/docs/images/bzLifecycle.xml
 share/bugzilla/docs/images/callouts/1.gif
 share/bugzilla/docs/images/callouts/2.gif
 share/bugzilla/docs/images/callouts/3.gif
@@ -369,7 +372,7 @@ share/bugzilla/template/en/default/sidebar.xul.tmpl
 @dirrm share/bugzilla/template/en
 @dirrm share/bugzilla/template
 @exec ${MKDIR} %D/share/examples/bugzilla
-@dirrm share/examples/bugzilla        
+@dirrm share/examples/bugzilla
 @dirrm share/doc/bugzilla
 @dirrm share/bugzilla/js
 @dirrm share/bugzilla/docs/html

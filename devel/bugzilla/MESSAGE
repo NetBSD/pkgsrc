@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/01/02 13:39:52 adrianp Exp $
+$NetBSD: MESSAGE,v 1.2 2005/05/15 17:04:32 adrianp Exp $
 
 To complete the setup you will need to read the Bugzilla-Guide.txt in order
 to setup mySQL properly.  In particular secion 2.2.2 of the document deals
@@ -12,11 +12,11 @@ check the settings in ${BZDIR}/localconfig and:
 You will need to make Bugzilla accessible through your HTTP server.
 If you are running Apache then you may add the following lines to httpd.conf:
 
-	DirectoryIndex index.cgi index.html			
+	DirectoryIndex index.cgi index.html
 	Include ${PKG_SYSCONFDIR}/httpd/bugzilla.conf
 
 to make Bugzilla accessible through:
-	
+
 	http://www.domain.com/bugzilla/index.cgi
 
 IMPORTANTLY: CHANGE YOUR DATABASE PASSWORD FROM THE DEFAULT !!
