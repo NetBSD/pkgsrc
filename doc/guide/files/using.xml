@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.8 2005/05/07 15:35:11 wiz Exp $ -->
+<!-- $NetBSD: using.xml,v 1.9 2005/05/15 20:38:40 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
   <title>Using pkgsrc</title>
@@ -15,9 +15,11 @@
       
       <para> Precompiled packages are stored on ftp.NetBSD.org and its
         mirrors in the directory
-        <filename>/pub/NetBSD/packages</filename> for anonymous FTP
-        access.  Please pick the right subdirectory there as indicated
-        by <command>uname -p</command>. In that directory, there is a
+        <filename>/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/</filename> for
+	anonymous FTP access.  <varname>OSVERSION</varname> is the &os;
+	version (<command>uname -r</command>), <varname>ARCH</varname>
+	is the architecture (<command>uname -p</command>). 
+	In that directory, there is a
         subdirectory for each category plus a subdirectory
         <filename>All</filename> which includes the actual binaries in
         <filename>.tgz</filename> files. The category subdirectories
@@ -37,7 +39,7 @@
       
       <para> If you have the files on a CDROM or downloaded them to
         your hard disk, you can install them with the following command
-        (be sure to<command>su</command> to root first):</para>
+        (be sure to <command>su</command> to root first):</para>
 
         <screen><prompt>#</prompt> <userinput>pkg_add /path/to/package.tgz</userinput></screen>
 
@@ -46,13 +48,9 @@
         automatically by giving <command>pkg_add</command> an FTP URL:
         </para> 
 
-      <screen><prompt>#</prompt> <userinput>pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSvers&gt;/&lt;arch&gt;/All/package.tgz</userinput></screen>
+      <screen><prompt>#</prompt> <userinput>pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All/package.tgz</userinput></screen>
 
-      <para>If there is any doubt, the uname utility can be used to
-        determine the &lt;OSvers&gt;, and &lt;arch&gt; by running
-        <command>uname -rp</command>. </para>
-
-      <para>Also note that any prerequisite packages needed to run the
+      <para>Note that any prerequisite packages needed to run the
         package in question will be installed, too, assuming they are
         present where you install from. </para>
 
@@ -71,12 +69,12 @@
         installing new packages, and verify that the vulnerabilities are
         acceptable for your configuration. An example
         <varname>PKG_PATH</varname> would be:
-      <filename>ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSvers&gt;/&lt;arch&gt;/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSvers&gt;/&lt;arch&gt;/vulnerable</filename>
+      <filename>ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/vulnerable</filename>
         Please note that semicolon (';') is a shell meta-character, so
         you'll probably have to quote it.</para>
 
       <para>After you've installed packages, be sure to have
-        <filename>/usr/pkg/bin</filename> in your
+        <filename>/usr/pkg/bin</filename> and <filename>/usr/pkg/sbin</filename> in your
         <varname>PATH</varname> so you can actually start the just
         installed program. </para> 
     </sect2>
@@ -97,7 +95,8 @@
     <title>Building packages from source</title>
     
     <para> This assumes that the package is already in pkgsrc. If it
-      is not, see <xref linkend="developers-guide"/>. </para>
+      is not, see <xref linkend="developers-guide"/> for instructions
+      how to create your own packages.</para>
 
     <sect2>
       <title>Requirements</title>
@@ -107,21 +106,21 @@
         sets must be installed. If you want to build X11 related
         packages the <quote>xbase</quote> and <quote>xcomp</quote>
         distribution sets are required, too.</para>
+      <!-- FIXME: what about installing x11/XFree86-*? -->
     </sect2>
     
 
     <sect2>
       <title>Fetching distfiles</title>
 
-      <para>The distfile (i.e. the unmodified source)
-        must exist on your system for the packages system to be able
-        to build it. If it does not exist, pkgsrc will use &man.ftp.1; to
-        fetch it automatically.</para>
+      <para>The first step for building a package is downloading the
+      distfiles (i.e. the unmodified source). If they have not yet been
+      downloaded, pkgsrc will fetch them automatically.</para>
 
       <para>You can overwrite some of the major distribution sites to fit to sites
         that are close to your own.  Have a look at
         <filename>pkgsrc/mk/defaults/mk.conf</filename> to find some examples
-        - in particular, look for the <varname>MASTER_SORT</varname>,
+        &mdash; in particular, look for the <varname>MASTER_SORT</varname>,
         <varname>MASTER_SORT_REGEX</varname> and
         <varname>INET_COUNTRY</varname> definitions.  This may save some of your
         bandwidth and time.</para>
@@ -253,6 +252,7 @@
               compilers to invoke when building packages.  Valid values
               are: </para>
             
+<!-- TODO: update this list after jlam's changes in May 2005 -->
             <itemizedlist>
               <listitem><para><varname>distcc</varname>:
                 distributed C/C++ (chainable)</para>
@@ -292,6 +292,10 @@
 	
         <varlistentry>
           <term><varname>GCC_REQD</varname>:</term>
+<!--
+   TODO: what are the effects of setting GCC_REQD if PKGSRC_COMPILER
+   is not gcc?
+-->
           <listitem>
             <para> This specifies the minimum version of GCC to use
               when building packages.  If the system GCC doesn't
