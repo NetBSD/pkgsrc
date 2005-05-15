@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/08 09:51:59 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/15 21:11:22 rillig Exp $
 
 COMMENT=	Regression tests for pkgsrc infrastructure
 
@@ -7,6 +7,7 @@ SUBDIR+=	buildlink-libtool
 SUBDIR+=	buildlink-transform
 SUBDIR+=	buildlink-unwrap
 SUBDIR+=	ignore-tools
+SUBDIR+=	make-quoting
 SUBDIR+=	pkgfail
 SUBDIR+=	print-plist
 
