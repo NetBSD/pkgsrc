@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.5 2005/05/14 22:34:59 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.6 2005/05/15 02:57:33 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -28,10 +28,13 @@
       distribution file to be downloaded from the package's
       website.</para></listitem>
 
-      <listitem><para><varname>PKGNAME</varname> is the name of the package,
-      as used by pkgsrc. You only need to provide it if it differs from
-      DISTNAME. Usually it is the directory name together with the
-      version number.</para></listitem>
+      <listitem><para><varname>PKGNAME</varname> is the name of the
+      package, as used by pkgsrc. You only need to provide it if it
+      differs from DISTNAME. Usually it is the directory name together
+      with the version number. It must match the regular expression
+      <varname>^[A-Za-z0-9][A-Za-z0-9-_.+]*$</varname>, that is, it
+      starts with a letter or digit, and contains only letters, digits,
+      dashes, underscores, dots and plus signs.</para></listitem>
 
       <listitem><para><varname>CATEGORIES</varname> is a list of categories
       which the package fits in. You can choose any of the top-level
