@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/04/11 21:47:05 tv Exp $
+# $NetBSD: Makefile,v 1.46 2005/05/15 02:01:14 reed Exp $
 #
 # NOTE: If you update this package, it is *mandatory* that you update
 # 	pkgsrc/pkgtools/libnbcompat/files/README to reflect the actual
@@ -6,7 +6,7 @@
 #
 
 DISTNAME=		libnbcompat-20041024
-CATEGORIES=		pkgtools
+CATEGORIES=		pkgtools devel
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
