@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10086 2005/05/15 16:53:29 drochner Exp $
+$NetBSD: CHANGES,v 1.10087 2005/05/15 17:06:00 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2379,3 +2379,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gimp to 2.2.7 [drochner 2005-05-15]
 	Added gimp-color-manager-0.1.1 [drochner 2005-05-15]
 	Updated gqview to 2.0.1 [drochner 2005-05-15]
+	Updated bugzilla to 2.18.1 [adrianp 2005-05-15]
