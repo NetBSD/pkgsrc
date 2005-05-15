@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2005/04/11 21:45:15 tv Exp $
+# $NetBSD: Makefile.common,v 1.4 2005/05/15 12:31:57 recht Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -36,11 +36,10 @@ PATCHDIR?=		${.CURDIR}/../postgresql80/patches
 # BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 #
 # Note: Do not forget jdbc-postgresql when updating version
-DIST_VERS?=		8.0.2
+DIST_VERS?=		8.0.3
 BASE_VERS?=		${DIST_VERS}
 
-BUILDLINK_DEPENDS.postgresql80-lib?=	postgresql80-lib>=${BASE_VERS}
-#BUILDLINK_DEPENDS.tcl-postgresql80?=	tcl-postgresql80>=${BASE_VERS}
+BUILDLINK_DEPENDS.postgresql80-client?=	postgresql80-client>=${BASE_VERS}
 
 GNU_CONFIGURE=		yes
 BUILD_USES_MSGFMT=	yes
@@ -57,18 +56,13 @@ SUBST_SED.pkglocaledir2=	-e 's|\( localedir[	 :]*=\).*|\1${_PKGLOCALEDIR}|'
 .include "../../mk/bsd.prefs.mk"
 
 # Add support for hierarchical queries with Oracle like CONNECT BY syntax.
-# see http://gppl.terminal.ru/README.html for details.
+# see http://gppl.moonbone.ru/README.html for details.
 .if defined(PGSQL_USE_HIER) && !empty(PGSQL_USE_HIER:M[yY][eE][sS])
 PATCH_SITES=		http://gppl.moonbone.ru/
 PATCHFILES=		hier-Pg8.0.1-0.5.4.diff.gz
 PATCH_DIST_STRIP=	-p1
 .endif
 BUILD_DEFS+=	PGSQL_USE_HIER
-
-PGSQL_TEMPLATE.SunOS=		solaris
-.if !defined(PGSQL_TEMPLATE.${OPSYS})
-PGSQL_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
-.endif
 
 PG_DIR=			${PREFIX}
 GNU_CONFIGURE_PREFIX=	${PG_DIR}
@@ -79,7 +73,6 @@ PG_DOC_DIR=		${PREFIX}/share/doc/postgresql80
 #CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${PG_DATA_DIR}
 CONFIGURE_ARGS+=	--with-docdir=${PG_DOC_DIR}
-CONFIGURE_ARGS+=	--with-template="${PGSQL_TEMPLATE.${OPSYS}}"
 CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--with-openssl
@@ -96,7 +89,7 @@ CONFIGURE_ARGS+=	--without-tk
 CONFIGURE_ARGS+=	--with-rendezvous
 .endif
 
-# Postgresql explicitly forbids any use of -ffast-math
+# PostgreSQL explicitly forbids any use of -ffast-math
 CFLAGS:=		${CFLAGS:S/-ffast-math//}
 
 post-extract:
