@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:10 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/15 19:05:54 jlam Exp $
 #
 
 DISTNAME=       aide-0.6
@@ -14,7 +14,11 @@ COMMENT=	Older intrusion detection system for checking file integrity
 
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	yacc lex
+USE_TOOLS+=	bison
 
 .include "../../mk/bsd.pkg.mk"
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 #don't set YACC so configure can correctly find bison
 YACC=
+.endif
