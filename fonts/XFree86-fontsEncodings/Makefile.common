@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/04/11 21:45:47 tv Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/05/15 21:38:02 jlam Exp $
 #
 # Makefile fragment used by XFree86-fonts* packages.
 
@@ -14,7 +14,7 @@ TOPDIR?=	../../..
 post-extract:
 .  if defined(FONTS_MISC)
 	cd ${WRKDIR} && \
-	${GUNZIP_CMD} -c ${DISTDIR}/XFree86-${XF_VER}-src-1.tgz | ${GTAR} -xf - \
+	${GZCAT} ${DISTDIR}/XFree86-${XF_VER}-src-1.tgz | ${GTAR} -xf - \
 	    xc/extras/fonts/arabic24 xc/extras/fonts/ClearlyU;
 .  endif
 	@${SED} \
