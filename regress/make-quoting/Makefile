@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/15 21:10:16 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/15 22:50:13 rillig Exp $
 #
 
 DISTNAME=	regress-make-1.0
@@ -9,7 +9,7 @@ MAINTAINER=	rillig@NetBSD.org
 COMMENT=	Test Makefile quoting
 
 REGRESS_TESTS=	continue dblquote for ltarget nestfor quoting sglquote	\
-	vtarget
+	vtarget bug1
 
 do-extract:
 	@${_PKG_SILENT}${_PKG_DEBUG}					\
