@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2004/07/01 10:56:11 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/15 11:53:20 veego Exp $
 #
 
-BASENAME=	j2re
+BD_BASENAME=	j2re
 DISTNAME=	${EXTNAME}-${BLACKDOWN_ARCH}
 PKGNAME=	blackdown-jre13-1
 PKGREVISION=	2
 COMMENT=	Blackdown's Java(tm) Runtime Environment 1.3.1
 
 .if ${MACHINE_ARCH} == "arm"
-DISTNAME=	${BASENAME}-${RELVERSION}-RC1-linux-arm
+DISTNAME=	${BD_BASENAME}-${RELVERSION}-RC1-linux-arm
 .endif
 
 .include "../../lang/blackdown-jre13/Makefile.common"
