@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.146 2005/05/10 19:04:53 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.147 2005/05/15 02:38:56 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -279,17 +279,19 @@ my (%checks) = (
 	"newpkg"	=> [\$opt_check_newpkg, "special checks for uncommitted packages"],
 );
 
-my $opt_warn_exec	= true;
 my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
+my $opt_warn_exec	= true;
 my $opt_warn_paren	= true;
-my $opt_warn_workdir	= true;
+my $opt_warn_sort	= true;
 my $opt_warn_types	= true;
+my $opt_warn_workdir	= true;
 my (%warnings) = (
-	"exec"		=> [\$opt_warn_exec, "warn if source files are executable"],
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
+	"exec"		=> [\$opt_warn_exec, "warn if source files are executable"],
 	"paren"		=> [\$opt_warn_paren, "warn about use of \$(VAR) instead of \${VAR} in Makefiles"],
+	"sort"		=> [\$opt_warn_sort, "warn about any unsorted things"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
 	"workdir"	=> [\$opt_warn_workdir, "warn that work* should not be committed into CVS"],
 );
@@ -876,7 +878,7 @@ sub checkfile_PLIST($) {
 			$line->log_error("use of full pathname disallowed.");
 		}
 
-		if ($line->text =~ qr"^\w") {
+		if ($opt_warn_sort && $line->text =~ qr"^\w") {
 			if (defined($last_file_seen)) {
 				if ($last_file_seen gt $line->text) {
 					$line->log_warning( $line->text." should be sorted before ${last_file_seen}.");
@@ -2094,7 +2096,7 @@ sub category_check() {
 					$line->log_error("SUBDIR+= expected.");
 				}
 				push(@makefile_subdirs, $subdir);
-				if ($last_subdir ge $subdir) {
+				if ($opt_warn_sort && $last_subdir ge $subdir) {
 					$line->log_error("$subdir should come before $last_subdir.");
 				}
 				$last_subdir = $subdir;

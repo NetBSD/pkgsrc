@@ -90,9 +90,11 @@ DDEESSCCRRIIPPTTIIOONN
      [no-]paren  Warn if variables are used like $(VAR) in Makefiles.  They
                  should always be used like ${VAR}.
 
-     [no-]patches
-                 Warn if a patch file patches more than one file or if the
-                 patches differ from what is recorded in the distinfo file.
+     [no-]sort   Warn if items of a list are not correctly sorted.  Currently
+                 this affects PLISTs and the SUBDIRs in category Makefiles.
+
+     [no-]types  Warn for some Makefile variables if their assigned values do
+                 not match their type.
 
      [no-]workdir
                  Warn about existing _w_o_r_k_* directories.  They might be commit-
@@ -141,4 +143,4 @@ BBUUGGSS
      ings concerning Makefiles do not print the file and line number where the
      warning originated.
 
-                               October 16, 2004                              3
+                                 May 15, 2005                                3
