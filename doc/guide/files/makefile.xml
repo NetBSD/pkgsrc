@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.13 2005/05/15 20:31:45 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.14 2005/05/15 23:46:20 rillig Exp $ -->
 
 <!-- based on:
 pkgsrc/bootstrap/bmake/for.c 1.1.1.1
@@ -299,6 +299,24 @@ for_test:
 	<varname>${i:Q}""</varname>.</para></listitem>
 
       </itemizedlist>
+    </sect2>
+
+    <sect2>
+      <title>Workaround for a bug in BSD Make</title>
+
+      <para>The pkgsrc bmake program does not handle the following
+      assignment correctly. In case <varname>_othervar_</varname>
+      contains a ``-'' character, one of the closing braces is included
+      in <varname>${VAR}</varname> after this code executes.</para>
+
+      <programlisting>
+        VAR:= ${VAR:N${_othervar_:C/-//}}
+      </programlisting>
+
+      <para>For a more complex code snippet and a workaround, see the
+      package <pkg>regress/make-quoting</pkg>, testcase
+      <varname>bug1</varname>.</para>
+
     </sect2>
 
   </sect1>
