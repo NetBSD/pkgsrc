@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2002/12/12 03:17:15 dmcmahill Exp $
+$NetBSD: patch-af,v 1.2 2005/05/15 16:38:28 bouyer Exp $
 
 hit with big hammer.  Unfortunately awk.h #define's proc which
 breaks 'struct proc' so we make sure we pull all that stuff in first.
@@ -44,3 +44,19 @@ breaks 'struct proc' so we make sure we pull all that stuff in first.
  #include "awk.h"
  
  #ifdef HAVE_SYS_PARAM_H
+@@ -2024,7 +2056,6 @@
+ 	int pid;
+ 	int status = 0;
+ 	struct redirect *redp;
+-	extern int errno;
+ 
+ 	hstat = signal(SIGHUP, SIG_IGN);
+ 	istat = signal(SIGINT, SIG_IGN);
+@@ -2205,7 +2236,6 @@
+ static IOBUF *
+ gawk_popen(const char *cmd, struct redirect *rp)
+ {
+-	extern char *strdup P((const char *));
+ 	int current;
+ 	char *name;
+ 	static char cmdbuf[256];
