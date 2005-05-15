@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/28 22:46:11 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/05/15 04:26:24 jlam Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	4
@@ -35,6 +35,7 @@ PKG_GROUPS=		${EXIM_GROUP}
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_TOOLS+=		gzip gzcat
 FILES_SUBST+=		GZIP_CMD="${GZIP_CMD:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"
 FILES_SUBST+=		GZCAT="${GZCAT}"
 
