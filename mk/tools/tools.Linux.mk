@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.15 2005/05/14 21:15:07 jlam Exp $
+# $NetBSD: tools.Linux.mk,v 1.16 2005/05/15 22:37:46 jlam Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -125,4 +125,4 @@ TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
-TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
+TOOLS_PLATFORM.xargs?=		/usr/bin/xargs -r
