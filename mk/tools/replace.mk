@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.77 2005/05/15 22:34:43 jlam Exp $
+# $NetBSD: replace.mk,v 1.78 2005/05/15 23:20:38 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -53,6 +53,11 @@ USE_TOOLS+=	${USE_GNU_TOOLS:S/^awk$/gawk/:S/^make$/gmake/:S/^sed$/gsed/}
 USE_TOOLS+=	tbl
 .endif
 
+# bison implies "bison-yacc"
+.if !empty(USE_TOOLS:Mbison)
+USE_TOOLS+=	bison-yacc
+.endif
+
 .include "../../mk/tools/imake.mk"
 
 ######################################################################
@@ -64,7 +69,7 @@ USE_TOOLS+=	tbl
 .if !defined(_USE_TOOLS)
 _USE_TOOLS:=	${PKGSRC_USE_TOOLS} ${USE_TOOLS}
 _USE_TOOLS:=	${_USE_TOOLS:O:u}
-.  if !empty(USE_TOOLS:Mbison)		# bison > yacc
+.  if !empty(USE_TOOLS:Mbison-yacc)	# bison-yacc > yacc
 _USE_TOOLS:=	${_USE_TOOLS:Nyacc}
 .  endif
 .  if !empty(USE_TOOLS:Mgawk)		# gawk > awk
@@ -155,10 +160,22 @@ TOOLS_DEPENDS.bison?=		bison>=1.0:../../devel/bison
 TOOLS_CREATE+=			bison
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bison=bison
 TOOLS_REAL_CMD.bison=		${TOOLS_PREFIX.bison}/bin/bison
-TOOLS_REAL_ARGS.bison=		-y
-TOOLS_${_TOOLS_VARNAME.bison}=	${TOOLS_REAL_CMD.bison} ${TOOLS_REAL_ARGS.bison}
 .  endif
-TOOLS_CMD.bison=		${TOOLS_DIR}/bin/yacc
+.endif
+
+.if !defined(TOOLS_IGNORE.bison-yacc) && !empty(_USE_TOOLS:Mbison-yacc)
+.  if !empty(PKGPATH:Mdevel/bison)
+MAKEFLAGS+=			TOOLS_IGNORE.bison-yacc=
+.  elif !empty(_TOOLS_USE_PKGSRC.bison-yacc:M[yY][eE][sS])
+TOOLS_DEPENDS.bison-yacc?=	bison>=1.0:../../devel/bison
+TOOLS_CREATE+=			bison-yacc
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bison-yacc=bison
+TOOLS_REAL_CMD.bison-yacc=	${TOOLS_PREFIX.bison-yacc}/bin/bison
+TOOLS_REAL_ARGS.bison-yacc=	-y
+TOOLS_${_TOOLS_VARNAME.bison-yacc}=	\
+	${TOOLS_REAL_CMD.bison-yacc} ${TOOLS_REAL_ARGS.bison-yacc}
+.  endif
+TOOLS_CMD.bison-yacc=		${TOOLS_DIR}/bin/yacc
 .endif
 
 .if !defined(TOOLS_IGNORE.bzcat) && !empty(_USE_TOOLS:Mbzcat)
