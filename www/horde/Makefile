@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/05/14 13:33:15 adrianp Exp $
+# $NetBSD: Makefile,v 1.35 2005/05/15 21:39:07 salo Exp $
 
 DISTNAME=	horde-2.2.8
 CATEGORIES=	www
@@ -8,10 +8,10 @@ MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.horde.org/
 COMMENT=	PHP application framework
 
-CONFLICTS+=	horde-3.*
-
 DEPENDS+=	php-gettext>=4.3.3:../../devel/php-gettext
 DEPENDS+=	pear-Log-*:../../sysutils/pear-Log
+
+CONFLICTS+=	horde-3.*
 
 DOCDIR=		${PREFIX}/share/doc/horde
 EGDIR=		${PREFIX}/share/examples/horde
