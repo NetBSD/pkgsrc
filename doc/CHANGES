@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10079 2005/05/14 15:28:25 taya Exp $
+$NetBSD: CHANGES,v 1.10080 2005/05/15 00:37:41 snj Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2363,3 +2363,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated horde to 2.2.8 [adrianp 2005-05-14]
 	Updated firefox to 1.0.4 [taya 2005-05-14]
 	Updated firefox-gtk1 to 1.0.4 [taya 2005-05-14]
+	Updated abcde to 2.2.6 [snj 2005-05-15]
