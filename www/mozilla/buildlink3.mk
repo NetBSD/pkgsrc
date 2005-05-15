@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2005/04/19 15:15:29 taya Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2005/05/15 02:58:05 taya Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MOZILLA_BUILDLINK3_MK:=	${MOZILLA_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	mozilla
 
 .if !empty(MOZILLA_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.mozilla+=	mozilla>=1.7.5
-BUILDLINK_RECOMMENDED.mozilla+=	mozilla>=1.7.7
+BUILDLINK_RECOMMENDED.mozilla+=	mozilla>=1.7.8
 BUILDLINK_PKGSRCDIR.mozilla?=	../../www/mozilla
 .endif	# MOZILLA_BUILDLINK3_MK
 

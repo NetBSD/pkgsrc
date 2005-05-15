@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2005/04/19 15:15:29 taya Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2005/05/15 02:58:05 taya Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MOZILLA_GTK2_BUILDLINK3_MK:=	${MOZILLA_GTK2_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	mozilla-gtk2
 
 .if !empty(MOZILLA_GTK2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.mozilla-gtk2+=	mozilla-gtk2>=1.7.5
-BUILDLINK_RECOMMENDED.mozilla-gtk2+=	mozilla-gtk2>=1.7.7
+BUILDLINK_RECOMMENDED.mozilla-gtk2+=	mozilla-gtk2>=1.7.8
 BUILDLINK_PKGSRCDIR.mozilla-gtk2?=	../../www/mozilla-gtk2
 .endif	# MOZILLA_GTK2_BUILDLINK3_MK
 

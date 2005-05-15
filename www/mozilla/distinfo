@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.75 2005/04/19 15:15:29 taya Exp $
+$NetBSD: distinfo,v 1.76 2005/05/15 02:58:05 taya Exp $
 
-SHA1 (mozilla-source-1.7.7.tar.bz2) = c660db518add97ed54e30a901c1e4e60dbafab3a
-RMD160 (mozilla-source-1.7.7.tar.bz2) = 410017e874ba058bf1dbc7f265db95a2311545a0
-Size (mozilla-source-1.7.7.tar.bz2) = 29776225 bytes
-SHA1 (mozilla-source-1.7.3-libart_lgpl.tar.bz2) = cb8f05dc11eb6fd954a15f6c04e2904c8d4d3f94
-RMD160 (mozilla-source-1.7.3-libart_lgpl.tar.bz2) = 4371536b745882de8dbd736ed03f3b661067251b
-Size (mozilla-source-1.7.3-libart_lgpl.tar.bz2) = 102926 bytes
+SHA1 (mozilla-1.7.8-source.tar.bz2) = ca682415a9ba99a3c4bd55636e1f9fda53a2545f
+RMD160 (mozilla-1.7.8-source.tar.bz2) = 3e91b559c2ab76ba6dc1f99fca57b921660ab673
+Size (mozilla-1.7.8-source.tar.bz2) = 30449749 bytes
 SHA1 (patch-aa) = be62070f062e8ae13f06bd7b3f4f0d4a9ee67bef
 SHA1 (patch-ab) = 77038a3dee47573782d912a928327d046c6d3c7f
 SHA1 (patch-ac) = 32aa4b92eea19aca07077a292cb759d074026642
