@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/11 21:47:49 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/05/15 21:54:50 jlam Exp $
 #
 # There are a few more mod_auth_cookie's out there doing slightly
 # different things.  This one pkg would be a good place to dump them all in
@@ -23,7 +23,7 @@ APACHE_MODULE_NAME=	mod_auth_cookie.so
 DIST_SUBDIR=	${PKGNAME}
 
 post-extract:
-	@(${ECHO} '#include "ap_compat.h"'; ${GZIP_CMD} -dc ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES}) \
+	@(${ECHO} '#include "ap_compat.h"'; ${GZCAT} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES}) \
 		>${WRKSRC}/${DISTNAME}
 
 .include "../../www/apache/module.mk"
