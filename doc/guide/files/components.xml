@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.6 2005/05/15 02:57:33 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.7 2005/05/15 20:24:17 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -66,22 +66,29 @@
     <para>The <varname>MASTER_SITES</varname> may be set to one of the
       predefined sites:</para>
 
+<!-- sort bsd.sites.mk | sed -n 's/\(^MA[A-Z_]*\).*/        ${\1}/p' -->
     <programlisting>
         ${MASTER_SITE_APACHE}
+        ${MASTER_SITE_BACKUP}
+        ${MASTER_SITE_CYGWIN}
         ${MASTER_SITE_DEBIAN}
+        ${MASTER_SITE_FREEBSD}
+        ${MASTER_SITE_FREEBSD_LOCAL}
         ${MASTER_SITE_GNOME}
         ${MASTER_SITE_GNU}
         ${MASTER_SITE_GNUSTEP}
         ${MASTER_SITE_IFARCHIVE}
         ${MASTER_SITE_MOZILLA}
+        ${MASTER_SITE_OPENOFFICE}
         ${MASTER_SITE_PERL_CPAN}
+        ${MASTER_SITE_R_CRAN}
         ${MASTER_SITE_SOURCEFORGE}
         ${MASTER_SITE_SUNSITE}
-        ${MASTER_SITE_R_CRAN}
         ${MASTER_SITE_SUSE}
         ${MASTER_SITE_TEX_CTAN}
         ${MASTER_SITE_XCONTRIB}
-        ${MASTER_SITE_XEMACS} </programlisting>
+        ${MASTER_SITE_XEMACS}
+    </programlisting>
 
     <para>If one of these predefined sites is chosen, you may require the
       ability to specify a subdirectory of that site.  Since these macros
