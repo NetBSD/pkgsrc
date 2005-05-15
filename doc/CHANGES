@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10082 2005/05/15 02:59:10 taya Exp $
+$NetBSD: CHANGES,v 1.10083 2005/05/15 12:37:09 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2367,3 +2367,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkglint to 4.14 [rillig 2005-05-15]
 	Updated mozilla to 1.7.8 [taya 2005-05-15]
 	Updated mozilla-gtk2 to 1.7.8 [taya 2005-05-15]
+	Updated postgresql80-client to 8.0.3 [recht 2005-05-15]
+	Updated postgresql80-server to 8.0.3 [recht 2005-05-15]
+	Updated postgresql80 to 8.0.3 [recht 2005-05-15]
