@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 16:47:07 martti Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/15 22:02:26 jlam Exp $
 #
 
 DISTNAME=	ISO8859-2-pcf
@@ -13,6 +13,8 @@ COMMENT=	Full set of ISO 8859-2 fonts for X Window System
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
+
+PKGSRC_USE_TOOLS+=	gzip
 
 FONTDIR=	${PREFIX}/lib/X11/fonts/biznet
 OWN_DIRS=	${FONTDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:39 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/15 22:02:28 jlam Exp $
 #
 
 DISTNAME=		routeplanner_0.11
@@ -12,6 +12,7 @@ COMMENT=		Highway trip planner written in Python
 
 WRKSRC=			${WRKDIR}/routeplanner-0.11
 NO_BUILD=		yes
+PKGSRC_USE_TOOLS+=	gzip
 
 PYTHON_PATCH_SCRIPTS=	rpcli
 RPLIBDIR=		${PREFIX}/lib/routeplanner
