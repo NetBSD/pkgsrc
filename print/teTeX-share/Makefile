@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/05/16 03:04:45 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/05/16 10:38:53 rillig Exp $
 #
 
 DISTNAME=	tetex-texmf-2.0.2
@@ -24,6 +24,8 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 USE_GNU_TOOLS+=		patch
+
+.include "../../mk/bsd.prefs.mk"
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
