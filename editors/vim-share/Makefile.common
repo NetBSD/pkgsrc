@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.44 2005/04/11 21:45:42 tv Exp $
+# $NetBSD: Makefile.common,v 1.45 2005/05/16 13:39:04 martti Exp $
 
 VIM_VERSION=		6.3
-VIM_PATCHLEVEL=		068
+VIM_PATCHLEVEL=		071
 DISTNAME=		vim-${VIM_VERSION}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
@@ -19,7 +19,7 @@ PATCHFILES+=		6.3.001 6.3.002 6.3.003 6.3.004 6.3.005 6.3.006 6.3.007\
 			6.3.040 6.3.042 6.3.043 6.3.045 6.3.046 6.3.049 6.3.050\
 			6.3.051 6.3.054 6.3.055 6.3.056 6.3.057 6.3.058 6.3.059\
 			6.3.060 6.3.061 6.3.062 6.3.063 6.3.064 6.3.065 6.3.066\
-			6.3.067 6.3.068
+			6.3.067 6.3.068 6.3.069 6.3.070 6.3.071
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.vim.org/
