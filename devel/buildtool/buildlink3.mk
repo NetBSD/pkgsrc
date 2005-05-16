@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2005/05/13 16:54:12 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2005/05/16 05:09:21 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BUILDTOOL_BUILDLINK3_MK:=	${BUILDTOOL_BUILDLINK3_MK}+
@@ -16,6 +16,7 @@ BUILDLINK_PKGSRCDIR.buildtool?=	../../devel/buildtool
 BUILDLINK_DEPMETHOD.buildtool?=	build
 
 BUILDTOOL=		${BUILDLINK_PREFIX.buildtool}/bin/buildtool
+USE_TOOLS+=		m4
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${BUILDTOOL} config
