@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10095 2005/05/16 13:39:16 martti Exp $
+$NetBSD: CHANGES,v 1.10096 2005/05/16 22:31:19 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2388,3 +2388,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added cdplayer-0.4.2 [rh 2005-05-16]
 	Added burn-0.4.0 [rh 2005-05-16]
 	Updated vim to 6.3.071 [martti 2005-05-16]
+	Added tex-chemarrow-0.1 [jschauma 2005-05-16]
