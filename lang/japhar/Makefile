@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/11/13 22:04:53 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/16 03:04:45 jlam Exp $
 #
 
 DISTNAME=		japhar-0.08
@@ -23,6 +23,6 @@ INFO_FILES=	japhar.info
 .include "../../mk/bsd.prefs.mk"
 
 # The japhar tar archive uses ././@LongLink GNU tar hacks
-.undef EXTRACT_USING_PAX
+EXTRACT_USING=		gtar
 
 .include "../../mk/bsd.pkg.mk"
