@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2005/04/25 13:54:39 adam Exp $
+# $NetBSD: Makefile,v 1.279 2005/05/16 09:41:40 rh Exp $
 #
 
 COMMENT=	Audio tools
@@ -23,6 +23,7 @@ SUBDIR+=	bmp-musepack
 SUBDIR+=	cam
 SUBDIR+=	cd-discid
 SUBDIR+=	cdd
+SUBDIR+=	cddb-bundle
 SUBDIR+=	cddbd
 SUBDIR+=	cdparanoia
 SUBDIR+=	cmp3
