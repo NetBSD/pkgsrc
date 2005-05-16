@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10093 2005/05/16 09:56:25 rh Exp $
+$NetBSD: CHANGES,v 1.10094 2005/05/16 10:52:28 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2386,3 +2386,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnustep-back to 0.9.6 [rh 2005-05-16]
 	Added cddb-bundle-0.2.0 [rh 2005-05-16]
 	Added cdplayer-0.4.2 [rh 2005-05-16]
+	Added burn-0.4.0 [rh 2005-05-16]
