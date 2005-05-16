@@ -1,0 +1,9 @@
+LaTeX can be used to typeset many kinds of different documents, but
+typesetting chemical reactions is esthetically not very pleasing because
+LaTeX's own arrows \rightarrow, \leftarrow and \rightleftharpoons which
+you might use for this purpose are too short and the arrow heads are not
+like the "standard" ones you will find in books or journals on chemistry.
+
+The macro chemarrow.sty in conjunction with the font arrow.mf is supposed
+to make the typesetting of chemical reaction schemes in LaTeX easier and
+especially nicer looking.
