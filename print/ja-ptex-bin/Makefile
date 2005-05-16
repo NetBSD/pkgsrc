@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/16 01:15:32 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/16 03:04:45 jlam Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -32,9 +32,6 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 PTEX_VERS=		3.1.2
 DVIPSK_PATCH_VERS=	p1.6
 MENDEXK_VERS=		2.5
-.if !defined(EXTRACT_USING_PAX)
-PKGSRC_USE_TOOLS+=	gtar
-.endif
 
 DF_TETEX_BIN= tetex-src-${TETEX_BIN_VERS}${EXTRACT_SUFX}
 DF_DVIPSK_PATCH= dvipsk-jpatch-${DVIPSK_PATCH_VERS}${EXTRACT_SUFX}
@@ -62,15 +59,7 @@ pre-extract:
 	fi;
 
 post-extract:
-.if defined(EXTRACT_USING_PAX)
-	cd ${WRKDIR_} && \
-		${PAX} -O -zrf ${DISTDIR}/${DIST_SUBDIR}/${DF_TETEX_BIN}
-	cd ${WRKSRC}/texk/web2c && \
-		${PAX} -O -zrf ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
-	cd ${WRKSRC}/texk && \
-		${PAX} -O -zrf ${DISTDIR}/${DIST_SUBDIR}/${DF_DVIPSK_PATCH}; \
-		${PAX} -O -zrf ${DISTDIR}/${DIST_SUBDIR}/${DF_MENDEXK}
-.else
+.if !empty(EXTRACT_USING:Mgtar)
 	cd ${WRKDIR_} && \
 		${GTAR} -zxpf ${DISTDIR}/${DIST_SUBDIR}/${DF_TETEX_BIN}
 	cd ${WRKSRC}/texk/web2c && \
@@ -78,6 +67,14 @@ post-extract:
 	cd ${WRKSRC}/texk && \
 		${GTAR} -zxpf ${DISTDIR}/${DIST_SUBDIR}/${DF_DVIPSK_PATCH}; \
 		${GTAR} -zxpf ${DISTDIR}/${DIST_SUBDIR}/${DF_MENDEXK}
+.else
+	cd ${WRKDIR_} && \
+		${PAX} -O -zrf ${DISTDIR}/${DIST_SUBDIR}/${DF_TETEX_BIN}
+	cd ${WRKSRC}/texk/web2c && \
+		${PAX} -O -zrf ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
+	cd ${WRKSRC}/texk && \
+		${PAX} -O -zrf ${DISTDIR}/${DIST_SUBDIR}/${DF_DVIPSK_PATCH}; \
+		${PAX} -O -zrf ${DISTDIR}/${DIST_SUBDIR}/${DF_MENDEXK}
 .endif
 	${SED} -e "s|\$$TEXMF/ptex/plain/||" \
 	${LOCALBASE}/share/texmf.local/ptex/plain/base/ptex.tex > \
