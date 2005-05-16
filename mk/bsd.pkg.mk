@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1664 2005/05/16 05:11:51 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1665 2005/05/16 15:20:15 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -835,9 +835,12 @@ PKGSRC_USE_TOOLS+=							\
 	mkdir mv pax pwd rm rmdir sed sh sort tail test touch tr true	\
 	wc xargs
 
+# bsd.wrapper.mk
+PKGSRC_USE_TOOLS+=	expr
+
 # bsd.bulk-pkg.mk uses certain tools
 .if defined(BATCH)
-PKGSRC_USE_TOOLS+=	expr tee tsort
+PKGSRC_USE_TOOLS+=	tee tsort
 .endif
 
 .if !defined(NO_MTREE)
