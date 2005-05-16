@@ -1,8 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
-
---- Makefile.in.orig	2001-06-15 05:06:35.000000000 -0500
-+++ Makefile.in
-@@ -35,13 +35,13 @@ LIB_INSTALL_DIR =       $(exec_prefix)/l
+--- Makefile.in.orig	2001-06-15 12:06:35.000000000 +0200
++++ Makefile.in	2005-05-16 18:28:53.000000000 +0200
+@@ -35,13 +35,13 @@
  LIB_RUNTIME_DIR =       $(exec_prefix)/lib
  
  # Directory in which to install library files belonging to the extension.
@@ -18,7 +16,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  
  # Top-level directory for manual entries:
  MAN_INSTALL_DIR =	$(prefix)/man
-@@ -82,7 +82,7 @@ TCL_EXEC_PREFIX=@TCL_EXEC_PREFIX@
+@@ -82,7 +82,7 @@
  
  # The full name of the tclsh executable (including the full path
  # and the Tcl version number).
@@ -27,7 +25,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  
  # Top-level directory in which Tk's platform-specific files (e.g.
  # executables) are installed.
-@@ -90,7 +90,7 @@ TK_EXEC_PREFIX=@TK_EXEC_PREFIX@
+@@ -90,7 +90,7 @@
  
  # The full name of the wish executable (including the full path
  # and the Tk version number).
@@ -36,7 +34,18 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  
  # A "-I" switch that can be used when compiling to make all the
  # Tcl include files accessible (the configure script will try to
-@@ -207,8 +207,8 @@ LD_SEARCH_FLAGS = @LD_SEARCH_FLAGS@
+@@ -197,8 +197,8 @@
+ 
+ # Flags to pass to the compiler to tell the run-time dynamic linker 
+ # where to look for shared libraries.
+-LD_SEARCH_FLAGS = @LD_SEARCH_FLAGS@
+-#LD_SEARCH_FLAGS =
++#LD_SEARCH_FLAGS = @LD_SEARCH_FLAGS@
++LD_SEARCH_FLAGS =
+ 
+ #----------------------------------------------------------------
+ # The information below is modified by the configure script when
+@@ -207,8 +207,8 @@
  #----------------------------------------------------------------
  
  INSTALL =		@INSTALL@
@@ -47,7 +56,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  RPCGEN =		@RPCGEN@
  LEX =			@LEX@
  YACC =			@YACC@
-@@ -244,8 +244,8 @@ TKI_LIBRARY_DIR =	$(TKI_DIR)/library
+@@ -244,8 +244,8 @@
  # either.
  #----------------------------------------------------------------
  
@@ -58,7 +67,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  
  CC_SWITCHES	= $(CFLAGS) $(PROTO_FLAGS) $(SHLIB_CFLAGS) $(MEM_DEBUG_FLAGS)
  
-@@ -261,13 +261,14 @@ TNM_GENERIC_SRCS = $(TNM_GENERIC_DIR)/tn
+@@ -261,13 +261,14 @@
  		$(TNM_GENERIC_DIR)/tnmHttp.c $(TNM_GENERIC_DIR)/tnmNetdb.c \
  		$(UNIX_DIR)/tnmUnixInit.c $(UNIX_DIR)/tnmUnixLog.c \
  		$(UNIX_DIR)/tnmUnixSocket.c $(UNIX_DIR)/tnmUnixIcmp.c
@@ -75,7 +84,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  
  SNMP_SRCS =	$(TNM_SNMP_DIR)/tnmAsn1.c $(TNM_SNMP_DIR)/tnmMD5.c \
  		$(TNM_SNMP_DIR)/tnmSnmpNet.c $(TNM_SNMP_DIR)/tnmSnmpUtil.c \
-@@ -406,21 +407,23 @@ TKI_OBJS =	$(TKI_GENERIC_OBJS)
+@@ -406,21 +407,23 @@
  
  all: @TARGET@
  
@@ -105,7 +114,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  
  test:
  	@echo
-@@ -495,7 +498,7 @@ install-man:
+@@ -495,7 +498,7 @@
  	    chmod 444 $(MANN_INSTALL_DIR)/$$i; \
  	    done;
  
@@ -114,7 +123,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  	@for i in $(BIN_INSTALL_DIR) $(LIB_RUNTIME_DIR) $(TNM_INSTALL_DIR) ; \
  	    do \
  	    if [ ! -d $$i ] ; then \
-@@ -505,11 +508,10 @@ tnm-install-bin: scotty tnm$(SHLIB_SUFFI
+@@ -505,11 +508,10 @@
  		else true; \
  		fi; \
  	    done;
@@ -129,7 +138,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  
  tnm-install-mibs:
  	@for i in $(TNM_INSTALL_DIR)/mibs ; \
-@@ -597,7 +599,7 @@ tnm-install-agents:
+@@ -597,7 +599,7 @@
  	    $(INSTALL_DATA) $$i $(TNM_INSTALL_DIR)/agents; \
  	    done
  
@@ -138,7 +147,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  	@for i in $(BIN_INSTALL_DIR) $(LIB_RUNTIME_DIR) $(TKI_INSTALL_DIR) ; \
  	    do \
  	    if [ ! -d $$i ] ; then \
-@@ -607,11 +609,10 @@ tki-install-bin: tkined tkined$(SHLIB_SU
+@@ -607,11 +609,10 @@
  		else true; \
  		fi; \
  	    done;
@@ -154,7 +163,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  	@$(INSTALL_DATA) $(TKI_DIR)/tkined.defaults $(TKI_INSTALL_DIR)
  
  tki-install-library:
-@@ -696,9 +697,9 @@ sinstall: ntping straps
+@@ -696,9 +697,9 @@
  uninstall: tnm-uninstall uninstall-man tki-uninstall
  
  tnm-uninstall:
@@ -166,7 +175,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  	@for i in $(LIB_INSTALL_DIR)/tnm$(TNM_VERSION)/* ; \
  	    do \
  	    if [ "`basename $$i`" != "site" ] ; then \
-@@ -713,9 +714,9 @@ tnm-uninstall:
+@@ -713,9 +714,9 @@
  	    fi
  
  tki-uninstall:
@@ -178,7 +187,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  	@for i in $(LIB_INSTALL_DIR)/tkined$(TKI_VERSION)/* ; \
  	    do \
  	    if [ "`basename $$i`" != "site" ] ; then \
-@@ -750,7 +751,7 @@ clean:
+@@ -750,7 +751,7 @@
  	@rm -f $(TNM_OBJS) $(TKI_OBJS) scotty.o ntping.o straps.o
  	@rm -f tnmGdmoScan.c tnmGdmoParser.c tnmGdmoParser.h
  	@rm -f scotty ntping straps tkined
@@ -187,7 +196,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/05 04:30:44 minskim Exp $
  	@rm -f core *_svc.c *~ *.bak so_locations lmake.???
  	@rm -f map.so tnmMap.o tnmMapUtil.o 
  	@rm -f tnmMapNode.o tnmMapClnt.o tnmMapAppl.o
-@@ -821,8 +822,8 @@ BIN_FILES =	$(BIN_INSTALL_DIR)/tkined$(T
+@@ -821,8 +822,8 @@
  		$(MAN8_INSTALL_DIR)/straps.8 \
  		$(BIN_INSTALL_DIR)/ntping \
  		$(MAN8_INSTALL_DIR)/ntping.8 \
