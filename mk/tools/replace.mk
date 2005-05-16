@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.78 2005/05/15 23:20:38 jlam Exp $
+# $NetBSD: replace.mk,v 1.79 2005/05/16 03:07:38 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -467,13 +467,6 @@ TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gtar=gtar-base
 TOOLS_REAL_CMD.gtar=		${TOOLS_PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar
 TOOLS_${_TOOLS_VARNAME.gtar}=	${TOOLS_REAL_CMD.gtar}
 .  endif
-#
-# The most likely situation is that "gtar" is pax-as-tar, and older
-# versions of it don't understand what to do if they're invoked as
-# "gtar".  Explicitly set TOOLS_REAL_CMDLINE.gtar to force a wrapper
-# script to be created.
-#
-TOOLS_REAL_CMDLINE.gtar?=	${TOOLS_REAL_CMDLINE_DFLT.gtar}
 .endif
 
 .if !defined(TOOLS_IGNORE.gunzip) && !empty(_USE_TOOLS:Mgunzip)
