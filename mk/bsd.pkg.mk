@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1655 2005/05/15 21:32:42 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1656 2005/05/16 00:00:35 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -841,6 +841,13 @@ PKGSRC_USE_TOOLS+=							\
 PKGSRC_USE_TOOLS+=	mail
 .endif
 
+# We need shlock if we're using locking to synchronize multiple builds
+# over the same pkgsrc tree.
+#
+.if ${PKGSRC_LOCKTYPE} != "none"
+PKGSRC_USE_TOOLS+=	shlock
+.endif
+
 # If MANZ is defined, then we want the final man pages to be compressed.
 # If MANZ is not defined, then we want the final man pages to be 
 # uncompressed.
@@ -882,11 +889,6 @@ PKGSRC_USE_TOOLS+=	gzip
 
 # Patch
 .include "../../mk/bsd.pkg.patch.mk"
-
-# this must come before tools/bsd.tools.mk is included
-.if ${PKGSRC_LOCKTYPE} != "none"
-PKGSRC_USE_TOOLS+=	shlock
-.endif
 
 .if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 .include "../../mk/tools/bsd.tools.mk"
