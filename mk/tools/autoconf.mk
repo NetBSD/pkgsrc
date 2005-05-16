@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.6 2005/05/11 20:09:44 jlam Exp $
+# $NetBSD: autoconf.mk,v 1.7 2005/05/16 18:54:06 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU autoconf.
 #
@@ -139,9 +139,9 @@ TOOLS_ALIASES.ifnames-2.13=	ifnames
 # Continue to define the following variables until packages have been
 # taught to just use "autoconf", "autoheader", and "autoreconf" instead.
 #
-AUTOCONF=	${TOOLS_CMD.autoconf}
-AUTOHEADER=	${TOOLS_CMD.autoheader}
-AUTORECONF=	${TOOLS_CMD.autoreconf}
+AUTOCONF=	${TOOLS_CMD.autoconf-2.13}
+AUTOHEADER=	${TOOLS_CMD.autoheader-2.13}
+AUTORECONF=	${TOOLS_CMD.autoreconf-2.13}
 
 .    if defined(USE_LIBTOOL)
 pre-configure: tools-libtool-m4-override
