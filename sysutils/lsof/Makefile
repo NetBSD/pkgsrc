@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2005/05/16 01:15:33 jlam Exp $
+# $NetBSD: Makefile,v 1.84 2005/05/16 03:04:45 jlam Exp $
 #
 
 DISTNAME=		lsof_4.74
@@ -32,10 +32,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !defined(EXTRACT_USING_PAX)
-PKGSRC_USE_TOOLS+=	gtar
-.endif
-
 .if ${OPSYS} == "NetBSD"
 REAL_GROUP=		-g kmem
 .elif ${OPSYS} == "SunOS"
@@ -54,7 +50,7 @@ post-extract:
 		${ECHO} "($$EXPMD5 != $$CALCMD5)" ; \
 		${FALSE} ; \
 	fi ; \
-	if [ "X${EXTRACT_USING_PAX}" = "X" ]; then \
+	if [ X${EXTRACT_USING} = Xgtar ]; then \
 		${GTAR} -xf ${SRCBALL_NAME}.tar; \
 	else \
 		${PAX} -O -r < ${SRCBALL_NAME}.tar; \
