@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/04/14 01:41:27 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.44 2005/05/16 18:45:29 jlam Exp $
 #
 
 DISTNAME=	Xaw3d-1.5E
@@ -26,7 +26,7 @@ post-extract:
 IMAKE_FLAGS+=	-DXISOPENWIN
 .endif
 
-XMKMF+=	${IMAKE_FLAGS}
+XMKMF_FLAGS+=	${IMAKE_FLAGS}
 
 PLIST_SUBST+=	INCDIR=include/X11
 
