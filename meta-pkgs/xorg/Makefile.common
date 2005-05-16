@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2005/04/15 16:38:32 hira Exp $
+# $NetBSD: Makefile.common,v 1.29 2005/05/16 01:32:23 jlam Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will
 #   be built in.
@@ -305,6 +305,7 @@ do-configure:
 #
 # This can use for a single distfile.
 #
+PKGSRC_USE_TOOLS+=	tar
 .  if defined(XEXTRACTS) && !empty(XEXTRACTS)
 _EXTRACTS=		xc/config xc/include xc/extras/Mesa/include/GL
 .    for _dir in ${XEXTRACTS}
