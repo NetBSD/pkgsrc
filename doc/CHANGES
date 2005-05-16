@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10089 2005/05/15 21:12:22 rillig Exp $
+$NetBSD: CHANGES,v 1.10090 2005/05/16 00:10:36 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2382,3 +2382,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bugzilla to 2.18.1 [adrianp 2005-05-15]
 	Updated p5-perl-ldap to 0.32.02 [seb 2005-05-15]
 	Added make-quoting-1.0 [rillig 2005-05-15]
+	Added pkg-options-1.0 [rillig 2005-05-16]
