@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1665 2005/05/16 15:20:15 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1666 2005/05/16 18:01:12 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1873,7 +1873,7 @@ do-configure:
 	    ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 .    endfor
 .  endif
-.  if defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake)
+.  if defined(USE_IMAKE)
 .    for DIR in ${CONFIGURE_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${DIR} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF}
 .    endfor
