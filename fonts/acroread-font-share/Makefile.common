@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2002/04/01 04:14:36 sakamoto Exp $
+# $NetBSD: Makefile.common,v 1.4 2005/05/16 01:15:31 jlam Exp $
 #
 
 PKGNAME=	acroread-${DISTNAME}-4.0
@@ -17,6 +17,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+
+PKGSRC_USE_TOOLS+=	gtar
 
 do-install:
 	@${GTAR} xf ${TAR_FILE} -C ${PREFIX}/Acrobat4/Resource

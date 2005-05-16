@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/29 13:58:04 gson Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/16 01:15:30 jlam Exp $
 
 PKGNAME=		tcl-postgresql74-${BASE_VERS}
 COMMENT=		Tcl interface to PostgreSQL
 
 .include "../postgresql74/Makefile.common"
 
+PKGSRC_USE_TOOLS+=	gtar
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-tcl
 CONFIGURE_ARGS+=	--with-tclconfig="${BUILDLINK_PREFIX.tcl}/lib"
