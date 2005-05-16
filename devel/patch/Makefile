@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/05/19 03:26:09 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2005/05/16 00:29:32 jlam Exp $
 #
 
 DISTNAME=	patch-2.5.4
@@ -44,7 +44,9 @@ post-install:
 
 .include "../../mk/bsd.pkg.mk"
 
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 # Needed for bootstrapping pkgsrc!
 .if !exists(${GTAR})
 GTAR=		/usr/bin/tar		# Solaris
+.endif
 .endif
