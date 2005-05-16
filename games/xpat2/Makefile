@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/16 18:16:06 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/16 18:18:13 jlam Exp $
 
 DISTNAME=	xpat2-1.07
 CATEGORIES=	games
@@ -12,13 +12,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGINSTALL=	YES
 USE_X11BASE=	YES
+USE_TOOLS+=	imake
 
-# This package uses imake, but invokes it directly as part of the build
-# procedure.
-#
-#USE_IMAKE=	YES
-
-MAKE_ENV+=	XPMDIR=${BUILDLINK_PREFIX.xpm:Q} XMKMF=${XMKMF:Q}
+MAKE_ENV+=	XPMDIR=${BUILDLINK_PREFIX.xpm:Q} XMKMF=${XMKMF_CMD:Q}
 
 SUPPORT_FILES_PERMS=	/dev/null /var/games/xpat.log ${GAMEOWN} ${GAMEGRP} ${GAMEMODE}
 MAKE_DIRS=		/var/games
