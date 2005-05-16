@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright (C) 1994-2004 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.5 2005/05/10 00:27:43 rillig Exp $
+$NetBSD: pkgsrc.xml,v 1.6 2005/05/15 20:32:27 rillig Exp $
 
 Abstract
 
@@ -109,24 +109,29 @@ I. The pkgsrc user's guide
 
 II. The pkgsrc developer's guide
 
-    7. Programming in Makefiles
+    7. Package components - files, directories and contents
 
-        7.1. Makefile variables
-        7.2. Code snippets
+        7.1. Makefile
+        7.2. distinfo
+        7.3. patches/*
+        7.4. Other mandatory files
+        7.5. Optional files
+        7.6. work*
+        7.7. files/*
 
-            7.2.1. Adding things to a list
-            7.2.2. Converting an internal list into an external list
-            7.2.3. Passing variables to a shell command
+    8. Programming in Makefiles
 
-    8. Package components - files, directories and contents
+        8.1. Makefile variables
 
-        8.1. Makefile
-        8.2. distinfo
-        8.3. patches/*
-        8.4. Other mandatory files
-        8.5. Optional files
-        8.6. work*
-        8.7. files/*
+            8.1.1. Naming conventions
+
+        8.2. Code snippets
+
+            8.2.1. Adding things to a list
+            8.2.2. Converting an internal list into an external list
+            8.2.3. Passing variables to a shell command
+            8.2.4. Quoting guideline
+            8.2.5. Workaround for a bug in BSD Make
 
     9. PLIST issues
 
@@ -343,8 +348,9 @@ Package
 The NetBSD package system
 
     This is the former name of "pkgsrc". It is part of the NetBSD operating
-    system and can be bootstrap to run on non-NetBSD operating systems as well.
-    It handles building (compiling), installing, and removing of packages.
+    system and can be bootstrapped to run on non-NetBSD operating systems as
+    well. It handles building (compiling), installing, and removing of
+    packages.
 
 Distfile
 
@@ -379,7 +385,7 @@ Program
 
 When giving examples for commands, shell prompts are used to show if the
 command should/can be issued as root, or if "normal" user privileges are
-sufficient. We use a # for root's shell prompt, and a $ for users' shell
+sufficient. We use a # for root's shell prompt, and a % for users' shell
 prompt, assuming they use the C-shell or tcsh.
 
 The pkgsrc user's guide
@@ -485,9 +491,8 @@ pkgsrc directory exists. Then, simply run sup -v /path/to/your/supfile.
 
 2.3. Via CVS
 
-To get pkgsrc via CVS, make sure you have "cvs" installed. If not present on
-your system, it can be found as precompiled binary on ftp.NetBSD.org. To do an
-initial (full) checkout of pkgsrc, do the following steps:
+To get pkgsrc via CVS, make sure you have "cvs" installed. To do an initial
+(full) checkout of pkgsrc, do the following steps:
 
 % setenv CVSROOT anoncvs@anoncvs.NetBSD.org:/cvsroot
 % setenv CVS_RSH ssh
@@ -522,7 +527,7 @@ Table of Contents
 
 3.1. Bootstrapping pkgsrc
 
-For Operating Systems other than NetBSD, we provide a bootstrap kit to build
+For operating systems other than NetBSD, we provide a bootstrap kit to build
 the required tools to use pkgsrc on your platform. Besides support for native
 NetBSD, pkgsrc and the bootstrap kit have support for the following operating
 systems:
@@ -556,8 +561,8 @@ Installing the bootstrap kit should be as simple as:
 See Chapter 2, Where to get pkgsrc for other ways to get pkgsrc before
 bootstrapping. The given bootstrap command will use the defaults of /usr/pkg
 for the prefix where programs will be installed in, and /var/db/pkg for the
-package database directory where pkgsrc will do it's internal bookkeeping.
-However, these can also be set using command-line parameters.
+package database directory where pkgsrc will do its internal bookkeeping.
+However, these can also be set using command-line arguments.
 
 Binary packages for the pkgsrc tools and an initial set of packages is
 available for supported platforms. An up-to-date list of these can be found on
@@ -752,9 +757,9 @@ Please note that you will need IRIX 6.5.17 or higher, as this is the earliest
 version of IRIX providing support for if_indextoname(3), if_nametoindex(3),
 etc.
 
-At this point in time, pkgsrc only supports one ABI. That is, you can not
-switch between the old 32-bit ABI, the new 32-bit ABI and the 64-bit ABI. If
-you start out using "abi=n32", that's what all your packages will be built
+At this point in time, pkgsrc only supports one ABI at a time. That is, you can
+not switch between the old 32-bit ABI, the new 32-bit ABI and the 64-bit ABI.
+If you start out using "abi=n32", that's what all your packages will be built
 with.
 
 Therefore, please make sure that you have no conflicting CFLAGS in your
@@ -769,7 +774,7 @@ filesystem.
 
 The bootstrapping process should set all the right options for programs such as
 imake(1), but you may want to set some options depending on your local setup.
-Please see pkgsrc/mk/defaults/mk.conf and, of course, your compilers man pages
+Please see pkgsrc/mk/defaults/mk.conf and, of course, your compiler's man pages
 for details.
 
 If you are using SGI's MIPSPro compiler, please set
@@ -907,7 +912,7 @@ You will need at least the following packages installed (from WorkShop 5.0)
 
 You should set CC, CXX and optionally, CPP in /etc/mk.conf, eg.
 
-CC=        cc
+CC=     cc
 CXX=    CC
 CPP=    /usr/ccs/lib/cpp
 
@@ -943,11 +948,12 @@ package that someone else already prepared for your type of machine.
 4.1.1. Where to get binary packages
 
 Precompiled packages are stored on ftp.NetBSD.org and its mirrors in the
-directory /pub/NetBSD/packages for anonymous FTP access. Please pick the right
-subdirectory there as indicated by uname -p. In that directory, there is a
-subdirectory for each category plus a subdirectory All which includes the
-actual binaries in .tgz files. The category subdirectories use symbolic links
-to those files (this is the same directory layout as in /usr/pkgsrc/packages).
+directory /pub/NetBSD/packages/<OSVERSION>/<ARCH>/ for anonymous FTP access.
+OSVERSION is the NetBSD version (uname -r), ARCH is the architecture (uname -p
+). In that directory, there is a subdirectory for each category plus a
+subdirectory All which includes the actual binaries in .tgz files. The category
+subdirectories use symbolic links to those files (this is the same directory
+layout as in /usr/pkgsrc/packages).
 
 This same directory layout applies for CDROM distributions, only that the
 directory may be rooted somewhere else, probably somewhere below /cdrom. Please
@@ -956,7 +962,7 @@ consult your CDROMs documentation for the exact location.
 4.1.2. How to use binary packages
 
 If you have the files on a CDROM or downloaded them to your hard disk, you can
-install them with the following command (be sure tosu to root first):
+install them with the following command (be sure to su to root first):
 
 # pkg_add /path/to/package.tgz
 
@@ -964,13 +970,10 @@ If you have FTP access and you don't want to download the packages via FTP
 prior to installation, you can do this automatically by giving pkg_add an FTP
 URL:
 
-# pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/<OSvers>/<arch>/All/package.tgz
+# pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/<OSVERSION>/<ARCH>/All/package.tgz
 
-If there is any doubt, the uname utility can be used to determine the <OSvers>,
-and <arch> by running uname -rp.
-
-Also note that any prerequisite packages needed to run the package in question
-will be installed, too, assuming they are present where you install from.
+Note that any prerequisite packages needed to run the package in question will
+be installed, too, assuming they are present where you install from.
 
 To save some typing, you can set the PKG_PATH environment variable to a
 semicolon separated list of paths (including remote URLs); trailing slashes are
@@ -982,12 +985,13 @@ cause missing dependencies. To use these packages, add the vulnerable directory
 to your PKG_PATH. However, you should run security/audit-packages regularly,
 and especially after installing new packages, and verify that the
 vulnerabilities are acceptable for your configuration. An example PKG_PATH
-would be: ftp://ftp.NetBSD.org/pub/NetBSD/packages/<OSvers>/<arch>/All;ftp://
-ftp.NetBSD.org/pub/NetBSD/packages/<OSvers>/<arch>/vulnerable Please note that
-semicolon (';') is a shell meta-character, so you'll probably have to quote it.
+would be: ftp://ftp.NetBSD.org/pub/NetBSD/packages/<OSVERSION>/<ARCH>/All;ftp:/
+/ftp.NetBSD.org/pub/NetBSD/packages/<OSVERSION>/<ARCH>/vulnerable Please note
+that semicolon (';') is a shell meta-character, so you'll probably have to
+quote it.
 
-After you've installed packages, be sure to have /usr/pkg/bin in your PATH so
-you can actually start the just installed program.
+After you've installed packages, be sure to have /usr/pkg/bin and /usr/pkg/sbin
+in your PATH so you can actually start the just installed program.
 
 4.1.3. A word of warning
 
@@ -999,7 +1003,8 @@ your system by indiscriminate adding of such files.
 4.2. Building packages from source
 
 This assumes that the package is already in pkgsrc. If it is not, see Part II,
-"The pkgsrc developer's guide".
+"The pkgsrc developer's guide" for instructions how to create your own
+packages.
 
 4.2.1. Requirements
 
@@ -1009,13 +1014,13 @@ the "xbase" and "xcomp" distribution sets are required, too.
 
 4.2.2. Fetching distfiles
 
-The distfile (i.e. the unmodified source) must exist on your system for the
-packages system to be able to build it. If it does not exist, pkgsrc will use
-ftp(1) to fetch it automatically.
+The first step for building a package is downloading the distfiles (i.e. the
+unmodified source). If they have not yet been downloaded, pkgsrc will fetch
+them automatically.
 
 You can overwrite some of the major distribution sites to fit to sites that are
 close to your own. Have a look at pkgsrc/mk/defaults/mk.conf to find some
-examples - in particular, look for the MASTER_SORT, MASTER_SORT_REGEX and
+examples ? in particular, look for the MASTER_SORT, MASTER_SORT_REGEX and
 INET_COUNTRY definitions. This may save some of your bandwidth and time.
 
 You can change these settings either in your shell's environment, or, if you
@@ -1599,9 +1604,9 @@ Utilities used by pkgsrc (automatically installed when needed):
 
 OS tool augmentation (automatically installed when needed):
 
-  * pkgtools/digest: calculates SHA1 checksums (and other kinds)
+  * pkgtools/digest: calculates various kinds of checksums (including SHA1)
 
-  * pkgtools/libnbcompat: compat library for pkg tools
+  * pkgtools/libnbcompat: compatibility library for pkgsrc tools
 
   * pkgtools/mtree: installed on non-BSD systems due to lack of native mtree
 
@@ -1611,7 +1616,7 @@ OS tool augmentation (automatically installed when needed):
 Utilities used by pkgsrc (not automatically installed):
 
   * pkgtools/pkg_tarup: create a binary package from an already-installed
-    package. used by 'make replace' to save the old package
+    package. used by make replace to save the old package
 
   * pkgtools/dfdisk: adds extra functionality to pkgsrc, allowing it to fetch
     distfiles from multiple locations. It currently supports the following
@@ -1624,17 +1629,17 @@ Utilities used by pkgsrc (not automatically installed):
 
 Utilities for keeping track of installed packages, being up to date, etc:
 
-  * pkgtools/pkg_chk: installs pkg_chk, which reports on packages whose
-    installed versions do not match the latest pkgsrc entries
+  * pkgtools/pkg_chk: reports on packages whose installed versions do not match
+    the latest pkgsrc entries
 
   * pkgtools/pkgdep: makes dependency graphs of packages, to aid in choosing a
     strategy for updating
 
-  * pkgtools/pkgdepgraph: make graph from above (uses graphviz)
+  * pkgtools/pkgdepgraph: makes graphs from the output of pkgtools/pkgdep (uses
+    graphviz)
 
-  * pkgtools/pkglint: This provides two distinct abilities: check a pkgsrc
-    entry for correctness (pkglint) check for and remove out-of-date distfiles
-    and binary packages (lintpkgsrc)
+  * pkgtools/pkglint: the pkglint(1) program checks a pkgsrc entry for errors,
+    lintpkgsrc(1) does various checks on the complete pkgsrc system.
 
   * pkgtools/pkgsurvey: report what packages you have installed
 
@@ -1675,11 +1680,9 @@ For example, if you want to use wget to resume downloads, you'll have to use
 something like:
 
         FETCH_CMD=wget
-        .if defined(FETCH_CMD) && ${FETCH_CMD} == "wget"
         FETCH_BEFORE_ARGS=--passive-ftp
         FETCH_RESUME_ARGS=-c
         FETCH_OUTPUT_ARGS=-O
-        .endif
 
 
 6.6. How can I install/use XFree86 from pkgsrc?
@@ -1889,24 +1892,29 @@ The pkgsrc developer's guide
 
 Table of Contents
 
-7. Programming in Makefiles
+7. Package components - files, directories and contents
 
-    7.1. Makefile variables
-    7.2. Code snippets
+    7.1. Makefile
+    7.2. distinfo
+    7.3. patches/*
+    7.4. Other mandatory files
+    7.5. Optional files
+    7.6. work*
+    7.7. files/*
 
-        7.2.1. Adding things to a list
-        7.2.2. Converting an internal list into an external list
-        7.2.3. Passing variables to a shell command
+8. Programming in Makefiles
 
-8. Package components - files, directories and contents
+    8.1. Makefile variables
 
-    8.1. Makefile
-    8.2. distinfo
-    8.3. patches/*
-    8.4. Other mandatory files
-    8.5. Optional files
-    8.6. work*
-    8.7. files/*
+        8.1.1. Naming conventions
+
+    8.2. Code snippets
+
+        8.2.1. Adding things to a list
+        8.2.2. Converting an internal list into an external list
+        8.2.3. Passing variables to a shell command
+        8.2.4. Quoting guideline
+        8.2.5. Workaround for a bug in BSD Make
 
 9. PLIST issues
 
@@ -2005,146 +2013,22 @@ Table of Contents
     15.3. Updating a package to a newer version
     15.4. Moving a package in pkgsrc
 
-Chapter 7. Programming in Makefiles
+Chapter 7. Package components - files, directories and contents
 
 Table of Contents
 
-7.1. Makefile variables
-7.2. Code snippets
-
-    7.2.1. Adding things to a list
-    7.2.2. Converting an internal list into an external list
-    7.2.3. Passing variables to a shell command
-
-WARNING: The make(1) man page is wrong. After the man page has been corrected,
-this chapter will be updated. Until that, don't take it too serious.
-
-Pkgsrc consists of many Makefile fragments, each of which forms a well-defined
-part of the pkgsrc system. Using the make(1) system as a programming language
-for a big system like pkgsrc requires some discipline to keep the code correct
-and understandable.
-
-The basic ingredients for Makefile programming are variables (which are
-actually macros) and shell commands. Among these shell commands may even be
-more complex ones like awk(1) programs. To make sure that every shell command
-runs as intended it is necessary to quote all variables correctly when they are
-used.
-
-This chapter describes some patterns, that appear quite often in Makefiles,
-including the pitfalls that come along with them.
-
-7.1. Makefile variables
-
-A restriction common to all types of variables is that they can neither contain
-a newline character nor the '\0' character nor the '#' character. The effects
-of the backslash character are not documented, so you should not use it at the
-moment. As the $ is used to get values of a Makefile variable, it must be
-quoted as $$.
-
-There are several types of variables that must be handled differently.
-
-  * Simple values (which I will call atoms) can contain any string, which does
-    not have to be quoted in any way. All other types are somewhat restricted
-    in their possible values.
-
-  * Internal lists are lists that are never exported to any shell command.
-    Their elements are separated by whitespace. Therefore the elements
-    themselves cannot have embedded whitespace. Any other characters are
-    allowed. Internal lists can be used in .for loops. Examples are DEPENDS,
-    BUILD_DEPENDS.
-
-  * External lists are lists that may be exported to a shell command. Their
-    elements can contain any characters, including whitespace. That's why they
-    cannot be used in .for loops. Examples are DISTFILES and MASTER_SITES.
-
-7.2. Code snippets
-
-This section presents you with some code snippets you should use in your own
-code. If you don't find anything appropriate here, you should test your code
-and add it here.
-
-7.2.1. Adding things to a list
-
-ATOM=                   foo * bar `date`
-INT_LIST=               # empty
-ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
-EXT_LIST=               # empty
-ANOTHER_EXT_LIST=       a=b c=d
-
-INT_LIST+=              ${ATOM}                 # 1
-INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
-EXT_LIST+=              ${ATOM:Q}               # 3
-EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
-
-
-When you add an atom to an external list (example 3), it must be quoted. In all
-other cases, you must not add a quoting level. You must not merge internal and
-external lists, unless you are sure that all entries are correctly interpreted
-in both lists.
-
-7.2.2. Converting an internal list into an external list
-
-EXT_LIST=       # empty
-.for i in ${INT_LIST}
-EXT_LIST+=      ${i:Q}
-.endfor
-
-
-This code converts the internal list INT_LIST into the external list EXT_LIST.
-As the elements of an internal list are unquoted they must be quoted here.
-
-7.2.3. Passing variables to a shell command
-
-ATOM=           foo bar <    > * `date` $$HOME ' "
-EXT_LIST=       atom=${ATOM:Q} x=second\ item
-
-all:
-        echo ${ATOM}                    # 1
-        echo "${ATOM}"                  # 2
-        echo "${ATOM:Q}"                # 3
-        echo ${ATOM:Q}                  # 4
-        echo x${ATOM:Q} | sed 1s,.,,    # 5
-        env ${EXT_LIST} /bin/sh -c 'echo "$$atom"; echo "$$x"'
-
-
-Example 1 leads to a syntax error in the shell, as the characters are just
-copied.
-
-Example 2 leads to a syntax error too, and if you leave out the last "
-character from ${ATOM}, date(1) would be executed. The $HOME shell variable
-would be evaluated, too.
-
-Example 3 would output each space character preceded by a backslash (or not),
-depending on the implementation of the echo(1) command.
-
-Example 4 handles correctly every string that does not start with a dash. In
-that case, the result depends on the implementation of the echo(1) command. As
-long as you can guarantee that your input does not start with a dash this form
-is appropriate.
-
-Example 5 handles even the case of a leading dash correctly.
-
-The EXT_LIST does not need to be quoted because the quoting has already be done
-when adding elements to the list.
-
-As internal lists shall not be passed to the shell, there is no example for it.
-
-Chapter 8. Package components - files, directories and contents
-
-Table of Contents
-
-8.1. Makefile
-8.2. distinfo
-8.3. patches/*
-8.4. Other mandatory files
-8.5. Optional files
-8.6. work*
-8.7. files/*
+7.1. Makefile
+7.2. distinfo
+7.3. patches/*
+7.4. Other mandatory files
+7.5. Optional files
+7.6. work*
+7.7. files/*
 
 Whenever you're preparing a package, there are a number of files involved which
 are described in the following sections.
 
-8.1. Makefile
+7.1. Makefile
 
 Building, installation and creation of a binary package are all controlled by
 the package's Makefile. The Makefile describes various things about a package,
@@ -2160,7 +2044,10 @@ exactly in the order given here.
 
   * PKGNAME is the name of the package, as used by pkgsrc. You only need to
     provide it if it differs from DISTNAME. Usually it is the directory name
-    together with the version number.
+    together with the version number. It must match the regular expression ^
+    [A-Za-z0-9][A-Za-z0-9-_.+]*$, that is, it starts with a letter or digit,
+    and contains only letters, digits, dashes, underscores, dots and plus
+    signs.
 
   * CATEGORIES is a list of categories which the package fits in. You can
     choose any of the top-level directories of pkgsrc for it.
@@ -2180,20 +2067,26 @@ The second section contains the following variables.
 The MASTER_SITES may be set to one of the predefined sites:
 
         ${MASTER_SITE_APACHE}
+        ${MASTER_SITE_BACKUP}
+        ${MASTER_SITE_CYGWIN}
         ${MASTER_SITE_DEBIAN}
+        ${MASTER_SITE_FREEBSD}
+        ${MASTER_SITE_FREEBSD_LOCAL}
         ${MASTER_SITE_GNOME}
         ${MASTER_SITE_GNU}
         ${MASTER_SITE_GNUSTEP}
         ${MASTER_SITE_IFARCHIVE}
         ${MASTER_SITE_MOZILLA}
+        ${MASTER_SITE_OPENOFFICE}
         ${MASTER_SITE_PERL_CPAN}
+        ${MASTER_SITE_R_CRAN}
         ${MASTER_SITE_SOURCEFORGE}
         ${MASTER_SITE_SUNSITE}
-        ${MASTER_SITE_R_CRAN}
         ${MASTER_SITE_SUSE}
         ${MASTER_SITE_TEX_CTAN}
         ${MASTER_SITE_XCONTRIB}
         ${MASTER_SITE_XEMACS}
+
 
 If one of these predefined sites is chosen, you may require the ability to
 specify a subdirectory of that site. Since these macros may expand to more than
@@ -2253,7 +2146,7 @@ Please pay attention to the following gotchas:
   * Be sure to set the COMMENT variable to a short description of the package,
     not containing the pkg's name.
 
-8.2. distinfo
+7.2. distinfo
 
 Most important, the mandatory message digest, or checksum, of all the distfiles
 needed for the package to compile, confirming they match the original file
@@ -2273,12 +2166,12 @@ should be taken when upgrading such a package to ensure distfile information is
 not lost.
 
 The message digest/checksum for all the official patches found in the patches/
-directory (see Section 8.3, "patches/*") for the package is also stored in the
+directory (see Section 7.3, "patches/*") for the package is also stored in the
 distinfo file. This is a message digest/checksum of all lines in the patch file
 except the NetBSD RCS Id. This file is generated by invoking make makepatchsum
 (or make mps if you're in a hurry).
 
-8.3. patches/*
+7.3. patches/*
 
 This directory contains files that are used by the patch(1) command to modify
 the sources as distributed in the distribution file into a form that will
@@ -2309,7 +2202,7 @@ easily compare the new set of patches with the previously existing one with
 patchdiff.
 
 When you have finished a package, remember to generate the checksums for the
-patch files by using the make makepatchsum command, see Section 8.2, "distinfo"
+patch files by using the make makepatchsum command, see Section 7.2, "distinfo"
 .
 
 Patch files that are distributed by the author or other maintainers can be
@@ -2324,7 +2217,7 @@ pkgsrc/graphics/png, keep it in $LOCALPATCHES/graphics/png/mypatch. All files
 in the named directory are expected to be patch files, and they are applied
 after pkgsrc patches are applied.
 
-8.4. Other mandatory files
+7.4. Other mandatory files
 
 DESCR
 
@@ -2341,7 +2234,7 @@ PLIST
     and the location of inserted files. See Chapter 9, PLIST issues for more
     information.
 
-8.5. Optional files
+7.5. Optional files
 
 INSTALL
 
@@ -2371,7 +2264,7 @@ MESSAGE
 
     replaces "${SOMEVAR}" with "somevalue" in MESSAGE.
 
-8.6. work*
+7.6. work*
 
 When you type make the distribution files are unpacked into this directory. It
 can be removed by running make clean. Besides the sources, this directory is
@@ -2381,7 +2274,7 @@ If a package doesn't create a subdirectory for itself (like GNU software does,
 for instance), but extracts itself in the current directory, you should set
 WRKSRC accordingly, e.g. editors/sam again, but the quick answer is:
 
-WRKSRC=                ${WRKDIR}
+WRKSRC=             ${WRKDIR}
 
 Please note that the old NO_WRKSUBDIR has been deprecated and should not be
 used. Also, if your package doesn't create a subdir with the name of DISTNAME
@@ -2395,13 +2288,257 @@ same pkgsrc tree should be used on several different platforms, the variable
 OBJMACHINE can be set in /etc/mk.conf to attach the platform to the directory
 name, e.g. work.i386 or work.sparc.
 
-8.7. files/*
+7.7. files/*
 
 If you have any files that you wish to be placed in the package prior to
 configuration or building, you could place these files here and use a "${CP}"
 command in the "pre-configure" target to achieve this. Alternatively, you could
 simply diff the file against /dev/null and use the patch mechanism to manage
 the creation of this file.
+
+Chapter 8. Programming in Makefiles
+
+Table of Contents
+
+8.1. Makefile variables
+
+    8.1.1. Naming conventions
+
+8.2. Code snippets
+
+    8.2.1. Adding things to a list
+    8.2.2. Converting an internal list into an external list
+    8.2.3. Passing variables to a shell command
+    8.2.4. Quoting guideline
+    8.2.5. Workaround for a bug in BSD Make
+
+Pkgsrc consists of many Makefile fragments, each of which forms a well-defined
+part of the pkgsrc system. Using the make(1) system as a programming language
+for a big system like pkgsrc requires some discipline to keep the code correct
+and understandable.
+
+The basic ingredients for Makefile programming are variables (which are
+actually macros) and shell commands. Among these shell commands may even be
+more complex ones like awk(1) programs. To make sure that every shell command
+runs as intended it is necessary to quote all variables correctly when they are
+used.
+
+This chapter describes some patterns, that appear quite often in Makefiles,
+including the pitfalls that come along with them.
+
+8.1. Makefile variables
+
+Makefile variables contain strings that can be processed using the five
+operators ``='', ``+='', ``?='', ``:='', and ``!='', which are described in the
+make(1) man page.
+
+When a variable's value is parsed from a Makefile, the hash character ``#'' and
+the backslash character ``\'' are handled specially. If a backslash is followed
+by a newline, any whitespace immediately in front of the backslash, the
+backslash, the newline, and any whitespace immediately behind the newline are
+replaced with a single space. A backspace character and an immediately
+following hash character are replaced with a single hash character. Otherwise
+the backslash is passed as is. In a variable assignment, any hash character
+that is not preceded by a backslash starts a comment that continues upto the
+end of the logical line.
+
+Note: Because of this parsing algorithm the only way to create a variable
+consisting of a single backslash is using the ``!='' operator, for example:
+BACKSLASH!=echo "\\".
+
+So far for defining variables. The other thing you can do with variables is
+evaluating them. A variable is evaluated when it is part of the right side of
+the ``:='' or the ``!='' operator, or directly before executing a shell command
+which the variable is part of. In all other cases make(1) performs lazy
+evaluation, that is, variables are not evaluated until there's no other way.
+The ``modifiers'' mentioned in the man page also evaluate the variable.
+
+Some of the modifiers split the string into words and then operate on the
+words, others operate on the string as a whole. When a string is splitted into
+words, it is splitted as you would expect it from sh(1).
+
+No rule without exception?the .for loop does not follow the shell quoting rules
+but splits at sequences of whitespace.
+
+There are several types of variables that should be handled differently.
+Strings and two types of lists.
+
+  * Strings can contain arbitrary characters. Nevertheless you should restrict
+    yourself to only using printable characters. Examples are PREFIX and
+    COMMENT.
+
+  * Internal lists are lists that are never exported to any shell command.
+    Their elements are separated by whitespace. Therefore the elements
+    themselves cannot have embedded whitespace. Any other characters are
+    allowed. Internal lists can be used in .for loops. Examples are DEPENDS and
+    BUILD_DEPENDS.
+
+  * External lists are lists that may be exported to a shell command. Their
+    elements can contain any characters, including whitespace. That's why they
+    cannot be used in .for loops. Examples are DISTFILES and MASTER_SITES.
+
+8.1.1. Naming conventions
+
+  * All variable names starting with an underscore are reserved for use by the
+    pkgsrc infrastructure. They shall not be used by package Makefiles.
+
+  * In .for loops you should use lowercase variable names for the iteration
+    variables.
+
+  * All list variables should have a ``plural'' name, e.g. PKG_OPTIONS or
+    DISTFILES.
+
+8.2. Code snippets
+
+This section presents you with some code snippets you should use in your own
+code. If you don't find anything appropriate here, you should test your code
+and add it here.
+
+8.2.1. Adding things to a list
+
+STRING=                 foo * bar `date`
+INT_LIST=               # empty
+ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
+EXT_LIST=               # empty
+ANOTHER_EXT_LIST=       a=b c=d
+
+INT_LIST+=              ${STRING}               # 1
+INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
+EXT_LIST+=              ${STRING:Q}             # 3
+EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
+
+
+When you add a string to an external list (example 3), it must be quoted. In
+all other cases, you must not add a quoting level. You must not merge internal
+and external lists, unless you are sure that all entries are correctly
+interpreted in both lists.
+
+8.2.2. Converting an internal list into an external list
+
+EXT_LIST=       # empty
+.for i in ${INT_LIST}
+EXT_LIST+=      ${i:Q}""
+.endfor
+
+
+This code converts the internal list INT_LIST into the external list EXT_LIST.
+As the elements of an internal list are unquoted they must be quoted here. The
+reason for appending "" is explained below.
+
+8.2.3. Passing variables to a shell command
+
+STRING=         foo bar <    > * `date` $$HOME ' "
+EXT_LIST=       string=${STRING:Q} x=second\ item
+
+all:
+        echo ${STRING}                  # 1
+        echo "${STRING}"                # 2
+        echo "${STRING:Q}"              # 3
+        echo ${STRING:Q}                # 4
+        echo x${STRING:Q} | sed 1s,.,,  # 5
+        env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
+
+
+Example 1 leads to a syntax error in the shell, as the characters are just
+copied.
+
+Example 2 leads to a syntax error too, and if you leave out the last "
+character from ${STRING}, date(1) will be executed. The $HOME shell variable
+would be evaluated, too.
+
+Example 3 outputs each space character preceded by a backslash (or not),
+depending on the implementation of the echo(1) command.
+
+Example 4 handles correctly every string that does not start with a dash. In
+that case, the result depends on the implementation of the echo(1) command. As
+long as you can guarantee that your input does not start with a dash this form
+is appropriate.
+
+Example 5 handles even the case of a leading dash correctly.
+
+The EXT_LIST does not need to be quoted because the quoting has already be done
+when adding elements to the list.
+
+As internal lists shall not be passed to the shell, there is no example for it.
+
+8.2.4. Quoting guideline
+
+There are many possible sources of wrongly quoted variables. This section lists
+some of the commonly known ones.
+
+  * Whenever you use the value of a list, think about what happens to leading
+    or trailing whitespace. If the list is a well-formed shell expression you
+    can apply the :M* modifier to strip leading and trailing whitespace from
+    each word. The :M operator first splits its argument according to the rules
+    of the shell, and then creates a new list consisting of all words that
+    match the shell glob expression *, that is: all. One class of situations
+    where this is needed is when adding a variable like CPPFLAGS to
+    CONFIGURE_ARGS. If the configure script invokes other configure scripts it
+    strips the leading and trailing whitespace from the variable and then
+    passes it to the other configure scripts. But these configure scripts
+    expect the (child) CPPFLAGS variable to be the same as the parent CPPFLAGS.
+    That's why we better pass the CPPFLAGS value properly trimmed. And here is
+    how we do it:
+
+    CPPFLAGS=               # empty
+    CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX:Q}\"
+    CPPFLAGS+=              ${MY_CPPFLAGS}
+
+    CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
+
+    all:
+            echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
+            echo x${CONFIGURE_ARGS}x        # properly trimmed
+
+
+  * The example above contains one bug: The ${PREFIX} is a properly quoted
+    shell expression, but there is the C compiler after it, which also expects
+    a properly quoted string (this time in C syntax). The version above is
+    therefore only correct if ${PREFIX} does not have embedded backslashes or
+    double quotes. If you want to allow these, you have to add another layer of
+    quoting to each variable that is used as a C string literal. You cannot use
+    the :Q operator for it, as this operator only works for the shell.
+
+  * Whenever a variable can be empty the :Q operator can have surprising
+    results. Here are two completely different cases which can be solved with
+    the same trick.
+
+    EMPTY=                  # empty
+    empty_test:
+            for i in a ${EMPTY:Q} c; do \
+                    echo "$$i"; \
+            done
+
+    for_test:
+    .for i in a:\ a:\test.txt
+            echo ${i:Q}
+            echo "foo"
+    .endfor
+
+
+    The first example will only print two of the three lines we might have
+    expected. This is because ${EMPTY:Q} expands to the empty string, which the
+    shell cannot see. The workaround is to write ${EMPTY:Q}"". This pattern can
+    be often found as ${TEST} -z ${VAR:Q} or as ${TEST} -f ${FNAME:Q} (both of
+    these are wrong).
+
+    The second example will only print three lines instead of four. The first
+    line looks like a:\ echo foo. This is because the backslash of the value a:
+    \ is interpreted as a line-continuation by make(1), which makes the second
+    line the arguments of the echo(1) command from the first line. To avoid
+    this, write ${i:Q}"".
+
+8.2.5. Workaround for a bug in BSD Make
+
+The pkgsrc bmake program does not handle the following assignment correctly. In
+case _othervar_ contains a ``-'' character, one of the closing braces is
+included in ${VAR} after this code executes.
+
+        VAR:= ${VAR:N${_othervar_:C/-//}}
+
+
+For a more complex code snippet and a workaround, see the package regress/
+make-quoting, testcase bug1.
 
 Chapter 9. PLIST issues
 
@@ -2502,7 +2639,7 @@ bsd.pkg.mk (and search for PLIST_SUBST).
 
 If you want to change other variables not listed above, you can add variables
 and their expansions to this variable in the following way, similar to
-MESSAGE_SUBST (see Section 8.5, "Optional files"):
+MESSAGE_SUBST (see Section 7.5, "Optional files"):
 
 PLIST_SUBST+=    SOMEVAR="somevalue"
 
@@ -2642,7 +2779,7 @@ The process of converting packages to use the buildlink3 framework
 If a dependency on a particular package is required for its libraries and
 headers, then we replace:
 
-DEPENDS+=       foo>=1.1.0:../../category/foo
+DEPENDS+=   foo>=1.1.0:../../category/foo
 
 with
 
@@ -2944,26 +3081,16 @@ supported. This variable should be set in /etc/mk.conf.
 
 11.2. Converting packages to use bsd.options.mk
 
-The following example shows how bsd.options.mk should be used in a package
-Makefile, or in a file, e.g. options.mk, that is included by the main package
-Makefile.
+The following example shows how bsd.options.mk should be used by the
+hypothetical ``wibble'' package, either in the package Makefile, or in a file,
+e.g. options.mk, that is included by the main package Makefile.
 
 # Global and legacy options
-.if defined(WIBBLE_USE_OPENLDAP) && !empty(WIBBLE_USE_OPENLDAP:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=   ldap
-.endif
-.if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=   sasl
-.endif
-
 PKG_OPTIONS_VAR=        PKG_OPTIONS.wibble
 PKG_SUPPORTED_OPTIONS=  ldap sasl
-#
-# Default options for "wibble" package.
-#
-.if !defined(PKG_OPTIONS.wibble)
-PKG_DEFAULT_OPTIONS+=   sasl
-endif
+PKG_SUGGESTED_OPTIONS=  sasl
+PKG_OPTION_LEGACY_VARS= WIBBLE_USE_OPENLDAP:ldap USE_SASL2:sasl
+
 .include "../../mk/bsd.options.mk"
 
 # Package-specific option-handling
@@ -2993,17 +3120,20 @@ be removed over time as the old options are in turn deprecated and removed.
 The second section contains the information about which build options are
 supported by the package, and any default options settings if needed.
 
- 1. PKG_OPTIONS_VAR is a list of the name of the make(1) variables that contain
-    the options the user wishes to select. The recommended value is
-    "PKG_OPTIONS.pkg" but any package-specific value may be used. This variable
-    should be set in a package Makefile.
+ 1. PKG_OPTIONS_VAR is the name of the make(1) variable that contains the
+    options the user wishes to select. The recommended value is "PKG_OPTIONS.
+    pkg" but any package-specific value may be used. This variable should be
+    set in a package Makefile.
 
  2. PKG_SUPPORTED_OPTIONS is a list of build options supported by the package.
     This variable should be set in a package Makefile.
 
- 3. ${PKG_OPTIONS_VAR} (the variables named in PKG_OPTIONS_VAR) are variables
-    that list the selected build options and override any default options given
-    in PKG_DEFAULT_OPTIONS. If any of the options begin with a "-", then that
+ 3. PKG_SUGGESTED_OPTIONS is a list of build options which are enabled by
+    default.
+
+ 4. ${PKG_OPTIONS_VAR} (the variable named in PKG_OPTIONS_VAR) lists the
+    selected build options and overrides any default options given in
+    PKG_DEFAULT_OPTIONS. If any of the options begin with a "-", then that
     option is always removed from the selected build options, e.g.
 
             PKG_DEFAULT_OPTIONS=    kerberos ldap sasl
@@ -3058,7 +3188,7 @@ The automatic variable PREFIX indicates where all files of the final program
 shall be installed. It is usually set to LOCALBASE (/usr/pkg), or CROSSBASE for
 pkgs in the "cross" category. The value of PREFIX needs to be put into the
 various places in the program's source where paths to these files are encoded.
-See Section 8.3, "patches/*" and Section 13.3.1, "Shared libraries - libtool"
+See Section 7.3, "patches/*" and Section 13.3.1, "Shared libraries - libtool"
 for more details.
 
 When choosing which of these variables to use, follow the following rules:
@@ -3183,7 +3313,7 @@ patch
     $PKGPATH (e.g. /usr/local/patches/graphics/png) are applied. Patchfiles
     ending in .Z or .gz are uncompressed before they are applied, files ending
     in .orig or .rej are ignored. Any special options to patch(1) can be handed
-    in PATCH_DIST_ARGS. See Section 8.3, "patches/*" for more details.
+    in PATCH_DIST_ARGS. See Section 7.3, "patches/*" for more details.
 
     By default patch(1) is given special args to make it fail if the patches
     apply with some lines of fuzz. Please fix (regen) the patches so that they
@@ -4476,7 +4606,7 @@ what was explained in the previous sections, only with some debugging aids.
     shouldn't be, especially during the build phase. mkpatches, patchdiff and
     pkgvi are from the pkgtools/pkgdiff package.
 
-  * Look at the Makefile, fix if necessary; see Section 8.1, "Makefile".
+  * Look at the Makefile, fix if necessary; see Section 7.1, "Makefile".
 
   * Generate a PLIST:
 
@@ -4722,7 +4852,7 @@ Create the directory where the package lives, plus any auxiliary directories:
 # cd bison
 # mkdir patches
 
-Create Makefile, DESCR and PLIST (see Chapter 8, Package components - files,
+Create Makefile, DESCR and PLIST (see Chapter 7, Package components - files,
 directories and contents) then continue with fetching the distfile:
 
 # make fetch
