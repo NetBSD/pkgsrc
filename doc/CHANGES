@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10094 2005/05/16 10:52:28 rh Exp $
+$NetBSD: CHANGES,v 1.10095 2005/05/16 13:39:16 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2387,3 +2387,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added cddb-bundle-0.2.0 [rh 2005-05-16]
 	Added cdplayer-0.4.2 [rh 2005-05-16]
 	Added burn-0.4.0 [rh 2005-05-16]
+	Updated vim to 6.3.071 [martti 2005-05-16]
