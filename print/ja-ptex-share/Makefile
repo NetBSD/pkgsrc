@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/26 02:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/16 01:15:32 jlam Exp $
 
 DISTNAME=	ptex-texmf-2.1
 PKGNAME=	ja-ptex-share-2.1
@@ -25,6 +25,9 @@ DIST_SUBDIR=		teTeX
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
 TEXMFLOCAL=		${PREFIX}/share/texmf.local
+.if !defined(EXTRACT_USING_PAX)
+PKGSRC_USE_TOOLS+=	gtar
+.endif
 
 do-install:
 	${INSTALL_DATA_DIR} ${TEXMFLOCAL}

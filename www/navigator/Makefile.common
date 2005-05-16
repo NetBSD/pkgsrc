@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.74 2005/04/11 21:47:54 tv Exp $
+# $NetBSD: Makefile.common,v 1.75 2005/05/16 01:15:34 jlam Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -10,6 +10,10 @@ NS_VERS=	4.8
 PKGNAME=	${BINNAME}-4.80
 NS_ENCRYPTION=	us
 LDAP_VERS=	40
+
+.if ${BINNAME} == "communicator"
+PKGSRC_USE_TOOLS+=	gtar
+.endif
 
 MASTER_SITES=	ftp://ftp.netscape.com/pub/communicator/${SUB}/ \
 		ftp://ftp.de.netscape.com/pub/communicator/${SUB}/ \

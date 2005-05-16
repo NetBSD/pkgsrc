@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/01/13 08:16:31 tron Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/16 01:15:30 jlam Exp $
 
 DISTNAME=	gqmpeg-skins-20030712
 PKGREVISION=	3
@@ -83,6 +83,8 @@ DEPENDS+=	gqmpeg-[0-9]*:../gqmpeg
 DIST_SUBDIR=	gqmpeg-skins
 WRKSRC=		${WRKDIR}/Makefile PLIST distinfo
 NO_BUILD=	yes
+
+PKGSRC_USE_TOOLS+=	gtar
 
 do-install:
 		for i in ${DISTFILES} ; do \
