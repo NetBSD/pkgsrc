@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1658 2005/05/16 03:07:38 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1659 2005/05/16 04:30:41 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -831,9 +831,14 @@ BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
 #
 PKGSRC_USE_TOOLS+=							\
 	[ awk basename cat chgrp chmod chown cmp cp cut date dirname	\
-	echo egrep env expr false fgrep file find grep head hostname id	\
+	echo egrep env expr false file find grep head hostname id	\
 	install ln ls m4 mkdir mv nice pax pwd rm rmdir sed sh sort	\
-	tail tee test touch tr true tsort wc xargs
+	tail tee test touch tr true wc xargs
+
+# bsd.bulk-pkg.mk uses tsort
+.if defined(BATCH)
+PKGSRC_USE_TOOLS+=	tsort
+.endif
 
 .if !defined(NO_MTREE)
 PKGSRC_USE_TOOLS+=	mtree
