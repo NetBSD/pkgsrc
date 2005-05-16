@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.79 2005/05/16 03:07:38 jlam Exp $
+# $NetBSD: replace.mk,v 1.80 2005/05/16 16:28:54 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -47,7 +47,7 @@
 # taught to use the new syntax.
 #
 .if defined(USE_GNU_TOOLS) && !empty(USE_GNU_TOOLS)
-USE_TOOLS+=	${USE_GNU_TOOLS:S/^awk$/gawk/:S/^make$/gmake/:S/^sed$/gsed/}
+USE_TOOLS+=	${USE_GNU_TOOLS:S/^awk$/gawk/:S/^make$/gmake/:S/^sed$/gsed/:S/^yacc$/bison/}
 .endif
 .if defined(USE_TBL) && !empty(USE_TBL:M[yY][eE][sS])
 USE_TOOLS+=	tbl
