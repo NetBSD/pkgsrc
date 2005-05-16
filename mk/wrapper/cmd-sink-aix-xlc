@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-xlc,v 1.1 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: cmd-sink-aix-xlc,v 1.2 2005/05/16 17:54:51 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -58,7 +58,7 @@ while ! queue_is_empty cmdbuf; do
 		"")	blibpath="$dir" ;;
 		*)	blibpath="$blibpath:$dir" ;;
 		esac
-		$debug_log "    (cmd-sink-aix-xlc) drop: $dir [adding to blibpath]"
+		$debug_log $wrapperlog "    (cmd-sink-aix-xlc) drop: $dir [adding to blibpath]"
 		;;
 	*)
 		. $buildcmd
@@ -69,6 +69,6 @@ done
 # AIX xlc uses -blibpath to set the runtime library search path.
 if $test -n "$blibpath"; then
 	arg="-blibpath:$blibpath"
-	$debug_log "    (cmd-sink-aix-xlc) pop: $arg"
+	$debug_log $wrapperlog "    (cmd-sink-aix-xlc) pop: $arg"
 	. $buildcmd
 fi
