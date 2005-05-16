@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.69 2005/05/16 03:45:24 jlam Exp $
+# $NetBSD: Makefile,v 1.70 2005/05/16 19:59:54 wiz Exp $
 #
 
-# tools used by this this Makefile
+# tools used by this Makefile
 PKGSRC_USE_TOOLS+=	[ awk cat cmp echo env expr false fgrep grep mv	\
 			rm sed sort wc
 
-# additional tools use by bsd.pkg.subdir.mk
+# additional tools used by bsd.pkg.subdir.mk
 PKGSRC_USE_TOOLS+=	basename touch
 
 # additional tools used by bsd.bulk-pkg.mk
