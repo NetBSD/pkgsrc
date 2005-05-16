@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/05/30 06:22:09 grant Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/05/16 04:45:40 jlam Exp $
 
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/nightly/${MOZ_CONTRIB}latest-trunk/ \
 		ftp://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/nightly/${MOZ_CONTRIB}latest-trunk/
@@ -8,6 +8,8 @@ NO_CHECKSUM=	# defined
 NO_SRC_ON_FTP=	# defined
 
 .include "../../mk/bsd.prefs.mk"
+
+PKGSRC_USE_TOOLS+=	date
 
 .if !defined(MOZ_VER) || empty(MOZ_VER)
 MOZ_VER!=	${DATE} +%Y%m%d
