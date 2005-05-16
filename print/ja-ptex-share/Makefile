@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/16 03:04:45 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/16 16:33:24 kristerw Exp $
 
 DISTNAME=	ptex-texmf-2.1
 PKGNAME=	ja-ptex-share-2.1
@@ -25,6 +25,8 @@ DIST_SUBDIR=		teTeX
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
 TEXMFLOCAL=		${PREFIX}/share/texmf.local
+
+.include "../../mk/bsd.prefs.mk"
 
 do-install:
 	${INSTALL_DATA_DIR} ${TEXMFLOCAL}
