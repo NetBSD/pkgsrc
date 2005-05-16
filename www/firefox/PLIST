@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/02/27 13:20:43 taya Exp $
+@comment $NetBSD: PLIST,v 1.12.2.1 2005/05/16 15:07:13 salo Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -47,18 +47,15 @@ lib/${MOZILLA}/components/libjsd.${SO_SUFFIX}
 lib/${MOZILLA}/components/libmork.${SO_SUFFIX}
 lib/${MOZILLA}/components/libmozfind.${SO_SUFFIX}
 lib/${MOZILLA}/components/libmozldap.${SO_SUFFIX}
-lib/${MOZILLA}/components/libmyspell.${SO_SUFFIX}
 lib/${MOZILLA}/components/libnecko.${SO_SUFFIX}
 lib/${MOZILLA}/components/libnecko2.${SO_SUFFIX}
 lib/${MOZILLA}/components/libnsappshell.${SO_SUFFIX}
 lib/${MOZILLA}/components/liboji.${SO_SUFFIX}
-lib/${MOZILLA}/components/libp3p.${SO_SUFFIX}
 lib/${MOZILLA}/components/libpipboot.${SO_SUFFIX}
 lib/${MOZILLA}/components/libpipnss.${SO_SUFFIX}
 lib/${MOZILLA}/components/libpippki.${SO_SUFFIX}
 lib/${MOZILLA}/components/libpref.${SO_SUFFIX}
 lib/${MOZILLA}/components/librdf.${SO_SUFFIX}
-lib/${MOZILLA}/components/libspellchecker.${SO_SUFFIX}
 lib/${MOZILLA}/components/libsystem-pref.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtoolkitcomps.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtransformiix.${SO_SUFFIX}
@@ -66,8 +63,6 @@ lib/${MOZILLA}/components/libtxmgr.${SO_SUFFIX}
 lib/${MOZILLA}/components/libuconv.${SO_SUFFIX}
 lib/${MOZILLA}/components/libucvmath.${SO_SUFFIX}
 lib/${MOZILLA}/components/libuniversalchardet.${SO_SUFFIX}
-lib/${MOZILLA}/components/libwallet.${SO_SUFFIX}
-lib/${MOZILLA}/components/libwalletviewers.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwebbrwsr.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwebsrvcs.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwidget_gtk2.${SO_SUFFIX}
@@ -101,6 +96,14 @@ lib/${MOZILLA}/libxpcom_compat.${SO_SUFFIX}
 lib/${MOZILLA}/libxpistub.${SO_SUFFIX}
 ${SUNOSLIB}lib/${MOZILLA}/libfreebl_hybrid_3.${SO_SUFFIX}
 @comment end DSO
+@comment begin PKGCONFIG
+lib/pkgconfig/firefox-gtkmozembed.pc
+lib/pkgconfig/firefox-js.pc
+lib/pkgconfig/firefox-nspr.pc
+lib/pkgconfig/firefox-nss.pc
+lib/pkgconfig/firefox-plugin.pc
+lib/pkgconfig/firefox-xpcom.pc
+@comment end PKGCONFIG
 @comment begin DATA
 lib/${MOZILLA}/LICENSE
 lib/${MOZILLA}/README.txt
@@ -110,7 +113,6 @@ lib/${MOZILLA}/chrome/browser.jar
 lib/${MOZILLA}/chrome/chromelist.txt
 lib/${MOZILLA}/chrome/classic.jar
 lib/${MOZILLA}/chrome/comm.jar
-lib/${MOZILLA}/chrome/content-packs.jar
 lib/${MOZILLA}/chrome/embed-sample.jar
 lib/${MOZILLA}/chrome/en-US.jar
 lib/${MOZILLA}/chrome/help.jar
@@ -186,8 +188,6 @@ lib/${MOZILLA}/components/mozbrwsr.xpt
 lib/${MOZILLA}/components/mozfind.xpt
 lib/${MOZILLA}/components/mozgnome.xpt
 lib/${MOZILLA}/components/mozldap.xpt
-lib/${MOZILLA}/components/myspell/en-US.aff
-lib/${MOZILLA}/components/myspell/en-US.dic
 lib/${MOZILLA}/components/necko.xpt
 lib/${MOZILLA}/components/necko_about.xpt
 lib/${MOZILLA}/components/necko_cache.xpt
@@ -217,7 +217,6 @@ lib/${MOZILLA}/components/nsSidebar.js
 lib/${MOZILLA}/components/nsUpdateService.js
 lib/${MOZILLA}/components/nsXmlRpcClient.js
 lib/${MOZILLA}/components/oji.xpt
-lib/${MOZILLA}/components/p3p.xpt
 lib/${MOZILLA}/components/passwordmgr.xpt
 lib/${MOZILLA}/components/pipboot.xpt
 lib/${MOZILLA}/components/pipnss.xpt
@@ -235,8 +234,6 @@ lib/${MOZILLA}/components/search.xpt
 lib/${MOZILLA}/components/shellservice.xpt
 lib/${MOZILLA}/components/shistory.xpt
 lib/${MOZILLA}/components/sidebar.xpt
-lib/${MOZILLA}/components/signonviewer.xpt
-lib/${MOZILLA}/components/spellchecker.xpt
 lib/${MOZILLA}/components/toolkitprofile.xpt
 lib/${MOZILLA}/components/txmgr.xpt
 lib/${MOZILLA}/components/txtsvc.xpt
@@ -244,9 +241,6 @@ lib/${MOZILLA}/components/uconv.xpt
 lib/${MOZILLA}/components/unicharutil.xpt
 lib/${MOZILLA}/components/update.xpt
 lib/${MOZILLA}/components/uriloader.xpt
-lib/${MOZILLA}/components/wallet.xpt
-lib/${MOZILLA}/components/walleteditor.xpt
-lib/${MOZILLA}/components/walletpreview.xpt
 lib/${MOZILLA}/components/webBrowser_core.xpt
 lib/${MOZILLA}/components/webbrowserpersist.xpt
 lib/${MOZILLA}/components/webshell_idls.xpt
@@ -283,13 +277,6 @@ lib/${MOZILLA}/defaults/profile/localstore.rdf
 lib/${MOZILLA}/defaults/profile/mimeTypes.rdf
 lib/${MOZILLA}/defaults/profile/prefs.js
 lib/${MOZILLA}/defaults/profile/search.rdf
-lib/${MOZILLA}/defaults/wallet/DistinguishedSchema.tbl
-lib/${MOZILLA}/defaults/wallet/FieldSchema.tbl
-lib/${MOZILLA}/defaults/wallet/PositionalSchema.tbl
-lib/${MOZILLA}/defaults/wallet/SchemaConcat.tbl
-lib/${MOZILLA}/defaults/wallet/SchemaStrings.tbl
-lib/${MOZILLA}/defaults/wallet/StateSchema.tbl
-lib/${MOZILLA}/defaults/wallet/VcardSchema.tbl
 lib/${MOZILLA}/greprefs/all.js
 lib/${MOZILLA}/greprefs/non-shared.txt
 lib/${MOZILLA}/greprefs/security-prefs.js
@@ -1617,10 +1604,6 @@ include/${MOZILLA}/oji/nsIThreadManager.h
 include/${MOZILLA}/oji/nsJVMManager.h
 include/${MOZILLA}/oji/nsJVMPluginTagInfo.h
 include/${MOZILLA}/oji/nsjvm.h
-include/${MOZILLA}/p3p/nsIPolicyListener.h
-include/${MOZILLA}/p3p/nsIPolicyReference.h
-include/${MOZILLA}/p3p/nsIPolicyTarget.h
-include/${MOZILLA}/p3p/nsP3PCIID.h
 include/${MOZILLA}/passwordmgr/nsIPassword.h
 include/${MOZILLA}/pipboot/nsIBufEntropyCollector.h
 include/${MOZILLA}/pipboot/nsISSLStatusProvider.h
@@ -1756,10 +1739,6 @@ include/${MOZILLA}/shistory/nsISHistory.h
 include/${MOZILLA}/shistory/nsISHistoryInternal.h
 include/${MOZILLA}/shistory/nsISHistoryListener.h
 include/${MOZILLA}/sidebar/nsISidebar.h
-include/${MOZILLA}/spellchecker/mozIPersonalDictionary.h
-include/${MOZILLA}/spellchecker/mozISpellCheckingEngine.h
-include/${MOZILLA}/spellchecker/mozISpellI18NManager.h
-include/${MOZILLA}/spellchecker/mozISpellI18NUtil.h
 include/${MOZILLA}/string/nsAString.h
 include/${MOZILLA}/string/nsAlgorithm.h
 include/${MOZILLA}/string/nsCharTraits.h
@@ -1861,12 +1840,6 @@ include/${MOZILLA}/view/nsIView.h
 include/${MOZILLA}/view/nsIViewManager.h
 include/${MOZILLA}/view/nsIViewObserver.h
 include/${MOZILLA}/view/nsViewsCID.h
-include/${MOZILLA}/wallet/nsCPassword.h
-include/${MOZILLA}/wallet/nsIPassword.h
-include/${MOZILLA}/wallet/nsIWalletService.h
-include/${MOZILLA}/walletviewers/nsISignonViewer.h
-include/${MOZILLA}/walletviewers/nsIWalletEditor.h
-include/${MOZILLA}/walletviewers/nsIWalletPreview.h
 include/${MOZILLA}/webbrowserpersist/nsCWebBrowserPersist.h
 include/${MOZILLA}/webbrowserpersist/nsIWebBrowserPersist.h
 include/${MOZILLA}/webbrwsr/nsCTooltipTextProvider.h
@@ -2271,13 +2244,13 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm lib/${MOZILLA}/res/dtd
 @dirrm lib/${MOZILLA}/res/builtin
 @dirrm lib/${MOZILLA}/res
+@exec ${MKDIR} %D/lib/${MOZILLA}/plugins
 @dirrm lib/${MOZILLA}/plugins
 @dirrm lib/${MOZILLA}/ipc/modules
 @dirrm lib/${MOZILLA}/ipc
 @dirrm lib/${MOZILLA}/init.d
 @dirrm lib/${MOZILLA}/icons
 @dirrm lib/${MOZILLA}/greprefs
-@dirrm lib/${MOZILLA}/defaults/wallet
 @dirrm lib/${MOZILLA}/defaults/profile/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}
 @dirrm lib/${MOZILLA}/defaults/profile/extensions
 @dirrm lib/${MOZILLA}/defaults/profile/chrome
@@ -2285,7 +2258,6 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm lib/${MOZILLA}/defaults/pref
 @dirrm lib/${MOZILLA}/defaults/autoconfig
 @dirrm lib/${MOZILLA}/defaults
-@dirrm lib/${MOZILLA}/components/myspell
 @dirrm lib/${MOZILLA}/components
 @dirrm lib/${MOZILLA}/chrome/icons/default
 @dirrm lib/${MOZILLA}/chrome/icons
@@ -2311,8 +2283,6 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/webshell
 @dirrm include/${MOZILLA}/webbrwsr
 @dirrm include/${MOZILLA}/webbrowserpersist
-@dirrm include/${MOZILLA}/walletviewers
-@dirrm include/${MOZILLA}/wallet
 @dirrm include/${MOZILLA}/view
 @dirrm include/${MOZILLA}/util
 @dirrm include/${MOZILLA}/uriloader
@@ -2332,10 +2302,10 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/toolkitcomps
 @dirrm include/${MOZILLA}/system-pref
 @dirrm include/${MOZILLA}/string
-@dirrm include/${MOZILLA}/spellchecker
 @dirrm include/${MOZILLA}/sidebar
 @dirrm include/${MOZILLA}/shistory
 @dirrm include/${MOZILLA}/shellservice
+@exec ${MKDIR} %D/include/${MOZILLA}/seccmd
 @dirrm include/${MOZILLA}/seccmd
 @dirrm include/${MOZILLA}/satchel
 @dirrm include/${MOZILLA}/rdfutil
@@ -2351,7 +2321,6 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/pipnss
 @dirrm include/${MOZILLA}/pipboot
 @dirrm include/${MOZILLA}/passwordmgr
-@dirrm include/${MOZILLA}/p3p
 @dirrm include/${MOZILLA}/oji
 @dirrm include/${MOZILLA}/nspr/private
 @dirrm include/${MOZILLA}/nspr/obsolete
