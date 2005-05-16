@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/16 09:40:59 rh Exp $
+share/GNUstep/Local/Library/Bundles/Cddb.bundle/Cddb
+share/GNUstep/Local/Library/Bundles/Cddb.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/Cddb.bundle/stamp.make
+share/GNUstep/Local/Library/Headers/Cddb/Cddb.h
+@dirrm share/GNUstep/Local/Library/Headers/Cddb
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Headers
+@dirrm share/GNUstep/Local/Library/Bundles/Cddb.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/Cddb.bundle
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Bundles
