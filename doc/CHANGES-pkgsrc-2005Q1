@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.98 2005/05/16 12:17:44 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.99 2005/05/16 15:08:28 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -223,3 +223,5 @@ Pullup ticket 503 - requested by Adrian Portelli
 security update for horde
 Pullup ticket 497 - requested by Matthias Scheler
 security update for firefox-gtk2-bin
+Pullup ticket 504 - requested by Shin'ichiro TAYA
+security update for firefox
