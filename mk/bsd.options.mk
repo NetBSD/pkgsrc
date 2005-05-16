@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.21 2005/05/14 02:17:43 rillig Exp $
+# $NetBSD: bsd.options.mk,v 1.22 2005/05/16 09:08:29 rillig Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -104,31 +104,22 @@ _DEPRECATED_WARNING+="Deprecated variable "${_m_:C/:.*//:Q}" used, use PKG_DEFAU
 .endfor
 
 #
-# reverse options in PKG_OPTIONS_VAR for backwards compatibility to
-#	PKG_OPTIONS.foo=${PKG_DEFAULT_OPTIONS} -foo
+# process options from generic to specific
 #
-_PKG_OPTIONS_USER=#empty
-.for _opt_ in ${${PKG_OPTIONS_VAR}}
-_PKG_OPTIONS_USER:=${_opt_} ${_PKG_OPTIONS_USER}
-.endfor
-
-#
-# process options from specific to generic
-#
-PKG_OPTIONS=#empty
-_PKG_OPTIONS_NOT=#empty
-.for _opt_ in ${_PKG_OPTIONS_USER} ${PKG_DEFAULT_OPTIONS} ${_PKG_LEGACY_OPTIONS} ${PKG_SUGGESTED_OPTIONS}
-_tmp_=${_opt_}
-.  if !empty(_tmp_:M-*) && empty(_PKG_OPTIONS_NOT:M${_opt_})
-_PKG_OPTIONS_NOT+=${_opt_}
-.  elif empty(PKG_OPTIONS:M${_opt_}) && !empty(PKG_SUPPORTED_OPTIONS:M${_opt_}) && empty(_PKG_OPTIONS_NOT:M-${_opt_})
-PKG_OPTIONS+=${_opt_}
+PKG_OPTIONS:=	# empty
+.for _o_ in ${PKG_SUGGESTED_OPTIONS} ${_PKG_LEGACY_OPTIONS} \
+	${PKG_DEFAULT_OPTIONS} ${${PKG_OPTIONS_VAR}}
+_opt_:=		${_o_}
+#  ,--- this variable is a work around for a bug documented in the
+#  |    regress/make-quoting package, testcase bug1.
+_popt_:=	${_o_:C/^-//}	# popt == plain option
+.  if !empty(_opt_:M-*)
+PKG_OPTIONS:=	${PKG_OPTIONS:N${_popt_}}
+.  elif !empty(PKG_SUPPORTED_OPTIONS:M${_popt_})
+PKG_OPTIONS:=	${PKG_OPTIONS} ${_popt_}
 .  endif
 .endfor
-.undef _opt_
-.undef _tmp_
-.undef _PKG_OPTIONS_NOT
-.undef _PKG_OPTIONS_USER
+PKG_OPTIONS:=	${PKG_OPTIONS:O:u}
 
 _PKG_OPTIONS_WORDWRAP_FILTER=						\
 	${AWK} '							\
