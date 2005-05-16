@@ -1,7 +1,7 @@
-# $NetBSD: Makefile-firefox.common,v 1.11.2.3 2005/04/22 06:48:12 snj Exp $
+# $NetBSD: Makefile-firefox.common,v 1.11.2.4 2005/05/16 15:07:13 salo Exp $
 
 MOZILLA_BIN=	firefox-bin
-MOZ_VER=	1.0.3
+MOZ_VER=	1.0.4
 EXTRACT_SUFX=	.tar.bz2
 
 DISTNAME=	firefox-${MOZ_VER}-source
@@ -23,7 +23,10 @@ MAKE_ENV+=	MOZ_PHOENIX=1
 CONFIGURE_ARGS+=	--disable-mailnews
 CONFIGURE_ARGS+=	--disable-composer
 CONFIGURE_ARGS+=	--enable-single-profile
-CONFIGURE_ARGS+=	--enable-extensions=default,-irc,-typeaheadfind
+CONFIGURE_ARGS+=	--without-gssapi
+
+MOZILLA_EXTENSIONS=	cookie,gnomevfs,inspector,negotiateauth,pref,transformiix,universalchardet,webservices,xml-rpc,xmlextras
+CONFIGURE_ARGS+=	--enable-extensions=${MOZILLA_EXTENSIONS}
 
 USE_LANGUAGES+=		c++
 BUILD_MATHML=		# defined
