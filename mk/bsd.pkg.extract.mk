@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.5 2005/05/16 04:22:40 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.6 2005/05/16 18:43:20 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -22,8 +22,8 @@
 #	that ends in <sufx>.
 #
 #    EXTRACT_USING specifies the tool used to extract tar/ustar-format
-#	archives.  The possible values are "pax" and "gtar".  By
-#	default, we use the "pax" tool.
+#	archives.  The possible values are "gtar", "nbtar", and "pax".
+#	By default, we use the "nbtar" tool (NetBSD's pax-as-tar).
 #
 #    EXTRACT_ELEMENTS is a list of files within the distfile to extract.
 #	This variable only takes effect for distfiles that are tarballs.
@@ -38,7 +38,7 @@
 
 EXTRACT_ONLY?=		${DISTFILES}
 EXTRACT_SUFX?=		.tar.gz
-EXTRACT_USING?=		pax
+EXTRACT_USING?=		nbtar
 
 _EXTRACT_SUFFIXES=	.tar.gz .tgz .tar.bz2 .tbz .tar.Z .tar _tar.gz
 _EXTRACT_SUFFIXES+=	.shar.gz .shar.bz2 .shar.Z .shar
@@ -55,6 +55,8 @@ _EXTRACT_SUFFIXES+=	.rar
     !empty(EXTRACT_SUFX:M*.tbz) || !empty(EXTRACT_SUFX:M*.tgz)
 .  if !empty(EXTRACT_USING:Mgtar)
 PKGSRC_USE_TOOLS+=	gtar
+.  elif !empty(EXTRACT_USING:Mnbtar)
+PKGSRC_USE_TOOLS+=	tar
 .  else
 PKGSRC_USE_TOOLS+=	pax
 .  endif
@@ -165,6 +167,8 @@ EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${S
 
 .if !empty(EXTRACT_USING:Mgtar)
 _DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
+.elif !empty(EXTRACT_USING:Mnbtar)
+_DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${TAR} -xf - ${EXTRACT_ELEMENTS}
 .else
 _DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${PAX} -O -r ${EXTRACT_ELEMENTS}
 .endif
@@ -173,6 +177,8 @@ _DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${PAX} -O -r ${EXTRACT_
 .  if !defined(EXTRACT_CMD${__suffix__})
 .    if !empty(EXTRACT_USING:Mgtar)
 EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
+.    elif !empty(EXTRACT_USING:Mnbtar)
+EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${TAR} -xf - ${EXTRACT_ELEMENTS}
 .    else
 EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${PAX} -O -r ${EXTRACT_ELEMENTS}
 .    endif
