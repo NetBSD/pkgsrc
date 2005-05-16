@@ -1,0 +1,3 @@
+  A simple CD player application for GNUstep that acts as a front end for
+libcdaudio and cddb-bundle.  This package also includes an AudioCD.bundle
+that allows access to audio CD meta data from other applications.
