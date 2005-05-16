@@ -16,6 +16,8 @@ NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
 EXTRACT_ONLY=	# defined
 
+PKGSRC_USE_TOOLS+=	tar
+
 A_DATADIR=	share/Album
 A_HTTPDIR=	share/httpd/htdocs/Album
 
