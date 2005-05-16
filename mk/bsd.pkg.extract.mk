@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.3 2005/05/15 03:57:21 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.4 2005/05/16 03:04:45 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -44,11 +44,16 @@ _EXTRACT_SUFFIXES+=	.zoo
 _EXTRACT_SUFFIXES+=	.bin
 _EXTRACT_SUFFIXES+=	.rar
 
-# If the distfile has a tar.bz2 suffix, use bzcat in preference to gzcat,
-# pulling in the "bzip2" package if necessary.  [Note: this is only for
-# the benefit of pre-1.5 NetBSD systems. "gzcat" on newer systems happily
-# decodes bzip2.]  Do likewise for ".zip" and ".lha" distfiles.
-#
+.if !empty(EXTRACT_ONLY:M*.tar) || !empty(EXTRACT_ONLY:M*.tar.*) || \
+    !empty(EXTRACT_SUFX:M*.tar) || !empty(EXTRACT_SUFX:M*.tar.*) || \
+    !empty(EXTRACT_ONLY:M*.tbz) || !empty(EXTRACT_ONLY:M*.tgz) || \
+    !empty(EXTRACT_SUFX:M*.tbz) || !empty(EXTRACT_SUFX:M*.tgz)
+.  if !empty(EXTRACT_USING:Mgtar)
+PKGSRC_USE_TOOLS+=	gtar
+.  else
+PKGSRC_USE_TOOLS+=	pax
+.  endif
+.endif
 .if !empty(EXTRACT_ONLY:M*.bz2) || !empty(EXTRACT_ONLY:M*.tbz) || \
     !empty(EXTRACT_SUFX:M*.bz2) || !empty(EXTRACT_SUFX:M*.tbz)
 .  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
@@ -153,20 +158,18 @@ EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} > `${
 EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${SH}
 .endfor
 
-# If EXTRACT_USING_PAX is defined, use pax in preference to (GNU) tar.
-#
-.if defined(EXTRACT_USING_PAX)
-_DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${PAX} -O -r ${EXTRACT_ELEMENTS}
-.else
+.if !empty(EXTRACT_USING:Mgtar)
 _DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
+.else
+_DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${PAX} -O -r ${EXTRACT_ELEMENTS}
 .endif
 
 .for __suffix__ in ${_EXTRACT_SUFFIXES}
 .  if !defined(EXTRACT_CMD${__suffix__})
-.    if defined(EXTRACT_USING_PAX)
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${PAX} -O -r ${EXTRACT_ELEMENTS}
-.  else
+.    if !empty(EXTRACT_USING:Mgtar)
 EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
+.    else
+EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${PAX} -O -r ${EXTRACT_ELEMENTS}
 .    endif
 .  endif
 .endfor

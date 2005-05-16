@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:19:17 agc Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/16 03:04:45 jlam Exp $
 
 DISTNAME=		mzscheme-205.src.unix
 PKGNAME=		mzscheme-205
@@ -14,7 +14,7 @@ CONFLICTS+=		drscheme*:../drscheme
 WRKSRC=			${WRKDIR}/plt/src
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./configure
-EXTRACT_USING_PAX=      # defined
+EXTRACT_USING=		pax
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-i386

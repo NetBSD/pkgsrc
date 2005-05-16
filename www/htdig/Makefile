@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/19 00:28:31 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2005/05/16 03:04:45 jlam Exp $
 
 DISTNAME=	htdig-3.1.6
 PKGREVISION=	3
@@ -41,10 +41,11 @@ CONF_FILES+=	${PREFIX}/share/examples/htdig/htdig.conf \
 		${PKG_SYSCONFDIR}/htdig.conf
 
 .include "../../mk/bsd.prefs.mk"
-.if defined(EXTRACT_USING_PAX)
-EXTRACT_ELEMENTS= -c ${DISTNAME}/db*
-.else
+
+.if !empty(EXTRACT_USING:Mgtar)
 EXTRACT_ELEMENTS= --exclude ${DISTNAME}/db*
+.else
+EXTRACT_ELEMENTS= -c ${DISTNAME}/db*
 .endif
 
 .include "../../databases/db/buildlink3.mk"
