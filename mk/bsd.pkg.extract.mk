@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.4 2005/05/16 03:04:45 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.5 2005/05/16 04:22:40 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -21,6 +21,10 @@
 #	contents of an archive named by the shell variable "extract_file"
 #	that ends in <sufx>.
 #
+#    EXTRACT_USING specifies the tool used to extract tar/ustar-format
+#	archives.  The possible values are "pax" and "gtar".  By
+#	default, we use the "pax" tool.
+#
 #    EXTRACT_ELEMENTS is a list of files within the distfile to extract.
 #	This variable only takes effect for distfiles that are tarballs.
 #	By default, this is empty, which causes all files within the
@@ -34,6 +38,7 @@
 
 EXTRACT_ONLY?=		${DISTFILES}
 EXTRACT_SUFX?=		.tar.gz
+EXTRACT_USING?=		pax
 
 _EXTRACT_SUFFIXES=	.tar.gz .tgz .tar.bz2 .tbz .tar.Z .tar _tar.gz
 _EXTRACT_SUFFIXES+=	.shar.gz .shar.bz2 .shar.Z .shar
