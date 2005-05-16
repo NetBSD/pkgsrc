@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2005/04/11 21:45:12 tv Exp $
+# $NetBSD: Makefile.common,v 1.41 2005/05/16 03:04:44 jlam Exp $
 
 DISTNAME=		mysql-4.0.24
 CATEGORIES=		databases
@@ -9,12 +9,12 @@ MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQL-4.0/ \
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.mysql.com/
 
-EXTRACT_USING_PAX=	# defined
-
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
+
+EXTRACT_USING=		pax
 
 # MYSQL_USER		username of the database administrator
 # MYSQL_GROUP		group of the database administrator

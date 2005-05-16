@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/05/16 01:15:33 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/05/16 03:04:45 jlam Exp $
 #
 
 DISTNAME=	tetex-texmf-2.0.2
@@ -24,19 +24,16 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 USE_GNU_TOOLS+=		patch
-.if !defined(EXTRACT_USING_PAX)
-PKGSRC_USE_TOOLS+=	gtar
-.endif
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
-.if defined(EXTRACT_USING_PAX)
+.if !empty(EXTRACT_USING:Mgtar)
 	for i in ${DISTFILES}; do \
-		cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/$$i | ${PAX} -O -cr `${CAT} ${FILESDIR}/exclude`; \
+		cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/$$i | ${GTAR} -X ${FILESDIR}/exclude -xpf -; \
 	done
 .else
 	for i in ${DISTFILES}; do \
-		cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/$$i | ${GTAR} -X ${FILESDIR}/exclude -xpf -; \
+		cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/$$i | ${PAX} -O -cr `${CAT} ${FILESDIR}/exclude`; \
 	done
 .endif
 	cd ${PREFIX}/share/texmf/dvipdfm/config && \

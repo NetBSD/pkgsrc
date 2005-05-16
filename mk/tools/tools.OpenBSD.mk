@@ -1,4 +1,4 @@
-# $NetBSD: tools.OpenBSD.mk,v 1.10 2005/05/14 21:15:07 jlam Exp $
+# $NetBSD: tools.OpenBSD.mk,v 1.11 2005/05/16 03:07:38 jlam Exp $
 #
 # System-supplied tools for the OpenBSD operating system.
 
@@ -23,7 +23,6 @@ TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
-TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
 TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
