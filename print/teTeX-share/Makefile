@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/03/21 00:47:45 kei Exp $
+# $NetBSD: Makefile,v 1.27 2005/05/16 01:15:33 jlam Exp $
 #
 
 DISTNAME=	tetex-texmf-2.0.2
@@ -22,7 +22,11 @@ DIST_SUBDIR=	teTeX
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-USE_GNU_TOOLS+=	patch
+
+USE_GNU_TOOLS+=		patch
+.if !defined(EXTRACT_USING_PAX)
+PKGSRC_USE_TOOLS+=	gtar
+.endif
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
