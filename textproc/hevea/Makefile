@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/13 16:54:13 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/16 05:09:21 jlam Exp $
 
 DISTNAME=	hevea-1.07
 CATEGORIES=	textproc
@@ -10,6 +10,7 @@ COMMENT=	LaTeX to HTML translator
 
 BUILD_DEPENDS+=	ocaml>=3.07:../../lang/ocaml
 
+USE_TOOLS+=	m4
 MAKE_ENV+=	M4=${TOOLS_M4:Q}
 
 .include "../../mk/bsd.prefs.mk"
