@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.51 2005/01/15 01:53:00 tv Exp $
+# $NetBSD: post-build,v 1.52 2005/05/16 19:11:19 jschauma Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -241,7 +241,7 @@ sub pkgResult ($$) {
 		'<td align="right" class="pkg-'.$state_style.'">'.$nbrokenby.'</td>'
 		if $nbrokenby > 0;
 
-	if ($pinfo->{nerrors} != 0 && $verbose && $state eq "broken") {
+	if ($pinfo->{nerrors} != 0 && $verbose && ($state eq "broken" || $state eq "topten")) {
 		print swrite($report_form, $pkg, $nbrokenby > 0 ? $nbrokenby : "", $maintainer);
 	}
 
@@ -450,6 +450,7 @@ tt.filename {
 <p>
   Jump to:<br/>
   <ul>
+    <li><a href="#topten">Top Ten Offenders</a></li>
     <li><a href="#broken">Broken packages</a></li>
     <li><a href="#broken depends">Broken dependencies</a></li>
     <li><a href="#not packaged">Not packaged</a></li>
@@ -459,19 +460,20 @@ tt.filename {
 EOHTML
 
 	my %state_head = (
+		"topten" => "Top Ten Offenders",
 		"broken" => "Broken packages",
 		"broken depends" => "Broken dependencies",
 		"not packaged" => "Not packaged"
 	);
 
-	# only include broken packages in the email, see also pkgResult().
-	if ($verbose && scalar(@{$broken->{"broken"}})) {
-		print "\n\n$state_head{broken}\n\n";
+	foreach my $state ("topten", "broken", "broken depends", "not packaged") {
+		next unless scalar(@{$broken->{$state}});
+		
+		if ($verbose && ($state eq "topten" || $state eq "broken")) {
+			print "\n\n$state_head{$state}\n\n";
 		print $report_head;
 	}
 
-	foreach my $state ("broken", "broken depends", "not packaged") {
-		next unless scalar(@{$broken->{$state}});
 
 		print HTML <<EOHTML;
 
@@ -569,6 +571,12 @@ sub getBroken {
 	# sort pkgs in each state
 	foreach my $state ("broken", "broken depends", "not packaged") {
 		$res->{$state} = [ sort { $a->{pkg} cmp $b->{pkg} } @{$res->{$state}} ];
+	}
+
+	$res->{"topten"} = [ sort { $b->{nbrokenby} <=> $a->{nbrokenby} } @{$res->{"broken"}} ];
+
+	for (my $count = $#{$res->{"topten"}}; $count >= 10; $count--) {
+		pop(@{$res->{"topten"}});
 	}
 
 	return $res;
