@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:35 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/16 01:15:33 jlam Exp $
 #
 
 DISTNAME=	html-4.01
@@ -18,6 +18,8 @@ WRKSRC=		${WRKDIR}
 NO_MTREE=	yes
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
+
+PKGSRC_USE_TOOLS+=	gtar
 
 INSTDIR=        ${PREFIX}/share/sgml/html
 ISOCAT=		${PREFIX}/share/sgml/iso8879/catalog

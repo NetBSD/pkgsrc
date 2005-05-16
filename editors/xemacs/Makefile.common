@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2005/04/11 21:45:42 tv Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/05/16 01:15:31 jlam Exp $
 
 DISTNAME=	xemacs-21.4.17
 CATEGORIES=	editors
@@ -12,6 +12,7 @@ CONFLICTS+=	gnuclient-[0-9]*
 
 NOT_FOR_PLATFORM=	*-*-mips*	# fails purespace dumping
 
+PKGSRC_USE_TOOLS+=	gtar
 
 DIST_SUBDIR=	xemacs
 EXTRA_FILES=	${DISTNAME}-elc.tar.gz ${DISTNAME}-info.tar.gz

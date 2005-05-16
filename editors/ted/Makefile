@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/11 21:45:42 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/05/16 01:15:31 jlam Exp $
 
 DISTNAME=	ted-2.16.src
 PKGNAME=	ted-2.16
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.nllgg.nl/Ted/
 COMMENT=	X11 based WordPad-like word processor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+PKGSRC_USE_TOOLS+=	gtar
 
 WRKSRC=		${WRKDIR}/Ted-2.16
 USE_X11BASE=	YES
