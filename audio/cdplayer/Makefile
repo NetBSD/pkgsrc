@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/16 09:55:04 rh Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/16 10:12:28 rh Exp $
 #
 
 DISTNAME=	cdplayer-0.4.2
@@ -17,6 +17,11 @@ MAKE_ENV+=	ADDITIONAL_CPPFLAGS="-Wno-import"
 
 do-configure:
 	${LN} -s ${BUILDLINK_DIR}/${GNUSTEP_SUBDIR}/System/Library/Frameworks/PrefsModule.framework/Versions/A/Headers ${WRKSRC}/AudioCD/AudioCDPrefs/PrefsModule
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/include/CDPlayer
+	${INSTALL_DATA} ${WRKSRC}/CDPlayer/AudioCDProtocol.h		\
+			${PREFIX}/include/CDPlayer
 
 .include "../../audio/libcdaudio/buildlink3.mk"
 .include "../../audio/cddb-bundle/buildlink3.mk"
