@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.14 2005/05/15 23:46:20 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.15 2005/05/16 09:27:48 rillig Exp $ -->
 
 <!-- based on:
 pkgsrc/bootstrap/bmake/for.c 1.1.1.1
@@ -111,6 +111,10 @@ pkgsrc/bootstrap/bmake/var.c 1.2
 	<listitem><para>In <command>.for</command> loops you should use
 	lowercase variable names for the iteration
 	variables.</para></listitem>
+
+	<listitem><para>All list variables should have a ``plural''
+	name, e.g. <varname>PKG_OPTIONS</varname> or
+	<varname>DISTFILES</varname>.</para></listitem>
 
       </itemizedlist>
     </sect2>
