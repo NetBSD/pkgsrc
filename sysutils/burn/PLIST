@@ -1,0 +1,438 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/16 10:51:17 rh Exp $
+share/GNUstep/Local/Applications/Burn.app/Burn
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.desktop
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/Logo.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/addfiles.xlp
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/advanced.xlp
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/blankpanel.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/burniso.xlp
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/burntools.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/compwin.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/console.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/cpyfiles.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/faq.xlp
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/getstart.xlp
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/howto.xlp
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/lnkfiles.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/main.xlp
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/movfiles.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/movtracks.xlp
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/params_panel.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/prefs_new_comp.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/prereq.xlp
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/progress_panel.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/selectiso.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/services.xlp
+share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/todo.xlp
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/AudioCDInspector.gorm/AudioCDInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/AudioCDInspector.gorm/AudioCDInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/AudioCDInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/AudioCDInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BlankPanel.gorm/BlankPanel.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BlankPanel.gorm/BlankPanel.gorm/iconCDRW.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BlankPanel.gorm/BlankPanel.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BlankPanel.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BlankPanel.gorm/iconCDRW.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BlankPanel.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BurnProgress.gorm/BurnProgress.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BurnProgress.gorm/BurnProgress.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BurnProgress.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BurnProgress.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/DriversPrefs.gorm/DriversPrefs.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/DriversPrefs.gorm/DriversPrefs.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/DriversPrefs.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/DriversPrefs.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/GeneralParams.gorm/GeneralParams.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/GeneralParams.gorm/GeneralParams.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/GeneralParams.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/GeneralParams.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/GeneralPrefs.gorm/GeneralPrefs.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/GeneralPrefs.gorm/GeneralPrefs.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/GeneralPrefs.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/GeneralPrefs.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/Localizable.strings
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/MediaInspector.gorm/MediaInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/MediaInspector.gorm/MediaInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/MediaInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/MediaInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/PreferencesWindow.gorm/PreferencesWindow.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/PreferencesWindow.gorm/PreferencesWindow.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/PreferencesWindow.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/PreferencesWindow.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/ProjectWindow.gorm/ProjectWindow.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/ProjectWindow.gorm/ProjectWindow.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/ProjectWindow.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/ProjectWindow.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/ToolPanel.gorm/ToolPanel.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/ToolPanel.gorm/ToolPanel.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/ToolPanel.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/ToolPanel.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/TrackInspector.gorm/TrackInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/TrackInspector.gorm/TrackInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/TrackInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/TrackInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/AudioCDInspector.gorm/AudioCDInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/AudioCDInspector.gorm/AudioCDInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/AudioCDInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/AudioCDInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BlankPanel.gorm/BlankPanel.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BlankPanel.gorm/BlankPanel.gorm/iconCDRW.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BlankPanel.gorm/BlankPanel.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BlankPanel.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BlankPanel.gorm/iconCDRW.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BlankPanel.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BurnProgress.gorm/BurnProgress.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BurnProgress.gorm/BurnProgress.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BurnProgress.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BurnProgress.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/DriversPrefs.gorm/DriversPrefs.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/DriversPrefs.gorm/DriversPrefs.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/DriversPrefs.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/DriversPrefs.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/GeneralParams.gorm/GeneralParams.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/GeneralParams.gorm/GeneralParams.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/GeneralParams.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/GeneralParams.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/GeneralPrefs.gorm/GeneralPrefs.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/GeneralPrefs.gorm/GeneralPrefs.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/GeneralPrefs.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/GeneralPrefs.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/Localizable.strings
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/MediaInspector.gorm/MediaInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/MediaInspector.gorm/MediaInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/MediaInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/MediaInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/PreferencesWindow.gorm/PreferencesWindow.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/PreferencesWindow.gorm/PreferencesWindow.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/PreferencesWindow.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/PreferencesWindow.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/ProjectWindow.gorm/ProjectWindow.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/ProjectWindow.gorm/ProjectWindow.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/ProjectWindow.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/ProjectWindow.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/ToolPanel.gorm/ToolPanel.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/ToolPanel.gorm/ToolPanel.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/ToolPanel.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/ToolPanel.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/TrackInspector.gorm/TrackInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/TrackInspector.gorm/TrackInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/TrackInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/TrackInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/AudioCDInspector.gorm/AudioCDInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/AudioCDInspector.gorm/AudioCDInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/AudioCDInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/AudioCDInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BlankPanel.gorm/BlankPanel.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BlankPanel.gorm/BlankPanel.gorm/iconCDRW.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BlankPanel.gorm/BlankPanel.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BlankPanel.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BlankPanel.gorm/iconCDRW.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BlankPanel.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BurnProgress.gorm/BurnProgress.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BurnProgress.gorm/BurnProgress.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BurnProgress.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BurnProgress.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/DriversPrefs.gorm/DriversPrefs.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/DriversPrefs.gorm/DriversPrefs.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/DriversPrefs.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/DriversPrefs.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/GeneralParams.gorm/GeneralParams.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/GeneralParams.gorm/GeneralParams.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/GeneralParams.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/GeneralParams.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/GeneralPrefs.gorm/GeneralPrefs.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/GeneralPrefs.gorm/GeneralPrefs.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/GeneralPrefs.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/GeneralPrefs.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/Localizable.strings
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/MediaInspector.gorm/MediaInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/MediaInspector.gorm/MediaInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/MediaInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/MediaInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/PreferencesWindow.gorm/PreferencesWindow.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/PreferencesWindow.gorm/PreferencesWindow.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/PreferencesWindow.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/PreferencesWindow.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/ProjectWindow.gorm/ProjectWindow.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/ProjectWindow.gorm/ProjectWindow.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/ProjectWindow.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/ProjectWindow.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/ToolPanel.gorm/ToolPanel.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/ToolPanel.gorm/ToolPanel.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/ToolPanel.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/ToolPanel.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/TrackInspector.gorm/TrackInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/TrackInspector.gorm/TrackInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/TrackInspector.gorm/data.classes
+share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/TrackInspector.gorm/objects.gorm
+share/GNUstep/Local/Applications/Burn.app/Resources/Info-gnustep.plist
+share/GNUstep/Local/Applications/Burn.app/Resources/iconAudioCD.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconAudioCDSm.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconAudioInt.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconAudioIntSm.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconAudioMot.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconAudioMotSm.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconBurn.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconCD.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconCDR.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconCDRW.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconDelete.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconDnD.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconDnDAudio.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconDnDAudioMulti.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconDnDMulti.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconDragTrack.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconDrivers.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconGSburn.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconGeneral.tiff
+share/GNUstep/Local/Applications/Burn.app/Resources/iconMultiSelection.tiff
+share/GNUstep/Local/Applications/Burn.app/library_paths.openapp
+share/GNUstep/Local/Applications/Burn.app/stamp.make
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/CDparanoia
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Localizable.strings
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Parameters.gorm/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Parameters.gorm/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Settings.gorm/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Settings.gorm/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj/Localizable.strings
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj/Parameters.gorm/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj/Parameters.gorm/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj/Settings.gorm/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj/Settings.gorm/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj/Localizable.strings
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj/Parameters.gorm/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj/Parameters.gorm/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj/Settings.gorm/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj/Settings.gorm/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/iconCDparanoia.tiff
+share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/stamp.make
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/CDrecord
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj/Localizable.strings
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj/Parameters.gorm/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj/Parameters.gorm/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj/Settings.gorm/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj/Settings.gorm/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj/Localizable.strings
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj/Parameters.gorm/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj/Parameters.gorm/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj/Settings.gorm/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj/Settings.gorm/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj/Localizable.strings
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj/Parameters.gorm/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj/Parameters.gorm/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj/Settings.gorm/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj/Settings.gorm/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/iconCDrecord.tiff
+share/GNUstep/Local/Library/Bundles/CDrecord.bundle/stamp.make
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Cdrdao
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/English.lproj/Localizable.strings
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/English.lproj/Settings.gorm/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/English.lproj/Settings.gorm/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/English.lproj/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/English.lproj/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/French.lproj/Localizable.strings
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/French.lproj/Settings.gorm/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/French.lproj/Settings.gorm/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/French.lproj/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/French.lproj/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/German.lproj/Localizable.strings
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/German.lproj/Settings.gorm/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/German.lproj/Settings.gorm/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/German.lproj/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/German.lproj/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/iconCdrdao.tiff
+share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/stamp.make
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/MkIsoFs
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj/Localizable.strings
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj/Parameters.gorm/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj/Parameters.gorm/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj/Settings.gorm/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj/Settings.gorm/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj/Localizable.strings
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj/Parameters.gorm/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj/Parameters.gorm/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj/Settings.gorm/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj/Settings.gorm/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Localizable.strings
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Parameters.gorm/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Parameters.gorm/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Parameters.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Parameters.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Settings.gorm/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Settings.gorm/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Settings.gorm/data.classes
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Settings.gorm/objects.gorm
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/iconMkIsoFs.tiff
+share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/stamp.make
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Settings.gorm/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Parameters.gorm/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj/Settings.gorm/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj/Parameters.gorm/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/French.lproj
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj/Settings.gorm/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj/Parameters.gorm/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/English.lproj
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/German.lproj/Settings.gorm/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/German.lproj/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/German.lproj
+@dirrm share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/French.lproj/Settings.gorm/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/French.lproj/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/French.lproj
+@dirrm share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/English.lproj/Settings.gorm/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/English.lproj/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources/English.lproj
+@dirrm share/GNUstep/Local/Library/Bundles/Cdrdao.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/Cdrdao.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj/Settings.gorm/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj/Parameters.gorm/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/German.lproj
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj/Settings.gorm/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj/Parameters.gorm/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/French.lproj
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj/Settings.gorm/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj/Parameters.gorm/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources/English.lproj
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/CDrecord.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj/Settings.gorm/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj/Parameters.gorm/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/German.lproj
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj/Settings.gorm/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj/Parameters.gorm/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/French.lproj
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Settings.gorm/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Settings.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Parameters.gorm/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Parameters.gorm
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/CDparanoia.bundle
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Bundles
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/TrackInspector.gorm/TrackInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/TrackInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/ToolPanel.gorm/ToolPanel.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/ToolPanel.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/ProjectWindow.gorm/ProjectWindow.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/ProjectWindow.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/PreferencesWindow.gorm/PreferencesWindow.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/PreferencesWindow.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/MediaInspector.gorm/MediaInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/MediaInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/GeneralPrefs.gorm/GeneralPrefs.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/GeneralPrefs.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/GeneralParams.gorm/GeneralParams.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/GeneralParams.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/DriversPrefs.gorm/DriversPrefs.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/DriversPrefs.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BurnProgress.gorm/BurnProgress.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BurnProgress.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BlankPanel.gorm/BlankPanel.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/BlankPanel.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/AudioCDInspector.gorm/AudioCDInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj/AudioCDInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/German.lproj
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/TrackInspector.gorm/TrackInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/TrackInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/ToolPanel.gorm/ToolPanel.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/ToolPanel.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/ProjectWindow.gorm/ProjectWindow.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/ProjectWindow.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/PreferencesWindow.gorm/PreferencesWindow.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/PreferencesWindow.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/MediaInspector.gorm/MediaInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/MediaInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/GeneralPrefs.gorm/GeneralPrefs.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/GeneralPrefs.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/GeneralParams.gorm/GeneralParams.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/GeneralParams.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/DriversPrefs.gorm/DriversPrefs.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/DriversPrefs.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BurnProgress.gorm/BurnProgress.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BurnProgress.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BlankPanel.gorm/BlankPanel.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/BlankPanel.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/AudioCDInspector.gorm/AudioCDInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj/AudioCDInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/French.lproj
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/TrackInspector.gorm/TrackInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/TrackInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/ToolPanel.gorm/ToolPanel.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/ToolPanel.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/ProjectWindow.gorm/ProjectWindow.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/ProjectWindow.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/PreferencesWindow.gorm/PreferencesWindow.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/PreferencesWindow.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/MediaInspector.gorm/MediaInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/MediaInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/GeneralPrefs.gorm/GeneralPrefs.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/GeneralPrefs.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/GeneralParams.gorm/GeneralParams.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/GeneralParams.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/DriversPrefs.gorm/DriversPrefs.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/DriversPrefs.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BurnProgress.gorm/BurnProgress.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BurnProgress.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BlankPanel.gorm/BlankPanel.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/BlankPanel.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/AudioCDInspector.gorm/AudioCDInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj/AudioCDInspector.gorm
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/English.lproj
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help
+@dirrm share/GNUstep/Local/Applications/Burn.app/Resources
+@dirrm share/GNUstep/Local/Applications/Burn.app
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Applications
