@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/10 08:56:16 markd Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/16 01:32:23 jlam Exp $
 
 PKGNAME=		realplayer-8.0.1
 PKGREVISION=		2
@@ -49,6 +49,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc64 NetBSD-*-sparc NetBSD-*-powerp
 CONFLICTS=		realplayer-codecs<8nb2
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+PKGSRC_USE_TOOLS+=	tar
 WRKSRC=			${WRKDIR}/RealPlayer8
 CRYPTO=			# defined
 INTERACTIVE_STAGE=	fetch extract

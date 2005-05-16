@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:10 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/16 01:32:22 jlam Exp $
 
 DISTNAME=		gcc-3.3.2003.05.11
 PKGNAME=		avr-gcc-3.3.2003.05.11
@@ -24,6 +24,7 @@ GNU_CONFIGURE=		yes
 USE_PERL5=		build
 USE_BZIP2=		yes
 USE_GNU_TOOLS+=		lex make yacc
+PKGSRC_USE_TOOLS+=	tar
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS=		--target=avr --prefix=${PREFIX}
