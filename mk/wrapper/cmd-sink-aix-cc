@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-cc,v 1.1 2005/02/19 04:19:59 grant Exp $
+# $NetBSD: cmd-sink-aix-cc,v 1.2 2005/05/16 17:54:51 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -60,7 +60,7 @@ while ! queue_is_empty cmdbuf; do
 		"")	blibpath="$dir" ;;
 		*)	blibpath="$blibpath:$dir" ;;
 		esac
-		$debug_log "    (cmd-sink-aix-cc) drop: $dir [adding to blibpath]"
+		$debug_log $wrapperlog "    (cmd-sink-aix-cc) drop: $dir [adding to blibpath]"
 		dynamic=yes
 		;;
 	*)
@@ -72,16 +72,16 @@ done
 # AIX ld(1) uses -blibpath to set the runtime library search path.
 if $test -n "$blibpath"; then
 	arg="-Wl,-blibpath:/lib:/usr/lib:$blibpath"
-	$debug_log "    (cmd-sink-aix-cc) pop: $arg"
+	$debug_log $wrapperlog "    (cmd-sink-aix-cc) pop: $arg"
 	. $buildcmd
 fi
 
 # If we are dynamically linking, make sure the runtime linker is used.
 if $test -n "$dynamic"; then
 	arg=-Wl,-brtl
-	$debug_log "    (cmd-sink-aix-cc) pop: $arg"
+	$debug_log $wrapperlog "    (cmd-sink-aix-cc) pop: $arg"
 	. $buildcmd
 	arg=-Wl,-bdynamic
-	$debug_log "    (cmd-sink-aix-cc) pop: $arg"
+	$debug_log $wrapperlog "    (cmd-sink-aix-cc) pop: $arg"
 	. $buildcmd
 fi
