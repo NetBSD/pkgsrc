@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.1.1.1 2005/02/06 12:32:06 jdolecek Exp $
+# $NetBSD: pgsql.sh,v 1.2 2005/05/16 01:02:20 cjs Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -42,9 +42,9 @@ elif [ -f /etc/rc.conf ]; then
 fi
 
 pidfile="${pgsql_home}/data/postmaster.pid"
-common_args="-D ${pgsql_home}/data"
+common_args="-D ${pgsql_home}/data -m fast"
 start_command_args="-w -s -l ${pgsql_home}/errlog"
-stop_command_args="-s -m fast"
+stop_command_args="-s"
 
 initdb_cmd="pgsql_initdb"
 start_precmd="pgsql_precmd"
