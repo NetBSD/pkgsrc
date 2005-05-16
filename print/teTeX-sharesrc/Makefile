@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/16 03:04:45 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/05/16 12:35:06 tron Exp $
 
 DISTNAME=	tetex-texmfsrc-2.0.2
 PKGNAME=	teTeX-sharesrc-2.0.2
@@ -19,6 +19,8 @@ EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
+
+.include "../../mk/bsd.prefs.mk"
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
