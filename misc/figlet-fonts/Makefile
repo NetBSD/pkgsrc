@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/15 21:49:39 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/16 01:15:32 jlam Exp $
 #
 
 DISTNAME=	figlet-fonts-20021023
@@ -16,7 +16,7 @@ DIST_SUBDIR=	${DISTNAME}
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
 
-PKGSRC_USE_TOOLS+=	gzcat
+PKGSRC_USE_TOOLS+=	gtar gzcat
 
 post-extract:
 	cd ${WRKDIR}/international && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/10/01 10:37:33 grant Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/16 01:15:31 jlam Exp $
 
 DISTNAME=		linuxppc_lib-2000.4.6
 CATEGORIES=		emulators
@@ -30,6 +30,8 @@ SHLIB_HANDLING=		NO
 CHECK_SHLIBS=		NO
 DIST_SUBDIR=		linuxppc_lib
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+
+PKGSRC_USE_TOOLS+=	gtar
 
 EMUL_LINUX=		emul/linux
 LINUX_LDCONFIG=		${PREFIX}/${EMUL_LINUX}/sbin/ldconfig
