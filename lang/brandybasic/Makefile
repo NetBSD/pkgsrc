@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/12/03 15:15:00 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/16 01:15:32 jlam Exp $
 #
 
 DISTNAME=	b116
@@ -15,6 +15,8 @@ WRKSRC=		${WRKDIR}/brandy-1.0.16
 DOCDIR=		${PREFIX}/share/doc/brandy
 EXAMPLEDIR=	${PREFIX}/share/examples/brandy
 BUILD_TARGET=	nodebug
+
+PKGSRC_USE_TOOLS+=	gtar
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}

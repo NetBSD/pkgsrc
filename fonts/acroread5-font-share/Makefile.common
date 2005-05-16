@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2002/09/16 05:58:14 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/05/16 01:15:31 jlam Exp $
 #
 
 PKGNAME=	acroread5-${DISTNAME}-5.0
@@ -20,6 +20,8 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+
+PKGSRC_USE_TOOLS+=	gtar
 
 do-install:
 	@${GTAR} xf ${TAR_FILE} -C ${PREFIX}/Acrobat5/Resource/Font

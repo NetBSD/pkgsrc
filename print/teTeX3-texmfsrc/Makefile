@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/27 21:23:09 hira Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/16 01:15:33 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -21,6 +21,10 @@ EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
+
+.if !defined(EXTRACT_USING_PAX)
+PKGSRC_USE_TOOLS+=	gtar
+.endif
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf

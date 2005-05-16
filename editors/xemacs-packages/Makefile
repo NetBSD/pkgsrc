@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/03/04 14:54:56 jwise Exp $
+# $NetBSD: Makefile,v 1.46 2005/05/16 01:15:31 jlam Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.15
@@ -136,6 +136,8 @@ WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGBASE}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
+
+PKGSRC_USE_TOOLS+=	gtar
 
 .include "../../editors/xemacs/Makefile.pkg"
 
