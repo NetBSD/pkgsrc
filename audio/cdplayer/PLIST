@@ -1,0 +1,140 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/16 09:55:04 rh Exp $
+share/GNUstep/Local/Applications/CDPlayer.app/CDPlayer
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/CDPlayer.desktop
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/CDPlayer.help/Config.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/CDPlayer.help/Configuration.xlp
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/CDPlayer.help/HowItWorks.xlp
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/CDPlayer.help/Logo.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/CDPlayer.help/Main.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/CDPlayer.help/MainEmpty.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/CDPlayer.help/ToDo.xlp
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/CDPlayer.help/TrackList.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/CDPlayer.help/main.xlp
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/FreeDB.gorm/FreeDB.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/FreeDB.gorm/FreeDB.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/FreeDB.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/FreeDB.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/General.gorm/General.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/General.gorm/General.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/General.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/General.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/Localizable.strings
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/TrackList.gorm/TrackList.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/TrackList.gorm/TrackList.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/TrackList.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/TrackList.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/FreeDB.gorm/FreeDB.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/FreeDB.gorm/FreeDB.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/FreeDB.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/FreeDB.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/General.gorm/General.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/General.gorm/General.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/General.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/General.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/Localizable.strings
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/TrackList.gorm/TrackList.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/TrackList.gorm/TrackList.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/TrackList.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/TrackList.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/FreeDB.gorm/FreeDB.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/FreeDB.gorm/FreeDB.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/FreeDB.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/FreeDB.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/General.gorm/General.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/General.gorm/General.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/General.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/General.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/Localizable.strings
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/TrackList.gorm/TrackList.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/TrackList.gorm/TrackList.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/TrackList.gorm/data.classes
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/TrackList.gorm/objects.gorm
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/Info-gnustep.plist
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/app.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/ffwd.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/iconDnDAudio.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/iconDnDAudioMulti.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/info.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/led0.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/led1.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/led10.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/led11.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/led12.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/led2.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/led3.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/led4.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/led5.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/led6.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/led7.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/led8.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/led9.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/next.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/pause.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/play.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/prev.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/rwd.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/Resources/stop.tiff
+share/GNUstep/Local/Applications/CDPlayer.app/library_paths.openapp
+share/GNUstep/Local/Applications/CDPlayer.app/stamp.make
+share/GNUstep/Local/Library/Bundles/AudioCD.bundle/AudioCD
+share/GNUstep/Local/Library/Bundles/AudioCD.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/AudioCD.bundle/stamp.make
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/AudioCD
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/AudioCD.tiff
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/English.lproj/AudioCD.gorm/AudioCD.gorm/data.classes
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/English.lproj/AudioCD.gorm/AudioCD.gorm/objects.gorm
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/English.lproj/AudioCD.gorm/data.classes
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/English.lproj/AudioCD.gorm/objects.gorm
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/English.lproj/Localizable.strings
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/French.lproj/AudioCD.gorm/AudioCD.gorm/data.classes
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/French.lproj/AudioCD.gorm/AudioCD.gorm/objects.gorm
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/French.lproj/AudioCD.gorm/data.classes
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/French.lproj/AudioCD.gorm/objects.gorm
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/French.lproj/Localizable.strings
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/German.lproj/AudioCD.gorm/AudioCD.gorm/data.classes
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/German.lproj/AudioCD.gorm/AudioCD.gorm/objects.gorm
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/German.lproj/AudioCD.gorm/data.classes
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/German.lproj/AudioCD.gorm/objects.gorm
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/German.lproj/Localizable.strings
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Preferences/AudioCD.prefs/stamp.make
+@dirrm share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/German.lproj/AudioCD.gorm/AudioCD.gorm
+@dirrm share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/German.lproj/AudioCD.gorm
+@dirrm share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/German.lproj
+@dirrm share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/French.lproj/AudioCD.gorm/AudioCD.gorm
+@dirrm share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/French.lproj/AudioCD.gorm
+@dirrm share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/French.lproj
+@dirrm share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/English.lproj/AudioCD.gorm/AudioCD.gorm
+@dirrm share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/English.lproj/AudioCD.gorm
+@dirrm share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources/English.lproj
+@dirrm share/GNUstep/Local/Library/Preferences/AudioCD.prefs/Resources
+@dirrm share/GNUstep/Local/Library/Preferences/AudioCD.prefs
+@dirrm share/GNUstep/Local/Library/Preferences
+@dirrm share/GNUstep/Local/Library/Bundles/AudioCD.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/AudioCD.bundle
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Bundles
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/TrackList.gorm/TrackList.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/TrackList.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/General.gorm/General.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/General.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/FreeDB.gorm/FreeDB.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj/FreeDB.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/German.lproj
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/TrackList.gorm/TrackList.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/TrackList.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/General.gorm/General.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/General.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/FreeDB.gorm/FreeDB.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj/FreeDB.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/French.lproj
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/TrackList.gorm/TrackList.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/TrackList.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/General.gorm/General.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/General.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/FreeDB.gorm/FreeDB.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj/FreeDB.gorm
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/English.lproj
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources/CDPlayer.help
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app/Resources
+@dirrm share/GNUstep/Local/Applications/CDPlayer.app
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Applications
