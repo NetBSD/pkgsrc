@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/14 23:07:55 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/05/16 16:32:28 jlam Exp $
 
 DISTNAME=	krb5-1.4
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
@@ -21,11 +21,15 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
 
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 .if !exists(/usr/bin/yacc)
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 YACC=			${LOCALBASE}/bin/bison -y
 .endif
+.endif
 
+PKGSRC_USE_TOOLS+=	gzcat
+USE_TOOLS+=		yacc
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
