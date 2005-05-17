@@ -1,0 +1,312 @@
+#!/bin/sh
+#
+# $NetBSD: binpkg-cache,v 1.1 2005/05/17 21:46:59 dmcmahill Exp $
+#
+# Script for generating a cache file with information about
+# all binary packages contained in a directory.
+#
+# Copyright (c) 2005 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Dan McMahill.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+#        This product includes software developed by the NetBSD
+#        Foundation, Inc. and its contributors.
+# 4. Neither the name of The NetBSD Foundation nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+
+
+TMPDIR=${TMPDIR:-/tmp}
+PACKAGES=${PACKAGES:-/usr/pkgsrc/packages/}
+AWK=${AWK:-awk}
+CMP=${CMP:-cmp}
+GREP=${GREP:-grep}
+PKG_INFO=${PKG_INFO:-pkg_info}
+PKG_SUFX=${PKG_SUFX:-.tgz}
+SED=${SED:-sed}
+SORT=${SORT:-sort}
+STAT=${STAT:-stat}
+
+cachefile=.pkgcache
+cacheversion=20050428
+
+prompt="----> "
+tab="      "
+
+tmpd=${TMPDIR}/pkg-cache.$$
+mkdir -m 0700 ${tmpd}
+if test $? -ne 0 ; then
+	echo "ERROR:  Could not create temporary directory ${tmpd}"
+	echo "Either you do not have write permission to ${tmpd} or"
+	echo "${tmpd} already exists"
+	exit 1
+fi
+
+prog=$0
+
+usage(){
+	echo "$prog - Generates cache files for each directory containing binary"
+	echo "        packages.  This cache file can then be used by the README.html"
+	echo "        generation code to avoid having to call pkg_info(1) over and over"
+	echo "        on the same binary package."
+	echo " "
+	echo "Usage:      $prog [-d|--debug] [-v|--verbose] [-p|--packages <dir>]"
+	echo " "
+	echo "            $prog -h|--help"
+	echo " "
+	echo "            $prog -V|--version"
+	echo " "
+	echo "The options supported by $prog are: "
+	echo " "
+	echo "  -d|--debug            Enables debugging output"
+	echo " "
+	echo "  -f|--database <file>  Writes the database into file specified by <file>"
+	echo " "
+	echo "  -h|--help             Displays this help message"
+	echo " "
+	echo "  -p|--packages <dir>   Specifies the top level directory to be searched"
+	echo "                        for binary packages."
+	echo " "
+	echo "  -v|--version          Displays the version of this script and exits."
+	echo " "
+	echo "Example:    $prog -v --packages /usr/pkgsrc/packages"
+	echo " "
+}
+
+clean_and_exit0(){
+	rm -fr ${tmpd}
+	exit 0
+}
+
+clean_and_exit1(){
+	rm -fr ${tmpd}
+	exit 1
+}
+
+all_cache_files=""
+
+process_binpkg_dir(){
+	all_cache_files="${all_cache_files} ${d}/${cachefile}"
+
+	need_update=no
+	if test -f ${d}/${cachefile} ; then
+		stale_entries=`find ${d} -type f -name \*${PKG_SUFX} -newer ${d}/${cachefile} -print`
+
+		# FIX_ME
+		#
+		# We also should find cache entries for files which no longer exist
+		# and nuke them.  Right now we simply declare the entire cache out
+		# of date.  Once we implement incremental updates to the cache,
+		# we need to remove the entries but not mark the entire cache as
+		# bad.
+		if test "X${DEBUG}" = "Xyes" ; then
+			echo "      Checking for cache entries with no corresponding pkg."
+		fi
+		# get the list of what pkgs belong in the cache
+		rm -f ${tmpd}/pkg_list ${tmpd}/cache_pkg_list
+		ls ${d}/*${PKG_SUFX} | ${SED} "s;^${PACKAGES}/*;;g" | ${SORT} > ${tmpd}/pkg_list
+
+		# and get the list of what is in the cache
+		${AWK} '/pkgcache_begin/ {gsub(/pkgcache_begin[ \t]*/, ""); print}' \
+			${d}/${cachefile} | ${SORT} > ${tmpd}/cache_pkg_list
+
+		if ${CMP} -s ${tmpd}/pkg_list ${tmpd}/cache_pkg_list ; then
+			if test "X${DEBUG}" = "Xyes" ; then
+				echo "      No extra cache entries in ${d}/${cachefile}"
+			fi
+		else
+			echo "      Entries found in ${d}/${cachefile} but no packages found"
+			need_update=yes
+		fi
+	else
+		stale_entries=""
+	fi
+
+	if test "X${force}" = "Xyes" -o "X${need_update}" = "Xyes" ; then
+		need_update=yes
+		echo "${tab}Forcing rebuild of cache ${d}/${cachefile}."
+	elif test ! -f ${d}/${cachefile} ; then
+		need_update=yes
+		echo "${tab}Missing cache file.  ${d}/${cachefile} will be generated."
+	elif test -n "${stale_entries}" ; then
+		need_update=yes
+		echo "${tab}Stale cache file.  ${d}/${cachefile} will be regenerated."
+	else
+		${GREP} "pkgcache_version ${cacheversion}" ${d}/${cachefile} >/dev/null 2>&1
+		if test $? -ne 0 ; then
+			need_update=yes
+			echo "${tab}Old version cache file.  ${d}/${cachefile} will be regenerated."
+		else
+			echo "${tab}Cache file ${d}/${cachefile} is up to date."
+		fi
+	fi
+
+	# FIX_ME
+	# We should use stale_entries in a way where we only update the 
+	# cache file entries corresponding to these if we're rebuilding
+	# due to stale entries.  That should save a good bit of time.
+	# 
+	if test "X${need_update}" = "Xyes" ; then
+		echo "pkgcache_version ${cacheversion}" > ${tmpd}/${cachefile}
+		for f in ${d}/*${PKG_SUFX} ; do
+			fn=`echo $f | ${SED} "s;^${PACKAGES}/*;;g"`
+			if test "X${DEBUG}" = "Xyes" ; then
+				echo "     Adding ${fn} (${f}) to the cache"
+			fi
+			echo " " >> ${tmpd}/${cachefile}
+			# stat(1) needs to be added to the bootstrap kit
+			# first if we want to use it here
+			#eval $(${STAT} -s ${f} 2>/dev/null)
+			echo "pkgcache_begin ${fn}" >> ${tmpd}/${cachefile}
+			#echo "pkgcache_mtime=${st_mtime}" >> ${tmpd}/${cachefile}
+			if test "X${DEBUG}" = "Xyes" ; then
+				echo "${PKG_INFO} -q -B ${f}"
+			fi
+			${PKG_INFO} -q -B ${f} >> ${tmpd}/${cachefile}
+			echo "pkgcache_end ${fn}" >> ${tmpd}/${cachefile}
+		done
+		mv ${tmpd}/${cachefile} ${d}/${cachefile}
+	fi
+
+
+}
+
+process_cache_files(){
+	echo "${prompt}Checking master cache file ${PACKAGES}/${cachefile}"
+	echo "pkgcache_version ${cacheversion}" > ${tmpd}/${cachefile}
+	if test -n "${all_cache_files}" ; then
+		for c in ${all_cache_files} ; do
+			echo "pkgcache_cachefile ${c}" >> ${tmpd}/${cachefile}
+		done
+	fi
+ 	if test ! -f ${PACKAGES}/${cachefile} ; then
+		echo "${tab}Creating master cache file ${PACKAGES}/${cachefile}"
+		cp ${tmpd}/${cachefile} ${PACKAGES}/${cachefile}
+	fi
+	if ${CMP} -s ${tmpd}/${cachefile} ${PACKAGES}/${cachefile} ; then
+		echo "${tab}Master cache file ${PACKAGES}/${cachefile} is up to date"
+	else
+		echo "${tab}Updating master cache file ${PACKAGES}/${cachefile}"
+		mv ${tmpd}/${cachefile} ${PACKAGES}/${cachefile}
+	fi
+}
+
+######################################################################
+#
+#  Handle command line options
+#
+######################################################################
+
+DEBUG=no
+verbose=no
+force=no
+
+while
+	test -n "$1"
+do
+	case "$1" in
+
+		# Turn on debugging
+		-d|--debug)
+			DEBUG=yes
+			verbose=yes
+			shift
+			;;
+
+		# Force a rebuilde of the cache
+		-F|--force)
+			force=yes
+			shift
+			;;
+		# Help
+		-h|--help)
+			usage
+			exit 0
+			;;
+
+		# Use the specified packages directory
+		-p|--packages)
+			PACKAGES=$2
+			shift 2
+			;;
+
+		# Version
+		-V|--version)
+			${AWK} '/^#[ \t]*\$NetBSD/ {gsub(/,v/,"",$3);printf("%s:  Version %s, %s\n",$3,$4,$5); exit 0;}' $prog
+			exit 0
+	    		;;
+
+		# Turn on verbose output, but not as noisy as DEBUG
+		-v|--verbose)
+			verbose=yes
+			shift
+			;;
+
+		-*) echo "$prog:  ERROR:  $1 is not a valid option"
+			usage
+			clean_and_exit1
+			;;
+
+		*) 
+			break
+			;;
+
+	esac
+done
+
+# put a trailing / after ${PACKAGES} in case ${PACKAGES} is 
+# a link.
+for d in `find ${PACKAGES}/ -type d -print` ; do
+	if test "X${DEBUG}" = "Xyes" ; then
+		echo "${prompt}Processing directory ${d}"
+	fi
+	is_pkg_dir=no
+	for f in ${d}/*${PKG_SUFX} ; do
+		if test -f "${f}" -a ! -h "${f}" ; then
+			${PKG_INFO} ${f} >/dev/null 2>&1
+			if test $? -eq 0 ; then
+				is_pkg_dir=yes
+				break
+			fi
+		fi
+	done
+	if test "X${is_pkg_dir}" = "Xyes" ; then
+		echo "${prompt}Checking cache in ${d}"
+		process_binpkg_dir
+	else
+		if test "X${DEBUG}" = "Xyes" ; then
+			echo "${prompt}no binary packages in ${d}"
+		fi
+	fi
+		
+done
+
+process_cache_files
+
+clean_and_exit0
+
