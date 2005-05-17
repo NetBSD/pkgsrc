@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/05/16 12:35:06 tron Exp $
+# $NetBSD: Makefile,v 1.27 2005/05/17 22:00:13 jlam Exp $
 
 DISTNAME=	tetex-texmfsrc-2.0.2
 PKGNAME=	teTeX-sharesrc-2.0.2
@@ -24,10 +24,7 @@ NO_MTREE=	yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
-.if !empty(EXTRACT_USING:Mgtar)
-	cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${GTAR} -xpf -
-.else
-	cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${PAX} -O -r
-.endif
+	extract_file=${_DISTDIR:Q}/${DISTFILES:Q};			\
+	cd ${PREFIX}/share/texmf; ${EXTRACT_CMD${EXTRACT_SUFX}}
 
 .include "../../mk/bsd.pkg.mk"
