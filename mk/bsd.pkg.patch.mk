@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.4 2005/05/14 22:32:59 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.5 2005/05/17 04:45:53 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -91,13 +91,15 @@ BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
 .endif
 
 .if defined(PATCH_DEBUG) || defined(PKG_VERBOSE)
-PATCH_DEBUG_TMP=	yes
+_PATCH_DEBUG=		yes
+ECHO_PATCH_MSG?=	${ECHO_MSG}
 .else
-PATCH_DEBUG_TMP=	no
+_PATCH_DEBUG=		no
+ECHO_PATCH_MSG?=	${TRUE}
 .endif
 
 PATCH_STRIP?=		-p0
-.if ${PATCH_DEBUG_TMP} == "yes"
+.if !empty(_PATCH_DEBUG:M[yY][eE][sS])
 PATCH_ARGS?=		-d ${WRKSRC} -E ${PATCH_STRIP}
 .else
 PATCH_ARGS?=		-d ${WRKSRC} --forward --quiet -E ${PATCH_STRIP}
@@ -126,7 +128,7 @@ PATCH_DIST_STRIP?=		-p0
 PATCH_DIST_STRIP.${i:S/=/--/}?=	${PATCH_DIST_STRIP}
 .  if defined(PATCH_DIST_ARGS)
 PATCH_DIST_ARGS.${i:S/=/--/}?=	${PATCH_DIST_ARGS}
-.  elif ${PATCH_DEBUG_TMP} == "yes"
+.  elif !empty(_PATCH_DEBUG:M[yY][eE][sS])
 PATCH_DIST_ARGS.${i:S/=/--/}?=	-d ${WRKSRC} -E ${PATCH_DIST_STRIP.${i:S/=/--/}}
 .  else
 PATCH_DIST_ARGS.${i:S/=/--/}?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP.${i:S/=/--/}}
@@ -153,11 +155,21 @@ PATCH_DIST_CAT?=	{ case $$patchfile in				\
 PATCH_DIST_CAT.${i:S/=/--/}?=	{ patchfile=${i}; ${PATCH_DIST_CAT}; }
 .endfor
 
-.if empty(PKGSRC_SHOW_PATCH_ERRORMSG:M[yY][eE][sS])
-PKGSRC_PATCH_FAIL=	exit 1
-.else
-PKGSRC_PATCH_FAIL=							\
-if [ -n "${PKG_OPTIONS}" ] || [ -n "${_LOCALPATCHFILES}" ]; then	\
+_PKGSRC_PATCH_TARGETS=	uptodate-digest
+.if defined(PATCHFILES)
+_PKGSRC_PATCH_TARGETS+=	apply-distribution-patches
+.endif
+_PKGSRC_PATCH_TARGETS+=	apply-pkgsrc-patches
+
+.PHONY: do-patch
+.if !target(do-patch)
+.ORDER: ${_PKGSRC_PATCH_TARGETS}
+do-patch: ${_PKGSRC_PATCH_TARGETS}
+.endif
+
+_PKGSRC_PATCH_FAIL=							\
+if ${TEST} -n ${PKG_OPTIONS:Q}"" ||					\
+   ${TEST} -n ${LOCALPATCHES:Q}"" -a -d ${LOCALPATCHES:Q}/${PKGPATH:Q}; then \
 	${ECHO} "=========================================================================="; \
 	${ECHO};							\
 	${ECHO} "Some of the selected build options and/or local patches may be incompatible."; \
@@ -165,109 +177,80 @@ if [ -n "${PKG_OPTIONS}" ] || [ -n "${_LOCALPATCHFILES}" ]; then	\
 	${ECHO};							\
 	${ECHO} "=========================================================================="; \
 fi; exit 1
-.endif
 
-# Patch
-
-.if defined(LOCALPATCHES)
-_DFLT_LOCALPATCHFILES=	${LOCALPATCHES}/${PKGPATH}/*
-_LOCALPATCHFILES=	${_DFLT_LOCALPATCHFILES}
-.endif
-
-.PHONY: do-patch
-.if !target(do-patch)
-do-patch: uptodate-digest
-.  if defined(PATCHFILES)
+apply-distribution-patches:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patches for ${PKGNAME}"
-.    for i in ${PATCHFILES}
+.for i in ${PATCHFILES}
+	@${ECHO_PATCH_MSG} "${_PKGSRC_IN}> Applying distribution patch ${i}"
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
-	if [ ${PATCH_DEBUG_TMP} = yes ]; then				\
-		${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patch ${i}"; \
-	fi;								\
 	${PATCH_DIST_CAT.${i:S/=/--/}} |				\
 	${PATCH} ${PATCH_DIST_ARGS.${i:S/=/--/}}			\
-		|| { ${ECHO} "Patch ${i} failed"; ${PKGSRC_PATCH_FAIL}; }
-.    endfor
-.  endif
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	patchlist="";							\
-	if [ -d ${PATCHDIR} ]; then					\
-		if [ "`${ECHO} ${PATCHDIR}/patch-*`" = "${PATCHDIR}/patch-*" ]; then \
-			${ECHO_MSG} "${_PKGSRC_IN}> Ignoring empty patch directory"; \
-			if [ -d ${PATCHDIR}/CVS ]; then			\
-				${ECHO_MSG} "${_PKGSRC_IN}> Perhaps you forgot the -P flag to 'cvs checkout' or 'cvs update'?"; \
-			fi;						\
-		else							\
-			patchlist=`${ECHO} ${PATCHDIR}/patch-*`;	\
-		fi;							\
-	fi;								\
-	if [ "X${_LOCALPATCHFILES}" = "X${_DFLT_LOCALPATCHFILES}" ]; then \
-		localpatchfiles="`${ECHO} ${_LOCALPATCHFILES}`";	\
-		if [ "$${localpatchfiles}" != "${_LOCALPATCHFILES}" ]; then \
-			patchlist="$${patchlist} $${localpatchfiles}";	\
-		fi;							\
-	else								\
-		patchlist=`${ECHO} $${patchlist} ${_LOCALPATCHFILES}`;	\
-	fi;								\
-	if [ -n "$${patchlist}" ]; then					\
-		${ECHO_MSG} "${_PKGSRC_IN}> Applying pkgsrc patches for ${PKGNAME}" ; \
-		fail="";						\
-		for i in $${patchlist}; do				\
-			if [ ! -f "$$i" ]; then				\
-				${ECHO_MSG} "${_PKGSRC_IN}> $$i is not a valid patch file - skipping"; \
-				continue; 				\
-			fi;						\
-			case $$i in					\
-			*.orig|*.rej|*~)				\
-				${ECHO_MSG} "${_PKGSRC_IN}> Ignoring patchfile $$i"; \
-				continue;				\
-				;;					\
-			${PATCHDIR}/patch-local-*) 			\
-				;;					\
-			${PATCHDIR}/patch-*)	 			\
-				if [ -f ${DISTINFO_FILE} ]; then	\
-					filename=`expr $$i : '.*/\(.*\)'`; \
-					algsum=`${AWK} 'NF == 4 && $$2 == "('$$filename')" && $$3 == "=" {print $$1 " " $$4}' ${DISTINFO_FILE} || ${TRUE}`; \
-					if [ "X$$algsum" != "X" ]; then	\
-						alg=`${ECHO} $$algsum | ${AWK} '{ print $$1 }'`; \
-						recorded=`${ECHO} $$algsum | ${AWK} '{ print $$2 }'`; \
-						calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${DIGEST} $$alg`; \
-						if [ ${PATCH_DEBUG_TMP} = yes ]; then \
-							${ECHO_MSG} "=> Verifying $$filename (using digest algorithm $$alg)"; \
-						fi;			\
-					fi;				\
-					if [ "X$$algsum" = "X" -o "X$$recorded" = "X" ]; then \
-						${ECHO_MSG} "**************************************"; \
-						${ECHO_MSG} "Ignoring unknown patch file: $$i"; \
-						${ECHO_MSG} "**************************************"; \
-						continue;		\
-					fi;				\
-					if [ "X$$calcsum" != "X$$recorded" ]; then \
-						${ECHO_MSG} "**************************************"; \
-						${ECHO_MSG} "Patch file $$i has been modified"; \
-						${ECHO_MSG} "**************************************"; \
-						fail="$$fail $$filename"; \
-						continue;		\
-					fi;				\
-				else					\
-					${ECHO_MSG} "**************************************"; \
-					${ECHO_MSG} "Ignoring unknown patch file: $$i"; \
-					${ECHO_MSG} "**************************************"; \
-					continue;			\
-				fi;					\
-				;;					\
-			esac;						\
-			if [ ${PATCH_DEBUG_TMP} = yes ]; then		\
-				${ECHO_MSG} "${_PKGSRC_IN}> Applying pkgsrc patch $$i" ; \
-			fi;						\
-			fuzz="";					\
-			${PATCH} -v > /dev/null 2>&1 && fuzz="${PATCH_FUZZ_FACTOR}"; \
-			${PATCH} $$fuzz ${PATCH_ARGS} < $$i ||		\
-				{ ${ECHO} Patch $$i failed ; ${PKGSRC_PATCH_FAIL}; }; \
-		done;							\
-		if [ "X$$fail" != "X" ]; then				\
-			${ECHO_MSG} "Patching failed due to modified patch file(s): $$fail"; \
-			${PKGSRC_PATCH_FAIL};				\
-		fi;							\
-	fi
+		|| { ${ECHO} "Patch ${i} failed"; ${_PKGSRC_PATCH_FAIL}; }
+.endfor
+
+_PKGSRC_PATCHES=	# empty
+.if defined(PATCHDIR) && exists(${PATCHDIR})
+_PKGSRC_PATCHES+=	${PATCHDIR}/patch-*
 .endif
+.if defined(LOCALPATCHES) && exists(${LOCALPATCHES}/${PKGPATH})
+_PKGSRC_PATCHES+=	${LOCALPATCHES}/${PKGPATH}/patch-*
+.endif
+
+apply-pkgsrc-patches:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	set -- `${ECHO} ${_PKGSRC_PATCHES:Q}`;				\
+	fail=;								\
+	while ${TEST} $$# -gt 0; do					\
+		i="$$1"; shift;						\
+		${TEST} -f "$$i" || continue;				\
+		case "$$i" in						\
+		*.orig|*.rej|*~)					\
+			${ECHO_MSG} "${_PKGSRC_IN}> Ignoring patchfile $$i"; \
+			continue;					\
+			;;						\
+		${PATCHDIR}/patch-local-*) 				\
+			;;						\
+		${PATCHDIR}/patch-*) 					\
+			if ${TEST} ! -f ${DISTINFO_FILE:Q}; then	\
+				${ECHO_MSG} "**************************************"; \
+				${ECHO_MSG} "Ignoring unknown patch file: $$i";	\
+				${ECHO_MSG} "**************************************"; \
+				continue;				\
+			fi;						\
+			filename=`${BASENAME} $$i`;			\
+			algsum=`${AWK} '(NF == 4) && ($$2 == "('$$filename')") && ($$3 == "=") {print $$1 " " $$4}' ${DISTINFO_FILE} || ${TRUE}`; \
+			if ${TEST} -z "$$algsum"; then			\
+				${ECHO_MSG} "**************************************"; \
+				${ECHO_MSG} "Ignoring unknown patch file: $$i"; \
+				${ECHO_MSG} "**************************************"; \
+				continue;				\
+			fi;						\
+			${ECHO} "$$algsum" |				\
+			{ read alg recorded;				\
+			  calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${DIGEST} $$alg`; \
+			  ${ECHO_PATCH_MSG} "=> Verifying $$filename (using digest algorithm $$alg)"; \
+			  if ${TEST} -z "$$recorded"; then		\
+				${ECHO_MSG} "**************************************"; \
+				${ECHO_MSG} "Ignoring unknown patch file: $$i"; \
+				${ECHO_MSG} "**************************************"; \
+				continue;				\
+			  fi;						\
+			  if ${TEST} "$$calcsum" != "$$recorded"; then	\
+				${ECHO_MSG} "**************************************"; \
+				${ECHO_MSG} "Patch file $$i has been modified"; \
+				${ECHO_MSG} "**************************************"; \
+				fail="$$fail $$filename";		\
+				continue;				\
+			  fi; };					\
+			;;						\
+		esac;							\
+		${ECHO_PATCH_MSG} "${_PKGSRC_IN}> Applying pkgsrc patch $$i"; \
+		fuzz=;							\
+		${PATCH} -v >/dev/null 2>&1 && fuzz=${PATCH_FUZZ_FACTOR:Q}; \
+		${PATCH} $$fuzz ${PATCH_ARGS} < $$i ||			\
+			${ECHO_MSG} "Patch $$i failed";			\
+	done;								\
+	if ${TEST} -n "$$fail"; then					\
+		${ECHO_MSG} "Patching failed due to modified patch file(s): $$fail"; \
+		${_PKGSRC_PATCH_FAIL};					\
+	fi
