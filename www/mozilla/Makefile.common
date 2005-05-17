@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.49 2004/12/25 15:39:42 taya Exp $
+# $NetBSD: Makefile.common,v 1.49.2.1 2005/05/17 10:29:42 salo Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
-DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
+DISTNAME?=	mozilla-${MOZ_DIST_VER}-source
 PKGNAME=	${MOZILLA}-${MOZ_VER}
 MASTER_SITES?=	${MASTER_SITE_MOZILLA:=mozilla${MOZ_DIST_VER}/source/}
 CATEGORIES=	www
@@ -20,6 +20,16 @@ USE_PERL5=	build
 USE_GNU_TOOLS+=	make
 USE_X11=	yes
 GNU_CONFIGURE=	yes
+
+CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess
+CONFIG_GUESS_OVERRIDE+=	nsprpub/build/autoconf/config.guess
+CONFIG_GUESS_OVERRIDE+=	directory/c-sdk/config/autoconf/config.guess
+CONFIG_SUB_OVERRIDE=	build/autoconf/config.sub
+CONFIG_SUB_OVERRIDE+=	nsprpub/build/autoconf/config.sub
+CONFIG_SUB_OVERRIDE+=	directory/c-sdk/config/autoconf/config.sub
+CONFIG_STATUS_OVERRIDE=		build/config.status
+CONFIG_STATUS_OVERRIDE+=	nsprpub/config.status
+CONFIG_STATUS_OVERRIDE+=	directory/c-sdk/config.status
 
 PKGCONFIG_OVERRIDE+=	build/unix/mozilla-gtkmozembed.pc
 PKGCONFIG_OVERRIDE+=	build/unix/mozilla-js.pc
@@ -52,7 +62,7 @@ UNLIMIT_RESOURCES=	datasize memorysize stacksize
 .include	"../../devel/pkgconfig/buildlink3.mk"
 .include	"../../net/libIDL/buildlink3.mk"
 .include	"../../x11/gtk2/buildlink3.mk"
-CONFIGURE_ARGS+= --enable-default-toolkit=gtk2
+CONFIGURE_ARGS+= --enable-default-toolkit=gtk2 --disable-gnomevfs
 .else
 .include	"../../graphics/gdk-pixbuf/buildlink3.mk"
 .include	"../../net/ORBit/buildlink3.mk"
@@ -191,6 +201,6 @@ SUBST_FILES.pc=		build/unix/*.pc.in
 SUBST_SED.pc=		-e "s|%includedir%|${PREFIX}/include/${MOZILLA}|g" \
 			-e "s|%libdir%|${PREFIX}/lib/${MOZILLA}|g"
 SUBST_MESSAGE.pc=	"Fixing pkgconfig files."
-			
+
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
