@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/14 23:36:38 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/17 17:23:59 adrianp Exp $
 share/doc/msf
 share/msf/docs/7f8d5320.0
 share/msf/docs/BUGS
@@ -6,12 +6,11 @@ share/msf/docs/COPYING
 share/msf/docs/COPYING.Artistic
 share/msf/docs/COPYING.GNU
 share/msf/docs/COPYING.InlineEgg
-share/msf/docs/CrashCourse_IT.doc
-share/msf/docs/CrashCourse_IT.html
-share/msf/docs/CrashCourse_IT.pdf
-share/msf/docs/CrashCourse_IT.sxw
+share/msf/docs/CrashCourse_BR.pdf
 share/msf/docs/CrashCourse_BR.sxw
 share/msf/docs/CrashCourse_FR.pdf
+share/msf/docs/CrashCourse_IT.pdf
+share/msf/docs/CrashCourse_IT.sxw
 share/msf/docs/Environment.txt
 share/msf/docs/QUICKSTART.impurity
 share/msf/docs/QUICKSTART.msfcli
@@ -19,7 +18,7 @@ share/msf/docs/QUICKSTART.msfconsole
 share/msf/docs/QUICKSTART.msfweb
 share/msf/docs/SECURITY
 share/msf/docs/VERSION
-share/msf/docs/RELEASE_2.3.txt
+share/msf/docs/RELEASE_2.4.txt
 share/msf/docs/meterpreter.pdf
 share/msf/docs/userguide.pdf
 share/msf/docs/userguide.tex
@@ -70,7 +69,6 @@ share/msf/encoders/QuackQuack.pm
 share/msf/encoders/ShikataGaNai.pm
 share/msf/encoders/Sparc.pm
 share/msf/exploits/Credits.pm
-share/msf/exploits/Tester.pm
 share/msf/exploits/aim_goaway.pm
 share/msf/exploits/backupexec_ns.pm
 share/msf/exploits/icecast_header.pm
@@ -116,8 +114,38 @@ share/msf/exploits/ut2004_secure_linux.pm
 share/msf/exploits/ut2004_secure_win32.pm
 share/msf/exploits/warftpd_165_pass.pm
 share/msf/exploits/windows_ssl_pct.pm
+share/msf/exploits/3com_3cdaemon_ftp_overflow.pm
+share/msf/exploits/arkeia_agent_access.pm
+share/msf/exploits/arkeia_type77_macos.pm
+share/msf/exploits/arkeia_type77_win32.pm
+share/msf/exploits/cabrightstor_disco.pm
+share/msf/exploits/cabrightstor_disco_servicepc.pm
+share/msf/exploits/cabrightstor_uniagent.pm
+share/msf/exploits/calicclnt_getconfig.pm
+share/msf/exploits/calicserv_getconfig.pm
+share/msf/exploits/iis_source_dumper.pm
+share/msf/exploits/maxdb_webdbm_get_overflow.pm
+share/msf/exploits/minishare_get_overflow.pm
+share/msf/exploits/msasn1_ms04_007_killbill.pm
+share/msf/exploits/msmq_deleteobject_ms05_017.pm
+share/msf/exploits/netterm_netftpd_user_overflow.pm
+share/msf/exploits/oracle9i_xdb_ftp.pm
+share/msf/exploits/oracle9i_xdb_ftp_pass.pm
+share/msf/exploits/payload_handler.pm
+share/msf/exploits/samba_trans2open_solsparc.pm
+share/msf/exploits/sentinel_lm7_overflow.pm
+share/msf/exploits/solaris_kcms_readfile.pm
+share/msf/exploits/solaris_lpd_exec.pm
+share/msf/exploits/solaris_snmpxdmid.pm
+share/msf/exploits/solaris_ttyprompt.pm
+share/msf/exploits/trackercam_phparg_overflow.pm
+share/msf/exploits/wsftp_server_503_mkd.pm
 share/msf/extras/Net_SSLeay.pm-1.23.tar.gz
 share/msf/extras/Term-ReadLine-Gnu-1.14.tar.gz
+share/msf/lib/Msf/Nop/OptyNop2.pm
+share/msf/lib/Msf/Nop/OptyNop2Tables.pm
+share/msf/lib/Msf/PayloadComponent/FindLocalShell.pm
+share/msf/lib/Msf/PayloadComponent/PassiveXConnection.pm
 share/msf/lib/Msf/PayloadComponent/InlineEggPayload.pm
 share/msf/lib/Msf/PayloadComponent/CommandPayload.pm
 share/msf/lib/Msf/PayloadComponent/SolarisShellStage.pm
@@ -183,6 +211,7 @@ share/msf/lib/Pex/ELFInfo.pm
 share/msf/lib/Pex/Alpha.pm
 share/msf/lib/Msf/PayloadComponent/Windows/ia32/UploadExecStage.pm
 share/msf/lib/Msf/PayloadComponent/Windows/ia32/ShellStage.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/PassiveXStager.pm
 share/msf/lib/Msf/PayloadComponent/Windows/ia32/ReverseStagerIE.pm
 share/msf/lib/Msf/PayloadComponent/Windows/ia32/ReverseStager.pm
 share/msf/lib/Msf/PayloadComponent/Windows/ia32/ReverseOrdinalStager.pm
@@ -198,6 +227,7 @@ share/msf/lib/Msf/PayloadComponent/Windows/StagePayloadIE.pm
 share/msf/lib/Msf/PayloadComponent/Windows/StagePayload.pm
 share/msf/lib/Msf/PayloadComponent/Windows/ReverseStager.pm
 share/msf/lib/Msf/PayloadComponent/Windows/Payload.pm
+share/msf/lib/Msf/PayloadComponent/Windows/PassiveXStager.pm
 share/msf/lib/Msf/PayloadComponent/Windows/FindRecvStager.pm
 share/msf/lib/Msf/PayloadComponent/Windows/BindStager.pm
 share/msf/lib/Msf/PayloadComponent/OSX/ppc/ShellStage.pm
@@ -237,7 +267,6 @@ share/msf/lib/Msf/PayloadComponent/BSD/ReverseStager.pm
 share/msf/lib/Msf/PayloadComponent/BSD/Payload.pm
 share/msf/lib/Msf/PayloadComponent/BSD/FindRecvStager.pm
 share/msf/lib/Msf/PayloadComponent/BSD/BindStager.pm
-share/msf/lib/Msf/Nop/OptyNop.pm
 share/msf/lib/Msf/Logo.pm
 share/msf/lib/Msf/Encoder/_Sparc.pm
 share/msf/lib/Msf/Encoder/XorDword.pm
@@ -251,6 +280,9 @@ share/msf/lib/Pex/Poly/RegAssassin.pm
 share/msf/lib/Pex/Poly/BlockMaster/Block.pm
 share/msf/lib/Pex/Poly/WannaCracker.pm
 share/msf/lib/Pex/RawPackets.pm
+share/msf/lib/Pex/Arkeia.pm
+share/msf/lib/Pex/SunRPC.pm
+share/msf/lib/Pex/XDR.pm
 share/msf/lib/Pex/SMB.pm
 share/msf/lib/Pex/Socket/SSLTcp.pm
 share/msf/lib/Pex/Socket/RawUdp.pm
@@ -283,7 +315,7 @@ share/msf/nops/Pex.pm
 share/msf/nops/SPARC.pm
 share/msf/nops/Alpha.pm
 share/msf/nops/MIPS.pm
-share/msf/nops/Opty.pm
+share/msf/nops/Opty2.pm
 share/msf/payloads/external/WindowsSyscall.py
 share/msf/payloads/external/bsdx86bind_ie.py
 share/msf/payloads/external/bsdx86reverse_ie.py
@@ -297,6 +329,15 @@ share/msf/payloads/cmd_generic.pm
 share/msf/payloads/cmd_sol_bind.pm
 share/msf/payloads/cmd_unix_reverse.pm
 share/msf/payloads/cmd_unix_reverse_nss.pm
+share/msf/payloads/cmd_interact.pm
+share/msf/payloads/cmd_localshell.pm
+share/msf/payloads/linux_ia32_dN_reverse.pm
+share/msf/payloads/linux_sparc_findsock.pm
+share/msf/payloads/solaris_sparc_findsock.pm
+share/msf/payloads/win32_passivex.pm
+share/msf/payloads/win32_passivex_meterpreter.pm
+share/msf/payloads/win32_passivex_stg.pm
+share/msf/payloads/win32_passivex_vncinject.pm
 share/msf/payloads/win32_adduser.pm
 share/msf/payloads/win32_bind.pm
 share/msf/payloads/win32_bind_dllinject.pm
@@ -329,7 +370,6 @@ share/msf/payloads/bsdi_ia32_reverse.pm
 share/msf/payloads/bsdi_ia32_reverse_stg.pm
 share/msf/payloads/cmd_irix_bind.pm
 share/msf/payloads/cmd_unix_reverse_bash.pm
-share/msf/payloads/cmd_unix_reverse_cross.pm
 share/msf/payloads/generic_sparc_execve.pm
 share/msf/payloads/irix_mips_execve.pm
 share/msf/payloads/linux_ia32_adduser.pm
@@ -386,11 +426,9 @@ share/msf/sdk/patternOffset.pl
 share/msf/sdk/spitCode.pl
 share/msf/msfcli
 share/msf/msfconsole
-share/msf/msfdldebug
 share/msf/msfencode
 share/msf/msflogdump
 share/msf/msfpayload
-share/msf/msfpayload.cgi
 share/msf/msfpescan
 share/msf/msfweb
 share/msf/msfupdate
@@ -471,6 +509,37 @@ share/msf/src/shellcode/solaris/sparc/single_reverse_tcp.s
 share/msf/src/shellcode/generic/ia32/stager_stdin.asm
 share/msf/src/shellcode/generic/sparc/single_shell.s
 share/msf/src/shellcode/import.pl
+share/msf/src/shellcode/linux/sparc/single_findsock.s
+share/msf/src/shellcode/win32/standard/passivex.asm
+share/msf/src/shellcode/solaris/sparc/single_findsock.s
+share/msf/src/passivex/CPassiveX.cpp
+share/msf/src/passivex/resource.h
+share/msf/src/passivex/PassiveX.cpp
+share/msf/src/passivex/PassiveX.idl
+share/msf/src/passivex/PassiveXLib.h
+share/msf/src/passivex/CPassiveX.h
+share/msf/src/passivex/HttpTunnel.h
+share/msf/src/passivex/passivex.rc
+share/msf/src/passivex/passivex.def
+share/msf/src/passivex/passivex.dsp
+share/msf/src/passivex/passivex.dsw
+share/msf/src/passivex/HttpTunnel.cpp
+share/msf/src/impurity/shelldemo/cmd_base.c
+share/msf/src/impurity/shelldemo/cmd_fd.c
+share/msf/src/impurity/shelldemo/cmd_fs.c
+share/msf/src/impurity/shelldemo/Makefile
+share/msf/src/impurity/shelldemo/cmd.h
+share/msf/src/impurity/shelldemo/cmd_expl.c
+share/msf/src/impurity/shelldemo/cmd_misc.c
+share/msf/src/impurity/shelldemo/cmd_privs.c
+share/msf/src/impurity/shelldemo/cmd_proc.c
+share/msf/src/impurity/shelldemo/cmd_sys.c
+share/msf/src/impurity/shelldemo/main.c
+share/msf/src/impurity/shelldemo/misc.c
+share/msf/src/impurity/script-ld-impurity
+share/msf/src/impurity/tracepath.c
+share/msf/src/impurity/Makefile
+share/msf/src/impurity/README.original
 share/msf/src/meterpreter/workspace/ext_server_net/ext_server_net.dsp
 share/msf/src/meterpreter/workspace/ext_server_sys/ext_server_sys.dsp
 share/msf/src/meterpreter/workspace/ext_server_fs/ext_server_fs.dsp
@@ -558,13 +627,6 @@ share/msf/src/meterpreter/source/extensions/process/server/system.c
 share/msf/src/meterpreter/source/extensions/process/process.h
 share/msf/src/shellcode/osx/syscall.h
 share/msf/src/shellcode/linux/ia32/linux_2.6.7_unistd_ia32.h
-share/msf/src/shellcode/linux/impurity/linux_reverse_impurity.asm
-share/msf/src/shellcode/linux/impurity/Makefile
-share/msf/src/shellcode/linux/impurity/README.metasploit
-share/msf/src/shellcode/linux/impurity/tracepath.c
-share/msf/src/shellcode/linux/impurity/script-ld-impurity
-share/msf/src/shellcode/linux/impurity/shelldemo.c
-share/msf/src/shellcode/linux/impurity/README.original
 share/msf/src/shellcode/win32/standard/win32_stage_boot_reverse_shell_revert.asm
 share/msf/src/shellcode/win32/standard/build
 share/msf/src/shellcode/win32/standard/win32_stage_inlineegg.asm
@@ -818,7 +880,6 @@ share/msf/src/shellcode/win32/dllinject/vncinject/vncdll.txt
 @dirrm share/msf/src/shellcode/win32/standard/new
 @dirrm share/msf/src/shellcode/win32/standard
 @dirrm share/msf/src/shellcode/win32
-@dirrm share/msf/src/shellcode/linux/impurity
 @dirrm share/msf/src/shellcode/linux/sparc
 @dirrm share/msf/src/shellcode/linux/ia32
 @dirrm share/msf/src/shellcode/linux
@@ -874,6 +935,9 @@ share/msf/src/shellcode/win32/dllinject/vncinject/vncdll.txt
 @dirrm share/msf/src/meterpreter/output/client
 @dirrm share/msf/src/meterpreter/output
 @dirrm share/msf/src/meterpreter
+@dirrm share/msf/src/impurity/shelldemo
+@dirrm share/msf/src/impurity
+@dirrm share/msf/src/passivex
 @dirrm share/msf/src
 @dirrm share/msf/encoders
 @dirrm share/msf/exploits
@@ -913,11 +977,15 @@ share/msf/src/shellcode/win32/dllinject/vncinject/vncdll.txt
 @dirrm share/msf/tools                
 @dirrm share/msf/sdk/docs             
 @dirrm share/msf/sdk
-@dirrm share/msf/data/msfweb/themes/gwhite
-@dirrm share/msf/data/msfweb/themes/gblack
-@dirrm share/msf/data/msfweb/themes/default
-@dirrm share/msf/data/msfweb/themes
+@dirrm share/msf/data/msfweb/cache
+@dirrm share/msf/data/msfweb/default
+@dirrm share/msf/data/msfweb/gblack
+@dirrm share/msf/data/msfweb/gwhite
 @dirrm share/msf/data/msfweb/icons
+@dirrm share/msf/data/msfweb/themes/default
+@dirrm share/msf/data/msfweb/themes/gblack
+@dirrm share/msf/data/msfweb/themes/gwhite
+@dirrm share/msf/data/msfweb/themes
 @dirrm share/msf/data/msfweb
 @dirrm share/msf/data/meterpreter
 @dirrm share/msf/data                 
