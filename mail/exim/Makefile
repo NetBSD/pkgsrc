@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.56 2005/05/10 22:52:06 abs Exp $
+# $NetBSD: Makefile,v 1.57 2005/05/17 17:06:11 abs Exp $
 
-DISTNAME=	exim-${EXIM_VERSION}
-PKGREVISION=	3
+DISTNAME=	exim-4.51
 CATEGORIES=	mail net
+MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
+		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
+		ftp://ftp.esat.net/pub/networking/mail/mta/exim/exim4/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.exim.org/
@@ -10,7 +13,107 @@ COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
 CONFLICTS+=	exim-exiscan-[0-9]*
 
-.include "Makefile.common"
+USE_PERL5=	yes
+USE_PKGINSTALL=	yes
 
-# Note: The distinfo in this directory includes the exiscan-acl-4.22-10.patch
-# 'make mdi' or equivalent should be run from ../exim-exiscan-acl
+MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS=	EXIM_USER EXIM_GROUP EXIM_DB EXIM_USE_LOOKUP_WHOSON
+
+PKG_GROUPS=	${EXIM_GROUP}
+PKG_USERS=	${EXIM_USER}:${EXIM_GROUP}::Exim\\ mail\\ server\\ user:/var/mail:/sbin/nologin
+
+PKG_SYSCONFSUBDIR?=	exim
+EXAMPLESDIR=		${PREFIX}/share/examples/exim
+CONF_FILES=		${EXAMPLESDIR}/aliases ${PKG_SYSCONFDIR}/aliases
+CONF_FILES+=		${EXAMPLESDIR}/configure ${PKG_SYSCONFDIR}/configure
+MESSAGE_SUBST+=		EXAMPLESDIR="${EXAMPLESDIR}"
+PLIST_SUBST+=		DISTNAME="${DISTNAME}"
+
+RCD_SCRIPTS=		exim
+
+OWN_DIRS_PERMS=		/var/log/exim ${EXIM_USER} ${EXIM_GROUP} 0750
+OWN_DIRS_PERMS+=	/var/spool/exim ${EXIM_USER} ${EXIM_GROUP} 0750
+
+# XXX: The following will be handled by buildlink3 at some point.
+CFLAGS+=		${_STRIPFLAG_CC}
+
+# BDB_TYPE gets set to "db1" if USE_DB185=="yes"
+USE_DB185?=		no
+BDB_ACCEPTED?=		db1 db2 db3 db4
+
+.if defined(EXIM_DB) && ${EXIM_DB} == "gdbm"
+.  include "../../databases/gdbm/buildlink3.mk"
+EXIM_USE_DB_CONFIG=	USE_GDBM=yes
+EXIM_DBMLIB=		DBMLIB=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.gdbm} -lgdbm
+EXIM_INCLUDE=		-I${PREFIX}/include
+.else # use native or Berkeley DB as defined by BDB_DEFAULT and BDB_ACCEPTED
+.  include "../../mk/bdb.buildlink3.mk"
+EXIM_USE_DB_CONFIG=	USE_DB=yes	# the default
+.  if ${BDB_TYPE} == "db4"
+EXIM_DBMLIB=		DBMLIB=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db4} ${BDB_LIBS}
+EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db4}
+.  elif ${BDB_TYPE} == "db3"
+EXIM_DBMLIB=		DBMLIB=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db3} ${BDB_LIBS}
+EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db3}
+.  elif ${BDB_TYPE} == "db2"
+EXIM_DBMLIB=		DBMLIB=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db2} ${BDB_LIBS}
+EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db2}
+.  else # using native
+EXIM_DBMLIB=		# empty so use defaults
+EXIM_USE_DB_CONFIG=	# empty so use defaults
+EXIM_INCLUDE=		-I/usr/${BUILDLINK_INCDIRS.db-native}
+.  endif
+.endif
+
+post-extract:
+	${MKDIR} ${WRKSRC}/Local
+	${CP} ${WRKSRC}/src/EDITME ${WRKSRC}/Local/Makefile.pkgsrc
+	${CP} ${WRKSRC}/exim_monitor/EDITME ${WRKSRC}/Local/eximon.conf.pkgsrc
+
+pre-configure:
+	@${ECHO} LOOKUP_DSEARCH=yes >> ${WRKSRC}/Local/Makefile.pkgsrc
+	@${SED} -e 's:@PREFIX@:${PREFIX}:' \
+		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:' \
+		-e 's:@EXIM_USER@:${EXIM_USER}:' \
+		-e 's:@EXIM_GROUP@:${EXIM_GROUP}:' \
+		-e 's:@EXIM_USE_DB_CONFIG@:${EXIM_USE_DB_CONFIG}:' \
+		-e 's:@EXIM_DBMLIB@:${EXIM_DBMLIB}:' \
+		-e 's:@EXIM_INCLUDE@:${EXIM_INCLUDE}:' \
+		-e 's:@CHOWN@:${CHOWN}:' \
+		-e 's:@CHGRP@:${CHGRP}:' \
+		-e 's:@MV@:${MV}:' \
+		-e 's:@RM@:${RM}:' \
+		-e 's:@PERL5@:${PERL5}:' \
+	    < ${WRKSRC}/Local/Makefile.pkgsrc \
+	    > ${WRKSRC}/Local/Makefile
+	@${ECHO} WITH_CONTENT_SCAN=yes >> ${WRKSRC}/Local/Makefile
+	@${ECHO} WITH_OLD_DEMIME=yes >> ${WRKSRC}/Local/Makefile
+.if defined(EXIM_USE_LOOKUP_WHOSON) && ${EXIM_USE_LOOKUP_WHOSON} == "YES"
+	@${ECHO} LOOKUP_WHOSON=yes >> ${WRKSRC}/Local/Makefile
+	@${ECHO} LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.whoson} -L${LOCALBASE}/${BUILDLINK_LIBDIRS.whoson} -lwhoson >> ${WRKSRC}/Local/Makefile
+.endif
+	@${SED} -e 's:@PREFIX@:${PREFIX}:' \
+		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:' \
+	    < ${WRKSRC}/Local/eximon.conf.pkgsrc \
+	    > ${WRKSRC}/Local/eximon.conf
+
+post-build:
+	@${SED} -e 's:@PREFIX@:${PREFIX}:' \
+	    ${FILESDIR}/mailer.conf.exim \
+	    > ${WRKDIR}/mailer.conf
+
+post-install:
+	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/exim.8 ${PREFIX}/man/man8/exim.8
+
+.if defined(EXIM_USE_LOOKUP_WHOSON) && ${EXIM_USE_LOOKUP_WHOSON} == "YES"
+.  include "../../net/whoson/buildlink3.mk"
+.endif
+
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
