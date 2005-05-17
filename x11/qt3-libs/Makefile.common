@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2005/05/13 16:54:13 jlam Exp $
+# $NetBSD: Makefile.common,v 1.46 2005/05/17 15:34:46 reed Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -62,6 +62,8 @@ CFLAGS+=		-I/usr/local/include/bind
 LDFLAGS+=		-L/usr/local/lib/bind -lbind
 BUILDLINK_PASSTHRU_DIRS+=/usr/local/include/bind /usr/local/lib/bind
 SYS_LIBS=		-lbind -ldb -ldl
+.elif ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	-platform freebsd-g++
 .endif
 
 .if !exists(${X11BASE}/lib/libXinerama.so)
