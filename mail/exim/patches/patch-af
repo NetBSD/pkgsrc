@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2004/09/25 07:45:51 grant Exp $
+$NetBSD: patch-af,v 1.5 2005/05/17 17:06:12 abs Exp $
 
---- OS/os.h-NetBSD.orig	2004-08-27 00:09:59.000000000 +1000
+--- OS/os.h-NetBSD.orig	2005-05-04 12:35:39.000000000 +0100
 +++ OS/os.h-NetBSD
-@@ -10,4 +10,10 @@ typedef struct flock flock_t;
+@@ -12,4 +12,10 @@ typedef struct flock flock_t;
  #define os_strsignal strsignal
  #define OS_STRSIGNAL
  
