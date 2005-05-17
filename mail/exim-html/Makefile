@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2004/10/07 17:29:16 abs Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/17 17:06:12 abs Exp $
 
-DISTNAME=	exim-html-4.40
+DISTNAME=	exim-html-4.50
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -11,7 +11,10 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.exim.org/
 COMMENT=	HTML documentation for the Exim mail transfer agent
 
-post-install:
+NO_CONFIGURE=
+NO_BUILD=
+
+do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/exim
 	${CP} -R ${WRKDIR}/${DISTNAME}/doc/html/* ${PREFIX}/share/doc/html/exim
 
