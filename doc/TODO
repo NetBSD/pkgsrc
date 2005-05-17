@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3491 2005/05/17 13:30:46 adam Exp $
+$NetBSD: TODO,v 1.3492 2005/05/17 13:42:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -484,7 +484,6 @@ Suggested package updates
 	o fakeroot-1.2.9 [pkg/30015]
 	o fd-2.06c
 	o fdgw-20040609
-	o feh-1.3.1
 	o fhist-1.14
 	o fidogate-4.4.10
 	o findutils-4.2.20
@@ -564,13 +563,13 @@ Suggested package updates
 	o hackbot-2.21
 	o hashcash-1.16
 	o haskell-mode-1.45
-	o hdf5-1.6.4 [checksum of current version has changed, check
-	  validity of sources when updating]
+	o hdf5-1.6.4 [checksum of current version has changed]
 	o hercules-3.02
 	o hitchhiker-0.7
 	o hot-babe-0.2.2
 	o html2ps-1.0b4
 	o html2wml-0.4.11
+	o htmllint-20050424 [pkg/30181]
 	o httperf-0.8
 	o httptunnel-3.3
 	o hugs-200503 [pkg/30071]
@@ -645,6 +644,7 @@ Suggested package updates
 	o libperl-5.6.2
 	o libpqxx-2.5.0
 	o libsmi-0.4.3
+	o libssh-0.11 [test security/hydra after update]
 	o libstatgrab-0.11.1
 	o libtcl-nothread-8.4.9
 	o libtool-1.5.16
@@ -716,12 +716,14 @@ Suggested package updates
 	o neverball-1.4.0
 	o newmail-1.0.2
 	o ng-1.4.4
+	o nkf-2.05 [pkg/30180]
 	o ns-2.28
 	o ns-plugger-common-5.1.3
 	o nsca-1.2.0
 	o nsd-2.3.0
 	o nslint-2.1a3
 	o nullmailer-1.0.0
+	o nvi-m17n-1.79.20040401 [pkg/30216]
 	o obexftp-0.10.6
 	o odbc-postgresql-7.4.7
 	o offlineimap-4.0.8
@@ -737,6 +739,8 @@ Suggested package updates
 	o openldap-2.2.24
 	o openmotif-2.2.4
 	o openssh-4.0
+	o openttd-0.4.0 [pkg/30238]
+	o openvpn-2.0 [pkg/30239]
 	o opera8-8.0
 	o oregano-0.40.3
 	o oroborus-2.0.13.1
@@ -880,7 +884,7 @@ Suggested package updates
 	o plib-1.8.4
 	o pload-0.9.5
 	o ploticus-examples-230
-	o plptools-0.13
+	o plptools-0.13 [pkg/30244]
 	o pnet-0.6.10 [pkg/28555]
 	o poedit-1.3.2
 	o poppy-4.01
@@ -975,6 +979,7 @@ Suggested package updates
 	o rpm-4.1
 	o rrdtool-1.0.49 [pkg/26353]
 	o rsnapshot-1.2.0
+	o rss2html-0.7.2 [pkg/30208]
 	o rt-3.4.1
 	o rt-mysql-3.4.1
 	o rt-pgsql-3.4.1
