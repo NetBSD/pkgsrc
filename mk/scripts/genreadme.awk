@@ -1,7 +1,7 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.12 2004/07/06 22:49:18 wiz Exp $
+# $NetBSD: genreadme.awk,v 1.13 2005/05/17 21:46:59 dmcmahill Exp $
 #
-# Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
+# Copyright (c) 2002, 2003, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -53,8 +53,13 @@ BEGIN {
 	do_pkg_readme=1;
 # set to 1 to use "README-new.html" as the name
 	use_readme_new=0;
+	if (use_readme_new) {
+		readme_name = "README-new.html";
+	}
+	else {
+		readme_name = "README.html";
+	}
 	printf("Reading database file\n");
-	fflush("/dev/stdout");
 }
 
 #conflicts /usr/pkgsrc/math/scilab
@@ -151,6 +156,10 @@ BEGIN {
 	for (i = 4; i <= NF; i++){
 		htmlname = htmlname " " $i;
 	}
+	# If we are using a name other than README.html, change it
+	# here.  This avoids having to process a huge line later which
+	# makes lesser awks puke.
+	gsub(/README.html/, readme_name, htmlname);
 	dir2htmlname[dir] = htmlname;
 	if (debug) printf("added dir2htmlname[%s]=%s\n", dir, htmlname);
 	next;
@@ -186,19 +195,27 @@ BEGIN {
 #
 
 END {
-	if (use_readme_new) {
-		readme_name = "README-new.html";
-	}
-	else {
-		readme_name = "README.html";
-	}
 	readme = TMPDIR "/" readme_name;
 
 	if ( dependsfile == "" ) dependsfile = "/dev/stdout";
 	if ( builddependsfile == "" ) builddependsfile = "/dev/stdout";
+
+	printf("Making sure binary package cache file is up to date...\n");
+	cmd = sprintf("%s AWK=%s CMP=%s GREP=%s PKG_INFO=\"%s\" PKG_SUFX=%s SED=%s SORT=%s %s/mk/scripts/binpkg-cache --packages %s",
+		SETENV, AWK, CMP, GREP, PKG_INFO, PKG_SUFX, SED, SORT, PKGSRCDIR, PACKAGES);
+	if (debug) printf("\nExecute:  %s\n",cmd);
+	rc = system(cmd);
+	if (rc != 0) {
+	  printf("\n**** WARNING ****\n") > "/dev/stderr";
+	  printf("Command: %s\nfailed.", cmd) > "/dev/stderr";
+	  printf("**** ------- ****\n") > "/dev/stderr";
+	  exit(1);
+	}
 	
+	printf("Loading binary package cache file...\n");
+	load_cache_file( PACKAGES "/.pkgcache" );
+
 	printf("Flattening dependencies\n");
-	fflush("/dev/stdout");
 	printf("") > dependsfile;
 	for (toppkg in topdepends){
 		if (debug) printf("calling find_all_depends(%s, run)\n", toppkg);
@@ -214,9 +231,10 @@ END {
 	
 
 # clear out the flattened depends list and repeat for the build depends
-	delete alldepends;
+	for( key in alldepends ) {
+		delete alldepends[key];
+	}
 	printf("Flattening build dependencies\n");
-	fflush("/dev/stdout");
 	printf("") > builddependsfile;
 	for (toppkg in topbuilddepends){
 		find_all_depends(toppkg, "build");
@@ -234,7 +252,6 @@ END {
 # read the vulnerabilities file
 		printf("Reading vulnerability file \"%s\"\n which was updated %s\n",
 		       vfile, vuldate);
-		fflush("/dev/stdout");
 		i = 1;
 		while((getline < vfile) > 0) {
 			if ($0 !~ /^\#/) {
@@ -253,16 +270,16 @@ END {
 		have_vfile = 0;
 	}
 	close(cmd);
-	fflush("/dev/stdout");
 
 	if (SINGLEPKG != "" ) {
 		printf("Only creating README for %s\n",SINGLEPKG);
-		delete topdepends;
+		for( key in topdepends ) {
+			delete topdepends[key];
+		}
 		topdepends[SINGLEPKG] = "yes";
 	}
 	
 	printf("Generating README.html files\n");
-	fflush("/dev/stdout");
 	pkgcnt = 0;
 	if (do_pkg_readme) {
 		templatefile = PKGSRCDIR "/templates/README.pkg";
@@ -278,12 +295,15 @@ END {
 			if ((pkgcnt % 100) == 0) {
 				printf("\n%d\n", pkgcnt);
 			}
-			fflush("/dev/stdout");
 			printf("") > readme;
 			htmldeps = "";
-			delete dpkgs;
+			for( key in dpkgs ) {
+				delete dpkgs[key];
+			}
 			split(alldepends[toppkg], dpkgs);
 			i = 1;
+			htmldeps_file = TMPDIR "/htmldep";
+			printf("") > htmldeps_file;
 			while(i in dpkgs){
 				if (debug) {
 				  printf("\tdpkg=%s, pat2dir[%s] = %s\n",
@@ -293,23 +313,30 @@ END {
 				}
 				nm=dpkgs[i];
 
-# we need a zillion escapes here because we need to end up
-# with \\&lt; in 'htmldeps' so that when
-# we gsub htmldeps into the output file, we end up with &lt;
-
-				gsub(/&/, "\\\\\\&amp;", nm);
-				gsub(/</, "\\\\\\&lt;", nm);
-				gsub(/>/, "\\\\\\&gt;", nm);
-				htmldeps=sprintf("%s<a href=\"../../%s/%s\">%s</a>\n",
+				gsub(/&/, "\\&amp;", nm);
+				gsub(/</, "\\&lt;", nm);
+				gsub(/>/, "\\&gt;", nm);
+#				htmldeps=sprintf("%s<a href=\"../../%s/%s\">%s</a>\n",
+#						 htmldeps,
+#						 pat2dir[dpkgs[i]],
+#						 readme_name, nm);
+# We use a temp file to hold the html dependencies because for
+# packages like gnome, this list can get very very large and 
+# become larger than what some awk implementations can deal
+# with.  The nawk shipped with solaris 9 is an example of 
+# such a limited awk.
+				printf("%s<a href=\"../../%s/%s\">%s</a>\n",
 						 htmldeps,
 						 pat2dir[dpkgs[i]],
-						 readme_name, nm);
+						 readme_name, nm) >> htmldeps_file;
 				i = i + 1;
 			}
-			if ( htmldeps == "" ) {
-				htmldeps = "<EM>none</EM>";
+			if ( i == 1 ) {
+			  printf("<EM>none</EM>") >> htmldeps_file;
 			}
-			if (debug) printf("htmldeps = \"%s\"\n", htmldeps);
+			close(htmldeps_file);
+			if (debug) printf("wrote = %d entries to \"%s\"\n",
+					  i-1, htmldeps_file);
 			
 			vul = "";
 			if (have_vfile) {
@@ -344,72 +371,28 @@ END {
 				}
 			}
 			
-			if (MULTIARCH == "no"){
-				cmd="ls -1 "PACKAGES "/" PKGREPOSITORYSUBDIR "/" wildcard[toppkg] PKG_SUFX " 2>/dev/null";
-				if (debug) {
-				  printf("Checking for binary package with %s\n",
-					 cmd);
-				}
-				binpkgs = "";
-				while((cmd | getline) > 0) {
-					pkgfile = $0;
-					gsub(/.*\//, "", pkgfile);
-					pkgnm = pkgfile;
-					gsub(/\.tgz$/, "", pkgnm);
-					binpkgs = sprintf("%s\n<TR><TD>%s:<TD><a href=\"%s/%s\">%s</a><TD>(%s %s)",
-							  binpkgs,
-							  MACHINE_ARCH,
-							  PKG_URL,
-							  pkgfile,
-							  pkgnm,
-							  OPSYS,
-							  OS_VERSION);
-				}
-				close(cmd);
+
+			if (debug) {
+			  printf("Checking for binary package with lookup_cache( %s)\n",
+				 wc);
 			}
-			else {
-				cmd = "ls -1 -d "PACKAGES"/[0-9].*/*/" 	PKGREPOSITORYSUBDIR "/" wildcard[toppkg] PKG_SUFX " 2>/dev/null";
-				oldfs = FS;
-				FS = "[/]";
-				binpkgs = "";
-				while((cmd | getline) > 0) {
-					release = $(NF-3);
-					arch = $(NF-2);
-					pkg = $NF;
-					pkgnm = pkg;
-					gsub(PKG_SUFX "$", "", pkgnm)
-						if (debug) {
-							printf("%s:%s:%s (%s)\n",
-							       release,
-							       arch,
-							       pkg,
-							       pkgnm);
-						}
-					binpkgs = sprintf("%s\n<TR><TD>%s:<TD><a href=\"%s/%s/%s/%s/%s\">%s</a><TD>(%s-%s)",
-						  binpkgs, arch,
-						  PKG_URL, release,
-						  arch,
-						  PKGREPOSITORYSUBDIR,
-						  pkg, pkgnm,
-						  OPSYS, release);
-				}
-				FS = oldfs;
-				close(cmd);
-			}
+# lookup_cache( wildcard ) will produce HTML for the packages which are found
+			binpkgs = lookup_cache( wildcard[toppkg] PKG_SUFX );
 			
+
 # sort the binary pkgs (XXX would be nice to implement in memory in awk)
 			sfile = TMPDIR "/sorted";
-			spipe = "sort > " sfile;
+			spipe = SORT " > " sfile;
 			printf("%s",binpkgs) | spipe;
 			close(spipe);
 			binpkgs = "";
 			while((getline < sfile) > 0) {
-				binpkgs = sprintf("%s\n%s", binpkgs, $0);
+			  binpkgs = sprintf("%s\n%s", binpkgs, $0);
 			}
 			close(sfile);
-			
-			if (debug) printf("binary packages: \n%s\n\n",
-					  binpkgs);
+
+                        if (debug) printf("binary packages: \n%s\n\n",
+                                          binpkgs);
 
 			if ( flatdepends[toppkg] ~ /^[ \t]*$/ ) {
 				rundeps = "<EM>none</EM>";
@@ -435,11 +418,21 @@ END {
 				}
 				gsub(/%%VULNERABILITIES%%/, ""vul"");
 				gsub(/%%VULDATE%%/, ""vuldate"");
-				gsub(/%%BUILD_DEPENDS%%/, ""htmldeps"");
+
 				gsub(/%%RUN_DEPENDS%%/, ""rundeps"");
 				gsub(/%%BIN_PKGS%%/, ""binpkgs"");
-				gsub(/README.html/, readme_name);
-				print >> readme;
+				
+				line = $0
+
+				if( line ~/%%BUILD_DEPENDS%%/ ) {
+				    gsub(/%%BUILD_DEPENDS%%/, "", line);
+				    while((getline < htmldeps_file) > 0) {
+				      print >> readme;
+				    }
+				    close( htmldeps_file );
+				}
+
+				print line >> readme;
 			}
 			close(readme);
 			close(templatefile);
@@ -484,6 +477,8 @@ END {
 			printf("Category = %s\n", category);
 			cat_make = catdir"/Makefile";
 			pkgs = "";
+			pkgs_file = TMPDIR "/pkgs_file";
+			printf("") > pkgs_file;
 			numpkg = 0;
 			print "" > readme;
 			while((getline < cat_make) > 0){
@@ -500,10 +495,19 @@ END {
 						 pkgdir2name[dir],
 						 comment[dir]);
 					}
-					pkgs =  sprintf("%s<TR><TD VALIGN=TOP><a href=\"%s/%s\">%s</a>: %s<TD>\n",
-							pkgs, pkg, readme_name,
+#					pkgs =  sprintf("%s<TR><TD VALIGN=TOP><a href=\"%s/%s\">%s</a>: %s<TD>\n",
+#							pkgs, pkg, readme_name,
+#							pkgdir2name[dir],
+#							comment[dir]);
+# We use a temp file to hold the list of all packages because
+# this list can get very very large and 
+# become larger than what some awk implementations can deal
+# with.  The nawk shipped with solaris 9 is an example of 
+# such a limited awk.
+					printf("<TR><TD VALIGN=TOP><a href=\"%s/%s\">%s</a>: %s<TD>\n",
+							pkg, readme_name,
 							pkgdir2name[dir],
-							comment[dir]);
+							comment[dir]) >> pkgs_file;
 					allpkg[tot_numpkg] =  sprintf("<!-- %s (for sorting) --><TR VALIGN=TOP><TD><a href=\"%s/%s/%s\">%s</a>: <TD>(<a href=\"%s/%s\">%s</a>) <td>%s\n",
 								      pkgdir2name[dir],
 								      category, pkg,
@@ -526,9 +530,19 @@ END {
 				gsub(/%%CATEGORY%%/, category);
 				gsub(/%%NUMITEMS%%/, numpkg);
 				gsub(/%%DESCR%%/, descr);
-				gsub(/%%SUBDIR%%/, pkgs);
-				gsub(/README.html/, readme_name);
-				print >> readme;
+
+				line = $0
+
+				if( $0 ~/%%SUBDIR%%/ ) {
+				    gsub(/%%SUBDIR%%/, "");
+				    while((getline < pkgs_file) > 0) {
+				      gsub(/README.html/, readme_name);
+				      print >> readme;
+				    }
+				    close( pkgs_file );
+				}
+
+				print line >> readme;
 			}
 			close(readme);
 			close(templatefile);
@@ -682,6 +696,18 @@ function reg2str(reg){
 }
 
 #
+# take a string which has a shell glob pattern and turn it into
+# an awk regular expression.
+#
+function glob2reg(reg){
+        gsub(/\./, "\\\.", reg);
+        gsub(/\+/, "\\\+", reg);
+        gsub(/\*/, ".*", reg);
+        gsub(/\?/, ".?", reg);
+        return(reg);
+}
+
+#
 # accepts a full path to a package directory, like "/usr/pkgsrc/math/scilab"
 # and returns just the last 2 directories, like "math/scilab"
 #
@@ -712,7 +738,7 @@ function uniq(list, deps, i, ulist){
 }
 
 function fatal_check_file(file, cmd){
-	cmd="test -f "file ;
+	cmd="test -f " file ;
 	if (debug) printf("Execute:  %s\n",cmd);
 	if (system(cmd) != 0) {
 		printf("**** FATAL ****\nRequired file %s does not exist\n",
@@ -747,7 +773,8 @@ function copy_readme(old, new, cmd, rc) {
 #	Compare the existing README.html file to the one we created.  If they are
 #	not the same, then copy over the one we created
 
-	cmd = " if ! cmp -s "new" "old" ; then mv -f " new " " old " ; fi";
+	cmd = sprintf("%s -s %s %s ; if test $? -ne 0 ; then mv -f %s %s ; fi",
+		CMP, new, old, new, old);
 	if (debug) printf("copy_readme()  execute:  %s\n",cmd);
 	rc = system(cmd);
 	if (rc != 0) {
@@ -768,3 +795,65 @@ function copy_readme(old, new, cmd, rc) {
 
 }
 
+
+function load_cache_file( file ) {
+
+  if( debug ) printf("load_cache_file(%s)\n", file);
+
+  # read the cache file
+  while( getline < file ) {
+
+    # if this line points to another cache file, then recursively
+    # load it
+    if( $0 ~ /^pkgcache_cachefile/ ) {
+      if( debug ) printf("\tFound pkgcache_cachefile line.\n");
+      load_cache_file( $2 );
+    } else if( $0 ~/^pkgcache_begin /) {
+      pkgfile = $2;
+      if( debug ) printf("\tStarting %s\n", pkgfile);
+      opsys = "unknown";
+      osver = "unknown";
+      march = "unknown";
+    } else if( $0 ~/^OPSYS=/ ) {
+      opsys = $1;
+      gsub(/OPSYS=/, "", opsys);
+    } else if( $0 ~/^OS_VERSION=/ ) {
+      osver = $1;
+      gsub(/OS_VERSION=/, "", osver);
+    } else if( $0 ~/^MACHINE_ARCH=/ ) {
+      march = $1;
+      gsub(/MACHINE_ARCH=/, "", march);
+    } else if( $0 ~/^pkgcache_end /) {
+      if( debug ) printf("\t%s, OPSYS=%s, OS_VERSION=%s, MACHINE_ARCH=%s\n",
+			 pkgfile, opsys, osver, march);
+      opsys_list[pkgfile] = opsys;
+      osver_list[pkgfile] = osver;
+      march_list[pkgfile] = march;
+      pkg_list[pkgfile] = pkgfile;
+      pkgnm_list[pkgfile] = pkgfile;
+      gsub(/.*\//, "", pkgnm_list[pkgfile]);
+    } else {
+      # skip this line
+    }
+  }
+
+  # close the cache file
+  close( file );
+}
+
+function lookup_cache( wc, r, binpkgs) {
+  if( debug ) printf("lookup_cache( %s )\n", wc);
+  r = ".*/" glob2reg( wc );
+  if( debug ) printf("lookup_cache():  Searching for \"%s\"\n", r );
+  
+  binpkgs = "";
+  for( key in pkg_list ) {
+    if( key ~ r ) {
+      binpkgs = sprintf("%s\n<TR><TD>%s:<TD><a href=\"%s/%s\">%s</a><TD>(%s %s)\n",
+			binpkgs, march_list[key], PKG_URL, key, pkgnm_list[key],
+			opsys_list[key], osver_list[key]);
+
+    }
+  }
+  return( binpkgs );
+}

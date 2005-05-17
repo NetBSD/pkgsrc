@@ -1,9 +1,9 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.4 2003/09/23 01:51:44 yyamano Exp $
+# $NetBSD: mkreadme,v 1.5 2005/05/17 21:46:59 dmcmahill Exp $
 #
 # Script for README.html generation
 #
-# Copyright (c) 2002 The NetBSD Foundation, Inc.
+# Copyright (c) 2002, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -41,16 +41,27 @@
 
 TMPDIR=${TMPDIR:-/tmp/mkreadme}
 PKGSRCDIR=${PKGSRCDIR:-/usr/pkgsrc}
-BMAKE=${BMAKE:-make}
 AWK=${AWK:-/usr/bin/awk}
-EXPR=${EXPR:-expr}
+
+opsys=`uname -s`
+case "$opsys" in
+	*BSD)
+		makeprog=make
+		;;
+
+	*)
+		makeprog=bmake
+		;;
+esac
+
+BMAKE=${BMAKE:-${makeprog}}
 
 usage(){
     echo "$prog - Generates README.html files for a pkgsrc tree"
     echo "Usage:      $prog [-c|--cdrom] [-C|--prune] [-d|--debug] [-f|--ftp] "
-    echo "                  [-m|--multi-arch] [-p|--pkgsrc directory] "
+    echo "                  [-p|--pkgsrc directory] "
     echo "                  [-P|--packages directory] [-r|--restart] "
-    echo "                  [-s|--single-arch] [-S|--save-database]"
+    echo "                  [-S|--save-database]"
     echo " "
     echo "            $prog -h|--help"
     echo " "
@@ -69,10 +80,6 @@ usage(){
     echo " "
     echo "  -h|--help           Displays this help message"
     echo " "
-    echo "  -m|--multi-arch     Assumes a packages directory layout like:"
-    echo "                      OS_VERSION/MACHINE_ARCH/     for example:"
-    echo "                      1.{5,6}/{alpha,i386,sparc,vax}"
-    echo " "
     echo "  -p|--pkgsrc dir     Specifies the pkgsrc directory.  Defaults to"
     echo "                      The value of the PKGSRCDIR environment variable"
     echo "                      if set or /usr/pkgsrc otherwise."
@@ -82,9 +89,6 @@ usage(){
     echo "  -r|--restart        Restart.  This option assumes that the database file"
     echo "                      from a previous run still exists and that the script"
     echo "                      should use that instead of recreating the database."
-    echo " "
-    echo "  -s|--single-arch    Assumes a single OS release and MACHINE_ARCH binary"
-    echo "                      packages directory structure."
     echo " "
     echo "  -S|--save-database  Does not delete the database file after the run."
     echo "                      This is useful for debugging or re-running this script"
@@ -113,6 +117,8 @@ prog=$0
 #  Handle command line options
 #
 ######################################################################
+
+cmdline=$*
 
 ftp_readme=no
 restart=no
@@ -157,12 +163,6 @@ do
 	exit 0
 	;;
 
-    # assume a OS_RELEASE/MACHINE_ARCH/ layout for the binary pkgs
-    -m|--multi-arch)
-	multiarch=yes
-	shift
-	;;
-
     # Specify pkgsrc directory
     -p|--pkgsrc)
 	PKGSRCDIR=$2
@@ -178,12 +178,6 @@ do
     # Restart (ie, don't re-generate the database file)
     -r|--restart)
 	restart=yes
-	shift
-	;;
-
-    # assume a single directory structure layout for the binary pkgs
-    -s|--single-arch)
-	multiarch=no
 	shift
 	;;
 
@@ -252,8 +246,9 @@ echo "Extracting configuration variables:"
 echo " "
 if [ -d ${PKGSRCDIR}/pkgtools/pkglint ]; then
     cd ${PKGSRCDIR}/pkgtools/pkglint
-
-    for v in DISTDIR PACKAGES PKGREPOSITORYSUBDIR PKG_SUFX MACHINE_ARCH PKG_URL OPSYS OS_VERSION FTP_PKG_URL_HOST FTP_PKG_URL_DIR CDROM_PKG_URL_HOST CDROM_PKG_URL_DIR
+    for v in AWK CDROM_PKG_URL_HOST CDROM_PKG_URL_DIR CMP DISTDIR ECHO EXPR \
+	FGREP FTP_PKG_URL_HOST FTP_PKG_URL_DIR GREP PACKAGES PKG_INFO PKG_SUFX \
+	SED SETENV SORT 
     do
 	val=`${BMAKE} show-var VARNAME=${v}`
 	if [ $? != 0 ]; then
@@ -261,14 +256,13 @@ if [ -d ${PKGSRCDIR}/pkgtools/pkglint ]; then
 	    echo "Failed.  This is a fatal error"
 	    clean_and_exit
 	fi
-	echo "$v=$val"
-	eval ${v}=${val}
+	echo "---->  ${v}=\"${val}\""
+	eval "${v}=\"${val}\""
     done
 else
     echo "Error:   ${PKGSRCDIR}/pkgtools/pkglint does not seem to exist"
     exit 1
 fi
-
 
 ######################################################################
 #
@@ -296,39 +290,6 @@ if [ ! -z "$PKGDIR" ]; then
     echo "PACKAGES specified on command line to be $PKGDIR"
 fi
 
-######################################################################
-#
-#  Decide in binary package directory layout
-#
-######################################################################
-
-
-# If PACKAGES is set to the default (../../pkgsrc/packages), the current
-# ${MACHINE_ARCH} and "release" (uname -r) will be used. Otherwise a directory
-# structure of ...pkgsrc/packages/`uname -r`/${MACHINE_ARCH} is assumed.
-#
-# This is the logic from bsd.pkg.mk, but I think I'd like to change it to
-# come from a command line switch
-
-if [ -z "$multiarch" -a -e ${PACKAGES} ]; then
-    cd ${PACKAGES}
-    case `pwd` in
-	*/pkgsrc/packages)
-	    multiarch=no
-	    ;;
-
-	*)
-	    multiarch=yes
-	    ;;
-    esac
-fi
-
-if [ "x$multiarch" = "xyes" ]; then
-    echo "Will generate multi-release, multi-arch readme files"
-else
-    echo "Will generate single-release, single-arch readme files"
-fi
-
 
 ######################################################################
 #
@@ -339,6 +300,7 @@ fi
 if [ "x$restart" = "xno" ] ; then
     echo " "
     echo "Extracting data.  This could take a while"
+    echo "Started at: `date` "
     echo " "
     npkg=1
 
@@ -346,13 +308,13 @@ if [ "x$restart" = "xno" ] ; then
     rm -fr $DATABASEFILE
 
     cd ${PKGSRCDIR}
-    list=`grep '^[[:space:]]*'SUBDIR */Makefile | sed 's,/Makefile.*=[[:space:]]*,/,'`
+    list=`${GREP} '^[ \t]*'SUBDIR */Makefile | ${GREP} -v regress/ | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
     for pkgdir in $list
     do
 	    if [ ! -d $pkgdir ]; then
 		    echo " "
 		    echo "WARNING:  the package directory $pkgdir is listed in" > /dev/stderr
-		    echo $pkgdir | sed 's;/.*;/Makefile;g' > /dev/stderr
+		    echo $pkgdir | ${SED} 's;/.*;/Makefile;g' > /dev/stderr
 		    echo "but the directory does not exist.  Please fix this!" > /dev/stderr
 	    else
 		    cd $pkgdir
@@ -368,7 +330,7 @@ if [ "x$restart" = "xno" ] ; then
 			    echo "$l" >> $DATABASEFILE
 		    fi
 	    fi
-	    echo -n "."
+	    ${ECHO} -n "."
 	    if [ `${EXPR} $npkg % 100 = 0` -eq 1 ]; then
 		echo " "
 		echo "$npkg"
@@ -376,6 +338,8 @@ if [ "x$restart" = "xno" ] ; then
 	    npkg=`${EXPR} $npkg + 1`
 	    cd $PKGSRCDIR
     done
+    echo " "
+    echo "Finished extracting data for ${npkg} packages at: `date` "
 else
     echo " "
     echo "Using existing database (are you sure you wanted the -r/--restart flag?)"
@@ -408,16 +372,18 @@ ${AWK} -f ${PKGSRCDIR}/mk/scripts/genreadme.awk  \
     builddependsfile=${TMPDIR}/pkgsrc.builddepends.debug \
     debug=$debug \
     dependsfile=${TMPDIR}/pkgsrc.depends.debug \
+    AWK=$AWK \
+    CMP=$CMP \
     DISTDIR=$DISTDIR \
-    MACHINE_ARCH=$MACHINE_ARCH \
-    MULTIARCH=$multiarch \
-    OPSYS=$OPSYS \
-    OS_VERSION=$OS_VERSION \
+    GREP=$GREP \
     PACKAGES=$PACKAGES \
+    PKG_INFO="$PKG_INFO" \
     PKG_SUFX=$PKG_SUFX \
     PKG_URL=$PKG_URL \
-    PKGREPOSITORYSUBDIR=$PKGREPOSITORYSUBDIR \
     PKGSRCDIR=$PKGSRCDIR \
+    SED=$SED \
+    SETENV=$SETENV \
+    SORT=$SORT \
     TMPDIR=$TMPDIR \
 	${DATABASEFILE}
 
@@ -438,9 +404,9 @@ echo " "
 cd ${PKGSRCDIR}
 ipv6=${TMPDIR}/ipv6pkgs
 ipv6_entries=${TMPDIR}/ipv6_entries
-grep -l '^BUILD_DEFS.*=.*USE_INET6' */*/Makefile  | sed 's;Makefile;;g' > $ipv6
-fgrep -f $ipv6 README-all.html | sort -t/ +1 > $ipv6_entries
-sed \
+${GREP} -l '^BUILD_DEFS.*=.*USE_INET6' */*/Makefile  | ${SED} 's;Makefile;;g' > $ipv6
+${FGREP} -f $ipv6 README-all.html | sort -t/ +1 > $ipv6_entries
+${SED} \
     -e "/%%TRS%%/r${ipv6_entries}" \
     -e '/%%TRS%%/d' \
     templates/README.ipv6 > ${TMPDIR}/README-IPv6.html
@@ -448,10 +414,13 @@ if [ $? != 0 ]; then
     echo "Error:  README-IPv6.html generation failed (on sed script)"
     clean_and_exit
 fi
-if [ ! -f README-IPv6.html ] || ! cmp -s ${TMPDIR}/README-IPv6.html README-IPv6.html ; then
+
+if [ ! -f README-IPv6.html ]; then
 	mv -f ${TMPDIR}/README-IPv6.html README-IPv6.html
-else
+elif cmp -s ${TMPDIR}/README-IPv6.html README-IPv6.html ; then
 	echo "README-IPv6.html is unchanged (no changes were needed)"
+else
+	mv -f ${TMPDIR}/README-IPv6.html README-IPv6.html
 fi
 
 ######################################################################

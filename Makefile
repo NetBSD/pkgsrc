@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2005/05/16 19:59:54 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2005/05/17 21:46:59 dmcmahill Exp $
 #
 
 # tools used by this Makefile
@@ -78,22 +78,10 @@ PKGSRCTOP=	yes
 _README_TYPE_FLAG?=	none
 README.html: .PRECIOUS
 .if ${_README_TYPE_FLAG} == "--ftp" || ${_README_TYPE_FLAG} == "--cdrom"
-	@if [ -e ${PACKAGES} ]; then					\
-		cd ${PACKAGES};						\
-		case `pwd` in						\
-			${.CURDIR}/packages)				\
-				MULTIARCH=;				\
-				;;					\
-			*)						\
-				MULTIARCH=--multi-arch;			\
-				;;					\
-		esac;							\
-		cd ${.CURDIR} ;						\
-	fi;								\
 	${SETENV} TMPDIR=${TMPDIR:U/tmp}/mkreadme	 		\
-		BMAKE=${MAKE} AWK=${AWK} EXPR=${EXPR} 			\
+		BMAKE=${MAKE}						\
 		./mk/scripts/mkreadme --pkgsrc ${.CURDIR} 		\
-		--packages ${PACKAGES} ${_README_TYPE_FLAG} $$MULTIARCH \
+		--packages ${PACKAGES} ${_README_TYPE_FLAG}		\
 		--prune
 .else
 	@${ECHO} "ERROR:  please do not use the README.html target directly."
