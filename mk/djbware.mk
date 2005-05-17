@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.3 2005/04/10 02:25:54 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.4 2005/05/17 08:42:24 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -19,7 +19,6 @@ DJB_RESTRICTED?=	YES
 DJB_ERRNO_HACK?=	YES
 DJB_BUILD_TARGETS?=	# empty
 DJB_INSTALL_TARGETS?=	# empty
-DJB_CONFIG_DIR?=	${WRKSRC}
 DJB_CONFIG_PREFIX?=	${PREFIX}
 DJB_CONFIG_HOME?=	conf-home
 DJB_CONFIG_CMDS?=	${DO_NADA}
@@ -46,7 +45,7 @@ SUBST_MESSAGE.djbware=	"Correcting definition of errno."
 
 .if !target(do-configure)
 do-configure:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${DJB_CONFIG_DIR};		\
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
 	for i in conf-*; do ${CP} $${i} $${i}.orig_dist; done;		\
 	[ -f ${DJB_CONFIG_HOME} ] && \
 		${ECHO} ${DJB_CONFIG_PREFIX} > ${DJB_CONFIG_HOME};	\
