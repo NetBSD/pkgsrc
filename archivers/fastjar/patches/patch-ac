@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/05/17 14:54:57 minskim Exp $
+
+--- jargrep.c.orig	2001-01-11 02:38:15.000000000 -0600
++++ jargrep.c
+@@ -572,7 +572,7 @@ static void jargrep(regex_t *exp, regex_
+ 					floop = FALSE;
+ 					break;
+ 				case 2:
+-					/* fall through continue */
++					; /* fall through continue */
+ 				}
+ 			}
+ 		} while(floop);
