@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/08/21 11:31:41 recht Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/05/17 13:30:09 adam Exp $
 ${PYSITELIB}/curl/__init__.py
 ${PYSITELIB}/curl/__init__.pyc
 ${PYSITELIB}/curl/__init__.pyo
@@ -9,6 +9,7 @@ share/doc/pycurl${PYVERSSUFFIX}/INSTALL
 share/doc/pycurl${PYVERSSUFFIX}/README
 share/doc/pycurl${PYVERSSUFFIX}/TODO
 share/doc/pycurl${PYVERSSUFFIX}/examples/basicfirst.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/file_upload.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/linksys.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/retriever-multi.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/retriever.py
