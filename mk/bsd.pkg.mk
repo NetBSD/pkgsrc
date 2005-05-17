@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1666 2005/05/16 18:01:12 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1667 2005/05/17 06:31:00 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2871,7 +2871,7 @@ test-message:
 extract-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${EXTRACT_COOKIE}
 patch-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${PATCH_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${_GENERATE_PATCH_COOKIE}
 tools-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${TOOLS_COOKIE}
 wrapper-cookie:
