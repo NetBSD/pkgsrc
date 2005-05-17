@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.81 2005/05/16 18:35:30 jlam Exp $
+# $NetBSD: replace.mk,v 1.82 2005/05/17 18:34:45 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -59,6 +59,7 @@ USE_TOOLS+=	bison-yacc
 .endif
 
 .include "../../mk/tools/imake.mk"
+.include "../../mk/tools/perl.mk"
 
 ######################################################################
 
