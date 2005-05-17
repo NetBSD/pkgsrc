@@ -1,7 +1,19 @@
-# $NetBSD: NetBSD.mk,v 1.5.2.2 2005/03/21 15:43:00 tv Exp $
+# $NetBSD: NetBSD.mk,v 1.5.2.3 2005/05/17 18:29:46 tv Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
+# Needed for 1.6.1 and earlier due to rpcgen bugs and paths
+.if defined(CPP) && ${CPP} == "cpp"
+CPP=		/usr/bin/cpp
+.endif
+ECHO_N?=	${ECHO} -n
+PKGLOCALEDIR?=	share
+PS?=		/bin/ps
+RSH?=		/usr/bin/rsh
+SU?=		/usr/bin/su
+TYPE?=		type				# Shell builtin
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
 CAT?=		/bin/cat
@@ -10,15 +22,10 @@ CHOWN?=		/usr/sbin/chown
 CHGRP?=		/usr/bin/chgrp
 CMP?=		/usr/bin/cmp
 CP?=		/bin/cp
-# Needed for 1.6.1 and earlier due to rpcgen bugs and paths
-.if defined(CPP) && ${CPP} == "cpp"
-CPP=		/usr/bin/cpp
-.endif
 CUT?=		/usr/bin/cut
 DATE?=		/bin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
-ECHO_N?=	${ECHO} -n
 EGREP?=		/usr/bin/egrep
 EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
@@ -34,12 +41,15 @@ GTAR?=		/usr/bin/tar
 .endif
 GUNZIP_CMD?=	/usr/bin/gunzip -f
 GZCAT?=		/usr/bin/gzcat
-GZIP?=		-9
 GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
+.if exists(/sbin/ldconfig)
 LDCONFIG?=	/sbin/ldconfig
+.else
+LDCONFIG?=	true
+.endif
 LN?=		/bin/ln
 LS?=		/bin/ls
 M4?=		/usr/bin/m4
@@ -51,18 +61,14 @@ NICE?=		/usr/bin/nice
 PATCH?=		/usr/bin/patch
 PAX?=		/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
-PKGLOCALEDIR?=	share
-PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
-RSH?=		/usr/bin/rsh
 SED?=		/usr/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/sh
 SHLOCK=		/usr/bin/shlock
 SORT?=		/usr/bin/sort
-SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
 .if exists(/bin/tar)
 TAR?=		/bin/tar
@@ -75,9 +81,9 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		true				# Shell builtin
 TSORT?=		/usr/bin/tsort
-TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
+.endif
 
 .if exists(/usr/sbin/user)
 USERADD?=	/usr/sbin/useradd
@@ -134,7 +140,6 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
-_OPSYS_LIBTOOL_REQD=	1.5.10nb6
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF/a.out	# shared lib type

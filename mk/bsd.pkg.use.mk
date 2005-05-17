@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.9 2005/02/25 14:46:51 tv Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.10 2005/05/17 18:29:44 tv Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -22,9 +22,7 @@ PLIST_SUBST+=		IMAKE_KERNMAN_SUFFIX=${IMAKE_KERNMAN_SUFFIX}
 PLIST_SUBST+=		IMAKE_FILEMAN_SUFFIX=${IMAKE_FILEMAN_SUFFIX}
 PLIST_SUBST+=		IMAKE_MISCMAN_SUFFIX=${IMAKE_MISCMAN_SUFFIX}
 PLIST_SUBST+=		IMAKE_MANNEWSUFFIX=${IMAKE_MANNEWSUFFIX}
-.  if !empty(USE_BUILDLINK3:M[yY][eE][sS])
-MAKE_FLAGS+=		CC="${CC}" CXX="${CXX}"
-.  endif
+MAKE_FLAGS+=		CC=${CC:Q} CXX=${CXX:Q}
 .endif
 
 .if defined(USE_X11BASE)
@@ -93,10 +91,7 @@ _SHLIBTOOL?=		${PKG_SHLIBTOOL}
 LIBTOOL?=		${PKG_LIBTOOL}
 SHLIBTOOL?=		${PKG_SHLIBTOOL}
 .if defined(USE_LIBTOOL)
-.  if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mfortran)
-LIBTOOL_REQD?=		1.5.10nb7
-.  endif
-LIBTOOL_REQD?=		1.5.10nb1
+LIBTOOL_REQD?=		1.5.14
 BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-base
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
@@ -160,18 +155,16 @@ ${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
 .  endif
 .endif
 
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 .if defined(USE_PERL5) && (${USE_PERL5} == "run")
 CONFIGURE_ENV+=		PERL=${PERL5:Q}
 .  include "../../lang/perl5/vars.mk"
 .endif       # USE_PERL5 == run
+.endif
 
-.if defined(PERL5_SUB_INSTALLSITELIB)
+.if defined(USE_PERL5)
 PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SUB_INSTALLSITELIB}
-.endif
-.if defined(PERL5_SUB_INSTALLSITEARCH)
 PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SUB_INSTALLSITEARCH}
-.endif
-.if defined(PERL5_SUB_INSTALLARCHLIB)
 PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_SUB_INSTALLARCHLIB}
 .endif
 
@@ -192,9 +185,6 @@ RMAN?=			${X11BASE}/bin/rman
 .if defined(USE_X11)
 X11_LDFLAGS+=		${COMPILER_RPATH_FLAG}${X11BASE}/lib${LIBABISUFFIX}
 X11_LDFLAGS+=		-L${X11BASE}/lib${LIBABISUFFIX}
-.  if !empty(USE_BUILDLINK3:M[nN][oO])
-LDFLAGS+=		${X11_LDFLAGS}
-.  endif
 .endif
 
 ### USE_XPKGWEDGE
