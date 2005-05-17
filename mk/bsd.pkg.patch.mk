@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.7 2005/05/17 06:31:00 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.8 2005/05/17 19:08:30 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -212,10 +212,9 @@ _PKGSRC_PATCHES+=	${LOCALPATCHES}/${PKGPATH}/patch-*
 apply-pkgsrc-patches:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Applying pkgsrc patches for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -- `${ECHO} ${_PKGSRC_PATCHES:Q}`;				\
 	fail=;								\
-	while ${TEST} $$# -gt 0; do					\
-		i="$$1"; shift;						\
+	patches=${_PKGSRC_PATCHES:Q};					\
+	for i in $$patches; do						\
 		${TEST} -f "$$i" || continue;				\
 		case "$$i" in						\
 		*.orig|*.rej|*~)					\
@@ -260,8 +259,10 @@ apply-pkgsrc-patches:
 		esac;							\
 		${ECHO_PATCH_MSG} "${_PKGSRC_IN}> Applying pkgsrc patch $$i"; \
 		fuzz=;							\
-		${PATCH} -v >/dev/null 2>&1 && fuzz=${PATCH_FUZZ_FACTOR:Q}; \
-		${PATCH} $$fuzz ${PATCH_ARGS} < $$i ||			\
+		if ${PATCH} -v >/dev/null 2>&1; then			\
+			fuzz_flags=${PATCH_FUZZ_FACTOR:Q};		\
+		fi;							\
+		${PATCH} $$fuzz_flags ${PATCH_ARGS} < $$i ||		\
 			${ECHO_MSG} "Patch $$i failed";			\
 		${ECHO} "$$i" >> ${_PATCH_COOKIE_TMP:Q};		\
 	done;								\
