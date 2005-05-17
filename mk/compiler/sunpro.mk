@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.31 2005/01/12 18:37:52 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.32 2005/05/17 19:06:21 rillig Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	defined
@@ -18,7 +18,7 @@ _SUNPRO_VARS=		# empty
 LANGUAGES.sunpro+=	c
 _SUNPRO_VARS+=		CC
 _SUNPRO_CC=		${_SUNPRO_DIR}/bin/cc
-_ALIASES.CC=		cc
+_ALIASES.CC=		cc gcc
 CCPATH=			${SUNWSPROBASE}/bin/cc
 PKG_CC:=		${_SUNPRO_CC}
 .endif
@@ -26,7 +26,7 @@ PKG_CC:=		${_SUNPRO_CC}
 LANGUAGES.sunpro+=	c++
 _SUNPRO_VARS+=		CXX
 _SUNPRO_CXX=		${_SUNPRO_DIR}/bin/CC
-_ALIASES.CXX=		CC c++
+_ALIASES.CXX=		CC c++ g++
 CXXPATH=		${SUNWSPROBASE}/bin/CC
 PKG_CXX:=		${_SUNPRO_CXX}
 .endif
