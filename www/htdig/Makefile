@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/16 03:04:45 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/05/17 22:00:13 jlam Exp $
 
 DISTNAME=	htdig-3.1.6
 PKGREVISION=	3
@@ -11,6 +11,7 @@ MASTER_SITES=	http://www.htdig.org/files/ \
 		http://www.it.htdig.org/files/ \
 		ftp://www.it.htdig.org/pub/htdig/ \
 		http://www.opdenbrouw.nl/htdig/maindocs/files/
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://htdig.sourceforge.net/
@@ -42,10 +43,10 @@ CONF_FILES+=	${PREFIX}/share/examples/htdig/htdig.conf \
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(EXTRACT_USING:Mgtar)
-EXTRACT_ELEMENTS= --exclude ${DISTNAME}/db*
-.else
-EXTRACT_ELEMENTS= -c ${DISTNAME}/db*
+.if !empty(EXTRACT_USING:M*tar)
+EXTRACT_CMD_OPTS${EXTRACT_SUFX}=	--exclude ${DISTNAME}/db*
+.elif !empty(EXTRACT_USING:Mpax)
+EXTRACT_CMD_OPTS${EXTRACT_SUFX}=	-c ${DISTNAME}/db*
 .endif
 
 .include "../../databases/db/buildlink3.mk"
