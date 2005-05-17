@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/10/07 17:29:16 abs Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/05/17 17:06:12 abs Exp $
 share/doc/html/exim/C002.txt
 share/doc/html/exim/C006.txt
 share/doc/html/exim/C022.txt
@@ -11,6 +11,7 @@ share/doc/html/exim/C046.txt
 share/doc/html/exim/C047.txt
 share/doc/html/exim/C049.txt
 share/doc/html/exim/C050.txt
+share/doc/html/exim/C051.txt
 share/doc/html/exim/F001.txt
 share/doc/html/exim/F002.txt
 share/doc/html/exim/F003.txt
@@ -130,6 +131,9 @@ share/doc/html/exim/spec_48.html
 share/doc/html/exim/spec_49.html
 share/doc/html/exim/spec_5.html
 share/doc/html/exim/spec_50.html
+share/doc/html/exim/spec_51.html
+share/doc/html/exim/spec_52.html
+share/doc/html/exim/spec_53.html
 share/doc/html/exim/spec_6.html
 share/doc/html/exim/spec_7.html
 share/doc/html/exim/spec_8.html
