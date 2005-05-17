@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.6 2005/05/16 18:43:20 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.7 2005/05/17 21:34:29 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -176,11 +176,11 @@ _DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${PAX} -O -r ${EXTRACT_
 .for __suffix__ in ${_EXTRACT_SUFFIXES}
 .  if !defined(EXTRACT_CMD${__suffix__})
 .    if !empty(EXTRACT_USING:Mgtar)
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
+EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${GTAR} ${EXTRACT_CMD_OPTS${__suffix__}} -xf - ${EXTRACT_ELEMENTS}
 .    elif !empty(EXTRACT_USING:Mnbtar)
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${TAR} -xf - ${EXTRACT_ELEMENTS}
+EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${TAR} ${EXTRACT_CMD_OPTS${__suffix__}} -xf - ${EXTRACT_ELEMENTS}
 .    else
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${PAX} -O -r ${EXTRACT_ELEMENTS}
+EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${PAX} ${EXTRACT_CMD_OPTS${__suffix__}} -O -r ${EXTRACT_ELEMENTS}
 .    endif
 .  endif
 .endfor
