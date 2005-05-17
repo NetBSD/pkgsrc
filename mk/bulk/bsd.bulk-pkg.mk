@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.65.2.5 2005/03/21 15:43:00 tv Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.65.2.6 2005/05/17 18:29:44 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -44,6 +44,14 @@
 
 LS?=	ls
 WC?=	wc
+TO_HTML?=	${SED} -e 's,&,\&amp;,g' -e 's,<,\&lt;,g' -e 's,>,\&gt;,g'
+
+# A sort(1) capable of very long lines is needed for full builds in "tflat".
+# Some platforms (namely, Interix) may not provide one, so override here.
+.if ${OPSYS} == "Interix"
+_SORT=			${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sort
+.endif
+_SORT?=			${SORT}
 
 # This variable is set to 'yes' by the pkgsrc/mk/bulk/build script.  It enables
 # the use of several cache files (DEPENDSTREEFILE, DEPENDSFILE, SUPPORTSFILE,
@@ -184,15 +192,15 @@ bulk-cache:
 		}} END{ \
 		for(pkg in pkgs) {if( pkg in listed ) {} else{ print pkg " " pkg;}} \
 		}' \
-		${BULK_DBFILE} | ${SORT} -u > ${DEPENDSTREEFILE}
+		${BULK_DBFILE} | ${_SORT} -u > ${DEPENDSTREEFILE}
 	@${ECHO_MSG} "BULK> Extracting package name <=> package directory cross reference file"
 	${AWK} '/^index/ {print $$2 " " $$3 " "}' ${BULK_DBFILE} > ${INDEXFILE}
 .endif
 	@${ECHO_MSG} "BULK> Sorting build order."
 	${TSORT} ${DEPENDSTREEFILE} > ${ORDERFILE}
 	@${ECHO_MSG} "BULK> Generating up and down dependency files."
-	${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat up ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
-	${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat down ${DEPENDSTREEFILE} > ${DEPENDSFILE}
+	${SETENV} SORT=${_SORT:Q} ${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat up ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
+	${SETENV} SORT=${_SORT:Q} ${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat down ${DEPENDSTREEFILE} > ${DEPENDSFILE}
 
 # remove the bulk cache files
 clean-bulk-cache:
@@ -301,7 +309,7 @@ bulk-package:
 			done ;\
 		fi; \
 		${ECHO_MSG} "BULK> Full rebuild in progress..." ; \
-		${ECHO_MSG} "BULK> Cleaning package and its depends" ;\
+		${ECHO_MSG} "BULK> Cleaning package ${PKGNAME} and pre-requisite packages" ;\
 		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 			for pkgdir in ${PKGPATH} `${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:;;p" ${DEPENDSFILE}`; do \
 				${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
@@ -384,7 +392,7 @@ bulk-package:
 			if [ -f "${WRKLOG}" ]; then \
 				(${ECHO_MSG} "<pre>"; \
 				${ECHO_MSG} ""; \
-				${CAT} ${WRKLOG}; \
+				${TO_HTML} ${WRKLOG}; \
 				${ECHO_MSG} "</pre>"; \
 				) >> ${BROKENWRKLOG}; \
 			fi; \
@@ -443,7 +451,7 @@ bulk-package:
 		fi ; \
 		case ${_PRESERVE_WRKDIR} in				\
 		yes|YES)	;;					\
-		*)	${ECHO_MSG} "BULK> Cleaning packages and its depends"; \
+		*)	${ECHO_MSG} "BULK> Cleaning package ${PKGNAME} and pre-requisite packages"; \
 		 	if [ "${USE_BULK_CACHE}" = "yes" ]; then	\
 				for pkgdir in ${PKGPATH} `${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:;;p" ${DEPENDSFILE}`; do \
 					${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \

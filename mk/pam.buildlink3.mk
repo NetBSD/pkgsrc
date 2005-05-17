@@ -1,4 +1,4 @@
-# $NetBSD: pam.buildlink3.mk,v 1.3.2.2 2005/01/24 18:40:01 tv Exp $
+# $NetBSD: pam.buildlink3.mk,v 1.3.2.3 2005/05/17 18:29:44 tv Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a PAM implementation.  pam.buildlink3.mk will:
@@ -25,7 +25,19 @@ PAM_BUILDLINK3_MK:=	${PAM_BUILDLINK3_MK}+
 # This is an exhaustive list of all of the PAM implementations
 # that may be used with PAM.buildlink3.mk, in order of precedence.
 #
-_PAM_PKGS?=	linux-pam openpam solaris-pam
+# OS conditionals can exclude implementations not available on
+# some platforms.
+#
+.if ${OPSYS} != "Interix"
+_PAM_PKGS+=	linux-pam
+.endif
+
+.if ${OPSYS} != "Interix"
+_PAM_PKGS+=	openpam
+.endif
+
+# builtin only, so no conditional needed
+_PAM_PKGS+=	solaris-pam
 
 BUILDLINK_BUILTIN_MK.linux-pam=		../../security/PAM/builtin.mk
 BUILDLINK_BUILTIN_MK.openpam=		../../security/openpam/builtin.mk

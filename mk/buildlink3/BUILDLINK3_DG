@@ -1,4 +1,4 @@
-$NetBSD: BUILDLINK3_DG,v 1.6.2.1 2004/11/22 22:48:05 tv Exp $
+$NetBSD: BUILDLINK3_DG,v 1.6.2.2 2005/05/17 18:29:44 tv Exp $
 
  0 Developer's guide to buildlink3
  =================================
@@ -59,26 +59,10 @@ to build against the viewed instance of a depoted package.
  2 Troubleshooting
  =================
 
-Q1: I'm trying to bl3ify a package but I get an error that looks like:
-
-	make: don't know how to make _BUILDLINK_USE. Stop
-
-A1: You forgot to change a reference to a buildlink2.mk file into a
-    buildlink3.mk file.
-
-
-Q2: Dependencies are added for every single buildlink3.mk file I
-    include, including for when it's supposed to use the base system
-    software.  What's going on?
-
-A2: You forgot to change USE_BUILDLINK2 to USE_BUILDLINK3 in the
-    package Makefile.
-
-
-Q3: Where can I see the actual command executed by the wrapper
+Q1: Where can I see the actual command executed by the wrapper
     scripts?
 
-A3: You should examine the contents of the ${WRKDIR}/.work.log file.
+A1: You should examine the contents of the ${WRKDIR}/.work.log file.
     The lines preceded with [*] are the commands that are intercepted
     by the wrapper scripts, and the lines preceded with <.> are the
     commands that are executed by the wrapper scripts.

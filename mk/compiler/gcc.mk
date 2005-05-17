@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.74.2.4 2005/01/24 18:40:01 tv Exp $
+# $NetBSD: gcc.mk,v 1.74.2.5 2005/05/17 18:29:45 tv Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -403,17 +403,9 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 
 # Add the dependency on GCC.
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
-.  if !empty(USE_BUILDLINK3:M[yY][eE][sS])
-.    for _dir_ in ${_GCC_PKGSRCDIR}
-.      include "${_dir_}/buildlink3.mk"
-.    endfor
-.  else
-.    if defined(_USE_GCC_SHLIB)
-DEPENDS+=	${_GCC_DEPENDENCY}
-.    else
-BUILD_DEPENDS+=	${_GCC_DEPENDENCY}
-.    endif
-.  endif
+.  for _dir_ in ${_GCC_PKGSRCDIR}
+.    include "${_dir_}/buildlink3.mk"
+.  endfor
 .endif
 
 # Create compiler driver scripts in ${WRKDIR}.
