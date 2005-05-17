@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1667 2005/05/17 06:31:00 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1668 2005/05/17 21:46:59 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -3994,16 +3994,18 @@ README.html: .PRECIOUS
 	${AWK} -f ../../mk/scripts/genreadme.awk \
 		builddependsfile=/dev/null \
 		dependsfile=/dev/null \
+		AWK=${AWK} \
+		CMP=${CMP} \
 		DISTDIR=${DISTDIR} \
-		MACHINE_ARCH=${MACHINE_ARCH} \
-		MULTIARCH=$$MULTIARCH \
-		OPSYS=${OPSYS} \
-		OS_VERSION=${OS_VERSION} \
+		GREP=${GREP} \
 		PACKAGES=${PACKAGES} \
+		PKG_INFO="${PKG_INFO}" \
 		PKG_SUFX=${PKG_SUFX} \
 		PKG_URL=${PKG_URL} \
-		PKGREPOSITORYSUBDIR=${PKGREPOSITORYSUBDIR} \
 		PKGSRCDIR=${.CURDIR:C|/[^/]*/[^/]*$||} \
+		SED=${SED} \
+		SETENV=${SETENV} \
+		SORT=${SORT} \
 		TMPDIR=${TMPDIR:U/tmp} \
 		SINGLEPKG=${PKGPATH} \
 		$@.tmp1
