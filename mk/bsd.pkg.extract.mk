@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.7 2005/05/17 21:34:29 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.8 2005/05/17 22:11:14 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -52,7 +52,8 @@ _EXTRACT_SUFFIXES+=	.rar
 .if !empty(EXTRACT_ONLY:M*.tar) || !empty(EXTRACT_ONLY:M*.tar.*) || \
     !empty(EXTRACT_SUFX:M*.tar) || !empty(EXTRACT_SUFX:M*.tar.*) || \
     !empty(EXTRACT_ONLY:M*.tbz) || !empty(EXTRACT_ONLY:M*.tgz) || \
-    !empty(EXTRACT_SUFX:M*.tbz) || !empty(EXTRACT_SUFX:M*.tgz)
+    !empty(EXTRACT_SUFX:M*.tbz) || !empty(EXTRACT_SUFX:M*.tgz) || \
+    !empty(EXTRACT_ONLY:M*_tar.gz) || !empty(EXTRACT_SUFX:M*_tar.gz)
 .  if !empty(EXTRACT_USING:Mgtar)
 PKGSRC_USE_TOOLS+=	gtar
 .  elif !empty(EXTRACT_USING:Mnbtar)
