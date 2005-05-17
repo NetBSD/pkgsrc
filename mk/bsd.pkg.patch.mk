@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.8 2005/05/17 19:08:30 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.9 2005/05/17 19:11:02 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -258,7 +258,7 @@ apply-pkgsrc-patches:
 			;;						\
 		esac;							\
 		${ECHO_PATCH_MSG} "${_PKGSRC_IN}> Applying pkgsrc patch $$i"; \
-		fuzz=;							\
+		fuzz_flags=;						\
 		if ${PATCH} -v >/dev/null 2>&1; then			\
 			fuzz_flags=${PATCH_FUZZ_FACTOR:Q};		\
 		fi;							\
