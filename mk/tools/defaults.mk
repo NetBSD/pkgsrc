@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.15 2005/05/15 23:20:38 jlam Exp $
+# $NetBSD: defaults.mk,v 1.16 2005/05/17 18:34:45 jlam Exp $
 
 .if !defined(TOOLS_DEFAULTS_MK)
 TOOLS_DEFAULTS_MK=	defined
@@ -62,6 +62,7 @@ _TOOLS_VARNAME.mv=		MV
 _TOOLS_VARNAME.nice=		NICE
 _TOOLS_VARNAME.patch=		PATCH
 _TOOLS_VARNAME.pax=		PAX
+_TOOLS_VARNAME.perl=		PERL5
 _TOOLS_VARNAME.pwd=		PWD_CMD
 _TOOLS_VARNAME.rm=		RM
 _TOOLS_VARNAME.rmdir=		RMDIR
