@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: named9.sh,v 1.2 2005/03/18 01:14:32 tron Exp $
+# $NetBSD: named9.sh,v 1.3 2005/05/17 13:17:34 sketch Exp $
 #
 
 # PROVIDE: named
