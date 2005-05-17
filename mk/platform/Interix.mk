@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.13.2.3 2005/03/21 15:43:00 tv Exp $
+# $NetBSD: Interix.mk,v 1.13.2.4 2005/05/17 18:29:46 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -33,11 +33,22 @@
 #   (main lib)	0x48000000
 # zsh		*
 
+BULK_PREREQ+=	converters/libiconv devel/gettext-lib pkgtools/pkg_install-info
 BULK_PREREQ+=	lang/gawk sysutils/coreutils
 
 # "catinstall" not yet supported as there's no shipped [gn]roff
 MANINSTALL=	maninstall
 MAKE_FLAGS+=	MKCATPAGES=no NOLINT=1
+
+ECHO_N?=	/bin/printf %s			# does not support "echo -n"
+IMAKEOPTS+=	-DBuildHtmlManPages=NO
+PKGLOCALEDIR?=	share
+PS?=		/bin/ps
+RSH?=		/usr/bin/rsh
+SU?=		/bin/su
+TYPE?=		type				# Shell builtin
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 
 # Use some pkgsrc versions as "better" replacements, if installed
 .if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk)
@@ -45,9 +56,6 @@ AWK?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
 .endif
 .if exists(${LOCALBASE}/bin/gtar)
 GTAR?=		${LOCALBASE}/bin/gtar
-.endif
-.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sort)
-SORT?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sort
 .endif
 
 AWK?=		/usr/contrib/bin/gawk
@@ -62,7 +70,6 @@ CUT?=		/bin/cut
 DATE?=		/bin/date
 DIRNAME?=	/bin/dirname
 ECHO?=		echo				# Shell builtin
-ECHO_N?=	/bin/printf %s			# does not support "echo -n"
 EGREP?=		/bin/egrep
 EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
@@ -74,13 +81,11 @@ GREP?=		/bin/grep
 GTAR?=		${LOCALBASE}/bin/tar
 GUNZIP_CMD?=	/usr/contrib/bin/gunzip -f
 GZCAT?=		/usr/contrib/bin/gunzip -c
-GZIP?=		-9
 GZIP_CMD?=	/usr/contrib/bin/gzip -nf ${GZIP}
 HEAD?=		/bin/head
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/bin/id
 IMAKE?=		${X11BASE}/bin/imake ${IMAKEOPTS}
-IMAKEOPTS+=	-DBuildHtmlManPages=NO
 LDCONFIG?=	/bin/true
 LN?=		/bin/ln
 LS?=		/bin/ls
@@ -93,18 +98,14 @@ NICE?=		/bin/nice
 PATCH?=		${LOCALBASE}/bin/gpatch
 PAX?=		${LOCALBASE}/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
-PKGLOCALEDIR?=	share
-PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
-RSH?=		/usr/bin/rsh
 SED?=		${LOCALBASE}/bin/nbsed
 SETENV?=	/bin/env
 SH?=		/bin/sh
 SHLOCK=		${LOCALBASE}/bin/shlock
 SORT?=		/bin/sort
-SU?=		/bin/su
 TAIL?=		/bin/tail
 TAR?=		${LOCALBASE}/bin/tar
 TEE?=		/bin/tee
@@ -113,9 +114,9 @@ TOUCH?=		/bin/touch
 TR?=		/bin/tr
 TRUE?=		true				# Shell builtin
 TSORT?=		/bin/tsort
-TYPE?=		type				# Shell builtin
 WC?=		/bin/wc
 XARGS?=		/bin/xargs
+.endif
 
 USERADD?=		${LOCALBASE}/sbin/useradd
 GROUPADD?=		${LOCALBASE}/sbin/groupadd
@@ -138,7 +139,7 @@ ROOT_GROUP?=		131616 # +Administrators or native language equivalent
 TOUCH_FLAGS?=
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
-ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
+ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 
 # imake installs manpages in weird places
 IMAKE_MAN_SOURCE_PATH=	man/man
@@ -164,7 +165,6 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
-_OPSYS_LIBTOOL_REQD=	1.5.10nb4
 _OPSYS_PERL_REQD=	5.8.3nb1 # base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF	# shared lib type - not exactly true, but near enough

@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: NetBSD.pkg.dist,v 1.78.2.4 2005/02/11 15:27:56 tv Exp $
+#	$NetBSD: NetBSD.pkg.dist,v 1.78.2.5 2005/05/17 18:29:44 tv Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -630,6 +630,10 @@
                 LC_MESSAGES
                 ..
             ..
+            fy
+                LC_MESSAGES
+                ..
+            ..
             ga
                 LC_MESSAGES
                 ..
@@ -735,6 +739,10 @@
                 ..
             ..
             ms
+                LC_MESSAGES
+                ..
+            ..
+            mt
                 LC_MESSAGES
                 ..
             ..
@@ -1035,8 +1043,6 @@
 	    sv_SE.ISO_8859-1
             ..
 	    uk_UA.KOI8-U
-	    ..
-	    uk_UA.ISO_8859-1
 	    ..
         ..
         skel

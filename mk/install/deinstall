@@ -1,6 +1,7 @@
+# -*- sh -*-
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.29.2.1 2005/02/11 15:27:57 tv Exp $
+# $NetBSD: deinstall,v 1.29.2.2 2005/05/17 18:29:45 tv Exp $
 
 case ${STAGE} in
 VIEW-DEINSTALL)

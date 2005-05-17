@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.20.2.7 2005/03/21 15:43:00 tv Exp $
+# $NetBSD: bsd.sites.mk,v 1.20.2.8 2005/05/17 18:29:44 tv Exp $
 #
 # Default MASTER_SITES
 
@@ -92,12 +92,9 @@ MASTER_SITE_GNOME+=     \
 	ftp://ftp.mirror.ac.uk/sites/ftp.gnome.org/pub/
 
 MASTER_SITE_SOURCEFORGE+=	\
-	http://belnet.dl.sourceforge.net/sourceforge/ \
-	http://citkit.dl.sourceforge.net/sourceforge/ \
 	http://cogent.dl.sourceforge.net/sourceforge/ \
 	http://easynews.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
-	http://internap.dl.sourceforge.net/sourceforge/ \
 	http://jaist.dl.sourceforge.net/sourceforge/ \
 	http://kent.dl.sourceforge.net/sourceforge/ \
 	http://mesh.dl.sourceforge.net/sourceforge/ \
@@ -105,10 +102,8 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://optusnet.dl.sourceforge.net/sourceforge/ \
 	http://ovh.dl.sourceforge.net/sourceforge/ \
 	http://puzzle.dl.sourceforge.net/sourceforge/ \
-	http://switch.dl.sourceforge.net/sourceforge/ \
-	http://unc.dl.sourceforge.net/sourceforge/ \
-	http://voxel.dl.sourceforge.net/sourceforge/ \
-	ftp://ftp2.sourceforge.net/pub/sourceforge/
+	http://switch.dl.sourceforge.net/sourceforge/
+#	ftp://ftp2.sourceforge.net/pub/sourceforge/
 #	ftp://ftp.tuwien.ac.at/linux/sourceforge/
 #	http://sf.gds.tuwien.ac.at/
 
@@ -144,8 +139,7 @@ MASTER_SITE_XEMACS+=    \
 	http://public.planetmirror.com.au/pub/xemacs/ \
 	ftp://mirror.aarnet.edu.au/pub/xemacs/ \
 	ftp://mirror.cict.fr/xemacs/ \
-	ftp://ring.aist.go.jp/pub/text/xemacs/ \
-	ftp://ring.asahi-net.or.jp/pub/text/xemacs/
+	ftp://ftp.t.ring.gr.jp/pub/text/xemacs/
 
 MASTER_SITE_APACHE+=    \
 	http://www.apache.org/dist/ \
@@ -252,7 +246,7 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://public.planetmirror.com.au/pub/openoffice/ \
 	http://komo.vlsm.org/openoffice/ \
 	ftp://ftp.kddlabs.co.jp/office/openoffice/ \
-	ftp://ftp.ring.gr.jp/pub/misc/openoffice/ \
+	ftp://ftp.t.ring.gr.jp/pub/misc/openoffice/ \
 	http://mymirror.asiaosc.org/openoffice/ \
 	ftp://ftp.kr.freebsd.org/pub/openoffice/ \
 	http://www.fs.tum.de/~mrauch/OpenOffice/download/
@@ -261,7 +255,7 @@ MASTER_SITE_CYGWIN+= \
 	http://mirrors.kernel.org/sources.redhat.com/cygwin/ \
 	http://mirrors.rcn.net/pub/sourceware/cygwin/ \
 	http://mirrors.xmission.com/cygwin/ \
-	ftp://ftp.ring.gr.jp/archives/pc/gnu-win32/ \
+	ftp://ftp.t.ring.gr.jp/archives/pc/gnu-win32/ \
 	ftp://ftp.funet.fi/pub/mirrors/cygwin.com/pub/cygwin/
 
 MASTER_SITE_IFARCHIVE+= \
@@ -270,6 +264,14 @@ MASTER_SITE_IFARCHIVE+= \
 	http://ifarchive.heanet.ie/if-archive/ \
 	http://ifarchive.giga.or.at/if-archive/
  
+MASTER_SITE_FREEBSD+= \
+	ftp://ftp.FreeBSD.org/pub/FreeBSD/distfiles/ \
+	ftp://ftp.jp.FreeBSD.org/pub/FreeBSD/distfiles/
+
+MASTER_SITE_FREEBSD_LOCAL+= \
+	ftp://ftp.FreeBSD.org/pub/FreeBSD/ports/local-distfiles/ \
+	ftp://ftp.jp.FreeBSD.org/pub/FreeBSD/ports/local-distfiles/
+
 # The primary backup site. 
 MASTER_SITE_BACKUP?=	\
 	http://ftp.fi.NetBSD.org/pub/NetBSD/packages/distfiles/ \

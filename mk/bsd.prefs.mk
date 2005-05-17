@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.177.2.6 2005/02/25 14:46:51 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.177.2.7 2005/05/17 18:29:44 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -7,7 +7,7 @@
 # the system defaults (sys.mk and bsd.own.mk) are used.
 
 # Do not recursively include mk.conf, redefine OPSYS, include bsd.own.mk, etc.
-.ifndef BSD_PKG_MK
+.if !defined(BSD_PKG_MK)
 
 # Let mk.conf know that this is pkgsrc.
 BSD_PKG_MK=1
@@ -45,14 +45,14 @@ CUT=/bin/cut
 CUT=echo Unknown
 .endif
 
-.ifndef OPSYS
+.if !defined(OPSYS)
 OPSYS!=			${UNAME} -s | tr -d /
 .endif
 MAKEFLAGS+=		OPSYS=${OPSYS}
-.ifndef OS_VERSION
+.if !defined(OS_VERSION)
 OS_VERSION!=		${UNAME} -r
 .endif
-.ifndef LOWER_OS_VERSION
+.if !defined(LOWER_OS_VERSION)
 LOWER_OS_VERSION!=	echo ${OS_VERSION} | tr 'A-Z' 'a-z'
 .endif
 MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
@@ -267,6 +267,22 @@ _PKGSRC_TOPDIR=	${.CURDIR}/../..
 .  include "${_PKGSRC_TOPDIR}/mk/defaults/mk.conf"
 .endif
 
+PKGSRC_USE_TOOLS?=	# empty
+USE_TOOLS?=		# empty
+
+# Provide default values for TOOLs used by the top-level make.
+PKGSRC_USE_TOOLS+=	[ awk dirname echo grep pwd sed test true
+
+# These tools are used by the top-level make only in certain packages and
+# should eventually be moved into those particular package Makefiles.
+#
+PKGSRC_USE_TOOLS+=	date tr
+
+_USE_NEW_TOOLS?=	yes
+.if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+.include "${_PKGSRC_TOPDIR}/mk/tools/defaults.mk"
+.endif
+
 .if ${OPSYS} == "NetBSD"
 .  if ${OBJECT_FMT} == "ELF" && \
    (${MACHINE_GNU_ARCH} == "arm" || \
@@ -399,14 +415,20 @@ _XPKGWEDGE_REQD=	1.9
 # The check for the existence of ${X11BASE}/lib/X11/config/xpkgwedge.def
 # is to catch users of xpkgwedge<1.0.
 #
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 XMKMF?=			${XMKMF_CMD} ${XMKMF_FLAGS} -a
 XMKMF_FLAGS?=		# empty
+.endif
 .if !empty(USE_XPKGWEDGE:M[Yy][Ee][Ss]) 
 X11PREFIX=		${LOCALBASE}
+.  if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 XMKMF_CMD?=		${X11PREFIX}/bin/pkgxmkmf
+.  endif
 .else
 X11PREFIX=		${X11BASE}
+.  if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
+.  endif
 .endif
 
 DEPOT_SUBDIR?=		packages
@@ -435,7 +457,7 @@ COMPILER_RPATH_FLAG?=	${_COMPILER_RPATH_FLAG}
 WHOLE_ARCHIVE_FLAG?=	${_OPSYS_WHOLE_ARCHIVE_FLAG}
 NO_WHOLE_ARCHIVE_FLAG?=	${_OPSYS_NO_WHOLE_ARCHIVE_FLAG}
 
-.ifndef DIGEST
+.if !defined(DIGEST)
 DIGEST:=		${LOCALBASE}/bin/digest
 MAKEFLAGS+=		DIGEST=${DIGEST}
 .endif
@@ -509,11 +531,6 @@ LINKFARM?=		${LINKFARM_CMD}
 #
 PKG_BEST_EXISTS?=	${PKG_ADMIN} -b -d ${_PKG_DBDIR} -S lsbest
 
-USE_BUILDLINK3?=	no	# default to not using buildlink3
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-USE_BUILDLINK3=		yes	# pkgviews requires buildlink3
-.endif
-
 .if exists(${LOCALBASE}/bsd/share/mk/zoularis.mk)
 PKG_FAIL_REASON+=	'You appear to have a deprecated Zoularis installation.'
 PKG_FAIL_REASON+=	'Please update your system to bootstrap-pkgsrc and remove the'
@@ -575,7 +592,7 @@ PKG_DEFAULT_OPTIONS?=	# empty
 PKG_OPTIONS?=		# empty
 
 # we want this *before* compiler.mk, so that compiler.mk paths override them
-PREPEND_PATH+=		${LOCALBASE}/bin ${USE_IMAKE:D${X11BASE}/bin}
+PREPEND_PATH+=		${USE_X11:D${X11BASE}/bin} ${LOCALBASE}/bin
 
 # Wrapper framework definitions
 .include "${PKGSRCDIR}/mk/wrapper/wrapper-defs.mk"

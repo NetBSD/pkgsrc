@@ -1,10 +1,10 @@
-# $NetBSD: apache.mk,v 1.6.4.1 2005/01/10 16:15:25 tv Exp $
+# $NetBSD: apache.mk,v 1.6.4.2 2005/05/17 18:29:44 tv Exp $
 #
 # This Makefile fragment handles Apache dependencies and make variables,
 # and is meant to be included by packages that require Apache either at
 # build-time or at run-time.  apache.mk will:
 #
-#	* set PKG_APACHE to the name of the apache web serverused
+#	* set PKG_APACHE to the name of the apache web server used
 #
 #	* add a full dependency on the apache server
 #
@@ -120,36 +120,20 @@ _APACHE_BL_SRCDIR=	${_APACHE_PKGSRCDIR}
 
 _APACHE_BL_SRCDIR?=	../../www/apache
 
-_APACHE_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_APACHE}}:${_APACHE_PKGSRCDIR}
-
 # Add a runtime dependency on the apache server.
 # This may or may not create an actual dependency depending on
 # what the apache buildlink[23].mk file does.
 #
 .if defined(_APACHE_PKGSRCDIR)
-.  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
-.    include "${_APACHE_BL_SRCDIR}/buildlink3.mk"
-.  else
-DEPENDS+=		${_APACHE_DEPENDENCY}
-.  endif
+.  include "${_APACHE_BL_SRCDIR}/buildlink3.mk"
 .endif
 
 # If we are building apache modules, then we might need a build-time
 # dependency on apr, and the apache sources?
 #
-.if defined(_APACHE_PKGSRCDIR)
-.  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
-.    include "${_APACHE_BL_SRCDIR}/buildlink3.mk"
-.  else
-BUILD_DEPENDS+=		${_APACHE_DEPENDENCY}
-.  endif
-.endif
-
 .if ${_PKG_APACHE} == "apache2"
 .  if defined(USE_APR) && !empty(USE_APR:M[yY][eE][sS])
-.    if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
-.      include "../../devel/apr/buildlink3.mk"
-.    endif
+.    include "../../devel/apr/buildlink3.mk"
 .  endif
 .endif
 
