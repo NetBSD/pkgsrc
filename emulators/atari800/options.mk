@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2005/03/22 08:46:26 adam Exp $
+# $NetBSD: options.mk,v 1.2 2005/05/17 15:08:57 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.atari800
-PKG_DEFAULT_OPTIONS=	x11
+PKG_DEFAULT_OPTIONS=	sdl
 PKG_SUPPORTED_OPTIONS=	sdl x11
 
 .include "../../mk/bsd.options.mk"
