@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3492 2005/05/17 13:42:09 wiz Exp $
+$NetBSD: TODO,v 1.3493 2005/05/17 15:10:26 adam Exp $
 
 Suggested new packages
 ======================
@@ -355,7 +355,6 @@ Suggested package updates
 	o aspell-faroese-0.2.22
 	o ast-ksh-20040229
 	o astyle-1.15.3
-	o atari800-1.3.6
 	o auctex-11.55
 	o autogen-5.7
 	o avidemux-2.0.36

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10100 2005/05/17 13:30:46 adam Exp $
+$NetBSD: CHANGES,v 1.10101 2005/05/17 15:10:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2393,3 +2393,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p7zip to 4.18 [adam 2005-05-17]
 	Updated curl to 7.14.0 [adam 2005-05-17]
 	Updated py-curl to 7.13.2 [adam 2005-05-17]
+	Updated atari800 to 1.3.6 [adam 2005-05-17]
