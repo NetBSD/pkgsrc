@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10097 2005/05/17 04:46:55 atatat Exp $
+$NetBSD: CHANGES,v 1.10098 2005/05/17 07:23:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2390,3 +2390,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated vim to 6.3.071 [martti 2005-05-16]
 	Added tex-chemarrow-0.1 [jschauma 2005-05-16]
 	Updated lsof to 4.75 [atatat 2005-05-17]
+	Updated p7zip to 4.18 [adam 2005-05-17]
