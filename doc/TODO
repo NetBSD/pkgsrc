@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3490 2005/05/16 18:43:21 rillig Exp $
+$NetBSD: TODO,v 1.3491 2005/05/17 13:30:46 adam Exp $
 
 Suggested new packages
 ======================
@@ -911,7 +911,6 @@ Suggested package updates
 	o py-ZODB-3.2.3
 	o py-amkCrypto-2.0
 	o py-bdb-xml-2.0.9
-	o py-curl-7.13.2
 	o py-gnuplot-1.7
 	o py-imaging-1.1.5c2
 	o py-kenosis-0.95
