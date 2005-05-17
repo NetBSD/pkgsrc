@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3493 2005/05/17 15:10:26 adam Exp $
+$NetBSD: TODO,v 1.3494 2005/05/17 17:07:50 abs Exp $
 
 Suggested new packages
 ======================
@@ -477,7 +477,6 @@ Suggested package updates
 	o etach-1.4.0
 	o ethereal-0.10.11
 	o exiftags-1.00
-	o exim-4.50
 	o exmh-2.7.2
 	o f2c-20031025
 	o fakeroot-1.2.9 [pkg/30015]
