@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.11 2005/05/17 22:22:52 jlam Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.12 2005/05/17 22:49:55 jlam Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -138,6 +138,11 @@ _PERL5_STRICTEST_REQD=	${_version_}
 .endfor
 _PERL5_REQD=	${_PERL5_STRICTEST_REQD}
 
+.if defined(USE_PERL5) || !empty(USE_TOOLS:Mperl)
+_PERL5_DEPENDS=		{perl>=${_PERL5_REQD},perl-thread>=${_PERL5_REQD}}
+PERL5_PKGSRCDIR?=	../../lang/perl58
+.endif
+
 # Convert USE_PERL5 to be two-valued: either "build" or "run" to denote
 # whether we want a build-time or run-time dependency on perl.
 #
@@ -149,7 +154,6 @@ USE_PERL5:=		run
 _PERL5_DEPMETHOD=	DEPENDS
 .  endif
 _PERL5_DEPENDS=		{perl>=${_PERL5_REQD},perl-thread>=${_PERL5_REQD}}
-PERL5_PKGSRCDIR?=	../../lang/perl58
 .  if !defined(BUILDLINK_DEPENDS.perl)
 ${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
 .  endif
