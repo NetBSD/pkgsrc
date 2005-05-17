@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.6 2005/05/17 05:00:06 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.7 2005/05/17 06:31:00 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -181,6 +181,15 @@ if ${TEST} -n ${PKG_OPTIONS:Q}"" ||					\
 	${ECHO} "=========================================================================="; \
 fi; exit 1
 
+_PATCH_COOKIE_TMP=	${PATCH_COOKIE}.tmp
+_GENERATE_PATCH_COOKIE=	\
+	if ${TEST} -f ${_PATCH_COOKIE_TMP:Q}; then			\
+		${CAT} ${_PATCH_COOKIE_TMP:Q} >> ${PATCH_COOKIE:Q};	\
+		${RM} -f ${_PATCH_COOKIE_TMP:Q};			\
+	else								\
+		${TOUCH} ${TOUCH_FLAGS} ${PATCH_COOKIE:Q};		\
+	fi
+
 apply-distribution-patches:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patches for ${PKGNAME}"
 .for i in ${PATCHFILES}
@@ -189,6 +198,7 @@ apply-distribution-patches:
 	${PATCH_DIST_CAT.${i:S/=/--/}} |				\
 	${PATCH} ${PATCH_DIST_ARGS.${i:S/=/--/}}			\
 		|| { ${ECHO} "Patch ${i} failed"; ${_PKGSRC_PATCH_FAIL}; }
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${i:Q} >> ${_PATCH_COOKIE_TMP:Q}
 .endfor
 
 _PKGSRC_PATCHES=	# empty
@@ -253,6 +263,7 @@ apply-pkgsrc-patches:
 		${PATCH} -v >/dev/null 2>&1 && fuzz=${PATCH_FUZZ_FACTOR:Q}; \
 		${PATCH} $$fuzz ${PATCH_ARGS} < $$i ||			\
 			${ECHO_MSG} "Patch $$i failed";			\
+		${ECHO} "$$i" >> ${_PATCH_COOKIE_TMP:Q};		\
 	done;								\
 	if ${TEST} -n "$$fail"; then					\
 		${ECHO_MSG} "Patching failed due to modified patch file(s): $$fail"; \
