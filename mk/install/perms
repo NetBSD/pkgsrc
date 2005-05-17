@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: perms,v 1.1.2.2 2005/02/11 15:27:57 tv Exp $
+# $NetBSD: perms,v 1.1.2.3 2005/05/17 18:29:45 tv Exp $
 #
 # +PERMS - special file and directory permissions management script
 #
@@ -58,10 +58,6 @@ ${SED} -n "/^\# PERMS: /{s/^\# PERMS: //;p;}" ${SELF} | ${SORT} -u |
 		${ECHO} "	$file (o=$f_user, g=$f_group, m=$f_mode)"
 		;;
 	esac
-	case $f_mode in
-	"")	;;
-	*)	${CHMOD} $f_mode $file ;;
-	esac
 	case $f_user in
 	"")	;;
 	*)	${CHOWN} $f_user $file ;;
@@ -69,6 +65,10 @@ ${SED} -n "/^\# PERMS: /{s/^\# PERMS: //;p;}" ${SELF} | ${SORT} -u |
 	case $f_group in
 	"")	;;
 	*)	${CHGRP} $f_group $file ;;
+	esac
+	case $f_mode in
+	"")	;;
+	*)	${CHMOD} $f_mode $file ;;
 	esac
 done
 case "$printed_header" in

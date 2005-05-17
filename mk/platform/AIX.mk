@@ -1,7 +1,22 @@
-# $NetBSD: AIX.mk,v 1.4.2.5 2005/03/21 15:43:00 tv Exp $
+# $NetBSD: AIX.mk,v 1.4.2.6 2005/05/17 18:29:46 tv Exp $
 #
 # Variable definitions for the AIX operating system.
 
+CPP?=		${LOCALBASE}/bin/cpp
+ECHO_N?=	${ECHO} -n
+PKGLOCALEDIR?=	share
+PS?=		/bin/ps
+# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
+# and remove this comment.
+RSH?=		/usr/bin/rsh
+# AIX strip fails too easily.  Use a wrapper script instead
+.if exists(${LOCALBASE}/bin/strip)
+STRIP?=     ${LOCALBASE}/bin/strip
+.endif
+SU?=		/usr/bin/su
+TYPE?=		type				# Shell builtin
+
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
 CAT?=		/bin/cat
@@ -10,12 +25,10 @@ CHOWN?=		/usr/bin/chown
 CHGRP?=		/usr/bin/chgrp
 CMP?=		/usr/bin/cmp
 CP?=		/bin/cp
-CPP?=		${LOCALBASE}/bin/cpp
 CUT?=		/usr/bin/cut
 DATE?=		/bin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
-ECHO_N?=	${ECHO} -n
 .if exists(${LOCALBASE}/bin/gegrep)
 EGREP?=		${LOCALBASE}/bin/gegrep
 .else
@@ -48,7 +61,6 @@ GTAR?=		/usr/bin/tar
 .endif
 GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
 GZCAT?=		${LOCALBASE}/bin/zcat
-GZIP?=		-9
 GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
@@ -76,14 +88,9 @@ PERL5?=		${LOCALBASE}/bin/perl
 .else
 PERL5?=		/usr/bin/perl
 .endif
-PKGLOCALEDIR?=	share
-PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
-# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
-# and remove this comment.
-RSH?=		/usr/bin/rsh
 .if exists(${LOCALBASE}/bin/nbsed)
 SED?=		${LOCALBASE}/bin/nbsed
 .else
@@ -93,11 +100,6 @@ SETENV?=	/usr/bin/env
 SH?=		/bin/sh
 SHLOCK=		/usr/bin/shlock
 SORT?=		/usr/bin/sort
-# AIX strip fails too easily.  Use a wrapper script instead
-.if exists(${LOCALBASE}/bin/strip)
-STRIP?=     ${LOCALBASE}/bin/strip
-.endif
-SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
 .if exists(${LOCALBASE}/bin/tar)
 TAR?=		${LOCALBASE}/bin/tar
@@ -110,9 +112,9 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		true				# Shell builtin
 TSORT?=		/usr/bin/tsort
-TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
+.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
@@ -138,8 +140,7 @@ IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
 IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
 IMAKE_MANNEWSUFFIX=	0
 
-_DO_SHLIB_CHECKS=	no	# fixup PLIST for shared libs/run ldconfig
-                 	  	# doesn't work on AIX b/c no ldd.
+_DO_SHLIB_CHECKS=	yes
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

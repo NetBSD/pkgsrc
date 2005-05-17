@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.38.2.1 2005/02/11 15:27:57 tv Exp $
+# $NetBSD: mksandbox,v 1.38.2.2 2005/05/17 18:29:45 tv Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -60,6 +60,10 @@ err()
 	exit 1
 }
 
+# by default, don't require src and xsrc to be available
+need_src=no
+need_xsrc=no
+
 opsys=`uname -s`
 case "$opsys" in
 Darwin)
@@ -102,6 +106,8 @@ NetBSD)
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/bin/sed
+	need_src=yes
+	need_xsrc=yes
 	;;
 SunOS)
 	bmakeprog=bmake
@@ -158,11 +164,11 @@ if [ ! -d $pkgsrc ]; then
 	err "pkgsrc directory $pkgsrc does not exist."
 fi
 
-if [ ! -d $src ]; then
+if [ ! -d $src -a "$need_src" = "yes" ]; then
 	err "source directory $src does not exist."
 fi
 
-if [ ! -d $xsrc ]; then
+if [ ! -d $xsrc -a "$need_xsrc" = "yes" ]; then
 	err "xsrc directory $xsrc does not exist."
 fi
 
@@ -268,20 +274,24 @@ for f in $sandboxEmptyFiles; do
 	$cpprog /dev/null $sandbox$f
 done
 
-echo "Mount $src from $sandbox"
-$mkdirprog $sandbox/usr/src
-$mountprog $mountflags -r $src $sandbox/usr/src
-echo "$src /usr/src ro \\" >> $sandbox_script
+if [ "$need_src" = "yes" ]; then
+	echo "Mount $src from $sandbox"
+	$mkdirprog $sandbox/usr/src
+	$mountprog $mountflags -r $src $sandbox/usr/src
+	echo "$src /usr/src ro \\" >> $sandbox_script
+fi
 
 echo "Mount $pkgsrc from $sandbox"
 $mkdirprog $sandbox/usr/pkgsrc
 $mountprog $mountflags $pkgsrc $sandbox/usr/pkgsrc
 echo "$pkgsrc /usr/pkgsrc rw \\" >> $sandbox_script
 
-echo "Mount $xsrc from $sandbox"
-$mkdirprog $sandbox/usr/xsrc
-$mountprog $mountflags -r $xsrc $sandbox/usr/xsrc
-echo "$xsrc /usr/xsrc ro \\" >> $sandbox_script
+if [ "$need_xsrc" = "yes" ]; then
+	echo "Mount $xsrc from $sandbox"
+	$mkdirprog $sandbox/usr/xsrc
+	$mountprog $mountflags -r $xsrc $sandbox/usr/xsrc
+	echo "$xsrc /usr/xsrc ro \\" >> $sandbox_script
+fi
 
 echo "Mounting $packages and $distfiles from $sandbox"
 $mkdirprog $sandbox/$packages $sandbox/$distfiles

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.15 2004/02/25 09:20:59 grant Exp $
+# $NetBSD: printdepends,v 1.15.8.1 2005/05/17 18:29:45 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -64,15 +64,15 @@ cwd=$PWD
 
 # get some initial variables
 cd $cwd/pkgtools/pkglint
-GREP=`${BMAKE} show-var VARNAME=GREP`
-SED=`${BMAKE} show-var VARNAME=SED`
+GREP=`${BMAKE} show-var VARNAME=GREP USE_TOOLS=grep`
+SED=`${BMAKE} show-var VARNAME=SED USE_TOOLS=sed`
 cd $cwd
 
 if [ -n "${PKGLIST}" ]; then
 	list="${PKGLIST}"
 else
 	# List of all pkgs, from pkgsrc/*/Makefile
-	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
+	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${GREP} -v regress/ | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
 fi
 
 # cache the package list for printindex

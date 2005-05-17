@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.3.2.2 2005/03/21 15:43:00 tv Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.3.2.3 2005/05/17 18:29:44 tv Exp $
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
@@ -13,8 +13,25 @@ PGSQL_VERSIONS_ACCEPTED?=	80 74 73
 _PGSQL_VERSION_${pv}_OK=	yes
 .endfor
 
+.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+PG_LIB_EXT=dylib
+.else
+PG_LIB_EXT=so
+.endif
+
 # check what is installed
-.if exists(${LOCALBASE}/lib/libecpg.so.4.2)
+.if ${OPSYS} == "Darwin"
+.if exists(${LOCALBASE}/lib/libecpg.5.0.dylib)
+_PGSQL_VERSION_80_INSTALLED=	yes
+.endif
+.if exists(${LOCALBASE}/lib/libecpg.4.1.dylib)
+_PGSQL_VERSION_74_INSTALLED=	yes
+.endif
+.if exists(${LOCALBASE}/lib/libecpg.3.dylib)
+_PGSQL_VERSION_73_INSTALLED=yes
+.endif
+.else
+.if exists(${LOCALBASE}/lib/libecpg.so.5.0)
 _PGSQL_VERSION_80_INSTALLED=	yes
 .endif
 .if exists(${LOCALBASE}/lib/libecpg.so.4.1)
@@ -22,6 +39,7 @@ _PGSQL_VERSION_74_INSTALLED=	yes
 .endif
 .if exists(${LOCALBASE}/lib/libecpg.so.3)
 _PGSQL_VERSION_73_INSTALLED=yes
+.endif
 .endif
 
 # if a version is explicitely required, take it
@@ -62,8 +80,8 @@ _PGSQL_VERSION=	${_PGSQL_VERSION_FIRSTACCEPTED}
 # set variables for the version we decided to use:
 #
 .if ${_PGSQL_VERSION} == "80"
-PGSQL_TYPE=	postgresql80-lib
-PGPKGSRCDIR=	../../databases/postgresql80-lib
+PGSQL_TYPE=	postgresql80-client
+PGPKGSRCDIR=	../../databases/postgresql80-client
 .elif ${_PGSQL_VERSION} == "74"
 PGSQL_TYPE=	postgresql74-lib
 PGPKGSRCDIR=	../../databases/postgresql74-lib
@@ -76,9 +94,7 @@ PGSQL_TYPE=		none
 PKG_SKIP_REASON+=	"${_PGSQL_VERSION} is not a valid package"
 .endif
 
-.if (defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO]))
-.  include "${PGPKGSRCDIR}/buildlink3.mk"
+.include "${PGPKGSRCDIR}/buildlink3.mk"
 PGSQL_PREFIX=	${BUILDLINK_PREFIX.${PGSQL_TYPE}}
-.endif
 
 .endif	# PGVERSION_MK

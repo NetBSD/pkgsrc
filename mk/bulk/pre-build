@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.40.2.2 2005/01/24 18:40:01 tv Exp $
+# $NetBSD: pre-build,v 1.40.2.3 2005/05/17 18:29:45 tv Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -53,6 +53,18 @@ fi
 
 LOCALBASE=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=LOCALBASE )`;
 X11BASE=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=X11BASE )`;
+DISTDIR=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=DISTDIR )`;
+
+# Make sure the pkg-vulnerabilities file is up to date
+echo "Making sure vulnerability-list is upto date:"
+if [ -z "$UPDATE_VULNERABILITY_LIST" -o "$UPDATE_VULNERABILITY_LIST" = yes ]; then
+       ( cd ${USR_PKGSRC}/security/audit-packages                       \
+         && ${BMAKE} bulk-install                                       \
+         && env PKGVULNDIR=${DISTDIR} download-vulnerability-list )
+       echo 'done.'
+else
+       echo '(skipped)'
+fi
 
 # On non-NetBSD platforms we need to keep the bootstrap-files!
 if [ x"$BMAKE" = x"bmake" ]; then
@@ -173,7 +185,6 @@ fi
 #
 # Remove old/broken distfiles and binary packages
 #
-DISTDIR=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=DISTDIR )`;
 PACKAGES=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=PACKAGES )`;
 
 case "$LINTPKGSRC_CACHE$PRUNEDISTFILES$PRUNEPACKAGES" in
@@ -234,6 +245,24 @@ yes|YES)
 	echo "Skipping pruning of packages links."
 	;;
 esac
+
+# Clean out the packages added above so that the real bulk build
+# is started in a consistent state.
+for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
+	echo Removing all installed packages in $dbdir
+	if [ -d $dbdir ]; then
+		cd $dbdir
+		for pkg in *
+		do
+			if `pkg_info -K $dbdir -qe $pkg`; then
+				echo pkg_delete -r $pkg
+				pkg_delete -K $dbdir -r $pkg
+			fi
+		done
+	fi
+done
+
+cd ${USR_PKGSRC}
 
 # on non-NetBSD, we don't want these to build as they overwrite
 # bootstrap-pkgsrc generated files and thus would break the following builds.
