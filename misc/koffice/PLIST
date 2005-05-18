@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/10/28 11:30:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/05/18 21:27:29 markd Exp $
 bin/karbon
 bin/kchart
 bin/kformula
@@ -3148,6 +3148,7 @@ share/kde/templates/TextDocument.desktop
 @dirrm share/kde/apps/karbon/icons
 @dirrm share/kde/apps/karbon/gradients
 @dirrm share/kde/apps/karbon
+@dirrm share/kde/applnk/Office
 @dirrm share/doc/kde/HTML/en/thesaurus
 @dirrm share/doc/kde/HTML/en/kword
 @dirrm share/doc/kde/HTML/en/kugar
