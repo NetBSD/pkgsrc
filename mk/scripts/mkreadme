@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.5 2005/05/17 21:46:59 dmcmahill Exp $
+# $NetBSD: mkreadme,v 1.6 2005/05/18 04:51:35 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -242,13 +242,27 @@ echo "Starting README.html generation: `date`"
 ######################################################################
 
 echo " "
+echo "Extracting tool variables:"
+echo " "
+if [ -d ${PKGSRCDIR}/pkgtools/prereq-readme ]; then
+    cd ${PKGSRCDIR}/pkgtools/prereq-readme
+    eval "`${BMAKE} show-tools`"
+    for v in AWK CMP ECHO EXPR FGREP GREP SED SETENV SORT 
+    do
+	eval "echo '---->'  ${v}=\"\${${v}}\""
+    done
+else
+    echo "Error:   ${PKGSRCDIR}/pkgtools/prereq-readme does not seem to exist"
+    exit 1
+fi
+
+echo " "
 echo "Extracting configuration variables:"
 echo " "
-if [ -d ${PKGSRCDIR}/pkgtools/pkglint ]; then
-    cd ${PKGSRCDIR}/pkgtools/pkglint
-    for v in AWK CDROM_PKG_URL_HOST CDROM_PKG_URL_DIR CMP DISTDIR ECHO EXPR \
-	FGREP FTP_PKG_URL_HOST FTP_PKG_URL_DIR GREP PACKAGES PKG_INFO PKG_SUFX \
-	SED SETENV SORT 
+if [ -d ${PKGSRCDIR}/pkgtools/prereq-readme ]; then
+    cd ${PKGSRCDIR}/pkgtools/prereq-readme
+    for v in CDROM_PKG_URL_HOST CDROM_PKG_URL_DIR CMP DISTDIR \
+	FTP_PKG_URL_HOST FTP_PKG_URL_DIR PACKAGES PKG_INFO PKG_SUFX 
     do
 	val=`${BMAKE} show-var VARNAME=${v}`
 	if [ $? != 0 ]; then
@@ -260,7 +274,7 @@ if [ -d ${PKGSRCDIR}/pkgtools/pkglint ]; then
 	eval "${v}=\"${val}\""
     done
 else
-    echo "Error:   ${PKGSRCDIR}/pkgtools/pkglint does not seem to exist"
+    echo "Error:   ${PKGSRCDIR}/pkgtools/prereq-readme does not seem to exist"
     exit 1
 fi
 
