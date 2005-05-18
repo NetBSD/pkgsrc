@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.9 2005/05/18 15:28:04 jmmv Exp $
+
+--- gtk/xdgmime/xdgmimemagic.c.orig	2004-12-09 17:26:52.000000000 +0000
++++ gtk/xdgmime/xdgmimemagic.c
+@@ -47,8 +47,6 @@
+ #define	TRUE	(!FALSE)
+ #endif
+ 
+-extern int errno;
+-
+ typedef struct XdgMimeMagicMatch XdgMimeMagicMatch;
+ typedef struct XdgMimeMagicMatchlet XdgMimeMagicMatchlet;
+ 
