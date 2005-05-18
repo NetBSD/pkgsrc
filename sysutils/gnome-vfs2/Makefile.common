@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2005/04/26 18:03:18 drochner Exp $
+# $NetBSD: Makefile.common,v 1.16 2005/05/18 16:08:17 jmmv Exp $
 #
 
 DISTNAME=		gnome-vfs-2.10.1
@@ -70,7 +70,7 @@ SUBST_STAGE.libs=       pre-configure
 SUBST_FILES.libs=       modules/Makefile.in
 SUBST_SED.libs=         -e 's|../libgnomevfs/libgnomevfs-2.la|${BUILDLINK_PREFIX.gnome-vfs2}/lib/libgnomevfs-2.la|g'
 
-BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
+BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.1
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/gnome-vfs-2.0\/modules$$/ \
