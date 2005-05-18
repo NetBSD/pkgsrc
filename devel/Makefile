@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.636 2005/04/28 15:05:15 augustss Exp $
+# $NetBSD: Makefile,v 1.637 2005/05/18 22:02:17 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -151,7 +151,6 @@ SUBDIR+=	gettext-lib
 SUBDIR+=	gettext-m4
 SUBDIR+=	giblib
 SUBDIR+=	gindent
-SUBDIR+=	glade
 SUBDIR+=	glade2
 SUBDIR+=	glade2-gnome
 SUBDIR+=	glib
@@ -161,20 +160,17 @@ SUBDIR+=	global
 SUBDIR+=	gmake
 SUBDIR+=	gmp
 SUBDIR+=	gnome-common
-SUBDIR+=	gnome-objc
 SUBDIR+=	gnome2-libole2
 SUBDIR+=	gnustep-base
 SUBDIR+=	gnustep-examples
 SUBDIR+=	gnustep-make
 SUBDIR+=	gnustep-objc
-SUBDIR+=	gob
 SUBDIR+=	gob2
 SUBDIR+=	gobo-eiffel
 SUBDIR+=	gperf
 SUBDIR+=	gputils
 SUBDIR+=	gscope
 SUBDIR+=	gtexinfo
-SUBDIR+=	gtkdiff
 SUBDIR+=	gtl
 SUBDIR+=	gtoolkit-examples
 SUBDIR+=	guile-fcgi
@@ -225,7 +221,6 @@ SUBDIR+=	libextractor
 SUBDIR+=	libffi
 SUBDIR+=	libgail-gnome
 SUBDIR+=	libgetopt
-SUBDIR+=	libglade
 SUBDIR+=	libglade2
 SUBDIR+=	libglademm20
 SUBDIR+=	libglademm24
@@ -258,7 +253,6 @@ SUBDIR+=	librfuncs
 SUBDIR+=	librsync
 SUBDIR+=	libscsi
 SUBDIR+=	libsigc++
-SUBDIR+=	libsigc++10
 SUBDIR+=	libsigc++2
 SUBDIR+=	libslang
 SUBDIR+=	libsmi
