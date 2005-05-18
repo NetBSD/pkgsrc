@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:05:30 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/05/18 13:35:11 mjl Exp $
 
-SHA1 (Device-Gsm-1.33.tar.gz) = 542001fabb636e9f61d32e1484f1c1f7e0be0f31
-RMD160 (Device-Gsm-1.33.tar.gz) = 6b6f3526233da4340d9b26a97f327cc27a01566a
-Size (Device-Gsm-1.33.tar.gz) = 42566 bytes
+SHA1 (Device-Gsm-1.36.tar.gz) = 91b2cebebb0cd61e133d73e73b1889d171f7706d
+RMD160 (Device-Gsm-1.36.tar.gz) = 987518c2850974d03a1cc8b3c5a201e6974d0c3e
+Size (Device-Gsm-1.36.tar.gz) = 49511 bytes
