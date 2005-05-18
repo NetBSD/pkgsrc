@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/18 16:00:08 drochner Exp $
+
+SHA1 (kye-0.1.0.tar.gz) = 8d60fe1182af456a1a185e53354372e19a875d5c
+RMD160 (kye-0.1.0.tar.gz) = 278dbab3ae80907aad6fe02c4a142e14a977d949
+Size (kye-0.1.0.tar.gz) = 51653 bytes
+SHA1 (patch-aa) = 41b98e46a7a1f803a1805e3a1189db9629bcb2c2
