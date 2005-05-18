@@ -1,4 +1,4 @@
-# $NetBSD: perl.mk,v 1.10 2005/05/17 18:34:45 jlam Exp $
+# $NetBSD: perl.mk,v 1.11 2005/05/18 03:14:01 jlam Exp $
 
 # Create a symlink from ${TOOLS_DIR}/bin/perl to ${PERL5} when USE_PERL5
 # is defined.  This ensures that when "perl" is invoked, the pkgsrc perl
@@ -32,11 +32,6 @@ TOOLS_REAL_CMD.perl=		${TOOLS_PREFIX.perl}/bin/perl
 TOOLS_${_TOOLS_VARNAME.perl}=	${TOOLS_REAL_CMD.perl}
 ${_TOOLS_VARNAME.perl}?=	${TOOLS_${_TOOLS_VARNAME.perl}}
 CONFIGURE_ENV+=			PERL=${TOOLS_${_TOOLS_VARNAME.perl}:Q}
-.  endif
-.  if defined(TOOLS_DEPMETHOD.perl) && defined(TOOLS_DEPENDS.perl)
-.    if empty(${TOOLS_DEPMETHOD.perl}:M${TOOLS_DEPENDS.perl})
-${TOOLS_DEPMETHOD.perl}+=	${TOOLS_DEPENDS.perl}
-.    endif
 .  endif
 
 # Define PERL5_* variables that locate the site directories for ${PERL5}.
