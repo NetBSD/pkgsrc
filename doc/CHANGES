@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10107 2005/05/18 05:22:46 jlam Exp $
+$NetBSD: CHANGES,v 1.10108 2005/05/18 06:10:48 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2402,3 +2402,26 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated clamav to 0.85 [xtraeme 2005-05-18]
 	Added prereq-readme-20050518 [dmcmahill 2005-05-18]
 	Updated nawk to 20050424 [jlam 2005-05-18]
+	Updated libxfce4util to 4.2.2 [martti 2005-05-18]
+	Updated libxfce4mcs to 4.2.2 [martti 2005-05-18]
+	Updated libxfce4gui to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-mcs-manager to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-mcs-plugins to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-icon-theme to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-panel to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-mixer to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-iconbox to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-print to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-appfinder to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-fm to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-wm to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-systray to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-calendar to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-wm-themes to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-desktop to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-gtk2-engine to 2.2.7 [martti 2005-05-18]
+	Updated xfce4-session to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-toys to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-utils to 4.2.2 [martti 2005-05-18]
+	Updated xfce4-trigger-launcher to 4.2.2 [martti 2005-05-18]
+	Updated xfce4 to 4.2.2 [martti 2005-05-18]
