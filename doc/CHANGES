@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10106 2005/05/18 04:50:25 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.10107 2005/05/18 05:22:46 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2401,3 +2401,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated rdesktop to 1.4.1 [xtraeme 2005-05-18]
 	Updated clamav to 0.85 [xtraeme 2005-05-18]
 	Added prereq-readme-20050518 [dmcmahill 2005-05-18]
+	Updated nawk to 20050424 [jlam 2005-05-18]
