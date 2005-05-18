@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/03/22 16:01:47 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/18 16:22:15 jmmv Exp $
 lib/pkgconfig/gnome-icon-theme.pc
 share/icons/gnome/12x12/emblems/emblem-symbolic-link.png
 share/icons/gnome/12x12/filesystems/gnome-fs-directory-accept.png
@@ -29,11 +29,9 @@ share/icons/gnome/16x16/filesystems/gnome-fs-desktop.png
 share/icons/gnome/16x16/filesystems/gnome-fs-directory.png
 share/icons/gnome/16x16/filesystems/gnome-fs-ftp.png
 share/icons/gnome/16x16/filesystems/gnome-fs-home.png
-share/icons/gnome/16x16/filesystems/gnome-fs-locally-shared.png
 share/icons/gnome/16x16/filesystems/gnome-fs-network.png
 share/icons/gnome/16x16/filesystems/gnome-fs-nfs.png
 share/icons/gnome/16x16/filesystems/gnome-fs-server.png
-share/icons/gnome/16x16/filesystems/gnome-fs-share-private.png
 share/icons/gnome/16x16/filesystems/gnome-fs-share.png
 share/icons/gnome/16x16/filesystems/gnome-fs-smb.png
 share/icons/gnome/16x16/filesystems/gnome-fs-ssh.png
@@ -96,10 +94,8 @@ share/icons/gnome/24x24/filesystems/gnome-fs-directory-visiting.png
 share/icons/gnome/24x24/filesystems/gnome-fs-directory.icon
 share/icons/gnome/24x24/filesystems/gnome-fs-directory.png
 share/icons/gnome/24x24/filesystems/gnome-fs-home.png
-share/icons/gnome/24x24/filesystems/gnome-fs-locally-shared.png
 share/icons/gnome/24x24/filesystems/gnome-fs-network.png
 share/icons/gnome/24x24/filesystems/gnome-fs-server.png
-share/icons/gnome/24x24/filesystems/gnome-fs-share-private.png
 share/icons/gnome/24x24/filesystems/gnome-fs-share.png
 share/icons/gnome/24x24/filesystems/gnome-fs-trash-empty.png
 share/icons/gnome/24x24/filesystems/gnome-fs-trash-full.png
@@ -294,6 +290,20 @@ share/icons/gnome/48x48/mimetypes/gnome-mime-application-smil.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.lotus-1-2-3.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.ms-excel.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.ms-powerpoint.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.chart.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.database.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.drawing.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.formula.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.graphics-template.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.image.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.presentation-template.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.presentation.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.spreadsheet-template.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.spreadsheet.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-master.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-template.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-web.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.rn-realmedia.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.stardivision.calc.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.stardivision.impress.png
@@ -506,6 +516,8 @@ share/icons/hicolor/16x16/apps/panel-notification-area.png
 share/icons/hicolor/16x16/apps/panel-window-list.png
 share/icons/hicolor/16x16/apps/panel-window-menu.png
 share/icons/hicolor/16x16/apps/text-editor.png
+share/icons/hicolor/16x16/filesystems/gnome-fs-locally-shared.png
+share/icons/hicolor/16x16/filesystems/gnome-fs-share-private.png
 share/icons/hicolor/16x16/stock/chart/stock_chart-autoformat.png
 share/icons/hicolor/16x16/stock/chart/stock_chart-data-in-columns.png
 share/icons/hicolor/16x16/stock/chart/stock_chart-data-in-rows.png
@@ -1123,6 +1135,8 @@ share/icons/hicolor/16x16/stock/net/stock_online-layout.png
 share/icons/hicolor/16x16/stock/net/stock_outbox.png
 share/icons/hicolor/16x16/stock/net/stock_post-message.png
 share/icons/hicolor/16x16/stock/net/stock_sent-mail.png
+share/icons/hicolor/16x16/stock/net/stock_shared-by-me.png
+share/icons/hicolor/16x16/stock/net/stock_shared-to-me.png
 share/icons/hicolor/16x16/stock/net/stock_spam.png
 share/icons/hicolor/16x16/stock/net/stock_video-conferencing.png
 share/icons/hicolor/16x16/stock/object/stock_3d-3d-attributes-only.png
@@ -1400,6 +1414,8 @@ share/icons/hicolor/24x24/apps/panel-notification-area.png
 share/icons/hicolor/24x24/apps/panel-window-list.png
 share/icons/hicolor/24x24/apps/panel-window-menu.png
 share/icons/hicolor/24x24/apps/text-editor.png
+share/icons/hicolor/24x24/filesystems/gnome-fs-locally-shared.png
+share/icons/hicolor/24x24/filesystems/gnome-fs-share-private.png
 share/icons/hicolor/24x24/stock/chart/stock_chart-autoformat.png
 share/icons/hicolor/24x24/stock/chart/stock_chart-data-in-columns.png
 share/icons/hicolor/24x24/stock/chart/stock_chart-data-in-rows.png
@@ -1889,6 +1905,8 @@ share/icons/hicolor/24x24/stock/net/stock_online-layout.png
 share/icons/hicolor/24x24/stock/net/stock_outbox.png
 share/icons/hicolor/24x24/stock/net/stock_post-message.png
 share/icons/hicolor/24x24/stock/net/stock_sent-mail.png
+share/icons/hicolor/24x24/stock/net/stock_shared-by-me.png
+share/icons/hicolor/24x24/stock/net/stock_shared-to-me.png
 share/icons/hicolor/24x24/stock/net/stock_spam.png
 share/icons/hicolor/24x24/stock/net/stock_video-conferencing.png
 share/icons/hicolor/24x24/stock/object/stock_add-bookmark.png
@@ -2494,6 +2512,7 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @dirrm share/icons/hicolor/24x24/stock/code
 @dirrm share/icons/hicolor/24x24/stock/chart
 @dirrm share/icons/hicolor/24x24/stock
+@dirrm share/icons/hicolor/24x24/filesystems
 @dirrm share/icons/hicolor/24x24/apps
 @dirrm share/icons/hicolor/24x24
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/192x192/apps
@@ -2513,6 +2532,7 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/code
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/chart
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/filesystems
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @exec ${MKDIR} %D/share/icons/gnome/scalable/mimetypes
@@ -2578,4 +2598,3 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @dirrm share/icons/gnome/12x12/devices
 @dirrm share/icons/gnome/12x12
 @dirrm share/icons/gnome
-@comment in xdg-dirs: @dirrm share/icons
