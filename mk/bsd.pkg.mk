@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1671 2005/05/18 19:42:01 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1672 2005/05/18 23:59:44 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -88,6 +88,7 @@ MKCRYPTO?=		YES	# build crypto packages by default
 NOCLEAN?=		NO	# don't clean up after update
 REINSTALL?=		NO	# reinstall upon update
 SHLIB_HANDLING?=	YES	# do automatic shared lib handling
+CREATE_WRKDIR_SYMLINK?=	yes	# create a symlink to WRKOBJDIR
 
 ##### Variant spellings
 
@@ -1697,7 +1698,7 @@ ${WRKDIR}:
 	${RM} -f ${WRKDIR_BASENAME} || ${TRUE}
 .    endif
 .  endif
-.  if !defined(NO_WRKDIR_SYMLINK)
+.  if !empty(CREATE_WRKDIR_SYMLINK:M[Yy][Ee][Ss])
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${LN} -s ${WRKDIR} ${WRKDIR_BASENAME} 2>/dev/null; then	\
 		${ECHO} "${WRKDIR_BASENAME} -> ${WRKDIR}";		\
