@@ -1,11 +1,14 @@
-# $NetBSD: perl.mk,v 1.11 2005/05/18 03:14:01 jlam Exp $
+# $NetBSD: perl.mk,v 1.12 2005/05/18 22:42:07 jlam Exp $
 
 # Create a symlink from ${TOOLS_DIR}/bin/perl to ${PERL5} when USE_PERL5
 # is defined.  This ensures that when "perl" is invoked, the pkgsrc perl
 # is executed on systems that also provide a perl binary.
 #
 .if defined(USE_PERL5)
-USE_TOOLS+=	perl
+USE_TOOLS+=		perl
+.  if empty(USE_PERL5:Mbuild)
+TOOLS_DEPMETHOD.perl?=	DEPENDS
+.  endif
 .endif
 
 # Skip the processing at the end of replace.mk.  If we need to use
@@ -17,14 +20,9 @@ _TOOLS_USE_PKGSRC.perl=	yes
 .  if !empty(PKGPATH:Mlang/perl58)
 MAKEFLAGS+=			TOOLS_IGNORE.perl=
 .  else
-.    include "../../lang/perl5/buildlink3.mk"
+.    include "../../lang/perl5/version.mk"
 TOOLS_DEPMETHOD.perl?=		BUILD_DEPENDS
-_TOOLS_DEPENDS.perl=		# empty
-.    for _dep_ in ${BUILDLINK_DEPENDS.perl}
-_TOOLS_DEPENDS.perl+=		${_dep_}:${BUILDLINK_PKGSRCDIR.perl}
-.    endfor
-.    undef _dep_
-TOOLS_DEPENDS.perl?=		${_TOOLS_DEPENDS.perl}
+TOOLS_DEPENDS.perl?=		{perl>=${PERL5_REQD},perl-thread>=${PERL5_REQD}}:../../lang/perl58
 TOOLS_CREATE+=			perl
 FIND_PREFIX:=			TOOLS_PREFIX.perl=perl
 .    include "../../mk/find-prefix.mk"
