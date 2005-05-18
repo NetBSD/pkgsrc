@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2005/04/03 14:22:22 adrianp Exp $
+# $NetBSD: Makefile,v 1.111 2005/05/18 22:02:17 wiz Exp $
 #
 
 COMMENT=	Communication programs
@@ -23,7 +23,6 @@ SUBDIR+=	epic4
 SUBDIR+=	epic4-doc
 SUBDIR+=	fisg
 SUBDIR+=	fugu
-SUBDIR+=	gabber
 SUBDIR+=	gaim
 SUBDIR+=	gaim-encryption
 SUBDIR+=	gaim-otr
@@ -91,7 +90,6 @@ SUBDIR+=	vicq
 SUBDIR+=	weechat
 SUBDIR+=	xaric
 SUBDIR+=	xchat
-SUBDIR+=	xchat-gnome
 SUBDIR+=	xchat-systray-integration
 SUBDIR+=	xchat2
 SUBDIR+=	ymessenger
