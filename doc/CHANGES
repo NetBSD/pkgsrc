@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10103 2005/05/17 17:29:22 adrianp Exp $
+$NetBSD: CHANGES,v 1.10104 2005/05/18 01:13:40 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2398,3 +2398,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated exim-html to 4.50 [abs 2005-05-17]
 	Removed exim-exiscan [abs 2005-05-17]
 	Updated msf to 2.4 [adrianp 2005-05-17]
+	Updated rdesktop to 1.4.1 [xtraeme 2005-05-18]
