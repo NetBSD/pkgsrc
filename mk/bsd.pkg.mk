@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1669 2005/05/17 22:07:56 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1670 2005/05/18 02:52:38 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -4880,3 +4880,16 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 .endfor
 .undef _phase_
+
+# show-tools emits a /bin/sh shell script that defines all known tools
+# to the values they have in the pkgsrc infrastructure.
+#
+# Don't move this code away from here unless you know what you're doing.
+#
+.PHONY: show-tools
+show-tools:
+.for _t_ in ${_USE_TOOLS}
+.  if defined(_TOOLS_VARNAME.${_t_})
+	@${ECHO} ${_TOOLS_VARNAME.${_t_}:Q}=${TOOLS_PLATFORM.${_t_}:Q:Q}
+.  endif
+.endfor
