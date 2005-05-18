@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3497 2005/05/18 13:39:54 adam Exp $
+$NetBSD: TODO,v 1.3498 2005/05/18 14:58:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -311,6 +311,7 @@ Suggested package updates
 	o PAM-0.78
 	o RealPlayerGold-10.0.4
 	o SmartEiffel-2.1
+	o TeXmacs-1.0.5.1
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
@@ -319,13 +320,14 @@ Suggested package updates
 	o acpi-iasl-20040715
 	o advancecomp-1.14
 	o aewm++-1.0.27
-	o afterstep-2.00.05
+	o afterstep-2.1.0
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
 	o amavis-0.3.12
-	o amavisd-new-2.3.0
+	o amavisd-new-2.3.1
 	o amaya-9.1
-	o amule-2.0.0
+	o amule-2.0.1
+	o anjuta-1.2.3
 	o anomy-sanitizer-1.70
 	o ap-Embperl-1.3.6
 	o ap-auth-mysql-4.3.9
@@ -357,7 +359,7 @@ Suggested package updates
 	o astyle-1.15.3
 	o auctex-11.55
 	o autogen-5.7
-	o avidemux-2.0.36
+	o avidemux-2.0.38
 	o avl-2.0.1
 	o avr-libc-1.2.3
 	o awstats-6.4
@@ -376,6 +378,7 @@ Suggested package updates
 	o blitz++-0.8
 	o bmake-20050322
 	o boaconstructor-0.3.1
+	o bogofilter-0.94.12
 	o bonobo-conf-0.16
 	o boson-0.10
 	o browser-bookmarks-menu-0.4
@@ -390,6 +393,7 @@ Suggested package updates
 	o ccgo-0.3.5
 	o cdl3-1.2.6
 	o cdlabelgen-3.5.0
+	o cdrdao-1.2.0
 	o cdrtools-2.01
 	o cfengine2-2.1.14
 	o cfengine2-doc-2.1.14
@@ -405,6 +409,7 @@ Suggested package updates
 	o cilk-5.3.2
 	o cint-5.15
 	o cjk-lyx-1.3.3
+	o clamav-0.85.1
 	o clanlib-0.7.8
 	o classpath-0.15
 	o classpath-gui-0.15
@@ -416,6 +421,7 @@ Suggested package updates
 	o controlcenter-1.4.0.5
 	o coreutils-5.3.0
 	o cqcam-0.91
+	o crack-attack-1.1.14
 	o crafty-19.5
 	o criticalmass-0.9.11
 	o crossfire-client-1.7.1
@@ -449,9 +455,9 @@ Suggested package updates
 	o dnstracer-1.8
 	o docbook-simple-1.1
 	o docbook-website-2.6.0
-	o doxygen-1.4.2
+	o doxygen-1.4.3
 	o dpkg-1.13.3
-	o dvdrip-0.52.3
+	o dvdrip-0.52.4
 	o dvipdfmx-20050201
 	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.4.0
@@ -462,6 +468,7 @@ Suggested package updates
 	o eclipse-3.0.2
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
+	o efax-gtk-3.0.1
 	o egtk-0.3.6
 	o electricfence-2.4.13
 	o elf-0.5.4
@@ -487,6 +494,7 @@ Suggested package updates
 	o findutils-4.2.20
 	o flac123-0.0.8
 	o flashplayer-0.4.13
+	o fluxbox-0.9.13 [pkg/30229|jmcneill]
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
@@ -504,6 +512,7 @@ Suggested package updates
 	o garmin-utils-2.2
 	o gated-3.6
 	o gcc-4.0.0
+	o gcdmaster-1.2.0
 	o gcombust-0.1.55
 	o gconfmm26-2.8.0?
 	o gcpio-2.6
@@ -543,12 +552,13 @@ Suggested package updates
 	o gpsim-devel-20041104
 	o gputils-0.13.0
 	o grace-5.1.18
+	o gramps-2.0.0
 	o grap-1.32
 	o grepmail-5.3030
 	o gri-2.12.8
 	o gsed-4.1.4
 	o gsharutils-4.3.78
-	o gtetrinet-0.7.8
+	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.6
 	o gtk-systrace-2003.06.23
 	o gtkyahoo-0.18.3
@@ -625,19 +635,23 @@ Suggested package updates
 	o lcab-1.0b11
 	o lcc-4.2
 	o leafpad-0.7.9
+	o lftp-3.2.0
+	o libcddb-1.0.2
 	o libcomprex-0.3.3
 	o libetpan-0.34b
-	o libevent-1.0e
+	o libevent-1.1
 	o libextractor-0.4.2
 	o libflash-0.4.13
 	o libgnomemm26-2.10.0
 	o libgnomeuimm26-2.10.0
 	o libhydrogen-0.9.0
+	o libidn-0.5.16
 	o libjit-0.0.4
 	o libksba-0.9.9
 	o liblive-2005.03.23
 	o libmatheval-1.1.2
 	o libmpeg3-1.5.4
+	o libopendaap-0.4.0
 	o libperl-5.6.2
 	o libpqxx-2.5.0
 	o libsmi-0.4.3
@@ -645,7 +659,7 @@ Suggested package updates
 	o libstatgrab-0.11.1
 	o libtcl-nothread-8.4.9
 	o licq-core-1.3.0
-	o liferea-0.9.1
+	o liferea-0.9.2
 	o lilypond-2.4.5
 	o linuxsms-0.77
 	o lmbench-2.0.4
@@ -679,6 +693,7 @@ Suggested package updates
 	o mknmz-wwwoffle-0.7.2
 	o mlview-0.7.1
 	o mmix-20041014
+	o mono-1.1.7
 	o moscow_ml-2.01
 	o most-4.10.1
 	o mowitz-0.3.0
@@ -690,6 +705,7 @@ Suggested package updates
 	o mpfr-2.1.1
 	o mplayer-plugin-firefox-2.80
 	o mrproject-0.9.1
+	o mrtg-2.12.1
 	o mserv-devel-0.41
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
@@ -697,6 +713,7 @@ Suggested package updates
 	o muse-0.9.1
 	o mutt-devel-1.5.7
 	o nagios-2.0b3 [replacing netsaint]
+	o nano-1.2.5
 	o nap-1.5.3
 	o navi2ch-1.7.5
 	o nawk-20041222
@@ -704,6 +721,7 @@ Suggested package updates
 	o ncftp3-3.1.9
 	o ncview-1.92e
 	o neon-0.25.0
+	o netatalk-2.0.3
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
 	o netio-1.23
@@ -719,6 +737,7 @@ Suggested package updates
 	o nsd-2.3.0
 	o nslint-2.1a3
 	o nullmailer-1.0.0
+	o nut-10.19
 	o nvi-m17n-1.79.20040401 [pkg/30216]
 	o obexftp-0.10.6
 	o odbc-postgresql-7.4.7
@@ -862,12 +881,13 @@ Suggested package updates
 	o pear-Net_Socket-1.0.6
 	o pen-0.15.0
 	o perl-5.6.2
-	o pfqueue-0.3.6
+	o pfqueue-0.3.7
 	o pfstat-1.8
 	o pgpool-2.5.1
 	o phoon-20030120
 	o photopc-3.05
 	o phpmyadmin-2.6.2
+	o phpmyadmin-2.6.2-pl1
 	o phppgadmin-3.5.3
 	o phylip-3.62
 	o piewm-1.03
@@ -1005,8 +1025,8 @@ Suggested package updates
 	o shmux-1.0b6
 	o siag-3.6.0
 	o sign-1.0.7
-	o silc-server-0.9.20
-	o silc-toolkit-0.9.14
+	o silc-server-1.0
+	o silc-toolkit-1.0
 	o simh-3.3.2
 	o sitecopy-0.15.1
 	o sitescooper-3.1.2
@@ -1014,6 +1034,7 @@ Suggested package updates
 	o skampi-4.1
 	o skill-4.1.2
 	o skkinput-2.06.4
+	o skype-1.1.0.3
 	o sma-1.4
 	o smalleiffel-0.90
 	o smalltalk-2.1.10
@@ -1025,6 +1046,7 @@ Suggested package updates
 	o snes9x-1.43
 	o snownews-1.5.6.1
 	o sox-12.17.7
+	o speex-1.0.5
 	o spim-7.1
 	o spruce-0.6.5
 	o sqlitemanager-1.0.6
@@ -1046,7 +1068,9 @@ Suggested package updates
 	o swig-perl-1.3.24
 	o swig-python-1.3.24
 	o swish-e-2.4.3
+	o sylpheed-claws-1.0.4a
 	o sylpheed-claws-ghostscript-viewer-0.8
+	o sylpheed-devel-1.9.11
 	o sympa-4.1.5
 	o sysinfo-4.2.2
 	o tcl-itcl-3.2.1
@@ -1086,8 +1110,9 @@ Suggested package updates
 	o tripwire-2.3.1 [see also pkg/22362]
 	o ttt-1.8.1
 	o ttyrec-1.0.6
+	o tunesbrowser-0.3.0
 	o twelf-1.5
-	o txt2html-2.40
+	o txt2html-2.41
 	o txt2man-1.4.8
 	o uae-0.8.23
 	o ubs-0.20
@@ -1098,6 +1123,7 @@ Suggested package updates
 	o userppp-030706
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
+	o vcdimager-devel-0.7.22
 	o vera-1.14
 	o vfu-4.03
 	o vifm-0.2
@@ -1170,6 +1196,7 @@ Suggested package updates
 	o xnap-2.5r3
 	o xorp-1.1
 	o xpad-2.6
+	o xpaint-2.7.7
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
 	o xrmap-2.30
