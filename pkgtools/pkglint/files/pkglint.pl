@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.149 2005/05/18 03:43:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.150 2005/05/18 03:47:24 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -34,11 +34,38 @@ BEGIN {
 	use Exporter;
 	use vars qw(@ISA @EXPORT_OK);
 	@ISA = qw(Exporter);
-	@EXPORT_OK = qw(false true);
+	@EXPORT_OK = qw(false true print_table);
 }
 
 use constant false	=> 0;
 use constant true	=> 1;
+
+sub print_table($$)
+{
+	my ($out, $table) = @_;
+	my (@width) = ();
+	foreach my $row (@$table) {
+		foreach my $i (0..(scalar(@$row)-1)) {
+			if (!defined($width[$i]) || length($row->[$i]) > $width[$i]) {
+				$width[$i] = length($row->[$i]);
+			}
+		}
+	}
+	foreach my $row (@$table) {
+		my ($max) = (scalar(@$row) - 1);
+		foreach my $i (0..$max) {
+			if ($i != 0) {
+				print $out ("  ");
+			}
+			print $out ($row->[$i]);
+			if ($i != $max) {
+				print $out (" " x ($width[$i] - length($row->[$i])));
+			}
+		}
+		print $out ("\n");
+	}
+	return 1;
+}
 
 #== End of PkgLint::Util ==================================================
 
@@ -340,33 +367,6 @@ sub check_predefined_sites($);
 sub category_check();
 sub check_package();
 
-sub print_table($$)
-{
-	my ($out, $table) = @_;
-	my (@width) = ();
-	foreach my $row (@$table) {
-		foreach my $i (0..(scalar(@$row)-1)) {
-			if (!defined($width[$i]) || length($row->[$i]) > $width[$i]) {
-				$width[$i] = length($row->[$i]);
-			}
-		}
-	}
-	foreach my $row (@$table) {
-		my ($max) = (scalar(@$row) - 1);
-		foreach my $i (0..$max) {
-			if ($i != 0) {
-				print $out ("  ");
-			}
-			print $out ($row->[$i]);
-			if ($i != $max) {
-				print $out (" " x ($width[$i] - length($row->[$i])));
-			}
-		}
-		print $out ("\n");
-	}
-	return 1;
-}
-
 sub help($$$) {
 	my ($out, $exitval, $show_all) = @_;
 	my ($prog) = (basename($0));
@@ -377,7 +377,7 @@ sub help($$$) {
 		push(@option_table, ["  ", $opt, $options{$opt}]);
 	}
 	print $out ("options:\n");
-	print_table($out, \@option_table);
+	PkgLint::Util::print_table($out, \@option_table);
 	print $out ("\n");
 
 	if (!$show_all) {
@@ -394,7 +394,7 @@ sub help($$$) {
 			$checks{$check}->[1]]);
 	}
 	print $out ("checks: (use \"check\" to enable, \"no-check\" to disable)\n");
-	print_table($out, \@checks_table);
+	PkgLint::Util::print_table($out, \@checks_table);
 	print $out ("\n");
 
 	my (@warnings_table) = (
@@ -407,7 +407,7 @@ sub help($$$) {
 			$warnings{$warning}->[1]]);
 	}
 	print $out ("warnings: (use \"warn\" to enable, \"no-warn\" to disable)\n");
-	print_table($out, \@warnings_table);
+	PkgLint::Util::print_table($out, \@warnings_table);
 	print $out ("\n");
 
 	exit($exitval);
