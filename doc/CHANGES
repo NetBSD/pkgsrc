@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10116 2005/05/18 19:12:06 adrianp Exp $
+$NetBSD: CHANGES,v 1.10117 2005/05/18 19:58:45 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2435,3 +2435,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gtkhtml36 to 3.6.2 [jmmv 2005-05-18]
 	Updated gnome2-pixmaps to 2.10.1 [jmmv 2005-05-18]
 	Updated apache to 2.0.54nb1 [adrianp 2005-05-18]
+	Added pear-DB-1.7.6 [adrianp 2005-05-18]
+
