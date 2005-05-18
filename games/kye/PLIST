@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/18 16:00:08 drochner Exp $
+bin/Kye
+${PYSITELIB}/kye/__init__.py
+${PYSITELIB}/kye/__init__.pyc
+${PYSITELIB}/kye/__init__.pyo
+${PYSITELIB}/kye/canvas.py
+${PYSITELIB}/kye/canvas.pyc
+${PYSITELIB}/kye/canvas.pyo
+${PYSITELIB}/kye/dialogs.py
+${PYSITELIB}/kye/dialogs.pyc
+${PYSITELIB}/kye/dialogs.pyo
+${PYSITELIB}/kye/frame.py
+${PYSITELIB}/kye/frame.pyc
+${PYSITELIB}/kye/frame.pyo
+${PYSITELIB}/kye/game.py
+${PYSITELIB}/kye/game.pyc
+${PYSITELIB}/kye/game.pyo
+${PYSITELIB}/kye/objects.py
+${PYSITELIB}/kye/objects.pyc
+${PYSITELIB}/kye/objects.pyo
+${PYSITELIB}/kye/stbar.py
+${PYSITELIB}/kye/stbar.pyc
+${PYSITELIB}/kye/stbar.pyo
+share/kye/images.zip
+share/kye/intro.kye
+share/kye/quests.kye
+@dirrm share/kye
+@dirrm ${PYSITELIB}/kye
