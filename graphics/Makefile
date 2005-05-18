@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.383 2005/05/18 22:03:56 wiz Exp $
+# $NetBSD: Makefile,v 1.384 2005/05/18 22:39:00 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -43,7 +43,6 @@ SUBDIR+=	camediaplay
 SUBDIR+=	camlimages
 SUBDIR+=	cdlabelgen
 SUBDIR+=	cinepaint
-SUBDIR+=	clanlib
 SUBDIR+=	claraocr
 SUBDIR+=	cnxtview
 SUBDIR+=	compface
@@ -193,7 +192,6 @@ SUBDIR+=	nvtv
 SUBDIR+=	nvtv-gtk2
 SUBDIR+=	opendis
 SUBDIR+=	openexr
-SUBDIR+=	openptc
 SUBDIR+=	ov519view
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Chart-ThreeD
@@ -265,7 +263,6 @@ SUBDIR+=	sodipodi
 SUBDIR+=	spcaview
 SUBDIR+=	swfdec
 SUBDIR+=	swfdec-gtk2
-SUBDIR+=	tcm
 SUBDIR+=	tgif
 SUBDIR+=	tiff
 SUBDIR+=	tkpiechart
