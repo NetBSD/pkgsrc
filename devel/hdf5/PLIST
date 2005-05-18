@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/02/25 09:10:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/05/18 13:39:05 adam Exp $
 bin/gif2h5
 bin/h52gif
 bin/h5cc
@@ -6,13 +6,16 @@ bin/h5debug
 bin/h5diff
 bin/h5dump
 bin/h5import
+bin/h5jam
 bin/h5ls
 bin/h5redeploy
 bin/h5repack
 bin/h5repart
+bin/h5unjam
 include/H5ACpublic.h
 include/H5Apublic.h
 include/H5Bpublic.h
+include/H5Cpublic.h
 include/H5Dpublic.h
 include/H5Epublic.h
 include/H5FDcore.h
@@ -32,12 +35,15 @@ include/H5Fpublic.h
 include/H5Gpublic.h
 include/H5HGpublic.h
 include/H5HLpublic.h
+include/H5IM.h
 include/H5Ipublic.h
+include/H5LT.h
 include/H5MMpublic.h
 include/H5Opublic.h
 include/H5Ppublic.h
 include/H5Rpublic.h
 include/H5Spublic.h
+include/H5TA.h
 include/H5Tpublic.h
 include/H5Zpublic.h
 include/H5api_adpt.h
@@ -46,6 +52,7 @@ include/H5public.h
 include/hdf5.h
 lib/libhdf5.la
 lib/libhdf5.settings
+lib/libhdf5_hl.la
 share/doc/hdf5/COPYING
 share/doc/hdf5/HISTORY.txt
 share/doc/hdf5/RELEASE.txt
@@ -341,9 +348,6 @@ share/doc/html/hdf5/Tutor/util.html
 share/doc/html/hdf5/Version.html
 share/doc/html/hdf5/chunk1.gif
 share/doc/html/hdf5/compat.html
-share/doc/html/hdf5/cpplus/CppInterfaces.html
-share/doc/html/hdf5/cpplus/CppUserNotes.doc
-share/doc/html/hdf5/cpplus/CppUserNotes.pdf
 share/doc/html/hdf5/cpplus/Dependencies
 share/doc/html/hdf5/cpplus/Makefile
 share/doc/html/hdf5/cpplus/Makefile.in
