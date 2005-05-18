@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.82 2005/05/17 18:34:45 jlam Exp $
+# $NetBSD: replace.mk,v 1.83 2005/05/18 05:31:55 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -130,13 +130,13 @@ TOOLS_REAL_CMD.[=		${TOOLS_PREFIX.[}/bin/${GNU_PROGRAM_PREFIX}[
 .endif
 
 .if !defined(TOOLS_IGNORE.awk) && !empty(_USE_TOOLS:Mawk)
-.  if !empty(PKGPATH:Mlang/gawk)
+.  if !empty(PKGPATH:Mlang/nawk)
 MAKEFLAGS+=			TOOLS_IGNORE.awk=
 .  elif !empty(_TOOLS_USE_PKGSRC.awk:M[yY][eE][sS])
-TOOLS_DEPENDS.awk?=		gawk>=3.1.1:../../lang/gawk
+TOOLS_DEPENDS.awk?=		nawk>=20040207:../../lang/nawk
 TOOLS_CREATE+=			awk
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.awk=gawk
-TOOLS_REAL_CMD.awk=		${TOOLS_PREFIX.awk}/bin/${GNU_PROGRAM_PREFIX}awk
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.awk=nawk
+TOOLS_REAL_CMD.awk=		${TOOLS_PREFIX.awk}/bin/nawk
 TOOLS_${_TOOLS_VARNAME.awk}=	${TOOLS_REAL_CMD.awk}
 .  endif
 .endif
