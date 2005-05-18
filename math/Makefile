@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2005/05/18 15:54:59 drochner Exp $
+# $NetBSD: Makefile,v 1.131 2005/05/18 22:39:00 wiz Exp $
 #
 
 COMMENT=	Mathematics
@@ -102,7 +102,6 @@ SUBDIR+=	snns
 SUBDIR+=	statist
 SUBDIR+=	superlu
 SUBDIR+=	tasp-vsipl
-SUBDIR+=	tela
 SUBDIR+=	tochnog
 SUBDIR+=	udunits
 SUBDIR+=	vista

@@ -1,9 +1,0 @@
-Cilk is a language for multithreaded parallel programming based on
-ANSI C.  Cilk is designed for general-purpose parallel programming,
-but it is especially effective for exploiting dynamic, highly
-asynchronous parallelism, which can be difficult to write in
-data-parallel or message-passing style.  Cilk has been developed since
-1994 by the Supercomputing Technologies Group at the MIT Laboratory
-for Computer Science.  Cilk has been used for research, teaching, and
-for coding applications such as a virus shell assembly simulator and
-three chess programs.

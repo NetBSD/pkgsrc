@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.213 2005/04/22 19:52:50 wiz Exp $
+# $NetBSD: Makefile,v 1.214 2005/05/18 22:39:00 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -17,7 +17,6 @@ SUBDIR+=	caml-light
 SUBDIR+=	ccsh
 SUBDIR+=	cdl3
 SUBDIR+=	chicken
-SUBDIR+=	cilk
 SUBDIR+=	cim
 SUBDIR+=	cint
 SUBDIR+=	classpath
@@ -95,7 +94,6 @@ SUBDIR+=	objc
 SUBDIR+=	ocaml
 SUBDIR+=	onyx
 SUBDIR+=	oo2c
-SUBDIR+=	openc++
 SUBDIR+=	opencobol
 SUBDIR+=	p2c
 SUBDIR+=	parrot
