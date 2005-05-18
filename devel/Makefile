@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.637 2005/05/18 22:02:17 wiz Exp $
+# $NetBSD: Makefile,v 1.638 2005/05/18 22:06:07 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -123,6 +123,7 @@ SUBDIR+=	emacs-ilisp
 SUBDIR+=	emacs20-elib
 SUBDIR+=	epydoc
 SUBDIR+=	eric3
+SUBDIR+=	error
 SUBDIR+=	exctags
 SUBDIR+=	fastdep
 SUBDIR+=	ffcall
@@ -221,6 +222,7 @@ SUBDIR+=	libextractor
 SUBDIR+=	libffi
 SUBDIR+=	libgail-gnome
 SUBDIR+=	libgetopt
+SUBDIR+=	libglade
 SUBDIR+=	libglade2
 SUBDIR+=	libglademm20
 SUBDIR+=	libglademm24
