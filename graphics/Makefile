@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.382 2005/05/18 22:02:17 wiz Exp $
+# $NetBSD: Makefile,v 1.383 2005/05/18 22:03:56 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -90,6 +90,7 @@ SUBDIR+=	gifsicle
 SUBDIR+=	giftrans
 SUBDIR+=	gimageview
 SUBDIR+=	gimp
+SUBDIR+=	gimp-color-manager
 SUBDIR+=	gimp-docs
 SUBDIR+=	gimp-rawphoto
 SUBDIR+=	gimp-refocus-it
