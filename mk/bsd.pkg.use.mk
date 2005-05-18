@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.13 2005/05/18 14:41:50 tv Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.14 2005/05/18 22:42:07 jlam Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -107,42 +107,12 @@ USE_MAKEINFO?=		no
 .  include "../../mk/texinfo.mk"
 .endif
 
-### USE_PERL5, PERL5_REQD
-
-# Distill the PERL5_REQD list into a single _PERL5_REQD value that is the
-# highest version of Perl required.
+.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+###
+### USE_PERL5
+###
+.include "../../lang/perl5/version.mk"
 #
-PERL5_REQD+=		5.0
-PERL5_REQD+=		${_OPSYS_PERL_REQD}
-
-_PERL5_STRICTEST_REQD?=	none
-.for _version_ in ${PERL5_REQD}
-.  for _pkg_ in perl-${_version_}
-.    if ${_PERL5_STRICTEST_REQD} == "none"
-_PERL5_PKG_SATISFIES_DEP=	YES
-.      for _vers_ in ${PERL5_REQD}
-.        if !empty(_PERL5_PKG_SATISFIES_DEP:M[yY][eE][sS])
-_PERL5_PKG_SATISFIES_DEP!=	\
-	if ${PKG_ADMIN} pmatch 'perl>=${_vers_}' ${_pkg_} 2>/dev/null; then \
-		${ECHO} "YES";						\
-	else								\
-		${ECHO} "NO";						\
-	fi
-.        endif
-.      endfor
-.      if !empty(_PERL5_PKG_SATISFIES_DEP:M[yY][eE][sS])
-_PERL5_STRICTEST_REQD=	${_version_}
-.      endif
-.    endif
-.  endfor
-.endfor
-_PERL5_REQD=	${_PERL5_STRICTEST_REQD}
-
-.if defined(USE_PERL5) || !empty(USE_TOOLS:Mperl)
-_PERL5_DEPENDS=		{perl>=${_PERL5_REQD},perl-thread>=${_PERL5_REQD}}
-PERL5_PKGSRCDIR?=	../../lang/perl58
-.endif
-
 # Convert USE_PERL5 to be two-valued: either "build" or "run" to denote
 # whether we want a build-time or run-time dependency on perl.
 #
@@ -153,23 +123,14 @@ _PERL5_DEPMETHOD=	BUILD_DEPENDS
 USE_PERL5:=		run
 _PERL5_DEPMETHOD=	DEPENDS
 .  endif
-_PERL5_DEPENDS=		{perl>=${_PERL5_REQD},perl-thread>=${_PERL5_REQD}}
+_PERL5_DEPENDS=		{perl>=${PERL5_REQD},perl-thread>=${PERL5_REQD}}
+PERL5_PKGSRCDIR?=	../../lang/perl58
 .  if !defined(BUILDLINK_DEPENDS.perl)
 ${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
 .  endif
-.endif
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-.if defined(USE_PERL5) && (${USE_PERL5} == "run")
 CONFIGURE_ENV+=		PERL=${PERL5:Q}
 .  include "../../lang/perl5/vars.mk"
-.endif       # USE_PERL5 == run
 .endif
-
-.if defined(USE_PERL5)
-PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SUB_INSTALLSITELIB}
-PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SUB_INSTALLSITEARCH}
-PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_SUB_INSTALLARCHLIB}
 .endif
 
 ### USE_RMAN
