@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/18 15:46:06 drochner Exp $
+bin/calcoo
+man/man1/calcoo.1
