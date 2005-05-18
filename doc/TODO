@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3496 2005/05/18 11:58:40 adam Exp $
+$NetBSD: TODO,v 1.3497 2005/05/18 13:39:54 adam Exp $
 
 Suggested new packages
 ======================
@@ -561,7 +561,6 @@ Suggested package updates
 	o hackbot-2.21
 	o hashcash-1.16
 	o haskell-mode-1.45
-	o hdf5-1.6.4 [checksum of current version has changed]
 	o hercules-3.02
 	o hitchhiker-0.7
 	o hot-babe-0.2.2
