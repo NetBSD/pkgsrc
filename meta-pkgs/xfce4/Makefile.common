@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.19 2005/04/11 21:46:33 tv Exp $
+# $NetBSD: Makefile.common,v 1.20 2005/05/18 06:10:30 martti Exp $
 
-MASTER_SITES=		http://www.xfce.org/archive/xfce-4.2.1.1/src/ \
-			http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-4.2.1.1/src/ \
+MASTER_SITES=		http://www.xfce.org/archive/xfce-4.2.2/src/ \
+			http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-4.2.2/src/ \
 			http://linux.imp.mx/xfce4/xfce_4.2.1.1/src/
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.xfce.org/
 
-XFCE4_VERSION=		4.2.1
+XFCE4_VERSION=		4.2.2
 
 # Do NOT put a PKGREVISION statement in this file!
 
@@ -25,3 +25,9 @@ PKG_CONFIG_PATH=	${BUILDLINK_DIR}/lib/pkgconfig
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+
+## # Use the latest GNU tar when the native tar is buggy
+## .if !empty(MACHINE_PLATFORM:MNetBSD-1.6*)
+## BUILD_DEPENDS+=		gtar-base-[0-9]*:../../archivers/gtar-base
+## GTAR=			${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
+## .endif

@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2005/03/18 07:59:09 martti Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/18 06:10:31 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-panel-${XFCE4_VERSION}
 CATEGORIES=	x11
 COMMENT=	XFce4 panel
-
-XFCE4_VERSION=	4.2.1.1
 
 PKGCONFIG_OVERRIDE=	panel/xfce4-panel-1.0.pc.in
 PTHREAD_AUTO_VARS=	yes

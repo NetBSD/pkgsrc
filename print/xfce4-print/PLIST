@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.10 2005/03/18 07:59:09 martti Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/18 06:10:30 martti Exp $
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/bn_IN/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfprint.mo
@@ -22,6 +24,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/xfprint.mo
@@ -55,4 +58,13 @@ share/xfce4/doc/C/images/xfprint_prettyprinting.png
 share/xfce4/doc/C/images/xfprint_sheets.png
 share/xfce4/doc/C/images/xfprint_virtualpages.png
 share/xfce4/doc/C/xfprint.html
+share/xfce4/doc/fr/images/xfprint-manager-queue.png
+share/xfce4/doc/fr/images/xfprint-manager.png
+share/xfce4/doc/fr/images/xfprint_headings.png
+share/xfce4/doc/fr/images/xfprint_input.png
+share/xfce4/doc/fr/images/xfprint_mcs_plugin.png
+share/xfce4/doc/fr/images/xfprint_prettyprinting.png
+share/xfce4/doc/fr/images/xfprint_sheets.png
+share/xfce4/doc/fr/images/xfprint_virtualpages.png
+share/xfce4/doc/fr/xfprint.html
 @dirrm lib/xfce4/xfprint-plugins

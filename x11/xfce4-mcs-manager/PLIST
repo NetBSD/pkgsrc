@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.10 2005/03/18 07:59:09 martti Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/18 06:10:31 martti Exp $
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/bn_IN/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xfce-mcs-manager.mo
@@ -23,6 +26,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/nb_NO/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce-mcs-manager.mo
@@ -50,7 +54,14 @@ share/xfce4/doc/C/images/settings_manager.png
 share/xfce4/doc/C/images/smgr_from_root_menu.png
 share/xfce4/doc/C/images/smgr_from_setup_button.png
 share/xfce4/doc/C/xfce-mcs-manager.html
+share/xfce4/doc/fr/images/settings_manager.png
+share/xfce4/doc/fr/images/smgr_from_panel.png
+share/xfce4/doc/fr/images/smgr_from_root_menu.png
+share/xfce4/doc/fr/images/smgr_from_setup_button.png
+share/xfce4/doc/fr/xfce-mcs-manager.html
 @dirrm include/xfce4/xfce-mcs-manager
 @unexec ${RMDIR} %D/share/xfce4/doc/C/images 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/C 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/fr/images 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/fr 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc 2>/dev/null || ${TRUE}

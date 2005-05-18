@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2005/03/18 07:59:09 martti Exp $
+$NetBSD: distinfo,v 1.11 2005/05/18 06:10:30 martti Exp $
 
-SHA1 (xfce4-systray-4.2.1.tar.gz) = 74bbde77a1c37193b821f579b1641827541c6da2
-RMD160 (xfce4-systray-4.2.1.tar.gz) = 18f9969c71b923ba59342ef3d895f0f25ee5f421
-Size (xfce4-systray-4.2.1.tar.gz) = 312823 bytes
+SHA1 (xfce4-systray-4.2.2.tar.gz) = eb001bf07de9b29511a152bfb89edcb146f78dfd
+RMD160 (xfce4-systray-4.2.2.tar.gz) = 57d7c7d98c1b45e6580fd23d5203da2b803eeca9
+Size (xfce4-systray-4.2.2.tar.gz) = 312188 bytes

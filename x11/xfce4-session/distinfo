@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/03/18 07:59:09 martti Exp $
+$NetBSD: distinfo,v 1.4 2005/05/18 06:10:31 martti Exp $
 
-SHA1 (xfce4-session-4.2.1.tar.gz) = 344d107672a06d1a58ac7d41c08ec9fce9203e49
-RMD160 (xfce4-session-4.2.1.tar.gz) = ad78f5caa5567c24fcf9b3ab17078362dc00634b
-Size (xfce4-session-4.2.1.tar.gz) = 1316467 bytes
+SHA1 (xfce4-session-4.2.2.tar.gz) = c84ac42ef6069456740a4788a3ed14d9e86aeafd
+RMD160 (xfce4-session-4.2.2.tar.gz) = f322301e5dfcf1476197318d2e154f648bc9e933
+Size (xfce4-session-4.2.2.tar.gz) = 1499674 bytes
