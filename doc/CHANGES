@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10123 2005/05/18 22:45:01 chris Exp $
+$NetBSD: CHANGES,v 1.10124 2005/05/18 23:22:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2486,3 +2486,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed tcm [wiz 2005-05-18]
 	Removed tela [wiz 2005-05-18]
 	Updated sylpheed-devel to 1.9.11 [chris 2005-05-18]
+	Updated getmail to 4.3.9 [schmonz 2005-05-18]
