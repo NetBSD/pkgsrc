@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/07 15:01:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/18 13:07:32 xtraeme Exp $
 #
 
 DISTNAME=		qemu-0.7.0
@@ -26,6 +26,10 @@ SUBST_STAGE.snd=	post-patch
 SUBST_FILES.snd=	audio/ossaudio.c
 SUBST_SED.snd=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_MESSAGE.snd=	"Fixing hardcoded audio device."
+
+# Remove -march/-mcpu from CFLAGS, otherwise it will fail
+# to build in the SSE code.
+BUILDLINK_TRANSFORM+=	rm-optarg:-march rm-optarg:-mcpu
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
