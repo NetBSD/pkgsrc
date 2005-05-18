@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3499 2005/05/18 15:28:11 drochner Exp $
+$NetBSD: TODO,v 1.3500 2005/05/18 16:56:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -452,8 +452,6 @@ Suggested package updates
 	o dmalloc-5.4.2
 	o dmidecode-2.6
 	o dnstracer-1.8
-	o docbook-simple-1.1
-	o docbook-website-2.6.0
 	o doxygen-1.4.3
 	o dpkg-1.13.3
 	o dvdrip-0.52.4
@@ -481,7 +479,6 @@ Suggested package updates
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.0
-	o ethereal-0.10.11
 	o exiftags-1.00
 	o exmh-2.7.2
 	o f2c-20031025
@@ -588,7 +585,6 @@ Suggested package updates
 	o idesk-0.7.0
 	o ifile-1.3.5
 	o ijs-0.35
-	o inkscape-0.41
 	o inn-2.4.2
 	o intercal-0.24 [dillo]
 	o ion3-devel-20050502
@@ -716,7 +712,6 @@ Suggested package updates
 	o navi2ch-1.7.5
 	o nawk-20041222
 	o ncftp2-2.8.2
-	o ncftp3-3.1.9
 	o ncview-1.92e
 	o neon-0.25.0
 	o netatalk-2.0.3
