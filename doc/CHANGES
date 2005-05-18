@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10114 2005/05/18 16:40:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.10115 2005/05/18 16:44:07 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2433,3 +2433,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated octave to 2.1.70 [adam 2005-05-18]
 	Updated gnome-icon-theme to 2.10.1 [jmmv 2005-05-18]
 	Updated gtkhtml36 to 3.6.2 [jmmv 2005-05-18]
+	Updated gnome2-pixmaps to 2.10.1 [jmmv 2005-05-18]
