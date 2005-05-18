@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.392 2005/05/10 20:29:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.393 2005/05/18 22:02:18 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -43,21 +43,14 @@ SUBDIR+=	gdkxft
 SUBDIR+=	gdm
 SUBDIR+=	gdm1
 SUBDIR+=	ggiterm
-SUBDIR+=	gnome--
-SUBDIR+=	gnome-applets
-SUBDIR+=	gnome-core
 SUBDIR+=	gnome-desktop
 SUBDIR+=	gnome-gkrellm
 SUBDIR+=	gnome-libs
 SUBDIR+=	gnome-mag
 SUBDIR+=	gnome-panel
-SUBDIR+=	gnome-python
 SUBDIR+=	gnome-session
 SUBDIR+=	gnome-themes
 SUBDIR+=	gnome-themes-extras
-SUBDIR+=	gnome-users-guide
-SUBDIR+=	gnome1-panel
-SUBDIR+=	gnome1-session
 SUBDIR+=	gnome2-applets
 SUBDIR+=	gnome2-control-center
 SUBDIR+=	gnome2-terminal
@@ -68,7 +61,6 @@ SUBDIR+=	gnustep-preferences
 SUBDIR+=	gromit
 SUBDIR+=	gtk
 SUBDIR+=	gtk+extra
-SUBDIR+=	gtk--
 SUBDIR+=	gtk-engines
 SUBDIR+=	gtk-thinice-engine
 SUBDIR+=	gtk2
