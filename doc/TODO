@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3500 2005/05/18 16:56:29 wiz Exp $
+$NetBSD: TODO,v 1.3501 2005/05/18 18:44:14 drochner Exp $
 
 Suggested new packages
 ======================
@@ -1116,11 +1116,10 @@ Suggested package updates
 	o userppp-030706
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
-	o vcdimager-devel-0.7.22 [needs ffmpeg prerelease/snapshot]
 	o vera-1.14
 	o vfu-4.03
 	o vifm-0.2
-	o vlc-0.8.1
+	o vlc-0.8.1 [needs ffmpeg prerelease/snapshot]
 	o vm-7.19
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
