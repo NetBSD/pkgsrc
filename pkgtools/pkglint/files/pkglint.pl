@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.150 2005/05/18 03:47:24 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.151 2005/05/18 03:48:43 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -170,14 +170,14 @@ sub is_verbose()
 }
 #== End of PkgLint::Logging ===============================================
 
-package PkgLint::FileUtils;
+package PkgLint::FileUtil;
 #==========================================================================
 # This package provides some file handling subroutines. The subroutine
 # load_file reads a file into memory as an array of lines. A line is a
 # record that contains the fields C<file>, C<lineno> and C<text>.
 #==========================================================================
 
-package PkgLint::FileUtils::Line;
+package PkgLint::FileUtil::Line;
 	sub new($$$$) {
 		my ($class, $file, $lineno, $text) = @_;
 		my ($self) = ({});
@@ -212,9 +212,9 @@ package PkgLint::FileUtils::Line;
 		my ($self, $text) = @_;
 		PkgLint::Logging::log_info($self->file, $self->lineno, $text);
 	}
-# end of PkgLint::FileUtils::Line
+# end of PkgLint::FileUtil::Line
 
-package PkgLint::FileUtils;
+package PkgLint::FileUtil;
 BEGIN {
 	use Exporter;
 	use vars qw(@ISA @EXPORT_OK);
@@ -232,13 +232,13 @@ sub load_file($) {
 	while (defined($line = <F>)) {
 		$lineno++;
 		$line =~ s/\r*\n*\z//;
-		push(@$result, PkgLint::FileUtils::Line->new($fname, $lineno, $line));
+		push(@$result, PkgLint::FileUtil::Line->new($fname, $lineno, $line));
 	}
 	close(F) or return undef;
 	return $result;
 }
 
-#== End of PkgLint::FileUtils =============================================
+#== End of PkgLint::FileUtil ==============================================
 
 package main;
 use strict;
@@ -255,7 +255,7 @@ BEGIN {
 		log_error log_warning log_info
 		print_summary_and_exit
 	);
-	import PkgLint::FileUtils qw(
+	import PkgLint::FileUtil qw(
 		load_file
 	);
 }
