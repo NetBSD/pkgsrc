@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10111 2005/05/18 13:39:54 adam Exp $
+$NetBSD: CHANGES,v 1.10112 2005/05/18 15:43:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2430,3 +2430,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libtool-info to 1.5.18 [adam 2005-05-18]
 	Updated libtool to 1.5.18 [adam 2005-05-18]
 	Updated hdf5 to 1.6.4 [adam 2005-05-18]
+	Updated octave to 2.1.70 [adam 2005-05-18]
