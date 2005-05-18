@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.10 2005/03/18 07:59:10 martti Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/18 06:10:31 martti Exp $
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xfce4-toys.mo
+${PKGLOCALEDIR}/locale/bn_IN/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce4-toys.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xfce4-toys.mo
@@ -22,6 +24,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce4-toys.mo
+${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/nb_NO/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce4-toys.mo

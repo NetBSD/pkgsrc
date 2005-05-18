@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2005/03/18 07:59:09 martti Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/05/18 06:10:30 martti Exp $
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfce4-appfinder.mo
+${PKGLOCALEDIR}/locale/bn_IN/LC_MESSAGES/xfce4-appfinder.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce4-appfinder.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce4-appfinder.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xfce4-appfinder.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce4-appfinder.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/xfce4-appfinder.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfce4-appfinder.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce4-appfinder.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce4-appfinder.mo
@@ -17,6 +20,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce4-appfinder.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce4-appfinder.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce4-appfinder.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce4-appfinder.mo
+${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/xfce4-appfinder.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce4-appfinder.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/xfce4-appfinder.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xfce4-appfinder.mo
@@ -34,6 +38,12 @@ share/xfce4/doc/C/images/appfinder-handle-popup.png
 share/xfce4/doc/C/images/appfinder-item-popup.png
 share/xfce4/doc/C/images/default_appfinder.png
 share/xfce4/doc/C/xfce4-appfinder.html
+share/xfce4/doc/fr/images/default_appfinder.png
+share/xfce4/doc/fr/images/appfinder-handle-popup.png
+share/xfce4/doc/fr/images/appfinder-item-popup.png
+share/xfce4/doc/fr/xfce4-appfinder.html
 @unexec ${RMDIR} %D/share/xfce4/doc/C/images 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/C 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/fr/images 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/fr 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc 2>/dev/null || ${TRUE}

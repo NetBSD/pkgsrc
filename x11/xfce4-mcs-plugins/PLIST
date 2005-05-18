@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.9 2005/01/17 12:56:13 martti Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/05/18 06:10:31 martti Exp $
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/bn_IN/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce-mcs-plugins.mo
@@ -22,6 +24,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/xfce-mcs-plugins.mo
@@ -62,4 +65,10 @@ share/xfce4/doc/C/images/mouse_settings.png
 share/xfce4/doc/C/images/user_interface_settings.png
 share/xfce4/doc/C/images/user_interface_settings_icons.png
 share/xfce4/doc/C/xfce-mcs-plugins.html
+share/xfce4/doc/fr/images/display_preferences.png
+share/xfce4/doc/fr/images/font_selection.png
+share/xfce4/doc/fr/images/keyboard_settings.png
+share/xfce4/doc/fr/images/mouse_settings.png
+share/xfce4/doc/fr/images/user_interface_settings.png
+share/xfce4/doc/fr/xfce-mcs-plugins.html
 @dirrm lib/xfce4/mcs-plugins

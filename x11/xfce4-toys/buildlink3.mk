@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2005/03/30 07:04:06 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2005/05/18 06:10:31 martti Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_TOYS_BUILDLINK3_MK:=	${XFCE4_TOYS_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-toys}
 BUILDLINK_PACKAGES+=	xfce4-toys
 
 .if !empty(XFCE4_TOYS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xfce4-toys+=	xfce4-toys>=4.2.1
+BUILDLINK_DEPENDS.xfce4-toys+=	xfce4-toys>=4.2.2
 BUILDLINK_PKGSRCDIR.xfce4-toys?=	../../x11/xfce4-toys
 .endif	# XFCE4_TOYS_BUILDLINK3_MK
 

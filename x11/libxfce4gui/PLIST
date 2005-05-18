@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.10 2005/04/15 04:23:20 martti Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/18 06:10:30 martti Exp $
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/bn_IN/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/libxfcegui4.mo
@@ -12,12 +15,15 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libxfcegui4.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libxfcegui4.mo
