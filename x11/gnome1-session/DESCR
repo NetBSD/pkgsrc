@@ -1,4 +1,0 @@
-  This package contains the gnome-session component from gnome-core.
-The reason for this split was to enable gnome-core to co-exist with
-gnome2 components by depending on a gnome-session from either gnome1
-or gnome2.

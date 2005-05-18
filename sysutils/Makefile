@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.296 2005/05/16 10:51:47 rh Exp $
+# $NetBSD: Makefile,v 1.297 2005/05/18 22:02:18 wiz Exp $
 
 COMMENT=	System utilities
 
@@ -87,7 +87,6 @@ SUBDIR+=	grub
 SUBDIR+=	grun
 SUBDIR+=	gst-plugins-gnomevfs
 SUBDIR+=	gtk-send-pr
-SUBDIR+=	gtop
 SUBDIR+=	gworkspace
 SUBDIR+=	hfsutils
 SUBDIR+=	i2ocfg
@@ -99,7 +98,6 @@ SUBDIR+=	kdirstat
 SUBDIR+=	krusader
 SUBDIR+=	lambd
 SUBDIR+=	lavaps
-SUBDIR+=	libgtop
 SUBDIR+=	libgtop2
 SUBDIR+=	libirman
 SUBDIR+=	libol
@@ -154,7 +152,6 @@ SUBDIR+=	rox-edit
 SUBDIR+=	rox-lib
 SUBDIR+=	rox-memo
 SUBDIR+=	rox-session
-SUBDIR+=	rox-system
 SUBDIR+=	rox-wallpaper
 SUBDIR+=	rox-wrappers
 SUBDIR+=	rsnapshot
