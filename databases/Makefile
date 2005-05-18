@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2005/04/29 14:00:44 gson Exp $
+# $NetBSD: Makefile,v 1.171 2005/05/18 19:58:45 adrianp Exp $
 #
 
 COMMENT=	Databases
@@ -81,6 +81,7 @@ SUBDIR+=	p5-gdbm
 SUBDIR+=	p5-perl-ldap
 SUBDIR+=	p5-postgresql
 SUBDIR+=	p5-sybperl
+SUBDIR+=	pear-DB
 SUBDIR+=	pgaccess
 SUBDIR+=	pgpool
 SUBDIR+=	php-dba
@@ -169,4 +170,5 @@ SUBDIR+=	xsqlmenu
 SUBDIR+=	yasql
 SUBDIR+=	zope-mysql
 
+A
 .include "../mk/bsd.pkg.subdir.mk"
