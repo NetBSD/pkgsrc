@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10121 2005/05/18 22:09:52 wiz Exp $
+$NetBSD: CHANGES,v 1.10122 2005/05/18 22:40:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2476,3 +2476,12 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed oregano [wiz 2005-05-18]
 	Removed rox-system [wiz 2005-05-18]
 	Removed xchat-gnome [wiz 2005-05-18]
+	Removed cilk [wiz 2005-05-18]
+	Removed clanbomber [wiz 2005-05-18]
+	Removed clanlib [wiz 2005-05-18]
+	Removed linux-locale [wiz 2005-05-18]
+	Removed openc++ [wiz 2005-05-18]
+	Removed openptc [wiz 2005-05-18]
+	Removed ptl2 [wiz 2005-05-18]
+	Removed tcm [wiz 2005-05-18]
+	Removed tela [wiz 2005-05-18]
