@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/19 15:04:54 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/18 20:25:02 adrianp Exp $
 
 DISTNAME=	horde-3.0.4
 CATEGORIES=	www
@@ -16,6 +16,7 @@ DEPENDS+=	php-iconv>=4.3.3:../../converters/php-iconv
 DEPENDS+=	php-gd>=4.3.3:../../graphics/php-gd
 DEPENDS+=	pear-Log-[0-9]*:../../sysutils/pear-Log
 DEPENDS+=	pear-Mail_Mime-[0-9]*:../../mail/pear-Mail_Mime
+DEPENDS+=	pear-DB-[0-9]*:../../databases/pear-DB
 DEPENDS+=	ap-php>=4.3.3:../../www/ap-php
 DEPENDS+=	php-domxml>=4.3.3:../../textproc/php4-domxml
 DEPENDS+=	php-zlib>=4.3.3:../../archivers/php-zlib
