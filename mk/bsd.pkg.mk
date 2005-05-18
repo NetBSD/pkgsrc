@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1670 2005/05/18 02:52:38 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1671 2005/05/18 19:42:01 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1697,10 +1697,12 @@ ${WRKDIR}:
 	${RM} -f ${WRKDIR_BASENAME} || ${TRUE}
 .    endif
 .  endif
+.  if !defined(NO_WRKDIR_SYMLINK)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${LN} -s ${WRKDIR} ${WRKDIR_BASENAME} 2>/dev/null; then	\
 		${ECHO} "${WRKDIR_BASENAME} -> ${WRKDIR}";		\
 	fi
+.  endif
 .endif # WRKOBJDIR
 
 
