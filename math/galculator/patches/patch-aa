@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/05/18 15:45:04 drochner Exp $
+
+--- src/general_functions.c.orig	2005-05-07 10:20:10.000000000 +0200
++++ src/general_functions.c
+@@ -124,7 +124,7 @@ double axtof (char *bin_string, int base
+ 			return_value += (lower_bin_string[counter] - '0') * pow (base, strlen (lower_bin_string) - 1 - counter);
+ 		else if (lower_bin_string[counter] - 'a' < 10) \
+ 			return_value += (lower_bin_string[counter] - 'a' + 10) * pow (base, strlen (lower_bin_string) - 1 - counter);
+-		else fprintf (stderr, _("[%s] failed to convert char %c in function \"axtof\". %s\n"), PROG_NAME, lower_bin_string[counter], lower_bin_string[counter], BUG_REPORT);
++		else fprintf (stderr, _("[%s] failed to convert char %c in function \"axtof\". %s\n"), PROG_NAME, lower_bin_string[counter], BUG_REPORT);
+ 	}
+ 	
+ 	g_free (lower_bin_string);
