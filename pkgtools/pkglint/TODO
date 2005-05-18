@@ -9,3 +9,4 @@
 * check for C/C++ style comments in Makefiles
   rm -f *.o		/* delete unused files */
   .ifdef foo		/* xyz */
+* add checking for absolute paths

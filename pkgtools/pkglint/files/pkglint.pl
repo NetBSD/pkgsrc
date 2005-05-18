@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.151 2005/05/18 03:48:43 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.152 2005/05/18 08:28:06 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -362,7 +362,6 @@ sub readmakefile($);
 sub checkextra($$);
 sub checkorder($$@);
 sub checkearlier($@);
-sub abspathname($$);
 sub check_predefined_sites($);
 sub category_check();
 sub check_package();
@@ -960,7 +959,7 @@ sub checkpathname($) {
 	open(IN, "< $opt_packagedir/$file") || return false;
 	{ local $/; $whole = <IN>; }
 	close(IN);
-	return abspathname($whole, $file);
+	return true;
 }
 
 sub checklastline($) {
@@ -1426,11 +1425,6 @@ sub checkfile_Makefile($) {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "Use RCD_SCRIPTS mechanism to install rc.d ".
 			"scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
 	}
-
-	#
-	# whole file: full path name
-	#
-	&abspathname($whole, $file);
 
 	#
 	# break the makefile into sections.
