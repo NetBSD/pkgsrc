@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10122 2005/05/18 22:40:49 wiz Exp $
+$NetBSD: CHANGES,v 1.10123 2005/05/18 22:45:01 chris Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2485,3 +2485,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed ptl2 [wiz 2005-05-18]
 	Removed tcm [wiz 2005-05-18]
 	Removed tela [wiz 2005-05-18]
+	Updated sylpheed-devel to 1.9.11 [chris 2005-05-18]
