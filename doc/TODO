@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3498 2005/05/18 14:58:37 wiz Exp $
+$NetBSD: TODO,v 1.3499 2005/05/18 15:28:11 drochner Exp $
 
 Suggested new packages
 ======================
@@ -311,7 +311,6 @@ Suggested package updates
 	o PAM-0.78
 	o RealPlayerGold-10.0.4
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.5.1
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
@@ -552,7 +551,7 @@ Suggested package updates
 	o gpsim-devel-20041104
 	o gputils-0.13.0
 	o grace-5.1.18
-	o gramps-2.0.0
+	o gramps-2.0.0 [does not work with newer py-gtk]
 	o grap-1.32
 	o grepmail-5.3030
 	o gri-2.12.8
@@ -636,7 +635,6 @@ Suggested package updates
 	o lcc-4.2
 	o leafpad-0.7.9
 	o lftp-3.2.0
-	o libcddb-1.0.2
 	o libcomprex-0.3.3
 	o libetpan-0.34b
 	o libevent-1.1
@@ -1034,7 +1032,7 @@ Suggested package updates
 	o skampi-4.1
 	o skill-4.1.2
 	o skkinput-2.06.4
-	o skype-1.1.0.3
+	o skype-1.1.0.3 [libdbus missing in suse91 compat]
 	o sma-1.4
 	o smalleiffel-0.90
 	o smalltalk-2.1.10
@@ -1123,7 +1121,7 @@ Suggested package updates
 	o userppp-030706
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
-	o vcdimager-devel-0.7.22
+	o vcdimager-devel-0.7.22 [needs ffmpeg prerelease/snapshot]
 	o vera-1.14
 	o vfu-4.03
 	o vifm-0.2
