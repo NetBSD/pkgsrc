@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/18 07:59:09 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/18 06:10:31 martti Exp $
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/bn_IN/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce4-session.mo
@@ -22,6 +24,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/nb_NO/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce4-session.mo
@@ -54,8 +57,8 @@ lib/xfce4/splash/engines/libsimple.la
 libexec/balou-export-theme
 libexec/balou-install-theme
 libexec/xfsm-shutdown-helper
-man/man1/xfce4-session.1
 man/man1/xfce4-session-logout.1
+man/man1/xfce4-session.1
 share/applications/xfce-session-settings.desktop
 share/applications/xfce-splash-settings.desktop
 share/icons/hicolor/128x128/apps/xfce4-session.png
@@ -73,6 +76,10 @@ share/xfce4/doc/C/images/xfsm-advanced.png
 share/xfce4/doc/C/images/xfsm-general.png
 share/xfce4/doc/C/images/xfsm-splash.png
 share/xfce4/doc/C/xfce4-session.html
+share/xfce4/doc/fr/images/xfsm-advanced.png
+share/xfce4/doc/fr/images/xfsm-general.png
+share/xfce4/doc/fr/images/xfsm-splash.png
+share/xfce4/doc/fr/xfce4-session.html
 @dirrm share/themes/Default/balou
 @unexec ${RMDIR} %D/share/icons/hicolor/72x72/apps 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/icons/hicolor/72x72 2>/dev/null || ${TRUE}
