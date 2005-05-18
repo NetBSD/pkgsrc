@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/16 18:27:30 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/18 15:56:38 drochner Exp $
 bin/freesci
 bin/freesci-setup
 bin/sciconsole
@@ -12,10 +12,6 @@ share/applnk/Games/Adventure/FreeSCI.desktop
 share/examples/freesci/config
 share/games/freesci/config.template
 share/icons/hicolor/48x48/apps/freesci.png
-@dirrm share/icons/hicolor/48x48/apps
-@dirrm share/icons/hicolor/48x48
-@dirrm share/icons/hicolor
-@dirrm share/icons
 @dirrm share/games/freesci
 @dirrm share/examples/freesci
 @dirrm share/applnk/Games/Adventure
