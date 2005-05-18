@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2005/04/11 21:46:59 tv Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/18 01:11:44 xtraeme Exp $
 #
 
-DISTNAME=		rdesktop-1.4.0
+DISTNAME=		rdesktop-1.4.1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rdesktop/}
 
