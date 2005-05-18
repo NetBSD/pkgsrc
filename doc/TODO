@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3494 2005/05/17 17:07:50 abs Exp $
+$NetBSD: TODO,v 1.3495 2005/05/18 06:10:49 martti Exp $
 
 Suggested new packages
 ======================
@@ -1145,7 +1145,6 @@ Suggested package updates
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.2
-	o xfce-4.2.1.1
 	o xfce4-netload-plugin-0.2.4
 	o xfce4-notes-plugin-0.10.0
 	o xfce4-systemload-plugin-0.3.6
