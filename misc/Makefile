@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.237 2005/04/22 18:58:30 wiz Exp $
+# $NetBSD: Makefile,v 1.238 2005/05/18 22:02:17 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -63,8 +63,6 @@ SUBDIR+=	gkrellm-weather
 SUBDIR+=	gkrellm1-moon
 SUBDIR+=	gkrellm1-weather
 SUBDIR+=	gnome-dirs
-SUBDIR+=	gnome-pim
-SUBDIR+=	gnome-utils
 SUBDIR+=	gnome1-dirs
 SUBDIR+=	gnome2-dirs
 SUBDIR+=	gnome2-user-docs
@@ -158,7 +156,6 @@ SUBDIR+=	most
 SUBDIR+=	mtail
 SUBDIR+=	multitail
 SUBDIR+=	nxtvepg
-SUBDIR+=	ooqstart
 SUBDIR+=	open2300
 SUBDIR+=	open2300-mysql
 SUBDIR+=	openoffice
