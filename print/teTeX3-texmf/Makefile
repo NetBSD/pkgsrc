@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/17 22:00:13 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/18 15:11:13 jlam Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
@@ -24,7 +24,7 @@ USE_GNU_TOOLS+=	patch
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(EXTRACT_USING:M*tar)
-EXTRACT_CMD_OPTS${EXTRACT_SUFX}=	-X ${FILEDIR}/exclude -p
+EXTRACT_CMD_OPTS${EXTRACT_SUFX}=	-X ${FILESDIR}/exclude -p
 .elif !empty(EXTRACT_USING:Mpax)
 EXTRACT_CMD_OPTS${EXTRACT_SUFX}=	-c `${CAT} ${FILESDIR}/exclude`
 .endif
