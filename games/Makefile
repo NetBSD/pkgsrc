@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2005/03/30 15:13:17 wiz Exp $
+# $NetBSD: Makefile,v 1.246 2005/05/18 16:01:36 drochner Exp $
 #
 
 COMMENT=	Games
@@ -119,6 +119,7 @@ SUBDIR+=	knightcap
 SUBDIR+=	knightcap-brain
 SUBDIR+=	knights
 SUBDIR+=	koth
+SUBDIR+=	kye
 SUBDIR+=	lbreakout
 SUBDIR+=	lbreakout2
 SUBDIR+=	level9
