@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/18 19:56:06 adrianp Exp $
+
+SHA1 (pear/DB-1.7.6.tgz) = cbb757ada4a3bb5e672c42105e8975ce81614fc6
+RMD160 (pear/DB-1.7.6.tgz) = 66ac157e769864c0c975e0509cc3d5bf728ddaa3
+Size (pear/DB-1.7.6.tgz) = 124807 bytes
