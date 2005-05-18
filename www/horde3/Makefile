@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/18 20:25:02 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/18 20:34:19 adrianp Exp $
 
 DISTNAME=	horde-3.0.4
 CATEGORIES=	www
@@ -57,7 +57,7 @@ SUPPORT_FILES_PERMS+=	${HORDEDIR}/config/registry.php.dist \
 			${APACHE_USER} ${ROOT_GROUP} 0440
 SUPPORT_FILES_PERMS+=	${HORDEDIR}/config/hooks.php.dist \
 			${HORDEDIR}/config/hooks.php \
-			${APACHE_USER} ${ROOT_GROUP} 0000
+			${APACHE_USER} ${ROOT_GROUP} 0440
 
 SUBST_CLASSES=		files
 SUBST_STAGE.files=	post-build
