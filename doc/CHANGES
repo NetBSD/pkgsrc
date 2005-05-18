@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10108 2005/05/18 06:10:48 martti Exp $
+$NetBSD: CHANGES,v 1.10109 2005/05/18 08:29:46 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2425,3 +2425,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xfce4-utils to 4.2.2 [martti 2005-05-18]
 	Updated xfce4-trigger-launcher to 4.2.2 [martti 2005-05-18]
 	Updated xfce4 to 4.2.2 [martti 2005-05-18]
+	Updated pkglint to 4.15 [rillig 2005-05-18]
