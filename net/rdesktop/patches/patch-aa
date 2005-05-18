@@ -1,38 +1,38 @@
-$NetBSD: patch-aa,v 1.9 2005/03/23 15:24:11 xtraeme Exp $
+$NetBSD: patch-aa,v 1.10 2005/05/18 01:11:45 xtraeme Exp $
 
---- Makefile.in.orig	2005-03-08 04:19:45.000000000 +0100
-+++ Makefile.in	2005-03-08 04:21:35.000000000 +0100
+--- Makefile.in.orig	2005-05-18 03:01:07.000000000 +0200
++++ Makefile.in	2005-05-18 03:02:42.000000000 +0200
 @@ -54,25 +54,21 @@
  
  .PHONY: installbin
  installbin: rdesktop
--	mkdir -p $(DESTDIR)/$(bindir)
--	$(INSTALL) rdesktop $(DESTDIR)/$(bindir)
--	strip $(DESTDIR)/$(bindir)/rdesktop
--	chmod 755 $(DESTDIR)/$(bindir)/rdesktop
-+	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)/$(bindir)
-+	$(BSD_INSTALL_PROGRAM) rdesktop $(DESTDIR)/$(bindir)
+-	mkdir -p $(DESTDIR)$(bindir)
+-	$(INSTALL) rdesktop $(DESTDIR)$(bindir)
+-	strip $(DESTDIR)$(bindir)/rdesktop
+-	chmod 755 $(DESTDIR)$(bindir)/rdesktop
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(bindir)
++	$(BSD_INSTALL_PROGRAM) rdesktop $(DESTDIR)$(bindir)
  
  .PHONY: installman
  installman: doc/rdesktop.1
--	mkdir -p $(DESTDIR)/$(mandir)/man1
--	cp doc/rdesktop.1 $(DESTDIR)/$(mandir)/man1
--	chmod 644 $(DESTDIR)/$(mandir)/man1/rdesktop.1
-+	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)/$(mandir)/man1
-+	$(BSD_INSTALL_MAN) doc/rdesktop.1 $(DESTDIR)/$(mandir)/man1
+-	mkdir -p $(DESTDIR)$(mandir)/man1
+-	cp doc/rdesktop.1 $(DESTDIR)$(mandir)/man1
+-	chmod 644 $(DESTDIR)$(mandir)/man1/rdesktop.1
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man1
++	$(BSD_INSTALL_MAN) doc/rdesktop.1 $(DESTDIR)$(mandir)/man1
  
  .PHONY: installkeymaps
  installkeymaps:
--	mkdir -p $(DESTDIR)/$(KEYMAP_PATH)
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(KEYMAP_PATH)
+-	mkdir -p $(DESTDIR)$(KEYMAP_PATH)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(KEYMAP_PATH)
  # Prevent copying the CVS directory
--	cp keymaps/?? keymaps/??-?? $(DESTDIR)/$(KEYMAP_PATH)
--	cp keymaps/common $(DESTDIR)/$(KEYMAP_PATH)
--	cp keymaps/modifiers $(DESTDIR)/$(KEYMAP_PATH)
--	chmod 644 $(DESTDIR)/$(KEYMAP_PATH)/*
-+	$(BSD_INSTALL_DATA) keymaps/?? keymaps/??-?? $(DESTDIR)/$(KEYMAP_PATH)
-+	$(BSD_INSTALL_DATA) keymaps/common $(DESTDIR)/$(KEYMAP_PATH)
-+	$(BSD_INSTALL_DATA) keymaps/modifiers $(DESTDIR)/$(KEYMAP_PATH)
+-	cp keymaps/?? keymaps/??-?? $(DESTDIR)$(KEYMAP_PATH)
+-	cp keymaps/common $(DESTDIR)$(KEYMAP_PATH)
+-	cp keymaps/modifiers $(DESTDIR)$(KEYMAP_PATH)
+-	chmod 644 $(DESTDIR)$(KEYMAP_PATH)/*
++	$(BSD_INSTALL_DATA) keymaps/?? keymaps/??-?? $(DESTDIR)$(KEYMAP_PATH)
++	$(BSD_INSTALL_DATA) keymaps/common $(DESTDIR)$(KEYMAP_PATH)
++	$(BSD_INSTALL_DATA) keymaps/modifiers $(DESTDIR)$(KEYMAP_PATH)
  
  .PHONY: proto
  proto:
