@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2005/05/12 18:31:20 reed Exp $
+# $NetBSD: Makefile,v 1.57 2005/05/18 22:35:04 reed Exp $
 
 DISTNAME=	koffice-1.3.5
 PKGREVISION=	4
@@ -19,13 +19,6 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
 GCC_REQD+=		2.95.3
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux"
-# workaround bug noted in PR #25402
-BUILDLINK_TRANSFORM+=	rm:-Wl,--no-undefined
-.endif
 
 PTHREAD_OPTS+=		require
 
