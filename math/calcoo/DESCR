@@ -1,0 +1,16 @@
+Calcoo is a scientific calculator designed to provide maximum
+usability.  The features that make Calcoo better than (at least some)
+other calculator programs are:
+* Bitmapped button labels and display digits to improve readability.
+* No double-function buttons. As the result, you need to click only one
+  button for any operation (except for arc-hyp trigonometric
+  functions).
+* Undo/redo buttons.
+* Copy/paste interaction with X the clipboard.
+* Both RPN (reverse Polish notation) and algebraic modes are available
+* Tick marks to separate thousands.
+* Two memory registers with displays.
+* Displays for Y, Z, and T registers.
+* It is a purely scientific calculator. There are no buttons for the
+  hexadecimal digits (ABCDEF) and logical operations, which take space
+  and distract from "scientific" buttons.
