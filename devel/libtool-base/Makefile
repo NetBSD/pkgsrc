@@ -1,16 +1,32 @@
-# $NetBSD: Makefile,v 1.62 2005/05/18 11:57:01 adam Exp $
+# $NetBSD: Makefile,v 1.63 2005/05/18 14:40:04 tv Exp $
+
+###########################################################################
+###########################################################################
+#
+# HEADS UP!  DO NOT CHANGE THE VERSION OR PKGREVISION WITHOUT READING THIS:
+#
+###########################################################################
+###########################################################################
+#
+# This package is maintained specially in order to preserve pkgsrc
+# specific OS changes that diverge from the "out of the box" libtool.
+# In order to keep this package in a maintainable condition, the .m4 files
+# must be manipulated in order to generate the patch-* files.
+#
+# See devel/libtool/patches/manual.README for instructions on how to make
+# these patch files properly; otherwise your changes WILL be lost on the
+# next libtool update.
+#
+# DO NOT MAKE CHANGES TO patch-ab OR patch-ad WITHOUT FOLLOWING THESE
+# INSTRUCTIONS.  There are no exceptions to this rule.
+#
+###########################################################################
+###########################################################################
 
 .include "../../devel/libtool/Makefile.common"
 
-#
-# HEADS UP!  Before changing PKGREVISION:  Did you remember to merge
-# any changes into the m4 manual diffs?  Updating patch-a[bd] is not enough!
-#
-# See devel/libtool/patches/manual.README for instructions on how to make
-# these patch files properly, so that your changes won't be lost completely
-# on the next libtool update.
-#
 PKGNAME=	${DISTNAME:S/-/-base-/}
+PKGREVISION=	1
 SVR4_PKGNAME=	ltoob
 
 COMMENT=	Generic shared library support script (the script itself)
