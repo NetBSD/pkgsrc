@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.147 2005/05/15 02:38:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.148 2005/05/18 03:38:03 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -214,10 +214,6 @@ sub load_file($) {
 #== End of PkgLint::FileUtils =============================================
 
 package main;
-#==========================================================================
-# This is the main package of pkglint. Currently it contains a lot of
-# functionality, but that will be moved into separate packages.
-#==========================================================================
 use strict;
 use warnings;
 
