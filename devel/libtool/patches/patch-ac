@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.17 2005/03/22 15:12:08 tv Exp $
+$NetBSD: patch-ac,v 1.18 2005/05/18 11:57:12 adam Exp $
 
---- ltmain.sh.orig	2005-02-12 07:30:57.000000000 -0500
+--- ltmain.sh.orig	Mon May 16 11:39:29 2005
 +++ ltmain.sh
-@@ -187,6 +187,31 @@ func_win32_libid ()
+@@ -188,6 +188,31 @@ func_win32_libid ()
  # arg is usually of the form 'gcc ...'
  func_infer_tag ()
  {
@@ -34,7 +34,7 @@ $NetBSD: patch-ac,v 1.17 2005/03/22 15:12:08 tv Exp $
      if test -n "$available_tags" && test -z "$tagname"; then
        CC_quoted=
        for arg in $CC; do
-@@ -227,6 +252,27 @@ func_infer_tag ()
+@@ -228,6 +253,27 @@ func_infer_tag ()
  	      break
  	      ;;
  	    esac
@@ -62,7 +62,7 @@ $NetBSD: patch-ac,v 1.17 2005/03/22 15:12:08 tv Exp $
  	  fi
  	done
  	# If $tagname still isn't set, then no tagged configuration
-@@ -534,7 +580,7 @@ if test -z "$show_help"; then
+@@ -512,7 +558,7 @@ if test -z "$show_help"; then
      $echo "*** Warning: inferring the mode of operation is deprecated." 1>&2
      $echo "*** Future versions of Libtool will require --mode=MODE be specified." 1>&2
      case $nonopt in
@@ -71,7 +71,7 @@ $NetBSD: patch-ac,v 1.17 2005/03/22 15:12:08 tv Exp $
        mode=link
        for arg
        do
-@@ -1321,6 +1367,13 @@ EOF
+@@ -1313,6 +1359,13 @@ EOF
  	    exit $EXIT_FAILURE
  	    ;;
  	  esac
@@ -85,7 +85,7 @@ $NetBSD: patch-ac,v 1.17 2005/03/22 15:12:08 tv Exp $
  	  if test "$prev" = rpath; then
  	    case "$rpath " in
  	    *" $arg "*) ;;
-@@ -3206,6 +3259,7 @@ EOF
+@@ -3202,6 +3255,7 @@ EOF
  	linux)
  	  major=.`expr $current - $age`
  	  versuffix="$major.$age.$revision"
@@ -93,7 +93,7 @@ $NetBSD: patch-ac,v 1.17 2005/03/22 15:12:08 tv Exp $
  	  ;;
  
  	osf)
-@@ -5422,8 +5476,16 @@ relink_command=\"$relink_command\""
+@@ -5462,8 +5516,16 @@ relink_command=\"$relink_command\""
        exit $EXIT_FAILURE
      fi
  
