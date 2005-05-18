@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.44 2005/04/01 22:37:44 heinz Exp $
+# $NetBSD: module.mk,v 1.45 2005/05/18 22:42:07 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -144,6 +144,10 @@ PERL5_MAKE_FLAGS+=	OTHERLDFLAGS="${LDFLAGS:S/-Wl,//g}"
 .else
 PERL5_MAKE_FLAGS+=	OTHERLDFLAGS="${LDFLAGS}"
 .endif
+
+PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SUB_INSTALLSITELIB}
+PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SUB_INSTALLSITEARCH}
+PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_SUB_INSTALLARCHLIB}
 
 # Generate the PLIST from the files listed in PERL5_PACKLIST.
 .if defined(PERL5_PACKLIST)
