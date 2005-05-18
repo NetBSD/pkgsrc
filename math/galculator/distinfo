@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/18 15:45:04 drochner Exp $
+
+SHA1 (galculator-1.2.5.tar.gz) = fb223bf23b1442ec391cec1932e917951f9cc895
+RMD160 (galculator-1.2.5.tar.gz) = bce9f52a4aca449ea15a160c83eb92ffbb3ab10e
+Size (galculator-1.2.5.tar.gz) = 275790 bytes
+SHA1 (patch-aa) = 16667855487c813ea5c8ea99a730d318c6cc7f40
