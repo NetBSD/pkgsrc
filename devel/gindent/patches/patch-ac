@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2005/05/18 14:23:10 minskim Exp $
+
+--- src/indent.h.orig	2002-04-23 15:49:24.000000000 -0500
++++ src/indent.h
+@@ -92,9 +92,6 @@ extern char *cur_line;
+ /* Size of the input program, not including the ' \n\0' we add at the end */
+ extern unsigned long in_prog_size;
+ 
+-/* The output file. */
+-extern FILE *output;
+-
+ 
+ 
+ extern char *labbuf;            /* buffer for label */
