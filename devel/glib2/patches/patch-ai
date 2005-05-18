@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2005/05/18 10:56:09 martin Exp $
+
+--- glib/gatomic.c.orig	2005-03-14 06:02:41.000000000 +0100
++++ glib/gatomic.c	2005-05-18 12:19:34.000000000 +0200
+@@ -121,7 +121,7 @@
+ 			: "=r" (result), "=m" (*a)
+ 			: "r" (oldval), "m" (*a), "r" (a),
+ 			"0" (newval));
+-  return result != 0;
++  return result == oldval;
+ }
+ #  else /* What's that */
+ #    error "Your system has an unsupported pointer size"
