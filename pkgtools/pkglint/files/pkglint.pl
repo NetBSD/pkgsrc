@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.152 2005/05/18 08:28:06 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.153 2005/05/18 19:08:42 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1572,13 +1572,6 @@ sub checkfile_Makefile($) {
 	$i =~ s/\${DISTNAME[^}]*}/$distname/g;
 	if ($i =~ /-([^-]+)$/) {
 		my ($j, $k) = ($`, $1);
-		if ($j =~ /[0-9]$/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "is \"$j\" sane as package name ".
-				"WITHOUT version number? ".
-				"if not, avoid \"-\" in version number ".
-				"part of ".
-				(($pkgname eq '') ? "DISTNAME." : "PKGNAME."));
-		}
 		# Be very smart. Kids, don't do this at home.
 		if ($k =~ /\$(\(|\{)([A-Z_-]+)(\)|\})/) {
 			my $k1 = $2;
