@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.49 2005/05/03 16:34:02 jlam Exp $
+# $NetBSD: build,v 1.50 2005/05/18 20:12:49 sketch Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -355,6 +355,15 @@ fi
 echo "Post processing bulk build results..."
 
 #rm $DEPENDSTREEFILE $DEPENDSFILE $SUPPORTSFILE $INDEXFILE $ORDERFILE
+
+# Re-install BULK_PREREQ as we may need functionality (e.g. SMTP) provided by
+# them for post-build to run.
+echo "Re-installing prerequisite packages specified with BULK_PREREQ..."
+for pkgdir in $BULK_PREREQ
+do
+	echo $pkgdir
+	( cd ${USR_PKGSRC}/$pkgdir && ${BMAKE} bulk-install )
+done
 
 # Perl was wiped, reinstall it!
 ( cd pkgtools/pkglint && cd ${PERL5_PKGSRCDIR} && ${BMAKE} bulk-install )
