@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.102 2005/05/18 03:36:13 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.103 2005/05/18 12:00:01 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -231,3 +231,5 @@ Pullup ticket 505 - requested by Shin'ichiro TAYA
 security update for mozilla
 Pullup ticket 508 - requested by Lubomir Sedlacik
 remove mozilla-stable
+Pullup ticket 509 - requested by Adrian Portelli
+security update for bugzilla
