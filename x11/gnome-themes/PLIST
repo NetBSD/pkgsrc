@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/03/22 16:20:22 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/05/18 16:24:29 drochner Exp $
 share/icons/Crux/12x12/filesystems/gnome-fs-directory.png
 share/icons/Crux/12x12/filesystems/gnome-fs-regular.png
 share/icons/Crux/192x192/filesystems/gnome-fs-directory.png
@@ -1163,6 +1163,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-themes.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-themes.mo
@@ -1172,9 +1173,11 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-themes.mo
+${PKGLOCALEDIR}/locale/ug/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-themes.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-themes.mo
 share/themes/Crux/index.theme
