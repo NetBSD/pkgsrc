@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.86 2005/05/19 05:27:25 jlam Exp $
+# $NetBSD: replace.mk,v 1.87 2005/05/19 20:08:44 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -57,6 +57,13 @@ USE_TOOLS+=	perl
 .  if empty(USE_PERL5:Mbuild)
 TOOLS_DEPMETHOD.perl?=	DEPENDS
 .  endif
+.endif
+
+# XXX Keep this hack here until the day that msgfmt and msgfmt-plurals
+# XXX is handled directly by the tools framework.
+# XXX
+.if defined(USE_MSGFMT_PLURALS) && !empty(USE_MSGFMT_PLURALS:M[yY][eE][sS])
+USE_TOOLS+=	perl
 .endif
 
 # bison implies "bison-yacc"
