@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3506 2005/05/19 15:08:10 wiz Exp $
+$NetBSD: TODO,v 1.3507 2005/05/19 16:01:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -301,6 +301,7 @@ Suggested package updates
 
 	o 0verkill-0.16
 	o BasiliskII-1.0.20050322
+	o BitTornado-0.3.12
 	o Chinput-3.0.1
 	o GMT-4.0
 	o GUIlib-1.1.1
@@ -440,6 +441,7 @@ Suggested package updates
 	o denemo-0.7.2a
 	o devIL-1.6.7
 	o devhelp-0.9.3
+	o devilspie-0.10
 	o devtodo-0.1.18
 	o diction-1.08
 	o diffstat-1.38
@@ -488,6 +490,7 @@ Suggested package updates
 	o flac123-0.0.8
 	o flashplayer-0.4.13
 	o fluxbox-0.9.13 [pkg/30229|jmcneill]
+	o flyspell-1.7i
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
@@ -516,7 +519,7 @@ Suggested package updates
 	o gfract-0.3.2
 	o ghc-6.2.2
 	o ghostscript-8.00 (apfl)
-	o ghostscript-8.01 (gnu)
+	o ghostscript-8.16 (gnu)
 	o ghostscript-8.50
 	o ghostscript-fonts-8.11
 	o ghostscript-gnu-8.50
