@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/05/19 13:03:56 minskim Exp $
+
+--- fireSim.c.orig	2004-08-27 10:34:54.000000000 -0600
++++ fireSim.c
+@@ -29,7 +29,9 @@
+ 
+ #include "fireLib.h"
+ 
++#ifndef _MATH_H_
+ #define INFINITY 999999999.     /* or close enough */
++#endif
+ 
+ /* NOTE 1: Change these to modify map size & resolution. */
+ static int    Rows   = 101;     /* Number of rows in each map. */
