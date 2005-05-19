@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.153 2005/05/18 19:08:42 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.154 2005/05/19 08:42:36 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -449,7 +449,7 @@ sub parse_command_line() {
 		"newpackage|N" => \$opt_check_newpkg,
 		"verbose|v" => sub { PkgLint::Logging::set_verbose(true); },
 		"version|V" => sub { print("$conf_distver\n"); exit(0); },
-		"conblank|B=i" => \$opt_contblank,
+		"contblank|B=i" => \$opt_contblank,
 		"dumpmakefile|I" => \$opt_dumpmakefile,
 		"quiet|q" => \$opt_quiet,
 	);
