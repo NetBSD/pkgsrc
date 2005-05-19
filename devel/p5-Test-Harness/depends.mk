@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.4 2005/05/12 06:04:09 jlam Exp $
+# $NetBSD: depends.mk,v 1.5 2005/05/19 15:35:41 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -10,11 +10,11 @@
 # packages, and thus refuses to build the packages depending on
 # this package when it fails...
 #
-# Fix this for now by noting that if there is no PERL5 installed,
-# and PERL5_PKGSRCDIR has not been set, then a sufficiently new
-# perl will be installed, so the DEPENDS line is not needed...
-# This hack should be removed when the bulk-build dependency-
-# tracking has been fixed.
-.if exists(${PERL5}) || defined(PERL5_PKGSRCDIR)
+# Fix this for now by noting that if there is no PERL5 installed, then
+# a sufficiently new perl will be installed, so the DEPENDS line is
+# not needed...  This hack should be removed when the bulk-build
+# dependency- tracking has been fixed.
+#
+.if defined(PERL5) && exists(${PERL5})
 DEPENDS+=	{perl{,-thread}>=5.8.3,p5-Test-Harness-[0-9]*}:../../devel/p5-Test-Harness
 .endif
