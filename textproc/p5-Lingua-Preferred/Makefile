@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/19 17:27:13 reed Exp $
+# $NetBSD: Makefile,v 1.1.1.1 2005/05/19 17:31:02 reed Exp $
 #
 
 DISTNAME=		Lingua-Preferred-0.2.4
