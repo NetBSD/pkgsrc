@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/05/18 13:39:05 adam Exp $
+# $NetBSD: Makefile,v 1.28 2005/05/19 15:39:04 jwise Exp $
 
 DISTNAME=	hdf5-1.6.4
 CATEGORIES=	devel
@@ -12,8 +12,9 @@ COMMENT=	Hierarchical Data Format (new generation)
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-szlib
 TEST_TARGET=		check
+
+.include "options.mk"
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/misc/h5cc ${PREFIX}/bin
@@ -25,6 +26,5 @@ post-install:
 	cd ${WRKSRC}/doc/html && ${PAX} -rw . ${PREFIX}/share/doc/html/hdf5
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/html/hdf5
 
-.include "../../archivers/szip/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
