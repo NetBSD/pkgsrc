@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/05/13 05:20:48 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2005/05/19 17:05:38 jlam Exp $
 
 DISTNAME=	courier-imap-4.0.2
 PKGBASE=	${DISTNAME:C/-[^-]*$//}
@@ -16,6 +16,7 @@ USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PERL5=		build
+USE_TOOLS+=		env
 
 .include "../../mail/courier-maildir/Makefile.common"
 
@@ -26,6 +27,7 @@ CONFIGURE_ARGS+=	--with-mailuser=${ROOT_USER}
 CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 CONFIGURE_ARGS+=	--program-transform-name='s/\.rc$$//'
 CONFIGURE_ENV+=		OPENSSL=${SSLBASE}/bin/openssl
+CONFIGURE_ENV+=		SETENV=${TOOLS_SETENV:Q}
 
 INSTALL_AM_MAKEFLAGS=	sysconfdir=${EGDIR}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
