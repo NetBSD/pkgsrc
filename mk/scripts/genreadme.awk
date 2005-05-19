@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.15 2005/05/19 11:46:40 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.16 2005/05/19 21:11:24 dmcmahill Exp $
 #
 # Copyright (c) 2002, 2003, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -796,7 +796,7 @@ function copy_readme(old, new, cmd, rc) {
 }
 
 
-function load_cache_file( file ) {
+function load_cache_file( file, pkgfile, opsys, osver, march ) {
   fatal_check_file( file );
 
   if( debug ) printf("load_cache_file(%s)\n", file);
@@ -830,7 +830,9 @@ function load_cache_file( file ) {
       opsys_list[pkgfile] = opsys;
       osver_list[pkgfile] = osver;
       march_list[pkgfile] = march;
-      pkg_list[pkgfile] = pkgfile;
+
+      # we only use this for a list of keys later so store something short...
+      pkg_list[pkgfile] = 1;
       pkgnm_list[pkgfile] = pkgfile;
       gsub(/.*\//, "", pkgnm_list[pkgfile]);
     } else {
@@ -842,7 +844,7 @@ function load_cache_file( file ) {
   close( file );
 }
 
-function lookup_cache( wc, r, binpkgs) {
+function lookup_cache( wc, r, binpkgs, key) {
   if( debug ) printf("lookup_cache( %s )\n", wc);
   r = ".*/" glob2reg( wc );
   if( debug ) printf("lookup_cache():  Searching for \"%s\"\n", r );
@@ -858,3 +860,4 @@ function lookup_cache( wc, r, binpkgs) {
   }
   return( binpkgs );
 }
+
