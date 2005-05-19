@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/15 22:50:13 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/19 10:59:10 rillig Exp $
 #
 
 DISTNAME=	regress-make-1.0
@@ -11,11 +11,7 @@ COMMENT=	Test Makefile quoting
 REGRESS_TESTS=	continue dblquote for ltarget nestfor quoting sglquote	\
 	vtarget bug1
 
-do-extract:
-	@${_PKG_SILENT}${_PKG_DEBUG}					\
-	${MKDIR} ${WRKSRC:Q}
-
-do-build:
+do-regress:
 .for t in ${REGRESS_TESTS}
 	@${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO_MSG} "Running testcase "${t:Q};				\
