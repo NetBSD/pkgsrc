@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/12/28 22:50:09 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/19 16:25:37 drochner Exp $
 share/icons/Amaranth/index.theme
 share/icons/Amaranth/scalable/apps/abiword_48.svg
 share/icons/Amaranth/scalable/apps/accessibility-keyboard-capplet.svg
@@ -1019,6 +1019,7 @@ ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnome-themes-extras.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-themes-extras.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-themes-extras.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-themes-extras.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-themes-extras.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-themes-extras.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-themes-extras.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-themes-extras.mo
