@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2005/05/02 16:57:19 drochner Exp $
+# $NetBSD: Makefile,v 1.65 2005/05/19 13:12:52 markd Exp $
 
 DISTNAME=		R-2.1.0
 CATEGORIES=		math
@@ -93,6 +93,10 @@ SUBST_SED.fix-R=	${SUBST_SED.unwrap}				\
 			-e "s|${BUILDLINK_X11_DIR}/|${X11BASE}/|g"
 
 BUILDLINK_DEPENDS.zlib+= zlib>=1.2.1
+
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-6]*)
+CONFIGURE_ARGS+=	--enable-mbcs=no
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
