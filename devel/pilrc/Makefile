@@ -1,29 +1,27 @@
-# $NetBSD: Makefile,v 1.24 2005/04/11 21:45:36 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/05/19 01:25:01 jlam Exp $
 #
 
 DISTNAME=	pilrc-2.9p9
 PKGNAME=	pilrc-2.9.10
 PKGREVISION=	3
 #WRKSRC=	${WRKDIR}/pilrc-2.9p9
-DIFFS=		pilrc-2.9p10.diff
-EXTRACT_SUFFIX=	.tgz
-DISTFILES=	${DISTNAME}${EXTRACT_SUFFIX} ${DIFFS}
+EXTRACT_SUFX=	.tgz
 CATEGORIES=	devel
-MASTER_SITES=	http://www.ardiri.com/download/files/palm/
-#MASTER_SITES=	http://www.ardiri.com/download/palm/pilrc/archive/
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFFIX}
+MASTER_SITES=	http://www.ardiri.com/download/files/palm/		\
+		http://www.ardiri.com/download/palm/pilrc/archive/
 
-# we can't use this, since pilrc's maintainer won't create patches with
-# unix line endings
-#PATCH_SITES=	${MASTER_SITES}
-#PATCHFILES=	pilrc-2.9p10.diff
-#PATCH_DIST_STRIP+=-p1
+PATCH_SITES=		${MASTER_SITES}
+PATCHFILES=		pilrc-2.9p10.diff
+PATCH_DIST_STRIP+=	-p1
+#
+# The pilrc patches don't have Unix line endings, so strip off the extra
+# \r character on each line.
+#
+PATCH_DIST_CAT=		${CAT} $$patchfile | ${TR} -d '\015'
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ardiri.com/index.cfm?redir=palm&cat=pilrc
 COMMENT=	Generate resources for PalmOS applications from textual description
-
-#EXTRACT_CMD=	unzip -aq ${DOWNLOADED_DISTFILE}
 
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
@@ -32,23 +30,30 @@ DOCDIR=		${PREFIX}/share/doc/html/pilrc
 
 .include "../../mk/bsd.prefs.mk"
 
-PILRC_USE_GTK?=	YES
+PKG_OPTIONS_VAR=		PKG_OPTIONS.pilrc
+PKG_SUPPORTED_OPTIONS=		gtk
+PKG_SUGGESTED_OPTIONS=		gtk
 
-.if ${PILRC_USE_GTK} == YES
-.include "../../x11/gtk/buildlink3.mk"
-PLIST_SUBST+=	PILRCUI=''
+# PILRC_USE_GTK should be removed after the pkgsrc-2005Q3 branch.
+PKG_OPTIONS_LEGACY_VARS+=	PILRC_USE_GTK:gtk
+
+.include "../../mk/bsd.options.mk"
+
+###
+### gtk -- Build the GTK+ UI
+###
+.if !empty(PKG_OPTIONS:Mgtk)
+.  include "../../x11/gtk/buildlink3.mk"
+PLIST_SUBST+=	PILRCUI=
 .else
 CONFIGURE_ARGS+=--disable-pilrcui
-PLIST_SUBST+=	PILRCUI='@comment '
+PLIST_SUBST+=	PILRCUI="@comment "
 .endif
 
 #post-extract:
 #	${CHMOD} +x ${WRKSRC}/configure
 #	${CHMOD} +x ${WRKSRC}/missing
 
-pre-patch:
-	cd ${WRKSRC} && ${TR} -d '\015' < ${DISTDIR}/${DIFFS} \
-		| ${PATCH} --quiet -p1
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}/images
