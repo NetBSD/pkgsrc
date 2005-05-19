@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/03/22 16:18:06 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/05/19 21:04:35 jmmv Exp $
 include/evolution-data-server-1.2/camel/broken-date-parser.h
 include/evolution-data-server-1.2/camel/camel-address.h
 include/evolution-data-server-1.2/camel/camel-arg.h
@@ -328,6 +328,21 @@ share/doc/libecal/libecal.devhelp
 share/doc/libecal/right.png
 share/doc/libecal/style.css
 share/doc/libecal/up.png
+share/doc/libedataserver/ch01.html
+share/doc/libedataserver/home.png
+share/doc/libedataserver/index.html
+share/doc/libedataserver/index.sgml
+share/doc/libedataserver/left.png
+share/doc/libedataserver/libedataserver-ETrie.html
+share/doc/libedataserver/libedataserver-EUrl.html
+share/doc/libedataserver/libedataserver-EXMLHash.html
+share/doc/libedataserver/libedataserver-MD5-Utility-Functions.html
+share/doc/libedataserver/libedataserver-Time-Related-Utility-Functions.html
+share/doc/libedataserver/libedataserver-Utility-Functions.html
+share/doc/libedataserver/libedataserver.devhelp
+share/doc/libedataserver/right.png
+share/doc/libedataserver/style.css
+share/doc/libedataserver/up.png
 share/evolution-data-server-1.2/evolutionperson.schema
 share/evolution-data-server-1.2/glade/e-categories-dialog.glade
 share/evolution-data-server-1.2/glade/e-name-selector-dialog.glade
@@ -764,6 +779,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/evolution-data-server-1.2.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/evolution-data-server-1.2.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/evolution-data-server-1.2.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/evolution-data-server-1.2.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/evolution-data-server-1.2.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/evolution-data-server-1.2.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/evolution-data-server-1.2.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/evolution-data-server-1.2.mo
@@ -774,6 +790,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/evolution-data-server-1.2.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/evolution-data-server-1.2.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/evolution-data-server-1.2.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/evolution-data-server-1.2.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/evolution-data-server-1.2.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/evolution-data-server-1.2.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/evolution-data-server-1.2.mo
 share/pixmaps/evolution-data-server-1.2/category_birthday_16.png
@@ -815,6 +832,7 @@ share/pixmaps/evolution-data-server-1.2/category_time-and-expenses_16.png
 @dirrm share/evolution-data-server-1.2/weather
 @dirrm share/evolution-data-server-1.2/glade
 @dirrm share/evolution-data-server-1.2
+@dirrm share/doc/libedataserver
 @dirrm share/doc/libecal
 @dirrm share/doc/libebook
 @dirrm lib/evolution-data-server-1.2/extensions
