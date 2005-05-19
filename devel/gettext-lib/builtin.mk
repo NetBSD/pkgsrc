@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.18 2005/04/19 14:55:30 epg Exp $
+# $NetBSD: builtin.mk,v 1.19 2005/05/19 20:08:44 jlam Exp $
 
 .for _lib_ in intl
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -173,19 +173,21 @@ CONFIGURE_ARGS+=	--without-libintl-prefix
 USE_PERL5?=		build
 CONFIGURE_ENV+=		MSGFMT=${BUILDLINK_DIR}/bin/msgfmt
 
-SUBST_CLASSES+=			fix-msgfmt
-SUBST_STAGE.fix-msgfmt=		post-wrapper
-SUBST_MESSAGE.fix-msgfmt=	"Fixing paths in msgfmt wrapper."
-SUBST_FILES.fix-msgfmt=		${BUILDLINK_DIR}/bin/msgfmt
-SUBST_SED.fix-msgfmt=		-e 's|@PERL@|${PERL5}|g'
-SUBST_SED.fix-msgfmt+=		-e 's|@MSGFMT@|${BUILDLINK_PREFIX.gettext}/bin/msgfmt|g'
-
+# XXX _USE_NEW_TOOLS=yes should make "msgfmt" and "msgfmt-plural" into
+# XXX tools that can be specified via USE_TOOLS.  They would replace
+# XXX BUILD_USES_MSGFMT and USE_MSGFMT_PLURALS.
+# XXX
 BUILDLINK_TARGETS+=	buildlink-msgfmt
 
-buildlink-msgfmt:
-	@${MKDIR} -p ${BUILDLINK_DIR}/bin
-	@${CP} ../../devel/gettext/files/msgfmt.pl ${BUILDLINK_DIR}/bin/msgfmt
-	@${CHMOD} +x ${BUILDLINK_DIR}/bin/msgfmt
+buildlink-msgfmt: ${BUILDLINK_DIR}/bin/msgfmt
+
+${BUILDLINK_DIR}/bin/msgfmt: ${.CURDIR}/../../devel/gettext/files/msgfmt.pl
+	@${MKDIR} ${.TARGET:H}
+	@${CAT} ${.ALLSRC} |						\
+	 ${SED} -e "s|@PERL@|"${PERL5:Q}"|g"				\
+		-e "s|@MSGFMT@|"${BUILDLINK_PREFIX.gettext:Q}/bin/msgfmt"|g" \
+		> ${.TARGET}
+	@${CHMOD} +x ${.TARGET}
 .endif
 
 .endif	# CHECK_BUILTIN.gettext
