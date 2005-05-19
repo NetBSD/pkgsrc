@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.84 2005/05/19 02:27:38 jlam Exp $
+# $NetBSD: replace.mk,v 1.85 2005/05/19 03:52:23 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -43,14 +43,20 @@
 #	TOOLS_DEPMETHOD.tbl=	DEPENDS
 #
 
-# Continue to allow USE_GNU_TOOLS and USE_TBL until packages have been
-# taught to use the new syntax.
+# Continue to allow USE_GNU_TOOLS, USE_TBL, and USE_PERL5 until packages
+# have been taught to use the new syntax.
 #
 .if defined(USE_GNU_TOOLS) && !empty(USE_GNU_TOOLS)
 USE_TOOLS+=	${USE_GNU_TOOLS:S/^awk$/gawk/:S/^m4$/gm4/:S/^make$/gmake/:S/^sed$/gsed/:S/^yacc$/bison/}
 .endif
 .if defined(USE_TBL) && !empty(USE_TBL:M[yY][eE][sS])
 USE_TOOLS+=	tbl
+.endif
+.if defined(USE_PERL5)
+USE_TOOLS+=	perl
+.  if empty(USE_PERL5:Mbuild)
+TOOLS_DEPMETHOD.perl?=	DEPENDS
+.  endif
 .endif
 
 # bison implies "bison-yacc"
@@ -59,7 +65,6 @@ USE_TOOLS+=	bison-yacc
 .endif
 
 .include "../../mk/tools/imake.mk"
-.include "../../mk/tools/perl.mk"
 
 ######################################################################
 
@@ -712,6 +717,19 @@ TOOLS_CREATE+=			pax
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.pax=pax
 TOOLS_REAL_CMD.pax=		${TOOLS_PREFIX.pax}/bin/pax
 TOOLS_${_TOOLS_VARNAME.pax}=	${TOOLS_REAL_CMD.pax}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.perl) && !empty(USE_TOOLS:Mperl)
+.  if !empty(PKGPATH:Mlang/perl58)
+MAKEFLAGS+=			TOOLS_IGNORE.perl=
+.  elif !empty(_TOOLS_USE_PKGSRC.perl:M[yY][eE][sS])
+.    include "../../lang/perl5/version.mk"
+TOOLS_DEPENDS.perl?=		{perl>=${PERL5_REQD},perl-thread>=${PERL5_REQD}}:../../lang/perl58
+TOOLS_CREATE+=			perl
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.perl=perl
+TOOLS_REAL_CMD.perl=		${TOOLS_PREFIX.perl}/bin/perl
+TOOLS_${_TOOLS_VARNAME.perl}=	${TOOLS_REAL_CMD.perl}
 .  endif
 .endif
 
