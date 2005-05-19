@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.54 2005/05/19 19:50:25 kristerw Exp $
+# $NetBSD: post-build,v 1.55 2005/05/19 20:56:36 kristerw Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -44,7 +44,6 @@ getconf(
 	'FTPHOST',		# ftp://ftp.machi.ne/
 	'REPORT',		# "broken.html"
 	'USR_PKGSRC',		# "/usr/pkgsrc"
-	'arch', 		# `uname -m`
 	'osrev',	       	# `uname -r`
 );
 
@@ -79,6 +78,7 @@ getmakevars(qw(
 	FIND
 	INDEXFILE
 	LOCALBASE
+	MACHINE_ARCH
 	ORDERFILE
 	PAX
 	PKG_DBDIR
@@ -139,17 +139,17 @@ writeReport();
 }
 
 #
-# Generate leftovers-$vars{arch}.html: files not deleted
-# Leftover files are copied to leftovers-$vars{arch} dir, and linked from
-# leftovers-$vars{arch}.html
+# Generate leftovers-$vars{MACHINE_ARCH}.html: files not deleted
+# Leftover files are copied to leftovers-$vars{MACHINE_ARCH} dir,
+# and linked from leftovers-$vars{MACHINE_ARCH}.html
 #
 {
 	chdir($vars{FTP});
-	my_system("mkdir -p leftovers-$vars{arch}");
+	my_system("mkdir -p leftovers-$vars{MACHINE_ARCH}");
 
 	# Find files since last build:
-	my $leftovers_txt = "leftovers-$vars{arch}.txt";
-	my $leftovers_html = "leftovers-$vars{arch}.html";
+	my $leftovers_txt = "leftovers-$vars{MACHINE_ARCH}.txt";
+	my $leftovers_html = "leftovers-$vars{MACHINE_ARCH}.html";
 
 	my_system("$vars{FIND} $vars{LOCALBASE}/ -newer $vars{STARTFILE} -type f -print >>$leftovers_txt");
 	my_system("$vars{FIND} $vars{X11BASE}/ -newer $vars{STARTFILE} -type f -print >>$leftovers_txt");
@@ -182,7 +182,7 @@ writeReport();
 
 	if (scalar(@leftovers)) {
 		# Store leftovers, for easier identification:
-		my_system("$vars{PAX} -r -w -X -p e leftovers-$vars{arch} < $leftovers_txt");
+		my_system("$vars{PAX} -r -w -X -p e leftovers-$vars{MACHINE_ARCH} < $leftovers_txt");
 	}
 
 	# Add links to leftover list:
@@ -195,7 +195,7 @@ writeReport();
 EOOUT
 	foreach (@leftovers) {
 		chomp;
-	    	print OUT "<a href=\"$vars{FTPHOST}/$vars{FTPURL}/leftovers-$vars{arch}$_\">$_</a>\n";
+	    	print OUT "<a href=\"$vars{FTPHOST}/$vars{FTPURL}/leftovers-$vars{MACHINE_ARCH}$_\">$_</a>\n";
 	}
 	print OUT <<EOOUT2;
 </pre>
@@ -275,7 +275,7 @@ sub writeReport {
 	if ($verbose) {
 		print <<EOF;
 pkgsrc bulk build results
-$os $vars{osrev}/$vars{arch}
+$os $vars{osrev}/$vars{MACHINE_ARCH}
 
 Summary:
 
@@ -305,7 +305,7 @@ EOF
 	print HTML <<EOHTML;
 <html>
 <head>
-<title>$os $vars{osrev}/$vars{arch} bulk package build</title>
+<title>$os $vars{osrev}/$vars{MACHINE_ARCH} bulk package build</title>
 <style type="text/css">
 <!--
 
@@ -401,7 +401,7 @@ tt.filename {
 
 <a name="top"></a>
 <h1>pkgsrc bulk build results</h1>
-<h2>$os $vars{osrev}/$vars{arch}</h2>
+<h2>$os $vars{osrev}/$vars{MACHINE_ARCH}</h2>
 
 <h3>Summary</h3>
 
@@ -437,13 +437,13 @@ tt.filename {
 
 <p>
   Packages not listed here resulted in a <a
-  href="../../packages/" title="binary packages for $os $vars{osrev}/$vars{arch}">binary
+  href="../../packages/" title="binary packages for $os $vars{osrev}/$vars{MACHINE_ARCH}">binary
   package</a>. Results of failed packages are available below.
 </p>
 
 <p>
   Files leftover from the build (because of broken PLISTs, etc.) can be
-  found in <a href="leftovers-$vars{arch}.html" title="leftover files">this
+  found in <a href="leftovers-$vars{MACHINE_ARCH}.html" title="leftover files">this
   list</a>.
 </p>
 
