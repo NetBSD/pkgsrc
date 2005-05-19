@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.14 2005/05/19 03:50:39 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.15 2005/05/19 11:46:40 dmcmahill Exp $
 #
 # Copyright (c) 2002, 2003, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -816,14 +816,14 @@ function load_cache_file( file ) {
       osver = "unknown";
       march = "unknown";
     } else if( $0 ~/^OPSYS=/ ) {
-      opsys = $1;
-      gsub(/OPSYS=/, "", opsys);
+      opsys = $0;
+      gsub(/OPSYS=[ \t]*/, "", opsys);
     } else if( $0 ~/^OS_VERSION=/ ) {
-      osver = $1;
-      gsub(/OS_VERSION=/, "", osver);
+      osver = $0;
+      gsub(/OS_VERSION=[ \t]*/, "", osver);
     } else if( $0 ~/^MACHINE_ARCH=/ ) {
-      march = $1;
-      gsub(/MACHINE_ARCH=/, "", march);
+      march = $0;
+      gsub(/MACHINE_ARCH=[ \t]*/, "", march);
     } else if( $0 ~/^pkgcache_end /) {
       if( debug ) printf("\t%s, OPSYS=%s, OS_VERSION=%s, MACHINE_ARCH=%s\n",
 			 pkgfile, opsys, osver, march);
