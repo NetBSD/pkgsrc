@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3505 2005/05/19 15:06:13 wiz Exp $
+$NetBSD: TODO,v 1.3506 2005/05/19 15:08:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -627,7 +627,6 @@ Suggested package updates
 	o lftp-3.2.0
 	o libcomprex-0.3.3
 	o libetpan-0.34b
-	o libevent-1.1
 	o libextractor-0.4.2
 	o libflash-0.4.13
 	o libgnomemm26-2.10.0
