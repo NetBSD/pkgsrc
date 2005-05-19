@@ -1,0 +1,90 @@
+$NetBSD: patch-ak,v 1.2.4.1 2005/05/19 11:03:55 salo Exp $
+
+--- src/modules/rlm_sql/rlm_sql.c.orig	2004-09-30 15:54:22.000000000 +0100
++++ src/modules/rlm_sql/rlm_sql.c
+@@ -158,6 +158,7 @@ static int rlm_sql_init(void) {
+  */
+ static int sql_set_user(SQL_INST *inst, REQUEST *request, char *sqlusername, const char *username);
+ static int generate_sql_clients(SQL_INST *inst);
++static int sql_escape_func(char *out, int outlen, const char *in);
+ 
+ /*
+  *	sql xlat function. Right now only SELECTs are supported. Only
+@@ -184,7 +185,7 @@ static int sql_xlat(void *instance, REQU
+ 	/*
+ 	 * Do an xlat on the provided string (nice recursive operation).
+ 	 */
+-	if (!radius_xlat(querystr, sizeof(querystr), fmt, request, func)) {
++	if (!radius_xlat(querystr, sizeof(querystr), fmt, request, sql_escape_func)) {
+ 		radlog(L_ERR, "rlm_sql (%s): xlat failed.",
+ 		       inst->config->xlat_name);
+ 		return 0;
+@@ -409,18 +410,18 @@ static int sql_escape_func(char *out, in
+ 
+ 	while (in[0]) {
+ 		/*
+-		 *  Only one byte left.
+-		 */
+-		if (outlen <= 1) {
+-			break;
+-		}
+-
+-		/*
+ 		 *	Non-printable characters get replaced with their
+ 		 *	mime-encoded equivalents.
+ 		 */
+ 		if ((in[0] < 32) ||
+ 		    strchr(allowed_chars, *in) == NULL) {
++			/*
++			 *	Only 3 or less bytes available.
++			 */
++			if (outlen <= 3) {
++				break;
++			}
++
+ 			snprintf(out, outlen, "=%02X", (unsigned char) in[0]);
+ 			in++;
+ 			out += 3;
+@@ -430,7 +431,14 @@ static int sql_escape_func(char *out, in
+ 		}
+ 
+ 		/*
+-		 *	Else it's a nice character.
++		 *	Only one byte left.
++		 */
++		if (outlen <= 1) {
++			break;
++		}
++
++		/*
++		 *	Allowed character.
+ 		 */
+ 		*out = *in;
+ 		out++;
+@@ -517,7 +525,7 @@ static int sql_groupcmp(void *instance, 
+ 	 */
+ 	if (sql_set_user(inst, req, sqlusername, 0) < 0)
+ 		return 1;
+-	if (!radius_xlat(querystr, sizeof(querystr), inst->config->groupmemb_query, req, NULL)){
++	if (!radius_xlat(querystr, sizeof(querystr), inst->config->groupmemb_query, req, sql_escape_func)){
+ 		radlog(L_ERR, "rlm_sql (%s): xlat failed.",
+ 		       inst->config->xlat_name);
+ 		/* Remove the username we (maybe) added above */
+@@ -1149,7 +1157,7 @@ static int rlm_sql_checksimul(void *inst
+ 	if(sql_set_user(inst, request, sqlusername, 0) <0)
+ 		return RLM_MODULE_FAIL;
+ 
+-	radius_xlat(querystr, sizeof(querystr), inst->config->simul_count_query, request, NULL);
++	radius_xlat(querystr, sizeof(querystr), inst->config->simul_count_query, request, sql_escape_func);
+ 
+ 	/* initialize the sql socket */
+ 	sqlsocket = sql_get_socket(inst);
+@@ -1193,7 +1201,7 @@ static int rlm_sql_checksimul(void *inst
+ 		return RLM_MODULE_OK;
+ 	}
+ 
+-	radius_xlat(querystr, sizeof(querystr), inst->config->simul_verify_query, request, NULL);
++	radius_xlat(querystr, sizeof(querystr), inst->config->simul_verify_query, request, sql_escape_func);
+ 	if(rlm_sql_select_query(sqlsocket, inst, querystr)) {
+ 		radlog(L_ERR, "rlm_sql (%s): sql_checksimul: Database query error", inst->config->xlat_name);
+ 		sql_release_socket(inst, sqlsocket);
