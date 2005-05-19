@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.83 2005/05/18 05:31:55 jlam Exp $
+# $NetBSD: replace.mk,v 1.84 2005/05/19 02:27:38 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -996,9 +996,12 @@ FIND_PREFIX:=	${TOOLS_FIND_PREFIX}
 #
 .for _t_ in ${_USE_TOOLS}
 .  if defined(TOOLS_DEPMETHOD.${_t_}) && defined(TOOLS_DEPENDS.${_t_})
-.    if empty(${TOOLS_DEPMETHOD.${_t_}}:M${TOOLS_DEPENDS.${_t_}})
-${TOOLS_DEPMETHOD.${_t_}}+=	${TOOLS_DEPENDS.${_t_}}
-.    endif
+.    for _dep_ in ${TOOLS_DEPENDS.${_t_}}
+.      if empty(${TOOLS_DEPMETHOD.${_t_}}:C/\:.*$//:M${_dep_:C/\:.*$//})
+${TOOLS_DEPMETHOD.${_t_}}+=	${_dep_}
+.      endif
+.    endfor
+.    undef _dep_
 .  endif
 .endfor
 
