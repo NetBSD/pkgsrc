@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.53 2005/05/19 19:24:59 jlam Exp $
+# $NetBSD: post-build,v 1.54 2005/05/19 19:50:25 kristerw Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -182,7 +182,7 @@ writeReport();
 
 	if (scalar(@leftovers)) {
 		# Store leftovers, for easier identification:
-		my_system("$vars{GTAR} -T $leftovers_txt -plcf - | (cd leftovers-$vars{arch}; $vars{GTAR} -plxf -)");
+		my_system("$vars{PAX} -r -w -X -p e leftovers-$vars{arch} < $leftovers_txt");
 	}
 
 	# Add links to leftover list:
