@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2005/04/13 17:16:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.80 2005/05/19 21:06:46 jmmv Exp $
 
-DISTNAME=		evolution-2.2.1.1
+DISTNAME=		evolution-2.2.2
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -99,10 +99,10 @@ GCONF2_SCHEMAS+=	evolution-mail-2.2.schemas
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
-BUILDLINK_DEPENDS.evolution-data-server+=	evolution-data-server>=1.2.1
-BUILDLINK_DEPENDS.gal2+=	gal2>=2.4.1
+BUILDLINK_DEPENDS.evolution-data-server+=	evolution-data-server>=1.2.2
+BUILDLINK_DEPENDS.gal2+=	gal2>=2.4.2
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb2
-BUILDLINK_DEPENDS.gtkhtml36+=	gtkhtml36>=3.6.1
+BUILDLINK_DEPENDS.gtkhtml36+=	gtkhtml36>=3.6.2
 BUILDLINK_DEPENDS.libsoup-devel+=		libsoup-devel>=2.2.1
 
 .if !exists(/usr/include/semaphore.h)

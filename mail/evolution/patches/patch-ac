@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.12 2005/01/17 08:46:34 jmmv Exp $
+$NetBSD: patch-ac,v 1.13 2005/05/19 21:06:46 jmmv Exp $
 
---- configure.orig	2004-12-06 18:27:04.000000000 +0100
+--- configure.orig	2005-04-08 19:27:21.000000000 +0000
 +++ configure
-@@ -23078,6 +23078,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -23589,6 +23589,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  		#include <sys/socket.h>
  		#include <netinet/in.h>
  		#include <netdb.h>
@@ -10,3 +10,11 @@ $NetBSD: patch-ac,v 1.12 2005/01/17 08:46:34 jmmv Exp $
  
  		#define BUFSIZE (sizeof(struct hostent)+10)
  
+@@ -24717,6 +24718,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 		#include <sys/socket.h>
+ 		#include <netinet/in.h>
+ 		#include <netdb.h>
++		#include <stdio.h> /* Needed to get NULL's definition */
+ 
+ 
+ int
