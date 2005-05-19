@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2005/04/12 01:18:12 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2005/05/19 21:04:35 jmmv Exp $
 #
 
-DISTNAME=	evolution-data-server-1.2.1
+DISTNAME=	evolution-data-server-1.2.2
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/1.2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,7 @@ COMMENT=	Evolution data server
 BUILD_USES_MSGFMT=	yes
 BUILD_DEPENDS+=		bison>=1.875:../../devel/bison
 
-BUILDLINK_DEPENDS.libsoup-devel+=	libsoup-devel>=2.2.2
+BUILDLINK_DEPENDS.libsoup-devel+=	libsoup-devel>=2.2.3
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
