@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/16 01:15:31 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/19 19:55:30 dillo Exp $
 #
 
 DISTNAME=	watanabe-vf
@@ -13,12 +13,10 @@ EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-PKGSRC_USE_TOOLS+=	gtar
-
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/fonts/watanabe_font
-	${GTAR} Cxzf ${PREFIX}/share/fonts/watanabe_font \
-		${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+	cd ${PREFIX}/share/fonts/watanabe_font \
+		&& ${TAR} xzf ${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 	${CHMOD} ${SHAREMODE} ${PREFIX}/share/fonts/watanabe_font/*
 	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/fonts/watanabe_font/*
 
