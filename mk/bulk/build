@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.51 2005/05/19 15:18:13 jlam Exp $
+# $NetBSD: build,v 1.52 2005/05/19 22:58:21 dillo Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -225,6 +225,13 @@ echo "BROKENFILE      = $BROKENFILE"
 echo "BROKENWRKLOG    = $BROKENWRKLOG"
 echo "BUILDLOG        = $BUILDLOG"
 echo "STARTFILE       = $STARTFILE"
+echo "AWK             = $AWK"
+echo "GREP            = $GREP"
+echo "SED             = $SED"
+echo "MAIL_CMD        = $MAIL_CMD"
+echo "MACHINE_ARCH    = $MACHINE_ARCH"
+echo "OPSYS           = $OPSYS"
+echo "OS_VERSION      = $OS_VERSION"
 echo "----------------------------------"
 
 # make sure we have values for these very important
