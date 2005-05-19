@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/03/22 16:35:35 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/05/19 21:11:56 jmmv Exp $
 bin/gnome-system-monitor
 share/applications/gnome-system-monitor.desktop
 share/gconf/schemas/gnome-system-monitor.schemas
@@ -66,6 +66,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-system-monitor.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-system-monitor.mo
