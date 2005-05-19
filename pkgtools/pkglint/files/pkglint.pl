@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.156 2005/05/19 11:06:18 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.157 2005/05/19 11:37:47 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -831,10 +831,10 @@ sub checkfile_MESSAGE($) {
 		return true;
 	}
 	if ($message->[0]->text ne "=" x 75) {
-		log_warning($message->[0]->file, $message->[0]->lineno, "expected a line of exactly 75 \"=\" characters.");
+		$message->[0]->log_warning("expected a line of exactly 75 \"=\" characters.");
 	}
 	if ($message->[1]->text !~ /^$regex_rcsidstr$/) {
-		log_error($message->[1]->file, $message->[1]->lineno, "expected the RCS Id tag.");
+		$message->[1]->log_error("expected the RCS Id tag.");
 	}
 	foreach my $line (@$message[2 .. scalar(@$message) - 2]) {
 		checkline_length($line, 80);
@@ -842,7 +842,7 @@ sub checkfile_MESSAGE($) {
 		checkline_valid_characters($line, $regex_validchars);
 	}
 	if ($message->[-1]->text ne "=" x 75) {
-		log_warning($message->[-1]->file, $message->[-1]->lineno, "expected a line of exactly 75 \"=\" characters.");
+		$message->[-1]->log_warning("expected a line of exactly 75 \"=\" characters.");
 	}
 	return true;
 }
@@ -864,7 +864,7 @@ sub checkfile_PLIST($) {
 		checkline_trailing_whitespace($line);
 
 		if ($line->text =~ /<\$ARCH>/) {
-			log_warning($line->file, $line->text, "use of <\$ARCH> is deprecated, use \${MACHINE_ARCH} instead.");
+			$line->log_warning("use of <\$ARCH> is deprecated, use \${MACHINE_ARCH} instead.");
 		}
 		if ($line->text =~ /^\@([a-z]+)\s+(.*)/) {
 			my ($cmd, $arg) = ($1, $2);
@@ -1063,7 +1063,7 @@ sub checkfile_patches_patch($) {
 		log_error($fname, NO_LINE_NUMBER, "Empty patch file.");
 		return true;
 	} elsif ($lines->[0]->text !~ /^$regex_rcsidstr$/) {
-		log_error($lines->[0]->file, $lines->[0]->lineno, "Expected RCS tag \"\$$conf_rcsidstr\$\" (and nothing more) here.");
+		$lines->[0]->log_error("Expected RCS tag \"\$$conf_rcsidstr\$\" (and nothing more) here.");
 	}
 
 	foreach my $line (@$lines[1..scalar(@$lines)-1]) {
@@ -1104,7 +1104,7 @@ sub readmakefile($) {
 			}
 			$seen_Makefile_include{$includefile} = true;
 			if ($includefile =~ /\/mk\/texinfo\.mk/) {
-				log_error($line->text, $line->lineno, "do not include $includefile");
+				$line->log_error("do not include $includefile");
 			}
 			if ($includefile =~ /\/mk\/(?:bsd|java)/) {
 				# skip these files
@@ -2062,9 +2062,9 @@ sub category_check() {
 		return true;
 	}
 	if ($lines->[0]->text =~ qr"^# $regex_rcsidstr$") {
-		log_info($lines->[0]->file, $lines->[0]->lineno, "RCS Id tag found.");
+		$lines->[0]->log_info("RCS Id tag found.");
 	} elsif (scalar(@$lines) > 1 && $lines->[1]->text =~ qr"^# $regex_rcsidstr$") {
-		log_info($lines->[1]->file, $lines->[1]->lineno, "RCS Id tag found.");
+		$lines->[1]->log_info("RCS Id tag found.");
 	} else {
 		log_error($fname, NO_LINE_NUMBER, "No RCS Id tag found.");
 	}
