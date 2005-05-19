@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10134 2005/05/19 18:36:38 ben Exp $
+$NetBSD: CHANGES,v 1.10135 2005/05/19 21:15:36 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2504,3 +2504,20 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnome-themes-extras to 0.8.1 [drochner 2005-05-19]
 	Updated vcdimager-devel to 0.7.22 [drochner 2005-05-19]
 	Updated helpdeco to 2.1.1 [ben 2005-05-19]
+	Updated evolution-data-server to 1.2.2 [jmmv 2005-05-19]
+	Updated gnome-backgrounds to 2.10.1 [jmmv 2005-05-19]
+	Updated gnome-doc-utils to 0.2.0 [jmmv 2005-05-19]
+	Updated gedit to 2.10.2 [jmmv 2005-05-19]
+	Updated gok to 1.0.3 [jmmv 2005-05-19]
+	Updated gnopernicus to 0.10.6 [jmmv 2005-05-19]
+	Updated gnome2-applets to 2.10.1 [jmmv 2005-05-19]
+	Updated gnome2-games to 2.10.1 [jmmv 2005-05-19]
+	Updated gnome2-system-monitor to 2.10.1 [jmmv 2005-05-19]
+	Updated gnome2-utils to 2.10.1 [jmmv 2005-05-19]
+	Updated evolution-webcal to 2.2.1 [jmmv 2005-05-19]
+	Updated evolution to 2.2.2 [jmmv 2005-05-19]
+	Updated ximian-connector to 2.2.2 [jmmv 2005-05-19]
+	Updated gnome-base to 2.10.1 [jmmv 2005-05-19]
+	Updated gnome-devel to 2.10.1 [jmmv 2005-05-19]
+	Updated gnome to 2.10.1 [jmmv 2005-05-19]
+	Updated seahorse to 0.7.8 [jmmv 2005-05-19]
