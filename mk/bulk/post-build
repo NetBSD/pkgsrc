@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.52 2005/05/16 19:11:19 jschauma Exp $
+# $NetBSD: post-build,v 1.53 2005/05/19 19:24:59 jlam Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -77,10 +77,10 @@ getmakevars(qw(
 	DEPENDSFILE
 	DEPENDSTREEFILE
 	FIND
-	GTAR
 	INDEXFILE
 	LOCALBASE
 	ORDERFILE
+	PAX
 	PKG_DBDIR
 	STARTFILE
 	SUPPORTSFILE
@@ -118,7 +118,7 @@ my_system("mkdir -p $vars{FTP}");
 
 # Copy over the output from the build process
 chdir($vars{USR_PKGSRC});
-my_system("/bin/ls -1 $vars{BROKENFILE} $vars{BROKENWRKLOG} */*/$vars{BROKENFILE} */*/$vars{BROKENWRKLOG} 2>/dev/null | $vars{GTAR} -T - -plcf - | (cd $vars{FTP}; $vars{GTAR} -plxf -)");
+my_system("/bin/ls -1 $vars{BROKENFILE} $vars{BROKENWRKLOG} */*/$vars{BROKENFILE} */*/$vars{BROKENWRKLOG} 2>/dev/null | $vars{PAX} -r -w -X -p e $vars{FTP}");
 
 # Copy over the cache files used during the build
 foreach my $f qw(BULK_DBFILE DEPENDSTREEFILE DEPENDSFILE SUPPORTSFILE INDEXFILE ORDERFILE) {
