@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10124 2005/05/18 23:22:01 schmonz Exp $
+$NetBSD: CHANGES,v 1.10125 2005/05/19 01:26:58 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1621,7 +1621,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated kdeutils3 to 3.4.0 [markd 2005-03-23]
 	Updated kdesdk3 to 3.4.0 [markd 2005-03-23]
 	Updated kdeaccessibility3 to 3.4.0 [markd 2005-03-23]
-	Updated kdewebdev to 3.4.0 [markd 2005-03-23]
+	Updated kdewebdev3 to 3.4.0 [markd 2005-03-23]
 	Removed kde3-i18n-af [markd 2005-03-23]
 	Updated kde3-i18n-ar to 3.4.0 [markd 2005-03-23]
 	Updated kde3-i18n-bg to 3.4.0 [markd 2005-03-23]
