@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/03/30 18:09:47 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2005/05/19 15:39:04 jwise Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HDF5_BUILDLINK3_MK:=	${HDF5_BUILDLINK3_MK}+
@@ -16,7 +16,17 @@ BUILDLINK_RECOMMENDED.hdf5+=	hdf5>=1.6.2nb1
 BUILDLINK_PKGSRCDIR.hdf5?=	../../devel/hdf5
 .endif	# HDF5_BUILDLINK3_MK
 
+.if !defined(PKG_BUILD_OPTIONS.hdf5)
+PKG_BUILD_OPTIONS.apr!=	cd ${BUILDLINK_PKGSRCDIR.hdf5} && \
+			${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
+MAKEFLAGS+=	PKG_BUILD_OPTIONS.hdf5=${PKG_BUILD_OPTIONS.hdf5:Q}
+.endif
+MAKEVARS+=	PKG_BUILD_OPTIONS.hdf5
+
+.if !empty(PKG_BUILD_OPTIONS.hdf5:Mszip)
 .include "../../archivers/szip/buildlink3.mk"
+.endif
+
 .include "../../devel/zlib/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
