@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/22 16:21:55 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/19 21:08:00 jmmv Exp $
 share/gnome-background-properties/gnome-branded.xml
 share/gnome-background-properties/gnome-tiles.xml
 share/gnome-background-properties/gnome-translucent.xml
@@ -13,6 +13,8 @@ ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gnome-backgrounds.mo
@@ -22,6 +24,7 @@ ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnome-backgrounds.mo
@@ -32,11 +35,13 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-backgrounds.mo
