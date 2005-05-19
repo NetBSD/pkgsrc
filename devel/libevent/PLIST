@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/19 01:51:24 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/19 15:07:22 wiz Exp $
 include/event.h
-lib/libevent.a
+lib/libevent.la
 man/man3/event.3
