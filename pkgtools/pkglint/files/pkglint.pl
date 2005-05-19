@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.157 2005/05/19 11:37:47 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.158 2005/05/19 11:47:18 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1125,8 +1125,6 @@ sub readmakefile($) {
 				}
 			}
 		} else {
-			# we don't want the include Makefile.common lines
-			# to be pkglinted
 			$contents .= $line->text . "\n";
 		}
 	}
