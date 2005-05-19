@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:28 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/19 21:07:04 jmmv Exp $
 #
 
-DISTNAME=	ximian-connector-2.2.1
+DISTNAME=	ximian-connector-2.2.2
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ximian-connector/2.2/}
 EXTRACT_SUFX=	.tar.bz2
