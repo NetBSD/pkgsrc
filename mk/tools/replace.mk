@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.85 2005/05/19 03:52:23 jlam Exp $
+# $NetBSD: replace.mk,v 1.86 2005/05/19 05:27:25 jlam Exp $
 #
 # This Makefile fragment handles "replacements" of system-supplied
 # tools with pkgsrc versions.
@@ -63,8 +63,6 @@ TOOLS_DEPMETHOD.perl?=	DEPENDS
 .if !empty(USE_TOOLS:Mbison)
 USE_TOOLS+=	bison-yacc
 .endif
-
-.include "../../mk/tools/imake.mk"
 
 ######################################################################
 
@@ -549,6 +547,26 @@ TOOLS_${_TOOLS_VARNAME.id}=	${TOOLS_REAL_CMD.id}
 .  endif
 .endif
 
+.if !defined(TOOLS_IGNORE.imake) && !empty(_USE_TOOLS:Mimake)
+.  if !empty(PKGPATH:Mx11/imake) || !empty(PKGPATH:Mx11/xorg-imake)
+MAKEFLAGS+=			TOOLS_IGNORE.imake=
+.  elif !empty(_TOOLS_USE_PKGSRC.imake:M[yY][eE][sS])
+TOOLS_CREATE+=			imake
+.    if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
+TOOLS_DEPENDS.imake?=		imake>=4.4.0:../../x11/imake
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.imake=imake
+TOOLS_REAL_CMD.imake=		${TOOLS_PREFIX.imake}/${X11ROOT_PREFIX}/bin/imake
+.    elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
+TOOLS_DEPENDS.imake?=		xorg-imake>=6.8:../../x11/xorg-imake
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.imake=xorg-imake
+TOOLS_REAL_CMD.imake=		${TOOLS_PREFIX.imake}/${X11ROOT_PREFIX}/bin/imake
+.    else # !empty(X11_TYPE:Mnative)
+TOOLS_REAL_CMD.imake=		${X11BASE}/bin/imake
+.    endif
+TOOLS_${_TOOLS_VARNAME.imake}=	${TOOLS_REAL_CMD.imake} ${TOOLS_REAL_ARGS.imake}
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.install) && !empty(_USE_TOOLS:Minstall)
 .  if !empty(PKGPATH:Msysutils/coreutils)
 MAKEFLAGS+=			TOOLS_IGNORE.install=
@@ -988,6 +1006,35 @@ TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xargs=findutils
 TOOLS_REAL_CMD.xargs=		${TOOLS_PREFIX.xargs}/bin/${GNU_PROGRAM_PREFIX}xargs
 TOOLS_REAL_ARGS.xargs=		-r	# don't run command if stdin is empty
 TOOLS_${_TOOLS_VARNAME.xargs}=	${TOOLS_REAL_CMD.xargs} ${TOOLS_REAL_ARGS.xargs}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.xmkmf) && !empty(_USE_TOOLS:Mxmkmf)
+.  if !empty(PKGPATH:Mx11/imake) || !empty(PKGPATH:Mx11/xorg-imake)
+MAKEFLAGS+=			TOOLS_IGNORE.xmkmf=
+.  elif !empty(_TOOLS_USE_PKGSRC.xmkmf:M[yY][eE][sS])
+TOOLS_CREATE+=			xmkmf
+.    if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
+TOOLS_DEPENDS.xmkmf?=		imake>=4.4.0:../../x11/imake
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xmkmf=imake
+TOOLS_REAL_CMD.xmkmf=		${TOOLS_PREFIX.xmkmf}/${X11ROOT_PREFIX}/bin/xmkmf
+.    elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
+TOOLS_DEPENDS.xmkmf?=		xorg-imake>=6.8:../../x11/xorg-imake
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xmkmf=xorg-imake
+TOOLS_REAL_CMD.xmkmf=		${TOOLS_PREFIX.xmkmf}/${X11ROOT_PREFIX}/bin/xmkmf
+.    else # !empty(X11_TYPE:Mnative)
+TOOLS_REAL_CMD.xmkmf=		${X11BASE}/bin/xmkmf
+.    endif
+#
+# If we're using xpkgwedge, then we need to invoke the special xmkmf
+# script that will find imake config files in both ${PREFIX} and in
+# ${X11BASE}.
+#
+.    if !empty(USE_XPKGWEDGE:M[yY][eE][sS])
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xpkgwedge=xpkgwedge
+TOOLS_REAL_CMD.xmkmf=		${TOOLS_PREFIX.xpkgwedge}/bin/pkgxmkmf
+.    endif
+TOOLS_${_TOOLS_VARNAME.xmkmf}=	${TOOLS_REAL_CMD.xmkmf} ${TOOLS_REAL_ARGS.xmkmf}
 .  endif
 .endif
 
