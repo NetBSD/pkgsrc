@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/10/28 19:13:54 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/05/19 21:09:43 jmmv Exp $
 bin/gnopernicus
 bin/srcore
 include/gnopernicus-1.0/libbrl/brlxmlapi.h
@@ -88,6 +88,7 @@ ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnopernicus.mo
@@ -95,6 +96,7 @@ ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnopernicus.mo
@@ -103,6 +105,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnopernicus.mo
