@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/18 05:22:43 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/05/19 19:45:45 dillo Exp $
 #
 
 DISTNAME=       awk
@@ -6,17 +6,16 @@ PKGNAME=        nawk-20050424
 CATEGORIES=	lang
 #MASTER_SITES=   http://cm.bell-labs.com/who/bwk/
 MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}/}
-DIST_SUBDIR=	${PKGNAME}
-
+#
 # We use the .shar file instead of the .tar.gz file to avoid needing
 # build dependencies.
-#
 EXTRACT_SUFX=	.shar
 
 MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://cm.bell-labs.com/who/bwk/
 COMMENT=	Brian Kernighan's pattern-directed scanning and processing language
 
+DIST_SUBDIR=	${PKGNAME}
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
