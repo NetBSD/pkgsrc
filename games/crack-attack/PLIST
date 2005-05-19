@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 23:08:57 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/19 06:49:33 snj Exp $
 bin/crack-attack
+man/man6/crack-attack.6
 share/crack-attack/clock_0.tga
 share/crack-attack/clock_1.tga
 share/crack-attack/clock_2.tga
@@ -15,6 +16,9 @@ share/crack-attack/count_down_1.tga
 share/crack-attack/count_down_2.tga
 share/crack-attack/count_down_3.tga
 share/crack-attack/count_down_go.tga
+share/crack-attack/crack-attack.desktop
+share/crack-attack/crack-attack.xpm
+share/crack-attack/default_multiplier
 share/crack-attack/default_record
 share/crack-attack/flavor_1.tga
 share/crack-attack/flavor_2.tga
@@ -126,6 +130,9 @@ share/crack-attack/message_loser.tga
 share/crack-attack/message_paused.tga
 share/crack-attack/message_waiting.tga
 share/crack-attack/message_winner.tga
+share/crack-attack/preview_extremely_reduced.tga
+share/crack-attack/preview_normal.tga
+share/crack-attack/preview_reduced.tga
 share/crack-attack/sign_10.tga
 share/crack-attack/sign_11.tga
 share/crack-attack/sign_12.tga
@@ -147,6 +154,7 @@ share/crack-attack/sign_x6.tga
 share/crack-attack/sign_x7.tga
 share/crack-attack/sign_x8.tga
 share/crack-attack/sign_x9.tga
+share/doc/html/crack-attack/cube_icon.jpg
 share/doc/html/crack-attack/dl_ii_linux.html
 share/doc/html/crack-attack/dl_ii_windows.html
 share/doc/html/crack-attack/index.html
