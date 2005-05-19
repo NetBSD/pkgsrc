@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/05/02 11:48:51 drochner Exp $
+# $NetBSD: Makefile,v 1.32 2005/05/19 20:39:09 jmmv Exp $
 #
 
 DISTNAME=	epiphany-1.6.3
@@ -55,4 +55,5 @@ BUILDLINK_DEPENDS.pango+=	pango>=1.8.0
 .include "../../www/mozilla-gtk2/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
