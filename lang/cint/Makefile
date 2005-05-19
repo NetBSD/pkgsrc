@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/05/02 17:01:34 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2005/05/19 17:11:45 drochner Exp $
 
 DISTNAME=		cint5.15
-PKGNAME=		cint-5.15.169
+PKGNAME=		cint-5.15.174
 CATEGORIES=		lang
 MASTER_SITES=		ftp://root.cern.ch/root/
 #MASTER_SITES=		${MASTER_SITE_BACKUP}
@@ -13,6 +13,10 @@ COMMENT=		C/C++ interpreter
 #same distribution file name for minor versions
 DIST_SUBDIR=		${PKGNAME}
 WRKSRC=			${WRKDIR}
+
+post-extract:
+	${FIND} -d ${WRKSRC} -type d -name CVS -exec ${RM} -rf {} \;
+	${FIND} ${WRKSRC} -type f -name .cvsignore -exec ${RM} -f {} \;
 
 do-build:
 	@cd ${WRKDIR};						\
