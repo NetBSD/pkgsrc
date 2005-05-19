@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10128 2005/05/19 11:56:11 wiz Exp $
+$NetBSD: CHANGES,v 1.10129 2005/05/19 13:06:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2489,3 +2489,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sylpheed-devel to 1.9.11 [chris 2005-05-18]
 	Updated getmail to 4.3.9 [schmonz 2005-05-18]
 	Updated crack-attack to 1.1.14 [snj 2005-05-19]
+	Added firelib-1.0.1 [minskim 2005-05-19]
