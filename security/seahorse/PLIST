@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.9 2004/11/07 13:19:24 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/05/19 21:14:11 jmmv Exp $
 bin/seahorse
 bin/seahorse-agent
 bin/seahorse-pgp-preferences
-lib/bonobo/libseahorse-pgp-file-listener.la
-lib/bonobo/servers/Seahorse_PGP_File_Listener.server
 lib/libseahorse-internal.la
+lib/nautilus/extensions-1.0/libnautilus-seahorse.la
+share/applications/seahorse-pgp-encrypted.desktop
+share/applications/seahorse-pgp-preferences.desktop
+share/applications/seahorse-pgp-signature.desktop
 share/applications/seahorse.desktop
 share/control-center-2.0/capplets/seahorse-pgp-preferences.desktop
 share/gconf/schemas/seahorse.schemas
@@ -22,6 +24,7 @@ share/gnome/help/seahorse/C/figures/text-editor.png
 share/gnome/help/seahorse/C/legal.xml
 share/gnome/help/seahorse/C/seahorse.xml
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/seahorse.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/seahorse.mo
@@ -38,6 +41,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/seahorse.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/seahorse.mo
@@ -45,6 +49,7 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/seahorse.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/seahorse.mo
@@ -58,24 +63,33 @@ share/mime-info/seahorse.keys
 share/mime-info/seahorse.mime
 share/mime/packages/seahorse.xml
 share/omf/seahorse/seahorse-C.omf
+share/pixmaps/seahorse-key.png
+share/pixmaps/seahorse-secret.png
 share/pixmaps/seahorse.png
+share/seahorse/glade/seahorse-add-keyserver.glade
 share/seahorse/glade/seahorse-add-subkey.glade
 share/seahorse/glade/seahorse-add-uid.glade
 share/seahorse/glade/seahorse-agent-cache.glade
 share/seahorse/glade/seahorse-change-passphrase.glade
+share/seahorse/glade/seahorse-expires.glade
 share/seahorse/glade/seahorse-generate-adv.glade
 share/seahorse/glade/seahorse-generate-druid.glade
 share/seahorse/glade/seahorse-generate-select.glade
 share/seahorse/glade/seahorse-key-manager.glade
 share/seahorse/glade/seahorse-key-properties.glade
+share/seahorse/glade/seahorse-keyserver-results.glade
+share/seahorse/glade/seahorse-keyserver-search.glade
+share/seahorse/glade/seahorse-keyserver-sync.glade
 share/seahorse/glade/seahorse-multi-encrypt.glade
 share/seahorse/glade/seahorse-passphrase.glade
-share/seahorse/glade/seahorse-pgp-preferences.glade
 share/seahorse/glade/seahorse-preferences.glade
+share/seahorse/glade/seahorse-prefs.glade
+share/seahorse/glade/seahorse-progress.glade
 share/seahorse/glade/seahorse-recipients.glade
 share/seahorse/glade/seahorse-revoke.glade
 share/seahorse/glade/seahorse-sign.glade
 share/seahorse/glade/seahorse-signatures.glade
+share/seahorse/glade/seahorse-signer.glade
 @dirrm share/seahorse/glade
 @dirrm share/seahorse
 @comment in xdg-dirs: @dirrm share/pixmaps
@@ -90,4 +104,4 @@ share/seahorse/glade/seahorse-signatures.glade
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
 @comment in xdg-dirs: @dirrm share/applications
-@comment in libbonobo: @dirrm lib/bonobo/servers
+@comment in nautilus: @dirrm lib/nautilus/extensions-1.0

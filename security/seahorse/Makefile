@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2005/04/11 21:47:19 tv Exp $
+# $NetBSD: Makefile,v 1.36 2005/05/19 21:14:11 jmmv Exp $
 
-DISTNAME=	seahorse-0.7.5
-PKGREVISION=	1
+DISTNAME=	seahorse-0.7.8
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/0.7/}
 EXTRACT_SUFX=	.tar.bz2
@@ -35,8 +34,10 @@ BUILDLINK_DEPENDS.gpgme+=	gpgme>=1.0.1nb2
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
