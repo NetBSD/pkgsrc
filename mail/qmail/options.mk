@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.10 2005/04/10 02:59:23 schmonz Exp $
+# $NetBSD: options.mk,v 1.11 2005/05/19 22:08:55 schmonz Exp $
 
 .if ${OPSYS} == "Darwin"
 PKG_DEFAULT_OPTIONS+=	darwin
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
-PKG_SUPPORTED_OPTIONS=	badrcptto bigdns darwin nullenvsender netqmail
-PKG_SUPPORTED_OPTIONS+=	outgoingip qregex realrcptto sasl syncdir tls viruscan
+PKG_SUPPORTED_OPTIONS=	badrcptto bigdns darwin netqmail outgoingip
+PKG_SUPPORTED_OPTIONS+=	qregex realrcptto sasl syncdir tls viruscan
 .include "../../mk/bsd.options.mk"
 
 ###
@@ -57,16 +57,6 @@ NETQMAIL_PATCH=		netqmail-1.05.tar.gz
 PATCHFILES+=		${NETQMAIL_PATCH}
 PATCH_DIST_CAT.${NETQMAIL_PATCH}=	${CAT} ${WRKSRC}/../${DISTNAME}.patch
 PATCH_DIST_STRIP.${NETQMAIL_PATCH}=	-p1
-.endif
-
-###
-### reject messages from the null envelope sender to >1 envelope recipient
-###
-.if !empty(PKG_OPTIONS:Mnullenvsender)
-NULLENVSENDER_PATCH=	nullenvsender-recipcount.patch
-PATCHFILES+=		${NULLENVSENDER_PATCH}
-SITES_${NULLENVSENDER_PATCH}=	http://pyropus.ca/software/misc/
-PATCH_DIST_STRIP.${NULLENVSENDER_PATCH}=	-p1
 .endif
 
 ###
