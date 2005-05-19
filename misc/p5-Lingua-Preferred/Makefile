@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:39 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/19 17:27:13 reed Exp $
 #
 
 DISTNAME=		Lingua-Preferred-0.2.4
 PKGNAME=		p5-${DISTNAME}
-CATEGORIES=		devel perl5
+CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Lingua/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
