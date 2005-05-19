@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/03/22 16:33:30 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/05/19 21:11:42 jmmv Exp $
 bin/blackjack
 bin/games-server.py
 bin/gataxx
@@ -388,6 +388,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-games.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-games.mo
@@ -399,6 +400,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-games.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 share/mime-info/gnome-stones.keys
