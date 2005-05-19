@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:43 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/19 17:27:13 reed Exp $
 
 DISTNAME=	xmltv-0.5.39
 PKGNAME=	p5-${DISTNAME}
@@ -18,8 +18,8 @@ DEPENDS+=	p5-XML-Writer>=0.4.6:../../textproc/p5-XML-Writer
 DEPENDS+=	p5-Memoize-[0-9]*:../../devel/p5-Memoize
 DEPENDS+=	p5-Storable>=2.04:../../devel/p5-Storable
 # recommended
-DEPENDS+=	p5-Lingua-EN-Numbers-Ordinate-[0-9]*:../../misc/p5-Lingua-EN-Numbers-Ordinate
-DEPENDS+=	p5-Lingua-Preferred>=0.2.4:../../misc/p5-Lingua-Preferred
+DEPENDS+=	p5-Lingua-EN-Numbers-Ordinate-[0-9]*:../../textproc/p5-Lingua-EN-Numbers-Ordinate
+DEPENDS+=	p5-Lingua-Preferred>=0.2.4:../../textproc/p5-Lingua-Preferred
 DEPENDS+=	p5-Term-ProgressBar>=2.03:../../devel/p5-Term-ProgressBar
 DEPENDS+=	p5-Unicode-String-[0-9]*:../../converters/p5-Unicode-String
 # needed by se, uk grabbers
