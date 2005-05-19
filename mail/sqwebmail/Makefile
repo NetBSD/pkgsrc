@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/05/13 02:35:40 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/05/19 17:05:38 jlam Exp $
 
 DISTNAME=	sqwebmail-5.0.1
 PKGBASE=	${DISTNAME:C/-[^-]*$//}
@@ -17,6 +17,7 @@ USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PERL5=		yes
+USE_TOOLS+=		env
 
 .include "../../mail/courier-maildir/Makefile.common"
 .include "../../security/courier-authlib/Makefile.common"
@@ -58,6 +59,7 @@ CONFIGURE_ARGS+=	--with-mailer="${SENDMAIL} -oi -t"
 CONFIGURE_ARGS+=	--with-mailgroup=${COURIER_GROUP}
 CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 
+CONFIGURE_ENV+=		SETENV=${TOOLS_SETENV:Q}
 CONFIGURE_ENV+=		GPG="${LOCALBASE}/bin/gpg"
 CONFIGURE_ENV+=		ldapsearch="${LOCALBASE}/bin/ldapsearch"
 
