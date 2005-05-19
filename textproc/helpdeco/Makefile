@@ -1,68 +1,28 @@
-# $NetBSD: Makefile,v 1.13 2004/09/22 17:38:30 ben Exp $
+# $NetBSD: Makefile,v 1.14 2005/05/19 18:34:34 ben Exp $
 #
 
-DISTNAME=		helpdc21
-PKGNAME=		helpdeco-21
-PKGREVISION=		1
+DISTNAME=		helpdeco-2.1.1
 CATEGORIES=		textproc
-MASTER_SITES=		${MASTER_SITE_SIMTEL:=win95/winhelp/}
-EXTRACT_SUFX=		.zip
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=helpdeco/}
 
 MAINTAINER=		ben@NetBSD.org
-HOMEPAGE=		http://www.simtel.net/pub/pd/23694.shtml
+HOMEPAGE=		http://sourceforge.net/projects/helpdeco/
 COMMENT=		Windows .hlp to .rtf converter
-
-LICENSE=		no-commercial-use
-
-WRKSRC=			${WRKDIR}
-
-# from ftp://ftp.simtel.net/pub/simtelnet/MIRRORS.TXT
-MASTER_SITE_SIMTEL+=	ftp://ftp.cdrom.com/pub/simtelnet/ \
-			ftp://ftp.datacanyon.com/pub/simtelnet/ \
-			ftp://ftp.digital.com/pub/micro/pc/simtelnet/ \
-			ftp://ftp.usg.edu/pub/mirrors/simtelnet/ \
-			ftp://uiarchive.cso.uiuc.edu/pub/systems/pc/simtelnet/ \
-			ftp://ftp.bu.edu/pub/mirrors/simtelnet/ \
-			ftp://simtel.klondyke.net/simtel/ \
-			ftp://simtelnet.galilei.com/pub/simtelnet/ \
-			ftp://ftp.rge.com/pub/systems/simtelnet/ \
-			ftp://ftp.ou.edu/pub/simtelnet/ \
-			ftp://ftp.orst.edu/pub/simtelnet/ \
-			ftp://ftphost.simtel.net/pub/simtelnet/ \
-			ftp://mirrors.aol.com/pub/simtelnet/ \
-			ftp://ftp.simtel.net/pub/simtelnet/ \
-			ftp://ftp.telusplanet.net/pub/simtelnet/ \
-			ftp://ftp.crc.ca/pub/systems/ibmpc/simtelnet/ \
-			ftp://ftp.direct.ca/pub/simtelnet/
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Linux"
-CFLAGS+=		-Dstrlcpy=strncpy
+.if ${OPSYS} == "NetBSD"
+CFLAGS+=		-DHAVE_STRLCPY
 .endif
 
 MAKE_ENV+=		CFLAGS="${CFLAGS}"
+BUILD_TARGET=		build
+USE_GNU_TOOLS+=		make
 
-post-extract:
-	${RM} -f ${WRKSRC}/*exe
-	${CP} ${FILESDIR}/helpdeco-de.txt \
-		${FILESDIR}/helpdeco-en.txt \
-		${FILESDIR}/compat.h \
-		${FILESDIR}/compat.c \
-		${WRKSRC}
-	${SED} "s|PREFIX|${PREFIX}|" \
-		<${FILESDIR}/Makefile \
-		>${WRKSRC}/Makefile
-
-do-install:
-	${CP} ${WRKSRC}/splitmrb \
-		${WRKSRC}/zapres \
-		${WRKSRC}/helpdeco \
-		${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/helpdeco
-	${CP} ${WRKSRC}/helpdeco-de.txt \
-		${WRKSRC}/helpdeco-en.txt \
-		${WRKSRC}/helpfile.txt \
-		${PREFIX}/share/doc/helpdeco
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	"Configuring to use PREFIX."
+SUBST_STAGE.prefix=	post-patch
+SUBST_FILES.prefix=	Makefile
+SUBST_SED.prefix=	-e "s,/usr/local,${PREFIX},g"
 
 .include "../../mk/bsd.pkg.mk"
