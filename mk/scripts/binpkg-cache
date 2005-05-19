@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.1 2005/05/17 21:46:59 dmcmahill Exp $
+# $NetBSD: binpkg-cache,v 1.2 2005/05/19 03:58:40 dmcmahill Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -191,6 +191,11 @@ process_binpkg_dir(){
 			echo "pkgcache_end ${fn}" >> ${tmpd}/${cachefile}
 		done
 		mv ${tmpd}/${cachefile} ${d}/${cachefile}
+		if test $? -ne 0 ; then
+			echo "move of ${tmpd}/${cachefile} to ${d}/${cachefile} failed!"
+			echo "Perhaps you do not have write permissions to ${d}?"
+			clean_and_exit1
+		fi
 	fi
 
 
@@ -206,13 +211,22 @@ process_cache_files(){
 	fi
  	if test ! -f ${PACKAGES}/${cachefile} ; then
 		echo "${tab}Creating master cache file ${PACKAGES}/${cachefile}"
-		cp ${tmpd}/${cachefile} ${PACKAGES}/${cachefile}
-	fi
-	if ${CMP} -s ${tmpd}/${cachefile} ${PACKAGES}/${cachefile} ; then
+		mv ${tmpd}/${cachefile} ${PACKAGES}/${cachefile}
+		if test $? -ne 0 ; then
+			echo "move of ${tmpd}/${cachefile} to ${PACKAGES}/${cachefile} failed!"
+			echo "Perhaps you do not have write permissions to ${PACKAGES}?"
+			clean_and_exit1
+		fi
+	elif ${CMP} -s ${tmpd}/${cachefile} ${PACKAGES}/${cachefile} ; then
 		echo "${tab}Master cache file ${PACKAGES}/${cachefile} is up to date"
 	else
 		echo "${tab}Updating master cache file ${PACKAGES}/${cachefile}"
 		mv ${tmpd}/${cachefile} ${PACKAGES}/${cachefile}
+		if test $? -ne 0 ; then
+			echo "move of ${tmpd}/${cachefile} to ${PACKAGES}/${cachefile} failed!"
+			echo "Perhaps you do not have write permissions to ${PACKAGES}?"
+			clean_and_exit1
+		fi
 	fi
 }
 
