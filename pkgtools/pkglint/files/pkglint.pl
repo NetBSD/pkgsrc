@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.154 2005/05/19 08:42:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.155 2005/05/19 11:02:03 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -269,10 +269,8 @@ my $conf_make		= '@MAKE@';
 my $conf_datadir	= '@DATADIR@';
 
 # Command Line Options
-my $opt_committer	= true;
 my $opt_dumpmakefile	= false;
 my $opt_contblank	= 1;
-my $opt_packagedir	= ".";
 my $opt_quiet		= false;
 my (%options) = (
 	"-p"		=> "warn about use of \$(VAR) instead of \${VAR}",
@@ -330,21 +328,22 @@ my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
 
 # Global variables
-my $pkgsrc_rootdir	= undef;
-my $pkgdir		= ".";
-my $filesdir		= "files";
-my $patchdir		= "patches";
-my $distinfo		= "distinfo";
-my $scriptdir		= "scripts";
-my %cmdnames		= ();
-my $seen_PLIST_SRC	= false;
-my $seen_NO_PKG_REGISTER= false;
-my $seen_NO_CHECKSUM	= false;
-my $seen_USE_PKGLOCALEDIR = false;
-my %seen_Makefile_include = ();
-my %predefined_sites	= ();
-my $pkgname		= "";
-my %make_vars_typemap	= ();
+my $opt_packagedir;
+my $pkgsrc_rootdir;
+my $pkgdir;
+my $filesdir;
+my $patchdir;
+my $distinfo;
+my $scriptdir;
+my %cmdnames;
+my $seen_PLIST_SRC;
+my $seen_NO_PKG_REGISTER;
+my $seen_NO_CHECKSUM;
+my $seen_USE_PKGLOCALEDIR;
+my %seen_Makefile_include;
+my %predefined_sites;
+my $pkgname;
+my %make_vars_typemap;
 
 # these subroutines return C<true> if the checking succeeded (that includes
 # errors in the file) and C<false> if the file could not be checked.
@@ -365,6 +364,24 @@ sub checkearlier($@);
 sub check_predefined_sites($);
 sub category_check();
 sub check_package();
+
+sub init_global_vars() {
+	$pkgsrc_rootdir		= undef;
+	$pkgdir			= ".";
+	$filesdir		= "files";
+	$patchdir		= "patches";
+	$distinfo		= "distinfo";
+	$scriptdir		= "scripts";
+	%cmdnames		= ();
+	$seen_PLIST_SRC		= false;
+	$seen_NO_PKG_REGISTER	= false;
+	$seen_NO_CHECKSUM	= false;
+	$seen_USE_PKGLOCALEDIR	= false;
+	%seen_Makefile_include	= ();
+	%predefined_sites	= ();
+	$pkgname		= "";
+	%make_vars_typemap	= ();
+}
 
 sub help($$$) {
 	my ($out, $exitval, $show_all) = @_;
@@ -459,9 +476,6 @@ sub parse_command_line() {
 			help(*STDERR, 1, false);
 		}
 	}
-	if (@ARGV) {
-		$opt_packagedir = shift(@ARGV);
-	}
 	return true;
 }
 
@@ -519,26 +533,38 @@ sub load_predefined_sites() {
 	return true;
 }
 
-sub main() {
-	parse_command_line();
-	if ($opt_warn_types) {
-		load_make_vars_typemap();
-	}
+sub check_directory($) {
+	($opt_packagedir) = @_;
 
-	log_info(NO_FILE, NO_LINE_NUMBER, "pkgsrcdir: $conf_pkgsrcdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "rcsidstr: $conf_rcsidstr");
-	log_info(NO_FILE, NO_LINE_NUMBER, "localbase: $conf_localbase");
-
+	init_global_vars();
 	if (-f "$opt_packagedir/../mk/bsd.pkg.mk") {
 		$pkgsrc_rootdir = "$opt_packagedir/..";
 		log_info(NO_FILE, NO_LINE_NUMBER, "checking category Makefile.");
 		category_check();
 	} elsif (-f "$opt_packagedir/../../mk/bsd.pkg.mk") {
 		$pkgsrc_rootdir = "$opt_packagedir/../..";
+		if ($opt_warn_types) {
+			load_make_vars_typemap();
+		}
 		load_predefined_sites();
 		check_package();
 	} else {
 		log_error(NO_FILE, NO_LINE_NUMBER, "cannot check \"$opt_packagedir\".");
+	}
+}
+
+sub main() {
+	parse_command_line();
+
+	log_info(NO_FILE, NO_LINE_NUMBER, "pkgsrcdir: $conf_pkgsrcdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "localbase: $conf_localbase");
+
+	if (@ARGV) {
+		foreach my $dir (@ARGV) {
+			check_directory($dir);
+		}
+	} else {
+		check_directory(".");
 	}
 	print_summary_and_exit($opt_quiet);
 }
@@ -662,18 +688,16 @@ sub check_package() {
 	    and ! $seen_NO_PKG_REGISTER ) {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "no PLIST or PLIST.common, and PLIST_SRC and NO_PKG_REGISTER unset. Are you sure PLIST handling is ok?");
 	}
-	if ($opt_committer) {
-		foreach my $wrkdir (<$opt_packagedir/work*>) {
-			if ($opt_warn_workdir && -d $wrkdir) {
-				log_warning($wrkdir, NO_LINE_NUMBER, "should be cleaned up before committing the package.");
-			}
+	foreach my $wrkdir (<$opt_packagedir/work*>) {
+		if ($opt_warn_workdir && -d $wrkdir) {
+			log_warning($wrkdir, NO_LINE_NUMBER, "should be cleaned up before committing the package.");
 		}
-		foreach my $backup (<$opt_packagedir/*~>, <$opt_packagedir/*/*~>) {
-			log_warning($backup, NO_LINE_NUMBER, "should be cleaned up before committing the package.");
-		}
-		foreach my $orig (<$opt_packagedir/*/*.orig>, <$opt_packagedir/*.orig>, <$opt_packagedir/*/*.rej>, <$opt_packagedir/*.rej>) {
-			log_warning($orig, NO_LINE_NUMBER, "should be cleaned up before committing the package.");
-		}
+	}
+	foreach my $backup (<$opt_packagedir/*~>, <$opt_packagedir/*/*~>) {
+		log_warning($backup, NO_LINE_NUMBER, "should be cleaned up before committing the package.");
+	}
+	foreach my $orig (<$opt_packagedir/*/*.orig>, <$opt_packagedir/*.orig>, <$opt_packagedir/*/*.rej>, <$opt_packagedir/*.rej>) {
+		log_warning($orig, NO_LINE_NUMBER, "should be cleaned up before committing the package.");
 	}
 	return true;
 } # check_package
@@ -926,7 +950,7 @@ sub checkfile_PLIST($) {
 	}
 
 	if (!$rcsid_seen) {
-		log_error($file, NO_LINE_NUMBER, "Expected a \@comment \"\$$conf_rcsidstr\$\" line.");
+		log_error($fname, NO_LINE_NUMBER, "Expected a \@comment \"\$$conf_rcsidstr\$\" line.");
 	}
 	return true;
 }
@@ -1054,7 +1078,7 @@ sub checkfile_patches_patch($) {
 	}
 
 	foreach my $line (@$lines[1..scalar(@$lines)-1]) {
-		if ($opt_committer && $line->text =~ /$regex_known_rcs_tag/) {
+		if ($line->text =~ /$regex_known_rcs_tag/) {
 			$line->log_warning("Possible RCS tag \"\$$1\$\". Use binary mode (-ko) on cvs add/import.");
 		}
 	}
@@ -1637,7 +1661,7 @@ sub checkfile_Makefile($) {
 
 	# additional checks for committer.
 	$i = ($pkgname eq '') ? $distname : $pkgname;
-	if ($opt_committer && -f "$opt_packagedir/$i.tgz") {
+	if (-f "$opt_packagedir/$i.tgz") {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "be sure to remove $opt_packagedir/$i.tgz ".
 			"before committing the package.");
 	}
@@ -2045,7 +2069,7 @@ sub category_check() {
 		return false;
 	}
 	if (scalar(@$lines) == 0) {
-		log_error($file, NO_LINE_NUMBER, "may not be empty.");
+		log_error($fname, NO_LINE_NUMBER, "may not be empty.");
 		return true;
 	}
 	if ($lines->[0]->text =~ qr"^# $regex_rcsidstr$") {
@@ -2053,7 +2077,7 @@ sub category_check() {
 	} elsif (scalar(@$lines) > 1 && $lines->[1]->text =~ qr"^# $regex_rcsidstr$") {
 		log_info($lines->[1]->file, $lines->[1]->lineno, "RCS Id tag found.");
 	} else {
-		log_error($file, NO_LINE_NUMBER, "No RCS Id tag found.");
+		log_error($fname, NO_LINE_NUMBER, "No RCS Id tag found.");
 	}
 
 	@filesys_subdirs = grep { ($_ = substr($_, length($opt_packagedir) + 1, -1)) ne "CVS"; } glob("$opt_packagedir/*/");
@@ -2098,16 +2122,16 @@ sub category_check() {
 			shift(@filesys_subdirs);
 			shift(@makefile_subdirs);
 		} elsif ($m eq "" || $f lt $m) {
-			log_error($file, NO_LINE_NUMBER, "$f exists in the file system, but not in the Makefile.");
+			log_error($fname, NO_LINE_NUMBER, "$f exists in the file system, but not in the Makefile.");
 			shift(@filesys_subdirs);
 		} else {
-			log_error($file, NO_LINE_NUMBER, "$m exists in the Makefile, but not in the file system.");
+			log_error($fname, NO_LINE_NUMBER, "$m exists in the Makefile, but not in the file system.");
 			shift(@makefile_subdirs);
 		}
 	}
 
 	if (!$comment_seen) {
-		log_error($file, NO_LINE_NUMBER, "no COMMENT line found.");
+		log_error($fname, NO_LINE_NUMBER, "no COMMENT line found.");
 	}
 	return true;
 }
