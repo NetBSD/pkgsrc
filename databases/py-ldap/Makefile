@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/04/11 21:45:15 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/05/20 20:13:56 rillig Exp $
 
 DISTNAME=	python-ldap-2.0.2
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -15,7 +15,7 @@ PYDISTUTILSPKG=			yes
 
 SUBST_CLASSES+=			setup
 SUBST_STAGE.setup=		pre-configure
-SUBST_FILES.setup=		${WRKSRC}/setup.cfg
+SUBST_FILES.setup=		setup.cfg
 SUBST_SED.setup=		-e "s|/usr/local/openldap-REL_ENG_2_1|${BUILDLINK_PREFIX.cyrus-sasl}/lib ${BUILDLINK_PREFIX.openldap}|" 	\
 				-e "s|/usr/include/sasl|${BUILDLINK_PREFIX.cyrus-sasl}/include/sasl|"
 
