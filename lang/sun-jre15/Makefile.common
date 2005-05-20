@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/05/10 02:02:20 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/05/20 21:34:30 markd Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -67,7 +67,7 @@ do-install:
 .if ${OPSYS} == "NetBSD"
 .  include "../../emulators/suse_linux/Makefile.application"
 .  if ${SUSE_DIR_PREFIX} == "suse91"
-DEPENDS+=	suse_local-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_locale
+DEPENDS+=	suse_locale-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_locale
 .  endif
 DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
