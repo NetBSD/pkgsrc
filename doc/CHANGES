@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10143 2005/05/20 19:20:55 jmmv Exp $
+$NetBSD: CHANGES,v 1.10144 2005/05/20 19:26:54 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2554,3 +2554,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added libao-macosx-0.8.6 [jmmv 2005-05-20]
 	Added libao-oss-0.8.6 [jmmv 2005-05-20]
 	Added libao-sun-0.8.6 [jmmv 2005-05-20]
+	Updated gcc34 to 3.4.4 [shannonjr 2005-05-20]
