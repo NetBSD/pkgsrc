@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.158 2005/05/19 11:47:18 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.159 2005/05/20 01:36:46 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1098,7 +1098,8 @@ sub readmakefile($) {
 			if ($includefile =~ /\"([^\"]+)\"/) {
 				$includefile = $1;
 			}
-			if (exists($seen_Makefile_include{$includefile})) {
+			if (exists($seen_Makefile_include{$includefile})
+			    || $includefile =~ qr"/buildlink3.mk$") {
 				$contents .= "### pkglint ### skipped $includefile\n";
 				next;
 			}
