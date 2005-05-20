@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2005/04/18 18:01:48 drochner Exp $
+# $NetBSD: Makefile.common,v 1.28 2005/05/20 22:09:39 jlam Exp $
 #
 
 DISTNAME=		libgda-1.2.1
@@ -35,7 +35,7 @@ INSTALL_DIRS=		${WRKSRC}/providers/${LIBGDA_PROVIDER}
 
 SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	pre-configure
-SUBST_MESSAGE.libs=	"Fixing references to installes libraries."
+SUBST_MESSAGE.libs=	"Fixing references to installed libraries."
 SUBST_FILES.libs=	providers/${LIBGDA_PROVIDER}/Makefile.in
 SUBST_SED.libs+=	-e 's|$$(top_builddir)/libgda/libgda-2.la|${BUILDLINK_PREFIX.libgda}/lib/libgda-2.la|'
 
