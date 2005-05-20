@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.9 2005/05/20 02:57:23 jlam Exp $
+# $NetBSD: automake.mk,v 1.10 2005/05/20 03:08:45 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU automake.
 #
@@ -129,7 +129,8 @@ AUTOMAKE=	${TOOLS_CMD.automake-1.4}
 .endif
 
 # Discover which version of autoconf should be used with automake.
-.if !defined(_TOOLS_AM_AUTOCONF)
+.if !empty(USE_TOOLS:Mautomake) || !empty(USE_TOOLS:Mautomake14)
+.  if !defined(_TOOLS_AM_AUTOCONF)
 _TOOLS_AM_AUTOCONF!=	\
 	dep="autoconf>="${AUTOCONF_REQD:Q};				\
 	if ${PKG_ADMIN} pmatch "$$dep" autoconf-2.13; then		\
@@ -137,9 +138,10 @@ _TOOLS_AM_AUTOCONF!=	\
 	else								\
 		${ECHO} "autoconf";					\
 	fi
-.endif
+.  endif
 MAKEVARS+=	_TOOLS_AM_AUTOCONF
 USE_TOOLS+=	${_TOOLS_AM_AUTOCONF}
+.endif
 
 # If the package wants to override the GNU auto* tools, then do it.
 AUTOMAKE_OVERRIDE?=	yes
