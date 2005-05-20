@@ -3112,12 +3112,7 @@ CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
 .endif
 
 
-The first section only exists if you are converting a package that had its own
-ad-hoc options handling to use bsd.options.mk. It converts global or legacy
-options variables into an equivalent PKG_OPTIONS.pkg value. These sections will
-be removed over time as the old options are in turn deprecated and removed.
-
-The second section contains the information about which build options are
+The first section contains the information about which build options are
 supported by the package, and any default options settings if needed.
 
  1. PKG_OPTIONS_VAR is the name of the make(1) variable that contains the
@@ -3139,22 +3134,26 @@ supported by the package, and any default options settings if needed.
             PKG_DEFAULT_OPTIONS=    kerberos ldap sasl
             PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
             WIBBLE_OPTIONS=         ${PKG_DEFAULT_OPTIONS} -sasl
-            # implies PKG_OPTIONS == "kerberos ldap"
+            # leads to PKG_OPTIONS = kerberos ldap
 
 
     or
 
             PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
             WIBBLE_OPTIONS=         kerberos -ldap ldap
-            # implies PKG_OPTIONS == "kerberos"
+            # leads to PKG_OPTIONS = kerberos
 
 
     This variable should be set in /etc/mk.conf.
 
-After the inclusion of bsd.options.mk, the following variables are set:
+ 5. The PKG_OPTIONS_LEGACY_VARS is only needed if you are converting a package
+    that had its own ad-hoc options handling to use bsd.options.mk. It converts
+    global or legacy options variables into an equivalent PKG_OPTIONS.pkg
+    value.
 
-  * PKG_OPTIONS contains the list of the selected build options, properly
-    filtered to remove unsupported and duplicate options.
+After the inclusion of bsd.options.mk, the variable PKG_OPTIONS contains the
+list of the selected build options, properly filtered to remove unsupported and
+duplicate options.
 
 The remaining sections contain the logic that is specific to each option. There
 should be a check for every option listed in PKG_SUPPORTED_OPTIONS, and there
