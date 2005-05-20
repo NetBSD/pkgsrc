@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10139 2005/05/19 23:30:26 seb Exp $
+$NetBSD: CHANGES,v 1.10140 2005/05/20 09:00:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2547,3 +2547,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated seahorse to 0.7.8 [jmmv 2005-05-19]
 	Updated phpldapadmin to 0.9.6c [seb 2005-05-19]
 	Updated p5-Module-CoreList to 2.01 [seb 2005-05-19]
+	Updated html to 4.01nb2 [wiz 2005-05-20]
