@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.10 2004/11/16 14:49:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/20 19:20:55 jmmv Exp $
 include/ao/ao.h
 include/ao/os_types.h
 include/ao/plugin.h
-${LIBOSS}lib/ao/plugins-2/liboss.la
-${LIBSUN}lib/ao/plugins-2/libsun.la
 lib/libao.la
 lib/pkgconfig/ao.pc
 man/man5/libao.conf.5
@@ -45,6 +43,7 @@ share/doc/${PKGNAME}/plugin-api.html
 share/doc/${PKGNAME}/plugin-overview.html
 share/doc/${PKGNAME}/style.css
 @dirrm share/doc/${PKGNAME}
+@exec ${MKDIR} -p %D/lib/ao/plugins-2 
 @dirrm lib/ao/plugins-2
 @dirrm lib/ao
 @dirrm include/ao

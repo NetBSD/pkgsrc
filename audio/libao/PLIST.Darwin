@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2004/12/18 17:14:18 grant Exp $
-${LIBOSS}lib/ao/plugins-2/libmacosx.la

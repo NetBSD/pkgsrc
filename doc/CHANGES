@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10142 2005/05/20 18:12:16 augustss Exp $
+$NetBSD: CHANGES,v 1.10143 2005/05/20 19:20:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2550,3 +2550,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated html to 4.01nb2 [wiz 2005-05-20]
 	Updated xephem to 3.6.4 [drochner 2005-05-20]
 	Added py-mcrypt-1.1 [augustss 2005-05-20]
+	Updated libao to 0.8.6nb1 [jmmv 2005-05-20]
+	Added libao-macosx-0.8.6 [jmmv 2005-05-20]
+	Added libao-oss-0.8.6 [jmmv 2005-05-20]
+	Added libao-sun-0.8.6 [jmmv 2005-05-20]
