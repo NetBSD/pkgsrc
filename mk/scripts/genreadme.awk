@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.17 2005/05/20 04:39:44 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.18 2005/05/20 21:48:45 dmcmahill Exp $
 #
 # Copyright (c) 2002, 2003, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -531,7 +531,7 @@ END {
 				line = $0
 
 				if( $0 ~/%%SUBDIR%%/ ) {
-				    gsub(/%%SUBDIR%%/, "");
+				    gsub(/%%SUBDIR%%/, "", line);
 				    while((getline < pkgs_file) > 0) {
 				      gsub(/README.html/, readme_name);
 				      print >> readme;
