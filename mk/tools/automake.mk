@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.7 2005/05/11 20:21:32 jlam Exp $
+# $NetBSD: automake.mk,v 1.8 2005/05/20 02:40:23 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU automake.
 #
@@ -74,7 +74,6 @@ MAKEFLAGS+=		TOOLS_IGNORE.automake=
 .  else
 AUTOMAKE_REQD?=		1.9
 AUTOCONF_REQD?=		2.58
-USE_TOOLS+=		autoconf
 
 TOOLS_DEPMETHOD.automake?=	BUILD_DEPENDS
 TOOLS_DEPENDS.automake?=	automake>=${AUTOMAKE_REQD}:../../devel/automake
@@ -103,7 +102,6 @@ MAKEFLAGS+=		TOOLS_IGNORE.automake14=
 .  else
 AUTOMAKE_REQD?=		1.4
 AUTOCONF_REQD?=		2.13
-USE_TOOLS+=		autoconf213
 
 TOOLS_DEPMETHOD.automake14?=	BUILD_DEPENDS
 TOOLS_DEPENDS.automake14?=	automake14>=${AUTOMAKE_REQD}:../../devel/automake14
@@ -129,6 +127,18 @@ ACLOCAL=	${TOOLS_CMD.aclocal-1.4}
 AUTOMAKE=	${TOOLS_CMD.automake-1.4}
 .  endif
 .endif
+
+# Discover which version of autoconf should be used with automake.
+.if !defined(_TOOLS_AM_AUTOCONF)
+_TOOLS_AM_AUTOCONF!=	\
+	if ${PKG_ADMIN} pmatch autoconf>=${AUTOCONF_REQD} autoconf-2.13; then \
+		${ECHO} "autoconf213";					\
+	else								\
+		${ECHO} "autoconf";					\
+	fi
+.endif
+MAKEVARS+=	_TOOLS_AM_AUTOCONF
+USE_TOOLS+=	${_TOOLS_AM_AUTOCONF}
 
 # If the package wants to override the GNU auto* tools, then do it.
 AUTOMAKE_OVERRIDE?=	yes
