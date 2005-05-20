@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/20 22:08:10 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/20 22:12:28 jlam Exp $
 
 DISTNAME=	cgiirc-0.5.6
 CATEGORIES=	chat
@@ -9,6 +9,7 @@ HOMEPAGE=	http://cgiirc.sourceforge.net/
 COMMENT=	Access IRC from a web browser
 
 USE_PERL5=	run
+NO_BUILD=	YES
 USE_PKGINSTALL=	YES
 
 BUILD_DEFS+=	USE_INET6
@@ -32,7 +33,7 @@ DOCFILES=	identd.xinetd decode.pl identd.pl viewconnects.pl
 EGFILES=	cgiirc.config.full client.c ipaccess.example
 CGIIRC=		${PREFIX}/share/cgiirc
 
-do-build:
+do-configure:
 	@${SED} -e "s|@CGIIRC@|${CGIIRC}|g" ${FILESDIR}/cgiirc.conf	\
 		> ${WRKDIR}/cgiirc.conf
 
