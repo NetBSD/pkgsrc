@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1 2005/05/20 12:54:54 drochner Exp $
+
+--- configure.orig	2005-05-19 22:22:30.000000000 +0200
++++ configure	2005-05-19 22:22:54.000000000 +0200
+@@ -3776,7 +3776,7 @@
+ STATIC_EXTENSION=""
+ OBJECT_EXTENSION=""
+ case "$target_os" in
+-     *bsd*|linux*|beos|irix*|solaris*)
++     *bsd*|linux*|beos|irix*|solaris*|dragonfly*)
+ 	echo "$as_me:$LINENO: result: .so .a .o" >&5
+ echo "${ECHO_T}.so .a .o" >&6
+ 	STATIC_EXTENSION="a"
+@@ -3819,7 +3819,7 @@
+ SPECIFIC_CFLAGS=""
+ PRE_SHARED_LIB=""
+ case "$target_os" in
+-     *bsd*|linux*|irix*|solaris*)
++     *bsd*|linux*|irix*|solaris*|dragonfly*)
+ 	echo "$as_me:$LINENO: result: ok" >&5
+ echo "${ECHO_T}ok" >&6
+ 	STATIC_LIB="libxvidcore.\$(STATIC_EXTENSION)"
+@@ -3957,7 +3957,7 @@
+                                     echo "$as_me:$LINENO: checking for nasm object format" >&5
+ echo $ECHO_N "checking for nasm object format... $ECHO_C" >&6
+          case "$target_os" in
+-              *bsd*|linux*|beos|irix*|solaris*)
++              *bsd*|linux*|beos|irix*|solaris*|dragonfly*)
+                   echo "$as_me:$LINENO: result: elf" >&5
+ echo "${ECHO_T}elf" >&6
+                   NASM_FORMAT="elf"
