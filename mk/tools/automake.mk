@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.8 2005/05/20 02:40:23 jlam Exp $
+# $NetBSD: automake.mk,v 1.9 2005/05/20 02:57:23 jlam Exp $
 #
 # This Makefile fragment handles packages that use GNU automake.
 #
@@ -131,7 +131,8 @@ AUTOMAKE=	${TOOLS_CMD.automake-1.4}
 # Discover which version of autoconf should be used with automake.
 .if !defined(_TOOLS_AM_AUTOCONF)
 _TOOLS_AM_AUTOCONF!=	\
-	if ${PKG_ADMIN} pmatch autoconf>=${AUTOCONF_REQD} autoconf-2.13; then \
+	dep="autoconf>="${AUTOCONF_REQD:Q};				\
+	if ${PKG_ADMIN} pmatch "$$dep" autoconf-2.13; then		\
 		${ECHO} "autoconf213";					\
 	else								\
 		${ECHO} "autoconf";					\
