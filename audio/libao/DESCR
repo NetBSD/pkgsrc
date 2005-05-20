@@ -9,5 +9,6 @@ libao currently supports:
    * Solaris (untested)
    * IRIX (untested)
 
-This NetBSD package uses /dev/sound (instead of /dev/sound/dsp)
-for the OSS support.
+This package provides the libao's core library but no output plugins
+by itself.  You will have to install some of the libao-* packages in
+order to get audio working.
