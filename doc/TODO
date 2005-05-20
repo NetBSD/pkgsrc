@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3510 2005/05/20 21:01:18 wiz Exp $
+$NetBSD: TODO,v 1.3511 2005/05/20 21:07:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1032,7 +1032,6 @@ Suggested package updates
 	o snes9x-1.43
 	o snownews-1.5.6.1
 	o sox-12.17.7
-	o speex-1.0.5
 	o spim-7.1
 	o spruce-0.6.5
 	o sqlitemanager-1.0.6
