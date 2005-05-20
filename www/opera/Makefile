@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/05/03 09:13:26 tron Exp $
+# $NetBSD: Makefile,v 1.35 2005/05/20 19:48:34 jlam Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 PKGREVISION=	# empty
@@ -107,9 +107,13 @@ post-install: post-install-manpage
 
 .include "../../emulators/suse_linux/Makefile.application"
 
+.if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
+PKGSRC_USE_TOOLS+=	gzip
+.endif
+
 post-install-manpage:
-  # The SuSE common makefile defines "MANCOMPRESSED".
-.  if defined(MANCOMPRESSED)
+  # The SuSE common makefile defines "MANCOMPRESSED=yes".
+.  if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
 	${GZIP_CMD} ${EMULDIR}/usr/share/man/man1/opera.1
 	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera.1.gz \
 		${PREFIX}/man/man1
@@ -131,7 +135,7 @@ post-install:
 
 # regenerate distinfo for all ports supported by this package
 opera-distinfo:
-	( echo '$$NetBSD: Makefile,v 1.34 2005/05/03 09:13:26 tron Exp $$'; echo ''; \
+	( echo '$$NetBSD: Makefile,v 1.35 2005/05/20 19:48:34 jlam Exp $$'; echo ''; \
 	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
 		${GREP} opera distinfo; \
 	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \
