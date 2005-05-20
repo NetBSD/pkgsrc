@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.20 2005/05/20 18:40:42 jlam Exp $
+# $NetBSD: subst.mk,v 1.21 2005/05/20 21:36:05 jlam Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a paricular
@@ -47,7 +47,7 @@ _SUBST_BACKUP_SUFFIX=	.subst.sav
 _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
 
 SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}}
-SUBST_POSTCMD.${_class_}?=	${RM} -f $$file${_SUBST_BACKUP_SUFFIX}
+SUBST_POSTCMD.${_class_}?=	${RM} -f "$$tmpfile"
 
 SUBST_TARGETS+=			subst-${_class_}
 _SUBST_TARGETS.${_class_}=	subst-${_class_}-message
@@ -77,26 +77,25 @@ subst-${_class_}: ${_SUBST_TARGETS.${_class_}}
 
 ${_SUBST_COOKIE.${_class_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cd ${WRKSRC};							\
-	files="${SUBST_FILES.${_class_}}";				\
-	case "$$files" in						\
-	"")	;;							\
-	*)	for file in $${files}; do				\
-			if ${_SUBST_IS_TEXT_FILE}; then			\
-				${MV} -f $$file $$file${_SUBST_BACKUP_SUFFIX} || exit 1; \
-				${CAT} $$file${_SUBST_BACKUP_SUFFIX}	\
-					| ${SUBST_FILTER_CMD.${_class_}} \
-					> $$file;			\
-				if [ -x $$file${_SUBST_BACKUP_SUFFIX} ]; then \
-					${CHMOD} +x $$file;		\
-				fi;					\
-				if ${CMP} -s $$file${_SUBST_BACKUP_SUFFIX} $$file; then \
-					${MV} -f $$file${_SUBST_BACKUP_SUFFIX} $$file; \
-				else					\
-					${SUBST_POSTCMD.${_class_}};	\
-					${ECHO} $$file >> ${.TARGET};	\
-				fi;					\
+	cd ${WRKSRC:Q};							\
+	files=${SUBST_FILES.${_class_}:Q};				\
+	for file in $$files; do						\
+		file="./$$file";					\
+		tmpfile="$$file"${_SUBST_BACKUP_SUFFIX:Q};		\
+		if ${_SUBST_IS_TEXT_FILE}; then				\
+			${MV} -f "$$file" "$$tmpfile" || exit 1;	\
+			${CAT} "$$tmpfile"				\
+			| ${SUBST_FILTER_CMD.${_class_}}		\
+			> "$$file";					\
+			if ${TEST} -x "$$tmpfile"; then			\
+				${CHMOD} +x "$$file";			\
 			fi;						\
-		done ;;							\
-	esac
+			if ${CMP} -s "$$tmpfile" "$$file"; then 	\
+				${MV} -f "$$tmpfile" "$$file";		\
+			else						\
+				${SUBST_POSTCMD.${_class_}};		\
+				${ECHO} "$$file" >> ${.TARGET};		\
+			fi;						\
+		fi;							\
+	done
 .endfor
