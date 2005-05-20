@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1672 2005/05/18 23:59:44 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1673 2005/05/20 21:36:05 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1727,12 +1727,11 @@ _REPLACE_LOCALEDIR_PATTERNS+=	[Mm]akefile.in*
 .  else
 _REPLACE_LOCALEDIR_PATTERNS+=	[Mm]akefile*
 .  endif
-_REPLACE_LOCALEDIR_PATTERNS_FIND= \
-	\( ${_REPLACE_LOCALEDIR_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
+_REPLACE_LOCALEDIR_PATTERNS_FIND_cmd= \
+	cd ${WRKSRC} && ${FIND} . \( ${_REPLACE_LOCALEDIR_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \) -print | ${SED} -e 's|^\./||' | ${GREP} -v '\.orig' | ${SORT} -u
 REPLACE_LOCALEDIR?=		# empty
-_REPLACE_LOCALEDIR=		\
-	${REPLACE_LOCALEDIR}	\
-	`${FIND} . ${_REPLACE_LOCALEDIR_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${GREP} -v '\.orig' | ${SORT} -u`
+_REPLACE_LOCALEDIR=		${REPLACE_LOCALEDIR}			\
+				${_REPLACE_LOCALEDIR_PATTERNS_FIND_cmd:sh}
 
 _CONFIGURE_PREREQ+=		subst-pkglocaledir
 .  if empty(USE_PKGLOCALEDIR:M[nN][oO])
