@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.16 2005/05/19 21:11:24 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.17 2005/05/20 04:39:44 dmcmahill Exp $
 #
 # Copyright (c) 2002, 2003, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -205,6 +205,7 @@ END {
 		SETENV, AWK, CMP, GREP, PKG_INFO, PKG_SUFX, SED, SORT, PKGSRCDIR, PACKAGES);
 	if (debug) printf("\nExecute:  %s\n",cmd);
 	rc = system(cmd);
+
 	if (rc != 0) {
 	  printf("\n**** WARNING ****\n") > "/dev/stderr";
 	  printf("Command: %s\nfailed.", cmd) > "/dev/stderr";
@@ -214,6 +215,9 @@ END {
 	
 	printf("Loading binary package cache file...\n");
 	load_cache_file( PACKAGES "/.pkgcache" );
+        if(pkg_count["unknown"] > 0 ) {
+		printf("    Loaded %d binary packages with unknown PKGPATH\n", pkg_count["unknown"]);
+	}
 
 	printf("Flattening dependencies\n");
 	printf("") > dependsfile;
@@ -374,25 +378,12 @@ END {
 
 			if (debug) {
 			  printf("Checking for binary package with lookup_cache( %s)\n",
-				 wc);
+				 toppkg);
 			}
 # lookup_cache( wildcard ) will produce HTML for the packages which are found
-			binpkgs = lookup_cache( wildcard[toppkg] PKG_SUFX );
+			lookup_cache( toppkg );
 			
 
-# sort the binary pkgs (XXX would be nice to implement in memory in awk)
-			sfile = TMPDIR "/sorted";
-			spipe = SORT " > " sfile;
-			printf("%s",binpkgs) | spipe;
-			close(spipe);
-			binpkgs = "";
-			while((getline < sfile) > 0) {
-			  binpkgs = sprintf("%s\n%s", binpkgs, $0);
-			}
-			close(sfile);
-
-                        if (debug) printf("binary packages: \n%s\n\n",
-                                          binpkgs);
 
 			if ( flatdepends[toppkg] ~ /^[ \t]*$/ ) {
 				rundeps = "<EM>none</EM>";
@@ -418,11 +409,17 @@ END {
 				}
 				gsub(/%%VULNERABILITIES%%/, ""vul"");
 				gsub(/%%VULDATE%%/, ""vuldate"");
-
 				gsub(/%%RUN_DEPENDS%%/, ""rundeps"");
-				gsub(/%%BIN_PKGS%%/, ""binpkgs"");
-				
-				line = $0
+
+				line = $0;
+
+				if( line ~/%%BIN_PKGS%%/ ) {
+				    gsub(/%%BIN_PKGS%%/, "", line);
+				    while((getline < binpkgs_file) > 0) {
+				      print >> readme;
+				    }
+				    close( binpkgs_file );
+				}
 
 				if( line ~/%%BUILD_DEPENDS%%/ ) {
 				    gsub(/%%BUILD_DEPENDS%%/, "", line);
@@ -796,10 +793,9 @@ function copy_readme(old, new, cmd, rc) {
 }
 
 
-function load_cache_file( file, pkgfile, opsys, osver, march ) {
+function load_cache_file( file, pkgfile, opsys, osver, march, wk, rx ) {
+  printf("    * %s\n", file);
   fatal_check_file( file );
-
-  if( debug ) printf("load_cache_file(%s)\n", file);
 
   # read the cache file
   while( getline < file ) {
@@ -815,6 +811,10 @@ function load_cache_file( file, pkgfile, opsys, osver, march ) {
       opsys = "unknown";
       osver = "unknown";
       march = "unknown";
+      pkgpath = "unknown";
+    } else if( $0 ~/^PKGPATH=/ ) {
+      pkgpath = $0;
+      gsub(/PKGPATH=[ \t]*/, "", pkgpath);
     } else if( $0 ~/^OPSYS=/ ) {
       opsys = $0;
       gsub(/OPSYS=[ \t]*/, "", opsys);
@@ -825,16 +825,18 @@ function load_cache_file( file, pkgfile, opsys, osver, march ) {
       march = $0;
       gsub(/MACHINE_ARCH=[ \t]*/, "", march);
     } else if( $0 ~/^pkgcache_end /) {
-      if( debug ) printf("\t%s, OPSYS=%s, OS_VERSION=%s, MACHINE_ARCH=%s\n",
-			 pkgfile, opsys, osver, march);
-      opsys_list[pkgfile] = opsys;
-      osver_list[pkgfile] = osver;
-      march_list[pkgfile] = march;
+      if( debug ) printf("\t%s, OPSYS=%s, OS_VERSION=%s, MACHINE_ARCH=%s, PKGPATH=%s\n",
+			 pkgfile, opsys, osver, march, pkpath);
 
-      # we only use this for a list of keys later so store something short...
-      pkg_list[pkgfile] = 1;
-      pkgnm_list[pkgfile] = pkgfile;
-      gsub(/.*\//, "", pkgnm_list[pkgfile]);
+      pkg_count[pkgpath] = pkg_count[pkgpath] + 1;
+
+      opsys_list[pkgpath, pkg_count[pkgpath]] = opsys;
+      osver_list[pkgpath, pkg_count[pkgpath]] = osver;
+      march_list[pkgpath, pkg_count[pkgpath]] = march;
+      pkgfile_list[pkgpath, pkg_count[pkgpath]] = pkgfile;
+      gsub(/.*\//, "", pkgfile);
+      pkgnm_list[pkgpath, pkg_count[pkgpath]] = pkgfile;
+
     } else {
       # skip this line
     }
@@ -844,20 +846,22 @@ function load_cache_file( file, pkgfile, opsys, osver, march ) {
   close( file );
 }
 
-function lookup_cache( wc, r, binpkgs, key) {
-  if( debug ) printf("lookup_cache( %s )\n", wc);
-  r = ".*/" glob2reg( wc );
-  if( debug ) printf("lookup_cache():  Searching for \"%s\"\n", r );
-  
-  binpkgs = "";
-  for( key in pkg_list ) {
-    if( key ~ r ) {
-      binpkgs = sprintf("%s\n<TR><TD>%s:<TD><a href=\"%s/%s\">%s</a><TD>(%s %s)\n",
-			binpkgs, march_list[key], PKG_URL, key, pkgnm_list[key],
-			opsys_list[key], osver_list[key]);
+function lookup_cache( d, binpkgs) {
+  if( debug ) printf("lookup_cache( %s ):  pkg_count = %d\n",
+     d, pkg_count[d]);
 
-    }
+  binpkgs_file = TMPDIR "/binpkgs";
+  spipe = SORT " > " binpkgs_file;
+  for(i=1 ; i<=pkg_count[d]; i=i+1) {
+    printf("<TR><TD>%s:<TD><a href=\"%s/%s\">%s</a><TD>(%s %s)\n",
+      march_list[d, i], PKG_URL, pkgfile_list[d, i], pkgnm_list[d, i],
+      opsys_list[d, i], osver_list[d, i]) | spipe;
   }
-  return( binpkgs );
+  if( pkg_count[d] == 0 ) {
+	printf("<TR><TD><EM>none</EM></TD></TR>\n") | spipe;
+  }
+
+  close( spipe );
 }
+
 
