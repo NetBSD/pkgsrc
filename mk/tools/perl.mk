@@ -1,4 +1,4 @@
-# $NetBSD: perl.mk,v 1.13 2005/05/19 03:52:23 jlam Exp $
+# $NetBSD: perl.mk,v 1.14 2005/05/20 03:00:16 jlam Exp $
 #
 # This Makefile fragment defines additional variables that are used by
 # packages that use the perl tool.
@@ -19,4 +19,9 @@ CONFIGURE_ENV+=		PERL=${TOOLS_${_TOOLS_VARNAME.perl}:Q}
 # includes find-prefix.mk.
 #
 .  include "../../lang/perl5/vars.mk"
+
+# Substitute for PERL5_* variables in PLISTs.
+PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SUB_INSTALLSITELIB}
+PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SUB_INSTALLSITEARCH}
+PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_SUB_INSTALLARCHLIB}
 .endif
