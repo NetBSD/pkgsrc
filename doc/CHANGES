@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10145 2005/05/20 21:01:17 wiz Exp $
+$NetBSD: CHANGES,v 1.10146 2005/05/20 21:07:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2555,4 +2555,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added libao-oss-0.8.6 [jmmv 2005-05-20]
 	Added libao-sun-0.8.6 [jmmv 2005-05-20]
 	Updated gcc34 to 3.4.4 [shannonjr 2005-05-20]
-	Updated devilspie to 0.10 [wizz 2005-05-20]
+	Updated devilspie to 0.10 [wiz 2005-05-20]
+	Updated speex to 1.0.5 [wiz 2005-05-20]
