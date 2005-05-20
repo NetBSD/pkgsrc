@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10140 2005/05/20 09:00:17 wiz Exp $
+$NetBSD: CHANGES,v 1.10141 2005/05/20 13:19:53 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2548,3 +2548,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated phpldapadmin to 0.9.6c [seb 2005-05-19]
 	Updated p5-Module-CoreList to 2.01 [seb 2005-05-19]
 	Updated html to 4.01nb2 [wiz 2005-05-20]
+	Updated xephem to 3.6.4 [drochner 2005-05-20]
