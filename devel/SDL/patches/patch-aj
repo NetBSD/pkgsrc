@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.20 2005/01/05 12:05:19 adam Exp $
+$NetBSD: patch-aj,v 1.21 2005/05/20 20:08:40 wiz Exp $
 
---- configure.in.orig	2004-12-13 09:02:08.000000000 +0000
+--- configure.in.orig	2004-12-13 10:02:08.000000000 +0100
 +++ configure.in
 @@ -28,9 +28,9 @@ AC_SUBST(SDL_VERSION)
  
@@ -88,9 +88,14 @@ $NetBSD: patch-aj,v 1.20 2005/01/05 12:05:19 adam Exp $
              SDL_CFLAGS="$SDL_CFLAGS $PTH_CFLAGS"
              SDL_LIBS="$SDL_LIBS $PTH_LIBS"
              CFLAGS="$CFLAGS -DENABLE_PTH"
-@@ -1248,8 +1251,8 @@ CheckPTHREAD()
+@@ -1247,9 +1250,13 @@ CheckPTHREAD()
+             pthread_cflags="-D_REENTRANT -D_THREAD_SAFE"
              pthread_lib="-pthread"
              ;;
++        *-*-dragonfly*)
++            pthread_cflags="-D_REENTRANT"
++            pthread_lib="-pthread"
++            ;;
          *-*-netbsd*)
 -            pthread_cflags="-I/usr/pkg/include -D_REENTRANT"
 -            pthread_lib="-L/usr/pkg/lib -lpthread -lsem"
@@ -99,7 +104,7 @@ $NetBSD: patch-aj,v 1.20 2005/01/05 12:05:19 adam Exp $
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -1724,29 +1727,31 @@ CheckUSBHID()
+@@ -1724,29 +1731,31 @@ CheckUSBHID()
          have_libusbhid=no
          have_libusb=no
          AC_CHECK_LIB(usbhid, hid_init, have_libusbhid=yes)
@@ -140,7 +145,7 @@ $NetBSD: patch-aj,v 1.20 2005/01/05 12:05:19 adam Exp $
          fi
  
          AC_MSG_CHECKING(for usbhid)
-@@ -1835,6 +1840,26 @@ CheckUSBHID()
+@@ -1835,6 +1844,26 @@ CheckUSBHID()
      fi
  }
  
@@ -167,7 +172,16 @@ $NetBSD: patch-aj,v 1.20 2005/01/05 12:05:19 adam Exp $
  dnl Check for altivec instruction support using gas syntax
  CheckAltivec()
  {
-@@ -2043,16 +2068,18 @@ case "$target" in
+@@ -1992,7 +2021,7 @@ case "$target" in
+             COPY_ARCH_SRC(src/timer, linux, SDL_systimer.c)
+         fi
+         ;;
+-    *-*-freebsd*)
++    *-*-freebsd* | *-*-dragonfly*)
+         ARCH=freebsd
+         CheckDummyVideo
+         CheckDiskAudio
+@@ -2043,16 +2072,18 @@ case "$target" in
          CheckESD
          CheckNAS
          CheckX11
@@ -189,7 +203,7 @@ $NetBSD: patch-aj,v 1.20 2005/01/05 12:05:19 adam Exp $
          fi
          # Set up files for the cdrom library
          if test x$enable_cdrom = xyes; then
-@@ -2061,9 +2088,6 @@ case "$target" in
+@@ -2061,9 +2092,6 @@ case "$target" in
          fi
          # Set up files for the thread library
          if test x$enable_threads = xyes; then
@@ -199,7 +213,7 @@ $NetBSD: patch-aj,v 1.20 2005/01/05 12:05:19 adam Exp $
              CopyUnixThreadSource
          fi
          # Set up files for the timer library
-@@ -2724,7 +2748,7 @@ AM_CONDITIONAL([ENABLE_STATIC], [test "$
+@@ -2724,7 +2752,7 @@ AM_CONDITIONAL([ENABLE_STATIC], [test "$
  
  # Set runtime shared library paths as needed
  
