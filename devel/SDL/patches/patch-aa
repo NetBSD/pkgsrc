@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.9 2005/01/05 12:05:19 adam Exp $
+$NetBSD: patch-aa,v 1.10 2005/05/20 20:08:40 wiz Exp $
 
---- src/joystick/bsd/SDL_sysjoystick.c.orig	2004-12-13 07:54:32.000000000 +0000
+--- src/joystick/bsd/SDL_sysjoystick.c.orig	2004-12-13 08:54:32.000000000 +0100
 +++ src/joystick/bsd/SDL_sysjoystick.c
-@@ -60,7 +60,7 @@ static char rcsid =
+@@ -55,12 +55,14 @@ static char rcsid =
+ #include <libusbhid.h>
+ #endif
+ 
+-#ifdef __FreeBSD__
++#ifdef __DragonFly__
++#include <sys/joystick.h>
++#elif defined(__FreeBSD__)
+ #include <osreldate.h>
  #include <sys/joystick.h>
  #endif
  
@@ -11,7 +19,7 @@ $NetBSD: patch-aa,v 1.9 2005/01/05 12:05:19 adam Exp $
  #include <machine/joystick.h>
  #endif
  
-@@ -239,6 +239,7 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -239,6 +241,7 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  	struct hid_data *hdata;
  	struct report *rep;
  	int fd;
@@ -19,7 +27,7 @@ $NetBSD: patch-aa,v 1.9 2005/01/05 12:05:19 adam Exp $
  
  	fd = open(path, O_RDONLY);
  	if (fd == -1) {
-@@ -303,6 +304,8 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -303,6 +306,8 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  	joy->nbuttons = 0;
  	joy->nhats = 0;
  	joy->nballs = 0;
@@ -28,7 +36,7 @@ $NetBSD: patch-aa,v 1.9 2005/01/05 12:05:19 adam Exp $
  
  	while (hid_get_item(hdata, &hitem) > 0) {
  		char *sp;
-@@ -329,8 +332,7 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -329,8 +334,7 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  			    unsigned usage = HID_USAGE(hitem.usage);
  			    int joyaxe = usage_to_joyaxe(usage);
  			    if (joyaxe >= 0) {
@@ -38,7 +46,7 @@ $NetBSD: patch-aa,v 1.9 2005/01/05 12:05:19 adam Exp $
  			    } else if (usage == HUG_HAT_SWITCH) {
  				joy->nhats++;
  			    }
-@@ -348,6 +350,9 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -348,6 +352,9 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  		}
  	}
  	hid_end_parse(hdata);
@@ -48,16 +56,25 @@ $NetBSD: patch-aa,v 1.9 2005/01/05 12:05:19 adam Exp $
  
  usbend:
  	/* The poll blocks the event thread. */
-@@ -370,7 +375,7 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
+@@ -370,7 +377,7 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
  	int nbutton, naxe = -1;
  	Sint32 v;
  
 -#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
-+#if defined(__FreeBSD__) || defined(HAVE_MACHINE_JOYSTICK) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(HAVE_MACHINE_JOYSTICK) || defined(__OpenBSD__) || defined(__DragonFly__)
  	struct joystick gameport;
  	static int x, y, xmin = 0xffff, ymin = 0xffff, xmax = 0, ymax = 0;
   
-@@ -457,7 +462,8 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
+@@ -419,7 +426,7 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
+ 		}
+ 		return;
+ 	}
+-#endif /* defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) */
++#endif /* defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)*/
+ 	
+ 	rep = &joy->hwdata->inreport;
+ 
+@@ -457,7 +464,8 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
  			    } else if (usage == HUG_HAT_SWITCH) {
  				v = (Sint32)hid_get_data(REP_BUF_DATA(rep),
  							 &hitem);
@@ -67,7 +84,7 @@ $NetBSD: patch-aa,v 1.9 2005/01/05 12:05:19 adam Exp $
  			    }
  			    break;
  			}
-@@ -530,9 +536,9 @@ report_alloc(struct report *r, struct re
+@@ -530,9 +538,9 @@ report_alloc(struct report *r, struct re
  #endif
  #else
  # ifdef USBHID_NEW
