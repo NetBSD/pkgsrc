@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.31 2005/05/20 21:36:05 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.32 2005/05/20 22:40:36 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -696,10 +696,14 @@ _UNWRAP_PATTERNS+=	*-config
 _UNWRAP_PATTERNS+=	*Conf.sh
 _UNWRAP_PATTERNS+=	*.pc
 _UNWRAP_PATTERNS_FIND_cmd=	\
-	cd ${WRKSRC} && ${FIND} . \( ${_UNWRAP_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \) -print | ${SED} -e 's|^\./||' | ${SORT} -u
+	cd ${WRKSRC} && \
+	${ECHO} "__dummy-entry__" && \
+	${FIND} . \( ${_UNWRAP_PATTERNS:C/.*/-o -name "&"/g:S/-o//1} \) -print \
+	| ${SED} -e 's|^\./||' \
+	| ${SORT} -u
 UNWRAP_FILES?=		# empty
 _UNWRAP_FILES=		${UNWRAP_FILES}					\
-			${_UNWRAP_PATTERNS_FIND_cmd:sh}
+			${_UNWRAP_PATTERNS_FIND_cmd:sh:N__dummy-entry__}
 _UNWRAP_SED?=		# empty
 
 SUBST_CLASSES+=		unwrap
