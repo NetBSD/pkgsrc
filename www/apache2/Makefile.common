@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.17 2005/05/18 19:10:01 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.18 2005/05/21 03:49:52 reed Exp $
 
 DISTNAME=		httpd-${APACHE_VERSION}
-PKGREVISION=		1
 EXTRACT_SUFX=		.tar.bz2
 # When updating this version be sure to update the checksum and remove
 # any PKGREVISION for devel/apr also.
