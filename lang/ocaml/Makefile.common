@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/04/11 21:46:14 tv Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/05/21 22:35:46 minskim Exp $
 
 DISTNAME=	ocaml-3.08.3
 CATEGORIES=	lang
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	-with-pthread
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
 INSTALL_UNSTRIPPED=	yes
 .endif
 
