@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/05/16 01:15:31 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/05/21 04:10:17 jlam Exp $
 #
 # Makefile fragment used by XFree86-fonts* packages.
 
@@ -44,7 +44,7 @@ do-configure:
 
 SUBST_CLASSES+=		large
 SUBST_STAGE.large=	pre-build
-SUBST_FILES.large=	${WRKDIR}/xc/fonts/encodings/large/Makefile
+SUBST_FILES.large=	large/Makefile
 SUBST_SED.large=	-e 's,/usr/X11R6,${X11ROOT},g'
 SUBST_MESSAGE.large=	"Fixing large Makefile."
 
