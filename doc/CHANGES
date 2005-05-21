@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10153 2005/05/21 14:41:19 minskim Exp $
+$NetBSD: CHANGES,v 1.10154 2005/05/21 15:30:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2546,3 +2546,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added xmms-faad-2.0 [grant 2005-05-21]
 	Updated flyspell to 1.7i [wiz 2005-05-21]
 	Updated libslang to 1.4.9nb4 [minskim 2005-05-21]
+	Updated unrar to 3.5.2 [wiz 2005-05-21]
