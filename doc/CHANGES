@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10148 2005/05/21 01:26:22 rh Exp $
+$NetBSD: CHANGES,v 1.10149 2005/05/21 03:18:48 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2559,3 +2559,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated speex to 1.0.5 [wiz 2005-05-20]
 	Updated libidn to 0.5.16 [wiz 2005-05-20]
 	Updated pkgdiff to 0.117 [rh 2005-05-21]
+	Added xmms-faad-2.0 [grant 2005-05-21]
