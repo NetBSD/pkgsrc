@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10147 2005/05/20 21:10:28 wiz Exp $
+$NetBSD: CHANGES,v 1.10148 2005/05/21 01:26:22 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2558,3 +2558,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devilspie to 0.10 [wiz 2005-05-20]
 	Updated speex to 1.0.5 [wiz 2005-05-20]
 	Updated libidn to 0.5.16 [wiz 2005-05-20]
+	Updated pkgdiff to 0.117 [rh 2005-05-21]
