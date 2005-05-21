@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.18 2005/05/21 04:53:17 jlam Exp $
+# $NetBSD: defaults.mk,v 1.19 2005/05/21 23:09:36 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -48,7 +48,10 @@ TOOLS_DEFAULTS_MK=	defined
 .  include "${_PKGSRC_TOPDIR}/mk/tools/tools.${OPSYS}.mk"
 .endif
 
+######################################################################
+
 # "TOOL" variable names associated with each of the tools
+
 _TOOLS_VARNAME.awk=		AWK
 _TOOLS_VARNAME.basename=	BASENAME
 _TOOLS_VARNAME.bison-yacc=	YACC
@@ -121,6 +124,34 @@ _TOOLS_VARNAME.wc=		WC
 _TOOLS_VARNAME.xargs=		XARGS
 _TOOLS_VARNAME.xmkmf=		XMKMF_CMD
 _TOOLS_VARNAME.yacc=		YACC
+
+######################################################################
+
+# "TOOL" variable names associated with each of the tools that are
+# expected by GNU configure script.
+
+_TOOLS_VARNAME_GNU.awk=		AWK
+_TOOLS_VARNAME_GNU.bison-yacc=	YACC
+_TOOLS_VARNAME_GNU.chmod=	CHMOD
+_TOOLS_VARNAME_GNU.cmp=		CMP
+_TOOLS_VARNAME_GNU.cp=		CP
+_TOOLS_VARNAME_GNU.echo=	ECHO
+_TOOLS_VARNAME_GNU.egrep=	EGREP
+_TOOLS_VARNAME_GNU.gawk=	AWK
+_TOOLS_VARNAME_GNU.gm4=		M4
+_TOOLS_VARNAME_GNU.gsed=	SED
+_TOOLS_VARNAME_GNU.gtar=	TAR
+_TOOLS_VARNAME_GNU.hostname=	HOSTNAME
+_TOOLS_VARNAME_GNU.install=	INSTALL
+_TOOLS_VARNAME_GNU.lex=		LEX
+_TOOLS_VARNAME_GNU.ln=		LN
+_TOOLS_VARNAME_GNU.m4=		M4
+_TOOLS_VARNAME_GNU.mv=		MV
+_TOOLS_VARNAME_GNU.perl=	PERL
+_TOOLS_VARNAME_GNU.rm=		RM
+_TOOLS_VARNAME_GNU.sed=		SED
+_TOOLS_VARNAME_GNU.tar=		TAR
+_TOOLS_VARNAME_GNU.yacc=	YACC
 
 ######################################################################
 
