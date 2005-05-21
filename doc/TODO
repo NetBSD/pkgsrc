@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3513 2005/05/21 08:58:59 wiz Exp $
+$NetBSD: TODO,v 1.3514 2005/05/21 15:20:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -374,6 +374,7 @@ Suggested package updates
 	o bind-9.3.1 [pkg/30152]
 	o bioperl-1.5.0
 	o bitlbee-0.92 [pkg/30096]
+	o bittorrent-4.1.0
 	o blackbox-0.70
 	o blitz++-0.8
 	o bmake-20050322
@@ -452,7 +453,7 @@ Suggested package updates
 	o dnstracer-1.8
 	o doxygen-1.4.3
 	o dpkg-1.13.3
-	o dvdrip-0.52.4
+	o dvdrip-0.52.5
 	o dvipdfmx-20050201
 	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.4.0
@@ -671,6 +672,7 @@ Suggested package updates
 	o memtest86-3.2
 	o mftrace-1.1.6
 	o mgetty+sendfax-1.1.32
+	o mhonarc-2.6.11
 	o micq-0.4.12 [pkg/29063]
 	o micq-0.5.0.3
 	o mimedefang-2.51
@@ -699,6 +701,8 @@ Suggested package updates
 	o multitail-3.4.8
 	o muse-0.9.1
 	o mutt-devel-1.5.7
+	o mysql4-client-4.1.12
+	o mysql4-server-4.1.12
 	o nagios-2.0b3 [replacing netsaint]
 	o nano-1.2.5
 	o nap-1.5.3
@@ -865,7 +869,7 @@ Suggested package updates
 	o pear-Net_Socket-1.0.6
 	o pen-0.15.0
 	o perl-5.6.2
-	o pfqueue-0.3.7
+	o pfqueue-0.3.8
 	o pfstat-1.8
 	o pgpool-2.5.1
 	o phoon-20030120
@@ -1024,7 +1028,7 @@ Suggested package updates
 	o smalltalk-2.1.10
 	o smartmontools-5.33
 	o smlnj-110.51 [pkgsrc-wip]
-	o smlnj-110.53
+	o smlnj-110.54
 	o smokeping-1.38
 	o snd-7.12
 	o snes9x-1.43
@@ -1100,6 +1104,7 @@ Suggested package updates
 	o ucblogo-5.4
 	o ucl-1.03
 	o unix2dos-1.3
+	o unrar-3.5.2
 	o userppp-030706
 	o uvscan-4.40 [pkg/30290]
 	o vba-1.7.2
@@ -1122,7 +1127,7 @@ Suggested package updates
 	o weechat-0.1.1
 	o weewm-0.01
 	o winbind-3.0.13
-	o windowlab-1.26
+	o windowlab-1.29
 	o wine-20050419
 	o wmakerconf-2.11
 	o wmbiff-0.4.26
