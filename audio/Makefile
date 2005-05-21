@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.281 2005/05/20 19:20:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.282 2005/05/21 03:17:00 grant Exp $
 #
 
 COMMENT=	Audio tools
@@ -267,6 +267,7 @@ SUBDIR+=	xmms-dscope
 SUBDIR+=	xmms-dspectogram
 SUBDIR+=	xmms-dspectral
 SUBDIR+=	xmms-esound
+SUBDIR+=	xmms-faad
 SUBDIR+=	xmms-flac
 SUBDIR+=	xmms-fmradio
 SUBDIR+=	xmms-funtimedancer
