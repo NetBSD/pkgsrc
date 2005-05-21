@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10152 2005/05/21 13:08:05 lukem Exp $
+$NetBSD: CHANGES,v 1.10153 2005/05/21 14:41:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2545,3 +2545,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgdiff to 0.117 [rh 2005-05-21]
 	Added xmms-faad-2.0 [grant 2005-05-21]
 	Updated flyspell to 1.7i [wiz 2005-05-21]
+	Updated libslang to 1.4.9nb4 [minskim 2005-05-21]
