@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10155 2005/05/21 16:38:48 dillo Exp $
+$NetBSD: CHANGES,v 1.10156 2005/05/21 20:24:46 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2548,3 +2548,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libslang to 1.4.9nb4 [minskim 2005-05-21]
 	Updated unrar to 3.5.2 [wiz 2005-05-21]
 	Updated audit-packages to 1.34 [dillo 2005-05-21]
+	Updated ghc to 6.4 [kristerw 2005-05-21]
