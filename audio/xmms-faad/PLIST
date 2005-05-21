@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/21 03:16:23 grant Exp $
+lib/xmms/Input/libmp4.la
+@comment in xmms: @dirrm lib/xmms/Input
