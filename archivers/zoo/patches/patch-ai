@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 1999/11/12 05:17:21 hubertf Exp $
+$NetBSD: patch-ai,v 1.2 2005/05/21 11:35:01 rillig Exp $
 
 --- ./zoolist.c	Sat Jul 20 00:57:27 1991
 +++ /usr/pkgsrc/archivers/zoo/work.i386.unpatched/zoolist.c	Fri Nov 12 06:19:38 1999
@@ -16,4 +16,3 @@ $NetBSD: patch-ai,v 1.1 1999/11/12 05:17:21 hubertf Exp $
  		if (diff_tz == 0)
  			printf ("   ");					/* print nothing if same */
  		else if (diff_tz > 0)			/* else print signed difference */
-
