@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.89 2005/05/21 04:53:17 jlam Exp $
+# $NetBSD: replace.mk,v 1.90 2005/05/21 23:09:36 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1180,3 +1180,21 @@ ${_v_}?=	${TOOLS_${_TOOLS_VARNAME.${_t_}}}
 .  endif
 .endfor
 .undef _t_
+
+######################################################################
+
+# For packages that use GNU configure scripts, pass the real command
+# paths for the tools that the package uses through the shell environment.
+# We do this since these paths may be hardcoded into package scripts,
+# and if they're not pre-specified, then they'll be searched for in the
+# PATH, which would find the ones in ${TOOLS_DIR}.
+#
+.if defined(GNU_CONFIGURE)
+.  for _t_ in ${_USE_TOOLS}
+.    if defined(_TOOLS_VARNAME_GNU.${_t_}) && \
+        defined(TOOLS_${_TOOLS_VARNAME.${_t_}})
+CONFIGURE_ENV+=	\
+	${_TOOLS_VARNAME_GNU.${_t_}}=${TOOLS_${_TOOLS_VARNAME.${_t_}}:Q}
+.    endif
+.  endfor
+.endif
