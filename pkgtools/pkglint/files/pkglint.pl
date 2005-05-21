@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.159 2005/05/20 01:36:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.160 2005/05/21 12:29:02 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -220,19 +220,25 @@ BEGIN {
 	use vars qw(@ISA @EXPORT_OK);
 	@ISA = qw(Exporter);
 	@EXPORT_OK = qw(load_file);
+
+	import PkgLint::Util qw(false true);
 }
 
 sub load_file($) {
 	my ($fname) = @_;
-	my ($result, $line, $lineno);
+	my ($result, $line, $lineno, $seen_newline);
 
 	$result = [];
 	open(F, "< $fname") or return undef;
 	$lineno = 0;
+	$seen_newline = true;
 	while (defined($line = <F>)) {
 		$lineno++;
-		$line =~ s/\r*\n*\z//;
+		$seen_newline = ($line =~ s/\n$//);
 		push(@$result, PkgLint::FileUtil::Line->new($fname, $lineno, $line));
+	}
+	if (!$seen_newline) {
+		$result->[-1]->log_error("File must end with a newline.");
 	}
 	close(F) or return undef;
 	return $result;
@@ -353,10 +359,9 @@ sub checkfile_Makefile($);
 sub checkfile_MESSAGE($);
 sub checkfile_patches_patch($);
 sub checkfile_PLIST($);
+sub checkfile_other($);
 
 sub checkperms($);
-sub checkpathname($);
-sub checklastline($);
 sub readmakefile($);
 sub checkextra($$);
 sub checkorder($$@);
@@ -641,7 +646,7 @@ sub check_package() {
 			next if (defined $checker{$extra});
 
 			push(@checker, $extra);
-			$checker{$extra} = \&checkpathname;
+			$checker{$extra} = \&checkfile_other;
 		}
 	}
 
@@ -651,10 +656,6 @@ sub check_package() {
 			log_error("$opt_packagedir/$i", NO_LINE_NUMBER, "file not found");
 		} else {
 			$checker{$i}->($i) || log_warning($i, NO_LINE_NUMBER, "cannot open");
-			if ($i !~ /patches\/patch/) {
-				&checklastline($i) ||
-					log_warning($i, NO_LINE_NUMBER, "cannot open");
-			}
 		}
 		log_info($i, NO_LINE_NUMBER, "finished checks ...");
 	}
@@ -736,6 +737,20 @@ sub checkline_trailing_whitespace($) {
 	return true;
 }
 
+sub checklines_trailing_empty_lines($) {
+	my ($lines) = @_;
+	my ($last, $max);
+
+	$max = $#{$lines} + 1;
+	for ($last = $max; $last > 1 && $lines->[$last - 1]->text eq ""; ) {
+		$last--;
+	}
+	if ($last != $max) {
+		$lines->[$last]->log_warning("Trailing empty lines.");
+	}
+	return true;
+}
+
 #
 # Specific subroutines
 #
@@ -756,6 +771,7 @@ sub checkfile_DESCR($) {
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, $regex_validchars);
 	}
+	checklines_trailing_empty_lines($descr);
 
 	if (scalar(@$descr) > $maxlines) {
 		log_warning($fname, NO_LINE_NUMBER, "File too long (should be no more than $maxlines lines).");
@@ -776,7 +792,7 @@ sub checkfile_distinfo($) {
 	}
 
 	if (scalar(@$distinfo) == 0) {
-		log_error($fname, NO_LINE_NUMBER, "May not be empty.");
+		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
 		return true;
 	}
 
@@ -805,6 +821,7 @@ sub checkfile_distinfo($) {
 			$in_distinfo{$patch} = true;
 		}
 	}
+	checklines_trailing_empty_lines($distinfo);
 
 	foreach my $patch (<$opt_packagedir/$patchdir/patch-*>) {
 		$patch = basename($patch);
@@ -844,6 +861,7 @@ sub checkfile_MESSAGE($) {
 	if ($message->[-1]->text ne "=" x 75) {
 		$message->[-1]->log_warning("expected a line of exactly 75 \"=\" characters.");
 	}
+	checklines_trailing_empty_lines($message);
 	return true;
 }
 
@@ -948,6 +966,7 @@ sub checkfile_PLIST($) {
 			$line->log_info("seen installation to share/doc.");
 		}
 	}
+	checklines_trailing_empty_lines($plist);
 
 	if (!$rcsid_seen) {
 		log_error($fname, NO_LINE_NUMBER, "Expected a \@comment \"\$$conf_rcsidstr\$\" line.");
@@ -967,33 +986,18 @@ sub checkperms($) {
 #
 # misc files
 #
-sub checkpathname($) {
+sub checkfile_other($) {
 	my ($file) = @_;
 	my ($fname) = ("$opt_packagedir/$file");
-	my ($whole);
-	
-	checkperms($fname);
-}
+	my ($lines);
 
-sub checklastline($) {
-	my ($file) = @_;
-	my ($fname) = ("$opt_packagedir/$file");
-	my ($whole);
-	
-	if (!open(IN, "< $fname")) {
-		log_error($fname, NO_LINE_NUMBER, "could not open: $!");
+	$lines = load_file($fname);
+	if (!$lines) {
+		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
 		return false;
 	}
-	{ local $/; $whole = <IN>; }
-	close(IN);
-
-	if ($whole eq "") {
-		log_error($fname, NO_LINE_NUMBER, "file is empty.");
-	} elsif ($whole !~ /\n$/) {
-		log_error($fname, NO_LINE_NUMBER, "newline expected at end of file.");
-	} elsif ($whole =~ /\r*\n(?:[ \t]*\r*\n)+$/) {
-		log_warning($fname, NO_LINE_NUMBER, "perhaps unnecessary blank lines at end of file.");
-	}
+	checklines_trailing_empty_lines($lines);
+	checkperms($fname);
 	return true;
 }
 
@@ -1071,6 +1075,7 @@ sub checkfile_patches_patch($) {
 			$line->log_warning("Possible RCS tag \"\$$1\$\". Use binary mode (-ko) on cvs add/import.");
 		}
 	}
+	checklines_trailing_empty_lines($lines);
 
 	check_for_multiple_patches($lines);
 	return true;
@@ -1129,6 +1134,7 @@ sub readmakefile($) {
 			$contents .= $line->text . "\n";
 		}
 	}
+	checklines_trailing_empty_lines($lines);
 	return $contents;
 }
 
@@ -2121,6 +2127,7 @@ sub category_check() {
 	if (!$comment_seen) {
 		log_error($fname, NO_LINE_NUMBER, "no COMMENT line found.");
 	}
+	checklines_trailing_empty_lines($lines);
 	return true;
 }
 
