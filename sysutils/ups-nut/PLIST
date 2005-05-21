@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2005/05/03 15:52:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/05/21 01:44:57 lukem Exp $
 bin/upsc
 bin/upscmd
 bin/upslog
@@ -6,11 +6,12 @@ bin/upsrw
 libexec/nut/apcsmart
 libexec/nut/belkin
 libexec/nut/belkinunv
+libexec/nut/bestfcom
 libexec/nut/bestuferrups
 libexec/nut/bestups
 libexec/nut/blazer
+libexec/nut/cpsups
 libexec/nut/cyberpower
-libexec/nut/cyberpower1100
 libexec/nut/esupssmart
 libexec/nut/etapro
 libexec/nut/everups
@@ -20,8 +21,10 @@ libexec/nut/ippon
 libexec/nut/isbmex
 libexec/nut/liebert
 libexec/nut/masterguard
+libexec/nut/metasys
 libexec/nut/mge-shut
 libexec/nut/mge-utalk
+libexec/nut/mustek
 libexec/nut/oneac
 libexec/nut/powercom
 libexec/nut/powermust
@@ -39,10 +42,11 @@ man/man5/upssched.conf.5
 man/man8/apcsmart.8
 man/man8/belkin.8
 man/man8/belkinunv.8
+man/man8/bestfcom.8
 man/man8/bestuferrups.8
 man/man8/bestups.8
+man/man8/cpsups.8
 man/man8/cyberpower.8
-man/man8/cyberpower1100.8
 man/man8/etapro.8
 man/man8/everups.8
 man/man8/fentonups.8
@@ -51,8 +55,10 @@ man/man8/ippon.8
 man/man8/isbmex.8
 man/man8/liebert.8
 man/man8/masterguard.8
+man/man8/metasys.8
 man/man8/mge-shut.8
 man/man8/mge-utalk.8
+man/man8/mustek.8
 man/man8/nutupsdrv.8
 man/man8/oneac.8
 man/man8/powercom.8
@@ -83,6 +89,7 @@ share/doc/nut/NEWS
 share/doc/nut/README
 share/doc/nut/UPGRADING
 share/doc/nut/big-servers.txt
+share/doc/nut/cables/apc-rs500-serial.txt
 share/doc/nut/cables/apc.txt
 share/doc/nut/cables/ge-imv-victron.txt
 share/doc/nut/cables/imv.txt
