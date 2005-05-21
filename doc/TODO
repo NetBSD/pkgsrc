@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3516 2005/05/21 15:48:48 wiz Exp $
+$NetBSD: TODO,v 1.3517 2005/05/21 20:24:47 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -516,7 +516,6 @@ Suggested package updates
 	o gdm1-2.2.5.5
 	o gettext-0.14.4
 	o gfract-0.3.2
-	o ghc-6.2.2
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.16 (gnu)
 	o ghostscript-8.50
