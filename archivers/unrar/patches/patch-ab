@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2004/03/30 23:36:46 snj Exp $
+$NetBSD: patch-ab,v 1.7 2005/05/21 15:30:06 wiz Exp $
 
---- sha1.cpp.orig	2004-03-30 13:47:36.000000000 -0800
-+++ sha1.cpp	2004-03-30 13:53:59.000000000 -0800
+--- sha1.cpp.orig	2005-05-01 17:08:48.000000000 +0200
++++ sha1.cpp
 @@ -44,17 +44,71 @@ A million repetitions of "a"
  #define R3(v,w,x,y,z,i) {z+=(((w|x)&y)|(w&x))+blk(i)+0x8F1BBCDC+rol(v,5);w=rol(w,30);}
  #define R4(v,w,x,y,z,i) {z+=(w^x^y)+blk(i)+0xCA62C1D6+rol(v,5);w=rol(w,30);}
