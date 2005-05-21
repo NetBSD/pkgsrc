@@ -1,10 +1,10 @@
-# $NetBSD: strip.mk,v 1.2 2005/05/21 04:46:52 jlam Exp $
+# $NetBSD: strip.mk,v 1.3 2005/05/21 04:53:17 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
-# by Johnny C. Lam
+# by Johnny C. Lam.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
