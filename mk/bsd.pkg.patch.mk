@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.9 2005/05/17 19:11:02 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.10 2005/05/21 21:40:45 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -262,11 +262,15 @@ apply-pkgsrc-patches:
 		if ${PATCH} -v >/dev/null 2>&1; then			\
 			fuzz_flags=${PATCH_FUZZ_FACTOR:Q};		\
 		fi;							\
-		${PATCH} $$fuzz_flags ${PATCH_ARGS} < $$i ||		\
+		if ${PATCH} $$fuzz_flags ${PATCH_ARGS} < $$i; then	\
+			${ECHO} "$$i" >> ${_PATCH_COOKIE_TMP:Q};	\
+		else							\
 			${ECHO_MSG} "Patch $$i failed";			\
-		${ECHO} "$$i" >> ${_PATCH_COOKIE_TMP:Q};		\
+			fail="$$fail $$filename";			\
+		fi;							\
 	done;								\
 	if ${TEST} -n "$$fail"; then					\
-		${ECHO_MSG} "Patching failed due to modified patch file(s): $$fail"; \
+		${ECHO_MSG} "Patching failed due to modified or broken patch file(s):"; \
+		${ECHO_MSG} "	$$fail";				\
 		${_PKGSRC_PATCH_FAIL};					\
 	fi
