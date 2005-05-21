@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/05/08 09:49:28 recht Exp $
+# $NetBSD: Makefile,v 1.21 2005/05/21 19:07:08 kristerw Exp $
 #
 
 DISTNAME=	gtkhtml-3.2.5
@@ -16,6 +16,8 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	src/libgtkhtml.pc.in
 GNU_CONFIGURE=		yes
+
+BUILDLINK_TRANSFORM+=	rm:-DGNOME_DISABLE_DEPRECATED=1
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gail/buildlink3.mk"
