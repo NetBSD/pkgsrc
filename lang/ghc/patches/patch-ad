@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.5 2004/05/29 14:28:43 kristerw Exp $
+$NetBSD: patch-ad,v 1.6 2005/05/21 20:22:21 kristerw Exp $
 
---- distrib/hc-build.orig	Sat May 29 03:20:17 2004
-+++ distrib/hc-build	Sat May 29 03:21:31 2004
+--- ../ghc-6.2.1/distrib/hc-build.orig	Sat May 29 03:20:17 2004
++++ ../ghc-6.2.1/distrib/hc-build	Sat May 29 03:21:31 2004
 @@ -95,6 +95,6 @@
  # The reconfigure step updates a few files, which can lead to
  # unnecessary recompilations.  Touch a bunch of things here to avoid

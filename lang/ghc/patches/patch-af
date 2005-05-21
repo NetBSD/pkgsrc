@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.5 2005/05/21 20:22:21 kristerw Exp $
+
+--- ghc/rts/package.conf.in.orig	2005-05-20 21:07:55.000000000 +0200
++++ ghc/rts/package.conf.in	2005-05-20 21:08:58.000000000 +0200
+@@ -65,7 +65,7 @@
+ hugs-options:
+ cc-options:
+ 
+-ld-options:
++ld-options: "-Wl","-R/usr/pkg/lib","-L","/usr/pkg/lib",
+ #ifdef LEADING_UNDERSCORE
+            "-u", "_GHCziBase_Izh_static_info"
+          , "-u", "_GHCziBase_Czh_static_info"
