@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:47:11 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/05/21 04:10:18 jlam Exp $
 #
 
 DISTNAME=		#defined
@@ -60,8 +60,7 @@ DIST_SUBDIR=		${DISTNAME}
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	"Configuring default paths."
 SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths+=	${WRKSRC}/tools/check-updates.pl \
-			${WRKSRC}/f-prot.sh
+SUBST_FILES.paths+=	tools/check-updates.pl f-prot.sh
 SUBST_SED.paths=	-e "s,/usr/local/f-prot,${FPDIR},g" \
 			-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
 

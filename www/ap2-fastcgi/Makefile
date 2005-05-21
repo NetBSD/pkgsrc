@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/09 22:52:03 seb Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/21 04:10:18 jlam Exp $
 
 .include "../../www/ap-fastcgi/Makefile.common"
 
@@ -11,7 +11,7 @@ MAKE_FLAGS+=		LIBTOOL=${LIBTOOL:Q}
 
 SUBST_CLASSES+=		ap2
 SUBST_STAGE.ap2=	pre-build
-SUBST_FILES.ap2=	${WRKSRC}/Makefile
+SUBST_FILES.ap2=	Makefile
 SUBST_SED.ap2=		-e s,/usr/local/apache2,${PREFIX}/share/httpd,
 
 post-patch:

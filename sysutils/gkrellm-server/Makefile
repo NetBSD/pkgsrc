@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:47:24 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/21 04:10:18 jlam Exp $
 .include "../../sysutils/gkrellm/Makefile.common"
 
 PKGREVISION=		# empty1
@@ -29,7 +29,7 @@ PKG_DEFAULTS_OPTIONS?=	# empty
 .include "../../mk/bsd.options.mk"
 
 SUBST_STAGE.gkprefix=	post-patch
-SUBST_FILES.gkprefix=	${WRKSRC}/server/gkrellmd.h
+SUBST_FILES.gkprefix=	server/gkrellmd.h
 SUBST_SED.gkprefix=	-e '/GKRELLMD_SYS_ETC/{s!/etc!${PREFIX}&!;}'
 SUBST_CLASSES+=		gkprefix
 

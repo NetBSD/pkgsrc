@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2005/05/21 03:49:52 reed Exp $
+# $NetBSD: Makefile,v 1.75 2005/05/21 04:10:18 jlam Exp $
 
 .include "Makefile.common"
 
@@ -99,10 +99,10 @@ SUBST_SED.apr-lt=	-e "s|^\(LIBTOOL =\) [^ ]*|\1 \$$(SHELL) \$$(top_builddir)/lib
 SUBST_MESSAGE.apr-lt=	"Fixing libtool references."
 
 SUBST_CLASSES+=		confs
-SUBST_STAGE.confs=	post-install
-SUBST_FILES.confs=	${EGDIR}/highperformance-std.conf \
-			${EGDIR}/httpd-std.conf \
-			${EGDIR}/ssl-std.conf
+SUBST_STAGE.confs=	post-configure
+SUBST_FILES.confs=	docs/conf/highperformance-std.conf \
+			docs/conf/httpd-std.conf \
+			docs/conf/ssl-std.conf
 SUBST_SED.confs=	-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g" \
 			-e "s|${PREFIX}/htdocs|${PREFIX}/share/httpd/htdocs|g" \
 			-e "s|${PREFIX}/conf|${PKG_SYSCONFDIR}|g" \
