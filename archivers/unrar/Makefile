@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2004/11/04 10:15:57 adam Exp $
+# $NetBSD: Makefile,v 1.38 2005/05/21 15:30:06 wiz Exp $
 
-DISTNAME=	unrarsrc-3.4.3
+DISTNAME=	unrarsrc-3.5.2
 PKGNAME=	${DISTNAME:S/src//}
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.rarlab.com/rar/ \
@@ -12,7 +12,7 @@ COMMENT=	Extract, view & test RAR archives
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-NO_CONFIGURE=	# defined
+NO_CONFIGURE=	YES
 USE_LANGUAGES=	c++
 
 MAKEFILE=	makefile.unix
