@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3515 2005/05/21 15:30:44 wiz Exp $
+$NetBSD: TODO,v 1.3516 2005/05/21 15:48:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -984,6 +984,7 @@ Suggested package updates
 	o rrdtool-1.0.49 [pkg/26353]
 	o rsnapshot-1.2.0
 	o rss2html-0.7.2 [pkg/30208]
+	o rsync-2.6.4
 	o rt-3.4.1
 	o rt-mysql-3.4.1
 	o rt-pgsql-3.4.1
