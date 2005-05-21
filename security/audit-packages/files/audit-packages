@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-packages,v 1.17 2004/06/06 08:28:54 agc Exp $
+# $NetBSD: audit-packages,v 1.18 2005/05/21 16:36:37 dillo Exp $
 #
 # Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
 #
@@ -40,7 +40,7 @@ if [ -r @PKG_SYSCONFDIR@/audit-packages.conf ]; then
 	. @PKG_SYSCONFDIR@/audit-packages.conf
 fi
 
-vuls=${PKGVULNDIR}/pkg-vulnerabilities 
+vuls="${PKGVULNDIR}/pkg-vulnerabilities"
 
 verbose=no
 while [ $# -gt 0 ]; do
@@ -53,11 +53,12 @@ done
 errmsg=""
 
 # check for missing vulnerabilities file
-[ ! -f $vuls ] && errmsg="** Missing $vuls"
+[ ! -f "$vuls" ] && errmsg="** Missing $vuls"
 
 case "$errmsg" in
 "")	# check for old vulnerabilities file if we're being verbose
 	case "$verbose" in
+	# XXX: quote vuls
 	yes)	[ -n "$(find $vuls -ctime +7)" ] && echo "*** WARNING - $vuls more than a week old, continuing..." ;;
 	esac
 	;;
@@ -65,15 +66,15 @@ esac
 
 case "$errmsg" in
 "")	# check integrity of vulnerabilities file
-	recordedsum=`@AWK@ '$1 == "#CHECKSUM" { print $3 }' $vuls`
-	recordedalg=`@AWK@ '$1 == "#CHECKSUM" { print $2 }' $vuls`
+	recordedsum=`@AWK@ '$1 == "#CHECKSUM" { print $3 }' "$vuls"`
+	recordedalg=`@AWK@ '$1 == "#CHECKSUM" { print $2 }' "$vuls"`
 	case "$recordedsum" in
 	"")	errmsg="***WARNING*** No checksum found in $vuls"
 		;;
 	*)	case "$recordedalg" in
 		"")	errmsg="***WARNING*** No checksum algorithm found in $vuls file"
 			;;
-		*)	calcsum=`@AWK@ '$1 == "#CHECKSUM" || /\$NetBSD.*/ { next } { print }' $vuls | @DIGEST@ $recordedalg`
+		*)	calcsum=`@AWK@ '$1 == "#CHECKSUM" || /\$NetBSD.*/ { next } { print }' "$vuls" | @DIGEST@ "$recordedalg"`
 			if [ "$recordedsum" != "$calcsum" ]; then
 				errmsg="***WARNING*** Checksum mismatch - recorded $recordedalg checksum \"$recordedsum\", calculated checksum \"$calcsum\""
 			fi
@@ -101,8 +102,8 @@ while read pat type url; do
 
 	if @PKG_TOOLS_BIN@/pkg_info -qe "$pat"; then
 		echo Package `@PKG_TOOLS_BIN@/pkg_info -e "$pat"` has a \
-			$type vulnerability, see $url
+			"$type" vulnerability, see "$url"
 	fi
-done < $vuls
+done < "$vuls"
 
 exit 0
