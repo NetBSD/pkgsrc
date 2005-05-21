@@ -1,15 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2005/04/11 21:47:30 tv Exp $
+# $NetBSD: Makefile,v 1.35 2005/05/21 01:44:57 lukem Exp $
 #
 
-DISTNAME=		nut-2.0.0
-PKGNAME=		ups-nut-2.0.0
-PKGREVISION=		2
+DISTNAME=		nut-2.0.1
+PKGNAME=		ups-nut-2.0.1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://random.networkupstools.org/source/2.0/
-
-PATCH_SITES+=		http://students.fct.unl.pt/~cer09566/nut/files/
-PATCHFILES+=		nut-2.0.0-powermust0.11.patch
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		lukem@NetBSD.org
 HOMEPAGE=		http://www.networkupstools.org/
