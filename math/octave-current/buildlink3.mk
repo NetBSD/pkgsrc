@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/01/29 22:33:47 dmcmahill Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2005/05/21 16:29:31 kristerw Exp $
 #
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
@@ -16,6 +16,12 @@ BUILDLINK_DEPENDS.octave-current+=	octave-current>=2.1.57
 BUILDLINK_RECOMMENDED.octave-current+=	octave-current>=2.1.59nb1
 BUILDLINK_PKGSRCDIR.octave-current?=	../../math/octave-current
 .endif	# OCTAVE_CURRENT_BUILDLINK3_MK
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !defined(PKG_OPTIONS.octave:) || !empty(PKG_OPTIONS.octave:Mhdf5)
+.include "../../devel/hdf5/buildlink3.mk"
+.endif
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
