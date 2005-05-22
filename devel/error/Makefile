@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/22 05:24:57 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/22 05:26:17 minskim Exp $
 #
 
 DISTNAME=	error-0.0
@@ -10,7 +10,5 @@ COMMENT=	Insert compiler errors in source files as comments
 
 MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}	\
 		MANOWN=${MANOWN} MANGRP=${MANGRP}
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/bsd.pkg.mk"
