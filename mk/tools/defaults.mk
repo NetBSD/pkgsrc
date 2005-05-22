@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.19 2005/05/21 23:09:36 jlam Exp $
+# $NetBSD: defaults.mk,v 1.20 2005/05/22 01:53:55 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -137,8 +137,10 @@ _TOOLS_VARNAME_GNU.cmp=		CMP
 _TOOLS_VARNAME_GNU.cp=		CP
 _TOOLS_VARNAME_GNU.echo=	ECHO
 _TOOLS_VARNAME_GNU.egrep=	EGREP
+_TOOLS_VARNAME_GNU.env=		SETENV
 _TOOLS_VARNAME_GNU.gawk=	AWK
 _TOOLS_VARNAME_GNU.gm4=		M4
+_TOOLS_VARNAME_GNU.grep=	GREP
 _TOOLS_VARNAME_GNU.gsed=	SED
 _TOOLS_VARNAME_GNU.gtar=	TAR
 _TOOLS_VARNAME_GNU.hostname=	HOSTNAME
@@ -151,6 +153,7 @@ _TOOLS_VARNAME_GNU.perl=	PERL
 _TOOLS_VARNAME_GNU.rm=		RM
 _TOOLS_VARNAME_GNU.sed=		SED
 _TOOLS_VARNAME_GNU.tar=		TAR
+_TOOLS_VARNAME_GNU.xmkmf=	XMKMF
 _TOOLS_VARNAME_GNU.yacc=	YACC
 
 ######################################################################
