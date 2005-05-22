@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/22 20:07:45 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/05/22 22:06:28 jlam Exp $
 
 DISTNAME=	db-2.7.7
 PKGREVISION=	2
@@ -20,8 +20,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../dist/configure
 CONFIGURE_ARGS+=	--enable-compat185
-
-USE_TOOLS+=		gawk
 
 INSTALLATION_DIRS=	bin include/db2 lib share/doc/html
 
