@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2005/05/22 05:35:32 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2005/05/22 20:51:45 jlam Exp $
 #
 
 DISTNAME=	automake-1.9.5
@@ -13,13 +13,14 @@ COMMENT=	GNU Standards-compliant Makefile generator
 
 DEPENDS=	autoconf>=2.58:../../devel/autoconf
 
+USE_TOOLS+=		gm4
+TOOLS_DEPMETHOD.gm4=	DEPENDS
+
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PLIST_SUBST+=		PKG_DIR_VERSION=1.9
 GNU_CONFIGURE=		YES
 _STRIPFLAG_INSTALL=	# none
-EVAL_PREFIX+=		M4DIR=m4
-TOOLS_M4=		${M4DIR}/bin/${GNU_PROGRAM_PREFIX}m4
 
 INFO_FILES=		automake.info
 
