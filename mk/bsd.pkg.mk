@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1676 2005/05/22 19:11:12 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1677 2005/05/22 20:15:40 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -420,12 +420,6 @@ NULL_COOKIE=		${WRKDIR}/.null
 SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 
 LIBABISUFFIX?=
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-TOOLS_M4?=		${M4}
-TOOLS_YACC?=		${YACC}
-CONFIGURE_ENV+=		M4=${TOOLS_M4:Q} YACC=${TOOLS_YACC:Q}
-.endif
 
 TOUCH_FLAGS?=		-f
 
@@ -893,11 +887,8 @@ PKGSRC_USE_TOOLS+=	gzip
 # Patch
 .include "../../mk/bsd.pkg.patch.mk"
 
-.if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
+# Tools
 .include "../../mk/tools/bsd.tools.mk"
-.else
-.include "../../mk/tools.mk"
-.endif
 
 # If NO_BUILD is defined, default to not needing a compiler.
 .if defined(NO_BUILD)
@@ -1842,13 +1833,6 @@ SUBST_SED.pkgconfig=		${PKGCONFIG_OVERRIDE_SED}
 pre-configure-override: ${_CONFIGURE_PREREQ}
 	@${DO_NADA}
 
-.if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-_INSTALL_CMD=	${INSTALL}
-.else
-_INSTALL_CMD=	`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'`
-TOOLS_AWK=	${AWK}
-.endif
-
 .PHONY: do-configure
 .if !target(do-configure)
 do-configure:
@@ -1856,8 +1840,8 @@ do-configure:
 .    for DIR in ${CONFIGURE_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} \
 	    AWK="${TOOLS_AWK}" \
-	    INSTALL="${_INSTALL_CMD} -c -o ${BINOWN} -g ${BINGRP}" \
-	    ac_given_INSTALL="${_INSTALL_CMD} -c -o ${BINOWN} -g ${BINGRP}" \
+	    INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}" \
+	    ac_given_INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}" \
 	    INSTALL_DATA="${INSTALL_DATA}"				\
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}"			\
 	    INSTALL_GAME="${INSTALL_GAME}"				\
