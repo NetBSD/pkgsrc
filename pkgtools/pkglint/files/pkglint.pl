@@ -11,12 +11,15 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.166 2005/05/22 22:50:41 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.167 2005/05/22 22:59:41 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
-# done by Hubert Feyrer <hubertf@netbsd.org>,
-# Thorsten Frueauf <frueauf@netbsd.org>, Thomas Klausner <wiz@netbsd.org>,
-# Roland Illig <roland.illig@gmx.de> and others.
+# done by:
+#	Hubert Feyrer <hubertf@netbsd.org>,
+#	Thorsten Frueauf <frueauf@netbsd.org>,
+#	Thomas Klausner <wiz@netbsd.org>,
+#	Roland Illig <rillig@NetBSD.org>
+#	and others.
 #
 
 #==========================================================================
