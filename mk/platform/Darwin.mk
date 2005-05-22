@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.10 2005/05/03 18:30:12 jlam Exp $
+# $NetBSD: Darwin.mk,v 1.11 2005/05/22 19:11:15 jlam Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -15,75 +15,6 @@ RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-AWK?=		/usr/bin/awk
-BASENAME?=	/usr/bin/basename
-CAT?=		/bin/cat
-CHMOD?=		/bin/chmod
-CHOWN?=		/usr/sbin/chown
-CHGRP?=		/usr/bin/chgrp
-CMP?=		/usr/bin/cmp
-CP?=		/bin/cp
-CUT?=		/usr/bin/cut
-DATE?=		/bin/date
-DIRNAME?=	/usr/bin/dirname
-ECHO?=		echo				# Shell builtin
-EGREP?=		/usr/bin/egrep
-EXPR?=		/bin/expr
-FALSE?=		false				# Shell builtin
-FILE_CMD?=	/usr/bin/file
-FIND?=		/usr/bin/find
-FGREP?=		/usr/bin/fgrep
-GMAKE?=		/usr/bin/gnumake
-GREP?=		/usr/bin/grep
-GTAR?=		/usr/bin/gnutar	
-GUNZIP_CMD?=	/usr/bin/gunzip -f
-GZCAT?=		/usr/bin/gzcat
-GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
-HEAD?=		/usr/bin/head
-HOSTNAME_CMD?=	/bin/hostname
-ID?=		/usr/bin/id
-IMAKE?=		${X11BASE}/bin/imake ${IMAKEOPTS}
-LDCONFIG?=	/sbin/ldconfig
-LN?=		/bin/ln
-LS?=		/bin/ls
-M4?=		/usr/bin/m4 
-MAIL_CMD?=	/usr/bin/mail
-MKDIR?=		/bin/mkdir -p
-MTREE?=		/usr/sbin/mtree
-MV?=		/bin/mv
-NICE?=		/usr/bin/nice
-PATCH?=		/usr/bin/patch
-.if exists(${LOCALBASE}/bin/pax)
-PAX?=		${LOCALBASE}/bin/pax
-.else
-PAX?=		/bin/pax
-.endif
-PERL5?=		${LOCALBASE}/bin/perl
-PWD_CMD?=	/bin/pwd	# needs to print physical path
-RM?=		/bin/rm
-RMDIR?=		/bin/rmdir
-SED?=		/usr/bin/sed
-SETENV?=	/usr/bin/env
-SH?=		/bin/sh
-SHLOCK=		/usr/bin/shlock
-SORT?=		/usr/bin/sort
-TAIL?=		/usr/bin/tail
-.if exists(${LOCALBASE}/bin/tar)
-TAR?=		${LOCALBASE}/bin/tar
-.else
-TAR?=		/usr/bin/tar
-.endif
-TEE?=		/usr/bin/tee
-TEST?=		test				# Shell builtin
-TOUCH?=		/usr/bin/touch
-TR?=		/usr/bin/tr
-TRUE?=		true				# Shell builtin
-TSORT?=		/usr/bin/tsort
-WC?=		/usr/bin/wc
-XARGS?=		/usr/bin/xargs
-.endif
 
 .if !defined(PKGSRC_COMPILER) || !empty(PKGSRC_COMPILER:Mgcc)
 CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	# use the GNU cpp, not the OS X cpp
