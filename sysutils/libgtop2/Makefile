@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/26 21:27:33 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2005/05/22 05:35:33 jlam Exp $
 
 DISTNAME=		libgtop-2.10.1
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -35,7 +35,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib2}
 CONFIGURE_ARGS+=	--with-catgets --with-libgtop-guile=no
 CONFIGURE_ARGS+=	--without-x
-CONFIGURE_ENV+=		AWK="${AWK}" LN_S="${LN} -s" PERL="${PERL5}"
+CONFIGURE_ENV+=		LN_S="${LN} -s"
 
 PRINT_PLIST_AWK+=	/^bin\/libgtop_server2$$/ \
 				{ print "$${LIBGTOP_SERVER}" $$0; next }
