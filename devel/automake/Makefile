@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2005/05/13 16:54:12 jlam Exp $
+# $NetBSD: Makefile,v 1.63 2005/05/22 05:35:32 jlam Exp $
 #
 
 DISTNAME=	automake-1.9.5
@@ -17,7 +17,6 @@ DEPENDS=	autoconf>=2.58:../../devel/autoconf
 
 PLIST_SUBST+=		PKG_DIR_VERSION=1.9
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV=		PERL=${PERL5}
 _STRIPFLAG_INSTALL=	# none
 EVAL_PREFIX+=		M4DIR=m4
 TOOLS_M4=		${M4DIR}/bin/${GNU_PROGRAM_PREFIX}m4

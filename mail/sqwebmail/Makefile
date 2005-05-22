@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/05/19 17:05:38 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2005/05/22 05:35:33 jlam Exp $
 
 DISTNAME=	sqwebmail-5.0.1
 PKGBASE=	${DISTNAME:C/-[^-]*$//}
@@ -59,7 +59,6 @@ CONFIGURE_ARGS+=	--with-mailer="${SENDMAIL} -oi -t"
 CONFIGURE_ARGS+=	--with-mailgroup=${COURIER_GROUP}
 CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 
-CONFIGURE_ENV+=		SETENV=${TOOLS_SETENV:Q}
 CONFIGURE_ENV+=		GPG="${LOCALBASE}/bin/gpg"
 CONFIGURE_ENV+=		ldapsearch="${LOCALBASE}/bin/ldapsearch"
 

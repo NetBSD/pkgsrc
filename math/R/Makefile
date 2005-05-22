@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2005/05/19 13:12:52 markd Exp $
+# $NetBSD: Makefile,v 1.66 2005/05/22 05:35:33 jlam Exp $
 
 DISTNAME=		R-2.1.0
 CATEGORIES=		math
@@ -18,6 +18,7 @@ TEST_TARGET=		check
 USE_X11=		# defined
 USE_PERL5=		# defined
 USE_GNU_TOOLS+=		make
+USE_TOOLS+=		xmkmf
 USE_GNU_READLINE=	# uses callback interface
 USE_MAKEINFO=		# defined
 TEXINFO_REQD=		4.5
@@ -33,7 +34,6 @@ CONFIGURE_ARGS+=	--without-gnome		# not yet stable
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--with-bzlib
 CONFIGURE_ARGS+=	--with-pcre
-CONFIGURE_ENV+=		XMKMF="${XMKMF}"
 
 # Use BLAS (math/blas)
 #

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2005/04/15 12:54:38 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2005/05/22 05:35:32 jlam Exp $
 
 DISTNAME=		glib-2.6.4
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -45,7 +45,6 @@ CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=gnu
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
 
-CONFIGURE_ENV+=		PERL=${PERL5}
 CONFIGURE_ENV+=		PERL_PATH=${PERL5}
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2005/04/15 11:45:16 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2005/05/22 05:35:33 jlam Exp $
 
 DISTNAME=		samba-3.0.10
 PKGREVISION=		2
@@ -22,7 +22,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		PERL="${PERL5}"
 
 .include "../../mk/bsd.prefs.mk"
 

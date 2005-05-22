@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--without-pam
 
 CONFIGURE_ENV+=		X_PRE_LIBS=-lXt
 CONFIGURE_ENV+=		ac_cv_x_app_defaults="${PREFIX}/lib/X11/app-defaults"
-CONFIGURE_ENV+=		PERL="${PERL5}" ac_cv_perl_version="${PERL_VERSION_cmd:sh}"
+CONFIGURE_ENV+=		ac_cv_perl_version="${PERL_VERSION_cmd:sh}"
 CONFIGURE_ENV+=		INTLTOOL_PERL="${PERL5}"
 .if defined(PKGREVISION)
 CONFIGURE_ENV+=		X_CFLAGS="-DPKGREVISION=${PKGREVISION}"
