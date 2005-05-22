@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.90 2005/05/21 23:09:36 jlam Exp $
+# $NetBSD: replace.mk,v 1.91 2005/05/22 01:56:27 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1191,10 +1191,10 @@ ${_v_}?=	${TOOLS_${_TOOLS_VARNAME.${_t_}}}
 #
 .if defined(GNU_CONFIGURE)
 .  for _t_ in ${_USE_TOOLS}
-.    if defined(_TOOLS_VARNAME_GNU.${_t_}) && \
-        defined(TOOLS_${_TOOLS_VARNAME.${_t_}})
-CONFIGURE_ENV+=	\
-	${_TOOLS_VARNAME_GNU.${_t_}}=${TOOLS_${_TOOLS_VARNAME.${_t_}}:Q}
+.    if defined(TOOLS_${_TOOLS_VARNAME.${_t_}})
+.      for _v_ in ${_TOOLS_VARNAME_GNU.${_t_}}
+CONFIGURE_ENV+=		${_v_}=${TOOLS_${_TOOLS_VARNAME.${_t_}}:Q}
+.      endfor
 .    endif
 .  endfor
 .endif
