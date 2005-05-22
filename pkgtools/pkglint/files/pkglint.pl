@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.161 2005/05/22 14:54:18 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.162 2005/05/22 18:41:44 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -583,18 +583,13 @@ sub check_package() {
 		checkfile_Makefile("Makefile") || log_error("$opt_packagedir/Makefile", NO_LINE_NUMBER, "error while reading.");
 	}
 
-	#
-	# check for files.
-	#
-	my @checker = ("$pkgdir/DESCR");
-	my %checker = ("$pkgdir/DESCR", \&checkfile_DESCR);
+	checkfile_DESCR("$pkgdir/DESCR");
 
 	if ($opt_check_MESSAGE) {
 		foreach my $abs_msg (<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>) {
 			my ($msg) = (substr($abs_msg, length("$opt_packagedir/")));
 			if ($msg =~ qr"MESSAGE") {
-				push(@checker, $msg);
-				$checker{$msg} = \&checkfile_MESSAGE;
+				checkfile_MESSAGE($msg);
 			}
 		}
 	}
@@ -602,26 +597,19 @@ sub check_package() {
 		foreach my $abs_plist (<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>) {
 			my ($plist) = (substr($abs_plist, length("$opt_packagedir/")));
 			if ($plist =~ qr"PLIST") {
-				push(@checker, $plist);
-				$checker{$plist} = \&checkfile_PLIST;
+				checkfile_PLIST($plist);
 			}
 		}
 	}
 	if ($opt_check_patches) {
 		foreach my $abs_patch (<$opt_packagedir/$patchdir/patch-*>) {
 			my ($patch) = (substr($abs_patch, length("$opt_packagedir/")));
-			next if (! -T $abs_patch);
-			next if (defined $checker{$patch});
-			push(@checker, $patch);
-			$checker{$patch} = \&checkfile_patches_patch;
+			checkfile_patches_patch($patch);
 		}
 	}
 	if ($opt_check_distinfo) {
 		if (-f "$opt_packagedir/$distinfo") {
-			my $i = "$distinfo";
-			next if (defined $checker{$i});
-			push(@checker, $i);
-			$checker{$i} = \&checkfile_distinfo;
+			checkfile_distinfo($distinfo);
 		}
 	}
 	if ($opt_check_distinfo && $opt_check_patches) {
@@ -641,24 +629,13 @@ sub check_package() {
 	if ($opt_check_extra) {
 		foreach my $abs_extra ((<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>)) {
 			my ($extra) = (substr($abs_extra, length("$opt_packagedir/")));
-			next if (! -T $abs_extra);
 			next if ($extra =~ qr"(?:distinfo$|Makefile$|PLIST|MESSAGE)");
-			next if (defined $checker{$extra});
+			next unless -f $extra && -T $extra;
 
-			push(@checker, $extra);
-			$checker{$extra} = \&checkfile_other;
+			checkfile_other($extra);
 		}
 	}
 
-	foreach my $i (@checker) {
-		log_info($i, NO_LINE_NUMBER, "starting checks ...");
-		if (! -f "$opt_packagedir/$i") {
-			log_error("$opt_packagedir/$i", NO_LINE_NUMBER, "file not found");
-		} else {
-			$checker{$i}->($i) || log_warning($i, NO_LINE_NUMBER, "cannot open");
-		}
-		log_info($i, NO_LINE_NUMBER, "finished checks ...");
-	}
 	if (-f "$opt_packagedir/$distinfo") {
 		if ( $seen_NO_CHECKSUM ) {
 			log_warning("$opt_packagedir/$distinfo", NO_LINE_NUMBER, "this file should not exist if NO_CHECKSUM is set");
