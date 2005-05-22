@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.11 2005/05/03 19:35:24 jlam Exp $
+# $NetBSD: UnixWare.mk,v 1.12 2005/05/22 19:11:15 jlam Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -10,81 +10,6 @@ PS?=		/usr/bin/ps
 RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 TYPE?=		/usr/bin/type
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-AWK?=		/usr/bin/nawk
-BASENAME?=	/usr/bin/basename
-CAT?=		/usr/bin/cat
-CHMOD?=		/usr/bin/chmod
-CHOWN?=		/usr/bin/chown
-CHGRP?=		/usr/bin/chgrp
-CMP?=		/usr/bin/cmp
-CP?=		/usr/bin/cp
-CUT?=		/usr/bin/cut
-DATE?=		/usr/bin/date
-DIRNAME?=	/usr/bin/dirname
-ECHO?=		/usr/ucb/echo
-EGREP?=		/usr/bin/grep -E
-EXPR?=		/usr/bin/expr
-FALSE?=		/usr/bin/false
-FGREP?=		/usr/bin/grep -F
-FILE_CMD?=	/usr/bin/file
-FIND?=		/usr/bin/find
-GMAKE?=		${LOCALBASE}/bin/gmake
-GREP?=		/usr/bin/grep
-.if exists(${LOCALBASE}/bin/gtar)
-GTAR?=		${LOCALBASE}/bin/gtar
-.else
-GTAR?=		${LOCALBASE}/bin/tar
-.endif
-.if exists(${LOCALBASE}/bin/gzip)
-GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
-GZCAT?=		${LOCALBASE}/bin/zcat
-GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
-.elif exists(/usr/local/bin/gzip)
-GUNZIP_CMD?=	/usr/local/bin/gzip -df
-GZCAT?=		/usr/local/bin/gzip -cd
-GZIP_CMD?=	/usr/local/bin/gzip -nf ${GZIP}
-.endif
-HEAD?=		/usr/bin/head
-HOSTNAME_CMD?=	/usr/bin/hostname
-ID?=		/usr/bin/id
-IMAKE?=		# XXX only available in the SDK? what about xmkmf?
-LDCONFIG?=	/usr/bin/true
-LN?=		/usr/bin/ln
-LS?=		/usr/bin/ls
-M4?=		/usr/ccs/bin/m4
-MAIL_CMD?=	/usr/bin/mailx
-MKDIR?=		${LOCALBASE}/sbin/mkdir-sh -p
-MTREE?=		${LOCALBASE}/sbin/mtree
-MV?=		/usr/bin/mv
-NICE?=		/usr/bin/nice
-PATCH?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}patch
-PAX?=		${LOCALBASE}/bin/pax
-PERL5?=		${LOCALBASE}/bin/perl
-PWD_CMD?=	/usr/bin/pwd	# needs to print physical path
-RM?=		/usr/bin/rm
-RMDIR?=		/usr/bin/rmdir
-.if exists(${LOCALBASE}/bin/nbsed)
-SED?=		${LOCALBASE}/bin/nbsed
-.else
-SED?=		/usr/bin/sed
-.endif
-SETENV?=	/usr/bin/env
-SH?=		/usr/bin/ksh
-SHLOCK=		${LOCALBASE}/bin/shlock
-SORT?=		/usr/bin/sort
-TAIL?=		/usr/bin/tail
-TAR?=		${LOCALBASE}/bin/tar
-TEE?=		/usr/bin/tee
-TEST?=		test				# Shell builtin
-TOUCH?=		/usr/bin/touch
-TR?=		/usr/bin/tr
-TRUE?=		/usr/bin/true
-TSORT?=		/usr/ccs/bin/tsort
-WC?=		/usr/bin/wc
-XARGS?=		/usr/bin/xargs
-.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022

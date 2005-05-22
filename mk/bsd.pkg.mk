@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1675 2005/05/22 15:31:03 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1676 2005/05/22 19:11:12 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -381,23 +381,6 @@ _PLIST_IGNORE_FILES+=	*[~\#] *.OLD *.orig *,v # scratch config files
 _PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
 .endif
 BUILD_DEFS+=		_PLIST_IGNORE_FILES
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-.if !empty(USE_GNU_TOOLS:Mmake)
-_USE_GMAKE=		yes
-.endif
-.if defined(_USE_GMAKE)
-MAKE_PROGRAM=		${GMAKE}
-.elif defined(USE_IMAKE)
-.  if ${_IMAKE_MAKE} == ${GMAKE}
-USE_GNU_TOOLS+=		make
-.  endif
-MAKE_PROGRAM=		${_IMAKE_MAKE}
-.else
-MAKE_PROGRAM=		${MAKE}
-.endif
-CONFIGURE_ENV+=		MAKE=${MAKE_PROGRAM:T:Q}
-.endif
 
 # Automatically increase process limit where necessary for building.
 _ULIMIT_CMD=

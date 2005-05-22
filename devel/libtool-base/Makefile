@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2005/05/22 05:35:32 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2005/05/22 19:11:12 jlam Exp $
 
 ###########################################################################
 ###########################################################################
@@ -66,9 +66,7 @@ BUILD_SHLIBTOOL?=	YES
 USE_LANGUAGES=		c c++ fortran
 CONFIGURE_ARGS+=	--with-tags=CXX,F77,GCJ
 
-.if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 USE_TOOLS+=		echo
-.endif
 
 .PHONY: fix-libtool
 fix-libtool:
