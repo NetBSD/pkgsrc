@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/24 13:51:15 grant Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:11 jlam Exp $
 
 DISTNAME=	vscmV0r4
 PKGNAME=	vscm-0.4
@@ -13,7 +13,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cs.princeton.edu/~blume/vscm/
 COMMENT=	Portable scheme implementation
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 post-patch:
 	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/path.h >${WRKSRC}/path.h

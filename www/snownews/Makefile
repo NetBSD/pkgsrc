@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:48:02 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:46 jlam Exp $
 
 DISTNAME=	snownews-1.5.5.1
 CATEGORIES=	www
@@ -10,7 +10,7 @@ COMMENT=	Small, curses based RSS feed reader
 
 BUILD_USES_MSGFMT=	YES
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_NCURSES=		# missing WA_BOLD, WA_REVERSE, KEY_RESIZE
 USE_PKGLOCALEDIR=	YES
 

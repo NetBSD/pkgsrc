@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2005/04/11 21:45:46 tv Exp $
+# $NetBSD: Makefile,v 1.83 2005/05/22 20:07:59 jlam Exp $
 
 DISTNAME=	Wine-20050310
 PKGNAME=	${DISTNAME:S/W/w/}
@@ -22,7 +22,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 SunOS*-i386 Darwin*-i386
 
 WRKSRC=		 	${WRKDIR}/${DISTNAME:S/W/w/}
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes

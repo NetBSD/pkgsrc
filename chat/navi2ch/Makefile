@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/11/30 08:46:53 uebayasi Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/22 20:07:43 jlam Exp $
 
 DISTNAME=	navi2ch-1.7.5
 CATEGORIES=	chat
@@ -11,7 +11,7 @@ COMMENT=	2ch BBS browser for Emacs
 .include "../../mk/emacs.mk"
 
 GNU_CONFIGURE=	# defined
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 .if ${EMACS_FLAVOR} == "emacs"
 CONFIGURE_ARGS+=--with-emacs
 CONFIGURE_ARGS+=--with-lispdir=${EMACS_LISPPREFIX}/navi2ch

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/22 08:24:31 grant Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/22 20:07:55 jlam Exp $
 #
 
 DISTNAME=	tpasm1.0r
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.sqt.com/
 COMMENT=	Assembler for 6805, 68HC11, 6502, Surplus, 8051, Z80, PIC, and AVR
 
 WRKSRC=		${WRKDIR}/tpasm
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libdata/tpasm

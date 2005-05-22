@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:42 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:57 jlam Exp $
 #
 
 DISTNAME=	xwpe-1.5.29a
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.identicalsoftware.com/xwpe/
 COMMENT=	Programming environment for UNIX systems
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_NCURSES=		# tigetstr()
 USE_X11=		yes
 

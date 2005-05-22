@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/16 01:15:31 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/22 20:08:00 jlam Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
@@ -14,7 +14,7 @@ COMMENT=		Full color 320x200 arcade quality platform shooter
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LDFLAGS="${X11_LDFLAGS}"
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LANGUAGES+=		c c++
 PKGSRC_USE_TOOLS+=	gtar
 

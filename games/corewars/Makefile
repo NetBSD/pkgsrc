@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:49 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/22 20:08:00 jlam Exp $
 
 DISTNAME=	corewars-0.9.13
 CATEGORIES=	games
@@ -8,7 +8,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://corewars.sourceforge.net/
 COMMENT=	Programs on a virtual machine, fighting each other
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 .include "../../x11/gtk/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/19 20:22:52 ben Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:37 jlam Exp $
 #
 
 DISTNAME=		csound-4.23f12gbs.11
@@ -13,7 +13,7 @@ COMMENT=		Software synthesizer and sequencer
 DIST_SUBDIR=		csound
 CONFLICTS+=		csound-bath-4*
 CONFLICTS+=		csound-dev-4*
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 USE_MAKEINFO=		yes
 USE_X11=		yes

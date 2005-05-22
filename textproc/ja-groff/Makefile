@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/24 21:13:02 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:35 jlam Exp $
 
 DISTNAME=	groff-1.10
 PKGNAME=	ja-groff-0.99
@@ -14,7 +14,7 @@ MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/groff/groff.html
 COMMENT=	Japanese enhancement of GNU groff
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 #CONFIGURE_ENV+= CXXFLAGS="-fno-rtti -fno-exceptions -O"
 

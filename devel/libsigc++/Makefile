@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/05/13 16:54:12 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/22 20:07:53 jlam Exp $
 
 DISTNAME=	libsigc++-1.2.7
 CATEGORIES=	devel
@@ -10,7 +10,7 @@ COMMENT=	Type-safe callback system for C++ programs
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_GNU_TOOLS+=		m4 make
+USE_TOOLS+=		gm4 gmake
 USE_LANGUAGES=		c c++
 
 PKGCONFIG_OVERRIDE=	sigc++-1.2.pc.in

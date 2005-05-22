@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 15:02:23 taya Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:08 jlam Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 
@@ -9,7 +9,7 @@ COMMENT=	Kana Kanji conversion system
 
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		EMACS=no

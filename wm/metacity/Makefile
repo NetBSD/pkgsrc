@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/04/26 20:17:33 drochner Exp $
+# $NetBSD: Makefile,v 1.43 2005/05/22 20:08:43 jlam Exp $
 #
 
 DISTNAME=	metacity-2.10.1
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	YES
 USE_DIRS+=		gnome2-1.5 theme-1.0
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 

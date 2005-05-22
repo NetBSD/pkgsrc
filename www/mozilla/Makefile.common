@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2005/05/15 02:58:05 taya Exp $
+# $NetBSD: Makefile.common,v 1.55 2005/05/22 20:08:45 jlam Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-${MOZ_DIST_VER}-source
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
 WRKSRC=		${WRKDIR}/mozilla
 USE_LANGUAGES=	c c++
 USE_PERL5=	build
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 

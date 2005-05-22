@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:48:12 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:49 jlam Exp $
 #
 
 DISTNAME=	wxPythonSrc-2.4.2.4
@@ -12,7 +12,7 @@ HOMEPAGE=	http://wxpython.org/
 COMMENT=	wxPython: Python bindings for wxWidgets
 
 WRKSRC=		${WRKDIR}/wxPythonSrc-2.4.2.4/wxPython
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 # previous name of the package
 CONFLICTS+=	${PYPKGPREFIX}-wxWindows-[0-9]*

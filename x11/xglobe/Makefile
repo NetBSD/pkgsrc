@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/04/11 21:48:15 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/05/22 20:08:52 jlam Exp $
 #
 
 DISTNAME=	xglobe-0.5
@@ -23,7 +23,7 @@ MAPS=		LE.400.gif Brill.400.gif mggd.gif
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_X11BASE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 post-install:
 	${INSTALL_DATA_DIR} ${X11PREFIX}/lib/xglobe

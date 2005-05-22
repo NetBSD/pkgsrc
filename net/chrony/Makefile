@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:46:45 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/22 20:08:23 jlam Exp $
 
 DISTNAME=	chrony-1.20
 PKGREVISION=	1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://chrony.sunsite.dk/index.php
 COMMENT=	Daemon for maintaining the accuracy of computer clocks
 
 USE_PKGINSTALL=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
