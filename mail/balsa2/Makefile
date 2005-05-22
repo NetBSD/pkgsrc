@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/04/11 21:46:17 tv Exp $
+# $NetBSD: Makefile,v 1.37 2005/05/22 08:29:15 jmmv Exp $
 
 DISTNAME=	balsa-2.2.6
 PKGREVISION=	1
@@ -36,6 +36,10 @@ CONF_FILES+=	${EGDIR}/${cnf} ${PKG_SYSCONFDIR}/sound/events/${cnf}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+
+BUILDLINK_TRANSFORM+=		rm:-DGNOME_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=		rm:-DGNOME_VFS_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=		rm:-DGTK_DISABLE_DEPRECATED
 
 BUILDLINK_DEPENDS.gmime+=	gmime>=2.1.9
 
