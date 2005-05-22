@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1674 2005/05/21 01:55:53 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1675 2005/05/22 15:31:03 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -396,7 +396,7 @@ MAKE_PROGRAM=		${_IMAKE_MAKE}
 .else
 MAKE_PROGRAM=		${MAKE}
 .endif
-CONFIGURE_ENV+=		MAKE="${MAKE_PROGRAM:T}"
+CONFIGURE_ENV+=		MAKE=${MAKE_PROGRAM:T:Q}
 .endif
 
 # Automatically increase process limit where necessary for building.
@@ -494,19 +494,19 @@ INSTALL_DATA_DIR?= 	\
 INSTALL_MAN_DIR?= 	\
 	${INSTALL} -d -o ${MANOWN} -g ${MANGRP} -m ${PKGDIRMODE}
 
-INSTALL_MACROS=	BSD_INSTALL_PROGRAM="${INSTALL_PROGRAM}"		\
-		BSD_INSTALL_SCRIPT="${INSTALL_SCRIPT}"			\
-		BSD_INSTALL_LIB="${INSTALL_LIB}"			\
-		BSD_INSTALL_DATA="${INSTALL_DATA}"			\
-		BSD_INSTALL_MAN="${INSTALL_MAN}"			\
-		BSD_INSTALL="${INSTALL}"				\
-		BSD_INSTALL_PROGRAM_DIR="${INSTALL_PROGRAM_DIR}"	\
-		BSD_INSTALL_SCRIPT_DIR="${INSTALL_SCRIPT_DIR}"		\
-		BSD_INSTALL_LIB_DIR="${INSTALL_LIB_DIR}"		\
-		BSD_INSTALL_DATA_DIR="${INSTALL_DATA_DIR}"		\
-		BSD_INSTALL_MAN_DIR="${INSTALL_MAN_DIR}"		\
-		BSD_INSTALL_GAME="${INSTALL_GAME}"			\
-		BSD_INSTALL_GAME_DATA="${INSTALL_GAME_DATA}"
+INSTALL_MACROS=	BSD_INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}		\
+		BSD_INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}			\
+		BSD_INSTALL_LIB=${INSTALL_LIB:Q}			\
+		BSD_INSTALL_DATA=${INSTALL_DATA:Q}			\
+		BSD_INSTALL_MAN=${INSTALL_MAN:Q}			\
+		BSD_INSTALL=${INSTALL:Q}				\
+		BSD_INSTALL_PROGRAM_DIR=${INSTALL_PROGRAM_DIR:Q}	\
+		BSD_INSTALL_SCRIPT_DIR=${INSTALL_SCRIPT_DIR:Q}		\
+		BSD_INSTALL_LIB_DIR=${INSTALL_LIB_DIR:Q}		\
+		BSD_INSTALL_DATA_DIR=${INSTALL_DATA_DIR:Q}		\
+		BSD_INSTALL_MAN_DIR=${INSTALL_MAN_DIR:Q}		\
+		BSD_INSTALL_GAME=${INSTALL_GAME:Q}			\
+		BSD_INSTALL_GAME_DATA=${INSTALL_GAME_DATA:Q}
 MAKE_ENV+=	${INSTALL_MACROS}
 SCRIPTS_ENV+=	${INSTALL_MACROS}
 
@@ -1401,8 +1401,8 @@ check-vulnerable:
 		. ${PKG_SYSCONFDIR}/audit-packages.conf;		\
 	fi;								\
 	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then		\
-		${SETENV} PKGNAME="${PKGNAME}"				\
-			  PKGBASE="${PKGBASE}"				\
+		${SETENV} PKGNAME=${PKGNAME:Q}				\
+			  PKGBASE=${PKGBASE:Q}				\
 			${AWK} '/^$$/ { next }				\
 				/^#.*/ { next }				\
 				$$1 !~ ENVIRON["PKGBASE"] && $$1 !~ /\{/ { next } \
@@ -4005,20 +4005,20 @@ README.html: .PRECIOUS
 	${AWK} -f ../../mk/scripts/genreadme.awk \
 		builddependsfile=/dev/null \
 		dependsfile=/dev/null \
-		AWK=${AWK} \
-		CMP=${CMP} \
-		DISTDIR=${DISTDIR} \
-		GREP=${GREP} \
-		PACKAGES=${PACKAGES} \
-		PKG_INFO="${PKG_INFO}" \
-		PKG_SUFX=${PKG_SUFX} \
-		PKG_URL=${PKG_URL} \
-		PKGSRCDIR=${.CURDIR:C|/[^/]*/[^/]*$||} \
-		SED=${SED} \
-		SETENV=${SETENV} \
-		SORT=${SORT} \
-		TMPDIR=${TMPDIR:U/tmp} \
-		SINGLEPKG=${PKGPATH} \
+		AWK=${AWK:Q} \
+		CMP=${CMP:Q} \
+		DISTDIR=${DISTDIR:Q} \
+		GREP=${GREP:Q} \
+		PACKAGES=${PACKAGES:Q} \
+		PKG_INFO=${PKG_INFO:Q} \
+		PKG_SUFX=${PKG_SUFX:Q} \
+		PKG_URL=${PKG_URL:Q} \
+		PKGSRCDIR=${.CURDIR:C|/[^/]*/[^/]*$||:Q} \
+		SED=${SED:Q} \
+		SETENV=${SETENV:Q} \
+		SORT=${SORT:Q} \
+		TMPDIR=${TMPDIR:U/tmp:Q} \
+		SINGLEPKG=${PKGPATH:Q} \
 		$@.tmp1
 	@${RM} $@.tmp1
 
@@ -4572,7 +4572,7 @@ real-su-build-views:
 			continue ;;					\
 		esac;							\
 		${ECHO} "=> Performing package view overwrite check for ${PKGNAME} in $$viewname view"; \
-		dups=`${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" ${PKG_VIEW} --view=$$v check ${PKGNAME} || ${TRUE}`; \
+		dups=`${SETENV} PLIST_IGNORE_FILES=${_PLIST_IGNORE_FILES:Q} ${PKG_VIEW} --view=$$v check ${PKGNAME} || ${TRUE}`; \
 		case "$$dups" in					\
 		"")	;;						\
 		*)	${ECHO} "***********************************************************"; \
@@ -4584,7 +4584,7 @@ real-su-build-views:
 			;;						\
 		esac;							\
 		${ECHO} "=> Linking package into $$viewname view";	\
-		${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" ${PKG_VIEW} --view=$$v add ${PKGNAME}; \
+		${SETENV} PLIST_IGNORE_FILES=${_PLIST_IGNORE_FILES:Q} ${PKG_VIEW} --view=$$v add ${PKGNAME}; \
 	done
 .  else
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
@@ -4613,7 +4613,7 @@ real-su-remove-views:
 		*)	dbdir=${LOCALBASE}/$$v/.dbdir; viewname=$$v ;;	\
 		esac;							\
 		${ECHO} "=> Removing package from $$viewname view";	\
-		${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" ${PKG_VIEW} --view=$$v delete ${PKGNAME}; \
+		${SETENV} PLIST_IGNORE_FILES=${_PLIST_IGNORE_FILES:Q} ${PKG_VIEW} --view=$$v delete ${PKGNAME}; \
 	done
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
