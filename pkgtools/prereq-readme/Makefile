@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/18 04:48:24 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/22 01:33:31 dmcmahill Exp $
 #
 
-DISTNAME=	prereq-readme-20050518
+DISTNAME=	prereq-readme-20050521
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -23,6 +23,7 @@ PKGSRC_USE_TOOLS+=	cmp
 PKGSRC_USE_TOOLS+=	echo
 PKGSRC_USE_TOOLS+=	expr
 PKGSRC_USE_TOOLS+=	fgrep
+PKGSRC_USE_TOOLS+=	find
 PKGSRC_USE_TOOLS+=	grep
 PKGSRC_USE_TOOLS+=	sed
 PKGSRC_USE_TOOLS+=	setenv
