@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.14 2005/05/18 22:42:07 jlam Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.15 2005/05/22 19:11:12 jlam Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -105,32 +105,6 @@ USE_MAKEINFO?=		no
 
 .if !empty(INFO_FILES) || empty(USE_MAKEINFO:M[nN][oO])
 .  include "../../mk/texinfo.mk"
-.endif
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-###
-### USE_PERL5
-###
-.include "../../lang/perl5/version.mk"
-#
-# Convert USE_PERL5 to be two-valued: either "build" or "run" to denote
-# whether we want a build-time or run-time dependency on perl.
-#
-.if defined(USE_PERL5)
-.  if (${USE_PERL5} == "build")
-_PERL5_DEPMETHOD=	BUILD_DEPENDS
-.  else
-USE_PERL5:=		run
-_PERL5_DEPMETHOD=	DEPENDS
-.  endif
-_PERL5_DEPENDS=		{perl>=${PERL5_REQD},perl-thread>=${PERL5_REQD}}
-PERL5_PKGSRCDIR?=	../../lang/perl58
-.  if !defined(BUILDLINK_DEPENDS.perl)
-${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
-.  endif
-CONFIGURE_ENV+=		PERL=${PERL5:Q}
-.  include "../../lang/perl5/vars.mk"
-.endif
 .endif
 
 ### USE_RMAN
