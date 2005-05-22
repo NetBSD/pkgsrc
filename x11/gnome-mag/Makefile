@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/04/11 21:48:07 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/05/22 20:08:47 jlam Exp $
 #
 
 DISTNAME=		gnome-mag-0.12.0
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME screen magnifier
 
 USE_DIRS+=		gnome2-1.5
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_X11=		yes

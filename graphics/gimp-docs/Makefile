@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/07 12:36:52 adam Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:05 jlam Exp $
 
 DISTNAME=	gimp-help-2-0.7
 PKGNAME=	gimp-docs-2.0.7
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.gimp.org/
 COMMENT=	Documentation package for The Gimp image manipulation software
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--without-gimp
 
 .include "../../mk/bsd.pkg.mk"

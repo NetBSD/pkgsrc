@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2005/04/11 21:48:04 tv Exp $
+# $NetBSD: Makefile,v 1.68 2005/05/22 20:08:46 jlam Exp $
 
 DISTNAME=		control-center-1.4.0.4
 PKGREVISION=		10
@@ -13,7 +13,7 @@ BUILD_USES_MSGFMT=	YES
 
 USE_DIRS+=		xdg-1.1
 USE_X11BASE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	YES
 
 USE_LIBTOOL=		YES

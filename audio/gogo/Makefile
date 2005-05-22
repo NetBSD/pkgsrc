@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/11/28 11:59:34 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/22 20:07:38 jlam Exp $
 #
 
 DISTNAME=		gogo239b
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 RESTRICTED=		'Source based on patent protected Fraunhofer code'
 NO_SRC_ON_FTP=	${RESTRICTED}

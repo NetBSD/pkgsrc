@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/18 16:22:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2005/05/22 20:08:05 jlam Exp $
 #
 
 DISTNAME=		gnome-icon-theme-2.10.1
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PERL5=		build
 USE_PKGLOCALEDIR=	yes
 

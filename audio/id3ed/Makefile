@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/04/11 21:44:53 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/05/22 20:07:38 jlam Exp $
 #
 
 DISTNAME=	id3ed-1.10.4
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 USE_GNU_READLINE=	# uses rl_startup_hook
 

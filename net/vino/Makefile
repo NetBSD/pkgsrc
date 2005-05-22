@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:02 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:26 jlam Exp $
 #
 
 DISTNAME=	vino-2.10.0
@@ -12,7 +12,7 @@ COMMENT=	VNC server for GNOME
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_PERL5=		build

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/04/11 21:45:28 tv Exp $
+# $NetBSD: Makefile,v 1.31 2005/05/22 20:07:53 jlam Exp $
 #
 
 DISTNAME=	maketool-0.7
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	# defined
 
 USE_PKGLOCALEDIR=	# defined
 USE_X11=		# defined
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		# defined
 USE_PKGLOCALEDIR=	# defined
 

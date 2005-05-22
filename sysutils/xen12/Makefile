@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/14 16:06:46 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:33 jlam Exp $
 #
 
 DISTNAME=		xeno-1.2-src-040418
@@ -20,7 +20,7 @@ BUILD_TARGET=		default
 
 USE_PKGINSTALL=		yes
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.prefs.mk"
 

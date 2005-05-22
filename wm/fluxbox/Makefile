@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/04/22 15:55:59 jmcneill Exp $
+# $NetBSD: Makefile,v 1.24 2005/05/22 20:08:43 jlam Exp $
 #
 
 DISTNAME=	fluxbox-0.9.12
@@ -15,7 +15,7 @@ DEPENDS=	bsetroot>=0.1nb1:../../wm/bsetroot
 USE_X11=	YES
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS=	make
+USE_TOOLS=	gmake
 USE_LIBTOOL=	YES
 
 .include "../../mk/bsd.prefs.mk"

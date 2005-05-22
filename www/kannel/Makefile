@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/04/11 21:47:54 tv Exp $
+# $NetBSD: Makefile,v 1.27 2005/05/22 20:08:45 jlam Exp $
 #
 
 DISTNAME=	gateway-${KANNEL_VER}
@@ -14,7 +14,7 @@ COMMENT=	Open source WAP and SMS gateway
 KANNEL_VER=	1.4.0
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PERL5=		YES
 PTHREAD_OPTS+=		require
 

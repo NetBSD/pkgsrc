@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:20 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/05/22 20:08:31 jlam Exp $
 #
 
 DISTNAME=	ssldump-0.9b3
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.rtfm.com/ssldump/
 COMMENT=	SSLv3/TLS network protocol analyzer
 
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=--with-pcap-inc=${BUILDLINK_PREFIX.libpcap}/include \
 		--with-pcap-lib=${BUILDLINK_PREFIX.libpcap}/lib \

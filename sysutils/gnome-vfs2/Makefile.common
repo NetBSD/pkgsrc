@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2005/05/18 16:08:17 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.17 2005/05/22 20:08:32 jlam Exp $
 #
 
 DISTNAME=		gnome-vfs-2.10.1
@@ -19,7 +19,7 @@ PATCHDIR=		${.CURDIR}/../../sysutils/gnome-vfs2/patches
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 

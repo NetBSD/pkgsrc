@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/22 12:50:25 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:08 jlam Exp $
 #
 
 DISTNAME=	gmfsk-0.6
@@ -9,7 +9,7 @@ MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://gmfsk.connect.fi/
 COMMENT=	Multimode HF terminal program
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 GCONF2_SCHEMAS+=gmfsk.schemas
 
