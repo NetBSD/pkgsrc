@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2005/05/22 00:01:36 minskim Exp $
+# $NetBSD: builtin.mk,v 1.8 2005/05/22 01:22:47 minskim Exp $
 
 .if !defined(_LIBICONV_FOUND)
 _LIBICONV_FOUND!=							\
@@ -104,8 +104,7 @@ USE_BUILTIN.iconv!=	\
 .    endif
 .  endif
 
-.  if defined(USE_GNU_ICONV) && \
-	(${OPSYS} != "Linux" || !empty(USE_BUILTIN.iconv:M[nN][oO]))
+.  if defined(USE_GNU_ICONV) && ${OPSYS} != "Linux"
 .    if !empty(IS_BUILTIN.iconv:M[nN][oO]) || \
         (${PREFER.iconv} == "pkgsrc")
 USE_BUILTIN.iconv=	no
