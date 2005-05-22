@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/05/10 21:56:13 christos Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/22 05:28:25 minskim Exp $
 #
 
 DISTNAME=	vis-0.0
@@ -7,6 +7,9 @@ MASTER_SITES=	ftp://ftp.gw.com/pub/people/christos/
 
 MAINTAINER=	christos@netbsd.org
 COMMENT=	Convert strings from/to a visual format
+
+MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}	\
+		MANOWN=${MANOWN} MANGRP=${MANGRP}
 
 .include "../../mk/bsd.prefs.mk"
 
