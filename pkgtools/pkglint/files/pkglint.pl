@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.165 2005/05/22 22:37:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.166 2005/05/22 22:50:41 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -313,6 +313,7 @@ my (%checks) = (
 my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
 my $opt_warn_exec	= true;
+my $opt_warn_order	= true;
 my $opt_warn_paren	= true;
 my $opt_warn_sort	= true;
 my $opt_warn_types	= true;
@@ -321,8 +322,9 @@ my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
 	"exec"		=> [\$opt_warn_exec, "warn if source files are executable"],
+	"order"		=> [\$opt_warn_order, "warn if Makefile entries are unordered"],
 	"paren"		=> [\$opt_warn_paren, "warn about use of \$(VAR) instead of \${VAR} in Makefiles"],
-	"sort"		=> [\$opt_warn_sort, "warn about any unsorted things"],
+	"sort"		=> [\$opt_warn_sort, "warn about any unsorted entries in category Makefiles and PLISTs"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
 	"workdir"	=> [\$opt_warn_workdir, "warn that work* should not be committed into CVS"],
 );
@@ -351,6 +353,7 @@ my $seen_NO_PKG_REGISTER;
 my $seen_NO_CHECKSUM;
 my $seen_USE_PKGLOCALEDIR;
 my %seen_Makefile_include;
+my $seen_Makefile_common;
 my %predefined_sites;
 my $pkgname;
 my %make_vars_typemap;
@@ -387,6 +390,7 @@ sub init_global_vars() {
 	$seen_NO_CHECKSUM	= false;
 	$seen_USE_PKGLOCALEDIR	= false;
 	%seen_Makefile_include	= ();
+	$seen_Makefile_common	= false;
 	%predefined_sites	= ();
 	$pkgname		= "";
 	%make_vars_typemap	= ();
@@ -1091,6 +1095,9 @@ sub readmakefile($$) {
 				next;
 			}
 			$seen_Makefile_include{$includefile} = true;
+			if ($includefile =~ qr"Makefile\.common$") {
+				$seen_Makefile_common = true;
+			}
 			if ($includefile =~ /\/mk\/texinfo\.mk/) {
 				$line->log_error("do not include $includefile");
 			}
@@ -1909,6 +1916,11 @@ sub checkextra($$) {
 sub checkorder($$@) {
 	my ($section, $str, @order) = @_;
 
+	if ($seen_Makefile_common || !$opt_warn_order) {
+		log_info(NO_FILE, NO_LINE_NUMBER, "skipping the Makefile order checks");
+		return true;
+	}
+
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking the order of $section section.");
 
 	my @items = ();
@@ -1948,6 +1960,11 @@ sub checkorder($$@) {
 
 sub checkearlier($@) {
 	my ($str, @varnames) = @_;
+
+	if ($seen_Makefile_common || !$opt_warn_order) {
+		log_info(NO_FILE, NO_LINE_NUMBER, "skipping the Makefile earlier checks");
+		return true;
+	}
 
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking items that have to appear earlier.");
 	foreach my $i (@varnames) {
