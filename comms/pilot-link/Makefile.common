@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/04/24 22:46:09 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/05/22 21:53:49 rillig Exp $
 
 DISTNAME=		pilot-link-${PILOT_LINK_VERS}
 CATEGORIES=		comms
@@ -10,8 +10,8 @@ PILOT_LINK_VERS=	0.11.7
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.pilot-link.org/
 
-USE_LIBTOOL=		# defined
-GNU_CONFIGURE=		# defined
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
