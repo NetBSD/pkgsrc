@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/11 21:47:35 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/05/22 05:35:33 jlam Exp $
 #
 
 DISTNAME=		intltool-0.33
@@ -18,8 +18,6 @@ CONFLICTS=		xml-i18n-tools-[0-9]*
 
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
-
-CONFIGURE_ENV+=		PERL=${PERL5}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
