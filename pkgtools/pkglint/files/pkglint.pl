@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.160 2005/05/21 12:29:02 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.161 2005/05/22 14:54:18 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1651,13 +1651,6 @@ sub checkfile_Makefile($) {
 					: " and \"EXTRACT_SUFX=$1\"").
 				", instead of DISTFILES?");
 		}
-	}
-
-	# additional checks for committer.
-	$i = ($pkgname eq '') ? $distname : $pkgname;
-	if (-f "$opt_packagedir/$i.tgz") {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "be sure to remove $opt_packagedir/$i.tgz ".
-			"before committing the package.");
 	}
 
 	push(@varnames, qw(
