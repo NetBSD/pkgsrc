@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/22 20:07:53 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/05/22 20:51:45 jlam Exp $
 
 DISTNAME=	libsigc++-1.2.7
 CATEGORIES=	devel
@@ -14,8 +14,6 @@ USE_TOOLS+=		gm4 gmake
 USE_LANGUAGES=		c c++
 
 PKGCONFIG_OVERRIDE=	sigc++-1.2.pc.in
-
-CONFIGURE_ENV+=		ac_cv_prog_M4=${TOOLS_M4:Q}
 
 .include "../../mk/pthread.buildlink3.mk"
 
