@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2005/05/10 21:56:13 christos Exp $
-bin/vis
+@comment $NetBSD: PLIST,v 1.2 2005/05/22 05:31:10 minskim Exp $
 bin/unvis
-man/man1/vis.1
-man/man1/unvis.1
-man/cat1/vis.0
+bin/vis
 man/cat1/unvis.0
+man/cat1/vis.0
+man/man1/unvis.1
+man/man1/vis.1
