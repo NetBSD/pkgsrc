@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.162 2005/05/22 18:41:44 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.163 2005/05/22 21:08:33 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -212,6 +212,10 @@ package PkgLint::FileUtil::Line;
 		my ($self, $text) = @_;
 		PkgLint::Logging::log_info($self->file, $self->lineno, $text);
 	}
+	sub to_string($) {
+		my ($self) = @_;
+		return sprintf("%s:%d: %s", $self->file, $self->lineno, $self->text);
+	}
 # end of PkgLint::FileUtil::Line
 
 package PkgLint::FileUtil;
@@ -362,7 +366,7 @@ sub checkfile_PLIST($);
 sub checkfile_other($);
 
 sub checkperms($);
-sub readmakefile($);
+sub readmakefile($$);
 sub checkextra($$);
 sub checkorder($$@);
 sub checkearlier($@);
@@ -1058,17 +1062,18 @@ sub checkfile_patches_patch($) {
 	return true;
 }
 
-sub readmakefile($) {
-	my ($file) = @_;
+sub readmakefile($$) {
+	my ($file, $all_lines) = @_;
 	my $contents = "";
 	my ($includefile, $dirname, $savedln, $level, $lines);
+
+	log_info($file, NO_LINE_NUMBER, "called readmakefile");
 
 	$lines = load_file($file);
 	if (!defined ($lines)) {
 		return false;
 	}
 
-	log_info($file, NO_LINE_NUMBER, "called readmakefile");
 	foreach my $line (@$lines) {
 		checkline_trailing_whitespace($line);
 		if ($line->text =~ /^\040{8}/) {
@@ -1092,6 +1097,7 @@ sub readmakefile($) {
 			if ($includefile =~ /\/mk\/(?:bsd|java)/) {
 				# skip these files
 				$contents .= $line->text . "\n";
+				push(@{$all_lines}, $line);
 			} else {
 				$dirname = dirname($file);
 				# Only look in the directory relative to the
@@ -1104,11 +1110,13 @@ sub readmakefile($) {
 					$line->log_error("can't read $includefile");
 				} else {
 					$line->log_info("including $dirname/$includefile");
-					$contents .= readmakefile("$dirname/$includefile");
+					push(@{$all_lines}, $line);
+					$contents .= readmakefile("$dirname/$includefile", $all_lines);
 				}
 			}
 		} else {
 			$contents .= $line->text . "\n";
+			push(@{$all_lines}, $line);
 		}
 	}
 	checklines_trailing_empty_lines($lines);
@@ -1196,37 +1204,30 @@ sub checkfile_Makefile_deprecated($) {
 sub checkfile_Makefile($) {
 	my ($file) = @_;
 	my ($fname) = ("$opt_packagedir/$file");
-	my ($lines) = load_file($fname);
 	my ($tmp, $rawwhole, $whole, $idx, @sections);
 	my (@varnames) = ();
 	my ($distfiles, $svrpkgname, $distname, $extractsufx) = ('', '', '', '', '');
 	my ($bogusdistfiles) = (0);
 	my ($realwrksrc, $wrksrc) = ('', '');
-	my ($includefile);
-	my ($category);
+	my ($category, $lines);
 
-	if (!defined($lines)) {
-		log_error($fname, NO_LINE_NUMBER, "read error");
-		return false;
-	}
-
-	if ($opt_packagedir eq ".") {
-		$category = basename(dirname(cwd()));
-	} else {
-		$category = basename(dirname($opt_packagedir));
-	}
+	$category = basename(dirname(Cwd::abs_path($opt_packagedir)));
 
 	checkperms($fname);
 
 	$tmp = 0;
-	$rawwhole = readmakefile($fname);
+	$rawwhole = readmakefile($fname, $lines = []);
 	if (!$rawwhole) {
 		log_error("$opt_packagedir/$file", NO_LINE_NUMBER, "cannot read");
 		return false;
 	}
-	else {
-		print("OK: whole Makefile (with all included files):\n".
-		      "$rawwhole\n") if ($opt_dumpmakefile);
+	if ($opt_dumpmakefile) {
+		print("OK: whole Makefile (with all included files) follows:\n");
+		print($rawwhole);
+		print("OK: whole Makefile (new parser) follows:\n");
+		foreach my $line (@{$lines}) {
+			printf("%s\n", $line->to_string());
+		}
 	}
 
 	#
