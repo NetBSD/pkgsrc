@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2005/05/22 20:08:05 jlam Exp $
+# $NetBSD: Makefile.common,v 1.42 2005/05/22 20:51:45 jlam Exp $
 
 DISTNAME=		gdk-pixbuf-${VER}.0
 CATEGORIES=		graphics devel
@@ -19,7 +19,6 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		path_rgb_txt="${X11BASE}/lib/X11/rgb.txt"
 
-M4=			${LOCALBASE}/bin/gm4
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
 DISTINFO_FILE=		${.CURDIR}/../gdk-pixbuf/distinfo
