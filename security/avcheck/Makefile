@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:10 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:29 jlam Exp $
 
 DISTNAME=	avcheck-0.9
 CATEGORIES=	security mail
@@ -8,7 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.corpit.ru/avcheck/
 COMMENT=	Mail content filter for SMTP servers
 
-USE_GNU_TOOLS+=	sed
+USE_TOOLS+=	gsed
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/avcheck ${PREFIX}/bin

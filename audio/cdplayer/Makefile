@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/16 10:12:28 rh Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/22 20:07:37 jlam Exp $
 #
 
 DISTNAME=	cdplayer-0.4.2
@@ -11,7 +11,7 @@ COMMENT=	GNUstep CD player with CDDB support
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 USE_X11=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 MAKEFILE=	GNUmakefile
 MAKE_ENV+=	ADDITIONAL_CPPFLAGS="-Wno-import"
 

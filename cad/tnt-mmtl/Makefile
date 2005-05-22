@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:02 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:41 jlam Exp $
 #
 
 DISTNAME=	tnt-1.2.2
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++ fortran
 
 post-patch:

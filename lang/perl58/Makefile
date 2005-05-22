@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2005/05/11 16:15:50 jlam Exp $
+# $NetBSD: Makefile,v 1.82 2005/05/22 20:08:10 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -89,7 +89,7 @@ CONFIGURE_ARGS+=	-Dsiteman1dir="${VIEWBASE}/man/man1"
 # The perl build attempts to work around case-insensitivity problems on
 # HFS filesystems by using GNUmakefiles, so we need to use GNU make.
 #
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 .endif
 
 # Nail down the needed libraries for each platform here to avoid hidden

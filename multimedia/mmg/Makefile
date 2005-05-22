@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:42 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:22 jlam Exp $
 #
 
 .include "../../multimedia/mkvtoolnix/Makefile.dist"
@@ -11,7 +11,7 @@ COMMENT=        MKVtoolnix mkvmerge GUI
 DEPENDS+=	${DISTNAME}:../../multimedia/mkvtoolnix
 
 GNU_CONFIGURE=	yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c++
 USE_X11=	yes
 

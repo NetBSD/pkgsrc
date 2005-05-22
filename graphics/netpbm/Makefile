@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2005/04/11 21:46:06 tv Exp $
+# $NetBSD: Makefile,v 1.110 2005/05/22 20:08:06 jlam Exp $
 
 DISTNAME=	netpbm-10.26.7
 CATEGORIES=	graphics
@@ -11,7 +11,7 @@ COMMENT=	Toolkit for conversion of images between different formats
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_GNU_TOOLS+=		lex make
+USE_TOOLS+=		gmake lex
 USE_PERL5=		yes
 
 INSTALL_TARGET=	install-dev install-run

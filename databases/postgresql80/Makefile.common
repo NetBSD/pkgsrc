@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/05/15 12:31:57 recht Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/05/22 20:07:46 jlam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -43,7 +43,7 @@ BUILDLINK_DEPENDS.postgresql80-client?=	postgresql80-client>=${BASE_VERS}
 
 GNU_CONFIGURE=		yes
 BUILD_USES_MSGFMT=	yes
-USE_GNU_TOOLS+=		lex make yacc
+USE_TOOLS+=		bison gmake lex
 PKG_SYSCONFSUBDIR=	postgresql
 
 # in 7.4.x/8.0.x, this is done by autoconf stuff which has leading whitespace

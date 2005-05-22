@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/04 09:38:43 adam Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:02 jlam Exp $
 
 DISTNAME=	powwow-1.2.5
 CATEGORIES=	games
@@ -8,7 +8,7 @@ MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://linuz.sns.it/~max/powwow.html
 COMMENT=	Client to play MUDs
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 POWWOW_DIR=	${PREFIX}/share/powwow
 
 do-build:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2005/04/11 21:45:25 tv Exp $
+# $NetBSD: Makefile,v 1.52 2005/05/22 20:07:52 jlam Exp $
 
 DISTNAME=	kdbg-1.2.10
 PKGREVISION=	2
@@ -12,7 +12,7 @@ COMMENT=	Graphical User Interface around gdb using KDE
 
 BUILD_USES_MSGFMT=	yes
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:44:59 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/05/22 20:07:40 jlam Exp $
 #
 
 DISTNAME=	neato
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.rpi.edu/~mullr/xmms/
 COMMENT=	Circle effect XMMS plugin
 
 GNU_CONFIGURE=	yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 USE_X11=	yes
 

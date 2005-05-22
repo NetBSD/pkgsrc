@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:17 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:30 jlam Exp $
 #
 
 DISTNAME=		pinentry-0.7.1
@@ -31,7 +31,7 @@ PLIST_SUBST+=		USE_GTK='@comment '
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt)
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 PLIST_SUBST+=		USE_QT=
 .  include "../../x11/qt3-libs/buildlink3.mk"
 .else

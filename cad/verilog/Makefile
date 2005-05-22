@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/04/11 21:45:02 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/05/22 20:07:41 jlam Exp $
 #
 
 DISTNAME=	verilog-0.8.1
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 CONFLICTS+=	verilog-current-[0-9]*
 
 GNU_CONFIGURE=	yes
-USE_GNU_TOOLS+=	lex make
+USE_TOOLS+=	gmake lex
 CONFIGURE_ARGS+=	--without-ipal
 YACC=			${LOCALBASE}/bin/bison
 TEST_DIRS=	${WRKSRC}

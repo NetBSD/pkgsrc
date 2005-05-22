@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/04/11 21:45:47 tv Exp $
+# $NetBSD: Makefile,v 1.35 2005/05/22 20:07:59 jlam Exp $
 
 DISTNAME=	libXft-2.1.6
 PKGNAME=	Xft2-2.1.6
@@ -15,9 +15,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_GNU_TOOLS+=		make
 USE_X11=		YES
-USE_GNU_TOOLS+=		awk
+USE_TOOLS+=		gawk gmake
 
 PKGCONFIG_OVERRIDE=	xft.pc.in
 MAKE_ENV+=		EGREP="${EGREP}"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/04/11 21:46:34 tv Exp $
+# $NetBSD: Makefile,v 1.28 2005/05/22 20:08:14 jlam Exp $
 
 DISTNAME=       dialog-0.6z
 PKGREVISION=	3
@@ -8,7 +8,7 @@ MASTER_SITES=   ${MASTER_SITE_SUNSITE:=utils/shell/}
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Display dialog boxes from shell scripts
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]* NetBSD-1.6[A-P]-*
 

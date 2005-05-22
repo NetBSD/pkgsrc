@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/05/21 20:22:21 kristerw Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/22 20:08:09 jlam Exp $
 
 DISTNAME=	ghc-6.4
 CATEGORIES=	lang
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--with-ghc=${WRKDIR}/bootstrap/bin/ghc
 CONFIGURE_ENV+=		PerlCmd=${PERL5}
 USE_GNU_READLINE=	yes	# uses the UNDO_ constants
 USE_PERL5=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 pre-configure:
 	${MV} ${WRKDIR}/ghc-6.2.1/mk/bootstrap.mk \

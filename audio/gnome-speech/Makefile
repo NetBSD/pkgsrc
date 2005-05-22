@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:44:52 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/22 20:07:38 jlam Exp $
 #
 
 DISTNAME=	gnome-speech-0.3.6
@@ -14,7 +14,7 @@ DIST_SUBDIR=	gnome-speech-0.3.6v2
 
 BUILD_USES_MSGFMT=	yes
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_X11=		yes

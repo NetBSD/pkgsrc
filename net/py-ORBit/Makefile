@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/11 21:46:58 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/05/22 20:08:25 jlam Exp $
 #
 
 DISTNAME=	pyorbit-2.0.1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Python bindings for ORBit2
 
 PY_PATCHPLIST=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
 PKGCONFIG_OVERRIDE+=	pyorbit-2.pc.in
 GNU_CONFIGURE=	YES

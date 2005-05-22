@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:47 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:43 jlam Exp $
 #
 
 DISTNAME=	ion-3ds-20040906
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGINSTALL=	YES
 USE_X11=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 USE_PKGLOCALEDIR=	YES
 

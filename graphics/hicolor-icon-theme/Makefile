@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:04 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:06 jlam Exp $
 #
 
 DISTNAME=	hicolor-icon-theme-0.5
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=	YES
 NO_BUILD=	YES
 USE_DIRS+=	xdg-1.1
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	# empty
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/19 10:45:19 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/05/22 20:07:40 jlam Exp $
 
 DISTNAME=	nut-10.18
 CATEGORIES=	biology
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.lafn.org/~av832/
 COMMENT=	Record what you eat and analyze your meals
 
 BUILD_TARGET=	nut
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nut ${PREFIX}/bin

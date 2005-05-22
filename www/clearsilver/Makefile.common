@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/04/11 21:47:52 tv Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/05/22 20:08:44 jlam Exp $
 
 DISTNAME=		clearsilver-0.9.14
 CLEARSILVER_BASE=       ${DISTNAME:S/-/-base-/}
@@ -17,7 +17,7 @@ FILESDIR=       	${.CURDIR}/../../www/clearsilver/files
 PATCHDIR=		${.CURDIR}/../../www/clearsilver/patches
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--disable-apache
 CONFIGURE_ARGS+=	--disable-csharp

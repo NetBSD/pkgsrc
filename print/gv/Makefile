@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2005/04/18 13:20:57 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2005/05/22 20:08:28 jlam Exp $
 
 DISTNAME=	gv-3.6.1
 CATEGORIES=	print
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.gnu.org/software/gv/
 COMMENT=	PostScript and PDF previewer
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11=		yes
 
 USE_MAKEINFO=		yes

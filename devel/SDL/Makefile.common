@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2005/04/11 21:45:17 tv Exp $
+# $NetBSD: Makefile.common,v 1.21 2005/05/22 20:07:47 jlam Exp $
 
 DISTNAME=	SDL-1.2.8
 CATEGORIES=	devel games
@@ -13,7 +13,7 @@ PATCHDIR=		${.CURDIR}/../../devel/SDL/patches
 
 USE_X11=		YES
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 PTHREAD_OPTS+=		require
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/05/15 22:02:26 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/22 20:07:58 jlam Exp $
 
 DISTNAME=		spim
 PKGNAME=		spim-6.5
@@ -16,7 +16,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 USE_IMAKE=		yes
-USE_GNU_TOOLS+=		lex
+USE_TOOLS+=		lex
 XMKMF=			${X11BASE}/bin/xmkmf # don't specify -a option
 PKGSRC_USE_TOOLS+=	gzip
 

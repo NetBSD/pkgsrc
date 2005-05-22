@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:46:02 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/22 20:08:04 jlam Exp $
 
 DISTNAME=	dvdview-1.2.2
 PKGREVISION=	2
@@ -10,7 +10,7 @@ HOMEPAGE=	http://rachmaninoff.informatik.uni-mannheim.de/dvdview/
 COMMENT=	Software only MPEG-1/2 video decoder
 
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_X11=	YES
 
 .include "../../mk/bsd.prefs.mk"

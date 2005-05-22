@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/17 07:22:37 adam Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/22 20:07:37 jlam Exp $
 
 DISTNAME=	p7zip_4.18_src
 PKGNAME=	p7zip-4.18
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=		c c++
 MAKEFILE=		makefile
 NO_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 PTHREAD_OPTS+=		require
 
 # compiles, but does not recognize any archives as supported

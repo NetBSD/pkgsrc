@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/04/11 21:44:54 tv Exp $
+# $NetBSD: Makefile,v 1.40 2005/05/22 20:07:38 jlam Exp $
 
 DISTNAME=	mikmod-3.2.1
 CATEGORIES=	audio
@@ -10,7 +10,7 @@ COMMENT=	MOD player for UNI IT XM S3M MOD MTM STM DSM MED FAR ULT 669 files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 .include "../../audio/libmikmod/buildlink3.mk"
