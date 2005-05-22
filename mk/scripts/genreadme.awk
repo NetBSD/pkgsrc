@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.18 2005/05/20 21:48:45 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.19 2005/05/22 01:37:31 dmcmahill Exp $
 #
 # Copyright (c) 2002, 2003, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -201,8 +201,8 @@ END {
 	if ( builddependsfile == "" ) builddependsfile = "/dev/stdout";
 
 	printf("Making sure binary package cache file is up to date...\n");
-	cmd = sprintf("%s AWK=%s CMP=%s GREP=%s PKG_INFO=\"%s\" PKG_SUFX=%s SED=%s SORT=%s %s/mk/scripts/binpkg-cache --packages %s",
-		SETENV, AWK, CMP, GREP, PKG_INFO, PKG_SUFX, SED, SORT, PKGSRCDIR, PACKAGES);
+	cmd = sprintf("%s AWK=%s CMP=%s FIND=%s GREP=%s PKG_INFO=\"%s\" PKG_SUFX=%s SED=%s SORT=%s %s/mk/scripts/binpkg-cache --packages %s",
+		SETENV, AWK, CMP, FIND, GREP, PKG_INFO, PKG_SUFX, SED, SORT, PKGSRCDIR, PACKAGES);
 	if (debug) printf("\nExecute:  %s\n",cmd);
 	rc = system(cmd);
 
