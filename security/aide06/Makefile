@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/15 19:05:54 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/22 19:11:12 jlam Exp $
 #
 
 DISTNAME=       aide-0.6
@@ -17,8 +17,3 @@ USE_GNU_TOOLS+=	yacc lex
 USE_TOOLS+=	bison
 
 .include "../../mk/bsd.pkg.mk"
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-#don't set YACC so configure can correctly find bison
-YACC=
-.endif

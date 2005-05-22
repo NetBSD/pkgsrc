@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.16 2005/05/03 20:41:53 jlam Exp $
+# $NetBSD: AIX.mk,v 1.17 2005/05/22 19:11:15 jlam Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -15,106 +15,6 @@ STRIP?=     ${LOCALBASE}/bin/strip
 .endif
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-AWK?=		/usr/bin/awk
-BASENAME?=	/usr/bin/basename
-CAT?=		/bin/cat
-CHMOD?=		/bin/chmod
-CHOWN?=		/usr/bin/chown
-CHGRP?=		/usr/bin/chgrp
-CMP?=		/usr/bin/cmp
-CP?=		/bin/cp
-CUT?=		/usr/bin/cut
-DATE?=		/bin/date
-DIRNAME?=	/usr/bin/dirname
-ECHO?=		echo				# Shell builtin
-.if exists(${LOCALBASE}/bin/gegrep)
-EGREP?=		${LOCALBASE}/bin/gegrep
-.else
-EGREP?=		/usr/bin/grep -E
-.endif
-EXPR?=		/bin/expr
-FALSE?=		false				# Shell builtin
-FETCH_CMD?= ${LOCALBASE}/bin/ftp
-.if exists(${LOCALBASE}/bin/gfgrep)
-FGREP?=		${LOCALBASE}/bin/gfgrep
-.else
-FGREP?=		/usr/bin/grep -F
-.endif
-FILE_CMD?=	/usr/bin/file
-FIND?=		/usr/bin/find
-GMAKE?=		${LOCALBASE}/bin/gmake
-.if exists(${LOCALBASE}/bin/ggrep)
-GREP?=		${LOCALBASE}/bin/ggrep
-.else
-GREP?=		/usr/bin/grep
-.endif
-.if exists(/bin/tar)
-GTAR?=		/bin/tar
-.else
-.if exists(${LOCALBASE}/bin/tar)
-GTAR?=		${LOCALBASE}/bin/tar
-.else
-GTAR?=		/usr/bin/tar
-.endif
-.endif
-GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
-GZCAT?=		${LOCALBASE}/bin/zcat
-GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
-HEAD?=		/usr/bin/head
-HOSTNAME_CMD?=	/bin/hostname
-ID?=		/usr/bin/id
-#.if ${INSTALL} == "install"
-INSTALL=	${LOCALBASE}/bin/install-sh
-#.endif
-LDCONFIG?=	/sbin/ldconfig
-LN?=		/bin/ln
-LS?=		/bin/ls
-M4?=		/usr/bin/m4
-MAIL_CMD?=	/usr/bin/mailx
-MKDIR?=		/bin/mkdir -p
-MTREE?=		${LOCALBASE}/sbin/mtree
-MV?=		/bin/mv
-NICE?=		/usr/bin/nice
-PATCH?=		${LOCALBASE}/bin/gpatch
-.if exists(${LOCALBASE}/bin/pax)
-PAX?=		${LOCALBASE}/bin/pax
-.else
-PAX?=		/bin/pax
-.endif
-.if exists(${LOCALBASE}/bin/perl)
-PERL5?=		${LOCALBASE}/bin/perl
-.else
-PERL5?=		/usr/bin/perl
-.endif
-PWD_CMD?=	/bin/pwd	# needs to print physical path
-RM?=		/bin/rm
-RMDIR?=		/bin/rmdir
-.if exists(${LOCALBASE}/bin/nbsed)
-SED?=		${LOCALBASE}/bin/nbsed
-.else
-SED?=		/usr/bin/sed
-.endif
-SETENV?=	/usr/bin/env
-SH?=		/bin/sh
-SHLOCK=		/usr/bin/shlock
-SORT?=		/usr/bin/sort
-TAIL?=		/usr/bin/tail
-.if exists(${LOCALBASE}/bin/tar)
-TAR?=		${LOCALBASE}/bin/tar
-.else
-TAR?=		/usr/bin/tar
-.endif
-TEE?=		/usr/bin/tee
-TEST?=		test				# Shell builtin
-TOUCH?=		/usr/bin/touch
-TR?=		/usr/bin/tr
-TRUE?=		true				# Shell builtin
-TSORT?=		/usr/bin/tsort
-WC?=		/usr/bin/wc
-XARGS?=		/usr/bin/xargs
-.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022

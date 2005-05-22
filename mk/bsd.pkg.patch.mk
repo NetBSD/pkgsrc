@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.10 2005/05/21 21:40:45 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.11 2005/05/22 19:11:12 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -63,11 +63,7 @@
 .if (defined(PATCHFILES) && !empty(PATCHFILES)) || \
     (defined(PATCHDIR) && exists(${PATCHDIR})) || \
     (defined(LOCALPATCHES) && exists(${LOCALPATCHES}/${PKGPATH}))
-.  if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-USE_GNU_TOOLS+=		patch
-.  else
 PKGSRC_USE_TOOLS+=	patch
-.  endif
 .endif
 
 # These tools are used to output the contents of the distribution patches
@@ -79,14 +75,7 @@ PKGSRC_USE_TOOLS+=	cat
 PKGSRC_USE_TOOLS+=	gzcat
 .  endif
 .  if !empty(PATCHFILES:M*.bz2)
-.    if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 PKGSRC_USE_TOOLS+=	bzcat
-.    elif exists(/usr/bin/bzcat)
-BZCAT=			/usr/bin/bzcat
-.    else
-BZCAT=			${LOCALBASE}/bin/bzcat
-BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
-.    endif
 .  endif
 .endif
 

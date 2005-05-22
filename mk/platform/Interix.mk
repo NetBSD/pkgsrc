@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.33 2005/05/03 18:30:12 jlam Exp $
+# $NetBSD: Interix.mk,v 1.34 2005/05/22 19:11:15 jlam Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -47,76 +47,6 @@ PS?=		/bin/ps
 RSH?=		/usr/bin/rsh
 SU?=		/bin/su
 TYPE?=		type				# Shell builtin
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-
-# Use some pkgsrc versions as "better" replacements, if installed
-.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk)
-AWK?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
-.endif
-.if exists(${LOCALBASE}/bin/gtar)
-GTAR?=		${LOCALBASE}/bin/gtar
-.endif
-
-AWK?=		/usr/contrib/bin/gawk
-BASENAME?=	/bin/basename
-CAT?=		/bin/cat
-CHMOD?=		/bin/chmod
-CHOWN?=		/bin/chown
-CHGRP?=		/bin/chgrp
-CMP?=		/bin/cmp
-CP?=		/bin/cp
-CUT?=		/bin/cut
-DATE?=		/bin/date
-DIRNAME?=	/bin/dirname
-ECHO?=		echo				# Shell builtin
-EGREP?=		/bin/egrep
-EXPR?=		/bin/expr
-FALSE?=		false				# Shell builtin
-FGREP?=		/bin/fgrep
-FILE_CMD?=	/bin/file
-FIND?=		/bin/find
-GMAKE?=		${LOCALBASE}/bin/gmake
-GREP?=		/bin/grep
-GTAR?=		${LOCALBASE}/bin/tar
-GUNZIP_CMD?=	/usr/contrib/bin/gunzip -f
-GZCAT?=		/usr/contrib/bin/gunzip -c
-GZIP_CMD?=	/usr/contrib/bin/gzip -nf ${GZIP}
-HEAD?=		/bin/head
-HOSTNAME_CMD?=	/bin/hostname
-ID?=		/bin/id
-IMAKE?=		${X11BASE}/bin/imake ${IMAKEOPTS}
-LDCONFIG?=	/bin/true
-LN?=		/bin/ln
-LS?=		/bin/ls
-M4?=		/bin/m4
-MAIL_CMD?=	/bin/mail
-MKDIR?=		/bin/mkdir -p
-MTREE?=		${LOCALBASE}/sbin/mtree
-MV?=		/bin/mv
-NICE?=		/bin/nice
-PATCH?=		${LOCALBASE}/bin/gpatch
-PAX?=		${LOCALBASE}/bin/pax
-PERL5?=		${LOCALBASE}/bin/perl
-PWD_CMD?=	/bin/pwd	# needs to print physical path
-RM?=		/bin/rm
-RMDIR?=		/bin/rmdir
-SED?=		${LOCALBASE}/bin/nbsed
-SETENV?=	/bin/env
-SH?=		/bin/sh
-SHLOCK=		${LOCALBASE}/bin/shlock
-SORT?=		/bin/sort
-TAIL?=		/bin/tail
-TAR?=		${LOCALBASE}/bin/tar
-TEE?=		/bin/tee
-TEST?=		/bin/test	# shell builtin has bugs with symlinks
-TOUCH?=		/bin/touch
-TR?=		/bin/tr
-TRUE?=		true				# Shell builtin
-TSORT?=		/bin/tsort
-WC?=		/bin/wc
-XARGS?=		/bin/xargs
-.endif
 
 USERADD?=		${LOCALBASE}/sbin/useradd
 GROUPADD?=		${LOCALBASE}/sbin/groupadd

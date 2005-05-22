@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.8 2005/05/17 22:11:14 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.9 2005/05/22 19:11:12 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -64,57 +64,25 @@ PKGSRC_USE_TOOLS+=	pax
 .endif
 .if !empty(EXTRACT_ONLY:M*.bz2) || !empty(EXTRACT_ONLY:M*.tbz) || \
     !empty(EXTRACT_SUFX:M*.bz2) || !empty(EXTRACT_SUFX:M*.tbz)
-.  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 PKGSRC_USE_TOOLS+=	bzcat
-.  elif exists(/usr/bin/bzcat)
-BZCAT=			/usr/bin/bzcat <
-.  else
-BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
-BZCAT=			${LOCALBASE}/bin/bzcat
-.  endif
 .endif
 .if !empty(EXTRACT_ONLY:M*.zip) || !empty(EXTRACT_SUFX:M*.zip)
-.  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 PKGSRC_USE_TOOLS+=	unzip
-.  else
-BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
-UNZIP=			${LOCALBASE}/bin/unzip
-.  endif
 .endif
 .if !empty(EXTRACT_ONLY:M*.lzh) || !empty(EXTRACT_ONLY:M*.lha) || \
     !empty(EXTRACT_SUFX:M*.lzh) || !empty(EXTRACT_SUFX:M*.lha)
-.  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 PKGSRC_USE_TOOLS+=	lha
-.  else
-BUILD_DEPENDS+=		lha>=114.9:../../archivers/lha
-LHA=			${LOCALBASE}/bin/lha
-.  endif
 .endif
 .if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
     !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz) || \
     !empty(EXTRACT_ONLY:M*.Z) || !empty(EXTRACT_SUFX:M*.Z)
-.  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 PKGSRC_USE_TOOLS+=	gzcat
-.  elif !defined(GZCAT)
-BUILD_DEPENDS+=         gzip-base>=1.2.4b:../../archivers/gzip-base
-GZCAT=                  ${LOCALBASE}/bin/zcat
-.  endif
 .endif
 .if !empty(EXTRACT_ONLY:M*.zoo) || !empty(EXTRACT_SUFX:M*.zoo)
-.  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 PKGSRC_USE_TOOLS+=	unzoo
-.  else
-BUILD_DEPENDS+=		unzoo-[0-9]*:../../archivers/unzoo
-UNZOO=			${LOCALBASE}/bin/unzoo
-.  endif
 .endif
 .if !empty(EXTRACT_ONLY:M*.rar) || !empty(EXTRACT_SUFX:M*.rar)
-.  if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 PKGSRC_USE_TOOLS+=	unrar
-.  else
-BUILD_DEPENDS+=		unrar>=3.3.4:../../archivers/unrar
-UNRAR=			${LOCALBASE}/bin/unrar
-.  endif
 .endif
 
 DECOMPRESS_CMD.tar.gz?=		${GZCAT}
