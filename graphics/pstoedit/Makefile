@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/04/11 21:46:08 tv Exp $
+# $NetBSD: Makefile,v 1.27 2005/05/22 05:35:32 jlam Exp $
 
 DISTNAME=	pstoedit_3_31
 PKGNAME=	pstoedit-3.31
@@ -23,7 +23,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	LIBTOOL="${LIBTOOL}" LIBPLOTTERLA="${X11PREFIX}/lib/libplotter.la"
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS} -Dunix"
 CONFIGURE_ENV+=	LDLIBS="${X11_LDFLAGS}"
-CONFIGURE_ENV+=	AWK=${AWK} GS=${LOCALBASE}/bin/gs
+CONFIGURE_ENV+=	GS=${LOCALBASE}/bin/gs
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=--libdir=${PREFIX}/lib/pstoedit	# plugin dir -- unused for now
 BUILD_TARGET=
