@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/05/22 20:08:11 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/05/22 20:28:47 jlam Exp $
 #
 
 DISTNAME=	evolution-data-server-1.2.2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://ximian.com/products/evolution/
 COMMENT=	Evolution data server
 
 BUILD_USES_MSGFMT=	yes
-BUILD_DEPENDS+=		bison>=1.875:../../devel/bison
 
 BUILDLINK_DEPENDS.libsoup-devel+=	libsoup-devel>=2.2.3
 
@@ -20,7 +19,6 @@ USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		bison gmake
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-YACC=			${LOCALBASE}/bin/bison # XXX
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution-data-server
 PKG_SUPPORTED_OPTIONS=	inet6
