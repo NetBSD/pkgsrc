@@ -1,4 +1,4 @@
-# $NetBSD: catalogs.mk,v 1.11 2005/05/11 02:07:37 jlam Exp $
+# $NetBSD: catalogs.mk,v 1.12 2005/05/22 21:54:59 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # catalog files or DTDs.  It takes care of registering them into the right
@@ -32,14 +32,14 @@ XML_ENTRIES?=
 # Convert SGML_CATALOGS files into arguments for SGML_ENTRIES.
 .if !empty(SGML_CATALOGS)
 .  for c in ${SGML_CATALOGS}
-SGML_ENTRIES+=	CATALOG ${PREFIX:=$c} --
+SGML_ENTRIES+=	CATALOG ${PREFIX:=${c}} --
 .  endfor
 .endif
 
 # Convert XML_CATALOGS files into arguments for XML_ENTRIES.
 .if !empty(XML_CATALOGS)
 .  for c in ${XML_CATALOGS}
-XML_ENTRIES+=	nextCatalog ${PREFIX:=$c} --
+XML_ENTRIES+=	nextCatalog ${PREFIX:=${c}} --
 .  endfor
 .endif
 
