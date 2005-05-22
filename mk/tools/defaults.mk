@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.20 2005/05/22 01:53:55 jlam Exp $
+# $NetBSD: defaults.mk,v 1.21 2005/05/22 20:58:27 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -144,7 +144,6 @@ _TOOLS_VARNAME_GNU.grep=	GREP
 _TOOLS_VARNAME_GNU.gsed=	SED
 _TOOLS_VARNAME_GNU.gtar=	TAR
 _TOOLS_VARNAME_GNU.hostname=	HOSTNAME
-_TOOLS_VARNAME_GNU.install=	INSTALL
 _TOOLS_VARNAME_GNU.lex=		LEX
 _TOOLS_VARNAME_GNU.ln=		LN
 _TOOLS_VARNAME_GNU.m4=		M4
