@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/16 01:15:33 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:29 jlam Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 PKGREVISION=	5
@@ -39,7 +39,7 @@ PKGSRC_USE_TOOLS+=	gtar
 
 BUILD_TARGET=	all
 INSTALL_TARGET=	install strip
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_X11=	yes
 PLIST_SUBST+=	MV="${MV}"
 CFLAGS+=	-Dunix

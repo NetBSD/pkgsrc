@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:56 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:02 jlam Exp $
 #
 
 DISTNAME=	qnetwalk-1.1
@@ -12,7 +12,7 @@ COMMENT=	QNetwalk is a Qt-version of the popular NetWalk game
 # We need qmake to build package's Makefile
 BUILD_DEPENDS+=	qt3-tools>=3.3:../../x11/qt3-tools
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 

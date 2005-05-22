@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:29 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:33 jlam Exp $
 #
 
 DISTNAME=		sformat-3.5
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 TBL?=			tbl
 
 # avoid picking up a bad ${ARCH} during the build

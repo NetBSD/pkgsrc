@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:28 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:13 jlam Exp $
 
 DISTNAME=		blitz-0.6
 PKGNAME=		blitz++-0.6
@@ -11,7 +11,7 @@ COMMENT=		C++ template class library providing array objects
 
 CONFIGURE_ARGS+=	--with-cxx=gcc
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/blitz

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/05/16 03:04:44 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2005/05/22 20:07:49 jlam Exp $
 
 DISTNAME=	gc6.4
 PKGNAME=	${DISTNAME:S/gc/boehm-gc-/}
@@ -11,7 +11,7 @@ COMMENT=	Garbage collection and memory leak detection for C and C++
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

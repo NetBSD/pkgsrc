@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:47 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:43 jlam Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -11,7 +11,7 @@ HOMEPAGE=	http://golem.sourceforge.net/
 COMMENT=	Fast and lightweight yet customizable window manager
 
 USE_PKGINSTALL=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/21 03:16:23 grant Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/22 20:07:39 jlam Exp $
 
 DISTNAME=		faad2-2.0
 PKGNAME=		xmms-faad-2.0
@@ -14,7 +14,7 @@ COMMENT=		XMMS plugin for faad
 #NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/faad2
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	libtool

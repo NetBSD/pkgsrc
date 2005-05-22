@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:47:23 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/05/22 20:08:32 jlam Exp $
 
 DISTNAME=	FSViewer.app-0.2.5
 PKGNAME=	FSViewer-0.2.5
@@ -13,7 +13,7 @@ MAINTAINER=	johnam@mail.kemper.org
 HOMEPAGE=	http://www.bayernline.de/~gscholz/linux/fsviewer/
 COMMENT=	NextStep-like Filemanager for WindowMaker
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes

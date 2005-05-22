@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:36 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/22 20:08:35 jlam Exp $
 
 DISTNAME=	kakasi-2.3.4
 PKGREVISION=	2
@@ -10,7 +10,7 @@ HOMEPAGE=	http://kakasi.namazu.org/
 COMMENT=	Kanji-Kana Simple Inverter, language filter for Japanese
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 
 post-install:

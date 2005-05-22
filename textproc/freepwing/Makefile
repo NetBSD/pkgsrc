@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/06 03:25:13 uebayasi Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:34 jlam Exp $
 
 DISTNAME=	freepwing-1.4.4
 PKGREVISION=	1
@@ -13,7 +13,7 @@ DEPENDS+=	p5-Jcode-[0-9]*:../../converters/p5-Jcode
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-pkgdocdir=${PREFIX}/share/doc/freepwing
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_PERL5=	yes
 
 .include "../../mk/bsd.pkg.mk"

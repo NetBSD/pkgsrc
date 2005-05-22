@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/04/26 19:06:00 drochner Exp $
+# $NetBSD: Makefile,v 1.36 2005/05/22 20:07:51 jlam Exp $
 #
 # Check the API before updating this package!  gal-2.5 and above should
 # get their own gal26 package!
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Library functions that came from Gnumeric and Evolution (gal-2.4 API)
 
 USE_X11=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

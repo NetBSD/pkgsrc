@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:18:25 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/22 20:08:44 jlam Exp $
 
 DISTNAME=	cgicc-3.1.5
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	shell@shellhung.org
 HOMEPAGE=	http://www.gnu.org/software/cgicc/cgicc.html
 COMMENT=	C++ compliant CGI applications libraries
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 

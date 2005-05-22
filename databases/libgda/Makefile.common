@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2005/05/20 22:09:39 jlam Exp $
+# $NetBSD: Makefile.common,v 1.29 2005/05/22 20:07:45 jlam Exp $
 #
 
 DISTNAME=		libgda-1.2.1
@@ -14,7 +14,7 @@ DISTINFO_FILE=		${.CURDIR}/../../databases/libgda/distinfo
 PATCHDIR=		${.CURDIR}/../../databases/libgda/patches
 
 USE_X11=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES

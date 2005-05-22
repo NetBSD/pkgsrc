@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/24 14:58:00 grant Exp $
+# $NetBSD: Makefile,v 1.18 2005/05/22 20:08:27 jlam Exp $
 
 DISTNAME=		auctex-11.13
 PKGREVISION=		1
@@ -9,7 +9,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/auctex/
 COMMENT=		Enhanced LaTeX mode for Emacs
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGINSTALL=		yes
 
 TEX_PREFIX_DEFAULT=	${LOCALBASE}

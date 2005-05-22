@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/29 16:10:22 magick Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:18 jlam Exp $
 
 DISTNAME=	alevt-1.6.0
 PKGREVISION=	2
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
 
 USE_DIRS+=	xdg-1.1
 USE_X11BASE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pixmaps

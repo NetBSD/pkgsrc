@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2005/05/19 21:06:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.81 2005/05/22 20:08:11 jlam Exp $
 
 DISTNAME=		evolution-2.2.2
 CATEGORIES=		mail time gnome
@@ -27,7 +27,7 @@ PKG_FAIL_REASON=	"Kerberos support conflicts with SSL"
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_GNU_TOOLS+=		make yacc
+USE_TOOLS+=		bison gmake
 USE_X11=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES

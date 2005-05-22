@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:47 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/22 20:08:00 jlam Exp $
 #
 
 DISTNAME=	oto-0.4
@@ -11,7 +11,7 @@ HOMEPAGE=	http://sourceforge.net/projects/oto/
 COMMENT=	List and modify OpenType font files
 
 GNU_CONFIGURE=	yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/oto

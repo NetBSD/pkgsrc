@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/04/11 21:45:04 tv Exp $
+# $NetBSD: Makefile,v 1.33 2005/05/22 20:07:42 jlam Exp $
 #
 
 DISTNAME=	gossip-0.8
@@ -14,7 +14,7 @@ BUILD_DEPENDS=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		gnome2-1.5
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=       yes
 GNU_CONFIGURE=		yes

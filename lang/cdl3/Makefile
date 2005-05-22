@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:12 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:08 jlam Exp $
 
 DISTNAME=	cdl3-1.2.5
 CATEGORIES=	lang
@@ -10,7 +10,7 @@ COMMENT=	Programming language for the development of compilers
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 

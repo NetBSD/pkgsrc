@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/04/11 21:45:02 tv Exp $
+# $NetBSD: Makefile,v 1.27 2005/05/22 20:07:41 jlam Exp $
 #
 
 DISTNAME=	ng-spice-rework-15c
@@ -14,7 +14,7 @@ WRKSRC=			${WRKDIR}/ng-spice-rework-15
 USE_X11=		YES
 USE_LIBTOOL=		YES
 USE_MAKEINFO=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_GNU_READLINE=	uses rl_* interface
 
 GNU_CONFIGURE=		YES

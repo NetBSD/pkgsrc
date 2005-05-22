@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2005/04/11 21:47:07 tv Exp $
+# $NetBSD: Makefile.common,v 1.22 2005/05/22 20:08:27 jlam Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 BASEGS_VERS=	7.07
@@ -23,7 +23,7 @@ DEPENDS+=	ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_PKGINSTALL=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ijs
 CONFIGURE_ARGS+=	--with-gimp-print

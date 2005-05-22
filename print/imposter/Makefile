@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:08 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:28 jlam Exp $
 #
 
 DISTNAME=	imposter-0.2
@@ -13,7 +13,7 @@ COMMENT=	Standalone OpenOffice presentations viewer using GTK2
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 

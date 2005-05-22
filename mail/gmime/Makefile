@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:19 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/22 20:08:12 jlam Exp $
 #
 
 DISTNAME=	gmime-2.1.9
@@ -11,7 +11,7 @@ COMMENT=	Library for the creation and parsing of MIME messages
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:02 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:05 jlam Exp $
 #
 
 DISTNAME=		exiv2-0.6.1
@@ -13,6 +13,6 @@ USE_LANGUAGES=		c c++
 GCC_REQD=		3.3
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.pkg.mk"

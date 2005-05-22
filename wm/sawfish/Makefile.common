@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2005/04/11 21:47:49 tv Exp $
+# $NetBSD: Makefile.common,v 1.24 2005/05/22 20:08:44 jlam Exp $
 
 DISTNAME=		sawfish-${SF_VERS}-gtk1
 SF_VERS=		1.2
@@ -13,7 +13,7 @@ DEPENDS+=		rep-gtk>=0.15nb2:../../x11/rep-gtk
 USE_X11=		# defined
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	# defined
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		# defined
 
 DISTINFO_FILE=		${.CURDIR}/../../wm/sawfish/distinfo

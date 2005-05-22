@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/02/27 22:30:43 veego Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/22 20:07:58 jlam Exp $
 #
 
 DISTNAME=		twin-src-3.1.14
@@ -13,7 +13,7 @@ COMMENT=		Cross-platform implementation of the win32 api
 
 WRKSRC=			${WRKDIR}/twin
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11=		yes
 BUILD_TARGET=		depend world
 AUTOCONF_REQD=		2.13

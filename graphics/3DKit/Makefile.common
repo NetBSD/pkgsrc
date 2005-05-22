@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/04/11 21:45:59 tv Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/05/22 20:08:04 jlam Exp $
 #
 
 DISTNAME=	3DKit-0.3.1r2
@@ -14,6 +14,6 @@ DISTINFO_FILE?= ${.CURDIR}/../../graphics/3DKit/distinfo
 DESCR_SRC?=	${.CURDIR}/../../graphics/3DKit/DESCR
 
 NO_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_X11=	YES
 MAKEFILE=	GNUmakefile

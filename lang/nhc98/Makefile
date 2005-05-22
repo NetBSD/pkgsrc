@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/05/12 17:53:29 kristerw Exp $
+# $NetBSD: Makefile,v 1.36 2005/05/22 20:08:10 jlam Exp $
 
 DISTNAME=		nhc98src-1.18.tar.gz
 PKGNAME=		nhc98-1.18
@@ -24,7 +24,7 @@ HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX} \
 			+docs --docdir=${PREFIX}/share/doc/nhc98
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 BUILD_TARGET=		default
 
 HARCH=			`${WRKSRC}/script/harch`

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/24 22:46:11 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:15 jlam Exp $
 
 DISTNAME=	elizatalk-0.4
 CATEGORIES=	misc
@@ -9,6 +9,6 @@ HOMEPAGE=	http://elizatalk.sourceforge.net/
 COMMENT=	Eliza talkback program
 
 WRKSRC=		${WRKDIR}/elizatalk-src
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.pkg.mk"

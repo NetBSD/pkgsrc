@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:45:40 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/22 20:07:55 jlam Exp $
 #
 
 DISTNAME=	biew562
@@ -13,7 +13,7 @@ COMMENT=	Binary viewer/editor
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 MAKEFILE=	makefile
 WRKSRC=		${WRKDIR}/biew-562
 

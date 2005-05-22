@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/15 11:45:16 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/22 20:07:46 jlam Exp $
 #
 
 DISTNAME=	tdb-1.0.6
@@ -14,7 +14,7 @@ COMMENT=	Small database system which uses files to store data
 CONFLICTS+=	samba-[0-9]*
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 
 .include "../../mk/bsd.pkg.mk"

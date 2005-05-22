@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/19 15:59:02 dillo Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:02 jlam Exp $
 #
 
 DISTNAME=	hugov31_unix_source
@@ -14,7 +14,7 @@ COMMENT=	Interactive fiction design system and interpreter
 SITES_hugolib.zip=${MASTER_SITE_IFARCHIVE:=programming/hugo/library/}
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 # uses halfkey (present since 1.6M)
 INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]* NetBSD-1.5* NetBSD-1.6 NetBSD-1.6.*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*

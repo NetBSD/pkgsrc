@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2005/05/16 01:15:34 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2005/05/22 20:08:46 jlam Exp $
 
 DISTNAME=	wwwoffle-2.8e
 CATEGORIES=	www
@@ -10,8 +10,7 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.gedanken.demon.co.uk/wwwoffle/
 COMMENT=	WWW proxy with support for offline browsing
 
-USE_TOOLS+=	gtar
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake gtar
 USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 

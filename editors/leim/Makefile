@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/02/26 16:26:30 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/05/22 20:07:56 jlam Exp $
 
 DISTNAME=	leim-${VERSION}
 CATEGORIES=	editors
@@ -11,7 +11,7 @@ COMMENT=	Libraries of Emacs Input Methods (for emacs21)
 
 WRKSRC=		${WRKDIR}/emacs-${VERSION}/leim
 GNU_CONFIGURE=	yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 VERSION=	21.4
 

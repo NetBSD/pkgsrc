@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:48:02 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/05/22 20:08:46 jlam Exp $
 #
 
 DISTNAME=	tidy_src_040811
@@ -17,7 +17,7 @@ COMMENT=	Fixes and tidies up HTML files
 
 WRKSRC=		${WRKDIR}/tidy
 NO_CONFIGURE=	yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 BUILD_DIRS=	${WRKSRC}/build/gmake
 
 OPSYSVARS+=	MAKEFLAGS

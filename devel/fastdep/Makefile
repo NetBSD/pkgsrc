@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:20 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/22 20:07:50 jlam Exp $
 #
 
 DISTNAME=	fastdep-0.16
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.irule.be/bvh/c++/fastdep/
 COMMENT=	Dependency generator for C/C++ files
 
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 post-extract:
 	${RM} -f ${WRKSRC}/*.orig

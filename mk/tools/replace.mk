@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.91 2005/05/22 01:56:27 jlam Exp $
+# $NetBSD: replace.mk,v 1.92 2005/05/22 20:08:52 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -79,12 +79,9 @@
 #	TOOLS_DEPMETHOD.tbl=	DEPENDS
 #
 
-# Continue to allow USE_GNU_TOOLS, USE_TBL, and USE_PERL5 until packages
-# have been taught to use the new syntax.
+# Continue to allow USE_TBL and USE_PERL5 until packages have been taught
+# to use the new syntax.
 #
-.if defined(USE_GNU_TOOLS) && !empty(USE_GNU_TOOLS)
-USE_TOOLS+=	${USE_GNU_TOOLS:S/^awk$/gawk/:S/^m4$/gm4/:S/^make$/gmake/:S/^sed$/gsed/:S/^yacc$/bison/}
-.endif
 .if defined(USE_TBL) && !empty(USE_TBL:M[yY][eE][sS])
 USE_TOOLS+=	tbl
 .endif

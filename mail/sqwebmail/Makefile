@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/05/22 05:35:33 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2005/05/22 20:08:12 jlam Exp $
 
 DISTNAME=	sqwebmail-5.0.1
 PKGBASE=	${DISTNAME:C/-[^-]*$//}
@@ -13,11 +13,10 @@ HOMEPAGE=	http://www.courier-mta.org/sqwebmail/
 DEPENDS+=	courier-maildir>=0.48.2:../../mail/courier-maildir
 DEPENDS+=	maildrop>=1.8.0:../../mail/maildrop
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		env gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PERL5=		yes
-USE_TOOLS+=		env
 
 .include "../../mail/courier-maildir/Makefile.common"
 .include "../../security/courier-authlib/Makefile.common"

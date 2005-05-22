@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/04/12 15:11:18 tv Exp $
+# $NetBSD: Makefile,v 1.38 2005/05/22 20:07:43 jlam Exp $
 #
 
 DISTNAME=	fidogate-4.4.9
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.fidogate.org/
 COMMENT=	FidoNet (FTN) <-> Internet mail and news gateway
 
 USE_PKGINSTALL=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 MAKE_ENV=		DEBUG="${CFLAGS} -Werror"
 BUILDLINK_SETENV.CC=	CC="cc ${_STRIPFLAG_CC}"
 

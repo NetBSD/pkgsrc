@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/04 16:50:34 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:06 jlam Exp $
 
 DISTNAME=	kipi-plugins-0.1.0-beta2
 PKGNAME=	kipi-plugins-0.1.0beta2
@@ -14,7 +14,7 @@ DEPENDS+=	dcraw-[0-9]*:../../graphics/dcraw
 DEPENDS+=	bash-[0-9]*:../../shells/bash2
 
 USE_DIRS+=		xdg-1.1
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

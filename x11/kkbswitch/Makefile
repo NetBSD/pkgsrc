@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:48:11 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:48 jlam Exp $
 #
 
 DISTNAME=		kkbswitch-1.4.3
@@ -9,7 +9,7 @@ MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://kkbswitch.sourceforge.net/
 COMMENT=		Keyboard layout indicator for KDE 2 or 3
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

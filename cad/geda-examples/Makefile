@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/16 01:32:22 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/22 20:07:41 jlam Exp $
 #
 
 DISTNAME=	geda-examples-${PKGVERSION}
@@ -13,7 +13,7 @@ CONFLICTS+=	gEDA<19991011
 .include "../../cad/geda/Makefile.common"
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 PKGSRC_USE_TOOLS+=	tar
 
 pre-install:

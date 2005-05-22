@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/04/05 10:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2005/05/22 20:08:14 jlam Exp $
 #
 
 DISTNAME=	sdr-3.0
@@ -11,7 +11,7 @@ COMMENT=	MBone Session Directory
 
 WRKSRC=		${WRKDIR}/sdr/${SYSDIR}
 CRYPTO=		yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 BUILD_DEFS+=		USE_INET6
 

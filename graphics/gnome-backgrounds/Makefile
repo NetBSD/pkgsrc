@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/19 21:08:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:05 jlam Exp $
 #
 
 DISTNAME=	gnome-backgrounds-2.10.1
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		# empty
 USE_PKGLOCALEDIR=	YES
 

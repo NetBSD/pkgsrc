@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:43 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/22 20:07:58 jlam Exp $
 #
 
 DISTNAME=	gpsim-0.21.2
@@ -13,7 +13,7 @@ COMMENT=	PIC emulator with X interface
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
 
 USE_GNU_READLINE=	# rl_callback_read_char, rl_copy_text,

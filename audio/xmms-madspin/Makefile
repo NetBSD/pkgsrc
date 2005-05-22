@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:44:59 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/22 20:07:40 jlam Exp $
 #
 
 DISTNAME=	madspin-0.05
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.students.uiuc.edu/~birck/madspin.html
 COMMENT=	Based on the madspin winamp plugin
 
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
 
 post-install:

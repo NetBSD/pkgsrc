@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:58 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/22 20:08:03 jlam Exp $
 #
 
 DISTNAME=		xnibbles-1.0BETA4
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.tjhsst.edu/xnibbles/
 COMMENT=		Winding snakes game for X11
 
 WRKSRC=			${WRKDIR}/xnibbles
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_X11=		YES
 

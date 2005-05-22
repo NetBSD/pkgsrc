@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/02 11:10:38 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:30 jlam Exp $
 #
 
 DISTNAME=		lsh-2.0.1
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.lysator.liu.se/~nisse/lsh/
 COMMENT=		SSH2 client/server
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--disable-openssl --disable-pam
 
 # man/man8/sftp-server.8

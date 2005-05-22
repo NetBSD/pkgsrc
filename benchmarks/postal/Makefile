@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/02 23:02:06 reed Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/22 20:07:40 jlam Exp $
 
 DISTNAME=	postal-0.62
 PKGREVISION=	2
@@ -13,7 +13,7 @@ COMMENT=	Tool for benchmarking SMTP/POP servers
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

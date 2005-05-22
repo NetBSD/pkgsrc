@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:13 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/05/22 20:08:09 jlam Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -17,7 +17,7 @@ BUILD_USES_MSGFMT=	YES
 GCC_VERSION=		3.4.3
 
 USE_PKGINSTALL=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-languages="c,ada"
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/04/11 21:45:05 tv Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/22 20:07:43 jlam Exp $
 
 PSI_VERSION=	0.9.3
 DISTNAME=	psi-${PSI_VERSION}
@@ -20,7 +20,7 @@ COMMENT=	PSI Jabber Client
 
 DEPENDS+=	qca-tls>=1.0:../../security/qca-tls
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 USE_X11=	yes
 HAS_CONFIGURE=	yes

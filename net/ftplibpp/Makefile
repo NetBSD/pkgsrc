@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:46 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:24 jlam Exp $
 #
 
 DISTNAME=		ftplibpp-1.0.1
@@ -9,7 +9,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://home.arcor.de/breitscheid/ftplibpp/ftplibpp.html
 COMMENT=		C++ class providing ftp client functionality
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ftplibpp

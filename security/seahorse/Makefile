@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/05/19 21:14:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2005/05/22 20:08:31 jlam Exp $
 
 DISTNAME=	seahorse-0.7.8
 CATEGORIES=	security
@@ -14,7 +14,7 @@ DEPENDS+=		gnupg>=1.2.1:../../security/gnupg
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes

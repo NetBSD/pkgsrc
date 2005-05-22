@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:34 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:15 jlam Exp $
 #
 
 DISTNAME=		getopt-1.1.3
@@ -11,7 +11,7 @@ COMMENT=		Program to help shell scripts parse command-line parameters
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 INSTALLATION_DIRS=	bin man/man1
 

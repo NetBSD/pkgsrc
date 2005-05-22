@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:47:12 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/05/22 20:08:30 jlam Exp $
 #
 
 DISTNAME=	kssh-0.7
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://kssh.sourceforge.net/
 COMMENT=	KDE Front-end to SSH
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES

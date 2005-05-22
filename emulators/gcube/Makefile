@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:43 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 20:07:57 jlam Exp $
 #
 
 DISTNAME=		gcube-v0.2-src
@@ -14,7 +14,7 @@ COMMENT=		Opensource Nintendo GameCube(TM) emulator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11=		yes
 WRKSRC=			${WRKDIR}
 

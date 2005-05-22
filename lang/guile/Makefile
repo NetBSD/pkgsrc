@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2005/04/11 21:46:13 tv Exp $
+# $NetBSD: Makefile,v 1.65 2005/05/22 20:08:09 jlam Exp $
 
 DISTNAME=		guile-1.6.7
 CATEGORIES=		lang
@@ -11,7 +11,7 @@ COMMENT=		GNU's Ubiquitous Intelligent Language for Extension
 CONFLICTS=		guile14<1.4.1nb1 guile-oops-[0-9]*
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
 PTHREAD_AUTO_VARS=	YES

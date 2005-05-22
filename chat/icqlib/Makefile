@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:13:14 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/22 20:07:42 jlam Exp $
 
 DISTNAME=		icqlib-1.0.0
 PKGREVISION=		1
@@ -9,7 +9,7 @@ MAINTAINER=		magick@NetBSD.org
 HOMEPAGE=		http://kicq.sourceforge.net/icqlib.shtml
 COMMENT=		Implementation of the icq protocol
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

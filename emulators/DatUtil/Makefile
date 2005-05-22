@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/20 15:30:29 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/22 20:07:57 jlam Exp $
 #
 
 DISTNAME=		dutil217
@@ -11,7 +11,7 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.logiqx.com/Tools/DatUtil/DatUtil.shtml
 COMMENT=		Create and convert emulator rom checksum files
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}
 MAKEFILE=		makefile
 BUILD_TARGET=		datutil

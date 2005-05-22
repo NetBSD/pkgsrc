@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2005/04/14 05:45:51 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.4 2005/05/22 20:07:46 jlam Exp $
 
 DISTNAME=	sqlite-3.2.1
 PKGNAME=	${DISTNAME:S/-/3-/}
@@ -14,7 +14,7 @@ DISTINFO_FILE=	${.CURDIR}/../../databases/sqlite3/distinfo
 PATCHDIR=	${.CURDIR}/../../databases/sqlite3/patches
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	sqlite3.pc.in

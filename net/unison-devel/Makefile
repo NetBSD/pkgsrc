@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/24 13:06:03 adrianp Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:26 jlam Exp $
 
 DISTNAME=	unison-2.12.0
 CATEGORIES=	net
@@ -15,7 +15,7 @@ BUILDLINK_DEPENDS.ocaml+=	ocaml>=3.08.2
 
 # docs: unison-manual.pdf/html/ps/dvi
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 MAKE_FLAGS+=	CFLAGS="" UISTYLE=text
 MAKE_ENV+=	HOME=${WRKDIR}
 

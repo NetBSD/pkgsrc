@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/04/19 00:17:40 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2005/05/22 20:07:51 jlam Exp $
 
 DISTNAME=	g-wrap-1.9.6
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ DEPENDS+=	guile-lib>=0.1.2:../../devel/guile-lib
 
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 TEST_TARGET=		check
 

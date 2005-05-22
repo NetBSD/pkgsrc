@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:43 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:22 jlam Exp $
 #
 
 DISTNAME=	smpeg-xmms-0.3.5
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.xmms.org/
 COMMENT=	MPEG video plugin using SDL/smpeg as the backend
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 
 .include "../../multimedia/smpeg/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:50 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/22 20:08:01 jlam Exp $
 #
 
 DISTNAME=	frozen-bubble-1.0.0
@@ -14,7 +14,7 @@ COMMENT=	Pop the frozen bubbles
 DEPENDS+=	p5-SDL>=1.19.2:../../devel/p5-SDL
 
 USE_PERL5=	run
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 MAKE_ENV+=	PERL5="${PERL5}" CP="${CP}"
 

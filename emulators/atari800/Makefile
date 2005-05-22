@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/05/17 15:08:57 adam Exp $
+# $NetBSD: Makefile,v 1.31 2005/05/22 20:07:57 jlam Exp $
 
 DISTNAME=	atari800-1.3.6
 CATEGORIES=	emulators
@@ -16,7 +16,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 .include "options.mk"

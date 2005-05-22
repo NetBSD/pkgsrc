@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:29 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:13 jlam Exp $
 
 DISTNAME=		libffm.0.28
 PKGNAME=		libffm-0.28
@@ -10,7 +10,7 @@ COMMENT=		Fast alpha-optimized replacement for some libm routines
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 ONLY_FOR_PLATFORM=      NetBSD-*-alpha
 

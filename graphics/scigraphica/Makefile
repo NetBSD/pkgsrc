@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/04/11 21:46:09 tv Exp $
+# $NetBSD: Makefile,v 1.30 2005/05/22 20:08:07 jlam Exp $
 #
 
 DISTNAME=	scigraphica-0.8.0
@@ -12,7 +12,7 @@ COMMENT=	Data analysis and technical graphics
 
 USE_DIRS+=		gnome1-1.5
 USE_X11=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_GNU_READLINE=	YES
 
 GNU_CONFIGURE=		YES

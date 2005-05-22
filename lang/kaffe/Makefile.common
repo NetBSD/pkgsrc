@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/04/11 21:46:14 tv Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/05/22 20:08:10 jlam Exp $
 
 DISTNAME=		kaffe-1.1.4
 CATEGORIES=		lang java
@@ -14,7 +14,7 @@ JAVA_NAME=		kaffe
 NO_MTREE=		yes
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 TEST_TARGET=		check
 

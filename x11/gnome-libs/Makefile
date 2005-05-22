@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2005/04/11 21:48:07 tv Exp $
+# $NetBSD: Makefile,v 1.109 2005/05/22 20:08:47 jlam Exp $
 
 DISTNAME=		gnome-libs-1.4.2
 PKGREVISION=		4
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	YES
 
 USE_DIRS+=		gnome1-1.5
 USE_X11=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES

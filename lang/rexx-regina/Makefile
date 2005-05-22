@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/24 13:51:15 grant Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/22 20:08:11 jlam Exp $
 #
 
 DISTNAME=	regina301
@@ -13,7 +13,7 @@ COMMENT=	Implementation of the REXX language
 
 WRKSRC=		${WRKDIR}
 GNU_CONFIGURE=	yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 CONFLICTS=	rexx-imc-[0-9]*
 

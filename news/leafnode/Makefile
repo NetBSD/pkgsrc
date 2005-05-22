@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/13 15:08:04 kim Exp $
+# $NetBSD: Makefile,v 1.25 2005/05/22 20:08:26 jlam Exp $
 
 DISTNAME=		leafnode-1.11.2.rel
 PKGNAME=		${DISTNAME:S/.rel//}
@@ -43,7 +43,7 @@ CONFIGURE_ARGS+=	--with-lockfile=${LEAFNODE_LOCKDIR}/fetchnews.lck
 CONFIGURE_ARGS+=	--sysconfdir=${LEAFNODE_CONFDIR}
 CONFIGURE_ARGS+=	--with-user=${LEAFNODE_USER}
 CONFIGURE_ARGS+=	--with-group=${LEAFNODE_GROUP}
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.prefs.mk"
 

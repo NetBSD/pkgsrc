@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2005/04/26 11:36:55 drochner Exp $
+# $NetBSD: Makefile,v 1.94 2005/05/22 20:08:13 jlam Exp $
 #
 
 DISTNAME=		gnumeric-1.2.13
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	YES
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PERL5=		YES
 USE_LIBTOOL=		YES
 

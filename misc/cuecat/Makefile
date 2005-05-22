@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 14:11:09 grant Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:14 jlam Exp $
 #
 
 DISTNAME=	cuecat-0.2.1
@@ -15,7 +15,7 @@ NO_SOURCE_ON_CDROM=	${NO_SOURCE_ON_FTP}
 NO_BIN_ON_FTP=		${NO_SOURCE_ON_FTP}
 NO_BIN_ON_CDROM=	${NO_SOURCE_ON_FTP}
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/read_cuecat ${PREFIX}/bin

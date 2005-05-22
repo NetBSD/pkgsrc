@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:43 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/22 20:07:58 jlam Exp $
 
 DISTNAME=	hatari-0.60
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://hatari.sourceforge.net/
 COMMENT=	Atari ST emulator
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 

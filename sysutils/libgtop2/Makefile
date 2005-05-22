@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/22 05:35:33 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/05/22 20:08:33 jlam Exp $
 
 DISTNAME=		libgtop-2.10.1
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -17,7 +17,7 @@ USE_MSGFMT_PLURALS=	YES
 
 USE_PERL5=		build
 USE_PKGLOCALEDIR=	YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libgtop-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	support/gnome-support-2.0.pc.in

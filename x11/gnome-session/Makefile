@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/04/11 21:48:07 tv Exp $
+# $NetBSD: Makefile,v 1.50 2005/05/22 20:08:47 jlam Exp $
 #
 
 DISTNAME=		gnome-session-2.10.0
@@ -18,7 +18,7 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11=		yes
 USE_PERL5=		build
 USE_LIBTOOL=		yes

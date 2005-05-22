@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:44:48 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/05/22 20:07:36 jlam Exp $
 
 DISTNAME=	cxunzip-0.98
 PKGREVISION=	2
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 

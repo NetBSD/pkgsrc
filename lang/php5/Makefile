@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:46:15 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/22 20:08:10 jlam Exp $
 #
 
 PKGNAME=		php-${PHP_BASE_VERS}
@@ -9,7 +9,7 @@ HOMEPAGE=		http://www.php.net/
 COMMENT=		PHP Hypertext Preprocessor version 5
 
 USE_PKGINSTALL=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 LIBTOOL_OVERRIDE=	# empty
 
 .include "Makefile.php"

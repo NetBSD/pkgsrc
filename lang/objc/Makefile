@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 05:35:33 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:10 jlam Exp $
 
 DISTNAME=	objc-3.2.6
 CATEGORIES=	lang
@@ -16,8 +16,7 @@ CONFIGURE_DIRS=		${WRKSRC_BS} ${WRKSRC}
 PREPEND_PATH+=		${WRKSRC_BS}
 BUILD_TARGET=		default
 
-USE_GNU_TOOLS+=		lex
-USE_TOOLS+=		yacc
+USE_TOOLS+=		lex yacc
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2005/04/11 21:46:00 tv Exp $
+# $NetBSD: Makefile,v 1.127 2005/05/22 20:08:04 jlam Exp $
 
 .include "Makefile.common"
 
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE=	Magick++/lib/ImageMagick++.pc.in
 PKGCONFIG_OVERRIDE+=	magick/ImageMagick.pc.in
 
