@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/04/11 21:45:51 tv Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/22 09:09:00 jmmv Exp $
 #
 
 DISTNAME=		gturing-0.1.1
@@ -18,6 +18,8 @@ USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
+
+BUILDLINK_TRANSFORM+=	rm:-D.*_DISABLE_DEPRECATED
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
