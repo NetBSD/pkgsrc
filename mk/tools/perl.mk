@@ -1,4 +1,4 @@
-# $NetBSD: perl.mk,v 1.17 2005/05/22 02:05:24 jlam Exp $
+# $NetBSD: perl.mk,v 1.18 2005/05/22 02:30:53 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,4 +54,16 @@
 PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SUB_INSTALLSITELIB}
 PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SUB_INSTALLSITEARCH}
 PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_SUB_INSTALLARCHLIB}
+
+.else
+#
+# Some packages want the path to the perl tool, even if they don't have
+# dependency on perl, e.g. devel/cvs.
+#
+.  if defined(TOOLS_PLATFORM.perl) && !empty(TOOLS_PLATFORM.perl)
+TOOLS_${_TOOLS_VARNAME.perl}?=	${TOOLS_PLATFORM.perl}
+.  else
+TOOLS_${_TOOLS_VARNAME.perl}?=	${LOCALBASE}/bin/perl
+.  endif
+${_TOOLS_VARNAME.perl}?=	${TOOLS_${_TOOLS_VARNAME.perl}}
 .endif
