@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/04/26 17:57:56 drochner Exp $
+# $NetBSD: Makefile,v 1.39 2005/05/22 20:08:23 jlam Exp $
 #
 
 DISTNAME=		ORBit2-2.12.2
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 CONFLICTS=		linc>=1.1
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 

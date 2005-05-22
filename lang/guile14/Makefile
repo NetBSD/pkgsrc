@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/11 21:46:14 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/05/22 20:08:09 jlam Exp $
 
 DISTNAME=		guile-1.4.1
 PKGNAME=		guile14-1.4.1
@@ -12,7 +12,7 @@ COMMENT=		GNU's Ubiquitous Intelligent Language for Extension
 
 GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${LOCALBASE}/guile/1.4
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
 PTHREAD_AUTO_VARS=	YES

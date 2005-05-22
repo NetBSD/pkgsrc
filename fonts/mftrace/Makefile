@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/02/02 13:05:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/22 20:08:00 jlam Exp $
 
 DISTNAME=	mftrace-1.1.1
 PKGREVISION=	1
@@ -15,7 +15,7 @@ DEPENDS+=	fontforge>=20041115:../../fonts/fontforge
 DEPENDS+=	t1utils>=1.27:../../fonts/t1utils
 DEPENDS+=	teTeX>=2.0.2:../../print/teTeX
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 MAKEFILE=		GNUmakefile

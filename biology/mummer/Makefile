@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:01 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 20:07:40 jlam Exp $
 #
 
 DISTNAME=		MUMmer3.15
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.tigr.org/software/mummer/
 COMMENT=		System for aligning whole genome sequences
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 MAKE_ENV+=		SH="${SH}"
 

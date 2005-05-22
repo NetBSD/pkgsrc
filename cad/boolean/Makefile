@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:45:01 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/05/22 20:07:40 jlam Exp $
 #
 
 DISTNAME=	boolean
@@ -17,7 +17,7 @@ REL=		6.4
 
 BUILD_DEPENDS+=	cmake>=1.6.6:../../devel/cmake
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 # the zip archive messes up the case of these files which breaks
 # cmake.

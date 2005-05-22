@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:43 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 20:07:57 jlam Exp $
 #
 
 DISTNAME=		gens-rc3
@@ -18,7 +18,7 @@ ONLY_FOR_PLATFORM=	*-i386
 
 WRKSRC=			${WRKDIR}/GensForLinux
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

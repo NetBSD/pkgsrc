@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/04/19 17:28:04 drochner Exp $
+# $NetBSD: Makefile,v 1.40 2005/05/22 20:07:50 jlam Exp $
 
 DISTNAME=	eel-2.10.1
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -13,7 +13,7 @@ COMMENT=	Eazel Extensions Library for GNOME2
 BUILD_USES_MSGFMT=	YES
 
 USE_DIRS+=		gnome2-1.5
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES

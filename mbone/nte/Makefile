@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/05 10:51:21 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2005/05/22 20:08:14 jlam Exp $
 #
 
 DISTNAME=		nt.1.5a23
@@ -12,7 +12,7 @@ COMMENT=		Multicast Network Text Editor
 
 WRKSRC=			${WRKDIR}
 CRYPTO=			yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 # Pass this on to our child
 do-configure:

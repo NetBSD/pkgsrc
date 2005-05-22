@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/19 01:25:01 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/05/22 20:07:54 jlam Exp $
 #
 
 DISTNAME=	pilrc-2.9p9
@@ -23,7 +23,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ardiri.com/index.cfm?redir=palm&cat=pilrc
 COMMENT=	Generate resources for PalmOS applications from textual description
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 
 DOCDIR=		${PREFIX}/share/doc/html/pilrc

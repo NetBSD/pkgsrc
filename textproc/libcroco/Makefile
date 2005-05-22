@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:47:36 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/05/22 20:08:35 jlam Exp $
 #
 
 DISTNAME=	libcroco-0.6.0
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.freespiders.org/projects/libcroco/
 COMMENT=	Toolkit to parse and manipulate CSS (Cascading Style Sheets)
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes

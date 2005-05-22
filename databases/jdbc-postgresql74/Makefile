@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/25 17:12:10 jdolecek Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:45 jlam Exp $
 #
 
 DIST_VERS=		7.4.6
@@ -25,7 +25,7 @@ BUILD_DEPENDS+=		apache-ant-[0-9]*:../../devel/apache-ant
 EXTRACT_ELEMENTS=	${DISTNAME}/src/interfaces/jdbc
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/interfaces/jdbc
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 EXAMPLEDIR=		${PREFIX}/share/examples/java/jdbc-postgresql
 DOCDIR=			${PREFIX}/share/doc/java/jdbc-postgresql

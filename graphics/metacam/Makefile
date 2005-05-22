@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/10 14:27:20 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:06 jlam Exp $
 #
 
 DISTNAME=		metacam-1.2
@@ -9,7 +9,7 @@ MAINTAINER=		simonb@NetBSD.org
 HOMEPAGE=		http://www.cheeseplant.org/~daniel/pages/metacam.html
 COMMENT=		Digital camera image meta-information reader
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 BUILD_TARGET=		default
 
 do-install:

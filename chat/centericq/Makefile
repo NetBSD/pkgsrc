@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/04/11 21:45:03 tv Exp $
+# $NetBSD: Makefile,v 1.50 2005/05/22 20:07:42 jlam Exp $
 #
 
 DISTNAME=	centericq-4.20.0
@@ -12,7 +12,7 @@ HOMEPAGE=	http://konst.org.ua/eng/software/centericq/info.html
 COMMENT=	Instant Messenger interface supporting many protocols
 
 USE_PKGLOCALEDIR=	yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes

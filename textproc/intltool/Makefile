@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/22 05:35:33 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/05/22 20:08:35 jlam Exp $
 #
 
 DISTNAME=		intltool-0.33
@@ -16,7 +16,7 @@ DEPENDS+=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
 CONFLICTS=		xml-i18n-tools-[0-9]*
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 
 .include "../../devel/gettext-lib/buildlink3.mk"

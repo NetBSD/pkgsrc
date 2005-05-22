@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/04/28 15:05:15 augustss Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/22 20:07:50 jlam Exp $
 
 DISTNAME=		darcs-1.0.2
 CATEGORIES=		devel
@@ -11,7 +11,7 @@ COMMENT=		A distributed revision control system
 BUILD_DEPENDS+=		teTeX>=2.0.2nb1:../../print/teTeX
 BUILD_DEPENDS+=		latex2html>=2002.2.1nb3:../../textproc/latex2html
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 MAKEFILE=		GNUmakefile
 GNU_CONFIGURE=		yes
 #CONFIGURE_ARGS+=	--without-libcurl

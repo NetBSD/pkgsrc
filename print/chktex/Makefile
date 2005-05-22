@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:06 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/22 20:08:27 jlam Exp $
 #
 
 DISTNAME=	chktex-1.6.1
@@ -12,7 +12,7 @@ COMMENT=	LaTeX semantic checker
 
 DEPENDS+=	lynx-[0-9]*:../../www/lynx
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_PERL5=	YES
 GNU_CONFIGURE=	YES
 CFLAGS+=	-D__unix__

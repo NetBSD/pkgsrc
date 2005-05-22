@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/04/11 21:46:49 tv Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/05/22 20:08:25 jlam Exp $
 #
 
 DISTNAME=	mldonkey-2.5.28
@@ -14,7 +14,7 @@ DISTINFO_FILE=		${.CURDIR}/../../net/mldonkey/distinfo
 PATCHDIR=		${.CURDIR}/../../net/mldonkey/patches
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PERL5=		build
 
 CONFIGURE_ENV+=		WGET=""

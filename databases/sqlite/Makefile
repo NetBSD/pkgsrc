@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/04/11 21:45:16 tv Exp $
+# $NetBSD: Makefile,v 1.32 2005/05/22 20:07:46 jlam Exp $
 
 DISTNAME=		sqlite-2.8.16
 CATEGORIES=		databases
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.hwaci.com/sw/sqlite/
 COMMENT=		SQL Database Engine in a C Library
 
 WRKSRC=			${WRKDIR}/sqlite-build
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes

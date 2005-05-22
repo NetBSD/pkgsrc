@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/04/11 21:46:09 tv Exp $
+# $NetBSD: Makefile,v 1.29 2005/05/22 20:08:07 jlam Exp $
 #
 
 DISTNAME=	sodipodi-0.34
@@ -13,7 +13,7 @@ COMMENT=	Open source vector graphics drawing program using SVG as native format
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_X11=		YES
 

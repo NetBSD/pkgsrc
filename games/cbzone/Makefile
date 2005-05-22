@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 13:30:55 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:00 jlam Exp $
 
 DISTNAME=		cbzone-sound
 PKGNAME=		cbzone-2.0c
@@ -9,7 +9,7 @@ MAINTAINER=		root@garbled.net
 COMMENT=		Simple classic game of 3D tank warfare
 
 WRKSRC=			${WRKDIR}/cbzone
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_IMAKE=		yes
 
 .include "../../mk/bsd.pkg.mk"

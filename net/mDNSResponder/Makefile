@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/13 08:22:58 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/22 20:08:25 jlam Exp $
 
 DISTNAME=	mDNSResponder-62
 CATEGORIES=	net
@@ -8,7 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://developer.apple.com/darwin/projects/rendezvous/
 COMMENT=	Apple's mDNS repsonder
 
-USE_GNU_TOOLS=	make
+USE_TOOLS=	gmake
 MAKE_ARGS+=	os=netbsd
 WRKSRC=		${WRKDIR}/${DISTNAME}/mDNSPosix
 

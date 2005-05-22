@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2005/04/18 17:49:41 drochner Exp $
+# $NetBSD: Makefile.common,v 1.21 2005/05/22 20:08:22 jlam Exp $
 
 MPLAYER_DIST_VERSION=	1.0pre7
 
@@ -32,7 +32,7 @@ NO_BIN_ON_CD=		"a dependency is restricted"
 NO_BIN_ON_FTP=		"a dependency is restricted"
 NO_SRC_ON_FTP=		"prohibited by USAs DMCA"
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES
 
 PTHREAD_OPTS+=		require

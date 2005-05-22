@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:16 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:11 jlam Exp $
 
 .include "../swi-prolog-lite/Makefile.common"
 
@@ -10,7 +10,7 @@ COMMENT=		Packages for SWI Prolog
 
 GNU_CONFIGURE=		yes
 USE_GNU_READLINE=	yes	# uses rl_event_hook() interface
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11=		yes
 
 CONFIGURE_ENV+=		PL=swi-prolog

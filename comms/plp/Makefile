@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:45:07 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/05/22 20:07:44 jlam Exp $
 
 DISTNAME=	plp_1_8
 PKGNAME=	plp-1.8
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.proudman51.freeserve.co.uk/psion/
 COMMENT=	Tools to talk to the PSION organiser
 
 USE_LANGUAGES=	c c++
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	# defined
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/04/11 21:45:58 tv Exp $
+# $NetBSD: Makefile,v 1.31 2005/05/22 20:08:04 jlam Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 PKGREVISION=		5
@@ -12,7 +12,7 @@ COMMENT=		Tetris-like puzzle game
 
 AUTOMAKE_REQD=		1.4
 USE_DIRS+=		gnome1-1.5
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

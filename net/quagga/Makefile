@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:46:59 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/05/22 20:08:26 jlam Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -13,7 +13,7 @@ COMMENT=	Free multithreaded routing daemon software (fork of zebra)
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_PERL5=		build
 

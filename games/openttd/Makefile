@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:56 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:02 jlam Exp $
 
 DISTNAME=	openttd-0.3.6-source
 PKGNAME=	openttd-0.3.6
@@ -9,7 +9,7 @@ MAINTAINER=	froz@icix.org
 HOMEPAGE=	http://www.openttd.com/
 COMMENT=	Open source clone of Transport Tycoon Deluxe
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_X11=	yes
 
 DATA_DIR= 	${PREFIX}/share/games/openttd

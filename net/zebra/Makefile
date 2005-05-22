@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2005/04/11 21:47:03 tv Exp $
+# $NetBSD: Makefile,v 1.66 2005/05/22 20:08:26 jlam Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -48,7 +48,7 @@ CONF_FILES+=		${EGDIR}/vtysh.conf.sample ${PKG_SYSCONFDIR}/vtysh.conf
 CONFIGURE_ARGS+=	--disable-vtysh
 .endif
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_MAKEINFO=		# defined
 .include "../../devel/readline/buildlink3.mk"
 

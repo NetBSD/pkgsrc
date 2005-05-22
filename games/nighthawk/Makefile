@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:45:56 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/05/22 20:08:02 jlam Exp $
 #
 
 DISTNAME=		nighthawk-2.1
@@ -15,7 +15,7 @@ HOMEPAGE=		http://jsno.arafuraconnect.com.au/proj_linux/nighthawk.html
 COMMENT=		C64 Paradroid clone
 
 WRKSRC=			${WRKDIR}/nighthawk
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_X11=		YES
 

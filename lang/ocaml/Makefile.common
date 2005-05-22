@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/05/21 22:35:46 minskim Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/05/22 20:08:10 jlam Exp $
 
 DISTNAME=	ocaml-3.08.3
 CATEGORIES=	lang
@@ -12,7 +12,7 @@ COMMENT=	The latest implementation of the Caml dialect of ML
 DISTINFO_FILE=		${.CURDIR}/../../lang/ocaml/distinfo
 PATCHDIR=		${.CURDIR}/../../lang/ocaml/patches
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-prefix ${PREFIX}
 CONFIGURE_ARGS+=	-libs "${LDFLAGS}"

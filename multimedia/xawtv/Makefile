@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:43 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:23 jlam Exp $
 #
 
 DISTNAME=	xawtv_3.90
@@ -13,7 +13,7 @@ COMMENT=	TV application for Brooktree 848 compatible cards
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11=		YES
 USE_PERL5=		build
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/19 18:34:34 ben Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/22 20:08:34 jlam Exp $
 #
 
 DISTNAME=		helpdeco-2.1.1
@@ -17,7 +17,7 @@ CFLAGS+=		-DHAVE_STRLCPY
 
 MAKE_ENV+=		CFLAGS="${CFLAGS}"
 BUILD_TARGET=		build
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	"Configuring to use PREFIX."

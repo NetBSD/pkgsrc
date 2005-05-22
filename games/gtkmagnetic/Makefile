@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:51 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:01 jlam Exp $
 #
 
 DISTNAME=		Magnetic22Src
@@ -12,7 +12,7 @@ MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://www.if-legends.org/~msmemorial/magnetic.htm
 COMMENT=		Interpreter for text adventures from Magnetic Scrolls
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 BUILD_TARGET=		gtkmagnetic
 WRKSRC=			${WRKDIR}/Gtk
 

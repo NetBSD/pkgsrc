@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:48 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:00 jlam Exp $
 #
 
 DISTNAME=		boson-all-0.8
@@ -17,7 +17,7 @@ BUILD_USES_MSGFMT=	yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_X11=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--disable-debug

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/16 01:15:31 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/22 20:07:59 jlam Exp $
 #
 
 DISTNAME=	chkfontpath-1.9.7
@@ -13,7 +13,7 @@ COMMENT=	Command line tool to manage X server's font path
 BUILD_DEPENDS+=	rpm2cpio>=1.1:../../converters/rpm2cpio
 
 MAKE_ENV+=	VERSION=${PKGVERSION}
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 PKGSRC_USE_TOOLS+=	gtar
 

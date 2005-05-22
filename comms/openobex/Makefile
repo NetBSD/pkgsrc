@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:07 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/22 20:07:44 jlam Exp $
 #
 
 DISTNAME=	openobex-1.0.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://openobex.sourceforge.net/
 COMMENT=	Implementation of the Object Exchange (OBEX) protocol
 
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
 
 .include "../../mk/bsd.pkg.mk"

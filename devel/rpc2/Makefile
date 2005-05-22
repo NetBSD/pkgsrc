@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/05/22 05:35:32 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/05/22 20:07:54 jlam Exp $
 #
 
 DISTNAME=	rpc2-1.26
@@ -10,7 +10,7 @@ MAINTAINER=	phil@cs.wwu.edu
 HOMEPAGE=	http://www.coda.cs.cmu.edu/
 COMMENT=	CMU (Coda) remote procedure call package
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 GNU_CONFIGURE=		YES
 

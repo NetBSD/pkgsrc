@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:46:42 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/22 20:08:21 jlam Exp $
 
 DISTNAME=	mjpegtools-1.6.2
 PKGREVISION=	3
@@ -12,7 +12,7 @@ COMMENT=	Programs for compressing video streams
 DEPENDS+=		toolame>=02l:../../audio/toolame
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool

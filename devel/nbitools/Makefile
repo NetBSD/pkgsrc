@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/08 03:14:35 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/22 20:07:53 jlam Exp $
 #
 
 DISTNAME=	nbitools-R6.3
@@ -20,7 +20,7 @@ MAKE_ENV+=	GCCCMD=gcc
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 .endif
 
 post-patch:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/04/11 21:45:48 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/05/22 20:08:00 jlam Exp $
 #
 
 DISTNAME=		asc-source-1.15.3.0
@@ -18,7 +18,7 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CPPFLAGS.NetBSD+=		-D_UNICODE_BROKEN_
 

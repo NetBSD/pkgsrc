@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:24 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/22 20:07:51 jlam Exp $
 #
 
 DISTNAME=	gnustep-objc-1.3.0
@@ -9,7 +9,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	Objective-C runtime
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 MAKEFILE=		GNUmakefile
 NO_CONFIGURE=		YES
 

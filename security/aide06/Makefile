@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 19:11:12 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/22 20:08:29 jlam Exp $
 #
 
 DISTNAME=       aide-0.6
@@ -13,7 +13,7 @@ COMMENT=	Older intrusion detection system for checking file integrity
 #BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
 GNU_CONFIGURE=	yes
-USE_GNU_TOOLS+=	yacc lex
+USE_TOOLS+=	bison lex
 USE_TOOLS+=	bison
 
 .include "../../mk/bsd.pkg.mk"

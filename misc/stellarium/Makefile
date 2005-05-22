@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:40 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:18 jlam Exp $
 #
 
 DISTNAME=		stellarium-0.6.0
@@ -10,7 +10,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://stellarium.free.fr/
 COMMENT=		Generate photorealistic skys with OpenGL
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 

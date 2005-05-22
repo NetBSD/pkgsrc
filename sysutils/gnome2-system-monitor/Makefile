@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/05/19 21:11:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2005/05/22 20:08:32 jlam Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.10.1
@@ -16,7 +16,7 @@ BUILD_USES_MSGFMT=	yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11=		yes
 
 LIBS+=			-lutil

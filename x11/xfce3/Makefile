@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:48:15 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:52 jlam Exp $
 
 DISTNAME=		xfce-3.8.18
 PKGREVISION=		5
@@ -15,7 +15,7 @@ USE_X11BASE=		# defined
 USE_PKGLOCALEDIR=	# defined
 USE_LIBTOOL=		# defined
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		# defined
 
 .if ${MACHINE_ARCH} == "alpha"

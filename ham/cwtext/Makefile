@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:08 jlam Exp $
 
 DISTNAME=	cwtext-0.91
 CATEGORIES=	ham
@@ -9,7 +9,7 @@ HOMEPAGE=	http://cwtext.sourceforge.net/
 COMMENT=	Morse Code Generator
 
 MAKEFILE=	makefile
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 BUILD_TARGET=	ALL
 
 post-patch:

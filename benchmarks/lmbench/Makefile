@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/04/11 21:45:00 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/05/22 20:07:40 jlam Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -12,7 +12,7 @@ COMMENT=		Complete benchmark that gives a large amount of information
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 BUILD_TARGET=		build
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 

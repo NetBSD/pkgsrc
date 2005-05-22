@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/09/10 18:52:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:54 jlam Exp $
 
 DISTNAME=	re2c-0.9.3
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://re2c.org/
 COMMENT=	Deterministic Finite State Automaton generator
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 

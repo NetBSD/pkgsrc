@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/24 21:12:59 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/22 20:08:27 jlam Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
@@ -14,7 +14,7 @@ COMMENT=	Enhanced Printer Spooler
 
 CONFLICTS+=		cups-[0-9]*
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		yes

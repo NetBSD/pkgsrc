@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/16 01:32:22 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/22 20:07:44 jlam Exp $
 
 DISTNAME=		gcc-3.3.2003.05.11
 PKGNAME=		avr-gcc-3.3.2003.05.11
@@ -23,7 +23,7 @@ EXTRACT_ONLY=		gcc-core+g++-3.3.2003.05.11${EXTRACT_SUFX}
 GNU_CONFIGURE=		yes
 USE_PERL5=		build
 USE_BZIP2=		yes
-USE_GNU_TOOLS+=		lex make yacc
+USE_TOOLS+=		bison gmake lex
 PKGSRC_USE_TOOLS+=	tar
 USE_PKGLOCALEDIR=	yes
 

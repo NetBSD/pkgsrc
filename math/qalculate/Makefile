@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:31 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:14 jlam Exp $
 
 DISTNAME=	qalculate-0.7.2
 CATEGORIES=	math
@@ -11,7 +11,7 @@ COMMENT=	Qalculate is a modern multi-purpose desktop calculator
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=	wget>=1.8:../../net/wget
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_READLINE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/02 20:49:04 kristerw Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/22 20:07:45 jlam Exp $
 
 DISTNAME=	cross-${TARGET_ARCH}-${DISTVERSION}
 TARGET_ARCH=	mipsEEel-netbsd
@@ -8,7 +8,7 @@ CATEGORIES+=	cross lang
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Cross-compiler for NetBSD/PlayStation2 kernel
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_MAKEINFO=	yes
 
 .if exists(/usr/bin/bzcat)

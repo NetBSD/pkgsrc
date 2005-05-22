@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/11 21:45:00 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/05/22 20:07:40 jlam Exp $
 
 DISTNAME=		chemtool-1.6
 PKGREVISION=	1
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--without-gnomedir
 

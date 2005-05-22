@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/04/26 20:05:24 drochner Exp $
+# $NetBSD: Makefile,v 1.51 2005/05/22 20:08:47 jlam Exp $
 #
 
 DISTNAME=		gnome-panel-2.10.1
@@ -12,7 +12,7 @@ COMMENT=		GNOME2 panel application
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PERL5=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES

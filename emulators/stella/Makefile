@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/04/11 21:45:44 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/05/22 20:07:58 jlam Exp $
 
 STELLA_VERSION=	1.4.1
 DISTNAME=	stella-${STELLA_VERSION}-src
@@ -16,7 +16,7 @@ DISTINFO_FILE=          ${.CURDIR}/../stella/distinfo
 
 WRKSRC=		${WRKDIR}/stella-${STELLA_VERSION}/src/build
 USE_LANGUAGES=	c c++
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_INSTALL=	YES
 UNLIMIT_RESOURCES=datasize
 

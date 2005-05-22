@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/04/11 21:47:52 tv Exp $
+# $NetBSD: Makefile,v 1.51 2005/05/22 20:08:44 jlam Exp $
 
 DISTNAME=	bluefish-1.0
 PKGREVISION=	1
@@ -18,7 +18,7 @@ DEPENDS+=		weblint-[0-9]*:../../www/weblint
 BUILD_USES_MSGFMT=	YES
 
 USE_DIRS+=		xdg-1.1
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes

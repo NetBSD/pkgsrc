@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2005/05/22 05:35:33 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2005/05/22 20:08:13 jlam Exp $
 
 DISTNAME=		R-2.1.0
 CATEGORIES=		math
@@ -17,8 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 TEST_TARGET=		check
 USE_X11=		# defined
 USE_PERL5=		# defined
-USE_GNU_TOOLS+=		make
-USE_TOOLS+=		xmkmf
+USE_TOOLS+=		gmake xmkmf
 USE_GNU_READLINE=	# uses callback interface
 USE_MAKEINFO=		# defined
 TEXINFO_REQD=		4.5

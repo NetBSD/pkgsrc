@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/03/24 21:12:59 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/22 20:08:26 jlam Exp $
 
 DISTNAME=		nntpcache-3.0.1
 CATEGORIES=		news
@@ -27,7 +27,7 @@ BUILD_DEFS+=		USE_OPENLDAP NNTP_USE_PGP
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/spool
 CONFIGURE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 INSTALL_TARGET=		SUBDIRS="cf src filters http doc pgp contrib/newshound contrib/perlnewshound innreport scripts unixauth" \
 			install

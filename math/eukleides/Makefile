@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/24 21:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:13 jlam Exp $
 
 DISTNAME=	eukleides.1.0.1
 PKGNAME=	eukleides-1.0.1
@@ -13,7 +13,7 @@ BUILD_DEPENDS+= bison>=1.35:../../devel/bison
 DEPENDS+=	pstoedit>=3.31:../../graphics/pstoedit
 
 BUILD_TARGET=	eukleides
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_MAKEINFO=	YES
 INFO_FILES=	eukleides.info
 

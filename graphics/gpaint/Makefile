@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:46:04 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/22 20:08:05 jlam Exp $
 #
 
 DISTNAME=	gpaint-0.2
@@ -12,7 +12,7 @@ COMMENT=	Simple, easy-to-use paint program for GNOME
 
 USE_DIRS+=		xdg-1.1
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_GNU_GETTEXT=	YES
 USE_X11BASE=		YES
 

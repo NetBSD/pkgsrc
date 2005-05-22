@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/05/21 19:07:08 kristerw Exp $
+# $NetBSD: Makefile,v 1.22 2005/05/22 20:08:45 jlam Exp $
 #
 
 DISTNAME=	gtkhtml-3.2.5
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Lightweight HTML rendering/printing/editing engine
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	src/libgtkhtml.pc.in

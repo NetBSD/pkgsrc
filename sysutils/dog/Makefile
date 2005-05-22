@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/24 21:13:01 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:32 jlam Exp $
 
 DISTNAME=	dog-1.7
 CATEGORIES=	misc
@@ -8,7 +8,7 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://jl.photodex.com/dog/
 COMMENT=	Dog writes the contents of each given file, URL, or stdin
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 BUILD_TARGET=	dog
 
 .include "../../mk/bsd.prefs.mk"

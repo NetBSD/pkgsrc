@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/24 22:18:28 perry Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:11 jlam Exp $
 #
 
 DISTNAME=	scm5d9
@@ -13,7 +13,7 @@ COMMENT=	Portable scheme interpreter
 
 DEPENDS+=	slib>=3.1.1:../../devel/slib
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_X11=	# defined
 
 WRKSRC=		${WRKDIR}/scm

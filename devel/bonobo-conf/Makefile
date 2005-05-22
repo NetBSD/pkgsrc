@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/04/11 21:45:18 tv Exp $
+# $NetBSD: Makefile,v 1.26 2005/05/22 20:07:49 jlam Exp $
 
 DISTNAME=		bonobo-conf-0.14
 PKGREVISION=		11
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 
 post-install:

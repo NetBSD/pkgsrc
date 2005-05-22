@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:02 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/05/22 20:07:41 jlam Exp $
 #
 
 DISTNAME=	tkgate-1.6i
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=		bison>=1.35:../../devel/bison
 BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 
 USE_IMAKE=		yes
-USE_GNU_TOOLS+=		m4
+USE_TOOLS+=		gm4
 
 TKGATE_SITENAME=	Earth
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:45 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:23 jlam Exp $
 #
 
 DISTNAME=		seti_boinc-client-cvs-2004-07-15
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		BOINCDIR=${BUILDLINK_DIR}/boinc3
 # XXX don't know why MySQL is needed here
 #CONFIGURE_ENV+=		MYSQL_CONFIG=true
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 CLIENTBINNAME=	setiathome-3.10.${MACHINE_GNU_PLATFORM}
 CLIENTVERSION=	310

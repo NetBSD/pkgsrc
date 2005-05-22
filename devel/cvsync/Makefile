@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2005/04/11 21:45:19 tv Exp $
+# $NetBSD: Makefile,v 1.73 2005/05/22 20:07:50 jlam Exp $
 #
 
 DISTNAME=	cvsync-0.24.18
@@ -12,7 +12,7 @@ COMMENT=	Portable incremental cvs repository syncer
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGINSTALL=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 INSTALLATION_DIRS=	bin man/man1
 
 MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP} BINMODE=${BINMODE}

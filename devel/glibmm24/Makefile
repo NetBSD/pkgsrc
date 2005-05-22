@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:24 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:51 jlam Exp $
 
 DISTNAME=	glibmm-2.4.5
 PKGNAME=	glibmm24-2.4.5
@@ -14,7 +14,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/glib/glibmm-2.4.pc.in
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
 .include "../../devel/glib2/buildlink3.mk"

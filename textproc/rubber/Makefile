@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:42 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:35 jlam Exp $
 #
 
 DISTNAME=		rubber-0.99.8
@@ -14,7 +14,7 @@ DEPENDS+=		teTeX-bin-[0-9]*:../../print/teTeX-bin
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
-USE_GNU_TOOLS+=         make
+USE_TOOLS+=         gmake
 USE_MAKEINFO=           yes
 INFO_FILES=             rubber.info
 TEXINFO_REQD=		4.6

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:42 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:57 jlam Exp $
 #
 
 DISTNAME=		mdiff216
@@ -11,7 +11,7 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.logiqx.com/Tools/MAMEDiff/MAMEDiff.shtml
 COMMENT=		Compare MAME rom sets of different releases
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}
 MAKEFILE=		makefile
 BUILD_TARGET=		mamediff

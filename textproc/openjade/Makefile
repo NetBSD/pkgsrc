@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/05 05:50:23 hrs Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:35 jlam Exp $
 #
 
 DISTNAME=	openjade-1.3.2
@@ -10,7 +10,7 @@ MAINTAINER=	kogule@mars.dti.ne.jp
 HOMEPAGE=	http://openjade.sourceforge.net/
 COMMENT=	SGML/XML parser toolkit and DSSSL engine, successor to "jade"
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_PERL5=	build
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
