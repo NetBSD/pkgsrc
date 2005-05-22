@@ -1,4 +1,4 @@
-# $NetBSD: perl.mk,v 1.16 2005/05/21 04:53:17 jlam Exp $
+# $NetBSD: perl.mk,v 1.17 2005/05/22 02:05:24 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -41,12 +41,6 @@
 #
 
 .if defined(_USE_TOOLS) && !empty(_USE_TOOLS:Mperl)
-#
-# GNU configure scripts need to be told where to the real Perl
-# interpreter can be found.  This value is typically hardcoded into
-# Perl shebang scripts.
-#
-CONFIGURE_ENV+=		PERL=${TOOLS_${_TOOLS_VARNAME.perl}:Q}
 #
 # Define PERL5_* variables that locate the site directories for
 # ${PERL5}.  These variables depend on PERL5 being properly defined
