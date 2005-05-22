@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/05/22 20:07:41 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2005/05/22 20:28:47 jlam Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
@@ -14,15 +14,12 @@ PKG_INSTALLATION_TYPES=        overwrite pkgviews
 
 CONFLICTS+=	verilog-[0-9]*
 
-BUILD_DEPENDS+= bison-[0-9]*:../../devel/bison
-
-SNAPDATE=	20041004
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake lex
+SNAPDATE=		20041004
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		bison gmake lex
 CONFIGURE_ARGS+=	--without-ipal
-YACC=		${LOCALBASE}/bin/bison
-TEST_DIRS=	${WRKSRC}
-TEST_TARGET=	check
+TEST_DIRS=		${WRKSRC}
+TEST_TARGET=		check
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"

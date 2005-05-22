@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/22 20:07:52 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/05/22 20:28:47 jlam Exp $
 
 DISTNAME=	HDF4.2r1
 PKGNAME=	hdf-4.2r1
@@ -9,9 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://hdf.ncsa.uiuc.edu/hdf4.html
 COMMENT=	NCSA Hierarchical Data Format
 
-#BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-#YACC=		${PREFIX}/bin/bison
-
+#USE_TOOLS+=		bison
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c fortran
 GNU_CONFIGURE=		yes
