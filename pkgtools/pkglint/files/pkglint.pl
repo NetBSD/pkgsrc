@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.163 2005/05/22 21:08:33 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.164 2005/05/22 22:27:52 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1176,10 +1176,11 @@ sub check_Makefile_variables($) {
 	return true;
 }
 
-sub checkfile_Makefile_deprecated($) {
-	my ($whole) = @_;
+sub checklines_deprecated_variables($) {
+	my ($lines) = @_;
 	my ($fname) = ("${conf_datadir}/deprecated.map");
 	my ($deprecated) = load_file($fname);
+	my %vars = ();
 
 	if (!$deprecated) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be loaded.");
@@ -1190,14 +1191,21 @@ sub checkfile_Makefile_deprecated($) {
 		if ($line->text =~ qr"^#" || $line->text =~ qr"^\s*$") {
 			next;
 		} elsif ($line->text =~ qr"^(\S+)\s+(.*)$") {
-			my ($varname, $howto_fix) = ($1, $2);
-			if ($whole =~ qr"\n\Q$varname\E\b") {
-				log_warning(NO_FILE, NO_LINE_NUMBER, "${varname} is deprecated. ${howto_fix}");
-			}
+			$vars{$1} = $2;
 		} else {
 			$line->log_error("internal error: Unknown line format.");
 		}
 	}
+
+	foreach my $line (@{$lines}) {
+		if ($line->text =~ qr"^([A-Z][A-Z0-9_]*)\s*[!+?]?=") {
+			my ($varname) = ($1);
+			if (exists($vars{$varname})) {
+				$line->log_warning("${varname} is deprecated. $vars{$varname}");
+			}
+		}
+	}
+
 	return true;
 }
 
@@ -1293,7 +1301,7 @@ sub checkfile_Makefile($) {
 	      "FILESDIR: $filesdir, PKGDIR: $pkgdir, ".
 	      "DISTINFO: $distinfo\n");
 
-	checkfile_Makefile_deprecated($whole);
+	checklines_deprecated_variables($lines);
 
 	#
 	# whole file: INTERACTIVE_STAGE
