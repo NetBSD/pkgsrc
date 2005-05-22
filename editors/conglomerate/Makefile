@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/04/11 21:45:40 tv Exp $
+# $NetBSD: Makefile,v 1.31 2005/05/22 20:07:55 jlam Exp $
 #
 
 DISTNAME=	conglomerate-0.9.0
@@ -16,7 +16,7 @@ DEPENDS+=		docbook-xml>=4.2nb6:../../textproc/docbook-xml
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PERL5=		build
 USE_PKGLOCALEDIR=	yes
 

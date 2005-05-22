@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:18 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/22 20:07:49 jlam Exp $
 #
 
 DISTNAME=	chmlib-0.35
@@ -13,7 +13,7 @@ COMMENT=	Library for dealing with Microsoft ITSS/CHM format files
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--disable-io64

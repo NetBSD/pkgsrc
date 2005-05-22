@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/16 13:35:29 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:34 jlam Exp $
 #
 
 DISTNAME=		xen-2.0.3-src
@@ -23,7 +23,7 @@ WRKSRC=			${WRKDIR}/xen-2.0/tools
 
 EGDIR=			${PREFIX}/share/examples/${PKGNAME_NOREV}
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 MAKE_ENV+=		EGDIR="${EGDIR}"
 MAKE_ENV+=		MV="${MV}" PYTHON="${PYTHONBIN}" SED="${SED}"
 PYTHON_VERSIONS_ACCEPTED= 24 23 22

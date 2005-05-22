@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:14:55 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/22 20:07:55 jlam Exp $
 #
 
 DISTNAME=	st-1.5.1
@@ -12,7 +12,7 @@ COMMENT=	Non-preemptive thread library for Internet applications
 ONLY_FOR_PLATFORM=     NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-vax
 
 USE_LIBTOOL=	yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 BUILD_TARGET=	netbsd-debug
 
 HTMLDIR=	${PREFIX}/share/doc/html/st

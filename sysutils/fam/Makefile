@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/09 23:13:33 jschauma Exp $
+# $NetBSD: Makefile,v 1.25 2005/05/22 20:08:32 jlam Exp $
 #
 
 DISTNAME=		fam-2.7.0
@@ -17,7 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 # fam is bundled with IRIX
 NOT_FOR_PLATFORM=	IRIX-*-*
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES

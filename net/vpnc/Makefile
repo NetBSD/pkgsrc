@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:02 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:26 jlam Exp $
 #
 
 DISTNAME=		vpnc-0.3.2
@@ -9,7 +9,7 @@ MAINTAINER=		hubertf@NetBSD.org
 HOMEPAGE=		http://www.unix-ag.uni-kl.de/~massar/vpnc/
 COMMENT=		Client for Cisco3000 VPN Concentrator
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 BUILD_TARGET=		vpnc
 
 do-install:

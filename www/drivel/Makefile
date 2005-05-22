@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:52 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/22 20:08:44 jlam Exp $
 #
 
 DISTNAME=	drivel-1.2.4
@@ -12,7 +12,7 @@ COMMENT=	LiveJournal client for the GNOME Desktop
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	YES
 
 GCONF2_SCHEMAS=		drivel.schemas

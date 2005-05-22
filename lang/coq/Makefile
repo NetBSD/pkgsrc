@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:13 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:09 jlam Exp $
 #
 
 DISTNAME=	coq-8.0pl2
@@ -9,7 +9,7 @@ MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	http://coq.inria.fr/
 COMMENT=	Theorem prover which extracts programs from proofs
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	-prefix ${PREFIX}
 CONFIGURE_ARGS+=	-emacslib ${PREFIX}/share/emacs/site-lisp

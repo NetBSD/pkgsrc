@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/15 22:02:27 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/22 20:08:04 jlam Exp $
 #
 
 DISTNAME=	xrick-021212
@@ -17,7 +17,7 @@ NO_SRC_ON_CDROM=    ${RESTRICTED}
 NO_BIN_ON_FTP=	    ${RESTRICTED}
 NO_SRC_ON_FTP=	    ${RESTRICTED}
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 PKGSRC_USE_TOOLS+=	gunzip
 USE_X11=		YES
 

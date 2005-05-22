@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/15 22:22:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:30 jlam Exp $
 #
 
 DISTNAME=	libgpg-error-1.0
@@ -19,7 +19,7 @@ USE_PKGLOCALEDIR=	YES
 
 # XXX See HACKS
 .if ${OPSYS} != IRIX
-USE_GNU_TOOLS+=		awk
+USE_TOOLS+=		gawk
 .endif
 
 MAKE_ENV+=		LC_ALL="C"

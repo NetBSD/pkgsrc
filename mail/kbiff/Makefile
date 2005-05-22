@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:46:20 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/05/22 20:08:12 jlam Exp $
 
 DISTNAME=	kbiff-3.7.1
 PKGREVISION=	1
@@ -10,7 +10,7 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.granroth.org/kbiff/index.html
 COMMENT= 	A new mail notification utility for KDE
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=          yes

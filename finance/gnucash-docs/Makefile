@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:46 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/22 20:07:59 jlam Exp $
 
 DISTNAME=		gnucash-docs-1.8.5
 CATEGORIES=		finance
@@ -15,7 +15,7 @@ BUILDLINK_DEPMETHOD.libxml2=	build
 BUILDLINK_DEPMETHOD.libxslt=	build
 
 USE_DIRS+=		gnome1-1.5
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES

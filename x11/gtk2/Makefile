@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2005/05/08 09:07:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.83 2005/05/22 20:08:48 jlam Exp $
 #
 
 DISTNAME=		gtk+-2.6.7
@@ -25,7 +25,7 @@ USE_DIRS+=		xdg-1.1
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 PTHREAD_AUTO_VARS=	yes
 
@@ -70,7 +70,7 @@ SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
 .if !empty(CC_VERSION:MSun)
 CPPFLAGS+=		-Xc
 .elif ${OPSYS} == "IRIX" && !empty(CC_VERSION:Mgcc*)
-USE_GNU_TOOLS+=		awk
+USE_TOOLS+=		gawk
 .endif
 
 post-install:

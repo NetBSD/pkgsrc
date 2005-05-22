@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/09/27 20:41:19 cube Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/22 20:07:49 jlam Exp $
 #
 
 DISTNAME=	check-0.9.1
@@ -11,6 +11,6 @@ COMMENT=	Unit test framework for C
 
 GNU_CONFIGURE=	# defined
 CONFIGURE_ARGS+=--enable-plain-docdir
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.pkg.mk"

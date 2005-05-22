@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2005/05/12 10:32:18 salo Exp $
+# $NetBSD: Makefile,v 1.86 2005/05/22 20:07:42 jlam Exp $
 
 DISTNAME=	gaim-1.3.0
 CATEGORIES=	chat x11
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	yes
 CONFLICTS+=		gaim-gnome-[0-9]*
 
 USE_DIRS+=		xdg-1.1
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/05/19 20:39:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2005/05/22 20:08:45 jlam Exp $
 #
 
 DISTNAME=	epiphany-1.6.3
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2005/05/13 16:54:13 jlam Exp $
+# $NetBSD: Makefile.common,v 1.28 2005/05/22 20:08:12 jlam Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -28,7 +28,7 @@ SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 BUILD_DEFS+=    SMRSH_CMDDIR
 
 WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
-USE_GNU_TOOLS+=	m4
+USE_TOOLS+=	gm4
 MAKE_ENV+=	M4=${TOOLS_M4:Q}
 
 .include "../../mk/bsd.prefs.mk"

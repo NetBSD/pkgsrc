@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/11 21:48:12 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/05/22 20:08:48 jlam Exp $
 
 PKGVER=		2.1.30
 DISTNAME=	openmotif${PKGVER}
@@ -44,7 +44,7 @@ PLIST_SUBST+=		AVAILABLE=
 
 # We must use GNU make on Linux
 .if ${OPSYS} == "Linux"
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 .endif
 
 INSTALLATION_DIRS=	lib/X11/config man/man1 man/man3 man/man5

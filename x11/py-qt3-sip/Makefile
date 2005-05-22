@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/02 15:35:39 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/22 20:08:49 jlam Exp $
 #
 
 DISTNAME=	sip-4.2.1
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=		qt3-tools-3.*:../../x11/qt3-tools
 
 USE_X11=	yes
 USE_LIBTOOL=	yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS=		-b ${PREFIX}/bin

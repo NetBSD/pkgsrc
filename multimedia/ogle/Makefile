@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:46:42 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/22 20:08:22 jlam Exp $
 
 DISTNAME=	ogle-0.9.2
 PKGREVISION=	2
@@ -19,7 +19,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	Linux-*-*
 ONLY_FOR_PLATFORM+=	SunOS-*-*
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_X11=		yes
 
