@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/05/22 20:08:48 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2005/05/22 21:04:42 jlam Exp $
 
 PKGVER=		2.1.30
 DISTNAME=	openmotif${PKGVER}
@@ -27,7 +27,7 @@ DIST_SUBDIR=		openmotif
 USE_X11BASE=		yes
 USE_PKGINSTALL=		yes
 BUILD_TARGET=		World
-USE_TBL=		yes
+USE_TOOLS+=		tbl
 
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL

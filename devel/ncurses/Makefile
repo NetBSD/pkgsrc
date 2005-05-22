@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2005/05/22 20:07:54 jlam Exp $
+# $NetBSD: Makefile,v 1.65 2005/05/22 21:04:41 jlam Exp $
 
 DISTNAME=	ncurses-${NC_VERS}
 PKGREVISION=	1
@@ -16,6 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
+USE_TOOLS+=		gawk tbl
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-libtool
@@ -27,9 +28,6 @@ CONFIGURE_ARGS+=	--without-curses-h
 CONFIGURE_ARGS+=	--without-gpm
 CONFIGURE_ARGS+=	--with-manpage-format=normal
 CONFIGURE_ARGS+=	--with-manpage-tbl
-
-USE_TOOLS+=		gawk
-USE_TBL=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
