@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/05/20 01:57:44 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/22 19:11:12 jlam Exp $
 #
 
 DISTNAME=	fastcap-2.0-18Sep92
@@ -14,13 +14,7 @@ COMMENT=	Fast 3-D capacitance solver
 BUILD_DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
 EXTRACT_USING=	gtar	# cannot be extracted with pax as tar
 
-.include "../../mk/bsd.prefs.mk"
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-BUILD_DEPENDS+= gtar-base-[0-9]*:../../archivers/gtar-base
-GTAR=           ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
-.endif
-
-WRKSRC=		${WRKDIR}
+WRKSRC=			${WRKDIR}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS=		4

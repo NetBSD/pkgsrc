@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.192 2005/05/14 01:51:52 rillig Exp $
+# $NetBSD: bsd.prefs.mk,v 1.193 2005/05/22 19:11:12 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -278,10 +278,7 @@ PKGSRC_USE_TOOLS+=	[ awk dirname echo grep pwd sed test true
 #
 PKGSRC_USE_TOOLS+=	date tr
 
-_USE_NEW_TOOLS?=	yes
-.if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 .include "${_PKGSRC_TOPDIR}/mk/tools/defaults.mk"
-.endif
 
 .if ${OPSYS} == "NetBSD"
 .  if ${OBJECT_FMT} == "ELF" && \
@@ -397,20 +394,10 @@ _XPKGWEDGE_REQD=	1.9
 # The check for the existence of ${X11BASE}/lib/X11/config/xpkgwedge.def
 # is to catch users of xpkgwedge<1.0.
 #
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-XMKMF?=			${XMKMF_CMD} ${XMKMF_FLAGS} -a
-XMKMF_FLAGS?=		# empty
-.endif
 .if !empty(USE_XPKGWEDGE:M[Yy][Ee][Ss]) 
 X11PREFIX=		${LOCALBASE}
-.  if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-XMKMF_CMD?=		${X11PREFIX}/bin/pkgxmkmf
-.  endif
 .else
 X11PREFIX=		${X11BASE}
-.  if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
-.  endif
 .endif
 
 DEPOT_SUBDIR?=		packages
