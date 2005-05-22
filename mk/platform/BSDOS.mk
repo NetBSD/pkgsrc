@@ -1,4 +1,4 @@
-# $NetBSD: BSDOS.mk,v 1.10 2005/05/03 18:30:12 jlam Exp $
+# $NetBSD: BSDOS.mk,v 1.11 2005/05/22 19:11:15 jlam Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -16,85 +16,6 @@ RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 # sh doesn't have built-in type
 TYPE?=		which
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-AWK?=		/usr/bin/awk
-BASENAME?=	/usr/bin/basename
-CAT?=		/bin/cat
-CHMOD?=		/bin/chmod
-CHOWN?=		/usr/sbin/chown
-CHGRP?=		/usr/bin/chgrp
-CMP?=		/usr/bin/cmp
-CP?=		/bin/cp
-CUT?=		/usr/bin/cut
-DATE?=		/bin/date
-DIRNAME?=	/usr/bin/dirname
-ECHO?=		echo				# Shell builtin
-EGREP?=		/bin/egrep
-EXPR?=		/bin/expr
-FALSE?=		false				# Shell builtin
-FGREP?=		/bin/fgrep
-FILE_CMD?=	/usr/bin/file
-FIND?=		/usr/bin/find
-.if exists(${LOCALBASE}/bin/gmake)
-GMAKE?=		${LOCALBASE}/bin/gmake
-.else
-GMAKE?=		/usr/contrib/bin/gmake
-.endif
-GREP?=		/bin/grep
-.if exists(${LOCALBASE}/bin/gtar)
-GTAR?=		${LOCALBASE}/bin/gtar
-.else
-GTAR?=		/bin/tar
-.endif
-GUNZIP_CMD?=	/usr/contrib/bin/gunzip -f
-GZCAT?=		/usr/contrib/bin/gzcat
-GZIP_CMD?=	/usr/contrib/bin/gzip -nf ${GZIP}
-HEAD?=		/usr/bin/head
-HOSTNAME_CMD?=	/bin/hostname
-ID?=		/usr/bin/id
-LDCONFIG?=	/sbin/ldconfig
-LN?=		/bin/ln
-LS?=		/bin/ls
-M4?=		/usr/bin/m4
-MAIL_CMD?=	/usr/bin/mail
-MKDIR?=		/bin/mkdir -p
-.if exists(${LOCALBASE}/sbin/mtree)
-MTREE?=	${LOCALBASE}/sbin/mtree
-.else
-MTREE?=		/usr/sbin/mtree
-.endif
-MV?=		/bin/mv
-NICE?=		/usr/bin/nice
-PATCH?=		/usr/contrib/bin/patch
-# native /bin/pax doesn't support -O
-PAX?=		${LOCALBASE}/bin/pax
-PERL5?=		${LOCALBASE}/bin/perl
-PWD_CMD?=	/bin/pwd	# needs to print physical path
-RM?=		/bin/rm
-RMDIR?=		/bin/rmdir
-SED?=		/usr/bin/sed
-SETENV?=	/usr/bin/env
-# native sh and ksh both have problems under BSD/OS 4.3.1
-# /usr/contrib/bin/bash is a symlink to /bin/bash
-SH?=		/bin/bash
-SHLOCK=		${LOCALBASE}/bin/shlock
-SORT?=		/usr/bin/sort
-TAIL?=		/usr/bin/tail
-.if exists(/bin/tar)
-TAR?=		/bin/tar
-.else
-TAR?=		/usr/bin/tar
-.endif
-TEE?=		/usr/bin/tee
-TEST?=		test				# Shell builtin
-TOUCH?=		/usr/bin/touch
-TR?=		/usr/bin/tr
-TRUE?=		true				# Shell builtin
-TSORT?=		/usr/bin/tsort
-WC?=		/usr/bin/wc
-XARGS?=		/usr/bin/xargs
-.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022

@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.13 2005/05/03 19:35:24 jlam Exp $
+# $NetBSD: SunOS.mk,v 1.14 2005/05/22 19:11:15 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -10,85 +10,6 @@ PS?=		/bin/ps
 RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 TYPE?=		/usr/bin/type
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-AWK?=		/usr/bin/nawk
-BASENAME?=	/usr/bin/basename
-CAT?=		/usr/bin/cat
-CHMOD?=		/usr/bin/chmod
-CHOWN?=		/usr/bin/chown
-CHGRP?=		/usr/bin/chgrp
-CMP?=		cmp
-CP?=		/usr/bin/cp
-CUT?=		/usr/bin/cut
-DATE?=		/usr/xpg4/bin/date
-DIRNAME?=	/usr/bin/dirname
-ECHO?=		/usr/ucb/echo
-EGREP?=		/usr/xpg4/bin/grep -E
-EXPR?=		/usr/xpg4/bin/expr
-FALSE?=		/usr/bin/false
-FGREP?=		/usr/xpg4/bin/fgrep
-FILE_CMD?=	/usr/bin/file
-FIND?=		/usr/bin/find
-GMAKE?=		${LOCALBASE}/bin/gmake
-GREP?=		/usr/xpg4/bin/grep
-.if exists(${LOCALBASE}/bin/gtar)
-GTAR?=		${LOCALBASE}/bin/gtar
-.else
-GTAR?=		${LOCALBASE}/bin/tar
-.endif
-.if exists(${LOCALBASE}/bin/gzip)
-GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
-GZCAT?=		${LOCALBASE}/bin/zcat
-GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
-.elif exists(/usr/bin/gzip)
-GUNZIP_CMD?=	/usr/bin/gzip -df
-GZCAT?=		/usr/bin/gzip -cd
-GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
-.endif
-HEAD?=		/usr/bin/head
-HOSTNAME_CMD?=	/bin/hostname
-ID?=		/usr/xpg4/bin/id
-IMAKE?=		${X11BASE}/bin/imake ${IMAKEOPTS}
-LDCONFIG?=	/usr/bin/true
-LN?=		/usr/bin/ln
-LS?=		/usr/bin/ls
-M4?=		/usr/ccs/bin/m4
-MAIL_CMD?=	/usr/bin/mailx
-MKDIR?=		/usr/bin/mkdir -p
-MTREE?=		${LOCALBASE}/sbin/mtree
-MV?=		/usr/bin/mv
-NICE?=		/usr/xpg4/bin/nice
-.if exists(/usr/bin/gpatch)
-PATCH?=		/usr/bin/gpatch
-.else
-PATCH?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}patch
-.endif
-PAX?=		${LOCALBASE}/bin/pax
-PERL5?=		${LOCALBASE}/bin/perl
-PWD_CMD?=	/bin/pwd	# needs to print physical path
-RM?=		/usr/bin/rm
-RMDIR?=		/usr/bin/rmdir
-.if exists(${LOCALBASE}/bin/nbsed)
-SED?=		${LOCALBASE}/bin/nbsed
-.else
-SED?=		/usr/xpg4/bin/sed
-.endif
-SETENV?=	/usr/bin/env
-SH?=		/bin/ksh
-SHLOCK=		${LOCALBASE}/bin/shlock
-SORT?=		/usr/bin/sort
-TAIL?=		/usr/xpg4/bin/tail
-TAR?=		${LOCALBASE}/bin/tar
-TEE?=		/usr/bin/tee
-TEST?=		test
-TOUCH?=		/usr/bin/touch
-TR?=		/usr/bin/tr
-TRUE?=		/usr/bin/true
-TSORT?=		/usr/ccs/bin/tsort
-WC?=		/usr/bin/wc
-XARGS?=		/usr/bin/xargs
-.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022

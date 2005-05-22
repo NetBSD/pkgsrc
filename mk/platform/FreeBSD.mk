@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.10 2005/05/03 18:30:12 jlam Exp $
+# $NetBSD: FreeBSD.mk,v 1.11 2005/05/22 19:11:15 jlam Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -9,84 +9,6 @@ PS?=		/bin/ps
 RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-AWK?=		/usr/bin/awk
-BASENAME?=	/usr/bin/basename
-BRANDELF?=	/usr/bin/brandelf		# used by linux compat layer
-CAT?=		/bin/cat
-CHMOD?=		/bin/chmod
-CHOWN?=		/usr/sbin/chown
-CHGRP?=		/usr/bin/chgrp
-CMP?=		/usr/bin/cmp
-CP?=		/bin/cp
-CUT?=		/usr/bin/cut
-DATE?=		/bin/date
-DIRNAME?=	/usr/bin/dirname
-ECHO?=		echo				# Shell builtin
-EGREP?=		/usr/bin/egrep
-EXPR?=		/bin/expr
-FALSE?=		false				# Shell builtin
-FGREP?=		/usr/bin/fgrep
-FILE_CMD?=	/usr/bin/file
-FIND?=		/usr/bin/find
-GMAKE?=		${LOCALBASE}/bin/gmake
-GREP?=		/usr/bin/grep
-.if exists(${LOCALBASE}/bin/tar)
-GTAR?=		${LOCALBASE}/bin/tar
-.else
-GTAR?=		/usr/bin/tar
-.endif
-GUNZIP_CMD?=	/usr/bin/gunzip -f
-GZCAT?=		/usr/bin/gzcat
-GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
-HEAD?=		/usr/bin/head
-HOSTNAME_CMD?=	/bin/hostname
-ID?=		/usr/bin/id
-IMAKE?=		${X11BASE}/bin/imake ${IMAKEOPTS}
-LDCONFIG?=	/sbin/ldconfig
-LN?=		/bin/ln
-LS?=		/bin/ls
-M4?=		/usr/bin/m4
-MAIL_CMD?=	/usr/bin/mail
-MKDIR?=		/bin/mkdir -p
-.if exists(${LOCALBASE}/sbin/mtree)
-MTREE?=		${LOCALBASE}/sbin/mtree
-.else
-MTREE?=		/usr/sbin/mtree
-.endif
-MV?=		/bin/mv
-NICE?=		/usr/bin/nice
-PATCH?=		/usr/bin/patch
-.if exists(${LOCALBASE}/bin/pax)
-PAX?=		${LOCALBASE}/bin/pax
-.else
-PAX?=		/bin/pax
-.endif
-PERL5?=		${LOCALBASE}/bin/perl
-PWD_CMD?=	/bin/pwd	# needs to print physical path
-RM?=		/bin/rm
-RMDIR?=		/bin/rmdir
-SED?=		/usr/bin/sed
-SETENV?=	/usr/bin/env
-SH?=		/bin/sh
-SHLOCK=		/usr/bin/shlock
-SORT?=		/usr/bin/sort
-TAIL?=		/usr/bin/tail
-.if exists(${LOCALBASE}/bin/tar)
-TAR?=		${LOCALBASE}/bin/tar
-.else
-TAR?=		/usr/bin/tar
-.endif
-TEE?=		/usr/bin/tee
-TEST?=		test				# Shell builtin
-TOUCH?=		/usr/bin/touch
-TR?=		/usr/bin/tr
-TRUE?=		true				# Shell builtin
-TSORT?=		/usr/bin/tsort
-WC?=		/usr/bin/wc
-XARGS?=		/usr/bin/xargs
-.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022

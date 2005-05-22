@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/19 19:45:45 dillo Exp $
+# $NetBSD: Makefile,v 1.25 2005/05/22 19:11:12 jlam Exp $
 #
 
 DISTNAME=       awk
@@ -18,13 +18,7 @@ COMMENT=	Brian Kernighan's pattern-directed scanning and processing language
 DIST_SUBDIR=	${PKGNAME}
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-.include "../../mk/bsd.prefs.mk"
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-USE_GNU_TOOLS+=	yacc
-.else
 USE_TOOLS+=	yacc
-.endif
-
 WRKSRC=		${WRKDIR}
 CFLAGS+=	${CPPFLAGS}
 MAKE_FLAGS+=	CC=${CC:Q} YACC=${YACC:Q} CFLAGS=${CFLAGS:Q}

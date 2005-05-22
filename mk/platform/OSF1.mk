@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.6 2005/05/03 20:41:53 jlam Exp $
+# $NetBSD: OSF1.mk,v 1.7 2005/05/22 19:11:15 jlam Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -17,75 +17,6 @@ PS?=		/bin/ps
 STRIP?=		/usr/bin/strip
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
-
-.if empty(_USE_NEW_TOOLS:M[yY][eE][sS])
-AWK?=		/usr/bin/awk
-BASENAME?=	/usr/bin/basename
-CAT?=		/bin/cat
-CHMOD?=		/bin/chmod
-CHOWN?=		/bin/chown
-CHGRP?=		/usr/bin/chgrp
-CMP?=		/usr/bin/cmp
-CP?=		/bin/cp
-CUT?=		/usr/bin/cut
-DATE?=		/bin/date
-DIRNAME?=	/usr/bin/dirname
-ECHO?=		/usr/bin/echo				
-EGREP?=		/usr/bin/grep -E
-EXPR?=		/bin/expr
-FALSE?=		false				# Shell builtin
-FGREP?=		/usr/bin/grep -F
-FILE_CMD?=	/usr/bin/file
-FIND?=		/usr/bin/find
-GMAKE?=		${LOCALBASE}/bin/gmake
-GREP?=		/usr/bin/grep
-.if exists(${LOCALBASE}/bin/gtar)
-GTAR?=		${LOCALBASE}/bin/gtar
-.else
-GTAR?=/usr/bin/tar
-.endif
-GUNZIP_CMD?=	/usr/bin/gunzip -f
-GZCAT?=		/usr/bin/gzcat
-GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
-HEAD?=		/usr/bin/head
-HOSTNAME_CMD?=	/bin/hostname
-ID?=		/usr/bin/id
-INSTALL=	${LOCALBASE}/bin/install-sh
-LDCONFIG?=	${TRUE}
-LN?=		/bin/ln
-LS?=		/bin/ls
-M4?=		/usr/bin/m4
-MAIL_CMD?=	/usr/bin/mailx
-MKDIR?=		/bin/mkdir -p
-MTREE?=		${LOCALBASE}/sbin/mtree
-MV?=		/bin/mv
-NICE?=		/usr/bin/nice
-PATCH?=		${LOCALBASE}/bin/gpatch
-PAX?=		${LOCALBASE}/bin/pax
-.if exists(${LOCALBASE}/bin/perl)
-PERL5?=		${LOCALBASE}/bin/perl
-.else
-PERL5?=		/usr/bin/perl
-.endif
-PWD_CMD?=	/bin/pwd	# needs to print physical path
-RM?=		/bin/rm
-RMDIR?=		/bin/rmdir
-SED?=		${LOCALBASE}/bin/nbsed
-SETENV?=	/usr/bin/env
-SH?=		/bin/ksh			# recommendend on Tru64
-#SHLOCK=	${LOCALBASE}/bin/shlock		# need to make this work
-SORT?=		/usr/bin/sort
-TAIL?=		/usr/bin/tail
-TAR?=		/usr/bin/tar
-TEE?=		/usr/bin/tee
-TEST?=		test				# Shell builtin
-TOUCH?=		/usr/bin/touch
-TR?=		/usr/bin/tr
-TRUE?=		true				# Shell builtin
-TSORT?=		/usr/bin/tsort
-WC?=		/usr/bin/wc
-XARGS?=		/usr/bin/xargs
-.endif
 
 USERADD?=	/usr/sbin/useradd
 GROUPADD?=	/usr/sbin/groupadd
