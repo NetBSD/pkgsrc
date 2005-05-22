@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/22 20:08:11 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/05/22 20:28:47 jlam Exp $
 
 DISTNAME=		evolution-1.2.4
 PKGNAME=		${DISTNAME:S/evolution/evolution12/}
@@ -23,7 +23,6 @@ COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 
 CONFLICTS+=		evolution<2.0 evolution14-[0-9]*
 
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
 
@@ -33,12 +32,11 @@ BUILDLINK_DEPENDS.db3=		db3-3.11.2{,nb*}
 BUILDLINK_DEPENDS.libxml=	libxml>=1.8.17
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		bison gmake
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	YES
-YACC=			${PREFIX}/bin/bison -y
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 REPLACE_PERL+=		libical/scripts/mkderivedvalues.pl

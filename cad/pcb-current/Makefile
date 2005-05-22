@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/22 20:07:41 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/22 20:28:47 jlam Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
@@ -10,28 +10,23 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://pcb.sourceforge.net/
 COMMENT=	Printed circuit board layout system (development snapshot version)
 
-BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-DEPENDS+=	m4>=1.4:../../devel/m4
 DEPENDS+=	tk>=8.3:../../x11/tk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	pcb-[0-9]*
 
-SNAPDATE=	20050315
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake lex
-USE_X11=	yes
+SNAPDATE=		20050315
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		bison gm4 gmake lex
+TOOLS_DEPMETHOD.gm4=	DEPENDS
+USE_X11=		yes
 
 INFO_FILES=	pcb.info
 
 .include "../../mk/bsd.prefs.mk"
 
-EVAL_PREFIX+=   BISONDIR=bison
-EVAL_PREFIX+=   M4DIR=m4
 EVAL_PREFIX+=   TKDIR=tk
-M4=${M4DIR}/bin/${GNU_PROGRAM_PREFIX}m4
-YACC=		${BISONDIR}/bin/bison
 CONFIGURE_ENV+=	WISH=${TKDIR}/bin/wish
 
 .if ${XAW_TYPE} == "xpm"

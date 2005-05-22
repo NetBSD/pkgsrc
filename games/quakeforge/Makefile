@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:03 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/22 20:28:47 jlam Exp $
 
 DISTNAME=		quakeforge-0.5.5
 PKGREVISION=		2
@@ -9,16 +9,13 @@ MAINTAINER=		snj@NetBSD.org
 HOMEPAGE=		http://www.quakeforge.net/
 COMMENT=		Improved Quake engine
 
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-
 CONFIGURE_ARGS+=	--with-cpp="${CPP} %d %i %o"
 CONFIGURE_ARGS+=	--disable-ogg
 CONFIGURE_ARGS+=	--disable-xmms
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		bison gmake
 USE_LIBTOOL=		YES
 USE_X11=		YES
-YACC=			${LOCALBASE}/bin/bison
 
 SUBST_CLASSES+=		dsp
 SUBST_STAGE.dsp=	post-patch
