@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:45 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/22 05:35:33 jlam Exp $
 
 DISTNAME=	AfterStep-1.8.11
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
@@ -24,7 +24,6 @@ CONFIGURE_ARGS+=	--disable-staticlibs
 CONFIGURE_ARGS+=	--disable-xinerama
 CONFIGURE_ARGS+=	--with-helpcommand=xpman
 CONFIGURE_ARGS+=	--with-xpm-includes='${BUILDLINK_DIR}/include/X11'
-CONFIGURE_ENV+=		PERL='${LOCALBASE}/bin/perl'
 CONFIGURE_ENV+=		ac_cv_prog_sgmltools='no'
 
 post-patch:

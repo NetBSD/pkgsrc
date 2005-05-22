@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2005/05/20 16:44:48 tv Exp $
+# $NetBSD: Makefile,v 1.66 2005/05/22 05:35:32 jlam Exp $
 
 ###########################################################################
 ###########################################################################
@@ -68,7 +68,6 @@ CONFIGURE_ARGS+=	--with-tags=CXX,F77,GCJ
 
 .if !empty(_USE_NEW_TOOLS:M[yY][eE][sS])
 USE_TOOLS+=		echo
-CONFIGURE_ENV+=		ECHO=${TOOLS_ECHO:Q}
 .endif
 
 .PHONY: fix-libtool

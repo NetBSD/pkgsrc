@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:44 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/05/22 05:35:32 jlam Exp $
 
 DISTNAME=	libspectrum-0.2.2
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	ZX Spectrum emulator file format library
 USE_PERL5=		build
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		PERL=${PERL5}
 
 DOCDIR=		${PREFIX}/share/doc/libspectrum
 

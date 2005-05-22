@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2005/02/18 22:12:50 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/05/22 05:35:33 jlam Exp $
 #
 # Package Makefiles should include this file after setting PKGBASE and
 # PKG_SUPPORTED_OPTIONS.
@@ -21,7 +21,6 @@ USE_DB185=		yes
 CONFIGURE_ARGS+=	--with-db=db
 .include "../../mk/bdb.buildlink3.mk"
 
-CONFIGURE_ENV+=		PERL=${PERL5}
 CONFIGURE_ENV+=		SYSCONFTOOL_PERL=${PERL5}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGBASE}

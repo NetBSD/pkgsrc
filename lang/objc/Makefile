@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/15 19:28:37 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/22 05:35:33 jlam Exp $
 
 DISTNAME=	objc-3.2.6
 CATEGORIES=	lang
@@ -18,7 +18,6 @@ BUILD_TARGET=		default
 
 USE_GNU_TOOLS+=		lex
 USE_TOOLS+=		yacc
-CONFIGURE_ENV+=		YACC=${TOOLS_YACC:Q}
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
