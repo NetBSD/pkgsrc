@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2005/05/22 20:08:48 jlam Exp $
+# $NetBSD: Makefile,v 1.80 2005/05/22 22:06:28 jlam Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	3
@@ -17,7 +17,6 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_DIRS+=		xdg-1.2
 USE_PKGINSTALL=		YES
-USE_TOOLS+=		gawk
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ARGS+=	--with-ldap="${BUILDLINK_PREFIX.openldap}"
