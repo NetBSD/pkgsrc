@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2005/05/13 16:54:12 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2005/05/22 20:51:45 jlam Exp $
 
 DISTNAME=		autoconf-2.59
 PKGREVISION=		1
@@ -10,7 +10,8 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/autoconf/autoconf.html
 COMMENT=		Generates automatic source code configuration scripts
 
-DEPENDS=		m4>=1.4:../../devel/m4
+USE_TOOLS+=		gm4
+TOOLS_DEPMETHOD.gm4=	DEPENDS
 
 # The next line is for conflicts with old versions of this package,
 # which had autoconf-devel as PKGNAME.
@@ -21,7 +22,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=		# empty
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-lispdir
-TOOLS_M4=		${LOCALBASE}/bin/gm4
 
 INFO_FILES=		autoconf.info standards.info
 
