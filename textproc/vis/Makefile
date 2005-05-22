@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/22 05:28:25 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/22 05:30:23 minskim Exp $
 #
 
 DISTNAME=	vis-0.0
@@ -10,7 +10,5 @@ COMMENT=	Convert strings from/to a visual format
 
 MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}	\
 		MANOWN=${MANOWN} MANGRP=${MANGRP}
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/bsd.pkg.mk"
