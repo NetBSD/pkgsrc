@@ -87,6 +87,8 @@ DDEESSCCRRIIPPTTIIOONN
      [no-]exec   Warn if a file in the package directory is executable.  Most
                  files should not be executable until they are installed.
 
+     [no-]order  Warn if Makefile variables are not in the preferred order.
+
      [no-]paren  Warn if variables are used like $(VAR) in Makefiles.  They
                  should always be used like ${VAR}.
 
@@ -143,4 +145,4 @@ BBUUGGSS
      ings concerning Makefiles do not print the file and line number where the
      warning originated.
 
-                                 May 15, 2005                                3
+                                 May 23, 2005                                3
