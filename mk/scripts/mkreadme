@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.6 2005/05/18 04:51:35 dmcmahill Exp $
+# $NetBSD: mkreadme,v 1.7 2005/05/22 01:37:31 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -247,7 +247,7 @@ echo " "
 if [ -d ${PKGSRCDIR}/pkgtools/prereq-readme ]; then
     cd ${PKGSRCDIR}/pkgtools/prereq-readme
     eval "`${BMAKE} show-tools`"
-    for v in AWK CMP ECHO EXPR FGREP GREP SED SETENV SORT 
+    for v in AWK CMP ECHO EXPR FGREP FIND GREP SED SETENV SORT 
     do
 	eval "echo '---->'  ${v}=\"\${${v}}\""
     done
@@ -261,7 +261,7 @@ echo "Extracting configuration variables:"
 echo " "
 if [ -d ${PKGSRCDIR}/pkgtools/prereq-readme ]; then
     cd ${PKGSRCDIR}/pkgtools/prereq-readme
-    for v in CDROM_PKG_URL_HOST CDROM_PKG_URL_DIR CMP DISTDIR \
+    for v in CDROM_PKG_URL_HOST CDROM_PKG_URL_DIR DISTDIR \
 	FTP_PKG_URL_HOST FTP_PKG_URL_DIR PACKAGES PKG_INFO PKG_SUFX 
     do
 	val=`${BMAKE} show-var VARNAME=${v}`
@@ -389,6 +389,7 @@ ${AWK} -f ${PKGSRCDIR}/mk/scripts/genreadme.awk  \
     AWK=$AWK \
     CMP=$CMP \
     DISTDIR=$DISTDIR \
+    FIND=$FIND \
     GREP=$GREP \
     PACKAGES=$PACKAGES \
     PKG_INFO="$PKG_INFO" \
