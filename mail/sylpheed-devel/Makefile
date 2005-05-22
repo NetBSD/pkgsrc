@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/18 22:42:21 chris Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/22 20:08:12 jlam Exp $
 
 DISTNAME=	sylpheed-1.9.11
 CATEGORIES=	mail news x11
@@ -19,7 +19,7 @@ USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=            yes
 USE_X11=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-nls

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/11 21:45:25 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/05/22 20:07:52 jlam Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 CATEGORIES=	devel
@@ -10,7 +10,7 @@ CONFLICTS+=	umbrello-[0-9]*
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 USE_DIRS+=		xdg-1.1
-USE_GNU_TOOLS+=		lex
+USE_TOOLS+=		lex
 USE_PERL5=		run
 
 REPLACE_PERL=	cervisia/change_colors.pl \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:39 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/05/22 20:08:17 jlam Exp $
 #
 
 DISTNAME=	pdmenu_1.2.65
@@ -13,7 +13,7 @@ COMMENT=	Simple console menu program
 
 WRKSRC=		${WRKDIR}/pdmenu
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_PERL5=	YES
 
 REPLACE_PERL=	examples/showdir.pl

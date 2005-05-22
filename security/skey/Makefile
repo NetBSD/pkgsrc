@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/27 20:48:32 hira Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/22 20:08:31 jlam Exp $
 #
 
 DISTNAME=		skey-1.1.5
@@ -11,7 +11,7 @@ HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Port of OpenBSD s/key implementation
 
 USE_PERL5=		build
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 

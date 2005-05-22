@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:44:58 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/05/22 20:07:39 jlam Exp $
 
 DISTNAME=	xamp-0.8-10
 PKGNAME=	xamp-0.8.10
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/xamp-0.8/xamp-0.8g
 DIST_SUBDIR=	xamp
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS}"
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 USE_X11=	yes
 

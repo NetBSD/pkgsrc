@@ -1,4 +1,4 @@
-#	$NetBSD: gnustep.mk,v 1.3 2005/04/24 02:47:03 rh Exp $
+#	$NetBSD: gnustep.mk,v 1.4 2005/05/22 20:07:51 jlam Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
@@ -45,7 +45,7 @@ LDFLAGS+=	${GNUSTEP_LDFLAGS}
 CPPFLAGS+=	${GNUSTEP_IFLAGS}
 CFLAGS+=	${GNUSTEP_IFLAGS}
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 .if defined(GNUSTEP_MAKEFILE)
 MAKEFILE=	${GNUSTEP_MAKEFILE}
 .else

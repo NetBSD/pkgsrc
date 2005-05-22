@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:44:53 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/22 20:07:38 jlam Exp $
 #
 
 DISTNAME=	ladspa_sdk_1.12
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.ladspa.org/
 COMMENT=	Linux Audio Developers Simple Plugin API
 
 WRKSRC=		${WRKDIR}/ladspa_sdk/src
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 MAKEFILE=	makefile
 

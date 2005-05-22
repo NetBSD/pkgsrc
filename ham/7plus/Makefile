@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/24 13:40:43 grant Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/22 20:08:08 jlam Exp $
 #
 
 DISTNAME=	7pl225sr
@@ -16,7 +16,7 @@ LICENSE=        no-commercial-use
 
 WRKSRC=		${WRKDIR}/7plsrc.225
 MAKEFILE=	netbsd.mak
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 post-install:
 		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/7plus && \

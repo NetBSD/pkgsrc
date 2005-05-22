@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/05/17 22:00:13 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2005/05/22 20:08:29 jlam Exp $
 #
 
 DISTNAME=	tetex-texmf-2.0.2
@@ -24,7 +24,7 @@ EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-USE_GNU_TOOLS+=		patch
+USE_TOOLS+=		patch
 
 .include "../../mk/bsd.prefs.mk"
 

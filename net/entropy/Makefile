@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:46 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:23 jlam Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -14,7 +14,7 @@ HOMEPAGE=		http://entropy.stop1984.com/
 COMMENT=		Anonymous peer-to-peer networking node (similar to Freenet)
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 ENTROPY_VERSION=	0.8.2-418
 

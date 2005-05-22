@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/04 12:17:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/22 20:07:53 jlam Exp $
 #
 
 DISTNAME=	monotone-0.19
@@ -13,7 +13,7 @@ GCC_REQD+=		3.0
 GNU_CONFIGURE=		yes
 INFO_FILES=		monotone.info
 UNLIMIT_RESOURCES+=	datasize
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_MAKEINFO=		yes
 

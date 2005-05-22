@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/24 21:13:02 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:35 jlam Exp $
 
 DISTNAME=	sed-3.02
 PKGNAME=	ja-sed-3.02
@@ -17,7 +17,7 @@ INFO_FILES=	sed.info
 
 CONFLICTS+=	gsed-[0-9]*
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--program-transform-name='s,^,j,'
 

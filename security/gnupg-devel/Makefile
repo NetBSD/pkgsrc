@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/23 12:38:05 shannonjr Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/22 20:08:30 jlam Exp $
 #
 
 DISTNAME=		gnupg-1.9.16
@@ -18,7 +18,7 @@ COMMENT=		Utility programs that come with GnuPG 1.9 (experimental branch)
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 

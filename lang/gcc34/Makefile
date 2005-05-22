@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/20 19:25:21 shannonjr Exp $
+# $NetBSD: Makefile,v 1.24 2005/05/22 20:08:09 jlam Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -105,7 +105,7 @@ CONFIGURE_ARGS+=	--disable-threads
 .endif
 
 USE_PKGINSTALL=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES # no GNU_CONFIGURE!
 CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
