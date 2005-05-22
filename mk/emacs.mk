@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.18 2005/04/08 19:05:29 jwise Exp $
+# $NetBSD: emacs.mk,v 1.19 2005/05/22 21:52:49 rillig Exp $
 #
 # A Makefile fragment for Emacs Lisp packages.
 #
@@ -197,9 +197,9 @@ _REPLACE_EMACS_SED=	-e "1s;^\#!.*emacs;\#!${EMACS_BIN};"
 .if defined(REPLACE_EMACS)
 emacs-patch-scripts:
 .for s in ${REPLACE_EMACS}
-	${CP} ${WRKSRC}/$s ${WRKSRC}/${s}.tmp
-	${CHMOD} +w ${WRKSRC}/$s
-	${SED} ${_REPLACE_EMACS_SED} <${WRKSRC}/${s}.tmp >${WRKSRC}/$s
+	${CP} ${WRKSRC}/${s} ${WRKSRC}/${s}.tmp
+	${CHMOD} +w ${WRKSRC}/${s}
+	${SED} ${_REPLACE_EMACS_SED} <${WRKSRC}/${s}.tmp >${WRKSRC}/${s}
 .endfor
 
 post-patch: emacs-patch-scripts
