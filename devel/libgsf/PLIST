@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/12/22 11:44:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/05/23 12:15:01 wiz Exp $
 include/libgsf-1/gsf-gnome/gsf-input-bonobo.h
 include/libgsf-1/gsf-gnome/gsf-input-gnomevfs.h
 include/libgsf-1/gsf-gnome/gsf-output-bonobo.h
@@ -7,6 +7,7 @@ include/libgsf-1/gsf-gnome/gsf-shared-bonobo-stream.h
 include/libgsf-1/gsf-win32/gsf-input-win32.h
 include/libgsf-1/gsf-win32/gsf-output-win32.h
 include/libgsf-1/gsf/gsf-doc-meta-data.h
+include/libgsf-1/gsf/gsf-docprop-vector.h
 include/libgsf-1/gsf/gsf-impl-utils.h
 include/libgsf-1/gsf/gsf-infile-impl.h
 include/libgsf-1/gsf/gsf-infile-msole.h
@@ -32,7 +33,9 @@ include/libgsf-1/gsf/gsf-outfile-stdio.h
 include/libgsf-1/gsf/gsf-outfile-zip.h
 include/libgsf-1/gsf/gsf-outfile.h
 include/libgsf-1/gsf/gsf-output-bzip.h
+include/libgsf-1/gsf/gsf-output-csv.h
 include/libgsf-1/gsf/gsf-output-gzip.h
+include/libgsf-1/gsf/gsf-output-iconv.h
 include/libgsf-1/gsf/gsf-output-impl.h
 include/libgsf-1/gsf/gsf-output-iochannel.h
 include/libgsf-1/gsf/gsf-output-memory.h
