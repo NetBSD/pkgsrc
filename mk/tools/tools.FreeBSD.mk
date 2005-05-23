@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeBSD.mk,v 1.12 2005/05/16 03:07:38 jlam Exp $
+# $NetBSD: tools.FreeBSD.mk,v 1.13 2005/05/23 01:20:50 jlam Exp $
 #
 # System-supplied tools for the FreeBSD operating system.
 
@@ -25,6 +25,7 @@ TOOLS_PLATFORM.false?=		false			# shell builtin
 TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
+TOOLS_PLATFORM.flex?=		/usr/bin/lex
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
