@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.93 2005/05/22 21:04:42 jlam Exp $
+# $NetBSD: replace.mk,v 1.94 2005/05/23 01:20:50 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -112,6 +112,9 @@ _USE_TOOLS:=	${PKGSRC_USE_TOOLS} ${USE_TOOLS}
 _USE_TOOLS:=	${_USE_TOOLS:O:u}
 .  if !empty(USE_TOOLS:Mbison-yacc)	# bison-yacc > yacc
 _USE_TOOLS:=	${_USE_TOOLS:Nyacc}
+.  endif
+.  if !empty(USE_TOOLS:Mflex)		# flex > lex
+_USE_TOOLS:=	${_USE_TOOLS:Nlex}
 .  endif
 .  if !empty(USE_TOOLS:Mgawk)		# gawk > awk
 _USE_TOOLS:=	${_USE_TOOLS:Nawk}
@@ -433,6 +436,25 @@ TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.find=findutils
 TOOLS_REAL_CMD.find=		${TOOLS_PREFIX.find}/bin/${GNU_PROGRAM_PREFIX}find
 TOOLS_${_TOOLS_VARNAME.find}=	${TOOLS_REAL_CMD.find}
 .  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.flex) && !empty(_USE_TOOLS:Mflex)
+.  if !empty(PKGPATH:Mdevel/flex)
+MAKEFLAGS+=			TOOLS_IGNORE.flex=
+.  elif !empty(_TOOLS_USE_PKGSRC.flex:M[yY][eE][sS])
+.    include "../../devel/flex/buildlink3.mk"
+_TOOLS_DEPENDS.flex=		# empty
+.      for _dep_ in ${BUILDLINK_DEPENDS.flex}
+_TOOLS_DEPENDS.flex+=		${_dep_}:${BUILDLINK_PKGSRCDIR.flex}
+.      endfor
+.      undef _dep_
+TOOLS_DEPENDS.flex?=		${_TOOLS_DEPENDS.flex}
+TOOLS_CREATE+=			flex
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.flex=flex
+TOOLS_REAL_CMD.flex=		${TOOLS_PREFIX.flex}/bin/flex
+TOOLS_${_TOOLS_VARNAME.flex}=	${TOOLS_REAL_CMD.flex}
+.  endif
+TOOLS_ALIASES.flex=		lex
 .endif
 
 .if !defined(TOOLS_IGNORE.gawk) && !empty(_USE_TOOLS:Mgawk)
