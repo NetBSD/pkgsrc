@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.170 2005/05/23 06:47:11 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.171 2005/05/23 06:52:35 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1242,8 +1242,6 @@ sub checkfile_Makefile($) {
 	}
 	if ($opt_dumpmakefile) {
 		print("OK: whole Makefile (with all included files) follows:\n");
-		print($rawwhole);
-		print("OK: whole Makefile (new parser) follows:\n");
 		foreach my $line (@{$lines}) {
 			printf("%s\n", $line->to_string());
 		}
