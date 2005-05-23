@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:43 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/23 09:28:40 rillig Exp $
 #
 
 DISTNAME=		cygwin-1.5.13-1
@@ -27,7 +27,7 @@ do-install:
 		${INSTALL_LIB} $$f ${PREFIX}/emul/cygwin/bin/$$(basename $${f%.exe}); \
 	done
 .for f in ${SYMLINKS}
-	${LN} -sf ../emul/cygwin/bin/$f ${PREFIX}/bin/cygwin-$f
+	${LN} -sf ../emul/cygwin/bin/${f} ${PREFIX}/bin/cygwin-${f}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
