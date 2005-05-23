@@ -10,4 +10,4 @@ syntax trees while parsing.
 
 The first application of TPG is TPG itself. The first (not released) version
 of TPG has been written by hand then was used to generate next versions. Now
-TPG can generate itself. 
+TPG can generate itself.
