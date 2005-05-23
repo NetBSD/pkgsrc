@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:44:59 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/23 08:49:16 rillig Exp $
 #
 
 DISTNAME=		xmms-meta-input-0.4
@@ -9,7 +9,6 @@ MASTER_SITES=		http://www.corbac.com/Data/Sources/
 MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www.corbac.com/page3.html
 COMMENT=		XMMS plugin wrapper for shell scripts
-
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libmetainput.so ${PREFIX}/lib/xmms/Input
