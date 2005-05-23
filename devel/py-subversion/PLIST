@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/04/26 00:17:48 epg Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/23 22:58:26 epg Exp $
 lib/libsvn_swig_py-1.la
 ${PYSITELIB}/libsvn/__init__.py
 ${PYSITELIB}/libsvn/__init__.pyc
@@ -37,8 +37,6 @@ ${PYSITELIB}/svn/ra.py
 ${PYSITELIB}/svn/ra.pyc
 ${PYSITELIB}/svn/repos.py
 ${PYSITELIB}/svn/repos.pyc
-${PYSITELIB}/svn/util.py
-${PYSITELIB}/svn/util.pyc
 ${PYSITELIB}/svn/wc.py
 ${PYSITELIB}/svn/wc.pyc
 share/examples/subversion/hook-scripts/mailer.conf.example
