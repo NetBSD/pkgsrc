@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3525 2005/05/23 22:59:11 epg Exp $
+$NetBSD: TODO,v 1.3526 2005/05/23 23:45:11 epg Exp $
 
 Suggested new packages
 ======================
@@ -957,7 +957,6 @@ Suggested package updates
 	o qwt-0.4.0
 	o raine-0.42.3
 	o randread-0.2
-	o rapidsvn-0.8.0
 	o raptor-1.4.5
 	o rasmol-2.7.2.1.1
 	o rat-4.2.25
