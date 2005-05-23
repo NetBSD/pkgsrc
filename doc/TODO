@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3522 2005/05/23 14:02:54 xtraeme Exp $
+$NetBSD: TODO,v 1.3523 2005/05/23 21:42:55 seb Exp $
 
 Suggested new packages
 ======================
@@ -1166,7 +1166,6 @@ Suggested package updates
 	o xmahjongg-3.7
 	o xmcd-3.3.0
 	o xmlsec1-1.2.8
-	o xmlstarlet-1.0.1
 	o xmms-alarm-0.3.7
 	o xmms-crossfade-0.3.7
 	o xmms-dspectogram-1.2.1
