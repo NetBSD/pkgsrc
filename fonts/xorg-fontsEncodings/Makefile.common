@@ -1,0 +1,14 @@
+# $NetBSD: Makefile.common,v 1.1 2005/05/23 20:53:28 xtraeme Exp $
+
+.ifndef XORG_FONTSENCODINGS_COMMON
+XORG_FONTSENCODINGS_COMMON=	defined
+
+BUILD_DEPENDS+=	xorg-clients>=${XORG_VER}:../../x11/xorg-clients
+
+FILESDIR=	${PKGSRCDIR}/fonts/xorg-fontsEncodings/files
+PATCHDIR=	${PKGSRCDIR}/fonts/xorg-fontsEncodings/patches
+DISTINFO_FILE=	${PKGSRCDIR}/fonts/xorg-fontsEncodings/distinfo
+
+.include "../../meta-pkgs/xorg/Makefile.common"
+
+.endif

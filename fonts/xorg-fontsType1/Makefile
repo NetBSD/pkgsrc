@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/30 20:40:32 hira Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/23 20:53:28 xtraeme Exp $
 
 DISTNAME=	X11R${XORG_VER}-src1
 PKGNAME=	xorg-fontsType1-${XORG_VER}
@@ -9,14 +9,11 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org Type1 fonts
 
-BUILD_DEPENDS=	xorg-clients>=${XORG_VER}:../../x11/xorg-clients
 DEPENDS+=	xorg-fontsEncodings>=${XORG_VER}:../../fonts/xorg-fontsEncodings
 
 XBUILD_DIRS=	fonts/encodings fonts/scaled/Type1
 XINSTALL_DIRS=	fonts/scaled/Type1
 XEXTRACTS=	${XBUILD_DIRS}
-
-FILESDIR=	${.CURDIR}/../../fonts/xorg-fontsEncodings/files
 
 SUBST_CLASSES+=		font
 SUBST_STAGE.font=	post-patch
@@ -29,5 +26,5 @@ SUBST_STAGE.scaled=	post-configure
 SUBST_FILES.scaled=	fonts/scaled/Type1/Makefile
 SUBST_SED.scaled=	-e "s,/usr/X11R6,${LOCALBASE},g"
 
-.include "../../meta-pkgs/xorg/Makefile.common"
+.include "../../fonts/xorg-fontsEncodings/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
