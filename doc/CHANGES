@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10169 2005/05/23 16:28:59 hubertf Exp $
+$NetBSD: CHANGES,v 1.10170 2005/05/23 20:42:12 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2563,3 +2563,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mysql4-client to 4.1.12 [xtraeme 2005-05-23]
 	Updated mysql4-server to 4.1.12 [xtraeme 2005-05-23]
 	Updated xlockmore to 5.17 [hubertf 2005-05-23]
+	Updated csound4 to 4.23.13.0 [ben 2005-05-23]
