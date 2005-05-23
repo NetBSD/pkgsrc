@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.9 2004/11/27 02:35:53 epg Exp $
+$NetBSD: patch-ad,v 1.10 2005/05/23 22:58:26 epg Exp $
 
---- Makefile.in.orig	2004-09-11 11:45:29.000000000 -0400
+--- Makefile.in.orig	2005-04-11 08:57:22.000000000 -0400
 +++ Makefile.in
-@@ -573,7 +573,7 @@ install-info: doc-all-info
+@@ -577,7 +577,7 @@ install-swig-rb: install-swig-rb-lib
  $(SWIG_PL_DIR)/native/Makefile: $(SWIG_PL_DIR)/native/Makefile.PL
  	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL
  
