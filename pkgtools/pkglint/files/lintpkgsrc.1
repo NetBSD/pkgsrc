@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.25 2005/02/04 15:44:50 wiz Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.26 2005/05/23 08:35:41 rillig Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -166,6 +166,15 @@ List any prebuilt packages in any subdirs of
 with known vulnerabilities, based on the data in
 .Pa ${PKGSRCDIR}/distfiles/pkg-vulnerabilities .
 .El
+.Sh ENVIRONMENT
+.Ev PKGLINT_FLAGS
+are the flags passed to
+.Xr pkglint 1
+when
+.Nm
+is invoked with the
+.Fl l
+option.
 .Sh AUTHORS
 .An David Brownlee Aq abs@netbsd.org
 .Sh BUGS

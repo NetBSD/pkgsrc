@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.100 2005/05/10 19:07:07 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.101 2005/05/23 08:35:41 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -73,7 +73,7 @@ if ($opt{D} && @ARGV)
 
     $pkgsrcdir = $default_vars->{PKGSRCDIR};
     $pkgdistdir = $default_vars->{DISTDIR};
-    $pkglint_flags = '-q -Wno-workdir';
+    $pkglint_flags = $ENV{"PKGLINT_FLAGS"} || '-q -Wno-workdir';
 
     if ($opt{r} && !$opt{o} && !$opt{m} && !$opt{p})
 	{ $opt{o} = $opt{m} = $opt{p} = 1; }
