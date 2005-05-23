@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/11/23 05:24:05 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/23 09:29:08 rillig Exp $
 
 DISTNAME=	darwin_lib-6.6.2
 CATEGORIES=	emulators
@@ -34,7 +34,7 @@ RPMARGS+=	${DISTDIR}/${TEMP}
 .endfor
 
 EXTRACT_ONLY=	# empty
-NO_BUILD=	1
+NO_BUILD=	yes
 
 do-install:
 	${RM} -f ${WRKDIR}/PLIST_DYNAMIC
