@@ -1,21 +1,16 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/03/26 11:10:10 seb Exp $
+$NetBSD: MESSAGE,v 1.3 2005/05/23 22:01:42 adrianp Exp $
 
-To enable this web application, first go to
-${PREFIX}/share/phpldapadmin
+You will need to edit ${PREFIX}/share/phpldapadmin/config.php to
+initially setup your site.
 
-cp config.php.example config.php
+You will also need to make phpLDAPAdmin accessible through your HTTP server.
+If you are running Apache then you can add the following line to httpd.conf:
 
-and edit to taste. Then you need to update your webserver config to serve
-up that directory, either by symlinking it from your document root or
-using an alias , like so:
+	Include ${PKG_SYSCONFDIR}/httpd/ldapadmin.conf
 
-    Alias /ldapadmin /${PREFIX}/share/phpldapadmin
+to make phpLDAPAdmin accessible through:
 
-  # strongly recommended
-    <Location /ldapadmin >
-        Require user adminaccount
-    </Location>
-
+	http://www.domain.com/ldapadmin/
 
 ===========================================================================
