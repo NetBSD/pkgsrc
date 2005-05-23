@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10171 2005/05/23 21:33:22 seb Exp $
+$NetBSD: CHANGES,v 1.10172 2005/05/23 21:47:38 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2565,3 +2565,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xlockmore to 5.17 [hubertf 2005-05-23]
 	Updated csound4 to 4.23.13.0 [ben 2005-05-23]
 	Updated xmlstarlet to 1.0.1 [seb 2005-05-23]
+	Added php-pcntl-5.0.4 [jdolecek 2005-05-23]
+	Added php-pcntl-4.3.11 [jdolecek 2005-05-23]
