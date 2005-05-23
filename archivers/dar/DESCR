@@ -5,7 +5,7 @@ in the spirit of TAR, with some additions.  Notably:
 	storage on portable media, like CDs or DVDs.
 
 	Can perform incremental back-ups against a reference archive, or,
-	more conveniently, a "catalog" of an archive, which is sort of a 
+	more conveniently, a "catalog" of an archive, which is sort of a
 	combination of a TAR table-of-contents and a file checksum list.
 
 DAR also supports filtering, so files or directories can be excluded from
