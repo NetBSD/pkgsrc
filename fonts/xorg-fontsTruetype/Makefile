@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/30 20:40:31 hira Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/23 20:53:28 xtraeme Exp $
 
 DISTNAME=	X11R${XORG_VER}-src1
 PKGNAME=	xorg-fontsTruetype-${XORG_VER}
@@ -9,15 +9,12 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org Truetype fonts
 
-BUILD_DEPENDS=	xorg-clients>=${XORG_VER}:../../x11/xorg-clients
 BUILD_DEPENDS+=	fontconfig-[0-9]*:../../fonts/fontconfig
 DEPENDS+=	xorg-fontsEncodings>=${XORG_VER}:../../fonts/xorg-fontsEncodings
 
 XBUILD_DIRS=	fonts/encodings fonts/scaled/TTF
 XINSTALL_DIRS=	fonts/scaled/TTF
 XEXTRACTS=	${XBUILD_DIRS} extras/fonts
-
-FILESDIR=	${.CURDIR}/../../fonts/xorg-fontsEncodings/files
 
 SUBST_CLASSES+=		font
 SUBST_STAGE.font=	post-patch
@@ -30,5 +27,5 @@ SUBST_STAGE.TTF=	post-configure
 SUBST_FILES.TTF=	fonts/scaled/TTF/Makefile
 SUBST_SED.TTF=		-e "s,/usr/X11R6,${LOCALBASE},g"
 
-.include "../../meta-pkgs/xorg/Makefile.common"
+.include "../../fonts/xorg-fontsEncodings/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
