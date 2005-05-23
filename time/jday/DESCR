@@ -4,7 +4,7 @@ Utilities to convert between calendar dates and Julian dates:
 	j2d	- Julian date to calendar date
 	dbd	- calculate days between dates
 
-Quite useful in timing situations where you need elapsed time between 
+Quite useful in timing situations where you need elapsed time between
 dates.
 
 This package also includes a library 'libjday.a' for incorporating

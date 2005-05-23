@@ -2,7 +2,7 @@ Alvaro's Messenger, or Another MSN messenger clone is a modified and
 multilanguage version of Compu's Messenger (CCMSN). It's a Tcl/Tk script
 as was CCMSN and Tcl/Tk must be installed to run it. This means it is
 multiplatform and can run on any OS having Tcl/Tk installed (Linux, Windows,
-Macintosh). 
+Macintosh).
 
 It's a clone of the original MSN Messenger, having the same look and feel.
 Some of it features are:

@@ -10,4 +10,4 @@ tob supports full backups, differential backups (of the files which
 were changed since the last full backup), and incremental backups (of
 files changed since any previous backups).  It lets you determine the
 size of the backup before actually making it, maintain listings of
-made backups, make remote backups and possibly more. 
+made backups, make remote backups and possibly more.

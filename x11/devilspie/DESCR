@@ -7,4 +7,4 @@ Devil's Pie can be configured to detect windows as they are created, and match
 the window to a set of rules. If the window matches the rules, it can perform a
 series of actions on that window. For example, I make all windows created by
 X-Chat appear on all workspaces, and the main Gkrellm1 window does not appear
-in the pager or task list. 
+in the pager or task list.

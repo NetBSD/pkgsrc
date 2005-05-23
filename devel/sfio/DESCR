@@ -2,7 +2,7 @@ Sfio is a portable library for managing I/O streams. It provides
 similar functionality to the ANSI C Standard I/O functions known
 collectively as Stdio. However, it has a distinct interface and is
 generally faster and more robust than most Stdio implementations.
-(For backward compatibility, Sfio provides two Stdio emulation packages.) 
+(For backward compatibility, Sfio provides two Stdio emulation packages.)
 Sfio also introduces a number of new features and concepts beyond
 Stdio stream I/O processing:
 
@@ -15,8 +15,8 @@ Stdio stream I/O processing:
 + Robust handling of variable-sized records, and
 + Extensible printf/scanf-like formatting I/O operations.
 
-The current distribution of Sfio is Sfio1998. The library handles 64-bit 
-streams on platforms that support 64-bit files. The formatting family of 
-functions (e.g., sfprintf() and sfscanf()) have been extended so that 
-applications can redefine the meanings of predefined patterns as well as 
+The current distribution of Sfio is Sfio1998. The library handles 64-bit
+streams on platforms that support 64-bit files. The formatting family of
+functions (e.g., sfprintf() and sfscanf()) have been extended so that
+applications can redefine the meanings of predefined patterns as well as
 define new patterns.

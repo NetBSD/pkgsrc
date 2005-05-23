@@ -6,7 +6,7 @@ NetBSD verion of this package contains several programs:
 1. Programs included with original TeXfamily
   - NTT JTeX 1.9.1 (Japanese TeX)
   - MuLTeX 0.8.1 (Multi-Lingual TeX)
-	
+
 2. Tools for JTex/MuLTeX (available from TeXfamily's site)
   - dvi2ps-3.2j (dvi2ps with Japanese support)
   - jmakeindex (indexing tool with Japanese support)

@@ -4,4 +4,4 @@ remote target for gdb. When used in gdbserver mode, the simulator
 is used as a backend so that gdb can be used as a source level
 debugger for AVR programs.
 
-Simulavr was written by Theodore A. Roth 
+Simulavr was written by Theodore A. Roth

@@ -9,4 +9,4 @@ full-screen, always-above or sticky, and activate, close, move, resize,
 maximize and minimize them.
 
 The command line access makes it easy to automate these tasks and execute them
-from any application that is able to run a command in response to some event. 
+from any application that is able to run a command in response to some event.

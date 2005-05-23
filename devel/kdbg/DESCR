@@ -1,9 +1,9 @@
 KDbg is a graphical user interface to gdb, the GNU debugger. It provides an
 intuitive interface for setting breakpoints, inspecting variables, and stepping
-through code. 
+through code.
 
 KDbg requires KDE, the K Desktop Environment, but you can of course debug any
-program. 
+program.
 
 Features:
 o 	Inspection of variable values in a tree structure.

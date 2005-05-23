@@ -1,6 +1,6 @@
 ICDPROG is a simple command line programmer for Microchip PIC controllers,
 using the Microchip or Olimex ICD (in circuit debugger) as a programmer.
-It was written by Geir Thomassen. 
+It was written by Geir Thomassen.
 
 The program is written for command line usage.
 

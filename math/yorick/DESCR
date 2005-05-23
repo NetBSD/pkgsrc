@@ -7,7 +7,7 @@ includes tools to assist making animated and simple 3D graphs.
 
 Yorick's binary file package can read or write floating point formats
 foreign to the machine where Yorick is running.
-										    
+
 A library of functions written in the Yorick language, including
 Bessel, gamma, and related functions, multiple key sorting, spline,
 rational function, and least squares fitting, and routines to read and

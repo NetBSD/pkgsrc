@@ -1,8 +1,8 @@
 LinPSK is a PSK31 program based on WinPSK 1.0
 
-Main features are: 
+Main features are:
 
-    * support for BPSK, QPSK, MFSK16 and RTTY 
+    * support for BPSK, QPSK, MFSK16 and RTTY
     * simultaneuos decoding of up to four channels.
     * mixed digital signal reception
     * trigger channels on receiving a predefined ASCII string patterns

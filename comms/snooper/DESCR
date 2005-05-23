@@ -1,6 +1,6 @@
 Snooper is a tool for snooping communication between two devices
 that communicate with an RS232C serial line.
-	
+
 For example, say you would like to snoop the following configuration
 		partyA ---cableAB--- partyB
 where partyA is a computer and partyB is a computer/modem/digi-cam/whatever.

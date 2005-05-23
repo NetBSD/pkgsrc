@@ -1,6 +1,6 @@
 To quote from the author, Brandon Long:
 
-	This program is based on the program in Appendix A of rfc1896. 
+	This program is based on the program in Appendix A of rfc1896.
 	It does as much as I can think of to convert text/enriched to
 	text/html (since there are so many viewers for text/html).  It
 	is a hack.  It is not perfect, and the html it generates is
