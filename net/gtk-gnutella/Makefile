@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2005/05/22 20:08:24 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/05/23 07:58:09 adam Exp $
 
-DISTNAME=	gtk-gnutella-0.95.2
+DISTNAME=	gtk-gnutella-0.95.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-gnutella/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,8 +9,8 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://gtk-gnutella.sourceforge.net/
 COMMENT=	GTK-based gnutella client
 
-USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake
 USE_X11=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
@@ -28,10 +28,4 @@ CONFIGURE_ARGS+=	-d -e -r -s \
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-
-post-configure:
-	cd "${WRKSRC}/src/ui/gtk/gtk2" && \
-	${TOUCH} interface-glade.c interface-glade.h \
-		support-glade.c support-glade.h
-
 .include "../../mk/bsd.pkg.mk"
