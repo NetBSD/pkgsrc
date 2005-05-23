@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10163 2005/05/23 08:40:33 adam Exp $
+$NetBSD: CHANGES,v 1.10164 2005/05/23 11:38:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2556,3 +2556,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gtk-gnutella to 0.95.3 [adam 2005-05-23]
 	Updated gimp-docs to 2.0.8 [adam 2005-05-23]
 	Updated fontforge to 20050502 [adam 2005-05-23]
+	Updated xpaint to 2.7.7 [adam 2005-05-23]
