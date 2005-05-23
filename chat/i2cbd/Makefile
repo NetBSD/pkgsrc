@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:04 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/05/23 09:03:12 rillig Exp $
 #
 
 DISTNAME=	i2cbd-2.0_BETA1
@@ -23,7 +23,7 @@ EGDIR=			${PREFIX}/share/examples/i2cbd
 EGFILES=		motd icbd_help icbd.deny news.1
 CONF_FILES_PERMS=
 .for f in ${EGFILES}
-CONF_FILES_PERMS+=	${EGDIR}/$f ${PKG_SYSCONFDIR}/$f \
+CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
 			${ICBD_OWNER} ${ROOT_GROUP} 644
 .endfor
 .undef f
@@ -41,7 +41,7 @@ post-build:
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 .for f in ${EGFILES}
-	${INSTALL_DATA} ${WRKSRC}/etc/$f ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
 .endfor
 .undef f
 	${INSTALL_SCRIPT} ${WRKDIR}/icbd.sh ${PREFIX}/etc/rc.d/icbd
