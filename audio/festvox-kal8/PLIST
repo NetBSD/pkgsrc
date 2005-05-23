@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:16:10 zuntum Exp $
-share/festival/lib/voices/english/kal_diphone/group/kallpc8k.group
+@comment $NetBSD: PLIST,v 1.2 2005/05/23 08:21:35 rillig Exp $
+share/festival/lib/voices/english/kal_diphone/COPYING
 share/festival/lib/voices/english/kal_diphone/festvox/kal_diphone.scm
 share/festival/lib/voices/english/kal_diphone/festvox/kaldurtreeZ.scm
-share/festival/lib/voices/english/kal_diphone/COPYING
-@dirrm share/festival/lib/voices/english/kal_diphone/group
+share/festival/lib/voices/english/kal_diphone/group/kallpc8k.group
 @dirrm share/festival/lib/voices/english/kal_diphone/festvox
+@dirrm share/festival/lib/voices/english/kal_diphone/group
 @dirrm share/festival/lib/voices/english/kal_diphone
