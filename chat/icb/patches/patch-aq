@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.1.1.1 2000/12/15 00:36:39 wiz Exp $
+$NetBSD: patch-aq,v 1.2 2005/05/23 09:04:00 rillig Exp $
 
 diff -x *.orig -urN ./tcl/tclGlob.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/tcl/tclGlob.c
 --- ./tcl/tclGlob.c	Fri Feb 24 22:19:55 1995
@@ -32,4 +32,3 @@ diff -x *.orig -urN ./tcl/tclGlob.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-
  		    }
  		    sprintf(newDir, "%s%s/", dir, entryPtr->d_name);
  		    result = DoGlob(interp, newDir, p+1, resPtr);
-
