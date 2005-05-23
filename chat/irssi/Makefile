@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/04/11 21:45:04 tv Exp $
+# $NetBSD: Makefile,v 1.32 2005/05/23 09:06:24 rillig Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 PKGREVISION=		3
@@ -10,7 +10,7 @@ MAINTAINER=		mutru@iki.fi
 HOMEPAGE=		http://www.irssi.org/
 COMMENT=                Secure and modular IRC client with text mode user interface
 
-.include "${.CURDIR}/Makefile.common"
+.include "Makefile.common"
 
 # list it into IPv6-ready packages
 BUILD_DEFS+=		USE_INET6 IRSSI_USE_PERL IRSSI_USE_SSL
