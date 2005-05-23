@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10164 2005/05/23 11:38:13 adam Exp $
+$NetBSD: CHANGES,v 1.10165 2005/05/23 12:02:21 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2557,3 +2557,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gimp-docs to 2.0.8 [adam 2005-05-23]
 	Updated fontforge to 20050502 [adam 2005-05-23]
 	Updated xpaint to 2.7.7 [adam 2005-05-23]
+	Added fe-1.6 [agc 2005-05-23]
