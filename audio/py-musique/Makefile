@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/05/21 23:20:24 augustss Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/23 15:25:05 augustss Exp $
 #
 
 DISTNAME=	pymusique-0.5
@@ -10,6 +10,11 @@ MASTER_SITES=	http://fuware.nanocrew.net/pymusique/
 MAINTAINER=	augustss@NetBSD.org
 HOMEPAGE=	http://fuware.nanocrew.net/pymusique/
 COMMENT=	Interface to the iTunes Music Store
+
+NO_SRC_ON_FTP=          ${RESTRICTED}
+NO_BIN_ON_FTP=          ${RESTRICTED}
+NO_SRC_ON_CDROM=        ${RESTRICTED}
+NO_BIN_ON_CDROM=        ${RESTRICTED}
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
