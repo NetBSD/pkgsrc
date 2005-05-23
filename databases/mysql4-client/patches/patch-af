@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.6 2005/01/17 14:42:35 xtraeme Exp $
+$NetBSD: patch-af,v 1.7 2005/05/23 14:00:21 xtraeme Exp $
 
---- configure.orig	2005-01-17 15:03:22.000000000 +0100
-+++ configure	2005-01-17 15:05:30.000000000 +0100
-@@ -36436,30 +36436,10 @@
+--- configure.orig	2005-05-13 13:34:04.000000000 +0200
++++ configure	2005-05-23 12:36:42.000000000 +0200
+@@ -37003,30 +37003,10 @@
  fi;
  
  
@@ -33,7 +33,7 @@ $NetBSD: patch-af,v 1.6 2005/01/17 14:42:35 xtraeme Exp $
  
  
  
-@@ -36738,7 +36718,7 @@
+@@ -37304,7 +37284,7 @@
  else
    bench_dirs=""
  fi
@@ -42,3 +42,12 @@ $NetBSD: patch-af,v 1.6 2005/01/17 14:42:35 xtraeme Exp $
  
  
  # Don't build readline, i have it already
+@@ -37421,7 +37401,7 @@
+ main ()
+ {
+ 
+-		char res= *(*rl_completion_entry_function)(0,0);
++		char res=(*rl_completion_entry_function)(0,0);
+ 		completion_matches(0,0);
+ 
+   ;

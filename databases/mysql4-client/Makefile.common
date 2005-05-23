@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.39 2005/05/22 20:07:46 jlam Exp $
+# $NetBSD: Makefile.common,v 1.40 2005/05/23 14:00:20 xtraeme Exp $
 
-DISTNAME=		mysql-4.1.11
+DISTNAME=		mysql-4.1.12
 CATEGORIES=		databases
 MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQL-4.1/ \
 			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQL-4.1/ \
@@ -43,6 +43,7 @@ CONFIGURE_ENV+=		ac_cv_lib_gen_p2open="no"
 
 # We always use our own readline, either system- or pkgsrc-supplied.
 CONFIGURE_ARGS+=	--without-readline
+CONFIGURE_ARGS+=	--without-libedit
 
 # This forces mysql.info _not_ to be rebuilt.
 CONFIGURE_ARGS+=	--without-docs
