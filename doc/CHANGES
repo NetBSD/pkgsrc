@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10175 2005/05/23 22:24:54 seb Exp $
+$NetBSD: CHANGES,v 1.10176 2005/05/23 22:44:12 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2570,3 +2570,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xentools20 to 2.0.3nb5 [bouyer 2005-05-23]
 	Updated phpldapadmin to 0.9.6cnb1 [adrianp 2005-05-23]
 	Updated p5-XML-Twig to 3.17 [seb 2005-05-23]
+	Updated clamav to 0.85.1 [xtraeme 2005-05-23]
