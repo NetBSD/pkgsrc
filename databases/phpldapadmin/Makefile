@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/05/19 23:12:17 seb Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/23 22:01:42 adrianp Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
 
@@ -12,10 +13,32 @@ DEPENDS+=	php-ldap>=4.1.2:../../databases/php-ldap
 
 VERSION=	0.9.6c
 NO_BUILD=	YES
+USE_PKGINSTALL=	YES
+APACHE_USER?=	www
+
+CONF_FILES=	${PREFIX}/share/examples/phpldapadmin/config.php.example \
+		${PREFIX}/share/phpldapadmin/config.php
+CONF_FILES+=	${PREFIX}/share/examples/phpldapadmin/phpldapadmin.conf \
+		${PKG_SYSCONFDIR}/httpd/phpldapadmin.conf		
+SPECIAL_PERMS=	${PREFIX}/share/phpldapadmin/config.php \
+		${APACHE_USER} wheel 0600
 
 INSTALLATION_DIRS=	${PREFIX}/share/phpldapadmin
 
+do-configure:
+	@${SED} -e "s|@LDAPADMINDIR@|${PREFIX}/share/phpldapadmin|g" \
+		${FILESDIR}/phpldapadmin.conf > ${WRKDIR}/phpldapadmin.conf
+
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/phpldapadmin
+
+	${INSTALL_DATA} ${WRKSRC}/config.php.example \
+		${PREFIX}/share/examples/phpldapadmin
+	${INSTALL_DATA} ${WRKDIR}/phpldapadmin.conf \
+		${PREFIX}/share/examples/phpldapadmin
+
+	@${RM} ${WRKSRC}/config.php.example
+
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpldapadmin
 	cd ${WRKSRC} && ${PAX}		\
 		-s /\.#//		\
