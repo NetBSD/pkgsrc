@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/23 12:00:42 agc Exp $
+bin/fe
+man/man1/fe.1
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/fe.mo
+share/doc/fe/fe.ps
+share/doc/fe/feref.ps
+@dirrm share/doc/fe
