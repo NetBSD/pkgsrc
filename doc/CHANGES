@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10159 2005/05/22 09:17:56 jmmv Exp $
+$NetBSD: CHANGES,v 1.10160 2005/05/23 07:51:44 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2552,3 +2552,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added py-musique-0.5 [augustss 2005-05-22]
 	Updated wxhaskell to 0.9.4 [augustss 2005-05-22]
 	Added hsetroot-1.0.2 [jmmv 2005-05-22]
+	Updated pkglint to 4.16 [rillig 2005-05-23]
