@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/03/01 01:17:01 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2005/05/23 08:50:36 rillig Exp $
 
 --- ffmpeg-strip-wma/asf.c.orig	Wed May 26 19:16:39 2004
 +++ ffmpeg-strip-wma/asf.c	Sat Dec 11 21:32:58 2004
@@ -57,4 +57,3 @@ $NetBSD: patch-ac,v 1.1.1.1 2005/03/01 01:17:01 xtraeme Exp $
  }
  
  static int asf_probe(AVProbeData *pd)
-
