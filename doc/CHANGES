@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10161 2005/05/23 07:59:09 adam Exp $
+$NetBSD: CHANGES,v 1.10162 2005/05/23 08:24:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2554,3 +2554,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added hsetroot-1.0.2 [jmmv 2005-05-22]
 	Updated pkglint to 4.16 [rillig 2005-05-23]
 	Updated gtk-gnutella to 0.95.3 [adam 2005-05-23]
+	Updated gimp-docs to 2.0.8 [adam 2005-05-23]
