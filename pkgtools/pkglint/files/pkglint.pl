@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.171 2005/05/23 06:52:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.172 2005/05/23 09:31:20 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -719,7 +719,7 @@ sub checkline_valid_characters($$) {
 sub checkline_trailing_whitespace($) {
 	my ($line) = @_;
 	if ($line->text =~ /\s+$/) {
-		$line->log_warning("Trailing white space.");
+		$line->log_warning("Trailing white-space.");
 	}
 	return true;
 }
@@ -1455,7 +1455,7 @@ sub checkfile_Makefile($) {
 	} else {
 		log_info(NO_FILE, NO_LINE_NUMBER, "\$$conf_rcsidstr\$ seen in $file.");
 		if ($1 ne ' ') {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "Please use single whitespace ".
+			log_warning(NO_FILE, NO_LINE_NUMBER, "Please use single white-space ".
 				"right before the \$$conf_rcsidstr\$ tag.");
 		}
 		if ($2 ne '') {
