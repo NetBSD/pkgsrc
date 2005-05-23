@@ -8,7 +8,7 @@ unpack frozen (1.0) files, if you have them.
 
 --------- CALGARY COMPRESSION CORPUS RESULTS --------
 
-  41127  bib.F		19924  paper1.F	
+  41127  bib.F		19924  paper1.F
  340447  book1.F	32439  paper2.F
  229188  book2.F	54993  pic.F
   68610  geo.F		14180  progc.F
