@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:43 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/23 21:32:01 seb Exp $
 #
 
-DISTNAME=		xmlstarlet-0.9.3
-PKGREVISION=	1
+DISTNAME=		xmlstarlet-1.0.1
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmlstar/}
 
@@ -15,6 +14,18 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-libxslt-prefix=${BUILDLINK_PREFIX.libxslt}
 PTHREAD_OPTS+=		require
+
+BUILDLINK_DEPENDS.libxml2+=	libxml2>=2.6.12
+BUILDLINK_DEPENDS.libxslt+=	libxslt>=1.1.9
+
+TEST_TARGET=	check
+
+INSTALLATION_DIRS+=	share/doc/xmlstarlet
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/xmlstarlet-ug.pdf ${PREFIX}/share/doc/xmlstarlet
+	${INSTALL_DATA} ${WRKSRC}/doc/xmlstarlet.txt ${PREFIX}/share/doc/xmlstarlet
+
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
