@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10165 2005/05/23 12:02:21 agc Exp $
+$NetBSD: CHANGES,v 1.10166 2005/05/23 12:15:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2558,3 +2558,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated fontforge to 20050502 [adam 2005-05-23]
 	Updated xpaint to 2.7.7 [adam 2005-05-23]
 	Added fe-1.6 [agc 2005-05-23]
+	Updated libgsf to 1.12.0 [wiz 2005-05-23]
