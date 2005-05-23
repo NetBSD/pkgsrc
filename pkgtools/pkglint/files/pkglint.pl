@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.169 2005/05/23 00:10:42 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.170 2005/05/23 06:47:11 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1264,7 +1264,7 @@ sub checkfile_Makefile($) {
 	#
 	if ($opt_warn_paren) {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Checking for \$(VARIABLE).");
-		if ($whole =~ /\$\([\w\d]+\)/) {
+		if ($whole =~ /[^\$]\$\([\w\d]+\)/) {
 			log_warning(NO_FILE, NO_LINE_NUMBER, "Use \${VARIABLE} instead of \$(VARIABLE).");
 		}
 	}
