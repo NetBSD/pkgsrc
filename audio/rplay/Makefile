@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/04/11 21:44:56 tv Exp $
+# $NetBSD: Makefile,v 1.49 2005/05/23 08:43:59 rillig Exp $
 #
 
 DISTNAME=	rplay-3.3.2
@@ -34,7 +34,7 @@ pre-configure:
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 .for f in rplay.conf rplay.helpers rplay.hosts rplay.servers
-	${INSTALL_DATA} ${WRKSRC}/etc/$f ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
 .endfor
 .undef f
 
