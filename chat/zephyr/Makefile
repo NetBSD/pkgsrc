@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:06 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/23 09:24:01 rillig Exp $
 #
 
 DISTNAME=	zephyr-20010518
@@ -15,13 +15,12 @@ USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 USE_X11=	YES
 
-# N.B. the following assume NetBSD-only. 
-CPPFLAGS+=      -I/usr/include/kerberosIV -I/usr/include/krb5
-LDFLAGS+=       -lroken -lcrypto -lcom_err -ledit -lcurses
-CONFIGURE_ARGS=	--sysconfdir="${PKG_SYSCONFDIR}"
-CONFIGURE_ARGS+="--with-krb4"
-CONFIGURE_ARGS+="--with-hesiod"
-CONFIGURE_ARGS+="--with-ares"
+CPPFLAGS.NetBSD+=	-I/usr/include/kerberosIV -I/usr/include/krb5
+LDFLAGS.NetBSD+=	-lroken -lcrypto -lcom_err -ledit -lcurses
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-krb4
+CONFIGURE_ARGS+=	--with-hesiod
+CONFIGURE_ARGS+=	--with-ares
 
 ZEPHYR_DOCDIR=	${PREFIX}/share/doc/zephyr
 ZEPHYR_DOCS=	INSTALL NOTES OPERATING README USING
