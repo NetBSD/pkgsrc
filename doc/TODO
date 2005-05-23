@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3526 2005/05/23 23:45:11 epg Exp $
+$NetBSD: TODO,v 1.3527 2005/05/23 23:50:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -988,6 +988,7 @@ Suggested package updates
 	o rt-mysql-3.4.1
 	o rt-pgsql-3.4.1
 	o rtcw-1.41.3
+	o ruby-RMagick-1.8.1 [pkg/30313]
 	o ruby-fox-1.2.6 [needs to update of fox-1.4.6]
 	o ruby-mysql-2.5.2
 	o rudiments-0.28.2
