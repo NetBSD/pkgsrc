@@ -19,7 +19,7 @@ Features include:
 - Dump table data in a variety of formats: SQL, COPY, XML, XHTML, CSV, Tabbed,
   pg_dump
 - Import SQL scripts, COPY data, XML, CSV and Tabbed
-- Excellent language support: 
+- Excellent language support:
   * Available in 18 languages
   * No encoding conflicts. Edit Russian data using a Japanese interface!
 - Easy to install and configure

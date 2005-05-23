@@ -21,4 +21,4 @@ features:
     # of parts req, date, age, messageid, and references.
   * Search for newsgroups based on their names and/or descriptions
   * Automatic handling of PAR and PAR2 files retrieves only as many
-    recovery files as necessary to repair any missing/damaged files. 
+    recovery files as necessary to repair any missing/damaged files.

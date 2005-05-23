@@ -7,7 +7,7 @@ selectable by command line options.  This set of differences is often
 called a "diff" or "patch".  For files that are identical, `diff'
 normally produces no output; for binary (non-text) files, `diff'
 normally reports only that they are different.
-  
+
    You can use the `cmp' command to show the offsets and line numbers
 where two files differ.  `cmp' can also show all the characters that
 differ between the two files, side by side.
