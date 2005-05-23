@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:44:59 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/23 08:47:26 rillig Exp $
 #
 
 DISTNAME=		xmms-meta-csound-0.3
@@ -16,6 +16,7 @@ DEPENDS+=		xmms-meta-input-[0-9]*:../../audio/xmms-meta-input
 
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		# empty
+NO_CHECKSUM=		yes
 
 do-build:
 	${SED} "s,XXXPREFIXXXX,${PREFIX},g" \
