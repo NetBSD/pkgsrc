@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/05/22 20:08:29 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/05/23 21:18:09 jlam Exp $
 #
 
 DISTNAME=       aide-0.10
@@ -14,7 +14,6 @@ BUILDLINK_DEPENDS.mhash?=	mhash>=0.8.17
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	bison gmake lex
-USE_TOOLS+=	bison
 
 .include "../../security/mhash/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
