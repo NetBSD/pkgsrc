@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/05/09 18:37:56 jdolecek Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/23 22:04:34 jdolecek Exp $
 
 DISTNAME=	php-extensions-5.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	meta-pkgs www php5
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -39,6 +39,7 @@ DEPENDS+=	php-mssql-5.0.*:../../databases/php-mssql
 DEPENDS+=	php-mysql-5.0.*:../../databases/php-mysql
 DEPENDS+=	php-odbc-5.0.*:../../databases/php-odbc
 DEPENDS+=	php-openssl-5.0.*:../../security/php-openssl
+DEPENDS+=	php-pcntl-5.0.*:../../devel/php-pcntl
 DEPENDS+=	php-pdflib-5.0.*:../../print/php-pdflib
 DEPENDS+=	php-pgsql-5.0.*:../../databases/php-pgsql
 DEPENDS+=	php-posix-5.0.*:../../devel/php-posix
