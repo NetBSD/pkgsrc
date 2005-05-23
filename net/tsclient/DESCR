@@ -1,6 +1,6 @@
 Tsclient is a frontend for rdesktop
 
-Features:  
+Features:
 
 * GTK+-2.0
 * GNOME panel applet to quickly launch saved rdp files

@@ -13,7 +13,7 @@ package contains several applications that work with qmail:
 * 822header, 822field, 822date, and 822received extract various
     pieces of information from a mail message.
 
-* 822print converts a message into an easier-to-read format. 
+* 822print converts a message into an easier-to-read format.
 
 mess822 supports the full complexity of RFC 822 address lists,
 including address groups, source routes, spaces around dots, etc.

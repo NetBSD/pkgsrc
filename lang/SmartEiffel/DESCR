@@ -5,6 +5,6 @@ DOS, OS2, WINDOWS NT/95/2000, Macintosh, NeXT, Amiga, AmigaDE/Elate, BeOS,
 QNX, VMS, etc. Actually, SmartEiffel should run on any platform for which
 an ANSI C compiler exists.
 
-The current distribution includes an Eiffel to C compiler, an Eiffel to 
-Java bytecode compiler, a debugger, a documentation tool, a pretty printer 
-and various other tools. 
+The current distribution includes an Eiffel to C compiler, an Eiffel to
+Java bytecode compiler, a debugger, a documentation tool, a pretty printer
+and various other tools.

@@ -1,6 +1,6 @@
 This is an Apple StyleWriter driver for un*x.  It was developed on
 NetBSD-mac68k, and has been reported to work on NetBSD-i386,
-linux-pmac, mklinux-ppc, and linux-x86. 
+linux-pmac, mklinux-ppc, and linux-x86.
 
 Supported printers include:
 

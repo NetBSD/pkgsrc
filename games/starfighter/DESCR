@@ -1,4 +1,4 @@
-Project: Starfighter is an old school 2D shoot 'em up. In the game you 
+Project: Starfighter is an old school 2D shoot 'em up. In the game you
 take on the role of a rebel pilot called Chris, who is attempting to
 overthrow a military corporation called Weapco. Weapco has seized control
 of the known universe and currently rules it with an iron fist. Chris can
@@ -10,7 +10,7 @@ with Chris attempting to escape a Weapco patrol that has intercepted him.
 Features:
 
     * 26 missions over 4 star systems
-    * Primary and Secondary Weapons 
+    * Primary and Secondary Weapons
 	(including a laser cannon and a charge weapon)
     * A weapon powerup system
     * Wingmates

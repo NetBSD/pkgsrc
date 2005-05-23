@@ -6,7 +6,7 @@ uses some optimizations to speed  up  execution of PHP scripts.
 eAccelerator typically reduces server load and  increases  the
 speed of your PHP code by 1-10 times.
 
-eAccelerator is a fork of TurckMMCache 
+eAccelerator is a fork of TurckMMCache
 ( http://sourceforge.net/project/turckmm-cache/  by Dmitry Stogov )
 
 eAccelerator stores compiled PHP scripts in shared memory  and
