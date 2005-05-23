@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:00 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/23 08:56:25 rillig Exp $
 #
 
 DISTNAME=		GeneSplicer
@@ -26,4 +26,3 @@ do-install:
 	cd ${WRKSRC}/../ && ${PAX} -rw ${EXAMPLES} ${EXDIR}/
 
 .include "../../mk/bsd.pkg.mk"
-
