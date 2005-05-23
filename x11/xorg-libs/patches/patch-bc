@@ -1,0 +1,22 @@
+$NetBSD: patch-bc,v 1.1 2005/05/23 19:14:15 xtraeme Exp $
+
+--- include/Xos_r.h.orig	2005-04-30 23:18:21.000000000 +0200
++++ include/Xos_r.h	2005-04-30 23:17:52.000000000 +0200
+@@ -257,7 +257,7 @@
+  */
+ 
+ #if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || \
+-    defined(__APPLE__)
++    defined(__APPLE__) || defined(__DragonFly__)
+ static __inline__ void _Xpw_copyPasswd(_Xgetpwparams p)
+ {
+    memcpy(&(p).pws, (p).pwp, sizeof(struct passwd));
+@@ -427,7 +427,7 @@
+ /* UnixWare 2.0, or other systems with thread support but no _r API. */
+ /* WARNING:  The h_addr_list and s_aliases values are *not* copied! */
+ 
+-#if defined(__NetBSD__) || defined(__FreeBSD__)
++#if defined(__DragonFly__) || defined(__NetBSD__) || defined(__FreeBSD__)
+ #include <sys/param.h>
+ #endif
+ 

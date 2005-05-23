@@ -1,9 +1,5 @@
 /* xc/config/cf/DragonFly.cf */
 
-#ifndef LocalBase
-# define LocalBase	@LOCALBASE@
-#endif
-
 #define UseElfFormat		YES
 #define OSBinaryFormat		[ELF]
 
@@ -60,21 +56,27 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVe
 /*
  * Multi-thread safe libs 
  */	
+#ifndef HasLibPthread
+# define HasLibPthread		NO
+#endif
 #define HasPosixThreads		YES
 #define ThreadedX		YES
 #define SystemMTDefines		-D_REENTRANT -D_THREAD_SAFE
 #define HasThreadSafeAPI	YES
 #define MTSafeAPIDefines	-DXUSE_MTSAFE_API -DXNO_MTSAFE_PWDAPI
 
-# define BuildThreadStubLibrary	YES
-# define NeedUIThrStubs		YES
+#if HasLibPthread
+# define ThreadsLibraries	-lpthread
+#else
 # define ThreadsLibraries	-pthread
 # define SharedX11Reqs		$(LDPRELIB)
 # define SharedXtReqs		$(LDPRELIB) $(XONLYLIB) $(SMLIB) $(ICELIB)
+#endif
 
 #define AvoidNullMakeCommand	YES
 #define StripInstalledPrograms	YES
 #define CompressAllFonts	YES
+#define GzipFontCompression	YES
 #define Malloc0ReturnsNull	YES
 #define NeedConstPrototypes	YES
 #define NeedFunctionPrototypes	YES
@@ -85,10 +87,13 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVe
 #define HasPlugin		YES
 #define VendorHasX11R6_3libXext	YES	/* XC or XFree86 >= 3.3.1 */
 
-#define CcCmd                         cc
-#define OptimizedCDebugFlags         /* -O2 causes some files to die out */
-#define CplusplusCmd          c++
-#define CppCmd			cpp
+#ifndef CcCmd
+#define CcCmd		@@PKGSRC_CC@@
+#endif
+#ifndef CplusplusCmd
+#define CplusplusCmd	@@PKGSRC_CXX@@
+#endif
+#define CppCmd			@@PKGSRC_CPP@@
 #define PreProcessCmd		CppCmd
 
 #define StandardCppOptions	-traditional
@@ -105,6 +110,8 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVe
 #  define DefaultCCOptions	-ansi -Dasm=__asm NoSystemWarn
 # endif
 #endif
+
+#define OptimizedCDebugFlags	@@PKGSRC_CFLAGS@@
 
 #define HasSetUserContext	YES
 #define HasGetpeereid		YES
@@ -171,7 +178,7 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVe
 # define UseGnuMalloc		NO
 #endif
 #ifndef GnuMallocLibrary
-# define GnuMallocLibrary	/**/
+# define GnuMallocLibrary	-lgnumalloc
 #endif
 
 #ifndef HasZlib
@@ -187,12 +194,10 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVe
 
 #ifndef HasExpat
 # define HasExpat		YES
-# define ExpatDir		LocalBase
 #endif
 
 #ifndef HasFreetype2
 # define HasFreetype2		YES
-# define Freetype2Dir		LocalBase
 #endif
 
 #undef  InstallCmd
@@ -237,7 +242,7 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVe
 #define HasMkstemp		YES
 
 #ifndef PreIncDir
-# define PreIncDir	/usr/include /* DefaultGccIncludeDir ? */
+# define PreIncDir	/usr/include
 #endif
 
 #define HasGroff	YES
@@ -248,8 +253,8 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVe
 # define ExtraFilesToClean *.core
 #endif
 
-#define DefaultUserPath		/usr/pkg/bin/bin:/usr/bin:/sbin:/usr/sbin:$(BINDIR):/usr/local/bin
-#define DefaultSystemPath	/usr/pkg/sbin:/bin:/usr/bin:/sbin:/usr/sbin:$(BINDIR)
+#define DefaultUserPath		/bin:/usr/bin:/sbin:/usr/sbin:$(BINDIR):/usr/local/bin
+#define DefaultSystemPath	/bin:/usr/bin:/sbin:/usr/sbin:$(BINDIR)
 
 #ifndef SystemManDirectory
 # define SystemManDirectory	/usr/share/man
@@ -273,7 +278,6 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVe
 #define MkCookieCmd \
 	'dd if=/dev/urandom bs=16 count=1 2>/dev/null | hexdump -e \\"%08x\\"'
 #endif
-
 
 #include <bsdLib.rules>
 
