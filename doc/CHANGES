@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10167 2005/05/23 13:16:28 seb Exp $
+$NetBSD: CHANGES,v 1.10168 2005/05/23 14:02:54 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2560,3 +2560,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added fe-1.6 [agc 2005-05-23]
 	Updated libgsf to 1.12.0 [wiz 2005-05-23]
 	Updated amarok to 1.2.4 [seb 2005-05-23]
+	Updated mysql4-client to 4.1.12 [xtraeme 2005-05-23]
+	Updated mysql4-server to 4.1.12 [xtraeme 2005-05-23]
