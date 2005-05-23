@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.7 2005/01/10 15:47:18 xtraeme Exp $
+$NetBSD: patch-af,v 1.8 2005/05/23 14:00:21 xtraeme Exp $
 
---- configure.orig	2005-01-10 16:12:40.000000000 +0100
-+++ configure	2005-01-10 16:12:52.000000000 +0100
-@@ -36429,33 +36429,10 @@
+--- configure.orig	2005-05-13 13:34:04.000000000 +0200
++++ configure	2005-05-23 15:42:07.000000000 +0200
+@@ -37003,33 +37003,10 @@
  fi;
  
  
@@ -36,3 +36,12 @@ $NetBSD: patch-af,v 1.7 2005/01/10 15:47:18 xtraeme Exp $
  
  
    echo "$as_me:$LINENO: checking if we should build MySQLFS" >&5
+@@ -37421,7 +37398,7 @@
+ main ()
+ {
+ 
+-		char res= *(*rl_completion_entry_function)(0,0);
++		char res=(*rl_completion_entry_function)(0,0);
+ 		completion_matches(0,0);
+ 
+   ;
