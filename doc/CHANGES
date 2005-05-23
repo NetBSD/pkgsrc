@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10172 2005/05/23 21:47:38 jdolecek Exp $
+$NetBSD: CHANGES,v 1.10173 2005/05/23 22:03:37 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2567,3 +2567,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xmlstarlet to 1.0.1 [seb 2005-05-23]
 	Added php-pcntl-5.0.4 [jdolecek 2005-05-23]
 	Added php-pcntl-4.3.11 [jdolecek 2005-05-23]
+	Updated xentools20 to 2.0.3nb5 [bouyer 2005-05-23]
