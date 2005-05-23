@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3521 2005/05/23 13:18:13 wiz Exp $
+$NetBSD: TODO,v 1.3522 2005/05/23 14:02:54 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -704,8 +704,6 @@ Suggested package updates
 	o multitail-3.4.8
 	o muse-0.9.1
 	o mutt-devel-1.5.7
-	o mysql4-client-4.1.12
-	o mysql4-server-4.1.12
 	o nagios-2.0b3 [replacing netsaint]
 	o nano-1.2.5
 	o nap-1.5.3
