@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10174 2005/05/23 22:04:54 adrianp Exp $
+$NetBSD: CHANGES,v 1.10175 2005/05/23 22:24:54 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2569,3 +2569,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added php-pcntl-4.3.11 [jdolecek 2005-05-23]
 	Updated xentools20 to 2.0.3nb5 [bouyer 2005-05-23]
 	Updated phpldapadmin to 0.9.6cnb1 [adrianp 2005-05-23]
+	Updated p5-XML-Twig to 3.17 [seb 2005-05-23]
