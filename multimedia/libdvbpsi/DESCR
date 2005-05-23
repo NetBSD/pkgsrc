@@ -1,11 +1,11 @@
 libdvbpsi is a simple library designed for decoding and generation of MPEG TS
-and DVB PSI tables. 
+and DVB PSI tables.
 
 Current features
 
-    Program Association Table (PAT), decoder and generator. 
-    Program Map Table (PMT), decoder and generator. 
-    All MPEG 2 descriptors, decoders and generators. 
+    Program Association Table (PAT), decoder and generator.
+    Program Map Table (PMT), decoder and generator.
+    All MPEG 2 descriptors, decoders and generators.
 
 The libdvbpsi is part of the VideoLAN project, a full MPEG2
 client/server solution. The libdvbpsi can also be used with extra

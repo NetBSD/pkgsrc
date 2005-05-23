@@ -10,4 +10,4 @@ The long term goal of gnetman is far greater. Two projects under
 consideration include a schematic generator, and a technology
 mapping back-end for Icarus Verilog. Basically, gnetman is a
 netlist manipulation database well suited for low-level
-manipulation of netlists. 
+manipulation of netlists.

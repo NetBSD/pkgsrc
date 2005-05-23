@@ -4,9 +4,9 @@ following RFCs:
 
  * 0822: Standard for the Format of Arpa Internet Text Messages
  * 1521: MIME (Multipurpose Internet Mail Extensions) Part One:
-         Mechanisms for Specifying and Describing the Format of 
+         Mechanisms for Specifying and Describing the Format of
          Internet Message Bodies
- * 1847: Security Multiparts for MIME: Multipart/Signed and 
+ * 1847: Security Multiparts for MIME: Multipart/Signed and
          Multipart/Encrypted
  * 1864: The Content-MD5 Header Field (Obsoletes rfc1544)
  * 2015: MIME Security with Pretty Good Privacy (PGP)

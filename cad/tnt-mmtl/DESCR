@@ -1,7 +1,7 @@
 TNT-MMTL, the Multilayer Multiconductor Transmission Line 2-D and 2.5-D
 electromagnetic modeling tool suite, generates transmission parameters
 and SPICE models from descriptions of electronics interconnect
-dimensions and materials properties. 
+dimensions and materials properties.
 
 MMTL programs and supporting libraries and documentation have been
 under development at the Mayo Clinic since the mid-1980s. The programs

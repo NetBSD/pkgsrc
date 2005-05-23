@@ -1,7 +1,7 @@
 FastCap is a three-dimensional capacitance extraction program.
 
 FastCap computes self and mutual capacitances between ideal
-conductors of arbitrary shapes, orientations and sizes. 
+conductors of arbitrary shapes, orientations and sizes.
 The conductors can be embedded in a dielectric region composed
 of any number of constant-permittivity regions of any shape and
 size.

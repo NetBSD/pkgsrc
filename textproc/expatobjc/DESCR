@@ -6,7 +6,7 @@ To use it, make a subclass of the XMLParser object that will override
 any or all of the following methods based on what parts of the XML
 parser document you want to read and analyze:
 
-startElement - for element start tags 
+startElement - for element start tags
 endElement - for element end tags
 characters - for PCDATA stuff
 processingInstruction - for XML processing instructions

@@ -16,7 +16,7 @@ database. It contains the following programs:
   The updating mechanism is too powerfull (for now) to allow the general
   public to use this mechanism. The server is protected by means of an
   accesslist.
- 
+
 - cryptpw
   Calculate a crypted password with given password and salt.
   This password can then be used in the 'auth:' field of maintainer

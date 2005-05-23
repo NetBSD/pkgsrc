@@ -7,5 +7,5 @@ it'll let you pick a window using a mouse or a keyboard.
 
 It is pretty similar to a tool made by Apple, called Expose -
 	http://www.apple.com/macosx/features/expose/
-	
+
 Skippy depends on a NetWM compliant window-manager.

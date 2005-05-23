@@ -1,4 +1,4 @@
-The PEAR::HTML_Common PHP package provides methods for html code display and 
+The PEAR::HTML_Common PHP package provides methods for html code display and
 attributes handling.
 * Methods to set, remove, update html attributes.
 * Handles comments in HTML code.

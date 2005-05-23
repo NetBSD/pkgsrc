@@ -1,5 +1,5 @@
 A Wiki is a website that allows its users to add pages, and edit any
-existing pages. 
+existing pages.
 
 You can create a new kwiki website with a single command. The module
 has no prerequisite modules, except the ones that ship with Perl.

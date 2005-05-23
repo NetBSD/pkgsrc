@@ -8,4 +8,4 @@ SableVM implements many innovative techniques, including:
 * Bidirectional object layout.
 * Spinlock-free thin locks.
 * Sparse interface vtables.
-* Low-cost maps for precise garbage collection. 
+* Low-cost maps for precise garbage collection.

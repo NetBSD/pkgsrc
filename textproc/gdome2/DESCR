@@ -7,7 +7,7 @@ software which takes a parsed XML or HTML document and makes it available for
 processing via the DOM interfaces. A browser contains a host implementation,
 for example.
 
-Here some key points about libgdome: 
+Here some key points about libgdome:
 * Libgdome is a DOM level2 Implementation.
 * Libgdome supports "Core" and "XML" modules (DOM level2 Core Recommendation).
 * Libgdome supports "Events" and "MutationEvents" modules (DOM level2 Events
