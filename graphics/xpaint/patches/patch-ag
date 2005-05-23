@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.6 2005/03/31 11:08:16 adam Exp $
+$NetBSD: patch-ag,v 1.7 2005/05/23 11:37:23 adam Exp $
 
---- Imakefile.orig	2005-03-20 20:15:32.000000000 +0000
+--- Imakefile.orig	2005-04-27 20:59:37.000000000 +0000
 +++ Imakefile
-@@ -98,7 +98,7 @@ SGI_LIB = -limage
+@@ -102,7 +102,7 @@ SGI_LIB = -limage
  #endif
  
  DEPLIBS = always xpaint.man XPaint.ad
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.6 2005/03/31 11:08:16 adam Exp $
  
  SUBDIRS = rw
  
-@@ -151,7 +151,7 @@ xaw::
+@@ -155,7 +155,7 @@ xaw::
  	-$(RM) xaw_incdir ; ln -sf /usr/include/X11/Xaw xaw_incdir
  	echo "XAWLIB_DEFINES = -DXAWPLAIN" > Local.xawdefs			
  	echo "SYS_LIBRARIES = XawClientLibs -lm" >> Local.xawdefs
@@ -20,7 +20,7 @@ $NetBSD: patch-ag,v 1.6 2005/03/31 11:08:16 adam Exp $
  	@echo ""
  	@echo "'xpaint' compiled with Xaw widgets (old and ugly)"
  	@echo "You should rather use Xaw3d, neXtaw or Xaw95 !!"	
-@@ -191,12 +191,15 @@ nextaw::
+@@ -195,12 +195,15 @@ nextaw::
  	@echo "Variants are 'make xaw3d' and 'make xaw95'"
  	@echo ""	
  

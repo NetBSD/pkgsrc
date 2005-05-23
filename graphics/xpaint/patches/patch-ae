@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.6 2005/03/31 11:08:16 adam Exp $
+$NetBSD: patch-ae,v 1.7 2005/05/23 11:37:23 adam Exp $
 
---- operation.c.orig	2005-03-21 20:36:37.000000000 +0000
+--- operation.c.orig	2005-05-06 09:46:06.000000000 +0000
 +++ operation.c
-@@ -993,8 +993,10 @@ static PaintMenuItem fontMenu[] =
+@@ -1266,8 +1266,10 @@ static PaintMenuItem fontMenu[] =
  	    fontSet, "-*-helvetica-medium-r-normal-*-*-120-*-*-p-*-*-*"),
      MI_FLAGCB("Helvetica Bold 12", MF_CHECK | MF_GROUP1,
  	      fontSet, "-*-helvetica-bold-r-normal-*-*-120-*-*-p-*-*-*"),
