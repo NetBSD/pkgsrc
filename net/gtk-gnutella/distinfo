@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2005/05/11 09:50:11 adam Exp $
+$NetBSD: distinfo,v 1.19 2005/05/23 07:58:09 adam Exp $
 
-SHA1 (gtk-gnutella-0.95.2.tar.bz2) = 885a5bf9793989d9ab40a8d2d3970378532e8b35
-RMD160 (gtk-gnutella-0.95.2.tar.bz2) = 3462ece2930f5c56456b56e3451af2f020b8c583
-Size (gtk-gnutella-0.95.2.tar.bz2) = 2304571 bytes
+SHA1 (gtk-gnutella-0.95.3.tar.bz2) = 1efeb54c8637f785e3a67e093c27fdf96974318b
+RMD160 (gtk-gnutella-0.95.3.tar.bz2) = 6f4bc6e0d150180e50d085bc61269185d5f5e531
+Size (gtk-gnutella-0.95.3.tar.bz2) = 2306819 bytes
