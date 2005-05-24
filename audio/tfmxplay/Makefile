@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:44:57 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/24 13:57:34 rillig Exp $
 #
 
 DISTNAME=	tfmxplay-0.6
@@ -11,7 +11,6 @@ HOMEPAGE=	http://darkstar.tabu.uni-bonn.de/~neo/audio.html
 COMMENT=	Console TFMX (amiga games sound file format) player
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
 
 .include "../../mk/ossaudio.buildlink3.mk"
 
