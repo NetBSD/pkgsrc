@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2005/05/24 15:39:05 rillig Exp $
+# $NetBSD: Makefile,v 1.240 2005/05/24 21:24:30 rillig Exp $
 #
 
 DISTNAME=	pkglint-4.17
@@ -14,27 +14,24 @@ DEPENDS+=	digest>=20010101:../../pkgtools/digest
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_PERL5=	yes
+USE_TOOLS+=	perl
 
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
 NO_TOOLS=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# empty
 
-DISTVER=	${DISTNAME:S/pkglint-//}
-
 INSTALLATION_DIRS=	bin man/cat1 man/man1 share/pkglint
 
 SUBST_CLASSES+=		pkglint
-SUBST_STAGE.pkglint=	post-patch
+SUBST_STAGE.pkglint=	post-configure
 SUBST_FILES.pkglint+=	lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl
 SUBST_FILES.pkglint+=	pkglint.0 pkglint.1 pkglint.pl
 SUBST_FILES.pkglint+=	plist-clash.pl
 SUBST_SED.pkglint+=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.pkglint+=	-e 's|@PKGSRCDIR@|${PKGSRCDIR}|g'
-SUBST_SED.pkglint+=	-e 's|@DISTVER@|${DISTVER}|g'
+SUBST_SED.pkglint+=	-e 's|@DISTVER@|${DISTNAME:S/pkglint-//}|g'
 SUBST_SED.pkglint+=	-e 's|@MAKE@|${MAKE}|g'
 SUBST_SED.pkglint+=	-e 's|@PERL@|${PERL5}|g'
 SUBST_SED.pkglint+=	-e 's|@DATADIR@|${PREFIX}/share/pkglint|g'
