@@ -1,25 +1,25 @@
-$NetBSD: patch-ag,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+$NetBSD: patch-ag,v 1.2 2005/05/24 16:02:08 xtraeme Exp $
 
---- misc/Makefile.orig	2005-01-12 13:22:25.000000000 +0100
-+++ misc/Makefile	2005-01-22 18:44:36.000000000 +0100
-@@ -20,10 +20,10 @@
+--- misc/Makefile.orig	2005-05-24 00:28:15.000000000 +0000
++++ misc/Makefile	2005-05-24 00:30:05.000000000 +0000
+@@ -24,10 +24,10 @@
  	$(MAKE) -C miniterm
  
- install: all
--	mkdir -p $(prefix)/usr/bin
--	mkdir -p $(prefix)/usr/sbin
--	install -m0755 $(INSTALL_BIN) $(prefix)/usr/bin
--	install -m0755 $(INSTALL_SBIN) $(prefix)/usr/sbin
-+	mkdir -p $(prefix)/${PREFIX}/bin
-+	mkdir -p $(prefix)/${PREFIX}/sbin
-+	install -m0755 $(INSTALL_BIN) $(prefix)/${PREFIX}/bin
-+	install -m0755 $(INSTALL_SBIN) $(prefix)/${PREFIX}/sbin
- 	$(MAKE) -C miniterm install
+ install: build
+-	[ -d $(DESTDIR)/usr/bin ] || $(INSTALL_DIR) $(DESTDIR)/usr/bin
+-	[ -d $(DESTDIR)/usr/sbin ] || $(INSTALL_DIR) $(DESTDIR)/usr/sbin
+-	$(INSTALL_PROG) $(INSTALL_BIN) $(DESTDIR)/usr/bin
+-	$(INSTALL_PROG) $(INSTALL_SBIN) $(DESTDIR)/usr/sbin
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/sbin
++	$(BSD_INSTALL_SCRIPT) $(INSTALL_BIN) $(PREFIX)/bin
++	$(BSD_INSTALL_SCRIPT) $(INSTALL_SBIN) $(PREFIX)/sbin
+ #       No sense in installing miniterm on the Xen box.
+ #	$(MAKE) -C miniterm install
  
- clean:
-@@ -31,4 +31,4 @@
- 	$(MAKE) -C miniterm clean
+@@ -39,4 +39,4 @@
+ 	$(CC) -c $(CFLAGS) -o $@ $<
  
- %: %.c $(HDRS) Makefile
+ $(TARGETS): %: %.o Makefile
 -	$(CC) $(CFLAGS) -o $@ $< -L$(XEN_LIBXC) -lxc -L$(XEN_LIBXUTIL) -lxutil
 +	$(CC) $(CFLAGS) -o $@ $< -L$(XEN_LIBXC) -lxc -L$(XEN_LIBXUTIL) $(LDFLAGS) -lxutil
