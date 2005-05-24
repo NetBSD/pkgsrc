@@ -1,7 +1,9 @@
-# $NetBSD: builtin.mk,v 1.20 2005/05/24 04:47:53 jlam Exp $
+# $NetBSD: builtin.mk,v 1.21 2005/05/24 05:41:32 jlam Exp $
 
 BUILDLINK_FIND_LIBS:=	intl
 .include "../../mk/buildlink3/find-libs.mk"
+
+_LIBINTL_H=	/usr/include/libintl.h
 
 .if !defined(IS_BUILTIN.gettext)
 IS_BUILTIN.gettext=	no
