@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.175 2005/05/24 18:56:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.176 2005/05/24 19:14:19 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -370,6 +370,7 @@ sub checkfile_MESSAGE($);
 sub checkfile_patches_patch($);
 sub checkfile_PLIST($);
 sub checkfile_other($);
+sub check_category($);
 
 sub checkperms($);
 sub readmakefile($$);
@@ -377,7 +378,6 @@ sub checkextra($$);
 sub checkorder($$@);
 sub checkearlier($@);
 sub check_predefined_sites($);
-sub category_check();
 sub check_package();
 
 sub init_global_vars() {
@@ -550,22 +550,23 @@ sub load_predefined_sites() {
 }
 
 sub check_directory($) {
-	($opt_packagedir) = @_;
+	my ($dir) = @_;
 
 	init_global_vars();
-	if (-f "$opt_packagedir/../mk/bsd.pkg.mk") {
-		$pkgsrc_rootdir = "$opt_packagedir/..";
+	if (-f "${dir}/../mk/bsd.pkg.mk") {
+		$pkgsrc_rootdir = "${dir}/..";
 		log_info(NO_FILE, NO_LINE_NUMBER, "Checking category Makefile.");
-		category_check();
-	} elsif (-f "$opt_packagedir/../../mk/bsd.pkg.mk") {
-		$pkgsrc_rootdir = "$opt_packagedir/../..";
+		check_category($dir);
+	} elsif (-f "${dir}/../../mk/bsd.pkg.mk") {
+		$pkgsrc_rootdir = "${dir}/../..";
+		$opt_packagedir = $dir;
 		if ($opt_warn_types) {
 			load_make_vars_typemap();
 		}
 		load_predefined_sites();
 		check_package();
 	} else {
-		log_error($opt_packagedir, NO_LINE_NUMBER, "Neither a package nor a category.");
+		log_error($dir, NO_LINE_NUMBER, "Neither a package nor a category.");
 	}
 }
 
@@ -2040,9 +2041,9 @@ sub check_predefined_sites($) {
 	return true;
 }
 
-sub category_check() {
-	my ($file) = "Makefile";
-	my ($fname) = ("$opt_packagedir/$file");
+sub check_category($) {
+	my ($dir) = @_;
+	my $fname = "${dir}/Makefile";
 	my ($lines);
 	my (@makefile_subdirs) = ();
 	my (@filesys_subdirs) = ();
@@ -2057,7 +2058,7 @@ sub category_check() {
 	}
 	checkline_rcsid($lines->[0], "# ");
 
-	@filesys_subdirs = grep { ($_ = substr($_, length($opt_packagedir) + 1, -1)) ne "CVS"; } glob("$opt_packagedir/*/");
+	@filesys_subdirs = grep { ($_ = substr($_, length($dir) + 1, -1)) ne "CVS"; } glob("${dir}/*/");
 	
 	my ($first, $last_subdir, $comment_seen) = (true, undef, false);
 	foreach my $line (@$lines) {
