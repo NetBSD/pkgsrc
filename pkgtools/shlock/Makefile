@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/13 19:01:18 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/24 20:28:39 rillig Exp $
 #
 
 DISTNAME=	shlock-20020114
@@ -9,8 +9,6 @@ DISTFILES=	# empty
 MAINTAINER=	tech-pkg@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Shell utility to perform dot-locking
-
-ONLY_FOR_PLATFORM=	SunOS-*-* Linux-*-* Interix-*-*
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	#empty
