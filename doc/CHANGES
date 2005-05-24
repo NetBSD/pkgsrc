@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10185 2005/05/24 16:04:32 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10186 2005/05/24 21:04:39 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2582,3 +2582,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated rudiments to 0.28.2 [rillig 2005-05-24]
 	Updated pkglint to 4.17 [rillig 2005-05-24]
 	Updated xentools20 to 2.0.6 [xtraeme 2005-05-24]
+	Updated jabberd2 to 2.0s8 [xtraeme 2005-05-24]
