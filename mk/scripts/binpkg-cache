@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.4 2005/05/24 20:49:41 dmcmahill Exp $
+# $NetBSD: binpkg-cache,v 1.5 2005/05/24 20:56:47 dmcmahill Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -173,7 +173,9 @@ process_binpkg_dir(){
 		${GREP} "pkgcache_version ${cacheversion}" ${d}/${cachefile} >/dev/null 2>&1
 		if test $? -ne 0 ; then
 			need_update=yes
-			echo "${tab}Old version cache file.  ${d}/${cachefile} will be regenerated."
+			echo "${tab}Invalid version cache file.  ${d}/${cachefile} will be regenerated."
+			echo "Need version ${cacheversion} but the file has"
+			${GREP} "^pkgcache_version " ${d}/${cachefile}
 		else
 			echo "${tab}Cache file ${d}/${cachefile} is up to date."
 		fi
