@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.5 2005/05/24 20:56:47 dmcmahill Exp $
+# $NetBSD: binpkg-cache,v 1.6 2005/05/24 21:48:22 dmcmahill Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -317,6 +317,17 @@ do
 
 	esac
 done
+
+if test $# -ne 0 ; then
+	echo "$0:  $* is invalid"
+	usage
+	clean_and_exit1
+fi
+
+if test ! -d ${PACKAGES} ; then
+	echo "Packages directory ${PACKAGES} seems to be missing"
+	clean_and_exit1
+fi
 
 # put a trailing / after ${PACKAGES} in case ${PACKAGES} is 
 # a link.
