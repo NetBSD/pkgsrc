@@ -1,4 +1,4 @@
-# $NetBSD: bsd.builtin.mk,v 1.3 2004/11/10 17:39:03 jlam Exp $
+# $NetBSD: bsd.builtin.mk,v 1.4 2005/05/24 15:41:05 xtraeme Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -144,6 +144,15 @@ BUILDLINK_BUILTIN_MK.${_pkg_}?=	${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk
 # is here to set the default for any package added to BUILDLINK_PACKAGES
 # by any of the above code.
 #
+# BUILTIN_PACKAGES will contain the list of all builtin
+# dependencies used in packages.
+#
+
 .for _pkg_ in ${BUILDLINK_PACKAGES}
 USE_BUILTIN.${_pkg_}?=	no
+BUILTIN_PACKAGES?=	# empty
+.  if !empty(USE_BUILTIN.${_pkg_}:M[Yy][Ee][Ss])
+BUILTIN_PACKAGES+=	${_pkg_}
+.  endif
 .endfor
+
