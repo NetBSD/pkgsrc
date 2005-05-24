@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2005/02/20 15:06:17 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2005/05/24 12:29:40 wiz Exp $
 
 --- libvisual/lv_cpu.c.orig	2005-02-09 20:20:12.000000000 +0100
 +++ libvisual/lv_cpu.c
@@ -11,3 +11,12 @@ $NetBSD: patch-aa,v 1.2 2005/02/20 15:06:17 wiz Exp $
  	_lv_cpu_caps.nrcpu = sysconf (_SC_NPROCESSORS_ONLN);
  	if (_lv_cpu_caps.nrcpu == -1)
  		_lv_cpu_caps.nrcpu = 1;
+@@ -423,7 +423,7 @@ void visual_cpu_initialize ()
+ #endif
+ #endif /* VISUAL_ARCH_X86 */
+ 
+-#if VISUAL_ARCH_POWERPC
++#if defined(VISUAL_ARCH_POWERPC)
+ 	check_os_altivec_support ();
+ #endif /* VISUAL_ARCH_POWERPC */
+ 
