@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.172 2005/05/23 09:31:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.173 2005/05/24 12:38:41 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1391,7 +1391,7 @@ sub checkfile_Makefile($) {
 	# ...nor settings of TEST_TARGET & BUILD_TARGET
 	$j =~ s/\nTEST_TARGET[\t ]*.*=[\t ]*[^\n]*\n/\nTEST_TARGET=#replaced\n/;
 	$j =~ s/\nBUILD_TARGET[\t ]*.*=[\t ]*[^\n]*\n/\nBUILD_TARGET=#replaced\n/;
-	$j =~ s/\n(?:PKGSRC_)?USE_TOOLS[ \t]*\+=[ \t]*[^\n]*\n/\nUSE_TOOLS=#replaced\n/;
+	$j =~ s/\n(?:PKGSRC_)?USE_TOOLS[ \t]*\+?=[ \t]*[^\n]*\n/\nUSE_TOOLS=#replaced\n/g;
 	if ($opt_warn_directcmd) {
 		foreach my $i (keys %cmdnames) {
 			if ($j =~ /[ \t\/@]$i[ \t\n;]/) {
