@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.178 2005/05/24 23:49:03 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.179 2005/05/24 23:50:07 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1284,7 +1284,7 @@ sub checklines_direct_tools($) {
 			my ($varname, $value) = ($1, $2);
 			# process variable assignments
 			if ($varname !~ $regex_ok_vars) {
-				$line->log_warning("Possible direct use of \"${tool}\" found in variable ${varname}. Please use \$\{$toolvar{$tool}\} instead.");
+				$line->log_warning("Possible direct use of \"${tool}\" in variable ${varname}. Please use \$\{$toolvar{$tool}\} instead.");
 			}
 		} elsif ($text =~ qr"^\t(.*)") {
 			my ($shellcmd) = ($1);
