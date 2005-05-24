@@ -1,4 +1,4 @@
-# $NetBSD: product.mk,v 1.6 2005/01/27 21:15:45 recht Exp $
+# $NetBSD: product.mk,v 1.7 2005/05/24 14:26:26 rillig Exp $
 
 DIST_SUBDIR=	zope
 BUILDLINK_DEPENDS.zope?=	zope-2.*
@@ -21,12 +21,12 @@ zope-std-copyproduct-long:
 
 zope-std-copyproduct-short:
 .for i in ${PRODNAMES}
-	(cd ${WRKSRC}; ${PAX} -r -w $i ${ZOPEDIR}/lib/python/Products)
+	(cd ${WRKSRC}; ${PAX} -r -w ${i} ${ZOPEDIR}/lib/python/Products)
 .endfor
 
 do-install: ${ZOPE_COPYPRODUCT}
 .for i in ${PRODNAMES}
-	(cd ${ZOPEDIR}/lib/python/Products/$i; \
+	(cd ${ZOPEDIR}/lib/python/Products/${i}; \
 	 ${PYTHONBIN} ${ZOPEDIR}/inst/compilezpy.py || true)
 .endfor
 
