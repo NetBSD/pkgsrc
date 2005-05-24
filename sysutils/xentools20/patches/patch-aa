@@ -1,28 +1,32 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+$NetBSD: patch-aa,v 1.2 2005/05/24 16:02:08 xtraeme Exp $
 
---- Makefile.orig	2005-01-12 13:22:26.000000000 +0100
-+++ Makefile	2005-01-22 01:09:07.000000000 +0100
-@@ -1,23 +1,16 @@
+--- Makefile.orig	2005-05-24 01:59:08.000000000 +0000
++++ Makefile	2005-05-24 01:59:28.000000000 +0000
+@@ -5,24 +5,22 @@
+ SUBDIRS += libxutil
+ SUBDIRS += libxc
+ SUBDIRS += misc
+-SUBDIRS += examples
+-SUBDIRS += xentrace
+ SUBDIRS += python
+ SUBDIRS += xfrd
  
- all:	
--	$(MAKE) -C check
- 	$(MAKE) -C libxutil
- 	$(MAKE) -C libxc
- 	$(MAKE) -C misc
-	$(MAKE) -C examples
--	$(MAKE) -C xentrace
- 	$(MAKE) -C python
- 	$(MAKE) -C xfrd
+ .PHONY: all install clean check check_clean
  
- install: 
--ifneq ($(dist),yes)
--	$(MAKE) -C check install
--endif
- 	$(MAKE) -C libxutil install
- 	$(MAKE) -C libxc install
- 	$(MAKE) -C misc install
--	$(MAKE) -C examples install
--	$(MAKE) -C xentrace install
- 	$(MAKE) -C python install
- 	$(MAKE) -C xfrd install
- 	$(MAKE) -C sv install
+-all: check
++all:
+ 	@set -e; for subdir in $(SUBDIRS); do \
+ 		$(MAKE) -C $$subdir $@; \
+ 	done
+ 
+-install: check
++install:
+ 	@set -e; for subdir in $(SUBDIRS); do \
+ 		$(MAKE) -C $$subdir $@; \
+ 	done
+ 
+-clean: check_clean
++clean:
+ 	@set -e; for subdir in $(SUBDIRS); do \
+ 		$(MAKE) -C $$subdir $@; \
+ 	done

@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2005/05/23 22:02:04 bouyer Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/24 16:02:08 xtraeme Exp $
 #
 
-DISTNAME=		xen-2.0.3-src
-PKGNAME=		xentools20-2.0.3
-PKGREVISION=		5
+DISTNAME=		xen-2.0.6-src
+PKGNAME=		xentools20-2.0.6
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/
 EXTRACT_SUFX=		.tgz
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.netbsd.org/Ports/xen/
@@ -16,12 +14,13 @@ COMMENT=		Userland Tools for Xen
 DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 USE_PKGINSTALL=		yes
+PKG_SYSCONFSUBDIR=	xen
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 WRKSRC=			${WRKDIR}/xen-2.0/tools
 
-EGDIR=			${PREFIX}/share/examples/${PKGNAME_NOREV}
+EGDIR=			${PREFIX}/share/examples/xen
 
 USE_TOOLS+=		gmake
 MAKE_ENV+=		EGDIR="${EGDIR}"
@@ -41,20 +40,46 @@ PYTHON_PATCH_SCRIPTS+=	misc/netfix
 PYTHON_PATCH_SCRIPTS+=	misc/xend
 PYTHON_PATCH_SCRIPTS+=	xentrace/xentrace_format
 
-SUBST_CLASSES=          paths
+SUBST_CLASSES=          paths py conf
 SUBST_STAGE.paths=      pre-configure
 SUBST_FILES.paths=      python/xen/xend/server/SrvDaemon.py
 SUBST_FILES.paths+=	python/xen/xend/XendDomainInfo.py
 SUBST_FILES.paths+=	python/xen/sv/Daemon.py
 SUBST_SED.paths=        -e "s|/usr/sbin|${PREFIX}/sbin|g"
 SUBST_MESSAGE.paths=    "Fixing hardcoded paths."
+SUBST_STAGE.py=		pre-configure
+SUBST_FILES.py=		python/Makefile
+SUBST_SED.py=		-e "s,python,${PYTHONBIN},g"
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	python/xen/xend/XendRoot.py
+SUBST_SED.conf=		-e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g"
 
 RCD_SCRIPTS=		xend
 FILES_SUBST+=		RCD_INTERPRETER=${PYTHONBIN}
 
+INSTALLATION_DIRS=	share/examples/xen
+
+XEND_SCRIPTS=		network vif-bridge block-enbd block-file	\
+			xmexample1 xmexample2 xmexample3
+
+SUPPORT_FILES=		${EGDIR}/xend-config.sxp \
+			${PKG_SYSCONFDIR}/xend-config.sxp
+.for f in ${XEND_SCRIPTS}
+SUPPORT_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+.endfor
+
+SUPPORT_FILES_MODE=	0755
+
 pre-build:
 	${MKDIR} ${WRKSRC}/libxc/xen/NetBSD
 	${CP} ${FILESDIR}/xenio.h ${WRKSRC}/libxc/xen/NetBSD
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/examples/xend-config.sxp \
+		${EGDIR}/xend-config.sxp
+.for s in ${XEND_SCRIPTS}
+	${INSTALL_DATA} ${WRKSRC}/examples/${s} ${EGDIR}/${s}
+.endfor
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
