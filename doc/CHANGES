@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10183 2005/05/24 13:04:54 rillig Exp $
+$NetBSD: CHANGES,v 1.10184 2005/05/24 15:39:48 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2580,3 +2580,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated jwhois to 3.2.2nb18 [kleink 2005-05-24]
 	Updated netpbm to 10.26.9 [adam 2005-05-24]
 	Updated rudiments to 0.28.2 [rillig 2005-05-24]
+	Updated pkglint to 4.17 [rillig 2005-05-24]
