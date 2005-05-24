@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.174 2005/05/24 14:29:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.175 2005/05/24 18:56:37 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -724,6 +724,20 @@ sub checkline_trailing_whitespace($) {
 	return true;
 }
 
+sub checkline_rcsid_regex($$$) {
+	my ($line, $prefix_regex, $prefix) = @_;
+
+	if ($line->text !~ qr"^${prefix_regex}${regex_rcsidstr}$") {
+		$line->log_error("\"${prefix}\$${conf_rcsidstr}\$\" expected.");
+	}
+	return true;
+}
+
+sub checkline_rcsid($$) {
+	my ($line, $prefix) = @_;
+	return checkline_rcsid_regex($line, quotemeta($prefix), $prefix);
+}
+
 sub checklines_trailing_empty_lines($) {
 	my ($lines) = @_;
 	my ($last, $max);
@@ -783,9 +797,7 @@ sub checkfile_distinfo($) {
 		return true;
 	}
 
-	if ($distinfo->[0]->text !~ /^$regex_rcsidstr$/) {
-		log_error($fname, 1, "\$$conf_rcsidstr\$ (and nothing more) expected.");
-	}
+	checkline_rcsid($distinfo->[0], "");
 
 	foreach my $line (@$distinfo[1 .. scalar(@$distinfo)-1]) {
 		next unless $line->text =~ /^(MD5|SHA1|RMD160) \(([^)]+)\) = (.*)$/;
@@ -837,9 +849,7 @@ sub checkfile_MESSAGE($) {
 	if ($message->[0]->text ne "=" x 75) {
 		$message->[0]->log_warning("Expected a line of exactly 75 \"=\" characters.");
 	}
-	if ($message->[1]->text !~ /^$regex_rcsidstr$/) {
-		$message->[1]->log_error("Expected the RCS Id tag.");
-	}
+	checkline_rcsid($message->[1], "");
 	foreach my $line (@$message[2 .. scalar(@$message) - 2]) {
 		checkline_length($line, 80);
 		checkline_trailing_whitespace($line);
@@ -855,13 +865,18 @@ sub checkfile_MESSAGE($) {
 sub checkfile_PLIST($) {
 	my ($file) = @_;
 	my ($fname) = ("$opt_packagedir/$file");
-	my ($plist, $curdir, $rcsid_seen, $last_file_seen);
+	my ($plist, $curdir, $last_file_seen);
 	
 	checkperms($fname);
 	if (!defined($plist = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
 	}
+	if (scalar(@{$plist}) == 0) {
+		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
+		return false;
+	}
+	checkline_rcsid($plist->[0], "\@comment ");
 
 	$curdir = $conf_localbase;
 	line:
@@ -884,9 +899,7 @@ sub checkfile_PLIST($) {
 					$line->log_error("ldconfig must be used with \"||/usr/bin/true\".");
 				}
 			} elsif ($cmd eq "comment") {
-				if ($arg =~ /^$regex_rcsidstr$/) {
-					$rcsid_seen = true;
-				}
+				# nothing to do
 			} elsif ($cmd eq "dirrm" || $cmd eq "option") {
 				# no check made
 			} elsif ($cmd eq "mode" || $cmd eq "owner" || $cmd eq "group") {
@@ -954,10 +967,6 @@ sub checkfile_PLIST($) {
 		}
 	}
 	checklines_trailing_empty_lines($plist);
-
-	if (!$rcsid_seen) {
-		log_error($fname, NO_LINE_NUMBER, "Expected a \@comment \"\$$conf_rcsidstr\$\" line.");
-	}
 	return true;
 }
 
@@ -1048,20 +1057,17 @@ sub checkfile_patches_patch($) {
 		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
 		return false;
 	}
-
-	# The first line should contain the RCS Id string
-	if (scalar(@$lines) == 0) {
-		log_error($fname, NO_LINE_NUMBER, "Empty patch file.");
+	if (scalar(@{$lines}) == 0) {
+		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
 		return true;
-	} elsif ($lines->[0]->text !~ /^$regex_rcsidstr$/) {
-		$lines->[0]->log_error("Expected RCS tag \"\$$conf_rcsidstr\$\" (and nothing more) here.");
 	}
+	checkline_rcsid($lines->[0], "");
 
-	foreach my $line (@$lines[1..scalar(@$lines)-1]) {
+	foreach my $line (@{$lines}[1..$#{$lines}]) {
 		if ($line->text =~ /$regex_known_rcs_tag/) {
 			# XXX: see the pkgsrc guide how to fix that
 			# TODO: that section still needs to be written
-			$line->log_warning("Possible RCS tag \"\$$1\$\". Use binary mode (-ko) on cvs add/import.");
+			$line->log_warning("Possible RCS tag \"\$$1\$\". Use no-keyword mode (-ko) on cvs add/import.");
 		}
 	}
 	checklines_trailing_empty_lines($lines);
@@ -1080,6 +1086,9 @@ sub readmakefile($$) {
 	$lines = load_file($file);
 	if (!defined ($lines)) {
 		return false;
+	}
+	if (scalar(@{$lines}) > 0) {
+		checkline_rcsid_regex($lines->[0], qr"#\s+", "# ");
 	}
 
 	foreach my $line (@$lines) {
@@ -1449,14 +1458,7 @@ sub checkfile_Makefile($) {
 	#
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking comment section of $file.");
 	$tmp = $sections[$idx++];
-	if ($tmp !~ /#(\s+)\$$conf_rcsidstr([^\$]*)\$/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "No \$$conf_rcsidstr\$ line in $file comment section.");
-	} else {
-		log_info(NO_FILE, NO_LINE_NUMBER, "\$$conf_rcsidstr\$ seen in $file.");
-		if ($1 ne ' ') {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "Please use single white-space ".
-				"right before the \$$conf_rcsidstr\$ tag.");
-		}
+	if ($tmp =~ /#(\s+)\$$conf_rcsidstr([^\$]*)\$/) {
 		if ($2 ne '') {
 			if ($opt_check_newpkg) {
 				log_warning(NO_FILE, NO_LINE_NUMBER, "For a new package, make \$$conf_rcsidstr\$ tag in comment ".
@@ -2053,13 +2055,7 @@ sub category_check() {
 		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
 		return true;
 	}
-	if ($lines->[0]->text =~ qr"^# $regex_rcsidstr$") {
-		$lines->[0]->log_info("RCS Id tag found.");
-	} elsif (scalar(@$lines) > 1 && $lines->[1]->text =~ qr"^# $regex_rcsidstr$") {
-		$lines->[1]->log_info("RCS Id tag found.");
-	} else {
-		log_error($fname, NO_LINE_NUMBER, "No RCS Id tag found.");
-	}
+	checkline_rcsid($lines->[0], "# ");
 
 	@filesys_subdirs = grep { ($_ = substr($_, length($opt_packagedir) + 1, -1)) ne "CVS"; } glob("$opt_packagedir/*/");
 	
