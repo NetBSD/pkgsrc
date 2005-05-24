@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.5 2005/05/14 22:34:59 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.6 2005/05/24 11:11:24 rillig Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -280,7 +280,7 @@ CONFIGURE_ARGS+=        netbsd13</programlisting>
 	    by invoking <varname>$MAKE_PROGRAM</varname> on
 	    <varname>$MAKEFILE</varname> with <varname>$BUILD_TARGET</varname> as
 	    the target to build.  The default <varname>MAKE_PROGRAM</varname> is
-	    <quote>gmake</quote> if <varname>USE_GNU_TOOLS</varname> contains <quote>make</quote>,
+	    <quote>gmake</quote> if <varname>USE_TOOLS</varname> contains <quote>gmake</quote>,
 	    <quote>make</quote> otherwise. <varname>MAKEFILE</varname> is set to
 	    <quote>Makefile</quote> by default, and <varname>BUILD_TARGET</varname>
 	    defaults to <quote>all</quote>.  Any of these variables

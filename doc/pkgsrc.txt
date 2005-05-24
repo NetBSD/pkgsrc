@@ -3348,7 +3348,7 @@ build
 
     Once configuration has taken place, the software will be built by invoking
     $MAKE_PROGRAM on $MAKEFILE with $BUILD_TARGET as the target to build. The
-    default MAKE_PROGRAM is "gmake" if USE_GNU_TOOLS contains "make", "make"
+    default MAKE_PROGRAM is "gmake" if USE_TOOLS contains "gmake", "make"
     otherwise. MAKEFILE is set to "Makefile" by default, and BUILD_TARGET
     defaults to "all". Any of these variables can be set in the package's
     Makefile to change the default build process.
