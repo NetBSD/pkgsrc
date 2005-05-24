@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/04 16:47:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/24 23:52:02 wiz Exp $
 include/libkipi/batchprogressdialog.h
 include/libkipi/imagecollection.h
 include/libkipi/imagecollectionselector.h
@@ -30,7 +30,6 @@ ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/libkipi.mo
-${PKGLOCALEDIR}/locale/is/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkipi.mo
