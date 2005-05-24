@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3536 2005/05/24 16:20:19 wiz Exp $
+$NetBSD: TODO,v 1.3537 2005/05/24 17:09:55 agc Exp $
 
 Suggested new packages
 ======================
@@ -1323,7 +1323,7 @@ Suggested cleanups in pkgsrc
 	o Fix packages installing manual pages under share/man to install
 	  them directly under man.
 	  Affects: emulators/peace, net/tsclient, print/scribus,
-	  security/fwbuilder, shells/standalone-tcsh, www/trac
+	  security/fwbuilder, www/trac
 
 	o Convert packages to use generic install scripts where possible
 	  (for example, mail/majordomo).
