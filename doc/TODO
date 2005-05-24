@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3528 2005/05/24 05:10:49 minskim Exp $
+$NetBSD: TODO,v 1.3529 2005/05/24 11:31:03 salo Exp $
 
 Suggested new packages
 ======================
@@ -627,7 +627,7 @@ Suggested package updates
 	o lcab-1.0b11
 	o lcc-4.2
 	o leafpad-0.7.9
-	o lftp-3.2.0
+	o lftp-3.2.0 [salo]
 	o libcomprex-0.3.3
 	o libetpan-0.34b
 	o libextractor-0.5.0
@@ -1013,8 +1013,8 @@ Suggested package updates
 	o shmux-1.0b6
 	o siag-3.6.0
 	o sign-1.0.7
-	o silc-server-1.0
-	o silc-toolkit-1.0
+	o silc-server-1.0 [salo]
+	o silc-toolkit-1.0 [salo]
 	o simh-3.3.2
 	o sitecopy-0.15.1
 	o sitescooper-3.1.2
