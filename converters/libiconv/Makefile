@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/11 21:45:08 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/05/24 04:36:51 jlam Exp $
 
 DISTNAME=	libiconv-1.9.2
 PKGREVISION=	1
@@ -18,12 +18,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Linux"
-# don't use PKG_SKIP_REASON yet so we can make sure the buildlinking is correct
-PKG_FAIL_REASON+=	"${PKGNAME} is not needed for Linux; it is included in GNU libc."
-.endif
 
 TEST_TARGET=		check
 
