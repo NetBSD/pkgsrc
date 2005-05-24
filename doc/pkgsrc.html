@@ -19,8 +19,8 @@ alink="#0000FF">
     <div class="titlepage">
       <div>
         <div>
-          <h1 class="title"><a name="id2598171" id=
-          "id2598171"></a>The pkgsrc guide</h1>
+          <h1 class="title"><a name="the-pkgsrc-guide" id=
+          "the-pkgsrc-guide"></a>The pkgsrc guide</h1>
         </div>
 
         <div>
@@ -66,8 +66,8 @@ alink="#0000FF">
         </div>
 
         <div xmlns="http://www.w3.org/TR/xhtml1/transitional">
-          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.6
-          2005/05/15 20:32:27 rillig Exp $</p>
+          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.7
+          2005/05/24 12:39:00 wiz Exp $</p>
         </div>
 
         <div>
@@ -93,7 +93,8 @@ alink="#0000FF">
 
         <dd>
           <dl>
-            <dt><span class="sect1"><a href="#id2568707">1.1.
+            <dt><span class="sect1"><a href=
+            "#introduction-section">1.1.
             Introduction</a></span></dt>
 
             <dt><span class="sect1"><a href="#overview">1.2.
@@ -117,14 +118,14 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2569429">2.1.
+                <dt><span class="sect1"><a href="#as-tar-file">2.1.
                 As tar file</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2569445">2.2.
-                Via SUP</a></span></dt>
+                <dt><span class="sect1"><a href="#via-sup">2.2. Via
+                SUP</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2569477">2.3.
-                Via CVS</a></span></dt>
+                <dt><span class="sect1"><a href="#via-cvs">2.3. Via
+                CVS</a></span></dt>
               </dl>
             </dd>
 
@@ -133,35 +134,37 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2569587">3.1.
-                Bootstrapping pkgsrc</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#bootstrapping-pkgsrc">3.1. Bootstrapping
+                pkgsrc</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2569768">3.2.
-                Platform specific notes</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#platform-specific-notes">3.2. Platform specific
+                notes</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2569774">3.2.1. Darwin (Mac OS
+                    "#darwin">3.2.1. Darwin (Mac OS
                     X)</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2569937">3.2.2. FreeBSD</a></span></dt>
+                    "#freebsd">3.2.2. FreeBSD</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2570449">3.2.3. Interix</a></span></dt>
+                    "#interix">3.2.3. Interix</a></span></dt>
+
+                    <dt><span class="sect2"><a href="#irix">3.2.4.
+                    IRIX</a></span></dt>
+
+                    <dt><span class="sect2"><a href="#linux">3.2.5.
+                    Linux</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2570750">3.2.4. IRIX</a></span></dt>
+                    "#openbsd">3.2.6. OpenBSD</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2570848">3.2.5. Linux</a></span></dt>
-
-                    <dt><span class="sect2"><a href=
-                    "#id2570916">3.2.6. OpenBSD</a></span></dt>
-
-                    <dt><span class="sect2"><a href=
-                    "#id2571028">3.2.7. Solaris</a></span></dt>
+                    "#solaris">3.2.7. Solaris</a></span></dt>
                   </dl>
                 </dd>
               </dl>
@@ -179,38 +182,39 @@ alink="#0000FF">
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2571164">4.1.1. Where to get binary
-                    packages</a></span></dt>
+                    "#where-to-get-binary-packages">4.1.1. Where to
+                    get binary packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2571218">4.1.2. How to use binary
-                    packages</a></span></dt>
+                    "#how-to-use-binary-packages">4.1.2. How to use
+                    binary packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2571392">4.1.3. A word of
+                    "#a-word-of-warning">4.1.3. A word of
                     warning</a></span></dt>
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2571949">4.2.
-                Building packages from source</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#building-packages-from-source">4.2. Building
+                packages from source</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2571960">4.2.1.
+                    "#requirements">4.2.1.
                     Requirements</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2571980">4.2.2. Fetching
+                    "#fetching-distfiles">4.2.2. Fetching
                     distfiles</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2572094">4.2.3. How to build and
-                    install</a></span></dt>
+                    "#how-to-build-and-install">4.2.3. How to build
+                    and install</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2623825">4.2.4. Selecting the
+                    "#selecting-the-compiler">4.2.4. Selecting the
                     compiler</a></span></dt>
                   </dl>
                 </dd>
@@ -222,10 +226,12 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2623979">5.1.
-                Building a single binary package</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#building-a-single-binary-package">5.1. Building a
+                single binary package</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2624057">5.2.
+                <dt><span class="sect1"><a href=
+                "#settings-for-creationg-of-binary-packages">5.2.
                 Settings for creation of binary
                 packages</a></span></dt>
 
@@ -239,27 +245,28 @@ alink="#0000FF">
                     Configuration</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2624204">5.3.2. Other environmental
+                    "#other-environmental-considerations">5.3.2.
+                    Other environmental
                     considerations</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2624245">5.3.3. Operation</a></span></dt>
+                    "#operation">5.3.3. Operation</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2624382">5.3.4. What it
+                    "#what-it-does">5.3.4. What it
                     does</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2624439">5.3.5. Disk space
+                    "#disk-space-requirements">5.3.5. Disk space
                     requirements</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2624466">5.3.6. Setting up a sandbox for
-                    chroot'ed builds</a></span></dt>
+                    "#setting-up-a-sandbox">5.3.6. Setting up a
+                    sandbox for chroot'ed builds</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2624926">5.3.7. Building a partial set of
-                    packages</a></span></dt>
+                    "#building-a-partial-set">5.3.7. Building a
+                    partial set of packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
                     "#bulk-upload">5.3.8. Uploading results of a
@@ -267,14 +274,14 @@ alink="#0000FF">
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2625383">5.4.
-                Creating a multiple CD-ROM packages
-                collection</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#creating-cdroms">5.4. Creating a multiple CD-ROM
+                packages collection</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2625398">5.4.1. Example of
+                    "#cdpack-example">5.4.1. Example of
                     cdpack</a></span></dt>
                   </dl>
                 </dd>
@@ -286,55 +293,61 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2625590">6.1.
-                Are there any mailing lists for pkg-related
-                discussion?</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#mailing-list-pointers">6.1. Are there any mailing
+                lists for pkg-related discussion?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2625724">6.2.
-                Where's the pkgviews documentation?</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#pkgviews-docs">6.2. Where's the pkgviews
+                documentation?</a></span></dt>
 
                 <dt><span class="sect1"><a href=
                 "#faq-pkgtools">6.3. Utilities for package
                 management (pkgtools)</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2625987">6.4.
-                How to use pkgsrc as non-root</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#non-root-pkgsrc">6.4. How to use pkgsrc as
+                non-root</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2625998">6.5.
-                How to resume transfers when fetching
-                distfiles?</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#resume-transfers">6.5. How to resume transfers
+                when fetching distfiles?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2626049">6.6.
-                How can I install/use XFree86 from
-                pkgsrc?</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#XFree86-from-pkgsrc">6.6. How can I install/use
+                XFree86 from pkgsrc?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2626076">6.7.
-                How can I install/use X.org from
-                pkgsrc?</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#x.org-from-pkgsrc">6.7. How can I install/use
+                X.org from pkgsrc?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2626104">6.8.
-                How to fetch files from behind a
-                firewall</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#fetch-behind-firewall">6.8. How to fetch files
+                from behind a firewall</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2626118">6.9.
+                <dt><span class="sect1"><a href="#passive-ftp">6.9.
                 How do I tell <span><strong class="command">make
                 fetch</strong></span> to do passive
                 FTP?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2626169">6.10.
-                How to fetch all distfiles at once</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#fetching-all-distfiles">6.10. How to fetch all
+                distfiles at once</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2626453">6.11.
-                What does &#8220;<span class="quote">Don't know how
-                to make /usr/share/tmac/tmac.andoc</span>&#8221;
+                <dt><span class="sect1"><a href=
+                "#tmac.andoc-missing">6.11. What does
+                &#8220;<span class="quote">Don't know how to make
+                /usr/share/tmac/tmac.andoc</span>&#8221;
                 mean?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2626491">6.12.
-                What does &#8220;<span class="quote">Could not find
+                <dt><span class="sect1"><a href=
+                "#bsd.own.mk-missing">6.12. What does
+                &#8220;<span class="quote">Could not find
                 bsd.own.mk</span>&#8221; mean?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2626549">6.13.
-                Using 'sudo' with pkgsrc</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#using-sudo-with-pkgsrc">6.13. Using 'sudo' with
+                pkgsrc</a></span></dt>
 
                 <dt><span class="sect1"><a href="#faq.conf">6.14.
                 Configuration files handling and
@@ -371,17 +384,18 @@ alink="#0000FF">
                 "#components.patches">7.3.
                 patches/*</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2627632">7.4.
-                Other mandatory files</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#other-mandatory-files">7.4. Other mandatory
+                files</a></span></dt>
 
                 <dt><span class="sect1"><a href=
                 "#components.optional">7.5. Optional
                 files</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2627757">7.6.
+                <dt><span class="sect1"><a href="#work-dir">7.6.
                 <code class="filename">work*</code></a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2627845">7.7.
+                <dt><span class="sect1"><a href="#files-dir">7.7.
                 <code class=
                 "filename">files/*</code></a></span></dt>
               </dl>
@@ -412,24 +426,25 @@ alink="#0000FF">
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2628274">8.2.1. Adding things to a
+                    "#adding-to-list">8.2.1. Adding things to a
                     list</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2628283">8.2.2. Converting an internal list
-                    into an external list</a></span></dt>
+                    "#converting-internal-to-external">8.2.2.
+                    Converting an internal list into an external
+                    list</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2628305">8.2.3. Passing variables to a
-                    shell command</a></span></dt>
+                    "#passing-variable-to-shell">8.2.3. Passing
+                    variables to a shell command</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2628426">8.2.4. Quoting
+                    "#quoting-guideline">8.2.4. Quoting
                     guideline</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2628677">8.2.5. Workaround for a bug in BSD
-                    Make</a></span></dt>
+                    "#bsd-make-bug-workaround">8.2.5. Workaround
+                    for a bug in BSD Make</a></span></dt>
                   </dl>
                 </dd>
               </dl>
@@ -440,11 +455,12 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2628738">9.1.
-                RCS ID</a></span></dt>
+                <dt><span class="sect1"><a href="#rcs-id">9.1. RCS
+                ID</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2628753">9.2.
-                Semi-automatic <code class="filename">PLIST</code>
+                <dt><span class="sect1"><a href=
+                "#automatic-plist-generation">9.2. Semi-automatic
+                <code class="filename">PLIST</code>
                 generation</a></span></dt>
 
                 <dt><span class="sect1"><a href="#print-PLIST">9.3.
@@ -455,16 +471,18 @@ alink="#0000FF">
                 <dt><span class="sect1"><a href="#plist.misc">9.4.
                 Variable substitution in PLIST</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2629074">9.5.
+                <dt><span class="sect1"><a href=
+                "#manpage-compression">9.5.
                 Manpage-compression</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2629115">9.6.
-                Changing PLIST source with <code class=
+                <dt><span class="sect1"><a href=
+                "#using-PLIST_SRC">9.6. Changing PLIST source with
+                <code class=
                 "varname">PLIST_SRC</code></a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2629140">9.7.
-                Platform specific and differing
-                PLISTs</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#platform-specific-plist">9.7. Platform specific
+                and differing PLISTs</a></span></dt>
 
                 <dt><span class="sect1"><a href=
                 "#faq.common-dirs">9.8. Sharing directories between
@@ -477,22 +495,24 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2629406">10.1.
-                Converting packages to use
-                buildlink3</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#converting-to-buildlink3">10.1. Converting
+                packages to use buildlink3</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2629724">10.2.
-                Writing <code class="filename">buildlink3.mk</code>
+                <dt><span class="sect1"><a href=
+                "#creating-buildlink3.mk">10.2. Writing
+                <code class="filename">buildlink3.mk</code>
                 files</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2629794">10.2.1. Anatomy of a buildlink3.mk
-                    file</a></span></dt>
+                    "#anatomy-of-bl3">10.2.1. Anatomy of a
+                    buildlink3.mk file</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2630166">10.2.2. Updating <code class=
+                    "#updating-buildlink-depends">10.2.2. Updating
+                    <code class=
                     "varname">BUILDLINK_DEPENDS.<em class=
                     "replaceable"><code>pkg</code></em></code> in
                     <code class="filename">buildlink3.mk</code>
@@ -500,20 +520,21 @@ alink="#0000FF">
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2630245">10.3.
-                Writing <code class="filename">builtin.mk</code>
-                files</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#writing-builtin.mk">10.3. Writing <code class=
+                "filename">builtin.mk</code> files</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2630394">10.3.1. Anatomy of a <code class=
-                    "filename">builtin.mk</code>
+                    "#anatomy-of-builtin.mk">10.3.1. Anatomy of a
+                    <code class="filename">builtin.mk</code>
                     file</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2630621">10.3.2. Global preferences for
-                    native or pkgsrc software</a></span></dt>
+                    "#native-or-pkgsrc-preference">10.3.2. Global
+                    preferences for native or pkgsrc
+                    software</a></span></dt>
                   </dl>
                 </dd>
               </dl>
@@ -524,11 +545,13 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2630762">11.1.
-                Global default options</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#global-default-options">11.1. Global default
+                options</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2630777">11.2.
-                Converting packages to use <code class=
+                <dt><span class="sect1"><a href=
+                "#converting-to-options">11.2. Converting packages
+                to use <code class=
                 "filename">bsd.options.mk</code></a></span></dt>
               </dl>
             </dd>
@@ -542,8 +565,8 @@ alink="#0000FF">
                 "#build.prefix">12.1. Program
                 location</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2631338">12.2.
-                Main targets</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#main-targets">12.2. Main targets</a></span></dt>
 
                 <dt><span class="sect1"><a href=
                 "#build.helpful-targets">12.3. Other helpful
@@ -556,17 +579,19 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2632835">13.1.
-                General operation</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#general-operation">13.1. General
+                operation</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2632838">13.1.1. How to pull in variables
-                    from /etc/mk.conf</a></span></dt>
+                    "#pulling-vars-from-etc-mk.conf">13.1.1. How to
+                    pull in variables from
+                    /etc/mk.conf</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2632921">13.1.2. Restricted
+                    "#restricted-packages">13.1.2. Restricted
                     packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
@@ -574,54 +599,58 @@ alink="#0000FF">
                     dependencies</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2633374">13.1.4. Handling conflicts with
+                    "#conflicts">13.1.4. Handling conflicts with
                     other packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2633493">13.1.5. Packages that cannot or
-                    should not be built</a></span></dt>
+                    "#not-building-packages">13.1.5. Packages that
+                    cannot or should not be built</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2633518">13.1.6. Packages which should not
-                    be deleted, once installed</a></span></dt>
+                    "#undeletable-packages">13.1.6. Packages which
+                    should not be deleted, once
+                    installed</a></span></dt>
 
                     <dt><span class="sect2"><a href=
                     "#security-handling">13.1.7. Handling packages
                     with security problems</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2633678">13.1.8. How to handle compiler
+                    "#compiler-bugs">13.1.8. How to handle compiler
                     bugs</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2633701">13.1.9. How to handle incrementing
-                    versions when fixing an existing
+                    "#bumping-pkgrevision">13.1.9. How to handle
+                    incrementing versions when fixing an existing
                     package</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2633818">13.1.10. Portability of
-                    packages</a></span></dt>
+                    "#portability-of-packages">13.1.10. Portability
+                    of packages</a></span></dt>
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2633843">13.2.
-                Possible downloading issues</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#downloading-issues">13.2. Possible downloading
+                issues</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2633846">13.2.1. Packages whose distfiles
-                    aren't available for plain
+                    "#no-plain-download">13.2.1. Packages whose
+                    distfiles aren't available for plain
                     downloading</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2633909">13.2.2. How to handle modified
-                    distfiles with the 'old' name</a></span></dt>
+                    "#modified-distfiles-same-name">13.2.2. How to
+                    handle modified distfiles with the 'old'
+                    name</a></span></dt>
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2633921">13.3.
-                Configuration gotchas</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#configuration-gotchas">13.3. Configuration
+                gotchas</a></span></dt>
 
                 <dd>
                   <dl>
@@ -630,108 +659,113 @@ alink="#0000FF">
                     libtool</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2634286">13.3.2. Using libtool on GNU
+                    "#using-libtool">13.3.2. Using libtool on GNU
                     packages that already support
                     libtool</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2634504">13.3.3. GNU
+                    "#autoconf-automake">13.3.3. GNU
                     Autoconf/Automake</a></span></dt>
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2634617">13.4.
-                Building considerations</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#building-considerations">13.4. Building
+                considerations</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2634620">13.4.1. CPP
+                    "#cpp-defines">13.4.1. CPP
                     defines</a></span></dt>
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2634650">13.5.
-                Package specific actions</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#package-specific-actions">13.5. Package specific
+                actions</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2634653">13.5.1. Package configuration
-                    files</a></span></dt>
+                    "#package-configuration-files">13.5.1. Package
+                    configuration files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2634756">13.5.2. User
+                    "#user-interaction">13.5.2. User
                     interaction</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2634801">13.5.3. Handling
+                    "#handling-licenses">13.5.3. Handling
                     licenses</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2634884">13.5.4. Creating an account from a
-                    package</a></span></dt>
+                    "#creating-accounts">13.5.4. Creating an
+                    account from a package</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2635014">13.5.5. Installing score
-                    files</a></span></dt>
+                    "#installing-score-files">13.5.5. Installing
+                    score files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2635058">13.5.6. Packages providing login
-                    shells</a></span></dt>
+                    "#login-shells">13.5.6. Packages providing
+                    login shells</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2635115">13.5.7. Packages containing perl
-                    scripts</a></span></dt>
+                    "#perl-scripts">13.5.7. Packages containing
+                    perl scripts</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2635133">13.5.8. Packages with hardcoded
-                    paths to other interpreters</a></span></dt>
+                    "#hardcoded-paths">13.5.8. Packages with
+                    hardcoded paths to other
+                    interpreters</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2635155">13.5.9. Packages installing perl
-                    modules</a></span></dt>
+                    "#perl-modules">13.5.9. Packages installing
+                    perl modules</a></span></dt>
 
                     <dt><span class="sect2"><a href=
                     "#faq.info-files">13.5.10. Packages installing
                     info files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2635511">13.5.11. Packages installing
-                    GConf2 data files</a></span></dt>
+                    "#gconf2-data-files">13.5.11. Packages
+                    installing GConf2 data files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2635680">13.5.12. Packages installing
-                    scrollkeeper data files</a></span></dt>
+                    "#scrollkeeper-data-files">13.5.12. Packages
+                    installing scrollkeeper data
+                    files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2635731">13.5.13. Packages installing X11
+                    "#x11-fonts">13.5.13. Packages installing X11
                     fonts</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2635778">13.5.14. Packages installing GTK2
-                    modules</a></span></dt>
+                    "#gtk2-modules">13.5.14. Packages installing
+                    GTK2 modules</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2635847">13.5.15. Packages installing SGML
-                    or XML data</a></span></dt>
+                    "#sgml-xml-data">13.5.15. Packages installing
+                    SGML or XML data</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2635899">13.5.16. Packages installing
+                    "#mime-database">13.5.16. Packages installing
                     extensions to the MIME database</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2636038">13.5.17. Packages using
+                    "#intltool">13.5.17. Packages using
                     intltool</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2636052">13.5.18. Packages installing
+                    "#startup-scripts">13.5.18. Packages installing
                     startup scripts</a></span></dt>
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2636073">13.6.
-                Feedback to the author</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#feedback-to-author">13.6. Feedback to the
+                author</a></span></dt>
               </dl>
             </dd>
 
@@ -743,19 +777,21 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2636740">15.1.
-                Submitting your packages</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#submitting-your-package">15.1. Submitting your
+                packages</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2636797">15.2.
-                Committing: Importing a package into
-                CVS</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#committing-importing">15.2. Committing: Importing
+                a package into CVS</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2636860">15.3.
-                Updating a package to a newer
-                version</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#updating-package">15.3. Updating a package to a
+                newer version</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2636880">15.4.
-                Moving a package in pkgsrc</a></span></dt>
+                <dt><span class="sect1"><a href=
+                "#moving-package">15.4. Moving a package in
+                pkgsrc</a></span></dt>
               </dl>
             </dd>
           </dl>
@@ -766,28 +802,30 @@ alink="#0000FF">
 
         <dd>
           <dl>
-            <dt><span class="sect1"><a href="#id2637037">A.1.
+            <dt><span class="sect1"><a href="#example-files">A.1.
             files</a></span></dt>
 
             <dd>
               <dl>
-                <dt><span class="sect2"><a href="#id2637041">A.1.1.
-                Makefile</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#example-Makefile">A.1.1. Makefile</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2637048">A.1.2.
-                DESCR</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#example-descr">A.1.2. DESCR</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2637063">A.1.3.
-                PLIST</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#example-plist">A.1.3. PLIST</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2637070">A.1.4.
-                Checking a package with <span><strong class=
+                <dt><span class="sect2"><a href=
+                "#checking-package-with-pkglint">A.1.4. Checking a
+                package with <span><strong class=
                 "command">pkglint</strong></span></a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2637111">A.2. Steps
-            for building, installing, packaging</a></span></dt>
+            <dt><span class="sect1"><a href="#steps-for-b-i-p">A.2.
+            Steps for building, installing,
+            packaging</a></span></dt>
           </dl>
         </dd>
 
@@ -812,10 +850,10 @@ alink="#0000FF">
 
         <dd>
           <dl>
-            <dt><span class="sect1"><a href="#id2637894">D.1.
+            <dt><span class="sect1"><a href="#targets">D.1.
             Targets</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2637959">D.2.
+            <dt><span class="sect1"><a href="#procedure">D.2.
             Procedure</a></span></dt>
           </dl>
         </dd>
@@ -836,8 +874,8 @@ alink="#0000FF">
         <p><b>Table of Contents</b></p>
 
         <dl>
-          <dt><span class="sect1"><a href="#id2568707">1.1.
-          Introduction</a></span></dt>
+          <dt><span class="sect1"><a href=
+          "#introduction-section">1.1. Introduction</a></span></dt>
 
           <dt><span class="sect1"><a href="#overview">1.2.
           Overview</a></span></dt>
@@ -855,8 +893,8 @@ alink="#0000FF">
           <div>
             <div>
               <h2 class="title" style="clear: both"><a name=
-              "id2568707" id=
-              "id2568707"></a>1.1.&nbsp;Introduction</h2>
+              "introduction-section" id=
+              "introduction-section"></a>1.1.&nbsp;Introduction</h2>
             </div>
           </div>
         </div>
@@ -1166,13 +1204,13 @@ alink="#0000FF">
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2569429">2.1. As
-              tar file</a></span></dt>
+              <dt><span class="sect1"><a href="#as-tar-file">2.1.
+              As tar file</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2569445">2.2. Via
+              <dt><span class="sect1"><a href="#via-sup">2.2. Via
               SUP</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2569477">2.3. Via
+              <dt><span class="sect1"><a href="#via-cvs">2.3. Via
               CVS</a></span></dt>
             </dl>
           </dd>
@@ -1182,35 +1220,36 @@ alink="#0000FF">
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2569587">3.1.
-              Bootstrapping pkgsrc</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#bootstrapping-pkgsrc">3.1. Bootstrapping
+              pkgsrc</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2569768">3.2.
-              Platform specific notes</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#platform-specific-notes">3.2. Platform specific
+              notes</a></span></dt>
 
               <dd>
                 <dl>
-                  <dt><span class="sect2"><a href=
-                  "#id2569774">3.2.1. Darwin (Mac OS
-                  X)</a></span></dt>
+                  <dt><span class="sect2"><a href="#darwin">3.2.1.
+                  Darwin (Mac OS X)</a></span></dt>
 
-                  <dt><span class="sect2"><a href=
-                  "#id2569937">3.2.2. FreeBSD</a></span></dt>
+                  <dt><span class="sect2"><a href="#freebsd">3.2.2.
+                  FreeBSD</a></span></dt>
 
-                  <dt><span class="sect2"><a href=
-                  "#id2570449">3.2.3. Interix</a></span></dt>
+                  <dt><span class="sect2"><a href="#interix">3.2.3.
+                  Interix</a></span></dt>
 
-                  <dt><span class="sect2"><a href=
-                  "#id2570750">3.2.4. IRIX</a></span></dt>
+                  <dt><span class="sect2"><a href="#irix">3.2.4.
+                  IRIX</a></span></dt>
 
-                  <dt><span class="sect2"><a href=
-                  "#id2570848">3.2.5. Linux</a></span></dt>
+                  <dt><span class="sect2"><a href="#linux">3.2.5.
+                  Linux</a></span></dt>
 
-                  <dt><span class="sect2"><a href=
-                  "#id2570916">3.2.6. OpenBSD</a></span></dt>
+                  <dt><span class="sect2"><a href="#openbsd">3.2.6.
+                  OpenBSD</a></span></dt>
 
-                  <dt><span class="sect2"><a href=
-                  "#id2571028">3.2.7. Solaris</a></span></dt>
+                  <dt><span class="sect2"><a href="#solaris">3.2.7.
+                  Solaris</a></span></dt>
                 </dl>
               </dd>
             </dl>
@@ -1228,37 +1267,39 @@ alink="#0000FF">
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2571164">4.1.1. Where to get binary
-                  packages</a></span></dt>
+                  "#where-to-get-binary-packages">4.1.1. Where to
+                  get binary packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2571218">4.1.2. How to use binary
-                  packages</a></span></dt>
+                  "#how-to-use-binary-packages">4.1.2. How to use
+                  binary packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2571392">4.1.3. A word of
+                  "#a-word-of-warning">4.1.3. A word of
                   warning</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2571949">4.2.
-              Building packages from source</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#building-packages-from-source">4.2. Building
+              packages from source</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2571960">4.2.1. Requirements</a></span></dt>
+                  "#requirements">4.2.1.
+                  Requirements</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2571980">4.2.2. Fetching
+                  "#fetching-distfiles">4.2.2. Fetching
                   distfiles</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2572094">4.2.3. How to build and
-                  install</a></span></dt>
+                  "#how-to-build-and-install">4.2.3. How to build
+                  and install</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2623825">4.2.4. Selecting the
+                  "#selecting-the-compiler">4.2.4. Selecting the
                   compiler</a></span></dt>
                 </dl>
               </dd>
@@ -1270,10 +1311,12 @@ alink="#0000FF">
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2623979">5.1.
-              Building a single binary package</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#building-a-single-binary-package">5.1. Building a
+              single binary package</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2624057">5.2.
+              <dt><span class="sect1"><a href=
+              "#settings-for-creationg-of-binary-packages">5.2.
               Settings for creation of binary
               packages</a></span></dt>
 
@@ -1287,26 +1330,28 @@ alink="#0000FF">
                   Configuration</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2624204">5.3.2. Other environmental
+                  "#other-environmental-considerations">5.3.2.
+                  Other environmental
                   considerations</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2624245">5.3.3. Operation</a></span></dt>
+                  "#operation">5.3.3. Operation</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2624382">5.3.4. What it does</a></span></dt>
+                  "#what-it-does">5.3.4. What it
+                  does</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2624439">5.3.5. Disk space
+                  "#disk-space-requirements">5.3.5. Disk space
                   requirements</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2624466">5.3.6. Setting up a sandbox for
-                  chroot'ed builds</a></span></dt>
+                  "#setting-up-a-sandbox">5.3.6. Setting up a
+                  sandbox for chroot'ed builds</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2624926">5.3.7. Building a partial set of
-                  packages</a></span></dt>
+                  "#building-a-partial-set">5.3.7. Building a
+                  partial set of packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
                   "#bulk-upload">5.3.8. Uploading results of a bulk
@@ -1314,14 +1359,14 @@ alink="#0000FF">
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2625383">5.4.
-              Creating a multiple CD-ROM packages
-              collection</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#creating-cdroms">5.4. Creating a multiple CD-ROM
+              packages collection</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2625398">5.4.1. Example of
+                  "#cdpack-example">5.4.1. Example of
                   cdpack</a></span></dt>
                 </dl>
               </dd>
@@ -1333,53 +1378,60 @@ alink="#0000FF">
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2625590">6.1. Are
-              there any mailing lists for pkg-related
-              discussion?</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#mailing-list-pointers">6.1. Are there any mailing
+              lists for pkg-related discussion?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2625724">6.2.
+              <dt><span class="sect1"><a href="#pkgviews-docs">6.2.
               Where's the pkgviews documentation?</a></span></dt>
 
               <dt><span class="sect1"><a href="#faq-pkgtools">6.3.
               Utilities for package management
               (pkgtools)</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2625987">6.4. How
-              to use pkgsrc as non-root</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#non-root-pkgsrc">6.4. How to use pkgsrc as
+              non-root</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2625998">6.5. How
-              to resume transfers when fetching
-              distfiles?</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#resume-transfers">6.5. How to resume transfers when
+              fetching distfiles?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2626049">6.6. How
-              can I install/use XFree86 from
-              pkgsrc?</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#XFree86-from-pkgsrc">6.6. How can I install/use
+              XFree86 from pkgsrc?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2626076">6.7. How
-              can I install/use X.org from pkgsrc?</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#x.org-from-pkgsrc">6.7. How can I install/use X.org
+              from pkgsrc?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2626104">6.8. How
-              to fetch files from behind a firewall</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#fetch-behind-firewall">6.8. How to fetch files from
+              behind a firewall</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2626118">6.9. How
-              do I tell <span><strong class="command">make
+              <dt><span class="sect1"><a href="#passive-ftp">6.9.
+              How do I tell <span><strong class="command">make
               fetch</strong></span> to do passive
               FTP?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2626169">6.10.
-              How to fetch all distfiles at once</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#fetching-all-distfiles">6.10. How to fetch all
+              distfiles at once</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2626453">6.11.
-              What does &#8220;<span class="quote">Don't know how
-              to make /usr/share/tmac/tmac.andoc</span>&#8221;
+              <dt><span class="sect1"><a href=
+              "#tmac.andoc-missing">6.11. What does
+              &#8220;<span class="quote">Don't know how to make
+              /usr/share/tmac/tmac.andoc</span>&#8221;
               mean?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2626491">6.12.
-              What does &#8220;<span class="quote">Could not find
+              <dt><span class="sect1"><a href=
+              "#bsd.own.mk-missing">6.12. What does
+              &#8220;<span class="quote">Could not find
               bsd.own.mk</span>&#8221; mean?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2626549">6.13.
-              Using 'sudo' with pkgsrc</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#using-sudo-with-pkgsrc">6.13. Using 'sudo' with
+              pkgsrc</a></span></dt>
 
               <dt><span class="sect1"><a href="#faq.conf">6.14.
               Configuration files handling and
@@ -1408,13 +1460,13 @@ alink="#0000FF">
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2569429">2.1. As
+            <dt><span class="sect1"><a href="#as-tar-file">2.1. As
             tar file</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2569445">2.2. Via
+            <dt><span class="sect1"><a href="#via-sup">2.2. Via
             SUP</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2569477">2.3. Via
+            <dt><span class="sect1"><a href="#via-cvs">2.3. Via
             CVS</a></span></dt>
           </dl>
         </div>
@@ -1428,7 +1480,7 @@ alink="#0000FF">
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2569429" id="id2569429"></a>2.1.&nbsp;As tar
+                "as-tar-file" id="as-tar-file"></a>2.1.&nbsp;As tar
                 file</h2>
               </div>
             </div>
@@ -1446,8 +1498,7 @@ alink="#0000FF">
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2569445" id="id2569445"></a>2.2.&nbsp;Via
-                SUP</h2>
+                "via-sup" id="via-sup"></a>2.2.&nbsp;Via SUP</h2>
               </div>
             </div>
           </div>
@@ -1472,8 +1523,7 @@ release=pkgsrc
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2569477" id="id2569477"></a>2.3.&nbsp;Via
-                CVS</h2>
+                "via-cvs" id="via-cvs"></a>2.3.&nbsp;Via CVS</h2>
               </div>
             </div>
           </div>
@@ -1528,33 +1578,35 @@ release=pkgsrc
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2569587">3.1.
-            Bootstrapping pkgsrc</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#bootstrapping-pkgsrc">3.1. Bootstrapping
+            pkgsrc</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2569768">3.2.
-            Platform specific notes</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#platform-specific-notes">3.2. Platform specific
+            notes</a></span></dt>
 
             <dd>
               <dl>
-                <dt><span class="sect2"><a href="#id2569774">3.2.1.
+                <dt><span class="sect2"><a href="#darwin">3.2.1.
                 Darwin (Mac OS X)</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2569937">3.2.2.
+                <dt><span class="sect2"><a href="#freebsd">3.2.2.
                 FreeBSD</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2570449">3.2.3.
+                <dt><span class="sect2"><a href="#interix">3.2.3.
                 Interix</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2570750">3.2.4.
+                <dt><span class="sect2"><a href="#irix">3.2.4.
                 IRIX</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2570848">3.2.5.
+                <dt><span class="sect2"><a href="#linux">3.2.5.
                 Linux</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2570916">3.2.6.
+                <dt><span class="sect2"><a href="#openbsd">3.2.6.
                 OpenBSD</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2571028">3.2.7.
+                <dt><span class="sect2"><a href="#solaris">3.2.7.
                 Solaris</a></span></dt>
               </dl>
             </dd>
@@ -1566,8 +1618,9 @@ release=pkgsrc
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2569587" id=
-                "id2569587"></a>3.1.&nbsp;Bootstrapping pkgsrc</h2>
+                "bootstrapping-pkgsrc" id=
+                "bootstrapping-pkgsrc"></a>3.1.&nbsp;Bootstrapping
+                pkgsrc</h2>
               </div>
             </div>
           </div>
@@ -1657,7 +1710,8 @@ release=pkgsrc
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2569768" id="id2569768"></a>3.2.&nbsp;Platform
+                "platform-specific-notes" id=
+                "platform-specific-notes"></a>3.2.&nbsp;Platform
                 specific notes</h2>
               </div>
             </div>
@@ -1670,9 +1724,8 @@ release=pkgsrc
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2569774" id=
-                  "id2569774"></a>3.2.1.&nbsp;Darwin (Mac OS
-                  X)</h3>
+                  <h3 class="title"><a name="darwin" id=
+                  "darwin"></a>3.2.1.&nbsp;Darwin (Mac OS X)</h3>
                 </div>
               </div>
             </div>
@@ -1803,8 +1856,8 @@ release=pkgsrc
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2569937" id=
-                  "id2569937"></a>3.2.2.&nbsp;FreeBSD</h3>
+                  <h3 class="title"><a name="freebsd" id=
+                  "freebsd"></a>3.2.2.&nbsp;FreeBSD</h3>
                 </div>
               </div>
             </div>
@@ -1860,8 +1913,8 @@ release=pkgsrc
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2570449" id=
-                  "id2570449"></a>3.2.3.&nbsp;Interix</h3>
+                  <h3 class="title"><a name="interix" id=
+                  "interix"></a>3.2.3.&nbsp;Interix</h3>
                 </div>
               </div>
             </div>
@@ -2042,8 +2095,8 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2570750" id=
-                  "id2570750"></a>3.2.4.&nbsp;IRIX</h3>
+                  <h3 class="title"><a name="irix" id=
+                  "irix"></a>3.2.4.&nbsp;IRIX</h3>
                 </div>
               </div>
             </div>
@@ -2123,8 +2176,8 @@ PKGSRC_COMPILER=mipspro
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2570848" id=
-                  "id2570848"></a>3.2.5.&nbsp;Linux</h3>
+                  <h3 class="title"><a name="linux" id=
+                  "linux"></a>3.2.5.&nbsp;Linux</h3>
                 </div>
               </div>
             </div>
@@ -2201,8 +2254,8 @@ ICCBASE=/opt/icc
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2570916" id=
-                  "id2570916"></a>3.2.6.&nbsp;OpenBSD</h3>
+                  <h3 class="title"><a name="openbsd" id=
+                  "openbsd"></a>3.2.6.&nbsp;OpenBSD</h3>
                 </div>
               </div>
             </div>
@@ -2268,8 +2321,8 @@ ICCBASE=/opt/icc
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2571028" id=
-                  "id2571028"></a>3.2.7.&nbsp;Solaris</h3>
+                  <h3 class="title"><a name="solaris" id=
+                  "solaris"></a>3.2.7.&nbsp;Solaris</h3>
                 </div>
               </div>
             </div>
@@ -2313,9 +2366,9 @@ ICCBASE=/opt/icc
               <div class="titlepage">
                 <div>
                   <div>
-                    <h4 class="title"><a name="id2571059" id=
-                    "id2571059"></a>3.2.7.1.&nbsp;If you are using
-                    gcc</h4>
+                    <h4 class="title"><a name="solaris-gcc-note"
+                    id="solaris-gcc-note"></a>3.2.7.1.&nbsp;If you
+                    are using gcc</h4>
                   </div>
                 </div>
               </div>
@@ -2343,9 +2396,10 @@ ICCBASE=/opt/icc
               <div class="titlepage">
                 <div>
                   <div>
-                    <h4 class="title"><a name="id2571080" id=
-                    "id2571080"></a>3.2.7.2.&nbsp;If you are using
-                    Sun WorkShop</h4>
+                    <h4 class="title"><a name=
+                    "solaris-sun-workshop-note" id=
+                    "solaris-sun-workshop-note"></a>3.2.7.2.&nbsp;If
+                    you are using Sun WorkShop</h4>
                   </div>
                 </div>
               </div>
@@ -2421,33 +2475,40 @@ CFLAGS= -xtarget=ultra -xarch=v9
 
             <dd>
               <dl>
-                <dt><span class="sect2"><a href="#id2571164">4.1.1.
-                Where to get binary packages</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#where-to-get-binary-packages">4.1.1. Where to get
+                binary packages</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2571218">4.1.2.
-                How to use binary packages</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#how-to-use-binary-packages">4.1.2. How to use
+                binary packages</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2571392">4.1.3.
-                A word of warning</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#a-word-of-warning">4.1.3. A word of
+                warning</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2571949">4.2.
-            Building packages from source</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#building-packages-from-source">4.2. Building packages
+            from source</a></span></dt>
 
             <dd>
               <dl>
-                <dt><span class="sect2"><a href="#id2571960">4.2.1.
-                Requirements</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#requirements">4.2.1. Requirements</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2571980">4.2.2.
-                Fetching distfiles</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#fetching-distfiles">4.2.2. Fetching
+                distfiles</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2572094">4.2.3.
-                How to build and install</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#how-to-build-and-install">4.2.3. How to build and
+                install</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2623825">4.2.4.
-                Selecting the compiler</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#selecting-the-compiler">4.2.4. Selecting the
+                compiler</a></span></dt>
               </dl>
             </dd>
           </dl>
@@ -2473,9 +2534,10 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2571164" id=
-                  "id2571164"></a>4.1.1.&nbsp;Where to get binary
-                  packages</h3>
+                  <h3 class="title"><a name=
+                  "where-to-get-binary-packages" id=
+                  "where-to-get-binary-packages"></a>4.1.1.&nbsp;Where
+                  to get binary packages</h3>
                 </div>
               </div>
             </div>
@@ -2508,9 +2570,10 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2571218" id=
-                  "id2571218"></a>4.1.2.&nbsp;How to use binary
-                  packages</h3>
+                  <h3 class="title"><a name=
+                  "how-to-use-binary-packages" id=
+                  "how-to-use-binary-packages"></a>4.1.2.&nbsp;How
+                  to use binary packages</h3>
                 </div>
               </div>
             </div>
@@ -2575,8 +2638,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2571392" id=
-                  "id2571392"></a>4.1.3.&nbsp;A word of
+                  <h3 class="title"><a name="a-word-of-warning" id=
+                  "a-word-of-warning"></a>4.1.3.&nbsp;A word of
                   warning</h3>
                 </div>
               </div>
@@ -2599,7 +2662,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2571949" id="id2571949"></a>4.2.&nbsp;Building
+                "building-packages-from-source" id=
+                "building-packages-from-source"></a>4.2.&nbsp;Building
                 packages from source</h2>
               </div>
             </div>
@@ -2615,8 +2679,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2571960" id=
-                  "id2571960"></a>4.2.1.&nbsp;Requirements</h3>
+                  <h3 class="title"><a name="requirements" id=
+                  "requirements"></a>4.2.1.&nbsp;Requirements</h3>
                 </div>
               </div>
             </div>
@@ -2635,8 +2699,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2571980" id=
-                  "id2571980"></a>4.2.2.&nbsp;Fetching
+                  <h3 class="title"><a name="fetching-distfiles"
+                  id="fetching-distfiles"></a>4.2.2.&nbsp;Fetching
                   distfiles</h3>
                 </div>
               </div>
@@ -2674,9 +2738,10 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2572094" id=
-                  "id2572094"></a>4.2.3.&nbsp;How to build and
-                  install</h3>
+                  <h3 class="title"><a name=
+                  "how-to-build-and-install" id=
+                  "how-to-build-and-install"></a>4.2.3.&nbsp;How to
+                  build and install</h3>
                 </div>
               </div>
             </div>
@@ -2843,9 +2908,10 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2623825" id=
-                  "id2623825"></a>4.2.4.&nbsp;Selecting the
-                  compiler</h3>
+                  <h3 class="title"><a name=
+                  "selecting-the-compiler" id=
+                  "selecting-the-compiler"></a>4.2.4.&nbsp;Selecting
+                  the compiler</h3>
                 </div>
               </div>
             </div>
@@ -2944,10 +3010,12 @@ CFLAGS= -xtarget=ultra -xarch=v9
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2623979">5.1.
-            Building a single binary package</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#building-a-single-binary-package">5.1. Building a
+            single binary package</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2624057">5.2.
+            <dt><span class="sect1"><a href=
+            "#settings-for-creationg-of-binary-packages">5.2.
             Settings for creation of binary
             packages</a></span></dt>
 
@@ -2960,24 +3028,27 @@ CFLAGS= -xtarget=ultra -xarch=v9
                 "#binary.configuration">5.3.1.
                 Configuration</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2624204">5.3.2.
-                Other environmental considerations</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#other-environmental-considerations">5.3.2. Other
+                environmental considerations</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2624245">5.3.3.
+                <dt><span class="sect2"><a href="#operation">5.3.3.
                 Operation</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2624382">5.3.4.
-                What it does</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#what-it-does">5.3.4. What it does</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2624439">5.3.5.
-                Disk space requirements</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#disk-space-requirements">5.3.5. Disk space
+                requirements</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2624466">5.3.6.
-                Setting up a sandbox for chroot'ed
-                builds</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#setting-up-a-sandbox">5.3.6. Setting up a sandbox
+                for chroot'ed builds</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2624926">5.3.7.
-                Building a partial set of packages</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#building-a-partial-set">5.3.7. Building a partial
+                set of packages</a></span></dt>
 
                 <dt><span class="sect2"><a href=
                 "#bulk-upload">5.3.8. Uploading results of a bulk
@@ -2985,14 +3056,15 @@ CFLAGS= -xtarget=ultra -xarch=v9
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2625383">5.4.
+            <dt><span class="sect1"><a href="#creating-cdroms">5.4.
             Creating a multiple CD-ROM packages
             collection</a></span></dt>
 
             <dd>
               <dl>
-                <dt><span class="sect2"><a href="#id2625398">5.4.1.
-                Example of cdpack</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#cdpack-example">5.4.1. Example of
+                cdpack</a></span></dt>
               </dl>
             </dd>
           </dl>
@@ -3003,8 +3075,9 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2623979" id="id2623979"></a>5.1.&nbsp;Building a
-                single binary package</h2>
+                "building-a-single-binary-package" id=
+                "building-a-single-binary-package"></a>5.1.&nbsp;Building
+                a single binary package</h2>
               </div>
             </div>
           </div>
@@ -3057,7 +3130,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2624057" id="id2624057"></a>5.2.&nbsp;Settings
+                "settings-for-creationg-of-binary-packages" id=
+                "settings-for-creationg-of-binary-packages"></a>5.2.&nbsp;Settings
                 for creation of binary packages</h2>
               </div>
             </div>
@@ -3139,8 +3213,8 @@ _ACCEPTABLE=    yes
               <div class="titlepage">
                 <div>
                   <div>
-                    <h4 class="title"><a name="id2624122" id=
-                    "id2624122"></a>5.3.1.2.&nbsp;<code class=
+                    <h4 class="title"><a name="build.conf" id=
+                    "build.conf"></a>5.3.1.2.&nbsp;<code class=
                     "filename">build.conf</code></h4>
                   </div>
                 </div>
@@ -3165,9 +3239,9 @@ _ACCEPTABLE=    yes
               <div class="titlepage">
                 <div>
                   <div>
-                    <h4 class="title"><a name="id2624158" id=
-                    "id2624158"></a>5.3.1.3.&nbsp;<code class=
-                    "filename">pre-build.local</code></h4>
+                    <h4 class="title"><a name="pre-build.local" id=
+                    "pre-build.local"></a>5.3.1.3.&nbsp;<code class="filename">
+                    pre-build.local</code></h4>
                   </div>
                 </div>
               </div>
@@ -3200,9 +3274,10 @@ _ACCEPTABLE=    yes
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2624204" id=
-                  "id2624204"></a>5.3.2.&nbsp;Other environmental
-                  considerations</h3>
+                  <h3 class="title"><a name=
+                  "other-environmental-considerations" id=
+                  "other-environmental-considerations"></a>5.3.2.&nbsp;Other
+                  environmental considerations</h3>
                 </div>
               </div>
             </div>
@@ -3242,8 +3317,8 @@ fi
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2624245" id=
-                  "id2624245"></a>5.3.3.&nbsp;Operation</h3>
+                  <h3 class="title"><a name="operation" id=
+                  "operation"></a>5.3.3.&nbsp;Operation</h3>
                 </div>
               </div>
             </div>
@@ -3289,8 +3364,8 @@ fi
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2624382" id=
-                  "id2624382"></a>5.3.4.&nbsp;What it does</h3>
+                  <h3 class="title"><a name="what-it-does" id=
+                  "what-it-does"></a>5.3.4.&nbsp;What it does</h3>
                 </div>
               </div>
             </div>
@@ -3348,9 +3423,10 @@ fi
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2624439" id=
-                  "id2624439"></a>5.3.5.&nbsp;Disk space
-                  requirements</h3>
+                  <h3 class="title"><a name=
+                  "disk-space-requirements" id=
+                  "disk-space-requirements"></a>5.3.5.&nbsp;Disk
+                  space requirements</h3>
                 </div>
               </div>
             </div>
@@ -3391,9 +3467,9 @@ fi
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2624466" id=
-                  "id2624466"></a>5.3.6.&nbsp;Setting up a sandbox
-                  for chroot'ed builds</h3>
+                  <h3 class="title"><a name="setting-up-a-sandbox"
+                  id="setting-up-a-sandbox"></a>5.3.6.&nbsp;Setting
+                  up a sandbox for chroot'ed builds</h3>
                 </div>
               </div>
             </div>
@@ -3581,9 +3657,10 @@ fi
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2624926" id=
-                  "id2624926"></a>5.3.7.&nbsp;Building a partial
-                  set of packages</h3>
+                  <h3 class="title"><a name=
+                  "building-a-partial-set" id=
+                  "building-a-partial-set"></a>5.3.7.&nbsp;Building
+                  a partial set of packages</h3>
                 </div>
               </div>
             </div>
@@ -3775,8 +3852,9 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2625383" id="id2625383"></a>5.4.&nbsp;Creating a
-                multiple CD-ROM packages collection</h2>
+                "creating-cdroms" id=
+                "creating-cdroms"></a>5.4.&nbsp;Creating a multiple
+                CD-ROM packages collection</h2>
               </div>
             </div>
           </div>
@@ -3798,8 +3876,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2625398" id=
-                  "id2625398"></a>5.4.1.&nbsp;Example of
+                  <h3 class="title"><a name="cdpack-example" id=
+                  "cdpack-example"></a>5.4.1.&nbsp;Example of
                   cdpack</h3>
                 </div>
               </div>
@@ -3872,52 +3950,59 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2625590">6.1. Are
-            there any mailing lists for pkg-related
-            discussion?</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#mailing-list-pointers">6.1. Are there any mailing
+            lists for pkg-related discussion?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2625724">6.2.
+            <dt><span class="sect1"><a href="#pkgviews-docs">6.2.
             Where's the pkgviews documentation?</a></span></dt>
 
             <dt><span class="sect1"><a href="#faq-pkgtools">6.3.
             Utilities for package management
             (pkgtools)</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2625987">6.4. How
-            to use pkgsrc as non-root</a></span></dt>
+            <dt><span class="sect1"><a href="#non-root-pkgsrc">6.4.
+            How to use pkgsrc as non-root</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2625998">6.5. How
-            to resume transfers when fetching
-            distfiles?</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#resume-transfers">6.5. How to resume transfers when
+            fetching distfiles?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2626049">6.6. How
-            can I install/use XFree86 from pkgsrc?</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#XFree86-from-pkgsrc">6.6. How can I install/use
+            XFree86 from pkgsrc?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2626076">6.7. How
-            can I install/use X.org from pkgsrc?</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#x.org-from-pkgsrc">6.7. How can I install/use X.org
+            from pkgsrc?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2626104">6.8. How
-            to fetch files from behind a firewall</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#fetch-behind-firewall">6.8. How to fetch files from
+            behind a firewall</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2626118">6.9. How
+            <dt><span class="sect1"><a href="#passive-ftp">6.9. How
             do I tell <span><strong class="command">make
             fetch</strong></span> to do passive
             FTP?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2626169">6.10. How
-            to fetch all distfiles at once</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#fetching-all-distfiles">6.10. How to fetch all
+            distfiles at once</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2626453">6.11. What
-            does &#8220;<span class="quote">Don't know how to make
+            <dt><span class="sect1"><a href=
+            "#tmac.andoc-missing">6.11. What does
+            &#8220;<span class="quote">Don't know how to make
             /usr/share/tmac/tmac.andoc</span>&#8221;
             mean?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2626491">6.12. What
-            does &#8220;<span class="quote">Could not find
+            <dt><span class="sect1"><a href=
+            "#bsd.own.mk-missing">6.12. What does
+            &#8220;<span class="quote">Could not find
             bsd.own.mk</span>&#8221; mean?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2626549">6.13.
-            Using 'sudo' with pkgsrc</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#using-sudo-with-pkgsrc">6.13. Using 'sudo' with
+            pkgsrc</a></span></dt>
 
             <dt><span class="sect1"><a href="#faq.conf">6.14.
             Configuration files handling and
@@ -3938,8 +4023,9 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2625590" id="id2625590"></a>6.1.&nbsp;Are there
-                any mailing lists for pkg-related discussion?</h2>
+                "mailing-list-pointers" id=
+                "mailing-list-pointers"></a>6.1.&nbsp;Are there any
+                mailing lists for pkg-related discussion?</h2>
               </div>
             </div>
           </div>
@@ -3997,8 +4083,9 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2625724" id="id2625724"></a>6.2.&nbsp;Where's
-                the pkgviews documentation?</h2>
+                "pkgviews-docs" id=
+                "pkgviews-docs"></a>6.2.&nbsp;Where's the pkgviews
+                documentation?</h2>
               </div>
             </div>
           </div>
@@ -4256,8 +4343,9 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2625987" id="id2625987"></a>6.4.&nbsp;How to use
-                pkgsrc as non-root</h2>
+                "non-root-pkgsrc" id=
+                "non-root-pkgsrc"></a>6.4.&nbsp;How to use pkgsrc
+                as non-root</h2>
               </div>
             </div>
           </div>
@@ -4274,8 +4362,9 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2625998" id="id2625998"></a>6.5.&nbsp;How to
-                resume transfers when fetching distfiles?</h2>
+                "resume-transfers" id=
+                "resume-transfers"></a>6.5.&nbsp;How to resume
+                transfers when fetching distfiles?</h2>
               </div>
             </div>
           </div>
@@ -4315,7 +4404,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2626049" id="id2626049"></a>6.6.&nbsp;How can I
+                "XFree86-from-pkgsrc" id=
+                "XFree86-from-pkgsrc"></a>6.6.&nbsp;How can I
                 install/use XFree86 from pkgsrc?</h2>
               </div>
             </div>
@@ -4338,7 +4428,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2626076" id="id2626076"></a>6.7.&nbsp;How can I
+                "x.org-from-pkgsrc" id=
+                "x.org-from-pkgsrc"></a>6.7.&nbsp;How can I
                 install/use X.org from pkgsrc?</h2>
               </div>
             </div>
@@ -4361,8 +4452,9 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2626104" id="id2626104"></a>6.8.&nbsp;How to
-                fetch files from behind a firewall</h2>
+                "fetch-behind-firewall" id=
+                "fetch-behind-firewall"></a>6.8.&nbsp;How to fetch
+                files from behind a firewall</h2>
               </div>
             </div>
           </div>
@@ -4386,8 +4478,8 @@ http_proxy=http://orpheus.amdahl.com:80/
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2626118" id="id2626118"></a>6.9.&nbsp;How do I
-                tell <span><strong class="command">make
+                "passive-ftp" id="passive-ftp"></a>6.9.&nbsp;How do
+                I tell <span><strong class="command">make
                 fetch</strong></span> to do passive FTP?</h2>
               </div>
             </div>
@@ -4420,7 +4512,8 @@ ${LOCALBASE}/bin/ftp
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2626169" id="id2626169"></a>6.10.&nbsp;How to
+                "fetching-all-distfiles" id=
+                "fetching-all-distfiles"></a>6.10.&nbsp;How to
                 fetch all distfiles at once</h2>
               </div>
             </div>
@@ -4493,7 +4586,8 @@ ${LOCALBASE}/bin/ftp
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2626453" id="id2626453"></a>6.11.&nbsp;What does
+                "tmac.andoc-missing" id=
+                "tmac.andoc-missing"></a>6.11.&nbsp;What does
                 &#8220;<span class="quote">Don't know how to make
                 /usr/share/tmac/tmac.andoc</span>&#8221; mean?</h2>
               </div>
@@ -4525,7 +4619,8 @@ ${LOCALBASE}/bin/ftp
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2626491" id="id2626491"></a>6.12.&nbsp;What does
+                "bsd.own.mk-missing" id=
+                "bsd.own.mk-missing"></a>6.12.&nbsp;What does
                 &#8220;<span class="quote">Could not find
                 bsd.own.mk</span>&#8221; mean?</h2>
               </div>
@@ -4554,7 +4649,8 @@ ${LOCALBASE}/bin/ftp
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2626549" id="id2626549"></a>6.13.&nbsp;Using
+                "using-sudo-with-pkgsrc" id=
+                "using-sudo-with-pkgsrc"></a>6.13.&nbsp;Using
                 'sudo' with pkgsrc</h2>
               </div>
             </div>
@@ -4819,17 +4915,18 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
               <dt><span class="sect1"><a href=
               "#components.patches">7.3. patches/*</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2627632">7.4.
-              Other mandatory files</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#other-mandatory-files">7.4. Other mandatory
+              files</a></span></dt>
 
               <dt><span class="sect1"><a href=
               "#components.optional">7.5. Optional
               files</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2627757">7.6.
+              <dt><span class="sect1"><a href="#work-dir">7.6.
               <code class="filename">work*</code></a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2627845">7.7.
+              <dt><span class="sect1"><a href="#files-dir">7.7.
               <code class="filename">files/*</code></a></span></dt>
             </dl>
           </dd>
@@ -4858,24 +4955,25 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2628274">8.2.1. Adding things to a
+                  "#adding-to-list">8.2.1. Adding things to a
                   list</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2628283">8.2.2. Converting an internal list
-                  into an external list</a></span></dt>
+                  "#converting-internal-to-external">8.2.2.
+                  Converting an internal list into an external
+                  list</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2628305">8.2.3. Passing variables to a shell
-                  command</a></span></dt>
+                  "#passing-variable-to-shell">8.2.3. Passing
+                  variables to a shell command</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2628426">8.2.4. Quoting
+                  "#quoting-guideline">8.2.4. Quoting
                   guideline</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2628677">8.2.5. Workaround for a bug in BSD
-                  Make</a></span></dt>
+                  "#bsd-make-bug-workaround">8.2.5. Workaround for
+                  a bug in BSD Make</a></span></dt>
                 </dl>
               </dd>
             </dl>
@@ -4886,11 +4984,12 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2628738">9.1. RCS
+              <dt><span class="sect1"><a href="#rcs-id">9.1. RCS
               ID</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2628753">9.2.
-              Semi-automatic <code class="filename">PLIST</code>
+              <dt><span class="sect1"><a href=
+              "#automatic-plist-generation">9.2. Semi-automatic
+              <code class="filename">PLIST</code>
               generation</a></span></dt>
 
               <dt><span class="sect1"><a href="#print-PLIST">9.3.
@@ -4900,16 +4999,18 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
               <dt><span class="sect1"><a href="#plist.misc">9.4.
               Variable substitution in PLIST</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2629074">9.5.
+              <dt><span class="sect1"><a href=
+              "#manpage-compression">9.5.
               Manpage-compression</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2629115">9.6.
-              Changing PLIST source with <code class=
+              <dt><span class="sect1"><a href=
+              "#using-PLIST_SRC">9.6. Changing PLIST source with
+              <code class=
               "varname">PLIST_SRC</code></a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2629140">9.7.
-              Platform specific and differing
-              PLISTs</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#platform-specific-plist">9.7. Platform specific and
+              differing PLISTs</a></span></dt>
 
               <dt><span class="sect1"><a href=
               "#faq.common-dirs">9.8. Sharing directories between
@@ -4922,41 +5023,45 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2629406">10.1.
-              Converting packages to use buildlink3</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#converting-to-buildlink3">10.1. Converting packages
+              to use buildlink3</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2629724">10.2.
-              Writing <code class="filename">buildlink3.mk</code>
-              files</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#creating-buildlink3.mk">10.2. Writing <code class=
+              "filename">buildlink3.mk</code> files</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2629794">10.2.1. Anatomy of a buildlink3.mk
-                  file</a></span></dt>
+                  "#anatomy-of-bl3">10.2.1. Anatomy of a
+                  buildlink3.mk file</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2630166">10.2.2. Updating <code class=
-                  "varname">BUILDLINK_DEPENDS.<em class=
-                  "replaceable"><code>pkg</code></em></code> in
-                  <code class="filename">buildlink3.mk</code>
+                  "#updating-buildlink-depends">10.2.2. Updating
+                  <code class=
+                  "varname">BUILDLINK_DEPENDS.<em class="replaceable">
+                  <code>pkg</code></em></code> in <code class=
+                  "filename">buildlink3.mk</code>
                   files</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2630245">10.3.
-              Writing <code class="filename">builtin.mk</code>
-              files</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#writing-builtin.mk">10.3. Writing <code class=
+              "filename">builtin.mk</code> files</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2630394">10.3.1. Anatomy of a <code class=
-                  "filename">builtin.mk</code> file</a></span></dt>
+                  "#anatomy-of-builtin.mk">10.3.1. Anatomy of a
+                  <code class="filename">builtin.mk</code>
+                  file</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2630621">10.3.2. Global preferences for
-                  native or pkgsrc software</a></span></dt>
+                  "#native-or-pkgsrc-preference">10.3.2. Global
+                  preferences for native or pkgsrc
+                  software</a></span></dt>
                 </dl>
               </dd>
             </dl>
@@ -4967,11 +5072,13 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2630762">11.1.
-              Global default options</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#global-default-options">11.1. Global default
+              options</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2630777">11.2.
-              Converting packages to use <code class=
+              <dt><span class="sect1"><a href=
+              "#converting-to-options">11.2. Converting packages to
+              use <code class=
               "filename">bsd.options.mk</code></a></span></dt>
             </dl>
           </dd>
@@ -4984,7 +5091,7 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
               <dt><span class="sect1"><a href="#build.prefix">12.1.
               Program location</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2631338">12.2.
+              <dt><span class="sect1"><a href="#main-targets">12.2.
               Main targets</a></span></dt>
 
               <dt><span class="sect1"><a href=
@@ -4998,17 +5105,19 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2632835">13.1.
-              General operation</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#general-operation">13.1. General
+              operation</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2632838">13.1.1. How to pull in variables
-                  from /etc/mk.conf</a></span></dt>
+                  "#pulling-vars-from-etc-mk.conf">13.1.1. How to
+                  pull in variables from
+                  /etc/mk.conf</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2632921">13.1.2. Restricted
+                  "#restricted-packages">13.1.2. Restricted
                   packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
@@ -5016,54 +5125,58 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
                   dependencies</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2633374">13.1.4. Handling conflicts with
+                  "#conflicts">13.1.4. Handling conflicts with
                   other packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2633493">13.1.5. Packages that cannot or
-                  should not be built</a></span></dt>
+                  "#not-building-packages">13.1.5. Packages that
+                  cannot or should not be built</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2633518">13.1.6. Packages which should not be
-                  deleted, once installed</a></span></dt>
+                  "#undeletable-packages">13.1.6. Packages which
+                  should not be deleted, once
+                  installed</a></span></dt>
 
                   <dt><span class="sect2"><a href=
                   "#security-handling">13.1.7. Handling packages
                   with security problems</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2633678">13.1.8. How to handle compiler
+                  "#compiler-bugs">13.1.8. How to handle compiler
                   bugs</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2633701">13.1.9. How to handle incrementing
-                  versions when fixing an existing
+                  "#bumping-pkgrevision">13.1.9. How to handle
+                  incrementing versions when fixing an existing
                   package</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2633818">13.1.10. Portability of
-                  packages</a></span></dt>
+                  "#portability-of-packages">13.1.10. Portability
+                  of packages</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2633843">13.2.
-              Possible downloading issues</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#downloading-issues">13.2. Possible downloading
+              issues</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2633846">13.2.1. Packages whose distfiles
-                  aren't available for plain
+                  "#no-plain-download">13.2.1. Packages whose
+                  distfiles aren't available for plain
                   downloading</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2633909">13.2.2. How to handle modified
-                  distfiles with the 'old' name</a></span></dt>
+                  "#modified-distfiles-same-name">13.2.2. How to
+                  handle modified distfiles with the 'old'
+                  name</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2633921">13.3.
-              Configuration gotchas</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#configuration-gotchas">13.3. Configuration
+              gotchas</a></span></dt>
 
               <dd>
                 <dl>
@@ -5072,65 +5185,69 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
                   libtool</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2634286">13.3.2. Using libtool on GNU
+                  "#using-libtool">13.3.2. Using libtool on GNU
                   packages that already support
                   libtool</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2634504">13.3.3. GNU
+                  "#autoconf-automake">13.3.3. GNU
                   Autoconf/Automake</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2634617">13.4.
-              Building considerations</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#building-considerations">13.4. Building
+              considerations</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2634620">13.4.1. CPP defines</a></span></dt>
+                  "#cpp-defines">13.4.1. CPP
+                  defines</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2634650">13.5.
-              Package specific actions</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#package-specific-actions">13.5. Package specific
+              actions</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2634653">13.5.1. Package configuration
-                  files</a></span></dt>
+                  "#package-configuration-files">13.5.1. Package
+                  configuration files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2634756">13.5.2. User
+                  "#user-interaction">13.5.2. User
                   interaction</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2634801">13.5.3. Handling
+                  "#handling-licenses">13.5.3. Handling
                   licenses</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2634884">13.5.4. Creating an account from a
-                  package</a></span></dt>
+                  "#creating-accounts">13.5.4. Creating an account
+                  from a package</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2635014">13.5.5. Installing score
-                  files</a></span></dt>
+                  "#installing-score-files">13.5.5. Installing
+                  score files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2635058">13.5.6. Packages providing login
+                  "#login-shells">13.5.6. Packages providing login
                   shells</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2635115">13.5.7. Packages containing perl
+                  "#perl-scripts">13.5.7. Packages containing perl
                   scripts</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2635133">13.5.8. Packages with hardcoded
-                  paths to other interpreters</a></span></dt>
+                  "#hardcoded-paths">13.5.8. Packages with
+                  hardcoded paths to other
+                  interpreters</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2635155">13.5.9. Packages installing perl
+                  "#perl-modules">13.5.9. Packages installing perl
                   modules</a></span></dt>
 
                   <dt><span class="sect2"><a href=
@@ -5138,41 +5255,43 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
                   info files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2635511">13.5.11. Packages installing GConf2
-                  data files</a></span></dt>
+                  "#gconf2-data-files">13.5.11. Packages installing
+                  GConf2 data files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2635680">13.5.12. Packages installing
-                  scrollkeeper data files</a></span></dt>
+                  "#scrollkeeper-data-files">13.5.12. Packages
+                  installing scrollkeeper data
+                  files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2635731">13.5.13. Packages installing X11
+                  "#x11-fonts">13.5.13. Packages installing X11
                   fonts</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2635778">13.5.14. Packages installing GTK2
+                  "#gtk2-modules">13.5.14. Packages installing GTK2
                   modules</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2635847">13.5.15. Packages installing SGML or
-                  XML data</a></span></dt>
+                  "#sgml-xml-data">13.5.15. Packages installing
+                  SGML or XML data</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2635899">13.5.16. Packages installing
+                  "#mime-database">13.5.16. Packages installing
                   extensions to the MIME database</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2636038">13.5.17. Packages using
+                  "#intltool">13.5.17. Packages using
                   intltool</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2636052">13.5.18. Packages installing startup
-                  scripts</a></span></dt>
+                  "#startup-scripts">13.5.18. Packages installing
+                  startup scripts</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2636073">13.6.
-              Feedback to the author</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#feedback-to-author">13.6. Feedback to the
+              author</a></span></dt>
             </dl>
           </dd>
 
@@ -5184,18 +5303,21 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2636740">15.1.
-              Submitting your packages</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#submitting-your-package">15.1. Submitting your
+              packages</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2636797">15.2.
-              Committing: Importing a package into
-              CVS</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#committing-importing">15.2. Committing: Importing a
+              package into CVS</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2636860">15.3.
-              Updating a package to a newer version</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#updating-package">15.3. Updating a package to a
+              newer version</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2636880">15.4.
-              Moving a package in pkgsrc</a></span></dt>
+              <dt><span class="sect1"><a href=
+              "#moving-package">15.4. Moving a package in
+              pkgsrc</a></span></dt>
             </dl>
           </dd>
         </dl>
@@ -5227,17 +5349,18 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
             <dt><span class="sect1"><a href=
             "#components.patches">7.3. patches/*</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2627632">7.4. Other
-            mandatory files</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#other-mandatory-files">7.4. Other mandatory
+            files</a></span></dt>
 
             <dt><span class="sect1"><a href=
             "#components.optional">7.5. Optional
             files</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2627757">7.6.
+            <dt><span class="sect1"><a href="#work-dir">7.6.
             <code class="filename">work*</code></a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2627845">7.7.
+            <dt><span class="sect1"><a href="#files-dir">7.7.
             <code class="filename">files/*</code></a></span></dt>
           </dl>
         </div>
@@ -5627,7 +5750,8 @@ converters    games         mbone         print         x11
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2627632" id="id2627632"></a>7.4.&nbsp;Other
+                "other-mandatory-files" id=
+                "other-mandatory-files"></a>7.4.&nbsp;Other
                 mandatory files</h2>
               </div>
             </div>
@@ -5751,8 +5875,7 @@ MESSAGE_SUBST+=  SOMEVAR="somevalue"
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2627757" id=
-                "id2627757"></a>7.6.&nbsp;<code class=
+                "work-dir" id="work-dir"></a>7.6.&nbsp;<code class=
                 "filename">work*</code></h2>
               </div>
             </div>
@@ -5812,8 +5935,8 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2627845" id=
-                "id2627845"></a>7.7.&nbsp;<code class=
+                "files-dir" id=
+                "files-dir"></a>7.7.&nbsp;<code class=
                 "filename">files/*</code></h2>
               </div>
             </div>
@@ -5863,22 +5986,26 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
 
             <dd>
               <dl>
-                <dt><span class="sect2"><a href="#id2628274">8.2.1.
-                Adding things to a list</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#adding-to-list">8.2.1. Adding things to a
+                list</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2628283">8.2.2.
+                <dt><span class="sect2"><a href=
+                "#converting-internal-to-external">8.2.2.
                 Converting an internal list into an external
                 list</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2628305">8.2.3.
-                Passing variables to a shell
-                command</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#passing-variable-to-shell">8.2.3. Passing
+                variables to a shell command</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2628426">8.2.4.
-                Quoting guideline</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#quoting-guideline">8.2.4. Quoting
+                guideline</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2628677">8.2.5.
-                Workaround for a bug in BSD Make</a></span></dt>
+                <dt><span class="sect2"><a href=
+                "#bsd-make-bug-workaround">8.2.5. Workaround for a
+                bug in BSD Make</a></span></dt>
               </dl>
             </dd>
           </dl>
@@ -6074,9 +6201,9 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2628274" id=
-                  "id2628274"></a>8.2.1.&nbsp;Adding things to a
-                  list</h3>
+                  <h3 class="title"><a name="adding-to-list" id=
+                  "adding-to-list"></a>8.2.1.&nbsp;Adding things to
+                  a list</h3>
                 </div>
               </div>
             </div>
@@ -6105,9 +6232,10 @@ EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2628283" id=
-                  "id2628283"></a>8.2.2.&nbsp;Converting an
-                  internal list into an external list</h3>
+                  <h3 class="title"><a name=
+                  "converting-internal-to-external" id=
+                  "converting-internal-to-external"></a>8.2.2.&nbsp;Converting
+                  an internal list into an external list</h3>
                 </div>
               </div>
             </div>
@@ -6131,9 +6259,10 @@ EXT_LIST+=      ${i:Q}""
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2628305" id=
-                  "id2628305"></a>8.2.3.&nbsp;Passing variables to
-                  a shell command</h3>
+                  <h3 class="title"><a name=
+                  "passing-variable-to-shell" id=
+                  "passing-variable-to-shell"></a>8.2.3.&nbsp;Passing
+                  variables to a shell command</h3>
                 </div>
               </div>
             </div>
@@ -6194,8 +6323,8 @@ all:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2628426" id=
-                  "id2628426"></a>8.2.4.&nbsp;Quoting
+                  <h3 class="title"><a name="quoting-guideline" id=
+                  "quoting-guideline"></a>8.2.4.&nbsp;Quoting
                   guideline</h3>
                 </div>
               </div>
@@ -6321,9 +6450,10 @@ for_test:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2628677" id=
-                  "id2628677"></a>8.2.5.&nbsp;Workaround for a bug
-                  in BSD Make</h3>
+                  <h3 class="title"><a name=
+                  "bsd-make-bug-workaround" id=
+                  "bsd-make-bug-workaround"></a>8.2.5.&nbsp;Workaround
+                  for a bug in BSD Make</h3>
                 </div>
               </div>
             </div>
@@ -6362,11 +6492,12 @@ for_test:
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2628738">9.1. RCS
+            <dt><span class="sect1"><a href="#rcs-id">9.1. RCS
             ID</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2628753">9.2.
-            Semi-automatic <code class="filename">PLIST</code>
+            <dt><span class="sect1"><a href=
+            "#automatic-plist-generation">9.2. Semi-automatic
+            <code class="filename">PLIST</code>
             generation</a></span></dt>
 
             <dt><span class="sect1"><a href="#print-PLIST">9.3.
@@ -6376,15 +6507,17 @@ for_test:
             <dt><span class="sect1"><a href="#plist.misc">9.4.
             Variable substitution in PLIST</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2629074">9.5.
+            <dt><span class="sect1"><a href=
+            "#manpage-compression">9.5.
             Manpage-compression</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2629115">9.6.
+            <dt><span class="sect1"><a href="#using-PLIST_SRC">9.6.
             Changing PLIST source with <code class=
             "varname">PLIST_SRC</code></a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2629140">9.7.
-            Platform specific and differing PLISTs</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#platform-specific-plist">9.7. Platform specific and
+            differing PLISTs</a></span></dt>
 
             <dt><span class="sect1"><a href="#faq.common-dirs">9.8.
             Sharing directories between packages</a></span></dt>
@@ -6409,8 +6542,7 @@ for_test:
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2628738" id="id2628738"></a>9.1.&nbsp;RCS
-                ID</h2>
+                "rcs-id" id="rcs-id"></a>9.1.&nbsp;RCS ID</h2>
               </div>
             </div>
           </div>
@@ -6427,8 +6559,8 @@ for_test:
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2628753" id=
-                "id2628753"></a>9.2.&nbsp;Semi-automatic
+                "automatic-plist-generation" id=
+                "automatic-plist-generation"></a>9.2.&nbsp;Semi-automatic
                 <code class="filename">PLIST</code> generation</h2>
               </div>
             </div>
@@ -6622,8 +6754,8 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2629074" id=
-                "id2629074"></a>9.5.&nbsp;Manpage-compression</h2>
+                "manpage-compression" id=
+                "manpage-compression"></a>9.5.&nbsp;Manpage-compression</h2>
               </div>
             </div>
           </div>
@@ -6647,8 +6779,9 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2629115" id="id2629115"></a>9.6.&nbsp;Changing
-                PLIST source with <code class=
+                "using-PLIST_SRC" id=
+                "using-PLIST_SRC"></a>9.6.&nbsp;Changing PLIST
+                source with <code class=
                 "varname">PLIST_SRC</code></h2>
               </div>
             </div>
@@ -6670,7 +6803,8 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2629140" id="id2629140"></a>9.7.&nbsp;Platform
+                "platform-specific-plist" id=
+                "platform-specific-plist"></a>9.7.&nbsp;Platform
                 specific and differing PLISTs</h2>
               </div>
             </div>
@@ -6815,41 +6949,44 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2629406">10.1.
-            Converting packages to use buildlink3</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#converting-to-buildlink3">10.1. Converting packages
+            to use buildlink3</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2629724">10.2.
-            Writing <code class="filename">buildlink3.mk</code>
-            files</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#creating-buildlink3.mk">10.2. Writing <code class=
+            "filename">buildlink3.mk</code> files</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#id2629794">10.2.1. Anatomy of a buildlink3.mk
-                file</a></span></dt>
+                "#anatomy-of-bl3">10.2.1. Anatomy of a
+                buildlink3.mk file</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2630166">10.2.2. Updating <code class=
-                "varname">BUILDLINK_DEPENDS.<em class=
+                "#updating-buildlink-depends">10.2.2. Updating
+                <code class="varname">BUILDLINK_DEPENDS.<em class=
                 "replaceable"><code>pkg</code></em></code> in
                 <code class="filename">buildlink3.mk</code>
                 files</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2630245">10.3.
-            Writing <code class="filename">builtin.mk</code>
-            files</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#writing-builtin.mk">10.3. Writing <code class=
+            "filename">builtin.mk</code> files</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#id2630394">10.3.1. Anatomy of a <code class=
-                "filename">builtin.mk</code> file</a></span></dt>
+                "#anatomy-of-builtin.mk">10.3.1. Anatomy of a
+                <code class="filename">builtin.mk</code>
+                file</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2630621">10.3.2. Global preferences for native
-                or pkgsrc software</a></span></dt>
+                "#native-or-pkgsrc-preference">10.3.2. Global
+                preferences for native or pkgsrc
+                software</a></span></dt>
               </dl>
             </dd>
           </dl>
@@ -6898,9 +7035,9 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2629406" id=
-                "id2629406"></a>10.1.&nbsp;Converting packages to
-                use buildlink3</h2>
+                "converting-to-buildlink3" id=
+                "converting-to-buildlink3"></a>10.1.&nbsp;Converting
+                packages to use buildlink3</h2>
               </div>
             </div>
           </div>
@@ -7044,7 +7181,8 @@ DEPENDS+=   foo&gt;=1.1.0:../../category/foo
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2629724" id="id2629724"></a>10.2.&nbsp;Writing
+                "creating-buildlink3.mk" id=
+                "creating-buildlink3.mk"></a>10.2.&nbsp;Writing
                 <code class="filename">buildlink3.mk</code>
                 files</h2>
               </div>
@@ -7084,8 +7222,8 @@ DEPENDS+=   foo&gt;=1.1.0:../../category/foo
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2629794" id=
-                  "id2629794"></a>10.2.1. Anatomy of a
+                  <h3 class="title"><a name="anatomy-of-bl3" id=
+                  "anatomy-of-bl3"></a>10.2.1. Anatomy of a
                   buildlink3.mk file</h3>
                 </div>
               </div>
@@ -7315,12 +7453,13 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2630166" id=
-                  "id2630166"></a>10.2.2. Updating <code class=
-                  "varname">BUILDLINK_DEPENDS.<em class=
-                  "replaceable"><code>pkg</code></em></code> in
-                  <code class="filename">buildlink3.mk</code>
-                  files</h3>
+                  <h3 class="title"><a name=
+                  "updating-buildlink-depends" id=
+                  "updating-buildlink-depends"></a>10.2.2. Updating
+                  <code class=
+                  "varname">BUILDLINK_DEPENDS.<em class="replaceable">
+                  <code>pkg</code></em></code> in <code class=
+                  "filename">buildlink3.mk</code> files</h3>
                 </div>
               </div>
             </div>
@@ -7385,7 +7524,8 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2630245" id="id2630245"></a>10.3.&nbsp;Writing
+                "writing-builtin.mk" id=
+                "writing-builtin.mk"></a>10.3.&nbsp;Writing
                 <code class="filename">builtin.mk</code> files</h2>
               </div>
             </div>
@@ -7437,9 +7577,10 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2630394" id=
-                  "id2630394"></a>10.3.1.&nbsp;Anatomy of a
-                  <code class="filename">builtin.mk</code>
+                  <h3 class="title"><a name="anatomy-of-builtin.mk"
+                  id=
+                  "anatomy-of-builtin.mk"></a>10.3.1.&nbsp;Anatomy
+                  of a <code class="filename">builtin.mk</code>
                   file</h3>
                 </div>
               </div>
@@ -7563,9 +7704,10 @@ CHECK_BUILTIN.foo?=     no
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2630621" id=
-                  "id2630621"></a>10.3.2.&nbsp;Global preferences
-                  for native or pkgsrc software</h3>
+                  <h3 class="title"><a name=
+                  "native-or-pkgsrc-preference" id=
+                  "native-or-pkgsrc-preference"></a>10.3.2.&nbsp;Global
+                  preferences for native or pkgsrc software</h3>
                 </div>
               </div>
             </div>
@@ -7622,11 +7764,13 @@ CHECK_BUILTIN.foo?=     no
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2630762">11.1.
-            Global default options</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#global-default-options">11.1. Global default
+            options</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2630777">11.2.
-            Converting packages to use <code class=
+            <dt><span class="sect1"><a href=
+            "#converting-to-options">11.2. Converting packages to
+            use <code class=
             "filename">bsd.options.mk</code></a></span></dt>
           </dl>
         </div>
@@ -7645,7 +7789,8 @@ CHECK_BUILTIN.foo?=     no
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2630762" id="id2630762"></a>11.1.&nbsp;Global
+                "global-default-options" id=
+                "global-default-options"></a>11.1.&nbsp;Global
                 default options</h2>
               </div>
             </div>
@@ -7663,9 +7808,9 @@ CHECK_BUILTIN.foo?=     no
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2630777" id=
-                "id2630777"></a>11.2.&nbsp;Converting packages to
-                use <code class=
+                "converting-to-options" id=
+                "converting-to-options"></a>11.2.&nbsp;Converting
+                packages to use <code class=
                 "filename">bsd.options.mk</code></h2>
               </div>
             </div>
@@ -7819,8 +7964,8 @@ CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
             <dt><span class="sect1"><a href="#build.prefix">12.1.
             Program location</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2631338">12.2. Main
-            targets</a></span></dt>
+            <dt><span class="sect1"><a href="#main-targets">12.2.
+            Main targets</a></span></dt>
 
             <dt><span class="sect1"><a href=
             "#build.helpful-targets">12.3. Other helpful
@@ -8021,8 +8166,8 @@ GTKDIR_DEFAULT= ${LOCALBASE}
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2631338" id="id2631338"></a>12.2.&nbsp;Main
-                targets</h2>
+                "main-targets" id=
+                "main-targets"></a>12.2.&nbsp;Main targets</h2>
               </div>
             </div>
           </div>
@@ -8800,17 +8945,18 @@ make build
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2632835">13.1.
-            General operation</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#general-operation">13.1. General
+            operation</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#id2632838">13.1.1. How to pull in variables from
-                /etc/mk.conf</a></span></dt>
+                "#pulling-vars-from-etc-mk.conf">13.1.1. How to
+                pull in variables from /etc/mk.conf</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2632921">13.1.2. Restricted
+                "#restricted-packages">13.1.2. Restricted
                 packages</a></span></dt>
 
                 <dt><span class="sect2"><a href=
@@ -8818,54 +8964,58 @@ make build
                 dependencies</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2633374">13.1.4. Handling conflicts with other
+                "#conflicts">13.1.4. Handling conflicts with other
                 packages</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2633493">13.1.5. Packages that cannot or should
-                not be built</a></span></dt>
+                "#not-building-packages">13.1.5. Packages that
+                cannot or should not be built</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2633518">13.1.6. Packages which should not be
-                deleted, once installed</a></span></dt>
+                "#undeletable-packages">13.1.6. Packages which
+                should not be deleted, once
+                installed</a></span></dt>
 
                 <dt><span class="sect2"><a href=
                 "#security-handling">13.1.7. Handling packages with
                 security problems</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2633678">13.1.8. How to handle compiler
+                "#compiler-bugs">13.1.8. How to handle compiler
                 bugs</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2633701">13.1.9. How to handle incrementing
-                versions when fixing an existing
+                "#bumping-pkgrevision">13.1.9. How to handle
+                incrementing versions when fixing an existing
                 package</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2633818">13.1.10. Portability of
+                "#portability-of-packages">13.1.10. Portability of
                 packages</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2633843">13.2.
-            Possible downloading issues</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#downloading-issues">13.2. Possible downloading
+            issues</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#id2633846">13.2.1. Packages whose distfiles
-                aren't available for plain
+                "#no-plain-download">13.2.1. Packages whose
+                distfiles aren't available for plain
                 downloading</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2633909">13.2.2. How to handle modified
-                distfiles with the 'old' name</a></span></dt>
+                "#modified-distfiles-same-name">13.2.2. How to
+                handle modified distfiles with the 'old'
+                name</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2633921">13.3.
-            Configuration gotchas</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#configuration-gotchas">13.3. Configuration
+            gotchas</a></span></dt>
 
             <dd>
               <dl>
@@ -8874,64 +9024,67 @@ make build
                 libtool</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2634286">13.3.2. Using libtool on GNU packages
-                that already support libtool</a></span></dt>
+                "#using-libtool">13.3.2. Using libtool on GNU
+                packages that already support
+                libtool</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2634504">13.3.3. GNU
+                "#autoconf-automake">13.3.3. GNU
                 Autoconf/Automake</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2634617">13.4.
-            Building considerations</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#building-considerations">13.4. Building
+            considerations</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#id2634620">13.4.1. CPP defines</a></span></dt>
+                "#cpp-defines">13.4.1. CPP defines</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2634650">13.5.
-            Package specific actions</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#package-specific-actions">13.5. Package specific
+            actions</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#id2634653">13.5.1. Package configuration
-                files</a></span></dt>
+                "#package-configuration-files">13.5.1. Package
+                configuration files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2634756">13.5.2. User
+                "#user-interaction">13.5.2. User
                 interaction</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2634801">13.5.3. Handling
+                "#handling-licenses">13.5.3. Handling
                 licenses</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2634884">13.5.4. Creating an account from a
-                package</a></span></dt>
+                "#creating-accounts">13.5.4. Creating an account
+                from a package</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2635014">13.5.5. Installing score
+                "#installing-score-files">13.5.5. Installing score
                 files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2635058">13.5.6. Packages providing login
+                "#login-shells">13.5.6. Packages providing login
                 shells</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2635115">13.5.7. Packages containing perl
+                "#perl-scripts">13.5.7. Packages containing perl
                 scripts</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2635133">13.5.8. Packages with hardcoded paths
-                to other interpreters</a></span></dt>
+                "#hardcoded-paths">13.5.8. Packages with hardcoded
+                paths to other interpreters</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2635155">13.5.9. Packages installing perl
+                "#perl-modules">13.5.9. Packages installing perl
                 modules</a></span></dt>
 
                 <dt><span class="sect2"><a href=
@@ -8939,41 +9092,42 @@ make build
                 files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2635511">13.5.11. Packages installing GConf2
-                data files</a></span></dt>
+                "#gconf2-data-files">13.5.11. Packages installing
+                GConf2 data files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2635680">13.5.12. Packages installing
-                scrollkeeper data files</a></span></dt>
+                "#scrollkeeper-data-files">13.5.12. Packages
+                installing scrollkeeper data files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2635731">13.5.13. Packages installing X11
+                "#x11-fonts">13.5.13. Packages installing X11
                 fonts</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2635778">13.5.14. Packages installing GTK2
+                "#gtk2-modules">13.5.14. Packages installing GTK2
                 modules</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2635847">13.5.15. Packages installing SGML or
-                XML data</a></span></dt>
+                "#sgml-xml-data">13.5.15. Packages installing SGML
+                or XML data</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2635899">13.5.16. Packages installing
+                "#mime-database">13.5.16. Packages installing
                 extensions to the MIME database</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2636038">13.5.17. Packages using
+                "#intltool">13.5.17. Packages using
                 intltool</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2636052">13.5.18. Packages installing startup
-                scripts</a></span></dt>
+                "#startup-scripts">13.5.18. Packages installing
+                startup scripts</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2636073">13.6.
-            Feedback to the author</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#feedback-to-author">13.6. Feedback to the
+            author</a></span></dt>
           </dl>
         </div>
 
@@ -8982,7 +9136,8 @@ make build
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2632835" id="id2632835"></a>13.1.&nbsp;General
+                "general-operation" id=
+                "general-operation"></a>13.1.&nbsp;General
                 operation</h2>
               </div>
             </div>
@@ -8992,9 +9147,10 @@ make build
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2632838" id=
-                  "id2632838"></a>13.1.1.&nbsp;How to pull in
-                  variables from /etc/mk.conf</h3>
+                  <h3 class="title"><a name=
+                  "pulling-vars-from-etc-mk.conf" id=
+                  "pulling-vars-from-etc-mk.conf"></a>13.1.1.&nbsp;How
+                  to pull in variables from /etc/mk.conf</h3>
                 </div>
               </div>
             </div>
@@ -9053,8 +9209,9 @@ CFLAGS+=  -your -flags
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2632921" id=
-                  "id2632921"></a>13.1.2.&nbsp;Restricted
+                  <h3 class="title"><a name="restricted-packages"
+                  id=
+                  "restricted-packages"></a>13.1.2.&nbsp;Restricted
                   packages</h3>
                 </div>
               </div>
@@ -9361,8 +9518,8 @@ pre-clean:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2633374" id=
-                  "id2633374"></a>13.1.4.&nbsp;Handling conflicts
+                  <h3 class="title"><a name="conflicts" id=
+                  "conflicts"></a>13.1.4.&nbsp;Handling conflicts
                   with other packages</h3>
                 </div>
               </div>
@@ -9409,9 +9566,10 @@ CONFLICTS=      Xaw3d-[0-9]*
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2633493" id=
-                  "id2633493"></a>13.1.5.&nbsp;Packages that cannot
-                  or should not be built</h3>
+                  <h3 class="title"><a name="not-building-packages"
+                  id=
+                  "not-building-packages"></a>13.1.5.&nbsp;Packages
+                  that cannot or should not be built</h3>
                 </div>
               </div>
             </div>
@@ -9441,9 +9599,10 @@ CONFLICTS=      Xaw3d-[0-9]*
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2633518" id=
-                  "id2633518"></a>13.1.6.&nbsp;Packages which
-                  should not be deleted, once installed</h3>
+                  <h3 class="title"><a name="undeletable-packages"
+                  id=
+                  "undeletable-packages"></a>13.1.6.&nbsp;Packages
+                  which should not be deleted, once installed</h3>
                 </div>
               </div>
             </div>
@@ -9505,8 +9664,8 @@ CONFLICTS=      Xaw3d-[0-9]*
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2633678" id=
-                  "id2633678"></a>13.1.8.&nbsp;How to handle
+                  <h3 class="title"><a name="compiler-bugs" id=
+                  "compiler-bugs"></a>13.1.8.&nbsp;How to handle
                   compiler bugs</h3>
                 </div>
               </div>
@@ -9531,10 +9690,10 @@ CONFLICTS=      Xaw3d-[0-9]*
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2633701" id=
-                  "id2633701"></a>13.1.9.&nbsp;How to handle
-                  incrementing versions when fixing an existing
-                  package</h3>
+                  <h3 class="title"><a name="bumping-pkgrevision"
+                  id="bumping-pkgrevision"></a>13.1.9.&nbsp;How to
+                  handle incrementing versions when fixing an
+                  existing package</h3>
                 </div>
               </div>
             </div>
@@ -9572,9 +9731,10 @@ DISTNAME=   foo-17.43
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2633818" id=
-                  "id2633818"></a>13.1.10.&nbsp;Portability of
-                  packages</h3>
+                  <h3 class="title"><a name=
+                  "portability-of-packages" id=
+                  "portability-of-packages"></a>13.1.10.&nbsp;Portability
+                  of packages</h3>
                 </div>
               </div>
             </div>
@@ -9589,8 +9749,8 @@ DISTNAME=   foo-17.43
               <div class="titlepage">
                 <div>
                   <div>
-                    <h4 class="title"><a name="id2633824" id=
-                    "id2633824"></a>13.1.10.1.&nbsp;${INSTALL},
+                    <h4 class="title"><a name="install-scripts" id=
+                    "install-scripts"></a>13.1.10.1.&nbsp;${INSTALL},
                     ${INSTALL_DATA_DIR}, ...</h4>
                   </div>
                 </div>
@@ -9615,7 +9775,8 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2633843" id="id2633843"></a>13.2.&nbsp;Possible
+                "downloading-issues" id=
+                "downloading-issues"></a>13.2.&nbsp;Possible
                 downloading issues</h2>
               </div>
             </div>
@@ -9625,9 +9786,9 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2633846" id=
-                  "id2633846"></a>13.2.1.&nbsp;Packages whose
-                  distfiles aren't available for plain
+                  <h3 class="title"><a name="no-plain-download" id=
+                  "no-plain-download"></a>13.2.1.&nbsp;Packages
+                  whose distfiles aren't available for plain
                   downloading</h3>
                 </div>
               </div>
@@ -9687,9 +9848,11 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2633909" id=
-                  "id2633909"></a>13.2.2.&nbsp;How to handle
-                  modified distfiles with the 'old' name</h3>
+                  <h3 class="title"><a name=
+                  "modified-distfiles-same-name" id=
+                  "modified-distfiles-same-name"></a>13.2.2.&nbsp;How
+                  to handle modified distfiles with the 'old'
+                  name</h3>
                 </div>
               </div>
             </div>
@@ -9717,8 +9880,8 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2633921" id=
-                "id2633921"></a>13.3.&nbsp;Configuration
+                "configuration-gotchas" id=
+                "configuration-gotchas"></a>13.3.&nbsp;Configuration
                 gotchas</h2>
               </div>
             </div>
@@ -9937,9 +10100,9 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2634286" id=
-                  "id2634286"></a>13.3.2.&nbsp;Using libtool on GNU
-                  packages that already support libtool</h3>
+                  <h3 class="title"><a name="using-libtool" id=
+                  "using-libtool"></a>13.3.2.&nbsp;Using libtool on
+                  GNU packages that already support libtool</h3>
                 </div>
               </div>
             </div>
@@ -10016,8 +10179,8 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2634504" id=
-                  "id2634504"></a>13.3.3.&nbsp;GNU
+                  <h3 class="title"><a name="autoconf-automake" id=
+                  "autoconf-automake"></a>13.3.3.&nbsp;GNU
                   Autoconf/Automake</h3>
                 </div>
               </div>
@@ -10083,7 +10246,8 @@ pre-configure:
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2634617" id="id2634617"></a>13.4.&nbsp;Building
+                "building-considerations" id=
+                "building-considerations"></a>13.4.&nbsp;Building
                 considerations</h2>
               </div>
             </div>
@@ -10093,8 +10257,8 @@ pre-configure:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2634620" id=
-                  "id2634620"></a>13.4.1.&nbsp;CPP defines</h3>
+                  <h3 class="title"><a name="cpp-defines" id=
+                  "cpp-defines"></a>13.4.1.&nbsp;CPP defines</h3>
                 </div>
               </div>
             </div>
@@ -10133,7 +10297,8 @@ pre-configure:
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2634650" id="id2634650"></a>13.5.&nbsp;Package
+                "package-specific-actions" id=
+                "package-specific-actions"></a>13.5.&nbsp;Package
                 specific actions</h2>
               </div>
             </div>
@@ -10143,8 +10308,9 @@ pre-configure:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2634653" id=
-                  "id2634653"></a>13.5.1.&nbsp;Package
+                  <h3 class="title"><a name=
+                  "package-configuration-files" id=
+                  "package-configuration-files"></a>13.5.1.&nbsp;Package
                   configuration files</h3>
                 </div>
               </div>
@@ -10216,8 +10382,8 @@ pre-configure:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2634756" id=
-                  "id2634756"></a>13.5.2.&nbsp;User
+                  <h3 class="title"><a name="user-interaction" id=
+                  "user-interaction"></a>13.5.2.&nbsp;User
                   interaction</h3>
                 </div>
               </div>
@@ -10266,8 +10432,8 @@ INTERACTIVE_STAGE= configure install
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2634801" id=
-                  "id2634801"></a>13.5.3.&nbsp;Handling
+                  <h3 class="title"><a name="handling-licenses" id=
+                  "handling-licenses"></a>13.5.3.&nbsp;Handling
                   licenses</h3>
                 </div>
               </div>
@@ -10341,9 +10507,9 @@ ACCEPTABLE_LICENSES+=graphviz-license
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2634884" id=
-                  "id2634884"></a>13.5.4.&nbsp;Creating an account
-                  from a package</h3>
+                  <h3 class="title"><a name="creating-accounts" id=
+                  "creating-accounts"></a>13.5.4.&nbsp;Creating an
+                  account from a package</h3>
                 </div>
               </div>
             </div>
@@ -10396,9 +10562,10 @@ user:group[:[userid][:[description][:[home][:shell]]]]
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2635014" id=
-                  "id2635014"></a>13.5.5.&nbsp;Installing score
-                  files</h3>
+                  <h3 class="title"><a name=
+                  "installing-score-files" id=
+                  "installing-score-files"></a>13.5.5.&nbsp;Installing
+                  score files</h3>
                 </div>
               </div>
             </div>
@@ -10434,9 +10601,9 @@ user:group[:[userid][:[description][:[home][:shell]]]]
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2635058" id=
-                  "id2635058"></a>13.5.6.&nbsp;Packages providing
-                  login shells</h3>
+                  <h3 class="title"><a name="login-shells" id=
+                  "login-shells"></a>13.5.6.&nbsp;Packages
+                  providing login shells</h3>
                 </div>
               </div>
             </div>
@@ -10470,9 +10637,9 @@ user:group[:[userid][:[description][:[home][:shell]]]]
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2635115" id=
-                  "id2635115"></a>13.5.7.&nbsp;Packages containing
-                  perl scripts</h3>
+                  <h3 class="title"><a name="perl-scripts" id=
+                  "perl-scripts"></a>13.5.7.&nbsp;Packages
+                  containing perl scripts</h3>
                 </div>
               </div>
             </div>
@@ -10489,8 +10656,8 @@ user:group[:[userid][:[description][:[home][:shell]]]]
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2635133" id=
-                  "id2635133"></a>13.5.8.&nbsp;Packages with
+                  <h3 class="title"><a name="hardcoded-paths" id=
+                  "hardcoded-paths"></a>13.5.8.&nbsp;Packages with
                   hardcoded paths to other interpreters</h3>
                 </div>
               </div>
@@ -10516,9 +10683,9 @@ user:group[:[userid][:[description][:[home][:shell]]]]
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2635155" id=
-                  "id2635155"></a>13.5.9.&nbsp;Packages installing
-                  perl modules</h3>
+                  <h3 class="title"><a name="perl-modules" id=
+                  "perl-modules"></a>13.5.9.&nbsp;Packages
+                  installing perl modules</h3>
                 </div>
               </div>
             </div>
@@ -10656,9 +10823,9 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2635511" id=
-                  "id2635511"></a>13.5.11.&nbsp;Packages installing
-                  GConf2 data files</h3>
+                  <h3 class="title"><a name="gconf2-data-files" id=
+                  "gconf2-data-files"></a>13.5.11.&nbsp;Packages
+                  installing GConf2 data files</h3>
                 </div>
               </div>
             </div>
@@ -10731,9 +10898,10 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2635680" id=
-                  "id2635680"></a>13.5.12.&nbsp;Packages installing
-                  scrollkeeper data files</h3>
+                  <h3 class="title"><a name=
+                  "scrollkeeper-data-files" id=
+                  "scrollkeeper-data-files"></a>13.5.12.&nbsp;Packages
+                  installing scrollkeeper data files</h3>
                 </div>
               </div>
             </div>
@@ -10776,8 +10944,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2635731" id=
-                  "id2635731"></a>13.5.13.&nbsp;Packages installing
+                  <h3 class="title"><a name="x11-fonts" id=
+                  "x11-fonts"></a>13.5.13.&nbsp;Packages installing
                   X11 fonts</h3>
                 </div>
               </div>
@@ -10814,9 +10982,9 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2635778" id=
-                  "id2635778"></a>13.5.14.&nbsp;Packages installing
-                  GTK2 modules</h3>
+                  <h3 class="title"><a name="gtk2-modules" id=
+                  "gtk2-modules"></a>13.5.14.&nbsp;Packages
+                  installing GTK2 modules</h3>
                 </div>
               </div>
             </div>
@@ -10881,9 +11049,9 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2635847" id=
-                  "id2635847"></a>13.5.15.&nbsp;Packages installing
-                  SGML or XML data</h3>
+                  <h3 class="title"><a name="sgml-xml-data" id=
+                  "sgml-xml-data"></a>13.5.15.&nbsp;Packages
+                  installing SGML or XML data</h3>
                 </div>
               </div>
             </div>
@@ -10943,9 +11111,9 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2635899" id=
-                  "id2635899"></a>13.5.16.&nbsp;Packages installing
-                  extensions to the MIME database</h3>
+                  <h3 class="title"><a name="mime-database" id=
+                  "mime-database"></a>13.5.16.&nbsp;Packages
+                  installing extensions to the MIME database</h3>
                 </div>
               </div>
             </div>
@@ -11002,8 +11170,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2636038" id=
-                  "id2636038"></a>13.5.17.&nbsp;Packages using
+                  <h3 class="title"><a name="intltool" id=
+                  "intltool"></a>13.5.17.&nbsp;Packages using
                   intltool</h3>
                 </div>
               </div>
@@ -11026,9 +11194,9 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2636052" id=
-                  "id2636052"></a>13.5.18.&nbsp;Packages installing
-                  startup scripts</h3>
+                  <h3 class="title"><a name="startup-scripts" id=
+                  "startup-scripts"></a>13.5.18.&nbsp;Packages
+                  installing startup scripts</h3>
                 </div>
               </div>
             </div>
@@ -11050,8 +11218,9 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2636073" id="id2636073"></a>13.6.&nbsp;Feedback
-                to the author</h2>
+                "feedback-to-author" id=
+                "feedback-to-author"></a>13.6.&nbsp;Feedback to the
+                author</h2>
               </div>
             </div>
           </div>
@@ -11286,17 +11455,19 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2636740">15.1.
-            Submitting your packages</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#submitting-your-package">15.1. Submitting your
+            packages</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2636797">15.2.
-            Committing: Importing a package into
-            CVS</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#committing-importing">15.2. Committing: Importing a
+            package into CVS</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2636860">15.3.
-            Updating a package to a newer version</a></span></dt>
+            <dt><span class="sect1"><a href=
+            "#updating-package">15.3. Updating a package to a newer
+            version</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2636880">15.4.
+            <dt><span class="sect1"><a href="#moving-package">15.4.
             Moving a package in pkgsrc</a></span></dt>
           </dl>
         </div>
@@ -11306,9 +11477,9 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2636740" id=
-                "id2636740"></a>15.1.&nbsp;Submitting your
-                packages</h2>
+                "submitting-your-package" id=
+                "submitting-your-package"></a>15.1.&nbsp;Submitting
+                your packages</h2>
               </div>
             </div>
           </div>
@@ -11376,9 +11547,9 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2636797" id=
-                "id2636797"></a>15.2.&nbsp;Committing: Importing a
-                package into CVS</h2>
+                "committing-importing" id=
+                "committing-importing"></a>15.2.&nbsp;Committing:
+                Importing a package into CVS</h2>
               </div>
             </div>
           </div>
@@ -11433,8 +11604,9 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2636860" id="id2636860"></a>15.3.&nbsp;Updating
-                a package to a newer version</h2>
+                "updating-package" id=
+                "updating-package"></a>15.3.&nbsp;Updating a
+                package to a newer version</h2>
               </div>
             </div>
           </div>
@@ -11484,8 +11656,9 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2636880" id="id2636880"></a>15.4.&nbsp;Moving a
-                package in pkgsrc</h2>
+                "moving-package" id=
+                "moving-package"></a>15.4.&nbsp;Moving a package in
+                pkgsrc</h2>
               </div>
             </div>
           </div>
@@ -11585,28 +11758,29 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
         <p><b>Table of Contents</b></p>
 
         <dl>
-          <dt><span class="sect1"><a href="#id2637037">A.1.
+          <dt><span class="sect1"><a href="#example-files">A.1.
           files</a></span></dt>
 
           <dd>
             <dl>
-              <dt><span class="sect2"><a href="#id2637041">A.1.1.
-              Makefile</a></span></dt>
+              <dt><span class="sect2"><a href=
+              "#example-Makefile">A.1.1. Makefile</a></span></dt>
 
-              <dt><span class="sect2"><a href="#id2637048">A.1.2.
-              DESCR</a></span></dt>
+              <dt><span class="sect2"><a href=
+              "#example-descr">A.1.2. DESCR</a></span></dt>
 
-              <dt><span class="sect2"><a href="#id2637063">A.1.3.
-              PLIST</a></span></dt>
+              <dt><span class="sect2"><a href=
+              "#example-plist">A.1.3. PLIST</a></span></dt>
 
-              <dt><span class="sect2"><a href="#id2637070">A.1.4.
-              Checking a package with <span><strong class=
+              <dt><span class="sect2"><a href=
+              "#checking-package-with-pkglint">A.1.4. Checking a
+              package with <span><strong class=
               "command">pkglint</strong></span></a></span></dt>
             </dl>
           </dd>
 
-          <dt><span class="sect1"><a href="#id2637111">A.2. Steps
-          for building, installing, packaging</a></span></dt>
+          <dt><span class="sect1"><a href="#steps-for-b-i-p">A.2.
+          Steps for building, installing, packaging</a></span></dt>
         </dl>
       </div>
 
@@ -11623,7 +11797,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
           <div>
             <div>
               <h2 class="title" style="clear: both"><a name=
-              "id2637037" id="id2637037"></a>A.1.&nbsp;files</h2>
+              "example-files" id=
+              "example-files"></a>A.1.&nbsp;files</h2>
             </div>
           </div>
         </div>
@@ -11632,8 +11807,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
           <div class="titlepage">
             <div>
               <div>
-                <h3 class="title"><a name="id2637041" id=
-                "id2637041"></a>A.1.1.&nbsp;Makefile</h3>
+                <h3 class="title"><a name="example-Makefile" id=
+                "example-Makefile"></a>A.1.1.&nbsp;Makefile</h3>
               </div>
             </div>
           </div>
@@ -11660,8 +11835,8 @@ INFO_FILES=     bison.info
           <div class="titlepage">
             <div>
               <div>
-                <h3 class="title"><a name="id2637048" id=
-                "id2637048"></a>A.1.2.&nbsp;DESCR</h3>
+                <h3 class="title"><a name="example-descr" id=
+                "example-descr"></a>A.1.2.&nbsp;DESCR</h3>
               </div>
             </div>
           </div>
@@ -11677,8 +11852,8 @@ of the NetBSD source tree is beyond me.
           <div class="titlepage">
             <div>
               <div>
-                <h3 class="title"><a name="id2637063" id=
-                "id2637063"></a>A.1.3.&nbsp;PLIST</h3>
+                <h3 class="title"><a name="example-plist" id=
+                "example-plist"></a>A.1.3.&nbsp;PLIST</h3>
               </div>
             </div>
           </div>
@@ -11695,9 +11870,10 @@ share/bison.hairy
           <div class="titlepage">
             <div>
               <div>
-                <h3 class="title"><a name="id2637070" id=
-                "id2637070"></a>A.1.4.&nbsp;Checking a package with
-                <span><strong class=
+                <h3 class="title"><a name=
+                "checking-package-with-pkglint" id=
+                "checking-package-with-pkglint"></a>A.1.4.&nbsp;Checking
+                a package with <span><strong class=
                 "command">pkglint</strong></span></h3>
               </div>
             </div>
@@ -11730,8 +11906,9 @@ looks fine.
           <div>
             <div>
               <h2 class="title" style="clear: both"><a name=
-              "id2637111" id="id2637111"></a>A.2.&nbsp;Steps for
-              building, installing, packaging</h2>
+              "steps-for-b-i-p" id=
+              "steps-for-b-i-p"></a>A.2.&nbsp;Steps for building,
+              installing, packaging</h2>
             </div>
           </div>
         </div>
@@ -12148,10 +12325,10 @@ Registering depends:.
         <p><b>Table of Contents</b></p>
 
         <dl>
-          <dt><span class="sect1"><a href="#id2637894">D.1.
+          <dt><span class="sect1"><a href="#targets">D.1.
           Targets</a></span></dt>
 
-          <dt><span class="sect1"><a href="#id2637959">D.2.
+          <dt><span class="sect1"><a href="#procedure">D.2.
           Procedure</a></span></dt>
         </dl>
       </div>
@@ -12164,7 +12341,7 @@ Registering depends:.
           <div>
             <div>
               <h2 class="title" style="clear: both"><a name=
-              "id2637894" id="id2637894"></a>D.1.&nbsp;Targets</h2>
+              "targets" id="targets"></a>D.1.&nbsp;Targets</h2>
             </div>
           </div>
         </div>
@@ -12215,8 +12392,8 @@ Registering depends:.
           <div>
             <div>
               <h2 class="title" style="clear: both"><a name=
-              "id2637959" id=
-              "id2637959"></a>D.2.&nbsp;Procedure</h2>
+              "procedure" id=
+              "procedure"></a>D.2.&nbsp;Procedure</h2>
             </div>
           </div>
         </div>
