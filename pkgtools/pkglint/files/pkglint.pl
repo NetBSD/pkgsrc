@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.176 2005/05/24 19:14:19 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.177 2005/05/24 20:17:31 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2094,17 +2094,21 @@ sub check_category($) {
 
 	@filesys_subdirs = sort(@filesys_subdirs);
 	@makefile_subdirs = sort(@makefile_subdirs);
-	while (scalar(@filesys_subdirs) > 0 || scalar(@makefile_subdirs) > 0) {
-		my ($f, $m) = ($filesys_subdirs[0] || "", $makefile_subdirs[0] || "");
-		if ($f eq $m) {
-			shift(@filesys_subdirs);
-			shift(@makefile_subdirs);
-		} elsif ($m eq "" || $f lt $m) {
+	my ($findex, $mindex) = (0, 0);
+	my ($fmax, $mmax) = (scalar(@filesys_subdirs), scalar(@makefile_subdirs));
+	while ($findex < $fmax || $mindex < $mmax) {
+		my $f = ($findex < $fmax) ? $filesys_subdirs[$findex] : undef;
+		my $m = ($mindex < $mmax) ? $makefile_subdirs[$mindex] : undef;
+
+		if ($findex < $fmax && ($mindex == $mmax || $f lt $m)) {
 			log_error($fname, NO_LINE_NUMBER, "$f exists in the file system, but not in the Makefile.");
-			shift(@filesys_subdirs);
-		} else {
+			$findex++;
+		} elsif ($mindex < $mmax && ($findex == $fmax || $m lt $f)) {
 			log_error($fname, NO_LINE_NUMBER, "$m exists in the Makefile, but not in the file system.");
-			shift(@makefile_subdirs);
+			$mindex++;
+		} else { # $findex < $fmax && $mindex < $mmax && $f eq $m
+			$findex++;
+			$mindex++;
 		}
 	}
 
