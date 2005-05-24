@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.173 2005/05/24 12:38:41 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.174 2005/05/24 14:29:52 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -665,7 +665,7 @@ sub check_package() {
 	if (-f "$opt_packagedir/$pkgdir/COMMENT") {
 		log_error("$opt_packagedir/$pkgdir/COMMENT", NO_LINE_NUMBER, "This file is deprecated -- please use a COMMENT variable instead.");
 	}
-	if (-d "$opt_packagedir/pkg") {
+	if (grep { $_ !~ qr"/CVS$" } <$opt_packagedir/pkg/*>) {
 		log_error("$opt_packagedir/pkg", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please 'mv $opt_packagedir/pkg/* $opt_packagedir' and 'rmdir $opt_packagedir/pkg'.");
 	}
 	if (-d "$opt_packagedir/scripts") {
@@ -1087,6 +1087,7 @@ sub readmakefile($$) {
 		if ($line->text =~ /^\040{8}/) {
 			$line->log_warning("Use tab (not spaces) to make indentation.");
 		}
+		push(@{$all_lines}, $line);
 		# try to get any included file
 		if ($line->text =~ /^.include\s+([^\n]+)$/) {
 			$includefile = $1;
@@ -1108,7 +1109,6 @@ sub readmakefile($$) {
 			if ($includefile =~ /\/mk\/(?:bsd|java)/) {
 				# skip these files
 				$contents .= $line->text . "\n";
-				push(@{$all_lines}, $line);
 			} else {
 				$dirname = dirname($file);
 				# Only look in the directory relative to the
@@ -1121,13 +1121,11 @@ sub readmakefile($$) {
 					$line->log_error("Cannot read $dirname/$includefile.");
 				} else {
 					$line->log_info("Including $dirname/$includefile.");
-					push(@{$all_lines}, $line);
 					$contents .= readmakefile("$dirname/$includefile", $all_lines);
 				}
 			}
 		} else {
 			$contents .= $line->text . "\n";
-			push(@{$all_lines}, $line);
 		}
 	}
 	checklines_trailing_empty_lines($lines);
@@ -1247,15 +1245,17 @@ sub checkfile_Makefile($) {
 		}
 	}
 
-	#
-	# whole file: blank lines.
-	#
-	$whole = "\n" . $rawwhole;
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking contiguous blank lines in $file.");
-	my $i = "\n" x ($opt_contblank + 2);
-	if ($whole =~ /$i/) {
-		log_error($file, int(@_ = split(/\n/, $`)), "Contiguous blank lines (> $opt_contblank lines) found.");
+	{
+		my $cont = 0;
+		foreach my $line (@{$lines}) {
+			$cont = ($line->text eq "") ? $cont + 1 : 0;
+			if ($cont == $opt_contblank + 1) {
+				$line->log_warning("${cont} contiguous blank lines, should be at most ${opt_contblank}.");
+			}
+		}
 	}
+
+	$whole = "\n" . $rawwhole;
 
 	#
 	# whole file: $(VARIABLE)
@@ -1284,9 +1284,8 @@ sub checkfile_Makefile($) {
 	$patchdir =~ s/\$\{.CURDIR\}/./;
 	$patchdir =~ s/\${PKGSRCDIR}/..\/../;
 
-	$pkgdir = "pkg";
-	if (! -d "$opt_packagedir/$pkgdir") {
-	    $pkgdir = ".";
+	if (grep { $_ !~ qr"/CVS$" } <$opt_packagedir/pkg/*>) {
+		$pkgdir = "pkg";
 	}
 	$pkgdir = $1 if ($whole =~ /\nPKGDIR[+?]?=[ \t]*([^\n]+)\n/);
 	$pkgdir = $1 if ($whole =~ /\nPKGDIR:?=[ \t]*([^\n]+)\n/);
@@ -1571,7 +1570,7 @@ sub checkfile_Makefile($) {
 				"than 5 characters.");
 		}
 	}
-	$i = ($pkgname eq '') ? $distname : $pkgname;
+	my $i = ($pkgname eq '') ? $distname : $pkgname;
 	$i =~ s/\${DISTNAME[^}]*}/$distname/g;
 	if ($i =~ /-([^-]+)$/) {
 		my ($j, $k) = ($`, $1);
