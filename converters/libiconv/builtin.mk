@@ -1,75 +1,71 @@
-# $NetBSD: builtin.mk,v 1.8 2005/05/22 01:22:47 minskim Exp $
+# $NetBSD: builtin.mk,v 1.9 2005/05/24 04:22:24 jlam Exp $
 
-.if !defined(_LIBICONV_FOUND)
-_LIBICONV_FOUND!=							\
-	if [ "`${ECHO} /usr/lib/libiconv.*`" = "/usr/lib/libiconv.*" ]; then \
-		${ECHO} "no";						\
-	else								\
-		${ECHO} "yes";						\
-	fi
-BUILDLINK_VARS+=	_LIBICONV_FOUND
-.endif
+BUILDLINK_FIND_LIBS:=	iconv
+.include "../../mk/buildlink3/find-libs.mk"
 
-_ICONV_H=	/usr/include/iconv.h
+_BLNK_ICONV_H=	/usr/include/iconv.h
 
+# Determine if there is a built-in GNU iconv implementation and set
+# IS_BUILTIN.iconv appropriately.
+#
 .if !defined(IS_BUILTIN.iconv)
 IS_BUILTIN.iconv=	no
-.  if exists(${_ICONV_H}) && !empty(_LIBICONV_FOUND:M[yY][eE][sS])
-IS_BUILTIN.iconv!=	\
-	if ${GREP} -q "GNU LIBICONV Library" ${_ICONV_H}; then		\
-		${ECHO} "yes";						\
+.  if exists(${_BLNK_ICONV_H}) && \
+      !empty(BUILDLINK_LIB_FOUND.iconv:M[yY][eE][sS])
+IS_BUILTIN.iconv!=							\
+	if ${GREP} -q "GNU LIBICONV Library" ${_BLNK_ICONV_H}; then	\
+		${ECHO} yes;						\
 	else								\
-		${ECHO} "no";						\
+		${ECHO} no;						\
 	fi
 .  endif
-.  if !empty(IS_BUILTIN.iconv:M[yY][eE][sS])
-_ICONV_MAJOR!=								\
-        ${AWK} 'BEGIN { hex="0123456789abcdef" }			\
-		/\#define[ 	]*_LIBICONV_VERSION[ 	]/ {		\
-			i = 16 * (index(hex, substr($$3, 3, 1)) - 1);	\
-			i += index(hex, substr($$3, 4, 1)) - 1;		\
-			print i;					\
-			exit 0;						\
-		}							\
-	' ${_ICONV_H}
-_ICONV_MINOR!=								\
-        ${AWK} 'BEGIN { hex="0123456789abcdef" }			\
-		/\#define[ 	]*_LIBICONV_VERSION[ 	]/ {		\
-			i = 16 * (index(hex, substr($$3, 5, 1)) - 1);	\
-			i += index(hex, substr($$3, 6, 1)) - 1;		\
-			print i;					\
-			exit 0;						\
-		}							\
-	' ${_ICONV_H}
-_ICONV_VERSION=		${_ICONV_MAJOR}.${_ICONV_MINOR}
-#
-# If the native libiconv is ABI version 1.9, then treat it the same as
-# the latest version on the libiconv-1.9.x branch.
-#
-.    if ${_ICONV_VERSION} == "1.9"
-_ICONV_VERSION=		1.9.1
-.    endif
-BUILTIN_PKG.iconv=	libiconv-${_ICONV_VERSION}
-BUILDLINK_VARS+=	BUILTIN_PKG.iconv
-.  endif
-BUILDLINK_VARS+=	IS_BUILTIN.iconv
-.endif	# IS_BUILTIN.iconv
+.endif
+MAKEVARS+=	IS_BUILTIN.iconv
 
+# If there is a built-in GNU iconv implementation, then set
+# BUILTIN_PKG.iconv to a package name for the built-in iconv.
+#
+.if !empty(IS_BUILTIN.iconv:M[yY][eE][sS])
+.  if !defined(BUILTIN_PKG.iconv)
+_BLNK_ICONV_VERSION!=							\
+	${AWK} 'BEGIN { hex="0123456789abcdef" }			\
+		/\#define[ 	]*_LIBICONV_VERSION[ 	]/ {		\
+			M = 16 * (index(hex, substr($$3, 3, 1)) - 1);	\
+			M += index(hex, substr($$3, 4, 1)) - 1;		\
+			m = 16 * (index(hex, substr($$3, 5, 1)) - 1);	\
+			m += index(hex, substr($$3, 6, 1)) - 1;		\
+			printf "%d.%d\n", M, m;				\
+			exit 0;						\
+		}							\
+	' ${_BLNK_ICONV_H}
+#
+# If the native GNU iconv is ABI version 1.9, then treat it the same
+# as the latest version on the libiconv-1.9.x branch.
+#
+.    if ${_BLNK_ICONV_VERSION} == "1.9"
+_BLNK_ICONV_VERSION=	1.9.2		# latest version on 1.9.x branch
+.    endif
+BUILTIN_PKG.iconv=	libiconv-${_BLNK_ICONV_VERSION}
+.  endif
+MAKEVARS+=	BUILTIN_PKG.iconv
+.endif
+
+# Determine whether we should use the built-in iconv implementation
+# if it exists, and set USE_BUILTIN.iconv appropriately.
+#
 .if !defined(USE_BUILTIN.iconv)
 USE_BUILTIN.iconv?=	${IS_BUILTIN.iconv}
 PREFER.iconv?=		pkgsrc
 
-.  if defined(BUILTIN_PKG.iconv)
+.  if defined(BUILTIN_PKG.iconv) && !empty(IS_BUILTIN.iconv:M[yY][eE][sS])
 USE_BUILTIN.iconv=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.iconv}
-.      if !empty(IS_BUILTIN.iconv:M[yY][eE][sS])
+.    for _dep_ in ${BUILDLINK_DEPENDS.iconv}
 USE_BUILTIN.iconv!=							\
-        if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.iconv}; then	\
-                ${ECHO} "yes";						\
-        else								\
-                ${ECHO} "no";						\
-        fi
-.      endif
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.iconv:Q}; then	\
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
 .    endfor
 .  endif
 
@@ -78,7 +74,7 @@ USE_BUILTIN.iconv!=							\
 # XXX By default, assume that the native iconv on NetBSD systems
 # XXX supports GNU libiconv's API.
 # XXX
-.    if (${OPSYS} == "NetBSD") && exists(${_ICONV_H})
+.    if (${OPSYS} == "NetBSD") && exists(${_BLNK_ICONV_H})
 USE_BUILTIN.iconv=	yes
 _INCOMPAT_ICONV?=	# should be set from defs.${OPSYS}.mk
 .      for _pattern_ in ${_INCOMPAT_ICONV} ${INCOMPAT_ICONV}
@@ -86,32 +82,34 @@ _INCOMPAT_ICONV?=	# should be set from defs.${OPSYS}.mk
 USE_BUILTIN.iconv=	no
 .        endif
 .      endfor
+.      undef _pattern_
 .    endif
 # XXX
-# XXX By default, assume that the native iconv on Linux systems using GLIBC
-# XXX supports GNU libiconv's API.
+# XXX By default, assume that the native iconv on Linux systems using
+# XXX GLIBC supports GNU libiconv's API.
 # XXX
-# XXX Determine we are using the builtin iconv regardless of whether it's
-# XXX truly GNU libiconv.
-# XXX
-.    if (${OPSYS} == "Linux") && exists(${_ICONV_H})
-USE_BUILTIN.iconv!=	\
-	if ${GREP} -q "This file is part of the GNU C Library" ${_ICONV_H}; then \
-		${ECHO} "yes";						\
+.    if (${OPSYS} == "Linux") && exists(${_BLNK_ICONV_H})
+USE_BUILTIN.iconv!=							\
+	if ${GREP} -q "This file is part of the GNU C Library" ${_BLNK_ICONV_H}; then \
+		${ECHO} yes;						\
 	else								\
-		${ECHO} "no";						\
+		${ECHO} no;						\
 	fi
 .    endif
-.  endif
+.  endif # PREFER.iconv == "native"
 
-.  if defined(USE_GNU_ICONV) && ${OPSYS} != "Linux"
+.  if defined(USE_GNU_ICONV)
 .    if !empty(IS_BUILTIN.iconv:M[nN][oO]) || \
         (${PREFER.iconv} == "pkgsrc")
 USE_BUILTIN.iconv=	no
 .    endif
 .  endif
-.endif	# USE_BUILTIN.iconv
+.endif
+MAKEVARS+=	USE_BUILTIN.iconv
 
+# ICONV_TYPE is either "gnu" or "native" depending on which iconv
+# implementation is used.
+#
 .if !defined(ICONV_TYPE)
 ICONV_TYPE?=	gnu
 .  if !empty(USE_BUILTIN.iconv:M[yY][eE][sS]) && \
@@ -123,25 +121,24 @@ ICONV_TYPE=	native
 CHECK_BUILTIN.iconv?=	no
 .if !empty(CHECK_BUILTIN.iconv:M[nN][oO])
 
-.if !empty(USE_BUILTIN.iconv:M[nN][oO])
-_LIBICONV=		-liconv
-.else
-.  if !empty(_LIBICONV_FOUND:M[yY][eE][sS])
-_LIBICONV=		-liconv
-.  else
-_LIBICONV=		# empty
-BUILDLINK_TRANSFORM+=	rm:-liconv
-.  endif
-.endif
-
-BUILDLINK_LDADD.iconv?=	${_LIBICONV}
-
-.if defined(GNU_CONFIGURE)
 .  if !empty(USE_BUILTIN.iconv:M[nN][oO])
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
+_BLNK_LIBICONV=		-liconv
 .  else
-CONFIGURE_ARGS+=	--without-libiconv-prefix
+.    if !empty(BUILDLINK_LIB_FOUND.iconv:M[yY][eE][sS])
+_BLNK_LIBICONV=		-liconv
+.    else
+_BLNK_LIBICONV=		# empty
+BUILDLINK_TRANSFORM+=	rm:-liconv
+.    endif
 .  endif
-.endif
+BUILDLINK_LDADD.iconv?=	${_BLNK_LIBICONV}
+
+.  if defined(GNU_CONFIGURE)
+.    if !empty(USE_BUILTIN.iconv:M[nN][oO])
+CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv:Q}
+.    else
+CONFIGURE_ARGS+=	--without-libiconv-prefix
+.    endif
+.  endif
 
 .endif	# CHECK_BUILTIN.iconv
