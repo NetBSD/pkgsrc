@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 2005/05/24 15:50:26 rillig Exp $
+
 --- configure.orig	Sat Nov  6 18:42:55 2004
 +++ configure	Sat Nov  6 18:43:15 2004
 @@ -7064,13 +7064,13 @@
