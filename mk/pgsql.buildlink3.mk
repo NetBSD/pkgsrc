@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.10 2005/05/12 22:19:16 jlam Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.11 2005/05/24 10:01:25 rillig Exp $
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
@@ -96,5 +96,7 @@ PKG_SKIP_REASON+=	"${_PGSQL_VERSION} is not a valid package"
 
 .include "${PGPKGSRCDIR}/buildlink3.mk"
 PGSQL_PREFIX=	${BUILDLINK_PREFIX.${PGSQL_TYPE}}
+
+PGSQL_VERSION=	${_PGSQL_VERSION}
 
 .endif	# PGVERSION_MK
