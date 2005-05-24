@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3533 2005/05/24 16:04:32 xtraeme Exp $
+$NetBSD: TODO,v 1.3534 2005/05/24 16:06:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1272,7 +1272,25 @@ Suggested cleanups in pkgsrc
 	  USE_PKGLOCALEDIR=YES where appropriate (for eg. Solaris).
 
 	o Deprecate LTCONFIG_OVERRIDE -- replace with appropriate
-	  LIBTOOL_OVERRIDE
+	  LIBTOOL_OVERRIDE. Affects:
+	  audio/audacity, audio/wsoundserver, benchmarks/benchfft,
+	  cad/geda, cad/gnetlist, cad/gsymcheck, chat/gale,
+	  chat/icqlib, converters/recode, databases/iodbc,
+	  databases/myodbc, databases/tcl-gdbm, devel/eel, devel/glib,
+	  devel/libdockapp, devel/libproplist, devel/libsmi,
+	  devel/libstroke, devel/xdelta, editors/cooledit,
+	  finance/emma, finance/gnofin, games/xpuyopuyo, graphics/GUIlib,
+	  graphics/SDL_image, graphics/aqsis, graphics/fnlib,
+	  graphics/freetype-lib, graphics/gphoto, graphics/librsvg,
+	  graphics/libungif, graphics/plotutils-nox11, graphics/plotutils,
+	  graphics/py-gimp, graphics/scigraphica, lang/cim, lang/gb,
+	  lang/japhar, lang/kaffe, lang/vslisp, mail/evolution12,
+	  net/ja-samba, net/samba2, print/LPRng-core, print/ja-vflib-lib,
+	  print/ja-vfxdvik, security/mirrordir, sysutils/amanda-common,
+	  sysutils/medusa, textproc/chasen-base, textproc/jade,
+	  textproc/libunicode, textproc/namazu2, time/devtodo,
+	  wm/bbconf, www/ap-jserv, www/cgicc, www/glibwww,
+	  x11/gtk+extra
 
 	o Fix remaining packages to install documentation into
 	  share/doc instead of share/gtk-doc (usually,
