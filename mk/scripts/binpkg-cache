@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.3 2005/05/22 01:36:49 dmcmahill Exp $
+# $NetBSD: binpkg-cache,v 1.4 2005/05/24 20:49:41 dmcmahill Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -111,9 +111,19 @@ clean_and_exit1(){
 
 all_cache_files=""
 
-process_binpkg_dir(){
-	all_cache_files="${all_cache_files} ${d}/${cachefile}"
+#############################################################################
+#
+# process_binpkg_dir()
+#
+# Process a directory by checking to see if a cache file exists.  If the
+# cache file exists, make sure it is up to date.  If the file does not
+# exist, create one.
+#
+# also keep track of this directory so it can be added to the master
+# cache.
+#
 
+process_binpkg_dir(){
 	need_update=no
 	if test -f ${d}/${cachefile} ; then
 		stale_entries=`${FIND} ${d} -type f -name \*${PKG_SUFX} -newer ${d}/${cachefile} -print`
@@ -193,14 +203,20 @@ process_binpkg_dir(){
 			${PKG_INFO} -q -B ${f} >> ${tmpd}/${cachefile}
 			echo "pkgcache_end ${fn}" >> ${tmpd}/${cachefile}
 		done
-		mv ${tmpd}/${cachefile} ${d}/${cachefile}
+		mv -f ${tmpd}/${cachefile} ${d}/${cachefile}
 		if test $? -ne 0 ; then
+			echo "********** WARNING **********"
 			echo "move of ${tmpd}/${cachefile} to ${d}/${cachefile} failed!"
 			echo "Perhaps you do not have write permissions to ${d}?"
-			clean_and_exit1
+			echo "This directory will be dropped from the master cache file."
+			echo "********** WARNING **********"
+			return
 		fi
 	fi
 
+	# if we got here, then this directory should have a good cache file in
+	# it and we should be able to add it to the master cache file
+	all_cache_files="${all_cache_files} ${d}/${cachefile}"
 
 }
 
@@ -214,20 +230,24 @@ process_cache_files(){
 	fi
  	if test ! -f ${PACKAGES}/${cachefile} ; then
 		echo "${tab}Creating master cache file ${PACKAGES}/${cachefile}"
-		mv ${tmpd}/${cachefile} ${PACKAGES}/${cachefile}
+		mv -f ${tmpd}/${cachefile} ${PACKAGES}/${cachefile}
 		if test $? -ne 0 ; then
+			echo "********** ERROR **********"
 			echo "move of ${tmpd}/${cachefile} to ${PACKAGES}/${cachefile} failed!"
 			echo "Perhaps you do not have write permissions to ${PACKAGES}?"
+			echo "********** ERROR **********"
 			clean_and_exit1
 		fi
 	elif ${CMP} -s ${tmpd}/${cachefile} ${PACKAGES}/${cachefile} ; then
 		echo "${tab}Master cache file ${PACKAGES}/${cachefile} is up to date"
 	else
 		echo "${tab}Updating master cache file ${PACKAGES}/${cachefile}"
-		mv ${tmpd}/${cachefile} ${PACKAGES}/${cachefile}
+		mv -f ${tmpd}/${cachefile} ${PACKAGES}/${cachefile}
 		if test $? -ne 0 ; then
+			echo "********** ERROR **********"
 			echo "move of ${tmpd}/${cachefile} to ${PACKAGES}/${cachefile} failed!"
 			echo "Perhaps you do not have write permissions to ${PACKAGES}?"
+			echo "********** ERROR **********"
 			clean_and_exit1
 		fi
 	fi
