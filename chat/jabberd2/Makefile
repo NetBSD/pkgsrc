@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:45:04 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/05/24 21:02:53 xtraeme Exp $
 #
 
-DISTNAME=		jabberd-2.0s6
-PKGREVISION=		1
+DISTNAME=		jabberd-2.0s8
 CATEGORIES=		chat
-MASTER_SITES=		http://www.jabberstudio.org/files/jabberd2/
+MASTER_SITES=		http://files.jabberstudio.org/jabberd2/
 
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://jabberd.jabberstudio.org/2/
@@ -72,10 +71,11 @@ OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 770
 .undef f
 
 post-extract:
-.for f in jabberd.cfg ${FILES}
+.for f in ${FILES}
 	@${MV} ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
 .endfor
 .undef f
+	@${MV} ${WRKSRC}/etc/jabberd.cfg.dist.in ${WRKSRC}/etc/jabberd.cfg.in
 
 pre-configure:
 .for f in ${FILES} jabberd.cfg
