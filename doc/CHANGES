@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10179 2005/05/24 05:10:49 minskim Exp $
+$NetBSD: CHANGES,v 1.10180 2005/05/24 05:43:39 garbled Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2576,3 +2576,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ruby-subversion-1.2.0 [epg 2005-05-23]
 	Updated rapidsvn to 0.8.0 [epg 2005-05-23]
 	Updated lq-sp to 1.3.4.12 [minskim 2005-05-24]
+	Updated clusterit to 2.3 [garbled 2005-05-24]
