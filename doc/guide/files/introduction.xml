@@ -1,9 +1,9 @@
-<!-- $NetBSD: introduction.xml,v 1.4 2005/05/15 20:30:54 rillig Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.5 2005/05/24 12:14:42 wiz Exp $ -->
 
 <chapter id="introduction">
   <title>Introduction</title>
 
-  <sect1>
+  <sect1 id="introduction-section">
     <title>Introduction</title>
 
     <para> There is a lot of software freely available for Unix based

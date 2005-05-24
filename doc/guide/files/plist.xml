@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.4 2005/05/08 13:53:06 wiz Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.5 2005/05/24 12:14:42 wiz Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -13,7 +13,7 @@
     below!).</para>
 
 
-  <sect1>
+  <sect1 id="rcs-id">
     <title>RCS ID</title>
 
     <para>
@@ -24,7 +24,7 @@
     <programlisting>@comment &#36;NetBSD&#36;</programlisting>
   </sect1>
     
-  <sect1>
+  <sect1 id="automatic-plist-generation">
     <title>Semi-automatic <filename>PLIST</filename> generation</title>
 	    
     <para>You can use the <command>make print-PLIST</command> command
@@ -162,7 +162,7 @@
       in the PLIST with <quote>somevalue</quote>.  </para>
   </sect1>
 
-  <sect1>
+  <sect1 id="manpage-compression">
     <title>Manpage-compression</title>
     
     <para>Manpages should be installed in compressed form if
@@ -177,7 +177,7 @@
   </sect1>
 
   
-  <sect1>
+  <sect1 id="using-PLIST_SRC">
     <title>Changing PLIST source with <varname>PLIST_SRC</varname></title>
 
     <para>To use one or more files as source for the <filename>PLIST</filename> used
@@ -188,7 +188,7 @@
   </sect1>
 
 
-  <sect1>
+  <sect1 id="platform-specific-plist">
     <title>Platform specific and differing PLISTs</title>
     
     <para>Some packages decide to install a different set of files based on

@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.3 2005/05/14 22:34:59 rillig Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.4 2005/05/24 12:14:42 wiz Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -33,7 +33,7 @@
     designed to insulate the package build from non-system-supplied
     software. </para>
 
-  <sect1>
+  <sect1 id="converting-to-buildlink3">
     <title>Converting packages to use buildlink3</title>
 
     <para>The process of converting packages to use the buildlink3
@@ -137,7 +137,7 @@
       description of how to use them properly.</para>
   </sect1>
 
-  <sect1>
+  <sect1 id="creating-buildlink3.mk">
     <title>Writing <filename>buildlink3.mk</filename> files</title>
 
     <para> A package's <filename>buildlink3.mk</filename> file is
@@ -158,7 +158,7 @@
     <screen>&cprompt; <userinput>cd pkgsrc/<replaceable>category</replaceable>/<replaceable>pkgdir</replaceable>
 &cprompt; createbuildlink -3 &gt;buildlink3.mk</userinput></screen> 
 
-    <sect2>
+    <sect2 id="anatomy-of-bl3">
       <title>Anatomy of a buildlink3.mk file</title>
 
       <para>The following real-life example
@@ -343,7 +343,7 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//} </programlisting>
 	    </para>
     </sect2>
 
-    <sect2>
+    <sect2 id="updating-buildlink-depends">
       <title>Updating <varname>BUILDLINK_DEPENDS.<replaceable>pkg</replaceable></varname> in <filename>buildlink3.mk</filename> files</title>
 
       <para>
@@ -388,7 +388,7 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//} </programlisting>
     </sect2>
   </sect1>
 
-  <sect1>
+  <sect1 id="writing-builtin.mk">
     <title>Writing <filename>builtin.mk</filename> files</title>
 
     <para>
@@ -429,7 +429,7 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//} </programlisting>
       </listitem>
     </orderedlist>
 
-    <sect2>
+    <sect2 id="anatomy-of-builtin.mk">
       <title>Anatomy of a <filename>builtin.mk</filename> file</title>
 
       <para>The following is the recommended template for builtin.mk
@@ -527,7 +527,7 @@ CHECK_BUILTIN.foo?=     no
         </para> 
     </sect2>
     
-    <sect2>
+    <sect2 id="native-or-pkgsrc-preference">
       <title>Global preferences for native or pkgsrc software</title>
 
       <para>

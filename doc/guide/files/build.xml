@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.6 2005/05/24 11:11:24 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.7 2005/05/24 12:14:42 wiz Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -127,7 +127,7 @@ CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
     </itemizedlist>
   </sect1>
 
-  <sect1>
+  <sect1 id="main-targets">
     <title>Main targets</title>
 
     <para>The main targets used during the build process defined in

@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.7 2005/05/15 20:24:17 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.8 2005/05/24 12:14:42 wiz Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -268,7 +268,7 @@ converters    games         mbone         print         x11</programlisting>
       <emphasis>they are applied after pkgsrc patches are applied</emphasis>.</para>
   </sect1>
 
-  <sect1>
+  <sect1 id="other-mandatory-files">
     <title>Other mandatory files</title>
 
     <variablelist>
@@ -350,7 +350,7 @@ converters    games         mbone         print         x11</programlisting>
     </variablelist>
   </sect1>
 
-  <sect1>
+  <sect1 id="work-dir">
     <title><filename>work*</filename></title>
 
     <para>When you type <command>make</command> the distribution files are
@@ -385,7 +385,7 @@ converters    games         mbone         print         x11</programlisting>
       <filename>work.sparc</filename>. </para>
   </sect1>
 
-  <sect1>
+  <sect1 id="files-dir">
     <title><filename>files/*</filename></title>
 
     <para>If you have any files that you wish to be placed in the package prior
