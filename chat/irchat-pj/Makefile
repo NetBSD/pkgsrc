@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:04 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/24 13:59:13 rillig Exp $
 
 DISTNAME=	irchat-pj-2.4.24.22
 CATEGORIES=	chat
@@ -7,7 +7,6 @@ MASTER_SITES=	http://irc.fan.gr.jp/pj/src/
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://irc.fan.gr.jp/pj/
 COMMENT=	Emacs lisp interface to Internet Relay Chat
-
 
 .include "../../mk/emacs.mk"
 
