@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3529 2005/05/24 11:31:03 salo Exp $
+$NetBSD: TODO,v 1.3530 2005/05/24 13:06:23 rillig Exp $
 
 Suggested new packages
 ======================
@@ -990,7 +990,6 @@ Suggested package updates
 	o ruby-RMagick-1.8.1 [pkg/30313]
 	o ruby-fox-1.2.6 [needs to update of fox-1.4.6]
 	o ruby-mysql-2.5.2
-	o rudiments-0.28.2
 	o sablecc-2.18.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-classpath-1.11.3 [pkg/30022]
