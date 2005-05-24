@@ -1,9 +1,10 @@
-# $NetBSD: deprecated.map,v 1.4 2005/05/24 10:54:20 rillig Exp $
+# $NetBSD: deprecated.map,v 1.5 2005/05/24 21:19:11 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
 # what to do to make the warning disappear.
 
+# The following entries can be removed after the 2005Q3 branch.
 ALL_TARGET		Use BUILD_TARGET instead.
 DIGEST_FILE		Use DISTINFO_FILE instead.
 IGNORE			Use PKG_FAIL_REASON or PKG_SKIP_REASON instead.
@@ -44,3 +45,4 @@ USE_WNN4		Use the PKG_OPTIONS framework instead.
 USE_XFACE		Use the PKG_OPTIONS framework instead.
 USE_PKGLIBTOOL		Use USE_LIBTOOL instead.
 USE_SSL			Include "../../security/openssl/buildlink3.mk" instead.
+USE_PERL5		Use USE_TOOLS+=perl instead.
