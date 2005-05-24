@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.238 2005/05/23 07:50:40 rillig Exp $
+# $NetBSD: Makefile,v 1.239 2005/05/24 15:39:05 rillig Exp $
 #
 
-DISTNAME=	pkglint-4.16
+DISTNAME=	pkglint-4.17
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
