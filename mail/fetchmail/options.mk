@@ -1,11 +1,9 @@
-# $NetBSD: options.mk,v 1.8 2005/01/21 20:45:09 frueauf Exp $
+# $NetBSD: options.mk,v 1.9 2005/05/24 19:01:34 frueauf Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fetchmail
 PKG_SUPPORTED_OPTIONS=	inet6 kerberos4 kerberos gssapi ssl
 
-.if !defined(PKG_OPTIONS.fetchmail)
-PKG_DEFAULT_OPTIONS+=	ssl
-.endif
+PKG_SUGGESTED_OPTIONS= ssl
 
 .include "../../mk/bsd.options.mk"
 
