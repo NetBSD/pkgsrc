@@ -1,9 +1,9 @@
-<!-- $NetBSD: binary.xml,v 1.12 2005/05/14 22:34:59 rillig Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.13 2005/05/24 12:14:42 wiz Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
 
-  <sect1>
+  <sect1 id="building-a-single-binary-package">
     <title>Building a single binary package</title>
 
     <para>
@@ -38,7 +38,7 @@
       such a binary package.</para>
   </sect1>
 
-  <sect1>
+  <sect1 id="settings-for-creationg-of-binary-packages">
     <title>Settings for creation of binary packages</title>
 
     <para>See <xref linkend="build.helpful-targets"/>.</para>
@@ -81,7 +81,7 @@ PKG_DEVELOPER?= yes
 _ACCEPTABLE=    yes</programlisting>
       </sect3>
 
-      <sect3>
+      <sect3 id="build.conf">
 	<title><filename>build.conf</filename></title>
 
 	<para>In <filename>pkgsrc/mk/bulk</filename>, copy
@@ -94,7 +94,7 @@ _ACCEPTABLE=    yes</programlisting>
 	  <command>cvs update</command>.</para>
       </sect3>
 
-      <sect3>
+      <sect3 id="pre-build.local">
 	<title><filename>pre-build.local</filename></title>
 
 	<para>It is possible to configure the bulk build to perform
@@ -114,7 +114,7 @@ _ACCEPTABLE=    yes</programlisting>
       </sect3>
     </sect2>
 
-    <sect2>
+    <sect2 id="other-environmental-considerations">
       <title>Other environmental considerations</title>
 
       <para>As <filename>/usr/pkg</filename> will be completely
@@ -140,7 +140,7 @@ fi</programlisting>
 	gets rebooted or crashes. You have been warned! :)</para>
     </sect2>
 
-    <sect2>
+    <sect2 id="operation">
       <title>Operation</title>
 
       <para>Make sure you don't need any of the packages still
@@ -173,7 +173,7 @@ fi</programlisting>
       </para> 
     </sect2>
 
-    <sect2>
+    <sect2 id="what-it-does">
       <title>What it does</title>
 
       <para>The bulk builds consist of three steps:</para>
@@ -231,7 +231,7 @@ fi</programlisting>
       </para> 
     </sect2>
 
-    <sect2>
+    <sect2 id="disk-space-requirements">
       <title>Disk space requirements</title>
 
       <para>Currently, roughly the following requirements are valid for
@@ -267,7 +267,7 @@ fi</programlisting>
       </para> 
     </sect2>
 
-    <sect2>
+    <sect2 id="setting-up-a-sandbox">
       <title>Setting up a sandbox for chroot'ed builds</title>
 
       <para>
@@ -403,7 +403,7 @@ fi</programlisting>
         (wherever that points/mounts to/from).</para>
     </sect2>
 
-    <sect2>
+    <sect2 id="building-a-partial-set">
       <title>Building a partial set of packages</title>
 
       <para> In addition to building a complete set of all packages in
@@ -555,7 +555,7 @@ nbftp% <userinput>chmod 755 .</userinput> </screen>
     </sect2>
   </sect1>
 
-  <sect1>
+  <sect1 id="creating-cdroms">
     <title>Creating a multiple CD-ROM packages collection</title>
 
     <para>
@@ -569,7 +569,7 @@ nbftp% <userinput>chmod 755 .</userinput> </screen>
       package.
     </para>
 
-    <sect2>
+    <sect2 id="cdpack-example">
       <title>Example of cdpack</title>
 
       <para>
