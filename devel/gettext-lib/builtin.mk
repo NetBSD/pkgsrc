@@ -1,15 +1,16 @@
-# $NetBSD: builtin.mk,v 1.21 2005/05/24 05:41:32 jlam Exp $
+# $NetBSD: builtin.mk,v 1.22 2005/05/24 05:43:37 jlam Exp $
 
 BUILDLINK_FIND_LIBS:=	intl
 .include "../../mk/buildlink3/find-libs.mk"
 
-_LIBINTL_H=	/usr/include/libintl.h
+_BLNK_LIBINTL_H=	/usr/include/libintl.h
 
 .if !defined(IS_BUILTIN.gettext)
 IS_BUILTIN.gettext=	no
-.  if exists(${_LIBINTL_H}) && !empty(BUILDLINK_LIB_FOUND.intl:M[yY][eE][sS])
+.  if exists(${_BLNK_LIBINTL_H}) && \
+      !empty(BUILDLINK_LIB_FOUND.intl:M[yY][eE][sS])
 IS_BUILTIN.gettext!=	\
- 	if ${GREP} -q "\#define[ 	]*__USE_GNU_GETTEXT" ${_LIBINTL_H}; then \
+ 	if ${GREP} -q "\#define[ 	]*__USE_GNU_GETTEXT" ${_BLNK_LIBINTL_H}; then \
  		${ECHO} "yes";						\
  	else								\
  		${ECHO} "no";						\
@@ -48,9 +49,9 @@ USE_BUILTIN.gettext!=	\
 # XXX By default, assume that the native gettext implementation is good
 # XXX enough if it has a prototype for ngettext().
 # XXX
-.    if !defined(_GETTEXT_NGETTEXT) && exists(${_LIBINTL_H})
+.    if !defined(_GETTEXT_NGETTEXT) && exists(${_BLNK_LIBINTL_H})
 _GETTEXT_NGETTEXT!=	\
-	if ${GREP} -q "char.*ngettext" ${_LIBINTL_H}; then		\
+	if ${GREP} -q "char.*ngettext" ${_BLNK_LIBINTL_H}; then		\
 		${ECHO} "yes";						\
 	else								\
 		${ECHO} "no";						\
@@ -68,7 +69,7 @@ USE_BUILTIN.gettext=	no
 # XXX
 .    if (${OPSYS} == "Linux")
 USE_BUILTIN.gettext!=	\
-	if ${GREP} -q "This file is part of the GNU C Library" ${_LIBINTL_H}; then \
+	if ${GREP} -q "This file is part of the GNU C Library" ${_BLNK_LIBINTL_H}; then \
 		${ECHO} "yes";						\
 	else								\
 		${ECHO} "no";						\
