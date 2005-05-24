@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/16 04:01:31 kim Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/24 13:45:14 rillig Exp $
 #
 
 DISTNAME=	mstream-1.0
@@ -12,7 +12,7 @@ COMMENT=	Mserv player package to queue tracks to IceS
 DEPENDS+=	ices-mp3>=0.3:../../audio/ices-mp3
 DEPENDS+=	p5-MP3-Info>=1.0:../../audio/p5-MP3-Info
 
-NO_CONFIGURE=	# defined
+NO_CONFIGURE=	yes
 USE_PERL5=	# defined
 
 MODDIR=		${PREFIX}/share/ices-mp3
