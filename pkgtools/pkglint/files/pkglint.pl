@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.177 2005/05/24 20:17:31 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.178 2005/05/24 23:49:03 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -350,7 +350,6 @@ my $filesdir;
 my $patchdir;
 my $distinfo;
 my $scriptdir;
-my %cmdnames;
 my $seen_PLIST_SRC;
 my $seen_NO_PKG_REGISTER;
 my $seen_NO_CHECKSUM;
@@ -387,7 +386,6 @@ sub init_global_vars() {
 	$patchdir		= "patches";
 	$distinfo		= "distinfo";
 	$scriptdir		= "scripts";
-	%cmdnames		= ();
 	$seen_PLIST_SRC		= false;
 	$seen_NO_PKG_REGISTER	= false;
 	$seen_NO_CHECKSUM	= false;
@@ -1228,6 +1226,83 @@ sub checklines_deprecated_variables($) {
 	return true;
 }
 
+sub checklines_direct_tools($) {
+	my ($lines) = @_;
+
+	if (!$opt_warn_directcmd) {
+		return true;
+	}
+	log_info(NO_FILE, NO_LINE_NUMBER, "Checking direct use of tool names.");
+
+	my @tools = qw(
+		awk basename cat chmod chown chgrp cmp cp cut digest
+		dirname echo egrep false file find gmake grep gtar gzcat
+		id ident install ldconfig ln md5 mkdir mtree mv patch
+		pax pkg_add pkg_create pkg_delete pkg_info rm rmdir sed
+		setenv sh sort su tail test touch tr true type wc
+		xmkmf);
+	my @cmd_tools = qw(
+		file gunzip gzip);
+	my @ok_vars = qw(
+		BUILDLINK_TRANSFORM BUILD_DEPENDS
+		COMMENT CONFLICTS
+		DEPENDS DISTNAME
+		EXTRACT_SUFX
+		MASTER_SITES
+		PKGNAME PKGSRC_USE_TOOLS
+		SUBST_MESSAGE\\.*
+		.*_TARGET
+		USE_TOOLS);
+	my @ok_shellcmds = qw(
+		.*\\./Build.*
+		);
+
+	my %toolvar = ();
+	foreach my $tool (@tools) {
+		$toolvar{$tool} = uc($tool);
+	}
+	foreach my $tool (@cmd_tools) {
+		$toolvar{$tool} = uc($tool)."_CMD";
+	}
+
+	my $tools = join("|", @tools, @cmd_tools);
+	my $regex_tools = qr"(?:^|\s|/)(${tools})(?:\s|$)";
+	my $ok_vars = join("|", @ok_vars);
+	my $regex_ok_vars = qr"^(${ok_vars})$";
+	my $ok_shellcmds = join("|", @ok_shellcmds);
+	my $regex_ok_shellcmds = qr"^(${ok_shellcmds})$";
+
+	foreach my $line (@{$lines}) {
+		my $text = $line->text;
+
+		next unless ($text =~ $regex_tools);
+		my ($tool) = ($1);
+
+		if ($text =~ qr"^#") {
+			# skip comments
+		} elsif ($text =~ qr"^([\w.]+?)\s*[?+:!]?=\s*(.*)") {
+			my ($varname, $value) = ($1, $2);
+			# process variable assignments
+			if ($varname !~ $regex_ok_vars) {
+				$line->log_warning("Possible direct use of \"${tool}\" found in variable ${varname}. Please use \$\{$toolvar{$tool}\} instead.");
+			}
+		} elsif ($text =~ qr"^\t(.*)") {
+			my ($shellcmd) = ($1);
+			# process shell commands
+			if ($shellcmd !~ $regex_ok_shellcmds) {
+				$line->log_warning("Possible direct use of \"${tool}\" in shell command ${shellcmd}. Please use \$\{$toolvar{$tool}\} instead.");
+			}
+		} elsif ($text =~ qr"^\.") {
+			# skip processing directives
+		} elsif ($text =~ qr"^([-\w.]+):") {
+			# skip dependency specifications
+		} else {
+			$line->log_error("[internal:checklines_direct_tools] unknown line format");
+		}
+	}
+	return true;
+}
+
 sub checkfile_Makefile($) {
 	my ($file) = @_;
 	my ($fname) = ("$opt_packagedir/$file");
@@ -1370,60 +1445,8 @@ sub checkfile_Makefile($) {
 	    	log_warning(NO_FILE, NO_LINE_NUMBER, "$1: no need to use '-' before command.");
 	}
 
-	#
-	# whole file: direct use of command names
-	#
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking direct use of command names.");
-	my @command_names = qw(
-		awk basename cat chmod chown chgrp cmp cp cut digest
-		dirname echo egrep false file find gmake grep gtar gzcat
-		id ident install ldconfig ln md5 mkdir mtree mv patch
-		pax pkg_add pkg_create pkg_delete pkg_info rm rmdir sed
-		setenv sh sort su tail test touch tr true type wc
-		xmkmf);
-	foreach my $i (@command_names) {
-		$cmdnames{$i} = "\$\{\U$i\E\}";
-	}
-	$cmdnames{'file'} = '${FILE_CMD}';
-	$cmdnames{'gunzip'} = '${GUNZIP_CMD}';
-	$cmdnames{'gzip'} = '${GZIP_CMD}';
-	#
-	# ignore parameter string to echo command.
-	# note that we leave the command as is, since we need to check the
-	# use of echo itself.
-	my $j = $whole;
-	$j =~ s/([ \t][\@-]?)(echo|\$[\{\(]ECHO[\}\)]|\$[\{\(]ECHO_MSG[\}\)])[ \t]+("(\\'|\\"|[^"])*"|'(\\'|\\"|[^'])*')[ \t]*[;\n]/$1$2;/;
-	# no need to check comments...
-	$j =~ s/\n#[\n]*/\n#/;
-	# ...nor COMMENTs
-	$j =~ s/\nCOMMENT[\t ]*=[\t ]*[^\n]*\n/\nCOMMENT=#replaced\n/;
-	# ...nor settings of TEST_TARGET & BUILD_TARGET
-	$j =~ s/\nTEST_TARGET[\t ]*.*=[\t ]*[^\n]*\n/\nTEST_TARGET=#replaced\n/;
-	$j =~ s/\nBUILD_TARGET[\t ]*.*=[\t ]*[^\n]*\n/\nBUILD_TARGET=#replaced\n/;
-	$j =~ s/\n(?:PKGSRC_)?USE_TOOLS[ \t]*\+?=[ \t]*[^\n]*\n/\nUSE_TOOLS=#replaced\n/g;
-	if ($opt_warn_directcmd) {
-		foreach my $i (keys %cmdnames) {
-			if ($j =~ /[ \t\/@]$i[ \t\n;]/) {
-				log_warning(NO_FILE, NO_LINE_NUMBER, "Possible direct use of command \"$i\" ".
-					"found. Use $cmdnames{$i} instead.");
-			}
-		}
-	}
+	checklines_direct_tools($lines);
 
-	#
-	# whole file: ldconfig must come with "true" command
-	#
-	if ($j =~ /(ldconfig|\$[{(]LDCONFIG[)}])/
-	 && $j !~ /(\/usr\/bin\/true|\$[{(]TRUE[)}])/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "ldconfig must be used with \"||\${TRUE}\".");
-	}
-
-	#
-	# whole file: ${MKDIR} -p
-	#
-	if ($j =~ /\${MKDIR}\s+-p/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "Possible use of \"\${MKDIR} -p\" found. \${MKDIR} includes \"-p\" by default.");
-	}
 	#
 	# whole file: continuation line in DEPENDS
 	#
@@ -1969,7 +1992,7 @@ sub checkearlier($@) {
 
 sub abspathname($$) {
 	my ($str, $file) = @_;
-	my ($s, $i, $pre, %cmdnames);
+	my ($s, $i, $pre);
 
 	# ignore parameter string to echo command
 	$str =~ s/[ \t][\@-]?(echo|\$[\{\(]ECHO[\}\)]|\$[\{\(]ECHO_MSG[\}\)])[ \t]+("(\\'|\\"|[^"])*"|'(\\'|\\"|[^"])*')[ \t]*[;\n]//;
