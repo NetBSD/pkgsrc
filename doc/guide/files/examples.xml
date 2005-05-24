@@ -1,4 +1,4 @@
-<!-- $NetBSD: examples.xml,v 1.4 2005/05/14 22:34:59 rillig Exp $ -->
+<!-- $NetBSD: examples.xml,v 1.5 2005/05/24 12:14:42 wiz Exp $ -->
 
 <appendix id="examples">
   <title>A simple example package: bison</title>
@@ -9,10 +9,10 @@
     present in the tree is beyond us, but it's useful for the purposes of
     this exercise.</para>
 
-  <sect1>
+  <sect1 id="example-files">
     <title>files</title>
 
-    <sect2>
+    <sect2 id="example-Makefile">
       <title>Makefile</title>
 
       <programlisting># &#36;NetBSD&#36;
@@ -32,7 +32,7 @@ INFO_FILES=     bison.info
 .include "../../mk/bsd.pkg.mk"</programlisting>
     </sect2>
 
-    <sect2>
+    <sect2 id="example-descr">
       <title>DESCR</title>
 
       <programlisting>GNU version of yacc.  Can make re-entrant parsers, and numerous other
@@ -40,7 +40,7 @@ improvements.  Why you would want this when Berkeley &man.yacc.1; is part
 of the &os; source tree is beyond me.</programlisting>
     </sect2>
 
-    <sect2>
+    <sect2 id="example-plist">
       <title>PLIST</title>
 
       <programlisting>@comment &#36;NetBSD&#36;
@@ -50,7 +50,7 @@ share/bison.simple
 share/bison.hairy</programlisting>
     </sect2>
 
-    <sect2>
+    <sect2 id="checking-package-with-pkglint">
       <title>Checking a package with <command>pkglint</command></title>
 
       <para>The NetBSD package system comes with <pkg>pkgtools/pkglint</pkg>
@@ -68,7 +68,7 @@ looks fine.</screen>
     </sect2>
   </sect1>
 
-  <sect1>
+  <sect1 id="steps-for-b-i-p">
     <title>Steps for building, installing, packaging</title>
 
     <para>Create the directory where the package lives,
