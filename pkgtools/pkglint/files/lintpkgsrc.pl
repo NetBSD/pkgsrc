@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.101 2005/05/23 08:35:41 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.102 2005/05/24 15:37:17 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -827,6 +827,7 @@ sub parse_makefile_vars
     @data = map {chomp; $_} <FILE>;
     close(FILE);
 
+    $incdirs{"."} = 1;
     # Some Makefiles depend on these being set
     if ($file eq '/etc/mk.conf')
 	{ $vars{LINTPKGSRC} = 'YES'; }
