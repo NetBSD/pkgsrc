@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3530 2005/05/24 13:06:23 rillig Exp $
+$NetBSD: TODO,v 1.3531 2005/05/24 15:18:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -667,6 +667,7 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-0.19.2
 	o mapserver-4.2.5
+	o mathomatic-12.3.3
 	o mdd-20050318
 	o mdf2iso-0.3.0
 	o memcached-1.1.12 [pkg/30289]
@@ -1032,6 +1033,7 @@ Suggested package updates
 	o snd-7.12
 	o snes9x-1.43
 	o snownews-1.5.6.1
+	o source-highlight-2.0
 	o sox-12.17.7
 	o spim-7.1
 	o spruce-0.6.5
@@ -1122,7 +1124,7 @@ Suggested package updates
 	o weechat-0.1.1
 	o weewm-0.01
 	o winbind-3.0.13
-	o windowlab-1.29
+	o windowlab-1.30
 	o wine-20050419
 	o wmakerconf-2.11
 	o wmbiff-0.4.26
@@ -1282,6 +1284,8 @@ Suggested cleanups in pkgsrc
 	  reports if any of the packages do not honor these
 	  configuration options and/or do not ship with pregenerated
 	  html documents.
+	  Affects: net/gnet, net/soup, sysutils/gnome-vfs, textproc/gdome2,
+	  x11/libxfce4gui, x11/libxfce4mcs, x11/libxfce4util
 
 	o Make packages utilize USE_X11 instead of USE_X11BASE if
 	  there is no good reason to install them into X11BASE.
