@@ -1,9 +1,9 @@
-<!-- $NetBSD: platforms.xml,v 1.10 2005/05/15 20:33:01 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.11 2005/05/24 12:14:42 wiz Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
 
-  <sect1>
+  <sect1 id="bootstrapping-pkgsrc">
     <title>Bootstrapping pkgsrc</title>
 
     <para>For operating systems other than &os;, we provide a bootstrap kit to
@@ -74,12 +74,12 @@
       found on <ulink url="http://www.pkgsrc.org/">www.pkgsrc.org</ulink>.</para>
   </sect1>
 
-  <sect1>
+  <sect1 id="platform-specific-notes">
     <title>Platform specific notes</title>
 
     <para>Here are some platform-specific notes you should be aware of.</para>
 
-    <sect2>
+    <sect2 id="darwin">
       <title>Darwin (Mac OS X)</title>
 
       <para>Darwin 5.x and 6.x are supported. There are two methods of using
@@ -159,7 +159,7 @@
       </sect3>
     </sect2>
 
-    <sect2>
+    <sect2 id="freebsd">
       <title>FreeBSD</title>
 
       <para>
@@ -197,7 +197,7 @@
       </orderedlist>
     </sect2>
 
-    <sect2>
+    <sect2 id="interix">
       <title>Interix</title>
 
       <para>Interix is a POSIX compatible subsystem for the Windows NT kernel,
@@ -295,7 +295,7 @@
       </sect3>
     </sect2>
 
-    <sect2>
+    <sect2 id="irix">
       <title>IRIX</title>
 
       <para>You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
@@ -343,7 +343,7 @@
         '--preserve-path' flag.</para>
     </sect2>
 
-    <sect2>
+    <sect2 id="linux">
       <title>Linux</title>
 
       <para>
@@ -396,7 +396,7 @@
 
     </sect2>
 
-    <sect2>
+    <sect2 id="openbsd">
       <title>OpenBSD</title>
 
       <para>OpenBSD 3.0 and 3.2 are tested and supported.</para>
@@ -441,7 +441,7 @@
       </orderedlist>
     </sect2>
 
-    <sect2>
+    <sect2 id="solaris">
       <title>Solaris</title>
 
       <para>Solaris 2.6 through 9 are supported on both x86 and sparc. You will need a working C 
@@ -475,7 +475,7 @@
       <para>Please note the use of GNU binutils on Solaris is
 	<emphasis>not</emphasis> supported.</para>
 
-      <sect3>
+      <sect3 id="solaris-gcc-note">
 	<title>If you are using gcc</title>
 
 	<para>It makes life much simpler if you only use the same gcc consistently
@@ -489,7 +489,7 @@
 	    url="http://www.sun.com/bigadmin/common/freewareSearch.html">http://www.sun.com/bigadmin/common/freewareSearch.html</ulink>.</para>
       </sect3>
 
-      <sect3>
+      <sect3 id="solaris-sun-workshop-note">
 	<title>If you are using Sun WorkShop</title>
 
 	<para>You will need at least the following packages installed (from WorkShop

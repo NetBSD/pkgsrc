@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.9 2005/05/15 20:38:40 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.10 2005/05/24 12:14:42 wiz Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
   <title>Using pkgsrc</title>
@@ -10,7 +10,7 @@
       precompiled binary package that someone else already prepared
       for your type of machine. </para>
 
-    <sect2>
+    <sect2 id="where-to-get-binary-packages">
       <title>Where to get binary packages</title>
       
       <para> Precompiled packages are stored on ftp.NetBSD.org and its
@@ -34,7 +34,7 @@
         documentation for the exact location. </para>  
     </sect2>
 
-    <sect2>
+    <sect2 id="how-to-use-binary-packages">
       <title>How to use binary packages</title>
       
       <para> If you have the files on a CDROM or downloaded them to
@@ -79,7 +79,7 @@
         installed program. </para> 
     </sect2>
 
-    <sect2>
+    <sect2 id="a-word-of-warning">
       <title>A word of warning</title>
     
       <para> Please pay very careful attention to the warnings
@@ -91,14 +91,14 @@
     </sect2>
   </sect1>
 
-  <sect1>
+  <sect1 id="building-packages-from-source">
     <title>Building packages from source</title>
     
     <para> This assumes that the package is already in pkgsrc. If it
       is not, see <xref linkend="developers-guide"/> for instructions
       how to create your own packages.</para>
 
-    <sect2>
+    <sect2 id="requirements">
       <title>Requirements</title>
 
       <para> To build packages from source on a NetBSD system the
@@ -110,7 +110,7 @@
     </sect2>
     
 
-    <sect2>
+    <sect2 id="fetching-distfiles">
       <title>Fetching distfiles</title>
 
       <para>The first step for building a package is downloading the
@@ -136,7 +136,7 @@
         <filename>/usr/pkgsrc/distfiles</filename>.</para>
     </sect2>
 
-    <sect2>
+    <sect2 id="how-to-build-and-install">
       <title>How to build and install</title>
 
       <para>Assuming that the distfile has been fetched (see previous section), become
@@ -236,7 +236,7 @@
         install any if you use a non-standard <varname>LOCALBASE</varname>.</para>
     </sect2>
     
-    <sect2>
+    <sect2 id="selecting-the-compiler">
       <title>Selecting the compiler</title>
 
       <para>By default, pkgsrc will use GCC to build packages.  This may be

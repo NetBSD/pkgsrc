@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.9 2005/05/15 20:27:15 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.10 2005/05/24 12:14:42 wiz Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
   <title>Frequently Asked Questions</title>
@@ -8,7 +8,7 @@
     previous chapters, and it contains items for both pkgsrc users and
     developers. </para>
 
-  <sect1>
+  <sect1 id="mailing-list-pointers">
     <title>Are there any mailing lists for pkg-related discussion?</title>
 
     <para>
@@ -60,7 +60,7 @@
 </sect1>
 
 
-<sect1>
+<sect1 id="pkgviews-docs">
     <title>Where's the pkgviews documentation?</title>
 
     <para> Pkgviews is tightly integrated with buildlink. You can find a 
@@ -229,7 +229,7 @@
 </sect1>
 
 
-<sect1>
+<sect1 id="non-root-pkgsrc">
     <title>How to use pkgsrc as non-root</title>
     
      <para>  If you want to use pkgsrc as non-root user, you can set
@@ -239,7 +239,7 @@
       message</ulink> for more details.  </para> 
 </sect1>
 
-<sect1>
+<sect1 id="resume-transfers">
     <title>How to resume transfers when fetching distfiles?</title>
 
     <para>By default resuming transfers in pkgsrc is disabled, but you
@@ -264,7 +264,7 @@
 
 </sect1>
 
-<sect1>
+<sect1 id="XFree86-from-pkgsrc">
     <title>How can I install/use XFree86 from pkgsrc?</title>
 
     <para> If you want to use XFree86 from pkgsrc instead of your
@@ -279,7 +279,7 @@
 </sect1>
 
 
-<sect1>
+<sect1 id="x.org-from-pkgsrc">
     <title>How can I install/use X.org from pkgsrc?</title>
 
     <para> If you want to use X.org from pkgsrc instead of your system's
@@ -293,7 +293,7 @@
 </sect1>
 
 
-<sect1>
+<sect1 id="fetch-behind-firewall">
     <title>How to fetch files from behind a firewall</title>
 
     <para> If you are sitting behind a firewall which does not allow
@@ -309,7 +309,7 @@ http_proxy=http://orpheus.amdahl.com:80/</programlisting>
 </sect1>
 
     
-<sect1>
+<sect1 id="passive-ftp">
     <title>How do I tell <command>make fetch</command> to do passive FTP?</title>
 
     <para> This depends on which utility is used to retrieve distfiles. From <filename>bsd.pkg.mk</filename>, <varname>FETCH_CMD</varname> is assigned the first available command from the following list: </para>
@@ -330,7 +330,7 @@ http_proxy=http://orpheus.amdahl.com:80/</programlisting>
 </sect1>
 
     
-<sect1>
+<sect1 id="fetching-all-distfiles">
     <title>How to fetch all distfiles at once</title>
 
     <para> You would like to download all the distfiles in a single
@@ -378,7 +378,7 @@ http_proxy=http://orpheus.amdahl.com:80/</programlisting>
 </sect1>
 
 
-<sect1>
+<sect1 id="tmac.andoc-missing">
     <title>What does <quote>Don't know how to make /usr/share/tmac/tmac.andoc</quote> mean?</title>
 
     <para> When compiling the <pkg>pkgtools/pkg_install</pkg> package,
@@ -396,7 +396,7 @@ http_proxy=http://orpheus.amdahl.com:80/</programlisting>
 </sect1>
 
 
-<sect1>
+<sect1 id="bsd.own.mk-missing">
     <title>What does <quote>Could not find bsd.own.mk</quote> mean?</title>
 
     <para> You didn't install the compiler set,
@@ -413,7 +413,7 @@ http_proxy=http://orpheus.amdahl.com:80/</programlisting>
 </sect1>
 
 
-<sect1>
+<sect1 id="using-sudo-with-pkgsrc">
     <title>Using 'sudo' with pkgsrc</title>
 
     <para>

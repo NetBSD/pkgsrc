@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.15 2005/05/16 09:27:48 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.16 2005/05/24 12:14:42 wiz Exp $ -->
 
 <!-- based on:
 pkgsrc/bootstrap/bmake/for.c 1.1.1.1
@@ -128,7 +128,7 @@ pkgsrc/bootstrap/bmake/var.c 1.2
     use in your own code. If you don't find anything appropriate here,
     you should test your code and add it here.</para>
 
-    <sect2>
+    <sect2 id="adding-to-list">
       <title>Adding things to a list</title>
 
       <programlisting>
@@ -152,7 +152,7 @@ EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
 
     </sect2>
 
-    <sect2>
+    <sect2 id="converting-internal-to-external">
       <title>Converting an internal list into an external list</title>
 
       <programlisting>
@@ -170,7 +170,7 @@ EXT_LIST+=      ${i:Q}""
 
     </sect2>
 
-    <sect2>
+    <sect2 id="passing-variable-to-shell">
       <title>Passing variables to a shell command</title>
 
       <programlisting>
@@ -216,7 +216,7 @@ all:
 
     </sect2>
 
-    <sect2>
+    <sect2 id="quoting-guideline">
       <title>Quoting guideline</title>
 
       <para>There are many possible sources of wrongly quoted variables.
@@ -305,7 +305,7 @@ for_test:
       </itemizedlist>
     </sect2>
 
-    <sect2>
+    <sect2 id="bsd-make-bug-workaround">
       <title>Workaround for a bug in BSD Make</title>
 
       <para>The pkgsrc bmake program does not handle the following

@@ -1,4 +1,4 @@
-<!-- $NetBSD: editing.xml,v 1.6 2005/05/07 22:28:47 wiz Exp $ -->
+<!-- $NetBSD: editing.xml,v 1.7 2005/05/24 12:14:42 wiz Exp $ -->
 
 <appendix id="editing">
   <title>Editing guidelines for the pkgsrc guide</title>
@@ -8,7 +8,7 @@
     itself.
   </para>
 
-  <sect1>
+  <sect1 id="targets">
     <title>Targets</title>
   
     <para>
@@ -56,7 +56,7 @@
     </itemizedlist>
   </sect1>
 
-  <sect1>
+  <sect1 id="procedure">
     <title>Procedure</title>
     
     <para>

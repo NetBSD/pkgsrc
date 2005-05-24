@@ -1,4 +1,4 @@
-<!-- $NetBSD: options.xml,v 1.4 2005/05/20 10:02:03 rillig Exp $ -->
+<!-- $NetBSD: options.xml,v 1.5 2005/05/24 12:14:42 wiz Exp $ -->
 
 <!-- based on:
 pkgsrc/mk/bsd.options.mk 1.23
@@ -15,7 +15,7 @@ pkgsrc/mk/bsd.options.mk 1.23
     of options will be built into a package or to allow a set of
     global default options apply. </para>
 
-    <sect1>
+    <sect1 id="global-default-options">
       <title>Global default options</title>
 
       <para> Global default options are listed in
@@ -25,7 +25,7 @@ pkgsrc/mk/bsd.options.mk 1.23
         <filename>/etc/mk.conf</filename>. </para>
     </sect1>
 
-    <sect1>
+    <sect1 id="converting-to-options">
       <title>Converting packages to use <filename>bsd.options.mk</filename></title>
 
       <para> The following example shows how
