@@ -1,27 +1,33 @@
-$NetBSD: patch-ah,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+$NetBSD: patch-ah,v 1.2 2005/05/24 16:02:08 xtraeme Exp $
 
---- xentrace/Makefile.orig	2005-01-12 13:22:22.000000000 +0100
-+++ xentrace/Makefile	2005-01-22 18:44:45.000000000 +0100
-@@ -20,15 +20,15 @@
- all: $(BIN)
+--- libxc/Makefile.orig	2005-05-24 00:31:07.000000000 +0000
++++ libxc/Makefile	2005-05-24 00:34:06.000000000 +0000
+@@ -68,13 +68,13 @@
+ 	  ln -sf ../../$(LINUX_ROOT)/include/asm-xen/linux-public/*.h . )
  
- install: all
--	mkdir -p $(prefix)/usr/bin
--	mkdir -p $(prefix)/usr/man/man1
--	mkdir -p $(prefix)/usr/man/man8
--	install -m0755 $(BIN) $(SCRIPTS) $(prefix)/usr/bin
--	install -m0644 $(MAN1) $(prefix)/usr/man/man1
--	install -m0644 $(MAN8) $(prefix)/usr/man/man8
-+	mkdir -p $(prefix)/${PREFIX}/bin
-+	mkdir -p $(prefix)/${PREFIX}/man/man1
-+	mkdir -p $(prefix)/${PREFIX}/man/man8
-+	install -m0755 $(BIN) $(SCRIPTS) $(prefix)/${PREFIX}/bin
-+	install -m0644 $(MAN1) $(prefix)/${PREFIX}/man/man1
-+	install -m0644 $(MAN8) $(prefix)/${PREFIX}/man/man8
+ install: build
+-	[ -d $(DESTDIR)/usr/lib ] || $(INSTALL_DIR) $(DESTDIR)/usr/lib
+-	[ -d $(DESTDIR)/usr/include ] || $(INSTALL_DIR) $(DESTDIR)/usr/include
+-	$(INSTALL_PROG) libxc.so.$(MAJOR).$(MINOR) $(DESTDIR)/usr/lib
+-	$(INSTALL_DATA) libxc.a $(DESTDIR)/usr/lib
+-	ln -sf libxc.so.$(MAJOR).$(MINOR) $(DESTDIR)/usr/lib/libxc.so.$(MAJOR)
+-	ln -sf libxc.so.$(MAJOR) $(DESTDIR)/usr/lib/libxc.so
+-	$(INSTALL_DATA) xc.h $(DESTDIR)/usr/include
++	$(BSD_INSTALL_LIB_DIR) $(PREFIX)/lib
++	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/include
++	$(BSD_INSTALL_LIB) libxc.so.$(MAJOR).$(MINOR) $(PREFIX)/lib
++	$(BSD_INSTALL_LIB) libxc.a $(PREFIX)/lib
++	ln -sf libxc.so.$(MAJOR).$(MINOR) $(PREFIX)/lib/libxc.so.$(MAJOR)
++	ln -sf libxc.so.$(MAJOR) $(PREFIX)/lib/libxc.so
++	$(BSD_INSTALL_DATA) xc.h $(PREFIX)/include
  
  clean:
- 	$(RM) *.a *.so *.o *.rpm $(BIN)
+ 	rm -rf *.a *.so* *.o *.opic *.rpm $(LIB) *~ $(DEPS) xen
+@@ -97,6 +97,6 @@
+ 	ln -sf $< $@
  
- %: %.c $(HDRS) Makefile
--	$(CC) $(CFLAGS) -o $@ $< -L$(XEN_LIBXC) -L$(XEN_LIBXUTIL) -lxc -lxutil
-+	$(CC) $(CFLAGS) -o $@ $< -L$(XEN_LIBXC) -L$(XEN_LIBXUTIL) -lxc $(LDFLAGS) -lxutil
+ libxc.so.$(MAJOR).$(MINOR): $(PIC_OBJS)
+-	$(CC) -Wl,-soname -Wl,libxc.so.$(MAJOR) -shared -o $@ $^ -L../libxutil -lxutil -lz
++	$(CC) -Wl,-soname -Wl,libxc.so.$(MAJOR) -shared -o $@ $^ -L../libxutil $(LDFLAGS) -lxutil -lz
+ 
+ -include $(DEPS)

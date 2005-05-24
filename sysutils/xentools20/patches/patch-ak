@@ -1,15 +1,15 @@
-$NetBSD: patch-ak,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+$NetBSD: patch-ak,v 1.2 2005/05/24 16:02:08 xtraeme Exp $
 
---- misc/miniterm/Makefile.orig	2005-01-22 01:47:40.000000000 +0100
-+++ misc/miniterm/Makefile	2005-01-22 01:48:00.000000000 +0100
-@@ -6,8 +6,8 @@
+--- misc/miniterm/Makefile.orig	2005-05-24 00:38:57.000000000 +0000
++++ misc/miniterm/Makefile	2005-05-24 00:39:42.000000000 +0000
+@@ -9,8 +9,8 @@
  all: $(TARGET)
  
  install: all
--	mkdir -p $(prefix)/usr/bin
--	install -m0755 $(TARGET) $(prefix)/usr/bin
-+	mkdir -p $(prefix)/${PREFIX}/bin
-+	install -m0755 $(TARGET) $(prefix)/${PREFIX}/bin
+-	[ -d $(DESTDIR)/usr/bin ] || $(INSTALL_DIR) $(DESTDIR)/usr/bin
+-	$(INSTALL_PROG) $(TARGET) $(DESTDIR)/usr/bin
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) $(TARGET) $(PREFIX)/bin
  
  clean:
  	$(RM) *.o $(TARGET) *~
