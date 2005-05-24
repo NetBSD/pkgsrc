@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:05 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 13:59:27 rillig Exp $
 #
 
 DISTNAME=	Net-Jabber-1.26
@@ -15,7 +15,6 @@ DEPENDS+=	p5-Unicode-String-[0-9]*:../../converters/p5-Unicode-String
 DEPENDS+=	p5-XML-Stream-[0-9]*:../../textproc/p5-XML-Stream
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-Time-[0-9]*:../../time/p5-Time
-
 
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/Jabber/.packlist
 
