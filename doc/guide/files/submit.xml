@@ -1,9 +1,9 @@
-<!-- $NetBSD: submit.xml,v 1.5 2005/05/08 13:53:06 wiz Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.6 2005/05/24 12:14:42 wiz Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
 
-<sect1>
+<sect1 id="submitting-your-package">
 <title>Submitting your packages</title>
 <para>
 You have to separate between binary and <quote>normal</quote> (source)
@@ -51,7 +51,7 @@ packages here:
 
 </sect1>
 
-<sect1>
+<sect1 id="committing-importing">
 <title>Committing: Importing a package into CVS</title>
 <para>
   This section is only of interest for pkgsrc developers with write
@@ -99,7 +99,7 @@ packages here:
 </para>
 </sect1>
 
-<sect1>
+<sect1 id="updating-package">
 <title>Updating a package to a newer version</title>
 <para>
   Please always put a concise, appropriate and relevant summary of the
@@ -143,7 +143,7 @@ packages here:
 </para>
 </sect1>
 
-<sect1>
+<sect1 id="moving-package">
 <title>Moving a package in pkgsrc</title>
 
 <orderedlist>

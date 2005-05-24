@@ -1,12 +1,12 @@
-<!-- $NetBSD: fixes.xml,v 1.14 2005/05/14 22:34:59 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.15 2005/05/24 12:14:42 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
 
-  <sect1>
+  <sect1 id="general-operation">
     <title>General operation</title>
 
-    <sect2>
+    <sect2 id="pulling-vars-from-etc-mk.conf">
       <title>How to pull in variables from /etc/mk.conf</title>
     
       <para> The problem with package-defined variables that can be
@@ -45,7 +45,7 @@
     </sect2>
 
 
-    <sect2>
+    <sect2 id="restricted-packages">
       <title>Restricted packages</title>
     
       <para> Some licenses restrict how software may be re-distributed.
@@ -269,7 +269,7 @@
     </sect2>
 
 
-    <sect2>
+    <sect2 id="conflicts">
       <title>Handling conflicts with other packages</title>
     
       <para> Your package may conflict with other packages a user might
@@ -300,7 +300,7 @@
     </sect2>
 
 
-    <sect2>
+    <sect2 id="not-building-packages">
       <title>Packages that cannot or should not be built</title>
     
       <para>
@@ -324,7 +324,7 @@
     </sect2>
     
     
-    <sect2>
+    <sect2 id="undeletable-packages">
       <title>Packages which should not be deleted, once installed</title>
     
       <para>To ensure that a package may not be deleted, once it has been
@@ -362,7 +362,7 @@
     </sect2>
 
 
-    <sect2>
+    <sect2 id="compiler-bugs">
       <title>How to handle compiler bugs</title>
     
       <para>  Some source files trigger bugs in the compiler, based on
@@ -380,7 +380,7 @@
     </sect2>
             
 
-    <sect2>
+    <sect2 id="bumping-pkgrevision">
       <title>How to handle incrementing versions when fixing an existing package</title>
     
       <para> When making fixes to an existing package it can be useful
@@ -406,7 +406,7 @@
     </sect2>
     
     
-    <sect2>
+    <sect2 id="portability-of-packages">
       <title>Portability of packages</title>
 
       <para>One appealing feature of pkgsrc is that it runs on many different
@@ -414,7 +414,7 @@
         that packages in pkgsrc are portable. There are some particular
         details you should pay attention to while working on pkgsrc.</para>
 
-      <sect3>
+      <sect3 id="install-scripts">
         <title>${INSTALL}, ${INSTALL_DATA_DIR}, ...</title>
 
         <para>The BSD-compatible <command>install</command> supplied with some
@@ -429,10 +429,10 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2</programlisting>
   </sect1>
   
   
-  <sect1>
+  <sect1 id="downloading-issues">
     <title>Possible downloading issues</title>
 
-    <sect2>
+    <sect2 id="no-plain-download">
       <title>Packages whose distfiles aren't available for plain downloading</title>
     
       <para> If you need to download from a dynamic URL you can set
@@ -461,7 +461,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2</programlisting>
     </sect2>
     
 
-    <sect2>
+    <sect2 id="modified-distfiles-same-name">
       <title>How to handle modified distfiles with the 'old' name</title>
     
       <para> Sometimes authors of a software package make some
@@ -481,7 +481,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2</programlisting>
   </sect1>
 
 
-  <sect1>
+  <sect1 id="configuration-gotchas">
     <title>Configuration gotchas</title>
 
     <sect2 id="fixes.libtool">
@@ -625,7 +625,7 @@ dynamic linker chooses the library with the greater REVISION number. </programli
     </sect2>
 
     
-    <sect2>
+    <sect2 id="using-libtool">
       <title>Using libtool on GNU packages that already support libtool</title>
 
       <para>Add <varname>USE_LIBTOOL=yes</varname> to the
@@ -681,7 +681,7 @@ dynamic linker chooses the library with the greater REVISION number. </programli
     </sect2>
 
     
-    <sect2>
+    <sect2 id="autoconf-automake">
       <title>GNU Autoconf/Automake</title>
 
       <para>If a package needs GNU autoconf or automake to be executed
@@ -734,10 +734,10 @@ pre-configure:
   </sect1>
   
   
-  <sect1>
+  <sect1 id="building-considerations">
     <title>Building considerations</title>
 
-    <sect2>
+    <sect2 id="cpp-defines">
       <title>CPP defines</title>
     
       <para>
@@ -768,10 +768,10 @@ pre-configure:
   </sect1>
   
   
-  <sect1>
+  <sect1 id="package-specific-actions">
     <title>Package specific actions</title>
 
-    <sect2>
+    <sect2 id="package-configuration-files">
       <title>Package configuration files</title>
       
       <para> Packages should be taught to look for their configuration
@@ -823,7 +823,7 @@ pre-configure:
           of <filename>${PREFIX}/etc</filename>. </para>
     </sect2>
 
-    <sect2>
+    <sect2 id="user-interaction">
       <title>User interaction</title>
 
       <para>Occasionally, packages require interaction from the user, and this can be
@@ -859,7 +859,7 @@ pre-configure:
     </sect2>
 
 
-    <sect2>
+    <sect2 id="handling-licenses">
       <title>Handling licenses</title>
 
       <para>A package may underly a license which the user has or has
@@ -920,7 +920,7 @@ pre-configure:
       </sect2>
     
 
-    <sect2>
+    <sect2 id="creating-accounts">
       <title>Creating an account from a package</title>
     
       <para> There are two make variables used to control the creation
@@ -960,7 +960,7 @@ pre-configure:
     </sect2>
     
     
-    <sect2>
+    <sect2 id="installing-score-files">
       <title>Installing score files</title>
     
       <para> Certain packages, most of them in the games category, install
@@ -985,7 +985,7 @@ pre-configure:
     </sect2>
     
     
-    <sect2>
+    <sect2 id="login-shells">
       <title>Packages providing login shells</title>
     
       <para>  If the purpose of the package is to provide a login shell,
@@ -1010,7 +1010,7 @@ pre-configure:
     </sect2>
     
     
-    <sect2>
+    <sect2 id="perl-scripts">
       <title>Packages containing perl scripts</title>
     
       <para>
@@ -1022,7 +1022,7 @@ pre-configure:
     </sect2>
     
     
-    <sect2>
+    <sect2 id="hardcoded-paths">
       <title>Packages with hardcoded paths to other interpreters</title>
     
       <para>
@@ -1040,7 +1040,7 @@ pre-configure:
     </sect2>
 
     
-    <sect2>
+    <sect2 id="perl-modules">
       <title>Packages installing perl modules</title>
   
       <para>Makefiles of packages providing perl5 modules should include
@@ -1140,7 +1140,7 @@ pre-configure:
     </sect2>
 
 
-    <sect2>
+    <sect2 id="gconf2-data-files">
       <title>Packages installing GConf2 data files</title>
     
       <para>
@@ -1193,7 +1193,7 @@ pre-configure:
     </sect2>
     
     
-    <sect2>
+    <sect2 id="scrollkeeper-data-files">
       <title>Packages installing scrollkeeper data files</title>
     
       <para>
@@ -1227,7 +1227,7 @@ pre-configure:
     </sect2>
     
     
-    <sect2>
+    <sect2 id="x11-fonts">
       <title>Packages installing X11 fonts</title>
     
       <para> If a package installs font files, you will need to rebuild
@@ -1250,7 +1250,7 @@ pre-configure:
     </sect2>
     
     
-    <sect2>
+    <sect2 id="gtk2-modules">
       <title>Packages installing GTK2 modules</title>
     
       <para>If a package installs gtk2 immodules or loaders, you need to
@@ -1295,7 +1295,7 @@ pre-configure:
     </sect2>
     
     
-    <sect2>
+    <sect2 id="sgml-xml-data">
       <title>Packages installing SGML or XML data</title>
     
       <para> If a package installs SGML or XML data files that need to be
@@ -1342,7 +1342,7 @@ pre-configure:
     </sect2>
     
     
-    <sect2>
+    <sect2 id="mime-database">
       <title>Packages installing extensions to the MIME database</title>
     
       <para> If a package provides extensions to the MIME database by
@@ -1384,7 +1384,7 @@ pre-configure:
     </sect2>
 
     
-    <sect2>
+    <sect2 id="intltool">
       <title>Packages using intltool</title>
     
       <para>   If a package uses intltool during its build, include the 
@@ -1400,7 +1400,7 @@ pre-configure:
     </sect2>
 
 
-    <sect2>
+    <sect2 id="startup-scripts">
         <title>Packages installing startup scripts</title>
         <para>If a package contains a rc.d script, it won't be copied into
         the startup directory by default, but you can enable it, by adding
@@ -1414,7 +1414,7 @@ pre-configure:
   </sect1>
 
     
-  <sect1>
+  <sect1 id="feedback-to-author">
     <title>Feedback to the author</title>
     
     <para> If you have found any bugs in the package you make available,
