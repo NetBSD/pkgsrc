@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3534 2005/05/24 16:06:28 wiz Exp $
+$NetBSD: TODO,v 1.3535 2005/05/24 16:14:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1270,6 +1270,9 @@ Suggested cleanups in pkgsrc
 
 	o Make packages install honour PKGLOCALEDIR by setting
 	  USE_PKGLOCALEDIR=YES where appropriate (for eg. Solaris).
+	  Affects: cross/h8300-hms-binutils, cross/h8300-hms-gcc,
+	  cross/i386-netbsdpe, sysutils/apcupsd, sysutils/gnometoaster,
+	  sysutils/mtoolsfm, sysutils/xnc, x11/mlterm
 
 	o Deprecate LTCONFIG_OVERRIDE -- replace with appropriate
 	  LIBTOOL_OVERRIDE. Affects:
