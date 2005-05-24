@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2005/04/18 13:21:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.22 2005/05/24 13:55:30 rillig Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -20,7 +20,6 @@ DISTINFO_FILE=	${.CURDIR}/../../audio/mpg123/distinfo
 LICENSE=	no-commercial-use
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
