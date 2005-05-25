@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/31 22:12:38 hubertf Exp $
+$NetBSD: distinfo,v 1.2 2005/05/25 13:38:20 wiz Exp $
 
 SHA1 (teTeX/tetex-texmf-3.0.tar.gz) = 10f7d2fa007c95ca066d899fca0e9a8446108824
+RMD160 (teTeX/tetex-texmf-3.0.tar.gz) = 67cb6325f1edbea89c4723791116717190ec73c4
 Size (teTeX/tetex-texmf-3.0.tar.gz) = 91762123 bytes
