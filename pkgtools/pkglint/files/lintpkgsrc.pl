@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.102 2005/05/24 15:37:17 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.103 2005/05/25 17:41:18 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -18,6 +18,7 @@ use locale;
 use strict;
 use Getopt::Std;
 use File::Find;
+use File::Basename;
 use Cwd 'realpath', 'getcwd';
 my(	$pkglist,		# list of Pkg packages
 	$pkg_installver,	# installed version of pkg_install pseudo-pkg
@@ -828,6 +829,7 @@ sub parse_makefile_vars
     close(FILE);
 
     $incdirs{"."} = 1;
+    $incdirs{dirname($file)} = 1;
     # Some Makefiles depend on these being set
     if ($file eq '/etc/mk.conf')
 	{ $vars{LINTPKGSRC} = 'YES'; }
@@ -934,7 +936,11 @@ sub parse_makefile_vars
 
 		if (! -f $incfile)
 		    {
-		    verbose("Cannot locate '$incfile' (from $file): $_\n");
+		    if (!$opt{L}) {
+			verbose("\n");
+		    }
+		    verbose("$file: Cannot locate $incfile in "
+			. join(" ", sort keys %incdirs) . "\n");
 		    }
 		else
 		    {
