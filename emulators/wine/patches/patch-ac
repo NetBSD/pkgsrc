@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.17 2005/02/16 12:22:11 adam Exp $
+$NetBSD: patch-ac,v 1.18 2005/05/25 08:23:43 adam Exp $
 
---- configure.orig	2005-02-11 13:34:18.000000000 +0000
+--- configure.orig	2005-05-24 14:16:16.000000000 +0000
 +++ configure
-@@ -17811,7 +17811,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -17799,7 +17799,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.17 2005/02/16 12:22:11 adam Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -19481,7 +19481,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -19469,7 +19469,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
