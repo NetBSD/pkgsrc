@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/02 22:40:19 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/05/25 13:43:58 wiz Exp $
 
 SHA1 (syck-0.42.tar.gz) = a7018f33658c5c368466c19892b168ede2b7e723
+RMD160 (syck-0.42.tar.gz) = 2f661a4deaa14be26981b86d526f777e09cfa02f
 Size (syck-0.42.tar.gz) = 327761 bytes

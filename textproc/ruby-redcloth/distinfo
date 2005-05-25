@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/26 16:16:44 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/05/25 13:43:26 wiz Exp $
 
 SHA1 (ruby/redcloth-2.0.5.tar.gz) = e731968b059a54616e0f177930b92c3d9ec51a10
+RMD160 (ruby/redcloth-2.0.5.tar.gz) = 7463cb86dfc57330b76245fa0c398dad4b839ff0
 Size (ruby/redcloth-2.0.5.tar.gz) = 18717 bytes
