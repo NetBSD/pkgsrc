@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.23 2005/05/19 01:15:57 jlam Exp $
+# $NetBSD: bsd.options.mk,v 1.24 2005/05/25 11:18:35 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -18,7 +18,7 @@
 #	PKG_SUGGESTED_OPTIONS (defaults to empty)
 #		This is a list of build options which are enabled by default.
 #
-#	PKG_OPTION_LEGACY_VARS
+#	PKG_OPTIONS_LEGACY_VARS
 #               This is a list of USE_VARIABLE:option pairs that
 #		map legacy /etc/mk.conf variables to their option
 #		counterparts.
@@ -98,11 +98,19 @@ PKG_FAIL_REASON+=	"bsd.options.mk: PKG_OPTIONS_VAR is not defined."
 .include "${.CURDIR}/../../mk/defaults/obsolete.mk"
 
 .for _m_ in ${PKG_OPTIONS_LEGACY_VARS}
-.if !empty(PKG_SUPPORTED_OPTIONS:M${_m_:C/.*://}) && defined(${_m_:C/:.*//}) && !empty(${_m_:C/:.*//}:M[yY][eE][sS])
-_PKG_LEGACY_OPTIONS+=${_m_:C/.*://}
-_DEPRECATED_WARNING+="Deprecated variable "${_m_:C/:.*//:Q}" used, use PKG_DEFAULT_OPTIONS+="${_m_:C/.*://:Q}" instead."
-.endif
+_var_:=	${_m_:C/:.*//}
+_opt_:=	${_m_:C/.*://}
+_popt_:=${_opt_:C/-//}
+.  if !empty(PKG_SUPPORTED_OPTIONS:M${_popt_})
+.    if defined(${_var_}) && !empty(${_var_}:M[yY][eE][sS])
+_PKG_LEGACY_OPTIONS:=${_PKG_LEGACY_OPTIONS} ${_opt_}
+_DEPRECATED_WARNING:=${_DEPRECATED_WARNING} "Deprecated variable "${_var_:Q}" used, use PKG_DEFAULT_OPTIONS+="${_opt_:Q}" instead."
+.    endif
+.  endif
 .endfor
+.undef _var_
+.undef _opt_
+.undef _popt_
 
 #
 # process options from generic to specific
@@ -113,13 +121,15 @@ PKG_OPTIONS:=	# empty
 _opt_:=		${_o_}
 #  ,--- this variable is a work around for a bug documented in the
 #  |    regress/make-quoting package, testcase bug1.
-_popt_:=	${_o_:C/^-//}	# popt == plain option
+_popt_:=	${_o_:C/^-//}	# popt == positive option
 .  if !empty(_opt_:M-*)
 PKG_OPTIONS:=	${PKG_OPTIONS:N${_popt_}}
 .  elif !empty(PKG_SUPPORTED_OPTIONS:M${_popt_})
 PKG_OPTIONS:=	${PKG_OPTIONS} ${_popt_}
 .  endif
 .endfor
+.undef _opt_
+.undef _popt_
 PKG_OPTIONS:=	${PKG_OPTIONS:O:u}
 
 _PKG_OPTIONS_WORDWRAP_FILTER=						\
