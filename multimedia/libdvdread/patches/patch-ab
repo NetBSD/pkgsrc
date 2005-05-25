@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.2 2004/06/21 16:14:14 drochner Exp $
+$NetBSD: patch-ab,v 1.3 2005/05/25 17:11:52 drochner Exp $
 
 --- dvdread/dvd_reader.c.orig	2003-02-13 23:31:21.000000000 +0100
 +++ dvdread/dvd_reader.c
+@@ -32,7 +32,7 @@
+ #include <limits.h>
+ #include <dirent.h>
+  
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__bsdi__)|| defined(__DARWIN__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__bsdi__)|| defined(__DARWIN__) || defined(__DragonFly__)
+ #define SYS_BSD 1
+ #endif
+ 
 @@ -282,7 +282,7 @@ static char *bsd_block2char( const char 
      char *new_path;
  
