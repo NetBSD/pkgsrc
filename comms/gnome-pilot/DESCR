@@ -1,0 +1,6 @@
+Gnome-Pilot is a package with a daemon (gpilotd) that monitor for
+pilot connects on one or more devices (cradles/XCopilots/xxx). It has
+a conduit system, and is accompanied by a few conduits, basically for
+installing files and backing up db's from the pilot.
+
+A few more interesting conduits exist, eg. the email conduit.
