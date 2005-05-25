@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.39 2005/04/25 14:29:07 mrg Exp $
+$NetBSD: distinfo,v 1.40 2005/05/25 12:13:51 wiz Exp $
 
 SHA1 (bozohttpd-20050410.tar.bz2) = 4bc9e54f34b6b9943af09b881242361e065c4054
+RMD160 (bozohttpd-20050410.tar.bz2) = f3221c5311d9befeb65e729e597d8ef076527381
 Size (bozohttpd-20050410.tar.bz2) = 36882 bytes
