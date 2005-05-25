@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2005/04/11 21:47:49 tv Exp $
+# $NetBSD: Makefile,v 1.26 2005/05/25 09:57:14 adam Exp $
 
-DISTNAME=	wmakerconf-2.9.2
-PKGREVISION=	1
+DISTNAME=	wmakerconf-2.11
 CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://starplot.org/wmakerconf/
 
@@ -27,8 +26,8 @@ pre-configure:
 		> ${WRKSRC}/data/WMWmakerconf
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
 .include "../../wm/windowmaker/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
