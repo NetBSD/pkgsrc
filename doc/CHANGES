@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10197 2005/05/25 21:10:36 jmmv Exp $
+$NetBSD: CHANGES,v 1.10198 2005/05/25 22:37:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2614,3 +2614,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gst-plugins-png to 0.8.9 [jmmv 2005-05-25]
 	Updated gst-plugins-theora to 0.8.9 [jmmv 2005-05-25]
 	Updated gst-plugins-vorbis to 0.8.9 [jmmv 2005-05-25]
+	Added gnome-pilot-2.0.12 [wiz 2005-05-25]
