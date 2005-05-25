@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3543 2005/05/25 14:51:01 wiz Exp $
+$NetBSD: TODO,v 1.3544 2005/05/25 19:47:14 martti Exp $
 
 Suggested new packages
 ======================
@@ -1304,8 +1304,7 @@ Suggested cleanups in pkgsrc
 	  reports if any of the packages do not honor these
 	  configuration options and/or do not ship with pregenerated
 	  html documents.
-	  Affects: sysutils/gnome-vfs,
-	  x11/libxfce4gui, x11/libxfce4mcs, x11/libxfce4util
+	  Affects: sysutils/gnome-vfs
 
 	o Make packages utilize USE_X11 instead of USE_X11BASE if
 	  there is no good reason to install them into X11BASE.
