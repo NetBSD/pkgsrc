@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10194 2005/05/25 13:50:03 tron Exp $
+$NetBSD: CHANGES,v 1.10195 2005/05/25 14:50:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2591,3 +2591,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated soup to 0.7.11nb4 [wiz 2005-05-25]
 	Updated gnet to 2.0.7nb1 [wiz 2005-05-25]
 	Updated net-snmp to 5.2.1nb1 [tron 2005-05-25]
+	Updated wistumbler2 to 2.0pre10 [wiz 2005-05-25]
+	Updated wistumbler2-gtk to 2.0pre10 [wiz 2005-05-25]
