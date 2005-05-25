@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.556 2005/05/18 22:02:17 wiz Exp $
+# $NetBSD: Makefile,v 1.557 2005/05/25 17:10:40 bouyer Exp $
 #
 
 COMMENT=	Networking tools
@@ -198,6 +198,7 @@ SUBDIR+=	netatalk
 SUBDIR+=	netatalk1
 SUBDIR+=	netbsd-tap
 SUBDIR+=	netcat
+SUBDIR+=	netdisco
 SUBDIR+=	netgroup
 SUBDIR+=	netname
 SUBDIR+=	netperf
@@ -256,6 +257,7 @@ SUBDIR+=	p5-Net-Z3950
 SUBDIR+=	p5-NetAddr-IP
 SUBDIR+=	p5-NetPacket
 SUBDIR+=	p5-RADIUS
+SUBDIR+=	p5-SNMP-Info
 SUBDIR+=	p5-SNMP-MIB-Compiler
 SUBDIR+=	p5-SNMP_Session
 SUBDIR+=	p5-SOAP-Lite
