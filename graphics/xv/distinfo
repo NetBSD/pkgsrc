@@ -1,12 +1,16 @@
-$NetBSD: distinfo,v 1.9 2004/08/22 08:02:30 minskim Exp $
+$NetBSD: distinfo,v 1.10 2005/05/25 12:32:30 wiz Exp $
 
 SHA1 (xv-3.10a.tar.gz) = 9e6372f154be9e9e355972cbeb91d98d9c342474
+RMD160 (xv-3.10a.tar.gz) = 7d545e0c0e5b0120a7d026ea549cba19a53fbc0d
 Size (xv-3.10a.tar.gz) = 2259124 bytes
 SHA1 (xv310a-magpic2-PhotoCD-patch.tar.gz) = b36192f0ab6cefba4221f8137d717a4c2cd45abd
+RMD160 (xv310a-magpic2-PhotoCD-patch.tar.gz) = 012c800f252d6d64c4906051e1964e59d32cf128
 Size (xv310a-magpic2-PhotoCD-patch.tar.gz) = 56612 bytes
 SHA1 (xv-3.10a.JPEG-patch) = 05d0de5a3c4babc36f867247e1920eca6b9e9ff0
+RMD160 (xv-3.10a.JPEG-patch) = f69cb0c07c116fbcec58678bcba1b5ef96cb7e62
 Size (xv-3.10a.JPEG-patch) = 3297 bytes
 SHA1 (xv-3.10a.TIFF-patch) = 5e1ce5610a83a88d5878eefe175352a4cc2aa21c
+RMD160 (xv-3.10a.TIFF-patch) = 4c09609558f1b93a67cae2abaf14462208dd850b
 Size (xv-3.10a.TIFF-patch) = 3241 bytes
 SHA1 (patch-aa) = 2c3b3819b77df503d6d86725cbc2fce2d101a1b0
 SHA1 (patch-ab) = dee0a3fc05e01f8b15c636ec4dcf745533eca345
