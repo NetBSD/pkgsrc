@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/05/25 17:06:49 bouyer Exp $
+
+--- sql/pg_init.orig	2005-05-24 15:03:37.000000000 +0200
++++ sql/pg_init	2005-05-24 15:04:03.000000000 +0200
+@@ -5,10 +5,10 @@
+ 
+ # Change these to match your setup
+ # Linux Default 
+-SYSDBUSER=postgres
++# SYSDBUSER=postgres
+ 
+ # BSD Default
+-# SYSDBUSER=pgsql
++SYSDBUSER=pgsql
+ 
+ DB=netdisco
+ 

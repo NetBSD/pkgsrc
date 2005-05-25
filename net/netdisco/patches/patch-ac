@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/05/25 17:06:49 bouyer Exp $
+
+--- sql/pg_all.orig	2004-10-29 05:45:36.000000000 +0200
++++ sql/pg_all	2005-05-24 18:47:00.000000000 +0200
+@@ -5,7 +5,7 @@
+ 
+ FILES="admin.sql device.sql device_ip.sql device_port.sql device_port_log.sql \
+-       log.sql node.sql node_ip.sql oui.sql sessions.sql user_log.sql users.sql"
++       log.sql node.sql node_ip.sql node_nbt.sql oui.sql sessions.sql user_log.sql users.sql"
+ 
+ rm -f pg_all.input
+ touch pg_all.input
