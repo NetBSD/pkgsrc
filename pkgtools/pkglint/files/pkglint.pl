@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.179 2005/05/24 23:50:07 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.180 2005/05/25 00:00:24 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1250,7 +1250,7 @@ sub checklines_direct_tools($) {
 		EXTRACT_SUFX
 		MASTER_SITES
 		PKGNAME PKGSRC_USE_TOOLS
-		SUBST_MESSAGE\\.*
+		SUBST_MESSAGE\\..*
 		.*_TARGET
 		USE_TOOLS);
 	my @ok_shellcmds = qw(
@@ -1267,10 +1267,13 @@ sub checklines_direct_tools($) {
 
 	my $tools = join("|", @tools, @cmd_tools);
 	my $regex_tools = qr"(?:^|\s|/)(${tools})(?:\s|$)";
+	log_info(NO_FILE, NO_LINE_NUMBER, "regex_tools=${regex_tools}");
 	my $ok_vars = join("|", @ok_vars);
 	my $regex_ok_vars = qr"^(${ok_vars})$";
+	log_info(NO_FILE, NO_LINE_NUMBER, "regex_ok_vars=${regex_ok_vars}");
 	my $ok_shellcmds = join("|", @ok_shellcmds);
 	my $regex_ok_shellcmds = qr"^(${ok_shellcmds})$";
+	log_info(NO_FILE, NO_LINE_NUMBER, "regex_ok_shellcmds=${regex_ok_shellcmds}");
 
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
