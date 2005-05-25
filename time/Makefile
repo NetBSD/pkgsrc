@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/05/06 19:49:32 epg Exp $
+# $NetBSD: Makefile,v 1.40 2005/05/25 17:09:22 bouyer Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -31,6 +31,7 @@ SUBDIR+=	lmclock
 SUBDIR+=	logtime
 SUBDIR+=	p5-DateTime
 SUBDIR+=	p5-DateTime-Event-Cron
+SUBDIR+=	p5-DateTime-Format-Epoch
 SUBDIR+=	p5-DateTime-Locale
 SUBDIR+=	p5-DateTime-Set
 SUBDIR+=	p5-DateTime-TimeZone
