@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.9 2005/05/25 21:07:59 jmmv Exp $
+
+--- gst/librfb/gstrfbsrc.c.orig	2005-05-17 08:41:44.000000000 +0000
++++ gst/librfb/gstrfbsrc.c
+@@ -27,6 +27,7 @@
+ 
+ #include <string.h>
+ #include <stdlib.h>
++#include <time.h>
+ #include <unistd.h>
+ 
+ #include <librfb/rfb.h>
