@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.17 2005/01/14 13:00:05 adam Exp $
+$NetBSD: patch-ab,v 1.18 2005/05/25 08:23:43 adam Exp $
 
---- dlls/ntdll/cdrom.c.orig	2004-06-15 00:45:01.000000000 +0000
+--- dlls/ntdll/cdrom.c.orig	2005-05-06 16:22:55.000000000 +0000
 +++ dlls/ntdll/cdrom.c
-@@ -61,6 +61,16 @@
+@@ -63,6 +63,16 @@
  #endif
  #ifdef HAVE_LINUX_CDROM_H
  # include <linux/cdrom.h>

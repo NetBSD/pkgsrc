@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.14 2005/01/14 13:00:05 adam Exp $
+$NetBSD: patch-aa,v 1.15 2005/05/25 08:23:43 adam Exp $
 
---- Make.rules.in.orig	2004-09-13 18:14:55.000000000 +0000
+--- Make.rules.in.orig	2005-05-07 12:39:58.000000000 +0000
 +++ Make.rules.in
-@@ -106,7 +106,7 @@ conf_manext     = 5
+@@ -107,7 +107,7 @@ conf_manext     = 5
  CLEAN_FILES     = *.o *.a *.so *.ln *.$(LIBEXT) \\\#*\\\# *~ *% .\\\#* *.bak *.orig *.rej \
-                   *.flc *.spec.c *.spec.def *.dbg.c *.tab.c *.tab.h @LEX_OUTPUT_ROOT@.c core
+                   *.flc *.spec.c *.dbg.c *.tab.c *.tab.h @LEX_OUTPUT_ROOT@.c core
  
 -OBJS = $(C_SRCS:.c=.o) $(EXTRA_OBJS)
 +OBJS = $(EXTRA_OBJS) $(C_SRCS:.c=.o)
