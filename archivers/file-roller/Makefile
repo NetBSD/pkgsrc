@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/05/22 20:07:36 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2005/05/25 22:37:37 rillig Exp $
 #
 
 DISTNAME=	file-roller-2.10.2
@@ -17,8 +17,7 @@ DEPENDS+=		zip>=2.3nb2:../../archivers/zip
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
-USE_PERL5=		build
+USE_TOOLS+=		gmake perl
 USE_PKGLOCALEDIR=	yes
 
 GCONF2_SCHEMAS=		file-roller.schemas
