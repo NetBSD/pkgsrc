@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/25 01:40:05 rh Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/25 02:23:15 reed Exp $
 #
 
 DISTNAME=	shlock-20020114
@@ -25,7 +25,7 @@ MAKE_ENV+=	MANOWN=${BINOWN} MANGRP=${BINGRP}
 
 PKGSRC_LOCKTYPE=	none	# avoid "bootstrapping problem"
 
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin"
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly"
 MANINSTALL=
 .endif
 
