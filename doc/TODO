@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3542 2005/05/25 14:12:20 salo Exp $
+$NetBSD: TODO,v 1.3543 2005/05/25 14:51:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -683,6 +683,7 @@ Suggested package updates
 	o mknmz-wwwoffle-0.7.2
 	o mlview-0.7.1
 	o mmix-20041014
+	o molden-4.3
 	o mono-1.1.7
 	o moscow_ml-2.01
 	o most-4.10.1
@@ -1090,6 +1091,7 @@ Suggested package updates
 	o treecc-0.3.4 [pkg/28546]
 	o trio-1.4
 	o tripwire-2.3.1 [see also pkg/22362]
+	o tspc-2.1.1
 	o ttt-1.8.1
 	o ttyrec-1.0.6
 	o tunesbrowser-0.3.0
@@ -1302,7 +1304,7 @@ Suggested cleanups in pkgsrc
 	  reports if any of the packages do not honor these
 	  configuration options and/or do not ship with pregenerated
 	  html documents.
-	  Affects: net/gnet, net/soup, sysutils/gnome-vfs,
+	  Affects: sysutils/gnome-vfs,
 	  x11/libxfce4gui, x11/libxfce4mcs, x11/libxfce4util
 
 	o Make packages utilize USE_X11 instead of USE_X11BASE if
