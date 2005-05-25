@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2004/11/08 10:14:33 adam Exp $
+$NetBSD: patch-ad,v 1.3 2005/05/25 09:57:14 adam Exp $
 
---- data/WMWmakerconf.in.orig	2004-02-20 15:59:21.000000000 +0000
+--- data/WMWmakerconf.in.orig	2005-01-30 12:52:33.000000000 +0000
 +++ data/WMWmakerconf.in
 @@ -564,6 +564,8 @@
        Default = (
@@ -20,11 +20,11 @@ $NetBSD: patch-ad,v 1.2 2004/11/08 10:14:33 adam Exp $
          "/usr/share/WindowMaker/Icons",
          "/usr/share/WindowMaker/Pixmaps",
          "/usr/local/share/WindowMaker/Icons",
-@@ -598,6 +602,7 @@
-       Info = "Wmakerconf searches each of these paths in order for the list of available themes.";
+@@ -599,6 +603,7 @@
        Title = "Theme search paths";
        Default = (
-+        "@PREFIX@/share/WindowMaker/Themes",
+         "~/GNUstep/Library/WindowMaker/Themes",
++        "@PREFIX@/WindowMaker/Themes",
          "/usr/share/WindowMaker/Themes",
- 	"/usr/local/share/WindowMaker/Themes",
-         "~/GNUstep/Library/WindowMaker/Themes"
+ 	"/usr/local/share/WindowMaker/Themes"
+       );

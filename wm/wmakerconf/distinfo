@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 18:43:55 wiz Exp $
+$NetBSD: distinfo,v 1.7 2005/05/25 09:57:14 adam Exp $
 
-SHA1 (wmakerconf-2.9.2.tar.gz) = 78240647a93c6dddf1db838a810ec48ce7646b32
-RMD160 (wmakerconf-2.9.2.tar.gz) = 4f288a73ca05a70c9192e9ca7b5affb28f48292d
-Size (wmakerconf-2.9.2.tar.gz) = 766440 bytes
-SHA1 (patch-aa) = 49ea35c55dba4e42ceaca8eeb39fdac9d4680530
-SHA1 (patch-ab) = db537545899839e6132ad0c0c2e9db26c7a83dc4
-SHA1 (patch-ac) = a1a5295ec8250db09b4b702bc60c8976d0e53d21
-SHA1 (patch-ad) = 8bd56bee7f7493c4ef0c555daadc90640aafeb9f
+SHA1 (wmakerconf-2.11.tar.gz) = 2c2409aad8b0348c2801c4350047a5468a800e48
+RMD160 (wmakerconf-2.11.tar.gz) = 18d661836272ae21f9d79398359b37b97b0a396a
+Size (wmakerconf-2.11.tar.gz) = 791166 bytes
+SHA1 (patch-aa) = d26fdc359404796ea7bf6791014e3b8b3abc4cbc
+SHA1 (patch-ab) = 3e5f5f8cad200a6b09001572336920685d5e2a82
+SHA1 (patch-ac) = 89f7cba515367182c6ad257b43d76256ed7be609
+SHA1 (patch-ad) = ebcd4d319c9f0cd995f6b43b30bf4446daf24934
