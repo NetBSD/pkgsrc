@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.180 2005/05/25 00:00:24 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.181 2005/05/25 00:53:35 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1293,7 +1293,7 @@ sub checklines_direct_tools($) {
 			my ($shellcmd) = ($1);
 			# process shell commands
 			if ($shellcmd !~ $regex_ok_shellcmds) {
-				$line->log_warning("Possible direct use of \"${tool}\" in shell command ${shellcmd}. Please use \$\{$toolvar{$tool}\} instead.");
+				$line->log_warning("Possible direct use of \"${tool}\" in shell command \"${shellcmd}\". Please use \$\{$toolvar{$tool}\} instead.");
 			}
 		} elsif ($text =~ qr"^\.") {
 			# skip processing directives
