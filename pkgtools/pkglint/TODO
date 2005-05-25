@@ -1,3 +1,4 @@
+* fatal error if RMD160 missing
 * --autofix
 * pkglint <package>...
 * fix false positive warnings
