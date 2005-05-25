@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.18 2005/05/22 20:08:18 jlam Exp $
+# $NetBSD: Makefile.common,v 1.19 2005/05/25 21:07:59 jmmv Exp $
 #
 
-DISTNAME=		gst-plugins-0.8.8
+DISTNAME=		gst-plugins-0.8.9
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gst-plugins/0.8/} \
 			http://gstreamer.freedesktop.org/src/gst-plugins/
@@ -46,6 +46,7 @@ CONFIGURE_ENV+=		have_func=no
 		audioresample \
 		cairo \
 		cdaudio \
+		cdio \
 		cdparanoia \
 		cdrom \
 		dirac \
@@ -84,7 +85,6 @@ CONFIGURE_ENV+=		have_func=no
 		libmms \
 		libmng \
 		libpng \
-		librfb \
 		libvisual \
 		mad \
 		mikmod \
@@ -113,6 +113,7 @@ CONFIGURE_ENV+=		have_func=no
 		smoothwave \
 		sndfile \
 		sunaudio \
+		spc \
 		speex \
 		swfdec \
 		tarkin \
@@ -120,6 +121,7 @@ CONFIGURE_ENV+=		have_func=no
 		vcd \
 		vorbis \
 		vorbistest \
+		wavpack \
 		x \
 		xshm \
 		xvid \
@@ -155,11 +157,11 @@ SUBST_STAGE.libs=	pre-configure
 SUBST_FILES.libs=	${GST_PLUGINS_DIR}/Makefile.in
 SUBST_SED.libs=		-e 's|$$(top_builddir)/gst-libs/gst/libgst|${BUILDLINK_PREFIX.gst-plugins}/lib/libgst|g'
 
-BUILDLINK_DEPENDS.gst-plugins+=	gst-plugins>=0.8.8
+BUILDLINK_DEPENDS.gst-plugins+=	gst-plugins>=0.8.9
 .include "../../multimedia/gst-plugins/buildlink3.mk"
 .endif
 
-BUILDLINK_DEPENDS.gstreamer+=	gstreamer>=0.8.9
+BUILDLINK_DEPENDS.gstreamer+=	gstreamer>=0.8.9.1
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
