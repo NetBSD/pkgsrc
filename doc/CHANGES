@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10196 2005/05/25 17:12:20 bouyer Exp $
+$NetBSD: CHANGES,v 1.10197 2005/05/25 21:10:36 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2596,3 +2596,21 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-SNMP-Info [bouyer 2005-05-25]
 	Added p5-DateTime-Format-Epoch [bouyer 2005-05-25]
 	Added netdisco [bouyer 2005-05-25]
+	Updated gst-plugins to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-artsd to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-cdparanoia to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-dvdnav to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-dvdread to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-esound to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-faad to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-flac to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-gnomevfs to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-lame to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-mad to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-mpeg2dec to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-ogg to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-opengl to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-oss to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-png to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-theora to 0.8.9 [jmmv 2005-05-25]
+	Updated gst-plugins-vorbis to 0.8.9 [jmmv 2005-05-25]
