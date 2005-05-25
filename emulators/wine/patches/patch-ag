@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.4 2005/05/25 08:23:43 adam Exp $
+
+--- dlls/kernel/sync.c.orig	2005-04-20 11:06:24.000000000 +0000
++++ dlls/kernel/sync.c
+@@ -40,6 +40,7 @@
+ #endif
+ #include <stdarg.h>
+ #include <stdio.h>
++#include <machine/limits.h>
+ 
+ #define NONAMELESSUNION
+ #define NONAMELESSSTRUCT

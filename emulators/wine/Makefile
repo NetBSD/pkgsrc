@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.84 2005/05/22 20:28:47 jlam Exp $
+# $NetBSD: Makefile,v 1.85 2005/05/25 08:23:43 adam Exp $
 
-DISTNAME=	Wine-20050310
+DISTNAME=	Wine-20050524
 PKGNAME=	${DISTNAME:S/W/w/}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wine/} \
@@ -23,7 +23,7 @@ USE_TOOLS+=		bison gmake
 USE_LIBTOOL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-curses #--disable-debug --disable-trace
+CONFIGURE_ARGS+=	--without-curses --disable-trace #--disable-debug
 CONFIGURE_ENV+=		ac_cv_path_ARTSCCONFIG=${TRUE}
 CONFIGURE_ENV+=		ac_cv_prog_sane_devel=no
 UNLIMIT_RESOURCES=	datasize
