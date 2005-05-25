@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2005/03/24 21:12:55 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2005/05/25 22:31:06 rillig Exp $
 
-DISTNAME=		scheme48-0.57
+DISTNAME=		scheme48-1.2
 CATEGORIES=		lang
-MASTER_SITES=		http://s48.org/0.57/
+MASTER_SITES=		http://s48.org/1.2/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -12,7 +12,6 @@ COMMENT=		The Scheme Underground's implementation of R5RS
 NOT_FOR_PLATFORM=	*-*-alpha	# *severe* problems.  Bus error, alignment
 
 GNU_CONFIGURE=  	yes
-CONFIGURE_ARGS=		--prefix=${PREFIX}
 BUILD_TARGET=		enough
 
 post-install:
