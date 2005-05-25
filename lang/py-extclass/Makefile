@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/07/22 09:16:02 recht Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/25 19:21:25 kristerw Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -35,4 +35,5 @@ do-install:
 	${INSTALL_DATA} *.txt *.stx ${PY_SITEPKG}/extclass_doc)
 
 .include "../../lang/python20/Makefile.inc"
+.include "../../lang/python20/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
