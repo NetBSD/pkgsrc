@@ -1,0 +1,2 @@
+The DateTime::Fromat::Epoch modules provide to/from epoch seconds for the
+DateTime.pm class.
