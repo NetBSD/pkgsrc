@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/03/20 18:50:09 salo Exp $
+$NetBSD: distinfo,v 1.4 2005/05/25 11:32:54 wiz Exp $
 
 SHA1 (jabber-1.4.2.tar.gz) = aa0bc2e9815e4fa4a1ca8ba7f320bfd3c85ba11f
+RMD160 (jabber-1.4.2.tar.gz) = bff5a02d3b76243ce59ddb66873ca1c51ef4bb5f
 Size (jabber-1.4.2.tar.gz) = 690217 bytes
 SHA1 (patch-aa) = 726ff89388dca237ac9acb83113a683feca8a356
 SHA1 (patch-ab) = 8722b0db3870e14eaf3e40f5493544db8a813fc1
