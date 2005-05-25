@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3539 2005/05/25 08:24:43 adam Exp $
+$NetBSD: TODO,v 1.3540 2005/05/25 09:57:46 adam Exp $
 
 Suggested new packages
 ======================
@@ -1125,7 +1125,6 @@ Suggested package updates
 	o weewm-0.01
 	o winbind-3.0.13
 	o windowlab-1.30
-	o wmakerconf-2.11
 	o wmbiff-0.4.26
 	o wmctrl-1.07
 	o wmweather-2.4.3
@@ -1303,7 +1302,7 @@ Suggested cleanups in pkgsrc
 	  reports if any of the packages do not honor these
 	  configuration options and/or do not ship with pregenerated
 	  html documents.
-	  Affects: net/gnet, net/soup, sysutils/gnome-vfs, textproc/gdome2,
+	  Affects: net/gnet, net/soup, sysutils/gnome-vfs,
 	  x11/libxfce4gui, x11/libxfce4mcs, x11/libxfce4util
 
 	o Make packages utilize USE_X11 instead of USE_X11BASE if
