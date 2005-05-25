@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2005/05/25 13:45:36 fredb Exp $
+
+--- src/chrtrans/makefile.in.orig	2004-01-08 03:03:09.000000000 +0100
++++ src/chrtrans/makefile.in	2005-05-25 11:32:21.000000000 +0200
+@@ -101,7 +101,7 @@
+ 
+ makeuctb$o: $(srcdir)/UCkd.h $(srcdir)/makeuctb.c
+ 
+-.SUFFIXES : $o .tbl .i
++.SUFFIXES : $o .h .tbl .i
+ 
+ .c$o:
+ @RULE_CC@
