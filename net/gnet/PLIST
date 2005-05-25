@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/03/23 22:26:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/05/25 11:41:32 wiz Exp $
 include/gnet-2.0/base64.h
 include/gnet-2.0/conn-http.h
 include/gnet-2.0/conn.h
@@ -20,39 +20,39 @@ lib/gnet-2.0/include/gnetconfig.h
 lib/libgnet-2.0.la
 lib/pkgconfig/gnet-2.0.pc
 share/aclocal/gnet-2.0.m4
-share/gtk-doc/html/gnet/gnet-base64.html
-share/gtk-doc/html/gnet/gnet-conn-http.html
-share/gtk-doc/html/gnet/gnet-conn.html
-share/gtk-doc/html/gnet/gnet-developers-async.html
-share/gtk-doc/html/gnet/gnet-developers-tips.html
-share/gtk-doc/html/gnet/gnet-developers.html
-share/gtk-doc/html/gnet/gnet-examples-other.html
-share/gtk-doc/html/gnet/gnet-examples.html
-share/gtk-doc/html/gnet/gnet-gnet.html
-share/gtk-doc/html/gnet/gnet-inetaddr.html
-share/gtk-doc/html/gnet/gnet-iochannel.html
-share/gtk-doc/html/gnet/gnet-ipv6.html
-share/gtk-doc/html/gnet/gnet-mcast.html
-share/gtk-doc/html/gnet/gnet-md5.html
-share/gtk-doc/html/gnet/gnet-overview.html
-share/gtk-doc/html/gnet/gnet-pack.html
-share/gtk-doc/html/gnet/gnet-server.html
-share/gtk-doc/html/gnet/gnet-sha.html
-share/gtk-doc/html/gnet/gnet-socks.html
-share/gtk-doc/html/gnet/gnet-tcp.html
-share/gtk-doc/html/gnet/gnet-udp.html
-share/gtk-doc/html/gnet/gnet-unix.html
-share/gtk-doc/html/gnet/gnet-uri.html
-share/gtk-doc/html/gnet/gnet.devhelp
-share/gtk-doc/html/gnet/home.png
-share/gtk-doc/html/gnet/index.html
-share/gtk-doc/html/gnet/index.sgml
-share/gtk-doc/html/gnet/left.png
-share/gtk-doc/html/gnet/libgnet-reference.html
-share/gtk-doc/html/gnet/right.png
-share/gtk-doc/html/gnet/style.css
-share/gtk-doc/html/gnet/up.png
-@dirrm share/gtk-doc/html/gnet
+share/doc/gnet/gnet-base64.html
+share/doc/gnet/gnet-conn-http.html
+share/doc/gnet/gnet-conn.html
+share/doc/gnet/gnet-developers-async.html
+share/doc/gnet/gnet-developers-tips.html
+share/doc/gnet/gnet-developers.html
+share/doc/gnet/gnet-examples-other.html
+share/doc/gnet/gnet-examples.html
+share/doc/gnet/gnet-gnet.html
+share/doc/gnet/gnet-inetaddr.html
+share/doc/gnet/gnet-iochannel.html
+share/doc/gnet/gnet-ipv6.html
+share/doc/gnet/gnet-mcast.html
+share/doc/gnet/gnet-md5.html
+share/doc/gnet/gnet-overview.html
+share/doc/gnet/gnet-pack.html
+share/doc/gnet/gnet-server.html
+share/doc/gnet/gnet-sha.html
+share/doc/gnet/gnet-socks.html
+share/doc/gnet/gnet-tcp.html
+share/doc/gnet/gnet-udp.html
+share/doc/gnet/gnet-unix.html
+share/doc/gnet/gnet-uri.html
+share/doc/gnet/gnet.devhelp
+share/doc/gnet/home.png
+share/doc/gnet/index.html
+share/doc/gnet/index.sgml
+share/doc/gnet/left.png
+share/doc/gnet/libgnet-reference.html
+share/doc/gnet/right.png
+share/doc/gnet/style.css
+share/doc/gnet/up.png
+@dirrm share/doc/gnet
 @dirrm lib/gnet-2.0/include
 @dirrm lib/gnet-2.0
 @dirrm include/gnet-2.0
