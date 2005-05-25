@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 14:48:43 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/05/25 13:42:45 wiz Exp $
 
 SHA1 (kdoc-2.0a54.tar.bz2) = f11e9a30c4c5757833c7633f1e7b907e9cf76ef6
-Size (kdoc-2.0a54.tar.bz2) = 93184 bytes
+RMD160 (kdoc-2.0a54.tar.bz2) = 2806c84677da05a60437ceb4ab608adfc0996264
+Size (kdoc-2.0a54.tar.bz2) = 92430 bytes
