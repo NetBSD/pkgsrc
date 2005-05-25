@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.37 2005/05/14 02:12:48 rillig Exp $
+# $NetBSD: bootstrap,v 1.38 2005/05/25 07:06:54 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -225,21 +225,26 @@ copy_src()
 	$cpprog -R $_src/* $wrkdir/$_dst
 }
 
+get_optarg()
+{
+	expr "x$1" : "x[^=]*=\\(.*\\)"
+}
+
 build_start=`date`
 echo_msg "bootstrap command: $0 $@"
 echo_msg "bootstrap started: $build_start"
 
 while [ $# -gt 0 ]; do
 	case $1 in
-	--workdir=*)	wrkdir=`echo x"$1" | sed 's,^[^=]*=,,'` ;;
+	--workdir=*)	wrkdir=`get_optarg "$1"` ;;
 	--workdir)	wrkdir="$2"; shift ;;
-	--prefix=*)	prefix=`echo x"$1" | sed 's,^[^=]*=,,'`;
+	--prefix=*)	prefix=`get_optarg "$1"`;
 			sysconfdir=${prefix}/etc ;;
 	--prefix)	prefix="$2"; shift;
 			sysconfdir=${prefix}/etc ;;
-	--pkgdbdir=*)	pkgdbdir=`echo x"$1" | sed 's,^[^=]*=,,'` ;;
+	--pkgdbdir=*)	pkgdbdir=`get_optarg "$1"` ;;
 	--pkgdbdir)	pkgdbdir="$2"; shift ;;
-	--sysconfdir=*)	sysconfdir=`echo x"$1" | sed 's,^[^=]*=,,'` ;;
+	--sysconfdir=*)	sysconfdir=`get_optarg "$1"` ;;
 	--sysconfdir)	sysconfdir="$2"; shift ;;
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--ignore-user-check) ignoreusercheck=yes ;;
