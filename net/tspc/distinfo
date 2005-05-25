@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2003/10/02 05:38:14 jonb Exp $
+$NetBSD: distinfo,v 1.4 2005/05/25 13:21:48 wiz Exp $
 
 SHA1 (freenet6-client-1.0.tgz) = b85b6334e3fd5c3278d82fa8a325582a57c24bd3
+RMD160 (freenet6-client-1.0.tgz) = 28c7cceaaea5ffe4b740d09f7dbd4aed5abac69d
 Size (freenet6-client-1.0.tgz) = 330953 bytes
 SHA1 (patch-aa) = c1ac856acdd9903ff43bdb937c5ff0d9d58ac8fd
 SHA1 (patch-ab) = 21ee1c7daa003b3ffe6093dd84d7ea226e95f8d7
