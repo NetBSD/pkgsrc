@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.149 2005/04/28 14:11:13 wiz Exp $
+# $NetBSD: Makefile,v 1.150 2005/05/25 19:37:18 reed Exp $
 
 DISTNAME=		openssh-3.9p1
 PKGNAME=		openssh-3.9.1
-PKGREVISION=		5
+PKGREVISION=		6
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -31,10 +31,11 @@ CRYPTO=			yes
 # retain the following line, for IPv6-ready pkgsrc webpage
 BUILD_DEFS+=		USE_INET6
 
-.include "options.mk"
-
 INSTALL_TARGET=		install-nokeys
+MESSAGE_SRC=		${.CURDIR}/MESSAGE
 PLIST_SRC=		# empty
+
+.include "options.mk"
 
 .if ${OPSYS} == "Interix"
 
@@ -49,7 +50,6 @@ LIBS+=			-lbind -ldb -lcrypt
 
 .else # not Interix
 
-MESSAGE_SRC=		${.CURDIR}/MESSAGE
 PKG_USERS=		${OPENSSH_USER}:${OPENSSH_GROUP}:${OPENSSH_UID}:sshd\\ privsep:${OPENSSH_CHROOT}:${NOLOGIN}
 PKG_GROUPS=             ${OPENSSH_GROUP}:${OPENSSH_GID}
 
