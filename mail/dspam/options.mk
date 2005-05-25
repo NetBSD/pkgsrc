@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2005/04/14 23:37:11 xtraeme Exp $
+# $NetBSD: options.mk,v 1.10 2005/05/25 15:36:06 cube Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -6,7 +6,8 @@ DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dspam
 PKG_SUPPORTED_OPTIONS=	largescale homedir long-usernames graphs \
-			domainscale
+			domainscale virtualusers preferences-extension \
+			neural
 
 .include "../../mk/bsd.options.mk"
 
