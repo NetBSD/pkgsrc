@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/05/02 20:34:00 reed Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/05/25 15:36:06 cube Exp $
 bin/dspam
 bin/dspam_2sql
 bin/dspam_admin
@@ -13,6 +13,7 @@ bin/dspam_stats
 bin/dspamc
 include/dspam/buffer.h
 include/dspam/config.h
+include/dspam/config_shared.h
 include/dspam/decode.h
 include/dspam/diction.h
 include/dspam/error.h
