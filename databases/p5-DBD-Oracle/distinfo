@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/15 10:48:43 grant Exp $
+$NetBSD: distinfo,v 1.2 2005/05/25 11:35:39 wiz Exp $
 
 SHA1 (DBD-Oracle-1.14.tar.gz) = b017c9e91619b04c4db4ad09b4cd806048aded8e
+RMD160 (DBD-Oracle-1.14.tar.gz) = 681e45b2865cd658637499050219779166160c18
 Size (DBD-Oracle-1.14.tar.gz) = 199667 bytes
