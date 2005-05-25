@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.9 2005/03/07 23:29:49 tv Exp $
+$NetBSD: patch-ad,v 1.10 2005/05/25 23:17:11 reed Exp $
 
 --- loginrec.c.orig	2004-08-15 05:12:52.000000000 -0400
 +++ loginrec.c
@@ -18,7 +18,7 @@ $NetBSD: patch-ad,v 1.9 2005/03/07 23:29:49 tv Exp $
  	/* set the timestamp */
  	login_set_current_time(li);
 -#ifdef USE_LOGIN
-+#if defined(USE_LOGIN) && (HAVE_UMTP_H)
++#if defined(USE_LOGIN) && (HAVE_UTMP_H)
  	syslogin_write_entry(li);
  #endif
  #ifdef USE_LASTLOG
