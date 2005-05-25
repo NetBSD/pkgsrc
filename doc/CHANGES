@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10195 2005/05/25 14:50:18 wiz Exp $
+$NetBSD: CHANGES,v 1.10196 2005/05/25 17:12:20 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2593,3 +2593,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net-snmp to 5.2.1nb1 [tron 2005-05-25]
 	Updated wistumbler2 to 2.0pre10 [wiz 2005-05-25]
 	Updated wistumbler2-gtk to 2.0pre10 [wiz 2005-05-25]
+	Added p5-SNMP-Info [bouyer 2005-05-25]
+	Added p5-DateTime-Format-Epoch [bouyer 2005-05-25]
+	Added netdisco [bouyer 2005-05-25]
