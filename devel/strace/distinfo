@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/10/10 03:13:07 reed Exp $
+$NetBSD: distinfo,v 1.2 2005/05/25 11:53:12 wiz Exp $
 
 SHA1 (strace-4.5.7.tar.bz2) = 622a5e7f0649c03f24a535bd1341dda1edca48d2
+RMD160 (strace-4.5.7.tar.bz2) = 875605e8c61c720d8562b1bfae7c34954edb0a75
 Size (strace-4.5.7.tar.bz2) = 414738 bytes
