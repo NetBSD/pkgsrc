@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3538 2005/05/24 21:04:39 xtraeme Exp $
+$NetBSD: TODO,v 1.3539 2005/05/25 08:24:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -1125,7 +1125,6 @@ Suggested package updates
 	o weewm-0.01
 	o winbind-3.0.13
 	o windowlab-1.30
-	o wine-20050419
 	o wmakerconf-2.11
 	o wmbiff-0.4.26
 	o wmctrl-1.07
