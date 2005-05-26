@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.94 2005/05/23 01:20:50 jlam Exp $
+# $NetBSD: replace.mk,v 1.95 2005/05/26 21:46:14 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -766,6 +766,18 @@ TOOLS_CREATE+=			nice
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.nice=coreutils
 TOOLS_REAL_CMD.nice=		${TOOLS_PREFIX.nice}/bin/${GNU_PROGRAM_PREFIX}nice
 TOOLS_${_TOOLS_VARNAME.nice}=	${TOOLS_REAL_CMD.nice}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.nroff) && !empty(_USE_TOOLS:Mnroff)
+.  if !empty(PKGPATH:Mtextproc/groff)
+MAKEFLAGS+=			TOOLS_IGNORE.nroff=
+.  elif !empty(_TOOLS_USE_PKGSRC.nroff:M[yY][eE][sS])
+TOOLS_DEPENDS.nroff?=		groff>=1.19nb4:../../textproc/groff
+TOOLS_CREATE+=			nroff
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.nroff=groff
+TOOLS_REAL_CMD.nroff=		${TOOLS_PREFIX.nroff}/bin/nroff
+TOOLS_${_TOOLS_VARNAME.nroff}=	${TOOLS_REAL_CMD.nroff}
 .  endif
 .endif
 
