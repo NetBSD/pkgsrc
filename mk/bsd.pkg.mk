@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1677 2005/05/22 20:15:40 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1678 2005/05/26 11:15:30 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -4864,6 +4864,6 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 show-tools:
 .for _t_ in ${_USE_TOOLS}
 .  if defined(_TOOLS_VARNAME.${_t_})
-	@${ECHO} ${_TOOLS_VARNAME.${_t_}:Q}=${TOOLS_PLATFORM.${_t_}:Q:Q}
+	@${ECHO} ${_TOOLS_VARNAME.${_t_}:Q}=${${_TOOLS_VARNAME.${_t_}}:Q:Q}
 .  endif
 .endfor
