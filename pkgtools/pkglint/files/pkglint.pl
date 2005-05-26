@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.185 2005/05/26 06:17:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.186 2005/05/26 06:26:10 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -350,7 +350,7 @@ my $pkgsrc_rootdir;
 my $pkgdir;
 my $filesdir;
 my $patchdir;
-my $distinfo;
+my $distinfo_file;
 my $scriptdir;
 my $seen_PLIST_SRC;
 my $seen_NO_PKG_REGISTER;
@@ -386,7 +386,7 @@ sub init_global_vars() {
 	$pkgdir			= ".";
 	$filesdir		= "files";
 	$patchdir		= "patches";
-	$distinfo		= "distinfo";
+	$distinfo_file		= "distinfo";
 	$scriptdir		= "scripts";
 	$seen_PLIST_SRC		= false;
 	$seen_NO_PKG_REGISTER	= false;
@@ -614,8 +614,8 @@ sub check_package() {
 		}
 	}
 	if ($opt_check_distinfo) {
-		if (-f "$opt_packagedir/$distinfo") {
-			checkfile_distinfo($distinfo);
+		if (-f "$opt_packagedir/$distinfo_file") {
+			checkfile_distinfo($distinfo_file);
 		}
 	}
 	if ($opt_check_distinfo && $opt_check_patches) {
@@ -628,8 +628,8 @@ sub check_package() {
 				last patch;
 			}
 		}
-		if ($patches && ! -f "$opt_packagedir/$distinfo" ) {
-			log_warning("$opt_packagedir/$distinfo", NO_LINE_NUMBER, "File not found. Please run '$conf_make makepatchsum'.");
+		if ($patches && ! -f "$opt_packagedir/$distinfo_file" ) {
+			log_warning("$opt_packagedir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makepatchsum'.");
 		}
 	}
 	if ($opt_check_extra) {
@@ -642,13 +642,13 @@ sub check_package() {
 		}
 	}
 
-	if (-f "$opt_packagedir/$distinfo") {
+	if (-f "$opt_packagedir/$distinfo_file") {
 		if ( $seen_NO_CHECKSUM ) {
-			log_warning("$opt_packagedir/$distinfo", NO_LINE_NUMBER, "This file should not exist if NO_CHECKSUM is set.");
+			log_warning("$opt_packagedir/$distinfo_file", NO_LINE_NUMBER, "This file should not exist if NO_CHECKSUM is set.");
 		}
 	} else {
 		if ( ! $seen_NO_CHECKSUM ) {
-			log_warning("$opt_packagedir/$distinfo", NO_LINE_NUMBER, "File not found. Please run '$conf_make makesum'.");
+			log_warning("$opt_packagedir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makesum'.");
 		}
 	}
 	if (-f "$opt_packagedir/$filesdir/md5") {
@@ -1380,17 +1380,18 @@ sub checkfile_Makefile($) {
 	$scriptdir = $1 if ($whole =~ /\nSCRIPTDIR:?=[ \t]*([^\n]+)\n/);
 	$scriptdir =~ s/\$\{.CURDIR\}/./;
 
-	$distinfo = "distinfo";
-	$distinfo = $1 if ($whole =~ /\nDISTINFO_FILE[+?]?=[ \t]*([^\n]+)\n/);
-	$distinfo = $1 if ($whole =~ /\nDISTINFO_FILE:?=[ \t]*([^\n]+)\n/);
-	$distinfo =~ s/\$\{.CURDIR\}/./;
-	$distinfo =~ s/\${PKGSRCDIR}/..\/../;
+	$distinfo_file = "distinfo";
+	$distinfo_file = $1 if ($whole =~ /\nDISTINFO_FILE[+?]?=[ \t]*([^\n]+)\n/);
+	$distinfo_file = $1 if ($whole =~ /\nDISTINFO_FILE:?=[ \t]*([^\n]+)\n/);
+	$distinfo_file =~ s/\$\{.CURDIR\}/./;
+	$distinfo_file =~ s/\${PKGSRCDIR}/..\/../;
+	$distinfo_file =~ s/\${PKGDIR}/$pkgdir/;
 
 	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] PATCHDIR=$patchdir");
 	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] SCRIPTDIR=$scriptdir");
 	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] FILESDIR=$filesdir");
 	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] PKGDIR=$pkgdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] DISTINFO=$distinfo");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] DISTINFO_FILE=$distinfo_file");
 
 	checklines_deprecated_variables($lines);
 
