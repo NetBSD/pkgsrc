@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.15 2005/05/24 12:14:42 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.16 2005/05/26 16:32:42 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -44,6 +44,14 @@
         optimization for the current CPU.  </para>
     </sect2>
 
+    <sect2 id="where-to-install-documentation">
+      <title>Where to install documentation</title>
+
+      <para> Documentation should be installed into
+      <filename>${PREFIX}/share/doc/${PKGBASE}</filename> or
+      <filename>${PREFIX}/share/doc/${PKGNAME}</filename> (the
+      latter includes the version number of the package). </para>
+    </sect2>
 
     <sect2 id="restricted-packages">
       <title>Restricted packages</title>
