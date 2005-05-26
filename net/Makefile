@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.557 2005/05/25 17:10:40 bouyer Exp $
+# $NetBSD: Makefile,v 1.558 2005/05/26 11:07:31 adrianp Exp $
 #
 
 COMMENT=	Networking tools
@@ -256,6 +256,7 @@ SUBDIR+=	p5-Net-XWhois
 SUBDIR+=	p5-Net-Z3950
 SUBDIR+=	p5-NetAddr-IP
 SUBDIR+=	p5-NetPacket
+SUBDIR+=	p5-Nmap-Parser
 SUBDIR+=	p5-RADIUS
 SUBDIR+=	p5-SNMP-Info
 SUBDIR+=	p5-SNMP-MIB-Compiler
