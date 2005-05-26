@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.182 2005/05/25 01:07:24 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.183 2005/05/26 00:16:36 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -316,6 +316,7 @@ my (%checks) = (
 my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
 my $opt_warn_exec	= true;
+my $opt_warn_vague	= true;
 my $opt_warn_order	= true;
 my $opt_warn_paren	= true;
 my $opt_warn_sort	= true;
@@ -329,6 +330,7 @@ my (%warnings) = (
 	"paren"		=> [\$opt_warn_paren, "warn about use of \$(VAR) instead of \${VAR} in Makefiles"],
 	"sort"		=> [\$opt_warn_sort, "warn about any unsorted entries in category Makefiles and PLISTs"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
+	"vague"		=> [\$opt_warn_vague, "show old (unreliable, vague) warnings"],
 	"workdir"	=> [\$opt_warn_workdir, "warn that work* should not be committed into CVS"],
 );
 
@@ -674,7 +676,7 @@ sub check_package() {
 	    and ! -f "$opt_packagedir/$pkgdir/PLIST.common"
 	    and ! $seen_PLIST_SRC
 	    and ! $seen_NO_PKG_REGISTER ) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "No PLIST or PLIST.common, and PLIST_SRC and NO_PKG_REGISTER unset. Are you sure PLIST handling is ok?");
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "No PLIST or PLIST.common, and PLIST_SRC and NO_PKG_REGISTER unset. Are you sure PLIST handling is ok?");
 	}
 	foreach my $wrkdir (<$opt_packagedir/work*>) {
 		if ($opt_warn_workdir && -d $wrkdir) {
@@ -1352,7 +1354,7 @@ sub checkfile_Makefile($) {
 	if ($opt_warn_paren) {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Checking for \$(VARIABLE).");
 		if ($whole =~ /[^\$]\$\([\w\d]+\)/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "Use \${VARIABLE} instead of \$(VARIABLE).");
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use \${VARIABLE} instead of \$(VARIABLE).");
 		}
 	}
 
@@ -1405,7 +1407,7 @@ sub checkfile_Makefile($) {
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking INTERACTIVE_STAGE.");
 	if ($whole =~ /\nINTERACTIVE_STAGE/) {
 		if ($whole !~ /defined\((BATCH|FOR_CDROM)\)/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "Use of INTERACTIVE_STAGE discouraged. ".
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use of INTERACTIVE_STAGE discouraged. ".
 				"Provide batch mode by using BATCH and/or FOR_CDROM.");
 		}
 	}
@@ -1424,7 +1426,7 @@ sub checkfile_Makefile($) {
 	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking USE_PERL usage.");
 	if ($whole =~ /\nUSE_PERL[^5]/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "USE_PERL found -- you probably mean USE_PERL5.");
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "USE_PERL found -- you probably mean USE_PERL5.");
 	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking for USE_PKGLOCALEDIR.");
 	if ($whole =~ /\nUSE_PKGLOCALEDIR/) {
@@ -1432,21 +1434,21 @@ sub checkfile_Makefile($) {
 	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking for MKDIR.");
 	if ($whole =~ m|\${MKDIR}.*(\${PREFIX}[/0-9a-zA-Z\${}]*)|) {
-	    	log_warning(NO_FILE, NO_LINE_NUMBER, "\${MKDIR} $1: consider using INSTALL_*_DIR");
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\${MKDIR} $1: consider using INSTALL_*_DIR");
 	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking for unneeded INSTALL -d.");
 	if ($whole =~ m|\${INSTALL}(.*)\n|) {
 	    my $args = $1;
 	    	if ($args =~ /-d/) {
 		        if ($args !~ /-[ogm]/) {
-		    		log_warning(NO_FILE, NO_LINE_NUMBER, "\${INSTALL}$args: " .
+				$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\${INSTALL}$args: " .
 					"consider using INSTALL_*_DIR");
 		        }
 		}
 	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking for unneeded failure check on directory creation.");
 	if ($whole =~ /\n\t-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)/g) {
-	    	log_warning(NO_FILE, NO_LINE_NUMBER, "$1: no need to use '-' before command.");
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "$1: no need to use '-' before command.");
 	}
 
 	checklines_direct_tools($lines);
@@ -1455,18 +1457,18 @@ sub checkfile_Makefile($) {
 	# whole file: continuation line in DEPENDS
 	#
 	if ($whole =~ /\n(BUILD_|)DEPENDS[^\n]*\\\n/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "Please don't use continuation lines in (BUILD_)DEPENDS, use (BUILD_)DEPENDS+= instead.");
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Please don't use continuation lines in (BUILD_)DEPENDS, use (BUILD_)DEPENDS+= instead.");
 	}
 
 	# whole file: check for pkgsrc-wip remnants
 	#
 	if ($whole =~ /\/wip\//
 	 && $category ne "wip") {
-		log_error(NO_FILE, NO_LINE_NUMBER, "Possible pkgsrc-wip pathname detected.");
+		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Possible pkgsrc-wip pathname detected.");
 	}
 
 	if ($whole =~ /etc\/rc\.d/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "Use RCD_SCRIPTS mechanism to install rc.d ".
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use RCD_SCRIPTS mechanism to install rc.d ".
 			"scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
 	}
 
@@ -1489,7 +1491,7 @@ sub checkfile_Makefile($) {
 	if ($tmp =~ /#(\s+)\$$conf_rcsidstr([^\$]*)\$/) {
 		if ($2 ne '') {
 			if ($opt_check_newpkg) {
-				log_warning(NO_FILE, NO_LINE_NUMBER, "For a new package, make \$$conf_rcsidstr\$ tag in comment ".
+				$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "For a new package, make \$$conf_rcsidstr\$ tag in comment ".
 				    "section empty, to make CVS happy.");
 			}
 		}
@@ -1524,17 +1526,17 @@ sub checkfile_Makefile($) {
 	$tmp = "\n" . $tmp;
 	foreach my $i ('DISTNAME', 'CATEGORIES') {
 		if ($tmp !~ /\n$i=/) {
-			log_error(NO_FILE, NO_LINE_NUMBER, "$i has to be there.");
+			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "$i has to be there.");
 		}
 		if ($tmp =~ /\n$i(\?=)/) {
-			log_error(NO_FILE, NO_LINE_NUMBER, "$i has to be set by \"=\", not by \"$1\".");
+			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "$i has to be set by \"=\", not by \"$1\".");
 		}
 	}
 
 	# check for pkgsrc-wip remnants in CATEGORIES
 	if ($tmp =~ /\nCATEGORIES=[ \t]*.*wip.*\n/
 	 && $category ne "wip") {
-		log_error(NO_FILE, NO_LINE_NUMBER, "Don't forget to remove \"wip\" from CATEGORIES.");
+		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Don't forget to remove \"wip\" from CATEGORIES.");
 	}
 
 	# check the URL
@@ -1545,11 +1547,11 @@ sub checkfile_Makefile($) {
 		foreach my $i (@sites) {
 			if ($i =~ m#^\w+://#) {
 				if ($i !~ m#/$#) {
-					log_error(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" should ".
+					$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" should ".
 						"end with \"/\".");
 				}
 				if ($i =~ m#://[^/]*:/#) {
-					log_error(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" contains ".
+					$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" contains ".
 						"extra \":\".");
 				}
 				check_predefined_sites($i);
@@ -1557,12 +1559,12 @@ sub checkfile_Makefile($) {
 				log_info(NO_FILE, NO_LINE_NUMBER, "non-URL \"$i\" ok.");
 			}
 		if ($tmp =~ /\nDYNAMIC_MASTER_SITES[+?]?=/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "MASTER_SITES and DYNAMIC_MASTER_SITES ".
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "MASTER_SITES and DYNAMIC_MASTER_SITES ".
 				"found. Is this ok?");
 			}
 		}
 	} elsif ($tmp !~ /\nDYNAMIC_MASTER_SITES[+?]?=/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "no MASTER_SITES or DYNAMIC_MASTER_SITES found. ".
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "no MASTER_SITES or DYNAMIC_MASTER_SITES found. ".
 			"Is this ok?");
 	}
 
@@ -1577,11 +1579,11 @@ sub checkfile_Makefile($) {
 	if ($extractsufx ne '') {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Seen EXTRACT_SUFX, checking value.");
 		if ($distfiles ne '' && ($extractsufx eq '.tar.gz')) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "no need to define EXTRACT_SUFX if ".
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "no need to define EXTRACT_SUFX if ".
 				"DISTFILES is defined.");
 		}
 		if ($extractsufx eq '.tar.gz') {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "EXTRACT_SUFX is \".tar.gz.\" ".
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "EXTRACT_SUFX is \".tar.gz.\" ".
 				"by default. You don't need to specify it.");
 		}
 	} else {
@@ -1591,12 +1593,12 @@ sub checkfile_Makefile($) {
 
 	log_info(NO_FILE, NO_LINE_NUMBER, "Sanity checking PKGNAME.");
 	if ($pkgname ne '' && $pkgname eq $distname) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default, ".
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default, ".
 			"you don't need to define PKGNAME.");
 	}
 	if ($svrpkgname ne '') {
 		if (length($svrpkgname) > 5) {
-			log_error(NO_FILE, NO_LINE_NUMBER, "SVR4_PKGNAME should not be longer ".
+			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "SVR4_PKGNAME should not be longer ".
 				"than 5 characters.");
 		}
 	}
@@ -1614,27 +1616,27 @@ sub checkfile_Makefile($) {
 			log_info(NO_FILE, NO_LINE_NUMBER, "Trailing part of PKGNAME\"-$k\" ".
 				"looks fine.");
 		} else {
-			log_error(NO_FILE, NO_LINE_NUMBER, "Version number part of PKGNAME".
+			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Version number part of PKGNAME".
 				(($pkgname eq '')
 					? ', which is derived from DISTNAME, '
 					: ' ').
 				"looks illegal. You should modify \"-$k\".");
 		}
 	} else {
-		log_error(NO_FILE, NO_LINE_NUMBER, "PKGNAME".
+		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "PKGNAME".
 			(($pkgname eq '')
 				? ', which is derived from DISTNAME, '
 				: ' ').
 			"must come with version number, like \"foobaa-1.0\".");
 		if ($i =~ /_pl[0-9]*$/
 		 || $i =~ /_[0-9]*[A-Za-z]?[0-9]*(\.[0-9]*[A-Za-z]?[0-9]*)*$/) {
-			log_error(NO_FILE, NO_LINE_NUMBER, "You seem to be using underline ".
+			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "You seem to be using underline ".
 				"before version number in PKGNAME. ".
 				"it has to be hyphen.");
 		}
 	}
 	if ($distname =~ /(nb\d*)/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "Is '$1' really ok on DISTNAME, ".
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Is '$1' really ok on DISTNAME, ".
 				"or is it intended for PKGNAME?");
 	}
 
@@ -1648,17 +1650,17 @@ sub checkfile_Makefile($) {
 	if ($distfiles =~ /^\S+$/) {
 		$bogusdistfiles++;
 		log_info(NO_FILE, NO_LINE_NUMBER, "Seen DISTFILES with single item, checking value.");
-		log_warning(NO_FILE, NO_LINE_NUMBER, "Use of DISTFILES with single file ".
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use of DISTFILES with single file ".
 			"is discouraged. Distribution filename should be set by ".
 			"DISTNAME and EXTRACT_SUFX.");
 		if ($distfiles eq $distname . $extractsufx) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "Definition of DISTFILES not necessary. ".
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Definition of DISTFILES not necessary. ".
 				"DISTFILES is \${DISTNAME}/\${EXTRACT_SUFX} by default.");
 		}
 
 		# make an advice only in certain cases.
 		if ($pkgname ne '' && $distfiles =~ /^$pkgname([-\.].+)$/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "How about \"DISTNAME=$pkgname\"".
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "How about \"DISTNAME=$pkgname\"".
 				(($1 eq '.tar.gz')
 					? ""
 					: " and \"EXTRACT_SUFX=$1\"").
@@ -1723,12 +1725,12 @@ sub checkfile_Makefile($) {
 	# warnings for missing or incorrect HOMEPAGE
 	$tmp = "\n" . $tmp;
 	if ($tmp !~ /\nHOMEPAGE[+?]?=[ \t]*([^\n]*)\n/ || $1 =~ /^[ \t]*$/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "Please add HOMEPAGE if the package has one.");
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Please add HOMEPAGE if the package has one.");
 	} else {
 		$i = $1;
 		if ($i =~ m#^\w+://#) {
 			if ($i !~ m#^\w+://[^\n/]+/#) {
-				log_warning(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" does not ".
+				$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" does not ".
 						"end with \"/\".");
 			}
 		}
@@ -1736,32 +1738,32 @@ sub checkfile_Makefile($) {
 
 	# warnings for missing COMMENT
 	if ($tmp !~ /\nCOMMENT=\s*(.*)$/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "Please add a short COMMENT describing the package.");
+		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Please add a short COMMENT describing the package.");
 	} else {
 		# and its properties:
 		my $tmp2 = $1;
 		if ($tmp2 =~ /\.$/i) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not end with a '.' (period).");
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not end with a '.' (period).");
 		}
 		if ($tmp2 =~ /^(a|an) /i) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not begin with '$1 '.");
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not begin with '$1 '.");
 		}
 		if ($tmp2 =~ /^[a-z]/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should start with a capital letter.");
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should start with a capital letter.");
 		}
 		if (length($tmp2) > 70) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not be longer than 70 characters.");
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not be longer than 70 characters.");
 		}
 	}
 
 	checkearlier($tmp, @varnames);
 	$tmp = "\n" . $tmp;
 	if ($tmp =~ /\nMAINTAINER=[^@]+\@netbsd.org/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "\@netbsd.org should be \@NetBSD.org in MAINTAINER.");
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\@netbsd.org should be \@NetBSD.org in MAINTAINER.");
 	} elsif ($tmp =~ /\nMAINTAINER=[^\n]+/) {
 		$tmp =~ s/\nMAINTAINER=[^\n]+//;
 	} else {
-		log_error(NO_FILE, NO_LINE_NUMBER, "No MAINTAINER listed in $file.");
+		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "No MAINTAINER listed in $file.");
 	}
 	$tmp =~ s/\n\n+/\n/g;
 
@@ -1775,7 +1777,7 @@ sub checkfile_Makefile($) {
 
 	my @linestocheck = qw(BUILD_USES_MSGFMT BUILD_DEPENDS DEPENDS);
         if ($tmp =~ /(DEPENDS_TARGET|FETCH_DEPENDS|LIB_DEPENDS|RUN_DEPENDS).*=/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "$1 is deprecated, please use DEPENDS.");
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "$1 is deprecated, please use DEPENDS.");
 	}
 	if ($tmp =~ /(LIB_|BUILD_|RUN_|FETCH_)?DEPENDS/ or
 	    $tmp =~ /BUILD_USES_MSGFMT/) {
@@ -1790,27 +1792,27 @@ sub checkfile_Makefile($) {
 
 				# check BUILD_USES_MSGFMT
 				if ($l =~ /^(msgfmt|gettext)$/) {
-					log_warning(NO_FILE, NO_LINE_NUMBER, "Dependency to $1 ".
+					$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Dependency to $1 ".
 						"listed in $j. Consider using".
 						" BUILD_USES_MSGFMT.");
 				}
 				# check USE_PERL5
 				if ($l =~ /^perl(\.\d+)?$/) {
-					log_warning(NO_FILE, NO_LINE_NUMBER, "Dependency to perl ".
+					$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Dependency to perl ".
 						"listed in $j. Consider using".
 						" USE_PERL5.");
 				}
 
 				# check USE_GMAKE
 				if ($l =~ /^(gmake|\${GMAKE})$/) {
-					log_warning(NO_FILE, NO_LINE_NUMBER, "Dependency to $1 ".
+					$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Dependency to $1 ".
 						"listed in $j. Consider using".
 						" USE_TOOLS+=gmake.");
 				}
 
 				# check direct dependencies on -dirs packages
 				if ($l =~ /^([-a-zA-Z0-9]+)-dirs[-><=]+(.*)/) {
-					log_warning(NO_FILE, NO_LINE_NUMBER, "Dependency to $1-dirs ".
+					$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Dependency to $1-dirs ".
 						"listed in $j. Consider using".
 						" USE_DIRS+=$1-$2.");
 				}
@@ -1820,15 +1822,15 @@ sub checkfile_Makefile($) {
 				if ($#m >= 1) {
 					$m[1] =~ s/\${PKGSRCDIR}/$ENV{'PKGSRCDIR'}/;
 					if ($m[1] =~ /\/$/) {
-						log_error(NO_FILE, NO_LINE_NUMBER, "Trailing '/' (slash) for directory $m[1] listed in $j.");
+						$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Trailing '/' (slash) for directory $m[1] listed in $j.");
 					}
 					if (! -d "$opt_packagedir/$m[1]") {
-						log_warning(NO_FILE, NO_LINE_NUMBER, "No package directory $m[1] found, even though it is listed in $j.");
+						$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "No package directory $m[1] found, even though it is listed in $j.");
 					} else {
 						log_info(NO_FILE, NO_LINE_NUMBER, "Package directory $m[1] found.");
 					}
 				} else {
-					log_error(NO_FILE, NO_LINE_NUMBER, "Invalid package dependency specification \"$k\".");
+					$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Invalid package dependency specification \"$k\".");
 				}
 			}
 		}
@@ -1877,11 +1879,11 @@ sub checkfile_Makefile($) {
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking value of WRKSRC.");
 	if ($bogusdistfiles) {
 		if ($distname ne '' && $wrksrc eq '') {
-		    log_warning(NO_FILE, NO_LINE_NUMBER, "Do not use DISTFILES and DISTNAME ".
+		    $opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Do not use DISTFILES and DISTNAME ".
 			"to control WRKSRC. how about ".
 			"\"WRKSRC=\${WRKDIR}/$distname\"?");
 		} else {
-		    log_warning(NO_FILE, NO_LINE_NUMBER, "DISTFILES/DISTNAME affects WRKSRC. ".
+		    $opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "DISTFILES/DISTNAME affects WRKSRC. ".
 			"Use caution when changing them.");
 		}
 	}
@@ -1892,7 +1894,7 @@ sub checkfile_Makefile($) {
 		foreach my $k (split(/\s+/, $i)) {
 			if ($k !~/^".*"$/ && $k =~ /\${/ && $k !~/:Q}/) {
 				# FIXME: don't "quote", always use :Q
-				log_warning(NO_FILE, NO_LINE_NUMBER, "Definition of $k in $j. ".
+				$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Definition of $k in $j. ".
 				"should use :Q or be quoted.");
 			}
 		}
@@ -1900,13 +1902,13 @@ sub checkfile_Makefile($) {
 
 	# check USE_X11 and USE_IMAKE
 	if ($tmp =~ /\nUSE_IMAKE[?+]?=/ && $tmp =~ /\nUSE_X11[?+]?=/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "Since you already have USE_IMAKE, ".
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Since you already have USE_IMAKE, ".
 			"you don't need USE_X11.");
 	}
 
 	# check direct use of important make targets.
 	if ($tmp =~ /\n(fetch|extract|patch|configure|build|install):/) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "Direct redefinition of make target \"$1\" ".
+		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Direct redefinition of make target \"$1\" ".
 			"discouraged. Redefine \"do-$1\" instead.");
 	}
 
@@ -1924,11 +1926,11 @@ sub checkextra($$) {
 	return if ($str eq '');
 
 	if ($str =~ /^([\w\d]+)/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "Extra item placed in the ".
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Extra item placed in the ".
 			"$section section, ".
 			"for example, \"$1\".");
 	} else {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "Extra item placed in the ".
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Extra item placed in the ".
 			"$section section.");
 	}
 }
@@ -1960,19 +1962,19 @@ sub checkorder($$@) {
 		}
 		if ($k <= $#order) {
 			if ($k < $j) {
-				log_error(NO_FILE, NO_LINE_NUMBER, "$i appears out-of-order.");
+				$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "$i appears out-of-order.");
 				$invalidorder++;
 			} else {
 				log_info(NO_FILE, NO_LINE_NUMBER, "Seen $i, in order.");
 			}
 			$j = $k;
 		} else {
-			log_error(NO_FILE, NO_LINE_NUMBER, "Extra item \"$i\" placed in".
+			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Extra item \"$i\" placed in".
 				" the $section section.");
 		}
 	}
 	if ($invalidorder) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "Order must be " . join('/', @order) . '.');
+		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Order must be " . join('/', @order) . '.');
 	} else {
 		log_info(NO_FILE, NO_LINE_NUMBER, "$section section is ordered properly.");
 	}
@@ -1989,7 +1991,7 @@ sub checkearlier($@) {
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking items that have to appear earlier.");
 	foreach my $i (@varnames) {
 		if ($str =~ /\n$i[?+]?=/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "\"$i\" has to appear earlier.");
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\"$i\" has to appear earlier.");
 		}
 	}
 }
@@ -2033,7 +2035,7 @@ sub abspathname($$) {
 		"/usr/X11R6"    => "\${PREFIX} or \${X11BASE}, as appropriate");
 	foreach my $i (keys %abspathnames) {
 		if ($str =~ /$i/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "Possible direct use of \"$&\" ".
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Possible direct use of \"$&\" ".
 				"found in $file. if so, use $abspathnames{$i}.");
 		}
 	}
@@ -2048,7 +2050,7 @@ sub abspathname($$) {
 		"work"      => "WRKDIR");
 	foreach my $i (keys %relpathnames) {
 		if ($str =~ /(\.\/|\$[\{\(]\.CURDIR[\}\)]\/|[ \t])(\b$i)\//) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "Possible direct use of \"$i\" ".
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Possible direct use of \"$i\" ".
 				"found in $file. If so, use \${$relpathnames{$i}} instead.");
 		}
 	}
@@ -2061,7 +2063,7 @@ sub check_predefined_sites($) {
 	foreach my $site (keys(%predefined_sites)) {
 		next unless (index($url, $site) == 0);
 		my $subdir = substr($url, length($site));
-		log_warning(NO_FILE, NO_LINE_NUMBER, "Please use \${$predefined_sites{$site}:=$subdir} instead of \"$url\".");
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Please use \${$predefined_sites{$site}:=$subdir} instead of \"$url\".");
 		return true;
 	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "URL does not match any of the predefined URLS. Good.");
