@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3546 2005/05/26 05:50:19 markd Exp $
+$NetBSD: TODO,v 1.3547 2005/05/26 11:12:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1294,7 +1294,7 @@ Suggested cleanups in pkgsrc
 
 	o Fix remaining packages to install documentation into
 	  share/doc instead of share/gtk-doc (usually,
-		CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+		CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 	  does the trick; additionally, one might set
 		CONFIGURE_ARGS+=	--enable-gtk-doc=no
 	  to avoid a gtk-doc dependency if html documentation is
@@ -1303,6 +1303,9 @@ Suggested cleanups in pkgsrc
 	  configuration options and/or do not ship with pregenerated
 	  html documents.
 	  Affects: sysutils/gnome-vfs
+
+	o Install documentation consistently into share/doc/${PKGBASE} or
+	  share/doc/${PKGNAME}, not share/doc/html.
 
 	o Make packages utilize USE_X11 instead of USE_X11BASE if
 	  there is no good reason to install them into X11BASE.
