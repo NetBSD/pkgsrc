@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2005/05/22 20:08:25 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/05/26 05:47:40 markd Exp $
 
-DISTNAME=	netatalk-2.0.2
-PKGREVISION=	1
+DISTNAME=	netatalk-2.0.3
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -43,9 +42,13 @@ CONFIGURE_ARGS+=	--enable-netbsd \
 			--libexecdir=${PREFIX}/libexec/netatalk \
 			--sbindir=${PREFIX}/libexec/netatalk \
 			--with-pkgconfdir=${PKG_SYSCONFDIR} \
+			--with-message-dir=${PKG_SYSCONFDIR}/msg \
 			--localstatedir=${VARBASE}/netatalk \
 			--with-uams-path=${PREFIX}/libexec/netatalk/uams \
-			--with-bdb=${BUILDLINK_PREFIX.db4}
+			--with-bdb=${BUILDLINK_PREFIX.db4} \
+			--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
+
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
