@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3548 2005/05/26 11:32:58 wiz Exp $
+$NetBSD: TODO,v 1.3549 2005/05/26 12:53:50 markd Exp $
 
 Suggested new packages
 ======================
@@ -653,7 +653,6 @@ Suggested package updates
 	o lmbench-2.0.4
 	o lopster-1.2.2
 	o lout-3.30
-	o mDNSResponder-98
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
 	o mail-notification-1.1
