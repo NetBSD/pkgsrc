@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.183 2005/05/26 00:16:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.184 2005/05/26 05:52:34 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1257,7 +1257,7 @@ sub checklines_direct_tools($) {
 		.*_TARGET
 		USE_TOOLS);
 	my @ok_shellcmds = qw(
-		.*\\./Build.*
+		\\./Build\s+(?:install|test)
 		);
 
 	my %toolvar = ();
@@ -1272,10 +1272,10 @@ sub checklines_direct_tools($) {
 	my $regex_tools = qr"(?:^|\s|/)(${tools})(?:\s|$)";
 	log_info(NO_FILE, NO_LINE_NUMBER, "regex_tools=${regex_tools}");
 	my $ok_vars = join("|", @ok_vars);
-	my $regex_ok_vars = qr"^(${ok_vars})$";
+	my $regex_ok_vars = qr"^(?:${ok_vars})$";
 	log_info(NO_FILE, NO_LINE_NUMBER, "regex_ok_vars=${regex_ok_vars}");
 	my $ok_shellcmds = join("|", @ok_shellcmds);
-	my $regex_ok_shellcmds = qr"^(${ok_shellcmds})$";
+	my $regex_ok_shellcmds = qr"(?:${ok_shellcmds})";
 	log_info(NO_FILE, NO_LINE_NUMBER, "regex_ok_shellcmds=${regex_ok_shellcmds}");
 
 	foreach my $line (@{$lines}) {
@@ -1289,13 +1289,17 @@ sub checklines_direct_tools($) {
 		} elsif ($text =~ qr"^([\w.]+?)\s*[?+:!]?=\s*(.*)") {
 			my ($varname, $value) = ($1, $2);
 			# process variable assignments
-			if ($varname !~ $regex_ok_vars) {
+			if ($varname =~ $regex_ok_vars) {
+				$line->log_info("Legitimate direct use of \"${tool}\" in variable ${varname}.");
+			} else {
 				$line->log_warning("Possible direct use of \"${tool}\" in variable ${varname}. Please use \$\{$toolvar{$tool}\} instead.");
 			}
 		} elsif ($text =~ qr"^\t(.*)") {
 			my ($shellcmd) = ($1);
 			# process shell commands
-			if ($shellcmd !~ $regex_ok_shellcmds) {
+			if ($shellcmd =~ $regex_ok_shellcmds) {
+				$line->log_info("Legitimate direct use of \"${tool}\" in shell command \"${shellcmd}\".");
+			} else {
 				$line->log_warning("Possible direct use of \"${tool}\" in shell command \"${shellcmd}\". Please use \$\{$toolvar{$tool}\} instead.");
 			}
 		} elsif ($text =~ qr"^\.") {
