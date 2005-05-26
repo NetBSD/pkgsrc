@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10212 2005/05/26 22:41:01 jschauma Exp $
+$NetBSD: CHANGES,v 1.10213 2005/05/26 22:41:58 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -1843,7 +1843,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/p5-Want to 0.08 [seb 2005-03-31]
 	Updated devel/p5-Module-ScanDeps to 0.51 [seb 2005-03-31]
 	Updated devel/p5-Module-CoreList to 1.98 [seb 2005-03-31]
-	Added print/teTeX-bin version 3.0 as teTeX3-bin [hubertf 2005-04-01]
+	Added print/teTeX3-bin version 3.0 [hubertf 2005-04-01]
 	Added print/teTeX3-texmf version 3.0 [hubertf 2005-04-01]
 	Added print/teTeX3-texmfsrc version 3.0 [hubertf 2005-04-01]
 	Updated math/octave to 2.1.69 [adam 2005-04-01]
