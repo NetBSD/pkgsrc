@@ -1,30 +1,17 @@
-# $NetBSD: Makefile,v 1.26 2005/05/22 20:07:54 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/05/26 10:22:47 dillo Exp $
 #
 
-DISTNAME=	pilrc-2.9p9
-PKGNAME=	pilrc-2.9.10
-PKGREVISION=	3
+DISTNAME=	pilrc-3.2
 #WRKSRC=	${WRKDIR}/pilrc-2.9p9
-EXTRACT_SUFX=	.tgz
 CATEGORIES=	devel
-MASTER_SITES=	http://www.ardiri.com/download/files/palm/		\
-		http://www.ardiri.com/download/palm/pilrc/archive/
-
-PATCH_SITES=		${MASTER_SITES}
-PATCHFILES=		pilrc-2.9p10.diff
-PATCH_DIST_STRIP+=	-p1
-#
-# The pilrc patches don't have Unix line endings, so strip off the extra
-# \r character on each line.
-#
-PATCH_DIST_CAT=		${CAT} $$patchfile | ${TR} -d '\015'
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pilrc/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.ardiri.com/index.cfm?redir=palm&cat=pilrc
+HOMEPAGE=	http://pilrc.sourceforge.net/
 COMMENT=	Generate resources for PalmOS applications from textual description
 
-USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
+CONFIGURE_SCRIPT=unix/configure
 
 DOCDIR=		${PREFIX}/share/doc/html/pilrc
 
@@ -45,14 +32,10 @@ PKG_OPTIONS_LEGACY_VARS+=	PILRC_USE_GTK:gtk
 .if !empty(PKG_OPTIONS:Mgtk)
 .  include "../../x11/gtk/buildlink3.mk"
 PLIST_SUBST+=	PILRCUI=
+CONFIGURE_ARGS+=--enable-pilrcui
 .else
-CONFIGURE_ARGS+=--disable-pilrcui
 PLIST_SUBST+=	PILRCUI="@comment "
 .endif
-
-#post-extract:
-#	${CHMOD} +x ${WRKSRC}/configure
-#	${CHMOD} +x ${WRKSRC}/missing
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
