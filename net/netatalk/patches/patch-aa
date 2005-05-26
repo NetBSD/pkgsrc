@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.12 2004/11/07 12:21:27 markd Exp $
+$NetBSD: patch-aa,v 1.13 2005/05/26 05:47:40 markd Exp $
 
 --- configure.orig	Thu Oct 28 03:42:21 2004
 +++ configure
+@@ -18190,7 +18190,7 @@
+ #define NETBSD 1
+ _ACEOF
+ 
+-	CFLAGS="-I\$(top_srcdir)/sys/netbsd -I/usr/include/kerberosIV $CFLAGS"
++	CFLAGS="-I\$(top_srcdir)/sys/netbsd $CFLAGS"
+ 	need_dash_r=yes
+ 
+ 
 @@ -18960,7 +18960,7 @@ if test "${enable_krbV_uam+set}" = set; 
  		if test x"$enableval" = x"yes"; then
  
