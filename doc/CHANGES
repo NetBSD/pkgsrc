@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10209 2005/05/26 20:10:17 jmmv Exp $
+$NetBSD: CHANGES,v 1.10210 2005/05/26 20:16:37 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2631,3 +2631,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated vim-motif to 6.3.071nb1 [jmmv 2005-05-26]
 	Updated vim-share to 6.3.071nb1 [jmmv 2005-05-26]
 	Updated vim-xaw to 6.3.071nb1 [jmmv 2005-05-26]
+	Updated openslp to 1.2.1 [adrianp 2005-05-26]
