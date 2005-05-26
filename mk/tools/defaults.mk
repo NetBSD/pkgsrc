@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.22 2005/05/23 17:07:22 jlam Exp $
+# $NetBSD: defaults.mk,v 1.23 2005/05/26 21:46:13 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -98,6 +98,7 @@ _TOOLS_VARNAME.mkdir=		MKDIR
 _TOOLS_VARNAME.mtree=		MTREE
 _TOOLS_VARNAME.mv=		MV
 _TOOLS_VARNAME.nice=		NICE
+_TOOLS_VARNAME.nroff=		NROFF
 _TOOLS_VARNAME.patch=		PATCH
 _TOOLS_VARNAME.pax=		PAX
 _TOOLS_VARNAME.perl=		PERL5

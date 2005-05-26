@@ -1,4 +1,4 @@
-# $NetBSD: tools.AIX.mk,v 1.8 2005/05/14 21:15:07 jlam Exp $
+# $NetBSD: tools.AIX.mk,v 1.9 2005/05/26 21:46:14 jlam Exp $
 #
 # System-supplied tools for the AIX operating system.
 
@@ -34,6 +34,7 @@ TOOLS_PLATFORM.mail?=		/usr/bin/mailx
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 TOOLS_PLATFORM.mv?=		/bin/mv
 TOOLS_PLATFORM.nice?=		/usr/bin/nice
+TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
