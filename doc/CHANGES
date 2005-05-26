@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10213 2005/05/26 22:41:58 jschauma Exp $
+$NetBSD: CHANGES,v 1.10214 2005/05/26 22:47:34 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -139,7 +139,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/gst-plugins-png to 0.8.7 [jmmv 2005-01-06]
 	Updated multimedia/gst-plugins-theora to 0.8.7 [jmmv 2005-01-06]
 	Updated audio/gst-plugins-vorbis to 0.8.7 [jmmv 2005-01-06]
-	Renamed net/ntop to ntop1 [adam 2005-01-06]
+	Renamed net/ntop to net/ntop1 [adam 2005-01-06]
 	Updated net/ntop to 3.1 [adam 2005-01-06]
 	Updated multimedia/xine-lib to 1rc8nb2 [tron 2005-01-06]
 	Updated devel/nasm to 0.98.38nb1 [adrianp 2005-01-06]
@@ -265,7 +265,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Added audio/terminatorx version 3.82 [xtraeme 2005-01-12]
 	bsd.pkg.mk: deprecate USE_FORTRAN in favor of USE_LANGUAGES+=fortran
 		[jlam 2005-01-12]
-	Renamed marbles to lmarbles [adam 2005-01-12]
+	Renamed games/marbles to games/lmarbles [adam 2005-01-12]
 	Updated games/lmarbles to 1.0.7 [adam 2005-01-12]
 	Updated games/lpairs to 1.0.1 [adam 2005-01-12]
 	Updated games/ltris to 1.0.7 [adam 2005-01-12]
@@ -1062,7 +1062,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/libfwbuilder to 2.0.5 [bad 2005-02-24]
 	Added security/fwbuilder version 2.05 [bad 2005-02-24]
 	Updated www/ap-bandwidth to 2.0.6 [wiz 2005-02-24]
-	Renamed openoffice-linux to openoffice-bin [mrauch 2005-02-24]
+	Renamed misc/openoffice-linux to misc/openoffice-bin [mrauch 2005-02-24]
 	Updated databases/p5-DBI to 1.47 [wiz 2005-02-24]
 	Updated databases/p5-DBD-SQLite to 1.07 [wiz 2005-02-24]
 	Updated net/oidentd to 2.0.7nb3 [tron 2005-02-24]
@@ -1850,7 +1850,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/octave-current to 2.9.1 [adam 2005-04-01]
 	Updated math/octave-forge to 2004.11.16nb1 [adam 2005-04-01]
 	Updated x11/xplanet to 1.1.2 [adam 2005-04-01]
-	Renamed www/jakarta-tomcat to jakarta-tomcat5 [abs 2005-04-01]
+	Renamed www/jakarta-tomcat to www/jakarta-tomcat5 [abs 2005-04-01]
 	Added www/jakarta-tomcat version 5.5.7 [abs 2005-04-01]
 	Added devel/teem version 1.8.0 [jschauma 2005-04-01]
 	Updated sysutils/xentools20 to 2.0.3nb4 [bouyer 2005-04-01]
@@ -2047,7 +2047,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated multimedia/libmatroska to 0.7.6 [salo 2005-04-18]
 	Updated multimedia/mkvtoolnix to 1.4.2 [salo 2005-04-18]
 	Updated multimedia/mmg to 1.4.2 [salo 2005-04-18]
-	Renamed www/firefox-gtk2-bin to firefox-bin [wiz 2005-04-18]
+	Renamed www/firefox-gtk2-bin to www/firefox-bin [wiz 2005-04-18]
 	Removed www/firefox-gtk2-bin-acroread [wiz 2005-04-18]
 	Removed www/firefox-gtk2-bin-flash [wiz 2005-04-18]
 	Removed www/firefox-gtk2-bin-java [wiz 2005-04-18]
