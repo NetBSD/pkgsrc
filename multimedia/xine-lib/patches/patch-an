@@ -1,0 +1,76 @@
+$NetBSD: patch-an,v 1.3 2005/05/26 22:47:22 reed Exp $
+Support --enable-fpic with recent versions of gcc.
+From xine cvs.
+
+--- src/post/goom/xmmx.c.orig	Sat May  7 18:06:07 2005
++++ src/post/goom/xmmx.c	Sat May  7 18:06:59 2005
+@@ -112,23 +112,23 @@
+ 		 * post : mm3 & mm4 : coefs for this position
+ 		 *              mm1 : X vector [0|X]
+ 		 *
+-		 * modif : eax,ebx
++		 * modif : eax,ecx
+ 		 */
+ 		__asm__ __volatile__ (
+-			"movd %%mm0,%%ebx\n"
++			"movd %%mm0,%%ecx\n"
+ 			"movq %%mm0,%%mm1\n"
+ 
+-			"andl $15,%%ebx\n"
++			"andl $15,%%ecx\n"
+ 			"psrlq $32,%%mm1\n"
+ 
+-			"shll $6,%%ebx\n"
++			"shll $6,%%ecx\n"
+ 			"movd %%mm1,%%eax\n"
+ 
+-			"addl %0,%%ebx\n"
++			"addl %0,%%ecx\n"
+ 			"andl $15,%%eax\n"
+ 
+-			"movd (%%ebx,%%eax,4),%%mm3\n"
+-			::"g"(precalCoef):"eax","ebx");
++			"movd (%%ecx,%%eax,4),%%mm3\n"
++			::"g"(precalCoef):"eax","ecx");
+ 
+ 		/*
+ 		 * extraction des coefficients...
+@@ -158,7 +158,7 @@
+ 		 * post : mm0 : expix1[position]
+ 		 *        mm2 : expix1[position+largeur]
+ 		 *
+-		 * modif : eax,ebx
++		 * modif : eax,ecx
+ 		 */
+ 		psrld_i2r (PERTEDEC,mm0);
+ 		psrld_i2r (PERTEDEC,mm1);
+@@ -167,23 +167,23 @@
+ 			/*^*/ "movq %%mm3,%%mm5\n"       /*^*/
+ 
+ 			"mull %1\n"
+-			"movd %%mm0,%%ebx\n"
++			"movd %%mm0,%%ecx\n"
+ 			/*^*/ "punpcklbw %%mm5, %%mm3\n" /*^*/
+ 
+-			"addl %%ebx,%%eax\n"
++			"addl %%ecx,%%eax\n"
+ 			/*^*/ "movq %%mm3,%%mm4\n"       /*^*/
+ 			/*^*/ "movq %%mm3,%%mm5\n"       /*^*/
+ 
+-			"movl %0,%%ebx\n"
++			"movl %0,%%ecx\n"
+ 			/*^*/ "punpcklbw %%mm5,%%mm3\n"  /*^*/
+ 
+-			"movq (%%ebx,%%eax,4),%%mm0\n"
++			"movq (%%ecx,%%eax,4),%%mm0\n"
+ 			/*^*/ "punpckhbw %%mm5,%%mm4\n"  /*^*/
+ 
+ 			"addl %1,%%eax\n"
+-			"movq (%%ebx,%%eax,4),%%mm2\n"
++			"movq (%%ecx,%%eax,4),%%mm2\n"
+ 
+-			: : "X"(expix1), "X"(prevX):"eax","ebx"
++			: : "X"(expix1), "X"(prevX):"eax","ecx"
+ 		);
+ 
+ 		/*
