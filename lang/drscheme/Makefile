@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/05/22 20:08:09 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/05/26 19:17:37 jschauma Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
@@ -65,7 +65,7 @@ post-install:
 	@cd ${PREFIX}/bin && ${LN} -s ../lib/plt/bin/$f
 .endfor
 .for f in ${DOCFILES}
-	${PREFIX}/bin/setup-plt ${DISTDIR}/$f
+	${PREFIX}/bin/setup-plt ${DISTDIR}/${DIST_SUBDIR}/$f
 .endfor
 
 .include "../../graphics/MesaLib/buildlink3.mk"
