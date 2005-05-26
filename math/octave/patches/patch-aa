@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2005/04/01 10:15:47 adam Exp $
+$NetBSD: patch-aa,v 1.10 2005/05/26 21:11:35 jlam Exp $
 
---- configure.orig	2005-02-18 04:55:38.000000000 +0000
+--- configure.orig	2005-05-05 15:10:00.000000000 -0400
 +++ configure
 @@ -8824,7 +8824,7 @@ if $have_fortran_compiler; then
  %.c : %.f
@@ -45,3 +45,14 @@ $NetBSD: patch-aa,v 1.9 2005/04/01 10:15:47 adam Exp $
  
  EOF
    ;;
+@@ -21278,9 +21278,9 @@ then
+   rm -rf "$tmp"
+ 
+ fi
++SED=$octave_cv_path_sed
+ 
+ fi
+-SED=$octave_cv_path_sed
+ 
+ echo "$as_me:$LINENO: result: $SED" >&5
+ echo "${ECHO_T}$SED" >&6
