@@ -1,4 +1,4 @@
-# $NetBSD: tools.BSDOS.mk,v 1.11 2005/05/16 03:07:38 jlam Exp $
+# $NetBSD: tools.BSDOS.mk,v 1.12 2005/05/26 21:46:14 jlam Exp $
 #
 # System-supplied tools for the BSD/OS operating system.
 
@@ -39,6 +39,7 @@ TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 TOOLS_PLATFORM.mv?=		/bin/mv
 TOOLS_PLATFORM.mtree?=		/usr/sbin/mtree
 TOOLS_PLATFORM.nice?=		/usr/bin/nice
+TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
 TOOLS_PLATFORM.patch?=		/usr/contrib/bin/patch
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.rm?=		/bin/rm

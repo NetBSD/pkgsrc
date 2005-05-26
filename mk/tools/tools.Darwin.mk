@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.11 2005/05/23 01:20:50 jlam Exp $
+# $NetBSD: tools.Darwin.mk,v 1.12 2005/05/26 21:46:14 jlam Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -43,6 +43,7 @@ TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 TOOLS_PLATFORM.mtree?=		/usr/sbin/mtree
 TOOLS_PLATFORM.mv?=		/bin/mv
 TOOLS_PLATFORM.nice?=		/usr/bin/nice
+TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.rm?=		/bin/rm
