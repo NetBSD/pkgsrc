@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10206 2005/05/26 14:13:14 wiz Exp $
+$NetBSD: CHANGES,v 1.10207 2005/05/26 14:33:29 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2623,3 +2623,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mDNSResponder to 107.1 [markd 2005-05-26]
 	Updated mathomatic to 12.3.3 [minskim 2005-05-26]
 	Updated dmidecode to 2.6 [wiz 2005-05-26]
+	Updated kile to 1.8 [markd 2005-05-26]
