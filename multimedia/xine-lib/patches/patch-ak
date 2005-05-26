@@ -1,0 +1,26 @@
+$NetBSD: patch-ak,v 1.5 2005/05/26 22:47:22 reed Exp $
+Support --enable-fpic with recent versions of gcc.
+From xine cvs.
+
+--- src/post/goom/mmx.h.orig	Sat May  7 18:00:46 2005
++++ src/post/goom/mmx.h	Sat May  7 18:01:45 2005
+@@ -72,6 +72,7 @@
+ 	register int rval = 0;
+ 
+ 	__asm__ __volatile__ (
++		"push %%ebx\n\t"
+ 		/* See if CPUID instruction is supported ... */
+ 		/* ... Get copies of EFLAGS into eax and ecx */
+ 		"pushf\n\t"
+@@ -214,9 +215,10 @@
+ 		"movl $0, %0\n\n\t"
+ 
+ 		"Return:\n\t"
++		"pop %%ebx\n\t"
+ 		: "=X" (rval)
+ 		: /* no input */
+-		: "eax", "ebx", "ecx", "edx"
++		: "eax", "ecx", "edx"
+ 	);
+ 
+ 	/* Return */
