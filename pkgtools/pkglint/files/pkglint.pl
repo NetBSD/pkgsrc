@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.184 2005/05/26 05:52:34 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.185 2005/05/26 06:17:20 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -522,7 +522,6 @@ sub load_predefined_sites() {
 		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
 		return false;
 	}
-	log_info($fname, NO_LINE_NUMBER, "Loading MASTER_SITE_* definitions.");
 	foreach my $line (@{$lines}) {
 		if ($line->text =~ qr"^(MASTER_SITE_\w+)\+=\s*\\$"o) {
 			$varname = $1;
@@ -573,9 +572,6 @@ sub check_directory($) {
 sub main() {
 	parse_command_line();
 
-	log_info(NO_FILE, NO_LINE_NUMBER, "pkgsrcdir: $conf_pkgsrcdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "localbase: $conf_localbase");
-
 	if (@ARGV) {
 		foreach my $dir (@ARGV) {
 			check_directory($dir);
@@ -588,8 +584,6 @@ sub main() {
 
 sub check_package() {
 	# we need to handle the Makefile first to get some variables
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking Makefile.");
-
 	if (!checkfile_Makefile("Makefile")) {
 		log_error("$opt_packagedir/Makefile", NO_LINE_NUMBER, "Cannot be read.");
 		return false;
@@ -962,10 +956,6 @@ sub checkfile_PLIST($) {
 		if ($curdir !~ m:^$conf_localbase: && $curdir !~ m:^/usr/X11R6:) {
 			$line->log_warning("Installing to directory $curdir discouraged. could you please avoid it?");
 		}
-
-		if ("$curdir/".$line->text =~ m:^$conf_localbase/share/doc:) {
-			$line->log_info("Seen installation to share/doc.");
-		}
 	}
 	checklines_trailing_empty_lines($plist);
 	return true;
@@ -1130,7 +1120,6 @@ sub readmakefile($$) {
 				if (!-f "$dirname/$includefile") {
 					$line->log_error("Cannot read $dirname/$includefile.");
 				} else {
-					$line->log_info("Including $dirname/$includefile.");
 					$contents .= readmakefile("$dirname/$includefile", $all_lines);
 				}
 			}
@@ -1270,13 +1259,13 @@ sub checklines_direct_tools($) {
 
 	my $tools = join("|", @tools, @cmd_tools);
 	my $regex_tools = qr"(?:^|\s|/)(${tools})(?:\s|$)";
-	log_info(NO_FILE, NO_LINE_NUMBER, "regex_tools=${regex_tools}");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checklines_direct_tools] regex_tools=${regex_tools}");
 	my $ok_vars = join("|", @ok_vars);
 	my $regex_ok_vars = qr"^(?:${ok_vars})$";
-	log_info(NO_FILE, NO_LINE_NUMBER, "regex_ok_vars=${regex_ok_vars}");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checklines_direct_tools] regex_ok_vars=${regex_ok_vars}");
 	my $ok_shellcmds = join("|", @ok_shellcmds);
 	my $regex_ok_shellcmds = qr"(?:${ok_shellcmds})";
-	log_info(NO_FILE, NO_LINE_NUMBER, "regex_ok_shellcmds=${regex_ok_shellcmds}");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checklines_direct_tools] regex_ok_shellcmds=${regex_ok_shellcmds}");
 
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
@@ -1323,6 +1312,8 @@ sub checkfile_Makefile($) {
 	my ($realwrksrc, $wrksrc) = ('', '');
 	my ($category, $lines);
 
+	log_info($fname, NO_LINE_NUMBER, "Checking package Makefile.");
+
 	$category = basename(dirname(Cwd::abs_path($opt_packagedir)));
 
 	checkperms($fname);
@@ -1356,7 +1347,6 @@ sub checkfile_Makefile($) {
 	# whole file: $(VARIABLE)
 	#
 	if ($opt_warn_paren) {
-		log_info(NO_FILE, NO_LINE_NUMBER, "Checking for \$(VARIABLE).");
 		if ($whole =~ /[^\$]\$\([\w\d]+\)/) {
 			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use \${VARIABLE} instead of \$(VARIABLE).");
 		}
@@ -1366,7 +1356,6 @@ sub checkfile_Makefile($) {
 	# whole file: get FILESDIR, PATCHDIR, PKGDIR, SCRIPTDIR,
 	# PATCH_SUM_FILE and DIGEST_FILE
 	#
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking for PATCHDIR, SCRIPTDIR, FILESDIR, PKGDIR, DIGEST_FILE.");
 
 	$filesdir = "files";
 	$filesdir = $1 if ($whole =~ /\nFILESDIR[+?]?=[ \t]*([^\n]+)\n/);
@@ -1397,9 +1386,11 @@ sub checkfile_Makefile($) {
 	$distinfo =~ s/\$\{.CURDIR\}/./;
 	$distinfo =~ s/\${PKGSRCDIR}/..\/../;
 
-	log_info(NO_FILE, NO_LINE_NUMBER, "PATCHDIR: $patchdir, SCRIPTDIR: $scriptdir, ".
-	      "FILESDIR: $filesdir, PKGDIR: $pkgdir, ".
-	      "DISTINFO: $distinfo");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] PATCHDIR=$patchdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] SCRIPTDIR=$scriptdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] FILESDIR=$filesdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] PKGDIR=$pkgdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] DISTINFO=$distinfo");
 
 	checklines_deprecated_variables($lines);
 
@@ -1408,7 +1399,6 @@ sub checkfile_Makefile($) {
 	#
 	$whole =~ s/\n#[^\n]*/\n/g;
 	$whole =~ s/\n\n+/\n/g;
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking INTERACTIVE_STAGE.");
 	if ($whole =~ /\nINTERACTIVE_STAGE/) {
 		if ($whole !~ /defined\((BATCH|FOR_CDROM)\)/) {
 			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use of INTERACTIVE_STAGE discouraged. ".
@@ -1416,31 +1406,24 @@ sub checkfile_Makefile($) {
 		}
 	}
 
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking for PLIST_SRC.");
 	if ($whole =~ /\nPLIST_SRC/) {
 		$seen_PLIST_SRC = true;
 	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking for NO_PKG_REGISTER.");
 	if ($whole =~ /\nNO_PKG_REGISTER/) {
 		$seen_NO_PKG_REGISTER = true;
 	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking for NO_CHECKSUM.");
 	if ($whole =~ /\nNO_CHECKSUM/) {
 		$seen_NO_CHECKSUM = true;
 	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking USE_PERL usage.");
 	if ($whole =~ /\nUSE_PERL[^5]/) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "USE_PERL found -- you probably mean USE_PERL5.");
 	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking for USE_PKGLOCALEDIR.");
 	if ($whole =~ /\nUSE_PKGLOCALEDIR/) {
 		$seen_USE_PKGLOCALEDIR = true;
 	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking for MKDIR.");
 	if ($whole =~ m|\${MKDIR}.*(\${PREFIX}[/0-9a-zA-Z\${}]*)|) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\${MKDIR} $1: consider using INSTALL_*_DIR");
 	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking for unneeded INSTALL -d.");
 	if ($whole =~ m|\${INSTALL}(.*)\n|) {
 	    my $args = $1;
 	    	if ($args =~ /-d/) {
@@ -1450,7 +1433,6 @@ sub checkfile_Makefile($) {
 		        }
 		}
 	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking for unneeded failure check on directory creation.");
 	if ($whole =~ /\n\t-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)/g) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "$1: no need to use '-' before command.");
 	}
@@ -1490,7 +1472,6 @@ sub checkfile_Makefile($) {
 	#
 	# section 1: comment lines.
 	#
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking comment section of $file.");
 	$tmp = $sections[$idx++];
 	if ($tmp =~ /#(\s+)\$$conf_rcsidstr([^\$]*)\$/) {
 		if ($2 ne '') {
@@ -1516,7 +1497,7 @@ sub checkfile_Makefile($) {
 	#
 	# section 2: DISTNAME/PKGNAME/...
 	#
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking first section of $file. (DISTNAME/...).");
+	log_info($fname, NO_LINE_NUMBER, "Checking DISTNAME section.");
 	$tmp = $sections[$idx++];
 
 	# check the order of items.
@@ -1595,7 +1576,6 @@ sub checkfile_Makefile($) {
 		$extractsufx = '.tar.gz';
 	}
 
-	log_info(NO_FILE, NO_LINE_NUMBER, "Sanity checking PKGNAME.");
 	if ($pkgname ne '' && $pkgname eq $distname) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default, ".
 			"you don't need to define PKGNAME.");
@@ -1679,7 +1659,7 @@ sub checkfile_Makefile($) {
 	#
 	# section 3: PATCH_SITES/PATCHFILES(optional)
 	#
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking second section, (PATCH*: optional).");
+	log_info($fname, NO_LINE_NUMBER, "Checking optional PATCH section.");
 	$tmp = $sections[$idx];
 
 	if ($tmp =~ /(PATCH_SITES|PATCH_SITE_SUBDIR|PATCHFILES|PATCH_DIST_STRIP)/) {
@@ -1718,7 +1698,7 @@ sub checkfile_Makefile($) {
 	#
 	# section 4: MAINTAINER
 	#
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking third section (MAINTAINER).");
+	log_info($fname, NO_LINE_NUMBER, "Checking MAINTAINER section.");
 	$tmp = $sections[$idx++];
 
 	# check the order of items.
@@ -1776,7 +1756,7 @@ sub checkfile_Makefile($) {
 	#
 	# section 5: *_DEPENDS (may not be there)
 	#
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking fourth section (*_DEPENDS).");
+	log_info($fname, NO_LINE_NUMBER, "Checking optional DEPENDS section.");
 	$tmp = $sections[$idx];
 
 	my @linestocheck = qw(BUILD_USES_MSGFMT BUILD_DEPENDS DEPENDS);
@@ -1853,7 +1833,7 @@ sub checkfile_Makefile($) {
 	#
 	# Makefile 6: check the rest of file
 	#
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking the rest of the $file.");
+	log_info($fname, NO_LINE_NUMBER, "Checking the rest of the file.");
 	$tmp = join("\n\n", @sections[$idx .. scalar(@sections)-1]);
 
 	$tmp = "\n" . $tmp;	# to make the begin-of-line check easier
@@ -1873,14 +1853,12 @@ sub checkfile_Makefile($) {
 	#	EXTRACT_SUFX=.tgz
 	#	WRKSRC=      ${WRKDIR}/package
 	#
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking WRKSRC.");
 	$wrksrc = '';
 	$wrksrc = $1 if ($tmp =~ /\nWRKSRC[+?]?=[ \t]*([^\n]*)\n/);
 	$realwrksrc = $wrksrc ? "$wrksrc/$distname"
 			      : "\${WRKDIR}/$distname";
 	log_info(NO_FILE, NO_LINE_NUMBER, "WRKSRC seems to be $realwrksrc.");
 
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking value of WRKSRC.");
 	if ($bogusdistfiles) {
 		if ($distname ne '' && $wrksrc eq '') {
 		    $opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Do not use DISTFILES and DISTNAME ".
