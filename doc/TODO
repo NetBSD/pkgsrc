@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3550 2005/05/26 13:09:08 minskim Exp $
+$NetBSD: TODO,v 1.3551 2005/05/26 14:13:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -449,7 +449,6 @@ Suggested package updates
 	o dirdiff-2.0
 	o distcc-2.18.3
 	o dmalloc-5.4.2
-	o dmidecode-2.6
 	o dnstracer-1.8
 	o doxygen-1.4.3
 	o dpkg-1.13.3
