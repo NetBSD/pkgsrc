@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.641 2005/05/23 21:47:38 jdolecek Exp $
+# $NetBSD: Makefile,v 1.642 2005/05/26 10:53:19 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -480,8 +480,8 @@ SUBDIR+=	pcre++
 SUBDIR+=	pedisassem
 SUBDIR+=	php-gettext
 SUBDIR+=	php-gmp
-SUBDIR+=	php-posix
 SUBDIR+=	php-pcntl
+SUBDIR+=	php-posix
 SUBDIR+=	php-shmop
 SUBDIR+=	php-sysvsem
 SUBDIR+=	php-sysvshm
@@ -547,6 +547,7 @@ SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-rd-mode
 SUBDIR+=	ruby-readline
 SUBDIR+=	ruby-strscan
+SUBDIR+=	ruby-subversion
 SUBDIR+=	ruby-testunit
 SUBDIR+=	ruby-textbuf
 SUBDIR+=	ruby-unit
@@ -582,6 +583,7 @@ SUBDIR+=	swig
 #SUBDIR+=	swig-build	# conflicts with swig (soon to change)
 SUBDIR+=	swig-perl
 SUBDIR+=	swig-python
+SUBDIR+=	swig13
 SUBDIR+=	syncdir
 SUBDIR+=	tavrasm
 SUBDIR+=	tcl-tclcl
