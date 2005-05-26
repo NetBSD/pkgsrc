@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10203 2005/05/26 11:07:30 adrianp Exp $
+$NetBSD: CHANGES,v 1.10204 2005/05/26 12:53:50 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -2620,3 +2620,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ukpostcodes-20040515 [agc 2005-05-26]
 	Updated pilrc to 3.2 [dillo 2005-05-26]
 	Added p5-Nmap-Parser-0.80 [adrianp 2005-05-26]
+	Updated mDNSResponder to 107.1 [markd 2005-05-26]
