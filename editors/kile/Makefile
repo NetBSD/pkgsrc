@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2005/05/22 20:07:56 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/05/26 14:31:42 markd Exp $
 
-DISTNAME=		kile-1.7.1
-PKGREVISION=		1
+DISTNAME=		kile-1.8
 CATEGORIES=		editors kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kile/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,7 +16,20 @@ USE_LIBTOOL=		yes
 USE_PERL5=		build
 GNU_CONFIGURE=		yes
 
-REPLACE_PERL=		kile1.6_upd.pl
+REPLACE_PERL=		src/kile1.6_upd.pl \
+			src/kile1.7_upd.pl
+
+SUBST_CLASSES+=		docfix
+SUBST_STAGE.docfix=	post-patch
+SUBST_MESSAGE.docfix=	"Fixup doc directory names"
+SUBST_FILES.docfix= \
+	translations/da/doc/Makefile.in \
+	translations/et/doc/Makefile.in \
+	translations/it/doc/Makefile.in \
+	translations/nl/doc/Makefile.in \
+	translations/pt/doc/Makefile.in \
+	translations/sv/doc/Makefile.in
+SUBST_SED.docfix=	-e 's:(KDE_LANG)/doc:(KDE_LANG)/kile:g'
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/kdegraphics3/buildlink3.mk"
