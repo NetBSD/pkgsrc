@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2005/04/11 21:47:20 tv Exp $
+# $NetBSD: Makefile,v 1.26 2005/05/26 02:25:22 markd Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
-PKGREVISION= 	3
+PKGREVISION= 	4
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.porcupine.org/pub/security/
 
