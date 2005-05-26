@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.35 2005/03/15 09:07:29 martti Exp $
+# $NetBSD: Makefile,v 1.36 2005/05/26 20:09:35 jmmv Exp $
 
 PKGNAME=		vim-xaw-${VIM_VERSION}.${VIM_PATCHLEVEL}
+PKGREVISION=		1
 
 .include		"../vim-share/Makefile.common"
 
 COMMENT=		Vim editor (vi clone) with X11 Athena GUI
 
-DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}:../vim-share
+DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}{,nb*}:../vim-share
 CONFLICTS+=		vim-[0-9]* vim-gtk-[0-9]* vim-gtk2-[0-9]*
 CONFLICTS+=		vim-motif-[0-9]* vim-kde-[0-9]*
 
