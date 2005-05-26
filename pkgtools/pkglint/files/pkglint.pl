@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.186 2005/05/26 06:26:10 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.187 2005/05/26 06:50:09 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -300,12 +300,14 @@ my (%options) = (
 
 my $opt_check_distinfo	= true;
 my $opt_check_extra	= true;
+my $opt_check_expensive	= false;
 my $opt_check_MESSAGE	= true;
 my $opt_check_patches	= true;
 my $opt_check_PLIST	= true;
 my $opt_check_newpkg	= false;
 my (%checks) = (
 	"distinfo"	=> [\$opt_check_distinfo, "check distinfo file"],
+	"expensive"	=> [\$opt_check_expensive, "enable warnings that may require much time"],
 	"extra"		=> [\$opt_check_extra, "check various additional files"],
 	"MESSAGE"	=> [\$opt_check_MESSAGE, "check MESSAGE files"],
 	"patches"	=> [\$opt_check_patches, "check patches"],
@@ -1094,11 +1096,15 @@ sub readmakefile($$) {
 			if ($includefile =~ /\"([^\"]+)\"/) {
 				$includefile = $1;
 			}
-			if (exists($seen_Makefile_include{$includefile})
-			    || $includefile =~ qr"/buildlink3.mk$") {
+			if (exists($seen_Makefile_include{$includefile})) {
 				$contents .= "### pkglint ### skipped $includefile\n";
 				next;
 			}
+			if (!$opt_check_expensive && $includefile =~ qr"/buildlink3.mk$") {
+				$contents .= "### pkglint ### skipped $includefile\n";
+				next;
+			}
+
 			$seen_Makefile_include{$includefile} = true;
 			if ($includefile =~ qr"Makefile\.common$") {
 				$seen_Makefile_common = true;
@@ -1234,6 +1240,9 @@ sub checklines_direct_tools($) {
 		xmkmf);
 	my @cmd_tools = qw(
 		file gunzip gzip);
+	my $tools = join("|", @tools, @cmd_tools);
+	my $regex_tools = qr"(?:^|\s|/)(${tools})(?:\s|$)";
+
 	my @ok_vars = qw(
 		BUILDLINK_TRANSFORM BUILD_DEPENDS
 		COMMENT CONFLICTS
@@ -1245,9 +1254,9 @@ sub checklines_direct_tools($) {
 		SUBST_MESSAGE\\..*
 		.*_TARGET
 		USE_TOOLS);
-	my @ok_shellcmds = qw(
-		\\./Build\s+(?:install|test)
-		);
+	my @ok_shellcmds = (
+		qr"\./Build\s+(?:install|test)",
+		qr"\"[^\"]*${regex_tools}[^\"]*\"");
 
 	my %toolvar = ();
 	foreach my $tool (@tools) {
@@ -1257,14 +1266,12 @@ sub checklines_direct_tools($) {
 		$toolvar{$tool} = uc($tool)."_CMD";
 	}
 
-	my $tools = join("|", @tools, @cmd_tools);
-	my $regex_tools = qr"(?:^|\s|/)(${tools})(?:\s|$)";
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checklines_direct_tools] regex_tools=${regex_tools}");
 	my $ok_vars = join("|", @ok_vars);
 	my $regex_ok_vars = qr"^(?:${ok_vars})$";
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checklines_direct_tools] regex_ok_vars=${regex_ok_vars}");
 	my $ok_shellcmds = join("|", @ok_shellcmds);
 	my $regex_ok_shellcmds = qr"(?:${ok_shellcmds})";
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checklines_direct_tools] regex_tools=${regex_tools}");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checklines_direct_tools] regex_ok_vars=${regex_ok_vars}");
 	log_info(NO_FILE, NO_LINE_NUMBER, "[checklines_direct_tools] regex_ok_shellcmds=${regex_ok_shellcmds}");
 
 	foreach my $line (@{$lines}) {
