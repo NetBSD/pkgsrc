@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3545 2005/05/25 22:31:44 rillig Exp $
+$NetBSD: TODO,v 1.3546 2005/05/26 05:50:19 markd Exp $
 
 Suggested new packages
 ======================
@@ -711,7 +711,6 @@ Suggested package updates
 	o ncftp2-2.8.2
 	o ncview-1.92e
 	o neon-0.25.0
-	o netatalk-2.0.3
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
 	o netio-1.23
