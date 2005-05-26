@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.18 2004/07/31 21:01:54 kristerw Exp $
+$NetBSD: patch-ab,v 1.19 2005/05/26 02:10:49 markd Exp $
 
---- configure.orig	Tue Mar 18 15:19:12 2003
-+++ configure	Sat Jul 31 03:56:01 2004
-@@ -822,9 +822,13 @@
+--- configure.orig	2003-03-19 02:19:12.000000000 +1200
++++ configure
+@@ -822,9 +822,13 @@ case "${canonical}" in
        sparc*-*-netbsd*)	machine=sparc ;;
        vax-*-netbsd*)	machine=vax ;;
        arm-*-netbsd*)	machine=arm ;;
@@ -16,11 +16,18 @@ $NetBSD: patch-ab,v 1.18 2004/07/31 21:01:54 kristerw Exp $
    ## OpenBSD ports
    *-*-openbsd* )
      opsys=openbsd
-@@ -9123,6 +9127,22 @@
- 
+@@ -1659,6 +1663,7 @@ case "${canonical}" in
+       *-sysv4.2uw* )	  	opsys=unixware; NON_GNU_CPP=/lib/cpp ;;
+       *-386bsd* )	        opsys=386bsd ;;
+       *-freebsd* )	        opsys=freebsd ;;
++      *-dragonfly* )	        opsys=freebsd ;;
+       *-nextstep* )             opsys=nextstep ;;
+       ## Otherwise, we'll fall through to the generic opsys code at the bottom.
+     esac
+@@ -9124,6 +9129,22 @@ EOF
  fi
  
-+
+ 
 +# NETBSD: NetBSD's newer run-time linker fix.
 +if test $opsys = netbsd; then
 +  if test -f /usr/lib/crti.o; then
@@ -36,6 +43,7 @@ $NetBSD: patch-ab,v 1.18 2004/07/31 21:01:54 kristerw Exp $
 +
 +  fi
 +fi
- 
++
  # Set up the CFLAGS for real compilation, so we can substitute it.
  CFLAGS="$REAL_CFLAGS"
+ CPPFLAGS="$REAL_CPPFLAGS"
