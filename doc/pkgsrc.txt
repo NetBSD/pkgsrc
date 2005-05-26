@@ -173,16 +173,17 @@ II. The pkgsrc developer's guide
         13.1. General operation
 
             13.1.1. How to pull in variables from /etc/mk.conf
-            13.1.2. Restricted packages
-            13.1.3. Handling dependencies
-            13.1.4. Handling conflicts with other packages
-            13.1.5. Packages that cannot or should not be built
-            13.1.6. Packages which should not be deleted, once installed
-            13.1.7. Handling packages with security problems
-            13.1.8. How to handle compiler bugs
-            13.1.9. How to handle incrementing versions when fixing an existing
-                package
-            13.1.10. Portability of packages
+            13.1.2. Where to install documentation
+            13.1.3. Restricted packages
+            13.1.4. Handling dependencies
+            13.1.5. Handling conflicts with other packages
+            13.1.6. Packages that cannot or should not be built
+            13.1.7. Packages which should not be deleted, once installed
+            13.1.8. Handling packages with security problems
+            13.1.9. How to handle compiler bugs
+            13.1.10. How to handle incrementing versions when fixing an
+                existing package
+            13.1.11. Portability of packages
 
         13.2. Possible downloading issues
 
@@ -1956,16 +1957,17 @@ Table of Contents
     13.1. General operation
 
         13.1.1. How to pull in variables from /etc/mk.conf
-        13.1.2. Restricted packages
-        13.1.3. Handling dependencies
-        13.1.4. Handling conflicts with other packages
-        13.1.5. Packages that cannot or should not be built
-        13.1.6. Packages which should not be deleted, once installed
-        13.1.7. Handling packages with security problems
-        13.1.8. How to handle compiler bugs
-        13.1.9. How to handle incrementing versions when fixing an existing
+        13.1.2. Where to install documentation
+        13.1.3. Restricted packages
+        13.1.4. Handling dependencies
+        13.1.5. Handling conflicts with other packages
+        13.1.6. Packages that cannot or should not be built
+        13.1.7. Packages which should not be deleted, once installed
+        13.1.8. Handling packages with security problems
+        13.1.9. How to handle compiler bugs
+        13.1.10. How to handle incrementing versions when fixing an existing
             package
-        13.1.10. Portability of packages
+        13.1.11. Portability of packages
 
     13.2. Possible downloading issues
 
@@ -2947,7 +2949,7 @@ libraries.
 Please take careful consideration before adjusting BUILDLINK_DEPENDS.pkg as we
 don't want to cause unneeded package deletions and rebuilds. In many cases, new
 versions of packages work just fine with older dependencies. See Section
-13.1.3, "Handling dependencies" and Chapter 10, Buildlink methodology for more
+13.1.4, "Handling dependencies" and Chapter 10, Buildlink methodology for more
 information about dependencies on other packages, including the
 BUILDLINK_RECOMMENDED and RECOMMENDED definitions.
 
@@ -3615,15 +3617,17 @@ Table of Contents
 13.1. General operation
 
     13.1.1. How to pull in variables from /etc/mk.conf
-    13.1.2. Restricted packages
-    13.1.3. Handling dependencies
-    13.1.4. Handling conflicts with other packages
-    13.1.5. Packages that cannot or should not be built
-    13.1.6. Packages which should not be deleted, once installed
-    13.1.7. Handling packages with security problems
-    13.1.8. How to handle compiler bugs
-    13.1.9. How to handle incrementing versions when fixing an existing package
-    13.1.10. Portability of packages
+    13.1.2. Where to install documentation
+    13.1.3. Restricted packages
+    13.1.4. Handling dependencies
+    13.1.5. Handling conflicts with other packages
+    13.1.6. Packages that cannot or should not be built
+    13.1.7. Packages which should not be deleted, once installed
+    13.1.8. Handling packages with security problems
+    13.1.9. How to handle compiler bugs
+    13.1.10. How to handle incrementing versions when fixing an existing
+        package
+    13.1.11. Portability of packages
 
 13.2. Possible downloading issues
 
@@ -3692,7 +3696,13 @@ Using CFLAGS= (i.e. without the "+") may lead to problems with packages that
 need to add their own flags. Also, you may want to take a look at the devel/
 cpuflags package if you're interested in optimization for the current CPU.
 
-13.1.2. Restricted packages
+13.1.2. Where to install documentation
+
+Documentation should be installed into ${PREFIX}/share/doc/${PKGBASE} or $
+{PREFIX}/share/doc/${PKGNAME} (the latter includes the version number of the
+package).
+
+13.1.3. Restricted packages
 
 Some licenses restrict how software may be re-distributed. In order to satisfy
 these restrictions, the package system defines five make variables that can be
@@ -3731,7 +3741,7 @@ Please note that the use of NO_PACKAGE, IGNORE, NO_CDROM, or other generic make
 variables to denote restrictions is deprecated, because they unconditionally
 prevent users from generating binary packages!
 
-13.1.3. Handling dependencies
+13.1.4. Handling dependencies
 
 Your package may depend on some other package being present - and there are
 various ways of expressing this dependency. pkgsrc supports the BUILD_DEPENDS
@@ -3811,7 +3821,7 @@ version numbers recognized by pkg_info(1).
     different versions of binary packages installed.
 
     For security fixes, please update the package vulnerabilities file as well
-    as setting RECOMMENDED, see Section 13.1.7, "Handling packages with
+    as setting RECOMMENDED, see Section 13.1.8, "Handling packages with
     security problems" for more information.
 
  4. If your package needs some executable to be able to run correctly and if
@@ -3846,7 +3856,7 @@ gettext package. The latter adds a build dependency on either an installed
 version of an older gettext package, or if it isn't, installs the devel/
 gettext-m4 package.
 
-13.1.4. Handling conflicts with other packages
+13.1.5. Handling conflicts with other packages
 
 Your package may conflict with other packages a user might already have
 installed on his system, e.g. if your package installs the same set of files
@@ -3868,7 +3878,7 @@ Packages will automatically conflict with other packages with the name prefix
 and a different version string. "Xaw3d-1.5" e.g. will automatically conflict
 with the older version "Xaw3d-1.3".
 
-13.1.5. Packages that cannot or should not be built
+13.1.6. Packages that cannot or should not be built
 
 There are several reasons why a package might be instructed to not build under
 certain circumstances. If the package builds and runs on most platforms, the
@@ -3882,7 +3892,7 @@ PKG_FAIL_REASON to a descriptive message.
 IGNORE is deprecated because it didn't provide enough information to determine
 whether the build should fail.
 
-13.1.6. Packages which should not be deleted, once installed
+13.1.7. Packages which should not be deleted, once installed
 
 To ensure that a package may not be deleted, once it has been installed, the
 PKG_PRESERVE definition should be set in the package Makefile. This will be
@@ -3890,7 +3900,7 @@ carried into any binary package that is made from this pkgsrc entry. A
 "preserved" package will not be deleted using pkg_delete(1) unless the "-f"
 option is used.
 
-13.1.7. Handling packages with security problems
+13.1.8. Handling packages with security problems
 
 When a vulnerability is found, this should be noted in localsrc/security/
 advisories/pkg-vulnerabilities, and after the commit of that file, it should be
@@ -3905,7 +3915,7 @@ BUILDLINK_* definitions.
 Also, if the fix should be applied to the stable pkgsrc branch, be sure to
 submit a pullup request!
 
-13.1.8. How to handle compiler bugs
+13.1.9. How to handle compiler bugs
 
 Some source files trigger bugs in the compiler, based on combinations of
 compiler version and architecture and almost always relation to optimisation
@@ -3916,7 +3926,7 @@ Typically a workaround involves testing the MACHINE_ARCH and compiler version,
 disabling optimisation for that file/MACHINE_ARCH/compiler combination, and
 documenting it in pkgsrc/doc/HACKS. See that file for a number of examples!
 
-13.1.9. How to handle incrementing versions when fixing an existing package
+13.1.10. How to handle incrementing versions when fixing an existing package
 
 When making fixes to an existing package it can be useful to change the version
 number in PKGNAME. To avoid conflicting with future versions by the original
@@ -3934,14 +3944,14 @@ like:
 
 DISTNAME=   foo-17.43
 
-13.1.10. Portability of packages
+13.1.11. Portability of packages
 
 One appealing feature of pkgsrc is that it runs on many different platforms. As
 a result, it is important to ensure, where possible, that packages in pkgsrc
 are portable. There are some particular details you should pay attention to
 while working on pkgsrc.
 
-13.1.10.1. ${INSTALL}, ${INSTALL_DATA_DIR}, ...
+13.1.11.1. ${INSTALL}, ${INSTALL_DATA_DIR}, ...
 
 The BSD-compatible install supplied with some operating systems will not
 perform more than one operation at a time. As such, you should call "${INSTALL}
