@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.10 2005/01/19 11:35:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/26 14:31:42 markd Exp $
 bin/kile
 share/applications/kde/kile.desktop
+share/doc/kde/HTML/da/kile/common
+share/doc/kde/HTML/da/kile/index.cache.bz2
+share/doc/kde/HTML/da/kile/index.docbook
 share/doc/kde/HTML/en/kile/TODO
 share/doc/kde/HTML/en/kile/common
 share/doc/kde/HTML/en/kile/index.cache.bz2
@@ -19,9 +22,50 @@ share/doc/kde/HTML/en/kile/snap_sidebarmenu.png
 share/doc/kde/HTML/en/kile/snap_structview_label.png
 share/doc/kde/HTML/en/kile/snap_usertag.png
 share/doc/kde/HTML/en/kile/snap_wizardry.png
-share/kde/apps/katepart/syntax/bibtex.xml
+share/doc/kde/HTML/et/kile/common
+share/doc/kde/HTML/et/kile/index.cache.bz2
+share/doc/kde/HTML/et/kile/index.docbook
+share/doc/kde/HTML/it/kile/common
+share/doc/kde/HTML/it/kile/index.cache.bz2
+share/doc/kde/HTML/it/kile/index.docbook
+share/doc/kde/HTML/it/kile/snap_autocomplete.png
+share/doc/kde/HTML/it/kile/snap_compile_error.png
+share/doc/kde/HTML/it/kile/snap_editusertag.png
+share/doc/kde/HTML/it/kile/snap_encoding.png
+share/doc/kde/HTML/it/kile/snap_kdvi_settings.png
+share/doc/kde/HTML/it/kile/snap_projectview.png
+share/doc/kde/HTML/it/kile/snap_projectview_add.png
+share/doc/kde/HTML/it/kile/snap_ref_choose.png
+share/doc/kde/HTML/it/kile/snap_ref_select.png
+share/doc/kde/HTML/it/kile/snap_sidebarmenu.png
+share/doc/kde/HTML/it/kile/snap_structview_label.png
+share/doc/kde/HTML/it/kile/snap_usertag.png
+share/doc/kde/HTML/it/kile/snap_wizardry.png
+share/doc/kde/HTML/nl/kile/common
+share/doc/kde/HTML/nl/kile/index.cache.bz2
+share/doc/kde/HTML/nl/kile/index.docbook
+share/doc/kde/HTML/pt/kile/common
+share/doc/kde/HTML/pt/kile/index.cache.bz2
+share/doc/kde/HTML/pt/kile/index.docbook
+share/doc/kde/HTML/sv/kile/common
+share/doc/kde/HTML/sv/kile/index.cache.bz2
+share/doc/kde/HTML/sv/kile/index.docbook
+share/doc/kde/HTML/sv/kile/snap_autocomplete.png
+share/doc/kde/HTML/sv/kile/snap_compile_error.png
+share/doc/kde/HTML/sv/kile/snap_editusertag.png
+share/doc/kde/HTML/sv/kile/snap_encoding.png
+share/doc/kde/HTML/sv/kile/snap_kdvi_settings.png
+share/doc/kde/HTML/sv/kile/snap_projectview.png
+share/doc/kde/HTML/sv/kile/snap_projectview_add.png
+share/doc/kde/HTML/sv/kile/snap_ref_choose.png
+share/doc/kde/HTML/sv/kile/snap_ref_select.png
+share/doc/kde/HTML/sv/kile/snap_sidebarmenu.png
+share/doc/kde/HTML/sv/kile/snap_structview_label.png
+share/doc/kde/HTML/sv/kile/snap_usertag.png
+share/doc/kde/HTML/sv/kile/snap_wizardry.png
 share/kde/apps/kconf_update/kile.upd
 share/kde/apps/kconf_update/kile1.6_upd.pl
+share/kde/apps/kconf_update/kile1.7_upd.pl
 share/kde/apps/kile/complete/abbreviation/example.cwl
 share/kde/apps/kile/complete/dictionary/example.cwl
 share/kde/apps/kile/complete/tex/Common.cwl
@@ -39,6 +83,7 @@ share/kde/apps/kile/encodings/latin5.enc
 share/kde/apps/kile/encodings/latin9.enc
 share/kde/apps/kile/help/latex-kile.lst
 share/kde/apps/kile/help/latex-tetex.lst
+share/kde/apps/kile/help/latex-tetex3.lst
 share/kde/apps/kile/icons/hicolor/16x16/actions/acute.png
 share/kde/apps/kile/icons/hicolor/16x16/actions/bar.png
 share/kde/apps/kile/icons/hicolor/16x16/actions/breve.png
@@ -134,6 +179,9 @@ share/kde/apps/kile/icons/hicolor/22x22/actions/multicolumn.png
 share/kde/apps/kile/icons/hicolor/22x22/actions/newline.png
 share/kde/apps/kile/icons/hicolor/22x22/actions/output_win.png
 share/kde/apps/kile/icons/hicolor/22x22/actions/pdflatex.png
+share/kde/apps/kile/icons/hicolor/22x22/actions/preview_env.png
+share/kde/apps/kile/icons/hicolor/22x22/actions/preview_sel.png
+share/kde/apps/kile/icons/hicolor/22x22/actions/preview_subdoc.png
 share/kde/apps/kile/icons/hicolor/22x22/actions/ps2pdf.png
 share/kde/apps/kile/icons/hicolor/22x22/actions/quick.png
 share/kde/apps/kile/icons/hicolor/22x22/actions/quickwizard.png
@@ -149,10 +197,14 @@ share/kde/apps/kile/icons/hicolor/22x22/actions/warnnext.png
 share/kde/apps/kile/icons/hicolor/22x22/actions/warnprev.png
 share/kde/apps/kile/icons/hicolor/22x22/actions/watchfile.png
 share/kde/apps/kile/icons/hicolor/22x22/actions/wizard_array.png
+share/kde/apps/kile/icons/hicolor/22x22/actions/wizard_float.png
+share/kde/apps/kile/icons/hicolor/22x22/actions/wizard_math.png
+share/kde/apps/kile/icons/hicolor/22x22/actions/wizard_pstools.png
 share/kde/apps/kile/icons/hicolor/22x22/actions/wizard_tabbing.png
 share/kde/apps/kile/icons/hicolor/22x22/actions/wizard_tabular.png
 share/kde/apps/kile/icons/hicolor/32x32/actions/bibtex.png
 share/kde/apps/kile/icons/hicolor/32x32/actions/usertool.png
+share/kde/apps/kile/icons/hicolor/64x64/actions/preview.png
 share/kde/apps/kile/kilestdtools.rc
 share/kde/apps/kile/kileui.rc
 share/kde/apps/kile/mathsymbols/img1.png
@@ -620,23 +672,49 @@ share/kde/apps/kile/test/test_plain.tex
 share/kde/apps/kile/test/test_src.tex
 share/kde/apps/kile/tips
 share/kde/config.kcfg/kile.kcfg
-share/kde/icons/crystalsvg/128x128/apps/kile.png
-share/kde/icons/crystalsvg/16x16/apps/kile.png
-share/kde/icons/crystalsvg/22x22/apps/kile.png
-share/kde/icons/crystalsvg/32x32/apps/kile.png
-share/kde/icons/crystalsvg/48x48/apps/kile.png
-share/kde/icons/crystalsvg/64x64/apps/kile.png
 share/kde/icons/hicolor/128x128/apps/kile.png
 share/kde/icons/hicolor/16x16/apps/kile.png
 share/kde/icons/hicolor/22x22/apps/kile.png
 share/kde/icons/hicolor/32x32/apps/kile.png
 share/kde/icons/hicolor/48x48/apps/kile.png
 share/kde/icons/hicolor/64x64/apps/kile.png
+share/kde/icons/hicolor/scalable/apps/kile.svgz
 share/kde/mimelnk/text/x-kilepr.desktop
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kile.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kile.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kile.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kile.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kile.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kile.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kile.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kile.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kile.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/kile.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kile.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/kile.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kile.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/kile.mo
+@comment in kde: @dirrm share/kde/mimelnk/text
+@dirrm share/kde/icons/hicolor/scalable/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/kile/test
 @dirrm share/kde/apps/kile/templates
 @dirrm share/kde/apps/kile/pics
 @dirrm share/kde/apps/kile/mathsymbols
+@dirrm share/kde/apps/kile/icons/hicolor/64x64/actions
+@dirrm share/kde/apps/kile/icons/hicolor/64x64
 @dirrm share/kde/apps/kile/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/kile/icons/hicolor/32x32
 @dirrm share/kde/apps/kile/icons/hicolor/22x22/actions
@@ -652,4 +730,20 @@ share/kde/mimelnk/text/x-kilepr.desktop
 @dirrm share/kde/apps/kile/complete/abbreviation
 @dirrm share/kde/apps/kile/complete
 @dirrm share/kde/apps/kile
+@comment in kde: @dirrm share/kde/apps/kconf_update
+@comment in kde: @dirrm share/kde/apps
+@dirrm share/doc/kde/HTML/sv/kile
+@comment in kde: @dirrm share/doc/kde/HTML/sv
+@dirrm share/doc/kde/HTML/pt/kile
+@comment in kde: @dirrm share/doc/kde/HTML/pt
+@dirrm share/doc/kde/HTML/nl/kile
+@comment in kde: @dirrm share/doc/kde/HTML/nl
+@dirrm share/doc/kde/HTML/it/kile
+@comment in kde: @dirrm share/doc/kde/HTML/it
+@dirrm share/doc/kde/HTML/et/kile
+@comment in kde: @dirrm share/doc/kde/HTML/et
 @dirrm share/doc/kde/HTML/en/kile
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@dirrm share/doc/kde/HTML/da/kile
+@comment in kde: @dirrm share/doc/kde/HTML/da
+@comment in kde: @dirrm share/applications/kde
