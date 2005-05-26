@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.30 2005/04/27 14:31:05 adam Exp $
+$NetBSD: distinfo,v 1.31 2005/05/26 21:22:27 kristerw Exp $
 
 SHA1 (octave-2.9.2.tar.bz2) = 53ea2f6a4007fdad374161d5e04f87a3aaf839c0
 RMD160 (octave-2.9.2.tar.bz2) = a4a6dcfa8935db5397db8e6a7633b3dc55f314ff
 Size (octave-2.9.2.tar.bz2) = 6166148 bytes
-SHA1 (patch-aa) = 479f436f9d75979122bb4244e6fc660e53510d92
+SHA1 (patch-aa) = 271c3463dec0b1859f86cf2340cd3fd61bc3d209
 SHA1 (patch-ac) = 16ec66a68e5ed80064d811cd1c8dda226a2f5ede
 SHA1 (patch-ad) = 01d0fb5878897a91d33e2cb7cbc6d2575a04c464
 SHA1 (patch-ae) = 79544d09268d41647b081680fc839f4fe481b111
