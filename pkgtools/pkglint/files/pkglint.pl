@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.187 2005/05/26 06:50:09 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.188 2005/05/26 07:07:00 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -300,14 +300,14 @@ my (%options) = (
 
 my $opt_check_distinfo	= true;
 my $opt_check_extra	= true;
-my $opt_check_expensive	= false;
+my $opt_check_bl3	= true;
 my $opt_check_MESSAGE	= true;
 my $opt_check_patches	= true;
 my $opt_check_PLIST	= true;
 my $opt_check_newpkg	= false;
 my (%checks) = (
 	"distinfo"	=> [\$opt_check_distinfo, "check distinfo file"],
-	"expensive"	=> [\$opt_check_expensive, "enable warnings that may require much time"],
+	"bl3"		=> [\$opt_check_bl3, "check buildlink3 files"],
 	"extra"		=> [\$opt_check_extra, "check various additional files"],
 	"MESSAGE"	=> [\$opt_check_MESSAGE, "check MESSAGE files"],
 	"patches"	=> [\$opt_check_patches, "check patches"],
@@ -632,6 +632,12 @@ sub check_package() {
 		}
 		if ($patches && ! -f "$opt_packagedir/$distinfo_file" ) {
 			log_warning("$opt_packagedir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makepatchsum'.");
+		}
+	}
+	if ($opt_check_bl3) {
+		foreach my $bl3 ("$opt_packagedir/$pkgdir/buildlink3.mk") {
+			next unless -f $bl3;
+			checkfile_buildlink3_mk($bl3);
 		}
 	}
 	if ($opt_check_extra) {
@@ -963,6 +969,21 @@ sub checkfile_PLIST($) {
 	return true;
 }
 
+sub checkfile_buildlink3_mk($) {
+	my ($file) = @_;
+	my ($fname) = ("$opt_packagedir/$file");
+	my ($lines);
+
+	if (!($lines = load_file($fname))) {
+		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
+		return false;
+	}
+	checklines_deprecated_variables($lines);
+	checklines_trailing_empty_lines($lines);
+	checklines_direct_tools($lines);
+	return true;
+}
+
 sub checkperms($) {
 	my ($file) = @_;
 
@@ -1100,7 +1121,7 @@ sub readmakefile($$) {
 				$contents .= "### pkglint ### skipped $includefile\n";
 				next;
 			}
-			if (!$opt_check_expensive && $includefile =~ qr"/buildlink3.mk$") {
+			if (!$opt_check_bl3 && $includefile =~ qr"/buildlink3.mk$") {
 				$contents .= "### pkglint ### skipped $includefile\n";
 				next;
 			}
