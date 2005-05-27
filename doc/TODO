@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3556 2005/05/27 09:34:56 wiz Exp $
+$NetBSD: TODO,v 1.3557 2005/05/27 11:15:06 salo Exp $
 
 Suggested new packages
 ======================
@@ -561,6 +561,7 @@ Suggested package updates
 	o guile-pg-0.27
 	o guile-www-1.1.1
 	o gwenview-1.2.0 [pkg/29878]
+	o gxine-0.4.5 [salo]
 	o gzrecover-0.3
 	o hackbot-2.21
 	o hashcash-1.16
