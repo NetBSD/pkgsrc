@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.37 2004/10/13 17:51:32 tv Exp $
+# $NetBSD: Makefile,v 1.37.4.1 2005/05/27 00:46:12 snj Exp $
 #
 
-DISTNAME=	bzip2-1.0.2
-PKGREVISION=	2
+DISTNAME=	bzip2-1.0.3
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://sources.redhat.com/pub/bzip2/v102/
+MASTER_SITES=	http://www.bzip.org/1.0.3/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://sources.redhat.com/bzip2/
+HOMEPAGE=	http://www.bzip.org/
 COMMENT=	Block-sorting file compressor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
