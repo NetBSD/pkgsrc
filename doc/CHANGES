@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10222 2005/05/27 13:36:35 augustss Exp $
+$NetBSD: CHANGES,v 1.10223 2005/05/27 13:48:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2637,3 +2637,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/mhonarc to 2.6.11 [adrianp 2005-05-27]
 	Updated multimedia/gxine to 0.4.5 [salo 2005-05-27]
 	Updated devel/darcs to 1.0.3 [augustss 2005-05-27]
+	Updated chat/gg2 to 2.2.6 [adam 2005-05-27]
