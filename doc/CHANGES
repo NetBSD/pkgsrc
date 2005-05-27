@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10215 2005/05/26 23:59:14 wiz Exp $
+$NetBSD: CHANGES,v 1.10216 2005/05/27 00:21:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2631,3 +2631,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated editors/vim-share to 6.3.071nb1 [jmmv 2005-05-26]
 	Updated editors/vim-xaw to 6.3.071nb1 [jmmv 2005-05-26]
 	Updated net/openslp to 1.2.1 [adrianp 2005-05-26]
+	Updated www/elinks to 0.10.5 [wiz 2005-05-27]
