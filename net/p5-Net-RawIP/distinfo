@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/27 15:12:53 bouyer Exp $
+
+SHA1 (Net-RawIP-0.2.tar.gz) = cbd99091d868ed2fc4c6ce1f43b7cc1849db7421
+RMD160 (Net-RawIP-0.2.tar.gz) = fee79ce9f08aad4d1ea3b98f79b8dc5fc2184e71
+Size (Net-RawIP-0.2.tar.gz) = 32483 bytes
