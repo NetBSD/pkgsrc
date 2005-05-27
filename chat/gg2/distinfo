@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.9 2005/04/13 16:31:26 rillig Exp $
+$NetBSD: distinfo,v 1.10 2005/05/27 13:47:05 adam Exp $
 
-SHA1 (gg2-2.2.5.tar.bz2) = c6642ae186194618019c3467c8d81eb80f5f0c23
-RMD160 (gg2-2.2.5.tar.bz2) = 3871c13c55caa3647bb9d9fa73165f897d11f55d
-Size (gg2-2.2.5.tar.bz2) = 1087478 bytes
-SHA1 (patch-aa) = 1e27a4b03da73dd0c15efd376fe506ef126580d0
+SHA1 (gg2-2.2.6.tar.gz) = 5142607ab6de127f64c3cf54a271dfae4d434bd6
+RMD160 (gg2-2.2.6.tar.gz) = 75b6185bf560edd3207bbe9d6cd5bb3c37cc0193
+Size (gg2-2.2.6.tar.gz) = 1371439 bytes
+SHA1 (patch-aa) = cf6fa7e1bf79dcaf90a10c4bc20b715cca67142e
 SHA1 (patch-af) = 9e1cc4b53f069e520a165bfed00c8b6692216ce9
-SHA1 (patch-ag) = e98012fda6ca186fecd1fedf0b43a16b0129d5fb
+SHA1 (patch-ag) = d7ddded776a5d61b57eae9a03e63269e22fe8437
 SHA1 (patch-ah) = b52abe3ed2fe478b7b55df78df299c3d7b706086
 SHA1 (patch-ai) = 39cd62d72007ba875dcb09156d53ab8852328eec
 SHA1 (patch-aj) = 0eeb9ec958e48d9d36f4ae078e51196f1fca158e
