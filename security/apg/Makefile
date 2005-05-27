@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/06/27 13:16:36 grant Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/27 10:32:01 zuntum Exp $
 #
 
-DISTNAME=	apg-2.1.0
+DISTNAME=	apg-2.2.3
 CATEGORIES=	security
 MASTER_SITES=	http://www.adel.nursat.kz/apg/download/
 
