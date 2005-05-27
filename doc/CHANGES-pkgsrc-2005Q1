@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.107 2005/05/27 10:46:10 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.108 2005/05/27 13:41:22 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -243,3 +243,5 @@ Pullup ticket 516 - requested by Lubomir Sedlacik
 security update for bzip2
 Pullup ticket 517 - requested by Adrian Portelli
 security update for openslp
+Pullup ticket 519 - requested by Adrian Portelli
+security update for mhonarc
