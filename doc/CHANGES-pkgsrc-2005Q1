@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.108 2005/05/27 13:41:22 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.109 2005/05/27 14:03:55 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -245,3 +245,5 @@ Pullup ticket 517 - requested by Adrian Portelli
 security update for openslp
 Pullup ticket 519 - requested by Adrian Portelli
 security update for mhonarc
+Pullup ticket 513 - requested by Matthias Scheler
+security fix for net-snmp
