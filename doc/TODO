@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3553 2005/05/26 16:41:35 wiz Exp $
+$NetBSD: TODO,v 1.3554 2005/05/27 00:22:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -345,6 +345,7 @@ Suggested package updates
 	o ap2-transform-0.6.0
 	o apache-ant-1.6.4
 	o apcupsd-3.10.16 [requires threads, doesn't work with pth on 1.6]
+	o apg-2.2.3 [pkg/30345|zuntum]
 	o apr-1.1.1
 	o apsfilter-7.2.6
 	o aqsis-0.9.2
@@ -467,7 +468,6 @@ Suggested package updates
 	o egtk-0.3.6
 	o electricfence-2.4.13
 	o elf-0.5.4
-	o elinks-0.10.5 [pkg/30125]
 	o elm-me-2.4pl121e
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
