@@ -1,21 +1,23 @@
-$NetBSD: patch-aa,v 1.10 2004/03/29 01:18:41 tv Exp $
+$NetBSD: patch-aa,v 1.10.8.1 2005/05/27 00:46:12 snj Exp $
 
---- Makefile.orig	Fri Jan 25 18:34:53 2002
-+++ Makefile	Mon Mar 15 11:42:02 2004
-@@ -2,43 +2,35 @@
+--- Makefile.orig	2005-02-17 12:28:24.000000000 +0100
++++ Makefile	2005-05-26 16:53:13.000000000 +0200
+@@ -2,42 +2,35 @@
  SHELL=/bin/sh
  
  # To assist in cross-compiling
 -CC=gcc
+-AR=ar
+-RANLIB=ranlib
+-LDFLAGS=
 +CC=${LIBTOOL} --mode=compile ${REALCC}
 +LD=${LIBTOOL} --mode=link ${REALCC}
- AR=ar
- RANLIB=ranlib
--LDFLAGS=
++#AR=ar
++#RANLIB=ranlib
++#LDFLAGS=
  
- # Suitably paranoid flags to avoid bugs in gcc-2.7
  BIGFILES=-D_FILE_OFFSET_BITS=64
--CFLAGS=-Wall -Winline -O2 -fomit-frame-pointer -fno-strength-reduce $(BIGFILES)
+-CFLAGS=-Wall -Winline -O -g $(BIGFILES)
 +CFLAGS+=$(BIGFILES)
  
 -# Where you want it installed when you do 'make install'
@@ -59,12 +61,12 @@ $NetBSD: patch-aa,v 1.10 2004/03/29 01:18:41 tv Exp $
 -	fi
 +libbz2.la: $(OBJS)
 +	rm -f libbz2.la
-+	$(LD) $(LDFLAGS) -o libbz2.la $(OBJS) -version-info 0:0  \
++	$(LD) $(LDFLAGS) -o libbz2.la $(OBJS) -version-info 0:0	\
 +		-rpath $(PREFIX)/lib
  
  check: test
  test: bzip2
-@@ -102,20 +94,20 @@
+@@ -100,20 +93,20 @@
  	sample1.rb2 sample2.rb2 sample3.rb2 \
  	sample1.tst sample2.tst sample3.tst
  
