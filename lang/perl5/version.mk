@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.2 2005/05/27 22:15:34 jlam Exp $
+# $NetBSD: version.mk,v 1.3 2005/05/27 22:15:53 jlam Exp $
 #
 # Distill the PERL5_REQD list into a single value that is the highest
 # version of Perl required.
@@ -17,7 +17,7 @@ _PERL5_PKG_SATISFIES_DEP=	yes
 .        for _dep_ in ${PERL5_REQD:S/^/perl>=/}
 .          if !empty(_PERL5_PKG_SATISFIES_DEP:M[yY][eE][sS])
 _PERL5_PKG_SATISFIES_DEP!=	\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${_pkg_} 2>/dev/null; then	\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${_pkg_:Q} 2>/dev/null; then	\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
