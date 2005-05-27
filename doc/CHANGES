@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10218 2005/05/27 08:48:24 adrianp Exp $
+$NetBSD: CHANGES,v 1.10219 2005/05/27 10:35:49 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2633,3 +2633,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/openslp to 1.2.1 [adrianp 2005-05-26]
 	Updated www/elinks to 0.10.5 [wiz 2005-05-27]
 	Updated sysutils/cdrdao to 1.2.0 [adrianp 2005-05-27]
+	Updated security/apg to 2.2.3 [zuntum 2005-05-27]
