@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10219 2005/05/27 10:35:49 zuntum Exp $
+$NetBSD: CHANGES,v 1.10220 2005/05/27 11:45:56 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2634,3 +2634,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/elinks to 0.10.5 [wiz 2005-05-27]
 	Updated sysutils/cdrdao to 1.2.0 [adrianp 2005-05-27]
 	Updated security/apg to 2.2.3 [zuntum 2005-05-27]
+	Updated mail/mhonarc to 2.6.11 [adrianp 2005-05-27]
