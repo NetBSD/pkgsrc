@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3555 2005/05/27 08:12:43 wiz Exp $
+$NetBSD: TODO,v 1.3556 2005/05/27 09:34:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -313,6 +313,7 @@ Suggested package updates
 	o PAM-0.78
 	o RealPlayerGold-10.0.4
 	o SmartEiffel-2.1
+	o TeXmacs-1.0.5.2
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
@@ -361,7 +362,7 @@ Suggested package updates
 	o astyle-1.15.3
 	o auctex-11.55
 	o autogen-5.7
-	o avidemux-2.0.38
+	o avidemux-2.0.40
 	o avl-2.0.1
 	o avr-libc-1.2.3
 	o awstats-6.4
@@ -376,11 +377,12 @@ Suggested package updates
 	o bind-9.3.1 [pkg/30152]
 	o bioperl-1.5.0
 	o bitlbee-0.92 [pkg/30096]
-	o bittorrent-4.1.0
+	o bittorrent-4.1.1
 	o blackbox-0.70
 	o blitz++-0.8
 	o bmake-20050322
 	o boaconstructor-0.3.1
+	o boehm-gc-6.5
 	o bogofilter-0.94.12
 	o bonobo-conf-0.16
 	o boson-0.10
@@ -432,10 +434,11 @@ Suggested package updates
 	o cwtext-0.94
 	o cxref-1.6
 	o cy-login-1.5.28
-	o cygwin_lib-1.5.16.1
+	o cygwin_lib-1.5.17.1
 	o cyrus-imapd21-2.1.18
 	o dact-0.8.37
 	o dar-2.2.0
+	o darcs-1.0.3
 	o dbench-3.03
 	o dbus-0.31 [0.2x API more common -- new package?]
 	o dc_gui2-0.80
@@ -446,7 +449,7 @@ Suggested package updates
 	o devtodo-0.1.18
 	o diction-1.08
 	o diffstat-1.38
-	o dirac-0.5.1
+	o dirac-0.5.2
 	o dirdiff-2.0
 	o distcc-2.18.3
 	o dmalloc-5.4.2
@@ -529,7 +532,7 @@ Suggested package updates
 	o gkrellm1-moon-0.6
 	o gkrellm1-snmp-0.21
 	o gkrellm1-xmms-0.5.8
-	o gliv-1.9.2
+	o gliv-1.9.3
 	o gnats-4.1.0
 	o gnet1-1.1.9
 	o gnetman-20050325
@@ -542,7 +545,7 @@ Suggested package updates
 	o gpsim-devel-20041104
 	o gputils-0.13.0
 	o grace-5.1.18
-	o gramps-2.0.0 [does not work with newer py-gtk]
+	o gramps-2.0.1 [2.0.0 does not work with newer py-gtk]
 	o grap-1.32
 	o grep-2.5.1a
 	o grepmail-5.3030
@@ -632,6 +635,7 @@ Suggested package updates
 	o libgnomemm26-2.10.0
 	o libgnomeuimm26-2.10.0
 	o libhydrogen-0.9.0
+	o libidn-0.5.17
 	o libjit-0.0.4
 	o libksba-0.9.9
 	o liblive-2005.03.23
@@ -886,6 +890,7 @@ Suggested package updates
 	o plptools-0.13 [pkg/30244]
 	o pnet-0.6.10 [pkg/28555]
 	o poedit-1.3.2
+	o popa3d-1.0
 	o poppy-4.01
 	o poptop-1.2.3
 	o potrace-1.7
@@ -1074,6 +1079,7 @@ Suggested package updates
 	o tkman-2.2
 	o tlf-0.9.22
 	o tmake-1.13
+	o tnef-1.3.3
 	o tob-0.26
 	o top-3.6alpha9
 	o tor-0.0.9.9
