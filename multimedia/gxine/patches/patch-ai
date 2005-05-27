@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.1 2005/04/13 16:39:32 rillig Exp $
+$NetBSD: patch-ai,v 1.2 2005/05/27 12:09:27 salo Exp $
 
 Needed for ISO C90 compliance.
 
---- src/key_events.c.orig	Fri Dec 17 01:32:59 2004
-+++ src/key_events.c	Tue Apr 12 12:58:06 2005
-@@ -605,8 +605,8 @@ void kb_edit_show (void) {
+--- src/key_events.c.orig	2005-04-26 00:11:56.000000000 +0200
++++ src/key_events.c	2005-05-27 13:05:59.000000000 +0200
+@@ -610,8 +610,8 @@
  
  static void do_edit_binding (void)
  {
@@ -14,7 +14,7 @@ Needed for ISO C90 compliance.
  
    gtk_entry_set_text (GTK_ENTRY (kb_binding_desc), editkey.desc);
    gtk_entry_set_text (GTK_ENTRY (kb_binding_command), editkey.cmd);
-@@ -1056,9 +1056,7 @@ static JSBool js_keybindings_show (JSCon
+@@ -1080,9 +1080,7 @@
  
  /* Xine event mapping data */
  
@@ -25,7 +25,7 @@ Needed for ISO C90 compliance.
      { "ANGLE_NEXT", XINE_EVENT_INPUT_ANGLE_NEXT },
      { "ANGLE_PREVIOUS", XINE_EVENT_INPUT_ANGLE_PREVIOUS },
      { "DOWN", XINE_EVENT_INPUT_DOWN },
-@@ -1099,7 +1097,10 @@ static const kb_xine_event_map_t xine_in
+@@ -1123,7 +1121,10 @@
      { "9", XINE_EVENT_INPUT_NUMBER_9 },
      { "-", -1 }, /* null event */
      { "" }
@@ -37,19 +37,18 @@ Needed for ISO C90 compliance.
  };
  
  
-@@ -1129,10 +1130,7 @@ int kb_xine_event_lookup (const kb_xine_
-   return 0;
- }
+@@ -1170,9 +1171,7 @@
  
--
+ 
+ 
 -static const kb_xine_event_map_t xine_vdr = {
 -  "VDR",
 -  {
 +static const kb_xine_event_id_t xine_vdr_ids[] = {
+     { "AUDIO", XINE_EVENT_VDR_MUTE + 1 /* ..._VDR_AUDIO */ },
      { "BACK", XINE_EVENT_VDR_BACK },
      { "BLUE", XINE_EVENT_VDR_BLUE },
-     { "CHANNELMINUS", XINE_EVENT_VDR_CHANNELMINUS },
-@@ -1166,7 +1164,10 @@ static const kb_xine_event_map_t xine_vd
+@@ -1207,7 +1206,10 @@
      { "VOLPLUS", XINE_EVENT_VDR_VOLPLUS },
      { "YELLOW", XINE_EVENT_VDR_YELLOW },
      { "" }
@@ -60,4 +59,4 @@ Needed for ISO C90 compliance.
 +  "VDR", &xine_vdr_ids
  };
  
- static JSBool js_vdr (JSContext *cx, JSObject *obj, uintN argc,
+ JSBool js_event_generic (JSContext *cx, JSObject *obj, uintN argc, jsval *argv,
