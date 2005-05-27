@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.105 2005/05/23 10:38:05 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.106 2005/05/27 01:01:05 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -237,3 +237,7 @@ Pullup ticket 510 - requested by Adrian Portelli
 security fix for freeradius
 Pullup ticket 499 - requested by Thomas Klausner
 various changes in bulk/upload script
+Pullup ticket 515 - requested by Lubomir Sedlacik
+security update for ImageMagick
+Pullup ticket 516 - requested by Lubomir Sedlacik
+security update for bzip2
