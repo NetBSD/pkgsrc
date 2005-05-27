@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:10:05 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/05/27 10:32:01 zuntum Exp $
 
-SHA1 (apg-2.1.0.tar.gz) = 415aeeae944c184bdc67ef36af9ea68c062c7cf9
-RMD160 (apg-2.1.0.tar.gz) = 4d4999cef5acb88432bf8fc5e9067cb3a3f62a76
-Size (apg-2.1.0.tar.gz) = 99202 bytes
+SHA1 (apg-2.2.3.tar.gz) = 7bdbc931ef8477717186dc3ab3a2d3c25012b4ca
+RMD160 (apg-2.2.3.tar.gz) = ccc1d8a90fcac90717a9ee16fcc85de53d5ef90d
+Size (apg-2.2.3.tar.gz) = 108186 bytes
 SHA1 (patch-aa) = d66d56ff653e66185a1af83d7b5330c1759e7573
