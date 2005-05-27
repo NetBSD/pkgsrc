@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:14 jlam Exp $
-bin/bzip2
+@comment $NetBSD: PLIST,v 1.2.4.1 2005/05/27 00:46:12 snj Exp $
 bin/bunzip2
 bin/bzcat
+bin/bzip2
 bin/bzip2recover
 include/bzlib.h
 lib/libbz2.la
-man/man1/bzip2.1
 man/man1/bunzip2.1
 man/man1/bzcat.1
+man/man1/bzip2.1
 man/man1/bzip2recover.1
