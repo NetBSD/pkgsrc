@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2004/11/27 04:41:12 jlam Exp $
+$NetBSD: patch-ac,v 1.1.4.1 2005/05/27 10:44:30 salo Exp $
 
---- configure.in.orig	2004-02-04 15:07:33.000000000 -0500
+--- configure.in.orig	2005-05-26 19:42:13.000000000 +0100
 +++ configure.in
-@@ -155,7 +155,7 @@ dnl ************************************
+@@ -159,7 +159,7 @@ dnl ************************************
  dnl Checks for header files.
  dnl ***********************************************************************
- AC_STDC_HEADERS
--AC_HAVE_HEADERS(string.h sys/types.h stdint.h netinet/in.h)
-+AC_HAVE_HEADERS(string.h sys/types.h stdint.h netinet/in.h bits/ioctls.h)
+ AC_HEADER_STDC
+-AC_CHECK_HEADERS(string.h sys/types.h stdint.h netinet/in.h)
++AC_CHECK_HEADERS(string.h sys/types.h stdint.h netinet/in.h bits/ioctls.h)
  
  dnl ***********************************************************************
  dnl Checks for data types.
