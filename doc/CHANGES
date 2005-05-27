@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10223 2005/05/27 13:48:31 adam Exp $
+$NetBSD: CHANGES,v 1.10224 2005/05/27 15:15:42 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2638,3 +2638,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated multimedia/gxine to 0.4.5 [salo 2005-05-27]
 	Updated devel/darcs to 1.0.3 [augustss 2005-05-27]
 	Updated chat/gg2 to 2.2.6 [adam 2005-05-27]
+	Added net/p5-Net-RawIP version 0.2 [bouyer 2005-05-27]
