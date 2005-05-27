@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/04/13 16:39:32 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/27 12:09:27 salo Exp $
 #
 
-DISTNAME=		gxine-0.4.1
+DISTNAME=		gxine-0.4.5
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
@@ -11,7 +11,9 @@ COMMENT=		Gtk-based media player
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
+USE_TOOLS+=		gmake
 
 PTHREAD_OPTS+=		require
 
