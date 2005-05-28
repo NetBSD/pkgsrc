@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/27 13:35:24 augustss Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/28 08:45:48 augustss Exp $
 bin/darcs
 man/man1/darcs.1
 share/doc/darcs/manual/WARNINGS
@@ -27,6 +27,7 @@ share/doc/darcs/manual/img21.png
 share/doc/darcs/manual/img22.png
 share/doc/darcs/manual/img23.png
 share/doc/darcs/manual/img24.png
+share/doc/darcs/manual/img25.png
 share/doc/darcs/manual/img3.png
 share/doc/darcs/manual/img4.png
 share/doc/darcs/manual/img5.png
