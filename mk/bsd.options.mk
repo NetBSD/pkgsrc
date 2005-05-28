@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.24 2005/05/25 11:18:35 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.25 2005/05/28 12:14:34 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -113,23 +113,47 @@ _DEPRECATED_WARNING:=${_DEPRECATED_WARNING} "Deprecated variable "${_var_:Q}" us
 .undef _popt_
 
 #
+# filter unsupported options from PKG_DEFAULT_OPTIONS
+#
+_OPTIONS_DEFAULT_SUPPORED:=	#empty
+.for _o_ in ${PKG_DEFAULT_OPTIONS}
+_opt_:=		${_o_}
+_popt_:=	${_opt_:C/^-//}
+.if !empty(PKG_SUPPORTED_OPTIONS:M${_popt_})
+_OPTIONS_DEFAULT_SUPPORTED:=${_OPTIONS_DEFAULT_SUPPORTED} ${_opt_}
+.endif
+.endfor
+.undef _opt_
+.undef _popt_
+
+#
 # process options from generic to specific
 #
-PKG_OPTIONS:=	# empty
+PKG_OPTIONS:=		# empty
+_OPTIONS_UNSUPPORTED:=	#empty
 .for _o_ in ${PKG_SUGGESTED_OPTIONS} ${_PKG_LEGACY_OPTIONS} \
-	${PKG_DEFAULT_OPTIONS} ${${PKG_OPTIONS_VAR}}
+	${_OPTIONS_DEFAULT_SUPPORTED} ${${PKG_OPTIONS_VAR}}
 _opt_:=		${_o_}
-#  ,--- this variable is a work around for a bug documented in the
-#  |    regress/make-quoting package, testcase bug1.
-_popt_:=	${_o_:C/^-//}	# popt == positive option
-.  if !empty(_opt_:M-*)
+_popt_:=	${_o_:C/^-//}	# positive option
+.  if empty(PKG_SUPPORTED_OPTIONS:M${_popt_})
+_OPTIONS_UNSUPPORTED:=${_OPTIONS_UNSUPPORTED} ${_opt_}
+.  else
+.    if !empty(_opt_:M-*)
 PKG_OPTIONS:=	${PKG_OPTIONS:N${_popt_}}
-.  elif !empty(PKG_SUPPORTED_OPTIONS:M${_popt_})
+.    else
 PKG_OPTIONS:=	${PKG_OPTIONS} ${_popt_}
+.    endif
 .  endif
 .endfor
 .undef _opt_
 .undef _popt_
+
+.if !empty(_OPTIONS_UNSUPPORTED)
+PKG_FAIL_REASON:=The following selected options are not supported: ${_OPTIONS_UNSUPPORTED:O:u:Q}
+.endif
+
+.undef _OPTIONS_UNSUPPORTED
+.undef _OPTIONS_DEFAULT_SUPPORTED
 PKG_OPTIONS:=	${PKG_OPTIONS:O:u}
 
 _PKG_OPTIONS_WORDWRAP_FILTER=						\
