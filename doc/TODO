@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3558 2005/05/27 12:10:20 salo Exp $
+$NetBSD: TODO,v 1.3559 2005/05/28 05:55:50 reed Exp $
 
 Suggested new packages
 ======================
@@ -362,7 +362,6 @@ Suggested package updates
 	o astyle-1.15.3
 	o auctex-11.55
 	o autogen-5.7
-	o avidemux-2.0.40
 	o avl-2.0.1
 	o avr-libc-1.2.3
 	o awstats-6.4
