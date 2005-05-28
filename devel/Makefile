@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.642 2005/05/26 10:53:19 wiz Exp $
+# $NetBSD: Makefile,v 1.643 2005/05/28 16:37:58 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -606,6 +606,7 @@ SUBDIR+=	vanessa_socket
 SUBDIR+=	w32api
 SUBDIR+=	wide
 SUBDIR+=	xdelta
+SUBDIR+=	xmake
 SUBDIR+=	xxgdb
 SUBDIR+=	yasm
 SUBDIR+=	z80-asm
