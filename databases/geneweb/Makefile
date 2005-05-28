@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2005/05/28 22:48:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/28 23:55:14 adrianp Exp $
 #
 
 DISTNAME=	geneweb-4.10
 CATEGORIES=	databases
 PKGREVISION=	1
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/cristal/geneweb/Src/
+DIST_SUBDIR=	${PKGNAME}
 
 MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://cristal.inria.fr/~ddr/GeneWeb/
