@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 12:59:01 jmmv Exp $
-bin/avidemux
+@comment $NetBSD: PLIST,v 1.2 2005/05/28 05:52:18 reed Exp $
+bin/avidemux2
