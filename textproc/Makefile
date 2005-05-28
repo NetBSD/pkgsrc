@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.288 2005/05/19 17:27:13 reed Exp $
+# $NetBSD: Makefile,v 1.289 2005/05/28 03:02:01 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -123,7 +123,6 @@ SUBDIR+=	lout
 SUBDIR+=	lq-sp
 SUBDIR+=	lua-expat
 SUBDIR+=	makeztxt
-SUBDIR+=	namazu1
 SUBDIR+=	namazu2
 SUBDIR+=	nbsed
 SUBDIR+=	ndtpd
