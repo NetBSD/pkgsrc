@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.2.2 2005/05/28 22:24:59 salo Exp $
+
+--- print-ldp.c.orig	2005-05-06 09:17:24.000000000 +0100
++++ print-ldp.c
+@@ -326,6 +326,9 @@ ldp_print(register const u_char *pptr, r
+                EXTRACT_32BITS(&ldp_msg_header->id),
+                LDP_MASK_U_BIT(EXTRACT_16BITS(&ldp_msg_header->type)) ? "continue processing" : "ignore");
+ 
++	if (msg_len == 0) /* infinite loop protection */
++		break;
++
+         msg_tptr=tptr+sizeof(struct ldp_msg_header);
+         msg_tlen=msg_len-sizeof(struct ldp_msg_header)+4; /* Type & Length fields not included */
+ 
