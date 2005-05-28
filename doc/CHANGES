@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10233 2005/05/28 17:59:50 adrianp Exp $
+$NetBSD: CHANGES,v 1.10234 2005/05/28 19:53:54 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -263,7 +263,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Added archivers/pbzip2 version 0.8.3 [wiz 2005-01-12]
 	Added audio/ladspa version 1.12 [xtraeme 2005-01-12]
 	Added audio/terminatorx version 3.82 [xtraeme 2005-01-12]
-	bsd.pkg.mk: deprecate USE_FORTRAN in favor of USE_LANGUAGES+=fortran
+	mk/bsd.pkg.mk: deprecate USE_FORTRAN in favor of USE_LANGUAGES+=fortran
 		[jlam 2005-01-12]
 	Renamed games/marbles to games/lmarbles [adam 2005-01-12]
 	Updated games/lmarbles to 1.0.7 [adam 2005-01-12]
@@ -574,7 +574,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Added misc/koffice-i18n-sk version 1.3.5 [markd 2005-01-25]
 	Added misc/koffice-i18n-sv version 1.3.5 [markd 2005-01-25]
 	Added pkgtools/pkg_alternatives version 1.0 [jmmv 2005-01-25]
-	bsd.pkg.mk: Introduced the alternatives framework, which allows easy
+	mk/bsd.pkg.mk: Introduced the alternatives framework, which allows easy
 		handling of different alternatives (binaries) for common
 		program names [jmmv 2005-01-25]
 	Updated devel/lwp to 1.12 [blymn 2005-01-25]
@@ -1038,7 +1038,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/evolution to 2.0.4 [jmmv 2005-02-22]
 	Updated devel/libgnome to 2.8.1 [jmmv 2005-02-22]
 	Updated devel/libgnomeui to 2.8.1 [jmmv 2005-02-22]
-	bsd.pkg.mk: Add the ability to use multiple digests to ensure the
+	mk/bsd.pkg.mk: Add the ability to use multiple digests to ensure the
 	integrity of dist files and dist patches [agc 2005-02-22]
 	Updated x11/gnome2-control-center to 2.8.2 [jmmv 2005-02-22]
 	Updated multimedia/fxtv to 1.03nb8 [wiz 2005-02-23]
@@ -1335,7 +1335,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/libopendaap to 0.3.0 [adam 2005-03-07]
 	Added sysutils/xentools20 version 2.0.3 [bouyer 2005-03-07]
 	Added wm/e16menuedit2 version 0.0.1 [agc 2005-03-07]
-	bsd.pkg.mk: started freeze for pkgsrc-2005Q1 branch [agc 2005-03-07]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2005Q1 branch [agc 2005-03-07]
 	Updated mail/dspam to 3.2.8 [xtraeme 2005-03-07]
 	Updated pkgtools/pkglint to 4.09 [abs 2005-03-07]
 	Updated shells/osh to 050131 [adam 2005-03-08]
@@ -1428,7 +1428,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/screws to 0.56 [jmmv 2005-03-20]
 	Updated net/djbdns to 1.05nb6 [schmonz 2005-03-21]
 	Updated security/cfs to 1.4.1nb5 [wiz 2005-03-21]
-	bsd.pkg.mk: archivers/freeze ended for pkgsrc-2005Q1 branch [agc 2005-03-21]
+	mk/bsd.pkg.mk: archivers/freeze ended for pkgsrc-2005Q1 branch [agc 2005-03-21]
 	Updated mail/dspam to 3.4.1 [xtraeme 2005-03-21]
 	Added devel/byacc version 20040328 [tv 2005-03-21]
 	Updated pkgtools/url2pkg to 1.27 [wiz 2005-03-21]
