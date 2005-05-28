@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2005/05/22 20:08:27 jlam Exp $
+# $NetBSD: Makefile.common,v 1.20 2005/05/28 13:08:39 dillo Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 GS_VERS=	7.07
@@ -17,7 +17,7 @@ CONFLICTS+=	ghostscript-gnu{,-nox11,-x11}-[0-9]*
 DEPENDS+=	ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
 
 USE_TOOLS+=		gmake
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-ijs
 
 DIST_SUBDIR=		ghostscript
@@ -72,10 +72,10 @@ post-extract:
 	${MKDIR} ${WRKSRC}/obj
 	${RM} -f ${WRKSRC}/jpeg
 	${LN} -s ${JPEG_WRKSRC} ${WRKSRC}/jpeg
-	cd ${WRKSRC}/lib; for file in gs_res.ps; do			\
+	cd ${WRKSRC}/lib; for fin gs_res.ps; do				\
 		${SED}  -e "s|/Resource/|${GS_RESOURCEDIR}/|g"		\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
+			$${f} > $${f}.fixed;				\
+		${MV} -f $${f}.fixed $${f};				\
 	done
 
 # Reinstall the gs binary so that it's properly stripped.
