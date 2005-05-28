@@ -1,27 +1,24 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:08:18 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/05/28 05:52:18 reed Exp $
 #
 
-DISTNAME=	avidemux-2.0.18
-PKGREVISION=	5
+DISTNAME=	avidemux-2.0.40
 CATEGORIES=	multimedia
-MASTER_SITES=	http://fixounet.free.fr/avidemux/
+MASTER_SITES=	http://download.berlios.de/avidemux/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://fixounet.free.fr/avidemux/
 COMMENT=	Graphical video editing program
 
-BUILD_USES_MSGFMT=	YES
-
+GCC_REQD=		3.0
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
+USE_TOOLS+=		gmake
 
-CFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
+CPPFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 LDFLAGS+=		${LIBOSSAUDIO}
-
-CONFIGURE_ARGS+=	--disable-warnings
-
-BUILDLINK_TRANSFORM+=   rm:-O3
+CONFIGURE_ENV+=		ac_cv_path_ART_CONFIG=no
+CONFIGURE_ARGS+=	--disable-faad # Dolby doesn't allow binary distribution
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -40,9 +37,7 @@ post-configure:
 .  endif
 .endif
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/avidemux/avidemux2 ${PREFIX}/bin/avidemux
-
+.include "../../audio/faac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
