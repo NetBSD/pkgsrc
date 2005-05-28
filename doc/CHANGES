@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10230 2005/05/28 07:23:11 minskim Exp $
+$NetBSD: CHANGES,v 1.10231 2005/05/28 14:18:09 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2646,3 +2646,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated converters/rss2html to 0.7.2 [snj 2005-05-28]
 	Added x11/mrxvt version 0.4.1 [minskim 2005-05-29]
 	Added sysutils/dirsize version 0.6 [minskim 2005-05-29]
+	Updated net/tcpdump to 3.8.3nb1 [adrianp 2005-05-29]
