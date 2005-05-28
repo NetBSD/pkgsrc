@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3560 2005/05/28 05:59:48 snj Exp $
+$NetBSD: TODO,v 1.3561 2005/05/28 17:59:50 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -434,7 +434,6 @@ Suggested package updates
 	o cxref-1.6
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.17.1
-	o cyrus-imapd21-2.1.18
 	o dact-0.8.37
 	o dar-2.2.0
 	o darcs-1.0.3
