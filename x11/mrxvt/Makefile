@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/28 06:36:53 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/28 07:09:59 minskim Exp $
 #
 
 DISTNAME=	mrxvt-0.4.1
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=materm/}
 MAINTAINER=	tnn@netilium.org
 HOMEPAGE=	http://materm.sourceforge.net/
 COMMENT=	Multi-tabbed terminal emulator with Xft support
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_PKGINSTALL=		YES
