@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.110 2005/05/28 04:52:10 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.111 2005/05/28 22:25:31 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -249,3 +249,5 @@ Pullup ticket 513 - requested by Matthias Scheler
 security fix for net-snmp
 Pullup ticket 520 - requested by Lubomir Sedlacik
 security update for gxine
+Pullup ticket 521 - requested by Adrian Portelli
+security fix for tcpdump
