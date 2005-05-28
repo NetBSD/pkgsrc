@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10228 2005/05/28 05:59:48 snj Exp $
+$NetBSD: CHANGES,v 1.10229 2005/05/28 06:40:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2644,3 +2644,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed textproc/namazu1 [taca 2005-05-28]
 	Updated multimedia/avidemux to 2.0.40 [reed 2005-05-28]
 	Updated converters/rss2html to 0.7.2 [snj 2005-05-28]
+	Added x11/mrxvt version 0.4.1 [minskim 2005-05-29]
