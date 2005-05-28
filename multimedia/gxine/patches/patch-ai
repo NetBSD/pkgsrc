@@ -1,0 +1,62 @@
+$NetBSD: patch-ai,v 1.2.2.2 2005/05/28 04:48:56 snj Exp $
+
+Needed for ISO C90 compliance.
+
+--- src/key_events.c.orig	2005-04-26 00:11:56.000000000 +0200
++++ src/key_events.c	2005-05-27 13:05:59.000000000 +0200
+@@ -610,8 +610,8 @@
+ 
+ static void do_edit_binding (void)
+ {
+-  editkey = *lookup_binding (&catch_key_iter);
+   char title[64];
++  editkey = *lookup_binding (&catch_key_iter);
+ 
+   gtk_entry_set_text (GTK_ENTRY (kb_binding_desc), editkey.desc);
+   gtk_entry_set_text (GTK_ENTRY (kb_binding_command), editkey.cmd);
+@@ -1080,9 +1080,7 @@
+ 
+ /* Xine event mapping data */
+ 
+-static const kb_xine_event_map_t xine_input = {
+-  "INPUT",
+-  {
++static const kb_xine_event_id_t xine_input_ids[] = {
+     { "ANGLE_NEXT", XINE_EVENT_INPUT_ANGLE_NEXT },
+     { "ANGLE_PREVIOUS", XINE_EVENT_INPUT_ANGLE_PREVIOUS },
+     { "DOWN", XINE_EVENT_INPUT_DOWN },
+@@ -1123,7 +1121,10 @@
+     { "9", XINE_EVENT_INPUT_NUMBER_9 },
+     { "-", -1 }, /* null event */
+     { "" }
+-  }
++};
++
++static const kb_xine_event_map_t xine_input = {
++  "INPUT", &xine_input_ids
+ };
+ 
+ 
+@@ -1170,9 +1171,7 @@
+ 
+ 
+ 
+-static const kb_xine_event_map_t xine_vdr = {
+-  "VDR",
+-  {
++static const kb_xine_event_id_t xine_vdr_ids[] = {
+     { "AUDIO", XINE_EVENT_VDR_MUTE + 1 /* ..._VDR_AUDIO */ },
+     { "BACK", XINE_EVENT_VDR_BACK },
+     { "BLUE", XINE_EVENT_VDR_BLUE },
+@@ -1207,7 +1206,10 @@
+     { "VOLPLUS", XINE_EVENT_VDR_VOLPLUS },
+     { "YELLOW", XINE_EVENT_VDR_YELLOW },
+     { "" }
+-  }
++};
++
++static const kb_xine_event_map_t xine_vdr = {
++  "VDR", &xine_vdr_ids
+ };
+ 
+ JSBool js_event_generic (JSContext *cx, JSObject *obj, uintN argc, jsval *argv,

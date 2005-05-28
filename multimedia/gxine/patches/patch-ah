@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1.2.2 2005/05/28 04:48:56 snj Exp $
+
+Needed for NetBSD-1.6.2.
+
+--- src/globals.h.orig	Sat Dec 11 01:40:18 2004
++++ src/globals.h	Tue Apr 12 12:49:30 2005
+@@ -36,6 +36,7 @@
+ #include <gdk/gdk.h>
+ #include <glib.h>
+ #include <xine.h>
++#include <pthread.h>
+ 
+ #include "script_engine.h"
+ #include "infobar.h"
