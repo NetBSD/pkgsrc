@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.298 2005/05/25 10:29:51 agc Exp $
+# $NetBSD: Makefile,v 1.299 2005/05/28 07:23:11 minskim Exp $
 
 COMMENT=	System utilities
 
@@ -41,6 +41,7 @@ SUBDIR+=	dbus
 SUBDIR+=	dbus-glib
 SUBDIR+=	depot
 SUBDIR+=	desktop-file-utils
+SUBDIR+=	dirsize
 SUBDIR+=	dmassage
 SUBDIR+=	dmesg2gif
 SUBDIR+=	dmidecode
