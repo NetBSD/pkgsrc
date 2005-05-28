@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10225 2005/05/28 02:51:53 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.10226 2005/05/28 03:07:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2640,3 +2640,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/gg2 to 2.2.6 [adam 2005-05-27]
 	Added net/p5-Net-RawIP version 0.2 [bouyer 2005-05-27]
 	Updated pkgtools/pkg_install to 20050527 [dmcmahill 2005-05-27]
+	Updated graphics/ruby-RMagick [taca 2005-05-28]
+	Removed textproc/namazu1 [taca 2005-05-28]
