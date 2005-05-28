@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10226 2005/05/28 03:07:30 taca Exp $
+$NetBSD: CHANGES,v 1.10227 2005/05/28 05:55:50 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2642,3 +2642,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkg_install to 20050527 [dmcmahill 2005-05-27]
 	Updated graphics/ruby-RMagick [taca 2005-05-28]
 	Removed textproc/namazu1 [taca 2005-05-28]
+	Updated multimedia/avidemux to 2.0.40 [reed 2005-05-28]
