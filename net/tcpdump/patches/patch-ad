@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1.2.2 2005/05/28 22:24:59 salo Exp $
+
+--- print-isoclns.c.orig	2005-05-06 09:11:15.000000000 +0100
++++ print-isoclns.c
+@@ -1506,6 +1506,9 @@ static int isis_print (const u_int8_t *p
+                tlv_type,
+                tlv_len);
+ 
++	if (tlv_len == 0) /* something is malformed */
++		break;
++
+         /* now check if we have a decoder otherwise do a hexdump at the end*/
+ 	switch (tlv_type) {
+ 	case TLV_AREA_ADDR:
+@@ -1536,7 +1539,7 @@ static int isis_print (const u_int8_t *p
+ 	    break;
+ 
+         case TLV_ISNEIGH_VARLEN:
+-            if (!TTEST2(*tptr, 1))
++            if (!TTEST2(*tptr, 1) || tmp < 3) /* min. TLV length */
+ 		goto trunctlv;
+ 	    lan_alen = *tptr++; /* LAN adress length */
+             tmp --;
