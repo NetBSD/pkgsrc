@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/05/27 13:35:24 augustss Exp $
+$NetBSD: distinfo,v 1.4 2005/05/28 09:14:39 augustss Exp $
 
 SHA1 (darcs-1.0.3.tar.gz) = 8feb9f4e42826a05c3cfed888db3c1bbf1f16e12
 RMD160 (darcs-1.0.3.tar.gz) = 66e3852ecbe4f92f7f83d0ea48cb8a8c26685678
 Size (darcs-1.0.3.tar.gz) = 883613 bytes
-SHA1 (patch-aa) = 4f5ac833d19b8fb3d101422c8faf4e3368c7cfa3
+SHA1 (patch-aa) = f4efc5395544889142b9e63d958f3304b7c0864f

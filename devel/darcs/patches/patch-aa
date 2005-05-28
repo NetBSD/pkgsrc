@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2005/05/27 13:35:24 augustss Exp $
---- GNUmakefile.orig	2005-05-27 15:05:04.000000000 +0200
-+++ GNUmakefile	2005-05-27 15:05:31.000000000 +0200
+$NetBSD: patch-aa,v 1.2 2005/05/28 09:14:39 augustss Exp $
+--- GNUmakefile.orig	2005-05-28 10:49:28.000000000 +0200
++++ GNUmakefile	2005-05-28 10:48:15.000000000 +0200
 @@ -86,9 +86,6 @@
  	$(INSTALL) -d $(DESTDIR)/$(bindir)
  	$(INSTALL) darcs $(DESTDIR)/$(bindir)
@@ -11,3 +11,11 @@ $NetBSD: patch-aa,v 1.1 2005/05/27 13:35:24 augustss Exp $
  	$(INSTALL) -d $(DESTDIR)/$(mandir)/man1
  	$(INSTALL_DATA) darcs.1 $(DESTDIR)/$(mandir)/man1/
  
+@@ -100,6 +97,7 @@
+ 	$(INSTALL) -d $(DESTDIR)/$(datadir)/doc/darcs/examples
+ 	$(INSTALL_DATA) zsh_completion_new $(DESTDIR)/$(datadir)/doc/darcs/examples/
+ 	$(INSTALL_DATA) zsh_completion_old $(DESTDIR)/$(datadir)/doc/darcs/examples/
++	$(INSTALL_DATA) darcs_completion $(DESTDIR)/$(datadir)/doc/darcs/examples/
+ 
+ installserver:	darcs-createrepo cgi/darcs.cgi
+ 	$(INSTALL) -d $(DESTDIR)/$(libexecdir)/cgi-bin
