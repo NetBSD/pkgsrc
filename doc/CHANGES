@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10236 2005/05/28 21:54:39 tron Exp $
+$NetBSD: CHANGES,v 1.10237 2005/05/28 22:52:42 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2644,9 +2644,10 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed textproc/namazu1 [taca 2005-05-28]
 	Updated multimedia/avidemux to 2.0.40 [reed 2005-05-28]
 	Updated converters/rss2html to 0.7.2 [snj 2005-05-28]
-	Added x11/mrxvt version 0.4.1 [minskim 2005-05-29]
-	Added sysutils/dirsize version 0.6 [minskim 2005-05-29]
-	Updated net/tcpdump to 3.8.3nb1 [adrianp 2005-05-29]
-	Added devel/xmake version 1.06 [minskim 2005-05-29]
-	Updated mail/cyrus-imapd21 to 2.1.18 [adrianp 2005-05-29]
-	Updated sysutils/cdrdao to 1.2.0nb1 [tron 2005-05-27]
+	Added x11/mrxvt version 0.4.1 [minskim 2005-05-28]
+	Added sysutils/dirsize version 0.6 [minskim 2005-05-28]
+	Updated net/tcpdump to 3.8.3nb1 [adrianp 2005-05-28]
+	Added devel/xmake version 1.06 [minskim 2005-05-28]
+	Updated mail/cyrus-imapd21 to 2.1.18 [adrianp 2005-05-28]
+	Updated sysutils/cdrdao to 1.2.0nb1 [tron 2005-05-28]
+	Updated databases/geneweb to 4.10nb1 [adrianp 2005-05-28]
