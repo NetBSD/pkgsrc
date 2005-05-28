@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.2.2.1 2005/05/28 04:48:56 snj Exp $
+
+--- src/spidermonkey/jsprf.c.orig	Sat May  7 19:07:27 2005
++++ src/spidermonkey/jsprf.c	Sat May  7 19:08:37 2005
+@@ -57,7 +57,11 @@
+ #define VARARGS_ASSIGN(foo, bar)	(foo) = (bar)
+ #endif
+ */
++#ifndef __FreeBSD__
+ #define VARARGS_ASSIGN(foo, bar) __va_copy(foo, bar)
++#else
++#define VARARGS_ASSIGN(foo, bar)	(foo) = (bar)
++#endif
+ 
+ /*
+ ** WARNING: This code may *NOT* call JS_LOG (because JS_LOG calls it)
