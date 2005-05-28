@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2005/05/28 04:17:04 minskim Exp $
+
+--- Makefile.in.orig	2004-10-11 03:09:24.000000000 -0500
++++ Makefile.in
+@@ -332,8 +332,8 @@ install-lib:
+ 	    echo "Installing language specific files for $$lang"; \
+ 	    dst=$(DESTDIR)$(SWIG_LIB)/$$lang;			\
+ 	    $(MKINSTDIRS) $$dst;				\
+-	     (doti="`cd $(srcdir)/Lib/$$lang && ls *.i 2>/dev/null`";	\
+-	      dotswg="`cd $(srcdir)/Lib/$$lang && ls *.swg 2>/dev/null`"; \
++	     (doti="`cd $(srcdir)/Lib/$$lang && ls *.i 2>/dev/null`" || doti="";	\
++	      dotswg="`cd $(srcdir)/Lib/$$lang && ls *.swg 2>/dev/null`" || dotswg=""; \
+ 	      if [ -f $(srcdir)/Lib/$$lang/extra-install.list ]; then	\
+ 		  extra="`sed '/^#/d' $(srcdir)/Lib/$$lang/extra-install.list`";	\
+ 	      fi;						\
