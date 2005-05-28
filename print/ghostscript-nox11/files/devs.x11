@@ -1,4 +1,4 @@
-# $NetBSD: devs.x11,v 1.1.1.1 2000/05/07 02:04:34 jlam Exp $
+# $NetBSD: devs.x11,v 1.2 2005/05/28 13:07:11 dillo Exp $
 #
 # X11 drivers for Ghostscript
 
@@ -14,4 +14,3 @@ DEVICE_DEVS+=	\
 	$(DD)x11mono.dev \
 	$(DD)x11rg16x.dev \
 	$(DD)x11rg32x.dev
-
