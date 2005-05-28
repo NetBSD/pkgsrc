@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10235 2005/05/28 20:17:21 jschauma Exp $
+$NetBSD: CHANGES,v 1.10236 2005/05/28 21:54:39 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2649,3 +2649,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/tcpdump to 3.8.3nb1 [adrianp 2005-05-29]
 	Added devel/xmake version 1.06 [minskim 2005-05-29]
 	Updated mail/cyrus-imapd21 to 2.1.18 [adrianp 2005-05-29]
+	Updated sysutils/cdrdao to 1.2.0nb1 [tron 2005-05-27]
