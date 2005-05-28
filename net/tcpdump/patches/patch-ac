@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.2.2 2005/05/28 22:24:59 salo Exp $
+
+--- print-bgp.c.orig	2005-05-06 09:08:17.000000000 +0100
++++ print-bgp.c
+@@ -1216,6 +1216,8 @@ bgp_attr_print(const struct bgp_attr *at
+                             tptr = pptr + len;
+                             break;
+ 			}
++			if (advance < 0) /* infinite loop protection */
++				break;
+ 			tptr += advance;
+ 		}
+ 		break;
