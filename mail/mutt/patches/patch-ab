@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.11 2004/08/05 07:19:25 jlam Exp $
+$NetBSD: patch-ab,v 1.12 2005/05/29 03:44:12 minskim Exp $
 
---- Makefile.in.orig	Thu Feb 12 03:52:26 2004
+--- Makefile.in.orig	2004-02-12 02:52:26.000000000 -0600
 +++ Makefile.in
 @@ -26,6 +26,7 @@ datadir = @datadir@
  sysconfdir = @sysconfdir@
@@ -19,3 +19,12 @@ $NetBSD: patch-ab,v 1.11 2004/08/05 07:19:25 jlam Exp $
  
  
  INCLUDES = -I. -I$(top_srcdir) $(IMAP_INCLUDES) -Iintl
+@@ -611,7 +612,7 @@ install-exec-local:
+ 		ln -sf $(DESTDIR)$(bindir)/mutt_dotlock $(DESTDIR)$(bindir)/mutt.dotlock ; \
+ 	fi
+ 	if test -f $(DESTDIR)$(bindir)/mutt_dotlock && test x@DOTLOCK_GROUP@ != x ; then \
+-		chgrp @DOTLOCK_GROUP@ $(DESTDIR)$(bindir)/mutt_dotlock && \
++		$(CHGRP) @DOTLOCK_GROUP@ $(DESTDIR)$(bindir)/mutt_dotlock && \
+ 		chmod @DOTLOCK_PERMISSION@ $(DESTDIR)$(bindir)/mutt_dotlock || \
+ 		{ echo "Can't fix mutt_dotlock's permissions!" >&2 ; exit 1 ; } \
+ 	fi
