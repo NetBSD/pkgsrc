@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10241 2005/05/29 16:11:49 jschauma Exp $
+$NetBSD: CHANGES,v 1.10242 2005/05/29 17:12:15 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2650,3 +2650,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added net/autonet version 0.13 [abs 2005-05-29]
 	Updated lang/python21 to 2.1.3nb7 [minskim 2005-05-29]
 	Updated mail/sylpheed-devel to 1.9.12 [chris 2005-05-29]
+	mk/bsd.pkg.mk: Added support for unprivileged builds through the
+		UNPRIVILEGED variable [jmmv 2005-05-29]
