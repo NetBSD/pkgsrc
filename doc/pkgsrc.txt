@@ -1664,7 +1664,20 @@ Utilities for people maintaining pkgsrc (or more obscure pkg utilities)
 6.4. How to use pkgsrc as non-root
 
 If you want to use pkgsrc as non-root user, you can set some variables to make
-pkgsrc work under these conditions. Please see this message for more details.
+pkgsrc work under these conditions. At the very least, you need to set
+UNPRIVILEGED to "yes"; this will turn on unprivileged mode and set multiple
+related variables to allow installation of packages as non-root.
+
+In case the defaults are not enough, you may want to tune some other variables
+used. For example, if the automatic user/group detection leads to incorrect
+values (or not the ones you would like to use), you can change them by setting
+UNPRIVILEGED_USER and UNPRIVILEGED_GROUP respectively.
+
+As regards bootstrapping, please note that the bootstrap script will ease
+non-root configuration when given the "--ignore-user-check" flag, as it will
+choose and use multiple default directories under ~/pkg as the installation
+targets. These directories can be overriden by the "--prefix" flag provided by
+the script, as well as some others that allow finer tuning of the tree layout.
 
 6.5. How to resume transfers when fetching distfiles?
 
