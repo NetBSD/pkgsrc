@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.38 2005/05/25 07:06:54 rillig Exp $
+# $NetBSD: bootstrap,v 1.39 2005/05/29 17:15:25 jmmv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -37,11 +37,6 @@
 
 BOOTSTRAP_VERSION=20050419
 
-# set defaults for system locations
-prefix=/usr/pkg
-pkgdbdir=/var/db/pkg
-sysconfdir=${prefix}/etc
-
 ignorecasecheck=no
 ignoreusercheck=no
 
@@ -57,6 +52,7 @@ usage="Usage: $0 "'
     [ --prefix <prefix> ]
     [ --pkgdbdir <pkgdbdir> ]
     [ --sysconfdir <sysconfdir> ]
+    [ --varbase <varbase> ]
     [ --ignore-case-check ]
     [ --ignore-user-check ]
     [ --preserve-path ]
@@ -234,6 +230,13 @@ build_start=`date`
 echo_msg "bootstrap command: $0 $@"
 echo_msg "bootstrap started: $build_start"
 
+# ensure system locations are empty; we will set them later when we know
+# whether they will be system wide or user specific
+prefix=
+pkgdbdir=
+sysconfdir=
+varbase=
+
 while [ $# -gt 0 ]; do
 	case $1 in
 	--workdir=*)	wrkdir=`get_optarg "$1"` ;;
@@ -246,6 +249,7 @@ while [ $# -gt 0 ]; do
 	--pkgdbdir)	pkgdbdir="$2"; shift ;;
 	--sysconfdir=*)	sysconfdir=`get_optarg "$1"` ;;
 	--sysconfdir)	sysconfdir="$2"; shift ;;
+	--varbase)	varbase="$2"; shift ;;
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--ignore-user-check) ignoreusercheck=yes ;;
 	--preserve-path) preserve_path=yes ;;
@@ -255,6 +259,19 @@ while [ $# -gt 0 ]; do
 	esac
 	shift
 done
+
+# set defaults for system locations if not already set by the user
+if [ "$ignoreusercheck" = "yes" ]; then
+	[ -z "$prefix" ] && prefix=${HOME}/pkg
+	[ -z "$pkgdbdir" ] && pkgdbdir=${prefix}/var/db/pkg
+	[ -z "$sysconfdir" ] && sysconfdir=${prefix}/etc
+	[ -z "$varbase" ] && varbase=${prefix}/var
+else
+	[ -z "$prefix" ] && prefix=/usr/pkg
+	[ -z "$pkgdbdir" ] && pkgdbdir=/var/db/pkg
+	[ -z "$sysconfdir" ] && sysconfdir=${prefix}/etc
+	[ -z "$varbase" ] && varbase=/var
+fi
 
 if [ "x$preserve_path" != "xyes" ]; then
 	PATH="$PATH:/sbin:/usr/sbin"
@@ -540,6 +557,7 @@ if [ -d /usr/ccs/bin -a -x /usr/ccs/bin/make ]; then
 fi
 PKG_DBDIR=$pkgdbdir; export PKG_DBDIR
 LOCALBASE=$prefix; export LOCALBASE
+VARBASE=$varbase; export VARBASE
 
 # build libnbcompat
 echo_msg "Building libnbcompat"
@@ -569,9 +587,15 @@ if [ ! -z "$compiler" ]; then
 fi
 			
 
+# enable unprivileged builds if not root
+if [ "$ignoreusercheck" = "yes" ]; then
+	echo "UNPRIVILEGED=yes" >> ${MKCONF_EXAMPLE}
+fi
+
 # save environment in example mk.conf
 echo "PKG_DBDIR=$pkgdbdir" >> ${MKCONF_EXAMPLE}
 echo "LOCALBASE=$prefix" >> ${MKCONF_EXAMPLE}
+echo "VARBASE=$varbase" >> ${MKCONF_EXAMPLE}
 if [ "${sysconfdir}" != "${prefix}/etc" ]; then
 	echo "PKG_SYSCONFBASE=$sysconfdir" >> ${MKCONF_EXAMPLE}
 fi
