@@ -1,6 +1,7 @@
-$NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
---- mush.h.orig	Mon Sep 14 22:55:37 1998
-+++ mush.h	Mon Sep 14 22:57:28 1998
+$NetBSD: patch-ad,v 1.3 2005/05/29 05:33:42 minskim Exp $
+
+--- mush.h.orig	2005-05-29 00:29:17.730213120 -0500
++++ mush.h
 @@ -4,89 +4,98 @@
  
  /* POSIX -- a collection of standardized parts from SYSV and BSD */
@@ -157,7 +158,7 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
  
  #ifndef __STDC__
  extern char
-@@ -100,79 +109,85 @@
+@@ -100,79 +109,85 @@ extern void
      xfree();		/* free malloc'ed pointers */
  
  #ifdef BSD
@@ -287,7 +288,7 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
  #endif /* CTRL */
  #define CTRL(c)		((c) & 037)
  
-@@ -180,20 +195,24 @@
+@@ -180,20 +195,24 @@ extern char *getcwd();
  
  #define NO_STRING	""
  #ifdef  NULL
@@ -315,7 +316,7 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
  #endif /* SUNTOOL */
  
  /* For error recovery purposes, send keyboard generated signals to a special
-@@ -211,121 +230,121 @@
+@@ -211,121 +230,121 @@ extern int bell();
  
  /* Don't flush input when setting echo or cbreak modes (allow typeahead) */
  #ifdef TIOCSETN
@@ -521,7 +522,7 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
  #endif /* ~USG */
  
  /* With all that out of the way, we can now declare our tty type */
-@@ -351,78 +370,78 @@
+@@ -351,78 +370,78 @@ extern char
  #define Debug		if (debug == 0) {;} else (void) wprint
  
  #ifdef SYSV
@@ -643,7 +644,7 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
  #endif
  
  #endif /* SUNTOOL */
-@@ -547,8 +566,13 @@
+@@ -547,8 +566,13 @@ u_long   glob_flags;	/* global boolean f
  /* It is possible to reset MAX_PRIORITY to as high as 9 */
  #define MAX_PRIORITY	5
  
@@ -659,7 +660,7 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
  struct msg {
      u_long m_flags;
      long   m_offset;	/* offset in tempfile of msg */
-@@ -559,7 +583,16 @@
+@@ -559,7 +583,16 @@ struct msg {
      char   *m_to;	/* Cached To: field */
      char   *m_subject;	/* Cached Subject: field */
      char   *m_from;	/* Cached Reply-To: or From: field */
@@ -677,7 +678,7 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
  
  struct options {
      char *option;
-@@ -603,7 +636,11 @@
+@@ -603,7 +636,11 @@ jmp_buf jmpbuf;		/* longjmp to jmpbuf on
  char
      debug,		/* debug causes various print statements in code */
      tempfile[MAXPATHLEN],	/* path to filename of temporary file */
@@ -689,7 +690,7 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
      **alternates,	/* alternates list --see alts() */
      *cmd_help,		/* filename of location for "command -?" commands. */
      *login,		/* login name of user */
-@@ -658,6 +695,9 @@
+@@ -658,6 +695,9 @@ char
  int
      last_msg_cnt,	/* when checking for new mail, save the last msg_cnt */
      msg_cnt,		/* total number of messages */
@@ -699,7 +700,7 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
      crt,		/* min number of lines msg contains to invoke pager */
      current_msg,	/* the current message we're dealing with */
      exec_pid,		/* pid of a command that has been "exec"ed */
-@@ -666,7 +706,7 @@
+@@ -666,7 +706,7 @@ int
  #if defined(SUNTOOL) || defined(lint)
      istool,		/* argv[0] == "xxxxtool", ranges from 0 to 2 */
  #else /* !SUNTOOL */
@@ -708,7 +709,7 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
  #endif /* SUNTOOL */
      n_array[128],	/* array of message numbers in the header window */
      screen,		/* number of headers window can handle */
-@@ -725,7 +765,7 @@
+@@ -725,7 +765,7 @@ int
  char * quoteit();
  
  #ifndef SIGRET
@@ -717,7 +718,7 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
  #endif /* SIGRET */
  SIGRET
      rm_edfile(),	/* remove letter-compose file on interrupts */
-@@ -737,8 +777,8 @@
+@@ -737,8 +777,8 @@ SIGRET
  
  long
      spool_size,		/* size of spool mail regardless of current folder */
@@ -728,7 +729,7 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
  
  void
      error(), getmail(), mail_status(), sign_letter(),
-@@ -754,9 +794,9 @@
+@@ -754,9 +794,9 @@ void
  #ifdef TIOCGLTC
  struct ltchars ltchars;			/* tty character settings */
  #endif /* TIOCGLTC */
@@ -740,7 +741,7 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
  
  #ifdef CURSES
  
-@@ -775,16 +815,16 @@
+@@ -775,16 +815,16 @@ void
      mac_flush();	/* Abandon macro processing (on error) */
  
  #if defined(SUNTOOL) || defined(POP3_SUPPORT)
@@ -764,3 +765,11 @@ $NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
  
  int
      time_out;		/* time out interval to wait for new mail */
+@@ -838,3 +878,7 @@ typedef enum {
+     MUSH_SCROLL_PASS_EVENT
+ } Scroll_action;
+ #endif /* SUNTOOL */
++
++#ifdef __linux__
++#include <time.h>
++#endif
