@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2005/05/29 09:40:09 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/29 11:18:35 minskim Exp $
 #
 
 DISTNAME=	Python-2.1.3
 PKGNAME=	python21-2.1.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.1.3/
 EXTRACT_SUFX=	.tgz
@@ -46,6 +46,18 @@ PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
 PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME}
+
+PLAT_SOCKET=	"@comment "
+PLAT_TERMIOS=	"@comment "
+.if !empty(MACHINE_PLATFORM:MNetBSD-[2-9].*)
+.  if exists(/usr/include/sys/socket.h)
+PLAT_SOCKET=	""
+.  endif
+.  if exists(/usr/include/termios.h)
+PLAT_TERMIOS=	""
+.  endif
+.endif
+PLIST_SUBST+=	PLAT_SOCKET=${PLAT_SOCKET} PLAT_TERMIOS=${PLAT_TERMIOS}
 
 # bsddb.so is not built on Solaris (or IRIX?)
 BSDDB=
