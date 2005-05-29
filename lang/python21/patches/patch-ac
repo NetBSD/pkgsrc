@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.6 2005/05/29 06:39:12 minskim Exp $
+$NetBSD: patch-ac,v 1.7 2005/05/29 07:35:54 minskim Exp $
 
 --- setup.py.orig	2001-12-27 15:51:02.000000000 -0600
 +++ setup.py
+@@ -14,7 +14,7 @@ from distutils.core import Extension, se
+ from distutils.command.build_ext import build_ext
+ 
+ # This global variable is used to hold the list of modules to be disabled.
+-disabled_module_list = []
++disabled_module_list = ["_bsddb", "_curses", "_curses_panel", "_tkinter", "gdbm", "mpz", "pyexpat", "readline"]
+ 
+ def find_file(filename, std_dirs, paths):
+     """Searches for the directory where a given file is located,
 @@ -145,11 +145,16 @@ class PyBuildExt(build_ext):
          return platform
  
@@ -106,15 +115,6 @@ $NetBSD: patch-ac,v 1.6 2005/05/29 06:39:12 minskim Exp $
  
          # Interface to the Expat XML parser
          #
-@@ -515,7 +500,7 @@ class PyBuildExt(build_ext):
-         self.extensions.extend(exts)
- 
-         # Call the method for detecting whether _tkinter can be compiled
--        self.detect_tkinter(inc_dirs, lib_dirs)
-+        #self.detect_tkinter(inc_dirs, lib_dirs)
- 
- 
-     def detect_tkinter(self, inc_dirs, lib_dirs):
 @@ -609,7 +594,7 @@ def main():
            ext_modules=[Extension('struct', ['structmodule.c'])],
  
