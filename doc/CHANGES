@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10237 2005/05/28 22:52:42 adrianp Exp $
+$NetBSD: CHANGES,v 1.10238 2005/05/29 09:28:08 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2651,3 +2651,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/cyrus-imapd21 to 2.1.18 [adrianp 2005-05-28]
 	Updated sysutils/cdrdao to 1.2.0nb1 [tron 2005-05-28]
 	Updated databases/geneweb to 4.10nb1 [adrianp 2005-05-28]
+	Added net/autonet version 0.13 [abs 2005-05-29]
