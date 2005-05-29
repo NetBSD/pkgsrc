@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.16 2005/05/26 16:32:42 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.17 2005/05/29 09:10:42 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -475,16 +475,23 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2</programlisting>
       <para> Sometimes authors of a software package make some
         modifications after the software was released, and they put up a
         new distfile without changing the package's version number. If a
-        package is already in pkgsrc at that time, the md5 checksum will
-        no longer match. The correct way to work around this is to
-        update the package's md5 checksum to match the package on the
-        master site (beware, any mirrors may not be up to date yet!),
-        and to remove the old distfile from
-        ftp.NetBSD.org's
-        <filename>/pub/NetBSD/packages/distfiles</filename> directory.
-        Furthermore, a mail to the package's author seems appropriate
-        making sure the distfile was really updated on purpose, and that
-        no trojan horse or so crept in.  </para>
+        package is already in pkgsrc at that time, the checksum will
+        no longer match. The contents of the new distfile should be
+	compared against the old one before changing anything, to make
+	sure the distfile was really updated on purpose, and that
+        no trojan horse or so crept in.
+	Then, the correct way to work around this is to
+	set <varname>DIST_SUBDIR</varname> to a unique directory name,
+	usually based on <varname>PKGNAME_NOREV</varname>. In case this
+	happens more often, <varname>PKGNAME</varname> can be used (thus
+	including the <filename>nbX</filename> suffix) or a date stamp
+	can be appended, like <varname>${PKGNAME_NOREV}-YYYYMMDD</varname>.
+	Do not forget regenerating the <filename>distinfo</filename> file
+	after that, since it contains the <varname>DIST_SUBDIR</varname>
+	path in the filenames.
+        Furthermore, a mail to the package's authors seems appropriate
+	telling them that changing distfiles after releases without
+	changing the file names is not good practice. </para>
     </sect2>
   </sect1>
 
