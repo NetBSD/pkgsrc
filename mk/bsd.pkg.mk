@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1678 2005/05/26 11:15:30 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1679 2005/05/29 17:12:16 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -889,6 +889,9 @@ PKGSRC_USE_TOOLS+=	gzip
 
 # Tools
 .include "../../mk/tools/bsd.tools.mk"
+
+# Unprivileged builds
+.include "../../mk/unprivileged.mk"
 
 # If NO_BUILD is defined, default to not needing a compiler.
 .if defined(NO_BUILD)
