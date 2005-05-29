@@ -1,17 +1,24 @@
-$NetBSD: patch-bu,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-bu,v 1.2 2005/05/29 14:38:33 wiz Exp $
 
-diff -U 1 progs/glush/sh.c ../old/progs/glush/sh.c
---- progs/glush/sh.c	Tue Sep 19 11:02:07 1995
-+++ ../old/progs/glush/sh.c	Thu Mar 12 01:46:30 1998
-@@ -38,3 +38,3 @@
+--- progs/glush/sh.c.orig	1995-09-19 20:02:07.000000000 +0200
++++ progs/glush/sh.c
+@@ -36,7 +36,7 @@
+  */
+ #define EXTERN	/* Intern */
  #include "sh.h"
 -#include "glib.h"
 +/*#include "glib.h"*/
  
-@@ -1172,6 +1172,2 @@
+ #ifndef lint
+ char    copyright[] =
+@@ -1171,10 +1171,6 @@ main(argc, argv)
+ 	    int     osetintr = setintr;
  	    sigret_t (*oparintr)() = parintr;
--
+ 
 -/********** GLUnix -- Doug's changes ***********/
 -	srcfile("/disks/barad-dur/now/glunix/data/glush.cshrc", 0, 0, NULL);
 -/***********************************************/
- 
+-
+ #ifdef BSDSIGS
+ 	    sigmask_t omask = sigblock(sigmask(SIGINT));
+ #else

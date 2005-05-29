@@ -1,7 +1,7 @@
-$NetBSD: patch-an,v 1.2 2003/03/31 03:46:30 jmc Exp $
+$NetBSD: patch-an,v 1.3 2005/05/29 14:38:33 wiz Exp $
 
---- glunix/src/rexec/lrexec.cc.orig	Thu Oct  2 19:34:06 1997
-+++ glunix/src/rexec/lrexec.cc	Sun Mar 30 21:55:03 2003
+--- glunix/src/rexec/lrexec.cc.orig	1997-10-02 21:34:06.000000000 +0200
++++ glunix/src/rexec/lrexec.cc
 @@ -293,6 +293,9 @@
  #include <termios.h>
  #include <unistd.h>
@@ -12,7 +12,7 @@ $NetBSD: patch-an,v 1.2 2003/03/31 03:46:30 jmc Exp $
  
  #include "glib/types.h"
  #include "glib.h"
-@@ -375,39 +378,30 @@
+@@ -375,39 +378,30 @@ SetupTerminal()
  {
      struct termios buf;
  
@@ -63,7 +63,7 @@ $NetBSD: patch-an,v 1.2 2003/03/31 03:46:30 jmc Exp $
      buf.c_lflag &= ~(ECHO | ICANON | IEXTEN | ISIG);
      buf.c_cflag &= ~(CSIZE | PARENB);
      buf.c_cflag |= CS8;
-@@ -426,14 +420,20 @@
+@@ -426,14 +420,20 @@ SetupTerminal()
  		    continue;
  		} else {
  		    D1("tcsetattr(): %s\n", strerror(errno));

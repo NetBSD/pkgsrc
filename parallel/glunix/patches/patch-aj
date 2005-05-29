@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
+$NetBSD: patch-aj,v 1.5 2005/05/29 14:38:33 wiz Exp $
 
---- glunix/src/idle/didle_sysinfo.cc.orig	Thu Sep 18 19:04:55 1997
-+++ glunix/src/idle/didle_sysinfo.cc	Sun Mar 30 21:52:53 2003
+--- glunix/src/idle/didle_sysinfo.cc.orig	1997-09-18 21:04:55.000000000 +0200
++++ glunix/src/idle/didle_sysinfo.cc
 @@ -95,14 +95,34 @@
  #include <kvm.h>
  #include <nlist.h>
@@ -90,7 +90,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
  /* definitions for indices in the nlist array */
  #define X_AVENRUN		 0
  #define X_MPID			 1
-@@ -165,11 +224,11 @@
+@@ -165,11 +224,11 @@ static struct nlist nlst[] =
  
  // These are offsets into kmem for the stats we need
  static ulong avenrunOffset, availrmemOffset, anoninfoOffset, swapfsOffset;
@@ -104,7 +104,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
  static int cpuStates[NUM_CPUSTATES];
  static int memoryStats[5];
  static char *cpuStateNames[] =
-@@ -237,6 +296,45 @@
+@@ -237,6 +296,45 @@ ReadKernelData(unsigned long addr, char 
   *
   * Side effects:
   *****************************************************************************/
@@ -150,7 +150,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
  Bool
  Idle_InitializeSysinfo(void)
  {
-@@ -301,7 +399,7 @@
+@@ -301,7 +399,7 @@ Idle_InitializeSysinfo(void)
  
      return True;
  }
@@ -159,7 +159,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
  /******************************************************************************
   * Idle_CleanupSysinfo --
   *    Description of purpose and function of the procedure
-@@ -333,18 +431,30 @@
+@@ -333,18 +431,30 @@ Idle_CleanupSysinfo(void)
   *
   * Side effects:
   *****************************************************************************/
@@ -191,7 +191,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
  	    /* Has this pid been recycled?  Are we hitting a very old process?
  	       If so, then reset the entry */
  	    if (usage < candidate->cpuUsage) {
-@@ -353,7 +463,11 @@
+@@ -353,7 +463,11 @@ FindEntry(struct prpsinfo *targProc, dou
  	    return candidate;
  	}
  	if (candidate->pid == -1) {
@@ -203,7 +203,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
  	    candidate->cpuUsage = 0;
  	    return candidate;
  	}
-@@ -379,10 +493,17 @@
+@@ -379,10 +493,17 @@ FindEntry(struct prpsinfo *targProc, dou
   *
   * Side effects:
   *****************************************************************************/
@@ -221,7 +221,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
      ASSERT(entry != NULL);
      entry->cpuUsage = usage;
  }
-@@ -408,12 +529,24 @@
+@@ -408,12 +529,24 @@ UpdateEntry(ProcUsage *entry, struct prp
  void
  Idle_GetSysInfo(Idle_Load *total, Idle_Load *seq, List_List *glunixProcs)
  {
@@ -246,7 +246,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
      static struct timeval  lastTime = {0, 0};
      struct timeval         currTime;
      double                 alpha, beta;
-@@ -459,6 +592,33 @@
+@@ -459,6 +592,33 @@ Idle_GetSysInfo(Idle_Load *total, Idle_L
      vmInUse[TOTAL] = 0; vmInUse[SEQUENTIAL] = 0;
      cpuUsage[TOTAL] = 0; cpuUsage[SEQUENTIAL] = 0;
      numProcs = 0;
@@ -280,7 +280,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
      rewinddir(procdir);
      
      while ((direntp = readdir(procdir)) != 0) {
-@@ -493,6 +653,7 @@
+@@ -493,6 +653,7 @@ Idle_GetSysInfo(Idle_Load *total, Idle_L
  	(void) close(fd);
  	numProcs++;
      }
@@ -288,7 +288,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
      total->mem = activeMemory[TOTAL];
      total->cpu = cpuUsage[TOTAL];
      seq->mem = activeMemory[SEQUENTIAL];
-@@ -503,10 +664,21 @@
+@@ -503,10 +664,21 @@ Idle_GetSysInfo(Idle_Load *total, Idle_L
  void
  Idle_GetSystemInfo(Idle_SystemLoad *sysLoad)
  {
@@ -311,7 +311,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
  
      if (kd == NULL) {
  	sysLoad->loadAvg[0] = 0;
-@@ -515,7 +687,48 @@
+@@ -515,7 +687,48 @@ Idle_GetSystemInfo(Idle_SystemLoad *sysL
  	sysLoad->memory = 0;
  	return;
      }
@@ -360,7 +360,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
      /* get load average array */
      ReadKernelData(avenrunOffset, (char *) avenrun, sizeof (avenrun));
      //
-@@ -539,6 +752,7 @@
+@@ -539,6 +752,7 @@ Idle_GetSystemInfo(Idle_SystemLoad *sysL
      sysLoad->memory = PAGETOK(MAX(ani_max - ani_resv, 0) +
  			      availrmem - swapfs_minfree);
  

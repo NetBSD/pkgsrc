@@ -1,8 +1,12 @@
-$NetBSD: patch-bn,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-bn,v 1.2 2005/05/29 14:38:33 wiz Exp $
 
---- glunix/src/comm/ccomm.cc~	Thu Oct  2 12:33:46 1997
-+++ glunix/src/comm/ccomm.cc	Fri Apr  3 17:04:02 1998
-@@ -397,3 +397,2 @@
+--- glunix/src/comm/ccomm.cc.orig	1997-10-02 21:33:46.000000000 +0200
++++ glunix/src/comm/ccomm.cc
+@@ -395,7 +395,6 @@
+ #include "ccomm_cback.h"
+ #include "ccomm_internal.h"
  #include "cdebug.h"
 -#include "ctime.h"
  #include "clist.h"
+ #include "glunix.h"
+ #include "cam.h"

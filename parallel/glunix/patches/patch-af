@@ -1,8 +1,10 @@
-$NetBSD: patch-af,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+$NetBSD: patch-af,v 1.2 2005/05/29 14:38:33 wiz Exp $
 
---- glunix/src/sched/csched.cc.orig	Thu Jul 25 15:01:27 1996
-+++ glunix/src/sched/csched.cc	Thu Mar 12 03:52:15 1998
-@@ -86,2 +86,8 @@
+--- glunix/src/sched/csched.cc.orig	1996-07-26 00:01:27.000000000 +0200
++++ glunix/src/sched/csched.cc
+@@ -84,9 +84,16 @@
+ #include <stdio.h>
+ #include <string.h>
  #include <errno.h>
 +
 +#ifdef __NetBSD__
@@ -11,30 +13,50 @@ $NetBSD: patch-af,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
 +typedef short pri_t;
 +#else
  #include <sys/priocntl.h>
-@@ -89,2 +95,3 @@
+ #include <sys/rtpriocntl.h>
  #include <sys/tspriocntl.h>
 +#endif
  
-@@ -104,2 +111,3 @@
+ #include "glib/types.h"
+ #include "cdebug.h"
+@@ -102,6 +109,7 @@
+  *
+  * Side effects:
   *****************************************************************************/
 +#ifndef __NetBSD__
  static short
-@@ -122,2 +130,3 @@
+ Sched_GetMaxPriority(void)
+ {
+@@ -120,6 +128,7 @@ Sched_GetMaxPriority(void)
+     D9("%d\n", maxPriority);
+     return maxPriority;
  }
 +#endif
  
-@@ -133,2 +142,5 @@
+ /******************************************************************************
+  * Sched_GetMyCid --
+@@ -131,6 +140,9 @@ Sched_GetMaxPriority(void)
+  *
+  * Side effects:
   *****************************************************************************/
 +#ifdef __NetBSD__
 +
 +#else
  static id_t
-@@ -154,3 +166,3 @@
+ Sched_GetMyCid(void)
+ {
+@@ -152,7 +164,7 @@ Sched_GetMyCid(void)
+     return myCid;
+     
  }
 -
 +#endif
  /******************************************************************************
-@@ -170,4 +182,10 @@
+  * Sched_SetSchedPriority --
+  *    Set the priority of the target pid to be higher than normal processes
+@@ -168,8 +180,14 @@ Sched_GetMyCid(void)
+  *    The target processes UNIX scheduling priority is increased.
+  *****************************************************************************/
  void
 -Sched_SetSchedPriority(pid_t targPid, pri_t offset)
 +Sched_SetSchedPriority(pid_t targPid, short offset)
@@ -46,7 +68,13 @@ $NetBSD: patch-af,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
 +
 +#else
      pcparms_t  parms;
-@@ -184,2 +202,3 @@
+     short      maxPriority;
+ 
+@@ -182,6 +200,7 @@ Sched_SetSchedPriority(pid_t targPid, pr
+ 	DE("priocntl: %s\n", strerror(errno));
+     }
      return;
 +#endif
  }
+ 
+ /*****************************************************************************/

@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
+$NetBSD: patch-ab,v 1.3 2005/05/29 14:38:33 wiz Exp $
 
---- glunix/src/comm/ccomm_net.cc.orig	Wed Oct 15 19:24:52 1997
-+++ glunix/src/comm/ccomm_net.cc	Sun Mar 30 21:48:41 2003
+--- glunix/src/comm/ccomm_net.cc.orig	1997-10-15 21:24:52.000000000 +0200
++++ glunix/src/comm/ccomm_net.cc
 @@ -73,7 +73,8 @@
  #include <netinet/tcp.h>
  #include <sys/socket.h>
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
  
  #include "glib/types.h"
  #include "cdebug.h"
-@@ -258,7 +259,7 @@
+@@ -258,7 +259,7 @@ Comm_GetIpByHostName(char *hostName)
  
      h = gethostbyname(hostName);
      if (!h) {
@@ -21,7 +21,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
  	// BUGBUG set error code
  	return 0;
      }
-@@ -328,14 +329,15 @@
+@@ -328,14 +329,15 @@ Comm_GetMyIpAddr(uint *ipPtr)
      }
  
      // Get my IP address
@@ -43,7 +43,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
  	// BUGBUG error code
  	*ipPtr = 0;
  	return False;
-@@ -365,7 +367,7 @@
+@@ -365,7 +367,7 @@ Bool
  Comm_SocketGetPort(int sock, int *port)
  {
      struct sockaddr_in  s;
@@ -52,7 +52,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
  
      ASSERT(port != NULL);
  
-@@ -376,7 +378,11 @@
+@@ -376,7 +378,11 @@ Comm_SocketGetPort(int sock, int *port)
  	return False;
      }
      // use ntohs to convert it back to host order for pc's
@@ -64,7 +64,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
      return True;
  }
  
-@@ -397,7 +403,7 @@
+@@ -397,7 +403,7 @@ int
  Comm_SocketGetPeerPort(int sock)
  {
      struct sockaddr_in  s;
@@ -73,7 +73,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
  
      len = sizeof(struct sockaddr_in);
      if (getpeername(sock, (struct sockaddr *)&s, &len)
-@@ -425,7 +431,7 @@
+@@ -425,7 +431,7 @@ Bool
  Comm_SocketGetPeerIpAddr(int sock, uint *ipAddrPtr)
  {
      struct sockaddr_in  s;
@@ -82,7 +82,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
  
      ASSERT(ipAddrPtr != NULL);
      *ipAddrPtr = 0;
-@@ -435,8 +441,11 @@
+@@ -435,8 +441,11 @@ Comm_SocketGetPeerIpAddr(int sock, uint 
  	DE("getpeername: %s\n", strerror(errno));
  	return False;
      }
@@ -95,7 +95,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
      return True;
  }
  
-@@ -528,8 +537,13 @@
+@@ -528,8 +537,13 @@ Comm_CreateListenSock(int port, int *soc
  
      // Bind the socket to a well-known port
      s.sin_family = AF_INET;
@@ -109,7 +109,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
  
      val = bind(sock, (struct sockaddr *) &s, sizeof(s));
      if (val < 0) {
-@@ -637,9 +651,13 @@
+@@ -637,9 +651,13 @@ Comm_Connect(int *sockPtr, uint ipAddr, 
  
      // Now connect to the requested host
      s.sin_family = AF_INET ;
@@ -124,7 +124,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
      if (connect(sock, (struct sockaddr *) &s, sizeof(s)) < 0) {
  	if (errno == EINTR) {
  	    while(1) {
-@@ -700,7 +718,7 @@
+@@ -700,7 +718,7 @@ Comm_Accept(int listenFd, int *newFd)
  {
      struct sockaddr_in  s;
      int                 fd;
@@ -133,7 +133,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
  
      ASSERT(newFd != NULL);
      *newFd = -1;
-@@ -754,7 +772,7 @@
+@@ -754,7 +772,7 @@ Comm_SureWrite(int sock, void *bufPtr, i
      ASSERT(bufLen > 0);
  
      errno = 0; // BUGBUG, we should do this for ALL related funcs
@@ -142,7 +142,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
  	val = write(sock, (const char *)bufPtr, bufLen);
  
  	writeErrno = errno;
-@@ -880,7 +898,7 @@
+@@ -880,7 +898,7 @@ Comm_SureWriteV(int sock, struct iovec *
  		vecLen--;
  	    } else {
  		vecPtr[0].iov_len -= val;
@@ -151,7 +151,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
  		break;
  	    }
  	}
-@@ -915,7 +933,7 @@
+@@ -915,7 +933,7 @@ Comm_SureRead(int sock, void *bufPtr, in
      ASSERT(bufLen > 0);
  
      errno = 0; // BUGBUG, we should do this for ALL related funcs
@@ -160,7 +160,7 @@ $NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
  	val = read(sock, (char *)bufPtr, bufLen);
  	readErrno = errno;
  	D9("Read from sock %d, bufPtr %08x, bufLen %d, bytes %d\n",
-@@ -1045,7 +1063,7 @@
+@@ -1045,7 +1063,7 @@ Comm_SureReadV(int sock, struct iovec *v
  		D3("Read fewer bytes than asked for:%d < %d\n",
  		   totRead, vecPtr[currVec].iov_len);
  		vecPtr[currVec].iov_len -= val;

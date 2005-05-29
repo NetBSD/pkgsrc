@@ -1,8 +1,12 @@
-$NetBSD: patch-bl,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-bl,v 1.2 2005/05/29 14:38:33 wiz Exp $
 
---- glunix/src/rexec/mrexec.cc~	Thu Oct  2 12:34:06 1997
-+++ glunix/src/rexec/mrexec.cc	Fri Apr  3 16:56:16 1998
-@@ -263,3 +263,2 @@
+--- glunix/src/rexec/mrexec.cc.orig	1997-10-02 21:34:06.000000000 +0200
++++ glunix/src/rexec/mrexec.cc
+@@ -261,7 +261,6 @@
+ 
+ #include <signal.h>
  #include <pwd.h>
 -#include <time.h>
  #include <stdio.h>
+ #include <string.h>
+ #include <time.h>

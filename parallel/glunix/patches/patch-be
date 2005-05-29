@@ -1,8 +1,10 @@
-$NetBSD: patch-be,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-be,v 1.2 2005/05/29 14:38:33 wiz Exp $
 
---- progs/glumake/make.h~	Fri Aug  2 12:05:32 1996
-+++ progs/glumake/make.h	Mon Mar  2 07:44:05 1998
-@@ -88,7 +88,3 @@
+--- progs/glumake/make.h.orig	1996-08-02 21:05:32.000000000 +0200
++++ progs/glumake/make.h
+@@ -86,11 +86,7 @@ extern int errno;
+ #define	SYS_SIGLIST_DECLARED
+ #endif
  
 -#ifdef HAVE_SYS_SIGLIST
 -#ifndef SYS_SIGLIST_DECLARED
@@ -11,3 +13,5 @@ $NetBSD: patch-be,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 -#else
 +#ifndef HAVE_SYS_SIGLIST
  #include "signame.h"
+ #endif
+ 
