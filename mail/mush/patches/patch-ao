@@ -1,0 +1,25 @@
+$NetBSD: patch-ao,v 1.1 2005/05/29 05:45:58 minskim Exp $
+
+--- makefile.linux.orig	2005-05-29 00:37:30.610283960 -0500
++++ makefile.linux
+@@ -30,9 +30,9 @@ DEBUG=-O6 
+ # apparently has the ncurses library installed as -lcurses, whereas the latter
+ # has a separate -lncurses.  RedHat for 5.0 recommends dropping -ltermcap
+ # and using only -lcurses.  Set CFLAGS and LIBS here as appropriate.
+-CFLAGS= $(DEBUG) -DPOSIX -DSIGRET=void -fwritable-strings -DCURSES -DDEFINE_CURSES_SGTTY -I/usr/include/ncurses
++CFLAGS+= -DPOSIX -DSIGRET=void -fwritable-strings -DCURSES -DDEFINE_CURSES_SGTTY -I/usr/include/ncurses
+ #CFLAGS= $(DEBUG) -DPOSIX -DSIGRET=void -fwritable-strings -DCURSES -DDEFINE_CURSES_SGTTY -DNCURSES
+-LDFLAGS= $(DEBUG)
++#LDFLAGS= $(DEBUG)
+ LIBS= -lncurses -ltermcap
+ #LIBS= -lcurses -ltermcap
+ #LIBS= -lcurses
+@@ -50,7 +50,7 @@ $(OBJS2): $(HDRS1) $(HDRS2) $(HDRS3)
+ loop.o: version.h
+ 
+ #PREFIX= /usr/packages/mush
+-PREFIX= /usr
++#PREFIX= /usr
+ BINDIR= $(PREFIX)/bin
+ LIBDIR= $(PREFIX)/lib
+ MRCDIR= $(PREFIX)/lib
