@@ -1,15 +1,25 @@
-$NetBSD: patch-al,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-al,v 1.2 2005/05/29 14:38:33 wiz Exp $
 
---- glunix/src/nmgt/dnmgt.cc.orig	Thu Sep 18 12:05:03 1997
-+++ glunix/src/nmgt/dnmgt.cc	Thu Apr  9 09:13:12 1998
-@@ -143,3 +143,6 @@
+--- glunix/src/nmgt/dnmgt.cc.orig	1997-09-18 21:05:03.000000000 +0200
++++ glunix/src/nmgt/dnmgt.cc
+@@ -138,10 +138,14 @@
+ #define __THIS_MODULE MODULE_NMGT
+ 
+ #include <signal.h>
++#include <stdlib.h>
+ #include <unistd.h>
+ #include <errno.h>
  #include <string.h>
 +
 +#ifndef __NetBSD__
  #include <sys/processor.h>
 +#endif
  
-@@ -202,2 +205,23 @@
+ #include "glib/types.h"
+ #include "cdebug.h"
+@@ -200,6 +204,27 @@ Nmgt_IncomingWelcome(int callbackValue, 
+ Bool
+ Nmgt_GetMachineInfo(MsgNmgt_Hello *hello)
  {
 +#ifdef __NetBSD__
 +
@@ -33,8 +43,14 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +#else
 +
      processor_info_t  info;
-@@ -218,3 +242,3 @@
+ 
+     ASSERT(hello != NULL);
+@@ -216,7 +241,7 @@ Nmgt_GetMachineInfo(MsgNmgt_Hello *hello
+     }
+ 
      // Could use uname() to get the os type and version.
 -
 +#endif
      return True;
+ }
+ 

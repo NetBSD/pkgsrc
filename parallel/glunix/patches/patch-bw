@@ -1,15 +1,22 @@
-$NetBSD: patch-bw,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-bw,v 1.2 2005/05/29 14:38:33 wiz Exp $
 
-diff -U 1 progs/glush/sh.exec.c ../old/progs/glush/sh.exec.c
---- progs/glush/sh.exec.c	Tue Jul 25 12:13:14 1995
-+++ ../old/progs/glush/sh.exec.c	Thu Mar 12 02:12:42 1998
-@@ -153,3 +153,3 @@
+--- progs/glush/sh.exec.c.orig	1995-07-25 21:13:14.000000000 +0200
++++ progs/glush/sh.exec.c
+@@ -151,7 +151,7 @@ static	void	pexerr		__P((void));
+ static	void	texec		__P((Char *, Char **));
+ static	int	hashname	__P((Char *));
  static	int 	iscommand	__P((Char *));
 -
 +/*
  char *index(a, b)
-@@ -167,3 +167,3 @@
+     char *a;
+     char  b;
+@@ -165,7 +165,7 @@ char *rindex(a, b)
+ {
+   return strrchr(a, b);
  }
 -
 +*/
  void
+ doexec(t)
+     register struct command *t;

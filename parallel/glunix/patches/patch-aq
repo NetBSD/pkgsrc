@@ -1,8 +1,10 @@
-$NetBSD: patch-aq,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-aq,v 1.2 2005/05/29 14:38:33 wiz Exp $
 
---- progs/tools/Makefile.orig	Wed Oct 29 16:11:27 1997
-+++ progs/tools/Makefile	Sat Feb 28 05:51:55 1998
-@@ -12,5 +12,5 @@
+--- progs/tools/Makefile.orig	1997-10-30 00:11:27.000000000 +0100
++++ progs/tools/Makefile
+@@ -10,9 +10,9 @@ SCRIPTS = run_glunix_script run_glunix_a
+ NOT_INSTALLED_SCRIPTS = gluinstall
+ 
  # These are things that need to be installed
 -BINS    = $(TARGETS) $(SCRIPTS)
 +BINS    = $(TARGETS) $(SCRIPTS) gluinstall
@@ -10,3 +12,5 @@ $NetBSD: patch-aq,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 -LIBS    = -lnsl
 +LIBS    = 
  MANPAGES = MHTML.1
+ 
+ ###########################################################################
