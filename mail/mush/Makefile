@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/20 12:19:43 agc Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/29 05:16:27 minskim Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -25,6 +25,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	mush
+BUILD_TARGET=	mush
 
 pre-configure:
 	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/config.h-dist > ${WRKSRC}/config.h
