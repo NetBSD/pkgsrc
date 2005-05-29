@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2004/01/24 07:09:15 grant Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2005/05/29 11:18:35 minskim Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 include/python${PY_VER_SUFFIX}/Python.h
@@ -832,6 +832,12 @@ lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/FCNTL.pyo
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.py
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.pyc
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.pyo
+${PLAT_SOCKET}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SOCKET.py
+${PLAT_SOCKET}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SOCKET.pyc
+${PLAT_SOCKET}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SOCKET.pyo
+${PLAT_TERMIOS}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TERMIOS.py
+${PLAT_TERMIOS}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TERMIOS.pyc
+${PLAT_TERMIOS}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TERMIOS.pyo
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/regen
 lib/python${PY_VER_SUFFIX}/popen2.py
 lib/python${PY_VER_SUFFIX}/popen2.pyc
