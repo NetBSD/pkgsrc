@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/05/29 08:03:25 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2005/05/29 09:40:09 minskim Exp $
 #
 
 DISTNAME=	Python-2.1.3
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--with-pth
 
 PY_VER_SUFFIX=	2.1
 
+BUILD_TARGET=		all ./Lib/plat-${PY_PLATNAME}
 INSTALL_TARGET=		altinstall
 
 .include "../../mk/bsd.prefs.mk"
