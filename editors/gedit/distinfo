@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.18 2005/05/19 21:08:57 jmmv Exp $
+$NetBSD: distinfo,v 1.19 2005/05/29 13:34:48 jmmv Exp $
 
 SHA1 (gedit-2.10.2.tar.bz2) = d4e2818bc2ec1c557ecb2340fa5acbab2f92a929
 RMD160 (gedit-2.10.2.tar.bz2) = 927925bc3f626c8ba398a5fa3da97ee665c4cc3c
 Size (gedit-2.10.2.tar.bz2) = 3171315 bytes
-SHA1 (patch-aa) = 3ef674ae52c500cb5807028c4328dad547cc7fa6
-SHA1 (patch-ab) = 5311afa2b4276ab337ebfcaabaf170dcd366688d
