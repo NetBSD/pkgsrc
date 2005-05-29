@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2004/05/16 20:01:59 minskim Exp $
+$NetBSD: patch-ac,v 1.6 2005/05/29 06:39:12 minskim Exp $
 
 --- setup.py.orig	2001-12-27 15:51:02.000000000 -0600
 +++ setup.py
@@ -106,6 +106,15 @@ $NetBSD: patch-ac,v 1.5 2004/05/16 20:01:59 minskim Exp $
  
          # Interface to the Expat XML parser
          #
+@@ -515,7 +500,7 @@ class PyBuildExt(build_ext):
+         self.extensions.extend(exts)
+ 
+         # Call the method for detecting whether _tkinter can be compiled
+-        self.detect_tkinter(inc_dirs, lib_dirs)
++        #self.detect_tkinter(inc_dirs, lib_dirs)
+ 
+ 
+     def detect_tkinter(self, inc_dirs, lib_dirs):
 @@ -609,7 +594,7 @@ def main():
            ext_modules=[Extension('struct', ['structmodule.c'])],
  
