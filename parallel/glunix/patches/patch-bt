@@ -1,15 +1,22 @@
-$NetBSD: patch-bt,v 1.2 1998/10/22 16:06:48 garbled Exp $
+$NetBSD: patch-bt,v 1.3 2005/05/29 14:38:33 wiz Exp $
 
-diff -U 1 progs/glush/config_f.h ../old/progs/glush/config_f.h
---- progs/glush/config_f.h	Thu Jul 20 11:08:43 1995
-+++ ../old/progs/glush/config_f.h	Thu Mar 12 01:24:31 1998
-@@ -58,3 +58,3 @@
+--- progs/glush/config_f.h.orig	1995-07-20 20:08:43.000000000 +0200
++++ progs/glush/config_f.h
+@@ -56,7 +56,7 @@
+  *		if you don't have <locale.h>, you don't want
+  *		to define this.
   */
 -#undef NLS
 +#define NLS
  
-@@ -92,3 +92,3 @@
+ /*
+  * LOGINFIRST   Source ~/.login before ~/.cshrc
+@@ -90,7 +90,7 @@
+  *		on the name of the tty, and environment.
+  *		Does not make sense in the modern window systems!
   */
 -#define AUTOLOGOUT
 +#undef AUTOLOGOUT
  
+ /*
+  * SUSPENDED	Newer shells say 'Suspended' instead of 'Stopped'.

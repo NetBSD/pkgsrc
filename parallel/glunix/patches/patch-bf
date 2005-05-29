@@ -1,4 +1,4 @@
-$NetBSD: patch-bf,v 1.2 1998/10/22 16:06:48 garbled Exp $
+$NetBSD: patch-bf,v 1.3 2005/05/29 14:38:33 wiz Exp $
 
 --- progs/glush/Makefile.ror	Wed May 27 11:19:41 1998
 +++ progs/glush/Makefile	Wed May 27 11:20:21 1998
@@ -761,7 +761,7 @@ $NetBSD: patch-bf,v 1.2 1998/10/22 16:06:48 garbled Exp $
 @@ -639,3 +821,3 @@
  	$(RM) $@
 -	$(CCLINK) -o $@ $(LDOPTIONS)  $(OBJS)   $(LDLIBS)  $(GLUNIX_LIBS) $(ALIB) $(EXTRA_LOAD_FLAGS)
-+	$(CCLINK) -o $@ $(LDOPTIONS)  $(OBJS)   $(LDLIBS)  $(ALIB) $(EXTRA_LOAD_FLAGS)
++	$(CXXLINK) -o $@ $(LDOPTIONS)  $(OBJS)   $(LDLIBS)  $(ALIB) $(EXTRA_LOAD_FLAGS)
  
 @@ -646,3 +828,3 @@
  	$(RM) $@

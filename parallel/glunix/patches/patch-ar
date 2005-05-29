@@ -1,8 +1,9 @@
-$NetBSD: patch-ar,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-ar,v 1.2 2005/05/29 14:38:33 wiz Exp $
 
---- progs/tools/gluinstall.pl.orig	Thu Sep 11 16:28:03 1997
-+++ progs/tools/gluinstall.pl	Sat May 23 14:16:26 1998
-@@ -2,3 +2,6 @@
+--- progs/tools/gluinstall.pl.orig	1997-09-12 01:28:03.000000000 +0200
++++ progs/tools/gluinstall.pl
+@@ -1,6 +1,9 @@
+ #!%%PERL_PATH%%
  
 -$glunix_base = "%%GLUNIX_DIR%%/release";
 +$install_man = "/usr/bin/install -c -m 644 -o glunix -g glunix ";
@@ -10,7 +11,11 @@ $NetBSD: patch-ar,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +$imkdir = "/usr/bin/install -d -m 755 -o glunix -g glunix";
 +$glunix_base = "%%GLUNIX_BASE%%";
  $now_base = "%%INSTALL_DIR%%";
-@@ -23,9 +26,9 @@
+ $http_base = "%%HTTP_BASE%%";
+ $util_base = "%%GLUNIX_DIR%%/util";
+@@ -21,13 +24,13 @@ if ($ARGV[0] eq "-test") {
+ # Create directories
+ #
  
 -&my_mkdir("$now_base/bin");
 -&my_mkdir("$now_base/lib");
@@ -27,7 +32,11 @@ $NetBSD: patch-ar,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +#    &my_mkdir("$http_base/man/html");
 +#}
  
-@@ -50,18 +53,39 @@
+ #######################################################################
+ #
+@@ -48,22 +51,43 @@ if ($http_base ne "") {
+ # Install include files/directories
+ #
  
 -@files = <$glunix_base/glunix/include/*>;
 -@files = &strip_garbage(@files);
@@ -80,12 +89,17 @@ $NetBSD: patch-ar,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
  }
 -
  print "\n";
-@@ -74,3 +98,3 @@
+ 
+ #######################################################################
+@@ -72,37 +96,38 @@ print "\n";
+ #
+ 
  # Find all of the man pages in the release directory
 -@dirs = <$glunix_base/man/man?>;
 +@dirs = <$glunix_base/glunix/man/man?>;
  push(@dirs, <$glunix_base/glunix/man/man?>);
-@@ -79,21 +103,22 @@
+ 
+ # print "Found man directories: ", join(" ", @dirs), "\n";
  
 -foreach $val (@dirs) {
 -    @f = <$val/*.*>;
@@ -124,17 +138,28 @@ $NetBSD: patch-ar,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +#    print "Done with catman!\n";
 +#}
  
-@@ -104,3 +129,3 @@
+ #######################################################################
+ #
+ # Install libraries
+ #
  
 -@files = <$glunix_base/lib/$glunix_arch/*>;
 +@files = <$glunix_base/glunix/lib/$glunix_arch/*>;
  @files = &strip_garbage(@files);
-@@ -115,3 +140,3 @@
+ #print "Found include files: ", join(" ", @dirs), "\n";
+ 
+@@ -113,7 +138,7 @@ foreach $val (@files) {
+ #       print "Unlinking $install_path\n";
+ 	unlink($install_path);
  #       print "Linking $install_path to $val\n";
 -	symlink($val, $install_path);
 +	system("$install_man $val $install_path");
      }
-@@ -131,9 +156,9 @@
+ }
+ 
+@@ -129,18 +154,18 @@ undef @f;
+ undef @files;
+ 
  foreach $val (@copy_progs) {
 -    if (-e "$glunix_base/bin/$glunix_arch/$val") {
 -	print "Copying $glunix_base/bin/$glunix_arch/$val to $now_base/bin/$val\n";
@@ -148,25 +173,39 @@ $NetBSD: patch-ar,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 -	print "Cannot find $glunix_base/bin/$glunix_arch/$val to copy\n";
 +	print "Cannot find $glunix_base/glunix/bin/$glunix_arch/$val to copy\n";
      }
-@@ -142,3 +167,3 @@
+ }
+ 
  # Find all of the programs in the release directory
 -@dirs = <$glunix_base/bin/*>;
 +@dirs = <$glunix_base/glunix/bin/*>;
  
-@@ -181,3 +206,3 @@
+ #print "Found program directories: ", join(" ", @dirs), "\n";
+ 
+@@ -179,14 +204,16 @@ foreach $val (@files) {
+     if (!$justTesting) {
+ 	unlink($install_path);
  #       print "symlink(\"GLUnix-bin\", $install_path);\n";
 -	symlink("GLUnix-bin", $install_path);
 +	system("$install_bin $val $install_path");
      }
-@@ -188,3 +213,5 @@
+ }
+ 
+ foreach $val (@setuid_progs) {
+     print "Marking file setuid root: $val\n";
      if (!$justTesting) {
 -	chmod 06511, $val;
 +#	chmod 06511, $val;
 +      system("chown root:glunix $now_base/bin/$val");
 +      system("chmod 6511 $now_base/bin/$val");
      }
-@@ -227,3 +254,3 @@
+ }
+ 
+@@ -225,7 +252,7 @@ sub install_manpages {
+ 	if (!$justTesting) {
+ 	    unlink($install_path);
  #           print "symlink($val, $install_path)\n";
 -	    symlink($val, $install_path);
 +	    system("$install_man $val $install_path");
  	}
+     }
+ 

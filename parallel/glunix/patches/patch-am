@@ -1,8 +1,10 @@
-$NetBSD: patch-am,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-am,v 1.2 2005/05/29 14:38:33 wiz Exp $
 
---- glunix/src/rexec/drexec.cc.orig	Thu Oct  2 12:34:05 1997
-+++ glunix/src/rexec/drexec.cc	Fri Apr  3 16:58:09 1998
-@@ -308,3 +308,10 @@
+--- glunix/src/rexec/drexec.cc.orig	1997-10-02 21:34:05.000000000 +0200
++++ glunix/src/rexec/drexec.cc
+@@ -306,7 +306,14 @@
+ #include <errno.h>
+ #include <string.h>
  #include <stdlib.h>
 +
 +#ifdef __NetBSD__
@@ -13,7 +15,11 @@ $NetBSD: patch-am,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +#endif
 +
  #include <grp.h>
-@@ -355,5 +362,7 @@
+ #include <pwd.h>
+ #include <bsd.h>
+@@ -353,9 +360,11 @@ static Bool FinalizeParentPtyPiping(int 
+ static Bool ChildPtyPiping(char *ptyName, char *ptyErrorName, int ptyMasterFd,
+ 			   int ptyErrorMasterFd, MsgRexec_ExecCommand *msg);
  static int PtyMasterOpen(char *ptyName);
 -/*static int PtySlaveOpen(char *ptyName, int uid, int gid);*/
 +#ifdef __NetBSD__
@@ -23,7 +29,11 @@ $NetBSD: patch-am,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 -
 +#endif
  /*****************************************************************************/
-@@ -1143,4 +1152,8 @@
+ 
+ // All of the routines on this list are called before this module
+@@ -1141,72 +1150,82 @@ ChildPtyPiping(char *ptyName, char *ptyE
+     windowSize = msg->windowSize;
+ 
      // Open the stderr pty
 +#ifdef __NetBSD__
 +    if((ptyErrorSlaveFd = PtySlaveOpen(ptyErrorName, msg->uid, msg->gid)) == -1) {
@@ -32,7 +42,9 @@ $NetBSD: patch-am,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
         == -1) {
 +#endif
  	DE("PtySlaveOpen() failed\n");
-@@ -1150,13 +1163,17 @@
+ 	return False;
+     }
+     close(ptyErrorMasterFd);
  
 -/*    if(setsid() == -1) {
 -	Debug_Print(MODULE_REXEC, DEBUG_ERROR, "(rexec)ChildPtyPiping: "
@@ -57,7 +69,9 @@ $NetBSD: patch-am,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 -/*    if((ptySlaveFd = PtySlaveOpen(ptyName, msg->uid, msg->gid)) == -1) {*/
 +#endif
  	DE("PtySlaveOpen() failed\n");
-@@ -1166,22 +1183,21 @@
+ 	return False;
+     }
+     close(ptyMasterFd);
  
 -/* This should work on BSD, but doesn't on SysV
 -#if defined(TIOCSCTTY) && !defined(CIBAUD)
@@ -94,7 +108,7 @@ $NetBSD: patch-am,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +	DE("ioctl: %s\n", strerror(errno));
 +      }
      }
-@@ -1189,16 +1205,18 @@
+     
      if(ioctl(ptySlaveFd, TIOCSWINSZ, (char *) &windowSize) == -1) {
 -	* BUGBUG maybe should return failure here? *
 -	DE("ioctl: %s\n", strerror(errno));
@@ -124,7 +138,7 @@ $NetBSD: patch-am,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +	DE("ioctl: %s\n", strerror(errno));
 +      }
      }
-@@ -1206,5 +1224,6 @@
+     
      if(ioctl(ptyErrorSlaveFd, TIOCSWINSZ, (char *) &windowSize) == -1) {
 -	* BUGBUG maybe should return failure here? *
 -	DE("ioctl: %s\n", strerror(errno));
@@ -134,16 +148,28 @@ $NetBSD: patch-am,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +    }
 +#endif
  
-@@ -1253,2 +1272,3 @@
+     if(msg->validIoFds[IO_INPUT]) {
+ 	while(dup2(ptySlaveFd, STDIN_FILENO) == -1) {
+@@ -1251,6 +1270,7 @@ ChildPtyPiping(char *ptyName, char *ptyE
+     return True;
+ }
  
 +#ifndef __NetBSD__
  int
-@@ -1273,3 +1293,3 @@
+ PtyMasterOpen(char *ptyName)
+ {
+@@ -1271,7 +1291,7 @@ PtyMasterOpen(char *ptyName)
+ 
+     return ptyMasterFd;
  }
 -
 +#else
  /******************************************************************************
-@@ -1286,36 +1306,39 @@
+  * PtyMasterOpen --
+  *     This is the actual procedure that opens up a master pty. (BSD STYLE)
+@@ -1284,40 +1304,43 @@ PtyMasterOpen(char *ptyName)
+  *
+  * Side effects:
   ****************************************************************************/
 -/*int
 +
@@ -211,17 +237,29 @@ $NetBSD: patch-am,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
  
 +#ifndef __NetBSD__
  int
-@@ -1366,3 +1389,3 @@
+ PtySlaveOpen(char *ptyName, int ptyMasterFd)
+ {
+@@ -1364,7 +1387,7 @@ PtySlaveOpen(char *ptyName, int ptyMaste
+ 
+     return ptySlaveFd;
  }
 -
 +#else
  /******************************************************************************
-@@ -1399,3 +1422,3 @@
+  * PtySlaveOpen --
+  *     This is the actual procedure that opens up a slave pty. (BSD STYLE)
+@@ -1397,7 +1420,7 @@ PtySlaveOpen(char *ptyName, int uid, int
+ 
+     return ptySlaveFd;
  }
 -
 +#endif
  /******************************************************************************
-@@ -1802,3 +1825,7 @@
+  * Rexec_AbortProgramCallback --
+  *
+@@ -1800,7 +1823,11 @@ ChildDeathCallback(int sig, int arg) {
+ 
+ 	/* If it didn't exit, but something else happened
  	   (received the SIG_STOP or SIG_CONT possibly) */
 +#ifdef __NetBSD__
 +	if ((WIFSTOPPED(procStat)) || (WIFSIGNALED(procStat))) {
@@ -229,3 +267,5 @@ $NetBSD: patch-am,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
  	if ((WIFSTOPPED(procStat)) || (WIFCONTINUED(procStat))) {
 +#endif
  	    // BUGBUG Shouldn't we signal the startup here????
+ 	    D5("process status says it didn't exit!\n");
+ 	    continue;
