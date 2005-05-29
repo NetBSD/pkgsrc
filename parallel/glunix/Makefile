@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2005/05/22 20:08:26 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2005/05/29 11:25:12 wiz Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
 PKGREVISION=	1
 CATEGORIES=	parallel
-MASTER_SITES=	http://now.cs.berkeley.edu/Glunix/ \
-		http://www.inficad.com/~garbled/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} makedepend${EXTRACT_SUFX}
+MASTER_SITES=	http://now.cs.berkeley.edu/Glunix/
 
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://now.cs.berkeley.edu/Glunix/glunix.html
@@ -20,17 +18,12 @@ SSH=		${LOCALBASE}/bin/ssh
 .endif
 
 WRKSRC=		${WRKDIR}
-USE_TOOLS+=	gmake
-USE_PERL5=	yes
+USE_TOOLS+=	gmake perl
 INTERACTIVE_STAGE=	fetch
 NO_MTREE=	yes
 
 NOW_ROOT=	${LOCALBASE}/now
 MESSAGE_SUBST+=	NOW_ROOT=${NOW_ROOT}
-
-.if (${MACHINE} == "i386")
-FLAGS=-m486
-.endif
 
 .include "../../mk/endian.mk"
 .if (${MACHINE_ENDIAN} == "little")
@@ -41,8 +34,6 @@ MAKE_ENV+= OPSYS=${OPSYS} ARCH=${MACHINE_ARCH} NOW_ROOT=${NOW_ROOT}
 MAKE_ENV+= PORTSDIR=${PKGDIR} WRKDIR=${WRKDIR} FLAGS="${FLAGS}"
 MAKE_ENV+= SSH=${SSH}
 
-SCRIPTS_ENV+= ARCH=${MACHINE_ARCH} RM=${RM} NOW_ROOT=${NOW_ROOT}
-
 .if exists(/usr/sbin/user)
 USER_CMD=       /usr/sbin/user
 GROUP_CMD=      /usr/sbin/group
@@ -51,13 +42,6 @@ DEPENDS+=       user>=20000313:../../sysutils/user
 USER_CMD=       ${LOCALBASE}/sbin/user
 GROUP_CMD=      ${LOCALBASE}/sbin/group
 .endif
-
-.if defined(BATCH)
-BATCH_CHECK_DISTFILES=	batch-check-distfiles
-.endif
-
-pre-fetch: ${BATCH_CHECK_DISTFILES}
-	cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/pre-fetch
 
 post-patch:
 	cd ${WRKSRC};							\
