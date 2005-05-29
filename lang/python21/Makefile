@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/05/29 06:26:50 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2005/05/29 08:03:25 minskim Exp $
 #
 
 DISTNAME=	Python-2.1.3
@@ -52,6 +52,9 @@ BSDDB=
 BSDDB=		"@comment "
 .else
 .include "../../mk/bdb.buildlink3.mk"
+MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE}
+MAKE_ENV+=	PY_BDB_INCDIRS=${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
+MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
 .endif
 PLIST_SUBST+=	BSDDB=${BSDDB}
 
