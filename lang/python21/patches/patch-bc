@@ -1,13 +1,13 @@
-$NetBSD: patch-bc,v 1.1 2004/08/29 10:44:19 recht Exp $
+$NetBSD: patch-bc,v 1.2 2005/05/29 11:07:49 minskim Exp $
 
---- Lib/posixfile.py.orig	2001-04-10 17:44:33.000000000 +0200
-+++ Lib/posixfile.py	2004-08-28 12:10:29.000000000 +0200
-@@ -171,11 +171,11 @@
+--- Lib/posixfile.py.orig	2001-04-10 10:44:33.000000000 -0500
++++ Lib/posixfile.py
+@@ -171,11 +171,11 @@ class _posixfile_:
          # Hack by davem@magnet.com to get locking to go on freebsd;
          # additions for AIX by Vladimir.Marangozov@imag.fr
          import sys, os
 -        if sys.platform in ('netbsd1',
-+        if sys.platform in ('netbsd1', 'netbsd2',
++        if sys.platform in ('netbsd1', 'netbsd2', 'netbsd3',
                              'openbsd2',
                              'freebsd2', 'freebsd3', 'freebsd4', 'freebsd5',
                              'bsdos2', 'bsdos3', 'bsdos4'):
@@ -16,12 +16,12 @@ $NetBSD: patch-bc,v 1.1 2004/08/29 10:44:19 recht Exp $
                    l_start, l_len, os.getpid(), l_type, l_whence)
          elif sys.platform in ['aix3', 'aix4']:
              flock = struct.pack('hhlllii', \
-@@ -187,12 +187,12 @@
+@@ -187,12 +187,12 @@ class _posixfile_:
          flock = fcntl.fcntl(self._file_.fileno(), cmd, flock)
  
          if '?' in how:
 -            if sys.platform in ('netbsd1',
-+            if sys.platform in ('netbsd1', 'netbsd2'
++            if sys.platform in ('netbsd1', 'netbsd2', 'netbsd3',
                                  'openbsd2',
                                  'freebsd2', 'freebsd3', 'freebsd4', 'freebsd5',
                                  'bsdos2', 'bsdos3', 'bsdos4'):
