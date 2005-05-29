@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.10 2004/12/29 12:16:56 agc Exp $	*/
+/*	$NetBSD: str.c,v 1.11 2005/05/29 19:20:53 minskim Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
 #else
-__RCSID("$NetBSD: str.c,v 1.10 2004/12/29 12:16:56 agc Exp $");
+__RCSID("$NetBSD: str.c,v 1.11 2005/05/29 19:20:53 minskim Exp $");
 #endif
 #endif
 
@@ -485,7 +485,7 @@ findmatchingname(const char *dir, const char *pattern, matchfn match, void *data
 		 * each is a different pattern class (e.g. dewey and
 		 * character class (.t[bg]z)) */
 		if (pmatch(tmp_pattern, tmp_file)
-		    && pmatch(pat_sfx, file_sfx)) {
+		    && (pat_sfx[0] == '\0' || pmatch(pat_sfx, file_sfx))) {
 			if (match) {
 				match(dp->d_name, data);
 				/* return value ignored for now */
