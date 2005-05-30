@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10253 2005/05/30 16:58:46 wiz Exp $
+$NetBSD: CHANGES,v 1.10254 2005/05/30 20:23:37 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2665,3 +2665,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/libebml to 0.7.5 [salo 2005-05-30]
 	Updated multimedia/libmatroska to 0.7.7 [salo 2005-05-30]
 	Updated net/tinc to 1.0.4 [wiz 2005-05-30]
+	Updated cad/eagle to 4.14 [bouyer 2005-05-30]
