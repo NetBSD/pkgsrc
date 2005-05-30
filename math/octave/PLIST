@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/04/01 10:15:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/05/30 18:12:51 minskim Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -553,82 +553,82 @@ include/octave-${PKGVERSION}/octave/xpow.h
 lib/libcruft.la
 lib/liboctave.la
 lib/liboctinterp.la
-libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/info-emacs-info
-libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/info-emacs-octave-help
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/airy.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/balance.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/besselh.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/besseli.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/besselj.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/besselk.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/bessely.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/betainc.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/chol.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/colloc.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/daspk.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/daspk_options.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/dasrt.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/dasrt_options.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/dassl.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/dassl_options.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/det.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/eig.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/endgrent.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/endpwent.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/expm.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/fft.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/fft2.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/fftn.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/fftw_wisdom.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/filter.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/find.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/fsolve.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/fsolve_options.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/gammainc.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/gcd.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/getgrent.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/getgrgid.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/getgrnam.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/getpwent.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/getpwnam.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/getpwuid.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/getrusage.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/givens.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/gmtime.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/hess.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/ifft.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/ifft2.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/ifftn.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/inv.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/inverse.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/kron.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/localtime.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/lpsolve.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/lpsolve_options.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/lsode.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/lsode_options.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/lu.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/max.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/min.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/minmax.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/mktime.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/pinv.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/qr.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/quad.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/quad_options.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/qz.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/rand.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/randn.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/schur.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/setgrent.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/setpwent.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/sort.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/sqrtm.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/strftime.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/strptime.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/svd.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/syl.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/time.oct
+libexec/octave/${PKGVERSION}/exec/${GNU_PLATFORM_DIR}/info-emacs-info
+libexec/octave/${PKGVERSION}/exec/${GNU_PLATFORM_DIR}/info-emacs-octave-help
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/airy.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/balance.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/besselh.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/besseli.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/besselj.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/besselk.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/bessely.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/betainc.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/chol.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/colloc.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/daspk.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/daspk_options.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/dasrt.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/dasrt_options.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/dassl.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/dassl_options.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/det.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/eig.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/endgrent.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/endpwent.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/expm.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/fft.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/fft2.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/fftn.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/fftw_wisdom.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/filter.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/find.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/fsolve.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/fsolve_options.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/gammainc.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/gcd.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/getgrent.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/getgrgid.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/getgrnam.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/getpwent.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/getpwnam.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/getpwuid.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/getrusage.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/givens.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/gmtime.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/hess.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/ifft.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/ifft2.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/ifftn.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/inv.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/inverse.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/kron.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/localtime.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/lpsolve.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/lpsolve_options.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/lsode.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/lsode_options.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/lu.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/max.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/min.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/minmax.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/mktime.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/pinv.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/qr.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/quad.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/quad_options.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/qz.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/rand.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/randn.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/schur.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/setgrent.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/setpwent.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/sort.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/sqrtm.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/strftime.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/strptime.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/svd.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/syl.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/time.oct
 libexec/octave/ls-R
 man/man1/mkoctfile.1
 man/man1/octave-bug.1
@@ -1397,21 +1397,21 @@ share/octave/site/m/startup/octaverc
 @dirrm share/octave/${PKGVERSION}/doc
 @dirrm share/octave/${PKGVERSION}
 @dirrm share/doc/html/octave
-@dirrm libexec/octave/site/oct/api-v13/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/site/oct/api-v13/${GNU_PLATFORM_DIR}
 @dirrm libexec/octave/site/oct/api-v13
-@dirrm libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/site/oct/${GNU_PLATFORM_DIR}
 @dirrm libexec/octave/site/oct
-@dirrm libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/site/exec/${GNU_PLATFORM_DIR}
 @dirrm libexec/octave/site/exec
 @dirrm libexec/octave/site
-@dirrm libexec/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/${PKGVERSION}/site/oct/${GNU_PLATFORM_DIR}
 @dirrm libexec/octave/${PKGVERSION}/site/oct
-@dirrm libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/${PKGVERSION}/site/exec/${GNU_PLATFORM_DIR}
 @dirrm libexec/octave/${PKGVERSION}/site/exec
 @dirrm libexec/octave/${PKGVERSION}/site
-@dirrm libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}
 @dirrm libexec/octave/${PKGVERSION}/oct
-@dirrm libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/${PKGVERSION}/exec/${GNU_PLATFORM_DIR}
 @dirrm libexec/octave/${PKGVERSION}/exec
 @dirrm libexec/octave/${PKGVERSION}
 @dirrm libexec/octave

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2005/05/22 20:08:14 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2005/05/30 18:12:51 minskim Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 CATEGORIES=	math
@@ -39,6 +39,9 @@ USE_LANGUAGES=		c c++ fortran
 CONFIGURE_ARGS+=	--enable-dl
 
 .include "options.mk"
+
+GNU_PLATFORM_DIR!=	${.CURDIR}/../../mk/gnu-config/config.sub ${MACHINE_GNU_PLATFORM}
+PLIST_SUBST+=	GNU_PLATFORM_DIR=${GNU_PLATFORM_DIR}
 
 INFO_FILES=	octave.info liboctave.info
 LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 \
