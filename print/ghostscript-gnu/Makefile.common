@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.22 2005/05/30 14:52:52 dillo Exp $
+# $NetBSD: Makefile.common,v 1.23 2005/05/30 15:39:11 dillo Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
-GS_VERS=	7.07
+GS_VERS=	8.15
 CATEGORIES=	print
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
 		ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/gnu/gs${GS_VERS:S/.//}/
