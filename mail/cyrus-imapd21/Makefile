@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2004/12/29 15:42:37 minskim Exp $
+# $NetBSD: Makefile,v 1.27.2.1 2005/05/30 04:45:48 snj Exp $
 
-DISTNAME=		cyrus-imapd-2.1.15
-PKGREVISION=		5
+DISTNAME=		cyrus-imapd-2.1.18
 SVR4_PKGNAME=		cimap
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
@@ -71,7 +70,7 @@ PKG_SUPPORTED_OPTIONS=	gssapi inet6 kerberos kerberos4 recommended-db
 
 .if !empty(PKG_OPTIONS:Minet6)
 PATCH_SITES=	http://www.imasy.or.jp/~ume/ipv6/
-PATCHFILES=	${DISTNAME}-ipv6-20030819.diff.gz
+PATCHFILES=	cyrus-imapd-2.1.16-ipv6-20031121.diff.gz
 .endif
 
 .if !empty(PKG_OPTIONS:Mrecommended-db)
