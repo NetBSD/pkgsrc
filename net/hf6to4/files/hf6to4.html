@@ -1,35 +1,35 @@
 <html>
 <head>
-     <title>
-           August 23, 2003 hf6to4 8
+        <title>
+                 May 31, 2005 hf6to4 8
 
-     </title>
+        </title>
         <style type="text/css">
         <!--
-          body { margin-left:4%; }
-          H1, H2, H3, H4, H5 {
-               color: maroon; padding: 4pt; margin-left: -4%;
-               border: solid; border-width: thin; width: 100%;
-               background: rgb(204,204,255)
-          }
+                body { margin-left:4%; }
+                H1, H2, H3, H4, H5 {
+                        color: maroon; padding: 4pt; margin-left: -4%;
+                        border: solid; border-width: thin; width: 100%;
+                        background: rgb(204,204,255)
+                }
         -->
         </style>
 </head>
 <body bgcolor="#FFFFFF" text="#000000">
-     <h3>
-     NAME
-     </h3>
+        <h3>
+        NAME
+        </h3>
 <b>hf6to4</b>
 - setup automatic 6to4 IPv6 tunnelling
-     <h3>
-     SYNOPSIS
-     </h3>
+        <h3>
+        SYNOPSIS
+        </h3>
 <b>hf6to4</b>
 [<b>-</b><b></b><b>vn</b>]
 <i></i><i>command</i>
-     <h3>
-     DESCRIPTION
-     </h3>
+        <h3>
+        DESCRIPTION
+        </h3>
 The
 <b>hf6to4</b>
 script can be used to setup IPv6 on your home machine and
@@ -42,17 +42,17 @@ Replies are routed back to you over IPv4 via (possibly) other
 packets are accepted from all v4-hosts. See
 <a href="../html4/stf.html">stf(4)</a>
 for security discussion.
-     <p>
+        <p>
 From your (single) IPv4 address, you get a whole IPv6 /48 network,
 which allows you to split your network in 2^16 subnets, with 2^64
 hosts each. You need to setup routing for your internal network
 properly, help is provided for setting up the border router here.
-     <p>
+        <p>
 This script takes the burden to calculate your IPv6 address from
 existing IPv4 address and runs the commands to setup (and tear down)
 automatic 6to4 IPv6 tunnelling. In a separate step, router
 advertisement for the inside network can be started and stopped.
-     <p>
+        <p>
 Possible options are:
 <dl compact>
 <p><dt><b>-</b><b></b><b>n</b><dd>
@@ -64,19 +64,27 @@ running them. Displays some additional information.
 <p><dt><b>-</b><b></b><b>h</b><dd>
 Show usage.
 </dl>
-     <p>
+        <p>
 Possible commands are:
 <dl compact>
 <p><dt><b></b><b>start</b><dd>
+Same as
+<b></b><b>stf-start</b>.
+<p><dt><b></b><b>stop</b><dd>
+Same as
+<b></b><b>stf-stop</b>.
+<p><dt><b></b><b>stf-start</b><dd>
 Configure 6to4 IPv6. The
 <a href="../html4/stf.html">stf(4)</a>
 interface is configured, and a default route to a remote 6to4
 gateway is established. In addition, the internal
 network interface is assigned an address.
-<p><dt><b></b><b>stop</b><dd>
+<p><dt><b></b><b>stf-stop</b><dd>
 Stops 6to4 IPv6. All addresses are removed from the
 <a href="../html4/stf.html">stf(4)</a>
-device, and the default route is removed.
+device, and the default route is removed. If
+<b></b><b>in_if</b>
+is set, the 6to4 addresses are removed from that interface too.
 <p><dt><b></b><b>rtadvd-start</b><dd>
 Starts router advertizement and IPv6 packet forwarding,
 turning the machine into a IPv6 router.
@@ -94,9 +102,9 @@ Stops router advertizement and IPv6 packet forwarding.
 <a href="../html8/rtadvd.html">rtadvd(8)</a>
 is stopped.
 </dl>
-     <h3>
-     REQUIREMENTS
-     </h3>
+        <h3>
+        REQUIREMENTS
+        </h3>
 Besides IPv4 connectivity, you need support for IPv6 and the
 <a href="../html4/stf.html">stf(4)</a>
 device in your kernel. While the GENERIC
@@ -104,18 +112,18 @@ NetBSD
 1.5 kernel does support IPv6, it does not contain support for the
 <a href="../html4/stf.html">stf(4)</a>
 device.
-     <p>
+        <p>
 Make sure you have the following options in your kernel config file:
 <dl compact><dt><dd>
 <code>
 <pre>
-options         INET          # IP + ICMP + TCP + UDP
+options         INET            # IP + ICMP + TCP + UDP
 options         INET6           # IPV6
-pseudo-device  stf  1    # 6to4 IPv6 over IPv4 encapsulation
+pseudo-device   stf     1       # 6to4 IPv6 over IPv4 encapsulation
 </pre>
 </code>
 </dl>
-     <p>
+        <p>
 In systems that run past-1.5,
 you will have to explicitly create an
 <a href="../html4/stf.html">stf(4)</a>
@@ -140,15 +148,15 @@ ifconfig_stf0="create"
 </pre>
 </code>
 </dl>
-     <p>
+        <p>
 See also the comment on setting up IPv6-clients
 `behind'
 your 6to4 router for the
 <b></b><b>rtadvd-start</b>
 command!
-     <h3>
-     CONFIGURATION
-     </h3>
+        <h3>
+        CONFIGURATION
+        </h3>
 The
 <b>hf6to4</b>
 script reads its configuration from a config file named
@@ -207,9 +215,9 @@ and
 can be set to strings containing the numerical IPv4 and IPv6 numbers
 directly.
 </dl>
-     <h3>
-     EXAMPLES
-     </h3>
+        <h3>
+        EXAMPLES
+        </h3>
 The
 <b>hf6to4</b>
 script can be run automatically by
@@ -219,24 +227,27 @@ when a connection is made. For this, put the following into
 <dl compact><dt><dd>
 <code>
 <pre>
-( /usr/pkg/sbin/hf6to4 stop
-  /usr/pkg/sbin/hf6to4 start ) &
+( /usr/pkg/sbin/hf6to4 stf-stop
+  /usr/pkg/sbin/hf6to4 stf-start
+  /usr/pkg/sbin/hf6to4 rtadvd-stop
+  /usr/pkg/sbin/hf6to4 rtadvd-start ) &
 </pre>
 </code>
 </dl>
-     <p>
+        <p>
 To shut down properly, put this into
 <code></code><code>/etc/ppp/ip-down</code>:
 <dl compact><dt><dd>
 <code>
 <pre>
-/usr/pkg/sbin/hf6to4 stop
+/usr/pkg/sbin/hf6to4 stf-stop
+/usr/pkg/sbin/hf6to4 rtadvd-stop
 </pre>
 </code>
 </dl>
-     <h3>
-     SEE ALSO
-     </h3>
+        <h3>
+        SEE ALSO
+        </h3>
 <a href="../html4/stf.html">stf(4)</a>,
 ``6to4 IPv6 Explained''
 at
@@ -245,20 +256,33 @@ NetBSD
 IPv6 Documentation at
 <code></code><code>http://www.netbsd.org/Documentation/network/ipv6/</code>,
 RFC 3068.
-     <h3>
-     HISTORY
-     </h3>
+        <h3>
+        HISTORY
+        </h3>
 The
 <b>hf6to4</b>
 utility and manpage were written by
 Hubert Feyrer <hubert@feyrer.de>.
-     <h3>
-     BUGS
-     </h3>
+        <p>
+The utility was initially written in perl and called
+``6to4''
+but later rewritten as shell script and renamed to a name different
+than the protocol it configures to emphasize the difference
+between the protocol (6to4) and the implementation (hf6to4).
+        <p>
+The older (perl) version is also shipped by Apple with versions
+10.3 and 10.4 (and probably newer) of their MacOS X operating system.
+        <h3>
+        BUGS
+        </h3>
 On systems running past-1.5, the
 ``ifconfig stf0 create''
 should be run automatically.
+        <p>
+Might be good to use /etc/rc.d/rtadvd for rtadvd handling.
 </font></body>
 </html>
+
+
 
 
