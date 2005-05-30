@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10243 2005/05/30 00:16:29 abs Exp $
+$NetBSD: CHANGES,v 1.10244 2005/05/30 04:09:29 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2653,3 +2653,4 @@ Changes to the packages collection and infrastructure in 2005:
 	mk/bsd.pkg.mk: Added support for unprivileged builds through the
 		UNPRIVILEGED variable [jmmv 2005-05-29]
 	Updated net/autonet version to 0.14 [abs 2005-05-30]
+	Updated logrot to 1.7 [lukem 2005-05-30]
