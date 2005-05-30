@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2005/05/23 16:29:10 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.27 2005/05/30 23:34:49 hubertf Exp $
 #
 # This Makefile.common is included by:
 #
@@ -14,6 +14,7 @@ MASTER_SITES=	ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore/ \
 		ftp://ibiblio.org/pub/Linux/X11/screensavers/ \
 		${MASTER_SITE_XCONTRIB:=applications/}
 EXTRACT_SUFX=	.tar.bz2
+PKGREVISION=	1
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.tux.org/~bagleyd/xlockmore.html
