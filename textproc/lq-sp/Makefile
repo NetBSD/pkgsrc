@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/24 05:09:42 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/30 04:56:20 minskim Exp $
 #
 
 DISTNAME=	lq-sp-1.3.4.12
@@ -16,13 +16,13 @@ USE_LANGUAGES=	c c++
 # doesn't build (LP64 bugs)
 NOT_FOR_PLATFORM=	*-*-alpha
 
-INSTALLATION_DIRS+=	bin
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	Makefile
+SUBST_SED.paths=	-e 's,/usr/local,${PREFIX},g'
 
-do-configure:
-	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.netbsd
-	${SED} -e 's:@PREFIX@:${PREFIX}:'	\
-	    < ${WRKSRC}/Makefile.netbsd		\
-	    > ${WRKSRC}/Makefile
+INSTALLATION_DIRS+=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nsgmls/lq-nsgmls ${PREFIX}/bin
