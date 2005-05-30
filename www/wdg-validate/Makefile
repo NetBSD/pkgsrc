@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:48:02 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/30 05:49:15 minskim Exp $
 #
 
-DISTNAME=	validate-1.2
+DISTNAME=	validate-1.2.2
 PKGNAME=	wdg-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://www.htmlhelp.com/tools/validator/offline/
-DISTFILES=	${DISTNAME} wdg-sgml-lib-1.1.3.tar.gz README
+DISTFILES=	${DISTNAME} wdg-sgml-lib-1.1.4.tar.gz README
 
 MAINTAINER=	norm@sandbox.org.uk
 HOMEPAGE=	http://www.htmlhelp.com/tools/validator/offline/
@@ -17,8 +17,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	validate
-EXTRACT_ONLY=	wdg-sgml-lib-1.1.3.tar.gz
-SITES_wdg-sgml-lib-1.1.3.tar.gz=	http://www.htmlhelp.com/tools/validator/src/
+EXTRACT_ONLY=	wdg-sgml-lib-1.1.4.tar.gz
+SITES_wdg-sgml-lib-1.1.4.tar.gz=	http://www.htmlhelp.com/tools/validator/src/
 
 REPLACE_PERL=	validate
 NO_BUILD=	YES
