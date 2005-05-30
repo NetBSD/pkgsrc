@@ -1,7 +1,7 @@
 PKG_INFO(1)             NetBSD General Commands Manual             PKG_INFO(1)
 
 NNAAMMEE
-     ppkkgg__iinnffoo - a utility for displaying information on software packages
+     ppkkgg__iinnffoo -- a utility for displaying information on software packages
 
 SSYYNNOOPPSSIISS
      ppkkgg__iinnffoo [--BBbbccDDddFFffhhIIiikkLLmmNNnnppqqRRrrSSssVVvv] [--ee _p_a_c_k_a_g_e] [--KK _p_k_g___d_b_d_i_r]
@@ -67,7 +67,8 @@ DDEESSCCRRIIPPTTIIOONN
 
      --LL      Show the files within each package.  This is different from just
              viewing the packing list, since full pathnames for everything are
-             generated.
+             generated.  Files that were created dynamically during installa-
+             tion of the package are not listed.
 
      --ll _s_t_r  Prefix each information category header (see --qq) shown with _s_t_r.
              This is primarily of use to front-end programs that want to
@@ -127,19 +128,24 @@ PPAACCKKAAGGEE WWIILLDDCCAARRDDSS
      nates have been implemented.  Package version numbers can also be matched
      in a relational manner using the _>_=, _<_=, _>, and _< operators.  For exam-
      ple, _p_k_g___i_n_f_o _-_e _'_n_a_m_e_>_=_1_._3_' will match versions 1.3 and later of the
-     _n_a_m_e package.  The collating sequence of the various package version num-
-     bers is unusual, but strives to be consistent.  The magic string
-     ``alpha'' equates to _a_l_p_h_a _v_e_r_s_i_o_n and sorts before a beta version.  The
-     magic string ``beta'' equates to _b_e_t_a _v_e_r_s_i_o_n and sorts before a release
-     candidate.  The magic string ``rc'' equates to _r_e_l_e_a_s_e _c_a_n_d_i_d_a_t_e and
-     sorts before a release.  The magic string ``pre'', short for ``pre-
-     release'', is a synonym for ``rc''.  For example, _n_a_m_e_-_1_._3_r_c_3 will sort
-     before _n_a_m_e_-_1_._3 and after _n_a_m_e_-_1_._2_._9.  Similarly _n_a_m_e_-_1_._3_a_l_p_h_a_2 will sort
-     before _n_a_m_e_-_1_._3_b_e_t_a_1 and they both sort before _n_a_m_e_-_1_._3_r_c_1.  In addition,
-     alphabetic characters sort in the same place as their numeric counter-
-     parts, so that _n_a_m_e_-_1_._2_e has the same sorting value as _n_a_m_e_-_1_._2_._5 The
-     magic string ``pl'' equates to a _p_a_t_c_h _l_e_v_e_l and has the same value as a
-     dot in the dewey-decimal ordering schemes.
+     _n_a_m_e package.  Additionally, ranges can be defined by giving a lower
+     bound with > or >= and an upper bound with < or <=.  The lower bound has
+     to come first.  For example, _p_k_g___i_n_f_o _-_e _'_n_a_m_e_>_=_1_._3_<_2_._0_' will match ver-
+     sions 1.3 (inclusive) to 2.0 (exclusive) of package _n_a_m_e.
+
+     The collating sequence of the various package version numbers is unusual,
+     but strives to be consistent.  The magic string ``alpha'' equates to
+     _a_l_p_h_a _v_e_r_s_i_o_n and sorts before a beta version.  The magic string ``beta''
+     equates to _b_e_t_a _v_e_r_s_i_o_n and sorts before a release candidate.  The magic
+     string ``rc'' equates to _r_e_l_e_a_s_e _c_a_n_d_i_d_a_t_e and sorts before a release.
+     The magic string ``pre'', short for ``pre-release'', is a synonym for
+     ``rc''.  For example, _n_a_m_e_-_1_._3_r_c_3 will sort before _n_a_m_e_-_1_._3 and after
+     _n_a_m_e_-_1_._2_._9.  Similarly _n_a_m_e_-_1_._3_a_l_p_h_a_2 will sort before _n_a_m_e_-_1_._3_b_e_t_a_1 and
+     they both sort before _n_a_m_e_-_1_._3_r_c_1.  In addition, alphabetic characters
+     sort in the same place as their numeric counterparts, so that _n_a_m_e_-_1_._2_e
+     has the same sorting value as _n_a_m_e_-_1_._2_._5 The magic string ``pl'' equates
+     to a _p_a_t_c_h _l_e_v_e_l and has the same value as a dot in the dewey-decimal
+     ordering schemes.
 
 EENNVVIIRROONNMMEENNTT
      PKG_DBDIR  If the --KK flag isn't given, then PKG_DBDIR is the location of
@@ -178,4 +184,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, depends displaying,
              pkg size display etc.
 
-BSD                            February 10, 2005                           BSD
+NetBSD 3.0                       May 30, 2005                       NetBSD 3.0
