@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2004/05/31 16:47:48 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2005/05/30 14:54:00 dillo Exp $
 
-DISTNAME=		ghostscript-fonts-6.0
+DISTNAME=		ghostscript-fonts-8.11
 CATEGORIES=		fonts
 MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
 			ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/fonts/
@@ -17,7 +17,7 @@ COMMENT=		Postscript fonts for Aladdin Ghostscript
 #  To avoid unnecessarily downloading distfiles, do not change these
 #  when upgrading the port unless the symlinks/files really change.
 #
-GS_FONTS_STD=		ghostscript-fonts-std-6.0.tar.gz
+GS_FONTS_STD=		ghostscript-fonts-std-8.11.tar.gz
 GS_FONTS_OTHER=		ghostscript-fonts-other-6.0.tar.gz
 
 CONFLICTS=		ghostscript-[0-5]* ghostscript-x11-[0-5]*
@@ -25,22 +25,24 @@ CONFLICTS=		ghostscript-[0-5]* ghostscript-x11-[0-5]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DIST_SUBDIR=		ghostscript
-EXTRACT_ONLY=		# empty
-NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
+NO_CONFIGURE=		YES
+NO_BUILD=		YES
+WRKSRC=			${WRKDIR}/fonts
+
+FONTS_DIR=		${PREFIX}/share/ghostscript/fonts
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/ghostscript
-	@cd ${PREFIX}/share/ghostscript;				\
-	for file in ${GS_FONTS_STD} ${GS_FONTS_OTHER}; do		\
-		extract_file="${_DISTDIR}/$${file}";			\
-		${EXTRACT_CMD};						\
+	${INSTALL_DATA_DIR} ${FONTS_DIR}
+	for ext in afm gsf pfa pfb pfm;				\
+	do							\
+		for f in ${WRKSRC}/*.$${ext};			\
+		do						\
+			${INSTALL_DATA} $${f} ${FONTS_DIR};	\
+		done;						\
 	done
-	${INSTALL_DATA} ${FILESDIR}/fonts.alias \
-		${PREFIX}/share/ghostscript/fonts/
-	@for file in ${PREFIX}/share/ghostscript/fonts/*; do		\
-		${CHMOD} ${SHAREMODE} $${file};				\
-		${CHOWN} ${SHAREOWN}:${SHAREGRP} $${file};		\
-	done
+	${INSTALL_DATA} ${WRKSRC}/fonts.dir ${FONTS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts.scale ${FONTS_DIR}
+	${INSTALL_DATA} ${FILESDIR}/fonts.alias ${FONTS_DIR}
 
 .include "../../mk/bsd.pkg.mk"
