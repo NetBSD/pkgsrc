@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10250 2005/05/30 15:41:48 dillo Exp $
+$NetBSD: CHANGES,v 1.10251 2005/05/30 16:02:31 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2661,3 +2661,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/ghostscript-gnu to 8.15 [dillo 2005-05-30]
 	Updated print/ghostscript-gnu-nox11 to 8.15 [dillo 2005-05-30]
 	Updated print/ghostscript-gnu-x11 to 8.15 [dillo 2005-05-30]
+	Updated net/lftp to 3.2.1 [salo 2005-05-30]
