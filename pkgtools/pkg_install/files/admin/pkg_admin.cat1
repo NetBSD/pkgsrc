@@ -1,7 +1,7 @@
 PKG_ADMIN(1)            NetBSD General Commands Manual            PKG_ADMIN(1)
 
 NNAAMMEE
-     ppkkgg__aaddmmiinn - perform various administrative tasks to the pkg system
+     ppkkgg__aaddmmiinn -- perform various administrative tasks to the pkg system
 
 SSYYNNOOPPSSIISS
      ppkkgg__aaddmmiinn [--bbqqSSVV] [--dd _l_s_d_i_r] [--KK _p_k_g___d_b_d_i_r] [--ss _s_f_x___p_a_t_t_e_r_n] _c_o_m_m_a_n_d
@@ -28,7 +28,7 @@ OOPPTTIIOONNSS
              otherwise it defaults to _/_v_a_r_/_d_b_/_p_k_g.
 
      --qq      Perform checks in a quiet manner.  In normal operation, ppkkgg__aaddmmiinn
-             prints a '.' to standard output to indicate progress.  This
+             prints a `.' to standard output to indicate progress.  This
              option suppresses this progress indicator.
 
      --SS      Set the shell glob pattern for package suffixes when matching
@@ -141,4 +141,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      The ppkkgg__aaddmmiinn command was written by Hubert Feyrer.
 
-NetBSD 2.0                      August 13, 2004                     NetBSD 2.0
+NetBSD 3.0                      August 13, 2004                     NetBSD 3.0
