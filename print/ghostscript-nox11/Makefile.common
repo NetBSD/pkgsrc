@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2005/05/22 20:08:27 jlam Exp $
+# $NetBSD: Makefile.common,v 1.59 2005/05/30 14:52:52 dillo Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -15,7 +15,7 @@ CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
 CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
 CONFLICTS+=		hpijs-[0-9]*
 
-DEPENDS+=		ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
+DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 DEPENDS+=		watanabe-vfont-19930318:../../fonts/watanabe_vfont
 
 WRKSRC=			${WRKDIR}/gs${GS_VERS}
