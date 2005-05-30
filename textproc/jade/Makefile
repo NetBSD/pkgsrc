@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/05/22 20:08:35 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2005/05/30 14:43:03 minskim Exp $
 
 DISTNAME=	jade-1.2.1
 PKGREVISION=	9
@@ -33,6 +33,7 @@ CXXFLAGS+=		${CFLAGS}
 post-patch:
 	@${CHMOD} -R +w ${WRKSRC}
 	@${FIND} ${WRKSRC} -name '*.orig' -size 0c -type f -exec ${RM} {} \;
+	@${FIND} ${WRKSRC} -name '*.orig_dist' -size 0c -type f -exec ${RM} {} \;
 
 post-install:
 	@for prog in jade nsgmls sgmlnorm spam spent sx; do		\
@@ -46,9 +47,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/jadedoc/*.htm ${PREFIX}/share/doc/jade
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/dsssl/* ${PREFIX}/share/sgml/jade
-# avoid installing files generated through distribution patches
-	${RM} -f ${PREFIX}/share/sgml/jade/FOT.tex.orig_dist
-	${RM} -f ${PREFIX}/share/sgml/jade/demoMaster.tex.orig_dist
 # Installed by print/tex-jadetex
 	${RM} ${PREFIX}/share/sgml/jade/*jadetex.*
 
