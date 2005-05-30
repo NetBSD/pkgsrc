@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3561 2005/05/28 17:59:50 adrianp Exp $
+$NetBSD: TODO,v 1.3562 2005/05/30 15:13:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -354,7 +354,7 @@ Suggested package updates
 	o argtable-2.3
 	o arnold-20040104
 	o arpwatch-2.1a13
-	o asapm-2.13
+	o asapm-3.0
 	o asc-1.16.0
 	o aspell-danish-1.4.49
 	o aspell-faroese-0.2.22
@@ -478,6 +478,7 @@ Suggested package updates
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.0
+	o ettercap-NG-0.7.3
 	o exiftags-1.00
 	o exmh-2.7.2
 	o f2c-20031025
@@ -519,7 +520,6 @@ Suggested package updates
 	o gettext-0.14.5
 	o gfract-0.3.2
 	o ghostscript-8.51
-	o ghostscript-fonts-8.11
 	o ghostscript-gnu-8.15
 	o gifsicle-1.42
 	o gift-openft-0.2.1.4
@@ -536,6 +536,7 @@ Suggested package updates
 	o gnetman-20050325
 	o gnocatan-0.8.1.30
 	o gnome-vfsmm26-2.8.0?
+	o gnutls-1.2.4
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.40
 	o gogo-3.11p1
@@ -665,6 +666,7 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-0.19.2
 	o mapserver-4.2.5
+	o mathomatic-12.4.0
 	o mdd-20050318
 	o mdf2iso-0.3.0
 	o memcached-1.1.12 [pkg/30289]
@@ -696,6 +698,7 @@ Suggested package updates
 	o mrproject-0.9.1
 	o mrtg-2.12.1
 	o mserv-devel-0.41
+	o msmtp-1.4.1
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.4.8
@@ -739,7 +742,7 @@ Suggested package updates
 	o openh323-1.17.1
 	o openldap-2.2.24
 	o openmotif-2.2.4
-	o openssh-4.0
+	o openssh-4.1
 	o openttd-0.4.0 [pkg/30238]
 	o openvpn-2.0 [pkg/30239]
 	o opera8-8.0
@@ -930,7 +933,7 @@ Suggested package updates
 	o py-psycopg-1.1.18
 	o py-rpy-0.4.0
 	o py-soappy-0.11.6
-	o py-sqlite-1.1.6
+	o py-sqlite-2.0.3
 	o py-textile-2.0.10
 	o py-twisted-2.0.0 
 	o py-urwid-0.8.6
@@ -987,6 +990,7 @@ Suggested package updates
 	o rtcw-1.41.3
 	o ruby-RMagick-1.8.1 [pkg/30313]
 	o ruby-fox-1.2.6 [needs to update of fox-1.4.6]
+	o ruby-imlib2-0.5.1 [pkg/30372]
 	o ruby-mysql-2.5.2
 	o sablecc-2.18.2
 	o sablevm-1.11.3 [pkg/30022]
@@ -1193,7 +1197,7 @@ Suggested package updates
 	o yudit-2.7.8
 	o zebra-0.95
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.0.1
+	o zile-2.0.6
 	o zircon-1.18.256
 	o zope25-Photo-1.2.4
 	o zope25-ZWiki-0.39.0
