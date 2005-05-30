@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.12 2005/05/30 13:23:32 wiz Exp $	*/
+/*	$NetBSD: str.c,v 1.13 2005/05/30 19:45:02 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
 #else
-__RCSID("$NetBSD: str.c,v 1.12 2005/05/30 13:23:32 wiz Exp $");
+__RCSID("$NetBSD: str.c,v 1.13 2005/05/30 19:45:02 wiz Exp $");
 #endif
 #endif
 
@@ -378,7 +378,11 @@ dewey_match(const char *pattern, const char *pkg)
 
 	/* compare names */
 	if ((version=strrchr(pkg, '-')) == NULL) {
+#if 0
+		/* too noisy, warns about "pkgdb.byfile.db" on
+		 * every invocation */
 		warnx("Invalid package name `%s'", pkg);
+#endif
 		return 0;
 	}
 	if ((sep = strpbrk(pattern, "<>")) == NULL)
