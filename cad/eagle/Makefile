@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2004/02/25 01:09:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/30 19:48:54 bouyer Exp $
 #
 
-DISTNAME=		eagle-4.11e
-PKGNAME=		eagle-4.11
+DISTNAME=		eagle-lin-eng-4.14
+PKGNAME=		eagle-4.14
 CATEGORIES=		cad
-MASTER_SITES=		ftp://ftp.cadsoft.de/pub/program/4.11/
+MASTER_SITES=		ftp://ftp.cadsoft.de/pub/program/4.14/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		rh@NetBSD.org
@@ -27,7 +27,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-WRKSRC=			${WRKDIR}/${DISTNAME:C/.$//}
 NO_BUILD=		YES
 
 do-configure:
