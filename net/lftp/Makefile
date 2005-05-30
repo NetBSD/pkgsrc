@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2005/04/18 16:19:16 salo Exp $
+# $NetBSD: Makefile,v 1.57 2005/05/30 16:01:40 salo Exp $
 #
 
-DISTNAME=		lftp-3.1.3
+DISTNAME=		lftp-3.2.1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.cs.tu-berlin.de/pub/net/ftp/lftp/ \
 			ftp://ftp.tuwien.ac.at/infosys/browsers/ftp/lftp/ \
@@ -26,7 +26,8 @@ USE_GNU_READLINE=	# uses GNU readline internal _rl_mark_modified_lines
 
 SHLIBTOOL_OVERRIDE=	libtool
 
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+.include "options.mk"
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-modules
 
@@ -44,6 +45,6 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
