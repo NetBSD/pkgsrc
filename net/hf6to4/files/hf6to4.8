@@ -1,5 +1,35 @@
-.\"     $NetBSD: hf6to4.8,v 1.3 2004/01/31 23:56:47 snj Exp $
-.Dd August 23, 2003
+.\"     $NetBSD: hf6to4.8,v 1.4 2005/05/30 22:49:43 hubertf Exp $
+.\"
+.\" Copyright (c) 2000-2005 Hubert Feyrer <hubert@feyrer.de>.
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\" 3. All advertising materials mentioning features or use of this software
+.\"    must display the following acknowledgement:
+.\"      This product includes software developed by Hubert Feyrer for
+.\"      the NetBSD Project.
+.\" 4. The name of the author may not be used to endorse or promote products
+.\"    derived from this software without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+.\" IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+.\" OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+.\" IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+.\" INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+.\" NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+.\" DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+.\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+.\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+.\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd May 31, 2005
 .Dt hf6to4 8
 .Os
 .Sh NAME
@@ -48,12 +78,18 @@ Show usage.
 Possible commands are:
 .Bl -tag -width rtadvd-start
 .It Sy start
+Same as
+.Sy stf-start .
+.It Sy stop
+Same as
+.Sy stf-stop .
+.It Sy stf-start
 Configure 6to4 IPv6. The
 .Xr stf 4
 interface is configured, and a default route to a remote 6to4
 gateway is established. In addition, the internal
 network interface is assigned an address.
-.It Sy stop
+.It Sy stf-stop
 Stops 6to4 IPv6. All addresses are removed from the
 .Xr stf 4
 device, and the default route is removed. If
@@ -181,14 +217,17 @@ script can be run automatically by
 when a connection is made. For this, put the following into
 .Pa /etc/ppp/ip-up :
 .Bd -literal -offset
-( /usr/pkg/sbin/hf6to4 stop
-  /usr/pkg/sbin/hf6to4 start ) &
+( /usr/pkg/sbin/hf6to4 stf-stop
+  /usr/pkg/sbin/hf6to4 stf-start
+  /usr/pkg/sbin/hf6to4 rtadvd-stop
+  /usr/pkg/sbin/hf6to4 rtadvd-start ) &
 .Ed
 .Pp
 To shut down properly, put this into
 .Pa /etc/ppp/ip-down :
 .Bd -literal -offset
-/usr/pkg/sbin/hf6to4 stop
+/usr/pkg/sbin/hf6to4 stf-stop
+/usr/pkg/sbin/hf6to4 rtadvd-stop
 .Ed
 .Sh SEE ALSO
 .Xr stf 4 ,
@@ -204,6 +243,15 @@ The
 .Nm
 utility and manpage were written by
 Hubert Feyrer <hubert@feyrer.de>.
+.Pp
+The utility was initially written in perl and called
+.Dq 6to4
+but later rewritten as shell script and renamed to a name different
+than the protocol it configures to emphasize the difference
+between the protocol (6to4) and the implementation (hf6to4).
+.Pp
+The older (perl) version is also shipped by Apple with versions
+10.3 and 10.4 (and probably newer) of their MacOS X operating system. 
 .Sh BUGS
 On systems running past-1.5, the
 .Dq ifconfig stf0 create
