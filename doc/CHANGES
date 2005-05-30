@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10249 2005/05/30 14:55:29 dillo Exp $
+$NetBSD: CHANGES,v 1.10250 2005/05/30 15:41:48 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2658,3 +2658,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated multimedia/mplayer-share to 1.0rc7nb1 [wiz 2005-05-30]
 	Updated editors/vim to 6.3.074 [martti 2005-05-30]
 	Updated fonts/ghostscript-fonts to 8.11 [dillo 2005-05-30]
+	Updated print/ghostscript-gnu to 8.15 [dillo 2005-05-30]
+	Updated print/ghostscript-gnu-nox11 to 8.15 [dillo 2005-05-30]
+	Updated print/ghostscript-gnu-x11 to 8.15 [dillo 2005-05-30]
