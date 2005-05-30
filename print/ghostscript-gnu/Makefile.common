@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2005/05/28 13:08:39 dillo Exp $
+# $NetBSD: Makefile.common,v 1.21 2005/05/30 07:53:54 rillig Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 GS_VERS=	7.07
@@ -72,7 +72,7 @@ post-extract:
 	${MKDIR} ${WRKSRC}/obj
 	${RM} -f ${WRKSRC}/jpeg
 	${LN} -s ${JPEG_WRKSRC} ${WRKSRC}/jpeg
-	cd ${WRKSRC}/lib; for fin gs_res.ps; do				\
+	cd ${WRKSRC}/lib; for f in gs_res.ps; do				\
 		${SED}  -e "s|/Resource/|${GS_RESOURCEDIR}/|g"		\
 			$${f} > $${f}.fixed;				\
 		${MV} -f $${f}.fixed $${f};				\
