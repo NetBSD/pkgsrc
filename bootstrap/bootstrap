@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.39 2005/05/29 17:15:25 jmmv Exp $
+# $NetBSD: bootstrap,v 1.40 2005/05/30 19:03:29 jmmv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -249,6 +249,7 @@ while [ $# -gt 0 ]; do
 	--pkgdbdir)	pkgdbdir="$2"; shift ;;
 	--sysconfdir=*)	sysconfdir=`get_optarg "$1"` ;;
 	--sysconfdir)	sysconfdir="$2"; shift ;;
+	--varbase=*)	varbase=`get_optarg "$1"` ;;
 	--varbase)	varbase="$2"; shift ;;
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--ignore-user-check) ignoreusercheck=yes ;;
