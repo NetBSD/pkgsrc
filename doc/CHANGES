@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10246 2005/05/30 05:50:59 minskim Exp $
+$NetBSD: CHANGES,v 1.10247 2005/05/30 12:45:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2655,3 +2655,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/autonet to 0.14 [abs 2005-05-30]
 	Updated sysutils/logrot to 1.7 [lukem 2005-05-30]
 	Updated www/wdg-validate to 1.2.2 [minskim 2005-05-30]
+	Updated multimedia/mplayer-share to 1.0rc7nb1 [wiz 2005-05-30]
