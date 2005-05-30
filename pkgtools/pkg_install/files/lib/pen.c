@@ -1,4 +1,4 @@
-/*	$NetBSD: pen.c,v 1.17 2005/02/20 09:17:25 grant Exp $	*/
+/*	$NetBSD: pen.c,v 1.18 2005/05/30 13:23:32 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: pen.c,v 1.25 1997/10/08 07:48:12 charnier Exp";
 #else
-__RCSID("$NetBSD: pen.c,v 1.17 2005/02/20 09:17:25 grant Exp $");
+__RCSID("$NetBSD: pen.c,v 1.18 2005/05/30 13:23:32 wiz Exp $");
 #endif
 #endif
 
@@ -47,12 +47,6 @@ __RCSID("$NetBSD: pen.c,v 1.17 2005/02/20 09:17:25 grant Exp $");
 #endif
 #if HAVE_SYS_MOUNT_H
 #include <sys/mount.h>
-#endif
-#if HAVE_SYS_VFS_H
-#include <sys/vfs.h>
-#endif
-#if HAVE_SYS_STATVFS_H
-#include <sys/statvfs.h>
 #endif
 
 /* For keeping track of where we are */
