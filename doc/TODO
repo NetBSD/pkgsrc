@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3562 2005/05/30 15:13:00 wiz Exp $
+$NetBSD: TODO,v 1.3563 2005/05/30 15:43:25 dillo Exp $
 
 Suggested new packages
 ======================
@@ -520,7 +520,6 @@ Suggested package updates
 	o gettext-0.14.5
 	o gfract-0.3.2
 	o ghostscript-8.51
-	o ghostscript-gnu-8.15
 	o gifsicle-1.42
 	o gift-openft-0.2.1.4
 	o git-4.3.20
