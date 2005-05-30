@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/05/16 01:15:34 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2005/05/30 23:24:10 wiz Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGNAME=	fvwm2-${FVWM_VER}
@@ -22,7 +22,6 @@ FVWM_VER=	2.4.19
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
-PKGSRC_USE_TOOLS+=	gtar
 
 PLIST_SUBST+=		FVWM_VER=${FVWM_VER}
 
@@ -38,7 +37,7 @@ CONFIGURE_ENV+=		ac_cv_path_FVWM_CPP="${CPP}"
 
 post-extract:
 	${MKDIR} ${WRKDIR}/icons
-	${GTAR} -xzf ${DISTDIR}/fvwm_icons.tgz -C ${WRKDIR}/icons
+	cd ${WRKDIR}/icons && ${TAR} -xzf ${DISTDIR}/fvwm_icons.tgz
 
 post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fvwm2/pixmaps
