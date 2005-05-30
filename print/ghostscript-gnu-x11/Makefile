@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/05/30 14:57:28 dillo Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/30 15:39:11 dillo Exp $
 
 PKGNAME=	ghostscript-gnu-x11-${GS_VERS}
-PKGREVISION=	1
-COMMENT=	GNU Postscript interpreter with X11 and image drivers
+COMMENT=	GNU Postscript interpreter with X11 and image drivers only
 
-USE_X11=		# defined
+USE_X11=		YES
 CONFIGURE_ARGS+=	--with-x
 
 # Based on the definitions for the DEVICE_DEVS* from ${WRKSRC}/src/devs.mak,
