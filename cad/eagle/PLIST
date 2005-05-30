@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/25 01:09:25 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/30 19:48:54 bouyer Exp $
 bin/eagle
 eagle/README
 eagle/bin/eagle
@@ -268,6 +268,8 @@ eagle/help/322.htm
 eagle/help/323.htm
 eagle/help/324.htm
 eagle/help/325.htm
+eagle/help/326.htm
+eagle/help/327.htm
 eagle/help/33.htm
 eagle/help/34.htm
 eagle/help/35.htm
@@ -394,7 +396,6 @@ eagle/lbr/con-jst.lbr
 eagle/lbr/con-lsta.lbr
 eagle/lbr/con-lstb.lbr
 eagle/lbr/con-lumberg.lbr
-eagle/lbr/con-ml.lbr
 eagle/lbr/con-molex.lbr
 eagle/lbr/con-neutrik_ag.lbr
 eagle/lbr/con-panduit.lbr
@@ -405,6 +406,7 @@ eagle/lbr/con-phoenix-500.lbr
 eagle/lbr/con-phoenix-508.lbr
 eagle/lbr/con-ptr500.lbr
 eagle/lbr/con-rib.lbr
+eagle/lbr/con-shiua-chyuan.lbr
 eagle/lbr/con-subd.lbr
 eagle/lbr/con-thomas-betts.lbr
 eagle/lbr/con-vg.lbr
@@ -418,10 +420,10 @@ eagle/lbr/crystal.lbr
 eagle/lbr/cypress.lbr
 eagle/lbr/dc-dc-converter.lbr
 eagle/lbr/diode.lbr
-eagle/lbr/discrete.lbr
 eagle/lbr/display-hp.lbr
 eagle/lbr/display-lcd.lbr
 eagle/lbr/ecl.lbr
+eagle/lbr/etx-board.lbr
 eagle/lbr/exar.lbr
 eagle/lbr/fiber-optic-hp.lbr
 eagle/lbr/fiber-optic-siemens.lbr
@@ -435,6 +437,7 @@ eagle/lbr/ic-package.lbr
 eagle/lbr/inductor-coilcraft.lbr
 eagle/lbr/inductor-neosid.lbr
 eagle/lbr/inductors.lbr
+eagle/lbr/infineon-tricore.lbr
 eagle/lbr/infineon.lbr
 eagle/lbr/isd.lbr
 eagle/lbr/jumper.lbr
@@ -483,6 +486,7 @@ eagle/lbr/pot.lbr
 eagle/lbr/ptc-ntc.lbr
 eagle/lbr/rcl.lbr
 eagle/lbr/rectifier.lbr
+eagle/lbr/ref-packages.lbr
 eagle/lbr/relay.lbr
 eagle/lbr/resistor-bourns.lbr
 eagle/lbr/resistor-dil.lbr
@@ -512,6 +516,7 @@ eagle/lbr/testpad.lbr
 eagle/lbr/texas.lbr
 eagle/lbr/toshiba.lbr
 eagle/lbr/trafo-siemens.lbr
+eagle/lbr/trafo-xicon.lbr
 eagle/lbr/trafo.lbr
 eagle/lbr/transistor-fet.lbr
 eagle/lbr/transistor-npn.lbr
@@ -527,6 +532,7 @@ eagle/lbr/v-reg.lbr
 eagle/lbr/varistor.lbr
 eagle/lbr/wafer-scale-psd.lbr
 eagle/lbr/wirepad.lbr
+eagle/lbr/wuerth-elektronik.lbr
 eagle/lbr/zetex.lbr
 eagle/lbr/zilog.lbr
 eagle/man/eagle.1
@@ -559,19 +565,19 @@ eagle/scr/fill.scr
 eagle/scr/menu.scr
 eagle/scr/mylayers.scr
 eagle/scr/nofill.scr
-eagle/scr/write.scr
 eagle/ulp/DESCRIPTION
 eagle/ulp/bom.ulp
 eagle/ulp/cam2dxf.ulp
+eagle/ulp/cam2image.ulp
 eagle/ulp/cam2print-box-grey-optimize.bmp
 eagle/ulp/cam2print-box-grey-poscoord.bmp
 eagle/ulp/cam2print-box-grey-quickplot.bmp
 eagle/ulp/cam2print.ulp
 eagle/ulp/change-pad-in-lbr-1.bmp
 eagle/ulp/change-pad-in-lbr-x.bmp
-eagle/ulp/change-pad-in-lbr.scr
 eagle/ulp/change-pad-in-lbr.ulp
 eagle/ulp/clear-layer-in-lbr.ulp
+eagle/ulp/cmd-change-brd-width.ulp
 eagle/ulp/cmd-change-class.ulp
 eagle/ulp/cmd-change-swap-layer.ulp
 eagle/ulp/cmd-net-list2sch.ulp
@@ -583,6 +589,7 @@ eagle/ulp/cmd-showzoom.ulp
 eagle/ulp/cmd-snap-board.ulp
 eagle/ulp/cmd-snappads.ulp
 eagle/ulp/copy-silk-screen.ulp
+eagle/ulp/copy-wire-to-solder-mask.ulp
 eagle/ulp/count.ulp
 eagle/ulp/del-devices.ulp
 eagle/ulp/del-empty-devices.ulp
@@ -590,6 +597,7 @@ eagle/ulp/del-pack-sym.ulp
 eagle/ulp/dif40.ulp
 eagle/ulp/dose-pro.ulp
 eagle/ulp/drill-aid.ulp
+eagle/ulp/drill-legend.ulp
 eagle/ulp/drillcfg.ulp
 eagle/ulp/dxf.ulp
 eagle/ulp/eagle.bmp
@@ -610,7 +618,10 @@ eagle/ulp/ex-run-script.ulp
 eagle/ulp/exp-descr-html.ulp
 eagle/ulp/exp-descr-script.ulp
 eagle/ulp/exp-project-lbr.ulp
+eagle/ulp/exp2image.ulp
 eagle/ulp/export-class.ulp
+eagle/ulp/fabmaster.ulp
+eagle/ulp/fill-via4vacuum.ulp
 eagle/ulp/find.ulp
 eagle/ulp/gluemark.ulp
 eagle/ulp/glueout.ulp
@@ -631,6 +642,12 @@ eagle/ulp/import-bmp-scale.bmp
 eagle/ulp/import-bmp.ulp
 eagle/ulp/import-ultiboard-ddf.ulp
 eagle/ulp/length-freq-ri.ulp
+eagle/ulp/length.ulp
+eagle/ulp/make-symbol-device-package-bsdl.ulp
+eagle/ulp/make_symbol_dual1.bmp
+eagle/ulp/make_symbol_dual2.bmp
+eagle/ulp/make_symbol_quad.bmp
+eagle/ulp/make_symbol_single.bmp
 eagle/ulp/mill-outlines-bott.bmp
 eagle/ulp/mill-outlines-cnc.bmp
 eagle/ulp/mill-outlines-coppdim.bmp
@@ -672,13 +689,17 @@ eagle/ulp/silk.ulp
 eagle/ulp/smash-all-sch.ulp
 eagle/ulp/smd-coordinate.ulp
 eagle/ulp/snap-on-grid-sch.ulp
-eagle/ulp/snap-pin-in-smbol.ulp
+eagle/ulp/snap-pin-in-symbol.ulp
+eagle/ulp/statistic-brd-checkmin.val
+eagle/ulp/statistic-brd.ulp
+eagle/ulp/statistic-lbr.ulp
+eagle/ulp/statistic_attention_min_value.bmp
 eagle/ulp/ulpmessage.ulp
+eagle/ulp/unidat-fiducials.ulp
 eagle/ulp/unidat.ulp
 eagle/ulp/update-packages.ulp
 eagle/ulp/useful-routines.ulp
 eagle/ulp/warning.bmp
-eagle/uninstall
 @unexec ${RM} -f %D/eagle/bin/eagle.key
 @dirrm eagle/ulp
 @dirrm eagle/scr
