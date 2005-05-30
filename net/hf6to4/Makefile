@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/03/15 13:26:07 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/30 22:49:42 hubertf Exp $
 #
 
-DISTNAME=		hf6to4-1.2
+DISTNAME=		hf6to4-1.3
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
