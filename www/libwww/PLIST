@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/31 20:52:00 salo Exp $
 bin/libwww-config
 bin/w3c
 bin/webbot
 bin/www
-include/wwwconf.h
 include/w3c-libwww/HTAABrow.h
 include/w3c-libwww/HTAAUtil.h
 include/w3c-libwww/HTANSI.h
@@ -45,8 +44,8 @@ include/w3c-libwww/HTFilter.h
 include/w3c-libwww/HTFormat.h
 include/w3c-libwww/HTGopher.h
 include/w3c-libwww/HTGuess.h
-include/w3c-libwww/HTHash.h
 include/w3c-libwww/HTHInit.h
+include/w3c-libwww/HTHash.h
 include/w3c-libwww/HTHeader.h
 include/w3c-libwww/HTHist.h
 include/w3c-libwww/HTHome.h
@@ -163,6 +162,7 @@ include/w3c-libwww/WWWXML.h
 include/w3c-libwww/WWWZip.h
 include/w3c-libwww/wwwsys.h
 include/w3c-libwww/xmlparse.h
+include/wwwconf.h
 ${MD5LIB}lib/libmd5.la
 lib/libpics.la
 lib/libwwwapp.la
@@ -172,8 +172,8 @@ lib/libwwwdir.la
 lib/libwwwfile.la
 lib/libwwwftp.la
 lib/libwwwgopher.la
-lib/libwwwhttp.la
 lib/libwwwhtml.la
+lib/libwwwhttp.la
 lib/libwwwinit.la
 lib/libwwwmime.la
 lib/libwwwmux.la
