@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/04/11 21:44:53 tv Exp $
+# $NetBSD: Makefile,v 1.27 2005/05/31 21:55:18 rillig Exp $
 #
 
 DISTNAME=       gsm-1.0.10
@@ -11,10 +11,10 @@ HOMEPAGE=	http://kbs.cs.tu-berlin.de/~jutta/toast.html
 COMMENT=	Audio converter and library for converting u-law to gsm encoding
 
 WRKSRC=         ${WRKDIR}/gsm-1.0-pl10
-USE_LIBTOOL=	# defined
+USE_LIBTOOL=	yes
 
-NO_CONFIGURE=	# defined
-MAKE_ENV+=	INSTALL_ROOT="${PREFIX}" ROOT="${WRKSRC}"
+NO_CONFIGURE=	yes
+MAKE_ENV+=	INSTALL_ROOT=${PREFIX:Q} ROOT=${WRKSRC:Q}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/gsm
