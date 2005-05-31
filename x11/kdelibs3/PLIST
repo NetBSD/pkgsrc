@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2005/03/27 22:43:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.25 2005/05/31 14:13:23 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -637,7 +637,6 @@ include/kstringhandler.h
 include/kstringvalidator.h
 include/kstyle.h
 include/ksvgiconengine.h
-include/kswap.h
 include/ksycoca.h
 include/ksycocaentry.h
 include/ksycocatype.h
@@ -782,6 +781,7 @@ lib/kde3/kimg_dds.la
 lib/kde3/kimg_eps.la
 lib/kde3/kimg_exr.la
 lib/kde3/kimg_ico.la
+lib/kde3/kimg_jp2.la
 lib/kde3/kimg_pcx.la
 lib/kde3/kimg_psd.la
 lib/kde3/kimg_rgb.la
@@ -2994,6 +2994,7 @@ share/kde/icons/crystalsvg/16x16/actions/editdelete.png
 share/kde/icons/crystalsvg/16x16/actions/editpaste.png
 share/kde/icons/crystalsvg/16x16/actions/editshred.png
 share/kde/icons/crystalsvg/16x16/actions/edittrash.png
+share/kde/icons/crystalsvg/16x16/actions/emptytrash.png
 share/kde/icons/crystalsvg/16x16/actions/encrypted.png
 share/kde/icons/crystalsvg/16x16/actions/eraser.png
 share/kde/icons/crystalsvg/16x16/actions/exec.png
@@ -3400,6 +3401,7 @@ share/kde/icons/crystalsvg/22x22/actions/editdelete.png
 share/kde/icons/crystalsvg/22x22/actions/editpaste.png
 share/kde/icons/crystalsvg/22x22/actions/editshred.png
 share/kde/icons/crystalsvg/22x22/actions/edittrash.png
+share/kde/icons/crystalsvg/22x22/actions/emptytrash.png
 share/kde/icons/crystalsvg/22x22/actions/encrypted.png
 share/kde/icons/crystalsvg/22x22/actions/eraser.png
 share/kde/icons/crystalsvg/22x22/actions/exec.png
@@ -3732,6 +3734,7 @@ share/kde/icons/crystalsvg/32x32/actions/editdelete.png
 share/kde/icons/crystalsvg/32x32/actions/editpaste.png
 share/kde/icons/crystalsvg/32x32/actions/editshred.png
 share/kde/icons/crystalsvg/32x32/actions/edittrash.png
+share/kde/icons/crystalsvg/32x32/actions/emptytrash.png
 share/kde/icons/crystalsvg/32x32/actions/encrypted.png
 share/kde/icons/crystalsvg/32x32/actions/exec.png
 share/kde/icons/crystalsvg/32x32/actions/exit.png
@@ -4958,6 +4961,7 @@ share/kde/services/http.protocol
 share/kde/services/http_cache_cleaner.desktop
 share/kde/services/https.protocol
 share/kde/services/ico.kimgio
+share/kde/services/jp2.kimgio
 share/kde/services/jpeg.kimgio
 share/kde/services/katepart.desktop
 share/kde/services/kbzip2filter.desktop
