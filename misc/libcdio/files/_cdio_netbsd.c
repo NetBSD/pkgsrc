@@ -1,4 +1,4 @@
-/* $NetBSD: _cdio_netbsd.c,v 1.3 2005/05/02 17:11:17 drochner Exp $ */
+/* $NetBSD: _cdio_netbsd.c,v 1.4 2005/05/31 17:05:36 drochner Exp $ */
 
 /*
  * Copyright (c) 2003
@@ -73,7 +73,7 @@ typedef struct {
 } _img_private_t;
 
 static driver_return_code_t
-run_scsi_cmd_freebsd(const void *p_user_data, unsigned int i_timeout_ms,
+run_scsi_cmd_freebsd(void *p_user_data, unsigned int i_timeout_ms,
 		     unsigned int i_cdb, const mmc_cdb_t *p_cdb, 
 		     mmc_direction_t e_direction, 
 		     unsigned int i_buf, void *p_buf )
@@ -94,7 +94,7 @@ run_scsi_cmd_freebsd(const void *p_user_data, unsigned int i_timeout_ms,
 		return -1;
 	}
 	if (req.retsts != SCCMD_OK) {
-		fprintf(stderr, "SCIOCCOMMAND sts %d\n", req.retsts);
+		fprintf(stderr, "SCIOCCOMMAND cmd 0x%02x sts %d\n", req.cmd[0], req.retsts);
 		return -1;
 	}
 
@@ -131,7 +131,7 @@ _cdio_read_audio_sectors(void *user_data, void *data, lsn_t lsn,
 		return 1;
 	}
 	if (req.retsts != SCCMD_OK) {
-		fprintf(stderr, "SCIOCCOMMAND sts %d\n", req.retsts);
+		fprintf(stderr, "SCIOCCOMMAND cmd 0xbe sts %d\n", req.retsts);
 		return 1;
 	}
 
@@ -169,7 +169,7 @@ _cdio_read_mode2_sector(void *user_data, void *data, lsn_t lsn,
 		return 1;
 	}
 	if (req.retsts != SCCMD_OK) {
-		fprintf(stderr, "SCIOCCOMMAND sts %d\n", req.retsts);
+		fprintf(stderr, "SCIOCCOMMAND cmd %0xbe sts %d\n", req.retsts);
 		return 1;
 	}
 
@@ -308,7 +308,7 @@ _cdio_read_discinfo(_img_private_t *_obj)
 		return 1;
 	}
 	if (req.retsts != SCCMD_OK) {
-		fprintf(stderr, "SCIOCCOMMAND sts %d\n", req.retsts);
+		fprintf(stderr, "SCIOCCOMMAND cmd 0x43 sts %d\n", req.retsts);
 		return 1;
 	}
 #if 1
@@ -473,6 +473,17 @@ _cdio_get_track_msf(void *user_data, track_t track_num, msf_t *msf)
 	return true;
 }
 
+static lsn_t
+get_disc_last_lsn_netbsd(void *user_data) 
+{
+	msf_t msf;
+  
+	_cdio_get_track_msf(user_data, CDIO_CDROM_LEADOUT_TRACK, &msf);
+
+	return (((msf.m * 60) + msf.s) * 75 + msf.f);
+}
+
+
 char **
 cdio_get_devices_freebsd (void)
 {
@@ -501,6 +512,7 @@ static cdio_funcs_t _funcs = {
 	.get_cdtext         = get_cdtext_generic,
 	.get_default_device = cdio_get_default_device_freebsd,
 	.get_devices        = cdio_get_devices_freebsd,
+	.get_disc_last_lsn   = get_disc_last_lsn_netbsd,
 	.get_discmode       = get_discmode_generic,
 	.get_drive_cap      = get_drive_cap_mmc,
 	.get_first_track_num= _cdio_get_first_track_num,
@@ -513,6 +525,7 @@ static cdio_funcs_t _funcs = {
 	.lseek              = cdio_generic_lseek,
 	.read               = cdio_generic_read,
 	.read_audio_sectors = _cdio_read_audio_sectors,
+	.read_data_sectors  = read_data_sectors_generic,
 	.read_mode2_sector  = _cdio_read_mode2_sector,
 	.read_mode2_sectors = _cdio_read_mode2_sectors,
 	.read_toc           = read_toc_freebsd,
@@ -540,11 +553,14 @@ cdio_open_freebsd(const char *source_name)
 	_cdio_set_arg(_data, "source",
 		      (source_name ? source_name : DEFAULT_CDIO_DEVICE));
 
+	if (source_name && !cdio_is_device_generic(source_name))
+		return (NULL);
+
 	ret = cdio_new(&_data->gen, &_funcs);
 	if (!ret)
 		return NULL;
 
-	if (cdio_generic_init(_data)) {
+	if (cdio_generic_init(_data, O_RDONLY)) {
 		return ret;
 	} else {
 		cdio_generic_free(_data);
