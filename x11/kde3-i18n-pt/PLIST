@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.12 2005/03/23 23:06:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/05/31 15:38:27 markd Exp $
 share/doc/kde/HTML/pt/KRegExpEditor/common
 share/doc/kde/HTML/pt/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/pt/KRegExpEditor/index.docbook
+share/doc/kde/HTML/pt/akregator/common
+share/doc/kde/HTML/pt/akregator/index.cache.bz2
+share/doc/kde/HTML/pt/akregator/index.docbook
 share/doc/kde/HTML/pt/amor/common
 share/doc/kde/HTML/pt/amor/index.cache.bz2
 share/doc/kde/HTML/pt/amor/index.docbook
+share/doc/kde/HTML/pt/amor/man-amor.6.docbook
 share/doc/kde/HTML/pt/ark/common
 share/doc/kde/HTML/pt/ark/index.cache.bz2
 share/doc/kde/HTML/pt/ark/index.docbook
@@ -382,6 +386,7 @@ share/doc/kde/HTML/pt/kdebugdialog/common
 share/doc/kde/HTML/pt/kdebugdialog/index.cache.bz2
 share/doc/kde/HTML/pt/kdebugdialog/index.docbook
 share/doc/kde/HTML/pt/kdelibs/man-artsmessage.1.docbook
+share/doc/kde/HTML/pt/kdelibs/man-checkXML.1.docbook
 share/doc/kde/HTML/pt/kdelibs/man-dcop.1.docbook
 share/doc/kde/HTML/pt/kdelibs/man-kdeoptions.7.docbook
 share/doc/kde/HTML/pt/kdelibs/man-qtoptions.7.docbook
@@ -540,6 +545,7 @@ share/doc/kde/HTML/pt/khelpcenter/userguide/intro.docbook
 share/doc/kde/HTML/pt/khelpcenter/userguide/kde-as-root.docbook
 share/doc/kde/HTML/pt/khelpcenter/userguide/kde-edutainment.docbook
 share/doc/kde/HTML/pt/khelpcenter/userguide/kde-for-admins.docbook
+share/doc/kde/HTML/pt/khelpcenter/userguide/kde-office.docbook
 share/doc/kde/HTML/pt/khelpcenter/userguide/kdeadmin-apps.docbook
 share/doc/kde/HTML/pt/khelpcenter/userguide/kdebase-apps.docbook
 share/doc/kde/HTML/pt/khelpcenter/userguide/kdeedu-apps.docbook
@@ -799,6 +805,9 @@ share/doc/kde/HTML/pt/kmplot/introduction.docbook
 share/doc/kde/HTML/pt/kmplot/menu.docbook
 share/doc/kde/HTML/pt/kmplot/reference.docbook
 share/doc/kde/HTML/pt/kmplot/using.docbook
+share/doc/kde/HTML/pt/knetattach/common
+share/doc/kde/HTML/pt/knetattach/index.cache.bz2
+share/doc/kde/HTML/pt/knetattach/index.docbook
 share/doc/kde/HTML/pt/knewsticker/common
 share/doc/kde/HTML/pt/knewsticker/index.cache.bz2
 share/doc/kde/HTML/pt/knewsticker/index.docbook
@@ -1243,6 +1252,7 @@ share/doc/kde/HTML/pt/scripts/man-cheatmake.1.docbook
 share/doc/kde/HTML/pt/scripts/man-create_cvsignore.1.docbook
 share/doc/kde/HTML/pt/scripts/man-create_makefile.1.docbook
 share/doc/kde/HTML/pt/scripts/man-create_makefiles.1.docbook
+share/doc/kde/HTML/pt/scripts/man-cvscheck.1.docbook
 share/doc/kde/HTML/pt/scripts/man-cvslastchange.1.docbook
 share/doc/kde/HTML/pt/scripts/man-cvslastlog.1.docbook
 share/doc/kde/HTML/pt/scripts/man-cvsrevertlast.1.docbook
@@ -1403,7 +1413,6 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kbstateapplet.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcachegrind.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcm_krfb.mo
@@ -1446,7 +1455,6 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmkonsole.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmkontactnt.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmktalkd.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmkttsd.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmkttsmgr.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmkuick.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmkurifilt.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmkvaio.mo
@@ -1461,7 +1469,6 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmlirc.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kcmmediacontrol.mo
@@ -1998,6 +2005,7 @@ ${PKGLOCALEDIR}/locale/pt/flag.png
 @dirrm share/doc/kde/HTML/pt/knotes
 @dirrm share/doc/kde/HTML/pt/knode
 @dirrm share/doc/kde/HTML/pt/knewsticker
+@dirrm share/doc/kde/HTML/pt/knetattach
 @dirrm share/doc/kde/HTML/pt/kmplot
 @dirrm share/doc/kde/HTML/pt/kmouth
 @dirrm share/doc/kde/HTML/pt/kmousetool
@@ -2169,5 +2177,6 @@ ${PKGLOCALEDIR}/locale/pt/flag.png
 @dirrm share/doc/kde/HTML/pt/artsbuilder
 @dirrm share/doc/kde/HTML/pt/ark
 @dirrm share/doc/kde/HTML/pt/amor
+@dirrm share/doc/kde/HTML/pt/akregator
 @dirrm share/doc/kde/HTML/pt/KRegExpEditor
 @comment in kde: @dirrm share/doc/kde/HTML/pt

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/03/23 23:06:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/05/31 15:38:31 markd Exp $
 share/doc/kde/HTML/sk/amor/common
 share/doc/kde/HTML/sk/amor/index.cache.bz2
 share/doc/kde/HTML/sk/amor/index.docbook
@@ -924,7 +924,6 @@ ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kbounce.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kbruch.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kcm_krfb.mo
@@ -979,7 +978,6 @@ ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kcmlirc.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kcmmediacontrol.mo

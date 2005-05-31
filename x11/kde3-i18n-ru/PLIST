@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.13 2005/03/23 23:06:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/05/31 15:38:31 markd Exp $
 share/doc/kde/HTML/ru/KRegExpEditor/common
 share/doc/kde/HTML/ru/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/ru/KRegExpEditor/index.docbook
 share/doc/kde/HTML/ru/amor/common
 share/doc/kde/HTML/ru/amor/index.cache.bz2
 share/doc/kde/HTML/ru/amor/index.docbook
+share/doc/kde/HTML/ru/amor/man-amor.6.docbook
 share/doc/kde/HTML/ru/ark/common
 share/doc/kde/HTML/ru/ark/index.cache.bz2
 share/doc/kde/HTML/ru/ark/index.docbook
@@ -207,6 +208,9 @@ share/doc/kde/HTML/ru/kcontrol/crypto/index.docbook
 share/doc/kde/HTML/ru/kcontrol/desktop/common
 share/doc/kde/HTML/ru/kcontrol/desktop/index.cache.bz2
 share/doc/kde/HTML/ru/kcontrol/desktop/index.docbook
+share/doc/kde/HTML/ru/kcontrol/desktopbehavior/common
+share/doc/kde/HTML/ru/kcontrol/desktopbehavior/index.cache.bz2
+share/doc/kde/HTML/ru/kcontrol/desktopbehavior/index.docbook
 share/doc/kde/HTML/ru/kcontrol/ebrowsing/common
 share/doc/kde/HTML/ru/kcontrol/ebrowsing/index.cache.bz2
 share/doc/kde/HTML/ru/kcontrol/ebrowsing/index.docbook
@@ -457,8 +461,6 @@ share/doc/kde/HTML/ru/kghostview/index.docbook
 share/doc/kde/HTML/ru/kgpg/common
 share/doc/kde/HTML/ru/kgpg/index.cache.bz2
 share/doc/kde/HTML/ru/kgpg/index.docbook
-share/doc/kde/HTML/ru/khelpcenter/background.png
-share/doc/kde/HTML/ru/khelpcenter/bgtable.png
 share/doc/kde/HTML/ru/khelpcenter/common
 share/doc/kde/HTML/ru/khelpcenter/contact.docbook
 share/doc/kde/HTML/ru/khelpcenter/faq/about.docbook
@@ -478,6 +480,7 @@ share/doc/kde/HTML/ru/khelpcenter/faq/moreinfo.docbook
 share/doc/kde/HTML/ru/khelpcenter/faq/nonkdeapps.docbook
 share/doc/kde/HTML/ru/khelpcenter/faq/notrelated.docbook
 share/doc/kde/HTML/ru/khelpcenter/faq/panel.docbook
+share/doc/kde/HTML/ru/khelpcenter/faq/qt.docbook
 share/doc/kde/HTML/ru/khelpcenter/faq/questions.docbook
 share/doc/kde/HTML/ru/khelpcenter/faq/sound.docbook
 share/doc/kde/HTML/ru/khelpcenter/faq/tips.docbook
@@ -490,20 +493,18 @@ share/doc/kde/HTML/ru/khelpcenter/glossary/kdeprintingglossary.docbook
 share/doc/kde/HTML/ru/khelpcenter/help.docbook
 share/doc/kde/HTML/ru/khelpcenter/index.cache.bz2
 share/doc/kde/HTML/ru/khelpcenter/index.docbook
-share/doc/kde/HTML/ru/khelpcenter/kdelogo2.png
 share/doc/kde/HTML/ru/khelpcenter/konq.css
-share/doc/kde/HTML/ru/khelpcenter/lines.png
-share/doc/kde/HTML/ru/khelpcenter/lines2.png
 share/doc/kde/HTML/ru/khelpcenter/links.docbook
 share/doc/kde/HTML/ru/khelpcenter/main.html
-share/doc/kde/HTML/ru/khelpcenter/pointers.png
 share/doc/kde/HTML/ru/khelpcenter/quickstart/common
 share/doc/kde/HTML/ru/khelpcenter/quickstart/index.cache.bz2
 share/doc/kde/HTML/ru/khelpcenter/quickstart/index.docbook
-share/doc/kde/HTML/ru/khelpcenter/shadow1.png
 share/doc/kde/HTML/ru/khelpcenter/support.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/about-desktop.docbook
+share/doc/kde/HTML/ru/khelpcenter/userguide/accessibility.docbook
+share/doc/kde/HTML/ru/khelpcenter/userguide/browser-fine-tuning.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/common
+share/doc/kde/HTML/ru/khelpcenter/userguide/control-center.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/credits-and-license.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/first-impressions.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/getting-started.docbook
@@ -512,6 +513,8 @@ share/doc/kde/HTML/ru/khelpcenter/userguide/index.cache.bz2
 share/doc/kde/HTML/ru/khelpcenter/userguide/index.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/installation.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/intro.docbook
+share/doc/kde/HTML/ru/khelpcenter/userguide/kde-edutainment.docbook
+share/doc/kde/HTML/ru/khelpcenter/userguide/kde-for-admins.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/kdeadmin-apps.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/kdebase-apps.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/kdeedu-apps.docbook
@@ -583,6 +586,9 @@ share/doc/kde/HTML/ru/kinfocenter/memory/index.docbook
 share/doc/kde/HTML/ru/kinfocenter/nics/common
 share/doc/kde/HTML/ru/kinfocenter/nics/index.cache.bz2
 share/doc/kde/HTML/ru/kinfocenter/nics/index.docbook
+share/doc/kde/HTML/ru/kinfocenter/opengl/common
+share/doc/kde/HTML/ru/kinfocenter/opengl/index.cache.bz2
+share/doc/kde/HTML/ru/kinfocenter/opengl/index.docbook
 share/doc/kde/HTML/ru/kinfocenter/partitions/common
 share/doc/kde/HTML/ru/kinfocenter/partitions/index.cache.bz2
 share/doc/kde/HTML/ru/kinfocenter/partitions/index.docbook
@@ -747,6 +753,9 @@ share/doc/kde/HTML/ru/kmplot/introduction.docbook
 share/doc/kde/HTML/ru/kmplot/menu.docbook
 share/doc/kde/HTML/ru/kmplot/reference.docbook
 share/doc/kde/HTML/ru/kmplot/using.docbook
+share/doc/kde/HTML/ru/knetattach/common
+share/doc/kde/HTML/ru/knetattach/index.cache.bz2
+share/doc/kde/HTML/ru/knetattach/index.docbook
 share/doc/kde/HTML/ru/knewsticker/common
 share/doc/kde/HTML/ru/knewsticker/index.cache.bz2
 share/doc/kde/HTML/ru/knewsticker/index.docbook
@@ -789,6 +798,9 @@ share/doc/kde/HTML/ru/kolourpaint/index.docbook
 share/doc/kde/HTML/ru/kompare/common
 share/doc/kde/HTML/ru/kompare/index.cache.bz2
 share/doc/kde/HTML/ru/kompare/index.docbook
+share/doc/kde/HTML/ru/kompmgr/common
+share/doc/kde/HTML/ru/kompmgr/index.cache.bz2
+share/doc/kde/HTML/ru/kompmgr/index.docbook
 share/doc/kde/HTML/ru/konq-plugins/babel/common
 share/doc/kde/HTML/ru/konq-plugins/babel/index.cache.bz2
 share/doc/kde/HTML/ru/konq-plugins/babel/index.docbook
@@ -1057,6 +1069,9 @@ share/doc/kde/HTML/ru/ktouch/index.docbook
 share/doc/kde/HTML/ru/ktron/common
 share/doc/kde/HTML/ru/ktron/index.cache.bz2
 share/doc/kde/HTML/ru/ktron/index.docbook
+share/doc/kde/HTML/ru/kttsd/common
+share/doc/kde/HTML/ru/kttsd/index.cache.bz2
+share/doc/kde/HTML/ru/kttsd/index.docbook
 share/doc/kde/HTML/ru/ktuberling/common
 share/doc/kde/HTML/ru/ktuberling/index.cache.bz2
 share/doc/kde/HTML/ru/ktuberling/index.docbook
@@ -1105,6 +1120,7 @@ share/doc/kde/HTML/ru/kwordquiz/index.docbook
 share/doc/kde/HTML/ru/kworldclock/common
 share/doc/kde/HTML/ru/kworldclock/index.cache.bz2
 share/doc/kde/HTML/ru/kworldclock/index.docbook
+share/doc/kde/HTML/ru/kworldclock/man-kworldclock.1.docbook
 share/doc/kde/HTML/ru/kwrite/common
 share/doc/kde/HTML/ru/kwrite/index.cache.bz2
 share/doc/kde/HTML/ru/kwrite/index.docbook
@@ -1288,7 +1304,6 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kbstateapplet.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcachegrind.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcm_krfb.mo
@@ -1331,7 +1346,6 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmkonsole.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmkontactnt.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmktalkd.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmkttsd.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmkttsmgr.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmkuick.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmkurifilt.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmkvaio.mo
@@ -1346,7 +1360,6 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmlirc.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kcmmediacontrol.mo
@@ -1813,6 +1826,7 @@ ${PKGLOCALEDIR}/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/kuickshow
 @dirrm share/doc/kde/HTML/ru/kturtle
 @dirrm share/doc/kde/HTML/ru/ktuberling
+@dirrm share/doc/kde/HTML/ru/kttsd
 @dirrm share/doc/kde/HTML/ru/ktron
 @dirrm share/doc/kde/HTML/ru/ktouch
 @dirrm share/doc/kde/HTML/ru/ktnef
@@ -1867,6 +1881,7 @@ ${PKGLOCALEDIR}/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/konq-plugins/crashes
 @dirrm share/doc/kde/HTML/ru/konq-plugins/babel
 @dirrm share/doc/kde/HTML/ru/konq-plugins
+@dirrm share/doc/kde/HTML/ru/kompmgr
 @dirrm share/doc/kde/HTML/ru/kompare
 @dirrm share/doc/kde/HTML/ru/kolourpaint
 @dirrm share/doc/kde/HTML/ru/kolf
@@ -1874,6 +1889,7 @@ ${PKGLOCALEDIR}/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/knotes
 @dirrm share/doc/kde/HTML/ru/knode
 @dirrm share/doc/kde/HTML/ru/knewsticker
+@dirrm share/doc/kde/HTML/ru/knetattach
 @dirrm share/doc/kde/HTML/ru/kmplot
 @dirrm share/doc/kde/HTML/ru/kmouth
 @dirrm share/doc/kde/HTML/ru/kmousetool
@@ -1908,6 +1924,7 @@ ${PKGLOCALEDIR}/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/kinfocenter/pcmcia
 @dirrm share/doc/kde/HTML/ru/kinfocenter/pci
 @dirrm share/doc/kde/HTML/ru/kinfocenter/partitions
+@dirrm share/doc/kde/HTML/ru/kinfocenter/opengl
 @dirrm share/doc/kde/HTML/ru/kinfocenter/nics
 @dirrm share/doc/kde/HTML/ru/kinfocenter/memory
 @dirrm share/doc/kde/HTML/ru/kinfocenter/ioports
@@ -1994,6 +2011,7 @@ ${PKGLOCALEDIR}/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/kcontrol/energy
 @dirrm share/doc/kde/HTML/ru/kcontrol/email
 @dirrm share/doc/kde/HTML/ru/kcontrol/ebrowsing
+@dirrm share/doc/kde/HTML/ru/kcontrol/desktopbehavior
 @dirrm share/doc/kde/HTML/ru/kcontrol/desktop
 @dirrm share/doc/kde/HTML/ru/kcontrol/crypto
 @dirrm share/doc/kde/HTML/ru/kcontrol/cookies

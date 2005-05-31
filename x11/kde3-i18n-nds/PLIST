@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/03/23 23:06:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/05/31 15:38:26 markd Exp $
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/alsaplayerui.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/appletproxy.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/ark.mo
@@ -29,6 +29,7 @@ ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/imagerename_plugin.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/imgalleryplugin.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/irkick.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/jefferson.mo
+${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/joystick.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kabc2mutt.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kabc_dir.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kabc_file.mo
@@ -65,7 +66,6 @@ ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/katexmltools.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kbabel.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kbinaryclock.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kcmaccess.mo
@@ -107,7 +107,6 @@ ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kcmlirc.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kcmmediacontrol.mo

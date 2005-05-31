@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/03/23 23:06:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/31 15:38:26 markd Exp $
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/akregator.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/akregator_konqplugin.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/alsaplayerui.mo
@@ -99,7 +99,6 @@ ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kbstateapplet.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcachegrind.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcm_krfb.mo
@@ -142,7 +141,6 @@ ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmkonsole.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmkontactnt.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmktalkd.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmkttsd.mo
-${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmkttsmgr.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmkuick.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmkurifilt.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmkvaio.mo
@@ -157,7 +155,6 @@ ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmlirc.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kcmmediacontrol.mo
@@ -280,6 +277,7 @@ ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kghostview.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kgoldrunner.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kgpg.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kgreet_classic.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kgreet_winbind.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/khangman.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/khelpcenter.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/khexedit.mo
@@ -516,6 +514,7 @@ ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kxsconfig.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kxsldbg.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libKTTSD.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libcalendarresources.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libdmctl.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libkaddrbk_gmx_xxport.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libkcal.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/03/23 23:06:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/31 15:38:32 markd Exp $
 share/doc/kde/HTML/zh_CN/common/1.png
 share/doc/kde/HTML/zh_CN/common/10.png
 share/doc/kde/HTML/zh_CN/common/2.png
@@ -58,6 +58,7 @@ share/doc/kde/HTML/zh_CN/common/x11-license.html
 share/doc/kde/HTML/zh_CN/common/xml.dcl
 share/doc/kde/HTML/zh_CN/kdevelop/tip.database
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/akregator.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/akregator_konqplugin.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/alsaplayerui.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/amor.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/appletproxy.mo
@@ -153,7 +154,6 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kbruch.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kbstateapplet.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kcm_krfb.mo
@@ -209,7 +209,6 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kcmmediacontrol.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kcmmidi.mo
@@ -271,6 +270,7 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfifteenapplet.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_au.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_avi.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_bmp.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_cert.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_cpp.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_deb.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_desktop.mo
@@ -287,6 +287,7 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_ics.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_jpeg.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_lnk.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_m3u.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_mhtml.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_mp3.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_mpc.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kfile_ogg.mo
@@ -324,6 +325,7 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kget.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kghostview.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kgpg.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kgreet_classic.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kgreet_winbind.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/khangman.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/khelpcenter.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/khexedit.mo
@@ -543,7 +545,9 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kxmlrpcd.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kxsconfig.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kxsldbg.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libcalendarresources.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libdmctl.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libkaddrbk_geo_xxport.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libkaddrbk_gmx_xxport.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libkcal.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libkcalsystem.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libkcddb.mo

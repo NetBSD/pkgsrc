@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/03/23 23:06:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/05/31 15:38:31 markd Exp $
 share/doc/kde/HTML/ro/common/1.png
 share/doc/kde/HTML/ro/common/10.png
 share/doc/kde/HTML/ro/common/2.png
@@ -56,8 +56,6 @@ share/doc/kde/HTML/ro/common/web-docbottom.png
 share/doc/kde/HTML/ro/common/web-doctop.png
 share/doc/kde/HTML/ro/common/x11-license.html
 share/doc/kde/HTML/ro/common/xml.dcl
-share/doc/kde/HTML/ro/khelpcenter/background.png
-share/doc/kde/HTML/ro/khelpcenter/bgtable.png
 share/doc/kde/HTML/ro/khelpcenter/common
 share/doc/kde/HTML/ro/khelpcenter/contact.docbook
 share/doc/kde/HTML/ro/khelpcenter/glossary/common
@@ -67,14 +65,7 @@ share/doc/kde/HTML/ro/khelpcenter/glossary/kdeprintingglossary.docbook
 share/doc/kde/HTML/ro/khelpcenter/help.docbook
 share/doc/kde/HTML/ro/khelpcenter/index.cache.bz2
 share/doc/kde/HTML/ro/khelpcenter/index.docbook
-share/doc/kde/HTML/ro/khelpcenter/kdelogo2.png
-share/doc/kde/HTML/ro/khelpcenter/khelpcenter.png
-share/doc/kde/HTML/ro/khelpcenter/konq.css
-share/doc/kde/HTML/ro/khelpcenter/lines.png
-share/doc/kde/HTML/ro/khelpcenter/lines2.png
 share/doc/kde/HTML/ro/khelpcenter/links.docbook
-share/doc/kde/HTML/ro/khelpcenter/pointers.png
-share/doc/kde/HTML/ro/khelpcenter/shadow1.png
 share/doc/kde/HTML/ro/khelpcenter/support.docbook
 share/doc/kde/HTML/ro/khelpcenter/visualdict/common
 share/doc/kde/HTML/ro/khelpcenter/visualdict/index.cache.bz2
@@ -310,7 +301,6 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kbruch.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcachegrind.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcm_krfb.mo
@@ -352,7 +342,6 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmkonsole.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmkontactnt.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmktalkd.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmkttsd.mo
-${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmkttsmgr.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmkuick.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmkurifilt.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmkvaio.mo
@@ -367,7 +356,6 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmlirc.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kcmmediacontrol.mo
@@ -509,12 +497,15 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kio_nfs.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kio_nntp.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kio_pop3.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kio_print.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kio_remote.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kio_settings.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kio_sftp.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kio_sieve.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kio_smb.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kio_smtp.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kio_svn.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kio_system.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kio_trash.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kioexec.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kiten.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kjobviewer.mo

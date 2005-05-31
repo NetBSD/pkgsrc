@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/03/23 23:06:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/05/31 15:38:31 markd Exp $
 share/doc/kde/HTML/uk/common/1.png
 share/doc/kde/HTML/uk/common/10.png
 share/doc/kde/HTML/uk/common/2.png
@@ -214,7 +214,6 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kbruch.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kbstateapplet.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcm_krfb.mo
@@ -257,7 +256,6 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmkonsole.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmkontactnt.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmktalkd.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmkttsd.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmkttsmgr.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmkuick.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmkurifilt.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmkvaio.mo
@@ -272,7 +270,6 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmlirc.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kcmmediacontrol.mo
@@ -316,8 +313,6 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kdessh.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kdesu.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kdesud.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kdevdesigner.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kdevelop.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kdevtipofday.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kdf.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kdgantt.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kdialog.mo
@@ -404,6 +399,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/khtmlsettingsplugin.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kicker.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kiconedit.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kig.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kimagemapeditor.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kinetd.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kio.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kio_audiocd.mo
