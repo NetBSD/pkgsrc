@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/05/22 20:07:38 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/05/31 16:10:19 wiz Exp $
 
 DISTNAME=		libmikmod-3.1.11
 PKGNAME=		libmikmod-3.1.11.1
@@ -24,20 +24,9 @@ INFO_FILES=		mikmod.info
 
 CONFIGURE_ARGS+=	--disable-threads
 
-.include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=		USE_ESOUND
-.if defined(USE_ESOUND) && !empty(USE_ESOUND:M[Yy][Ee][Ss])
-.include "../../audio/esound/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-esd
-.endif
+.include "options.mk"
 
 pre-build:
 	${RM} -f ${WRKSRC}/docs/mikmod.info*
-
-.if defined(USE_OSS)
-.  include "../../mk/ossaudio.buildlink3.mk"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
