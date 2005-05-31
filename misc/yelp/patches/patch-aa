@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.3 2005/05/31 15:54:26 drochner Exp $
+
+--- src/yelp-toc-pager.c.orig	2005-05-11 23:46:12.000000000 +0200
++++ src/yelp-toc-pager.c
+@@ -422,7 +422,7 @@ static gboolean
+ process_read_scrollkeeper (YelpTocPager *pager)
+ {
+     gchar  *content_list;
+-    gchar  *stderr;
++    gchar  *sc_stderr;
+     gchar  *lang;
+     gchar  *command;
+     static xmlSAXHandler sk_sax_handler = { 0, };
+@@ -435,7 +435,7 @@ process_read_scrollkeeper (YelpTocPager 
+ 
+     command = g_strconcat("scrollkeeper-get-content-list ", lang, NULL);
+ 
+-    if (g_spawn_command_line_sync (command, &content_list, &stderr, NULL, NULL)) {
++    if (g_spawn_command_line_sync (command, &content_list, &sc_stderr, NULL, NULL)) {
+ 	if (!sk_sax_handler.startElement) {
+ 	    sk_sax_handler.startElement = sk_startElement;
+ 	    sk_sax_handler.endElement   = sk_endElement;
+@@ -447,7 +447,7 @@ process_read_scrollkeeper (YelpTocPager 
+     }
+ 
+     g_free (content_list);
+-    g_free (stderr);
++    g_free (sc_stderr);
+     g_free (command);
+     return FALSE;
+ }
