@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:17 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/31 22:43:53 rillig Exp $
 #
 
 DISTNAME=	adocman-0.10
@@ -23,11 +23,11 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/xml_export ${PREFIX}/bin
 	${INSTALL_SCRIPT_DIR} ${PERL5_SITEARCH}/Alexandria
 .for f in Client.pm Docman.pm
-	${INSTALL_SCRIPT} ${WRKSRC}/Alexandria/$f ${PERL5_SITEARCH}/Alexandria
+	${INSTALL_SCRIPT} ${WRKSRC}/Alexandria/${f} ${PERL5_SITEARCH}/Alexandria
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/adocman
 .for f in LICENSE README TODO adocman.html xml_export.html
-	${INSTALL_DATA} ${WRKSRC}/$f ${PREFIX}/share/doc/html/adocman
+	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/html/adocman
 .endfor
 .undef f
 
