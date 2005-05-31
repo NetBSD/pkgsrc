@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2005/05/31 10:01:40 dillo Exp $
+# $NetBSD: Makefile,v 1.167 2005/05/31 20:00:43 wiz Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -133,8 +133,6 @@ LINK_LIBGCC_LDFLAGS+=	-lgcc_s
 .endif
 
 BUILD_DEFS+=		APACHE_CUSTOM_CFLAGS
-BUILD_DEFS+=		APACHE_PERF_TUNING
-BUILD_DEFS+=		APACHE_SUEXEC
 
 EGDIR=		${PREFIX}/share/examples/httpd
 
