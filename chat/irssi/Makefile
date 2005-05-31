@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/05/23 09:06:24 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2005/05/31 21:58:38 wiz Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 PKGREVISION=		3
@@ -11,9 +11,6 @@ HOMEPAGE=		http://www.irssi.org/
 COMMENT=                Secure and modular IRC client with text mode user interface
 
 .include "Makefile.common"
-
-# list it into IPv6-ready packages
-BUILD_DEFS+=		USE_INET6 IRSSI_USE_PERL IRSSI_USE_SSL
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -30,33 +27,7 @@ CONFIGURE_ENV+=		F77=${FALSE}
 EGDIR=		${PREFIX}/share/examples/irssi
 CONF_FILES=	${EGDIR}/irssi.conf ${PKG_SYSCONFDIR}/irssi.conf
 
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(IRSSI_USE_PERL) && (${IRSSI_USE_PERL} == "YES")
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Irssi/.packlist
-PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/Irssi/Irc/.packlist
-PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/Irssi/UI/.packlist
-PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/Irssi/TextUI/.packlist
-.include "../../lang/perl5/buildlink3.mk"
-# actually we don't need --with-perl here, irssi is compiled with it by default
-# but who knows what may happen in future versions
-CONFIGURE_ARGS+=	--with-perl
-CONFIGURE_ARGS+=	--with-perl-lib=site
-.else
-CONFIGURE_ARGS+=	--with-perl=no
-.endif
-
-# IPv6 support
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-
-# SSL support
-.if defined(IRSSI_USE_SSL) && !empty(IRSSI_USE_SSL:M[Yy][Ee][Ss])
-.  include "../../security/openssl/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-ssl
-.endif
+.include "options.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
