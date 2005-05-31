@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/03/23 23:06:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/05/31 15:38:24 markd Exp $
 share/doc/kde/HTML/da/KRegExpEditor/altntool.png
 share/doc/kde/HTML/da/KRegExpEditor/anychartool.png
 share/doc/kde/HTML/da/KRegExpEditor/boundarytools.png
@@ -11,6 +11,9 @@ share/doc/kde/HTML/da/KRegExpEditor/linestartendtool.png
 share/doc/kde/HTML/da/KRegExpEditor/lookaheadtools.png
 share/doc/kde/HTML/da/KRegExpEditor/repeattool.png
 share/doc/kde/HTML/da/KRegExpEditor/theEditor.png
+share/doc/kde/HTML/da/akregator/common
+share/doc/kde/HTML/da/akregator/index.cache.bz2
+share/doc/kde/HTML/da/akregator/index.docbook
 share/doc/kde/HTML/da/amor/common
 share/doc/kde/HTML/da/amor/index.cache.bz2
 share/doc/kde/HTML/da/amor/index.docbook
@@ -152,12 +155,15 @@ share/doc/kde/HTML/da/kate-plugins/textfilter.docbook
 share/doc/kde/HTML/da/kate-plugins/xmlcheck.docbook
 share/doc/kde/HTML/da/kate-plugins/xmltools.docbook
 share/doc/kde/HTML/da/kate/advanced.docbook
+share/doc/kde/HTML/da/kate/common
 share/doc/kde/HTML/da/kate/configdialog01.png
 share/doc/kde/HTML/da/kate/configdialog02.png
 share/doc/kde/HTML/da/kate/configuring.docbook
 share/doc/kde/HTML/da/kate/fundamentals.docbook
 share/doc/kde/HTML/da/kate/highlighted.png
 share/doc/kde/HTML/da/kate/highlighting.docbook
+share/doc/kde/HTML/da/kate/index.cache.bz2
+share/doc/kde/HTML/da/kate/index.docbook
 share/doc/kde/HTML/da/kate/kate.png
 share/doc/kde/HTML/da/kate/mdi.docbook
 share/doc/kde/HTML/da/kate/menus.docbook
@@ -436,11 +442,15 @@ share/doc/kde/HTML/da/kdeprint/theory.docbook
 share/doc/kde/HTML/da/kdesu/common
 share/doc/kde/HTML/da/kdesu/index.cache.bz2
 share/doc/kde/HTML/da/kdesu/index.docbook
+share/doc/kde/HTML/da/kdevelop/app-files.docbook
+share/doc/kde/HTML/da/kdevelop/app-menu.docbook
 share/doc/kde/HTML/da/kdevelop/applicationwizard.docbook
 share/doc/kde/HTML/da/kdevelop/common
+share/doc/kde/HTML/da/kdevelop/getting-started.docbook
 share/doc/kde/HTML/da/kdevelop/index.cache.bz2
 share/doc/kde/HTML/da/kdevelop/index.docbook
 share/doc/kde/HTML/da/kdevelop/kdevelop-install.docbook
+share/doc/kde/HTML/da/kdevelop/kdevelop-scripting.docbook
 share/doc/kde/HTML/da/kdevelop/kdevelop-survey.docbook
 share/doc/kde/HTML/da/kdevelop/project-advanced.docbook
 share/doc/kde/HTML/da/kdevelop/project-management.docbook
@@ -452,6 +462,9 @@ share/doc/kde/HTML/da/kdf/index.docbook
 share/doc/kde/HTML/da/kdict/common
 share/doc/kde/HTML/da/kdict/index.cache.bz2
 share/doc/kde/HTML/da/kdict/index.docbook
+share/doc/kde/HTML/da/kdm/common
+share/doc/kde/HTML/da/kdm/index.cache.bz2
+share/doc/kde/HTML/da/kdm/index.docbook
 share/doc/kde/HTML/da/kdm/kdmrc-ref.docbook
 share/doc/kde/HTML/da/kdvi/common
 share/doc/kde/HTML/da/kdvi/index.cache.bz2
@@ -565,6 +578,7 @@ share/doc/kde/HTML/da/khelpcenter/userguide/intro.docbook
 share/doc/kde/HTML/da/khelpcenter/userguide/kde-as-root.docbook
 share/doc/kde/HTML/da/khelpcenter/userguide/kde-edutainment.docbook
 share/doc/kde/HTML/da/khelpcenter/userguide/kde-for-admins.docbook
+share/doc/kde/HTML/da/khelpcenter/userguide/kde-office.docbook
 share/doc/kde/HTML/da/khelpcenter/userguide/konsole-intro.docbook
 share/doc/kde/HTML/da/khelpcenter/userguide/messaging-intro.docbook
 share/doc/kde/HTML/da/khelpcenter/userguide/migrator-dictionary.docbook
@@ -852,6 +866,9 @@ share/doc/kde/HTML/da/kmplot/settingsdlg.png
 share/doc/kde/HTML/da/kmplot/stepdlg.png
 share/doc/kde/HTML/da/kmplot/toolbar.png
 share/doc/kde/HTML/da/kmplot/using.docbook
+share/doc/kde/HTML/da/knetattach/common
+share/doc/kde/HTML/da/knetattach/index.cache.bz2
+share/doc/kde/HTML/da/knetattach/index.docbook
 share/doc/kde/HTML/da/knewsticker/common
 share/doc/kde/HTML/da/knewsticker/index.cache.bz2
 share/doc/kde/HTML/da/knewsticker/index.docbook
@@ -880,7 +897,6 @@ share/doc/kde/HTML/da/knode/knode-mail-account.png
 share/doc/kde/HTML/da/knode/knode-new-article.png
 share/doc/kde/HTML/da/knode/knode-news-account.png
 share/doc/kde/HTML/da/knode/knode-post-settings.png
-share/doc/kde/HTML/da/knode/knode-read-news-appearance-dialog.png
 share/doc/kde/HTML/da/knode/knode-read-news-settings.png
 share/doc/kde/HTML/da/knode/knode-reply.png
 share/doc/kde/HTML/da/knode/knode-search.png
@@ -1089,7 +1105,6 @@ share/doc/kde/HTML/da/kppp/kppp-account-login-script-tab.png
 share/doc/kde/HTML/da/kppp/kppp-config.png
 share/doc/kde/HTML/da/kppp/kppp-device-tab.png
 share/doc/kde/HTML/da/kppp/kppp-dialer-tab.png
-share/doc/kde/HTML/da/kppp/kppp-dialler-tab.png
 share/doc/kde/HTML/da/kppp/kppp-faq.docbook
 share/doc/kde/HTML/da/kppp/kppp-graph-tab.png
 share/doc/kde/HTML/da/kppp/kppp-misc-tab.png
@@ -1409,6 +1424,9 @@ share/doc/kde/HTML/da/quanta/working-with-quanta.docbook
 share/doc/kde/HTML/da/scripts/man-adddebug.1.docbook
 share/doc/kde/HTML/da/scripts/man-cheatmake.1.docbook
 share/doc/kde/HTML/da/scripts/man-create_cvsignore.1.docbook
+share/doc/kde/HTML/da/scripts/man-create_makefile.1.docbook
+share/doc/kde/HTML/da/scripts/man-create_makefiles.1.docbook
+share/doc/kde/HTML/da/scripts/man-cvscheck.1.docbook
 share/doc/kde/HTML/da/scripts/man-cvslastchange.1.docbook
 share/doc/kde/HTML/da/scripts/man-cvslastlog.1.docbook
 share/doc/kde/HTML/da/scripts/man-cvsrevertlast.1.docbook
@@ -1626,7 +1644,6 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kbstateapplet.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcachegrind.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcm_krfb.mo
@@ -1669,7 +1686,6 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmkonsole.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmkontactnt.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmktalkd.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmkttsd.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmkttsmgr.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmkuick.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmkurifilt.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmkvaio.mo
@@ -1684,7 +1700,6 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmlirc.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kcmmediacontrol.mo
@@ -2228,6 +2243,7 @@ ${PKGLOCALEDIR}/locale/da/flag.png
 @dirrm share/doc/kde/HTML/da/knotes
 @dirrm share/doc/kde/HTML/da/knode
 @dirrm share/doc/kde/HTML/da/knewsticker
+@dirrm share/doc/kde/HTML/da/knetattach
 @dirrm share/doc/kde/HTML/da/kmplot
 @dirrm share/doc/kde/HTML/da/kmouth
 @dirrm share/doc/kde/HTML/da/kmousetool
@@ -2400,5 +2416,6 @@ ${PKGLOCALEDIR}/locale/da/flag.png
 @dirrm share/doc/kde/HTML/da/artsbuilder
 @dirrm share/doc/kde/HTML/da/ark
 @dirrm share/doc/kde/HTML/da/amor
+@dirrm share/doc/kde/HTML/da/akregator
 @dirrm share/doc/kde/HTML/da/KRegExpEditor
 @comment in kde: @dirrm share/doc/kde/HTML/da

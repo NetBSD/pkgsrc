@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2005/03/23 23:06:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/31 15:38:25 markd Exp $
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/appletproxy.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/childpanelextension.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/clockapplet.mo
@@ -144,8 +144,10 @@ ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/kpartapp.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/kpersonalizer.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/kprinter.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/krandr.mo
+${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/krdb.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/kreadconfig.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/krunapplet.mo
+${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/kscreensaver.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/ksmserver.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/ksplash.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/ksplashthemes.mo
@@ -162,8 +164,10 @@ ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/ktexteditor_insertfile.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/ktexteditor_isearch.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/ktexteditor_kdatatool.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/kthememanager.mo
+${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/ktip.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/kwin.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/kwin_clients.mo
+${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/kwriteconfig.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/kxkb.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/libdmctl.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/libkicker.mo
@@ -182,10 +186,12 @@ ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/lockout.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/mediaapplet.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/naughtyapplet.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/nsplugin.mo
+${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/passwords.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/privacy.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/quicklauncher.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/taskbarextension.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/timezones.mo
 ${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/trashapplet.mo
+${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/useraccount.mo
 ${PKGLOCALEDIR}/locale/fy/charset
 ${PKGLOCALEDIR}/locale/fy/entry.desktop

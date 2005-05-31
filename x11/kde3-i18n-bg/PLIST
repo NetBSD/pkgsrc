@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/03/23 23:06:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/05/31 15:38:23 markd Exp $
 share/kde/apps/khangman/data/bg/animals.kvtml
 share/kde/apps/khangman/data/bg/easy.kvtml
 share/kde/apps/khangman/data/bg/hard.kvtml
@@ -98,7 +98,6 @@ ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kbounce.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kbruch.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kbstateapplet.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcm_krfb.mo
@@ -141,7 +140,6 @@ ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmkonsole.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmkontactnt.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmktalkd.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmkttsd.mo
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmkttsmgr.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmkuick.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmkurifilt.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmkvaio.mo
@@ -156,7 +154,6 @@ ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmlirc.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kcmmediacontrol.mo

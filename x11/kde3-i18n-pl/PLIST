@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/03/23 23:06:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/05/31 15:38:26 markd Exp $
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/akregator.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/akregator_konqplugin.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/alsaplayerui.mo
@@ -95,10 +95,10 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kbinaryclock.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kblackbox.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kbounce.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kbruch.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kbstateapplet.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcachegrind.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcm_krfb.mo
@@ -141,7 +141,6 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmkonsole.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmkontactnt.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmktalkd.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmkttsd.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmkttsmgr.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmkuick.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmkurifilt.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmkvaio.mo
@@ -156,7 +155,6 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmlirc.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kcmmediacontrol.mo
@@ -429,6 +427,7 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/krfb.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kruler.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/krunapplet.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/ksame.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/ksayit.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kscd.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kscreensaver.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kshisen.mo
@@ -473,7 +472,12 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/ktnef.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/ktouch.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/ktron.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kttsd.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kttsd_commandplugin.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kttsd_eposplugin.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kttsd_festivalintplugin.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kttsd_fliteplugin.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kttsd_freettsplugin.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kttsd_hadifixplugin.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kttsd_sbdplugin.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kttsd_stringreplacerplugin.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kttsd_talkerchooserplugin.mo

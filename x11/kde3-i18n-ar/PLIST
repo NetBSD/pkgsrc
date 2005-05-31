@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/03/23 23:06:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/05/31 15:38:23 markd Exp $
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/alsaplayerui.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/amor.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/appletproxy.mo
@@ -81,7 +81,6 @@ ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kbounce.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kbruch.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kcm_krfb.mo
@@ -129,7 +128,6 @@ ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kcmlirc.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kcmmediacontrol.mo

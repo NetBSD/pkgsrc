@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/03/23 23:06:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/31 15:38:24 markd Exp $
 share/doc/kde/HTML/en_GB/cervisia/common
 share/doc/kde/HTML/en_GB/cervisia/index.cache.bz2
 share/doc/kde/HTML/en_GB/cervisia/index.docbook
@@ -731,7 +731,6 @@ ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kbstateapplet.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcachegrind.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcm_krfb.mo
@@ -774,7 +773,6 @@ ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmkonsole.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmkontactnt.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmktalkd.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmkttsd.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmkttsmgr.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmkuick.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmkurifilt.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmkvaio.mo
@@ -789,7 +787,6 @@ ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmlirc.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kcmmediacontrol.mo
