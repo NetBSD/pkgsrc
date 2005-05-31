@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/03/23 21:53:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/05/31 14:30:37 markd Exp $
 bin/kfilereplace
 bin/kimagemapeditor
 bin/klinkstatus
@@ -233,6 +233,7 @@ share/kde/apps/kimagemapeditor/removepointcursor.png
 share/kde/apps/klinkstatus/klinkstatus_shell.rc
 share/kde/apps/klinkstatuspart/klinkstatus_part.rc
 share/kde/apps/klinkstatuspart/pics/304.png
+share/kde/apps/kmdr-editor/pics/kommandersplash.png
 share/kde/apps/kxsldbg/kxsldbg_shell.rc
 share/kde/apps/kxsldbgpart/kxsldbg_part.rc
 share/kde/apps/quanta/actions.rc
@@ -1697,6 +1698,8 @@ share/kde/servicetypes/quantadebugger.desktop
 @dirrm share/kde/apps/quanta
 @dirrm share/kde/apps/kxsldbgpart
 @dirrm share/kde/apps/kxsldbg
+@dirrm share/kde/apps/kmdr-editor/pics
+@dirrm share/kde/apps/kmdr-editor
 @dirrm share/kde/apps/klinkstatuspart/pics
 @dirrm share/kde/apps/klinkstatuspart
 @dirrm share/kde/apps/klinkstatus
