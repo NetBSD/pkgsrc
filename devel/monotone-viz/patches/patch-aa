@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/05/31 16:00:58 drochner Exp $
+
+--- configure.orig	2005-05-30 16:35:17.000000000 +0200
++++ configure
+@@ -1870,38 +1870,6 @@ else
+ fi
+ 
+ 
+-# Check the sqlite3 sources
+-
+-# Check whether --with-monotone-dir or --without-monotone-dir was given.
+-if test "${with_monotone_dir+set}" = set; then
+-  withval="$with_monotone_dir"
+-  MONOTONE_DIR=$withval
+-else
+-  MONOTONE_DIR=monotone
+-fi;
+-echo "$as_me:$LINENO: checking sqlite sources" >&5
+-echo $ECHO_N "checking sqlite sources... $ECHO_C" >&6
+-if test -d "$MONOTONE_DIR" -a -r "$MONOTONE_DIR/sqlite/lib3rdparty_a-main.o" ; then
+-  echo "$as_me:$LINENO: result: found in $MONOTONE_DIR/sqlite" >&5
+-echo "${ECHO_T}found in $MONOTONE_DIR/sqlite" >&6
+-else
+-  { { echo "$as_me:$LINENO: error:
+-
+-Could not find compiled sqlite sources. Monotone-viz needs a compiled
+-monotone tree for the sqlite library. Create a link named \`monotone'
+-or specify the location to configure using the \`--with-monotone-dir'
+-option." >&5
+-echo "$as_me: error:
+-
+-Could not find compiled sqlite sources. Monotone-viz needs a compiled
+-monotone tree for the sqlite library. Create a link named \`monotone'
+-or specify the location to configure using the \`--with-monotone-dir'
+-option." >&2;}
+-   { (exit 1); exit 1; }; }
+-fi
+-if test "${MONOTONE_DIR:0:1}" != "/" ; then
+-  MONOTONE_DIR=$PWD/$MONOTONE_DIR
+-fi
+ 
+ 
+           ac_config_files="$ac_config_files config.make"

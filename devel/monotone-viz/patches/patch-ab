@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/05/31 16:00:58 drochner Exp $
+
+--- Makefile.orig	2005-04-20 21:34:48.000000000 +0200
++++ Makefile
+@@ -7,7 +7,7 @@ EXTLIB       := extlib-1.3
+ VPATH = mlsqlite $(OCAMLNET) $(EXTLIB) glib crypto
+ 
+ MLINCDIRS = -I $(OCAMLNET) -I mlsqlite -I $(EXTLIB) -I $(LABLGTK_DIR) -I glib -I crypto
+-CINCDIRS  = -I $(MONOTONE_DIR)/sqlite -I $(LABLGTK_DIR) -ccopt "$(GTK_CFLAGS) $(CRYPTO_CFLAGS)"
++CINCDIRS  = -I $(LABLGTK_DIR) -ccopt "$(GTK_CFLAGS) $(CRYPTO_CFLAGS)"
+ GTK_CFLAGS := $(shell pkg-config gtk+-2.0 --cflags)
+ 
+ 
+@@ -54,12 +54,12 @@ monotone-viz : $(OBJX) lib3rdparty.a
+ monotone-viz : MLLIBS = str.cmxa lablgtk.cmxa gtkInit.cmx lablgnomecanvas.cmxa 
+ else
+ monotone-viz : $(OBJ) lib3rdparty.a
+-	$(OCAMLC) -custom -o $@ -I . -I $(LABLGTK_DIR) $(MLLIBS) $^ $(CRYPTO_LIB) 
++	$(OCAMLC) -custom -o $@ -I . -I $(LABLGTK_DIR) $(MLLIBS) $^ ${BUILDLINK_DIR}/lib/ocaml/libcamlrun.a $(CRYPTO_LIB) ${BUILDLINK_DIR}/lib/libsqlite3.a
+ monotone-viz : MLLIBS = str.cma lablgtk.cma gtkInit.cmo lablgnomecanvas.cma 
+ endif
+ 
+ lib3rdparty.a : mlsqlite/ocaml-sqlite3.o glib/ocaml-gspawn.o glib/ocaml-giochannel.o crypto/ocaml-openssl.o
+-	ar crs lib3rdparty.a $(MONOTONE_DIR)/sqlite/lib3rdparty_a-*.o $^
++	ar crs lib3rdparty.a $^
+ 
+ glib/ocaml-gspawn.o : gspawn_tags.c gspawn_tags.h
+ glib/ocaml-giochannel.o : giochannel_tags.c giochannel_tags.h
