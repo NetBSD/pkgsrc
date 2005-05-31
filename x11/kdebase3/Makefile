@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2005/05/31 10:01:40 dillo Exp $
+# $NetBSD: Makefile,v 1.82 2005/05/31 14:21:23 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	3
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -108,12 +107,6 @@ pre-configure:
 		${SED} ${FILES_SUBST_SED} $${file} > $${file}.new;	\
 		${MV} -f $${file}.new $${file};				\
 	done
-
-.if ${OPSYS} == "SunOS"
-post-configure:
-	# will be done with a proper configure check in 3.4.1
-	${ECHO} "#define HAVE_SYS_LOADAVG_H 1" >> ${WRKSRC}/config.h
-.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kde/templates/.source/emptydir
