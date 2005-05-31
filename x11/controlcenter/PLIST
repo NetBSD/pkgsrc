@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/09/22 08:09:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/05/31 22:07:37 wiz Exp $
 bin/background-properties-capplet
 bin/file-types-capplet
 bin/gnome-edit-properties-capplet
@@ -16,8 +16,8 @@ lib/cappletConf.sh
 lib/libcapplet.la
 man/man1/background-properties-capplet.1
 man/man1/file-types-capplet.1
-man/man1/gnomecc.1
 man/man1/gnome-edit-properties-capplet.1
+man/man1/gnomecc.1
 man/man1/keyboard-properties.1
 man/man1/mouse-properties-capplet.1
 man/man1/screensaver-properties-capplet.1
@@ -61,7 +61,6 @@ share/gnome/apps/Settings/Session/.directory
 share/gnome/apps/Settings/UIOptions/.directory
 share/gnome/apps/Settings/file-types-capplet.desktop
 share/gnome/apps/Settings/gnomecc.desktop
-share/gnome/help/control-center/C/topic.dat
 share/gnome/help/control-center/C/control-center.sgml
 share/gnome/help/control-center/C/desktop-intro.html
 share/gnome/help/control-center/C/doc-handlers.html
@@ -100,6 +99,7 @@ share/gnome/help/control-center/C/stylesheet-images/toc-minus.gif
 share/gnome/help/control-center/C/stylesheet-images/toc-plus.gif
 share/gnome/help/control-center/C/stylesheet-images/up.gif
 share/gnome/help/control-center/C/stylesheet-images/warning.gif
+share/gnome/help/control-center/C/topic.dat
 share/gnome/help/control-center/C/usage.html
 share/gnome/wm-properties/Enlightenment.desktop
 share/gnome/wm-properties/IceWM.desktop
