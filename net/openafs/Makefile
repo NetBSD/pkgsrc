@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/25 22:09:39 gendalia Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/31 11:24:32 dillo Exp $
 
 DISTNAME=	openafs-1.3.82-src
 PKGNAME=	${DISTNAME:C/-src//}
@@ -20,11 +20,11 @@ USE_GNU_CONFIGURE_HOST= no
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
-PKG_SUPPORTED_OPTIONS = PAM
+PKG_SUPPORTED_OPTIONS = pam
 PKG_OPTIONS_VAR       = PKG_OPTIONS.openafs
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:MPAM)
+.if !empty(PKG_OPTIONS:Mpam)
 CONFIGURE_ARGS+=        --enable-pam
 .include "../../mk/pam.buildlink3.mk"
 PLIST_SRC+=		${.CURDIR}/PLIST.pam

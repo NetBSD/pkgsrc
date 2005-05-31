@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/04/28 14:11:13 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/05/31 11:24:33 dillo Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -74,10 +74,10 @@ CPPFLAGS+=		-I/usr/include/krb5 -I/usr/include/kerberosIV
 # XXX: why yet.  For the moment, disable PAM authentication.
 #
 #PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh+gssapi
-#PKG_SUPPORTED_OPTIONS=	PAM
+#PKG_SUPPORTED_OPTIONS=	pam
 #.include "../../mk/bsd.options.mk"
 #
-#.if !empty(PKG_OPTIONS:MPAM)
+#.if !empty(PKG_OPTIONS:Mpam)
 #.  include "../../mk/pam.buildlink3.mk"
 #CONFIGURE_ARGS+=	--with-pam
 #PLIST_SRC+=		${.CURDIR}/PLIST.pam
@@ -154,7 +154,7 @@ post-install:
 	cd ${WRKSRC}; for file in ${CONFS} ${SUPPS}; do			\
 		${INSTALL_DATA} $${file}.out ${EGDIR}/$${file};		\
 	done
-#.if defined(USE_PAM)
+#.if !empty(PKT_OPTIONS:Mpam)
 #	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.freebsd ${EGDIR}/sshd.pam
 #.endif
 
