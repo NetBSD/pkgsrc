@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.29 2005/05/31 16:03:41 wiz Exp $
+# $NetBSD: bsd.options.mk,v 1.30 2005/05/31 18:25:37 jmmv Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -181,7 +181,7 @@ PKG_OPTIONS:=	${PKG_OPTIONS} ${_popt_}
 .undef _popt_
 
 .if !empty(_OPTIONS_UNSUPPORTED)
-PKG_FAIL_REASON:=The following selected options are not supported: ${_OPTIONS_UNSUPPORTED:O:u:Q}
+PKG_FAIL_REASON:=	"The following selected options are not supported: ${_OPTIONS_UNSUPPORTED:O:u:Q}."
 .endif
 
 .undef _OPTIONS_UNSUPPORTED
