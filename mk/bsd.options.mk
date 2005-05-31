@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.25 2005/05/28 12:14:34 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.26 2005/05/31 11:05:31 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -21,6 +21,11 @@
 #	PKG_OPTIONS_LEGACY_VARS
 #               This is a list of USE_VARIABLE:option pairs that
 #		map legacy /etc/mk.conf variables to their option
+#		counterparts.
+#
+#	PKG_OPTIONS_LEGACY_OPTS
+#		This is a list of old-option:new-option pairs that
+#		map options that have been renamed to their new
 #		counterparts.
 #		
 #
@@ -48,10 +53,11 @@
 #
 # -------------8<-------------8<-------------8<-------------8<-------------
 # PKG_OPTIONS_VAR=		PKG_OPTIONS.wibble
-# PKG_SUPPORTED_OPTIONS=	foo ldap sasl
-# PKG_SUGGESTED_OPTIONS=	foo
+# PKG_SUPPORTED_OPTIONS=	wibble-foo ldap sasl
+# PKG_SUGGESTED_OPTIONS=	wibble-foo
 # PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_OPENLDAP:ldap
 # PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_SASL2:sasl
+# PKG_OPTIONS_LEGACY_OPTS+=	foo:wibble-foo
 #
 # .include "../../mk/bsd.options.mk"
 #
@@ -60,7 +66,7 @@
 # ###
 # ### FOO support
 # ###
-# .if !empty(PKG_OPTIONS:Mfoo)
+# .if !empty(PKG_OPTIONS:Mwibble-foo)
 # CONFIGURE_ARGS+=	--enable-foo
 # .endif
 
@@ -112,6 +118,17 @@ _DEPRECATED_WARNING:=${_DEPRECATED_WARNING} "Deprecated variable "${_var_:Q}" us
 .undef _opt_
 .undef _popt_
 
+.for _m_ in ${PKG_OPTIONS_LEGACY_OPTS}
+_old_:= ${_m_:C/:.*//}
+_new_:= ${_m_:C/.*://}
+.  if !empty(PKG_SUPPORTED_OPTIONS:M${_new_})
+_PKG_LEGACY_OPTMAP.${_old_}:=${_new_}
+_DEPRECATED_WARNING:=${_DEPRECATED_WARNING} "Deprecated option "${_old_:Q}" used, use option "${_new_:Q}" instead."
+.  endif
+.endfor
+.undef _old_
+.undef _new_
+
 #
 # filter unsupported options from PKG_DEFAULT_OPTIONS
 #
@@ -119,7 +136,8 @@ _OPTIONS_DEFAULT_SUPPORED:=	#empty
 .for _o_ in ${PKG_DEFAULT_OPTIONS}
 _opt_:=		${_o_}
 _popt_:=	${_opt_:C/^-//}
-.if !empty(PKG_SUPPORTED_OPTIONS:M${_popt_})
+.if !empty(PKG_SUPPORTED_OPTIONS:M${_popt_}) \
+	|| defined(_PKG_LEGACY_OPTMAP.${_popt_})
 _OPTIONS_DEFAULT_SUPPORTED:=${_OPTIONS_DEFAULT_SUPPORTED} ${_opt_}
 .endif
 .endfor
@@ -135,6 +153,14 @@ _OPTIONS_UNSUPPORTED:=	#empty
 	${_OPTIONS_DEFAULT_SUPPORTED} ${${PKG_OPTIONS_VAR}}
 _opt_:=		${_o_}
 _popt_:=	${_o_:C/^-//}	# positive option
+.  if defined(_PKG_LEGACY_OPTMAP.${_popt_})
+_popt_:=	${_PKG_LEGACY_OPTMAP.${_popt_}}
+.    if empty(_opt_:M-*)
+_opt_:=		${_popt_}
+.    else
+_opt_:=		-${_popt_}
+.    endif
+.  endif
 .  if empty(PKG_SUPPORTED_OPTIONS:M${_popt_})
 _OPTIONS_UNSUPPORTED:=${_OPTIONS_UNSUPPORTED} ${_opt_}
 .  else
