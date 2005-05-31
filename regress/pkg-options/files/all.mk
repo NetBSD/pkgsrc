@@ -1,6 +1,7 @@
-# $NetBSD: all.mk,v 1.1 2005/05/28 12:16:43 dillo Exp $
+# $NetBSD: all.mk,v 1.2 2005/05/31 13:33:39 dillo Exp $
 #
-# This file test a very simple options configuration.
+# This file tests legacy variables and precedence of the various
+# option variables.
 #
 
 MAKECONF=		/dev/null

@@ -1,6 +1,6 @@
-# $NetBSD: simple.mk,v 1.1.1.1 2005/05/16 00:09:03 rillig Exp $
+# $NetBSD: simple.mk,v 1.2 2005/05/31 13:33:39 dillo Exp $
 #
-# This file test a very simple options configuration.
+# This file tests a very simple options configuration.
 #
 
 MAKECONF=		/dev/null
