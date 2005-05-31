@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2005/05/22 20:08:43 jlam Exp $
+# $NetBSD: Makefile.common,v 1.44 2005/05/31 14:05:57 rillig Exp $
 
 DISTNAME=		icewm-1.2.20
 CATEGORIES=		x11 wm
@@ -54,7 +54,8 @@ post-extract:
 	@${CP} ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${HTMLDIR}
 	for file in BUGS CHANGES COPYING README README.wm-session TODO; do\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR}; \
 	done
