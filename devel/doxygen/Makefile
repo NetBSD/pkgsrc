@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/05/31 18:37:20 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2005/05/31 18:38:27 wiz Exp $
 
 DISTNAME=	doxygen-1.4.3.src
 PKGNAME=	doxygen-1.4.3
@@ -12,9 +12,8 @@ COMMENT=	Documentation system for C++, Java, IDL and C
 DEPENDS+=	teTeX-[0-9]*:../../print/teTeX
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
-USE_PERL5=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--make ${GMAKE}
 CONFIGURE_ARGS+=	--perl ${PERL5}
