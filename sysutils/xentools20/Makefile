@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4.2.1 2005/03/28 05:55:03 snj Exp $
+# $NetBSD: Makefile,v 1.4.2.2 2005/05/31 11:13:04 salo Exp $
 #
 
 DISTNAME=		xen-2.0.3-src
 PKGNAME=		xentools20-2.0.3
-PKGREVISION=		3
+PKGREVISION=		5
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/
 EXTRACT_SUFX=		.tgz
@@ -13,7 +13,7 @@ MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.netbsd.org/Ports/xen/
 COMMENT=		Userland Tools for Xen
 
-DEPENDS+=		${PYPKGPREFIX}-twisted*:../../net/py-twisted
+DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 USE_PKGINSTALL=		yes
 
@@ -51,6 +51,7 @@ SUBST_SED.paths=        -e "s|/usr/sbin|${PREFIX}/sbin|g"
 SUBST_MESSAGE.paths=    "Fixing hardcoded paths."
 
 RCD_SCRIPTS=		xend
+FILES_SUBST+=		RCD_INTERPRETER=${PYTHONBIN}
 
 pre-build:
 	${MKDIR} ${WRKSRC}/libxc/xen/NetBSD
