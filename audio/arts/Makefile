@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/05/31 14:04:13 markd Exp $
+# $NetBSD: Makefile,v 1.43 2005/05/31 21:46:38 rillig Exp $
 
 DISTNAME=	arts-1.4.1
 CATEGORIES=	audio
@@ -9,7 +9,7 @@ COMMENT=	Analog Real-Time Synthesizer
 
 CONFLICTS+=	kdelibs-2*
 
-USE_PERL5=		build
+USE_TOOLS+=	perl
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
