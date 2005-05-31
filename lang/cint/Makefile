@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/25 17:48:13 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/31 16:40:31 drochner Exp $
 
 DISTNAME=		cint5.15
 PKGNAME=		cint-5.15.174
@@ -14,7 +14,13 @@ COMMENT=		C/C++ interpreter
 DIST_SUBDIR=		${PKGNAME}
 WRKSRC=			${WRKDIR}
 GCC_REQD+=		3.0
-PTHREAD_OPTS+=	require native
+PTHREAD_OPTS+=	native
+.include "../../mk/pthread.buildlink3.mk"
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
+PLIST_SUBST+= HAVE_THR=""
+.else
+PLIST_SUBST+= HAVE_THR="@comment "
+.endif
 
 post-extract:
 	${FIND} -d ${WRKSRC} -type d -name CVS -exec ${RM} -rf {} \;
@@ -43,5 +49,4 @@ do-install:
 	${CP} -r ${WRKDIR}/lib/prec_stl ${PREFIX}/cint/lib
 	${INSTALL_DATA} ${WRKDIR}/G__ci.h ${PREFIX}/cint
 
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
