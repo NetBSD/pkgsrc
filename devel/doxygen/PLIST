@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2005/01/06 10:38:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/05/31 18:37:20 wiz Exp $
 bin/doxygen
 bin/doxytag
+man/man1/doxygen.1
+man/man1/doxytag.1
+man/man1/doxywizard.1
 share/doc/doxygen/doxygen_manual.pdf
 share/doc/doxygen/examples/Makefile
 share/doc/doxygen/examples/Makefile.in
@@ -42,6 +45,7 @@ share/doc/doxygen/examples/autolink/html/functions.html
 share/doc/doxygen/examples/autolink/html/functions_enum.html
 share/doc/doxygen/examples/autolink/html/functions_eval.html
 share/doc/doxygen/examples/autolink/html/functions_func.html
+share/doc/doxygen/examples/autolink/html/functions_rela.html
 share/doc/doxygen/examples/autolink/html/functions_vars.html
 share/doc/doxygen/examples/autolink/html/globals.html
 share/doc/doxygen/examples/autolink/html/globals_defs.html
@@ -66,6 +70,7 @@ share/doc/doxygen/examples/define/html/define_8h.html
 share/doc/doxygen/examples/define/html/doxygen.css
 share/doc/doxygen/examples/define/html/doxygen.png
 share/doc/doxygen/examples/define/html/files.html
+share/doc/doxygen/examples/define/html/functions_rela.html
 share/doc/doxygen/examples/define/html/globals.html
 share/doc/doxygen/examples/define/html/globals_defs.html
 share/doc/doxygen/examples/define/html/index.html
@@ -195,6 +200,7 @@ share/doc/doxygen/examples/file/html/doxygen.png
 share/doc/doxygen/examples/file/html/file_8h-source.html
 share/doc/doxygen/examples/file/html/file_8h.html
 share/doc/doxygen/examples/file/html/files.html
+share/doc/doxygen/examples/file/html/functions_rela.html
 share/doc/doxygen/examples/file/html/globals.html
 share/doc/doxygen/examples/file/html/globals_vars.html
 share/doc/doxygen/examples/file/html/index.html
@@ -221,6 +227,7 @@ share/doc/doxygen/examples/group/html/class_c5.html
 share/doc/doxygen/examples/group/html/doxygen.css
 share/doc/doxygen/examples/group/html/doxygen.png
 share/doc/doxygen/examples/group/html/files.html
+share/doc/doxygen/examples/group/html/functions_rela.html
 share/doc/doxygen/examples/group/html/globals.html
 share/doc/doxygen/examples/group/html/globals_func.html
 share/doc/doxygen/examples/group/html/group_8cpp.html
@@ -268,6 +275,7 @@ share/doc/doxygen/examples/memgrp/html/doxygen.png
 share/doc/doxygen/examples/memgrp/html/files.html
 share/doc/doxygen/examples/memgrp/html/functions.html
 share/doc/doxygen/examples/memgrp/html/functions_func.html
+share/doc/doxygen/examples/memgrp/html/functions_rela.html
 share/doc/doxygen/examples/memgrp/html/globals.html
 share/doc/doxygen/examples/memgrp/html/globals_defs.html
 share/doc/doxygen/examples/memgrp/html/globals_func.html
@@ -320,7 +328,6 @@ share/doc/doxygen/examples/relates/html/doxygen.css
 share/doc/doxygen/examples/relates/html/doxygen.png
 share/doc/doxygen/examples/relates/html/functions.html
 share/doc/doxygen/examples/relates/html/functions_func.html
-share/doc/doxygen/examples/relates/html/functions_rela.html
 share/doc/doxygen/examples/relates/html/index.html
 share/doc/doxygen/examples/restypedef.cfg
 share/doc/doxygen/examples/restypedef.cpp
@@ -329,6 +336,7 @@ share/doc/doxygen/examples/restypedef/html/doxygen.css
 share/doc/doxygen/examples/restypedef/html/doxygen.png
 share/doc/doxygen/examples/restypedef/html/files.html
 share/doc/doxygen/examples/restypedef/html/functions.html
+share/doc/doxygen/examples/restypedef/html/functions_rela.html
 share/doc/doxygen/examples/restypedef/html/functions_vars.html
 share/doc/doxygen/examples/restypedef/html/globals.html
 share/doc/doxygen/examples/restypedef/html/globals_func.html
@@ -342,6 +350,7 @@ share/doc/doxygen/examples/structcmd.h
 share/doc/doxygen/examples/structcmd/html/doxygen.css
 share/doc/doxygen/examples/structcmd/html/doxygen.png
 share/doc/doxygen/examples/structcmd/html/files.html
+share/doc/doxygen/examples/structcmd/html/functions_rela.html
 share/doc/doxygen/examples/structcmd/html/globals.html
 share/doc/doxygen/examples/structcmd/html/globals_defs.html
 share/doc/doxygen/examples/structcmd/html/globals_func.html
