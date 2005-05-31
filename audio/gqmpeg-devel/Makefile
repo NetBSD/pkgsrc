@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:44:53 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/31 15:13:57 wiz Exp $
 
 DISTNAME=		gqmpeg-0.91.1
 PKGREVISION=		2
@@ -15,30 +15,21 @@ DEPENDS+=		vorbis-tools>=1.0.0.6:../../audio/vorbis-tools
 DEPENDS+=		xmp>=2.0.2:../../audio/xmp
 
 USE_DIRS+=		gnome2-1.5
+USE_DIRS+=		xdg-1.2
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-
-.include "../../mk/bsd.prefs.mk"
-
-.if !defined(GQMPEG_NO_JAPANESE)
-CONFIGURE_ARGS+=	--enable-japanese
-.endif
-.if !defined(GQMPEG_NO_RUSSIAN)
-CONFIGURE_ARGS+=	--enable-russian
-.endif
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ENV+=		GNOME_DATADIR=${PREFIX}/share
+
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+
+.include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-
-# in case gnome isn't installed, we need to create the directories
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pixmaps
 
 .include "../../mk/bsd.pkg.mk"
