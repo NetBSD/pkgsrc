@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10256 2005/05/31 15:47:06 markd Exp $
+$NetBSD: CHANGES,v 1.10257 2005/05/31 17:47:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2738,3 +2738,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/kdelibdocs3 to 3.4.1 [markd 2005-05-31]
 	Updated devel/kdevelop-base to 3.2.1 [markd 2005-05-31]
 	Updated devel/kdevelop to 3.2.1 [markd 2005-05-31]
+	Updated mail/popa3d to 1.0 [wiz 2005-05-31]
