@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.3 2004/07/30 11:24:38 xtraeme Exp $
+# $NetBSD: dirs.mk,v 1.4 2005/05/31 18:53:32 jmmv Exp $
 #
 
 .if !defined(DIRS_XFREE86_MK)
@@ -31,6 +31,7 @@ XFREE86_DIRS+=		${MISCMAN_DIR}
 DEPENDS+=		XFree86-dirs>=${_USE_XFREE86_DIRS}:../../misc/XFree86-dirs
 
 .  for dir in ${XFREE86_DIRS}
+PRINT_PLIST_AWK+=	/^@exec $${MKDIR} %D/${dir:S|/|\\/|g}$$/ { next; }
 PRINT_PLIST_AWK+=	/^@dirrm ${dir:S|/|\\/|g}$$/ \
 				{ print "@comment in XFree86-dirs: "$$0; next; }
 .  endfor
