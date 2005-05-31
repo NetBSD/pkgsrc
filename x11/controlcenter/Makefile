@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2005/05/22 20:08:46 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2005/05/31 22:08:17 wiz Exp $
 
 DISTNAME=		control-center-1.4.0.4
 PKGREVISION=		10
@@ -34,7 +34,7 @@ post-patch:
 	@${ECHO} >>${WRKSRC}/control-center/cappletConf.sh.in ""
 
 post-install:
-	${MKDIR} ${PREFIX}/share/control-center/capplets
+	${INSTALL_DATA_DIR} ${PREFIX}/share/control-center/capplets
 
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
