@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/02 17:01:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/31 16:40:31 drochner Exp $
 bin/cint
 bin/makecint
 cint/G__ci.h
@@ -110,7 +110,7 @@ cint/include/new
 cint/include/new.h
 cint/include/ostream
 cint/include/platform.h
-cint/include/pthread.dll
+${HAVE_THR}cint/include/pthread.dll
 cint/include/pthread.h
 cint/include/readfile.h
 cint/include/regex.h
