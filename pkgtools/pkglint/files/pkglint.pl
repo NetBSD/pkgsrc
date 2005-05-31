@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.190 2005/05/31 21:15:06 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.191 2005/05/31 21:32:45 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1173,7 +1173,7 @@ sub readmakefile($$) {
 
 sub check_Makefile_vartype($) {
 	my ($line) = @_;
-	if ($line->text =~ qr"([A-Z_a-z0-9.]+)\s*(=|\?=|\+=)\s*(.*)") {
+	if ($line->text =~ qr"^([A-Z_a-z0-9.]+)\s*(=|\?=|\+=)\s*(.*)") {
 		my ($varname, $op, $value) = ($1, $2, $3);
 		if ($value =~ qr"\$") {
 			# ignore values that contain other variables
@@ -1289,7 +1289,7 @@ sub checklines_direct_tools($) {
 		.*_TARGET
 		USE_TOOLS);
 	my @ok_shellcmds = (
-		qr"\./Build\s+(?:install|test)",
+		qr"(?:\./Build|\$\{JAM_COMMAND\})\s+(?:install|test)",
 		qr"\"[^\"]*${regex_tools}[^\"]*\"");
 
 	my %toolvar = ();
