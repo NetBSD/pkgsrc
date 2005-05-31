@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.2 2003/10/08 03:24:17 danw Exp $
+$NetBSD: patch-af,v 1.3 2005/05/31 20:51:46 salo Exp $
 
 --- Library/src/wwwsys.h.orig	Wed Dec 20 05:00:07 2000
 +++ Library/src/wwwsys.h
-@@ -925,6 +925,7 @@
+@@ -925,6 +925,7 @@ Their existance is discovered by configu
  #endif
  
  /* appkit.h */
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.2 2003/10/08 03:24:17 danw Exp $
  #ifdef HAVE_APPKIT_APPKIT_H
  #include <appkit/appkit.h>
  #else
-@@ -932,6 +933,7 @@
+@@ -932,6 +933,7 @@ Their existance is discovered by configu
  #include <appkit.h>
  #endif
  #endif
@@ -18,7 +18,7 @@ $NetBSD: patch-af,v 1.2 2003/10/08 03:24:17 danw Exp $
  
  /* dn.h */
  #ifdef HAVE_DN_H
-@@ -1225,25 +1227,24 @@
+@@ -1225,25 +1227,24 @@ the SOCKS ones. Initial modification of 
  #ifdef SOCKS4
  #define connect	        Rconnect
  #define getsockname	Rgetsockname
@@ -58,3 +58,13 @@ $NetBSD: patch-af,v 1.2 2003/10/08 03:24:17 danw Exp $
  #else
  #ifdef SOCKS5
  #define connect		SOCKSconnect
+@@ -1316,7 +1317,9 @@ table.
+ */
+ 
+ #ifndef ERRNO_DONE
++#ifndef errno
+ extern int errno;
++#endif
+ #define socerrno errno
+ #endif
+ 
