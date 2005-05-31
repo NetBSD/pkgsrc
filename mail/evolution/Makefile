@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2005/05/22 20:08:11 jlam Exp $
+# $NetBSD: Makefile,v 1.82 2005/05/31 19:44:15 rillig Exp $
 
 DISTNAME=		evolution-2.2.2
 CATEGORIES=		mail time gnome
@@ -73,7 +73,7 @@ CONFIGURE_ARGS+=	--without-krb5
 .if !empty(PKG_OPTIONS:Mssl)
 CONFIGURE_ARGS+=	--enable-nss=yes
 PLIST_SUBST+=		HAVE_SMIME=
-PRINT_PLIST_AWK+=	/smime/ { print "$${HAVE_SMIME}" $0; next; }
+PRINT_PLIST_AWK+=	/smime/ { print "$${HAVE_SMIME}" $$0; next; }
 # XXX Workaround for the following problem: addressbook/util/libeabutil.la
 # is compiled as a static library only which uses the NSS stuff.  When other
 # parts of the program use this .la archive, they get the right -L flags
