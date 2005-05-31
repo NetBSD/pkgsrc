@@ -1,4 +1,4 @@
-# $NetBSD: obsolete.mk,v 1.8 2005/05/31 11:24:33 dillo Exp $
+# $NetBSD: obsolete.mk,v 1.9 2005/05/31 21:50:56 wiz Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -45,7 +45,7 @@ PKG_OPTIONS_LEGACY_VARS+=	USE_MILTER:milter
 PKG_OPTIONS_LEGACY_VARS+=	USE_MMX:mmx
 PKG_OPTIONS_LEGACY_VARS+=	USE_OPENLDAP:ldap
 PKG_OPTIONS_LEGACY_VARS+=	USE_OSS:oss
-PKG_OPTIONS_LEGACY_VARS+=	USE_PAM:PAM
+PKG_OPTIONS_LEGACY_VARS+=	USE_PAM:pam
 PKG_OPTIONS_LEGACY_VARS+=	USE_RSAREF2:rsaref
 PKG_OPTIONS_LEGACY_VARS+=	USE_SASL:sasl
 PKG_OPTIONS_LEGACY_VARS+=	USE_SASL2:sasl
