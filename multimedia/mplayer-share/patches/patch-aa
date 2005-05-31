@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2005/05/30 12:43:30 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2005/05/31 19:15:11 jmmv Exp $
 
 --- configure.orig	2005-04-13 13:46:35.000000000 +0200
 +++ configure
@@ -39,3 +39,12 @@ $NetBSD: patch-aa,v 1.10 2005/05/30 12:43:30 wiz Exp $
      ;;
    --with-dxr2incdir=*)
      _inc_dxr2=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
+@@ -2382,7 +2383,7 @@
+ echocheck "lrintf"
+ cat > $TMPC << EOF
+ #include <math.h>
+-int main(void) { (void) lrintf(0.0); return 0; }
++int main(void) { long (*foo)(double); foo = lrintf; (void)(*foo)(0.0); return 0; }
+ EOF
+ _lrintf=no
+ cc_check $_ld_lm && _lrintf=yes
