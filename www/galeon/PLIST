@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2005/04/04 10:25:03 abs Exp $
+@comment $NetBSD: PLIST,v 1.26 2005/05/31 15:43:56 drochner Exp $
 bin/galeon
 bin/galeon-config-tool
 lib/bonobo/servers/GNOME_Galeon_Automation.server
@@ -167,6 +167,7 @@ ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/galeon-2.0.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/galeon-2.0.mo
@@ -192,14 +193,17 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/galeon-2.0.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/galeon-2.0.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/galeon-2.0.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/galeon-2.0.mo
