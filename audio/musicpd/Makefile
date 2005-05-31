@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:44:55 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/31 16:20:43 wiz Exp $
 
 DISTNAME=		mpd-0.11.5
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
@@ -15,7 +15,6 @@ USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 
 .include "options.mk"
-.include "../../mk/bsd.prefs.mk"
 
 EGDIR=			${PREFIX}/share/examples/mpd
 RCD_SCRIPTS=		mpd
@@ -27,13 +26,6 @@ SUBST_CLASSES+=		config
 SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	src/main.c
 SUBST_SED.config=	-e s,/etc/mpd.conf,${PKG_SYSCONFDIR}/mpd.conf,
-
-# when IPv6 support is enabled, mpd doesn't listen on an IPv4 address.
-#.if defined(USE_INET6) && ${USE_INET6} == "YES"
-#CONFIGURE_ARGS+=	--enable-ipv6
-#.else
-CONFIGURE_ARGS+=	--disable-ipv6
-#.endif
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mpd.conf > ${WRKDIR}/mpd.conf
