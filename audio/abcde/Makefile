@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/05/15 00:36:28 snj Exp $
+# $NetBSD: Makefile,v 1.32 2005/05/31 21:40:37 rillig Exp $
 
 DISTNAME=	abcde_2.2.6.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -15,7 +15,7 @@ DEPENDS+=	id3v2-[0-9]*:../../audio/id3v2
 DEPENDS+=	cdparanoia>=3.0.9.7:../../audio/cdparanoia
 DEPENDS+=	wget>=1.7:../../net/wget
 
-NO_BUILD=	# defined
+NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 EGDIR=		${PREFIX}/share/examples/abcde
