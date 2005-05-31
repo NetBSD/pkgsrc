@@ -1,8 +1,22 @@
-$NetBSD: patch-aa,v 1.10 2005/05/20 20:08:40 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2005/05/31 17:37:50 wiz Exp $
 
 --- src/joystick/bsd/SDL_sysjoystick.c.orig	2004-12-13 08:54:32.000000000 +0100
 +++ src/joystick/bsd/SDL_sysjoystick.c
-@@ -55,12 +55,14 @@ static char rcsid =
+@@ -44,8 +44,13 @@ static char rcsid =
+ #if defined(HAVE_USB_H)
+ #include <usb.h>
+ #endif
++#ifdef __DragonFly__
++#include <bus/usb/usb.h>
++#include <bus/usb/usbhid.h>
++#else
+ #include <dev/usb/usb.h>
+ #include <dev/usb/usbhid.h>
++#endif
+ 
+ #if defined(HAVE_USBHID_H)
+ #include <usbhid.h>
+@@ -55,12 +60,14 @@ static char rcsid =
  #include <libusbhid.h>
  #endif
  
@@ -19,7 +33,7 @@ $NetBSD: patch-aa,v 1.10 2005/05/20 20:08:40 wiz Exp $
  #include <machine/joystick.h>
  #endif
  
-@@ -239,6 +241,7 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -239,6 +246,7 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  	struct hid_data *hdata;
  	struct report *rep;
  	int fd;
@@ -27,7 +41,7 @@ $NetBSD: patch-aa,v 1.10 2005/05/20 20:08:40 wiz Exp $
  
  	fd = open(path, O_RDONLY);
  	if (fd == -1) {
-@@ -303,6 +306,8 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -303,6 +311,8 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  	joy->nbuttons = 0;
  	joy->nhats = 0;
  	joy->nballs = 0;
@@ -36,7 +50,7 @@ $NetBSD: patch-aa,v 1.10 2005/05/20 20:08:40 wiz Exp $
  
  	while (hid_get_item(hdata, &hitem) > 0) {
  		char *sp;
-@@ -329,8 +334,7 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -329,8 +339,7 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  			    unsigned usage = HID_USAGE(hitem.usage);
  			    int joyaxe = usage_to_joyaxe(usage);
  			    if (joyaxe >= 0) {
@@ -46,7 +60,7 @@ $NetBSD: patch-aa,v 1.10 2005/05/20 20:08:40 wiz Exp $
  			    } else if (usage == HUG_HAT_SWITCH) {
  				joy->nhats++;
  			    }
-@@ -348,6 +352,9 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -348,6 +357,9 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  		}
  	}
  	hid_end_parse(hdata);
@@ -56,7 +70,7 @@ $NetBSD: patch-aa,v 1.10 2005/05/20 20:08:40 wiz Exp $
  
  usbend:
  	/* The poll blocks the event thread. */
-@@ -370,7 +377,7 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
+@@ -370,7 +382,7 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
  	int nbutton, naxe = -1;
  	Sint32 v;
  
@@ -65,7 +79,7 @@ $NetBSD: patch-aa,v 1.10 2005/05/20 20:08:40 wiz Exp $
  	struct joystick gameport;
  	static int x, y, xmin = 0xffff, ymin = 0xffff, xmax = 0, ymax = 0;
   
-@@ -419,7 +426,7 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
+@@ -419,7 +431,7 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
  		}
  		return;
  	}
@@ -74,7 +88,7 @@ $NetBSD: patch-aa,v 1.10 2005/05/20 20:08:40 wiz Exp $
  	
  	rep = &joy->hwdata->inreport;
  
-@@ -457,7 +464,8 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
+@@ -457,7 +469,8 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
  			    } else if (usage == HUG_HAT_SWITCH) {
  				v = (Sint32)hid_get_data(REP_BUF_DATA(rep),
  							 &hitem);
@@ -84,8 +98,23 @@ $NetBSD: patch-aa,v 1.10 2005/05/20 20:08:40 wiz Exp $
  			    }
  			    break;
  			}
-@@ -530,9 +538,9 @@ report_alloc(struct report *r, struct re
- #endif
+@@ -518,7 +531,9 @@ report_alloc(struct report *r, struct re
+ {
+ 	int len;
+ 
+-#ifdef __FreeBSD__
++#ifdef __DragonFly__
++	len = hid_report_size(rd, r->rid, repinfo[repind].kind);
++#elif defined(__FreeBSD__)
+ # if (__FreeBSD_version >= 460000)
+ #  if (__FreeBSD_version <= 500111)
+ 	len = hid_report_size(rd, r->rid, repinfo[repind].kind);
+@@ -527,12 +542,12 @@ report_alloc(struct report *r, struct re
+ #  endif
+ # else
+ 	len = hid_report_size(rd, repinfo[repind].kind, &r->rid);
+-#endif
++# endif
  #else
  # ifdef USBHID_NEW
 -	len = hid_report_size(rd, repinfo[repind].kind, &r->rid);
