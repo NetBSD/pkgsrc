@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2005/05/22 20:08:45 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2005/05/31 20:51:59 salo Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -18,9 +18,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 SITES_libwww-configure-5.4.0nb1.gz=	${MASTER_SITE_LOCAL}
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		YES
-USE_PERL5=		build
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS=		--with-zlib --with-regex --without-x
@@ -35,7 +34,7 @@ pre-configure:
 	${GZCAT} ${DISTDIR}/libwww-configure-5.4.0nb1.gz > ${WRKSRC}/configure
 	${CHMOD} a+x ${WRKSRC}/configure
 .for f in aclocal.m4 configure stamp-h.in
-	${TOUCH} ${WRKSRC}/$f
+	${TOUCH} ${WRKSRC}/${f}
 .endfor
 	${TOUCH} `${FIND} ${WRKSRC} -name Makefile.in -print`
 
