@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/01/18 12:23:33 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/31 22:45:58 rillig Exp $
 #
 
 DISTNAME=	mpgtx-1.3.1
@@ -19,11 +19,11 @@ MLINKS=		mpgcat.1 mpgjoin.1 mpginfo.1 mpgsplit.1 mpgdemux.1
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mpgtx ${PREFIX}/bin
 .for f in ${PLINKS}
-	${LN} -f ${PREFIX}/bin/mpgtx ${PREFIX}/bin/$f
+	${LN} -f ${PREFIX}/bin/mpgtx ${PREFIX}/bin/${f}
 .endfor
 	${INSTALL_MAN} ${WRKSRC}/man/mpgtx.1 ${PREFIX}/man/man1
 .for f in ${MLINKS}
-	${LN} -f ${PREFIX}/man/man1/mpgtx.1 ${PREFIX}/man/man1/$f
+	${LN} -f ${PREFIX}/man/man1/mpgtx.1 ${PREFIX}/man/man1/${f}
 .endfor
 	${INSTALL_MAN} ${WRKSRC}/man/tagmp3.1 ${PREFIX}/man/man1
 
