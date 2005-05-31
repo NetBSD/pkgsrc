@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3566 2005/05/31 04:14:56 xtraeme Exp $
+$NetBSD: TODO,v 1.3567 2005/05/31 09:19:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -461,7 +461,6 @@ Suggested package updates
 	o dylan-compiler-2.4.0
 	o dylan-interpreter-2.4.0
 	o e2fsprogs-1.36
-	o eagle-4.13r1
 	o ec-fonts-mftraced-1.0.11
 	o eclipse-3.0.2
 	o edb-1.0.5
