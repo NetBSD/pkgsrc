@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10259 2005/05/31 17:58:43 wiz Exp $
+$NetBSD: CHANGES,v 1.10260 2005/05/31 18:38:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2741,3 +2741,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/popa3d to 1.0 [wiz 2005-05-31]
 	Updated security/gnutls to 1.2.4 [wiz 2005-05-31]
 	Updated devel/libidn to 0.5.17 [wiz 2005-05-31]
+	Updated devel/doxygen to 1.4.3 [wiz 2005-05-31]
