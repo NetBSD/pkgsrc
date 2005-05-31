@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.6 2005/05/27 12:09:27 salo Exp $
+$NetBSD: distinfo,v 1.7 2005/05/31 21:33:11 kristerw Exp $
 
 SHA1 (gxine-0.4.5.tar.gz) = e18fea29164b10a93f9a4bc0de45db0db0d82fdd
 RMD160 (gxine-0.4.5.tar.gz) = b6ffce9caf73b244cfa674faed5def17edda9755
 Size (gxine-0.4.5.tar.gz) = 1322811 bytes
+SHA1 (patch-aa) = 168f7149dbffd7b191721a30193c6d58320534fc
 SHA1 (patch-ab) = 581122a87dd3ea1a61b434ba721866efd3455ab6
 SHA1 (patch-ac) = b4db5fbfb45f283937b38db2d2e22110b7e113be
 SHA1 (patch-ad) = 1a0cf404f16806bc75cb12659a6f0f86e5e52705
