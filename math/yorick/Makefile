@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/31 18:02:31 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2005/05/31 21:53:26 jlam Exp $
 
 DISTNAME=	yorick-1.6.02
 CATEGORIES=	math
@@ -16,7 +16,7 @@ INSTALL_DIRS=	${WRKSRC}
 
 USE_MAKEINFO=	YES
 INFO_FILES=	yorick.info
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 post-patch:
 	for f in ${WRKSRC}/ysite.sh; do				\
