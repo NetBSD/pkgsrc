@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.7 2005/01/14 05:15:40 jlam Exp $
+# $NetBSD: options.mk,v 1.8 2005/05/31 10:01:39 dillo Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
 PKG_SUPPORTED_OPTIONS=	PAM kerberos ldap skey
+
 .if ${OPSYS} == "NetBSD"
-PKG_DEFAULT_OPTIONS+=	skey
+PKG_SUGGESTED_OPTIONS=	skey
 .endif
 
 .include "../../mk/bsd.options.mk"

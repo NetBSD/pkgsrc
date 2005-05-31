@@ -1,11 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2005/02/01 18:24:34 adrianp Exp $
+# $NetBSD: options.mk,v 1.2 2005/05/31 10:01:38 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.arping
 PKG_SUPPORTED_OPTIONS=	arping1 arping2
-
-.if !defined(PKG_OPTIONS.arping)
-PKG_DEFAULT_OPTIONS+= 	arping1
-.endif
+PKG_SUGGESTED_OPTIONS= 	arping1
 
 .include "../../mk/bsd.options.mk"
 
