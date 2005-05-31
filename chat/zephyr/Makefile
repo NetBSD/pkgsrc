@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/23 09:24:01 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/31 22:41:39 rillig Exp $
 #
 
 DISTNAME=	zephyr-20010518
@@ -37,7 +37,7 @@ pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${ZEPHYR_DOCDIR}
 .for f in ${ZEPHYR_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/$f ${ZEPHYR_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${ZEPHYR_DOCDIR}
 .endfor
 .undef f
 
