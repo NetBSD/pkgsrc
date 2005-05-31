@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2004/05/11 18:28:32 sjg Exp $
+# $NetBSD: Makefile,v 1.21 2005/05/31 20:52:53 sjg Exp $
 #
 
-DISTNAME=       bmake-20040511
+DISTNAME=       bmake-20050530
 CATEGORIES=	devel
 MASTER_SITES=   ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
 
