@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2005/03/26 03:49:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/05/31 14:34:59 markd Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -44,6 +44,7 @@ include/kopete/kopetemessagemanagerfactory.h
 include/kopete/kopetemetacontact.h
 include/kopete/kopetemimetypehandler.h
 include/kopete/kopetenotifyclient.h
+include/kopete/kopetenotifydataobject.h
 include/kopete/kopeteonlinestatus.h
 include/kopete/kopeteonlinestatusmanager.h
 include/kopete/kopetepassword.h
@@ -347,7 +348,6 @@ share/kde/apps/kget/icons/crystalsvg/22x22/actions/bar6.png
 share/kde/apps/kget/icons/crystalsvg/22x22/actions/dock.png
 share/kde/apps/kget/icons/crystalsvg/22x22/actions/tool_clipboard.png
 share/kde/apps/kget/icons/crystalsvg/22x22/actions/tool_delay.png
-share/kde/apps/kget/icons/crystalsvg/22x22/actions/tool_delete.png
 share/kde/apps/kget/icons/crystalsvg/22x22/actions/tool_disconnect.png
 share/kde/apps/kget/icons/crystalsvg/22x22/actions/tool_dock.png
 share/kde/apps/kget/icons/crystalsvg/22x22/actions/tool_drop_target.png
@@ -1258,12 +1258,15 @@ share/kde/apps/kppp/Rules/Ireland/Eircom_National.rst
 share/kde/apps/kppp/Rules/Ireland/Eircom_Special.rst
 share/kde/apps/kppp/Rules/Israel/Bezeq_Interurban.rst
 share/kde/apps/kppp/Rules/Israel/Bezeq_Local.rst
+share/kde/apps/kppp/Rules/Italy/Atlanet.rst
 share/kde/apps/kppp/Rules/Italy/Infostrada_Internet_SpZero.rst
 share/kde/apps/kppp/Rules/Italy/Infostrada_Libero1055_Base.rst
 share/kde/apps/kppp/Rules/Italy/Infostrada_Libero1055_SpZero.rst
 share/kde/apps/kppp/Rules/Italy/Infostrada_Loc_Reg_Naz_SpZero.rst
 share/kde/apps/kppp/Rules/Italy/Infostrada_Locali_Base.rst
 share/kde/apps/kppp/Rules/Italy/Infostrada_Reg_Naz_Base.rst
+share/kde/apps/kppp/Rules/Italy/Tele2_Altri_ISP.rst
+share/kde/apps/kppp/Rules/Italy/Tele2_Internet_Tele2.rst
 share/kde/apps/kppp/Rules/Italy/Telecom_Interurbane_Fino15Km.rst
 share/kde/apps/kppp/Rules/Italy/Telecom_Interurbane_Oltre15Km.rst
 share/kde/apps/kppp/Rules/Italy/Telecom_Locali.rst
