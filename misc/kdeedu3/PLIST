@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/03/23 22:11:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/05/31 14:50:56 markd Exp $
 bin/celestrongps
 bin/fliccd
 bin/indiserver
@@ -785,6 +785,7 @@ share/kde/apps/klettres/en/syllab/say.ogg
 share/kde/apps/klettres/en/syllab/sit.ogg
 share/kde/apps/klettres/en/syllab/sky.ogg
 share/kde/apps/klettres/en/syllab/th.ogg
+share/kde/apps/klettres/es.txt
 share/kde/apps/klettres/fr/alpha/a-0.ogg
 share/kde/apps/klettres/fr/alpha/a-1.ogg
 share/kde/apps/klettres/fr/alpha/a-10.ogg
@@ -1904,11 +1905,11 @@ share/kde/services/kmplot_part.desktop
 @dirrm share/kde/apps/klatin/data/vocabs/pl
 @dirrm share/kde/apps/klatin/data/vocabs/en
 @dirrm share/kde/apps/klatin/data/vocabs/de
-@dirrm share/kde/apps/klatin/data/vocabs
+@unexec ${RMDIR} %D/share/kde/apps/klatin/data/vocabs 2>/dev/null || ${TRUE}
 @dirrm share/kde/apps/klatin/data/verbs
 @dirrm share/kde/apps/klatin/data/grammar
-@dirrm share/kde/apps/klatin/data
-@dirrm share/kde/apps/klatin
+@unexec ${RMDIR} %D/share/kde/apps/klatin/data 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/apps/klatin 2>/dev/null || ${TRUE}
 @dirrm share/kde/apps/kiten
 @dirrm share/kde/apps/kig/pics
 @dirrm share/kde/apps/kig/builtin-macros
