@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/31 10:01:36 dillo Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/31 11:21:41 dillo Exp $
 #
 
 DISTNAME=	gxemul-0.3.2
@@ -27,13 +27,14 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.c ${PREFIX}/share/doc/${PKGBASE}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gxemul
-# X11 for legacy purposes.  can be removed after 2005Q2
-PKG_SUPPORTED_OPTIONS=	X11 x11
+PKG_SUPPORTED_OPTIONS=	x11
 PKG_SUGGESTED_OPTIONS=	x11
+# can be removed after 2005Q2
+PKG_OPTIONS_LEGACY_OPTS+=	X11:x11
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mx11) || !empty(PKG_OPTIONS:MX11)
+.if !empty(PKG_OPTIONS:Mx11)
 USE_X11=		yes
 GLOBAL_LDFLAGS=		-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib
 SUBST_CLASSES=		x11
