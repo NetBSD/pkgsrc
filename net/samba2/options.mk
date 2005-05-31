@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2005/05/31 10:01:39 dillo Exp $
+# $NetBSD: options.mk,v 1.3 2005/05/31 11:24:32 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba2
-PKG_SUPPORTED_OPTIONS=	PAM cups ldap-compat
+PKG_SUPPORTED_OPTIONS=	pam cups ldap-compat
 PKG_OPTIONS_LEGACY_VARS+=	USE_OPENLDAP:ldap-compat
 
 .include "../../mk/bsd.options.mk"
@@ -9,7 +9,7 @@ PKG_OPTIONS_LEGACY_VARS+=	USE_OPENLDAP:ldap-compat
 ###
 ### Support PAM authentication.
 ###
-.if !empty(PKG_OPTIONS:MPAM)
+.if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam
 .endif

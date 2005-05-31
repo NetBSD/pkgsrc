@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2005/05/22 20:08:27 jlam Exp $
+# $NetBSD: Makefile,v 1.93 2005/05/31 11:24:32 dillo Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -54,10 +54,10 @@ CONFIGURE_ENV+=		DSOFLAGS="${LDFLAGS}"
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
-PKG_SUPPORTED_OPTIONS=	PAM
+PKG_SUPPORTED_OPTIONS=	pam
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:MPAM)
+.if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-pam
 MESSAGE_SRC=		${PKGDIR}/MESSAGE
@@ -135,7 +135,7 @@ post-install:
 			;;						\
 		esac;							\
 	done
-.if !empty(PKG_OPTIONS:MPAM)
+.if !empty(PKG_OPTIONS:Mpam)
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${EGDIR}
 .endif
 

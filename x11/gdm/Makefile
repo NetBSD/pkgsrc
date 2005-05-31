@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2005/04/26 20:20:32 drochner Exp $
+# $NetBSD: Makefile,v 1.78 2005/05/31 11:24:33 dillo Exp $
 #
 
 DISTNAME=	gdm-2.6.0.9
@@ -27,7 +27,7 @@ USE_X11=		YES
 USE_LIBTOOL=		YES
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdm
-PKG_SUPPORTED_OPTIONS=	inet6 PAM
+PKG_SUPPORTED_OPTIONS=	inet6 pam
 .include "../../mk/bsd.options.mk"
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
@@ -98,7 +98,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 CONFIGURE_ARGS+=	X_SERVER_ARGS="vt05"
 .endif
 
-.if !empty(PKG_OPTIONS:MPAM)
+.if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-authentication-scheme=pam
 .  if ${PAM_TYPE} == "linux-pam"
