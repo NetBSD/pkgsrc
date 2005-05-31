@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:05 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/31 22:26:10 wiz Exp $
 #
 
 DISTNAME=		gimp-1.2.5
@@ -24,8 +24,6 @@ USE_X11=		YES
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 
-.include "../../mk/bsd.prefs.mk"
-
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-perl
@@ -47,7 +45,7 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 MAKE_ENV+=		X11BASE=${X11BASE}
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
-BUILD_DEFS+=		GIMP_WITH_HELPBROWSER
+.include "options.mk"
 
 # Configuration files
 PKG_SYSCONFSUBDIR=	gimp/1.2
@@ -71,16 +69,4 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../multimedia/mpeg-lib/buildlink3.mk"
-.if defined(GIMP_WITH_HELPBROWSER) && ${GIMP_WITH_HELPBROWSER} != "no"
-PLIST_SUBST+=	HELPBROWSER=""
-.include "../../x11/gnome-libs/buildlink3.mk"
-.else
-PLIST_SUBST+=	HELPBROWSER="@comment "
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
-.endif
-
 .include "../../mk/bsd.pkg.mk"
