@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2005/05/25 08:23:43 adam Exp $
+# $NetBSD: Makefile,v 1.86 2005/05/31 21:42:04 wiz Exp $
 
 DISTNAME=	Wine-20050524
 PKGNAME=	${DISTNAME:S/W/w/}
@@ -38,12 +38,7 @@ CONFIGURE_ENV+=		X_LIBS="${LDFLAGS}"
 CONFIGURE_ENV+=		CFLAGS="${CFLAGS} -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\""
 LIBS+=			${LDFLAGS}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_CUPS) && (${USE_CUPS} == YES)
-.  include "../../print/cups/buildlink3.mk"
-BUILD_DEFS+=		USE_CUPS
-.endif
+.include "options.mk"
 
 EGDIR=			${PREFIX}/share/wine
 
