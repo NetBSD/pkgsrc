@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/05/24 13:25:48 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/31 20:48:17 wiz Exp $
 #
 
 DISTNAME=		rarlinux-3.4.1
+PKGNAME=		${DISTNAME:C/linux/-linux/}
 CATEGORIES=		archivers
 MASTER_SITES=		http://www.rarsoft.com/rar/ \
 			ftp://ftp.rarsoft.com/rar/
@@ -15,6 +16,9 @@ LICENSE=		rar-license
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.6*-i386 \
 			NetBSD-[2-9]*-i386 Linux-*-i[3-6]86
 WRKSRC=			${WRKDIR}/rar
+
+# old name of the package
+CONFLICTS=		rarlinux-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
