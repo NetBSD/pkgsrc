@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3571 2005/05/31 17:58:43 wiz Exp $
+$NetBSD: TODO,v 1.3572 2005/05/31 18:38:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -454,7 +454,6 @@ Suggested package updates
 	o distcc-2.18.3
 	o dmalloc-5.4.2
 	o dnstracer-1.8
-	o doxygen-1.4.3
 	o dpkg-1.13.3
 	o dvdrip-0.52.5
 	o dvipdfmx-20050201
