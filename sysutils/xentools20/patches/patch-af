@@ -1,12 +1,13 @@
-$NetBSD: patch-af,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+$NetBSD: patch-af,v 1.1.1.1.2.1 2005/05/31 11:13:04 salo Exp $
 
---- xfrd/select.c.orig	2005-01-22 01:28:18.000000000 +0100
-+++ xfrd/select.c	2005-01-22 01:29:02.000000000 +0100
-@@ -1,6 +1,7 @@
+--- xfrd/select.c.orig	2005-01-12 13:22:21.000000000 +0100
++++ xfrd/select.c	2005-05-23 20:01:54.000000000 +0200
+@@ -1,6 +1,8 @@
  #include <stdlib.h>
  #include <errno.h>
  #include <unistd.h>
 +#include <string.h>
++#include <sys/select.h>
  
  #include "select.h"
  
