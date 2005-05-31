@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/03/25 12:21:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/05/31 14:58:32 markd Exp $
 bin/kmag
 bin/kmousetool
 bin/kmouth
@@ -321,6 +321,8 @@ share/kde/icons/mono/scalable/actions/add_milestone.svgz
 share/kde/icons/mono/scalable/actions/add_sub_task.svgz
 share/kde/icons/mono/scalable/actions/add_task.svgz
 share/kde/icons/mono/scalable/actions/add_user.svgz
+share/kde/icons/mono/scalable/actions/addimagefolder.svgz
+share/kde/icons/mono/scalable/actions/addpoint.svgz
 share/kde/icons/mono/scalable/actions/addquestion.svgz
 share/kde/icons/mono/scalable/actions/adjustcol.svgz
 share/kde/icons/mono/scalable/actions/adjustrow.svgz
@@ -330,6 +332,8 @@ share/kde/icons/mono/scalable/actions/aim_offline.svgz
 share/kde/icons/mono/scalable/actions/aim_online.svgz
 share/kde/icons/mono/scalable/actions/aim_protocol.svgz
 share/kde/icons/mono/scalable/actions/airbrush.svgz
+share/kde/icons/mono/scalable/actions/albumfoldercomment.svgz
+share/kde/icons/mono/scalable/actions/albumfoldernew.svgz
 share/kde/icons/mono/scalable/actions/align_left.svgz
 share/kde/icons/mono/scalable/actions/align_right.svgz
 share/kde/icons/mono/scalable/actions/alignobjs.svgz
@@ -412,9 +416,11 @@ share/kde/icons/mono/scalable/actions/borderbottom.svgz
 share/kde/icons/mono/scalable/actions/borderleft.svgz
 share/kde/icons/mono/scalable/actions/borderoutline.svgz
 share/kde/icons/mono/scalable/actions/borderright.svgz
+share/kde/icons/mono/scalable/actions/bordertool.svgz
 share/kde/icons/mono/scalable/actions/bordertop.svgz
 share/kde/icons/mono/scalable/actions/bottom.svgz
 share/kde/icons/mono/scalable/actions/brackets.svgz
+share/kde/icons/mono/scalable/actions/brightness.svgz
 share/kde/icons/mono/scalable/actions/bring_forward.svgz
 share/kde/icons/mono/scalable/actions/bring_stencil_to_front.svgz
 share/kde/icons/mono/scalable/actions/bug.svgz
@@ -500,6 +506,7 @@ share/kde/icons/mono/scalable/actions/connect_no.svgz
 share/kde/icons/mono/scalable/actions/contents.svgz
 share/kde/icons/mono/scalable/actions/contents2.svgz
 share/kde/icons/mono/scalable/actions/contexthelp.svgz
+share/kde/icons/mono/scalable/actions/contrast.svgz
 share/kde/icons/mono/scalable/actions/control.svgz
 share/kde/icons/mono/scalable/actions/coords.svgz
 share/kde/icons/mono/scalable/actions/copy.svgz
@@ -528,6 +535,7 @@ share/kde/icons/mono/scalable/actions/delquestion.svgz
 share/kde/icons/mono/scalable/actions/delslide.svgz
 share/kde/icons/mono/scalable/actions/deriv_func.svgz
 share/kde/icons/mono/scalable/actions/diff.svgz
+share/kde/icons/mono/scalable/actions/digikamimageplugins.svgz
 share/kde/icons/mono/scalable/actions/digitalcam.svgz
 share/kde/icons/mono/scalable/actions/dirsynch.svgz
 share/kde/icons/mono/scalable/actions/dirsynch_new.svgz
@@ -537,7 +545,6 @@ share/kde/icons/mono/scalable/actions/documentinfo.svgz
 share/kde/icons/mono/scalable/actions/domtreeviewer.svgz
 share/kde/icons/mono/scalable/actions/dontknow.svgz
 share/kde/icons/mono/scalable/actions/down.svgz
-share/kde/icons/mono/scalable/actions/earth.svgz
 share/kde/icons/mono/scalable/actions/edit.svgz
 share/kde/icons/mono/scalable/actions/edit_add.svgz
 share/kde/icons/mono/scalable/actions/edit_copy.svgz
@@ -552,6 +559,7 @@ share/kde/icons/mono/scalable/actions/editconstants.svgz
 share/kde/icons/mono/scalable/actions/editcopy.svgz
 share/kde/icons/mono/scalable/actions/editcut.svgz
 share/kde/icons/mono/scalable/actions/editdelete.svgz
+share/kde/icons/mono/scalable/actions/editimage.svgz
 share/kde/icons/mono/scalable/actions/editor.svgz
 share/kde/icons/mono/scalable/actions/editpaste.svgz
 share/kde/icons/mono/scalable/actions/editplots.svgz
@@ -573,6 +581,7 @@ share/kde/icons/mono/scalable/actions/eraser.svgz
 share/kde/icons/mono/scalable/actions/error.svgz
 share/kde/icons/mono/scalable/actions/exclamation.svgz
 share/kde/icons/mono/scalable/actions/exec.svgz
+share/kde/icons/mono/scalable/actions/exifinfo.svgz
 share/kde/icons/mono/scalable/actions/exit.svgz
 share/kde/icons/mono/scalable/actions/favorites.svgz
 share/kde/icons/mono/scalable/actions/file.svgz
@@ -584,6 +593,7 @@ share/kde/icons/mono/scalable/actions/filefind.svgz
 share/kde/icons/mono/scalable/actions/fileimport.svgz
 share/kde/icons/mono/scalable/actions/filenew.svgz
 share/kde/icons/mono/scalable/actions/fileopen.svgz
+share/kde/icons/mono/scalable/actions/fileopenurl.svgz
 share/kde/icons/mono/scalable/actions/fileprint.svgz
 share/kde/icons/mono/scalable/actions/filequickprint.svgz
 share/kde/icons/mono/scalable/actions/filereplace.svgz
@@ -658,6 +668,7 @@ share/kde/icons/mono/scalable/actions/group.svgz
 share/kde/icons/mono/scalable/actions/group_stencils.svgz
 share/kde/icons/mono/scalable/actions/groupbox.svgz
 share/kde/icons/mono/scalable/actions/groupevent.svgz
+share/kde/icons/mono/scalable/actions/groupwise_online.svgz
 share/kde/icons/mono/scalable/actions/gsub.svgz
 share/kde/icons/mono/scalable/actions/gsup.svgz
 share/kde/icons/mono/scalable/actions/guides_horizontal.svgz
@@ -677,6 +688,7 @@ share/kde/icons/mono/scalable/actions/history_clear.svgz
 share/kde/icons/mono/scalable/actions/homepage.svgz
 share/kde/icons/mono/scalable/actions/hotmail.svgz
 share/kde/icons/mono/scalable/actions/htmlvalidator.svgz
+share/kde/icons/mono/scalable/actions/hue.svgz
 share/kde/icons/mono/scalable/actions/icq_away.svgz
 share/kde/icons/mono/scalable/actions/icq_invisible.svgz
 share/kde/icons/mono/scalable/actions/icq_offline.svgz
@@ -687,6 +699,7 @@ share/kde/icons/mono/scalable/actions/idea.svgz
 share/kde/icons/mono/scalable/actions/identity.svgz
 share/kde/icons/mono/scalable/actions/idf.svgz
 share/kde/icons/mono/scalable/actions/idh.svgz
+share/kde/icons/mono/scalable/actions/imagecomment.svgz
 share/kde/icons/mono/scalable/actions/imagegallery.svgz
 share/kde/icons/mono/scalable/actions/images_display.svgz
 share/kde/icons/mono/scalable/actions/indent.svgz
@@ -695,6 +708,8 @@ share/kde/icons/mono/scalable/actions/inline_image.svgz
 share/kde/icons/mono/scalable/actions/inline_table.svgz
 share/kde/icons/mono/scalable/actions/inscol.svgz
 share/kde/icons/mono/scalable/actions/insert_arg.svgz
+share/kde/icons/mono/scalable/actions/insert_chart.svgz
+share/kde/icons/mono/scalable/actions/insert_link.svgz
 share/kde/icons/mono/scalable/actions/insert_table_col.svgz
 share/kde/icons/mono/scalable/actions/insert_table_row.svgz
 share/kde/icons/mono/scalable/actions/insert_tag.svgz
@@ -793,6 +808,9 @@ share/kde/icons/mono/scalable/actions/kivio_zoom_minus.svgz
 share/kde/icons/mono/scalable/actions/kivio_zoom_page.svgz
 share/kde/icons/mono/scalable/actions/kivio_zoom_plus.svgz
 share/kde/icons/mono/scalable/actions/kivio_zoom_width.svgz
+share/kde/icons/mono/scalable/actions/klettres_desert.svgz
+share/kde/icons/mono/scalable/actions/klettres_grownup.svgz
+share/kde/icons/mono/scalable/actions/klettres_kids.svgz
 share/kde/icons/mono/scalable/actions/klipper_doc.svgz
 share/kde/icons/mono/scalable/actions/klipper_dock.svgz
 share/kde/icons/mono/scalable/actions/klipper_dock2.svgz
@@ -829,6 +847,21 @@ share/kde/icons/mono/scalable/actions/korgac_disabled.svgz
 share/kde/icons/mono/scalable/actions/krec_record.svgz
 share/kde/icons/mono/scalable/actions/kroete.svgz
 share/kde/icons/mono/scalable/actions/ksirc_dock.svgz
+share/kde/icons/mono/scalable/actions/kstars_advanced.svgz
+share/kde/icons/mono/scalable/actions/kstars_catalog.svgz
+share/kde/icons/mono/scalable/actions/kstars_cbound.svgz
+share/kde/icons/mono/scalable/actions/kstars_clines.svgz
+share/kde/icons/mono/scalable/actions/kstars_cnames.svgz
+share/kde/icons/mono/scalable/actions/kstars_colors.svgz
+share/kde/icons/mono/scalable/actions/kstars_deepsky.svgz
+share/kde/icons/mono/scalable/actions/kstars_geo.svgz
+share/kde/icons/mono/scalable/actions/kstars_grid.svgz
+share/kde/icons/mono/scalable/actions/kstars_guides.svgz
+share/kde/icons/mono/scalable/actions/kstars_horizon.svgz
+share/kde/icons/mono/scalable/actions/kstars_mw.svgz
+share/kde/icons/mono/scalable/actions/kstars_planets.svgz
+share/kde/icons/mono/scalable/actions/kstars_solarsystem.svgz
+share/kde/icons/mono/scalable/actions/kstars_stars.svgz
 share/kde/icons/mono/scalable/actions/ksys1.svgz
 share/kde/icons/mono/scalable/actions/ksys2.svgz
 share/kde/icons/mono/scalable/actions/ksys3.svgz
@@ -884,6 +917,7 @@ share/kde/icons/mono/scalable/actions/locationbar_erase.svgz
 share/kde/icons/mono/scalable/actions/lock.svgz
 share/kde/icons/mono/scalable/actions/locked.svgz
 share/kde/icons/mono/scalable/actions/lockzoom.svgz
+share/kde/icons/mono/scalable/actions/loop.svgz
 share/kde/icons/mono/scalable/actions/lower.svgz
 share/kde/icons/mono/scalable/actions/lsub.svgz
 share/kde/icons/mono/scalable/actions/lsup.svgz
@@ -932,6 +966,10 @@ share/kde/icons/mono/scalable/actions/message_reply.svgz
 share/kde/icons/mono/scalable/actions/messagebox_critical.svgz
 share/kde/icons/mono/scalable/actions/messagebox_info.svgz
 share/kde/icons/mono/scalable/actions/messagebox_warning.svgz
+share/kde/icons/mono/scalable/actions/metacontact_away.svgz
+share/kde/icons/mono/scalable/actions/metacontact_offline.svgz
+share/kde/icons/mono/scalable/actions/metacontact_online.svgz
+share/kde/icons/mono/scalable/actions/metacontact_unknown.svgz
 share/kde/icons/mono/scalable/actions/middle.svgz
 share/kde/icons/mono/scalable/actions/mini_autoform.svgz
 share/kde/icons/mono/scalable/actions/mini_circle.svgz
@@ -961,7 +999,7 @@ share/kde/icons/mono/scalable/actions/mouse_pointer.svgz
 share/kde/icons/mono/scalable/actions/move.svgz
 share/kde/icons/mono/scalable/actions/msgid2msgstr.svgz
 share/kde/icons/mono/scalable/actions/msn_away.svgz
-share/kde/icons/mono/scalable/actions/msn_block.svgz
+share/kde/icons/mono/scalable/actions/msn_blocked.svgz
 share/kde/icons/mono/scalable/actions/msn_invisible.svgz
 share/kde/icons/mono/scalable/actions/msn_offline.svgz
 share/kde/icons/mono/scalable/actions/msn_online.svgz
@@ -983,6 +1021,7 @@ share/kde/icons/mono/scalable/actions/music_halfnote.svgz
 share/kde/icons/mono/scalable/actions/music_natur.svgz
 share/kde/icons/mono/scalable/actions/music_quarternote.svgz
 share/kde/icons/mono/scalable/actions/music_sixteenthnote.svgz
+share/kde/icons/mono/scalable/actions/mute.svgz
 share/kde/icons/mono/scalable/actions/napsterdown.svgz
 share/kde/icons/mono/scalable/actions/napsterup.svgz
 share/kde/icons/mono/scalable/actions/navigator_first.svgz
@@ -1040,6 +1079,7 @@ share/kde/icons/mono/scalable/actions/nomailappt.svgz
 share/kde/icons/mono/scalable/actions/ocr-select.svgz
 share/kde/icons/mono/scalable/actions/ocr.svgz
 share/kde/icons/mono/scalable/actions/ocrImage.svgz
+share/kde/icons/mono/scalable/actions/oilpaint.svgz
 share/kde/icons/mono/scalable/actions/ok.svgz
 share/kde/icons/mono/scalable/actions/onetwomatrix.svgz
 share/kde/icons/mono/scalable/actions/open_stencilset.svgz
@@ -1119,6 +1159,8 @@ share/kde/icons/mono/scalable/actions/player_start.svgz
 share/kde/icons/mono/scalable/actions/player_stop.svgz
 share/kde/icons/mono/scalable/actions/player_time.svgz
 share/kde/icons/mono/scalable/actions/player_volume.svgz
+share/kde/icons/mono/scalable/actions/player_volume_down.svgz
+share/kde/icons/mono/scalable/actions/player_volume_up.svgz
 share/kde/icons/mono/scalable/actions/playlist.svgz
 share/kde/icons/mono/scalable/actions/playsound.svgz
 share/kde/icons/mono/scalable/actions/polar.svgz
@@ -1141,6 +1183,7 @@ share/kde/icons/mono/scalable/actions/prevuntranslated.svgz
 share/kde/icons/mono/scalable/actions/prod.svgz
 share/kde/icons/mono/scalable/actions/progress.svgz
 share/kde/icons/mono/scalable/actions/project_open.svgz
+share/kde/icons/mono/scalable/actions/properties.svgz
 share/kde/icons/mono/scalable/actions/qa.svgz
 share/kde/icons/mono/scalable/actions/quadricbeziercurve.svgz
 share/kde/icons/mono/scalable/actions/queries.svgz
@@ -1159,6 +1202,7 @@ share/kde/icons/mono/scalable/actions/rectangle.svgz
 share/kde/icons/mono/scalable/actions/recur.svgz
 share/kde/icons/mono/scalable/actions/recursive.svgz
 share/kde/icons/mono/scalable/actions/red_ball.svgz
+share/kde/icons/mono/scalable/actions/redeyes.svgz
 share/kde/icons/mono/scalable/actions/redo.svgz
 share/kde/icons/mono/scalable/actions/relation.svgz
 share/kde/icons/mono/scalable/actions/reload.svgz
@@ -1169,6 +1213,7 @@ share/kde/icons/mono/scalable/actions/remcol.svgz
 share/kde/icons/mono/scalable/actions/remove.svgz
 share/kde/icons/mono/scalable/actions/removecell.svgz
 share/kde/icons/mono/scalable/actions/removecomment.svgz
+share/kde/icons/mono/scalable/actions/removepoint.svgz
 share/kde/icons/mono/scalable/actions/remrow.svgz
 share/kde/icons/mono/scalable/actions/repeat.svgz
 share/kde/icons/mono/scalable/actions/report.svgz
@@ -1179,6 +1224,7 @@ share/kde/icons/mono/scalable/actions/resfiledel.svgz
 share/kde/icons/mono/scalable/actions/resfileedit.svgz
 share/kde/icons/mono/scalable/actions/resfileinfo.svgz
 share/kde/icons/mono/scalable/actions/resfileopen.svgz
+share/kde/icons/mono/scalable/actions/resize_image.svgz
 share/kde/icons/mono/scalable/actions/resizecol.svgz
 share/kde/icons/mono/scalable/actions/resizerow.svgz
 share/kde/icons/mono/scalable/actions/restart.svgz
@@ -1202,6 +1248,7 @@ share/kde/icons/mono/scalable/actions/run_bounding.svgz
 share/kde/icons/mono/scalable/actions/run_not.svgz
 share/kde/icons/mono/scalable/actions/run_skip.svgz
 share/kde/icons/mono/scalable/actions/runprog.svgz
+share/kde/icons/mono/scalable/actions/saturation.svgz
 share/kde/icons/mono/scalable/actions/save.svgz
 share/kde/icons/mono/scalable/actions/save_all.svgz
 share/kde/icons/mono/scalable/actions/saveall.svgz
@@ -1243,6 +1290,7 @@ share/kde/icons/mono/scalable/actions/slideshow.svgz
 share/kde/icons/mono/scalable/actions/smallcal.svgz
 share/kde/icons/mono/scalable/actions/smallclock.svgz
 share/kde/icons/mono/scalable/actions/smallthumbnails.svgz
+share/kde/icons/mono/scalable/actions/solarizetool.svgz
 share/kde/icons/mono/scalable/actions/sort_az.svgz
 share/kde/icons/mono/scalable/actions/sort_decrease.svgz
 share/kde/icons/mono/scalable/actions/sort_incr.svgz
@@ -1279,6 +1327,7 @@ share/kde/icons/mono/scalable/actions/styledocker.svgz
 share/kde/icons/mono/scalable/actions/sub.svgz
 share/kde/icons/mono/scalable/actions/sum.svgz
 share/kde/icons/mono/scalable/actions/super.svgz
+share/kde/icons/mono/scalable/actions/superimpose.svgz
 share/kde/icons/mono/scalable/actions/syntax.svgz
 share/kde/icons/mono/scalable/actions/tab_breakoff.svgz
 share/kde/icons/mono/scalable/actions/tab_duplicate.svgz
@@ -1293,9 +1342,49 @@ share/kde/icons/mono/scalable/actions/table.svgz
 share/kde/icons/mono/scalable/actions/table_newobj.svgz
 share/kde/icons/mono/scalable/actions/tables.svgz
 share/kde/icons/mono/scalable/actions/tabwidget.svgz
+share/kde/icons/mono/scalable/actions/tag-folder.svgz
 share/kde/icons/mono/scalable/actions/tea_anim1.svgz
 share/kde/icons/mono/scalable/actions/tea_anim2.svgz
 share/kde/icons/mono/scalable/actions/tea_not_ready.svgz
+share/kde/icons/mono/scalable/actions/template_a4.svgz
+share/kde/icons/mono/scalable/actions/template_balancesheet.svgz
+share/kde/icons/mono/scalable/actions/template_barchart.svgz
+share/kde/icons/mono/scalable/actions/template_basicworkflow.svgz
+share/kde/icons/mono/scalable/actions/template_bmi.svgz
+share/kde/icons/mono/scalable/actions/template_businesscards10.svgz
+share/kde/icons/mono/scalable/actions/template_businesscards16.svgz
+share/kde/icons/mono/scalable/actions/template_cmyk_empty.svgz
+share/kde/icons/mono/scalable/actions/template_creditcardtracker.svgz
+share/kde/icons/mono/scalable/actions/template_empty.svgz
+share/kde/icons/mono/scalable/actions/template_emptylandscape.svgz
+share/kde/icons/mono/scalable/actions/template_emptyportrait.svgz
+share/kde/icons/mono/scalable/actions/template_envelopec6.svgz
+share/kde/icons/mono/scalable/actions/template_envelopedl.svgz
+share/kde/icons/mono/scalable/actions/template_expensereport.svgz
+share/kde/icons/mono/scalable/actions/template_fax.svgz
+share/kde/icons/mono/scalable/actions/template_gray_empty.svgz
+share/kde/icons/mono/scalable/actions/template_invoice.svgz
+share/kde/icons/mono/scalable/actions/template_iso.svgz
+share/kde/icons/mono/scalable/actions/template_letter.svgz
+share/kde/icons/mono/scalable/actions/template_memo.svgz
+share/kde/icons/mono/scalable/actions/template_menuplan.svgz
+share/kde/icons/mono/scalable/actions/template_onecolumnlandscape.svgz
+share/kde/icons/mono/scalable/actions/template_onecolumnportrait.svgz
+share/kde/icons/mono/scalable/actions/template_packingslip.svgz
+share/kde/icons/mono/scalable/actions/template_plain.svgz
+share/kde/icons/mono/scalable/actions/template_plaintext.svgz
+share/kde/icons/mono/scalable/actions/template_pricequotation.svgz
+share/kde/icons/mono/scalable/actions/template_rgb_empty.svgz
+share/kde/icons/mono/scalable/actions/template_simplelayout.svgz
+share/kde/icons/mono/scalable/actions/template_studentidcard.svgz
+share/kde/icons/mono/scalable/actions/template_titlelandscape.svgz
+share/kde/icons/mono/scalable/actions/template_titleportrait.svgz
+share/kde/icons/mono/scalable/actions/template_twocolumnlandscape.svgz
+share/kde/icons/mono/scalable/actions/template_twocolumnportrait.svgz
+share/kde/icons/mono/scalable/actions/template_twocolumns.svgz
+share/kde/icons/mono/scalable/actions/template_us.svgz
+share/kde/icons/mono/scalable/actions/template_vacationchecklist.svgz
+share/kde/icons/mono/scalable/actions/template_worksheet.svgz
 share/kde/icons/mono/scalable/actions/test_it.svgz
 share/kde/icons/mono/scalable/actions/text.svgz
 share/kde/icons/mono/scalable/actions/text_block.svgz
@@ -1384,6 +1473,7 @@ share/kde/icons/mono/scalable/actions/urlrequest.svgz
 share/kde/icons/mono/scalable/actions/validators.svgz
 share/kde/icons/mono/scalable/actions/vcs_add.svgz
 share/kde/icons/mono/scalable/actions/vcs_commit.svgz
+share/kde/icons/mono/scalable/actions/vcs_diff.svgz
 share/kde/icons/mono/scalable/actions/vcs_remove.svgz
 share/kde/icons/mono/scalable/actions/vcs_status.svgz
 share/kde/icons/mono/scalable/actions/vcs_update.svgz
@@ -1533,10 +1623,9 @@ share/kde/icons/mono/scalable/apps/designer.svgz
 share/kde/icons/mono/scalable/apps/desktop-mdk.svgz
 share/kde/icons/mono/scalable/apps/dia.svgz
 share/kde/icons/mono/scalable/apps/dia_gnome_icon.svgz
-share/kde/icons/mono/scalable/apps/digicam.svgz
-share/kde/icons/mono/scalable/apps/digicamcameraclient.svgz
 share/kde/icons/mono/scalable/apps/digikam.svgz
 share/kde/icons/mono/scalable/apps/digikamcameraclient.svgz
+share/kde/icons/mono/scalable/apps/digikamimageplugins.svgz
 share/kde/icons/mono/scalable/apps/display.svgz
 share/kde/icons/mono/scalable/apps/dlgedit.svgz
 share/kde/icons/mono/scalable/apps/dopewars-pill.svgz
@@ -1596,6 +1685,7 @@ share/kde/icons/mono/scalable/apps/gnutella.svgz
 share/kde/icons/mono/scalable/apps/go.svgz
 share/kde/icons/mono/scalable/apps/gpg.svgz
 share/kde/icons/mono/scalable/apps/gpgsm.svgz
+share/kde/icons/mono/scalable/apps/groupwise_protocol.svgz
 share/kde/icons/mono/scalable/apps/grownup.svgz
 share/kde/icons/mono/scalable/apps/gsnes9x-icon.svgz
 share/kde/icons/mono/scalable/apps/gtk_camera.svgz
@@ -1654,6 +1744,7 @@ share/kde/icons/mono/scalable/apps/kamix.svgz
 share/kde/icons/mono/scalable/apps/kappfinder.svgz
 share/kde/icons/mono/scalable/apps/karbon.svgz
 share/kde/icons/mono/scalable/apps/karchiver.svgz
+share/kde/icons/mono/scalable/apps/kard.svgz
 share/kde/icons/mono/scalable/apps/karm.svgz
 share/kde/icons/mono/scalable/apps/kasteroids.svgz
 share/kde/icons/mono/scalable/apps/kate.svgz
@@ -1879,6 +1970,7 @@ share/kde/icons/mono/scalable/apps/kservices.svgz
 share/kde/icons/mono/scalable/apps/kshisen.svgz
 share/kde/icons/mono/scalable/apps/ksig.svgz
 share/kde/icons/mono/scalable/apps/ksim.svgz
+share/kde/icons/mono/scalable/apps/ksimon.svgz
 share/kde/icons/mono/scalable/apps/ksirc.svgz
 share/kde/icons/mono/scalable/apps/ksirtet.svgz
 share/kde/icons/mono/scalable/apps/ksmiletris.svgz
@@ -2324,9 +2416,11 @@ share/kde/icons/mono/scalable/mimetypes/colorscm.svgz
 share/kde/icons/mono/scalable/mimetypes/colorset.svgz
 share/kde/icons/mono/scalable/mimetypes/configure.svgz
 share/kde/icons/mono/scalable/mimetypes/core.svgz
+share/kde/icons/mono/scalable/mimetypes/database.svgz
 share/kde/icons/mono/scalable/mimetypes/deb.svgz
 share/kde/icons/mono/scalable/mimetypes/document.svgz
 share/kde/icons/mono/scalable/mimetypes/document2.svgz
+share/kde/icons/mono/scalable/mimetypes/drawing.svgz
 share/kde/icons/mono/scalable/mimetypes/dvi.svgz
 share/kde/icons/mono/scalable/mimetypes/empty.svgz
 share/kde/icons/mono/scalable/mimetypes/encrypted.svgz
@@ -2351,6 +2445,7 @@ share/kde/icons/mono/scalable/mimetypes/images.svgz
 share/kde/icons/mono/scalable/mimetypes/info.svgz
 share/kde/icons/mono/scalable/mimetypes/ipod.svgz
 share/kde/icons/mono/scalable/mimetypes/java_jar.svgz
+share/kde/icons/mono/scalable/mimetypes/javascript.svgz
 share/kde/icons/mono/scalable/mimetypes/karbon_karbon.svgz
 share/kde/icons/mono/scalable/mimetypes/kchart_chrt.svgz
 share/kde/icons/mono/scalable/mimetypes/kdevelop_project.svgz
