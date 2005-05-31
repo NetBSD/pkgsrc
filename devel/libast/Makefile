@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:26 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/05/31 21:35:13 wiz Exp $
 
 DISTNAME=	libast-0.6.1
 CATEGORIES=	devel
@@ -13,14 +13,8 @@ USE_X11=		YES
 GNU_CONFIGURE=		YES
 TEST_TARGET=		test
 
+.include "options.mk"
 .include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "i386"
-BUILD_DEFS+=		USE_MMX
-. if !empty(USE_MMX:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-mmx
-. endif
-.endif
 
 .if ${OPSYS} == "SunOS"
 LDFLAGS+=-lresolv

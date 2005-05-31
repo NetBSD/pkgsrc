@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/04/11 21:46:04 tv Exp $
+# $NetBSD: Makefile,v 1.32 2005/05/31 21:36:36 wiz Exp $
 
 DISTNAME=	imlib2-1.2.0
 PKGREVISION=	3
@@ -17,14 +17,7 @@ PKGCONFIG_OVERRIDE=	imlib2.pc.in
 
 LIBS.SunOS=		-lm
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "i386"
-BUILD_DEFS+=		USE_MMX
-. if !empty(USE_MMX:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-mmx
-. endif
-.endif
+.include "options.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
