@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/05/31 10:01:36 dillo Exp $
+# $NetBSD: options.mk,v 1.4 2005/05/31 16:20:43 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 PKG_SUPPORTED_OPTIONS=	aac audiofile flac iconv id3 ogg
@@ -48,3 +48,10 @@ CONFIGURE_ARGS+=	--with-ogg=${BUILDLINK_PREFIX.libvorbis}
 .else
 CONFIGURE_ARGS+=	--disable-ogg
 .endif
+
+# when IPv6 support is enabled, mpd doesn't listen on an IPv4 address.
+#.if !empty(PKG_OPTIONS:Minet6)
+#CONFIGURE_ARGS+=	--enable-ipv6
+#.else
+CONFIGURE_ARGS+=	--disable-ipv6
+#.endif
