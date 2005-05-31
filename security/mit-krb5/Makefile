@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/31 10:01:39 dillo Exp $
+# $NetBSD: Makefile,v 1.24 2005/05/31 11:31:07 dillo Exp $
 
 DISTNAME=	krb5-1.4
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
@@ -41,15 +41,16 @@ CONFIGURE_ARGS+=	--without-tcl
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mit-krb5
-PKG_SUPPORTED_OPTIONS=	prefix-cmds
-PKG_OPTIONS_LEGACY_VARS+=	KERBEROS_PREFIX_CMDS:prefix-cmds
+PKG_SUPPORTED_OPTIONS=	kerberos-prefix-cmds
+PKG_OPTIONS_LEGACY_VARS+=	KERBEROS_PREFIX_CMDS:kerberos-prefix-cmds
+PKG_OPTIONS_LEGACY_OPTS+=	prefix-cmds:kerberos-prefix-cmds
 
 .include "../../mk/bsd.options.mk"
 
 # Rename some of MIT krb5's applications so they won't conflict with
 # other packages.
 #
-.if !empty(PKG_OPTIONS:Mprefix-cmds)
+.if !empty(PKG_OPTIONS:Mkerberos-prefix-cmds)
 KRB5_PREFIX=		k
 MIT_KRB5_TRANSFORM=	s/^ftp/${KRB5_PREFIX}&/;			\
 			s/^rcp/${KRB5_PREFIX}&/;			\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/05/31 10:01:39 dillo Exp $
+# $NetBSD: Makefile,v 1.38 2005/05/31 11:31:07 dillo Exp $
 
 DISTNAME=	heimdal-0.6.4
 CATEGORIES=	security
@@ -40,8 +40,9 @@ USE_OLD_DES_API=	yes
 .include "../../security/openssl/buildlink3.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.heimdal
-PKG_SUPPORTED_OPTIONS=	db4 ldap prefix-cmds
-PKG_OPTIONS_LEGACY_VARS+=	KERBEROS_PREFIX_CMDS:prefix-cmds
+PKG_SUPPORTED_OPTIONS=	db4 ldap kerberos-prefix-cmds
+PKG_OPTIONS_LEGACY_VARS+=	KERBEROS_PREFIX_CMDS:kerberos-prefix-cmds
+PKG_OPTIONS_LEGACY_OPTS+=	prefix-cmds:kerberos-prefix-cmds
 
 .include "../../mk/bsd.options.mk"
 
@@ -59,7 +60,7 @@ CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap}
 # Rename some of Heimdal's applications so they won't conflict with
 # other packages.
 #
-.if !empty(PKG_OPTIONS:Mprefix-cmds)
+.if !empty(PKG_OPTIONS:Mkerberos-prefix-cmds)
 KRB5_PREFIX=		k
 HEIMDAL_TRANSFORM=	s/^ftp/${KRB5_PREFIX}&/;			\
 			s/^login/${KRB5_PREFIX}&/;			\
