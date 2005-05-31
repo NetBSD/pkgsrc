@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2005/03/29 10:50:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/05/31 15:08:20 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -84,6 +84,9 @@ include/kbabel/tagextractor.h
 include/kprofilemethod.h
 include/kspy.h
 include/repository_stub.h
+lib/kde3/cervisia.la
+lib/kde3/cvsaskpass.la
+lib/kde3/cvsservice.la
 lib/kde3/kabcformat_kdeaccounts.la
 lib/kde3/kbabel_accelstool.la
 lib/kde3/kbabel_argstool.la
@@ -122,6 +125,9 @@ lib/kde3/quithumbnail.la
 lib/libcvsservice.la
 lib/libkbabelcommon.la
 lib/libkbabeldictplugin.la
+lib/libkdeinit_cervisia.la
+lib/libkdeinit_cvsaskpass.la
+lib/libkdeinit_cvsservice.la
 lib/libkompareinterface.la
 lib/libkspy.la
 man/man1/cervisia.1
