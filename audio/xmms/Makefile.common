@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2005/05/22 20:07:40 jlam Exp $
+# $NetBSD: Makefile.common,v 1.18 2005/05/31 16:28:54 wiz Exp $
 #
 
 DISTNAME=	xmms-1.2.10
@@ -21,8 +21,6 @@ DISTINFO_FILE=		${.CURDIR}/../../audio/xmms/distinfo
 FILESDIR=		${.CURDIR}/../../audio/xmms/files
 PATCHDIR=		${.CURDIR}/../../audio/xmms/patches
 
-BUILD_DEFS+=		USE_INET6
-
 CONFIGURE_ARGS+=	--without-gnome
 SHLIBTOOL_OVERRIDE=	libtool
 
@@ -31,13 +29,18 @@ CPPFLAGS+=		-DHAVE_ICONV_OPEN=1
 CONFIGURE_ENV+=		ac_cv_func_iconv_open=yes
 LDFLAGS+=		${BUILDLINK_LDADD.iconv}
 
-.include "../../mk/bsd.prefs.mk"
-
 PTHREAD_OPTS+=		require
 
-.if defined(USE_INET6) && ${USE_INET6} == YES
+PKG_OPTIONS_VAR=        PKG_OPTIONS.xmms
+PKG_SUPPORTED_OPTIONS=  inet6
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
 RAWPART_cmd=		/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
