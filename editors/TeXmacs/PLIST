@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2005/05/18 15:37:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2005/05/31 16:37:09 drochner Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -1574,6 +1574,7 @@ share/TeXmacs/misc/pixmaps/tm_lambda.xpm
 share/TeXmacs/misc/pixmaps/tm_language.xpm
 share/TeXmacs/misc/pixmaps/tm_left.xpm
 share/TeXmacs/misc/pixmaps/tm_line_mode.xpm
+share/TeXmacs/misc/pixmaps/tm_line_pattern.xpm
 share/TeXmacs/misc/pixmaps/tm_line_style.xpm
 share/TeXmacs/misc/pixmaps/tm_line_width.xpm
 share/TeXmacs/misc/pixmaps/tm_link.xpm
@@ -1792,6 +1793,24 @@ share/TeXmacs/plugins/octave/octave/tm/tmrepl.m
 share/TeXmacs/plugins/octave/progs/init-octave.scm
 share/TeXmacs/plugins/pari/packages/session/pari.ts
 share/TeXmacs/plugins/pari/progs/init-pari.scm
+share/TeXmacs/plugins/proclus/TODO
+share/TeXmacs/plugins/proclus/langs/natural/dic/proclus-english-french.scm
+share/TeXmacs/plugins/proclus/packages/proclus/proclus-common.ts
+share/TeXmacs/plugins/proclus/packages/proclus/proclus-links.ts
+share/TeXmacs/plugins/proclus/packages/proclus/proclus.ts
+share/TeXmacs/plugins/proclus/progs/init-proclus.scm
+share/TeXmacs/plugins/proclus/progs/proclus-absname-editor.scm
+share/TeXmacs/plugins/proclus/progs/proclus-absname.scm
+share/TeXmacs/plugins/proclus/progs/proclus-distill.scm
+share/TeXmacs/plugins/proclus/progs/proclus-kbd.scm
+share/TeXmacs/plugins/proclus/progs/proclus-lib.scm
+share/TeXmacs/plugins/proclus/progs/proclus-list.scm
+share/TeXmacs/plugins/proclus/progs/proclus-locus.scm
+share/TeXmacs/plugins/proclus/progs/proclus-menu.scm
+share/TeXmacs/plugins/proclus/progs/proclus-source.scm
+share/TeXmacs/plugins/proclus/progs/proclus-types.scm
+share/TeXmacs/plugins/proclus/progs/proclus.scm
+share/TeXmacs/plugins/proclus/progs/search-in-tree.scm
 share/TeXmacs/plugins/python/progs/init-python.scm
 share/TeXmacs/plugins/python/progs/init-python.scm.orig
 share/TeXmacs/plugins/qcl/progs/init-qcl.scm
@@ -1914,6 +1933,7 @@ share/TeXmacs/progs/kernel/boot/boot.scm
 share/TeXmacs/progs/kernel/boot/compat.scm
 share/TeXmacs/progs/kernel/boot/content.scm
 share/TeXmacs/progs/kernel/boot/debug.scm
+share/TeXmacs/progs/kernel/boot/extra.scm
 share/TeXmacs/progs/kernel/boot/prologue.scm
 share/TeXmacs/progs/kernel/boot/srfi.scm
 share/TeXmacs/progs/kernel/drd/drd-bind.scm
@@ -1930,6 +1950,7 @@ share/TeXmacs/progs/kernel/regexp/regexp-select.scm
 share/TeXmacs/progs/kernel/regexp/regexp-test.scm
 share/TeXmacs/progs/kernel/texmacs/tm-convert.scm
 share/TeXmacs/progs/kernel/texmacs/tm-define.scm
+share/TeXmacs/progs/kernel/texmacs/tm-dialogue.scm
 share/TeXmacs/progs/kernel/texmacs/tm-modes.scm
 share/TeXmacs/progs/kernel/texmacs/tm-overload.scm
 share/TeXmacs/progs/kernel/texmacs/tm-plugins.scm
@@ -1974,6 +1995,7 @@ share/TeXmacs/progs/text/std-text-kbd.scm
 share/TeXmacs/progs/text/text-kbd.scm
 share/TeXmacs/progs/text/text-menu.scm
 share/TeXmacs/progs/tm-mode.el
+share/TeXmacs/progs/utils/base/environment.scm
 share/TeXmacs/progs/utils/edit/auto-close.scm
 share/TeXmacs/progs/utils/edit/selections.scm
 share/TeXmacs/progs/utils/edit/variants.scm
@@ -2028,6 +2050,7 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/progs/utils/edit
 @exec ${MKDIR} %D/share/TeXmacs/progs/utils/cursor
 @dirrm share/TeXmacs/progs/utils/cursor
+@dirrm share/TeXmacs/progs/utils/base
 @dirrm share/TeXmacs/progs/utils
 @dirrm share/TeXmacs/progs/text/cyrillic
 @dirrm share/TeXmacs/progs/text
@@ -2109,6 +2132,13 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/plugins/qcl
 @dirrm share/TeXmacs/plugins/python/progs
 @dirrm share/TeXmacs/plugins/python
+@dirrm share/TeXmacs/plugins/proclus/progs
+@dirrm share/TeXmacs/plugins/proclus/packages/proclus
+@dirrm share/TeXmacs/plugins/proclus/packages
+@dirrm share/TeXmacs/plugins/proclus/langs/natural/dic
+@dirrm share/TeXmacs/plugins/proclus/langs/natural
+@dirrm share/TeXmacs/plugins/proclus/langs
+@dirrm share/TeXmacs/plugins/proclus
 @dirrm share/TeXmacs/plugins/pari/progs
 @dirrm share/TeXmacs/plugins/pari/packages/session
 @dirrm share/TeXmacs/plugins/pari/packages
