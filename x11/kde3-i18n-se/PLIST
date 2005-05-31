@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/03/23 23:06:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/05/31 15:38:31 markd Exp $
 ${PKGLOCALEDIR}/locale/se/ChangeLog
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/akregator.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/appletproxy.mo
@@ -81,7 +81,6 @@ ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kcmkwm.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kcmmidi.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kcmnic.mo
@@ -231,7 +230,7 @@ ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/krdb.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kreadconfig.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/krec.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kres_exchange.mo
-${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kres_imap.mo
+${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kres_kolab.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kres_remote.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kres_xmlrpc.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/kruler.mo

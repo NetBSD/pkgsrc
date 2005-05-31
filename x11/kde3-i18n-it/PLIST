@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/03/23 23:06:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/05/31 15:38:26 markd Exp $
 share/doc/kde/HTML/it/KRegExpEditor/common
 share/doc/kde/HTML/it/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/it/KRegExpEditor/index.docbook
@@ -87,6 +87,7 @@ share/doc/kde/HTML/it/kaddressbook/index.docbook
 share/doc/kde/HTML/it/kalzium/common
 share/doc/kde/HTML/it/kalzium/index.cache.bz2
 share/doc/kde/HTML/it/kalzium/index.docbook
+share/doc/kde/HTML/it/kalzium/man-kalzium.1.docbook
 share/doc/kde/HTML/it/kamera/common
 share/doc/kde/HTML/it/kamera/index.cache.bz2
 share/doc/kde/HTML/it/kamera/index.docbook
@@ -153,6 +154,7 @@ share/doc/kde/HTML/it/kcharselect/index.docbook
 share/doc/kde/HTML/it/kcoloredit/common
 share/doc/kde/HTML/it/kcoloredit/index.cache.bz2
 share/doc/kde/HTML/it/kcoloredit/index.docbook
+share/doc/kde/HTML/it/kcontrol/arts/midi.docbook
 share/doc/kde/HTML/it/kcontrol/bell/common
 share/doc/kde/HTML/it/kcontrol/bell/index.cache.bz2
 share/doc/kde/HTML/it/kcontrol/bell/index.docbook
@@ -287,6 +289,11 @@ share/doc/kde/HTML/it/kdearch/index.docbook
 share/doc/kde/HTML/it/kdebugdialog/common
 share/doc/kde/HTML/it/kdebugdialog/index.cache.bz2
 share/doc/kde/HTML/it/kdebugdialog/index.docbook
+share/doc/kde/HTML/it/kdelibs/man-artsmessage.1.docbook
+share/doc/kde/HTML/it/kdelibs/man-checkXML.1.docbook
+share/doc/kde/HTML/it/kdelibs/man-dcop.1.docbook
+share/doc/kde/HTML/it/kdelibs/man-kdeoptions.7.docbook
+share/doc/kde/HTML/it/kdelibs/man-qtoptions.7.docbook
 share/doc/kde/HTML/it/kdelirc/irkick/common
 share/doc/kde/HTML/it/kdelirc/irkick/index.cache.bz2
 share/doc/kde/HTML/it/kdelirc/irkick/index.docbook
@@ -361,7 +368,6 @@ share/doc/kde/HTML/it/kdevelop/kdevelop-scripting.docbook
 share/doc/kde/HTML/it/kdevelop/kdevelop-survey.docbook
 share/doc/kde/HTML/it/kdevelop/kdevelop-tabbed-mode.png
 share/doc/kde/HTML/it/kdevelop/kdevelop-toplevel-mode.png
-share/doc/kde/HTML/it/kdevelop/loading-progress-bar.png
 share/doc/kde/HTML/it/kdevelop/open-project.png
 share/doc/kde/HTML/it/kdevelop/open-recent-project.png
 share/doc/kde/HTML/it/kdevelop/project-advanced.docbook
@@ -371,7 +377,6 @@ share/doc/kde/HTML/it/kdevelop/select-user-interface-0.png
 share/doc/kde/HTML/it/kdevelop/select-user-interface.png
 share/doc/kde/HTML/it/kdevelop/setup.docbook
 share/doc/kde/HTML/it/kdevelop/unixdev.docbook
-share/doc/kde/HTML/it/kdevelop/wrong-project-location.png
 share/doc/kde/HTML/it/kdf/common
 share/doc/kde/HTML/it/kdf/index.cache.bz2
 share/doc/kde/HTML/it/kdf/index.docbook
@@ -540,6 +545,9 @@ share/doc/kde/HTML/it/kinfocenter/processor/index.docbook
 share/doc/kde/HTML/it/kinfocenter/protocols/common
 share/doc/kde/HTML/it/kinfocenter/protocols/index.cache.bz2
 share/doc/kde/HTML/it/kinfocenter/protocols/index.docbook
+share/doc/kde/HTML/it/kinfocenter/samba/common
+share/doc/kde/HTML/it/kinfocenter/samba/index.cache.bz2
+share/doc/kde/HTML/it/kinfocenter/samba/index.docbook
 share/doc/kde/HTML/it/kinfocenter/scsi/common
 share/doc/kde/HTML/it/kinfocenter/scsi/index.cache.bz2
 share/doc/kde/HTML/it/kinfocenter/scsi/index.docbook
@@ -801,7 +809,6 @@ share/doc/kde/HTML/it/kooka/index.docbook
 share/doc/kde/HTML/it/kooka/kooka_gocr.png
 share/doc/kde/HTML/it/kooka/kooka_gocr_result.png
 share/doc/kde/HTML/it/kooka/kooka_mainctrl.png
-share/doc/kde/HTML/it/kooka/ocr-select.png
 share/doc/kde/HTML/it/kooka/shortcut0.png
 share/doc/kde/HTML/it/kooka/shortcut1.png
 share/doc/kde/HTML/it/kooka/toolbar.png
@@ -881,7 +888,6 @@ share/doc/kde/HTML/it/kscd/kscd2.png
 share/doc/kde/HTML/it/kscd/kscd3.png
 share/doc/kde/HTML/it/kscd/kscd5.png
 share/doc/kde/HTML/it/kscd/kscd6.png
-share/doc/kde/HTML/it/kscd/kscd9.png
 share/doc/kde/HTML/it/kshisen/common
 share/doc/kde/HTML/it/kshisen/index.cache.bz2
 share/doc/kde/HTML/it/kshisen/index.docbook
@@ -1057,7 +1063,6 @@ share/doc/kde/HTML/it/kvoctrain/entry6-dlg.png
 share/doc/kde/HTML/it/kvoctrain/index.cache.bz2
 share/doc/kde/HTML/it/kvoctrain/index.docbook
 share/doc/kde/HTML/it/kvoctrain/lang1-dlg.png
-share/doc/kde/HTML/it/kvoctrain/logo-kvoctrain.png
 share/doc/kde/HTML/it/kvoctrain/mainview.png
 share/doc/kde/HTML/it/kvoctrain/man-spotlight2kvtml.1.docbook
 share/doc/kde/HTML/it/kvoctrain/mu-query-dlg.png
@@ -1400,7 +1405,6 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kbstateapplet.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcachegrind.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcm_krfb.mo
@@ -1443,7 +1447,6 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmkonsole.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmkontactnt.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmktalkd.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmkttsd.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmkttsmgr.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmkuick.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmkurifilt.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmkvaio.mo
@@ -1458,7 +1461,6 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmlirc.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kcmmediacontrol.mo
@@ -1905,7 +1907,9 @@ ${PKGLOCALEDIR}/locale/it/flag.png
 @dirrm share/kde/apps/klettres/it
 @comment in kde: @dirrm share/kde/apps/klettres
 @dirrm share/kde/apps/klatin/data/vocabs/it
-@dirrm share/kde/apps/klatin/data/vocabs
+unexec ${RMDIR} %D/share/kde/apps/klatin/data/vocabs 2>/dev/null || ${TRUE}
+unexec ${RMDIR} %D/share/kde/apps/klatin/data 2>/dev/null || ${TRUE}
+unexec ${RMDIR} %D/share/kde/apps/klatin 2>/dev/null || ${TRUE}
 @dirrm share/kde/apps/khangman/data/it
 @comment in kde: @dirrm share/kde/apps/khangman/data
 @comment in kde: @dirrm share/kde/apps/katepart/syntax
@@ -2015,6 +2019,7 @@ ${PKGLOCALEDIR}/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kinfocenter/usb
 @dirrm share/doc/kde/HTML/it/kinfocenter/sound
 @dirrm share/doc/kde/HTML/it/kinfocenter/scsi
+@dirrm share/doc/kde/HTML/it/kinfocenter/samba
 @dirrm share/doc/kde/HTML/it/kinfocenter/protocols
 @dirrm share/doc/kde/HTML/it/kinfocenter/processor
 @dirrm share/doc/kde/HTML/it/kinfocenter/pcmcia
@@ -2059,6 +2064,7 @@ ${PKGLOCALEDIR}/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kdelirc/kcmlirc
 @dirrm share/doc/kde/HTML/it/kdelirc/irkick
 @dirrm share/doc/kde/HTML/it/kdelirc
+@dirrm share/doc/kde/HTML/it/kdelibs
 @dirrm share/doc/kde/HTML/it/kdebugdialog
 @dirrm share/doc/kde/HTML/it/kdearch
 @dirrm share/doc/kde/HTML/it/kde_app_devel
@@ -2102,6 +2108,7 @@ ${PKGLOCALEDIR}/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kcontrol/clock
 @dirrm share/doc/kde/HTML/it/kcontrol/cache
 @dirrm share/doc/kde/HTML/it/kcontrol/bell
+@dirrm share/doc/kde/HTML/it/kcontrol/arts
 @dirrm share/doc/kde/HTML/it/kcontrol
 @dirrm share/doc/kde/HTML/it/kcoloredit
 @dirrm share/doc/kde/HTML/it/kcharselect
