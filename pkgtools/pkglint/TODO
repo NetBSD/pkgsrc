@@ -10,4 +10,6 @@
 * check for C/C++ style comments in Makefiles
   rm -f *.o		/* delete unused files */
   .ifdef foo		/* xyz */
-* add checking for absolute paths
+* check for absolute paths
+* check for direct use of /usr/pkgsrc etc.
+* check dir direct use of *DIR
