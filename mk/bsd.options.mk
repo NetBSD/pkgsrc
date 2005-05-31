@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.26 2005/05/31 11:05:31 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.27 2005/05/31 12:10:07 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -198,8 +198,8 @@ _PKG_OPTIONS_WORDWRAP_FILTER=						\
 		END { if (length(line) > 0) print "	"line }		\
 	'
 
-.PHONY: describe-options
-describe-options:
+.PHONY: show-options
+show-options:
 	@${ECHO} The following options are supported by this package:
 .for _opt_ in ${PKG_SUPPORTED_OPTIONS:O}
 	@${ECHO} "	"${_opt_:Q}"	"`${SED} -n "s/^"${_opt_:Q}"	//p" ../../mk/defaults/options.description`
@@ -207,12 +207,6 @@ describe-options:
 	@${ECHO}
 	@${ECHO} "These options are enabled by default: "${PKG_SUGGESTED_OPTIONS:O:Q}
 	@${ECHO} "These options are currently enabled: "${PKG_OPTIONS:O:Q}
-
-.PHONY: show-options
-show-options:
-	@${ECHO} "available: "${PKG_SUPPORTED_OPTIONS:O:Q}
-	@${ECHO} "default: "${PKG_SUGGESTED_OPTIONS:O:Q}
-	@${ECHO} "enabled: "${PKG_OPTIONS:O:Q}
 
 .if defined(PKG_SUPPORTED_OPTIONS)
 .PHONY: supported-options-message
