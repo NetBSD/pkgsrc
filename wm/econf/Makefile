@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/05/22 20:08:43 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/05/31 22:12:18 wiz Exp $
 #
 
 DISTNAME=		enlightenment-conf-0.15
@@ -17,5 +17,5 @@ USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-.include "../../x11/controlcenter/buildlink3.mk"
+.include "../../x11/control-center/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
