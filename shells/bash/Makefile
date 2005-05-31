@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:21 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/31 10:01:39 dillo Exp $
 #
 
 DISTNAME=	bash-3.0
@@ -50,15 +50,11 @@ CONFIGURE_ARGS+=	--enable-array-variables
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(BASH_STATIC) && !empty(BASH_STATIC:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	static
-.endif
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bash
 PKG_SUPPORTED_OPTIONS=	multibyte static
-.if !defined(PKG_OPTIONS.bash)
-PKG_DEFAULT_OPTIONS+=	multibyte
-.endif
+PKG_SUGGESTED_OPTIONS=	multibyte
+PKG_OPTIONS_LEGACY_VARS+=	BASH_STATIC:static
+
 .include "../../mk/bsd.options.mk"
 
 ##

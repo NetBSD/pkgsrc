@@ -1,11 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2005/01/10 20:59:43 adrianp Exp $
+# $NetBSD: options.mk,v 1.4 2005/05/31 10:01:36 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xchat2
 PKG_SUPPORTED_OPTIONS=	inet6 ssl socks
-
-.if !defined(PKG_OPTIONS.xchat2)
-PKG_DEFAULT_OPTIONS+=	ssl
-.endif
+PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
 

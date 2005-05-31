@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/05/22 20:08:29 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2005/05/31 10:01:39 dillo Exp $
 #
 
 DISTNAME=	Linux-PAM-0.77
@@ -40,12 +40,9 @@ MESSAGE_SUBST+=		PAM_MODULEDIR=${PAM_MODULEDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_LIBCRACK) && !empty(USE_LIBCRACK:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	libcrack
-.endif
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.PAM
 PKG_SUPPORTED_OPTIONS=	libcrack
+
 .include "../../mk/bsd.options.mk"
 
 ###

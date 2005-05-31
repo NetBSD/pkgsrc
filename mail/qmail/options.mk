@@ -1,12 +1,13 @@
-# $NetBSD: options.mk,v 1.12 2005/05/22 20:08:12 jlam Exp $
-
-.if ${OPSYS} == "Darwin"
-PKG_DEFAULT_OPTIONS+=	darwin
-.endif
+# $NetBSD: options.mk,v 1.13 2005/05/31 10:01:38 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS=	badrcptto bigdns darwin netqmail outgoingip
 PKG_SUPPORTED_OPTIONS+=	qregex realrcptto sasl syncdir tls viruscan
+
+.if ${OPSYS} == "Darwin"
+PKG_SUGGESTED_OPTIONS=	darwin
+.endif
+
 .include "../../mk/bsd.options.mk"
 
 ###
