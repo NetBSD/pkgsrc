@@ -25,5 +25,3 @@ JAVA=$(JAVA_HOME)/bin/java
 JAVAC=$(JAVA_HOME)/bin/javac
 JAVAH=$(JAVA_HOME)/bin/javah -jni
 JAR=$(JAVA_HOME)/bin/jar cf0v 
-
-
