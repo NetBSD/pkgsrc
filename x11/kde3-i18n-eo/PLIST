@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/03/23 23:06:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/05/31 15:38:24 markd Exp $
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/amor.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/appletproxy.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/ark.mo
@@ -46,7 +46,6 @@ ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kbattleship.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kblackbox.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kbounce.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kcmaccess.mo
@@ -88,7 +87,6 @@ ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kcmmidi.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kcmnic.mo
