@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:07:38 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/31 22:23:50 rillig Exp $
 #
 
 DISTNAME=	MuSE-0.9
 PKGNAME=	${DISTNAME:S/MuSE/muse/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.dyne.org/muse/releases/ \
 		http://www.ljudmila.org/~jaromil/muse/releases/ \
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--disable-lubrify
 CONFIGURE_ARGS+=	--enable-gtk2
 LIBS+=			${LIBOSSAUDIO}
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+MAKE_FLAGS+=		docsdir=${PREFIX:Q}/share/doc/MuSE
 
 SUBST_CLASSES=		dsp
 SUBST_STAGE.dsp=	post-patch
