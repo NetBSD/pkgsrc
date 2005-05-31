@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.396 2005/05/31 15:38:23 markd Exp $
+# $NetBSD: Makefile,v 1.397 2005/05/31 22:12:18 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -24,7 +24,7 @@ SUBDIR+=	bbapm
 SUBDIR+=	blt
 SUBDIR+=	clearlooks-metacity
 SUBDIR+=	compositeext
-SUBDIR+=	controlcenter
+SUBDIR+=	control-center
 SUBDIR+=	devilspie
 SUBDIR+=	dfm
 SUBDIR+=	dtx11session
