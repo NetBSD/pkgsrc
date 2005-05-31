@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.16 2005/05/20 20:08:40 wiz Exp $
+$NetBSD: patch-am,v 1.17 2005/05/31 17:37:50 wiz Exp $
 
 --- configure.orig	2004-12-13 10:04:51.000000000 +0100
 +++ configure
@@ -899,7 +899,49 @@ $NetBSD: patch-am,v 1.16 2005/05/20 20:08:40 wiz Exp $
          fi
  
          echo "$as_me:$LINENO: checking for usbhid" >&5
-@@ -29514,6 +29518,70 @@ echo "${ECHO_T}$have_usbhid_new" >&6
+@@ -29307,8 +29311,13 @@ cat >>conftest.$ac_ext <<_ACEOF
+           #if defined(HAVE_USB_H)
+           #include <usb.h>
+           #endif
++	  #ifdef __DragonFly__
++          #include <bus/usb/usb.h>
++          #include <bus/usb/usbhid.h>
++	  #else
+           #include <dev/usb/usb.h>
+           #include <dev/usb/usbhid.h>
++	  #endif
+           #if defined(HAVE_USBHID_H)
+           #include <usbhid.h>
+           #elif defined(HAVE_LIBUSB_H)
+@@ -29378,8 +29387,13 @@ cat >>conftest.$ac_ext <<_ACEOF
+               #if defined(HAVE_USB_H)
+               #include <usb.h>
+               #endif
++	      #ifdef __DragonFly__
++              #include <bus/usb/usb.h>
++              #include <bus/usb/usbhid.h>
++	      #else
+               #include <dev/usb/usb.h>
+               #include <dev/usb/usbhid.h>
++	      #endif
+               #if defined(HAVE_USBHID_H)
+               #include <usbhid.h>
+               #elif defined(HAVE_LIBUSB_H)
+@@ -29450,8 +29464,13 @@ cat >>conftest.$ac_ext <<_ACEOF
+               #if defined(HAVE_USB_H)
+               #include <usb.h>
+               #endif
++	      #ifdef __DragonFly__
++              #include <bus/usb/usb.h>
++              #include <bus/usb/usbhid.h>
++	      #else
+               #include <dev/usb/usb.h>
+               #include <dev/usb/usbhid.h>
++	      #endif
+               #if defined(HAVE_USBHID_H)
+               #include <usbhid.h>
+               #elif defined(HAVE_LIBUSB_H)
+@@ -29514,6 +29533,70 @@ echo "${ECHO_T}$have_usbhid_new" >&6
      fi
  }
  
@@ -970,7 +1012,7 @@ $NetBSD: patch-am,v 1.16 2005/05/20 20:08:40 wiz Exp $
  CheckAltivec()
  {
      echo "$as_me:$LINENO: checking for GCC Altivec instruction support" >&5
-@@ -29743,7 +29811,7 @@ __EOF__
+@@ -29743,7 +29826,7 @@ __EOF__
  
          fi
          ;;
@@ -979,7 +1021,7 @@ $NetBSD: patch-am,v 1.16 2005/05/20 20:08:40 wiz Exp $
          ARCH=freebsd
          CheckDummyVideo
          CheckDiskAudio
-@@ -29808,16 +29876,18 @@ __EOF__
+@@ -29808,16 +29891,18 @@ __EOF__
          CheckESD
          CheckNAS
          CheckX11
@@ -1001,7 +1043,7 @@ $NetBSD: patch-am,v 1.16 2005/05/20 20:08:40 wiz Exp $
          fi
          # Set up files for the cdrom library
          if test x$enable_cdrom = xyes; then
-@@ -29826,9 +29896,6 @@ __EOF__
+@@ -29826,9 +29911,6 @@ __EOF__
          fi
          # Set up files for the thread library
          if test x$enable_threads = xyes; then
@@ -1011,7 +1053,7 @@ $NetBSD: patch-am,v 1.16 2005/05/20 20:08:40 wiz Exp $
              CopyUnixThreadSource
          fi
          # Set up files for the timer library
-@@ -31455,7 +31522,7 @@ fi
+@@ -31455,7 +31537,7 @@ fi
  
  # Set runtime shared library paths as needed
  
@@ -1020,7 +1062,7 @@ $NetBSD: patch-am,v 1.16 2005/05/20 20:08:40 wiz Exp $
    SDL_RLD_FLAGS="-Wl,-rpath,\${exec_prefix}/lib"
  fi
  if test $ARCH = solaris; then
-@@ -32598,8 +32665,9 @@ s,@X_EXTRA_LIBS@,$X_EXTRA_LIBS,;t t
+@@ -32598,8 +32680,9 @@ s,@X_EXTRA_LIBS@,$X_EXTRA_LIBS,;t t
  s,@PKG_CONFIG@,$PKG_CONFIG,;t t
  s,@DIRECTFB_CFLAGS@,$DIRECTFB_CFLAGS,;t t
  s,@DIRECTFB_LIBS@,$DIRECTFB_LIBS,;t t
