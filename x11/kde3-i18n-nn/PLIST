@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/03/23 23:06:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/05/31 15:38:26 markd Exp $
 share/kde/apps/khangman/data/nn/animals.kvtml
 share/kde/apps/khangman/data/nn/easy.kvtml
 share/kde/apps/khangman/data/nn/hard.kvtml
@@ -130,7 +130,6 @@ ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kcmlaptop.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kcmlilo.mo
-${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kcmlinuz.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kcmlocale.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kcmmediacontrol.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kcmmidi.mo
