@@ -1,0 +1,31 @@
+$NetBSD: patch-bj,v 1.1 2005/05/31 14:48:24 markd Exp $
+
+--- kpilot/lib/pilotDatabase.h.orig	2005-05-24 00:12:43.000000000 +1200
++++ kpilot/lib/pilotDatabase.h
+@@ -279,9 +279,12 @@ public:
+ 		int appLen = MAX_APPINFO_SIZE;
+ 		unsigned char buffer[MAX_APPINFO_SIZE];
+ 
+-		appLen = d->readAppBlock(buffer,appLen);
+-
+-		(*unpack)(&fInfo, buffer, appLen);
++		if (d && d->isDBOpen())
++		{
++			appLen = d->readAppBlock(buffer,appLen);
++			(*unpack)(&fInfo, buffer, appLen);
++		}
++		// fInfo is just a struct, so we can point to it anyway.
+ 		init(&fInfo.category,appLen);
+ 	} ;
+ 
+@@ -289,6 +292,10 @@ public:
+ 	{
+ 		FUNCTIONSETUP;
+ 		unsigned char buffer[MAX_APPINFO_SIZE];
++		if (!d || !d->isDBOpen())
++		{
++			return -1;
++		}
+ 		int appLen = (*pack)(&fInfo, buffer, length());
+ 		if (appLen > 0)
+ 		{
