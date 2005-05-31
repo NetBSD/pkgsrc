@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.5 2005/05/24 12:14:42 wiz Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.6 2005/05/31 16:55:19 wiz Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -253,7 +253,7 @@
   
       <listitem>
         <para> If the packages using the directory are not related at
-          all (they have no    common dependencies), a *-dirs package is
+          all (they have no common dependencies), a *-dirs package is
           used. </para>
       </listitem>
     </orderedlist>
@@ -269,7 +269,7 @@
     <para> Their use from other packages is very simple.  The
       <varname>USE_DIRS</varname> variable takes a list of package names
       (without the <quote>-dirs</quote> part) together with the required
-      version number (always pick the latest one when writting new
+      version number (always pick the latest one when writing new
       packages). </para>
   
     <para> For example, if a package installs files under
