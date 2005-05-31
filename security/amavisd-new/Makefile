@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/21 04:10:18 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/31 10:01:39 dillo Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -61,12 +61,9 @@ PKG_USERS=	${AMAVIS_USER}:${AMAVIS_GROUP}::Virus\\ Scanning\\ Account:${AMAVIS_D
 RCD_SCRIPTS=	amavisd
 CONF_FILES=	${EGDIR}/amavisd.conf-minimal ${PKG_SYSCONFDIR}/amavisd.conf
 
-.if defined(USE_MILTER) && !empty(USE_MILTER:M[Yy][Es][Ss])
-PKG_DEFAULT_OPTIONS+=	milter
-.endif
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amavisd-new
 PKG_SUPPORTED_OPTIONS=	milter
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mmilter)

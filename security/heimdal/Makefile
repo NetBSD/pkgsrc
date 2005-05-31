@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/05/22 20:08:30 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/05/31 10:01:39 dillo Exp $
 
 DISTNAME=	heimdal-0.6.4
 CATEGORIES=	security
@@ -39,12 +39,10 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 USE_OLD_DES_API=	yes
 .include "../../security/openssl/buildlink3.mk"
 
-.if defined(KERBEROS_PREFIX_CMDS) && !empty(KERBEROS_PREFIX_CMDS:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	prefix-cmds
-.endif
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.heimdal
 PKG_SUPPORTED_OPTIONS=	db4 ldap prefix-cmds
+PKG_OPTIONS_LEGACY_VARS+=	KERBEROS_PREFIX_CMDS:prefix-cmds
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdb4)
