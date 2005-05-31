@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.112 2005/05/30 04:46:06 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.113 2005/05/31 11:13:45 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -253,3 +253,5 @@ Pullup ticket 521 - requested by Adrian Portelli
 security fix for tcpdump
 Pullup ticket 526 - requested by Lubomir Sedlacik
 security update for cyrus-imapd21
+Pullup ticket 512 - requested by Manuel Bouyer
+bugfix updates for xentools20
