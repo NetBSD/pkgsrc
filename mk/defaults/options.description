@@ -72,13 +72,13 @@ gnupg
 gnuplot	
 gnutls	
 gpgsm	
-gqmpeg-japanese		Japanese ID3 tag support in gqmpeg
-gqmpeg-russian		Russian ID3 tag support in gqmpeg
+gqmpeg-japanese		Japanese ID3 tag support in gqmpeg.
+gqmpeg-russian		Russian ID3 tag support in gqmpeg.
 graphs	
 gsasl	
 gssapi	
 gstreamer	
-gtk	
+gtk			Enable support for GTK.
 gtkfe	
 gucharmap	
 hdf5	
