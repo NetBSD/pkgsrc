@@ -1,0 +1,12 @@
+$NetBSD: patch-bg,v 1.1 2005/05/31 14:48:24 markd Exp $
+
+--- kpilot/conduits/memofileconduit/memofile-conduit.h.orig	2005-05-24 00:12:37.000000000 +1200
++++ kpilot/conduits/memofileconduit/memofile-conduit.h
+@@ -88,6 +88,7 @@ private:
+ 
+ 	bool	copyHHToPC();
+ 	bool	copyPCToHH();
++	void	deleteUnsyncedHHRecords();
+ 	bool	sync();
+ 
+ 	int 	writeToPilot(Memofile * memofile);
