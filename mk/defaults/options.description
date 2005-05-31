@@ -64,6 +64,7 @@ frontend-modperl2
 gd	
 gdbm	
 gdk-pixbuf	
+gimp1-helpbrowser	Links gimp1 against gnome1 to get a help browser.
 glib1	
 glint	
 glpk	
