@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2005/05/31 21:02:10 salo Exp $
+
+--- src/keyserver.c.orig	2005-05-31 07:20:08.000000000 +0200
++++ src/keyserver.c
+@@ -24,6 +24,7 @@
+ #endif
+ #include <stdio.h>
+ #ifdef HAVE_NETDB_H
++# include <sys/types.h>
+ # include <sys/socket.h>
+ # include <netinet/in.h>
+ # include <arpa/inet.h>
