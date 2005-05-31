@@ -1,15 +1,15 @@
-# $NetBSD: options.mk,v 1.5 2004/11/17 19:56:49 xtraeme Exp $
+# $NetBSD: options.mk,v 1.6 2005/05/31 11:24:32 dillo Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba
-PKG_SUPPORTED_OPTIONS=	PAM ads cups ldap ldap-compat
+PKG_SUPPORTED_OPTIONS=	pam ads cups ldap ldap-compat
 .include "../../mk/bsd.options.mk"
 
 ###
 ### Support PAM authentication and build smbpass and winbind PAM modules.
 ###
-.if !empty(PKG_OPTIONS:MPAM)
+.if !empty(PKG_OPTIONS:Mpam)
 .  include "../../security/PAM/module.mk"
 CONFIGURE_ARGS+=	--with-pam
 CONFIGURE_ARGS+=	--with-pam_smbpass
