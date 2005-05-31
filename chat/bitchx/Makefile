@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/04/11 21:45:03 tv Exp $
+# $NetBSD: Makefile,v 1.36 2005/05/31 16:36:40 wiz Exp $
 
 DISTNAME=	ircii-pana-1.1-final
 PKGNAME=	bitchx-1.1
@@ -19,22 +19,11 @@ USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS=		--with-ssl
 
+.include "options.mk"
 .include "../../mk/bsd.prefs.mk"
+
 .if ${OPSYS} == "Darwin"
 CFLAGS+=	-DBIND_8_COMPAT
-.endif
-
-.if defined(BITCHX_WITH_GTK) && !empty(BITCHX_WITH_GTK:M[Yy][Ee][Ss])
-.include "../../graphics/imlib/buildlink3.mk"
-.include "../../x11/gnome-libs/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gtk
-CFLAGS+=		-I${PREFIX}/include/gnome-1.0
-PLIST_SUBST+=		GTK="gtk"
-PLIST_SUBST+=		NOT_GTK="@comment "
-.else
-PLIST_SUBST+=		GTK=
-PLIST_SUBST+=		NOT_GTK=
 .endif
 
 post-patch:
