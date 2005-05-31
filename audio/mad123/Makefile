@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/25 23:34:51 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/05/31 16:14:39 wiz Exp $
 #
 
 DISTNAME=	mad123-0.8.5
@@ -10,26 +10,24 @@ HOMEPAGE=	http://www.mctavish.co.uk/mad123/
 COMMENT=	Command-line MPEG audio player
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mad123
-PKG_SUPPORTED_OPTIONS=	arts
+PKG_SUPPORTED_OPTIONS=	arts oss
+
 .include "../../mk/bsd.options.mk"
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mad123 ${PREFIX}/bin/mad123
-	${INSTALL_MAN} ${WRKSRC}/mad123.1 ${PREFIX}/man/man1/
-
-.include "../../mk/bsd.prefs.mk"
 
 .if !empty(PKG_OPTIONS:Marts)
 MAKE_FLAGS+=	USE_ARTS=yes
 .include "../../audio/arts/buildlink3.mk"
 .endif
 
-.include "../../audio/taglib/buildlink3.mk"
-.include "../../audio/libmad/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
-
-.if defined(USE_OSS)
+.if !empty(PKG_OPTIONS:Moss)
 .  include "../../mk/ossaudio.buildlink3.mk"
 .endif
 
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/mad123 ${PREFIX}/bin/mad123
+	${INSTALL_MAN} ${WRKSRC}/mad123.1 ${PREFIX}/man/man1/
+
+.include "../../audio/taglib/buildlink3.mk"
+.include "../../audio/libmad/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
