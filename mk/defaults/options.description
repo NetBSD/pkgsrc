@@ -156,6 +156,7 @@ okinawa_dict
 opengl			Use OpenGL as display library.
 openldap	
 openssl	
+oss			Compile in support for the Open Sound System audio library.
 outgoingip	
 pam	
 patchviewer	
