@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/04/19 10:59:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/05/31 15:14:04 markd Exp $
 bin/kdevassistant
 bin/kdevdesigner
 bin/kdevelop
@@ -1125,6 +1125,13 @@ share/kde/apps/kdevprojectmanager/kdevprojectmanager.rc
 share/kde/apps/kdevpythonsupport/kdevpythonsupport.rc
 share/kde/apps/kdevquickopen/kdevpart_quickopen.rc
 share/kde/apps/kdevrbdebugger/debuggee.rb
+share/kde/apps/kdevrbdebugger/icons/hicolor/22x22/actions/dbgnext.png
+share/kde/apps/kdevrbdebugger/icons/hicolor/22x22/actions/dbgrestart.png
+share/kde/apps/kdevrbdebugger/icons/hicolor/22x22/actions/dbgrun.png
+share/kde/apps/kdevrbdebugger/icons/hicolor/22x22/actions/dbgrunto.png
+share/kde/apps/kdevrbdebugger/icons/hicolor/22x22/actions/dbgstep.png
+share/kde/apps/kdevrbdebugger/icons/hicolor/22x22/actions/dbgstepout.png
+share/kde/apps/kdevrbdebugger/icons/hicolor/22x22/actions/debugger.png
 share/kde/apps/kdevrbdebugger/kdevrbdebugger.rc
 share/kde/apps/kdevregexptest/kdevregexptest.rc
 share/kde/apps/kdevreplace/kdevpart_replace.rc
@@ -1308,6 +1315,10 @@ share/kde/servicetypes/kdevelopversioncontrol.desktop
 @dirrm share/kde/apps/kdevrubysupport
 @dirrm share/kde/apps/kdevreplace
 @dirrm share/kde/apps/kdevregexptest
+@dirrm share/kde/apps/kdevrbdebugger/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kdevrbdebugger/icons/hicolor/22x22
+@dirrm share/kde/apps/kdevrbdebugger/icons/hicolor
+@dirrm share/kde/apps/kdevrbdebugger/icons
 @dirrm share/kde/apps/kdevrbdebugger
 @dirrm share/kde/apps/kdevquickopen
 @dirrm share/kde/apps/kdevpythonsupport
