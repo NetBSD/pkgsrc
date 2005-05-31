@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2005/05/31 10:01:39 dillo Exp $
+# $NetBSD: options.mk,v 1.5 2005/05/31 11:24:32 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-authlib
-PKG_SUPPORTED_OPTIONS=	PAM bdb ldap mysql pgsql
+PKG_SUPPORTED_OPTIONS=	pam bdb ldap mysql pgsql
 PKG_SUGGESTED_OPTIONS=	bdb
 
 .include "../../mk/bsd.options.mk"
@@ -15,7 +15,7 @@ AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthshadow.la
 ###
 ### PAM authentication
 ###
-.if !empty(PKG_OPTIONS:MPAM)
+.if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-authpam
 AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthpam.la
