@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2005/05/22 20:07:58 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2005/05/31 10:01:36 dillo Exp $
 #
 
 DISTNAME=		vice-1.16
@@ -31,12 +31,9 @@ INFO_FILES=		vice.info
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(VICE_USE_FFMPEG:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	ffmpeg
-.endif
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vice
 PKG_SUPPORTED_OPTIONS=	esound ffmpeg gnome
+PKG_OPTIONS_LEGACY_VARS+=VICE_USE_FFMPEG:ffmpeg
 
 .include "../../mk/bsd.options.mk"
 

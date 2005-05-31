@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:46 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/05/31 10:01:38 dillo Exp $
 
 DISTNAME=	flow-tools-0.67
 PKGREVISION=	2
@@ -27,17 +27,11 @@ SUPPORT_FILES+=	${EGDIR}/sym/${_f_} ${PKG_SYSCONFDIR}/sym/${_f_}
 .endfor
 MESSAGE_SUBST+=	EGDIR=${EGDIR}
 
-.if defined(FLOW_TOOLS_USE_MYSQL) && \
-    !empty(FLOW_TOOLS_USE_MYSQL:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	mysql
-.endif
-.if defined(FLOW_TOOLS_USE_POSTGRESQL) && \
-    !empty(FLOW_TOOLS_USE_POSTGRESQL:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	postgresql
-.endif
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.flow-tools
 PKG_SUPPORTED_OPTIONS=	mysql postgresql
+PKG_OPTIONS_LEGACY_VARS+=	FLOW_TOOLS_USE_MYSQL:mysql
+PKG_OPTIONS_LEGACY_VARS+=	FLOW_TOOLS_USE_POSTGRESQL:postgresql
+
 .include "../../mk/bsd.options.mk"
 
 # MySQL support.

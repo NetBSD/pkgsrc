@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/25 03:39:44 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/31 10:01:38 dillo Exp $
 
 DISTNAME=	ffmpeg-0.4.8
 PKGREVISION=	3
@@ -30,10 +30,6 @@ PKG_SUPPORTED_OPTIONS=	bktr lame mmx vorbis
 .include "../../mk/bsd.options.mk"
 
 .include "../../mk/bsd.prefs.mk"
-
-.if !empty(USE_MMX:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=   mmx
-.endif
 
 .include "../../mk/compiler.mk"
 

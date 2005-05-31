@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/05/22 20:08:05 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/05/31 10:01:37 dillo Exp $
 
 DISTNAME=	freetype-2.1.9
 PKGNAME=	freetype2-2.1.9
@@ -30,11 +30,10 @@ PKGCONFIG_OVERRIDE=	builds/unix/freetype2.in
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-.if defined(MKTTINTERP) && !empty(MKTTINTERP:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	truetype
-.endif
 PKG_OPTIONS_VAR+=	PKG_OPTIONS.freetype2
 PKG_SUPPORTED_OPTIONS=	truetype
+PKG_OPTIONS_LEGACY_VARS+=	MKTTINTERP:truetype
+
 .include "../../mk/bsd.options.mk"
 
 ###

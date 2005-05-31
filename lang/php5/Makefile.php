@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.5 2005/04/08 20:58:49 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.6 2005/05/31 10:01:37 dillo Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -32,24 +32,20 @@ CONFIGURE_ARGS+=	--enable-track-vars
 CONFIGURE_ARGS+=	--disable-posix
 CONFIGURE_ARGS+=	--disable-dom
 
-.if defined(USE_INET6) && ${USE_INET6} == "NO"
-CONFIGURE_ARGS+=	--disable-ipv6
-.else
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-
 CONFIGURE_ARGS+=	--enable-xml
 CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 .include "../../textproc/libxml2/buildlink3.mk"
 
-# Global and legacy options
-.if defined(USE_SSL) && !empty(USE_SSL:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	ssl
-.endif
-
 PKG_OPTIONS_VAR=		PKG_OPTIONS.${PKGNAME:C/-[^-]*$//}
 PKG_SUPPORTED_OPTIONS+=	ssl
+
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
 
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"

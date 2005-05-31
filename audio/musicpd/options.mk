@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2004/12/22 21:46:24 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2005/05/31 10:01:36 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 PKG_SUPPORTED_OPTIONS=	aac audiofile flac iconv id3 ogg
-PKG_DEFAULT_OPTIONS+=	aac audiofile flac iconv id3 ogg
+PKG_SUGGESTED_OPTIONS=	aac audiofile flac iconv id3 ogg
 
 .include "../../mk/bsd.options.mk"
 

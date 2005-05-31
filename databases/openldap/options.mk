@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.11 2005/02/09 15:38:03 cube Exp $
+# $NetBSD: options.mk,v 1.12 2005/05/31 10:01:36 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap
 PKG_SUPPORTED_OPTIONS=	bdb dynamic kerberos sasl slp
-PKG_DEFAULT_OPTIONS+=	bdb
+PKG_SUGGESTED_OPTIONS=	bdb
 
 .include "../../mk/bsd.options.mk"
 

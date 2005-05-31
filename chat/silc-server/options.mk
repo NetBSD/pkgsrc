@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2005/04/08 15:09:43 salo Exp $
+# $NetBSD: options.mk,v 1.2 2005/05/31 10:01:36 dillo Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.silc-server
 PKG_SUPPORTED_OPTIONS=	debug inet6
-PKG_DEFAULT_OPTIONS=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdebug)

@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2005/03/23 01:17:45 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/05/31 10:01:37 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tiff
 PKG_SUPPORTED_OPTIONS=	lzw
-PKG_DEFAULT_OPTIONS=	lzw
+PKG_SUGGESTED_OPTIONS=	lzw
+
 .include "../../mk/bsd.options.mk"
 
 ###
