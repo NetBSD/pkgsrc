@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.188 2005/05/26 07:07:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.189 2005/05/31 20:44:02 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -37,7 +37,7 @@ BEGIN {
 	use Exporter;
 	use vars qw(@ISA @EXPORT_OK);
 	@ISA = qw(Exporter);
-	@EXPORT_OK = qw(false true print_table);
+	@EXPORT_OK = qw(false print_table true);
 }
 
 use constant false	=> 0;
@@ -289,7 +289,6 @@ my (%options) = (
 	"-p"		=> "warn about use of \$(VAR) instead of \${VAR}",
 	"-q"		=> "don't print a summary line when finishing",
 	"-I"		=> "dump the Makefile after parsing",
-	"-N"		=> "assume a new (still uncommitted) package",
 	"-B#"		=> "allow # contiguous blank lines in Makefiles",
 	"-C{check,...}"	=> "enable or disable specific checks",
 	"-W{warn,...}"	=> "enable or disable specific warnings",
@@ -304,7 +303,6 @@ my $opt_check_bl3	= true;
 my $opt_check_MESSAGE	= true;
 my $opt_check_patches	= true;
 my $opt_check_PLIST	= true;
-my $opt_check_newpkg	= false;
 my (%checks) = (
 	"distinfo"	=> [\$opt_check_distinfo, "check distinfo file"],
 	"bl3"		=> [\$opt_check_bl3, "check buildlink3 files"],
@@ -312,17 +310,16 @@ my (%checks) = (
 	"MESSAGE"	=> [\$opt_check_MESSAGE, "check MESSAGE files"],
 	"patches"	=> [\$opt_check_patches, "check patches"],
 	"PLIST"		=> [\$opt_check_PLIST, "check PLIST files"],
-	"newpkg"	=> [\$opt_check_newpkg, "special checks for uncommitted packages"],
 );
 
 my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
 my $opt_warn_exec	= true;
-my $opt_warn_vague	= true;
 my $opt_warn_order	= true;
 my $opt_warn_paren	= true;
 my $opt_warn_sort	= true;
 my $opt_warn_types	= true;
+my $opt_warn_vague	= true;
 my $opt_warn_workdir	= true;
 my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
@@ -481,7 +478,6 @@ sub parse_command_line() {
 			parse_multioption($val, \%checks);
 		},
 		"help|h" => sub { help(*STDOUT, 0, 1); },
-		"newpackage|N" => \$opt_check_newpkg,
 		"verbose|v" => sub { PkgLint::Logging::set_verbose(true); },
 		"version|V" => sub { print("$conf_distver\n"); exit(0); },
 		"contblank|B=i" => \$opt_contblank,
@@ -693,6 +689,23 @@ sub check_package() {
 	}
 	return true;
 } # check_package
+
+sub is_committed($) {
+	my ($fname) = @_;
+	my ($basename, $entries);
+
+	$basename = basename($fname);
+	$entries = load_file(dirname($fname) . "/CVS/Entries");
+	if (!$entries) {
+		return false;
+	}
+	foreach my $entry (@{$entries}) {
+		if ($entry->text =~ qr"^/\Q${basename}\E/") {
+			return true;
+		}
+	}
+	return false;
+}
 
 #
 # Subroutines common to all checking routines
@@ -987,7 +1000,7 @@ sub checkfile_buildlink3_mk($) {
 sub checkperms($) {
 	my ($file) = @_;
 
-	if ($opt_warn_exec && -f $file && -x $file) {
+	if ($opt_warn_exec && -f $file && -x $file && !is_committed($file)) {
 		log_warning($file, NO_LINE_NUMBER, "Should not be executable.");
 	}
 	return true;
@@ -1504,9 +1517,8 @@ sub checkfile_Makefile($) {
 	$tmp = $sections[$idx++];
 	if ($tmp =~ /#(\s+)\$$conf_rcsidstr([^\$]*)\$/) {
 		if ($2 ne '') {
-			if ($opt_check_newpkg) {
-				$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "For a new package, make \$$conf_rcsidstr\$ tag in comment ".
-				    "section empty, to make CVS happy.");
+			if (!is_committed($fname)) {
+				$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\"\$$conf_rcsidstr\$\" expected.");
 			}
 		}
 	}
