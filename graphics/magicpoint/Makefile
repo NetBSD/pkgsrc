@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/05/31 10:01:37 dillo Exp $
+# $NetBSD: Makefile,v 1.48 2005/05/31 22:45:28 rillig Exp $
 
 DISTNAME=		magicpoint-1.10a
 PKGREVISION=		6
@@ -43,7 +43,7 @@ MGP_PRE_STAGE=		ctlwords.h grammar.c scanner.c tokdefs.h \
 post-configure:
 .for s in ${MGP_PRE_STAGE}
 	cd ${WRKSRC}; \
-		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} $s
+		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} ${s}
 .endfor
 
 pre-install:
