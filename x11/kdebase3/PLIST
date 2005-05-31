@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2005/05/02 20:34:08 reed Exp $
+@comment $NetBSD: PLIST,v 1.36 2005/05/31 14:21:23 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -1661,6 +1661,7 @@ share/kde/apps/kfontview/kfontviewpart.rc
 share/kde/apps/kfontview/kfontviewui.rc
 share/kde/apps/khelpcenter/glossary.html.in
 share/kde/apps/khelpcenter/glossary.xslt
+share/kde/apps/khelpcenter/index.html.in
 share/kde/apps/khelpcenter/intro.html.in
 share/kde/apps/khelpcenter/khelpcenterui.rc
 share/kde/apps/khelpcenter/plugins/Applications/.directory
@@ -1994,8 +1995,10 @@ share/kde/apps/konsole/Transparent_lightbg.schema
 share/kde/apps/konsole/WhiteOnBlack.schema
 share/kde/apps/konsole/XTerm.schema
 share/kde/apps/konsole/eventsrc
+share/kde/apps/konsole/icons/crystalsvg/16x16/actions/activity.png
 share/kde/apps/konsole/icons/crystalsvg/16x16/actions/opentermblue.png
 share/kde/apps/konsole/icons/crystalsvg/16x16/actions/opentermred.png
+share/kde/apps/konsole/icons/crystalsvg/16x16/actions/silence.png
 share/kde/apps/konsole/icons/crystalsvg/22x22/actions/opentermblue.png
 share/kde/apps/konsole/icons/crystalsvg/22x22/actions/opentermred.png
 share/kde/apps/konsole/icons/crystalsvg/32x32/actions/opentermblue.png
