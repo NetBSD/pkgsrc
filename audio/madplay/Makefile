@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/04/11 21:44:54 tv Exp $
+# $NetBSD: Makefile,v 1.27 2005/05/31 16:16:50 wiz Exp $
 #
 
 DISTNAME=	madplay-0.15.2b
@@ -20,26 +20,11 @@ USE_LIBTOOL=		YES
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
 
-BUILD_DEFS+=	USE_ESOUND
-BUILD_DEFS+=	USE_OSS
+.include "options.mk"
 
-.include "../../mk/bsd.prefs.mk"
-
-.if empty(USE_ESOUND:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=        --without-esd
-.endif
-
-.if !empty(USE_ESOUND:M[Yy][Ee][Ss])
-.include "../../audio/esound/buildlink3.mk"
-.endif
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-
-.if defined(USE_OSS)
-.  include "../../mk/ossaudio.buildlink3.mk"
-.endif
-
 .include "../../mk/bsd.pkg.mk"
