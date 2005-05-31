@@ -21,7 +21,7 @@
 /
 / Stefan Bieschewski <stb@acm.org>
 /
-/ $Id: decode_i586_.s,v 1.1 1998/10/30 03:11:52 mycroft Exp $
+/ $Id: decode_i586_.s,v 1.2 2005/05/31 22:13:24 rillig Exp $
 /
 .bss
 	.comm	buffs,4352
@@ -318,4 +318,3 @@ _synth_1to1_pent:
 	popl %ebp
 	addl $12,%esp
 	ret
-
