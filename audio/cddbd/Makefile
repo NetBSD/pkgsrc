@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/07/02 11:27:44 agc Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/31 21:53:20 rillig Exp $
 #
 
 DISTNAME=	cddbd-1.3.1
@@ -19,11 +19,13 @@ NO_PACKAGE=	too interactive
 MAKEFILE=	makefile
 
 do-configure:
-	@( cd ${WRKSRC} && BASEDIR=${PREFIX}/share sh config.sh )
+	cd ${WRKSRC};							\
+	${SETENV} BASEDIR=${PREFIX:Q}/share ${SH} config.sh
 
 do-install:
-	@( cd ${WRKSRC} && INSTALL=${INSTALL} BINDIR=${PREFIX}/bin \
-	  BINPERM=${BINMODE} BINOWNER=${BINOWN} BINGROUP=${BINGRP} \
-	  sh install.sh )
+	cd ${WRKSRC};							\
+	${SETENV} INSTALL=${INSTALL:Q} BINDIR=${PREFIX:Q}/bin		\
+	  BINPERM=${BINMODE:Q} BINOWNER=${BINOWN:Q}			\
+	  BINGROUP=${BINGRP:Q} ${SH} install.sh
 
 .include "../../mk/bsd.pkg.mk"
