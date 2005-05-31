@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.28 2005/05/31 15:05:13 rillig Exp $
+# $NetBSD: bsd.options.mk,v 1.29 2005/05/31 16:03:41 wiz Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -108,9 +108,15 @@ _var_:=	${_m_:C/:.*//}
 _opt_:=	${_m_:C/.*://}
 _popt_:=${_opt_:C/-//}
 .  if !empty(PKG_SUPPORTED_OPTIONS:M${_popt_})
-.    if defined(${_var_}) && !empty(${_var_}:M[yY][eE][sS])
+.    if defined(${_var_})
+_DEPRECATED_WARNING:=${_DEPRECATED_WARNING} "Deprecated variable "${_var_:Q}" used, use PKG_DEFAULT_OPTIONS+="${_popt_:Q}" instead."
+.      if empty(${_var_}:M[nN][oO])
 _PKG_LEGACY_OPTIONS:=${_PKG_LEGACY_OPTIONS} ${_opt_}
-_DEPRECATED_WARNING:=${_DEPRECATED_WARNING} "Deprecated variable "${_var_:Q}" used, use PKG_DEFAULT_OPTIONS+="${_opt_:Q}" instead."
+.      elif empty(_opt_:M-*)
+_PKG_LEGACY_OPTIONS:=${_PKG_LEGACY_OPTIONS} -${_popt_}
+.      else
+_PKG_LEGACY_OPTIONS:=${_PKG_LEGACY_OPTIONS} ${_popt_}
+.      endif
 .    endif
 .  endif
 .endfor
