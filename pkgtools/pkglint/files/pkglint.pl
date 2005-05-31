@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.189 2005/05/31 20:44:02 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.190 2005/05/31 21:15:06 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2017,67 +2017,6 @@ sub checkearlier($@) {
 			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\"$i\" has to appear earlier.");
 		}
 	}
-}
-
-sub abspathname($$) {
-	my ($str, $file) = @_;
-	my ($s, $i, $pre);
-
-	# ignore parameter string to echo command
-	$str =~ s/[ \t][\@-]?(echo|\$[\{\(]ECHO[\}\)]|\$[\{\(]ECHO_MSG[\}\)])[ \t]+("(\\'|\\"|[^"])*"|'(\\'|\\"|[^"])*')[ \t]*[;\n]//;
-
-	# FIXME: is the path relative to $opt_packagedir?
-	log_info($file, NO_LINE_NUMBER, "Checking direct use of full pathnames.");
-	foreach my $s (split(/\n+/, $str)) {
-		$i = '';
-		if ($s =~ /(^|[ \t\@'"-])(\/[\w\d])/) {
-			# suspected pathnames are recorded.
-			$i = $2 . $';
-			$pre = $` . $1;
-
-			if ($pre =~ /MASTER_SITE_SUBDIR/) {
-				# MASTER_SITE_SUBDIR lines are ok.
-				$i = '';
-			}
-		}
-		if ($i ne '') {
-			$i =~ s/\s.*$//;
-			$i =~ s/['"].*$//;
-			if ($opt_warn_absname) {
-				log_warning($file, NO_LINE_NUMBER, "Possible use of absolute pathname \"$i\".");
-			}
-		}
-	}
-
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking direct use of pathnames, phase 1.");
-	my %abspathnames = (
-		"/usr/pkgsrc"   => "\${PKGSRCDIR} instead",
-		$conf_pkgsrcdir => "\${PKGSRCDIR} instead",
-		$conf_localbase	=> "\${PREFIX} or \${LOCALBASE}, as appropriate",
-		"/usr/X11"      => "\${PREFIX} or \${X11BASE}, as appropriate",
-		"/usr/X11R6"    => "\${PREFIX} or \${X11BASE}, as appropriate");
-	foreach my $i (keys %abspathnames) {
-		if ($str =~ /$i/) {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Possible direct use of \"$&\" ".
-				"found in $file. if so, use $abspathnames{$i}.");
-		}
-	}
-
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking direct use of pathnames, phase 2.");
-	my %relpathnames = (
-		"distfiles" => "DISTDIR",
-		"pkg"       => "PKGDIR",
-		"files"     => "FILESDIR",
-		"scripts"   => "SCRIPTSDIR",
-		"patches"   => "PATCHDIR",
-		"work"      => "WRKDIR");
-	foreach my $i (keys %relpathnames) {
-		if ($str =~ /(\.\/|\$[\{\(]\.CURDIR[\}\)]\/|[ \t])(\b$i)\//) {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Possible direct use of \"$i\" ".
-				"found in $file. If so, use \${$relpathnames{$i}} instead.");
-		}
-	}
-	return true;
 }
 
 sub check_predefined_sites($) {
