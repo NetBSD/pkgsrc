@@ -97,7 +97,7 @@ ignoreip2
 imlib	
 imlib2	
 imstt	
-inet6	
+inet6			Enable support for IPv6.
 ipfilter	
 iptables	
 ipv6	
@@ -156,7 +156,7 @@ okinawa_dict
 opengl			Use OpenGL as display library.
 openldap	
 openssl	
-oss			Compile in support for the Open Sound System audio library.
+oss			Enable support for the Open Sound System audio library.
 outgoingip	
 pam	
 patchviewer	
