@@ -32,11 +32,6 @@ DDEESSCCRRIIPPTTIIOONN
                  files that are slurped in via .include directives.  This flag
                  is mainly for debugging.
 
-     --NN          New package flag.  Adds several checks specific to newly sub-
-                 mitted packages.  If you are willing to submit the directory
-                 to be checked as a new package, use this option.  This option
-                 is deprecated.  Use --CC_n_e_w_p_k_g instead.
-
      --qq|----qquuiieett  Don't print the errors and warnings summary before terminat-
                  ing.
 
@@ -64,9 +59,6 @@ DDEESSCCRRIIPPTTIIOONN
                  Check the distinfo file.
 
      [no-]extra  Check remaining files in the package directory.
-
-     [no-]newpkg
-                 Enable special checks for uncommitted packages.
 
      [no-]patches
                  Check the pkgsrc specific patch files.
