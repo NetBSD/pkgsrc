@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/05/22 20:07:38 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2005/05/31 16:04:28 wiz Exp $
 #
 
 DISTNAME=	lame-${VERS}
@@ -28,14 +28,9 @@ CONFIGURE_ENV+=		F77=${FALSE}
 
 LDFLAGS.SunOS+=		-lm
 
-.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
-.if defined(LAME_USE_GTK)
-CONFIGURE_ENV+=		GTK_CONFIG=${BUILDLINK_PREFIX.gtk}/bin/gtk-config
-.  include "../../x11/gtk/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-analyzer
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "alpha"
 .  include "../../math/libffm/buildlink3.mk"
