@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10263 2005/05/31 22:15:16 wiz Exp $
+$NetBSD: CHANGES,v 1.10264 2005/05/31 22:25:20 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2745,3 +2745,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/ettercap-NG to 0.7.3 [adrianp 2005-05-31]
 	Updated devel/bmake to 20050530 [sjg 2005-05-31]
 	Moved x11/controlcenter to x11/control-center [wiz 2005-05-31]
+	Updated audio/muse to 0.9nb3 [rillig 2005-05-31]
