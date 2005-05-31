@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2005/05/30 12:44:09 wiz Exp $
+$NetBSD: distinfo,v 1.21 2005/05/31 19:15:11 jmmv Exp $
 
 SHA1 (mplayer-1.0rc7/MPlayer-1.0pre7.tar.bz2) = df1e8d4f2f44d72c6f7989932f3b272e815ecb80
 RMD160 (mplayer-1.0rc7/MPlayer-1.0pre7.tar.bz2) = a4bac10df287c4b134ea49b3bc9bf7fb0126cae6
@@ -12,9 +12,21 @@ Size (mplayer-1.0rc7/font-arial-iso-8859-2.tar.bz2) = 222208 bytes
 SHA1 (mplayer-1.0rc7/font-arial-cp1250.tar.bz2) = ccf11dce5d0fb72fd3af97f788b7471cd0cd0b68
 RMD160 (mplayer-1.0rc7/font-arial-cp1250.tar.bz2) = a2fc7ae07b0d80936ea58e168e1047efccb9eb91
 Size (mplayer-1.0rc7/font-arial-cp1250.tar.bz2) = 249705 bytes
-SHA1 (patch-aa) = 39fb120fb93c3d5cbbbce74b8680a235cfe93fa0
-SHA1 (patch-ab) = 022cf7b043c7b3e4e76efd5891b0035bfa216ade
+SHA1 (patch-aa) = 7e4eaab0042979c44271c361d00e1c05a04c93bc
+SHA1 (patch-ab) = 1a08f717e326d83b355eee26e1be9c0636b735c5
 SHA1 (patch-ac) = 3b9ae32e6e656ec4b58b7e51a1c2eaa280384f3e
 SHA1 (patch-ad) = d705dd315e913593223b83e533c60a9620d34cc8
-SHA1 (patch-ae) = 1acef0fca1362c32dd5467d2d3e06e8446b4850c
+SHA1 (patch-ae) = 601808d8c89cba68156fb3c95fe9fcfb8da4fca0
 SHA1 (patch-af) = 6eab8572b239f6ac7afc03ad6254a7c97f90663e
+SHA1 (patch-da) = be092da4f854708c1ef47f10c26e361c095a6799
+SHA1 (patch-dc) = b11ef06a89f13e2ae5e013d569aa5acc99c770aa
+SHA1 (patch-dd) = e5b23b73a1e53e3185ecbac26042432395cd5e63
+SHA1 (patch-de) = 923814d978a3ed2b00494cf7f7fd17acd72aa610
+SHA1 (patch-df) = 0a85d1d8fbbbc1a86436e7364b72619a9a32e2d7
+SHA1 (patch-dg) = 1633dfd61c83796ce148ede22bafbe01f67d2bd4
+SHA1 (patch-dh) = 639638d871af2462945d8c5e454cae291a15e939
+SHA1 (patch-di) = 5b4c7d96537882422fb648181a93ec9ba9e13c7e
+SHA1 (patch-dj) = e72e08dda9f3eb97bf5e63751bf18999f1689434
+SHA1 (patch-dk) = 744911451794b554f9754b4cd77cf24520ed0f8e
+SHA1 (patch-dm) = b57da36cce0b896b51ca1ff2eef3c58ed95e2b68
+SHA1 (patch-do) = dbd4705c81ee4e6fa7cefc93dc187733a739d710
