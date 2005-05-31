@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/04/11 21:48:06 tv Exp $
+# $NetBSD: Makefile,v 1.27 2005/05/31 22:12:18 wiz Exp $
 #
 
 DISTNAME=		gdkxft-1.5
@@ -36,7 +36,7 @@ post-install:
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
-.include "../../x11/controlcenter/buildlink3.mk"
+.include "../../x11/control-center/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
