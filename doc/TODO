@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3570 2005/05/31 17:49:30 wiz Exp $
+$NetBSD: TODO,v 1.3571 2005/05/31 17:58:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -632,7 +632,6 @@ Suggested package updates
 	o libgnomemm26-2.10.0
 	o libgnomeuimm26-2.10.0
 	o libhydrogen-0.9.0
-	o libidn-0.5.17
 	o libjit-0.0.4
 	o libksba-0.9.9
 	o liblive-2005.03.23
