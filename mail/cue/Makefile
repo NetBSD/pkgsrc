@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/04/11 21:46:18 tv Exp $
+# $NetBSD: Makefile,v 1.46 2005/05/31 10:01:37 dillo Exp $
 
 DISTNAME=	cue-snap-20050131
 PKGNAME=	cue-20050131
@@ -12,13 +12,10 @@ GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-# Global & legacy options
-.if defined(CUE_USE_CANNA) && !empty(CUE_USE_CANNA:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	canna
-.endif
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cue
 PKG_SUPPORTED_OPTIONS=	canna idea inet6
+PKG_OPTIONS_LEGACY_VARS+=	CUE_USE_CANNA:canna
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Minet6) && (${OPSYS} != "SunOS")

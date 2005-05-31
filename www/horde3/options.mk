@@ -1,11 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2005/03/04 22:35:22 adrianp Exp $
+# $NetBSD: options.mk,v 1.3 2005/05/31 10:01:40 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.horde
 PKG_SUPPORTED_OPTIONS=	ldap postgresql mysql
+PKG_SUGGESTED_OPTIONS=	mysql
 
-.if !defined(PKG_OPTIONS.horde)
-PKG_DEFAULT_OPTIONS+=	mysql
-.endif
 .include "../../mk/bsd.options.mk"
 
 ###

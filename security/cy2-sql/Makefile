@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/31 10:01:39 dillo Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-sql/}
 COMMENT=	Cyrus SASL SQL authentication plugin
@@ -8,10 +8,7 @@ SASL_PLUGIN=	yes
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cy2-sql
 PKG_SUPPORTED_OPTIONS=	mysql pgsql sqlite
-
-.if !defined(PKG_OPTIONS.cy2-sql)
-PKG_DEFAULT_OPTIONS+=	mysql
-.endif
+PKG_SUGGESTED_OPTIONS=	mysql
 
 .include "../../mk/bsd.options.mk"
 

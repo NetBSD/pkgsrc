@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/04/11 21:46:13 tv Exp $
+# $NetBSD: Makefile,v 1.29 2005/05/31 10:01:37 dillo Exp $
 #
 
 DISTNAME=	gawk-3.1.4
@@ -26,12 +26,9 @@ MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(GAWK_ENABLE_PORTALS:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=   portals
-.endif
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gawk
 PKG_SUPPORTED_OPTIONS=	portals
+PKG_OPTIONS_LEGACY_VARS+=	GAWK_ENABLE_PORTALS:portals
 
 .include "../../mk/bsd.options.mk"
 

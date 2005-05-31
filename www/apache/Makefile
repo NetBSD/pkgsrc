@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2005/05/17 19:11:47 jlam Exp $
+# $NetBSD: Makefile,v 1.166 2005/05/31 10:01:40 dillo Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -64,15 +64,11 @@ BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 CONFIGURE_ARGS+=	--server-uid=${APACHE_USER}
 CONFIGURE_ARGS+=	--server-gid=${APACHE_GROUP}
 
-.if defined(APACHE_PERF_TUNING) && !empty(APACHE_PERF_TUNING:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	perf-tuning
-.endif
-.if defined(APACHE_SUEXEC) && !empty(APACHE_SUEXEC:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	suexec
-.endif
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apache
 PKG_SUPPORTED_OPTIONS=	perf-tuning suexec
+PKG_OPTIONS_LEGACY_VARS+=	APACHE_PERF_TUNING:perf-tuning
+PKG_OPTIONS_LEGACY_VARS+=	APACHE_SUEXEC:suexec
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Msuexec)

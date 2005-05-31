@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/05/23 22:41:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.40 2005/05/31 10:01:37 dillo Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
@@ -54,14 +54,10 @@ CONF_FILES_PERMS+=	${EGDIR}/${_file_} ${VIRUSDBDIR}/${_file_}	\
 
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} CFGINST=${EGDIR} DBINST=${EGDIR}
 
-PKG_DEFAULT_OPTIONS+=	curl
-
-.if defined(USE_MILTER) && !empty(USE_MILTER:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	milter
-.endif
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clamav
 PKG_SUPPORTED_OPTIONS=	curl milter
+PKG_SUGGESTED_OPTIONS=	curl
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mmilter)

@@ -1,12 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2005/02/07 11:35:46 jlam Exp $
-
-# Global and legacy options
-.if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	ldap-compat
-.endif
+# $NetBSD: options.mk,v 1.2 2005/05/31 10:01:39 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba2
 PKG_SUPPORTED_OPTIONS=	PAM cups ldap-compat
+PKG_OPTIONS_LEGACY_VARS+=	USE_OPENLDAP:ldap-compat
+
 .include "../../mk/bsd.options.mk"
 
 ###

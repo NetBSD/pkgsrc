@@ -1,13 +1,14 @@
-# $NetBSD: options.mk,v 1.3 2005/03/30 10:00:36 schmonz Exp $
+# $NetBSD: options.mk,v 1.4 2005/05/31 10:01:38 dillo Exp $
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.djbdns
+PKG_SUPPORTED_OPTIONS=	inet6 ignoreip2 tinydns64
 
 .if ${MACHINE_ARCH} == "sparc64" || \
 	${MACHINE_ARCH} == "alpha" || \
 	${MACHINE_ARCH} == "amd64"
-PKG_DEFAULT_OPTIONS+=   tinydns64
+PKG_SUGGESTED_OPTIONS=   tinydns64
 .endif
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.djbdns
-PKG_SUPPORTED_OPTIONS=	inet6 ignoreip2 tinydns64
 .include "../../mk/bsd.options.mk"
 
 ###

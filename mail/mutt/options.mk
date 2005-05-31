@@ -1,11 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2005/03/28 08:57:58 jlam Exp $
+# $NetBSD: options.mk,v 1.7 2005/05/31 10:01:38 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
 PKG_SUPPORTED_OPTIONS=	slang ncurses ssl buffy-size
-
-.if !defined(PKG_OPTIONS.mutt)
-PKG_DEFAULT_OPTIONS+=	ssl
-.endif
+PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
 

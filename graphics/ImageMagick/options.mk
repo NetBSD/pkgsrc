@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2004/12/24 23:42:49 tv Exp $
+# $NetBSD: options.mk,v 1.2 2005/05/31 10:01:36 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ImageMagick
-PKG_DEFAULT_OPTIONS=	x11
 PKG_SUPPORTED_OPTIONS=	x11
+PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.options.mk"
 

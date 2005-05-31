@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/04/11 21:46:06 tv Exp $
+# $NetBSD: Makefile,v 1.47 2005/05/31 10:01:37 dillo Exp $
 
 DISTNAME=		magicpoint-1.10a
 PKGREVISION=		6
@@ -18,8 +18,8 @@ USE_IMAKE=		yes
 USE_PERL5=		build
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.magicpoint
-PKG_DEFAULT_OPTIONS+=	xft2
-PKG_SUPPORTED_OPTIONS+=	freetype vflib xft2
+PKG_SUPPORTED_OPTIONS=	freetype vflib xft2
+PKG_SUGGESTED_OPTIONS=	xft2
 
 .include "../../mk/bsd.options.mk"
 
