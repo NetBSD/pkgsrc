@@ -1,0 +1,13 @@
+$NetBSD: patch-bi,v 1.1 2005/05/31 14:48:24 markd Exp $
+
+--- kpilot/lib/pilotLocalDatabase.cc.orig	2005-05-24 00:12:43.000000000 +1200
++++ kpilot/lib/pilotLocalDatabase.cc
+@@ -618,7 +618,7 @@ void PilotLocalDatabase::openDatabase()
+ 
+ 	int count;
+ 	pi_file_get_entries(dbFile, &count);
+-	if (count > 0)
++	if (count >= 0)
+ 	{
+ 		KPILOT_DELETE(d);
+ 		d = new Private(count);

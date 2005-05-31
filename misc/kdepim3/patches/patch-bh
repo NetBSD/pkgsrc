@@ -1,0 +1,13 @@
+$NetBSD: patch-bh,v 1.1 2005/05/31 14:48:24 markd Exp $
+
+--- kpilot/lib/pilotDatabase.cc.orig	2005-05-24 00:12:43.000000000 +1200
++++ kpilot/lib/pilotDatabase.cc
+@@ -185,7 +185,7 @@ bool PilotAppInfoBase::setCategory(unsig
+ 	int len = CATEGORY_NAME_SIZE - 1;
+ 	QCString t = PilotAppCategory::codec()->fromUnicode(s,len);
+ 	memset(categoryInfo()->name[i],0,CATEGORY_NAME_SIZE);
+-	qstrncpy(categoryInfo()->name[i],t,kMin(len,(int)CATEGORY_NAME_SIZE));
++	qstrncpy(categoryInfo()->name[i],t,CATEGORY_NAME_SIZE);
+ 	return true;
+ }
+ 

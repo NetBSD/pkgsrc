@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/05/31 10:01:38 dillo Exp $
+# $NetBSD: Makefile,v 1.45 2005/05/31 14:48:24 markd Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -29,6 +29,7 @@ REPLACE_PERL=	kmail/kmail-3.1-update-new-mail-notification-settings.pl \
 		kmail/kmail-pgpidentity.pl \
 		kmail/kmail-upd-identities.pl \
 		kmail/kmail-3.4-misc.pl \
+		kmail/kmail-3.4.1-update-status-filters.pl \
 		kmail/upgrade-signature.pl \
 		kmail/upgrade-transport.pl \
 		libkdenetwork/kpgp-3.1-upgrade-address-data.pl \
