@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10277 2005/06/01 22:08:28 tron Exp $
+$NetBSD: CHANGES,v 1.10278 2005/06/01 23:27:04 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2761,3 +2761,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/qpopper to 4.0.8 [adrianp 2005-06-01]
 	Updated mail/poppassd to 4.0.8 [adrianp 2005-06-01]
 	Updated net/bind9 to 9.3.1 [tron 2005-06-01]
+	Updated mail/mailman to 2.1.6 [bouyer 2005-06-02]
