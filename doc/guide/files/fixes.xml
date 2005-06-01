@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.17 2005/05/29 09:10:42 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.18 2005/06/01 22:49:59 jlam Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -702,41 +702,34 @@ dynamic linker chooses the library with the greater REVISION number. </programli
       <para>If a package needs GNU autoconf or automake to be executed
         to regenerate the configure script and Makefile.in makefile
         templates, then they should be executed in a pre-configure
-        target. Two Makefile fragments are provided in
-        <filename>pkgsrc/mk/autoconf.mk</filename> and
-        <filename>pkgsrc/mk/automake.mk</filename> to help
-        dealing with these tools. See comments in these files for
-        details.</para>
+        target.</para>
 
         <para> For packages that need only autoconf: </para>
 
-        <programlisting>AUTOCONF_REQD=    2.50    # if default version is not good enough
+        <programlisting>AUTOCONF_REQD=    2.50     # if default version is not good enough
+USE_TOOLS+=	autoconf   # use "autoconf213" for autoconf-2.13
 ...
 
 pre-configure:
-          cd ${WRKSRC}; ${AUTOCONF}
+          cd ${WRKSRC}; autoconf
 
-...
-.include "../../mk/autoconf.mk"</programlisting>
+...</programlisting>
 
         <para> and for packages that need automake and autoconf: </para> 
 
-<programlisting>AUTOMAKE_REQD=  1.7.1   # if default version is not good enough
+<programlisting>AUTOMAKE_REQD=  1.7.1      # if default version is not good enough
+USE_TOOLS+=	automake   # use "automake14" for autoconf-1.4
 ...
 
 pre-configure:
           cd ${WRKSRC};                                           \
-          ${ACLOCAL};                                             \
-          ${AUTOHEADER};                                          \
-          ${AUTOMAKE} -a --foreign -i;                            \
-          ${AUTOCONF}
+          aclocal; autoheader;                                    \
+          automake -a --foreign -i; autoconf
 
-...
-.include "../mk/automake.mk"</programlisting>
+...</programlisting>
 
         <para> Packages which use GNU Automake will almost certainly
-          require GNU Make, but that's automatically provided for you in
-          <filename>mk/automake.mk</filename>. </para> 
+          require GNU Make. </para> 
 
         <para> There are times when the configure process makes
           additional  changes to the generated files, which then causes
