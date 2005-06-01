@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/05/31 22:39:48 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/01 09:27:44 wiz Exp $
 #
 
 DISTNAME=	gltron-0.70-source
@@ -11,7 +11,7 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://gltron.sourceforge.net/
 COMMENT=	3D lightcycle game inspired by the movie Tron
 
-WRKSRC=		${WRKDIR}/${PKGBASE}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+= --disable-warn
 
