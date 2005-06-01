@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1682 2005/06/01 03:04:16 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1683 2005/06/01 17:05:19 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -20,7 +20,6 @@
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.hacks.mk"
-.include "../../mk/bsd.makevars.mk"
 
 # This has to come first to avoid showing all BUILD_DEFS added by this
 # Makefile, which are usually not customizable.
