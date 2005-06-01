@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2005/06/01 20:55:16 adrianp Exp $
+# $NetBSD: options.mk,v 1.6 2005/06/01 21:09:02 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qpopper
 PKG_SUPPORTED_OPTIONS=	inet6 ssl PAM
@@ -19,6 +19,7 @@ CONFIGURE_ENV+=		O_DEFS="${O_DEFS}" CFLAGS="-DINET6"
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
+# Please note this is currently experimental for platforms that support it
 .if !empty(PKG_OPTIONS:MPAM)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=        --with-pam
