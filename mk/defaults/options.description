@@ -52,7 +52,7 @@ db4
 debug	
 deliver-suid		Install deliver executable setuid root.
 domainscale	
-drac	
+drac			Enable DRAC support.
 dummy	
 dv			Enable usage of the libdv library.
 dvdread			Enable reproduction of DVDs.
@@ -116,8 +116,8 @@ java
 jpeg			Enable JPEG support.
 jpilot	
 kde	
-kerberos	
-kerberos4	
+kerberos		Enable Kerberos support.
+kerberos4		Enable Kerberos4 support.
 kqueue	
 krb4	
 krb5	
@@ -176,7 +176,7 @@ openldap
 openssl	
 oss			Enable support for the Open Sound System audio library.
 outgoingip	
-pam	
+pam			Enabel PAM support.
 patchviewer	
 pcre	
 perf-tuning	
@@ -193,6 +193,7 @@ postgresql73
 postgresql74	
 prefix-cmds	
 python	
+qpopper-servermode	Enable server mode.
 qregex	
 qt	
 quota	
@@ -221,7 +222,7 @@ socks
 socks4	
 socks5	
 sqlite	
-ssl	
+ssl			Enable SSL support.
 starttls	
 static	
 subshell	
