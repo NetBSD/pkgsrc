@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10264 2005/05/31 22:25:20 rillig Exp $
+$NetBSD: CHANGES,v 1.10265 2005/06/01 02:42:21 snj Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2746,3 +2746,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/bmake to 20050530 [sjg 2005-05-31]
 	Moved x11/controlcenter to x11/control-center [wiz 2005-05-31]
 	Updated audio/muse to 0.9nb3 [rillig 2005-05-31]
+	Updated time/devtodo to 0.1.18 [snj 2005-06-01]
