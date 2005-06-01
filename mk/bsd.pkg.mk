@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1681 2005/05/31 21:53:26 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1682 2005/06/01 03:04:16 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -20,27 +20,7 @@
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.hacks.mk"
-
-.if !defined(_REV_ALL_PHASES)
-_REV_ALL_PHASES=	# empty
-.  for _phase_ in ${ALL_PHASES}
-_REV_ALL_PHASES:=	${_phase_} ${_REV_ALL_PHASES}
-.  endfor
-.  undef _phase_
-.endif
-MAKEVARS+=		_REV_ALL_PHASES
-
-# Try including the .makevars.mk.* files in reverse order so that the
-# latest file is included and no more.
-#
-.for _phase_ in ${_REV_ALL_PHASES}
-_MAKEVARS_MK.${_phase_}=	${WRKDIR}/.${_phase_}_makevars.mk
-${_phase_}-vars: ${_MAKEVARS_MK.${_phase_}}
-.  if !defined(_MAKEVARS_MK)
-.    sinclude "${_MAKEVARS_MK.${_phase_}}"
-.  endif
-.endfor
-.undef _phase_
+.include "../../mk/bsd.makevars.mk"
 
 # This has to come first to avoid showing all BUILD_DEFS added by this
 # Makefile, which are usually not customizable.
