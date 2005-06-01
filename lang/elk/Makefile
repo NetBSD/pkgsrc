@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/04/11 21:46:13 tv Exp $
+# $NetBSD: Makefile,v 1.29 2005/06/01 18:02:58 jlam Exp $
 
 DISTNAME=		elk-3.0
 PKGNAME=		elk-3.0.3
@@ -26,7 +26,6 @@ BUILD_DEFS+=	ELK_GUI
 .if ${ELK_GUI} != "none"
 MAKE_ENV+=	X11_LDFLAGS="${X11_LDFLAGS:S/-Wl,//}"
 .  if !empty(ELK_GUI:Mxaw)
-USE_X11=	# defined
 .    include "../../mk/xaw.buildlink3.mk"
 LIBXAW:=	${LIBXAW:S/-Wl,//}
 ELK_SUBDIRS+=	lib/xlib lib/xt lib/xaw
@@ -43,6 +42,8 @@ PLIST_SRC+=	${PKGDIR}/PLIST.Motif
 
 PLIST_SRC+=	${PKGDIR}/PLIST.base
 MAKE_ENV+=	ELK_SUBDIRS="${ELK_SUBDIRS}"
+
+.include "../../mk/x11.buildlink3.mk"
 
 do-configure:
 	${MV} ${WRKSRC}/src/stab-elf.c ${WRKSRC}/src/stab-elf.c-dist

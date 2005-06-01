@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/22 20:28:47 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/01 18:02:52 jlam Exp $
 
 DISTNAME=		quakeforge-0.5.5
 PKGREVISION=		2
@@ -15,7 +15,6 @@ CONFIGURE_ARGS+=	--disable-xmms
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		bison gmake
 USE_LIBTOOL=		YES
-USE_X11=		YES
 
 SUBST_CLASSES+=		dsp
 SUBST_STAGE.dsp=	post-patch

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/05/22 20:07:37 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2005/06/01 18:02:37 jlam Exp $
 
 DISTNAME=	audacity-src-1.2.3
 PKGNAME=	audacity-1.2.3
@@ -16,7 +16,6 @@ WRKSRC=			${WRKDIR}/audacity-src-1.2.3
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xaudio
 CONFIGURE_ARGS+=	--with-id3=system

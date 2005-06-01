@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2005/05/22 20:08:28 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2005/06/01 18:03:09 jlam Exp $
 
 DISTNAME=	gv-3.6.1
 CATEGORIES=	print
@@ -10,7 +10,6 @@ COMMENT=	PostScript and PDF previewer
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-USE_X11=		yes
 
 USE_MAKEINFO=		yes
 TEXINFO_REQD=		4.2

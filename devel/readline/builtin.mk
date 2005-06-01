@@ -1,109 +1,114 @@
-# $NetBSD: builtin.mk,v 1.9 2005/01/26 16:17:16 jlam Exp $
+# $NetBSD: builtin.mk,v 1.10 2005/06/01 18:02:45 jlam Exp $
 
-_READLINE_H=		/usr/include/readline.h
-_READLINE_READLINE_H=	/usr/include/readline/readline.h
+BUILTIN_PKG:=	readline
 
-.for _lib_ in readline edit
-.  if !defined(_BLNK_LIB_FOUND.${_lib_})
-_BLNK_LIB_FOUND.${_lib_}!=	\
-	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" != "/usr/lib/lib${_lib_}.*"; then \
-		${ECHO} "yes";						\
-	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" != "/lib/lib${_lib_}.*"; then \
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
-.  endif
-.endfor
-.undef _lib_
+BUILTIN_FIND_LIBS:=		edit readline
+BUILTIN_FIND_FILES_VAR:=	H_READLINE
+BUILTIN_FIND_FILES.H_READLINE=	/usr/include/readline/readline.h	\
+				/usr/include/readline.h
+BUILTIN_FIND_GREP.H_READLINE=	\#define[ 	]*RL_VERSION_MAJOR
 
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.readline)
 IS_BUILTIN.readline=	no
-.  if exists(${_READLINE_H}) || exists(${_READLINE_READLINE_H})
-.    if exists(${_READLINE_H})
-_READLINE_HEADER=	${_READLINE_H}
-.    else
-_READLINE_HEADER=	${_READLINE_READLINE_H}
-.    endif
-IS_BUILTIN.readline!=	\
-	if ${GREP} -q "\#define[ 	]*RL_VERSION_MAJOR" ${_READLINE_HEADER}; then \
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-.    if !empty(IS_BUILTIN.readline:M[yY][eE][sS])
-#
-# Create an appropriate name for the built-in package distributed
-# with the system.  This package name can be used to check against
-# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc
-# version or if the built-in one is sufficient.
-#
-_READLINE_MAJOR!=							\
-	${AWK} '/\#define[ 	]*RL_VERSION_MAJOR/ { print $$3 }'	\
-		${_READLINE_HEADER}
-_READLINE_MINOR!=							\
-	${AWK} '/\#define[ 	]*RL_VERSION_MINOR/ { print $$3 }'	\
-		${_READLINE_HEADER}
-_READLINE_VERSION=	${_READLINE_MAJOR}.${_READLINE_MINOR}
-BUILTIN_PKG.readline=	readline-${_READLINE_VERSION}
-BUILDLINK_VARS+=	BUILTIN_PKG.readline
-.    endif
+.  if empty(H_READLINE:M${LOCALBASE}/*) && exists(${H_READLINE}) && \
+      !empty(BUILTIN_LIB_FOUND.readline:M[yY][eE][sS])
+IS_BUILTIN.readline=	yes
 .  endif
-BUILDLINK_VARS+=	IS_BUILTIN.readline
-.endif	# IS_BUILTIN.readline
+.endif
+MAKEVARS+=	IS_BUILTIN.readline
 
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.readline) && \
+    !empty(IS_BUILTIN.readline:M[yY][eE][sS]) && \
+    exists(${H_READLINE})
+BUILTIN_VERSION.readline!=						\
+	${AWK} '/\#define[ 	]*RL_VERSION_MAJOR/ { M = $$3 }		\
+		/\#define[ 	]*RL_VERSION_MINOR/ { m = "."$$3 }	\
+		END { printf "%s%s\n", M, m }				\
+	' ${H_READLINE:Q}
+BUILTIN_PKG.readline=	readline-${BUILTIN_VERSION.readline}
+.endif
+MAKEVARS+=	BUILTIN_PKG.readline
+
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
 .if !defined(USE_BUILTIN.readline)
-USE_BUILTIN.readline?=	${IS_BUILTIN.readline}
-PREFER.readline?=	pkgsrc
-
-.  if defined(BUILTIN_PKG.readline)
+.  if ${PREFER.readline} == "pkgsrc"
+USE_BUILTIN.readline=	no
+.  else
+USE_BUILTIN.readline=	${IS_BUILTIN.readline}
+.    if defined(BUILTIN_PKG.readline) && \
+        !empty(IS_BUILTIN.readline:M[yY][eE][sS])
 USE_BUILTIN.readline=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.readline}
-.      if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
+.      for _dep_ in ${BUILDLINK_DEPENDS.readline}
+.        if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
 USE_BUILTIN.readline!=							\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.readline}; then \
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.readline:Q}; then \
 		${ECHO} "yes";						\
 	else								\
 		${ECHO} "no";						\
 	fi
-.      endif
-.    endfor
-.  endif
-
-.  if ${PREFER.readline} == "native"
-# XXX
-# XXX By default, assume that the native editline library supports readline.
-# XXX
-.    if !empty(_BLNK_LIB_FOUND.readline:M[nN][oO]) && \
-        !empty(_BLNK_LIB_FOUND.edit:M[yY][eE][sS])
-USE_BUILTIN.readline=	yes
-_INCOMPAT_READLINE?=	SunOS-*-* Darwin-*-* Interix-*-*
-.      for _pattern_ in ${_INCOMPAT_READLINE} ${INCOMPAT_READLINE}
-.        if !empty(MACHINE_PLATFORM:M${_pattern_})
-USE_BUILTIN.readline=	no
 .        endif
 .      endfor
 .    endif
-.  endif
-
-.  if defined(USE_GNU_READLINE)
-.    if !empty(IS_BUILTIN.readline:M[nN][oO]) || \
-        (${PREFER.readline} == "pkgsrc")
-USE_BUILTIN.readline=	no
+# XXX
+# XXX By default, assume that the native editline library is good enough
+# XXX to replace GNU readline if it provides the readline-compatibility
+# XXX headers.
+# XXX
+.    if !empty(BUILTIN_LIB_FOUND.readline:M[nN][oO]) && \
+        !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS]) && \
+        (exists(/usr/include/readline/readline.h) || \
+         exists(/usr/include/readline.h))
+USE_BUILTIN.readline=	yes
 .    endif
-.  endif
-.endif	# USE_BUILTIN.readline
+#
+# Some platforms don't have a readline/editline implementation that can
+# replace GNU readline.
+#
+_INCOMPAT_READLINE?=	SunOS-*-* Darwin-*-* Interix-*-*
+.    for _pattern_ in ${_INCOMPAT_READLINE} ${INCOMPAT_READLINE}
+.      if !empty(MACHINE_PLATFORM:M${_pattern_})
+USE_BUILTIN.readline=	no
+.      endif
+.    endfor
+.  endif  # PREFER.readline
+.endif
+MAKEVARS+=	USE_BUILTIN.readline
 
+# If USE_GNU_READLINE is defined, then force the use of a GNU readline
+# implementation.
+#
+.if defined(USE_GNU_READLINE)
+.  if !empty(IS_BUILTIN.readline:M[nN][oO])
+USE_BUILTIN.readline=	no
+.  endif
+.endif
+
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
 CHECK_BUILTIN.readline?=	no
 .if !empty(CHECK_BUILTIN.readline:M[nN][oO])
 
-.if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
-.  if !empty(_BLNK_LIB_FOUND.readline:M[nN][oO]) && \
-      !empty(_BLNK_LIB_FOUND.edit:M[yY][eE][sS])
-BUILDLINK_TRANSFORM+=		l:history:edit:termcap
-BUILDLINK_TRANSFORM+=		l:readline:edit:termcap
+.  if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
+.    if !empty(BUILTIN_LIB_FOUND.readline:M[nN][oO]) && \
+        !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
+BUILDLINK_TRANSFORM+=	l:history:edit:termcap
+BUILDLINK_TRANSFORM+=	l:readline:edit:termcap
+.    endif
 .  endif
-.endif
 
 .endif	# CHECK_BUILTIN.readline

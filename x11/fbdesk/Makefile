@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/16 01:12:41 kristerw Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/01 18:03:28 jlam Exp $
 #
 
 DISTNAME=	fbdesk-1.2.1
@@ -12,7 +12,6 @@ COMMENT=	Application that creates and manage icons on your desktop
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
-USE_X11=	YES
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fbdesk

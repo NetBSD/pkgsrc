@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/22 20:08:15 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/01 18:03:05 jlam Exp $
 #
 
 DISTNAME=	gnome2-user-docs-2.8.1
@@ -14,7 +14,6 @@ USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../textproc/scrollkeeper/omf.mk"

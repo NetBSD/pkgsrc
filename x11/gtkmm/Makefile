@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/22 20:08:48 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/01 18:03:29 jlam Exp $
 #
 
 DISTNAME=	gtkmm-2.2.12
@@ -14,7 +14,6 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake
 USE_PERL5=		YES
-USE_X11=		YES
 USE_LANGUAGES=		c c++
 
 PKGCONFIG_OVERRIDE=	atk/atkmm-1.0.pc.in

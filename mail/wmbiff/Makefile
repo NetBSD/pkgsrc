@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/05/22 20:08:13 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/06/01 18:03:00 jlam Exp $
 
 DISTNAME=	wmbiff-0.4.25
 PKGREVISION=	1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://sourceforge.net/projects/wmbiff/
 COMMENT=	xbuffy like "mail-checker" for WindowMaker
 
 GNU_CONFIGURE=	YES
-USE_X11=	YES
 USE_TOOLS+=	gmake
 
 EX_DIR=		${PREFIX}/share/examples/wmbiff

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/04/11 21:46:14 tv Exp $
+# $NetBSD: Makefile,v 1.35 2005/06/01 18:02:58 jlam Exp $
 
 DISTNAME=       	icon.v942src
 PKGNAME=		icon-9.4.2
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.cs.arizona.edu/icon/index.htm
 COMMENT=		The Icon programming language
 
-USE_X11=		YES
 CONFIGURE_TARGET=	X-Configure
 BUILD_TARGET=		All
 TEST_TARGET=		Test
@@ -49,6 +48,7 @@ PTHREAD_OPTS+=		require native
 PKG_FAIL_REASON=	"${PKGNAME} does not have the correct config name for this system"
 .endif
 
+.include "../../mk/x11.buildlink3.mk"
 
 pre-build:
 	${MKDIR} ${WRKSRC}/lib/icon

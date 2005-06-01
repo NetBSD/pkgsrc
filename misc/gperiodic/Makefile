@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/05/22 20:08:15 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/06/01 18:03:05 jlam Exp $
 
 DISTNAME=		gperiodic-2.0.8
 CATEGORIES=		misc x11
@@ -12,7 +12,6 @@ BUILD_USES_MSGFMT=	# defined
 
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	# defined
-USE_X11=		# defined
 USE_TOOLS+=		gmake
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED

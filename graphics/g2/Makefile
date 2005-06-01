@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/11 21:46:02 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/01 18:02:55 jlam Exp $
 
 DISTNAME=		g2-0.49a
 PKGREVISION=		3
@@ -10,7 +10,6 @@ HOMEPAGE=		http://g2.sourceforge.net/
 COMMENT=		Powerful, easy to use 2D graphics library
 
 GNU_CONFIGURE=		yes
-USE_X11=		yes
 USE_LIBTOOL=		yes
 
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/G2/.packlist
@@ -29,5 +28,6 @@ post-install:
 		${PREFIX}/share/examples/g2
 
 .include "../../graphics/gd/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

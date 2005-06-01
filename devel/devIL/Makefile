@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:19 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:43 jlam Exp $
 #
 
 DISTNAME=	DevIL-1.6.6
@@ -14,7 +14,6 @@ COMMENT=	Developer's Image Library
 WRKSRC=		${WRKDIR}/DevIL
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_X11=	yes
 
 CONFIGURE_ARGS+=	--disable-lcms
 

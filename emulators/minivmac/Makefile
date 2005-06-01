@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:44 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/01 18:02:47 jlam Exp $
 
 DISTNAME=	minivmac-0.1.7.src
 PKGNAME=	minivmac-0.1.7
@@ -12,11 +12,12 @@ HOMEPAGE=	http://minivmac.sourceforge.net/
 COMMENT=	Miniature Macintosh emulator
 
 WRKSRC=		${WRKDIR}/minivmac
-USE_X11=	YES
 
 SCRIPTS_ENV+=	CC="${CC}"
 
 DOCDIR=		${PREFIX}/share/doc/html/minivmac
+
+.include "../../mk/x11.buildlink3.mk"
 
 do-build:
 	cd ${WRKSRC}/tool/bash; ${SETENV} ${SCRIPTS_ENV} ${SH} build

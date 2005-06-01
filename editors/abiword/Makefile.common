@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2005/05/22 20:07:55 jlam Exp $
+# $NetBSD: Makefile.common,v 1.20 2005/06/01 18:02:45 jlam Exp $
 
 # Be sure to update PLIST and distinfo for editors/abiword-plugins when updating
 ABIWORD_VERSION=	2.2.7
@@ -19,7 +19,6 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake
-USE_X11=		yes
 
 CONFIGURE_ARGS+=        --with-libpng=${BUILDLINK_PREFIX.png}
 

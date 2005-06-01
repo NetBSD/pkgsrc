@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/16 01:15:33 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/01 18:03:24 jlam Exp $
 
 DISTNAME=	ethemes-0.1
 PKGREVISION=	2
@@ -13,7 +13,6 @@ COMMENT=	Themes for the window manager Enlightenment
 DEPENDS+=	enlightenment>=0.16.2:../../wm/enlightenment
 
 DIST_SUBDIR=	ethemes
-USE_X11=	yes
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 EXTRACT_ONLY=
@@ -37,6 +36,8 @@ E_THEMES?=	Absolute_E-DR16-199911060830.etheme \
 	X11-DR16-199910131422.etheme \
 	arctic-DR16-200006050720.etheme \
 	eMac-DR16-199912101635.etheme small-e-DR16-199908230041.etheme
+
+.include "../../mk/x11.buildlink3.mk"
 
 do-install:
 .for FILE in ${E_THEMES}

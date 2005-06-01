@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:08:18 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 18:03:06 jlam Exp $
 #
 
 DISTNAME=	gmencoder-0.1.0
@@ -20,7 +20,6 @@ USE_DIRS+=       	gnome2-1.5
 USE_TOOLS+=		gmake
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 
 CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 EGDIR=			${PREFIX}/share/examples/gmencoder

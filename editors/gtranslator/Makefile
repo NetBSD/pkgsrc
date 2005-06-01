@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 20:07:56 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/01 18:02:45 jlam Exp $
 
 DISTNAME=	gtranslator-1.0.2
 CATEGORIES=	editors
@@ -13,7 +13,6 @@ BUILD_USES_MSGFMT=	yes
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 MANCOMPRESSED=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:48:15 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/01 18:03:32 jlam Exp $
 #
 
 DISTNAME=		Xdialog-2.1.1
@@ -17,7 +17,6 @@ BUILD_USES_MSGFMT=	YES
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
-USE_X11=		YES
 
 DOCDIR=			${PREFIX}/share/doc/html/xdialog
 EGDIR=			${PREFIX}/share/examples/xdialog
@@ -35,5 +34,4 @@ post-install:
 	done
 
 .include "../../x11/gtk/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

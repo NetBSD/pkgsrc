@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/02/24 06:36:18 veego Exp $
+# $NetBSD: Makefile,v 1.38 2005/06/01 18:02:56 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/MesaLib/glut/}
 PKGREVISION=	2
@@ -9,9 +9,13 @@ CONFLICTS+=	Mesa<3.2.1
 
 .include "../Mesa/Makefile.common"
 
-MESA_REQD+=	${MESA_VERSION}
+BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=${MESA_VERSION}
+BUILDLINK_DEPENDS.glu+=		glu>=${MESA_VERSION}
 
 INSTLIBS=	${WRKSRC}/src/glut/glx/libglut.la
+
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 
 pre-build:
 	cd ${WRKSRC} && ${RM} -fr src/mesa src/glu src/glw progs
@@ -24,6 +28,4 @@ do-install:
 		${INSTALL_DATA} $${hdr} ${PREFIX}/include/GL;		\
 	done
 
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

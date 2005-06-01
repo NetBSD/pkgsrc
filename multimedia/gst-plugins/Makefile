@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/03/22 16:16:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2005/06/01 18:03:06 jlam Exp $
 #
 
 .include "Makefile.common"
@@ -6,7 +6,6 @@
 COMMENT+=		base plugins
 
 USE_PERL5=		run
-USE_X11=		yes
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-gconf.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-interfaces.pc.in
@@ -28,4 +27,5 @@ REPLACE_PERL+=		tools/gst-launch-ext-m.m
 REPLACE_PERL+=		tools/gst-visualise-m.m
 
 .include "../../devel/GConf2/schemas.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

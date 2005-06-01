@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:47 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 18:03:25 jlam Exp $
 #
 
 DISTNAME=	evilwm_0.99.17.orig
@@ -11,9 +11,10 @@ HOMEPAGE=	http://evilwm.sourceforge.net/
 COMMENT=	Minimalist Window Manager for X
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
-USE_X11=	yes
 
 BUILD_TARGET=	allinone
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/evilwm

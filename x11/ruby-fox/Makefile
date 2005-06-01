@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/11 21:48:13 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/01 18:03:30 jlam Exp $
 
 DISTNAME=	FXRuby-1.0.29
 PKGNAME=	${RUBY_PKGPREFIX}-fox-1.0.29
@@ -15,7 +15,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-opengl>=0.32:../../graphics/ruby-opengl
 
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
-USE_X11=		yes
 INSTALL_TARGET=		site-install
 WRKDIST=		${WRKDIR}/${DISTNAME}
 WRKSRC=			${WRKDIST}/ext/fox
@@ -45,4 +44,5 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

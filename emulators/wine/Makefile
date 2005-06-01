@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2005/05/31 21:42:04 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2005/06/01 18:02:48 jlam Exp $
 
 DISTNAME=	Wine-20050524
 PKGNAME=	${DISTNAME:S/W/w/}
@@ -21,7 +21,6 @@ ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 SunOS*-i386 Darwin*-i386
 WRKSRC=		 	${WRKDIR}/${DISTNAME:S/W/w/}
 USE_TOOLS+=		bison gmake
 USE_LIBTOOL=		yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-curses --disable-trace #--disable-debug
 CONFIGURE_ENV+=		ac_cv_path_ARTSCCONFIG=${TRUE}
@@ -57,4 +56,5 @@ post-install:
 
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

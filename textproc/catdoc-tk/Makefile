@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/29 17:27:36 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/01 18:03:23 jlam Exp $
 #
 
 .include "../../textproc/catdoc/Makefile.common"
@@ -8,7 +8,6 @@ COMMENT+=		(Tk interface)
 
 DEPENDS+=		catdoc>=0.91.4nb1:../../textproc/catdoc
 
-USE_X11=		yes
 
 CONFIGURE_ARGS+=	--enable-wordview
 CONFIGURE_ENV+=		WISH="${BUILDLINK_PREFIX.tk}/bin/wish"

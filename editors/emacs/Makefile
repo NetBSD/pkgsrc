@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2005/05/22 20:07:56 jlam Exp $
+# $NetBSD: Makefile,v 1.85 2005/06/01 18:02:45 jlam Exp $
 
 DISTNAME=	emacs-21.4a
 PKGREVISION=	1
@@ -11,7 +11,6 @@ COMMENT=	GNU editing macros (editor)
 
 CONFLICTS=	mule-[0-9]*
 
-USE_X11=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 

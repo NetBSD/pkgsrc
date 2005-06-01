@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:48 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/01 18:03:29 jlam Exp $
 #
 
 DISTNAME=	keylaunch-1.3.0
@@ -10,8 +10,9 @@ HOMEPAGE=	http://www.kensden.pwp.blueyonder.co.uk/Oroborus/download.htm
 COMMENT=	X utility for binding commands to a hot key
 
 WRKSRC=		${WRKDIR}/keylaunch
-USE_X11=	YES
 USE_TOOLS+=	gmake
+
+.include "../../mk/x11.buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/keylaunch ${PREFIX}/bin

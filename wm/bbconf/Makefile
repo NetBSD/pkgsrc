@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/16 23:09:00 kristerw Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/01 18:03:24 jlam Exp $
 #
 
 DISTNAME=	bbconf-1.4
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://bbconf.sourceforge.net/
 COMMENT=	Configuration tool for the blackbox window manager
 
-USE_X11=		YES
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

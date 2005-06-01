@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/05/16 01:15:31 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/01 18:02:52 jlam Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	1
@@ -22,7 +22,6 @@ DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=	suse_glx>=6.4:../../emulators/${SUSE_DIR_PREFIX}_glx
 .include "../../emulators/suse_linux/Makefile.application"
 .else
-USE_X11=	yes
 .endif
 
 NO_SRC_ON_FTP=	no
@@ -44,6 +43,8 @@ BINNAME=	quake3arena
 WRKSRC=		${WRKDIR}
 LIBDIR=		${PREFIX}/lib/lokigames/${BINNAME}
 SHAREDIR=	${PREFIX}/share/doc/lokigames
+
+.include "../../mk/x11.buildlink3.mk"
 
 do-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/05/22 20:07:45 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/06/01 18:02:42 jlam Exp $
 #
 
 DISTNAME=		libgnomedb-1.2.1
@@ -12,7 +12,6 @@ COMMENT=		GNOME2 database library
 
 BUILD_USES_MSGFMT=	yes
 
-USE_X11=		YES
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_DIRS+=		gnome2-1.5

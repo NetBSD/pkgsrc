@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/05/22 20:07:58 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/06/01 18:02:48 jlam Exp $
 
 DISTNAME=	uae-0.8.22
 PKGREVISION=	2
@@ -13,7 +13,6 @@ COMMENT=	The UAE Amiga Emulator
 DEPENDS=	unzip>=5.40:../../archivers/unzip
 
 USE_TOOLS+=	gmake
-USE_X11=	yes
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--enable-dga --enable-vidmode
@@ -26,6 +25,7 @@ CONFIGURE_ARGS+=	--disable-ui
 .endif
 
 .include "../../mk/compiler.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 .if !empty(CC_VERSION:Mgcc-3.*)
 post-configure:

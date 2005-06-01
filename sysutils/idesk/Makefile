@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:32 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/01 18:03:22 jlam Exp $
 #
 
 DISTNAME=	idesk-0.3.5
@@ -11,7 +11,6 @@ HOMEPAGE=	http://sourceforge.net/projects/idesk/
 COMMENT=	Gives users of minimal WMs icons on their desktop
 
 USE_TOOLS+=	gmake
-USE_X11=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/idesk ${PREFIX}/bin/idesk

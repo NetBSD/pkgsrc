@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/05/22 20:07:36 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/01 18:02:37 jlam Exp $
 
 DISTNAME=	cxunzip-0.98
 PKGREVISION=	2
@@ -11,7 +11,6 @@ COMMENT=	Cloned Xunzip is a GNOME zip-archive uncompressing program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_X11=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++

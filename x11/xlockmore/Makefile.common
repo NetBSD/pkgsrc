@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2005/05/30 23:34:49 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.28 2005/06/01 18:03:32 jlam Exp $
 #
 # This Makefile.common is included by:
 #
@@ -60,6 +60,8 @@ CONFIGURE_ARGS+=	--enable-def-play="${XLOCK_AUDIOPLAY}"
 .if defined(XLOCK_NO_DPMS) && !empty(XLOCK_NO_DPMS:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--without-dpms
 .endif
+
+.include "../../mk/x11.buildlink3.mk"
 
 # Set the complete paths to the sound files and set the default xlock
 # mode/screensaver.

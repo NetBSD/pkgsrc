@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/22 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/01 18:02:49 jlam Exp $
 #
 
 DISTNAME=		shinonome-0.9.10-src
@@ -30,6 +30,8 @@ FILES_SUBST+=		ALIAS_SHINONOME=${ALIAS_SHINONOME}
 CONFIGURE_ARGS+=	--with-fontdir=${FONTDIR}
 CONFIGURE_ARGS+=	--disable-progressbar
 CONFIGURE_ARGS+=	--with-foundry=${FOUNDRY}
+
+.include "../../mk/x11.buildlink3.mk"
 
 do-install:
 	cd ${WRKSRC}; \

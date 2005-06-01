@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/24 21:12:54 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:46 jlam Exp $
 
 DISTNAME=		xcoral-3.2
 CATEGORIES=		editors
@@ -17,6 +17,8 @@ LIBFILES=	DEPEND README cmd.sc color.sc comments.sc compare-win.sc \
 		man.dtex misc-commands.sc mode-ext.sc mode.sc mouse.sc \
 		rcs.sc save.sc sun-keydef.sc title.sc top-ten.sc \
 		utilities.sc version.sc window-utilities.sc xcoralrc.lf
+
+.include "../../mk/x11.buildlink3.mk"
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/xcoral

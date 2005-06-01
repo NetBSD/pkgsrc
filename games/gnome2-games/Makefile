@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/05/22 20:08:01 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2005/06/01 18:02:50 jlam Exp $
 
 DISTNAME=		gnome-games-2.10.1
 CATEGORIES=		games gnome
@@ -18,7 +18,6 @@ BUILD_USES_MSGFMT=	yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
-USE_X11=		yes
 USE_CONFIG_WRAPPER=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

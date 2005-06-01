@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:30 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/01 18:03:23 jlam Exp $
 
 DISTNAME=	wmSMPmon-2.3
 CATEGORIES=	sysutils x11
@@ -10,7 +10,6 @@ COMMENT=	Dockable CPU (SMP) monitor
 
 WRKSRC=		${WRKDIR}/wmSMPmon-2.x/wmSMPmon
 
-USE_X11=	yes
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/wmsmpmon.1 ${PREFIX}/man/man1/wmSMPmon.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:28 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/01 18:02:44 jlam Exp $
 #
 
 DISTNAME=	NetBeansIDE-release351
@@ -13,7 +13,6 @@ COMMENT=	NetBeans Java IDE
 
 USE_JAVA=	run
 PKG_JVMS_ACCEPTED=  sun-jdk13 sun-jdk14 jdk13 jdk14
-USE_X11=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/netbeans
@@ -37,5 +36,6 @@ do-install:
 	    tomcat406 update_tracking ${SHAREDIR}
 	${LN} -sf ${SHAREDIR}/bin/runide.sh  ${PREFIX}/bin/netbeans
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

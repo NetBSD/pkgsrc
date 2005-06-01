@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:08:14 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 18:03:03 jlam Exp $
 
 DISTNAME=	octave-forge-2004.11.16
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Extensions to Octave
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_TOOLS+=		gmake
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 UNLIMIT_RESOURCES=	datasize
@@ -48,5 +47,6 @@ post-patch:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/octave/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

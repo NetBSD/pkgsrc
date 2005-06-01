@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/22 20:07:58 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/01 18:02:48 jlam Exp $
 
 DISTNAME=		s9xs139
 PKGNAME=		snes9x-1.39
@@ -15,7 +15,6 @@ BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 WRKSRC=			${WRKDIR}/release
 USE_TOOLS+=		gmake
-USE_X11=		yes
 PTHREAD_OPTS=		require
 
 do-install:
@@ -62,4 +61,5 @@ MAKE_ENV+=	USBHID_H=1
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

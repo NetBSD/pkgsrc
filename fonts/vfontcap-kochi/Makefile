@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/25 20:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/01 18:02:49 jlam Exp $
 
 DISTNAME=		vfontcap-kochi-0.0
 PKGREVISION=		1
@@ -16,7 +16,6 @@ WRKSRC=			${WRKDIR}
 EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		YES
 NO_BUILD=		YES
-USE_X11=		YES # kochi font defines this as well.
 
 USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL

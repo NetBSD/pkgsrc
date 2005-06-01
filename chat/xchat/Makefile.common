@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2005/05/22 20:07:43 jlam Exp $
+# $NetBSD: Makefile.common,v 1.38 2005/06/01 18:02:41 jlam Exp $
 
 DISTNAME=	xchat-1.8.11
 PKGREVISION=	11
@@ -52,5 +52,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xchat
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/xchat
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/python/application.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/06/01 14:11:26 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/06/01 18:02:37 jlam Exp $
 
 DISTNAME=	SDL_mixer-1.2.6
 PKGREVISION=	2
@@ -14,7 +14,6 @@ CONFLICTS=		SDL-mixer-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		YES
-USE_X11=		YES
 GNU_CONFIGURE=		YES
 
 CPPFLAGS=		-Dunix=1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/01 03:36:47 taca Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/01 18:02:57 jlam Exp $
 
 DISTNAME=	imlib2-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-imlib2-${VER}
@@ -16,7 +16,6 @@ REPLACE_RUBY_DIRS=	${WRKSRC}/examples
 RUBY_HAS_ARCHLIB=	yes
 RUBY_REQD=		1.8.0
 USE_RUBY_EXTCONF=	yes
-USE_X11= 		yes
 
 INSTALL_TARGET=	site-install
 
@@ -26,6 +25,8 @@ BUILDLINK_DEPENDS.imlib2+=      imlib2>=1.2.0nb2
 .include "../../lang/ruby/modules.mk"
 
 DOCS=		AUTHORS COPYING ChangeLog README TODO
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/imlib2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:07:57 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:46 jlam Exp $
 #
 
 DISTNAME=		aranym-0.8.9beta
@@ -12,7 +12,6 @@ COMMENT=		Atari Running on Any Machine
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/Unix
 USE_TOOLS+=		gzip

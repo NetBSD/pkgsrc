@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/03/13 16:43:20 uebayasi Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 18:02:47 jlam Exp $
 
 DISTNAME=	fMSX24.tar
 PKGNAME=	fmsx-2.4
@@ -17,7 +17,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
 WRKSRC= 	${WRKDIR}/MSX
-USE_X11=	yes
 
 .include "../../mk/bsd.prefs.mk"
 USE_SUN_AUDIO?=	YES
@@ -29,6 +28,8 @@ DEFS+=		-DSUN_AUDIO
 .endif
 
 MAKE_ENV=	DEFS="${DEFS}"
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-extract:
 	@${RM} ${WRKSRC}/CMOS.ROM

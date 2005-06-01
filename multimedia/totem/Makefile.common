@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/05/22 20:08:22 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/06/01 18:03:07 jlam Exp $
 #
 
 DISTNAME=	totem-1.0.2
@@ -18,7 +18,6 @@ USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 
 PKGCONFIG_OVERRIDE=	totem-plparser.pc.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/22 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/01 18:02:49 jlam Exp $
 
 DISTNAME=	bzflag-1.10.6.20040515
 PKGNAME=	${DISTNAME:S/.20040515//}
@@ -15,7 +15,6 @@ USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 USE_NCURSES=	# resize_term()
 USE_PERL5=	build
-USE_X11=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,4 +35,5 @@ CONFIGURE_ARGS+=	--with-ncurses
 
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

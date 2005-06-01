@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/05/22 05:35:32 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/06/01 18:02:57 jlam Exp $
 
 DISTNAME=	pstoedit_3_31
 PKGNAME=	pstoedit-3.31
@@ -16,7 +16,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/pstoedit_3.31/src
-USE_X11=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c++
 GNU_CONFIGURE=	yes
@@ -46,5 +45,6 @@ post-install:
 	${INSTALL_DATA} ${DOCSRC}/readme.txt	${DOCDIR}
 
 .include "../../graphics/plotutils/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

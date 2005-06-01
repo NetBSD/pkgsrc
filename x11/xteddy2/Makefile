@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:48:16 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/01 18:03:33 jlam Exp $
 
 DISTNAME=	xteddy-2.0.1
 PKGREVISION=	6
@@ -11,7 +11,6 @@ COMMENT=	Teddy bear for your desktop
 
 CONFLICT+=	xteddy-1.*
 
-USE_X11=	yes
 GNU_CONFIGURE=	yes
 
 pre-configure:

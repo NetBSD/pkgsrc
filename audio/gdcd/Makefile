@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/04/11 21:44:52 tv Exp $
+# $NetBSD: Makefile,v 1.29 2005/06/01 18:02:38 jlam Exp $
 #
 
 DISTNAME=	gdcd-0.2.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://gdcd.undergrid.net/
 COMMENT=	CD player for the X Window System using the GIMP Tool Kit (GTK)
 
 USE_DIRS+=	xdg-1.1
-USE_X11=	YES
 GNU_CONFIGURE=	YES
 
 .include "../../audio/libcdaudio/buildlink3.mk"

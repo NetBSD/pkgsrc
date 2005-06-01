@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/02/12 23:38:04 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2005/06/01 18:03:22 jlam Exp $
 #
 
 ### The charset option enables input/display support for various 8-bit
@@ -58,7 +58,7 @@ CONFIGURE_ARGS+=	--without-vfs
 ### Shift modifiers) and mouse support.
 .if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--with-x
-USE_X11=		yes
+.  include "../../mk/x11.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
 .endif

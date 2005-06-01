@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/07 20:43:39 kristerw Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/01 18:02:40 jlam Exp $
 
 DISTNAME=	phylip-3.61
 CATEGORIES=	biology
@@ -14,7 +14,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
-USE_X11=	yes
+.include "../../mk/x11.buildlink3.mk"
 
 do-install:
 .for PROGRAM in clique consense contml contrast dnacomp dnadist		\

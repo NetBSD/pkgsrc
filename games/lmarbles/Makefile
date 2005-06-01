@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/16 14:43:49 cube Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/01 18:02:51 jlam Exp $
 
 DISTNAME=	lmarbles-1.0.7
 PKGREVISION=	2
@@ -9,7 +9,6 @@ MAINTAINER=	xs@nitric.net
 HOMEPAGE=	http://lgames.sourceforge.net/
 COMMENT=	Atomix-like puzzle
 
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../audio/SDL_mixer/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/24 21:13:03 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:24 jlam Exp $
 
 DISTNAME=		rxvt-2.6.0
 PKGNAME=		rclock-2.6.0
@@ -15,4 +15,5 @@ USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		clock
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/05/19 21:13:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.50 2005/06/01 18:03:04 jlam Exp $
 
 DISTNAME=	gnome-2.10.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -61,7 +61,6 @@ DEPENDS+=	ximian-connector>=2.2.2:../../mail/ximian-connector
 #DEPENDS+=	gnomemeeting>=1.2.1:../../net/gnomemeeting
 #DEPENDS+=	sound-juicer>=2.10.1:../../audio/sound-juicer
 
-USE_X11=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes

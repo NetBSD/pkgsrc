@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/28 03:01:20 taca Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/01 18:02:57 jlam Exp $
 
 DISTNAME=	RMagick-1.8.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ RUBY_VERSION_SUPPORTED=	18	# build error with Ruby 1.6.8
 RUBY_HAS_ARCHLIB=	yes
 GNU_CONFIGURE=		yes
 USE_GHOSTSCRIPT=	build
-USE_X11=		yes
 
 CONFIGURE_ARGS+=	--with-doc-dir=${RUBY_DOCDIR}/RMagick
 CONFIGURE_ARGS+=	--without-graphics-magick
@@ -24,6 +23,7 @@ post-install:
 		${PAX} -rw -pp -pm . ${RUBY_EXAMPLESDIR}/RMagick
 
 .include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

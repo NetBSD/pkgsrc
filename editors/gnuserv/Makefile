@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/31 00:10:12 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/01 18:02:45 jlam Exp $
 
 DISTNAME=	gnuserv-3.12.7
 PKGREVISION=	1
@@ -12,7 +12,8 @@ COMMENT=	Improved version of emacsserver for GNU Emacs
 CONFLICTS+=	xemacs-[0-9]*
 
 GNU_CONFIGURE=	YES
-USE_X11=	YES
+
+.include "../../mk/x11.buildlink3.mk"
 
 EL_FILES=	devices.el gnuserv.el gnuserv-compat.el
 post-install:

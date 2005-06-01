@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/18 15:53:35 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/01 18:02:56 jlam Exp $
 
 DISTNAME=	libgii-0.9.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -14,7 +14,6 @@ COMMENT=	General Input Interface - API for all possible input sources
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_PKGINSTALL=		yes
-USE_X11=		yes
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
 
@@ -32,6 +31,7 @@ CONF_FILES+=		${EGDIR}/filter/mouse ${PKG_SYSCONFDIR}/filter/mouse
 PTHREAD_OPTS+=		native
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 .if empty(PTHREAD_TYPE:Mnative)
 PLIST_SUBST+=		GGTICK=""

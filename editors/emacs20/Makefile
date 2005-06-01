@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/05/22 20:07:56 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/01 18:02:45 jlam Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	5
@@ -52,8 +52,8 @@ CONFIGURE_ARGS+=--with-pop
 .endif
 
 .if defined(EMACS_USE_X)
+.include "../../mk/x11.buildlink3.mk"
 BUILD_DEFS+=		EMACS_USE_X EMACS_USE_X_TOOLKIT
-USE_X11=		yes
 CONFIGURE_ARGS+=	--with-x=yes
 .if defined(EMACS_USE_X_TOOLKIT)
 CONFIGURE_ARGS+=	--with-x-toolkit=${EMACS_USE_X_TOOLKIT}

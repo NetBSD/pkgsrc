@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/05/10 20:24:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2005/06/01 18:03:29 jlam Exp $
 
 DISTNAME=		gtk-engines-2.6.3
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -19,7 +19,6 @@ BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.6.4
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		theme-1.1 xdg-1.1
-USE_X11=		yes
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	gtk-engines-2.pc.in

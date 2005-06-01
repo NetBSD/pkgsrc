@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:01 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/01 18:02:50 jlam Exp $
 #
 
 DISTNAME=	glaxium_0.5
@@ -12,7 +12,6 @@ HOMEPAGE=	http://xhosxe.free.fr/glaxium/
 COMMENT=	Space-ship OpenGL shoot them up
 
 GNU_CONFIGURE=		yes
-USE_X11=		yes
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 

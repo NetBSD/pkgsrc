@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2005/05/22 20:08:44 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2005/06/01 18:03:26 jlam Exp $
 
 DISTNAME=	bluefish-1.0
 PKGREVISION=	1
@@ -20,7 +20,6 @@ BUILD_USES_MSGFMT=	YES
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-icon-path=${PREFIX}/share/pixmaps
 

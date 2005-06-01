@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/04 13:58:32 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:44 jlam Exp $
 #
 
 DISTNAME=		jgrasp170
@@ -13,7 +13,6 @@ COMMENT=		IDE with support for Software Visualizations
 
 WRKSRC=			${WRKDIR}/jgrasp
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 jdk13 jdk14
-USE_X11=		yes
 
 do-configure:
 	${MKDIR} ${WRKSRC}/bin/${LOWER_OPSYS}
@@ -42,5 +41,6 @@ do-install:
 	${LN} -s ${PREFIX}/${PKGNAME}/bin/${LOWER_OPSYS}/jgrasp		\
 		${PREFIX}/bin/jgrasp
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

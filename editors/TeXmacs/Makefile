@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/05/31 16:37:09 drochner Exp $
+# $NetBSD: Makefile,v 1.44 2005/06/01 18:02:45 jlam Exp $
 
 DISTNAME=	TeXmacs-1.0.5.2-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -15,7 +15,6 @@ BUILD_TARGET=	TEXMACS
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 PYTHON_PATCH_SCRIPTS=	plugins/python/bin/tm_python
@@ -28,6 +27,7 @@ SUBST_SED.init=		-e 's,@PYTHONBIN@,${PYTHONBIN},g'
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../lang/python/application.mk"
 
 .include "../../mk/bsd.pkg.mk"

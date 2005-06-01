@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/22 20:08:28 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/01 18:03:09 jlam Exp $
 
 DISTNAME=	gimp-print-4.2.7
 PKGREVISION=	1
@@ -13,7 +13,6 @@ CONFLICTS+=	gimp<=1.2.3
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-samples --without-user-guide
 CONFIGURE_ARGS+=	--without-cups --without-translated-ppds

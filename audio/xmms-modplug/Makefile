@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:44:59 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:39 jlam Exp $
 #
 
 DISTNAME=		modplugxmms-2.05
@@ -14,7 +14,6 @@ COMMENT=		XMMS plugin based on modplug
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
 LDFLAGS+=		-lm ${LIBOSSAUDIO}
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool-disable-static

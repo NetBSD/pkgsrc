@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2005/05/22 20:08:47 jlam Exp $
+# $NetBSD: Makefile,v 1.110 2005/06/01 18:03:28 jlam Exp $
 
 DISTNAME=		gnome-libs-1.4.2
 PKGREVISION=		4
@@ -14,7 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 BUILD_USES_MSGFMT=	YES
 
 USE_DIRS+=		gnome1-1.5
-USE_X11=		YES
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 

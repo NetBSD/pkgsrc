@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:26 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 18:02:44 jlam Exp $
 #
 
 DISTNAME=	libdockapp-0.4.0
@@ -13,7 +13,6 @@ COMMENT=	Simple library to create dockapps for WindowMaker
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-USE_X11=		YES
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libdockapp

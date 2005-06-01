@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/05/22 20:07:56 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/06/01 18:02:45 jlam Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	2
@@ -23,7 +23,6 @@ CONFLICTS=	emacs-[0-9]*
 WRKSRC=		${WRKDIR}/mule
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-USE_X11=	yes
 
 CONFIGURE_ARGS+=	${MACHINE_ARCH}--netbsd --with-x --with-x-toolkit=lucid
 CONFIGURE_ARGS+=	--terminal-face --mcpath
@@ -46,6 +45,8 @@ INFO_FILES+=	egg egg-jp emacs forms gnus kbd-trans languages m2ps mule
 INFO_FILES+=	mule-jp quail sc terminology vip
 
 MAN1=		coco.1 ctags.1 etags.1 m2ps.1 mule.1
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-patch:
 	@${ECHO_MSG} "===> Applying jumbo patches in info directory"

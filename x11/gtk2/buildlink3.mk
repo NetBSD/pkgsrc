@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2005/04/01 10:51:50 salo Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2005/06/01 18:03:29 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTK2_BUILDLINK3_MK:=	${GTK2_BUILDLINK3_MK}+
@@ -22,8 +22,6 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.4.0$$/ { next; }
 PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.4.0\/(engines|filesystems|immodules|loaders|modules)$$/ \
 				{ print "@comment in gtk2: " $$0; next; }
 .endif	# GTK2_BUILDLINK3_MK
-
-USE_X11= 	yes
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/04/12 15:54:21 adam Exp $
+# $NetBSD: Makefile,v 1.23 2005/06/01 18:03:29 jlam Exp $
 
 DISTNAME=	gnustep-gui-0.9.5
 CATEGORIES=	x11 gnustep
@@ -8,7 +8,6 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	GNUstep AppKit Implementation
 
-USE_X11=		yes
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
 
 .include "../../audio/libaudiofile/buildlink3.mk"
@@ -29,4 +28,5 @@ PLIST_SUBST+=	GSND=
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

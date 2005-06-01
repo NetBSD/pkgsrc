@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:48:04 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/01 18:03:27 jlam Exp $
 #
 
 DISTNAME=		libXcomposite-1.0.1
@@ -13,7 +13,6 @@ HOMEPAGE=		http://freedesktop.org/
 COMMENT=		Xcomposite extension (library)
 
 USE_LIBTOOL=		yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	xcomposite.pc.in

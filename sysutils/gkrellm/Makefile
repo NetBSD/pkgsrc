@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/05/21 04:10:18 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/06/01 18:03:22 jlam Exp $
 .include "Makefile.common"
 
 PKGREVISION=		# empty1
@@ -10,7 +10,6 @@ COMMENT=		GTK2 based system monitor
 
 DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}:../../sysutils/gkrellm-share
 
-USE_X11=		YES
 USE_PKGINSTALL=		YES
 
 .include "../../mk/bsd.prefs.mk"

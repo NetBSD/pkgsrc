@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:00 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:54 jlam Exp $
 #
 
 DISTNAME=		openrm-devel-1.5.2
@@ -11,7 +11,6 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.openrm.org/
 COMMENT=		The OpenRM Scene Graph API
 
-USE_X11=		yes
 WRKSRC=			${WRKDIR}/rm152
 BUILD_TARGET=		freebsd docs
 MAKE_ENV+=		AR=${AR} RM=${RM} CP=${CP} LN=${LN} ECHO_CMD=${ECHO} \
@@ -55,6 +54,7 @@ do-install:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

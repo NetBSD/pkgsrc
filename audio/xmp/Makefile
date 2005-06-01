@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:07:40 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 18:02:40 jlam Exp $
 
 DISTNAME=	xmp-2.0.4
 PKGREVISION=	2
@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=--disable-alsa \
 		--disable-xmms \
 		--sysconfdir=${PKG_SYSCONFDIR}
 
-USE_X11=	yes
 USE_TOOLS+=	gmake
 
 EGDIR=		${PREFIX}/share/examples/xmp
@@ -30,6 +29,8 @@ CONF_FILES+=	${EGDIR}/xmp.conf ${PKG_SYSCONFDIR}/xmp.conf
 # XMP has no native Darwin support, so make it use the esound backend
 .include "../../audio/esound/buildlink3.mk"
 .endif
+
+.include "../../mk/x11.buildlink3.mk"
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
