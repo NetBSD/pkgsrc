@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2005/06/01 14:05:03 dillo Exp $
+# $NetBSD: options.mk,v 1.3 2005/06/01 14:06:50 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lftp
 PKG_SUPPORTED_OPTIONS=	gnutls ssl
-PKG_SUPPORTED_OPTIONS=	gnutls
+PKG_SUGGESTED_OPTIONS=	gnutls
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgnutls) && !empty(PKG_OPTIONS:Mssl)
