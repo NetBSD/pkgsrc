@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.191 2005/05/31 21:32:45 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.192 2005/06/01 14:54:18 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1548,7 +1548,7 @@ sub checkfile_Makefile($) {
 		EXTRACT_SUFX DISTFILES ONLY_FOR_ARCHS NO_SRC_ON_FTP
 		NO_BIN_ON_FTP));
 
-	# check the items that has to be there.
+	# check the items that have to be there.
 	$tmp = "\n" . $tmp;
 	foreach my $i ('DISTNAME', 'CATEGORIES') {
 		if ($tmp !~ /\n$i=/) {
