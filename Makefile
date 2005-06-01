@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2005/05/17 21:46:59 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.72 2005/06/01 17:45:57 wiz Exp $
 #
 
 # tools used by this Makefile
@@ -216,16 +216,16 @@ readme-ipv6:
 	fi
 
 README-IPv6.html:
-	@${GREP} -l '^BUILD_DEFS.*=.*USE_INET6' */*/Makefile \
-	 | ${SED} s,Makefile,, >$@.pkgs
+	@${GREP} -l -e '^BUILD_DEFS.*=.*USE_INET6' -e '^PKG_SUPPORTED_OPTIONS.*=.*inet6' \
+		 */*/Makefile */*/options.mk \
+	 | ${SED} -e s,Makefile,, -e s,options.mk,, >$@.pkgs
 	@${FGREP} -f $@.pkgs README-all.html | ${SORT} -t/ +1 >$@.trs
 	@${CAT} templates/README.ipv6 \
 	| ${SED} \
 		-e '/%%TRS%%/r$@.trs' \
 		-e '/%%TRS%%/d' \
 		>$@
-	@${RM} $@.trs
-	@${RM} $@.pkgs
+	@${RM} $@.pkgs $@.trs
 
 show-host-specific-pkgs:
 	@${ECHO} "HOST_SPECIFIC_PKGS= \\";					\
