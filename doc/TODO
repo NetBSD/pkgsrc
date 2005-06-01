@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3577 2005/06/01 20:08:31 wiz Exp $
+$NetBSD: TODO,v 1.3578 2005/06/01 21:06:16 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -939,7 +939,6 @@ Suggested package updates
 	o qcad-2.0.4.0 [pkgsrc-wip]
 	o qnetwalk-1.2 [pkg/29941]
 	o qgreylist-0.3
-	o qpopper-4.0.8
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
