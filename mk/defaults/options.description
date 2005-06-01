@@ -148,7 +148,7 @@ mga
 mhash	
 milter	
 mlib			Enable usage of medialib (SunOS only).
-mmx	
+mmx			Enable MMX support (i386 only).
 modperl	
 mplayer-menu		Enable support for user-defined menus.
 mplayer-real		Enable usage of Real codecs.
