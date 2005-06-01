@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2005/06/01 18:02:48 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2005/06/01 18:33:02 jlam Exp $
 
 BUILTIN_PKG:=	fontconfig
 
@@ -22,7 +22,7 @@ IS_BUILTIN.fontconfig!=							\
 	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
 		-f ${BUILDLINK_PKGSRCDIR.fontconfig}/builtin-imake.mk	\
 		-s - |							\
-	${MAKE} -f - builtin-test
+	${IMAKE_MAKE} -f - builtin-test
 .    endif
 .  endif
 .endif
