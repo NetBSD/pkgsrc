@@ -1,8 +1,9 @@
-# $NetBSD: IRIX.mk,v 1.14 2005/05/22 19:11:15 jlam Exp $
+# $NetBSD: IRIX.mk,v 1.15 2005/06/01 18:14:23 jlam Exp $
 #
 # Variable definitions for the IRIX operating system.
 
 ECHO_N?=	${ECHO} -n
+IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 IMAKEOPTS+=	-DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE}
 IMAKEOPTS+=	-DManUsr=${PREFIX}
 PKGLOCALEDIR?=	share
@@ -36,7 +37,6 @@ IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5/X11
 IMAKE_MANNEWSUFFIX=	z
 
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
-_IMAKE_MAKE=		${MAKE}		# program which gets invoked by imake
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes		# IPv6 is standard
 .else

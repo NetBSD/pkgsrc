@@ -1,8 +1,9 @@
-# $NetBSD: SunOS.mk,v 1.15 2005/06/01 14:27:12 markd Exp $
+# $NetBSD: SunOS.mk,v 1.16 2005/06/01 18:14:23 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
 ECHO_N?=	${ECHO} -n
+IMAKE_MAKE?=	/usr/ccs/bin/make	# program which gets invoked by imake
 PKGLOCALEDIR?=	lib
 PS?=		/bin/ps
 # XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
@@ -47,7 +48,6 @@ IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
 IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
-_IMAKE_MAKE=	/usr/ccs/bin/make	# program which gets invoked by imake
 .if exists(/usr/include/netinet/ip6.h)
 _OPSYS_HAS_INET6=	yes		# IPv6 is standard
 .else

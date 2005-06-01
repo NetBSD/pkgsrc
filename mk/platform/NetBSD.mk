@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.14 2005/06/01 14:23:07 markd Exp $
+# $NetBSD: NetBSD.mk,v 1.15 2005/06/01 18:14:23 jlam Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -7,6 +7,7 @@
 CPP=		/usr/bin/cpp
 .endif
 ECHO_N?=	${ECHO} -n
+IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 RSH?=		/usr/bin/rsh
@@ -59,7 +60,6 @@ IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
 IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
 
 _DO_SHLIB_CHECKS=	yes	# fixup PLIST for shared libs/run ldconfig
-_IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else
