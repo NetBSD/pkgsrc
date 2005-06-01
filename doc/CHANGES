@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10269 2005/06/01 11:30:28 abs Exp $
+$NetBSD: CHANGES,v 1.10270 2005/06/01 14:12:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2751,3 +2751,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/mpc to 0.11.2 [simonb 2005-06-01]
 	Updated graphics/ruby-imlib2 to 0.5.1 [taca 2005-06-01]
 	Updated pkgtools/pkg_chk to 1.58 [abs 2005-06-01]
+	Updated audio/SDL_mixer to 1.2.6nb2 [wiz 2005-06-01]
