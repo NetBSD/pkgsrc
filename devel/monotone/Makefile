@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:07:53 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/01 18:19:31 wiz Exp $
 #
 
 DISTNAME=	monotone-0.19
@@ -21,11 +21,12 @@ CONFIGURE_ARGS+=	--with-bundled-lua=no
 CONFIGURE_ARGS+=	--with-bundled-sqlite=no
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.monotone
-PKG_SUPPORTED_OPTIONS=	ipv6
+PKG_SUPPORTED_OPTIONS=	inet6
+PKG_OPTIONS_LEGACY_OPTS+=	ipv6:inet6
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mipv6)
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
