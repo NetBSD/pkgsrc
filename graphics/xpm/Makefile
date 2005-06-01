@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/06/01 18:02:58 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/06/01 19:31:17 jlam Exp $
 
 DISTNAME=       xpm-3.4k
 PKGREVISION=	3
@@ -13,6 +13,8 @@ COMMENT=	The X Pixmap library
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_IMAKE=	# defined
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
 post-install:
