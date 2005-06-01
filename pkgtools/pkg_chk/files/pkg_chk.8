@@ -1,9 +1,9 @@
-.\"	$NetBSD: pkg_chk.8,v 1.10 2005/06/01 11:29:45 abs Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.11 2005/06/01 11:38:45 wiz Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
 .\"
-.Dd February 28, 2005
+.Dd June 1, 2005
 .Dt PKG_CHK 1
 .Sh NAME
 .Nm pkg_chk
@@ -33,21 +33,25 @@ will skip dependent packages to reduce unnecessary rebuilding.
 .It Fl a
 Automatically add any missing packages.
 If a binary package exists in
-.Ev ${PACKAGES}
+.Pa ${PACKAGES}
 it will be used in preference to building from source, unless the
 .Fl b
 or
 .Fl s
 options are given.
 .It Fl B
-Include the "Build version" (see option -b of pkg_info(1)) of packages when
-determining if a package is up to date.
+Include the "Build version" (see option
+.Fl b
+.Xr pkg_info 1 )
+of packages when determining if a package is up to date.
 .It Fl b
-Use binary packages. If
+Use binary packages.
+If
 .Fl s
 is not set this allows
 .Nm
-to run without PKGSRCDIR.
+to run without
+.Ev PKGSRCDIR .
 .It Fl C Ar conf
 Use the
 .Pa pkgchk.conf
@@ -93,16 +97,31 @@ List the filename for all binary packages (including the exact dependencies
 against which each package was built) based on
 .Pa pkgchk.conf .
 Will abort if a binary package is missing.
-This can be used (in conjunction with -U and -D) to determine what
+This can be used (in conjunction with
+.Fl U
+and
+.Fl D )
+to determine what
 packages would need to be copied to a remote machine to ensure it
-was completely up to date. The list is sorted so that dependencies
+was completely up to date.
+The list is sorted so that dependencies
 always come before packages which depend upon them.
 .It Fl N
 For each installed package, look if there is a newer version
-noted in PKGSRCDIR/doc/TODO.
+noted in
+.Pa ${PKGSRCDIR}/doc/TODO .
 Good for finding packages to update.
 .It Fl n
 Display actions that would be taken, but do not change anything.
+.It Fl P Ar path
+Set the path to the binary packages.
+Defaults to
+.Ev PACKAGES
+if
+.Ev PKGSRCDIR
+is available, or
+.Dq Pa \&.
+otherwise.
 .It Fl r
 Recursively delete any mismatched packages found.
 Use with care, this does not record which packages were installed
@@ -114,9 +133,6 @@ If DEPENDS_TARGET=package is set in
 then
 .Nm
 will automatically generate binary packages for later reuse.
-.It Fl P Ar path
-Set the path to the binary packages. Defaults to PACKAGES if PKGSRCDIR
-is available, or '.' otherwise.
 .It Fl U Ar tags
 Remove the comma separated list of tags from those checked when
 parsing
@@ -124,19 +140,20 @@ parsing
 Also includes
 .Ev PKGCHK_NOTAGS .
 Package directories can also be skipped by listing them under
-.Fl U
+.Fl U .
 .It Fl u
 Automatically update any missing packages.
-If a binary package exists in PACKAGES it will be used in preference
-to building from source, unless the
+If a binary package exists in
+.Ev PACKAGES
+it will be used in preference to building from source, unless the
 .Fl b
 or
 .Fl s
 options are given.
 .Pp
 Note: If the update fails (particularly when building from source), the system
-will be left with missing packages. Once the error has been fixed a second run
-will resume the update.
+will be left with missing packages.
+Once the error has been fixed, a second run will resume the update.
 .It Fl v
 Verbose - list the tags set when checking
 .Pa pkgchk.conf ,
@@ -266,7 +283,8 @@ Pathname to temporary list of installed packages used when updating.
 If not set in environment then read from
 .Pa /etc/mk.conf .
 Defaults to
-.Pa ${PKGSRCDIR}/pkgchk_update-$(hostname).conf . Note, if pkgsrc is being
+.Pa ${PKGSRCDIR}/pkgchk_update-$(hostname).conf .
+Note, if pkgsrc is being
 shared across multiple machines which may be updating at the same time then
 it is important this file does not overlap between machines.
 .It Ev PKGCHK_TAGS
@@ -299,7 +317,6 @@ x11/xlockmore                   x11 -wopr
 .Aq abs@netbsd.org ,
 plus much from Stoned Elipot.
 .Sh BUGS
-.Pp
 When used against binary packages,
 .Nm
 does not handle the directory containing multiple versions of the same package.
