@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/05/22 20:07:46 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/06/01 20:08:00 jlam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -39,7 +39,7 @@ BASE_VERS?=		${DIST_VERS}
 BUILDLINK_DEPENDS.postgresql73-lib?=	postgresql73-lib>=${BASE_VERS}
 BUILDLINK_DEPENDS.tcl-postgresql73?=	tcl-postgresql73>=${BASE_VERS}
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		autoconf gmake
 GNU_CONFIGURE=		YES
 PKG_SYSCONFSUBDIR=	postgresql
 
@@ -90,6 +90,4 @@ post-extract:
 	fi
 
 pre-configure:
-	cd ${WRKSRC} && ${AUTOCONF}
-
-.include "../../mk/autoconf.mk"
+	cd ${WRKSRC} && autoconf
