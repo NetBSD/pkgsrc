@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.170 2005/05/11 22:08:18 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.171 2005/06/01 18:03:06 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -104,27 +104,10 @@ BUILDLINK_DEPENDS?=	# empty
 # For each package we use, check whether we are using the built-in
 # version of the package or if we are using the pkgsrc version.
 #
-.include "../../mk/buildlink3/bsd.builtin.mk"
-
-# Check whether we should include the X11 buildlink3.mk file here since
-# USE_X11 may have been set indirectly by bsd.builtin.mk.
-#
-.if defined(USE_X11)
-X11_TYPE?=		native
-X11_PKGSRCDIR.native=	../../pkgtools/x11-links
-X11_PKGSRCDIR.XFree86=	../../x11/XFree86-libs
-X11_PKGSRCDIR.xlibs=	../../x11/xlibs
-X11_PKGSRCDIR.xorg=	../../x11/xorg-libs
-.  if exists(${X11_PKGSRCDIR.${X11_TYPE}}/buildlink3.mk)
-.    include "${X11_PKGSRCDIR.${X11_TYPE}}/buildlink3.mk"
-.    if exists(${X11_PKGSRCDIR.${X11_TYPE}}/builtin.mk)
-.      include "${X11_PKGSRCDIR.${X11_TYPE}}/builtin.mk"
-.    endif
-.  else
-PKG_FAIL_REASON+=	\
-	"${PKGNAME} uses X11, but \"${X11_TYPE}\" isn't a valid X11 type."
-.  endif
-.endif
+.for _pkg_ in ${BUILDLINK_PACKAGES}
+BUILDLINK_BUILTIN_MK.${_pkg_}?=	${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk
+.  sinclude "${BUILDLINK_BUILTIN_MK.${_pkg_}}"
+.endfor
 
 # Set IGNORE_PKG.<pkg> if <pkg> is the current package we're building.  
 # We can then check for this value to avoid build loops.

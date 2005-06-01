@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:07:59 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:48 jlam Exp $
 
 DISTNAME=		gnucash-docs-1.8.5
 CATEGORIES=		finance
@@ -16,7 +16,6 @@ BUILDLINK_DEPMETHOD.libxslt=	build
 
 USE_DIRS+=		gnome1-1.5
 USE_TOOLS+=		gmake
-USE_X11=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -26,5 +25,6 @@ CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

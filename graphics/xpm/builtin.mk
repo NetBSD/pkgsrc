@@ -1,69 +1,100 @@
-# $NetBSD: builtin.mk,v 1.4 2004/05/20 11:25:57 grant Exp $
+# $NetBSD: builtin.mk,v 1.5 2005/06/01 18:02:58 jlam Exp $
 
-.include "../../mk/bsd.prefs.mk"
+BUILTIN_PKG:=	xpm
 
-_X11_XPM_H=	${X11BASE}/include/X11/xpm.h
-_X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
+BUILTIN_FIND_FILES_VAR:=	H_XPM
+BUILTIN_FIND_FILES.H_XPM=	${X11BASE}/include/X11/xpm.h
 
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.xpm)
-IS_BUILTIN.xpm=	no
-.  if exists(${_X11_XPM_H})
-.    if !empty(X11BASE:M*openwin)
+IS_BUILTIN.xpm=		no
+.  if exists(${H_XPM})
+.    if !empty(X11BASE:M*openwin) && exists(/usr/sbin/pkgchk)
 IS_BUILTIN.xpm!=							\
 	if /usr/sbin/pkgchk -l SUNWxwinc | ${GREP} -q xpm.h; then	\
-		${ECHO} "yes";						\
+		${ECHO} yes;						\
 	else								\
-		${ECHO} "no";						\
+		${ECHO} no;						\
 	fi
 .    elif ${OPSYS} == "IRIX"
-IS_BUILTIN.xpm=	yes
-.    elif exists(${_X11_TMPL})
-IS_BUILTIN.xpm!=							\
-	if ${GREP} -q NormalLibXpm ${_X11_TMPL}; then			\
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
+IS_BUILTIN.xpm=		yes
 .    else
-IS_BUILTIN.xpm=	no
+PKGSRC_USE_TOOLS+=	imake			# XXX
+IMAKE?=			${X11BASE}/bin/imake	# XXX
+.      if defined(IMAKE) && exists(${IMAKE})
+IS_BUILTIN.xpm!=							\
+	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
+		-f ${BUILDLINK_PKGSRCDIR.xpm}/builtin-imake.mk		\
+		-s - |							\
+	${MAKE} -f - builtin-test
+.      endif
 .    endif
 .  endif
-.  if !empty(IS_BUILTIN.xpm:M[yY][eE][sS])
-#
-# Create an appropriate package name for the built-in xpm distributed
-# with the system.  This package name can be used to check against
-# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
-# or if the built-in one is sufficient.
-#
-_XPM_MAJOR!=	\
-	${AWK} '/\#define[ 	]*XpmFormat/ { print $$3 }' ${_X11_XPM_H}
-_XPM_MINOR!=	\
-	${AWK} '/\#define[ 	]*XpmVersion/ { print "."$$3 }' ${_X11_XPM_H}
-_XPM_PATCH!=	\
-	${AWK} 'BEGIN { split("abcdefghijklmnopqrstuvwxyz", alpha, "") } /\#define[ 	]*XpmRevision/ { print alpha[$$3] }' ${_X11_XPM_H}
-_XPM_VERSION=		${_XPM_MAJOR}${_XPM_MINOR}${_XPM_PATCH}
-BUILTIN_PKG.xpm=	xpm-${_XPM_VERSION}
-BUILDLINK_VARS+=	BUILTIN_PKG.xpm
-.  endif
-BUILDLINK_VARS+=	IS_BUILTIN.xpm
-.endif	# IS_BUILTIN.xpm
-
-.if !defined(USE_BUILTIN.xpm)
-USE_BUILTIN.xpm?=	${IS_BUILTIN.xpm}
-
-.  if defined(BUILTIN_PKG.xpm)
-USE_BUILTIN.xpm=	yes
-.    if !empty(USE_BUILTIN.xpm:M[yY][eE][sS])
-USE_BUILTIN.xpm!=							\
-       if ${PKG_ADMIN} pmatch 'xpm>=3.4' ${BUILTIN_PKG.xpm}; then	\
-		${ECHO} "yes";						\
-       else								\
-		${ECHO} "no";						\
-       fi
-.    endif
-.  endif
-.endif	# USE_BUILTIN.xpm
-
-.if !empty(USE_BUILTIN.xpm:M[yY][eE][sS])
-BUILDLINK_PREFIX.xpm=	${X11BASE}
 .endif
+MAKEVARS+=	IS_BUILTIN.xpm
+
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.xpm) && \
+    !empty(IS_BUILTIN.xpm:M[yY][eE][sS]) && \
+    exists(${H_XPM})
+BUILTIN_VERSION.xpm!=							\
+	${AWK} 'BEGIN { split("abcdefghijklmnopqrstuvwxyz", alpha, "");	\
+			p = ".0" }					\
+		/\#define[ 	]*XpmFormat/ { M = $$3 }		\
+		/\#define[ 	]*XpmVersion/ { m = "."$$3 }		\
+		/\#define[ 	]*XpmRevision/ { p = alpha[$$3] }	\
+		END { printf "%s%s%s\n", M, m, p }'			\
+		${H_XPM}
+BUILTIN_PKG.xpm=	xpm-${BUILTIN_VERSION.xpm}
+.endif
+MAKEVARS+=	BUILTIN_PKG.xpm
+
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
+.if !defined(USE_BUILTIN.xpm)
+.  if ${PREFER.xpm} == "pkgsrc"
+USE_BUILTIN.xpm=	no
+.  else
+USE_BUILTIN.xpm=	${IS_BUILTIN.xpm}
+.    if defined(BUILTIN_PKG.xpm) && \
+        !empty(IS_BUILTIN.xpm:M[yY][eE][sS])
+USE_BUILTIN.xpm=	yes
+.      for _dep_ in ${BUILDLINK_DEPENDS.xpm}
+.        if !empty(USE_BUILTIN.xpm:M[yY][eE][sS])
+USE_BUILTIN.xpm!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.xpm:Q}; then	\
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+.        endif
+.      endfor
+.    endif
+.  endif  # PREFER.xpm
+.endif
+MAKEVARS+=	USE_BUILTIN.xpm
+
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
+CHECK_BUILTIN.xpm?=	no
+.if !empty(CHECK_BUILTIN.xpm:M[nN][oO])
+
+.  if !empty(USE_BUILTIN.xpm:M[yY][eE][sS])
+BUILDLINK_PREFIX.xpm=	${X11BASE}
+.    include "../../mk/x11.buildlink3.mk"
+.    include "../../mk/x11.builtin.mk"
+.  endif
+
+.endif	# CHECK_BUILTIN.xpm

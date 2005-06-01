@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/22 20:08:14 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/01 18:03:04 jlam Exp $
 #
 
 DISTNAME=	yacas-1.0.57
@@ -13,7 +13,6 @@ USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
-USE_X11=	YES
 USE_PERL5=	build
 
 TEST_TARGET=	test
@@ -37,4 +36,5 @@ post-install:
 .endfor
 
 .include "../../math/gsl/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

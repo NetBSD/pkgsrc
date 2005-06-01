@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:07:57 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/01 18:02:47 jlam Exp $
 #
 
 DISTNAME=	dgen-sdl-1.23
@@ -16,7 +16,6 @@ DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
-USE_X11=	yes
 
 CONFIGURE_ARGS+=	--with-extra-opt
 

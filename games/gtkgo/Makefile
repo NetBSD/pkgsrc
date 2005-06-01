@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:51 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 18:02:50 jlam Exp $
 #
 
 DISTNAME=	gtkgo-0_0_10
@@ -13,7 +13,6 @@ COMMENT=	Go board with skin support
 
 CPPFLAGS+=	-DPKGDATADIR='"${PREFIX}/share/gtkgo/"'
 GNU_CONFIGURE=	YES
-USE_X11=	YES
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/./g}
 
 .include "../../x11/gnome-libs/buildlink3.mk"

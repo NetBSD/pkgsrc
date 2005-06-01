@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/05/22 20:08:04 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/01 18:02:54 jlam Exp $
 #
 
 DISTNAME=	Ngraph-6.3.30-src
@@ -15,7 +15,6 @@ COMMENT=	The 2D graph and data analysis program
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_X11=		yes
 USE_TOOLS+=		gmake
 PKGSRC_USE_TOOLS+=	gtar
 

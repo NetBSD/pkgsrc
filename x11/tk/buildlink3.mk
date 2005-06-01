@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2004/10/03 00:18:38 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2005/06/01 18:03:31 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TK_BUILDLINK3_MK:=	${TK_BUILDLINK3_MK}+
@@ -22,12 +22,11 @@ BUILDLINK_FILES.tk=	bin/wish*
 #
 BUILDLINK_TRANSFORM+=	l:tk:tk84
 BUILDLINK_TRANSFORM+=	l:tk8.4:tk84
-
 .endif	# TK_BUILDLINK3_MK
 
-USE_X11=	yes
 TKCONFIG_SH?=	${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
 
 .include "../../lang/tcl/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

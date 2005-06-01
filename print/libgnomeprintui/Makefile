@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/05/22 20:08:28 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/06/01 18:03:20 jlam Exp $
 #
 
 DISTNAME=	libgnomeprintui-2.10.2
@@ -15,7 +15,6 @@ BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake
-USE_X11=		YES
 USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	libgnomeprintui/libgnomeprintui-2.2.pc.in

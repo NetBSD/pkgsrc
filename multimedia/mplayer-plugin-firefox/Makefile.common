@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/05/22 20:08:22 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/06/01 18:03:06 jlam Exp $
 #
 
 DISTNAME=		mplayerplug-in-2.70
@@ -17,7 +17,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_LANGUAGES+=		c++
 USE_PKGINSTALL=		yes
-USE_X11=		yes
 
 FILESDIR=	${.CURDIR}/../../multimedia/mplayer-plugin-firefox/files
 PATCHDIR=	${.CURDIR}/../../multimedia/mplayer-plugin-firefox/patches
@@ -68,3 +67,4 @@ do-install:
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"

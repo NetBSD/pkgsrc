@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:07:58 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/01 18:02:48 jlam Exp $
 #
 
 DISTNAME=	raines-0.40.2
@@ -16,7 +16,6 @@ BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 WRKSRC=		${WRKDIR}/raine
 USE_TOOLS+=	gmake
-USE_X11=	yes
 MAKEFILE=	makefile
 MAKE_ENV+=	OSTYPE=linux
 USE_PERL5=	run
@@ -38,4 +37,5 @@ pre-install:
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/22 20:08:49 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/01 18:03:30 jlam Exp $
 #
 
 DISTNAME=	sip-4.2.1
@@ -15,7 +15,6 @@ CONFLICTS+=	${PYPKGPREFIX}-qt2-sip-*
 # needs qmake
 BUILD_DEPENDS+=		qt3-tools-3.*:../../x11/qt3-tools
 
-USE_X11=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:48:11 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/01 18:03:29 jlam Exp $
 #
 
 DISTNAME=	multi-aterm-0.0.4
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.materm.tuxfamily.org/
 COMMENT=	Multi-terminal for the X Window System based on aterm
 
 GNU_CONFIGURE=		YES
-USE_X11=		YES
 
 CONFIGURE_ARGS+=	--enable-mousewheel
 CONFIGURE_ARGS+=	--enable-swapscreen

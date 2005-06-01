@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/03/24 21:12:54 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/01 18:02:53 jlam Exp $
 
 DISTNAME=	xworm102
 PKGNAME=	xworm-1.02
@@ -10,7 +10,8 @@ COMMENT=	Classic game with apples and hungry worm
 
 WRKSRC=		${WRKDIR}/XWorm
 BUILD_TARGET=	bsd
-USE_X11=	yes
+
+.include "../../mk/x11.buildlink3.mk"
 
 do-install:
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/xworm ${PREFIX}/bin

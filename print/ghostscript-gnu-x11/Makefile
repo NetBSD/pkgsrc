@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/05/30 15:39:11 dillo Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/01 18:03:09 jlam Exp $
 
 PKGNAME=	ghostscript-gnu-x11-${GS_VERS}
 COMMENT=	GNU Postscript interpreter with X11 and image drivers only
 
-USE_X11=		YES
 CONFIGURE_ARGS+=	--with-x
 
 # Based on the definitions for the DEVICE_DEVS* from ${WRKSRC}/src/devs.mak,
@@ -19,4 +18,5 @@ MAKE_FLAGS+=	DEVICE_DEVS${N}=
 #
 MAKE_FLAGS+=	DEVICE_DEVS5="\$$(DD)ijs.dev"
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../ghostscript-gnu/Makefile.common"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/05/31 10:01:38 dillo Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/01 18:03:06 jlam Exp $
 
 DISTNAME=	ffmpeg-0.4.8
 PKGREVISION=	3
@@ -17,7 +17,7 @@ USE_PKGINSTALL=	YES
 CONF_FILES=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
 		${PKG_SYSCONFDIR}/ffserver.conf
 
-MAKE_ENV+=	EXTRA_LIBS=${LIBGETOPT:Q} \
+MAKE_ENV+=	EXTRA_LIBS=${BUILDLINK_LDADD.getopt:Q} \
 		FFSERVER_CONF=${PKG_SYSCONFDIR:Q}/ffserver.conf \
 		LOCALBASE=${LOCALBASE:Q}
 
