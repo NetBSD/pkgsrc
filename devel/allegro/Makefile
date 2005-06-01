@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:07:47 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/01 14:29:58 wiz Exp $
 
 DISTNAME=	allegro-4.1.18
 CATEGORIES=	devel
@@ -23,17 +23,7 @@ CONFIGURE_ARGS+=	--disable-ossmidi
 
 LIBS+=		${LIBOSSAUDIO}
 
-.include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=	USE_ESOUND
-
-.if !empty(USE_ESOUND:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-esddigi
-.include "../../audio/esound/buildlink3.mk"
-PLIST_SUBST+=		ESOUND=""
-.else
-PLIST_SUBST+=		ESOUND="@comment "
-.endif
+.include "options.mk"
 
 SUBST_CLASSES=		oss
 SUBST_STAGE.oss=	post-patch
