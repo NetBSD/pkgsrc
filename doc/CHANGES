@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10276 2005/06/01 21:06:16 adrianp Exp $
+$NetBSD: CHANGES,v 1.10277 2005/06/01 22:08:28 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2760,3 +2760,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/lablgtk2 to 2.4.0nb2 [wiz 2005-06-01]
 	Updated mail/qpopper to 4.0.8 [adrianp 2005-06-01]
 	Updated mail/poppassd to 4.0.8 [adrianp 2005-06-01]
+	Updated net/bind9 to 9.3.1 [tron 2005-06-01]
