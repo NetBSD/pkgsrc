@@ -1,15 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2005/05/28 02:57:22 taca Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/01 21:00:39 adrianp Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
 PKGNAME=		poppassd-${VERSION}
-PKGREVISION=		3
 CATEGORIES=		mail
 MASTER_SITES=		${QPOPPER_MASTER_SITES}
-
-PATCH_SITES=		http://www.imasy.or.jp/~ume/ipv6/
-PATCHFILES=		qpopper-4.0.5-ipv6-20030313.diff.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		mellon@fugue.com
 HOMEPAGE=		${QPOPPER_HOMEPAGE}
