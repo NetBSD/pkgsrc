@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3578 2005/06/01 21:06:16 adrianp Exp $
+$NetBSD: TODO,v 1.3579 2005/06/01 22:08:32 tron Exp $
 
 Suggested new packages
 ======================
@@ -373,7 +373,6 @@ Suggested package updates
 	o bchunk-1.2.0
 	o bdb-xml-2.0.9 [requires xerces-c>=2.6.0]
 	o benchfft-3.1
-	o bind-9.3.1 [pkg/30152]
 	o bioperl-1.5.0
 	o bitlbee-0.92 [pkg/30096]
 	o bittorrent-4.1.1
