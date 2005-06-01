@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:26 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/01 20:08:01 jlam Exp $
 #
 
 DISTNAME=		socket++-1.12.10
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.linuxhacker.at/socketxx/
 COMMENT=		C++ class library for UNIX Sockets with exception handling
 
 USE_LIBTOOL=		YES
-AUTOMAKE_REQD=          1.4
+USE_TOOLS+=		automake14
 AUTOCONF_REQD=          2.50
 GNU_CONFIGURE=          YES
 USE_TOOLS+=		gmake
@@ -20,10 +20,9 @@ TEST_TARGET=		check
 pre-configure:
 		cd ${WRKSRC};						\
 		${LOCALBASE}/bin/libtoolize --automake;                 \
-		${ACLOCAL} -I .;                                        \
-		${AUTOHEADER};                                          \
-		${AUTOMAKE} --add-missing;                              \
-		${AUTOCONF};                                            \
+		aclocal -I .;						\
+		autoheader;						\
+		automake --add-missing;					\
+		autoconf
 
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

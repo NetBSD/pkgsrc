@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.5 2004/12/12 09:13:56 jdolecek Exp $
+# $NetBSD: ext.mk,v 1.6 2005/06/01 20:08:00 jlam Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -40,6 +40,7 @@ CONFIGURE_ARGS+=	--with-php-config=${PHP_CONFIG}
 
 USE_CONFIG_WRAPPER=	YES
 USE_LIBTOOL=		YES
+USE_TOOLS+=		automake
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
@@ -56,9 +57,11 @@ phpize-module:
 	@cookie=${WRKDIR}/.phpize_module_done;				\
 	if [ ! -f $${cookie} ]; then					\
 		cd ${WRKSRC} && 					\
-		${SETENV} AUTOCONF=${AUTOCONF} AUTOHEADER=${AUTOHEADER}	\
-			ACLOCAL=${ACLOCAL}				\
-			LIBTOOLIZE=${LOCALBASE}/bin/libtoolize		\
+		${SETENV}						\
+			AUTOCONF=${TOOLS_DIR:Q}/bin/autoconf		\
+			AUTOHEADER=${TOOLS_DIR:Q}/bin/autoheader	\
+			ACLOCAL=${TOOLS_DIR:Q}/bin/aclocal		\
+			LIBTOOLIZE=${LOCALBASE:Q}/bin/libtoolize	\
 			${PHPIZE} &&					\
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
@@ -79,7 +82,6 @@ do-patch:
 	done
 .endif
 
-.include "../../mk/automake.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
 
 .endif	# PHPEXT_MK

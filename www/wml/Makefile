@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/05/03 14:21:43 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/06/01 20:08:01 jlam Exp $
 #
 
 DISTNAME=	wml-2.0.9
@@ -17,6 +17,7 @@ DEPENDS+=	p5-Term-ReadKey>=2.11:../../devel/p5-Term-ReadKey
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_TOOLS+=	automake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-perl=${PERL5} \
 		--with-openworld \
@@ -39,7 +40,7 @@ pre-configure:
 	    wml_common/gd \
 	    ; \
 	do \
-	    cd ${WRKSRC}/$$i && ${AUTORECONF} --force || exit 1; \
+	    cd ${WRKSRC}/$$i && autoreconf --force || exit 1; \
 	done
 
 post-install:
@@ -58,5 +59,4 @@ post-install:
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

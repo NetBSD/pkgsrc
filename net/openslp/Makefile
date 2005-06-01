@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/05/26 20:14:21 adrianp Exp $
+# $NetBSD: Makefile,v 1.27 2005/06/01 20:08:01 jlam Exp $
 
 DISTNAME=	openslp-1.2.1
 CATEGORIES=	net
@@ -11,7 +11,7 @@ COMMENT=	Open-source implementation of the Service Location Protocol
 # Needs pkgviews-enabled automake
 # PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		bison lex
+USE_TOOLS+=		automake bison lex
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -31,15 +31,14 @@ CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 RCD_SCRIPTS=		slpd
 
 .include "../../security/openssl/buildlink3.mk"
-.include "../../mk/automake.mk"
 
 post-extract:
 	@${FIND} ${WRKSRC} -name "CVS" -print | ${XARGS} ${RM} -rf
 	@${RM} -fr ${WRKSRC}/doc/html/UsersGuide/.xvpics
 
 pre-configure:
-	@cd ${WRKSRC} && ${ACLOCAL} && ${AUTOHEADER} && ${AUTOCONF} &&	\
-		${LOCALBASE}/bin/libtoolize && ${AUTOMAKE} --add-missing
+	@cd ${WRKSRC} && aclocal && autoheader && autoconf &&		\
+		${LOCALBASE}/bin/libtoolize && automake --add-missing
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/openslp

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/06/01 18:03:22 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/01 20:08:01 jlam Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.10.1
@@ -16,14 +16,14 @@ BUILD_USES_MSGFMT=	yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		autoconf gmake
 
 LIBS+=			-lutil
 GCONF2_SCHEMAS+=	gnome-system-monitor.schemas
 
 pre-configure:
 	cd ${WRKSRC} && ${PREFIX}/bin/libtoolize
-	cd ${WRKSRC} && ${AUTOCONF}
+	cd ${WRKSRC} && autoconf
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -39,5 +39,4 @@ pre-configure:
 .include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"

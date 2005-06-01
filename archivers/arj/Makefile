@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/22 20:07:36 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/01 20:07:59 jlam Exp $
 
 DISTNAME=	arj-3.10.21
 CATEGORIES=	archivers
@@ -10,7 +10,7 @@ COMMENT=	Open-source ARJ
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		autoconf gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/gnu/configure
 MAKEFILE=		makefile.gnu
@@ -25,7 +25,7 @@ pre-configure:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' < ${WRKSRC}/environ.c.1	\
 			> ${WRKSRC}/environ.c
 	${RM} -f ${WRKSRC}/environ.c.1
-	cd ${WRKSRC}/gnu; ${AUTOCONF}
+	cd ${WRKSRC}/gnu && autoconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${ARJ_DOCSDIR}
@@ -35,5 +35,4 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/resource/en/$$i ${ARJ_DOCSDIR};\
 		done
 
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"

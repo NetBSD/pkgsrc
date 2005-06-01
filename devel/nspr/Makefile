@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 20:07:54 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/01 20:08:00 jlam Exp $
 
 DISTNAME=		nspr-4.4.1
 PKGREVISION=		1
@@ -11,12 +11,10 @@ COMMENT=		Platform-neutral API for system level and libc like functions
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla/nsprpub/build
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		autoconf213 gmake
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--disable-debug
-
-AUTOCONF_REQD=		2.13
 
 MAKE_ENV=		DIST=${WRKSRC}/dist
 CONFIGURE_SCRIPT=	../configure
@@ -34,7 +32,7 @@ SO_SUFFIX=		so.1.0
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX}
 
 pre-configure:
-	cd ${WRKSRC}/.. && ${AUTOCONF}
+	cd ${WRKSRC}/.. && autoconf
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/nspr
@@ -52,6 +50,4 @@ CONFIGURE_ARGS+=	--without-pthreads
 CONFIGURE_ARGS+=	--with-pthreads
 .endif
 
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
-

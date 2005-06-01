@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2005/06/01 18:03:26 jlam Exp $
+# $NetBSD: Makefile.common,v 1.57 2005/06/01 20:08:01 jlam Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-${MOZ_DIST_VER}-source
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
 WRKSRC=		${WRKDIR}/mozilla
 USE_LANGUAGES=	c c++
 USE_PERL5=	build
-USE_TOOLS+=	gmake
+USE_TOOLS+=	autoconf213 gmake
 GNU_CONFIGURE=	yes
 
 CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess
@@ -48,8 +48,6 @@ CONFIGURE_ARGS+= --disable-tests \
 
 SHAREMODE?=	644
 BUILD_TARGET=	# empty
-
-AUTOCONF_REQD= 2.13
 
 UNLIMIT_RESOURCES=	datasize memorysize stacksize
 
@@ -165,8 +163,8 @@ post-extract:
 .endfor
 
 pre-configure:
-	cd ${WRKSRC} && ${AUTOCONF}
-	cd ${WRKSRC}/nsprpub && ${AUTOCONF}
+	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC}/nsprpub && autoconf
 
 post-build:
 	${ECHO} skin,install,select,classic/1.0 >> \
@@ -200,5 +198,4 @@ SUBST_SED.pc=		-e "s|%includedir%|${PREFIX}/include/${MOZILLA}|g" \
 			-e "s|%libdir%|${PREFIX}/lib/${MOZILLA}|g"
 SUBST_MESSAGE.pc=	"Fixing pkgconfig files."
 
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"

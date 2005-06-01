@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/05/22 20:08:04 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/06/01 20:08:00 jlam Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 PKGREVISION=		5
@@ -10,9 +10,8 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 COMMENT=		Tetris-like puzzle game
 
-AUTOMAKE_REQD=		1.4
 USE_DIRS+=		gnome1-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		automake14 gmake
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -24,8 +23,7 @@ CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="${GNOME_CONFIG}"
 GNOME_CONFIG=		${WRKDIR}/gnome-config
 
 pre-configure:
-	cd ${WRKSRC} && ${AUTOHEADER} && ${AUTOMAKE} --gnu && \
-		${AUTORECONF} --force
+	cd ${WRKSRC} && autoheader && automake --gnu && autoreconf --force
 	${SED} -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/gnome-config \
 		> ${GNOME_CONFIG}
 	${CHMOD} +x ${GNOME_CONFIG}
@@ -33,5 +31,4 @@ pre-configure:
 .include "../../audio/libmikmod/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

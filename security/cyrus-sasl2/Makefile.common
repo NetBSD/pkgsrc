@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2005/05/22 20:08:29 jlam Exp $
+# $NetBSD: Makefile.common,v 1.29 2005/06/01 20:08:01 jlam Exp $
 #
 # This file is currently included by:
 #
@@ -74,15 +74,16 @@ CONFIGURE_ARGS+=	--without-saslauthd
 
 # Left here as reference for patch makers...
 # clean up a bit to help package maintainer produce patch files
+#
+#USE_TOOLS+=	automake
+#
 #post-extract:
 #	${_PKG_SILENT}${_PKG_DEBUG}					\
 #	${FIND} ${WRKSRC} -type f -name "*.orig" -print | ${XARGS} ${RM} -f
 #
 #pre-configure:
 #	cd ${WRKSRC};							\
-#	${ACLOCAL} -I cmulocal -I config;				\
-#	${AUTOHEADER};							\
-#	${AUTOMAKE} -a --gnu -i ;					\
-#	${AUTOCONF}
-#
-#.include "../../mk/automake.mk"
+#	aclocal -I cmulocal -I config;					\
+#	autoheader;							\
+#	automake -a --gnu -i ;						\
+#	autoconf

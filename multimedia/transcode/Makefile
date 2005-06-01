@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:08:22 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 20:08:01 jlam Exp $
 
 DISTNAME=	transcode-0.6.12
 PKGREVISION=	6
@@ -12,7 +12,7 @@ COMMENT=	Command line video-stream processing tool
 
 BUILD_DEPENDS+=		nasm>=0.98.36:../../devel/nasm
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		automake gmake
 
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--with-ft-prefix=${BUILDLINK_PREFIX.freetype2}
 # this used to operate on acinclude.m4 and run aclocal, but running
 # aclocal here breaks due to missing DLFCN checking
 post-patch:
-	-cd ${WRKSRC} && ${ACLOCAL} && ${AUTOCONF} && ${AUTOMAKE}
+	-cd ${WRKSRC} && aclocal && autoconf && automake
 	cd ${WRKSRC} && \
 	${SED} "s|/usr/local|${PREFIX}|g; s|include/libmpeg3|include/mpeg3|g; s|-ldl -lm|-lm|g" configure > configure.new && \
 	${MV} configure.new configure && ${CHMOD} a+x configure
@@ -59,5 +59,4 @@ post-install:
 .include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
