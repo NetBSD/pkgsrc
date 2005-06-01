@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.14 2005/05/22 19:11:15 jlam Exp $
+# $NetBSD: SunOS.mk,v 1.15 2005/06/01 14:27:12 markd Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -28,10 +28,19 @@ ULIMIT_CMD_memorysize?=	ulimit -v `${SETENV} LC_MESSAGES=C ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
 
 # imake installs manpages in weird places
+.if !defined(X11_TYPE) || defined(X11_TYPE) && !empty(X11_TYPE:Mnative)
+# openwindows
 IMAKE_MAN_SOURCE_PATH=	share/man/man
 IMAKE_MAN_SUFFIX=	1
 IMAKE_LIBMAN_SUFFIX=	3
 IMAKE_FILEMAN_SUFFIX=	5
+.else
+# xfree86, xorg
+IMAKE_MAN_SOURCE_PATH=	man/man
+IMAKE_MAN_SUFFIX=	1x
+IMAKE_LIBMAN_SUFFIX=	3x
+IMAKE_FILEMAN_SUFFIX=	5x
+.endif
 IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
 IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
 IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
