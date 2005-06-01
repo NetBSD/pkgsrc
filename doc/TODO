@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3573 2005/05/31 22:06:30 wiz Exp $
+$NetBSD: TODO,v 1.3574 2005/06/01 02:42:22 snj Exp $
 
 Suggested new packages
 ======================
@@ -446,7 +446,6 @@ Suggested package updates
 	o denemo-0.7.2a
 	o devIL-1.6.7
 	o devhelp-0.9.3
-	o devtodo-0.1.18
 	o diction-1.08
 	o diffstat-1.38
 	o dirac-0.5.2
@@ -1286,7 +1285,7 @@ Suggested cleanups in pkgsrc
 	  net/ja-samba, net/samba2, print/LPRng-core, print/ja-vflib-lib,
 	  print/ja-vfxdvik, security/mirrordir, sysutils/amanda-common,
 	  sysutils/medusa, textproc/chasen-base, textproc/jade,
-	  textproc/libunicode, textproc/namazu2, time/devtodo,
+	  textproc/libunicode, textproc/namazu2,
 	  wm/bbconf, www/ap-jserv, www/cgicc, www/glibwww,
 	  x11/gtk+extra
 
