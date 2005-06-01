@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:12 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/01 20:08:00 jlam Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.4-src
@@ -14,6 +14,7 @@ HOMEPAGE=		http://www.mysql.com/
 COMMENT=		MySQL Control Center
 
 USE_PKGLOCALEDIR=	YES
+USE_TOOLS+=		automake
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	\
 	--with-mysql-lib=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
@@ -26,7 +27,7 @@ CONFIGURE_ENV+=		QMAKESPEC="${QTDIR}/mkspecs/netbsd-g++"
 MYSQL_VERSIONS_ACCEPTED=	40 41
 
 pre-configure:
-	cd ${WRKSRC} && ${ACLOCAL} && ${AUTOCONF}
+	cd ${WRKSRC} && aclocal && autoconf
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mysqlcc ${PREFIX}/bin/
@@ -34,6 +35,4 @@ do-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
-.include "../../mk/autoconf.mk"
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
