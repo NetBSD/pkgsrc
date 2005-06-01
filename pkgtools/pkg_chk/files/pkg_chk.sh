@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.15 2005/06/01 11:29:45 abs Exp $
+# $Id: pkg_chk.sh,v 1.16 2005/06/01 14:14:47 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -241,7 +241,7 @@ list_packages()
 		fatal_maybe " ** $pkg.tgz - binary package dependency missing"
 		continue
 	    fi
-	    DEPLIST="$(${PKG_INFO} -. -N $PACKAGES/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} ..)"
+	    DEPLIST="$(${PKG_INFO} -. -N $PACKAGES/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} .. || true)"
 	    if [ -z "$DEPLIST" ] ; then
 		PAIRLIST="${PAIRLIST}$pkg.tgz $pkg.tgz\n"
 	    fi
