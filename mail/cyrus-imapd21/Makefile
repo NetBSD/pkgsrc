@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/05/31 10:01:37 dillo Exp $
+# $NetBSD: Makefile,v 1.31 2005/06/01 20:08:00 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.1.18
 SVR4_PKGNAME=		cimap
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
-AUTOCONF_REQD=		2.13
+USE_TOOLS+=		autoconf213
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
@@ -166,7 +166,7 @@ post-patch:
 	done
 
 pre-configure:
-	cd ${WRKSRC} && ${AUTOHEADER} && ${AUTOCONF}
+	cd ${WRKSRC} && autoheader && autoconf
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${PREFIX}/cyrus/bin
@@ -182,5 +182,4 @@ post-install:
 		${INSTALL_DATA} $$file ${HTMLDIR};			\
 	done
 
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"

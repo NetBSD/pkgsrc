@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/05/22 20:08:46 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/01 20:08:01 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -26,12 +26,11 @@ PKG_USERS=		${PRIVOXY_USER}:${PRIVOXY_GROUP}::Privoxy\\ user
 
 EGDIR=			${PREFIX}/share/examples/privoxy
 
-AUTOCONF_REQD=		2.13
 CPPFLAGS+=		-Dunix
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}-stable
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		autoconf213 gmake
 MAKEFILE=		GNUmakefile
 
 USE_PERL5=		build
@@ -62,7 +61,7 @@ FILES_SUBST+=		PRIVOXY_USER=${PRIVOXY_USER}
 
 pre-configure:
 	@cd ${WRKSRC} &&					\
-	(   ${AUTOHEADER} && ${AUTOCONF} ;			\
+	(   autoheader && autoconf ;				\
 	    ${MV} config config.bak &&				\
 	    ${SED} ${FILES_SUBST_SED} <config.bak >config &&	\
 	    ${RM} -f config.bak					\
@@ -74,5 +73,4 @@ post-install:
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
