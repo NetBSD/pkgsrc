@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:46:18 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/01 14:37:31 wiz Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -17,8 +17,6 @@ USE_PKGINSTALL=	YES
 
 LICENSE=	shareware
 
-BUILD_DEFS+=	USE_INET6
-
 MAKE_ENV+=	ROOT_USER="${ROOT_USER}"
 MAKE_ENV+=	ROOT_GROUP="${ROOT_GROUP}"
 
@@ -26,7 +24,7 @@ MAKE_DIRS+=	${PREFIX}/share/cucipop/bulletins
 SPECIAL_PERMS+=	${PREFIX}/sbin/cucipop ${ROOT_USER} ${ROOT_GROUP} 2755
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cucipop
-PKG_SUPPORTED_OPTIONS=	db
+PKG_SUPPORTED_OPTIONS=	db inet6
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
@@ -38,8 +36,7 @@ MAKE_ENV+=	LIBS=${BDB_LIBS}
 .  include "../../mk/bdb.buildlink3.mk"
 .endif
 
-# to be friendly with pre-1.5 systems
-.if defined(USE_INET6) && (${USE_INET6} == "YES")
+.if !empty(PKG_OPTIONS:Minet6)
 MAKE_ENV+=	CFLAGS_INET6=-DINET6
 .endif
 
