@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.398 2005/06/01 20:00:49 wiz Exp $
+# $NetBSD: Makefile,v 1.399 2005/06/01 20:07:43 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -11,7 +11,6 @@ SUBDIR+=	amaya
 SUBDIR+=	analog
 SUBDIR+=	ap-Embperl
 SUBDIR+=	ap-access-referer
-SUBDIR+=	ap-aolserver
 SUBDIR+=	ap-auth-cookie
 SUBDIR+=	ap-auth-ldap
 SUBDIR+=	ap-auth-mysql
