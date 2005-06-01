@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3574 2005/06/01 02:42:22 snj Exp $
+$NetBSD: TODO,v 1.3575 2005/06/01 03:02:29 snj Exp $
 
 Suggested new packages
 ======================
@@ -446,7 +446,6 @@ Suggested package updates
 	o denemo-0.7.2a
 	o devIL-1.6.7
 	o devhelp-0.9.3
-	o diction-1.08
 	o diffstat-1.38
 	o dirac-0.5.2
 	o dirdiff-2.0
