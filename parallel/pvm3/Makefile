@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/04/11 21:47:04 tv Exp $
+# $NetBSD: Makefile,v 1.38 2005/06/01 18:03:08 jlam Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
@@ -19,7 +19,6 @@ PVM_SSH?=		${LOCALBASE}/bin/ssh
 
 WRKSRC=			${WRKDIR}/pvm3
 USE_LANGUAGES=		fortran
-USE_X11=		yes
 USE_LIBTOOL=		yes
 
 PVM_ROOT=		${WRKSRC}
@@ -36,6 +35,8 @@ BUILD_TARGET=		all install
 
 PVM_DIR=		${PREFIX}/pvm3
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PVM_DIR}/lib/${PVM_ARCH}
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-build:
 	${CP} ${WRKSRC}/examples/${PVM_ARCH}/.libs/* \

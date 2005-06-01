@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/05/22 20:08:04 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/06/01 18:02:55 jlam Exp $
 #
 
 DISTNAME=	eog-2.10.0
@@ -13,7 +13,6 @@ COMMENT=	Eye of GNOME: an image viewing and cataloging program
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
-USE_X11=		YES
 USE_TOOLS+=		gmake
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES

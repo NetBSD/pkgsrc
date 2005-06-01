@@ -1,127 +1,116 @@
-# $NetBSD: builtin.mk,v 1.6 2005/03/01 18:56:43 xtraeme Exp $
+# $NetBSD: builtin.mk,v 1.7 2005/06/01 18:03:27 jlam Exp $
 
-_X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
+BUILTIN_PKG:=	Xrender
 
+BUILTIN_FIND_FILES_VAR:=	H_XRENDER
+BUILTIN_FIND_FILES.H_XRENDER=	${X11BASE}/include/X11/extensions/Xrender.h
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.Xrender)
 IS_BUILTIN.Xrender=	no
-.  if exists(${_X11_TMPL})
+.  if exists(${H_XRENDER})
+PKGSRC_USE_TOOLS+=	imake			# XXX
+IMAKE?=			${X11BASE}/bin/imake	# XXX
+.    if defined(IMAKE) && exists(${IMAKE})
 IS_BUILTIN.Xrender!=							\
-	if ${GREP} -q BuildRenderLibrary ${_X11_TMPL}; then		\
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-.    if !empty(IS_BUILTIN.Xrender:M[yY][eE][sS])
-#
-# Create an appropriate package name for the built-in Xrender distributed
-# with the system.  This package name can be used to check against
-# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
-# or if the built-in one is sufficient.
-#
-# Xrender doesn't provide a method of discovering the version number of
-# the software.  Match up Xrender versions with XFree86 versions for an
-# approximate determination of the Xrender version.
-#
-_XRENDER_VERSIONS=	0.8.3  0.8.2  0.8.1  0.8  0.2  0.1
-_XRENDER_0.1=	4.0 4.0.* 4.1 4.1.[0-9] 4.1.[0-9].* 4.1.[1-8][0-9]* 4.1.9[0-8]*
-_XRENDER_0.2=	4.1.99.* 4.2 4.2.[0-9] 4.2.[0-9].* 4.2.[1-8][0-9]* 4.2.9[0-8]*
-_XRENDER_0.8=	4.2.99.* 4.3 4.3.[0-9] 4.3.[0-9].* 4.3.[1-8][0-9]* 4.3.9[0-8]*
-_XRENDER_0.8+=	4.3.99.* 4.[4-9]* 4.[1-9][0-9]*
-.      if !defined(XF86_VERSION)
-XF86_VERSION=	3.3
-.        if exists(${X11BASE}/lib/X11/config/xorgversion.def)
-_X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/xorgversion.def
-.        elif exists(${X11BASE}/lib/X11/config/xorg.cf)
-_X11_CONFIG_VERSION_DEF=        ${X11BASE}/lib/X11/config/xorg.cf
-_XORG_MAJOR!=	\
-	${AWK} '/\#define[ 	]*XORG_VERSION_MAJOR/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XORG_MINOR!=	\
-	${AWK} '/\#define[ 	]*XORG_VERSION_MINOR/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XORG_PATCH!=	\
-	${AWK} '/\#define[ 	]*XORG_VERSION_PATCH/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XORG_SNAP!=	\
-	${AWK} '/\#define[ 	]*XORG_VERSION_SNAP/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XORG_TEENY=	${_XORG_PATCH}.${_XORG_SNAP}
-.          if !empty(_XORG_TEENY:M0.0)
-XF86_VERSION=	4.4
-.          else
-XF86_VERSION=	4.4.${_XORG_TEENY}
-.          endif
-.        elif exists(${X11BASE}/lib/X11/config/version.def)
-_X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/version.def
-_XF86_MAJOR!=	\
-	${AWK} '/\#define[ 	]*XF86_VERSION_MAJOR/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XF86_MINOR!=	\
-	${AWK} '/\#define[ 	]*XF86_VERSION_MINOR/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XF86_PATCH!=	\
-	${AWK} '/\#define[ 	]*XF86_VERSION_PATCH/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XF86_SNAP!=	\
-	${AWK} '/\#define[ 	]*XF86_VERSION_SNAP/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XF86_TEENY=	${_XF86_PATCH}.${_XF86_SNAP}
-.          if !empty(_XF86_TEENY:M0.0)
-XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}
-.          else
-_F86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}.${_XF86_TEENY}
-.          endif
-.        endif
-BUILDLINK_VARS+=	XF86_VERSION
-.      endif	# defined(XF86_VERSION)
-.      for _xrender_version_ in ${_XRENDER_VERSIONS}
-.        for _pattern_ in ${_XRENDER_${_xrender_version_}}
-.          if !empty(XF86_VERSION:M${_pattern_})
-_XRENDER_VERSION?=	${_xrender_version_}
-.          endif
-.        endfor
-.      endfor
-_XRENDER_VERSION?=	0.1
-BUILTIN_PKG.Xrender=	Xrender-${_XRENDER_VERSION}
-BUILDLINK_VARS+=	BUILTIN_PKG.Xrender
+	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
+		-f ${BUILDLINK_PKGSRCDIR.Xrender}/builtin-imake.mk	\
+		-s - |							\
+	${MAKE} -f - builtin-test
 .    endif
 .  endif
-BUILDLINK_VARS+=	IS_BUILTIN.Xrender
-.endif	# IS_BUILTIN.Xrender
+.endif
+MAKEVARS+=	IS_BUILTIN.Xrender
 
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.Xrender) && \
+    !empty(IS_BUILTIN.Xrender:M[yY][eE][sS]) && \
+    exists(${H_XRENDER})
+#
+# Xrender doesn't provide a method of discovering the version number of
+# the software.  Match up Xrender versions with X11 versions for an
+# approximate determination of the Xrender version.
+#
+_BLTN_XRENDER_VERSIONS=		0.8.3  0.8.2  0.8.1  0.8  0.2  0.1
+_BLTN_XRENDER_0.1.XFree86=	4.0 4.0.* 4.1 4.1.[0-9] 4.1.[0-9].*	\
+				4.1.[1-8][0-9]* 4.1.9[0-8]*
+_BLTN_XRENDER_0.2.XFree86=	4.1.99.* 4.2 4.2.[0-9] 4.2.[0-9].*	\
+				4.2.[1-8][0-9]* 4.2.9[0-8]*
+_BLTN_XRENDER_0.8.XFree86=	4.2.99.* 4.3 4.3.[0-9] 4.3.[0-9].*	\
+				4.3.[1-8][0-9]* 4.3.9[0-8]*		\
+				4.3.99.* 4.[4-9]* 4.[1-9][0-9]*
+_BLTN_XRENDER_0.8.xorg=		6.[7-9]* 6.[1-9][0-9]*
+.  for _version_ in ${_BLTN_XRENDER_VERSIONS}
+.    for _pattern_ in ${_BLTN_XRENDER_${_version_}.${BUILTIN_X11_TYPE.${X11_TYPE}}}
+.      if !empty(BUILTIN_X11_VERSION.${X11_TYPE}:M${_pattern_})
+BUILTIN_VERSION.Xrender?=	${_version_}
+.      endif
+.    endfor
+.  endfor
+.  if defined(BUILTIN_VERSION.Xrender)
+BUILTIN_PKG.Xrender=	Xrender-${BUILTIN_VERSION.Xrender}
+.  endif
+.endif
+MAKEVARS+=	BUILTIN_PKG.Xrender
+
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
+#
+# These are dependencies of Xrender.  If we need to use the pkgsrc
+# versions of any of these, then also use the pkgsrc version of
+# Xrender.
+#
 #.if defined(USE_BUILTIN.render) && !empty(USE_BUILTIN.render:M[nN][oO])
-#USE_BUILTIN.Xrender=	no
+#USE_BUILTIN.render=	no
 #.endif
 
 .if !defined(USE_BUILTIN.Xrender)
-USE_BUILTIN.Xrender?=	${IS_BUILTIN.Xrender}
-
-.  if defined(BUILTIN_PKG.Xrender)
+.  if ${PREFER.Xrender} == "pkgsrc"
+USE_BUILTIN.Xrender=	no
+.  else
+USE_BUILTIN.Xrender=	${IS_BUILTIN.Xrender}
+.    if defined(BUILTIN_PKG.Xrender) && \
+        !empty(IS_BUILTIN.Xrender:M[yY][eE][sS])
 USE_BUILTIN.Xrender=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.Xrender}
-.      if !empty(USE_BUILTIN.Xrender:M[yY][eE][sS])
-USE_BUILTIN.Xrender!=	\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.Xrender}; then \
-		${ECHO} "yes";						\
+.      for _dep_ in ${BUILDLINK_DEPENDS.Xrender}
+.        if !empty(USE_BUILTIN.Xrender:M[yY][eE][sS])
+USE_BUILTIN.Xrender!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.Xrender:Q}; then \
+		${ECHO} yes;						\
 	else								\
-		${ECHO} "no";						\
+		${ECHO} no;						\
 	fi
-.      endif
-.    endfor
-.  endif
-.endif	# USE_BUILTIN.Xrender
+.        endif
+.      endfor
+.    endif
+.  endif  # PREFER.Xrender
+.endif
+MAKEVARS+=	USE_BUILTIN.Xrender
 
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
 CHECK_BUILTIN.Xrender?=	no
 .if !empty(CHECK_BUILTIN.Xrender:M[nN][oO])
 
-.if !empty(USE_BUILTIN.Xrender:M[nN][oO])
+.  if !empty(USE_BUILTIN.Xrender:M[nN][oO])
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8.2
-BUILDLINK_DEPENDS.render+=	render>=0.8
-.endif
+BUILDLINK_DEPENDS.render+=	Xrender>=0.8
+.  endif
 
-.if !empty(USE_BUILTIN.Xrender:M[yY][eE][sS])
+.  if !empty(USE_BUILTIN.Xrender:M[yY][eE][sS])
 BUILDLINK_PREFIX.Xrender=	${X11BASE}
 USE_BUILTIN.render=		yes
-.endif
+.  endif
 
 .endif	# CHECK_BUILTIN.Xrender

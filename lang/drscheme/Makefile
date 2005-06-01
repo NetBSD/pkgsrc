@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/05/26 19:17:37 jschauma Exp $
+# $NetBSD: Makefile,v 1.28 2005/06/01 18:02:58 jlam Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
@@ -23,7 +23,6 @@ COMMENT=		R4RS-compliant and nearly R5RS-compliant scheme tailored for teaching
 CONFLICTS+=		mzscheme-[0-9]*:../../lang/mzscheme
 
 WRKSRC=                 ${WRKDIR}/plt/src
-USE_X11=		yes
 USE_TOOLS+=		gmake
 USE_PERL5=		yes
 GNU_CONFIGURE=		yes
@@ -70,6 +69,7 @@ post-install:
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # See comment above.

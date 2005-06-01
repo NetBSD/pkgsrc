@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:03 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/01 18:02:52 jlam Exp $
 #
 
 DISTNAME=	starfighter-1.1-1
@@ -13,7 +13,6 @@ COMMENT=	Old school 2D shoot them up
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES+=	c++
-USE_X11=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-1$//}
 
 MAKEFILE=	makefile

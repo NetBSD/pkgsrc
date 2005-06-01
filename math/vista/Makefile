@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/22 20:08:14 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/01 18:03:04 jlam Exp $
 #
 
 DISTNAME=	vista
@@ -16,4 +16,5 @@ WRKSRC=		${WRKDIR}/vista-5.0.5
 USE_X11BASE=	yes
 USE_TOOLS+=	gmake
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/04/15 21:53:38 hira Exp $
+# $NetBSD: Makefile,v 1.26 2005/06/01 18:03:33 jlam Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-server-${XORG_VER}
@@ -13,7 +13,6 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org X server and related programs
 
-USE_X11=		yes
 DISTINFO_FILE=		${.CURDIR}/../../x11/xorg-libs/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/xorg-libs/patches
 
@@ -90,4 +89,5 @@ BUILDLINK_DEPENDS.xorg-libs+=	xorg-libs>=6.8.2nb1
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../meta-pkgs/xorg/Makefile.common"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

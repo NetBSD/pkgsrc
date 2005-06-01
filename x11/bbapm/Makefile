@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/12/03 17:41:21 gson Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:03:27 jlam Exp $
 # based on
 #    FreeBSD port:
 #    ID: ports/x11-wm/bbapm/Makefile,v 1.5 2002/09/02 01:30:15 lioux Exp
@@ -15,13 +15,14 @@ HOMEPAGE=	http://bbtools.windsofstorm.net/
 COMMENT=	APM monitor for Blackbox
 
 GNU_CONFIGURE=	yes
-USE_X11=	yes
 
 # For now:
 # We use i386/apmvar.h; other architectures will require modification
 # of the patches, probably something like ${MACHINE_ARCH}/apmvar.h in
 # patch-ak
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-*
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-patch:
 	${SED} -e 's,@PREFIX@,${PREFIX},' ${WRKSRC}/data/bbapm.1.tmp > \

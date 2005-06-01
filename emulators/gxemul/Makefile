@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/31 11:21:41 dillo Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/01 18:02:47 jlam Exp $
 #
 
 DISTNAME=	gxemul-0.3.2
@@ -35,7 +35,6 @@ PKG_OPTIONS_LEGACY_OPTS+=	X11:x11
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mx11)
-USE_X11=		yes
 GLOBAL_LDFLAGS=		-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib
 SUBST_CLASSES=		x11
 SUBST_STAGE.x11=	post-patch
@@ -45,4 +44,5 @@ SUBST_SED.x11=		-e "s|-L/usr/X11R6/lib|${GLOBAL_LDFLAGS}|g" \
 SUBST_MESSAGE.x11=	"Fixing X linking flags."
 .endif
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

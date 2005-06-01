@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/23 08:39:50 adam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/01 18:02:48 jlam Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
@@ -14,7 +14,6 @@ VERSION=	20050502
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-freetype-src=no
 WRKSRC=			${WRKDIR}/fontforge-${VERSION}
@@ -26,5 +25,6 @@ WRKSRC=			${WRKDIR}/fontforge-${VERSION}
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

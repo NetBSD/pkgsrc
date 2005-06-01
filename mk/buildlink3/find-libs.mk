@@ -1,4 +1,4 @@
-# $NetBSD: find-libs.mk,v 1.1 2005/05/24 03:44:04 jlam Exp $
+# $NetBSD: find-libs.mk,v 1.2 2005/06/01 18:03:06 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -41,14 +41,14 @@
 #
 # The input variable is BUILDLINK_FIND_LIBS, which is a list of library
 # names, e.g. ncurses, iconv, etc., that will be sought in the base
-# system.  BUILDLINK_LIB_FOUND.<lib> is set to "yes" or "no" depending
+# system.  BUILTIN_LIB_FOUND.<lib> is set to "yes" or "no" depending
 # on the result of the search.
-# 
+#
 # An example use is:
 #
 # BUILDLINK_FIND_LIBS:=	intl iconv
 # .include "../../mk/buildlink3/find-libs.mk"
-# # ${BUILDLINK_LIB_FOUND.intl} and ${BUILDLINK_LIB_FOUND.iconv} are now
+# # ${BUILTIN_LIB_FOUND.intl} and ${BUILTIN_LIB_FOUND.iconv} are now
 # # either "yes" or "no".
 #
 
@@ -59,17 +59,16 @@ PKGSRC_USE_TOOLS+=	echo
 PKGSRC_USE_TOOLS+=	test
 .endif
 
-.for _lib_ in ${BUILDLINK_FIND_LIBS}
-.  if !defined(BUILDLINK_LIB_FOUND.${_lib_})
-BUILDLINK_LIB_FOUND.${_lib_}!=	\
-	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" != "/usr/lib/lib${_lib_}.*"; then \
+.for _lib_ in ${BUILTIN_FIND_LIBS}
+.  if !defined(BUILTIN_LIB_FOUND.${_lib_})
+BUILTIN_LIB_FOUND.${_lib_}!=	\
+	if ${TEST} "`${ECHO} /usr/lib${ABI}/lib${_lib_}.*`" != "/usr/lib${ABI}/lib${_lib_}.*"; then \
 		${ECHO} yes;						\
-	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" != "/lib/lib${_lib_}.*"; then \
+	elif ${TEST} "`${ECHO} /lib${ABI}/lib${_lib_}.*`" != "/lib${ABI}/lib${_lib_}.*"; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
 	fi
 .  endif
-MAKEVARS+=	BUILDLINK_LIB_FOUND.${_lib_}
+MAKEVARS+=	BUILTIN_LIB_FOUND.${_lib_}
 .endfor
-.undef _lib_

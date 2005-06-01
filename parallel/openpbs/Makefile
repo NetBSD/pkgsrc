@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:04 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:08 jlam Exp $
 #
 
 DISTNAME=		OpenPBS_2_3_16
@@ -14,7 +14,6 @@ INTERACTIVE_STAGE=	fetch
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-USE_X11=		yes
 
 REPLACE_INTERPRETER+=	tcl
 _REPLACE.tcl.old=	.*/bin/pbs_tclsh

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 04:06:53 reed Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:44 jlam Exp $
 #
 
 DISTNAME=	libmatchbox-1.6
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://projects.o-hand.com/matchbox/
 COMMENT=	Library for matchbox window manager for computers with small displays
 
-USE_X11=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 

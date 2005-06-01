@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 05:35:33 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/01 18:03:24 jlam Exp $
 
 DISTNAME=	AfterStep-1.8.11
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
@@ -18,7 +18,6 @@ DEPENDS+=		xp-[0-9]*:../../x11/xp
 AUTOCONF_REQD=		2.13
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_X11=		YES
 
 CONFIGURE_ARGS+=	--disable-staticlibs
 CONFIGURE_ARGS+=	--disable-xinerama

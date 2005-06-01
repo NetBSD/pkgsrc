@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/22 20:08:28 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/06/01 18:03:09 jlam Exp $
 #
 
 DISTNAME=	gpdf-2.10.0
@@ -17,7 +17,6 @@ USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 GCONF2_SCHEMAS=		gpdf.schemas

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/05/22 20:08:49 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/01 18:03:30 jlam Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -24,6 +24,8 @@ MAKE_ENV+=	CXXOPTS="${CFLAGS}"
 BUILD_TARGET=	src
 
 .include "../../mk/bsd.prefs.mk"
+
+.include "../../mk/x11.buildlink3.mk"
 
 do-configure:
 	@cd ${WRKSRC} && ${MAKE} QTDIR=${WRKSRC} ${LOWER_OPSYS}-g++-static

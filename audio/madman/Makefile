@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/31 22:00:06 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:38 jlam Exp $
 
 DISTNAME=	madman-0.93
 PKGREVISION=	2
@@ -10,8 +10,6 @@ HOMEPAGE=	http://madman.sourceforge.net/
 COMMENT=	Powerful audio manager for large collections
 
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
-
-USE_X11=		yes
 
 GCC_REQD=		3.0
 

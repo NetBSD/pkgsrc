@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:15 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/01 18:02:42 jlam Exp $
 #
 
 DISTNAME=	quicklist-0.8.6
@@ -13,7 +13,6 @@ COMMENT=	Simple database like AppleWorks & MS Works
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=	yes
-USE_X11=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"

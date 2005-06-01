@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/05/22 20:07:56 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2005/06/01 18:02:45 jlam Exp $
 #
 
 DISTNAME=		gedit-2.10.2
@@ -16,7 +16,6 @@ USE_PERL5=		build
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake
-USE_X11=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
