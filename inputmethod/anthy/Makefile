@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:08 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/01 14:03:15 dillo Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 
@@ -16,17 +16,10 @@ CONFIGURE_ENV+=		EMACS=no
 
 PKGCONFIG_OVERRIDE+=	anthy.pc.in
 
-# Global and legacy options
-.if defined(USE_2CH_DICT) && !empty(USE_2CH_DICT:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	2ch_dict
-.endif
-
-.if defined(USE_OKINAWA_DICT) && !empty(USE_OKINAWA_DICT:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	okinawa_dict
-.endif
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.anthy
 PKG_SUPPORTED_OPTIONS=	2ch_dict okinawa_dict
+PKG_OPTIONS_LEGACY_VARS+=	USE_2CH_DICT:2ch_dict
+PKG_OPTIONS_LEGACY_VARS+=	USE_OKINAWA_DICT:okinawa_dict
 
 .include	"../../mk/bsd.options.mk"
 
