@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.7 2005/05/24 12:14:42 wiz Exp $ -->
+<!-- $NetBSD: build.xml,v 1.8 2005/06/01 20:58:16 wiz Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -60,7 +60,8 @@
 
 	<para>Usually, X11 packages should be installed under
 	  <varname>LOCALBASE</varname> whenever possible.  Note that you will
-	  need to set <varname>USE_X11</varname> in them to request the
+	  need to include <filename>../../mk/x11.buildlink3.mk</filename>
+	  in them to request the
 	  presence of X11 and to get the right compilation flags.</para>
 
 	<para>Even though, there are some packages that cannot be installed
@@ -70,15 +71,14 @@
 	  <varname>USE_X11BASE</varname> or <varname>USE_IMAKE</varname> in
 	  your package.</para>
 
-	<para>Some notes: <varname>USE_X11</varname> and
-	  <varname>USE_X11BASE</varname> are mutually exclusive. If you need
+	<para>Some notes: If you need
 	  to find includes or libraries installed by a pkg that has
 	  <varname>USE_IMAKE</varname> or <varname>USE_X11BASE</varname> in
-	  its pkg <filename>Makefile</filename>, you need to use
+	  its pkg <filename>Makefile</filename>, you need to look in
 	  <emphasis>both</emphasis> <filename>${X11BASE}</filename> and
 	  <filename>${LOCALBASE}</filename>. To force installation of
 	  all X11 packages in <varname>LOCALBASE</varname>, the 
-	  <pkg>pkgtools/xpkgwedge</pkg> is enabled by default.</para>
+	  <pkg>pkgtools/xpkgwedge</pkg> package is enabled by default.</para>
       </listitem>
 
       <listitem>
