@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/06/01 18:03:28 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/06/01 19:44:07 wiz Exp $
 
 DISTNAME=	Eterm-0.9.3
 PKGNAME=	${DISTNAME:S/^E/e/}
@@ -41,12 +41,7 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/themes
 SPECIAL_PERMS=		${PREFIX}/bin/Eterm ${SETUID_ROOT_PERMS}
 .endif
 
-.if ${MACHINE_ARCH} == "i386"
-BUILD_DEFS+=		USE_MMX
-. if !empty(USE_MMX:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-mmx
-. endif
-.endif
+.include "options.mk"
 
 post-extract:
 	${LN} -sf ${WRKSRC} ${WRKDIR}/Eterm
