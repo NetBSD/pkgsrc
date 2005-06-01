@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/22 20:08:11 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/01 14:47:54 wiz Exp $
 
 DISTNAME=		evolution-1.4.6
 PKGNAME=		${DISTNAME:S/evolution/evolution14/}
@@ -24,15 +24,7 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb2
 # to make sure locally stored mails remain in the same format!
 BUILDLINK_DEPENDS.db3=		db3-3.11.2{,nb*}
 
-.include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=		USE_INET6
-
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ipv6=yes
-.else
-CONFIGURE_ARGS+=	--enable-ipv6=no
-.endif
+.include "options.mk"
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
