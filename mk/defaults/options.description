@@ -102,7 +102,6 @@ imstt
 inet6			Enable support for IPv6.
 ipfilter	
 iptables	
-ipv6	
 irssi-perl		Enable Perl support in irssi.
 ispell	
 java	
