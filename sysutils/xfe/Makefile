@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/22 20:08:34 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/01 18:03:23 jlam Exp $
 #
 
 DISTNAME=	xfe-0.54.2
@@ -17,7 +17,6 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_PKGINSTALL=		yes
-USE_X11=		yes
 
 PKG_SYSCONFSUBDIR=	xfe
 EGDIR=			${PREFIX}/share/examples/xfe
@@ -30,4 +29,5 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/fox/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

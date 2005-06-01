@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:45:51 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/01 18:02:51 jlam Exp $
 
 DISTNAME=	ltris-1.0.7
 PKGREVISION=	1
@@ -9,7 +9,6 @@ MAINTAINER=	xs@nitric.net
 HOMEPAGE=	http://lgames.sourceforge.net/
 COMMENT=	SDL tetris clone
 
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../audio/SDL_mixer/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:40 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/01 18:03:05 jlam Exp $
 
 DISTNAME=	xtide-2.4
 PKGNAME=	${DISTNAME}
@@ -16,7 +16,6 @@ XTIDE_SRC=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
-USE_X11=	yes
 
 CONFIGURE_ARGS+=--sysconfdir="${PKG_SYSCONFDIR}"
 EGDIR=		${PREFIX}/share/examples/xtide

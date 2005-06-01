@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/22 20:08:09 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/01 18:02:58 jlam Exp $
 
 DISTNAME=		otp_src_R9C-0
 PKGNAME=		erlang-9.2
@@ -12,7 +12,6 @@ COMMENT=		Concurrent functional programming language
 
 DIST_SUBDIR=		erlang
 
-USE_X11=		yes
 USE_PERL5=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
@@ -29,4 +28,5 @@ SUBST_MESSAGE.target=	"Fixing target name."
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/java-vm.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

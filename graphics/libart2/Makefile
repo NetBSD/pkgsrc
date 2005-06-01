@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:46:05 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/01 18:02:56 jlam Exp $
 
 DISTNAME=		libart_lgpl-2.3.17
 PKGNAME=		${DISTNAME:S/_lgpl/2/}
@@ -13,8 +13,8 @@ COMMENT=		High-performance 2D graphics library
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
-USE_X11=		YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libart-2.0.pc.in
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

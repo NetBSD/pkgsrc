@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2005/05/31 15:43:56 drochner Exp $
+# $NetBSD: Makefile,v 1.79 2005/06/01 18:03:26 jlam Exp $
 #
 
 DISTNAME=	galeon-1.3.21
@@ -19,7 +19,6 @@ USE_TOOLS+=		gmake
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 MOZILLA_USE_GTK2=	# defined
 MOZILLA_USE_XFT=	YES

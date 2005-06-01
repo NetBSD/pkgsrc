@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:07:42 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 18:02:41 jlam Exp $
 
 DISTNAME=	gtkyahoo-0.18.2
 PKGREVISION=	3
@@ -13,7 +13,6 @@ COMMENT=	GTK+ client for Yahoo! Messenger
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 USE_TOOLS+=		lex
-USE_X11=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-libyahoo="${BUILDLINK_PREFIX.libyahoo}"
 

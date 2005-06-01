@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:26 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/01 18:03:08 jlam Exp $
 #
 
 DISTNAME=	vino-2.10.0
@@ -16,7 +16,6 @@ USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_PERL5=		build
-USE_X11=		yes
 
 GCONF2_SCHEMAS=		vino-server.schemas
 

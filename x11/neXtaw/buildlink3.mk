@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:18:36 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2005/06/01 18:03:29 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NEXTAW_BUILDLINK3_MK:=	${NEXTAW_BUILDLINK3_MK}+
@@ -17,6 +17,7 @@ BUILDLINK_PKGSRCDIR.neXtaw?=	../../x11/neXtaw
 .endif	# NEXTAW_BUILDLINK3_MK
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 LIBXAW?=	-L${BUILDLINK_PREFIX.neXtaw}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.neXtaw}/lib	\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/03/24 21:13:04 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/01 18:03:33 jlam Exp $
 
 DISTNAME=	xneko
 PKGNAME=	xneko-4.4
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Classic BSD4.4 cat-and-mouse
 
 WRKSRC=		${WRKDIR}/pub/bsd-sources/4.4BSD-Lite/usr/src/games/xneko
-USE_X11=	yes
 MANCOMPRESSED_IF_MANZ=	yes
 
 PLIST_SRC=	${WRKDIR}/PLIST
@@ -18,6 +17,8 @@ PLIST_SRC=	${WRKDIR}/PLIST
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=	MANINSTALL
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}

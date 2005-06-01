@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/17 01:06:06 kristerw Exp $
+# $NetBSD: Makefile,v 1.34 2005/06/01 18:02:41 jlam Exp $
 
 DISTNAME=	uudeview-0.5.20
 PKGNAME=	xdeview-0.5.20
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.fpx.de/fp/Software/UUDeview/
 COMMENT=	X11 program for uu/xx/Base64/BinHex de-/encoding
 
-USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-tcl="${LOCALBASE}" --enable-tk="${LOCALBASE}"
 LDFLAGS+=	-s -lX11

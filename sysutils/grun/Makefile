@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:32 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/01 18:03:22 jlam Exp $
 
 DISTNAME=	grun-0.9.2
 PKGREVISION=	3
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	${MASTER_SITES}/grun.html
 COMMENT=	GTK+ based Run dialog
 
-USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 PTHREAD_OPTS+=		require

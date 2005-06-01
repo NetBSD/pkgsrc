@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/11 21:44:55 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/01 18:02:38 jlam Exp $
 
 DISTNAME=	musicbox-1.01p2
 CATEGORIES=	audio
@@ -11,7 +11,6 @@ COMMENT=	X11 front-interface for mpg123
 DEPENDS+=	mpg123>=0.59.18:../../audio/mpg123
 
 WRKSRC=		${WRKDIR}/musicbox-1.01
-USE_X11=	yes
 CFLAGS+=	-D${OPSYS}
 MAKE_ENV+=	QT1DIR="${QT1DIR}"
 

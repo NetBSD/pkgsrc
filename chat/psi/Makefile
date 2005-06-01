@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/22 20:07:43 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/01 18:02:41 jlam Exp $
 
 PSI_VERSION=	0.9.3
 DISTNAME=	psi-${PSI_VERSION}
@@ -22,7 +22,6 @@ DEPENDS+=	qca-tls>=1.0:../../security/qca-tls
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
-USE_X11=	yes
 HAS_CONFIGURE=	yes
 
 CONFIGURE_ARGS= --prefix="${PREFIX}" --qtdir="${QTDIR}"

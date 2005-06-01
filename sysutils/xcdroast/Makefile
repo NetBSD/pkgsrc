@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/05/22 20:08:33 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/06/01 18:03:23 jlam Exp $
 
 DISTNAME=	xcdroast-0.98alpha15
 PKGNAME=	xcdroast-0.98a15
@@ -17,7 +17,6 @@ DEPENDS+=		cdrecord-xcdroast-0.98a15.*:../cdrecord-xcdroast
 USE_TOOLS+=		gmake
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--enable-gtk2

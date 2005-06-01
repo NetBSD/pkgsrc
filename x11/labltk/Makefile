@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/24 17:19:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/01 18:03:29 jlam Exp $
 
 .include "../../lang/ocaml/Makefile.common"
 
@@ -6,7 +6,6 @@ PKGNAME=		${DISTNAME:S/ocaml/labltk/}
 
 COMMENT=		Tk bindings for ocaml
 
-USE_X11=		yes
 
 CONFIGURE_ARGS+=	-x11include ${X11BASE}/include
 CONFIGURE_ARGS+=	-x11lib ${X11BASE}/lib

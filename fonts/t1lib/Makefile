@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/05/22 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/01 18:02:49 jlam Exp $
 #
 
 DISTNAME=	t1lib-5.0.2
@@ -16,7 +16,6 @@ USE_PKGINSTALL=		YES
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_X11=		YES
 
 BUILD_TARGET=	without_doc
 
@@ -25,6 +24,8 @@ DATADIR=	${PREFIX}/share/${PKGBASE}
 
 CONF_FILES=	${EGDIR}/t1lib.config.sample ${DATADIR}/t1lib.config
 CONF_FILES+=	${EGDIR}/FontDataBase ${DATADIR}/FontDataBase
+
+.include "../../mk/x11.buildlink3.mk"
 
 pre-build:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM}

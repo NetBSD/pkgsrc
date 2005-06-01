@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:07:58 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 18:02:47 jlam Exp $
 #
 
 DISTNAME=		qemu-0.7.0
@@ -13,7 +13,6 @@ CONFLICTS+=		qemu-bin-*
 NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
 
 USE_TOOLS+=		gmake
-USE_X11=		yes
 HAS_CONFIGURE=		yes
 
 GCC_REQD+=		3.0

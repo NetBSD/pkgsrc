@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/22 20:08:02 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/01 18:02:51 jlam Exp $
 #
 
 DISTNAME=	icebreaker-1.9.7
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.mattdm.org/icebreaker/
 COMMENT=	Penguin capturing simulation
 
 USE_TOOLS+=	gmake
-USE_X11=	yes
 MAKE_ENV+=	mandir="${PREFIX}/man" highscoredir="/var/games"
 MAKE_ENV+=	prefix="${PREFIX}"
 

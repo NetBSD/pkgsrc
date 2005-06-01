@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:32 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:03:22 jlam Exp $
 #
 
 DISTNAME=	gkrellm-1.2.13
@@ -14,7 +14,6 @@ COMMENT=	GTK based system monitor
 BUILD_USES_MSGFMT=	YES
 
 OSVERSION_SPECIFIC=	YES
-USE_X11=		YES
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	YES
 

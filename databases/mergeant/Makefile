@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/05/22 20:07:45 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/06/01 18:02:42 jlam Exp $
 #
 
 DISTNAME=		mergeant-0.52
@@ -12,7 +12,6 @@ COMMENT=		GNOME2 GNOME-DB database front-end
 
 USE_PERL5=              build
 USE_DIRS+=		gnome2-1.5
-USE_X11=		YES
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

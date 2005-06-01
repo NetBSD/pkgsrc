@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1684 2005/06/01 17:27:22 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1685 2005/06/01 18:03:05 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -717,10 +717,6 @@ CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 .  endif
 CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX}
 HAS_CONFIGURE=		yes
-.  if defined(USE_X11)
-CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
-CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib${LIBABISUFFIX}
-.  endif
 CONFIGURE_HAS_INFODIR?=	yes
 .  if !empty(INFO_FILES) && !empty(CONFIGURE_HAS_INFODIR:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${INFO_DIR}

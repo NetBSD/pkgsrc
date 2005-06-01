@@ -1,42 +1,59 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:30 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2005/06/01 18:02:48 jlam Exp $
 
-_FONTCONFIG_FONTCONFIG_H=	${X11BASE}/include/fontconfig/fontconfig.h
-_X11_TMPL=			${X11BASE}/lib/X11/config/X11.tmpl
+BUILTIN_PKG:=	fontconfig
 
+BUILTIN_FIND_FILES_VAR:=		H_FONTCONFIG
+BUILTIN_FIND_FILES.H_FONTCONFIG=	\
+	${X11BASE}/include/fontconfig/fontconfig.h
+
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.fontconfig)
 IS_BUILTIN.fontconfig=	no
-.  if exists(${_FONTCONFIG_FONTCONFIG_H}) && exists(${_X11_TMPL})
+.  if exists(${H_FONTCONFIG})
+PKGSRC_USE_TOOLS+=	imake			# XXX
+IMAKE?=			${X11BASE}/bin/imake	# XXX
+.    if defined(IMAKE) && exists(${IMAKE})
 IS_BUILTIN.fontconfig!=							\
-	if ${GREP} -q BuildFontconfigLibrary ${_X11_TMPL}; then		\
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-.    if !empty(IS_BUILTIN.fontconfig:M[yY][eE][sS])
-#
-# Create an appropriate package name for the built-in fontconfig distributed
-# with the system.  This package name can be used to check against
-# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
-# or if the built-in one is sufficient.
-#
-_FONTCONFIG_MAJOR!=	\
-	${AWK} '/\#define[ 	]*FC_MAJOR/ { print $$3 }'		\
-		${_FONTCONFIG_FONTCONFIG_H}
-_FONTCONFIG_MINOR!=	\
-	${AWK} '/\#define[ 	]*FC_MINOR/ { print $$3 }'		\
-		${_FONTCONFIG_FONTCONFIG_H}
-_FONTCONFIG_REVISION!=	\
-	${AWK} '/\#define[ 	]*FC_REVISION/ { print $$3 }'		\
-		${_FONTCONFIG_FONTCONFIG_H}
-_FONTCONFIG_VERSION=	\
-	${_FONTCONFIG_MAJOR}.${_FONTCONFIG_MINOR}.${_FONTCONFIG_REVISION}
-BUILTIN_PKG.fontconfig=	fontconfig-${_FONTCONFIG_VERSION}
-BUILDLINK_VARS+=	BUILTIN_PKG.fontconfig
+	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
+		-f ${BUILDLINK_PKGSRCDIR.fontconfig}/builtin-imake.mk	\
+		-s - |							\
+	${MAKE} -f - builtin-test
 .    endif
 .  endif
-BUILDLINK_VARS+=	IS_BUILTIN.fontconfig
-.endif	# IS_BUILTIN.fontconfig
+.endif
+MAKEVARS+=	IS_BUILTIN.fontconfig
 
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.fontconfig) && \
+    !empty(IS_BUILTIN.fontconfig:M[yY][eE][sS]) && \
+    exists(${H_FONTCONFIG})
+BUILTIN_VERSION.fontconfig!=						\
+	${AWK} '/\#define[ 	]*FC_MAJOR/ { M = $$3 }			\
+		/\#define[ 	]*FC_MINOR/ { m = "."$$3 }		\
+		/\#define[ 	]*FC_REVISION/ { r = "."$$3 }		\
+		END { printf "%s%s%s\n", M, m, r }'			\
+		${H_FONTCONFIG}
+BUILTIN_PKG.fontconfig=	fontconfig-${BUILTIN_VERSION.fontconfig}
+.endif
+MAKEVARS+=	BUILTIN_PKG.fontconfig
+
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
+#
+# These are dependencies of fontconfig.  If we need to use the pkgsrc
+# versions of any of these, then also use the pkgsrc version of
+# fontconfig.
+#
 .if defined(USE_BUILTIN.zlib) && !empty(USE_BUILTIN.zlib:M[nN][oO])
 USE_BUILTIN.fontconfig=	no
 .endif
@@ -48,38 +65,47 @@ USE_BUILTIN.fontconfig=	no
 .endif
 
 .if !defined(USE_BUILTIN.fontconfig)
-USE_BUILTIN.fontconfig?=	${IS_BUILTIN.fontconfig}
-
-.  if defined(BUILTIN_PKG.fontconfig)
-USE_BUILTIN.fontconfig=		yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.fontconfig}
-.      if !empty(USE_BUILTIN.fontconfig:M[yY][eE][sS])
-USE_BUILTIN.fontconfig!=	\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.fontconfig}; then \
-		${ECHO} "yes";						\
+.  if ${PREFER.fontconfig} == "pkgsrc"
+USE_BUILTIN.fontconfig=	no
+.  else
+USE_BUILTIN.fontconfig=	${IS_BUILTIN.fontconfig}
+.    if defined(BUILTIN_PKG.fontconfig) && \
+        !empty(IS_BUILTIN.fontconfig:M[yY][eE][sS])
+USE_BUILTIN.fontconfig=	yes
+.      for _dep_ in ${BUILDLINK_DEPENDS.fontconfig}
+.        if !empty(USE_BUILTIN.fontconfig:M[yY][eE][sS])
+USE_BUILTIN.fontconfig!=						\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.fontconfig:Q}; then \
+		${ECHO} yes;						\
 	else								\
-		${ECHO} "no";						\
+		${ECHO} no;						\
 	fi
-.      endif
-.    endfor
-.  endif
-.endif	# USE_BUILTIN.fontconfig
+.        endif
+.      endfor
+.    endif
+.  endif  # PREFER.fontconfig
+.endif
+MAKEVARS+=	USE_BUILTIN.fontconfig
 
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
 CHECK_BUILTIN.fontconfig?=	no
 .if !empty(CHECK_BUILTIN.fontconfig:M[nN][oO])
 
-.if !empty(USE_BUILTIN.fontconfig:M[nN][oO])
+.  if !empty(USE_BUILTIN.fontconfig:M[nN][oO])
 BUILDLINK_DEPENDS.fontconfig+=	fontconfig>=2.1nb2
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.3
-.endif
+.  endif
 
-.if !empty(USE_BUILTIN.fontconfig:M[yY][eE][sS])
+.  if !empty(USE_BUILTIN.fontconfig:M[yY][eE][sS])
 BUILDLINK_PREFIX.fontconfig=	${X11BASE}
 BUILDLINK_FILES.fontconfig+=	lib/pkgconfig/fontconfig.pc
 
 USE_BUILTIN.expat=	yes
 USE_BUILTIN.freetype2=	yes
 USE_BUILTIN.zlib=	yes
-.endif
+.  endif
 
 .endif	# CHECK_BUILTIN.fontconfig

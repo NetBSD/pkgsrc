@@ -1,66 +1,92 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:31 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2005/06/01 18:02:55 jlam Exp $
 
-_FREETYPE2_FREETYPE_H=	${X11BASE}/include/freetype2/freetype/freetype.h
-_X11_TMPL=		${X11BASE}/lib/X11/config/X11.tmpl
+BUILTIN_PKG:=	freetype2
 
+BUILTIN_FIND_FILES_VAR:=	H_FREETYPE2
+BUILTIN_FIND_FILES.H_FREETYPE2=	${X11BASE}/include/freetype2/freetype/freetype.h
+
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.freetype2)
 IS_BUILTIN.freetype2=	no
-.  if exists(${_FREETYPE2_FREETYPE_H}) && exists(${_X11_TMPL})
+.  if exists(${H_FREETYPE2})
+PKGSRC_USE_TOOLS+=	imake			# XXX
+IMAKE?=			${X11BASE}/bin/imake	# XXX
+.    if defined(IMAKE) && exists(${IMAKE})
 IS_BUILTIN.freetype2!=							\
-	if ${GREP} -q BuildFreetype2Library ${_X11_TMPL}; then		\
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-.    if !empty(IS_BUILTIN.freetype2:M[yY][eE][sS])
-#
-# Create an appropriate package name for the built-in freetype2 distributed
-# with the system.  This package name can be used to check against
-# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
-# or if the built-in one is sufficient.
-#
-_FREETYPE2_MAJOR!=	\
-	${AWK} '/\#define[ 	]*FREETYPE_MAJOR/ { print $$3 }' ${_FREETYPE2_FREETYPE_H}
-_FREETYPE2_MINOR!=	\
-	${AWK} '/\#define[ 	]*FREETYPE_MINOR/ { print "."$$3 }' ${_FREETYPE2_FREETYPE_H}
-_FREETYPE2_PATCH!=	\
-	${AWK} 'BEGIN { patch=0; } /\#define[ 	]*FREETYPE_PATCH/ { patch=$$3; } END { print "."patch; }' ${_FREETYPE2_FREETYPE_H}
-_FREETYPE2_VERSION=	${_FREETYPE2_MAJOR}${_FREETYPE2_MINOR}${_FREETYPE2_PATCH}
-BUILTIN_PKG.freetype2=	freetype2-${_FREETYPE2_VERSION}
-BUILDLINK_VARS+=	BUILTIN_PKG.freetype2
+	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
+		-f ${BUILDLINK_PKGSRCDIR.freetype2}/builtin-imake.mk	\
+		-s - |							\
+	${MAKE} -f - builtin-test
 .    endif
 .  endif
-BUILDLINK_VARS+=	IS_BUILTIN.freetype2
-.endif	# IS_BUILTIN.freetype2
+.endif
+MAKEVARS+=	IS_BUILTIN.freetype2
 
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.freetype2) && \
+    !empty(IS_BUILTIN.freetype2:M[yY][eE][sS]) && \
+    exists(${H_FREETYPE2})
+BUILTIN_VERSION.freetype2!=						\
+	${AWK} 'BEGIN { p = ".0" }					\
+		/\#define[ 	]*FREETYPE_MAJOR/ { M = $$3 }		\
+		/\#define[ 	]*FREETYPE_MINOR/ { m = "."$$3 }	\
+		/\#define[ 	]*FREETYPE_PATCH/ { p = "."$$3 }	\
+		END { printf "%s%s%s\n", M, m, p }'			\
+		${H_FREETYPE2}
+BUILTIN_PKG.freetype2=	freetype2-${BUILTIN_VERSION.freetype2}
+.endif
+MAKEVARS+=	BUILTIN_PKG.freetype2
+
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
 .if !defined(USE_BUILTIN.freetype2)
-USE_BUILTIN.freetype2?=	${IS_BUILTIN.freetype2}
-
-.  if defined(BUILTIN_PKG.freetype2)
+.  if ${PREFER.freetype2} == "pkgsrc"
+USE_BUILTIN.freetype2=	no
+.  else
+USE_BUILTIN.freetype2=	${IS_BUILTIN.freetype2}
+.    if defined(BUILTIN_PKG.freetype2) && \
+        !empty(IS_BUILTIN.freetype2:M[yY][eE][sS])
 USE_BUILTIN.freetype2=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.freetype2}
-.      if !empty(USE_BUILTIN.freetype2:M[yY][eE][sS])
-USE_BUILTIN.freetype2!=	\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.freetype2}; then \
-		${ECHO} "yes";						\
+.      for _dep_ in ${BUILDLINK_DEPENDS.freetype2}
+.        if !empty(USE_BUILTIN.freetype2:M[yY][eE][sS])
+USE_BUILTIN.freetype2!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.freetype2:Q}; then \
+		${ECHO} yes;						\
 	else								\
-		${ECHO} "no";						\
+		${ECHO} no;						\
 	fi
-.      endif
-.    endfor
-.  endif
-.endif	# USE_BUILTIN.freetype2
+.        endif
+.      endfor
+.    endif
+.  endif  # PREFER.freetype2
+.endif
+MAKEVARS+=	USE_BUILTIN.freetype2
 
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
 CHECK_BUILTIN.freetype2?=	no
 .if !empty(CHECK_BUILTIN.freetype2:M[nN][oO])
 
-.if !empty(USE_BUILTIN.freetype2:M[nN][oO])
+.  if !empty(USE_BUILTIN.freetype2:M[nN][oO])
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.3
-.endif
+.  endif
 
-.if !empty(USE_BUILTIN.freetype2:M[yY][eE][sS])
+.  if !empty(USE_BUILTIN.freetype2:M[yY][eE][sS])
 BUILDLINK_PREFIX.freetype2=	${X11BASE}
-USE_X11=			yes
-.endif
+.    include "../../mk/x11.buildlink3.mk"
+.    include "../../mk/x11.builtin.mk"
+.  endif
 
 .endif	# CHECK_BUILTIN.freetype2

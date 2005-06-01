@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:45 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/01 18:03:24 jlam Exp $
 
 DISTNAME=	amaterus-0.34.1
 PKGREVISION=	4
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.taiyaki.org/
 COMMENT=	GTK+ window manager
 
 GNU_CONFIGURE=	YES
-USE_X11=	YES
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/amaterus

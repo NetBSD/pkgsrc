@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/05/22 20:07:56 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/06/01 18:02:45 jlam Exp $
 #
 
 DISTNAME=		gconf-editor-2.10.0
@@ -17,7 +17,6 @@ USE_DIRS+=		xdg-1.1 gnome2-1.5
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake
-USE_X11=		YES
 
 CONFIGURE_ARGS+=	--with-gconf-defaults-source=${GCONF2_CONFIG_SOURCE}
 CONFIGURE_ARGS+=	--with-gconf-mandatory-source=${GCONF2_CONFIG_SOURCE:S/gconf.xml.defaults/gconf.xml.mandatory/g}

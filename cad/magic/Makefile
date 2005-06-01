@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:07:41 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/01 18:02:40 jlam Exp $
 #
 
 DISTNAME=	magic-7.1
@@ -11,8 +11,9 @@ HOMEPAGE=	http://vlsi.cornell.edu/magic/
 COMMENT=	Integrated circuit layout system
 
 USE_TOOLS+=	gmake
-USE_X11=	YES
 MAKE_ENV+=	MAGIC_HOME=${PREFIX}
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-patch:
 	cd ${WRKSRC} && for f in `${FIND} . -type f -exec ${GREP} -l CAD_HOME {} /dev/null \;` ; do \
