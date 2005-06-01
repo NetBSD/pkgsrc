@@ -1,4 +1,4 @@
-# $NetBSD: BSDOS.mk,v 1.12 2005/06/01 14:23:07 markd Exp $
+# $NetBSD: BSDOS.mk,v 1.13 2005/06/01 18:14:23 jlam Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -8,6 +8,7 @@
 CXX=		/usr/bin/g++
 .endif
 ECHO_N?=	${ECHO} -n
+IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 # XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
@@ -46,7 +47,6 @@ IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
 IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
 
 _DO_SHLIB_CHECKS=	yes	# fixup PLIST for shared libs/run ldconfig
-_IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else

@@ -1,8 +1,9 @@
-# $NetBSD: FreeBSD.mk,v 1.11 2005/05/22 19:11:15 jlam Exp $
+# $NetBSD: FreeBSD.mk,v 1.12 2005/06/01 18:14:23 jlam Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
 ECHO_N?=	${ECHO} -n
+IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
@@ -42,7 +43,6 @@ IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
 IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 
 _DO_SHLIB_CHECKS=	yes	# fixup PLIST for shared libs/run ldconfig
-_IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else
