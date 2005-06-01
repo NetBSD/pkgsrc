@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2005/06/01 20:55:16 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.16 2005/06/01 21:12:28 wiz Exp $
 
 QPOPPER_MASTER_SITES=	ftp://ftp.qualcomm.com/eudora/servers/unix/popper/ \
 			http://core.ring.gr.jp/archives/net/mail/qpopper/
@@ -30,23 +30,5 @@ PATCH_DIST_STRIP=	-p1
 .if defined(QPOPPER_SPOOL_DIR)
 CONFIGURE_ARGS+=	--enable-spool-dir=${QPOPPER_SPOOL_DIR}
 .endif
-
-.if defined(KERBEROS)
-PKG_USE_KERBEROS=	# defined
-CONFIGURE_ARGS+=	--enable-kerberos
-.endif
-
-BUILD_DEFS+=		QPOPPER_SERVERMODE USE_INET6
-
-.if defined(QPOPPER_SERVERMODE)
-CONFIGURE_ARGS+=	--enable-servermode
-.endif
-
-.if defined(QPOPPER_USE_DRAC) && !empty(QPOPPER_USE_DRAC:M[Yy][Ee][Ss])
-.include "../../mail/drac/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-drac=${BUILDLINK_PREFIX.drac}
-.endif
-
-BUILD_DEFS+=		QPOPPER_USE_DRAC
 
 LIBS+=			${LDFLAGS}
