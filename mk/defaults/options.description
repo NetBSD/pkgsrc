@@ -45,6 +45,7 @@ db
 db2	
 db4	
 debug	
+deliver-suid		Install deliver executable setuid root.
 domainscale	
 drac	
 dummy	
