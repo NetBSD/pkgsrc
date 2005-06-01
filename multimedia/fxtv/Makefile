@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:18 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/01 16:41:26 wiz Exp $
 
 DISTNAME=	fxtv-1.03
 PKGREVISION=	8
@@ -12,7 +12,6 @@ COMMENT=	TV display application for Brooktree 848 compatible TV cards
 
 USE_X11BASE=	YES
 USE_TOOLS+=	gmake
-XAW_TYPE?=	3d
 
 SUBST_CLASSES+=		ossaudio
 SUBST_MESSAGE.ossaudio=	"Fixing path to audio device."
@@ -20,29 +19,20 @@ SUBST_STAGE.ossaudio=	pre-configure
 SUBST_FILES.ossaudio=	app_rsrc.h Fxtv README
 SUBST_SED.ossaudio=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 
-.include "../../mk/bsd.prefs.mk"
-
-# The purpose of this check is to make sure that there is a "Xaw3d"
-# compatible widget set installed because normal "Xaw" won't work.
-#
-.if (${XAW_TYPE} == standard)
-XAW_TYPE=	3d
-.endif
-
 post-extract:
 	@${RM} -f ${WRKSRC}/videolib/videolib.o
 
 pre-configure:
 	if [ -r /usr/include/machine/mouse.h ] ; then \
-		echo '#define HAVE_MOUSE_H 1' > ${WRKSRC}/netbsdconf.h; \
+		${ECHO} '#define HAVE_MOUSE_H 1' > ${WRKSRC}/netbsdconf.h; \
 	else \
-		echo '#define HAVE_MOUSE_H 0' > ${WRKSRC}/netbsdconf.h; \
+		${ECHO} '#define HAVE_MOUSE_H 0' > ${WRKSRC}/netbsdconf.h; \
 	fi
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
-.include "../../mk/xaw.buildlink3.mk"
+.include "../../x11/Xaw3d/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
