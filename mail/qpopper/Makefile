@@ -1,15 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2005/05/28 02:55:43 taca Exp $
+# $NetBSD: Makefile,v 1.50 2005/06/01 20:55:16 adrianp Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
 PKGNAME=		qpopper-${VERSION}
-PKGREVISION=		7
 CATEGORIES=		mail
 MASTER_SITES=		${QPOPPER_MASTER_SITES}
-
-PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=		qpopper-4.0.5-ipv6-20030313.diff.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		mellon@fugue.com
 HOMEPAGE=		${QPOPPER_HOMEPAGE}
