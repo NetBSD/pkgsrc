@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.30 2005/05/31 18:25:37 jmmv Exp $
+# $NetBSD: bsd.options.mk,v 1.31 2005/06/01 13:40:14 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -106,7 +106,7 @@ PKG_FAIL_REASON+=	"bsd.options.mk: PKG_OPTIONS_VAR is not defined."
 .for _m_ in ${PKG_OPTIONS_LEGACY_VARS}
 _var_:=	${_m_:C/:.*//}
 _opt_:=	${_m_:C/.*://}
-_popt_:=${_opt_:C/-//}
+_popt_:=${_opt_:C/^-//}
 .  if !empty(PKG_SUPPORTED_OPTIONS:M${_popt_})
 .    if defined(${_var_})
 _DEPRECATED_WARNING:=${_DEPRECATED_WARNING} "Deprecated variable "${_var_:Q}" used, use PKG_DEFAULT_OPTIONS+="${_popt_:Q}" instead."
