@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2005/06/01 18:03:27 jlam Exp $
+# $NetBSD: builtin.mk,v 1.8 2005/06/01 18:33:02 jlam Exp $
 
 BUILTIN_PKG:=	Xrender
 
@@ -20,7 +20,7 @@ IS_BUILTIN.Xrender!=							\
 	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
 		-f ${BUILDLINK_PKGSRCDIR.Xrender}/builtin-imake.mk	\
 		-s - |							\
-	${MAKE} -f - builtin-test
+	${IMAKE_MAKE} -f - builtin-test
 .    endif
 .  endif
 .endif
