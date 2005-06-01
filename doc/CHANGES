@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10268 2005/06/01 03:38:04 taca Exp $
+$NetBSD: CHANGES,v 1.10269 2005/06/01 11:30:28 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2750,3 +2750,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/diction to 1.08 [snj 2005-06-01]
 	Updated audio/mpc to 0.11.2 [simonb 2005-06-01]
 	Updated graphics/ruby-imlib2 to 0.5.1 [taca 2005-06-01]
+	Updated pkgtools/pkg_chk to 1.58 [abs 2005-06-01]
