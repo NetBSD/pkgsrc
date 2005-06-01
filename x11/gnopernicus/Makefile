@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/06/01 18:03:28 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/06/01 19:46:17 wiz Exp $
 #
 
 DISTNAME=		gnopernicus-0.10.6
@@ -31,11 +31,12 @@ CONF_FILES+=		${EGDIR}/translation_tables/es.a2b \
 CONF_FILES+=		${EGDIR}/translation_tables/sv.a2b \
 			${PKG_SYSCONFDIR}/translation_tables/sv.a2b
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gnopernicus
+PKG_SUPPORTED_OPTIONS=	inet6
 
-BUILD_DEFS+=		USE_INET6
+.include "../../mk/bsd.options.mk"
 
-.if !empty(USE_INET6:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
