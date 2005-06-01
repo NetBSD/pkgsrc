@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.11 2005/05/22 19:11:15 jlam Exp $
+# $NetBSD: Darwin.mk,v 1.12 2005/06/01 18:14:23 jlam Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -7,6 +7,7 @@ CPP=		${CC} -E ${CPP_PRECOMP_FLAGS}
 .endif
 ECHO_N?=	${ECHO} -n
 LDD?=		/usr/bin/otool -L
+IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 # XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
@@ -51,7 +52,6 @@ IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
 IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 
 _DO_SHLIB_CHECKS=	yes	# on installation, fixup PLIST for shared libs
-_IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 .if ${OS_VERSION:R} >= 6
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else

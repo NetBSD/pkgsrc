@@ -1,8 +1,9 @@
-# $NetBSD: UnixWare.mk,v 1.12 2005/05/22 19:11:15 jlam Exp $
+# $NetBSD: UnixWare.mk,v 1.13 2005/06/01 18:14:23 jlam Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
 ECHO_N?=	${ECHO} -n
+IMAKE_MAKE?=	/usr/ccs/bin/make	# program which gets invoked by imake
 PKGLOCALEDIR?=	lib
 PS?=		/usr/bin/ps
 # XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
@@ -38,7 +39,6 @@ IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
 IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
-_IMAKE_MAKE=	/usr/ccs/bin/make	# program which gets invoked by imake
 .if exists(/usr/include/netinet/in6.h)
 _OPSYS_HAS_INET6=	yes		# IPv6 is standard
 .else
