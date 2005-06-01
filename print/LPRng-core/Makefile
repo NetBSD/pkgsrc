@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/05/22 20:08:27 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/01 18:51:57 wiz Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
@@ -26,18 +26,7 @@ CONFIGURE_ARGS+=	--with-filterdir="${FILTER_DIR}"
 CONFIGURE_ARGS+=	--with-filter_path="${FILTER_PATH}"
 CONFIGURE_ARGS+=	--with-ld_library_path="${FILTER_LD_PATH}"
 
-.include "../../mk/bsd.prefs.mk"
-
-LPRNG_SUID?=		YES
-LPRNG_PRIV_PORTS?=	NO
-BUILD_DEFS+=		LPRNG_SUID LPRNG_PRIV_PORTS
-
-.if (${LPRNG_SUID} == "NO")
-CONFIGURE_ARGS+=	--disable-setuid
-.endif
-.if (${LPRNG_PRIV_PORTS} == "YES")
-CONFIGURE_ARGS+=	--enable-priv_ports
-.endif
+.include "options.mk"
 
 # Look for printer configuration files firstly in /etc, then ${PREFIX}/etc.
 #
