@@ -1,14 +1,16 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.14 2005/04/20 15:32:25 abs Exp $
+# $Id: pkg_chk.sh,v 1.15 2005/06/01 11:29:45 abs Exp $
 #
-# TODO: Handle updates with dependencies via binary packages
+# TODO: Make -g check dependencies and tsort
+# TODO: Variation of -g which only lists top level packages
+# TODO: List top level packages installed but not in config
+# TODO: Generate list files so -u can work against a remote URL
 
 PATH=/usr/sbin:/usr/bin:${PATH}
 
 check_packages_installed()
     {
-    UPDATE_TODO=
     MISSING_TODO=
     MISMATCH_TODO=
 
@@ -31,7 +33,6 @@ check_packages_installed()
 	    if [ -n "$pkginstalled" ];then
 		msg_n "version mismatch - $pkginstalled"
 		MISMATCH_TODO="$MISMATCH_TODO $pkginstalled"
-		UPDATE_TODO="$UPDATE_TODO $PKGNAME $pkgdir"
 	    else
 		msg_n "missing"
 		MISSING_TODO="$MISSING_TODO $PKGNAME $pkgdir"
@@ -52,13 +53,21 @@ check_packages_installed()
 		    verbose "$installed_build_ver"
 		    verbose "----"
 		    MISMATCH_TODO="$MISMATCH_TODO $PKGNAME"
-		    # should we mark this pkg to be updated if -u is given ??
 		else
 		    verbose "$PKGNAME: OK"
 		fi
 	    else
 		verbose "$PKGNAME: OK"
 	    fi
+	fi
+    done
+    }
+
+delete_pkgs()
+    {
+    for pkg in $* ; do
+	if [ -d $PKG_DBDIR/$pkg ] ; then
+	    run_cmd "${PKG_DELETE} -r $pkg" 1
 	fi
     done
     }
@@ -130,13 +139,15 @@ extract_variables()
 
     if [ -z "$opt_b" -o -n "$opt_s" -o -d $PKGSRCDIR/pkgtools/pkg_chk ] ; then
 	cd $PKGSRCDIR/pkgtools/pkg_chk
-	extract_make_vars Makefile AWK GREP SED PACKAGES PKG_INFO PKG_ADD \
-			PKG_DELETE PKGCHK_CONF PKGCHK_TAGS PKGCHK_NOTAGS
+	extract_make_vars Makefile AWK GREP SED TSORT SORT PACKAGES PKG_INFO \
+			PKG_ADD PKG_DELETE PKGCHK_CONF PKGCHK_UPDATE_CONF \
+			PKGCHK_TAGS PKGCHK_NOTAGS
 	if [ -z "$PACKAGES" ];then
 	    PACKAGES=$PKGSRCDIR/packages
 	fi
     elif [ $MAKECONF != /dev/null ] ; then
-	extract_make_vars $MAKECONF PACKAGES PKGCHK_CONF PKGCHK_TAGS PKGCHK_NOTAGS
+	extract_make_vars $MAKECONF PACKAGES PKGCHK_CONF PKGCHK_UPDATE_CONF \
+			PKGCHK_TAGS PKGCHK_NOTAGS
 	if [ -z "$PACKAGES" ] ; then
 	    PACKAGES=`pwd`
 	fi
@@ -144,6 +155,9 @@ extract_variables()
 
     if [ -z "$PKGCHK_CONF" ];then
 	PKGCHK_CONF=$PKGSRCDIR/pkgchk.conf
+    fi
+    if [ -z "$PKGCHK_UPDATE_CONF" ];then
+	PKGCHK_UPDATE_CONF=$PKGSRCDIR/pkgchk_update-$(hostname).conf
     fi
     }
 
@@ -159,6 +173,16 @@ fatal_maybe()
     if [ -z "$opt_k" ];then
 	exit 1
     fi
+    }
+
+generate_conf_from_installed()
+    {
+    FILE=$1
+    if [ -r $FILE ]; then
+	mv $FILE ${FILE}.old
+    fi
+    echo "# Generated automatically at $(date)" > $FILE
+    echo $(pkgdirs_from_installed) | fmt -1 	>> $FILE
     }
 
 get_build_ver()
@@ -207,31 +231,127 @@ list_packages()
 	verbose "$PKGNAME.tgz: found"
 	CHECKLIST="$CHECKLIST$PKGNAME ";
     done
+
+    PAIRLIST=
+    PKGLIST=' '
     while [ "$CHECKLIST" != ' ' ]; do
-	PKGLIST="$PKGLIST$CHECKLIST"
 	NEXTCHECK=' '
 	for pkg in $CHECKLIST ; do
 	    if [ ! -f $PACKAGES/$pkg.tgz ] ; then
 		fatal_maybe " ** $pkg.tgz - binary package dependency missing"
 		continue
 	    fi
-	    for dep in $(${PKG_INFO} -. -N $PACKAGES/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} ..) ; do
-		case "$PKGLIST$NEXTCHECK" in
-		    *\ $dep\ *)
+	    DEPLIST="$(${PKG_INFO} -. -N $PACKAGES/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} ..)"
+	    if [ -z "$DEPLIST" ] ; then
+		PAIRLIST="${PAIRLIST}$pkg.tgz $pkg.tgz\n"
+	    fi
+	    for dep in $DEPLIST ; do
+		if [ ! -f $PACKAGES/$dep.tgz ] ; then
+		    fatal_maybe " ** $dep.tgz - binary package dependency missing"
+		    break 2
+		fi
+		PAIRLIST="${PAIRLIST}$dep.tgz $pkg.tgz\n"
+		case "$PKGLIST$CHECKLIST$NEXTCHECK" in
+		    *" $dep "*)
 			verbose "$pkg: Duplicate depend $dep"
 			;;
 		    *)
-			NEXTCHECK="$NEXTCHECK$dep "
+			NEXTCHECK=" $dep$NEXTCHECK"
 			verbose "$pkg: Add depend $dep"
 			;;
 		esac
 	    done
+	    PKGLIST="$pkg $PKGLIST"
 	done
 	CHECKLIST="$NEXTCHECK"
     done
-    for pkg in $PKGLIST ; do
-	echo $pkg.tgz
-    done
+    printf "$PAIRLIST" | ${TSORT}
+    }
+
+pkgdirs_from_conf()
+    {
+    CONF=$1; shift
+    LIST="$*"
+    if [ ! -r $CONF ];then
+	fatal "Unable to read PKGCHK_CONF '$CONF'"
+    fi
+
+    # Determine list of tags
+    #
+    extract_make_vars Makefile OPSYS OS_VERSION MACHINE_ARCH
+    TAGS="$(hostname | ${SED} -e 's,\..*,,'),$(hostname),$OPSYS-$OS_VERSION-$MACHINE_ARCH,$OPSYS-$OS_VERSION,$OPSYS-$MACHINE_ARCH,$OPSYS,$OS_VERSION,$MACHINE_ARCH"
+    if [ -f /usr/X11R6/lib/libX11.so -o -f /usr/X11R6/lib/libX11.a ];then
+	TAGS="$TAGS,x11"
+    fi
+    if [ -n "$PKGCHK_TAGS" ];then
+	TAGS="$TAGS,$PKGCHK_TAGS"
+    fi
+    if [ -n "$PKGCHK_NOTAGS" ];then
+	if [ -n "$opt_U" ];then
+		opt_U="$opt_U,$PKGCHK_NOTAGS"
+	else
+		opt_U="$PKGCHK_NOTAGS"
+	fi
+    fi
+    if [ -n "$opt_D" ];then
+	TAGS="$TAGS,$opt_D"
+    fi
+    verbose "set   TAGS=$TAGS"
+    verbose "unset TAGS=$opt_U"
+
+    # Extract list of valid pkgdirs (skip any 'alreadyset' in $LIST)
+    #
+    LIST="$LIST "$(${AWK} -v alreadyset="$LIST" -v setlist=$TAGS -v unsetlist=$opt_U '
+    BEGIN {
+	split(alreadyset, tmp, " ");
+	for (tag in tmp) { skip[tmp[tag]] = 1; }
+
+	split(setlist, tmp, ",");
+	for (tag in tmp) { taglist[tmp[tag]] = 1; }
+
+	split(unsetlist, tmp, ",");
+	for (tag in tmp) { skip[tmp[tag]] = 1; delete taglist[tmp[tag]] }
+
+	taglist["*"] = "*"
+    }
+    function and_expr_with_dict(expr, dict, ary, i, r, d) {
+	split(expr,ary,/\+/);
+	r = 1;
+	for (i in ary) {
+		if (ary[i] ~ /^\//) {
+			if (getline d < ary[i] == -1)
+			    { r = 0; break ;}
+		}
+		else if (! (ary[i] in dict))
+			{ r = 0; break ;}
+	}
+	return r;
+    }
+    {
+    sub("#.*", "");
+    if (skip[$1])
+	{ next; }
+    need = 0;
+    for (f = 1 ; f<=NF ; ++f) {			# For each word on the line
+	if (sub("^-", "", $f)) { 	# If it begins with a '-'
+		if (and_expr_with_dict($f, taglist))
+			next;		# If it is true, discard
+	} else {
+		if (and_expr_with_dict($f, taglist))
+			need = 1;	# If it is true, note needed
+	}
+    }
+    if (NF == 1 || need)
+	{ print $1 }
+    }
+    ' < $CONF
+    )
+    echo $LIST
+    }
+
+pkgdirs_from_installed()
+    {
+    ${PKG_INFO} -Bqa | ${AWK} -F= '/PKGPATH=/{print $2}' | ${SORT}
     }
 
 msg()
@@ -269,6 +389,16 @@ pkg_fetch()
     fi
     }
 
+pkg_fetchlist()
+    {
+    PKGLIST=$@
+    msg_progress Fetch
+    while [ $# != 0 ]; do 
+	pkg_fetch $1 $2
+	shift ; shift;
+    done
+    }
+
 pkg_install()
     {
     PKGNAME=$1
@@ -278,13 +408,6 @@ pkg_install()
     if [ -d $PKG_DBDIR/$PKGNAME ];then
 	msg "$PKGNAME installed in previous stage"
     elif [ -n "$opt_b" -a -f $PACKAGES/$PKGNAME.tgz ] ; then
-	if [ $INSTALL = Update ];then
-	    PKG=$(echo $PKGNAME | ${SED} 's/-[0-9].*//')
-	    run_cmd "${PKG_DELETE} $PKG" 1
-	    if [ -n "$FAIL" ]; then
-		fatal "Can only update packages with dependencies via -s"
-	    fi
-	fi
 	if [ -n "$saved_PKG_PATH" ] ; then
 	    export PKG_PATH=$saved_PKG_PATH
 	fi
@@ -303,21 +426,9 @@ pkg_install()
 
     if [ -n "$FAIL" ]; then
 	FAIL_DONE=$FAIL_DONE" "$PKGNAME
-    elif [ $INSTALL = Update ];then
-	UPDATE_DONE=$UPDATE_DONE" "$PKGNAME
     else
 	INSTALL_DONE=$INSTALL_DONE" "$PKGNAME
     fi
-    }
-
-pkg_fetchlist()
-    {
-    PKGLIST=$@
-    msg_progress Fetch
-    while [ $# != 0 ]; do 
-	pkg_fetch $1 $2
-	shift ; shift;
-    done
     }
 
 pkg_installlist()
@@ -388,7 +499,8 @@ usage()
 	-v      Verbose
 
 pkg_chk verifies installed packages against pkgsrc.
-The most common usage is 'pkg_chk -i' to check all installed packages.
+The most common usage is 'pkg_chk -i' to check all installed packages or
+'pkg_chk -u' to update all out of date packages.
 For more advanced usage, including defining a set of desired packages based
 on hostname and type, see pkg_chk(8).
 
@@ -400,7 +512,7 @@ If neither -b nor -s is given, both are assumed with -b preferred.
 verbose()
     {
     if [ -n "$opt_v" ] ; then
-	msg "$@"
+	msg "$@" >&2
     fi
     }
 
@@ -454,12 +566,14 @@ fi
 saved_PKG_PATH=$PKG_PATH
 unset PKG_PATH || true
 
-test -n "$AWK" || AWK="@AWK@"
-test -n "$GREP" || GREP="@GREP@"
-test -n "$MAKE" || MAKE="@MAKE@"
+test -n "$AWK"      || AWK="@AWK@"
+test -n "$GREP"     || GREP="@GREP@"
+test -n "$MAKE"     || MAKE="@MAKE@"
 test -n "$MAKECONF" || MAKECONF="@MAKECONF@"
 test -n "$PKG_INFO" || PKG_INFO="@PKG_INFO@"
-test -n "$SED" || SED="@SED@"
+test -n "$SED"      || SED="@SED@"
+test -n "$SORT"	    || SORT="@SORT@"
+test -n "$TSORT"    || TSORT="@TSORT@"
 
 if [ ! -f $MAKECONF ] ; then
     if [ -f /etc/mk.conf ] ; then
@@ -526,172 +640,74 @@ fi
 cd $PKGSRCDIR
 real_pkgsrcdir=$(pwd)
 
-if [ -n "$opt_i" ];then
-    PKGDIRLIST=$(sh -c "${PKG_INFO} -B \*" | ${AWK} -F= '/PKGPATH=/{printf $2" "}')
-fi
-
 if [ -n "$opt_g" ]; then
-	if [ -r $PKGCHK_CONF ]; then
-		mv $PKGCHK_CONF ${PKGCHK_CONF}.old
-	fi
-	echo "# Generated automatically at $(date)" > $PKGCHK_CONF
-	${PKG_INFO} -qBa | ${AWK} '/^PKGPATH/ { sub("PKGPATH=[ ]*", ""); print }' >> $PKGCHK_CONF
+    verbose "Write $PKGCHK_CONF based on installed packages"
+    generate_conf_from_installed $PKGCHK_CONF
 fi
 
-if [ -n "$opt_c" -o -n "$opt_l" ];then
+if [ -n "$opt_i" ];then
+    verbose "Enumerate PKGDIRLIST from installed packages"
+    PKGDIRLIST=$(pkgdirs_from_installed)
+fi
 
-    if [ ! -r $PKGCHK_CONF ];then
-	fatal "Unable to read PKGCHK_CONF '$PKGCHK_CONF'"
-    fi
-
-    # Determine list of tags
-    #
-    extract_make_vars Makefile OPSYS OS_VERSION MACHINE_ARCH
-    TAGS="$(hostname | ${SED} -e 's,\..*,,'),$(hostname),$OPSYS-$OS_VERSION-$MACHINE_ARCH,$OPSYS-$OS_VERSION,$OPSYS-$MACHINE_ARCH,$OPSYS,$OS_VERSION,$MACHINE_ARCH"
-    if [ -f /usr/X11R6/lib/libX11.so -o -f /usr/X11R6/lib/libX11.a ];then
-	TAGS="$TAGS,x11"
-    fi
-    if [ -n "$PKGCHK_TAGS" ];then
-	TAGS="$TAGS,$PKGCHK_TAGS"
-    fi
-    if [ -n "$PKGCHK_NOTAGS" ];then
-	if [ -n "$opt_U" ];then
-		opt_U="$opt_U,$PKGCHK_NOTAGS"
-	else
-		opt_U="$PKGCHK_NOTAGS"
-	fi
-    fi
-    if [ -n "$opt_D" ];then
-	TAGS="$TAGS,$opt_D"
-    fi
-    verbose "set   TAGS=$TAGS"
-    verbose "unset TAGS=$opt_U"
-
-    # Extract list of valid pkgdirs (skip any 'alreadyset' in $PKGDIRLIST)
-    #
-    PKGDIRLIST="$PKGDIRLIST "$(${AWK} -v alreadyset="$PKGDIRLIST" -v setlist=$TAGS -v unsetlist=$opt_U '
-    BEGIN {
-	split(alreadyset, tmp, " ");
-	for (tag in tmp) { skip[tmp[tag]] = 1; }
-
-	split(setlist, tmp, ",");
-	for (tag in tmp) { taglist[tmp[tag]] = 1; }
-
-	split(unsetlist, tmp, ",");
-	for (tag in tmp) { skip[tmp[tag]] = 1; delete taglist[tmp[tag]] }
-
-	taglist["*"] = "*"
-    }
-    function and_expr_with_dict(expr, dict, ary, i, r, d) {
-	split(expr,ary,/\+/);
-	r = 1;
-	for (i in ary) {
-		if (ary[i] ~ /^\//) {
-			if (getline d < ary[i] == -1)
-			    { r = 0; break ;}
-		}
-		else if (! (ary[i] in dict))
-			{ r = 0; break ;}
-	}
-	return r;
-    }
-    {
-    sub("#.*", "");
-    if (skip[$1])
-	{ next; }
-    need = 0;
-    for (f = 1 ; f<=NF ; ++f) {			# For each word on the line
-	if (sub("^-", "", $f)) { 	# If it begins with a '-'
-		if (and_expr_with_dict($f, taglist))
-			next;		# If it is true, discard
-	} else {
-		if (and_expr_with_dict($f, taglist))
-			need = 1;	# If it is true, note needed
-	}
-    }
-    if (NF == 1 || need)
-	{ print $1 }
-    }
-    ' < $PKGCHK_CONF
-    )
+if [ -n "$opt_c" -o -n "$opt_l" ];then	# Append to PKGDIRLIST based on conf
+    verbose "Append to PKGDIRLIST based on config $PKGCHK_CONF"
+    PKGDIRLIST="$(pkgdirs_from_conf $PKGCHK_CONF $PKGDIRLIST)"
 fi
 
 if [ -n "$opt_l" ] ; then
     list_packages $PKGDIRLIST
 else
-    # Check $PKGDIRLIST packages are installed and correct version
-    #
     check_packages_installed $PKGDIRLIST
 fi
 
-if [ -n "$opt_r" -a -n "$MISMATCH_TODO" ]; then
-    run_cmd "${PKG_DELETE} -r $MISMATCH_TODO" 1
-    if [ -n "$opt_a" ] ; then
-	msg_progress Rechecking packages after deletions
-	check_packages_installed $PKGDIRLIST # May need to add more packages
+if [ -n "$MISMATCH_TODO" ]; then
+    delete_and_recheck=1
+elif [ -n "$opt_u" -a -f $PKGCHK_UPDATE_CONF ] ; then
+    delete_and_recheck=1
+fi
+
+if [ -n "$delete_and_recheck" ]; then
+    if [ -n "$opt_u" ] ; then		 # Save current installed list
+	if [ -f $PKGCHK_UPDATE_CONF ] ; then
+	    msg "Merging in previous $PKGCHK_UPDATE_CONF"
+	    tmp=$(cat $PKGCHK_UPDATE_CONF;echo $(pkgdirs_from_installed)|fmt -1)
+	    echo $tmp | fmt -1 | ${SORT} -u > $PKGCHK_UPDATE_CONF
+	    tmp=
+	else
+	    echo $(pkgdirs_from_installed) | fmt -1 > $PKGCHK_UPDATE_CONF
+	fi
+    fi
+    if [ -n "$opt_r" -o -n "$opt_u" ] ; then
+	if [ -n "$MISMATCH_TODO" ]; then
+	    delete_pkgs $MISMATCH_TODO
+	    msg_progress Rechecking packages after deletions
+	fi
+	if [ -n "$opt_u" ]; then
+	    PKGDIRLIST="$(pkgdirs_from_conf $PKGCHK_UPDATE_CONF $PKGDIRLIST)"
+	fi
+	if [ -n "$opt_u" -o -n "$opt_a" ]; then
+	    check_packages_installed $PKGDIRLIST # May need to add more
+	fi
     fi
 fi
 
-UPDATE_FETCH_TODO="$UPDATE_TODO"
-if [ -n "$UPDATE_TODO" ];then
-    # Generate list including packages which depend on updates
-    #
-    set -- $UPDATE_TODO
-    while [ $# != 0 ]; do
-	PKGNAME=$(echo $1 | ${SED} 's/-[0-9].*//')
-	if [ -f $PKG_DBDIR/$PKGNAME-[0-9]*/+REQUIRED_BY ];then
-	    LIST="$LIST$1|$2|$(cat $PKG_DBDIR/$PKGNAME-[0-9]*/+REQUIRED_BY | xargs echo)\n"
-	else
-	    LIST="$LIST$1|$2\n"
-	fi
-	shift ; shift;
-    done
-
-    # drop any packages whose 'parents' are also to be updated
-    #
-    UPDATE_TODO=$(printf "$LIST" | ${AWK} -F '|' '
-    {
-    pkg2dir[$1] = $2
-    split($3, deplist, " ")
-    for (pkg in deplist)
-	{
-	dep = deplist[pkg]
-	sub("-[0-9].*", "", dep) # Strip version
-	covered[dep] = 1
-	}
-    }
-    END {
-    for (pkg in pkg2dir)
-	{
-	chk = pkg
-	sub("-[0-9].*", "", chk); # Strip version
-	if (!covered[chk])
-	    print pkg" "pkg2dir[pkg]
-	}
-    }
-    ')
-fi
-
 if [ -n "$opt_f" ] ; then
-    pkg_fetchlist $UPDATE_FETCH_TODO
     pkg_fetchlist $MISSING_TODO
 fi
-if [ -n "$opt_u" ] ; then
-    pkg_installlist Update  $UPDATE_TODO
-fi
-if [ -n "$opt_a" ] ; then
-    pkg_installlist Install $MISSING_TODO
+
+if [ -n "$MISSING_TODO" ] ; then
+    if [ -n "$opt_a" -o -n "$opt_u" ] ; then
+	pkg_installlist Install $MISSING_TODO
+    fi
 fi
 
-if [ -n "$UPDATE_DONE" ];then
-    msg "Updated:$UPDATE_DONE"
+if [ -n "$opt_u" -a -z "$FAIL_DONE" -a -f $PKGCHK_UPDATE_CONF ] ; then
+    run_cmd "rm -f $PKGCHK_UPDATE_CONF"
 fi
-if [ -n "$INSTALL_DONE" ];then
-    msg "Installed:$INSTALL_DONE"
-fi
-if [ -n "$FAIL_DONE" ];then
-    msg "Failed:$FAIL_DONE"
-fi
-if [ -n "$MISS_DONE" ];then
-    msg "Missing:$MISS_DONE"
-fi
+
+[ -n "$MISS_DONE" ] &&		msg "Missing:$MISS_DONE"
+[ -n "$INSTALL_DONE" ] &&	msg "Installed:$INSTALL_DONE"
+[ -n "$FAIL_DONE" ] &&		msg "Failed:$FAIL_DONE"
+
+[ -z "$FAIL_DONE" ]
