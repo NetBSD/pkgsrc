@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.193 2005/05/22 19:11:12 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.194 2005/06/01 17:05:19 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -565,5 +565,8 @@ PREPEND_PATH+=		${USE_X11:D${X11BASE}/bin} ${LOCALBASE}/bin
 
 # Wrapper framework definitions
 .include "${PKGSRCDIR}/mk/wrapper/wrapper-defs.mk"
+
+# Make variable definitions cache
+.include "${PKGSRCDIR}/mk/bsd.makevars.mk"
 
 .endif	# BSD_PKG_MK

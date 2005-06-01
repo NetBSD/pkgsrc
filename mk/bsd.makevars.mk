@@ -1,9 +1,10 @@
-# $NetBSD: bsd.makevars.mk,v 1.1 2005/06/01 03:04:16 jlam Exp $
+# $NetBSD: bsd.makevars.mk,v 1.2 2005/06/01 17:05:19 jlam Exp $
 #
-# This Makefile fragment is included by other Makefiles to set all of
+# This Makefile fragment is included by bsd.prefs.mk to set all of
 # the variables saved through MAKEVARS.  Typical usage is:
 #
-# .include "../../mk/bsd.makevars.mk"
+# .include "../../mk/bsd.prefs.mk"
+#
 # .if !define(EXPENSIVE_VAR)
 # EXPENSIVE_VAR!=	( ... an expensive computation ... )
 # .endif
@@ -26,8 +27,10 @@ _REV_ALL_PHASES:=	${_phase_} ${_REV_ALL_PHASES}
 .endif
 MAKEVARS+=	_REV_ALL_PHASES
 
-# Try including the .makevars.mk.* files in reverse order so that the
-# latest file is included and no more.
+# Try including the *.makevars.mk files in reverse order so that the
+# latest file is included and no more.  We check for _MAKEVARS_MK since
+# all of the *.makevars.mk files define this symbol at the top of the
+# file.
 #
 .for _phase_ in ${_REV_ALL_PHASES}
 _MAKEVARS_MK.${_phase_}=	${WRKDIR}/.${_phase_}_makevars.mk
