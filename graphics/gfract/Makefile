@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/05/22 20:08:05 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/06/01 18:02:55 jlam Exp $
 #
 
 DISTNAME=		gfract-0.30
@@ -10,7 +10,6 @@ MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www.cs.Helsinki.FI/u/salerma/gfract/
 COMMENT=		Gtk-based fractal program
 
-USE_X11=		yes
 USE_TOOLS+=		gmake
 BUILD_TARGET=		gfract
 

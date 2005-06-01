@@ -1,28 +1,48 @@
-# $NetBSD: solaris-pam.builtin.mk,v 1.2 2005/01/14 07:54:20 jlam Exp $
+# $NetBSD: solaris-pam.builtin.mk,v 1.3 2005/06/01 18:03:06 jlam Exp $
 
-_SOLARIS_PAM_APPL_HEADERS=	/usr/include/security/pam_appl.h
-_SOLARIS_PAM_IDENT=		Copyright.*Sun Microsystems
+BUILTIN_PKG:=	solaris-pam
 
+BUILTIN_FIND_FILES_VAR:=		H_SOLARIS_PAM
+BUILTIN_FIND_FILES.H_SOLARIS_PAM=	/usr/include/security/pam_appl.h
+BUILTIN_FIND_GREP.H_SOLARIS_PAM=	Copyright.*Sun Microsystems
+
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.solaris-pam)
-IS_BUILTIN.solaris-pam=		no
-.  for _inc_ in ${_SOLARIS_PAM_APPL_HEADERS}
-.    if !empty(IS_BUILTIN.solaris-pam:M[nN][oO]) && exists(${_inc_})
-IS_BUILTIN.solaris-pam!=	\
-	case ${_inc_} in						\
-	${LOCALBASE}/*)							\
-		${ECHO} "no";						\
-		;;							\
-	*)								\
-		if ${GREP} -q "${_SOLARIS_PAM_IDENT}" ${_inc_}; then	\
-			${ECHO} "yes";					\
-		else							\
-			${ECHO} "no";					\
-		fi;							\
-		;;							\
-	esac
-.    endif
-.  endfor
-BUILDLINK_VARS+=	IS_BUILTIN.solaris-pam
-.endif	# IS_BUILTIN.solaris-pam
+IS_BUILTIN.solaris-pam=	no
+.  if empty(H_SOLARIS_PAM:M${LOCALBASE}/*) && exists(${H_SOLARIS_PAM})
+IS_BUILTIN.solaris-pam=	yes
+.  endif
+.endif
+MAKEVARS+=	IS_BUILTIN.solaris-pam
 
-USE_BUILTIN.solaris-pam?=	${IS_BUILTIN.solaris-pam}
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
+.if !defined(USE_BUILTIN.solaris-pam)
+.  if ${PREFER.solaris-pam} == "pkgsrc"
+USE_BUILTIN.solaris-pam=	no
+.  else
+USE_BUILTIN.solaris-pam=	${IS_BUILTIN.solaris-pam}
+.    if defined(BUILTIN_PKG.solaris-pam) && \
+        !empty(IS_BUILTIN.solaris-pam:M[yY][eE][sS])
+USE_BUILTIN.solaris-pam=	yes
+.      for _dep_ in ${BUILDLINK_DEPENDS.solaris-pam}
+.        if !empty(USE_BUILTIN.solaris-pam:M[yY][eE][sS])
+USE_BUILTIN.solaris-pam!=						\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.solaris-pam:Q}; then \
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+.        endif
+.      endfor
+.    endif
+.  endif  # PREFER.solaris-pam
+.endif
+MAKEVARS+=	USE_BUILTIN.solaris-pam

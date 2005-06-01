@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/04/11 21:45:58 tv Exp $
+# $NetBSD: Makefile,v 1.27 2005/06/01 18:02:52 jlam Exp $
 
 DISTNAME=	xboard-4.2.6
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Graphical frontend for chess engines and servers
 CONFIGURE_ARGS+=	--enable-xpm
 CONFIGURE_ARGS+=	--enable-zippy	# interface to ICS
 GNU_CONFIGURE=		# defined
-USE_X11=		# defined
 
 INFO_FILES=	xboard.info
 

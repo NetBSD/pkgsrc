@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/22 20:08:44 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/01 18:03:25 jlam Exp $
 #
 
 DISTNAME=	qvwm-1.1.12
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.qvwm.org/
 COMMENT=	Windows 95/98/NT like window manager for X11
 
-USE_X11=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c++

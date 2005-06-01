@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/22 20:07:44 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/01 18:02:41 jlam Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -10,7 +10,6 @@ COMMENT=		Perl bindings for pilot-link
 
 BUILDLINK_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
 
-USE_X11=		YES
 USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
@@ -37,6 +36,7 @@ post-install:
 
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 
 .include "../../mk/bsd.pkg.mk"

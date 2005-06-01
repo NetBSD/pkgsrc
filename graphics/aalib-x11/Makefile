@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:00 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/01 18:02:54 jlam Exp $
 
 PKGNAME=	aalib-x11-${BASE_VERS}
 CATEGORIES+=	x11
@@ -7,7 +7,6 @@ COMMENT=	ASCII Art library with X11 support
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_X11=		# defined
 
 BUILD_TARGET=		libaa-x11.la
 INSTALL_TARGET=		install-libLTLIBRARIES
@@ -18,6 +17,8 @@ INSTALLATION_DIRS=	bin include lib
 # of "-laa".
 #
 BUILDLINK_TRANSFORM+=	l:aa:aa-x11
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-patch:
 	for file in ${WRKSRC}/src/Makefile.in; do			\

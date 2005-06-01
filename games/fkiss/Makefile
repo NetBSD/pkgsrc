@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/22 20:08:01 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/01 18:02:50 jlam Exp $
 #
 
 DISTNAME=		fkiss-0.33
@@ -16,7 +16,6 @@ PATCH_DIST_STRIP=       -p1
 
 DEPENDS+=		lha-[0-9]*:../../archivers/lha
 
-USE_X11=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CFLAGS+=		-DUSE_STDARG -DHAVE_STDARG_H
@@ -45,4 +44,5 @@ do-install:
 	done
 
 .include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

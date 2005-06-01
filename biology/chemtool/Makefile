@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/22 20:07:40 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/06/01 18:02:40 jlam Exp $
 
 DISTNAME=		chemtool-1.6
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=		Program for drawing organic molecules
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 

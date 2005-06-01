@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/05/22 22:06:28 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/06/01 18:02:48 jlam Exp $
 
 DISTNAME=	libXft-2.1.6
 PKGNAME=	Xft2-2.1.6
@@ -15,7 +15,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_X11=		YES
 USE_TOOLS+=		gmake
 
 PKGCONFIG_OVERRIDE=	xft.pc.in

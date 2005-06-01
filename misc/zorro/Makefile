@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/03/24 21:12:58 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/01 18:03:05 jlam Exp $
 
 DISTNAME=	zorro-1.1p8
 PKGNAME=	zorro-1.1.8
@@ -11,7 +11,8 @@ COMMENT=	Simple to-do list manager
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 NO_BUILD=	yes
-USE_X11=	yes
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-patch:
 	( cd ${WRKSRC} ; ${SED} 's|@PREFIX@|'${PREFIX}'|g' \

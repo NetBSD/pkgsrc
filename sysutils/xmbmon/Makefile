@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/03 15:15:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:03:23 jlam Exp $
 #
 
 .include "../../sysutils/mbmon/Makefile.common"
@@ -7,11 +7,12 @@ PKGNAME=	xmbmon-205
 
 COMMENT=	X11-based motherboard monitoring utility
 
-USE_X11=	yes
 
 BUILD_TARGET=	xmbmon
 
 LDFLAGS+=	-Wl,-R${X11BASE}/lib
+
+.include "../../mk/x11.buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xmbmon ${PREFIX}/bin

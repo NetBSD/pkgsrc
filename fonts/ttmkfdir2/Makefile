@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:49 jlam Exp $
 #
 
 DISTNAME=	ttmkfdir2.20021109
@@ -20,7 +20,7 @@ USE_TOOLS+=	gmake lex
 USE_LANGUAGES=	c c++
 
 MAKE_ENV+=	FREETYPE_CONFIG=${FREETYPE_CONFIG}
-LDFLAGS+=	${LIBGETOPT}
+LDFLAGS+=	${BUILDLINK_LDADD.getopt}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ttmkfdir ${PREFIX}/bin

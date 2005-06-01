@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/01/12 21:05:46 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/01 18:03:22 jlam Exp $
 #
 
 DISTNAME=	tkcron-2.12
@@ -12,8 +12,9 @@ COMMENT=	Graphical frontend to crontab
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 WRKSRC=		${WRKDIR}
-USE_X11=	yes
 EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} > tkcron.tcl
+
+.include "../../mk/x11.buildlink3.mk"
 
 do-build:
 	${SED} -e "\:/usr/local/bin/wish: s;;${LOCALBASE}/bin/wish;g" ${WRKSRC}/tkcron.tcl > ${WRKSRC}/tkcron

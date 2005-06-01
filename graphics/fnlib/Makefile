@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/04/11 21:46:02 tv Exp $
+# $NetBSD: Makefile,v 1.30 2005/06/01 18:02:55 jlam Exp $
 #
 
 DISTNAME=		fnlib-0.5
@@ -15,7 +15,6 @@ COMMENT=		Color font rendering library for X11R6
 DIST_SUBDIR=		fnlib
 
 USE_PKGINSTALL=		YES
-USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 

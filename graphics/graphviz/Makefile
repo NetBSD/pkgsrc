@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/28 14:58:06 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2005/06/01 18:02:56 jlam Exp $
 #
 
 DISTNAME=	graphviz-2.2.1
@@ -17,7 +17,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_X11=		yes
 XAW_TYPE=		standard
 PKGCONFIG_OVERRIDE=	*/*.pc */*/*.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build

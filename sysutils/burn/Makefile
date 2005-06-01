@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/22 20:08:31 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/01 18:03:21 jlam Exp $
 #
 
 DISTNAME=	burn-0.4.0
@@ -15,7 +15,6 @@ DEPENDS+=	cdrdao>=1.1.5:../../sysutils/cdrdao
 DEPENDS+=	gworkspace-[0-9]*:../../sysutils/gworkspace
 
 NO_CONFIGURE=	YES
-USE_X11=	YES
 MAKEFILE=	GNUmakefile
 USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/${PKGBASE}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:44 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/01 18:03:23 jlam Exp $
 #
 
 DISTNAME=		glclock-6.0b6.0
@@ -13,7 +13,6 @@ COMMENT=		OpenGL-based pocket watch
 MAKEFILE=		makefile
 BUILD_TARGET=		glclock
 
-USE_X11=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,4 +28,5 @@ do-install:
 #	${INSTALL_SCRIPT} ${WRKSRC}/$$i ${PREFIX}/bin; done
 
 .include "../../graphics/Mesa/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

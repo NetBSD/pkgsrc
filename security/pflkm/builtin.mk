@@ -1,29 +1,87 @@
-# $NetBSD: builtin.mk,v 1.3 2005/05/11 22:01:28 peter Exp $
+# $NetBSD: builtin.mk,v 1.4 2005/06/01 18:03:21 jlam Exp $
 
-_PF_VERSION=	3.7	# pkg default
-_PF_PFVAR_H=	/usr/include/net/pfvar.h
+BUILTIN_PKG:=	pflkm
 
+BUILTIN_FIND_FILES_VAR:=	H_PFLKM
+BUILTIN_FIND_FILES.H_PFLKM=	/usr/include/net/pfvar.h
+
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+# Compute the version number of the PF API by checking for the presence
+# of symbols added in newer versions and store the result in ${PF_VERSION}.
+#
+.if !defined(PF_VERSION)
+PF_VERSION=	3.7	# package default
+.  if exists(${H_PFLKM})
+# OpenBSD 3.7: pf_threshold added
+_BLTN_PF_3_7!=	${GREP} -c pf_threshold ${H_PFLKM} || ${TRUE}
+# OpenBSD 3.6: pf_cksum_fixup added
+_BLTN_PF_3_6!=	${GREP} -c pf_cksum_fixup ${H_PFLKM} || ${TRUE}
+
+.    if ${_BLTN_PF_3_7} == "1"
+PF_VERSION=	3.7
+.    elif ${_BLTN_PF_3_6} == "1"
+PF_VERSION=	3.6
+.    else
+PF_VERSION=	3.5
+.    endif
+.  endif
+.endif
+MAKEVARS+=	PF_VERSION
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.pflkm)
 IS_BUILTIN.pflkm=	no
-.  if exists(${_PF_PFVAR_H})
+.  if empty(H_PFLKM:M${LOCALBASE}/*) && exists(${H_PFLKM})
 IS_BUILTIN.pflkm=	yes
-
-# OpenBSD 3.7: pf_threshold added
-_PF_3_7!=	${GREP} -c pf_threshold ${_PF_PFVAR_H} || ${TRUE}
-# OpenBSD 3.6: pf_cksum_fixup added
-_PF_3_6!=	${GREP} -c pf_cksum_fixup ${_PF_PFVAR_H} || ${TRUE}
-
-.if ${_PF_3_7} == "1"
-BUILTIN_PKG.pflkm=	3.7
-.elif ${_PF_3_6} == "1"
-BUILTIN_PKG.pflkm=	3.6
-.else
-BUILTIN_PKG.pflkm=	3.5
+.  endif
 .endif
+MAKEVARS+=	IS_BUILTIN.pflkm
 
-_PF_VERSION=		${BUILTIN_PKG.pflkm}
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.pflkm) && \
+    !empty(IS_BUILTIN.pflkm:M[yY][eE][sS])
+.  if ${PF_VERSION} == "3.7"
+BUILTIN_PKG.pflkm=	20050519	# release date for PF API 3.7
+.  elif ${PF_VERSION} == "3.6"
+BUILTIN_PKG.pflkm=	20041101	# release date for PF API 3.6
+.  elif ${PF_VERSION} == "3.5"
+BUILTIN_PKG.pflkm=	20040501	# release date for PF API 3.5
+.  else
+BUILTIN_PKG.pflkm=	20040501	# release date for PF API 3.5
+.  endif
+.endif
+MAKEVARS+=	BUILTIN_PKG.pflkm
 
-.  endif	# exists(${_PF_PFVAR_H})
-.endif	# IS_BUILTIN.pflkm
-
-USE_BUILTIN.pflkm?=	${IS_BUILTIN.pflkm}
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
+.if !defined(USE_BUILTIN.pflkm)
+.  if ${PREFER.pflkm} == "pkgsrc"
+USE_BUILTIN.pflkm=	no
+.  else
+USE_BUILTIN.pflkm=	${IS_BUILTIN.pflkm}
+.    if defined(BUILTIN_PKG.pflkm) && \
+        !empty(IS_BUILTIN.pflkm:M[yY][eE][sS])
+USE_BUILTIN.pflkm=	yes
+.      for _dep_ in ${BUILDLINK_DEPENDS.pflkm}
+.        if !empty(USE_BUILTIN.pflkm:M[yY][eE][sS])
+USE_BUILTIN.pflkm!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.pflkm:Q}; then	\
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+.        endif
+.      endfor
+.    endif
+.  endif  # PREFER.pflkm
+.endif
+MAKEVARS+=	USE_BUILTIN.pflkm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2005/05/22 20:07:59 jlam Exp $
+# $NetBSD: Makefile,v 1.86 2005/06/01 18:02:48 jlam Exp $
 
 DISTNAME=		gnucash-1.8.11
 PKGREVISION=		2
@@ -18,7 +18,6 @@ BUILD_DEPENDS+=		bison>=1.28:../../devel/bison
 
 USE_DIRS+=		gnome1-1.5
 USE_TOOLS+=		gmake
-USE_X11=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 

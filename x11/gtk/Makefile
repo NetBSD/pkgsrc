@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2005/05/22 20:08:48 jlam Exp $
+# $NetBSD: Makefile,v 1.108 2005/06/01 18:03:29 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		8
@@ -73,4 +73,5 @@ pre-configure:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

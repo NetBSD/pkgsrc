@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:44:58 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:39 jlam Exp $
 
 DISTNAME=	Blursk-1.3
 PKGNAME=	xmms-blursk-1.3
@@ -15,7 +15,6 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
-USE_X11=	YES
 
 .include "../../mk/bsd.prefs.mk"
 

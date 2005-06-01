@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/22 20:07:55 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/01 18:02:45 jlam Exp $
 #
 
 DISTNAME=	dasher-3.2.15
@@ -14,7 +14,6 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 
 .include "../../audio/gnome-speech/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"

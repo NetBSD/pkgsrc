@@ -1,54 +1,61 @@
-# $NetBSD: builtin.mk,v 1.1 2004/04/28 03:35:58 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2005/06/01 18:03:21 jlam Exp $
 
-_SKEY_H=	/usr/include/skey.h
+BUILTIN_PKG:=	skey
 
+BUILTIN_FIND_FILES_VAR:=	H_SKEY
+BUILTIN_FIND_FILES.H_SKEY=	/usr/include/skey.h
+
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.skey)
 IS_BUILTIN.skey=	no
-.  if exists(${_SKEY_H})
+.  if empty(H_SKEY:M${LOCALBASE}/*) && exists(${H_SKEY})
 IS_BUILTIN.skey=	yes
+.  endif
+.endif
+MAKEVARS+=	IS_BUILTIN.skey
+
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.skey) && \
+    !empty(IS_BUILTIN.skey:M[yY][eE][sS) && \
+    exists(${H_SKEY})
 # XXX
 # XXX Consider the native skey to be skey-1.1.5.
 # XXX
 BUILTIN_PKG.skey=	skey-1.1.5
-BUILDLINK_VARS+=	BUILTIN_PKG.skey
-.  endif
-BUILDLINK_VARS+=	IS_BUILTIN.skey
-.endif	# IS_BUILTIN.skey
+.endif
+MAKEVARS+=	BUILTIN_PKG.skey
 
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
 .if !defined(USE_BUILTIN.skey)
-USE_BUILTIN.skey?=	${IS_BUILTIN.skey}
-PREFER.skey?=		pkgsrc
-
-.  if defined(BUILTIN_PKG.skey)
-USE_BUILTIN.skey=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.skey}
-.      if !empty(USE_BUILTIN.skey:M[yY][eE][sS])
-USE_BUILTIN.skey!=	\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.skey}; then	\
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-.      endif
-.    endfor
-.  endif
-
-.  if ${PREFER.skey} == "native"
-.    if (${OPSYS} == "NetBSD") && exists(${_SKEY_H})
-USE_BUILTIN.skey=	yes
-_INCOMPAT_SKEY?=	# should be set from defs.${OPSYS}.mk
-.      for _pattern_ in ${_INCOMPAT_SKEY} ${INCOMPAT_SKEY}
-.        if !empty(MACHINE_PLATFORM:M${_pattern_})
+.  if ${PREFER.skey} == "pkgsrc"
 USE_BUILTIN.skey=	no
+.  else
+USE_BUILTIN.skey=	${IS_BUILTIN.skey}
+.    if defined(BUILTIN_PKG.skey) && \
+        !empty(IS_BUILTIN.skey:M[yY][eE][sS])
+USE_BUILTIN.skey=	yes
+.      for _dep_ in ${BUILDLINK_DEPENDS.skey}
+.        if !empty(USE_BUILTIN.skey:M[yY][eE][sS])
+USE_BUILTIN.skey!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.skey:Q}; then	\
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
 .        endif
 .      endfor
 .    endif
-.  endif
-
-.  if defined(USE_SKEY)
-.    if !empty(IS_BUILTIN.skey:M[nN][oO]) && \
-        (${PREFER.skey} == "pkgsrc")
-USE_BUILTIN.skey=	no
-.    endif
-.  endif
-.endif	# USE_BUILTIN.skey
+.  endif  # PREFER.skey
+.endif
+MAKEVARS+=	USE_BUILTIN.skey

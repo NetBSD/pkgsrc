@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:08:46 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 18:03:27 jlam Exp $
 #
 
 DISTNAME=		XaoS-3.1
@@ -13,7 +13,6 @@ COMMENT=		Zoomable fractal rendering doodad
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS=		gmake
 USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-curses-driver=no
 # DGA fails to link somehow, XXX should be fixed
@@ -28,4 +27,5 @@ SUBST_SED.paths=	-e 's,/usr/share/locale,${PREFIX}/${PKGLOCALEDIR}/locale,g'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
