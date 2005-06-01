@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2005/06/01 18:45:46 jmmv Exp $
+# $NetBSD: options.mk,v 1.2 2005/06/01 20:31:38 jlam Exp $
 
-.if !empty(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
+.if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 
@@ -232,4 +232,4 @@ CONFIGURE_ARGS+=	--enable-xvid
 CONFIGURE_ARGS+=	--disable-xvid
 .endif
 
-.endif # !empty(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
+.endif # defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
