@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:07:58 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/01 18:02:48 jlam Exp $
 #
 
 DISTNAME=		tuxnes-0.75
@@ -13,7 +13,6 @@ COMMENT=		NES emulator
 ONLY_FOR_PLATFORM=	*-*-i386
 
 USE_TOOLS+=		gmake
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 SUBST_CLASSES+=		dsp

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/05/22 20:07:57 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/01 18:02:46 jlam Exp $
 
 DISTNAME=	BasiliskII_src_14032003
 PKGNAME=	BasiliskII-1.0.20030314
@@ -16,12 +16,13 @@ WRKSRC=		${WRKDIR}/BasiliskII-1.0/src/Unix
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
-USE_X11=	yes
 
 CONFIGURE_ARGS+=	--without-gtk \
 			--without-esd \
 			--disable-fbdev-dga \
 			--without-mon
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/BasiliskII

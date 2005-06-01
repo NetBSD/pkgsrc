@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:25 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/01 18:02:44 jlam Exp $
 #
 
 DISTNAME=		guile-gtk-0.19
@@ -13,7 +13,6 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.ping.de/sites/zagadka/guile-gtk/
 COMMENT=		Library to make GTK accessible from guile 1.4
 
-USE_X11=		# defined
 USE_LIBTOOL=		# defined
 
 GNU_CONFIGURE=		# defined

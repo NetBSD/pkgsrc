@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/30 14:18:14 martti Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/01 18:02:46 jlam Exp $
 
 PKGNAME=		vim-gtk2-${VIM_VERSION}.${VIM_PATCHLEVEL}
 #PKGREVISION=		1
@@ -11,7 +11,6 @@ DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}{,nb*}:../vim-share
 CONFLICTS+=		vim-[0-9]* vim-gtk-[0-9]* vim-motif-[0-9]*
 CONFLICTS+=		vim-xaw-[0-9]* vim-kde-[0-9]*
 
-USE_X11=		yes
 CONFIGURE_ARGS+=	--enable-gui=gtk2
 CONFIGURE_ARGS+=	--with-tlib=ncurses
 

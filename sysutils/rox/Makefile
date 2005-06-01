@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/04/11 21:47:28 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/01 18:03:22 jlam Exp $
 #
 
 DISTNAME=	rox-2.2.0
@@ -17,7 +17,6 @@ CONFLICTS=	rox-base-[0-9]*
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Filer/src
 DIST_SUBDIR=	rox
 
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		APP_DIR=${WRKDIR}/${DISTNAME}/ROX-Filer
 CONFIGURE_ARGS+=	--enable-rox --with-platform=${OPSYS}-${MACHINE_ARCH}

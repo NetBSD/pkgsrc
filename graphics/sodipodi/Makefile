@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/05/22 20:08:07 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/06/01 18:02:57 jlam Exp $
 #
 
 DISTNAME=	sodipodi-0.34
@@ -15,7 +15,6 @@ USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
-USE_X11=		YES
 
 REPLACE_PERL=		extensions/*.pl
 

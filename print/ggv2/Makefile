@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/05/22 20:08:27 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2005/06/01 18:03:09 jlam Exp $
 #
 
 DISTNAME=		ggv-2.8.4
@@ -17,7 +17,6 @@ USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake
-USE_X11=		YES
 
 GCONF2_SCHEMAS= 	ggv.schemas
 

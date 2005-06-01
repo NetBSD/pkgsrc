@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:44:53 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/01 18:02:38 jlam Exp $
 
 DISTNAME=		kmp-0.01
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=		Qt client for the Music Player Daemon
 
 USE_LANGUAGES=		c++
 USE_LIBTOOL=		yes
-USE_X11=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	${PREFIX}
 

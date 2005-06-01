@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:48:13 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:31 jlam Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-tcltklib-${RUBY_VERSION}
@@ -13,7 +13,6 @@ COMMENT=	Ruby interface to Tcl/Tk libraries
 RUBY_HAS_ARCHLIB=	yes
 RUBY_VERSION=		${RUBY16_VERSION}
 USE_RUBY_EXTCONF=	yes
-USE_X11=		yes
 DISTINFO_FILE=		${RUBY_DISTINFO_FILE}
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/tcltklib
 WRKSRC=			${RUBY_WRKSRC}/ext/tcltklib

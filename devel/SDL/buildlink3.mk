@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2005/03/27 14:43:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2005/06/01 18:02:42 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SDL_BUILDLINK3_MK:=	${SDL_BUILDLINK3_MK}+
@@ -16,7 +16,6 @@ BUILDLINK_RECOMMENDED.SDL+=	SDL>=1.2.7nb4
 BUILDLINK_PKGSRCDIR.SDL?=	../../devel/SDL
 .endif	# SDL_BUILDLINK3_MK
 
-USE_X11=	yes
 PTHREAD_OPTS+=	require
 
 .include "../../mk/bsd.prefs.mk"

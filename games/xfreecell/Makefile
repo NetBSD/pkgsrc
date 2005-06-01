@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:03 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:53 jlam Exp $
 
 DISTNAME=	xfreecell-1.0.5b
 CATEGORIES=	games
@@ -18,4 +18,5 @@ NO_CONFIGURE=	YES
 
 MAKE_ENV+=	GMAKE=${GMAKE:Q}
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

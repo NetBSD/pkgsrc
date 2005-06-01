@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/05/25 11:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/01 18:03:33 jlam Exp $
 
 DISTNAME=	xservers-3.3.6.3
 CATEGORIES=	x11
@@ -33,6 +33,7 @@ X11_SRCS=	Imakefile Makefile config fonts include lib nls \
 MESSAGE_SUBST+=	X11_SUBDIR=${X11_SUBDIR}
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 do-fetch:
 .if defined(BSDXSRCDIR)

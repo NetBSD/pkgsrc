@@ -1,33 +1,53 @@
-# $NetBSD: builtin.mk,v 1.4 2004/07/24 06:48:51 grant Exp $
+# $NetBSD: builtin.mk,v 1.5 2005/06/01 18:03:32 jlam Exp $
 
-_X11_XCURSOR_XCURSOR_H=	${X11BASE}/include/X11/Xcursor/Xcursor.h
+BUILTIN_PKG:=	xcursor
 
+BUILTIN_FIND_FILES_VAR:=	H_XCURSOR
+BUILTIN_FIND_FILES.H_XCURSOR=	${X11BASE}/include/X11/Xcursor/Xcursor.h
+
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.xcursor)
 IS_BUILTIN.xcursor=	no
-.  if exists(${_X11_XCURSOR_XCURSOR_H})
-IS_BUILTIN.xcursor=	yes
-#
-# Create an appropriate package name for the built-in Xcursor distributed
-# with the system.  This package name can be used to check against
-# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
-# or if the built-in one is sufficient.
-#
-_XCURSOR_MAJOR!=	\
-	${AWK} '/\#define[ 	]*XCURSOR_(LIB_)?MAJOR/ { print $$3 }'		\
-		${_X11_XCURSOR_XCURSOR_H}
-_XCURSOR_MINOR!=	\
-	${AWK} '/\#define[ 	]*XCURSOR_(LIB_)?MINOR/ { print "."$$3 }'	\
-		${_X11_XCURSOR_XCURSOR_H}
-_XCURSOR_REVISION!=	\
-	${AWK} '/\#define[ 	]*XCURSOR_(LIB_)?MINOR/ { print "."$$3 }'	\
-		${_X11_XCURSOR_XCURSOR_H}
-_XCURSOR_VERSION=	${_XCURSOR_MAJOR}${_XCURSOR_MINOR}${_XCURSOR_REVISION}
-BUILTIN_PKG.xcursor=	xcursor-${_XCURSOR_VERSION}
-BUILDLINK_VARS+=	BUILTIN_PKG.xcursor
+.  if exists(${H_XCURSOR})
+PKGSRC_USE_TOOLS+=	imake			# XXX
+IMAKE?=			${X11BASE}/bin/imake	# XXX
+.    if defined(IMAKE) && exists(${IMAKE})
+IS_BUILTIN.xcursor!=							\
+	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
+		-f ${BUILDLINK_PKGSRCDIR.xcursor}/builtin-imake.mk	\
+		-s - |							\
+	${MAKE} -f - builtin-test
+.    endif
 .  endif
-BUILDLINK_VARS+=	IS_BUILTIN.xcursor
-.endif	# IS_BUILTIN.xcursor
+.endif
+MAKEVARS+=	IS_BUILTIN.xcursor
 
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.xcursor) && \
+    !empty(IS_BUILTIN.xcursor:M[yY][eE][sS]) && \
+    exists(${H_XCURSOR})
+BUILTIN_VERSION.xcursor!=						\
+	${AWK} '/\#define[ 	]*XCURSOR_(LIB_)?MAJOR/ { M = $$3 }	\
+		/\#define[ 	]*XCURSOR_(LIB_)?MINOR/ { m = "."$$3 }	\
+		/\#define[ 	]*XCURSOR_(LIB_)?REVISION/ { r = "."$$3 } \
+		END { printf "%s%s%s\n", M, m, r }'			\
+		${H_XCURSOR}
+BUILTIN_PKG.xcursor=	xcursor-${BUILTIN_VERSION.xcursor}
+.endif
+MAKEVARS+=	BUILTIN_PKG.xcursor
+
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
 .if defined(USE_BUILTIN.Xfixes) && !empty(USE_BUILTIN.Xfixes:M[nN][oO])
 USE_BUILTIN.xcursor=	no
 .endif
@@ -36,42 +56,49 @@ USE_BUILTIN.xcursor=	no
 .endif
 
 .if !defined(USE_BUILTIN.xcursor)
-USE_BUILTIN.xcursor?=	${IS_BUILTIN.xcursor}
-
-.  if defined(BUILTIN_PKG.xcursor)
+.  if ${PREFER.xcursor} == "pkgsrc"
+USE_BUILTIN.xcursor=	no
+.  else
+USE_BUILTIN.xcursor=	${IS_BUILTIN.xcursor}
+.    if defined(BUILTIN_PKG.xcursor) && \
+        !empty(IS_BUILTIN.xcursor:M[yY][eE][sS])
 USE_BUILTIN.xcursor=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.xcursor}
-.      if !empty(USE_BUILTIN.xcursor:M[yY][eE][sS])
-USE_BUILTIN.xcursor!=	\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.xcursor}; then \
-		${ECHO} "yes";						\
+.      for _dep_ in ${BUILDLINK_DEPENDS.xcursor}
+.        if !empty(USE_BUILTIN.xcursor:M[yY][eE][sS])
+USE_BUILTIN.xcursor!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.xcursor:Q}; then \
+		${ECHO} yes;						\
 	else								\
-		${ECHO} "no";						\
+		${ECHO} no;						\
 	fi
-.      endif
-.    endfor
-.  endif
-.endif	# USE_BUILTIN.xcursor
+.        endif
+.      endfor
+.    endif
+.  endif  # PREFER.xcursor
+.endif
+MAKEVARS+=	USE_BUILTIN.xcursor
 
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
 CHECK_BUILTIN.xcursor?=	no
 .if !empty(CHECK_BUILTIN.xcursor:M[nN][oO])
 
-.if !empty(USE_BUILTIN.xcursor:M[nN][oO])
+.  if !empty(USE_BUILTIN.xcursor:M[nN][oO])
 BUILDLINK_DEPENDS.xcursor+=	xcursor>=1.1.1
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
-.  for _mkfile_ in buildlink3.mk builtin.mk
-.    if exists(../../x11/Xfixes/${_mkfile_})
+.    for _mkfile_ in buildlink3.mk builtin.mk
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-.      include "../../x11/Xfixes/${_mkfile_}"
+.      sinclude "../../x11/Xfixes/${_mkfile_}"
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
-.    endif
-.  endfor
-.endif
+.    endfor
+.  endif
 
-.if !empty(USE_BUILTIN.xcursor:M[yY][eE][sS])
+.  if !empty(USE_BUILTIN.xcursor:M[yY][eE][sS])
 BUILDLINK_PREFIX.xcursor=	${X11BASE}
 BUILDLINK_FILES.xcursor+=	lib/pkgconfig/xcursor.pc
 USE_BUILTIN.Xrender=		yes
-.endif
+.  endif
 
 .endif	# CHECK_BUILTIN.xcursor

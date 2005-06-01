@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:28 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/01 18:03:22 jlam Exp $
 
 DISTNAME=	pftop-0.4
 CATEGORIES=	sysutils net
@@ -10,7 +10,7 @@ COMMENT=	Utility for real-time display of statistics for PF
 
 NO_CONFIGURE=	yes
 
-MAKE_ENV+=	OSLEVEL=${_PF_VERSION:S/.//}
+MAKE_ENV+=	OSLEVEL=${PF_VERSION:S/.//}
 CFLAGS+=	-I${PREFIX}/include
 
 do-install:

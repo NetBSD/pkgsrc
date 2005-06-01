@@ -1,42 +1,47 @@
-# $NetBSD: builtin.mk,v 1.1 2004/04/26 05:09:29 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2005/06/01 18:02:43 jlam Exp $
 
-_CDK_CDK_H=	/usr/include/cdk/cdk.h
+BUILTIN_PKG:=	cdk
 
+BUILTIN_FIND_FILES_VAR:=	H_CDK
+BUILTIN_FIND_FILES.H_CDK=	/usr/include/cdk/cdk.h
+
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.cdk)
 IS_BUILTIN.cdk=	no
-.  if exists(${_CDK_CDK_H})
+.  if empty(H_CDK:M${LOCALBASE}/*) && exists(${H_CDK})
 IS_BUILTIN.cdk=	yes
-# XXX
-# XXX Consider the native CDK to be cdk-4.9.9nb1.
-# XXX
-BUILTIN_PKG.cdk=	cdk-4.9.9nb1
-BUILDLINK_VARS+=	BUILTIN_PKG.cdk
 .  endif
-BUILDLINK_VARS+=	IS_BUILTIN.cdk
-.endif	# IS_BUILTIN.cdk
+.endif
+MAKEVARS+=	IS_BUILTIN.cdk
 
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
 .if !defined(USE_BUILTIN.cdk)
-USE_BUILTIN.cdk?=	${IS_BUILTIN.cdk}
-PREFER.cdk?=		pkgsrc
-
-.  if defined(BUILTIN_PKG.cdk)
-USE_BUILTIN.cdk=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.cdk}
-.      if !empty(USE_BUILTIN.cdk:M[yY][eE][sS])
-USE_BUILTIN.cdk!=	\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.cdk}; then	\
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-.      endif
-.    endfor
-.  endif
-
-.  if defined(USE_CDK)
-.    if !empty(IS_BUILTIN.cdk:M[nN][oO]) && \
-        (${PREFER.cdk} == "pkgsrc")
+.  if ${PREFER.cdk} == "pkgsrc"
 USE_BUILTIN.cdk=	no
+.  else
+USE_BUILTIN.cdk=	${IS_BUILTIN.cdk}
+.    if defined(BUILTIN_PKG.cdk) && \
+        !empty(IS_BUILTIN.cdk:M[yY][eE][sS])
+USE_BUILTIN.cdk=	yes
+.      for _dep_ in ${BUILDLINK_DEPENDS.cdk}
+.        if !empty(USE_BUILTIN.cdk:M[yY][eE][sS])
+USE_BUILTIN.cdk!=							\
+        if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.cdk:Q}; then	\
+		${ECHO} yes;						\
+        else								\
+		${ECHO} no;						\
+	fi
+.        endif
+.      endfor
 .    endif
-.  endif
-.endif	# USE_BUILTIN.cdk
+.  endif  # PREFER.cdk
+.endif
+MAKEVARS+=	USE_BUILTIN.cdk

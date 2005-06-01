@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/22 20:08:35 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/01 18:03:23 jlam Exp $
 #
 
 DISTNAME=	libcroco-0.6.0
@@ -13,7 +13,6 @@ COMMENT=	Toolkit to parse and manipulate CSS (Cascading Style Sheets)
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=    libcroco-0.6.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/11/03 14:18:52 adam Exp $
+# $NetBSD: Makefile,v 1.22 2005/06/01 18:02:50 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
 COMMENT=	Freeciv client with Xaw interface
@@ -8,7 +8,6 @@ DEPENDS+=	freeciv-sounds>=2.0:../../games/freeciv-sounds
 
 CONFLICTS=	freeciv-client-gtk<=1.11.4
 
-USE_X11=		yes
 
 CONFIGURE_ARGS+=	--disable-server --disable-make-data
 CONFIGURE_ARGS+=	--enable-client=xaw

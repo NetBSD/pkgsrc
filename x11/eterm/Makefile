@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/04/11 21:48:05 tv Exp $
+# $NetBSD: Makefile,v 1.41 2005/06/01 18:03:28 jlam Exp $
 
 DISTNAME=	Eterm-0.9.3
 PKGNAME=	${DISTNAME:S/^E/e/}
@@ -22,7 +22,6 @@ PIXMAP_FILES=		Eterm-bg-scale-1.tar.gz Eterm-bg-scale-2.tar.gz \
 
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
-USE_X11=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
@@ -58,5 +57,6 @@ post-extract:
 
 .include "../../devel/libast/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

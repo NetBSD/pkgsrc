@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:06 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/01 18:02:41 jlam Exp $
 
 DISTNAME=	estic-1.61
 CATEGORIES=	comms
@@ -17,13 +17,14 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:C/-.*//}
-USE_X11=	# defined
 
 BUILD_TARGET=	depend all
 ESTICPATCH=	${DISTNAME}-patch-from-1.60${EXTRACT_SUFX}
 LIB_TARGET=	depend lib
 LIBSRC=		${WRKDIR}/spunk
 MAKEFILE=	make/freebsd-x.mak
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && \

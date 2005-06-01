@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/28 11:51:04 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/01 18:02:51 jlam Exp $
 
 # Needed so configure/patch rules don't get pulled in
 NO_BUILD=	yes
@@ -17,7 +17,6 @@ DEPENDS+=	nethack-tty-${NETHACK_VERSION}:../nethack-tty
 DEPENDS+=	nethack-x11-${NETHACK_VERSION}:../nethack-x11
 DEPENDS+=	nethack-qt-${NETHACK_VERSION}nb2:../nethack-qt
 
-USE_X11=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 

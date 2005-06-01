@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/20 12:27:35 agc Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/01 18:03:26 jlam Exp $
 
 #
 # There is no distinfo file because users can specify alternate themes
@@ -37,6 +37,8 @@ THEME_FILES+=	${theme}.tar.gz
 SITES_${theme}.tar.gz=	http://download.freshmeat.net/themes/${theme:C/-[^-]*$//}/
 .endfor
 .undef theme
+
+.include "../../mk/x11.buildlink3.mk"
 
 do-install:
 	@${RM} -f ${PLIST_SRC}

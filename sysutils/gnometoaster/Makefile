@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/05/22 20:08:32 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/01 18:03:22 jlam Exp $
 #
 
 DISTNAME=	gtoaster1.0Beta5
@@ -13,7 +13,6 @@ HOMEPAGE=	http://gnometoaster.rulez.org/
 COMMENT=	CD recording frontend for X/GTK+
 
 WRKSRC=			${WRKDIR}/gtoaster
-USE_X11=		YES
 USE_TOOLS+=		gmake
 
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:09 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:57 jlam Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -14,7 +14,6 @@ HOMEPAGE=	http://www.radiance-online.org/
 COMMENT=	Physically-based, image-generating, backward raytracer
 
 WRKSRC=		${WRKDIR}/ray
-USE_X11=	YES
 
 LICENSE=	radiance-license
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2005/03/05 18:16:21 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2005/06/01 18:03:30 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 RANDREXT_BUILDLINK3_MK:=	${RANDREXT_BUILDLINK3_MK}+
@@ -14,11 +14,9 @@ BUILDLINK_PACKAGES+=	randrext
 BUILDLINK_DEPENDS.randrext+=	randrext>=1.0
 BUILDLINK_PKGSRCDIR.randrext?=	../../x11/randrext
 BUILDLINK_DEPMETHOD.randrext?=	build
+.endif	# RANDREXT_BUILDLINK3_MK
 
 .include "../../x11/xextensions/buildlink3.mk"
-
-USE_X11=	yes
-
-.endif	# RANDREXT_BUILDLINK3_MK
+.include "../../mk/x11.buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

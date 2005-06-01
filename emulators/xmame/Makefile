@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2005/05/22 20:07:59 jlam Exp $
+# $NetBSD: Makefile,v 1.130 2005/06/01 18:02:48 jlam Exp $
 #
 
 DISTNAME=		xmame-0.96
@@ -15,7 +15,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_PKGINSTALL=		YES
-USE_X11=		YES
 USE_TOOLS+=		gmake
 MAKEFILE=		makefile.unix
 TARGET=			${PKGBASE}
@@ -115,4 +114,5 @@ do-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

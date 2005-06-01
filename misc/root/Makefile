@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/05/22 20:08:17 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/01 18:03:05 jlam Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
@@ -13,7 +13,6 @@ BUILD_DEPENDS+=		cint-5.14.40:../../lang/cint
 
 WRKSRC=			${WRKDIR}
 BUILDLINK_PASSTHRU_DIRS=${PREFIX}/root/lib
-USE_X11=		YES
 USE_TOOLS+=		gmake
 
 BUILD_TARGET=		netbsd

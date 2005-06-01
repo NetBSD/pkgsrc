@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/05/22 20:08:52 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/01 18:03:33 jlam Exp $
 #
 
 DISTNAME=	xpad-1.12
@@ -17,7 +17,6 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 
 LIBS.SunOS=		-lX11
 

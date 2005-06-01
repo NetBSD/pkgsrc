@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:07 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/01 18:02:57 jlam Exp $
 
 DISTNAME=		pgraf-20010131
 CATEGORIES=		graphics
@@ -8,10 +8,11 @@ MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Portable graphics system
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
-USE_X11=		YES
 INSTALLATION_DIRS=	bin include lib man/man1 man/man3 man/man5
 
 CONFLICTS=		pgp5-[0-9]*		# Both have a `pgps' executable
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/include/pgraf.h ${PREFIX}/include

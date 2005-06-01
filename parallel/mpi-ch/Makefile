@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/03/07 02:08:37 jschauma Exp $
+# $NetBSD: Makefile,v 1.35 2005/06/01 18:03:08 jlam Exp $
 
 DISTNAME=		mpich-1.2.6
 CATEGORIES=		parallel
@@ -17,7 +17,6 @@ BUILD_TARGET=		ALL examples
 INSTALL_TARGET=		install-all
 USE_PERL5=		yes
 HAS_CONFIGURE=		yes
-USE_X11=		yes
 USE_FORTRAN=		yes
 PKG_SYSCONFSUBDIR=	mpi-ch
 

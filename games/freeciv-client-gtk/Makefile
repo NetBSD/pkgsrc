@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/11/03 14:19:20 adam Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/01 18:02:50 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-gtk-/}
 COMMENT=	Freeciv client with GTK+ interface
@@ -6,7 +6,6 @@ COMMENT=	Freeciv client with GTK+ interface
 DEPENDS+=	freeciv-share>=${FC_VERS}:../../games/freeciv-share
 DEPENDS+=	freeciv-sounds>=2.0:../../games/freeciv-sounds
 
-USE_X11=		yes
 
 CONFIGURE_ARGS+=	--disable-server --disable-make-data
 CONFIGURE_ARGS+=	--enable-client=gtk

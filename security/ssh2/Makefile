@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/28 02:47:49 reed Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/01 18:03:21 jlam Exp $
 #
 
 PKGNAME=	${DISTNAME:C/ssh-/ssh2-/}
@@ -7,8 +7,8 @@ PKGREVISION=	3
 
 CONFLICTS=	ssh2-nox11-[0-9]*
 
-USE_X11=		YES
 CONFIGURE_ARGS+=	--with-x	# be explicit
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../security/ssh2/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

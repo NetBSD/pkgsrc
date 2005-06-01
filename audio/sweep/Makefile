@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/22 20:07:39 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/06/01 18:02:39 jlam Exp $
 #
 
 DISTNAME=	sweep-0.8.3
@@ -16,7 +16,6 @@ USE_DIRS+=		gnome1-1.5
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-oggtest

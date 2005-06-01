@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/03/05 19:25:12 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2005/06/01 18:02:54 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 AALIB_X11_BUILDLINK3_MK:=	${AALIB_X11_BUILDLINK3_MK}+
@@ -21,7 +21,8 @@ BUILDLINK_TRANSFORM+=		l:aa:aa-x11
 AALIB_CONFIG=		${BUILDLINK_PREFIX.aalib-x11}/bin/aalib-x11-config
 CONFIGURE_ENV+=		AALIB_CONFIG="${AALIB_CONFIG}"
 MAKE_ENV+=		AALIB_CONFIG="${AALIB_CONFIG}"
-
 .endif	# AALIB_X11_BUILDLINK3_MK
+
+.include "../../mk/x11.buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

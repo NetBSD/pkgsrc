@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2005/05/22 20:51:45 jlam Exp $
+# $NetBSD: Makefile.common,v 1.43 2005/06/01 18:02:55 jlam Exp $
 
 DISTNAME=		gdk-pixbuf-${VER}.0
 CATEGORIES=		graphics devel
@@ -13,7 +13,6 @@ VER=			0.22
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_TOOLS+=		gmake
-USE_X11=		YES
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES

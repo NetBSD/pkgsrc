@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/04/11 21:45:41 tv Exp $
+# $NetBSD: Makefile,v 1.41 2005/06/01 18:02:45 jlam Exp $
 
 DISTNAME=	nedit-${VERS}-src
 PKGNAME=	nedit-${VERS}
@@ -16,7 +16,6 @@ COMMENT=	Motif based standard GUI style text editor
 VERS=		5.5
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_X11=		YES
 BUILD_TARGET=		netbsd
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:48:14 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/01 18:03:32 jlam Exp $
 #
 
 DISTNAME=	tix8.2.0b1
@@ -12,7 +12,6 @@ HOMEPAGE=	http://tixlibrary.sourceforge.net/
 COMMENT=	Powerful widget library for Tcl/Tk
 
 WRKSRC=			${WRKDIR}/tix8.2.0/unix
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared --with-tcl=${BUILDLINK_PREFIX.tcl}/lib \
 			--with-tk=${BUILDLINK_PREFIX.tk}/lib \

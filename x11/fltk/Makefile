@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/05/22 20:08:46 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2005/06/01 18:03:28 jlam Exp $
 
 DISTNAME=	fltk-1.1.6-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -21,7 +21,6 @@ WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
-USE_X11=		yes
 TEST_TARGET=		test
 
 GNU_CONFIGURE=		yes
@@ -31,4 +30,5 @@ CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL}
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

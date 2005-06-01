@@ -1,58 +1,87 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:36 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2005/06/01 18:03:30 jlam Exp $
 
-_X11_EXTENSIONS_RANDR_H=	${X11BASE}/include/X11/extensions/randr.h
+BUILTIN_PKG:=	randrext
 
+BUILTIN_FIND_FILES_VAR:=	H_RANDR
+BUILTIN_FIND_FILES.H_RANDR=	${X11BASE}/include/X11/extensions/randr.h
+
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.randrext)
 IS_BUILTIN.randrext=	no
-.  if exists(${_X11_EXTENSIONS_RANDR_H})
+#
+# Here, we skip checking whether the files are under ${LOCALBASE} since
+# we'll consider this X11 package to be built-in even if it's a part
+# of one of the pkgsrc-installed X11 distributions.
+#  
+.  if exists(${H_RANDR})
 IS_BUILTIN.randrext=	yes
-#
-# Create an appropriate package name for the built-in randr distributed
-# with the system.  This package name can be used to check against
-# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
-# or if the built-in one is sufficient.
-#
-_RANDR_MAJOR!=	\
-	${AWK} '/\#define[ 	]*RANDR_MAJOR/ { print $$3 }'		\
-		${_X11_EXTENSIONS_RANDR_H}
-_RANDR_MINOR!=	\
-	${AWK} '/\#define[ 	]*RANDR_MINOR/ { print "."$$3 }'	\
-		${_X11_EXTENSIONS_RANDR_H}
-_RANDR_VERSION=	${_RANDR_MAJOR}${_RANDR_MINOR}
-BUILTIN_PKG.randrext=	randrext-${_RANDR_VERSION}
-BUILDLINK_VARS+=	BUILTIN_PKG.randrext
 .  endif
-BUILDLINK_VARS+=	IS_BUILTIN.randrext
-.endif	# IS_BUILTIN.randrext
+.endif
+MAKEVARS+=      IS_BUILTIN.randrext
 
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.randrext) && \
+    !empty(IS_BUILTIN.randrext:M[yY][eE][sS]) && \
+    exists(${H_RANDR})
+BUILTIN_VERSION.randrext!=						\
+	${AWK} '/\#define[ 	]*RANDR_MAJOR/ { M = $$3 }		\
+		/\#define[ 	]*RANDR_MINOR/ { m = "."$$3 }		\
+		END { printf "%s%s\n", M, m }'				\
+		${H_RANDR}
+BUILTIN_PKG.randrext=	randrext-${BUILTIN_VERSION.randrext}
+.endif
+MAKEVARS+=	BUILTIN_PKG.randrext
+
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
 .if !defined(USE_BUILTIN.randrext)
-USE_BUILTIN.randrext?=	${IS_BUILTIN.randrext}
-
-.  if defined(BUILTIN_PKG.randrext)
+.  if ${PREFER.randrext} == "pkgsrc"
+USE_BUILTIN.randrext=	no
+.  else
+USE_BUILTIN.randrext=	${IS_BUILTIN.randrext}
+.    if defined(BUILTIN_PKG.randrext) && \
+        !empty(IS_BUILTIN.randrext:M[yY][eE][sS])
 USE_BUILTIN.randrext=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.randrext}
-.      if !empty(USE_BUILTIN.randrext:M[yY][eE][sS])
-USE_BUILTIN.randrext!=		\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.randrext}; then \
-		${ECHO} "yes";						\
+.      for _dep_ in ${BUILDLINK_DEPENDS.randrext}
+.        if !empty(USE_BUILTIN.randrext:M[yY][eE][sS])
+USE_BUILTIN.randrext!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.randrext:Q}; then \
+		${ECHO} yes;						\
 	else								\
-		${ECHO} "no";						\
+		${ECHO} no;						\
 	fi
-.      endif
-.    endfor
-.  endif
-.endif	# USE_BUILTIN.randrext
+.        endif
+.      endfor
+.    endif
+.  endif  # PREFER.randrext
+.endif
+MAKEVARS+=	USE_BUILTIN.randrext
 
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
 CHECK_BUILTIN.randrext?=	no
 .if !empty(CHECK_BUILTIN.randrext:M[nN][oO])
 
-.if !empty(USE_BUILTIN.randrext:M[nN][oO])
+.  if !empty(USE_BUILTIN.randrext:M[nN][oO])
 BUILDLINK_DEPENDS.randrext+=	randrext>=1.0
-.endif
+.  endif
 
-.if !empty(USE_BUILTIN.randrext:M[yY][eE][sS])
+.  if !empty(USE_BUILTIN.randrext:M[yY][eE][sS])
 BUILDLINK_PREFIX.randrext=	${X11BASE}
-USE_X11=			yes
-.endif
+.    include "../../mk/x11.buildlink3.mk"
+.    include "../../mk/x11.builtin.mk"
+.  endif
 
 .endif	# CHECK_BUILTIN.randrext

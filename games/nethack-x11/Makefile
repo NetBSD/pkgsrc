@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/08 10:17:30 pooka Exp $
+# $NetBSD: Makefile,v 1.26 2005/06/01 18:02:51 jlam Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
@@ -10,7 +10,6 @@ CATEGORIES+=		x11
 
 DEPENDS+=		nethack-lib-${NETHACK_VERSION}:../nethack-lib
 
-USE_X11=		YES
 
 BUILD_TARGET=		x11tiles nethack
 INSTALL_TARGET=		binfiles

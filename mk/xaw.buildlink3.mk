@@ -1,4 +1,4 @@
-# $NetBSD: xaw.buildlink3.mk,v 1.1 2004/04/11 23:35:16 xtraeme Exp $
+# $NetBSD: xaw.buildlink3.mk,v 1.2 2005/06/01 18:03:06 jlam Exp $
 
 .if !defined(XAW_BUILDLINK3_MK)
 XAW_BUILDLINK3_MK=	# defined
@@ -18,6 +18,7 @@ BUILDLINK_PREFIX.Xaw?=	${BUILDLINK_PREFIX.Xaw3d}
 .  include "../../x11/neXtaw/buildlink3.mk"
 BUILDLINK_PREFIX.Xaw?=	${BUILDLINK_PREFIX.neXtaw}
 .else
+.  include "../../mk/x11.buildlink3.mk"
 BUILDLINK_PREFIX.Xaw?=	${X11BASE}
 .endif
 

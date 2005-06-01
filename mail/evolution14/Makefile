@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/01 14:47:54 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/01 18:02:59 jlam Exp $
 
 DISTNAME=		evolution-1.4.6
 PKGNAME=		${DISTNAME:S/evolution/evolution14/}
@@ -29,7 +29,6 @@ BUILDLINK_DEPENDS.db3=		db3-3.11.2{,nb*}
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		bison gmake
-USE_X11=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 

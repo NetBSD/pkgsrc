@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/30 19:51:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/01 18:02:38 jlam Exp $
 
 DISTNAME=	rsynth-2.0
 PKGREVISION=	1
@@ -16,7 +16,6 @@ EXTRACT_ONLY=	rsynth-2.0.tar.gz
 
 DIST_SUBDIR=	rsynth
 GNU_CONFIGURE=	YES
-USE_X11=	YES
 
 CONFIGURE_ARGS+=--with-aDict="${WRKDIR}/cmudict.0.4"
 CONFIGURE_ARGS+=--without-bDict
@@ -32,4 +31,5 @@ post-install:
 
 .include "../../audio/nas/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/11/29 17:36:10 minskim Exp $
+# $NetBSD: Makefile,v 1.42 2005/06/01 18:02:41 jlam Exp $
 #
 
 .include "Makefile.common"
@@ -17,7 +17,6 @@ CONFLICTS=		xchat-gnome-[0-9]*
 
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 
 CONFIGURE_ARGS+=	--enable-textfe
 CONFIGURE_ARGS+=	--enable-tcl=no

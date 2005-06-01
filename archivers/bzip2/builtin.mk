@@ -1,36 +1,67 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:28 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2005/06/01 18:02:37 jlam Exp $
 
+BUILTIN_PKG:=	bzip2
+
+BUILTIN_FIND_FILES_VAR:=	H_BZIP2
+BUILTIN_FIND_FILES.H_BZIP2=	/usr/include/bzlib.h
+BUILTIN_FIND_GREP.H_BZIP2=	BZ2_
+
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.bzip2)
 IS_BUILTIN.bzip2=	no
-.  if exists(/usr/include/bzlib.h)
-IS_BUILTIN.bzip2!=							\
-	if ${GREP} -q "BZ2_" /usr/include/bzlib.h; then			\
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
+.  if empty(H_BZIP2:M${LOCALBASE}/*) && exists(${H_BZIP2})
+IS_BUILTIN.bzip2=	yes
 .  endif
-BUILDLINK_VARS+=	IS_BUILTIN.bzip2
-.endif	# IS_BUILTIN.bzip2
+.endif
+MAKEVARS+=	IS_BUILTIN.bzip2
 
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
 .if !defined(USE_BUILTIN.bzip2)
-USE_BUILTIN.bzip2?=	${IS_BUILTIN.bzip2}
-PREFER.bzip2?=		pkgsrc
-
-.  if defined(USE_BZIP2)
-.    if !empty(IS_BUILTIN.bzip2:M[nN][oO]) || \
-        (${PREFER.bzip2} == "pkgsrc")
+.  if ${PREFER.bzip2} == "pkgsrc"
 USE_BUILTIN.bzip2=	no
+.  else
+USE_BUILTIN.bzip2=	${IS_BUILTIN.bzip2}
+.    if defined(BUILTIN_PKG.bzip2) && \
+        !empty(IS_BUILTIN.bzip2:M[yY][eE][sS])
+USE_BUILTIN.bzip2=	yes
+.      for _dep_ in ${BUILDLINK_DEPENDS.bzip2}
+.        if !empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
+USE_BUILTIN.bzip2!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.bzip2:Q}; then	\
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+.        endif
+.      endfor
 .    endif
-.  endif
-
-# Solaris 9 has bzip2 1.0.1, build it on older versions.
-# Darwin only has a static libbz2.a.
 #
-_INCOMPAT_BZIP2?=	SunOS-5.[678]-* Darwin-*
-.  for _pattern_ in ${_INCOMPAT_BZIP2} ${INCOMPAT_BZIP2}
-.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+# Some platforms don't have a bzip2 implementation that can replace
+# pkgsrc bzip2.
+#
+_INCOMPAT_BZIP2?=	SunOS-5.[678]-* Darwin-*-*
+.    for _pattern_ in ${_INCOMPAT_BZIP2} ${INCOMPAT_BZIP2}
+.      if !empty(MACHINE_PLATFORM:M${_pattern_})
 USE_BUILTIN.bzip2=	no
-.    endif
-.  endfor
-.endif	# USE_BUILTIN.bzip2
+.      endif
+.    endfor
+.  endif  # PREFER.bzip2
+.endif
+MAKEVARS+=	USE_BUILTIN.bzip2
+
+# if USE_BZIP2 is defined, then force the use of a true bzip2
+# implementation.
+#
+.if defined(USE_BZIP2)
+.  if !empty(IS_BUILTIN.bzip2:M[nN][oO])
+USE_BUILTIN.bzip2=	no
+.  endif
+.endif

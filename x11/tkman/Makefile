@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/03/24 21:13:04 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2005/06/01 18:03:32 jlam Exp $
 
 DISTNAME=		tkman
 PKGNAME=		tkman-2.1
@@ -15,7 +15,8 @@ DEPENDS+=		tk>=8.3.2:../../x11/tk83
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_RMAN=		yes
-USE_X11=		yes
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-install:
 	${SED} -e 's|@@LOCALBASE@@|${LOCALBASE}|' \

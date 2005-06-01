@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:17 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 18:02:59 jlam Exp $
 
 DISTNAME=	otcl-1.9
 PKGNAME=	tcl-${DISTNAME}
@@ -13,7 +13,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_X11=	yes
 
 CONFIGURE_ARGS+=	V_LIBS="`${CONFIG_SHELL} -c '. ${TCLCONFIG_SH}; echo $$TCL_LIBS'`"
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}

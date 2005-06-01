@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:02 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/01 18:02:55 jlam Exp $
 #
 
 DISTNAME=		flphoto-1.2-source
@@ -14,7 +14,6 @@ COMMENT=		Image management and display program
 WRKSRC=		${WRKDIR}/flphoto-1.2
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_X11=		yes
 
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

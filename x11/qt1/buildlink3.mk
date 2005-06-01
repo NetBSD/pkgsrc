@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:37 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/06/01 18:03:30 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 QT1_BUILDLINK3_MK:=	${QT1_BUILDLINK3_MK}+
@@ -21,5 +21,7 @@ BUILDLINK_TRANSFORM.qt1+=	-e s,/qt1/bin/,/bin/,
 
 QT1DIR=				${LOCALBASE}/qt1
 .endif	# QT1_BUILDLINK3_MK
+
+.include "../../mk/x11.buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

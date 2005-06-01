@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:45:16 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/01 18:02:42 jlam Exp $
 #
 
 DISTNAME=	xmysql-1.10
@@ -12,7 +12,6 @@ COMMENT=	Graphical front end to the MySQL database engine
 
 BUILDLINK_DEPENDS.mysql-client=	mysql-client>=3.23.35
 
-USE_X11=	YES
 MAKE_ENV+=	X11PREFIX=${X11PREFIX}
 
 BUILD_TARGET=	xmysql

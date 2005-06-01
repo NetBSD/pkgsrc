@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:48:14 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/01 18:03:32 jlam Exp $
 
 DISTNAME=	wmfstatus-0.4
 CATEGORIES=	x11
@@ -9,7 +9,6 @@ HOMEPAGE=	http://www.finik.net/software.html
 COMMENT=	General purpose 8x5 LCD screen for WindowMaker
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/wmfstatus
-USE_X11=	YES
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmfstatus ${PREFIX}/bin

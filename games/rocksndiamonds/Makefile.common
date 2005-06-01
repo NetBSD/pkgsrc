@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2005/05/22 20:08:03 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2005/06/01 18:02:52 jlam Exp $
 
 DISTNAME=	rocksndiamonds-3.1.0
 CATEGORIES=	games x11
@@ -9,7 +9,6 @@ HOMEPAGE=	http://www.artsoft.org/rocksndiamonds/
 
 USE_TOOLS+=		gmake
 USE_PKGINSTALL=		YES
-USE_X11=		YES
 
 INSTALLATION_DIRS=	man/man6
 
@@ -29,6 +28,8 @@ MAKE_ENV+=	HAVE_JOYSTICK=1
 .endif
 
 SCORE_PATH=	${VARBASE}/games/rocksndiamonds
+
+.include "../../mk/x11.buildlink3.mk"
 
 pre-configure:
 	@${SED} -e "s,@SCORE_PATH@,${SCORE_PATH},g" \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/22 20:07:55 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/01 18:02:45 jlam Exp $
 
 DISTNAME=	cooledit-3.17.14
 CATEGORIES=	editors
@@ -13,7 +13,6 @@ BUILD_USES_MSGFMT=	yes
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 

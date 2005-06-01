@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2005/05/22 20:08:29 jlam Exp $
+# $NetBSD: Makefile.common,v 1.4 2005/06/01 18:03:20 jlam Exp $
 
 TETEX_BIN_VERS=		3.0
 DIST_SUBDIR=		teTeX
@@ -8,7 +8,6 @@ INSTALL_TARGET=		install strip
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_PKGINSTALL=		yes
-USE_X11=		yes
 CFLAGS+=		-Dunix
 
 GNU_CONFIGURE=		yes
@@ -60,3 +59,4 @@ OWN_DIRS_PERMS+=	${TEXFONTSDIR}/tfm ${ROOT_USER} ${ROOT_GROUP} 1777
 .include "../../fonts/t1lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"

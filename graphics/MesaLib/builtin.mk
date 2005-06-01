@@ -1,61 +1,88 @@
-# $NetBSD: builtin.mk,v 1.4 2004/03/29 05:43:30 jlam Exp $
+# $NetBSD: builtin.mk,v 1.5 2005/06/01 18:02:54 jlam Exp $
 
-_GL_GLX_H=	${X11BASE}/include/GL/glx.h
-_X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
+BUILTIN_PKG:=	MesaLib
 
-.include "../../graphics/Mesa/version.mk"
-BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=${_MESA_REQD}
+BUILTIN_FIND_FILES_VAR:=	H_MESALIB
+BUILTIN_FIND_FILES.H_MESALIB=	${X11BASE}/include/GL/glx.h
 
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.MesaLib)
 IS_BUILTIN.MesaLib=	no
-.  if exists(${_GL_GLX_H}) && exists(${_X11_TMPL})
+.  if exists(${H_MESALIB})
+PKGSRC_USE_TOOLS+=	imake			# XXX
+IMAKE?=			${X11BASE}/bin/imake	# XXX
+.    if defined(IMAKE) && exists(${IMAKE})
 IS_BUILTIN.MesaLib!=							\
-	if ${GREP} -q BuildGLXLibrary ${_X11_TMPL}; then		\
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-.    if !empty(IS_BUILTIN.MesaLib:M[yY][eE][sS])
-#
-# _MESA_VERSION is defined by Mesa/version.mk to be the version of the
-# Mesa software distributed with the built-in XFree86.
-#
-BUILTIN_PKG.MesaLib=	MesaLib-${_MESA_VERSION}
-BUILDLINK_VARS+=	BUILTIN_PKG.MesaLib
+	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
+		-f ${BUILDLINK_PKGSRCDIR.MesaLib}/builtin-imake.mk	\
+		-s - |							\
+	${MAKE} -f - builtin-test
 .    endif
 .  endif
-BUILDLINK_VARS+=	IS_BUILTIN.MesaLib
-.endif	# IS_BUILTIN.MesaLib
+.endif
+MAKEVARS+=	IS_BUILTIN.MesaLib
 
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.MesaLib) && \
+    !empty(IS_BUILTIN.MesaLib:M[yY][eE][sS]) && \
+    exists(${H_MESALIB})
+.  include "../../graphics/Mesa/version.mk"
+BUILTIN_PKG.MesaLib=	MesaLib-${BUILTIN_VERSION.Mesa}
+.endif
+MAKEVARS+=	BUILTIN_PKG.MesaLib
+
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
 .if !defined(USE_BUILTIN.MesaLib)
-USE_BUILTIN.MesaLib?=	${IS_BUILTIN.MesaLib}
-
-.  if defined(BUILTIN_PKG.MesaLib)
-USE_BUILTIN.MesaLib=		yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.MesaLib}
-.      if !empty(USE_BUILTIN.MesaLib:M[yY][eE][sS])
-USE_BUILTIN.MesaLib!=	\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.MesaLib}; then \
-		${ECHO} "yes";						\
+.  if ${PREFER.MesaLib} == "pkgsrc"
+USE_BUILTIN.MesaLib=	no
+.  else
+USE_BUILTIN.MesaLib=	${IS_BUILTIN.MesaLib}
+.    if defined(BUILTIN_PKG.MesaLib) && \
+        !empty(IS_BUILTIN.MesaLib:M[yY][eE][sS])
+USE_BUILTIN.MesaLib=	yes
+.      for _dep_ in ${BUILDLINK_DEPENDS.MesaLib}
+.        if !empty(USE_BUILTIN.MesaLib:M[yY][eE][sS])
+USE_BUILTIN.MesaLib!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.MesaLib:Q}; then \
+		${ECHO} yes;						\
 	else								\
-		${ECHO} "no";						\
+		${ECHO} no;						\
 	fi
-.      endif
-.    endfor
-.  endif
-.endif	# USE_BUILTIN.MesaLib
+.        endif
+.      endfor
+.    endif
+.  endif  # PREFER.MesaLib
+.endif
+MAKEVARS+=	USE_BUILTIN.MesaLib
 
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
 CHECK_BUILTIN.MesaLib?=	no
 .if !empty(CHECK_BUILTIN.MesaLib:M[nN][oO])
 
-.if !empty(USE_BUILTIN.MesaLib:M[nN][oO])
+.  if !empty(USE_BUILTIN.MesaLib:M[nN][oO])
 BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=6.0
-.endif
+.  endif
 
-.if !empty(USE_BUILTIN.MesaLib:M[yY][eE][sS])
+.  if !empty(USE_BUILTIN.MesaLib:M[yY][eE][sS])
 BUILDLINK_PREFIX.MesaLib=	${X11BASE}
-USE_X11=			yes
-_MESA_REQD=			${_MESA_VERSION}
-.endif
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+.    include "../../mk/x11.buildlink3.mk"
+.    include "../../mk/x11.builtin.mk"
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+.  endif
 
 .endif	# CHECK_BUILTIN.MesaLib

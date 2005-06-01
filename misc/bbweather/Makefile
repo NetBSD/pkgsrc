@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/15 22:02:27 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 18:03:04 jlam Exp $
 #
 
 DISTNAME=	bbweather-0.6.2
@@ -12,11 +12,12 @@ COMMENT=	Show current weather conditions
 
 DEPENDS+=	wget>=1.7:../../net/wget
 
-USE_X11=		YES
 GNU_CONFIGURE=		YES
 REPLACE_PERL=		GrabWeather
 USE_PERL5=		run
 PKGSRC_USE_TOOLS+=	gunzip
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-install:
 	cd ${PREFIX}/man/man1 && ${GUNZIP_CMD} GrabWeather.1.gz

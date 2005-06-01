@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:08:22 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/01 18:03:06 jlam Exp $
 
 DISTNAME=	ogle-0.9.2
 PKGREVISION=	2
@@ -21,7 +21,6 @@ ONLY_FOR_PLATFORM+=	SunOS-*-*
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
-USE_X11=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
@@ -39,4 +38,5 @@ MESSAGE_SUBST+=		PKGBASE=${PKGBASE}
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:02 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/01 18:03:08 jlam Exp $
 #
 
 DISTNAME=       	x2vnc-1.5.1
@@ -11,6 +11,6 @@ HOMEPAGE=		http://fredrik.hubbe.net/x2vnc.html
 COMMENT=		Multi-console display using X and VNC
 
 GNU_CONFIGURE=		yes
-USE_X11=		yes
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

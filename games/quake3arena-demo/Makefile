@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/16 01:15:31 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/01 18:02:52 jlam Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGREVISION=	2
@@ -22,7 +22,7 @@ DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
 DEPENDS+=	suse_glx>=6.4:../../emulators/${SUSE_DIR_PREFIX}_glx
 .include "../../emulators/suse_linux/Makefile.application"
 .else
-USE_X11=	yes
+.include "../../mk/x11.buildlink3.mk"
 .endif
 
 NO_CONFIGURE=	yes

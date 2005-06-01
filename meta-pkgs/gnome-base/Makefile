@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/05/19 21:13:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/01 18:03:04 jlam Exp $
 
 DISTNAME=	gnome-base-2.10.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -81,7 +81,6 @@ DEPENDS+=	gnome-session>=2.10.0:../../x11/gnome-session
 # Not really part of GNOME, but we need it.
 DEPENDS+=	xscreensaver>=4.16:../../x11/xscreensaver
 
-USE_X11=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes

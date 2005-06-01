@@ -1,130 +1,110 @@
-# $NetBSD: builtin.mk,v 1.6 2005/03/01 18:56:43 xtraeme Exp $
+# $NetBSD: builtin.mk,v 1.7 2005/06/01 18:02:48 jlam Exp $
 
-_X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
+BUILTIN_PKG:=	Xft2
 
+BUILTIN_FIND_FILES_VAR:=	H_XFT2
+BUILTIN_FIND_FILES.H_XFT2=	${X11BASE}/include/X11/Xft.h
+
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.Xft2)
 IS_BUILTIN.Xft2=	no
-.  if exists(${_X11_TMPL})
+.  if exists(${H_XFT2})
+PKGSRC_USE_TOOLS+=	imake			# XXX
+IMAKE?=			${X11BASE}/bin/imake	# XXX
+.    if defined(IMAKE) && exists(${IMAKE})
 IS_BUILTIN.Xft2!=							\
-	if ${GREP} -q BuildXftLibrary ${_X11_TMPL}; then		\
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-.    if !empty(IS_BUILTIN.Xft2:M[yY][eE][sS])
-#
-# Create an appropriate package name for the built-in Xft2 distributed
-# with the system.  This package name can be used to check against
-# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
-# or if the built-in one is sufficient.
-#
-# Xft2 doesn't provide a method of discovering the version number of
-# the software.  Match up Xft2 versions with XFree86 versions for an
-# approximate determination of the Xft2 version.
-#
-_XFT2_VERSIONS=	2.1.2  2.1.1  2.1.0
-_XFT2_2.1.0=	4.2.99.* 4.3 4.3.[0-9] 4.3.[0-9].* 4.3.[1-8][0-9]* 4.3.9[0-8]*
-_XFT2_2.1.0+=	4.3.99.* 4.[4-9]* 4.[1-9][0-9]*
-.      if !defined(XF86_VERSION)
-XF86_VERSION=	3.3
-.        if exists(${X11BASE}/lib/X11/config/xorgversion.def)
-_X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/xorgversion.def
-.        elif exists(${X11BASE}/lib/X11/config/xorg.cf)
-_X11_CONFIG_VERSION_DEF=        ${X11BASE}/lib/X11/config/xorg.cf
-_XORG_MAJOR!=	\
-	${AWK} '/\#define[ 	]*XORG_VERSION_MAJOR/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XORG_MINOR!=	\
-	${AWK} '/\#define[ 	]*XORG_VERSION_MINOR/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XORG_PATCH!=	\
-	${AWK} '/\#define[ 	]*XORG_VERSION_PATCH/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XORG_SNAP!=	\
-	${AWK} '/\#define[ 	]*XORG_VERSION_SNAP/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XORG_TEENY=	${_XORG_PATCH}.${_XORG_SNAP}
-.          if !empty(_XORG_TEENY:M0.0)
-XF86_VERSION=	4.4
-.          else
-XF86_VERSION=	4.4.${_XORG_TEENY}
-.          endif
-.        elif exists(${X11BASE}/lib/X11/config/version.def)
-_X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/version.def
-_XF86_MAJOR!=	\
-	${AWK} '/\#define[ 	]*XF86_VERSION_MAJOR/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XF86_MINOR!=	\
-	${AWK} '/\#define[ 	]*XF86_VERSION_MINOR/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XF86_PATCH!=	\
-	${AWK} '/\#define[ 	]*XF86_VERSION_PATCH/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XF86_SNAP!=	\
-	${AWK} '/\#define[ 	]*XF86_VERSION_SNAP/ { print $$3 }'	\
-		${_X11_CONFIG_VERSION_DEF}
-_XF86_TEENY=	${_XF86_PATCH}.${_XF86_SNAP}
-.          if !empty(_XF86_TEENY:M0.0)
-XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}
-.          else
-XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}.${_XF86_TEENY}
-.          endif
-.        endif
-.      endif	# defined(XF86_VERSION)
-BUILDLINK_VARS+=	XF86_VERSION
-.      for _xrender_version_ in ${_XFT2_VERSIONS}
-.        for _pattern_ in ${_XFT2_${_xrender_version_}}
-.          if !empty(XF86_VERSION:M${_pattern_})
-_XFT2_VERSION?=	${_xrender_version_}
-.          endif
-.        endfor
-.      endfor
-_XFT2_VERSION?=		0.0
-BUILTIN_PKG.Xft2=	Xft2-${_XFT2_VERSION}
-BUILDLINK_VARS+=	BUILTIN_PKG.Xft2
+	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
+		-f ${BUILDLINK_PKGSRCDIR.Xft2}/builtin-imake.mk		\
+		-s - |							\
+	${MAKE} -f - builtin-test
 .    endif
 .  endif
-BUILDLINK_VARS+=	IS_BUILTIN.Xft2
-.endif	# IS_BUILTIN.Xft2
+.endif
+MAKEVARS+=	IS_BUILTIN.Xft2
 
-.if defined(USE_BUILTIN.fontconfig) && !empty(USE_BUILTIN.fontconfig:M[nN][oO])
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.Xft2) && \
+    !empty(IS_BUILTIN.Xft2:M[yY][eE][sS]) && \
+    exists(${H_XFT2})
+#
+# Extract the version number from the header file, but if it's not
+# there, then pretend it's from version 2.0.
+#
+BUILTIN_VERSION.Xft2!=							\
+	${AWK} 'BEGIN { M = 2; m = ".0"; r = "" }			\
+		/\#define[ 	]*XFT_MAJOR/ { M = $$3 }		\
+		/\#define[ 	]*XFT_MINOR/ { m = "."$$3 }		\
+		/\#define[ 	]*XFT_REVISION/ { r = "."$$3 }		\
+		END { printf "%s%s%s\n", M, m, r }'			\
+		${H_XFT2}
+BUILTIN_PKG.Xft2=	Xft2-${BUILTIN_VERSION.Xft2}
+.endif
+MAKEVARS+=	BUILTIN_PKG.Xft2
+
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
+#
+# These are dependencies of Xft2.  If we need to use the pkgsrc
+# versions of any of these, then also use the pkgsrc version of
+# Xft2.
+#
+.if defined(USE_BUILTIN.Xrender) && !empty(USE_BUILTIN.Xrender:M[nN][oO])
 USE_BUILTIN.Xft2=	no
 .endif
-.if defined(USE_BUILTIN.Xrender) && !empty(USE_BUILTIN.Xrender:M[nN][oO])
+.if defined(USE_BUILTIN.fontconfig) && !empty(USE_BUILTIN.fontconfig:M[nN][oO])
 USE_BUILTIN.Xft2=	no
 .endif
 
 .if !defined(USE_BUILTIN.Xft2)
-USE_BUILTIN.Xft2?=	${IS_BUILTIN.Xft2}
-
-.  if defined(BUILTIN_PKG.Xft2)
+.  if ${PREFER.Xft2} == "pkgsrc"
+USE_BUILTIN.Xft2=	no
+.  else
+USE_BUILTIN.Xft2=	${IS_BUILTIN.Xft2}
+.    if defined(BUILTIN_PKG.Xft2) && \
+        !empty(IS_BUILTIN.Xft2:M[yY][eE][sS])
 USE_BUILTIN.Xft2=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.Xft2}
-.      if !empty(USE_BUILTIN.Xft2:M[yY][eE][sS])
-USE_BUILTIN.Xft2!=	\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.Xft2}; then	\
-		${ECHO} "yes";						\
+.      for _dep_ in ${BUILDLINK_DEPENDS.Xft2}
+.        if !empty(USE_BUILTIN.Xft2:M[yY][eE][sS])
+USE_BUILTIN.Xft2!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.Xft2:Q}; then	\
+		${ECHO} yes;						\
 	else								\
-		${ECHO} "no";						\
+		${ECHO} no;						\
 	fi
-.      endif
-.    endfor
-.  endif
-.endif	# USE_BUILTIN.Xft2
+.        endif
+.      endfor
+.    endif
+.  endif  # PREFER.Xft2
+.endif
+MAKEVARS+=	USE_BUILTIN.Xft2
 
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
 CHECK_BUILTIN.Xft2?=	no
 .if !empty(CHECK_BUILTIN.Xft2:M[nN][oO])
 
-.if !empty(USE_BUILTIN.Xft2:M[nN][oO])
-BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1nb1
-.endif
+.  if !empty(USE_BUILTIN.Xft2:M[nN][oO])
+BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1nb2
+.  endif
 
-.if !empty(USE_BUILTIN.Xft2:M[yY][eE][sS])
+.  if !empty(USE_BUILTIN.Xft2:M[yY][eE][sS])
 BUILDLINK_PREFIX.Xft2=	${X11BASE}
-BUILDLINK_FILES.Xft2+=	lib/pkgconfig/xft.pc
+BUILDLINK_FILES.Xft2+=	lib/pkgconfig/Xft2.pc
 
 USE_BUILTIN.Xrender=	yes
 USE_BUILTIN.fontconfig=	yes
-.endif
+.  endif
 
 .endif	# CHECK_BUILTIN.Xft2

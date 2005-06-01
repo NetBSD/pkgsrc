@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/04/11 21:46:08 tv Exp $
+# $NetBSD: Makefile,v 1.35 2005/06/01 18:02:57 jlam Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -15,7 +15,6 @@ CONFLICTS+=		plotutils-nox11-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
-USE_X11=		YES
 
 INFO_FILES=	plotutils.info
 
@@ -26,4 +25,5 @@ USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig ${WRKSRC}/libxmi/ltconfig
 
 .include "../../graphics/png/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/22 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/01 18:02:49 jlam Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
@@ -19,6 +19,8 @@ USE_LANGUAGES+=		c c++
 PKGSRC_USE_TOOLS+=	gtar
 
 NOT_FOR_PLATFORM=	NetBSD-*-arm32
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-extract:
 	cd ${WRKSRC}/abuse && \

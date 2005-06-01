@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/05/22 20:08:02 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/06/01 18:02:52 jlam Exp $
 
 DISTNAME=	quake-v6-bsd-kame
 PKGNAME=	quake6-0.0
@@ -13,7 +13,6 @@ COMMENT=	Quake over IPv6
 DEPENDS=	quakedata-[0-9]*:../../games/quakedata
 
 WRKSRC=		${WRKDIR}/quakeforge
-USE_X11=	yes
 
 post-extract:
 	cd ${WRKSRC}; ${FIND} . -name \*.o -exec ${RM} {} \;
@@ -35,4 +34,5 @@ CONFIGURE_ARGS+=--disable-asmopt --bindir=/bin
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

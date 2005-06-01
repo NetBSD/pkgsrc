@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/04/11 21:45:07 tv Exp $
+# $NetBSD: Makefile,v 1.46 2005/06/01 18:02:41 jlam Exp $
 #
 
 DISTNAME=		jpilot-0.99.5
@@ -17,7 +17,6 @@ CONFLICTS+=		jpilot-libplugin-[0-9]*
 USE_DIRS+=		gnome1-1.0
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 USE_OLD_DES_API=	YES
 
 GNU_CONFIGURE=		YES

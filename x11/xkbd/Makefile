@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:48:15 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:32 jlam Exp $
 #
 
 DISTNAME=	xkbd-0.8.5
@@ -13,7 +13,6 @@ COMMENT=	On-screen keyboard for X, useful for palmtops
 CONFIGURE_ARGS+=--enable-xpm
 
 GNU_CONFIGURE=	YES
-USE_X11=	YES
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

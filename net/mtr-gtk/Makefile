@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/22 20:08:25 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/06/01 18:03:07 jlam Exp $
 #
 
 DISTNAME=	mtr-0.69
@@ -14,7 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-USE_X11=	yes
 
 INSTALLATION_DIRS=	man/man8 sbin
 

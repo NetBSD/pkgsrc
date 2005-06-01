@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/05/22 20:07:42 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/06/01 18:02:41 jlam Exp $
 
 DISTNAME=	gnomeicu-0.99.5
 CATEGORIES=	chat gnome
@@ -14,7 +14,6 @@ USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
 

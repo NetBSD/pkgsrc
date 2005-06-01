@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/11 21:45:19 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/01 18:02:43 jlam Exp $
 #
 
 DISTNAME=	coconut-0.3.0
@@ -14,7 +14,6 @@ COMMENT=	Objective-C library for Unix-like systems
 BUILD_DEPENDS+=	papaya>=0.1.7:../../devel/papaya
 
 USE_LIBTOOL=	YES
-USE_X11=	YES
 GNU_CONFIGURE=	YES
 CPPFLAGS+=	-I${PREFIX}/include/libxml2/libxml -DGL_GLEXT_LEGACY
 MAKE_ENV+=	AM_MAKEFLAGS="am__depfiles_maybe="

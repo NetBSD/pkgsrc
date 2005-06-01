@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:32 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/01 18:03:21 jlam Exp $
 #
 
 DISTNAME=	fsv-0.9
@@ -12,7 +12,6 @@ COMMENT=	3D filesystem visualizer
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-USE_X11=		yes
 
 .include "../../x11/gtkglarea/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"

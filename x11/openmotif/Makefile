@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/05/22 21:04:42 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/06/01 18:03:30 jlam Exp $
 
 PKGVER=		2.1.30
 DISTNAME=	openmotif${PKGVER}
@@ -48,6 +48,8 @@ USE_TOOLS+=		gmake
 .endif
 
 INSTALLATION_DIRS=	lib/X11/config man/man1 man/man3 man/man5
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-extract:
 	${CP} ${FILESDIR}/NoInstall.rules ${WRKSRC}/config/cf/NoInstall.rules

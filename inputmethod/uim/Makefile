@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:08 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:58 jlam Exp $
 #
 
 DISTNAME=		uim-0.4.6
@@ -15,7 +15,6 @@ USE_NCURSES=		# clear_screen, clr_eos
 USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/uim.pc.in
 GNU_CONFIGURE=		YES
-USE_X11=		YES
 GTK2_IMMODULES=		YES
 
 .include "options.mk"

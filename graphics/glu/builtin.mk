@@ -1,65 +1,86 @@
-# $NetBSD: builtin.mk,v 1.3 2004/03/29 05:43:31 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2005/06/01 18:02:56 jlam Exp $
 
-_GL_GLU_H=	${X11BASE}/include/GL/glu.h
-_X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
+BUILTIN_PKG:=	glu
 
-.include "../../graphics/Mesa/version.mk"
-BUILDLINK_DEPENDS.glu+=	glu>=${_MESA_REQD}
+BUILTIN_FIND_FILES_VAR:=	H_GLU
+BUILTIN_FIND_FILES.H_GLU=	${X11BASE}/include/GL/glu.h
 
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.glu)
 IS_BUILTIN.glu=	no
-.  if exists(${_GL_GLU_H}) && exists(${_X11_TMPL})
+.  if exists(${H_GLU})
+PKGSRC_USE_TOOLS+=	imake			# XXX
+IMAKE?=			${X11BASE}/bin/imake	# XXX
+.    if defined(IMAKE) && exists(${IMAKE})
 IS_BUILTIN.glu!=							\
-	if ${GREP} -q BuildGLULibrary ${_X11_TMPL}; then		\
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-.    if !empty(IS_BUILTIN.glu:M[yY][eE][sS])
-#
-# _MESA_VERSION is defined by Mesa/version.mk to be the version of the
-# Mesa software distributed with the built-in XFree86.
-#
-BUILTIN_PKG.glu=	glu-${_MESA_VERSION}
-BUILDLINK_VARS+=	BUILTIN_PKG.glu
+	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
+		-f ${BUILDLINK_PKGSRCDIR.glu}/builtin-imake.mk		\
+		-s - |							\
+	${MAKE} -f - builtin-test
 .    endif
 .  endif
-BUILDLINK_VARS+=	IS_BUILTIN.glu
-.endif	# IS_BUILTIN.glu
-
-.if defined(USE_BUILTIN.MesaLib) && !empty(USE_BUILTIN.MesaLib:M[nN][oO])
-USE_BUILTIN.glu=	no
 .endif
+MAKEVARS+=	IS_BUILTIN.glu
 
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.glu) && \
+    !empty(IS_BUILTIN.glu:M[yY][eE][sS]) && \
+    exists(${H_GLU})
+.  include "../../graphics/Mesa/version.mk"
+BUILTIN_PKG.glu=	glu-${BUILTIN_VERSION.Mesa}
+.endif
+MAKEVARS+=	BUILTIN_PKG.glu
+
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
 .if !defined(USE_BUILTIN.glu)
-USE_BUILTIN.glu?=	${IS_BUILTIN.glu}
-
-.  if defined(BUILTIN_PKG.glu)
+.  if ${PREFER.glu} == "pkgsrc"
+USE_BUILTIN.glu=	no
+.  else
+USE_BUILTIN.glu=	${IS_BUILTIN.glu}
+.    if defined(BUILTIN_PKG.glu) && \
+        !empty(IS_BUILTIN.glu:M[yY][eE][sS])
 USE_BUILTIN.glu=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.glu}
-.      if !empty(USE_BUILTIN.glu:M[yY][eE][sS])
-USE_BUILTIN.glu!=	\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.glu}; then	\
-		${ECHO} "yes";						\
+.      for _dep_ in ${BUILDLINK_DEPENDS.glu}
+.        if !empty(USE_BUILTIN.glu:M[yY][eE][sS])
+USE_BUILTIN.glu!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.glu:Q}; then	\
+		${ECHO} yes;						\
 	else								\
-		${ECHO} "no";						\
+		${ECHO} no;						\
 	fi
-.      endif
-.    endfor
-.  endif
-.endif	# USE_BUILTIN.glu
+.        endif
+.      endfor
+.    endif
+.  endif  # PREFER.glu
+.endif
+MAKEVARS+=	USE_BUILTIN.glu
 
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
 CHECK_BUILTIN.glu?=	no
 .if !empty(CHECK_BUILTIN.glu:M[nN][oO])
 
-.if !empty(USE_BUILTIN.glu:M[nN][oO])
+.  if !empty(USE_BUILTIN.glu:M[nN][oO])
 BUILDLINK_DEPENDS.glu+=	glu>=6.0
-.endif
+.  endif
 
-.if !empty(USE_BUILTIN.glu:M[yY][eE][sS])
+.  if !empty(USE_BUILTIN.glu:M[yY][eE][sS])
 BUILDLINK_PREFIX.glu=	${X11BASE}
-USE_X11=		yes
-_MESA_REQD=		${_MESA_VERSION}
-.endif
+.    include "../../mk/x11.buildlink3.mk"
+.    include "../../mk/x11.builtin.mk"
+.  endif
 
 .endif	# CHECK_BUILTIN.glu

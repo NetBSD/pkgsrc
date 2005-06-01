@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2005/05/22 20:08:47 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2005/06/01 18:03:28 jlam Exp $
 #
 
 DISTNAME=		gnome-panel-2.10.1
@@ -15,7 +15,6 @@ USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake
 USE_PERL5=		YES
 USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libpanel-applet/libpanelapplet-2.0.pc.in
 

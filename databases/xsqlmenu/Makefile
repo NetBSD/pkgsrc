@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/22 20:07:47 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/01 18:02:42 jlam Exp $
 #
 
 DISTNAME=	xsqlmenu-2.10
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.jlab.org/~saw/xsqlmenu/
 COMMENT=	X based GUI for MySQL
 
-USE_X11=	yes
 USE_TOOLS+=	gmake
 MAKE_ENV+=	MAKE=${MAKE_PROGRAM}
 

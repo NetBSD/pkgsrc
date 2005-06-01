@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2005/04/20 15:42:11 drochner Exp $
+# $NetBSD: Makefile,v 1.55 2005/06/01 18:02:57 jlam Exp $
 #
 
 DISTNAME=	libwmf-0.2.8.3
@@ -13,7 +13,6 @@ COMMENT=	Library for reading and converting WMF (Windows Meta Files)
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
-USE_X11=		YES
 USE_LIBTOOL=		YES
 CONFIGURE_ARGS+=	--disable-gd
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/libwmf
@@ -28,4 +27,5 @@ post-install:
 .include "../../textproc/libxml2/buildlink3.mk"
 #.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

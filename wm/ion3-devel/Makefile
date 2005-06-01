@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:43 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/01 18:03:25 jlam Exp $
 #
 
 DISTNAME=	ion-3ds-20040906
@@ -13,7 +13,6 @@ COMMENT=	Keyboard friendly tiling window manager
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGINSTALL=	YES
-USE_X11=	YES
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 USE_PKGLOCALEDIR=	YES
@@ -41,6 +40,7 @@ CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # This is necessary because gettext's builtin.mk add stuff there,

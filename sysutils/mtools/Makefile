@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/05/22 20:08:33 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2005/06/01 18:03:22 jlam Exp $
 
 DISTNAME=	mtools-3.9.10
 CATEGORIES=	sysutils
@@ -19,7 +19,7 @@ INFO_FILES=		mtools.info
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(MTOOLS_ENABLE_FLOPPYD) && !empty(MTOOLS_ENABLE_FLOPPYD:M[Yy][Ee][Ss])
-USE_X11=	YES
+.include "../../mk/x11.buildlink3.mk"
 CPPFLAGS=	-I${X11BASE}/include
 CONFIGURE_ARGS=	--enable-floppyd
 PLIST_SUBST=	NOFLOPPYD=

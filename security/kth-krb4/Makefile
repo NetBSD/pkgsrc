@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/04/11 21:47:12 tv Exp $
+# $NetBSD: Makefile,v 1.38 2005/06/01 18:03:21 jlam Exp $
 #
 
 DISTNAME=		krb4-1.2.1
@@ -16,7 +16,6 @@ CONFLICTS+=		libdes-[0-9]*
 
 CRYPTO=			yes
 
-USE_X11=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/kerberosIV
@@ -65,4 +64,5 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/services-1.5.diff ${EXAMPLEDIR}
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

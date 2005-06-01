@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/22 20:08:27 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/01 18:03:08 jlam Exp $
 #
 
 DISTNAME=		sge-5.3p6
@@ -14,7 +14,6 @@ BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
-USE_X11=		YES
 USE_PERL5=		YES
 
 CFLAGS+=		-D${UPPER_OPSYS}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/05 05:59:17 rh Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/01 18:02:53 jlam Exp $
 #
 
 DISTNAME=		Cenon-3.67
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.cenon.info/
 COMMENT=		Vector graphics / CAD / DTP program
 
 WRKSRC=			${WRKDIR}/Cenon
-USE_X11=		yes
 NO_CONFIGURE=		yes
 
 post-install:

@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/04/17 01:44:29 kristerw Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/01 18:02:42 jlam Exp $
 
 PKGNAME=		unixodbc-DataManager-${ODBC_BASE_VERS}
 PKGREVISION=		4
 COMMENT=		GUI tool for unixODBC data source management
-
-USE_X11=		YES
 
 .include "../../databases/unixodbc/Makefile.common"
 

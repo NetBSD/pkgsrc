@@ -1,57 +1,62 @@
-# $NetBSD: builtin.mk,v 1.5 2004/12/05 07:01:19 jlam Exp $
+# $NetBSD: builtin.mk,v 1.6 2005/06/01 18:02:43 jlam Exp $
 
-.for _lib_ in dl
-.  if !defined(_BLNK_LIB_FOUND.${_lib_})
-_BLNK_LIB_FOUND.${_lib_}!=	\
-	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" != "/usr/lib/lib${_lib_}.*"; then \
-		${ECHO} "yes";						\
-	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" != "/lib/lib${_lib_}.*"; then \
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
-.  endif
-.endfor
-.undef _lib_
+BUILTIN_PKG:=	dlcompat
 
-_DLFCN_H=	/usr/include/dlfcn.h
+BUILTIN_FIND_LIBS:=		dl
+BUILTIN_FIND_FILES_VAR:=	H_DLFCN
+BUILTIN_FIND_FILES.H_DLFCN=	/usr/include/dlfcn.h
 
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.dlcompat)
 IS_BUILTIN.dlcompat=	no
-.  if !empty(_BLNK_LIB_FOUND.dl:M[yY][eE][sS]) && exists(${_DLFCN_H})
+.  if empty(H_DLFCN:M${LOCALBASE}/*) && exists(${H_DLFCN}) && \
+      !empty(BUILTIN_LIB_FOUND.dl:M[yY][eE][sS])
 IS_BUILTIN.dlcompat=	yes
-_DLCOMPAT_VERSION=	20030629
-BUILTIN_PKG.dlcompat=	dlcompat-${_DLCOMPAT_VERSION}
-BUILDLINK_VARS+=	BUILTIN_PKG.dlcompat
 .  endif
-BUILDLINK_VARS+=	IS_BUILTIN.dlcompat
-.endif	# IS_BUILTIN.dlcompat
+.endif
+MAKEVARS+=	IS_BUILTIN.dlcompat
 
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.dlcompat) && \
+    !empty(IS_BUILTIN.dlcompat:M[yY][eE][sS])
+# XXX
+# XXX Consider any built-in dlcompat to be from version 20030629.
+# XXX
+BUILTIN_PKG.dlcompat=	dlcompat-20030629
+.endif
+MAKEVARS+=	BUILTIN_PKG.dlcompat
+
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
 .if !defined(USE_BUILTIN.dlcompat)
-USE_BUILTIN.dlcompat?=	${IS_BUILTIN.dlcompat}
-PREFER.dlcompat?=	pkgsrc
-
-.  if defined(BUILTIN_PKG.dlcompat)
-USE_BUILTIN.dlcompat=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.dlcompat}
-.      if !empty(USE_BUILTIN.dlcompat:M[yY][eE][sS])
-USE_BUILTIN.dlcompat!=							\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.dlcompat}; then \
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-.      endif
-.    endfor
-.  endif
-
-.  if ${PREFER.dlcompat} == "native"
-USE_BUILTIN.dlcompat=	yes
-.  endif
-
-.  if !empty(IS_BUILTIN.dlcompat:M[nN][oO]) || \
-      (${PREFER.dlcompat} == "pkgsrc")
+.  if ${PREFER.dlcompat} == "pkgsrc"
 USE_BUILTIN.dlcompat=	no
-.  endif
-.endif	# USE_BUILTIN.dlcompat
+.  else
+USE_BUILTIN.dlcompat=	${IS_BUILTIN.dlcompat}
+.    if defined(BUILTIN_PKG.dlcompat) && \
+        !empty(IS_BUILTIN.dlcompat:M[yY][eE][sS])
+USE_BUILTIN.dlcompat=	yes
+.      for _dep_ in ${BUILDLINK_DEPENDS.dlcompat}
+.        if !empty(USE_BUILTIN.dlcompat:M[yY][eE][sS])
+USE_BUILTIN.dlcompat!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q}' ${BUILTIN_PKG.dlcompat:Q}; then \
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+.        endif
+.      endfor
+.    endif
+.  endif  # PREFER.dlcompat
+.endif
+MAKEVARS+=	USE_BUILTIN.dlcompat

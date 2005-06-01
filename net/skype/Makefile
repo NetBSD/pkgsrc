@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/09 19:53:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:03:08 jlam Exp $
 #
 
 DISTNAME=		skype_staticQT-1.0.0.20
@@ -20,7 +20,7 @@ DEPENDS+=	suse_freetype2>=9.1:../../emulators/suse91_freetype2
 DEPENDS+=	suse_x11>=9.1:../../emulators/suse91_x11
 .include "../../emulators/suse_linux/Makefile.application"
 .else
-USE_X11=	yes
+.include "../../mk/x11.buildlink3.mk"
 .endif
 
 ONLY_FOR_PLATFORM=	*-*-i386

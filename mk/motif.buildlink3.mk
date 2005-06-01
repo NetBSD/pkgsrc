@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink3.mk,v 1.7 2005/05/22 21:44:07 rillig Exp $
+# $NetBSD: motif.buildlink3.mk,v 1.8 2005/06/01 18:03:06 jlam Exp $
 #
 # MOTIFBASE
 #	choose the Motif-2.0 installation at the named location.
@@ -79,7 +79,8 @@ MOTIF_TYPE:=		${_MOTIF_TYPE}
 MOTIFBASE=		${_MOTIFBASE}
 .endif
 
-USE_X11?=		yes
+.include "../../mk/x11.buildlink3.mk"
+
 MAKE_ENV+=		MOTIFLIB="${MOTIFLIB}"
 MAKE_ENV+=		MOTIFBASE="${_MOTIFBASE}"
 CPPFLAGS+=		-I${_MOTIFBASE}/include

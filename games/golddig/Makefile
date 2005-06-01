@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:38:42 grant Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/01 18:02:50 jlam Exp $
 #
 
 DISTNAME=	golddigC3.0
@@ -10,6 +10,7 @@ MAINTAINER=	wiz@NetBSD.org
 COMMENT=	Fast action game designed for use with X
 
 USE_X11BASE=	yes
+.include "../../mk/x11.buildlink3.mk"
 
 post-build:
 	for f in ${WRKSRC}/golddig.6 ${WRKSRC}/gdedit.6; do \

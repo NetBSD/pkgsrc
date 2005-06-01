@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2005/05/07 22:24:04 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2005/06/01 18:03:08 jlam Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in buildlink3.mk to the correct version,
@@ -20,7 +20,6 @@ USE_LANGUAGES=		# empty
 EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		yes
 NO_MTREE=		yes
-USE_X11=		yes
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 PLIST_SRC.dirs=		${PLIST_SRC}.dirs
@@ -49,6 +48,8 @@ X11_LINKS_DIR=		${PREFIX}/${X11_LINKS_SUBDIR}
 FILES_LIST_CMD=	${SED} -e "s/@ABI@/${ABI}/" ${FILES_LIST} | ${GREP} -v "^\#"
 
 CREATE_X11LINK?=	${LN} -fs $$src $$dest
+
+.include "../../mk/x11.buildlink3.mk"
 
 do-build:
 	${MKDIR} ${X11_LINKS_BUILD_DIR}

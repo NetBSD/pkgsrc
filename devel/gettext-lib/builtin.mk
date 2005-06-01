@@ -1,121 +1,170 @@
-# $NetBSD: builtin.mk,v 1.22 2005/05/24 05:43:37 jlam Exp $
+# $NetBSD: builtin.mk,v 1.23 2005/06/01 18:02:43 jlam Exp $
 
-BUILDLINK_FIND_LIBS:=	intl
-.include "../../mk/buildlink3/find-libs.mk"
+BUILTIN_PKG:=	gettext
 
-_BLNK_LIBINTL_H=	/usr/include/libintl.h
+BUILTIN_FIND_LIBS:=		intl
+BUILTIN_FIND_FILES_VAR:=	H_GETTEXT
+BUILTIN_FIND_FILES.H_GETTEXT=	/usr/include/libintl.h
+BUILTIN_FIND_GREP.H_GETTEXT=	\#define[ 	]*__USE_GNU_GETTEXT
 
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.gettext)
 IS_BUILTIN.gettext=	no
-.  if exists(${_BLNK_LIBINTL_H}) && \
-      !empty(BUILDLINK_LIB_FOUND.intl:M[yY][eE][sS])
-IS_BUILTIN.gettext!=	\
- 	if ${GREP} -q "\#define[ 	]*__USE_GNU_GETTEXT" ${_BLNK_LIBINTL_H}; then \
- 		${ECHO} "yes";						\
- 	else								\
- 		${ECHO} "no";						\
- 	fi
+.  if empty(H_GETTEXT:M${LOCALBASE}/*) && exists(${H_GETTEXT}) && \
+      !empty(BUILTIN_LIB_FOUND.intl:M[yY][eE][sS])
+IS_BUILTIN.gettext=	yes
 .  endif
-.  if !empty(IS_BUILTIN.gettext:M[yY][eE][sS])
-# XXX
-# XXX Consider the native libintl to be gettext-lib-0.10.35nb1 until we
-# XXX find a way to more accurately determine the version.
-# XXX
-BUILTIN_PKG.gettext=	gettext-lib-0.10.35nb1
-BUILDLINK_VARS+=	BUILTIN_PKG.gettext
-.  endif
-.endif	# IS_BUILTIN.gettext
+.endif
+MAKEVARS+=	IS_BUILTIN.gettext
 
-.if !defined(USE_BUILTIN.gettext)
-USE_BUILTIN.gettext?=	${IS_BUILTIN.gettext}
-PREFER.gettext?=		pkgsrc
-
-.  if defined(BUILTIN_PKG.gettext)
-USE_BUILTIN.gettext=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.gettext}
-.      if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
-USE_BUILTIN.gettext!=	\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.gettext}; then \
-		${ECHO} "yes";						\
+_BLTNH_GETTEXT=	/usr/include/libintl.h
+.if !defined(BUILTIN_GETTEXT_NGETTEXT) && exists(${_BLTNH_GETTEXT})
+BUILTIN_GETTEXT_NGETTEXT!=						\
+	if ${GREP} -q "char.*ngettext" ${_BLTNH_GETTEXT:Q}; then	\
+		${ECHO} yes;						\
 	else								\
-		${ECHO} "no";						\
+		${ECHO} no;						\
 	fi
-.      endif
-.    endfor
-.  endif
+.endif
+MAKEVARS+=	BUILTIN_GETTEXT_NGETTEXT
 
-.  if ${PREFER.gettext} == "native"
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and uset USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
+.if !defined(USE_BUILTIN.gettext)
+.  if ${PREFER.gettext} == "pkgsrc"
+USE_BUILTIN.gettext=	no
+.  else
+USE_BUILTIN.gettext=	${IS_BUILTIN.gettext}
+.    if defined(BUILTIN_PKG.gettext) && \
+        !empty(IS_BUILTIN.gettext:M[yY][eE][sS])
+USE_BUILTIN.gettext=	yes
+.      for _dep_ in ${BUILDLINK_DEPENDS.gettext}
+.        if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
+USE_BUILTIN.gettext!=							\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gettext:Q}; then \
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+.        endif
+.      endfor
+.    endif
+.    if !defined(_BLNK_REPLACE.gettext)
+_BLNK_REPLACE.gettext=	no
 # XXX
 # XXX By default, assume that the native gettext implementation is good
-# XXX enough if it has a prototype for ngettext().
+# XXX enough to replace GNU gettext if it is part of glibc (the GNU C
+# XXX Library).
 # XXX
-.    if !defined(_GETTEXT_NGETTEXT) && exists(${_BLNK_LIBINTL_H})
-_GETTEXT_NGETTEXT!=	\
-	if ${GREP} -q "char.*ngettext" ${_BLNK_LIBINTL_H}; then		\
-		${ECHO} "yes";						\
+.      if exists(${_BLTNH_GETTEXT})
+_BLNK_REPLACE.gettext!=							\
+	if ${GREP} -q "This file is part of the GNU C Library" ${_BLTNH_GETTEXT:Q}; then \
+		${ECHO} yes;						\
 	else								\
-		${ECHO} "no";						\
+		${ECHO} no;						\
 	fi
-BUILDLINK_VARS+=	_GETTEXT_NGETTEXT
-.      if !empty(_GETTEXT_NGETTEXT:M[yY][eE][sS])
-USE_BUILTIN.gettext=	yes
-.      else
-USE_BUILTIN.gettext=	no
 .      endif
 .    endif
+MAKEVARS+=	_BLNK_REPLACE.gettext
+.    if !empty(_BLNK_REPLACE.gettext:M[yY][eE][sS])
+USE_BUILTIN.gettext=	yes
+.    endif
 # XXX
-# XXX By default, assume the native gettext on Linux systems using GLIBC
-# XXX supports the GNU gettext API, and use it.
+# XXX By default, assume that the native gettext implementation is good
+# XXX enough to replace GNU gettext if it supplies ngettext().
 # XXX
-.    if (${OPSYS} == "Linux")
-USE_BUILTIN.gettext!=	\
-	if ${GREP} -q "This file is part of the GNU C Library" ${_BLNK_LIBINTL_H}; then \
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
+.    if !empty(BUILTIN_GETTEXT_NGETTEXT:M[yY][eE][sS])
+USE_BUILTIN.gettext=	yes
 .    endif
 #
-# The listed platforms have an implementation of gettext that isn't
-# GNUish enough.
+# Some platforms don't have a gettext implementation that can replace
+# GNU gettext.
 #
-_INCOMPAT_GETTEXT=	SunOS-*-*
+_INCOMPAT_GETTEXT?=	SunOS-*-*	# XXX move to mk/platforms/SunOS.mk
 .    for _pattern_ in ${_INCOMPAT_GETTEXT} ${INCOMPAT_GETTEXT}
 .      if !empty(MACHINE_PLATFORM:M${_pattern_})
-USE_BUILTIN.gettext=   no
+USE_BUILTIN.gettext=	no
 .      endif
 .    endfor
-.  endif # PREFER.gettext == "native"
+.  endif  # PREFER.gettext
+.endif
+MAKEVARS+=	USE_BUILTIN.gettext
 
-.  if defined(USE_GNU_GETTEXT)
-.    if !empty(IS_BUILTIN.gettext:M[nN][oO]) || \
-        (${PREFER.gettext} == "pkgsrc")
+# If USE_GNU_GETTEXT is defined, then force the use of a GNU gettext
+# implementation.
+#
+.if defined(USE_GNU_GETTEXT)
+.  if !empty(IS_BUILTIN.gettext:M[nN][oO])
 USE_BUILTIN.gettext=	no
-.    endif
 .  endif
-.endif	# USE_BUILTIN.gettext
+.endif
 
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
 CHECK_BUILTIN.gettext?=	no
 .if !empty(CHECK_BUILTIN.gettext:M[nN][oO])
 
 ######################################################################
 # If we are using the builtin gettext implementation...
 ######################################################################
-.if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
-.  if ${BUILDLINK_LIB_FOUND.intl} == "yes"
+.  if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
+.    if ${BUILTIN_LIB_FOUND.intl} == "yes"
 _BLNK_LIBINTL=		-lintl
-.  else
+.    else
 _BLNK_LIBINTL=		# empty
 BUILDLINK_TRANSFORM+=	rm:-lintl
+.    endif
 .  endif
-.endif
 
 ######################################################################
 # If we are using pkgsrc gettext implementation...
 ######################################################################
-.if !empty(USE_BUILTIN.gettext:M[nN][oO])
+.  if !empty(USE_BUILTIN.gettext:M[nN][oO])
 _BLNK_LIBINTL=		-lintl
-.endif
+#
+# Determine if we need to include the libiconv buildlink3.mk file.
+# Since we're using the pkgsrc gettext, the only time we don't need
+# iconv is if an already-installed gettext-lib package satisfied all
+# of the gettext dependencies but is <0.11.5nb1.
+#
+_BLNK_GETTEXT_ICONV_DEPENDS=	gettext-lib>=0.11.5nb1
+.    if !defined(_BLNK_GETTEXT_NEEDS_ICONV)
+_BLNK_GETTEXT_NEEDS_ICONV?=	no
+.      for _dep_ in ${BUILDLINK_DEPENDS.gettext}
+.        if !empty(_BLNK_GETTEXT_NEEDS_ICONV:M[nN][oO])
+_BLNK_GETTEXT_NEEDS_ICONV!=						\
+	pkg=`${PKG_BEST_EXISTS} ${_dep_:Q}`;				\
+	if ${TEST} -z "$$pkg"; then					\
+		${ECHO} yes;						\
+	elif ${PKG_ADMIN} pmatch ${_BLNK_GETTEXT_ICONV_DEPENDS:Q} "$$pkg"; then \
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+.        endif
+.      endfor
+.    endif
+MAKEVARS+=	_BLNK_GETTEXT_NEEDS_ICONV
+
+.    if !empty(_BLNK_GETTEXT_NEEDS_ICONV:M[yY][eE][sS])
+.      for _mkfile_ in buildlink3.mk builtin.mk
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+.        sinclude "../../converters/libiconv/${_mkfile_}"
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+.      endfor
+BUILDLINK_DEPENDS.gettext+=	${_BLNK_GETTEXT_ICONV_DEPENDS}
+_BLNK_LIBINTL+=			${BUILDLINK_LDADD.iconv}
+.    endif
+.  endif
 
 BUILDLINK_LDADD.gettext?=	${_BLNK_LIBINTL}
 
@@ -131,34 +180,33 @@ BUILDLINK_LDADD.gettext?=	${_BLNK_LIBINTL}
 # XXX as "yes" until we can do a full bulk build test.
 #
 BROKEN_GETTEXT_DETECTION?=	yes
-.if !empty(BROKEN_GETTEXT_DETECTION:M[yY][eE][sS])
+.  if !empty(BROKEN_GETTEXT_DETECTION:M[yY][eE][sS])
 BUILDLINK_LIBS.gettext+=	${BUILDLINK_LDADD.gettext}
 CONFIGURE_ENV+=			INTLLIBS="${BUILDLINK_LDADD.gettext}"
-.endif	# BROKEN_GETTEXT_DETECTION
+.  endif
 
 # If using a built-in libintl that isn't from GNU gettext, then set up
 # some GNU configure variables that are checked by modern gettext.m4
 # so that it will detect "GNU gettext" in the existing libintl.
 #
-.if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
-.  if !empty(BUILDLINK_LIB_FOUND.intl:M[yY][eE][sS])
+.  if defined(GNU_CONFIGURE)
+.    if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
+.      if !empty(BUILTIN_LIB_FOUND.intl:M[yY][eE][sS])
 CONFIGURE_ENV+=		gt_cv_func_gnugettext_libintl="yes"
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl="yes"
-.    if defined(_GETTEXT_NGETTEXT) && !empty(_GETTEXT_NGETTEXT:M[yY][eE][sS])
+.        if !empty(BUILTIN_GETTEXT_NGETTEXT:M[yY][eE][sS])
 CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libintl="yes"
+.        endif
+.      endif
+.    endif
+.    if !empty(USE_BUILTIN.gettext:M[nN][oO])
+CONFIGURE_ARGS+=	--with-libintl-prefix="${BUILDLINK_PREFIX.gettext}"
+.    else
+CONFIGURE_ARGS+=	--without-libintl-prefix
 .    endif
 .  endif
-.endif
 
-.if defined(GNU_CONFIGURE)
-.  if !empty(USE_BUILTIN.gettext:M[nN][oO])
-CONFIGURE_ARGS+=	--with-libintl-prefix="${BUILDLINK_PREFIX.gettext}"
-.  else
-CONFIGURE_ARGS+=	--without-libintl-prefix
-.  endif
-.endif
-
-.if defined(USE_MSGFMT_PLURALS) && !empty(USE_MSGFMT_PLURALS:M[Yy][Ee][Ss])
+.  if defined(USE_MSGFMT_PLURALS) && !empty(USE_MSGFMT_PLURALS:M[Yy][Ee][Ss])
 USE_PERL5?=		build
 CONFIGURE_ENV+=		MSGFMT=${BUILDLINK_DIR}/bin/msgfmt
 
@@ -177,6 +225,6 @@ ${BUILDLINK_DIR}/bin/msgfmt: ${.CURDIR}/../../devel/gettext/files/msgfmt.pl
 		-e "s|@MSGFMT@|"${BUILDLINK_PREFIX.gettext:Q}/bin/msgfmt"|g" \
 		> ${.TARGET}
 	@${CHMOD} +x ${.TARGET}
-.endif
+.  endif
 
 .endif	# CHECK_BUILTIN.gettext

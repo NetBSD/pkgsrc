@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/22 20:07:39 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/01 18:02:38 jlam Exp $
 
 DISTNAME=	rosegarden-2.1pl4
 PKGNAME=	rosegarden-2.1.4
@@ -17,7 +17,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 MAKE_ENV+=	GCC=yes
-USE_X11=	YES
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-extract:
 	cd ${WRKSRC} && ${MV} Rosegarden Rosegarden.in

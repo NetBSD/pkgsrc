@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/05/22 20:08:02 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/06/01 18:02:52 jlam Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -20,7 +20,6 @@ WRKSRC=		${WRKDIR}
 USE_TOOLS+=	gmake
 MAKE_ENV+=	MAINDIR=${WRKSRC}
 
-USE_X11=	yes
 
 MAKE_ENV+=	MESA_DIR=${BUILDLINK_PREFIX.Mesa}
 MAKE_ENV+=	X11BASE=${X11BASE}
@@ -53,4 +52,5 @@ do-install:
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

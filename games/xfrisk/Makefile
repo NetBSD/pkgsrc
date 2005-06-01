@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:03 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/01 18:02:53 jlam Exp $
 #
 
 DISTNAME=	xfrisk-1.2
@@ -12,7 +12,6 @@ COMMENT=	X11 version of the classic Risk board game
 
 WRKSRC=		${WRKDIR}/XFrisk
 USE_TOOLS+=	gmake
-USE_X11=	yes
 
 RESTRICTED=	"Possible trademark infringement"
 NO_SRC_ON_CDROM=${RESTRICTED}

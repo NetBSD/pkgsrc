@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/11 21:45:48 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/06/01 18:02:49 jlam Exp $
 
 DISTNAME=	baduki-0.2.9
 PKGREVISION=	3
@@ -12,7 +12,6 @@ COMMENT=	Go playing program based on xamigo
 BUILD_USES_MSGFMT=	# defined
 
 USE_PKGLOCALEDIR=	# defined
-USE_X11=		# defined
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--without-included-gettext

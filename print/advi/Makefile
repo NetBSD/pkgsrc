@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:27 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/01 18:03:08 jlam Exp $
 
 DISTNAME=		advi-1.6.0
 CATEGORIES=		print
@@ -15,7 +15,6 @@ BUILD_DEPENDS+=		ocaml>=3.04:../../lang/ocaml
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-USE_X11=		yes
 
 post-extract:
 	@${CP} ${WRKSRC}/tex/*.eps ${WRKSRC}/doc

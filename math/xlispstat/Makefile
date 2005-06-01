@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/03/24 21:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/01 18:03:04 jlam Exp $
 
 DISTNAME=		xlispstat-3-52-18
 PKGNAME=		xlispstat-3.52.18
@@ -25,4 +25,5 @@ MAKE_ENV+=		CPPFLAGS=
 
 MAKE_ENV+=		DISPLAY=	# Prevent 'Rejected connection'
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

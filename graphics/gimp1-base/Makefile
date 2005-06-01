@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/31 22:26:10 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:55 jlam Exp $
 #
 
 DISTNAME=		gimp-1.2.5
@@ -20,7 +20,6 @@ CONFLICTS+=		gimp<=1.2.3 gimp>=2.0.0
 
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 

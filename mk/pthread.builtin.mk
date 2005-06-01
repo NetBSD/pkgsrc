@@ -1,28 +1,30 @@
-# $NetBSD: pthread.builtin.mk,v 1.7 2005/01/17 08:29:30 jlam Exp $
+# $NetBSD: pthread.builtin.mk,v 1.8 2005/06/01 18:03:06 jlam Exp $
 
-.for _lib_ in pthread c_r rt
-.  if !defined(_BLNK_LIB_FOUND.${_lib_})
-_BLNK_LIB_FOUND.${_lib_}!=	\
-	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" != "/usr/lib/lib${_lib_}.*"; then \
-		${ECHO} "yes";						\
-	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" != "/lib/lib${_lib_}.*"; then \
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
-.  endif
-.endfor
-.undef _lib_
+BUILTIN_PKG:=	pthread
 
+BUILTIN_FIND_LIBS:=		pthread c_r rt
+BUILTIN_FIND_FILES_VAR=		H_PTHREAD
+BUILTIN_FIND_FILES.H_PTHREAD=	/usr/include/pthread.h
+
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### Determine if there is a built-in implementation of the package and
+### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+###
 .if !defined(IS_BUILTIN.pthread)
 IS_BUILTIN.pthread=	no
-.  if exists(/usr/include/pthread.h)
+.  if empty(H_PTHREAD:M${LOCALBASE}/*) && exists(${H_PTHREAD})
 IS_BUILTIN.pthread=	yes
 .  endif
-BUILDLINK_VARS+=	IS_BUILTIN.pthread
-.endif	# IS_BUILTIN.pthread
+.endif
+MAKEVARS+=	IS_BUILTIN.pthread
 
+###
+### Determine whether we should use the built-in implementation if it
+### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+###
+#
 # We ignore the value of PREFER_PKGSRC and PREFER_NATIVE.  Whether we
 # prefer one or the other is dependent on the value of
 # PREFER_NATIVE_PTHREADS, which is yes/no.
@@ -33,10 +35,14 @@ USE_BUILTIN.pthread=	${IS_BUILTIN.pthread}
 USE_BUILTIN.pthread=	no
 .endif
 
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
 CHECK_BUILTIN.pthread?=	no
 .if !empty(CHECK_BUILTIN.pthread:M[nN][oO])
 
-.if !empty(USE_BUILTIN.pthread:M[yY][eE][sS])
+.  if !empty(USE_BUILTIN.pthread:M[yY][eE][sS])
 BUILDLINK_PREFIX.pthread=	/usr
 BUILDLINK_CFLAGS.pthread=	# empty
 BUILDLINK_LDFLAGS.pthread=	# empty
@@ -46,33 +52,33 @@ BUILDLINK_LDFLAGS.pthread=	# empty
 # XXX This should really be a check for GCC!
 # XXX
 BUILDLINK_OPSYS_SUPPORT_PTHREAD=	DragonFly FreeBSD Linux NetBSD
-.  if !empty(BUILDLINK_OPSYS_SUPPORT_PTHREAD:M${OPSYS})
+.    if !empty(BUILDLINK_OPSYS_SUPPORT_PTHREAD:M${OPSYS})
 BUILDLINK_CFLAGS.pthread+=	-pthread
 BUILDLINK_LDFLAGS.pthread+=	-pthread
-.  elif ${OPSYS} == "OSF1"
+.    elif ${OPSYS} == "OSF1"
 BUILDLINK_CFLAGS.pthread+=	-pthread
-.  else
+.    else
 BUILDLINK_CPPFLAGS.pthread+=	-D_REENTRANT
-.  endif
-.  if ${OPSYS} == "FreeBSD"
+.    endif
+.    if ${OPSYS} == "FreeBSD"
 BUILDLINK_CPPFLAGS.pthread+=	-D_THREAD_SAFE
-.  endif
+.    endif
 
 # Handle systems which have pthreads functions in libc_r such as
 # FreeBSD 5.x, or fall back to libc if we don't find libc_r.
 #
-.  if ${OPSYS} == "NetBSD"
+.    if ${OPSYS} == "NetBSD"
 BUILDLINK_LIBS.pthread=		# empty
-.  elif !empty(_BLNK_LIB_FOUND.pthread:M[yY][eE][sS])
+.    elif !empty(BUILTIN_LIB_FOUND.pthread:M[yY][eE][sS])
 BUILDLINK_LIBS.pthread=		-lpthread
-.    if !empty(_BLNK_LIB_FOUND.rt:M[yY][eE][sS])
+.      if !empty(BUILTIN_LIB_FOUND.rt:M[yY][eE][sS])
 BUILDLINK_LIBS.pthread+=	-lrt
-.    endif
-.  elif !empty(_BLNK_LIB_FOUND.c_r:M[yY][eE][sS])
+.      endif
+.    elif !empty(BUILTIN_LIB_FOUND.c_r:M[yY][eE][sS])
 BUILDLINK_LIBS.pthread=		-lc_r
-.  else
+.    else
 BUILDLINK_LIBS.pthread=		# empty
+.    endif
 .  endif
-.endif	# USE_BUILTIN.pthread
 
 .endif	# CHECK_BUILTIN.pthread

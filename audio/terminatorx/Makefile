@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:44:57 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/01 18:02:39 jlam Exp $
 #
 
 DISTNAME=	terminatorX-3.82
@@ -15,7 +15,6 @@ DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 DEPENDS+=	sox-[0-9]*:../../audio/sox
 DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 
-USE_X11=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 

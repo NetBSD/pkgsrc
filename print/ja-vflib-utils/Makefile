@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:07 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:20 jlam Exp $
 
 .include "../../print/ja-vflib-lib/Makefile.common"
 
@@ -8,11 +8,11 @@ COMMENT=	Utilities for manipulating VFlib vector font files
 
 BUILDLINK_DEPENDS.vflib=ja-vflib-lib>=${VFLIB_VERSION}
 
-USE_X11=		# defined
 CONFIGURE_ARGS+=	--enable-tools --with-x
 
 BUILD_TARGET=		build-tools
 INSTALL_TARGET=		install-tools
 
 .include "../../print/ja-vflib-lib/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
