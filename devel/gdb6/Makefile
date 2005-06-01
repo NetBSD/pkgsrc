@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:07:51 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/01 20:08:00 jlam Exp $
 #
 
 DISTNAME=		gdb-6.2.1
@@ -13,12 +13,11 @@ COMMENT=		The GNU Project Debugger
 
 BUILD_USES_MSGFMT=	yes
 
-USE_TOOLS=		gmake
+USE_TOOLS=		autoconf213 gmake
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-AUTOCONF_REQD=		2.13
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/gdb6
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/gdb6
 CONFIGURE_ARGS+=	--enable-libada
@@ -34,9 +33,7 @@ pre-patch:
 	${CP} ${FILESDIR}/nbsd-nat.c ${WRKSRC}/gdb
 
 pre-configure:
-	cd ${WRKSRC}/gdb;                                           \
-	${AUTOHEADER};                                          \
-	${AUTOCONF}
+	cd ${WRKSRC}/gdb; autoheader; autoconf
 
 do-test:
 	if `${PKG_INFO} -qe dejagnu` ;then		\
@@ -46,5 +43,4 @@ do-test:
 	fi
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
