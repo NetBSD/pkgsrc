@@ -12,7 +12,7 @@ apop
 ark	
 arping1	
 arping2	
-arts	
+arts			Use the aRts audio daemon.
 aspell	
 ati	
 audiofile	
@@ -31,6 +31,7 @@ buffy-size
 canna	
 catalog-pgsql	
 catalog-sqlite	
+cdparanoia		Use cdparanoia to rip CDDA media.
 charset	
 charts	
 chips	
@@ -49,6 +50,8 @@ deliver-suid		Install deliver executable setuid root.
 domainscale	
 drac	
 dummy	
+dv			Enable usage of the libdv library.
+dvdread			Enable reproduction of DVDs.
 dynamic	
 eb	
 edit	
@@ -65,6 +68,7 @@ frontend-modperl2
 gd	
 gdbm	
 gdk-pixbuf	
+gif			Enable GIF support.
 gimp1-helpbrowser	Links gimp1 against gnome1 to get a help browser.
 glib1	
 glint	
@@ -105,7 +109,7 @@ iptables
 irssi-perl		Enable Perl support in irssi.
 ispell	
 java	
-jpeg	
+jpeg			Enable JPEG support.
 jpilot	
 kde	
 kerberos	
@@ -113,7 +117,7 @@ kerberos4
 kqueue	
 krb4	
 krb5	
-lame	
+lame			Use the lame encoder to create MP3 files.
 largefile	
 largescale	
 ldap	
@@ -130,20 +134,26 @@ lynxkey
 lzw	
 m17n	
 m68060-optimized	
-mad	
+mad			Enable usage of the mad library to play MP3 files.
 magick	
 mdc2	
 metarefresh	
 mga	
 mhash	
 milter	
+mlib			Enable usage of medialib (SunOS only).
 mmx	
 modperl	
+mplayer-menu		Enable support for user-defined menus.
+mplayer-real		Enable usage of Real codecs.
+mplayer-runtime-cpudetection	Enable CPU detection at run time.
+mplayer-win32		Enable usage of Win32 DLLs (codecs).
 multibyte	
 mysql	
 mysql4	
 native	
 ncurses	
+nas			Enable usage of the Network Audio System.
 neomagic	
 net-tests	
 netqmail	
@@ -170,6 +180,7 @@ perl-warnings
 pf	
 pgsql	
 plplot	
+png			Enable PNG support.
 portals	
 postgresql	
 postgresql73	
@@ -216,6 +227,7 @@ tcpwrappers
 tdb	
 tdfx	
 tga	
+theora			Use the theora codecs.
 tinydns64	
 tls	
 trident	
@@ -231,7 +243,7 @@ via
 virtualchroot	
 viruscan	
 vmware	
-vorbis	
+vorbis			Use the vorbis codecs to play Ogg Vorbis files.
 vpop	
 wrap	
 wx	
@@ -241,7 +253,7 @@ xft
 xft2	
 xmlimportbugs	
 xmms-eq	
-xvid	
+xvid			Enable usage of XVid codecs.
 zaptel	
 zip	
 ziplinks	
