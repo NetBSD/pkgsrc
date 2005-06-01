@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/19 04:35:59 cjones Exp $
-
-SHA1 (openacs-3.2.5.tgz) = 6dce37b051f2d0b07eda24cc4a54f89ae3e140ff
-Size (openacs-3.2.5.tgz) = 2662068 bytes
-SHA1 (patch-aa) = e00628ec4aa5d651d6971373a8f127f44c63618b
-SHA1 (patch-ab) = ce50389a7e397b0cefb6c32cd6faef545b5b59e6
-SHA1 (patch-ac) = 2a433d099c14ba0f10eaf3b52b96b9333d0b4ace
-SHA1 (patch-ad) = ec3652f8eca46e319ebd818e1c5a9498f07222e7
