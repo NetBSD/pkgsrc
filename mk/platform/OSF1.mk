@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.7 2005/05/22 19:11:15 jlam Exp $
+# $NetBSD: OSF1.mk,v 1.8 2005/06/01 18:14:23 jlam Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -11,7 +11,8 @@
 
 CPP?=		/usr/bin/cpp
 ECHO_N?=	${SETENV} CMD_ENV=bsd /usr/bin/echo -n
-FETCH_CMD?= ${LOCALBASE}/bin/ftp
+FETCH_CMD?=	${LOCALBASE}/bin/ftp
+IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR=	share
 PS?=		/bin/ps
 STRIP?=		/usr/bin/strip
@@ -46,7 +47,6 @@ IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
 IMAKE_MANNEWSUFFIX=	1
 
 _DO_SHLIB_CHECKS=	yes	# fixup PLIST
-_IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 .if exists(/usr/include/netinet/ip6.h)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else
