@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/28 01:09:01 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/01 14:45:01 wiz Exp $
 
 DISTNAME=	deliver-2.1.14
 PKGREVISION=	1
@@ -9,22 +9,19 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://deliver.sourceforge.net/
 COMMENT=	Local mail delivery agent with shell-script control
 
-.include "../../mk/bsd.prefs.mk"
+PKG_SYSCONFSUBDIR=		deliver
 
-# Deliver prefers to be installed suid root, but by default we don't do that.
-DELIVER_SUID?=	NO
+PKG_OPTIONS_VAR=		PKG_OPTIONS.deliver
+PKG_SUPPORTED_OPTIONS=		deliver-suid
+PKG_OPTIONS_LEGACY_VARS+=	DELIVER_SUID:deliver-suid
 
-# Use DELIVER_CONF_PREFIX from /etc/mk.conf, if defined.
-# If this specifies a directory that will contain files other than deliver's
-# delivery files, you may also want to add a suffix like "deliver.", to
-# identify the "sys", "post", and "err" delivery files as owned by deliver.
-DELIVER_CONF_PREFIX?=	${PREFIX}/etc/deliver/
+.include "../../mk/bsd.options.mk"
 
 pre-configure:
 	cd ${WRKSRC};							\
 	for FILE in config.h deliver.8 conf/os-netbsd.h; do		\
 		${MV} $${FILE} $${FILE}.bak;				\
-		${SED} -e 's#@DELIVER_CONF_PREFIX@#${DELIVER_CONF_PREFIX}#g' \
+		${SED} -e 's#@DELIVER_CONF_PREFIX@#${PKG_SYSCONFDIR}#g' \
 		       -e 's#@PREFIX@#${PREFIX}#g'			\
 		< $${FILE}.bak > $${FILE};				\
 	done;								\
@@ -46,10 +43,9 @@ post-install:
 	cd ${WRKSRC}/samples; \
 	${INSTALL_DATA} README p-aliases s-aliases u-chip u-notify u-vacation \
 		${PREFIX}/share/examples/deliver
-.if defined(DELIVER_SUID) && ${DELIVER_SUID} == YES
+.if !empty(PKG_OPTIONS:Mdeliver-suid)
 	${CHOWN} root ${PREFIX}/bin/deliver
 	${CHMOD} u+s ${PREFIX}/bin/deliver
 .endif
 
 .include "../../mk/bsd.pkg.mk"
-.include <bsd.man.mk>
