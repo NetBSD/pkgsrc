@@ -1,4 +1,4 @@
-# $NetBSD: BSDOS.mk,v 1.11 2005/05/22 19:11:15 jlam Exp $
+# $NetBSD: BSDOS.mk,v 1.12 2005/06/01 14:23:07 markd Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -37,13 +37,13 @@ ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 # imake installs manpages in weird places
 # XXX: assume NetBSD defaults until somebody determines correct values
 IMAKE_MAN_SOURCE_PATH=	man/cat
-IMAKE_MAN_SUFFIX=	1
-IMAKE_LIBMAN_SUFFIX=	3
-IMAKE_FILEMAN_SUFFIX=	5
+IMAKE_MANNEWSUFFIX=	0
+IMAKE_MAN_SUFFIX=	${IMAKE_MANNEWSUFFIX}
+IMAKE_LIBMAN_SUFFIX=	${IMAKE_MANNEWSUFFIX}
+IMAKE_FILEMAN_SUFFIX=	${IMAKE_MANNEWSUFFIX}
 IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
 IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
 IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
-IMAKE_MANNEWSUFFIX=	0
 
 _DO_SHLIB_CHECKS=	yes	# fixup PLIST for shared libs/run ldconfig
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
