@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/05/22 20:07:51 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/06/01 18:02:43 jlam Exp $
 
 DISTNAME=	glade-2.10.0
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -19,7 +19,6 @@ USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/04/11 21:46:01 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/01 18:02:54 jlam Exp $
 #
 
 DISTNAME=		cqcam-0.45a
@@ -17,7 +17,6 @@ LICENSE=		no-profit
 
 HAS_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
-USE_X11=		YES
 
 CONFIGURE_ENV+=		CAT=${CAT:Q} ECHO=${ECHO:Q}			\
 			TCLCONFIG_SH=${TCLCONFIG_SH:Q}

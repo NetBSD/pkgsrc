@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/10/18 13:08:49 cjep Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/01 18:02:58 jlam Exp $
 
 DISTNAME=	xplot-0.90.7.1
 PKGREVISION=	1
@@ -15,6 +15,8 @@ GNU_CONFIGURE=	yes
 DOCFILES=	ANNOUNCE README README.tcp_plots
 # demo.? removed from interim .7.1 version
 #		demo.0 demo.1 demo.2 demo.3 demo.4 demo.5 demo.6 demo.7
+
+.include "../../mk/x11.buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xplot

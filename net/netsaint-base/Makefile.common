@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/05/22 20:08:25 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/06/01 18:03:08 jlam Exp $
 #
 
 CATEGORIES=		net sysutils
@@ -15,7 +15,6 @@ PKG_GROUPS+=	${NETSTADM_GROUP}
 PKG_USERS+=	${NETSAINT_USER}:${NETSAINT_GROUP}::NetSaint\\ Runtime\\ User
 PKG_USERS+=	${NETSTADM_USER}:${NETSTADM_GROUP}::NetSaint\\ Administrator:${PREFIX}/etc/netsaint:${SH}
 
-USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 
@@ -31,3 +30,5 @@ CONFIGURE_ARGS+=	--with-lockfile=var/run/netsaint/netsaint.lock
 CONFIGURE_ARGS+=	--with-netsaint-user=${NETSAINT_USER}
 CONFIGURE_ARGS+=	--with-netsaint-grp=${NETSAINT_GROUP}
 CONFIGURE_ARGS+=	--with-init-dir=${PREFIX}/etc/rc.d
+
+.include "../../mk/x11.buildlink3.mk"

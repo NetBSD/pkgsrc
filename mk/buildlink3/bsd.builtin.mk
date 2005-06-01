@@ -1,6 +1,6 @@
-# $NetBSD: bsd.builtin.mk,v 1.4 2005/05/24 15:41:05 xtraeme Exp $
+# $NetBSD: bsd.builtin.mk,v 1.5 2005/06/01 18:03:06 jlam Exp $
 #
-# Copyright (c) 2004 The NetBSD Foundation, Inc.
+# Copyright (c) 2004-2005 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -51,44 +51,66 @@
 # An example package builtin.mk file is:
 #
 # -------------8<-------------8<-------------8<-------------8<-------------
-# .if !defined(IS_BUILTIN.foo)
-# #
-# # IS_BUILTIN.foo is set to "yes" or "no" depending on whether "foo"
-# # genuinely exists in the system or not.
-# #
-# IS_BUILTIN.foo?=	no
+# BUILTIN_PKG:=	wibble
+# .include "../../mk/buildlink3/bsd.builtin.mk"
 #
-# # BUILTIN_PKG.foo should be set here if "foo" is built-in and its package
-# # version can be determined.
-# #
-# .  if !empty(IS_BUILTIN.foo:M[yY][eE][sS])
-# BUILTIN_PKG.foo?=	foo-1.0
-# .  endif
-# .endif  # IS_BUILTIN.foo
+# ###
+# ### Determine if there is a built-in implementation of the package and
+# ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
+# ###
+# .if !defined(IS_BUILTIN.wibble)
+# IS_BUILTIN.wibble=	no
+# .endif
+# MAKEVARS+=	IS_BUILTIN.wibble
 #
-# .if !defined(USE_BUILTIN.foo)
-# USE_BUILTIN.foo?=	${IS_BUILTIN.foo}
-# .  if defined(BUILTIN_PKG.foo)
-# .    for _depend_ in ${BUILDLINK_DEPENDS.foo}
-# .      if !empty(USE_BUILTIN.foo:M[yY][eE][sS])
-# USE_BUILTIN.foo!=							\
-#	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.foo}; then	\
+# ###
+# ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+# ### a package name to represent the built-in package.
+# ###
+# .if !defined(BUILTIN_PKG.iconv) && \
+#     !empty(IS_BUILTIN.wibble:M[yY][eE][sS])
+# BUILTIN_PKG.wibble=	wibble-1.0
+# .endif
+# MAKEVARS+=	BUILTIN_PKG.wibble
+#
+# ###
+# ### Determine whether we should use the built-in implementation if it
+# ### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
+# ###
+# .if !defined(USE_BUILTIN.wibble)
+# .  if ${PREFER.wibble} == "pkgsrc"
+# USE_BUILTIN.wibble=	no
+# .  else
+# USE_BUILTIN.wibble=	${IS_BUILTIN.wibble}
+# .    if defined(BUILTIN_PKG.wibble) && \
+#         !empty(IS_BUILTIN.wibble:M[yY][eE][sS])
+# USE_BUILTIN.wibble=	yes
+# .      for _dep_ in ${BUILDLINK_DEPENDS.wibble}
+# .        if !empty(USE_BUILTIN.wibble:M[yY][eE][sS])
+# USE_BUILTIN.wibble!=							\
+#	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.wibble:Q}; then	\
 #		${ECHO} "yes";						\
 #	else								\
 #		${ECHO} "no";						\
 #	fi
-# .      endif
-# .    endfor
+# .        endif
+# .      endfor
+# .    endif
 # .  endif
-# .endif  # USE_BUILTIN.foo
+# .endif
+# MAKEVARS+=	USE_BUILTIN.wibble
 #
-# CHECK_BUILTIN.foo?=	no
-# .if !empty(CHECK_BUILTIN.foo:M[nN][oO])
+# ###
+# ### The section below only applies if we are not including this file
+# ### solely to determine whether a built-in implementation exists.
+# ###
+# CHECK_BUILTIN.wibble?=	no
+# .if !empty(CHECK_BUILTIN.wibble:M[nN][oO])
 # #
-# # Here we place code that depends on whether USE_BUILTIN.foo is set to
-# # "yes" or "no".
+# # Here we place code that depends on whether USE_BUILTIN.wibble is
+# # set to "yes" or "no".
 # #
-# .endif  # CHECK_BUILTIN.foo
+# .endif  # CHECK_BUILTIN.wibble
 # -------------8<-------------8<-------------8<-------------8<-------------
 #
 # Note the structure of the builtin.mk file: first we set IS_BUILTIN.<pkg>,
@@ -96,17 +118,21 @@
 # USE_BUILTIN.<pkg> is "yes" or "no" in a region that is guarded by
 # CHECK_BUILTIN.<pkg>.  Package builtin.mk files aren't protected against
 # multiple inclusion.
+#
 
+.include "../../mk/bsd.prefs.mk"
+
+.for _pkg_ in ${BUILTIN_PKG}
+#
 # Define PREFER.<pkg> to be either "pkgsrc" or "native" depending on
 # whether to prefer the pkgsrc or native versions of software that's
-# also part of the base system.  It's value is determined from the
+# also part of the base system.  Its value is determined from the
 # user-settable values PREFER_PKGSRC and PREFER_NATIVE.  Preferences are
 # determined by the most specific instance of the package in either
 # PREFER_PKGSRC or PREFER_NATIVE.  If a package is specified in neither
 # or in both variables, then PREFER_PKGSRC has precedence over
 # PREFER_NATIVE.
 #
-.for _pkg_ in ${BUILDLINK_PACKAGES}
 PREFER.${_pkg_}?=	pkgsrc
 .  if !empty(PREFER_NATIVE:M[yY][eE][sS])
 PREFER.${_pkg_}=	native
@@ -122,37 +148,5 @@ PREFER.${_pkg_}=	pkgsrc
 .  endif
 .endfor
 
-.for _pkg_ in ${BUILDLINK_PACKAGES}
-#
-# builtin.mk files default to using the built-in software if it's
-# available (${PREFER.<pkg>} == "native") unless USE_BUILTIN.<pkg> has
-# been previously set.
-#
-.  if ${PREFER.${_pkg_}} == "pkgsrc"
-USE_BUILTIN.${_pkg_}?=	no
-.  endif
-#
-# Set the default path to the package builtin.mk file.
-#
-BUILDLINK_BUILTIN_MK.${_pkg_}?=	${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk
-.  if exists(${BUILDLINK_BUILTIN_MK.${_pkg_}})
-.    include "${BUILDLINK_BUILTIN_MK.${_pkg_}}"
-.  endif
-.endfor
-
-# Default fall-through for packages that don't provide a builtin.mk.  This
-# is here to set the default for any package added to BUILDLINK_PACKAGES
-# by any of the above code.
-#
-# BUILTIN_PACKAGES will contain the list of all builtin
-# dependencies used in packages.
-#
-
-.for _pkg_ in ${BUILDLINK_PACKAGES}
-USE_BUILTIN.${_pkg_}?=	no
-BUILTIN_PACKAGES?=	# empty
-.  if !empty(USE_BUILTIN.${_pkg_}:M[Yy][Ee][Ss])
-BUILTIN_PACKAGES+=	${_pkg_}
-.  endif
-.endfor
-
+.include "../../mk/buildlink3/find-libs.mk"
+.include "../../mk/buildlink3/find-files.mk"

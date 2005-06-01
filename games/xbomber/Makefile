@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/20 12:15:41 agc Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/01 18:02:52 jlam Exp $
 #
 
 DISTNAME=	xbomber.0.8
@@ -13,7 +13,8 @@ COMMENT=	Colorful game where you blow other people/robots up
 
 WRKSRC=		${WRKDIR}/xbomber
 MAKEFILE=	makefile
-USE_X11=	yes
+
+.include "../../mk/x11.buildlink3.mk"
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xbomber

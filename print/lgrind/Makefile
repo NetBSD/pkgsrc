@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/01/17 12:51:29 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/01 18:03:20 jlam Exp $
 
 DISTNAME=	lgrind
 PKGNAME=	lgrind-3.5
@@ -13,9 +13,10 @@ COMMENT=	Source pretty printer for LaTeX
 DEPENDS+=	teTeX>=1.0:../../print/teTeX
 
 WRKSRC=		${WRKDIR}/lgrind/source
-USE_X11=	yes
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 NO_CONFIGURE=	yes
+
+.include "../../mk/x11.buildlink3.mk"
 
 pre-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile-prepatch

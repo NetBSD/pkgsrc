@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/13 20:41:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:32 jlam Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -17,7 +17,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 MAKE_ENV+=		TOUCH="${TOUCH}"
 
-USE_X11=		yes
 USE_LIBTOOL=		yes
 TEST_TARGET=		test
 
@@ -96,4 +95,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/../unix/tkUnixPort.h ${PREFIX}/include/tk/unix
 
 .include "../../lang/tcl83/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

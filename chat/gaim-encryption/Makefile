@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/22 20:07:42 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/01 18:02:41 jlam Exp $
 
 DISTNAME=	gaim-encryption-2.34
 CATEGORIES=	chat security
@@ -13,7 +13,6 @@ BUILD_USES_MSGFMT=	YES
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 GNU_CONFIGURE=		YES
 
 SHLIBTOOL_OVERRIDE=	libtool

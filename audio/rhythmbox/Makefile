@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/22 20:07:39 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/01 18:02:38 jlam Exp $
 #
 
 DISTNAME=	rhythmbox-0.8.8
@@ -24,7 +24,6 @@ USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 
 PKGCONFIG_OVERRIDE=	data/rhythmbox.pc.in
 

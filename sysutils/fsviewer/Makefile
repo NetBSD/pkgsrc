@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/22 20:08:32 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/01 18:03:21 jlam Exp $
 
 DISTNAME=	FSViewer.app-0.2.5
 PKGNAME=	FSViewer-0.2.5
@@ -15,7 +15,6 @@ COMMENT=	NextStep-like Filemanager for WindowMaker
 
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../wm/windowmaker/buildlink3.mk"

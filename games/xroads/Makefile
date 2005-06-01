@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/02/21 20:26:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:53 jlam Exp $
 #
 
 DISTNAME=	xroads-v0.5
@@ -11,6 +11,6 @@ HOMEPAGE=	http://apps.freshmeat.net/homepage/898367442/
 COMMENT=	Overhead view maze-based shoot 'em up game
 
 WRKSRC=		${WRKDIR}/xroads-v0.5
-USE_X11=	YES
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:45:37 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/01 18:02:45 jlam Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-idle-0
@@ -8,8 +8,6 @@ CATEGORIES=	devel python
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.python.org/idle/
 COMMENT=	IDLE - The Integrated DeveLopment Environment for Python
-
-USE_X11=	yes
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 PY_PATCHPLIST=	yes

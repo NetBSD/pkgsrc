@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/29 19:01:33 kristerw Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/01 18:03:23 jlam Exp $
 
 DISTNAME=	ical-2.3.1
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Calendar application
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c c++
-USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--with-tclconfig=${BUILDLINK_PREFIX.tcl}/lib \

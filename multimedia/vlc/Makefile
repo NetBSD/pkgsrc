@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/05/22 20:08:23 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/01 18:03:07 jlam Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -13,7 +13,6 @@ COMMENT=		VideoLAN Client
 
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 

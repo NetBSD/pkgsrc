@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/15 19:04:20 kristerw Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/01 18:02:47 jlam Exp $
 #
 
 DISTNAME=	generator-0.35
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.squish.net/generator/
 COMMENT=	Sega Mega drive genesis emulator
 
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 .if (${MACHINE_ARCH} == "i386")

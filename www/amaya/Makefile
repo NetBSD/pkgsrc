@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/05/22 20:08:44 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2005/06/01 18:03:26 jlam Exp $
 
 DISTNAME=	amaya-fullsrc-9.0
 PKGNAME=	${DISTNAME:S/-fullsrc//}
@@ -16,7 +16,6 @@ EXTRACT_ELEMENTS=	Amaya libwww
 WRKSRC=			${WRKDIR}/Amaya/work
 
 USE_TOOLS+=		gmake
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--without-graphic-libs	# Use pkgsrc libraries

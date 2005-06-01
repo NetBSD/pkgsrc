@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/22 20:07:57 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/01 18:02:46 jlam Exp $
 #
 
 DISTNAME=	dega-1.07
@@ -13,7 +13,6 @@ COMMENT=	Sega Game Gear, Sega Mark III and Sega Master System emulator
 BUILD_DEPENDS=	nasm>=0.98:../../devel/nasm
 
 USE_TOOLS+=	gmake
-USE_X11=	yes
 
 # Uses i386 assembly code
 ONLY_FOR_PLATFORM=	*-*-i386

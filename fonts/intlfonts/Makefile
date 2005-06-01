@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/28 15:07:37 tron Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/01 18:02:49 jlam Exp $
 
 DISTNAME=	intlfonts-1.2.1
 PKGREVISION=	2
@@ -49,6 +49,8 @@ CONFIGURE_ARGS+=--with-fontdir=${PREFIX}/lib/X11/fonts/intlfonts \
 .if !defined(NO_EXTRA_FONTS)
 FONT_SETS+=	${EXTRA_FONTS}
 PLIST_SRC=	${WRKDIR}/PLIST
+
+.include "../../mk/x11.buildlink3.mk"
 
 # the order may look strange, but we need to make "@dirrm" the last item.
 post-patch:

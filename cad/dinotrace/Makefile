@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/05/22 20:07:40 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2005/06/01 18:02:40 jlam Exp $
 #
 
 DISTNAME=	dinotrace-9.2a
@@ -12,7 +12,6 @@ COMMENT=	Tool for viewing the output of digital simulators
 GNU_CONFIGURE=		YES
 INFO_FILES=		dinotrace.info
 USE_PERL5=		build
-USE_X11=		YES
 USE_TOOLS+=		gmake
 
 .include "../../mk/motif.buildlink3.mk"

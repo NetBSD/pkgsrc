@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/05/22 20:08:44 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/01 18:03:25 jlam Exp $
 #
 
 DISTNAME=	pwm-20030617
@@ -15,7 +15,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 CONFLICTS+=	ion<=20040729nb2
 
 USE_PKGINSTALL=	YES
-USE_X11=	YES
 USE_TOOLS+=	gmake
 
 CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
@@ -35,4 +34,5 @@ SUPPORT_FILES=	# empty
 SUPPORT_FILES+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

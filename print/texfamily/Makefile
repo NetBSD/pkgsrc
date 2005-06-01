@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:29 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/01 18:03:20 jlam Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 PKGREVISION=	5
@@ -40,7 +40,6 @@ PKGSRC_USE_TOOLS+=	gtar
 BUILD_TARGET=	all
 INSTALL_TARGET=	install strip
 USE_TOOLS+=	gmake
-USE_X11=	yes
 PLIST_SUBST+=	MV="${MV}"
 CFLAGS+=	-Dunix
 MAKEFLAGS+=	PREFIX=${PREFIX:Q}
@@ -82,6 +81,8 @@ CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 TEXFAMILY_PTEXVERSION=	3.0.1
 TEXFAMILY_DVIPSVERSION=	1.5g
 TEXFAMILY_MENDEXVERSION=2.5
+
+.include "../../mk/x11.buildlink3.mk"
 
 pre-extract:
 	if [ ! -r ${WRKSRC} ]; then \

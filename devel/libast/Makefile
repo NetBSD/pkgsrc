@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/31 21:35:13 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/01 18:02:44 jlam Exp $
 
 DISTNAME=	libast-0.6.1
 CATEGORIES=	devel
@@ -9,7 +9,6 @@ HOMEPAGE=	http://freshmeat.net/projects/libast/?topic_id=809%2C861
 COMMENT=	The Library of Assorted Spiffy Things
 
 USE_LIBTOOL=		YES
-USE_X11=		YES
 GNU_CONFIGURE=		YES
 TEST_TARGET=		test
 
@@ -22,4 +21,5 @@ LDFLAGS+=-lresolv
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
