@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2005/06/01 18:02:43 jlam Exp $
+# $NetBSD: builtin.mk,v 1.7 2005/06/01 20:35:41 jlam Exp $
 
 BUILTIN_PKG:=	dlcompat
 
@@ -49,7 +49,7 @@ USE_BUILTIN.dlcompat=	yes
 .      for _dep_ in ${BUILDLINK_DEPENDS.dlcompat}
 .        if !empty(USE_BUILTIN.dlcompat:M[yY][eE][sS])
 USE_BUILTIN.dlcompat!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q}' ${BUILTIN_PKG.dlcompat:Q}; then \
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.dlcompat:Q}; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
