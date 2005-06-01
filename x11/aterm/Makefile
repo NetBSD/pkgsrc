@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/06/01 18:03:27 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/06/01 19:39:36 wiz Exp $
 #
 
 DISTNAME=	aterm-0.4.2
@@ -17,8 +17,6 @@ GNU_CONFIGURE=	YES
 BUILD_DEFS+=	ATERM_USE_KANJI ATERM_USE_XTERM_SCROLL
 BUILD_DEFS+=	ATERM_USE_BIG5 ATERM_USE_GREEK
 
-.include "../../mk/bsd.prefs.mk"
-
 CONFIGURE_ARGS+=--enable-background-image \
 		--enable-transparency \
 		--enable-fading \
@@ -35,26 +33,12 @@ CONFIGURE_ARGS+=--enable-background-image \
 		--enable-utmp \
 		--enable-wtmp
 
-.if defined(ATERM_USE_XTERM_SCROLL) && ${ATERM_USE_XTERM_SCROLL} != NO
-CONFIGURE_ARGS+=--enable-xterm-scroll
-.endif
-
-.if defined(ATERM_USE_KANJI) && ${ATERM_USE_KANJI} != NO
-CONFIGURE_ARGS+=--enable-kanji
-.endif
-
-.if defined(ATERM_USE_BIG5) && ${ATERM_USE_BIG5} != NO
-CONFIGURE_ARGS+=--enable-big5
-.endif
-
-.if defined(ATERM_USE_GREEK) && ${ATERM_USE_GREEK} != NO
-CONFIGURE_ARGS+=--enable-greek
-.endif
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS:M*BSD} || ${OPSYS} == "Darwin"
-# Make rxvt setuid root so that tty ownership setting and utmp logging
+# Make aterm setuid root so that tty ownership setting and utmp logging
 # function correctly.
 #
 CONFIGURE_ARGS+=--enable-ttygid
