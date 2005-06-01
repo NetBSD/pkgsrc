@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.23 2005/06/01 18:02:43 jlam Exp $
+# $NetBSD: builtin.mk,v 1.24 2005/06/01 21:07:59 jlam Exp $
 
 BUILTIN_PKG:=	gettext
 
@@ -22,14 +22,17 @@ IS_BUILTIN.gettext=	yes
 .endif
 MAKEVARS+=	IS_BUILTIN.gettext
 
-_BLTNH_GETTEXT=	/usr/include/libintl.h
-.if !defined(BUILTIN_GETTEXT_NGETTEXT) && exists(${_BLTNH_GETTEXT})
+_BLTN_H_GETTEXT=	/usr/include/libintl.h
+.if !defined(BUILTIN_GETTEXT_NGETTEXT)
+BUILTIN_GETTEXT_NGETTEXT=	no
+.  if exists(${_BLTN_H_GETTEXT})
 BUILTIN_GETTEXT_NGETTEXT!=						\
-	if ${GREP} -q "char.*ngettext" ${_BLTNH_GETTEXT:Q}; then	\
+	if ${GREP} -q "char.*ngettext" ${_BLTN_H_GETTEXT:Q}; then	\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
 	fi
+.  endif
 .endif
 MAKEVARS+=	BUILTIN_GETTEXT_NGETTEXT
 
@@ -63,9 +66,9 @@ _BLNK_REPLACE.gettext=	no
 # XXX enough to replace GNU gettext if it is part of glibc (the GNU C
 # XXX Library).
 # XXX
-.      if exists(${_BLTNH_GETTEXT})
+.      if exists(${_BLTN_H_GETTEXT})
 _BLNK_REPLACE.gettext!=							\
-	if ${GREP} -q "This file is part of the GNU C Library" ${_BLTNH_GETTEXT:Q}; then \
+	if ${GREP} -q "This file is part of the GNU C Library" ${_BLTN_H_GETTEXT:Q}; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
