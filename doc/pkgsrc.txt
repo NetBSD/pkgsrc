@@ -1570,15 +1570,15 @@ for both pkgsrc users and developers.
 
 The following mailing lists may be of interest to pkgsrc users:
 
-  * pkgsrc-bugs -- a list where problem reports related to pkgsrc are sent and
-    discussed
+  * pkgsrc-bugs: A list where problem reports related to pkgsrc are sent and
+    discussed.
 
-  * pkgsrc-bulk -- a list where the results of pkgsrc bulk builds are sent and
-    discussed
+  * pkgsrc-bulk: A list where the results of pkgsrc bulk builds are sent and
+    discussed.
 
-  * pkgsrc-changes -- a list where all commit messages to pkgsrc are sent
+  * pkgsrc-changes: A list where all commit messages to pkgsrc are sent.
 
-  * tech-pkg -- a general discussion list for all things related to pkgsrc
+  * tech-pkg: A general discussion list for all things related to pkgsrc.
 
 To subscribe, do:
 
@@ -1601,65 +1601,66 @@ duplicate the documentation that comes with each package.
 
 Utilities used by pkgsrc (automatically installed when needed):
 
-  * pkgtools/x11-links: symlinks for use by buildlink
+  * pkgtools/x11-links: Symlinks for use by buildlink.
 
 OS tool augmentation (automatically installed when needed):
 
-  * pkgtools/digest: calculates various kinds of checksums (including SHA1)
+  * pkgtools/digest: Calculates various kinds of checksums (including SHA1).
 
-  * pkgtools/libnbcompat: compatibility library for pkgsrc tools
+  * pkgtools/libnbcompat: Compatibility library for pkgsrc tools.
 
-  * pkgtools/mtree: installed on non-BSD systems due to lack of native mtree
+  * pkgtools/mtree: Installed on non-BSD systems due to lack of native mtree.
 
-  * pkgtools/pkg_install: up-to-date replacement for /usr/sbin/pkg_install, or
-    for use on operating systems where pkg_install is not present
+  * pkgtools/pkg_install: Up-to-date replacement for /usr/sbin/pkg_install, or
+    for use on operating systems where pkg_install is not present.
 
 Utilities used by pkgsrc (not automatically installed):
 
-  * pkgtools/pkg_tarup: create a binary package from an already-installed
-    package. used by make replace to save the old package
+  * pkgtools/pkg_tarup: Create a binary package from an already-installed
+    package. Used by make replace to save the old package.
 
-  * pkgtools/dfdisk: adds extra functionality to pkgsrc, allowing it to fetch
+  * pkgtools/dfdisk: Adds extra functionality to pkgsrc, allowing it to fetch
     distfiles from multiple locations. It currently supports the following
     methods: multiple CD-ROMs and network FTP/HTTP connections.
 
-  * pkgtools/xpkgwedge: put X11 packages someplace else (enabled by default)
+  * pkgtools/xpkgwedge: Put X11 packages someplace else (enabled by default).
 
-  * devel/cpuflags: will determine the best compiler flags to optimise code for
-    your current CPU and compiler.
+  * devel/cpuflags: Determine the best compiler flags to optimise code for your
+    current CPU and compiler.
 
 Utilities for keeping track of installed packages, being up to date, etc:
 
-  * pkgtools/pkg_chk: reports on packages whose installed versions do not match
-    the latest pkgsrc entries
+  * pkgtools/pkg_chk: Reports on packages whose installed versions do not match
+    the latest pkgsrc entries.
 
-  * pkgtools/pkgdep: makes dependency graphs of packages, to aid in choosing a
-    strategy for updating
+  * pkgtools/pkgdep: Makes dependency graphs of packages, to aid in choosing a
+    strategy for updating.
 
-  * pkgtools/pkgdepgraph: makes graphs from the output of pkgtools/pkgdep (uses
-    graphviz)
+  * pkgtools/pkgdepgraph: Makes graphs from the output of pkgtools/pkgdep (uses
+    graphviz).
 
-  * pkgtools/pkglint: the pkglint(1) program checks a pkgsrc entry for errors,
+  * pkgtools/pkglint: The pkglint(1) program checks a pkgsrc entry for errors,
     lintpkgsrc(1) does various checks on the complete pkgsrc system.
 
-  * pkgtools/pkgsurvey: report what packages you have installed
+  * pkgtools/pkgsurvey: Report what packages you have installed.
 
 Utilities for people maintaining or creating individual packages:
 
-  * pkgtools/pkgdiff: automate making and maintaining patches for a package
-    (includes pkgdiff, pkgvi, mkpatches, ...)
+  * pkgtools/pkgdiff: Automate making and maintaining patches for a package
+    (includes pkgdiff, pkgvi, mkpatches, etc.).
 
-  * pkgtools/rpm2pkg, pkgtools/url2pkg: aids in converting to pkgsrc
+  * pkgtools/rpm2pkg, pkgtools/url2pkg: Aids in converting to pkgsrc.
 
-  * pkgtools/gensolpkg: convert pkgsrc to a Solaris package
+  * pkgtools/gensolpkg: Convert pkgsrc to a Solaris package.
 
 Utilities for people maintaining pkgsrc (or more obscure pkg utilities)
 
-  * pkgtools/pkgconflict: find packages that conflict but aren't marked as such
+  * pkgtools/pkgconflict: Find packages that conflict but aren't marked as
+    such.
 
-  * pkgtools/pkg_comp: build packages in a chrooted area
+  * pkgtools/pkg_comp: Build packages in a chrooted area.
 
-  * pkgtools/libkver: spoof kernel version for chrooted cross builds
+  * pkgtools/libkver: Spoof kernel version for chrooted cross builds.
 
 6.4. How to use pkgsrc as non-root
 
@@ -1693,11 +1694,10 @@ if you are not using default values.
 For example, if you want to use wget to resume downloads, you'll have to use
 something like:
 
-        FETCH_CMD=wget
-        FETCH_BEFORE_ARGS=--passive-ftp
-        FETCH_RESUME_ARGS=-c
-        FETCH_OUTPUT_ARGS=-O
-
+FETCH_CMD=wget
+FETCH_BEFORE_ARGS=--passive-ftp
+FETCH_RESUME_ARGS=-c
+FETCH_OUTPUT_ARGS=-O
 
 6.6. How can I install/use XFree86 from pkgsrc?
 
@@ -1705,8 +1705,7 @@ If you want to use XFree86 from pkgsrc instead of your system's own X11 (/usr/
 X11R6, /usr/openwin, ...), you will have to add the following line into /etc/
 mk.conf:
 
-      X11_TYPE=XFree86
-
+X11_TYPE=XFree86
 
 6.7. How can I install/use X.org from pkgsrc?
 
@@ -1714,8 +1713,7 @@ If you want to use X.org from pkgsrc instead of your system's own X11 (/usr/
 X11R6, /usr/openwin, ...) you will have to add the following line into /etc/
 mk.conf:
 
-      X11_TYPE=xorg
-
+X11_TYPE=xorg
 
 6.8. How to fetch files from behind a firewall
 
@@ -1725,7 +1723,7 @@ is done using an environment variable in the form of a URL e.g. in Amdahl, the
 machine "orpheus.amdahl.com" is one of the firewalls, and it uses port 80 as
 the proxy port number. So the proxy environment variables are:
 
-  ftp_proxy=ftp://orpheus.amdahl.com:80/
+ftp_proxy=ftp://orpheus.amdahl.com:80/
 http_proxy=http://orpheus.amdahl.com:80/
 
 6.9. How do I tell make fetch to do passive FTP?
@@ -1733,8 +1731,9 @@ http_proxy=http://orpheus.amdahl.com:80/
 This depends on which utility is used to retrieve distfiles. From bsd.pkg.mk,
 FETCH_CMD is assigned the first available command from the following list:
 
-${LOCALBASE}/bin/ftp
-/usr/bin/ftp
+  * ${LOCALBASE}/bin/ftp
+
+  * /usr/bin/ftp
 
 On a default NetBSD installation, this will be /usr/bin/ftp, which
 automatically tries passive connections first, and falls back to active
@@ -1809,10 +1808,9 @@ does password caching over a limited time. To use it, install sudo (either as
 binary package or from security/sudo) and then put the following into your /etc
 /mk.conf:
 
-        .if exists(${LOCALBASE}/bin/sudo)
-        SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
-        .endif
-
+.if exists(${LOCALBASE}/bin/sudo)
+SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
+.endif
 
 6.14. Configuration files handling and placement
 
@@ -1868,7 +1866,7 @@ environment variable PKG_CONFIG prior to package installation.
 
 Here is an example, taken from mail/mutt/Makefile:
 
-  EGDIR=            ${PREFIX}/share/doc/mutt/samples
+EGDIR=        ${PREFIX}/share/doc/mutt/samples
 CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 
 As you can see, this package installs configuration files inside EGDIR, which
@@ -1886,14 +1884,14 @@ The database can be downloaded automatically, and a security audit of all
 packages installed on a system can take place. To do this, install the security
 /audit-packages package. It has two components:
 
- 1. "download-vulnerability-list", an easy way to download a list of the
-    security vulnerabilities information. This list is kept up to date by the
-    NetBSD security officer and the NetBSD packages team, and is distributed
-    from the NetBSD ftp server:
+ 1. download-vulnerability-list, an easy way to download a list of the security
+    vulnerabilities information. This list is kept up to date by the NetBSD
+    security officer and the NetBSD packages team, and is distributed from the
+    NetBSD ftp server:
 
     ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities
 
- 2. "audit-packages", an easy way to audit the current machine, checking each
+ 2. audit-packages, an easy way to audit the current machine, checking each
     vulnerability which is known. If a vulnerable package is installed, it will
     be shown by output to stdout, including a description of the type of
     vulnerability, and a URL containing more information.
@@ -2725,7 +2723,7 @@ packages available, issue:
 
 Their use from other packages is very simple. The USE_DIRS variable takes a
 list of package names (without the "-dirs" part) together with the required
-version number (always pick the latest one when writting new packages).
+version number (always pick the latest one when writing new packages).
 
 For example, if a package installs files under share/applications, it should
 have the following line in it:
@@ -3223,19 +3221,18 @@ When choosing which of these variables to use, follow the following rules:
     LOCALBASE.
 
     Usually, X11 packages should be installed under LOCALBASE whenever
-    possible. Note that you will need to set USE_X11 in them to request the
-    presence of X11 and to get the right compilation flags.
+    possible. Note that you will need to include ../../mk/x11.buildlink3.mk in
+    them to request the presence of X11 and to get the right compilation flags.
 
     Even though, there are some packages that cannot be installed under
     LOCALBASE: those that come with app-defaults files. These packages are
     special and they must be placed under X11BASE. To accomplish this, set
     either USE_X11BASE or USE_IMAKE in your package.
 
-    Some notes: USE_X11 and USE_X11BASE are mutually exclusive. If you need to
-    find includes or libraries installed by a pkg that has USE_IMAKE or
-    USE_X11BASE in its pkg Makefile, you need to use both ${X11BASE} and $
-    {LOCALBASE}. To force installation of all X11 packages in LOCALBASE, the
-    pkgtools/xpkgwedge is enabled by default.
+    Some notes: If you need to find includes or libraries installed by a pkg
+    that has USE_IMAKE or USE_X11BASE in its pkg Makefile, you need to look in
+    both ${X11BASE} and ${LOCALBASE}. To force installation of all X11 packages
+    in LOCALBASE, the pkgtools/xpkgwedge package is enabled by default.
 
   * X11PREFIX should be used to refer to the installed location of an X11
     package. X11PREFIX will be set to X11BASE if xpkgwedge is not installed,
