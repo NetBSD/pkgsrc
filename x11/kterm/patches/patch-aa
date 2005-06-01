@@ -1,13 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/06/09 11:34:01 sakamoto Exp $
+$NetBSD: patch-aa,v 1.2 2005/06/01 19:48:32 wiz Exp $
 
-*** kterm.h.orig	Thu Jul 11 22:01:37 1996
---- kterm.h	Mon Oct 19 22:28:45 1998
-***************
-*** 37,41 ****
---- 37,42 ----
-  #define KTERM_COLOR	/* color sequence */
-  #define KTERM_NOTEK	/* disables Tektronix emulation */
-  #undef  KTERM_XAW3D	/* Xaw3d -DARROW_SCROLLBAR support */
-+ #define	ALLOWLOGGING
-  
-  #endif /* !_KTERM_H_ */
+--- kterm.h.orig	2005-06-01 21:47:18.000000000 +0200
++++ kterm.h
+@@ -37,5 +37,6 @@
+ #define KTERM_COLOR	/* color sequence */
+ #define KTERM_NOTEK	/* disables Tektronix emulation */
+ #undef  KTERM_XAW3D	/* Xaw3d -DARROW_SCROLLBAR support */
++#define	ALLOWLOGGING
+ 
+ #endif /* !_KTERM_H_ */
