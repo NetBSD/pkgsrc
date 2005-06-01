@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/31 11:24:33 dillo Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/01 20:08:01 jlam Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -57,6 +57,7 @@ MANDIR=			man
 PLIST_SUBST+=		MANDIR=${MANDIR}
 
 USE_PKGINSTALL=		yes
+USE_TOOLS+=		autoconf
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${MANDIR}
@@ -147,7 +148,7 @@ MESSAGE_SUBST+=		OPENSSH_GROUP=${OPENSSH_GROUP}
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 pre-configure:
-	cd ${WRKSRC} && ${AUTORECONF}
+	cd ${WRKSRC} && autoreconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -161,6 +162,5 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
-.include "../../mk/autoconf.mk"
 
 .include "../../mk/bsd.pkg.mk"

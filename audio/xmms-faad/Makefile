@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/22 20:07:39 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/01 20:07:59 jlam Exp $
 
 DISTNAME=		faad2-2.0
 PKGNAME=		xmms-faad-2.0
@@ -14,12 +14,11 @@ COMMENT=		XMMS plugin for faad
 #NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/faad2
-USE_TOOLS+=		gmake
+USE_TOOLS+=		automake14 gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	libtool
 
-AUTOMAKE_REQD=		1.4
 AUTOCONF_REQD=		2.50
 GNU_CONFIGURE=		YES
 
@@ -32,11 +31,11 @@ pre-configure:
 	@${CP} ${WRKSRC}/common/faad/getopt.* ${WRKSRC}/frontend
 	for dir in . ; do						\
 		cd ${WRKSRC}/$$dir;					\
-		${ACLOCAL} -I .;					\
-		${AUTOHEADER};						\
+		aclocal -I .;						\
+		autoheader;						\
 		${LOCALBASE}/bin/libtoolize --automake;			\
-		${AUTOMAKE} --add-missing;				\
-		${AUTOCONF};						\
+		automake --add-missing;					\
+		autoconf;						\
 	done
 
 do-build:
@@ -52,5 +51,4 @@ do-install:
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

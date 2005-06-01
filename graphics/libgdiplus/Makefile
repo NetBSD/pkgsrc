@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/06/01 18:02:56 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/01 20:08:00 jlam Exp $
 #
 
 DISTNAME=	libgdiplus-1.1.5
@@ -10,16 +10,14 @@ HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Implementation of the GDI+ API
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		autoconf gmake
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libgdiplus.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-glitz
 
 pre-configure:
-	cd ${WRKSRC};			\
-	${AUTOHEADER};			\
-	${AUTOCONF}
+	cd ${WRKSRC}; autoheader; autoconf
 
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.5
 BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2
@@ -37,5 +35,4 @@ BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 .include "../../x11/Xrender/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"

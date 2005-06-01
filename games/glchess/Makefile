@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/01 18:02:50 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/01 20:08:00 jlam Exp $
 #
 
 DISTNAME=	glchess-0.4.7
@@ -10,14 +10,15 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://glchess.sourceforge.net/
 COMMENT=	3D chess interface
 
+USE_TOOLS+=	automake
 GNU_CONFIGURE=	YES
 INSTALL_DIRS=	${WRKSRC}/src ${WRKSRC}/man ${WRKSRC}/textures
 
 pre-configure:
 		cd ${WRKSRC} &&						\
-		${ACLOCAL} &&						\
-		${AUTOMAKE} --add-missing &&				\
-		${AUTOCONF} &&						\
+		aclocal &&						\
+		automake --add-missing &&				\
+		autoconf &&						\
 		${CP} glchessrc glchessrc.dist &&			\
 		${SED}	-e 's|/usr/local/share/games|${PREFIX}/share|g'	\
 			 < glchessrc.dist > glchessrc &&		\
@@ -34,5 +35,4 @@ post-install:
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/gtkglarea/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

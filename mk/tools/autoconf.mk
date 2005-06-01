@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.9 2005/05/21 04:53:17 jlam Exp $
+# $NetBSD: autoconf.mk,v 1.10 2005/06/01 20:08:01 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -119,13 +119,6 @@ TOOLS_REAL_CMD.autoupdate=	${_TOOLS_AC_PREFIX}/bin/autoupdate
 
 _TOOLS_AC_TYPE.ifnames=		TOOLS_CREATE
 TOOLS_REAL_CMD.ifnames=		${_TOOLS_AC_PREFIX}/bin/ifnames
-
-# Continue to define the following variables until packages have been
-# taught to just use "autoconf", "autoheader", and "autoreconf" instead.
-#
-AUTOCONF=	${TOOLS_CMD.autoconf}
-AUTOHEADER=	${TOOLS_CMD.autoheader}
-AUTORECONF=	${TOOLS_CMD.autoreconf}
 .  endif
 .endif
 
@@ -171,13 +164,6 @@ _TOOLS_AC_TYPE.ifnames-2.13=	TOOLS_CREATE
 _TOOLS_AC_TYPE.ifnames=		# empty
 TOOLS_REAL_CMD.ifnames-2.13=	${_TOOLS_AC_PREFIX}/bin/ifnames-2.13
 TOOLS_ALIASES.ifnames-2.13=	ifnames
-
-# Continue to define the following variables until packages have been
-# taught to just use "autoconf", "autoheader", and "autoreconf" instead.
-#
-AUTOCONF=	${TOOLS_CMD.autoconf-2.13}
-AUTOHEADER=	${TOOLS_CMD.autoheader-2.13}
-AUTORECONF=	${TOOLS_CMD.autoreconf-2.13}
 
 .    if defined(USE_LIBTOOL)
 pre-configure: tools-libtool-m4-override

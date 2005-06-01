@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/22 20:07:54 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/01 20:08:00 jlam Exp $
 #
 
 DISTNAME=	prc-tools-2.2
@@ -32,9 +32,8 @@ CONFLICTS+=	prc-tools-binutils-[0-9]*
 CONFLICTS+=	prc-tools-gcc-[0-9]*
 CONFLICTS+=	prc-tools-gdb-[0-9]*
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	autoconf gmake
 GNU_CONFIGURE=	YES
-AUTOCONF_REQD=	2.50
 USE_MAKEINFO=	YES
 INFO_FILES=	prc-tools.info
 
@@ -67,6 +66,5 @@ pre-patch:
 	cd ${WRKDIR} \
 		&& ${PATCH} --quiet -p0 < ${WRKSRC}/${DIST_GDB}.palmos.diff
 
-.include "../../mk/autoconf.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

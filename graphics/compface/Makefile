@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:04 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/01 20:08:00 jlam Exp $
 
 DISTNAME=	compface-1.5.1
 CATEGORIES=	graphics
@@ -10,7 +10,7 @@ COMMENT=	48x48x1 image compression and decompression (X-face utility)
 
 CONFLICTS=	faces-[0-9]*
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		autoconf gmake
 GNU_CONFIGURE=		yes
 
 SUBST_CLASSES+=		perlpath
@@ -20,10 +20,9 @@ SUBST_FILES.perlpath=	xbm2xface.pl
 SUBST_SED.perlpath=	-e 's|||' -e 's|/usr/bin|${PREFIX}/bin|g'
 
 pre-configure:
-	cd ${WRKSRC}; ${AUTOCONF}
+	cd ${WRKSRC}; autoconf
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/xbm2xface.pl ${PREFIX}/bin
 
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"

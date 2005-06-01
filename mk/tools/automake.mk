@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.12 2005/05/21 04:53:17 jlam Exp $
+# $NetBSD: automake.mk,v 1.13 2005/06/01 20:08:01 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -123,12 +123,6 @@ TOOLS_REAL_CMD.aclocal=		${_TOOLS_AM_PREFIX}/bin/aclocal
 
 _TOOLS_AM_TYPE.automake=	TOOLS_CREATE
 TOOLS_REAL_CMD.automake=	${_TOOLS_AM_PREFIX}/bin/automake
-
-# Continue to define the following variables until packages have been
-# taught to just use "aclocal" and "automake" instead.
-#
-ACLOCAL=	${TOOLS_CMD.aclocal}
-AUTOMAKE=	${TOOLS_CMD.automake}
 .  endif
 .endif
 
@@ -155,12 +149,6 @@ _TOOLS_AM_TYPE.automake-1.4=	TOOLS_CREATE
 _TOOLS_AM_TYPE.automake=	# empty
 TOOLS_REAL_CMD.automake-1.4=	${_TOOLS_AM_PREFIX}/bin/automake-1.4
 TOOLS_ALIASES.automake-1.4=	automake
-
-# Continue to define the following variables until packages have been
-# taught to just use "aclocal" and "automake" instead.
-#
-ACLOCAL=	${TOOLS_CMD.aclocal-1.4}
-AUTOMAKE=	${TOOLS_CMD.automake-1.4}
 .  endif
 .endif
 

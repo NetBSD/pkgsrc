@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/04/11 21:45:18 tv Exp $
+# $NetBSD: Makefile,v 1.28 2005/06/01 20:08:00 jlam Exp $
 #
 
 DISTNAME=		latestCDK
@@ -16,12 +16,12 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_NCURSES=		# uses ncurses internals
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-AUTOCONF_REQD=		2.13
+USE_TOOLS+=		autoconf213
 
 BUILD_TARGET=		default
 
 pre-configure:
-	cd ${WRKSRC}; ${AUTOCONF}
+	cd ${WRKSRC}; autoconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cdk
@@ -30,5 +30,4 @@ post-install:
 	done
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"

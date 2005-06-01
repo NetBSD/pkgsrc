@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2005/05/31 11:24:32 dillo Exp $
+# $NetBSD: Makefile,v 1.94 2005/06/01 20:08:01 jlam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -33,7 +33,7 @@ UNLIMIT_RESOURCES=	datasize memorysize
 USE_LANGUAGES=		c c++	# pdftops is a C++ application
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		autoconf gmake
 USE_LIBTOOL=		yes
 INSTALL_TARGET=		installcups
 
@@ -112,10 +112,9 @@ OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${CUPS_USER} ${CUPS_GROUP} 1770
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../mk/autoconf.mk"
 
 pre-configure:
-	cd ${WRKSRC} && ${AUTOCONF}
+	cd ${WRKSRC} && autoconf
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam

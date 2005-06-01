@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:47 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/01 20:08:00 jlam Exp $
 #
 
 .include "../../graphics/freetype-lib/Makefile.common"
@@ -9,7 +9,6 @@ CATEGORIES=		print
 MAINTAINER=		bernhard@SDG.de,hubertf@NetBSD.org
 HOMEPAGE=		http://www.freetype.org/
 COMMENT=		TrueType to TeX PK font converter
-
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
@@ -22,11 +21,12 @@ BUILD_DIRS=		${T2PSRC}
 BUILD_TARGET=		depend all
 
 USE_LIBTOOL=		# defined
+USE_TOOLS+=		autoconf
 
 TEXMF=			${PREFIX}/share/texmf
 
 pre-configure:
-			cd ${T2PSRC}; ${AUTOCONF}
+			cd ${T2PSRC}; autoconf
 
 do-install:
 			${INSTALL_PROGRAM}	${T2PSRC}/ttf2pk \
@@ -56,5 +56,4 @@ do-install:
 .include "../../graphics/freetype-lib/buildlink3.mk"
 .include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
 
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"

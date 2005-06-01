@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/22 20:07:45 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/01 20:08:00 jlam Exp $
 
 DISTNAME=	cross-${TARGET_ARCH}-${DISTVERSION}
 TARGET_ARCH=	mipsEEel-netbsd
@@ -104,5 +104,6 @@ gcc-install:
 		install-cpp lang.install-normal install-driver
 
 # just uses autoheader -- any version is ok
-.include "../../mk/autoconf.mk"
+USE_TOOLS+=	autoconf
+
 .include "../../mk/bsd.pkg.mk"

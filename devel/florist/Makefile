@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:07:51 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 20:08:00 jlam Exp $
 #
 
 DISTNAME=		florist-3.15p-src
@@ -15,8 +15,7 @@ COMMENT=		FSU implementation of POSIX.5 (Ada binding)
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_AUTOCONF=		yes
-AUTOCONF_REQD=		2.12
-USE_TOOLS+=		gmake
+USE_TOOLS+=		autoconf213 gmake
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,7 +35,7 @@ pre-configure:
 .else
 .  include "../../lang/gcc34-ada/preconfigure.mk"
 .endif
-	cd ${WRKSRC}; ${AUTOCONF}
+	cd ${WRKSRC}; autoconf
 
 do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/lib/florist
@@ -51,5 +50,4 @@ do-install:
 .  include "../../lang/gcc34-ada/buildlink3.mk"
 .endif
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"

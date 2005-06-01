@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2005/05/22 20:08:26 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2005/06/01 20:08:01 jlam Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -48,7 +48,7 @@ CONF_FILES+=		${EGDIR}/vtysh.conf.sample ${PKG_SYSCONFDIR}/vtysh.conf
 CONFIGURE_ARGS+=	--disable-vtysh
 .endif
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		automake gmake
 USE_MAKEINFO=		# defined
 .include "../../devel/readline/buildlink3.mk"
 
@@ -70,8 +70,8 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 LIBS+=			${LDFLAGS}
 
 pre-configure:
-	cd ${WRKSRC} && ${AUTORECONF} --force
-#	cd ${WRKSRC} && ${AUTOMAKE}
+	cd ${WRKSRC} && autoreconf --force
+#	cd ${WRKSRC} && automake
 
 #post-build:
 #	cd ${WRKSRC}/doc ; \
@@ -81,5 +81,4 @@ pre-configure:
 post-install:
 	@${CHMOD} a+r ${PREFIX}/share/examples/zebra/*
 
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

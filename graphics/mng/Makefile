@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/11 21:46:06 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/01 20:08:00 jlam Exp $
 
 DISTNAME=	lm1009
 PKGNAME=	mng-1.0.9
@@ -18,6 +18,7 @@ COMMENT=	Multiple-image Network Graphics (MNG) reference library
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+USE_TOOLS+=		automake
 
 # only needed as long as we use the zip distfile
 EXTRACT_CMD_OPTS.zip?=  -aqo
@@ -32,13 +33,13 @@ DOCDIR=			${PREFIX}/share/doc/mng
 INSTALLATION_DIRS=	man/man3 man/man5
 
 pre-configure:
-	cd ${WRKSRC};				\
+	cd ${WRKSRC};							\
 	${RM} -f configure.in && ${LN} -sf makefiles/configure.in .;	\
 	${RM} -f Makefile.am && ${LN} -sf makefiles/Makefile.am .;	\
-	${SETENV} AUTOM4TE=${LOCALBASE}/bin/autom4te ${ACLOCAL};	\
-	${LOCALBASE}/bin/libtoolize --automake;	\
-	${SETENV} AUTOCONF=${AUTOCONF} ${AUTOMAKE} -a --foreign -i;	\
-	${AUTOCONF}
+	aclocal;							\
+	${LOCALBASE}/bin/libtoolize --automake;				\
+	automake -a --foreign -i;					\
+	autoconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -53,5 +54,4 @@ post-install:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

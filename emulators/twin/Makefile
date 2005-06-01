@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/06/01 18:02:48 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/01 20:08:00 jlam Exp $
 #
 
 DISTNAME=		twin-src-3.1.14
@@ -13,15 +13,14 @@ COMMENT=		Cross-platform implementation of the win32 api
 
 WRKSRC=			${WRKDIR}/twin
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		autoconf213 gmake
 BUILD_TARGET=		depend world
-AUTOCONF_REQD=		2.13
 CONFIGURE_ARGS=		--enable-debugger
 
 .include "../../mk/x11.buildlink3.mk"
 
 pre-configure:
-	cd ${WRKSRC} && ${AUTORECONF} --force
+	cd ${WRKSRC} && autoreconf --force
 
 pre-build:
 	${CP} ${WRKSRC}/windows/Execfreebsd.c ${WRKSRC}/windows/Execnetbsd.c
@@ -34,5 +33,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/documentation/debugger.1 ${PREFIX}/man/man1
 	${INSTALL_PROGRAM} ${WRKSRC}/tools/rc/rc ${PREFIX}/bin
 
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
