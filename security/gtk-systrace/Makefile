@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:12 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/01 20:08:01 jlam Exp $
 #
 
 DISTNAME=	gtk-systrace-2002-12-01
@@ -16,14 +16,10 @@ ONLY_FOR_PLATFORM=	NetBSD-1.6[H-Z]*-* NetBSD-[2-9]*
 WRKSRC=			${WRKDIR}/notification-0.1
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+USE_TOOLS+=		automake
 
 pre-configure:
-	cd ${WRKSRC} && \
-		${ACLOCAL} && \
-		${AUTOHEADER} && \
-		${AUTOCONF} && \
-		${AUTOMAKE} -acf
+	cd ${WRKSRC} && aclocal && autoheader && autoconf && automake -acf
 
 .include "../../x11/gtk/buildlink3.mk"
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

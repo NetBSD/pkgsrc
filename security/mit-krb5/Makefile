@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/31 11:31:07 dillo Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/01 20:08:01 jlam Exp $
 
 DISTNAME=	krb5-1.4
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
@@ -22,7 +22,7 @@ CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
 
 PKGSRC_USE_TOOLS+=	gzcat
-USE_TOOLS+=		yacc
+USE_TOOLS+=		autoconf yacc
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
@@ -95,7 +95,7 @@ pre-configure:
 	${XARGS} -n 1 ${DIRNAME} |					\
 	while read dir; do						\
 		 ${ECHO} "=> Generating configure in $$dir";		\
-		 (cd $$dir && ${AUTOCONF} -I ${WRKSRC} -f);		\
+		 (cd $$dir && autoconf -I ${WRKSRC} -f);		\
 	done
 
 post-install:
@@ -108,5 +108,4 @@ post-install:
 		done;							\
 	done
 
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
