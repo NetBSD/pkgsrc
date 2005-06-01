@@ -129,6 +129,8 @@ libnet10
 libnet11	
 long-usernames	
 lookup	
+lprng-priv-ports	Connections must be made from privileged ports.
+lprng-suid		Install LPRng executables setuid root.
 lua	
 lynxkey	
 lzw	
