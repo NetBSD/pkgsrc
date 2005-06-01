@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:12 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/01 18:22:13 wiz Exp $
 #
 
 DISTNAME=	mail-notification-1.0
@@ -25,13 +25,14 @@ CONF_FILES=	${EGDIR}/sound/events/mail-notification.soundlist \
 		${PKG_SYSCONFDIR}/sound/events/mail-notification.soundlist
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mail-notification
-PKG_SUPPORTED_OPTIONS=	ipv6 sasl ssl
+PKG_SUPPORTED_OPTIONS=	inet6 sasl ssl
+PKG_OPTIONS_LEGACY_OPTS+=	ipv6:inet6
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
 # Whether to add IPv6 support.
-.if empty(PKG_OPTIONS:Mipv6)
+.if empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
