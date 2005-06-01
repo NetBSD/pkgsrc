@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2005/06/01 18:03:09 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2005/06/01 19:23:26 wiz Exp $
 
 DISTNAME=	gv-3.6.1
 CATEGORIES=	print
@@ -15,8 +15,6 @@ USE_MAKEINFO=		yes
 TEXINFO_REQD=		4.2
 INFO_FILES=		gv.info
 
-XAW_TYPE=		3d
-
 .if !exists(/usr/include/getopt.h)
 .  include "../../pkgtools/libnbcompat/buildlink3.mk"
 post-extract:
@@ -24,6 +22,6 @@ post-extract:
 
 .endif
 
-.include "../../mk/xaw.buildlink3.mk"
+.include "../../x11/Xaw3d/buildlink3.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
