@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_chk.8,v 1.9 2005/03/26 00:46:40 hubertf Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.10 2005/06/01 11:29:45 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
@@ -40,7 +40,8 @@ or
 .Fl s
 options are given.
 .It Fl B
-Check the "Build version" (see option -b of pkg_info(1)) of packages.
+Include the "Build version" (see option -b of pkg_info(1)) of packages when
+determining if a package is up to date.
 .It Fl b
 Use binary packages. If
 .Fl s
@@ -94,7 +95,8 @@ against which each package was built) based on
 Will abort if a binary package is missing.
 This can be used (in conjunction with -U and -D) to determine what
 packages would need to be copied to a remote machine to ensure it
-was completely up to date.
+was completely up to date. The list is sorted so that dependencies
+always come before packages which depend upon them.
 .It Fl N
 For each installed package, look if there is a newer version
 noted in PKGSRCDIR/doc/TODO.
@@ -133,7 +135,8 @@ or
 options are given.
 .Pp
 Note: If the update fails (particularly when building from source), the system
-will be left with missing packages.
+will be left with missing packages. Once the error has been fixed a second run
+will resume the update.
 .It Fl v
 Verbose - list the tags set when checking
 .Pa pkgchk.conf ,
@@ -258,6 +261,14 @@ If not set in environment then read from
 .Pa /etc/mk.conf .
 Defaults to
 .Pa ${PKGSRCDIR}/pkgchk.conf .
+.It Ev PKGCHK_UPDATE_CONF
+Pathname to temporary list of installed packages used when updating.
+If not set in environment then read from
+.Pa /etc/mk.conf .
+Defaults to
+.Pa ${PKGSRCDIR}/pkgchk_update-$(hostname).conf . Note, if pkgsrc is being
+shared across multiple machines which may be updating at the same time then
+it is important this file does not overlap between machines.
 .It Ev PKGCHK_TAGS
 Additional tags to add when parsing
 .Pa pkgchk.conf .
@@ -275,9 +286,9 @@ devel/cpuflags
 pkgtools/xpkgwedge              x11
 
 shells/standalone-tcsh          *
-wm/pwm                          x11
+wm/pwm                          /etc/X11/XF86Config
 misc/setiathome                 i386
-print/acroread                  x11+i386
+print/acroread                  /etc/X11/XF86Config+i386
 www/communicator                x11+sparc x11+sparc64
 www/navigator                	x11+i386
 x11/xlockmore                   x11 -wopr
@@ -288,44 +299,7 @@ x11/xlockmore                   x11 -wopr
 .Aq abs@netbsd.org ,
 plus much from Stoned Elipot.
 .Sh BUGS
-Updating packages on which other packages depend can currently only be done
-via source (not binary packages).
 .Pp
-If both package
-.Em a
-and package
-.Em b
-are to be updated, and
-.Em a
-depends on
-.Em b ,
+When used against binary packages,
 .Nm
-will correctly skip the update of
-.Em a .
-However, if
-.Em a
-depends on
-.Em b
-and
-.Em c ,
-and all three are marked for update,
-.Nm
-will update
-.Em b
-and
-.Em c
-in two separate passes, resulting in unnecessary rebuilding of
-.Em a
-(and potentially other packages).
-.Pp
-There exists a workaround, if you have a complete
-.Pa pkgchk.conf :
-.Bd -literal
-# pkg_chk -ra
-
-.Ed
-will remove all outdated packages and then install all
-files that are in your
-.Pa pkgchk.conf
-file, but not currently installed, i.e. hopefully all
-that you just deleted, if the file was complete.
+does not handle the directory containing multiple versions of the same package.
