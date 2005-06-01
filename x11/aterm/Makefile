@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/06/01 19:39:36 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/01 19:41:14 wiz Exp $
 #
 
 DISTNAME=	aterm-0.4.2
@@ -14,8 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
-BUILD_DEFS+=	ATERM_USE_KANJI ATERM_USE_XTERM_SCROLL
-BUILD_DEFS+=	ATERM_USE_BIG5 ATERM_USE_GREEK
 
 CONFIGURE_ARGS+=--enable-background-image \
 		--enable-transparency \
