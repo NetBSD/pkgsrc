@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:48:41 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/06/01 03:01:58 snj Exp $
 
-SHA1 (diction-1.02.tar.gz) = 5933b8cd1308d91ed0ac03dff048e787ed11ad70
-RMD160 (diction-1.02.tar.gz) = 7aec954f1cf45351e242197d83ff69b2c64eba5a
-Size (diction-1.02.tar.gz) = 90957 bytes
+SHA1 (diction-1.08.tar.gz) = bce77da24d7550715dacf4f13065d5ac2d8ea3bd
+RMD160 (diction-1.08.tar.gz) = 6f16e7b2fc800a52858eda77e245e0d725843a8e
+Size (diction-1.08.tar.gz) = 144440 bytes
