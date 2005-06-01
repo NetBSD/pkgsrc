@@ -1,25 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2005/03/29 18:47:52 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/06/01 14:00:55 dillo Exp $
 
-# Global and legacy options
-.if defined(UIM_USE_ANTHY) && !empty(UIM_USE_ANTHY:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=   anthy
-.endif
-
-.if defined(UIM_USE_CANNA) && !empty(UIM_USE_CANNA:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=   canna
-.endif
-
-.if defined(UIM_USE_EB) && !empty(UIM_USE_EB:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=   eb
-.endif
-
-.if defined(UIM_USE_QT) && !empty(UIM_USE_QT:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=   qt
-.endif
-
-PKG_OPTIONS_VAR=        PKG_OPTIONS.uim
 PKG_SUPPORTED_OPTIONS=  anthy canna eb qt
-PKG_DEFAULT_OPTIONS+=	anthy canna
+PKG_SUPPORTED_OPTIONS=	anthy canna
+PKG_OPTIONS_LEGACY_VARS+=	UIM_USE_ANTHY:anthy
+PKG_OPTIONS_LEGACY_VARS+=	UIM_USE_CANNA:canna
+PKG_OPTIONS_LEGACY_VARS+=	UIM_USE_EB:eb
+PKG_OPTIONS_LEGACY_VARS+=	UIM_USE_qt:qt
 
 .include "../../mk/bsd.options.mk"
 
