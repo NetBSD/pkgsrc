@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2005/06/01 18:02:59 jlam Exp $
+# $NetBSD: Makefile,v 1.84 2005/06/01 18:21:10 wiz Exp $
 
 DISTNAME=		evolution-2.2.2
 CATEGORIES=		mail time gnome
@@ -13,7 +13,8 @@ DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution
-PKG_SUPPORTED_OPTIONS=	ipv6 krb4 krb5 ssl
+PKG_SUPPORTED_OPTIONS=	inet6 krb4 krb5 ssl
+PKG_OPTIONS_LEGACY_OPTS+=	ipv6:inet6
 
 .include "../../mk/bsd.options.mk"
 
@@ -50,7 +51,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--with-sub-version=nb${PKGREVISION}
 .endif
 
-.if !empty(PKG_OPTIONS:Mipv6)
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6=yes
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
