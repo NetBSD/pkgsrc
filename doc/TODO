@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3576 2005/06/01 14:12:43 wiz Exp $
+$NetBSD: TODO,v 1.3577 2005/06/01 20:08:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -731,7 +731,6 @@ Suggested package updates
 	o onyx-5.1.2
 	o oo2c-2.1.7
 	o open2300-1.8
-	o openacs-5.1.4
 	o openal-20050202
 	o opencobol-0.31
 	o openh323-1.17.1
