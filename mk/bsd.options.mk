@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.32 2005/06/02 20:38:09 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.33 2005/06/02 20:43:55 wiz Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -20,7 +20,7 @@
 #		options.  The options in each group are listed in
 #		PKG_OPTIONS_GROUP.<groupname>.  The most specific
 #		setting of any option from the group takes precedence
-#               over all other options in the group.  Options from
+#		over all other options in the group.  Options from
 #		the groups will be automatically added to
 #		PKG_SUPPORTED_OPTOINS.
 #
