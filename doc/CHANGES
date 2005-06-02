@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10282 2005/06/02 15:14:05 martin Exp $
+$NetBSD: CHANGES,v 1.10283 2005/06/02 20:49:41 garbled Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2770,3 +2770,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/jakarta-tomcat55 to 5.5.9 [abs 2005-06-02]
 	Updated games/bzflag to 2.0.2 [blymn 2005-06-02]
 	Added sysutils/afbinit version 1.0 [martin 2005-06-02]
+	Updated parallel/clusterit to 2.3.1 [garbled 2005-06-02]
