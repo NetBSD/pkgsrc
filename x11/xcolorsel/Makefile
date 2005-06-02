@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/11 21:48:14 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/02 19:33:47 wiz Exp $
 #
 
 DISTNAME=	xcolorsel-1.1a-src
@@ -11,15 +11,8 @@ MAINTAINER=	perry@NetBSD.org
 COMMENT=	Browse and select named X colors from rgb.txt
 
 WRKSRC=		${WRKDIR}/xcolorsel
+MAKE_ENV+=	LIBXAW=${LIBXAW:Q}
 USE_IMAKE=	yes
-XAW_TYPE?=	3d
 
-.include "../../mk/bsd.prefs.mk"
-
-# We need at least Xaw3d to compile this package.
-.if (${XAW_TYPE} == standard || ${XAW_TYPE} == neXtaw)
-XAW_TYPE=	3d
-.endif
-
-.include "../../mk/xaw.buildlink3.mk"
+.include "../../x11/Xaw3d/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
