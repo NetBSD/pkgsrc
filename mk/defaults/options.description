@@ -30,6 +30,7 @@ bayes-sql-tests
 bdb	
 bigdns	
 bktr	
+blender-exppython	Enable the Experimental Python support.
 bpf	
 buffy-size	
 canna	
@@ -157,9 +158,9 @@ mplayer-win32		Enable usage of Win32 DLLs (codecs).
 multibyte	
 mysql	
 mysql4	
+nas			Enable usage of the Network Audio System.
 native	
 ncurses	
-nas			Enable usage of the Network Audio System.
 neomagic	
 net-tests	
 netqmail	
@@ -169,8 +170,9 @@ nospoof
 nsc	
 nullenvsender	
 nv	
-ogg	
+ogg			Enable Ogg support.
 okinawa_dict	
+openal			Enable OpenAL support.
 opengl			Use OpenGL as display library.
 openldap	
 openssl	
@@ -250,7 +252,7 @@ via
 virtualchroot	
 viruscan	
 vmware	
-vorbis			Use the vorbis codecs to play Ogg Vorbis files.
+vorbis			Enable Ogg Vorbis support.
 vpop	
 wrap	
 wx	
