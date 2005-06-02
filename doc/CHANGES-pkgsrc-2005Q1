@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.114 2005/06/02 01:00:15 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.115 2005/06/02 11:12:40 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -257,3 +257,5 @@ Pullup ticket 512 - requested by Manuel Bouyer
 bugfix updates for xentools20
 Pullup ticket 528 - requested by Thomas Klausner
 PLIST fix for lablgtk2
+Pullup ticket 536 - requested by Manuel Bouyer
+security update for mailman
