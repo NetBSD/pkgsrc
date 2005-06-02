@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.3.12.1 2005/06/02 23:00:30 snj Exp $
+
+--- misc/registry.c.orig	2004-08-25 02:48:47.000000000 +0200
++++ misc/registry.c	2005-06-01 15:23:10.000000000 +0200
+@@ -1227,7 +1227,7 @@
+     ret = _xmalloc(50);
+     for (count = 0;;) {
+         sprintf(ret,"/tmp/reg%lx%04x.tmp",(long)getpid(),count++);
+-        if ((tmp_fd = open(ret,O_CREAT | O_EXCL | O_WRONLY,0666)) != -1) break;
++        if ((tmp_fd = open(ret,O_CREAT | O_EXCL | O_WRONLY,0600)) != -1) break;
+         if (errno != EEXIST) {
+             ERR("Unexpected error while open() call: %s\n",strerror(errno));
+             free(ret);

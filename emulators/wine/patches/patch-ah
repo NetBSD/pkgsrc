@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.4.12.1 2005/06/02 23:00:30 snj Exp $
+
+--- server/registry.c.orig	2004-11-30 22:38:57.000000000 +0100
++++ server/registry.c	2005-06-01 15:24:40.000000000 +0200
+@@ -1615,7 +1615,7 @@
+     for (;;)
+     {
+         sprintf( p, "reg%lx%04x.tmp", (long) getpid(), count++ );
+-        if ((fd = open( tmp, O_CREAT | O_EXCL | O_WRONLY, 0666 )) != -1) break;
++        if ((fd = open( tmp, O_CREAT | O_EXCL | O_WRONLY, 0600 )) != -1) break;
+         if (errno != EEXIST) goto done;
+         close( fd );
+     }
