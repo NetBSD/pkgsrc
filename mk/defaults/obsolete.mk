@@ -1,4 +1,4 @@
-# $NetBSD: obsolete.mk,v 1.9 2005/05/31 21:50:56 wiz Exp $
+# $NetBSD: obsolete.mk,v 1.10 2005/06/02 22:20:37 wiz Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -25,7 +25,7 @@ _DEPRECATED_WARNING+="Deprecated variable KERBEROS used, use PKG_DEFAULT_OPTIONS
 .  if ${USE_SOCKS} == "4" && !empty(PKG_SUPPORTED_OPTIONS:Msocks4)
 _PKG_LEGACY_OPTIONS+=	socks4
 _DEPRECATED_WARNING+="Deprecated variable SOCKS used, use PKG_DEFAULT_OPTIONS+=socks4 instead."
-.  elif ${USE_SOCKS} == "5 && !empty(PKG_SUPPORTED_OPTIONS:Msocks5)"
+.  elif ${USE_SOCKS} == "5" && !empty(PKG_SUPPORTED_OPTIONS:Msocks5)
 _PKG_LEGACY_OPTIONS+=	socks5
 _DEPRECATED_WARNING+="Deprecated variable SOCKS used, use PKG_DEFAULT_OPTIONS+=socks5 instead."
 .  endif
