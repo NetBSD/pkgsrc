@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2005/02/23 04:09:51 minskim Exp $
-#
+# $NetBSD: Makefile,v 1.19.2.1 2005/06/02 22:53:12 snj Exp $
 
-DISTNAME=		cdrdao-1.1.9
+DISTNAME=		cdrdao-1.2.0
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdrdao/}
 
@@ -59,5 +59,8 @@ post-install:
 			${PREFIX}/share/examples/cdrdao
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../audio/libao/buildlink3.mk"
+.include "../../audio/libmad/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/pccts/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
