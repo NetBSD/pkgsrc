@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2005/01/17 12:11:46 adam Exp $
+$NetBSD: patch-aa,v 1.6 2005/06/02 15:03:39 adam Exp $
 
---- include/lcms.h.orig	2004-12-13 09:00:59.000000000 +0000
+--- include/lcms.h.orig	2004-12-13 10:00:59.000000000 +0100
 +++ include/lcms.h
 @@ -74,7 +74,7 @@
  
@@ -11,3 +11,12 @@ $NetBSD: patch-aa,v 1.5 2005/01/17 12:11:46 adam Exp $
  #   define unlink remove
  #   if WIN32 
  #       define USE_CUSTOM_SWAB 1
+@@ -112,7 +112,7 @@
+ #   define USE_BIG_ENDIAN      1
+ #endif
+ 
+-#if TARGET_CPU_PPC
++#ifdef TARGET_CPU_PPC
+ #   define USE_BIG_ENDIAN   1
+ #endif
+ 
