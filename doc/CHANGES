@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10283 2005/06/02 20:49:41 garbled Exp $
+$NetBSD: CHANGES,v 1.10284 2005/06/02 23:33:33 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2771,3 +2771,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/bzflag to 2.0.2 [blymn 2005-06-02]
 	Added sysutils/afbinit version 1.0 [martin 2005-06-02]
 	Updated parallel/clusterit to 2.3.1 [garbled 2005-06-02]
+	Updated chat/xchat2 to 2.4.3 [tron 2005-06-02]
