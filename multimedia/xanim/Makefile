@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/15 22:02:28 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/02 18:26:36 wiz Exp $
 
 DISTNAME=	xanim2801
 PKGNAME=	xanim-2.80.1
@@ -31,7 +31,12 @@ MAKE_ENV+=		${XANIM_AUDIO.${OPSYS}}
 XANIM_AUDIO.Linux=	XA_AUDIO_DEFS="-DXA_LINUX_AUDIO"		\
 			XA_AUDIO_LIBS="-lc"
 
-.if defined(USE_OSS)
+PKG_OPTIONS_VAR=	PKG_OPTIONS.xanim
+PKG_SUPPORTED_OPTIONS=	oss
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Moss)
 XANIM_AUDIO.NetBSD=	XA_AUDIO_DEFS="-DXA_LINUX_AUDIO"		\
 			XA_AUDIO_LIBS="${LIBOSSAUDIO}"
 .else
