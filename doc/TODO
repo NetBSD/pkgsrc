@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3583 2005/06/02 14:26:26 blymn Exp $
+$NetBSD: TODO,v 1.3584 2005/06/02 16:13:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1290,8 +1290,8 @@ Suggested cleanups in pkgsrc
 	o Install documentation consistently into share/doc/${PKGBASE} or
 	  share/doc/${PKGNAME}, not share/doc/html.
 
-	o Make packages utilize USE_X11 instead of USE_X11BASE if
-	  there is no good reason to install them into X11BASE.
+	o Remove USE_X11BASE if there is no good reason to install a
+	  package into X11BASE.
 
 	o Set USE_LANGUAGES appropriately in packages that use C++,
 	  Fortran, or Objective-C so that the correct type of
