@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/10/25 17:05:41 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/06/02 09:48:43 salo Exp $
 #
 # NOTE: This file is included by:
 #
@@ -21,8 +21,8 @@ EXTRACT_SUFX=		.tar.gz
 DISTINFO_FILE?=		${.CURDIR}/../../net/samba2/distinfo
 PATCHDIR?=		${.CURDIR}/../../net/samba2/patches
 
-GNU_CONFIGURE=		# defined
-USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.prefs.mk"
