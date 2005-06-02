@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.31 2005/06/01 13:40:14 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.32 2005/06/02 20:38:09 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -14,6 +14,20 @@
 #	PKG_OPTION_VAR (must be defined)
 #               The variable the user can set to enable or disable
 #		options specifically for this package.
+#
+#	PKG_OPTIONS_OPTIONAL_GROUPS
+#		This is a list of groups of mutually exclusive
+#		options.  The options in each group are listed in
+#		PKG_OPTIONS_GROUP.<groupname>.  The most specific
+#		setting of any option from the group takes precedence
+#               over all other options in the group.  Options from
+#		the groups will be automatically added to
+#		PKG_SUPPORTED_OPTOINS.
+#
+#	PKG_OPTIONS_REQUIRED_GROUPS
+#		Like PKG_OPTIONS_OPTIONAL_GROUPS, but building
+#		the packages will fail if no option from the group
+#		is selected.
 #
 #	PKG_SUGGESTED_OPTIONS (defaults to empty)
 #		This is a list of build options which are enabled by default.
@@ -54,6 +68,8 @@
 # -------------8<-------------8<-------------8<-------------8<-------------
 # PKG_OPTIONS_VAR=		PKG_OPTIONS.wibble
 # PKG_SUPPORTED_OPTIONS=	wibble-foo ldap sasl
+# PKG_OPTIONAL_GROUPS=		database
+# PKG_GROUP.database=		mysql pgsql
 # PKG_SUGGESTED_OPTIONS=	wibble-foo
 # PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_OPENLDAP:ldap
 # PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_SASL2:sasl
@@ -85,6 +101,16 @@
 # .  include "../../security/cyrus-sasl2/buildlink3.mk"
 # CONFIGURE_ARGS+=	--enable-sasl=${BUILDLINK_PREFIX.sasl}
 # .endif
+#
+# ###
+# ### database support
+# ###
+# .if !empty(PKG_OPTIONS:Mmysql)
+# .  include "../../mk/mysql.buildlink3.mk"
+# .endif
+# .if !empty(PKG_OPTIONS:Mpgsql)
+# .  include "../../mk/pgsql.buildlink3.mk"
+# .endif
 # -------------8<-------------8<-------------8<-------------8<-------------
 
 .include "../../mk/bsd.prefs.mk"
@@ -103,6 +129,20 @@ PKG_FAIL_REASON+=	"bsd.options.mk: PKG_OPTIONS_VAR is not defined."
 # include deprecated variable to options mapping
 .include "${.CURDIR}/../../mk/defaults/obsolete.mk"
 
+#
+# create map of option to group and add group options to PKG_SUPPORTED_OPTOINS
+#
+.for _cls_ in ${PKG_OPTIONS_OPTIONAL_GROUPS} ${PKG_OPTIONS_REQUIRED_GROUPS}
+_PKG_OPTIONS_GROUP_STACK.${_cls_}:=#empty
+.  for _opt_ in ${PKG_OPTIONS_GROUP.${_cls_}}
+PKG_SUPPORTED_OPTIONS+= ${_opt_}
+_PKG_OPTIONS_GROUP_MAP.${_opt_}=${_cls_}
+.  endfor
+.endfor
+
+#
+# place options imlied by legacy variables in _PKG_LEGACY_OPTIONS
+#
 .for _m_ in ${PKG_OPTIONS_LEGACY_VARS}
 _var_:=	${_m_:C/:.*//}
 _opt_:=	${_m_:C/.*://}
@@ -124,6 +164,9 @@ _PKG_LEGACY_OPTIONS:=${_PKG_LEGACY_OPTIONS} ${_popt_}
 .undef _opt_
 .undef _popt_
 
+#
+# create map of old option name to new option name for legacy options
+#
 .for _m_ in ${PKG_OPTIONS_LEGACY_OPTS}
 _old_:= ${_m_:C/:.*//}
 _new_:= ${_m_:C/.*://}
@@ -170,18 +213,47 @@ _opt_:=		-${_popt_}
 .  if empty(PKG_SUPPORTED_OPTIONS:M${_popt_})
 _OPTIONS_UNSUPPORTED:=${_OPTIONS_UNSUPPORTED} ${_opt_}
 .  else
-.    if !empty(_opt_:M-*)
-PKG_OPTIONS:=	${PKG_OPTIONS:N${_popt_}}
+.    if defined(_PKG_OPTIONS_GROUP_MAP.${_popt_})
+_cls_:= ${_PKG_OPTIONS_GROUP_MAP.${_popt_}}
+_stk_:=	_PKG_OPTIONS_GROUP_STACK.${_cls_}
+_cnt_:=	${${_stk_}}
+.      if !empty(_opt_:M-*)
+${_stk_}:=	${_cnt_:N${_popt_}}
+.      else
+${_stk_}:=	${_cnt_} ${_popt_}
+.      endif
 .    else
+.      if !empty(_opt_:M-*)
+PKG_OPTIONS:=	${PKG_OPTIONS:N${_popt_}}
+.      else
 PKG_OPTIONS:=	${PKG_OPTIONS} ${_popt_}
+.      endif
 .    endif
 .  endif
 .endfor
 .undef _opt_
 .undef _popt_
+.undef _stk_
+
+.for _cls_ in ${PKG_OPTIONS_REQUIRED_GROUPS}
+.  if empty(_PKG_OPTIONS_GROUP_STACK.${_cls_})
+PKG_FAIL_REASON:="One of the following options must be selected: "${PKG_OPTIONS_GROUP.${_cls_}:O:u:Q}
+.  endif
+.endfor
+
+.for _cls_ in ${PKG_OPTIONS_REQUIRED_GROUPS} ${PKG_OPTIONS_OPTIONAL_GROUPS}
+.undef _opt_
+.  for _o_ in ${_PKG_OPTIONS_GROUP_STACK.${_cls_}}
+_opt_:=		${_o_}
+.  endfor
+.  if defined(_opt_)
+PKG_OPTIONS:=	${PKG_OPTIONS} ${_opt_}
+.  endif
+.endfor
+.undef _opt_
 
 .if !empty(_OPTIONS_UNSUPPORTED)
-PKG_FAIL_REASON:=	"The following selected options are not supported: ${_OPTIONS_UNSUPPORTED:O:u:Q}."
+PKG_FAIL_REASON:=	"The following selected options are not supported: "${_OPTIONS_UNSUPPORTED:O:u:Q}"."
 .endif
 
 .undef _OPTIONS_UNSUPPORTED
