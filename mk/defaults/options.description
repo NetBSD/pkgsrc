@@ -187,6 +187,7 @@ perl-taint-checks
 perl-warnings	
 pf	
 pgsql	
+pinfo-native-curses	Use NetBSD native curses rather than ncurses.
 plplot	
 png			Enable PNG support.
 portals	
