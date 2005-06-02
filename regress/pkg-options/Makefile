@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/31 11:05:31 dillo Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/02 20:38:51 dillo Exp $
 #
 
 DISTNAME=	regress-pkg-options-1.0
@@ -8,7 +8,7 @@ DISTFILES=	# empty
 MAINTAINER=	rillig@NetBSD.org
 COMMENT=	Test bsd.options.mk framework
 
-REGRESS_TESTS=	all legacy-opt order simple unsupported
+REGRESS_TESTS=	all group-required groups legacy-opt order simple unsupported
 
 do-test:
 .for t in ${REGRESS_TESTS}
