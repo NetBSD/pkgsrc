@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.33 2005/06/02 20:43:55 wiz Exp $
+# $NetBSD: bsd.options.mk,v 1.34 2005/06/02 21:55:05 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -126,9 +126,6 @@ PKG_FAIL_REASON+=	"bsd.options.mk: PKG_SUPPORTED_OPTIONS is not defined."
 PKG_FAIL_REASON+=	"bsd.options.mk: PKG_OPTIONS_VAR is not defined."
 .else # process the rest of the file
 
-# include deprecated variable to options mapping
-.include "${.CURDIR}/../../mk/defaults/obsolete.mk"
-
 #
 # create map of option to group and add group options to PKG_SUPPORTED_OPTOINS
 #
@@ -139,6 +136,11 @@ PKG_SUPPORTED_OPTIONS+= ${_opt_}
 _PKG_OPTIONS_GROUP_MAP.${_opt_}=${_cls_}
 .  endfor
 .endfor
+
+#
+# include deprecated variable to options mapping
+#
+.include "${.CURDIR}/../../mk/defaults/obsolete.mk"
 
 #
 # place options imlied by legacy variables in _PKG_LEGACY_OPTIONS
