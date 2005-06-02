@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.19 2005/06/02 14:24:04 blymn Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/02 14:29:48 wiz Exp $
 
 DISTNAME=	bzflag-2.0.2.20050318
 PKGNAME=	${DISTNAME:S/.20050318//}
-PKGREVISION=	0
 CATEGORIES=	games x11
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=bzflag/}
 
-MAINTAINER=	dtremenak@users.sourceforge.net	
+MAINTAINER=	dtremenak@users.sourceforge.net
 HOMEPAGE=	http://www.bzflag.org/
 COMMENT=	OpenGL tank game
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl
 USE_LANGUAGES=	c c++
 USE_NCURSES=	# resize_term()
-USE_PERL5=	build
 USE_X11=	yes
 CPPFLAGS+=      -I/usr/pkg/include -I${X11BASE}/include
 
