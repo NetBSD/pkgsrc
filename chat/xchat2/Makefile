@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2005/06/02 22:08:29 tron Exp $
+# $NetBSD: Makefile,v 1.44 2005/06/02 23:33:14 tron Exp $
 
-DISTNAME=		xchat-2.4.1
-PKGREVISION=		1
+DISTNAME=		xchat-2.4.3
 CATEGORIES=		chat gnome
 MASTER_SITES=		http://www.xchat.org/files/source/2.4/
 EXTRACT_SUFX=		.tar.bz2
 
-PATCH_SITES=		${MASTER_SITES:=patches/}
-PATCHFILES=		xc241-fix-fetext.diff
-PATCH_DIST_STRIP=	-p1
-
-MAINTAINER=		minskim@NetBSD.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.xchat.org/
 COMMENT=		X11 (X Window System) IRC client, using the GTK2 toolkit
 
