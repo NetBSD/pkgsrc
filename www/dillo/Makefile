@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/06/01 18:03:26 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/06/02 18:11:34 wiz Exp $
 
 DISTNAME=	dillo-0.8.4
 CATEGORIES=	www
@@ -18,10 +18,12 @@ EGDIR=		${PREFIX}/share/examples/dillo
 CONF_FILES=	${EGDIR}/dillorc.default ${PKG_SYSCONFDIR}/dillorc
 CONF_FILES+=	${EGDIR}/dpidrc ${PKG_SYSCONFDIR}/dpidrc
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.dillo
+PKG_SUPPORTED_OPTIONS=	inet6
 
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-BUILD_DEFS+=		USE_INET6
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
