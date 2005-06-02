@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2005/06/01 18:03:08 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/02 20:48:12 garbled Exp $
 
-DISTNAME=		clusterit-2.3
+DISTNAME=		clusterit-2.3.1
 CATEGORIES=		parallel
 MASTER_SITES=		http://www.garbled.net/download/
 
