@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:07:42 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/02 21:39:53 wiz Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -29,18 +29,14 @@ EGDIR=			${PREFIX}/share/examples/jabberd
 LIBDIR=			${PREFIX}/lib/jabberd
 INCDIR=			${PREFIX}/include/jabberd
 
-.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 # some systems don't have u_intN_t
 CPPFLAGS+=		-Du_int8_t=uint8_t
 
 BUILD_DEFS+=		JABBERD_USER	JABBERD_GROUP \
 			JABBERD_LOGDIR	JABBERD_SPOOLDIR \
-			JABBERD_PIDDIR  USE_INET6
-
-.if !empty(USE_INET6:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
+			JABBERD_PIDDIR
 
 PKG_GROUPS=             ${JABBERD_GROUP}
 PKG_USERS=              ${JABBERD_USER}:${JABBERD_GROUP}::Jabberd\\ user
