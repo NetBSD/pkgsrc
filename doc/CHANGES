@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10280 2005/06/02 10:33:15 abs Exp $
+$NetBSD: CHANGES,v 1.10281 2005/06/02 14:26:25 blymn Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2768,3 +2768,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/yorick to 1.6.02 [drochner 2005-06-02]
 	Updated graphics/py-matplotlib to 0.80 [drochner 2005-06-02]
 	Updated www/jakarta-tomcat55 to 5.5.9 [abs 2005-06-02]
+	Updated games/bzflag to 2.0.2 [blymn 2005-06-02]
