@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10278 2005/06/01 23:27:04 bouyer Exp $
+$NetBSD: CHANGES,v 1.10279 2005/06/02 10:19:28 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2762,3 +2762,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/poppassd to 4.0.8 [adrianp 2005-06-01]
 	Updated net/bind9 to 9.3.1 [tron 2005-06-01]
 	Updated mail/mailman to 2.1.6 [bouyer 2005-06-02]
+	Added devel/monotone-viz version 0.9 [drochner 2005-06-02]
+	Added print/epstool version 3.07 [drochner 2005-06-02]
+	Updated editors/TeXmacs to 1.0.5.2 [drochner 2005-06-02]
+	Updated math/yorick to 1.6.02 [drochner 2005-06-02]
+	Updated graphics/py-matplotlib to 0.80 [drochner 2005-06-02]
