@@ -254,6 +254,9 @@ viruscan
 vmware	
 vorbis			Enable Ogg Vorbis support.
 vpop	
+w3m-lynx-key		Enable lynx-like key bindings.
+w3m-m17n		Multilingual support.
+w3m-unicode		Use Unicode characters.
 wrap	
 wx	
 x11	
