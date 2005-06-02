@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3580 2005/06/01 23:27:05 bouyer Exp $
+$NetBSD: TODO,v 1.3581 2005/06/02 10:24:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -313,7 +313,6 @@ Suggested package updates
 	o PAM-0.78
 	o RealPlayerGold-10.0.4
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.5.2
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
