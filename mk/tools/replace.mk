@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.96 2005/06/02 09:31:25 tron Exp $
+# $NetBSD: replace.mk,v 1.97 2005/06/02 21:03:32 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -809,11 +809,10 @@ TOOLS_${_TOOLS_VARNAME.pax}=	${TOOLS_REAL_CMD.pax}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.perl) && !empty(USE_TOOLS:Mperl)
+.if !defined(TOOLS_IGNORE.perl) && !empty(_USE_TOOLS:Mperl)
 .  if !empty(PKGPATH:Mlang/perl58)
 MAKEFLAGS+=			TOOLS_IGNORE.perl=
-.  elif defined(_TOOLS_USE_PKGSRC.perl) && \
-        !empty(_TOOLS_USE_PKGSRC.perl:M[yY][eE][sS])
+.  elif !empty(_TOOLS_USE_PKGSRC.perl:M[yY][eE][sS])
 .    include "../../lang/perl5/version.mk"
 TOOLS_DEPENDS.perl?=		{perl>=${PERL5_REQD},perl-thread>=${PERL5_REQD}}:../../lang/perl58
 TOOLS_CREATE+=			perl
