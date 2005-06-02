@@ -1,6 +1,6 @@
-# $NetBSD: group-required.mk,v 1.1 2005/06/02 20:38:51 dillo Exp $
+# $NetBSD: group-required.mk,v 1.2 2005/06/02 20:45:18 wiz Exp $
 #
-# This file tests that selecting no option from a requried group
+# This file tests that selecting no option from a required group
 # causes the package build to fail.
 #
 
