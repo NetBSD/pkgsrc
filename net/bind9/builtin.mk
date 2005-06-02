@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2005/06/01 18:03:07 jlam Exp $
+# $NetBSD: builtin.mk,v 1.8 2005/06/02 00:27:22 jlam Exp $
 
 BUILTIN_PKG:=	bind
 
@@ -32,7 +32,8 @@ MAKEVARS+=	IS_BUILTIN.bind
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.bind) && \
-    !empty(IS_BUILTIN.bind:M[yY][eE][sS])
+    !empty(IS_BUILTIN.bind:M[yY][eE][sS]) && \
+    defined(BUILTIN_VERSION.bind)
 BUILTIN_PKG.bind=	bind-${BUILTIN_VERSION.bind:Nvers}
 .endif
 MAKEVARS+=	BUILTIN_PKG.bind
