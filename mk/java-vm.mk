@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.41 2005/04/20 13:17:40 tron Exp $
+# $NetBSD: java-vm.mk,v 1.42 2005/06/02 10:07:48 abs Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -17,7 +17,8 @@
 #	add the dependency on the JDK.  The default value is "yes".
 #
 # USE_JAVA2 is used to note that the package requires a Java2 implementation.
-#	It's undefined by default, but may be set to "yes".
+#	It's undefined by default, but may be set to "yes" or to one of
+#	1.4 or 1.5
 #
 # PKG_JVM_DEFAULT is a user-settable variable whose value is the default
 #	JVM to use.
@@ -41,7 +42,11 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 
 # This is a list of all of the JVMs that may be used with java-vm.mk.
 #
-.if defined(USE_JAVA2) && !empty(USE_JAVA2:M[yY][eE][sS])
+.if defined(USE_JAVA2) && ${USE_JAVA2} == "1.5"
+_PKG_JVMS?=		sun-jdk15
+.elif defined(USE_JAVA2) && ${USE_JAVA2} == "1.4"
+_PKG_JVMS?=		sun-jdk14 sun-jdk15 jdk14
+.elif defined(USE_JAVA2) && !empty(USE_JAVA2:M[yY][eE][sS])
 _PKG_JVMS?=		sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe \
 			sun-jdk15 jdk14 # win32-jdk
 .else
