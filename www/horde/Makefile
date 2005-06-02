@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32.2.1 2005/05/15 21:44:31 salo Exp $
+# $NetBSD: Makefile,v 1.32.2.2 2005/06/02 23:35:17 salo Exp $
 
 DISTNAME=	horde-2.2.8
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.horde.org/pub/horde/tarballs/
 
@@ -11,7 +12,8 @@ COMMENT=	PHP application framework
 CONFLICTS+=	horde-3.*
 
 DEPENDS+=	php-gettext>=4.3.3:../../devel/php-gettext
-DEPENDS+=	pear-Log-*:../../sysutils/pear-Log
+DEPENDS+=	pear-Log-[0-9]*:../../sysutils/pear-Log
+DEPENDS+=	pear-DB-[0-9]*:../../databases/pear-DB
 
 DOCDIR=		${PREFIX}/share/doc/horde
 EGDIR=		${PREFIX}/share/examples/horde
