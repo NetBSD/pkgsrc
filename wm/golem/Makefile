@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/01 18:03:25 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/02 18:10:33 wiz Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -20,10 +20,13 @@ CONFIGURE_ARGS=	--enable-i18n
 CONFIGURE_ARGS+=	--enable-xinerama
 .endif
 
-GOLEM_WITH_SOUND?=	NO
+PKG_OPTIONS_VAR=	PKG_OPTIONS.golem
+PKG_SUPPORTED_OPTIONS=	esound
+PKG_OPTIONS_LEGACY_VARS+=	GOLEM_WITH_SOUND:esound
 
-.if !empty(GOLEM_WITH_SOUND:M[Yy][Ee][Ss])
-BUILD_DEFS=		GOLEM_WITH_SOUND
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mesound)
 CONFIGURE_ARGS+=	--enable-sound
 PLIST_SUBST=		NOT_SOUND=
 .include "../../audio/esound/buildlink3.mk"
