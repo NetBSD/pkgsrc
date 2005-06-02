@@ -60,7 +60,7 @@ dvdread			Enable reproduction of DVDs.
 dynamic	
 eb	
 edit	
-esound			Enable support for Enlightment Sound Daemon.
+esound			Enable support for the Enlightment Sound Daemon.
 faac	
 faad	
 fam	
