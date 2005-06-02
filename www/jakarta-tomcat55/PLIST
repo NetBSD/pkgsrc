@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:07 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/06/02 10:31:42 abs Exp $
 share/examples/rc.d/tomcat
 tomcat/LICENSE
 tomcat/NOTICE
@@ -13,10 +13,12 @@ tomcat/bin/jsvc.tar.gz
 tomcat/bin/setclasspath.sh
 tomcat/bin/shutdown.sh
 tomcat/bin/startup.sh
+tomcat/bin/tomcat-juli.jar
 tomcat/bin/tomcat5.exe
 tomcat/bin/tomcat5w.exe
 tomcat/bin/tool-wrapper.sh
 tomcat/bin/version.sh
+tomcat/common/classes/logging.properties
 tomcat/common/i18n/tomcat-i18n-en.jar
 tomcat/common/i18n/tomcat-i18n-es.jar
 tomcat/common/i18n/tomcat-i18n-fr.jar
@@ -45,6 +47,19 @@ tomcat/server/lib/tomcat-ajp.jar
 tomcat/server/lib/tomcat-coyote.jar
 tomcat/server/lib/tomcat-http.jar
 tomcat/server/lib/tomcat-util.jar
+tomcat/server/webapps/host-manager/WEB-INF/lib/catalina-host-manager.jar
+tomcat/server/webapps/host-manager/WEB-INF/web.xml
+tomcat/server/webapps/host-manager/host-manager.xml
+tomcat/server/webapps/host-manager/images/add.gif
+tomcat/server/webapps/host-manager/images/code.gif
+tomcat/server/webapps/host-manager/images/design.gif
+tomcat/server/webapps/host-manager/images/docs.gif
+tomcat/server/webapps/host-manager/images/fix.gif
+tomcat/server/webapps/host-manager/images/jakarta-logo.gif
+tomcat/server/webapps/host-manager/images/tomcat.gif
+tomcat/server/webapps/host-manager/images/update.gif
+tomcat/server/webapps/host-manager/images/void.gif
+tomcat/server/webapps/host-manager/manager.xml
 tomcat/server/webapps/manager/WEB-INF/lib/catalina-manager.jar
 tomcat/server/webapps/manager/WEB-INF/lib/commons-fileupload-1.0.jar
 tomcat/server/webapps/manager/WEB-INF/web.xml
@@ -966,6 +981,10 @@ tomcat/webapps/webdav/tomcat.gif
 @dirrm tomcat/server/webapps/manager/WEB-INF/lib
 @dirrm tomcat/server/webapps/manager/WEB-INF
 @dirrm tomcat/server/webapps/manager
+@dirrm tomcat/server/webapps/host-manager/images
+@dirrm tomcat/server/webapps/host-manager/WEB-INF/lib
+@dirrm tomcat/server/webapps/host-manager/WEB-INF
+@dirrm tomcat/server/webapps/host-manager
 @dirrm tomcat/server/webapps
 @dirrm tomcat/server/lib
 @dirrm tomcat/server/classes
@@ -980,21 +999,14 @@ tomcat/webapps/webdav/tomcat.gif
 @dirrm tomcat/common/classes
 @dirrm tomcat/common
 @dirrm tomcat/bin
-@comment @exec ${MKDIR} %D/tomcat/work
-@comment @exec ${MKDIR} %D/tomcat/webapps/balancer/images
-@comment @exec ${MKDIR} %D/tomcat/temp
-@comment @exec ${MKDIR} %D/tomcat/shared/lib
-@comment @exec ${MKDIR} %D/tomcat/shared/classes
-@comment @exec ${MKDIR} %D/tomcat/server/webapps/admin/valve
-@comment @exec ${MKDIR} %D/tomcat/server/webapps/admin/service
-@comment @exec ${MKDIR} %D/tomcat/server/webapps/admin/server
-@comment @exec ${MKDIR} %D/tomcat/server/webapps/admin/realm
-@comment @exec ${MKDIR} %D/tomcat/server/webapps/admin/logger
-@comment @exec ${MKDIR} %D/tomcat/server/webapps/admin/host
-@comment @exec ${MKDIR} %D/tomcat/server/webapps/admin/defaultcontext
-@comment @exec ${MKDIR} %D/tomcat/server/webapps/admin/context
-@comment @exec ${MKDIR} %D/tomcat/server/webapps/admin/connector
-@comment @exec ${MKDIR} %D/tomcat/server/classes
-@comment @exec ${MKDIR} %D/tomcat/logs
-@comment @exec ${MKDIR} %D/tomcat/common/classes
+@exec ${MKDIR} %D/tomcat/common/classes
+@exec ${MKDIR} %D/tomcat/common/endorsed
+@exec ${MKDIR} %D/tomcat/logs
+@exec ${MKDIR} %D/tomcat/server/classes
+@exec ${MKDIR} %D/tomcat/shared/classes
+@exec ${MKDIR} %D/tomcat/shared/lib
+@exec ${MKDIR} %D/tomcat/temp
+@exec ${MKDIR} %D/tomcat/webapps/balancer/images
+@exec ${MKDIR} %D/tomcat/work
 @unexec ${RMDIR} -p %D/tomcat 2> /dev/null || ${TRUE}
+@unexec ${RM} -rf %D/tomcat/work 2> /dev/null || ${TRUE}
