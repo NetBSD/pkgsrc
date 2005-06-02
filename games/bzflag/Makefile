@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/02 14:29:48 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/02 14:40:15 salo Exp $
 
 DISTNAME=	bzflag-2.0.2.20050318
 PKGNAME=	${DISTNAME:S/.20050318//}
@@ -13,7 +13,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl
 USE_LANGUAGES=	c c++
 USE_NCURSES=	# resize_term()
-USE_X11=	yes
 CPPFLAGS+=      -I/usr/pkg/include -I${X11BASE}/include
 
 .include "../../mk/bsd.prefs.mk"
@@ -28,12 +27,12 @@ SUBST_SED.fixme+=   -e "s|@LINUX_FALSE@|\#|g"
 
 CONFIGURE_ARGS+=	--with-ncurses
 
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
