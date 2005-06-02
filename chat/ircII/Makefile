@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/04/11 21:45:04 tv Exp $
+# $NetBSD: Makefile,v 1.38 2005/06/02 22:21:18 wiz Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -28,24 +28,13 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-default-server=${DEFAULT_IRC_SERVER}
 .endif
 
+# Note: this pkg auto-detects IPv6 without regarding USE_INET6.
+# (Leave the line in to still get it into the README-IPv6.html!)
 BUILD_DEFS+=		USE_INET6
 
-# Note: this pkg auto-detects IPv6 without regarding USE_INET6.
-# (Leave the above line in to still get it into the README-IPv6.html!)
-
 PLIST_SRC=		${WRKDIR}/PLIST.tmp
-BUILD_DEFS+=		USE_SOCKS
 
-# Include SOCKS firewall support
-.if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
-.  if ${USE_SOCKS} == 4
-.    include "../../net/socks4/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-socks4=${BUILDLINK_PREFIX.socks4}
-.  elif ${USE_SOCKS} == 5
-.    include "../../net/socks5/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-socks5=${BUILDLINK_PREFIX.socks5}
-.  endif
-.endif
+.include "options.mk"
 
 # Allow customizations from ${MAKECONF}
 CONFIGURE_ARGS+=	${IRCII_CONFIGURE_ARGS}
