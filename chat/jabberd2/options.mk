@@ -1,15 +1,13 @@
-# $NetBSD: options.mk,v 1.9 2005/05/31 11:24:32 dillo Exp $
+# $NetBSD: options.mk,v 1.10 2005/06/02 20:39:16 dillo Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.jabberd2
-PKG_SUPPORTED_OPTIONS=	db mysql pgsql ldap pam
+PKG_SUPPORTED_OPTIONS=	db ldap pam
+PKG_OPTIONS_OPTIONAL_GROUPS=	database
+PKG_OPTIONS_GROUP.database=	mysql pgsql
 PKG_SUGGESTED_OPTIONS=	mysql
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mmysql) && !empty(PKG_OPTIONS:Mpgsql)
-PKG_FAIL_REASON+=	"Cannot use mysql and pgsql, use one of them."
-.endif
 
 .if !empty(PKG_OPTIONS:Mdb)
 BUILD_DEFS+=		JABBERD_DBDIR
