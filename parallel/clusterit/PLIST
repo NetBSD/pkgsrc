@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/02 20:48:12 garbled Exp $
 bin/barrier
 bin/barrierd
-bin/seq
+bin/rseq
 bin/run
 bin/dsh
 bin/pcp
@@ -15,7 +15,7 @@ bin/jsh
 bin/jsd
 man/man1/barrier.1
 man/man1/barrierd.1
-man/man1/seq.1
+man/man1/rseq.1
 man/man1/run.1
 man/man1/dsh.1
 man/man1/pcp.1
