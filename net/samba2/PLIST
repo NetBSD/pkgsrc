@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:03 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/06/02 09:48:43 salo Exp $
 bin/findsmb
 bin/make_printerdef
 bin/make_smbcodepage
@@ -94,9 +94,9 @@ share/doc/samba/WindowsTerminalServer.reg
 share/doc/samba/announce
 share/doc/samba/cifsntdomain.txt
 share/doc/samba/security_level.txt
-share/examples/rc.d/smbd
 share/examples/rc.d/nmbd
 share/examples/rc.d/samba
+share/examples/rc.d/smbd
 share/examples/samba/LDAP/README
 share/examples/samba/LDAP/export_smbpasswd.pl
 share/examples/samba/LDAP/import_smbpasswd.pl

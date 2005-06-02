@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/05/31 11:24:32 dillo Exp $
+# $NetBSD: options.mk,v 1.4 2005/06/02 09:48:43 salo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba2
 PKG_SUPPORTED_OPTIONS=	pam cups ldap-compat
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--enable-cups
 .  include "../../databases/openldap/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldapsam
 PLIST_SUBST+=		SAMBA_LDAP=""
-.else   
+.else
 PLIST_SUBST+=		SAMBA_LDAP="@comment "
 MESSAGE_SRC=		${.CURDIR}/MESSAGE.smbpasswd
 SMBPASSWD_FILE=		/dev/null ${SAMBA_PRIVATE}/smbpasswd		\
