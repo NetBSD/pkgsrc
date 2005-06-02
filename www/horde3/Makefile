@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2.2.1 2005/04/01 05:19:28 snj Exp $
+# $NetBSD: Makefile,v 1.2.2.2 2005/06/02 23:19:55 salo Exp $
 
 DISTNAME=	horde-3.0.4
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.horde.org/pub/horde/tarballs/
 
@@ -16,6 +17,7 @@ DEPENDS+=	php-iconv>=4.3.3:../../converters/php-iconv
 DEPENDS+=	php-gd>=4.3.3:../../graphics/php-gd
 DEPENDS+=	pear-Log-[0-9]*:../../sysutils/pear-Log
 DEPENDS+=	pear-Mail_Mime-[0-9]*:../../mail/pear-Mail_Mime
+DEPENDS+=	pear-DB-[0-9]*:../../databases/pear-DB
 DEPENDS+=	ap-php>=4.3.3:../../www/ap-php
 DEPENDS+=	php-domxml>=4.3.3:../../textproc/php4-domxml
 DEPENDS+=	php-zlib>=4.3.3:../../archivers/php-zlib
