@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.115 2005/06/02 11:12:40 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.116 2005/06/02 23:00:50 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -259,3 +259,7 @@ Pullup ticket 528 - requested by Thomas Klausner
 PLIST fix for lablgtk2
 Pullup ticket 536 - requested by Manuel Bouyer
 security update for mailman
+Pullup ticket 529 - requested by Lubomir Sedlacik
+security update for cdrdao
+Pullup ticket 531 - requested by Lubomir Sedlacik
+security fix for wine
