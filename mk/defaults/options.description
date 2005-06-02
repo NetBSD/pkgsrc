@@ -74,7 +74,7 @@ gd
 gdbm	
 gdk-pixbuf	
 gif			Enable GIF support.
-gimp1-helpbrowser	Links gimp1 against gnome1 to get a help browser.
+gimp1-helpbrowser	Link against gnome1 to get a help browser.
 glib1	
 glint	
 glpk	
@@ -83,8 +83,8 @@ gnupg
 gnuplot	
 gnutls	
 gpgsm	
-gqmpeg-japanese		Japanese ID3 tag support in gqmpeg.
-gqmpeg-russian		Russian ID3 tag support in gqmpeg.
+gqmpeg-japanese		Japanese ID3 tag support.
+gqmpeg-russian		Russian ID3 tag support.
 graphs	
 gsasl	
 gssapi	
@@ -178,7 +178,7 @@ openldap
 openssl	
 oss			Enable support for the Open Sound System audio library.
 outgoingip	
-pam			Enabel PAM support.
+pam			Enable PAM support.
 patchviewer	
 pcre	
 perf-tuning	
