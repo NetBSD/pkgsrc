@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/06/01 20:31:38 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2005/06/02 16:08:31 dillo Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -45,26 +45,23 @@ PKG_SUPPORTED_OPTIONS+=	mplayer-real
 # Define PKG_SUGGESTED_OPTIONS.
 # -------------------------------------------------------------------------
 
-PKG_SUGGESTED_OPTIONS+=	cdparanoia dv dvdread gif jpeg mad mplayer-menu \
-			oss png mplayer-real theora vorbis \
-			mplayer-runtime-cpudetection mplayer-win32 \
-			xvid
-.if !empty(PKGNAME:M*mplayer*)
-PKG_SUGGESTED_OPTIONS+=	arts esound nas sdl
-.elif !empty(PKGNAME:M*mencoder*)
-PKG_SUGGESTED_OPTIONS+=	lame
-.endif
+.for _o_ in arts cdparanoia dv dvdread esound gif jpeg \
+	    lame mad mplayer-menu mplayer-real \
+	    mplayer-runtime-cpudetection mplayer-win32 \
+	    nas oss png sdl theora vorbis xvid 
+.  if !empty(PKG_SUPPORTED_OPTIONS:M${_o_})
+PKG_SUGGESTED_OPTIONS+=	${_o_}
+.  endif
+.endfor
 
 # -------------------------------------------------------------------------
 # Define PKG_SUGGESTED_OPTIONS based on deprecated variables.
 # -------------------------------------------------------------------------
 
-BUILD_DEFS+=		MPLAYER_DISABLE_DRIVERS
 .for d in ${MPLAYER_DISABLE_DRIVERS}
 PKG_SUGGESTED_OPTIONS+=	-${d:S/esd/esound/}
 _DEPRECATED_WARNING:=	${_DEPRECATED_WARNING} "Deprecated variable MPLAYER_DISABLE_DRIVERS=${d} used; use PKG_DEFAULT_OPTIONS+=-${d:S/esd/esound/} instead."
 .endfor
-.undef d
 
 .if ${MACHINE_ARCH} == "i386"
 PKG_OPTIONS_LEGACY_VARS+=	\
