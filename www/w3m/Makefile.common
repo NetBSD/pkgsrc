@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2005/06/01 18:03:27 jlam Exp $
+# $NetBSD: Makefile.common,v 1.36 2005/06/02 18:24:18 wiz Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -20,45 +20,7 @@ USE_PERL5=	run
 
 DOCDIR=		share/doc/w3m
 
-.include "../../mk/bsd.prefs.mk"
-
-# Memo about W3m configuration:
-#
-#	* pkgsrc should export only user configurable build options that can't
-#	  be configured at run-time.
-#
-#	* As of 0.5, W3m is moving from English/Japanese (localized model) to
-#	  internationalized model.  The set of its options are not well refined
-#	  nor tested yet.  These configuration should be revisited later.
-#
-#	* --enable-m17n enables multibyte encoding support, and
-#	  --enable-unicode adds UTF-7/UTF-8 support.  W3m has a home-grown M17N
-#	  library (libwc) instead of using libc's I18N functions, that means
-#	  enabling M17N much increases the size of W3m binary.  Additionary W3m
-#	  has a home-grown Unicode mapping table, which is huge too!
-#
-
-BUILD_DEFS+=	W3M_USE_M17N
-BUILD_DEFS+=	W3M_USE_UNICODE
-BUILD_DEFS+=	W3M_USE_LYNX_KEY
-
-.if ${W3M_USE_M17N} == YES
-CONFIGURE_ARGS+=	--enable-m17n
-.else
-CONFIGURE_ARGS+=	--disable-m17n
-.endif
-
-.if ${W3M_USE_UNICODE} == YES
-CONFIGURE_ARGS+=	--enable-unicode
-.else
-CONFIGURE_ARGS+=	--disable-unicode
-.endif
-
-.if ${W3M_USE_LYNX_KEY} == YES
-CONFIGURE_ARGS+=	--enable-keymap=lynx
-.else
-CONFIGURE_ARGS+=	--enable-keymap=w3m
-.endif
+.include "options.mk"
 
 _W3M_USE_IMAGE?=	NO
 .if ${_W3M_USE_IMAGE} == YES
@@ -66,6 +28,8 @@ CONFIGURE_ARGS+=	--enable-image=x11
 .else
 CONFIGURE_ARGS+=	--disable-image
 .endif
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-termlib=curses
