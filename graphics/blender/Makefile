@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/06/01 18:02:54 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2005/06/02 14:14:43 wiz Exp $
 #
 
 DISTNAME=		blender-2.36
@@ -20,11 +20,7 @@ USE_LIBTOOL=		YES
 
 LDFLAGS+=		-lcrypto
 
-.include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=		BLENDER_USE_OGG BLENDER_USE_VORBIS
-BUILD_DEFS+=		BLENDER_USE_OPENAL BLENDER_USE_EXPPYTHON
-BUILD_DEFS+=		BLENDER_INSTALL_DOC
+.include "options.mk"
 
 post-patch:
 	${MV} ${WRKSRC}/SConstruct ${WRKSRC}/SConstruct.orig
@@ -43,40 +39,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/blender/scripts
 	${INSTALL_DATA} ${WRKSRC}/release/scripts/* ${PREFIX}/share/blender/scripts
 	${INSTALL} ${WRKDIR}/blender/bin/blender ${PREFIX}/bin
-
-.if defined(BLENDER_INSTALL_DOC)
-DEPENDS+=		blender-doc:../../graphics/blender-doc
-.endif
-
-#
-# disabled these options; they ought to be re-instantiated one day
-#
-.if 0
-.if defined(BLENDER_USE_OGG)
-CONFIGURE_ARGS+=	--with-ogg=${PREFIX}
-.include "../../multimedia/libogg/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-ogg --disable-oggtest
-.endif
-
-.if defined(BLENDER_USE_VORBIS)
-CONFIGURE_ARGS+=	--with-vorbis=${PREFIX}
-.include "../../audio/libvorbis/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-vorbis --disable-vorbistest
-.endif
-
-.if defined(BLENDER_USE_OPENAL)
-CONFIGURE_ARGS+=	--enable-openal
-.include "../../audio/openal/buildlink3.mk"
-.endif
-
-.if defined(BLENDER_USE_EXPPYTHON)
-CONFIGURE_ARGS+=	--enable-exppython
-.else
-CONFIGURE_ARGS+=	--disable-exppython
-.endif
-.endif
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
