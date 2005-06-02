@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2005/03/02 21:09:56 kim Exp $
+# $NetBSD: Makefile,v 1.21.2.1 2005/06/02 11:12:08 salo Exp $
 
-DISTNAME=	mailman-2.1.5
+DISTNAME=	mailman-2.1.6
 PKGREVISION=	# empty
 CATEGORIES=	mail www
 MASTER_SITES=	http://www.list.org/ \
@@ -65,7 +65,7 @@ RCD_SCRIPTS=		mailman
 INSTALL_EXTRA_TMPL+=	${FILESDIR}/INSTALL
 DEINSTALL_EXTRA_TMPL+=	${FILESDIR}/DEINSTALL
 
-PYTHON_VERSIONS_ACCEPTED= 23 22 21
+PYTHON_VERSIONS_ACCEPTED= 24 23 22 21
 PYTHON_PATCH_SCRIPTS+=	Mailman/Archiver/pipermail.py
 PYTHON_PATCH_SCRIPTS+=	Mailman/Post.py
 PYTHON_PATCH_SCRIPTS+=	admin/bin/Release.py
