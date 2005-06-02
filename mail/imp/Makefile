@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/05/09 16:15:06 minskim Exp $
+# $NetBSD: Makefile,v 1.31 2005/06/02 09:13:44 bouyer Exp $
 
 DISTNAME=	imp-3.2.8
 CATEGORIES=	mail www
@@ -12,6 +12,7 @@ CONFLICTS+=	imp-4.*
 
 DEPENDS+=	horde>=2.2.4:../../www/horde
 DEPENDS+=	php-imap>4.0.0:../../mail/php-imap
+DEPENDS+=	pear-Mail-[0-9]*:../../mail/pear-Mail
 
 DOCDIR=		${PREFIX}/share/doc/imp
 EGDIR=		${PREFIX}/share/examples/imp
