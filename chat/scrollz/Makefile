@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:05 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/02 21:21:12 wiz Exp $
 #
 
 DISTNAME=	ScrollZ-1.9
@@ -10,13 +10,14 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.scrollz.com/
 COMMENT=	Advanced IRC client based on ircII client
 
-BUILD_DEFS+=	USE_INET6
-
 GNU_CONFIGURE=	yes
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.scrollz
+PKG_SUPPORTED_OPTIONS=	inet6
 
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
