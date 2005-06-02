@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/16 21:36:27 adrianp Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2005/06/02 23:19:55 salo Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.horde.org/pub/imp/tarballs/
 
@@ -13,6 +14,7 @@ CONFLICTS+=	imp-3.*
 
 DEPENDS+=	horde>=3.0.2:../../www/horde3
 DEPENDS+=	php-imap>4.3.3:../../mail/php-imap
+DEPENDS++	pear-Mail-[0-9]*:../../mail/pear-Mail
 
 .include "../../mk/bsd.prefs.mk"
 
