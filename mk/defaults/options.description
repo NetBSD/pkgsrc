@@ -221,7 +221,6 @@ slang
 slp	
 snmp	
 socketmap	
-socks			XXX: don't use this, use socks4 or socks5
 socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
 sqlite	
