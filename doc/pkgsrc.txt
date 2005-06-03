@@ -104,7 +104,7 @@ I. The pkgsrc user's guide
             mean?
         6.12. What does "Could not find bsd.own.mk" mean?
         6.13. Using 'sudo' with pkgsrc
-        6.14. Configuration files handling and placement
+        6.14. How do I change the location of configuration files?
         6.15. Automated security checks
 
 II. The pkgsrc developer's guide
@@ -157,80 +157,100 @@ II. The pkgsrc developer's guide
             10.3.1. Anatomy of a builtin.mk file
             10.3.2. Global preferences for native or pkgsrc software
 
-    11. Options handling
+    11. The pkginstall framework
 
-        11.1. Global default options
-        11.2. Converting packages to use bsd.options.mk
+        11.1. Files and directories outside the installation prefix
 
-    12. The build process
+            11.1.1. Directory manipulation
+            11.1.2. File manipulation
 
-        12.1. Program location
-        12.2. Main targets
-        12.3. Other helpful targets
+        11.2. Configuration files
 
-    13. Notes on fixes for packages
+            11.2.1. How PKG_SYSCONFDIR is set
+            11.2.2. Telling the software were configuration files are
+            11.2.3. Patching installations
+            11.2.4. Disabling handling of configuration files
 
-        13.1. General operation
+        11.3. System startup scripts
 
-            13.1.1. How to pull in variables from /etc/mk.conf
-            13.1.2. Where to install documentation
-            13.1.3. Restricted packages
-            13.1.4. Handling dependencies
-            13.1.5. Handling conflicts with other packages
-            13.1.6. Packages that cannot or should not be built
-            13.1.7. Packages which should not be deleted, once installed
-            13.1.8. Handling packages with security problems
-            13.1.9. How to handle compiler bugs
-            13.1.10. How to handle incrementing versions when fixing an
+            11.3.1. Disabling handling of system startup scripts
+
+        11.4. System users and groups
+        11.5. System shells
+
+            11.5.1. Disabling handling of configuration files
+
+    12. Options handling
+
+        12.1. Global default options
+        12.2. Converting packages to use bsd.options.mk
+
+    13. The build process
+
+        13.1. Program location
+        13.2. Main targets
+        13.3. Other helpful targets
+
+    14. Notes on fixes for packages
+
+        14.1. General operation
+
+            14.1.1. How to pull in variables from /etc/mk.conf
+            14.1.2. Where to install documentation
+            14.1.3. Restricted packages
+            14.1.4. Handling dependencies
+            14.1.5. Handling conflicts with other packages
+            14.1.6. Packages that cannot or should not be built
+            14.1.7. Packages which should not be deleted, once installed
+            14.1.8. Handling packages with security problems
+            14.1.9. How to handle compiler bugs
+            14.1.10. How to handle incrementing versions when fixing an
                 existing package
-            13.1.11. Portability of packages
+            14.1.11. Portability of packages
 
-        13.2. Possible downloading issues
+        14.2. Possible downloading issues
 
-            13.2.1. Packages whose distfiles aren't available for plain
+            14.2.1. Packages whose distfiles aren't available for plain
                 downloading
-            13.2.2. How to handle modified distfiles with the 'old' name
+            14.2.2. How to handle modified distfiles with the 'old' name
 
-        13.3. Configuration gotchas
+        14.3. Configuration gotchas
 
-            13.3.1. Shared libraries - libtool
-            13.3.2. Using libtool on GNU packages that already support libtool
-            13.3.3. GNU Autoconf/Automake
+            14.3.1. Shared libraries - libtool
+            14.3.2. Using libtool on GNU packages that already support libtool
+            14.3.3. GNU Autoconf/Automake
 
-        13.4. Building considerations
+        14.4. Building considerations
 
-            13.4.1. CPP defines
+            14.4.1. CPP defines
 
-        13.5. Package specific actions
+        14.5. Package specific actions
 
-            13.5.1. Package configuration files
-            13.5.2. User interaction
-            13.5.3. Handling licenses
-            13.5.4. Creating an account from a package
-            13.5.5. Installing score files
-            13.5.6. Packages providing login shells
-            13.5.7. Packages containing perl scripts
-            13.5.8. Packages with hardcoded paths to other interpreters
-            13.5.9. Packages installing perl modules
-            13.5.10. Packages installing info files
-            13.5.11. Packages installing GConf2 data files
-            13.5.12. Packages installing scrollkeeper data files
-            13.5.13. Packages installing X11 fonts
-            13.5.14. Packages installing GTK2 modules
-            13.5.15. Packages installing SGML or XML data
-            13.5.16. Packages installing extensions to the MIME database
-            13.5.17. Packages using intltool
-            13.5.18. Packages installing startup scripts
+            14.5.1. User interaction
+            14.5.2. Handling licenses
+            14.5.3. Installing score files
+            14.5.4. Packages containing perl scripts
+            14.5.5. Packages with hardcoded paths to other interpreters
+            14.5.6. Packages installing perl modules
+            14.5.7. Packages installing info files
+            14.5.8. Packages installing GConf2 data files
+            14.5.9. Packages installing scrollkeeper data files
+            14.5.10. Packages installing X11 fonts
+            14.5.11. Packages installing GTK2 modules
+            14.5.12. Packages installing SGML or XML data
+            14.5.13. Packages installing extensions to the MIME database
+            14.5.14. Packages using intltool
+            14.5.15. Packages installing startup scripts
 
-        13.6. Feedback to the author
+        14.6. Feedback to the author
 
-    14. Debugging
-    15. Submitting and Committing
+    15. Debugging
+    16. Submitting and Committing
 
-        15.1. Submitting your packages
-        15.2. Committing: Importing a package into CVS
-        15.3. Updating a package to a newer version
-        15.4. Moving a package in pkgsrc
+        16.1. Submitting your packages
+        16.2. Committing: Importing a package into CVS
+        16.3. Updating a package to a newer version
+        16.4. Moving a package in pkgsrc
 
 A. A simple example package: bison
 
@@ -461,7 +481,7 @@ Table of Contents
     6.11. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
     6.12. What does "Could not find bsd.own.mk" mean?
     6.13. Using 'sudo' with pkgsrc
-    6.14. Configuration files handling and placement
+    6.14. How do I change the location of configuration files?
     6.15. Automated security checks
 
 Chapter 2. Where to get pkgsrc
@@ -1182,12 +1202,12 @@ manipulate it. Binary packages are created by default in /usr/pkgsrc/packages,
 in the form of a gzipped tar file. See Section B.2, "Packaging figlet" for a
 continuation of the above misc/figlet example.
 
-See Chapter 15, Submitting and Committing for information on how to submit such
+See Chapter 16, Submitting and Committing for information on how to submit such
 a binary package.
 
 5.2. Settings for creation of binary packages
 
-See Section 12.3, "Other helpful targets".
+See Section 13.3, "Other helpful targets".
 
 5.3. Doing a bulk build of all packages
 
@@ -1559,7 +1579,7 @@ Table of Contents
 6.11. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
 6.12. What does "Could not find bsd.own.mk" mean?
 6.13. Using 'sudo' with pkgsrc
-6.14. Configuration files handling and placement
+6.14. How do I change the location of configuration files?
 6.15. Automated security checks
 
 This section contains hints, tips & tricks on special things in pkgsrc that we
@@ -1812,67 +1832,25 @@ binary package or from security/sudo) and then put the following into your /etc
 SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
 .endif
 
-6.14. Configuration files handling and placement
+6.14. How do I change the location of configuration files?
 
-The global variable PKG_SYSCONFBASE (and some others) can be set by the system
-administrator in /etc/mk.conf to define the place where configuration files get
-installed. Therefore, packages must be adapted to support this feature. Keep in
-mind that you should only install files that are strictly necessary in the
-configuration directory, files that can go to $PREFIX/share should go there.
+As the system administrator, you can choose where configuration files are
+installed. The default settings make all these files go into ${PREFIX}/etc or
+some of its subdirectories; this may be suboptimal depending on your
+expectations (e.g., a read-only, NFS-exported PREFIX with a need of per-machine
+configuration of the provided packages).
 
-We will take a look at available variables first (bsd.pkg.mk contains more
-information). PKG_SYSCONFDIR is where the configuration files for a package may
-be found (that is, the full path, e.g. /etc or /usr/pkg/etc). This value may be
-customized in various ways:
+In order to change the defaults, you can modify the PKG_SYSCONFBASE variable
+(in /etc/mk.conf) to point to your preferred configuration directory; some
+common examples include /etc or /etc/pkg.
 
- 1. PKG_SYSCONFBASE is the main config directory under which all package
-    configuration files are to be found. Users will typically want to set it to
-    /etc, or accept the default location of $PREFIX/etc.
+Furthermore, you can change this value on a per-package basis by setting the
+PKG_SYSCONFDIR.${PKG_SYSCONFVAR} variable. PKG_SYSCONFVAR's value usually
+matches the name of the package you would like to modify, that is, the contents
+of PKGBASE.
 
- 2. PKG_SYSCONFSUBDIR is the subdirectory of PKG_SYSCONFBASE under which the
-    configuration files for a particular package may be found. Defaults to $
-    {SYSCONFBASE}.
-
- 3. PKG_SYSCONFVAR is the special suffix used to distinguish any overriding
-    values for a particular package (see next item). It defaults to ${PKGBASE},
-    but for a collection of related packages that should all have the same
-    PKG_SYSCONFDIR value, it can be set in each of the package Makefiles to a
-    common value.
-
- 4. PKG_SYSCONFDIR.${PKG_SYSCONFVAR} overrides the value of ${PKG_SYSCONFDIR}
-    for packages with the same value for PKG_SYSCONFVAR.
-
-    As an example, all the various KDE packages may want to set PKG_SYSCONFVAR
-    to "kde" so admins can set PKG_SYSCONFDIR.kde in /etc/mk.conf to define
-    where to install KDE config files.
-
-Programs' configuration directory should be defined during the configure stage.
-Packages that use GNU autoconf can usually do this by using the "--sysconfdir"
-parameter, but this brings some problems as we will see now. When you change
-this pathname in packages, you should not allow them to install files in that
-directory directly. Instead they need to install those files under share/
-examples/${PKGNAME} so PLIST can register them.
-
-Once you have the required configuration files in place (under the share/
-examples directory) the variable CONF_FILES should be set to copy them into
-PKG_SYSCONFDIR. The contents of this variable is formed by pairs of filenames;
-the first element of the pair specifies the file inside the examples directory
-(registered by PLIST) and the second element specifies the target file. This is
-done this way to allow binary packages to place files in the right directory
-using INSTALL/DEINSTALL scripts which are created automatically. The package
-Makefile must also set USE_PKGINSTALL=YES to use these automatically generated
-scripts. The automatic copying of config files can be toggled by setting the
-environment variable PKG_CONFIG prior to package installation.
-
-Here is an example, taken from mail/mutt/Makefile:
-
-EGDIR=        ${PREFIX}/share/doc/mutt/samples
-CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
-
-As you can see, this package installs configuration files inside EGDIR, which
-are registered by PLIST. After that, the variable CONF_FILES lists the
-installed file first and then the target file. Users will also get an automatic
-message when files are installed using this method.
+Note that, after changing these settings, you must rebuild and reinstall any
+affected packages.
 
 6.15. Automated security checks
 
@@ -1952,79 +1930,99 @@ Table of Contents
         10.3.1. Anatomy of a builtin.mk file
         10.3.2. Global preferences for native or pkgsrc software
 
-11. Options handling
+11. The pkginstall framework
 
-    11.1. Global default options
-    11.2. Converting packages to use bsd.options.mk
+    11.1. Files and directories outside the installation prefix
 
-12. The build process
+        11.1.1. Directory manipulation
+        11.1.2. File manipulation
 
-    12.1. Program location
-    12.2. Main targets
-    12.3. Other helpful targets
+    11.2. Configuration files
 
-13. Notes on fixes for packages
+        11.2.1. How PKG_SYSCONFDIR is set
+        11.2.2. Telling the software were configuration files are
+        11.2.3. Patching installations
+        11.2.4. Disabling handling of configuration files
 
-    13.1. General operation
+    11.3. System startup scripts
 
-        13.1.1. How to pull in variables from /etc/mk.conf
-        13.1.2. Where to install documentation
-        13.1.3. Restricted packages
-        13.1.4. Handling dependencies
-        13.1.5. Handling conflicts with other packages
-        13.1.6. Packages that cannot or should not be built
-        13.1.7. Packages which should not be deleted, once installed
-        13.1.8. Handling packages with security problems
-        13.1.9. How to handle compiler bugs
-        13.1.10. How to handle incrementing versions when fixing an existing
+        11.3.1. Disabling handling of system startup scripts
+
+    11.4. System users and groups
+    11.5. System shells
+
+        11.5.1. Disabling handling of configuration files
+
+12. Options handling
+
+    12.1. Global default options
+    12.2. Converting packages to use bsd.options.mk
+
+13. The build process
+
+    13.1. Program location
+    13.2. Main targets
+    13.3. Other helpful targets
+
+14. Notes on fixes for packages
+
+    14.1. General operation
+
+        14.1.1. How to pull in variables from /etc/mk.conf
+        14.1.2. Where to install documentation
+        14.1.3. Restricted packages
+        14.1.4. Handling dependencies
+        14.1.5. Handling conflicts with other packages
+        14.1.6. Packages that cannot or should not be built
+        14.1.7. Packages which should not be deleted, once installed
+        14.1.8. Handling packages with security problems
+        14.1.9. How to handle compiler bugs
+        14.1.10. How to handle incrementing versions when fixing an existing
             package
-        13.1.11. Portability of packages
+        14.1.11. Portability of packages
 
-    13.2. Possible downloading issues
+    14.2. Possible downloading issues
 
-        13.2.1. Packages whose distfiles aren't available for plain downloading
-        13.2.2. How to handle modified distfiles with the 'old' name
+        14.2.1. Packages whose distfiles aren't available for plain downloading
+        14.2.2. How to handle modified distfiles with the 'old' name
 
-    13.3. Configuration gotchas
+    14.3. Configuration gotchas
 
-        13.3.1. Shared libraries - libtool
-        13.3.2. Using libtool on GNU packages that already support libtool
-        13.3.3. GNU Autoconf/Automake
+        14.3.1. Shared libraries - libtool
+        14.3.2. Using libtool on GNU packages that already support libtool
+        14.3.3. GNU Autoconf/Automake
 
-    13.4. Building considerations
+    14.4. Building considerations
 
-        13.4.1. CPP defines
+        14.4.1. CPP defines
 
-    13.5. Package specific actions
+    14.5. Package specific actions
 
-        13.5.1. Package configuration files
-        13.5.2. User interaction
-        13.5.3. Handling licenses
-        13.5.4. Creating an account from a package
-        13.5.5. Installing score files
-        13.5.6. Packages providing login shells
-        13.5.7. Packages containing perl scripts
-        13.5.8. Packages with hardcoded paths to other interpreters
-        13.5.9. Packages installing perl modules
-        13.5.10. Packages installing info files
-        13.5.11. Packages installing GConf2 data files
-        13.5.12. Packages installing scrollkeeper data files
-        13.5.13. Packages installing X11 fonts
-        13.5.14. Packages installing GTK2 modules
-        13.5.15. Packages installing SGML or XML data
-        13.5.16. Packages installing extensions to the MIME database
-        13.5.17. Packages using intltool
-        13.5.18. Packages installing startup scripts
+        14.5.1. User interaction
+        14.5.2. Handling licenses
+        14.5.3. Installing score files
+        14.5.4. Packages containing perl scripts
+        14.5.5. Packages with hardcoded paths to other interpreters
+        14.5.6. Packages installing perl modules
+        14.5.7. Packages installing info files
+        14.5.8. Packages installing GConf2 data files
+        14.5.9. Packages installing scrollkeeper data files
+        14.5.10. Packages installing X11 fonts
+        14.5.11. Packages installing GTK2 modules
+        14.5.12. Packages installing SGML or XML data
+        14.5.13. Packages installing extensions to the MIME database
+        14.5.14. Packages using intltool
+        14.5.15. Packages installing startup scripts
 
-    13.6. Feedback to the author
+    14.6. Feedback to the author
 
-14. Debugging
-15. Submitting and Committing
+15. Debugging
+16. Submitting and Committing
 
-    15.1. Submitting your packages
-    15.2. Committing: Importing a package into CVS
-    15.3. Updating a package to a newer version
-    15.4. Moving a package in pkgsrc
+    16.1. Submitting your packages
+    16.2. Committing: Importing a package into CVS
+    16.3. Updating a package to a newer version
+    16.4. Moving a package in pkgsrc
 
 Chapter 7. Package components - files, directories and contents
 
@@ -2146,7 +2144,7 @@ Please pay attention to the following gotchas:
 
   * Replace /usr/local with "${PREFIX}" in all files (see patches, below).
 
-  * If the package installs any info files, see Section 13.5.10, "Packages
+  * If the package installs any info files, see Section 14.5.7, "Packages
     installing info files".
 
   * Set MAINTAINER to be yourself. If you really can't maintain the package for
@@ -2581,7 +2579,7 @@ Be sure to add a RCS ID line as the first thing in any PLIST file you write:
 9.2. Semi-automatic PLIST generation
 
 You can use the make print-PLIST command to output a PLIST that matches any new
-files since the package was extracted. See Section 12.3, "Other helpful
+files since the package was extracted. See Section 13.3, "Other helpful
 targets" for more information on this target.
 
 9.3. Tweaking output of make print-PLIST
@@ -2960,7 +2958,7 @@ libraries.
 Please take careful consideration before adjusting BUILDLINK_DEPENDS.pkg as we
 don't want to cause unneeded package deletions and rebuilds. In many cases, new
 versions of packages work just fine with older dependencies. See Section
-13.1.4, "Handling dependencies" and Chapter 10, Buildlink methodology for more
+14.1.4, "Handling dependencies" and Chapter 10, Buildlink methodology for more
 information about dependencies on other packages, including the
 BUILDLINK_RECOMMENDED and RECOMMENDED definitions.
 
@@ -3072,12 +3070,320 @@ all but the most basic bits on a NetBSD system, you can set:
 A package must have a builtin.mk file to be listed in PREFER_NATIVE, otherwise
 it is simply ignored in that list.
 
-Chapter 11. Options handling
+Chapter 11. The pkginstall framework
 
 Table of Contents
 
-11.1. Global default options
-11.2. Converting packages to use bsd.options.mk
+11.1. Files and directories outside the installation prefix
+
+    11.1.1. Directory manipulation
+    11.1.2. File manipulation
+
+11.2. Configuration files
+
+    11.2.1. How PKG_SYSCONFDIR is set
+    11.2.2. Telling the software were configuration files are
+    11.2.3. Patching installations
+    11.2.4. Disabling handling of configuration files
+
+11.3. System startup scripts
+
+    11.3.1. Disabling handling of system startup scripts
+
+11.4. System users and groups
+11.5. System shells
+
+    11.5.1. Disabling handling of configuration files
+
+This chapter describes the framework known as pkginstall, whose key features
+are:
+
+  * Generic installation and manipulation of directories and files outside the
+    pkgsrc-handled tree, LOCALBASE.
+
+  * Automatic handling of configuration files during installation, provided
+    that packages are correctly designed.
+
+  * Generation and installation of system startup scripts.
+
+  * Registration of system users and groups.
+
+  * Registration of system shells.
+
+The following sections inspect each of the above points in detail. Note that,
+in order to use any of the described functionalities, you must add the
+following to your package's Makefile:
+
+USE_PKGINSTALL=YES
+
+You may be thinking that many of the things described here could be easily done
+with simple code in the package's post-installation target (post-install). This
+is incorrect, as the code in them is only executed when building from source.
+Machines using binary packages could not benefit from it at all (as the code
+itself could be unavailable). Therefore, the only way to achieve any of the
+items described above is by means of the installation scripts, which are
+automatically generated by pkginstall.
+
+11.1. Files and directories outside the installation prefix
+
+As you already know, the PLIST file holds a list of files and directories that
+belong to a package. The names used in it are relative to the installation
+prefix (${PREFIX}), which means that it cannot register files outside this
+directory (absolute path names are not allowed). Despite this restriction, some
+packages need to install files outside this location; e.g., under ${VARBASE} or
+${PKG_SYSCONFDIR}.
+
+The only way to achieve this is to create such files during installation time
+by using the installation scripts. These scripts can run arbitrary commands, so
+they have the potential to create and manage files anywhere in the filesystem.
+Here is where pkginstall comes into play: it provides generic scripts to
+abstract the manipulation of such files and directories based on variables set
+in the package's Makefile. The rest of this section describes which these
+variables are.
+
+11.1.1. Directory manipulation
+
+The following variables can be set to request the creation of directories
+anywhere in the filesystem:
+
+  * MAKE_DIRS and OWN_DIRS contain a list of directories that should be created
+    and should attempt to be destroyed by the installation scripts. The
+    difference between the two is that the latter prompts the administrator to
+    remove any directories that may be left after deinstallation (because they
+    were not empty), while the former does not.
+
+  * MAKE_DIRS_PERMS and OWN_DIRS_PERMS contain a list of tuples describing
+    which directories should be created and should attempt to be destroyed by
+    the installation scripts. Each tuple holds the following values, separated
+    by spaces: the directory name, its owner, its group and its numerical mode.
+    For example:
+
+    MAKE_DIRS_PERMS+= ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
+
+    The difference between the two is exactly the same as their non-PERMS
+    counterparts.
+
+11.1.2. File manipulation
+
+Creating non-empty files outside the installation prefix is tricky because the
+PLIST forces all files to be inside it. To overcome this problem, the only
+solution is to extract the file in the known place (i.e., inside the
+installation prefix) and copy it to the appropriate location during
+installation (done by the installation scripts generated by pkginstall). We
+will call the former the master file in the following paragraphs, which
+describe the variables that can be used to automatically and consistently
+handle files outside the installation prefix:
+
+  * CONF_FILES and SUPPORT_FILES are pairs of master and target files. During
+    installation time, the master file is copied to the target one if and only
+    if the latter does not exist. Upon deinstallation, the target file is
+    removed provided that it was not modified by the installation.
+
+    The difference between the two is that the latter prompts the administrator
+    to remove any files that may be left after deinstallation (because they
+    were not empty), while the former does not.
+
+  * CONF_FILES_PERMS and SUPPORT_FILES_PERMS contain tuples describing master
+    files as well as their target locations. For each of them, it also
+    specifies their owner, their group and their numeric permissions, in this
+    order. For example:
+
+    SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
+
+    The difference between the two is exactly the same as their non-PERMS
+    counterparts.
+
+11.2. Configuration files
+
+Configuration files are special in the sense that they are installed in their
+own specific directory, PKG_SYSCONFDIR, and need special treatment during
+installation (most of which is automated by pkginstall). The main concept you
+must bear in mind is that files marked as a configuration are automatically
+copied to the right place (somewhere inside PKG_SYSCONFDIR) during installation
+if and only if they didn't exist before. Similarly, they will not be removed if
+they have local modifications. This ensures that administrators never loose any
+custom changes they may have made.
+
+11.2.1. How PKG_SYSCONFDIR is set
+
+As said before, the PKG_SYSCONFDIR variable specifies where configuration files
+shall be installed. Its contents are set based upon the following variables:
+
+  * PKG_SYSCONFBASE: The configuration's root directory. Defaults to ${PREFIX}/
+    etc although may be overridden by the user to point to his preferred
+    location (e.g., /etc, /etc/pkg, etc.). Packages must not use it directly.
+
+  * PKG_SYSCONFSUBDIR: A subdirectory of PKG_SYSCONFBASE under which the
+    configuration files for the package being built shall be installed. The
+    definition of this variable only makes sense in the package's Makefile
+    (i.e., it is not user customizable).
+
+    As an example, consider the Apache package, www/apache2, which places its
+    configuration files under the httpd/ subdirectory of PKG_SYSCONFBASE. This
+    should be set in the package Makefile.
+
+  * PKG_SYSCONFVAR: Specifies the name of the variable that holds this
+    package's configuration directory (if different from PKG_SYSCONFBASE). It
+    defaults to PKGBASE's value, and is always prefixed with PKG_SYSCONFDIR.
+
+  * PKG_SYSCONFDIR.${PKG_SYSCONFVAR}: Holds the directory where the
+    configuration files for the package identified by PKG_SYSCONFVAR's shall be
+    placed.
+
+Based on the above variables, pkginstall determines the value of
+PKG_SYSCONFDIR, which is the only variable that can be used within a package to
+refer to its configuration directory. The algorithm used to set its value is
+basically the following:
+
+ 1. If PKG_SYSCONFDIR.${PKG_SYSCONFVAR} is set, its value is used.
+
+ 2. If the previous variable is not defined but PKG_SYSCONFSUBDIR is set in the
+    package's Makefile, the resulting value is ${PKG_SYSCONFBASE}/$
+    {PKG_SYSCONFSUBDIR}.
+
+ 3. Otherwise, it is set to ${PKG_SYSCONFBASE}.
+
+It is worth mentioning that ${PKG_SYSCONFDIR} is automatically added to
+OWN_DIRS. See Section 11.1.1, "Directory manipulation" what this means.
+
+11.2.2. Telling the software were configuration files are
+
+Given that pkgsrc (and users!) expect configuration files to be in a known
+place, you need to teach each package where shall it install its files. In some
+cases you will have to patch the package Makefiles to achieve it. If you are
+lucky, though, it may be as easy as passing an extra flag to the configuration
+script; this is the case of GNU Autoconf generated files:
+
+CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
+
+Note that this specifies where the package has to look for its configuration
+files, not where they will be originally installed (although the difference is
+never explicit, unfortunately).
+
+11.2.3. Patching installations
+
+As said before, pkginstall automatically handles configuration files. This
+means that the packages themselves must not touch the contents of $
+{PKG_SYSCONFDIR} directly. Bad news is that the software they build will, out
+of the box, mess with the contents of that directory. So which is the correct
+procedure to fix this issue?
+
+You must teach the package (usually by manually patching it) to install any
+configuration files under the examples hierarchy, share/examples/${PKGBASE}/.
+This way, the PLIST registers them and the administrator always has the
+original copies available.
+
+Once the required configuration files are in place (i.e., under the examples
+hierarchy), the pkginstall framework can use them as master copies during the
+package installation to update what is in ${PKG_SYSCONFDIR}. To achieve this,
+the variables CONF_FILES and CONF_FILES_PERMS are used. Check out Section
+11.1.2, "File manipulation" for information about their syntax and their
+purpose. Here is an example, taken from the mail/mutt package:
+
+EGDIR=        ${PREFIX}/share/doc/mutt/samples
+CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
+
+Note that the EGDIR variable is specific to that package and has no meaning
+outside it.
+
+11.2.4. Disabling handling of configuration files
+
+The automatic copying of config files can be toggled by setting the environment
+variable PKG_CONFIG prior to package installation.
+
+11.3. System startup scripts
+
+System startup scripts are special files because they must be installed in a
+place known by the underlying OS, usually outside the installation prefix.
+Therefore, the same rules described in Section 11.1, "Files and directories
+outside the installation prefix" apply, and the same solutions can be used.
+However, pkginstall provides a specific mechanism to handle these files, given
+that they are special.
+
+In order to provide system startup scripts, the package has to:
+
+ 1. Store the script inside ${FILESDIR}, with the .sh suffix appended.
+    Considering the print/cups package as an example, it has the cupsd.sh in
+    its files directory.
+
+ 2. Tell pkginstall to handle it, appending the name of the script, without its
+    extension, to the RCD_SCRIPTS variable. Continuing the previous example:
+
+    RCD_SCRIPTS+= cupsd
+
+
+Once this is done, pkginstall will do the following steps for each script in an
+automated fashion:
+
+ 1. Process the file found in the files directory applying all the
+    substitutions described in the FILES_SUBST variable.
+
+ 2. Copy the script from the files directory to the examples hierarchy, $
+    {PREFIX}/share/examples/rc.d/. Note that the master file must be explicitly
+    registered in the PLIST.
+
+ 3. Add code to the installation scripts to copy the startup script from the
+    examples hierarchy into the system-wide startup scripts directory.
+
+11.3.1. Disabling handling of system startup scripts
+
+The automatic copying of config files can be toggled by setting the environment
+variable PKG_RCD_SCRIPTS prior to package installation. Note that the scripts
+will be always copied inside the examples hierarchy, ${PREFIX}/share/examples/
+rc.d/, no matter what the value of this variable is.
+
+11.4. System users and groups
+
+If a package needs to create special users and/or groups during installation,
+it can do so by using the pkginstall framework.
+
+Users can be created by adding entries to the PKG_USERS variable. Each entry
+has the following syntax, which mimics /etc/passwd:
+
+user:group[:[userid][:[descr][:[home][:shell]]]]
+
+Only the user and group are required; everything else is optional, but the
+colons must be in the right places when specifying optional bits. By default, a
+new user will have home directory /nonexistent, and login shell /sbin/nologin
+unless they are specified as part of the user element. Note that if the
+description contains spaces, then spaces should be double backslash-escaped, as
+in:
+
+foo:foogrp::The\\ Foomister
+
+Similarly, groups can be created using the PKG_GROUPS variable, whose syntax
+is:
+
+group[:groupid]
+
+As before, only the group name is required; the numeric identifier is optional.
+
+11.5. System shells
+
+Packages that install system shells should register them in the shell database,
+/etc/shells, to make things easier to the administrator. This must be done from
+the installation scripts to keep binary packages working on any system.
+pkginstall provides an easy way to accomplish this task.
+
+When a package provides a shell interpreter, it has to set the PKG_SHELL
+variable to its absolute file name. This will add some hooks to the
+installation scripts to handle it. Consider the following example, taken from
+shells/zsh:
+
+USE_PKGINSTALL= YES
+PKG_SHELL=      ${PREFIX}/bin/zsh
+
+11.5.1. Disabling handling of configuration files
+
+The automatic registration of shell interpreters can be disabled by the
+administrator by setting the PKG_REGISTER_SHELLS environment variable to NO.
+
+Chapter 12. Options handling
+
+Table of Contents
+
+12.1. Global default options
+12.2. Converting packages to use bsd.options.mk
 
 Many packages have the ability to be built to support different sets of
 features. bsd.options.mk is a framework in pkgsrc that provides generic
@@ -3086,13 +3392,13 @@ can be built. It's possible for the user to specify exactly which sets of
 options will be built into a package or to allow a set of global default
 options apply.
 
-11.1. Global default options
+12.1. Global default options
 
 Global default options are listed in PKG_DEFAULT_OPTIONS, which is a list of
 the options that should be built into every package if that option is
 supported. This variable should be set in /etc/mk.conf.
 
-11.2. Converting packages to use bsd.options.mk
+12.2. Converting packages to use bsd.options.mk
 
 The following example shows how bsd.options.mk should be used by the
 hypothetical ``wibble'' package, either in the package Makefile, or in a file,
@@ -3174,13 +3480,13 @@ should be clear documentation on what turning on the option will do in the
 comments preceding each section. The correct way to check for an option is to
 check whether it is listed in PKG_OPTIONS.
 
-Chapter 12. The build process
+Chapter 13. The build process
 
 Table of Contents
 
-12.1. Program location
-12.2. Main targets
-12.3. Other helpful targets
+13.1. Program location
+13.2. Main targets
+13.3. Other helpful targets
 
 The basic steps for building a program are always the same. First the program's
 source (distfile) must be brought to the local system and then extracted. After
@@ -3190,7 +3496,7 @@ binaries, etc. can be put into place on the system. These are exactly the steps
 performed by the NetBSD package system, which is implemented as a series of
 targets in a central Makefile, pkgsrc/mk/bsd.pkg.mk.
 
-12.1. Program location
+13.1. Program location
 
 Before outlining the process performed by the NetBSD package system in the next
 section, here's a brief discussion on where programs are installed, and which
@@ -3200,7 +3506,7 @@ The automatic variable PREFIX indicates where all files of the final program
 shall be installed. It is usually set to LOCALBASE (/usr/pkg), or CROSSBASE for
 pkgs in the "cross" category. The value of PREFIX needs to be put into the
 various places in the program's source where paths to these files are encoded.
-See Section 7.3, "patches/*" and Section 13.3.1, "Shared libraries - libtool"
+See Section 7.3, "patches/*" and Section 14.3.1, "Shared libraries - libtool"
 for more details.
 
 When choosing which of these variables to use, follow the following rules:
@@ -3265,7 +3571,7 @@ When choosing which of these variables to use, follow the following rules:
     the exception that manual pages go into ${PREFIX}/man, not ${PREFIX}/share/
     man.
 
-12.2. Main targets
+13.2. Main targets
 
 The main targets used during the build process defined in bsd.pkg.mk are:
 
@@ -3384,7 +3690,7 @@ make patch
 make configure
 make build
 
-12.3. Other helpful targets
+13.3. Other helpful targets
 
 pre/post-*
 
@@ -3620,66 +3926,63 @@ bulk-install
 
     Beware that this target may deinstall all packages installed on a system!
 
-Chapter 13. Notes on fixes for packages
+Chapter 14. Notes on fixes for packages
 
 Table of Contents
 
-13.1. General operation
+14.1. General operation
 
-    13.1.1. How to pull in variables from /etc/mk.conf
-    13.1.2. Where to install documentation
-    13.1.3. Restricted packages
-    13.1.4. Handling dependencies
-    13.1.5. Handling conflicts with other packages
-    13.1.6. Packages that cannot or should not be built
-    13.1.7. Packages which should not be deleted, once installed
-    13.1.8. Handling packages with security problems
-    13.1.9. How to handle compiler bugs
-    13.1.10. How to handle incrementing versions when fixing an existing
+    14.1.1. How to pull in variables from /etc/mk.conf
+    14.1.2. Where to install documentation
+    14.1.3. Restricted packages
+    14.1.4. Handling dependencies
+    14.1.5. Handling conflicts with other packages
+    14.1.6. Packages that cannot or should not be built
+    14.1.7. Packages which should not be deleted, once installed
+    14.1.8. Handling packages with security problems
+    14.1.9. How to handle compiler bugs
+    14.1.10. How to handle incrementing versions when fixing an existing
         package
-    13.1.11. Portability of packages
+    14.1.11. Portability of packages
 
-13.2. Possible downloading issues
+14.2. Possible downloading issues
 
-    13.2.1. Packages whose distfiles aren't available for plain downloading
-    13.2.2. How to handle modified distfiles with the 'old' name
+    14.2.1. Packages whose distfiles aren't available for plain downloading
+    14.2.2. How to handle modified distfiles with the 'old' name
 
-13.3. Configuration gotchas
+14.3. Configuration gotchas
 
-    13.3.1. Shared libraries - libtool
-    13.3.2. Using libtool on GNU packages that already support libtool
-    13.3.3. GNU Autoconf/Automake
+    14.3.1. Shared libraries - libtool
+    14.3.2. Using libtool on GNU packages that already support libtool
+    14.3.3. GNU Autoconf/Automake
 
-13.4. Building considerations
+14.4. Building considerations
 
-    13.4.1. CPP defines
+    14.4.1. CPP defines
 
-13.5. Package specific actions
+14.5. Package specific actions
 
-    13.5.1. Package configuration files
-    13.5.2. User interaction
-    13.5.3. Handling licenses
-    13.5.4. Creating an account from a package
-    13.5.5. Installing score files
-    13.5.6. Packages providing login shells
-    13.5.7. Packages containing perl scripts
-    13.5.8. Packages with hardcoded paths to other interpreters
-    13.5.9. Packages installing perl modules
-    13.5.10. Packages installing info files
-    13.5.11. Packages installing GConf2 data files
-    13.5.12. Packages installing scrollkeeper data files
-    13.5.13. Packages installing X11 fonts
-    13.5.14. Packages installing GTK2 modules
-    13.5.15. Packages installing SGML or XML data
-    13.5.16. Packages installing extensions to the MIME database
-    13.5.17. Packages using intltool
-    13.5.18. Packages installing startup scripts
+    14.5.1. User interaction
+    14.5.2. Handling licenses
+    14.5.3. Installing score files
+    14.5.4. Packages containing perl scripts
+    14.5.5. Packages with hardcoded paths to other interpreters
+    14.5.6. Packages installing perl modules
+    14.5.7. Packages installing info files
+    14.5.8. Packages installing GConf2 data files
+    14.5.9. Packages installing scrollkeeper data files
+    14.5.10. Packages installing X11 fonts
+    14.5.11. Packages installing GTK2 modules
+    14.5.12. Packages installing SGML or XML data
+    14.5.13. Packages installing extensions to the MIME database
+    14.5.14. Packages using intltool
+    14.5.15. Packages installing startup scripts
 
-13.6. Feedback to the author
+14.6. Feedback to the author
 
-13.1. General operation
+14.1. General operation
 
-13.1.1. How to pull in variables from /etc/mk.conf
+14.1.1. How to pull in variables from /etc/mk.conf
 
 The problem with package-defined variables that can be overridden via MAKECONF
 or /etc/mk.conf is that make(1) expands a variable as it is used, but evaluates
@@ -3706,13 +4009,13 @@ Using CFLAGS= (i.e. without the "+") may lead to problems with packages that
 need to add their own flags. Also, you may want to take a look at the devel/
 cpuflags package if you're interested in optimization for the current CPU.
 
-13.1.2. Where to install documentation
+14.1.2. Where to install documentation
 
 Documentation should be installed into ${PREFIX}/share/doc/${PKGBASE} or $
 {PREFIX}/share/doc/${PKGNAME} (the latter includes the version number of the
 package).
 
-13.1.3. Restricted packages
+14.1.3. Restricted packages
 
 Some licenses restrict how software may be re-distributed. In order to satisfy
 these restrictions, the package system defines five make variables that can be
@@ -3751,7 +4054,7 @@ Please note that the use of NO_PACKAGE, IGNORE, NO_CDROM, or other generic make
 variables to denote restrictions is deprecated, because they unconditionally
 prevent users from generating binary packages!
 
-13.1.4. Handling dependencies
+14.1.4. Handling dependencies
 
 Your package may depend on some other package being present - and there are
 various ways of expressing this dependency. pkgsrc supports the BUILD_DEPENDS
@@ -3831,7 +4134,7 @@ version numbers recognized by pkg_info(1).
     different versions of binary packages installed.
 
     For security fixes, please update the package vulnerabilities file as well
-    as setting RECOMMENDED, see Section 13.1.8, "Handling packages with
+    as setting RECOMMENDED, see Section 14.1.8, "Handling packages with
     security problems" for more information.
 
  4. If your package needs some executable to be able to run correctly and if
@@ -3866,7 +4169,7 @@ gettext package. The latter adds a build dependency on either an installed
 version of an older gettext package, or if it isn't, installs the devel/
 gettext-m4 package.
 
-13.1.5. Handling conflicts with other packages
+14.1.5. Handling conflicts with other packages
 
 Your package may conflict with other packages a user might already have
 installed on his system, e.g. if your package installs the same set of files
@@ -3888,7 +4191,7 @@ Packages will automatically conflict with other packages with the name prefix
 and a different version string. "Xaw3d-1.5" e.g. will automatically conflict
 with the older version "Xaw3d-1.3".
 
-13.1.6. Packages that cannot or should not be built
+14.1.6. Packages that cannot or should not be built
 
 There are several reasons why a package might be instructed to not build under
 certain circumstances. If the package builds and runs on most platforms, the
@@ -3902,7 +4205,7 @@ PKG_FAIL_REASON to a descriptive message.
 IGNORE is deprecated because it didn't provide enough information to determine
 whether the build should fail.
 
-13.1.7. Packages which should not be deleted, once installed
+14.1.7. Packages which should not be deleted, once installed
 
 To ensure that a package may not be deleted, once it has been installed, the
 PKG_PRESERVE definition should be set in the package Makefile. This will be
@@ -3910,7 +4213,7 @@ carried into any binary package that is made from this pkgsrc entry. A
 "preserved" package will not be deleted using pkg_delete(1) unless the "-f"
 option is used.
 
-13.1.8. Handling packages with security problems
+14.1.8. Handling packages with security problems
 
 When a vulnerability is found, this should be noted in localsrc/security/
 advisories/pkg-vulnerabilities, and after the commit of that file, it should be
@@ -3925,7 +4228,7 @@ BUILDLINK_* definitions.
 Also, if the fix should be applied to the stable pkgsrc branch, be sure to
 submit a pullup request!
 
-13.1.9. How to handle compiler bugs
+14.1.9. How to handle compiler bugs
 
 Some source files trigger bugs in the compiler, based on combinations of
 compiler version and architecture and almost always relation to optimisation
@@ -3936,7 +4239,7 @@ Typically a workaround involves testing the MACHINE_ARCH and compiler version,
 disabling optimisation for that file/MACHINE_ARCH/compiler combination, and
 documenting it in pkgsrc/doc/HACKS. See that file for a number of examples!
 
-13.1.10. How to handle incrementing versions when fixing an existing package
+14.1.10. How to handle incrementing versions when fixing an existing package
 
 When making fixes to an existing package it can be useful to change the version
 number in PKGNAME. To avoid conflicting with future versions by the original
@@ -3954,14 +4257,14 @@ like:
 
 DISTNAME=   foo-17.43
 
-13.1.11. Portability of packages
+14.1.11. Portability of packages
 
 One appealing feature of pkgsrc is that it runs on many different platforms. As
 a result, it is important to ensure, where possible, that packages in pkgsrc
 are portable. There are some particular details you should pay attention to
 while working on pkgsrc.
 
-13.1.11.1. ${INSTALL}, ${INSTALL_DATA_DIR}, ...
+14.1.11.1. ${INSTALL}, ${INSTALL_DATA_DIR}, ...
 
 The BSD-compatible install supplied with some operating systems will not
 perform more than one operation at a time. As such, you should call "${INSTALL}
@@ -3970,9 +4273,9 @@ perform more than one operation at a time. As such, you should call "${INSTALL}
 ${INSTALL_DATA_DIR} ${PREFIX}/dir1
 ${INSTALL_DATA_DIR} ${PREFIX}/dir2
 
-13.2. Possible downloading issues
+14.2. Possible downloading issues
 
-13.2.1. Packages whose distfiles aren't available for plain downloading
+14.2.1. Packages whose distfiles aren't available for plain downloading
 
 If you need to download from a dynamic URL you can set DYNAMIC_MASTER_SITES and
 a make fetch will call files/getsite.sh with the name of each file to download
@@ -3988,7 +4291,7 @@ packages use this: audio/realplayer, cad/simian, devel/ipv6socket, emulators/
 vmware-module, fonts/acroread-jpnfont, sysutils/storage-manager, www/
 ap-aolserver, www/openacs. Try to be consistent with them.
 
-13.2.2. How to handle modified distfiles with the 'old' name
+14.2.2. How to handle modified distfiles with the 'old' name
 
 Sometimes authors of a software package make some modifications after the
 software was released, and they put up a new distfile without changing the
@@ -4005,9 +4308,9 @@ filenames. Furthermore, a mail to the package's authors seems appropriate
 telling them that changing distfiles after releases without changing the file
 names is not good practice.
 
-13.3. Configuration gotchas
+14.3. Configuration gotchas
 
-13.3.1. Shared libraries - libtool
+14.3.1. Shared libraries - libtool
 
 pkgsrc supports many different machines, with different object formats like
 a.out and ELF, and varying abilities to do shared library and dynamic loading
@@ -4101,7 +4404,7 @@ Here's how to use libtool in a pkg in seven simple steps:
  7. In your PLIST, include only the .la file (this is a change from previous
     behaviour).
 
-13.3.2. Using libtool on GNU packages that already support libtool
+14.3.2. Using libtool on GNU packages that already support libtool
 
 Add USE_LIBTOOL=yes to the package Makefile. This will override the package's
 own libtool in most cases. For older libtool using packages, libtool is made by
@@ -4135,42 +4438,37 @@ in some circumstances. Some of the more common errors are:
     The function lt_dlinit() should be called and the macro
     LTDL_SET_PRELOADED_SYMBOLS included in executables.
 
-13.3.3. GNU Autoconf/Automake
+14.3.3. GNU Autoconf/Automake
 
 If a package needs GNU autoconf or automake to be executed to regenerate the
 configure script and Makefile.in makefile templates, then they should be
-executed in a pre-configure target. Two Makefile fragments are provided in
-pkgsrc/mk/autoconf.mk and pkgsrc/mk/automake.mk to help dealing with these
-tools. See comments in these files for details.
+executed in a pre-configure target.
 
 For packages that need only autoconf:
 
-AUTOCONF_REQD=    2.50    # if default version is not good enough
+AUTOCONF_REQD=    2.50     # if default version is not good enough
+USE_TOOLS+=     autoconf   # use "autoconf213" for autoconf-2.13
 ...
 
 pre-configure:
-          cd ${WRKSRC}; ${AUTOCONF}
+          cd ${WRKSRC}; autoconf
 
 ...
-.include "../../mk/autoconf.mk"
 
 and for packages that need automake and autoconf:
 
-AUTOMAKE_REQD=  1.7.1   # if default version is not good enough
+AUTOMAKE_REQD=  1.7.1      # if default version is not good enough
+USE_TOOLS+=     automake   # use "automake14" for autoconf-1.4
 ...
 
 pre-configure:
           cd ${WRKSRC};                                           \
-          ${ACLOCAL};                                             \
-          ${AUTOHEADER};                                          \
-          ${AUTOMAKE} -a --foreign -i;                            \
-          ${AUTOCONF}
+          aclocal; autoheader;                                    \
+          automake -a --foreign -i; autoconf
 
 ...
-.include "../mk/automake.mk"
 
-Packages which use GNU Automake will almost certainly require GNU Make, but
-that's automatically provided for you in mk/automake.mk.
+Packages which use GNU Automake will almost certainly require GNU Make.
 
 There are times when the configure process makes additional changes to the
 generated files, which then causes the build process to try to re-execute the
@@ -4178,9 +4476,9 @@ automake sequence. This is prevented by touching various files in the configure
 stage. If this causes problems with your package you can set AUTOMAKE_OVERRIDE=
 NO in the package Makefile.
 
-13.4. Building considerations
+14.4. Building considerations
 
-13.4.1. CPP defines
+14.4.1. CPP defines
 
 To port an application to NetBSD, it's usually necessary for the compiler to be
 able to judge the system on which it's compiling, and we use definitions so
@@ -4201,36 +4499,9 @@ using this conditional:
 Please use the "__NetBSD__" definition sparingly - it should only apply to
 features of NetBSD that are not present in other 4.4-lite derived BSDs.
 
-13.5. Package specific actions
+14.5. Package specific actions
 
-13.5.1. Package configuration files
-
-Packages should be taught to look for their configuration files in $
-{PKG_SYSCONFDIR}, which is passed through to the configure and build processes.
-PKG_SYSCONFDIR may be customized in various ways by setting other make
-variables:
-
-  * PKG_SYSCONFBASE is the main config directory under which all package
-    configuration files are to be found. This defaults to ${PREFIX}/etc, but
-    may be overridden in /etc/mk.conf.
-
-  * PKG_SYSCONFSUBDIR is the subdirectory of PKG_SYSCONFBASE under which the
-    configuration files for a particular package may be found, e.g. the Apache
-    configuration files may all be found under the httpd/ subdirectory of $
-    {PKG_SYSCONFBASE}. This should be set in the package Makefile.
-
-  * By default, PKG_SYSCONFDIR is set to ${PKG_SYSCONFBASE}/$
-    {PKG_SYSCONFSUBDIR}, but this may be overridden by setting PKG_SYSCONFDIR.$
-    {PKG_SYSCONFVAR} for a particular package, where PKG_SYSCONFVAR defaults to
-    ${PKGBASE}. This is not meant to be set by a package Makefile, but is
-    reserved for users who wish to override the PKG_SYSCONFDIR setting for a
-    particular package with a special location.
-
-The only variables that users should customize are PKG_SYSCONFBASE and
-PKG_SYSCONFDIR.${PKG_SYSCONFVAR}. Users will typically want to set
-PKG_SYSCONFBASE to /etc, or to accept the default location of ${PREFIX}/etc.
-
-13.5.2. User interaction
+14.5.1. User interaction
 
 Occasionally, packages require interaction from the user, and this can be in a
 number of ways:
@@ -4253,7 +4524,7 @@ Multiple interactive stages can be specified:
 
 INTERACTIVE_STAGE= configure install
 
-13.5.3. Handling licenses
+14.5.2. Handling licenses
 
 A package may underly a license which the user has or has not agreed to accept.
 Usually, packages that underly well-known Open Source licenses (e.g. the GNU
@@ -4294,37 +4565,7 @@ If there is a really pressing need to accept all licenses at once, like when
 trying to download or mirror all distfiles or doing a bulk build to test if all
 packages in pkgsrc build, this can be done by setting _ACCEPTABLE=yes.
 
-13.5.4. Creating an account from a package
-
-There are two make variables used to control the creation of package-specific
-groups and users at pre-install time. The first is PKG_GROUPS, which is a list
-of group[:groupid] elements, where the groupid is optional. The second is
-PKG_USERS, which is a list of elements of the form:
-
-user:group[:[userid][:[description][:[home][:shell]]]]
-
-where only the user and group are required, the rest being optional. A simple
-example is:
-
-  PKG_GROUPS=       foogroup
-    PKG_USERS=    foouser:foogroup
-
-A more complex example is that creates two groups and two users is:
-
-  PKG_GROUPS=       group1 group2:1005
-    PKG_USERS=    first:group1::First\\ User                      \
-                  second:group2::Second\\ User:/home/second:${SH}
-
-By default, a new user will have home directory /nonexistent, and login shell /
-sbin/nologin unless they are specified as part of the user element.
-
-The package Makefile must also set USE_PKGINSTALL=YES. This will cause the
-users and groups to be created at pre-install time, and the admin will be
-prompted to remove them at post-deinstall time. Automatic creation of the users
-and groups can be toggled on and off by setting the PKG_CREATE_USERGROUP
-variable prior to package installation.
-
-13.5.5. Installing score files
+14.5.3. Installing score files
 
 Certain packages, most of them in the games category, install a score file that
 allows all users on the system to record their highscores. In order for this to
@@ -4339,29 +4580,13 @@ SETGIDGAME=YES will set all the other variables accordingly.
 A package should therefor never hard code file ownership or access permissions
 but rely on INSTALL_GAME and INSTALL_GAME_DATA to set these correctly.
 
-13.5.6. Packages providing login shells
-
-If the purpose of the package is to provide a login shell, the variable
-PKG_SHELL should contain the full pathname of the shell executable installed by
-this package. The package Makefile must also set USE_PKGINSTALL=YES to use the
-automatically generated INSTALL/DEINSTALL scripts.
-
-An example taken from shells/zsh:
-
-  USE_PKGINSTALL=   YES
-    PKG_SHELL=    ${PREFIX}/bin/zsh
-
-The shell is registered into /etc/shells file automatically in the post-install
-target by the generated INSTALL script and removed in the deinstall target by
-the DEINSTALL script.
-
-13.5.7. Packages containing perl scripts
+14.5.4. Packages containing perl scripts
 
 If your package contains interpreted perl scripts, set REPLACE_PERL to ensure
 that the proper interpreter path is set. REPLACE_PERL should contain a list of
 scripts, relative to WRKSRC, that you want adjusted.
 
-13.5.8. Packages with hardcoded paths to other interpreters
+14.5.5. Packages with hardcoded paths to other interpreters
 
 Your package may also contain scripts with hardcoded paths to other
 interpreters besides (or as well as) perl. To correct the full pathname to the
@@ -4374,7 +4599,7 @@ script interpreter, you need to set the following definitions in your Makefile
     _REPLACE_FILES.tcl=   ...list of tcl scripts which need to be fixed,
                           relative to ${WRKSRC}, just as in REPLACE_PERL
 
-13.5.9. Packages installing perl modules
+14.5.6. Packages installing perl modules
 
 Makefiles of packages providing perl5 modules should include the Makefile
 fragment ../../lang/perl5/module.mk. It provides a do-configure target for the
@@ -4394,7 +4619,7 @@ three locations in which perl5 modules may be installed, and may be used by
 perl5 packages that don't have a packlist. These three variables are also
 substituted for in the PLIST.
 
-13.5.10. Packages installing info files
+14.5.7. Packages installing info files
 
 Some packages install info files or use the "makeinfo" or "install-info"
 commands. Each of the info files:
@@ -4433,7 +4658,7 @@ message. The script overriding makeinfo logs a message and according to the
 value of USE_MAKEINFO and TEXINFO_REQD either run the appropriate makeinfo
 command or exit on error.
 
-13.5.11. Packages installing GConf2 data files
+14.5.8. Packages installing GConf2 data files
 
 If a package installs .schemas or .entries files, used by GConf2, you need to
 take some extra steps to make sure they get registered in the database:
@@ -4449,8 +4674,8 @@ take some extra steps to make sure they get registered in the database:
     manually patch the package.
 
  3. Check the PLIST and remove any entries under the etc/gconf directory, as
-    they will be handled automatically. See Section 6.14, "Configuration files
-    handling and placement" for more information.
+    they will be handled automatically. See Section 6.14, "How do I change the
+    location of configuration files?" for more information.
 
  4. Define the GCONF2_SCHEMAS variable in your Makefile with a list of all
     .schemas files installed by the package, if any. Names must not contain any
@@ -4460,7 +4685,7 @@ take some extra steps to make sure they get registered in the database:
     .entries files installed by the package, if any. Names must not contain any
     directories in them.
 
-13.5.12. Packages installing scrollkeeper data files
+14.5.9. Packages installing scrollkeeper data files
 
 If a package installs .omf files, used by scrollkeeper, you need to take some
 extra steps to make sure they get registered in the database:
@@ -4476,7 +4701,7 @@ extra steps to make sure they get registered in the database:
  3. Remove the share/omf directory from the PLIST. It will be handled by
     scrollkeeper.
 
-13.5.13. Packages installing X11 fonts
+14.5.10. Packages installing X11 fonts
 
 If a package installs font files, you will need to rebuild the fonts database
 in the directory where they get installed at installation and deinstallation
@@ -4492,7 +4717,7 @@ Note that you should not create new directories for fonts; instead use the
 standard ones to avoid that the user needs to manually configure his X server
 to find them.
 
-13.5.14. Packages installing GTK2 modules
+14.5.11. Packages installing GTK2 modules
 
 If a package installs gtk2 immodules or loaders, you need to take some extra
 steps to get them registered in the GTK2 database properly:
@@ -4515,7 +4740,7 @@ steps to get them registered in the GTK2 database properly:
  5. Check the PLIST and remove any entries under the libdata/gtk-2.0 directory,
     as they will be handled automatically.
 
-13.5.15. Packages installing SGML or XML data
+14.5.12. Packages installing SGML or XML data
 
 If a package installs SGML or XML data files that need to be registered in
 system-wide catalogs (like DTDs, sub-catalogs, etc.), you need to take some
@@ -4541,7 +4766,7 @@ extra steps:
     (specifically, arguments recognized by the 'add' action). Note that you
     will normally not use this variable.
 
-13.5.16. Packages installing extensions to the MIME database
+14.5.13. Packages installing extensions to the MIME database
 
 If a package provides extensions to the MIME database by installing .xml files
 inside ${PREFIX}/share/mime/packages, you need to take some extra steps to
@@ -4562,7 +4787,7 @@ ensure that the database is kept consistent with respect to these new files:
  3. Remove any share/mime/* directories from the PLIST. They will be handled by
     the shared-mime-info package.
 
-13.5.17. Packages using intltool
+14.5.14. Packages using intltool
 
 If a package uses intltool during its build, include the ../../textproc/
 intltool/buildlink3.mk file, which forces it to use the intltool package
@@ -4572,7 +4797,7 @@ This tracks intltool's build-time dependencies and uses the latest available
 version; this way, the package benefits of any bug fixes that may have appeared
 since it was released.
 
-13.5.18. Packages installing startup scripts
+14.5.15. Packages installing startup scripts
 
 If a package contains a rc.d script, it won't be copied into the startup
 directory by default, but you can enable it, by adding the option
@@ -4580,7 +4805,7 @@ PKG_RCD_SCRIPTS=YES in /etc/mk.conf. This option will copy the scripts into /
 etc/rc.d when a package is installed, and it will automatically remove the
 scripts when the package is deinstalled.
 
-13.6. Feedback to the author
+14.6. Feedback to the author
 
 If you have found any bugs in the package you make available, if you had to do
 special steps to make it run under NetBSD or if you enhanced the software in
@@ -4591,7 +4816,7 @@ win from your efforts.
 
 Support the idea of free software!
 
-Chapter 14. Debugging
+Chapter 15. Debugging
 
 To check out all the gotchas when building a package, here are the steps that I
 do in order to get a package working. Please note this is basically the same as
@@ -4670,19 +4895,19 @@ what was explained in the previous sections, only with some debugging aids.
 
     # pkglint
 
-  * Submit (or commit, if you have cvs access); see Chapter 15, Submitting and
+  * Submit (or commit, if you have cvs access); see Chapter 16, Submitting and
     Committing.
 
-Chapter 15. Submitting and Committing
+Chapter 16. Submitting and Committing
 
 Table of Contents
 
-15.1. Submitting your packages
-15.2. Committing: Importing a package into CVS
-15.3. Updating a package to a newer version
-15.4. Moving a package in pkgsrc
+16.1. Submitting your packages
+16.2. Committing: Importing a package into CVS
+16.3. Updating a package to a newer version
+16.4. Moving a package in pkgsrc
 
-15.1. Submitting your packages
+16.1. Submitting your packages
 
 You have to separate between binary and "normal" (source) packages here:
 
@@ -4698,7 +4923,7 @@ You have to separate between binary and "normal" (source) packages here:
   * packages
 
     First, check that your package is complete, compiles and runs well; see
-    Chapter 14, Debugging and the rest of this document. Next, generate an
+    Chapter 15, Debugging and the rest of this document. Next, generate an
     uuencoded gzipped tar(1) archive, preferably with all files in a single
     directory. Finally, send-pr with category "pkg", a synopsis which includes
     the package name and version number, a short description of your package
@@ -4712,7 +4937,7 @@ You have to separate between binary and "normal" (source) packages here:
     work-in-progress"); see the homepage at http://pkgsrc-wip.sourceforge.net/
     for details.
 
-15.2. Committing: Importing a package into CVS
+16.2. Committing: Importing a package into CVS
 
 This section is only of interest for pkgsrc developers with write access to the
 pkgsrc repository. Please remember that cvs imports files relative to the
@@ -4741,7 +4966,7 @@ there.
 For new packages, "cvs import" is preferred to "cvs add" because the former
 gets everything with a single command, and provides a consistent tag.
 
-15.3. Updating a package to a newer version
+16.3. Updating a package to a newer version
 
 Please always put a concise, appropriate and relevant summary of the changes
 between old and new versions into the commit log when updating a package. There
@@ -4766,7 +4991,7 @@ which pkgsrc is used. Please use your judgement about what should go into
 pkgsrc, and bear in mind that stability is to be preferred above new and
 possibly untested features.
 
-15.4. Moving a package in pkgsrc
+16.4. Moving a package in pkgsrc
 
  1. Make a copy of the directory somewhere else.
 
