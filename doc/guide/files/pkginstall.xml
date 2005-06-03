@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.1 2005/06/03 12:27:48 jmmv Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.2 2005/06/03 12:54:11 wiz Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -166,11 +166,11 @@ installation prefix:</para>
 in their own specific directory, <varname>PKG_SYSCONFDIR</varname>, and
 need special treatment during installation (most of which is automated by
 pkginstall).  The main concept you must bear in mind is that files marked
-as a configuration are automatically copied to the right place (somewhere
+as configuration files are automatically copied to the right place (somewhere
 inside <varname>PKG_SYSCONFDIR</varname>) during installation <emphasis>if
 and only if</emphasis> they didn't exist before.  Similarly, they will not
 be removed if they have local modifications.  This ensures that
-administrators never loose any custom changes they may have made.</para>
+administrators never lose any custom changes they may have made.</para>
 
 <!-- ================================================================== -->
 
@@ -185,7 +185,7 @@ set based upon the following variables:</para>
 
   <listitem>
     <para><varname>PKG_SYSCONFBASE</varname>: The configuration's root
-    directory.  Defaults to <filename>${PREFIX}/etc</filename> although may
+    directory.  Defaults to <filename>${PREFIX}/etc</filename> although it may
     be overridden by the user to point to his preferred location (e.g.,
     <filename>/etc</filename>, <filename>/etc/pkg</filename>, etc.).
     Packages must not use it directly.</para>
@@ -261,7 +261,7 @@ linkend="dirs-outside-prefix" /> what this means.</para>
 <title>Telling the software were configuration files are</title>
 
 <para>Given that pkgsrc (and users!) expect configuration files to be in a
-known place, you need to teach each package where shall it install its
+known place, you need to teach each package where it shall install its
 files.  In some cases you will have to patch the package Makefiles to
 achieve it.  If you are lucky, though, it may be as easy as passing an
 extra flag to the configuration script; this is the case of GNU Autoconf
@@ -284,8 +284,8 @@ unfortunately).</para>
 <para>As said before, pkginstall automatically handles configuration files.
 This means that <emphasis role="strong">the packages themselves must not
 touch the contents of <filename>${PKG_SYSCONFDIR}</filename>
-directly</emphasis>.  Bad news is that the software they build will, out of
-the box, mess with the contents of that directory.  So which is the correct
+directly</emphasis>.  Bad news is that many software installation scripts will, out of
+the box, mess with the contents of that directory.  So what is the correct
 procedure to fix this issue?</para>
 
 <para>You must teach the package (usually by manually patching it) to
@@ -335,8 +335,8 @@ installation.</para>
 installed in a place known by the underlying OS, usually outside the
 installation prefix.  Therefore, the same rules described in <xref
 linkend="files-and-dirs-outside-prefix" /> apply, and the same solutions
-can be used.  However, pkginstall provides a specific mechanism to handle
-these files, given that they are special.</para>
+can be used.  However, pkginstall provides a special mechanism to handle
+these files.</para>
 
 <para>In order to provide system startup scripts, the package has
 to:</para>
@@ -346,7 +346,7 @@ to:</para>
   <listitem>
     <para>Store the script inside <filename>${FILESDIR}</filename>, with
     the <literal>.sh</literal> suffix appended.  Considering the
-    <pkg>print/cups</pkg> package as an example, it has the
+    <pkg>print/cups</pkg> package as an example, it has a
     <filename>cupsd.sh</filename> in its files directory.</para>
   </listitem>
 
@@ -377,7 +377,7 @@ script in an automated fashion:</para>
   <listitem>
     <para>Copy the script from the files directory to the examples
     hierarchy, <filename>${PREFIX}/share/examples/rc.d/</filename>.  Note
-    that the master file must be explicitly registered in the
+    that this master file must be explicitly registered in the
     <filename>PLIST</filename>.</para>
   </listitem>
 
