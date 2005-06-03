@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.4 2005/05/24 12:14:42 wiz Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.5 2005/06/03 16:05:30 reed Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -381,7 +381,7 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//} </programlisting>
 	as we don't want to cause unneeded package deletions and
 	rebuilds.  In many cases, new versions of packages work just
 	fine with older dependencies.  See <xref
-	linkend="dependencies"/> and <xref linkend="buildlink"/> for
+	linkend="dependencies"/> for
 	more information about dependencies on other packages,
 	including the <varname>BUILDLINK_RECOMMENDED</varname> and
 	<varname>RECOMMENDED</varname> definitions. </para>
