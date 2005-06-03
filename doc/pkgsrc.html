@@ -350,8 +350,8 @@ alink="#0000FF">
                 pkgsrc</a></span></dt>
 
                 <dt><span class="sect1"><a href="#faq.conf">6.14.
-                Configuration files handling and
-                placement</a></span></dt>
+                How do I change the location of configuration
+                files?</a></span></dt>
 
                 <dt><span class="sect1"><a href=
                 "#audit-packages">6.15. Automated security
@@ -540,261 +540,326 @@ alink="#0000FF">
               </dl>
             </dd>
 
-            <dt><span class="chapter"><a href="#options">11.
+            <dt><span class="chapter"><a href="#pkginstall">11. The
+            pkginstall framework</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect1"><a href=
+                "#files-and-dirs-outside-prefix">11.1. Files and
+                directories outside the installation
+                prefix</a></span></dt>
+
+                <dd>
+                  <dl>
+                    <dt><span class="sect2"><a href=
+                    "#dirs-outside-prefix">11.1.1. Directory
+                    manipulation</a></span></dt>
+
+                    <dt><span class="sect2"><a href=
+                    "#files-outside-prefix">11.1.2. File
+                    manipulation</a></span></dt>
+                  </dl>
+                </dd>
+
+                <dt><span class="sect1"><a href="#conf-files">11.2.
+                Configuration files</a></span></dt>
+
+                <dd>
+                  <dl>
+                    <dt><span class="sect2"><a href=
+                    "#conf-files-sysconfdir">11.2.1. How
+                    <code class="varname">PKG_SYSCONFDIR</code> is
+                    set</a></span></dt>
+
+                    <dt><span class="sect2"><a href=
+                    "#conf-files-configure">11.2.2. Telling the
+                    software were configuration files
+                    are</a></span></dt>
+
+                    <dt><span class="sect2"><a href=
+                    "#conf-files-patching">11.2.3. Patching
+                    installations</a></span></dt>
+
+                    <dt><span class="sect2"><a href=
+                    "#conf-files-disable">11.2.4. Disabling
+                    handling of configuration files</a></span></dt>
+                  </dl>
+                </dd>
+
+                <dt><span class="sect1"><a href=
+                "#rcd-scripts">11.3. System startup
+                scripts</a></span></dt>
+
+                <dd>
+                  <dl>
+                    <dt><span class="sect2"><a href=
+                    "#rcd-scripts-disable">11.3.1. Disabling
+                    handling of system startup
+                    scripts</a></span></dt>
+                  </dl>
+                </dd>
+
+                <dt><span class="sect1"><a href=
+                "#users-and-groups">11.4. System users and
+                groups</a></span></dt>
+
+                <dt><span class="sect1"><a href="#shells">11.5.
+                System shells</a></span></dt>
+
+                <dd>
+                  <dl>
+                    <dt><span class="sect2"><a href=
+                    "#shells-disable">11.5.1. Disabling handling of
+                    configuration files</a></span></dt>
+                  </dl>
+                </dd>
+              </dl>
+            </dd>
+
+            <dt><span class="chapter"><a href="#options">12.
             Options handling</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect1"><a href=
-                "#global-default-options">11.1. Global default
+                "#global-default-options">12.1. Global default
                 options</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#converting-to-options">11.2. Converting packages
+                "#converting-to-options">12.2. Converting packages
                 to use <code class=
                 "filename">bsd.options.mk</code></a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="chapter"><a href="#build">12. The
+            <dt><span class="chapter"><a href="#build">13. The
             build process</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect1"><a href=
-                "#build.prefix">12.1. Program
+                "#build.prefix">13.1. Program
                 location</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#main-targets">12.2. Main targets</a></span></dt>
+                "#main-targets">13.2. Main targets</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#build.helpful-targets">12.3. Other helpful
+                "#build.helpful-targets">13.3. Other helpful
                 targets</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="chapter"><a href="#fixes">13. Notes on
+            <dt><span class="chapter"><a href="#fixes">14. Notes on
             fixes for packages</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect1"><a href=
-                "#general-operation">13.1. General
+                "#general-operation">14.1. General
                 operation</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#pulling-vars-from-etc-mk.conf">13.1.1. How to
+                    "#pulling-vars-from-etc-mk.conf">14.1.1. How to
                     pull in variables from
                     /etc/mk.conf</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#where-to-install-documentation">13.1.2. Where
+                    "#where-to-install-documentation">14.1.2. Where
                     to install documentation</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#restricted-packages">13.1.3. Restricted
+                    "#restricted-packages">14.1.3. Restricted
                     packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#dependencies">13.1.4. Handling
+                    "#dependencies">14.1.4. Handling
                     dependencies</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#conflicts">13.1.5. Handling conflicts with
+                    "#conflicts">14.1.5. Handling conflicts with
                     other packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#not-building-packages">13.1.6. Packages that
+                    "#not-building-packages">14.1.6. Packages that
                     cannot or should not be built</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#undeletable-packages">13.1.7. Packages which
+                    "#undeletable-packages">14.1.7. Packages which
                     should not be deleted, once
                     installed</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#security-handling">13.1.8. Handling packages
+                    "#security-handling">14.1.8. Handling packages
                     with security problems</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#compiler-bugs">13.1.9. How to handle compiler
+                    "#compiler-bugs">14.1.9. How to handle compiler
                     bugs</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#bumping-pkgrevision">13.1.10. How to handle
+                    "#bumping-pkgrevision">14.1.10. How to handle
                     incrementing versions when fixing an existing
                     package</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#portability-of-packages">13.1.11. Portability
+                    "#portability-of-packages">14.1.11. Portability
                     of packages</a></span></dt>
                   </dl>
                 </dd>
 
                 <dt><span class="sect1"><a href=
-                "#downloading-issues">13.2. Possible downloading
+                "#downloading-issues">14.2. Possible downloading
                 issues</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#no-plain-download">13.2.1. Packages whose
+                    "#no-plain-download">14.2.1. Packages whose
                     distfiles aren't available for plain
                     downloading</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#modified-distfiles-same-name">13.2.2. How to
+                    "#modified-distfiles-same-name">14.2.2. How to
                     handle modified distfiles with the 'old'
                     name</a></span></dt>
                   </dl>
                 </dd>
 
                 <dt><span class="sect1"><a href=
-                "#configuration-gotchas">13.3. Configuration
+                "#configuration-gotchas">14.3. Configuration
                 gotchas</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#fixes.libtool">13.3.1. Shared libraries -
+                    "#fixes.libtool">14.3.1. Shared libraries -
                     libtool</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#using-libtool">13.3.2. Using libtool on GNU
+                    "#using-libtool">14.3.2. Using libtool on GNU
                     packages that already support
                     libtool</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#autoconf-automake">13.3.3. GNU
+                    "#autoconf-automake">14.3.3. GNU
                     Autoconf/Automake</a></span></dt>
                   </dl>
                 </dd>
 
                 <dt><span class="sect1"><a href=
-                "#building-considerations">13.4. Building
+                "#building-considerations">14.4. Building
                 considerations</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#cpp-defines">13.4.1. CPP
+                    "#cpp-defines">14.4.1. CPP
                     defines</a></span></dt>
                   </dl>
                 </dd>
 
                 <dt><span class="sect1"><a href=
-                "#package-specific-actions">13.5. Package specific
+                "#package-specific-actions">14.5. Package specific
                 actions</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#package-configuration-files">13.5.1. Package
-                    configuration files</a></span></dt>
-
-                    <dt><span class="sect2"><a href=
-                    "#user-interaction">13.5.2. User
+                    "#user-interaction">14.5.1. User
                     interaction</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#handling-licenses">13.5.3. Handling
+                    "#handling-licenses">14.5.2. Handling
                     licenses</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#creating-accounts">13.5.4. Creating an
-                    account from a package</a></span></dt>
-
-                    <dt><span class="sect2"><a href=
-                    "#installing-score-files">13.5.5. Installing
+                    "#installing-score-files">14.5.3. Installing
                     score files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#login-shells">13.5.6. Packages providing
-                    login shells</a></span></dt>
-
-                    <dt><span class="sect2"><a href=
-                    "#perl-scripts">13.5.7. Packages containing
+                    "#perl-scripts">14.5.4. Packages containing
                     perl scripts</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#hardcoded-paths">13.5.8. Packages with
+                    "#hardcoded-paths">14.5.5. Packages with
                     hardcoded paths to other
                     interpreters</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#perl-modules">13.5.9. Packages installing
+                    "#perl-modules">14.5.6. Packages installing
                     perl modules</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#faq.info-files">13.5.10. Packages installing
+                    "#faq.info-files">14.5.7. Packages installing
                     info files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#gconf2-data-files">13.5.11. Packages
+                    "#gconf2-data-files">14.5.8. Packages
                     installing GConf2 data files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#scrollkeeper-data-files">13.5.12. Packages
+                    "#scrollkeeper-data-files">14.5.9. Packages
                     installing scrollkeeper data
                     files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#x11-fonts">13.5.13. Packages installing X11
+                    "#x11-fonts">14.5.10. Packages installing X11
                     fonts</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#gtk2-modules">13.5.14. Packages installing
+                    "#gtk2-modules">14.5.11. Packages installing
                     GTK2 modules</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#sgml-xml-data">13.5.15. Packages installing
+                    "#sgml-xml-data">14.5.12. Packages installing
                     SGML or XML data</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#mime-database">13.5.16. Packages installing
+                    "#mime-database">14.5.13. Packages installing
                     extensions to the MIME database</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#intltool">13.5.17. Packages using
+                    "#intltool">14.5.14. Packages using
                     intltool</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#startup-scripts">13.5.18. Packages installing
+                    "#startup-scripts">14.5.15. Packages installing
                     startup scripts</a></span></dt>
                   </dl>
                 </dd>
 
                 <dt><span class="sect1"><a href=
-                "#feedback-to-author">13.6. Feedback to the
+                "#feedback-to-author">14.6. Feedback to the
                 author</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="chapter"><a href="#debug">14.
+            <dt><span class="chapter"><a href="#debug">15.
             Debugging</a></span></dt>
 
-            <dt><span class="chapter"><a href="#submit">15.
+            <dt><span class="chapter"><a href="#submit">16.
             Submitting and Committing</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect1"><a href=
-                "#submitting-your-package">15.1. Submitting your
+                "#submitting-your-package">16.1. Submitting your
                 packages</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#committing-importing">15.2. Committing: Importing
+                "#committing-importing">16.2. Committing: Importing
                 a package into CVS</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#updating-package">15.3. Updating a package to a
+                "#updating-package">16.3. Updating a package to a
                 newer version</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#moving-package">15.4. Moving a package in
+                "#moving-package">16.4. Moving a package in
                 pkgsrc</a></span></dt>
               </dl>
             </dd>
@@ -1437,9 +1502,9 @@ alink="#0000FF">
               "#using-sudo-with-pkgsrc">6.13. Using 'sudo' with
               pkgsrc</a></span></dt>
 
-              <dt><span class="sect1"><a href="#faq.conf">6.14.
-              Configuration files handling and
-              placement</a></span></dt>
+              <dt><span class="sect1"><a href="#faq.conf">6.14. How
+              do I change the location of configuration
+              files?</a></span></dt>
 
               <dt><span class="sect1"><a href=
               "#audit-packages">6.15. Automated security
@@ -3124,8 +3189,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
           class="pkgname">misc/figlet</a> example.</p>
 
           <p>See <a href="#submit" title=
-          "Chapter&nbsp;15.&nbsp;Submitting and Committing">Chapter
-          15, <i>Submitting and Committing</i></a> for information
+          "Chapter&nbsp;16.&nbsp;Submitting and Committing">Chapter
+          16, <i>Submitting and Committing</i></a> for information
           on how to submit such a binary package.</p>
         </div>
 
@@ -3142,7 +3207,7 @@ CFLAGS= -xtarget=ultra -xarch=v9
           </div>
 
           <p>See <a href="#build.helpful-targets" title=
-          "12.3.&nbsp;Other helpful targets">Section&nbsp;12.3,
+          "13.3.&nbsp;Other helpful targets">Section&nbsp;13.3,
           &#8220;Other helpful targets&#8221;</a>.</p>
         </div>
 
@@ -4008,9 +4073,9 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             "#using-sudo-with-pkgsrc">6.13. Using 'sudo' with
             pkgsrc</a></span></dt>
 
-            <dt><span class="sect1"><a href="#faq.conf">6.14.
-            Configuration files handling and
-            placement</a></span></dt>
+            <dt><span class="sect1"><a href="#faq.conf">6.14. How
+            do I change the location of configuration
+            files?</a></span></dt>
 
             <dt><span class="sect1"><a href="#audit-packages">6.15.
             Automated security checks</a></span></dt>
@@ -4718,135 +4783,38 @@ SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "faq.conf" id=
-                "faq.conf"></a>6.14.&nbsp;Configuration files
-                handling and placement</h2>
+                "faq.conf" id="faq.conf"></a>6.14.&nbsp;How do I
+                change the location of configuration files?</h2>
               </div>
             </div>
           </div>
 
-          <p>The global variable <code class=
-          "varname">PKG_SYSCONFBASE</code> (and some others) can be
-          set by the system administrator in <code class=
-          "filename">/etc/mk.conf</code> to define the place where
-          configuration files get installed. Therefore, packages
-          must be adapted to support this feature. Keep in mind
-          that you should only install files that are strictly
-          necessary in the configuration directory, files that can
-          go to <code class="filename">$PREFIX/share</code> should
-          go there.</p>
+          <p>As the system administrator, you can choose where
+          configuration files are installed. The default settings
+          make all these files go into <code class=
+          "filename">${PREFIX}/etc</code> or some of its
+          subdirectories; this may be suboptimal depending on your
+          expectations (e.g., a read-only, NFS-exported
+          <code class="varname">PREFIX</code> with a need of
+          per-machine configuration of the provided packages).</p>
 
-          <p>We will take a look at available variables first
-          (<code class="filename">bsd.pkg.mk</code> contains more
-          information). <code class="varname">PKG_SYSCONFDIR</code>
-          is where the configuration files for a package may be
-          found (that is, the full path, e.g. <code class=
-          "filename">/etc</code> or <code class=
-          "filename">/usr/pkg/etc</code>). This value may be
-          customized in various ways:</p>
+          <p>In order to change the defaults, you can modify the
+          <code class="varname">PKG_SYSCONFBASE</code> variable (in
+          <code class="filename">/etc/mk.conf</code>) to point to
+          your preferred configuration directory; some common
+          examples include <code class="filename">/etc</code> or
+          <code class="filename">/etc/pkg</code>.</p>
 
-          <div class="orderedlist">
-            <ol type="1">
-              <li>
-                <p><code class="varname">PKG_SYSCONFBASE</code> is
-                the main config directory under which all package
-                configuration files are to be found. Users will
-                typically want to set it to <code class=
-                "filename">/etc</code>, or accept the default
-                location of <code class=
-                "filename">$PREFIX/etc</code>.</p>
-              </li>
+          <p>Furthermore, you can change this value on a
+          per-package basis by setting the <code class=
+          "varname">PKG_SYSCONFDIR.${PKG_SYSCONFVAR}</code>
+          variable. <code class="varname">PKG_SYSCONFVAR</code>'s
+          value usually matches the name of the package you would
+          like to modify, that is, the contents of <code class=
+          "varname">PKGBASE</code>.</p>
 
-              <li>
-                <p><code class="varname">PKG_SYSCONFSUBDIR</code>
-                is the subdirectory of <code class=
-                "varname">PKG_SYSCONFBASE</code> under which the
-                configuration files for a particular package may be
-                found. Defaults to <code class=
-                "varname">${SYSCONFBASE}</code>.</p>
-              </li>
-
-              <li>
-                <p><code class="varname">PKG_SYSCONFVAR</code> is
-                the special suffix used to distinguish any
-                overriding values for a particular package (see
-                next item). It defaults to <code class=
-                "varname">${PKGBASE}</code>, but for a collection
-                of related packages that should all have the same
-                <code class="varname">PKG_SYSCONFDIR</code> value,
-                it can be set in each of the package Makefiles to a
-                common value.</p>
-              </li>
-
-              <li>
-                <p><code class=
-                "varname">PKG_SYSCONFDIR.${PKG_SYSCONFVAR}</code>
-                overrides the value of <code class=
-                "varname">${PKG_SYSCONFDIR}</code> for packages
-                with the same value for <code class=
-                "varname">PKG_SYSCONFVAR</code>.</p>
-
-                <p>As an example, all the various KDE packages may
-                want to set <code class=
-                "varname">PKG_SYSCONFVAR</code> to
-                &#8220;<span class="quote">kde</span>&#8221; so
-                admins can set <code class=
-                "varname">PKG_SYSCONFDIR.kde</code> in <code class=
-                "filename">/etc/mk.conf</code> to define where to
-                install KDE config files.</p>
-              </li>
-            </ol>
-          </div>
-
-          <p>Programs' configuration directory should be defined
-          during the configure stage. Packages that use GNU
-          autoconf can usually do this by using the
-          &#8220;<span class="quote">--sysconfdir</span>&#8221;
-          parameter, but this brings some problems as we will see
-          now. When you change this pathname in packages, you
-          should not allow them to install files in that directory
-          directly. Instead they need to install those files under
-          <code class="filename">share/examples/${PKGNAME}</code>
-          so <code class="filename">PLIST</code> can register
-          them.</p>
-
-          <p>Once you have the required configuration files in
-          place (under the <code class=
-          "filename">share/examples</code> directory) the variable
-          <code class="varname">CONF_FILES</code> should be set to
-          copy them into <code class=
-          "varname">PKG_SYSCONFDIR</code>. The contents of this
-          variable is formed by pairs of filenames; the first
-          element of the pair specifies the file inside the
-          examples directory (registered by <code class=
-          "filename">PLIST</code>) and the second element specifies
-          the target file. This is done this way to allow binary
-          packages to place files in the right directory using
-          <code class="filename">INSTALL</code>/<code class=
-          "filename">DEINSTALL</code> scripts which are created
-          automatically. The package <code class=
-          "filename">Makefile</code> must also set <code class=
-          "varname">USE_PKGINSTALL=YES</code> to use these
-          automatically generated scripts. The automatic copying of
-          config files can be toggled by setting the environment
-          variable <code class="varname">PKG_CONFIG</code> prior to
-          package installation.</p>
-
-          <p>Here is an example, taken from <code class=
-          "filename">mail/mutt/Makefile</code>:</p>
-          <pre class="programlisting">
-EGDIR=        ${PREFIX}/share/doc/mutt/samples
-CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
-</pre>
-
-          <p>As you can see, this package installs configuration
-          files inside <code class="varname">EGDIR</code>, which
-          are registered by <code class="filename">PLIST</code>.
-          After that, the variable <code class=
-          "varname">CONF_FILES</code> lists the installed file
-          first and then the target file. Users will also get an
-          automatic message when files are installed using this
-          method.</p>
+          <p>Note that, after changing these settings, you must
+          rebuild and reinstall any affected packages.</p>
         </div>
 
         <div class="sect1" lang="en" xml:lang="en">
@@ -5102,260 +5070,323 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
             </dl>
           </dd>
 
-          <dt><span class="chapter"><a href="#options">11. Options
+          <dt><span class="chapter"><a href="#pkginstall">11. The
+          pkginstall framework</a></span></dt>
+
+          <dd>
+            <dl>
+              <dt><span class="sect1"><a href=
+              "#files-and-dirs-outside-prefix">11.1. Files and
+              directories outside the installation
+              prefix</a></span></dt>
+
+              <dd>
+                <dl>
+                  <dt><span class="sect2"><a href=
+                  "#dirs-outside-prefix">11.1.1. Directory
+                  manipulation</a></span></dt>
+
+                  <dt><span class="sect2"><a href=
+                  "#files-outside-prefix">11.1.2. File
+                  manipulation</a></span></dt>
+                </dl>
+              </dd>
+
+              <dt><span class="sect1"><a href="#conf-files">11.2.
+              Configuration files</a></span></dt>
+
+              <dd>
+                <dl>
+                  <dt><span class="sect2"><a href=
+                  "#conf-files-sysconfdir">11.2.1. How <code class=
+                  "varname">PKG_SYSCONFDIR</code> is
+                  set</a></span></dt>
+
+                  <dt><span class="sect2"><a href=
+                  "#conf-files-configure">11.2.2. Telling the
+                  software were configuration files
+                  are</a></span></dt>
+
+                  <dt><span class="sect2"><a href=
+                  "#conf-files-patching">11.2.3. Patching
+                  installations</a></span></dt>
+
+                  <dt><span class="sect2"><a href=
+                  "#conf-files-disable">11.2.4. Disabling handling
+                  of configuration files</a></span></dt>
+                </dl>
+              </dd>
+
+              <dt><span class="sect1"><a href="#rcd-scripts">11.3.
+              System startup scripts</a></span></dt>
+
+              <dd>
+                <dl>
+                  <dt><span class="sect2"><a href=
+                  "#rcd-scripts-disable">11.3.1. Disabling handling
+                  of system startup scripts</a></span></dt>
+                </dl>
+              </dd>
+
+              <dt><span class="sect1"><a href=
+              "#users-and-groups">11.4. System users and
+              groups</a></span></dt>
+
+              <dt><span class="sect1"><a href="#shells">11.5.
+              System shells</a></span></dt>
+
+              <dd>
+                <dl>
+                  <dt><span class="sect2"><a href=
+                  "#shells-disable">11.5.1. Disabling handling of
+                  configuration files</a></span></dt>
+                </dl>
+              </dd>
+            </dl>
+          </dd>
+
+          <dt><span class="chapter"><a href="#options">12. Options
           handling</a></span></dt>
 
           <dd>
             <dl>
               <dt><span class="sect1"><a href=
-              "#global-default-options">11.1. Global default
+              "#global-default-options">12.1. Global default
               options</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#converting-to-options">11.2. Converting packages to
+              "#converting-to-options">12.2. Converting packages to
               use <code class=
               "filename">bsd.options.mk</code></a></span></dt>
             </dl>
           </dd>
 
-          <dt><span class="chapter"><a href="#build">12. The build
+          <dt><span class="chapter"><a href="#build">13. The build
           process</a></span></dt>
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#build.prefix">12.1.
+              <dt><span class="sect1"><a href="#build.prefix">13.1.
               Program location</a></span></dt>
 
-              <dt><span class="sect1"><a href="#main-targets">12.2.
+              <dt><span class="sect1"><a href="#main-targets">13.2.
               Main targets</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#build.helpful-targets">12.3. Other helpful
+              "#build.helpful-targets">13.3. Other helpful
               targets</a></span></dt>
             </dl>
           </dd>
 
-          <dt><span class="chapter"><a href="#fixes">13. Notes on
+          <dt><span class="chapter"><a href="#fixes">14. Notes on
           fixes for packages</a></span></dt>
 
           <dd>
             <dl>
               <dt><span class="sect1"><a href=
-              "#general-operation">13.1. General
+              "#general-operation">14.1. General
               operation</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#pulling-vars-from-etc-mk.conf">13.1.1. How to
+                  "#pulling-vars-from-etc-mk.conf">14.1.1. How to
                   pull in variables from
                   /etc/mk.conf</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#where-to-install-documentation">13.1.2. Where
+                  "#where-to-install-documentation">14.1.2. Where
                   to install documentation</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#restricted-packages">13.1.3. Restricted
+                  "#restricted-packages">14.1.3. Restricted
                   packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#dependencies">13.1.4. Handling
+                  "#dependencies">14.1.4. Handling
                   dependencies</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#conflicts">13.1.5. Handling conflicts with
+                  "#conflicts">14.1.5. Handling conflicts with
                   other packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#not-building-packages">13.1.6. Packages that
+                  "#not-building-packages">14.1.6. Packages that
                   cannot or should not be built</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#undeletable-packages">13.1.7. Packages which
+                  "#undeletable-packages">14.1.7. Packages which
                   should not be deleted, once
                   installed</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#security-handling">13.1.8. Handling packages
+                  "#security-handling">14.1.8. Handling packages
                   with security problems</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#compiler-bugs">13.1.9. How to handle compiler
+                  "#compiler-bugs">14.1.9. How to handle compiler
                   bugs</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#bumping-pkgrevision">13.1.10. How to handle
+                  "#bumping-pkgrevision">14.1.10. How to handle
                   incrementing versions when fixing an existing
                   package</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#portability-of-packages">13.1.11. Portability
+                  "#portability-of-packages">14.1.11. Portability
                   of packages</a></span></dt>
                 </dl>
               </dd>
 
               <dt><span class="sect1"><a href=
-              "#downloading-issues">13.2. Possible downloading
+              "#downloading-issues">14.2. Possible downloading
               issues</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#no-plain-download">13.2.1. Packages whose
+                  "#no-plain-download">14.2.1. Packages whose
                   distfiles aren't available for plain
                   downloading</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#modified-distfiles-same-name">13.2.2. How to
+                  "#modified-distfiles-same-name">14.2.2. How to
                   handle modified distfiles with the 'old'
                   name</a></span></dt>
                 </dl>
               </dd>
 
               <dt><span class="sect1"><a href=
-              "#configuration-gotchas">13.3. Configuration
+              "#configuration-gotchas">14.3. Configuration
               gotchas</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#fixes.libtool">13.3.1. Shared libraries -
+                  "#fixes.libtool">14.3.1. Shared libraries -
                   libtool</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#using-libtool">13.3.2. Using libtool on GNU
+                  "#using-libtool">14.3.2. Using libtool on GNU
                   packages that already support
                   libtool</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#autoconf-automake">13.3.3. GNU
+                  "#autoconf-automake">14.3.3. GNU
                   Autoconf/Automake</a></span></dt>
                 </dl>
               </dd>
 
               <dt><span class="sect1"><a href=
-              "#building-considerations">13.4. Building
+              "#building-considerations">14.4. Building
               considerations</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#cpp-defines">13.4.1. CPP
+                  "#cpp-defines">14.4.1. CPP
                   defines</a></span></dt>
                 </dl>
               </dd>
 
               <dt><span class="sect1"><a href=
-              "#package-specific-actions">13.5. Package specific
+              "#package-specific-actions">14.5. Package specific
               actions</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#package-configuration-files">13.5.1. Package
-                  configuration files</a></span></dt>
-
-                  <dt><span class="sect2"><a href=
-                  "#user-interaction">13.5.2. User
+                  "#user-interaction">14.5.1. User
                   interaction</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#handling-licenses">13.5.3. Handling
+                  "#handling-licenses">14.5.2. Handling
                   licenses</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#creating-accounts">13.5.4. Creating an account
-                  from a package</a></span></dt>
-
-                  <dt><span class="sect2"><a href=
-                  "#installing-score-files">13.5.5. Installing
+                  "#installing-score-files">14.5.3. Installing
                   score files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#login-shells">13.5.6. Packages providing login
-                  shells</a></span></dt>
-
-                  <dt><span class="sect2"><a href=
-                  "#perl-scripts">13.5.7. Packages containing perl
+                  "#perl-scripts">14.5.4. Packages containing perl
                   scripts</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#hardcoded-paths">13.5.8. Packages with
+                  "#hardcoded-paths">14.5.5. Packages with
                   hardcoded paths to other
                   interpreters</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#perl-modules">13.5.9. Packages installing perl
+                  "#perl-modules">14.5.6. Packages installing perl
                   modules</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#faq.info-files">13.5.10. Packages installing
+                  "#faq.info-files">14.5.7. Packages installing
                   info files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#gconf2-data-files">13.5.11. Packages installing
+                  "#gconf2-data-files">14.5.8. Packages installing
                   GConf2 data files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#scrollkeeper-data-files">13.5.12. Packages
+                  "#scrollkeeper-data-files">14.5.9. Packages
                   installing scrollkeeper data
                   files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#x11-fonts">13.5.13. Packages installing X11
+                  "#x11-fonts">14.5.10. Packages installing X11
                   fonts</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#gtk2-modules">13.5.14. Packages installing GTK2
+                  "#gtk2-modules">14.5.11. Packages installing GTK2
                   modules</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#sgml-xml-data">13.5.15. Packages installing
+                  "#sgml-xml-data">14.5.12. Packages installing
                   SGML or XML data</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#mime-database">13.5.16. Packages installing
+                  "#mime-database">14.5.13. Packages installing
                   extensions to the MIME database</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#intltool">13.5.17. Packages using
+                  "#intltool">14.5.14. Packages using
                   intltool</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#startup-scripts">13.5.18. Packages installing
+                  "#startup-scripts">14.5.15. Packages installing
                   startup scripts</a></span></dt>
                 </dl>
               </dd>
 
               <dt><span class="sect1"><a href=
-              "#feedback-to-author">13.6. Feedback to the
+              "#feedback-to-author">14.6. Feedback to the
               author</a></span></dt>
             </dl>
           </dd>
 
-          <dt><span class="chapter"><a href="#debug">14.
+          <dt><span class="chapter"><a href="#debug">15.
           Debugging</a></span></dt>
 
-          <dt><span class="chapter"><a href="#submit">15.
+          <dt><span class="chapter"><a href="#submit">16.
           Submitting and Committing</a></span></dt>
 
           <dd>
             <dl>
               <dt><span class="sect1"><a href=
-              "#submitting-your-package">15.1. Submitting your
+              "#submitting-your-package">16.1. Submitting your
               packages</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#committing-importing">15.2. Committing: Importing a
+              "#committing-importing">16.2. Committing: Importing a
               package into CVS</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#updating-package">15.3. Updating a package to a
+              "#updating-package">16.3. Updating a package to a
               newer version</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#moving-package">15.4. Moving a package in
+              "#moving-package">16.4. Moving a package in
               pkgsrc</a></span></dt>
             </dl>
           </dd>
@@ -5599,8 +5630,8 @@ converters    games         mbone         print         x11
               <li>
                 <p>If the package installs any info files, see
                 <a href="#faq.info-files" title=
-                "13.5.10.&nbsp;Packages installing info files">Section
-                13.5.10, &#8220;Packages installing info
+                "14.5.7.&nbsp;Packages installing info files">Section
+                14.5.7, &#8220;Packages installing info
                 files&#8221;</a>.</p>
               </li>
 
@@ -6609,7 +6640,7 @@ for_test:
           print-PLIST</strong></span> command to output a PLIST
           that matches any new files since the package was
           extracted. See <a href="#build.helpful-targets" title=
-          "12.3.&nbsp;Other helpful targets">Section&nbsp;12.3,
+          "13.3.&nbsp;Other helpful targets">Section&nbsp;13.3,
           &#8220;Other helpful targets&#8221;</a> for more
           information on this target.</p>
         </div>
@@ -7546,8 +7577,8 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
             want to cause unneeded package deletions and rebuilds.
             In many cases, new versions of packages work just fine
             with older dependencies. See <a href="#dependencies"
-            title="13.1.4.&nbsp;Handling dependencies">Section
-            13.1.4, &#8220;Handling dependencies&#8221;</a> and
+            title="14.1.4.&nbsp;Handling dependencies">Section
+            14.1.4, &#8220;Handling dependencies&#8221;</a> and
             <a href="#buildlink" title=
             "Chapter&nbsp;10.&nbsp;Buildlink methodology">Chapter
             10, <i>Buildlink methodology</i></a> for more
@@ -7792,8 +7823,738 @@ CHECK_BUILTIN.foo?=     no
         <div class="titlepage">
           <div>
             <div>
+              <h2 class="title"><a name="pkginstall" id=
+              "pkginstall"></a>Chapter&nbsp;11.&nbsp;The pkginstall
+              framework</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="toc">
+          <p><b>Table of Contents</b></p>
+
+          <dl>
+            <dt><span class="sect1"><a href=
+            "#files-and-dirs-outside-prefix">11.1. Files and
+            directories outside the installation
+            prefix</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect2"><a href=
+                "#dirs-outside-prefix">11.1.1. Directory
+                manipulation</a></span></dt>
+
+                <dt><span class="sect2"><a href=
+                "#files-outside-prefix">11.1.2. File
+                manipulation</a></span></dt>
+              </dl>
+            </dd>
+
+            <dt><span class="sect1"><a href="#conf-files">11.2.
+            Configuration files</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect2"><a href=
+                "#conf-files-sysconfdir">11.2.1. How <code class=
+                "varname">PKG_SYSCONFDIR</code> is
+                set</a></span></dt>
+
+                <dt><span class="sect2"><a href=
+                "#conf-files-configure">11.2.2. Telling the
+                software were configuration files
+                are</a></span></dt>
+
+                <dt><span class="sect2"><a href=
+                "#conf-files-patching">11.2.3. Patching
+                installations</a></span></dt>
+
+                <dt><span class="sect2"><a href=
+                "#conf-files-disable">11.2.4. Disabling handling of
+                configuration files</a></span></dt>
+              </dl>
+            </dd>
+
+            <dt><span class="sect1"><a href="#rcd-scripts">11.3.
+            System startup scripts</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect2"><a href=
+                "#rcd-scripts-disable">11.3.1. Disabling handling
+                of system startup scripts</a></span></dt>
+              </dl>
+            </dd>
+
+            <dt><span class="sect1"><a href=
+            "#users-and-groups">11.4. System users and
+            groups</a></span></dt>
+
+            <dt><span class="sect1"><a href="#shells">11.5. System
+            shells</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect2"><a href=
+                "#shells-disable">11.5.1. Disabling handling of
+                configuration files</a></span></dt>
+              </dl>
+            </dd>
+          </dl>
+        </div>
+
+        <p>This chapter describes the framework known as
+        <code class="literal">pkginstall</code>, whose key features
+        are:</p>
+
+        <div class="itemizedlist">
+          <ul type="disc">
+            <li>
+              <p>Generic installation and manipulation of
+              directories and files outside the pkgsrc-handled
+              tree, <code class="varname">LOCALBASE</code>.</p>
+            </li>
+
+            <li>
+              <p>Automatic handling of configuration files during
+              installation, provided that packages are correctly
+              designed.</p>
+            </li>
+
+            <li>
+              <p>Generation and installation of system startup
+              scripts.</p>
+            </li>
+
+            <li>
+              <p>Registration of system users and groups.</p>
+            </li>
+
+            <li>
+              <p>Registration of system shells.</p>
+            </li>
+          </ul>
+        </div>
+
+        <p>The following sections inspect each of the above points
+        in detail. Note that, in order to use any of the described
+        functionalities, you must add the following to your
+        package's <code class="filename">Makefile</code>:</p>
+        <pre class="programlisting">
+USE_PKGINSTALL=YES
+</pre>
+
+        <p>You may be thinking that many of the things described
+        here could be easily done with simple code in the package's
+        post-installation target (<code class=
+        "literal">post-install</code>). <span class=
+        "emphasis"><em>This is incorrect</em></span>, as the code
+        in them is only executed when building from source.
+        Machines using binary packages could not benefit from it at
+        all (as the code itself could be unavailable). Therefore,
+        the only way to achieve any of the items described above is
+        by means of the installation scripts, which are
+        automatically generated by pkginstall.</p>
+
+        <div class="sect1" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "files-and-dirs-outside-prefix" id=
+                "files-and-dirs-outside-prefix"></a>11.1. Files and
+                directories outside the installation prefix</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>As you already know, the <code class=
+          "filename">PLIST</code> file holds a list of files and
+          directories that belong to a package. The names used in
+          it are relative to the installation prefix (<code class=
+          "filename">${PREFIX}</code>), which means that it cannot
+          register files outside this directory (absolute path
+          names are not allowed). Despite this restriction, some
+          packages need to install files outside this location;
+          e.g., under <code class="filename">${VARBASE}</code> or
+          <code class="filename">${PKG_SYSCONFDIR}</code>.</p>
+
+          <p>The only way to achieve this is to create such files
+          during installation time by using the installation
+          scripts. These scripts can run arbitrary commands, so
+          they have the potential to create and manage files
+          anywhere in the filesystem. Here is where pkginstall
+          comes into play: it provides generic scripts to abstract
+          the manipulation of such files and directories based on
+          variables set in the package's <code class=
+          "filename">Makefile</code>. The rest of this section
+          describes which these variables are.</p>
+
+          <div class="sect2" lang="en" xml:lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name="dirs-outside-prefix"
+                  id="dirs-outside-prefix"></a>11.1.1. Directory
+                  manipulation</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>The following variables can be set to request the
+            creation of directories anywhere in the filesystem:</p>
+
+            <div class="itemizedlist">
+              <ul type="disc">
+                <li>
+                  <p><code class="varname">MAKE_DIRS</code> and
+                  <code class="varname">OWN_DIRS</code> contain a
+                  list of directories that should be created and
+                  should attempt to be destroyed by the
+                  installation scripts. The difference between the
+                  two is that the latter prompts the administrator
+                  to remove any directories that may be left after
+                  deinstallation (because they were not empty),
+                  while the former does not.</p>
+                </li>
+
+                <li>
+                  <p><code class="varname">MAKE_DIRS_PERMS</code>
+                  and <code class="varname">OWN_DIRS_PERMS</code>
+                  contain a list of tuples describing which
+                  directories should be created and should attempt
+                  to be destroyed by the installation scripts. Each
+                  tuple holds the following values, separated by
+                  spaces: the directory name, its owner, its group
+                  and its numerical mode. For example:</p>
+                  <pre class="programlisting">
+MAKE_DIRS_PERMS+= ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
+</pre>
+
+                  <p>The difference between the two is exactly the
+                  same as their non-<code class=
+                  "varname">PERMS</code> counterparts.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sect2" lang="en" xml:lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name="files-outside-prefix"
+                  id="files-outside-prefix"></a>11.1.2. File
+                  manipulation</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>Creating non-empty files outside the installation
+            prefix is tricky because the <code class=
+            "filename">PLIST</code> forces all files to be inside
+            it. To overcome this problem, the only solution is to
+            extract the file in the known place (i.e., inside the
+            installation prefix) and copy it to the appropriate
+            location during installation (done by the installation
+            scripts generated by pkginstall). We will call the
+            former the <span class="emphasis"><em>master
+            file</em></span> in the following paragraphs, which
+            describe the variables that can be used to
+            automatically and consistently handle files outside the
+            installation prefix:</p>
+
+            <div class="itemizedlist">
+              <ul type="disc">
+                <li>
+                  <p><code class="varname">CONF_FILES</code> and
+                  <code class="varname">SUPPORT_FILES</code> are
+                  pairs of master and target files. During
+                  installation time, the master file is copied to
+                  the target one if and only if the latter does not
+                  exist. Upon deinstallation, the target file is
+                  removed provided that it was not modified by the
+                  installation.</p>
+
+                  <p>The difference between the two is that the
+                  latter prompts the administrator to remove any
+                  files that may be left after deinstallation
+                  (because they were not empty), while the former
+                  does not.</p>
+                </li>
+
+                <li>
+                  <p><code class="varname">CONF_FILES_PERMS</code>
+                  and <code class=
+                  "varname">SUPPORT_FILES_PERMS</code> contain
+                  tuples describing master files as well as their
+                  target locations. For each of them, it also
+                  specifies their owner, their group and their
+                  numeric permissions, in this order. For
+                  example:</p>
+                  <pre class="programlisting">
+SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
+</pre>
+
+                  <p>The difference between the two is exactly the
+                  same as their non-<code class=
+                  "varname">PERMS</code> counterparts.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="sect1" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "conf-files" id="conf-files"></a>11.2.
+                Configuration files</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>Configuration files are special in the sense that they
+          are installed in their own specific directory,
+          <code class="varname">PKG_SYSCONFDIR</code>, and need
+          special treatment during installation (most of which is
+          automated by pkginstall). The main concept you must bear
+          in mind is that files marked as a configuration are
+          automatically copied to the right place (somewhere inside
+          <code class="varname">PKG_SYSCONFDIR</code>) during
+          installation <span class="emphasis"><em>if and only
+          if</em></span> they didn't exist before. Similarly, they
+          will not be removed if they have local modifications.
+          This ensures that administrators never loose any custom
+          changes they may have made.</p>
+
+          <div class="sect2" lang="en" xml:lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name="conf-files-sysconfdir"
+                  id="conf-files-sysconfdir"></a>11.2.1. How
+                  <code class="varname">PKG_SYSCONFDIR</code> is
+                  set</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>As said before, the <code class=
+            "varname">PKG_SYSCONFDIR</code> variable specifies
+            where configuration files shall be installed. Its
+            contents are set based upon the following
+            variables:</p>
+
+            <div class="itemizedlist">
+              <ul type="disc">
+                <li>
+                  <p><code class="varname">PKG_SYSCONFBASE</code>:
+                  The configuration's root directory. Defaults to
+                  <code class="filename">${PREFIX}/etc</code>
+                  although may be overridden by the user to point
+                  to his preferred location (e.g., <code class=
+                  "filename">/etc</code>, <code class=
+                  "filename">/etc/pkg</code>, etc.). Packages must
+                  not use it directly.</p>
+                </li>
+
+                <li>
+                  <p><code class=
+                  "varname">PKG_SYSCONFSUBDIR</code>: A
+                  subdirectory of <code class=
+                  "varname">PKG_SYSCONFBASE</code> under which the
+                  configuration files for the package being built
+                  shall be installed. The definition of this
+                  variable only makes sense in the package's
+                  <code class="filename">Makefile</code> (i.e., it
+                  is not user customizable).</p>
+
+                  <p>As an example, consider the Apache package,
+                  <a xmlns=
+                  "http://www.w3.org/TR/xhtml1/transitional" href=
+                  "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/apache2/README.html"
+                  class="pkgname">www/apache2</a>, which places its
+                  configuration files under the <code class=
+                  "filename">httpd/</code> subdirectory of
+                  <code class="varname">PKG_SYSCONFBASE</code>.
+                  This should be set in the package Makefile.</p>
+                </li>
+
+                <li>
+                  <p><code class="varname">PKG_SYSCONFVAR</code>:
+                  Specifies the name of the variable that holds
+                  this package's configuration directory (if
+                  different from <code class=
+                  "varname">PKG_SYSCONFBASE</code>). It defaults to
+                  <code class="varname">PKGBASE</code>'s value, and
+                  is always prefixed with <code class=
+                  "literal">PKG_SYSCONFDIR</code>.</p>
+                </li>
+
+                <li>
+                  <p><code class=
+                  "varname">PKG_SYSCONFDIR.${PKG_SYSCONFVAR}</code>:
+                  Holds the directory where the configuration files
+                  for the package identified by <code class=
+                  "varname">PKG_SYSCONFVAR</code>'s shall be
+                  placed.</p>
+                </li>
+              </ul>
+            </div>
+
+            <p>Based on the above variables, pkginstall determines
+            the value of <code class=
+            "varname">PKG_SYSCONFDIR</code>, which is the
+            <span class="emphasis"><em>only</em></span> variable
+            that can be used within a package to refer to its
+            configuration directory. The algorithm used to set its
+            value is basically the following:</p>
+
+            <div class="orderedlist">
+              <ol type="1">
+                <li>
+                  <p>If <code class=
+                  "varname">PKG_SYSCONFDIR.${PKG_SYSCONFVAR}</code>
+                  is set, its value is used.</p>
+                </li>
+
+                <li>
+                  <p>If the previous variable is not defined but
+                  <code class="varname">PKG_SYSCONFSUBDIR</code> is
+                  set in the package's <code class=
+                  "filename">Makefile</code>, the resulting value
+                  is <code class=
+                  "filename">${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}</code>.</p>
+                </li>
+
+                <li>
+                  <p>Otherwise, it is set to <code class=
+                  "filename">${PKG_SYSCONFBASE}</code>.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p>It is worth mentioning that <code class=
+            "filename">${PKG_SYSCONFDIR}</code> is automatically
+            added to <code class="filename">OWN_DIRS</code>. See
+            <a href="#dirs-outside-prefix" title=
+            "11.1.1.&nbsp;Directory manipulation">Section 11.1.1,
+            &#8220;Directory manipulation&#8221;</a> what this
+            means.</p>
+          </div>
+
+          <div class="sect2" lang="en" xml:lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name="conf-files-configure"
+                  id="conf-files-configure"></a>11.2.2. Telling the
+                  software were configuration files are</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>Given that pkgsrc (and users!) expect configuration
+            files to be in a known place, you need to teach each
+            package where shall it install its files. In some cases
+            you will have to patch the package Makefiles to achieve
+            it. If you are lucky, though, it may be as easy as
+            passing an extra flag to the configuration script; this
+            is the case of GNU Autoconf generated files:</p>
+            <pre class="programlisting">
+CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
+</pre>
+
+            <p>Note that this specifies where the package has to
+            <span class="emphasis"><em>look for</em></span> its
+            configuration files, not where they will be originally
+            installed (although the difference is never explicit,
+            unfortunately).</p>
+          </div>
+
+          <div class="sect2" lang="en" xml:lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name="conf-files-patching"
+                  id="conf-files-patching"></a>11.2.3. Patching
+                  installations</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>As said before, pkginstall automatically handles
+            configuration files. This means that <span class=
+            "strong"><strong>the packages themselves must not touch
+            the contents of <code class=
+            "filename">${PKG_SYSCONFDIR}</code>
+            directly</strong></span>. Bad news is that the software
+            they build will, out of the box, mess with the contents
+            of that directory. So which is the correct procedure to
+            fix this issue?</p>
+
+            <p>You must teach the package (usually by manually
+            patching it) to install any configuration files under
+            the examples hierarchy, <code class=
+            "filename">share/examples/${PKGBASE}/</code>. This way,
+            the <code class="filename">PLIST</code> registers them
+            and the administrator always has the original copies
+            available.</p>
+
+            <p>Once the required configuration files are in place
+            (i.e., under the examples hierarchy), the pkginstall
+            framework can use them as master copies during the
+            package installation to update what is in <code class=
+            "filename">${PKG_SYSCONFDIR}</code>. To achieve this,
+            the variables <code class="varname">CONF_FILES</code>
+            and <code class="varname">CONF_FILES_PERMS</code> are
+            used. Check out <a href="#files-outside-prefix" title=
+            "11.1.2.&nbsp;File manipulation">Section 11.1.2,
+            &#8220;File manipulation&#8221;</a> for information
+            about their syntax and their purpose. Here is an
+            example, taken from the <a xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" href=
+            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/mail/mutt/README.html"
+            class="pkgname">mail/mutt</a> package:</p>
+            <pre class="programlisting">
+EGDIR=        ${PREFIX}/share/doc/mutt/samples
+CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
+</pre>
+
+            <p>Note that the <code class="varname">EGDIR</code>
+            variable is specific to that package and has no meaning
+            outside it.</p>
+          </div>
+
+          <div class="sect2" lang="en" xml:lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name="conf-files-disable"
+                  id="conf-files-disable"></a>11.2.4. Disabling
+                  handling of configuration files</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>The automatic copying of config files can be toggled
+            by setting the environment variable <code class=
+            "varname">PKG_CONFIG</code> prior to package
+            installation.</p>
+          </div>
+        </div>
+
+        <div class="sect1" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "rcd-scripts" id="rcd-scripts"></a>11.3. System
+                startup scripts</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>System startup scripts are special files because they
+          must be installed in a place known by the underlying OS,
+          usually outside the installation prefix. Therefore, the
+          same rules described in <a href=
+          "#files-and-dirs-outside-prefix" title=
+          "11.1.&nbsp;Files and directories outside the installation prefix">
+          Section 11.1, &#8220;Files and directories outside the
+          installation prefix&#8221;</a> apply, and the same
+          solutions can be used. However, pkginstall provides a
+          specific mechanism to handle these files, given that they
+          are special.</p>
+
+          <p>In order to provide system startup scripts, the
+          package has to:</p>
+
+          <div class="orderedlist">
+            <ol type="1">
+              <li>
+                <p>Store the script inside <code class=
+                "filename">${FILESDIR}</code>, with the
+                <code class="literal">.sh</code> suffix appended.
+                Considering the <a xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" href=
+                "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/print/cups/README.html"
+                class="pkgname">print/cups</a> package as an
+                example, it has the <code class=
+                "filename">cupsd.sh</code> in its files
+                directory.</p>
+              </li>
+
+              <li>
+                <p>Tell pkginstall to handle it, appending the name
+                of the script, without its extension, to the
+                <code class="varname">RCD_SCRIPTS</code> variable.
+                Continuing the previous example:</p>
+                <pre class="programlisting">
+RCD_SCRIPTS+= cupsd
+</pre>
+              </li>
+            </ol>
+          </div>
+
+          <p>Once this is done, pkginstall will do the following
+          steps for each script in an automated fashion:</p>
+
+          <div class="orderedlist">
+            <ol type="1">
+              <li>
+                <p>Process the file found in the files directory
+                applying all the substitutions described in the
+                <code class="filename">FILES_SUBST</code>
+                variable.</p>
+              </li>
+
+              <li>
+                <p>Copy the script from the files directory to the
+                examples hierarchy, <code class=
+                "filename">${PREFIX}/share/examples/rc.d/</code>.
+                Note that the master file must be explicitly
+                registered in the <code class=
+                "filename">PLIST</code>.</p>
+              </li>
+
+              <li>
+                <p>Add code to the installation scripts to copy the
+                startup script from the examples hierarchy into the
+                system-wide startup scripts directory.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="sect2" lang="en" xml:lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name="rcd-scripts-disable"
+                  id="rcd-scripts-disable"></a>11.3.1. Disabling
+                  handling of system startup scripts</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>The automatic copying of config files can be toggled
+            by setting the environment variable <code class=
+            "varname">PKG_RCD_SCRIPTS</code> prior to package
+            installation. Note that the scripts will be always
+            copied inside the examples hierarchy, <code class=
+            "filename">${PREFIX}/share/examples/rc.d/</code>, no
+            matter what the value of this variable is.</p>
+          </div>
+        </div>
+
+        <div class="sect1" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "users-and-groups" id="users-and-groups"></a>11.4.
+                System users and groups</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>If a package needs to create special users and/or
+          groups during installation, it can do so by using the
+          pkginstall framework.</p>
+
+          <p>Users can be created by adding entries to the
+          <code class="varname">PKG_USERS</code> variable. Each
+          entry has the following syntax, which mimics <code class=
+          "filename">/etc/passwd</code>:</p>
+          <pre class="programlisting">
+user:group[:[userid][:[descr][:[home][:shell]]]]
+</pre>
+
+          <p>Only the user and group are required; everything else
+          is optional, but the colons must be in the right places
+          when specifying optional bits. By default, a new user
+          will have home directory <code class=
+          "filename">/nonexistent</code>, and login shell
+          <code class="filename">/sbin/nologin</code> unless they
+          are specified as part of the user element. Note that if
+          the description contains spaces, then spaces should be
+          double backslash-escaped, as in:</p>
+          <pre class="programlisting">
+foo:foogrp::The\\ Foomister
+</pre>
+
+          <p>Similarly, groups can be created using the
+          <code class="varname">PKG_GROUPS</code> variable, whose
+          syntax is:</p>
+          <pre class="programlisting">
+group[:groupid]
+</pre>
+
+          <p>As before, only the group name is required; the
+          numeric identifier is optional.</p>
+        </div>
+
+        <div class="sect1" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "shells" id="shells"></a>11.5. System shells</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>Packages that install system shells should register
+          them in the shell database, <code class=
+          "filename">/etc/shells</code>, to make things easier to
+          the administrator. This must be done from the
+          installation scripts to keep binary packages working on
+          any system. pkginstall provides an easy way to accomplish
+          this task.</p>
+
+          <p>When a package provides a shell interpreter, it has to
+          set the <code class="varname">PKG_SHELL</code> variable
+          to its absolute file name. This will add some hooks to
+          the installation scripts to handle it. Consider the
+          following example, taken from <a xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" href=
+          "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/shells/zsh/README.html"
+          class="pkgname">shells/zsh</a>:</p>
+          <pre class="programlisting">
+USE_PKGINSTALL= YES
+PKG_SHELL=      ${PREFIX}/bin/zsh
+</pre>
+
+          <div class="sect2" lang="en" xml:lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name="shells-disable" id=
+                  "shells-disable"></a>11.5.1. Disabling handling
+                  of configuration files</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>The automatic registration of shell interpreters can
+            be disabled by the administrator by setting the
+            <code class="filename">PKG_REGISTER_SHELLS</code>
+            environment variable to <code class=
+            "literal">NO</code>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
               <h2 class="title"><a name="options" id=
-              "options"></a>Chapter&nbsp;11.&nbsp;Options
+              "options"></a>Chapter&nbsp;12.&nbsp;Options
               handling</h2>
             </div>
           </div>
@@ -7804,11 +8565,11 @@ CHECK_BUILTIN.foo?=     no
 
           <dl>
             <dt><span class="sect1"><a href=
-            "#global-default-options">11.1. Global default
+            "#global-default-options">12.1. Global default
             options</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#converting-to-options">11.2. Converting packages to
+            "#converting-to-options">12.2. Converting packages to
             use <code class=
             "filename">bsd.options.mk</code></a></span></dt>
           </dl>
@@ -7829,7 +8590,7 @@ CHECK_BUILTIN.foo?=     no
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "global-default-options" id=
-                "global-default-options"></a>11.1.&nbsp;Global
+                "global-default-options"></a>12.1.&nbsp;Global
                 default options</h2>
               </div>
             </div>
@@ -7848,7 +8609,7 @@ CHECK_BUILTIN.foo?=     no
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "converting-to-options" id=
-                "converting-to-options"></a>11.2.&nbsp;Converting
+                "converting-to-options"></a>12.2.&nbsp;Converting
                 packages to use <code class=
                 "filename">bsd.options.mk</code></h2>
               </div>
@@ -7990,7 +8751,7 @@ CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
           <div>
             <div>
               <h2 class="title"><a name="build" id=
-              "build"></a>Chapter&nbsp;12.&nbsp;The build
+              "build"></a>Chapter&nbsp;13.&nbsp;The build
               process</h2>
             </div>
           </div>
@@ -8000,14 +8761,14 @@ CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#build.prefix">12.1.
+            <dt><span class="sect1"><a href="#build.prefix">13.1.
             Program location</a></span></dt>
 
-            <dt><span class="sect1"><a href="#main-targets">12.2.
+            <dt><span class="sect1"><a href="#main-targets">13.2.
             Main targets</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#build.helpful-targets">12.3. Other helpful
+            "#build.helpful-targets">13.3. Other helpful
             targets</a></span></dt>
           </dl>
         </div>
@@ -8030,7 +8791,7 @@ CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "build.prefix" id=
-                "build.prefix"></a>12.1.&nbsp;Program location</h2>
+                "build.prefix"></a>13.1.&nbsp;Program location</h2>
               </div>
             </div>
           </div>
@@ -8054,7 +8815,7 @@ CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
           "7.3.&nbsp;patches/*">Section&nbsp;7.3,
           &#8220;patches/*&#8221;</a> and <a href="#fixes.libtool"
           title=
-          "13.3.1.&nbsp;Shared libraries - libtool">Section&nbsp;13.3.1,
+          "14.3.1.&nbsp;Shared libraries - libtool">Section&nbsp;14.3.1,
           &#8220;Shared libraries - libtool&#8221;</a> for more
           details.</p>
 
@@ -8205,7 +8966,7 @@ GTKDIR_DEFAULT= ${LOCALBASE}
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "main-targets" id=
-                "main-targets"></a>12.2.&nbsp;Main targets</h2>
+                "main-targets"></a>13.2.&nbsp;Main targets</h2>
               </div>
             </div>
           </div>
@@ -8455,7 +9216,7 @@ make build
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "build.helpful-targets" id=
-                "build.helpful-targets"></a>12.3.&nbsp;Other
+                "build.helpful-targets"></a>13.3.&nbsp;Other
                 helpful targets</h2>
               </div>
             </div>
@@ -8973,7 +9734,7 @@ make build
           <div>
             <div>
               <h2 class="title"><a name="fixes" id=
-              "fixes"></a>Chapter&nbsp;13.&nbsp;Notes on fixes for
+              "fixes"></a>Chapter&nbsp;14.&nbsp;Notes on fixes for
               packages</h2>
             </div>
           </div>
@@ -8984,191 +9745,179 @@ make build
 
           <dl>
             <dt><span class="sect1"><a href=
-            "#general-operation">13.1. General
+            "#general-operation">14.1. General
             operation</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#pulling-vars-from-etc-mk.conf">13.1.1. How to
+                "#pulling-vars-from-etc-mk.conf">14.1.1. How to
                 pull in variables from /etc/mk.conf</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#where-to-install-documentation">13.1.2. Where to
+                "#where-to-install-documentation">14.1.2. Where to
                 install documentation</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#restricted-packages">13.1.3. Restricted
+                "#restricted-packages">14.1.3. Restricted
                 packages</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#dependencies">13.1.4. Handling
+                "#dependencies">14.1.4. Handling
                 dependencies</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#conflicts">13.1.5. Handling conflicts with other
+                "#conflicts">14.1.5. Handling conflicts with other
                 packages</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#not-building-packages">13.1.6. Packages that
+                "#not-building-packages">14.1.6. Packages that
                 cannot or should not be built</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#undeletable-packages">13.1.7. Packages which
+                "#undeletable-packages">14.1.7. Packages which
                 should not be deleted, once
                 installed</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#security-handling">13.1.8. Handling packages with
+                "#security-handling">14.1.8. Handling packages with
                 security problems</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#compiler-bugs">13.1.9. How to handle compiler
+                "#compiler-bugs">14.1.9. How to handle compiler
                 bugs</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#bumping-pkgrevision">13.1.10. How to handle
+                "#bumping-pkgrevision">14.1.10. How to handle
                 incrementing versions when fixing an existing
                 package</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#portability-of-packages">13.1.11. Portability of
+                "#portability-of-packages">14.1.11. Portability of
                 packages</a></span></dt>
               </dl>
             </dd>
 
             <dt><span class="sect1"><a href=
-            "#downloading-issues">13.2. Possible downloading
+            "#downloading-issues">14.2. Possible downloading
             issues</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#no-plain-download">13.2.1. Packages whose
+                "#no-plain-download">14.2.1. Packages whose
                 distfiles aren't available for plain
                 downloading</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#modified-distfiles-same-name">13.2.2. How to
+                "#modified-distfiles-same-name">14.2.2. How to
                 handle modified distfiles with the 'old'
                 name</a></span></dt>
               </dl>
             </dd>
 
             <dt><span class="sect1"><a href=
-            "#configuration-gotchas">13.3. Configuration
+            "#configuration-gotchas">14.3. Configuration
             gotchas</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#fixes.libtool">13.3.1. Shared libraries -
+                "#fixes.libtool">14.3.1. Shared libraries -
                 libtool</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#using-libtool">13.3.2. Using libtool on GNU
+                "#using-libtool">14.3.2. Using libtool on GNU
                 packages that already support
                 libtool</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#autoconf-automake">13.3.3. GNU
+                "#autoconf-automake">14.3.3. GNU
                 Autoconf/Automake</a></span></dt>
               </dl>
             </dd>
 
             <dt><span class="sect1"><a href=
-            "#building-considerations">13.4. Building
+            "#building-considerations">14.4. Building
             considerations</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#cpp-defines">13.4.1. CPP defines</a></span></dt>
+                "#cpp-defines">14.4.1. CPP defines</a></span></dt>
               </dl>
             </dd>
 
             <dt><span class="sect1"><a href=
-            "#package-specific-actions">13.5. Package specific
+            "#package-specific-actions">14.5. Package specific
             actions</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#package-configuration-files">13.5.1. Package
-                configuration files</a></span></dt>
-
-                <dt><span class="sect2"><a href=
-                "#user-interaction">13.5.2. User
+                "#user-interaction">14.5.1. User
                 interaction</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#handling-licenses">13.5.3. Handling
+                "#handling-licenses">14.5.2. Handling
                 licenses</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#creating-accounts">13.5.4. Creating an account
-                from a package</a></span></dt>
-
-                <dt><span class="sect2"><a href=
-                "#installing-score-files">13.5.5. Installing score
+                "#installing-score-files">14.5.3. Installing score
                 files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#login-shells">13.5.6. Packages providing login
-                shells</a></span></dt>
-
-                <dt><span class="sect2"><a href=
-                "#perl-scripts">13.5.7. Packages containing perl
+                "#perl-scripts">14.5.4. Packages containing perl
                 scripts</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#hardcoded-paths">13.5.8. Packages with hardcoded
+                "#hardcoded-paths">14.5.5. Packages with hardcoded
                 paths to other interpreters</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#perl-modules">13.5.9. Packages installing perl
+                "#perl-modules">14.5.6. Packages installing perl
                 modules</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#faq.info-files">13.5.10. Packages installing info
+                "#faq.info-files">14.5.7. Packages installing info
                 files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#gconf2-data-files">13.5.11. Packages installing
+                "#gconf2-data-files">14.5.8. Packages installing
                 GConf2 data files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#scrollkeeper-data-files">13.5.12. Packages
+                "#scrollkeeper-data-files">14.5.9. Packages
                 installing scrollkeeper data files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#x11-fonts">13.5.13. Packages installing X11
+                "#x11-fonts">14.5.10. Packages installing X11
                 fonts</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#gtk2-modules">13.5.14. Packages installing GTK2
+                "#gtk2-modules">14.5.11. Packages installing GTK2
                 modules</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#sgml-xml-data">13.5.15. Packages installing SGML
+                "#sgml-xml-data">14.5.12. Packages installing SGML
                 or XML data</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#mime-database">13.5.16. Packages installing
+                "#mime-database">14.5.13. Packages installing
                 extensions to the MIME database</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#intltool">13.5.17. Packages using
+                "#intltool">14.5.14. Packages using
                 intltool</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#startup-scripts">13.5.18. Packages installing
+                "#startup-scripts">14.5.15. Packages installing
                 startup scripts</a></span></dt>
               </dl>
             </dd>
 
             <dt><span class="sect1"><a href=
-            "#feedback-to-author">13.6. Feedback to the
+            "#feedback-to-author">14.6. Feedback to the
             author</a></span></dt>
           </dl>
         </div>
@@ -9179,7 +9928,7 @@ make build
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "general-operation" id=
-                "general-operation"></a>13.1.&nbsp;General
+                "general-operation"></a>14.1.&nbsp;General
                 operation</h2>
               </div>
             </div>
@@ -9191,7 +9940,7 @@ make build
                 <div>
                   <h3 class="title"><a name=
                   "pulling-vars-from-etc-mk.conf" id=
-                  "pulling-vars-from-etc-mk.conf"></a>13.1.1.&nbsp;How
+                  "pulling-vars-from-etc-mk.conf"></a>14.1.1.&nbsp;How
                   to pull in variables from /etc/mk.conf</h3>
                 </div>
               </div>
@@ -9253,7 +10002,7 @@ CFLAGS+=  -your -flags
                 <div>
                   <h3 class="title"><a name=
                   "where-to-install-documentation" id=
-                  "where-to-install-documentation"></a>13.1.2.&nbsp;Where
+                  "where-to-install-documentation"></a>14.1.2.&nbsp;Where
                   to install documentation</h3>
                 </div>
               </div>
@@ -9272,7 +10021,7 @@ CFLAGS+=  -your -flags
                 <div>
                   <h3 class="title"><a name="restricted-packages"
                   id=
-                  "restricted-packages"></a>13.1.3.&nbsp;Restricted
+                  "restricted-packages"></a>14.1.3.&nbsp;Restricted
                   packages</h3>
                 </div>
               </div>
@@ -9351,7 +10100,7 @@ CFLAGS+=  -your -flags
               <div>
                 <div>
                   <h3 class="title"><a name="dependencies" id=
-                  "dependencies"></a>13.1.4.&nbsp;Handling
+                  "dependencies"></a>14.1.4.&nbsp;Handling
                   dependencies</h3>
                 </div>
               </div>
@@ -9504,8 +10253,8 @@ RECOMMENDED+=   tiff&gt;=3.6.1:../../graphics/tiff
                   vulnerabilities file as well as setting
                   <code class="varname">RECOMMENDED</code>, see
                   <a href="#security-handling" title=
-                  "13.1.8.&nbsp;Handling packages with security problems">
-                  Section 13.1.8, &#8220;Handling packages with
+                  "14.1.8.&nbsp;Handling packages with security problems">
+                  Section 14.1.8, &#8220;Handling packages with
                   security problems&#8221;</a> for more
                   information.</p>
                 </li>
@@ -9580,7 +10329,7 @@ pre-clean:
               <div>
                 <div>
                   <h3 class="title"><a name="conflicts" id=
-                  "conflicts"></a>13.1.5.&nbsp;Handling conflicts
+                  "conflicts"></a>14.1.5.&nbsp;Handling conflicts
                   with other packages</h3>
                 </div>
               </div>
@@ -9629,7 +10378,7 @@ CONFLICTS=      Xaw3d-[0-9]*
                 <div>
                   <h3 class="title"><a name="not-building-packages"
                   id=
-                  "not-building-packages"></a>13.1.6.&nbsp;Packages
+                  "not-building-packages"></a>14.1.6.&nbsp;Packages
                   that cannot or should not be built</h3>
                 </div>
               </div>
@@ -9662,7 +10411,7 @@ CONFLICTS=      Xaw3d-[0-9]*
                 <div>
                   <h3 class="title"><a name="undeletable-packages"
                   id=
-                  "undeletable-packages"></a>13.1.7.&nbsp;Packages
+                  "undeletable-packages"></a>14.1.7.&nbsp;Packages
                   which should not be deleted, once installed</h3>
                 </div>
               </div>
@@ -9687,7 +10436,7 @@ CONFLICTS=      Xaw3d-[0-9]*
               <div>
                 <div>
                   <h3 class="title"><a name="security-handling" id=
-                  "security-handling"></a>13.1.8.&nbsp;Handling
+                  "security-handling"></a>14.1.8.&nbsp;Handling
                   packages with security problems</h3>
                 </div>
               </div>
@@ -9726,7 +10475,7 @@ CONFLICTS=      Xaw3d-[0-9]*
               <div>
                 <div>
                   <h3 class="title"><a name="compiler-bugs" id=
-                  "compiler-bugs"></a>13.1.9.&nbsp;How to handle
+                  "compiler-bugs"></a>14.1.9.&nbsp;How to handle
                   compiler bugs</h3>
                 </div>
               </div>
@@ -9752,7 +10501,7 @@ CONFLICTS=      Xaw3d-[0-9]*
               <div>
                 <div>
                   <h3 class="title"><a name="bumping-pkgrevision"
-                  id="bumping-pkgrevision"></a>13.1.10.&nbsp;How to
+                  id="bumping-pkgrevision"></a>14.1.10.&nbsp;How to
                   handle incrementing versions when fixing an
                   existing package</h3>
                 </div>
@@ -9794,7 +10543,7 @@ DISTNAME=   foo-17.43
                 <div>
                   <h3 class="title"><a name=
                   "portability-of-packages" id=
-                  "portability-of-packages"></a>13.1.11.&nbsp;Portability
+                  "portability-of-packages"></a>14.1.11.&nbsp;Portability
                   of packages</h3>
                 </div>
               </div>
@@ -9811,7 +10560,7 @@ DISTNAME=   foo-17.43
                 <div>
                   <div>
                     <h4 class="title"><a name="install-scripts" id=
-                    "install-scripts"></a>13.1.11.1.&nbsp;${INSTALL},
+                    "install-scripts"></a>14.1.11.1.&nbsp;${INSTALL},
                     ${INSTALL_DATA_DIR}, ...</h4>
                   </div>
                 </div>
@@ -9837,7 +10586,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "downloading-issues" id=
-                "downloading-issues"></a>13.2.&nbsp;Possible
+                "downloading-issues"></a>14.2.&nbsp;Possible
                 downloading issues</h2>
               </div>
             </div>
@@ -9848,7 +10597,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
               <div>
                 <div>
                   <h3 class="title"><a name="no-plain-download" id=
-                  "no-plain-download"></a>13.2.1.&nbsp;Packages
+                  "no-plain-download"></a>14.2.1.&nbsp;Packages
                   whose distfiles aren't available for plain
                   downloading</h3>
                 </div>
@@ -9911,7 +10660,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
                 <div>
                   <h3 class="title"><a name=
                   "modified-distfiles-same-name" id=
-                  "modified-distfiles-same-name"></a>13.2.2.&nbsp;How
+                  "modified-distfiles-same-name"></a>14.2.2.&nbsp;How
                   to handle modified distfiles with the 'old'
                   name</h3>
                 </div>
@@ -9952,7 +10701,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "configuration-gotchas" id=
-                "configuration-gotchas"></a>13.3.&nbsp;Configuration
+                "configuration-gotchas"></a>14.3.&nbsp;Configuration
                 gotchas</h2>
               </div>
             </div>
@@ -9963,7 +10712,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
               <div>
                 <div>
                   <h3 class="title"><a name="fixes.libtool" id=
-                  "fixes.libtool"></a>13.3.1.&nbsp;Shared libraries
+                  "fixes.libtool"></a>14.3.1.&nbsp;Shared libraries
                   - libtool</h3>
                 </div>
               </div>
@@ -10172,7 +10921,7 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
               <div>
                 <div>
                   <h3 class="title"><a name="using-libtool" id=
-                  "using-libtool"></a>13.3.2.&nbsp;Using libtool on
+                  "using-libtool"></a>14.3.2.&nbsp;Using libtool on
                   GNU packages that already support libtool</h3>
                 </div>
               </div>
@@ -10251,7 +11000,7 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
               <div>
                 <div>
                   <h3 class="title"><a name="autoconf-automake" id=
-                  "autoconf-automake"></a>13.3.3.&nbsp;GNU
+                  "autoconf-automake"></a>14.3.3.&nbsp;GNU
                   Autoconf/Automake</h3>
                 </div>
               </div>
@@ -10260,46 +11009,37 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
             <p>If a package needs GNU autoconf or automake to be
             executed to regenerate the configure script and
             Makefile.in makefile templates, then they should be
-            executed in a pre-configure target. Two Makefile
-            fragments are provided in <code class=
-            "filename">pkgsrc/mk/autoconf.mk</code> and
-            <code class="filename">pkgsrc/mk/automake.mk</code> to
-            help dealing with these tools. See comments in these
-            files for details.</p>
+            executed in a pre-configure target.</p>
 
             <p>For packages that need only autoconf:</p>
             <pre class="programlisting">
-AUTOCONF_REQD=    2.50    # if default version is not good enough
+AUTOCONF_REQD=    2.50     # if default version is not good enough
+USE_TOOLS+=     autoconf   # use "autoconf213" for autoconf-2.13
 ...
 
 pre-configure:
-          cd ${WRKSRC}; ${AUTOCONF}
+          cd ${WRKSRC}; autoconf
 
 ...
-.include "../../mk/autoconf.mk"
 </pre>
 
             <p>and for packages that need automake and
             autoconf:</p>
             <pre class="programlisting">
-AUTOMAKE_REQD=  1.7.1   # if default version is not good enough
+AUTOMAKE_REQD=  1.7.1      # if default version is not good enough
+USE_TOOLS+=     automake   # use "automake14" for autoconf-1.4
 ...
 
 pre-configure:
           cd ${WRKSRC};                                           \
-          ${ACLOCAL};                                             \
-          ${AUTOHEADER};                                          \
-          ${AUTOMAKE} -a --foreign -i;                            \
-          ${AUTOCONF}
+          aclocal; autoheader;                                    \
+          automake -a --foreign -i; autoconf
 
 ...
-.include "../mk/automake.mk"
 </pre>
 
             <p>Packages which use GNU Automake will almost
-            certainly require GNU Make, but that's automatically
-            provided for you in <code class=
-            "filename">mk/automake.mk</code>.</p>
+            certainly require GNU Make.</p>
 
             <p>There are times when the configure process makes
             additional changes to the generated files, which then
@@ -10318,7 +11058,7 @@ pre-configure:
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "building-considerations" id=
-                "building-considerations"></a>13.4.&nbsp;Building
+                "building-considerations"></a>14.4.&nbsp;Building
                 considerations</h2>
               </div>
             </div>
@@ -10329,7 +11069,7 @@ pre-configure:
               <div>
                 <div>
                   <h3 class="title"><a name="cpp-defines" id=
-                  "cpp-defines"></a>13.4.1.&nbsp;CPP defines</h3>
+                  "cpp-defines"></a>14.4.1.&nbsp;CPP defines</h3>
                 </div>
               </div>
             </div>
@@ -10369,7 +11109,7 @@ pre-configure:
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "package-specific-actions" id=
-                "package-specific-actions"></a>13.5.&nbsp;Package
+                "package-specific-actions"></a>14.5.&nbsp;Package
                 specific actions</h2>
               </div>
             </div>
@@ -10379,82 +11119,8 @@ pre-configure:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name=
-                  "package-configuration-files" id=
-                  "package-configuration-files"></a>13.5.1.&nbsp;Package
-                  configuration files</h3>
-                </div>
-              </div>
-            </div>
-
-            <p>Packages should be taught to look for their
-            configuration files in <code class=
-            "varname">${PKG_SYSCONFDIR}</code>, which is passed
-            through to the configure and build processes.
-            <code class="varname">PKG_SYSCONFDIR</code> may be
-            customized in various ways by setting other make
-            variables:</p>
-
-            <div class="itemizedlist">
-              <ul type="disc">
-                <li>
-                  <p><code class="varname">PKG_SYSCONFBASE</code>
-                  is the main config directory under which all
-                  package configuration files are to be found. This
-                  defaults to <code class=
-                  "filename">${PREFIX}/etc</code>, but may be
-                  overridden in <code class=
-                  "filename">/etc/mk.conf</code>.</p>
-                </li>
-
-                <li>
-                  <p><code class="varname">PKG_SYSCONFSUBDIR</code>
-                  is the subdirectory of <code class=
-                  "varname">PKG_SYSCONFBASE</code> under which the
-                  configuration files for a particular package may
-                  be found, e.g. the Apache configuration files may
-                  all be found under the <code class=
-                  "filename">httpd/</code> subdirectory of
-                  <code class="varname">${PKG_SYSCONFBASE}</code>.
-                  This should be set in the package Makefile.</p>
-                </li>
-
-                <li>
-                  <p>By default, <code class=
-                  "varname">PKG_SYSCONFDIR</code> is set to
-                  <code class=
-                  "varname">${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}</code>,
-                  but this may be overridden by setting
-                  <code class="varname">PKG_SYSCONFDIR.${PKG_SYSCONFVAR}</code>
-                  for a particular package, where <code class=
-                  "varname">PKG_SYSCONFVAR</code> defaults to
-                  <code class="varname">${PKGBASE}</code>. This is
-                  not meant to be set by a package Makefile, but is
-                  reserved for users who wish to override the
-                  <code class="varname">PKG_SYSCONFDIR</code>
-                  setting for a particular package with a special
-                  location.</p>
-                </li>
-              </ul>
-            </div>
-
-            <p>The only variables that users should customize are
-            <code class="varname">PKG_SYSCONFBASE</code> and
-            <code class=
-            "varname">PKG_SYSCONFDIR.${PKG_SYSCONFVAR}</code>.
-            Users will typically want to set <code class=
-            "varname">PKG_SYSCONFBASE</code> to <code class=
-            "filename">/etc</code>, or to accept the default
-            location of <code class=
-            "filename">${PREFIX}/etc</code>.</p>
-          </div>
-
-          <div class="sect2" lang="en" xml:lang="en">
-            <div class="titlepage">
-              <div>
-                <div>
                   <h3 class="title"><a name="user-interaction" id=
-                  "user-interaction"></a>13.5.2.&nbsp;User
+                  "user-interaction"></a>14.5.1.&nbsp;User
                   interaction</h3>
                 </div>
               </div>
@@ -10504,7 +11170,7 @@ INTERACTIVE_STAGE= configure install
               <div>
                 <div>
                   <h3 class="title"><a name="handling-licenses" id=
-                  "handling-licenses"></a>13.5.3.&nbsp;Handling
+                  "handling-licenses"></a>14.5.2.&nbsp;Handling
                   licenses</h3>
                 </div>
               </div>
@@ -10578,64 +11244,9 @@ ACCEPTABLE_LICENSES+=graphviz-license
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="creating-accounts" id=
-                  "creating-accounts"></a>13.5.4.&nbsp;Creating an
-                  account from a package</h3>
-                </div>
-              </div>
-            </div>
-
-            <p>There are two make variables used to control the
-            creation of package-specific groups and users at
-            pre-install time. The first is <code class=
-            "varname">PKG_GROUPS</code>, which is a list of
-            group[:groupid] elements, where the groupid is
-            optional. The second is <code class=
-            "varname">PKG_USERS</code>, which is a list of elements
-            of the form:</p>
-            <pre class="programlisting">
-user:group[:[userid][:[description][:[home][:shell]]]]
-</pre>
-
-            <p>where only the user and group are required, the rest
-            being optional. A simple example is:</p>
-            <pre class="programlisting">
-  PKG_GROUPS=       foogroup
-    PKG_USERS=    foouser:foogroup
-</pre>
-
-            <p>A more complex example is that creates two groups
-            and two users is:</p>
-            <pre class="programlisting">
-  PKG_GROUPS=       group1 group2:1005
-    PKG_USERS=    first:group1::First\\ User                      \
-                  second:group2::Second\\ User:/home/second:${SH}
-</pre>
-
-            <p>By default, a new user will have home directory
-            <code class="filename">/nonexistent</code>, and login
-            shell <code class="filename">/sbin/nologin</code>
-            unless they are specified as part of the user
-            element.</p>
-
-            <p>The package <code class="filename">Makefile</code>
-            must also set <code class=
-            "varname">USE_PKGINSTALL=YES</code>. This will cause
-            the users and groups to be created at pre-install time,
-            and the admin will be prompted to remove them at
-            post-deinstall time. Automatic creation of the users
-            and groups can be toggled on and off by setting the
-            <code class="varname">PKG_CREATE_USERGROUP</code>
-            variable prior to package installation.</p>
-          </div>
-
-          <div class="sect2" lang="en" xml:lang="en">
-            <div class="titlepage">
-              <div>
-                <div>
                   <h3 class="title"><a name=
                   "installing-score-files" id=
-                  "installing-score-files"></a>13.5.5.&nbsp;Installing
+                  "installing-score-files"></a>14.5.3.&nbsp;Installing
                   score files</h3>
                 </div>
               </div>
@@ -10672,44 +11283,8 @@ user:group[:[userid][:[description][:[home][:shell]]]]
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="login-shells" id=
-                  "login-shells"></a>13.5.6.&nbsp;Packages
-                  providing login shells</h3>
-                </div>
-              </div>
-            </div>
-
-            <p>If the purpose of the package is to provide a login
-            shell, the variable <code class=
-            "varname">PKG_SHELL</code> should contain the full
-            pathname of the shell executable installed by this
-            package. The package <code class=
-            "filename">Makefile</code> must also set <code class=
-            "varname">USE_PKGINSTALL=YES</code> to use the
-            automatically generated <code class=
-            "filename">INSTALL</code>/<code class=
-            "filename">DEINSTALL</code> scripts.</p>
-
-            <p>An example taken from shells/zsh:</p>
-            <pre class="programlisting">
-  USE_PKGINSTALL=   YES
-    PKG_SHELL=    ${PREFIX}/bin/zsh
-</pre>
-
-            <p>The shell is registered into <code class=
-            "filename">/etc/shells</code> file automatically in the
-            post-install target by the generated <code class=
-            "filename">INSTALL</code> script and removed in the
-            deinstall target by the <code class=
-            "filename">DEINSTALL</code> script.</p>
-          </div>
-
-          <div class="sect2" lang="en" xml:lang="en">
-            <div class="titlepage">
-              <div>
-                <div>
                   <h3 class="title"><a name="perl-scripts" id=
-                  "perl-scripts"></a>13.5.7.&nbsp;Packages
+                  "perl-scripts"></a>14.5.4.&nbsp;Packages
                   containing perl scripts</h3>
                 </div>
               </div>
@@ -10728,7 +11303,7 @@ user:group[:[userid][:[description][:[home][:shell]]]]
               <div>
                 <div>
                   <h3 class="title"><a name="hardcoded-paths" id=
-                  "hardcoded-paths"></a>13.5.8.&nbsp;Packages with
+                  "hardcoded-paths"></a>14.5.5.&nbsp;Packages with
                   hardcoded paths to other interpreters</h3>
                 </div>
               </div>
@@ -10755,7 +11330,7 @@ user:group[:[userid][:[description][:[home][:shell]]]]
               <div>
                 <div>
                   <h3 class="title"><a name="perl-modules" id=
-                  "perl-modules"></a>13.5.9.&nbsp;Packages
+                  "perl-modules"></a>14.5.6.&nbsp;Packages
                   installing perl modules</h3>
                 </div>
               </div>
@@ -10798,7 +11373,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <div>
                   <h3 class="title"><a name="faq.info-files" id=
-                  "faq.info-files"></a>13.5.10.&nbsp;Packages
+                  "faq.info-files"></a>14.5.7.&nbsp;Packages
                   installing info files</h3>
                 </div>
               </div>
@@ -10895,7 +11470,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <div>
                   <h3 class="title"><a name="gconf2-data-files" id=
-                  "gconf2-data-files"></a>13.5.11.&nbsp;Packages
+                  "gconf2-data-files"></a>14.5.8.&nbsp;Packages
                   installing GConf2 data files</h3>
                 </div>
               </div>
@@ -10936,10 +11511,10 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
                   <p>Check the PLIST and remove any entries under
                   the etc/gconf directory, as they will be handled
                   automatically. See <a href="#faq.conf" title=
-                  "6.14.&nbsp;Configuration files handling and placement">
-                  Section&nbsp;6.14, &#8220;Configuration files
-                  handling and placement&#8221;</a> for more
-                  information.</p>
+                  "6.14.&nbsp;How do I change the location of configuration files?">
+                  Section&nbsp;6.14, &#8220;How do I change the
+                  location of configuration files?&#8221;</a> for
+                  more information.</p>
                 </li>
 
                 <li>
@@ -10971,7 +11546,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
                 <div>
                   <h3 class="title"><a name=
                   "scrollkeeper-data-files" id=
-                  "scrollkeeper-data-files"></a>13.5.12.&nbsp;Packages
+                  "scrollkeeper-data-files"></a>14.5.9.&nbsp;Packages
                   installing scrollkeeper data files</h3>
                 </div>
               </div>
@@ -11016,7 +11591,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <div>
                   <h3 class="title"><a name="x11-fonts" id=
-                  "x11-fonts"></a>13.5.13.&nbsp;Packages installing
+                  "x11-fonts"></a>14.5.10.&nbsp;Packages installing
                   X11 fonts</h3>
                 </div>
               </div>
@@ -11054,7 +11629,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <div>
                   <h3 class="title"><a name="gtk2-modules" id=
-                  "gtk2-modules"></a>13.5.14.&nbsp;Packages
+                  "gtk2-modules"></a>14.5.11.&nbsp;Packages
                   installing GTK2 modules</h3>
                 </div>
               </div>
@@ -11121,7 +11696,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <div>
                   <h3 class="title"><a name="sgml-xml-data" id=
-                  "sgml-xml-data"></a>13.5.15.&nbsp;Packages
+                  "sgml-xml-data"></a>14.5.12.&nbsp;Packages
                   installing SGML or XML data</h3>
                 </div>
               </div>
@@ -11183,7 +11758,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <div>
                   <h3 class="title"><a name="mime-database" id=
-                  "mime-database"></a>13.5.16.&nbsp;Packages
+                  "mime-database"></a>14.5.13.&nbsp;Packages
                   installing extensions to the MIME database</h3>
                 </div>
               </div>
@@ -11242,7 +11817,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <div>
                   <h3 class="title"><a name="intltool" id=
-                  "intltool"></a>13.5.17.&nbsp;Packages using
+                  "intltool"></a>14.5.14.&nbsp;Packages using
                   intltool</h3>
                 </div>
               </div>
@@ -11266,7 +11841,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <div>
                   <h3 class="title"><a name="startup-scripts" id=
-                  "startup-scripts"></a>13.5.18.&nbsp;Packages
+                  "startup-scripts"></a>14.5.15.&nbsp;Packages
                   installing startup scripts</h3>
                 </div>
               </div>
@@ -11290,7 +11865,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "feedback-to-author" id=
-                "feedback-to-author"></a>13.6.&nbsp;Feedback to the
+                "feedback-to-author"></a>14.6.&nbsp;Feedback to the
                 author</h2>
               </div>
             </div>
@@ -11314,7 +11889,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
           <div>
             <div>
               <h2 class="title"><a name="debug" id=
-              "debug"></a>Chapter&nbsp;14.&nbsp;Debugging</h2>
+              "debug"></a>Chapter&nbsp;15.&nbsp;Debugging</h2>
             </div>
           </div>
         </div>
@@ -11504,7 +12079,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <li>
               <p>Submit (or commit, if you have cvs access); see
               <a href="#submit" title=
-              "Chapter&nbsp;15.&nbsp;Submitting and Committing">Chapter&nbsp;15,
+              "Chapter&nbsp;16.&nbsp;Submitting and Committing">Chapter&nbsp;16,
               <i>Submitting and Committing</i></a>.</p>
             </li>
           </ul>
@@ -11516,7 +12091,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
           <div>
             <div>
               <h2 class="title"><a name="submit" id=
-              "submit"></a>Chapter&nbsp;15.&nbsp;Submitting and
+              "submit"></a>Chapter&nbsp;16.&nbsp;Submitting and
               Committing</h2>
             </div>
           </div>
@@ -11527,18 +12102,18 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
 
           <dl>
             <dt><span class="sect1"><a href=
-            "#submitting-your-package">15.1. Submitting your
+            "#submitting-your-package">16.1. Submitting your
             packages</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#committing-importing">15.2. Committing: Importing a
+            "#committing-importing">16.2. Committing: Importing a
             package into CVS</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#updating-package">15.3. Updating a package to a newer
+            "#updating-package">16.3. Updating a package to a newer
             version</a></span></dt>
 
-            <dt><span class="sect1"><a href="#moving-package">15.4.
+            <dt><span class="sect1"><a href="#moving-package">16.4.
             Moving a package in pkgsrc</a></span></dt>
           </dl>
         </div>
@@ -11549,7 +12124,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "submitting-your-package" id=
-                "submitting-your-package"></a>15.1.&nbsp;Submitting
+                "submitting-your-package"></a>16.1.&nbsp;Submitting
                 your packages</h2>
               </div>
             </div>
@@ -11582,7 +12157,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
 
                 <p>First, check that your package is complete,
                 compiles and runs well; see <a href="#debug" title=
-                "Chapter&nbsp;14.&nbsp;Debugging">Chapter&nbsp;14,
+                "Chapter&nbsp;15.&nbsp;Debugging">Chapter&nbsp;15,
                 <i>Debugging</i></a> and the rest of this document.
                 Next, generate an uuencoded gzipped <a href=
                 "http://netbsd.gw.com/cgi-bin/man-cgi?tar+1+NetBSD-current">
@@ -11619,7 +12194,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "committing-importing" id=
-                "committing-importing"></a>15.2.&nbsp;Committing:
+                "committing-importing"></a>16.2.&nbsp;Committing:
                 Importing a package into CVS</h2>
               </div>
             </div>
@@ -11676,7 +12251,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "updating-package" id=
-                "updating-package"></a>15.3.&nbsp;Updating a
+                "updating-package"></a>16.3.&nbsp;Updating a
                 package to a newer version</h2>
               </div>
             </div>
@@ -11728,7 +12303,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "moving-package" id=
-                "moving-package"></a>15.4.&nbsp;Moving a package in
+                "moving-package"></a>16.4.&nbsp;Moving a package in
                 pkgsrc</h2>
               </div>
             </div>
