@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.2 2005/06/03 12:54:11 wiz Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.3 2005/06/03 13:05:20 jmmv Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -284,9 +284,9 @@ unfortunately).</para>
 <para>As said before, pkginstall automatically handles configuration files.
 This means that <emphasis role="strong">the packages themselves must not
 touch the contents of <filename>${PKG_SYSCONFDIR}</filename>
-directly</emphasis>.  Bad news is that many software installation scripts will, out of
-the box, mess with the contents of that directory.  So what is the correct
-procedure to fix this issue?</para>
+directly</emphasis>.  Bad news is that many software installation scripts
+will, out of the box, mess with the contents of that directory.  So what is
+the correct procedure to fix this issue?</para>
 
 <para>You must teach the package (usually by manually patching it) to
 install any configuration files under the examples hierarchy,
