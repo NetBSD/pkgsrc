@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2005/06/03 13:43:29 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.38 2005/06/03 19:22:20 wiz Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -20,9 +20,9 @@ USE_PERL5=	run
 
 DOCDIR=		share/doc/w3m
 
-.include "options.mk"
-
 _W3M_USE_IMAGE?=	NO
+
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
