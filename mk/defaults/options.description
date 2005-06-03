@@ -90,6 +90,7 @@ gsasl
 gssapi	
 gstreamer	
 gtk			Enable support for GTK.
+gtk2			Enable support for GTK2.
 gtkfe	
 gucharmap	
 hdf5	
