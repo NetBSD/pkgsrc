@@ -1,11 +1,11 @@
-# $NetBSD: bsd.options.mk,v 1.34 2005/06/02 21:55:05 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.35 2005/06/03 14:25:47 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
 #
 # Before including this file, the following variables can be defined:
 #
-#	PKG_SUPPORTED_OPTIONS (must be defined)
+#	PKG_SUPPORTED_OPTIONS
 #		This is a list of build options supported by the package.
 #		This variable should be set in a package Makefile.  E.g.,
 #
@@ -16,7 +16,7 @@
 #		options specifically for this package.
 #
 #	PKG_OPTIONS_OPTIONAL_GROUPS
-#		This is a list of groups of mutually exclusive
+#		This is a list names of groups of mutually exclusive
 #		options.  The options in each group are listed in
 #		PKG_OPTIONS_GROUP.<groupname>.  The most specific
 #		setting of any option from the group takes precedence
@@ -41,6 +41,9 @@
 #		This is a list of old-option:new-option pairs that
 #		map options that have been renamed to their new
 #		counterparts.
+#
+#       At least one of PKG_SUPPORTED_OPTIONS, PKG_OPTIONS_OPTIONAL_GROUPS,
+#	and PKG_OPTIONS_REQUIRED_GROUPS must be defined.
 #		
 #
 # Optionally, the user may define the following variables in /etc/mk.conf:
@@ -120,8 +123,8 @@
 PKG_OPTIONS=		# empty
 
 # Check for variable definitions required before including this file.
-.if !defined(PKG_SUPPORTED_OPTIONS)
-PKG_FAIL_REASON+=	"bsd.options.mk: PKG_SUPPORTED_OPTIONS is not defined."
+.if !defined(PKG_SUPPORTED_OPTIONS) && !defined(PKG_OPTIONS_OPTIONAL_GROUPS) && !defined(PKG_OPTIONS_REQUIRED_GROUPS)
+PKG_FAIL_REASON+=	"bsd.options.mk: At least one of PKG_SUPPORTED_OPTIONS, PKG_OPTIONS_OPTIONAL_GROUPS, and PKG_OPTIONS_REQUIRED_GROUPS must be defined."
 .elif !defined(PKG_OPTIONS_VAR)
 PKG_FAIL_REASON+=	"bsd.options.mk: PKG_OPTIONS_VAR is not defined."
 .else # process the rest of the file
