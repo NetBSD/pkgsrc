@@ -5,7 +5,7 @@ ac3_passthrough
 ads	
 alsa	
 althash	
-anthy	
+anthy			Use Anthy as Japanese conversion program.
 antialias	
 apm	
 apop	
@@ -33,7 +33,7 @@ bktr
 blender-exppython	Enable the Experimental Python support.
 bpf	
 buffy-size	
-canna	
+canna			Use Canna as Japanese conversion program.
 catalog-pgsql	
 catalog-sqlite	
 cdparanoia		Use cdparanoia to rip CDDA media.
@@ -58,7 +58,7 @@ dummy
 dv			Enable usage of the libdv library.
 dvdread			Enable reproduction of DVDs.
 dynamic	
-eb	
+eb			Enable EB dictionary library support.
 edit	
 esound			Enable support for the Enlightment Sound Daemon.
 faac	
@@ -72,7 +72,7 @@ frontend-modperl1
 frontend-modperl2	
 gd	
 gdbm	
-gdk-pixbuf	
+gdk-pixbuf		Use gdk-pixbuf as imaging library.
 gif			Enable GIF support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
 glib1	
@@ -105,8 +105,8 @@ id3
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
 ifevents	
 ignoreip2	
-imlib	
-imlib2	
+imlib			Use imlib as imaging library.
+imlib2			Use imlib2 as imaging library.
 imstt	
 inet6			Enable support for IPv6.
 ipfilter	
@@ -257,6 +257,9 @@ vpop
 w3m-lynx-key		Enable lynx-like key bindings.
 w3m-m17n		Multilingual support.
 w3m-unicode		Use Unicode characters.
+w3m-image-gdk-pixbuf	Use gdk-pixbuf as imaging library for W3m.
+w3m-image-imlib		Use imlib as imaging library for W3m.
+w3m-image-imlib2	Use imlib2 as imaging library for W3m.
 wrap	
 wx	
 x11	
