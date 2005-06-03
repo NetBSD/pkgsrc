@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1685 2005/06/01 18:03:05 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1686 2005/06/03 20:22:59 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4831,19 +4831,6 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 .endfor
 .undef _phase_
-
-# *.makevars.mk doesn't exist until after ${WRKDIR} is created, which
-# doesn't happen until after the package is extracted.  Prior to
-# extraction, cache the variables named in MAKEVARS using MAKEFLAGS
-# instead.
-#
-.if !exists(${EXTRACT_COOKIE})
-.  for _var_ in ${MAKEVARS:O:u}
-.    if defined(${_var_})
-MAKEFLAGS+=	${_var_}=${${_var_}:Q}
-.    endif
-.  endfor
-.endif
 
 # show-tools emits a /bin/sh shell script that defines all known tools
 # to the values they have in the pkgsrc infrastructure.
