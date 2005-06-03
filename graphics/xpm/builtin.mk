@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2005/06/03 17:02:36 jlam Exp $
+# $NetBSD: builtin.mk,v 1.10 2005/06/03 19:12:49 jlam Exp $
 
 BUILTIN_PKG:=	xpm
 
@@ -24,18 +24,9 @@ IS_BUILTIN.xpm!=							\
 .    elif ${OPSYS} == "IRIX"
 IS_BUILTIN.xpm=		yes
 .    else
-PKGSRC_USE_TOOLS+=	imake			# XXX
-IMAKE?=			${X11BASE}/bin/imake	# XXX
-_BUILTIN_IMAKE_CMD=	${IMAKE:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-.      if exists(${_BUILTIN_IMAKE_CMD})
-IS_BUILTIN.xpm!=							\
-	dir=`cd ${BUILDLINK_PKGSRCDIR.xpm} && ${PWD_CMD}`;		\
-	cd ${TMPDIR:U/tmp:Q} && 					\
-	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
-		-f $$dir/builtin-imake.mk -C builtin-imake.$$$$.c	\
-		-s - |							\
-	${IMAKE_MAKE} -f - builtin-test
-.      endif
+BUILTIN_IMAKE_CHECK:=	xpm:NormalLibXpm
+.      include "../../mk/buildlink3/imake-check.mk"
+IS_BUILTIN.xpm=		${BUILTIN_IMAKE_CHECK.xpm}
 .    endif
 .  endif
 .endif
