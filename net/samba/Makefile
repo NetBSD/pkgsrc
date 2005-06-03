@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2005/05/22 05:35:33 jlam Exp $
+# $NetBSD: Makefile,v 1.142 2005/06/03 22:54:44 jlam Exp $
 
 DISTNAME=		samba-3.0.10
 PKGREVISION=		2
@@ -64,11 +64,11 @@ CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 
 .include "options.mk"
 
-.if !defined(MKTEMP)
-MKTEMP!=	${TYPE} mktemp 2>&1 | \
-		${AWK} '/not found/ { print "mktemp"; exit } { print $$3 }'
-MAKEFLAGS+=	MKTEMP=${MKTEMP:Q}
-.endif
+# mktemp is useful for the replacement adduser script, but don't require
+# a full dependency since it's not actually needed by samba.
+#
+USE_TOOLS+=		mktemp
+
 .if !defined(PWD_MKDB)
 PWD_MKDB!=	${TYPE} pwd_mkdb 2>&1 | \
 		${AWK} '/not found/ { print "pwd_mkdb"; exit } { print $$3 }'

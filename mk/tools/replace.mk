@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.98 2005/06/03 21:11:07 jlam Exp $
+# $NetBSD: replace.mk,v 1.99 2005/06/03 22:54:44 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -745,6 +745,18 @@ TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mkdir=coreutils
 TOOLS_REAL_CMD.mkdir=		${TOOLS_PREFIX.mkdir}/bin/${GNU_PROGRAM_PREFIX}mkdir
 TOOLS_REAL_ARGS.mkdir=		-p
 TOOLS_${_TOOLS_VARNAME.mkdir}=	${TOOLS_REAL_CMD.mkdir} ${TOOLS_REAL_ARGS.mkdir}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.mktemp) && !empty(_USE_TOOLS:Mmktemp)
+.  if !empty(PKGPATH:Msysutils/mktemp)
+MAKEFLAGS+=			TOOLS_IGNORE.mktemp=
+.  elif !empty(_TOOLS_USE_PKGSRC.mktemp:M[yY][eE][sS])
+TOOLS_DEPENDS.mktemp?=		mktemp>=1.5:../../sysutils/mktemp
+TOOLS_CREATE+=			mktemp
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mktemp=mktemp
+TOOLS_REAL_CMD.mktemp=		${TOOLS_PREFIX.mktemp}/bin/mktemp
+TOOLS_${_TOOLS_VARNAME.mktemp}=	${TOOLS_REAL_CMD.mktemp}
 .  endif
 .endif
 
