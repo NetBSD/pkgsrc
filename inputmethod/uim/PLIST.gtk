@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gtk2,v 1.1 2005/06/03 05:10:11 uebayasi Exp $
+@comment $NetBSD: PLIST.gtk,v 1.1 2005/06/03 10:21:51 uebayasi Exp $
 bin/uim-candwin-gtk
 bin/uim-helper-candwin-gtk
 bin/uim-helper-toolbar-gtk
