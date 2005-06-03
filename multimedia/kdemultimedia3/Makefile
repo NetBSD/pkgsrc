@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/06/01 14:51:56 markd Exp $
+# $NetBSD: Makefile,v 1.28 2005/06/03 22:58:54 markd Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
 CATEGORIES=	multimedia
@@ -58,5 +58,10 @@ UNLIMIT_RESOURCES+=	datasize
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
+
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "pth"
+.include "../../devel/pthread-sem/buildlink3.mk"
+BUILDLINK_TRANSFORM+=	l:pthread:pthread:semaphore
+.endif
 
 .include "../../mk/bsd.pkg.mk"
