@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2005/05/18 22:02:17 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2005/06/03 15:40:30 jmmv Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -31,6 +31,7 @@ SUBDIR+=	kdemultimedia3
 SUBDIR+=	kmplayer
 SUBDIR+=	libassetml
 SUBDIR+=	libdv
+SUBDIR+=	libdv-tools
 SUBDIR+=	libdvbpsi
 SUBDIR+=	libdvdcss
 SUBDIR+=	libdvdnav
