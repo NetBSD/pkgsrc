@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2005/06/03 16:03:09 jlam Exp $
+# $NetBSD: builtin.mk,v 1.8 2005/06/03 17:02:36 jlam Exp $
 
 BUILTIN_PKG:=	xcursor
 
@@ -16,7 +16,8 @@ IS_BUILTIN.xcursor=	no
 .  if exists(${H_XCURSOR})
 PKGSRC_USE_TOOLS+=	imake			# XXX
 IMAKE?=			${X11BASE}/bin/imake	# XXX
-.    if defined(IMAKE) && exists(${IMAKE})
+_BUILTIN_IMAKE_CMD=	${IMAKE:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+.    if exists(${_BUILTIN_IMAKE_CMD})
 IS_BUILTIN.xcursor!=							\
 	dir=`cd ${BUILDLINK_PKGSRCDIR.xcursor} && ${PWD_CMD}`;		\
 	cd ${TMPDIR:U/tmp:Q} && 					\
