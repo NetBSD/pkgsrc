@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3586 2005/06/03 13:47:26 wiz Exp $
+$NetBSD: TODO,v 1.3587 2005/06/03 20:09:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -856,6 +856,7 @@ Suggested package updates
 	o p5-ispman-1.2
 	o p5-perl-ldap-0.3202
 	o p5-sybperl-2.17
+	o pag-0.92 [pkg/30417]
 	o pam-smbpass-3.0.13
 	o pari-2.2.7
 	o pcal-4.8
