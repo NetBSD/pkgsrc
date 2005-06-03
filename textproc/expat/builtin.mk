@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2005/06/03 16:03:09 jlam Exp $
+# $NetBSD: builtin.mk,v 1.6 2005/06/03 17:02:36 jlam Exp $
 
 BUILTIN_PKG:=	expat
 
@@ -16,7 +16,8 @@ IS_BUILTIN.expat=	no
 .  if exists(${H_EXPAT})
 PKGSRC_USE_TOOLS+=	imake			# XXX
 IMAKE?=			${X11BASE}/bin/imake	# XXX
-.    if defined(IMAKE) && exists(${IMAKE})
+_BUILTIN_IMAKE_CMD=	${IMAKE:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+.    if exists(${_BUILTIN_IMAKE_CMD})
 IS_BUILTIN.expat!=							\
 	dir=`cd ${BUILDLINK_PKGSRCDIR.expat} && ${PWD_CMD}`;		\
 	cd ${TMPDIR:U/tmp:Q} && 					\
