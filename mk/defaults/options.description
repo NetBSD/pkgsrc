@@ -102,7 +102,7 @@ i740
 i810	
 iconv	
 id3	
-idea	
+idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
 ifevents	
 ignoreip2	
 imlib	
