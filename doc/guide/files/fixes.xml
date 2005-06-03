@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.18 2005/06/01 22:49:59 jlam Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.19 2005/06/03 12:27:48 jmmv Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -779,58 +779,6 @@ pre-configure:
   <sect1 id="package-specific-actions">
     <title>Package specific actions</title>
 
-    <sect2 id="package-configuration-files">
-      <title>Package configuration files</title>
-      
-      <para> Packages should be taught to look for their configuration
-        files in <varname>${PKG_SYSCONFDIR}</varname>, which is passed
-        through to the configure and build processes.
-        <varname>PKG_SYSCONFDIR</varname> may be customized in various
-        ways by setting other make variables: </para>
-
-      <itemizedlist>
-        <listitem>
-          <para> <varname>PKG_SYSCONFBASE</varname> is the main config
-            directory   under which all package configuration files are
-            to be found.  This defaults to
-            <filename>${PREFIX}/etc</filename>, but may  be overridden
-            in <filename>/etc/mk.conf</filename>.</para> 
-        </listitem>
-
-        <listitem>
-          <para>  <varname>PKG_SYSCONFSUBDIR</varname> is the subdirectory of
-            <varname>PKG_SYSCONFBASE</varname> under which the
-            configuration files for a particular package may be found, e.g.
-            the Apache configuration files may all be found under the
-            <filename>httpd/</filename> subdirectory of
-            <varname>${PKG_SYSCONFBASE}</varname>. This should be set in
-            the package Makefile.
-            </para>
-        </listitem>
-
-        <listitem>     
-          <para> By default,
-            <varname>PKG_SYSCONFDIR</varname> is set to
-            <varname>${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}</varname>, 
-            but this may be overridden by setting
-            <varname>PKG_SYSCONFDIR.${PKG_SYSCONFVAR}</varname> for a
-            particular package, where <varname>PKG_SYSCONFVAR</varname>
-            defaults to <varname>${PKGBASE}</varname>. This is not meant to
-            be set by a package Makefile, but is reserved for users who wish
-            to override the <varname>PKG_SYSCONFDIR</varname> setting for
-            a particular package with a special location.
-            </para>
-          </listitem>
-        </itemizedlist>
-
-        <para> The only variables that users should customize are
-          <varname>PKG_SYSCONFBASE</varname> and  <varname>PKG_SYSCONFDIR.${PKG_SYSCONFVAR}</varname>.
-          Users will typically want to set
-          <varname>PKG_SYSCONFBASE</varname> to
-          <filename>/etc</filename>, or to accept the default location
-          of <filename>${PREFIX}/etc</filename>. </para>
-    </sect2>
-
     <sect2 id="user-interaction">
       <title>User interaction</title>
 
@@ -928,46 +876,6 @@ pre-configure:
       </sect2>
     
 
-    <sect2 id="creating-accounts">
-      <title>Creating an account from a package</title>
-    
-      <para> There are two make variables used to control the creation
-        of package-specific groups and users at pre-install time.  The
-        first is <varname>PKG_GROUPS</varname>, which is a list of
-        group[:groupid] elements, where the groupid is optional.  The
-        second is <varname>PKG_USERS</varname>, which is a list of
-        elements of the form: </para>
-    
-      <programlisting>user:group[:[userid][:[description][:[home][:shell]]]]</programlisting>
-    
-      <para> where only the user and group are required, the rest being
-        optional.  A simple example is: </para>
-    
-      <programlisting>  PKG_GROUPS=       foogroup
-    PKG_USERS=    foouser:foogroup</programlisting>
-    
-      <para>  A more complex example is that creates two groups and two
-        users is:  </para> 
-    
-      <programlisting>  PKG_GROUPS=       group1 group2:1005
-    PKG_USERS=    first:group1::First\\ User                      \
-                  second:group2::Second\\ User:/home/second:${SH}</programlisting>
-    
-      <para> By default, a new user will have home directory
-        <filename>/nonexistent</filename>, and login shell
-        <filename>/sbin/nologin</filename> unless they are specified as
-        part of the user element.  </para>
-    
-      <para> The package <filename>Makefile</filename> must also set
-        <varname>USE_PKGINSTALL=YES</varname>. This will cause the users
-        and groups to be created at pre-install time, and the admin will
-        be prompted to remove them at post-deinstall time.  Automatic
-        creation of the users and groups can be toggled on and off by
-        setting the <varname>PKG_CREATE_USERGROUP</varname> variable
-        prior to package installation.  </para>
-    </sect2>
-    
-    
     <sect2 id="installing-score-files">
       <title>Installing score files</title>
     
@@ -990,31 +898,6 @@ pre-configure:
         access permissions but rely on <varname>INSTALL_GAME</varname> and
         <varname>INSTALL_GAME_DATA</varname> to set these
         correctly. </para>
-    </sect2>
-    
-    
-    <sect2 id="login-shells">
-      <title>Packages providing login shells</title>
-    
-      <para>  If the purpose of the package is to provide a login shell,
-        the variable  <varname>PKG_SHELL</varname> should contain the
-        full pathname of the  shell executable installed by this
-        package. The package  <filename>Makefile</filename> must also
-        set  <varname>USE_PKGINSTALL=YES</varname> to use the
-        automatically generated
-        <filename>INSTALL</filename>/<filename>DEINSTALL</filename>
-        scripts.  </para>
-          
-      <para> An example taken from shells/zsh: </para>
-    
-      <programlisting>  USE_PKGINSTALL=   YES
-    PKG_SHELL=    ${PREFIX}/bin/zsh</programlisting>
-    
-      <para>
-        The shell is registered into <filename>/etc/shells</filename>
-        file automatically in the post-install target by the generated
-        <filename>INSTALL</filename> script and removed in the deinstall
-        target by the <filename>DEINSTALL</filename> script.  </para>
     </sect2>
     
     
