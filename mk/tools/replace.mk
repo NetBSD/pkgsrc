@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.97 2005/06/02 21:03:32 jlam Exp $
+# $NetBSD: replace.mk,v 1.98 2005/06/03 21:11:07 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -193,6 +193,25 @@ TOOLS_CREATE+=			basename
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.basename=coreutils
 TOOLS_REAL_CMD.basename=	${TOOLS_PREFIX.basename}/bin/${GNU_PROGRAM_PREFIX}basename
 TOOLS_${_TOOLS_VARNAME.basename}=	${TOOLS_REAL_CMD.basename}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.bdftopcf) && !empty(_USE_TOOLS:Mbdftopcf)
+.  if !empty(PKGPATH:Mx11/XFree86-clients) || !empty(PKGPATH:Mx11/xorg-clients)
+MAKEFLAGS+=			TOOLS_IGNORE.bdftopcf=
+.  elif !empty(_TOOLS_USE_PKGSRC.bdftopcf:M[yY][eE][sS])
+TOOLS_CREATE+=			bdftopcf
+.    if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
+TOOLS_DEPENDS.bdftopcf?=	XFree86-clients>=4.4.0:../../x11/XFree86-clients
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bdftopcf=imake
+TOOLS_REAL_CMD.bdftopcf=	${TOOLS_PREFIX.bdftopcf}/${X11ROOT_PREFIX}/bin/bdftopcf
+.    elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
+TOOLS_DEPENDS.bdftopcf?=	xorg-clients>=6.8:../../x11/xorg-clients
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bdftopcf=xorg-clients
+TOOLS_REAL_CMD.bdftopcf=	${TOOLS_PREFIX.bdftopcf}/${X11ROOT_PREFIX}/bin/bdftopcf
+.    else # !empty(X11_TYPE:Mnative)
+TOOLS_REAL_CMD.bdftopcf=	${X11BASE}/bin/bdftopcf
+.    endif
 .  endif
 .endif
 
