@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2005/06/02 18:24:18 wiz Exp $
+# $NetBSD: Makefile.common,v 1.37 2005/06/03 13:43:29 uebayasi Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -23,11 +23,6 @@ DOCDIR=		share/doc/w3m
 .include "options.mk"
 
 _W3M_USE_IMAGE?=	NO
-.if ${_W3M_USE_IMAGE} == YES
-CONFIGURE_ARGS+=	--enable-image=x11
-.else
-CONFIGURE_ARGS+=	--disable-image
-.endif
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -57,12 +52,6 @@ CONFIGURE_ARGS+=	--with-mailer=${MAIL_CMD}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-.if ${_W3M_USE_IMAGE} == YES
-PLIST_SUBST+=		USE_IMAGE=''
-.else
-PLIST_SUBST+=		USE_IMAGE='@comment '
-.endif
-
 SUBST_CLASSES+=		man-ja
 SUBST_MESSAGE.man-ja=	"Fixing the path to Japanese manual pages."
 SUBST_STAGE.man-ja=	post-patch
@@ -87,9 +76,6 @@ post-install:
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.if ${_W3M_USE_IMAGE} == YES
-.include "../../graphics/gdk-pixbuf/buildlink3.mk"
-.endif
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 
