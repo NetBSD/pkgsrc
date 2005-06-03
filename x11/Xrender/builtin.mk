@@ -1,9 +1,10 @@
-# $NetBSD: builtin.mk,v 1.9 2005/06/03 16:03:09 jlam Exp $
+# $NetBSD: builtin.mk,v 1.10 2005/06/03 17:02:36 jlam Exp $
 
 BUILTIN_PKG:=	Xrender
 
 BUILTIN_FIND_FILES_VAR:=	H_XRENDER
 BUILTIN_FIND_FILES.H_XRENDER=	${X11BASE}/include/X11/extensions/Xrender.h
+
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
 ###
@@ -15,7 +16,8 @@ IS_BUILTIN.Xrender=	no
 .  if exists(${H_XRENDER})
 PKGSRC_USE_TOOLS+=	imake			# XXX
 IMAKE?=			${X11BASE}/bin/imake	# XXX
-.    if defined(IMAKE) && exists(${IMAKE})
+_BUILTIN_IMAKE_CMD=	${IMAKE:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+.    if exists(${_BUILTIN_IMAKE_CMD})
 IS_BUILTIN.Xrender!=							\
 	dir=`cd ${BUILDLINK_PKGSRCDIR.Xrender} && ${PWD_CMD}`;		\
 	cd ${TMPDIR:U/tmp:Q} && 					\
