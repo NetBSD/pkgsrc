@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:58 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/03 05:10:11 uebayasi Exp $
 #
 
 DISTNAME=		uim-0.4.6
@@ -38,5 +38,5 @@ post-install:
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
-.include "../../x11/gtk2/modules.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

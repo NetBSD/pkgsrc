@@ -1,17 +1,9 @@
-@comment $NetBSD: PLIST.common,v 1.1 2005/03/29 18:47:52 wiz Exp $
-bin/uim-candwin-gtk
+@comment $NetBSD: PLIST.common,v 1.2 2005/06/03 05:10:11 uebayasi Exp $
 bin/uim-fep
 bin/uim-fep-tick
-bin/uim-helper-candwin-gtk
 bin/uim-helper-server
-bin/uim-helper-toolbar-gtk
-bin/uim-helper-toolbar-gtk-systray
-bin/uim-im-switcher-gtk
 bin/uim-input-pad-ja
-bin/uim-pref-gtk
 bin/uim-sh
-bin/uim-toolbar-gtk
-bin/uim-toolbar-gtk-systray
 bin/uim-xim
 include/uim/plugin.h
 include/uim/uim-compat-scm.h
@@ -21,7 +13,6 @@ include/uim/uim-im-switcher.h
 include/uim/uim-scm.h
 include/uim/uim-util.h
 include/uim/uim.h
-lib/gtk-2.0/2.4.0/immodules/im-uim.la
 lib/libuim-custom.la
 lib/libuim.la
 lib/pkgconfig/uim.pc
@@ -114,5 +105,4 @@ share/uim/zaurus.scm
 @dirrm share/doc/uim
 @dirrm lib/uim/plugin
 @dirrm lib/uim
-@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/immodules
 @dirrm include/uim

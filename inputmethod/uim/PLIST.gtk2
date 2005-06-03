@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST.gtk2,v 1.1 2005/06/03 05:10:11 uebayasi Exp $
+bin/uim-candwin-gtk
+bin/uim-helper-candwin-gtk
+bin/uim-helper-toolbar-gtk
+bin/uim-helper-toolbar-gtk-systray
+bin/uim-im-switcher-gtk
+bin/uim-pref-gtk
+bin/uim-toolbar-gtk
+bin/uim-toolbar-gtk-systray
+lib/gtk-2.0/2.4.0/immodules/im-uim.la
+@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/immodules
