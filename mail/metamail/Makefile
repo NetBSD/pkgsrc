@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/05/09 13:02:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.36 2005/06/03 21:11:07 jlam Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -24,6 +24,7 @@ MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR} CHMOD=${CHMOD} SED=${SED}
 
 EGDIR=		${PREFIX}/share/examples/metamail
 CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
+USE_TOOLS+=	bdftopcf
 
 INSTALLATION_DIRS=	bin man/man1 man/man4
 
@@ -43,5 +44,4 @@ post-patch:
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 
-.include "../../mk/x11-clients.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
