@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2005/06/03 17:02:36 jlam Exp $
+# $NetBSD: builtin.mk,v 1.11 2005/06/03 19:12:49 jlam Exp $
 
 BUILTIN_PKG:=	Xft2
 
@@ -14,18 +14,9 @@ BUILTIN_FIND_FILES.H_XFT2=	${X11BASE}/include/X11/Xft.h
 .if !defined(IS_BUILTIN.Xft2)
 IS_BUILTIN.Xft2=	no
 .  if exists(${H_XFT2})
-PKGSRC_USE_TOOLS+=	imake			# XXX
-IMAKE?=			${X11BASE}/bin/imake	# XXX
-_BUILTIN_IMAKE_CMD=	${IMAKE:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-.    if exists(${_BUILTIN_IMAKE_CMD})
-IS_BUILTIN.Xft2!=							\
-	dir=`cd ${BUILDLINK_PKGSRCDIR.Xft2} && ${PWD_CMD}`;		\
-	cd ${TMPDIR:U/tmp:Q} &&						\
-	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
-		-f $$dir/builtin-imake.mk -C builtin-imake.$$$$.c	\
-		-s - |							\
-	${IMAKE_MAKE} -f - builtin-test
-.    endif
+BUILTIN_IMAKE_CHECK:=	Xft2:BuildXftLibrary
+.    include "../../mk/buildlink3/imake-check.mk"
+IS_BUILTIN.Xft2=	${BUILTIN_IMAKE_CHECK.Xft2}
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.Xft2
