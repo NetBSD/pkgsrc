@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.8 2005/06/03 13:26:17 wiz Exp $
+# $NetBSD: makevars.map,v 1.9 2005/06/03 13:54:32 wiz Exp $
 #
 
 # This file tries to guess the type of some variables, according to their
@@ -27,7 +27,6 @@ SETGIDGAME		Boolean
 #USE_CRYPTO		One_Of(YES NO)
 USE_CUPS		Yes_Or_Undefined
 #USE_DB2		One_Of(YES NO) ; weird (see mail/sendmail812)
-USE_GIF			Yes_Or_Undefined
 USE_I586		Boolean
 USE_INET6		Boolean
 USE_INN			Yes_Or_Undefined
