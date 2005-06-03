@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:02 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/06/03 15:40:31 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBDV_BUILDLINK3_MK:=	${LIBDV_BUILDLINK3_MK}+
@@ -15,11 +15,5 @@ BUILDLINK_DEPENDS.libdv+=	libdv>=0.102
 BUILDLINK_RECOMMENDED.libdv+=	libdv>=0.102nb1
 BUILDLINK_PKGSRCDIR.libdv?=	../../multimedia/libdv
 .endif	# LIBDV_BUILDLINK3_MK
-
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
