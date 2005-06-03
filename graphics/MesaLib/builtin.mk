@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2005/06/03 17:02:36 jlam Exp $
+# $NetBSD: builtin.mk,v 1.9 2005/06/03 19:12:49 jlam Exp $
 
 BUILTIN_PKG:=	MesaLib
 
@@ -14,18 +14,9 @@ BUILTIN_FIND_FILES.H_MESALIB=	${X11BASE}/include/GL/glx.h
 .if !defined(IS_BUILTIN.MesaLib)
 IS_BUILTIN.MesaLib=	no
 .  if exists(${H_MESALIB})
-PKGSRC_USE_TOOLS+=	imake			# XXX
-IMAKE?=			${X11BASE}/bin/imake	# XXX
-_BUILTIN_IMAKE_CMD=	${IMAKE:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-.    if exists(${_BUILTIN_IMAKE_CMD})
-IS_BUILTIN.MesaLib!=							\
-	dir=`cd ${BUILDLINK_PKGSRCDIR.MesaLib} && ${PWD_CMD}`;		\
-	cd ${TMPDIR:U/tmp:Q} &&						\
-	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
-		-f $$dir/builtin-imake.mk -C builtin-imake.$$$$.c	\
-		-s - |							\
-	${IMAKE_MAKE} -f - builtin-test
-.    endif
+BUILTIN_IMAKE_CHECK:=	MesaLib:BuildGLXLibrary
+.    include "../../mk/buildlink3/imake-check.mk"
+IS_BUILTIN.MesaLib=	${BUILTIN_IMAKE_CHECK.MesaLib}
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.MesaLib
