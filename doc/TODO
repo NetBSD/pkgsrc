@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3584 2005/06/02 16:13:19 wiz Exp $
+$NetBSD: TODO,v 1.3585 2005/06/03 09:08:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -450,6 +450,7 @@ Suggested package updates
 	o dmalloc-5.4.2
 	o dnstracer-1.8
 	o dpkg-1.13.3
+	o dspam-3.4.7
 	o dvdrip-0.52.5
 	o dvipdfmx-20050201
 	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
@@ -474,6 +475,7 @@ Suggested package updates
 	o et-2.60
 	o etach-1.4.0
 	o ettercap-NG-0.7.3
+	o evilwm-0.99.18
 	o exiftags-1.00
 	o exmh-2.7.2
 	o f2c-20031025
@@ -1167,7 +1169,7 @@ Suggested package updates
 	o xmon-1.5.6
 	o xnap-2.5r3
 	o xorp-1.1
-	o xpad-2.6
+	o xpad-2.7
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
 	o xrmap-2.30
