@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2005/06/03 17:02:36 jlam Exp $
+# $NetBSD: builtin.mk,v 1.7 2005/06/03 19:12:49 jlam Exp $
 
 BUILTIN_PKG:=	freetype2
 
@@ -14,18 +14,9 @@ BUILTIN_FIND_FILES.H_FREETYPE2=	${X11BASE}/include/freetype2/freetype/freetype.h
 .if !defined(IS_BUILTIN.freetype2)
 IS_BUILTIN.freetype2=	no
 .  if exists(${H_FREETYPE2})
-PKGSRC_USE_TOOLS+=	imake			# XXX
-IMAKE?=			${X11BASE}/bin/imake	# XXX
-_BUILTIN_IMAKE_CMD=	${IMAKE:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-.    if exists(${_BUILTIN_IMAKE_CMD})
-IS_BUILTIN.freetype2!=							\
-	dir=`cd ${BUILDLINK_PKGSRCDIR.freetype2} && ${PWD_CMD}`;	\
-	cd ${TMPDIR:U/tmp:Q} &&						\
-	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
-		-f $$dir/builtin-imake.mk -C builtin-imake.$$$$.c	\
-		-s - |							\
-	${IMAKE_MAKE} -f - builtin-test
-.    endif
+BUILTIN_IMAKE_CHECK:=	freetype2:BuildFreetype2Library
+.    include "../../mk/buildlink3/imake-check.mk"
+IS_BUILTIN.freetype2=	${BUILTIN_IMAKE_CHECK.freetype2}
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.freetype2

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2005/06/03 17:02:36 jlam Exp $
+# $NetBSD: builtin.mk,v 1.12 2005/06/03 19:12:49 jlam Exp $
 
 BUILTIN_PKG:=	Xrandr
 
@@ -14,18 +14,9 @@ BUILTIN_FIND_FILES.H_XRANDR=	${X11BASE}/include/X11/extensions/Xrandr.h
 .if !defined(IS_BUILTIN.Xrandr)
 IS_BUILTIN.Xrandr=	no
 .  if exists(${H_XRANDR})
-PKGSRC_USE_TOOLS+=	imake			# XXX
-IMAKE?=			${X11BASE}/bin/imake	# XXX
-_BUILTIN_IMAKE_CMD=	${IMAKE:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-.    if exists(${_BUILTIN_IMAKE_CMD})
-IS_BUILTIN.Xrandr!=							\
-	dir=`cd ${BUILDLINK_PKGSRCDIR.Xrandr} && ${PWD_CMD}`;		\
-	cd ${TMPDIR:U/tmp:Q} && 					\
-	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
-		-f $$dir/builtin-imake.mk -C builtin-imake.$$$$.c	\
-		-s - |							\
-	${IMAKE_MAKE} -f - builtin-test
-.    endif
+BUILTIN_IMAKE_CHECK:=	Xrandr:BuildRandRLibrary
+.    include "../../mk/buildlink3/imake-check.mk"
+IS_BUILTIN.Xrandr=	${BUILTIN_IMAKE_CHECK.Xrandr}
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.Xrandr
