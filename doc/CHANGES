@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10285 2005/06/03 15:40:30 jmmv Exp $
+$NetBSD: CHANGES,v 1.10286 2005/06/03 20:09:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2774,3 +2774,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/xchat2 to 2.4.3 [tron 2005-06-02]
 	Updated multimedia/libdv to 0.104nb1 [jmmv 2005-06-03]
 	Added multimedia/libdv-tools version 0.104 [jmmv 2005-06-03]
+	Added comms/conserver8 version 8.1.11 [wiz 2005-06-03]
