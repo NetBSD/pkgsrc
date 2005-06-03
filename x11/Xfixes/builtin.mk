@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2005/06/03 17:02:36 jlam Exp $
+# $NetBSD: builtin.mk,v 1.8 2005/06/03 19:12:49 jlam Exp $
 
 BUILTIN_PKG:=	Xfixes
 
@@ -14,18 +14,9 @@ BUILTIN_FIND_FILES.H_XFIXES=	${X11BASE}/include/X11/extensions/Xfixes.h
 .if !defined(IS_BUILTIN.Xfixes)
 IS_BUILTIN.Xfixes=	no
 .  if exists(${H_XFIXES})
-PKGSRC_USE_TOOLS+=	imake			# XXX
-IMAKE?=			${X11BASE}/bin/imake	# XXX
-_BUILTIN_IMAKE_CMD=	${IMAKE:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-.    if exists(${_BUILTIN_IMAKE_CMD})
-IS_BUILTIN.Xfixes!=							\
-	dir=`cd ${BUILDLINK_PKGSRCDIR.Xfixes} && ${PWD_CMD}`;		\
-	cd ${TMPDIR:U/tmp:Q} && 					\
-	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config		\
-		-f $$dir/builtin-imake.mk -C builtin-imake.$$$$.c	\
-		-s - |							\
-	${IMAKE_MAKE} -f - builtin-test
-.    endif
+BUILTIN_IMAKE_CHECK:=	Xfixes:BuildXfixesLibrary
+.    include "../../mk/buildlink3/imake-check.mk"
+IS_BUILTIN.Xfixes=	${BUILTIN_IMAKE_CHECK.Xfixes}
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.Xfixes
