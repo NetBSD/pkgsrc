@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2005/05/31 10:01:36 dillo Exp $
+# $NetBSD: options.mk,v 1.5 2005/06/03 10:24:05 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xchat2
-PKG_SUPPORTED_OPTIONS=	inet6 ssl socks
+PKG_SUPPORTED_OPTIONS=	inet6 ssl socks5
 PKG_SUGGESTED_OPTIONS=	ssl
+PKG_OPTIONS_LEGACY_OPTS+=	socks:socks5
 
 .include "../../mk/bsd.options.mk"
 
@@ -19,7 +20,7 @@ CONFIGURE_ARGS+=	--enable-openssl=no
 ###
 ### Support for connecting thru SOCKS servers
 ###
-.if !empty(PKG_OPTIONS:Msocks)
+.if !empty(PKG_OPTIONS:Msocks5)
 CONFIGURE_ARGS+=	--enable-socks
 .endif
 
