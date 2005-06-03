@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2005/06/01 14:05:54 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2005/06/03 05:10:11 uebayasi Exp $
 
-PKG_SUPPORTED_OPTIONS=  anthy canna eb qt
-PKG_SUGGESTED_OPTIONS=	anthy canna
+PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
+PKG_SUPPORTED_OPTIONS=	anthy canna eb gtk2 qt
+PKG_SUGGESTED_OPTIONS=	anthy canna gtk2
 PKG_OPTIONS_LEGACY_VARS+=	UIM_USE_ANTHY:anthy
 PKG_OPTIONS_LEGACY_VARS+=	UIM_USE_CANNA:canna
 PKG_OPTIONS_LEGACY_VARS+=	UIM_USE_EB:eb
@@ -24,6 +25,11 @@ PLIST_SRC+=		PLIST.canna
 .include "../../textproc/eb/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-eb
+.endif
+
+.if !empty(PKG_OPTIONS:Mgtk2)
+.include "../../x11/gtk2/modules.mk"
+PLIST_SRC+=		PLIST.gtk2
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt)
