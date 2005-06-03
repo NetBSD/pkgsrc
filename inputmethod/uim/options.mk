@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2005/06/03 10:21:51 uebayasi Exp $
+# $NetBSD: options.mk,v 1.6 2005/06/03 10:25:38 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 PKG_SUPPORTED_OPTIONS=	anthy canna eb gtk qt
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--without-eb
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk)
-.include "../../x11/gtk/modules.mk"
+.include "../../x11/gtk2/modules.mk"
 PLIST_SRC+=		PLIST.gtk
 .endif
 
