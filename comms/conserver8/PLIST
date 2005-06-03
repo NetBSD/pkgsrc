@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/03 20:08:04 wiz Exp $
+bin/conserverconvert
+bin/console
+man/man1/console.1
+man/man5/conserver.cf.5
+man/man5/conserver.passwd.5
+man/man8/conserver.8
+sbin/conserver
+share/doc/conserver/INSTALL
+share/doc/conserver/PROTOCOL
+share/doc/conserver/README
+share/examples/conserver/conserver.cf
+share/examples/conserver/conserver.passwd
+share/examples/conserver/conserver.rc
+@dirrm share/examples/conserver
