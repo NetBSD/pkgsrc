@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.19 2005/06/03 12:27:48 jmmv Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.20 2005/06/03 16:09:11 reed Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -214,18 +214,30 @@
             <varname>RECOMMENDED</varname>: </para>
     
           <programlisting>RECOMMENDED+=   tiff>=3.6.1:../../graphics/tiff</programlisting>
-    
+
           <para> In addition to the above <varname>DEPENDS</varname>
             line, this denotes that while a package will build against
             tiff&gt;=3.5.4, at least version 3.6.1 is recommended.
             <varname>RECOMMENDED</varname> entries will be turned into
             dependencies unless explicitly ignored (in which case a
-            warning will be printed).  Packages that are built with
-            recommendations ignored may not be uploaded to
-            ftp.NetBSD.org by developers and should not be used across
-            different systems that may have different versions of binary
-            packages installed.  </para>
-    
+            warning will be printed). </para>
+
+          <para>To ignore these dependency recommendations and just
+            use the required <varname>DEPENDS</varname>, set
+            <varname>IGNORE_RECOMMENDED=YES</varname>.   This may make
+            it easier and faster to update packages built using pkgsrc,
+            since older compatible dependencies can continue to be
+            used. This is useful for people who watch their rebuilds
+            very carefully; it is not very good as a general-purpose
+            hammer.  If you use it, you need to be mindful of possible
+            ABI changes, including those from the underlying OS.
+            </para>
+	    
+	  <para> Packages that are built with recommendations ignored
+            may not be uploaded to ftp.NetBSD.org by developers and
+            should not be used across different systems that may have
+            different versions of binary packages installed.  </para>
+
           <para> For security fixes, please update the package
             vulnerabilities file as well as setting
             <varname>RECOMMENDED</varname>, see <xref
