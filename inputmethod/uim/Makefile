@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/03 05:10:11 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/04 10:20:22 uebayasi Exp $
 #
 
 DISTNAME=		uim-0.4.6
@@ -7,7 +7,7 @@ MASTER_SITES=		http://uim.freedesktop.org/releases/
 
 MAINTAINER=		VEG03617@nifty.com
 HOMEPAGE=		http://uim.freedesktop.org/wiki/
-COMMENT=		Uim is a multilingual input method library
+COMMENT=		Multilingual input method library
 
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
