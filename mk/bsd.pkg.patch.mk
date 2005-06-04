@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.11 2005/05/22 19:11:12 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.12 2005/06/04 20:56:47 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -170,13 +170,13 @@ if ${TEST} -n ${PKG_OPTIONS:Q}"" ||					\
 	${ECHO} "=========================================================================="; \
 fi; exit 1
 
-_PATCH_COOKIE_TMP=	${PATCH_COOKIE}.tmp
+_PATCH_COOKIE_TMP=	${_PATCH_COOKIE}.tmp
 _GENERATE_PATCH_COOKIE=	\
 	if ${TEST} -f ${_PATCH_COOKIE_TMP:Q}; then			\
-		${CAT} ${_PATCH_COOKIE_TMP:Q} >> ${PATCH_COOKIE:Q};	\
+		${CAT} ${_PATCH_COOKIE_TMP:Q} >> ${_PATCH_COOKIE:Q};	\
 		${RM} -f ${_PATCH_COOKIE_TMP:Q};			\
 	else								\
-		${TOUCH} ${TOUCH_FLAGS} ${PATCH_COOKIE:Q};		\
+		${TOUCH} ${TOUCH_FLAGS} ${_PATCH_COOKIE:Q};		\
 	fi
 
 apply-distribution-patches:

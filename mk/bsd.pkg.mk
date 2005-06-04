@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1686 2005/06/03 20:22:59 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1687 2005/06/04 20:56:47 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -382,17 +382,17 @@ CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN_CMD:sh}
 .  endif
 .endif
 
-EXTRACT_COOKIE=		${WRKDIR}/.extract_done
-WRAPPER_COOKIE=		${WRKDIR}/.wrapper_done
-CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
-INSTALL_COOKIE=		${WRKDIR}/.install_done
-TEST_COOKIE=		${WRKDIR}/.test_done
-BUILD_COOKIE=		${WRKDIR}/.build_done
-PATCH_COOKIE=		${WRKDIR}/.patch_done
-TOOLS_COOKIE=		${WRKDIR}/.tools_done
-PACKAGE_COOKIE=		${WRKDIR}/.package_done
-INTERACTIVE_COOKIE=	.interactive_stage
-NULL_COOKIE=		${WRKDIR}/.null
+_EXTRACT_COOKIE=	${WRKDIR}/.extract_done
+_TOOLS_COOKIE=		${WRKDIR}/.tools_done
+_WRAPPER_COOKIE=	${WRKDIR}/.wrapper_done
+_PATCH_COOKIE=		${WRKDIR}/.patch_done
+_CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
+_BUILD_COOKIE=		${WRKDIR}/.build_done
+_TEST_COOKIE=		${WRKDIR}/.test_done
+_INSTALL_COOKIE=	${WRKDIR}/.install_done
+_PACKAGE_COOKIE=	${WRKDIR}/.package_done
+_INTERACTIVE_COOKIE=	.interactive_stage
+_NULL_COOKIE=		${WRKDIR}/.null
 
 # Miscellaneous overridable commands:
 SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
@@ -1077,7 +1077,7 @@ UPDATE_RUNNING?=	NO
 
 # Disable checksum
 .PHONY: checksum
-.if (defined(NO_CHECKSUM) || exists(${EXTRACT_COOKIE})) && !target(checksum)
+.if (defined(NO_CHECKSUM) || exists(${_EXTRACT_COOKIE})) && !target(checksum)
 checksum: fetch
 	@${DO_NADA}
 .endif
@@ -1086,28 +1086,28 @@ checksum: fetch
 .PHONY: wrapper
 .if defined(NO_BUILD) && !target(wrapper)
 wrapper: tools
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRAPPER_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_WRAPPER_COOKIE}
 .endif
 
 # Disable configure
 .PHONY: configure
 .if defined(NO_CONFIGURE) && !target(configure)
 configure: wrapper
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${CONFIGURE_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_CONFIGURE_COOKIE}
 .endif
 
 # Disable build
 .PHONY: build
 .if defined(NO_BUILD) && !target(build)
 build: configure
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${BUILD_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_BUILD_COOKIE}
 .endif
 
 # Disable install
 .PHONY: install
 .if defined(NO_INSTALL) && !target(install)
 install: build
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_INSTALL_COOKIE}
 .endif
 
 # Disable package
@@ -1338,7 +1338,7 @@ batch-check-distfiles:
 		[ ! -z "${HOMEPAGE}" ] && 				\
 			${ECHO} "*** See ${HOMEPAGE} for more details";	\
 		${ECHO};						\
-		${TOUCH} ${INTERACTIVE_COOKIE};				\
+		${TOUCH} ${_INTERACTIVE_COOKIE};			\
 		${FALSE} ;;						\
 	esac
 
@@ -1963,7 +1963,7 @@ real-su-package: ${PLIST} ${DESCR}
 		${MAKE} ${MAKEFLAGS} delete-package;			\
 		exit 1;							\
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${PACKAGE_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_PACKAGE_COOKIE}
 .  if defined(NO_BIN_ON_CDROM)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} may not be put on a CD-ROM:"
 	@${ECHO_MSG} "${_PKGSRC_IN}>         " ${NO_BIN_ON_CDROM:Q}
@@ -2210,7 +2210,7 @@ real-su-install: ${MESSAGE}
 .if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} register-pkg
 .endif # !NO_PKG_REGISTER
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_INSTALL_COOKIE}
 .if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} check-shlibs
 .endif
@@ -2672,47 +2672,47 @@ fetch:
 
 .PHONY: extract
 .if !target(extract)
-extract: checksum ${WRKDIR} acquire-extract-lock ${EXTRACT_COOKIE} release-extract-lock
+extract: checksum ${WRKDIR} acquire-extract-lock ${_EXTRACT_COOKIE} release-extract-lock
 .endif
 
 .PHONY: patch
 .if !target(patch)
-patch: extract acquire-patch-lock ${PATCH_COOKIE} release-patch-lock
+patch: extract acquire-patch-lock ${_PATCH_COOKIE} release-patch-lock
 .endif
 
 .PHONY: tools
 .if !target(tools)
-tools: patch acquire-tools-lock ${TOOLS_COOKIE} release-tools-lock
+tools: patch acquire-tools-lock ${_TOOLS_COOKIE} release-tools-lock
 .endif
 
 .PHONY: wrapper
 .if !target(wrapper)
-wrapper: tools acquire-wrapper-lock ${WRAPPER_COOKIE} release-wrapper-lock
+wrapper: tools acquire-wrapper-lock ${_WRAPPER_COOKIE} release-wrapper-lock
 .endif
 
 .PHONY: configure
 .if !target(configure)
-configure: wrapper acquire-configure-lock ${CONFIGURE_COOKIE} release-configure-lock
+configure: wrapper acquire-configure-lock ${_CONFIGURE_COOKIE} release-configure-lock
 .endif
 
 .PHONY: build
 .if !target(build)
-build: configure acquire-build-lock ${BUILD_COOKIE} release-build-lock
+build: configure acquire-build-lock ${_BUILD_COOKIE} release-build-lock
 .endif
 
 .PHONY: test
 .if !target(test)
-test: build ${TEST_COOKIE}
+test: build ${_TEST_COOKIE}
 .endif
 
 .PHONY: install
 .if !target(install)
-install: ${_PKGSRC_BUILD_TARGETS} acquire-install-lock ${INSTALL_COOKIE} release-install-lock
+install: ${_PKGSRC_BUILD_TARGETS} acquire-install-lock ${_INSTALL_COOKIE} release-install-lock
 .endif
 
 .PHONY: package
 .if !target(package)
-package: install acquire-package-lock ${PACKAGE_COOKIE} release-package-lock
+package: install acquire-package-lock ${_PACKAGE_COOKIE} release-package-lock
 .endif
 
 .PHONY: replace
@@ -2725,23 +2725,23 @@ replace: ${_PKGSRC_BUILD_TARGETS} real-replace
 undo-replace: real-undo-replace
 .endif
 
-${EXTRACT_COOKIE}:
+${_EXTRACT_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mextract} == "extract" && defined(BATCH)
 	@${ECHO} "*** The extract stage of this package requires user interaction"
 	@${ECHO} "*** Please extract manually with \"cd ${PKGDIR} && ${MAKE} extract\""
-	@${TOUCH} ${INTERACTIVE_COOKIE}
+	@${TOUCH} ${_INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET:Q} PKG_PHASE=extract
 .endif
 
-${PATCH_COOKIE}:
+${_PATCH_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-patch PKG_PHASE=patch
 
-${TOOLS_COOKIE}:
+${_TOOLS_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-tools PKG_PHASE=tools
 
-${WRAPPER_COOKIE}:
+${_WRAPPER_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-wrapper PKG_PHASE=wrapper
 
 PKG_ERROR_CLASSES+=	configure
@@ -2760,11 +2760,11 @@ PKG_ERROR_MSG.configure+=						\
 	"     * ${WRKLOG}"						\
 	""
 .endif
-${CONFIGURE_COOKIE}:
+${_CONFIGURE_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
 	@${ECHO} "*** The configuration stage of this package requires user interaction"
 	@${ECHO} "*** Please configure manually with \"cd ${PKGDIR} && ${MAKE} configure\""
-	@${TOUCH} ${INTERACTIVE_COOKIE}
+	@${TOUCH} ${_INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-configure PKG_PHASE=configure || ${PKG_ERROR_HANDLER.configure}
@@ -2778,30 +2778,30 @@ PKG_ERROR_MSG.build=	\
 	"     * log of the build"					\
 	"     * ${WRKLOG}"						\
 	""
-${BUILD_COOKIE}:
+${_BUILD_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mbuild} == "build" && defined(BATCH)
 	@${ECHO} "*** The build stage of this package requires user interaction"
 	@${ECHO} "*** Please build manually with \"cd ${PKGDIR} && ${MAKE} build\""
-	@${TOUCH} ${INTERACTIVE_COOKIE}
+	@${TOUCH} ${_INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-build PKG_PHASE=build || ${PKG_ERROR_HANDLER.build}
 .endif
 
-${TEST_COOKIE}:
+${_TEST_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-test PKG_PHASE=test
 
-${INSTALL_COOKIE}:
+${_INSTALL_COOKIE}:
 .if ${INTERACTIVE_STAGE:Minstall} == "install" && defined(BATCH)
 	@${ECHO} "*** The installation stage of this package requires user interaction"
 	@${ECHO} "*** Please install manually with \"cd ${PKGDIR} && ${MAKE} install\""
-	@${TOUCH} ${INTERACTIVE_COOKIE}
+	@${TOUCH} ${_INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-install PKG_PHASE=install
 .endif
 
-${PACKAGE_COOKIE}:
+${_PACKAGE_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-package PKG_PHASE=package
 
 .PHONY: extract-message patch-message tools-message wrapper-message
@@ -2824,19 +2824,19 @@ test-message:
 .PHONY: extract-cookie patch-cookie tools-cookie wrapper-cookie
 .PHONY: configure-cookie build-cookie test-cookie
 extract-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${EXTRACT_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${_EXTRACT_COOKIE}
 patch-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${_GENERATE_PATCH_COOKIE}
 tools-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${TOOLS_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${_TOOLS_COOKIE}
 wrapper-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${WRAPPER_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${_WRAPPER_COOKIE}
 configure-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${CONFIGURE_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${_CONFIGURE_COOKIE}
 build-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${BUILD_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${_BUILD_COOKIE}
 test-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${TEST_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${_TEST_COOKIE}
 
 .ORDER: pre-fetch do-fetch post-fetch
 .ORDER: extract-message extract-vars install-depends pre-extract do-extract post-extract extract-cookie
@@ -2893,7 +2893,7 @@ _SU_TARGET=								\
 .PHONY: do-su-install
 do-su-install:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	extractname=`${CAT} ${EXTRACT_COOKIE}`;				\
+	extractname=`${CAT} ${_EXTRACT_COOKIE}`;			\
 	case "$$extractname" in						\
 	"")	${ECHO_MSG} "*** Warning: ${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
 	"${PKGNAME}")	;;						\
@@ -2955,7 +2955,7 @@ post-${name}:
 .PHONY: reinstall
 .if !target(reinstall)
 reinstall:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE} ${PLIST}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_INSTALL_COOKIE} ${_PACKAGE_COOKIE} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}DEPENDS_TARGET=${DEPENDS_TARGET:Q} ${MAKE} ${MAKEFLAGS} install
 .endif
 
@@ -3018,7 +3018,7 @@ real-su-deinstall:
 	fi
 .    endfor
 .  endif # DEINSTALLDEPENDS
-	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
+	@${RM} -f ${_INSTALL_COOKIE} ${_PACKAGE_COOKIE}
 .endif						# target(deinstall)
 
 
@@ -3685,7 +3685,7 @@ repackage: pre-repackage package
 
 .PHONY: pre-repackage
 pre-repackage:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PACKAGE_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_PACKAGE_COOKIE}
 .endif
 
 # Build a package but don't check the cookie for installation, also don't
@@ -4175,9 +4175,9 @@ _PRINT_PLIST_COMMON_DIRS!= 	${AWK} 'BEGIN  {			\
 # XXX should check $LOCALBASE and $X11BASE, and add @cwd statements
 
 _PRINT_PLIST_FILES_CMD=	\
-	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} \! -type d -print
+	${FIND} ${PREFIX}/. -xdev -newer ${_EXTRACT_COOKIE} \! -type d -print
 _PRINT_PLIST_DIRS_CMD=	\
-	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} -type d -print
+	${FIND} ${PREFIX}/. -xdev -newer ${_EXTRACT_COOKIE} -type d -print
 _PRINT_LA_LIBNAMES=	${SETENV} ECHO=${ECHO:Q} GREP=${GREP:Q} SORT=${SORT:Q} \
 			${SH} ${.CURDIR}/../../mk/scripts/print-la-libnames
 
