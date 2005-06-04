@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3590 2005/06/04 16:46:01 adrianp Exp $
+$NetBSD: TODO,v 1.3591 2005/06/04 17:47:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -508,7 +508,6 @@ Suggested package updates
 	o gauche-0.8.4
 	o gcc-3.3.6
 	o gcc-4.0.0
-	o gcdmaster-1.2.0
 	o gcombust-0.1.55
 	o gconfmm26-2.8.0?
 	o gcpio-2.6
