@@ -1,16 +1,16 @@
-# $NetBSD: Makefile.common,v 1.8 2005/06/04 00:21:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.1 2005/06/04 10:41:42 jmmv Exp $
 #
 
 DISTNAME=		swfdec-0.2.2
-CATEGORIES=		graphics
+CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swfdec/}
 
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://swfdec.sourceforge.net/
 COMMENT=		Library for rendering Flash(R) animations and games
 
-DISTINFO_FILE=		${.CURDIR}/../../graphics/swfdec/distinfo
-PATCHDIR=		${.CURDIR}/../../graphics/swfdec/patches
+DISTINFO_FILE=		${.CURDIR}/../../multimedia/swfdec/distinfo
+PATCHDIR=		${.CURDIR}/../../multimedia/swfdec/patches
 
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes

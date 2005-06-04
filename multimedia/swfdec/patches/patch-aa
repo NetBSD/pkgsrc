@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/23 08:15:40 rh Exp $
+$NetBSD: patch-aa,v 1.1 2005/06/04 10:41:42 jmmv Exp $
 
 --- libswfdec/mpglib/clipconv_f32_s16.h.orig	2002-11-06 17:11:48.000000000 +1000
 +++ libswfdec/mpglib/clipconv_f32_s16.h

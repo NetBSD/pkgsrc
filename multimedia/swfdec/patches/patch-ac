@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2004/01/22 12:48:32 jmmv Exp $
+$NetBSD: patch-ac,v 1.1 2005/06/04 10:41:42 jmmv Exp $
 
 --- pixbuf-loader/Makefile.in.orig	2003-02-05 21:37:46.000000000 +0100
 +++ pixbuf-loader/Makefile.in
