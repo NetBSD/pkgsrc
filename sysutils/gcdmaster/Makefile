@@ -1,46 +1,36 @@
-# $NetBSD: Makefile,v 1.23 2005/06/04 16:43:37 adrianp Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/04 19:02:07 adrianp Exp $
 #
 
-DISTNAME=		cdrdao-1.2.0
-PKGNAME=		gcdmaster-1.2.0
-PKGREVISION=		1
-CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdrdao/}
+.include "../../sysutils/cdrdao/Makefile.common"
 
-MAINTAINER=		david@maxwell.net
-HOMEPAGE=		http://cdrdao.sourceforge.net/gcdmaster/index.html
-COMMENT=		GUI for cdrdao with some editing capability
+PKGNAME=		gcdmaster-${CDRDAO_VER}
+COMMENT=		Gnome UI frontend to cdrdao
 
-DEPENDS+=		cdrdao-1.2.0nb1:../../sysutils/cdrdao
+DEPENDS+=		cdrdao-${PKGVERSION}:../../sysutils/cdrdao
 
-WRKSRC=			${WRKDIR}/cdrdao-1.2.0
+PKGDIR=         	${.CURDIR}/../../sysutils/cdrdao
+FILESDIR=       	${PKGDIR}/files
+PATCHDIR=       	${PKGDIR}/patches
+DISTINFO_FILE=  	${PKGDIR}/distinfo
+PLIST_SRC=		${PKGDIR}/PLIST.gcdmaster
+WRKSRC=			${WRKDIR}/cdrdao-${CDRDAO_VER}
+
 USE_X11BASE=		YES
-GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome1-1.5
-USE_TOOLS+=		gmake
-CONFIGURE_ARGS+=	--with-pcctsbin=${LOCALBASE}/bin
-CONFIGURE_ARGS+=	--with-pcctsinc=${LOCALBASE}/include/pccts
 CONFIGURE_ARGS+=	--without-posix-threads
 CONFIGURE_ARGS+=	--with-xdao
-LDFLAGS+=		-L../paranoia
 
-# override ARCH to avoid picking up a bad ${ARCH} during the build
-MAKE_ENV+=      ARCH=""
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/xdao/gcdmaster ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/xdao/gcdmaster.man \
+		${PREFIX}/man/man1/gcdmaster.1
+	${INSTALL_DATA} ${WRKSRC}/xdao/gcdmaster.desktop \
+		${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/xdao/gcdmaster.png \
+		${PREFIX}/share/pixmaps
 
 .include "../../devel/libgnomeuimm26/buildlink3.mk"
 .include "../../devel/libgnomemm26/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../audio/libmad/buildlink3.mk"
-.include "../../audio/libao/buildlink3.mk"
-.include "../../devel/pccts/buildlink3.mk"
 .include "../../x11/gtkmm24/buildlink3.mk"
-
-post-configure:
-	cd ${WRKSRC}/scsilib/RULES ; \
-	${TEST} -f netbsd-cc.rul || ${MV} i386-netbsd-cc.rul netbsd-cc.rul; \
-	${TEST} -f netbsd-gcc.rul || ${MV} i386-netbsd-gcc.rul netbsd-gcc.rul; \
-	${LN} -sf netbsd-gcc.rul ${MACHINE}-netbsd-gcc.rul; \
-	${LN} -sf netbsd-cc.rul ${MACHINE}-netbsd-cc.rul;
-
 .include "../../mk/bsd.pkg.mk"
