@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/01 18:03:04 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/04 10:41:42 jmmv Exp $
 
 DISTNAME=	gtk2-extras-2.6.0
 PKGREVISION=	1
@@ -13,7 +13,7 @@ COMMENT=	Meta-package for the GIMP Toolkit v2
 DEPENDS+=	gtk2+>=2.6.0:../../x11/gtk2
 DEPENDS+=	gtk2-engines>=2.6.0:../../x11/gtk2-engines
 DEPENDS+=	librsvg2-gtk2>=2.6.3:../../graphics/librsvg2-gtk2
-DEPENDS+=	swfdec-gtk2>=0.2.1nb1:../../graphics/swfdec-gtk2
+DEPENDS+=	swfdec-gtk2>=0.2.1nb1:../../multimedia/swfdec-gtk2
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes

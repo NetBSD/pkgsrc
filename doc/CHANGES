@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10288 2005/06/04 09:36:23 wiz Exp $
+$NetBSD: CHANGES,v 1.10289 2005/06/04 10:41:41 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2777,3 +2777,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added comms/conserver8 version 8.1.11 [wiz 2005-06-03]
 	Updated security/systrace-policies to 1.1nb1 [kristerw 2005-06-04]
 	Updated net/rsync to 2.6.5 [wiz 2005-06-04]
+	Moved graphics/swfdec to multimedia/swfdec [jmmv 2005-06-04]
+	Moved graphics/swfdec-gtk2 to multimedia/swfdec-gtk2 [jmmv 2005-06-04]
