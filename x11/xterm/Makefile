@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2005/06/01 18:03:33 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/04 17:42:31 wiz Exp $
 
-DISTNAME=	xterm-200
-PKGREVISION=	1
+DISTNAME=	xterm-202
 CATEGORIES=	x11
 MASTER_SITES=	ftp://invisible-island.net/xterm/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	asmodai@in-nomine.org
 HOMEPAGE=	http://dickey.his.com/xterm/xterm.html
 COMMENT=	Latest terminal emulator for the X Window System
 
@@ -15,6 +14,12 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/x11.buildlink3.mk"
+
+.if exists(/usr/include/wchar.h)
+CONFIGURE_ARGS+= --enable-wide-chars
+.endif
+
+.include "options.mk"
 
 .if ${OPSYS} == "SunOS"
 INSTALL_FILE=	${WRKDIR}/INSTALL
