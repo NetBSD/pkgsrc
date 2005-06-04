@@ -1,25 +1,21 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:11 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/04 21:48:40 adrianp Exp $
 #
 
-DISTNAME=	adodb400
-PKGNAME=	adodb-4.00
+DISTNAME=	adodb463
+PKGNAME=	adodb-4.63
 CATEGORIES=	databases www
-MASTER_SITES=	http://phplens.com/lens/dl/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=adodb/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	adrianp@stindustries.net
-HOMEPAGE= 	http://php.weblogs.com/ADODB
+MAINTAINER=	adrianp@NetBSD.org
+HOMEPAGE= 	http://adodb.sourceforge.net/
 COMMENT=	Active Data Objects Data Base for php4
 
-DEPENDS+=       php>=4.0.5:../../www/php4
+DEPENDS+=	php>=4.1.0:../../www/php4
 
 WRKSRC=		${WRKDIR}/adodb
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
-
-DOC_FILES=	license.txt readme.htm readme.txt tips_portable_sql.htm \
-		tute.htm docs-datadict.htm old-changelog.htm docs-adodb.htm \
-		docs-session.htm docs-perf.htm
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/adodb
@@ -29,10 +25,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/adodb/lang
 	${INSTALL_DATA_DIR} ${PREFIX}/share/adodb/perf
 	${INSTALL_DATA_DIR} ${PREFIX}/share/adodb/tests
+	${INSTALL_DATA_DIR} ${PREFIX}/share/adodb/xsl
+	${INSTALL_DATA_DIR} ${PREFIX}/share/adodb/session
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/adodb
 	${INSTALL_SCRIPT} ${WRKSRC}/*.php ${PREFIX}/share/adodb
-	${INSTALL_DATA} ${WRKSRC}/cute_icons_for_site/*.png \
-		${PREFIX}/share/adodb/cute_icons_for_site
+	${INSTALL_SCRIPT} ${WRKSRC}/*.dtd ${PREFIX}/share/adodb
 	${INSTALL_DATA} ${WRKSRC}/cute_icons_for_site/*.gif \
 		${PREFIX}/share/adodb/cute_icons_for_site
 	${INSTALL_SCRIPT} ${WRKSRC}/datadict/*.php \
@@ -42,8 +39,11 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/perf/*.php ${PREFIX}/share/adodb/perf
 	${INSTALL_SCRIPT} ${WRKSRC}/tests/*.php ${PREFIX}/share/adodb/tests
 	${INSTALL_SCRIPT} ${WRKSRC}/tests/*.xml ${PREFIX}/share/adodb/tests
-	for FILE in ${DOC_FILES}; do \
-	  ${INSTALL_DATA} ${WRKSRC}/$$FILE ${PREFIX}/share/doc/adodb; \
-	done
+	${INSTALL_SCRIPT} ${WRKSRC}/session/*.php ${PREFIX}/share/adodb/session
+	${INSTALL_SCRIPT} ${WRKSRC}/session/*.txt ${PREFIX}/share/adodb/session
+	${INSTALL_SCRIPT} ${WRKSRC}/session/*.sql ${PREFIX}/share/adodb/session
+	${INSTALL_SCRIPT} ${WRKSRC}/xsl/*.xsl ${PREFIX}/share/adodb/xsl
+	${INSTALL_DATA} ${WRKSRC}/docs/*.htm ${PREFIX}/share/doc/adodb
+	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/adodb
 
 .include "../../mk/bsd.pkg.mk"
