@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2004/07/06 20:57:45 drochner Exp $
+$NetBSD: patch-aj,v 1.1 2005/06/04 19:05:38 adrianp Exp $
 
 --- xdao/SoundIF-solaris.cc.orig	2004-07-04 22:05:21.000000000 +0200
 +++ xdao/SoundIF-solaris.cc
