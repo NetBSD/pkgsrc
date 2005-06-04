@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2005/06/04 10:44:29 wiz Exp $
+
+--- index/glimpse.c.orig	2002-09-27 23:41:11.000000000 +0200
++++ index/glimpse.c
+@@ -9,7 +9,9 @@
+ #include <errno.h>
+ 
+ extern char **environ;
++#ifndef errno
+ extern int errno;
++#endif
+ extern FILE *TIMEFILE;	/* file descriptor for sorting .glimpse_filenames by time */
+ #if	BG_DEBUG
+ extern FILE  *LOGFILE; 	/* file descriptor for LOG output */
