@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3588 2005/06/04 00:31:24 wiz Exp $
+$NetBSD: TODO,v 1.3589 2005/06/04 11:45:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -343,7 +343,7 @@ Suggested package updates
 	o ap2-auth-ldap-3.05
 	o ap2-chroot-0.4
 	o ap2-transform-0.6.0
-	o apache-ant-1.6.4
+	o apache-ant-1.6.5
 	o apcupsd-3.10.16 [requires threads, doesn't work with pth on 1.6]
 	o apg-2.2.3 [pkg/30345|zuntum]
 	o apr-1.1.1
@@ -551,6 +551,7 @@ Suggested package updates
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.6
 	o gtk-systrace-2003.06.23
+	o gtklife-4.2
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o guile-oops-1.0.2
@@ -600,6 +601,7 @@ Suggested package updates
 	o jdbc-postgresql-7.3.9
 	o jessie-1.0.0
 	o jftpgw-0.13.5
+	o joe-3.3
 	o john-1.6.37
 	o jove-4.16.0.65
 	o jpegpixi-1.1.0
@@ -856,6 +858,7 @@ Suggested package updates
 	o p5-ispman-1.2
 	o p5-perl-ldap-0.3202
 	o p5-sybperl-2.17
+	o p5-xmltv-0.5.40
 	o pag-0.92 [pkg/30417]
 	o pam-smbpass-3.0.13
 	o pari-2.2.7
