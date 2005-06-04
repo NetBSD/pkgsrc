@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/20 14:33:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/04 19:30:05 adrianp Exp $
 #
 
 DISTNAME=	honeyd-1.0
@@ -9,7 +9,6 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://niels.xtdnet.nl/honeyd/index.php
 COMMENT=	Small daemon that creates virtual hosts on a network
 
-.include "../../mk/bsd.prefs.mk"
 DEPENDS+=       honeyd-arpd>=0.2:../../security/honeyd-arpd
 
 GNU_CONFIGURE=		YES
@@ -45,4 +44,3 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
-
