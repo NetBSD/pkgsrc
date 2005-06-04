@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.81 2005/05/19 15:18:13 jlam Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.82 2005/06/04 20:56:48 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -377,10 +377,10 @@ bulk-package:
 				fi ;\
 			done ;\
 		fi ;\
-		if [ -f ${INTERACTIVE_COOKIE} ]; then \
+		if [ -f ${_INTERACTIVE_COOKIE} ]; then \
 			${ECHO_MSG} "BULK> Removing old marker for INTERACTIVE_STAGE..." ; \
-			${ECHO_MSG} ${RM} -f ${INTERACTIVE_COOKIE} ; \
-			${DO}       ${RM} -f ${INTERACTIVE_COOKIE} ; \
+			${ECHO_MSG} ${RM} -f ${_INTERACTIVE_COOKIE} ; \
+			${DO}       ${RM} -f ${_INTERACTIVE_COOKIE} ; \
 		fi ;\
 		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 ; \
 		${DO}     ( ${MAKE} package 2>&1 ); \
@@ -443,7 +443,7 @@ bulk-package:
 				fi ;\
 			fi ;\
 			nerrors=`${GREP} -c '^\*\*\* Error code' ${BROKENFILE} || true`; \
-			if [ -f ${INTERACTIVE_COOKIE} ]; then \
+			if [ -f ${_INTERACTIVE_COOKIE} ]; then \
 				nerrors="0"; \
 			fi; \
 			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${PKGSRCDIR}/${BROKENFILE} \
