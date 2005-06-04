@@ -3,5 +3,5 @@ originally designed as a basis library for creating Flash plugins for
 GStreamer, but it is a fully standalone library which only use the libart
 library for drawing.  Swfdec is released under the LGPL.
 
-This package provides the swfdec library, as well as an standalonw SWF
+This package provides the swfdec library, as well as an standalone SWF
 player.
