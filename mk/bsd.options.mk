@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.36 2005/06/04 10:11:24 seb Exp $
+# $NetBSD: bsd.options.mk,v 1.37 2005/06/04 16:30:19 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -132,11 +132,11 @@ PKG_FAIL_REASON+=	"bsd.options.mk: PKG_OPTIONS_VAR is not defined."
 #
 # create map of option to group and add group options to PKG_SUPPORTED_OPTOINS
 #
-.for _cls_ in ${PKG_OPTIONS_OPTIONAL_GROUPS} ${PKG_OPTIONS_REQUIRED_GROUPS}
-_PKG_OPTIONS_GROUP_STACK.${_cls_}:=#empty
-.  for _opt_ in ${PKG_OPTIONS_GROUP.${_cls_}}
+.for _grp_ in ${PKG_OPTIONS_OPTIONAL_GROUPS} ${PKG_OPTIONS_REQUIRED_GROUPS}
+_PKG_OPTIONS_GROUP_STACK.${_grp_}:=#empty
+.  for _opt_ in ${PKG_OPTIONS_GROUP.${_grp_}}
 PKG_SUPPORTED_OPTIONS+= ${_opt_}
-_PKG_OPTIONS_GROUP_MAP.${_opt_}=${_cls_}
+_PKG_OPTIONS_GROUP_MAP.${_opt_}=${_grp_}
 .  endfor
 .endfor
 
@@ -219,8 +219,8 @@ _opt_:=		-${_popt_}
 _OPTIONS_UNSUPPORTED:=${_OPTIONS_UNSUPPORTED} ${_opt_}
 .  else
 .    if defined(_PKG_OPTIONS_GROUP_MAP.${_popt_})
-_cls_:= ${_PKG_OPTIONS_GROUP_MAP.${_popt_}}
-_stk_:=	_PKG_OPTIONS_GROUP_STACK.${_cls_}
+_grp_:= ${_PKG_OPTIONS_GROUP_MAP.${_popt_}}
+_stk_:=	_PKG_OPTIONS_GROUP_STACK.${_grp_}
 _cnt_:=	${${_stk_}}
 .      if !empty(_opt_:M-*)
 ${_stk_}:=	${_cnt_:N${_popt_}}
@@ -240,15 +240,15 @@ PKG_OPTIONS:=	${PKG_OPTIONS} ${_popt_}
 .undef _popt_
 .undef _stk_
 
-.for _cls_ in ${PKG_OPTIONS_REQUIRED_GROUPS}
-.  if empty(_PKG_OPTIONS_GROUP_STACK.${_cls_})
-PKG_FAIL_REASON:="One of the following options must be selected: "${PKG_OPTIONS_GROUP.${_cls_}:O:u:Q}
+.for _grp_ in ${PKG_OPTIONS_REQUIRED_GROUPS}
+.  if empty(_PKG_OPTIONS_GROUP_STACK.${_grp_})
+PKG_FAIL_REASON:="One of the following options must be selected: "${PKG_OPTIONS_GROUP.${_grp_}:O:u:Q}
 .  endif
 .endfor
 
-.for _cls_ in ${PKG_OPTIONS_REQUIRED_GROUPS} ${PKG_OPTIONS_OPTIONAL_GROUPS}
+.for _grp_ in ${PKG_OPTIONS_REQUIRED_GROUPS} ${PKG_OPTIONS_OPTIONAL_GROUPS}
 .undef _opt_
-.  for _o_ in ${_PKG_OPTIONS_GROUP_STACK.${_cls_}}
+.  for _o_ in ${_PKG_OPTIONS_GROUP_STACK.${_grp_}}
 _opt_:=		${_o_}
 .  endfor
 .  if defined(_opt_)
@@ -285,7 +285,21 @@ _PKG_OPTIONS_WORDWRAP_FILTER=						\
 show-options:
 	@${ECHO} The following options are supported by this package:
 .for _opt_ in ${PKG_SUPPORTED_OPTIONS:O}
+.  if !defined(_PKG_OPTIONS_GROUP_MAP.${_opt_})
 	@${ECHO} "	"${_opt_:Q}"	"`${SED} -n "s/^"${_opt_:Q}"	//p" ../../mk/defaults/options.description`
+.  endif
+.endfor
+.for _grp_ in ${PKG_OPTIONS_REQUIRED_GROUPS}
+	@${ECHO} "Exactly one of the following "${_grp_:Q}" options is required:"
+.  for _opt_ in ${PKG_OPTIONS_GROUP.${_grp_}:O}
+	@${ECHO} "	"${_opt_:Q}"	"`${SED} -n "s/^"${_opt_:Q}"	//p" ../../mk/defaults/options.description`
+.  endfor
+.endfor
+.for _grp_ in ${PKG_OPTIONS_OPTIONAL_GROUPS}
+	@${ECHO} "At most one of the following "${_grp_:Q}" options may be selected:"
+.  for _opt_ in ${PKG_OPTIONS_GROUP.${_grp_}:O}
+	@${ECHO} "	"${_opt_:Q}"	"`${SED} -n "s/^"${_opt_:Q}"	//p" ../../mk/defaults/options.description`
+.  endfor
 .endfor
 	@${ECHO}
 	@${ECHO} "These options are enabled by default: "${PKG_SUGGESTED_OPTIONS:O:Q}
