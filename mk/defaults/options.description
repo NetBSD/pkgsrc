@@ -269,6 +269,9 @@ xft2
 xmlimportbugs	
 xmms-eq	
 xvid			Enable usage of XVid codecs.
+xterm-88color		Enable 88 color support.
+xterm-256color		Enable 256 color support.
+xterm-luit		Enable locale <> UTF encoding translation.
 zaptel	
 zip	
 ziplinks	
