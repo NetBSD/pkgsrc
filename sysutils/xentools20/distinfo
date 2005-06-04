@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.6 2005/05/24 16:02:08 xtraeme Exp $
+$NetBSD: distinfo,v 1.7 2005/06/04 11:34:30 yamt Exp $
 
 SHA1 (xen-2.0.6-src.tgz) = 3808b8ff57decc3dea0c65c5a80665516a000487
 RMD160 (xen-2.0.6-src.tgz) = ebcdd95e3c74fb71bf732ff04694abe4fe3b6876
 Size (xen-2.0.6-src.tgz) = 2456215 bytes
 SHA1 (patch-aa) = 2c3ca679003895f19f11dcd5038dbfa2de241a74
 SHA1 (patch-ab) = 876bcc0723ff7e12e096ca1bff749f8a2ff23b16
-SHA1 (patch-ac) = a07e37a56a6d0cb8cd51b24e82a48a7bef91d233
+SHA1 (patch-ac) = 24acf3f7c71addc24e8f32270173fb4ace1e9180
 SHA1 (patch-ad) = 6f242d6ad89b4c019cd291313ba8eaa28ae3bfbb
 SHA1 (patch-ae) = b5a6521b14dd24cb52713bd83ec91422ef63161e
 SHA1 (patch-af) = 5467e64fbd49d6ca35718d42864ed7b44fe76df3

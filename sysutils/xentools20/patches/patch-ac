@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+$NetBSD: patch-ac,v 1.2 2005/06/04 11:34:30 yamt Exp $
 
 --- python/xen/lowlevel/xu/xu.c.orig	2005-01-12 13:22:21.000000000 +0100
 +++ python/xen/lowlevel/xu/xu.c	2005-02-05 20:22:08.000000000 +0100
@@ -101,8 +101,8 @@ $NetBSD: patch-ac,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
           * We use an ioctl to discover the port at our end of the channel.
           */
 -        port1 = ioctl(xup->xc_handle, IOCTL_PRIVCMD_INITDOMAIN_EVTCHN, NULL);
-+        (void)ioctl(xup->xc_handle, IOCTL_PRIVCMD_INITDOMAIN_EVTCHN, NULL);
-+	port1 = errno;
++        if (ioctl(xup->xc_handle, IOCTL_PRIVCMD_INITDOMAIN_EVTCHN, &port1))
++            port1 = -1;
          port2 = -1; /* We don't need the remote end of the DOM0 link. */
          if ( port1 < 0 )
          {
