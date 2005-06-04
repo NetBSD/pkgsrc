@@ -1,13 +1,14 @@
-$NetBSD: patch-ad,v 1.1 2001/10/13 23:43:30 mjl Exp $
+$NetBSD: patch-ad,v 1.2 2005/06/04 10:44:28 wiz Exp $
 
---- configure.orig	Tue Aug 21 06:37:16 2001
-+++ configure	Sun Oct 14 01:12:16 2001
-@@ -1873,7 +1873,7 @@
- else
-   ac_save_LIBS="$LIBS"
- LIBS="-ldl  $LIBS"
--INDEXLIBS="-ldl $INDEXLIBS"
-+INDEXLIBS="$INDEXLIBS"
+--- agrep/bitap.c.orig	2002-11-30 01:47:27.000000000 +0100
++++ agrep/bitap.c
+@@ -34,7 +34,9 @@ extern CHAR *agrep_outbuffer;
+ extern int agrep_outlen;
+ extern int agrep_outpointer;
+ extern FILE *agrep_finalfp;
++#ifndef errno
+ extern int errno;
++#endif
  
- cat > conftest.$ac_ext <<EOF
- #line 1757 "configure"
+ extern int NEW_FILE, POST_FILTER;
+ 
