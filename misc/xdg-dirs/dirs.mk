@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.3 2005/05/31 18:53:32 jmmv Exp $
+# $NetBSD: dirs.mk,v 1.4 2005/06/04 11:20:23 jmmv Exp $
 #
 # This file is intended to be included by mk/dirs.mk, not directly by packages.
 #
@@ -20,7 +20,7 @@ XDG_DIRS+=		share/themes
 DEPENDS+=		xdg-dirs>=${_USE_XDG_DIRS}:../../misc/xdg-dirs
 
 .  for dir in ${XDG_DIRS}
-PRINT_PLIST_AWK+=	/^@exec $${MKDIR} %D/${dir:S|/|\\/|g}$$/ { next; }
+PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/${dir:S|/|\\/|g}$$/ { next; }
 PRINT_PLIST_AWK+=	/^@dirrm ${dir:S|/|\\/|g}$$/ \
 				{ print "@comment in xdg-dirs: " $$0; next; }
 .  endfor

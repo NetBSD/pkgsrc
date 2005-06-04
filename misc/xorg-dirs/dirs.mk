@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.3 2005/05/31 18:53:32 jmmv Exp $
+# $NetBSD: dirs.mk,v 1.4 2005/06/04 11:20:23 jmmv Exp $
 #
 
 .if !defined(DIRS_XORG_MK)
@@ -31,7 +31,7 @@ XORG_DIRS+=		${MISCMAN_DIR}
 DEPENDS+=		xorg-dirs>=${_USE_XORG_DIRS}:../../misc/xorg-dirs
 
 .  for dir in ${XORG_DIRS}
-PRINT_PLIST_AWK+=	/^@exec $${MKDIR} %D/${dir:S|/|\\/|g}$$/ { next; }
+PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/${dir:S|/|\\/|g}$$/ { next; }
 PRINT_PLIST_AWK+=	/^@dirrm ${dir:S|/|\\/|g}$$/ \
 				{ print "@comment in xorg-dirs: "$$0; next; }
 .  endfor
