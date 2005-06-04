@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/04/11 21:46:09 tv Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/06/04 00:21:05 wiz Exp $
 #
 
 DISTNAME=		swfdec-0.2.2
@@ -20,6 +20,6 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	swfdec.pc.in
 
 pre-install:
-	echo "install:" >${WRKSRC}/plugin/Makefile
+	${ECHO} "install:" >${WRKSRC}/plugin/Makefile
 
 .include "../../devel/pkgconfig/buildlink3.mk"
