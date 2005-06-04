@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3587 2005/06/03 20:09:29 wiz Exp $
+$NetBSD: TODO,v 1.3588 2005/06/04 00:31:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1047,7 +1047,7 @@ Suggested package updates
 	o subtitleripper-0.3.4
 	o sudo-1.6.8p8
 	o suse_base-9.3
-	o swfdec-0.3.2
+	o swfdec-0.3.5
 	o swi-prolog-5.5.11
 	o swish-e-2.4.3
 	o sylpheed-claws-1.0.4a
