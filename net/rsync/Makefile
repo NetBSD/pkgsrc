@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2005/05/25 10:55:16 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2005/06/04 09:35:51 wiz Exp $
 
-DISTNAME=	rsync-2.6.4
+DISTNAME=	rsync-2.6.5
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 		ftp://rsync.samba.org/pub/rsync/ \
