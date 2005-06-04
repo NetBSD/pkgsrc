@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2005/05/22 20:07:39 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2005/06/04 23:43:51 markd Exp $
 
-DISTNAME=	nas-1.7.src
+DISTNAME=	nas-1.7b.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://nas.codebrilliance.com/nas/ \
 		ftp://ftp.uni-duisburg.de/Sound/NAS/
@@ -23,12 +22,6 @@ USE_IMAKE=		yes
 PKG_SYSCONFSUBDIR=	nas
 
 REPLACE_PERL=		clients/audio/auscope/auscope
-
-post-patch:
-	@for f in `${FIND} ${WRKSRC} -name '*.[ch]' -print`; do		\
-		${SED} -e "s|<malloc.h>|<stdlib.h>|g" $$f > $$f.patch	\
-		&& ${MV} $$f.patch $$f;					\
-	done
 
 pre-configure:
 	@cd ${WRKSRC}; for file in					\
@@ -56,6 +49,11 @@ pre-configure:
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "SunOS"
+post-install:
+	${LN} -s ${PREFIX}/lib/libaudio.so.2.3 ${PREFIX}/lib/libaudio.so.2
+.endif
+
 PLIST_SRC=	${PKGDIR}/PLIST.clients
 
 .if ${OPSYS} != "Interix"
@@ -63,8 +61,11 @@ PLIST_SRC=	${PKGDIR}/PLIST.clients
       (${MACHINE_ARCH} == "sparc")
 .    include "../../mk/ossaudio.buildlink3.mk"
 EGDIR=		${PREFIX}/share/examples/nas
-PLIST_SRC+=	${PKGDIR}/PLIST.voxware
 CONF_FILES=	${EGDIR}/nasd.conf.eg ${PKG_SYSCONFDIR}/nasd.conf
+.    if ${OPSYS} != "SunOS"
+PLIST_SRC+=	${PKGDIR}/PLIST.voxware
+.    endif
+PLIST_SRC+=	${PKGDIR}/PLIST.server
 .  endif
 .endif
 
