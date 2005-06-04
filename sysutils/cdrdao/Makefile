@@ -1,39 +1,21 @@
-# $NetBSD: Makefile,v 1.23 2005/05/28 21:50:19 tron Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/04 19:05:38 adrianp Exp $
 
-DISTNAME=		cdrdao-1.2.0
-PKGREVISION=		1
-CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdrdao/}
+.include "../../sysutils/cdrdao/Makefile.common"
 
-MAINTAINER=		david@maxwell.net
-HOMEPAGE=		http://cdrdao.sourceforge.net/
+PKGNAME=		cdrdao-${CDRDAO_VER}
+
 COMMENT=		Records audio or data CD-Rs in disk-at-once (DAO) mode
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
-USE_LANGUAGES=		c c++
-CONFIGURE_ARGS+=	--with-pcctsbin=${PREFIX}/bin
-CONFIGURE_ARGS+=	--with-pcctsinc=${PREFIX}/include/pccts
-CONFIGURE_ARGS+=	--with-gtkmm-exec-prefix=/dev/null
-# don't pick up an installed libcdda_paranoia
-LDFLAGS+=		-L../paranoia
+PKGDIR=			${.CURDIR}/../../sysutils/cdrdao
+FILESDIR=		${PKGDIR}/files
+PATCHDIR=		${PKGDIR}/patches
+DISTINFO_FILE=		${PKGDIR}/distinfo
+PLIST_SRC=		${PKGDIR}/PLIST.cdrdao
+CONFIGURE_ARGS+=	--without-xdao
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
 CONFIGURE_ARGS+=	--without-posix-threads
-.endif
-
-#override ARCH to avoid picking up a bad ${ARCH} during the build
-MAKE_ENV+=      ARCH=""
-
-
-post-configure:
-	cd ${WRKSRC}/scsilib/RULES ; \
-	${TEST} -f netbsd-cc.rul || ${MV} i386-netbsd-cc.rul netbsd-cc.rul; \
-	${TEST} -f netbsd-gcc.rul || ${MV} i386-netbsd-gcc.rul netbsd-gcc.rul; \
-	${LN} -sf netbsd-gcc.rul ${MACHINE}-netbsd-gcc.rul; \
-	${LN} -sf netbsd-cc.rul ${MACHINE}-netbsd-cc.rul;
+.endif    
 
 post-install:
 		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/cdrdao
@@ -57,9 +39,5 @@ post-install:
 		${INSTALL_MAN} ${WRKSRC}/contrib/wav2dao/wav2dao.pl \
 			${PREFIX}/share/examples/cdrdao
 
-.include "../../mk/pthread.buildlink3.mk"
-.include "../../audio/libao/buildlink3.mk"
-.include "../../audio/libmad/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
-.include "../../devel/pccts/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk" 
 .include "../../mk/bsd.pkg.mk"
