@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10289 2005/06/04 10:41:41 jmmv Exp $
+$NetBSD: CHANGES,v 1.10290 2005/06/04 10:45:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2779,3 +2779,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/rsync to 2.6.5 [wiz 2005-06-04]
 	Moved graphics/swfdec to multimedia/swfdec [jmmv 2005-06-04]
 	Moved graphics/swfdec-gtk2 to multimedia/swfdec-gtk2 [jmmv 2005-06-04]
+	Updated textproc/glimpse to 4.18.0 [wiz 2005-06-04]
