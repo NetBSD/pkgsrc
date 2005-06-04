@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10295 2005/06/04 21:50:55 adrianp Exp $
+$NetBSD: CHANGES,v 1.10296 2005/06/04 23:54:10 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2785,3 +2785,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/gcdmaster to 1.2.0nb1 [adrianp 2005-06-04]
 	Updated x11/xterm to 202 [wiz 2005-06-04]
 	Updated databases/adodb to 4.63 [adrianp 2005-06-04]
+	Updated audio/nas to 1.7b [markd 2005-06-04]
+	Updated editors/kile to 1.8.1 [markd 2005-06-04]
