@@ -1,3 +1,5 @@
+/*	NetBSD: xenio.h,v 1.3 2005/05/24 12:07:12 yamt Exp $	*/
+
 /******************************************************************************
  * privcmd.h
  * 
@@ -70,14 +72,11 @@ typedef struct privcmd_blkmsg
 #define IOCTL_PRIVCMD_HYPERCALL         \
     _IOWR('P', 0, privcmd_hypercall_t)
 
-/*
- * @cmd: IOCTL_PRIVCMD_INITDOMAIN_EVTCHN
- * @arg: n/a
- * Return: Port associated with domain-controller end of control event channel
- *         for the initial domain.
- */
-#define IOCTL_PRIVCMD_INITDOMAIN_EVTCHN \
+#if defined(_KERNEL)
+/* compat */
+#define IOCTL_PRIVCMD_INITDOMAIN_EVTCHN_OLD \
     _IO('P', 1)
+#endif /* defined(_KERNEL) */
     
 #define IOCTL_PRIVCMD_MMAP             \
     _IOW('P', 2, privcmd_mmap_t)
@@ -85,6 +84,15 @@ typedef struct privcmd_blkmsg
     _IOW('P', 3, privcmd_mmapbatch_t)
 #define IOCTL_PRIVCMD_GET_MACH2PHYS_START_MFN \
     _IOW('P', 4, unsigned long)
+
+/*
+ * @cmd: IOCTL_PRIVCMD_INITDOMAIN_EVTCHN
+ * @arg: n/a
+ * Return: Port associated with domain-controller end of control event channel
+ *         for the initial domain.
+ */
+#define IOCTL_PRIVCMD_INITDOMAIN_EVTCHN \
+    _IOR('P', 5, int)
 
 /* Interface to /dev/xenevt */
 /* EVTCHN_RESET: Clear and reinit the event buffer. Clear error condition. */
