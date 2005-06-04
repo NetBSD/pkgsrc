@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.35 2005/06/03 14:25:47 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.36 2005/06/04 10:11:24 seb Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -71,8 +71,8 @@
 # -------------8<-------------8<-------------8<-------------8<-------------
 # PKG_OPTIONS_VAR=		PKG_OPTIONS.wibble
 # PKG_SUPPORTED_OPTIONS=	wibble-foo ldap sasl
-# PKG_OPTIONAL_GROUPS=		database
-# PKG_GROUP.database=		mysql pgsql
+# PKG_OPTIONS_OPTIONAL_GROUPS=	database
+# PKG_OPTIONS_GROUP.database=	mysql pgsql
 # PKG_SUGGESTED_OPTIONS=	wibble-foo
 # PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_OPENLDAP:ldap
 # PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_SASL2:sasl
