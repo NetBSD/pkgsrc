@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2005/06/03 13:19:22 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2005/06/04 09:31:10 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMIKMOD_BUILDLINK3_MK:=	${LIBMIKMOD_BUILDLINK3_MK}+
@@ -25,11 +25,10 @@ MAKEFLAGS+=	PKG_BUILD_OPTIONS.libmikmod=${PKG_BUILD_OPTIONS.libmikmod:Q}
 .endif
 MAKEVARS+=	PKG_BUILD_OPTIONS.libmikmod
 
-# On NetBSD, libmikmod dynamically loads esound, so there is
-# no library dependency
-# XXX: add cases for other OPSYS that do that!
+# On some platforms, libmikmod dynamically loads esound,
+# so there is no library dependency
 .if !empty(PKG_BUILD_OPTIONS.libmikmod:Mesound) && \
-  empty(OPSYS:MNetBSD)
+  empty(OPSYS:MNetBSD) && empty(OPSYS:MLinux)
 .  include "../../audio/esound/buildlink3.mk"
 .endif
 
