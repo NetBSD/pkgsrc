@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10286 2005/06/03 20:09:15 wiz Exp $
+$NetBSD: CHANGES,v 1.10287 2005/06/04 00:37:55 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2775,3 +2775,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated multimedia/libdv to 0.104nb1 [jmmv 2005-06-03]
 	Added multimedia/libdv-tools version 0.104 [jmmv 2005-06-03]
 	Added comms/conserver8 version 8.1.11 [wiz 2005-06-03]
+	Updated security/systrace-policies to 1.1nb1 [kristerw 2005-06-04]
