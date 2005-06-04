@@ -1,8 +1,18 @@
-$NetBSD: patch-aa,v 1.3 1998/12/03 12:39:45 frueauf Exp $
+$NetBSD: patch-aa,v 1.4 2005/06/04 10:44:28 wiz Exp $
 
---- main.c.orig	Mon Apr 28 00:14:04 1997
-+++ main.c	Sun Nov 29 03:34:48 1998
-@@ -1059,7 +1059,7 @@
+--- main.c.orig	2004-06-08 19:07:33.000000000 +0200
++++ main.c
+@@ -27,7 +27,9 @@
+ 
+ /* Borrowed from C-Lib */
+ extern char **environ;
++#ifndef errno
+ extern int errno;
++#endif
+ 
+ #if	CLIENTSERVER
+ #include "communicate.c"
+@@ -1080,7 +1082,7 @@ char *argv[];
  		clargc = 0;
  		clargv = NULL;
  		cli_len = sizeof(cli_addr);
