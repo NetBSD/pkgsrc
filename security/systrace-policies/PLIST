@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/24 17:11:45 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/04 00:35:28 kristerw Exp $
 share/examples/systrace-policies/00FILELIST.txt
 share/examples/systrace-policies/00README-X11.txt
 share/examples/systrace-policies/00README.txt
@@ -121,9 +121,9 @@ share/examples/systrace-policies/usr_bin_zgrep
 share/examples/systrace-policies/usr_bin_zmore
 share/examples/systrace-policies/usr_games_caesar
 share/examples/systrace-policies/usr_games_fortune
-share/examples/systrace-policies/usr_lib_gcc_lib_${MACHINE_ARCH}_unknown_openbsd3_1_2_95_3_cc1
-share/examples/systrace-policies/usr_lib_gcc_lib_${MACHINE_ARCH}_unknown_openbsd3_1_2_95_3_collect2
-share/examples/systrace-policies/usr_lib_gcc_lib_${MACHINE_ARCH}_unknown_openbsd3_1_2_95_3_cpp0
+share/examples/systrace-policies/usr_lib_gcc_lib_i386_unknown_openbsd3_1_2_95_3_cc1
+share/examples/systrace-policies/usr_lib_gcc_lib_i386_unknown_openbsd3_1_2_95_3_collect2
+share/examples/systrace-policies/usr_lib_gcc_lib_i386_unknown_openbsd3_1_2_95_3_cpp0
 share/examples/systrace-policies/usr_libexec_cpp
 share/examples/systrace-policies/usr_libexec_ftpd
 share/examples/systrace-policies/usr_local_AbiSuite_bin_AbiWord_d
