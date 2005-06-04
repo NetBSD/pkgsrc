@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/06/01 18:03:22 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2005/06/04 22:05:56 jmmv Exp $
 #
 
 DISTNAME=		nautilus-2.10.1
@@ -25,6 +25,7 @@ GCONF2_SCHEMAS=		apps_nautilus_preferences.schemas
 BUILDLINK_DEPENDS.eel2+=	eel2>=2.10.1
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
+BUILDLINK_DEPENDS.startup-notification+=	startup-notification>=0.8
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
