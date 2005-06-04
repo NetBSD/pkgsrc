@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.2 2005/05/31 18:53:32 jmmv Exp $
+# $NetBSD: dirs.mk,v 1.3 2005/06/04 11:20:23 jmmv Exp $
 #
 # This file is intended to be included by mk/dirs.mk, not directly by packages.
 #
@@ -21,7 +21,7 @@ GNOME2_DIRS+=		share/gnome/wm-properties
 DEPENDS+=		gnome2-dirs>=${_USE_GNOME2_DIRS}:../../misc/gnome2-dirs
 
 .  for dir in ${GNOME_DIRS} ${GNOME2_DIRS}
-PRINT_PLIST_AWK+=	/^@exec $${MKDIR} %D/${dir:S|/|\\/|g}$$/ { next; }
+PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/${dir:S|/|\\/|g}$$/ { next; }
 PRINT_PLIST_AWK+=	/^@dirrm ${dir:S|/|\\/|g}$$/ \
 				{ print "@comment in gnome2-dirs: " $$0; next; }
 .  endfor
