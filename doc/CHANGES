@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10291 2005/06/04 11:19:30 wiz Exp $
+$NetBSD: CHANGES,v 1.10292 2005/06/04 11:34:30 yamt Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2781,3 +2781,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Moved graphics/swfdec-gtk2 to multimedia/swfdec-gtk2 [jmmv 2005-06-04]
 	Updated textproc/glimpse to 4.18.0 [wiz 2005-06-04]
 	Added games/liquidwar version 5.6.2 [wiz 2005-06-04]
+	Updated sysutils/xentools20 to 2.0.6nb1 [yamt 2005-06-04]
