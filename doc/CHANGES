@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10304 2005/06/05 18:09:27 tv Exp $
+$NetBSD: CHANGES,v 1.10305 2005/06/05 22:54:56 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2794,5 +2794,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/squid to 2.5.10 [taca 2005-06-05]
 	Updated graphics/MesaLib to 6.2.1nb1 [minskim 2005-06-05]
 	Updated devel/libtool-base to 1.5.18nb3 [2005-06-05]
-	Updated net/dtcp to 20050521 [hamajima 2005-06-06]
-	Updated net/dtcpclient to 20050521 [hamajima 2005-06-06]
+	Updated net/dtcp to 20050521 [hamajima 2005-06-05]
+	Updated net/dtcpclient to 20050521 [hamajima 2005-06-05]
+	Updated net/kftpgrabber to 0.6.0 [markd 2005-06-05]
+	Updated mail/mimedefang to 2.52 [markd 2005-06-05]
+	Added misc/kchm version 0.6.5 [markd 2005-06-05]
