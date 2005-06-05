@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2005/06/01 18:02:41 jlam Exp $
+# $NetBSD: builtin.mk,v 1.11 2005/06/05 09:25:37 jlam Exp $
 
 BUILTIN_PKG:=	iconv
 
@@ -74,8 +74,8 @@ USE_BUILTIN.iconv!=							\
 .        endif
 .      endfor
 .    endif
-.    if !defined(_BLNK_REPLACE.iconv)
-_BLNK_REPLACE.iconv=	no
+.    if !defined(_BLTN_REPLACE.iconv)
+_BLTN_REPLACE.iconv=	no
 # XXX
 # XXX By default, assume that the native iconv implementation is good
 # XXX enough to replace GNU libiconv if it is part of glibc (the GNU C
@@ -83,7 +83,7 @@ _BLNK_REPLACE.iconv=	no
 # XXX
 .      if exists(/usr/include/iconv.h)
 H_ICONV=	/usr/include/iconv.h
-_BLNK_REPLACE.iconv!=							\
+_BLTN_REPLACE.iconv!=							\
 	if ${GREP} -q "This file is part of the GNU C Library" ${H_ICONV}; then \
 		${ECHO} yes;						\
 	else								\
@@ -96,11 +96,11 @@ _BLNK_REPLACE.iconv!=							\
 # XXX
 .      if (${OPSYS} == "NetBSD") && exists(/usr/include/iconv.h)
 H_ICONV=	/usr/include/iconv.h
-_BLNK_REPLACE.iconv=	yes
+_BLTN_REPLACE.iconv=	yes
 .      endif
 .    endif
-MAKEVARS+=	_BLNK_REPLACE.iconv
-.    if !empty(_BLNK_REPLACE.iconv:M[yY][eE][sS])
+MAKEVARS+=	_BLTN_REPLACE.iconv
+.    if !empty(_BLTN_REPLACE.iconv:M[yY][eE][sS])
 USE_BUILTIN.iconv=	yes
 .    endif
 #
@@ -145,16 +145,16 @@ CHECK_BUILTIN.iconv?=	no
 .if !empty(CHECK_BUILTIN.iconv:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.iconv:M[nN][oO])
-_BLNK_LIBICONV=		-liconv
+_BLTN_LIBICONV=		-liconv
 .  else
 .    if !empty(BUILTIN_LIB_FOUND.iconv:M[yY][eE][sS])
-_BLNK_LIBICONV=		-liconv
+_BLTN_LIBICONV=		-liconv
 .    else
-_BLNK_LIBICONV=		# empty
+_BLTN_LIBICONV=		# empty
 BUILDLINK_TRANSFORM+=	rm:-liconv
 .    endif
 .  endif
-BUILDLINK_LDADD.iconv?=	${_BLNK_LIBICONV}
+BUILDLINK_LDADD.iconv?=	${_BLTN_LIBICONV}
 
 .  if defined(GNU_CONFIGURE)
 .    if !empty(USE_BUILTIN.iconv:M[nN][oO])
