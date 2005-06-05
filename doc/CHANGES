@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10298 2005/06/05 09:34:08 jmmv Exp $
+$NetBSD: CHANGES,v 1.10299 2005/06/05 13:14:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2789,3 +2789,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated editors/kile to 1.8.1 [markd 2005-06-04]
 	Updated math/mathomatic to 12.4.0 [minskim 2005-06-05]
 	Updated editors/vim-share to 6.3.074nb1 [jmmv 2005-06-05]
+	Updated net/samba to 3.0.14a [taca 2005-06-05]
