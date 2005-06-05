@@ -1,0 +1,3 @@
+Chm is a new chm viewer for KDE. It consists of kio_chm,
+corresponding kpart(so you can view chm files in konqueror)
+and a small viewer on top of this.
