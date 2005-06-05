@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:51 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/06/05 22:19:41 markd Exp $
 
-SHA1 (kftpgrabber-0.5.0.tar.bz2) = 6f4fea924487119f3a44f08ce99edc563723792b
-RMD160 (kftpgrabber-0.5.0.tar.bz2) = ab139d440a1ac2b9cfb05d079f60e95dcaf6ce26
-Size (kftpgrabber-0.5.0.tar.bz2) = 1075867 bytes
-SHA1 (patch-aa) = 25984104fd47f53f6ba66fd4e80a69311b29bcbe
+SHA1 (kftpgrabber-0.6.0.tar.bz2) = c6d4819c6dcc3271ef27f24aa3e086e64fb77010
+RMD160 (kftpgrabber-0.6.0.tar.bz2) = d036f000dcfe7d189384c850ff8be3d91eb82669
+Size (kftpgrabber-0.6.0.tar.bz2) = 1127926 bytes
+SHA1 (patch-aa) = 243ed3196298121553039d1c827f7042f69eb033

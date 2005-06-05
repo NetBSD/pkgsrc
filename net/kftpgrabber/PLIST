@@ -1,31 +1,40 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/09 13:06:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/05 22:19:41 markd Exp $
 bin/kftpgrabber
 include/kftpgrabber/kftpbookmarkimportplugin.h
 lib/kde3/kftpimportplugin_gftp.la
+lib/kde3/kftpimportplugin_ncftp.la
 lib/libkftpinterfaces.la
 share/applications/kde/kftpgrabber.desktop
-share/doc/kde/HTML/en/kftpgrabber/common
-share/doc/kde/HTML/en/kftpgrabber/index.cache.bz2
-share/doc/kde/HTML/en/kftpgrabber/index.docbook
 share/kde/apps/kftpgrabber/kftpgrabber-bi-wizard.png
 share/kde/apps/kftpgrabber/kftpgrabber-logo.png
 share/kde/apps/kftpgrabber/kftpgrabberui.rc
 share/kde/icons/hicolor/16x16/apps/kftpgrabber.png
+share/kde/icons/hicolor/22x22/apps/kftpgrabber.png
 share/kde/icons/hicolor/32x32/apps/kftpgrabber.png
+share/kde/icons/hicolor/64x64/apps/kftpgrabber.png
 share/kde/icons/hicolor/48x48/apps/kftpgrabber.png
 share/kde/services/kftpimportplugin_gftp.desktop
+share/kde/services/kftpimportplugin_ncftp.desktop
 share/kde/servicetypes/kftpbookmarkimportplugin.desktop
+${PKGLOCALEDIR}/locale/br/LC_MESSAGES/kftpgrabber.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kftpgrabber.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kftpgrabber.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/kftpgrabber.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kftpgrabber.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kftpgrabber.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/kftpgrabber.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kftpgrabber.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kftpgrabber.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kftpgrabber.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/kftpgrabber
 @comment in kde: @dirrm share/kde/apps
-@dirrm share/doc/kde/HTML/en/kftpgrabber
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in kde: @dirrm share/applications/kde
 @comment in kde: @dirrm lib/kde3
