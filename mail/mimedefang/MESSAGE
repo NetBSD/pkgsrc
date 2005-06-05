@@ -1,5 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/07/18 06:11:14 markd Exp $
+$NetBSD: MESSAGE,v 1.2 2005/06/05 22:31:34 markd Exp $
+
+From version 2.52 mimedefang.pl doesn't detect and load Perl modules until
+the detect_and_load_perl_modules() function is called.
+You *MUST* call detect_and_load_perl_modules() inside your filter before
+you can rely on the %Features hash being set correctly, and before you can
+rely on SpamAssassin being loaded!!!
 
 In version 2.44 the location of the sa-mimedefang.cf file moved from
 ${PKG_SYSCONFDIR}/spamassassin/sa-mimedefang.cf to 
