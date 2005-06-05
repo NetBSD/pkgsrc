@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.2.2 2005/06/05 18:51:34 salo Exp $
+
+--- nametoaddr.c.orig	2003-11-20 03:13:48.000000000 +0900
++++ nametoaddr.c
+@@ -390,7 +390,7 @@ pcap_ether_hostton(const char *name)
+  * compile on one of 3.x or 4.x).
+  */
+ #if !defined(sgi) && !defined(__NetBSD__) && !defined(__FreeBSD__) && \
+-       !defined(_UNICOSMP)
++       !defined(_UNICOSMP) && !defined(__APPLE__)
+ extern int ether_hostton(char *, struct ether_addr *);
+ #endif
+ 
