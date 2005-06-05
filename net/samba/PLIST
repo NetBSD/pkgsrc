@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2005/05/03 15:47:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2005/06/05 13:13:05 taca Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -207,6 +207,7 @@ share/samba/swat/help/Samba-Guide/index.html
 share/samba/swat/help/Samba-Guide/ix01.html
 share/samba/swat/help/Samba-Guide/kerberos.html
 share/samba/swat/help/Samba-Guide/migration.html
+share/samba/swat/help/Samba-Guide/nw4migration.html
 share/samba/swat/help/Samba-Guide/pr01.html
 share/samba/swat/help/Samba-Guide/pr02.html
 share/samba/swat/help/Samba-Guide/pr03.html
@@ -304,6 +305,7 @@ share/samba/swat/help/Samba-HOWTO-Collection/install.html
 share/samba/swat/help/Samba-HOWTO-Collection/integrate-ms-networks.html
 share/samba/swat/help/Samba-HOWTO-Collection/introduction.html
 share/samba/swat/help/Samba-HOWTO-Collection/ix01.html
+share/samba/swat/help/Samba-HOWTO-Collection/largefile.html
 share/samba/swat/help/Samba-HOWTO-Collection/locking.html
 share/samba/swat/help/Samba-HOWTO-Collection/migration.html
 share/samba/swat/help/Samba-HOWTO-Collection/msdfs.html
@@ -315,6 +317,7 @@ share/samba/swat/help/Samba-HOWTO-Collection/pr02.html
 share/samba/swat/help/Samba-HOWTO-Collection/pr03.html
 share/samba/swat/help/Samba-HOWTO-Collection/printing.html
 share/samba/swat/help/Samba-HOWTO-Collection/problems.html
+share/samba/swat/help/Samba-HOWTO-Collection/rights.html
 share/samba/swat/help/Samba-HOWTO-Collection/samba-bdc.html
 share/samba/swat/help/Samba-HOWTO-Collection/samba-pdc.html
 share/samba/swat/help/Samba-HOWTO-Collection/securing-samba.html
@@ -565,14 +568,10 @@ share/samba/swat/using_samba/toc.html
 @dirrm share/samba/swat/lang
 @dirrm share/samba/swat/include
 @dirrm share/samba/swat/images
-@exec ${MKDIR} %D/share/samba/swat/help/images
-@dirrm share/samba/swat/help/images
 @dirrm share/samba/swat/help/Samba-HOWTO-Collection/images
 @dirrm share/samba/swat/help/Samba-HOWTO-Collection
 @dirrm share/samba/swat/help/Samba-Guide/images
 @dirrm share/samba/swat/help/Samba-Guide
-@exec ${MKDIR} %D/share/samba/swat/help/Samba-Developers-Guide/images
-@dirrm share/samba/swat/help/Samba-Developers-Guide/images
 @dirrm share/samba/swat/help/Samba-Developers-Guide
 @dirrm share/samba/swat/help
 @dirrm share/samba/swat
