@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2005/06/01 18:02:44 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2005/06/05 09:25:37 jlam Exp $
 
 BUILTIN_PKG:=	getopt
 
@@ -55,11 +55,11 @@ CHECK_BUILTIN.getopt?=	no
 .if !empty(CHECK_BUILTIN.getopt:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.getopt:M[nN][oO])
-_BLNK_LIBGETOPT=	-lgetopt
+_BLTN_LIBGETOPT=	-lgetopt
 .  else
-_BLNK_LIBGETOPT=	# empty
+_BLTN_LIBGETOPT=	# empty
 .  endif
-BUILDLINK_LDADD.getopt?=	${_BLNK_LIBGETOPT}
+BUILDLINK_LDADD.getopt?=	${_BLTN_LIBGETOPT}
 
 CONFIGURE_ENV+=		LIBGETOPT=${BUILDLINK_LDADD.getopt:Q}
 MAKE_ENV+=		LIBGETOPT=${BUILDLINK_LDADD.getopt:Q}
