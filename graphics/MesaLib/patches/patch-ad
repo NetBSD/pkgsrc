@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2004/10/26 13:55:37 adam Exp $
+$NetBSD: patch-ad,v 1.6 2005/06/05 15:39:06 minskim Exp $
 
---- src/mesa/Makefile.orig	2004-08-16 17:11:10.000000000 +0000
+--- src/mesa/Makefile.orig	2004-10-04 09:44:50.000000000 -0500
 +++ src/mesa/Makefile
 @@ -12,10 +12,10 @@ GL_TINY = 0$(MESA_MAJOR)0$(MESA_MINOR)0$
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ad,v 1.5 2004/10/26 13:55:37 adam Exp $
  
  
  # Figure out what to make here
-@@ -112,22 +112,20 @@ subdirs:
+@@ -112,22 +112,23 @@ subdirs:
  
  # Make the GL library
  $(LIB_DIR)/$(GL_LIB_NAME): $(STAND_ALONE_OBJECTS)
@@ -24,7 +24,8 @@ $NetBSD: patch-ad,v 1.5 2004/10/26 13:55:37 adam Exp $
 -		$(MKLIB_OPTIONS) $(GL_LIB_DEPS) $(STAND_ALONE_OBJECTS)
 +	${LIBTOOL} --mode=link ${CC} -o ${GL_LIB_NAME:.so=.la} \
 +		${STAND_ALONE_OBJECTS:.o=.lo} \
-+		-rpath ${PREFIX}/lib -version-info ${GL_MAJOR}:${GL_MINOR}
++		-rpath ${PREFIX}/lib -version-info ${GL_MAJOR}:${GL_MINOR} \
++		-L${X11BASE}/lib ${GL_LIB_DEPS:M-l*} -R ${X11BASE}/lib
  
  # Make the OSMesa library
  $(LIB_DIR)/$(OSMESA_LIB_NAME): $(OSMESA_DRIVER_OBJECTS) $(OSMESA16_OBJECTS)
@@ -35,7 +36,8 @@ $NetBSD: patch-ad,v 1.5 2004/10/26 13:55:37 adam Exp $
 -			$(OSMESA_LIB_DEPS) $(OSMESA16_OBJECTS) ; \
 +	    ${LIBTOOL} --mode=link ${CC} -o ${OSMESA_LIB_NAME:.so=.la} \
 +		${OSMESA16_OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
-+		-version-info ${MESA_MAJOR}:${MESA_MINOR} ; \
++		-version-info ${MESA_MAJOR}:${MESA_MINOR} \
++		${OSMESA_LIB_DEPS:M-l*:S|-lGL|libGL.la|} ; \
  	else \
 -		CC=$(CC) CXX=$(CXX) $(TOP)/bin/mklib -o $(OSMESA_LIB) -major $(MESA_MAJOR) \
 -			-minor $(MESA_MINOR) -patch $(GL_TINY) \
@@ -43,7 +45,8 @@ $NetBSD: patch-ad,v 1.5 2004/10/26 13:55:37 adam Exp $
 -			$(OSMESA_LIB_DEPS) $(OSMESA_DRIVER_OBJECTS) ; \
 +	    ${LIBTOOL} --mode=link ${CC} -o ${OSMESA_LIB_NAME:.so=.la} \
 +		${OSMESA_DRIVER_OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
-+		-version-info ${MESA_MAJOR}:${MESA_MINOR} ; \
++		-version-info ${MESA_MAJOR}:${MESA_MINOR} \
++		${OSMESA_LIB_DEPS:M-l*:S|-lGL|libGL.la|} ; \
  	fi
  
  
