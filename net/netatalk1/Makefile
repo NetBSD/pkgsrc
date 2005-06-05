@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:25 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/05 23:40:56 taca Exp $
 
-DISTNAME=	netatalk-1.6.2
-PKGREVISION=	2
+DISTNAME=	netatalk-1.6.4a
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/} \
 		http://me.in-berlin.de/~jroger/netatalk/
 
-MAINTAINER=	markd@NetBSD.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/netatalk/
 COMMENT=	Netatalk appletalk file and print services
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
-USE_PERL5=	YES
+USE_TOOLS+=	gmake perl
 USE_LIBTOOL=		YES
 
 USE_PKGINSTALL=		YES
@@ -37,8 +35,10 @@ CONFIGURE_ARGS+=	--enable-netbsd \
 #CONFIGURE_ARGS+=	--with-flock-locks	# broken
 #CONFIGURE_ARGS+=	--with-bdb=${PREFIX}	# still some known issues
 
+.include "options.mk"
+
 post-patch:
-	mv ${WRKSRC}/etc/psf/etc2ps.sh ${WRKSRC}/etc/psf/etc2ps.sh.tmp
+	${MV} ${WRKSRC}/etc/psf/etc2ps.sh ${WRKSRC}/etc/psf/etc2ps.sh.tmp
 	${SED} -e "s,^\(DVIPS=\)\(/usr/local/tex\)\(/bin\),\1${PREFIX}\3," \
 		< ${WRKSRC}/etc/psf/etc2ps.sh.tmp > ${WRKSRC}/etc/psf/etc2ps.sh
 

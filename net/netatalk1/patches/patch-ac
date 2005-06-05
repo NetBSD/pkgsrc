@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 2005/06/05 23:40:56 taca Exp $
+
 The original commit message for this patch:
 
     http://mail-index.netbsd.org/source-changes/1999/09/17/0023.html
@@ -26,8 +28,6 @@ and finally, the discussion referred to in the above change:
     http://mail-index.netbsd.org/tech-net/1999/07/02/0022.html
     http://mail-index.netbsd.org/tech-net/1999/07/03/0004.html
 
-
-$NetBSD: patch-ac,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
 
 --- etc/atalkd/main.c.orig	Sat Oct  5 08:20:13 2002
 +++ etc/atalkd/main.c
