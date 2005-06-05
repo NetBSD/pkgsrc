@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/18 16:15:50 grant Exp $
+$NetBSD: MESSAGE,v 1.2.14.1 2005/06/05 18:40:05 salo Exp $
 
 In order to enable poppassd service, you should add the following line
 to your /etc/services:
@@ -9,5 +9,6 @@ to your /etc/services:
 And /etc/inetd.conf:
 
     poppass stream tcp nowait root ${PREFIX}/libexec/poppassd poppassd
+    poppass stream tcp6 nowait root ${PREFIX}/libexec/poppassd poppassd
 
 ===========================================================================
