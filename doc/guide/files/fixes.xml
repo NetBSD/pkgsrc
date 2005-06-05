@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.20 2005/06/03 16:09:11 reed Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.21 2005/06/05 23:14:33 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -730,7 +730,7 @@ pre-configure:
         <para> and for packages that need automake and autoconf: </para> 
 
 <programlisting>AUTOMAKE_REQD=  1.7.1      # if default version is not good enough
-USE_TOOLS+=	automake   # use "automake14" for autoconf-1.4
+USE_TOOLS+=	automake   # use "automake14" for automake-1.4
 ...
 
 pre-configure:
