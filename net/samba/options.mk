@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2005/05/31 11:24:32 dillo Exp $
+# $NetBSD: options.mk,v 1.7 2005/06/05 13:13:05 taca Exp $
 
 # Global and legacy options
 
@@ -78,15 +78,15 @@ PLIST_SUBST+=		SMBMOUNT="@comment "
 NSS_WINBIND.${OPSYS}?=  libnss_winbind.so
 NSS_WINS.${OPSYS}?=     libnss_wins.so
 
-NSS_WINBIND.AIX=        WINBIND       
-NSS_WINS.AIX=           # empty       
+NSS_WINBIND.AIX=        WINBIND
+NSS_WINS.AIX=           # empty
 
 NSS_WINBIND.IRIX=       libns_winbind.so
-NSS_WINS.IRIX=          libns_wins.so 
+NSS_WINS.IRIX=          libns_wins.so
 
 .if !empty(MACHINE_PLATFORM:MFreeBSD-5.*)
 NSS_WINBIND.FreeBSD=    nss_winbind.so
-NSS_WINS.FreeBSD=       nss_wins.so   
+NSS_WINS.FreeBSD=       nss_wins.so
 .endif
 
 NSS_WINBIND=            ${NSS_WINBIND.${OPSYS}}
