@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2005/06/05 09:25:37 jlam Exp $
+# $NetBSD: builtin.mk,v 1.12 2005/06/05 10:00:20 jmmv Exp $
 
 BUILTIN_PKG:=	iconv
 
@@ -91,10 +91,11 @@ _BLTN_REPLACE.iconv!=							\
 	fi
 .      endif
 # XXX
-# XXX By default, assume that on NetBSD the native iconv implementation
-# XXX (if it exists) is good enough to replace GNU libiconv.
+# XXX By default, assume that on NetBSD and DragonFly the native iconv
+# XXX implementation (if it exists) is good enough to replace GNU libiconv.
 # XXX
-.      if (${OPSYS} == "NetBSD") && exists(/usr/include/iconv.h)
+.      if (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly") && \
+          exists(/usr/include/iconv.h)
 H_ICONV=	/usr/include/iconv.h
 _BLTN_REPLACE.iconv=	yes
 .      endif
