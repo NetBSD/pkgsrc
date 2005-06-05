@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.119 2005/06/05 18:52:03 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.120 2005/06/05 20:40:59 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -277,3 +277,5 @@ Pullup ticket 540 - requested by Adrian Portelli
 security update for poppassd
 Pullup ticket 543 - requested by Robert T. Retzlaff
 portability fix for libpcap
+Pullup ticket 541 - requested by Adrian Portelli
+gcdmaster update
