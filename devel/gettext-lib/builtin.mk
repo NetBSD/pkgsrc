@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.24 2005/06/01 21:07:59 jlam Exp $
+# $NetBSD: builtin.mk,v 1.25 2005/06/05 09:25:37 jlam Exp $
 
 BUILTIN_PKG:=	gettext
 
@@ -59,15 +59,15 @@ USE_BUILTIN.gettext!=							\
 .        endif
 .      endfor
 .    endif
-.    if !defined(_BLNK_REPLACE.gettext)
-_BLNK_REPLACE.gettext=	no
+.    if !defined(_BLTN_REPLACE.gettext)
+_BLTN_REPLACE.gettext=	no
 # XXX
 # XXX By default, assume that the native gettext implementation is good
 # XXX enough to replace GNU gettext if it is part of glibc (the GNU C
 # XXX Library).
 # XXX
 .      if exists(${_BLTN_H_GETTEXT})
-_BLNK_REPLACE.gettext!=							\
+_BLTN_REPLACE.gettext!=							\
 	if ${GREP} -q "This file is part of the GNU C Library" ${_BLTN_H_GETTEXT:Q}; then \
 		${ECHO} yes;						\
 	else								\
@@ -75,8 +75,8 @@ _BLNK_REPLACE.gettext!=							\
 	fi
 .      endif
 .    endif
-MAKEVARS+=	_BLNK_REPLACE.gettext
-.    if !empty(_BLNK_REPLACE.gettext:M[yY][eE][sS])
+MAKEVARS+=	_BLTN_REPLACE.gettext
+.    if !empty(_BLTN_REPLACE.gettext:M[yY][eE][sS])
 USE_BUILTIN.gettext=	yes
 .    endif
 # XXX
@@ -121,9 +121,9 @@ CHECK_BUILTIN.gettext?=	no
 ######################################################################
 .  if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
 .    if ${BUILTIN_LIB_FOUND.intl} == "yes"
-_BLNK_LIBINTL=		-lintl
+_BLTN_LIBINTL=		-lintl
 .    else
-_BLNK_LIBINTL=		# empty
+_BLTN_LIBINTL=		# empty
 BUILDLINK_TRANSFORM+=	rm:-lintl
 .    endif
 .  endif
@@ -132,23 +132,23 @@ BUILDLINK_TRANSFORM+=	rm:-lintl
 # If we are using pkgsrc gettext implementation...
 ######################################################################
 .  if !empty(USE_BUILTIN.gettext:M[nN][oO])
-_BLNK_LIBINTL=		-lintl
+_BLTN_LIBINTL=		-lintl
 #
 # Determine if we need to include the libiconv buildlink3.mk file.
 # Since we're using the pkgsrc gettext, the only time we don't need
 # iconv is if an already-installed gettext-lib package satisfied all
 # of the gettext dependencies but is <0.11.5nb1.
 #
-_BLNK_GETTEXT_ICONV_DEPENDS=	gettext-lib>=0.11.5nb1
-.    if !defined(_BLNK_GETTEXT_NEEDS_ICONV)
-_BLNK_GETTEXT_NEEDS_ICONV?=	no
+_BLTN_GETTEXT_ICONV_DEPENDS=	gettext-lib>=0.11.5nb1
+.    if !defined(_BLTN_GETTEXT_NEEDS_ICONV)
+_BLTN_GETTEXT_NEEDS_ICONV?=	no
 .      for _dep_ in ${BUILDLINK_DEPENDS.gettext}
-.        if !empty(_BLNK_GETTEXT_NEEDS_ICONV:M[nN][oO])
-_BLNK_GETTEXT_NEEDS_ICONV!=						\
+.        if !empty(_BLTN_GETTEXT_NEEDS_ICONV:M[nN][oO])
+_BLTN_GETTEXT_NEEDS_ICONV!=						\
 	pkg=`${PKG_BEST_EXISTS} ${_dep_:Q}`;				\
 	if ${TEST} -z "$$pkg"; then					\
 		${ECHO} yes;						\
-	elif ${PKG_ADMIN} pmatch ${_BLNK_GETTEXT_ICONV_DEPENDS:Q} "$$pkg"; then \
+	elif ${PKG_ADMIN} pmatch ${_BLTN_GETTEXT_ICONV_DEPENDS:Q} "$$pkg"; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
@@ -156,20 +156,20 @@ _BLNK_GETTEXT_NEEDS_ICONV!=						\
 .        endif
 .      endfor
 .    endif
-MAKEVARS+=	_BLNK_GETTEXT_NEEDS_ICONV
+MAKEVARS+=	_BLTN_GETTEXT_NEEDS_ICONV
 
-.    if !empty(_BLNK_GETTEXT_NEEDS_ICONV:M[yY][eE][sS])
+.    if !empty(_BLTN_GETTEXT_NEEDS_ICONV:M[yY][eE][sS])
 .      for _mkfile_ in buildlink3.mk builtin.mk
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 .        sinclude "../../converters/libiconv/${_mkfile_}"
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 .      endfor
-BUILDLINK_DEPENDS.gettext+=	${_BLNK_GETTEXT_ICONV_DEPENDS}
-_BLNK_LIBINTL+=			${BUILDLINK_LDADD.iconv}
+BUILDLINK_DEPENDS.gettext+=	${_BLTN_GETTEXT_ICONV_DEPENDS}
+_BLTN_LIBINTL+=			${BUILDLINK_LDADD.iconv}
 .    endif
 .  endif
 
-BUILDLINK_LDADD.gettext?=	${_BLNK_LIBINTL}
+BUILDLINK_LDADD.gettext?=	${_BLTN_LIBINTL}
 
 # Some GNU configure scripts generated with an older and broken gettext.m4
 # fail to detect if gettext is present or not because it fails to add
