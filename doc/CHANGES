@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10296 2005/06/04 23:54:10 markd Exp $
+$NetBSD: CHANGES,v 1.10297 2005/06/05 04:57:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2787,3 +2787,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/adodb to 4.63 [adrianp 2005-06-04]
 	Updated audio/nas to 1.7b [markd 2005-06-04]
 	Updated editors/kile to 1.8.1 [markd 2005-06-04]
+	Updated math/mathomatic to 12.4.0 [minskim 2005-06-05]
