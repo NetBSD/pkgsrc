@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
+$NetBSD: patch-af,v 1.2 2005/06/05 23:40:56 taca Exp $
 
---- etc/psf/etc2ps.sh.orig	Sun Apr 27 15:00:44 2003
-+++ etc/psf/etc2ps.sh	Sun Apr 27 19:51:31 2003
+--- etc/psf/etc2ps.sh.orig	2004-10-28 07:54:53.000000000 +0900
++++ etc/psf/etc2ps.sh
 @@ -9,15 +9,12 @@
  # tag in the case.
  #
@@ -19,12 +19,19 @@ $NetBSD: patch-af,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
  case $1 in
  
  #
-@@ -39,7 +36,7 @@
+@@ -40,12 +37,9 @@ df*)
  # troff2ps is from psroff by Chris Lewis.
  #
  tf*)
 -    if [ -x "$TROFF2PS" ]; then
-+    if [ -x "/usr/bin/groff" ]; then
- 	exec $TROFF2PS $TROFF2PSARGS
-     else
- 	echo "$0: filter troff2ps uninstalled" 1>&2
+-	exec $TROFF2PS $TROFF2PSARGS
+-    else
+-	echo "$0: filter troff2ps uninstalled" 1>&2
+-	exit 2
+-    fi
++    exec $TROFF2PS $TROFF2PSARGS
++    echo "$0: filter troff2ps failed" 1>&2
++    exit 2
+     ;;
+ 
+ *)

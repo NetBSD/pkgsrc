@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2005/06/05 23:40:56 taca Exp $
+
+--- bin/afppasswd/Makefile.in.orig	2003-12-03 05:18:37.000000000 +0900
++++ bin/afppasswd/Makefile.in
+@@ -201,7 +201,7 @@ pkgconfdir = @PKGCONFDIR@
+ afppasswd_SOURCES = afppasswd.c
+ afppasswd_LDADD = $(top_builddir)/libatalk/libatalk.la @SSL_LIBS@
+ 
+-INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/sys @SSL_CFLAGS@ \
++CFLAGS = @CFLAGS@ @SSL_CFLAGS@ -I$(top_srcdir)/sys \
+ 	-D_PATH_AFPDPWFILE=\"$(pkgconfdir)/afppasswd\"
+ 
+ subdir = bin/afppasswd

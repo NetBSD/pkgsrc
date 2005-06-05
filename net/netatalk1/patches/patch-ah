@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2005/06/05 23:40:56 taca Exp $
+
+--- etc/uams/Makefile.in.orig	2003-12-03 05:19:36.000000000 +0900
++++ etc/uams/Makefile.in
+@@ -230,7 +230,7 @@ uams_dhx_pam_la_SOURCES = uams_dhx_pam.c
+ #
+ # flags
+ #
+-INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/sys @SSL_CFLAGS@
++CFLAGS = @CFLAGS@ @SSL_CFLAGS@ -I$(top_srcdir)/sys
+ 
+ uams_guest_la_CFLAGS = @CFLAGS@
+ uams_randnum_la_CFLAGS = @CFLAGS@ @SSL_CFLAGS@
