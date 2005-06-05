@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.151 2005/05/22 05:35:33 jlam Exp $
+# $NetBSD: Makefile,v 1.152 2005/06/05 14:20:25 taca Exp $
 
-DISTNAME=	squid-2.5.STABLE9
-PKGNAME=	squid-2.5.9
-PKGREVISION=	11
+DISTNAME=	squid-2.5.STABLE10
+PKGNAME=	squid-2.5.10
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -10,49 +9,7 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE9-setcookie.patch \
-		squid-2.5.STABLE9-ftp_EPLF.patch \
-		squid-2.5.STABLE9-ftp_base_href.patch \
-		squid-2.5.STABLE9-acl_error.patch \
-		squid-2.5.STABLE9-date.patch \
-		squid-2.5.STABLE9-reload_into_ims.patch \
-		squid-2.5.STABLE9-delay_access_doc.patch \
-		squid-2.5.STABLE9-config_overflow.patch \
-		squid-2.5.STABLE9-bzero.patch \
-		squid-2.5.STABLE9-pid_t.patch \
-		squid-2.5.STABLE9-ctype.patch \
-		squid-2.5.STABLE9-defer_digest_fetch.patch \
-		squid-2.5.STABLE9-dup_content_length.patch \
-		squid-2.5.STABLE9-excess_data.patch \
-		squid-2.5.STABLE9-aufs.patch \
-		squid-2.5.STABLE9-long_basic_auth.patch \
-		squid-2.5.STABLE9-CONNECT_truncated.patch \
-		squid-2.5.STABLE9-LDAP_SUN_SDK.patch \
-		squid-2.5.STABLE9-disable_hostname_checks.patch \
-		squid-2.5.STABLE9-aufs_shutdown.patch \
-		squid-2.5.STABLE9-2GB.patch \
-		squid-2.5.STABLE9-rename_cleanup.patch \
-		squid-2.5.STABLE9-cachemgr_objects.patch \
-		squid-2.5.STABLE9-extaclauth.patch \
-		squid-2.5.STABLE9-syslog.patch \
-		squid-2.5.STABLE9-errpage_user.patch \
-		squid-2.5.STABLE9-debug_newlines.patch \
-		squid-2.5.STABLE9-squid_k_nohostname.patch \
-		squid-2.5.STABLE9-config_CRLF.patch \
-		squid-2.5.STABLE9-forwardcc.patch \
-		squid-2.5.STABLE9-authinfo.patch \
-		squid-2.5.STABLE9-chroot_pidfile.patch \
-		squid-2.5.STABLE9-cachemgr_conf.patch \
-		squid-2.5.STABLE9-aufs_improvement.patch \
-		squid-2.5.STABLE9_2GB-hot_cache.patch \
-		squid-2.5.STABLE9-diskd.patch \
-		squid-2.5.STABLE9-snmp.patch \
-		squid-2.5.STABLE9-arpacl.patch \
-		squid-2.5.STABLE9-dstdomain_ip.patch \
-		squid-2.5.STABLE9-dns_query-5.patch \
-		squid-2.5.STABLE9-2GB_assert.patch \
-		squid-2.5.STABLE9-always_direct_documentation.patch
-#		squid-2.5.STABLE9-transparent_port.patch
+PATCHFILES=	squid-2.5.STABLE10-content_length.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
@@ -68,31 +25,24 @@ DATADIR=	${VARBASE}/squid
 
 # Update this time stamp pattern if any of official distfiles has changed.
 #
-DIST_STAMP=	2005042600
+DIST_STAMP=	2005060500
 
 DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
 
 # Configuration directory location which can be overwritten by the user.
 PKG_SYSCONFSUBDIR?=	squid
 
-.include "../../mk/bsd.prefs.mk"
-
-USE_PERL5=		build
 USE_PKGINSTALL=		yes
+USE_TOOLS+=		perl
+TOOLS_DEPMETHOD.perl?=	DEPENDS
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
-			--localstatedir=${DATADIR} \
-			${SQUID_CONFIGURE_ARGS}
+			--localstatedir=${DATADIR}
 
-BUILD_DEFS+=	SQUID_CONFIGURE_ARGS
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 MAKE_ENV+=	PKG_PREFIX="${PREFIX}" VARBASE="${VARBASE}"
 PLIST_SRC=	${WRKDIR}/PLIST
 RCD_SCRIPTS=	squid
-
-SQUID_USER?=	squid
-SQUID_GROUP?=	squid
-BUILD_DEFS+=	SQUID_USER SQUID_GROUP
 
 PKG_GROUPS=	${SQUID_GROUP}
 PKG_USERS=	${SQUID_USER}:${SQUID_GROUP}::Squid\\ Web-Cache\\ pseudo-user
@@ -102,33 +52,43 @@ OWN_DIRS=	${DATADIR}
 OWN_DIRS_PERMS+= ${DATADIR}/cache ${SQUID_USER} ${SQUID_GROUP} 0750 \
 		 ${DATADIR}/logs ${SQUID_USER} ${SQUID_GROUP} 0750
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--enable-arp-acl
-.endif
+.include "../../mk/bsd.prefs.mk"
 
-# Configuration options which can be overwritten by the user.
-SQUID_CONFIGURE_ARGS?=	--enable-auth=basic,digest,ntlm \
+SQUID_USER?=	squid
+SQUID_GROUP?=	squid
+BUILD_DEFS+=	SQUID_USER SQUID_GROUP
+
+CONFIGURE_ARGS+=	--enable-auth=basic,digest,ntlm \
 			--enable-cachemgr-hostname=localhost \
 			--enable-delay-pools \
 			--enable-removal-policies=lru,heap \
-			--enable-icmp \
-			--enable-ipf-transparent \
 			--enable-poll \
-			--enable-snmp \
-			--enable-ssl \
-			--with-openssl=${SSLBASE} \
+			--enable-async-io=5 \
 			--enable-underscores \
-			--enable-storeio=ufs,diskd,null \
-			--enable-basic-auth-helpers=getpwnam,winbind,SMB \
-			--enable-digest-auth-helpers=password \
-			--enable-external-acl-helpers=unix_group,ip_user,winbind_group \
-			--enable-ntlm-auth-helpers=winbind
+			--enable-storeio=${SQUID_BACKEND}
 
+#
+# generic helpers
+#
 OPTIONAL_FILES+= libexec/diskd libexec/dnsserver libexec/pinger libexec/unlinkd
-OPTIONAL_FILES+= libexec/digest_pw_auth libexec/getpwname_auth
-OPTIONAL_FILES+= libexec/ip_user_check libexec/smb_auth libexec/smb_auth.sh
-OPTIONAL_FILES+= libexec/squid_unix_group libexec/wb_auth libexec/wb_group
+#
+# basic auth helpers (except LDAP, multi-domain-NTLM and SASL)
+#
+OPTIONAL_FILES+= libexec/getpwname_auth libexec/msnt_auth libexec/ncsa_auth
+OPTIONAL_FILES+= libexec/pam_auth man/man8/pam_auth.8 libexec/smb_auth
+OPTIONAL_FILES+= libexec/yp_auth libexec/wb_auth
+#
+# digest auth helpers
+#
+OPTIONAL_FILES+= libexec/digest_pw_auth
+#
+# ntlm auth helpers (except no_check and winbind)
+#
 OPTIONAL_FILES+= libexec/wb_ntlmauth man/man8/squid_unix_group.8
+#
+# external acl helpers (except ldap_group, wbinfo_group and winbind_group)
+#
+OPTIONAL_FILES+= libexec/ip_user_check libexec/squid_unix_group
 
 pre-install:
 	@${INSTALL_DATA_DIR} ${EXAMPLESDIR}
@@ -162,6 +122,5 @@ post-install:
 	${ECHO} "@dirrm share/squid"				\
 	) >>${PLIST_SRC}
 
-.include "../../lang/perl5/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
