@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2005/06/05 10:00:20 jmmv Exp $
+# $NetBSD: builtin.mk,v 1.13 2005/06/05 22:05:00 minskim Exp $
 
 BUILTIN_PKG:=	iconv
 
@@ -47,7 +47,7 @@ BUILTIN_VERSION.iconv!=							\
 .  if ${BUILTIN_VERSION.iconv} == "1.9"
 BUILTIN_ICONV_VERSION=	1.9.2		# latest version on 1.9.x branch
 .  endif
-BUILTIN_PKG.iconv=	libiconv-${BUILTIN_VERSION.iconv}
+BUILTIN_PKG.iconv=	libiconv-${BUILTIN_ICONV_VERSION}
 .endif
 MAKEVARS+=	BUILTIN_PKG.iconv
 
