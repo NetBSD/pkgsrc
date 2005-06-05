@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10305 2005/06/05 22:54:56 markd Exp $
+$NetBSD: CHANGES,v 1.10306 2005/06/05 23:42:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2799,3 +2799,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/kftpgrabber to 0.6.0 [markd 2005-06-05]
 	Updated mail/mimedefang to 2.52 [markd 2005-06-05]
 	Added misc/kchm version 0.6.5 [markd 2005-06-05]
+	Updated net/netatalk1 to 1.6.4a [taca 2005-06-05]
