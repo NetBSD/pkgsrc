@@ -1,18 +1,13 @@
-# $NetBSD: Makefile,v 1.47 2005/01/30 04:41:16 taca Exp $
+# $NetBSD: Makefile,v 1.47.2.1 2005/06/05 18:35:25 salo Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
 PKGNAME=		qpopper-${VERSION}
-PKGREVISION=		7
 CATEGORIES=		mail
-MASTER_SITES=		ftp://ftp.qualcomm.com/eudora/servers/unix/popper/
-
-PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=		qpopper-4.0.5-ipv6-20030313.diff.gz
-PATCH_DIST_STRIP=	-p1
+MASTER_SITES=		${QPOPPER_MASTER_SITES}
 
 MAINTAINER=		mellon@fugue.com
-HOMEPAGE=		http://www.eudora.com/qpopper/
+HOMEPAGE=		${QPOPPER_HOMEPAGE}
 COMMENT=		Qualcomm's POP server for Eudora
 
 .include "Makefile.common"
