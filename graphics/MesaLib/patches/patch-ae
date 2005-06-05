@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.5 2004/10/26 13:55:37 adam Exp $
+$NetBSD: patch-ae,v 1.6 2005/06/05 15:39:06 minskim Exp $
 
---- src/glw/Makefile.orig	2004-06-25 22:51:39.000000000 +0000
+--- src/glw/Makefile.orig	2004-06-25 17:51:39.000000000 -0500
 +++ src/glw/Makefile
 @@ -17,7 +17,7 @@ OBJECTS = $(GLW_SOURCES:.c=.o)
  ##### RULES #####
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.5 2004/10/26 13:55:37 adam Exp $
  
  
  
-@@ -33,9 +33,8 @@ clean:
+@@ -33,9 +33,10 @@ clean:
  
  # Make the library
  $(LIB_DIR)/$(GLW_LIB_NAME): $(OBJECTS)
@@ -19,7 +19,9 @@ $NetBSD: patch-ae,v 1.5 2004/10/26 13:55:37 adam Exp $
 -		-patch $(TINY) $(MKLIB_OPTIONS) -install $(LIB_DIR) \
 -		$(GLW_LIB_DEPS) $(OBJECTS)
 +	${LIBTOOL} --mode=link ${CC} -o ${GLW_LIB_NAME:.so=.la} ${OBJECTS:.o=.lo} \
-+		-rpath ${PREFIX}/lib -version-info ${MAJOR}:${MINOR}
++		-rpath ${PREFIX}/lib -version-info ${MAJOR}:${MINOR} \
++		-L${X11BASE}/lib ${GLW_LIB_DEPS:M-l*:S|-lGL|libGL.la}} \
++		-R ${X11BASE}/lib
  
  
  #
