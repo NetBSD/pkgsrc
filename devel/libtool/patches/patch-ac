@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.18 2005/05/18 11:57:12 adam Exp $
+$NetBSD: patch-ac,v 1.19 2005/06/05 18:04:37 tv Exp $
 
---- ltmain.sh.orig	Mon May 16 11:39:29 2005
+--- ltmain.sh.orig	2005-05-16 05:39:29.000000000 -0400
 +++ ltmain.sh
 @@ -188,6 +188,31 @@ func_win32_libid ()
  # arg is usually of the form 'gcc ...'
@@ -85,7 +85,51 @@ $NetBSD: patch-ac,v 1.18 2005/05/18 11:57:12 adam Exp $
  	  if test "$prev" = rpath; then
  	    case "$rpath " in
  	    *" $arg "*) ;;
-@@ -3202,6 +3255,7 @@ EOF
+@@ -1523,6 +1576,12 @@ EOF
+ 	compiler_flags="$compiler_flags $arg"
+ 	compile_command="$compile_command $arg"
+ 	finalize_command="$finalize_command $arg"
++	case $host:$arg in
++	*-*-dragonfly*:-pthread)
++	  # pkgsrc hack to use -pthread in .la file for final linking
++	  deplibs="$deplibs $arg"
++	  ;;
++	esac
+ 	continue
+ 	;;
+ 
+@@ -2013,6 +2072,30 @@ EOF
+ 	  else
+ 	    compiler_flags="$compiler_flags $deplib"
+ 	  fi
++	  case $host:$deplib in
++	  *-*-dragonfly*:-pthread)
++	    # pkgsrc hack to use -pthread in .la file for final linking
++	    case $linkmode in
++	    lib)
++	      deplibs="$deplib $deplibs"
++	      test "$pass" = conv && continue
++	      newdependency_libs="$deplib $newdependency_libs"
++	      ;;
++	    prog)
++	      if test "$pass" = conv; then
++		deplibs="$deplib $deplibs"
++		continue
++	      fi
++	      if test "$pass" = scan; then
++		deplibs="$deplib $deplibs"
++	      else
++		compile_deplibs="$deplib $compile_deplibs"
++		finalize_deplibs="$deplib $finalize_deplibs"
++	      fi
++	      ;;
++	    esac
++	    ;;
++	  esac
+ 	  continue
+ 	  ;;
+ 	-l*)
+@@ -3202,6 +3285,7 @@ EOF
  	linux)
  	  major=.`expr $current - $age`
  	  versuffix="$major.$age.$revision"
@@ -93,7 +137,7 @@ $NetBSD: patch-ac,v 1.18 2005/05/18 11:57:12 adam Exp $
  	  ;;
  
  	osf)
-@@ -5462,8 +5516,16 @@ relink_command=\"$relink_command\""
+@@ -5462,8 +5546,16 @@ relink_command=\"$relink_command\""
        exit $EXIT_FAILURE
      fi
  
