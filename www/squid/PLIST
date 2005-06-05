@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.17 2005/05/02 20:34:07 reed Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/06/05 14:20:26 taca Exp $
 bin/squidclient
 libexec/cachemgr.cgi
+man/man8/cachemgr.cgi.8
 man/man8/squid.8
 sbin/RunAccel
 sbin/RunCache
