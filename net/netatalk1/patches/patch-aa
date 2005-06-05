@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
+$NetBSD: patch-aa,v 1.2 2005/06/05 23:40:56 taca Exp $
 
---- configure.orig	Sun Feb 16 12:46:32 2003
-+++ configure	Sun Feb 23 16:55:12 2003
-@@ -8084,64 +8084,6 @@
+--- configure.orig	2003-12-03 05:16:21.000000000 +0900
++++ configure
+@@ -19582,73 +19582,6 @@ _ACEOF
  fi
  
  
@@ -14,7 +14,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
 -  ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lcrypt  $LIBS"
 -cat >conftest.$ac_ext <<_ACEOF
--#line $LINENO "configure"
 -/* confdefs.h.  */
 -_ACEOF
 -cat confdefs.h >>conftest.$ac_ext
@@ -32,11 +31,20 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
 -_ACEOF
 -rm -f conftest.$ac_objext conftest$ac_exeext
 -if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
--  (eval $ac_link) 2>&5
+-  (eval $ac_link) 2>conftest.er1
 -  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); } &&
--         { ac_try='test -s conftest$ac_exeext'
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest$ac_exeext'
 -  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
 -  (eval $ac_try) 2>&5
 -  ac_status=$?
@@ -49,7 +57,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
 -
 -ac_cv_lib_crypt_main=no
 -fi
--rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+-rm -f conftest.err conftest.$ac_objext \
+-      conftest$ac_exeext conftest.$ac_ext
 -LIBS=$ac_check_lib_save_LIBS
 -fi
 -echo "$as_me:$LINENO: result: $ac_cv_lib_crypt_main" >&5
@@ -67,7 +76,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
  echo "$as_me:$LINENO: checking for main in -ld" >&5
  echo $ECHO_N "checking for main in -ld... $ECHO_C" >&6
  if test "${ac_cv_lib_d_main+set}" = set; then
-@@ -13066,13 +13008,13 @@
+@@ -25066,13 +24999,13 @@ fi;
  			savedldflags="$LDFLAGS"
  			CFLAGS="$CFLAGS -I$bdbdir"
  			LDFLAGS="-L$bdblibdir $LDFLAGS"
@@ -82,18 +91,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
 -LIBS="-ldb  $LIBS"
 +LIBS="-ldb3  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
  /* confdefs.h.  */
-@@ -13118,7 +13060,7 @@
- 
- 				bdbfound=yes
- 				BDB_CFLAGS="-I$bdbdir"
--				BDB_LIBS="-L$bdblibdir -ldb"
-+				BDB_LIBS="-L$bdblibdir -ldb3"
+ _ACEOF
+@@ -25132,7 +25065,7 @@ if test $ac_cv_lib_db_main = yes; then
+ 				if test "$bdblibdir" != "/usr/lib"; then
+ 				    BDB_LIBS="-L$bdblibdir"
+ 				fi
+-				BDB_LIBS="$BDB_LIBS -ldb"
++				BDB_LIBS="$BDB_LIBS -ldb3"
  				BDB_BIN=$bdbbindir
  				BDB_PATH="`echo $bdbdir | sed 's,include/db3$,,'`"
- 
-@@ -14552,7 +14494,62 @@
+ 				BDB_PATH="`echo $BDB_PATH | sed 's,include$,,'`"
+@@ -26702,7 +26635,71 @@ echo "${ECHO_T}no" >&6
  	fi
  
  
@@ -105,14 +114,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
 +  ac_check_lib_save_LIBS=$LIBS
 +LIBS="-lcrypt  $LIBS"
 +cat >conftest.$ac_ext <<_ACEOF
-+#line $LINENO "configure"
 +/* confdefs.h.  */
 +_ACEOF
 +cat confdefs.h >>conftest.$ac_ext
 +cat >>conftest.$ac_ext <<_ACEOF
 +/* end confdefs.h.  */
 +
-+
+ 
 +int
 +main ()
 +{
@@ -123,11 +131,20 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
 +_ACEOF
 +rm -f conftest.$ac_objext conftest$ac_exeext
 +if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
-+  (eval $ac_link) 2>&5
++  (eval $ac_link) 2>conftest.er1
 +  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
 +  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 +  (exit $ac_status); } &&
-+         { ac_try='test -s conftest$ac_exeext'
++	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest$ac_exeext'
 +  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
 +  (eval $ac_try) 2>&5
 +  ac_status=$?
@@ -140,7 +157,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
 +
 +ac_cv_lib_crypt_main=no
 +fi
-+rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
 +LIBS=$ac_check_lib_save_LIBS
 +fi
 +echo "$as_me:$LINENO: result: $ac_cv_lib_crypt_main" >&5
@@ -151,7 +169,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
 +_ACEOF
 +
 +  LIBS="-lcrypt $LIBS"
- 
++
 +fi
  
  
