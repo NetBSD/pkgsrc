@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright (C) 1994-2004 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.7 2005/05/24 12:39:00 wiz Exp $
+$NetBSD: pkgsrc.xml,v 1.8 2005/06/03 12:27:48 jmmv Exp $
 
 Abstract
 
@@ -2958,9 +2958,9 @@ libraries.
 Please take careful consideration before adjusting BUILDLINK_DEPENDS.pkg as we
 don't want to cause unneeded package deletions and rebuilds. In many cases, new
 versions of packages work just fine with older dependencies. See Section
-14.1.4, "Handling dependencies" and Chapter 10, Buildlink methodology for more
-information about dependencies on other packages, including the
-BUILDLINK_RECOMMENDED and RECOMMENDED definitions.
+14.1.4, "Handling dependencies" for more information about dependencies on
+other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
+definitions.
 
 10.3. Writing builtin.mk files
 
@@ -3198,10 +3198,10 @@ handle files outside the installation prefix:
 Configuration files are special in the sense that they are installed in their
 own specific directory, PKG_SYSCONFDIR, and need special treatment during
 installation (most of which is automated by pkginstall). The main concept you
-must bear in mind is that files marked as a configuration are automatically
+must bear in mind is that files marked as configuration files are automatically
 copied to the right place (somewhere inside PKG_SYSCONFDIR) during installation
 if and only if they didn't exist before. Similarly, they will not be removed if
-they have local modifications. This ensures that administrators never loose any
+they have local modifications. This ensures that administrators never lose any
 custom changes they may have made.
 
 11.2.1. How PKG_SYSCONFDIR is set
@@ -3210,7 +3210,7 @@ As said before, the PKG_SYSCONFDIR variable specifies where configuration files
 shall be installed. Its contents are set based upon the following variables:
 
   * PKG_SYSCONFBASE: The configuration's root directory. Defaults to ${PREFIX}/
-    etc although may be overridden by the user to point to his preferred
+    etc although it may be overridden by the user to point to his preferred
     location (e.g., /etc, /etc/pkg, etc.). Packages must not use it directly.
 
   * PKG_SYSCONFSUBDIR: A subdirectory of PKG_SYSCONFBASE under which the
@@ -3249,7 +3249,7 @@ OWN_DIRS. See Section 11.1.1, "Directory manipulation" what this means.
 11.2.2. Telling the software were configuration files are
 
 Given that pkgsrc (and users!) expect configuration files to be in a known
-place, you need to teach each package where shall it install its files. In some
+place, you need to teach each package where it shall install its files. In some
 cases you will have to patch the package Makefiles to achieve it. If you are
 lucky, though, it may be as easy as passing an extra flag to the configuration
 script; this is the case of GNU Autoconf generated files:
@@ -3264,9 +3264,9 @@ never explicit, unfortunately).
 
 As said before, pkginstall automatically handles configuration files. This
 means that the packages themselves must not touch the contents of $
-{PKG_SYSCONFDIR} directly. Bad news is that the software they build will, out
-of the box, mess with the contents of that directory. So which is the correct
-procedure to fix this issue?
+{PKG_SYSCONFDIR} directly. Bad news is that many software installation scripts
+will, out of the box, mess with the contents of that directory. So what is the
+correct procedure to fix this issue?
 
 You must teach the package (usually by manually patching it) to install any
 configuration files under the examples hierarchy, share/examples/${PKGBASE}/.
@@ -3297,14 +3297,13 @@ System startup scripts are special files because they must be installed in a
 place known by the underlying OS, usually outside the installation prefix.
 Therefore, the same rules described in Section 11.1, "Files and directories
 outside the installation prefix" apply, and the same solutions can be used.
-However, pkginstall provides a specific mechanism to handle these files, given
-that they are special.
+However, pkginstall provides a special mechanism to handle these files.
 
 In order to provide system startup scripts, the package has to:
 
  1. Store the script inside ${FILESDIR}, with the .sh suffix appended.
-    Considering the print/cups package as an example, it has the cupsd.sh in
-    its files directory.
+    Considering the print/cups package as an example, it has a cupsd.sh in its
+    files directory.
 
  2. Tell pkginstall to handle it, appending the name of the script, without its
     extension, to the RCD_SCRIPTS variable. Continuing the previous example:
@@ -3319,8 +3318,8 @@ automated fashion:
     substitutions described in the FILES_SUBST variable.
 
  2. Copy the script from the files directory to the examples hierarchy, $
-    {PREFIX}/share/examples/rc.d/. Note that the master file must be explicitly
-    registered in the PLIST.
+    {PREFIX}/share/examples/rc.d/. Note that this master file must be
+    explicitly registered in the PLIST.
 
  3. Add code to the installation scripts to copy the startup script from the
     examples hierarchy into the system-wide startup scripts directory.
@@ -3430,7 +3429,6 @@ CONFIGURE_ARGS+=      --enable-ldap=${BUILDLINK_PREFIX.openldap}
 CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
 .endif
 
-
 The first section contains the information about which build options are
 supported by the package, and any default options settings if needed.
 
@@ -3450,18 +3448,16 @@ supported by the package, and any default options settings if needed.
     PKG_DEFAULT_OPTIONS. If any of the options begin with a "-", then that
     option is always removed from the selected build options, e.g.
 
-            PKG_DEFAULT_OPTIONS=    kerberos ldap sasl
-            PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
-            WIBBLE_OPTIONS=         ${PKG_DEFAULT_OPTIONS} -sasl
-            # leads to PKG_OPTIONS = kerberos ldap
-
+    PKG_DEFAULT_OPTIONS=    kerberos ldap sasl
+    PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
+    WIBBLE_OPTIONS=         ${PKG_DEFAULT_OPTIONS} -sasl
+    # leads to PKG_OPTIONS = kerberos ldap
 
     or
 
-            PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
-            WIBBLE_OPTIONS=         kerberos -ldap ldap
-            # leads to PKG_OPTIONS = kerberos
-
+    PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
+    WIBBLE_OPTIONS=         kerberos -ldap ldap
+    # leads to PKG_OPTIONS = kerberos
 
     This variable should be set in /etc/mk.conf.
 
@@ -4128,10 +4124,19 @@ version numbers recognized by pkg_info(1).
     In addition to the above DEPENDS line, this denotes that while a package
     will build against tiff>=3.5.4, at least version 3.6.1 is recommended.
     RECOMMENDED entries will be turned into dependencies unless explicitly
-    ignored (in which case a warning will be printed). Packages that are built
-    with recommendations ignored may not be uploaded to ftp.NetBSD.org by
-    developers and should not be used across different systems that may have
-    different versions of binary packages installed.
+    ignored (in which case a warning will be printed).
+
+    To ignore these dependency recommendations and just use the required
+    DEPENDS, set IGNORE_RECOMMENDED=YES. This may make it easier and faster to
+    update packages built using pkgsrc, since older compatible dependencies can
+    continue to be used. This is useful for people who watch their rebuilds
+    very carefully; it is not very good as a general-purpose hammer. If you use
+    it, you need to be mindful of possible ABI changes, including those from
+    the underlying OS.
+
+    Packages that are built with recommendations ignored may not be uploaded to
+    ftp.NetBSD.org by developers and should not be used across different
+    systems that may have different versions of binary packages installed.
 
     For security fixes, please update the package vulnerabilities file as well
     as setting RECOMMENDED, see Section 14.1.8, "Handling packages with
@@ -4458,7 +4463,7 @@ pre-configure:
 and for packages that need automake and autoconf:
 
 AUTOMAKE_REQD=  1.7.1      # if default version is not good enough
-USE_TOOLS+=     automake   # use "automake14" for autoconf-1.4
+USE_TOOLS+=     automake   # use "automake14" for automake-1.4
 ...
 
 pre-configure:

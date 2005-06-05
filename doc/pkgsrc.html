@@ -66,8 +66,8 @@ alink="#0000FF">
         </div>
 
         <div xmlns="http://www.w3.org/TR/xhtml1/transitional">
-          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.7
-          2005/05/24 12:39:00 wiz Exp $</p>
+          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.8
+          2005/06/03 12:27:48 jmmv Exp $</p>
         </div>
 
         <div>
@@ -7578,11 +7578,8 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
             In many cases, new versions of packages work just fine
             with older dependencies. See <a href="#dependencies"
             title="14.1.4.&nbsp;Handling dependencies">Section
-            14.1.4, &#8220;Handling dependencies&#8221;</a> and
-            <a href="#buildlink" title=
-            "Chapter&nbsp;10.&nbsp;Buildlink methodology">Chapter
-            10, <i>Buildlink methodology</i></a> for more
-            information about dependencies on other packages,
+            14.1.4, &#8220;Handling dependencies&#8221;</a> for
+            more information about dependencies on other packages,
             including the <code class=
             "varname">BUILDLINK_RECOMMENDED</code> and <code class=
             "varname">RECOMMENDED</code> definitions.</p>
@@ -8122,13 +8119,13 @@ SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} 
           <code class="varname">PKG_SYSCONFDIR</code>, and need
           special treatment during installation (most of which is
           automated by pkginstall). The main concept you must bear
-          in mind is that files marked as a configuration are
+          in mind is that files marked as configuration files are
           automatically copied to the right place (somewhere inside
           <code class="varname">PKG_SYSCONFDIR</code>) during
           installation <span class="emphasis"><em>if and only
           if</em></span> they didn't exist before. Similarly, they
           will not be removed if they have local modifications.
-          This ensures that administrators never loose any custom
+          This ensures that administrators never lose any custom
           changes they may have made.</p>
 
           <div class="sect2" lang="en" xml:lang="en">
@@ -8155,9 +8152,9 @@ SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} 
                   <p><code class="varname">PKG_SYSCONFBASE</code>:
                   The configuration's root directory. Defaults to
                   <code class="filename">${PREFIX}/etc</code>
-                  although may be overridden by the user to point
-                  to his preferred location (e.g., <code class=
-                  "filename">/etc</code>, <code class=
+                  although it may be overridden by the user to
+                  point to his preferred location (e.g.,
+                  <code class="filename">/etc</code>, <code class=
                   "filename">/etc/pkg</code>, etc.). Packages must
                   not use it directly.</p>
                 </li>
@@ -8260,7 +8257,7 @@ SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} 
 
             <p>Given that pkgsrc (and users!) expect configuration
             files to be in a known place, you need to teach each
-            package where shall it install its files. In some cases
+            package where it shall install its files. In some cases
             you will have to patch the package Makefiles to achieve
             it. If you are lucky, though, it may be as easy as
             passing an extra flag to the configuration script; this
@@ -8292,10 +8289,10 @@ CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
             "strong"><strong>the packages themselves must not touch
             the contents of <code class=
             "filename">${PKG_SYSCONFDIR}</code>
-            directly</strong></span>. Bad news is that the software
-            they build will, out of the box, mess with the contents
-            of that directory. So which is the correct procedure to
-            fix this issue?</p>
+            directly</strong></span>. Bad news is that many
+            software installation scripts will, out of the box,
+            mess with the contents of that directory. So what is
+            the correct procedure to fix this issue?</p>
 
             <p>You must teach the package (usually by manually
             patching it) to install any configuration files under
@@ -8368,8 +8365,7 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
           Section 11.1, &#8220;Files and directories outside the
           installation prefix&#8221;</a> apply, and the same
           solutions can be used. However, pkginstall provides a
-          specific mechanism to handle these files, given that they
-          are special.</p>
+          special mechanism to handle these files.</p>
 
           <p>In order to provide system startup scripts, the
           package has to:</p>
@@ -8384,7 +8380,7 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/print/cups/README.html"
                 class="pkgname">print/cups</a> package as an
-                example, it has the <code class=
+                example, it has a <code class=
                 "filename">cupsd.sh</code> in its files
                 directory.</p>
               </li>
@@ -8417,7 +8413,7 @@ RCD_SCRIPTS+= cupsd
                 <p>Copy the script from the files directory to the
                 examples hierarchy, <code class=
                 "filename">${PREFIX}/share/examples/rc.d/</code>.
-                Note that the master file must be explicitly
+                Note that this master file must be explicitly
                 registered in the <code class=
                 "filename">PLIST</code>.</p>
               </li>
@@ -8649,7 +8645,6 @@ CONFIGURE_ARGS+=      --enable-ldap=${BUILDLINK_PREFIX.openldap}
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
 CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
 .endif
-      
 </pre>
 
           <p>The first section contains the information about which
@@ -8696,19 +8691,17 @@ CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
                 "quote">-</span>&#8221;, then that option is always
                 removed from the selected build options, e.g.</p>
                 <pre class="programlisting">
-        PKG_DEFAULT_OPTIONS=    kerberos ldap sasl
-        PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
-        WIBBLE_OPTIONS=         ${PKG_DEFAULT_OPTIONS} -sasl
-        # leads to PKG_OPTIONS = kerberos ldap
-          
+PKG_DEFAULT_OPTIONS=    kerberos ldap sasl
+PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
+WIBBLE_OPTIONS=         ${PKG_DEFAULT_OPTIONS} -sasl
+# leads to PKG_OPTIONS = kerberos ldap
 </pre>
 
                 <p>or</p>
                 <pre class="programlisting">
-        PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
-        WIBBLE_OPTIONS=         kerberos -ldap ldap
-        # leads to PKG_OPTIONS = kerberos
-          
+PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
+WIBBLE_OPTIONS=         kerberos -ldap ldap
+# leads to PKG_OPTIONS = kerberos
 </pre>
 
                 <p>This variable should be set in <code class=
@@ -10242,12 +10235,26 @@ RECOMMENDED+=   tiff&gt;=3.6.1:../../graphics/tiff
                   "varname">RECOMMENDED</code> entries will be
                   turned into dependencies unless explicitly
                   ignored (in which case a warning will be
-                  printed). Packages that are built with
-                  recommendations ignored may not be uploaded to
-                  ftp.NetBSD.org by developers and should not be
-                  used across different systems that may have
-                  different versions of binary packages
-                  installed.</p>
+                  printed).</p>
+
+                  <p>To ignore these dependency recommendations and
+                  just use the required <code class=
+                  "varname">DEPENDS</code>, set <code class=
+                  "varname">IGNORE_RECOMMENDED=YES</code>. This may
+                  make it easier and faster to update packages
+                  built using pkgsrc, since older compatible
+                  dependencies can continue to be used. This is
+                  useful for people who watch their rebuilds very
+                  carefully; it is not very good as a
+                  general-purpose hammer. If you use it, you need
+                  to be mindful of possible ABI changes, including
+                  those from the underlying OS.</p>
+
+                  <p>Packages that are built with recommendations
+                  ignored may not be uploaded to ftp.NetBSD.org by
+                  developers and should not be used across
+                  different systems that may have different
+                  versions of binary packages installed.</p>
 
                   <p>For security fixes, please update the package
                   vulnerabilities file as well as setting
@@ -11027,7 +11034,7 @@ pre-configure:
             autoconf:</p>
             <pre class="programlisting">
 AUTOMAKE_REQD=  1.7.1      # if default version is not good enough
-USE_TOOLS+=     automake   # use "automake14" for autoconf-1.4
+USE_TOOLS+=     automake   # use "automake14" for automake-1.4
 ...
 
 pre-configure:
