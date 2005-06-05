@@ -1,72 +1,33 @@
-$NetBSD: patch-ap,v 1.2 2005/01/30 04:41:16 taca Exp $
+$NetBSD: patch-ap,v 1.2.2.1 2005/06/05 18:35:25 salo Exp $
 
---- popper/main.c.orig	2005-01-30 13:05:52.000000000 +0900
+--- popper/main.c.orig	2005-05-28 17:29:10.000000000 +0100
 +++ popper/main.c
-@@ -226,7 +226,8 @@ main ( int argc, char *argv[] )
- #else
-     struct sockaddr_in  cli_addr;
-     struct sockaddr_in  serv_addr;
--    unsigned short      port        = SERV_TCP_PORT;
-+    unsigned short      hport        = SERV_TCP_PORT;
-+    unsigned short      port;
-     unsigned long       addr        = INADDR_ANY;
-     int                 pollfd [ 1 ];
- #endif
-@@ -236,6 +237,7 @@ main ( int argc, char *argv[] )
+@@ -246,6 +246,7 @@ main ( int argc, char *argv[] )
      fd_set              fdset_templ;
      fd_set              fdset_read;
      int                 fd_flags    = 0;
 +    FILE		*fp;
  
  
-     if ( argc >= 2 && ( strncmp ( argv[1], "-v",  2 ) == 0 ||
-@@ -256,7 +258,7 @@ main ( int argc, char *argv[] )
-      * Ensure default port & address is in network order
-      */
-     addr = htonl ( addr );
--    port = htons ( port );
-+    port = htons ( hport );
- #endif
+ #ifdef USE_PAM
+@@ -625,7 +626,10 @@ main ( int argc, char *argv[] )
+             "listening using socket fd %d", 
+             sockfd );
  
-     /*
-@@ -290,8 +292,7 @@ main ( int argc, char *argv[] )
-     {
- #ifndef INET6
-         unsigned long  a = addr;
--        unsigned short n = ntohs ( port );
--        unsigned short n = port;
-+	int	       n = hport;
-         char           b [ 25 ] = "";
- #endif
-         char          *q = b;
-@@ -349,7 +350,8 @@ main ( int argc, char *argv[] )
-         if ( a == BAD_ADDR || n == 0 || n > USHRT_MAX )
-             err_dump ( HERE, "invalid address and/or port: \"%s\"", argv[1] );
- 
--        port = htons ( n );
-+        hport = n;
-+	port = htons ( hport );
-         addr = a;
- #endif
-         
-@@ -636,7 +638,10 @@ main ( int argc, char *argv[] )
- 	TRACE ( trace_file, POP_DEBUG, HERE, "listening using socket fd %d",
- 		sockfd );
- 
--	listen ( sockfd, 5 );
+-    listen ( sockfd, 5 );
 +#ifndef SOMAXCONN
 +#define SOMAXCONN 5
 +#endif
 +	listen ( sockfd, SOMAXCONN );
  
- 	/*
- 	 * Set file descriptor to be non-blocking in case there isn't really a
-@@ -762,6 +767,16 @@ main ( int argc, char *argv[] )
+     /*
+      * Set file descriptor to be non-blocking in case there isn't really a
+@@ -655,6 +659,16 @@ main ( int argc, char *argv[] )
      signal ( SIGHUP,  VOIDSTAR hupit   );
      signal ( SIGTERM, VOIDSTAR cleanup );
  
 +#ifndef PIDFILE
-+#define	PIDFILE	"/var/run/qpopper.pid"
++#define        PIDFILE "/var/run/qpopper.pid"
 +#endif
 +    fp = fopen(PIDFILE, "w");
 +    if (fp == NULL) {

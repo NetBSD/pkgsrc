@@ -1,17 +1,16 @@
-$NetBSD: distinfo,v 1.11 2005/02/24 09:59:28 agc Exp $
+$NetBSD: distinfo,v 1.11.2.1 2005/06/05 18:35:25 salo Exp $
 
-SHA1 (qpopper4.0.5.tar.gz) = 726d40da2210bf4b82541a28971986e6a3d9e1a5
-RMD160 (qpopper4.0.5.tar.gz) = e05c1b0823c8942d791c7b48af82e278a51591d2
-Size (qpopper4.0.5.tar.gz) = 2281284 bytes
-SHA1 (qpopper-4.0.5-ipv6-20030313.diff.gz) = 31858d41e1dab90019152d957a7ea3d69fe085b0
-RMD160 (qpopper-4.0.5-ipv6-20030313.diff.gz) = b9d4329496ed427ca46c8981a2888f4471269737
-Size (qpopper-4.0.5-ipv6-20030313.diff.gz) = 60773 bytes
+SHA1 (qpopper4.0.8.tar.gz) = 161038e6088b4952eedaf85fafa9f3b10eb40a01
+RMD160 (qpopper4.0.8.tar.gz) = 4a1dc2aaa6ef1330a76dfed5330d658a45e7d1d2
+Size (qpopper4.0.8.tar.gz) = 2766902 bytes
+SHA1 (qpopper4.0.8-ipv6-20050515.diff.gz) = 3ccd51fa8fb1633c34dee19e6d50351cb649a3c1
+RMD160 (qpopper4.0.8-ipv6-20050515.diff.gz) = 0ca9a8893e31933d8bf33a3cfa4d88fde511ed5e
+Size (qpopper4.0.8-ipv6-20050515.diff.gz) = 11479 bytes
 SHA1 (patch-aa) = d1f4e56dbb8eb4b7cc250ca261435ec609f14c23
 SHA1 (patch-ab) = 67d661adce74d0662cab5b644d2e57bfd1d5e3c7
 SHA1 (patch-ae) = 1e06159f56c78e63a7960d4d9ca80535752099b2
 SHA1 (patch-ag) = 4b187ab978ead4b751290fe483f6d6a6bf959089
 SHA1 (patch-al) = 63fdc28b9c1d292d55464cda13c529ffb2a47b34
-SHA1 (patch-am) = 145c5d5ca8bdf59d5ee9cdaed0f60b2da814d033
+SHA1 (patch-am) = 4f7c1c342f22e5cd6d6ef8dd2812629016fe17df
 SHA1 (patch-an) = 43e7c20b9c3cfd978255748236efbcbaf2f929ce
-SHA1 (patch-ao) = 0edffdd0b548e2fd83d946225e32aeab0a1c99c2
-SHA1 (patch-ap) = e68fdccaea642c52dff60f5db59aecbb3084645d
+SHA1 (patch-ap) = 14ad2349ba690bbdc679a24a8b96da5681af1f18

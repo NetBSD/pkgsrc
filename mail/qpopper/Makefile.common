@@ -1,4 +1,8 @@
-# $NetBSD: Makefile.common,v 1.13 2004/12/18 03:59:30 grant Exp $
+# $NetBSD: Makefile.common,v 1.13.4.1 2005/06/05 18:35:25 salo Exp $
+
+QPOPPER_MASTER_SITES=	ftp://ftp.qualcomm.com/eudora/servers/unix/popper/ \
+			http://core.ring.gr.jp/archives/net/mail/qpopper/
+QPOPPER_HOMEPAGE=	http://www.eudora.com/products/unsupported/qpopper/
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
@@ -8,7 +12,7 @@ CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
 			--enable-log-facility=LOG_${QPOPPER_FAC} \
 			--disable-update-abort --without-gdbm
 
-VERSION=		4.0.5
+VERSION=		4.0.8
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -18,6 +22,10 @@ QPOPPER_GROUP?=		mail
 QPOPPER_FAC?=		LOCAL1
 QPOPPER_APOP_AUTH?=	${PKG_SYSCONFDIR}/apop.auth
 DB_SUFFIX?=		db
+
+PATCH_SITES=		http://www.imasy.or.jp/~ume/ipv6/
+PATCHFILES=		qpopper4.0.8-ipv6-20050515.diff.gz
+PATCH_DIST_STRIP=	-p1
 
 .if defined(QPOPPER_SPOOL_DIR)
 CONFIGURE_ARGS+=	--enable-spool-dir=${QPOPPER_SPOOL_DIR}
