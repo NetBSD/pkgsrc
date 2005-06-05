@@ -1,0 +1,31 @@
+$NetBSD: patch-at,v 1.1 2005/06/05 14:17:53 taca Exp $
+
+--- configure.orig	2005-06-02 23:09:21.000000000 +0200
++++ configure
+@@ -3991,7 +3991,7 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
+ 
+ 		;;
+-	*freebsd*|*DragonFly*)
++	*freebsd*|*dragonfly*)
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define FREEBSD 1
+@@ -21611,7 +21611,7 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
+ 
+ 			;;
+-		*netbsd* | *freebsd* | *DragonFly* )
++		*netbsd* | *freebsd* | *dragonfly* )
+ 			BLDSHARED="true"
+ 			LDSHFLAGS="-shared"
+ 			DYNEXP="-Wl,--export-dynamic"
+@@ -37195,7 +37195,7 @@ echo "${ECHO_T}no" >&6;
+ 	fi
+ 
+ 	;;
+-	*freebsd* | *DragonFly* )
++	*freebsd* | *dragonfly* )
+ 		echo "$as_me:$LINENO: checking for freebsd sendfile support" >&5
+ echo $ECHO_N "checking for freebsd sendfile support... $ECHO_C" >&6
+ if test "${samba_cv_HAVE_SENDFILE+set}" = set; then

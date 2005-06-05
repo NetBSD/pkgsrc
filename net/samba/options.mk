@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2005/06/05 13:13:05 taca Exp $
+# $NetBSD: options.mk,v 1.8 2005/06/05 14:17:53 taca Exp $
 
 # Global and legacy options
 
@@ -80,6 +80,9 @@ NSS_WINS.${OPSYS}?=     libnss_wins.so
 
 NSS_WINBIND.AIX=        WINBIND
 NSS_WINS.AIX=           # empty
+
+NSS_WINBIND.DragonFly=	# empty
+NSS_WINS.DragonFly=	# empty
 
 NSS_WINBIND.IRIX=       libns_winbind.so
 NSS_WINS.IRIX=          libns_wins.so
