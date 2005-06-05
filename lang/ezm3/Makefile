@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:09 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/05 09:47:16 jmmv Exp $
 
 DISTNAME=	ezm3-1.1
 PKGREVISION=	1
@@ -25,9 +25,9 @@ EZM3ROOT=		${PREFIX}/ezm3
 BUILDLINK_PASSTHRU_DIRS+=	${EZM3ROOT}
 
 # XXX: This may well work for some others.
-ONLY_FOR_PLATFORM=      FreeBSD-*-i386 NetBSD-*-i386 Linux-*-i386
+ONLY_FOR_PLATFORM=      FreeBSD-*-i386 NetBSD-*-i386 Linux-*-i386 DragonFly-*-i386
 
-.if ${OPSYS} == "FreeBSD"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 BOOTSTRAP=	${DISTNAME}-FreeBSD4-boot.tar.bz2
 TARGET=		FreeBSD4
 TARGETDIR=	freebsd-1
