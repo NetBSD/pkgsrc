@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.117 2005/06/02 23:36:34 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.118 2005/06/05 18:41:28 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -271,3 +271,7 @@ Pullup ticket 534 - requested by Manuel Bouyer
 dependencies update for horde3 and imp4
 Pullup ticket 535 - requested by Manuel Bouyer
 dependencies updates for horde and imp
+Pullup ticket 539 - requested by Adrian Portelli
+security update for qpopper
+Pullup ticket 540 - requested by Adrian Portelli
+security update for poppassd
