@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.142 2005/06/03 22:54:44 jlam Exp $
+# $NetBSD: Makefile,v 1.143 2005/06/05 13:13:05 taca Exp $
 
-DISTNAME=		samba-3.0.10
-PKGREVISION=		2
+DISTNAME=		samba-3.0.14a
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/old-versions/ \
 			ftp://ring.asahi-net.or.jp/pub/net/samba/old-versions/ \
@@ -110,7 +109,7 @@ post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/deluser.sh > ${WRKDIR}/deluser.sh
 
 post-install:
-	-cd ${SAMBA_LIBDIR} && ln -s libsmbclient.so libsmbclient.so.0
+	-cd ${SAMBA_LIBDIR} && ${LN} -s libsmbclient.so libsmbclient.so.0
 	for d in auth idmap pdb rpc; do					\
 		${RMDIR} ${SAMBA_LIBDIR}/$$d;				\
 	done
@@ -121,8 +120,8 @@ post-install:
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/${NSS_WINS} ${PREFIX}/lib
 .endif
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC}/../docs/registry; for file in *.reg; do		\
-		${INSTALL_DATA} $$file ${DOCDIR}/$$file;		\
+	cd ${WRKSRC}/../docs/registry; for f in *.reg; do		\
+		${INSTALL_DATA} $${f} ${DOCDIR}/$${f};			\
 	done
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/adduser.sh ${EGDIR}/adduser.sh
@@ -140,8 +139,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/pam_smbpass/README			\
 		${DOCDIR}/README.pam_smbpass
 	${INSTALL_DATA_DIR} ${EGDIR}/pam_smbpass
-	cd ${WRKSRC}/pam_smbpass/samples; for file in [a-z]*; do	\
-		${INSTALL_DATA} $${file} ${EGDIR}/pam_smbpass/$${file};	\
+	cd ${WRKSRC}/pam_smbpass/samples; for f in [a-z]*; do		\
+		${INSTALL_DATA} $${f} ${EGDIR}/pam_smbpass/$${f};	\
 	done
 .endif
 .if !empty(PKG_OPTIONS:Mcups)
