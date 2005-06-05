@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3593 2005/06/05 10:37:00 wiz Exp $
+$NetBSD: TODO,v 1.3594 2005/06/05 22:54:56 markd Exp $
 
 Suggested new packages
 ======================
@@ -673,8 +673,6 @@ Suggested package updates
 	o mhonarc-2.6.11
 	o micq-0.4.12 [pkg/29063]
 	o micq-0.5.0.3
-	o mimedefang-2.51
-	o mimedefant-2.52
 	o mini_sendmail-1.3.5
 	o minicom-2.1
 	o minivmac-2.5.0
