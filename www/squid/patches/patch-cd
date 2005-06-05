@@ -1,13 +1,65 @@
-$NetBSD: patch-cd,v 1.7 2005/05/01 23:17:49 taca Exp $
+$NetBSD: patch-cd,v 1.8 2005/06/05 14:20:27 taca Exp $
 
---- src/client_side.c.orig	2005-05-02 01:31:18.000000000 +0900
+--- src/client_side.c.orig	2005-04-21 06:46:06.000000000 +0900
 +++ src/client_side.c
-@@ -2782,7 +2782,7 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -41,6 +41,7 @@
+ #endif
+ #include <netinet/tcp.h>
+ #include <net/if.h>
++#include <netinet/ipl.h>
+ #if HAVE_IP_FIL_COMPAT_H
+ #include <ip_fil_compat.h>
+ #elif HAVE_NETINET_IP_FIL_COMPAT_H
+@@ -2589,6 +2590,9 @@ parseHttpRequest(ConnStateData * conn, m
+     static int natfd = -1;
+     static int siocgnatl_cmd = SIOCGNATL & 0xff;
+     int x;
++#if defined(IPFILTER_VERSION) && (IPFILTER_VERSION >= 4000027)
++    struct ipfobj obj;
++#endif
+ #endif
+ #if PF_TRANSPARENT
+     struct pfioc_natlook nl;
+@@ -2731,6 +2735,13 @@ parseHttpRequest(ConnStateData * conn, m
+ 	int vport;
+ 	if (vhost_mode) {
+ #if IPF_TRANSPARENT
++#if defined(IPFILTER_VERSION) && (IPFILTER_VERSION >= 4000027)
++	    obj.ipfo_rev = IPFILTER_VERSION;
++	    obj.ipfo_size = sizeof(natLookup);
++	    obj.ipfo_ptr = &natLookup;
++	    obj.ipfo_type = IPFOBJ_NATLOOKUP;
++	    obj.ipfo_offset = 0;
++#endif
+ 	    natLookup.nl_inport = http->conn->me.sin_port;
+ 	    natLookup.nl_outport = http->conn->peer.sin_port;
+ 	    natLookup.nl_inip = http->conn->me.sin_addr;
+@@ -2739,8 +2750,8 @@ parseHttpRequest(ConnStateData * conn, m
  	    if (natfd < 0) {
  		int save_errno;
  		enter_suid();
--		natfd = open(IPL_NAT, O_RDONLY, 0);
+-#ifdef IPL_NAME
+-		natfd = open(IPL_NAME, O_RDONLY, 0);
++#ifdef IPNAT_NAME
 +		natfd = open(IPNAT_NAME, O_RDONLY, 0);
- 		save_errno = errno;
- 		leave_suid();
- 		errno = save_errno;
+ #else
+ 		natfd = open(IPL_NAT, O_RDONLY, 0);
+ #endif
+@@ -2756,6 +2767,9 @@ parseHttpRequest(ConnStateData * conn, m
+ 		cbdataFree(http);
+ 		xfree(inbuf);
+ 	    } else {
++#if defined(IPFILTER_VERSION) && (IPFILTER_VERSION >= 4000027)
++		x = ioctl(natfd, SIOCGNATL, &obj);
++#else
+ 		/*
+ 		 * IP-Filter changed the type for SIOCGNATL between
+ 		 * 3.3 and 3.4.  It also changed the cmd value for
+@@ -2769,6 +2783,7 @@ parseHttpRequest(ConnStateData * conn, m
+ 		} else {
+ 		    x = ioctl(natfd, SIOCGNATL, &natLookup);
+ 		}
++#endif
+ 		if (x < 0) {
+ 		    if (errno != ESRCH) {
+ 			debug(50, 1) ("parseHttpRequest: NAT lookup failed: ioctl(SIOCGNATL)\n");
