@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10317 2005/06/06 18:39:23 minskim Exp $
+$NetBSD: CHANGES,v 1.10318 2005/06/06 18:50:44 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2811,3 +2811,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/yaz to 2.1.6 [jwise 2005-06-06]
 	Added net/openvmps version 1.3 [bouyer 2005-06-06]
 	Updated graphics/gd to 2.0.33nb1 [minskim 2005-06-06]
+	Updated pkgtools/pkg_comp to 1.21 [jmmv 2005-06-06]
