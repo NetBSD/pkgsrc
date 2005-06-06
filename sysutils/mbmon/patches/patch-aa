@@ -1,7 +1,7 @@
+$NetBSD: patch-aa,v 1.7 2005/06/06 15:52:10 hira Exp $
+
 --- Makefile.in.orig	2004-07-18 02:15:42.000000000 +0100
 +++ Makefile.in	2004-07-18 02:19:16.000000000 +0100
---- Makefile.in.orig	2004-08-13 09:04:21.000000000 +0200
-+++ Makefile.in
 @@ -26,10 +26,10 @@ LIBS=@ADDLIBS@ @LIBS@
  LIBSX=$(LIBS) @X_LIBS@ -lXt @X_PRE_LIBS@ -lX11 @X_EXTRA_LIBS@
  
