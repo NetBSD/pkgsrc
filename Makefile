@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2005/06/01 17:45:57 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2005/06/06 22:30:19 kristerw Exp $
 #
 
 # tools used by this Makefile
@@ -28,6 +28,7 @@ SUBDIR += chat
 SUBDIR += comms
 SUBDIR += converters
 SUBDIR += cross
+SUBDIR += crosspkgtools
 SUBDIR += databases
 SUBDIR += devel
 SUBDIR += editors
