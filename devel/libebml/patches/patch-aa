@@ -1,9 +1,15 @@
-$NetBSD: patch-aa,v 1.6 2005/02/17 10:52:02 salo Exp $
+$NetBSD: patch-aa,v 1.7 2005/06/06 21:11:36 salo Exp $
 
---- make/linux/Makefile.orig	2005-02-06 19:11:15.000000000 +0100
-+++ make/linux/Makefile	2005-02-16 18:40:28.000000000 +0100
-@@ -20,11 +20,11 @@
- includedir=$(prefix)/include/ebml
+--- make/linux/Makefile.orig	2005-04-19 08:56:06.000000000 +0200
++++ make/linux/Makefile	2005-06-06 23:07:55.000000000 +0200
+@@ -16,15 +16,15 @@
+ else
+ prefix=/usr/local
+ endif
+-libdir=$(prefix)/lib
+-includedir=$(prefix)/include/ebml
++libdir=$(PREFIX)/lib
++includedir=$(PREFIX)/include/ebml
  
  # Programs
 -CXX=g++
