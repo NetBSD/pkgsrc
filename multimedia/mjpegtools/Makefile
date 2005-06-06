@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:08:21 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/06 19:10:36 jmmv Exp $
 
 DISTNAME=	mjpegtools-1.6.2
 PKGREVISION=	3
@@ -37,4 +37,5 @@ INFO_FILES=		mjpeg-howto.info
 #.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
