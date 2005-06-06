@@ -1,7 +1,7 @@
+$NetBSD: patch-ac,v 1.4 2005/06/06 15:52:10 hira Exp $
+
 --- AC-TOOLS/config.sub.orig	2004-07-18 02:22:16.000000000 +0100
 +++ AC-TOOLS/config.sub	2004-07-18 02:23:09.000000000 +0100
---- AC-TOOLS/config.sub.orig	2001-10-04 03:14:27.000000000 +0200
-+++ AC-TOOLS/config.sub
 @@ -182,7 +182,8 @@ case $basic_machine in
  	      | sparc64-* | mips64-* | mipsel-* \
  	      | mips64el-* | mips64orion-* | mips64orionel-*  \
