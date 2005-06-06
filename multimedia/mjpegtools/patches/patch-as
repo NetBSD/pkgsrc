@@ -1,0 +1,17 @@
+$NetBSD: patch-as,v 1.1 2005/06/06 19:10:44 jmmv Exp $
+
+--- configure.orig	2004-02-03 22:58:37.000000000 +0000
++++ configure
+@@ -22481,9 +22481,10 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-# FreeBSD and OpenBSD have neither -lpthread nor integrated pthreads in libc.
++# DragonFly, FreeBSD and OpenBSD have neither -lpthread nor integrated
++# pthreads in libc.
+ # Instead -pthread is used to the compiler/linker to get pthreads working right.
+-if test x$OS_ARCH = xFreeBSD -o x$OS_ARCH = xOpenBSD; then
++if test x$OS_ARCH = xFreeBSD -o x$OS_ARCH = xOpenBSD -o x$OS_ARCH = xDragonFly; then
+    CFLAGS="$CFLAGS -pthread"
+    CXXFLAGS="$CXXFLAGS -pthread"
+ fi
