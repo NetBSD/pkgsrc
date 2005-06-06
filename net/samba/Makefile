@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2005/06/05 14:17:53 taca Exp $
+# $NetBSD: Makefile,v 1.145 2005/06/06 07:02:23 taca Exp $
 
 DISTNAME=		samba-3.0.14a
 PKGREVISION=		1
@@ -133,7 +133,7 @@ post-install:
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mknissmbpwdtbl.sh ${EGDIR}
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mksmbpasswd.sh ${EGDIR}
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} updatesmbpasswd.sh ${EGDIR}
-.if !empty(PKG_OPTIONS:MPAM)
+.if !empty(PKG_OPTIONS:Mpam)
 	${INSTALL_DATA_DIR} ${PAM_INSTMODULEDIR}
 	${INSTALL_LIBRARY} ${WRKSRC}/bin/pam_smbpass.so ${PAM_INSTMODULEDIR}
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/pam_winbind.so ${PAM_INSTMODULEDIR}
