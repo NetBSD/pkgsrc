@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.3 2005/06/06 15:12:07 wiz Exp $
+
+--- src/widgets.cpp.orig	2005-05-01 09:03:14.000000000 +0200
++++ src/widgets.cpp
+@@ -130,6 +130,7 @@ void setup_gtk_stuff()
+ 
+     /* figure out where our pixmaps are */
+     add_pixmap_directory(PACKAGE_DATA_DIR "/pixmaps");
++    add_pixmap_directory(PACKAGE_DATA_DIR "/pixmaps/gopchop");
+     add_pixmap_directory(PACKAGE_SOURCE_DIR "/pixmaps");
+ 
+     /* create our main window */
