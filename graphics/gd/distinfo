@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.21 2005/02/24 08:45:05 agc Exp $
+$NetBSD: distinfo,v 1.22 2005/06/06 18:38:08 minskim Exp $
 
 SHA1 (gd-2.0.33.tar.gz) = 89548efb01116a740c796a8df80de16d19856811
 RMD160 (gd-2.0.33.tar.gz) = 6c573638387bb36044f3d4d480b10229445b9a6b
 Size (gd-2.0.33.tar.gz) = 587617 bytes
+SHA1 (patch-aa) = 38f0aa7043dba517405312d4eef59347e3c0185a
+SHA1 (patch-ab) = 082f5baa2c147fb62381c21ecb3ce11a1891a2aa
