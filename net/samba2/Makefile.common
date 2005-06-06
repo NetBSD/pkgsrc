@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/06/02 09:48:43 salo Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/06/06 13:25:12 salo Exp $
 #
 # NOTE: This file is included by:
 #
@@ -17,6 +17,12 @@ COUNTRY_MIRRORS=	fi ru se us1 us2
 MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/old-versions/
 .endfor
 EXTRACT_SUFX=		.tar.gz
+
+PATCH_SITES=		${MASTER_SITE_LOCAL}
+PATCHFILES=		samba-2.2.12-CAN-2004-0882.diff.gz \
+			samba-2.2.12-CAN-2004-0930.diff.gz \
+			samba-2.2.12-CAN-2004-1154.diff.gz
+PATCH_DIST_STRIP=	-p2
 
 DISTINFO_FILE?=		${.CURDIR}/../../net/samba2/distinfo
 PATCHDIR?=		${.CURDIR}/../../net/samba2/patches
