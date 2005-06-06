@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/26 02:27:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/06 20:43:52 minskim Exp $
 
 DISTNAME=	winsteng
 PKGNAME=	adobeps-win-1.0.6
@@ -28,7 +28,9 @@ post-extract:
 	cd ${WRKSRC}; for dir in WinNT Windows; do			\
 		( cd $$dir; for file in *; do				\
 			cap=`${ECHO} $$file | ${TR} '[a-z]' '[A-Z]'`;	\
-			${MV} $$file $$cap;				\
+			if [ $$file != $$cap ]; then			\
+				${MV} $$file $$cap;			\
+			fi;						\
 		  done );						\
 	done
 
