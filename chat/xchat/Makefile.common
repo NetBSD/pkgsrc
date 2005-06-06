@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2005/06/06 11:35:39 tron Exp $
+# $NetBSD: Makefile.common,v 1.41 2005/06/06 11:43:50 tron Exp $
 #
 # Please do not merge this file into "Makefile" because it is used by
 # packages in "pkgsrc-wip".
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER?=	minskim@NetBSD.org
 HOMEPAGE=	http://www.xchat.org/
 
-DISTINFO_FILE=	${.CURDIR}/../../chat/xchat2/distinfo
+DISTINFO_FILE=	${.CURDIR}/../../chat/xchat/distinfo
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
