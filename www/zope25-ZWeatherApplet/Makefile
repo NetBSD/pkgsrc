@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:48:03 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/06 00:45:49 minskim Exp $
 
 DISTNAME=	ZWeatherApplet-1.51
 PKGREVISION=	1
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zweatherapplet/}
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.librelogiciel.com/software/
 COMMENT=	Zope Weather applet
+
+BROKEN=		Dependencies (py-METAR and zope25) require different Python versions.
 
 DEPENDS+=	${PYPKGPREFIX}-pymetar-[0-9]*:../../net/py-METAR
 
