@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2005/06/06 08:42:53 jlam Exp $
+# $NetBSD: Makefile,v 1.70 2005/06/06 09:05:25 jlam Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in buildlink3.mk to the correct version,
@@ -21,9 +21,9 @@ EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		yes
 NO_MTREE=		yes
 
-PLIST_SRC=		${WRKDIR}/.PLIST_SRC
-PLIST_SRC.dirs=		${PLIST_SRC}.dirs
-PLIST_SRC.files=	${PLIST_SRC}.files
+PLIST_SRC.dirs=		${WRKDIR}/.PLIST_SRC.dirs
+PLIST_SRC.files=	${WRKDIR}/.PLIST_SRC.files
+PLIST_SRC=		${.CURDIR}/PLIST ${PLIST_SRC.files} ${PLIST_SRC.dirs}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -54,14 +54,11 @@ CREATE_X11LINK?=	${LN} -fs $$src $$dest
 do-build:
 	${MKDIR} ${X11_LINKS_BUILD_DIR}
 	${CHMOD} ${PKGDIRMODE} ${X11_LINKS_BUILD_DIR}
-	${RM} -f ${PLIST_SRC.dirs}
 	${FILES_LIST_CMD} | ${SED} -e "s,/[^/]*$$,," | ${SORT} -u |	\
 	while read dir; do						\
 		if [ -d ${X11BASE}/$$dir ]; then			\
 			${MKDIR} ${X11_LINKS_BUILD_DIR}/$$dir;		\
 			${CHMOD} ${PKGDIRMODE} ${X11_LINKS_BUILD_DIR}/$$dir; \
-			${ECHO} "@dirrm ${X11_LINKS_SUBDIR}/$$dir"	\
-				>> ${PLIST_SRC.dirs};			\
 		fi;							\
 	done
 	${RM} -f ${PLIST_SRC.files}
@@ -75,13 +72,10 @@ do-build:
 				>> ${PLIST_SRC.files};			\
 		fi;							\
 	done
-
-post-build:
-	( ${CAT} ${PKGDIR}/PLIST;					\
-	  ${SORT} -u ${PLIST_SRC.files};				\
-	  ${SORT} -ur ${PLIST_SRC.dirs};				\
-	  ${ECHO} "@dirrm ${X11_LINKS_SUBDIR}";				\
-	) > ${PLIST_SRC}
+	${RM} -f ${PLIST_SRC.dirs}
+	{ cd ${WRKSRC}; ${FIND} ${X11_LINKS_SUBDIR} -type d -print |	\
+	  ${SORT} -ur | ${SED} -e "s|^|@dirrm |";			\
+	} > ${PLIST_SRC.dirs}
 
 do-install:
 	${INSTALL_DATA_DIR} ${X11_LINKS_DIR}
