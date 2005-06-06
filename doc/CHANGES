@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10310 2005/06/06 13:03:56 wiz Exp $
+$NetBSD: CHANGES,v 1.10311 2005/06/06 14:51:13 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2804,3 +2804,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/docbook-xml to 4.2nb9 [minskim 2005-06-06]
 	Updated chat/xchat to 2.4.3 [tron 2005-06-06]
 	Removed chat/xchat2 [tron 2005-06-06]
+	Updated archivers/file-roller to 2.10.2nb1 [hira 2005-06-06]
