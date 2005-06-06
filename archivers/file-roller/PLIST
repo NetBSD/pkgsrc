@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/03/22 16:29:09 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/06/06 14:48:05 hira Exp $
 bin/file-roller
 lib/bonobo/libfile-roller-component.la
 lib/bonobo/servers/File_Roller_Component.server
@@ -111,6 +111,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/file-roller.mo
