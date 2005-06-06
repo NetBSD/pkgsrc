@@ -1,7 +1,19 @@
-@comment $NetBSD: PLIST,v 1.13 2005/06/06 16:13:51 hira Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/06/06 17:25:57 hira Exp $
 bin/mlcc
 bin/mlclient
 bin/mlterm
+etc/mlterm/aafont
+etc/mlterm/color
+etc/mlterm/font
+etc/mlterm/key
+etc/mlterm/main
+etc/mlterm/menu
+etc/mlterm/taafont
+etc/mlterm/termcap
+etc/mlterm/tfont
+etc/mlterm/vaafont
+etc/mlterm/vfont
+etc/mlterm/xim
 lib/libkik.la
 lib/libmkf.la
 lib/mlterm/libathena.la
@@ -19,3 +31,4 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/mlconfig.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/mlconfig.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/mlconfig.mo
 @dirrm lib/mlterm
+@dirrm etc/mlterm
