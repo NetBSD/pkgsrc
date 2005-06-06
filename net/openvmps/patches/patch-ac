@@ -1,0 +1,25 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/06/06 16:07:43 bouyer Exp $
+
+--- vmpsd.c.orig	Mon Jun  6 14:20:37 2005
++++ vmpsd.c	Mon Jun  6 14:21:50 2005
+@@ -137,9 +137,19 @@
+ #ifdef HAVE_SIGACTION
+ 	{
+ 		struct sigaction action;
+-		action.sa_sigaction = handle_sighup;
+ 		sigemptyset(&action.sa_mask);
++#ifdef SA_SIGINFO
++		action.sa_sigaction = handle_sighup;
+ 		action.sa_flags = SA_SIGINFO;
++#else
++		action.sa_handler = handle_sighup;
++#ifdef SA_RESTART
++		action.sa_flags = SA_RESTART;
++#else
++		action.sa_flags = 0;
++#endif
++#endif
++
+ 		sigaction(SIGHUP, &action, NULL);
+ 	}
+ #else
