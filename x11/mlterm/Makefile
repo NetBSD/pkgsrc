@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/06/06 16:13:51 hira Exp $
+# $NetBSD: Makefile,v 1.33 2005/06/06 17:25:57 hira Exp $
 
 DISTNAME=	mlterm-2.9.2
 CATEGORIES=	x11
@@ -15,7 +15,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 USE_PKGLOCALEDIR=	yes
-PKG_SYSCONFSUBDIR=	mlterm
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,13 +22,6 @@ CONFIGURE_ARGS+=	--with-imagelib=gdk-pixbuf
 CONFIGURE_ARGS+=	--with-type-engines=xft
 CONFIGURE_ARGS+=	--without-libiconv-prefix
 CONFIGURE_ARGS+=	--without-libintl-prefix
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/${PKGLOCALEDIR}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-
-.for _f in aafont color font key main menu taafont termcap tfont vaafont \
-	vfont xim
-CONF_FILES+=		${PKG_SYSCONFDIR}/${_f}
-.endfor
 
 SUBST_CLASSES+=		link
 SUBST_MESSAGE.link=	"Fixing hardcoded paths and link options."
