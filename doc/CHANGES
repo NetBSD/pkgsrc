@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10320 2005/06/06 20:34:15 adrianp Exp $
+$NetBSD: CHANGES,v 1.10321 2005/06/06 22:57:25 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2814,3 +2814,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkg_comp to 1.21 [jmmv 2005-06-06]
 	Updated textproc/sablotron to 1.0.2 [jwise 2005-06-06]
 	Updated devel/mantis to 0.91.1nb3 [adrianp 2005-06-06]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2005Q2 branch [agc 2005-06-06]
