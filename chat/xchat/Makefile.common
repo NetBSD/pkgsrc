@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/06/03 10:13:29 tron Exp $
+# $NetBSD: Makefile.common,v 1.40 2005/06/06 11:35:39 tron Exp $
 #
 # Please do not merge this file into "Makefile" because it is used by
 # packages in "pkgsrc-wip".

@@ -1,3 +1,2 @@
-XChat is a graphical IRC client that runs on UNIX like systems. It
-uses the GTK+ toolkit for graphical abstraction.  (Use the chat/xchat2
-package for XChat version 2 using the GTK2 toolkit.)
+XChat is a graphical IRC client that runs on UNIX-like systems.
+It uses the GTK 2 library as its graphics toolkit.
