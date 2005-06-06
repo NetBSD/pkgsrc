@@ -1,0 +1,56 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/06/06 16:07:43 bouyer Exp $
+
+--- Makefile.in.orig	2005-06-06 13:30:39.000000000 +0200
++++ Makefile.in	2005-06-06 13:33:01.000000000 +0200
+@@ -52,7 +52,7 @@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = config.h
+ CONFIG_CLEAN_FILES =
+-am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(sysconfdir)"
++am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(egsysconfdir)"
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
+ PROGRAMS = $(bin_PROGRAMS)
+ am_vmpsd_OBJECTS = vmpsd-vmpsd.$(OBJEXT) vmpsd-daemon.$(OBJEXT) \
+@@ -166,6 +166,7 @@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
++egsysconfdir = @prefix@/share/examples/openvmps
+ target_alias = @target_alias@
+ vmpsd_SOURCES = vmpsd.c daemon.c data.c log.c parser.c vqp.c data.h log.h vqp.h external.c external.h
+ vmpsd_CFLAGS = -DSYSCONFDIR="\"${sysconfdir}\""
+@@ -442,20 +443,20 @@
+ 	done
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(sysconfdir)" || $(mkdir_p) "$(DESTDIR)$(sysconfdir)"
++	test -z "$(egsysconfdir)" || $(mkdir_p) "$(DESTDIR)$(egsysconfdir)"
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
+-	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
++	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(egsysconfdir)/$$f'"; \
++	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(egsysconfdir)/$$f"; \
+ 	done
+ 
+ uninstall-sysconfDATA:
+ 	@$(NORMAL_UNINSTALL)
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " rm -f '$(DESTDIR)$(sysconfdir)/$$f'"; \
+-	  rm -f "$(DESTDIR)$(sysconfdir)/$$f"; \
++	  echo " rm -f '$(DESTDIR)$(egsysconfdir)/$$f'"; \
++	  rm -f "$(DESTDIR)$(egsysconfdir)/$$f"; \
+ 	done
+ 
+ ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
+@@ -634,7 +635,7 @@
+ check: check-am
+ all-am: Makefile $(PROGRAMS) $(MANS) $(DATA) config.h
+ installdirs:
+-	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(sysconfdir)"; do \
++	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(egsysconfdir)"; do \
+ 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+ 	done
+ install: install-am
