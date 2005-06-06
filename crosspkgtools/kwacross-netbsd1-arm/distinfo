@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/06/06 22:34:08 kristerw Exp $
+
+SHA1 (kwacross-netbsd-1.6.2/kwacross-netbsd1-arm-20050605.tgz) = 3dc5a7a85dbc262b11c602ae280131cca5c8fbd1
+RMD160 (kwacross-netbsd-1.6.2/kwacross-netbsd1-arm-20050605.tgz) = 249a6eb652c2b6efa3a39fcec4b0566ad127f2b5
+Size (kwacross-netbsd-1.6.2/kwacross-netbsd1-arm-20050605.tgz) = 14213529 bytes
+SHA1 (kwacross-netbsd-1.6.2/gnusrc.tgz) = e8d5f80568115d24c989d732b88a370e8eb3d03f
+RMD160 (kwacross-netbsd-1.6.2/gnusrc.tgz) = 4ab39b84552ac87b78eafc596269c412492b785f
+Size (kwacross-netbsd-1.6.2/gnusrc.tgz) = 57687955 bytes
+SHA1 (kwacross-netbsd-1.6.2/sharesrc.tgz) = 52a5c38ced2b642e0852d78871ff3ebd24163d4e
+RMD160 (kwacross-netbsd-1.6.2/sharesrc.tgz) = 422bd8136a3521de0f5dd5b4da94289a7582c833
+Size (kwacross-netbsd-1.6.2/sharesrc.tgz) = 3690765 bytes
+SHA1 (kwacross-netbsd-1.6.2/src.tgz) = ee6d4ef31d32b975621b34d590ab4ef8018a72f6
+RMD160 (kwacross-netbsd-1.6.2/src.tgz) = 0f93f627df8eed1b7ff036b4aa8bb531efce9593
+Size (kwacross-netbsd-1.6.2/src.tgz) = 28517316 bytes
+SHA1 (kwacross-netbsd-1.6.2/syssrc.tgz) = 62560fddfd8252a025bb3ca693d2aa8ffc6acd1f
+RMD160 (kwacross-netbsd-1.6.2/syssrc.tgz) = 7676a8f9fe6b2f268170d0f88ee03c2d470170ba
+Size (kwacross-netbsd-1.6.2/syssrc.tgz) = 22986092 bytes
+SHA1 (patch-aa) = 505ff3f62f8ee12744a15c8382e36989b1de4218
+SHA1 (patch-ab) = 97b2f67cdc04e66fd55b18124fcafac6f111c403
