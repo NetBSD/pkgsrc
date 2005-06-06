@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/06/06 16:07:43 bouyer Exp $
+
+--- daemon.c.orig	2005-06-06 13:03:05.000000000 +0200
++++ daemon.c	2005-06-06 13:04:47.000000000 +0200
+@@ -44,6 +44,9 @@
+ 
+ {
+ 	register int	childpid;
++#ifdef 	VMPS_CHECK_BSD
++	int fd;
++#endif
+ 
+ #ifdef	SIGTTOU
+ 	signal(SIGTTOU, SIG_IGN);
