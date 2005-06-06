@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.24 2005/03/20 21:29:05 jmmv Exp $
+.\" $NetBSD: pkg_comp.8,v 1.25 2005/06/06 18:50:07 jmmv Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd April 2, 2004
+.Dd June 6, 2005
 .Dt PKG_COMP 8
 .Os
 .Sh NAME
@@ -198,7 +198,7 @@ distributions, that is, tgz files must reside inside
 Defaults to
 .Pa /var/pub/NetBSD .
 .It EXTRAMK
-Specifies a file that must be appended to
+Specifies a whitespace-separated list of files that must be appended to
 .Pa $DESTDIR/etc/mk.conf .
 This is useful to add special items to this configuration file.
 Defaults to nothing.
@@ -445,6 +445,11 @@ Enters the chroot environment.
 If no arguments are given,
 .Va ROOTSHELL
 is executed, otherwise whatever you typed.
+If the first argument begins with a word prefixed by
+.Li pkg_ ,
+then the
+.Ql chroot
+argument can be omitted (it is implied).
 .It removeroot
 Remove the entire chroot tree.
 You should do it with this target because it
@@ -464,7 +469,7 @@ and use
 .Sy AUTO_PACKAGES
 or pass package names through the command line.
 .Pp
-If the magic work
+If the magic word
 .Ql resume
 is passed as the unique argument to this target,
 .Nm
