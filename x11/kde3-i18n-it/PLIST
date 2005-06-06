@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/05/31 15:38:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/06/06 13:21:17 minskim Exp $
 share/doc/kde/HTML/it/KRegExpEditor/common
 share/doc/kde/HTML/it/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/it/KRegExpEditor/index.docbook
@@ -1907,9 +1907,9 @@ ${PKGLOCALEDIR}/locale/it/flag.png
 @dirrm share/kde/apps/klettres/it
 @comment in kde: @dirrm share/kde/apps/klettres
 @dirrm share/kde/apps/klatin/data/vocabs/it
-unexec ${RMDIR} %D/share/kde/apps/klatin/data/vocabs 2>/dev/null || ${TRUE}
-unexec ${RMDIR} %D/share/kde/apps/klatin/data 2>/dev/null || ${TRUE}
-unexec ${RMDIR} %D/share/kde/apps/klatin 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/apps/klatin/data/vocabs 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/apps/klatin/data 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/apps/klatin 2>/dev/null || ${TRUE}
 @dirrm share/kde/apps/khangman/data/it
 @comment in kde: @dirrm share/kde/apps/khangman/data
 @comment in kde: @dirrm share/kde/apps/katepart/syntax
