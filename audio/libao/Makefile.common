@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.20 2005/05/22 20:07:38 jlam Exp $
+# $NetBSD: Makefile.common,v 1.21 2005/06/06 01:37:13 minskim Exp $
 
 DISTNAME=	libao-0.8.6
+PKGREVISION=	1
 CATEGORIES=	audio devel
 MASTER_SITES=	http://downloads.xiph.org/releases/ao/
 
@@ -29,6 +30,8 @@ CONFIGURE_ARGS+=	ENABLE_OSS=no
 CONFIGURE_ARGS+=	ENABLE_SUN_AUDIO=no
 CONFIGURE_ARGS+=	ENABLE_MACOSX=no
 CONFIGURE_ARGS+=	ENABLE_SOLARIS=no
+
+MAKE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl}
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"

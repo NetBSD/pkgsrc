@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 2005/02/18 17:22:07 wiz Exp $
+$NetBSD: patch-ad,v 1.7 2005/06/06 01:37:13 minskim Exp $
 
 --- src/Makefile.in.orig	2005-01-11 23:12:05.000000000 +0100
 +++ src/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.6 2005/02/18 17:22:07 wiz Exp $
  lib_LTLIBRARIES = libao.la
  libao_la_SOURCES = audio_out.c config.c ao_null.c ao_wav.c ao_au.c ao_raw.c ao_aixs.c ao_private.h
 -libao_la_LDFLAGS = -version-info @LIB_CURRENT@:@LIB_REVISION@:@LIB_AGE@ -ldl
-+libao_la_LDFLAGS = -version-info @LIB_CURRENT@:@LIB_REVISION@:@LIB_AGE@
++libao_la_LDFLAGS = -version-info @LIB_CURRENT@:@LIB_REVISION@:@LIB_AGE@ ${DLLIB}
  all: all-recursive
  
  .SUFFIXES:
