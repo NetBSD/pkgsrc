@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/01/04 00:57:57 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/06 16:08:43 wiz Exp $
 #
 
 .include "../../sysutils/mbmon/Makefile.common"
@@ -7,7 +7,6 @@ PKGNAME=	mbmon-205
 PKGREVISION=	1
 
 MAINTAINER=	tech-pkg@NetBSD.org
-#HOMEPAGE=	
 COMMENT=	Motherboard monitoring utility
 
 BUILD_TARGET=	mbmon
