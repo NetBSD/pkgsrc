@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.37 2005/06/04 16:30:19 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.38 2005/06/06 13:54:51 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -42,6 +42,16 @@
 #		map options that have been renamed to their new
 #		counterparts.
 #
+#	PKG_LEGACY_OPTIONS
+#		A list of options implied by deprecated variables
+#		used.  This can be used for cases that neither
+#		PKG_OPTIONS_LEGACY_VARS nor PKG_OPTIONS_LEGACY_OPTS
+#		can handle, e. g. when PKG_OPTIONS_VAR is renamed.
+#
+#	PKG_OPTIONS_DEPRECATED_WARNINGS
+#		A list of warnings about deprecated variables or
+#		options used, and what to use instead.
+#
 #       At least one of PKG_SUPPORTED_OPTIONS, PKG_OPTIONS_OPTIONAL_GROUPS,
 #	and PKG_OPTIONS_REQUIRED_GROUPS must be defined.
 #		
@@ -77,6 +87,14 @@
 # PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_OPENLDAP:ldap
 # PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_SASL2:sasl
 # PKG_OPTIONS_LEGACY_OPTS+=	foo:wibble-foo
+#
+# # this package was previously named wibble2
+# .include "../../mk/bsd.prefs.mk"
+#
+# .if defined(PKG_OPTIONS.wibble2)
+# PKG_LEGACY_OPTIONS+=	${PKG_OPTIONS.wibble2}
+# PKG_OPTIONS_LEGACY_WARNINGS+="Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
+# .endif
 #
 # .include "../../mk/bsd.options.mk"
 #
@@ -146,7 +164,7 @@ _PKG_OPTIONS_GROUP_MAP.${_opt_}=${_grp_}
 .include "${.CURDIR}/../../mk/defaults/obsolete.mk"
 
 #
-# place options imlied by legacy variables in _PKG_LEGACY_OPTIONS
+# place options imlied by legacy variables in PKG_LEGACY_OPTIONS
 #
 .for _m_ in ${PKG_OPTIONS_LEGACY_VARS}
 _var_:=	${_m_:C/:.*//}
@@ -154,13 +172,13 @@ _opt_:=	${_m_:C/.*://}
 _popt_:=${_opt_:C/^-//}
 .  if !empty(PKG_SUPPORTED_OPTIONS:M${_popt_})
 .    if defined(${_var_})
-_DEPRECATED_WARNING:=${_DEPRECATED_WARNING} "Deprecated variable "${_var_:Q}" used, use PKG_DEFAULT_OPTIONS+="${_popt_:Q}" instead."
+PKG_OPTIONS_DEPRECATED_WARNINGS:=${PKG_OPTIONS_DEPRECATED_WARNINGS} "Deprecated variable "${_var_:Q}" used, use PKG_DEFAULT_OPTIONS+="${_popt_:Q}" instead."
 .      if empty(${_var_}:M[nN][oO])
-_PKG_LEGACY_OPTIONS:=${_PKG_LEGACY_OPTIONS} ${_opt_}
+PKG_LEGACY_OPTIONS:=${PKG_LEGACY_OPTIONS} ${_opt_}
 .      elif empty(_opt_:M-*)
-_PKG_LEGACY_OPTIONS:=${_PKG_LEGACY_OPTIONS} -${_popt_}
+PKG_LEGACY_OPTIONS:=${PKG_LEGACY_OPTIONS} -${_popt_}
 .      else
-_PKG_LEGACY_OPTIONS:=${_PKG_LEGACY_OPTIONS} ${_popt_}
+PKG_LEGACY_OPTIONS:=${PKG_LEGACY_OPTIONS} ${_popt_}
 .      endif
 .    endif
 .  endif
@@ -177,7 +195,7 @@ _old_:= ${_m_:C/:.*//}
 _new_:= ${_m_:C/.*://}
 .  if !empty(PKG_SUPPORTED_OPTIONS:M${_new_})
 _PKG_LEGACY_OPTMAP.${_old_}:=${_new_}
-_DEPRECATED_WARNING:=${_DEPRECATED_WARNING} "Deprecated option "${_old_:Q}" used, use option "${_new_:Q}" instead."
+PKG_OPTIONS_DEPRECATED_WARNINGS:=${PKG_OPTIONS_DEPRECATED_WARNINGS} "Deprecated option "${_old_:Q}" used, use option "${_new_:Q}" instead."
 .  endif
 .endfor
 .undef _old_
@@ -203,7 +221,7 @@ _OPTIONS_DEFAULT_SUPPORTED:=${_OPTIONS_DEFAULT_SUPPORTED} ${_opt_}
 #
 PKG_OPTIONS:=		# empty
 _OPTIONS_UNSUPPORTED:=	#empty
-.for _o_ in ${PKG_SUGGESTED_OPTIONS} ${_PKG_LEGACY_OPTIONS} \
+.for _o_ in ${PKG_SUGGESTED_OPTIONS} ${PKG_LEGACY_OPTIONS} \
 	${_OPTIONS_DEFAULT_SUPPORTED} ${${PKG_OPTIONS_VAR}}
 _opt_:=		${_o_}
 _popt_:=	${_o_:C/^-//}	# positive option
@@ -329,9 +347,9 @@ supported-options-message:
 .    else
 	@${ECHO} "	${PKG_OPTIONS_VAR} = ${${PKG_OPTIONS_VAR}}"
 .    endif
-.    if defined(_DEPRECATED_WARNING)
+.    if defined(PKG_OPTIONS_DEPRECATED_WARNINGS)
 	@${ECHO}
-	@for l in ${_DEPRECATED_WARNING}; \
+	@for l in ${PKG_OPTIONS_DEPRECATED_WARNINGS}; \
 	do \
 		${ECHO} "$$l"; \
 	done
