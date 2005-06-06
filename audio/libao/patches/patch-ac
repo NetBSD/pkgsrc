@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2003/12/08 14:33:47 wiz Exp $
+$NetBSD: patch-ac,v 1.6 2005/06/06 01:37:13 minskim Exp $
 
 --- src/Makefile.am.orig	Wed Jan  8 04:48:54 2003
 +++ src/Makefile.am
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.5 2003/12/08 14:33:47 wiz Exp $
  
  libao_la_SOURCES = audio_out.c config.c ao_null.c ao_wav.c ao_au.c ao_raw.c ao_aixs.c ao_private.h
 -libao_la_LDFLAGS = -version-info @LIB_CURRENT@:@LIB_REVISION@:@LIB_AGE@ -ldl
-+libao_la_LDFLAGS = -version-info @LIB_CURRENT@:@LIB_REVISION@:@LIB_AGE@
++libao_la_LDFLAGS = -version-info @LIB_CURRENT@:@LIB_REVISION@:@LIB_AGE@ ${DLLIB}
  
  
  debug:
