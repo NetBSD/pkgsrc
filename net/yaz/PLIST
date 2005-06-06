@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:50 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/06/06 15:58:26 jwise Exp $
+bin/yaz-asncomp
 bin/yaz-client
-bin/yaz-comp
 bin/yaz-config
+bin/yaz-iconv
+bin/yaz-marcdump
 bin/yaz-ztest
 bin/zoomsh
 include/yaz/backend.h
@@ -10,6 +12,7 @@ include/yaz/charneg.h
 include/yaz/comstack.h
 include/yaz/cql.h
 include/yaz/diagbib1.h
+include/yaz/diagsrw.h
 include/yaz/ill-core.h
 include/yaz/ill.h
 include/yaz/item-req.h
@@ -51,6 +54,7 @@ include/yaz/z-estask.h
 include/yaz/z-exp.h
 include/yaz/z-grs.h
 include/yaz/z-mterm2.h
+include/yaz/z-oclcui.h
 include/yaz/z-opac.h
 include/yaz/z-rrf1.h
 include/yaz/z-rrf2.h
@@ -70,14 +74,15 @@ include/yaz/zes-update0.h
 include/yaz/zgdu.h
 include/yaz/zoom.h
 lib/libyaz.la
-lib/libyazmalloc.la
 ${YAZTHREAD}lib/libyazthread.la
-man/man1/yaz-client-ssl.1
+man/man1/yaz-asncomp.1
 man/man1/yaz-client.1
-man/man1/yaz-config.1
+man/man1/yaz-iconv.1
+man/man1/yaz-marcdump.1
 man/man1/zoomsh.1
+man/man7/yaz-log.7
 man/man7/yaz.7
-man/man8/yaz-ztest-ssl.8
+man/man8/yaz-config.8
 man/man8/yaz-ztest.8
 share/aclocal/yaz.m4
 share/doc/yaz/apilayer.png
@@ -97,6 +102,7 @@ share/doc/yaz/comstack.diagnostics.html
 share/doc/yaz/comstack.html
 share/doc/yaz/comstack.introduction.html
 share/doc/yaz/comstack.server.html
+share/doc/yaz/comstack.ssl.html
 share/doc/yaz/comstack.summary.html
 share/doc/yaz/credits.html
 share/doc/yaz/future.html
@@ -119,13 +125,17 @@ share/doc/yaz/server.frontend.html
 share/doc/yaz/server.html
 share/doc/yaz/server.invocation.html
 share/doc/yaz/server.main.html
+share/doc/yaz/server.vhosts.html
 share/doc/yaz/soap.html
 share/doc/yaz/soap.http.html
 share/doc/yaz/soap.srw.html
 share/doc/yaz/soap.xml.html
 share/doc/yaz/tools.html
+share/doc/yaz/tools.log.html
+share/doc/yaz/tools.marc.html
 share/doc/yaz/tools.nmem.html
 share/doc/yaz/tools.oid.html
+share/doc/yaz/yaz.css
 share/doc/yaz/yaz.html
 share/doc/yaz/yaz.pdf
 share/doc/yaz/zoom.events.html
@@ -135,6 +145,12 @@ share/doc/yaz/zoom.query.html
 share/doc/yaz/zoom.records.html
 share/doc/yaz/zoom.resultsets.html
 share/doc/yaz/zoom.scan.html
+share/yaz/etc/MARC21slim2DC.xsl
+share/yaz/etc/MARC21slim2MODS.xsl
+share/yaz/etc/MARC21slim2RDFDC.xsl
+share/yaz/etc/MARC21slimUtils.xsl
+share/yaz/etc/maps.xml
+share/yaz/etc/pqf.properties
 share/yaz/ill/ill.tcl
 share/yaz/ill/ill9702.asn
 share/yaz/ill/item-req.asn
@@ -143,11 +159,13 @@ share/yaz/z39.50/datetime.asn
 share/yaz/z39.50/esadmin.asn
 share/yaz/z39.50/esupdate.asn
 share/yaz/z39.50/mterm2.asn
+share/yaz/z39.50/oclcui.asn
 share/yaz/z39.50/univres.asn
 share/yaz/z39.50/z.tcl
 share/yaz/z39.50/z3950v3.asn
-@dirrm share/yaz/z39.50
-@dirrm share/yaz/ill
-@dirrm share/yaz
-@dirrm share/doc/yaz
 @dirrm include/yaz
+@dirrm share/doc/yaz
+@dirrm share/yaz/etc
+@dirrm share/yaz/ill
+@dirrm share/yaz/z39.50
+@dirrm share/yaz
