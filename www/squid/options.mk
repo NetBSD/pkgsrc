@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/06/05 14:20:27 taca Exp $
+# $NetBSD: options.mk,v 1.2 2005/06/06 01:51:13 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	icmp pam-helper snmp ssl aufs
@@ -20,7 +20,8 @@ PKG_SUPPORTED_OPTIONS+=	ipf-transparent
 PKG_SUPPORTED_OPTIONS+=	pf-transparent
 .endif
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD"
+.if (${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD") && \
+	!empty(PKG_SUPPORTED_OPTIONS:Mipf-transparent)
 PKG_SUGGESTED_OPTIONS+=	ipf-transparent
 .endif
 
