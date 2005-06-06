@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3595 2005/06/06 14:33:51 wiz Exp $
+$NetBSD: TODO,v 1.3596 2005/06/06 16:11:58 jwise Exp $
 
 Suggested new packages
 ======================
@@ -1187,7 +1187,6 @@ Suggested package updates
 	o yafc-1.1
 	o yamt-0.6
 	o yasm-0.4.0
-	o yaz-2.1.2
 	o yencode-0.46
 	o yorick-1.5.15
 	o ysm-2.9.6
