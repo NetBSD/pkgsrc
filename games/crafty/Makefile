@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/11 21:45:49 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/06/06 03:59:00 minskim Exp $
 
 DISTNAME=		crafty-18.15
 CATEGORIES=		games
@@ -32,6 +32,12 @@ BUILD_TARGET=		netbsd-sparc
 CFLAGS:=		${CFLAGS:C/-O[0-9]*/-O1/}
 .elif !empty(MACHINE_PLATFORM:MNetBSD-*-*)
 BUILD_TARGET=		netbsd
+.elif !empty(MACHINE_PLATFORM:MLinux-*-i386)
+.  if ${OBJECT_FMT} == "ELF"
+BUILD_TARGET=		linux-elf
+.  else
+BUILD_TARGET=		linux
+.  endif
 .elif !empty(MACHINE_PLATFORM:MSunOS-*-*)
 BUILD_TARGET=		solaris-gcc
 .else
