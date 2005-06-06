@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10319 2005/06/06 20:15:46 jwise Exp $
+$NetBSD: CHANGES,v 1.10320 2005/06/06 20:34:15 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2813,3 +2813,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/gd to 2.0.33nb1 [minskim 2005-06-06]
 	Updated pkgtools/pkg_comp to 1.21 [jmmv 2005-06-06]
 	Updated textproc/sablotron to 1.0.2 [jwise 2005-06-06]
+	Updated devel/mantis to 0.91.1nb3 [adrianp 2005-06-06]
