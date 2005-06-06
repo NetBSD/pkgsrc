@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10308 2005/06/06 03:38:27 minskim Exp $
+$NetBSD: CHANGES,v 1.10309 2005/06/06 11:41:20 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2802,3 +2802,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/netatalk1 to 1.6.4a [taca 2005-06-05]
 	Updated audio/libao to 0.8.6nb2 [minskim 2005-06-06]
 	Updated textproc/docbook-xml to 4.2nb9 [minskim 2005-06-06]
+	Updated chat/xchat to 2.4.3 [tron 2005-06-06]
+	Removed chat/xchat2 [tron 2005-06-06]
