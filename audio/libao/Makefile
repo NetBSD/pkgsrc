@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2005/05/20 19:20:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2005/06/06 01:52:39 minskim Exp $
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 PKG_INSTALLATION_TYPES=	overwrite
 
