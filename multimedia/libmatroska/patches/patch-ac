@@ -1,9 +1,15 @@
-$NetBSD: patch-ac,v 1.5 2005/02/17 10:52:46 salo Exp $
+$NetBSD: patch-ac,v 1.6 2005/06/06 21:15:02 salo Exp $
 
---- make/linux/Makefile.orig	2005-02-06 19:12:08.000000000 +0100
-+++ make/linux/Makefile	2005-02-16 18:46:17.000000000 +0100
-@@ -20,11 +20,11 @@
- includedir=$(prefix)/include/matroska
+--- make/linux/Makefile.orig	2005-04-19 09:00:00.000000000 +0200
++++ make/linux/Makefile	2005-06-06 23:12:23.000000000 +0200
+@@ -16,15 +16,15 @@
+ else
+ prefix=/usr/local
+ endif
+-libdir=$(prefix)/lib
+-includedir=$(prefix)/include/matroska
++libdir=$(PREFIX)/lib
++includedir=$(PREFIX)/include/matroska
  
  # Programs
 -CXX=g++
