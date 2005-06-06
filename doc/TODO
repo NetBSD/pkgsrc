@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3596 2005/06/06 16:11:58 jwise Exp $
+$NetBSD: TODO,v 1.3597 2005/06/06 16:33:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1186,7 +1186,7 @@ Suggested package updates
 	o xzip-182
 	o yafc-1.1
 	o yamt-0.6
-	o yasm-0.4.0
+	o yasm-0.4.0 [pkg/30445]
 	o yencode-0.46
 	o yorick-1.5.15
 	o ysm-2.9.6
@@ -1269,7 +1269,7 @@ Suggested cleanups in pkgsrc
 	  USE_PKGLOCALEDIR=YES where appropriate (for eg. Solaris).
 	  Affects: cross/h8300-hms-binutils, cross/h8300-hms-gcc,
 	  cross/i386-netbsdpe, sysutils/apcupsd, sysutils/gnometoaster,
-	  sysutils/mtoolsfm, sysutils/xnc, x11/mlterm
+	  sysutils/mtoolsfm, sysutils/xnc
 
 	o Deprecate LTCONFIG_OVERRIDE -- replace with appropriate
 	  LIBTOOL_OVERRIDE. Affects:
