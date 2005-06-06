@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.22 2004/12/12 01:04:27 grant Exp $
+# $NetBSD: pkg_comp.sh,v 1.23 2005/06/06 18:50:07 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -555,11 +555,13 @@ EOF
     done
 
     if [ -n "$EXTRAMK" ]; then
-        if [ ! -f "$EXTRAMK" ]; then
-            err "Cannot find $EXTRAMK"
-        else
-            cat $EXTRAMK >> $file
-        fi
+        for mkfile in $EXTRAMK; do
+            if [ ! -f "$mkfile" ]; then
+                err "Cannot find $mkfile"
+            else
+                cat $mkfile >> $file
+            fi
+        done
     fi
 
     if [ "$USE_AUDIT_PACKAGES" != "yes" ]; then
@@ -886,8 +888,15 @@ if [ -z "$conffile" ]; then
     conffile="$confdir/default.conf"
 fi
 
-target="$1"
-shift
+case "$1" in
+    pkg_*)
+        target=chroot
+        ;;
+    *)
+        target="$1"
+        shift
+        ;;
+esac
 args="$*"
 
 # readconf
