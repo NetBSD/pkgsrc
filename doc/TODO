@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3594 2005/06/05 22:54:56 markd Exp $
+$NetBSD: TODO,v 1.3595 2005/06/06 14:33:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -343,7 +343,7 @@ Suggested package updates
 	o ap2-auth-ldap-3.05
 	o ap2-chroot-0.4
 	o ap2-transform-0.6.0
-	o apache-ant-1.6.5
+	o apache-ant-1.6.5 [pkg/30332]
 	o apcupsd-3.10.16 [requires threads, doesn't work with pth on 1.6]
 	o apg-2.2.3 [pkg/30345|zuntum]
 	o apr-1.1.1
@@ -460,7 +460,7 @@ Suggested package updates
 	o eclipse-3.0.2
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o efax-gtk-3.0.1
+	o efax-gtk-3.0.2
 	o egtk-0.3.6
 	o electricfence-2.4.13
 	o elf-0.5.4
@@ -541,7 +541,7 @@ Suggested package updates
 	o gpsim-devel-20041104
 	o gputils-0.13.0
 	o grace-5.1.18
-	o gramps-2.0.1 [2.0.0 does not work with newer py-gtk]
+	o gramps-2.0.2 [2.0.0 does not work with newer py-gtk]
 	o grap-1.32
 	o grep-2.5.1a
 	o grepmail-5.3030
@@ -737,6 +737,7 @@ Suggested package updates
 	o openh323-1.17.1
 	o openldap-2.2.24
 	o openmotif-2.2.4
+	o openntpd-3.7p1
 	o openssh-4.1
 	o openttd-0.4.0 [pkg/30238]
 	o openvpn-2.0 [pkg/30239]
@@ -856,6 +857,7 @@ Suggested package updates
 	o p5-perl-ldap-0.3202
 	o p5-sybperl-2.17
 	o p5-xmltv-0.5.40
+	o p7zip-4.20
 	o pag-0.92 [pkg/30417]
 	o pam-smbpass-3.0.13
 	o pari-2.2.7
@@ -1027,7 +1029,7 @@ Suggested package updates
 	o smokeping-1.38
 	o snd-7.12
 	o snes9x-1.43
-	o snownews-1.5.6.1
+	o snownews-1.5.7
 	o source-highlight-2.0
 	o sox-12.17.7
 	o spim-7.1
@@ -1118,7 +1120,7 @@ Suggested package updates
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o wdm-1.28
-	o webmin-1.200
+	o webmin-1.210
 	o weechat-0.1.1
 	o weewm-0.01
 	o winbind-3.0.13
@@ -1137,6 +1139,7 @@ Suggested package updates
 	o xblast-2.10.0
 	o xboard-4.2.7
 	o xcb-2.4
+	o xchm-1.0 [needs wxGTK-2.6]
 	o xcircuit-3.3.11
 	o xdaliclock-2.20
 	o xdesktopwaves-1.3
