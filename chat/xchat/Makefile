@@ -1,37 +1,33 @@
-# $NetBSD: Makefile,v 1.30 2005/06/02 21:48:42 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2005/06/06 11:35:39 tron Exp $
 
-DISTNAME=	xchat-1.8.11
-PKGREVISION=	11
-CATEGORIES=	chat x11
-MASTER_SITES=	${HOMEPAGE}files/source/1.8/
-EXTRACT_SUFX=	.tar.bz2
+MAINTAINER=		tron@NetBSD.org
 
-MAINTAINER=	tron@NetBSD.org
-HOMEPAGE=	http://xchat.org/
-COMMENT=	X11 (X Window System) IRC client, using the GTK+ toolkit
+.include "Makefile.common"
+
+COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 
 BUILD_USES_MSGFMT=	YES
 
-USE_DIRS+=		gnome1-1.5
+CONFLICTS=		xchat-gnome-[0-9]*
+
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
-USE_X11BASE=		YES
-USE_TOOLS+=		gmake grep perl
-CONFIGURE_ARGS+=	--enable-python
 
-CONFLICTS+=		xchat-gnome-[0-9]*
+CONFIGURE_ARGS+=	--enable-textfe
+CONFIGURE_ARGS+=	--enable-tcl=no
+CONFIGURE_ARGS+=	--disable-perl
+CONFIGURE_ARGS+=	--disable-python
 
-GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		ac_cv_path_perlpath=${PERL5} pythonpath=${PYTHONBIN}
-CONFIGURE_ARGS+=	--disable-gnome
-CONFIGURE_ARGS+=	--disable-zvt
+LDFLAGS.IRIX+=		-lX11
+LDFLAGS.Darwin+=	-lX11
 
+.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xchat
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/xchat
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
-.include "../../graphics/gdk-pixbuf/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/xchat/plugins
+
 .include "../../mk/bsd.pkg.mk"
