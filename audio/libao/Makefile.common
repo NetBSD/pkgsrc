@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.21 2005/06/06 01:37:13 minskim Exp $
+# $NetBSD: Makefile.common,v 1.22 2005/06/06 01:52:39 minskim Exp $
 
 DISTNAME=	libao-0.8.6
-PKGREVISION=	1
 CATEGORIES=	audio devel
 MASTER_SITES=	http://downloads.xiph.org/releases/ao/
 
