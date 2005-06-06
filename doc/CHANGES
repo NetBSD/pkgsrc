@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10321 2005/06/06 22:57:25 agc Exp $
+$NetBSD: CHANGES,v 1.10322 2005/06/06 23:07:17 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2814,4 +2814,20 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkg_comp to 1.21 [jmmv 2005-06-06]
 	Updated textproc/sablotron to 1.0.2 [jwise 2005-06-06]
 	Updated devel/mantis to 0.91.1nb3 [adrianp 2005-06-06]
+	Added crosspkgtools/kwacross-netbsd1-arm version 20050605
+		[kristerw 2005-06-06] 
+	Added crosspkgtools/crosspkg-netbsd1-acorn26 version 1.6.2
+		[kristerw 2005-06-06]
+	Added crosspkgtools/crosspkg-netbsd1-acorn32 version 1.6.2
+		[kristerw 2005-06-06]
+	Added crosspkgtools/crosspkg-netbsd1-cats version 1.6.2
+		[kristerw 2005-06-06]
+	Added crosspkgtools/crosspkg-netbsd1-evbarm version 1.6.2
+		[kristerw 2005-06-06]
+	Added crosspkgtools/crosspkg-netbsd1-hpcarm version 1.6.2
+		[kristerw 2005-06-06]
+	Added crosspkgtools/crosspkg-netbsd1-netwinder version 1.6.2
+		[kristerw 2005-06-06]
+	Added crosspkgtools/crosspkg-netbsd1-shark version 1.6.2
+		[kristerw 2005-06-06]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2005Q2 branch [agc 2005-06-06]
