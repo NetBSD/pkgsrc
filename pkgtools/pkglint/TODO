@@ -13,3 +13,4 @@
 * check for absolute paths
 * check for direct use of /usr/pkgsrc etc.
 * check dir direct use of *DIR
+* in dependency lines check for ../../category/package, not ../package
