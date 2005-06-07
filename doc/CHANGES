@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10326 2005/06/07 14:39:28 minskim Exp $
+$NetBSD: CHANGES,v 1.10327 2005/06/07 15:03:40 sketch Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2836,3 +2836,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/nighthawk to 2.1nb1 [minskim 2005-06-07]
 	Updated graphics/glu to 6.2.1nb1 [minskim 2005-06-07]
 	Updated graphics/glut to 6.2.1nb3 [minskim 2005-06-07]
+	Updated wm/evilwm to 0.99.18 [sketch 2005-06-07]
