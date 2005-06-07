@@ -8620,30 +8620,49 @@ PKG_SHELL=      ${PREFIX}/bin/zsh
           included by the main package <code class=
           "filename">Makefile</code>.</p>
           <pre class="programlisting">
-# Global and legacy options
-PKG_OPTIONS_VAR=        PKG_OPTIONS.wibble
-PKG_SUPPORTED_OPTIONS=  ldap sasl
-PKG_SUGGESTED_OPTIONS=  sasl
-PKG_OPTION_LEGACY_VARS= WIBBLE_USE_OPENLDAP:ldap USE_SASL2:sasl
+PKG_OPTIONS_VAR=                PKG_OPTIONS.wibble
+PKG_SUPPORTED_OPTIONS=          wibble-foo ldap
+PKG_OPTIONAL_GROUPS=            database
+PKG_GROUP.database=             mysql pgsql
+PKG_SUGGESTED_OPTIONS=          wibble-foo
+PKG_OPTIONS_LEGACY_VARS+=       WIBBLE_USE_OPENLDAP:ldap
+PKG_OPTIONS_LEGACY_OPTS+=       foo:wibble-foo
+
+.include "../../mk/bsd.prefs.mk"
+
+# this package was previously named wibble2
+.if defined(PKG_OPTIONS.wibble2)
+PKG_LEGACY_OPTIONS+=  ${PKG_OPTIONS.wibble2}
+PKG_OPTIONS_LEGACY_WARNINGS+="Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
+.endif
 
 .include "../../mk/bsd.options.mk"
 
 # Package-specific option-handling
 
 ###
+### FOO support
+###
+.if !empty(PKG_OPTIONS:Mwibble-foo)
+CONFIGURE_ARGS+=        --enable-foo
+.endif
+
+###
 ### LDAP support
 ###
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap/buildlink3.mk"
-CONFIGURE_ARGS+=      --enable-ldap=${BUILDLINK_PREFIX.openldap}
+CONFIGURE_ARGS+=        --enable-ldap=${BUILDLINK_PREFIX.openldap}
 .endif
 
 ###
-### SASL authentication
+### database support
 ###
-.if !empty(PKG_OPTIONS:Msasl)
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
-CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
+.if !empty(PKG_OPTIONS:Mmysql)
+.  include "../../mk/mysql.buildlink3.mk"
+.endif
+.if !empty(PKG_OPTIONS:Mpgsql)
+.  include "../../mk/pgsql.buildlink3.mk"
 .endif
 </pre>
 
@@ -8659,19 +8678,39 @@ CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
                 "http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current">
                 <span class="citerefentry"><span class=
                 "refentrytitle">make</span>(1)</span></a> variable
-                that contains the options the user wishes to
-                select. The recommended value is
-                &#8220;<span class="quote">PKG_OPTIONS.<em class=
-                "replaceable"><code>pkg</code></em></span>&#8221;
-                but any package-specific value may be used. This
-                variable should be set in a package Makefile.</p>
+                that the user can set to override the default
+                options. It should be set to &#8220;<span class=
+                "quote">PKG_OPTIONS.<em class=
+                "replaceable"><code>pkgname</code></em></span>&#8221;.</p>
               </li>
 
               <li>
                 <p><code class=
                 "varname">PKG_SUPPORTED_OPTIONS</code> is a list of
-                build options supported by the package. This
-                variable should be set in a package Makefile.</p>
+                build options supported by the package.</p>
+              </li>
+
+              <li>
+                <p><code class=
+                "varname">PKG_OPTIONS_OPTIONAL_GROUPS</code> is a
+                list of names of groups of mutually exclusive
+                options. The options in each group are listed in
+                <code class="varname">PKG_OPTIONS_GROUP.<em class=
+                "replaceable"><code>groupname</code></em></code>.
+                The most specific setting of any option from the
+                group takes precedence over all other options in
+                the group. Options from the groups will be
+                automatically added to <code class=
+                "varname">PKG_SUPPORTED_OPTIONS</code>.</p>
+              </li>
+
+              <li>
+                <p><code class=
+                "varname">PKG_OPTIONS_REQUIRED_GROUPS</code> is
+                like <code class=
+                "varname">PKG_OPTIONS_OPTIONAL_GROUPS</code>, but
+                building the packages will fail if no option from
+                the group is selected.</p>
               </li>
 
               <li>
@@ -8681,61 +8720,94 @@ CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
               </li>
 
               <li>
-                <p><code class="varname">${PKG_OPTIONS_VAR}</code>
-                (the variable named in <code class=
-                "varname">PKG_OPTIONS_VAR</code>) lists the
-                selected build options and overrides any default
-                options given in <code class=
-                "varname">PKG_DEFAULT_OPTIONS</code>. If any of the
-                options begin with a &#8220;<span class=
-                "quote">-</span>&#8221;, then that option is always
-                removed from the selected build options, e.g.</p>
-                <pre class="programlisting">
-PKG_DEFAULT_OPTIONS=    kerberos ldap sasl
-PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
-WIBBLE_OPTIONS=         ${PKG_DEFAULT_OPTIONS} -sasl
-# leads to PKG_OPTIONS = kerberos ldap
-</pre>
-
-                <p>or</p>
-                <pre class="programlisting">
-PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
-WIBBLE_OPTIONS=         kerberos -ldap ldap
-# leads to PKG_OPTIONS = kerberos
-</pre>
-
-                <p>This variable should be set in <code class=
-                "filename">/etc/mk.conf</code>.</p>
+                <p><code class=
+                "varname">PKG_OPTIONS_LEGACY_VARS</code> is a list
+                of &#8220;<span class="quote"><em class=
+                "replaceable"><code>USE_VARIABLE</code></em>:<em class="replaceable">
+                <code>option</code></em></span>&#8221; pairs that
+                map legacy <code class=
+                "filename">/etc/mk.conf</code> variables to their
+                option counterparts. Pairs should be added with
+                &#8220;<span class="quote">+=</span>&#8221; to keep
+                the listing of global legacy variables. A warning
+                will be issued if the user uses a legacy
+                variable.</p>
               </li>
 
               <li>
-                <p>The <code class=
-                "varname">PKG_OPTIONS_LEGACY_VARS</code> is only
-                needed if you are converting a package that had its
-                own ad-hoc options handling to use <code class=
-                "filename">bsd.options.mk</code>. It converts
-                global or legacy options variables into an
-                equivalent <code class=
-                "varname">PKG_OPTIONS.<em class=
-                "replaceable"><code>pkg</code></em></code>
-                value.</p>
+                <p><code class=
+                "varname">PKG_OPTIONS_LEGACY_OPTS</code> is a list
+                of &#8220;<span class="quote"><em class=
+                "replaceable"><code>old-option</code></em>:<em class="replaceable">
+                <code>new-option</code></em></span>&#8221; pairs
+                that map options that have been renamed to their
+                new counterparts. Pairs should be added with
+                &#8220;<span class="quote">+=</span>&#8221; to keep
+                the listing of global legacy options. A warning
+                will be issued if the user uses a legacy
+                option.</p>
+              </li>
+
+              <li>
+                <p><code class="varname">PKG_LEGACY_OPTIONS</code>
+                is a list of options implied by deprecated
+                variables used. This can be used for cases that
+                neither <code class=
+                "varname">PKG_OPTIONS_LEGACY_VARS</code> nor
+                <code class=
+                "varname">PKG_OPTIONS_LEGACY_OPTS</code> can
+                handle, e. g. when <code class=
+                "varname">PKG_OPTIONS_VAR</code> is renamed.</p>
+              </li>
+
+              <li>
+                <p><code class=
+                "varname">PKG_OPTIONS_DEPRECATED_WARNINGS</code> is
+                a list of warnings about deprecated variables or
+                options used, and what to use instead.</p>
               </li>
             </ol>
           </div>
 
-          <p>After the inclusion of bsd.options.mk, the variable
+          <p>A package should never modify <code class=
+          "varname">PKG_DEFAULT_OPTIONS</code> or the variable
+          named in <code class="varname">PKG_OPTIONS_VAR</code>.
+          These are strictly user-settable. To suggest a default
+          set of options, use <code class=
+          "varname">PKG_SUGGESTED_OPTIONS</code>.</p>
+
+          <p><code class="varname">PKG_OPTIONS_VAR</code> and at
+          least one of <code class=
+          "varname">PKG_SUPPORTED_OPTIONS</code>, <code class=
+          "varname">PKG_OPTIONS_OPTIONAL_GROUPS</code>, and
+          <code class="varname">PKG_OPTIONS_REQUIRED_GROUPS</code>
+          must be defined before including <code class=
+          "filename">bsd.options.mk</code>.</p>
+
+          <p>After the inclusion of <code class=
+          "filename">bsd.options.mk</code>, the variable
           <code class="varname">PKG_OPTIONS</code> contains the
-          list of the selected build options, properly filtered to
+          list of selected build options, properly filtered to
           remove unsupported and duplicate options.</p>
 
           <p>The remaining sections contain the logic that is
-          specific to each option. There should be a check for
-          every option listed in <code class=
-          "varname">PKG_SUPPORTED_OPTIONS</code>, and there should
-          be clear documentation on what turning on the option will
-          do in the comments preceding each section. The correct
-          way to check for an option is to check whether it is
-          listed in <code class="varname">PKG_OPTIONS</code>.</p>
+          specific to each option. The correct way to check for an
+          option is to check whether it is listed in <code class=
+          "varname">PKG_OPTIONS</code>:</p>
+          <pre class="programlisting">
+.if !empty(PKG_OPTIONS:M<em class=
+"replaceable"><code>option</code></em>)
+</pre>
+
+          <p>If another package already has an option with the same
+          meaning, use the same name. For options applicable to
+          multiple packages (like enabling support for a library),
+          use short option names (like the name of the library).
+          For options specific to this package, prefix the name
+          with <code class="varname"><em class=
+          "replaceable"><code>pkgname</code></em>-</code>. Document
+          the option and its meaning in <code class=
+          "filename">mk/defaults/options.description</code>.</p>
         </div>
       </div>
 
