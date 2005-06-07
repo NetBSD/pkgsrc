@@ -1,7 +1,7 @@
 AUDIT-PACKAGES(8)       NetBSD System Manager's Manual       AUDIT-PACKAGES(8)
 
 NNAAMMEE
-     aauuddiitt--ppaacckkaaggeess, ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt - show vulnerabilities in
+     aauuddiitt--ppaacckkaaggeess, ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt -- show vulnerabilities in
      installed packages
 
 SSYYNNOOPPSSIISS
@@ -25,40 +25,40 @@ DDEESSCCRRIIPPTTIIOONN
      Each line lists the package and vulnerable versions, the type of exploit,
      and an Internet address for further information.  The type of exploit can
      be any text, although some common types of exploits listed are:
-           ++oo   cross-site-html
-           ++oo   cross-site-scripting
-           ++oo   denial-of-service
-           ++oo   file-permissions
-           ++oo   local-access
-           ++oo   local-code-execution
-           ++oo   local-file-read
-           ++oo   local-file-removal
-           ++oo   local-file-write
-           ++oo   local-root-file-view
-           ++oo   local-root-shell
-           ++oo   local-symlink-race
-           ++oo   local-user-file-view
-           ++oo   local-user-shell
-           ++oo   privacy-leak
-           ++oo   remote-code-execution
-           ++oo   remote-command-inject
-           ++oo   remote-file-creation
-           ++oo   remote-file-read
-           ++oo   remote-file-view
-           ++oo   remote-file-write
-           ++oo   remote-key-theft
-           ++oo   remote-root-access
-           ++oo   remote-root-shell
-           ++oo   remote-script-inject
-           ++oo   remote-server-admin
-           ++oo   remote-use-of-secret
-           ++oo   remote-user-access
-           ++oo   remote-user-file-view
-           ++oo   remote-user-shell
-           ++oo   unknown
-           ++oo   weak-authentication
-           ++oo   weak-encryption
-           ++oo   weak-ssl-authentication
+           ··   cross-site-html
+           ··   cross-site-scripting
+           ··   denial-of-service
+           ··   file-permissions
+           ··   local-access
+           ··   local-code-execution
+           ··   local-file-read
+           ··   local-file-removal
+           ··   local-file-write
+           ··   local-root-file-view
+           ··   local-root-shell
+           ··   local-symlink-race
+           ··   local-user-file-view
+           ··   local-user-shell
+           ··   privacy-leak
+           ··   remote-code-execution
+           ··   remote-command-inject
+           ··   remote-file-creation
+           ··   remote-file-read
+           ··   remote-file-view
+           ··   remote-file-write
+           ··   remote-key-theft
+           ··   remote-root-access
+           ··   remote-root-shell
+           ··   remote-script-inject
+           ··   remote-server-admin
+           ··   remote-use-of-secret
+           ··   remote-user-access
+           ··   remote-user-file-view
+           ··   remote-user-shell
+           ··   unknown
+           ··   weak-authentication
+           ··   weak-encryption
+           ··   weak-ssl-authentication
 
      By default, the vulnerabilities file is stored in the @PKGVULNDIR@ direc-
      tory.  This can be changed by defining the environment variable
@@ -88,6 +88,36 @@ EEXXAAMMPPLLEESS
 
      export FETCH_ARGS="-4"
 
+DDIIAAGGNNOOSSTTIICCSS
+     The aauuddiitt--ppaacckkaaggeess utility exits 0 on success, and >0 if an error occurs.
+
+     The following errors can occur:
+
+     Checksum mismatch
+                 The vulnerabilities file is corrupted.  Run
+                 ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt.
+
+     Missing vulnerabilities file
+                 The vulnerabilities file could not be found.  Run
+                 ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt.
+
+     No checksum algorithm found
+                 The vulnerabilities file is too old or incomplete.  Run
+                 ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt.
+
+     No checksum found
+                 The vulnerabilities file is too old or incomplete.  Run
+                 ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt.
+
+     No file format version found
+                 The vulnerabilities file is too old or incomplete.  Run
+                 ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt.
+
+     Unsupported file format version
+                 The vulnerabilities file is too old or too new.  If it's too
+                 old, run ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt.  If it's too new,
+                 update the aauuddiitt--ppaacckkaaggeess package.
+
 SSEEEE AALLSSOO
      pkg_info(1), mk.conf(5), packages(7), @PKGSRCDIR@/mk/bsd.pkg.defaults.mk
      and
@@ -100,4 +130,4 @@ HHIISSTTOORRYY
      September 19, 2000.  The original idea came from Roland Dowdeswell and
      Bill Sommerfeld.
 
-NetBSD 2.0                       May 12, 2004                       NetBSD 2.0
+NetBSD 3.0                       May 27, 2005                       NetBSD 3.0

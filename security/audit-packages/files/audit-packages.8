@@ -1,5 +1,6 @@
-.\" $NetBSD: audit-packages.8,v 1.9 2005/05/07 22:15:25 wiz Exp $
-.Dd May 12, 2004
+.\" $NetBSD: audit-packages.8,v 1.10 2005/06/07 19:17:01 dillo Exp $
+.\" XXX: License?
+.Dd May 27, 2005
 .Os
 .Dt AUDIT-PACKAGES 8
 .Sh NAME
@@ -135,7 +136,6 @@ Specifies optional arguments for the ftp client.
 @PKGVULNDIR@/pkg-vulnerabilities
 .Pp
 @PKG_SYSCONFDIR@/audit-packages.conf
-.\" .Sh EXAMPLES
 .Sh EXAMPLES
 The
 .Nm download-vulnerability-list
@@ -159,6 +159,39 @@ command can be forced to use IPv4 with the following setting in
 @PKG_SYSCONFDIR@/audit-packages.conf :
 .Pp
 export FETCH_ARGS="-4"
+.Sh DIAGNOSTICS
+.Ex -std audit-packages
+.Pp
+The following errors can occur: 
+.Bl -tag -width 10n
+.It Checksum mismatch
+The vulnerabilities file is corrupted.
+Run
+.Nm download-vulnerability-list .
+.It Missing vulnerabilities file
+The vulnerabilities file could not be found.
+Run
+.Nm download-vulnerability-list .
+.It \&No checksum algorithm found
+The vulnerabilities file is too old or incomplete.
+Run
+.Nm download-vulnerability-list .
+.It \&No checksum found
+The vulnerabilities file is too old or incomplete.
+Run
+.Nm download-vulnerability-list .
+.It \&No file format version found
+The vulnerabilities file is too old or incomplete.
+Run
+.Nm download-vulnerability-list .
+.It Unsupported file format version
+The vulnerabilities file is too old or too new.
+If it's too old, run
+.Nm download-vulnerability-list .
+If it's too new, update the
+.Nm audit-packages
+package.
+.El
 .Sh SEE ALSO
 .Xr pkg_info 1 ,
 .Xr mk.conf 5 ,
