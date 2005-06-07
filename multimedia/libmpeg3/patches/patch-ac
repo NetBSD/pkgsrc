@@ -1,19 +1,26 @@
-$NetBSD: patch-ac,v 1.1 2004/06/26 18:00:21 grant Exp $
-
---- mpeg3ifo.c.orig	Tue Jul 31 17:18:25 2001
-+++ mpeg3ifo.c	Tue Jul 31 17:18:56 2001
-@@ -1,9 +1,13 @@
+--- mpeg3ifo.c.orig	2001-05-20 05:05:26.000000000 +0200
++++ mpeg3ifo.c	2005-06-08 01:20:54.000000000 +0200
+@@ -1,10 +1,22 @@
 -#include <byteswap.h>
  #include <dirent.h>
  #include <fcntl.h>
  #include <stdlib.h>
  #include <string.h>
  #include <sys/types.h>
-+
-+#include <sys/endian.h>
-+#include <machine/bswap.h>
-+#define bswap_16(x) bswap16(x)
-+#define bswap_32(x) bswap32(x)
  
++#if defined(__NetBSD__)
++#  include <sys/endian.h>
++#  include <machine/bswap.h>
++#  define bswap_16(x) bswap16(x)
++#  define bswap_32(x) bswap32(x)
++#elif defined(linux)
++#  include <byteswap.h>
++#elif defined(__APPLE__) || defined(__MACH__) /* MacOS X */
++#  include <libkern/OSByteOrder.h>
++#  define bswap_16(x) OSSwapInt16(x)
++#  define bswap_32(x) OSSwapInt32(x)
++#endif
++
  #include "ifo.h"
  #include "mpeg3private.h"
+ #include "mpeg3protos.h"

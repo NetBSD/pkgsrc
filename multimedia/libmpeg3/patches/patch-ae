@@ -1,8 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2004/06/26 18:00:21 grant Exp $
-
---- mpeg3io.c.orig	2001-05-20 13:05:26.000000000 +1000
-+++ mpeg3io.c	2004-05-04 23:48:36.000000000 +1000
-@@ -1,11 +1,17 @@
+--- mpeg3io.c.orig	2001-05-20 05:05:26.000000000 +0200
++++ mpeg3io.c	2005-06-08 00:54:51.000000000 +0200
+@@ -1,11 +1,20 @@
  #include "mpeg3private.h"
  #include "mpeg3protos.h"
  
@@ -19,10 +17,13 @@ $NetBSD: patch-ae,v 1.1 2004/06/26 18:00:21 grant Exp $
 +# endif
 +#endif
 +
++#include <sys/types.h>
++#include <sys/stat.h>
++
  mpeg3_fs_t* mpeg3_new_fs(char *path)
  {
  	mpeg3_fs_t *fs = calloc(1, sizeof(mpeg3_fs_t));
-@@ -88,27 +94,15 @@
+@@ -88,27 +97,15 @@
  
  int mpeg3io_device(char *path, char *device)
  {
