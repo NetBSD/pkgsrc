@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2005/06/07 16:24:27 garbled Exp $
+--- client/configure.orig	2005-06-07 08:34:46.000000000 -0700
++++ client/configure	2005-06-07 08:38:22.000000000 -0700
+@@ -3088,7 +3088,7 @@
+ #define HAVE_LIBX11 1
+ _ACEOF
+ 
+-  LIBS="-lX11 $LIBS"
++  LIBS="-lX11 -lXext $LIBS"
+ 
+ else
+   { echo "$as_me:$LINENO: WARNING: \"cannot find required X11 library.\"" >&5
+@@ -3102,7 +3102,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lGL  $LIBS"
++LIBS="-lGL $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
