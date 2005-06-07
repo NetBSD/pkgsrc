@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10324 2005/06/07 05:34:04 minskim Exp $
+$NetBSD: CHANGES,v 1.10325 2005/06/07 05:34:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2833,3 +2833,4 @@ Changes to the packages collection and infrastructure in 2005:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2005Q2 branch [agc 2005-06-06]
 	Updated mail/dspam to 3.4.7 [xtraeme 2005-06-07]
 	Updated lang/lua to 5.0.2nb3 [minskim 2005-06-07]
+	Updated games/nighthawk to 2.1nb1 [minskim 2005-06-07]
