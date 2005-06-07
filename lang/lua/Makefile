@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/04/11 21:46:14 tv Exp $
+# $NetBSD: Makefile,v 1.23 2005/06/07 03:47:24 minskim Exp $
 
 DISTNAME=	lua-5.0.2
 PKGREVISION=	2
@@ -26,9 +26,7 @@ BUILD_TARGET=	all so
 INSTALL_TARGET=	install soinstall
 
 CFLAGS+=	-fPIC
-LIBS.Interix+=	-ldl
-LIBS.Linux+=	-ldl
-LIBS.SunOS+=	-ldl
+LIBS+=		${BUILDLINK_LDADD.dl}
 MAKE_ENV+=	LIBS="${LIBS}"
 
 post-build:
