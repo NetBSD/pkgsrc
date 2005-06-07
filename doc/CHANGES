@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10322 2005/06/06 23:07:17 kristerw Exp $
+$NetBSD: CHANGES,v 1.10323 2005/06/07 02:49:51 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2831,3 +2831,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added crosspkgtools/crosspkg-netbsd1-shark version 1.6.2
 		[kristerw 2005-06-06]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2005Q2 branch [agc 2005-06-06]
+	Updated mail/dspam to 3.4.7 [xtraeme 2005-06-07]

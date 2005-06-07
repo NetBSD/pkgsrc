@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3597 2005/06/06 16:33:58 wiz Exp $
+$NetBSD: TODO,v 1.3598 2005/06/07 02:49:51 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -449,7 +449,6 @@ Suggested package updates
 	o dmalloc-5.4.2
 	o dnstracer-1.8
 	o dpkg-1.13.3
-	o dspam-3.4.7
 	o dvdrip-0.52.5
 	o dvipdfmx-20050201
 	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
