@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-packages,v 1.18 2005/05/21 16:36:37 dillo Exp $
+# $NetBSD: audit-packages,v 1.19 2005/06/07 19:17:01 dillo Exp $
 #
 # Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
 #
@@ -33,7 +33,13 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+ERR_DOWNLOAD="Please run download-vulnerability-list"
+ERR_UPGRADE="Please upgrade audit-packages to the newest version"
+
 : ${PKGVULNDIR=@PKGVULNDIR@}
+
+FORMAT_MAJOR=1
+FORMAT_MINOR=0
 
 if [ -r @PKG_SYSCONFDIR@/audit-packages.conf ]; then
 	echo "Reading settings from @PKG_SYSCONFDIR@/audit-packages.conf"
@@ -53,7 +59,11 @@ done
 errmsg=""
 
 # check for missing vulnerabilities file
-[ ! -f "$vuls" ] && errmsg="** Missing $vuls"
+if [ ! -f "$vuls" ]
+then
+	errmsg="Missing vulnerabilities file $vuls"
+	errsolution="$ERR_DOWNLOAD"
+fi
 
 case "$errmsg" in
 "")	# check for old vulnerabilities file if we're being verbose
@@ -65,18 +75,42 @@ case "$errmsg" in
 esac
 
 case "$errmsg" in
+"")	# check format version of vulnerabilities file
+	file_major=`@AWK@ '$1 == "#FORMAT" { split($2, a, "\\."); print a[1] }' "$vuls"`
+	file_minor=`@AWK@ '$1 == "#FORMAT" { split($2, a, "\\."); print a[2] }' "$vuls"`
+	if [ "x$file_major" = "x" -o "x$file_minor" = "x" ]
+	then
+		errmsg="No file format version found in $vuls"
+		errsolution="$ERR_DOWNLOAD"
+	elif [ "$file_major" -ne "$FORMAT_MAJOR" -o "$file_minor" -gt "$FORMAT_MINOR" ]
+	then
+		errmsg="Unsupported file format version $file_major.$file_minor in $vuls (supported version: $FORMAT_MAJOR.$FORMAT_MINOR)."
+		if [ "$file_major" -le "$FORMAT_MAJOR" ]
+		then
+			errsolution="$ERR_DOWNLOAD"
+		else
+			errsolution="$ERR_UPGRADE"
+		fi
+	fi
+	;;
+esac
+
+case "$errmsg" in
 "")	# check integrity of vulnerabilities file
 	recordedsum=`@AWK@ '$1 == "#CHECKSUM" { print $3 }' "$vuls"`
 	recordedalg=`@AWK@ '$1 == "#CHECKSUM" { print $2 }' "$vuls"`
 	case "$recordedsum" in
-	"")	errmsg="***WARNING*** No checksum found in $vuls"
+	"")	errmsg="No checksum found in $vuls"
+		errsolution="$ERR_DOWNLOAD"
 		;;
 	*)	case "$recordedalg" in
-		"")	errmsg="***WARNING*** No checksum algorithm found in $vuls file"
+		"")	errmsg="No checksum algorithm found in $vuls file"
+			errsolution="$ERR_DOWNLOAD"
 			;;
 		*)	calcsum=`@AWK@ '$1 == "#CHECKSUM" || /\$NetBSD.*/ { next } { print }' "$vuls" | @DIGEST@ "$recordedalg"`
 			if [ "$recordedsum" != "$calcsum" ]; then
-				errmsg="***WARNING*** Checksum mismatch - recorded $recordedalg checksum \"$recordedsum\", calculated checksum \"$calcsum\""
+				errmsg="Checksum mismatch - recorded $recordedalg checksum \"$recordedsum\", calculated checksum \"$calcsum\""
+				errsolution="$ERR_DOWNLOAD"
 			fi
 			;;
 		esac
@@ -88,8 +122,8 @@ esac
 # if we have found an error, then complain and exit
 case "$errmsg" in
 "")	;;
-*)	echo "$errmsg" 1>&2
-	echo "** Please run download-vulnerability-list" 1>&2
+*)	echo "***ERROR*** $errmsg" 1>&2
+	echo "** $errsolution" 1>&2
 	exit 1
 	;;
 esac
