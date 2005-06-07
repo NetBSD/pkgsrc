@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1.1.1 2002/07/11 13:26:14 wiz Exp $
+$NetBSD: patch-ai,v 1.2 2005/06/07 04:23:43 minskim Exp $
 
 --- fastrand.cpp.orig	Mon May 26 04:27:54 1997
 +++ fastrand.cpp	Tue Dec 11 09:56:52 2001
@@ -7,7 +7,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2002/07/11 13:26:14 wiz Exp $
  #endif
  	if ( ! Seed ) {
 -		gettimeofday(&tv, (void *)0);
-+		gettimeofday(&tv, NULL);
++		gettimeofday(&tv, 0);
  		randomSeed = ((tv.tv_usec<<16)|((tv.tv_sec^tv.tv_usec)&0xFFFF));
  		return;
  	}
