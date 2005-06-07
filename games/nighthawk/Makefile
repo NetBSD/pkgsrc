@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/06/07 05:43:30 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2005/06/07 05:44:46 minskim Exp $
 #
 
 DISTNAME=		nighthawk-2.1
@@ -37,8 +37,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/nighthawk/data
 	cd ${WRKSRC}/data && ${PAX} -rw . ${PREFIX}/share/nighthawk/data
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/nighthawk
-	${FIND} ${PREFIX}/share/nighthawk -type f -print | ${XARGS} ${CHMOD} 444
-	${FIND} ${PREFIX}/share/nighthawk -type d -print | ${XARGS} ${CHMOD} 555
+	${FIND} ${PREFIX}/share/nighthawk -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	${FIND} ${PREFIX}/share/nighthawk -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${INSTALL_PROGRAM} ${WRKSRC}/src/nighthawk ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src_sound/nighthawk_sound ${PREFIX}/bin
 	${CHGRP} ${GAMEGRP} ${PREFIX}/bin/nighthawk
