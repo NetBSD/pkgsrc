@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10329 2005/06/07 21:24:43 wiz Exp $
+$NetBSD: CHANGES,v 1.10330 2005/06/07 23:35:15 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2839,3 +2839,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wm/evilwm to 0.99.18 [sketch 2005-06-07]
 	Updated security/audit-packages to 1.35 [dillo 2005-06-07]
 	Updated multimedia/mjpegtools to 1.6.2nb4 [wiz 2005-06-07]
+	Updated x11/xlockmore to 5.18 [hubertf 2005-06-08]
