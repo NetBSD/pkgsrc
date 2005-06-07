@@ -1,7 +1,7 @@
-$NetBSD: patch-bb,v 1.2 1999/02/10 15:09:56 frueauf Exp $
+$NetBSD: patch-bb,v 1.3 2005/06/07 05:33:20 minskim Exp $
 
---- src_sound/dsp_mixxer.c.BAK	Sun Feb  7 02:24:23 1999
-+++ src_sound/dsp_mixxer.c	Sun Feb  7 02:26:49 1999
+--- src_sound/dsp_mixxer.c.orig	1998-06-22 05:41:31.000000000 -0500
++++ src_sound/dsp_mixxer.c
 @@ -23,6 +23,8 @@
   #include <sys/soundcard.h>
  #elif FreeBSD
@@ -11,7 +11,7 @@ $NetBSD: patch-bb,v 1.2 1999/02/10 15:09:56 frueauf Exp $
  #endif
  #include "funktracker_defs.h"
  #include "funktracker.h"
-@@ -91,7 +93,7 @@
+@@ -91,7 +93,7 @@ void init_dsp_buffers(void)
    register int x;
  
    calc_mix_buffer(funk_info.bpm_rate);
@@ -20,7 +20,7 @@ $NetBSD: patch-bb,v 1.2 1999/02/10 15:09:56 frueauf Exp $
    for(x = 0;x < mix_buffer_size;x++)
    {
      *(left_mix_buffer + x) = 0;
-@@ -187,7 +189,7 @@
+@@ -187,7 +189,7 @@ void close_dsp(void)
  {
    if(dsp_fp != -1)
    {
@@ -29,3 +29,27 @@ $NetBSD: patch-bb,v 1.2 1999/02/10 15:09:56 frueauf Exp $
      close(dsp_fp);
    }
  }
+@@ -247,12 +249,12 @@ int open_dsp(int srate,int prec,int st)
+   if(dsp_alloc_bufs())
+   {
+     printf("Allocated dsp buffers..\n");
+-    dsp_fp = open("/dev/dsp",O_WRONLY,0);
++    dsp_fp = open(DEVOSSAUDIO,O_WRONLY,0);
+     if(dsp_fp != -1)
+     {
+       int frag;
+ 
+-      printf("Opened /dev/dsp: %d bit %s, %d Hz (%d frames @ %d bytes)\n",
++      printf("Opened " DEVOSSAUDIO ": %d bit %s, %d Hz (%d frames @ %d bytes)\n",
+         funk_info.precision,
+         funk_info.stereo == 8 ? "mono" : "stereo",
+         funk_info.sampling_rate,
+@@ -265,7 +267,7 @@ int open_dsp(int srate,int prec,int st)
+       return 1;
+     }
+     else
+-      printf("Error: Couldn't open /dev/dsp. Program aborted.\n");
++      printf("Error: Couldn't open " DEVOSSAUDIO". Program aborted.\n");
+     dsp_dealloc_bufs();
+   }
+   else
