@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2004/04/05 02:31:06 xtraeme Exp $
+$NetBSD: patch-ab,v 1.5 2005/06/07 03:52:10 minskim Exp $
 
---- Makefile.orig	Fri Apr 11 00:34:38 2003
+--- Makefile.orig	2004-03-11 19:50:55.000000000 -0600
 +++ Makefile
 @@ -38,8 +38,8 @@ install: all strip
  
@@ -8,8 +8,8 @@ $NetBSD: patch-ab,v 1.4 2004/04/05 02:31:06 xtraeme Exp $
  so:
 -	ld -o lib/liblua.so.$V -shared src/*.o
 -	ld -o lib/liblualib.so.$V -shared src/lib/*.o
-+	${CC} ${LDFLAGS} -o lib/liblua.so.$V -shared src/*.o
-+	${CC} ${LDFLAGS} -o lib/liblualib.so.$V -shared src/lib/*.o
++	${CC} ${LDFLAGS} -o lib/liblua.so.$V -shared src/*.o ${LIBS}
++	${CC} ${LDFLAGS} -o lib/liblualib.so.$V -shared src/lib/*.o ${LIBS}
  	cd lib; ln -fs liblua.so.$V liblua.so; ln -fs liblualib.so.$V liblualib.so
  
  # binaries using shared libraries
