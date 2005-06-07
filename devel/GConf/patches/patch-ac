@@ -1,13 +1,12 @@
-$NetBSD: patch-ac,v 1.6 2002/03/20 12:36:45 wiz Exp $
+$NetBSD: patch-ac,v 1.7 2005/06/07 15:37:54 minskim Exp $
 
---- configure.orig	Fri Mar 15 05:10:03 2002
+--- configure.orig	2002-03-14 22:10:03.000000000 -0600
 +++ configure
-@@ -7945,7 +7945,7 @@
- BDB_LIBS=
- BDB_CFLAGS=
+@@ -8005,6 +8005,7 @@ fi
+   fi
+ done
  
--for dblib in db-3.3 db-3.2 db-3.1 db-3; do
-+for dblib in db-3.3 db-3.2 db-3.1 db-3 db3; do
-   as_ac_Lib=`echo "ac_cv_lib_$dblib''_db_env_create" | $as_tr_sh`
- echo "$as_me:7950: checking for db_env_create in -l$dblib" >&5
- echo $ECHO_N "checking for db_env_create in -l$dblib... $ECHO_C" >&6
++BDB_LIBS=
+ if test "x$BDB_LIBS" = x; then
+   { echo "$as_me:8009: WARNING: No db3 library found. Not building bdb backend." >&5
+ echo "$as_me: WARNING: No db3 library found. Not building bdb backend." >&2;}
