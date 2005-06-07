@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.6 2005/02/24 06:24:03 veego Exp $
+$NetBSD: patch-ag,v 1.7 2005/06/07 14:31:48 minskim Exp $
 
---- src/glut/glx/Makefile.orig	2004-12-06 05:00:20.000000000 +1100
+--- src/glut/glx/Makefile.orig	2004-12-05 12:00:20.000000000 -0600
 +++ src/glut/glx/Makefile
 @@ -79,6 +79,7 @@ OBJECTS = $(SOURCES:.c=.o)
  ##### RULES #####
@@ -20,8 +20,8 @@ $NetBSD: patch-ag,v 1.6 2005/02/24 06:24:03 veego Exp $
 -		$(GLUT_LIB_DEPS) $(OBJECTS)
 +	${LIBTOOL} --mode=link ${CC} -o ${GLUT_LIB_NAME:.so=.la} ${OBJECTS:.o=.lo} \
 +		-rpath ${PREFIX}/lib \
-+		-L${X11BASE}/lib -R ${X11BASE}/lib -lXi \
-+		-version-info ${GLUT_MAJOR}:${GLUT_MINOR}
++		-version-info ${GLUT_MAJOR}:${GLUT_MINOR} \
++		-L${X11BASE}/lib ${GLUT_LIB_DEPS:M-l*} -R${X11BASE}/lib
  
  
  clean:
