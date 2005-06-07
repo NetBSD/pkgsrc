@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.25 2005/06/07 16:33:12 jlam Exp $
+# $NetBSD: defaults.mk,v 1.26 2005/06/07 16:57:37 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -139,7 +139,7 @@ _TOOLS_VARNAME_GNU.cmp=		CMP
 _TOOLS_VARNAME_GNU.cp=		CP
 _TOOLS_VARNAME_GNU.echo=	ECHO
 _TOOLS_VARNAME_GNU.egrep=	EGREP ac_cv_path_EGREP
-_TOOLS_VARNAME_GNU.env=		SETENV ac_cv_path_ENV
+_TOOLS_VARNAME_GNU.env=		SETENV ENV_PROG ac_cv_path_ENV
 _TOOLS_VARNAME_GNU.find=	FIND
 _TOOLS_VARNAME_GNU.gawk=	AWK
 _TOOLS_VARNAME_GNU.gm4=		M4
