@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10325 2005/06/07 05:34:39 minskim Exp $
+$NetBSD: CHANGES,v 1.10326 2005/06/07 14:39:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2834,3 +2834,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/dspam to 3.4.7 [xtraeme 2005-06-07]
 	Updated lang/lua to 5.0.2nb3 [minskim 2005-06-07]
 	Updated games/nighthawk to 2.1nb1 [minskim 2005-06-07]
+	Updated graphics/glu to 6.2.1nb1 [minskim 2005-06-07]
+	Updated graphics/glut to 6.2.1nb3 [minskim 2005-06-07]
