@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.2 1999/02/10 15:09:56 frueauf Exp $
+$NetBSD: patch-ac,v 1.3 2005/06/07 05:00:19 minskim Exp $
 
---- src/nighthawk.cc.BAK	Sun Feb  7 01:01:57 1999
-+++ src/nighthawk.cc	Sun Feb  7 01:02:10 1999
-@@ -85,7 +85,11 @@
+--- src/nighthawk.cc.orig	1998-06-22 06:28:05.000000000 -0500
++++ src/nighthawk.cc
+@@ -20,6 +20,7 @@ extern "C" {
+ #include <string.h>
+ #include <signal.h>
+ #include <pwd.h>
++#include <time.h>
+ #include <sys/types.h>
+ #include <sys/file.h>
+ #include <sys/stat.h>
+@@ -85,7 +86,11 @@ FILE *lopen(char *filename,char *mode)
    FILE *fp;
  
    if((fp = fopen(filename,mode)) != NULL)
