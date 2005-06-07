@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2005/06/07 03:47:24 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/07 03:52:10 minskim Exp $
 
 DISTNAME=	lua-5.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 		ftp://ftp.ntua.gr/pub/lang/lua/ \
@@ -28,6 +28,8 @@ INSTALL_TARGET=	install soinstall
 CFLAGS+=	-fPIC
 LIBS+=		${BUILDLINK_LDADD.dl}
 MAKE_ENV+=	LIBS="${LIBS}"
+
+.include "../../mk/dlopen.buildlink3.mk"
 
 post-build:
 	cd ${WRKSRC}/etc && ${SETENV} ${MAKE_ENV} ${MAKE} bin2c
