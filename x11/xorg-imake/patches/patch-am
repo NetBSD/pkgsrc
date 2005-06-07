@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2005/06/07 02:43:26 xtraeme Exp $
+
+--- config/cf/bsdLib.rules.orig	2005-06-01 18:09:09.000000000 +0200
++++ config/cf/bsdLib.rules
+@@ -229,7 +229,7 @@ LintLibReferences(varname,libname,libsou
+  * InstallSharedLibrary - generate rules to install the shared library.
+  * NOTE: file must be executable, hence "INSTBINFLAGS"
+  */
+-#ifndef FreeBSDArchitecture
++#if !defined(FreeBSDArchitecture) || defined(DragonFlyArchitecture)
+ INSTALLMINORREV = true
+ #else
+ INSTALLMINORREV = false
