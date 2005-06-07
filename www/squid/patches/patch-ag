@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.18 2005/06/05 14:20:27 taca Exp $
+$NetBSD: patch-ag,v 1.19 2005/06/07 14:19:10 taca Exp $
 
 --- configure.orig	2005-05-17 07:41:14.000000000 +0900
 +++ configure
@@ -19,7 +19,15 @@ $NetBSD: patch-ag,v 1.18 2005/06/05 14:20:27 taca Exp $
  	malloc.h \
  	math.h \
  	memory.h \
-@@ -6291,43 +6292,38 @@ fi
+@@ -4060,6 +4061,7 @@ for ac_hdr in \
+ 	netinet/ip_fil_compat.h \
+ 	netinet/ip_fil.h \
+ 	netinet/ip_nat.h \
++	netinet/ipl.h \
+ 	openssl/err.h \
+ 	openssl/md5.h \
+ 	openssl/ssl.h \
+@@ -6291,43 +6293,38 @@ fi
  echo "$ac_t""$ac_cv_type_mode_t" 1>&6
  if test $ac_cv_type_mode_t = no; then
    cat >> confdefs.h <<\EOF
@@ -77,7 +85,7 @@ $NetBSD: patch-ag,v 1.18 2005/06/05 14:20:27 taca Exp $
  
  
  echo $ac_n "checking size of off_t""... $ac_c" 1>&6
-@@ -7643,8 +7639,8 @@ if test "$GCC" = "yes"; then
+@@ -7643,8 +7640,8 @@ if test "$GCC" = "yes"; then
  	GCCVER=`$CC -v 2>&1 | awk '$2 ==  "version" {print $3}'`
  	case "$GCCVER" in
  	2.95.[123])

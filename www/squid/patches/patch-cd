@@ -1,16 +1,18 @@
-$NetBSD: patch-cd,v 1.8 2005/06/05 14:20:27 taca Exp $
+$NetBSD: patch-cd,v 1.9 2005/06/07 14:19:10 taca Exp $
 
 --- src/client_side.c.orig	2005-04-21 06:46:06.000000000 +0900
 +++ src/client_side.c
-@@ -41,6 +41,7 @@
+@@ -41,6 +41,9 @@
  #endif
  #include <netinet/tcp.h>
  #include <net/if.h>
++#if HAVE_NETINET_IPL_H
 +#include <netinet/ipl.h>
++#endif
  #if HAVE_IP_FIL_COMPAT_H
  #include <ip_fil_compat.h>
  #elif HAVE_NETINET_IP_FIL_COMPAT_H
-@@ -2589,6 +2590,9 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -2589,6 +2592,9 @@ parseHttpRequest(ConnStateData * conn, m
      static int natfd = -1;
      static int siocgnatl_cmd = SIOCGNATL & 0xff;
      int x;
@@ -20,7 +22,7 @@ $NetBSD: patch-cd,v 1.8 2005/06/05 14:20:27 taca Exp $
  #endif
  #if PF_TRANSPARENT
      struct pfioc_natlook nl;
-@@ -2731,6 +2735,13 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -2731,6 +2737,13 @@ parseHttpRequest(ConnStateData * conn, m
  	int vport;
  	if (vhost_mode) {
  #if IPF_TRANSPARENT
@@ -34,7 +36,7 @@ $NetBSD: patch-cd,v 1.8 2005/06/05 14:20:27 taca Exp $
  	    natLookup.nl_inport = http->conn->me.sin_port;
  	    natLookup.nl_outport = http->conn->peer.sin_port;
  	    natLookup.nl_inip = http->conn->me.sin_addr;
-@@ -2739,8 +2750,8 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -2739,8 +2752,8 @@ parseHttpRequest(ConnStateData * conn, m
  	    if (natfd < 0) {
  		int save_errno;
  		enter_suid();
@@ -45,7 +47,7 @@ $NetBSD: patch-cd,v 1.8 2005/06/05 14:20:27 taca Exp $
  #else
  		natfd = open(IPL_NAT, O_RDONLY, 0);
  #endif
-@@ -2756,6 +2767,9 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -2756,6 +2769,9 @@ parseHttpRequest(ConnStateData * conn, m
  		cbdataFree(http);
  		xfree(inbuf);
  	    } else {
@@ -55,7 +57,7 @@ $NetBSD: patch-cd,v 1.8 2005/06/05 14:20:27 taca Exp $
  		/*
  		 * IP-Filter changed the type for SIOCGNATL between
  		 * 3.3 and 3.4.  It also changed the cmd value for
-@@ -2769,6 +2783,7 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -2769,6 +2785,7 @@ parseHttpRequest(ConnStateData * conn, m
  		} else {
  		    x = ioctl(natfd, SIOCGNATL, &natLookup);
  		}
