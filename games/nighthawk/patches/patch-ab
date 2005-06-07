@@ -1,19 +1,18 @@
-$NetBSD: patch-ab,v 1.4 1999/08/04 12:18:12 hubertf Exp $
+$NetBSD: patch-ab,v 1.5 2005/06/07 05:41:38 minskim Exp $
 
---- src/Makefile.orig	Sun Feb  7 01:25:16 1999
-+++ src/Makefile	Sun Feb  7 01:26:48 1999
-@@ -3,13 +3,14 @@
+--- src/Makefile.orig	2005-06-07 00:36:34.514643392 -0500
++++ src/Makefile
+@@ -3,13 +3,13 @@
  #
  ############################################################################
  VERSION         = 2.1
 -CC		= gcc
 -CP		= g++
+-OPTIONS 	= -Wall -g -pipe -fomit-frame-pointer \
 +CC		= gcc ${EVERYTHING}
 +CP		= g++ ${EVERYTHING}
- OPTIONS 	= -Wall -g -pipe -fomit-frame-pointer \
--			-DVERSION='"$(VERSION)"'
-+			-DVERSION='"$(VERSION)"' \
-+			-DPREFIX=\"${PREFIX}\"
++OPTIONS 	= ${CPPFLAGS} ${CFLAGS} -Wall -pipe -fomit-frame-pointer \
+ 			-DVERSION='"$(VERSION)"'
  
 -INCLUDE		=
 -LIBS		= -L/usr/X11R6/lib -lXpm -lX11
