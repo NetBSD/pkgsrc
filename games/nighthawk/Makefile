@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/06/01 18:02:51 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/06/07 05:10:50 minskim Exp $
 #
 
 DISTNAME=		nighthawk-2.1
@@ -17,6 +17,8 @@ COMMENT=		C64 Paradroid clone
 WRKSRC=			${WRKDIR}/nighthawk
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
+
+MAKE_ENV+=		OSTYPE=${OPSYS}
 
 post-build:
 	cd ${WRKSRC}/src_sound && \
