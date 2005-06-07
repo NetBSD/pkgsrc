@@ -1,8 +1,16 @@
-$NetBSD: patch-ah,v 1.1.1.1 2002/07/11 13:26:14 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2005/06/07 04:15:40 minskim Exp $
 
---- netlogic/netplay.cpp.orig	Thu Dec 12 23:14:46 1996
-+++ netlogic/netplay.cpp	Tue Dec 11 09:53:18 2001
-@@ -25,6 +25,10 @@
+--- netlogic/netplay.cpp.orig	1996-12-12 10:14:46.000000000 -0600
++++ netlogic/netplay.cpp
+@@ -5,6 +5,7 @@
+ #include "netplay.h"
+ #include "protocol.h"
+ 
++#include <time.h>
+ #ifdef _SGI_SOURCE
+ #include <bstring.h>
+ #endif
+@@ -25,6 +26,10 @@
  #include <arpa/inet.h>
  #endif /* Win95 */
  
@@ -13,7 +21,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2002/07/11 13:26:14 wiz Exp $
  int   gNumPlayers;
  int   gOurPlayer;
  int   gDeathMatch;
-@@ -352,7 +356,8 @@
+@@ -352,7 +357,8 @@ void QueueKey(unsigned char Op, unsigned
  int SyncNetwork(void)
  {
  	int  nleft;
@@ -23,7 +31,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2002/07/11 13:26:14 wiz Exp $
  	struct sockaddr_in from;
  	unsigned long frame, seed, newseed;
  	struct timeval timeout;
-@@ -567,7 +572,7 @@
+@@ -567,7 +573,7 @@ inline void SuckPackets(void)
  	struct timeval timeout;
  	fd_set fdset;
  	char   netbuf[BUFSIZ];
@@ -32,7 +40,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2002/07/11 13:26:14 wiz Exp $
  	struct sockaddr_in from;
  	
  	timeout.tv_sec = 0;
-@@ -807,7 +812,8 @@
+@@ -807,7 +813,8 @@ int Send_NewGame(int *Wave, int *Lives, 
  	char message[BUFSIZ];
  	int  nleft, n;
  	int  acked[MAX_PLAYERS];
@@ -42,7 +50,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2002/07/11 13:26:14 wiz Exp $
  	struct sockaddr_in from;
  	struct timeval timeout;
  	fd_set fdset;
-@@ -939,7 +945,8 @@
+@@ -939,7 +946,8 @@ getit:
  int Await_NewGame(int *Wave, int *Lives, int *Turbo)
  {
  	unsigned char netbuf[BUFSIZ];
