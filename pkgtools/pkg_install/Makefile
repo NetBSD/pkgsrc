@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2005/05/16 00:09:33 jlam Exp $
+# $NetBSD: Makefile,v 1.113 2005/06/07 16:34:50 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -24,6 +24,10 @@ CONFIGURE_ARGS+=	--with-mtree="\"${MTREE}"\"
 CONFIGURE_ARGS+=	--with-pax="\"${PAX}"\"
 CONFIGURE_ARGS+=	--with-tar="\"${TAR}"\"
 USE_TOOLS=		mtree pax tar
+
+# The following tools are needed by pkg_view and linkfarm.
+USE_TOOLS=		chmod cmp cp env find grep ln mkdir rm rmdir	\
+			sed sort touch
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
 NO_CHECKSUM=		# defined
