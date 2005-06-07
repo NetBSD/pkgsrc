@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3599 2005/06/07 14:10:00 wiz Exp $
+$NetBSD: TODO,v 1.3600 2005/06/07 15:03:40 sketch Exp $
 
 Suggested new packages
 ======================
@@ -475,7 +475,6 @@ Suggested package updates
 	o et-2.60
 	o etach-1.4.0
 	o ettercap-NG-0.7.3
-	o evilwm-0.99.18
 	o exiftags-1.00
 	o exmh-2.7.2
 	o f2c-20031025
