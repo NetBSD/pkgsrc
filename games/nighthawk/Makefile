@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2005/06/07 05:10:50 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/07 05:33:20 minskim Exp $
 #
 
 DISTNAME=		nighthawk-2.1
+PKGREVISION=		1
 CATEGORIES=		x11 games
 MASTER_SITES=		${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=		.tgz
@@ -19,6 +20,11 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
 MAKE_ENV+=		OSTYPE=${OPSYS}
+CPPFLAGS+=		-DPREFIX="\"${PREFIX}\"" \
+			-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
+
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 
 post-build:
 	cd ${WRKSRC}/src_sound && \
@@ -39,5 +45,4 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/nighthawk/README
 	${INSTALL} -o ${ROOT_USER} -g games -m 664 /dev/null /var/games/nighthawk.scores
 
-.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
