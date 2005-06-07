@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/06/06 01:51:13 taca Exp $
+# $NetBSD: options.mk,v 1.3 2005/06/07 14:19:10 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	icmp pam-helper snmp ssl aufs
@@ -42,7 +42,7 @@ PKG_SUPPORTED_OPTIONS+=	arp-acl
 
 .include "../../mk/bsd.options.mk"
 
-SQUID_BACKEND?=			ufs,null
+SQUID_BACKEND?=			ufs null
 SQUID_BASIC_AUTH_HELPERS?=	getpwnam MSNT NCSA YP winbind
 SQUID_DIGEST_AUTH_HELPERS?=	password
 SQUID_NTLM_AUTH_HELPERS?=	fakeauth SMB
@@ -89,17 +89,17 @@ SQUID_BACKEND+=		diskd
 .endif
 
 .if !empty(SQUID_BASIC_AUTH_HELPERS)
-CONFIGURE_ARGS+= --enable-basic-auth-helpers=${SQUID_BASIC_AUTH_HELPERS:ts,}
+CONFIGURE_ARGS+= --enable-basic-auth-helpers=${SQUID_BASIC_AUTH_HELPERS:Q}
 .endif
 
 .if !empty(SQUID_DIGEST_AUTH_HELPERS)
-CONFIGURE_ARGS+= --enable-digest-auth-helpers=${SQUID_DIGEST_AUTH_HELPERS:ts,}
+CONFIGURE_ARGS+= --enable-digest-auth-helpers=${SQUID_DIGEST_AUTH_HELPERS:Q}
 .endif
 
 .if !empty(SQUID_NTLM_AUTH_HELPERS)
-CONFIGURE_ARGS+= --enable-ntlm-auth-helpers=${SQUID_NTLM_AUTH_HELPERS:ts,}
+CONFIGURE_ARGS+= --enable-ntlm-auth-helpers=${SQUID_NTLM_AUTH_HELPERS:Q}
 .endif
 
 .if !empty(SQUID_EXTERNAL_ACL_HELPERS)
-CONFIGURE_ARGS+= --enable-external-acl-helpers=${SQUID_EXTERNAL_ACL_HELPERS:ts,}
+CONFIGURE_ARGS+= --enable-external-acl-helpers=${SQUID_EXTERNAL_ACL_HELPERS:Q}
 .endif
