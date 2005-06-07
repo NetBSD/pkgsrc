@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/06 19:10:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/07 21:17:55 wiz Exp $
 
 DISTNAME=	mjpegtools-1.6.2
 PKGREVISION=	3
@@ -21,8 +21,6 @@ PKGCONFIG_OVERRIDE=	mjpegtools.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-large-file
 CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
-# XXX fix me
-CONFIGURE_ARGS+=	--without-avifile
 
 INFO_FILES=		mjpeg-howto.info
 
@@ -30,7 +28,6 @@ INFO_FILES=		mjpeg-howto.info
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
-#.include "../../multimedia/avifile/buildlink3.mk"
 # GTK+ support is disabled to avoid a dependency on GTK+ when building GNOME2.
 # This only disables the "glav" program.  If you really need it, please add an
 # external package for it.
