@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/04/28 23:25:14 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/07 13:34:06 hubertf Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -23,6 +23,7 @@ REPLACE_PERL=	texk/xdvik/t1mapper \
 		texk/oxdvik/t1mapper
 
 CONFIGURE_ARGS+=	--without-texinfo --without-texi2html
+CONFIGURE_ARGS+=	--with-xdvi-x-toolkit=xaw
 
 .if defined(PAPERSIZE)
 LOWER_PAPERSIZE_cmd=	${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'
