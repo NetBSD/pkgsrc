@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/05/29 13:41:29 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/07 17:32:58 jlam Exp $
 #
 
 DISTNAME=	latex-mk-1.3
@@ -11,7 +11,10 @@ COMMENT=	Makefile fragments and scripts for managing LaTeX documents
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		YES
+USE_TOOLS=	awk echo env false find grep rm rmdir
+
+GNU_CONFIGURE=	YES
+CONFIGURE_ENV+=	BMAKE=${MAKE_PROGRAM:Q}
 
 INFO_FILES=	latex-mk.info
 
