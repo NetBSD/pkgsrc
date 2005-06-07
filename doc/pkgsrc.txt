@@ -3403,78 +3403,111 @@ The following example shows how bsd.options.mk should be used by the
 hypothetical ``wibble'' package, either in the package Makefile, or in a file,
 e.g. options.mk, that is included by the main package Makefile.
 
-# Global and legacy options
-PKG_OPTIONS_VAR=        PKG_OPTIONS.wibble
-PKG_SUPPORTED_OPTIONS=  ldap sasl
-PKG_SUGGESTED_OPTIONS=  sasl
-PKG_OPTION_LEGACY_VARS= WIBBLE_USE_OPENLDAP:ldap USE_SASL2:sasl
+PKG_OPTIONS_VAR=                PKG_OPTIONS.wibble
+PKG_SUPPORTED_OPTIONS=          wibble-foo ldap
+PKG_OPTIONAL_GROUPS=            database
+PKG_GROUP.database=             mysql pgsql
+PKG_SUGGESTED_OPTIONS=          wibble-foo
+PKG_OPTIONS_LEGACY_VARS+=       WIBBLE_USE_OPENLDAP:ldap
+PKG_OPTIONS_LEGACY_OPTS+=       foo:wibble-foo
+
+.include "../../mk/bsd.prefs.mk"
+
+# this package was previously named wibble2
+.if defined(PKG_OPTIONS.wibble2)
+PKG_LEGACY_OPTIONS+=  ${PKG_OPTIONS.wibble2}
+PKG_OPTIONS_LEGACY_WARNINGS+="Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
+.endif
 
 .include "../../mk/bsd.options.mk"
 
 # Package-specific option-handling
 
 ###
+### FOO support
+###
+.if !empty(PKG_OPTIONS:Mwibble-foo)
+CONFIGURE_ARGS+=        --enable-foo
+.endif
+
+###
 ### LDAP support
 ###
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap/buildlink3.mk"
-CONFIGURE_ARGS+=      --enable-ldap=${BUILDLINK_PREFIX.openldap}
+CONFIGURE_ARGS+=        --enable-ldap=${BUILDLINK_PREFIX.openldap}
 .endif
 
 ###
-### SASL authentication
+### database support
 ###
-.if !empty(PKG_OPTIONS:Msasl)
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
-CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
+.if !empty(PKG_OPTIONS:Mmysql)
+.  include "../../mk/mysql.buildlink3.mk"
+.endif
+.if !empty(PKG_OPTIONS:Mpgsql)
+.  include "../../mk/pgsql.buildlink3.mk"
 .endif
 
 The first section contains the information about which build options are
 supported by the package, and any default options settings if needed.
 
- 1. PKG_OPTIONS_VAR is the name of the make(1) variable that contains the
-    options the user wishes to select. The recommended value is "PKG_OPTIONS.
-    pkg" but any package-specific value may be used. This variable should be
-    set in a package Makefile.
+ 1. PKG_OPTIONS_VAR is the name of the make(1) variable that the user can set
+    to override the default options. It should be set to "PKG_OPTIONS.pkgname".
 
  2. PKG_SUPPORTED_OPTIONS is a list of build options supported by the package.
-    This variable should be set in a package Makefile.
 
- 3. PKG_SUGGESTED_OPTIONS is a list of build options which are enabled by
+ 3. PKG_OPTIONS_OPTIONAL_GROUPS is a list of names of groups of mutually
+    exclusive options. The options in each group are listed in
+    PKG_OPTIONS_GROUP.groupname. The most specific setting of any option from
+    the group takes precedence over all other options in the group. Options
+    from the groups will be automatically added to PKG_SUPPORTED_OPTIONS.
+
+ 4. PKG_OPTIONS_REQUIRED_GROUPS is like PKG_OPTIONS_OPTIONAL_GROUPS, but
+    building the packages will fail if no option from the group is selected.
+
+ 5. PKG_SUGGESTED_OPTIONS is a list of build options which are enabled by
     default.
 
- 4. ${PKG_OPTIONS_VAR} (the variable named in PKG_OPTIONS_VAR) lists the
-    selected build options and overrides any default options given in
-    PKG_DEFAULT_OPTIONS. If any of the options begin with a "-", then that
-    option is always removed from the selected build options, e.g.
+ 6. PKG_OPTIONS_LEGACY_VARS is a list of "USE_VARIABLE: option" pairs that map
+    legacy /etc/mk.conf variables to their option counterparts. Pairs should be
+    added with "+=" to keep the listing of global legacy variables. A warning
+    will be issued if the user uses a legacy variable.
 
-    PKG_DEFAULT_OPTIONS=    kerberos ldap sasl
-    PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
-    WIBBLE_OPTIONS=         ${PKG_DEFAULT_OPTIONS} -sasl
-    # leads to PKG_OPTIONS = kerberos ldap
+ 7. PKG_OPTIONS_LEGACY_OPTS is a list of "old-option: new-option" pairs that
+    map options that have been renamed to their new counterparts. Pairs should
+    be added with "+=" to keep the listing of global legacy options. A warning
+    will be issued if the user uses a legacy option.
 
-    or
+ 8. PKG_LEGACY_OPTIONS is a list of options implied by deprecated variables
+    used. This can be used for cases that neither PKG_OPTIONS_LEGACY_VARS nor
+    PKG_OPTIONS_LEGACY_OPTS can handle, e. g. when PKG_OPTIONS_VAR is renamed.
 
-    PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
-    WIBBLE_OPTIONS=         kerberos -ldap ldap
-    # leads to PKG_OPTIONS = kerberos
+ 9. PKG_OPTIONS_DEPRECATED_WARNINGS is a list of warnings about deprecated
+    variables or options used, and what to use instead.
 
-    This variable should be set in /etc/mk.conf.
+A package should never modify PKG_DEFAULT_OPTIONS or the variable named in
+PKG_OPTIONS_VAR. These are strictly user-settable. To suggest a default set of
+options, use PKG_SUGGESTED_OPTIONS.
 
- 5. The PKG_OPTIONS_LEGACY_VARS is only needed if you are converting a package
-    that had its own ad-hoc options handling to use bsd.options.mk. It converts
-    global or legacy options variables into an equivalent PKG_OPTIONS.pkg
-    value.
+PKG_OPTIONS_VAR and at least one of PKG_SUPPORTED_OPTIONS,
+PKG_OPTIONS_OPTIONAL_GROUPS, and PKG_OPTIONS_REQUIRED_GROUPS must be defined
+before including bsd.options.mk.
 
 After the inclusion of bsd.options.mk, the variable PKG_OPTIONS contains the
-list of the selected build options, properly filtered to remove unsupported and
+list of selected build options, properly filtered to remove unsupported and
 duplicate options.
 
-The remaining sections contain the logic that is specific to each option. There
-should be a check for every option listed in PKG_SUPPORTED_OPTIONS, and there
-should be clear documentation on what turning on the option will do in the
-comments preceding each section. The correct way to check for an option is to
-check whether it is listed in PKG_OPTIONS.
+The remaining sections contain the logic that is specific to each option. The
+correct way to check for an option is to check whether it is listed in
+PKG_OPTIONS:
+
+.if !empty(PKG_OPTIONS:Moption)
+
+If another package already has an option with the same meaning, use the same
+name. For options applicable to multiple packages (like enabling support for a
+library), use short option names (like the name of the library). For options
+specific to this package, prefix the name with pkgname-. Document the option
+and its meaning in mk/defaults/options.description.
 
 Chapter 13. The build process
 
