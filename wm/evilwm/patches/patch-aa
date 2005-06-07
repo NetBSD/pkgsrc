@@ -1,55 +1,31 @@
-$NetBSD: patch-aa,v 1.10 2003/12/03 17:40:25 sketch Exp $
+$NetBSD: patch-aa,v 1.11 2005/06/07 15:01:09 sketch Exp $
 
---- Makefile.orig	Wed Oct 15 12:48:23 2003
-+++ Makefile	Wed Oct 15 13:35:35 2003
-@@ -1,11 +1,11 @@
- # If you don't use CC 
--CC       = gcc
-+#CC       = gcc
- 
- # Edit this line if you don't want evilwm to install under /usr.
- # Note that $(DESTDIR) is used by the Debian build process.
--prefix = $(DESTDIR)/usr
-+prefix = ${PREFIX}
- 
--XROOT    = /usr/X11R6
-+XROOT    = ${X11BASE}
- INCLUDES = -I$(XROOT)/include
- LDPATH   = -L$(XROOT)/lib
- LIBS     = -lX11
-@@ -22,7 +22,7 @@
+--- Makefile.orig	2005-06-02 18:22:49.000000000 +0100
++++ Makefile	2005-06-07 08:54:32.000000000 +0100
+@@ -25,7 +25,7 @@
  
  # Use Motif hints to find if a window should be borderless.
  # To use this option, you need to have the Motif development files installed.
 -DEFINES += -DMWM_HINTS
 +#DEFINES += -DMWM_HINTS
  
- # To support virtual desktops, uncomment one or both of the following 2 lines.
+ # To support virtual desktops, uncomment the following line.
  DEFINES += -DVWM
-@@ -70,10 +70,10 @@
- #DEFINES += -DXDEBUG	# show some X calls
+@@ -56,7 +56,7 @@
+ #DEFINES += -DKEY_KILL=XK_q
  
- DEFINES += -DVERSION=\"$(version).$(revision).$(subrev)\" $(DEBIAN)
--CFLAGS  += $(INCLUDES) $(DEFINES) -Os -Wall
-+CFLAGS  += $(INCLUDES) $(DEFINES)
- #CFLAGS  += $(INCLUDES) $(DEFINES) -g -Wall
--CFLAGS  += -Wstrict-prototypes -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Waggregate-return -Wnested-externs -Winline -Wwrite-strings -Wundef
--LDFLAGS += $(LDPATH) $(LIBS)
-+#CFLAGS  += -Wstrict-prototypes -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Waggregate-return -Wnested-externs -Winline -Wwrite-strings -Wundef
-+LDFLAGS += $(LIBS)
+ # Print whatever debugging messages I've left in this release.
+-DEFINES += -DDEBUG	# miscellaneous debugging
++#DEFINES += -DDEBUG	# miscellaneous debugging
  
- HEADERS  = evilwm.h
- SRCS     = client.c events.c main.c misc.c new.c screen.c
-@@ -94,10 +94,8 @@
+ # ----- You shouldn't need to change anything under this line ------ #
  
- doinstall:
- 	if [ -f evilwm.exe ]; then mv evilwm.exe evilwm; fi
--	mkdir -p $(prefix)/bin $(prefix)/share/man/man1
--	install -s evilwm $(prefix)/bin
--	install evilwm.1 $(prefix)/share/man/man1
--	#gzip -9 $(prefix)/share/man/man1/evilwm.1
-+	${BSD_INSTALL_PROGRAM} evilwm $(prefix)/bin
-+	${BSD_INSTALL_MAN} evilwm.1 $(prefix)/man/man1
+@@ -64,7 +64,7 @@
  
- install: doinstall
+ distname = evilwm-$(version)
  
+-DEFINES += -DXDEBUG	# show some X calls
++#DEFINES += -DXDEBUG	# show some X calls
+ 
+ DEFINES += -DVERSION=\"$(version)\" $(DEBIAN)
+ CFLAGS  += $(INCLUDES) $(DEFINES) -Os -Wall
