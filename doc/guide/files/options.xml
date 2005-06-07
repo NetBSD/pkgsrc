@@ -1,7 +1,7 @@
-<!-- $NetBSD: options.xml,v 1.6 2005/06/03 13:29:18 dillo Exp $ -->
+<!-- $NetBSD: options.xml,v 1.7 2005/06/07 20:01:04 dillo Exp $ -->
 
 <!-- based on:
-pkgsrc/mk/bsd.options.mk 1.23
+pkgsrc/mk/bsd.options.mk 1.38
 -->
 
 <chapter id="options">
@@ -19,7 +19,7 @@ apply.</para>
 <sect1 id="global-default-options">
 <title>Global default options</title>
 
-<para> Global default options are listed in
+<para>Global default options are listed in
 <varname>PKG_DEFAULT_OPTIONS</varname>, which is a list of the options
 that should be built into every package if that option is supported.
 This variable should be set in <filename>/etc/mk.conf</filename>.</para>
@@ -38,30 +38,49 @@ e.g. <filename>options.mk</filename>, that is included by the
 main package <filename>Makefile</filename>.</para>
 
 <programlisting>
-# Global and legacy options
-PKG_OPTIONS_VAR=        PKG_OPTIONS.wibble
-PKG_SUPPORTED_OPTIONS=  ldap sasl
-PKG_SUGGESTED_OPTIONS=  sasl
-PKG_OPTION_LEGACY_VARS= WIBBLE_USE_OPENLDAP:ldap USE_SASL2:sasl
+PKG_OPTIONS_VAR=		PKG_OPTIONS.wibble
+PKG_SUPPORTED_OPTIONS=		wibble-foo ldap
+PKG_OPTIONAL_GROUPS=		database
+PKG_GROUP.database=		mysql pgsql
+PKG_SUGGESTED_OPTIONS=		wibble-foo
+PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_OPENLDAP:ldap
+PKG_OPTIONS_LEGACY_OPTS+=	foo:wibble-foo
+
+.include "../../mk/bsd.prefs.mk"
+
+# this package was previously named wibble2
+.if defined(PKG_OPTIONS.wibble2)
+PKG_LEGACY_OPTIONS+=  ${PKG_OPTIONS.wibble2}
+PKG_OPTIONS_LEGACY_WARNINGS+="Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
+.endif
 
 .include "../../mk/bsd.options.mk"
 
 # Package-specific option-handling
 
 ###
+### FOO support
+###
+.if !empty(PKG_OPTIONS:Mwibble-foo)
+CONFIGURE_ARGS+=	--enable-foo
+.endif
+
+###
 ### LDAP support
 ###
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap/buildlink3.mk"
-CONFIGURE_ARGS+=      --enable-ldap=${BUILDLINK_PREFIX.openldap}
+CONFIGURE_ARGS+=	--enable-ldap=${BUILDLINK_PREFIX.openldap}
 .endif
 
 ###
-### SASL authentication
+### database support
 ###
-.if !empty(PKG_OPTIONS:Msasl)
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
-CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
+.if !empty(PKG_OPTIONS:Mmysql)
+.  include "../../mk/mysql.buildlink3.mk"
+.endif
+.if !empty(PKG_OPTIONS:Mpgsql)
+.  include "../../mk/pgsql.buildlink3.mk"
 .endif
 </programlisting>
 
@@ -72,19 +91,58 @@ if needed.</para>
 <orderedlist>
 
 <listitem><para><varname>PKG_OPTIONS_VAR</varname> is the name of the
-&man.make.1; variable that contains the options the user wishes to
-select.  The recommended value is
-<quote>PKG_OPTIONS.<replaceable>pkg</replaceable></quote> but any
-package-specific value may be used.  This variable should be set in a
-package Makefile.</para></listitem>
+&man.make.1; variable that the user can set to override the default
+options.  It should be set to
+<quote>PKG_OPTIONS.<replaceable>pkgbase</replaceable></quote>.</para></listitem>
 
-<listitem><para> <varname>PKG_SUPPORTED_OPTIONS</varname> is a list of
-build options supported by the package.  This variable should be set
-in a package Makefile.</para></listitem>
+<listitem><para><varname>PKG_SUPPORTED_OPTIONS</varname> is a list of
+build options supported by the package.</para></listitem>
+
+<listitem><para><varname>PKG_OPTIONS_OPTIONAL_GROUPS</varname> is a
+list of names of groups of mutually exclusive options.  The options in
+each group are listed in
+<varname>PKG_OPTIONS_GROUP.<replaceable>groupname</replaceable></varname>.
+The most specific setting of any option from the group takes
+precedence over all other options in the group.  Options from the
+groups will be automatically added to
+<varname>PKG_SUPPORTED_OPTIONS</varname>.</para></listitem>
+
+<listitem><para><varname>PKG_OPTIONS_REQUIRED_GROUPS</varname> is like
+<varname>PKG_OPTIONS_OPTIONAL_GROUPS</varname>, but building the
+packages will fail if no option from the group is
+selected.</para></listitem>
 
 <listitem><para><varname>PKG_SUGGESTED_OPTIONS</varname> is a list of
 build options which are enabled by default.</para></listitem>
 
+<listitem><para><varname>PKG_OPTIONS_LEGACY_VARS</varname> is a list
+of
+<quote><replaceable>USE_VARIABLE</replaceable>:<replaceable>option</replaceable></quote>
+pairs that map legacy <filename>/etc/mk.conf</filename> variables to
+their option counterparts.  Pairs should be added with
+<quote>+=</quote> to keep the listing of global legacy variables.  A
+warning will be issued if the user uses a legacy
+variable.</para></listitem>
+
+<listitem><para><varname>PKG_OPTIONS_LEGACY_OPTS</varname> is a list
+of
+<quote><replaceable>old-option</replaceable>:<replaceable>new-option</replaceable></quote>
+pairs that map options that have been renamed to their new
+counterparts.  Pairs should be added with <quote>+=</quote> to keep
+the listing of global legacy options.  A warning will be issued if
+the user uses a legacy option.</para></listitem>
+
+<listitem><para><varname>PKG_LEGACY_OPTIONS</varname> is a list of
+options implied by deprecated variables used.  This can be used for
+cases that neither <varname>PKG_OPTIONS_LEGACY_VARS</varname> nor
+<varname>PKG_OPTIONS_LEGACY_OPTS</varname> can handle, e. g. when
+<varname>PKG_OPTIONS_VAR</varname> is renamed.</para></listitem>
+
+<listitem><para><varname>PKG_OPTIONS_DEPRECATED_WARNINGS</varname> is
+a list of warnings about deprecated variables or options used, and
+what to use instead.</para></listitem>
+
+<!-- XXX: not here
 <listitem>
 <para><varname>${PKG_OPTIONS_VAR}</varname> (the variable named in
 <varname>PKG_OPTIONS_VAR</varname>) lists the selected build options
@@ -111,27 +169,40 @@ WIBBLE_OPTIONS=         kerberos -ldap ldap
 <para>This variable should be set in
 <filename>/etc/mk.conf</filename>.</para>
 </listitem>
-
-<listitem><para>The <varname>PKG_OPTIONS_LEGACY_VARS</varname> is only
-needed if you are converting a package that had its own ad-hoc options
-handling to use <filename>bsd.options.mk</filename>.  It converts
-global or legacy options variables into an equivalent
-<varname>PKG_OPTIONS.<replaceable>pkg</replaceable></varname>
-value.</para></listitem>
+-->
 
 </orderedlist>
 
-<para>After the inclusion of bsd.options.mk, the variable
-<varname>PKG_OPTIONS</varname> contains the list of the selected build
-options, properly filtered to remove unsupported and duplicate
+<para>A package should never modify
+<varname>PKG_DEFAULT_OPTIONS</varname> or the variable named in
+<varname>PKG_OPTIONS_VAR</varname>.  These are strictly user-settable.
+To suggest a default set of options, use
+<varname>PKG_SUGGESTED_OPTIONS</varname>.</para>
+
+<para><varname>PKG_OPTIONS_VAR</varname> and at least one of
+<varname>PKG_SUPPORTED_OPTIONS</varname>,
+<varname>PKG_OPTIONS_OPTIONAL_GROUPS</varname>, and
+<varname>PKG_OPTIONS_REQUIRED_GROUPS</varname> must be defined before
+including <filename>bsd.options.mk</filename>.</para>
+
+<para>After the inclusion of <filename>bsd.options.mk</filename>, the
+variable <varname>PKG_OPTIONS</varname> contains the list of selected
+build options, properly filtered to remove unsupported and duplicate
 options.</para>
 
 <para>The remaining sections contain the logic that is specific to
-each option.  There should be a check for every option listed in
-<varname>PKG_SUPPORTED_OPTIONS</varname>, and there should be clear
-documentation on what turning on the option will do in the comments
-preceding each section. The correct way to check for an option is to
-check whether it is listed in <varname>PKG_OPTIONS</varname>.</para>
+each option.  The correct way to check for an option is to check
+whether it is listed in <varname>PKG_OPTIONS</varname>:</para>
+
+<programlisting>.if !empty(PKG_OPTIONS:M<replaceable>option</replaceable>)</programlisting>
+
+<para>If another package already has an option with the same meaning,
+use the same name.  For options applicable to multiple packages (like
+enabling support for a library), use short option names (like the name
+of the library).  For options specific to this package, prefix the
+name with <varname><replaceable>pkgname</replaceable>-</varname>.
+Document the option and its meaning in
+<filename>mk/defaults/options.description</filename>.</para>
 
 </sect1>	  
 
