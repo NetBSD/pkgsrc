@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.11 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.12 2005/06/08 08:13:05 jlam Exp $
 
 BUILTIN_PKG:=	dl
 
@@ -26,28 +26,10 @@ MAKEVARS+=	IS_BUILTIN.dl
 ### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
 ###
 .if !defined(USE_BUILTIN.dl)
-.  if ${PREFER.dl} == "pkgsrc"
-USE_BUILTIN.dl=	no
-.  else
-USE_BUILTIN.dl=	${IS_BUILTIN.dl}
-.    if defined(BUILTIN_PKG.dl) && \
-        !empty(IS_BUILTIN.dl:M[yY][eE][sS])
-USE_BUILTIN.dl=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.dl}
-.        if !empty(USE_BUILTIN.dl:M[yY][eE][sS])
-USE_BUILTIN.dl!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.dl:Q}; then	\
-		${ECHO} yes;						\
-	else								\
-		${ECHO} no;						\
-	fi
-.        endif
-.      endfor
-.    endif
-.    if ${OPSYS} == "Darwin"
+USE_BUILTIN.dl=		${IS_BUILTIN.dl}
+.  if ${OPSYS} == "Darwin"
 USE_BUILTIN.dl=		no	# Darwin uses devel/dlcompat
-.    endif
-.  endif  # PREFER.dl
+.  endif
 .endif
 MAKEVARS+=	USE_BUILTIN.dl
 
