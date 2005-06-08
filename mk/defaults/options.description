@@ -60,6 +60,7 @@ dvdread			Enable reproduction of DVDs.
 dynamic	
 eb			Enable EB dictionary library support.
 edit	
+emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
 esound			Enable support for the Enlightment Sound Daemon.
 faac	
 faad	
