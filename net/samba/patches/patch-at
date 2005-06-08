@@ -1,8 +1,8 @@
-$NetBSD: patch-at,v 1.1 2005/06/05 14:17:53 taca Exp $
+$NetBSD: patch-at,v 1.2 2005/06/08 20:15:20 jlam Exp $
 
---- configure.orig	2005-06-02 23:09:21.000000000 +0200
+--- configure.orig	2005-04-14 02:23:50.000000000 -0400
 +++ configure
-@@ -3991,7 +3991,7 @@ cat >>confdefs.h <<\_ACEOF
+@@ -4794,7 +4794,7 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
  		;;
@@ -11,7 +11,7 @@ $NetBSD: patch-at,v 1.1 2005/06/05 14:17:53 taca Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define FREEBSD 1
-@@ -21611,7 +21611,7 @@ cat >>confdefs.h <<\_ACEOF
+@@ -22517,7 +22517,7 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
  			;;
@@ -20,7 +20,62 @@ $NetBSD: patch-at,v 1.1 2005/06/05 14:17:53 taca Exp $
  			BLDSHARED="true"
  			LDSHFLAGS="-shared"
  			DYNEXP="-Wl,--export-dynamic"
-@@ -37195,7 +37195,7 @@ echo "${ECHO_T}no" >&6;
+@@ -29701,9 +29701,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
+ 
+ 
+ 
+-        echo "$as_me:$LINENO: checking for des_set_key in -lcrypto" >&5
+-echo $ECHO_N "checking for des_set_key in -lcrypto... $ECHO_C" >&6
+-if test "${ac_cv_lib_ext_crypto_des_set_key+set}" = set; then
++        echo "$as_me:$LINENO: checking for EVP_des_cbc in -lcrypto" >&5
++echo $ECHO_N "checking for EVP_des_cbc in -lcrypto... $ECHO_C" >&6
++if test "${ac_cv_lib_ext_crypto_EVP_des_cbc+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   cat >conftest.$ac_ext <<_ACEOF
+@@ -29719,11 +29719,11 @@ extern "C"
+ #endif
+ /* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+-char des_set_key ();
++char EVP_des_cbc ();
+ int
+ main ()
+ {
+-des_set_key ();
++EVP_des_cbc ();
+   ;
+   return 0;
+ }
+@@ -29750,22 +29750,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_lib_ext_crypto_des_set_key=yes;
++  ac_cv_lib_ext_crypto_EVP_des_cbc=yes;
+ 		  ac_cv_lib_ext_crypto=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-ac_cv_lib_ext_crypto_des_set_key=no;
++ac_cv_lib_ext_crypto_EVP_des_cbc=no;
+ 		  ac_cv_lib_ext_crypto=no
+ fi
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ 
+ fi
+-echo "$as_me:$LINENO: result: $ac_cv_lib_ext_crypto_des_set_key" >&5
+-echo "${ECHO_T}$ac_cv_lib_ext_crypto_des_set_key" >&6
+-    if test $ac_cv_lib_ext_crypto_des_set_key = yes; then
++echo "$as_me:$LINENO: result: $ac_cv_lib_ext_crypto_EVP_des_cbc" >&5
++echo "${ECHO_T}$ac_cv_lib_ext_crypto_EVP_des_cbc" >&6
++    if test $ac_cv_lib_ext_crypto_EVP_des_cbc = yes; then
+   cat >>confdefs.h <<_ACEOF
+ #define HAVE_DES_SET_KEY 1
+ _ACEOF
+@@ -38099,7 +38099,7 @@ echo "${ECHO_T}no" >&6;
  	fi
  
  	;;
