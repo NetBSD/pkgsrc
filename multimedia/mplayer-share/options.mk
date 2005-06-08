@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/06/02 16:08:31 dillo Exp $
+# $NetBSD: options.mk,v 1.4 2005/06/08 16:18:44 dillo Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -59,8 +59,8 @@ PKG_SUGGESTED_OPTIONS+=	${_o_}
 # -------------------------------------------------------------------------
 
 .for d in ${MPLAYER_DISABLE_DRIVERS}
-PKG_SUGGESTED_OPTIONS+=	-${d:S/esd/esound/}
-_DEPRECATED_WARNING:=	${_DEPRECATED_WARNING} "Deprecated variable MPLAYER_DISABLE_DRIVERS=${d} used; use PKG_DEFAULT_OPTIONS+=-${d:S/esd/esound/} instead."
+PKG_LEGACY_OPTIONS+=-${d:S/esd/esound/}
+PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable MPLAYER_DISABLE_DRIVERS="${d:Q}" used; use "${PKG_OPTIONS_VAR:Q}"+=-"${d:S/esd/esound/:Q}" instead."
 .endfor
 
 .if ${MACHINE_ARCH} == "i386"
