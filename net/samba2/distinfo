@@ -1,7 +1,17 @@
-$NetBSD: distinfo,v 1.3 2004/10/25 17:05:41 jdolecek Exp $
+$NetBSD: distinfo,v 1.3.4.1 2005/06/08 01:29:22 snj Exp $
 
 SHA1 (samba-2.2.12.tar.gz) = 9f8cf8bef5f7aace692d06c7d1f60be61b046bad
+RMD160 (samba-2.2.12.tar.gz) = a01c42c8d3d44c1de339be3b012cc9d4168b0d3e
 Size (samba-2.2.12.tar.gz) = 5459704 bytes
+SHA1 (samba-2.2.12-CAN-2004-0882.diff.gz) = df1e3e070aa3c2814ab07df5f6fa2d3a286a659b
+RMD160 (samba-2.2.12-CAN-2004-0882.diff.gz) = 0f3ac1329e827d2570eeafe55ab9d26dacc2d55f
+Size (samba-2.2.12-CAN-2004-0882.diff.gz) = 1432 bytes
+SHA1 (samba-2.2.12-CAN-2004-0930.diff.gz) = bfb7398b438f16ead569b3eab263d8066d70f8e5
+RMD160 (samba-2.2.12-CAN-2004-0930.diff.gz) = 2db2e9695eb9c08b5cc598ba75c48aca8e04ad31
+Size (samba-2.2.12-CAN-2004-0930.diff.gz) = 3027 bytes
+SHA1 (samba-2.2.12-CAN-2004-1154.diff.gz) = 5dde5315bf8e7851344322b7d4676774ee5c4a2d
+RMD160 (samba-2.2.12-CAN-2004-1154.diff.gz) = e788027f207bb0481d31e33e5d535dd56e4912b8
+Size (samba-2.2.12-CAN-2004-1154.diff.gz) = 59813 bytes
 SHA1 (patch-aa) = 7f85ab121ffbcb67eb1f1c59f49245dda2eff44d
 SHA1 (patch-ab) = 8be47e3f277f191aff18f77d8ed5ef4d8903ec5f
 SHA1 (patch-ac) = cfde267ffe57046de18691f612e73ecdd1158d86
@@ -10,7 +20,7 @@ SHA1 (patch-ag) = e296e076c6bfe20b839f6f6be83873d7cfcc9d89
 SHA1 (patch-ah) = e87f2e393db68acc7028fe20d4772455379ad7aa
 SHA1 (patch-aj) = e2c5f7580a8c701b6bf35d0d3004f714f2c810cb
 SHA1 (patch-al) = 9507677d964044416802e91597c29310c61c9622
-SHA1 (patch-ap) = cc0b3d73d0c7de4cd46e66b0d66b2c3bbaddeb41
+SHA1 (patch-ap) = 1a8409ba329a18b8b1b8a4ff63f510089465dbdc
 SHA1 (patch-aq) = ea9cd9097cf91dd2b9f1acd9e6ff6f9445505774
 SHA1 (patch-ar) = e5b442fb7eb837bb2771ac71c73e6f95ae6fdfc2
 SHA1 (patch-as) = 019cd56e1a0f3c4517e1701e09d0a7cbd741df93
