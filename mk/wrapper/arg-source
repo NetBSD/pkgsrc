@@ -1,4 +1,4 @@
-# $NetBSD: arg-source,v 1.4 2005/06/08 04:54:27 jlam Exp $
+# $NetBSD: arg-source,v 1.5 2005/06/08 05:02:50 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -60,7 +60,7 @@ while $test $# -gt 0; do
 		;;
 	##############################################################
 	# Split "-Wl,-R/dir1:/dir2" into "-Wl,-R/dir1 -Wl,-R/dir2".
-	# Same for -Wl,-rpath and -Wl,-rpath-link.
+	# Same for -R and -Wl,-rpath and -Wl,-rpath-link.
 	##############################################################
 	-R*:*|-Wl,-R*:*|\
 	-Wl,-rpath,*:*|-Wl,-rpath-link,*:*|-Wl,--rpath,*:*)     
