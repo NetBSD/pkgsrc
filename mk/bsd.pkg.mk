@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1687 2005/06/04 20:56:47 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1688 2005/06/08 22:44:08 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -4844,3 +4844,24 @@ show-tools:
 	@${ECHO} ${_TOOLS_VARNAME.${_t_}:Q}=${${_TOOLS_VARNAME.${_t_}}:Q:Q}
 .  endif
 .endfor
+
+CTYPE?=	Updated
+.if !empty(CTYPE:MUpdated)
+_CTYPE2=	" to "${PKGVERSION:Q}
+.elif !empty(CTYPE:MAdded)
+_CTYPE2=	" version "${PKGVERSION:Q}
+.elif !empty(CTYPE:MRenamed) || !empty(CTYPE:MMoved)
+_CTYPE2=	" to XXX"
+.else
+_CTYPE2=
+.endif
+_PKGPATH=	${.CURDIR:S/${_PKGSRCDIR}\///}
+# override in /etc/mk.conf with your NetBSD login if different
+.if !defined(NETBSD_LOGIN_NAME)
+NETBSD_LOGIN_NAME!=	id -nu
+.endif
+CDATE!=		date -u +%Y-%m-%d
+.PHONY: changes-entry
+changes-entry:
+	@${ECHO} "	"${CTYPE:Q}" "${_PKGPATH:Q}${_CTYPE2}" ["${NETBSD_LOGIN_NAME:Q}" "${CDATE:Q}"]"\
+		>> ${_PKGSRCDIR}/doc/CHANGES
