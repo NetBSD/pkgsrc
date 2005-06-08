@@ -862,15 +862,20 @@ alink="#0000FF">
                 packages</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#committing-importing">17.2. Committing: Importing
+                "#general-notes-for-changes">17.2. General notes
+                when adding, updating, or removing
+                packages</a></span></dt>
+
+                <dt><span class="sect1"><a href=
+                "#committing-importing">17.3. Committing: Importing
                 a package into CVS</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#updating-package">17.3. Updating a package to a
+                "#updating-package">17.4. Updating a package to a
                 newer version</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#moving-package">17.4. Moving a package in
+                "#moving-package">17.5. Moving a package in
                 pkgsrc</a></span></dt>
               </dl>
             </dd>
@@ -5520,15 +5525,20 @@ SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
               packages</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#committing-importing">17.2. Committing: Importing a
+              "#general-notes-for-changes">17.2. General notes when
+              adding, updating, or removing
+              packages</a></span></dt>
+
+              <dt><span class="sect1"><a href=
+              "#committing-importing">17.3. Committing: Importing a
               package into CVS</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#updating-package">17.3. Updating a package to a
+              "#updating-package">17.4. Updating a package to a
               newer version</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#moving-package">17.4. Moving a package in
+              "#moving-package">17.5. Moving a package in
               pkgsrc</a></span></dt>
             </dl>
           </dd>
@@ -12329,14 +12339,18 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             packages</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#committing-importing">17.2. Committing: Importing a
+            "#general-notes-for-changes">17.2. General notes when
+            adding, updating, or removing packages</a></span></dt>
+
+            <dt><span class="sect1"><a href=
+            "#committing-importing">17.3. Committing: Importing a
             package into CVS</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#updating-package">17.3. Updating a package to a newer
+            "#updating-package">17.4. Updating a package to a newer
             version</a></span></dt>
 
-            <dt><span class="sect1"><a href="#moving-package">17.4.
+            <dt><span class="sect1"><a href="#moving-package">17.5.
             Moving a package in pkgsrc</a></span></dt>
           </dl>
         </div>
@@ -12416,8 +12430,56 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
+                "general-notes-for-changes" id=
+                "general-notes-for-changes"></a>17.2.&nbsp;General
+                notes when adding, updating, or removing
+                packages</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>Please note all package additions, updates, moves, and
+          removals in <code class=
+          "filename">pkgsrc/doc/CHANGES</code>. It's very important
+          to keep this file up to date and conforming to the
+          existing format, because it will be used by scripts to
+          automatically update pages on <a href=
+          "http://www.NetBSD.org/" target="_top">www.NetBSD.org</a>
+          and other sites. Additionally, check the <code class=
+          "filename">pkgsrc/doc/TODO</code> file and remove the
+          entry for the package you updated or removed, in case it
+          was mentioned there.</p>
+
+          <p>There is a make target that helps in creating proper
+          <code class="filename">CHANGES</code> entries:
+          <span><strong class="command">make
+          changes-entry</strong></span>. It uses the optional
+          <code class="varname">CTYPE</code> and <code class=
+          "varname">NETBSD_LOGIN_NAME</code> variables. The general
+          usage is to first make sure that your <code class=
+          "filename">CHANGES</code> file is up-to-date (to avoid
+          having to resolve conflicts later-on) and then to
+          <span><strong class="command">cd</strong></span> to the
+          package directory. For package updates,
+          <span><strong class="command">make
+          changes-entry</strong></span> is enough. For new
+          packages, or package moves or removals, set the
+          <code class="varname">CTYPE</code> variable on the
+          command line to "Added", "Moved", or "Removed". You can
+          set <code class="varname">NETBSD_LOGIN_NAME</code> in
+          <code class="filename">/etc/mk.conf</code> if your local
+          login name is not the same as your NetBSD login name.
+          Don't forget to commit the changes to <code class=
+          "filename">pkgsrc/doc/CHANGES</code>!</p>
+        </div>
+
+        <div class="sect1" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
                 "committing-importing" id=
-                "committing-importing"></a>17.2.&nbsp;Committing:
+                "committing-importing"></a>17.3.&nbsp;Committing:
                 Importing a package into CVS</h2>
               </div>
             </div>
@@ -12451,16 +12513,6 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
           file, so people reading the mailing lists know what the
           package is/does.</p>
 
-          <p>Please note all package updates/additions in
-          <code class="filename">pkgsrc/doc/CHANGES</code>. It's
-          very important to keep this file up to date and
-          conforming to the existing format, because it will be
-          used by scripts to automatically update pages on <a href=
-          "http://www.NetBSD.org/" target="_top">www.NetBSD.org</a>
-          and other sites. Additionally, check the pkgsrc/doc/TODO
-          file and remove the entry for the package you updated, in
-          case it was mentioned there.</p>
-
           <p>For new packages, &#8220;<span class="quote">cvs
           import</span>&#8221; is preferred to &#8220;<span class=
           "quote">cvs add</span>&#8221; because the former gets
@@ -12474,7 +12526,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "updating-package" id=
-                "updating-package"></a>17.3.&nbsp;Updating a
+                "updating-package"></a>17.4.&nbsp;Updating a
                 package to a newer version</h2>
               </div>
             </div>
@@ -12526,7 +12578,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "moving-package" id=
-                "moving-package"></a>17.4.&nbsp;Moving a package in
+                "moving-package"></a>17.5.&nbsp;Moving a package in
                 pkgsrc</h2>
               </div>
             </div>

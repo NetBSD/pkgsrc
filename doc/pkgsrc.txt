@@ -252,9 +252,10 @@ II. The pkgsrc developer's guide
     17. Submitting and Committing
 
         17.1. Submitting your packages
-        17.2. Committing: Importing a package into CVS
-        17.3. Updating a package to a newer version
-        17.4. Moving a package in pkgsrc
+        17.2. General notes when adding, updating, or removing packages
+        17.3. Committing: Importing a package into CVS
+        17.4. Updating a package to a newer version
+        17.5. Moving a package in pkgsrc
 
 A. A simple example package: bison
 
@@ -2086,9 +2087,10 @@ Table of Contents
 17. Submitting and Committing
 
     17.1. Submitting your packages
-    17.2. Committing: Importing a package into CVS
-    17.3. Updating a package to a newer version
-    17.4. Moving a package in pkgsrc
+    17.2. General notes when adding, updating, or removing packages
+    17.3. Committing: Importing a package into CVS
+    17.4. Updating a package to a newer version
+    17.5. Moving a package in pkgsrc
 
 Chapter 8. Package components - files, directories and contents
 
@@ -5007,9 +5009,10 @@ Chapter 17. Submitting and Committing
 Table of Contents
 
 17.1. Submitting your packages
-17.2. Committing: Importing a package into CVS
-17.3. Updating a package to a newer version
-17.4. Moving a package in pkgsrc
+17.2. General notes when adding, updating, or removing packages
+17.3. Committing: Importing a package into CVS
+17.4. Updating a package to a newer version
+17.5. Moving a package in pkgsrc
 
 17.1. Submitting your packages
 
@@ -5041,7 +5044,26 @@ You have to separate between binary and "normal" (source) packages here:
     work-in-progress"); see the homepage at http://pkgsrc-wip.sourceforge.net/
     for details.
 
-17.2. Committing: Importing a package into CVS
+17.2. General notes when adding, updating, or removing packages
+
+Please note all package additions, updates, moves, and removals in pkgsrc/doc/
+CHANGES. It's very important to keep this file up to date and conforming to the
+existing format, because it will be used by scripts to automatically update
+pages on www.NetBSD.org and other sites. Additionally, check the pkgsrc/doc/
+TODO file and remove the entry for the package you updated or removed, in case
+it was mentioned there.
+
+There is a make target that helps in creating proper CHANGES entries: make
+changes-entry. It uses the optional CTYPE and NETBSD_LOGIN_NAME variables. The
+general usage is to first make sure that your CHANGES file is up-to-date (to
+avoid having to resolve conflicts later-on) and then to cd to the package
+directory. For package updates, make changes-entry is enough. For new packages,
+or package moves or removals, set the CTYPE variable on the command line to
+"Added", "Moved", or "Removed". You can set NETBSD_LOGIN_NAME in /etc/mk.conf
+if your local login name is not the same as your NetBSD login name. Don't
+forget to commit the changes to pkgsrc/doc/CHANGES!
+
+17.3. Committing: Importing a package into CVS
 
 This section is only of interest for pkgsrc developers with write access to the
 pkgsrc repository. Please remember that cvs imports files relative to the
@@ -5060,17 +5082,10 @@ forget to add the new package to the category's Makefile.
 The commit message of the initial import should include part of the DESCR file,
 so people reading the mailing lists know what the package is/does.
 
-Please note all package updates/additions in pkgsrc/doc/CHANGES. It's very
-important to keep this file up to date and conforming to the existing format,
-because it will be used by scripts to automatically update pages on
-www.NetBSD.org and other sites. Additionally, check the pkgsrc/doc/TODO file
-and remove the entry for the package you updated, in case it was mentioned
-there.
-
 For new packages, "cvs import" is preferred to "cvs add" because the former
 gets everything with a single command, and provides a consistent tag.
 
-17.3. Updating a package to a newer version
+17.4. Updating a package to a newer version
 
 Please always put a concise, appropriate and relevant summary of the changes
 between old and new versions into the commit log when updating a package. There
@@ -5095,7 +5110,7 @@ which pkgsrc is used. Please use your judgement about what should go into
 pkgsrc, and bear in mind that stability is to be preferred above new and
 possibly untested features.
 
-17.4. Moving a package in pkgsrc
+17.5. Moving a package in pkgsrc
 
  1. Make a copy of the directory somewhere else.
 
