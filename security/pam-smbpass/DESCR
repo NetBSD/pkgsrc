@@ -1,3 +1,0 @@
-pam_smbpass is a PAM module to authenticate against a local smbpassd (Samba
-password) user database, and can be used on conforming systems to keep the
-smbpasswd database in sync with the UNIX password file.

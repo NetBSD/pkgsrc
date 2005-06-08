@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.241 2005/05/20 18:10:54 augustss Exp $
+# $NetBSD: Makefile,v 1.242 2005/06/08 08:58:15 salo Exp $
 #
 
 COMMENT=	Security tools
@@ -164,7 +164,6 @@ SUBDIR+=	pakemon
 SUBDIR+=	pam-dbm
 SUBDIR+=	pam-ldap
 SUBDIR+=	pam-mysql
-SUBDIR+=	pam-smbpass
 SUBDIR+=	pflkm
 SUBDIR+=	pgp2
 SUBDIR+=	pgp5
@@ -231,7 +230,6 @@ SUBDIR+=	tinyca
 SUBDIR+=	tkpasman
 SUBDIR+=	tripwire
 SUBDIR+=	uvscan
-SUBDIR+=	winbind
 SUBDIR+=	xmlsec1
 SUBDIR+=	zebedee
 
