@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10330 2005/06/07 23:35:15 hubertf Exp $
+$NetBSD: CHANGES,v 1.10331 2005/06/08 08:58:15 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2840,3 +2840,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/audit-packages to 1.35 [dillo 2005-06-07]
 	Updated multimedia/mjpegtools to 1.6.2nb4 [wiz 2005-06-07]
 	Updated x11/xlockmore to 5.18 [hubertf 2005-06-08]
+	Removed net/samba2 [salo 2005-06-08]
+	Removed security/pam-smbpass [salo 2005-06-08]
+	Removed security/winbind [salo 2005-06-08]
