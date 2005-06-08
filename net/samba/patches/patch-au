@@ -1,8 +1,8 @@
-$NetBSD: patch-au,v 1.1 2005/06/05 14:17:53 taca Exp $
+$NetBSD: patch-au,v 1.2 2005/06/08 20:15:20 jlam Exp $
 
---- configure.in.orig	2005-06-02 23:10:03.000000000 +0200
+--- configure.in.orig	2005-04-14 02:14:26.000000000 -0400
 +++ configure.in
-@@ -514,7 +514,7 @@ case "$host_os" in
+@@ -533,7 +533,7 @@ case "$host_os" in
  	*irix*)
  		AC_DEFINE(SYSV, 1, [Whether to enable System V compatibility])
  		;;
@@ -11,7 +11,7 @@ $NetBSD: patch-au,v 1.1 2005/06/05 14:17:53 taca Exp $
  		AC_DEFINE(FREEBSD, 1, [Whether the host os is FreeBSD])
  		;;
  #
-@@ -1203,7 +1203,7 @@ if test "$enable_shared" = "yes"; then
+@@ -1223,7 +1223,7 @@ if test "$enable_shared" = "yes"; then
  			AC_DEFINE(STAT_ST_BLOCKSIZE,512)
  			AC_DEFINE(BROKEN_GETGRNAM,1,[Does getgrnam work correctly])
  			;;
@@ -20,7 +20,16 @@ $NetBSD: patch-au,v 1.1 2005/06/05 14:17:53 taca Exp $
  			BLDSHARED="true"
  			LDSHFLAGS="-shared"
  			DYNEXP="-Wl,--export-dynamic"
-@@ -4090,7 +4090,7 @@ samba_cv_HAVE_BROKEN_LINUX_SENDFILE=yes,
+@@ -2788,7 +2788,7 @@ if test x"$with_ads_support" != x"no"; t
+   AC_CHECK_LIB_EXT(k5crypto, KRB5_LIBS, krb5_encrypt_data)
+ 
+   # Heimdal checks.
+-  AC_CHECK_LIB_EXT(crypto, KRB5_LIBS, des_set_key)
++  AC_CHECK_LIB_EXT(crypto, KRB5_LIBS, EVP_des_cbc)
+   AC_CHECK_LIB_EXT(asn1, KRB5_LIBS, copy_Authenticator)
+   AC_CHECK_LIB_EXT(roken, KRB5_LIBS, roken_getaddrinfo_hostspec)
+ 
+@@ -4108,7 +4108,7 @@ samba_cv_HAVE_BROKEN_LINUX_SENDFILE=yes,
  	fi
  
  	;;
