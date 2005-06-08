@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:44 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/08 14:48:13 wiz Exp $
 #
 
 DISTNAME=	argus-3.3
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=	p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
 BUILD_DEPENDS+=	p5-Crypt-DES-[0-9]*:../../security/p5-Crypt-DES
 BUILD_DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 
-USE_PERL5=		yes
+USE_TOOLS+=		perl
 USE_PKGINSTALL=		yes
 HAS_CONFIGURE= 		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/Configure
@@ -30,13 +30,5 @@ CONFIGURE_ARGS+=	--data_dir ${VARBASE}/argus
 
 RCD_SCRIPTS=		argusd
 
-.include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=		USE_INET6
-
-.if !empty(USE_INET6:M[Yy][Ee][Ss])
-BUILD_DEPENDS+= fping6-[0-9]*:../../net/fping6
-BUILD_DEPENDS+= p5-Socket6>=0.12:../../net/p5-Socket6
-.endif
-
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
