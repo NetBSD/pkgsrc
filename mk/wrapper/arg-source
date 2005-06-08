@@ -1,4 +1,4 @@
-# $NetBSD: arg-source,v 1.5 2005/06/08 05:02:50 jlam Exp $
+# $NetBSD: arg-source,v 1.6 2005/06/08 05:54:17 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -79,6 +79,37 @@ while $test $# -gt 0; do
 			$debug_log $wrapperlog "    (arg-source) push: $R$dir"
 		done
 		IFS="${save_IFS}"
+		;;
+	##############################################################
+	# Merge and split "-Wl,-R -Wl,/dir1:/dir2" into
+	# "-Wl,-R/dir1 -Wl,-R/dir2".  Same for -Wl,-rpath and
+	# -Wl,-rpath-link.
+	##############################################################
+	-Wl,-R|-Wl,-rpath|-Wl,-rpath-link|-Wl,--rpath)
+		nextarg="$1"; shift
+		case $arg in  
+		-Wl,-R)			R="-Wl,-R" ;;
+		-Wl,-rpath)		R="-Wl,-rpath," ;;      
+		-Wl,-rpath-link)	R="-Wl,-rpath-link," ;; 
+		-Wl,--rpath)		R="-Wl,--rpath," ;;
+		esac
+		nextarg="${nextarg#-Wl}"
+		case $nextarg in
+		*:*)
+			save_IFS="${IFS}"; IFS=":"
+			for dir in $nextarg; do
+				shquote "$dir"; dir="$shquoted"
+				append_queue argbuf "$R$dir"
+				$debug_log $wrapperlog "    (arg-source) push: $R$dir"
+			done
+			IFS="${save_IFS}"
+			;;
+		*)
+			shquote "$nextarg"; nextarg="$shquoted"
+			append_queue argbuf "$R$nextarg"
+			$debug_log $wrapperlog "    (arg-source) push: $R$nextarg"
+			;;
+		esac
 		;;
 	##############################################################
 	# "-Xlinker arg" is the equivalent of "-Wl,arg" so convert it
