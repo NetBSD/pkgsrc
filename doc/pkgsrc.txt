@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright (C) 1994-2004 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.8 2005/06/03 12:27:48 jmmv Exp $
+$NetBSD: pkgsrc.xml,v 1.9 2005/06/08 13:59:30 dillo Exp $
 
 Abstract
 
@@ -1203,8 +1203,8 @@ which can be used to select or disable options specifically for package pkgbase
 . Options listed in these variables are selected, options preceded by "-" are
 disabled.
 
-For each option, the following settings are consulted in the order given, and
-the last setting that selects or disables the option is used:
+The following settings are consulted in the order given, and the last setting
+that selects or disables an option is used:
 
  1. the default options as suggested by the package maintainer
 
