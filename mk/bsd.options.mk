@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.38 2005/06/06 13:54:51 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.39 2005/06/08 16:19:08 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -93,7 +93,7 @@
 #
 # .if defined(PKG_OPTIONS.wibble2)
 # PKG_LEGACY_OPTIONS+=	${PKG_OPTIONS.wibble2}
-# PKG_OPTIONS_LEGACY_WARNINGS+="Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
+# PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
 # .endif
 #
 # .include "../../mk/bsd.options.mk"
