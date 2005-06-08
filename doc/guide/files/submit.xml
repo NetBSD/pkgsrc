@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.6 2005/05/24 12:14:42 wiz Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.7 2005/06/08 23:03:49 wiz Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -51,6 +51,34 @@ packages here:
 
 </sect1>
 
+<sect1 id="general-notes-for-changes">
+<title>General notes when adding, updating, or removing packages</title>
+<para>Please note all package additions, updates, moves, and removals
+  in <filename>pkgsrc/doc/CHANGES</filename>. It's very important
+  to keep this file up to date and conforming to the existing
+  format, because it will be used by scripts to automatically update
+  pages on <ulink url="http://www.NetBSD.org/">www.NetBSD.org</ulink>
+  and other sites. Additionally, check the
+  <filename>pkgsrc/doc/TODO</filename> file and remove the entry
+  for the package you updated or removed, in case it was mentioned
+  there.</para>
+
+<para>There is a make target that helps in creating proper
+  <filename>CHANGES</filename> entries:  <command>make
+  changes-entry</command>. It uses the optional <varname>CTYPE</varname>
+  and <varname>NETBSD_LOGIN_NAME</varname> variables. The general
+  usage is to first make sure that your <filename>CHANGES</filename>
+  file is up-to-date (to avoid having to resolve conflicts later-on)
+  and then to <command>cd</command> to the package directory.  For
+  package updates, <command>make changes-entry</command> is enough.
+  For new packages, or package moves or removals, set the
+  <varname>CTYPE</varname> variable on the command line to "Added",
+  "Moved", or "Removed".  You can set <varname>NETBSD_LOGIN_NAME</varname>
+  in <filename>/etc/mk.conf</filename> if your local login name is
+  not the same as your NetBSD login name. Don't forget to commit
+  the changes to <filename>pkgsrc/doc/CHANGES</filename>!</para>
+</sect1>
+
 <sect1 id="committing-importing">
 <title>Committing: Importing a package into CVS</title>
 <para>
@@ -80,16 +108,6 @@ packages here:
   The commit message of the initial import should include part of the
   <filename>DESCR</filename> file, so people reading the mailing lists know
   what the package is/does.
-</para>
-
-<para>
-  Please note all package updates/additions in
-  <filename>pkgsrc/doc/CHANGES</filename>. It's very
-  important to keep this file up to date and conforming to the existing
-  format, because it will be used by scripts to automatically update pages on
-  <ulink url="http://www.NetBSD.org/">www.NetBSD.org</ulink> and other
-  sites. Additionally, check the pkgsrc/doc/TODO file and remove the entry
-  for the package you updated, in case it was mentioned there.
 </para>
 
 <para>
