@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/02 05:16:21 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/08 05:49:21 jlam Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -123,9 +123,11 @@ TEST_MAKEFILES=	${RUNTESTS:S/^/${TEST_DIR}\//:S/$/.mk/}
 .  include "tests/remove-dir.mk"
 .  include "tests/remove-option.mk"
 .  include "tests/repeated-arg.mk"
+.  include "tests/rpath-merge.mk"
 .  include "tests/rpath-pkgdir-slashdot.mk"
 .  include "tests/rpath-pkgdir.mk"
 .  include "tests/rpath-pkgsubdir.mk"
+.  include "tests/rpath-split.mk"
 .  include "tests/rpath-usr-lib-slashdot.mk"
 .  include "tests/rpath-usr-lib-subdir.mk"
 .  include "tests/rpath-usr-lib.mk"
