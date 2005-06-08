@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.12 2005/06/04 20:56:47 rillig Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.13 2005/06/08 17:52:50 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -241,7 +241,7 @@ apply-pkgsrc-patches:
 				${ECHO_MSG} "**************************************"; \
 				${ECHO_MSG} "Patch file $$i has been modified"; \
 				${ECHO_MSG} "**************************************"; \
-				fail="$$fail $$filename";		\
+				fail="$$fail $$i";			\
 				continue;				\
 			  fi; };					\
 			;;						\
@@ -255,11 +255,13 @@ apply-pkgsrc-patches:
 			${ECHO} "$$i" >> ${_PATCH_COOKIE_TMP:Q};	\
 		else							\
 			${ECHO_MSG} "Patch $$i failed";			\
-			fail="$$fail $$filename";			\
+			fail="$$fail $$i";				\
 		fi;							\
 	done;								\
 	if ${TEST} -n "$$fail"; then					\
 		${ECHO_MSG} "Patching failed due to modified or broken patch file(s):"; \
-		${ECHO_MSG} "	$$fail";				\
+		for i in $$fail; do					\
+			${ECHO_MSG} "	$$i";				\
+		done;							\
 		${_PKGSRC_PATCH_FAIL};					\
 	fi
