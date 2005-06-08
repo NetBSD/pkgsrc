@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1 2005/06/08 16:17:46 bouyer Exp $
+
+--- Info.pm.orig	2005-06-08 18:00:15.000000000 +0200
++++ Info.pm	2005-06-08 18:01:54.000000000 +0200
+@@ -384,7 +384,8 @@
+ 
+ =item SNMP::Info::Layer2::C2900
+ 
+-Subclass for Cisco Catalyst 2900, 2950, 3500XL, and 3548 devices running IOS.
++Subclass for Cisco Catalyst 2900, 2940, 2950, 3500XL, and 3548 devices
++running IOS.
+ 
+ =item SNMP::Info::Layer2::Catalyst
+ 
+@@ -714,7 +715,7 @@
+         Elsif Layer2 (no Layer3)           -> SNMP::Info::Layer2
+             Aironet - IOS Devices          -> SNMP::Info::Layer2::Aironet
+             Catalyst 1900                  -> SNMP::Info::Layer2::C1900
+-            Catalyst 2900XL,2950,3500XL    -> SNMP::Info::Layer2::C2900
++            Catalyst 2900XL,2940,2950,3500XL -> SNMP::Info::Layer2::C2900
+             Catalyst 2970                  -> SNMP::Info::Layer3::C6500
+             Catalyst 3550/3548             -> SNMP::Info::Layer3::C3550
+             Catalyst WS-C 2926,5xxx        -> SNMP::Info::Layer2::Catalyst
+@@ -790,7 +791,7 @@
+         $objtype = 'SNMP::Info::Layer2::C1900' if ($desc =~ /catalyst/i and $desc =~ /\D19\d{2}/);
+ 
+         #   Catalyst 2900 and 3500XL (IOS) series override
+-        $objtype = 'SNMP::Info::Layer2::C2900' if ($desc =~ /(C2900XL|C2950|C3500XL)/i );
++        $objtype = 'SNMP::Info::Layer2::C2900' if ($desc =~ /(C2900XL|C2940|C2950|C3500XL)/i );
+ 
+         #   Catalyst WS-C series override 2926,4k,5k,6k in Hybrid
+         $objtype = 'SNMP::Info::Layer2::Catalyst' if ($desc =~ /WS-C\d{4}/);
