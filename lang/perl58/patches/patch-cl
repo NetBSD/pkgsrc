@@ -1,0 +1,21 @@
+$NetBSD: patch-cl,v 1.1 2005/06/08 08:42:33 jlam Exp $
+
+--- ext/SDBM_File/sdbm/sdbm.c.orig	2003-08-27 06:30:22.000000000 -0400
++++ ext/SDBM_File/sdbm/sdbm.c
+@@ -34,10 +34,12 @@
+ /*
+  * externals
+  */
+-#ifndef WIN32
+-#ifndef sun
+-extern int errno;
+-#endif
++#ifndef errno
++	extern int errno;     /* ANSI allows errno to be an lvalue expr.
++			       * For example in multithreaded environments
++			       * something like this might happen:
++			       * extern int *_errno(void);
++			       * #define errno (*_errno()) */
+ #endif
+ 
+ extern Malloc_t malloc proto((MEM_SIZE));
