@@ -1,4 +1,4 @@
-<!-- $NetBSD: options.xml,v 1.7 2005/06/07 20:01:04 dillo Exp $ -->
+<!-- $NetBSD: options.xml,v 1.8 2005/06/08 16:20:17 dillo Exp $ -->
 
 <!-- based on:
 pkgsrc/mk/bsd.options.mk 1.38
@@ -51,7 +51,7 @@ PKG_OPTIONS_LEGACY_OPTS+=	foo:wibble-foo
 # this package was previously named wibble2
 .if defined(PKG_OPTIONS.wibble2)
 PKG_LEGACY_OPTIONS+=  ${PKG_OPTIONS.wibble2}
-PKG_OPTIONS_LEGACY_WARNINGS+="Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
+PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
 .endif
 
 .include "../../mk/bsd.options.mk"
