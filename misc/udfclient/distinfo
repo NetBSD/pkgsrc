@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2005/04/10 00:42:49 reinoud Exp $
+$NetBSD: distinfo,v 1.18 2005/06/08 22:46:26 reinoud Exp $
 
-SHA1 (UDFclient.0.3.5.tgz) = e18afc0270b3e362593ac1df1692a69f707ecc80
-RMD160 (UDFclient.0.3.5.tgz) = e9df99db9a256ed63c554c0da8e7ed4480eca056
-Size (UDFclient.0.3.5.tgz) = 189644 bytes
+SHA1 (UDFclient.0.4.tgz) = 307a38ea8114663f4b5174eac09caf4c57770186
+RMD160 (UDFclient.0.4.tgz) = 8b95463b8d385bff3175303b0bf6de0b9a2f55c2
+Size (UDFclient.0.4.tgz) = 228756 bytes
