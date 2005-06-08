@@ -1,0 +1,73 @@
+<!-- $NetBSD: configuring.xml,v 1.1 2005/06/08 13:59:30 dillo Exp $ -->
+
+<chapter id="configuring">
+<title>Configuring pkgsrc</title>
+
+<sect1 id="selecting-options">
+<title>Selecting build options</title>
+
+<para>Some packages have build time options, usually to select between
+different dependencies, enable optional support for big dependencies
+or enable experimental features.</para>
+
+<para>To see which options, if any, a package supports, and which
+options are mutually exclusive, run <command>make show-options</command>,
+for example:</para>
+
+<programlisting>
+The following options are supported by this package:
+        ssl      Enable SSL support.
+Exactly one of the following gecko options is required:
+        firefox  Use firefox as gecko rendering engine.
+        mozilla  Use mozilla as gecko rendering engine.
+At most one of the following database options may be selected:
+        mysql    Enable support for MySQL database.
+        pgsql    Enable support for PostgreSQL database.
+
+These options are enabled by default: firefox
+These options are currently enabled: mozilla ssl
+</programlisting>
+
+<para>The following variables can be defined in
+<filename>/etc/mk.conf</filename> to select which options to enable
+for a package: <varname>PKG_DEFAULT_OPTIONS</varname>, which can be
+used to select or disable options for all packages that support them,
+and <varname>PKG_OPTIONS.<replaceable>pkgbase</replaceable></varname>,
+which can be used to select or disable options specifically for
+package <replaceable>pkgbase</replaceable>.  Options listed in these
+variables are selected, options preceded by <quote>-</quote> are
+disabled.</para>
+
+<para>The following settings are consulted in the order given, and the
+last setting that selects or disables an option is used:</para>
+
+<orderedlist>
+<listitem><para>the default options as suggested by the package
+maintainer</para></listitem>
+
+<listitem><para>the options implied by the settings of legacy
+variables (see below)</para></listitem>
+
+<listitem><para><varname>PKG_DEFAULT_OPTIONS</varname></para></listitem>
+
+<listitem><para><varname>PKG_OPTIONS.<replaceable>pkgbase</replaceable></varname></para></listitem>
+</orderedlist>
+
+<para>For groups of mutually exclusive options, the last option
+selected is used, all others are automatically disabled.  If an option
+of the group is explicitly disabled, the previously selected option,
+if any, is used.  It is an error if no option from a required group of
+options is selected, and building the package will fail.</para>
+
+<para>Before the options framework was introduced, build options were
+selected by setting a variable in <filename>/etc/mk.conf</filename>
+for each option.  To ease transition to the options framework for the
+user, these legacy variables are converted to the appropriate options
+setting automatically.  A warning is issued to prompt the user to
+update <filename>/etc/mk.conf</filename> to use the options framework
+directly.  Support for these legacy variables will be removed
+eventually.</para>
+
+</sect1>
+
+</chapter>
