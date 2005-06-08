@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10331 2005/06/08 08:58:15 salo Exp $
+$NetBSD: CHANGES,v 1.10332 2005/06/08 16:21:37 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2843,3 +2843,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed net/samba2 [salo 2005-06-08]
 	Removed security/pam-smbpass [salo 2005-06-08]
 	Removed security/winbind [salo 2005-06-08]
+	Updated net/p5-SNMP-Info to 0.9nb1 [bouyer 2005-06-08]
