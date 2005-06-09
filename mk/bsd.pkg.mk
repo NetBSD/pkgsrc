@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1690 2005/06/09 16:08:27 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1691 2005/06/09 16:09:58 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4870,11 +4870,10 @@ _CTYPE2=	" to XXX"
 .else
 _CTYPE2=
 .endif
-_PKGPATH=	${.CURDIR:S/${_PKGSRCDIR}\///}
 # override in /etc/mk.conf with your NetBSD login if different
 NETBSD_LOGIN_NAME?=	`id -nu`
 CDATE!=		date -u +%Y-%m-%d
 .PHONY: changes-entry
 changes-entry:
-	@${ECHO} "	"${CTYPE:Q}" "${_PKGPATH:Q}${_CTYPE2}" [${NETBSD_LOGIN_NAME} "${CDATE:Q}"]"\
+	@${ECHO} "	"${CTYPE:Q}" "${PKGPATH:Q}${_CTYPE2}" [${NETBSD_LOGIN_NAME} "${CDATE:Q}"]"\
 		>> ${_PKGSRCDIR}/doc/CHANGES
