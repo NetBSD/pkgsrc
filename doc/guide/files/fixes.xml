@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.21 2005/06/05 23:14:33 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.22 2005/06/09 18:30:33 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -360,25 +360,22 @@
     <sect2 id="security-handling">
       <title>Handling packages with security problems</title>
       
-      <para> When a vulnerability is found, this should be noted in
+      <para>When a vulnerability is found, this should be noted in
         <filename>localsrc/security/advisories/pkg-vulnerabilities</filename>,
-        and after the commit of that file, it should be copied to both
-        <filename>/pub/NetBSD/packages/distfiles/pkg-vulnerabilities</filename>
-        and
-        <filename>/pub/NetBSD/packages/distfiles/vulnerabilities</filename>
-        on ftp.NetBSD.org using
-        <filename>localsrc/security/advisories/Makefile</filename>.  In
-        addition, if a <filename>buildlink3.mk</filename> file exists
-        for an affected package, bumping <varname>PKGREVISION</varname>
-        and creating a corresponding
-        <varname>BUILDLINK_RECOMMENDED.<replaceable>pkg</replaceable></varname>
-        entry should be considered. See <xref linkend="buildlink"/> for
-        more information about writing
-        <filename>buildlink3.mk</filename> files and
-        <varname>BUILDLINK_*</varname> definitions. </para>
+        and after committing that file, use <command>make upload</command>
+	in the same directory to update the file on ftp.NetBSD.org.</para>
 
-      <para> Also, if the fix should be applied to the stable pkgsrc
-        branch, be sure to submit a pullup request!  </para>
+      <para>After fixing the vulnerability by a patch, its
+	<varname>PKGREVISION</varname> should be increased (this
+	is of course not necessary if the problem is fixed by using
+	a newer release of the software).  In addition, if a
+	<filename>buildlink3.mk</filename> file exists for an
+	affected package, a corresponding
+        <varname>BUILDLINK_RECOMMENDED.<replaceable>pkg</replaceable></varname>
+	entry should be added or updated in it.</para>
+
+      <para>Also, if the fix should be applied to the stable pkgsrc
+        branch, be sure to submit a pullup request!</para>
     </sect2>
 
 
