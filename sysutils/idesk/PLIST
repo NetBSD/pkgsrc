@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/08 14:27:27 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/09 21:09:39 jmmv Exp $
 bin/idesk
 share/doc/idesk/README
+share/idesk/README
+share/idesk/default.lnk
+share/idesk/dot.ideskrc
+share/idesk/dot.xsession
+share/idesk/folder_home.xpm
+@dirrm share/idesk
 @dirrm share/doc/idesk
