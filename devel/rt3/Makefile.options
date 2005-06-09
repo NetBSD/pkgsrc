@@ -1,27 +1,13 @@
-# $NetBSD: Makefile.options,v 1.4 2005/05/26 15:00:29 cube Exp $
+# $NetBSD: Makefile.options,v 1.5 2005/06/09 08:08:26 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rt
-PKG_SUPPORTED_OPTIONS=	backend-mysql backend-pgsql		\
-			frontend-modperl1 frontend-modperl2	\
-			frontend-fastcgi
+PKG_OPTIONS_REQUIRED_GROUPS=	backend frontend
+PKG_OPTIONS_GROUP.backend=	backend-mysql backend-pgsql
+PKG_OPTIONS_GROUP.frontend=	frontend-modperl1 frontend-modperl2 \
+				frontend-fastcgi
 PKG_SUGGESTED_OPTIONS=	backend-mysql frontend-fastcgi
 
 .include "../../mk/bsd.options.mk"
-
-# Too bad -1-6's make doesn't have :[#] modifier
-.for _option_ in backend frontend
-. if empty(PKG_OPTIONS:M${_option_}-*)
-PKG_FAIL_REASON+=	"There must be one ${_option_} defined."
-. else
-_RT_DUMMY:=	# empty
-.  for _dummy_ in ${PKG_OPTIONS:M${_option_}-*}
-_RT_DUMMY:=	${_RT_DUMMY}+
-.  endfor
-.  if ${_RT_DUMMY} != +
-PKG_FAIL_REASON+=       "There must be no more than one ${_option_} defined."
-.  endif
-. endif
-.endfor
 
 # Other options
 
