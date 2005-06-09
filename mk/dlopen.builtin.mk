@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.12 2005/06/08 08:13:05 jlam Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.13 2005/06/09 05:59:51 jlam Exp $
 
 BUILTIN_PKG:=	dl
 
@@ -25,6 +25,11 @@ MAKEVARS+=	IS_BUILTIN.dl
 ### Determine whether we should use the built-in implementation if it
 ### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
 ###
+#
+# We ignore the value of PREFER_PKGSRC and PREFER_NATIVE because for
+# every platform except for Darwin, we can only use the built-in
+# dynamic linker functions, so USE_BUILTIN.dl must match IS_BUILTIN.dl.
+#
 .if !defined(USE_BUILTIN.dl)
 USE_BUILTIN.dl=		${IS_BUILTIN.dl}
 .  if ${OPSYS} == "Darwin"
