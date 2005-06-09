@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10335 2005/06/09 14:27:32 kent Exp $
+$NetBSD: CHANGES,v 1.10336 2005/06/09 15:36:36 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2847,3 +2847,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated misc/udfclient to 0.4 [reinoud 2005-06-09]
 	Updated sysutils/iwi-firmware to 2.3 [skrll 2005-06-09]
 	Updated emulators/peace to 0.0.20050609 [kent 2005-06-09]
+	Updated security/audit-packages to 1.36 [dillo 2005-06-09]
