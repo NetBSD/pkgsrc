@@ -1,4 +1,4 @@
-# $NetBSD: pthread.builtin.mk,v 1.8 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: pthread.builtin.mk,v 1.9 2005/06/09 06:03:40 jlam Exp $
 
 BUILTIN_PKG:=	pthread
 
@@ -29,11 +29,13 @@ MAKEVARS+=	IS_BUILTIN.pthread
 # prefer one or the other is dependent on the value of
 # PREFER_NATIVE_PTHREADS, which is yes/no.
 #
-.if !empty(PREFER_NATIVE_PTHREADS:M[yY][eE][sS])
+.if !defined(USE_BUILTIN.pthread)
 USE_BUILTIN.pthread=	${IS_BUILTIN.pthread}
-.else
+.  if !empty(PREFER_NATIVE_PTHREADS:M[nN][oO])
 USE_BUILTIN.pthread=	no
+.  endif
 .endif
+MAKEVARS+=	USE_BUILTIN.pthread
 
 ###
 ### The section below only applies if we are not including this file
