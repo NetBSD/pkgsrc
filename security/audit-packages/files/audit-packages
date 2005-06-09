@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-packages,v 1.19 2005/06/07 19:17:01 dillo Exp $
+# $NetBSD: audit-packages,v 1.20 2005/06/09 15:34:52 dillo Exp $
 #
 # Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
 #
@@ -33,13 +33,15 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-ERR_DOWNLOAD="Please run download-vulnerability-list"
-ERR_UPGRADE="Please upgrade audit-packages to the newest version"
+ERR_DOWNLOAD="Please run download-vulnerability-list."
+ERR_UPGRADE="Please upgrade security/audit-packages to the newest version."
+ERR_PKGINSTALL="Please upgrade pkgtools/pkg_install to the newest version."
 
 : ${PKGVULNDIR=@PKGVULNDIR@}
 
 FORMAT_MAJOR=1
 FORMAT_MINOR=0
+PKG_INSTALL_REQUIRED=20050530
 
 if [ -r @PKG_SYSCONFDIR@/audit-packages.conf ]; then
 	echo "Reading settings from @PKG_SYSCONFDIR@/audit-packages.conf"
@@ -71,6 +73,16 @@ case "$errmsg" in
 	# XXX: quote vuls
 	yes)	[ -n "$(find $vuls -ctime +7)" ] && echo "*** WARNING - $vuls more than a week old, continuing..." ;;
 	esac
+	;;
+esac
+
+case "$errmsg" in
+"")	# check that pkg_info is new enough (supports ranges)
+	if [ `@PKG_TOOLS_BIN@/pkg_info -V` -lt "$PKG_INSTALL_REQUIRED" ]
+	then
+		errmsg='Installed pkg_info is too old.'
+		errsolution="$ERR_PKGINSTALL"
+	fi
 	;;
 esac
 
