@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: builtin.mk,v 1.14 2005/06/09 06:07:29 jlam Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -91,7 +91,7 @@ MAKEVARS+=	BUILTIN_PKG.openssl
 ###
 .if !defined(USE_BUILTIN.openssl)
 .  if ${PREFER.openssl} == "pkgsrc"
-USE_BUILTIN.openssl=	${IS_BUILTIN.openssl}
+USE_BUILTIN.openssl=	no
 .  else
 USE_BUILTIN.openssl=	${IS_BUILTIN.openssl}
 .    if defined(BUILTIN_PKG.openssl) && \
