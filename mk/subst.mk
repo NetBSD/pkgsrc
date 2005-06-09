@@ -1,7 +1,7 @@
-# $NetBSD: subst.mk,v 1.21 2005/05/20 21:36:05 jlam Exp $
+# $NetBSD: subst.mk,v 1.22 2005/06/09 19:49:48 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
-# Package makefiles define a ``class'', for each of which a paricular
+# Package makefiles define a ``class'', for each of which a particular
 # substitution description can be defined.  For each class of files, a
 # target subst-<class> is created to perform the text replacement.
 #
