@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2004/10/12 18:28:28 tv Exp $
+# $NetBSD: Makefile,v 1.17.4.1 2005/06/09 22:31:18 salo Exp $
 #
 
 DISTNAME=	gzip-1.2.4a
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/gzip-/gzip-base-/:S/a$/b/}
 SVR4_PKGNAME=	gzipb
 CATEGORIES=	archivers
