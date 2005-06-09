@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10334 2005/06/09 07:31:51 skrll Exp $
+$NetBSD: CHANGES,v 1.10335 2005/06/09 14:27:32 kent Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2846,3 +2846,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/p5-SNMP-Info to 0.9nb1 [bouyer 2005-06-08]
 	Updated misc/udfclient to 0.4 [reinoud 2005-06-09]
 	Updated sysutils/iwi-firmware to 2.3 [skrll 2005-06-09]
+	Updated emulators/peace to 0.0.20050609 [kent 2005-06-09]
