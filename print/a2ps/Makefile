@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2004/12/31 13:27:06 minskim Exp $
+# $NetBSD: Makefile,v 1.51.2.1 2005/06/09 20:05:49 snj Exp $
 
 DISTNAME=		a2ps-4.13b
 PKGNAME=		a2ps-4.13.0.2
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=a2ps/} \
 			ftp://ftp.enst.fr/pub/unix/a2ps/
@@ -13,6 +13,12 @@ COMMENT=		Formats an ascii file for printing on a postscript printer
 
 DEPENDS+=		papersize>=1.0.2:../../print/papersize
 DEPENDS+=		psutils>=1.17:../../print/psutils
+
+.include "../../mk/bsd.prefs.mk"
+
+.if empty(OPSYS:M*BSD)
+DEPENDS+=		mktemp>=1.5:../../sysutils/mktemp
+.endif
 
 WRKSRC=			${WRKDIR}/a2ps-4.13
 STRIP=			# empty
