@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.122 2005/06/09 20:06:01 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.123 2005/06/09 22:31:49 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -283,3 +283,5 @@ Pullup ticket 544 - requested by Lubomir Sedlacik
 security fix for samba2
 Pullup ticket 545 - requested by Lubomir Sedlacik
 security fix for a2ps
+Pullup ticket 546 - requested by Adrian Portelli
+security fix for gzip-base
