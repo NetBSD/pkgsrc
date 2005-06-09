@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1689 2005/06/09 10:09:58 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1690 2005/06/09 16:08:27 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4845,6 +4845,21 @@ show-tools:
 .  endif
 .endfor
 
+# changes-entry appends an entry to pkgsrc/doc/CHANGES.
+#
+# The following variables may be set:
+#
+#    CTYPE is the type of entry to add and is one of "Added", "Updated",
+#	"Renamed", "Moved", of "Removed".  The default CTYPE is "Updated".
+#
+#    NETBSD_LOGIN_NAME is the login name assigned by the NetBSD Project.
+#	It defaults to the local login name.
+#
+# Example usage:
+#
+#	cd /usr/pkgsrc/category/package
+#	make changes-entry CTYPE=Added
+#
 CTYPE?=	Updated
 .if !empty(CTYPE:MUpdated)
 _CTYPE2=	" to "${PKGVERSION:Q}
