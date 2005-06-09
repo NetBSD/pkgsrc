@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.40 2005/06/08 22:36:52 wiz Exp $
+# $NetBSD: bsd.options.mk,v 1.41 2005/06/09 18:44:26 jlam Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -204,7 +204,7 @@ PKG_OPTIONS_DEPRECATED_WARNINGS:=${PKG_OPTIONS_DEPRECATED_WARNINGS} "Deprecated 
 #
 # filter unsupported options from PKG_DEFAULT_OPTIONS
 #
-_OPTIONS_DEFAULT_SUPPORED:=	#empty
+_OPTIONS_DEFAULT_SUPPORTED:=	#empty
 .for _o_ in ${PKG_DEFAULT_OPTIONS}
 _opt_:=		${_o_}
 _popt_:=	${_opt_:C/^-//}
