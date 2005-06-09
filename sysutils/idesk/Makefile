@@ -1,22 +1,27 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:03:22 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/09 21:09:39 jmmv Exp $
 #
 
-DISTNAME=	idesk-0.3.5
-PKGREVISION=	3
+DISTNAME=	idesk-0.7.2
 CATEGORIES=	sysutils x11
-MASTER_SITES=	http://idesk.sourceforge.net/releases/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=idesk/}
 
 MAINTAINER=	pancake@phreaker.net
-HOMEPAGE=	http://sourceforge.net/projects/idesk/
-COMMENT=	Gives users of minimal WMs icons on their desktop
+HOMEPAGE=	http://idesk.sourceforge.net/
+COMMENT=	Lightweight desktop icons handler
 
-USE_TOOLS+=	gmake
+GNU_CONFIGURE=		YES
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/idesk ${PREFIX}/bin/idesk
+CONFIGURE_ARGS+=	--enable-libsn
+
+post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/idesk
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/idesk
 
-.include "../../graphics/imlib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
