@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2005/06/09 07:01:59 kent Exp $
+
+--- dll/Makefile.inc.~1.64.~	2004-03-09 11:45:44.000000000 +0900
++++ dll/Makefile.inc
+@@ -24,6 +24,7 @@ ICUINC=		-I${LOCALBASE}/include
+ X11INC=		-I/usr/X11R6/include
+ FREETYPEINC=	${X11INC}/freetype2
+ CFLAGS+=	-I../common -Wall
++CXXFLAGS=	${CFLAGS}
+ LDFLAGS+=	-mdll -nostartfiles -Wl,--image-base,${IBASE}
+ #LDFLAGS+=	-Wl,--verbose
+ #LDFLAGS+=	-Wl,--enable-extra-pe-debug

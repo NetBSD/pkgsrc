@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2005/06/09 07:01:59 kent Exp $
+
+--- dll/advapi32/Makefile.~1.16.~	2003-11-29 19:32:12.000000000 +0900
++++ dll/advapi32/Makefile
+@@ -3,8 +3,7 @@
+ DLL=	advapi32
+ SRCS=	crt0.c winbase.c winsvc.c wincrypt.c ntsecapi.c \
+ 	reg.cc RegistryKey.cc combase.cc handle.c
+-CFLAGS+=	${ICUINC}
+-CXXFLAGS+=	-I../kernel32
++CFLAGS+=	${ICUINC} -I../kernel32
+ IBASE=		0x89000000
+ DLLDEPS= 	kernel32
+ LDADD+=		${ICULDADD} ${GUIDLDADD}
