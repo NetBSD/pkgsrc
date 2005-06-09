@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10336 2005/06/09 15:36:36 dillo Exp $
+$NetBSD: CHANGES,v 1.10337 2005/06/09 18:22:32 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2848,3 +2848,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/iwi-firmware to 2.3 [skrll 2005-06-09]
 	Updated emulators/peace to 0.0.20050609 [kent 2005-06-09]
 	Updated security/audit-packages to 1.36 [dillo 2005-06-09]
+	Updated news/leafnode to 1.11.3 [salo 2005-06-09]
