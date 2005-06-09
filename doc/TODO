@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3603 2005/06/09 15:22:09 salo Exp $
+$NetBSD: TODO,v 1.3604 2005/06/09 18:22:33 salo Exp $
 
 Suggested new packages
 ======================
@@ -625,7 +625,6 @@ Suggested package updates
 	o lbdb-0.30
 	o lcab-1.0b11
 	o lcc-4.2
-	o leafnode-1.11.3
 	o leafpad-0.7.9
 	o libcomprex-0.3.3
 	o libetpan-0.34b
