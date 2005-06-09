@@ -1,0 +1,32 @@
+$NetBSD: patch-ae,v 1.4 2005/06/09 14:53:49 salo Exp $
+
+Fix for CAN-2004-1377
+
+--- contrib/psmandup.in.orig	1999-10-24 15:06:42.000000000 +0200
++++ contrib/psmandup.in	2005-06-09 16:46:24.000000000 +0200
+@@ -36,7 +36,6 @@
+ message=
+ psselect=${PSSELECT:-psselect}
+ psset=${PSSET:-psset}
+-tmpdir=/tmp/$program.$$
+ 
+ # These two must be kept in synch.  They are opposed.
+ verbose=echo
+@@ -177,6 +176,8 @@
+       exit 1;;
+ esac
+ 
++tmpdir=`mktemp -d -t psmandup.XXXXXX` || { echo "$program: Cannot create temporary directory!" >&2 ; exit 1; }
++
+ if test -n "$debug"; then
+   # Set -x now if debugging
+   set -x
+@@ -185,8 +186,6 @@
+   trap "/bin/rm -rf $tmpdir" 0 1 2 3 13 15
+ fi
+ 
+-mkdir $tmpdir
+-
+ # If printing from stdin, save into a tmp file
+ if test $file = '-'; then
+   file=$tmpdir/stdin.ps
