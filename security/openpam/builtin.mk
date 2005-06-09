@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2005/06/09 06:07:29 jlam Exp $
 
 BUILTIN_PKG:=	openpam
 
@@ -39,7 +39,7 @@ MAKEVARS+=	BUILTIN_PKG.openpam
 ###
 .if !defined(USE_BUILTIN.openpam)
 .  if ${PREFER.openpam} == "pkgsrc"
-USE_BUILTIN.openpam=	${IS_BUILTIN.openpam}
+USE_BUILTIN.openpam=	no
 .  else
 USE_BUILTIN.openpam=	${IS_BUILTIN.openpam}
 .    if defined(BUILTIN_PKG.openpam) && \
