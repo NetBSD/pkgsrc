@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2004/06/11 12:59:27 kent Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/09 14:25:49 kent Exp $
 #
-PEACE_VERSION=	0.0.20040611
+PEACE_VERSION=	0.0.20050609
 DISTNAME=	peace-${PEACE_VERSION}
-SITES_peace-0.0.20040611.tar.gz=http://chiharu.hauN.org/peace/dist/
+SITES_peace-0.0.20050609.tar.gz=http://chiharu.hauN.org/peace/dist/
 CATEGORIES=	emulators
 
-MAINTAINER=	peace-sacrifice@hauN.org
+MAINTAINER=	kent@NetBSD.org
 HOMEPAGE=	http://chiharu.hauN.org/peace/
 COMMENT=	Enable to run Win32 executables
 
