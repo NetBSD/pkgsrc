@@ -1,4 +1,4 @@
-# $NetBSD: arg-source,v 1.6 2005/06/08 05:54:17 jlam Exp $
+# $NetBSD: arg-source,v 1.7 2005/06/09 17:06:21 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -93,7 +93,7 @@ while $test $# -gt 0; do
 		-Wl,-rpath-link)	R="-Wl,-rpath-link," ;; 
 		-Wl,--rpath)		R="-Wl,--rpath," ;;
 		esac
-		nextarg="${nextarg#-Wl}"
+		nextarg="${nextarg#-Wl,}"
 		case $nextarg in
 		*:*)
 			save_IFS="${IFS}"; IFS=":"
