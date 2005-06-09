@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2005/05/04 05:20:40 martti Exp $
+# $NetBSD: Makefile,v 1.163 2005/06/09 17:06:47 martti Exp $
 
 DISTNAME=	postfix-2.2.3
 CATEGORIES=	mail
@@ -127,9 +127,6 @@ do-install:
 .if !empty(PKG_OPTIONS:Msasl)
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${EXAMPLEDIR}
 .endif
-	@for i in ${POSTFIX_EXAMPLE_FILES}; do				\
-		${INSTALL_DATA} ${WRKSRC}/conf/$$i ${EXAMPLEDIR}/$$i;	\
-	done
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${EXAMPLEDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EXAMPLEDIR}/mailer.conf
