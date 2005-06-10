@@ -1,12 +1,12 @@
-/*	NetBSD: sl_init.c,v 1.4 2005/05/16 06:37:47 lukem Exp	*/
-/*	from	NetBSD: stringlist.c,v 1.10 2000/01/25 16:24:40 enami Exp	*/
+/*	NetBSD: filecomplete.h,v 1.1.1.1 2005/05/31 01:53:11 lukem Exp	*/
+/*	from	NetBSD: filecomplete.h,v 1.2 2005/05/07 16:28:32 dsl Exp	*/
 
 /*-
- * Copyright (c) 1994, 1999 The NetBSD Foundation, Inc.
+ * Copyright (c) 1997 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
- * by Christos Zoulas.
+ * by Jaromir Dolecek.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -18,8 +18,8 @@
  *    documentation and/or other materials provided with the distribution.
  * 3. All advertising materials mentioning features or use of this software
  *    must display the following acknowledgement:
- *        This product includes software developed by the NetBSD
- *        Foundation, Inc. and its contributors.
+ *	This product includes software developed by the NetBSD
+ *	Foundation, Inc. and its contributors.
  * 4. Neither the name of The NetBSD Foundation nor the names of its
  *    contributors may be used to endorse or promote products derived
  *    from this software without specific prior written permission.
@@ -36,86 +36,17 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+#ifndef _FILECOMPLETE_H_
+#define _FILECOMPLETE_H_
 
-#include "tnftp.h"
+int fn_complete(EditLine *,
+    char *(*)(const char *, int),
+    char **(*)(const char *, int, int),
+    const char *, const char *, char, int,
+    int *, int *, int *, int *);
 
-#define _SL_CHUNKSIZE	20
+void fn_display_match_list(EditLine *, char **, int, int);
+char *tilde_expand(char *txt);
+char *filename_completion_function(const char *, int);
 
-/*
- * sl_init(): Initialize a string list
- */
-StringList *
-sl_init(void)
-{
-	StringList *sl;
-
-	sl = malloc(sizeof(StringList));
-	if (sl == NULL)
-		return (NULL);
-
-	sl->sl_cur = 0;
-	sl->sl_max = _SL_CHUNKSIZE;
-	sl->sl_str = malloc(sl->sl_max * sizeof(char *));
-	if (sl->sl_str == NULL) {
-		free(sl);
-		sl = NULL;
-	}
-	return (sl);
-}
-
-
-/*
- * sl_add(): Add an item to the string list
- */
-int
-sl_add(StringList *sl, char *name)
-{
-	if (sl->sl_cur == sl->sl_max - 1) {
-		char	**new;
-
-		new = (char **)realloc(sl->sl_str,
-		    (sl->sl_max + _SL_CHUNKSIZE) * sizeof(char *));
-		if (new == NULL)
-			return (-1);
-		sl->sl_max += _SL_CHUNKSIZE;
-		sl->sl_str = new;
-	}
-	sl->sl_str[sl->sl_cur++] = name;
-	return (0);
-}
-
-
-/*
- * sl_free(): Free a stringlist
- */
-void
-sl_free(StringList *sl, int all)
-{
-	size_t i;
-
-	if (sl == NULL)
-		return;
-	if (sl->sl_str) {
-		if (all)
-			for (i = 0; i < sl->sl_cur; i++)
-				free(sl->sl_str[i]);
-		free(sl->sl_str);
-	}
-	free(sl);
-}
-
-
-/*
- * sl_find(): Find a name in the string list
- */
-char *
-sl_find(StringList *sl, char *name)
-{
-	size_t i;
-
-	for (i = 0; i < sl->sl_cur; i++)
-		if (strcmp(sl->sl_str[i], name) == 0)
-			return (sl->sl_str[i]);
-
-	return (NULL);
-}
+#endif

@@ -1,5 +1,5 @@
-/*	NetBSD: readline.h,v 1.2 2005/05/11 01:17:39 lukem Exp	*/
-/*	from	NetBSD: readline.h,v 1.12 2004/09/08 18:15:37 christos Exp	*/
+/*	NetBSD: readline.h,v 1.3 2005/05/31 02:07:02 lukem Exp	*/
+/*	from	NetBSD: readline.h,v 1.14 2005/05/27 11:35:07 agc Exp	*/
 
 /*-
  * Copyright (c) 1997 The NetBSD Foundation, Inc.
@@ -46,6 +46,7 @@
 /* typedefs */
 typedef int	  Function(const char *, int);
 typedef void	  VFunction(void);
+typedef void	  VCPFunction(char *);
 typedef char	 *CPFunction(const char *, int);
 typedef char	**CPPFunction(const char *, int, int);
 
@@ -103,6 +104,7 @@ extern char		*rl_completer_word_break_characters;
 extern char		*rl_completer_quote_characters;
 extern Function		*rl_completion_entry_function;
 extern CPPFunction	*rl_attempted_completion_function;
+extern int		 rl_attempted_completion_over;
 extern int		rl_completion_type;
 extern int		rl_completion_query_items;
 extern char		*rl_special_prefixes;
@@ -167,7 +169,7 @@ void		 rl_reset_terminal(const char *);
 int		 rl_bind_key(int, int (*)(int, int));
 int		 rl_newline(int, int);
 void		 rl_callback_read_char(void);
-void		 rl_callback_handler_install(const char *, VFunction *);
+void		 rl_callback_handler_install(const char *, VCPFunction *);
 void		 rl_callback_handler_remove(void);
 void		 rl_redisplay(void);
 int		 rl_get_previous_history(int, int);
@@ -175,6 +177,7 @@ void		 rl_prep_terminal(int);
 void		 rl_deprep_terminal(void);
 int		 rl_read_init_file(const char *);
 int		 rl_parse_and_bind(const char *);
+int		 rl_variable_bind(const char *, const char *);
 void		 rl_stuff_char(int);
 int		 rl_add_defun(const char *, Function *, int);
 

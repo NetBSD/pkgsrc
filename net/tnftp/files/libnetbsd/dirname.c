@@ -1,12 +1,12 @@
-/*	NetBSD: sl_init.c,v 1.4 2005/05/16 06:37:47 lukem Exp	*/
-/*	from	NetBSD: stringlist.c,v 1.10 2000/01/25 16:24:40 enami Exp	*/
+/*	NetBSD: dirname.c,v 1.1 2005/06/01 15:07:55 lukem Exp	*/
+/*	from	NetBSD: dirname.c,v 1.7 2002/10/17 11:36:39 tron Exp	*/
 
 /*-
- * Copyright (c) 1994, 1999 The NetBSD Foundation, Inc.
+ * Copyright (c) 1997, 2002 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
- * by Christos Zoulas.
+ * by Klaus Klein and Jason R. Thorpe.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -39,83 +39,46 @@
 
 #include "tnftp.h"
 
-#define _SL_CHUNKSIZE	20
-
-/*
- * sl_init(): Initialize a string list
- */
-StringList *
-sl_init(void)
-{
-	StringList *sl;
-
-	sl = malloc(sizeof(StringList));
-	if (sl == NULL)
-		return (NULL);
-
-	sl->sl_cur = 0;
-	sl->sl_max = _SL_CHUNKSIZE;
-	sl->sl_str = malloc(sl->sl_max * sizeof(char *));
-	if (sl->sl_str == NULL) {
-		free(sl);
-		sl = NULL;
-	}
-	return (sl);
-}
-
-
-/*
- * sl_add(): Add an item to the string list
- */
-int
-sl_add(StringList *sl, char *name)
-{
-	if (sl->sl_cur == sl->sl_max - 1) {
-		char	**new;
-
-		new = (char **)realloc(sl->sl_str,
-		    (sl->sl_max + _SL_CHUNKSIZE) * sizeof(char *));
-		if (new == NULL)
-			return (-1);
-		sl->sl_max += _SL_CHUNKSIZE;
-		sl->sl_str = new;
-	}
-	sl->sl_str[sl->sl_cur++] = name;
-	return (0);
-}
-
-
-/*
- * sl_free(): Free a stringlist
- */
-void
-sl_free(StringList *sl, int all)
-{
-	size_t i;
-
-	if (sl == NULL)
-		return;
-	if (sl->sl_str) {
-		if (all)
-			for (i = 0; i < sl->sl_cur; i++)
-				free(sl->sl_str[i]);
-		free(sl->sl_str);
-	}
-	free(sl);
-}
-
-
-/*
- * sl_find(): Find a name in the string list
- */
 char *
-sl_find(StringList *sl, char *name)
+dirname(path)
+	char *path;
 {
-	size_t i;
+	static char singledot[] = ".";
+	static char result[PATH_MAX];
+	char *lastp;
+	size_t len;
 
-	for (i = 0; i < sl->sl_cur; i++)
-		if (strcmp(sl->sl_str[i], name) == 0)
-			return (sl->sl_str[i]);
+	/*
+	 * If `path' is a null pointer or points to an empty string,
+	 * return a pointer to the string ".".
+	 */
+	if ((path == NULL) || (*path == '\0'))
+		return (singledot);
 
-	return (NULL);
+	/* Strip trailing slashes, if any. */
+	lastp = path + strlen(path) - 1;
+	while (lastp != path && *lastp == '/')
+		lastp--;
+
+	/* Terminate path at the last occurence of '/'. */
+	do {
+		if (*lastp == '/') {
+			/* Strip trailing slashes, if any. */
+			while (lastp != path && *lastp == '/')
+				lastp--;
+
+			/* ...and copy the result into the result buffer. */
+			len = (lastp - path) + 1 /* last char */;
+			if (len > (PATH_MAX - 1))
+				len = PATH_MAX - 1;
+
+			memcpy(result, path, len);
+			result[len] = '\0';
+
+			return (result);
+		}
+	} while (--lastp >= path);
+
+	/* No /'s found, return a pointer to the string ".". */
+	return (singledot);
 }

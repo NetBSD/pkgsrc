@@ -1,7 +1,7 @@
-/*	NetBSD: tnftp.h,v 1.13 2005/05/14 04:46:26 lukem Exp	*/
+/*	NetBSD: tnftp.h,v 1.19 2005/06/10 04:40:13 lukem Exp	*/
 
 #define	FTP_PRODUCT	"tnftp"
-#define	FTP_VERSION	"20050514"
+#define	FTP_VERSION	"20050610"
 
 #include "config.h"
 
@@ -22,6 +22,7 @@
 #include <ctype.h>
 #include <errno.h>
 #include <fcntl.h>
+#include <libgen.h>
 #include <limits.h>
 #ifdef HAVE_RFC2553_NETDB
 #include <netdb.h>
@@ -42,21 +43,32 @@
 #include <unistd.h>
 
 #if HAVE_POLL
-# if HAVE_POLL_H
-#  include <poll.h>
-# elif HAVE_SYS_POLL_H
-#  include <sys/poll.h>
-# endif
+/* we use poll */
 #elif HAVE_SELECT
-# ifndef POLLIN
-#  define POLLIN 1
-# endif
-# ifndef POLLOUT
-#  define POLLOUT 4
-# endif
 /* we use select */
 #else /* ! HAVE_POLL && ! HAVE_SELECT */
 # error "no poll() or select() found"
+#endif
+
+#if HAVE_POLL_H
+# include <poll.h>
+#elif HAVE_SYS_POLL_H
+# include <sys/poll.h>
+#endif
+#ifndef POLLIN
+# define POLLIN		0x0001
+#endif
+#ifndef POLLOUT
+# define POLLOUT	0x0004
+#endif
+#ifndef POLLRDNORM
+# define POLLRDNORM	0x0040
+#endif
+#ifndef POLLWRNORM
+# define POLLWRNORM	POLLOUT
+#endif
+#ifndef POLLRDBAND
+# define POLLRDBAND	0x0080
 #endif
 #ifndef INFTIM
 # define INFTIM -1
@@ -251,20 +263,20 @@ typedef unsigned int socklen_t;
 #if ! HAVE_RFC2553_NETDB && ! HAVE_ADDRINFO
 
 struct addrinfo {
-	int	ai_flags;	/* AI_PASSIVE, AI_CANONNAME, AI_NUMERICHOST */
-	int	ai_family;	/* PF_xxx */
-	int	ai_socktype;	/* SOCK_xxx */
-	int	ai_protocol;	/* 0 or IPPROTO_xxx for IPv4 and IPv6 */
-	size_t	ai_addrlen;	/* length of ai_addr */
-	char	*ai_canonname;	/* canonical name for hostname */
+	int		ai_flags;	/* AI_PASSIVE, AI_CANONNAME, AI_NUMERICHOST */
+	int		ai_family;	/* PF_xxx */
+	int		ai_socktype;	/* SOCK_xxx */
+	int		ai_protocol;	/* 0 or IPPROTO_xxx for IPv4 and IPv6 */
+	socklen_t	ai_addrlen;	/* length of ai_addr */
+	char		*ai_canonname;	/* canonical name for hostname */
 	struct sockaddr *ai_addr;	/* binary address */
 	struct addrinfo *ai_next;	/* next structure in linked list */
 };
 
 int	getaddrinfo(const char *, const char *,
 	    const struct addrinfo *, struct addrinfo **);
-int	getnameinfo(const struct sockaddr *, socklen_t, char *,
-	    size_t, char *, size_t, int);
+int	getnameinfo(const struct sockaddr *, socklen_t,
+	    char *, size_t, char *, size_t, int);
 void	freeaddrinfo(struct addrinfo *);
 char   *gai_strerror(int);
 
@@ -300,6 +312,10 @@ extern int	optind;
 int	pclose(FILE *);
 #endif
 
+#if ! HAVE_DIRNAME
+char	*dirname(char *);
+#endif
+
 #if ! HAVE_ERR
 void	err(int, const char *, ...);
 void	errx(int, const char *, ...);
@@ -325,7 +341,7 @@ char   *fparseln(FILE *, size_t *, size_t *, const char[3], int);
 #endif
 
 #if ! HAVE_INET_NTOP
-const char *inet_ntop(int, const void *, char *, size_t);
+const char *inet_ntop(int, const void *, char *, socklen_t);
 #endif
 
 #if ! HAVE_INET_PTON
@@ -360,11 +376,11 @@ char   *strptime(const char *, const char *, struct tm *);
 #if HAVE_QUAD_SUPPORT
 # if ! HAVE_STRTOLL && HAVE_LONG_LONG
 long long strtoll(const char *, char **, int);
-#  if ! defined(QUAD_MIN)
-#   define QUAD_MIN	(-0x7fffffffffffffffL-1)
+#  if ! defined(LLONG_MIN)
+#   define LLONG_MIN	(-0x7fffffffffffffffL-1)
 #  endif
-#  if ! defined(QUAD_MAX)
-#   define QUAD_MAX	(0x7fffffffffffffffL)
+#  if ! defined(LLONG_MAX)
+#   define LLONG_MAX	(0x7fffffffffffffffL)
 #  endif
 # endif
 #else	/* ! HAVE_QUAD_SUPPORT */
