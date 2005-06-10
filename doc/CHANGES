@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10339 2005/06/09 21:10:59 jmmv Exp $
+$NetBSD: CHANGES,v 1.10340 2005/06/10 01:39:31 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2851,3 +2851,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated news/leafnode to 1.11.3 [salo 2005-06-09]
 	Updated archivers/gzip-base to gzip-1.2.4anb1 [adrianp 2005-06-09]
 	Updated sysutils/idesk to 0.7.2 [jmmv 2005-06-09]
+	Updated pkgtools/pkg_install to 20050607 [dmcmahill 2005-06-09]
