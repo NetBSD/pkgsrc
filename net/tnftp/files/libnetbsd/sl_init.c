@@ -1,5 +1,5 @@
-/*	NetBSD: sl_init.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
-/*	from	NetBSD: stringlist.c,v 1.8 1999/11/28 03:44:09 lukem Exp	*/
+/*	NetBSD: sl_init.c,v 1.4 2005/05/16 06:37:47 lukem Exp	*/
+/*	from	NetBSD: stringlist.c,v 1.10 2000/01/25 16:24:40 enami Exp	*/
 
 /*-
  * Copyright (c) 1994, 1999 The NetBSD Foundation, Inc.
@@ -73,10 +73,11 @@ sl_add(StringList *sl, char *name)
 	if (sl->sl_cur == sl->sl_max - 1) {
 		char	**new;
 
-		sl->sl_max += _SL_CHUNKSIZE;
-		new = (char **)realloc(sl->sl_str, sl->sl_max * sizeof(char *));
+		new = (char **)realloc(sl->sl_str,
+		    (sl->sl_max + _SL_CHUNKSIZE) * sizeof(char *));
 		if (new == NULL)
 			return (-1);
+		sl->sl_max += _SL_CHUNKSIZE;
 		sl->sl_str = new;
 	}
 	sl->sl_str[sl->sl_cur++] = name;
@@ -114,7 +115,7 @@ sl_find(StringList *sl, char *name)
 
 	for (i = 0; i < sl->sl_cur; i++)
 		if (strcmp(sl->sl_str[i], name) == 0)
-			return sl->sl_str[i];
+			return (sl->sl_str[i]);
 
 	return (NULL);
 }

@@ -1,5 +1,5 @@
-/*	NetBSD: vi.c,v 1.4 2005/05/11 01:17:39 lukem Exp	*/
-/*	from	NetBSD: vi.c,v 1.20 2004/08/13 12:10:39 mycroft Exp	*/
+/*	NetBSD: vi.c,v 1.6 2005/06/09 16:48:58 lukem Exp	*/
+/*	from	NetBSD: vi.c,v 1.21 2005/04/25 01:06:03 matt Exp	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -35,21 +35,6 @@
 
 #include "tnftp.h"
 #include "sys.h"
-
-#if 0
-#include "config.h"
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/wait.h>
-
-#if !defined(lint) && !defined(SCCSID)
-#if 0
-static char sccsid[] = "@(#)vi.c	8.1 (Berkeley) 6/4/93";
-#else
-__RCSID("NetBSD: vi.c,v 1.4 2005/05/11 01:17:39 lukem Exp");
-#endif
-#endif /* not lint && not SCCSID */
-#endif
 
 /*
  * vi.c: Vi mode commands.
@@ -1027,7 +1012,7 @@ vi_histedit(EditLine *el, int c)
 		return CC_ERROR;
 	case 0:
 		close(fd);
-		execlp("vi", "vi", tempfile, 0);
+		execlp("vi", "vi", tempfile, NULL);
 		exit(0);
 		/*NOTREACHED*/
 	default:

@@ -1,4 +1,4 @@
-/*	NetBSD: sys.h,v 1.3 2005/05/11 01:17:39 lukem Exp	*/
+/*	NetBSD: sys.h,v 1.4 2005/05/27 04:58:05 lukem Exp	*/
 /*	from	NetBSD: sys.h,v 1.9 2004/01/17 17:57:40 christos Exp	*/
 
 /*-
@@ -41,15 +41,11 @@
 #ifndef _h_sys
 #define	_h_sys
 
-#if __not_for_tnftp
-#ifdef HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
-#endif
-
 #if !defined(__attribute__) && (defined(__cplusplus) || !defined(__GNUC__)  || __GNUC__ == 2 && __GNUC_MINOR__ < 8)
 # define __attribute__(A)
 #endif
 
+#if __not_for_tnftp
 #ifndef __BEGIN_DECLS
 # ifdef  __cplusplus
 #  define __BEGIN_DECLS  extern "C" {
