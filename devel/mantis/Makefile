@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/06/06 20:32:39 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/10 19:38:29 adrianp Exp $
 
 DISTNAME=	mantis-0.19.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
