@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.47 2005/03/31 23:36:15 reed Exp $
+# $NetBSD: pre-build,v 1.48 2005/06/10 13:09:07 sketch Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -91,7 +91,7 @@ if [ x"$BMAKE" = x"bmake" ]; then
 		man/man1/pkg_admin.1 man/man1/pkg_create.1                   \
 		man/man1/pkg_delete.1 man/man1/pkg_info.1                    \
 		man/man1/pkg_view.1 man/man1/linkfarm.1 man/cat8/mtree.0     \
-		man/man8/mtree.8 man/cat7/packages.0 )
+		man/man8/mtree.8 man/cat7/packages.0 etc/mk.conf )
 fi
 
 #
