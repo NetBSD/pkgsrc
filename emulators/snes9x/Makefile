@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/06/10 18:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2005/06/10 18:20:06 wiz Exp $
 
 DISTNAME=		s9xs139
 PKGNAME=		snes9x-1.39
@@ -29,19 +29,17 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/README.TXT ${PREFIX}/share/doc/snes9x
 	${INSTALL_MAN} ${WRKSRC}/TODO.TXT ${PREFIX}/share/doc/snes9x
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "i386"
 PKG_OPTIONS_VAR=	PKG_OPTIONS.snes9x
 PKG_SUPPORTED_OPTIONS=	mmx
 
 .include "../../mk/bsd.options.mk"
-.endif
+
+.include "../../mk/bsd.prefs.mk"
 
 MAKE_ENV+=	THREAD_SOUND=1
-.if ( ${MACHINE_ARCH} == "i386" )
+.if ${MACHINE_ARCH} == "i386"
 MAKE_ENV+=	USING_I386=1
-.if ( ${OBJECT_FMT} == "a.out" )
+.if ${OBJECT_FMT} == "a.out"
 MAKE_ENV+=	FILEFORMAT=aoutb
 MAKE_ENV+=	_ASM_UNDERBARS=1
 .else
