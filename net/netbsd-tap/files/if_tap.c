@@ -1,4 +1,4 @@
-/*	$NetBSD: if_tap.c,v 1.5 2005/03/24 22:39:07 cube Exp $	*/
+/*	$NetBSD: if_tap.c,v 1.6 2005/06/10 15:06:33 cube Exp $	*/
 
 /*
  *  Copyright (c) 2003, 2004 The NetBSD Foundation.
@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__KERNEL_RCSID(0, "$NetBSD: if_tap.c,v 1.5 2005/03/24 22:39:07 cube Exp $");
+__KERNEL_RCSID(0, "$NetBSD: if_tap.c,v 1.6 2005/06/10 15:06:33 cube Exp $");
 
 #if defined(_KERNEL_OPT)
 #include "bpfilter.h"
@@ -940,6 +940,7 @@ tap_dev_write(int unit, struct uio *uio, int flags)
 	struct ifnet *ifp;
 	struct mbuf *m, **mp;
 	int error = 0;
+	int s;
 
 	if (sc == NULL)
 		return (ENXIO);
@@ -980,7 +981,9 @@ tap_dev_write(int unit, struct uio *uio, int flags)
 	if (ifp->if_bpf)
 		bpf_mtap(ifp->if_bpf, m);
 #endif
+	s =splnet();
 	(*ifp->if_input)(ifp, m);
+	splx(s);
 
 	return (0);
 }
@@ -1380,7 +1383,6 @@ tap_ether_aton(u_char *dest, char *str)
  *      @(#)if_ethersubr.c      8.2 (Berkeley) 4/4/96
  */
 
-static char digits[] = "0123456789abcdef";
 static char *
 tap_ether_sprintf(char *dest, const u_char *ap)
 {
@@ -1388,8 +1390,8 @@ tap_ether_sprintf(char *dest, const u_char *ap)
 	int i;
 
 	for (i = 0; i < 6; i++) {
-		*cp++ = digits[*ap >> 4];
-		*cp++ = digits[*ap++ & 0xf];
+		*cp++ = tap_hexdigits[*ap >> 4];
+		*cp++ = tap_hexdigits[*ap++ & 0xf];
 		*cp++ = ':';
 	}
 	*--cp = 0;
