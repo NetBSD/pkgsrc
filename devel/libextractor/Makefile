@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 20:07:52 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/10 17:03:35 tv Exp $
 #
 
-DISTNAME=		libextractor-0.3.11
-PKGREVISION=		1
+DISTNAME=		libextractor-0.4.2
 CATEGORIES=		devel
-MASTER_SITES=		http://ovmj.org/libextractor/download/
+MASTER_SITES=		http://gnunet.org/libextractor/download/
 
 MAINTAINER=		tv@duh.org
-HOMEPAGE=		http://ovmj.org/libextractor/
+HOMEPAGE=		http://gnunet.org/libextractor/
 COMMENT=		Metadata extractor for various file data types
 
 USE_TOOLS+=		gmake
@@ -21,7 +20,12 @@ CONFLICTS=		csound-{bath,dev}-*	# bin/extract
 # This package requires dlopen, so save on space by skipping non-PIC libs
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/convenience.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

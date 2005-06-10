@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/05 18:22:29 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/10 17:03:35 tv Exp $
 bin/extract
 include/extractor.h
 lib/libextractor.la
 lib/libextractor/libextractor_asf.la
+lib/libextractor/libextractor_deb.la
 lib/libextractor/libextractor_dvi.la
 lib/libextractor/libextractor_elf.la
 lib/libextractor/libextractor_filename.la
@@ -20,6 +21,7 @@ lib/libextractor/libextractor_man.la
 lib/libextractor/libextractor_mime.la
 lib/libextractor/libextractor_mp3.la
 lib/libextractor/libextractor_mpeg.la
+lib/libextractor/libextractor_ogg.la
 lib/libextractor/libextractor_oo.la
 lib/libextractor/libextractor_pdf.la
 lib/libextractor/libextractor_png.la
@@ -36,9 +38,12 @@ lib/libextractor/libextractor_riff.la
 lib/libextractor/libextractor_rpm.la
 lib/libextractor/libextractor_split.la
 lib/libextractor/libextractor_tar.la
+lib/libextractor/libextractor_thumbnail.la
 lib/libextractor/libextractor_tiff.la
+lib/libextractor/libextractor_translit.la
 lib/libextractor/libextractor_wav.la
 lib/libextractor/libextractor_zip.la
 man/man1/extract.1
 man/man3/libextractor.3
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libextractor.mo
 @dirrm lib/libextractor
