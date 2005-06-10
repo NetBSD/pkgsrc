@@ -1,10 +1,11 @@
-# $NetBSD: xfree.freetype2,v 1.5 2003/12/19 19:19:15 veego Exp $
+# $NetBSD: xfree.freetype2,v 1.6 2005/06/10 03:44:07 jlam Exp $
 #
 include/freetype2/freetype/cache/ftccache.h
 include/freetype2/freetype/cache/ftccmap.h
 include/freetype2/freetype/cache/ftcglyph.h
 include/freetype2/freetype/cache/ftcimage.h
 include/freetype2/freetype/cache/ftcmanag.h
+include/freetype2/freetype/cache/ftcmru.h
 include/freetype2/freetype/cache/ftcsbits.h
 include/freetype2/freetype/cache/ftlru.h
 include/freetype2/freetype/config/ftconfig.h
@@ -24,8 +25,10 @@ include/freetype2/freetype/ftgzip.h
 include/freetype2/freetype/ftimage.h
 include/freetype2/freetype/ftincrem.h
 include/freetype2/freetype/ftlist.h
+include/freetype2/freetype/ftlzw.h
 include/freetype2/freetype/ftmac.h
 include/freetype2/freetype/ftmm.h
+include/freetype2/freetype/ftmodapi.h
 include/freetype2/freetype/ftmoderr.h
 include/freetype2/freetype/ftmodule.h
 include/freetype2/freetype/ftoutln.h
@@ -33,6 +36,7 @@ include/freetype2/freetype/ftpfr.h
 include/freetype2/freetype/ftrender.h
 include/freetype2/freetype/ftsizes.h
 include/freetype2/freetype/ftsnames.h
+include/freetype2/freetype/ftstroke.h
 include/freetype2/freetype/ftstroker.h
 include/freetype2/freetype/ftsynth.h
 include/freetype2/freetype/ftsysio.h
@@ -57,7 +61,10 @@ include/freetype2/freetype/internal/fthash.h
 include/freetype2/freetype/internal/ftmemory.h
 include/freetype2/freetype/internal/ftobject.h
 include/freetype2/freetype/internal/ftobjs.h
+include/freetype2/freetype/internal/ftrfork.h
+include/freetype2/freetype/internal/ftserv.h
 include/freetype2/freetype/internal/ftstream.h
+include/freetype2/freetype/internal/fttrace.h
 include/freetype2/freetype/internal/internal.h
 include/freetype2/freetype/internal/pcftypes.h
 include/freetype2/freetype/internal/pfr.h
@@ -69,14 +76,28 @@ include/freetype2/freetype/internal/sfnt.h
 include/freetype2/freetype/internal/t1types.h
 include/freetype2/freetype/internal/t42types.h
 include/freetype2/freetype/internal/tttypes.h
+include/freetype2/freetype/internal/services/svbdf.h
+include/freetype2/freetype/internal/services/svgldict.h
+include/freetype2/freetype/internal/services/svmm.h
+include/freetype2/freetype/internal/services/svpfr.h
+include/freetype2/freetype/internal/services/svpostnm.h
+include/freetype2/freetype/internal/services/svpscmap.h
+include/freetype2/freetype/internal/services/svpsinfo.h
+include/freetype2/freetype/internal/services/svsfnt.h
+include/freetype2/freetype/internal/services/svttcmap.h
+include/freetype2/freetype/internal/services/svwinfnt.h
+include/freetype2/freetype/internal/services/svxf86nm.h
 include/freetype2/freetype/t1tables.h
 include/freetype2/freetype/ttnameid.h
 include/freetype2/freetype/tttables.h
 include/freetype2/freetype/tttags.h
+include/freetype2/freetype/ttunpat.h
 include/freetype2/ft2build.h
 include/ft2build.h
 lib/libfreetype.a
 lib/libfreetype.so
+lib/libfreetype.so.6
+lib/libfreetype.so.7
 lib/libfreetype.so.8
 lib/libfreetype.so.8.0
 lib/libfreetype.so.9
