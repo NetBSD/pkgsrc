@@ -1,5 +1,5 @@
-/*	NetBSD: ftpvis.h,v 1.2 2005/05/11 01:01:56 lukem Exp	*/
-/*	from	NetBSD: vis.h,v 1.10 1998/11/13 12:20:18 christos Exp	*/
+/*	NetBSD: ftpvis.h,v 1.3 2005/05/16 13:25:48 lukem Exp	*/
+/*	from	NetBSD: vis.h,v 1.15 2005/02/03 04:39:32 perry Exp	*/
 
 /*-
  * Copyright (c) 1990, 1993
@@ -13,11 +13,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -59,6 +55,7 @@
  * other
  */
 #define	VIS_NOSLASH	0x40	/* inhibit printing '\' */
+#define	VIS_HTTPSTYLE	0x80	/* http-style escape % HEX HEX */
 
 /*
  * unvis return codes
@@ -75,9 +72,13 @@
 #define	UNVIS_END	1	/* no more characters */
 
 char	*vis(char *, int, int, int);
+char	*svis(char *, int, int, int, const char *);
 int	strvis(char *, const char *, int);
+int	strsvis(char *, const char *, int, const char *);
 int	strvisx(char *, const char *, size_t, int);
+int	strsvisx(char *, const char *, size_t, int, const char *);
 int	strunvis(char *, const char *);
+int	strunvisx(char *, const char *, int);
 int	unvis(char *, int, int *, int);
 
 #endif /* !_VIS_H_ */

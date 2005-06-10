@@ -1,4 +1,4 @@
-#	NetBSD: Makefile.in,v 1.3 2005/05/11 01:01:56 lukem Exp
+#	NetBSD: Makefile.in,v 1.5 2005/06/10 04:36:12 lukem Exp
 #
 
 srcdir	= @srcdir@
@@ -6,7 +6,8 @@ VPATH	= @srcdir@
 SHELL	= /bin/sh
 
 CC	= @CC@
-CFLAGS	= -I${srcdir} -I${srcdir}/.. -I.. @INCLUDES@ @CFLAGS@
+CFLAGS	= @CFLAGS@
+CPPFLAGS= -I${srcdir} -I${srcdir}/.. -I. -I.. @INCLUDES@ @CPPFLAGS@
 
 AR	= @AR@
 RANLIB	= @RANLIB@
@@ -21,6 +22,11 @@ all:	${LIB}
 ${LIB}: ${OBJS}
 	${AR} cr $@ ${OBJS}
 	${RANLIB} $@
+
+${OBJS}: ${srcdir}/../tnftp.h ../config.h
+
+.c.o:
+	${CC} ${CFLAGS} ${CPPFLAGS} -c $<
 
 install:
 

@@ -1,4 +1,4 @@
-/*	NetBSD: el.c,v 1.4 2005/05/11 01:17:39 lukem Exp	*/
+/*	NetBSD: el.c,v 1.5 2005/06/09 16:48:57 lukem Exp	*/
 /*	from	NetBSD: el.c,v 1.39 2004/07/08 00:51:36 christos Exp	*/
 
 /*-
@@ -35,17 +35,6 @@
 
 #include "tnftp.h"
 #include "sys.h"
-
-#if 0
-#include "config.h"
-#if !defined(lint) && !defined(SCCSID)
-#if 0
-static char sccsid[] = "@(#)el.c	8.2 (Berkeley) 1/3/94";
-#else
-__RCSID("NetBSD: el.c,v 1.4 2005/05/11 01:17:39 lukem Exp");
-#endif
-#endif /* not lint && not SCCSID */
-#endif
 
 /*
  * el.c: EditLine interface functions
