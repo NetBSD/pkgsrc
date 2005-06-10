@@ -1,4 +1,4 @@
-/*	NetBSD: read.c,v 1.7 2005/06/09 16:48:58 lukem Exp	*/
+/*	$NetBSD: read.c,v 1.1.1.4 2005/06/10 16:48:58 lukem Exp $	*/
 /*	from	NetBSD: read.c,v 1.35 2005/03/09 23:55:02 christos Exp	*/
 
 /*-

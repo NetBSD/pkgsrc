@@ -1,4 +1,4 @@
-/*	NetBSD: el.c,v 1.5 2005/06/09 16:48:57 lukem Exp	*/
+/*	$NetBSD: el.c,v 1.1.1.4 2005/06/10 16:48:57 lukem Exp $	*/
 /*	from	NetBSD: el.c,v 1.39 2004/07/08 00:51:36 christos Exp	*/
 
 /*-
