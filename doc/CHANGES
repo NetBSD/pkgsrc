@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10340 2005/06/10 01:39:31 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.10341 2005/06/10 03:50:17 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2852,3 +2852,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/gzip-base to gzip-1.2.4anb1 [adrianp 2005-06-09]
 	Updated sysutils/idesk to 0.7.2 [jmmv 2005-06-09]
 	Updated pkgtools/pkg_install to 20050607 [dmcmahill 2005-06-09]
+	Updated pkgtools/x11-links to 0.25 [jlam 2005-06-10]
