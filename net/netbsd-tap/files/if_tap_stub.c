@@ -1,7 +1,7 @@
-/*	$NetBSD: if_tap_stub.c,v 1.2 2005/02/15 21:23:08 cube Exp $	*/
+/*	$NetBSD: if_tap_stub.c,v 1.3 2005/06/10 15:06:33 cube Exp $	*/
 
 #include <sys/cdefs.h>
-__KERNEL_RCSID(0, "$NetBSD: if_tap_stub.c,v 1.2 2005/02/15 21:23:08 cube Exp $");
+__KERNEL_RCSID(0, "$NetBSD: if_tap_stub.c,v 1.3 2005/06/10 15:06:33 cube Exp $");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -11,6 +11,10 @@ __KERNEL_RCSID(0, "$NetBSD: if_tap_stub.c,v 1.2 2005/02/15 21:23:08 cube Exp $")
 #include <sys/stat.h>
 
 #include "if_tap_stub.h"
+
+/*
+ * fdclone() and friends
+ */
 
 /* 2.99.10 is gray area.  Oh, well. */
 #if __NetBSD_Version__ < 299001100
@@ -46,4 +50,12 @@ tap_fbadop_stat(struct file *fp, struct stat *sb, struct proc *p)
 {
 	return EOPNOTSUPP;
 }
+#endif
+
+/*
+ * hexdigits
+ */
+
+#if __NetBSD_Version__ < 399000400
+const char tap_hexdigits[] = "0123456789abcdef";
 #endif
