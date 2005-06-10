@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10342 2005/06/10 05:11:09 lukem Exp $
+$NetBSD: CHANGES,v 1.10343 2005/06/10 09:22:26 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2854,3 +2854,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkg_install to 20050607 [dmcmahill 2005-06-09]
 	Updated pkgtools/x11-links to 0.25 [jlam 2005-06-10]
 	Updated net/tnftp to 20050610 [lukem 2005-06-10]
+	Updated editors/gedit to 2.10.3 [jmmv 2005-06-10]
