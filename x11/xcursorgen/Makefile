@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:48:14 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/10 22:47:36 jlam Exp $
 
 DISTNAME=	xcursorgen-4.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,14 +13,13 @@ COMMENT=	Create an X cursor file from a collection of PNG images
 WRKSRC=		${WRKDIR}/${DISTNAME:C/-.*//}
 USE_IMAKE=	YES
 
-.include "../../mk/bsd.prefs.mk"
+LIBPNG=		-L${BUILDLINK_PREFIX.png}/lib				\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.png}/lib	\
+		-lpng
 
-.if !exists(${X11BASE}/bin/xcursor-config)
-PKG_SKIP_REASON="This package requires XFree86 4.3.0 or newer."
-.endif
+MAKE_FLAGS+=	LIBPNGLIB=${LIBPNG:Q}
 
 .include "../../graphics/png/buildlink3.mk"
-
-MAKE_ENV+=       LOCAL_LDFLAGS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.png_DEFAULT}/lib"
+.include "../../x11/xcursor/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
