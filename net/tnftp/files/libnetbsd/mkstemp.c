@@ -1,4 +1,4 @@
-/*	NetBSD: mkstemp.c,v 1.5 2005/06/01 11:48:49 lukem Exp	*/
+/*	$NetBSD: mkstemp.c,v 1.1.1.4 2005/06/10 11:48:49 lukem Exp $	*/
 /*	from	NetBSD: gettemp.c,v 1.13 2003/12/05 00:57:36 uebayasi Exp	*/
 
 /*
