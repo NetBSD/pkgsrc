@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.30 2005/05/28 02:50:46 dmcmahill Exp $	*/
+/*	$NetBSD: perform.c,v 1.31 2005/06/10 01:37:21 dmcmahill Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.30 2005/05/28 02:50:46 dmcmahill Exp $");
+__RCSID("$NetBSD: perform.c,v 1.31 2005/06/10 01:37:21 dmcmahill Exp $");
 #endif
 #endif
 
@@ -66,6 +66,26 @@ static int zapLogDir;		/* Should we delete LogDir? */
 
 static package_t Plist;
 static char *Home;
+
+/*
+ * Some systems such as OpenBSD-3.6 do not provide PRIu64.
+ * Others such as AIX-4.3.2 have a broken PRIu64 which includes
+ * a leading "%".
+ */
+#ifdef NEED_PRI_MACRO
+#  ifdef PRIu64
+#    undef PRIu64
+#  endif
+#  if SIZEOF_INT == 8
+#    define PRIu64 "u"
+#  elif SIZEOF_LONG == 8
+#    define PRIu64 "lu"
+#  elif SIZEOF_LONG_LONG == 8
+#    define PRIu64 "llu"
+#  else
+#    error "unable to find a suitable PRIu64"
+#  endif
+#endif
 
 /* used in build information */
 enum {
@@ -323,7 +343,6 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 			 * take up once it's unpacked.  I've noticed that most packages
 			 * compress an average of 75%, so multiply by 4 for good measure.
 			 */
-
 			needed = 4 * (uint64_t) sb.st_size;
 			if (!inPlace && min_free(playpen) < needed) {
 				warnx("projected size of %" PRIu64 " bytes exceeds available free space\n"

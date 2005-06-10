@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([pkg_install], [20050527], [grant@NetBSD.org])
+AC_INIT([pkg_install], [20050607], [grant@NetBSD.org])
 AC_CONFIG_SRCDIR([lib/plist.c])
 AC_CONFIG_HEADER(lib/config.h)
 
@@ -85,6 +85,50 @@ AC_CHECK_HEADERS([sys/cdefs.h sys/file.h sys/ioctl.h sys/mount.h sys/param.h \
 # Checks for library functions.
 AC_CHECK_FUNCS([chflags dbopen tgetent vfork])
 AC_CHECK_FUNCS([getrlimit setrlimit])
+
+need_priu64=no
+AC_MSG_CHECKING([for a working PRIu64])
+AC_LANG_PUSH([C])
+AC_RUN_IFELSE(
+	[AC_LANG_PROGRAM([[
+		#include <stdio.h>
+		#ifdef HAVE_INTTYPES_H
+		#include <inttypes.h>
+		#endif
+		]],
+		[[
+		char *x;
+		#if !defined(PRIu64)
+			return -1;
+		#else
+		x = PRIu64;
+		if( x[0] == '%' ) {
+			return -1;
+		} else {
+			return 0;
+		}
+		#endif
+		]])],
+	[
+		# program worked correctly
+		AC_MSG_RESULT([yes])
+	],
+	[
+		# program failed
+		AC_MSG_RESULT([no])
+		AC_DEFINE([NEED_PRI_MACRO], [1], [Defined when PRIu64 is missing or broken])
+		need_priu64=yes
+	],
+	[
+		# we are cross compiling
+		AC_MSG_RESULT([unable to check when crosscompiling])
+		AC_DEFINE([NEED_PRI_MACRO], [1], [Defined when PRIu64 is missing or broken])
+		need_priu64=yes
+	])
+AC_LANG_POP([C])
+AC_CHECK_SIZEOF(int)
+AC_CHECK_SIZEOF(long)
+AC_CHECK_SIZEOF(long long)
 
 AH_BOTTOM(
 #if !HAVE_VFORK
