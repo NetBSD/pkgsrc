@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/06/10 22:57:48 markd Exp $
+
+--- Makefile.orig	Sat Jun 11 22:44:40 2005
++++ Makefile
+@@ -233,7 +233,7 @@ RM = rm
+ LN = ln -s -f
+ CFLAGS_COMMON = -I. -I$(COREDIR) -I$(SHAREDDIR) -W -Wall -DPID_FILE=\"/var/run/mdnsd.pid\" -DMDNS_UDS_SERVERPATH=\"/var/run/mdnsd\"
+ LIBFLAGS =
+-DNSEXT_FLAGS = -D_REENTRANT -g -Wall -lpthread
++DNSEXT_FLAGS = -D_REENTRANT -g -Wall ${COMPILER_RPATH_FLAG}${PTHREADBASE}/lib -lpthread
+ LDSUFFIX = so
+ JAVACFLAGS_OS = -fPIC -shared -ldns_sd
+ 
