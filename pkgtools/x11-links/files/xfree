@@ -1,4 +1,4 @@
-# $NetBSD: xfree,v 1.9 2004/02/17 16:50:26 jlam Exp $
+# $NetBSD: xfree,v 1.10 2005/06/10 03:44:07 jlam Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported XFree distributions, minus the set of files representing
@@ -334,6 +334,8 @@ include/X11/extensions/Xvproto.h
 include/X11/extensions/bigreqstr.h
 include/X11/extensions/dpms.h
 include/X11/extensions/dpmsstr.h
+include/X11/extensions/dmxext.h
+include/X11/extensions/dmxproto.h
 include/X11/extensions/extutil.h
 include/X11/extensions/fontcache.h
 include/X11/extensions/fontcacheP.h
@@ -350,6 +352,7 @@ include/X11/extensions/multibuf.h
 include/X11/extensions/multibufst.h
 include/X11/extensions/panoramiXext.h
 include/X11/extensions/panoramiXproto.h
+include/X11/extensions/panoramiXwrap.h
 include/X11/extensions/record.h
 include/X11/extensions/recordstr.h
 include/X11/extensions/saver.h
@@ -395,6 +398,17 @@ include/X11/fonts/fontenc.h
 include/X11/fonts/fsmasks.h
 include/X11/keysym.h
 include/X11/keysymdef.h
+include/X11/pixmaps/card.xpm
+include/X11/pixmaps/computer.xpm
+include/X11/pixmaps/deny-always.xpm
+include/X11/pixmaps/deny.xpm
+include/X11/pixmaps/keyboard.xpm
+include/X11/pixmaps/logo.xpm
+include/X11/pixmaps/monitor.xpm
+include/X11/pixmaps/mouse.xpm
+include/X11/pixmaps/permit-always.xpm
+include/X11/pixmaps/permit.xpm
+include/X11/pixmaps/skull.xpm
 include/xf86Optrec.h
 include/xf86Parser.h
 lib/libFS.a
@@ -569,6 +583,7 @@ lib/libXxf86dga.a
 lib/libXxf86dga.so
 lib/libXxf86dga.so.1
 lib/libXxf86dga.so.1.0
+lib/libXxf86dga.so.1.1
 lib/libXxf86misc.a
 lib/libXxf86misc.so
 lib/libXxf86misc.so.1
@@ -578,6 +593,10 @@ lib/libXxf86vm.a
 lib/libXxf86vm.so
 lib/libXxf86vm.so.1
 lib/libXxf86vm.so.1.0
+lib/libdmx.a
+lib/libdmx.so
+lib/libdmx.so.1
+lib/libdmx.so.1.0
 lib/libdps.a
 lib/libdps.so
 lib/libdps.so.1
