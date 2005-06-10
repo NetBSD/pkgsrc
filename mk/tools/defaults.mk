@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.26 2005/06/07 16:57:37 jlam Exp $
+# $NetBSD: defaults.mk,v 1.27 2005/06/10 20:53:54 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -137,9 +137,10 @@ _TOOLS_VARNAME_GNU.bison-yacc=	YACC
 _TOOLS_VARNAME_GNU.chmod=	CHMOD
 _TOOLS_VARNAME_GNU.cmp=		CMP
 _TOOLS_VARNAME_GNU.cp=		CP
-_TOOLS_VARNAME_GNU.echo=	ECHO
+_TOOLS_VARNAME_GNU.echo=	ECHO ac_cv_path_ECHO
 _TOOLS_VARNAME_GNU.egrep=	EGREP ac_cv_path_EGREP
 _TOOLS_VARNAME_GNU.env=		SETENV ENV_PROG ac_cv_path_ENV
+_TOOLS_VARNAME_GNU.false=	FALSE ac_cv_path_FALSE
 _TOOLS_VARNAME_GNU.find=	FIND
 _TOOLS_VARNAME_GNU.gawk=	AWK
 _TOOLS_VARNAME_GNU.gm4=		M4
@@ -158,7 +159,9 @@ _TOOLS_VARNAME_GNU.rmdir=	RMDIR
 _TOOLS_VARNAME_GNU.sed=		SED
 _TOOLS_VARNAME_GNU.sort=	SORT
 _TOOLS_VARNAME_GNU.tar=		TAR
+_TOOLS_VARNAME_GNU.test=	TEST ac_cv_path_TEST
 _TOOLS_VARNAME_GNU.touch=	TOUCH
+_TOOLS_VARNAME_GNU.true=	TRUE ac_cv_path_TRUE
 _TOOLS_VARNAME_GNU.xmkmf=	XMKMF
 _TOOLS_VARNAME_GNU.yacc=	YACC
 
