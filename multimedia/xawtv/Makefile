@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/01 20:14:28 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/10 18:26:36 wiz Exp $
 #
 
 DISTNAME=	xawtv_3.90
@@ -30,17 +30,15 @@ SUBST_FILES.devoss+=	man/es/streamer.1 man/es/xawtv.1 man/fr/xawtv.1
 SUBST_SED.devoss=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xawtv
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "i386"
 PKG_SUPPORTED_OPTIONS=	mmx
-.endif
 
 .include "../../mk/bsd.options.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(PKG_OPTIONS:Mmmx)
+.if ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--enable-mmx
+.endif
 .endif
 
 .include "../../devel/ncurses/buildlink3.mk"
