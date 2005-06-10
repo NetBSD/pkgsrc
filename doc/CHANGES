@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10344 2005/06/10 12:58:43 salo Exp $
+$NetBSD: CHANGES,v 1.10345 2005/06/10 15:08:20 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2856,3 +2856,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/tnftp to 20050610 [lukem 2005-06-10]
 	Updated editors/gedit to 2.10.3 [jmmv 2005-06-10]
 	Updated chat/gaim to 1.3.1 [salo 2005-06-10]
+	Updated net/netbsd-tap to 20050610 [cube 2005-06-10]
