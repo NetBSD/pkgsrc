@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3604 2005/06/09 18:22:33 salo Exp $
+$NetBSD: TODO,v 1.3605 2005/06/10 01:42:12 dmcmahill Exp $
 
 Suggested new packages
 ======================
@@ -1243,6 +1243,11 @@ Suggested pkgsrc enhancements
 	o Document process for installing manual pages in the pkgsrc guide.
 		- INSTALL_MAN
 		- MANCOMPRESSED
+
+	o Add an install time check that examines installed files for references
+	  to ${WRKDIR}.  In particular this should help catch packages which 
+	  pickup the tools directory with AC_PATH_PROG.  This is in a similar
+	  spirit as the runtime path checks which already exist.
 
 Suggested other platform enhancements
 =====================================
