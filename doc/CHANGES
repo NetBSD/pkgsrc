@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10341 2005/06/10 03:50:17 jlam Exp $
+$NetBSD: CHANGES,v 1.10342 2005/06/10 05:11:09 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2853,3 +2853,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/idesk to 0.7.2 [jmmv 2005-06-09]
 	Updated pkgtools/pkg_install to 20050607 [dmcmahill 2005-06-09]
 	Updated pkgtools/x11-links to 0.25 [jlam 2005-06-10]
+	Updated net/tnftp to 20050610 [lukem 2005-06-10]
