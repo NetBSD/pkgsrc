@@ -1,5 +1,5 @@
-/*	NetBSD: util.c,v 1.10 2005/05/14 03:53:28 lukem Exp	*/
-/*	from	NetBSD: util.c,v 1.122 2005/05/13 05:03:49 lukem Exp	*/
+/*	NetBSD: util.c,v 1.14 2005/06/10 04:05:01 lukem Exp	*/
+/*	from	NetBSD: util.c,v 1.129 2005/06/10 00:18:47 lukem Exp	*/
 
 /*-
  * Copyright (c) 1997-2005 The NetBSD Foundation, Inc.
@@ -69,13 +69,6 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-
-#if 0
-#include <sys/cdefs.h>
-#ifndef lint
-__RCSID("NetBSD: util.c,v 1.10 2005/05/14 03:53:28 lukem Exp");
-#endif /* not lint */
-#endif
 
 /*
  * FTP User Program -- Misc support routines
@@ -355,34 +348,35 @@ lostpeer(int dummy)
  * Return non-zero if successful.
  */
 int
-ftp_login(const char *host, const char *user, const char *pass)
+ftp_login(const char *host, const char *luser, const char *lpass)
 {
 	char tmp[80];
-	const char *acct;
-	int n, aflag, rval, freeuser, freepass, freeacct;
+	char *user, *pass, *acct, *p;
+	const char *errormsg;
+	int n, aflag, rval, nlen;
 
-	acct = NULL;
-	aflag = rval = freeuser = freepass = freeacct = 0;
+	aflag = rval = 0;
+	user = pass = acct = NULL;
+	if (luser)
+		user = xstrdup(luser);
+	if (lpass)
+		pass = xstrdup(lpass);
 
 	if (debug)
 		fprintf(ttyout, "ftp_login: user `%s' pass `%s' host `%s'\n",
 		    user ? user : "<null>", pass ? pass : "<null>",
 		    host ? host : "<null>");
 
-
 	/*
 	 * Set up arguments for an anonymous FTP session, if necessary.
 	 */
 	if (anonftp) {
-		user = "anonymous";	/* as per RFC 1635 */
-		pass = getoptionvalue("anonpass");
+		FREEPTR(user);
+		user = xstrdup("anonymous");	/* as per RFC 1635 */
+		FREEPTR(pass);
+		pass = xstrdup(getoptionvalue("anonpass"));
 	}
 
-	if (user == NULL)
-		freeuser = 1;
-	if (pass == NULL)
-		freepass = 1;
-	freeacct = 1;
 	if (ruserpass(host, &user, &pass, &acct) < 0) {
 		code = -1;
 		goto cleanup_ftp_login;
@@ -393,53 +387,55 @@ ftp_login(const char *host, const char *user, const char *pass)
 			fprintf(ttyout, "Name (%s:%s): ", host, localname);
 		else
 			fprintf(ttyout, "Name (%s): ", host);
-		*tmp = '\0';
-		if (fgets(tmp, sizeof(tmp) - 1, stdin) == NULL) {
-			fprintf(ttyout, "\nEOF received; login aborted.\n");
-			clearerr(stdin);
+		errormsg = NULL;
+		nlen = getline(stdin, tmp, sizeof(tmp), &errormsg);
+		if (nlen < 0) {
+			fprintf(ttyout, "%s; %s aborted.\n", errormsg, "login");
 			code = -1;
 			goto cleanup_ftp_login;
+		} else if (nlen == 0) {
+			user = xstrdup(localname);
+		} else {
+			user = xstrdup(tmp);
 		}
-		tmp[strlen(tmp) - 1] = '\0';
-		freeuser = 0;
-		if (*tmp == '\0')
-			user = localname;
-		else
-			user = tmp;
 	}
 
 	if (gatemode) {
 		char *nuser;
-		int len;
+		size_t len;
 
 		len = strlen(user) + 1 + strlen(host) + 1;
 		nuser = xmalloc(len);
 		(void)strlcpy(nuser, user, len);
 		(void)strlcat(nuser, "@",  len);
 		(void)strlcat(nuser, host, len);
-		freeuser = 1;
+		FREEPTR(user);
 		user = nuser;
 	}
 
 	n = command("USER %s", user);
 	if (n == CONTINUE) {
 		if (pass == NULL) {
-			freepass = 0;
-			pass = getpass("Password:");
+			p = getpass("Password: ");
+			pass = xstrdup(p);
+			memset(p, 0, strlen(p));
 		}
 		n = command("PASS %s", pass);
+		memset(pass, 0, strlen(pass));
 	}
 	if (n == CONTINUE) {
 		aflag++;
 		if (acct == NULL) {
-			freeacct = 0;
-			acct = getpass("Account:");
+			p = getpass("Account: ");
+			acct = xstrdup(p);
+			memset(p, 0, strlen(p));
 		}
 		if (acct[0] == '\0') {
 			warnx("Login failed.");
 			goto cleanup_ftp_login;
 		}
 		n = command("ACCT %s", acct);
+		memset(acct, 0, strlen(acct));
 	}
 	if ((n != COMPLETE) ||
 	    (!aflag && acct != NULL && command("ACCT %s", acct) != COMPLETE)) {
@@ -465,12 +461,13 @@ ftp_login(const char *host, const char *user, const char *pass)
 	updateremotecwd();
 
  cleanup_ftp_login:
-	if (user != NULL && freeuser)
-		free((char *)user);
-	if (pass != NULL && freepass)
-		free((char *)pass);
-	if (acct != NULL && freeacct)
-		free((char *)acct);
+	FREEPTR(user);
+	if (pass != NULL)
+		memset(pass, 0, strlen(pass));
+	FREEPTR(pass);
+	if (acct != NULL)
+		memset(acct, 0, strlen(pass));
+	FREEPTR(acct);
 	return (rval);
 }
 
@@ -483,21 +480,24 @@ ftp_login(const char *host, const char *user, const char *pass)
 int
 another(int *pargc, char ***pargv, const char *prompt)
 {
-	int len = strlen(line), ret;
+	const char	*errormsg;
+	int		ret, nlen;
+	size_t		len;
 
+	len = strlen(line);
 	if (len >= sizeof(line) - 3) {
-		fputs("sorry, arguments too long.\n", ttyout);
+		fputs("Sorry, arguments too long.\n", ttyout);
 		intr(0);
 	}
 	fprintf(ttyout, "(%s) ", prompt);
 	line[len++] = ' ';
-	if (fgets(&line[len], sizeof(line) - len, stdin) == NULL) {
-		clearerr(stdin);
+	errormsg = NULL;
+	nlen = getline(stdin, line + len, sizeof(line)-len, &errormsg);
+	if (nlen < 0) {
+		fprintf(ttyout, "%s; %s aborted.\n", errormsg, "operation");
 		intr(0);
 	}
-	len += strlen(&line[len]);
-	if (len > 0 && line[len - 1] == '\n')
-		line[len - 1] = '\0';
+	len += nlen;
 	makeargv();
 	ret = margc > *pargc;
 	*pargc = margc;
@@ -511,65 +511,67 @@ another(int *pargc, char ***pargv, const char *prompt)
  * of writing to the screen.
  */
 char *
-remglob(char *argv[], int doswitch, char **errbuf)
+remglob(char *argv[], int doswitch, const char **errbuf)
 {
-        char temp[MAXPATHLEN];
-        static char buf[MAXPATHLEN];
-        static FILE *ftemp = NULL;
-        static char **args;
-        int oldverbose, oldhash, oldprogress, fd, len;
-        char *cp, *mode;
+	static char buf[MAXPATHLEN];
+	static FILE *ftemp = NULL;
+	static char **args;
+	char temp[MAXPATHLEN];
+	int oldverbose, oldhash, oldprogress, fd;
+	char *cp;
+	const char *mode;
+	size_t len;
 
-        if (!mflag || !connected) {
-                if (!doglob)
-                        args = NULL;
-                else {
-                        if (ftemp) {
-                                (void)fclose(ftemp);
-                                ftemp = NULL;
-                        }
-                }
-                return (NULL);
-        }
-        if (!doglob) {
-                if (args == NULL)
-                        args = argv;
-                if ((cp = *++args) == NULL)
-                        args = NULL;
-                return (cp);
-        }
-        if (ftemp == NULL) {
+	if (!mflag || !connected) {
+		if (!doglob)
+			args = NULL;
+		else {
+			if (ftemp) {
+				(void)fclose(ftemp);
+				ftemp = NULL;
+			}
+		}
+		return (NULL);
+	}
+	if (!doglob) {
+		if (args == NULL)
+			args = argv;
+		if ((cp = *++args) == NULL)
+			args = NULL;
+		return (cp);
+	}
+	if (ftemp == NULL) {
 		len = strlcpy(temp, tmpdir, sizeof(temp));
 		if (temp[len - 1] != '/')
 			(void)strlcat(temp, "/", sizeof(temp));
 		(void)strlcat(temp, TMPFILE, sizeof(temp));
-                if ((fd = mkstemp(temp)) < 0) {
-                        warn("unable to create temporary file %s", temp);
-                        return (NULL);
-                }
-                close(fd);
-                oldverbose = verbose;
+		if ((fd = mkstemp(temp)) < 0) {
+			warn("unable to create temporary file %s", temp);
+			return (NULL);
+		}
+		close(fd);
+		oldverbose = verbose;
 		verbose = (errbuf != NULL) ? -1 : 0;
-                oldhash = hash;
+		oldhash = hash;
 		oldprogress = progress;
-                hash = 0;
+		hash = 0;
 		progress = 0;
-                if (doswitch)
-                        pswitch(!proxy);
-                for (mode = "w"; *++argv != NULL; mode = "a")
-                        recvrequest("NLST", temp, *argv, mode, 0, 0);
+		if (doswitch)
+			pswitch(!proxy);
+		for (mode = "w"; *++argv != NULL; mode = "a")
+			recvrequest("NLST", temp, *argv, mode, 0, 0);
 		if ((code / 100) != COMPLETE) {
 			if (errbuf != NULL)
 				*errbuf = reply_string;
 		}
-                if (doswitch)
-                        pswitch(!proxy);
-                verbose = oldverbose;
+		if (doswitch)
+			pswitch(!proxy);
+		verbose = oldverbose;
 		hash = oldhash;
 		progress = oldprogress;
-                ftemp = fopen(temp, "r");
-                (void)unlink(temp);
-                if (ftemp == NULL) {
+		ftemp = fopen(temp, "r");
+		(void)unlink(temp);
+		if (ftemp == NULL) {
 			if (errbuf == NULL)
 				fputs(
 				    "can't find list of remote files, oops.\n",
@@ -577,17 +579,17 @@ remglob(char *argv[], int doswitch, char **errbuf)
 			else
 				*errbuf =
 				    "can't find list of remote files, oops.";
-                        return (NULL);
-                }
-        }
-        if (fgets(buf, sizeof(buf), ftemp) == NULL) {
-                (void)fclose(ftemp);
+			return (NULL);
+		}
+	}
+	if (fgets(buf, sizeof(buf), ftemp) == NULL) {
+		(void)fclose(ftemp);
 		ftemp = NULL;
-                return (NULL);
-        }
-        if ((cp = strchr(buf, '\n')) != NULL)
-                *cp = '\0';
-        return (buf);
+		return (NULL);
+	}
+	if ((cp = strchr(buf, '\n')) != NULL)
+		*cp = '\0';
+	return (buf);
 }
 
 /*
@@ -815,20 +817,30 @@ updateremotecwd(void)
 int
 fileindir(const char *file, const char *dir)
 {
-	char	realfile[PATH_MAX+1];
+	char	parentdirbuf[PATH_MAX+1], *parentdir;
+	char	realdir[PATH_MAX+1];
 	size_t	dirlen;
 
-	if (realpath(file, realfile) == NULL) {
-		warn("Unable to determine real path of `%s'", file);
+		 			/* determine parent directory of file */
+	(void)strlcpy(parentdirbuf, file, sizeof(parentdirbuf));
+	parentdir = dirname(parentdirbuf);
+	if (strcmp(parentdir, ".") == 0)
+		return 1;		/* current directory is ok */
+
+					/* find the directory */
+	if (realpath(parentdir, realdir) == NULL) {
+		warn("Unable to determine real path of `%s'", parentdir);
 		return 0;
 	}
-	if (realfile[0] != '/')		/* relative result */
+	if (realdir[0] != '/')		/* relative result is ok */
 		return 1;
 	dirlen = strlen(dir);
 #if 0
-printf("file %s realfile %s dir %s [%d]\n", file, realfile, dir, dirlen);
+printf("file %s parent %s realdir %s dir %s [%d]\n",
+    file, parentdir, realdir, dir, dirlen);
 #endif
-	if (strncmp(realfile, dir, dirlen) == 0 && realfile[dirlen] == '/')
+	if (strncmp(realdir, dir, dirlen) == 0 &&
+	    (realdir[dirlen] == '/' || realdir[dirlen] == '\0'))
 		return 1;
 	return 0;
 }
@@ -839,9 +851,10 @@ printf("file %s realfile %s dir %s [%d]\n", file, realfile, dir, dirlen);
 void
 list_vertical(StringList *sl)
 {
-	int i, j, w;
-	int columns, width, lines;
+	int i, j;
+	int columns, lines;
 	char *p;
+	size_t w, width;
 
 	width = 0;
 
@@ -1055,8 +1068,7 @@ ftpvis(char *dst, size_t dstlen, const char *src, size_t srclen)
 void
 formatbuf(char *buf, size_t len, const char *src)
 {
-	const char	*p;
-	char		*p2, *q;
+	const char	*p, *p2, *q;
 	int		 i, op, updirs, pdirs;
 
 #define ADDBUF(x) do { \
@@ -1135,7 +1147,7 @@ formatbuf(char *buf, size_t len, const char *src)
 
 		case 'M':
 		case 'm':
-			for (p2 = connected && username ? username : "-";
+			for (p2 = connected && hostname ? hostname : "-";
 			    *p2 ; p2++) {
 				if (op == 'm' && *p2 == '.')
 					break;
@@ -1223,6 +1235,56 @@ isipv6addr(const char *addr)
 	return (rv == 1) ? 1 : 0;
 }
 
+/*
+ * Read a line from the FILE stream into buf/buflen using fgets(), so up
+ * to buflen-1 chars will be read and the result will be NUL terminated.
+ * If the line has a trailing newline it will be removed.
+ * If the line is too long, excess characters will be read until
+ * newline/EOF/error.
+ * If EOF/error occurs or a too-long line is encountered and errormsg
+ * isn't NULL, it will be changed to a description of the problem.
+ * (The EOF message has a leading \n for cosmetic purposes).
+ * Returns:
+ *	>=0	length of line (excluding trailing newline) if all ok
+ *	-1	error occurred
+ *	-2	EOF encountered
+ *	-3	line was too long
+ */
+int
+getline(FILE *stream, char *buf, size_t buflen, const char **errormsg)
+{
+	int	rv, ch;
+	size_t	len;
+
+	if (fgets(buf, buflen, stream) == NULL) {
+		if (feof(stream)) {	/* EOF */
+			rv = -2;
+			if (errormsg)
+				*errormsg = "\nEOF received";
+		} else  {		/* error */
+			rv = -1;
+			if (errormsg)
+				*errormsg = "Error encountered";
+		}
+		clearerr(stream);
+		return rv;
+	}
+	len = strlen(buf);
+	if (buf[len-1] == '\n') {	/* clear any trailing newline */
+		buf[--len] = '\0';
+	} else if (len == buflen-1) {	/* line too long */
+		while ((ch = getchar()) != '\n' && ch != EOF)
+			continue;
+		if (errormsg)
+			*errormsg = "Input line is too long";
+		clearerr(stream);
+		return -3;
+	}
+	if (errormsg)
+		*errormsg = NULL;
+	return len;
+}
+
 
 /*
  * Internal version of connect(2); sets socket buffer sizes first and
@@ -1233,7 +1295,7 @@ isipv6addr(const char *addr)
  * Returns -1 upon failure (with errno set to the problem), or 0 on success.
  */
 int
-xconnect(int sock, const struct sockaddr *name, int namelen)
+xconnect(int sock, const struct sockaddr *name, socklen_t namelen)
 {
 	int		flags, rv, timeout, error;
 	socklen_t	slen;
@@ -1327,12 +1389,16 @@ xpoll(struct pollfd *fds, int nfds, int timeout)
 	return poll(fds, nfds, timeout);
 
 #elif HAVE_SELECT	/* implement poll(2) using select(2) */
-	fd_set		rset, wset;
+	fd_set		rset, wset, xset;
+	const int	rsetflags = POLLIN | POLLRDNORM;
+	const int	wsetflags = POLLOUT | POLLWRNORM;
+	const int	xsetflags = POLLRDBAND;
 	struct timeval	tv, *ptv;
 	int		i, max, rv;
 
 	FD_ZERO(&rset);			/* build list of read & write events */
 	FD_ZERO(&wset);
+	FD_ZERO(&xset);
 	max = 0;
 	for (i = 0; i < nfds; i++) {
 		if (fds[i].fd > FD_SETSIZE) {
@@ -1341,10 +1407,12 @@ xpoll(struct pollfd *fds, int nfds, int timeout)
 			return -1;
 		} else if (fds[i].fd > max)
 			max = fds[i].fd;
-		if (fds[i].events & POLLIN)
+		if (fds[i].events & rsetflags)
 			FD_SET(fds[i].fd, &rset);
-		if (fds[i].events & POLLOUT)
+		if (fds[i].events & wsetflags)
 			FD_SET(fds[i].fd, &wset);
+		if (fds[i].events & xsetflags)
+			FD_SET(fds[i].fd, &xset);
 	}
 
 	ptv = &tv;			/* determine timeout */
@@ -1358,15 +1426,17 @@ xpoll(struct pollfd *fds, int nfds, int timeout)
 		ptv->tv_sec = timeout / 1000;
 		ptv->tv_usec = (timeout % 1000) * 1000;
 	}
-	rv = select(max + 1, &rset, &wset, NULL, ptv);
+	rv = select(max + 1, &rset, &wset, &xset, ptv);
 	if (rv <= 0)			/* -1 == error, 0 == timeout */
 		return rv;
 
 	for (i = 0; i < nfds; i++) {	/* determine results */
 		if (FD_ISSET(fds[i].fd, &rset))
-			fds[i].revents |= POLLIN;
+			fds[i].revents |= (fds[i].events & rsetflags);
 		if (FD_ISSET(fds[i].fd, &wset))
-			fds[i].revents |= POLLOUT;
+			fds[i].revents |= (fds[i].events & wsetflags);
+		if (FD_ISSET(fds[i].fd, &xset))
+			fds[i].revents |= (fds[i].events & xsetflags);
 	}
 	return rv;
 

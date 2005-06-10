@@ -1,5 +1,5 @@
-/*	NetBSD: ftp.c,v 1.7 2005/05/14 03:53:28 lukem Exp	*/
-/*	from	NetBSD: ftp.c,v 1.131 2005/05/13 05:03:49 lukem Exp	*/
+/*	NetBSD: ftp.c,v 1.11 2005/06/10 04:05:01 lukem Exp	*/
+/*	from	NetBSD: ftp.c,v 1.134 2005/06/10 00:18:46 lukem Exp	*/
 
 /*-
  * Copyright (c) 1996-2005 The NetBSD Foundation, Inc.
@@ -97,17 +97,6 @@
 
 #include "tnftp.h"
 
-#if 0
-#include <sys/cdefs.h>
-#ifndef lint
-#if 0
-static char sccsid[] = "@(#)ftp.c	8.6 (Berkeley) 10/27/94";
-#else
-__RCSID("NetBSD: ftp.c,v 1.7 2005/05/14 03:53:28 lukem Exp");
-#endif
-#endif /* not lint */
-#endif
-
 #include <arpa/telnet.h>
 
 #include "ftp_var.h"
@@ -147,11 +136,12 @@ struct sockinet myctladdr, hisctladdr, data_addr;
 char *
 hookup(char *host, char *port)
 {
-	int s = -1, len, error, portnum;
+	int s = -1, error, portnum;
 	struct addrinfo hints, *res, *res0;
 	char hbuf[MAXHOSTNAMELEN];
 	static char hostnamebuf[MAXHOSTNAMELEN];
 	char *cause = "unknown";
+	socklen_t len;
 	int on = 1;
 
 	memset((char *)&hisctladdr, 0, sizeof (hisctladdr));
@@ -164,7 +154,7 @@ hookup(char *host, char *port)
 	hints.ai_protocol = 0;
 	error = getaddrinfo(host, NULL, &hints, &res0);
 	if (error) {
-		warnx("%s", gai_strerror(error));
+		warnx("%s: %s", host, gai_strerror(error));
 		code = -1;
 		return (0);
 	}
@@ -196,12 +186,8 @@ hookup(char *host, char *port)
 		 * we use it as native.  What a mess!
 		 */
 		ai_unmapped(res);
-#if 0	/*old behavior*/
-		if (res != res0)	/* not on the first address */
-#else
-		if (res0->ai_next)	/* if we have multiple possibilities */
-#endif
-		{
+		if (verbose && res0->ai_next) {
+				/* if we have multiple possibilities */
 			if (getnameinfo(res->ai_addr, res->ai_addrlen,
 			    hbuf, sizeof(hbuf), NULL, 0, NI_NUMERICHOST))
 				strlcpy(hbuf, "?", sizeof(hbuf));
@@ -244,7 +230,7 @@ hookup(char *host, char *port)
 	res0 = res = NULL;
 
 	len = hisctladdr.su_len;
-	if (getsockname(s, (struct sockaddr *)&myctladdr.si_su, &len) < 0) {
+	if (getsockname(s, (struct sockaddr *)&myctladdr.si_su, &len) == -1) {
 		warn("getsockname");
 		code = -1;
 		goto bad;
@@ -553,7 +539,7 @@ void
 abortxfer(int notused)
 {
 	char msgbuf[100];
-	int len;
+	size_t len;
 
 	sigint_raised = 1;
 	alarmtimer(0);
@@ -1253,11 +1239,12 @@ int
 initconn(void)
 {
 	char *p, *a;
-	int result, len, tmpno = 0;
+	int result, tmpno = 0;
 	int on = 1;
 	int error;
-	u_int addr[16], port[2];
-	u_int af, hal, pal;
+	unsigned int addr[16], port[2];
+	unsigned int af, hal, pal;
+	socklen_t len;
 	char *pasvcmd = NULL;
 
 #ifdef INET6
@@ -1557,7 +1544,7 @@ initconn(void)
 	}
 	len = sizeof(data_addr.si_su);
 	memset((char *)&data_addr, 0, sizeof (data_addr));
-	if (getsockname(data, (struct sockaddr *)&data_addr.si_su, &len) < 0) {
+	if (getsockname(data, (struct sockaddr *)&data_addr.si_su, &len) == -1) {
 		warn("getsockname");
 		goto bad;
 	}
@@ -1672,9 +1659,10 @@ FILE *
 dataconn(const char *lmode)
 {
 	struct sockinet	from;
-	int		s, fromlen, flags, rv, timeout;
+	int		s, flags, rv, timeout;
 	struct timeval	endtime, now, td;
 	struct pollfd	pfd[1];
+	socklen_t	fromlen;
 
 	if (passivemode)	/* passive data connection */
 		return (fdopen(data, lmode));
@@ -2064,7 +2052,7 @@ void
 abort_squared(int dummy)
 {
 	char msgbuf[100];
-	int len;
+	size_t len;
 
 	sigint_raised = 1;
 	alarmtimer(0);
@@ -2123,7 +2111,7 @@ ai_unmapped(struct addrinfo *ai)
 #ifdef INET6
 	struct sockaddr_in6 *sin6;
 	struct sockaddr_in sin;
-	int len;
+	socklen_t len;
 
 	if (ai->ai_family != AF_INET6)
 		return;

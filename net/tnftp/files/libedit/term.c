@@ -1,4 +1,4 @@
-/*	NetBSD: term.c,v 1.4 2005/05/11 01:17:39 lukem Exp	*/
+/*	NetBSD: term.c,v 1.5 2005/06/09 16:48:58 lukem Exp	*/
 /*	from	NetBSD: term.c,v 1.40 2004/05/22 23:21:28 christos Exp	*/
 
 /*-
@@ -35,17 +35,6 @@
 
 #include "tnftp.h"
 #include "sys.h"
-
-#if 0
-#include "config.h"
-#if !defined(lint) && !defined(SCCSID)
-#if 0
-static char sccsid[] = "@(#)term.c	8.2 (Berkeley) 4/30/95";
-#else
-__RCSID("NetBSD: term.c,v 1.4 2005/05/11 01:17:39 lukem Exp");
-#endif
-#endif /* not lint && not SCCSID */
-#endif
 
 /*
  * term.c: Editor/termcap-curses interface

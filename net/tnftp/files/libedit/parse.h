@@ -1,5 +1,5 @@
-/*	NetBSD: parse.h,v 1.2 2005/05/11 01:17:39 lukem Exp	*/
-/*	from	NetBSD: parse.h,v 1.5 2003/08/07 16:44:32 agc Exp	*/
+/*	NetBSD: parse.h,v 1.3 2005/05/31 02:07:02 lukem Exp	*/
+/*	from	NetBSD: parse.h,v 1.6 2005/05/29 04:58:15 lukem Exp	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -42,7 +42,7 @@
 #define	_h_el_parse
 
 protected int	 parse_line(EditLine *, const char *);
-protected int	 parse__escape(const char ** const);
+protected int	 parse__escape(const char **);
 protected char	*parse__string(char *, const char *);
 protected int	 parse_cmd(EditLine *, const char *);
 

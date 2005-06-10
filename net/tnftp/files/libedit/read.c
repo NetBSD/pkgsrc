@@ -1,5 +1,5 @@
-/*	NetBSD: read.c,v 1.4 2005/05/11 01:17:39 lukem Exp	*/
-/*	from	NetBSD: read.c,v 1.34 2004/07/08 00:51:36 christos Exp	*/
+/*	NetBSD: read.c,v 1.7 2005/06/09 16:48:58 lukem Exp	*/
+/*	from	NetBSD: read.c,v 1.35 2005/03/09 23:55:02 christos Exp	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -35,17 +35,6 @@
 
 #include "tnftp.h"
 #include "sys.h"
-
-#if 0
-#include "config.h"
-#if !defined(lint) && !defined(SCCSID)
-#if 0
-static char sccsid[] = "@(#)read.c	8.1 (Berkeley) 6/4/93";
-#else
-__RCSID("NetBSD: read.c,v 1.4 2005/05/11 01:17:39 lukem Exp");
-#endif
-#endif /* not lint && not SCCSID */
-#endif
 
 /*
  * read.c: Clean this junk up! This is horrible code.
@@ -372,6 +361,9 @@ read_prepare(EditLine *el)
 	re_clear_display(el);	/* reset the display stuff */
 	ch_reset(el);
 	re_refresh(el);		/* print the prompt */
+
+	if (el->el_flags & UNBUFFERED)
+		term__flush();
 }
 
 protected void
@@ -488,7 +480,7 @@ el_gets(EditLine *el, int *nread)
 #endif /* DEBUG_READ */
 			break;
 		}
-		if ((uint)cmdnum >= el->el_map.nfunc) {	/* BUG CHECK command */
+		if ((unsigned int)cmdnum >= el->el_map.nfunc) {	/* BUG CHECK command */
 #ifdef DEBUG_EDIT
 			(void) fprintf(el->el_errfile,
 			    "ERROR: illegal command from key 0%o\r\n", ch);

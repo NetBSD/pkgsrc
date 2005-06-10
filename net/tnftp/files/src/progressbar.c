@@ -1,9 +1,9 @@
-/* pkgsrc $NetBSD $/
-/*	NetBSD: progressbar.c,v 1.6 2005/05/11 02:41:28 lukem Exp	*/
-/*	from	NetBSD: progressbar.c,v 1.7 2005/04/11 01:49:31 lukem Exp	*/
+/* pkgsrc $NetBSD: progressbar.c,v 1.5 2005/06/10 05:06:26 lukem Exp $ */
+/*	NetBSD: progressbar.c,v 1.9 2005/06/10 04:05:01 lukem Exp	*/
+/*	from	NetBSD: progressbar.c,v 1.10 2005/06/09 16:38:29 lukem Exp	*/
 
 /*-
- * Copyright (c) 1997-2003 The NetBSD Foundation, Inc.
+ * Copyright (c) 1997-2005 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -37,13 +37,6 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-
-#if 0
-#include <sys/cdefs.h>
-#ifndef lint
-__RCSID("NetBSD: progressbar.c,v 1.6 2005/05/11 02:41:28 lukem Exp");
-#endif /* not lint */
-#endif
 
 /*
  * FTP User Program -- Misc support routines
@@ -119,7 +112,8 @@ progressmeter(int flag)
 	struct timeval td;
 	off_t abbrevsize, bytespersec;
 	double elapsed;
-	int ratio, barlength, i, remaining;
+	int ratio, i, remaining;
+	size_t barlength;
 
 			/*
 			 * Work variables for progress bar.
@@ -130,7 +124,7 @@ progressmeter(int flag)
 			 *	these appropriately.
 			 */
 #endif
-	int len;
+	size_t		len;
 	char		buf[256];	/* workspace for progress bar */
 #ifndef NO_PROGRESS
 #define	BAROVERHEAD	43		/* non `*' portion of progress bar */
@@ -217,7 +211,7 @@ progressmeter(int flag)
 		if (barlength > 0) {
 			i = barlength * ratio / 100;
 			len += snprintf(buf + len, BUFLEFT,
-			    "|%.*s%*s|", i, stars, barlength - i, "");
+			    "|%.*s%*s|", i, stars, (int)(barlength - i), "");
 		}
 	}
 
@@ -294,7 +288,8 @@ ptransfer(int siginfo)
 	struct timeval now, td, wait;
 	double elapsed;
 	off_t bytespersec;
-	int remaining, hh, i, len;
+	int remaining, hh, i;
+	size_t len;
 
 	char buf[256];		/* Work variable for transfer status. */
 

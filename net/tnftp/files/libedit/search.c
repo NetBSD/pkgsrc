@@ -1,4 +1,4 @@
-/*	NetBSD: search.c,v 1.4 2005/05/11 01:17:39 lukem Exp	*/
+/*	NetBSD: search.c,v 1.5 2005/06/09 16:48:58 lukem Exp	*/
 /*	from	NetBSD: search.c,v 1.20 2004/11/04 01:16:03 christos Exp	*/
 
 /*-
@@ -35,17 +35,6 @@
 
 #include "tnftp.h"
 #include "sys.h"
-
-#if 0
-#include "config.h"
-#if !defined(lint) && !defined(SCCSID)
-#if 0
-static char sccsid[] = "@(#)search.c	8.1 (Berkeley) 6/4/93";
-#else
-__RCSID("NetBSD: search.c,v 1.4 2005/05/11 01:17:39 lukem Exp");
-#endif
-#endif /* not lint && not SCCSID */
-#endif
 
 /*
  * search.c: History and character search functions
