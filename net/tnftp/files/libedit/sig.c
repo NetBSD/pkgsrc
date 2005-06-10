@@ -1,4 +1,4 @@
-/*	NetBSD: sig.c,v 1.4 2005/05/11 01:17:39 lukem Exp	*/
+/*	NetBSD: sig.c,v 1.6 2005/06/09 16:48:58 lukem Exp	*/
 /*	from	NetBSD: sig.c,v 1.11 2003/08/07 16:44:33 agc Exp	*/
 
 /*-
@@ -36,17 +36,6 @@
 #include "tnftp.h"
 #include "sys.h"
 
-#if 0
-#include "config.h"
-#if !defined(lint) && !defined(SCCSID)
-#if 0
-static char sccsid[] = "@(#)sig.c	8.1 (Berkeley) 6/4/93";
-#else
-__RCSID("NetBSD: sig.c,v 1.4 2005/05/11 01:17:39 lukem Exp");
-#endif
-#endif /* not lint && not SCCSID */
-#endif
-
 /*
  * sig.c: Signal handling stuff.
  *	  our policy is to trap all signals, set a good state
@@ -54,6 +43,8 @@ __RCSID("NetBSD: sig.c,v 1.4 2005/05/11 01:17:39 lukem Exp");
  */
 #include "el.h"
 #include <stdlib.h>
+
+#include "src/progressbar.h"	/* for xsignal_restart() */
 
 private EditLine *sel = NULL;
 

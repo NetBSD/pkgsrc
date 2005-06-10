@@ -1,5 +1,5 @@
-/*	NetBSD: glob.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
-/*	from	NetBSD: __glob13.c,v 1.23 2001/09/18 16:37:26 christos Exp	*/
+/*	NetBSD: glob.c,v 1.5 2005/06/01 11:48:49 lukem Exp	*/
+/*	from	NetBSD: __glob13.c,v 1.25 2003/08/07 16:42:45 agc Exp	*/
 
 /*
  * Copyright (c) 1989, 1993
@@ -16,11 +16,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -88,7 +84,7 @@
 #define	M_MASK		0xffff
 #define	M_ASCII		0x00ff
 
-typedef u_short Char;
+typedef unsigned short Char;
 
 #else
 
@@ -137,11 +133,11 @@ int
 glob(const char *pattern, int flags, int (*errfunc)(const char *, int),
     glob_t *pglob)
 {
-	const u_char *patnext;
+	const unsigned char *patnext;
 	int c;
 	Char *bufnext, *bufend, patbuf[MAXPATHLEN+1];
 
-	patnext = (const u_char *) pattern;
+	patnext = (const unsigned char *) pattern;
 	if (!(flags & GLOB_APPEND)) {
 		pglob->gl_pathc = 0;
 		pglob->gl_pathv = NULL;
@@ -616,7 +612,7 @@ glob3(Char *pathbuf, Char *pathend, Char *pathlim,
 	else
 		readdirfunc = (struct dirent *(*)(void *)) readdir;
 	while ((dp = (*readdirfunc)(dirp)) != NULL) {
-		u_char *sc;
+		unsigned char *sc;
 		Char *dc;
 
 		/* Initial DOT must be matched literally. */
@@ -626,7 +622,7 @@ glob3(Char *pathbuf, Char *pathend, Char *pathlim,
 		 * The resulting string contains EOS, so we can
 		 * use the pathlim character, if it is the nul
 		 */
-		for (sc = (u_char *) dp->d_name, dc = pathend; 
+		for (sc = (unsigned char *) dp->d_name, dc = pathend; 
 		     dc <= pathlim && (*dc++ = *sc++) != EOS;)
 			continue;
 
@@ -806,7 +802,7 @@ g_opendir(Char *str, glob_t *pglob)
 	char buf[MAXPATHLEN];
 
 	if (!*str)
-		(void)strcpy(buf, ".");
+		(void)strlcpy(buf, ".", sizeof(buf));
 	else {
 		if (g_Ctoc(str, buf, sizeof(buf)))
 			return NULL;

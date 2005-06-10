@@ -1,5 +1,5 @@
-/*	NetBSD: ruserpass.c,v 1.4 2005/05/11 02:41:28 lukem Exp	*/
-/*	from	NetBSD: ruserpass.c,v 1.29 2003/08/07 11:13:57 agc Exp	*/
+/*	NetBSD: ruserpass.c,v 1.6 2005/06/10 04:05:01 lukem Exp	*/
+/*	from	NetBSD: ruserpass.c,v 1.30 2005/06/10 00:18:47 lukem Exp	*/
 
 /*
  * Copyright (c) 1985, 1993, 1994
@@ -30,17 +30,6 @@
  * SUCH DAMAGE.
  */
 
-#if 0
-#include <sys/cdefs.h>
-#ifndef lint
-#if 0
-static char sccsid[] = "@(#)ruserpass.c	8.4 (Berkeley) 4/27/95";
-#else
-__RCSID("NetBSD: ruserpass.c,v 1.4 2005/05/11 02:41:28 lukem Exp");
-#endif
-#endif /* not lint */
-#endif
-
 #include "tnftp.h"
 
 #include "ftp_var.h"
@@ -59,7 +48,7 @@ static	FILE *cfile;
 static char tokval[100];
 
 static struct toktab {
-	char *tokstr;
+	const char *tokstr;
 	int tval;
 } toktab[] = {
 	{ "default",	DEFAULT },
@@ -73,11 +62,11 @@ static struct toktab {
 };
 
 int
-ruserpass(const char *host, const char **aname, const char **apass,
-	const char **aacct)
+ruserpass(const char *host, char **aname, char **apass, char **aacct)
 {
 	char *tmp;
-	char myname[MAXHOSTNAMELEN + 1], *mydomain;
+	const char *mydomain;
+	char myname[MAXHOSTNAMELEN + 1];
 	int t, i, c, usedefault = 0;
 	struct stat stb;
 

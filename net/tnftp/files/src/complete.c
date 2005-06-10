@@ -1,8 +1,8 @@
-/*	NetBSD: complete.c,v 1.3 2005/05/11 02:41:28 lukem Exp	*/
-/*	from	NetBSD: complete.c,v 1.38 2000/05/01 10:35:17 lukem Exp	*/
+/*	NetBSD: complete.c,v 1.6 2005/06/10 04:05:01 lukem Exp	*/
+/*	from	NetBSD: complete.c,v 1.40 2005/06/09 16:38:29 lukem Exp	*/
 
 /*-
- * Copyright (c) 1997-2000 The NetBSD Foundation, Inc.
+ * Copyright (c) 1997-2000,2005 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -37,13 +37,6 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#if 0
-#include <sys/cdefs.h>
-#ifndef lint
-__RCSID("NetBSD: complete.c,v 1.3 2005/05/11 02:41:28 lukem Exp");
-#endif /* not lint */
-#endif
-
 /*
  * FTP user program - command and file completion routines
  */
@@ -64,7 +57,7 @@ static unsigned char complete_remote	(char *, int);
 static int
 comparstr(const void *a, const void *b)
 {
-	return (strcmp(*(const char **)a, *(const char **)b));
+	return (strcmp(*(const char * const *)a, *(const char * const *)b));
 }
 
 /*
@@ -300,7 +293,7 @@ complete_remote(char *word, int list)
 
 	if (dirchange || dirlist == NULL ||
 	    strcmp(dir, lastdir) != 0) {		/* dir not cached */
-		char *emesg;
+		const char *emesg;
 
 		if (dirlist != NULL)
 			sl_free(dirlist, 1);

@@ -1,8 +1,8 @@
-/*	NetBSD: main.c,v 1.8 2005/05/14 03:53:28 lukem Exp	*/
-/*	from	NetBSD: main.c,v 1.94 2005/05/13 05:03:49 lukem Exp	*/
+/*	NetBSD: main.c,v 1.11 2005/06/10 04:05:01 lukem Exp	*/
+/*	from	NetBSD: main.c,v 1.97 2005/06/10 00:18:46 lukem Exp	*/
 
 /*-
- * Copyright (c) 1996-2004 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2005 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -95,22 +95,6 @@
  * SUCH DAMAGE.
  */
 
-#if 0
-#include <sys/cdefs.h>
-#ifndef lint
-__COPYRIGHT("@(#) Copyright (c) 1985, 1989, 1993, 1994\n\
-	The Regents of the University of California.  All rights reserved.\n");
-#endif /* not lint */
-
-#ifndef lint
-#if 0
-static char sccsid[] = "@(#)main.c	8.6 (Berkeley) 10/9/94";
-#else
-__RCSID("NetBSD: main.c,v 1.8 2005/05/14 03:53:28 lukem Exp");
-#endif
-#endif /* not lint */
-#endif
-
 /*
  * FTP User Program -- Command Interface.
  */
@@ -134,7 +118,8 @@ main(int argc, char *argv[])
 	int ch, rval;
 	struct passwd *pw;
 	char *cp, *ep, *anonuser, *anonpass, *upload_path;
-	int dumbterm, s, len, isupload;
+	int dumbterm, s, isupload;
+	size_t len;
 	socklen_t slen;
 
 #if 0			/* XXX */
@@ -623,7 +608,8 @@ cmdscanner(void)
 {
 	struct cmd	*c;
 	char		*p;
-	int		 num;
+	int		 ch;
+	size_t		 num;
 
 	for (;;) {
 #ifndef NO_EDITCOMPLETE
@@ -636,32 +622,31 @@ cmdscanner(void)
 					fprintf(ttyout, "%s ", p);
 				(void)fflush(ttyout);
 			}
-			if (fgets(line, sizeof(line), stdin) == NULL) {
+			num = getline(stdin, line, sizeof(line), NULL);
+			switch (num) {
+			case -1:	/* EOF */
+			case -2:	/* error */
 				if (fromatty)
 					putc('\n', ttyout);
 				quit(0, NULL);
-			}
-			num = strlen(line);
-			if (num == 0)
-				break;
-			if (line[--num] == '\n') {
-				if (num == 0)
-					break;
-				line[num] = '\0';
-			} else if (num == sizeof(line) - 2) {
+				/* NOTREACHED */
+			case -3:	/* too long; try again */
 				fputs("Sorry, input line is too long.\n",
 				    ttyout);
-				while ((num = getchar()) != '\n' && num != EOF)
-					/* void */;
+				continue;
+			case 0:		/* empty; try again */
+				continue;
+			default:	/* all ok */
 				break;
-			} /* else it was a line without a newline */
+			}
 #ifndef NO_EDITCOMPLETE
 		} else {
 			const char *buf;
 			HistEvent ev;
 			cursor_pos = NULL;
 
-			buf = el_gets(el, &num);
+			buf = el_gets(el, &ch);
+			num = ch;
 			if (buf == NULL || num == 0) {
 				if (fromatty)
 					putc('\n', ttyout);

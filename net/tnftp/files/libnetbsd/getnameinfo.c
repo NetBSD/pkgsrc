@@ -1,4 +1,4 @@
-/*	NetBSD: getnameinfo.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	NetBSD: getnameinfo.c,v 1.5 2005/06/01 11:48:49 lukem Exp	*/
 /*	from	?	*/
 
 /*
@@ -67,9 +67,9 @@ static struct afd {
 };
 
 struct sockinet {
-	u_char	si_len;
-	u_char	si_family;
-	u_short	si_port;
+	unsigned char	si_len;
+	unsigned char	si_family;
+	unsigned short	si_port;
 };
 
 #ifdef INET6
@@ -87,13 +87,13 @@ static int ip6_sa2str(const struct sockaddr_in6 *, char *, size_t, int);
 #define ENI_SALEN	EAI_FAMILY
 
 int
-getnameinfo(const struct sockaddr *sa, socklen_t salen, char *host,
-	size_t hostlen, char *serv, size_t servlen, int flags)
+getnameinfo(const struct sockaddr *sa, socklen_t salen,
+    char *host, size_t hostlen, char *serv, size_t servlen, int flags)
 {
 	struct afd *afd;
 	struct servent *sp;
 	struct hostent *hp;
-	u_short port;
+	unsigned short port;
 	int family, i;
 	const char *addr;
 	unsigned int v4a;

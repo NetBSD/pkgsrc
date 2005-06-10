@@ -1,8 +1,8 @@
-/*	NetBSD: fetch.c,v 1.7 2005/05/11 02:41:28 lukem Exp	*/
-/*	from	NetBSD: fetch.c,v 1.157 2005/04/11 01:49:31 lukem Exp	*/
+/*	NetBSD: fetch.c,v 1.11 2005/06/10 04:05:01 lukem Exp	*/
+/*	from	NetBSD: fetch.c,v 1.162 2005/06/10 00:18:46 lukem Exp	*/
 
 /*-
- * Copyright (c) 1997-2004 The NetBSD Foundation, Inc.
+ * Copyright (c) 1997-2005 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -39,13 +39,6 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-
-#if 0
-#include <sys/cdefs.h>
-#ifndef lint
-__RCSID("NetBSD: fetch.c,v 1.7 2005/05/11 02:41:28 lukem Exp");
-#endif /* not lint */
-#endif
 
 /*
  * FTP User Program -- Command line file retrieval
@@ -129,7 +122,7 @@ static int
 auth_url(const char *challenge, char **response, const char *guser,
 	const char *gpass)
 {
-	const char	*cp, *scheme;
+	const char	*cp, *scheme, *errormsg;
 	char		*ep, *clear, *realm;
 	char		 user[BUFSIZ], *pass;
 	int		 rval;
@@ -176,8 +169,8 @@ auth_url(const char *challenge, char **response, const char *guser,
 		fprintf(ttyout, "%s\n", user);
 	} else {
 		(void)fflush(ttyout);
-		if (fgets(user, sizeof(user) - 1, stdin) == NULL) {
-			clearerr(stdin);
+		if (getline(stdin, user, sizeof(user), &errormsg) < 0) {
+			warnx("%s; can't authenticate", errormsg);
 			goto cleanup_auth_url;
 		}
 		user[strlen(user) - 1] = '\0';
@@ -201,7 +194,8 @@ auth_url(const char *challenge, char **response, const char *guser,
 	(void)strlcpy(*response, scheme, rlen);
 	len = strlcat(*response, " ", rlen);
 			/* use  `clen - 1'  to not encode the trailing NUL */
-	base64_encode(clear, clen - 1, (unsigned char *)*response + len);
+	base64_encode((unsigned char *)clear, clen - 1,
+	    (unsigned char *)*response + len);
 	memset(clear, 0, clen);
 	rval = 0;
 
@@ -332,6 +326,8 @@ parse_url(const char *url, const char *desc, url_t *type,
 		warnx("Invalid %s `%s'", desc, url);
  cleanup_parse_url:
 		FREEPTR(*user);
+		if (*pass != NULL)
+			memset(*pass, 0, strlen(*pass));
 		FREEPTR(*pass);
 		FREEPTR(*host);
 		FREEPTR(*port);
@@ -677,7 +673,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		hints.ai_protocol = 0;
 		error = getaddrinfo(host, NULL, &hints, &res0);
 		if (error) {
-			warnx("%s", gai_strerror(error));
+			warnx("%s: %s", host, gai_strerror(error));
 			goto cleanup_fetch_url;
 		}
 		if (res0->ai_canonname)
@@ -693,8 +689,9 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 			    hbuf, sizeof(hbuf), NULL, 0, NI_NUMERICHOST) != 0)
 				strlcpy(hbuf, "invalid", sizeof(hbuf));
 
-			if (verbose && res != res0)
+			if (verbose && res0->ai_next) {
 				fprintf(ttyout, "Trying %s...\n", hbuf);
+			}
 
 			((struct sockaddr_in *)res->ai_addr)->sin_port =
 			    htons(portnum);
@@ -1037,9 +1034,8 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 
 				fprintf(ttyout,
 				    "Authorization failed. Retry (y/n)? ");
-				if (fgets(reply, sizeof(reply), stdin)
-				    == NULL) {
-					clearerr(stdin);
+				if (getline(stdin, reply, sizeof(reply), NULL)
+				    < 0) {
 					goto cleanup_fetch_url;
 				}
 				if (tolower((unsigned char)reply[0]) != 'y')
@@ -1261,12 +1257,16 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		freeaddrinfo(res0);
 	FREEPTR(savefile);
 	FREEPTR(user);
+	if (pass != NULL)
+		memset(pass, 0, strlen(pass));
 	FREEPTR(pass);
 	FREEPTR(host);
 	FREEPTR(port);
 	FREEPTR(path);
 	FREEPTR(decodedpath);
 	FREEPTR(puser);
+	if (ppass != NULL)
+		memset(ppass, 0, strlen(ppass));
 	FREEPTR(ppass);
 	FREEPTR(buf);
 	FREEPTR(auth);
@@ -1282,7 +1282,7 @@ void
 aborthttp(int notused)
 {
 	char msgbuf[100];
-	int len;
+	size_t len;
 
 	sigint_raised = 1;
 	alarmtimer(0);
@@ -1302,7 +1302,8 @@ fetch_ftp(const char *url)
 	char		*cp, *xargv[5], rempath[MAXPATHLEN];
 	char		*host, *path, *dir, *file, *user, *pass;
 	char		*port;
-	int		 dirhasglob, filehasglob, oautologin, rval, type, xargc;
+	int		 dirhasglob, filehasglob, rval, type, xargc;
+	int		 oanonftp, oautologin;
 	in_port_t	 portnum;
 	url_t		 urltype;
 
@@ -1420,8 +1421,10 @@ fetch_ftp(const char *url)
 	}
 
 			/* Set up the connection */
+	oanonftp = anonftp;
 	if (connected)
 		disconnect(0, NULL);
+	anonftp = oanonftp;
 	xargv[0] = (char *)getprogname();	/* XXX discards const */
 	xargv[1] = host;
 	xargv[2] = NULL;
@@ -1610,6 +1613,8 @@ fetch_ftp(const char *url)
 	FREEPTR(host);
 	FREEPTR(path);
 	FREEPTR(user);
+	if (pass)
+		memset(pass, 0, strlen(pass));
 	FREEPTR(pass);
 	return (rval);
 }
@@ -1700,10 +1705,9 @@ go_fetch(const char *url)
 int
 auto_fetch(int argc, char *argv[])
 {
-	volatile int	argpos;
-	int		rval;
+	volatile int	argpos, rval;
 
-	argpos = 0;
+	argpos = rval = 0;
 
 	if (sigsetjmp(toplevel, 1)) {
 		if (connected)
@@ -1718,7 +1722,7 @@ auto_fetch(int argc, char *argv[])
 	/*
 	 * Loop through as long as there's files to fetch.
 	 */
-	for (rval = 0; (rval == 0) && (argpos < argc); argpos++) {
+	for (; (rval == 0) && (argpos < argc); argpos++) {
 		if (strchr(argv[argpos], ':') == NULL)
 			break;
 		redirect_loop = 0;
@@ -1742,7 +1746,8 @@ int
 auto_put(int argc, char **argv, const char *uploadserver)
 {
 	char	*uargv[4], *path, *pathsep;
-	int	 uargc, rval, len;
+	int	 uargc, rval;
+	size_t	 len;
 
 	uargc = 0;
 	uargv[uargc++] = "mput";
@@ -1761,8 +1766,6 @@ auto_put(int argc, char **argv, const char *uploadserver)
 			 * make sure we always pass a directory to auto_fetch
 			 */
 		if (argc > 1) {		/* more than one file to upload */
-			int len;
-
 			len = strlen(uploadserver) + 2;	/* path + "/" + "\0" */
 			free(path);
 			path = (char *)xmalloc(len);

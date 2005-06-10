@@ -1,4 +1,144 @@
-NetBSD: ChangeLog,v 1.17 2005/05/14 04:46:26 lukem Exp
+NetBSD: ChangeLog,v 1.27 2005/06/10 04:40:13 lukem Exp
+
+Fri Jun 10 04:39:33 UTC 2005	lukem
+
+	* Release as "tnftp 20050610"
+
+	* Add dependencies on ${srcdir}/../tnftp.h and ../config.h
+
+	* Merge NetBSD ftp from 20050609 to 20050610.  Changes:
+		- Implement getline() to read a line into a buffer.
+		- Convert to use getline() instead of fgets() whenever reading
+		  user input to ensure that an overly long input line doesn't
+		  leave excess characters for the next input operation to
+		  accidentally use as input.
+		- Zero out the password & account after we've finished with it.
+		- Consistently use getpass(3) (i.e, character echo suppressed)
+		  when reading the account data.  For some reason, historically
+		  the "login" code suppressed echo for Account: yet the "user"
+		  command did not!
+		- Display the hostname in the "getaddrinfo failed" warning.
+		- Appease some -Wcast-qual warnings.  Fixing all of these
+		  requires significant code refactoring.  (mmm, legacy code).
+
+Thu Jun  9 16:49:05 UTC 2005	lukem
+
+	* src, libnetbsd: Excise RCSID block, rather than using
+	  #if 0 ...  #endif.  The point was to minimise RCSID
+	  conflicts, and the latter isn't helping there.
+
+	* Merge NetBSD ftp from 20050531 to 20050609.  Changes:
+		- Only print the "Trying <address>..." message if verbose
+		  and there's more than one struct addrinfo in the
+		  getaddrinfo() result.
+		- Don't use non-standard "u_int".
+
+Wed Jun  1 15:08:01 UTC 2005	lukem
+
+	* Look for dirname(3), which may be in -lgen on IRIX, and
+	  replace it if not found..
+
+Wed Jun  1 11:48:58 UTC 2005	lukem
+
+	* libnetbsd:
+		- Don't use non-standard: u_char u_short u_int.
+		- Use uint32_t instead of u_int32_t.
+		- Don't use register.
+
+	* libedit: Don't use non-standard uint or u_int.
+
+Tue May 31 02:23:08 UTC 2005	lukem
+
+	* tnftp.h: need <libgen.h> for dirname(3)
+
+	* Merge ftp from 20050513 to 20050531.  Changes:
+		- Helps if the definition of xconnect() matches its
+		  declaration....
+		- Fix some cast issues highlighted by Scott Reynolds using
+		  gcc 4 on OSX.4
+		- Use size_t instead of int where appropriate.
+		- Make this compile on sparc64 (size_t != int).
+		- Printf field widths and size_t don't always mix well, so
+		  cast to int.  Fixes build problem for alpha.
+		- Some const cleanups.
+		- tab cleanup
+		- Improve method used in fileindir() to determine if `file'
+		  is in or under `dir': realpath(3) on non-NetBSD systems may
+		  fail if the target filename doesn't exist, so instead use
+		  realpath(3) on the parent directory of `file'.
+		  Per discussion with Todd Eigenschink.
+		- formatbuf(): fix %m and %M to use the hostname, not the
+		  username.
+		- fetch_ftp(): preserve 'anonftp' across a disconnect() so
+		  that multiple ftp auto-fetches on the same command line
+		  login automatically.
+		- auto_fetch(): use an initialized volatile int to appease
+		  IRIX cc.
+
+	* Merge libedit from NetBSD 20050105 to 20050531.  Changes include:
+		- Rui Paulo: Incorrect tok_line and tok_str declarations.
+		- Remove clause 3 from the UCB license.
+		- Luke Mewburn: Don't abuse unconstify'ing a string
+		  and writing to it, because you'll core dump. Also remove
+		  extra const that gives pain to the irix compiler.
+		- Make sure we flush after we prepare when we are unbuffered
+		  otherwise the prompt will not appear immediately.
+		- Terminate the arglist with a NULL instead of 0. 
+		  (Shuts up gcc4.x)
+
+Sat May 28 13:19:38 UTC 2005	lukem
+
+	* libnetbsd/strvis.c:
+		- Sync to NetBSD's vis.c 1.33:
+		  Use malloc(3) instead of alloca(3).
+		- Remove extraenous #endif
+
+Fri May 27 05:46:58 UTC 2005	lukem
+
+	* libnetbsd/strvis.c: Sync to NetBSD's vis.c 1.30:
+	  Use a more standard TNF license.
+
+	* libedit/sig.c: Include "src/progressbar.h" for xsignal_restart()
+	  prototype.
+
+	* Ensure that fallback #define of __attribute__ is available.
+	  Fixes build problem on HP-UX with cc.
+
+Thu May 26 14:21:08 UTC 2005	lukem
+
+	* Extend xpoll()'s HAVE_SELECT implementation to support POLLRDNORM,
+	  POLLWRNORM, and POLLRDBAND - the latter using exceptfds.
+	  Per discussion with Christos Zoulas.
+
+Mon May 16 13:33:27 UTC 2005	lukem
+
+	* Pull in <poll.h> or <sys/poll.h> if they exist even if we're
+	  not using poll, as struct pollfd might exist in those.
+	  Fixes build problem on OSX.3.
+
+	* Separate CPPFLAGS from CFLAGS.
+
+	* Sync various files in libnetbsd with the original versions
+	  in NetBSD.  Notable changes
+		- Convert 4 clause UCB license to 3 clause.
+		- Use strlcpy instead of strcpy.
+		- Update ISC copyright.
+		- Use NS_INADDRSZ, NS_IN6ADDRSZ and NS_INT16SZ instead of
+		  equivalents without NS_ prefix.
+		- Use socklen_t instead of size_t where appropriate.
+		- Improve bounds checking.
+		- Don't update the size of allocated storage until
+		  realloc succeeds.
+		- Fix comment about return value.
+		- Reverse the order of two loop invariant to make
+		  'strlcat(0, "foo", 0)' not get a SEGV.
+		- Use Todd C. Miller's latest copyright notice (more loose).
+		- Use "long long" instead of "quad" in various
+		  comments & constants.
+		- Support VIS_HTTPSTYLE.
+		- Implement svis(), strsvis(), strsvisx(), strunvisx().
+
+	* Prefer poll over select when implementing replacement usleep().
 
 Sat May 14 04:44:35 UTC 2005	lukem
 

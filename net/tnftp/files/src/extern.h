@@ -1,5 +1,5 @@
-/*	NetBSD: extern.h,v 1.5 2005/05/11 02:41:28 lukem Exp	*/
-/*	from	NetBSD: extern.h,v 1.66 2005/04/11 01:49:31 lukem Exp	*/
+/*	NetBSD: extern.h,v 1.7 2005/06/10 04:05:01 lukem Exp	*/
+/*	from	NetBSD: extern.h,v 1.69 2005/06/10 00:18:46 lukem Exp	*/
 
 /*-
  * Copyright (c) 1996-2005 The NetBSD Foundation, Inc.
@@ -142,6 +142,7 @@ int	ftp_login(const char *, const char *, const char *);
 void	get(int, char **);
 struct cmd *getcmd(const char *);
 int	getit(int, char **, int, const char *);
+int	getline(FILE *, char *, size_t, const char **);
 struct option *getoption(const char *);
 char   *getoptionvalue(const char *);
 void	getremoteinfo(void);
@@ -171,7 +172,7 @@ void	mls(int, char **);
 void	mlst(int, char **);
 void	modtime(int, char **);
 void	mput(int, char **);
-char   *onoff(int);
+const char *onoff(int);
 void	opts(int, char **);
 void	newer(int, char **);
 void	page(int, char **);
@@ -190,7 +191,7 @@ void	quote1(const char *, int, char **);
 void	recvrequest(const char *, const char *, const char *,
 	    const char *, int, int);
 void	reget(int, char **);
-char   *remglob(char **, int, char **);
+char   *remglob(char **, int, const char **);
 time_t	remotemodtime(const char *, int);
 off_t	remotesize(const char *, int);
 void	removedir(int, char **);
@@ -200,8 +201,7 @@ void	restart(int, char **);
 void	rmthelp(int, char **);
 void	rmtstatus(int, char **);
 char   *rprompt(void);
-int	ruserpass(const char *, const char **, const char **,
-	    const char **);
+int	ruserpass(const char *, char **, char **, char **);
 void	sendrequest(const char *, const char *, const char *, int);
 void	setascii(int, char **);
 void	setbell(int, char **);
@@ -249,7 +249,7 @@ void	updatelocalcwd(void);
 void	updateremotecwd(void);
 void	usage(void);
 void	user(int, char **);
-int	xconnect(int, const struct sockaddr *, int);
+int	xconnect(int, const struct sockaddr *, socklen_t);
 int	xlisten(int, int);
 int	xpoll(struct pollfd *, int, int);
 void   *xmalloc(size_t);

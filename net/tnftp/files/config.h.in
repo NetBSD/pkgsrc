@@ -1,5 +1,5 @@
 /* config.h.in.  Generated automatically from configure.in by autoheader.  */
-/*	NetBSD: config.h.in,v 1.9 2005/05/14 04:41:27 lukem Exp	*/
+/*	NetBSD: config.h.in,v 1.10 2005/06/01 15:10:21 lukem Exp	*/
 
 
 /* Define if on AIX 3.
@@ -44,6 +44,9 @@
 
 /* The number of bytes in a off_t.  */
 #undef SIZEOF_OFF_T
+
+/* Define if you have the dirname function.  */
+#undef HAVE_DIRNAME
 
 /* Define if you have the err function.  */
 #undef HAVE_ERR

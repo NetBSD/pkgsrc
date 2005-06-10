@@ -1,4 +1,4 @@
-/*	NetBSD: emacs.c,v 1.4 2005/05/11 01:17:39 lukem Exp	*/
+/*	NetBSD: emacs.c,v 1.5 2005/06/09 16:48:57 lukem Exp	*/
 /*	from	NetBSD: emacs.c,v 1.19 2004/10/28 21:14:52 dsl Exp	*/
 
 /*-
@@ -35,17 +35,6 @@
 
 #include "tnftp.h"
 #include "sys.h"
-
-#if 0
-#include "config.h"
-#if !defined(lint) && !defined(SCCSID)
-#if 0
-static char sccsid[] = "@(#)emacs.c	8.1 (Berkeley) 6/4/93";
-#else
-__RCSID("NetBSD: emacs.c,v 1.4 2005/05/11 01:17:39 lukem Exp");
-#endif
-#endif /* not lint && not SCCSID */
-#endif
 
 /*
  * emacs.c: Emacs functions

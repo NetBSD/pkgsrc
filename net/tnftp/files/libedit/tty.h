@@ -1,4 +1,4 @@
-/*	NetBSD: tty.h,v 1.2 2005/05/11 01:17:39 lukem Exp	*/
+/*	NetBSD: tty.h,v 1.3 2005/06/01 11:42:24 lukem Exp	*/
 /*	from	NetBSD: tty.h,v 1.10 2003/08/07 16:44:34 agc Exp	*/
 
 /*-
@@ -451,8 +451,8 @@
 
 typedef struct {
 	const char	*t_name;
-	u_int	 t_setmask;
-	u_int	 t_clrmask;
+	unsigned int	 t_setmask;
+	unsigned int	 t_clrmask;
 } ttyperm_t[NN_IO][MD_NN];
 
 typedef unsigned char ttychar_t[NN_IO][C_NCC];

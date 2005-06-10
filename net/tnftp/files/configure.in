@@ -1,10 +1,10 @@
-dnl	NetBSD: configure.in,v 1.13 2005/05/14 04:34:50 lukem Exp
+dnl	NetBSD: configure.in,v 1.16 2005/06/02 00:20:32 lukem Exp
 dnl
 dnl configure.in --
 dnl	process this file with autoconf to produce a configure script.
 dnl
 
-AC_REVISION([Revision: 1.13])dnl
+AC_REVISION([Revision: 1.16])dnl
 
 AC_INIT(tnftp.h)
 
@@ -43,6 +43,7 @@ if test $opt_editcomplete = yes; then
 	    AC_MSG_ERROR([no relevant library found containing tgetent]))
 	AC_SEARCH_LIBS(el_init, [edit], [have_libedit=yes], [have_libedit=no])
 fi
+AC_SEARCH_LIBS(dirname, [gen], [have_dirname=yes], [have_dirname=no])
 AC_LIBRARY_NET
 AC_LIBRARY_SOCKS
 if test -n "$socks"; then
@@ -190,6 +191,9 @@ AC_REPLACE_FUNCS([err fgetln fseeko getaddrinfo getnameinfo inet_ntop \
 AC_CHECK_FUNCS([gethostbyname2 getpassphrase getpgrp memmove select])
 if test $have_fparseln != yes; then
 	AC_REPLACE_FUNCS(fparseln)
+fi
+if test $have_dirname != yes; then
+	AC_REPLACE_FUNCS(dirname)
 fi
 if test $ac_cv_func_getpgrp = yes; then
 	AC_FUNC_GETPGRP

@@ -1,5 +1,5 @@
-/*	NetBSD: strtoll.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
-/*	from	NetBSD: strtoq.c,v 1.14 1999/09/20 04:39:42 lukem Exp	*/
+/*	NetBSD: strtoll.c,v 1.4 2005/05/16 11:27:58 lukem Exp	*/
+/*	from	NetBSD: strtoll.c,v 1.6 2003/10/27 00:12:42 lukem Exp	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -13,11 +13,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -37,16 +33,17 @@
 #include "tnftp.h"
 
 /*
- * Convert a string to a quad integer.
+ * Convert a string to a long long integer.
  *
  * Ignores `locale' stuff.  Assumes that the upper and lower case
  * alphabets and digits are each contiguous.
  */
-long long
+long long int
 strtoll(const char *nptr, char **endptr, int base)
 {
 	const char *s;
-	long long acc, cutoff;
+	/* LONGLONG */
+	long long int acc, cutoff;
 	int c;
 	int neg, any, cutlim;
 
@@ -90,7 +87,7 @@ strtoll(const char *nptr, char **endptr, int base)
 	 * followed by a legal input character, is too big.  One that
 	 * is equal to this value may be valid or not; the limit
 	 * between valid and invalid numbers is then based on the last
-	 * digit.  For instance, if the range for quads is
+	 * digit.  For instance, if the range for long longs is
 	 * [-9223372036854775808..9223372036854775807] and the input base
 	 * is 10, cutoff will be set to 922337203685477580 and cutlim to
 	 * either 7 (neg==0) or 8 (neg==1), meaning that if we have
@@ -101,7 +98,7 @@ strtoll(const char *nptr, char **endptr, int base)
 	 * Set any if any `digits' consumed; make it negative to indicate
 	 * overflow.
 	 */
-	cutoff = neg ? QUAD_MIN : QUAD_MAX;
+	cutoff = neg ? LLONG_MIN : LLONG_MAX;
 	cutlim = (int)(cutoff % base);
 	cutoff /= base;
 	if (neg) {
@@ -125,7 +122,7 @@ strtoll(const char *nptr, char **endptr, int base)
 		if (neg) {
 			if (acc < cutoff || (acc == cutoff && c > cutlim)) {
 				any = -1;
-				acc = QUAD_MIN;
+				acc = LLONG_MIN;
 				errno = ERANGE;
 			} else {
 				any = 1;
@@ -135,7 +132,7 @@ strtoll(const char *nptr, char **endptr, int base)
 		} else {
 			if (acc > cutoff || (acc == cutoff && c > cutlim)) {
 				any = -1;
-				acc = QUAD_MAX;
+				acc = LLONG_MAX;
 				errno = ERANGE;
 			} else {
 				any = 1;
