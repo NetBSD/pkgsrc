@@ -1,4 +1,4 @@
-/*	NetBSD: chared.c,v 1.4 2005/05/11 01:17:39 lukem Exp	*/
+/*	NetBSD: chared.c,v 1.6 2005/06/09 16:48:57 lukem Exp	*/
 /*	from	NetBSD: chared.c,v 1.22 2004/08/13 12:10:38 mycroft Exp	*/
 
 /*-
@@ -36,17 +36,6 @@
 #include "tnftp.h"
 #include "sys.h"
 
-#if 0
-#include "config.h"
-#if !defined(lint) && !defined(SCCSID)
-#if 0
-static char sccsid[] = "@(#)chared.c	8.1 (Berkeley) 6/4/93";
-#else
-__RCSID("NetBSD: chared.c,v 1.4 2005/05/11 01:17:39 lukem Exp");
-#endif
-#endif /* not lint && not SCCSID */
-#endif
-
 /*
  * chared.c: Character editor utilities
  */
@@ -64,7 +53,7 @@ cv_undo(EditLine *el)
 {
 	c_undo_t *vu = &el->el_chared.c_undo;
 	c_redo_t *r = &el->el_chared.c_redo;
-	uint size;
+	unsigned int size;
 
 	/* Save entire line for undo */
 	size = el->el_line.lastchar - el->el_line.buffer;

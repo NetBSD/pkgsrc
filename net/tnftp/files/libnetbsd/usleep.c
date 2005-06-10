@@ -1,7 +1,7 @@
-/*	NetBSD: usleep.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	NetBSD: usleep.c,v 1.4 2005/05/16 13:21:43 lukem Exp	*/
 
 /*-
- * Copyright (c) 1999-2000 The NetBSD Foundation, Inc.
+ * Copyright (c) 1999,2000,2005 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -41,14 +41,14 @@
 int
 usleep(unsigned int usec)
 {
-#if HAVE_SELECT
+#if HAVE_POLL
+	return (poll(NULL, 0, usec / 1000);
+#elif HAVE_SELECT
 	struct timeval tv;
 
 	tv.tv_sec = 0;
 	tv.tv_usec = usec;
 	return (select(1, NULL, NULL, NULL, &tv));
-#elif HAVE_POLL
-	return (poll(NULL, 0, usec / 1000);
 #else
 # error no way to implement usleep
 #endif
