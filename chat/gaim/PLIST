@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2005/05/12 10:32:18 salo Exp $
+@comment $NetBSD: PLIST,v 1.40 2005/06/10 22:49:47 salo Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim/account.h
@@ -129,6 +129,7 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/my_MM/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gaim.mo
