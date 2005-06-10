@@ -1,20 +1,21 @@
-/*	NetBSD: inet_pton.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
-/*	from	NetBSD: inet_pton.c,v 1.16 2000/02/07 18:51:02 itojun Exp	*/
+/*	NetBSD: inet_pton.c,v 1.5 2005/06/01 11:48:49 lukem Exp	*/
+/*	from	NetBSD: inet_pton.c,v 1.2 2004/05/20 23:12:33 christos Exp	*/
 
-/* Copyright (c) 1996 by Internet Software Consortium.
+/*
+ * Copyright (c) 2004 by Internet Systems Consortium, Inc. ("ISC")
+ * Copyright (c) 1996,1999 by Internet Software Consortium.
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
  * copyright notice and this permission notice appear in all copies.
  *
- * THE SOFTWARE IS PROVIDED "AS IS" AND INTERNET SOFTWARE CONSORTIUM DISCLAIMS
- * ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL INTERNET SOFTWARE
- * CONSORTIUM BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
- * DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
- * PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS
- * ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
- * SOFTWARE.
+ * THE SOFTWARE IS PROVIDED "AS IS" AND ISC DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS.  IN NO EVENT SHALL ISC BE LIABLE FOR
+ * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
+ * OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
 #include "tnftp.h"
@@ -23,8 +24,16 @@
 #include <arpa/nameser.h>
 #endif
 
-#ifndef INADDRSZ
-#define	INADDRSZ	4
+#ifndef NS_INADDRSZ
+#define	NS_INADDRSZ	4
+#endif
+
+#ifndef NS_IN6ADDRSZ
+#define	NS_IN6ADDRSZ	16
+#endif
+
+#ifndef NS_INT16SZ
+#define	NS_INT16SZ	2
 #endif
 
 /*
@@ -32,9 +41,9 @@
  * sizeof(int) < 4.  sizeof(int) > 4 is fine; all the world's not a VAX.
  */
 
-static int	inet_pton4(const char *src, u_char *dst, int pton);
+static int	inet_pton4(const char *src, unsigned char *dst, int pton);
 #ifdef INET6
-static int	inet_pton6(const char *src, u_char *dst);
+static int	inet_pton6(const char *src, unsigned char *dst);
 #endif
 
 /* int
@@ -78,14 +87,14 @@ inet_pton(int af, const char *src, void *dst)
  *	Paul Vixie, 1996.
  */
 static int
-inet_pton4(const char *src, u_char *dst, int pton)
+inet_pton4(const char *src, unsigned char *dst, int pton)
 {
-	u_int val;
-	u_int digit;
-	int base, n;
+	uint32_t val;
+	unsigned int digit, base;
+	int n;
 	unsigned char c;
-	u_int parts[4];
-	register u_int *pp = parts;
+	unsigned int parts[4];
+	unsigned int *pp = parts;
 
 	c = *src;
 	for (;;) {
@@ -179,7 +188,7 @@ inet_pton4(const char *src, u_char *dst, int pton)
 	}
 	if (dst) {
 		val = htonl(val);
-		memcpy(dst, &val, INADDRSZ);
+		memcpy(dst, &val, NS_INADDRSZ);
 	}
 	return (1);
 }
@@ -199,17 +208,17 @@ inet_pton4(const char *src, u_char *dst, int pton)
  *	Paul Vixie, 1996.
  */
 static int
-inet_pton6(const char *src, u_char *dst)
+inet_pton6(const char *src, unsigned char *dst)
 {
 	static const char xdigits_l[] = "0123456789abcdef",
 			  xdigits_u[] = "0123456789ABCDEF";
-	u_char tmp[IN6ADDRSZ], *tp, *endp, *colonp;
+	unsigned char tmp[NS_IN6ADDRSZ], *tp, *endp, *colonp;
 	const char *xdigits, *curtok;
 	int ch, saw_xdigit;
-	u_int val;
+	unsigned int val;
 
-	memset((tp = tmp), '\0', IN6ADDRSZ);
-	endp = tp + IN6ADDRSZ;
+	memset((tp = tmp), '\0', NS_IN6ADDRSZ);
+	endp = tp + NS_IN6ADDRSZ;
 	colonp = NULL;
 	/* Leading :: requires some special handling. */
 	if (*src == ':')
@@ -242,25 +251,25 @@ inet_pton6(const char *src, u_char *dst)
 				return (0);
 			if (tp + INT16SZ > endp)
 				return (0);
-			*tp++ = (u_char) (val >> 8) & 0xff;
-			*tp++ = (u_char) val & 0xff;
+			*tp++ = (unsigned char) (val >> 8) & 0xff;
+			*tp++ = (unsigned char) val & 0xff;
 			saw_xdigit = 0;
 			val = 0;
 			continue;
 		}
-		if (ch == '.' && ((tp + INADDRSZ) <= endp) &&
+		if (ch == '.' && ((tp + NS_INADDRSZ) <= endp) &&
 		    inet_pton4(curtok, tp, 1) > 0) {
-			tp += INADDRSZ;
+			tp += NS_INADDRSZ;
 			saw_xdigit = 0;
 			break;	/* '\0' was seen by inet_pton4(). */
 		}
 		return (0);
 	}
 	if (saw_xdigit) {
-		if (tp + INT16SZ > endp)
+		if (tp + NS_INT16SZ > endp)
 			return (0);
-		*tp++ = (u_char) (val >> 8) & 0xff;
-		*tp++ = (u_char) val & 0xff;
+		*tp++ = (unsigned char) (val >> 8) & 0xff;
+		*tp++ = (unsigned char) val & 0xff;
 	}
 	if (colonp != NULL) {
 		/*
@@ -280,7 +289,7 @@ inet_pton6(const char *src, u_char *dst)
 	}
 	if (tp != endp)
 		return (0);
-	memcpy(dst, tmp, IN6ADDRSZ);
+	memcpy(dst, tmp, NS_IN6ADDRSZ);
 	return (1);
 }
 #endif
