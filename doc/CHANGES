@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10345 2005/06/10 15:08:20 cube Exp $
+$NetBSD: CHANGES,v 1.10346 2005/06/10 17:04:19 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2857,3 +2857,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated editors/gedit to 2.10.3 [jmmv 2005-06-10]
 	Updated chat/gaim to 1.3.1 [salo 2005-06-10]
 	Updated net/netbsd-tap to 20050610 [cube 2005-06-10]
+	Updated devel/libextractor to 1.4.2 [tvierling 2005-06-10]
