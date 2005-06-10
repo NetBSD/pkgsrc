@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/06 17:08:20 gendalia Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/10 15:57:05 gendalia Exp $
 
 DISTNAME=	openafs-1.3.84-src
 PKGNAME=	${DISTNAME:C/-src//}
@@ -9,6 +9,10 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	gendalia@NetBSD.org
 HOMEPAGE=	http://www.openafs.org/
 COMMENT=	File system for sharing, scalability and transparent data migration
+
+CONFLICTS+=	lwp-[0-9]*
+CONFLICTS+=	rx-[0-9]*
+CONFLICTS+=	arla-[0-9]*
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-largefile-fileserver --enable-fast-restart
