@@ -1,4 +1,4 @@
-/*	NetBSD: parse.h,v 1.3 2005/05/31 02:07:02 lukem Exp	*/
+/*	$NetBSD: parse.h,v 1.1.1.4 2005/06/10 05:07:02 lukem Exp $	*/
 /*	from	NetBSD: parse.h,v 1.6 2005/05/29 04:58:15 lukem Exp	*/
 
 /*-

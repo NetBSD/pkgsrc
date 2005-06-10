@@ -1,4 +1,4 @@
-/*	NetBSD: sys.h,v 1.4 2005/05/27 04:58:05 lukem Exp	*/
+/*	$NetBSD: sys.h,v 1.1.1.4 2005/06/10 04:58:05 lukem Exp $	*/
 /*	from	NetBSD: sys.h,v 1.9 2004/01/17 17:57:40 christos Exp	*/
 
 /*-
