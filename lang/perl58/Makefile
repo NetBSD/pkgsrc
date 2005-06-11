@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2005/05/31 22:47:56 rillig Exp $
+# $NetBSD: Makefile,v 1.84 2005/06/11 21:57:11 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -91,6 +91,14 @@ CONFIGURE_ARGS+=	-Dsiteman1dir="${VIEWBASE}/man/man1"
 #
 USE_TOOLS+=	gmake
 .endif
+
+# Perl embeds the full paths to the following tools in several installed
+# files, so make sure the paths to the ones in ${TOOLS_DIR} aren't used.
+#
+USE_TOOLS+=		hostname ln sed
+CONFIGURE_ARGS+=	-Daphostname=${TOOLS_HOSTNAME_CMD:Q}
+CONFIGURE_ARGS+=	-Dln=${TOOLS_LN:Q}
+CONFIGURE_ARGS+=	-Dsed=${TOOLS_SED:Q}
 
 # Nail down the needed libraries for each platform here to avoid hidden
 # dependencies.  If this isn't defined, then use the perl defaults for the
