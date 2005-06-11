@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1693 2005/06/10 23:38:00 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1694 2005/06/11 04:26:17 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2554,6 +2554,7 @@ _CHECK_WRKREF_SKIP_FILTER=	case "$$file" in
 .      for _pattern_ in ${CHECK_WRKREF_SKIP}
 _CHECK_WRKREF_SKIP_FILTER+=	${_pattern_}) continue ;;
 .      endfor
+_CHECK_WRKREF_SKIP_FILTER+=	*) ;;
 _CHECK_WRKREF_SKIP_FILTER+=	esac
 .    endif
 .  endif
