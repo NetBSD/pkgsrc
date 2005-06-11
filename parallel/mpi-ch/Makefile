@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/06/01 18:03:08 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/06/11 11:22:21 wiz Exp $
 
 DISTNAME=		mpich-1.2.6
 CATEGORIES=		parallel
@@ -90,10 +90,9 @@ post-install:
 	@${ECHO} "exit" >> ${PREFIX}/sbin/mpiuninstall
 	@${CHMOD} 755 ${PREFIX}/sbin/mpiuninstall
 
+.include "../../x11/tk83/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if exists(${WRKDIR}/with-java)
 PLIST_SRC+=		${PKGDIR}/PLIST.java
 .endif
-
-.include "../../x11/tk83/buildlink3.mk"
