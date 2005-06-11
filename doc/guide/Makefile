@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/14 22:33:27 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/11 16:26:47 dillo Exp $
 #
 
 DISTNAME=		htdocs-share-20050507
@@ -110,7 +110,7 @@ install-htdocs: build
 		${HTDOCSDIR}/Documentation/pkgsrc
 
 do-lint:
-	cd ${WRKSRC} ; ${MAKE} lint
+	cd ${WRKSRC} ; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} lint
 
 DETAB_PROGRAM= \
 	if (/<programlisting>/ .. /<\/programlisting>/) {		\
