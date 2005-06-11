@@ -227,8 +227,8 @@ alink="#0000FF">
             <dd>
               <dl>
                 <dt><span class="sect1"><a href=
-                "#selecting-options">5.1. Selecting build
-                options</a></span></dt>
+                "#selecting-options">5.1. Selecting Build
+                Options</a></span></dt>
               </dl>
             </dd>
 
@@ -1397,8 +1397,8 @@ alink="#0000FF">
           <dd>
             <dl>
               <dt><span class="sect1"><a href=
-              "#selecting-options">5.1. Selecting build
-              options</a></span></dt>
+              "#selecting-options">5.1. Selecting Build
+              Options</a></span></dt>
             </dl>
           </dd>
 
@@ -3107,8 +3107,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
 
           <dl>
             <dt><span class="sect1"><a href=
-            "#selecting-options">5.1. Selecting build
-            options</a></span></dt>
+            "#selecting-options">5.1. Selecting Build
+            Options</a></span></dt>
           </dl>
         </div>
 
@@ -3118,8 +3118,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "selecting-options" id=
-                "selecting-options"></a>5.1.&nbsp;Selecting build
-                options</h2>
+                "selecting-options"></a>5.1.&nbsp;Selecting Build
+                Options</h2>
               </div>
             </div>
           </div>
@@ -8930,13 +8930,17 @@ CONFIGURE_ARGS+=        --enable-ldap=${BUILDLINK_PREFIX.openldap}
           set of options, use <code class=
           "varname">PKG_SUGGESTED_OPTIONS</code>.</p>
 
-          <p><code class="varname">PKG_OPTIONS_VAR</code> and at
-          least one of <code class=
+          <p><code class="varname">PKG_OPTIONS_VAR</code> must be
+          defined before including <code class=
+          "filename">bsd.options.mk</code>. If none of <code class=
           "varname">PKG_SUPPORTED_OPTIONS</code>, <code class=
           "varname">PKG_OPTIONS_OPTIONAL_GROUPS</code>, and
           <code class="varname">PKG_OPTIONS_REQUIRED_GROUPS</code>
-          must be defined before including <code class=
-          "filename">bsd.options.mk</code>.</p>
+          are defined (as can happen with platform specific options
+          if none of them is supported on the current platform),
+          <code class="varname">PKG_OPTIONS</code> is set to the
+          empty list and the package is otherwise treated as not
+          using the options framework.</p>
 
           <p>After the inclusion of <code class=
           "filename">bsd.options.mk</code>, the variable
