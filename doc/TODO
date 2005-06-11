@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3607 2005/06/11 11:29:52 wiz Exp $
+$NetBSD: TODO,v 1.3608 2005/06/11 12:03:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -989,9 +989,9 @@ Suggested package updates
 	o rt-mysql-3.4.1
 	o rt-pgsql-3.4.1
 	o rtcw-1.41.3
-	o ruby-RMagick-1.8.1 [pkg/30313]
+	o ruby-RMagick-1.8.2 [pkg/30497]
 	o ruby-fox-1.2.6 [needs to update of fox-1.4.6]
-	o ruby-imlib2-0.5.1 [pkg/30372]
+	o ruby-imlib2-0.5.2 [pkg/30498]
 	o ruby-mysql-2.5.2
 	o sablecc-2.18.2
 	o sablevm-1.11.3 [pkg/30022]
