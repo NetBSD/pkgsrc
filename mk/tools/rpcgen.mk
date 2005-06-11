@@ -1,4 +1,4 @@
-# $NetBSD: rpcgen.mk,v 1.7 2005/05/21 04:53:17 jlam Exp $
+# $NetBSD: rpcgen.mk,v 1.8 2005/06/11 05:22:03 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -48,7 +48,6 @@ TOOLS_EXECDIRS.rpcgen?=	/bin /sbin /usr/bin /usr/sbin
 TOOLS_REAL_CMD.rpcgen?=	${_d_}/rpcgen
 .    endif
 .  endfor
-.  undef _d_
 TOOLS_REAL_CMD.rpcgen?=	${FALSE}
 .endif
 TOOLS_CMD.rpcgen=	${TOOLS_DIR}/bin/rpcgen
