@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.13 2005/06/01 20:08:01 jlam Exp $
+# $NetBSD: automake.mk,v 1.14 2005/06/11 05:22:03 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -102,7 +102,6 @@ _TOOLS_AM_NAMES+=	automake	automake-1.4			\
 .for _t_ in ${_TOOLS_AM_NAMES}
 _TOOLS_AM_TYPE.${_t_}?=	TOOLS_GNU_MISSING
 .endfor
-.undef _t_
 
 .if !defined(TOOLS_IGNORE.automake) && !empty(USE_TOOLS:Mautomake)
 .  if !empty(PKGPATH:Mdevel/automake)
@@ -175,7 +174,6 @@ AUTOMAKE_OVERRIDE?=	yes
 ${_TOOLS_AM_TYPE.${_t_}}+=	${_t_}
 .    endif
 .  endfor
-.  undef _t_
 .endif
 
 .if !empty(USE_TOOLS:Mgettext-m4)
