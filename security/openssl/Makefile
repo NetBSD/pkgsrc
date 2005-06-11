@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2005/05/22 20:08:30 jlam Exp $
+# $NetBSD: Makefile,v 1.105 2005/06/11 22:16:15 jlam Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -90,7 +90,22 @@ CONF_FILES=		${PREFIX}/share/examples/openssl/openssl.cnf	\
 			${PKG_SYSCONFDIR}/openssl.cnf
 OWN_DIRS=		${PKG_SYSCONFDIR}/certs ${PKG_SYSCONFDIR}/private
 
+# Some shells don't accept empty word lists in for loops.  For those
+# Makefiles where this occurs, edit the file so that we avoid running
+# the loop.
+#
+# Also, fix the path to perl in various scripts.
+#
 pre-configure:
+	cd ${WRKSRC}; for file in					\
+		fips/aes/Makefile	fips/des/Makefile		\
+		fips/dh/Makefile	fips/dsa/Makefile		\
+		fips/rsa/Makefile	fips/sha1/Makefile;		\
+	do								\
+		${MV} -f $$file $$file.preawk;				\
+		${AWK} '/^install:/ { printf "install:\n\nnot-install:\n"; next } { print }' \
+			$$file.preawk > $$file;				\
+	done
 	cd ${WRKSRC} && ${PERL5} util/perlpath.pl ${PERL5}
 
 .include  "../../mk/bsd.pkg.mk"
