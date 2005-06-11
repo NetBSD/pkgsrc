@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/10 18:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/11 16:57:29 wiz Exp $
 #
 
 DISTNAME=	avidemux-2.0.40
@@ -20,8 +20,12 @@ LDFLAGS+=		${LIBOSSAUDIO}
 CONFIGURE_ENV+=		ac_cv_path_ART_CONFIG=no
 CONFIGURE_ARGS+=	--disable-faad # Dolby doesn't allow binary distribution
 
+.include "../../mk/bsd.prefs.mk"
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avidemux
+.if ${MACHINE_ARCH} == "i386"
 PKG_SUPPORTED_OPTIONS=	mmx
+.endif
 
 .include "../../mk/bsd.options.mk"
 

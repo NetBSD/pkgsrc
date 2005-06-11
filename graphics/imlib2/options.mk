@@ -1,13 +1,14 @@
-# $NetBSD: options.mk,v 1.3 2005/06/10 18:21:45 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2005/06/11 16:54:31 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.imlib2
-PKG_SUPPORTED_OPTIONS=	mmx
-
-.include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(PKG_OPTIONS:Mmmx)
+PKG_OPTIONS_VAR=	PKG_OPTIONS.imlib2
 .if ${MACHINE_ARCH} == "i386"
-CONFIGURE_ARGS+=	--enable-mmx
+PKG_SUPPORTED_OPTIONS=	mmx
 .endif
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mmmx)
+CONFIGURE_ARGS+=	--enable-mmx
 .endif
