@@ -1,8 +1,6 @@
-<!-- $NetBSD: options.xml,v 1.8 2005/06/08 16:20:17 dillo Exp $ -->
+<!-- $NetBSD: options.xml,v 1.9 2005/06/11 16:31:03 dillo Exp $ -->
 
-<!-- based on:
-pkgsrc/mk/bsd.options.mk 1.38
--->
+<!-- based on: pkgsrc/mk/bsd.options.mk 1.42 -->
 
 <chapter id="options">
 <title>Options handling</title>
@@ -142,35 +140,6 @@ cases that neither <varname>PKG_OPTIONS_LEGACY_VARS</varname> nor
 a list of warnings about deprecated variables or options used, and
 what to use instead.</para></listitem>
 
-<!-- XXX: not here
-<listitem>
-<para><varname>${PKG_OPTIONS_VAR}</varname> (the variable named in
-<varname>PKG_OPTIONS_VAR</varname>) lists the selected build options
-and overrides any default options given in
-<varname>PKG_DEFAULT_OPTIONS</varname>.  If any of the options begin
-with a <quote>-</quote>, then that option is always removed from the
-selected build options, e.g.</para>
-
-<programlisting>
-PKG_DEFAULT_OPTIONS=    kerberos ldap sasl
-PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
-WIBBLE_OPTIONS=         ${PKG_DEFAULT_OPTIONS} -sasl
-# leads to PKG_OPTIONS = kerberos ldap
-</programlisting>
-
-<para>or</para>
-
-<programlisting>
-PKG_OPTIONS_VAR=        WIBBLE_OPTIONS
-WIBBLE_OPTIONS=         kerberos -ldap ldap
-# leads to PKG_OPTIONS = kerberos
-</programlisting>
-
-<para>This variable should be set in
-<filename>/etc/mk.conf</filename>.</para>
-</listitem>
--->
-
 </orderedlist>
 
 <para>A package should never modify
@@ -179,11 +148,15 @@ WIBBLE_OPTIONS=         kerberos -ldap ldap
 To suggest a default set of options, use
 <varname>PKG_SUGGESTED_OPTIONS</varname>.</para>
 
-<para><varname>PKG_OPTIONS_VAR</varname> and at least one of
+<para><varname>PKG_OPTIONS_VAR</varname> must be defined before
+including <filename>bsd.options.mk</filename>.  If none of
 <varname>PKG_SUPPORTED_OPTIONS</varname>,
 <varname>PKG_OPTIONS_OPTIONAL_GROUPS</varname>, and
-<varname>PKG_OPTIONS_REQUIRED_GROUPS</varname> must be defined before
-including <filename>bsd.options.mk</filename>.</para>
+<varname>PKG_OPTIONS_REQUIRED_GROUPS</varname> are defined (as can
+happen with platform specific options if none of them is supported on
+the current platform), <varname>PKG_OPTIONS</varname> is set to the
+empty list and the package is otherwise treated as not using the
+options framework.</para>
 
 <para>After the inclusion of <filename>bsd.options.mk</filename>, the
 variable <varname>PKG_OPTIONS</varname> contains the list of selected
