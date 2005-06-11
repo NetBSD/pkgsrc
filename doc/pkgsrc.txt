@@ -71,7 +71,7 @@ I. The pkgsrc user's guide
 
     5. Configuring pkgsrc
 
-        5.1. Selecting build options
+        5.1. Selecting Build Options
 
     6. Creating binary packages
 
@@ -454,7 +454,7 @@ Table of Contents
 
 5. Configuring pkgsrc
 
-    5.1. Selecting build options
+    5.1. Selecting Build Options
 
 6. Creating binary packages
 
@@ -1174,9 +1174,9 @@ Chapter 5. Configuring pkgsrc
 
 Table of Contents
 
-5.1. Selecting build options
+5.1. Selecting Build Options
 
-5.1. Selecting build options
+5.1. Selecting Build Options
 
 Some packages have build time options, usually to select between different
 dependencies, enable optional support for big dependencies or enable
@@ -3557,9 +3557,12 @@ A package should never modify PKG_DEFAULT_OPTIONS or the variable named in
 PKG_OPTIONS_VAR. These are strictly user-settable. To suggest a default set of
 options, use PKG_SUGGESTED_OPTIONS.
 
-PKG_OPTIONS_VAR and at least one of PKG_SUPPORTED_OPTIONS,
-PKG_OPTIONS_OPTIONAL_GROUPS, and PKG_OPTIONS_REQUIRED_GROUPS must be defined
-before including bsd.options.mk.
+PKG_OPTIONS_VAR must be defined before including bsd.options.mk. If none of
+PKG_SUPPORTED_OPTIONS, PKG_OPTIONS_OPTIONAL_GROUPS, and
+PKG_OPTIONS_REQUIRED_GROUPS are defined (as can happen with platform specific
+options if none of them is supported on the current platform), PKG_OPTIONS is
+set to the empty list and the package is otherwise treated as not using the
+options framework.
 
 After the inclusion of bsd.options.mk, the variable PKG_OPTIONS contains the
 list of selected build options, properly filtered to remove unsupported and
