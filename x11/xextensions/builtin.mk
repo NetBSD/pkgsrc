@@ -1,10 +1,12 @@
-# $NetBSD: builtin.mk,v 1.3 2005/06/01 18:03:32 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2005/06/11 08:49:33 jmmv Exp $
 
 BUILTIN_PKG:=	xextensions
 
-BUILTIN_FIND_FILES_VAR:=		H_XEXTENSIONS
+BUILTIN_FIND_FILES_VAR:=		H_XEXTENSIONS PC_XEXTENSIONS
 BUILTIN_FIND_FILES.H_XEXTENSIONS=	\
 	${X11BASE}/include/X11/extensions/extutil.h
+BUILTIN_FIND_FILES.PC_XEXTENSIONS=	\
+	${X11BASE}/lib/pkgconfig/xextensions.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -19,7 +21,7 @@ IS_BUILTIN.xextensions=	no
 # we'll consider this X11 package to be built-in even if it's a part
 # of one of the pkgsrc-installed X11 distributions.
 #  
-.  if exists(${H_XEXTENSIONS})
+.  if exists(${H_XEXTENSIONS}) && exists(${PC_XEXTENSIONS})
 IS_BUILTIN.xextensions=	yes
 .  endif
 .endif
