@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/06/06 17:25:57 hira Exp $
+# $NetBSD: Makefile,v 1.34 2005/06/11 15:00:04 hira Exp $
 
 DISTNAME=	mlterm-2.9.2
 CATEGORIES=	x11
@@ -11,10 +11,17 @@ COMMENT=	Multilingual terminal emulator
 # CODESET is only supported on NetBSD in 1.5T and later - see <langinfo.h>
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-* NetBSD-1.5[A-S]-*
 
+USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-
 USE_PKGLOCALEDIR=	yes
+
+PKG_SYSCONFSUBDIR=	mlterm
+EGDIR=			${PREFIX}/share/examples/mlterm
+.for _f in aafont color font key main menu taafont termcap tfont vaafont vfont \
+	xim
+CONF_FILES+=		${EGDIR}/${_f} ${PKG_SYSCONFDIR}/${_f}
+.endfor
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,6 +29,7 @@ CONFIGURE_ARGS+=	--with-imagelib=gdk-pixbuf
 CONFIGURE_ARGS+=	--with-type-engines=xft
 CONFIGURE_ARGS+=	--without-libiconv-prefix
 CONFIGURE_ARGS+=	--without-libintl-prefix
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
 SUBST_CLASSES+=		link
 SUBST_MESSAGE.link=	"Fixing hardcoded paths and link options."
