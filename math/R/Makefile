@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2005/06/01 18:03:00 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2005/06/11 02:37:00 markd Exp $
 
 DISTNAME=		R-2.1.0
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
@@ -45,9 +46,9 @@ CONFIGURE_ARGS+=	--without-libmoto
 CONFIGURE_ENV+=		ac_cv_lib_blas_dgemm=yes
 CONFIGURE_ENV+=		ac_cv_lib_blas_dgemm_=yes
 
-# Pass the Fortran compiler to the configure script in case it's overridden
-# by the package builder.
-#
+CONFIGURE_ENV+=		GETWD=${TOOLS_PWD_CMD:Q}
+CONFIGURE_ENV+=		lt_cv_path_LD=${LD:Q}
+
 USE_LANGUAGES=		c fortran
 
 # Package assumes it can append to files (specifically DESCRIPTION) that have
@@ -76,19 +77,6 @@ INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 R_LIBDIR=		${PREFIX}/lib/R
 R_INSTALL_DIRS=		${R_LIBDIR}
-
-# R does ugly things in the configure to get the default list of
-# arguments for linking Fortran and exposes the buildlink directory
-# in various files and scripts that will later be installed, so clean
-# up after configure is complete.
-#
-SUBST_CLASSES+=		fix-R
-SUBST_STAGE.fix-R=	post-configure
-SUBST_MESSAGE.fix-R=	${SUBST_MESSAGE.unwrap}
-SUBST_FILES.fix-R=	etc/Makeconf src/scripts/R.sh src/scripts/f77
-SUBST_SED.fix-R=	${SUBST_SED.unwrap}				\
-			-e "s|${BUILDLINK_DIR}/|${LOCALBASE}/|g"	\
-			-e "s|${BUILDLINK_X11_DIR}/|${X11BASE}/|g"
 
 BUILDLINK_DEPENDS.zlib+= zlib>=1.2.1
 
