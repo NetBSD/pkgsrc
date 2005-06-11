@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3606 2005/06/10 09:17:55 wiz Exp $
+$NetBSD: TODO,v 1.3607 2005/06/11 11:29:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -422,6 +422,7 @@ Suggested package updates
 	o coreutils-5.3.0
 	o cqcam-0.91
 	o crafty-19.5
+	o crimson-0.4.8
 	o criticalmass-0.9.11
 	o crossfire-client-1.7.1
 	o crossfire-server-1.7.1
@@ -530,6 +531,7 @@ Suggested package updates
 	o gkrellm1-moon-0.6
 	o gkrellm1-snmp-0.21
 	o gkrellm1-xmms-0.5.8
+	o glib-2.6.5
 	o gliv-1.9.3
 	o gnats-4.1.0
 	o gnet1-1.1.9
@@ -1128,6 +1130,7 @@ Suggested package updates
 	o weechat-0.1.1
 	o weewm-0.01
 	o wesnoth-0.9.2
+	o wget-1.10
 	o winbind-3.0.13
 	o windowlab-1.30
 	o wmbiff-0.4.26
@@ -1178,7 +1181,7 @@ Suggested package updates
 	o xmon-1.5.6
 	o xnap-2.5r3
 	o xorp-1.1
-	o xpad-2.7
+	o xpad-2.8
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
 	o xrmap-2.30
