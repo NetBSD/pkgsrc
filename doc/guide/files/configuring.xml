@@ -1,10 +1,36 @@
-<!-- $NetBSD: configuring.xml,v 1.1 2005/06/08 13:59:30 dillo Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.2 2005/06/11 16:31:40 dillo Exp $ -->
 
 <chapter id="configuring">
 <title>Configuring pkgsrc</title>
 
+<!-- General configuration -->
+<!--	DISTDIR -->
+<!--	PACKAGES -->
+<!--	WRKOBJDIR -->
+<!--	FAILOVER_FETCH -->
+
+<!-- Compiler settings -->
+<!--	PKGSRC_COMPILER -->
+<!--	CFLAGS -->
+
+<!-- Configuration files -->
+<!--	PKG_SYSCONFBASE -->
+<!--	PKG_SYSCONFDIR.foobar -->
+
+<!-- Security -->
+<!--	ALLOW_VULNERABLE_PACKAGES -->
+<!--	PKGVULNDIR -->
+
+<!-- Developer/advanced settings -->
+<!--	IGNORE_RECOMMENDED -->
+<!--	PKG_DEVELOPER -->
+
+<!-- pkginstall-related variables -->
+<!--	PKG_REGISTER_SHELLS -->
+<!--	PKG_RCD_SCRIPTS -->
+
 <sect1 id="selecting-options">
-<title>Selecting build options</title>
+<title>Selecting Build Options</title>
 
 <para>Some packages have build time options, usually to select between
 different dependencies, enable optional support for big dependencies
