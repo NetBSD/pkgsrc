@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.27 2005/06/10 20:53:54 jlam Exp $
+# $NetBSD: defaults.mk,v 1.28 2005/06/11 05:22:03 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -179,9 +179,7 @@ _TOOLS_VARNAME_GNU.yacc=	YACC
 .    for _v_ in ${_TOOLS_VARNAME.${_t_}}
 ${_v_}?=	${TOOLS_PLATFORM.${_t_}}
 .    endfor
-.    undef _v_
 .  endif
 .endfor
-.undef _t_
 
 .endif	# TOOLS_DEFAULTS_MK

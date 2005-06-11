@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.10 2005/06/01 20:08:01 jlam Exp $
+# $NetBSD: autoconf.mk,v 1.11 2005/06/11 05:22:03 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -84,7 +84,6 @@ _TOOLS_AC_NAMES+=	ifnames		ifnames-2.13
 .for _t_ in ${_TOOLS_AC_NAMES}
 _TOOLS_AC_TYPE.${_t_}?=	TOOLS_GNU_MISSING
 .endfor _t_
-.undef _t_
 
 .if !defined(TOOLS_IGNORE.autoconf) && !empty(USE_TOOLS:Mautoconf)
 .  if !empty(PKGPATH:Mdevel/autoconf)
@@ -179,7 +178,6 @@ AUTOMAKE_OVERRIDE?=	yes
 ${_TOOLS_AC_TYPE.${_t_}}+=	${_t_}
 .    endif
 .  endfor
-.  undef _t_
 .endif
 
 # LIBTOOL_M4_OVERRIDE lists the locations where the libtool.m4 symlink
@@ -209,4 +207,3 @@ tools-libtool-m4-override:
 		fi;							\
 	done
 .endfor
-.undef _pattern_
