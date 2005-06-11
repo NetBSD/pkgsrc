@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1 1999/12/12 04:20:21 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2005/06/11 11:45:53 wiz Exp $
 
---- Makefile.in.orig	Sun Dec 12 05:15:06 1999
-+++ Makefile.in	Sun Dec 12 05:15:42 1999
-@@ -163,7 +163,7 @@
+--- Makefile.in.orig	1998-05-08 15:31:05.000000000 +0200
++++ Makefile.in
+@@ -1,7 +1,7 @@
+ srcdir = @srcdir@
+ VPATH = @srcdir@
+ @SET_MAKE@
+-RM   = @MAKE_RM@
++RM   = @MAKE_RM@ -f
+ 
+ CC   = @CC@
+ LEX  = @LEX@
+@@ -163,7 +163,7 @@ dummylibs:
  ###############################################################################
  
  installdirs:
