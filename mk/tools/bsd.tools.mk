@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.28 2005/05/21 04:53:17 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.29 2005/06/11 05:22:03 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -125,20 +125,17 @@ USE_TOOLS?=		# empty
 TOOLS_CREATE+=			${_t_}
 TOOLS_REAL_CMDLINE.${_t_}?=	exit 0
 .endfor
-.undef _t_
 
 .for _t_ in ${TOOLS_BROKEN}
 TOOLS_CREATE+=			${_t_}
 TOOLS_REAL_CMDLINE.${_t_}?=	exit 1
 .endfor
-.undef _t_
 
 .for _t_ in ${TOOLS_GNU_MISSING}
 TOOLS_CREATE+=			${_t_}
 TOOLS_REAL_CMD.${_t_}?=		${PKGSRCDIR}/mk/gnu-config/missing
 TOOLS_REAL_CMDLINE.${_t_}?=	${TOOLS_REAL_CMD.${_t_}} ${_t_:T:C/-[0-9].*$//}
 .endfor
-.undef _t_
 
 ######################################################################
 
@@ -215,8 +212,6 @@ ${TOOLS_CMD.${_t_}}:
 	${TEST} ${.TARGET:Q} = ${.TARGET:H:Q}/${_a_} ||			\
 		${LN} -fs ${.TARGET:T:Q} ${.TARGET:H:Q}/${_a_}
 .  endfor
-.  undef _a_
 .endfor
-.undef _t_
 
 .endif	# BSD_TOOLS_MK

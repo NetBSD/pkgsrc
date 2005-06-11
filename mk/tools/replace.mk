@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.99 2005/06/03 22:54:44 jlam Exp $
+# $NetBSD: replace.mk,v 1.100 2005/06/11 05:22:03 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -141,13 +141,11 @@ _TOOLS_USE_PKGSRC.${_t_}?=	no
 .  endif
 _TOOLS_USE_PKGSRC.${_t_}?=	yes
 .endfor
-.undef _t_
 
 # TOOLS_DEPMETHOD.<tool> defaults to BUILD_DEPENDS.
 .for _t_ in ${_USE_TOOLS}
 TOOLS_DEPMETHOD.${_t_}?=	BUILD_DEPENDS
 .endfor
-.undef _t_
 
 ######################################################################
 
@@ -466,7 +464,6 @@ _TOOLS_DEPENDS.flex=		# empty
 .      for _dep_ in ${BUILDLINK_DEPENDS.flex}
 _TOOLS_DEPENDS.flex+=		${_dep_}:${BUILDLINK_PKGSRCDIR.flex}
 .      endfor
-.      undef _dep_
 TOOLS_DEPENDS.flex?=		${_TOOLS_DEPENDS.flex}
 TOOLS_CREATE+=			flex
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.flex=flex
@@ -666,7 +663,6 @@ _TOOLS_DEPENDS.lex=		# empty
 .      for _dep_ in ${BUILDLINK_DEPENDS.flex}
 _TOOLS_DEPENDS.lex+=		${_dep_}:${BUILDLINK_PKGSRCDIR.flex}
 .      endfor
-.      undef _dep_
 TOOLS_DEPENDS.lex?=		${_TOOLS_DEPENDS.lex}
 TOOLS_CREATE+=			lex
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.lex=flex
@@ -1168,7 +1164,6 @@ FIND_PREFIX:=	${TOOLS_FIND_PREFIX}
 ${TOOLS_DEPMETHOD.${_t_}}+=	${_dep_}
 .      endif
 .    endfor
-.    undef _dep_
 .  endif
 .endfor
 
@@ -1190,7 +1185,6 @@ ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_${_TOOLS_VARNAME.${_t_}}}
 .    endif
 .  endif
 .endfor
-.undef _t_
 
 ######################################################################
 
@@ -1234,11 +1228,9 @@ TOOLS_${_TOOLS_VARNAME.${_t_}}=	${_TOOLS_VARNAME.${_t_}}_not_defined_
 .      for _v_ in ${_TOOLS_VARNAME.${_t_}}
 ${_v_}?=	${TOOLS_${_TOOLS_VARNAME.${_t_}}}
 .      endfor
-.      undef _v_
 .    endif
 .  endif
 .endfor
-.undef _t_
 
 ######################################################################
 
