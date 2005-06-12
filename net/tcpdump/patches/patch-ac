@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2005/05/28 14:15:23 adrianp Exp $
+$NetBSD: patch-ac,v 1.2 2005/06/12 15:38:32 salo Exp $
 
---- print-bgp.c.orig	2005-05-06 09:08:17.000000000 +0100
-+++ print-bgp.c
-@@ -1216,6 +1216,8 @@ bgp_attr_print(const struct bgp_attr *at
+--- print-bgp.c.orig	2004-03-24 01:04:04.000000000 +0100
++++ print-bgp.c	2005-06-12 17:22:17.000000000 +0200
+@@ -1216,6 +1216,8 @@
                              tptr = pptr + len;
                              break;
  			}
@@ -11,3 +11,16 @@ $NetBSD: patch-ac,v 1.1 2005/05/28 14:15:23 adrianp Exp $
  			tptr += advance;
  		}
  		break;
+@@ -1646,9 +1648,10 @@
+ 		while (dat + length > p) {
+ 			char buf[MAXHOSTNAMELEN + 100];
+ 			i = decode_prefix4(p, buf, sizeof(buf));
+-			if (i == -1)
++			if (i == -1) {
+ 				printf("\n\t    (illegal prefix length)");
+-			else if (i == -2)
++				break;
++                        } else if (i == -2)
+ 				goto trunc;
+ 			else {
+ 				printf("\n\t    %s", buf);
