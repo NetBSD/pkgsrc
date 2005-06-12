@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2005/05/24 07:53:54 adam Exp $
+# $NetBSD: Makefile,v 1.112 2005/06/12 06:37:32 jlam Exp $
 
 DISTNAME=	netpbm-10.26.9
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -11,8 +12,8 @@ COMMENT=	Toolkit for conversion of images between different formats
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		gmake lex
-USE_PERL5=		yes
+USE_TOOLS+=	gmake lex
+USE_PERL5=	yes
 
 INSTALL_TARGET=	install-dev install-run
 MAKE_ENV+=	INSTALL="${INSTALL}" STRIPFLAG="${_STRIPFLAG_INSTALL}" \
@@ -25,6 +26,22 @@ STAGEDIR=	${WRKDIR}/staging
 
 LIBS.SunOS=	-lsocket -lnsl
 MAKE_ENV+=	NETWORKLD="${LIBS}"
+
+# Several of the netpbm shell scripts use bashisms, so force using
+# bash for all of the shell scripts.
+#
+DEPENDS+=		bash-[0-9]*:../../shells/bash2
+EVAL_PREFIX+=		BASH_PREFIX=bash
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	post-build
+SUBST_SED.bash=		-e "1s|^\#.*bin/sh|\#${BASH_PREFIX}/bin/bash|"
+SUBST_FILES.bash=	converter/other/anytopnm			\
+			converter/other/pnmtoplainpnm			\
+			converter/ppm/hpcdtoppm/hpcdtoppm		\
+			converter/ppm/hpcdtoppm/pcdovtoppm		\
+			editor/pamstretch-gen	editor/pnmindex		\
+			editor/pnmmargin	editor/ppmquantall	\
+			other/ppmtomap
 
 pre-configure:
 	${CP} ${WRKSRC}/Makefile.config.in ${WRKSRC}/Makefile.config
