@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 15:59:12 agc Exp $
-
-SHA1 (libyahoo-0.18.4.tar.gz) = 02e8916b1c25c13bcbc3ebac5e512e6a4ea876e1
-RMD160 (libyahoo-0.18.4.tar.gz) = 4e1569abbc89ada6b936511a296ea0b15cb63677
-Size (libyahoo-0.18.4.tar.gz) = 187776 bytes
