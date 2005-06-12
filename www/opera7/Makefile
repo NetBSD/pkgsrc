@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/06/12 10:52:10 jdolecek Exp $
+# $NetBSD: Makefile,v 1.33 2005/06/12 11:01:04 jdolecek Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 PKGREVISION=	# empty
@@ -22,7 +22,6 @@ LICENSE=	opera-license
 
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-NO_BUILDLINK=           YES
 NO_CONFIGURE=           YES
 NO_TOOLS=               YES
 USE_LANGUAGES=          # empty
@@ -91,8 +90,8 @@ NO_BUILD=               YES
 USE_PKGINSTALL=		YES
 
 SUBST_CLASSES+=		opera7
-SUBST_STAGE.opera7=	pre-install
-SUBST_FILES.opera7=	${WRKSRC}/man/opera.1
+SUBST_STAGE.opera7=	post-build
+SUBST_FILES.opera7=	man/opera.1
 SUBST_SED.opera7=	-e 's,/usr/,${PREFIX}/,g'
 
 .endif
@@ -107,9 +106,13 @@ post-install: post-install-manpage
 
 .include "../../emulators/suse_linux/Makefile.application"
 
+.if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
+PKGSRC_USE_TOOLS+=	gzip
+.endif
+
 post-install-manpage:
-  # The SuSE common makefile defines "MANCOMPRESSED".
-.  if defined(MANCOMPRESSED)
+  # The SuSE common makefile defines "MANCOMPRESSED=yes".
+.  if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
 	${GZIP_CMD} ${EMULDIR}/usr/share/man/man1/opera.1
 	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera.1.gz \
 		${PREFIX}/man/man1
@@ -131,7 +134,7 @@ post-install:
 
 # regenerate distinfo for all ports supported by this package
 opera-distinfo:
-	( echo '$$NetBSD: Makefile,v 1.32 2005/06/12 10:52:10 jdolecek Exp $$'; echo ''; \
+	( echo '$$NetBSD: Makefile,v 1.33 2005/06/12 11:01:04 jdolecek Exp $$'; echo ''; \
 	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
 		${GREP} opera distinfo; \
 	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \
