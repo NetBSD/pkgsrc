@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1 2005/06/12 08:52:54 taya Exp $
+
+diff -ru ../Orig/anthy-6300/src-util/dic-tool.c ./src-util/dic-tool.c
+--- ../Orig/anthy-6300/src-util/dic-tool.c	2005-02-28 22:35:44.000000000 +0900
++++ ./src-util/dic-tool.c	2005-06-12 17:33:17.000000000 +0900
+@@ -16,7 +16,6 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include <ctype.h>
+ 
+ #include <dicutil.h>
+ #include <config.h>
+@@ -287,24 +286,11 @@
+ find_head(char *yomi, char *freq, char *w)
+ {
+   char buf[256];
+-  char *p;
+-  int i;
+   do {
+     if (!read_line(buf, 256, fp_in)) {
+       return -1;
+     }
+-  } while (sscanf(buf, "%s %s %s",yomi, freq, w) != 3);
+-  /* 単語はspaceを含みうるので、切り直し */
+-  p = buf;
+-  for (i = 0; i < 2; i++) {
+-    while (!isspace(p[0]) ||
+-	   isspace(p[1])) {
+-      p++;
+-    }
+-    p++;
+-  }
+-  /* pは3つめのトークンの先頭*/
+-  strncpy(w, p, 256);
++  } while (sscanf(buf, "%s %s %[^\n]", yomi, freq, w) != 3);
+   return 0;
+ }
+ 
+Only in ./src-util: dic-tool.c.orig

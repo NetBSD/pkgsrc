@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/06/01 14:03:15 dillo Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/12 08:52:54 taya Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 
+PKGREVISION=	1
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
 MAINTAINER=	taya@NetBSD.org
@@ -32,8 +33,8 @@ SITES_2ch.t+=	http://omaemona.sourceforge.net/packages/Zisyo/
 .endif
 
 .if !empty(PKG_OPTIONS:Mokinawa_dict)
-DISTFILES+=			okinawa-20050410.t
-SITES_okinawa-20050410.t+=	http://www.ofug.net/~yamajun/files/
+DISTFILES+=			okinawa-20050607.t
+SITES_okinawa-20050607.t+=	http://www.ofug.net/~yamajun/files/
 .endif
 
 post-patch:
@@ -43,8 +44,8 @@ post-patch:
 		ed -s ${WRKSRC}/mkanthydic/Makefile.in
 .endif
 .if !empty(PKG_OPTIONS:Mokinawa_dict)
-	${CP} ${DISTDIR}/okinawa-20050410.t ${WRKSRC}/mkanthydic
-	@printf '/^EXTRA_DICS\ns/$$/ okinawa-20050410.t/\nwq\n' | \
+	${CP} ${DISTDIR}/okinawa-20050607.t ${WRKSRC}/mkanthydic
+	@printf '/^EXTRA_DICS\ns/$$/ okinawa-20050607.t/\nwq\n' | \
 		ed -s ${WRKSRC}/mkanthydic/Makefile.in
 .endif
 
