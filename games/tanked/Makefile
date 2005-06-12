@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:57 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/12 08:22:59 jlam Exp $
 #
 
 DISTNAME=		tanked-0.90
@@ -10,6 +10,7 @@ MAINTAINER=		root@garbled.net
 COMMENT=		Multiplayer internet tank game for X11
 
 USE_X11BASE=		YES
+USE_TOOLS+=		imake
 
 post-patch:
 	@${TOUCH} ${WRKSRC}/client/tanked.man
