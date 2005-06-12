@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/05/22 20:08:46 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2005/06/12 08:18:28 jdolecek Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 CATEGORIES+=		lang
@@ -35,11 +35,6 @@ MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 CONF_FILES=	${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=	${PREFIX}/${PHP_EXTENSION_DIR}
 
-# some of the bundled Pear extensions have newer versions, which fix
-# some known bugs
-PEAR_CMD=	${PREFIX}/bin/pear
-UPGRADE_PKG=
-
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
 	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/man/man1/php.1
@@ -49,9 +44,5 @@ post-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-dist php.ini-recommended ${EGDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/php
 	${INSTALL_DATA} ${WRKSRC}/php.gif ${PREFIX}/share/php
-
-	for p in ${UPGRADE_PKG}; do \
-		${PEAR_CMD} upgrade $$p || exit 1; \
-	done
 
 .include "../../mk/bsd.pkg.mk"
