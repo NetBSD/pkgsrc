@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.5 2005/02/23 16:58:26 jwise Exp $
+$NetBSD: patch-ac,v 1.6 2005/06/12 14:29:53 hira Exp $
 
---- voice/Makefile.orig	2001-12-23 10:08:13.000000000 -0500
-+++ voice/Makefile	2005-02-23 11:48:08.000000000 -0500
-@@ -92,11 +92,12 @@
+--- voice/Makefile.orig	2001-12-24 00:08:13.000000000 +0900
++++ voice/Makefile	2005-06-12 23:03:21.000000000 +0900
+@@ -26,6 +26,8 @@
+ 
+ PROGRAMDIRS=pvftools vgetty vm
+ 
++CONF_EXAMPLES_DIR=${PREFIX}/share/examples/mgetty+sendfax
++
+ PVFTOOLS=pvfamp pvfcut pvfecho pvffile pvffilter pvffft pvfmix pvfnoise \
+ 	pvfreverse pvfsine pvfspeed pvftormd rmdtopvf rmdfile pvftovoc \
+ 	voctopvf pvftolin lintopvf pvftobasic basictopvf pvftoau autopvf \
+@@ -92,11 +94,12 @@
  	$(INSTALL) -m 644 man/man1/zplay.1 $(MAN1DIR)
  	$(INSTALL) -m 644 man/man1/pvf.1 $(MAN1DIR)
  	$(INSTALL) -m 644 man/man8/vgetty.8 $(MAN8DIR)
