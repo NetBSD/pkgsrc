@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10349 2005/06/12 10:54:59 jdolecek Exp $
+$NetBSD: CHANGES,v 1.10350 2005/06/12 13:03:38 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2861,3 +2861,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/mantis to 0.91.1nb4 [adrianp 2005-06-10]
 	Updated x11/wxGTK to 2.4.2nb5 [wiz 2005-06-11]
 	Added www/opera7 version 7.54pl2 [jdolecek 2005-06-12]
+	Removed chat/gtkyahoo [jmmv 2005-06-12]
+	Removed chat/libyahoo [jmmv 2005-06-12]
