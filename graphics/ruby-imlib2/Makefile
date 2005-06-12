@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/01 18:02:57 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/12 14:57:51 taca Exp $
 
 DISTNAME=	imlib2-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-imlib2-${VER}
@@ -9,7 +9,7 @@ MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://www.pablotron.org/software/imlib2-ruby/
 COMMENT=	Imlib2 bindings for Ruby
 
-VER=		0.5.1
+VER=		0.5.2
 
 PLIST_SRC=		${WRKDIR}/PLIST
 REPLACE_RUBY_DIRS=	${WRKSRC}/examples
