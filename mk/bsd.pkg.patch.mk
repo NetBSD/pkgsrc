@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.14 2005/06/12 03:38:04 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.15 2005/06/12 03:59:42 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -146,11 +146,11 @@ PATCH_DIST_CAT.${i:S/=/--/}?=	{ patchfile=${i}; ${PATCH_DIST_CAT}; }
 
 _PKGSRC_PATCH_TARGETS=	uptodate-digest
 .if defined(PATCHFILES)
-_PKGSRC_PATCH_TARGETS+=	do-distribution-patch
+_PKGSRC_PATCH_TARGETS+=	distribution-patch-message do-distribution-patch
 .endif
 .if (defined(PATCHDIR) && exists(${PATCHDIR})) || \
     (defined(LOCALPATCHES) && exists(${LOCALPATCHES}/${PKGPATH}))
-_PKGSRC_PATCH_TARGETS+=	do-pkgsrc-patch
+_PKGSRC_PATCH_TARGETS+=	pkgsrc-patch-message do-pkgsrc-patch
 .endif
 
 .PHONY: do-patch
@@ -179,10 +179,13 @@ _GENERATE_PATCH_COOKIE=	\
 		${TOUCH} ${TOUCH_FLAGS} ${_PATCH_COOKIE:Q};		\
 	fi
 
-.PHONY: do-distribution-patch
+.PHONY: distribution-patch-message do-distribution-patch
+
+distribution-patch-message:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patches for ${PKGNAME}"
+
 .if !target(do-distribution-patch)
 do-distribution-patch:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patches for ${PKGNAME}"
 .  for i in ${PATCHFILES}
 	@${ECHO_PATCH_MSG} "${_PKGSRC_IN}> Applying distribution patch ${i}"
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
@@ -201,10 +204,13 @@ _PKGSRC_PATCHES+=	${PATCHDIR}/patch-*
 _PKGSRC_PATCHES+=	${LOCALPATCHES}/${PKGPATH}/patch-*
 .endif
 
-.PHONY: do-pkgsrc-patch
+.PHONY: pkgsrc-patch-message do-pkgsrc-patch
+
+pkgsrc-patch-message:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Applying pkgsrc patches for ${PKGNAME}"
+
 .if !target(do-pkgsrc-patch)
 do-pkgsrc-patch:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Applying pkgsrc patches for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	fail=;								\
 	patches=${_PKGSRC_PATCHES:Q};					\
