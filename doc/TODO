@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3608 2005/06/11 12:03:57 wiz Exp $
+$NetBSD: TODO,v 1.3609 2005/06/12 12:24:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -496,7 +496,7 @@ Suggested package updates
 	o fondu-040927
 	o fop-0.20.5
 	o fort77-1.18
-	o fox-1.4.15
+	o fox-1.4.16
 	o freeciv-client-2.0.1
 	o freeciv-server-2.0.1
 	o freeciv-share-2.0.1
