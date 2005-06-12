@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.10 2005/06/12 13:43:36 jmmv Exp $
+
+--- include/curl/multi.h.orig	2005-04-18 13:45:13.000000000 +0200
++++ include/curl/multi.h
+@@ -52,12 +52,7 @@
+ #endif
+ #else
+ 
+-/* HP-UX systems version 9, 10 and 11 lack sys/select.h and so does oldish
+-   libc5-based Linux systems. Only include it on system that are known to
+-   require it! */
+-#if defined(_AIX) || defined(NETWARE)
+-#include <sys/select.h>
+-#endif
++__INCLUDE_SYS_SELECT_H__
+ 
+ #ifndef _WIN32_WCE
+ #include <sys/socket.h>
