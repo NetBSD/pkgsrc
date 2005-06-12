@@ -25,40 +25,40 @@ DDEESSCCRRIIPPTTIIOONN
      Each line lists the package and vulnerable versions, the type of exploit,
      and an Internet address for further information.  The type of exploit can
      be any text, although some common types of exploits listed are:
-           ··   cross-site-html
-           ··   cross-site-scripting
-           ··   denial-of-service
-           ··   file-permissions
-           ··   local-access
-           ··   local-code-execution
-           ··   local-file-read
-           ··   local-file-removal
-           ··   local-file-write
-           ··   local-root-file-view
-           ··   local-root-shell
-           ··   local-symlink-race
-           ··   local-user-file-view
-           ··   local-user-shell
-           ··   privacy-leak
-           ··   remote-code-execution
-           ··   remote-command-inject
-           ··   remote-file-creation
-           ··   remote-file-read
-           ··   remote-file-view
-           ··   remote-file-write
-           ··   remote-key-theft
-           ··   remote-root-access
-           ··   remote-root-shell
-           ··   remote-script-inject
-           ··   remote-server-admin
-           ··   remote-use-of-secret
-           ··   remote-user-access
-           ··   remote-user-file-view
-           ··   remote-user-shell
-           ··   unknown
-           ··   weak-authentication
-           ··   weak-encryption
-           ··   weak-ssl-authentication
+           oo   cross-site-html
+           oo   cross-site-scripting
+           oo   denial-of-service
+           oo   file-permissions
+           oo   local-access
+           oo   local-code-execution
+           oo   local-file-read
+           oo   local-file-removal
+           oo   local-file-write
+           oo   local-root-file-view
+           oo   local-root-shell
+           oo   local-symlink-race
+           oo   local-user-file-view
+           oo   local-user-shell
+           oo   privacy-leak
+           oo   remote-code-execution
+           oo   remote-command-inject
+           oo   remote-file-creation
+           oo   remote-file-read
+           oo   remote-file-view
+           oo   remote-file-write
+           oo   remote-key-theft
+           oo   remote-root-access
+           oo   remote-root-shell
+           oo   remote-script-inject
+           oo   remote-server-admin
+           oo   remote-use-of-secret
+           oo   remote-user-access
+           oo   remote-user-file-view
+           oo   remote-user-shell
+           oo   unknown
+           oo   weak-authentication
+           oo   weak-encryption
+           oo   weak-ssl-authentication
 
      By default, the vulnerabilities file is stored in the @PKGVULNDIR@ direc-
      tory.  This can be changed by defining the environment variable
