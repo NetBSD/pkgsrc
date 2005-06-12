@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3612 2005/06/12 20:55:15 salo Exp $
+$NetBSD: TODO,v 1.3613 2005/06/12 21:21:58 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -453,7 +453,7 @@ Suggested package updates
 	o dmalloc-5.4.2
 	o dnstracer-1.8
 	o dpkg-1.13.3
-	o drivel-2.0
+	o drivel-2.0.0 [jmmv]
 	o dvdrip-0.52.5
 	o dvipdfmx-20050201
 	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
@@ -531,7 +531,7 @@ Suggested package updates
 	o gkrellm1-moon-0.6
 	o gkrellm1-snmp-0.21
 	o gkrellm1-xmms-0.5.8
-	o glib-2.6.5
+	o glib-2.6.5 [jmmv]
 	o gliv-1.9.3
 	o gnats-4.1.0
 	o gnet1-1.1.9
