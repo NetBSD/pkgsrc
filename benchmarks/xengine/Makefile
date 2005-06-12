@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/03/24 21:12:51 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/12 04:03:30 jlam Exp $
 
 DISTNAME=	xengine-1.0.1
 PKGREVISION=	1
@@ -6,12 +6,11 @@ CATEGORIES=	benchmarks
 MASTER_SITES=	ftp://ftp.lab.kdd.co.jp/Usenet/comp.sources.x/volume09/xengine/
 DISTFILES=	part01.z patch1.z
 
-PATCH_DIST_STRIP=	-p1	# no ${PATCHFILES} but used below
+PATCHFILES=		# no ${PATCHFILES} but runs "do-distribution-patch"
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	sakamoto@NetBSD.org
 COMMENT=	Reciprocating engine for X
-
-BUILD_DEPENDS=	gsharutils>=4.2.1:../../archivers/gsharutils
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -19,10 +18,12 @@ WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	xengine
 USE_IMAKE=	yes
 
-EXTRACT_CMD=	zcat ${DOWNLOADED_DISTFILE} | gunshar
+PKGSRC_USE_TOOLS+=	gzcat patch sed
 
-pre-patch:
-	@cd ${WRKSRC} ; ${PATCH} ${PATCH_DIST_ARGS} < xengine.patch1
+EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} | ${SED} "1,/\#!/d" | ${SH}
+
+do-distribution-patch:
+	@cd ${WRKSRC}; ${PATCH} ${PATCH_DIST_ARGS} < xengine.patch1
 
 post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xengine
