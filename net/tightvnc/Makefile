@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/22 20:08:26 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/12 05:26:47 jlam Exp $
 #
 
 DISTNAME=		tightvnc-1.2.9
@@ -18,8 +18,6 @@ CRYPTO=			yes
 USE_IMAKE=		yes
 NO_INSTALL_MANPAGES=	yes
 USE_PERL5=		yes
-
-USE_TOOLS+=		gmake
 
 BUILD_TARGET=		World
 
