@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/06/01 03:36:47 taca Exp $
+$NetBSD: distinfo,v 1.3 2005/06/12 14:57:51 taca Exp $
 
-SHA1 (ruby/imlib2-ruby-0.5.1.tar.gz) = e0105c2253608e1f3ae5883e8994c3053f5fc61b
-RMD160 (ruby/imlib2-ruby-0.5.1.tar.gz) = bc0dd58ea904d35db91c3ea7eef6bcffbe9da4d8
-Size (ruby/imlib2-ruby-0.5.1.tar.gz) = 180025 bytes
+SHA1 (ruby/imlib2-ruby-0.5.2.tar.gz) = 10c92b7eb2702105ba94bba9918a7e69d7d941e8
+RMD160 (ruby/imlib2-ruby-0.5.2.tar.gz) = a980d8acf9f334763d7974a2976faa1fb201331b
+Size (ruby/imlib2-ruby-0.5.2.tar.gz) = 180685 bytes
