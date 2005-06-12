@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3611 2005/06/12 15:27:24 taca Exp $
+$NetBSD: TODO,v 1.3612 2005/06/12 20:55:15 salo Exp $
 
 Suggested new packages
 ======================
@@ -1012,7 +1012,7 @@ Suggested package updates
 	o siag-3.6.0
 	o sign-1.0.7
 	o silc-server-1.0 [salo]
-	o silc-toolkit-1.0 [salo]
+	o silc-toolkit-1.0 [salo, breaks chat/gaim]
 	o simh-3.3.2
 	o sitecopy-0.15.1
 	o sitescooper-3.1.2
