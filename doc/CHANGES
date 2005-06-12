@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10351 2005/06/12 13:44:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.10352 2005/06/12 14:31:58 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2864,3 +2864,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed chat/gtkyahoo [jmmv 2005-06-12]
 	Removed chat/libyahoo [jmmv 2005-06-12]
 	Updated www/curl to 7.14.0nb1 [jmmv 2005-06-12]
+	Updated comms/mgetty+sendfax to 1.1.31nb1 [hira 2005-06-12]
