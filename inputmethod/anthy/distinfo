@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2005/04/11 15:02:23 taya Exp $
+$NetBSD: distinfo,v 1.6 2005/06/12 08:52:54 taya Exp $
 
 SHA1 (anthy-6300.tar.gz) = bce93631d3249aa551f708bcb9b4724b26f71a70
 RMD160 (anthy-6300.tar.gz) = d6bdad88e15ef4edb0ead94dd65c14295dd9e53e
@@ -6,7 +6,8 @@ Size (anthy-6300.tar.gz) = 2020760 bytes
 SHA1 (2ch.t) = 2160d7b0079e2c1a14093da968f34e7f8dbc07c2
 RMD160 (2ch.t) = b05902485829eebb4e09c554f095275f5278dd8b
 Size (2ch.t) = 142157 bytes
-SHA1 (okinawa-20050410.t) = dd519410a4865b1fe9894d3b504fbd20f11a8d03
-RMD160 (okinawa-20050410.t) = e584074accf91a839329a7c856857d4b8a2560c1
-Size (okinawa-20050410.t) = 150102 bytes
+SHA1 (okinawa-20050607.t) = 50f9524e5f11240cbc486c32eb86fcc1a3075e6f
+RMD160 (okinawa-20050607.t) = 6ee9adeaddb0c62c6a4741761d14932603ee7a81
+Size (okinawa-20050607.t) = 150145 bytes
 SHA1 (patch-aa) = 79816563a3d1ff853bc1edcbfee7e22ae2e26991
+SHA1 (patch-ab) = c8847cd5d97161c07161358d31c4f15d8586e7a9
