@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2005/02/22 21:16:37 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/06/12 11:16:56 wiz Exp $
 
 SHA1 (xengine/part01.z) = c56961f548c4b653f97075027069a8dec962da88
 RMD160 (xengine/part01.z) = 5f0f84378674ee32c17015ebe2e15477da0c1ba5
@@ -6,4 +6,4 @@ Size (xengine/part01.z) = 8176 bytes
 SHA1 (xengine/patch1.z) = b633b0e88389fbdd2b9c9f6243099043040dd4d1
 RMD160 (xengine/patch1.z) = ccf0c19d2456ec299575b0190248824506b9ca33
 Size (xengine/patch1.z) = 3506 bytes
-SHA1 (patch-aa) = 00a3636ceed86cd2112679a1fdee289d3948bbac
+SHA1 (patch-aa) = 012f076447d69539c0ba02127f12d2a1d85a48f2
