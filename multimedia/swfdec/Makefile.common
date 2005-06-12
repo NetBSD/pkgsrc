@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2005/06/04 10:41:42 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/06/12 16:43:29 jmmv Exp $
 #
 
 DISTNAME=		swfdec-0.2.2
@@ -18,6 +18,8 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	swfdec.pc.in
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 pre-install:
 	${ECHO} "install:" >${WRKSRC}/plugin/Makefile
