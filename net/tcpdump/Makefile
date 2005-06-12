@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2005/06/12 15:38:32 salo Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/12 19:41:45 salo Exp $
 
 DISTNAME=		tcpdump-3.8.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES= 		http://www.tcpdump.org/release/
 
@@ -11,9 +11,7 @@ COMMENT=		Network monitoring tool
 
 GNU_CONFIGURE=		YES
 
-.if exists(/usr/include/netinet/ip6.h)
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
+.include "options.mk"
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
