@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10348 2005/06/11 17:18:52 wiz Exp $
+$NetBSD: CHANGES,v 1.10349 2005/06/12 10:54:59 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2860,3 +2860,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/libextractor to 1.4.2 [tvierling 2005-06-10]
 	Updated devel/mantis to 0.91.1nb4 [adrianp 2005-06-10]
 	Updated x11/wxGTK to 2.4.2nb5 [wiz 2005-06-11]
+	Added www/opera7 version 7.54pl2 [jdolecek 2005-06-12]
