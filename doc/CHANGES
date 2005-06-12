@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10350 2005/06/12 13:03:38 jmmv Exp $
+$NetBSD: CHANGES,v 1.10351 2005/06/12 13:44:26 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2863,3 +2863,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added www/opera7 version 7.54pl2 [jdolecek 2005-06-12]
 	Removed chat/gtkyahoo [jmmv 2005-06-12]
 	Removed chat/libyahoo [jmmv 2005-06-12]
+	Updated www/curl to 7.14.0nb1 [jmmv 2005-06-12]
