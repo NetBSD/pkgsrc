@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/01/12 21:33:52 seb Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/06/12 14:29:53 hira Exp $
 bin/autopvf
 bin/basictopvf
 bin/faxq
@@ -65,5 +65,6 @@ share/examples/mgetty+sendfax/faxspool.rules.sample
 share/examples/mgetty+sendfax/login.config
 share/examples/mgetty+sendfax/mgetty.config
 share/examples/mgetty+sendfax/sendfax.config
+share/examples/mgetty+sendfax/voice.conf
 @dirrm share/examples/mgetty+sendfax
 @dirrm lib/mgetty+sendfax
