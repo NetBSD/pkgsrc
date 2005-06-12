@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2005/05/17 13:25:32 adam Exp $
+# $NetBSD: Makefile,v 1.55 2005/06/12 13:43:36 jmmv Exp $
 
 DISTNAME=	curl-7.14.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		ftp://ftp.sunet.se/pub/www/utilities/curl/ \
@@ -31,6 +32,20 @@ CONFIGURE_ENV+=		F77=${FALSE}
 .if empty(USE_INET6:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
+
+post-configure:
+	@if ${GREP} '#define HAVE_SYS_SELECT_H 1' ${WRKSRC}/src/config.h \
+		>/dev/null; \
+	then \
+	    line='#include <sys/select.h>'; \
+	else \
+	    line='/* sys/select.h not included because it does not exist */'; \
+	fi; \
+	${SED} -e "s|__INCLUDE_SYS_SELECT_H__|$${line}|" \
+	       <${WRKSRC}/include/curl/multi.h \
+	       >${WRKSRC}/include/curl/multi.h.new; \
+	${MV} ${WRKSRC}/include/curl/multi.h.new \
+	      ${WRKSRC}/include/curl/multi.h
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/curl
