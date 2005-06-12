@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10352 2005/06/12 14:31:58 hira Exp $
+$NetBSD: CHANGES,v 1.10353 2005/06/12 15:02:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2636,7 +2636,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/gg2 to 2.2.6 [adam 2005-05-27]
 	Added net/p5-Net-RawIP version 0.2 [bouyer 2005-05-27]
 	Updated pkgtools/pkg_install to 20050527 [dmcmahill 2005-05-27]
-	Updated graphics/ruby-RMagick [taca 2005-05-28]
+	Updated graphics/ruby-RMagick to 1.8.1 [taca 2005-05-28]
 	Removed textproc/namazu1 [taca 2005-05-28]
 	Updated multimedia/avidemux to 2.0.40 [reed 2005-05-28]
 	Updated converters/rss2html to 0.7.2 [snj 2005-05-28]
@@ -2865,3 +2865,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed chat/libyahoo [jmmv 2005-06-12]
 	Updated www/curl to 7.14.0nb1 [jmmv 2005-06-12]
 	Updated comms/mgetty+sendfax to 1.1.31nb1 [hira 2005-06-12]
+	Updated graphics/ruby-RMagick to 1.8.2 [taca 2005-06-12]
+	Updated graphics/ruby-imlib2 to 0.5.2 [taca 2005-06-12]
