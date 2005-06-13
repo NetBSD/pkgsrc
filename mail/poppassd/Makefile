@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2005/06/01 21:00:39 adrianp Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/13 16:57:02 taca Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
 PKGNAME=		poppassd-${VERSION}
 CATEGORIES=		mail
 MASTER_SITES=		${QPOPPER_MASTER_SITES}
+
+PATCH_SITES=		${QPOPPER_PATCHSITES}
+PATCHFILES=		${QPOPPER_PATCHFILES}
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		mellon@fugue.com
 HOMEPAGE=		${QPOPPER_HOMEPAGE}
@@ -15,6 +19,8 @@ COMMENT=		Qualcomm's password change server mainly for Eudora
 CONFIGURE_ARGS+=	--enable-poppassd
 CONFIGURE_ENV+=	CDEFS='-DSMBPASSWD_BINARY=\"${LOCALBASE}/bin/smbpasswd\"'
 MAKE_ENV+=	ROOT_USER=${ROOT_USER} ROOT_GROUP=${ROOT_GROUP}
+
+.include "options.mk"
 
 do-build:
 .for DIR in common password
