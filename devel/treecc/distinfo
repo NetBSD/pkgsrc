@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:35 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/06/13 18:40:40 jmmv Exp $
 
-SHA1 (treecc-0.3.0.tar.gz) = 6e16cfaac00159e84234ea237b69ab2598202a71
-RMD160 (treecc-0.3.0.tar.gz) = f98a675caa882e2ca0cf130b15b72376bdbc6d92
-Size (treecc-0.3.0.tar.gz) = 277663 bytes
+SHA1 (treecc-0.3.6.tar.gz) = 5e8eeb97fb08aa5e0e997f32ff3e293a6d6256fa
+RMD160 (treecc-0.3.6.tar.gz) = 3bc5dc3574455b2fe546ccdb3da01dcf7f04f109
+Size (treecc-0.3.6.tar.gz) = 281458 bytes
