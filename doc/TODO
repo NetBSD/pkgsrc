@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3614 2005/06/13 12:37:52 wiz Exp $
+$NetBSD: TODO,v 1.3615 2005/06/13 17:58:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -637,7 +637,7 @@ Suggested package updates
 	o libgnomemm26-2.10.0
 	o libgnomeuimm26-2.10.0
 	o libhydrogen-0.9.0
-	o libjit-0.0.4
+	o libjit-0.0.4 [pkg/30514]
 	o libksba-0.9.9
 	o liblive-2005.03.23
 	o libmatheval-1.1.2
@@ -1089,7 +1089,7 @@ Suggested package updates
 	o tpb-0.6.3
 	o trac-0.8.1
 	o transcode-0.6.14
-	o treecc-0.3.4 [pkg/28546]
+	o treecc-0.3.6 [pkg/30513]
 	o trio-1.4
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tspc-2.1.1
