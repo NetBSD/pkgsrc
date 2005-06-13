@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/06/01 20:55:16 adrianp Exp $
+# $NetBSD: Makefile,v 1.51 2005/06/13 16:53:47 taca Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -6,14 +6,32 @@ PKGNAME=		qpopper-${VERSION}
 CATEGORIES=		mail
 MASTER_SITES=		${QPOPPER_MASTER_SITES}
 
+PATCH_SITES=		${QPOPPER_PATCHSITES}
+PATCHFILES=		${QPOPPER_PATCHFILES}
+PATCH_DIST_STRIP=	-p1
+
 MAINTAINER=		mellon@fugue.com
 HOMEPAGE=		${QPOPPER_HOMEPAGE}
 COMMENT=		Qualcomm's POP server for Eudora
 
 .include "Makefile.common"
 
-USE_PKGINSTALL=		yes
+CONFIGURE_ARGS+=	--enable-apop=${QPOPPER_APOP_AUTH} \
+			--enable-popuid=${QPOPPER_USER} \
+			--disable-update-abort --without-gdbm
 
+.include "options.mk"
+
+QPOPPER_USER?=		pop
+QPOPPER_GROUP?=		mail
+QPOPPER_APOP_AUTH?=	${PKG_SYSCONFDIR}/apop.auth
+DB_SUFFIX?=		db
+
+.if defined(QPOPPER_SPOOL_DIR)
+CONFIGURE_ARGS+=	--enable-spool-dir=${QPOPPER_SPOOL_DIR}
+.endif
+
+USE_PKGINSTALL=		yes
 RCD_SCRIPTS=		qpopper
 MESSAGE_SUBST+=		RCD_SCRIPTS=${RCD_SCRIPTS} \
 			RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
