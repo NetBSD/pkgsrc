@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.1 2005/06/13 22:42:02 kristerw Exp $
+
+--- src/interface.c.orig	Tue Jun 14 00:26:36 2005
++++ src/interface.c	Tue Jun 14 00:27:48 2005
+@@ -526,10 +526,10 @@
+   
+   if(ui_state->cm_have_embedded)
+   {
++    char msgstring[MAXPATHLEN];
+     delete_embed_profile((gint32) data);
+     gtk_button_set_label(GTK_BUTTON(embed_profile_button),ENBED_BUT_NAME);
+     ui_state->cm_have_embedded = FALSE;
+-    char msgstring[MAXPATHLEN];
+     sprintf (msgstring," <span foreground=\"red\">%s</span>", "no profile attached");
+     gtk_label_set_markup (GTK_LABEL (emb_lbl),msgstring);
+     return;
+@@ -542,12 +542,13 @@
+   parasite = gimp_image_parasite_find ((gint32) data, "icc-profile");
+   if (parasite)
+     {
+-      gtk_button_set_label(GTK_BUTTON(embed_profile_button),ENBED_BUT_NAME2);
+       gint profile_size = 0;
+       guchar *icc_profile;
++      cmsHPROFILE *out;
++      gtk_button_set_label(GTK_BUTTON(embed_profile_button),ENBED_BUT_NAME2);
+       profile_size = gimp_parasite_data_size (parasite);
+       icc_profile =(guchar *) gimp_parasite_data (parasite);
+-      cmsHPROFILE *out = cmsOpenProfileFromMem (icc_profile, profile_size);
++      out = cmsOpenProfileFromMem (icc_profile, profile_size);
+       gimp_parasite_free (parasite);
+       ui_state->cm_have_embedded = TRUE;
+       if(out)
