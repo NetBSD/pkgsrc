@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.124 2005/06/11 02:57:12 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.125 2005/06/13 05:36:45 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -287,3 +287,7 @@ Pullup ticket 546 - requested by Adrian Portelli
 security fix for gzip-base
 Pullup ticket 547 - requested by Lubomir Sedlacik
 security update for gaim
+Pullup ticket 549 - requested by Lubomir Sedlacik
+security fix for tcpdump
+Pullup ticket 550 - requested by Lubomir Sedlacik
+security update for leafnode
