@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10354 2005/06/12 15:25:31 taca Exp $
+$NetBSD: CHANGES,v 1.10355 2005/06/13 18:42:43 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2868,3 +2868,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/ruby-RMagick to 1.8.2 [taca 2005-06-12]
 	Updated graphics/ruby-imlib2 to 0.5.2 [taca 2005-06-12]
 	Updated databases/ruby-mysql to 2.6 [taca 2005-06-12]
+	Updated devel/treecc to 0.3.6 [jmmv 2005-06-13]
