@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3613 2005/06/12 21:21:58 jmmv Exp $
+$NetBSD: TODO,v 1.3614 2005/06/13 12:37:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -482,7 +482,7 @@ Suggested package updates
 	o exiftags-1.00
 	o exmh-2.7.2
 	o f2c-20031025
-	o fakeroot-1.2.9 [pkg/30015]
+	o fakeroot-1.3 [pkg/30015]
 	o fd-2.06c
 	o fdgw-20040609
 	o feh-1.3.3
@@ -587,7 +587,7 @@ Suggested package updates
 	o inn-2.4.2
 	o intercal-0.24 [dillo]
 	o ion3-devel-20050607
-	o iozone-3.235
+	o iozone-3.239
 	o ipcheck-0.219
 	o ircd-hybrid-7.0.4
 	o iroffer-1.309
@@ -668,6 +668,7 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-0.19.2
 	o mapserver-4.2.5
+	o mathomatic-12.4.2
 	o mdd-20050318
 	o mdf2iso-0.3.0
 	o memcached-1.1.12 [pkg/30289]
