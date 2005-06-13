@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3615 2005/06/13 17:58:05 wiz Exp $
+$NetBSD: TODO,v 1.3616 2005/06/13 18:37:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -893,7 +893,9 @@ Suggested package updates
 	o pload-0.9.5
 	o ploticus-examples-230
 	o plptools-0.13 [pkg/30244]
-	o pnet-0.6.10 [pkg/28555]
+	o pnet-0.7.0 [pkg/30516]
+	o pnetC-0.7.0 [pkg/30517]
+	o pnetlib-0.7.0 [pkg/30518]
 	o poedit-1.3.2
 	o poppy-4.01
 	o poptop-1.2.3
