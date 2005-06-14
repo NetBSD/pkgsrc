@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/05/31 10:01:37 dillo Exp $
+# $NetBSD: Makefile,v 1.43 2005/06/14 15:44:14 adam Exp $
 
 DISTNAME=	freetype-2.1.9
 PKGNAME=	freetype2-2.1.9
@@ -51,8 +51,6 @@ CFLAGS+=	-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
 CPPFLAGS:=	${CPPFLAGS:C/-O[0-9]*/-O/g}
 CFLAGS:=	${CFLAGS:C/-O[0-9]*/-O/g}
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
-CONFIGURE_ENV+=	CFLAGS="${CFLAGS}"
 .endif
 
 # source code breaks strict aliasing in gcc>=2.95
@@ -60,12 +58,11 @@ CONFIGURE_ENV+=	CFLAGS="${CFLAGS}"
 CFLAGS+=	-fno-strict-aliasing
 .endif
 
-.include "../../devel/zlib/buildlink3.mk"
-
 post-configure:
 	cd ${WRKSRC} && ${LN} -s builds/unix/unix.mk config.mk
 .if ${OPSYS} == "IRIX"
 	${MKDIR} ${WRKSRC}/.libs
 .endif
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
