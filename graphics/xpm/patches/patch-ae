@@ -1,8 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2004/09/16 15:09:01 minskim Exp $
+$NetBSD: patch-ae,v 1.2 2005/06/14 18:10:37 jlam Exp $
 
---- lib/Attrib.c.orig	Thu Mar 19 13:50:59 1998
+--- lib/Attrib.c.orig	1998-03-19 14:50:59.000000000 -0500
 +++ lib/Attrib.c
-@@ -35,7 +35,7 @@
+@@ -32,13 +32,15 @@
+ *  Developed by Arnaud Le Hors                                                *
+ \*****************************************************************************/
+ 
++/* October 2004, source code review by Thomas Biege <thomas@suse.de> */
++
  #include "XpmI.h"
  
  /* 3.2 backward compatibility code */
@@ -10,8 +15,12 @@ $NetBSD: patch-ae,v 1.1 2004/09/16 15:09:01 minskim Exp $
 +LFUNC(CreateOldColorTable, int, (XpmColor *ct, unsigned int ncolors,
  				 XpmColor ***oldct));
  
- LFUNC(FreeOldColorTable, void, (XpmColor **colorTable, int ncolors));
-@@ -46,11 +46,14 @@ LFUNC(FreeOldColorTable, void, (XpmColor
+-LFUNC(FreeOldColorTable, void, (XpmColor **colorTable, int ncolors));
++LFUNC(FreeOldColorTable, void, (XpmColor **colorTable, unsigned int ncolors));
+ 
+ /*
+  * Create a colortable compatible with the old style colortable
+@@ -46,11 +48,14 @@ LFUNC(FreeOldColorTable, void, (XpmColor
  static int
  CreateOldColorTable(ct, ncolors, oldct)
      XpmColor *ct;
@@ -20,10 +29,32 @@ $NetBSD: patch-ae,v 1.1 2004/09/16 15:09:01 minskim Exp $
      XpmColor ***oldct;
  {
      XpmColor **colorTable, **color;
-     int a;
+-    int a;
++    unsigned int a;
 +
-+    if (ncolors >= SIZE_MAX / sizeof(XpmColor *))
++    if (ncolors >= UINT_MAX / sizeof(XpmColor *)) 
 +	return XpmNoMemory;
  
      colorTable = (XpmColor **) XpmMalloc(ncolors * sizeof(XpmColor *));
      if (!colorTable) {
+@@ -66,9 +71,9 @@ CreateOldColorTable(ct, ncolors, oldct)
+ static void
+ FreeOldColorTable(colorTable, ncolors)
+     XpmColor **colorTable;
+-    int ncolors;
++    unsigned int ncolors;
+ {
+-    int a, b;
++    unsigned int a, b;
+     XpmColor **color;
+     char **sptr;
+ 
+@@ -119,7 +124,7 @@ XpmFreeExtensions(extensions, nextension
+     XpmExtension *ext;
+     char **sptr;
+ 
+-    if (extensions) {
++    if (extensions  && nextensions > 0) {
+ 	for (i = 0, ext = extensions; i < nextensions; i++, ext++) {
+ 	    if (ext->name)
+ 		XpmFree(ext->name);

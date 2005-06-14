@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2004/09/16 15:09:01 minskim Exp $
+$NetBSD: patch-ad,v 1.6 2005/06/14 18:10:37 jlam Exp $
 
---- lib/XpmI.h.orig	Thu Mar 19 13:51:00 1998
+--- lib/XpmI.h.orig	1998-03-19 14:51:00.000000000 -0500
 +++ lib/XpmI.h
-@@ -42,6 +42,7 @@
+@@ -42,14 +42,17 @@
  #ifndef XPMI_h
  #define XPMI_h
  
@@ -10,12 +10,22 @@ $NetBSD: patch-ad,v 1.5 2004/09/16 15:09:01 minskim Exp $
  #include "xpm.h"
  
  /*
-@@ -114,6 +115,18 @@ extern FILE *popen();
+  * lets try to solve include files
+  */
+ 
++#include <sys/types.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <limits.h>
+ /* stdio.h doesn't declare popen on a Sequent DYNIX OS */
+ #ifdef sequent
+ extern FILE *popen();
+@@ -114,6 +117,18 @@ extern FILE *popen();
  		boundCheckingCalloc((long)(nelem),(long) (elsize))
  #endif
  
 +#if defined(SCO) || defined(__USLC__)
-+#include <stdint.h>	/* For SIZE_MAX */
++#include <stdint.h>    /* For SIZE_MAX */
 +#endif
 +#include <limits.h>
 +#ifndef SIZE_MAX
@@ -29,7 +39,7 @@ $NetBSD: patch-ad,v 1.5 2004/09/16 15:09:01 minskim Exp $
  #define XPMMAXCMTLEN BUFSIZ
  typedef struct {
      unsigned int type;
-@@ -215,9 +228,9 @@ typedef struct _xpmHashAtom {
+@@ -215,9 +230,9 @@ typedef struct _xpmHashAtom {
  }      *xpmHashAtom;
  
  typedef struct {
