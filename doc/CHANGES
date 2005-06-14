@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10356 2005/06/13 20:39:47 reinoud Exp $
+$NetBSD: CHANGES,v 1.10357 2005/06/14 02:30:16 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2870,3 +2870,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/ruby-mysql to 2.6 [taca 2005-06-12]
 	Updated devel/treecc to 0.3.6 [jmmv 2005-06-13]
 	Updated misc/udfclient to 0.4.5 [reinoud 2005-06-13]
+	Updated x11/mlterm to 2.9.2nb1 [hira 2005-06-14]
