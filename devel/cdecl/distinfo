@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2005/04/01 15:33:35 minskim Exp $
+$NetBSD: distinfo,v 1.7 2005/06/14 03:02:29 jschauma Exp $
 
 SHA1 (cdecl-2.5.tar.gz) = b955a0b95b635090360b19de888cb29d5c005296
 RMD160 (cdecl-2.5.tar.gz) = 351c36dcc7f18e4d143f2559460025d2de9a83c4
 Size (cdecl-2.5.tar.gz) = 21435 bytes
-SHA1 (patch-aa) = 44aa70378d483eedb468069e59d3676ba06f9cb0
+SHA1 (patch-aa) = 2dba6f2b76f71f89fe945b2c3c45347f5b4fbcf1
 SHA1 (patch-ab) = e8c9f70894ed5613234ed17b8c1c95c9b12afd7b

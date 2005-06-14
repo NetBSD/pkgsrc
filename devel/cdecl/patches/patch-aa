@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2005/04/01 15:33:35 minskim Exp $
+$NetBSD: patch-aa,v 1.6 2005/06/14 03:02:29 jschauma Exp $
 
 --- cdecl.c.orig	Mon Jan 15 21:54:46 1996
 +++ cdecl.c
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.5 2005/04/01 15:33:35 minskim Exp $
  # endif /* NOVOID */
  #endif /* __STDC__ || DOS */
  
-+#if defined(__svr4__) && defined(__sun__) || defined(__NetBSD__) || defined(__APPLE__)
++#if defined(__svr4__) && defined(__sun__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__sgi)
 +#include <errno.h>
 +#endif
 +
