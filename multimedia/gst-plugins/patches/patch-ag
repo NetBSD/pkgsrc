@@ -1,0 +1,30 @@
+$NetBSD: patch-ag,v 1.1 2005/06/14 07:47:17 rillig Exp $
+
+Removed the #define directive from the inside of a macro expansion.
+Needed for gcc-2.95 and possibly others.
+
+--- sys/glsink/glimagesink.c.orig	Tue May 17 10:41:52 2005
++++ sys/glsink/glimagesink.c	Tue Jun 14 09:36:08 2005
+@@ -51,15 +51,19 @@ GST_ELEMENT_DETAILS ("Video sink",
+ /* Default template - initiated with class struct to allow gst-register to work
+    without X running */
+ static GstStaticPadTemplate gst_glimagesink_sink_template_factory =
++#ifdef ENABLE_YUV
++#  define YUV_FOO ";" GST_VIDEO_CAPS_YUV ("{ UYVY, YUY2 }")
++#else
++#  define YUV_FOO /* empty */
++#endif
+     GST_STATIC_PAD_TEMPLATE ("sink",
+     GST_PAD_SINK,
+     GST_PAD_ALWAYS,
+     GST_STATIC_CAPS (GST_VIDEO_CAPS_RGBx ";" GST_VIDEO_CAPS_BGRx
+-#ifdef ENABLE_YUV
+-        ";" GST_VIDEO_CAPS_YUV ("{ UYVY, YUY2 }")
+-#endif
++    YUV_FOO
+     )
+     );
++#undef YUV_FOO
+ 
+ #if 0
+ enum
