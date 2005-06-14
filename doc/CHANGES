@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10362 2005/06/14 18:28:52 abs Exp $
+$NetBSD: CHANGES,v 1.10363 2005/06/14 20:12:53 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2876,3 +2876,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/mathomatic to 12.4.2 [minskim 2005-06-14]
 	Updated games/xjig to 2.4nb2 [jmmv 2005-06-14]
 	Updated net/autonet to 0.15 [abs 2005-06-14]
+	Updated pkgtools/xpkgwedge to 1.14 [jlam 2005-06-14]
