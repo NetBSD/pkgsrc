@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2005/05/21 20:22:21 kristerw Exp $
+$NetBSD: distinfo,v 1.10 2005/06/14 11:02:43 kristerw Exp $
 
 SHA1 (ghc-6.4-src.tar.bz2) = d799730abe021a9af3c85da26ed585eb0ccc9c37
 RMD160 (ghc-6.4-src.tar.bz2) = 23a0f07887d2ccd0df909592f3a3b40ef5bea2f5
@@ -16,3 +16,4 @@ SHA1 (patch-ad) = 73f5593587d20ad8f6bab5b6586c043c838e83a8
 SHA1 (patch-ae) = 994e5c93c93e82c6c375f21ae172eac5a887d756
 SHA1 (patch-af) = a0c44c8b43b4ca7489a4e14a247ca959764e7bc5
 SHA1 (patch-ag) = 9d9e39fbb97c516fcd9d8775cfe4f88d0ecbdb43
+SHA1 (patch-ah) = 243b1b98ce48873ded6c45dd0ff3541e8284bf00
