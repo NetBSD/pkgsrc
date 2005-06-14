@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.6 2005/03/25 12:45:09 jmmv Exp $
+# $NetBSD: pear.mk,v 1.7 2005/06/14 01:35:09 jschauma Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -47,7 +47,7 @@ GENERATE_PLIST+=	${PEAR_GENERATE_PLIST}
 NO_BUILD=	# defined
 
 post-extract:
-	@cd ${WRKSRC} && ${LN} -s ${WRKDIR}/package.xml
+	@cd ${WRKSRC} && ${LN} -s ${WRKDIR}/package.xml package.xml
 
 do-install:
 	cd ${WRKSRC} && ${PEAR_CMD} install package.xml || exit 1
