@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2005/05/30 00:15:22 abs Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/14 18:28:21 abs Exp $
 
-DISTNAME=	autonet-0.14
+DISTNAME=	autonet-0.15
 CATEGORIES=	net
 MASTER_SITES=	http://www.mono.org/abs/tools/autonet/
 EXTRACT_SUFX=	.tbz

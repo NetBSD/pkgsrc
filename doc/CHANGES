@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10361 2005/06/14 18:08:45 jmmv Exp $
+$NetBSD: CHANGES,v 1.10362 2005/06/14 18:28:52 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2875,3 +2875,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/php-jpgraph to 1.18 [adrianp 2005-06-14]
 	Updated math/mathomatic to 12.4.2 [minskim 2005-06-14]
 	Updated games/xjig to 2.4nb2 [jmmv 2005-06-14]
+	Updated net/autonet to 0.15 [abs 2005-06-14]
