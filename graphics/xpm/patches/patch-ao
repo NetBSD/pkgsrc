@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1 2005/06/14 18:10:37 jlam Exp $
+
+--- lib/WrFFrBuf.c.orig	1998-03-19 14:51:00.000000000 -0500
++++ lib/WrFFrBuf.c
+@@ -32,6 +32,8 @@
+ *  Developed by Arnaud Le Hors                                                *
+ \*****************************************************************************/
+ 
++/* October 2004, source code review by Thomas Biege <thomas@suse.de> */
++
+ #include "XpmI.h"
+ 
+ int
+@@ -49,7 +51,7 @@ XpmWriteFileFromBuffer(filename, buffer)
+     fcheck = fwrite(buffer, len, 1, fp);
+     fclose(fp);
+     if (fcheck != 1)
+-	return XpmOpenFailed;
++	return XpmOpenFailed; /* maybe use a better return value */
+ 
+     return XpmSuccess;
+ }
