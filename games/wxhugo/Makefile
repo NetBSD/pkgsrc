@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/22 20:08:03 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/14 07:15:52 rillig Exp $
 #
 
 DISTNAME=	hugov31_unix_source
@@ -17,6 +17,13 @@ DISTFILE_WX=	hugov31_wxwin_source${EXTRACT_SUFX}
 DIST_SUBDIR=	hugo-3.1.02
 USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/hugov3.1.02/hewx
+
+# The gcc-2.95 Preprocessor chokes on DOS line-ends in macro continuations
+SUBST_CLASSES+=		dos_eol
+SUBST_MESSAGE.dos_eol=	Removing DOS line-ends
+SUBST_STAGE.dos_eol=	post-extract
+SUBST_FILES.dos_eol=	*.c *.cpp */*.c */*.cpp */*/*.c */*/*.cpp
+SUBST_FILTER_CMD.dos_eol=	${TR} -d '\r'
 
 .include "../../audio/libmikmod/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
