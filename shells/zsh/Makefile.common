@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2005/04/11 21:47:21 tv Exp $
+# $NetBSD: Makefile.common,v 1.24 2005/06/14 18:39:29 minskim Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -59,7 +59,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.${OPSYS}
 .    else
 PLIST_SRC=	# empty
 .    endif
-.    if ${OPSYS} != "IRIX"
+.    if ${OPSYS} != "IRIX" && ${OPSYS} != "Linux"
 PLIST_SRC+=	${PKGDIR}/PLIST.shlibs
 .    endif
 PLIST_SRC+=	${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
