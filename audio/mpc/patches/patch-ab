@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.4 2005/06/14 01:34:54 kristerw Exp $
+
+--- src/command.c.orig	Tue Jun 14 03:30:30 2005
++++ src/command.c	Tue Jun 14 03:32:26 2005
+@@ -183,10 +183,11 @@
+ int cmd_crop( int argc, char ** argv, mpd_Connection * conn )
+ {
+ 
++	int length;
+ 	mpd_Status *status;
+ 	status = getStatus( conn );
+ 
+-	int length = ( status->playlistLength - 1 );
++	length = ( status->playlistLength - 1 );
+ 
+ 	if( status->playlistLength == 0 ) {
+ 
