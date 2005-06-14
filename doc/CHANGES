@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10358 2005/06/14 03:54:04 rillig Exp $
+$NetBSD: CHANGES,v 1.10359 2005/06/14 11:26:37 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2872,3 +2872,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated misc/udfclient to 0.4.5 [reinoud 2005-06-13]
 	Updated x11/mlterm to 2.9.2nb1 [hira 2005-06-14]
 	Updated pkgtools/pkglint to 4.17.1 [rillig 2005-06-14]
+	Updated graphics/php-jpgraph to 1.18 [adrianp 2005-06-14]
