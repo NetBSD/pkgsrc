@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3617 2005/06/13 18:42:44 jmmv Exp $
+$NetBSD: TODO,v 1.3618 2005/06/14 15:22:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -378,6 +378,7 @@ Suggested package updates
 	o bittorrent-4.1.1
 	o blackbox-0.70
 	o blitz++-0.8
+	o bluefish-1.0.1
 	o bmake-20050322
 	o boaconstructor-0.3.1
 	o bochs-2.2
@@ -454,6 +455,7 @@ Suggested package updates
 	o dnstracer-1.8
 	o dpkg-1.13.3
 	o drivel-2.0.0 [jmmv]
+	o dspam-3.4.8
 	o dvdrip-0.52.5
 	o dvipdfmx-20050201
 	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
@@ -695,7 +697,7 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpc-0.11.2
 	o mpfr-2.1.1
-	o mplayer-plugin-firefox-2.80
+	o mplayer-plugin-firefox-2.85
 	o mrproject-0.9.1
 	o mrtg-2.12.1
 	o mserv-devel-0.41
@@ -866,6 +868,7 @@ Suggested package updates
 	o pag-0.92 [pkg/30417]
 	o pam-smbpass-3.0.13
 	o pari-2.2.7
+	o patchutils-0.2.31
 	o pcal-4.8
 	o pchar-1.5
 	o pdmenu-1.2.85
