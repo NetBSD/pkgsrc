@@ -1,0 +1,12 @@
+$NetBSD: patch-ba,v 1.1 2005/06/14 16:33:13 jmmv Exp $
+
+--- Xlib/XlibImage.cc.orig	2005-06-14 17:01:14.191898576 +0200
++++ Xlib/XlibImage.cc	2005-06-14 17:01:32.255152544 +0200
+@@ -2,6 +2,7 @@
+ #include <X11/Xutil.h>
+ #include <sys/ipc.h>
+ #include <sys/shm.h>
++#include <string.h>
+ #include "Utils.hh"
+ 
+ static bool DontUseShm = FALSE;
