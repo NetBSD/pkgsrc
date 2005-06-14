@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.192 2005/06/01 14:54:18 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.193 2005/06/14 03:52:01 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -781,6 +781,10 @@ sub checkfile_DESCR($) {
 	if (!defined($descr = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
+	}
+	if (scalar(@{$descr}) == 0) {
+		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
+		return true;
 	}
 
 	foreach my $line (@$descr) {
