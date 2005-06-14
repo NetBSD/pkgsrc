@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2005/06/07 00:59:48 minskim Exp $
+# $NetBSD: Makefile,v 1.38 2005/06/14 21:00:41 minskim Exp $
 
 .include "Makefile.common"
 
 CONFIGURE_ARGS+=	-no-tk
 CONFIGURE_ENV+=		disable_x11=yes
-CONFIGURE_ENV+=		BDB_LIBS=${BDB_LIBS} \
-			BDB_BUILTIN=${USE_BUILTIN.${BDB_TYPE}}
-
-CPPFLAGS+=		-DDB_DBM_HSEARCH
 
 BUILD_TARGET=		world
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
@@ -24,5 +20,4 @@ PLIST_SRC+=	${PKGDIR}/PLIST
 PLIST_SRC+=	${PKGDIR}/PLIST.stub
 .endif
 
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
