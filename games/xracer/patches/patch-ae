@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2000/10/02 08:23:15 jlam Exp $
+$NetBSD: patch-ae,v 1.4 2005/06/14 19:33:19 jmmv Exp $
 
---- src/joystick_generic.c.orig	Sat Jan  1 20:49:04 2000
+--- src/joystick_generic.c.orig	2000-01-02 02:49:04.000000000 +0100
 +++ src/joystick_generic.c
-@@ -22,6 +22,10 @@
+@@ -22,8 +22,12 @@
  #include "xracer-joystick.h"
  #include "xracer-log.h"
  
@@ -11,5 +11,8 @@ $NetBSD: patch-ae,v 1.3 2000/10/02 08:23:15 jlam Exp $
 +#endif
 +
  /* Joystick device. */
- char *xrJoystickDevice = NULL;
+-char *xrJoystickDevice = NULL;
++const char *xrJoystickDevice = NULL;
  
+ /* Program-level initializations. */
+ void
