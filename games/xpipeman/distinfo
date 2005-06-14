@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 23:12:05 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/06/14 18:32:48 jmmv Exp $
 
 SHA1 (xpipeman-1.5.tar.gz) = 065ec572f7be019737e2bb9ed131bc907c713cc5
 RMD160 (xpipeman-1.5.tar.gz) = 9668409dadf70bf5bf4a546a3340846191937c74
@@ -8,4 +8,4 @@ SHA1 (patch-ab) = 43bea8141e49a300402d435d4858ec61284efa52
 SHA1 (patch-ac) = d0c388585988208e47b69dcaa1131870f74676a1
 SHA1 (patch-ad) = a97f685ab79b18d7717ccaf8771b34f645492434
 SHA1 (patch-ae) = 850a1d6d46df30303021d09b62879e0d7b3d960b
-SHA1 (patch-af) = ccae962e4a2f4ea4351660174b56ec276fe1ed30
+SHA1 (patch-af) = 7b1f5bcbe9518668bd1ca84fd7e58309dedfb232
