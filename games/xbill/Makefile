@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/14 17:14:08 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/14 17:18:54 minskim Exp $
 #
 
 DISTNAME=		xbill-2.0
@@ -19,6 +19,7 @@ NO_INSTALL_MANPAGES=	YES
 
 PKG_GROUPS=		${GAMEGRP}
 MAKE_DIRS_PERMS+=	/var/games ${BINOWN} ${GAMEGRP} 0775
+MAKE_ENV+=		GAMEGRP=${GAMEGRP} GAMEMODE=${GAMEMODE}
 SUPPORT_FILES_PERMS+=	${PREFIX}/share/examples/xbill.scores /var/games/xbill.scores ${BINOWN} ${GAMEGRP} ${GAMEDATAMODE}
 
 post-install:
