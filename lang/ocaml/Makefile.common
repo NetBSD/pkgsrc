@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2005/05/22 20:08:10 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/06/14 21:00:41 minskim Exp $
 
 DISTNAME=	ocaml-3.08.3
 CATEGORIES=	lang
@@ -17,12 +17,17 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-prefix ${PREFIX}
 CONFIGURE_ARGS+=	-libs "${LDFLAGS}"
 CONFIGURE_ARGS+=	-with-pthread
+CONFIGURE_ENV+=		BDB_LIBS=${BDB_LIBS} \
+			BDB_BUILTIN=${USE_BUILTIN.${BDB_TYPE}}
+CPPFLAGS+=		-DDB_DBM_HSEARCH
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
 INSTALL_UNSTRIPPED=	yes
 .endif
+
+.include "../../mk/bdb.buildlink3.mk"
 
 post-extract: cp-power-bsd cp-gnu-config
 
