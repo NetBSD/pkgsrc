@@ -1,10 +1,12 @@
-$NetBSD: patch-ar,v 1.1 2004/02/18 23:09:03 kristerw Exp $
+$NetBSD: patch-ar,v 1.2 2005/06/14 16:33:13 jmmv Exp $
 
---- XVision/SimpleViews.cc.orig	Wed Feb 18 23:21:00 2004
-+++ XVision/SimpleViews.cc	Wed Feb 18 23:28:53 2004
-@@ -6,8 +6,8 @@
+--- XVision/SimpleViews.cc.orig	1998-04-07 14:27:23.000000000 +0200
++++ XVision/SimpleViews.cc
+@@ -5,9 +5,10 @@
+ #include "Application.hh"
  #include "XVisionGlobal.hh"
  #include <stdio.h>
++#include <string.h>
  
 -StaticText::StaticText(const char * _text, TextDirection _direction=tdNorth,
 -		       FontShape _fontshape=fsRegular)
@@ -13,7 +15,7 @@ $NetBSD: patch-ar,v 1.1 2004/02/18 23:09:03 kristerw Exp $
      : text(0), buffer1(0), buffer2(0), buffer3(0),
    direction(_direction), fontshape(_fontshape)
  {
-@@ -67,7 +67,7 @@
+@@ -67,7 +68,7 @@ void StaticText::SetText(const char * _t
    if (Visible && (!Hidden)) {
  //    Hide();
  //    Show();
@@ -22,7 +24,7 @@ $NetBSD: patch-ar,v 1.1 2004/02/18 23:09:03 kristerw Exp $
    }
  }
  
-@@ -105,8 +105,8 @@
+@@ -105,8 +106,8 @@ void StaticText::Draw()
  }
  
  Label::Label(const char * _text, const CommandType _cc,
@@ -33,7 +35,7 @@ $NetBSD: patch-ar,v 1.1 2004/02/18 23:09:03 kristerw Exp $
      : StaticText(_text, _direction, _fontshape)
  {
    AutoResize = _AutoResize;
-@@ -114,7 +114,7 @@
+@@ -114,7 +115,7 @@ Label::Label(const char * _text, const C
    Selectable = TRUE;
  }
     
@@ -42,7 +44,7 @@ $NetBSD: patch-ar,v 1.1 2004/02/18 23:09:03 kristerw Exp $
  {
    if (direction == VAVertical)
      SetSize(Point(1, Size));
-@@ -123,14 +123,14 @@
+@@ -123,14 +124,14 @@ Padding::Padding(const Align direction=V
    MinSize = Area.Size;
  }
  
@@ -60,7 +62,7 @@ $NetBSD: patch-ar,v 1.1 2004/02/18 23:09:03 kristerw Exp $
      : picture(_picture), DeleteP(_DeleteP)
  {
    if (_cc != cmInvalid) {
-@@ -197,8 +197,8 @@
+@@ -197,8 +198,8 @@ void CheckBoxImg::Choose()
    parent->SendDataChanged();
  }
  
@@ -71,7 +73,7 @@ $NetBSD: patch-ar,v 1.1 2004/02/18 23:09:03 kristerw Exp $
      : Group(VAHorizontal), Checked(_Checked), Valuep(_Valuep)
  {
    AutoResize = TRUE;
-@@ -217,9 +217,9 @@
+@@ -217,9 +218,9 @@ void CheckBox::SetChecked(bool _Checked)
    Status_v->Choose();
  }
  
@@ -84,7 +86,7 @@ $NetBSD: patch-ar,v 1.1 2004/02/18 23:09:03 kristerw Exp $
      : Label(_Items[_SelectedItem], cmInvalid, _AutoResize, _direction, _fontshape),
    Items(_Items), NumItems(_NumItems), SelectedItem(_SelectedItem)
  {
-@@ -234,8 +234,8 @@
+@@ -234,8 +235,8 @@ void Selector::Choose()
  }
  
  InputLine::InputLine(const char * _text, const int _MAXTextLen, const CommandType _cc /* = cmInvalid */,
@@ -95,7 +97,7 @@ $NetBSD: patch-ar,v 1.1 2004/02/18 23:09:03 kristerw Exp $
      : Label(_text, _cc, _AutoResize, _direction, _fontshape),
    MAXTextLen(_MAXTextLen)
  {
-@@ -300,10 +300,10 @@
+@@ -300,10 +301,10 @@ void PictureSelector::SetItem(int _ItemN
  static const int invalid_number = -4888839; // can't initialize on this number
  
  InputNumber::InputNumber(const int _Number, const int _MinNumber, const int _MaxNumber,
@@ -109,7 +111,7 @@ $NetBSD: patch-ar,v 1.1 2004/02/18 23:09:03 kristerw Exp $
      : Label(" ", _cc, _AutoResize, _direction, _fontshape),
    Number(invalid_number), Valuep(_Valuep), MinNumber(_MinNumber), MaxNumber(_MaxNumber)
  {
-@@ -335,7 +335,7 @@
+@@ -335,7 +336,7 @@ void InputNumber::Deselect()
    Label::Deselect();
  }
  
