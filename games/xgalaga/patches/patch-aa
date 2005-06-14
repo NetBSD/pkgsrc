@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/06/14 17:32:37 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2005/06/14 17:56:41 minskim Exp $
 
---- Makefile.in.orig	Mon May 11 08:52:59 1998
+--- Makefile.in.orig	1998-05-11 01:52:59.000000000 -0500
 +++ Makefile.in
-@@ -25,7 +25,7 @@
+@@ -25,7 +25,7 @@ SOUNDDEFS = -DSOUNDSERVER=\"@prefix@/@SO
  RM = rm -f
  CC = @CC@
  CFLAGS = -I. @CFLAGS@ @DEFS@ @X_CFLAGS@ -DXGALAGADIR=\"@prefix@/\" $(SOUNDDEFS)
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2005/06/14 17:32:37 jmmv Exp $
  LIBS = @LIBS@ libsprite/libsprite.a @X_LIBS@
  INSTALL = @INSTALL@
  
-@@ -40,7 +40,7 @@
+@@ -40,7 +40,7 @@ SUBDIRS = libsprite
  all: $(TARGET) $(SOUNDSRV)
  
  $(SOUNDSRV): $(SOUNDOBJS)
@@ -20,15 +20,15 @@ $NetBSD: patch-aa,v 1.4 2005/06/14 17:32:37 jmmv Exp $
  
  install: all
  	./mkinstalldirs $(bindir)
-@@ -52,7 +52,10 @@
+@@ -52,7 +52,10 @@ install: all
  	for i in levels/*.xgl; do $(INSTALL) $$i $(prefix)/$$i ; done
  	for i in sounds/*.raw; do $(INSTALL) $$i $(prefix)/$$i ; done
  	touch $(prefix)/scores
 -	chmod 666 $(prefix)/scores
-+	chown bin:games $(prefix)/scores
-+	chown bin:games $(bindir)/$(TARGET)
-+	chmod 2755 $(bindir)/$(TARGET)
-+	chmod 664 $(prefix)/scores
++	chown ${GAMEOWN}:${GAMEGRP} $(prefix)/scores
++	chown ${GAMEOWN}:${GAMEGRP} $(bindir)/$(TARGET)
++	chmod ${GAMEMODE} $(bindir)/$(TARGET)
++	chmod ${GAMEDATAMODE} $(prefix)/scores
  
  subdirs:
  	for i in $(SUBDIRS); do cd $$i ; make ; done
