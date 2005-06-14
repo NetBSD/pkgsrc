@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2004/09/08 12:48:32 sketch Exp $
+$NetBSD: patch-ae,v 1.2 2005/06/14 18:50:50 jmmv Exp $
 
---- ai.c.orig	1999-06-30 19:25:02.000000000 +0100
-+++ ai.c	2004-09-08 13:41:53.000000000 +0100
-@@ -59,12 +59,12 @@
+--- ai.c.orig	1999-06-30 20:25:02.000000000 +0200
++++ ai.c
+@@ -59,12 +59,12 @@ void destrand( entity *amonst ) {       
     int tries=0;
  
        /* If in a halfstep, finish it */
@@ -17,7 +17,7 @@ $NetBSD: patch-ae,v 1.1 2004/09/08 12:48:32 sketch Exp $
        case UP: amonst->y-=0.5; return;
        case DOWN: amonst->y+=0.5; return;
        default: amonst->dir = directions[(int)rnd(2)];
-@@ -84,9 +84,9 @@
+@@ -84,9 +84,9 @@ void destrand( entity *amonst ) {       
        /* Find coordinates for new position */
     switch(dir) {
        case UP: y-=0.5; eqy=trunc(y); eqx=trunc(x); break;
@@ -29,7 +29,7 @@ $NetBSD: patch-ae,v 1.1 2004/09/08 12:48:32 sketch Exp $
        default: printf("Error: Not a direction\n"); return;
        }
  
-@@ -94,7 +94,7 @@
+@@ -94,7 +94,7 @@ void destrand( entity *amonst ) {       
     if(!checkdest(eqx, eqy)) goto tryagain;
  
        /* Check for double half-step */
@@ -38,7 +38,7 @@ $NetBSD: patch-ae,v 1.1 2004/09/08 12:48:32 sketch Exp $
  
        /* Passes all checks */
     amonst->x = x;
-@@ -111,12 +111,12 @@
+@@ -111,12 +111,12 @@ void desthome( entity *amonst ) {       
     float dx, dy, dz;
  
        /* If in a halfstep, finish it */
@@ -53,7 +53,7 @@ $NetBSD: patch-ae,v 1.1 2004/09/08 12:48:32 sketch Exp $
        case UP: amonst->y-=0.5; return;
        case DOWN: amonst->y+=0.5; return;
        default: amonst->dir = directions[(int)rnd(2)];
-@@ -136,8 +136,8 @@
+@@ -136,8 +136,8 @@ void desthome( entity *amonst ) {       
     tryagain: /* Come back here to try again */
     tries++;
     if(tries>100) {
@@ -64,7 +64,7 @@ $NetBSD: patch-ae,v 1.1 2004/09/08 12:48:32 sketch Exp $
           watchentity(amonst, target);
        return;
        }
-@@ -175,7 +175,7 @@
+@@ -175,7 +175,7 @@ void desthome( entity *amonst ) {       
     if(!checkdest(eqx, eqy)) goto tryagain;
  
        /* Be careful of half-steps */
@@ -73,7 +73,15 @@ $NetBSD: patch-ae,v 1.1 2004/09/08 12:48:32 sketch Exp $
  
        /* Done working out new position, assign to character */
     amonst->x = x;
-@@ -279,7 +279,7 @@
+@@ -193,7 +193,6 @@ void deststraight( entity *actmonst ) { 
+       case DOWN: y+=1; break;
+       case LEFT: x-=1; break;
+       case RIGHT: x+=1; break;
+-      default:
+       }
+    icorrectpos(&x, &y);
+    if(!checkdest(x, y) && data[xytotype(x, y)].etype==CHARACTER) {
+@@ -279,7 +278,7 @@ void killmonster( entity *amonst ) {    
        printf("I was asked to kill a monster that shouldn't be killed!\n");
        if(amonst->health <= 0) {
           if(data[amonst->type].etype != EFFECT) {
@@ -82,7 +90,7 @@ $NetBSD: patch-ae,v 1.1 2004/09/08 12:48:32 sketch Exp $
              maze[trunc(amonst->y)][trunc(amonst->x)] = -2; /* Blank */
              }
           draw_tilex2(mainwindow, data[amonst->type].tile[amonst->frame],
-@@ -293,8 +293,8 @@
+@@ -293,8 +292,8 @@ void killmonster( entity *amonst ) {    
                       bmonst->x*GRIDSIZE, bmonst->y*GRIDSIZE,
                       bmonst->color, bmonst->dir);
           }
@@ -93,7 +101,7 @@ $NetBSD: patch-ae,v 1.1 2004/09/08 12:48:32 sketch Exp $
           draw_tilex2(mainwindow, data[bmonst->type].tile[bmonst->frame],
                       bmonst->x*GRIDSIZE, bmonst->y*GRIDSIZE,
                       bmonst->color, bmonst->dir);
-@@ -354,9 +354,9 @@
+@@ -354,9 +353,9 @@ void spawnbullet( entity *amonst ) {    
        else amonst->atspeed=4;
        switch(amonst->dir) {
           case LEFT: fx-=1; x=trunc(fx); y=trunc(fy); break;
@@ -105,7 +113,7 @@ $NetBSD: patch-ae,v 1.1 2004/09/08 12:48:32 sketch Exp $
           }
        icorrectpos(&x, &y);
        if(!checkdest(x, y)) {
-@@ -420,8 +420,8 @@
+@@ -420,8 +419,8 @@ int clearshot( entity *amonst, entity *t
     if(!(amonst->x == target->x || amonst->y == target->y)) return 0;
  
        /* Halfsteps are banned */
