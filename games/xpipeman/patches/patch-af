@@ -1,16 +1,47 @@
-$NetBSD: patch-af,v 1.2 1998/11/12 23:34:32 frueauf Exp $
+$NetBSD: patch-af,v 1.3 2005/06/14 18:32:48 jmmv Exp $
 
---- score.c.orig	Sun Aug  9 03:56:41 1998
-+++ score.c	Sun Aug  9 03:57:23 1998
-@@ -72,3 +72,3 @@
+--- score.c.orig	1991-09-13 22:32:12.000000000 +0200
++++ score.c
+@@ -70,7 +70,7 @@ void 	show_scores(), 
+ 	write_out_scores();
+ 
  static FILE *scorefile = 0;
 -char *score_filename;
 +extern AppData app_data;
  
-@@ -102,4 +102,4 @@
+ /*----------------------------------------------------------------------*/
+ 
+@@ -87,7 +87,7 @@ check_score(current_score,level)
+   }
+   if(scorefile) {
+ #ifndef SYSV
+-    flock(scorefile->_file, LOCK_UN);
++    flock(fileno(scorefile), LOCK_UN);
+ #endif
+     fclose(scorefile);
+     show_scores();
+@@ -100,12 +100,12 @@ load_scores()
+ {
+   int i = 0;
  
 -  if( !(scorefile = fopen(score_filename,"r+")) ) {
 -    scorefile = fopen(score_filename, "w");
 +  if( !(scorefile = fopen(app_data.score_filename,"r+")) ) {
 +    scorefile = fopen(app_data.score_filename, "w");
      return;
+   }
+ #ifndef SYSV
+-  flock(scorefile->_file, LOCK_EX);
++  flock(fileno(scorefile), LOCK_EX);
+ #endif
+   while( fgets(scores[i].score,6,scorefile) 	/* get score */
+       && fgets(scores[i].name,26,scorefile) 	/* get name */
+@@ -281,7 +281,7 @@ show_scores_callback()
+ 
+   if(scorefile) {
+ #ifndef SYSV
+-    flock(scorefile->_file, LOCK_UN);
++    flock(fileno(scorefile), LOCK_UN);
+ #endif
+     fclose(scorefile);
+     show_scores();
