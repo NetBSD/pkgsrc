@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.1 2005/06/14 16:57:49 jmmv Exp $
+
+--- libs/regex/src/wide_posix_api.cpp.orig	2003-12-16 14:06:00.000000000 +0100
++++ libs/regex/src/wide_posix_api.cpp
+@@ -28,6 +28,8 @@
+ #include <cstring>
+ #include <cstdio>
+ 
++using namespace std; // For swprintf, in case it is there.
++
+ namespace boost{
+ 
+ namespace {
+@@ -142,13 +144,13 @@ BOOST_REGEX_DECL regsize_t BOOST_REGEX_C
+       {
+          if(std::wcscmp(e->re_endp, wnames[i]) == 0)
+          {
+-            std::swprintf(localbuf, 5, L"%d", i);
++            swprintf(localbuf, 5, L"%d", i);
+             if(std::wcslen(localbuf) < buf_size)
+                std::wcscpy(buf, localbuf);
+             return std::wcslen(localbuf) + 1;
+          }
+       }
+-      std::swprintf(localbuf, 5, L"%d", 0);
++      swprintf(localbuf, 5, L"%d", 0);
+       if(std::wcslen(localbuf) < buf_size)
+          std::wcscpy(buf, localbuf);
+       return std::wcslen(localbuf) + 1;
