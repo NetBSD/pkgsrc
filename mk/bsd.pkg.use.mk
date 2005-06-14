@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.16 2005/06/01 18:03:05 jlam Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.17 2005/06/14 02:09:38 jlam Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -8,8 +8,6 @@
 ############################################################################
 
 .if defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake)
-INSTALL_TARGET+=	${NO_INSTALL_MANPAGES:D:Uinstall.man}
-USE_X11BASE?=		implied
 PLIST_SUBST+=		IMAKE_MAN_SOURCE_PATH=${IMAKE_MAN_SOURCE_PATH}
 PLIST_SUBST+=		IMAKE_MAN_DIR=${IMAKE_MAN_DIR}
 PLIST_SUBST+=		IMAKE_LIBMAN_DIR=${IMAKE_LIBMAN_DIR}
@@ -22,6 +20,11 @@ PLIST_SUBST+=		IMAKE_KERNMAN_SUFFIX=${IMAKE_KERNMAN_SUFFIX}
 PLIST_SUBST+=		IMAKE_FILEMAN_SUFFIX=${IMAKE_FILEMAN_SUFFIX}
 PLIST_SUBST+=		IMAKE_MISCMAN_SUFFIX=${IMAKE_MISCMAN_SUFFIX}
 PLIST_SUBST+=		IMAKE_MANNEWSUFFIX=${IMAKE_MANNEWSUFFIX}
+.endif
+
+.if defined(USE_IMAKE)
+USE_X11BASE?=		implied
+INSTALL_TARGET+=	${NO_INSTALL_MANPAGES:D:Uinstall.man}
 MAKE_FLAGS+=		CC=${CC:Q} CXX=${CXX:Q}
 .endif
 
