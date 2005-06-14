@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/06/01 18:02:51 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/06/14 17:24:12 jlam Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
@@ -17,6 +17,8 @@ MAKE_ENV+=		GTYPE=-x11
 
 ALLFILES+=		${DISTFILES}
 FONTS_X11_DIRS+=	${PREFIX}/lib/X11/fonts/misc
+
+INSTALLATION_DIRS=	lib/X11/app-defaults lib/X11/fonts/misc
 
 post-install:
 	@${INSTALL_DATA} ${WRKSRC}/dat/x11tiles ${PREFIX}/share/${NETHACK_DIR}
