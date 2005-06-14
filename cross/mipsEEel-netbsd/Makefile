@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/14 22:25:15 kristerw Exp $
 
 DISTNAME=	cross-${TARGET_ARCH}-${DISTVERSION}
 TARGET_ARCH=	mipsEEel-netbsd
@@ -17,6 +17,8 @@ BZCAT=		/usr/bin/bzcat
 BZCAT=		${LOCALBASE}/bin/bzcat
 BUILD_DEPENDS+=	bzip2>=0.9.0b:../../archivers/bzip2
 .endif
+
+WRKSRC=		${WRKDIR}
 
 # We don't use CROSSBASE because the binutils are not the same as binutils
 # for other cross compilers.
