@@ -1,4 +1,4 @@
-# $NetBSD: imake.mk,v 1.13 2005/05/22 05:21:15 minskim Exp $
+# $NetBSD: imake.mk,v 1.14 2005/06/14 07:12:23 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -51,8 +51,8 @@
 #	XMKMF_FLAGS	Options to pass to xmkmf
 #
 # A platform/${OPSYS}.mk file may note that additional tools are
-# required when using imake by setting _IMAKE_TOOLS to the appropriate
-# value, e.g. _IMAKE_TOOLS+=gmake to use GNU make to build packages
+# required when using imake by setting IMAKE_TOOLS to the appropriate
+# value, e.g. IMAKE_TOOLS+=gmake to use GNU make to build packages
 # that use imake.
 #
 # This file needs to be included before replace.mk as it modifies the
@@ -73,7 +73,7 @@ USE_TOOLS+=		imake xmkmf
 
 # Add any extra tools that may be required when using imake, e.g. gmake.
 .if !empty(USE_TOOLS:Mimake)
-USE_TOOLS+=		${_IMAKE_TOOLS:Nimake}
+USE_TOOLS+=		${IMAKE_TOOLS:Nimake}
 .endif
 
 TOOLS_REAL_ARGS.imake?=	${IMAKEOPTS}
