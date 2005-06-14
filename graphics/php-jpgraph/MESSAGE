@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/11/27 22:34:19 jdolecek Exp $
+$NetBSD: MESSAGE,v 1.2 2005/06/14 11:25:09 adrianp Exp $
 
 Do *not* edit "${PJDIR}/jpg-config.inc" to customize
 this package because it is a link which will removed during upgrades.
@@ -13,4 +13,3 @@ add following directory to php.ini 'include_path':
 Usage examples are available in ${EXDIR}.
 
 ===========================================================================
-
