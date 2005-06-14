@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/06/01 18:02:53 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/06/14 17:32:36 jmmv Exp $
 
 DISTNAME=		xgalaga-2.0.34
 PKGREVISION=		2
@@ -20,4 +20,5 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/xgalaga/README
 
 .include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

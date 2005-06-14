@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2001/09/08 00:09:10 hubertf Exp $
+$NetBSD: patch-aa,v 1.4 2005/06/14 17:32:37 jmmv Exp $
 
 --- Makefile.in.orig	Mon May 11 08:52:59 1998
 +++ Makefile.in
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.3 2001/09/08 00:09:10 hubertf Exp $
  
  $(SOUNDSRV): $(SOUNDOBJS)
 -	$(CC) $(LDFLAGS) -o $(SOUNDSRV) $(SOUNDOBJS) $(SOUNDLIBS)
-+	$(CC) $(LDFLAGS) -o $(SOUNDSRV) $(SOUNDOBJS) $(SOUNDLIBS) -lossaudio
++	$(CC) $(LDFLAGS) -o $(SOUNDSRV) $(SOUNDOBJS) $(SOUNDLIBS) $(LIBOSSAUDIO)
  
  install: all
  	./mkinstalldirs $(bindir)
