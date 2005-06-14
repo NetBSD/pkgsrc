@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:58 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/14 17:14:08 minskim Exp $
 #
 
 DISTNAME=		xbill-2.0
@@ -17,9 +17,9 @@ USE_IMAKE=		YES
 USE_PKGINSTALL=		YES
 NO_INSTALL_MANPAGES=	YES
 
-PKG_GROUPS=		games
-MAKE_DIRS_PERMS+=	/var/games ${BINOWN} games 0775
-SUPPORT_FILES_PERMS+=	${PREFIX}/share/examples/xbill.scores /var/games/xbill.scores ${BINOWN} games 0664
+PKG_GROUPS=		${GAMEGRP}
+MAKE_DIRS_PERMS+=	/var/games ${BINOWN} ${GAMEGRP} 0775
+SUPPORT_FILES_PERMS+=	${PREFIX}/share/examples/xbill.scores /var/games/xbill.scores ${BINOWN} ${GAMEGRP} ${GAMEDATAMODE}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/xbill.man ${PREFIX}/man/man6/xbill.6
