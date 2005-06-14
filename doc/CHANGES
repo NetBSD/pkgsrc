@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10359 2005/06/14 11:26:37 adrianp Exp $
+$NetBSD: CHANGES,v 1.10360 2005/06/14 18:02:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2873,3 +2873,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/mlterm to 2.9.2nb1 [hira 2005-06-14]
 	Updated pkgtools/pkglint to 4.17.1 [rillig 2005-06-14]
 	Updated graphics/php-jpgraph to 1.18 [adrianp 2005-06-14]
+	Updated math/mathomatic to 12.4.2 [minskim 2005-06-14]
