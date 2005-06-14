@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/05/29 06:36:01 rh Exp $
+$NetBSD: patch-aa,v 1.2 2005/06/14 19:33:19 jmmv Exp $
 
---- include/xracer-joystick.h.orig	Sat May 27 04:58:58 2000
-+++ include/xracer-joystick.h	Sat May 27 04:59:18 2000
-@@ -31,6 +31,6 @@
- extern void xrJoystickInit (void);
- extern int xrJoystickRead (struct xrJoystickStatus *status);
+--- src/joystick_freebsd.c.orig	2000-01-02 02:49:04.000000000 +0100
++++ src/joystick_freebsd.c
+@@ -39,7 +39,7 @@
+ static int fd = -1;
  
--extern const char *xrJoystickDevice;
-+extern char *xrJoystickDevice;
+ /* Joystick device. */
+-char *xrJoystickDevice = "/dev/joy0";
++const char *xrJoystickDevice = "/dev/joy0";
  
- #endif /* __xracer_joystick_h__ */
+ /* Program-level initializations. */
+ void
