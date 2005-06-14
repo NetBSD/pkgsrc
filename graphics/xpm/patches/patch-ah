@@ -1,13 +1,43 @@
-$NetBSD: patch-ah,v 1.1 2004/09/16 15:09:01 minskim Exp $
+$NetBSD: patch-ah,v 1.2 2005/06/14 18:10:37 jlam Exp $
 
---- lib/data.c.orig	Thu Mar 19 13:51:00 1998
+--- lib/data.c.orig	1998-03-19 14:51:00.000000000 -0500
 +++ lib/data.c
-@@ -374,7 +374,7 @@ xpmGetCmt(data, cmt)
+@@ -32,6 +32,8 @@
+ *  Developed by Arnaud Le Hors                                                *
+ \*****************************************************************************/
+ 
++/* October 2004, source code review by Thomas Biege <thomas@suse.de> */
++
+ #ifndef CXPMPROG
+ /* Official version number */
+ static char *RCS_Version = "$XpmVersion: 3.4k $";
+@@ -261,7 +263,7 @@ xpmNextWord(data, buf, buflen)
+ 	}
+ 	Ungetc(data, c, file);
+     }
+-    return (n);
++    return (n); /* this returns bytes read + 1 */
+ }
+ 
+ /*
+@@ -374,8 +376,9 @@ xpmGetCmt(data, cmt)
  {
      if (!data->type)
  	*cmt = NULL;
 -    else if (data->CommentLength) {
-+    else if (data->CommentLength != 0 && data->CommentLength < SIZE_MAX - 1) {
- 	*cmt = (char *) XpmMalloc(data->CommentLength + 1);
+-	*cmt = (char *) XpmMalloc(data->CommentLength + 1);
++    else if (data->CommentLength != 0 && data->CommentLength < UINT_MAX - 1) {
++	if( (*cmt = (char *) XpmMalloc(data->CommentLength + 1)) == NULL)
++		return XpmNoMemory;
  	strncpy(*cmt, data->Comment, data->CommentLength);
  	(*cmt)[data->CommentLength] = '\0';
+ 	data->CommentLength = 0;
+@@ -403,7 +406,7 @@ int
+ xpmParseHeader(data)
+     xpmData *data;
+ {
+-    char buf[BUFSIZ];
++    char buf[BUFSIZ+1] = {0};
+     int l, n = 0;
+ 
+     if (data->type) {

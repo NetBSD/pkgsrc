@@ -1,33 +1,38 @@
-$NetBSD: patch-aj,v 1.1 2004/09/16 15:09:01 minskim Exp $
+$NetBSD: patch-aj,v 1.2 2005/06/14 18:10:37 jlam Exp $
 
---- lib/parse.c.orig	Thu Mar 19 13:51:00 1998
+--- lib/parse.c.orig	1998-03-19 14:51:00.000000000 -0500
 +++ lib/parse.c
-@@ -41,6 +41,24 @@
+@@ -38,8 +38,29 @@
+  * HeDu (hedu@cul-ipn.uni-kiel.de) 4/94
+  */
+ 
++/* October 2004, source code review by Thomas Biege <thomas@suse.de> */
++
  #include "XpmI.h"
  #include <ctype.h>
- 
-+#ifdef HAS_STRLCAT
-+# define STRLCAT(dst, src, dstsize) { \
-+  	if (strlcat(dst, src, dstsize) >= (dstsize)) \
-+	    return (XpmFileInvalid); }
-+# define STRLCPY(dst, src, dstsize) { \
-+  	if (strlcpy(dst, src, dstsize) >= (dstsize)) \
-+	    return (XpmFileInvalid); }
-+#else
-+# define STRLCAT(dst, src, dstsize) { \
-+	if ((strlen(dst) + strlen(src)) < (dstsize)) \
-+ 	    strcat(dst, src); \
-+	else return (XpmFileInvalid); }
-+# define STRLCPY(dst, src, dstsize) { \
-+	if (strlen(src) < (dstsize)) \
-+ 	    strcpy(dst, src); \
-+	else return (XpmFileInvalid); }
-+#endif
++#include <string.h>
 +
++#ifdef HAS_STRLCAT
++# define STRLCAT(dst, src, dstsize) do { \
++	if (strlcat(dst, src, dstsize) >= (dstsize)) \
++	    return (XpmFileInvalid); } while(0)
++# define STRLCPY(dst, src, dstsize) do { \
++	if (strlcpy(dst, src, dstsize) >= (dstsize)) \
++	    return (XpmFileInvalid); } while(0)
++#else
++# define STRLCAT(dst, src, dstsize) do { \
++	if ((strlen(dst) + strlen(src)) < (dstsize)) \
++	    strcat(dst, src); \
++	else return (XpmFileInvalid); } while(0)
++# define STRLCPY(dst, src, dstsize) do { \
++	if (strlen(src) < (dstsize)) \
++	    strcpy(dst, src); \
++	else return (XpmFileInvalid); } while(0)
++#endif
+ 
  LFUNC(ParsePixels, int, (xpmData *data, unsigned int width,
  			 unsigned int height, unsigned int ncolors,
- 			 unsigned int cpp, XpmColor *colorTable,
-@@ -63,7 +81,7 @@ xpmParseValues(data, width, height, ncol
+@@ -63,7 +84,7 @@ xpmParseValues(data, width, height, ncol
      unsigned int *extensions;
  {
      unsigned int l;
@@ -36,12 +41,12 @@ $NetBSD: patch-aj,v 1.1 2004/09/16 15:09:01 minskim Exp $
  
      if (!data->format) {		/* XPM 2 or 3 */
  
-@@ -172,10 +190,10 @@ xpmParseColors(data, ncolors, cpp, color
+@@ -172,10 +193,10 @@ xpmParseColors(data, ncolors, cpp, color
      XpmColor **colorTablePtr;
      xpmHashTable *hashtable;
  {
 -    unsigned int key, l, a, b;
-+    unsigned int key, l, a, b, len;
++    unsigned int key = 0, l, a, b, len;
      unsigned int curkey;		/* current color key */
      unsigned int lastwaskey;		/* key read */
 -    char buf[BUFSIZ];
@@ -49,27 +54,27 @@ $NetBSD: patch-aj,v 1.1 2004/09/16 15:09:01 minskim Exp $
      char curbuf[BUFSIZ];		/* current buffer */
      char **sptr, *s;
      XpmColor *color;
-@@ -183,6 +201,8 @@ xpmParseColors(data, ncolors, cpp, color
+@@ -183,6 +204,8 @@ xpmParseColors(data, ncolors, cpp, color
      char **defaults;
      int ErrorStatus;
  
-+    if (ncolors >= SIZE_MAX / sizeof(XpmColor))
++    if (ncolors >= UINT_MAX / sizeof(XpmColor))
 +	return (XpmNoMemory);
      colorTable = (XpmColor *) XpmCalloc(ncolors, sizeof(XpmColor));
      if (!colorTable)
  	return (XpmNoMemory);
-@@ -194,6 +214,10 @@ xpmParseColors(data, ncolors, cpp, color
+@@ -194,6 +217,10 @@ xpmParseColors(data, ncolors, cpp, color
  	    /*
  	     * read pixel value
  	     */
-+	    if (cpp >= SIZE_MAX - 1) {
++	    if (cpp >= UINT_MAX - 1) {
 +		xpmFreeColorTable(colorTable, ncolors);
 +		return (XpmNoMemory);
 +	    }
  	    color->string = (char *) XpmMalloc(cpp + 1);
  	    if (!color->string) {
  		xpmFreeColorTable(colorTable, ncolors);
-@@ -231,13 +255,14 @@ xpmParseColors(data, ncolors, cpp, color
+@@ -231,13 +258,14 @@ xpmParseColors(data, ncolors, cpp, color
  		}
  		if (!lastwaskey && key < NKEYS) {	/* open new key */
  		    if (curkey) {	/* flush string */
@@ -86,7 +91,7 @@ $NetBSD: patch-aj,v 1.1 2004/09/16 15:09:01 minskim Exp $
  		    }
  		    curkey = key + 1;	/* set new key  */
  		    *curbuf = '\0';	/* reset curbuf */
-@@ -248,9 +273,9 @@ xpmParseColors(data, ncolors, cpp, color
+@@ -248,9 +276,9 @@ xpmParseColors(data, ncolors, cpp, color
  			return (XpmFileInvalid);
  		    }
  		    if (!lastwaskey)
@@ -98,7 +103,7 @@ $NetBSD: patch-aj,v 1.1 2004/09/16 15:09:01 minskim Exp $
  		    lastwaskey = 0;
  		}
  	    }
-@@ -258,12 +283,13 @@ xpmParseColors(data, ncolors, cpp, color
+@@ -258,12 +286,13 @@ xpmParseColors(data, ncolors, cpp, color
  		xpmFreeColorTable(colorTable, ncolors);
  		return (XpmFileInvalid);
  	    }
@@ -114,18 +119,18 @@ $NetBSD: patch-aj,v 1.1 2004/09/16 15:09:01 minskim Exp $
  	}
      } else {				/* XPM 1 */
  	/* get to the beginning of the first string */
-@@ -276,6 +302,10 @@ xpmParseColors(data, ncolors, cpp, color
+@@ -276,6 +305,10 @@ xpmParseColors(data, ncolors, cpp, color
  	    /*
  	     * read pixel value
  	     */
-+	    if (cpp >= SIZE_MAX - 1) {
++	    if (cpp >= UINT_MAX - 1) {
 +		xpmFreeColorTable(colorTable, ncolors);
 +		return (XpmNoMemory);
 +	    }
  	    color->string = (char *) XpmMalloc(cpp + 1);
  	    if (!color->string) {
  		xpmFreeColorTable(colorTable, ncolors);
-@@ -304,16 +334,17 @@ xpmParseColors(data, ncolors, cpp, color
+@@ -304,19 +337,20 @@ xpmParseColors(data, ncolors, cpp, color
  	    *curbuf = '\0';		/* init curbuf */
  	    while (l = xpmNextWord(data, buf, BUFSIZ)) {
  		if (*curbuf != '\0')
@@ -133,7 +138,7 @@ $NetBSD: patch-aj,v 1.1 2004/09/16 15:09:01 minskim Exp $
 +		    STRLCAT(curbuf, " ", sizeof(curbuf));/* append space */
  		buf[l] = '\0';
 -		strcat(curbuf, buf);	/* append buf */
-+		STRLCAT(curbuf, buf, sizeof(curbuf));	/* append buf */
++		STRLCAT(curbuf, buf, sizeof(curbuf)); /* append buf */
  	    }
 -	    s = (char *) XpmMalloc(strlen(curbuf) + 1);
 +	    len = strlen(curbuf) + 1;
@@ -146,34 +151,119 @@ $NetBSD: patch-aj,v 1.1 2004/09/16 15:09:01 minskim Exp $
 +	    memcpy(s, curbuf, len);
  	    color->c_color = s;
  	    *curbuf = '\0';		/* reset curbuf */
- 	    if (a < ncolors - 1)
-@@ -338,6 +369,9 @@ ParsePixels(data, width, height, ncolors
-     unsigned int *iptr, *iptr2;
+-	    if (a < ncolors - 1)
++	    if (a < ncolors - 1)	/* can we trust ncolors -> leave data's bounds */
+ 		xpmNextString(data);	/* get to the next string */
+ 	}
+     }
+@@ -335,9 +369,12 @@ ParsePixels(data, width, height, ncolors
+     xpmHashTable *hashtable;
+     unsigned int **pixels;
+ {
+-    unsigned int *iptr, *iptr2;
++    unsigned int *iptr, *iptr2 = NULL; /* found by Egbert Eich */
      unsigned int a, x, y;
  
-+    if ((height > 0 && width >= SIZE_MAX / height) ||
-+	width * height >= SIZE_MAX / sizeof(unsigned int)) 
++    if ((height > 0 && width >= UINT_MAX / height) ||
++	width * height >= UINT_MAX / sizeof(unsigned int)) 
 +	return XpmNoMemory;
  #ifndef FOR_MSW
      iptr2 = (unsigned int *) XpmMalloc(sizeof(unsigned int) * width * height);
  #else
-@@ -361,6 +395,9 @@ ParsePixels(data, width, height, ncolors
+@@ -361,6 +398,11 @@ ParsePixels(data, width, height, ncolors
  	{
  	    unsigned short colidx[256];
  
-+	    if (ncolors > 256)
++	    if (ncolors > 256) {
++		XpmFree(iptr2); /* found by Egbert Eich */
 +		return (XpmFileInvalid);
++	    }
 +
  	    bzero((char *)colidx, 256 * sizeof(short));
  	    for (a = 0; a < ncolors; a++)
  		colidx[(unsigned char)colorTable[a].string[0]] = a + 1;
-@@ -438,6 +475,9 @@ if (cidx[f]) XpmFree(cidx[f]);}
+@@ -386,16 +428,20 @@ ParsePixels(data, width, height, ncolors
  	{
+ 
+ /* free all allocated pointers at all exits */
+-#define FREE_CIDX {int f; for (f = 0; f < 256; f++) \
+-if (cidx[f]) XpmFree(cidx[f]);}
++#define FREE_CIDX \
++do \
++{ \
++	int f; for (f = 0; f < 256; f++) \
++	if (cidx[f]) XpmFree(cidx[f]); \
++} while(0)
+ 
+ 	    /* array of pointers malloced by need */
+ 	    unsigned short *cidx[256];
+-	    int char1;
++	    unsigned int char1;
+ 
+ 	    bzero((char *)cidx, 256 * sizeof(unsigned short *)); /* init */
+ 	    for (a = 0; a < ncolors; a++) {
+-		char1 = colorTable[a].string[0];
++		char1 = (unsigned char) colorTable[a].string[0];
+ 		if (cidx[char1] == NULL) { /* get new memory */
+ 		    cidx[char1] = (unsigned short *)
+ 			XpmCalloc(256, sizeof(unsigned short));
+@@ -439,6 +485,11 @@ if (cidx[f]) XpmFree(cidx[f]);}
  	    char *s;
  	    char buf[BUFSIZ];
-+
-+	    if (cpp >= sizeof(buf))
-+		return (XpmFileInvalid);
  
++	    if (cpp >= sizeof(buf)) {
++		XpmFree(iptr2); /* found by Egbert Eich */
++		return (XpmFileInvalid);
++	    }
++
  	    buf[cpp] = '\0';
  	    if (USE_HASHTABLE) {
+ 		xpmHashAtom *slot;
+@@ -447,7 +498,7 @@ if (cidx[f]) XpmFree(cidx[f]);}
+ 		    xpmNextString(data);
+ 		    for (x = 0; x < width; x++, iptr++) {
+ 			for (a = 0, s = buf; a < cpp; a++, s++)
+-			    *s = xpmGetC(data);
++			    *s = xpmGetC(data); /* int assigned to char, not a problem here */
+ 			slot = xpmHashSlot(hashtable, buf);
+ 			if (!*slot) {	/* no color matches */
+ 			    XpmFree(iptr2);
+@@ -461,7 +512,7 @@ if (cidx[f]) XpmFree(cidx[f]);}
+ 		    xpmNextString(data);
+ 		    for (x = 0; x < width; x++, iptr++) {
+ 			for (a = 0, s = buf; a < cpp; a++, s++)
+-			    *s = xpmGetC(data);
++			    *s = xpmGetC(data); /* int assigned to char, not a problem here */
+ 			for (a = 0; a < ncolors; a++)
+ 			    if (!strcmp(colorTable[a].string, buf))
+ 				break;
+@@ -516,7 +567,7 @@ xpmParseExtensions(data, extensions, nex
+     while (!notstart && notend) {
+ 	/* there starts an extension */
+ 	ext = (XpmExtension *)
+-	    XpmRealloc(exts, (num + 1) * sizeof(XpmExtension));
++	    XpmRealloc(exts, (num + 1) * sizeof(XpmExtension)); /* can the loop be forced to iterate often enough to make "(num + 1) * sizeof(XpmExtension)" wrapping? */
+ 	if (!ext) {
+ 	    XpmFree(string);
+ 	    XpmFreeExtensions(exts, num);
+@@ -553,7 +604,7 @@ xpmParseExtensions(data, extensions, nex
+ 	while ((notstart = strncmp("XPMEXT", string, 6))
+ 	       && (notend = strncmp("XPMENDEXT", string, 9))) {
+ 	    sp = (char **)
+-		XpmRealloc(ext->lines, (nlines + 1) * sizeof(char *));
++		XpmRealloc(ext->lines, (nlines + 1) * sizeof(char *)); /* can we iterate enough for a wrapping? */
+ 	    if (!sp) {
+ 		XpmFree(string);
+ 		ext->nlines = nlines;
+@@ -593,9 +644,9 @@ xpmParseExtensions(data, extensions, nex
+ /* function call in case of error */
+ #undef RETURN
+ #define RETURN(status) \
+-{ \
++do { \
+       goto error; \
+-}
++} while(0)
+ 
+ /*
+  * This function parses an Xpm file or data and store the found informations
