@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2005/06/14 17:14:08 minskim Exp $
+$NetBSD: distinfo,v 1.11 2005/06/14 17:23:24 minskim Exp $
 
 SHA1 (xbill-2.0.tgz) = 4ce4e37687801343af5f57c28498bd0b969c0537
 RMD160 (xbill-2.0.tgz) = 8f1551fb5f2bf7b620243ba4787c88c91d00d460
 Size (xbill-2.0.tgz) = 46909 bytes
 SHA1 (patch-aa) = 2da005452b1bd9c0258bc132535dd5c1fc9eb4b9
-SHA1 (patch-ab) = 245573e1ea2223ed1bde91c16db81a658bfcc8f6
+SHA1 (patch-ab) = 13a90b12c94352e228406541db06bacab8cd4a0d
 SHA1 (patch-ac) = c3dd487d0002f528f6726d268673bc11be0b24b6
 SHA1 (patch-ad) = 841d5ff9bbd984b62076a96e82b04e082d09a40c
