@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.3 2005/06/14 05:20:05 rillig Exp $
+
+Needed for ISO C90 compilers.
+
+--- ext/cdparanoia/gstcdparanoia.c.orig	Tue May 17 10:41:41 2005
++++ ext/cdparanoia/gstcdparanoia.c	Tue Jun 14 07:14:32 2005
+@@ -571,10 +571,11 @@ cdparanoia_get (GstPad * pad)
+ 
+     if (!src->discont_sent && (is_track_switch (src, src->cur_sector) ||
+             (src->prev_sec != src->cur_sector))) {
++      GstEvent *discont_ev;
++
+       gst_pad_convert (src->srcpad, sector_format,
+           get_relative (src, src->cur_track, src->cur_sector), &format,
+           &timestamp);
+-      GstEvent *discont_ev;
+ 
+       if (src->flush_pending) {
+         src->flush_pending = FALSE;
