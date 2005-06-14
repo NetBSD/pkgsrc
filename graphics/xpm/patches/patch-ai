@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2004/09/16 15:09:01 minskim Exp $
+$NetBSD: patch-ai,v 1.2 2005/06/14 18:10:37 jlam Exp $
 
---- lib/hashtab.c.orig	Thu Mar 19 13:51:00 1998
+--- lib/hashtab.c.orig	1998-03-19 14:51:00.000000000 -0500
 +++ lib/hashtab.c
-@@ -135,7 +135,7 @@ HashTableGrows(table)
+@@ -135,15 +135,17 @@ HashTableGrows(table)
      xpmHashTable *table;
  {
      xpmHashAtom *atomTable = table->atomTable;
@@ -10,12 +10,14 @@ $NetBSD: patch-ai,v 1.1 2004/09/16 15:09:01 minskim Exp $
 +    unsigned int size = table->size;
      xpmHashAtom *t, *p;
      int i;
-     int oldSize = size;
-@@ -144,6 +144,8 @@ HashTableGrows(table)
+-    int oldSize = size;
++    unsigned int oldSize = size;
+ 
+     t = atomTable;
      HASH_TABLE_GROWS
  	table->size = size;
      table->limit = size / 3;
-+    if (size >= SIZE_MAX / sizeof(*atomTable)) 
++    if (size >= UINT_MAX / sizeof(*atomTable)) 
 +	return (XpmNoMemory);
      atomTable = (xpmHashAtom *) XpmMalloc(size * sizeof(*atomTable));
      if (!atomTable)
@@ -24,7 +26,7 @@ $NetBSD: patch-ai,v 1.1 2004/09/16 15:09:01 minskim Exp $
      table->size = INITIAL_HASH_SIZE;
      table->limit = table->size / 3;
      table->used = 0;
-+    if (table->size >= SIZE_MAX / sizeof(*atomTable))
++    if (table->size >= UINT_MAX / sizeof(*atomTable))
 +	return (XpmNoMemory);
      atomTable = (xpmHashAtom *) XpmMalloc(table->size * sizeof(*atomTable));
      if (!atomTable)
