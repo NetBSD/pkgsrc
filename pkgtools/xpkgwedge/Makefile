@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2005/06/14 07:23:56 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2005/06/14 20:12:51 jlam Exp $
 
-DISTNAME=	xpkgwedge-1.13
+DISTNAME=	xpkgwedge-1.14
 CATEGORIES=	pkgtools devel x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -38,6 +38,8 @@ FONT_PROGS=		bdftopcf fstobdf mkfontdir mkfontscale
 
 FILES_SUBST+=		VIEWBASE=${VIEWBASE}
 FILES_SUBST+=		FONT_PROGS=${FONT_PROGS:Q}
+FILES_SUBST+=		MAKE=${IMAKE_MAKE:Q}
+USE_TOOLS+=		${IMAKE_TOOLS}
 
 .include "../../mk/x11.buildlink3.mk"
 
