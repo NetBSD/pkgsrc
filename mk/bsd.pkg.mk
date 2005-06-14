@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1695 2005/06/13 02:25:50 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1696 2005/06/14 22:02:00 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2568,6 +2568,7 @@ MAKEVARS+=	_CHECK_WRKREF_SKIP_FILTER
 _CHECK_WRKREF_SKIP_FILTER=	${TRUE}
 .endif
 CHECK_WRKREF_PKG?=		${PKGNAME}
+CHECK_WRKREF_IS_TEXT_FILE?=	${_SUBST_IS_TEXT_FILE}
 
 .PHONY: check-wrkref
 check-wrkref:
@@ -2579,7 +2580,7 @@ check-wrkref:
 	{ while read file; do						\
 		${_CHECK_WRKREF_SKIP_FILTER};				\
 		${SHCOMMENT} [$$file];					\
-		if ${_SUBST_IS_TEXT_FILE}; then				\
+		if ${CHECK_WRKREF_IS_TEXT_FILE}; then			\
 			if ${GREP} -H ${WRKDIR:Q} "$$file" 2>/dev/null; then \
 				found_wrkdir=1;				\
 			fi;						\
