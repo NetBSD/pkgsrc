@@ -1,37 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/27 22:34:19 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/06/14 11:25:09 adrianp Exp $
 share/doc/html/php-jpgraph/JpGraph_Logo.png
-share/doc/html/php-jpgraph/html/0aboutmanual.html
-share/doc/html/php-jpgraph/html/1introduction.html
-share/doc/html/php-jpgraph/html/2210intro.html
-share/doc/html/php-jpgraph/html/2220fonts.html
-share/doc/html/php-jpgraph/html/2230colors.html
-share/doc/html/php-jpgraph/html/2240cache.html
-share/doc/html/php-jpgraph/html/22working.html
-share/doc/html/php-jpgraph/html/2installation.html
-share/doc/html/php-jpgraph/html/3010intro.html
-share/doc/html/php-jpgraph/html/3020lineplot.html
-share/doc/html/php-jpgraph/html/3030barplot.html
-share/doc/html/php-jpgraph/html/3040errorplot.html
-share/doc/html/php-jpgraph/html/3050scatterplot.html
-share/doc/html/php-jpgraph/html/3055stockplot.html
-share/doc/html/php-jpgraph/html/3060combplots.html
-share/doc/html/php-jpgraph/html/3070adjscalelabels.html
-share/doc/html/php-jpgraph/html/3080graphaug.html
-share/doc/html/php-jpgraph/html/3090axisform.html
-share/doc/html/php-jpgraph/html/3095bands.html
-share/doc/html/php-jpgraph/html/3xyplots.html
-share/doc/html/php-jpgraph/html/4010radarplot.html
-share/doc/html/php-jpgraph/html/4020pieplot.html
-share/doc/html/php-jpgraph/html/4nonxy.html
-share/doc/html/php-jpgraph/html/5gantt.html
-share/doc/html/php-jpgraph/html/6csimdoc.html
-share/doc/html/php-jpgraph/html/7adv.html
-share/doc/html/php-jpgraph/html/8canvas.html
-share/doc/html/php-jpgraph/html/A00utilities.html
-share/doc/html/php-jpgraph/html/A01codedef.html
+share/doc/html/php-jpgraph/html/exframes/JpGraph_Logo.html
 share/doc/html/php-jpgraph/html/exframes/alphabarex1.html
+share/doc/html/php-jpgraph/html/exframes/antispamex01.html
 share/doc/html/php-jpgraph/html/exframes/backgroundex03.html
 share/doc/html/php-jpgraph/html/exframes/balloonex1.html
+share/doc/html/php-jpgraph/html/exframes/bar_csimex1.html
+share/doc/html/php-jpgraph/html/exframes/bar_csimex2.html
+share/doc/html/php-jpgraph/html/exframes/bar_csimex3.html
 share/doc/html/php-jpgraph/html/exframes/bargradsmallex1.html
 share/doc/html/php-jpgraph/html/exframes/bargradsmallex2.html
 share/doc/html/php-jpgraph/html/exframes/bargradsmallex3.html
@@ -39,12 +15,16 @@ share/doc/html/php-jpgraph/html/exframes/bargradsmallex4.html
 share/doc/html/php-jpgraph/html/exframes/bargradsmallex5.html
 share/doc/html/php-jpgraph/html/exframes/bargradsmallex6.html
 share/doc/html/php-jpgraph/html/exframes/bargradsmallex7.html
+share/doc/html/php-jpgraph/html/exframes/bargradsmallex8.html
+share/doc/html/php-jpgraph/html/exframes/barline_csimex1.html
+share/doc/html/php-jpgraph/html/exframes/barlinefreq_csimex1.html
 share/doc/html/php-jpgraph/html/exframes/bartutex1.html
 share/doc/html/php-jpgraph/html/exframes/bartutex2.html
 share/doc/html/php-jpgraph/html/exframes/bartutex3.html
 share/doc/html/php-jpgraph/html/exframes/bartutex4.html
 share/doc/html/php-jpgraph/html/exframes/bartutex5.html
 share/doc/html/php-jpgraph/html/exframes/bartutex6.html
+share/doc/html/php-jpgraph/html/exframes/boxstockcsimex1.html
 share/doc/html/php-jpgraph/html/exframes/boxstockex1.html
 share/doc/html/php-jpgraph/html/exframes/builtinplotmarksex1.html
 share/doc/html/php-jpgraph/html/exframes/canvas_jpgarchex.html
@@ -59,6 +39,8 @@ share/doc/html/php-jpgraph/html/exframes/color_chart02.html
 share/doc/html/php-jpgraph/html/exframes/color_chart03.html
 share/doc/html/php-jpgraph/html/exframes/color_chart04.html
 share/doc/html/php-jpgraph/html/exframes/dateaxisex1.html
+share/doc/html/php-jpgraph/html/exframes/dateaxisex2.html
+share/doc/html/php-jpgraph/html/exframes/dateaxisex4.html
 share/doc/html/php-jpgraph/html/exframes/dbschemaex1.html
 share/doc/html/php-jpgraph/html/exframes/example0.html
 share/doc/html/php-jpgraph/html/exframes/example11.html
@@ -121,9 +103,14 @@ share/doc/html/php-jpgraph/html/exframes/fieldscatterex1.html
 share/doc/html/php-jpgraph/html/exframes/filledgridex1.html
 share/doc/html/php-jpgraph/html/exframes/filledlineex01.1.html
 share/doc/html/php-jpgraph/html/exframes/filledlineex01.html
+share/doc/html/php-jpgraph/html/exframes/frame_JpGraph_Logo.html
 share/doc/html/php-jpgraph/html/exframes/frame_alphabarex1.html
+share/doc/html/php-jpgraph/html/exframes/frame_antispamex01.html
 share/doc/html/php-jpgraph/html/exframes/frame_backgroundex03.html
 share/doc/html/php-jpgraph/html/exframes/frame_balloonex1.html
+share/doc/html/php-jpgraph/html/exframes/frame_bar_csimex1.html
+share/doc/html/php-jpgraph/html/exframes/frame_bar_csimex2.html
+share/doc/html/php-jpgraph/html/exframes/frame_bar_csimex3.html
 share/doc/html/php-jpgraph/html/exframes/frame_bargradsmallex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_bargradsmallex2.html
 share/doc/html/php-jpgraph/html/exframes/frame_bargradsmallex3.html
@@ -131,12 +118,16 @@ share/doc/html/php-jpgraph/html/exframes/frame_bargradsmallex4.html
 share/doc/html/php-jpgraph/html/exframes/frame_bargradsmallex5.html
 share/doc/html/php-jpgraph/html/exframes/frame_bargradsmallex6.html
 share/doc/html/php-jpgraph/html/exframes/frame_bargradsmallex7.html
+share/doc/html/php-jpgraph/html/exframes/frame_bargradsmallex8.html
+share/doc/html/php-jpgraph/html/exframes/frame_barline_csimex1.html
+share/doc/html/php-jpgraph/html/exframes/frame_barlinefreq_csimex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_bartutex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_bartutex2.html
 share/doc/html/php-jpgraph/html/exframes/frame_bartutex3.html
 share/doc/html/php-jpgraph/html/exframes/frame_bartutex4.html
 share/doc/html/php-jpgraph/html/exframes/frame_bartutex5.html
 share/doc/html/php-jpgraph/html/exframes/frame_bartutex6.html
+share/doc/html/php-jpgraph/html/exframes/frame_boxstockcsimex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_boxstockex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_builtinplotmarksex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_canvas_jpgarchex.html
@@ -151,6 +142,8 @@ share/doc/html/php-jpgraph/html/exframes/frame_color_chart02.html
 share/doc/html/php-jpgraph/html/exframes/frame_color_chart03.html
 share/doc/html/php-jpgraph/html/exframes/frame_color_chart04.html
 share/doc/html/php-jpgraph/html/exframes/frame_dateaxisex1.html
+share/doc/html/php-jpgraph/html/exframes/frame_dateaxisex2.html
+share/doc/html/php-jpgraph/html/exframes/frame_dateaxisex4.html
 share/doc/html/php-jpgraph/html/exframes/frame_dbschemaex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_example0.html
 share/doc/html/php-jpgraph/html/exframes/frame_example11.html
@@ -216,6 +209,8 @@ share/doc/html/php-jpgraph/html/exframes/frame_filledlineex01.html
 share/doc/html/php-jpgraph/html/exframes/frame_funcex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_ganttconstrainex0.html
 share/doc/html/php-jpgraph/html/exframes/frame_ganttconstrainex1.html
+share/doc/html/php-jpgraph/html/exframes/frame_ganttcsimex01.html
+share/doc/html/php-jpgraph/html/exframes/frame_ganttcsimex02.html
 share/doc/html/php-jpgraph/html/exframes/frame_ganttex00.html
 share/doc/html/php-jpgraph/html/exframes/frame_ganttex01.html
 share/doc/html/php-jpgraph/html/exframes/frame_ganttex02.html
@@ -245,6 +240,7 @@ share/doc/html/php-jpgraph/html/exframes/frame_horizbarex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_horizbarex2.html
 share/doc/html/php-jpgraph/html/exframes/frame_horizbarex3.html
 share/doc/html/php-jpgraph/html/exframes/frame_horizbarex4.html
+share/doc/html/php-jpgraph/html/exframes/frame_imgmarkercsimex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_imgmarkerex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_impulsex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_impulsex2.html
@@ -265,11 +261,17 @@ share/doc/html/php-jpgraph/html/exframes/frame_markflagex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_nullvalueex01.html
 share/doc/html/php-jpgraph/html/exframes/frame_partiallyfilledlineex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_penguin.html
+share/doc/html/php-jpgraph/html/exframes/frame_pie3d_csimex1.html
+share/doc/html/php-jpgraph/html/exframes/frame_pie_csimex1.html
+share/doc/html/php-jpgraph/html/exframes/frame_piec_csimex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_piecex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_piecex2.html
 share/doc/html/php-jpgraph/html/exframes/frame_pieex3.html
 share/doc/html/php-jpgraph/html/exframes/frame_pieex8.html
 share/doc/html/php-jpgraph/html/exframes/frame_pieex9.html
+share/doc/html/php-jpgraph/html/exframes/frame_pielabelsex1.html
+share/doc/html/php-jpgraph/html/exframes/frame_pielabelsex2.html
+share/doc/html/php-jpgraph/html/exframes/frame_pielabelsex4.html
 share/doc/html/php-jpgraph/html/exframes/frame_polarex0-180.html
 share/doc/html/php-jpgraph/html/exframes/frame_polarex0.html
 share/doc/html/php-jpgraph/html/exframes/frame_polarex3-lin.html
@@ -292,6 +294,7 @@ share/doc/html/php-jpgraph/html/exframes/frame_rotex2.html
 share/doc/html/php-jpgraph/html/exframes/frame_rotex3.html
 share/doc/html/php-jpgraph/html/exframes/frame_rotex4.html
 share/doc/html/php-jpgraph/html/exframes/frame_rotex5.html
+share/doc/html/php-jpgraph/html/exframes/frame_scatter_csimex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_scatterex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_scatterex2.html
 share/doc/html/php-jpgraph/html/exframes/frame_smallstaticbandsex1.html
@@ -309,10 +312,13 @@ share/doc/html/php-jpgraph/html/exframes/frame_staticbandbarex7.html
 share/doc/html/php-jpgraph/html/exframes/frame_stockex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_tabtitleex1.html
 share/doc/html/php-jpgraph/html/exframes/frame_textalignex1.html
+share/doc/html/php-jpgraph/html/exframes/frame_titlecsimex01.html
 share/doc/html/php-jpgraph/html/exframes/frame_topxaxisex1.html
 share/doc/html/php-jpgraph/html/exframes/funcex1.html
 share/doc/html/php-jpgraph/html/exframes/ganttconstrainex0.html
 share/doc/html/php-jpgraph/html/exframes/ganttconstrainex1.html
+share/doc/html/php-jpgraph/html/exframes/ganttcsimex01.html
+share/doc/html/php-jpgraph/html/exframes/ganttcsimex02.html
 share/doc/html/php-jpgraph/html/exframes/ganttex00.html
 share/doc/html/php-jpgraph/html/exframes/ganttex01.html
 share/doc/html/php-jpgraph/html/exframes/ganttex02.html
@@ -342,9 +348,14 @@ share/doc/html/php-jpgraph/html/exframes/horizbarex1.html
 share/doc/html/php-jpgraph/html/exframes/horizbarex2.html
 share/doc/html/php-jpgraph/html/exframes/horizbarex3.html
 share/doc/html/php-jpgraph/html/exframes/horizbarex4.html
+share/doc/html/php-jpgraph/html/exframes/image_JpGraph_Logo.html
 share/doc/html/php-jpgraph/html/exframes/image_alphabarex1.html
+share/doc/html/php-jpgraph/html/exframes/image_antispamex01.html
 share/doc/html/php-jpgraph/html/exframes/image_backgroundex03.html
 share/doc/html/php-jpgraph/html/exframes/image_balloonex1.html
+share/doc/html/php-jpgraph/html/exframes/image_bar_csimex1.html
+share/doc/html/php-jpgraph/html/exframes/image_bar_csimex2.html
+share/doc/html/php-jpgraph/html/exframes/image_bar_csimex3.html
 share/doc/html/php-jpgraph/html/exframes/image_bargradsmallex1.html
 share/doc/html/php-jpgraph/html/exframes/image_bargradsmallex2.html
 share/doc/html/php-jpgraph/html/exframes/image_bargradsmallex3.html
@@ -352,12 +363,16 @@ share/doc/html/php-jpgraph/html/exframes/image_bargradsmallex4.html
 share/doc/html/php-jpgraph/html/exframes/image_bargradsmallex5.html
 share/doc/html/php-jpgraph/html/exframes/image_bargradsmallex6.html
 share/doc/html/php-jpgraph/html/exframes/image_bargradsmallex7.html
+share/doc/html/php-jpgraph/html/exframes/image_bargradsmallex8.html
+share/doc/html/php-jpgraph/html/exframes/image_barline_csimex1.html
+share/doc/html/php-jpgraph/html/exframes/image_barlinefreq_csimex1.html
 share/doc/html/php-jpgraph/html/exframes/image_bartutex1.html
 share/doc/html/php-jpgraph/html/exframes/image_bartutex2.html
 share/doc/html/php-jpgraph/html/exframes/image_bartutex3.html
 share/doc/html/php-jpgraph/html/exframes/image_bartutex4.html
 share/doc/html/php-jpgraph/html/exframes/image_bartutex5.html
 share/doc/html/php-jpgraph/html/exframes/image_bartutex6.html
+share/doc/html/php-jpgraph/html/exframes/image_boxstockcsimex1.html
 share/doc/html/php-jpgraph/html/exframes/image_boxstockex1.html
 share/doc/html/php-jpgraph/html/exframes/image_builtinplotmarksex1.html
 share/doc/html/php-jpgraph/html/exframes/image_canvas_jpgarchex.html
@@ -372,6 +387,8 @@ share/doc/html/php-jpgraph/html/exframes/image_color_chart02.html
 share/doc/html/php-jpgraph/html/exframes/image_color_chart03.html
 share/doc/html/php-jpgraph/html/exframes/image_color_chart04.html
 share/doc/html/php-jpgraph/html/exframes/image_dateaxisex1.html
+share/doc/html/php-jpgraph/html/exframes/image_dateaxisex2.html
+share/doc/html/php-jpgraph/html/exframes/image_dateaxisex4.html
 share/doc/html/php-jpgraph/html/exframes/image_dbschemaex1.html
 share/doc/html/php-jpgraph/html/exframes/image_example0.html
 share/doc/html/php-jpgraph/html/exframes/image_example11.html
@@ -437,6 +454,8 @@ share/doc/html/php-jpgraph/html/exframes/image_filledlineex01.html
 share/doc/html/php-jpgraph/html/exframes/image_funcex1.html
 share/doc/html/php-jpgraph/html/exframes/image_ganttconstrainex0.html
 share/doc/html/php-jpgraph/html/exframes/image_ganttconstrainex1.html
+share/doc/html/php-jpgraph/html/exframes/image_ganttcsimex01.html
+share/doc/html/php-jpgraph/html/exframes/image_ganttcsimex02.html
 share/doc/html/php-jpgraph/html/exframes/image_ganttex00.html
 share/doc/html/php-jpgraph/html/exframes/image_ganttex01.html
 share/doc/html/php-jpgraph/html/exframes/image_ganttex02.html
@@ -466,6 +485,7 @@ share/doc/html/php-jpgraph/html/exframes/image_horizbarex1.html
 share/doc/html/php-jpgraph/html/exframes/image_horizbarex2.html
 share/doc/html/php-jpgraph/html/exframes/image_horizbarex3.html
 share/doc/html/php-jpgraph/html/exframes/image_horizbarex4.html
+share/doc/html/php-jpgraph/html/exframes/image_imgmarkercsimex1.html
 share/doc/html/php-jpgraph/html/exframes/image_imgmarkerex1.html
 share/doc/html/php-jpgraph/html/exframes/image_impulsex1.html
 share/doc/html/php-jpgraph/html/exframes/image_impulsex2.html
@@ -486,11 +506,17 @@ share/doc/html/php-jpgraph/html/exframes/image_markflagex1.html
 share/doc/html/php-jpgraph/html/exframes/image_nullvalueex01.html
 share/doc/html/php-jpgraph/html/exframes/image_partiallyfilledlineex1.html
 share/doc/html/php-jpgraph/html/exframes/image_penguin.html
+share/doc/html/php-jpgraph/html/exframes/image_pie3d_csimex1.html
+share/doc/html/php-jpgraph/html/exframes/image_pie_csimex1.html
+share/doc/html/php-jpgraph/html/exframes/image_piec_csimex1.html
 share/doc/html/php-jpgraph/html/exframes/image_piecex1.html
 share/doc/html/php-jpgraph/html/exframes/image_piecex2.html
 share/doc/html/php-jpgraph/html/exframes/image_pieex3.html
 share/doc/html/php-jpgraph/html/exframes/image_pieex8.html
 share/doc/html/php-jpgraph/html/exframes/image_pieex9.html
+share/doc/html/php-jpgraph/html/exframes/image_pielabelsex1.html
+share/doc/html/php-jpgraph/html/exframes/image_pielabelsex2.html
+share/doc/html/php-jpgraph/html/exframes/image_pielabelsex4.html
 share/doc/html/php-jpgraph/html/exframes/image_polarex0-180.html
 share/doc/html/php-jpgraph/html/exframes/image_polarex0.html
 share/doc/html/php-jpgraph/html/exframes/image_polarex3-lin.html
@@ -513,6 +539,7 @@ share/doc/html/php-jpgraph/html/exframes/image_rotex2.html
 share/doc/html/php-jpgraph/html/exframes/image_rotex3.html
 share/doc/html/php-jpgraph/html/exframes/image_rotex4.html
 share/doc/html/php-jpgraph/html/exframes/image_rotex5.html
+share/doc/html/php-jpgraph/html/exframes/image_scatter_csimex1.html
 share/doc/html/php-jpgraph/html/exframes/image_scatterex1.html
 share/doc/html/php-jpgraph/html/exframes/image_scatterex2.html
 share/doc/html/php-jpgraph/html/exframes/image_smallstaticbandsex1.html
@@ -530,7 +557,9 @@ share/doc/html/php-jpgraph/html/exframes/image_staticbandbarex7.html
 share/doc/html/php-jpgraph/html/exframes/image_stockex1.html
 share/doc/html/php-jpgraph/html/exframes/image_tabtitleex1.html
 share/doc/html/php-jpgraph/html/exframes/image_textalignex1.html
+share/doc/html/php-jpgraph/html/exframes/image_titlecsimex01.html
 share/doc/html/php-jpgraph/html/exframes/image_topxaxisex1.html
+share/doc/html/php-jpgraph/html/exframes/imgmarkercsimex1.html
 share/doc/html/php-jpgraph/html/exframes/imgmarkerex1.html
 share/doc/html/php-jpgraph/html/exframes/impulsex1.html
 share/doc/html/php-jpgraph/html/exframes/impulsex2.html
@@ -551,11 +580,17 @@ share/doc/html/php-jpgraph/html/exframes/markflagex1.html
 share/doc/html/php-jpgraph/html/exframes/nullvalueex01.html
 share/doc/html/php-jpgraph/html/exframes/partiallyfilledlineex1.html
 share/doc/html/php-jpgraph/html/exframes/penguin.html
+share/doc/html/php-jpgraph/html/exframes/pie3d_csimex1.html
+share/doc/html/php-jpgraph/html/exframes/pie_csimex1.html
+share/doc/html/php-jpgraph/html/exframes/piec_csimex1.html
 share/doc/html/php-jpgraph/html/exframes/piecex1.html
 share/doc/html/php-jpgraph/html/exframes/piecex2.html
 share/doc/html/php-jpgraph/html/exframes/pieex3.html
 share/doc/html/php-jpgraph/html/exframes/pieex8.html
 share/doc/html/php-jpgraph/html/exframes/pieex9.html
+share/doc/html/php-jpgraph/html/exframes/pielabelsex1.html
+share/doc/html/php-jpgraph/html/exframes/pielabelsex2.html
+share/doc/html/php-jpgraph/html/exframes/pielabelsex4.html
 share/doc/html/php-jpgraph/html/exframes/polarex0-180.html
 share/doc/html/php-jpgraph/html/exframes/polarex0.html
 share/doc/html/php-jpgraph/html/exframes/polarex3-lin.html
@@ -578,6 +613,7 @@ share/doc/html/php-jpgraph/html/exframes/rotex2.html
 share/doc/html/php-jpgraph/html/exframes/rotex3.html
 share/doc/html/php-jpgraph/html/exframes/rotex4.html
 share/doc/html/php-jpgraph/html/exframes/rotex5.html
+share/doc/html/php-jpgraph/html/exframes/scatter_csimex1.html
 share/doc/html/php-jpgraph/html/exframes/scatterex1.html
 share/doc/html/php-jpgraph/html/exframes/scatterex2.html
 share/doc/html/php-jpgraph/html/exframes/smallstaticbandsex1.html
@@ -595,10 +631,14 @@ share/doc/html/php-jpgraph/html/exframes/staticbandbarex7.html
 share/doc/html/php-jpgraph/html/exframes/stockex1.html
 share/doc/html/php-jpgraph/html/exframes/tabtitleex1.html
 share/doc/html/php-jpgraph/html/exframes/textalignex1.html
+share/doc/html/php-jpgraph/html/exframes/titlecsimex01.html
 share/doc/html/php-jpgraph/html/exframes/topxaxisex1.html
 share/doc/html/php-jpgraph/html/img/JpGraph_Logo.png
+share/doc/html/php-jpgraph/html/img/antispamex01.png
 share/doc/html/php-jpgraph/html/img/backgroundex03.png
 share/doc/html/php-jpgraph/html/img/balloonex1.png
+share/doc/html/php-jpgraph/html/img/bar_csimex1.png
+share/doc/html/php-jpgraph/html/img/bar_csimex2.png
 share/doc/html/php-jpgraph/html/img/bargradsmallex1.png
 share/doc/html/php-jpgraph/html/img/bargradsmallex2.png
 share/doc/html/php-jpgraph/html/img/bargradsmallex3.png
@@ -606,6 +646,7 @@ share/doc/html/php-jpgraph/html/img/bargradsmallex4.png
 share/doc/html/php-jpgraph/html/img/bargradsmallex5.png
 share/doc/html/php-jpgraph/html/img/bargradsmallex6.png
 share/doc/html/php-jpgraph/html/img/bargradsmallex7.png
+share/doc/html/php-jpgraph/html/img/bargradsmallex8.png
 share/doc/html/php-jpgraph/html/img/bartutex1.png
 share/doc/html/php-jpgraph/html/img/bartutex2.png
 share/doc/html/php-jpgraph/html/img/bartutex3.png
@@ -626,6 +667,8 @@ share/doc/html/php-jpgraph/html/img/color_chart02.png
 share/doc/html/php-jpgraph/html/img/color_chart03.png
 share/doc/html/php-jpgraph/html/img/color_chart04.png
 share/doc/html/php-jpgraph/html/img/dateaxisex1.png
+share/doc/html/php-jpgraph/html/img/dateaxisex2.png
+share/doc/html/php-jpgraph/html/img/dateaxisex4.png
 share/doc/html/php-jpgraph/html/img/dbschemaex1.png
 share/doc/html/php-jpgraph/html/img/example0.png
 share/doc/html/php-jpgraph/html/img/example11.png
@@ -742,11 +785,24 @@ share/doc/html/php-jpgraph/html/img/manscaleex4.png
 share/doc/html/php-jpgraph/html/img/markflagex1.png
 share/doc/html/php-jpgraph/html/img/nullvalueex01.png
 share/doc/html/php-jpgraph/html/img/partiallyfilledlineex1.png
+share/doc/html/php-jpgraph/html/img/pie3d_csimex1.png
+share/doc/html/php-jpgraph/html/img/pie_csimex1.png
 share/doc/html/php-jpgraph/html/img/piecex1.png
 share/doc/html/php-jpgraph/html/img/piecex2.png
 share/doc/html/php-jpgraph/html/img/pieex3.png
 share/doc/html/php-jpgraph/html/img/pieex8.png
 share/doc/html/php-jpgraph/html/img/pieex9.png
+share/doc/html/php-jpgraph/html/img/pielabelsex1.png
+share/doc/html/php-jpgraph/html/img/pielabelsex2.png
+share/doc/html/php-jpgraph/html/img/pielabelsex4.png
+share/doc/html/php-jpgraph/html/img/polarex0-180.png
+share/doc/html/php-jpgraph/html/img/polarex0.png
+share/doc/html/php-jpgraph/html/img/polarex3-lin.png
+share/doc/html/php-jpgraph/html/img/polarex3.png
+share/doc/html/php-jpgraph/html/img/polarex4.png
+share/doc/html/php-jpgraph/html/img/polarex5.png
+share/doc/html/php-jpgraph/html/img/polarex7-2.png
+share/doc/html/php-jpgraph/html/img/polarex9.png
 share/doc/html/php-jpgraph/html/img/radarex1.png
 share/doc/html/php-jpgraph/html/img/radarex2.png
 share/doc/html/php-jpgraph/html/img/radarex4.png
@@ -762,6 +818,7 @@ share/doc/html/php-jpgraph/html/img/rotex3.png
 share/doc/html/php-jpgraph/html/img/rotex4.png
 share/doc/html/php-jpgraph/html/img/rotex5.png
 share/doc/html/php-jpgraph/html/img/saab_95.jpg
+share/doc/html/php-jpgraph/html/img/scatter_csimex1.png
 share/doc/html/php-jpgraph/html/img/scatterex1.png
 share/doc/html/php-jpgraph/html/img/scatterex2.png
 share/doc/html/php-jpgraph/html/img/smallstaticbandsex1.png
@@ -784,12 +841,16 @@ share/doc/html/php-jpgraph/html/img/theme02.png
 share/doc/html/php-jpgraph/html/img/theme03.png
 share/doc/html/php-jpgraph/html/img/theme04.png
 share/doc/html/php-jpgraph/html/img/tiger1.jpg
+share/doc/html/php-jpgraph/html/img/titlecsimex01.png
 share/doc/html/php-jpgraph/html/img/topxaxisex1.png
 share/doc/html/php-jpgraph/html/index.html
+share/doc/html/php-jpgraph/html/jpgmanual.css
+share/doc/html/php-jpgraph/html/manual_jpgraph.html
 share/doc/html/php-jpgraph/index.html
 share/doc/html/php-jpgraph/manual.png
 share/doc/html/php-jpgraph/ref/AccBarPlot.html
 share/doc/html/php-jpgraph/ref/AccLinePlot.html
+share/doc/html/php-jpgraph/ref/AntiSpam.html
 share/doc/html/php-jpgraph/ref/Axis.html
 share/doc/html/php-jpgraph/ref/BarPlot.html
 share/doc/html/php-jpgraph/ref/BoxPlot.html
@@ -797,6 +858,7 @@ share/doc/html/php-jpgraph/ref/CanvasGraph.html
 share/doc/html/php-jpgraph/ref/CanvasRectangleText.html
 share/doc/html/php-jpgraph/ref/CanvasScale.html
 share/doc/html/php-jpgraph/ref/DateLocale.html
+share/doc/html/php-jpgraph/ref/DateScale.html
 share/doc/html/php-jpgraph/ref/DisplayValue.html
 share/doc/html/php-jpgraph/ref/ErrorLinePlot.html
 share/doc/html/php-jpgraph/ref/ErrorPlot.html
@@ -815,6 +877,7 @@ share/doc/html/php-jpgraph/ref/GraphTabTitle.html
 share/doc/html/php-jpgraph/ref/Grid.html
 share/doc/html/php-jpgraph/ref/GroupBarPlot.html
 share/doc/html/php-jpgraph/ref/HeaderProperty.html
+share/doc/html/php-jpgraph/ref/HorizontalGridLine.html
 share/doc/html/php-jpgraph/ref/IconImage.html
 share/doc/html/php-jpgraph/ref/IconPlot.html
 share/doc/html/php-jpgraph/ref/Image.html
@@ -858,11 +921,11 @@ share/doc/html/php-jpgraph/ref/class_toc.html
 share/doc/html/php-jpgraph/ref/index.html
 share/doc/html/php-jpgraph/ref/projinfo.html
 share/doc/html/php-jpgraph/reference.png
-share/doc/php-jpgraph/IMPORTANT_DO_README
 share/doc/php-jpgraph/QPL.txt
 share/doc/php-jpgraph/README
 share/examples/php-jpgraph/accbarex1.php
 share/examples/php-jpgraph/alphabarex1.php
+share/examples/php-jpgraph/antispamex01.php
 share/examples/php-jpgraph/backgroundex01.php
 share/examples/php-jpgraph/backgroundex02.php
 share/examples/php-jpgraph/backgroundex03.php
@@ -871,6 +934,7 @@ share/examples/php-jpgraph/bar2scalesex1.php
 share/examples/php-jpgraph/bar_csimex1.php
 share/examples/php-jpgraph/bar_csimex2.php
 share/examples/php-jpgraph/bar_csimex3.php
+share/examples/php-jpgraph/barformatcallbackex1.php
 share/examples/php-jpgraph/bargradex1.php
 share/examples/php-jpgraph/bargradex2.php
 share/examples/php-jpgraph/bargradex3.php
@@ -884,6 +948,7 @@ share/examples/php-jpgraph/bargradsmallex4.php
 share/examples/php-jpgraph/bargradsmallex5.php
 share/examples/php-jpgraph/bargradsmallex6.php
 share/examples/php-jpgraph/bargradsmallex7.php
+share/examples/php-jpgraph/bargradsmallex8.php
 share/examples/php-jpgraph/barimgex1.php
 share/examples/php-jpgraph/barintex1.php
 share/examples/php-jpgraph/barintex2.php
@@ -923,6 +988,9 @@ share/examples/php-jpgraph/centeredlineex02.php
 share/examples/php-jpgraph/centeredlineex03.php
 share/examples/php-jpgraph/centerlinebarex1.php
 share/examples/php-jpgraph/dateaxisex1.php
+share/examples/php-jpgraph/dateaxisex2.php
+share/examples/php-jpgraph/dateaxisex3.php
+share/examples/php-jpgraph/dateaxisex4.php
 share/examples/php-jpgraph/dbschemaex1.php
 share/examples/php-jpgraph/dupyaxisex1.php
 share/examples/php-jpgraph/example0.php
@@ -1104,6 +1172,10 @@ share/examples/php-jpgraph/pieex6.php
 share/examples/php-jpgraph/pieex7.php
 share/examples/php-jpgraph/pieex8.php
 share/examples/php-jpgraph/pieex9.php
+share/examples/php-jpgraph/pielabelsex1.php
+share/examples/php-jpgraph/pielabelsex2.php
+share/examples/php-jpgraph/pielabelsex3.php
+share/examples/php-jpgraph/pielabelsex4.php
 share/examples/php-jpgraph/polarex0-180.php
 share/examples/php-jpgraph/polarex0.php
 share/examples/php-jpgraph/polarex1.php
@@ -1156,6 +1228,7 @@ share/examples/php-jpgraph/show-image.php
 share/examples/php-jpgraph/show-source.php
 share/examples/php-jpgraph/smallstaticbandsex1.php
 share/examples/php-jpgraph/smallstaticbandsex10.php
+share/examples/php-jpgraph/smallstaticbandsex11.php
 share/examples/php-jpgraph/smallstaticbandsex2.php
 share/examples/php-jpgraph/smallstaticbandsex3.php
 share/examples/php-jpgraph/smallstaticbandsex4.php
@@ -1184,6 +1257,8 @@ share/examples/php-jpgraph/textalignex1.php
 share/examples/php-jpgraph/tiger_bkg.gif
 share/examples/php-jpgraph/tiger_bkg.jpg
 share/examples/php-jpgraph/tiger_bkg.png
+share/examples/php-jpgraph/timestampex01.php
+share/examples/php-jpgraph/titlecsimex01.php
 share/examples/php-jpgraph/topxaxisex1.php
 share/examples/php-jpgraph/worldmap1.jpg
 share/php-jpgraph/flags.dat
@@ -1198,9 +1273,12 @@ share/php-jpgraph/imgdata_squares.inc
 share/php-jpgraph/imgdata_stars.inc
 share/php-jpgraph/jpg-config.inc
 share/php-jpgraph/jpgraph.php
+share/php-jpgraph/jpgraph_antispam-digits.php
+share/php-jpgraph/jpgraph_antispam.php
 share/php-jpgraph/jpgraph_bar.php
 share/php-jpgraph/jpgraph_canvas.php
 share/php-jpgraph/jpgraph_canvtools.php
+share/php-jpgraph/jpgraph_date.php
 share/php-jpgraph/jpgraph_error.php
 share/php-jpgraph/jpgraph_flags.php
 share/php-jpgraph/jpgraph_gantt.php
@@ -1219,10 +1297,10 @@ share/php-jpgraph/jpgraph_radar.php
 share/php-jpgraph/jpgraph_regstat.php
 share/php-jpgraph/jpgraph_scatter.php
 share/php-jpgraph/jpgraph_stock.php
-@dirrm share/doc/php-jpgraph
-@dirrm share/doc/html/php-jpgraph/ref
-@dirrm share/doc/html/php-jpgraph/html/img
 @dirrm share/doc/html/php-jpgraph/html/exframes
+@dirrm share/doc/html/php-jpgraph/html/img
 @dirrm share/doc/html/php-jpgraph/html
+@dirrm share/doc/html/php-jpgraph/ref
+@dirrm share/doc/php-jpgraph
 @dirrm share/examples/php-jpgraph
 @dirrm share/php-jpgraph

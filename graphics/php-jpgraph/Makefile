@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:07 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/14 11:25:09 adrianp Exp $
 
-DISTNAME=	jpgraph-1.16
+DISTNAME=	jpgraph-1.18
 PKGNAME=	php-${DISTNAME}
 CATEGORIES=	graphics www
-MASTER_SITES=	http://www.aditus.nu/jpgraph/downloads/
+MASTER_SITES=	http://members.chello.se/jpgraph/jpgdownloads/
 
-MAINTAINER=	jdolecek@NetBSD.org
+MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE= 	http://www.aditus.nu/jpgraph/index.php
 COMMENT=	Object Oriented class library for PHP
 
-DEPENDS+=	php-gd>=4.3.0:../../graphics/php-gd
+DEPENDS+=	php-gd>=4.3.1:../../graphics/php-gd
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
@@ -44,10 +44,12 @@ do-install:
 	${MV} -f ${PJDIR}/jpg-config.inc ${EXDIR}
 	${LN} -sf ${PJCONFFILE} ${PJDIR}/jpg-config.inc
 
-	for f in README QPL.txt IMPORTANT_DO_README; do \
+	for f in README QPL.txt; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f \
 			${PREFIX}/share/doc/php-jpgraph; \
 	done
 	cd ${WRKSRC}/docs && ${PAX} -rw . ${PREFIX}/share/doc/html/php-jpgraph
+	${FIND} ${PREFIX}/share/doc/html/php-jpgraph -type d | ${XARGS} \
+		${CHMOD} ${PKGDIRMODE}
 
 .include "../../mk/bsd.pkg.mk"
