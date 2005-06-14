@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2005/06/14 18:39:29 minskim Exp $
+lib/zsh/${PKGVERSION}/zsh/terminfo.so
