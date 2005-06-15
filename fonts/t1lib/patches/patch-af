@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2005/06/15 04:43:09 jlam Exp $
+
+--- xglyph/Makefile.in.orig	2001-01-15 17:06:53.000000000 -0500
++++ xglyph/Makefile.in
+@@ -65,7 +65,7 @@ SRCS = \
+ 
+ T1LIB  = ../lib/libt1.la
+ T1LIBX = ../lib/libt1x.la
+-XAWLIB = -lXaw -lXt -lXmu
++XAWLIB = -lXaw -lXt -lXmu $(XPM_LIB)
+ 
+ 
+ all: xglyph
