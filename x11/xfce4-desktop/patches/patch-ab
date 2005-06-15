@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/06/15 09:00:15 hira Exp $
+
+--- modules/menu/Makefile.in.orig	2005-06-13 18:42:49.000000000 +0900
++++ modules/menu/Makefile.in	2005-06-13 18:43:10.000000000 +0900
+@@ -292,7 +292,7 @@
+ 	@GMODULE_LIBS@ \
+ 	@LIBXFCEGUI4_LIBS@
+ 
+-xfceconfdir = $(sysconfdir)/xdg/xfce4/desktop
++xfceconfdir = $(datadir)/examples/xfce4/desktop
+ xfceconf_DATA = \
+ 	xfce-registered-categories.xml \
+ 	xfce-registered-categories.xml.cs \

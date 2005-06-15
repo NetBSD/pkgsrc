@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/05/18 06:10:31 martti Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/06/15 09:01:59 hira Exp $
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfce4-panel.mo
@@ -43,29 +43,6 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfce4-panel.mo
 bin/xfce4-panel
-etc/xdg/xfce4/panel/contents.xml
-etc/xdg/xfce4/panel/contents.xml.ar
-etc/xdg/xfce4/panel/contents.xml.az
-etc/xdg/xfce4/panel/contents.xml.ca
-etc/xdg/xfce4/panel/contents.xml.da
-etc/xdg/xfce4/panel/contents.xml.eu
-etc/xdg/xfce4/panel/contents.xml.fi
-etc/xdg/xfce4/panel/contents.xml.fr
-etc/xdg/xfce4/panel/contents.xml.he
-etc/xdg/xfce4/panel/contents.xml.hu
-etc/xdg/xfce4/panel/contents.xml.it
-etc/xdg/xfce4/panel/contents.xml.ja
-etc/xdg/xfce4/panel/contents.xml.ko
-etc/xdg/xfce4/panel/contents.xml.lt
-etc/xdg/xfce4/panel/contents.xml.ms
-etc/xdg/xfce4/panel/contents.xml.nl
-etc/xdg/xfce4/panel/contents.xml.ro
-etc/xdg/xfce4/panel/contents.xml.ru
-etc/xdg/xfce4/panel/contents.xml.sk
-etc/xdg/xfce4/panel/contents.xml.tr
-etc/xdg/xfce4/panel/contents.xml.vi
-etc/xdg/xfce4/panel/contents.xml.zh_CN
-etc/xdg/xfce4/panel/contents.xml.zh_TW
 include/xfce4/panel/add-control-dialog.h
 include/xfce4/panel/controls.h
 include/xfce4/panel/global.h
@@ -86,6 +63,29 @@ lib/xfce4/panel-plugins/libseparator.la
 lib/xfce4/panel-plugins/libswitcher.la
 lib/xfce4/panel-plugins/libsystembuttons.la
 share/applications/xfce-panel-settings.desktop
+share/examples/xfce4/panel/contents.xml
+share/examples/xfce4/panel/contents.xml.ar
+share/examples/xfce4/panel/contents.xml.az
+share/examples/xfce4/panel/contents.xml.ca
+share/examples/xfce4/panel/contents.xml.da
+share/examples/xfce4/panel/contents.xml.eu
+share/examples/xfce4/panel/contents.xml.fi
+share/examples/xfce4/panel/contents.xml.fr
+share/examples/xfce4/panel/contents.xml.he
+share/examples/xfce4/panel/contents.xml.hu
+share/examples/xfce4/panel/contents.xml.it
+share/examples/xfce4/panel/contents.xml.ja
+share/examples/xfce4/panel/contents.xml.ko
+share/examples/xfce4/panel/contents.xml.lt
+share/examples/xfce4/panel/contents.xml.ms
+share/examples/xfce4/panel/contents.xml.nl
+share/examples/xfce4/panel/contents.xml.ro
+share/examples/xfce4/panel/contents.xml.ru
+share/examples/xfce4/panel/contents.xml.sk
+share/examples/xfce4/panel/contents.xml.tr
+share/examples/xfce4/panel/contents.xml.vi
+share/examples/xfce4/panel/contents.xml.zh_CN
+share/examples/xfce4/panel/contents.xml.zh_TW
 share/icons/hicolor/16x16/apps/xfce-system-exit.png
 share/icons/hicolor/16x16/apps/xfce-system-info.png
 share/icons/hicolor/16x16/apps/xfce-system-lock.png
@@ -133,5 +133,3 @@ share/xfce4/doc/fr/images/systembuttons-properties.png
 share/xfce4/doc/fr/xfce4-panel.html
 @dirrm lib/xfce4/panel-plugins
 @dirrm include/xfce4/panel
-@dirrm etc/xdg/xfce4/panel
-@unexec ${RMDIR} %D/etc/xdg/xfce4 2>/dev/null || ${TRUE}
