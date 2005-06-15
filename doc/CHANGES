@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10366 2005/06/15 05:27:15 taca Exp $
+$NetBSD: CHANGES,v 1.10367 2005/06/15 09:08:17 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2882,3 +2882,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cad/geda-examples to 20050313nb1 [dmcmahill 2005-06-14]
 	Updated cad/atlc to atlc-4.6.0nb1 [dmcmahill 2005-06-14]
 	Updated mail/poppassd to 4.0.8nb1 [taca 2005-06-15]
+	Updated x11/xfce4-desktop to 4.2.2nb1 [hira 2005-06-15]
+	Updated x11/xfce4-panel to 4.2.2nb1 [hira 2005-06-15]
+	Updated x11/xfce4-session to 4.2.2nb1 [hira 2005-06-15]
+	Updated x11/xfce4-utils to 4.2.2nb1 [hira 2005-06-15]
