@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/27 20:49:24 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/06/15 02:21:03 dmcmahill Exp $
 bin/atlc
 bin/coax
 bin/create_any_bitmap
@@ -393,7 +393,6 @@ share/examples/atlc/50ohm-401h.bmp
 share/examples/atlc/50ohm-401h.bmp.txt
 share/examples/atlc/50ohm-801h.bmp
 share/examples/atlc/50ohm-801h.bmp.txt
-share/examples/atlc/Makefile
 share/examples/atlc/Makefile.am
 share/examples/atlc/Makefile.in
 share/examples/atlc/README
