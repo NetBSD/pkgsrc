@@ -68,10 +68,11 @@ ${MKDIR} "$tmpdir" || exit 1
 #
 cd "$tmpdir"
 ${CAT} > Imakefile << EOF
-builtin-test:
 #if $imake_symbol
+builtin-test:
 	@${ECHO} yes
 #else
+builtin-test:
 	@${ECHO} no
 #endif
 EOF
