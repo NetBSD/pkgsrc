@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2005/05/19 15:39:04 jwise Exp $
+# $NetBSD: Makefile,v 1.29 2005/06/15 01:51:32 dmcmahill Exp $
 
 DISTNAME=	hdf5-1.6.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/hdf5-1.6.4/src/ \
 		ftp://sunsite.doc.ic.ac.uk/packages/HDF/HDF5/hdf5-1.6.4/src/ \
@@ -14,6 +15,10 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 
+# it appears that this file is informative only and is not actually
+# used by any installed tools
+CHECK_WRKREF_SKIP=	${PREFIX}/lib/libhdf5.settings
+
 .include "options.mk"
 
 post-install:
@@ -23,8 +28,10 @@ post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} COPYING release_docs/HISTORY.txt \
 		release_docs/RELEASE.txt ${PREFIX}/share/doc/hdf5
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/hdf5
-	cd ${WRKSRC}/doc/html && ${PAX} -rw . ${PREFIX}/share/doc/html/hdf5
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/html/hdf5
+	# avoid installing the Makefile and Makefile.in's  They are not needed
+	cd ${WRKSRC}/doc/html && ${PAX} -s '/.*Makefile.*//' -rw . ${PREFIX}/share/doc/html/hdf5
+	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/doc/html/hdf5
+	${CHGRP} -R ${SHAREGRP} ${PREFIX}/share/doc/html/hdf5
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
