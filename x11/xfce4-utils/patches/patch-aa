@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/06/15 09:04:32 hira Exp $
+
+--- scripts/Makefile.in.orig	2005-06-13 18:05:51.000000000 +0900
++++ scripts/Makefile.in	2005-06-13 18:07:08.000000000 +0900
+@@ -233,7 +233,7 @@
+         -e 's,@sysconfdir\@,$(sysconfdir),g' \
+ 	-e 's,@BROWSER_DEFAULT\@,@BROWSER_DEFAULT@,g'
+ 
+-conffilesdir = @sysconfdir@/xdg/xfce4
++conffilesdir = @datadir@/examples/xfce4
+ conffiles_DATA = \
+ 	xinitrc
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/06/15 09:01:59 hira Exp $
+
+--- Makefile.in.orig	2005-06-13 19:00:58.000000000 +0900
++++ Makefile.in	2005-06-13 19:01:29.000000000 +0900
+@@ -236,7 +236,7 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-confdir = $(sysconfdir)/xdg/xfce4/panel
++confdir = $(datadir)/examples/xfce4/panel
+ conf_DATA = \
+ 	contents.xml 							\
+ 	contents.xml.ar							\

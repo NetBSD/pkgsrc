@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.11 2005/05/18 06:10:31 martti Exp $
+$NetBSD: distinfo,v 1.12 2005/06/15 09:00:15 hira Exp $
 
 SHA1 (xfdesktop-4.2.2.tar.gz) = 5a8bd1fe4541e96f781535ea2a3b8266c3249feb
 RMD160 (xfdesktop-4.2.2.tar.gz) = f4eed52553607b3db14130e529bbe68cb0a5adf2
 Size (xfdesktop-4.2.2.tar.gz) = 2945698 bytes
+SHA1 (patch-aa) = 688161e8361ca83bc30ea71b0f15f044bdcdd045
+SHA1 (patch-ab) = 6a7d204cdafdc9535b6732ed7e6d717ba712eaab
