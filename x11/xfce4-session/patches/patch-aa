@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/06/15 09:03:28 hira Exp $
+
+--- Makefile.in.orig	2005-06-13 18:25:08.000000000 +0900
++++ Makefile.in	2005-06-13 18:26:18.000000000 +0900
+@@ -249,7 +249,7 @@
+ 	xfce4-session-logout						\
+ 	xfsm-shutdown-helper
+ 
+-configdir = $(sysconfdir)/xdg/xfce4-session
++configdir = $(datadir)/examples/xfce4/session
+ config_DATA = xfce4-session.rc
+ EXTRA_DIST = \
+ 	$(config_DATA)							\
