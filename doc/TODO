@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3619 2005/06/14 18:02:14 minskim Exp $
+$NetBSD: TODO,v 1.3620 2005/06/15 16:29:01 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -455,7 +455,6 @@ Suggested package updates
 	o dnstracer-1.8
 	o dpkg-1.13.3
 	o drivel-2.0.0 [jmmv]
-	o dspam-3.4.8
 	o dvdrip-0.52.5
 	o dvipdfmx-20050201
 	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
