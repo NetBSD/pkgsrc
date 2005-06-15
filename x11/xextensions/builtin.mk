@@ -1,12 +1,10 @@
-# $NetBSD: builtin.mk,v 1.4 2005/06/11 08:49:33 jmmv Exp $
+# $NetBSD: builtin.mk,v 1.5 2005/06/15 09:41:02 jmmv Exp $
 
 BUILTIN_PKG:=	xextensions
 
-BUILTIN_FIND_FILES_VAR:=		H_XEXTENSIONS PC_XEXTENSIONS
+BUILTIN_FIND_FILES_VAR:=		H_XEXTENSIONS
 BUILTIN_FIND_FILES.H_XEXTENSIONS=	\
 	${X11BASE}/include/X11/extensions/extutil.h
-BUILTIN_FIND_FILES.PC_XEXTENSIONS=	\
-	${X11BASE}/lib/pkgconfig/xextensions.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -21,7 +19,7 @@ IS_BUILTIN.xextensions=	no
 # we'll consider this X11 package to be built-in even if it's a part
 # of one of the pkgsrc-installed X11 distributions.
 #  
-.  if exists(${H_XEXTENSIONS}) && exists(${PC_XEXTENSIONS})
+.  if exists(${H_XEXTENSIONS})
 IS_BUILTIN.xextensions=	yes
 .  endif
 .endif
@@ -65,6 +63,21 @@ CHECK_BUILTIN.xextensions?=	no
 BUILDLINK_PREFIX.xextensions=	${X11BASE}
 .    include "../../mk/x11.buildlink3.mk"
 .    include "../../mk/x11.builtin.mk"
+.  endif
+
+# Check whether the implementation we selected has a xextensions.pc file
+# or not.  If the latter, generate a fake one.
+.  if exists(${BUILDLINK_PREFIX.xextensions}/lib/pkgconfig/xextensions.pc)
+BUILDLINK_FILES.xextensions+=	lib/pkgconfig/fontconfig.pc
+.  else
+BUILDLINK_TARGETS+=	xextensions-fake-pc
+
+xextensions-fake-pc:
+	@{ ${ECHO} "Name: XExtensions"; \
+	   ${ECHO} "Description: Sundry X extension headers"; \
+	   ${ECHO} "Version: 1.0.1"; \
+	   ${ECHO} "Cflags: -I${BUILDLINK_PREFIX.xextensions}/include"; \
+	} >${BUILDLINK_DIR}/lib/pkgconfig/xextensions.pc
 .  endif
 
 .endif	# CHECK_BUILTIN.xextensions
