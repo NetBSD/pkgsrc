@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2005/06/01 18:03:28 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2005/06/15 01:40:33 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FLTK_BUILDLINK3_MK:=	${FLTK_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	fltk
 BUILDLINK_DEPENDS.fltk+=	fltk>=1.1.5rc1
 BUILDLINK_RECOMMENDED.fltk+=	fltk>=1.1.5rc1nb3
 BUILDLINK_PKGSRCDIR.fltk?=	../../x11/fltk
-BUILDLINK_FILES.fltk+=		include/Fl/*
+BUILDLINK_FILES.fltk+=		include/FL/*
 .endif	# FLTK_BUILDLINK3_MK
 
 .include "../../graphics/MesaLib/buildlink3.mk"
