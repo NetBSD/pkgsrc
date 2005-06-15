@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/05/18 13:39:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/06/15 01:51:32 dmcmahill Exp $
 bin/gif2h5
 bin/h52gif
 bin/h5cc
@@ -62,8 +62,6 @@ share/doc/html/hdf5/ADGuide/Dependencies
 share/doc/html/hdf5/ADGuide/H4toH5Mapping.pdf
 share/doc/html/hdf5/ADGuide/HISTORY.txt
 share/doc/html/hdf5/ADGuide/ImageSpec.html
-share/doc/html/hdf5/ADGuide/Makefile
-share/doc/html/hdf5/ADGuide/Makefile.in
 share/doc/html/hdf5/ADGuide/PaletteExample1.gif
 share/doc/html/hdf5/ADGuide/Palettes.fm.anc.gif
 share/doc/html/hdf5/ADGuide/RELEASE.txt
@@ -97,8 +95,6 @@ share/doc/html/hdf5/Graphics/C++.gif
 share/doc/html/hdf5/Graphics/Dependencies
 share/doc/html/hdf5/Graphics/FORTRAN.gif
 share/doc/html/hdf5/Graphics/Java.gif
-share/doc/html/hdf5/Graphics/Makefile
-share/doc/html/hdf5/Graphics/Makefile.in
 share/doc/html/hdf5/Graphics/OtherAPIs.gif
 share/doc/html/hdf5/Groups.html
 share/doc/html/hdf5/H5.api_map.html
@@ -117,15 +113,9 @@ share/doc/html/hdf5/IH_mapHead.gif
 share/doc/html/hdf5/IOPipe.html
 share/doc/html/hdf5/Intro/Dependencies
 share/doc/html/hdf5/Intro/IntroExamples.html
-share/doc/html/hdf5/Intro/Makefile
-share/doc/html/hdf5/Intro/Makefile.in
-share/doc/html/hdf5/Makefile
-share/doc/html/hdf5/Makefile.in
 share/doc/html/hdf5/MountingFiles.html
 share/doc/html/hdf5/NCSAfooterlogo.gif
 share/doc/html/hdf5/PSandPDF/Dependencies
-share/doc/html/hdf5/PSandPDF/Makefile
-share/doc/html/hdf5/PSandPDF/Makefile.in
 share/doc/html/hdf5/Performance.html
 share/doc/html/hdf5/PredefDTypes.html
 share/doc/html/hdf5/Properties.html
@@ -162,8 +152,6 @@ share/doc/html/hdf5/TechNotes/H4-H5Compat.html
 share/doc/html/hdf5/TechNotes/HeapMgmt.html
 share/doc/html/hdf5/TechNotes/IOPipe.html
 share/doc/html/hdf5/TechNotes/LibMaint.html
-share/doc/html/hdf5/TechNotes/Makefile
-share/doc/html/hdf5/TechNotes/Makefile.in
 share/doc/html/hdf5/TechNotes/MemoryMgmt.html
 share/doc/html/hdf5/TechNotes/MoveDStruct.html
 share/doc/html/hdf5/TechNotes/NamingScheme.html
@@ -218,8 +206,6 @@ share/doc/html/hdf5/Tutor/Graphics/H5API.gif
 share/doc/html/hdf5/Tutor/Graphics/Intro.gif
 share/doc/html/hdf5/Tutor/Graphics/IntroTopics.gif
 share/doc/html/hdf5/Tutor/Graphics/Iterate.gif
-share/doc/html/hdf5/Tutor/Graphics/Makefile
-share/doc/html/hdf5/Tutor/Graphics/Makefile.in
 share/doc/html/hdf5/Tutor/Graphics/MountFile.gif
 share/doc/html/hdf5/Tutor/Graphics/Quiz.gif
 share/doc/html/hdf5/Tutor/Graphics/QuizAns.gif
@@ -234,8 +220,6 @@ share/doc/html/hdf5/Tutor/Graphics/TOCFull.gif
 share/doc/html/hdf5/Tutor/Graphics/TOCShort.gif
 share/doc/html/hdf5/Tutor/Graphics/TitlePg.gif
 share/doc/html/hdf5/Tutor/Graphics/Utilities.gif
-share/doc/html/hdf5/Tutor/Makefile
-share/doc/html/hdf5/Tutor/Makefile.in
 share/doc/html/hdf5/Tutor/answers.html
 share/doc/html/hdf5/Tutor/api.html
 share/doc/html/hdf5/Tutor/bighdf2sp.JPG
@@ -247,8 +231,6 @@ share/doc/html/hdf5/Tutor/crtgrp.html
 share/doc/html/hdf5/Tutor/crtgrpar.html
 share/doc/html/hdf5/Tutor/crtgrpd.html
 share/doc/html/hdf5/Tutor/examples/Dependencies
-share/doc/html/hdf5/Tutor/examples/Makefile
-share/doc/html/hdf5/Tutor/examples/Makefile.in
 share/doc/html/hdf5/Tutor/examples/attrexample.f90
 share/doc/html/hdf5/Tutor/examples/chunk.f90
 share/doc/html/hdf5/Tutor/examples/compound.f90
@@ -290,8 +272,6 @@ share/doc/html/hdf5/Tutor/examples/java/CreateGroupDataset.java
 share/doc/html/hdf5/Tutor/examples/java/DatasetRdWt.java
 share/doc/html/hdf5/Tutor/examples/java/Dependencies
 share/doc/html/hdf5/Tutor/examples/java/HyperSlab.java
-share/doc/html/hdf5/Tutor/examples/java/Makefile
-share/doc/html/hdf5/Tutor/examples/java/Makefile.in
 share/doc/html/hdf5/Tutor/examples/java/README
 share/doc/html/hdf5/Tutor/examples/java/readme.html
 share/doc/html/hdf5/Tutor/examples/java/runCompound.sh
@@ -349,8 +329,6 @@ share/doc/html/hdf5/Version.html
 share/doc/html/hdf5/chunk1.gif
 share/doc/html/hdf5/compat.html
 share/doc/html/hdf5/cpplus/Dependencies
-share/doc/html/hdf5/cpplus/Makefile
-share/doc/html/hdf5/cpplus/Makefile.in
 share/doc/html/hdf5/cpplus_RM/Dependencies
 share/doc/html/hdf5/cpplus_RM/H5AbstractDs_8cpp.html
 share/doc/html/hdf5/cpplus_RM/H5AbstractDs_8h-source.html
@@ -439,8 +417,6 @@ share/doc/html/hdf5/cpplus_RM/H5RefCounter_8h.html
 share/doc/html/hdf5/cpplus_RM/H5StrType_8cpp.html
 share/doc/html/hdf5/cpplus_RM/H5StrType_8h-source.html
 share/doc/html/hdf5/cpplus_RM/H5StrType_8h.html
-share/doc/html/hdf5/cpplus_RM/Makefile
-share/doc/html/hdf5/cpplus_RM/Makefile.in
 share/doc/html/hdf5/cpplus_RM/NCSAlogo.jpg
 share/doc/html/hdf5/cpplus_RM/annotated.html
 share/doc/html/hdf5/cpplus_RM/classH5_1_1AbstractDs-members.html
@@ -566,8 +542,6 @@ share/doc/html/hdf5/cpplus_RM/globals_type.html
 share/doc/html/hdf5/cpplus_RM/globals_vars.html
 share/doc/html/hdf5/cpplus_RM/header.html
 share/doc/html/hdf5/cpplus_RM/header_files/Dependencies
-share/doc/html/hdf5/cpplus_RM/header_files/Makefile
-share/doc/html/hdf5/cpplus_RM/header_files/Makefile.in
 share/doc/html/hdf5/cpplus_RM/header_files/filelist.xml
 share/doc/html/hdf5/cpplus_RM/header_files/image001.jpg
 share/doc/html/hdf5/cpplus_RM/header_files/image002.jpg
@@ -585,8 +559,6 @@ share/doc/html/hdf5/dataset_p1.gif
 share/doc/html/hdf5/ddl.html
 share/doc/html/hdf5/ed_libs/Dependencies
 share/doc/html/hdf5/ed_libs/Footer.lbi
-share/doc/html/hdf5/ed_libs/Makefile
-share/doc/html/hdf5/ed_libs/Makefile.in
 share/doc/html/hdf5/ed_libs/NavBar_ADevG.lbi
 share/doc/html/hdf5/ed_libs/NavBar_Common.lbi
 share/doc/html/hdf5/ed_libs/NavBar_Intro.lbi
@@ -608,8 +580,6 @@ share/doc/html/hdf5/ed_styles/IndexElect.css
 share/doc/html/hdf5/ed_styles/IndexPrint.css
 share/doc/html/hdf5/ed_styles/IntroElect.css
 share/doc/html/hdf5/ed_styles/IntroPrint.css
-share/doc/html/hdf5/ed_styles/Makefile
-share/doc/html/hdf5/ed_styles/Makefile.in
 share/doc/html/hdf5/ed_styles/RMelect.css
 share/doc/html/hdf5/ed_styles/RMprint.css
 share/doc/html/hdf5/ed_styles/UGelect.css
@@ -619,8 +589,6 @@ share/doc/html/hdf5/extern2.gif
 share/doc/html/hdf5/fortran/Dependencies
 share/doc/html/hdf5/fortran/F90Flags.html
 share/doc/html/hdf5/fortran/F90UserNotes.html
-share/doc/html/hdf5/fortran/Makefile
-share/doc/html/hdf5/fortran/Makefile.in
 share/doc/html/hdf5/group_p1.gif
 share/doc/html/hdf5/group_p2.gif
 share/doc/html/hdf5/group_p3.gif
