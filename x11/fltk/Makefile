@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2005/06/14 22:42:49 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2005/06/15 02:24:40 jlam Exp $
 
 DISTNAME=	fltk-1.1.6-source
 PKGNAME=	${DISTNAME:S/-source//}
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fltk/} \
 		ftp://ftp.fltk.org/pub/fltk/${VERS}/ \
@@ -26,7 +26,7 @@ TEST_TARGET=		test
 PTHREAD_OPTS+=		require
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL}
-CONFIGURE_ARGS+=	--without-links
+CONFIGURE_ARGS+=	--with-links
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
