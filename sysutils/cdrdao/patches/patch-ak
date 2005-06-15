@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1 2005/06/15 21:45:12 adrianp Exp $
+
+--- trackdb/Track.cc.orig	2005-06-06 22:37:22.000000000 +0100
++++ trackdb/Track.cc
+@@ -596,6 +596,7 @@ bool Track::resolveFilename(const char* 
+       }
+     }
+   }
++  return true;
+ }
+ 
+ // Locates 'SubTrack' that contains specified sample.
