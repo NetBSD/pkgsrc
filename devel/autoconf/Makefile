@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2005/06/15 02:01:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.55 2005/06/15 13:27:15 wiz Exp $
 
 DISTNAME=		autoconf-2.59
 PKGREVISION=		2
@@ -43,4 +43,3 @@ post-install:
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
