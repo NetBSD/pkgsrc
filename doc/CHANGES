@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10363 2005/06/14 20:12:53 jlam Exp $
+$NetBSD: CHANGES,v 1.10364 2005/06/15 02:07:01 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2877,3 +2877,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/xjig to 2.4nb2 [jmmv 2005-06-14]
 	Updated net/autonet to 0.15 [abs 2005-06-14]
 	Updated pkgtools/xpkgwedge to 1.14 [jlam 2005-06-14]
+	Updated devel/hdf5 to 1.6.4nb1 [dmcmahill 2005-06-14]
+	Updated devel/autoconf to 2.59nb2 [dmcmahill 2005-06-14]
+	Updated cad/geda-examples to 20050313nb1 [dmcmahill 2005-06-14]
