@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2005/06/04 19:05:38 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/06/15 21:45:13 adrianp Exp $
 
 DISTNAME=		cdrdao-${CDRDAO_VER}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdrdao/}
 
