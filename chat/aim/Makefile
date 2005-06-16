@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/03 21:31:13 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:41 jlam Exp $
 
 DISTNAME=	aim-1.5.286
 CATEGORIES=	chat
@@ -27,6 +27,8 @@ PLIST_SUBST+=	EMULSUBDIR=${EMULSUBDIR}
 
 DIST_SUBDIR=	.
 RPMFILES=	${DISTFILES}
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}

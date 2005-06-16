@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/12 05:38:38 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:42 jlam Exp $
 #
 
 DISTNAME=		tik-0.90
@@ -16,6 +16,7 @@ NO_CONFIGURE=		# defined
 NO_BUILD=		# defined
 
 TIKDIR=			${PREFIX}/libexec/tik
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_DATA_DIR} ${TIKDIR}

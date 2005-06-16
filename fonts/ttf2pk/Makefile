@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:52 jlam Exp $
 #
 
 .include "../../graphics/freetype-lib/Makefile.common"
@@ -24,6 +24,7 @@ USE_LIBTOOL=		# defined
 USE_TOOLS+=		autoconf
 
 TEXMF=			${PREFIX}/share/texmf
+INSTALLATION_DIRS=	bin man/man1
 
 pre-configure:
 			cd ${T2PSRC}; autoconf

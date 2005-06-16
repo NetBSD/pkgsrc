@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:18 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:45 jlam Exp $
 #
 
 DISTNAME=       cbrowser-0.6
@@ -14,6 +14,8 @@ DEPENDS+=	cscope-[0-9]*:../../devel/cscope
 DEPENDS+=	tk-[0-9]*:../../x11/tk
 
 NO_BUILD=	# defined
+
+INSTALLATION_DIRS=	bin
 
 post-patch:
 	${MV} ${WRKSRC}/cbrowser ${WRKSRC}/cbrowser.input && \

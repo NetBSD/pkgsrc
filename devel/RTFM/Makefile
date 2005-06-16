@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/03 23:46:29 cube Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/16 06:57:44 jlam Exp $
 #
 
 DISTNAME=	RTFM-2.0.4
@@ -25,6 +25,8 @@ PLIST_SUBST+=	RT_HTML_DIR=${RT_HTML_DIR:C/^${LOCALBASE}\///}	\
 
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
+
+INSTALLATION_DIRS=	lib share
 
 do-install:
 	@${ECHO} "=> Libraries"

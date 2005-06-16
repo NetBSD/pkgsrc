@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/05/25 19:21:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/16 06:58:01 jlam Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -25,7 +25,9 @@ post-build:
 	(cd ${WRKSRC}; ${PY_PROG} -O ${PY_LIBDIR}/compileall.py .)
 
 do-install:
-	(cd ${WRKSRC}; ${INSTALL_DATA} ExtensionClass.h ${PY_INCDIR} ; \
+	(cd ${WRKSRC}; \
+	${INSTALL_DATA_DIR} ${PY_INCDIR} ; \
+	${INSTALL_DATA} ExtensionClass.h ${PY_INCDIR} ; \
 	${INSTALL_SCRIPT_DIR} ${PY_SITEPKG} ; \
 	${INSTALL_SCRIPT} Xaq.py* ${PY_SITEPKG} ; \
 	${INSTALL_PROGRAM} *.so ${PY_SITEPKG} ; \

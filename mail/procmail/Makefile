@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/04/11 21:46:22 tv Exp $
+# $NetBSD: Makefile,v 1.37 2005/06/16 06:58:08 jlam Exp $
 #
 
 DISTNAME=	procmail-3.22
@@ -22,6 +22,8 @@ BUILD_DEFS+=	PROCMAIL_MAILSPOOLHOME PROCMAIL_TRUSTED_IDS
 
 PROCMAIL_TRUSTED_IDS?=\
 "root","daemon","uucp","mail","x400","network","list","slist","lists","news",0
+
+INSTALLATION_DIRS=	bin man/man1 man/man5
 
 pre-configure:
 	${ECHO} "#define TRUSTED_IDS {${PROCMAIL_TRUSTED_IDS:Q}}"	\

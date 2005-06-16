@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/01 18:02:50 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/16 06:57:54 jlam Exp $
 #
 
 DISTNAME=		fkiss-0.33
@@ -21,6 +21,7 @@ GNU_CONFIGURE=		yes
 CFLAGS+=		-DUSE_STDARG -DHAVE_STDARG_H
 CFLAGS+=		-DDEV_SOUND="\"${DEVOSSSOUND}\""
 BUILD_TARGET=		fkiss
+INSTALLATION_DIRS=	bin man/man6
 
 post-patch:
 	${MV} ${WRKSRC}/sound.c ${WRKSRC}/sound.c.bak

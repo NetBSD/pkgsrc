@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:07:37 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:38 jlam Exp $
 #
 
 DISTNAME=	darkice-0.14
@@ -22,6 +22,8 @@ EGDIR=		${PREFIX}/share/examples/darkice
 HTMLDIR=	${PREFIX}/share/doc/html/darkice
 
 CONF_FILES=	${EGDIR}/darkice.conf.default ${PKG_SYSCONFDIR}/darkice.conf
+
+INSTALLATION_DIRS=	bin man/man1 man/man5
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR} ${HTMLDIR}

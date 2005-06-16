@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/31 16:14:39 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/16 06:57:39 jlam Exp $
 #
 
 DISTNAME=	mad123-0.8.5
@@ -22,6 +22,8 @@ MAKE_FLAGS+=	USE_ARTS=yes
 .if !empty(PKG_OPTIONS:Moss)
 .  include "../../mk/ossaudio.buildlink3.mk"
 .endif
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mad123 ${PREFIX}/bin/mad123

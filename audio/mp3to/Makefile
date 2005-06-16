@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:22:56 grant Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:39 jlam Exp $
 
 DISTNAME=	mp3to
 PKGNAME=	${DISTNAME}-1.0.1
@@ -16,6 +16,8 @@ DEPENDS+=	gmp3info>=0.8.2:../gmp3info
 DEPENDS+=	sox>=12.17.1:../sox
 
 NO_BUILD=	YES
+
+INSTALLATION_DIRS=	bin
 
 do-extract:
 	@${MKDIR} ${WRKSRC}

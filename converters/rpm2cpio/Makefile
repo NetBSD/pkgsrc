@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:45:09 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/16 06:57:43 jlam Exp $
 
 DISTNAME=	rpm2cpio
 PKGNAME=	rpm2cpio-1.1
@@ -17,6 +17,8 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 REPLACE_PERL=	rpm2cpio
 
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} .
+
+INSTALLATION_DIRS=	bin
 
 # There is nothing to build
 do-build:

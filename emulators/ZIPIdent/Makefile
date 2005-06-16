@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:57 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:50 jlam Exp $
 #
 
 DISTNAME=		zident24
@@ -16,6 +16,7 @@ WRKSRC=			${WRKDIR}
 MAKEFILE=		makefile
 BUILD_TARGET=		zipident
 EXTRACT_CMD_OPTS.zip=	-Laaqo
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	${MKDIR} ${WRKSRC}/obj

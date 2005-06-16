@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/07/02 15:40:01 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/16 06:58:00 jlam Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-f77-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - F77 compiler
@@ -22,6 +22,7 @@ post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
 
 do-install:
+	${INSTALL_PROGRAM_DIR} ${GCC_ARCHDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/gcc/f771 ${GCC_ARCHDIR}
 	cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} \
 		f77.install-common f77.install-info f77.install-man

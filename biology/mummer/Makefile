@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 20:07:40 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:40 jlam Exp $
 #
 
 DISTNAME=		MUMmer3.15
@@ -14,6 +14,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_TOOLS+=		gmake
 
 MAKE_ENV+=		SH="${SH}"
+INSTALLATION_DIRS=	bin
 
 do-install:
 .for PROGRAM in annotate combineMUMs gaps mgaps mummer repeat-match 	  \

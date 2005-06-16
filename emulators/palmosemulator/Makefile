@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/01 18:02:47 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/16 06:57:51 jlam Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
@@ -41,6 +41,8 @@ CONFIGURE_ENV+=		PACKAGE_SKINS_DIR=${POSE_SKINS_DIR}
 
 # Assumes too much about how to build va_list's from scratch
 NOT_FOR_PLATFORM=	*-*-powerpc
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${POSE_BUILD_DIR}/pose ${PREFIX}/bin/pose
