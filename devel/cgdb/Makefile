@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 20:07:49 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:45 jlam Exp $
 #
 
 DISTNAME=	cgdb-0.4.0
@@ -14,6 +14,8 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_NCURSES=	# tigetstr()
 USE_GNU_READLINE=	# rl_mark and others
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cgdb

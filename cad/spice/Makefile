@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/06/01 18:02:40 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/06/16 06:57:41 jlam Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
@@ -23,6 +23,8 @@ WRKSRC=			${WRKDIR}
 #		These are included as patch-ae
 #PATCH_SITES=	ftp://ilpsoft.eecs.berkeley.edu/pub/SPICE3F5/
 #PATCHFILES=	grid.patch newcoms.patch spsmp.patch
+
+INSTALLATION_DIRS=	bin man/man1 man/man3 man/man5
 
 post-extract:
 	${CP} ${FILESDIR}/NetBSD ${WRKSRC}/conf

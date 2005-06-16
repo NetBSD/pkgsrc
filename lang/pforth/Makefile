@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/22 20:08:10 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/16 06:58:00 jlam Exp $
 
 DISTNAME=		pfthpc21
 PKGNAME=		pforth-21
@@ -15,6 +15,8 @@ USE_TOOLS+=		gmake
 MAKEFILE=		${WRKSRC}/makefile
 
 NOT_FOR_PLATFORM=	*-*-alpha  #segfaults when running ./pforth during build
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	${MKDIR} ${WRKSRC}/objects

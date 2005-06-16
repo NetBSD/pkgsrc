@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:09 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:43 jlam Exp $
 #
 
 DISTNAME=	chkjis
@@ -25,6 +25,7 @@ NO_CONFIGURE=	yes
 NO_WRAPPER=	yes
 
 do-install:
+	${INSTALL_DATA_DIR} ${PERL5_SITELIB}
 	${INSTALL_SCRIPT} ${WRKSRC}/chkjis.pl ${PERL5_SITELIB}
 
 .include "../../mk/bsd.pkg.mk"

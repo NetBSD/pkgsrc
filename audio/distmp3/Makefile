@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/25 23:31:02 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:38 jlam Exp $
 #
 
 DISTNAME=		distmp3-0.1.9
@@ -31,6 +31,8 @@ SUBST_STAGE.config=	post-configure
 SUBST_FILES.config=	distmp3.conf
 SUBST_SED.config+=	-e 's,^SERVER_PROGRAM,; SERVER_PROGRAM,'
 SUBST_SED.config+=	-e 's,/usr/local,${PREFIX},'
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/distmp3 ${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/01 18:02:38 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/16 06:57:39 jlam Exp $
 #
 
 DISTNAME=		SpiralSynth-2.0.0
@@ -20,6 +20,8 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		CXXFLAGS="${CXXFLAGS}"
 CXXFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/SpiralSynth ${PREFIX}/bin

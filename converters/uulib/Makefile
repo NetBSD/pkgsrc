@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/04/11 21:45:10 tv Exp $
+# $NetBSD: Makefile,v 1.33 2005/06/16 06:57:43 jlam Exp $
 #
 
 DISTNAME=       uudeview-0.5.20
@@ -25,6 +25,8 @@ DOCFILES=	HISTORY doc/Makefile doc/README doc/binhex.fig \
 		doc/td-v3.c doc/test.txt
 
 .include "../../mk/bsd.prefs.mk"
+
+INSTALLATION_DIRS=	include lib man/man3
 
 do-install:
 	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libuu.la ${PREFIX}/lib
