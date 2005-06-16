@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/01 20:08:01 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/06/16 23:33:10 kristerw Exp $
 
 DISTNAME=	krb5-1.4
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
@@ -83,6 +83,8 @@ INSTALLATION_DIRS=	bin include/gssapi include/gssrpc info lib	\
 			man/man1 man/man5 man/man8 sbin			\
 			share/examples/krb5
 
+PTHREAD_OPTS+=		require
+
 # The MIT krb5 distribution is actually a tar file that contains the
 # real .tar.gz distfile and a PGP signature.
 #
@@ -108,4 +110,5 @@ post-install:
 		done;							\
 	done
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
