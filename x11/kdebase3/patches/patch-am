@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.14 2005/06/16 01:11:04 markd Exp $
+
+--- kicker/taskbar/taskcontainer.cpp.orig	2005-05-24 00:14:10.000000000 +1200
++++ kicker/taskbar/taskcontainer.cpp
+@@ -805,7 +805,7 @@ void TaskContainer::performAction( TaskB
+                 {
+                     // activate next
+                     ++it;
+-                    if (it != itEnd)
++                    if (it == itEnd)
+                     {
+                         it = m_filteredTasks.begin();
+                     }
