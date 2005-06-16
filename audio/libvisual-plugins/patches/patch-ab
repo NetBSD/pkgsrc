@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2005/06/16 21:19:08 kristerw Exp $
+
+--- plugins/actor/pseudotoad_flower/notch.c.orig	Thu Jun 16 22:50:58 2005
++++ plugins/actor/pseudotoad_flower/notch.c	Thu Jun 16 22:52:05 2005
+@@ -25,12 +25,13 @@
+ #include <stdio.h>
+ #include <math.h>
+ #include <string.h>
++#include <stdlib.h>
+ 
+ #include "notch.h"
+ 
+ NOTCH_FILTER *  init_notch(float cutoff) {
+     NOTCH_FILTER * l=malloc(sizeof(NOTCH_FILTER));
+-    float steep = 0.99;;
++    float steep = 0.99;
+     float r = steep * 0.99609375;
+     float f = cos(M_PI * cutoff / SAMPLING_RATE);
+     l->cutoff = cutoff;
