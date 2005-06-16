@@ -1,4 +1,4 @@
-# $NetBSD: pam.buildlink3.mk,v 1.4 2005/04/25 14:21:47 tv Exp $
+# $NetBSD: pam.buildlink3.mk,v 1.5 2005/06/16 17:40:56 salo Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a PAM implementation.  pam.buildlink3.mk will:
@@ -51,7 +51,7 @@ BUILDLINK_BUILTIN_MK.solaris-pam=	../../mk/solaris-pam.builtin.mk
 CHECK_BUILTIN.${_pam_}:=	yes
 .      include "${BUILDLINK_BUILTIN_MK.${_pam_}}"
 .      if defined(IS_BUILTIN.${_pam_}) && \
-          !empty(IS_BUILTIN.${_pam_}:M[yY][eE][sS])
+		!empty(IS_BUILTIN.${_pam_}:M[yY][eE][sS])
 PAM_DEFAULT?=	${_pam_}
 .      endif
 CHECK_BUILTIN.${_pam_}:=	no
