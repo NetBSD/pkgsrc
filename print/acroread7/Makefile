@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/15 14:23:30 markd Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/16 23:56:15 kristerw Exp $
 
 DISTNAME=	acroread7	# Overridden below
 PKGNAME=	acroread7-7.0
@@ -35,8 +35,8 @@ PLATFORM=	unknown
 
 .if ${OPSYS} == "NetBSD"
 . if (${MACHINE_ARCH} == "i386")
-DEPENDS=	suse_gtk2>=9.1:../../emulators/${SUSE_DIR_PREFIX}_gtk2
-DEPENDS+=	suse_locale>=9.1:../../emulators/${SUSE_DIR_PREFIX}_locale
+DEPENDS=	suse_gtk2>=9.1:../../emulators/suse91_gtk2
+DEPENDS+=	suse_locale>=9.1:../../emulators/suse91_locale
 DISTNAME=	AdbeRdr70_linux_enu
 PLATFORM=	intellinux
 .endif
