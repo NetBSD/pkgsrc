@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10369 2005/06/15 21:50:11 adrianp Exp $
+$NetBSD: CHANGES,v 1.10370 2005/06/16 07:30:46 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2888,3 +2888,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/xfce4-utils to 4.2.2nb1 [hira 2005-06-15]
 	Updated mail/dspam to 3.4.8 [xtraeme 2005-06-15]
 	Updated sysutils/cdrdao to 1.2.0nb2 [adrianp 2005-06-15]
+	Updated squirrelmail to 1.4.4nb1 [martti 2005-06-16]
