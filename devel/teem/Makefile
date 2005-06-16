@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:55 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 02:41:21 jlam Exp $
 #
 
 DISTNAME=		teem-1.8.0-src
@@ -34,16 +34,16 @@ TEEM_ARCH=linux.32
 PKG_FAIL_REASON="Support for this platform has not yet been added."
 .endif
 
-MAKE_ENV+=		TEEM_ARCH=${TEEM_ARCH}					\
-			TEEM_PNG=1 TEEM_BZIP2=1 TEEM_ZLIB=1 TEEM_PTHREAD=1	\
-			TEEM_PNG_IPATH="-I${BUILDLINK_PREFIX.png}/include"	\
-			TEEM_PNG_LPATH="-L${BUILDLINK_PREFIX.png}/lib"		\
-			TEEM_BZIP2_IPATH="-I${BUILDLINK_PREFIX.bzip2}/include"	\
-			TEEM_BZIP2_LPATH="-L${BUILDLINK_PREFIX.bzip2}/lib"	\
-			TEEM_ZLIB_IPATH="-I${BUILDLINK_PREFIX.zlib}/include"	\
-			TEEM_ZLIB_LPATH="-L${BUILDLINK_PREFIX.zlib}/lib"	\
-			TEEM_PTHREAD_IPATH="-I${BUILDLINK_PREFIX.pthread}/include" \
-			TEEM_PTHREAD_LPATH="-L${BUILDLINK_PREFIX.pthread}/lib"
+MAKE_ENV+=	TEEM_ARCH=${TEEM_ARCH}					\
+		TEEM_PNG=1 TEEM_BZIP2=1 TEEM_ZLIB=1 TEEM_PTHREAD=1	\
+		TEEM_PNG_IPATH="-I${BUILDLINK_PREFIX.png}/include"	\
+		TEEM_PNG_LPATH="-L${BUILDLINK_PREFIX.png}/lib"		\
+		TEEM_BZIP2_IPATH="-I${BUILDLINK_PREFIX.bzip2}/include"	\
+		TEEM_BZIP2_LPATH="-L${BUILDLINK_PREFIX.bzip2}/lib"	\
+		TEEM_ZLIB_IPATH="-I${BUILDLINK_PREFIX.zlib}/include"	\
+		TEEM_ZLIB_LPATH="-L${BUILDLINK_PREFIX.zlib}/lib"	\
+		TEEM_PTHREAD_IPATH="-I${BUILDLINK_PREFIX.pthread}/include" \
+		TEEM_PTHREAD_LPATH="-L${BUILDLINK_PREFIX.pthread}/lib"
 
 do-build:
 	cd ${WRKSRC}/src && ${MAKE_ENV} ${GMAKE}
