@@ -1,0 +1,31 @@
+$NetBSD: patch-cl,v 1.1 2005/06/16 21:39:06 martin Exp $
+
+--- extensions/transformiix/source/xslt/txStylesheetCompileHandlers.cpp.orig	2004-01-29 23:04:29.000000000 +0100
++++ extensions/transformiix/source/xslt/txStylesheetCompileHandlers.cpp	2005-06-16 09:18:13.000000000 +0200
+@@ -258,7 +258,7 @@
+               txStylesheetCompilerState& aState,
+               double& aNumber)
+ {
+-    aNumber = Double::NaN;
++    aNumber = Double::NaN();
+     txStylesheetAttr* attr = nsnull;
+     nsresult rv = getStyleAttr(aAttributes, aAttrCount, kNameSpaceID_None,
+                                aName, aRequired, &attr);
+@@ -479,7 +479,7 @@
+     NS_ENSURE_SUCCESS(rv, rv);
+ 
+     txExpandedName nullExpr;
+-    double prio = Double::NaN;
++    double prio = Double::NaN();
+     nsAutoPtr<txPattern> match(new txRootPattern(MB_TRUE));
+     NS_ENSURE_TRUE(match, NS_ERROR_OUT_OF_MEMORY);
+ 
+@@ -1038,7 +1038,7 @@
+                       aState, mode);
+     NS_ENSURE_SUCCESS(rv, rv);
+ 
+-    double prio = Double::NaN;
++    double prio = Double::NaN();
+     rv = getNumberAttr(aAttributes, aAttrCount, txXSLTAtoms::priority,
+                        PR_FALSE, aState, prio);
+     NS_ENSURE_SUCCESS(rv, rv);
