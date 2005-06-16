@@ -1,4 +1,4 @@
-$NeBSD$
+$NetBSD: patch-ak,v 1.2 2005/06/16 10:47:43 hira Exp $
 
 --- src/logging.c.orig	2005-01-16 16:33:20.000000000 -0500
 +++ src/logging.c	2005-01-16 16:55:25.000000000 -0500
