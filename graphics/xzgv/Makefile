@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/05/22 20:08:08 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/06/16 06:57:59 jlam Exp $
 
 DISTNAME=	xzgv-0.8
 PKGNAME=	xzgv-0.8.0.1
@@ -18,6 +18,7 @@ INFO_FILES=	xzgv
 
 USE_X11BASE=		yes
 USE_TOOLS+=		gmake
+INSTALLATION_DIRS=	bin info man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/xzgv ${PREFIX}/bin

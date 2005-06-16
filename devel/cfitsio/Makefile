@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/02/28 07:28:29 tron Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/16 06:57:45 jlam Exp $
 
 DISTNAME=	cfitsio2500
 PKGNAME=	cfitsio-2.500
@@ -15,6 +15,8 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 
 BUILD_TARGET=	all testprog
+
+INSTALLATION_DIRS=	include lib
 
 post-build:
 	cd ${WRKSRC}; \

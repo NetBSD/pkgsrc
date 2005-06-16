@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/22 20:08:12 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/16 06:58:03 jlam Exp $
 #
 
 DISTNAME=	mailsync_5.2.1.orig
@@ -30,6 +30,8 @@ SUBST_MESSAGE.conf=	"Fixing configure script."
 DOCS=	COPYING NEWS README THANKS TODO doc/ABSTRACT doc/HACKING
 
 .include "../../mk/bsd.prefs.mk"
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mailsync

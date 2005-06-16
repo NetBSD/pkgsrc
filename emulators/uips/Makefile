@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:46 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:51 jlam Exp $
 #
 
 DISTNAME=		uips
@@ -14,6 +14,7 @@ COMMENT=		IPS patcher with v2 support
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
 WRKSRC=			${WRKDIR}
+INSTALLATION_DIRS=	bin
 
 do-extract:
 	${CP} ${_DISTDIR}/uips.c ${WRKSRC}/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:07:59 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/16 06:57:52 jlam Exp $
 #
 
 DISTNAME=	chkfontpath-1.9.7
@@ -16,6 +16,7 @@ MAKE_ENV+=	VERSION=${PKGVERSION}
 USE_TOOLS+=	gmake
 
 PKGSRC_USE_TOOLS+=	gtar
+INSTALLATION_DIRS=	bin man/man8
 
 # Might as well make this a general scheme for .src.rpm files... - HF
 do-extract:

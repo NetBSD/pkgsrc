@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:45:41 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/16 06:57:49 jlam Exp $
 #
 
 DISTNAME=	manedit-0.5.6
@@ -17,6 +17,8 @@ MAKE_ENV+=	CPP="${CXX}"
 
 # The FreeBSD makefile may be used as "generic UNIX".
 MAKEFILE=	Makefile.FreeBSD
+
+INSTALLATION_DIRS=	bin man/man1 man/man7
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/manedit ${PREFIX}/bin

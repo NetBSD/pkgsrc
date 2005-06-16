@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/04/11 21:46:14 tv Exp $
+# $NetBSD: Makefile,v 1.30 2005/06/16 06:58:00 jlam Exp $
 
 DISTNAME=	hugs98-Dec2001
 PKGNAME=	hugs98-200112
@@ -22,6 +22,8 @@ BUILD_TARGET=		default
 # since the dlcompat layer expects you to not be that clever.
 CONFIGURE_ENV+=		ac_cv_header_nlist_h=no
 .endif
+
+INSTALLATION_DIRS=	man/man1
 
 do-build:
 	@cd ${WRKSRC}/.. && ${SETENV} ${MAKE_ENV} \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/01 05:29:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/16 06:57:47 jlam Exp $
 #
 
 DISTNAME=	p4web
@@ -8,6 +8,8 @@ COMMENT=	Perforce SCM Web client
 P4BINONLY=	# defined
 
 .include "../../devel/p4/Makefile.common"
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} \

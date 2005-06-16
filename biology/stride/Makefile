@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:01 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:41 jlam Exp $
 #
 
 DISTNAME=		stride
@@ -11,6 +11,7 @@ HOMEPAGE=		http://wolf.bi.umist.ac.uk/unix/stride.html
 COMMENT=		Protein secondary structure assignment from atomic coordinates
 
 WRKSRC=			${WRKDIR}
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/stride ${PREFIX}/bin

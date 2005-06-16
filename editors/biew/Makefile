@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/22 20:07:55 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/16 06:57:49 jlam Exp $
 #
 
 DISTNAME=	biew562
@@ -16,6 +16,8 @@ ONLY_FOR_PLATFORM=	*-*-i386
 USE_TOOLS+=	gmake
 MAKEFILE=	makefile
 WRKSRC=		${WRKDIR}/biew-562
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/biew

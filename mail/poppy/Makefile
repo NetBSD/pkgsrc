@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/23 14:28:56 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 06:58:03 jlam Exp $
 #
 
 DISTNAME=	poppy-3.1
@@ -12,6 +12,8 @@ COMMENT=	Client to perform simple tasks with a POP3/IMAP server
 NO_BUILD=	YES
 USE_PERL5=	YES
 REPLACE_PERL=	poppy
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/poppy ${PREFIX}/bin

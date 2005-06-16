@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2005/06/01 18:02:48 jlam Exp $
+# $NetBSD: Makefile,v 1.71 2005/06/16 06:57:52 jlam Exp $
 #
 
 DISTNAME=		xmame-0.96
@@ -85,6 +85,7 @@ MAKE_FLAGS+=		LOW_MEM=1
 .endif
 
 OWN_DIRS=		${SPOOLDIR}
+INSTALLATION_DIRS=	bin man/man6
 
 post-configure:
 	cd ${WRKSRC}/doc;						\
