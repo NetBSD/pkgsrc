@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/22 20:07:38 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/16 06:57:38 jlam Exp $
 #
 
 DISTNAME=		gogo239b
@@ -29,6 +29,8 @@ MAKE_FLAGS+=	ASFLAGS="-f aoutb -D__unix__ -DAOUT ${E3DN}"
 .else
 MAKE_FLAGS+=	ASFLAGS="-f elf -D__unix__ ${E3DN}"
 .endif
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/gogo ${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/22 20:07:43 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:42 jlam Exp $
 #
 
 DISTNAME=		mu-conference-0.6.0
@@ -31,6 +31,8 @@ FILES_SUBST+=		JABBERD_USER=${JABBERD_USER}
 
 EGDIR=			${PREFIX}/share/examples/jabberd
 CONF_FILES+=		${EGDIR}/muc-jcr.xml ${PKG_SYSCONFDIR}/muc-jcr.xml
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	@${MV} ${XMLCONFIG} ${XMLCONFIG}.in

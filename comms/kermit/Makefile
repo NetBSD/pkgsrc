@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2005/05/30 15:04:17 yyamano Exp $
+# $NetBSD: Makefile,v 1.63 2005/06/16 06:57:42 jlam Exp $
 
 DISTNAME=	cku211
 PKGNAME=	kermit-8.0.211
@@ -28,6 +28,8 @@ PLIST_SRC=	${WRKDIR}/PLIST
 SSLINC=		-I${WRKDIR}/.buildlink/include
 SSLLIB=		-L${WRKDIR}/.buildlink/lib ${COMPILER_RPATH_FLAG}${WRKDIR}/.buildlink/lib
 
+INSTALLATION_DIRS=	bin
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${PREFIX}/bin/kermit
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
@@ -37,10 +39,12 @@ do-install:
 	  case $$OPT in \
 	    catinstall) \
 		nroff -man ${WRKSRC}/ckuker.nr > ${WRKSRC}/kermit.0; \
+		${INSTALL_MAN_DIR} ${PREFIX}/man/cat1; \
 		${INSTALL_MAN} ${WRKSRC}/kermit.0 ${PREFIX}/man/cat1/kermit.0; \
 		${ECHO} man/cat1/kermit.0 >>${PLIST_SRC}; \
 		;; \
 	    maninstall) \
+		${INSTALL_MAN_DIR} ${PREFIX}/man/man1; \
 		${INSTALL_MAN} ${WRKSRC}/ckuker.nr ${PREFIX}/man/man1/kermit.1; \
 		${ECHO} man/man1/kermit.1 >>${PLIST_SRC}; \
 		;; \

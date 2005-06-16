@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:47 jlam Exp $
 
 DISTNAME=		nspr-4.4.1
 PKGREVISION=		1
@@ -30,6 +30,8 @@ SO_SUFFIX=		dylib
 SO_SUFFIX=		so.1.0
 .endif
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX}
+
+INSTALLATION_DIRS=	bin
 
 pre-configure:
 	cd ${WRKSRC}/.. && autoconf

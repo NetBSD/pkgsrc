@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/01 18:02:42 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/16 06:57:44 jlam Exp $
 #
 
 DISTNAME=	xsqlmenu-2.10
@@ -12,6 +12,8 @@ COMMENT=	X based GUI for MySQL
 
 USE_TOOLS+=	gmake
 MAKE_ENV+=	MAKE=${MAKE_PROGRAM}
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xsqlmenu ${PREFIX}/bin

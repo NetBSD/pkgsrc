@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:02 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:54 jlam Exp $
 #
 
 DISTNAME=	hugov31_unix_source
@@ -21,6 +21,8 @@ INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*
 WRKSRC=		${WRKDIR}/hugov3.1.02
 
 LIBDIR=		${PREFIX}/share/hugo
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hc ${PREFIX}/bin

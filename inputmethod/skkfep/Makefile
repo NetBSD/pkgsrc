@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:18:53 agc Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:59 jlam Exp $
 
 DISTNAME=	skkfep0.86c
 PKGNAME=	skkfep-0.86c
@@ -17,6 +17,8 @@ MAKE_ENV=	MAKE_FLAGS='EXECBASE=${LOCALBASE} CC=${CC}'
 
 DESCR_SRC=	${WRKDIR}/DESCR
 INSTALL_FILE=	${WRKDIR}/INSTALL
+
+INSTALLATION_DIRS=	bin man/man1
 
 post-build:
 	${SED} 's#@PKGBASE@#${LOCALBASE}#g' ${PKGDIR}/DESCR	>${DESCR_SRC}

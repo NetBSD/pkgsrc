@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/20 12:19:43 agc Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:58:03 jlam Exp $
 #
 
 DISTNAME=	mdfrm.pl
@@ -17,6 +17,8 @@ EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 WRKSRC=		${WRKDIR}
 USE_PERL5=	yes
 NO_BUILD=	yes
+
+INSTALLATION_DIRS=	bin
 
 post-patch:
 	${SED}	-e "s,/usr/local/bin/perl,${LOCALBASE}/bin/perl,g"	\

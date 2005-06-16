@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/20 12:14:41 agc Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/16 06:57:51 jlam Exp $
 
 DISTNAME=	VMware-workstation-3.2.1-2242
 PKGNAME=	vmware-3.2.1pl1
@@ -37,6 +37,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 VMWARE_CFG_DIR=		${PREFIX}/emul/linux/etc/vmware
 
 .include "../../mk/bsd.prefs.mk"
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-build:
 	${GZCAT} ${WRKSRC}/man/man1/vmware.1.gz > ${WRKDIR}/vmware.1

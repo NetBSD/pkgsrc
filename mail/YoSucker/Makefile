@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/26 02:27:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/16 06:58:02 jlam Exp $
 #
 
 DISTNAME=		YoSucker-pr37
@@ -23,6 +23,7 @@ NO_BUILD=		# defined
 
 EGDIR=			${PREFIX}/share/examples/YoSucker
 DOCDIR=			${PREFIX}/share/doc/YoSucker
+INSTALLATION_DIRS=	bin lib
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${PREFIX}/bin

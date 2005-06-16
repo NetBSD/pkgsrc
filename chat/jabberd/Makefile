@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/02 21:39:53 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/16 06:57:42 jlam Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -54,6 +54,9 @@ OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 750
 CONF_FILES=		${EGDIR}/jabber.xml ${PKG_SYSCONFDIR}/jabber.xml
 SUPPORT_FILES=		${EGDIR}/platform-settings \
 			${PKG_SYSCONFDIR}/platform-settings
+
+INSTALLATION_DIRS=	sbin
+
 post-extract:
 	@${MV} ${WRKSRC}/jabber.xml ${WRKSRC}/jabber.xml.in
 

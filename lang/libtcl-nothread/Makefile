@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:14 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:58:00 jlam Exp $
 #
 
 DISTNAME=		tcl8.4.6-src
@@ -34,6 +34,8 @@ CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
 .if (${MACHINE_PLATFORM:MNetBSD-1.5*-m68k} != "")
 CONFIGURE_ENV+=		COMPILER_OPTIMIZATION_BUG=YES
 .endif
+
+INSTALLATION_DIRS=	lib
 
 post-configure:
 	${SED} 's|tcl84|tcl84-nothread|g' <${WRKSRC}/tclConfig.sh \

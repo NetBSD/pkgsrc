@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/09 20:29:26 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:46 jlam Exp $
 
 DISTNAME=	guile-slib-2.4.2
 PKGREVISION=	5
@@ -17,6 +17,8 @@ NO_CHECKSUM=	yes
 WRKSRC=		${WRKDIR}
 
 PLIST_SUBST+=	GUILE14_SUBDIR=${GUILE14_SUBDIR:Q}
+
+INSTALLATION_DIRS=	share/guile
 
 do-build:
 

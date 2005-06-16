@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/05/22 20:08:02 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/16 06:57:55 jlam Exp $
 #
 
 DISTNAME=		mirrormagic-2.0.2
@@ -18,6 +18,8 @@ PLIST_SRC=		${WRKDIR}/PLIST PLIST
 
 # if you change SCORE_PATH, don't forget to change patch-aa, too
 SCORE_PATH=		/var/games/mirrormagic
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} -o bin -g games -m 2755 \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/07 15:06:08 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/16 06:57:58 jlam Exp $
 
 DISTNAME=	warp-sharp
 PKGNAME=	gimp-${DISTNAME}-1.4
@@ -18,6 +18,8 @@ NO_BUILD=	yes
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
+
+INSTALLATION_DIRS=	share/gimp/2.0/scripts
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}${EXTRACT_SUFX} \

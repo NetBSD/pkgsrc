@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/02/04 13:33:36 grant Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:46 jlam Exp $
 
 DISTNAME=		ElectricFence-2.1
 PKGREVISION=		1
@@ -16,6 +16,8 @@ CFLAGS+=		-g -DPAGE_PROTECTION_VIOLATED_SIGNAL=SIGBUS
 .else
 CFLAGS+=		-g
 .endif
+
+INSTALLATION_DIRS=	lib man/man3
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libefence.a ${PREFIX}/lib

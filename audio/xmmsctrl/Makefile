@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 20:07:40 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:40 jlam Exp $
 #
 
 DISTNAME=		xmmsctrl-1.6
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.docs.uu.se/~adavid/utils/
 COMMENT=		Small utility to control xmms from the command line
 
 USE_TOOLS+=		gmake
+INSTALLATION_DIRS=	bin
 
 .include "../../audio/xmms/buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/12/05 13:40:56 ben Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/16 06:57:47 jlam Exp $
 #
 
 DISTNAME=	python-mode-4.54
@@ -18,6 +18,8 @@ WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	python-mode-20041204
 
 .include "../../mk/emacs.mk"
+
+INSTALLATION_DIRS=	${EMACS_LISPPREFIX:S/^${PREFIX}\///}
 
 do-extract:
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/python-mode.el ${WRKDIR}

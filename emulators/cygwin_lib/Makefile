@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/23 09:28:40 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:50 jlam Exp $
 #
 
 DISTNAME=		cygwin-1.5.13-1
@@ -17,6 +17,7 @@ DIST_SUBDIR=		cygwin
 WRKSRC=			${WRKDIR}
 
 SYMLINKS=		cygpath ipcrm ipcs kill mount ps regtool umount
+INSTALLATION_DIRS=	bin emul/cygwin/bin
 
 do-build: # nothing
 

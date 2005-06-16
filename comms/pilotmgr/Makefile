@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/06/01 18:02:41 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2005/06/16 06:57:42 jlam Exp $
 
 DISTNAME=	pilotmgr-1.107p2
 PKGNAME=	pilotmgr-1.107.2
@@ -26,6 +26,8 @@ CONFIGURE_SCRIPT=	./Setup
 
 PM_PERL_DIR=	${PREFIX}/lib/${DISTNAME:C/-.*$//}
 PM_DOC_DIR=	${PREFIX}/share/doc/${DISTNAME:C/-.*$//}
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	@${RM} -f ${WRKSRC}/SyncCM.pm

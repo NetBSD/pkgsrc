@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:08 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:59 jlam Exp $
 
 DISTNAME=	cwtext-0.91
 CATEGORIES=	ham
@@ -11,6 +11,8 @@ COMMENT=	Morse Code Generator
 MAKEFILE=	makefile
 USE_TOOLS+=	gmake
 BUILD_TARGET=	ALL
+
+INSTALLATION_DIRS=	bin
 
 post-patch:
 	${SED} 	-e "s,^PREFIX,#PREFIX,g"	\

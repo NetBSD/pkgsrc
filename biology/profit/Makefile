@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:01 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:41 jlam Exp $
 #
 
 DISTNAME=		profit
@@ -13,6 +13,7 @@ COMMENT=		Performs least squares fits of two protein structures
 DIST_SUBDIR=		${DISTNAME}
 BUILD_TARGET=		${DISTNAME}
 WRKSRC=			${WRKDIR}/ProFitV2.2/src
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/profit ${PREFIX}/bin

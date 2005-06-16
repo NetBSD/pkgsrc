@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/01 14:37:31 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/16 06:58:02 jlam Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -42,6 +42,7 @@ MAKE_ENV+=	CFLAGS_INET6=-DINET6
 
 LDFLAGS.SunOS+=	-lnsl -lsocket
 
+INSTALLATION_DIRS=	man/man8 sbin
 pre-configure:
 	@(cd ${WRKSRC};							\
 	for f in config.h cucipop.8 makevpopdb.8; do			\

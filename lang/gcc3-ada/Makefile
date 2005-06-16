@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/11/28 19:19:52 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/16 06:58:00 jlam Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-ada-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - Ada compiler
@@ -75,6 +75,7 @@ post-build:
 	${ECHO} "ADA_INCLUDE_PATH+=${GCC_ARCHDIR}/adainclude" >> ${WRKDIR}/gcc3.mk
 
 do-install:
+	${INSTALL_PROGRAM_DIR} ${GCC_ARCHDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/gcc/gnat1 ${GCC_ARCHDIR}
 	cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} \
 		ada.install-common ada.install-info install-gnatlib

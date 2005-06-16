@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:46 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/16 06:57:52 jlam Exp $
 #
 
 DISTNAME=		gkrellstock-0.5.1
@@ -16,6 +16,7 @@ DEPENDS+=		p5-finance-quote>=1.08:../../finance/p5-finance-quote
 WRKSRC=			${WRKDIR}/gkrellStock-0.5.1
 BUILD_TARGET=		gkrellstock.so
 REPLACE_PERL=		${WRKSRC}/GetQuote2
+INSTALLATION_DIRS=	bin lib/gkrellm2/plugins
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gkrellstock.so ${PREFIX}/lib/gkrellm2/plugins

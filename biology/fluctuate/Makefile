@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:00 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:40 jlam Exp $
 #
 
 DISTNAME=	fluctuate1.4.src.doc
@@ -17,6 +17,8 @@ DOCDIR=		${PREFIX}/share/doc/fluctuate
 EXDIR=		${PREFIX}/share/examples/fluctuate
 DOCFILES=	fluctuate.doc errors.doc
 EXFILES=	bestree infile outfile
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fluctuate ${PREFIX}/bin/

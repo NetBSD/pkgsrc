@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:02:44 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:47 jlam Exp $
 #
 
 DISTNAME=	ode-0.039
@@ -13,6 +13,8 @@ COMMENT=	Library for the simulation of Rigid Body Dynamics
 USE_TOOLS+=	gmake
 
 .include "../../mk/x11.buildlink3.mk"
+
+INSTALLATION_DIRS=	lib
 
 do-configure:
 	cd ${WRKSRC} && ${GMAKE} configure

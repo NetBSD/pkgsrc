@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:03 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/16 06:57:58 jlam Exp $
 #
 
 DISTNAME=	libmng-1.0.7
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/contrib/gcc/gtk-mng-view
 MAKE_ENV+=	LIBMNG_PREFIX=${BUILDLINK_PREFIX.mng:Q}
 
 EXTRACT_ELEMENTS=	*/contrib/gcc/gtk-mng*
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gmngview ${PREFIX}/bin

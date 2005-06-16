@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:19:43 agc Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/16 06:58:02 jlam Exp $
 #
 
 DISTNAME=	mailserv
@@ -25,6 +25,8 @@ CONF_FILES=
 CONF_FILES+=	${EGDIR}/${cf}.cf ${PKG_SYSCONFDIR}/${cf}.cf
 .endfor
 .undef cf
+
+INSTALLATION_DIRS=	libexec/cgi-bin
 
 do-configure:
 .for file in mailserv cgi-lib.pl

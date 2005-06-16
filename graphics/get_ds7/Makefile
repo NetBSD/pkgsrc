@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/02/21 20:26:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:57 jlam Exp $
 #
 
 DISTNAME=	get_ds7_1.2.4
@@ -18,6 +18,8 @@ DECOMPRESS_CMD=	${CAT}
 NO_BUILD=	# defined
 
 DOCDIR=		${PREFIX}/share/doc/get_ds7
+
+INSTALLATION_DIRS=	bin
 
 post-patch:
 	${SED}	-e "s,/usr/bin/perl,${PERL5}," \

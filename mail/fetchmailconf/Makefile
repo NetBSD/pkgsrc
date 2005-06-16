@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2005/06/01 18:02:59 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2005/06/16 06:58:02 jlam Exp $
 
 DISTNAME=	fetchmail-6.2.5
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
@@ -19,6 +19,8 @@ DISTINFO_FILE=		${.CURDIR}/../../mail/fetchmail/distinfo
 PATCHDIR=		${.CURDIR}/../../mail/fetchmail/patches
 
 PYTHON_PATCH_SCRIPTS= fetchmailconf
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 		${INSTALL_SCRIPT} ${WRKSRC}/fetchmailconf ${PREFIX}/bin

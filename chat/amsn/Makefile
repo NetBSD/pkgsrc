@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:03 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:41 jlam Exp $
 #
 
 DISTNAME=		amsn-0_94
@@ -13,6 +13,7 @@ COMMENT=		"Alvaro's MSN messenger client"
 
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/amsn

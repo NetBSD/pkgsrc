@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/01 18:02:51 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/16 06:57:54 jlam Exp $
 
 DISTNAME=		KnightCap-3.6
 PKGNAME=		knightcap-3.6
@@ -21,6 +21,7 @@ DEFINES=		-DTB_DIR=\\\"${TBDIR}\\\"
 
 TBDIR=			${PREFIX}/share/egtb
 DOCDIR=			${PREFIX}/share/doc/knightcap
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/KnightCap ${PREFIX}/bin

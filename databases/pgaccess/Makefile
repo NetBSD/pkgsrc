@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/07/26 06:47:12 recht Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/16 06:57:44 jlam Exp $
 #
 
 DISTNAME=	pgaccess-0.98.8
@@ -20,6 +20,8 @@ PGTKSH=		${PREFIX}/bin/pgtksh
 PGACCESS_HOME=	${PREFIX}/share/pgaccess
 HTMLDIR=	${PREFIX}/share/doc/html/pgaccess
 EGDIR=		${PREFIX}/share/examples/pgaccess
+
+INSTALLATION_DIRS=	bin
 
 do-configure:
 	for file in ${WRKSRC}/pgaccess.tcl; do				\

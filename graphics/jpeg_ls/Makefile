@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:05 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/16 06:57:58 jlam Exp $
 #
 
 DISTNAME=		jpeg_ls_v2.2
@@ -14,6 +14,7 @@ BUILD_DIRS=		${WRKSRC}/Decoder ${WRKSRC}/Encoder
 MAKEFILE=		makefile
 
 LICENSE=		no-commercial-use
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Decoder/locod ${PREFIX}/bin

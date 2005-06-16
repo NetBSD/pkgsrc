@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/03 15:14:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:52 jlam Exp $
 
 DISTNAME=		Kappa20-0.394
 PKGNAME=		ja-kappa20-0.394
@@ -23,6 +23,8 @@ FILES_SUBST+=		ALIAS_KAPPA=${ALIAS_KAPPA}
 
 # do not build experimental JIS X 0213 font.
 BUILD_TARGET=		default
+
+INSTALLATION_DIRS=	share/doc
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/README.Kappa20; \

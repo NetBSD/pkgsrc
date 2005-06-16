@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/23 08:48:52 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:40 jlam Exp $
 #
 
 DISTNAME=		xmms-meta-timidity-0.2
@@ -17,6 +17,7 @@ DEPENDS+=		xmms-meta-input-[0-9]*:../../audio/xmms-meta-input
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		# empty
 NO_CHECKSUM=		yes
+INSTALLATION_DIRS=	lib/xmms/Input/Meta
 
 do-build:
 	${SED} <${FILESDIR}/timidity.sh >${WRKSRC}/timidity.sh \

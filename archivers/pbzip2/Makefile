@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/10 00:01:07 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:37 jlam Exp $
 #
 
 DISTNAME=		pbzip2-0.9.2
@@ -13,6 +13,8 @@ PTHREAD_AUTO_VARS=	yes
 PTHREAD_OPTS+=		require
 MAKE_FLAGS+=		LDADD=${LIBS:Q}" -lbz2"
 MAKEFILE=		${FILESDIR}/Makefile
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pbzip2 ${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:30:06 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:45 jlam Exp $
 #
 
 DISTNAME=	cvs2p4-2.3.3
@@ -31,6 +31,8 @@ FILES_SUBST+=	P4PORT=${P4PORT:Q}
 
 CVS2P4_INLIB=	$$Mydir/lib/util\.pl
 CVS2P4_OUTLIB=	${LIBDIR}/${PKGBASE}-util.pl
+
+INSTALLATION_DIRS=	bin ${LIBDIR}
 
 do-configure:
 	for f in ${WRKSRC}/bin/*; do \

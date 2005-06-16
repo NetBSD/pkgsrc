@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/03/24 21:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/16 06:57:48 jlam Exp $
 
 DISTNAME=	optparse-0.12
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -20,7 +20,10 @@ EXAMPLES=	cmd-ls.rb cmd.rb getopts.test.en opttest.rb \
 		rd/jfold.rb
 EXAMPLES_JA=	getopts.test
 
+INSTALLATION_DIRS=	man/man3
+
 do-install:
+	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/optparse.rb ${RUBY_SITELIBDIR}
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/optparse
 .for f in ${DOCS}

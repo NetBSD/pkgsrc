@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/01 18:02:45 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/16 06:57:47 jlam Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-idle-0
@@ -31,6 +31,7 @@ PYTHON_VERSIONS_ACCEPTED=	24 23 22 21 20
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Tools/idle/*
 PYTHON_PATCH_SCRIPTS=	Tools/idle/idle.py
+INSTALLATION_DIRS=	bin ${PYSITELIB}
 
 do-build:
 	${PYTHONBIN} ${LOCALBASE}/${PYLIB}/compileall.py ${WRKSRC}/Tools/idle
@@ -51,6 +52,7 @@ do-install:
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Tools/scripts/idle
 PYTHON_PATCH_SCRIPTS= Tools/scripts/idle
 NO_BUILD=	yes
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Tools/scripts/idle \

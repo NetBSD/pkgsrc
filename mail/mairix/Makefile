@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/25 00:19:40 simonb Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/16 06:58:03 jlam Exp $
 #
 
 DISTNAME=		mairix-0.15.1
@@ -20,6 +20,8 @@ INFO_FILES=		mairix.info
 BINDIR=			${PREFIX}/bin
 INFODIR=		${PREFIX}/info
 HTMLDIR=		${PREFIX}/share/doc/html/mairix
+
+INSTALLATION_DIRS=	bin info
 
 pre-build:
 			@cd ${WRKSRC}; \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/29 07:45:32 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/16 06:57:44 jlam Exp $
 #
 
 DISTNAME=	geneweb-4.10
@@ -31,6 +31,8 @@ CONFLICTS+=	coreutils-[0-9]*
 # Stripped OCAML binaries don't seem to work nolonger
 # Installing unstripped binaries until this is fixed
 INSTALL_PROGRAM =  ${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+
+INSTALLATION_DIRS=	bin libexec sbin
 
 pre-configure:
 		if ! ${TEST} -x ${LOCALBASE}/bin/ocamlc.opt; then \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/05/22 20:07:40 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/16 06:57:40 jlam Exp $
 
 DISTNAME=	nut-10.18
 CATEGORIES=	biology
@@ -11,6 +11,8 @@ COMMENT=	Record what you eat and analyze your meals
 
 BUILD_TARGET=	nut
 USE_TOOLS+=	gmake
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nut ${PREFIX}/bin

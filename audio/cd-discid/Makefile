@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/30 02:19:16 snj Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:38 jlam Exp $
 
 DISTNAME=	cd-discid_0.9.orig
 PKGNAME=	cd-discid-0.9
@@ -9,6 +9,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Read CD to obtain CDDB discid information
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-build:
 	cd ${WRKSRC} && ${CC} -O -o cd-discid cd-discid.c

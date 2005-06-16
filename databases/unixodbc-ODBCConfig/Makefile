@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:42 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/16 06:57:44 jlam Exp $
 
 PKGNAME=		unixodbc-ODBCConfig-${ODBC_BASE_VERS}
 PKGREVISION=		4
@@ -27,6 +27,8 @@ _AC_CV_HAVE_X?=		have_x=yes					\
 _AC_CV_HAVE_QT?=	have_qt=yes					\
 			ac_qt_includes=${QTDIR}/include			\
 			ac_qt_libraries=${QTDIR}/lib
+
+INSTALLATION_DIRS=	bin
 
 post-patch: fix-driver-installation
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:08 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/16 06:57:43 jlam Exp $
 #
 
 DISTNAME=	latex2rtf-1.8aa
@@ -16,6 +16,8 @@ MAKE_FLAGS+=	XCFLAGS="${CFLAGS}"
 INFO_FILES=	latex2rtf.info
 SUPPORT_FILES=	direct.cfg fonts.cfg ignore.cfg english.cfg german.cfg \
 		spanish.cfg
+
+INSTALLATION_DIRS=	bin ${INFO_DIR} man/man1
 
 post-extract:
 	${CP} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.in

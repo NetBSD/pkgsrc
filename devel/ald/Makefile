@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:14:53 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:45 jlam Exp $
 #
 
 DISTNAME=	ald-0.0.19d
@@ -14,6 +14,8 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	YES
+
+INSTALLATION_DIRS=	bin man/man8
 
 #do-build:
 #	cd ${WRKSRC} && ${MAKE_PROGRAM} -f ${MAKEFILE} ${BUILD_TARGET}

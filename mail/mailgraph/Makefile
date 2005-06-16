@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:20 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/16 06:58:02 jlam Exp $
 #
 
 DISTNAME=	mailgraph-1.10
@@ -48,6 +48,7 @@ SUBST_SED.defs+=	-e 's,/var/log/syslog,${VARBASE}/log/maillog,g'
 #
 SUBST_MESSAGE.defs=	"Fixing defaults"
 
+INSTALLATION_DIRS=	${CGIDIR} sbin
 do-build:
 
 do-configure:

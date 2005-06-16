@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/04/11 21:45:48 tv Exp $
+# $NetBSD: Makefile,v 1.30 2005/06/16 06:57:53 jlam Exp $
 #
 
 DISTNAME=	cgoban-unix-2.6.12
@@ -15,6 +15,8 @@ WRKSRC=		${WRKDIR}/cgoban
 NO_BUILD=	yes
 USE_JAVA2=	yes
 USE_JAVA=	run
+
+INSTALLATION_DIRS=	bin libexec
 
 do-configure:
 	${SED}	-e 's|\(_DIR=\).|\1${PREFIX}/libexec|'			\

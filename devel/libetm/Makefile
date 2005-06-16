@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/20 12:13:28 agc Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/16 06:57:46 jlam Exp $
 #
 
 DISTNAME=		ETM-1.09
@@ -11,6 +11,7 @@ HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Exception and termination manager
 
 WRKSRC=			${WRKDIR}/etm
+INSTALLATION_DIRS=	include lib
 
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.bak

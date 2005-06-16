@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/05/31 10:01:37 dillo Exp $
+# $NetBSD: Makefile,v 1.47 2005/06/16 06:58:02 jlam Exp $
 
 DISTNAME=	cue-snap-20050131
 PKGNAME=	cue-20050131
@@ -37,6 +37,8 @@ CONFIGURE_ARGS+=	--enable-idea
 
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+
+INSTALLATION_DIRS=	bin
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

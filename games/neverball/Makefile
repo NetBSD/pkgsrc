@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:02:51 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:55 jlam Exp $
 #
 
 DISTNAME=	neverball-1.2.2
@@ -17,6 +17,8 @@ BUILDLINK_TRANSFORM.SDL+=	-e "s|/SDL/|/|g"
 BUILDLINK_TRANSFORM.SDL_ttf+=	-e "s|/SDL/|/|g"
 
 SHAREDIR=	${PREFIX}/share/${PKGBASE}
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_DATA_DIR} ${SHAREDIR}

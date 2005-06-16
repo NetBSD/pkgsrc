@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/06/01 18:02:40 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/16 06:57:41 jlam Exp $
 
 DISTNAME=		qcad-1.5.4-src
 PKGNAME=		qcad-1.5.4
@@ -13,6 +13,7 @@ COMMENT=		2D CAD System
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 MAKE_ENV+=		QTDIR=${BUILDLINK_PREFIX.qt3}
+INSTALLATION_DIRS=	bin
 
 do-configure:
 	for f in rappwin.cpp relement.cpp rfonts.cpp rprgdef.h; do	\

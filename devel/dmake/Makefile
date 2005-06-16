@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/03 15:14:54 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:45 jlam Exp $
 #
 
 DISTNAME=	dmake-v4.1-src-export.all-unknown-all
@@ -15,6 +15,8 @@ COMMENT=	Portable make supported by many platforms
 MAKEFILE=	makefile
 BUILD_TARGET=	linux
 WRKSRC=		${WRKDIR}/dmake
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-configure:
 	cd ${WRKSRC} && ${RM} unix/bsd43/dirent.h &&		\

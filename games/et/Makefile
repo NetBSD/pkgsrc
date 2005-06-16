@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/16 01:15:31 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:54 jlam Exp $
 #
 
 DISTNAME=       et-linux-2.56-2.x86
@@ -26,6 +26,8 @@ EXTRACT_CMD=	${TAIL} +356 ${DOWNLOADED_DISTFILE} | ${GTAR} xzf - \
 DEPENDS+=       suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
 .include "../../emulators/suse_linux/Makefile.application"
 .endif
+
+INSTALLATION_DIRS=	bin
 
 pre-extract:
 	${MKDIR} ${WRKSRC}

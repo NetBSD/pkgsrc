@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/22 19:11:12 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/16 06:57:41 jlam Exp $
 #
 
 DISTNAME=	fastcap-2.0-18Sep92
@@ -22,6 +22,8 @@ CONFIGURE_ARGS=		4
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
 .endif
+
+INSTALLATION_DIRS=	bin
 
 post-patch:
 	${CHMOD} 755 ${WRKSRC}/config

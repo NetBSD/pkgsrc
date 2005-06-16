@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/06/01 18:02:48 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/06/16 06:57:51 jlam Exp $
 
 DISTNAME=	uae-0.8.22
 PKGREVISION=	2
@@ -36,6 +36,8 @@ post-configure:
 .if ${OPSYS} == NetBSD && exists(/usr/include/sys/statvfs.h)
 CONFIGURE_ENV+=	cv_func_getmntinfo=yes fu_cv_sys_mounted_getmntinfo=yes
 .endif
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} readdisk uae ${PREFIX}/bin

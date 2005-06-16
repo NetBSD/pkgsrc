@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:54 jlam Exp $
 
 DISTNAME=	cube_2004_05_22
 PKGNAME=	cube-20040522
@@ -18,6 +18,8 @@ CUBE_DATA=	${PREFIX}/share/cube
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	@unzip -q -a -o ${WRKSRC}/source/${DISTNAME}_src.zip -d ${WRKSRC}/source/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:00 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/16 06:57:40 jlam Exp $
 #
 
 DISTNAME=		xwave2
@@ -10,6 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Audio player/recorder/editor for the X Window System
 
 USE_IMAKE=		YES
+INSTALLATION_DIRS=	bin lib/X11/app-defaults
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/xwave ${PREFIX}/bin

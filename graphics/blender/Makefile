@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/06/02 14:14:43 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2005/06/16 06:57:57 jlam Exp $
 #
 
 DISTNAME=		blender-2.36
@@ -21,6 +21,8 @@ USE_LIBTOOL=		YES
 LDFLAGS+=		-lcrypto
 
 .include "options.mk"
+
+INSTALLATION_DIRS=	bin
 
 post-patch:
 	${MV} ${WRKSRC}/SConstruct ${WRKSRC}/SConstruct.orig

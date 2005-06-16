@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/04/11 21:45:56 tv Exp $
+# $NetBSD: Makefile,v 1.27 2005/06/16 06:57:55 jlam Exp $
 
 DISTNAME=	omega-0.90.4-src
 PKGNAME=	omega-0.90.4
@@ -20,6 +20,8 @@ FILEMODE=	0660
 .else
 FILEMODE=	0600
 .endif
+
+INSTALLATION_DIRS=	bin man/man6
 
 do-install:
 	${INSTALL_GAME} ${WRKSRC}/omega ${PREFIX}/bin/Omega

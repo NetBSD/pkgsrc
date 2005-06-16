@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:17 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/16 06:58:02 jlam Exp $
 #
 
 DISTNAME=	autorespond-2.0.5
@@ -16,6 +16,8 @@ SUBST_CLASSES+=		qmaildir
 SUBST_STAGE.qmaildir=	do-configure
 SUBST_FILES.qmaildir=	autorespond.c
 SUBST_SED.qmaildir=	-e 's|/var/qmail|${QMAILDIR}|g'
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/autorespond ${PREFIX}/bin

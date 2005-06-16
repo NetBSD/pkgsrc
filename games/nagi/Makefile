@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:02 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:55 jlam Exp $
 #
 
 DISTNAME=		nagi_src_-_2002-11-14
@@ -16,6 +16,8 @@ USE_TOOLS+=	gmake
 MAKEFILE=	Makefile.linux
 
 NAGILIB=	${PREFIX}/lib/nagi
+
+INSTALLATION_DIRS=	bin
 
 post-build:
 	${SED} "s|@PREFIX@|${PREFIX}|" <${FILESDIR}/nagi.sh >${WRKDIR}/nagi.sh

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/01 18:02:48 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/16 06:57:51 jlam Exp $
 #
 
 DISTNAME=		xm71010s
@@ -24,6 +24,7 @@ EXTRACT_CMD=		lha xqt ${DOWNLOADED_DISTFILE}
 WRKSRC=			${WRKDIR}/vm
 NO_CONFIGURE=		yes
 MAKEFILE=		makefile.x11
+INSTALLATION_DIRS=	bin
 
 .include "../../mk/x11.buildlink3.mk"
 

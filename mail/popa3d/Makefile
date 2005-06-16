@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/05/31 17:46:45 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2005/06/16 06:58:03 jlam Exp $
 #
 
 DISTNAME=	popa3d-1.0
@@ -31,6 +31,8 @@ SUBST_STAGE.params=	post-patch
 SUBST_FILES.params=	params.h
 SUBST_SED.params=	-e 's,/var/empty,${PREFIX}/share/empty,'	\
 			-e 's,@@POPA3D_USER@@,"${POPA3D_USER}",'
+
+INSTALLATION_DIRS=	man/man8 sbin
 
 do-install:
 	${INSTALL_PROGRAM} -m 500 ${WRKSRC}/popa3d ${PREFIX}/sbin

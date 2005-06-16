@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/01 18:02:39 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/16 06:57:40 jlam Exp $
 
 DISTNAME=	wmusic-1.5.0
 PKGREVISION=	1
@@ -11,6 +11,8 @@ COMMENT=	WindowMaker dockable remote for XMMS
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/wmusic ${PREFIX}/bin

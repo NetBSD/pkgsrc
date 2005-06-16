@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/03/12 00:02:38 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:41 jlam Exp $
 #
 
 DISTNAME=	mpac-0.2.2
@@ -10,6 +10,8 @@ MAINTAINER=	dmcmahill@NetBSD.org
 COMMENT=	Microstrip Patch Antenna Calculator
 
 DEPENDS+=	tk>=8.1:../../x11/tk
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	${SED} 's;patch.gif;${PREFIX}/share/mpac/patch.gif;g' ${WRKSRC}/mpac.tcl > ${WRKSRC}/mpac

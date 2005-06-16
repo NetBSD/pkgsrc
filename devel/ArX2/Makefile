@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/10 07:23:25 recht Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:44 jlam Exp $
 #
 
 DISTNAME=	ArX-2.2.2
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	ARXPYTHON=/bin/true
 IMG_FILES=	ArX001.png ArX002.png ArX003.png ArX004.png
 DOC_FILES=	ArX.html ArX.pdf ${IMG_FILES}
 DOCDIR=		${PREFIX}/share/doc/ArX
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} &&	\

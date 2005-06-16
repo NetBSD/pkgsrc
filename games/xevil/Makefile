@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/01 18:02:52 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/16 06:57:56 jlam Exp $
 
 DISTNAME=	xevilsrc2.02r2
 PKGNAME=	xevil-2.02
@@ -16,6 +16,8 @@ BUILD_TARGET=	pkgsrc
 WRKSRC=		${WRKDIR}
 
 MAKE_ENV+=	HOSTTYPE="pkgsrc"
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/x11/PKGSRC/xevil ${PREFIX}/bin/xevil

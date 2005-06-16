@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/04/11 21:45:16 tv Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/06/16 06:57:44 jlam Exp $
 
 DISTNAME=	sqsh-2.1-src
 CATEGORIES=	databases
@@ -37,6 +37,8 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${_SYBASE}/lib
 CONFIGURE_ENV+=		SYBASE="${_SYBASE}"
 CONFIGURE_ENV+=		INCDIRS="${BUILDLINK_PREFIX.readline}/include"
 CONFIGURE_ENV+=		LIBDIRS="${BUILDLINK_PREFIX.readline}/lib"
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/sqsh ${PREFIX}/bin
