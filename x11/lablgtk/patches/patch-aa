@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.5 2005/06/16 13:09:34 hira Exp $
+
 --- src/Makefile.orig	2003-05-15 16:17:53.000000000 +0200
 +++ src/Makefile
 @@ -137,32 +137,39 @@ testcc: lablgladecc lablgtktop
