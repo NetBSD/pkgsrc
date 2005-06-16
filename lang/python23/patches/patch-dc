@@ -1,3 +1,5 @@
+$NetBSD: patch-dc,v 1.2 2005/06/16 12:44:34 hira Exp $
+
 --- Modules/posixmodule.c.orig	Thu Nov 25 12:56:28 2004
 +++ Modules/posixmodule.c	Thu Nov 25 12:57:24 2004
 @@ -304,7 +304,7 @@
