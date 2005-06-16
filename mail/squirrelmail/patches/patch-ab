@@ -1,0 +1,651 @@
+$NetBSD: patch-ab,v 1.8 2005/06/16 07:30:40 martti Exp $
+
+--- functions/addressbook.php	Mon Dec 27 16:03:42 2004
++++ functions/addressbook.php	Wed Jun 15 23:50:03 2005
+@@ -108,7 +108,7 @@
+                 if (!$r && $showerr) {
+                     printf( '&nbsp;' . _("Error initializing LDAP server %s:") .
+                             "<br />\n", $param['host']);
+-                    echo '&nbsp;' . $abook->error;
++                    echo '&nbsp;' . htmlspecialchars($abook->error);
+                     exit;
+                 }
+             }
+@@ -239,7 +239,7 @@
+                 if (is_array($res)) {
+                     $ret = array_merge($ret, $res);
+                 } else {
+-                    $this->error .= "<br />\n" . $backend->error;
++                    $this->error .= "\n" . $backend->error;
+                     $failed++;
+                 }
+             }
+@@ -255,7 +255,7 @@
+ 
+             $ret = $this->backends[$bnum]->search($expression);
+             if (!is_array($ret)) {
+-                $this->error .= "<br />\n" . $this->backends[$bnum]->error;
++                $this->error .= "\n" . $this->backends[$bnum]->error;
+                 $ret = FALSE;
+             }
+         }
+diff -urw squirrelmail-1.4.4.orig/functions/mime.php squirrelmail-1.4.4/functions/mime.php
+--- functions/mime.php	Mon Jan 10 19:52:48 2005
++++ functions/mime.php	Wed Jun 15 23:50:03 2005
+@@ -1388,12 +1388,33 @@
+                 }
+             }
+         }
++
++        /**
++         * Replace empty src tags with the blank image.  src is only used
++         * for frames, images, and image inputs.  Doing a replace should
++         * not affect them working as should be, however it will stop
++         * IE from being kicked off when src for img tags are not set
++         */
++        if (($attname == 'src') && ($attvalue == '""')) {
++            $attary{$attname} = '"' . SM_PATH . 'images/blank.png"';
++        }
++
+         /**
+          * Turn cid: urls into http-friendly ones.
+          */
+         if (preg_match("/^[\'\"]\s*cid:/si", $attvalue)){
+             $attary{$attname} = sq_cid2http($message, $id, $attvalue, $mailbox);
+         }
++
++        /**
++         * "Hack" fix for Outlook using propriatary outbind:// protocol in img tags.
++         * One day MS might actually make it match something useful, for now, falling
++         * back to using cid2http, so we can grab the blank.png.
++         */
++        if (preg_match("/^[\'\"]\s*outbind:\/\//si", $attvalue)) {
++            $attary{$attname} = sq_cid2http($message, $id, $attvalue, $mailbox);
++        }
++
+     }
+     /**
+      * See if we need to append any attributes to this tag.
+@@ -1408,7 +1429,7 @@
+ 
+ /**
+  * This function edits the style definition to make them friendly and
+- * usable in squirrelmail.
++ * usable in SquirrelMail.
+  *
+  * @param  $message  the message object
+  * @param  $id       the message id
+@@ -1436,27 +1457,54 @@
+     /**
+      * Fix url('blah') declarations.
+      */
+-    $content = preg_replace("|url\s*\(\s*([\'\"])\s*\S+script\s*:.*?([\'\"])\s*\)|si",
+-                            "url(\\1$secremoveimg\\2)", $content);
++    //   $content = preg_replace("|url\s*\(\s*([\'\"])\s*\S+script\s*:.*?([\'\"])\s*\)|si",
++    //                           "url(\\1$secremoveimg\\2)", $content);
++    // remove NUL
++    $content = str_replace("\0", "", $content);
++    // NB I insert NUL characters to keep to avoid an infinite loop. They are removed after the loop.
++    while (preg_match("/url\s*\(\s*[\'\"]?([^:]+):(.*)?[\'\"]?\s*\)/si", $content, $matches)) {
++        $sProto = strtolower($matches[1]);
++        switch ($sProto) {
+     /**
+      * Fix url('https*://.*) declarations but only if $view_unsafe_images
+      * is false.
+      */
++          case 'https':
++          case 'http':
+     if (!$view_unsafe_images){
+-        $content = preg_replace("|url\s*\(\s*([\'\"])\s*https*:.*?([\'\"])\s*\)|si",
+-                                "url(\\1$secremoveimg\\2)", $content);
++                $sExpr = "/url\s*\(\s*([\'\"])\s*$sProto*:.*?([\'\"])\s*\)/si";
++                $content = preg_replace($sExpr, "u\0r\0l(\\1$secremoveimg\\2)", $content);
+     }
+-
++            break;
+     /**
+      * Fix urls that refer to cid:
+      */
+-    while (preg_match("|url\s*\(\s*([\'\"]\s*cid:.*?[\'\"])\s*\)|si",
+-                      $content, $matches)){
+-        $cidurl = $matches{1};
++          case 'cid':
++            $cidurl = 'cid:'. $matches[2];
+         $httpurl = sq_cid2http($message, $id, $cidurl, $mailbox);
+         $content = preg_replace("|url\s*\(\s*$cidurl\s*\)|si",
+-                                "url($httpurl)", $content);
++                                "u\0r\0l($httpurl)", $content);
++            break;
++          default:
++            /**
++             * replace url with protocol other then the white list
++             * http,https and cid by an empty string.
++             */
++            $content = preg_replace("/url\s*\(\s*[\'\"]?([^:]+):(.*)?[\'\"]?\s*\)/si",
++                                "", $content);
++            break;
+     }
++        break;
++    }
++    // remove NUL
++    $content = str_replace("\0", "", $content);
++
++   /**
++    * Remove any backslashes, entities, and extraneous whitespace.
++    */
++    $contentTemp = $content;
++    sq_defang($contentTemp);
++    sq_unspace($contentTemp);
+ 
+     /**
+      * Fix stupid css declarations which lead to vulnerabilities
+@@ -1467,10 +1515,16 @@
+                      '/binding/i',
+                      '/include-source/i');
+     $replace = Array('idiocy', 'idiocy', 'idiocy', 'idiocy');
+-    $content = preg_replace($match, $replace, $content);
++    $contentNew = preg_replace($match, $replace, $contentTemp);
++    if ($contentNew !== $contentTemp) {
++        // insecure css declarations are used. From now on we don't care
++        // anymore if the css is destroyed by sq_deent, sq_unspace or sq_unbackslash
++        $content = $contentNew;
++    }
+     return array($content, $newpos);
+ }
+ 
++
+ /**
+  * This function converts cid: url's into the ones that can be viewed in
+  * the browser.
+@@ -1492,15 +1546,46 @@
+         $quotchar = '';
+     }
+     $cidurl = substr(trim($cidurl), 4);
++
++    $match_str = '/\{.*?\}\//';
++    $str_rep = '';
++    $cidurl = preg_replace($match_str, $str_rep, $cidurl);
++
+     $linkurl = find_ent_id($cidurl, $message);
+     /* in case of non-save cid links $httpurl should be replaced by a sort of
+        unsave link image */
+     $httpurl = '';
+-    if ($linkurl) {
++
++    /**
++     * This is part of a fix for Outlook Express 6.x generating
++     * cid URLs without creating content-id headers. These images are
++     * not part of the multipart/related html mail. The html contains
++     * <img src="cid:{some_id}/image_filename.ext"> references to
++     * attached images with as goal to render them inline although
++     * the attachment disposition property is not inline.
++     */
++
++    if (empty($linkurl)) {
++        if (preg_match('/{.*}\//', $cidurl)) {
++            $cidurl = preg_replace('/{.*}\//','', $cidurl);
++            if (!empty($cidurl)) {
++                $linkurl = find_ent_id($cidurl, $message);
++            }
++        }
++    }
++
++    if (!empty($linkurl)) {
+         $httpurl = $quotchar . SM_PATH . 'src/download.php?absolute_dl=true&amp;' .
+                    "passed_id=$id&amp;mailbox=" . urlencode($mailbox) .
+                    '&amp;ent_id=' . $linkurl . $quotchar;
++    } else {
++        /**
++         * If we couldn't generate a proper img url, drop in a blank image
++         * instead of sending back empty, otherwise it causes unusual behaviour
++         */
++        $httpurl = $quotchar . SM_PATH . 'images/blank.png';
+     }
++
+     return $httpurl;
+ }
+ 
+@@ -1526,8 +1611,7 @@
+             $attvalue = str_replace($quotchar, "", $attvalue);
+             switch ($attname){
+                 case 'background':
+-                    $attvalue = sq_cid2http($message, $id,
+-                                            $attvalue, $mailbox);
++                    $attvalue = sq_cid2http($message, $id, $attvalue, $mailbox);
+                     $styledef .= "background-image: url('$attvalue'); ";
+                     break;
+                 case 'bgcolor':
+@@ -1754,6 +1838,7 @@
+                                   "embed",
+                                   "title",
+                                   "frameset",
++            "xmp",
+                                   "xml"
+                                   );
+ 
+@@ -1761,7 +1846,8 @@
+                                 "img",
+                                 "br",
+                                 "hr",
+-                                "input"
++            "input",
++            "outbind"
+                                 );
+ 
+     $force_tag_closing = true;
+@@ -1816,6 +1902,7 @@
+                                 "/binding/i",
+                                 "/behaviou*r/i",
+                                 "/include-source/i",
++                    "/position\s*:\s*absolute/i",
+                                 "/url\s*\(\s*([\'\"])\s*\S+script\s*:.*([\'\"])\s*\)/si",
+                                 "/url\s*\(\s*([\'\"])\s*mocha\s*:.*([\'\"])\s*\)/si",
+                                 "/url\s*\(\s*([\'\"])\s*about\s*:.*([\'\"])\s*\)/si",
+@@ -1826,6 +1913,7 @@
+                                 "idiocy",
+                                 "idiocy",
+                                 "idiocy",
++                    "",
+                                 "url(\\1#\\1)",
+                                 "url(\\1#\\1)",
+                                 "url(\\1#\\1)",
+@@ -1856,7 +1944,7 @@
+ 
+     $add_attr_to_tag = Array(
+         "/^a$/i" =>
+-            Array('target'=>'"_new"',
++            Array('target'=>'"_blank"',
+                   'title'=>'"'._("This external link will open in a new window").'"'
+             )
+     );
+diff -urw squirrelmail-1.4.4.orig/functions/page_header.php squirrelmail-1.4.4/functions/page_header.php
+--- functions/page_header.php	Mon Dec 27 22:08:58 2004
++++ functions/page_header.php	Wed Jun 15 23:50:03 2005
+@@ -275,6 +275,7 @@
+                                  : html_tag( 'td', '', 'left' ) )
+         . "\n";
+     $urlMailbox = urlencode($mailbox);
++    $startMessage = (int)$startMessage;
+     echo makeComposeLink('src/compose.php?mailbox='.$urlMailbox.'&amp;startMessage='.$startMessage);
+     echo "&nbsp;&nbsp;\n";
+     displayInternalLink ('src/addressbook.php', _("Addresses"));
+diff -urw squirrelmail-1.4.4.orig/plugins/calendar/calendar.php squirrelmail-1.4.4/plugins/calendar/calendar.php
+--- plugins/calendar/calendar.php	Mon Dec 27 16:03:49 2004
++++ plugins/calendar/calendar.php	Wed Jun 15 23:51:15 2005
+@@ -28,17 +28,17 @@
+ require_once(SM_PATH . 'functions/html.php');
+ 
+ /* get globals */
+-
+-if (isset($_GET['month'])) {
++unset($month, $year);
++if (isset($_GET['month']) && is_numeric($_GET['month'])) {
+     $month = $_GET['month'];
+ }
+-if (isset($_GET['year'])) {
++if (isset($_GET['year']) && is_numeric($_GET['year'])) {
+     $year = $_GET['year'];
+ }
+-if (isset($_POST['year'])) {
++if (isset($_POST['year']) && is_numeric($_POST['year'])) {
+     $year = $_POST['year'];
+ }
+-if (isset($_POST['month'])) {
++if (isset($_POST['month']) && is_numeric($_POST['month'])) {
+     $month = $_POST['month'];
+ }
+ /* got 'em */
+diff -urw squirrelmail-1.4.4.orig/plugins/calendar/day.php squirrelmail-1.4.4/plugins/calendar/day.php
+--- plugins/calendar/day.php	Mon Dec 27 16:03:49 2004
++++ plugins/calendar/day.php	Wed Jun 15 23:51:52 2005
+@@ -29,22 +29,23 @@
+ require_once(SM_PATH . 'functions/html.php');
+ 
+ /* get globals */
+-if (isset($_GET['year'])) {
++unset($year, $month, $day);
++if (isset($_GET['year']) && is_numeric($_GET['year'])) {
+     $year = $_GET['year'];
+ }
+-elseif (isset($_POST['year'])) {
++elseif (isset($_POST['year']) && is_numeric($_POST['year'])) {
+     $year = $_POST['year'];
+ }
+-if (isset($_GET['month'])) {
++if (isset($_GET['month']) && is_numeric($_GET['month'])) {
+     $month = $_GET['month'];
+ }
+-elseif (isset($_POST['month'])) {
++elseif (isset($_POST['month']) && is_numeric($_POST['month'])) {
+     $month = $_POST['month'];
+ }
+-if (isset($_GET['day'])) {
++if (isset($_GET['day']) && is_numeric($_GET['day'])) {
+     $day = $_GET['day'];
+ }
+-elseif (isset($_POST['day'])) {
++elseif (isset($_POST['day']) && is_numeric($_POST['day'])) {
+     $day = $_POST['day'];
+ }
+ 
+diff -urw squirrelmail-1.4.4.orig/plugins/calendar/event_create.php squirrelmail-1.4.4/plugins/calendar/event_create.php
+--- plugins/calendar/event_create.php	Mon Dec 27 16:03:49 2004
++++ plugins/calendar/event_create.php	Wed Jun 15 23:52:34 2005
+@@ -28,41 +28,42 @@
+ require_once(SM_PATH . 'functions/html.php');
+ 
+ /* get globals */
+-
+-if (isset($_POST['year'])) {
++unset($year, $month, $day, $hour, $event_hour, $event_minute,
++    $event_length, $event_priority);
++if (isset($_POST['year']) && is_numeric($_POST['year'])) {
+     $year = $_POST['year'];
+ }
+-elseif (isset($_GET['year'])) {
++elseif (isset($_GET['year']) && is_numeric($_GET['year'])) {
+     $year = $_GET['year'];
+ }
+-if (isset($_POST['month'])) {
++if (isset($_POST['month']) && is_numeric($_POST['month'])) {
+     $month = $_POST['month'];
+ }
+-elseif (isset($_GET['month'])) {
++elseif (isset($_GET['month']) && is_numeric($_GET['month'])) {
+     $month = $_GET['month'];
+ }
+-if (isset($_POST['day'])) {
++if (isset($_POST['day']) && is_numeric($_POST['day'])) {
+     $day = $_POST['day'];
+ }
+-elseif (isset($_GET['day'])) {
++elseif (isset($_GET['day']) && is_numeric($_GET['day'])) {
+     $day = $_GET['day'];
+ }
+-if (isset($_POST['hour'])) {
++if (isset($_POST['hour']) && is_numeric($_POST['hour'])) {
+     $hour = $_POST['hour'];
+ }
+-elseif (isset($_GET['hour'])) {
++elseif (isset($_GET['hour']) && is_numeric($_GET['hour'])) {
+     $hour = $_GET['hour'];
+ }
+-if (isset($_POST['event_hour'])) {
++if (isset($_POST['event_hour']) && is_numeric($_POST['event_hour'])) {
+     $event_hour = $_POST['event_hour'];
+ }
+-if (isset($_POST['event_minute'])) {
++if (isset($_POST['event_minute']) && is_numeric($_POST['event_minute'])) {
+     $event_minute = $_POST['event_minute'];
+ }
+-if (isset($_POST['event_length'])) {
++if (isset($_POST['event_length']) && is_numeric($_POST['event_length'])) {
+     $event_length = $_POST['event_length'];
+ }
+-if (isset($_POST['event_priority'])) {
++if (isset($_POST['event_priority']) && is_numeric($_POST['event_priority'])) {
+     $event_priority = $_POST['event_priority'];
+ }
+ if (isset($_POST['event_title'])) {
+diff -urw squirrelmail-1.4.4.orig/plugins/calendar/event_edit.php squirrelmail-1.4.4/plugins/calendar/event_edit.php
+--- plugins/calendar/event_edit.php	Mon Dec 27 16:03:49 2004
++++ plugins/calendar/event_edit.php	Wed Jun 15 23:53:22 2005
+@@ -29,26 +29,27 @@
+ 
+ 
+ /* get globals */
+-
++unset($event_year, $event_month, $event_day, $event_hour, $event_minute,
++    $event_length, $event_priority, $year, $month, $day, $hour, $minute);
+ if (isset($_POST['updated'])) {
+     $updated = $_POST['updated'];
+ }
+-if (isset($_POST['event_year'])) {
++if (isset($_POST['event_year']) && is_numeric($_POST['event_year'])) {
+     $event_year = $_POST['event_year'];
+ }
+-if (isset($_POST['event_month'])) {
++if (isset($_POST['event_month']) && is_numeric($_POST['event_month'])) {
+     $event_month = $_POST['event_month'];
+ }
+-if (isset($_POST['event_day'])) {
++if (isset($_POST['event_day']) && is_numeric($_POST['event_day'])) {
+     $event_day = $_POST['event_day'];
+ }
+-if (isset($_POST['event_hour'])) {
++if (isset($_POST['event_hour']) && is_numeric($_POST['event_hour'])) {
+     $event_hour = $_POST['event_hour'];
+ }
+-if (isset($_POST['event_minute'])) {
++if (isset($_POST['event_minute']) && is_numeric($_POST['event_minute'])) {
+     $event_minute = $_POST['event_minute'];
+ }
+-if (isset($_POST['event_length'])) {
++if (isset($_POST['event_length']) && is_numeric($_POST['event_length'])) {
+     $event_length = $_POST['event_length'];
+ }
+ if (isset($_POST['event_title'])) {
+@@ -60,40 +61,40 @@
+ if (isset($_POST['send'])) {
+     $send = $_POST['send'];
+ }
+-if (isset($_POST['event_priority'])) {
++if (isset($_POST['event_priority']) && is_numeric($_POST['event_priority'])) {
+     $event_priority = $_POST['event_priority'];
+ }
+ if (isset($_POST['confirmed'])) {
+     $confirmed = $_POST['confirmed'];
+ }
+-if (isset($_POST['year'])) {
++if (isset($_POST['year']) && is_numeric($_POST['year'])) {
+     $year = $_POST['year'];
+ }
+-elseif (isset($_GET['year'])) {
++elseif (isset($_GET['year']) && is_numeric($_GET['year'])) {
+     $year = $_GET['year'];
+ }
+-if (isset($_POST['month'])) {
++if (isset($_POST['month']) && is_numeric($_POST['month'])) {
+     $month = $_POST['month'];
+ }
+-elseif (isset($_GET['month'])) {
++elseif (isset($_GET['month']) && is_numeric($_GET['month'])) {
+     $month = $_GET['month'];
+ }
+-if (isset($_POST['day'])) {
++if (isset($_POST['day']) && is_numeric($_POST['day'])) {
+     $day = $_POST['day'];
+ }
+-elseif (isset($_GET['day'])) {
++elseif (isset($_GET['day']) && is_numeric($_GET['day'])) {
+     $day = $_GET['day'];
+ }
+-if (isset($_POST['hour'])) {
++if (isset($_POST['hour']) && is_numeric($_POST['hour'])) {
+     $hour = $_POST['hour'];
+ }
+-elseif (isset($_GET['hour'])) {
++elseif (isset($_GET['hour']) && is_numeric($_GET['hour'])) {
+     $hour = $_GET['hour'];
+ }
+-if (isset($_POST['minute'])) {
++if (isset($_POST['minute']) && is_numeric($_POST['minute'])) {
+     $minute = $_POST['minute'];
+ }
+-elseif (isset($_GET['minute'])) {
++elseif (isset($_GET['minute']) && is_numeric($_GET['minute'])) {
+     $minute = $_GET['minute'];
+ }
+ /* got 'em */
+diff -urw squirrelmail-1.4.4.orig/plugins/filters/options.php squirrelmail-1.4.4/plugins/filters/options.php
+--- plugins/filters/options.php	Mon Dec 27 16:03:57 2004
++++ plugins/filters/options.php	Wed Jun 15 23:50:03 2005
+@@ -189,7 +189,7 @@
+                 html_tag( 'td', '', 'left' ) .
+                     '<input type="text" size="32" name="filter_what" value="';
+         if (isset($filters[$theid]['what'])) {
+-            echo $filters[$theid]['what'];
++            echo htmlspecialchars($filters[$theid]['what']);
+         }
+         echo '" />'.
+                 '</td>'.
+diff -urw squirrelmail-1.4.4.orig/plugins/filters/spamoptions.php squirrelmail-1.4.4/plugins/filters/spamoptions.php
+--- plugins/filters/spamoptions.php	Mon Dec 27 16:03:57 2004
++++ plugins/filters/spamoptions.php	Wed Jun 15 23:50:03 2005
+@@ -199,7 +199,7 @@
+     echo html_tag( 'p', '', 'center' ) .
+          '[<a href="spamoptions.php?action=spam">' . _("Edit") . '</a>]' .
+          ' - [<a href="../../src/options.php">' . _("Done") . '</a>]</center><br /><br />';
+-    printf( _("Spam is sent to %s."), ($filters_spam_folder?'<b>'.imap_utf7_decode_local($filters_spam_folder).'</b>':'[<i>'._("not set yet").'</i>]' ) );
++    printf( _("Spam is sent to %s."), ($filters_spam_folder?'<b>'.htmlspecialchars(imap_utf7_decode_local($filters_spam_folder)).'</b>':'[<i>'._("not set yet").'</i>]' ) );
+     echo '<br />';
+     printf( _("Spam scan is limited to %s."), '<b>' . ( ($filters_spam_scan == 'new')?_("Unread messages only"):_("All messages") ) . '</b>' );
+     echo '</p>'.
+diff -urw squirrelmail-1.4.4.orig/plugins/listcommands/mailout.php squirrelmail-1.4.4/plugins/listcommands/mailout.php
+--- plugins/listcommands/mailout.php	Mon Dec 27 16:03:58 2004
++++ plugins/listcommands/mailout.php	Wed Jun 15 23:50:03 2005
+@@ -25,14 +25,6 @@
+ sqgetGlobalVar('body',    $body,    SQ_GET);
+ sqgetGlobalVar('action',  $action,  SQ_GET);
+ 
+-echo html_tag('p', '', 'left' ) .
+-html_tag( 'table', '', 'center', $color[0], 'border="0" width="75%"' ) . "\n" .
+-    html_tag( 'tr',
+-        html_tag( 'th', _("Mailinglist") . ' ' . _($action), '', $color[9] )
+-    ) .
+-    html_tag( 'tr' ) .
+-    html_tag( 'td', '', 'left' );
+-
+ switch ( $action ) {
+ case 'help':
+     $out_string = _("This will send a message to %s requesting help for this list. You will receive an emailed response at the address below.");
+@@ -42,7 +34,19 @@
+     break;
+ case 'unsubscribe':
+     $out_string = _("This will send a message to %s requesting that you will be unsubscribed from this list. It will try to unsubscribe the adress below.");
++default:
++    error_box(sprintf(_("Unknown action: %s"),htmlspecialchars($action)), $color);
++    exit;
+ }
++
++echo html_tag('p', '', 'left' ) .
++html_tag( 'table', '', 'center', $color[0], 'border="0" width="75%"' ) . "\n" .
++    html_tag( 'tr',
++        html_tag( 'th', _("Mailinglist") . ' ' . _($action), '', $color[9] )
++    ) .
++    html_tag( 'tr' ) .
++    html_tag( 'td', '', 'left' );
++
+ 
+ printf( $out_string, htmlspecialchars($send_to) );
+ 
+diff -urw squirrelmail-1.4.4.orig/plugins/newmail/newmail.php squirrelmail-1.4.4/plugins/newmail/newmail.php
+--- plugins/newmail/newmail.php	Mon Dec 27 16:03:58 2004
++++ plugins/newmail/newmail.php	Wed Jun 15 23:50:03 2005
+@@ -22,6 +22,7 @@
+ require_once(SM_PATH . 'functions/page_header.php');
+ 
+ sqGetGlobalVar('numnew', $numnew, SQ_GET);
++$numnew = (int)$numnew;
+ 
+    displayHtmlHeader( _("New Mail"), '', FALSE );
+ 
+diff -urw squirrelmail-1.4.4.orig/plugins/spamcop/setup.php squirrelmail-1.4.4/plugins/spamcop/setup.php
+--- plugins/spamcop/setup.php	Mon Dec 27 16:03:58 2004
++++ plugins/spamcop/setup.php	Wed Jun 15 23:50:03 2005
+@@ -75,6 +75,9 @@
+    sqgetGlobalVar('passed_ent_id',$passed_ent_id,SQ_FORM);
+    sqgetGlobalVar('mailbox',      $mailbox,      SQ_FORM);
+    sqgetGlobalVar('startMessage', $startMessage, SQ_FORM);
++   if ( sqgetGlobalVar('startMessage', $startMessage, SQ_FORM) ) {
++       $startMessage = (int)$startMessage;
++   }
+    /* END GLOBALS */
+ 
+    // catch unset passed_ent_id
+diff -urw squirrelmail-1.4.4.orig/plugins/squirrelspell/modules/lang_change.mod squirrelmail-1.4.4/plugins/squirrelspell/modules/lang_change.mod
+--- plugins/squirrelspell/modules/lang_change.mod	Sat Jun 12 18:39:48 2004
++++ plugins/squirrelspell/modules/lang_change.mod	Wed Jun 15 23:50:03 2005
+@@ -69,11 +69,11 @@
+   $lang_array = explode( ',', $lang_string );
+   $dsp_string = '';
+   foreach( $lang_array as $a) {
+-    $dsp_string .= _(trim($a)) . ', ';
++    $dsp_string .= _(htmlspecialchars(trim($a))) . ', ';
+   }
+   $dsp_string = substr( $dsp_string, 0, -2 );
+   $msg = '<p>'
+-    . sprintf(_("Settings adjusted to: %s with %s as default dictionary."), '<strong>'.$dsp_string.'</strong>', '<strong>'._($lang_default).'</strong>')
++    . sprintf(_("Settings adjusted to: %s with %s as default dictionary."), '<strong>'.$dsp_string.'</strong>', '<strong>'._(htmlspecialchars($lang_default)).'</strong>')
+     . '</p>';
+ } else {
+   /**
+diff -urw squirrelmail-1.4.4.orig/src/addressbook.php squirrelmail-1.4.4/src/addressbook.php
+--- src/addressbook.php	Mon Dec 27 16:03:59 2004
++++ src/addressbook.php	Wed Jun 15 23:50:03 2005
+@@ -279,7 +279,7 @@
+                                     html_tag( 'tr',
+                                         html_tag( 'td',
+                                             "\n". '<strong><font color="' . $color[2] .
+-                                            '">' . _("ERROR") . ': ' . $abook->error . '</font></strong>' ."\n",
++                                            '">' . _("ERROR") . ': ' . htmlspecialchars($abook->error) . '</font></strong>' ."\n",
+                                             'center' )
+                                         ),
+                                     'center', '', 'width="100%"' );
+@@ -331,7 +331,7 @@
+             html_tag( 'tr',
+                 html_tag( 'td',
+                     "\n". '<br /><strong><font color="' . $color[2] .
+-                    '">' . _("ERROR") . ': ' . $formerror . '</font></strong>' ."\n",
++                    '">' . _("ERROR") . ': ' . htmlspecialchars($formerror) . '</font></strong>' ."\n",
+                     'center' )
+                 ),
+             'center', '', 'width="100%"' );
+@@ -343,6 +343,7 @@
+     /* Get and sort address list */
+     $alist = $abook->list_addr();
+     if(!is_array($alist)) {
++        $abook->error = htmlspecialchars($abook->error);
+         plain_error_message($abook->error, $color);
+         exit;
+     }
+diff -urw squirrelmail-1.4.4.orig/src/compose.php squirrelmail-1.4.4/src/compose.php
+--- src/compose.php	Mon Jan  3 16:06:28 2005
++++ src/compose.php	Wed Jun 15 23:50:03 2005
+@@ -76,6 +76,11 @@
+ sqgetGlobalVar('saved_draft',$saved_draft);
+ sqgetGlobalVar('delete_draft',$delete_draft);
+ sqgetGlobalVar('startMessage',$startMessage);
++if ( sqgetGlobalVar('startMessage',$startMessage) ) {
++    $startMessage = (int)$startMessage;
++} else {
++    $startMessage = 1;
++}
+ 
+ /** POST VARS */
+ sqgetGlobalVar('sigappend',             $sigappend,             SQ_POST);
+diff -urw squirrelmail-1.4.4.orig/src/printer_friendly_bottom.php squirrelmail-1.4.4/src/printer_friendly_bottom.php
+--- src/printer_friendly_bottom.php	Tue Dec 28 14:02:49 2004
++++ src/printer_friendly_bottom.php	Wed Jun 15 23:50:03 2005
+@@ -33,7 +33,8 @@
+ sqgetGlobalVar('passed_id', $passed_id, SQ_GET);
+ sqgetGlobalVar('mailbox', $mailbox, SQ_GET);
+ 
+-if (! sqgetGlobalVar('passed_ent_id', $passed_ent_id, SQ_GET) ) {
++if (! sqgetGlobalVar('passed_ent_id', $passed_ent_id, SQ_GET) ||
++    ! preg_match('/^\d+(\.\d+)*$/', $passed_ent_id) ) {
+     $passed_ent_id = '';
+ } 
+ /* end globals */
+diff -urw squirrelmail-1.4.4.orig/src/right_main.php squirrelmail-1.4.4/src/right_main.php
+--- src/right_main.php	Mon Dec 27 16:04:00 2004
++++ src/right_main.php	Wed Jun 15 23:50:03 2005
+@@ -165,7 +165,7 @@
+ 
+ do_hook('right_main_after_header');
+ if (isset($note)) {
+-    echo html_tag( 'div', '<b>' . $note .'</b>', 'center' ) . "<br />\n";
++    echo html_tag( 'div', '<b>' . htmlspecialchars($note) .'</b>', 'center' ) . "<br />\n";
+ }
+ 
+ if ( sqgetGlobalVar('just_logged_in', $just_logged_in, SQ_SESSION) ) {
