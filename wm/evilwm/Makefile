@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/07 15:01:09 sketch Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/16 22:27:44 kristerw Exp $
 #
 
 DISTNAME=	evilwm-0.99.18
@@ -15,10 +15,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/evilwm ${PREFIX}/bin/evilwm
 	${INSTALL_MAN} ${WRKSRC}/evilwm.1 ${PREFIX}/man/man1/evilwm.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/evilwm
-	for file in ChangeLog README TODO; \
+	for docfile in ChangeLog README TODO; \
 	do \
-	    ${INSTALL_DATA} ${WRKSRC}/$$file ${PREFIX}/share/doc/evilwm/; \
+	    ${INSTALL_DATA} ${WRKSRC}/$$docfile ${PREFIX}/share/doc/evilwm/; \
 	done
-	
 
 .include "../../mk/bsd.pkg.mk"
