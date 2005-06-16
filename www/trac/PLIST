@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/11/20 00:49:12 epg Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/06/16 15:18:07 epg Exp $
 bin/trac-admin
 bin/tracd
 bin/tracdb2env
@@ -166,6 +166,7 @@ ${PYSITELIB}/trac/wikimacros/txtl.pyc
 ${PYSITELIB}/trac/wikimacros/txtl.pyo
 share/examples/trac/README
 share/examples/trac/bugzilla2trac.py
+share/examples/trac/emailfilter.py
 share/examples/trac/sourceforge2trac.py
 share/examples/trac/trac-post-commit-hook
 share/examples/trac/trac-pre-commit-hook
@@ -205,6 +206,7 @@ share/trac/htdocs/newticket.png
 share/trac/htdocs/parent.png
 share/trac/htdocs/topbar_gradient.png
 share/trac/htdocs/topbar_gradient2.png
+share/trac/htdocs/trac.ico
 share/trac/htdocs/trac.js
 share/trac/htdocs/trac_banner.png
 share/trac/htdocs/trac_logo_mini.png
