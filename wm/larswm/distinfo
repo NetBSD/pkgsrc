@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 18:43:54 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/06/16 12:53:42 hira Exp $
 
 SHA1 (larswm-7.5.3.tar.gz) = 5a79861f5e052a785fbd498eafe532799390a756
 RMD160 (larswm-7.5.3.tar.gz) = bfc777b88b8bd783c1f1ce12ab2128c167fe5cb3
@@ -10,4 +10,4 @@ SHA1 (mouse_refcard.pdf) = df0e4cdad3d320f7395755e23d379cc047075372
 RMD160 (mouse_refcard.pdf) = 7dd33ecbb66bd715f69606ef1e93068f02b50e0d
 Size (mouse_refcard.pdf) = 3332 bytes
 SHA1 (patch-aa) = 8ab134d48754c071688bce9120248214cb3bf989
-SHA1 (patch-ab) = 9c1ade6e3daa42867c65ba14a4e4b765566d6f8c
+SHA1 (patch-ab) = 5d5808f577901263f293160fc08c22b6104bcfa4
