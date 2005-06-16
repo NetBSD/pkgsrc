@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2003/10/07 08:45:14 is Exp $
+$NetBSD: patch-aa,v 1.5 2005/06/16 15:38:18 is Exp $
 
---- mini_sendmail.c.orig	Thu Nov 21 21:27:55 2002
+--- mini_sendmail.c.orig	2002-11-21 20:27:55.000000000 +0000
 +++ mini_sendmail.c
 @@ -129,6 +129,10 @@ main( int argc, char** argv )
  	    timeout = atoi( &(argv[argn][2]) );
@@ -13,7 +13,63 @@ $NetBSD: patch-aa,v 1.4 2003/10/07 08:45:14 is Exp $
  	else
  	    usage();
  	++argn;
-@@ -575,14 +579,16 @@ open_client_socket( void )
+@@ -490,14 +494,24 @@ parse_for_recipients( char* message )
+ 	    switch ( *cp )
+ 		{
+ 		case '\n':
+-		add_recipient( recip, ( cp - recip ) );
+-		state = ST_BOL;
+-		if ( bcc != (char*) 0 )
++		/* peek ahead for continuation line */
++		switch (cp[1])
+ 		    {
+-		    /* Elide the Bcc: line, and reset cp. */
+-		    (void) strcpy( bcc, cp + 1 );
+-		    cp = bcc - 1;
+-		    bcc = (char*) 0;
++		    case ' ':
++		    case '\t':
++		    break;
++
++		    default:
++		    add_recipient( recip, ( cp - recip ) );
++		    state = ST_BOL;
++		    if ( bcc != (char*) 0 )
++			{
++			/* Elide the Bcc: line, and reset cp. */
++			(void) strcpy( bcc, cp + 1 );
++			cp = bcc - 1;
++			bcc = (char*) 0;
++			}
++		    break;
+ 		    }
+ 		break;
+ 		case ',':
+@@ -516,15 +530,22 @@ add_recipient( char* recipient, int len 
+     {
+     char buf[1000];
+     int status;
++    int i;
+ 
+     /* Skip leading whitespace. */
+-    while ( len > 0 && ( *recipient == ' ' || *recipient == '\t' ) )
++    while ( len > 0 && ( *recipient == ' ' || *recipient == '\t' ||
++	    *recipient == '\n') )
+ 	{
+ 	++recipient;
+ 	--len;
+ 	}
+ 
+     (void) snprintf( buf, sizeof(buf), "RCPT TO:<%.*s>", len, recipient );
++    for (i=0; i<sizeof(buf); i++)
++    {
++	if (buf[i] == '\n')
++	    buf[i] = ' ';
++    }
+     send_command( buf );
+     status = read_response();
+     if ( status != 250  && status != 251 )
+@@ -575,14 +596,16 @@ open_client_socket( void )
      sock_family = PF_INET6;
  
  #ifdef DO_MINUS_S
