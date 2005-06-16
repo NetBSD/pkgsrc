@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/03 19:30:40 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/16 17:27:12 gendalia Exp $
 bin/afsmonitor
 bin/bos
 bin/cmdebug
@@ -222,6 +222,7 @@ sbin/voldump
 sbin/volinfo
 sbin/vos
 sbin/vsys
+share/examples/rc.d/bosserver
 @dirrm sbin/kdump
 @dirrm libexec/openafs
 @exec ${MKDIR} %D/lib/openafs
