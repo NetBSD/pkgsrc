@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10372 2005/06/16 15:19:53 epg Exp $
+$NetBSD: CHANGES,v 1.10373 2005/06/16 15:41:20 is Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2890,3 +2890,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/cdrdao to 1.2.0nb2 [adrianp 2005-06-15]
 	Updated mail/squirrelmail to 1.4.4nb1 [martti 2005-06-16]
 	Updated www/trac to 0.8.3 [epg 2005-06-16]
+	Updated mail/mini_sendmail to 1.3.2nb5 [is 2005-06-16]
