@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.19 2005/06/03 22:54:44 jlam Exp $
+# $NetBSD: tools.Linux.mk,v 1.20 2005/06/16 04:30:46 grant Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -12,6 +12,11 @@ TOOLS_PLATFORM.basename?=	/usr/bin/basename
 .if exists(/usr/bin/bison)
 TOOLS_PLATFORM.bison?=		/usr/bin/bison
 TOOLS_PLATFORM.bison-yacc?=	/usr/bin/bison -y
+.endif
+.if exists(/usr/bin/bzcat)
+TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
+.elif exists(/usr/bin/bzip2)
+TOOLS_PLATFORM.bzcat?=		/usr/bin/bzip2 -cd
 .endif
 TOOLS_PLATFORM.cat?=		/bin/cat
 TOOLS_PLATFORM.chgrp?=		/bin/chgrp
@@ -119,6 +124,9 @@ TOOLS_PLATFORM.sort?=		/usr/bin/sort
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
 TOOLS_PLATFORM.tar?=		${TOOLS_PLATFORM.gtar}
+.if exists(/usr/bin/tbl)
+TOOLS_PLATFORM.tbl?=		/usr/bin/tbl
+.endif
 TOOLS_PLATFORM.tee?=		/usr/bin/tee
 TOOLS_PLATFORM.test?=		test			# shell builtin
 .if exists(/bin/touch)
