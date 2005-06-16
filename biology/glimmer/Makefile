@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:00 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:40 jlam Exp $
 #
 
 DISTNAME=		glimmer213
@@ -11,6 +11,7 @@ HOMEPAGE=		ftp://ftp.tigr.org/pub/software/Glimmer/
 COMMENT=		System for finding genes in microbial DNA
 
 WRKSRC=                 ${WRKDIR}/glimmer2.13
+INSTALLATION_DIRS=	bin
 
 do-install:
 .for PROGRAM in adjust anomaly build-icm check codon-usage compare-lists \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/31 21:53:26 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/16 06:57:39 jlam Exp $
 
 DISTNAME=	mp3check-0.8.0
 CATEGORIES=	audio
@@ -12,6 +12,8 @@ GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 
 BUILD_TARGET=	mp3check
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mp3check ${PREFIX}/bin

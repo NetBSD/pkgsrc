@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:08 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:43 jlam Exp $
 
 DISTNAME=	bibtex2html-1.75
 CATEGORIES=	converters
@@ -19,6 +19,8 @@ SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	aux2bib.1
 SUBST_SED.paths=	-e 's,/usr/share,${PREFIX}/share,g'
+
+INSTALLATION_DIRS=	bin man/man1
 
 post-build:
 	cd ${WRKSRC}; ${MAKE} doc

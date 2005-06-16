@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:20 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/16 06:57:46 jlam Exp $
 #
 
 VERS=		0.51b3
@@ -23,6 +23,8 @@ SUBST_SED.elfsh=	-e s,@@SH@@,${SH}, -e s,@@PREFIX@@,${PREFIX},
 SUBST_CLASSES+=		elfsh
 
 # XXX This package should be converted to use libtool
+
+INSTALLATION_DIRS=	bin include lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vm/elfsh ${PREFIX}/bin/elfsh

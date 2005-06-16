@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/01 18:02:41 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/16 06:57:41 jlam Exp $
 #
 
 DISTNAME=	xchiplogo
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.eleceng.adelaide.edu.au/Personal/moini/
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.eleceng.adelaide.edu.au/Personal/moini/chiplogo.html
 COMMENT=	Program for generating pretty logos on VLSI chips
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xchiplogo ${LOCALBASE}/bin/xchiplogo

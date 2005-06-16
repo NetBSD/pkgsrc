@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 21:37:43 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:52 jlam Exp $
 #
 
 DISTNAME=		type1inst-0.6.1
@@ -13,6 +13,7 @@ USE_X11BASE=		yes
 REPLACE_PERL=		t1embed type1inst
 
 NO_BUILD=		yes
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/type1inst ${X11PREFIX}/bin

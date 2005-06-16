@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:17 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:58:02 jlam Exp $
 #
 
 DISTNAME=		archivemail-0.6.1
@@ -10,6 +10,7 @@ HOMEPAGE=		http://archivemail.sourceforge.net/
 COMMENT=		Tool for archiving and compressing old email in mailboxes
 
 NO_CONFIGURE=		yes
+INSTALLATION_DIRS=	man/man1
 
 do-build:
 

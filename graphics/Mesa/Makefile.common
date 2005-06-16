@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2005/06/01 18:02:54 jlam Exp $
+# $NetBSD: Makefile.common,v 1.43 2005/06/16 06:57:57 jlam Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -57,6 +57,7 @@ BUILD_TARGET=		pkgsrc
 pre-install:
 	@if [ -n "${INSTLIBS}" ]; then					\
 		${ECHO_MSG} "Installing libraries.";			\
+		${INSTALL_LIB_DIR} ${PREFIX}/lib;			\
 		for lib in ${INSTLIBS}; do				\
 			${LIBTOOL} --mode=install ${INSTALL_LIB}	\
 				$${lib} ${PREFIX}/lib;			\

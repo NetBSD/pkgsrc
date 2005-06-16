@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:37:48 grant Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/16 06:57:52 jlam Exp $
 #
 
 DISTNAME=	0verkill-0.15
@@ -11,6 +11,8 @@ HOMEPAGE=	http://artax.karlin.mff.cuni.cz/~brain/0verkill/
 COMMENT=	0verkill is bloody 2D action deathmatch-like game in ASCII-ART
 
 HAS_CONFIGURE=	YES
+
+INSTALLATION_DIRS=	bin
 
 post-patch:
 	${SED} "s|@PREFIX@|${PREFIX}|g" ${WRKSRC}/cfg.h > ${WRKSRC}/cfg.h.done

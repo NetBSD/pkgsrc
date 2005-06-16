@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/06/01 18:02:59 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/06/16 06:58:01 jlam Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		5
@@ -47,6 +47,8 @@ SUBST_SED.sather-configure=					\
 	-e 's:@TK_PREFIX@:${BUILDLINK_PREFIX.tk}:g'		\
 	-e 's:@LINKER_RPATH_FLAG@:${LINKER_RPATH_FLAG}:g'	\
 	-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g'
+
+INSTALLATION_DIRS=	man/man1
 
 post-build:
 	cd ${WRKSRC}/Emacs; ${MAKEINFO} sather.texinfo; 		\

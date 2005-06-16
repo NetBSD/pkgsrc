@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/01 18:02:52 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/06/16 06:57:55 jlam Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGREVISION=	2
@@ -39,6 +39,8 @@ WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	lokigames
 LIBDIR=		${PREFIX}/lib/lokigames/${BINNAME}
 SHAREDIR=	${PREFIX}/share/doc/lokigames
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \

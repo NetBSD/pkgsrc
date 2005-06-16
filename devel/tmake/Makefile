@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/19 13:30:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:48 jlam Exp $
 #
 
 DISTNAME=	tmake-1.11
@@ -17,6 +17,8 @@ USE_PERL5=		YES
 
 TMAKEPATH=	${PREFIX}/lib/tmake/netbsd-g++
 GLBASE=		${X11BASE}
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	${MV} ${WRKSRC}/bin/tmake ${WRKSRC}/bin/tmake.BAK

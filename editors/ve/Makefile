@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 21:35:04 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:50 jlam Exp $
 
 DISTNAME=	ve-1.0
 CATEGORIES=	editors
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org
 COMMENT=	NTHU-CS Maple BBS 2.36 BBS-like editor
+
+INSTALLATION_DIRS=	bin
 
 post-patch:
 	${SED} "s,/usr/local,${PREFIX},g" ${WRKSRC}/edit.c > ${WRKSRC}/edit.c.done

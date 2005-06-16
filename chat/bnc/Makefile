@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/24 21:12:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/16 06:57:41 jlam Exp $
 
 DISTNAME=	bnc2.8.6
 PKGNAME=	${DISTNAME:S/bnc/&-/}
@@ -14,6 +14,8 @@ COMMENT=	Simple IRC relay proxy with support for virtual hosting
 DEPENDS+=	dialog-[0-9]*:../../misc/dialog
 
 GNU_CONFIGURE=	YES
+
+INSTALLATION_DIRS=	bin
 
 post-patch:
 	${MV} ${WRKSRC}/bncsetup ${WRKSRC}/bncsetup.orig

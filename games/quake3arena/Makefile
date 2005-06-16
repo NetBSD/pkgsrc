@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/06/01 18:02:52 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/06/16 06:57:55 jlam Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	1
@@ -43,6 +43,8 @@ BINNAME=	quake3arena
 WRKSRC=		${WRKDIR}
 LIBDIR=		${PREFIX}/lib/lokigames/${BINNAME}
 SHAREDIR=	${PREFIX}/share/doc/lokigames
+
+INSTALLATION_DIRS=	bin
 
 .include "../../mk/x11.buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/03/24 21:12:55 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/16 06:58:00 jlam Exp $
 
 DISTNAME=	cu-prolog-3.94
 CATEGORIES=	lang
@@ -12,6 +12,8 @@ WRKSRC=		${WRKDIR}/src
 DIST_SUBDIR=	${DISTNAME}
 MAKEFILE=	makefile
 BUILD_TARGET=	cup
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cup3 ${PREFIX}/bin/cuprolog
