@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/12/28 02:47:45 reed Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/16 06:58:08 jlam Exp $
 #
 
 DISTNAME=	qmhandle-1.2.0
@@ -24,6 +24,8 @@ SUBST_SED.config+=	-e 's|/etc/init.d/qmail|${RCD_SCRIPTS_DIR}/qmail|g'
 .if exists(/usr/bin/pgrep)
 SUBST_SED.config+=	-e 's|pidof|/usr/bin/pgrep|g'
 .endif
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/qmHandle ${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/12/30 17:21:55 cjep Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/16 06:57:43 jlam Exp $
 #
 
 DISTNAME=	doc2html
@@ -17,6 +17,8 @@ DEPENDS+=	xpdf-[0-9]*:../../print/xpdf
 DEPENDS+=	catdoc-[0-9]*:../../textproc/catdoc
 
 USE_PERL5=	YES
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 .for CVTR in doc2html pdf2html

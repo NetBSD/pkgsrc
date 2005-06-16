@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:13:29 agc Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:47 jlam Exp $
 #
 
 DISTNAME=	p4pr
@@ -17,6 +17,8 @@ EXTRACT_ONLY=	# none
 NO_BUILD=	# defined
 USE_PERL5=	# defined
 REPLACE_PERL=	${DISTFILES}
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	${CP} ${DISTDIR}/${DISTFILES} ${WRKSRC}

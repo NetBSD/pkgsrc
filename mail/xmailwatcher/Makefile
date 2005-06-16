@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/24 21:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:58:08 jlam Exp $
 
 DISTNAME=		xmailwatcher
 PKGNAME=		${DISTNAME}-1.6
@@ -9,6 +9,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT= 		Mailbox checker which displays sender and subject lines of mails
 
 USE_IMAKE=		yes
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/xmailwatcher.0 ${PREFIX}/man/man1/xmailwatcher.1

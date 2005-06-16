@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:14:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:49 jlam Exp $
 
 DISTNAME=	ne-1.31
 CATEGORIES=	editors
@@ -14,6 +14,8 @@ WRKSRC=		${WRKDIR}/src
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
 BUILD_TARGET=	NetBSD ne
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nenewp ${PREFIX}/bin/ne

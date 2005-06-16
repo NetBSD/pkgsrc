@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/01 18:02:51 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:55 jlam Exp $
 
 DISTNAME=	openttd-0.3.6-source
 PKGNAME=	openttd-0.3.6
@@ -23,6 +23,8 @@ MAKE_ENV+=	WITH_NETWORK=1
 MAKE_ENV+=	X11BASE=${X11BASE}
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/openttd ${PREFIX}/bin

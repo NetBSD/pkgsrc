@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/04/11 21:45:56 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/06/16 06:57:55 jlam Exp $
 #
 
 DISTNAME=	pysol-4.81
@@ -16,6 +16,8 @@ NO_BUILD=	yes
 PLIST_SRC=	${WRKDIR}/PLIST.src
 
 CARDSETS=	pysol-cardsets-4.40
+
+INSTALLATION_DIRS=	bin man/man6
 
 do-install:
 	${SED} -e "s|@pkgdatadir@|${PREFIX}/share/pysol|" \

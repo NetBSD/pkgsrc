@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/06/01 18:02:52 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/06/16 06:57:55 jlam Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -25,6 +25,8 @@ MAKE_ENV+=	MESA_DIR=${BUILDLINK_PREFIX.Mesa}
 MAKE_ENV+=	X11BASE=${X11BASE}
 
 LDFLAGS+=	${LIBOSSAUDIO}
+
+INSTALLATION_DIRS=	bin
 
 do-configure:
 	cd ${WRKSRC}/qw && ${LN} -fs makefile.linux ${MAKEFILE}

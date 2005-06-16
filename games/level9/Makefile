@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:51 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:54 jlam Exp $
 
 DISTNAME=		Level9_3.0_Source
 PKGNAME=		level9-3.0
@@ -15,6 +15,8 @@ WRKSRC=			${WRKDIR}/Unix
 # uses halfkey (present since 1.6M)
 INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]* NetBSD-1.5* NetBSD-1.6-* NetBSD-1.6.*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}

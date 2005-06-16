@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/04/11 21:45:16 tv Exp $
+# $NetBSD: Makefile,v 1.23 2005/06/16 06:57:44 jlam Exp $
 #
 
 DISTNAME=	ZMySQLDA-1.1.3-nonbin
@@ -21,6 +21,8 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 ZOPEDIR=	${PREFIX}/lib/zope
 DAPATH=		lib/python/Products/ZMySQLDA
 PYTHON_VERSIONS_ACCEPTED= 20 # XXX for now
+
+INSTALLATION_DIRS=	lib
 
 do-configure:
 	(cd ${WRKDIR}/${DAPATH}; ${RM} -rf Makefile* *.pyc *.orig src Setup)

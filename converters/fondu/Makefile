@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/18 22:30:24 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:43 jlam Exp $
 #
 
 DISTNAME=	fondu_src-030428
@@ -12,6 +12,8 @@ COMMENT=	Utility to convert between Mac fonts and UNIX fonts
 
 WRKSRC=		${WRKDIR}/fondu
 GNU_CONFIGURE=	YES
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fondu ${PREFIX}/bin

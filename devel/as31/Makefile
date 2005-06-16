@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:14:54 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:45 jlam Exp $
 
 DISTNAME=	asm.8051
 PKGNAME=	as31-19900126
@@ -15,6 +15,8 @@ EXTRACT_CMD=	${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | \
 		${SED} '1,/^.! \/bin\/sh/d' | ${SH}
 MAKEFILE=	makefile
 BUILD_TARGET=	as31 man
+
+INSTALLATION_DIRS=	bin man/cat1 man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/as31 ${PREFIX}/bin/as31

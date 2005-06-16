@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/06/01 18:02:57 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2005/06/16 06:57:58 jlam Exp $
 
 DISTNAME=	pl231src
 PKGNAME=	ploticus-2.31pl4
@@ -21,6 +21,8 @@ PREFABDST=	${PREFIX}/share/ploticus
 
 MAKE_ENV+=	XLIBS="-L${X11BASE}/lib -lX11"
 MAKE_ENV+=	XINCLUDEDIR="-I${X11BASE}/include"
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pl ${PREFIX}/bin/pl

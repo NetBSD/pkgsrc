@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/22 20:07:57 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/16 06:57:49 jlam Exp $
 #
 
 DISTNAME=	speedbar-0.14beta4
@@ -27,6 +27,8 @@ IMAGES=	sb-dir-plus.xpm sb-dir-minus.xpm sb-dir.xpm sb-pg-plus.xpm 	\
 	sb-tag-type.xpm sb-image.el sb-obj.xpm sb-chk.xpm sb-objod.xpm 	\
 	sb-label.xpm sb-ro.xpm sb-doc.xpm sb-info.xpm sb-doc-plus.xpm 	\
 	sb-doc-minus.xpm sb-box.xpm sb-box-plus.xpm sb-box-minus.xpm
+
+INSTALLATION_DIRS=	info
 
 do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/speedbar

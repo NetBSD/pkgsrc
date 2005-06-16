@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:57 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/16 06:57:55 jlam Exp $
 #
 
 DISTNAME=		BASS-Floppy
@@ -14,6 +14,8 @@ COMMENT=		Beneath a Steel Sky
 WRKSRC=			${WRKDIR}/sky-floppy
 
 BASSDIR=	${PREFIX}/share/games/bass
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	${SED} "s|@BASSDIR@|${BASSDIR}|" <${FILESDIR}/bass.sh \

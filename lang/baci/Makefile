@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:44:00 grant Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:59 jlam Exp $
 #
 
 DISTNAME=	bacisrc
@@ -15,6 +15,8 @@ COMMENT=	Ben-Ari Concurrent Interpreter
 DEPENDS+=	bison-[0-9]*:../../devel/bison
 
 PLIST_SRC=      ${WRKDIR}/PLIST
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 		cd ${WRKSRC}/ccomp && ${MAKE}

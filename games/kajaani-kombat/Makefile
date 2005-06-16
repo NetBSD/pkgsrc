@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:02 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:54 jlam Exp $
 #
 
 DISTNAME=		kajaani-kombat-0.6
@@ -11,6 +11,7 @@ HOMEPAGE=		http://kombat.kajaani.net/
 COMMENT=		Rampart-like multiplayer game set in space
 
 USE_TOOLS+=		gmake
+INSTALLATION_DIRS=	bin man/man6
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/kajaani-kombat ${PREFIX}/bin

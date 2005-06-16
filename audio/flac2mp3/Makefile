@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/25 23:34:07 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:38 jlam Exp $
 
 DISTNAME=	flac2mp3
 PKGNAME=	flac2mp3-20041223
@@ -23,6 +23,8 @@ TOOLS_DEPMETHOD.perl=	DEPENDS
 WRKSRC=		${WRKDIR}
 
 NO_BUILD=	yes
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/flac2mp3.pl ${PREFIX}/bin/flac2mp3

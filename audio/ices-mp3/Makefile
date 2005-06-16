@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/01 20:07:59 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:39 jlam Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
@@ -31,6 +31,8 @@ PKG_SYSCONFSUBDIR=	icecast
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 MODDIR=			${PREFIX}/share/${PKGBASE}
+
+INSTALLATION_DIRS=	bin man/man1
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf --force

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:07:54 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:48 jlam Exp $
 #
 
 DISTNAME=		rsltcsrc
@@ -17,6 +17,7 @@ DEPENDS+=		gentle>=97:../../devel/gentle
 MAKEFILE=		make_sunos
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/rsl.2.4
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rsltc ${PREFIX}/bin

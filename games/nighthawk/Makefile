@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/06/07 05:44:46 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2005/06/16 06:57:55 jlam Exp $
 #
 
 DISTNAME=		nighthawk-2.1
@@ -23,6 +23,8 @@ MAKE_ENV+=		OSTYPE=${OPSYS}
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\"" \
 			-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\"" \
 			-DVARBASE="\"${VARBASE}\""
+
+INSTALLATION_DIRS=	bin
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"

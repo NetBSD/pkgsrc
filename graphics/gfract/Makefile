@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/06/01 18:02:55 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/06/16 06:57:57 jlam Exp $
 #
 
 DISTNAME=		gfract-0.30
@@ -20,6 +20,8 @@ SUBST_MESSAGE.prefix=	"Fixing prefix."
 SUBST_STAGE.prefix=	post-extract
 SUBST_FILES.prefix=	main.cpp
 SUBST_SED.prefix=	-e "s,/usr/local,${PREFIX},g"
+
+INSTALLATION_DIRS=	bin
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

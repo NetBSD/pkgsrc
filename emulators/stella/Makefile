@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/22 20:07:58 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/16 06:57:51 jlam Exp $
 
 STELLA_VERSION=	1.4.1
 DISTNAME=	stella-${STELLA_VERSION}-src
@@ -31,6 +31,8 @@ MAKE_ENV=	CXXFLAGS="${CXXFLAGS} -fno-rtti"
 
 DOCDIR=${PREFIX}/share/doc/html/stella
 DATADIR=${PREFIX}/share/stella
+
+INSTALLATION_DIRS=	bin
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

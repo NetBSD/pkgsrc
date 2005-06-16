@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/21 23:02:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/16 06:57:38 jlam Exp $
 
 DISTNAME=	festdoc-1.4.0.1
 PKGNAME=	festival-doc-1.4.0.1
@@ -16,6 +16,8 @@ NO_BUILD=	yes
 DOC=		${PREFIX}/share/doc/festival
 
 INFO_FILES=	festival.info
+
+INSTALLATION_DIRS=	info
 
 post-extract:
 	${CHMOD} -R a+r ${WRKSRC}

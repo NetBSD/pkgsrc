@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/16 01:32:23 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 06:58:08 jlam Exp $
 #
 
 DISTNAME=	all_locales-${VER}-20050122
@@ -15,6 +15,7 @@ VER=		1.4.4
 
 NO_CONFIGURE=		# defined
 PKGSRC_USE_TOOLS+=	tar
+INSTALLATION_DIRS=	share/squirrelmail
 
 WRKSRC=		${WRKDIR}
 

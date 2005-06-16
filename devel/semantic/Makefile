@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:07:55 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/16 06:57:48 jlam Exp $
 #
 
 DISTNAME=	semantic-1.4.2
@@ -44,6 +44,8 @@ SRCS+=	senator.el
 AUXFILES=	semantic-load.el
 # XXX cd ${WRKSRC}; ${MAKE} -V aux_AUX
 AUXFILES+=	c.bnf make.bnf java.bnf scheme.bnf
+
+INSTALLATION_DIRS=	${INFO_DIR}
 
 do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/semantic

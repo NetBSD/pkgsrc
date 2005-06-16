@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:08 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/16 06:57:43 jlam Exp $
 
 DISTNAME=		cbmconvert-2.0.5
 CATEGORIES=		converters archivers
@@ -9,6 +9,7 @@ COMMENT=		Converts files to and from various C64/C128/CBM formats
 
 BUILD_TARGET=		unix
 MAKE_FLAGS=		CFLAGS="${CFLAGS}"
+INSTALLATION_DIRS=	bin
 
 do-install:
 .for f in cbmconvert disk2zip zip2disk

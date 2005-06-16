@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:09 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/16 06:58:00 jlam Exp $
 #
 
 DISTNAME=	eieio-0.17
@@ -28,6 +28,8 @@ SRCS=	eieio.el eieio-comp.el eieio-opt.el eieio-custom.el eieio-doc.el \
 	eieio-base.el
 # XXX $cd ${WRKSRC}; ${MAKE} -V examples_LISP
 SRCS+=	tree.el call-tree.el chart.el eieio-speedbar.el linemark.el
+
+INSTALLATION_DIRS=	${INFO_DIR}
 
 do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/eieio

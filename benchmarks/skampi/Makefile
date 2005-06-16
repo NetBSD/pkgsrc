@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/15 04:29:48 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/16 06:57:40 jlam Exp $
 #
 
 DISTNAME=	skampi4
@@ -21,6 +21,8 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 USE_PERL5=	run
 REPLACE_PERL=	report_generator/dorep4.pl
 DIST_SUBDIR=	${PKGNAME_NOREV}
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	${GZCAT} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}_userman.ps.gz > \

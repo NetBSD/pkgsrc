@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/16 01:15:32 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/06/16 06:57:55 jlam Exp $
 
 DISTNAME=	Rollemup
 PKGNAME=	rollemup-1.0
@@ -41,6 +41,8 @@ DEPENDS=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 CHECK_SHLIBS=	no
 .endif
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	@${SED} -e 's|$${PREFIX}|${PREFIX}|g' \

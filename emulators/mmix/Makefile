@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/12/03 15:14:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/16 06:57:51 jlam Exp $
 
 DISTNAME=	mmix-20030622
 PKGREVISION=	1
@@ -13,6 +13,8 @@ BUILD_DEPENDS+= cweb-[0-9]*:../../devel/cweb
 
 WRKSRC=		${WRKDIR}
 BUILD_TARGET=	all doc
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} abstime mmix mmixal 		\

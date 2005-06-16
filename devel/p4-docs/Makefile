@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/19 12:34:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/16 06:57:47 jlam Exp $
 #
 
 DISTNAME=	p4-docs
@@ -42,6 +42,8 @@ DOCDIR=		share/doc/p4
 HTMLDIR=	share/doc/html/p4
 PLIST_SUBST+=	DOCDIR=${DOCDIR}
 PLIST_SUBST+=	HTMLDIR=${HTMLDIR}
+
+INSTALLATION_DIRS=	man/man1
 
 do-install:
 	${INSTALL_MAN} ${DISTDIR}/${DIST_SUBDIR}/*.1 ${PREFIX}/man/man1

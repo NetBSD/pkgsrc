@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/06/01 18:02:55 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/06/16 06:57:57 jlam Exp $
 
 DISTNAME=	fly-1.6.5
 PKGREVISION=	6
@@ -17,6 +17,8 @@ REPLACE_PERL=	examples/cgi-perl-example.pl \
 		examples/fly-tester.pl \
 		examples/size.pl \
 		examples/perl.example
+
+INSTALLATION_DIRS=	bin
 
 pre-configure:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' \

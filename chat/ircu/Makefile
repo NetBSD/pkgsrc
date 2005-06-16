@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:04 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/16 06:57:42 jlam Exp $
 #
 
 DISTNAME=	ircu2.10.11.07
@@ -51,6 +51,8 @@ SUBST_FILES.paths=	tools/README doc/ircd.conf.sample
 SUBST_SED.paths=	-e "s|/usr/local/lib/irc|${PKG_SYSCONFDIR}|g" \
 			-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+
+INSTALLATION_DIRS=	man/man8 sbin
 
 post-build:
 	@cd ${WRKSRC}/tools && \

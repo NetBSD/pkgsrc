@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:43 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:50 jlam Exp $
 #
 
 DISTNAME=		arnsrc27012002
@@ -22,6 +22,7 @@ BUILD_TARGET=		arnold
 SHAREDIR=		${PREFIX}/share/arnold
 DOCDIR=			${PREFIX}/share/doc/arnold
 MAKE_ENV+=		SHAREDIR=${SHAREDIR}
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	${CHMOD} +x ${WRKSRC}/configure

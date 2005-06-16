@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/11 11:50:00 markd Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:49 jlam Exp $
 
 DISTNAME=	Ted_fr_FR
 PKGNAME=	ted-fr-2.16
@@ -17,6 +17,8 @@ USE_X11BASE=	YES
 
 DIST_SUBDIR=	Ted-2.16
 NO_BUILD=	YES
+
+INSTALLATION_DIRS=	share/Ted/ind
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/ind/French.ind ${PREFIX}/share/Ted/ind

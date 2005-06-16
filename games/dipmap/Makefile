@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:49 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:54 jlam Exp $
 
 DISTNAME=		mapit.v1-16
 PKGNAME=		dipmap-1.16
@@ -13,6 +13,7 @@ COMMENT=		Generate postscript maps from results of play-by-email Diplomacy games
 MAKEFILE=		makefile
 NO_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/mapit
+INSTALLATION_DIRS=	bin libexec
 
 post-patch:
 	${SED} "s,@PREFIX@,${PREFIX},g" ${WRKSRC}/dipmap > ${WRKSRC}/dipmap.new

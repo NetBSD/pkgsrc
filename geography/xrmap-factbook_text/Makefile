@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:59 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:57 jlam Exp $
 #
 
 DISTNAME=		factbook_text_2002
@@ -11,9 +11,11 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://frmas.free.fr/li_1.htm
 COMMENT=		CIA factbook for xrmap
 
+DEPENDS+=		xrmap-base>=2.29:../../geography/xrmap-base
+
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
-DEPENDS+=		xrmap-base>=2.29:../../geography/xrmap-base
+INSTALLATION_DIRS=	share/rmap
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw -pe factbook ${PREFIX}/share/rmap

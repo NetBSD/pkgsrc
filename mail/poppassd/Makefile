@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/15 05:26:20 taca Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/16 06:58:03 jlam Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -22,6 +22,8 @@ CONFIGURE_ENV+=	CDEFS='-DSMBPASSWD_BINARY=\"${LOCALBASE}/bin/smbpasswd\"'
 MAKE_ENV+=	ROOT_USER=${ROOT_USER} ROOT_GROUP=${ROOT_GROUP}
 
 .include "options.mk"
+
+INSTALLATION_DIRS=	man/man8 share/doc
 
 do-build:
 .for DIR in common password

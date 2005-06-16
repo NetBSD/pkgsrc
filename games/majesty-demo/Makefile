@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/15 04:26:24 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:55 jlam Exp $
 #
 
 DISTNAME=	majesty_demo
@@ -26,6 +26,8 @@ DEPENDS+=       suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 BINNAME=	maj_demo
 LGP_PATH=	${PREFIX}/lib/lgp
 MAJ_PATH=	${LGP_PATH}/maj_demo
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \

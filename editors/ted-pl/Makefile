@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/11 11:50:01 markd Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:50 jlam Exp $
 
 DISTNAME=	Ted_pl_PL
 PKGNAME=	ted-pl-2.16
@@ -17,6 +17,8 @@ USE_X11BASE=	YES
 
 DIST_SUBDIR=	Ted-2.16
 NO_BUILD=	YES
+
+INSTALLATION_DIRS=	share/Ted/ind
 
 post-extract:
 		cd ${WRKSRC};tar xvf Ted/ad/Ted_pl_PL.ad.tar

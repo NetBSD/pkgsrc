@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:11 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/16 06:58:01 jlam Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -48,6 +48,8 @@ SML_BINDIR=	${SML_BASE}/bin
 SML_SCRIPTS=	_link-sml _run-sml _ml-build _ml-makedepend
 
 .include "../../lang/smlnj/Makefile.common"
+
+INSTALLATION_DIRS+=	bin
 
 # create parent directory for the runtime system
 pre-extract:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2005/04/11 21:46:19 tv Exp $
+# $NetBSD: Makefile,v 1.95 2005/06/16 06:58:02 jlam Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system with Kerberos libraries
@@ -155,6 +155,7 @@ post-build:
 do-install:
 	${INSTALL_DATA_DIR} ${INC_DIR}
 	cd ${WRKSRC}/c-client; ${INSTALL_DATA} ${CCLIENT_INCS} ${INC_DIR}
+	${INSTALL_LIB_DIR} ${LIB_DIR}
 	${INST_LIB} ${WRKSRC}/c-client/${CCLIENT_LIB} ${LIB_DIR}
 	${INSTALL_LIB} ${WRKSRC}/c-client/.libs/${CCLIENT_PICLIB} ${LIB_DIR}
 	${RANLIB} ${LIB_DIR}/${CCLIENT_PICLIB}
@@ -167,11 +168,14 @@ do-install:
 			;;						\
 		esac;							\
 	done
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/imapd/imapd ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop2d ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop3d ${PREFIX}/libexec
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/sbin
 	${INST_PROG} ${WRKSRC}/mtest/mtest ${PREFIX}/sbin
 	${LN} -sf ../libexec/imapd ${PREFIX}/sbin/rimapd
+	${INSTALL_MAN_DIR} ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/src/imapd/imapd.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/src/ipopd/ipopd.8 ${PREFIX}/man/man8
 	${LN} -sf ipopd.8 ${PREFIX}/man/man8/ipop2d.8
@@ -182,7 +186,9 @@ do-install:
 	${FIND} ${DOC_DIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${DOC_DIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/bin
 	${INST_PROG} ${WRKSRC}/mailutil/mailutil ${PREFIX}/bin
+	${INSTALL_MAN_DIR} ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/src/mailutil/mailutil.1 ${PREFIX}/man/man1
 	${INST_PROG} ${WRKSRC}/dmail/dmail ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/src/dmail/dmail.1 ${PREFIX}/man/man1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/16 02:41:21 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:48 jlam Exp $
 #
 
 DISTNAME=		teem-1.8.0-src
@@ -44,6 +44,8 @@ MAKE_ENV+=	TEEM_ARCH=${TEEM_ARCH}					\
 		TEEM_ZLIB_LPATH="-L${BUILDLINK_PREFIX.zlib}/lib"	\
 		TEEM_PTHREAD_IPATH="-I${BUILDLINK_PREFIX.pthread}/include" \
 		TEEM_PTHREAD_LPATH="-L${BUILDLINK_PREFIX.pthread}/lib"
+
+INSTALLATION_DIRS=	bin include lib
 
 do-build:
 	cd ${WRKSRC}/src && ${MAKE_ENV} ${GMAKE}

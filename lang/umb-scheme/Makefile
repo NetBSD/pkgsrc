@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/12/03 15:15:02 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/16 06:58:01 jlam Exp $
 
 DISTNAME=		umb-scheme-3.2
 CATEGORIES=		lang
@@ -10,6 +10,7 @@ COMMENT=		UMB Scheme interpreter
 
 WRKSRC=			${WRKDIR}/scheme-3.2
 BUILD_TARGET=		default
+INSTALLATION_DIRS=	bin man/man1
 
 pre-patch:
 	${MV} ${WRKSRC}/scheme.1 ${WRKSRC}/scheme.1.dist

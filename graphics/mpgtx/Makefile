@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/31 22:45:58 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:58 jlam Exp $
 #
 
 DISTNAME=	mpgtx-1.3.1
@@ -15,6 +15,8 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}	\
 BUILD_TARGET=	mpgtx
 PLINKS=		mpgjoin mpgcat mpgsplit mpginfo mpgdemux tagmp3
 MLINKS=		mpgcat.1 mpgjoin.1 mpginfo.1 mpgsplit.1 mpgdemux.1
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mpgtx ${PREFIX}/bin

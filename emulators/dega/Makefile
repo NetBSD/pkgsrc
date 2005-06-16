@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/01 18:02:46 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:50 jlam Exp $
 #
 
 DISTNAME=	dega-1.07
@@ -16,6 +16,8 @@ USE_TOOLS+=	gmake
 
 # Uses i386 assembly code
 ONLY_FOR_PLATFORM=	*-*-i386
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dega ${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/22 20:07:57 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:50 jlam Exp $
 #
 
 DISTNAME=		dutil217
@@ -18,6 +18,8 @@ BUILD_TARGET=		datutil
 EXTRACT_CMD_OPTS.zip=	-Laaqo
 
 BUILDLINK_DEPENDS.DatLib+=	DatLib>=2.4
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	${MKDIR} ${WRKSRC}/obj

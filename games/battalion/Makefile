@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/06/01 18:02:49 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2005/06/16 06:57:53 jlam Exp $
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
@@ -24,6 +24,8 @@ MAKE_ENV+=	LIBFLAGS=-lcompat
 .elif ${OPSYS} == "Linux"
 MAKE_ENV+=	OS="-DLINUXVERSION"
 .endif
+
+INSTALLATION_DIRS=	bin man/man6
 
 do-install:
 	${INSTALL} -c -s -o ${ROOT_USER} -g games -m 2755 ${WRKSRC}/battalion ${PREFIX}/bin

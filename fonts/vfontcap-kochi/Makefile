@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/01 18:02:49 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/16 06:57:52 jlam Exp $
 
 DISTNAME=		vfontcap-kochi-0.0
 PKGREVISION=		1
@@ -23,6 +23,8 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 VFONTCAPDIR=		${PREFIX}/share/VFlib/2.24.2
 FILES_SUBST+=		VFONTCAPDIR=${VFONTCAPDIR}
+
+INSTALLATION_DIRS=	share/VFlib/2.24.2
 
 do-configure:
 	${SED} -e 's,@X11PREFIX@,${X11PREFIX},g' ${FILESDIR}/vfontcap \

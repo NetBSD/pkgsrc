@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/05/16 01:15:32 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/06/16 06:58:00 jlam Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -39,6 +39,7 @@ post-extract:
 	@cd ${WRKDIR} && ${GTAR} -xzf ${EXTRACT_ELEMENTS}
 
 do-install:
+	${INSTALL_LIB_DIR} ${PKG_JAVA_HOME}/lib/i386
 	${INSTALL_PROGRAM} ${WRKSRC}/libjavacomp.so ${WRKSRC}/libjavacomp_g.so \
 		${PKG_JAVA_HOME}/lib/i386/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jbuilder-jit

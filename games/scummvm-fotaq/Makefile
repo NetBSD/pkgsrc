@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:57 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:55 jlam Exp $
 #
 
 DISTNAME=		FOTAQ_Floppy
@@ -14,6 +14,8 @@ COMMENT=		Flight Of The Amazon Queen
 WRKSRC=			${WRKDIR}/FOTAQ_Floppy
 
 FOTAQDIR=	${PREFIX}/share/games/fotaq
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	${SED} "s|@FOTAQDIR@|${FOTAQDIR}|" <${FILESDIR}/fotaq.sh \

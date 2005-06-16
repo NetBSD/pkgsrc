@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/06/01 18:02:41 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/16 06:57:42 jlam Exp $
 
 PSI_VERSION=	0.9.3
 DISTNAME=	psi-${PSI_VERSION}
@@ -35,6 +35,8 @@ LANG_FILES=	psi_zh.qm psi_nl.qm psi_sk.qm psi_fr.qm psi_cs.qm	\
 .for l in ${LANG_FILES}
 SITES_${l}=	http://psi.affinix.com/?version=${PSI_VERSION}&file=
 .endfor
+
+INSTALLATION_DIRS=	bin
 
 # XXX the psiwidgets.so symlink is somewhat ugly, but without that
 # uic doesn't find the built plug-in and generates sources without

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/08/09 10:59:04 seb Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:59 jlam Exp $
 
 DISTNAME=	a60-0.20a
 CATEGORIES=	lang
@@ -12,6 +12,8 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+= 	-Dunix
 
 INFO_FILES=	RRA60.info a60.info
+
+INSTALLATION_DIRS=	bin info man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/a60 ${PREFIX}/bin/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/03/24 21:12:55 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2005/06/16 06:58:01 jlam Exp $
 
 DISTNAME=	ruby-${RUBY_VERSION}
 PKGREVISION=	2
@@ -24,6 +24,8 @@ RUBY_COMMANDS=	irb ruby
 .if ${RUBY_VER} >= 18
 RUBY_COMMANDS+=	erb h2rb rdoc ri testrb
 .endif
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
