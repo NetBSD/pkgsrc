@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:10 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:59 jlam Exp $
 #
 
 DISTNAME=	xdvipresent-0.6p14
@@ -21,6 +21,8 @@ STYDIR=		${PREFIX}/share/texmf/tex/latex/other
 EXAMPLES_DIR=	${PREFIX}/share/examples/xdvipresent
 MAN_DIR=	${PREFIX}/man/
 HTML_DIR=	${PREFIX}/share/doc/html/xdvipresent
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_DATA_DIR} ${STYDIR}/images

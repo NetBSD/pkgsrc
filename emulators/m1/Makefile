@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/29 23:19:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/16 06:57:51 jlam Exp $
 #
 
 DISTNAME=	m1074b2-lnx
@@ -18,6 +18,8 @@ ONLY_FOR_PLATFORM=	*-*-i386
 WRKSRC=		${WRKDIR}/m1-0.7.4
 NO_BUILD=	# defined
 CHECK_SHLIBS=	no
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/m1 ${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:44 jlam Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.4-src
@@ -25,6 +25,8 @@ CONFIGURE_ARGS+=	--with-openssl-lib=${SSLBASE}/lib
 CONFIGURE_ENV+=		QMAKESPEC="${QTDIR}/mkspecs/netbsd-g++"
 
 MYSQL_VERSIONS_ACCEPTED=	40 41
+
+INSTALLATION_DIRS=	bin
 
 pre-configure:
 	cd ${WRKSRC} && aclocal && autoconf

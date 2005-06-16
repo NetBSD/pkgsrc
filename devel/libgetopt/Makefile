@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/06/12 07:26:18 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/06/16 06:57:46 jlam Exp $
 #
 
 DISTNAME=	libgetopt-1.4.1
@@ -19,6 +19,8 @@ WRKSRC=		${WRKDIR}/libgetopt
 MAKEFLAGS+=	NETBSD_COMPATIBLE=YES
 CFLAGS+=	-DREPLACE_GETOPT
 .endif
+
+INSTALLATION_DIRS=	include lib man/man3
 
 do-extract:
 	${MKDIR} ${WRKSRC}

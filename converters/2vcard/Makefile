@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:27:05 grant Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:42 jlam Exp $
 #
 
 DISTNAME=	2vcard-0.5
@@ -14,6 +14,8 @@ USE_PERL5=	run
 REPLACE_PERL=	src/2vcard
 
 NO_BUILD=	yes
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/2vcard ${PREFIX}/bin

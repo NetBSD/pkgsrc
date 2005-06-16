@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/05/31 20:52:53 sjg Exp $
+# $NetBSD: Makefile,v 1.22 2005/06/16 06:57:45 jlam Exp $
 #
 
 DISTNAME=       bmake-20050530
@@ -16,6 +16,8 @@ WRKSRC=		${WRKDIR}/bmake
 makesyspath=${PREFIX}/share/mk:/usr/share/mk:/usr/local/share/mk:/opt/share/mk
 GNU_CONFIGURE=	no
 CONFIGURE_ARGS+= --with-default-sys-path=${makesyspath}
+
+INSTALLATION_DIRS=	bin man/cat1 man/man1
 
 do-configure:
 

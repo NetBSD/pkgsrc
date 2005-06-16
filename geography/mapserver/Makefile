@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/01 18:02:53 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:56 jlam Exp $
 #
 
 DISTNAME=		mapserver-4.0
@@ -17,6 +17,8 @@ USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--with-gd=${PREFIX}				\
 			--with-libiconv=${PREFIX}			\
 			--with-zlib=${BUILDLINK_PREFIX.zlib}
+
+INSTALLATION_DIRS=	bin include lib
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libmap.a ${PREFIX}/lib

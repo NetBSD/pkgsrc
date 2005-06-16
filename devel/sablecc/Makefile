@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/08/05 13:38:00 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:48 jlam Exp $
 #
 
 DISTNAME=	sablecc-2.16.2
@@ -12,6 +12,8 @@ COMMENT=	Java based Compiler Compiler
 
 USE_JAVA=	run
 USE_JAVA2=	yes
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	${SED}	-e 's,@PREFIX@,${PREFIX},g'				\

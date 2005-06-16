@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/09/04 13:56:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:46 jlam Exp $
 #
 
 DISTNAME=	jam-2.5
@@ -18,6 +18,8 @@ WRKSRC=		${WRKDIR}
 
 DOCDIR=		share/doc/${PKGBASE}
 HTMLDIR=	share/doc/html/${PKGBASE}
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	@for f in jam mkjambase; do \

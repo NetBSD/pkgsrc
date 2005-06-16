@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:38 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:39 jlam Exp $
 
 DISTNAME=	madman-0.93
 PKGREVISION=	2
@@ -12,6 +12,8 @@ COMMENT=	Powerful audio manager for large collections
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 
 GCC_REQD=		3.0
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	${MV} ${WRKSRC}/httpd/make_webdata ${WRKSRC}/httpd/make_webdata.org

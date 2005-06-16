@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:44:53 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:39 jlam Exp $
 #
 
 DISTNAME=	ac3dec-0.6.1
@@ -11,6 +11,8 @@ HOMEPAGE=	http://ess.engr.uvic.ca/~aholtzma/ac3/
 COMMENT=	AC3 audio (as used on DVDs) decoding library
 
 GNU_CONFIGURE=  yes
+
+INSTALLATION_DIRS=	include lib
 
 do-build:
 	cd ${WRKSRC}/libac3 && ${MAKE}

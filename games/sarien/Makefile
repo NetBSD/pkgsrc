@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/22 20:08:03 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/16 06:57:55 jlam Exp $
 #
 
 DISTNAME=	sarien-0.7.0
@@ -19,6 +19,8 @@ CONFIGURE_ARGS=		--with-sdl
 CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 EGDIR=			${PREFIX}/share/examples/sarien
 CONF_FILES=		${EGDIR}/sarien.conf ${PKG_SYSCONFDIR}/sarien.conf
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/sarien ${PREFIX}/bin
