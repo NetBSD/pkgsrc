@@ -1,0 +1,13 @@
+$NetBSD: patch-cm,v 1.1 2005/06/16 21:39:06 martin Exp $
+
+--- extensions/transformiix/source/xslt/txXSLTPatterns.cpp.orig	2003-11-18 23:56:46.000000000 +0100
++++ extensions/transformiix/source/xslt/txXSLTPatterns.cpp	2005-06-16 09:17:00.000000000 +0200
+@@ -99,7 +99,7 @@
+ double txUnionPattern::getDefaultPriority()
+ {
+     NS_ASSERTION(0, "Don't call getDefaultPriority on txUnionPattern");
+-    return Double::NaN;
++    return Double::NaN();
+ }
+ 
+ /*

@@ -1,0 +1,19 @@
+$NetBSD: patch-ck,v 1.1 2005/06/16 21:38:09 martin Exp $
+
+--- extensions/transformiix/source/xslt/functions/txFormatNumberFunctionCall.cpp.orig	2003-06-17 00:31:17.000000000 +0200
++++ extensions/transformiix/source/xslt/functions/txFormatNumberFunctionCall.cpp	2005-06-16 10:06:22.000000000 +0200
+@@ -112,12 +112,12 @@
+         return aContext->recycler()->getStringResult(format->mNaN, aResult);
+     }
+ 
+-    if (value == Double::POSITIVE_INFINITY) {
++    if (value == Double::PositiveInfinity()) {
+         return aContext->recycler()->getStringResult(format->mInfinity,
+                                                      aResult);
+     }
+ 
+-    if (value == Double::NEGATIVE_INFINITY) {
++    if (value == Double::NegativeInfinity()) {
+         nsAutoString res;
+         res.Append(format->mMinusSign);
+         res.Append(format->mInfinity);
