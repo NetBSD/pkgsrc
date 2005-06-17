@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3621 2005/06/16 15:19:53 epg Exp $
+$NetBSD: TODO,v 1.3622 2005/06/17 11:11:41 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -519,6 +519,7 @@ Suggested package updates
 	o gcube-0.4
 	o gdb6-6.3.0
 	o gdm1-2.2.5.5
+	o gdm-2.8.0.0 [jmmv]
 	o gentoo-0.11.55
 	o gettext-0.14.5
 	o gfract-0.3.2
@@ -635,6 +636,8 @@ Suggested package updates
 	o libetpan-0.34b
 	o libextractor-0.5.0
 	o libflash-0.4.13
+	o libgda-1.2.2 [jmmv]
+	o libgnomedb-1.2.2 [jmmv]
 	o libgnomemm26-2.10.0
 	o libgnomeuimm26-2.10.0
 	o libhydrogen-0.9.0
