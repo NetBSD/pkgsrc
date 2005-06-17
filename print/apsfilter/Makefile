@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/20 12:24:28 agc Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/17 04:49:48 jlam Exp $
 #
 
 DISTNAME=	apsfilter-7.2.5
@@ -22,7 +22,7 @@ HAS_CONFIGURE=	YES
 USE_BZIP2=	YES
 USE_PKGINSTALL=	YES
 
-CONFIGURE_ARGS+=--prefix=${LOCALBASE}
+CONFIGURE_ARGS+=--prefix=${PREFIX}
 CONFIGURE_ARGS+=--with-shell=${SH}
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 
