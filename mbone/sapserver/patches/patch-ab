@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 2005/06/17 15:06:16 hira Exp $
+
 --- Makefile.in.orig	Tue Jul 27 18:07:05 2004
 +++ Makefile.in	Tue Jul 27 18:07:30 2004
 @@ -104,9 +104,9 @@
