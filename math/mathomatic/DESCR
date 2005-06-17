@@ -5,8 +5,6 @@ Mathomatic is an interpreter that can:
   - Solve, simplify, and compare algebraic equations.
   - Combine simultaneous equations.
   - Perform basic calculus operations.
-  - Generate the sensitivity formula for one or more variables in an
-    equation.
   - Act like a double precision floating point programmable calculator.
   - Perform complex number and polynomial arithmetic.
   - Compute the Greatest Common Divisor of numbers or polynomials.
