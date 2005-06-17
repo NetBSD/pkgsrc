@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2005/02/22 21:33:50 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/06/17 15:06:16 hira Exp $
 
 SHA1 (miniSAPserver-0.2.4.tar.gz) = 08c23e667f473e889fbaecffb08815e93d24ca83
 RMD160 (miniSAPserver-0.2.4.tar.gz) = 9e501df31445d0fc89bdafca2d8f5a3c8c4df3d4
 Size (miniSAPserver-0.2.4.tar.gz) = 83614 bytes
-SHA1 (patch-aa) = 5ace64928278a095adaabd2a305a252afb9bdbfc
-SHA1 (patch-ab) = 8d532c712dbeae4662feb2ae5f8fae596d693886
-SHA1 (patch-ac) = 4ec86525145d3684982fbed60f13f83d17371466
+SHA1 (patch-aa) = cab5013873ac64988e5a0410fbbee5de2eba1fa9
+SHA1 (patch-ab) = 60e557be6853ca15621f71b60c58fddd5c54cb1a
+SHA1 (patch-ac) = 70a89208a5d34543c7992f476e7e2bcc71815e0d
