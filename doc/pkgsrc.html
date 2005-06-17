@@ -10682,29 +10682,27 @@ CONFLICTS=      Xaw3d-[0-9]*
             <p>When a vulnerability is found, this should be noted
             in <code class=
             "filename">localsrc/security/advisories/pkg-vulnerabilities</code>,
-            and after the commit of that file, it should be copied
-            to both <code class=
-            "filename">/pub/NetBSD/packages/distfiles/pkg-vulnerabilities</code>
-            and <code class=
-            "filename">/pub/NetBSD/packages/distfiles/vulnerabilities</code>
-            on ftp.NetBSD.org using <code class=
-            "filename">localsrc/security/advisories/Makefile</code>.
-            In addition, if a <code class=
+            and after committing that file, use
+            <span><strong class="command">make
+            upload</strong></span> in the same directory to update
+            the file on ftp.NetBSD.org.</p>
+
+            <p>After fixing the vulnerability by a patch, its
+            <code class="varname">PKGREVISION</code> should be
+            increased (this is of course not necessary if the
+            problem is fixed by using a newer release of the
+            software). In addition, if a <code class=
             "filename">buildlink3.mk</code> file exists for an
-            affected package, bumping <code class=
-            "varname">PKGREVISION</code> and creating a
-            corresponding <code class=
+            affected package, a corresponding <code class=
             "varname">BUILDLINK_RECOMMENDED.<em class=
             "replaceable"><code>pkg</code></em></code> entry should
-            be considered. See <a href="#buildlink" title=
-            "Chapter&nbsp;11.&nbsp;Buildlink methodology">Chapter&nbsp;11,
-            <i>Buildlink methodology</i></a> for more information
-            about writing <code class=
-            "filename">buildlink3.mk</code> files and <code class=
-            "varname">BUILDLINK_*</code> definitions.</p>
+            be added or updated in it.</p>
 
             <p>Also, if the fix should be applied to the stable
             pkgsrc branch, be sure to submit a pullup request!</p>
+
+            <p>Binary packages already on ftp.NetBSD.org will be
+            handled semi-automatically by a weekly cron job.</p>
           </div>
 
           <div class="sect2" lang="en" xml:lang="en">
@@ -10865,9 +10863,6 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
             "varname">${ECHO}</code>). As of this writing, the
             following packages use this: <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
-            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/audio/realplayer/README.html"
-            class="pkgname">audio/realplayer</a>, <a xmlns=
-            "http://www.w3.org/TR/xhtml1/transitional" href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/cad/simian/README.html"
             class="pkgname">cad/simian</a>, <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
@@ -10879,6 +10874,9 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
             "http://www.w3.org/TR/xhtml1/transitional" href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/fonts/acroread-jpnfont/README.html"
             class="pkgname">fonts/acroread-jpnfont</a>, <a xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" href=
+            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/multimedia/realplayer/README.html"
+            class="pkgname">multimedia/realplayer</a>, <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/storage-manager/README.html"
             class="pkgname">sysutils/storage-manager</a>, <a xmlns=
