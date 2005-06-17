@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/28 15:16:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/17 04:49:47 jlam Exp $
 
 DISTNAME=	se
 PKGNAME=	SmartEiffel-2.0
@@ -31,6 +31,6 @@ post-build:
 	${RM} -f ${WRKSRC}/sys/system.se~
 
 do-install:
-	${CP} -r ${WRKSRC} ${LOCALBASE}
+	${CP} -r ${WRKSRC} ${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"

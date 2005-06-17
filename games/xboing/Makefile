@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/11 21:45:58 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/17 04:49:46 jlam Exp $
 #
 
 DISTNAME=		xboing2.4
@@ -19,9 +19,9 @@ NO_INSTALL_MANPAGES=	YES
 MAKE_ENV+=		VARBASE=${VARBASE:Q}
 
 post-install:
-	${CHOWN} ${GAMEOWN}:${GAMEGRP} ${X11PREFIX}/bin/xboing
-	${CHMOD} ${GAMEMODE} ${X11PREFIX}/bin/xboing
-	${INSTALL_MAN} ${WRKSRC}/xboing.man ${X11PREFIX}/man/man6/xboing.6
+	${CHOWN} ${GAMEOWN}:${GAMEGRP} ${PREFIX}/bin/xboing
+	${CHMOD} ${GAMEMODE} ${PREFIX}/bin/xboing
+	${INSTALL_MAN} ${WRKSRC}/xboing.man ${PREFIX}/man/man6/xboing.6
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/04/11 21:48:13 tv Exp $
+# $NetBSD: Makefile,v 1.47 2005/06/17 04:49:49 jlam Exp $
 
 DISTNAME=		rxvt-2.7.10
 PKGREVISION=		4
@@ -58,11 +58,12 @@ CFLAGS+=	-DSunOS
 post-patch:
 	${MV} ${WRKSRC}/src/feature.h  ${WRKSRC}/src/feature.h.orig
 	${SED} < ${WRKSRC}/src/feature.h.orig > ${WRKSRC}/src/feature.h \
-		-e "s:/usr/lib/X11/app-defaults:${X11PREFIX}/lib/X11/app-defaults:"
+		-e "s:/usr/lib/X11/app-defaults:${PREFIX}/lib/X11/app-defaults:"
 
 pre-install:
-	if [ ! -f ${X11PREFIX}/lib/X11/app-defaults/Rxvt ]; then \
-		${INSTALL_DATA} ${FILESDIR}/Rxvt ${X11PREFIX}/lib/X11/app-defaults; \
+	if [ ! -f ${PREFIX}/lib/X11/app-defaults/Rxvt ]; then \
+		${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/app-defaults; \
+		${INSTALL_DATA} ${FILESDIR}/Rxvt ${PREFIX}/lib/X11/app-defaults; \
 	fi
 
 .include "../../graphics/xpm/buildlink3.mk"

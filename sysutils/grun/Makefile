@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/01 18:03:22 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/17 04:49:48 jlam Exp $
 
 DISTNAME=	grun-0.9.2
 PKGREVISION=	3
@@ -14,7 +14,7 @@ USE_TOOLS+=		gmake
 PTHREAD_OPTS+=		require
 
 post-install:
-	${MV} ${LOCALBASE}/man/man1/grun.1x ${LOCALBASE}/man/man1/grun.1
+	${MV} ${PREFIX}/man/man1/grun.1x ${PREFIX}/man/man1/grun.1
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
