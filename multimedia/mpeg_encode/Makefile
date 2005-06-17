@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:23 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 04:49:47 jlam Exp $
 #
 
 DISTNAME=	mpeg_encode-1.5b-src
@@ -20,20 +20,20 @@ post-build:
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mpeg_encode ${LOCALBASE}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/mpeg_encode ${PREFIX}/bin
 .for i in eyuvtojpeg jmovie2jpeg mpeg_demux
-	${INSTALL_PROGRAM} ${WRKSRC}/convert/${i} ${LOCALBASE}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/convert/${i} ${PREFIX}/bin
 .endfor
-	${INSTALL_DATA_DIR}  ${LOCALBASE}/share/doc/mpeg_encode
+	${INSTALL_DATA_DIR}  ${PREFIX}/share/doc/mpeg_encode
 .for i in EXTENSIONS INPUT.FORMAT mpeg_encode.1 parallel.param param-summary \
 		template.param users-guide.fm users-guide.mif users-guide.ps
-	${INSTALL_DATA}  ${WRKSRC}/docs/${i} ${LOCALBASE}/share/doc/mpeg_encode
+	${INSTALL_DATA}  ${WRKSRC}/docs/${i} ${PREFIX}/share/doc/mpeg_encode
 .endfor
-	${INSTALL_DATA_DIR}  ${LOCALBASE}/share/examples/mpeg_encode
+	${INSTALL_DATA_DIR}  ${PREFIX}/share/examples/mpeg_encode
 	cd ${WRKSRC}/examples ; for i in * ; do \
-		${INSTALL_DATA} $$i ${LOCALBASE}/share/examples/mpeg_encode; \
+		${INSTALL_DATA} $$i ${PREFIX}/share/examples/mpeg_encode; \
 	done
-	${INSTALL_MAN} ${WRKSRC}/docs/mpeg_encode.1 ${LOCALBASE}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/docs/mpeg_encode.1 ${PREFIX}/man/man1
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

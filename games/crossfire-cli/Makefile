@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/06/01 18:02:49 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/17 04:49:46 jlam Exp $
 #
 
 DISTNAME=	crossfire-client-1.0.0
@@ -20,7 +20,7 @@ CF_RAW=		client-0.95.2-raw-sounds.tgz
 USE_PERL5=	yes
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-sound-dir=${LOCALBASE}/share/cfclient/sounds
+CONFIGURE_ARGS+=	--with-sound-dir=${PREFIX}/share/cfclient/sounds
 PKGSRC_USE_TOOLS+=	gtar
 
 REPLACE_PERL=	utils/deftoheader.pl items.pl
@@ -35,13 +35,13 @@ pre-build:
 	cd ${WRKSRC} && ${MAKE} soundsdef.h
 
 post-install:
-	@${INSTALL_DATA_DIR} ${LOCALBASE}/share/cfclient
-	cd ${LOCALBASE}/share/cfclient && \
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/cfclient
+	cd ${PREFIX}/share/cfclient && \
 	    ${GZCAT} ${DISTDIR}/${CF_SND} | ${GTAR} xmf -
-	cd ${LOCALBASE}/share/cfclient && \
+	cd ${PREFIX}/share/cfclient && \
 	    ${GZCAT} ${DISTDIR}/${CF_RAW} | ${GTAR} xmf -
-	${INSTALL_DATA} ${WRKSRC}/def_keys ${LOCALBASE}/share/cfclient
-	@${CHOWN} -R ${ROOT_USER}:games ${LOCALBASE}/share/cfclient
+	${INSTALL_DATA} ${WRKSRC}/def_keys ${PREFIX}/share/cfclient
+	@${CHOWN} -R ${ROOT_USER}:games ${PREFIX}/share/cfclient
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"

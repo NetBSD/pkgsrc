@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/31 22:09:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/17 04:49:49 jlam Exp $
 
 DISTNAME=		control-center-1.4.0.4
 PKGREVISION=		10
@@ -18,7 +18,7 @@ USE_PKGLOCALEDIR=	YES
 
 USE_LIBTOOL=		YES
 
-LOCALSTATEDIR=		${X11PREFIX}/var
+LOCALSTATEDIR=		${PREFIX}/var
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}

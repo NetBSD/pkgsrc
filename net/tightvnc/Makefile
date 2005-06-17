@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/12 05:26:47 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/17 04:49:47 jlam Exp $
 #
 
 DISTNAME=		tightvnc-1.2.9
@@ -36,7 +36,7 @@ post-install:
 	    ${PREFIX}/bin/vncpasswd
 	${INSTALL_MAN} ${WRKSRC}/vncpasswd/vncpasswd.man \
 	    ${PREFIX}/man/man1/vncpasswd.1
-	${SED} -e 's|/usr/local/vnc/classes|${X11PREFIX}/share/vnc/classes|g' \
+	${SED} -e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g' \
 		-e 's|/usr/bin/perl|${PERL5}|g' \
 		< ${WRKSRC}/vncserver \
 		> ${WRKSRC}/vncserver.local

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/01 18:02:59 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 04:49:47 jlam Exp $
 #
 
 DISTNAME=		sr233
@@ -32,7 +32,7 @@ pre-configure:
 				> ${WRKSRC}/Configuration
 
 pre-install:
-			-${MKDIR} ${LOCALBASE}/lib/sr
+			-${MKDIR} ${PREFIX}/lib/sr
 
 post-install:
 			${INSTALL_PROGRAM} ${WRKSRC}/csw/cstest ${PREFIX}/bin

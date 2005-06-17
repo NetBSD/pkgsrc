@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/04/18 13:23:13 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2005/06/17 04:49:47 jlam Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
@@ -42,7 +42,7 @@ post-install:
 .endif
 	${INSTALL_PROGRAM} ${WRKSRC}/vncconnect/vncconnect ${PREFIX}/bin/vncconnect
 	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd ${PREFIX}/bin/vncpasswd
-	${SED} -e 's|/usr/local/vnc/classes|${X11PREFIX}/share/vnc/classes|g' \
+	${SED} -e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g' \
 		-e 's|/usr/bin/perl|${PERL5}|g' \
 		< ${WRKSRC}/vncserver \
 		> ${WRKSRC}/vncserver.local

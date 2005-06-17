@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/04/11 21:45:28 tv Exp $
+# $NetBSD: Makefile,v 1.30 2005/06/17 04:49:46 jlam Exp $
 #
 
 DISTNAME=		mrproject-0.5.1
@@ -15,7 +15,7 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--sysconfdir=${LOCALBASE}/etc/mrproject
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc/mrproject
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-evolution-idldir
 

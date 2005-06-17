@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/01 18:02:51 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/17 04:49:46 jlam Exp $
 
 DISTNAME=	lbreakout2-2.5.2
 PKGREVISION=	1
@@ -10,8 +10,8 @@ HOMEPAGE=	http://lgames.sourceforge.net/
 COMMENT=	Breakout-style arcade game
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-highscore-path=${LOCALBASE}/share/games/ \
-			--with-docdir=${LOCALBASE}/share/doc/html
+CONFIGURE_ARGS+=	--with-highscore-path=${PREFIX}/share/games/ \
+			--with-docdir=${PREFIX}/share/doc/html
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 

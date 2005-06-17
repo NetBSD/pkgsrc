@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/16 06:57:48 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 04:49:46 jlam Exp $
 
 DISTNAME=	optparse-0.12
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -36,7 +36,7 @@ do-install:
 .for f in ${EXAMPLES_JA}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_EXAMPLESDIR}/optparse/${f}.ja
 .endfor
-	${INSTALL_MAN} ${WRKSRC}/optparse.1 ${LOCALBASE}/man/man3/optparse.3
+	${INSTALL_MAN} ${WRKSRC}/optparse.1 ${PREFIX}/man/man3/optparse.3
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"

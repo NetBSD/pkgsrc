@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2005/04/11 21:46:04 tv Exp $
+# $NetBSD: Makefile.common,v 1.4 2005/06/17 04:49:47 jlam Exp $
 #
 
 DISTNAME=		gnuplot-4.0.0
@@ -21,7 +21,7 @@ USE_MAKEINFO=		YES
 INFO_FILES=		gnuplot.info
 
 CONFIGURE_ARGS+=	--with-pdf
-CONFIGURE_ARGS+=	--with-plot=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-plot=${PREFIX}
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 CONFIGURE_ARGS+=	--without-lisp-files
 

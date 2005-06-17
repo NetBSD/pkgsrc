@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/17 03:50:40 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/17 04:49:49 jlam Exp $
 #
 
 DISTNAME=	htmllint
@@ -20,8 +20,8 @@ REPLACE_PERL=	htmllint.cgi htmllint parsedtd.pl tagslist.cgi
 USE_PERL5=	# defined
 NO_BUILD=	# defined
 
-CGIDIR=		${LOCALBASE}/libexec/cgi-bin
-HTMLDIR=	${LOCALBASE}/share/httpd/htdocs/htmllint
+CGIDIR=		${PREFIX}/libexec/cgi-bin
+HTMLDIR=	${PREFIX}/share/httpd/htdocs/htmllint
 IMGDIR=		${HTMLDIR}/images
 
 INSTALLATION_DIRS=	bin

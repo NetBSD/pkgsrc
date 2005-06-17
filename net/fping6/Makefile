@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 22:51:10 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/17 04:49:47 jlam Exp $
 
 DISTNAME=	fping-2.4b2_to-ipv6
 PKGNAME=	fping6-2.4b2
@@ -15,6 +15,6 @@ post-patch:
 	@${MV} ${WRKSRC}/fping.8 ${WRKSRC}/fping6.8
 
 post-install:
-	${CHMOD} 4555 ${LOCALBASE}/sbin/fping6
+	${CHMOD} 4555 ${PREFIX}/sbin/fping6
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/16 06:57:41 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/17 04:49:45 jlam Exp $
 #
 
 DISTNAME=	xchiplogo
@@ -14,7 +14,7 @@ COMMENT=	Program for generating pretty logos on VLSI chips
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xchiplogo ${LOCALBASE}/bin/xchiplogo
+	${INSTALL_PROGRAM} ${WRKSRC}/xchiplogo ${PREFIX}/bin/xchiplogo
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"

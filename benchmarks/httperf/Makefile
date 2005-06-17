@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:07:40 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/17 04:49:45 jlam Exp $
 #
 
 DISTNAME=	httperf-0.6
@@ -24,7 +24,7 @@ LDFLAGS+=	-lsocket -lnsl -lresolv
 INSTALLATION_DIRS=	bin man/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/httperf ${LOCALBASE}/bin/httperf
-	${INSTALL_MAN} ${WRKSRC}/httperf.man ${LOCALBASE}/man/man1/httperf.1
+	${INSTALL_PROGRAM} ${WRKSRC}/httperf ${PREFIX}/bin/httperf
+	${INSTALL_MAN} ${WRKSRC}/httperf.man ${PREFIX}/man/man1/httperf.1
 
 .include "../../mk/bsd.pkg.mk"

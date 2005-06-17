@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/06/16 06:58:01 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/06/17 04:49:47 jlam Exp $
 
 DISTNAME=	ruby-${RUBY_VERSION}
 PKGREVISION=	2
@@ -31,7 +31,7 @@ do-install:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 .if ${RUBY_NAME} != "ruby"
 .for f in ${RUBY_COMMANDS}
-	${LN} -sf ${f}${RUBY_VER} ${LOCALBASE}/bin/${f}
+	${LN} -sf ${f}${RUBY_VER} ${PREFIX}/bin/${f}
 	${ECHO} bin/${f} >> ${PLIST_SRC}
 .endfor
 	${LN} -sf ${RUBY_NAME}.1 ${PREFIX}/man/man1/ruby.1
