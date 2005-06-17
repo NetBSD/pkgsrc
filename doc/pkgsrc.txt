@@ -4325,17 +4325,20 @@ option is used.
 15.1.8. Handling packages with security problems
 
 When a vulnerability is found, this should be noted in localsrc/security/
-advisories/pkg-vulnerabilities, and after the commit of that file, it should be
-copied to both /pub/NetBSD/packages/distfiles/pkg-vulnerabilities and /pub/
-NetBSD/packages/distfiles/vulnerabilities on ftp.NetBSD.org using localsrc/
-security/advisories/Makefile. In addition, if a buildlink3.mk file exists for
-an affected package, bumping PKGREVISION and creating a corresponding
-BUILDLINK_RECOMMENDED.pkg entry should be considered. See Chapter 11, Buildlink
-methodology for more information about writing buildlink3.mk files and
-BUILDLINK_* definitions.
+advisories/pkg-vulnerabilities, and after committing that file, use make upload
+in the same directory to update the file on ftp.NetBSD.org.
+
+After fixing the vulnerability by a patch, its PKGREVISION should be increased
+(this is of course not necessary if the problem is fixed by using a newer
+release of the software). In addition, if a buildlink3.mk file exists for an
+affected package, a corresponding BUILDLINK_RECOMMENDED.pkg entry should be
+added or updated in it.
 
 Also, if the fix should be applied to the stable pkgsrc branch, be sure to
 submit a pullup request!
+
+Binary packages already on ftp.NetBSD.org will be handled semi-automatically by
+a weekly cron job.
 
 15.1.9. How to handle compiler bugs
 
@@ -4396,8 +4399,8 @@ information to apply for a password, or must pay for the source, or whatever,
 you can set _FETCH_MESSAGE to a macro which displays a message explaining the
 situation. _FETCH_MESSAGE must be executable shell commands, not just a
 message. (Generally, it executes ${ECHO}). As of this writing, the following
-packages use this: audio/realplayer, cad/simian, devel/ipv6socket, emulators/
-vmware-module, fonts/acroread-jpnfont, sysutils/storage-manager, www/
+packages use this: cad/simian, devel/ipv6socket, emulators/vmware-module, fonts
+/acroread-jpnfont, multimedia/realplayer, sysutils/storage-manager, www/
 ap-aolserver, www/openacs. Try to be consistent with them.
 
 15.2.2. How to handle modified distfiles with the 'old' name
