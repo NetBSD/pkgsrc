@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/21 17:20:05 martti Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/17 03:50:31 jlam Exp $
 #
 
 DISTNAME=	amavis-0.2.1
@@ -32,6 +32,8 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	procmail="/usr/libexec/mail.local"
 CONFIGURE_ARGS+=--with-virusdir=${VIRUSDIR}
 CONFIGURE_ARGS+=--with-mailto=${VIRUSMAILTO}
+
+INSTALLATION_DIRS=	bin sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/zipsecure/zipsecure ${PREFIX}/bin

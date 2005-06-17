@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:53:55 grant Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:35 jlam Exp $
 #
 
 DISTNAME=	procps-2.0.6
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://people.redhat.com/johnsonm/procps/
 
 MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	Terminal version of xload
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-build:
 	cd ${WRKSRC} ; \

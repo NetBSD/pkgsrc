@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/05/16 01:15:33 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/06/17 03:50:32 jlam Exp $
 
 DISTNAME=	pgp263is
 CATEGORIES=	security
@@ -66,6 +66,7 @@ CFLAGS+=        -DHIGHFIRST
 BUILD_DEFS+=	USE_RSAREF2 M68060 ASMFLAG
 
 PKGSRC_USE_TOOLS+=	gtar
+INSTALLATION_DIRS=	bin man/man1
 
 .if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
 pre-fetch:

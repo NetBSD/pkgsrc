@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/13 10:26:03 agc Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/17 03:50:32 jlam Exp $
 
 DISTNAME=	hydan-0.13
 CATEGORIES=	security
@@ -11,6 +11,8 @@ COMMENT=	Steganography tool for covert comms, signing and watermarking
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 FreeBSD-*-i386 Linux-*-i386
 
 WRKSRC=		${WRKDIR}/hydan
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hydan ${PREFIX}/bin

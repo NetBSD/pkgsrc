@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/06/10 09:34:52 grant Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:35 jlam Exp $
 
 DISTNAME=	scsiinfo-4.7
 PKGNAME=	${DISTNAME}
@@ -13,6 +13,8 @@ COMMENT=	Displays information about SCSI devices attached to a system
 WRKSRC=		${WRKDIR}
 
 ONLY_FOR_PLATFORM=	SunOS-*-*
+
+INSTALLATION_DIRS=	man/man1 sbin
 
 do-extract:
 	cd ${WRKSRC} && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/16 00:54:33 kristerw Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/17 03:50:44 jlam Exp $
 
 PKGNAME=		qt2-designer-${QTVERSION}
 PKGREVISION=		3
@@ -12,8 +12,10 @@ CONFLICTS+=		qt2-designer-kde-[0-9]*
 BUILD_TARGET=		sub-tools
 
 do-install:
+	${INSTALL_LIB_DIR} ${QTPREFIX}/lib
 	${LIBTOOL} ${INSTALL_DATA} \
 		${WRKSRC}/tools/designer/util/libqutil.la ${QTPREFIX}/lib
+	${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
 	${LIBTOOL} ${INSTALL_PROGRAM} \
 		${WRKSRC}/tools/designer/uic/uic ${QTPREFIX}/bin
 	${LIBTOOL} ${INSTALL_PROGRAM} \

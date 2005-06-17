@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:18 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:32 jlam Exp $
 
 # Date-based distfile name for pre-releases leading to 0.6.6.
 DISTNAME=	pyca-20031021
@@ -29,6 +29,8 @@ PYCA_SCRIPT_FIXUP_SED= \
 	-e "s|/etc/openssl/openssl.cnf|${PKG_SYSCONFDIR}/openssl.cnf|g"	\
 	-e "s|/home/.*/openssl.cnf|${PKG_SYSCONFDIR}/openssl.cnf|g"	\
 	-e "s|/home/.*/pylib|${PREFIX}/lib/pyca|g"
+
+INSTALLATION_DIRS=	bin libexec/cgi-bin sbin
 
 pyca-script-fixup:
 	cd ${WRKSRC}; for file in ${PYTHON_PATCH_SCRIPTS}; do \

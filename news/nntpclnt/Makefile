@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/04/01 03:28:36 kim Exp $
+# $NetBSD: Makefile,v 1.24 2005/06/17 03:50:29 jlam Exp $
 
 DISTNAME=	nntpclnt-1.6.1
 PKGREVISION=	5
@@ -26,6 +26,8 @@ PLIST_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 CONFIG_SH=	${FILESDIR}/config.${OPSYS}.sh
 ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-*
+
+INSTALLATION_DIRS=	bin include lib man/man3
 
 do-configure:
 	${SED} -e s,@PREFIX@,${PREFIX}, -e s,@PKGSYSCONFDIR@,${PKG_SYSCONFDIR}, \

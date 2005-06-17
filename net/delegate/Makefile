@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/03/24 21:12:58 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2005/06/17 03:50:24 jlam Exp $
 
 DISTNAME=	${PKGNAME_NOREV:S/-//}
 PKGNAME=	delegate-8.9.6
@@ -33,6 +33,8 @@ FILES_SUBST+=		ADMIN="${DELEGATE_MANAGER}"
 
 OWN_DIRS_PERMS+=${VARBASE}/spool/delegate/cache ${ROOT_USER} ${ROOT_GROUP} 1777
 OWN_DIRS_PERMS+=${VARBASE}/spool/delegate-nobody nobody nobody 755
+
+INSTALLATION_DIRS=	sbin
 
 pre-build:
 	@${ECHO} "ADMIN=${DELEGATE_MANAGER}" >> ${WRKSRC}/DELEGATE_CONF

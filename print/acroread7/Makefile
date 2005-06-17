@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/16 23:56:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:30 jlam Exp $
 
 DISTNAME=	acroread7	# Overridden below
 PKGNAME=	acroread7-7.0
@@ -52,6 +52,8 @@ BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 # Additional directories to search for fonts
 BUILD_DEFS+=	ACROREAD_FONTPATH
 ACROREAD_FONTPATH?= ${PREFIX}/lib/X11/fonts/TTF
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/Acrobat7
