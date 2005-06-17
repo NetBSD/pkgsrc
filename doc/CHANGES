@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10375 2005/06/17 05:51:12 hira Exp $
+$NetBSD: CHANGES,v 1.10376 2005/06/17 12:57:54 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2893,3 +2893,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/mini_sendmail to 1.3.2nb5 [is 2005-06-16]
 	Updated wm/wmakerconf to 2.11nb1 [kristerw 2005-06-16]
 	Updated x11/xfce4-session to 4.2.2nb2 [hira 2005-06-17]
+	Updated math/algae to 4.1.3nb3 [kristerw 2005-06-17]
