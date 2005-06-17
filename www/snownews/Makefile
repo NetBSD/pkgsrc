@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:46 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:42 jlam Exp $
 
 DISTNAME=	snownews-1.5.5.1
 CATEGORIES=	www
@@ -20,6 +20,8 @@ MAKE_ENV+=	EXTRA_CFLAGS=${CFLAGS:Q} LOCALBASE=${LOCALBASE:Q}
 # XXX -lintl hack suggested by Jeremy C. Reed: blocking on PR #23369
 .include "../../devel/gettext-lib/buildlink3.mk"
 MAKE_ENV+=	EXTRA_LDFLAGS="${LDFLAGS} ${BUILDLINK_LDADD.gettext}"
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/snownews ${LOCALBASE}/bin

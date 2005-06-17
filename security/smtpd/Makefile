@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/08 14:27:35 grant Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/17 03:50:32 jlam Exp $
 #
 
 DISTNAME=	smtpd-2.0
@@ -24,6 +24,8 @@ LD_LIBS.SunOS=	-lnsl -lsocket -lresolv
 MAKE_ENV+=	LD_LIBS="${LD_LIBS}"
 
 .include "../../mk/bsd.prefs.mk"
+
+INSTALLATION_DIRS=	sbin
 
 do-install:
 	-${INSTALL_DATA_DIR} ${SPOOL}/etc

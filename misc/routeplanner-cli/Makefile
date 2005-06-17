@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/15 22:02:28 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:22 jlam Exp $
 #
 
 DISTNAME=		routeplanner_0.11
@@ -20,6 +20,8 @@ RPPY= rpcli.py rpcountry.py rpdbase.py rpunits.py rpcity.py rproute.py
 RPDB= Basic-USA.rpl3 NorthAmerica.rpl3
 
 RP_LIBDIR_SED=	"s|/usr/share/routeplanner|${RPLIBDIR}|g"
+
+INSTALLATION_DIRS=	bin
 
 post-patch:
 	for i in rpcli rpcli.py;do \

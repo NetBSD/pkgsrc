@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/28 14:43:10 recht Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:24 jlam Exp $
 #
 
 .include "../../net/bittorrent/Makefile.common"
@@ -10,6 +10,8 @@ COMMENT+=	(GTK+ GUI)
 DEPENDS+=	bittorrent>=4.0.1:../../net/bittorrent
 
 PYTHON_PATCH_SCRIPTS= btdownloadgui.py btmaketorrentgui.py
+
+INSTALLATION_DIRS=	bin
 
 do-build:	# empty
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/10 17:00:39 tv Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/17 03:50:40 jlam Exp $
 #
 
 DISTNAME=		bw_mod-0.6
@@ -12,6 +12,7 @@ HOMEPAGE=		http://ivn.cl/apache/
 COMMENT=		Class-based bandwidth limiting module for Apache 2
 
 APACHE_MODULE=		# defined
+INSTALLATION_DIRS=	share/doc
 
 do-build:
 	@${ECHO} '#include "${DISTNAME}.c"' >${WRKSRC}/mod_bw.c

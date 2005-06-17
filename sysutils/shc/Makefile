@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/30 09:41:49 grant Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/17 03:50:35 jlam Exp $
 #
 
 DISTNAME=		shc-3.7
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.datsi.fi.upm.es/~frosal/
 COMMENT=		Shell script to C compiler
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/shc ${PREFIX}/bin

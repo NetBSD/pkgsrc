@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/06 17:19:08 taca Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:42 jlam Exp $
 
 DISTNAME=	htmlsplit102
 PKGNAME=	${RUBY_PKGPREFIX}-htmlsplit-1.0.2
@@ -16,6 +16,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 do-install:
+	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/htmlsplit.rb ${RUBY_SITELIBDIR}
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/htmlsplit
 	${INSTALL_DATA} ${WRKSRC}/splittest.rb ${RUBY_EXAMPLESDIR}/htmlsplit

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:46:52 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:26 jlam Exp $
 #
 
 DISTNAME=	nsca-1.1.0
@@ -15,6 +15,8 @@ DEPENDS+=	netsaint-base-[0-9]*:../../net/netsaint-base
 GNU_CONFIGURE=	YES
 
 EGDIR=		${PREFIX}/share/examples/nsca
+
+INSTALLATION_DIRS=	sbin
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}

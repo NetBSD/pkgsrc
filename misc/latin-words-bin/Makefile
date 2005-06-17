@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:37 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:22 jlam Exp $
 #
 
 DISTNAME=		words-1.97-linux
@@ -19,6 +19,8 @@ CHECK_SHLIBS=   NO
 .if ${OPSYS} == "NetBSD"
 DEPENDS+=	suse_base>=6.1:../../emulators/${SUSE_DIR_PREFIX}_base
 .endif
+
+INSTALLATION_DIRS=	bin libexec
 
 do-build:
 	${SED} -e "s|@PREFIX@|${PREFIX}|g" ${FILESDIR}/latin-words.sh \

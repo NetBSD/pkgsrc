@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/02/24 11:35:37 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/17 03:50:40 jlam Exp $
 #
 
 DISTNAME=	htmllint
@@ -23,6 +23,8 @@ NO_BUILD=	# defined
 CGIDIR=		${LOCALBASE}/libexec/cgi-bin
 HTMLDIR=	${LOCALBASE}/share/httpd/htdocs/htmllint
 IMGDIR=		${HTMLDIR}/images
+
+INSTALLATION_DIRS=	bin
 
 post-patch:
 .for f in faq.html htmllintenv htmllint htmllint.caller

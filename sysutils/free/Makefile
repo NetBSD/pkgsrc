@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/21 20:26:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:34 jlam Exp $
 #
 
 DISTNAME=		free-1.0
@@ -17,6 +17,8 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/free ${PREFIX}/bin/free

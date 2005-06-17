@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/03 15:15:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:43 jlam Exp $
 #
 
 DISTNAME=		webnew-1.3
@@ -13,6 +13,8 @@ USE_PERL5=		# defined
 
 NO_CONFIGURE=		yes
 BUILD_TARGET=		all DEST=${PREFIX} PERL=${PERL5}
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/webnew ${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/03/28 02:01:50 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:24 jlam Exp $
 #
 
 DISTNAME=	dnstop-20050203
@@ -8,6 +8,8 @@ MASTER_SITES=	http://dnstop.measurement-factory.com/src/
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://dnstop.measurement-factory.com/src/
 COMMENT=	Diagnose tcpdump trace for DNS queries/replies
+
+INSTALLATION_DIRS=	bin man/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dnstop ${PREFIX}/bin
