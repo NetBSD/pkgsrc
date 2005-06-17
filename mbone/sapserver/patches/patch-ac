@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 2005/06/17 15:06:16 hira Exp $
+
 --- sapserver.cpp.orig	Tue Jul 27 18:13:01 2004
 +++ sapserver.cpp	Tue Jul 27 18:14:06 2004
 @@ -174,9 +174,13 @@
