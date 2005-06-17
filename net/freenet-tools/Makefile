@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:23 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:25 jlam Exp $
 #
 
 DISTNAME=		ft-0.2.23
@@ -16,6 +16,8 @@ USE_TOOLS+=		gmake
 
 MAKE_FLAGS+=		CC=${CC:Q} LD=${CC:Q} CFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
 CFLAGS+=		-DFT_BIN=\"${PREFIX}/bin\"
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ft ${PREFIX}/bin/ft

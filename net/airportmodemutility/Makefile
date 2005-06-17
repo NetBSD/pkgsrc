@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:44 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:23 jlam Exp $
 
 DISTNAME=	${BINNAME}_20
 PKGNAME=	${BINNAME}-2.0
@@ -23,6 +23,8 @@ LIBDIR=		${PREFIX}/lib/${BINNAME}
 
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 blackdown-jdk13 jdk13 jdk14
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	${CHMOD} -R g-w,o-w ${WRKSRC}/*

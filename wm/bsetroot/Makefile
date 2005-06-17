@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/01 18:03:24 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/17 03:50:39 jlam Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
@@ -15,6 +15,8 @@ USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 
 BUILD_DIRS=	${WRKSRC}/nls ${WRKSRC}/util
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/util/bsetbg ${PREFIX}/bin

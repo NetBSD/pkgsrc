@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/20 12:28:27 agc Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/17 03:50:44 jlam Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -42,6 +42,7 @@ EGDIR=		${PREFIX}/share/examples/swing
 HTMLDIR=	${PREFIX}/share/doc/html/swing
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${SWINGDIR}
 	${INSTALL_DATA} ${WRKSRC}/swingall.jar ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/beaninfo.jar ${SWINGDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/16 22:27:44 kristerw Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/17 03:50:39 jlam Exp $
 #
 
 DISTNAME=	evilwm-0.99.18
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.6809.org.uk/evilwm/
 MAINTAINER=	sketch@NetBSD.org
 HOMEPAGE=	http://www.6809.org.uk/evilwm/
 COMMENT=	Minimalist Window Manager for X
+
+INSTALLATION_DIRS=	bin man/man1
 
 .include "../../mk/x11.buildlink3.mk"
 
