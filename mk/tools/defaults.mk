@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.29 2005/06/17 16:24:51 jlam Exp $
+# $NetBSD: defaults.mk,v 1.30 2005/06/17 17:05:18 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -150,6 +150,7 @@ _TOOLS_VARNAME_GNU.gtar=	TAR
 _TOOLS_VARNAME_GNU.hostname=	HOSTNAME
 _TOOLS_VARNAME_GNU.lex=		LEX
 _TOOLS_VARNAME_GNU.ln=		LN
+_TOOLS_VARNAME_GNU.ls=		LS
 _TOOLS_VARNAME_GNU.m4=		M4
 _TOOLS_VARNAME_GNU.mkdir=	MKDIR
 _TOOLS_VARNAME_GNU.mv=		MV
@@ -161,6 +162,7 @@ _TOOLS_VARNAME_GNU.sort=	SORT
 _TOOLS_VARNAME_GNU.tar=		TAR
 _TOOLS_VARNAME_GNU.test=	TEST ac_cv_path_TEST
 _TOOLS_VARNAME_GNU.touch=	TOUCH
+_TOOLS_VARNAME_GNU.tr=		TR
 _TOOLS_VARNAME_GNU.true=	TRUE ac_cv_path_TRUE
 _TOOLS_VARNAME_GNU.xmkmf=	XMKMF
 _TOOLS_VARNAME_GNU.yacc=	YACC
