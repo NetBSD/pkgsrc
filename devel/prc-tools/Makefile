@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/06/17 04:49:46 jlam Exp $
 #
 
 DISTNAME=	prc-tools-2.2
@@ -48,9 +48,9 @@ GCC_REQD+=	2.8.0
 CONFIGURE_ARGS+=--enable-targets=m68k-palmos,arm-palmos
 CONFIGURE_ARGS+=--enable-languages=c,c++
 CONFIGURE_ARGS+=--with-headers=${WRKSRC}/empty
-CONFIGURE_ARGS+=--with-palmdev-prefix=${LOCALBASE}/share/palmdev
+CONFIGURE_ARGS+=--with-palmdev-prefix=${PREFIX}/share/palmdev
 CONFIGURE_ARGS+=--disable-nls
-#CONFIGURE_ARGS+=--enable-html-docs=${LOCALBASE}/share/doc/html/prc-tools
+#CONFIGURE_ARGS+=--enable-html-docs=${PREFIX}/share/doc/html/prc-tools
 
 post-extract:
 	${LN} -s ../${DIST_BINUTILS} ${WRKSRC}/binutils

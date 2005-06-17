@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:50 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/17 04:49:46 jlam Exp $
 
 DISTNAME=		ia64sim
 PKGNAME=		ia64sim-0.3
@@ -17,6 +17,6 @@ MAKEFILE=		makefile.unx
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ia64sim ${LOCALBASE}/bin/ia64sim
+	${INSTALL_PROGRAM} ${WRKSRC}/ia64sim ${PREFIX}/bin/ia64sim
 
 .include "../../mk/bsd.pkg.mk"

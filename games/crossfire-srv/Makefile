@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/01 18:02:49 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/17 04:49:46 jlam Exp $
 #
 
 DISTNAME=	crossfire-1.0.0
@@ -34,13 +34,13 @@ REPLACE_PERL+=	doc/include_html.pl doc/playbook/make_index.pl
 REPLACE_PERL+=	doc/spoiler-html/makeps.pl
 
 post-install:
-	cd ${LOCALBASE}/share/crossfire && \
+	cd ${PREFIX}/share/crossfire && \
 	    ${GZCAT} ${DISTDIR}/${CF_MAPS} | ${GTAR} xmf -
-	@${CHOWN} ${ROOT_USER}:games ${LOCALBASE}/bin/crossfire
-	@${CHMOD} 2755 ${LOCALBASE}/bin/crossfire
-	@${CHOWN} -R ${ROOT_USER}:games ${LOCALBASE}/share/crossfire
-	@${CHOWN} -R ${ROOT_USER}:games ${LOCALBASE}/var/crossfire
-	@${CHMOD} -R g+w ${LOCALBASE}/var/crossfire
+	@${CHOWN} ${ROOT_USER}:games ${PREFIX}/bin/crossfire
+	@${CHMOD} 2755 ${PREFIX}/bin/crossfire
+	@${CHOWN} -R ${ROOT_USER}:games ${PREFIX}/share/crossfire
+	@${CHOWN} -R ${ROOT_USER}:games ${PREFIX}/var/crossfire
+	@${CHMOD} -R g+w ${PREFIX}/var/crossfire
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"

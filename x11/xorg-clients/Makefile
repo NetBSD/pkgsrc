@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/01 18:03:33 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/17 04:49:49 jlam Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-clients-${XORG_VER}
@@ -27,7 +27,7 @@ OWN_DIRS_PERMS+=        ${VARBASE}/lib/xdm/authdir \
 OWN_DIRS_PERMS+=        ${VARBASE}/lib/xdm/authdir/authfiles \
 	${ROOT_USER} ${ROOT_GROUP} 0700
 
-EGDIR=			${LOCALBASE}/share/examples/xorg/xdm
+EGDIR=			${PREFIX}/share/examples/xorg/xdm
 PKG_SYSCONFSUBDIR=	xorg/xdm
 
 CONF_FILES=		${EGDIR}/xdm-config ${PKG_SYSCONFDIR}/xdm-config

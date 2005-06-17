@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/12 08:22:59 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/17 04:49:46 jlam Exp $
 #
 
 DISTNAME=		tanked-0.90
@@ -10,12 +10,12 @@ MAINTAINER=		root@garbled.net
 COMMENT=		Multiplayer internet tank game for X11
 
 USE_X11BASE=		YES
-USE_TOOLS+=		imake
+USE_TOOLS+=		imake gmake
 
 post-patch:
 	@${TOUCH} ${WRKSRC}/client/tanked.man
 	@${MV} ${WRKSRC}/server/maps.list ${WRKSRC}/server/maps.list.bak
-	@${SED} -e 's@XXX@${X11PREFIX}/share/tanked/@' \
+	@${SED} -e 's@XXX@${PREFIX}/share/tanked/@' \
 		< ${WRKSRC}/server/maps.list.bak > ${WRKSRC}/server/maps.list
 
 .include "../../graphics/xpm/buildlink3.mk"

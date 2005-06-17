@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/20 12:28:28 agc Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/17 04:49:49 jlam Exp $
 #
 
 DISTNAME=	xmove.2.0beta2
@@ -11,7 +11,7 @@ COMMENT=	Move an X11 display between screens and displays
 
 WRKSRC=		${WRKDIR}/xmove
 USE_IMAKE=	yes
-XMOVEDOCDIR=	${X11PREFIX}/share/doc/xmove
+XMOVEDOCDIR=	${PREFIX}/share/doc/xmove
 
 pre-configure:
 	@${SED} -e 's|@x11base@|'${X11PREFIX}'|' < ${WRKSRC}/xmove/Imakefile > ${WRKSRC}/xmove/Imakefile.new && \

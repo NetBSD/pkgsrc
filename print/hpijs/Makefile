@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/17 03:50:30 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/17 04:49:48 jlam Exp $
 
 DISTNAME=	hpijs-1.7.1
 PKGREVISION=	# empty
@@ -20,12 +20,12 @@ ONLY_FOR_COMPILER=	gcc
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_DATA_DIR} ${LOCALBASE}/share/ppd
-	${INSTALL_DATA_DIR} ${LOCALBASE}/share/doc/html/hpijs
-	cd ${WRKSRC} && ${CP} hpijs ${LOCALBASE}/bin/hpijs
+	${INSTALL_DATA_DIR} ${PREFIX}/share/ppd
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/hpijs
+	cd ${WRKSRC} && ${CP} hpijs ${PREFIX}/bin/hpijs
 	cd ${WRKSRC} && ${CP} hpijs_readme.html gs_hpijs.png \
-		 ${LOCALBASE}/share/doc/html/hpijs/
-	cd ${WRKSRC} && ${CP} ppd/HP* ${LOCALBASE}/share/ppd/
-	${GZIP_CMD} ${LOCALBASE}/share/ppd/HP*.ppd
+		 ${PREFIX}/share/doc/html/hpijs/
+	cd ${WRKSRC} && ${CP} ppd/HP* ${PREFIX}/share/ppd/
+	${GZIP_CMD} ${PREFIX}/share/ppd/HP*.ppd
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/16 06:57:44 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/17 04:49:45 jlam Exp $
 
 DISTNAME=	oraedit-0.1.4
 CATEGORIES=	databases
@@ -15,7 +15,7 @@ PYTHON_PATCH_SCRIPTS=	oraedit
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/oraedit ${LOCALBASE}/bin/oraedit
+	${INSTALL_SCRIPT} ${WRKSRC}/oraedit ${PREFIX}/bin/oraedit
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

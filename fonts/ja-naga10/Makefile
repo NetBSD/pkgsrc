@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/15 22:02:27 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/17 04:49:46 jlam Exp $
 
 DISTNAME=		knj10-1.1
 PKGNAME=		ja-naga10-1.1
@@ -14,7 +14,7 @@ COMMENT=		10x10 dots X11 bitmap font for JIS X 0208
 USE_X11BASE=		YES
 PKGSRC_USE_TOOLS+=	gzip
 DOCDIR=			${PREFIX}/share/doc
-FONTDIR=		${X11PREFIX}/lib/X11/fonts/local
+FONTDIR=		${PREFIX}/lib/X11/fonts/local
 
 post-extract:
 	cd ${WRKDIR}; \

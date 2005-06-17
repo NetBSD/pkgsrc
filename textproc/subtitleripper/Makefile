@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:37 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/17 04:49:49 jlam Exp $
 #
 
 DISTNAME=	subtitleripper-0.3-1
@@ -22,11 +22,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/subtitle2pgm ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/srttool ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/subtitle2vobsub ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${LOCALBASE}/share/doc/subtitleripper
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/subtitleripper
 	cd ${WRKSRC}; ${INSTALL_DATA} README README.gocr README.srttool \
 		README.subtitle2pgm README.vobsub gocrfilter_en.sed \
 		gocrfilter_fr.sed gocrfilter_nl.sed  gocrfilter_none.sed \
-		${LOCALBASE}/share/doc/subtitleripper
+		${PREFIX}/share/doc/subtitleripper
 
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

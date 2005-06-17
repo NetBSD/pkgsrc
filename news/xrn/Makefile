@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:22:41 agc Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/17 04:49:47 jlam Exp $
 #
 
 DISTNAME=	9.01
@@ -18,9 +18,9 @@ DIST_SUBDIR=	xrn
 USE_IMAKE=	yes
 
 pre-install:
-	${INSTALL_DATA_DIR} ${X11PREFIX}/share/doc/xrn
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xrn
 	for f in COMMON-PROBLMS COPYRIGHT CREDITS ChangeLog; do		\
-		${INSTALL_DATA} ${WRKSRC}/$$f ${X11PREFIX}/share/doc/xrn; \
+		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/xrn;	\
 	done
 
 .include "../../mk/bsd.pkg.mk"

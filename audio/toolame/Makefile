@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/16 06:57:39 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/17 04:49:45 jlam Exp $
 #
 
 DISTNAME=	toolame-02l
@@ -21,9 +21,9 @@ INSTALLATION_DIRS=	bin
 
 TOOLAME_HTMLFILES= changes.html default.html psycho.html readme.html vbr.html
 do-install:
-	${INSTALL_DATA_DIR} ${LOCALBASE}/share/doc/html/toolame
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/toolame
 	cd ${WRKSRC}/html; ${INSTALL_DATA} ${TOOLAME_HTMLFILES} \
-		${LOCALBASE}/share/doc/html/toolame
+		${PREFIX}/share/doc/html/toolame
 	${INSTALL_PROGRAM} ${WRKSRC}/toolame ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

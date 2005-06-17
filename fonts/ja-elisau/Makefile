@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:07:59 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 04:49:46 jlam Exp $
 
 DISTNAME=		elisau10
 PKGNAME=		ja-elisau-1.0
@@ -22,7 +22,7 @@ USE_TOOLS+=		patch
 PKGSRC_USE_TOOLS+=	gzip
 USE_X11BASE=		YES
 DOCDIR=			${PREFIX}/share/doc/elisau
-FONTDIR=		${X11PREFIX}/lib/X11/fonts/local
+FONTDIR=		${PREFIX}/lib/X11/fonts/local
 DISTPATCH=		${WRKSRC}/clR5x8-s5x8.diff
 
 LICENSE=		no-commercial-use

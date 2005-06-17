@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:20 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/17 04:49:47 jlam Exp $
 #
 
 DISTNAME=		jchkmail-1.3.1a
@@ -12,8 +12,8 @@ COMMENT=		Behavior-based virus and spam milter for Sendmail
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-rc-dir=${LOCALBASE}/etc/rc.d		\
-			--with-conf-dir=${LOCALBASE}/etc/jchkmail
+CONFIGURE_ARGS+=	--with-rc-dir=${PREFIX}/etc/rc.d		\
+			--with-conf-dir=${PREFIX}/etc/jchkmail
 
 .include "../../mail/libmilter/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
