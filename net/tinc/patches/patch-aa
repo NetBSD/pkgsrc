@@ -1,4 +1,5 @@
-diff -Nur src/protocol_auth.c src/protocol_auth.c
+$NetBSD: patch-aa,v 1.2 2005/06/17 15:32:44 hira Exp $
+
 --- src/protocol_auth.c	Fri May 27 14:28:54 2005
 +++ src/protocol_auth.c	Fri May 27 14:28:30 2005
 @@ -118,7 +118,7 @@
