@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 2005/06/17 15:06:16 hira Exp $
+
 --- broadcast.h.orig	Tue Jul 27 17:56:37 2004
 +++ broadcast.h	Tue Jul 27 17:57:05 2004
 @@ -40,6 +40,10 @@
