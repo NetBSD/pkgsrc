@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3622 2005/06/17 11:11:41 jmmv Exp $
+$NetBSD: TODO,v 1.3623 2005/06/17 19:10:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -328,7 +328,7 @@ Suggested package updates
 	o amavis-0.3.12
 	o amavisd-new-2.3.1
 	o amaya-9.1
-	o amule-2.0.1
+	o amule-2.0.3
 	o anjuta-1.2.3
 	o anomy-sanitizer-1.70
 	o ap-Embperl-1.3.6
@@ -398,6 +398,7 @@ Suggested package updates
 	o cdl3-1.2.6
 	o cdlabelgen-3.5.0
 	o cdrtools-2.01
+	o cdrtools-ossdvd-2.01.01a01
 	o cfengine2-2.1.14
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
@@ -411,6 +412,7 @@ Suggested package updates
 	o chktex-1.6.2
 	o cint-5.15
 	o cjk-lyx-1.3.3
+	o ckmame-0.6
 	o cksfv-1.3.5
 	o classpath-0.15
 	o classpath-gui-0.15
@@ -510,7 +512,7 @@ Suggested package updates
 	o gap-4r4p3
 	o garmin-utils-2.2
 	o gated-3.6
-	o gauche-0.8.4
+	o gauche-0.8.4 [pkg/30535]
 	o gcc-3.3.6
 	o gcc-4.0.0
 	o gcombust-0.1.55
@@ -521,6 +523,7 @@ Suggested package updates
 	o gdm1-2.2.5.5
 	o gdm-2.8.0.0 [jmmv]
 	o gentoo-0.11.55
+	o getmail-4.3.11
 	o gettext-0.14.5
 	o gfract-0.3.2
 	o ghostscript-8.51
@@ -557,6 +560,7 @@ Suggested package updates
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.6
 	o gtk-systrace-2003.06.23
+	o gtk2-2.6.8
 	o gtklife-4.2
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -660,6 +664,7 @@ Suggested package updates
 	o lmbench-2.0.4
 	o lopster-1.2.2
 	o lout-3.30
+	o lua-sql
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
 	o mail-notification-1.1
@@ -688,7 +693,7 @@ Suggested package updates
 	o mlview-0.7.1
 	o mmix-20041014
 	o molden-4.3
-	o mono-1.1.7
+	o mono-1.1.8
 	o moscow_ml-2.01
 	o most-4.10.1
 	o mowitz-0.3.0
@@ -749,7 +754,6 @@ Suggested package updates
 	o openssh-4.1
 	o openttd-0.4.0 [pkg/30238]
 	o openvpn-2.0 [pkg/30239]
-	o opera8-8.0
 	o oroborus-2.0.13.1
 	o osh-050219
 	o oss-3.99.2d
@@ -798,6 +802,7 @@ Suggested package updates
 	o p5-File-DirSync-1.12
 	o p5-FileHandle-Unget-0.16.2.1
 	o p5-Font-AFM-1.19
+	o p5-GD-2.23 [pkg/30532]
 	o p5-Graph-0.20105
 	o p5-HTMLObject-2.26
 	o p5-HTTP-Request-Form-0.952
@@ -863,6 +868,7 @@ Suggested package updates
 	o p5-gtk2-1.080
 	o p5-ispman-1.2
 	o p5-perl-ldap-0.3202
+	o p5-razor-agents-2.72
 	o p5-sybperl-2.17
 	o p5-xmltv-0.5.40
 	o p7zip-4.20
@@ -877,7 +883,7 @@ Suggested package updates
 	o pear-Net_Socket-1.0.6
 	o pen-0.15.0
 	o perl-5.6.2
-	o pfqueue-0.4.0
+	o pfqueue-0.4.1
 	o pfstat-1.8
 	o pgpool-2.5.1
 	o phoon-20030120
@@ -1003,6 +1009,7 @@ Suggested package updates
 	o sablevm-classpath-gui-1.11.3 [pkg/30022?]
 	o same-1.8 [don't update; same-1.3 is small and nice]
 	o sarah-0.9.1b
+	o sather-1.2.2
 	o sawfish-1.3
 	o sawfish-replibs-1.3
 	o scew-0.4.0
@@ -1089,8 +1096,8 @@ Suggested package updates
 	o tnef-1.3.3
 	o tob-0.26
 	o top-3.6alpha9
-	o tor-0.0.9.9
-	o totd-1.5
+	o tor-0.1.0.10
+	o totd-1.5 [pkg/30545]
 	o tpasm-1.2
 	o tpb-0.6.3
 	o transcode-0.6.14
@@ -1167,7 +1174,9 @@ Suggested package updates
 	o xlog-1.2.2
 	o xm7-303
 	o xmahjongg-3.7
+	o xmame-0.97
 	o xmcd-3.3.0
+	o xmess-0.97
 	o xmlsec1-1.2.8
 	o xmms-alarm-0.3.7
 	o xmms-crossfade-0.3.7
@@ -1183,6 +1192,7 @@ Suggested package updates
 	o xnap-2.5r3
 	o xorp-1.1
 	o xpad-2.8
+	o xplanet-1.2.0
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
 	o xrmap-2.30
