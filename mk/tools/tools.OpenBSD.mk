@@ -1,4 +1,4 @@
-# $NetBSD: tools.OpenBSD.mk,v 1.14 2005/06/03 22:54:44 jlam Exp $
+# $NetBSD: tools.OpenBSD.mk,v 1.15 2005/06/17 20:58:58 jlam Exp $
 #
 # System-supplied tools for the OpenBSD operating system.
 
@@ -6,9 +6,17 @@ TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
 TOOLS_PLATFORM.cat?=		/bin/cat
+.if exists(/bin/chgrp)
+TOOLS_PLATFORM.chgrp?=		/bin/chgrp
+.elif exists(/usr/bin/chgrp)
 TOOLS_PLATFORM.chgrp?=		/usr/bin/chgrp
+.endif
 TOOLS_PLATFORM.chmod?=		/bin/chmod
+.if exists(/sbin/chown)
+TOOLS_PLATFORM.chown?=		/sbin/chown
+.elif exists(/usr/sbin/chown)
 TOOLS_PLATFORM.chown?=		/usr/sbin/chown
+.endif
 TOOLS_PLATFORM.cmp?=		/usr/bin/cmp
 TOOLS_PLATFORM.cp?=		/bin/cp
 TOOLS_PLATFORM.cut?=		/usr/bin/cut
