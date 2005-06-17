@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.28 2005/06/11 05:22:03 jlam Exp $
+# $NetBSD: defaults.mk,v 1.29 2005/06/17 16:24:51 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -153,7 +153,7 @@ _TOOLS_VARNAME_GNU.ln=		LN
 _TOOLS_VARNAME_GNU.m4=		M4
 _TOOLS_VARNAME_GNU.mkdir=	MKDIR
 _TOOLS_VARNAME_GNU.mv=		MV
-_TOOLS_VARNAME_GNU.perl=	PERL
+_TOOLS_VARNAME_GNU.perl=	PERL PERL_PATH
 _TOOLS_VARNAME_GNU.rm=		RM
 _TOOLS_VARNAME_GNU.rmdir=	RMDIR
 _TOOLS_VARNAME_GNU.sed=		SED
