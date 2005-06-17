@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2005/06/17 22:58:02 adrianp Exp $
+
+--- checksetup.pl.orig	2005-06-17 20:33:45.000000000 +0000
++++ checksetup.pl	2005-06-17 22:36:27.000000000 +0000
+@@ -288,7 +288,7 @@
+     }, 
+     { 
+         name => 'File::Spec', 
+-        version => '0.82' 
++        version => '0' 
+     }, 
+     {
+         name => 'File::Temp',
