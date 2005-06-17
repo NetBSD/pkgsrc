@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/03 15:15:06 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:28 jlam Exp $
 #
 
 DISTNAME=	freenet6-client-1.0
@@ -38,6 +38,8 @@ _FETCH_MESSAGE= \
 FILES_SUBST+=	TSP_DIR=${PREFIX}/share/tspc
 EGDIR=		${PREFIX}/share/examples/tspc
 CONF_FILES=	${EGDIR}/tspc.conf.default ${PKG_SYSCONFDIR}/tspc.conf
+
+INSTALLATION_DIRS=	man/man5 man/man8 sbin
 
 pre-build:
 .for f in man/man5/tspc.conf.5 man/man8/tspc.8 src/Makefile	\

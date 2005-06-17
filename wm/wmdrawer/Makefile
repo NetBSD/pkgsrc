@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:44 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:39 jlam Exp $
 #
 
 DISTNAME=		wmdrawer-0.10.5
@@ -10,6 +10,7 @@ HOMEPAGE=		http://people.easter-eggs.org/~valos/wmdrawer/
 COMMENT=		Drawer (retractable button bar) to launch applications
 
 USE_TOOLS+=		gmake
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmdrawer ${PREFIX}/bin

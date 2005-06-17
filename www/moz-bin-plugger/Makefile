@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/11/04 20:28:47 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:41 jlam Exp $
 #
 
 DISTNAME=	${PLUGGER}-linux-x86-glibc
@@ -22,6 +22,8 @@ PLUGGER_VERSION=4.0
 PLUGGER=	plugger-${PLUGGER_VERSION}
 MOZILLA_HOME=	${PREFIX}/lib/mozilla-linux
 LDD=		${PREFIX}/emul/linux/usr/bin/ldd
+
+INSTALLATION_DIRS=	emul/linux/etc emul/linux/usr/bin
 
 do-install:
 	cd ${WRKSRC} &&							\

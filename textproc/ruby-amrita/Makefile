@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/24 21:13:02 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:37 jlam Exp $
 
 DISTNAME=	amrita-1.0.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -21,6 +21,8 @@ REPLACE_RUBY=	bin/ams bin/amshandler bin/amx
 .if ${RUBY_VER} == 16
 DEPENDS+=	${RUBY_PKGPREFIX}-strscan>=0.6.5:../../devel/ruby-strscan
 .endif
+
+INSTALLATION_DIRS=	bin
 
 post-patch:
 	@${FIND} ${WRKSRC} -name '.cvsignore' -exec ${RM} -f {} \;

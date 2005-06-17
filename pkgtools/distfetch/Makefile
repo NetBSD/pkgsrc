@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:23:57 agc Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:29 jlam Exp $
 
 DISTNAME=	distfetch-20020930
 CATEGORIES=	pkgtools
@@ -15,6 +15,8 @@ NO_CHECKSUM=	# defined
 NO_CONFIGURE=	# defined
 
 .include "../../mk/bsd.prefs.mk"
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-build:
 .for i in distfetch distfetch.1 distfetch.conf

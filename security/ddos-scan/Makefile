@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:08 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/17 03:50:31 jlam Exp $
 #
 
 DISTNAME=	ddos_scan
@@ -13,6 +13,8 @@ COMMENT=	Scan for a limited set of distributed denial of service (ddos) agents
 
 DECOMPRESS_CMD=	${CAT}
 BUILD_TARGET=	default dds
+
+INSTALLATION_DIRS=	sbin share/doc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dds ${PREFIX}/sbin/dds

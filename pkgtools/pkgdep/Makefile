@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/07 02:01:38 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:29 jlam Exp $
 #
 
 DISTNAME=	pkgdep-1.0
@@ -15,6 +15,8 @@ USE_PERL5=	YES
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	${CP} ${FILESDIR}/pkgdep.pl ${WRKDIR}/pkgdep

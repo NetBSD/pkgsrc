@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/22 20:08:27 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/17 03:50:30 jlam Exp $
 
 DISTNAME=		auctex-11.13
 PKGREVISION=		1
@@ -33,6 +33,8 @@ MESSAGE_SUBST+=		LISPDIR=${LISPDIR}
 
 EGDIR=			${PREFIX}/share/examples/auctex
 CONF_FILES=		${EGDIR}/tex-site.el ${EMACS_LISPPREFIX}/auctex/tex-site.el
+
+INSTALLATION_DIRS=	${INFODIR}
 
 post-patch:
 	${MV} ${WRKSRC}/tex-site.el ${WRKSRC}/tex-site.el.orig

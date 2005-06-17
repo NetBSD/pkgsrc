@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/04/11 21:47:44 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/06/17 03:50:38 jlam Exp $
 #
 
 DISTNAME=	asclock-gtk-2.1.10beta
@@ -19,6 +19,8 @@ PLIST_SRC=	${PKGDIR}/PLIST \
 		${PKGDIR}/PLIST.themes
 
 BUILD_TARGET=	asclock
+
+INSTALLATION_DIRS=	bin
 
 pre-configure:
 	cd ${WRKSRC}; ${LN} -sf themes/classic default_theme

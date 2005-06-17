@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/09/23 22:50:59 ben Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:33 jlam Exp $
 #
 
 PKGNAME=	cfengine-doc-${CFENGINE_VERSION}
@@ -12,6 +12,8 @@ NO_CONFIGURE=   yes
 NO_BUILD=       yes
 INFO_FILES=	cfengine-Reference.info cfengine-Tutorial.info
 INFO_FILES+=	cfengine-Anomalies.info
+
+INSTALLATION_DIRS=	info
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/cfengine-*.info* ${PREFIX}/info
