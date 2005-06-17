@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/06/17 03:50:42 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2005/06/17 19:06:43 jdolecek Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 PKGREVISION=	# empty
@@ -29,9 +29,9 @@ USE_LANGUAGES=          # empty
 .include "../../mk/bsd.prefs.mk"
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20050415
-OPERA_PKG_VERSION=	8.0
-OPERA_PKG_VERSION_DIR=	800
+OPERA_VER_DATE=		20050615
+OPERA_PKG_VERSION=	8.01
+OPERA_PKG_VERSION_DIR=	801
 
 _OPERA_OPSYS?=		${OPSYS}
 _OPERA_MACHINE_ARCH?=	${MACHINE_ARCH}
@@ -137,7 +137,7 @@ post-install:
 
 # regenerate distinfo for all ports supported by this package
 opera-distinfo:
-	( echo '$$NetBSD: Makefile,v 1.37 2005/06/17 03:50:42 jlam Exp $$'; echo ''; \
+	( echo '$$NetBSD: Makefile,v 1.38 2005/06/17 19:06:43 jdolecek Exp $$'; echo ''; \
 	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
 		${GREP} opera distinfo; \
 	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \
