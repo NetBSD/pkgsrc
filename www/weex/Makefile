@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:48:03 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 04:49:49 jlam Exp $
 
 DISTNAME=	weex-2.6.1
 CATEGORIES=	www
@@ -18,12 +18,12 @@ WEEX_DOCS=	AUTHORS BUGS BUGS.ja COPYING COPYING.ja \
 WEEX_DOCDIR=	share/doc/weex
 
 post-install:
-	${INSTALL_DATA_DIR} ${LOCALBASE}/${WEEX_DOCDIR}
+	${INSTALL_DATA_DIR} ${PREFIX}/${WEEX_DOCDIR}
 .for f in ${WEEX_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${LOCALBASE}/${WEEX_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/${WEEX_DOCDIR}
 .endfor
-	${INSTALL_DATA_DIR} ${LOCALBASE}/share/examples/weex
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/weex
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.weexrc \
-				${LOCALBASE}/share/examples/weex
+				${PREFIX}/share/examples/weex
 
 .include "../../mk/bsd.pkg.mk"

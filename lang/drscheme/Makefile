@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/06/01 18:02:58 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/06/17 04:49:47 jlam Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
@@ -48,7 +48,7 @@ post-patch:
 		${WRKDIR}/plt/man/man1/drscheme.1 			\
 		${WRKDIR}/plt/man/man1/mred.1; do 			\
 			${MV} -f $$patchee ${WRKSRC}/foo ; 		\
-			${SED} -e 's|@PREFIX@|${LOCALBASE}|' <${WRKSRC}/foo \
+			${SED} -e 's|@PREFIX@|${PREFIX}|' <${WRKSRC}/foo \
 				 > $$patchee ; 				\
 	done;
 	@${MV} -f ${WRKSRC}/mred/Makefile.in ${WRKSRC}/foo
@@ -57,7 +57,7 @@ post-patch:
 	@${FIND} ${WRKDIR} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-install:
-	${INSTALL_MAN_DIR} ${LOCALBASE}/man/man1
+	${INSTALL_MAN_DIR} ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/../man/man1/*.1 ${PREFIX}/man/man1/
 	@cd ${PREFIX}/lib/plt && PATH="${OLD_PATH}" ${SH} install || ${TRUE}
 .for f in ${PROGRAMS}

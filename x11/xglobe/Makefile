@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/22 20:08:52 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/17 04:49:49 jlam Exp $
 #
 
 DISTNAME=	xglobe-0.5
@@ -26,14 +26,14 @@ USE_X11BASE=	YES
 USE_TOOLS+=	gmake
 
 post-install:
-	${INSTALL_DATA_DIR} ${X11PREFIX}/lib/xglobe
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/mggd.gif      ${X11PREFIX}/lib/xglobe/mggd.gif
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/LE.400.gif    ${X11PREFIX}/lib/xglobe/daymap.gif
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/Brill.400.gif ${X11PREFIX}/lib/xglobe/nightmap.gif
-	${INSTALL_DATA_DIR} ${X11PREFIX}/share/doc/xglobe
-	${INSTALL_DATA} ${WRKSRC}/README	 ${X11PREFIX}/share/doc/xglobe
-	${INSTALL_DATA} ${WRKSRC}/README.maps	 ${X11PREFIX}/share/doc/xglobe
-	${INSTALL_DATA} ${WRKSRC}/getcloudmap.sh ${X11PREFIX}/bin/xglobe-getcloudmap.sh
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/xglobe
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/mggd.gif      ${PREFIX}/lib/xglobe/mggd.gif
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/LE.400.gif    ${PREFIX}/lib/xglobe/daymap.gif
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/Brill.400.gif ${PREFIX}/lib/xglobe/nightmap.gif
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xglobe
+	${INSTALL_DATA} ${WRKSRC}/README	 ${PREFIX}/share/doc/xglobe
+	${INSTALL_DATA} ${WRKSRC}/README.maps	 ${PREFIX}/share/doc/xglobe
+	${INSTALL_DATA} ${WRKSRC}/getcloudmap.sh ${PREFIX}/bin/xglobe-getcloudmap.sh
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
