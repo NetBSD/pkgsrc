@@ -1,36 +1,39 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/07 21:55:24 seb Exp $
-bin/algae
+@comment $NetBSD: PLIST,v 1.6 2005/06/17 12:47:55 kristerw Exp $
 bin/${PKGNAME}
+bin/algae
 include/algae/abs.h
 include/algae/acos.h
 include/algae/add.h
 include/algae/algae.h
 include/algae/append.h
 include/algae/apply.h
+include/algae/arpack.h
 include/algae/asin.h
 include/algae/assign.h
 include/algae/atan.h
 include/algae/band.h
+include/algae/bcs.h
 include/algae/bdiag.h
 include/algae/binop.h
+include/algae/blas.h
 include/algae/btrans.h
 include/algae/builtin.h
 include/algae/cast.h
 include/algae/children.h
 include/algae/code.h
 include/algae/conjugate.h
-include/algae/cram.h
 include/algae/cos.h
 include/algae/cosh.h
+include/algae/cram.h
 include/algae/datum.h
 include/algae/dense.h
 include/algae/diag.h
 include/algae/divide.h
 include/algae/dynio.h
 include/algae/eig.h
-include/algae/equil.h
 include/algae/entity.h
 include/algae/enum_strng.h
+include/algae/equil.h
 include/algae/error.h
 include/algae/exception.h
 include/algae/exp.h
@@ -42,6 +45,7 @@ include/algae/filter.h
 include/algae/find.h
 include/algae/for_loop.h
 include/algae/form.h
+include/algae/fortran.h
 include/algae/fread.h
 include/algae/full.h
 include/algae/function.h
@@ -50,6 +54,7 @@ include/algae/get.h
 include/algae/getopt.h
 include/algae/ifft.h
 include/algae/imag.h
+include/algae/lapack.h
 include/algae/leastsq.h
 include/algae/log.h
 include/algae/logical.h
@@ -81,6 +86,7 @@ include/algae/psr.h
 include/algae/ptypes.h
 include/algae/put.h
 include/algae/rand.h
+include/algae/rc0.h
 include/algae/read.h
 include/algae/real.h
 include/algae/scalar.h
@@ -102,6 +108,7 @@ include/algae/table_st.h
 include/algae/tan.h
 include/algae/tanh.h
 include/algae/test.h
+include/algae/thin.h
 include/algae/time.h
 include/algae/transform.h
 include/algae/transpose.h
@@ -110,18 +117,10 @@ include/algae/unop.h
 include/algae/vargs.h
 include/algae/vector.h
 include/algae/vector_st.h
-include/algae/zero.h
-include/algae/bcs.h
-include/algae/blas.h
-include/algae/fortran.h
-include/algae/thin.h
-include/algae/lapack.h
 include/algae/version.h
-include/algae/rc0.h
-include/algae/arpack.h
+include/algae/zero.h
 lib/algae/${PKGVERSION}/algae.A
 man/man1/algae.1
-share/algae/html
 share/algae/${PKGVERSION}/tools/all.A
 share/algae/${PKGVERSION}/tools/arg.A
 share/algae/${PKGVERSION}/tools/autosrc.A
@@ -172,15 +171,15 @@ share/algae/${PKGVERSION}/tools/string.A
 share/algae/${PKGVERSION}/tools/sum.A
 share/algae/${PKGVERSION}/tools/surprise.A
 share/algae/${PKGVERSION}/tools/tmp_file.A
+share/algae/${PKGVERSION}/tools/tools.algae
 share/algae/${PKGVERSION}/tools/umin.A
 share/algae/${PKGVERSION}/tools/unlabel.A
 share/algae/${PKGVERSION}/tools/what.A
 share/algae/${PKGVERSION}/tools/who.A
-share/algae/${PKGVERSION}/tools/tools.algae
+share/algae/html
 share/doc/algae/algae.ps
 share/doc/html/algae/COPYING
 share/doc/html/algae/LICENSE
-share/doc/html/algae/index.html
 share/doc/html/algae/algae.html
 share/doc/html/algae/algae_1.html
 share/doc/html/algae/algae_10.html
@@ -201,6 +200,7 @@ share/doc/html/algae/algae_9.html
 share/doc/html/algae/algae_abt.html
 share/doc/html/algae/algae_toc.html
 share/doc/html/algae/icon.gif
+share/doc/html/algae/index.html
 share/doc/html/algae/info.db
 @dirrm share/doc/html/algae
 @dirrm share/doc/algae
