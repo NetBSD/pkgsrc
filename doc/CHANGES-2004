@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.10 2005/04/01 11:36:32 adam Exp $
+$NetBSD: CHANGES-2004,v 1.11 2005/06/17 18:37:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2705,7 +2705,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated apache to 1.3.31nb1 [tron 2004-05-30]
 	Added ap2-transform-0.4.0 [xtraeme 2004-05-30]
 	Updated rapidsvn to 0.6.0 [epg 2004-05-31]
-	Added trac-0.7 [epg 2004-05-31]
+	Updated trac to 0.7 [epg 2004-05-31]
 	Updated net-snmp to 5.1.1nb1 [tron 2004-05-31]
 	Updated kdebase3 to 3.2.2nb3 [markd 2004-05-31]
 	Updated pcb-current to 20040530 [dmcmahill 2004-05-31]
