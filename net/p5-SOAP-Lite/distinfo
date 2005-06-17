@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:13:59 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/06/17 15:29:38 hira Exp $
 
 SHA1 (SOAP-Lite-0.60a.tar.gz) = 4b2f76ecb7f8b76bcaa86bd78dbf658d6db6f59a
 RMD160 (SOAP-Lite-0.60a.tar.gz) = 010c563de36b4c0e6253ead410ea0425d6c74e95
 Size (SOAP-Lite-0.60a.tar.gz) = 170390 bytes
-SHA1 (patch-aa) = 5952133c40cd01eaeac2757781c0422d88b7dc55
+SHA1 (patch-aa) = 1e856bfff494e4cc900ab8ea0b7f446d6fac176c
