@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.5 2005/05/18 21:43:21 markd Exp $
+@comment $NetBSD: PLIST.Linux,v 1.6 2005/06/17 20:30:55 reed Exp $
 lib/xine/plugins/${PKGVERSION}/vidix/cyberblade_vid.a
 lib/xine/plugins/${PKGVERSION}/vidix/cyberblade_vid.so
 lib/xine/plugins/${PKGVERSION}/vidix/mach64_vid.a
@@ -17,8 +17,6 @@ lib/xine/plugins/${PKGVERSION}/vidix/rage128_vid.a
 lib/xine/plugins/${PKGVERSION}/vidix/rage128_vid.so
 lib/xine/plugins/${PKGVERSION}/vidix/sis_vid.a
 lib/xine/plugins/${PKGVERSION}/vidix/sis_vid.so
-lib/xine/plugins/${PKGVERSION}/xineplug_ao_out_alsa.a
-lib/xine/plugins/${PKGVERSION}/xineplug_ao_out_alsa.so
 lib/xine/plugins/${PKGVERSION}/xineplug_ao_out_oss.a
 lib/xine/plugins/${PKGVERSION}/xineplug_ao_out_oss.so
 lib/xine/plugins/${PKGVERSION}/xineplug_decode_dxr3_spu.a
