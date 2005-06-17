@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:29 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/17 03:50:35 jlam Exp $
 #
 
 DISTNAME=	Edit-0.1.2
@@ -21,6 +21,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 PYTHON_PATCH_SCRIPTS=	AppRun
+INSTALLATION_DIRS=	share/rox
 
 post-patch:
 	${SED} -e s:"/usr/local/lib":"${PREFIX}/share/rox":g	\

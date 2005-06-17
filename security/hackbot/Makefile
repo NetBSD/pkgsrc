@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/20 12:25:33 agc Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:32 jlam Exp $
 
 DISTNAME=		hackbot-2.15
 CATEGORIES=		security net
@@ -15,6 +15,8 @@ WRKSRC=			${WRKDIR}/hackbot
 MANCOMPRESSED=		YES
 USE_PERL5=		YES
 REPLACE_PERL=		hackbot.pl
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-build:
 	${SED} "s,/usr/local/etc,${PREFIX}/share/hackbot,g" ${WRKSRC}/hackbot.pl > ${WRKSRC}/hackbot.pl.done

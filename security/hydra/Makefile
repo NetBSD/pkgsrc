@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/17 12:19:54 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/17 03:50:32 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME}-src
@@ -32,6 +32,8 @@ USE_OLD_DES_API=	YES
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 BUILDLINK_DEPENDS.libssh+=	libssh-0.1
+
+INSTALLATION_DIRS=	bin
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hydra
 PKG_SUPPORTED_OPTIONS=	gtkfe

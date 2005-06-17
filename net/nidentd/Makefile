@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/02 18:40:23 symka Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/17 03:50:26 jlam Exp $
 #
 
 DISTNAME=	nidentd-1.0
@@ -11,6 +11,8 @@ MAINTAINER=	symka@NetBSD.org
 COMMENT=	identd that supports IPv4, IPv6, NAT, fake and random
 
 DEPENDS+=	lsof>=4.61:../../sysutils/lsof
+
+INSTALLATION_DIRS=	etc libexec
 
 do-build:
 		${SED} \

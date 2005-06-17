@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/06/12 11:01:04 jdolecek Exp $
+# $NetBSD: Makefile,v 1.34 2005/06/17 03:50:42 jlam Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 PKGREVISION=	# empty
@@ -96,6 +96,8 @@ SUBST_SED.opera7=	-e 's,/usr/,${PREFIX}/,g'
 
 .endif
 
+INSTALLATION_DIRS=	bi man/man1
+
 do-build:
 .if (${_OPERA_OPSYS} == NetBSD)
 	@ ${SED} -e 's#@EMULDIR@#${EMULDIR}#g' ${FILESDIR}/opera.sh > \
@@ -134,7 +136,7 @@ post-install:
 
 # regenerate distinfo for all ports supported by this package
 opera-distinfo:
-	( echo '$$NetBSD: Makefile,v 1.33 2005/06/12 11:01:04 jdolecek Exp $$'; echo ''; \
+	( echo '$$NetBSD: Makefile,v 1.34 2005/06/17 03:50:42 jlam Exp $$'; echo ''; \
 	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
 		${GREP} opera distinfo; \
 	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \

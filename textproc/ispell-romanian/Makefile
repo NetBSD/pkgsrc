@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/07 21:14:09 markd Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:36 jlam Exp $
 #
 
 DISTNAME=	rom-spell
@@ -13,6 +13,8 @@ COMMENT=	Romanian dictionary for ispell
 DEPENDS+=	ispell-base>=3.1.20:../../textproc/ispell-base
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
+
+INSTALLATION_DIRS=	lib
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/rom.aff ${PREFIX}/lib/romanian.aff

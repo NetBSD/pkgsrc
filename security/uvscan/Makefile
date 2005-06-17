@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/07/29 22:19:57 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2005/06/17 03:50:33 jlam Exp $
 
 DISTNAME=		vlnx424e
 PKGNAME=		uvscan-4.24.1
@@ -40,6 +40,8 @@ SUPPORT_FILES=		${DATDIR}/clean.dat ${UVSCANDIR}/clean.dat
 SUPPORT_FILES+=		${DATDIR}/names.dat ${UVSCANDIR}/names.dat
 SUPPORT_FILES+=		${DATDIR}/scan.dat ${UVSCANDIR}/scan.dat
 OWN_DIRS=		${UVSCANDIR}
+
+INSTALLATION_DIRS=	bin man/man1 sbin
 
 do-build:
 	@${SED}	${FILES_SUBST_SED}					\

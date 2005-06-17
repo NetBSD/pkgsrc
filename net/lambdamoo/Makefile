@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/12/03 15:15:05 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/17 03:50:25 jlam Exp $
 
 DISTNAME=		LambdaMOO-1.8.1
 PKGNAME=		lambdamoo-1.8.1
@@ -31,6 +31,7 @@ FILES_SUBST+=		LAMBDAMOO_HOME=${LAMBDAMOO_HOME}
 WRKSRC=			${WRKDIR}/MOO-1.8.1
 BUILD_TARGET=
 GNU_CONFIGURE=		yes
+INSTALLATION_DIRS=	sbin
 
 pre-build:
 	${MV} ${WRKSRC}/restart.sh ${WRKSRC}/restart.sh.in

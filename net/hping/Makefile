@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:22:19 agc Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:25 jlam Exp $
 #
 
 DISTNAME=		hping2.0.0-rc2
@@ -17,6 +17,7 @@ CONFIGURE_ENV+=		MANPATH="${MANPATH}"
 NOT_FOR_PLATFORM=	NetBSD-0.* NetBSD-1.[0-4]*
 
 BINMODE=		4755
+INSTALLATION_DIRS=	man/man8 sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hping2 ${PREFIX}/sbin

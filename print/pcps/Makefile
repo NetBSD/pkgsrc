@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/12/03 15:15:07 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:30 jlam Exp $
 #
 
 DISTNAME=	pcps840
@@ -20,6 +20,8 @@ LICENSE=        shareware
 RESTRICTED=	This is shareware for your evaluation and subsequent payment
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
+
+INSTALLATION_DIRS=	bin man/man1
 
 post-patch:
 	${SED} "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/pcps.1 > ${WRKDIR}/pcps.1

@@ -26,6 +26,8 @@ REPLACE_PERL=	${MY_SCRIPT}
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
+INSTALLATION_DIRS=	bin man/man1
+
 do-install:	replace-interpreter
 	${INSTALL_SCRIPT} ${WRKSRC}/${MY_SCRIPT} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${MY_SCRIPT}.1 ${PREFIX}/man/man1

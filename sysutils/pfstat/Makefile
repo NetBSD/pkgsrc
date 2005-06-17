@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:28 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:34 jlam Exp $
 
 DISTNAME=	pfstat-1.7
 CATEGORIES=	sysutils net
@@ -9,6 +9,8 @@ HOMEPAGE=	http://www.benzedrine.cx/pfstat.html
 COMMENT=	Utility to render graphical statistics for PF
 
 NO_CONFIGURE=	yes
+
+INSTALLATION_DIRS=	bin man/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pfstat ${PREFIX}/bin

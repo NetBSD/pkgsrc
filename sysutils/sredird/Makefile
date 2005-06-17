@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:29 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:35 jlam Exp $
 #
 
 DISTNAME=		sredird-2.0.0
@@ -12,6 +12,7 @@ COMMENT=		RFC2217 compliant serial port redirector
 
 MAKE_FLAGS=		CC="${CC}" CFLAGS="${CFLAGS}"
 BUILD_TARGET=		sredird
+INSTALLATION_DIRS=	libexec share/doc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sredird ${PREFIX}/libexec/sredird

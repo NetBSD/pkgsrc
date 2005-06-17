@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/02/21 20:26:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:34 jlam Exp $
 #
 
 DISTNAME=	netbsd-pcvt-20000611
@@ -13,6 +13,8 @@ COMMENT=	Useful leftovers from pcvt: playvt and two font editors
 ONLY_FOR_PLATFORM= NetBSD-*-*
 
 WRKSRC=		${WRKDIR}/pcvt/Util
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} \

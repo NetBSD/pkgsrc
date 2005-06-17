@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:32 jlam Exp $
 
 DISTNAME=	qca-1.0
 PKGREVISION=	# empty
@@ -13,6 +13,8 @@ COMMENT=	Cross-platform crypto API for QT
 USE_TOOLS+= gmake
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
+
+INSTALLATION_DIRS=	include lib
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL} src/qca.h ${PREFIX}/include

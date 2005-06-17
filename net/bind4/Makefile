@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/25 13:12:55 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/17 03:50:24 jlam Exp $
 #
 
 DISTNAME=	bind-4.9.11-REL
@@ -13,6 +13,8 @@ COMMENT=	The BIND name server, version 4, as an alternative to BIND 8
 WRKSRC=		${WRKDIR}
 
 NOT_FOR_PLATFORM=	NetBSD-0.*-* NetBSD-1.[0123]*-*
+
+INSTALLATION_DIRS=	libexec man/man8 sbin
 
 post-extract:
 	@${RM} -f ${WRKSRC}/compat/include/sys/cdefs.h

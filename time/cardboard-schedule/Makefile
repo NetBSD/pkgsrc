@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/16 01:15:33 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/17 03:50:38 jlam Exp $
 #
 
 DISTNAME=	cs113ins
@@ -30,6 +30,8 @@ CSFILES=	cs/images/Logo2.gif \
 		stage/jhbasic.jar \
 		stage/license.txt \
 		stage/CsHelp.jar
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	(cd ${WRKDIR} && unzip -x InstallerData/Installer.zip) || ${TRUE}

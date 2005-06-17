@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/16 02:12:48 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:20 jlam Exp $
 #
 
 DISTNAME=	newmat10 # actually newmat10B, but no such distfile
@@ -20,6 +20,8 @@ HEADERS=	boolean.h controlw.h include.h myexcept.h newmat.h 	\
 		newmatap.h newmatio.h newmatnl.h newmatrc.h precisio.h
 
 DOCDIR=		${PREFIX}/share/doc/html/newmat
+
+INSTALLATION_DIRS=	lib
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/newmat

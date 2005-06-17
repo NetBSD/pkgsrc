@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/12/03 15:15:10 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:35 jlam Exp $
 #
 
 DISTNAME=	sysgen
@@ -12,6 +12,8 @@ COMMENT=	Assign DEC Qbus or UNIBUS standard CSR and vector addresses
 
 WRKSRC=		${WRKDIR}
 BUILD_TARGET=	sysgen
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sysgen ${PREFIX}/bin

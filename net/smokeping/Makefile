@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/01/22 21:50:54 adrianp Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:28 jlam Exp $
 
 DISTNAME=	smokeping-1.37
 CATEGORIES=	net
@@ -55,6 +55,8 @@ SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g" \
 			-e "s|perl-5.8.0|perl|g" \
 			-e "s|/usr/bin/perl|${PERL5}|g"
 SUBST_MESSAGE.files=	"Fixing configuration files."
+
+INSTALLATION_DIRS=	bin libexec/cgi-bin
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping

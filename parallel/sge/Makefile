@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/01 18:03:08 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:29 jlam Exp $
 #
 
 DISTNAME=		sge-5.3p6
@@ -76,6 +76,8 @@ LDFLAGS+=	-R${SGE_ROOT}/lib/${SGE_ARCH}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${SGE_ROOT}/lib/${SGE_ARCH}
 
 SGE_ROOT=	${PREFIX}/sge
+
+INSTALLATION_DIRS=	bin
 
 post-patch:
 	@if [ "`${WRKSRC}/source/dist/util/arch`" != "${SGE_ARCH}" ]; then \

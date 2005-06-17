@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 17:16:27 martti Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:30 jlam Exp $
 #
 
 DISTNAME=	pscal-1.15
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.panix.com/~mbh/pscal/
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.panix.com/~mbh/projects.html
 COMMENT=	Produces simple, nice-looking PostScript calendars
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 

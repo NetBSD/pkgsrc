@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:10 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:31 jlam Exp $
 #
 
 DISTNAME=	AiCA-0.81
@@ -25,6 +25,8 @@ COMMANDS=		aica/aica bin/aistore bin/asn1view bin/certconv \
 LIBRARIES=		libaica.a libaicrypto.a libaissl.a
 DOCS=			COPYRIGHT README README.j
 EXAMPLES=		lib/aica.cnf sample.csv
+
+INSTALLATION_DIRS=	bin include lib
 
 pre-configure:
 	cd ${WRKSRC}; \

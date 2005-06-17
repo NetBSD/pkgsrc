@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/03/10 17:27:06 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:23 jlam Exp $
 #
 
 DISTNAME=	6tunnel-0.09
@@ -17,6 +17,8 @@ NOT_FOR_PLATFORM+= Interix-*-* # no IPv6 support
 .if ${OPSYS} == "SunOS"
 LDFLAGS+=	-lsocket -lnsl
 .endif
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-build:
 	${CC} ${CFLAGS} -o ${WRKSRC}/6tunnel ${WRKSRC}/6tunnel.c ${LDFLAGS}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/12/03 15:15:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:42 jlam Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -17,6 +17,8 @@ HAS_CONFIGURE=	yes
 EXTRACT_ELEMENTS=	${DISTNAME}/pcgi
 
 BUILD_TARGET=	all
+
+INSTALLATION_DIRS=	bin libexec
 
 post-build:
 	(cd ${WRKSRC}; ${PY_PROG} ${PY_LIBDIR}/compileall.py .)

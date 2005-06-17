@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:31 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:36 jlam Exp $
 #
 
 DISTNAME=		RAIDAdmin1.3archive
@@ -24,6 +24,7 @@ WRKSRC=			${WRKDIR}/RAID\ Admin\ 1.3
 NO_BUILD=		# defined
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14
+INSTALLATION_DIRS=	bin
 
 do-configure:
 	${SED} -e 's|@SH@|${SH}|' -e 's|@PKG_JAVA_HOME@|${PKG_JAVA_HOME}|' \

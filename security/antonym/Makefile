@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/12 15:11:18 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:31 jlam Exp $
 #
 
 DISTNAME=		antonym-1.9
@@ -17,6 +17,7 @@ USE_PERL5=		yes
 
 REPLACE_PERL=		antonym
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+INSTALLATION_DIRS=	bin
 
 do-build: # empty
 

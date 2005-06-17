@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/10 13:05:06 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:40 jlam Exp $
 
 DISTNAME= 		firefox-bin-realplayer-1.0
 PKGREVISION=		1
@@ -23,6 +23,7 @@ NS_PLUGINS_DIR=		${PREFIX}/lib/firefox-linux/plugins
 PLUGIN_SOURCE=		${PREFIX}/lib/netscape/plugins/rpnp.so
 
 do-install:
+	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
 	${LN} -s ${PLUGIN_SOURCE} ${NS_PLUGINS_DIR}/rpnp.so
 
 .include "../../mk/bsd.pkg.mk"

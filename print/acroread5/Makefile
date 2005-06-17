@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/02/21 21:24:06 veego Exp $
+# $NetBSD: Makefile,v 1.27 2005/06/17 03:50:30 jlam Exp $
 
 DISTNAME=	acroread5	# Overridden below
 PKGNAME=	acroread5-5.10
@@ -60,6 +60,8 @@ PLATFORM=	sparcsolaris
 PLIST_SUBST+=	PLATFORM=${PLATFORM}
 
 BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/Acrobat5

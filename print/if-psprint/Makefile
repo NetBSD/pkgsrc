@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/17 12:44:42 salo Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/17 03:50:30 jlam Exp $
 #
 
 DISTNAME=	if-psprint-1.7
@@ -13,6 +13,8 @@ COMMENT=	Print text or postscript to arbitrary printer, can use smb
 DEPENDS+=	enscript>=1.6.3nb1:../../print/enscript
 
 USE_PERL5=	YES
+
+INSTALLATION_DIRS=	libexec man/man1
 
 do-build:
 	${SED} -e 's|/usr/local|${PREFIX}|g'		\

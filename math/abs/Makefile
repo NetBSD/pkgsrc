@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:46:28 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:19 jlam Exp $
 #
 
 DISTNAME=	abs-src-0.8
@@ -12,6 +12,8 @@ COMMENT=	Free spreadsheet with graphical user interface
 
 USE_X11BASE=	YES
 MAKEFILE=	Makefile.netBSD
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/abs ${PREFIX}/bin

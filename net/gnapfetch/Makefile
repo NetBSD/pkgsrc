@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/24 22:46:11 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:25 jlam Exp $
 
 DISTNAME=	gnapfetch-0.3
 CATEGORIES=	net
@@ -9,6 +9,8 @@ HOMEPAGE=	http://entropy.atlantic.net/gnapfetch/
 COMMENT=	Update/maintain opennap servers for gnapster/TekNap
 
 USE_PERL5=	# defined
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	${SED} -e "s,/usr/bin/perl,${PERL5},g" \

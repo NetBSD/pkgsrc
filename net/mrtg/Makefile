@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2005/05/21 04:10:18 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2005/06/17 03:50:26 jlam Exp $
 
 DISTNAME=	mrtg-2.11.1
 PKGREVISION=	1
@@ -58,6 +58,8 @@ SUBST_FILES.files=	../mrtg.conf.example ../netstat2mrtg		\
 			../sys2mrtg ../envstat2mrtg	
 SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.files=	"Fixing default configuration files."
+
+INSTALLATION_DIRS=	bin libexec man/man1
 
 .include "../../graphics/freetype-lib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 17:11:08 martti Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:27 jlam Exp $
 #
 
 DISTNAME=	poink-1.6
@@ -9,6 +9,8 @@ MAINTAINER=	zuntum@NetBSD.org
 COMMENT=	Nosuid, absolutely secure version of ping utility
 
 NO_SRC_ON_FTP=	"Already in MASTER_SITE_LOCAL"
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/poink ${PREFIX}/bin

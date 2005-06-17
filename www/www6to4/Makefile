@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/03 15:15:12 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:43 jlam Exp $
 #
 
 DISTNAME=	www6to4-1.5
@@ -14,6 +14,8 @@ BUILD_TARGET=	# empty
 .include "../../mk/bsd.prefs.mk"
 # always IPv6 ready
 BUILD_DEFS+=	USE_INET6
+
+INSTALLATION_DIRS=	sbin
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/www6to4

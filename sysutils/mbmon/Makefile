@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/06 16:08:43 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:34 jlam Exp $
 #
 
 .include "../../sysutils/mbmon/Makefile.common"
@@ -10,6 +10,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Motherboard monitoring utility
 
 BUILD_TARGET=	mbmon
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mbmon ${PREFIX}/bin

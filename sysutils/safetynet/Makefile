@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:26:16 agc Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:35 jlam Exp $
 #
 
 DISTNAME=	safetynet-1.15
@@ -12,6 +12,8 @@ COMMENT=	Safetynet is a perl script intended to monitor system services
 WRKSRC=		${WRKDIR}
 NO_BUILD=	YES
 USE_PERL5=	YES
+
+INSTALLATION_DIRS=	bin etc
 
 post-patch:
 	${SED}	-e "s,/etc/safetynet.conf,${PREFIX}/etc/safetynet.conf,g" \

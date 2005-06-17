@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/08/09 11:11:28 seb Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:19 jlam Exp $
 
 DISTNAME=	calc-2.02f
 PKGREVISION=	1
@@ -15,6 +15,8 @@ MAKE_ENV+=	EMACS=${EMACS_FLAVOR}
 
 USE_MAKEINFO=	YES
 INFO_FILES=	calc.info
+
+INSTALLATION_DIRS=	info
 
 do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/calc

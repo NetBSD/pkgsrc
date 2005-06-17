@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/02/21 21:24:06 veego Exp $
+# $NetBSD: Makefile,v 1.41 2005/06/17 03:50:30 jlam Exp $
 
 DISTNAME=	acroread	# Overridden below
 PKGNAME=	acroread-4.05
@@ -63,6 +63,8 @@ PLIST_SUBST+=	PLATFORM=${PLATFORM}
 NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
 
 BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/Acrobat4

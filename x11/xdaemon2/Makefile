@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/28 23:18:19 reed Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:45 jlam Exp $
 
 DISTNAME=	xdaemon-2.0
 PKGREVISION=	2
@@ -20,6 +20,8 @@ PIX=		xdaemon.png xdaemon2.png
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
+
+INSTALLATION_DIRS=	bin share/doc share/xteddy
 
 do-extract:
 	@${MKDIR} ${WRKSRC}

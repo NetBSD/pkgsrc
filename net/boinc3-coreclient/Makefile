@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:45 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:24 jlam Exp $
 #
 
 #DISTNAME=		boinc-3.07
@@ -19,6 +19,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		MYSQL_CONFIG=true
 
 BUILDDIRS=	RSAEuro client
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	cd ${WRKSRC}; for d in ${BUILDDIRS}; do \

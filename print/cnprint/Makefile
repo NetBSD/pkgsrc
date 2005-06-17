@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/16 01:15:32 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:30 jlam Exp $
 
 DISTNAME=		#
 PKGNAME=		cnprint-3.30b
@@ -27,6 +27,7 @@ COMMENT=		Print & convert CJK style text to PostScript
 
 DIST_SUBDIR=		${PKGNAME}
 PKGSRC_USE_TOOLS+=	gtar gunzip
+INSTALLATION_DIRS=	bin
 
 do-extract:
 	${MKDIR} ${WRKSRC}

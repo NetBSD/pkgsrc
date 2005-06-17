@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/12/03 15:15:06 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/17 03:50:27 jlam Exp $
 
 DISTNAME=	raproxy3.0b1
 PKGNAME=	ra-pna-proxy-3.0b1
@@ -22,6 +22,8 @@ PROGNAME=	${PKGNAME:C/-[1-9].*//}
 
 LIBS.SunOS+=	-lnsl -lsocket
 MAKE_ENV+=	LIBS="${LIBS}"
+
+INSTALLATION_DIRS=	libexec man/man8
 
 post-build:
 	cd ${WRKSRC}; \

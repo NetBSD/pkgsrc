@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:26 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:39 jlam Exp $
 #
 
 DISTNAME=	wampager-0.9.1
@@ -11,6 +11,7 @@ COMMENT=	Virtual pager dockapp for the Waimea Window Manager
 
 DEPENDS=	waimea>=0.4.0:../../wm/waimea
 
+INSTALLATION_DIRS=	bin
 
 do-build:
 	@${ECHO} "${CC} ${CFLAGS} wampager.c -o wampager ${LDFLAGS} \

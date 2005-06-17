@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/24 21:13:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:30 jlam Exp $
 
 DISTNAME=	poster
 PKGNAME=	poster-1.0
@@ -11,6 +11,8 @@ COMMENT=	Resize a ps image to print on larger media and/or multiple sheets
 
 BUILD_TARGET=	poster
 WRKSRC=		${WRKDIR}
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin

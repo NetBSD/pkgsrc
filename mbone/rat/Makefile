@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/22 20:08:14 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/06/17 03:50:20 jlam Exp $
 #
 
 DISTNAME=	rat-3.0.28
@@ -15,6 +15,8 @@ USE_TOOLS+=	gmake
 USE_X11BASE=	yes
 
 USER=		build
+
+INSTALLATION_DIRS=	bin man/man1
 
 post-patch:
 	${CP} ${WRKSRC}/Makefile_NetBSD_1 ${WRKSRC}/Makefile_NetBSD_2

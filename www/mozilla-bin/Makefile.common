@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2005/04/23 10:37:36 wiz Exp $
+# $NetBSD: Makefile.common,v 1.28 2005/06/17 03:50:41 jlam Exp $
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -95,6 +95,8 @@ DEPENDS+=	gtk+>=1.2:../../x11/gtk
 .  endif
 
 .endif	# defined(MOZ_PLATFORM)
+
+INSTALLATION_DIRS=	bin
 
 # we don't want libnullplugin.
 post-extract:

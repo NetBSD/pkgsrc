@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:28:28 agc Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:45 jlam Exp $
 
 DISTNAME=	xdaemon-1.0
 CATEGORIES=	games x11
@@ -22,6 +22,8 @@ PIX=	xdaemon_bw.xbm		xdaemon2_bw.xbm \
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
+
+INSTALLATION_DIRS=	bin share/doc share/xteddy/pixmaps
 
 do-extract:
 	@${MKDIR} ${WRKSRC}

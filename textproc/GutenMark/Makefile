@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/22 20:08:34 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/17 03:50:36 jlam Exp $
 #
 
 DISTNAME=	GutenMark_source_${GVER}
@@ -17,6 +17,8 @@ WRKSRC=		${WRKDIR}/GutenMark-source
 GVER=		20020714
 USE_TOOLS+=	gmake
 BUILD_TARGET=	GutenMark
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/GutenMark ${PREFIX}/bin

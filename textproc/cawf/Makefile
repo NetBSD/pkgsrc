@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/12 15:11:18 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:36 jlam Exp $
 #
 # Possible TODOs:
 # - set CH based on manual page section number, and real OS name
@@ -25,6 +25,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 .include "../../mk/bsd.prefs.mk"
 
 CPPFLAGS+=		-DUNIX -DUSG -DSTDLIB -DCAWFLIB="\"${PREFIX}/share/cawf\""
+
+INSTALLATION_DIRS+=	bin man/man1
 
 post-extract:
 	${RM} -f ${WRKSRC}/*.o

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/15 22:02:27 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:21 jlam Exp $
 #
 
 DISTNAME=	colorize_0.3.0
@@ -16,6 +16,7 @@ NO_BUILD=	yes
 USE_PERL5=	yes
 
 PKGSRC_USE_TOOLS+=	gunzip
+INSTALLATION_DIRS=	bin man/man1
 
 post-patch:
 	${SED}	-e "s,/usr/bin/perl,${LOCALBASE}/bin/perl,"		\

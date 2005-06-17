@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/16 01:15:32 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:21 jlam Exp $
 
 DISTNAME=	${DISTNAME_${OPSYS}_${MACHINE_ARCH}}
 PKGNAME=	dnetc-2.${DISTVER_${OPSYS}_${MACHINE_ARCH}}
@@ -49,6 +49,8 @@ DISTVER_SunOS_sparc=		9005.484
 WRKSRC=${WRKDIR}/${DISTNAME:S/dnetc/dnetc${DISTVER_${OPSYS}_${MACHINE_ARCH}:E}/1}
 
 RCD_SCRIPTS=	dnetc
+
+INSTALLATION_DIRS=	bin man/man1
 
 .if ${MACHINE_ARCH} != "arm" && ${MACHINE_ARCH} != "arm32"
 do-extract:

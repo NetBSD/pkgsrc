@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/07 23:38:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:23 jlam Exp $
 #
 
 DISTNAME=	libmpeg3-1.3
@@ -34,6 +34,8 @@ INSTHDRS=	bitstream.h libmpeg3.h mpeg3atrack.h mpeg3css.h \
 AINSTHDRS=	ac3.h mpeg3audio.h
 VINSTHDRS=	idct.h mpeg3video.h slice.h
 INSTBINS=	mpeg3cat mpeg3toc mpeg3split
+
+INSTALLATION_DIRS=	bin lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/work/dump ${PREFIX}/bin/mpeg3dump

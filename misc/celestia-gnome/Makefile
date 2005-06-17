@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/12/05 11:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:21 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gnome-/}
 
@@ -9,6 +9,8 @@ DEPENDS=	celestia-${CELESTIA_VERS}*:../../misc/celestia
 CONFIGURE_ARGS+=	--with-gnome
 
 BUILD_DIRS=	${WRKSRC}/src
+
+INSTALLATION_DIRS=	bin share/applications share/pixmaps
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/celestia/celestia \

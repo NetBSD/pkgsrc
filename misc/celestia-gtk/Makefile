@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/12 23:44:02 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:21 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gtk-/}
 
@@ -9,6 +9,8 @@ DEPENDS=	celestia-${CELESTIA_VERS}*:../../misc/celestia
 CONFIGURE_ARGS+=	--with-gtk
 
 BUILD_DIRS=	${WRKSRC}/src
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/celestia/celestia ${PREFIX}/bin/gtkcelestia
