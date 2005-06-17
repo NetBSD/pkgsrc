@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:44 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/17 04:49:49 jlam Exp $
 #
 
 DISTNAME=	ssystem-1.6
@@ -23,13 +23,13 @@ INSTALLATION_DIRS=	bin
 
 do-install:
 	cd ${WRKSRC} && \
-	    ${INSTALL_PROGRAM} ssystem ${X11PREFIX}/bin; \
-	    ${INSTALL_DATA_DIR} ${X11PREFIX}/share/ssystem; \
-	    ${INSTALL_DATA_DIR} ${X11PREFIX}/share/doc/ssystem; \
-	    ${INSTALL_DATA_DIR} ${X11PREFIX}/share/ssystem/hires; \
-	    ${INSTALL_DATA} ${DATA_FILES} ${X11PREFIX}/share/ssystem; \
-	    ${INSTALL_DATA} ${DOC_FILES} ${X11PREFIX}/share/doc/ssystem; \
-	    ${INSTALL_DATA} hires/README ${X11PREFIX}/share/ssystem/hires
+	    ${INSTALL_PROGRAM} ssystem ${PREFIX}/bin; \
+	    ${INSTALL_DATA_DIR} ${PREFIX}/share/ssystem; \
+	    ${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ssystem; \
+	    ${INSTALL_DATA_DIR} ${PREFIX}/share/ssystem/hires; \
+	    ${INSTALL_DATA} ${DATA_FILES} ${PREFIX}/share/ssystem; \
+	    ${INSTALL_DATA} ${DOC_FILES} ${PREFIX}/share/doc/ssystem; \
+	    ${INSTALL_DATA} hires/README ${PREFIX}/share/ssystem/hires
 
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:47:52 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/17 04:49:49 jlam Exp $
 #
 
 DISTNAME=	chimera-2.0a19
@@ -20,9 +20,9 @@ pre-configure:
 	    Common.tmpl.dist > Common.tmpl
 
 post-install:
-	${INSTALL_DATA_DIR} ${X11PREFIX}/share/doc/chimera
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/chimera
 	cd ${WRKSRC}/doc && ${INSTALL_DATA}			\
-	    HINTS INFO LICENSE ${X11PREFIX}/share/doc/chimera
+	    HINTS INFO LICENSE ${PREFIX}/share/doc/chimera
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
