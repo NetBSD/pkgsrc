@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/05 10:42:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:33 jlam Exp $
 
 DISTNAME=       atitvout-0.4
 PKGREVISION=	1
@@ -30,6 +30,8 @@ SUBST_STAGE.sh=	post-patch
 SUBST_FILES.sh=	test.sh
 SUBST_SED.sh=	-e "s,@PREFIX@,${PREFIX},"
 SUBST_MESSAGE.sh=	"Fixing stupid bash scripts."
+
+INSTALLATION_DIRS=	sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/atitvout ${PREFIX}/sbin

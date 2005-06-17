@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/04/11 21:47:50 tv Exp $
+# $NetBSD: Makefile,v 1.23 2005/06/17 03:50:39 jlam Exp $
 
 DISTNAME=	mod_dtcl-0.11.6
 PKGNAME=	ap-dtcl-0.11.2
@@ -30,6 +30,7 @@ do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} builddtcl.sh
 
 do-install:
+	${INSTALL_DATA_DIR} ${APACHEMODDIR}
 	${INSTALL_DATA} ${WRKSRC}/mod_dtcl.so ${APACHEMODDIR}
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/*.gif ${HTMLDIR}

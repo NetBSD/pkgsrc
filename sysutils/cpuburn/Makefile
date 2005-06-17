@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/16 01:15:33 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:33 jlam Exp $
 #
 
 DISTNAME=	cpuburn_1_4
@@ -18,6 +18,8 @@ EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf -
 PKGSRC_USE_TOOLS+=	gtar
 
 WRKSRC=         ${WRKDIR}/${PKGNAME_NOREV}
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/burnBX ${PREFIX}/bin/burnBX

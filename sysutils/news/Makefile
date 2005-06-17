@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/19 03:49:09 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:34 jlam Exp $
 #
 
 DISTNAME=		news-0.2
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.netmeister.org/apps/
 MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://www.netmeister.org/
 COMMENT=		System V news(1)
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/news ${PREFIX}/bin/

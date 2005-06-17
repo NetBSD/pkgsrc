@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/20 12:23:57 agc Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:29 jlam Exp $
 #
 
 DISTNAME=	dfdisk-1.0
@@ -26,6 +26,8 @@ FILES_SUBST+=	FTP="${ZOULARISBASE}/bin/ftp -p"
 .else
 FILES_SUBST+=	FTP="/usr/bin/ftp -p"
 .endif
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-build:
 .for f in dfdisk.sh dfdisk.1 dfdisk.conf

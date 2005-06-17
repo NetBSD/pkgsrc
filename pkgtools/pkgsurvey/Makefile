@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:23:58 agc Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:29 jlam Exp $
 #
 
 DISTNAME=	pkgsurvey-0.0
@@ -13,6 +13,8 @@ WRKSRC=		${WRKDIR}
 NO_CHECKSUM=    yes
 NO_CONFIGURE=   yes
 NO_BUILD=	yes
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${SED} -e 's|\$${PKG_INFO}|${PKG_INFO}|'			\

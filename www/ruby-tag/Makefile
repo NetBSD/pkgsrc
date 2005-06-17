@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/17 22:15:54 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:42 jlam Exp $
 
 DISTNAME=	tag104
 PKGNAME=	${RUBY_PKGPREFIX}-tag-1.0.4
@@ -23,6 +23,7 @@ do-build:
 	@cd ${WRKSRC}; ${RUBY_RD} tag.rb > tag.html
 
 do-install:
+	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/tag.rb ${RUBY_SITELIBDIR}
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/tag/ja
 	${INSTALL_DATA} ${WRKSRC}/tag.html ${RUBY_DOCDIR}/tag/ja

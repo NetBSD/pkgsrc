@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:35 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:37 jlam Exp $
 #
 
 DISTNAME=	luaexpat-1.0a
@@ -13,6 +13,8 @@ COMMENT=	XML parser for LUA based on expat
 
 USE_TOOLS+=	gmake
 MAKEFILE=	makefile
+
+INSTALLATION_DIRS=	lib
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/liblxp.so ${PREFIX}/lib/liblualxp.so

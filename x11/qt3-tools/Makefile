@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/20 23:50:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.34 2005/06/17 03:50:44 jlam Exp $
 
 .include "../qt3-libs/Makefile.common"
 
@@ -13,7 +13,9 @@ UNLIMIT_RESOURCES=	datasize
 BUILD_TARGET=		sub-tools
 
 do-install:
+	${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/uic ${QTPREFIX}/bin
+	${INSTALL_LIB_DIR} ${QTPREFIX}/lib
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/lib/libqui.la ${QTPREFIX}/lib
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/lib/libeditor.la ${QTPREFIX}/lib
 	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/lib/libqassistantclient.la \

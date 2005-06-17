@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 17:10:36 martti Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:25 jlam Exp $
 #
 
 DISTNAME=	identd
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.c
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.clock.org/~fair/opinion/identd.html
 COMMENT=	Fast RFC-1413 identd running under inetd that returns no useful info
+
+INSTALLATION_DIRS=	libexec
 
 do-extract:
 	${MKDIR} ${WRKSRC}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/02 10:48:16 adrianp Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:26 jlam Exp $
 
 DISTNAME=	oinkmaster-1.2
 PKGREVISION=	1
@@ -33,6 +33,8 @@ SUBST_FILES.pub=	oinkmaster.pl oinkmaster.conf oinkmaster.1
 SUBST_SED.pub=		-e "s|/usr/local/etc|${PKG_SYSCONFDIR}|g" \
 			-e "s|/usr/local|${PREFIX}|g"
 SUBST_MESSAGE.pub=	"Fixing harcoded paths."
+
+INSTALLATION_DIRS=	bin share/snort/rules
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/oinkmaster

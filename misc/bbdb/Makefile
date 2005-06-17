@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:33 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:21 jlam Exp $
 #
 
 DISTNAME=		bbdb-2.34
@@ -33,6 +33,9 @@ pre-install:
 .else
 LISPDIR=	${EMACS_LISPPREFIX}/bbdb
 INFODIR=	info
+
+INSTALLATION_DIRS=	${INFO_DIR}
+
 do-install:
 	${MKDIR} ${LISPDIR}
 	${INSTALL_DATA} ${WRKSRC}/lisp/*.el ${LISPDIR}

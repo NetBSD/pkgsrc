@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/06/01 18:03:22 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/17 03:50:35 jlam Exp $
 #
 
 DISTNAME=	rox-2.2.0
@@ -20,6 +20,8 @@ DIST_SUBDIR=	rox
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		APP_DIR=${WRKDIR}/${DISTNAME}/ROX-Filer
 CONFIGURE_ARGS+=	--enable-rox --with-platform=${OPSYS}-${MACHINE_ARCH}
+
+INSTALLATION_DIRS=	bin libexec/rox man/man1
 
 post-patch:
 	${SED} -e "s:@PREFIX@:"${PREFIX}":g" < ${FILESDIR}/rox > \

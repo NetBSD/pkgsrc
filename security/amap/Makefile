@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/24 12:10:47 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/17 03:50:31 jlam Exp $
 #
 
 DISTNAME=       amap-5.0
@@ -31,6 +31,8 @@ SUBST_SED.conf=		-e 's|@PREFIX@|${PREFIX}|g' \
 			-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g' \
 			-e "s|@UNAME@|${UNAME}|g"
 SUBST_MESSAGE.conf=	"Fixing configure script."
+
+INSTALLATION_DIRS=	bni man/man1
 
 .include "../../security/openssl/buildlink3.mk"
 
