@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/22 09:57:58 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:22 jlam Exp $
 
 DISTNAME=	ttyrec-1.0.4
 CATEGORIES=	misc
@@ -13,6 +13,8 @@ COMMENT=	ttyrec is a tty recorder
 .if ${OPSYS} == "SunOS"
 CFLAGS+=	-DSVR4
 .endif
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ttyplay ${PREFIX}/bin

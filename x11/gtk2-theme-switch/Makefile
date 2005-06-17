@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:48 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:44 jlam Exp $
 #
 
 DISTNAME=		gtk-theme-switch-2.0.0rc2
@@ -14,6 +14,7 @@ COMMENT=		Allows quick & easy switching of GTK+ 2.x themes
 USE_TOOLS+=		gmake
 
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/switch2 \

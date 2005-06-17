@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/22 20:08:23 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/17 03:50:25 jlam Exp $
 #
 
 DISTNAME=	Flan
@@ -14,6 +14,7 @@ WRKSRC=			${WRKDIR}/src
 USE_JAVA=		yes
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 jdk13 jdk14
 USE_TOOLS+=		gmake
+INSTALLATION_DIRS=	bin
 
 post-build:
 	cd ${WRKSRC} ; ${PKG_JAVA_HOME}/bin/jar cf flan.jar flan/ graphic/

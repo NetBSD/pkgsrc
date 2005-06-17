@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:43 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:38 jlam Exp $
 #
 
 DISTNAME=	${W2L}beta2
@@ -17,6 +17,8 @@ USE_JAVA=	run
 
 W2L=		writer2latex04
 W2LPATH=	${PREFIX}/share/${W2L}
+
+INSTALLATION_DIRS=	bin
 
 do-configure:
 .for scr in w2l

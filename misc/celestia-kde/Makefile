@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/11/16 14:34:10 adam Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/17 03:50:21 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-kde-/}
 
@@ -10,6 +10,8 @@ CONFIGURE_ARGS+=	--with-kde
 
 BUILD_DIRS=	${WRKSRC}/src
 KDEWRKSRC=	${WRKSRC}/src/celestia/kde/data
+
+INSTALLATION_DIRS=	bin share/kde/mimelnk/application share/kde/services
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/celestia/celestia \
@@ -42,6 +44,7 @@ do-install:
 	${INSTALL_DATA} ${KDEWRKSRC}/../doc/celestia/index.docbook \
 		${PREFIX}/share/doc/kde/HTML/en/celestia/
 .for nn in 16 22 32 48
+	${INSTALL_DATA_DIR} ${PREFIX}/share/kde/icons/hicolor/${nn}x${nn}/apps
 	${INSTALL_DATA} ${KDEWRKSRC}/hi${nn}-app-celestia.png \
 		${PREFIX}/share/kde/icons/hicolor/${nn}x${nn}/apps/celestia.png
 .endfor

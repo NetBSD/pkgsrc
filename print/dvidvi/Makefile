@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:06 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:30 jlam Exp $
 #
 
 DISTNAME=	dvidvi-1.0
@@ -13,6 +13,8 @@ NO_SRC_ON_FTP=	Unable to determine distribution license
 NO_SRC_ON_CDROM=Unable to determine distribution license
 NO_BIN_ON_FTP=	Unable to determine distribution license
 NO_BIN_ON_CDROM=Unable to determine distribution license
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dvidvi ${PREFIX}/bin/dvidvi

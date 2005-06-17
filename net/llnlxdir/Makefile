@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:49 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:25 jlam Exp $
 #
 
 DISTNAME=		llnlxdir2_1_2
@@ -14,6 +14,7 @@ COMMENT=		Advanced graphical FTP client
 
 USE_IMAKE=      	yes
 WRKSRC=         	${WRKDIR}/llnlxdir2_1_2/sources
+INSTALLATION_DIRS=	bin lib/X11/app-defaults
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xdir ${PREFIX}/bin

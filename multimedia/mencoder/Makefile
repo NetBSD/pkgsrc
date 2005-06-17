@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/01 18:45:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/17 03:50:23 jlam Exp $
 
 PKGNAME=	mencoder-${MPLAYER_PKG_VERSION}
 
@@ -11,6 +11,7 @@ CONFIGURE_ARGS+=	--confdir=${PREFIX}/share/mplayer
 BUILD_TARGET=	mencoder
 
 MANCOMPRESSED_IF_MANZ=	1
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mencoder ${PREFIX}/bin

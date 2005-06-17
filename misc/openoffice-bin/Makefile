@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/14 21:06:44 mrauch Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:22 jlam Exp $
 
 PKGNAME=		openoffice-bin-${OO_VER}
 PKGREVISION=		1
@@ -75,6 +75,8 @@ WRKSRC=		${WRKDIR}/OOo_${OO_VER}_Solaris_Intel_install
 PKG_FAIL_REASON= '${PKGNAME} needs to have the PLIST fixed up still'
 .endif
 .endif
+
+INSTALLATION_DIRS=	bin
 
 pre-install:
 	${CP} ${WRKSRC}/setup.ins ${WRKSRC}/setup.ins.orig

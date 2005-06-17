@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:44 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:24 jlam Exp $
 #
 
 DISTNAME=		awhois.sh-v1.61
@@ -12,6 +12,7 @@ HOMEPAGE=		ftp://ftp.planix.com/pub/Planix/
 COMMENT=		All-encompassing whois client wrapper
 
 WRKSRC=			${WRKDIR}
+INSTALLATION_DIRS=	bin
 
 do-extract:
 	${CP} ${DISTDIR}/${DISTFILES} ${WRKDIR};

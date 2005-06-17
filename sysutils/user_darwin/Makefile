@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:30 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:36 jlam Exp $
 #
 
 DISTNAME=		user-20040801
@@ -17,6 +17,8 @@ NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 NO_TOOLS=		yes
 NO_BUILD=		yes
+
+INSTALLATION_DIRS=	sbin
 
 do-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/useradd.sh ${PREFIX}/sbin/useradd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:48:05 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/17 03:50:43 jlam Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
@@ -14,6 +14,8 @@ COMMENT=	Eiffel/GTK+ interface for SmallEiffel
 DEPENDS+=	smalleiffel-[0-9]*:../../lang/smalleiffel
 
 WRKSRC=		${WRKDIR}/eGTK
+
+INSTALLATION_DIRS=	bin lib man/man1
 
 post-extract:
 	${FIND} ${WRKSRC} -type d -name "CVS" -print | ${XARGS} ${RM} -rf

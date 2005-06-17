@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/21 05:03:18 grant Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/17 03:50:34 jlam Exp $
 #
 
 DISTNAME=		fastfs.c
@@ -10,9 +10,11 @@ EXTRACT_SUFX=		# empty
 MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Turn on/off delayed IO on a file system
 
+ONLY_FOR_PLATFORM=	SunOS-*-*
+
 WRKSRC=			${WRKDIR}/fastfs
 NO_CONFIGURE=		# defined
-ONLY_FOR_PLATFORM=	SunOS-*-*
+INSTALLATION_DIRS=	sbin
 
 do-extract:
 	@${MKDIR} ${WRKSRC}

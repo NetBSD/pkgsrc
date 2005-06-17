@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:21 martti Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:40 jlam Exp $
 #
 
 DISTNAME=	calamaris-2.58
@@ -12,6 +12,8 @@ COMMENT=	Squid logfile analyzer
 USE_PERL5=	YES
 REPLACE_PERL=	calamaris
 NO_BUILD=	YES
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/calamaris ${PREFIX}/bin

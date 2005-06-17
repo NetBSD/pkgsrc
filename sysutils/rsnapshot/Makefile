@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/11 09:44:12 kim Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:35 jlam Exp $
 #
 
 DISTNAME=	rsnapshot-1.1.6
@@ -27,6 +27,8 @@ CONF_FILES+=	${EGDIR}/rsnapshot.conf.default \
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 CONFIGURE_ARGS+=	--with-rsync=${LOCALBASE}/bin/rsync
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rsnapshot ${PREFIX}/bin

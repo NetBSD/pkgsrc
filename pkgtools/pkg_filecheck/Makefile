@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/07 22:24:04 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/17 03:50:29 jlam Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.1
@@ -22,6 +22,8 @@ FILES_SUBST+=	X11PREFIX=${X11PREFIX}
 FILES_SUBST+=	PKG_DBDIR=${PKG_DBDIR}
 CONF_FILES=	${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf \
 		${PKG_SYSCONFDIR}/pkg_filecheck.conf
+
+INSTALLATION_DIRS=	bin man/man1 man/man5
 
 .include "../../mk/bdb.buildlink3.mk"
 

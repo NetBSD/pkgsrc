@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/05/16 01:15:32 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/17 03:50:20 jlam Exp $
 #
 
 DISTNAME=	gap4r3
@@ -30,6 +30,8 @@ GAP_DIRECTORY=	${PREFIX}/lib/gap4.3
 GAP_PLATFORM=	${MACHINE_GNU_PLATFORM}-${CC}
 
 PLIST_SUBST=	GAP_PLATFORM=${GAP_PLATFORM}
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	( cd ${WRKSRC} && ${GTAR} zxf ${DISTDIR}/fix4r3n5.tar.gz )

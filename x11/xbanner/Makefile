@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:48:14 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/17 03:50:44 jlam Exp $
 
 DISTNAME=		XBanner1.31
 PKGNAME=		xbanner-1.31
@@ -12,6 +12,8 @@ COMMENT=		Make XDM login screen look pretty
 USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES
 DOCDIR=			${PREFIX}/share/doc/xbanner
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	for f in freetemp random_effect xb_check xbanner; do		\

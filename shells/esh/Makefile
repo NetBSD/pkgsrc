@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/20 12:25:54 agc Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/17 03:50:33 jlam Exp $
 
 DISTNAME=		esh-0.8
 CATEGORIES=		shells
@@ -12,6 +12,7 @@ INFO_FILES=		esh.info
 WRKSRC=			${WRKDIR}/esh
 USE_PKGINSTALL=		yes
 PKG_SHELL=		${PREFIX}/bin/esh
+INSTALLATION_DIRS=	bin info
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/esh ${PREFIX}/bin

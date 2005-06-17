@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/17 03:50:23 jlam Exp $
 #
 
 .include "../../multimedia/mkvtoolnix/Makefile.dist"
@@ -27,6 +27,8 @@ SUBST_STAGE.help=	pre-configure
 SUBST_FILES.help=	src/mmg/mmg.cpp
 SUBST_SED.help=		's,@HELPDIR@,${PREFIX}/share/doc/html/mmg,'
 SUBST_MESSAGE.help=	"Fixing path to help data."
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/mmg/mmg ${PREFIX}/bin/

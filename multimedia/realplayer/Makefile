@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/16 01:32:23 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:23 jlam Exp $
 
 PKGNAME=		realplayer-8.0.1
 PKGREVISION=		2
@@ -82,6 +82,8 @@ _FETCH_MESSAGE+= \
 .endif
 _FETCH_MESSAGE+= \
 	    ${ECHO} "==============================================================="
+
+INSTALLATION_DIRS=	bin lib
 
 pre-extract:
 	@delay=15;							\

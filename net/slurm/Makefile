@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:59 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:28 jlam Exp $
 #
 
 DISTNAME=	slurm-0.3.3
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.raisdorf.net/projects/slurm/
 COMMENT=	Realtime traffic statistics
 
 GNU_CONFIGURE=	YES
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/slurm ${PREFIX}/bin

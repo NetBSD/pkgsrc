@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/01 18:03:26 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:41 jlam Exp $
 #
 
 DISTNAME=	mMosaic-3.7.2
@@ -11,6 +11,8 @@ HOMEPAGE=	http://perso.enst.fr/~dauphin/mMosaic/
 COMMENT=	Modern derivative of NCSA XMosaic
 
 WRKSRC=		${WRKDIR}/mMosaic-src-3.7.2
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/mMosaic ${PREFIX}/bin/

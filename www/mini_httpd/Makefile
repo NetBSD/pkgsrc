@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:54 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:41 jlam Exp $
 
 DISTNAME=	mini_httpd-1.19
 PKGREVISION=	2
@@ -18,6 +18,8 @@ LDFLAGS+=	-lssl -lcrypto -lcrypt
 .if ${OPSYS} != "IRIX"
 LDFLAGS+=	-lutil
 .endif
+
+INSTALLATION_DIRS=	man/man1 man/man8 sbin
 
 do-install:
 	for FILE in mini_httpd.8 htpasswd.1; do \

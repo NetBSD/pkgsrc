@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:14 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:32 jlam Exp $
 
 DISTNAME=	nikto-1.34
 CATEGORIES=	security www
@@ -24,6 +24,8 @@ SUBST_MESSAGE.conf=	"Fixing configuration files."
 
 CONF_FILES=	${PREFIX}/share/examples/nikto/config.txt \
 			 ${PREFIX}/share/nikto/config.txt
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nikto

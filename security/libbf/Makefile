@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:25:34 agc Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:32 jlam Exp $
 #
 
 DISTNAME=	libbf-0.8.2b
@@ -24,6 +24,8 @@ BF_ENC=bf_enc.o
 .endif
 
 MAKEFLAGS+=	BF_ENC=${BF_ENC}
+
+INSTALLATION_DIRS=	bin include lib
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/blowfish

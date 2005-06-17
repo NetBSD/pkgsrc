@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/05/22 20:08:46 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2005/06/17 03:50:43 jlam Exp $
 #
 
 DISTNAME=       XmHTML-1.1.7
@@ -13,6 +13,8 @@ COMMENT=	Motif Widget capable of displaying HTML 3.2 conforming text
 USE_X11BASE=	YES
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
+
+INSTALLATION_DIRS=	lib
 
 do-install:
 	${LIBTOOL} ${LIBTOOL_FLAGS} ${INSTALL_DATA} \

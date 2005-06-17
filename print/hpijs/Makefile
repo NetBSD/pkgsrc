@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/15 22:02:28 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/17 03:50:30 jlam Exp $
 
 DISTNAME=	hpijs-1.7.1
 PKGREVISION=	# empty
@@ -17,6 +17,7 @@ CPPFLAGS+=		-DAPDK_BUFFER_SEND
 
 PKGSRC_USE_TOOLS+=	gzip
 ONLY_FOR_COMPILER=	gcc
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_DATA_DIR} ${LOCALBASE}/share/ppd

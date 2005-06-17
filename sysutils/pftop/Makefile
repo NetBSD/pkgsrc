@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/01 18:03:22 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:34 jlam Exp $
 
 DISTNAME=	pftop-0.4
 CATEGORIES=	sysutils net
@@ -12,6 +12,8 @@ NO_CONFIGURE=	yes
 
 MAKE_ENV+=	OSLEVEL=${PF_VERSION:S/.//}
 CFLAGS+=	-I${PREFIX}/include
+
+INSTALLATION_DIRS=	man/man8 sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pftop ${PREFIX}/sbin

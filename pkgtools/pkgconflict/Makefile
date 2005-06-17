@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:05 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/17 03:50:29 jlam Exp $
 #
 
 DISTNAME=	pkgconflict-0.4
@@ -17,6 +17,8 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 .include "../../mk/bsd.prefs.mk"
 
 CPPFLAGS+=	-I${PGSQL_PREFIX}/include/postgresql/server
+
+INSTALLATION_DIRS=	bin lib/postgresql
 
 post-extract:
 	@for f in dewey_cmp.c pkgconflict pkgdbextract; do \

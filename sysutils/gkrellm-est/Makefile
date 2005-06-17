@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:24 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:34 jlam Exp $
 #
 
 DISTNAME=		gkrellm-est-20040710
@@ -14,6 +14,8 @@ NO_CONFIGURE=		yes
 
 ONLY_FOR_PLATFORM=	NetBSD-2.0[F-Z]*-i386 NetBSD-2.99.*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-[3-9].*-i386
+
+INSTALLATION_DIRS=	lib/gkrellm2/plugins
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gkrellm-est.so ${PREFIX}/lib/gkrellm2/plugins

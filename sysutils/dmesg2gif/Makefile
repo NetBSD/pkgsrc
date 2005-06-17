@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:26:15 agc Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:33 jlam Exp $
 #
 
 DISTNAME=		dmesg2gif-1.3
@@ -17,6 +17,7 @@ NO_BUILD=		yes
 NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 USE_PERL5=		run
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/dmesg2gif ${PREFIX}/bin/dmesg2gif

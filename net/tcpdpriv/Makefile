@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/27 20:49:47 hira Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:28 jlam Exp $
 
 DISTNAME=	tcpd-tools-0.8
 PKGNAME=	tcpdpriv-0.8
@@ -9,6 +9,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Anonymize tcpdump traces
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/wide-tcpdpriv
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcpdpriv ${PREFIX}/bin

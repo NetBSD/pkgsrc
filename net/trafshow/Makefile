@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:47:01 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/17 03:50:28 jlam Exp $
 
 DISTNAME=	trafshow-4.0
 PKGREVISION=	1
@@ -20,6 +20,8 @@ BUILD_DEFS+=	USE_INET6
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
 CPPFLAGS+=	-DINET6
 .endif
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/trafshow ${PREFIX}/bin

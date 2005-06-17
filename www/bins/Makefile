@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/11 21:47:52 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/06/17 03:50:40 jlam Exp $
 #
 
 DISTNAME=	bins-1.1.27
@@ -30,6 +30,8 @@ USE_PKGLOCALEDIR=	YES
 # bins_txt2xml not installed because it's an upgrade tool, and we didn't
 # have previous versions in pkgsrc.
 REPLACE_PERL=	bins bins_edit bins-edit-gui bins_cleanupgallery bins_txt2xml
+
+INSTALLATION_DIRS=	bin man/man1
 
 post-patch:
 	${MV} ${WRKSRC}/bins ${WRKSRC}/bins.bak
@@ -103,6 +105,8 @@ do-install:
 		${PREFIX}/share/examples/bins/templates.satyap/static/
 	# Translations
 	for lang in de eo es fi fr it ja nl pl ru zh_TW; do \
+		${INSTALL_DATA_DIR} \
+		${PREFIX}/${PKGLOCALEDIR}/locale/$$lang/LC_MESSAGES; \
 		${INSTALL_DATA} ${WRKSRC}/intl/$$lang.mo \
 		${PREFIX}/${PKGLOCALEDIR}/locale/$$lang/LC_MESSAGES/bins.mo; \
 	done

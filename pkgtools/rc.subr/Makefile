@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/01/06 05:32:30 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:30 jlam Exp $
 #
 
 DISTNAME=		rc.subr-20041011
@@ -22,6 +22,8 @@ USE_PKGINSTALL=		YES
 PLIST_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR:S/^\///}
 
 CONF_FILES+=		${PREFIX}etc/rc.conf.example ${PREFIX}etc/rc.conf
+
+INSTALLATION_DIRS=	etc
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}

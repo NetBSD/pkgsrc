@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:46:38 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:22 jlam Exp $
 #
 
 DISTNAME=	multitail-2.4
@@ -11,6 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.vanheusden.com/multitail/
 COMMENT=	View one or multiple files
 
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/multitail ${PREFIX}/bin/

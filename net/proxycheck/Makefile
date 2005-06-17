@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/29 00:07:15 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:27 jlam Exp $
 #
 
 DISTNAME=	proxycheck-0.49a
@@ -11,6 +11,8 @@ COMMENT=	Tester for open (promiscuous) proxy systems
 
 HAS_CONFIGURE=	YES
 MAKE_FLAGS+=	CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/proxycheck ${PREFIX}/bin/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/21 01:48:19 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:27 jlam Exp $
 #
 
 DISTNAME=	overnetclc-1.0.1
@@ -29,6 +29,8 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 .if ${OPSYS} != "Linux"
 DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 .endif
+
+INSTALLATION_DIRS=	bin
 
 do-extract:
 	${RPM2PKGDIR}/sbin/rpm2pkg -d ${WRKDIR}				\

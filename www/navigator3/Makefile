@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/01 18:03:27 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/17 03:50:41 jlam Exp $
 
 DISTNAME=		netscape-v304-export.x86-unknown-bsd
 PKGNAME=		navigator3-3.04
@@ -21,6 +21,8 @@ WRKSRC=			${WRKDIR}
 USE_X11BASE=		YES
 SCRIPTS_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 NO_BUILD=		YES
+
+INSTALLATION_DIRS=	bin
 
 .include "../../mk/x11.buildlink3.mk"
 

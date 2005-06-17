@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:26 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:29 jlam Exp $
 #
 
 DISTNAME=		vpnc-0.3.2
@@ -11,6 +11,7 @@ COMMENT=		Client for Cisco3000 VPN Concentrator
 
 USE_TOOLS+=		gmake
 BUILD_TARGET=		vpnc
+INSTALLATION_DIRS=	bin man/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vpnc ${PREFIX}/bin

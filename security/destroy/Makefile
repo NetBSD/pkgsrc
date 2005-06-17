@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:11 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:31 jlam Exp $
 #
 
 DISTNAME=	destroy-20040415
@@ -10,6 +10,7 @@ MAINTAINER=	shane@freebsdhackers.net
 HOMEPAGE=	http://www.freebsdhackers.net/destroy/
 COMMENT=	A program to securely destroy files on the hard disk
 
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/destroy ${PREFIX}/bin

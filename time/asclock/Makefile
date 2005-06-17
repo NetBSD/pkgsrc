@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:47:44 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/17 03:50:38 jlam Exp $
 
 DISTNAME=	asclock-classic-1.0
 PKGNAME=	asclock-1.0
@@ -18,6 +18,8 @@ LANGUAGES=	en de pt nl no it sv es hu br fr cs ru uk sl id da
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 .include "../../mk/bsd.prefs.mk"
+
+INSTALLATION_DIRS=	bin libexec
 
 # Translate to two-letter abbreviations in /usr/share/misc/language.
 #
@@ -53,10 +55,12 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/asclock ${PREFIX}/libexec/asclock-classic
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 .if (${OPSYS} == SunOS) || (${OPSYS} == "Linux") || (${OPSYS} == "Interix")
-	${INSTALL_DATA} ${WRKSRC}/asclock.man ${PREFIX}/man/man1/asclock.1
+	${INSTALL_MAN_DIR} ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/asclock.man ${PREFIX}/man/man1/asclock.1
 	@${ECHO} man/man1/asclock.1 >> ${PLIST_SRC}
 .else
-	${INSTALL_DATA} ${WRKSRC}/asclock.0 ${PREFIX}/man/cat1/asclock.0
+	${INSTALL_MAN_DIR} ${PREFIX}/man/cat1
+	${INSTALL_MAN} ${WRKSRC}/asclock.0 ${PREFIX}/man/cat1/asclock.0
 	@${ECHO} man/cat1/asclock.0 >> ${PLIST_SRC}
 .endif
 	${INSTALL_DATA_DIR} ${PREFIX}/share/asclock-classic

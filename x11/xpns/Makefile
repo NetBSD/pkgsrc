@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/01 18:03:33 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/17 03:50:45 jlam Exp $
 
 DISTNAME=	pns_source
 PKGNAME=	xpns-1.0
@@ -14,6 +14,8 @@ WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes
 MAKEFILE=	makefile
 BUILD_TARGET=	pns
+
+INSTALLATION_DIRS=	bin
 
 .include "../../mk/x11.buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/04/11 16:17:34 jschauma Exp $
+# $NetBSD: Makefile,v 1.30 2005/06/17 03:50:41 jlam Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -38,6 +38,7 @@ DISTINFO_FILE=		${.CURDIR}/distinfo.${PKG_LANG}
 .endif
 
 PLIST_SRC=		${WRKDIR}/PLIST
+INSTALLATION_DIRS=	bin
 
 pre-fetch:
 	@${CAT} ${FILESDIR}/fetch-message

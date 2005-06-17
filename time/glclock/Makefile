@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/01 18:03:23 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/17 03:50:38 jlam Exp $
 #
 
 DISTNAME=		glclock-6.0b6.0
@@ -19,6 +19,8 @@ BUILD_TARGET=		glclock
 .if ${OPSYS} == NetBSD && ${MACHINE_ARCH} == sparc
 CFLAGS=
 .endif
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/glclock ${PREFIX}/bin

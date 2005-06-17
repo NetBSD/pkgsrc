@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/20 12:26:15 agc Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/17 03:50:34 jlam Exp $
 #
 
 DISTNAME=		memconf
@@ -15,6 +15,7 @@ ONLY_FOR_PLATFORM=	SunOS-*-* 	# only for Solaris
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
+INSTALLATION_DIRS=	sbin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/memconf ${LOCALBASE}/sbin/memconf

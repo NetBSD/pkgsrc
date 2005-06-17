@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/01 18:03:31 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:44 jlam Exp $
 #
 
 DISTNAME=	ssystem-1.6
@@ -18,6 +18,8 @@ MAKEFILE=	Makefile.FreeBSD
 
 DATA_FILES=	*.jpg *.dat ssystem.conf
 DOC_FILES=	LICENSE README
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	cd ${WRKSRC} && \

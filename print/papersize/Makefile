@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:47:08 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/17 03:50:30 jlam Exp $
 #
 
 DISTNAME=	papersize-1.0.8
@@ -15,6 +15,8 @@ USE_LANGUAGES=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 USE_PKGINSTALL=	yes
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-build:
 	@for f in setpapersize getpapersize; do			\

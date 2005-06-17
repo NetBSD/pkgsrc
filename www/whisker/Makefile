@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/26 02:27:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:43 jlam Exp $
 
 DISTNAME=	whisker-2.1
 PKGREVISION=	1
@@ -13,6 +13,8 @@ DEPENDS+=	p5-Net-SSLeay>=1.20:../../security/p5-Net-SSLeay
 
 USE_PERL5=      YES
 REPLACE_PERL=	whisker.pl
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' < ${WRKSRC}/whisker.pl > ${WRKSRC}/whisker

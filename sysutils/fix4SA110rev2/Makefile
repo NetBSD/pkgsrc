@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/20 12:26:15 agc Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/17 03:50:34 jlam Exp $
 #
 
 DISTNAME=	fix4SA110rev2-1.0
@@ -15,6 +15,8 @@ ONLY_FOR_PLATFORM= NetBSD-*-arm NetBSD-*-arm32
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 
 WRKSRC=		${WRKDIR}
+
+INSTALLATION_DIRS=	bin share/doc
 
 do-build:
 	${CC} ${CFLAGS} -o ${WRKSRC}/fix4SA110rev2 ${WRKSRC}/fix4SA110rev2.c

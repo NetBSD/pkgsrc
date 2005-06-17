@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/07 22:24:50 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:31 jlam Exp $
 #
 
 DISTNAME=	gpg2dot-1.4
@@ -19,6 +19,8 @@ NO_CONFIGURE=	yes
 
 DISTVER=	${DISTNAME:S/gpg2dot-//}
 WRKSRC=		${WRKDIR}
+
+INSTALLATION_DIRS=	bin
 
 do-extract:
 	${CP} ${FILESDIR}/gpg2dot.pl ${WRKSRC}/gpg2dot.pl

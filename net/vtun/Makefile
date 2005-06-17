@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/04/11 21:47:02 tv Exp $
+# $NetBSD: Makefile,v 1.35 2005/06/17 03:50:29 jlam Exp $
 
 DISTNAME=	vtun-2.6
 PKGREVISION=	6
@@ -35,6 +35,8 @@ LOGDIR=			/var/log/vtund
 CONF_FILES_PERMS=	${EGDIR}/vtund.conf ${PKG_SYSCONFDIR}/vtund.conf \
 			${ROOT_USER} ${ROOT_GROUP} 0600
 OWN_DIRS=		${LOCKDIR} ${LOGDIR}
+
+INSTALLATION_DIRS=	man/man5 man/man8 sbin
 
 post-build:
 	@cd ${WRKSRC}; for file in vtund.8; do				\

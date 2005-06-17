@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/30 22:49:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:25 jlam Exp $
 #
 
 DISTNAME=		hf6to4-1.3
@@ -21,6 +21,8 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 CONF_FILES+=	${PREFIX}/share/examples/hf6to4/hf6to4.conf ${PKG_SYSCONFDIR}/hf6to4.conf
+
+INSTALLATION_DIRS=	man/man8 sbin
 
 do-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/hf6to4 > ${WRKSRC}/hf6to4

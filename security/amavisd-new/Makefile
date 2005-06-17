@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/31 10:01:39 dillo Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/17 03:50:31 jlam Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -101,6 +101,8 @@ SUBST_SED.amavisd=	\
 	-e "s|@AMAVIS_QUARANTINE@|${AMAVIS_QUARANTINE}|g"		\
 	-e "s|@LOCALBASE@|${LOCALBASE}|g"				\
 	-e "s|@PREFIX@|${PREFIX}|g"
+
+INSTALLATION_DIRS=	sbin
 
 do-install:
 .if !empty(PKG_OPTIONS:Mmilter)

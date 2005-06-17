@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:24 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:25 jlam Exp $
 
 DISTNAME=		kphone-4.1.0
 CATEGORIES=		net comms
@@ -29,6 +29,8 @@ CONFIGURE_ARGS+=	--enable-alsa=yes
 .else
 CONFIGURE_ARGS+=	--enable-alsa=no
 .endif
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/kphone/kphone ${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:27 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:34 jlam Exp $
 
 DISTNAME= 	mtscan-20050129
 CATEGORIES=	sysutils
@@ -10,6 +10,8 @@ HOMEPAGE=	http://mail-index.netbsd.org/port-i386/2005/01/29/0011.html
 COMMENT=	Magtape scanner - reports record and file-mark structure
 
 NO_CHECKSUM=	# defined
+
+INSTALLATION_DIRS=	bin
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
