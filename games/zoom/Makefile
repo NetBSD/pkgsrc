@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/01 18:02:53 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/06/17 04:49:46 jlam Exp $
 #
 
 DISTNAME=	zoom-1.0.1
@@ -26,7 +26,7 @@ GCC_REQD+=		3.0
 .endif
 UNLIMIT_RESOURCES+=	datasize
 
-DOCDIR=			${LOCALBASE}/share/doc/html/zoom
+DOCDIR=			${PREFIX}/share/doc/html/zoom
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	for f in colours.png configXwin.html configmac.html fonts.png \
