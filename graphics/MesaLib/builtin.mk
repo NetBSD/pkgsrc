@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2005/06/03 19:12:49 jlam Exp $
+# $NetBSD: builtin.mk,v 1.10 2005/06/17 15:54:06 jlam Exp $
 
 BUILTIN_PKG:=	MesaLib
 
@@ -68,7 +68,11 @@ CHECK_BUILTIN.MesaLib?=	no
 .if !empty(CHECK_BUILTIN.MesaLib:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.MesaLib:M[nN][oO])
-BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=6.0
+BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=6.2.1nb2
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+.    include "../../mk/pthread.buildlink3.mk"
+.    include "../../mk/pthread.builtin.mk"
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
 .  endif
 
 .  if !empty(USE_BUILTIN.MesaLib:M[yY][eE][sS])
