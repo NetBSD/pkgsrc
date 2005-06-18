@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10381 2005/06/18 12:21:48 hira Exp $
+$NetBSD: CHANGES,v 1.10382 2005/06/18 14:35:31 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2899,3 +2899,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed www/opera7 [jdolecek 2005-06-17]
 	Updated devel/bugzilla to 2.18.1nb1 [adrianp 2005-06-18]
 	Updated chat/ser to 0.8.10nb4 [hira 2005-06-18]
+	Updated meta-pkgs/boost to 1.32.0nb1 [jmmv 2005-06-18]
+	Updated devel/boost-libs to 1.32.0nb1 [jmmv 2005-06-18]
+	Updated devel/boost-python to 1.32.0nb1 [jmmv 2005-06-18]
+	Updated devel/monotone to 0.19nb1 [jmmv 2005-06-18]
