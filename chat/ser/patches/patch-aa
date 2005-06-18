@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2005/06/18 05:57:05 hira Exp $
+$NetBSD: patch-aa,v 1.6 2005/06/18 12:39:52 hira Exp $
 
 --- Makefile.defs.orig	2002-11-13 02:21:28.000000000 +0900
-+++ Makefile.defs	2005-06-18 11:11:16.000000000 +0900
++++ Makefile.defs	2005-06-18 21:32:06.000000000 +0900
 @@ -16,7 +16,6 @@
  			-e s/armv4l/arm/)
  
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.5 2005/06/18 05:57:05 hira Exp $
  ut-prefix = bin/
  # target dirs for various stuff
 -cfg-target = $(prefix)/$(cfg-dir)
-+cfg-target = $(PKG_SYSCONFDIR)/$(cfg-dir)
++cfg-target = $(PKG_SYSCONFDIR)/
  modules-target = $(prefix)/$(modules-dir)
  
  

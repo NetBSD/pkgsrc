@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2005/06/18 05:57:05 hira Exp $
+$NetBSD: distinfo,v 1.8 2005/06/18 12:39:52 hira Exp $
 
 SHA1 (ser-0.8.10_src.tar.gz) = d3e88ff5eccf1c77b5b21637dd7c1ad3068ae89d
 RMD160 (ser-0.8.10_src.tar.gz) = f804e319d719a9e8b4146fc981bd403200b31d93
 Size (ser-0.8.10_src.tar.gz) = 931150 bytes
-SHA1 (patch-aa) = e07c79670189543ca320f117b351fb0d7d09a29b
+SHA1 (patch-aa) = 9b91738bdfe999a5ac655073b4def3fcd16c43d7
 SHA1 (patch-ab) = 5ec50d206955619e3f73c3f6da5e40c1e86426ec
 SHA1 (patch-ac) = 98bd0bc672c6183f8ee6a8dba3ea01500fcdb80d
 SHA1 (patch-ad) = ef31745ff25338cb8031074f3f9956f33cca04ce
