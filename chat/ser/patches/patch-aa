@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2004/08/27 06:29:07 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2005/06/18 05:57:05 hira Exp $
 
---- Makefile.defs.orig	2002-11-12 17:21:28.000000000 +0000
-+++ Makefile.defs	2003-09-16 15:42:29.000000000 +0100
+--- Makefile.defs.orig	2002-11-13 02:21:28.000000000 +0900
++++ Makefile.defs	2005-06-18 11:11:16.000000000 +0900
 @@ -16,7 +16,6 @@
  			-e s/armv4l/arm/)
  
@@ -10,16 +10,17 @@ $NetBSD: patch-aa,v 1.4 2004/08/27 06:29:07 jlam Exp $
  prefix = $(PREFIX)
  # install path is $(basedir) $(prefix) 
  # example:
-@@ -33,7 +32,7 @@
+@@ -33,7 +32,8 @@
  ut-prefix = $(basedir)$(prefix)
  
  # dirs
 -cfg-dir = etc/ser/
 +cfg-dir = ser/
++eg-dir  = $(EGDIR)/
  bin-dir = sbin/
  modules-dir = lib/ser/modules/
  ifeq ($(OS), linux)
-@@ -45,7 +44,7 @@
+@@ -45,7 +45,7 @@
  endif
  ut-prefix = bin/
  # target dirs for various stuff
@@ -28,7 +29,7 @@ $NetBSD: patch-aa,v 1.4 2004/08/27 06:29:07 jlam Exp $
  modules-target = $(prefix)/$(modules-dir)
  
  
-@@ -59,10 +58,10 @@
+@@ -59,10 +59,10 @@
  endif
  
  # INSTALL-CFG = $(INSTALL) -m 644
@@ -43,7 +44,7 @@ $NetBSD: patch-aa,v 1.4 2004/08/27 06:29:07 jlam Exp $
  
  #set some vars from the environment (and not make builtins)
  CC   := $(shell echo "$${CC}")
-@@ -446,6 +445,7 @@
+@@ -446,6 +446,7 @@
  endif
  
  endif #mode=release
@@ -51,7 +52,7 @@ $NetBSD: patch-aa,v 1.4 2004/08/27 06:29:07 jlam Exp $
  
  
  #*FLAGS used for compiling the modules
-@@ -473,8 +473,10 @@
+@@ -473,8 +474,10 @@
  	DEFS+=-DHAVE_GETHOSTBYNAME2 -DHAVE_UNION_SEMUN
  endif
  ifneq ($(OS), openbsd)
@@ -62,7 +63,7 @@ $NetBSD: patch-aa,v 1.4 2004/08/27 06:29:07 jlam Exp $
  
  
  #os specific stuff
-@@ -520,7 +522,7 @@
+@@ -520,7 +523,7 @@
  ifeq ($(OS), netbsd)
  	DEFS+=-DHAVE_SOCKADDR_SA_LEN
  	YACC=yacc
