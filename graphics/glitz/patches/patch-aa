@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.3 2005/06/18 20:11:01 kristerw Exp $
+
+--- src/glx/glitz_glx_info.c.orig	Sat Jun 18 21:07:20 2005
++++ src/glx/glitz_glx_info.c	Sat Jun 18 21:08:06 2005
+@@ -379,15 +379,15 @@
+   if (gl_library) {
+     int len = strlen (gl_library);
+ 
+-    if (thread_info->gl_library) {
+-      free (thread_info->gl_library);
+-      thread_info->gl_library = NULL;
++    if (thread_info.gl_library) {
++      free (thread_info.gl_library);
++      thread_info.gl_library = NULL;
+     }
+     
+-    thread_info->gl_library = malloc (len + 1);
+-    if (thread_info->gl_library) {
+-      memcpy (thread_info->gl_library, gl_library, len);
+-      thread_info->gl_library[len] = '\0';
++    thread_info.gl_library = malloc (len + 1);
++    if (thread_info.gl_library) {
++      memcpy (thread_info.gl_library, gl_library, len);
++      thread_info.gl_library[len] = '\0';
+     }
+   }
+   
