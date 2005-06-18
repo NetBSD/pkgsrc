@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2005/04/11 21:46:32 tv Exp $
+# $NetBSD: Makefile.common,v 1.4 2005/06/18 14:32:38 jmmv Exp $
 #
 
 BOOST_PACKAGE?=		undefined
@@ -55,14 +55,6 @@ do-configure:
 .endif
 
 boost-install-libs:
-	@cd ${WRKSRC}/stage/lib && \
-	    for f in *; do \
-	        ${ECHO} ${INSTALL_LIB} $$f \
-	            ${PREFIX}/lib/`${ECHO} $$f | \
-	                ${SED} 's|-.*\\.|${BOOST_LIB_SUFFIX}.|'`; \
-	        ${INSTALL_LIB} $$f \
-	            ${PREFIX}/lib/`${ECHO} $$f | \
-	                ${SED} 's|-.*\\.|${BOOST_LIB_SUFFIX}.|'`; \
-	    done
+	cd ${WRKSRC}/stage/lib && ${PAX} -rwpe libboost* ${PREFIX}/lib
 
 .endif # ${BOOST_PACKAGE} == "meta-pkg"
