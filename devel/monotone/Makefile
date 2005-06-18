@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:19:31 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/18 14:33:59 jmmv Exp $
 #
 
 DISTNAME=	monotone-0.19
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.venge.net/monotone/downloads/
 
@@ -19,6 +20,7 @@ USE_MAKEINFO=		yes
 
 CONFIGURE_ARGS+=	--with-bundled-lua=no
 CONFIGURE_ARGS+=	--with-bundled-sqlite=no
+CONFIGURE_ARGS+=	BOOST_SUFFIX=-mt
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.monotone
 PKG_SUPPORTED_OPTIONS=	inet6
