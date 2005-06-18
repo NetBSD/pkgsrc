@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/26 02:15:58 markd Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/18 21:02:21 markd Exp $
 
 DISTNAME=	kde-i18n-sr@Latn-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/@/_/}
@@ -9,6 +9,7 @@ COMMENT=	Language bindings for the KDE desktop
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
+BUILD_USES_MSGFMT=	yes
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
