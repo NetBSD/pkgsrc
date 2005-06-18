@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.401 2005/06/16 14:12:23 salo Exp $
+# $NetBSD: Makefile,v 1.402 2005/06/18 23:42:17 kristerw Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -164,7 +164,6 @@ SUBDIR+=	opera-acroread3
 SUBDIR+=	opera-acroread5
 SUBDIR+=	opera-acroread7
 SUBDIR+=	opera-plugins
-SUBDIR+=	opera7
 SUBDIR+=	p5-Apache-ASP
 SUBDIR+=	p5-Apache-AuthCookie
 SUBDIR+=	p5-Apache-AuthCookieDBI
