@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1 2005/06/18 05:57:05 hira Exp $
+
+--- Makefile.orig	2002-11-12 21:31:25.000000000 +0900
++++ Makefile	2005-06-18 11:33:25.000000000 +0900
+@@ -156,10 +156,10 @@
+ $(man-prefix)/$(man-dir)/man5:
+ 		mkdir -p $(man-prefix)/$(man-dir)/man5
+ 
+-install-cfg: $(cfg-prefix)/$(cfg-dir)
++install-cfg:
+ 		sed -e "s#/usr/lib/ser/modules/#$(modules-target)#g" \
+-			< etc/ser.cfg > $(cfg-prefix)/$(cfg-dir)ser.cfg
+-		chmod 644 $(cfg-prefix)/$(cfg-dir)ser.cfg
++			< etc/ser.cfg > $(eg-dir)ser.cfg
++		chmod 644 $(eg-dir)ser.cfg
+ #		$(INSTALL-CFG) etc/ser.cfg $(cfg-prefix)/$(cfg-dir)
+ 
+ install-bin: $(bin-prefix)/$(bin-dir) utils/gen_ha1/gen_ha1
