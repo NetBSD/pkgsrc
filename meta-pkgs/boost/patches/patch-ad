@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2005/06/18 14:32:38 jmmv Exp $
+
+--- tools/build/v1/gcc-tools.jam.orig	2004-10-19 17:12:58.000000000 +0200
++++ tools/build/v1/gcc-tools.jam
+@@ -384,7 +384,7 @@ rule Link-action
+         LNOPT on $(<) = "" ;
+     }
+     # do we use sonames or not?
+-    if $(DLLVERSION) && $(TARGET_TYPE) in $(SHARED_TYPES) && ( $(OS) = LINUX || $(OS) = OPENBSD ) && ! $(NO_GNU_LN)
++    if $(DLLVERSION) && $(TARGET_TYPE) in $(SHARED_TYPES) && ( $(OS) = DRAGONFLY || $(OS) = FREEBSD || $(OS) = LINUX || $(OS) = NETBSD || $(OS) = OPENBSD ) && ! $(NO_GNU_LN)
+     {
+         OUTTAG on $(<) = ".$(DLLVERSION)" ;
+         SOTAG on $(<) = ".$(DLLVERSION)" ;
+@@ -433,7 +433,7 @@ rule Link-action
+ 
+     gcc-Link-action $(<) : $(>) ;
+ 
+-    if $(DLLVERSION) && $(TARGET_TYPE) in $(SHARED_TYPES) && ( $(OS) = LINUX || $(OS) = OPENBSD ) && ! $(NO_GNU_LN)
++    if $(DLLVERSION) && $(TARGET_TYPE) in $(SHARED_TYPES) && ( $(OS) = DRAGONFLY || $(OS) = FREEBSD || $(OS) = LINUX || $(OS) = NETBSD || $(OS) = OPENBSD ) && ! $(NO_GNU_LN)
+     {
+         return "$(<[1]).$(DLLVERSION)" ;
+     }
