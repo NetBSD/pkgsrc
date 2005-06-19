@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/06/17 04:49:48 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/19 01:03:04 kristerw Exp $
 #
 
 DISTNAME=	tct-1.09
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://www.porcupine.org/forensics/
 
@@ -15,6 +15,8 @@ DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 REPLACE_PERL=	bin/grave-robber bin/mactime bin/strip_tct_home
 REPLACE_PERL+=	extras/bdf extras/ils2mac extras/realpath
 REPLACE_PERL+=	lazarus/lazarus
+
+MAKE_ENV+=	PERL5="${PERL5}"
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/tct/bin
