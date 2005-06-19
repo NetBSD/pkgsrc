@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/19 02:59:41 kristerw Exp $
 #
 
 DISTNAME=	libgdiplus-1.1.5
@@ -22,6 +22,8 @@ pre-configure:
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.5
 BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
+
+BUILDLINK_TRANSFORM+=		rm:-Werror
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
