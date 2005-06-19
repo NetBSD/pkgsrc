@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2005/05/22 20:08:04 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/06/19 03:10:49 kristerw Exp $
 
 DISTNAME=	dx-4.3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://opendx.npaci.edu/source/
 
@@ -10,9 +10,10 @@ HOMEPAGE=	http://www.opendx.org/
 COMMENT=	Open Visualization Data Explorer
 
 USE_X11BASE=		yes
-USE_TOOLS+=		gmake lex
+USE_TOOLS+=		gmake lex sh
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-javadx
+CONFIGURE_ENV+=		ac_cv_path_bsh_path="${TOOLS_SH}"
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
