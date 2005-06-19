@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/05/23 14:00:21 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/06/19 21:12:36 seb Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
@@ -31,6 +31,7 @@ lib/mysql/libvio.a
 libexec/mysqld
 man/man1/mysqld.1
 man/man1/mysqld_multi.1
+share/examples/rc.d/mysqld
 share/mysql-test/README
 share/mysql-test/cacert.pem
 share/mysql-test/client-cert.pem
