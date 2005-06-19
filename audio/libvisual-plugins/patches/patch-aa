@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1 2005/02/20 15:56:20 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2005/06/19 17:14:44 kristerw Exp $
 
 --- configure.orig	2005-01-24 15:43:45.000000000 +0100
-+++ configure
-@@ -20355,7 +20355,7 @@ if test "${ac_cv_lib_GL_glBegin+set}" = 
++++ configure	2005-06-19 19:08:03.000000000 +0200
+@@ -1882,7 +1882,7 @@
+ AUTOHEADER=${AUTOHEADER-"${am_missing_run}autoheader"}
+ 
+ 
+-MAKEINFO=${MAKEINFO-"${am_missing_run}makeinfo"}
++MAKEINFO=
+ 
+ 
+ AMTAR=${AMTAR-"${am_missing_run}tar"}
+@@ -20355,7 +20355,7 @@
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
