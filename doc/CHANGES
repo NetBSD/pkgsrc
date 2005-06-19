@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10385 2005/06/19 03:18:58 kristerw Exp $
+$NetBSD: CHANGES,v 1.10386 2005/06/19 08:07:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2912,3 +2912,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/ncftp2 to 2.4.3nb2 [kristerw 2005-06-19]
 	Updated www/bluefish to 1.0nb2 [kristerw 2005-06-19]
 	Updated graphics/dx to 4.3.2nb3 [kristerw 2005-06-19]
+	Updated www/dillo to 0.8.5 [wiz 2005-06-19]
