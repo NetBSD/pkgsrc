@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/01/04 14:09:17 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/06/19 00:13:30 kristerw Exp $
 bin/dillo
 bin/dpid
 bin/dpidc
@@ -21,9 +21,6 @@ share/doc/dillo/DwWidget.txt
 share/doc/dillo/HtmlParser.txt
 share/doc/dillo/IO.txt
 share/doc/dillo/Images.txt
-share/doc/dillo/Makefile
-share/doc/dillo/Makefile.am
-share/doc/dillo/Makefile.in
 share/doc/dillo/NC_design.txt
 share/doc/dillo/README
 share/doc/dillo/Selection.txt
