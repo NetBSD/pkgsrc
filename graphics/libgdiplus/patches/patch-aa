@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.4 2005/06/19 02:59:41 kristerw Exp $
+
+--- src/tiffcodec.c.orig	Sun Jun 19 04:45:51 2005
++++ src/tiffcodec.c	Sun Jun 19 04:46:11 2005
+@@ -102,9 +102,10 @@
+ toff_t 
+ gdip_tiff_filesize (thandle_t clientData)
+ {
++	long ret;
+ 	long cur_pos = ftell ((FILE*)clientData);
+ 	fseek ((FILE*)clientData, 0, SEEK_END);
+-	long ret = ftell ((FILE*)clientData);
++	ret = ftell ((FILE*)clientData);
+ 	fseek ((FILE*)clientData, cur_pos, SEEK_SET);
+ 	return (toff_t)ret;
+ }
