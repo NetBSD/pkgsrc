@@ -1,3 +1,5 @@
+$NetBSD: patch-ak,v 1.2 2005/06/19 10:44:45 hira Exp $
+
 --- find/fstype.c	Thu Nov  3 11:33:48 1994
 +++ find/fstype.c	Tue May  2 15:31:42 2000
 @@ -30,9 +30,6 @@
