@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2005/06/19 11:34:45 veego Exp $
+$NetBSD: MESSAGE,v 1.2 2005/06/19 22:18:53 veego Exp $
 
-You will need to setup the default configration file:
- ${PREFIX}/etc/minicom/minirc.dfl
-by runing 'minicom -s' as root.
+You will need to create the default configuration file:
+ ${PKG_SYSCONFDIR}/minirc.dfl
+which can be done by executing 'minicom -s' as root.
 
 Do not forget to change the default 'Serial Device', which can be found in
 the 'Serial port setup' section.
