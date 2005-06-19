@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10383 2005/06/19 01:23:43 salo Exp $
+$NetBSD: CHANGES,v 1.10384 2005/06/19 01:40:55 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2904,3 +2904,10 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/boost-python to 1.32.0nb1 [jmmv 2005-06-18]
 	Updated devel/monotone to 0.19nb1 [jmmv 2005-06-18]
 	Updated chat/silc-server to 1.0 [salo 2005-06-19]
+	Updated lang/gcc3-f77 to 3.3.5nb1 [kristerw 2005-06-19]
+	Updated www/dillo to 0.8.4nb1 [kristerw 2005-06-19]
+	Updated math/R to 2.1.0nb2 [kristerw 2005-06-19]
+	Updated security/tct to 1.09nb2 [kristerw 2005-06-19]
+	Updated biology/mummer to 3.15nb1 [kristerw 2005-06-19]
+	Updated net/ncftp2 to 2.4.3nb2 [kristerw 2005-06-19]
+	Updated www/bluefish to 1.0nb2 [kristerw 2005-06-19]
