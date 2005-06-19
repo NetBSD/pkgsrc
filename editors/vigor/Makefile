@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2005/06/01 18:02:46 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/19 17:40:22 kristerw Exp $
 #
 
 DISTNAME=	vigor-0.016
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vigor/}
 
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=--with-x
 #		--disable-db \
 #		--disable-re
 CONFIGURE_ENV+=	TCLCONFIG_SH=${TCLCONFIG_SH:Q}
+CONFIGURE_ENV+=	vi_cv_path_shell="${TOOLS_SH}"
+USE_TOOLS+=	sh
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
