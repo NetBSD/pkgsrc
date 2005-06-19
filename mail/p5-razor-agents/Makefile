@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2005/04/20 13:15:53 heinz Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/19 22:39:15 heinz Exp $
 
-DISTNAME=	razor-agents-2.67
+DISTNAME=	razor-agents-2.72
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5ra
 CATEGORIES=	mail perl5

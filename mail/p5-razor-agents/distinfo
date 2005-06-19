@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2005/04/20 13:15:53 heinz Exp $
+$NetBSD: distinfo,v 1.10 2005/06/19 22:39:15 heinz Exp $
 
-SHA1 (razor-agents-2.67.tar.gz) = 851fc2173b367598e2544d1cee30587b87ae5c6c
-RMD160 (razor-agents-2.67.tar.gz) = 9265ff5979f07c675b2e9e45ab96512e408fa859
-Size (razor-agents-2.67.tar.gz) = 86705 bytes
-SHA1 (patch-aa) = ec38be16b99dcc5324f813957a82949938f42a11
+SHA1 (razor-agents-2.72.tar.gz) = f214a86da3825c411fadb40847dca16deb1919f9
+RMD160 (razor-agents-2.72.tar.gz) = 5988e93eebdf169dd87bc617c53a77e71e50bb32
+Size (razor-agents-2.72.tar.gz) = 88479 bytes
