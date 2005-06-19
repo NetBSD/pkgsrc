@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.7 2005/06/19 11:02:41 markd Exp $
+
+--- kmailcvt/filter_oe.cxx.orig	2005-06-16 21:37:13.000000000 +1200
++++ kmailcvt/filter_oe.cxx
+@@ -397,7 +397,11 @@ QString FilterOE::getFolderName(QString 
+     while (!found)
+     {
+         for ( QValueList<QString[4]>::Iterator it = folderStructure.begin(); it != folderStructure.end(); it++) {
++#if defined(__GNUC__) && __GNUC__ <= 2
++            QString tmp[4]; tmp = *it;
++#else
+             QString tmp[4] = *it;
++#endif
+             if(foundFilename == false) {
+                 QString _tmpFileName = tmp[1];
+                 _tmpFileName = _tmpFileName.lower();

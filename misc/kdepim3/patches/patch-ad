@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.5 2005/06/19 11:02:41 markd Exp $
+
+--- kmailcvt/filter_pmail.cxx.orig	2005-05-24 00:12:15.000000000 +1200
++++ kmailcvt/filter_pmail.cxx
+@@ -326,7 +326,11 @@ QString FilterPMail::getFolderName(QStri
+     while (!found)
+     {
+         for ( QValueList<QString[5]>::Iterator it = folderMatrix.begin(); it != folderMatrix.end(); it++) {
++#if defined (__GNUC__) && __GNUC__ <= 2
++            QString tmp[5]; tmp = *it;
++#else
+             QString tmp[5] = *it;
++#endif
+             
+             QString _ID = tmp[2];
+             if(_ID == search) {
