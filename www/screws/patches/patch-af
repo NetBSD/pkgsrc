@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2005/06/19 20:12:05 kristerw Exp $
+
+--- src/Hsml/CONFIG.orig	2005-06-19 22:03:22.000000000 +0200
++++ src/Hsml/CONFIG	2005-06-19 22:03:32.000000000 +0200
+@@ -1,7 +1,7 @@
+ #### GetPaths ####
+ 
+-PERL=`../Utils/whereis perl`
+-PERL?=/usr/bin/perl
++#PERL=`../Utils/whereis perl`
++#PERL?=/usr/bin/perl
+ 
+ PYTHON=`../Utils/whereis python`
+ PYTHON?=/usr/bin/python
