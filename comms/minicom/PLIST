@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2005/06/19 11:34:45 veego Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/06/19 12:18:27 veego Exp $
 bin/ascii-xfr
 bin/minicom
 bin/runscript
+man/man1/ascii-xfr.1
 man/man1/minicom.1
 man/man1/runscript.1
-man/man1/ascii-xfr.1
 share/examples/minicom/minicom.users
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/minicom.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/minicom.mo
