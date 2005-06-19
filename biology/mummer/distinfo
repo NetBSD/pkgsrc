@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/22 21:28:55 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/06/19 01:13:23 kristerw Exp $
 
 SHA1 (MUMmer3.15.tar.gz) = c8907b0b2010e3a8d07fff0dde570c12d9cf8dea
 RMD160 (MUMmer3.15.tar.gz) = 223135f09c8795f7fab5219f07c7047f114056df
 Size (MUMmer3.15.tar.gz) = 660102 bytes
 SHA1 (patch-aa) = bf64019cbbfa53c1883641b28186146cd7c0a946
+SHA1 (patch-ab) = 8548bc11a6d43b489ea9af5dbca584ce0d2750c9

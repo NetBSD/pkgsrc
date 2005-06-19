@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2005/06/17 03:50:26 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2005/06/19 01:21:19 kristerw Exp $
 
 DISTNAME=		ncftp-2.4.3
-PKGREVISION=	1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.ncftp.com/ncftp/
 
@@ -13,6 +13,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-extra-dirs
 CONFIGURE_ARGS+=	--disable-ncurses
 CONFIGURE_ENV+=		ac_cv_lib_intl_strftime=no
+CONFIGURE_ENV+=		ac_cv_path_GZCAT="${GZCAT}"
+USE_TOOLS+=		gzcat
 
 .include "../../mk/bsd.prefs.mk"
 
