@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2005/04/29 08:48:40 heinz Exp $
+# $NetBSD: Makefile,v 1.56 2005/06/19 22:29:35 heinz Exp $
 
 DISTNAME=	Mail-SpamAssassin-${SPAMASSASSIN_VERSION}
 PKGNAME=	spamassassin-${SPAMASSASSIN_VERSION}
@@ -27,7 +27,7 @@ CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-SPAMASSASSIN_VERSION=	3.0.3
+SPAMASSASSIN_VERSION=	3.0.4
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
@@ -37,7 +37,7 @@ USE_PKGINSTALL=		YES
 PKG_SYSCONFSUBDIR=	spamassassin
 
 # Set contact address (e-mail, URL, ...) for use in spam report messages
-# See "perldoc Mail::SpamAssassin::Conf" for option "report_contact" 
+# See "perldoc Mail::SpamAssassin::Conf" for option "report_contact"
 SPAMASSASSIN_CONTACT_ADDRESS?=	postmaster
 
 .include "options.mk"
@@ -123,13 +123,13 @@ post-install:
 		spamc/README.qmail					\
 		sample-nonspam.txt sample-spam.txt spamd/README		\
 		spamd/README.vpopmail
-	@${INSTALL_DATA} ${WRKSRC}/$f ${DOCDIR}/$f
-	@${ECHO} "${DOC_SUBDIR}/$f" >> ${PLIST_ADD}
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}/${f}
+	@${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
 .endfor
 .for f in STATISTICS.txt STATISTICS-set1.txt STATISTICS-set2.txt	\
 		STATISTICS-set3.txt
-	@${INSTALL_DATA} ${WRKSRC}/rules/$f ${DOCDIR}/
-	@${ECHO} "${DOC_SUBDIR}/$f" >> ${PLIST_ADD}
+	@${INSTALL_DATA} ${WRKSRC}/rules/${f} ${DOCDIR}/
+	@${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
 .endfor
 .for DIR in masses sql ldap tools
 	@cd ${WRKSRC};							\
