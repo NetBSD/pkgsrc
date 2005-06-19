@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/16 18:25:36 gendalia Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/19 15:48:00 tsarna Exp $
 
 DISTNAME=	openafs-1.3.84-src
 PKGREVISION=	1
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
 
 USE_GNU_CONFIGURE_HOST= no
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${DISTNAME:C/-src//}
 
 PKG_SUPPORTED_OPTIONS = pam
 PKG_OPTIONS_VAR       = PKG_OPTIONS.openafs
