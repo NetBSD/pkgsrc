@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3625 2005/06/19 06:46:37 wiz Exp $
+$NetBSD: TODO,v 1.3626 2005/06/19 07:41:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -640,6 +640,7 @@ Suggested package updates
 	o leafpad-0.7.9
 	o libcomprex-0.3.3
 	o libetpan-0.34b
+	o libevent-1.1a
 	o libextractor-0.5.0
 	o libflash-0.4.13
 	o libgda-1.2.2 [jmmv]
@@ -1004,6 +1005,7 @@ Suggested package updates
 	o rt-mysql-3.4.1
 	o rt-pgsql-3.4.1
 	o rtcw-1.41.3
+	o ruby-RMagick-1.8.3 [pkg/30557]
 	o ruby-fox-1.2.6 [needs to update of fox-1.4.6]
 	o sablecc-2.18.2
 	o sablevm-1.11.3 [pkg/30022]
