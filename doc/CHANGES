@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10382 2005/06/18 14:35:31 jmmv Exp $
+$NetBSD: CHANGES,v 1.10383 2005/06/19 01:23:43 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2903,3 +2903,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/boost-libs to 1.32.0nb1 [jmmv 2005-06-18]
 	Updated devel/boost-python to 1.32.0nb1 [jmmv 2005-06-18]
 	Updated devel/monotone to 0.19nb1 [jmmv 2005-06-18]
+	Updated chat/silc-server to 1.0 [salo 2005-06-19]

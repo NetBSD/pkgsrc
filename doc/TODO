@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3623 2005/06/17 19:10:13 wiz Exp $
+$NetBSD: TODO,v 1.3624 2005/06/19 01:23:43 salo Exp $
 
 Suggested new packages
 ======================
@@ -1025,7 +1025,6 @@ Suggested package updates
 	o shmux-1.0b6
 	o siag-3.6.0
 	o sign-1.0.7
-	o silc-server-1.0 [salo]
 	o silc-toolkit-1.0 [salo, breaks chat/gaim]
 	o simh-3.3.2
 	o sitecopy-0.15.1
