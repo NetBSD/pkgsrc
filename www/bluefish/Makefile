@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2005/06/01 18:03:26 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2005/06/19 01:35:08 kristerw Exp $
 
 DISTNAME=	bluefish-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/	\
 		ftp://bluefish.advancecreations.com/bluefish/downloads/ \
@@ -18,10 +18,12 @@ DEPENDS+=		weblint-[0-9]*:../../www/weblint
 BUILD_USES_MSGFMT=	YES
 
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake
+USE_TOOLS+=		find gmake grep
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-icon-path=${PREFIX}/share/pixmaps
+CONFIGURE_ENV+=		ac_cv_path_EXTERNAL_GREP="${TOOLS_GREP}"
+CONFIGURE_ENV+=		ac_cv_path_EXTERNAL_FIND="${TOOLS_FIND}"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
