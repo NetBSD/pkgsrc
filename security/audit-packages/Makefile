@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2005/06/09 15:34:52 dillo Exp $
+# $NetBSD: Makefile,v 1.57 2005/06/19 12:14:39 adrianp Exp $
 
 DISTNAME=	audit-packages-1.36
 CATEGORIES=	security pkgtools
+PKGREVISION=	1
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
@@ -37,6 +38,7 @@ do-build:
 			-e 's|@RM@|${RM}|g'				\
 			-e 's|@MKDIR@|${MKDIR}|g'			\
 			-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'	\
+			-e 's|@FIND@|${FIND}|g'				\
 			${FILESDIR}/$$f > ${WRKSRC}/$$f;		\
 	done
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"

@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-packages,v 1.20 2005/06/09 15:34:52 dillo Exp $
+# $NetBSD: audit-packages,v 1.21 2005/06/19 12:14:39 adrianp Exp $
 #
 # Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
 #
@@ -71,7 +71,7 @@ case "$errmsg" in
 "")	# check for old vulnerabilities file if we're being verbose
 	case "$verbose" in
 	# XXX: quote vuls
-	yes)	[ -n "$(find $vuls -ctime +7)" ] && echo "*** WARNING - $vuls more than a week old, continuing..." ;;
+	yes)	[ -n "$(@FIND@ $vuls -ctime +7)" ] && echo "*** WARNING - $vuls more than a week old, continuing..." ;;
 	esac
 	;;
 esac
