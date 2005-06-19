@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2005/06/19 00:13:30 kristerw Exp $
+# $NetBSD: Makefile,v 1.30 2005/06/19 08:07:05 wiz Exp $
 
-DISTNAME=	dillo-0.8.4
-PKGREVISION=	1
+DISTNAME=	dillo-0.8.5
 CATEGORIES=	www
-MASTER_SITES=	http://dillo.auriga.wearlab.de/download/
+MASTER_SITES=	http://www.dillo.org/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	Benjamin.Wong@cc.gatech.edu
-HOMEPAGE=	http://dillo.auriga.wearlab.de/
+HOMEPAGE=	http://www.dillo.org/
 COMMENT=	Very small and fast graphical web-browser
 
 USE_PKGINSTALL=		yes
