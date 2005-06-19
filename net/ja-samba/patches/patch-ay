@@ -1,0 +1,12 @@
+$NetBSD: patch-ay,v 1.1 2005/06/19 18:38:40 taca Exp $
+
+--- lib/util.c.orig	2005-03-02 14:33:07.000000000 +0900
++++ lib/util.c
+@@ -1925,6 +1925,7 @@ char *smb_xstrndup(const char *s, size_t
+ #if defined(PARANOID_MALLOC_CHECKER)
+ #ifdef strndup
+ #undef strndup
++	extern char *strndup(const char *, size_t);
+ #endif
+ #endif
+ 	char *s1 = strndup(s, n);
