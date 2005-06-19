@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.5 2005/06/06 13:55:30 dillo Exp $
+# $NetBSD: options.mk,v 1.6 2005/06/19 01:46:35 salo Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xchat
 PKG_SUPPORTED_OPTIONS=	inet6 ssl socks5
-PKG_SUGGESTED_OPTIONS=	inet6 ssl
+PKG_SUGGESTED_OPTIONS=	ssl
 PKG_OPTIONS_LEGACY_OPTS+=	socks:socks5
 
 .if defined(PKG_OPTIONS.xchat2)
