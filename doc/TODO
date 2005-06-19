@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3624 2005/06/19 01:23:43 salo Exp $
+$NetBSD: TODO,v 1.3625 2005/06/19 06:46:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -450,6 +450,7 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.9.3
 	o diffstat-1.38
+	o dillo-0.8.5
 	o dirac-0.5.2
 	o dirdiff-2.0
 	o distcc-2.18.3
@@ -504,6 +505,7 @@ Suggested package updates
 	o freeciv-server-2.0.1
 	o freeciv-share-2.0.1
 	o freeciv-sounds-3.0
+	o freeradius-1.0.4
 	o freetds-0.62.4
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
