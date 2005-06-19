@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10390 2005/06/19 22:42:06 heinz Exp $
+$NetBSD: CHANGES,v 1.10391 2005/06/19 23:32:35 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2918,3 +2918,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/audit-packages to 1.36nb1 [adrianp 2005-06-19]
 	Updated mail/spamassassin to 3.0.4 [heinz 2005-06-19]
 	Updated mail/p5-razor-agents to 2.72 [heinz 2005-06-19]
+	Updated databases/mysql4-server to 4.1.12nb1 [seb 2005-06-19]
