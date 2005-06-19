@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
+$NetBSD: patch-ad,v 1.2 2005/06/19 20:44:06 minskim Exp $
 
---- main.c.orig	Thu Nov  2 01:29:07 2000
+--- main.c.orig	2001-04-02 08:57:20.000000000 -0500
 +++ main.c
-@@ -307,9 +307,11 @@
+@@ -1,7 +1,6 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include <malloc.h>
+ 
+ #ifndef MSW  /*rwj  --  make portable*/
+ #include <signal.h>
+@@ -324,9 +323,11 @@ char *tmpdir;
      text_file_name[len + 5] = 't';
      union_file_name[len + 5] = 'u';
  
@@ -14,7 +22,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
  
      if (jflag)/*rwj*/
        {
-@@ -363,6 +365,9 @@
+@@ -380,6 +381,9 @@ char *tmpdir;
  
  void open_files(void)
  {
@@ -24,7 +32,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
    create_file_names();
  
    if (input_file == 0)
-@@ -372,11 +377,25 @@
+@@ -389,11 +393,25 @@ void open_files(void)
  	    open_error(input_file_name);
      }
  
@@ -52,7 +60,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
    if (text_file == 0)
  	open_error(text_file_name);
  
-@@ -392,7 +411,14 @@
+@@ -409,7 +427,14 @@ void open_files(void)
  	 defines_file = fopen(defines_file_name, "w");
  	 if (defines_file == 0)
  	    open_error(defines_file_name);
