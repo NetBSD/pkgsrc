@@ -1,9 +1,10 @@
 #!/bin/sh
 #
-# $NetBSD: adduser.sh,v 1.1 2004/06/05 13:16:35 taca Exp $
+# $NetBSD: adduser.sh,v 1.2 2005/06/19 18:38:40 taca Exp $
 #
 # This is an adduser script for NetBSD systems whose useradd(8) doesn't
-# accept "$" in the username.
+# accept "$" in the username.  This script may be used for the
+# "add machine script" in smb.conf.
 
 awkprog="@AWK@"
 catprog="@CAT@"

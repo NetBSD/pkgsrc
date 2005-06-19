@@ -1,10 +1,10 @@
-$NetBSD: patch-ao,v 1.1 2003/03/29 08:18:50 taca Exp $
+$NetBSD: patch-ao,v 1.2 2005/06/19 18:38:40 taca Exp $
 
 Expand & in the gecos field to a capitalized login name.
 
---- lib/util_getent.c.orig	Sat Feb  2 19:46:42 2002
-+++ lib/util_getent.c	Sun Oct 13 21:37:56 2002
-@@ -155,6 +155,11 @@
+--- lib/util_getent.c.orig	2005-03-02 14:33:07.000000000 +0900
++++ lib/util_getent.c
+@@ -155,6 +155,11 @@ struct sys_pwent * getpwent_list(void)
  	struct sys_pwent *plist;
  	struct sys_pwent *pent;
  	struct passwd *pwd;
@@ -14,9 +14,9 @@ Expand & in the gecos field to a capitalized login name.
 +	int buflen;
 +#endif
  	
- 	pent = (struct sys_pwent *) malloc(sizeof(struct sys_pwent));
+ 	pent = SMB_MALLOC_P(struct sys_pwent);
  	if (pent == NULL) {
-@@ -178,9 +183,38 @@
+@@ -178,9 +183,38 @@ struct sys_pwent * getpwent_list(void)
  		pent->pw_uid = pwd->pw_uid;
  		pent->pw_gid = pwd->pw_gid;
  		if (pwd->pw_gecos) {
@@ -42,10 +42,10 @@ Expand & in the gecos field to a capitalized login name.
 +					*bp++ = *p;
 +			}
 +			*bp = '\0';
-+			if ((pent->pw_name = strdup(buf)) == NULL)
++			if ((pent->pw_name = SMB_STRDUP(buf)) == NULL)
 +				goto err;
 +#else
- 			if ((pent->pw_name = strdup(pwd->pw_gecos)) == NULL)
+ 			if ((pent->pw_name = SMB_STRDUP(pwd->pw_gecos)) == NULL)
  				goto err;
 +#endif
  		}
@@ -53,5 +53,5 @@ Expand & in the gecos field to a capitalized login name.
 +  gecos_done:
 +#endif
  		if (pwd->pw_dir) {
- 			if ((pent->pw_name = strdup(pwd->pw_dir)) == NULL)
+ 			if ((pent->pw_name = SMB_STRDUP(pwd->pw_dir)) == NULL)
  				goto err;

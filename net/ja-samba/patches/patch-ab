@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.6 2004/06/05 13:16:35 taca Exp $
+$NetBSD: patch-ab,v 1.7 2005/06/19 18:38:40 taca Exp $
 
 --- configure.in.orig	2004-01-22 20:20:32.000000000 +0900
 +++ configure.in
+@@ -1077,7 +1077,7 @@ case "$host_os" in
+ 			PICFLAG="-KPIC"   # Is this correct for SunOS
+ 			AC_DEFINE(STAT_ST_BLOCKSIZE,512)
+ 		;;
+-		*freebsd*) AC_DEFINE(FREEBSD)
++		*freebsd*|*dragonfly*) AC_DEFINE(FREEBSD)
+ 			AC_DEFINE(BSD44)
+ 			BLDSHARED="true"
+ 			LDSHFLAGS="-shared"
 @@ -2352,6 +2352,10 @@ AC_ARG_WITH(pam,
  # we can't build a pam module if we don't have pam.
  AC_CHECK_LIB(pam, pam_get_data, [AC_DEFINE(HAVE_LIBPAM)])
@@ -13,3 +22,11 @@ $NetBSD: patch-ab,v 1.6 2004/06/05 13:16:35 taca Exp $
  #################################################
  # check for pam_smbpass support
  AC_MSG_CHECKING(whether to use pam_smbpass)
+@@ -2717,6 +2721,7 @@ AC_ARG_WITH(libsmbclient,
+   yes)
+      if test $BLDSHARED = true; then
+         INSTALLCLIENTCMD_SH="\$(INSTALLCMD)"
++        INSTALLCLIENTCMD_A="\$(INSTALLCMD)"
+         LIBSMBCLIENT_SHARED=bin/libsmbclient.$SHLIBEXT
+ 	LIBSMBCLIENT_NON_SHARED=bin/libsmbclient.a
+         LIBSMBCLIENT=libsmbclient
