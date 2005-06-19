@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/06/19 01:13:23 kristerw Exp $
+
+--- scripts/Makefile.orig	2005-06-19 03:10:05.000000000 +0200
++++ scripts/Makefile	2005-06-19 03:10:14.000000000 +0200
+@@ -14,7 +14,7 @@
+ SCRIPT_DIR := $(CURDIR)
+ SED := $(filter /%,$(shell /bin/sh -c 'type sed'))
+ CSH := $(filter /%,$(shell /bin/sh -c 'type csh'))
+-PERL := $(filter /%,$(shell /bin/sh -c 'type perl'))
++#PERL := $(filter /%,$(shell /bin/sh -c 'type perl'))
+ VPATH := $(BIN_DIR)
+ 
+ ALL := exact-tandems mapview mummerplot nucmer promer \
