@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/05/25 13:09:22 wiz Exp $
+$NetBSD: distinfo,v 1.4 2005/06/19 10:42:27 hira Exp $
 
 SHA1 (regionset-0.1.tar.gz) = c60b973f44288264234d07be1fb418b6e7bf61a5
 RMD160 (regionset-0.1.tar.gz) = 2061fae73b8b948135a91b33eaacd77590507306
 Size (regionset-0.1.tar.gz) = 17095 bytes
-SHA1 (patch-aa) = a7247e9be9570ceb0a0e6266c1850adf01e22445
-SHA1 (patch-ab) = b8eac39ba05b6da002856320bff346cdba740caa
+SHA1 (patch-aa) = 4a7085cc9bf693a93e871914346bcc4c959e606c
+SHA1 (patch-ab) = edbe06718024e855e41d8aea54c268c89450a222
