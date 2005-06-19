@@ -1,10 +1,35 @@
-$NetBSD: patch-ao,v 1.1 2002/01/05 16:20:55 agc Exp $
+$NetBSD: patch-ao,v 1.2 2005/06/19 01:03:04 kristerw Exp $
 
-Use root's home directory for TCT_HOME
-
---- reconfig	2002/01/05 15:38:05	1.1
-+++ reconfig	2002/01/05 15:38:36
-@@ -167,7 +167,7 @@
+--- reconfig.orig	2001-09-15 22:48:51.000000000 +0200
++++ reconfig	2005-06-19 02:58:30.000000000 +0200
+@@ -52,25 +52,7 @@
+ 
+ # find perl5!
+ print "Ok, trying to find perl5 now... hang on a bit...\n";
+-for $dir (@all_dirs) {
+-	# first, find where it might be; oftentimes you'll see perl,
+-	# perl4, perl5, etc. in the same dir
+-	next if (! -d $dir);
+-	while (<$dir/perl5* $dir/perl*>) {
+-		if (-x $_) {
+-			$perl_version=`($_ -v 2> /dev/null) |
+-				awk '/This is perl, v.*5/ { print $NF }'`;
+-			if ($perl_version) {
+-				$PERL=$_;
+-				$pflag="1";
+-				last;
+-				}
+-			}
+-			last if $pflag;
+-		}
+-	last if $pflag;
+-	}
+-
++$PERL = $ENV{"PERL5"};
+ die "\nCan't find perl5!  Bailing out...\n" unless $PERL;
+ print "\nPerl5 is in $PERL\n";
+ 
+@@ -167,7 +149,7 @@
  	die "Can't open $file for reading\n" unless open(FILE, $file);
  	while (<FILE>) {
  		if (/^\s*\$TCT_HOME\s*=/ && !$done) {
