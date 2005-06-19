@@ -1,8 +1,15 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
+$NetBSD: patch-af,v 1.2 2005/06/19 20:44:06 minskim Exp $
 
---- output.c.orig	Tue Nov 14 17:42:19 2000
+--- output.c.orig	2000-11-14 02:42:19.000000000 -0600
 +++ output.c
-@@ -834,9 +834,7 @@
+@@ -1,6 +1,5 @@
+ #include <stdio.h>
+ #include <string.h>
+-#include <malloc.h>
+ 
+ #include "defs.h"
+ 
+@@ -834,9 +833,7 @@ void output_defines(void)
  	s = symbol_name[i];
  	if (is_C_identifier(s))
  	{
@@ -13,7 +20,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
  	      fprintf(code_file, "#define ");
  	    if (dflag) fprintf(defines_file, "#define ");
  	    c = *s;
-@@ -876,8 +874,17 @@
+@@ -876,8 +873,17 @@ void output_defines(void)
  
      if (dflag && unionized)
      {
@@ -31,7 +38,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
  	if (union_file == NULL) open_error(union_file_name);
  	while ((c = getc(union_file)) != EOF)
  	    putc(c, defines_file);
-@@ -891,8 +898,17 @@
+@@ -891,8 +897,17 @@ void output_stored_text(void)
  int c;
  FILE *in, *out;
  
@@ -49,7 +56,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
      if (text_file == NULL)
  	open_error(text_file_name);
      in = text_file;
-@@ -908,11 +924,12 @@
+@@ -908,11 +923,12 @@ FILE *in, *out;
  	    ++outline;
  	putc(c, out);
      }
@@ -63,7 +70,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
  }
  
  
-@@ -1191,8 +1208,6 @@
+@@ -1191,8 +1207,6 @@ char **symnam, *s;
  void output_stype(void)
  {
  int prim; /*is the Ruby semantic type a primitive?*/
@@ -72,7 +79,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
    if (jflag){ /*rwj*/
      prim=0;
      fprintf(code_file,"\n\n");
-@@ -1313,11 +1328,12 @@
+@@ -1313,11 +1327,12 @@ FILE *in, *out;
  	++outline;
  	putc('\n', out);
      }
@@ -86,7 +93,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
  }
  
  
-@@ -1326,8 +1342,17 @@
+@@ -1326,8 +1341,17 @@ void output_semantic_actions(void)
  int c, last;
  FILE *out;
  
@@ -104,7 +111,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
      if (action_file == NULL)
  	open_error(action_file_name);
  
-@@ -1353,11 +1378,12 @@
+@@ -1353,11 +1377,12 @@ FILE *out;
  	putc('\n', out);
      }
  

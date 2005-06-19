@@ -1,0 +1,10 @@
+$NetBSD: patch-ai,v 1.1 2005/06/19 20:44:06 minskim Exp $
+
+--- symtab.c.orig	2000-11-01 08:03:49.000000000 -0600
++++ symtab.c
+@@ -1,5 +1,4 @@
+ #include <stdio.h>
+-#include <malloc.h>
+ #include <string.h>
+ 
+ #include "defs.h"

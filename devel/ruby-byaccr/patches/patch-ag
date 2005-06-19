@@ -1,8 +1,15 @@
-$NetBSD: patch-ag,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
+$NetBSD: patch-ag,v 1.2 2005/06/19 20:44:06 minskim Exp $
 
---- reader.c.orig	Thu Nov  2 01:29:07 2000
+--- reader.c.orig	2000-11-01 08:03:49.000000000 -0600
 +++ reader.c
-@@ -35,8 +35,8 @@
+@@ -1,6 +1,5 @@
+ #include <stdio.h>
+ #include <string.h>
+-#include <malloc.h>
+ 
+ #include "defs.h"
+ 
+@@ -35,8 +34,8 @@ bucket **plhs;
  int name_pool_size;
  char *name_pool;
  
@@ -13,7 +20,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
  
  
  void cachec(int c)
-@@ -315,11 +315,12 @@
+@@ -315,11 +314,12 @@ char *t_cptr = t_line + (cptr - line - 2
  	if (line == 0)
  	    unterminated_text(t_lineno, t_line, t_cptr);
      }
@@ -27,7 +34,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
  
  loop:
      c = *cptr++;
-@@ -446,11 +447,12 @@
+@@ -446,11 +446,12 @@ int c;
      if (unionized) over_unionized(cptr - 6);
      unionized = 1;
  
@@ -41,7 +48,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
  
      fprintf(text_file, "typedef union");
      if (dflag) fprintf(union_file, "typedef union");
-@@ -1190,7 +1192,7 @@
+@@ -1190,7 +1191,7 @@ char *a_cptr = a_line + (cptr - line);
  	insert_empty_rule();
      last_was_action = 1;
  
@@ -50,7 +57,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
        if (jflag){
  	fprintf(f, "when %d\n", nrules - 2);
          fprintf(f, jline_format, lineno, input_file_name);
-@@ -1199,6 +1201,7 @@
+@@ -1199,6 +1200,7 @@ char *a_cptr = a_line + (cptr - line);
  	fprintf(f, "%d:\n", nrules - 2);
          fprintf(f, line_format, lineno, input_file_name);
        };

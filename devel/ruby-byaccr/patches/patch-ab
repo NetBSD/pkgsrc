@@ -1,18 +1,20 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
+$NetBSD: patch-ab,v 1.2 2005/06/19 20:44:06 minskim Exp $
 
---- defs.h.orig	Thu Nov  2 01:29:07 2000
+--- defs.h.orig	2001-04-02 08:57:20.000000000 -0500
 +++ defs.h
-@@ -6,7 +6,8 @@
+@@ -5,8 +5,9 @@
+ #include <assert.h>
  #include <ctype.h>
  #include <stdio.h>
- #include <malloc.h>
+-#include <malloc.h>
 -
++#include <stdlib.h>
 +#include <unistd.h>
 +#include <unistd.h>
  
  
  /*  machine-dependent definitions			*/
-@@ -241,8 +242,8 @@
+@@ -242,8 +243,8 @@ extern int nvars;
  extern int ntags;
  
  extern char unionized;
@@ -23,7 +25,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
  
  extern int   start_symbol;
  extern char  **symbol_name;
-@@ -290,8 +291,11 @@
+@@ -291,8 +292,11 @@ extern short final_state;
  
  /* system variables */
  
