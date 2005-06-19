@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10384 2005/06/19 01:40:55 kristerw Exp $
+$NetBSD: CHANGES,v 1.10385 2005/06/19 03:18:58 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2911,3 +2911,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated biology/mummer to 3.15nb1 [kristerw 2005-06-19]
 	Updated net/ncftp2 to 2.4.3nb2 [kristerw 2005-06-19]
 	Updated www/bluefish to 1.0nb2 [kristerw 2005-06-19]
+	Updated graphics/dx to 4.3.2nb3 [kristerw 2005-06-19]
