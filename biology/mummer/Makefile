@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:40 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/19 01:13:23 kristerw Exp $
 #
 
 DISTNAME=		MUMmer3.15
 PKGNAME=		mummer-3.15
+PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.tigr.org/pub/software/MUMmer/
 
@@ -14,6 +15,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_TOOLS+=		gmake
 
 MAKE_ENV+=		SH="${SH}"
+MAKE_ENV+=		PERL="${PERL5}"
 INSTALLATION_DIRS=	bin
 
 do-install:
