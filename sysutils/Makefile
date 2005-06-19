@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.300 2005/06/02 15:12:41 martin Exp $
+# $NetBSD: Makefile,v 1.301 2005/06/19 07:46:03 minskim Exp $
 
 COMMENT=	System utilities
 
@@ -109,7 +109,7 @@ SUBDIR+=	logrot
 SUBDIR+=	lsof
 SUBDIR+=	mbmon
 SUBDIR+=	mc
-SUBDIR+=        mdf2iso
+SUBDIR+=	mdf2iso
 SUBDIR+=	medusa
 SUBDIR+=	memconf
 SUBDIR+=	memtest86
