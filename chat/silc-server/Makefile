@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2005/04/11 21:45:05 tv Exp $
+# $NetBSD: Makefile,v 1.40 2005/06/19 01:22:17 salo Exp $
 #
 
-DISTNAME=		silc-server-0.9.19p1
-PKGNAME=		${DISTNAME:S/p1/.1/}
+DISTNAME=		silc-server-1.0
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
@@ -15,11 +14,10 @@ MAINTAINER=		salo@NetBSD.org
 HOMEPAGE=		http://www.silcnet.org/
 COMMENT=                Server for the Secure Internet Live Conferencing (SILC) protocol
 
-USE_PKGINSTALL=		YES
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+USE_PKGINSTALL=		yes
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool */*/*/libtool
-WRKSRC=			${WRKDIR}/${DISTNAME:S/p1//}
 
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
@@ -62,6 +60,7 @@ CONFIGURE_ARGS+=	--with-logsdir=${VARBASE}/log/silcd
 CONFIGURE_ARGS+=	--with-silcd-pid-file=${VARBASE}/run/silcd.pid
 CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--without-libtoolfix
+CONFIGURE_ARGS+=	--enable-shared
 
 # XXX: Avoid an ICE in gcc2 on sparc64
 #

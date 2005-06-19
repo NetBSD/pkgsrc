@@ -1,52 +1,42 @@
-$NetBSD: patch-aa,v 1.9 2003/10/16 12:37:44 salo Exp $
+$NetBSD: patch-aa,v 1.10 2005/06/19 01:22:17 salo Exp $
 
---- Makefile.in.orig	2003-10-15 19:22:13.000000000 +0200
-+++ Makefile.in	2003-10-16 13:16:39.000000000 +0200
-@@ -710,14 +710,12 @@
- 	-mkdir -p $(mandir)/man1
+--- apps/silcd/Makefile.in.orig	2005-05-10 18:59:04.000000000 +0200
++++ apps/silcd/Makefile.in	2005-06-19 02:36:04.000000000 +0200
+@@ -581,13 +581,10 @@
  
- install-dirs-server: install-dirs
+ install-dirs-server:
+ 	-mkdir -p $(docdir)
+-	-mkdir -p $(etcdir)
 -	-mkdir -p $(logsdir)
  	-mkdir -p $(mandir)/man5
  	-mkdir -p $(mandir)/man8
  
- doc-install:
- 	-$(INSTALL_DATA) $(srcdir)/doc/CodingStyle $(docdir)/
- 	-$(INSTALL_DATA) $(srcdir)/doc/FAQ $(docdir)/
--	-$(INSTALL_DATA) $(srcdir)/doc/*.txt $(docdir)/
- 	-$(INSTALL_DATA) $(srcdir)/COPYING $(docdir)/
- 	-$(INSTALL_DATA) $(srcdir)/CHANGES $(docdir)/
- 	-$(INSTALL_DATA) $(srcdir)/CREDITS $(docdir)/
-@@ -732,7 +730,6 @@
+ doc-install-server:
+-	-$(INSTALL_DATA) $(top_srcdir)/doc/example_silcd.conf $(docdir)/
+ 	-@if test -f $(top_srcdir)/doc/silcd.8 ; then \
+ 	 $(INSTALL_DATA) $(top_srcdir)/doc/silcd.8 $(mandir)/man8; \
  	fi
- 
- doc-install-server: doc-install
--	-$(INSTALL_DATA) $(srcdir)/doc/example_silcd.conf $(docdir)/
- 	-@if test -f $(srcdir)/doc/silcd.8 ; then \
- 	 $(INSTALL_DATA) $(srcdir)/doc/silcd.8 $(mandir)/man8; \
+@@ -605,8 +602,10 @@
  	fi
-@@ -767,9 +764,12 @@
- 	-cp -R $(srcdir)/tutorial $(prefix)
  
  examples-install:
 -	-mkdir -p $(docdir)/examples/
--	-$(INSTALL_DATA) $(srcdir)/doc/examples/README $(docdir)/examples/
--	-$(INSTALL_DATA) $(srcdir)/doc/examples/silc* $(docdir)/examples/
+-	-$(INSTALL_DATA) $(top_srcdir)/doc/examples/* $(docdir)/examples/
 +	-mkdir -p $(examplesdir)
-+	-$(INSTALL_DATA) $(srcdir)/doc/examples/README $(examplesdir)
-+	-$(INSTALL_DATA) $(srcdir)/doc/examples/silc* $(examplesdir)
-+	-$(INSTALL_DATA) $(srcdir)/doc/examples/cell* $(examplesdir)
-+	-$(INSTALL_DATA) $(srcdir)/doc/example_silcd.conf $(examplesdir)/silcd.conf.default
-+	-$(INSTALL_DATA) $(srcdir)/doc/silcalgs.conf $(examplesdir)/silcalgs.conf.default
++	-$(INSTALL_DATA) $(top_srcdir)/doc/examples/* $(examplesdir)/
++	-$(INSTALL_DATA) $(top_srcdir)/doc/example_silcd.conf $(examplesdir)/silcd.conf.default
++	-$(INSTALL_DATA) $(top_srcdir)/doc/silcalgs.conf $(examplesdir)/silcalgs.conf.default
  
  generate-server-key:
  	-@if test '!' -f $(etcdir)/silcd.pub ; then \
-@@ -778,7 +778,7 @@
+@@ -616,9 +615,7 @@
+ install-data-hook: 		\
+ 	install-dirs-server 	\
+ 	doc-install-server	\
+-	etc-install-server 	\
+-	examples-install 	\
+-	generate-server-key
++	examples-install
  
- @SILC_DIST_CLIENT_TRUE@install-data-hook: install-dirs-client sim-install doc-install-client etc-install-client
- @SILC_DIST_CLIENT_FALSE@@SILC_DIST_TOOLKIT_TRUE@install-data-hook: install-dirs-client install-dirs-server sim-install doc-install-client doc-install-server toolkit-install examples-install etc-install-client etc-install-server
--@SILC_DIST_CLIENT_FALSE@@SILC_DIST_TOOLKIT_FALSE@install-data-hook: install-dirs-server sim-install doc-install-server examples-install etc-install-server generate-server-key
-+@SILC_DIST_CLIENT_FALSE@@SILC_DIST_TOOLKIT_FALSE@install-data-hook: install-dirs-server sim-install doc-install-server examples-install
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
+ @INCLUDE_DEFINES_INT@
+ 
