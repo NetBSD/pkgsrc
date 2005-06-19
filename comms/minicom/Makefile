@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2005/05/22 20:07:44 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2005/06/19 11:34:45 veego Exp $
 
-DISTNAME=	minicom-1.83.1.src
-PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	2
+DISTNAME=	minicom-2.1
 CATEGORIES=	comms
-MASTER_SITES=	${MASTER_SITE_BACKUP}
-#MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/serialcomm/dialout/} \
-#		http://www.pp.clinet.fi/~walker/
+MASTER_SITES=	http://alioth.debian.org/download.php/123/
 
 MAINTAINER=     tech-pkg@NetBSD.org
-HOMEPAGE=	http://alioth.debian.org/projects/minicom/
+HOMEPAGE=	http://minicom.alioth.debian.org/
 COMMENT=	MS-DOS Telix serial communication program "workalike"
 
 BUILD_USES_MSGFMT=	yes
@@ -18,11 +14,12 @@ DEPENDS+=	lrzsz-[0-9]*:../../comms/lrzsz
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/src
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
-NO_CONFIGURE=		yes
+GNU_CONFIGURE=		yes
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	minicom
 EGDIR=			${PREFIX}/share/examples/minicom
@@ -34,14 +31,15 @@ OWN_DIRS_PERMS=		${PKG_SYSCONFDIR} uucp dialer 0755
 CONF_FILES_PERMS=	${EGDIR}/minicom.users ${PKG_SYSCONFDIR}/minicom.users \
 			uucp dialer 0644
 
-# for BATCH !
-.include "../../mk/bsd.prefs.mk"
+SUBST_CLASSES+=	minicom
+SUBST_MESSAGE.minicom=	"Fixing hardcoded paths."
+SUBST_STAGE.minicom=	post-patch
+SUBST_FILES.minicom=	src/rwconf.c
+SUBST_SED.minicom=	-e 's,@PREFIX@,${PREFIX},g'
 
-.if !defined(BATCH)
-pre-install:
-	# this script creates a link from your comm port to /dev/modem
-	${SH} ${SCRIPTDIR}/create-dev-link
-.endif
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/minicom.users ${EGDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

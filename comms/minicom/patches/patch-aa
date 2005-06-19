@@ -1,86 +1,20 @@
-$NetBSD: patch-aa,v 1.8 2002/10/04 23:47:28 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2005/06/19 11:34:45 veego Exp $
 
---- Makefile.orig	Tue Apr 25 08:42:32 2000
-+++ Makefile
-@@ -22,10 +22,10 @@
- # enochw@scn.org Oct 99: flags for UWIN 2.0 (Unix for Windows)
+--- src/Makefile.am.orig	2003-04-30 00:03:22.000000000 +0200
++++ src/Makefile.am	2005-05-17 21:55:32.000000000 +0200
+@@ -3,8 +3,6 @@
  
- # Where to install things for Linux sites (FSSTND)
--BINDIR	= /usr/bin
--LIBDIR	= /etc
--DOCDIR	= /usr/doc/minicom
--MANDIR	= /usr/man/man1
-+#BINDIR	= /usr/bin
-+#LIBDIR	= /etc
-+#DOCDIR	= /usr/doc/minicom
-+#MANDIR	= /usr/man/man1
+ bin_PROGRAMS = minicom runscript ascii-xfr @KEYSERV@
  
- # fmg 8/22/97: seems a more logical place for this :-)
- # Select Compile Options you want:
-@@ -53,6 +53,13 @@ PO	= po
- # DOCDIR = /usr/local/etc/minicom
- # MANDIR = /usr/local/man/man1
+-bin_SCRIPTS = xminicom
+-
+ minicom_SOURCES = minicom.c vt100.c config.c help.c updown.c \
+ 	util.c dial.c window.c wkeys.c ipc.c \
+ 	windiv.c sysdep1.c sysdep1_s.c sysdep2.c rwconf.c main.c \
+@@ -34,5 +32,5 @@
  
-+# Where to install things for NetBSD sites.
-+BINDIR	= ${PREFIX}/bin
-+LIBDIR	= ${PKG_SYSCONFDIR}
-+EGDIR   = ${PREFIX}/share/examples/minicom
-+DOCDIR	= ${PREFIX}/share/doc/minicom
-+MANDIR	= ${PREFIX}/man/man1
-+
- # Where to install things for "normal" sites.
- # BINDIR	= /usr/local/bin
- # LIBDIR	= /usr/local/lib
-@@ -60,11 +67,11 @@ PO	= po
- # MANDIR	= /usr/local/man/man1
+ runscript_LDADD = @INTLLIBS@
  
- # Take these compilation flags for Linux with libncurses.
--FLAGS	= -Wall -D_POSIX -D_SYSV -D_SELECT -pipe # -I/usr/include/ncurses
--PROGS	= minicom runscript ascii-xfr
--LFLAGS	= -s
--LIBS	= -lncurses #-lintl
--CC	= cc
-+#FLAGS	= -Wall -D_POSIX -D_SYSV -D_SELECT -pipe # -I/usr/include/ncurses
-+#PROGS	= minicom runscript ascii-xfr
-+#LFLAGS	= -s
-+#LIBS	= -lncurses #-lintl
-+#CC	= cc
+-EXTRA_DIST = functions.c xminicom
++EXTRA_DIST = functions.c
  
- # Take these compilation flags for FreeBSD.
- #FLAGS	= -Wall -D_POSIX -D_BSD43 -D_SELECT -D_DCDFLOW
-@@ -174,6 +181,13 @@ CC	= cc
- #PROGS	= minicom runscript ascii-xfr keyserv
- #LIBS	=
- 
-+# Take these compilation flags for NetBSD.
-+FLAGS	= -Wall -D_POSIX -D_BSD43 -D_SELECT -D_DCDFLOW
-+PROGS	= minicom runscript ascii-xfr
-+LFLAGS	= $(LDFLAGS)
-+LIBS	= -lintl -lcurses -ltermcap
-+CC	= cc
-+
- # Nothing should have to change beneath this line
- 
- SRCS	= minicom.c vt100.c config.c help.c updown.c \
-@@ -199,7 +213,7 @@ KOBJS	= keyserv.o wkeys.o sysdep2.o
- SOBJS	= script.o sysdep1.o common.o
- 
- # fmg 8/22/97: merge in new OPFLAGS...
--CFLAGS	= $(FLAGS) $(OPFLAGS) -DLIBDIR=\"$(LIBDIR)\"
-+CFLAGS	= $(CPPFLAGS) $(FLAGS) $(OPFLAGS) -DBINDIR=\"$(BINDIR)\" -DLIBDIR=\"$(LIBDIR)\"
- 
- R	= $(ROOTDIR)
- 
-@@ -263,10 +277,10 @@ dummy:
- 
- install:	$(PROGS)
- 		$(MAKE) -C po install R=$(R)
--		sh install.sh $(R)$(LIBDIR) $(R)$(BINDIR) $(R)$(MANDIR) $(R)$(DOCDIR)
-+		sh install.sh $(R)$(EGDIR) $(R)$(BINDIR) $(R)$(MANDIR) $(R)$(DOCDIR)
- 
- install2:	$(PROGS)
--		sh install.sh $(R)$(LIBDIR) $(R)$(BINDIR) $(R)$(MANDIR) $(R)$(DOCDIR)
-+		sh install.sh $(R)$(EGDIR) $(R)$(BINDIR) $(R)$(MANDIR) $(R)$(DOCDIR)
- 
- clobber:
- 		rm -f *.o *~ minicom keyserv runscript ascii-xfr
