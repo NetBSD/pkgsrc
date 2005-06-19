@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.4 2000/06/12 18:40:55 rh Exp $
+$NetBSD: patch-ac,v 1.5 2005/06/19 11:34:45 veego Exp $
 
---- updown.c.orig	Thu Mar 16 10:44:26 2000
-+++ updown.c	Mon Jun 12 20:24:37 2000
-@@ -238,7 +238,7 @@
-     do_log(cmdline);   /* jl 22.06.97 */
+--- src/updown.c.orig	2003-04-13 00:52:20.000000000 +0200
++++ src/updown.c	2005-05-17 20:33:24.000000000 +0200
+@@ -245,7 +245,7 @@
+     do_log("%s", cmdline);   /* jl 22.06.97 */
  
    if (P_PFULL(g) == 'N') {
 -    win = wopen(10, 7, 70, 13, BSINGLE, stdattr, mfcolor, mbcolor, 1, 0, 1);
