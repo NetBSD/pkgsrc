@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:04 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/19 14:42:48 jmmv Exp $
 
 DISTNAME=		autoswc-1.5
 CATEGORIES=		pkgtools sysutils
@@ -65,7 +65,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/autoswc.8 ${PREFIX}/man/man8
 	${INSTALL_DATA_DIR} ${PREFIX}/share/autoswc
 	${INSTALL_DATA} ${WRKSRC}/autoswc.mk ${PREFIX}/share/autoswc
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/autoswc
 	${INSTALL_DATA} ${WRKSRC}/config.site ${PREFIX}/share/autoswc
 	${INSTALL_DATA} ${FILESDIR}/configure.ac ${PREFIX}/share/autoswc
 
