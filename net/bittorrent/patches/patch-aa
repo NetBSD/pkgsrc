@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2005/03/28 14:43:10 recht Exp $
+$NetBSD: patch-aa,v 1.7 2005/06/19 02:49:23 salo Exp $
 
---- setup.py.orig	Mon Mar 28 16:23:38 2005
-+++ setup.py	Mon Mar 28 16:26:30 2005
-@@ -19,8 +19,8 @@
+--- setup.py.orig	2005-03-24 23:30:24.000000000 +0100
++++ setup.py	2005-06-19 04:18:09.000000000 +0200
+@@ -19,15 +19,14 @@
  
  import glob
  
@@ -13,3 +13,11 @@ $NetBSD: patch-aa,v 1.6 2005/03/28 14:43:10 recht Exp $
             "btlaunchmany.py", "btlaunchmanycurses.py",
             "bttrack.py", "btreannounce.py", "btrename.py", "btshowmetainfo.py"]
  
+ img_root, doc_root = BitTorrent.calc_unix_dirs()
+ 
+-data_files = [ (img_root        , glob.glob('images/*png')+['images/bittorrent.ico',]),
+-               (img_root+'/logo', glob.glob('images/logo/bittorrent_[0-9]*.png')     ),
++data_files = [ (img_root+'/logo', glob.glob('images/logo/bittorrent_[0-9]*.png')     ),
+                (doc_root        , ['credits.txt', 'LICENSE.txt',
+                                    'README.txt', 'redirdonate.html']       ),
+                ]
