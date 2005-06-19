@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.6 2004/06/05 13:16:35 taca Exp $
+$NetBSD: patch-ac,v 1.7 2005/06/19 18:38:40 taca Exp $
 
 --- configure.orig	2004-01-22 20:20:31.000000000 +0900
 +++ configure
+@@ -16267,7 +16267,7 @@ _ACEOF
+ _ACEOF
+ 
+ 		;;
+-		*freebsd*) cat >>confdefs.h <<\_ACEOF
++		*freebsd*|*dragonfly*) cat >>confdefs.h <<\_ACEOF
+ #define FREEBSD 1
+ _ACEOF
+ 
 @@ -21449,6 +21449,49 @@ echo "${ECHO_T}no" >&6
  
  fi;
@@ -52,7 +61,15 @@ $NetBSD: patch-ac,v 1.6 2004/06/05 13:16:35 taca Exp $
  #################################################
  # check for a NISPLUS password database
  echo "$as_me:$LINENO: checking whether to use NISPLUS SAM database" >&5
-@@ -26986,6 +27029,7 @@ s,@ROFF@,$ROFF,;t t
+@@ -21775,6 +21818,7 @@ if test "${with_libsmbclient+set}" = set
+   yes)
+      if test $BLDSHARED = true; then
+         INSTALLCLIENTCMD_SH="\$(INSTALLCMD)"
++        INSTALLCLIENTCMD_A="\$(INSTALLCMD)"
+         LIBSMBCLIENT_SHARED=bin/libsmbclient.$SHLIBEXT
+ 	LIBSMBCLIENT_NON_SHARED=bin/libsmbclient.a
+         LIBSMBCLIENT=libsmbclient
+@@ -26986,6 +27030,7 @@ s,@ROFF@,$ROFF,;t t
  s,@DYNEXP@,$DYNEXP,;t t
  s,@SHDYNEXP@,$SHDYNEXP,;t t
  s,@KRBLIBS@,$KRBLIBS,;t t
