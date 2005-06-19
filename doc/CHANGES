@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10386 2005/06/19 08:07:35 wiz Exp $
+$NetBSD: CHANGES,v 1.10387 2005/06/19 11:38:04 veego Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2913,3 +2913,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/bluefish to 1.0nb2 [kristerw 2005-06-19]
 	Updated graphics/dx to 4.3.2nb3 [kristerw 2005-06-19]
 	Updated www/dillo to 0.8.5 [wiz 2005-06-19]
+	Updated comms/minicom to 2.1 [veego 2005-06-19]
+	Updated graphics/jhead to 2.4 [veego 2005-06-19]
