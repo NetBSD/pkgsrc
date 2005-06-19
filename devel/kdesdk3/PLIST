@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2005/05/31 15:08:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2005/06/19 13:10:33 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -258,10 +258,7 @@ share/kde/apps/cervisiapart/cervisiaui.rc
 share/kde/apps/kabc/formats/kdeaccountsplugin.desktop
 share/kde/apps/kapptemplate/admin/Doxyfile.am
 share/kde/apps/kapptemplate/admin/Doxyfile.global
-share/kde/apps/kapptemplate/admin/Makefile
-share/kde/apps/kapptemplate/admin/Makefile.am
 share/kde/apps/kapptemplate/admin/Makefile.common
-share/kde/apps/kapptemplate/admin/Makefile.in
 share/kde/apps/kapptemplate/admin/acinclude.m4.in
 share/kde/apps/kapptemplate/admin/am_edit
 share/kde/apps/kapptemplate/admin/bcheck.pl
