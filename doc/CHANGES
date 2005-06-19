@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10389 2005/06/19 18:39:39 taca Exp $
+$NetBSD: CHANGES,v 1.10390 2005/06/19 22:42:06 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2916,4 +2916,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated comms/minicom to 2.1 [veego 2005-06-19]
 	Updated graphics/jhead to 2.4 [veego 2005-06-19]
 	Updated security/audit-packages to 1.36nb1 [adrianp 2005-06-19]
-	Updated net/ja-samba to 2.2.12.0.9.1 [taca 2005-06-19]
+	Updated mail/spamassassin to 3.0.4 [heinz 2005-06-19]
+	Updated mail/p5-razor-agents to 2.72 [heinz 2005-06-19]
