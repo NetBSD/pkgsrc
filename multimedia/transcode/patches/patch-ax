@@ -1,3 +1,5 @@
+$NetBSD: patch-ax,v 1.2 2005/06/19 10:39:23 hira Exp $
+
 --- export/Makefile.am.orig	2003-12-20 20:49:11.000000000 +0900
 +++ export/Makefile.am	2004-08-29 09:25:46.000000000 +0900
 @@ -3,7 +3,6 @@
