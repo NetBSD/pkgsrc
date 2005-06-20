@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2005/06/19 12:14:39 adrianp Exp $
+# $NetBSD: Makefile,v 1.58 2005/06/20 09:29:44 tron Exp $
 
-DISTNAME=	audit-packages-1.36
+DISTNAME=	audit-packages-1.37
 CATEGORIES=	security pkgtools
-PKGREVISION=	1
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
