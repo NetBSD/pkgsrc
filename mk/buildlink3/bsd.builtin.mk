@@ -1,4 +1,4 @@
-# $NetBSD: bsd.builtin.mk,v 1.5 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: bsd.builtin.mk,v 1.6 2005/06/20 05:44:17 jlam Exp $
 #
 # Copyright (c) 2004-2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -133,19 +133,20 @@
 # or in both variables, then PREFER_PKGSRC has precedence over
 # PREFER_NATIVE.
 #
-PREFER.${_pkg_}?=	pkgsrc
+_BLTN_PREFER.${_pkg_}=	pkgsrc
 .  if !empty(PREFER_NATIVE:M[yY][eE][sS])
-PREFER.${_pkg_}=	native
+_BLTN_PREFER.${_pkg_}=	native
 .  endif
 .  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-PREFER.${_pkg_}=	pkgsrc
+_BLTN_PREFER.${_pkg_}=	pkgsrc
 .  endif
 .  if !empty(PREFER_NATIVE:M${_pkg_})
-PREFER.${_pkg_}=	native
+_BLTN_PREFER.${_pkg_}=	native
 .  endif
 .  if !empty(PREFER_PKGSRC:M${_pkg_})
-PREFER.${_pkg_}=	pkgsrc
+_BLTN_PREFER.${_pkg_}=	pkgsrc
 .  endif
+PREFER.${_pkg_}?=	${_BLTN_PREFER.${_pkg_}}
 .endfor
 
 .include "../../mk/buildlink3/find-libs.mk"
