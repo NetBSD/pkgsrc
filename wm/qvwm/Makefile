@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2005/06/01 18:03:25 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/06/20 17:02:04 kristerw Exp $
 #
 
 DISTNAME=	qvwm-1.1.12
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	wm
 MASTER_SITES=	ftp://www.qvwm.org/pub/qvwm/
 
@@ -11,7 +11,8 @@ HOMEPAGE=	http://www.qvwm.org/
 COMMENT=	Windows 95/98/NT like window manager for X11
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake rm
+CONFIGURE_ENV+=	ac_cv_path_PATH_RM="${TOOLS_RM}"
 USE_LANGUAGES=	c++
 
 post-install:
