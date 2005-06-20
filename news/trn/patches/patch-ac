@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2000/03/18 19:51:33 wiz Exp $
+$NetBSD: patch-ac,v 1.3 2005/06/20 01:57:36 kristerw Exp $
 
---- Configure.orig	Mon Sep 21 00:50:59 1998
-+++ Configure	Sun Jan 16 06:50:36 2000
-@@ -2411,7 +2411,7 @@
+--- Configure.orig	2001-02-22 20:17:39.000000000 +0100
++++ Configure	2005-06-20 03:49:52.000000000 +0200
+@@ -2540,7 +2540,7 @@
      esac
      ;;
  *)  case "$d_inews" in
@@ -11,3 +11,99 @@ $NetBSD: patch-ac,v 1.2 2000/03/18 19:51:33 wiz Exp $
      "$define")
  	set dflt installinews bin
  	eval $prefixit
+@@ -6223,14 +6223,14 @@
+ acttimes='$acttimes'
+ aphostcmd='$aphostcmd'
+ archobjs='$archobjs'
+-awk='$awk'
+-basename='$basename'
++awk='$TOOLS_AWK'
++basename='$TOOLS_BASENAME'
+ bash='$bash'
+ bin='$bin'
+ binexp='$binexp'
+ byacc='$byacc'
+ c='$c'
+-cat='$cat'
++cat='$TOOLS_CAT'
+ cc='$cc'
+ ccflags='$ccflags'
+ cf_by='$cf_by'
+@@ -6240,7 +6240,7 @@
+ comm='$comm'
+ contains='$contains'
+ contdist='$contdist'
+-cp='$cp'
++cp='$TOOLS_CP'
+ cpp='$cpp'
+ cppflags='$cppflags'
+ cpplast='$cpplast'
+@@ -6307,19 +6307,19 @@
+ defeditor='$defeditor'
+ diff='$diff'
+ direntrytype='$direntrytype'
+-echo='$echo'
++echo='$TOOLS_ECHO'
+ ed='$ed'
+-egrep='$egrep'
++egrep='$TOOLS_EGREP'
+ eunicefix='$eunicefix'
+ exe_ext='$exe_ext'
+-expr='$expr'
++expr='$TOOLS_EXPR'
+ extrainews='$extrainews'
+ filexp='$filexp'
+ find='$find'
+ firstmakefile='$firstmakefile'
+ gccversion='$gccversion'
+ glibpth='$glibpth'
+-grep='$grep'
++grep='$TOOLS_GREP'
+ groupdesc='$groupdesc'
+ hint='$hint'
+ hostbits='$hostbits'
+@@ -6376,10 +6376,10 @@
+ mimecap='$mimecap'
+ mips='$mips'
+ mips_type='$mips_type'
+-mkdir='$mkdir'
++mkdir='$TOOLS_MKDIR'
+ more='$more'
+ multistatedist='$multistatedist'
+-mv='$mv'
++mv='$TOOLS_MV'
+ myactive='$myactive'
+ myuname='$myuname'
+ n='$n'
+@@ -6417,11 +6417,11 @@
+ prefshell='$prefshell'
+ privlib='$privlib'
+ privlibexp='$privlibexp'
+-rm='$rm'
++rm='$TOOLS_RM'
+ rmail='$rmail'
+ rootid='$rootid'
+ runnm='$runnm'
+-sed='$sed'
++sed='$TOOLS_SED'
+ sendmail='$sendmail'
+ servername='$servername'
+ sharpbang='$sharpbang'
+@@ -6442,7 +6442,7 @@
+ strn='$strn'
+ subscriptions='$subscriptions'
+ sysman='$sysman'
+-tail='$tail'
++tail='$TOOLS_TAIL'
+ tee='$tee'
+ termlib='$termlib'
+ test='$test'
+@@ -6450,7 +6450,7 @@
+ tk='$tk'
+ tkinc='$tkinc'
+ tklibs='$tklibs'
+-tr='$tr'
++tr='$TOOLS_TR'
+ trn_init='$trn_init'
+ trn_select='$trn_select'
+ trnl='$trnl'
