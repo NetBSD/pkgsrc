@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2005/06/16 23:33:10 kristerw Exp $
+# $NetBSD: Makefile,v 1.27 2005/06/20 06:39:59 kristerw Exp $
 
 DISTNAME=	krb5-1.4
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/1.4/
 DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
@@ -36,6 +36,7 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-pkgsrc-libtool
 CONFIGURE_ARGS+=	--enable-dns
 CONFIGURE_ARGS+=	--enable-kdc-replay-cache
+CONFIGURE_ARGS+=	--disable-thread-support
 CONFIGURE_ARGS+=	--without-krb4
 CONFIGURE_ARGS+=	--without-tcl
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
@@ -83,8 +84,6 @@ INSTALLATION_DIRS=	bin include/gssapi include/gssrpc info lib	\
 			man/man1 man/man5 man/man8 sbin			\
 			share/examples/krb5
 
-PTHREAD_OPTS+=		require
-
 # The MIT krb5 distribution is actually a tar file that contains the
 # real .tar.gz distfile and a PGP signature.
 #
@@ -110,5 +109,4 @@ post-install:
 		done;							\
 	done
 
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
