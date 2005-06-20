@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2005/04/11 21:46:52 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/06/20 02:59:36 jlam Exp $
 #
 
 DISTNAME=		netsaint-plugins-1.2.9-4
 PKGNAME=		netsaint-plugins-1.2.9.4
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netsaintplug/}
 
@@ -25,6 +25,11 @@ CPPFLAGS+=		-I${PGSQL_PREFIX}/include/postgresql
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=      --with-df-command="/bin/df -Pklt nokernfs,procfs,fdesc"
 .endif
+
+SUBST_CLASSES+=		wrkdir
+SUBST_STAGE.wrkdir=	pre-configure
+SUBST_SED.wrkdir=	-e "s|@WRKDIR@|${WRKDIR:Q}|"
+SUBST_FILES.wrkdir=	plugins-scripts/subst.in
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
