@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10399 2005/06/20 20:11:13 jlam Exp $
+$NetBSD: CHANGES,v 1.10400 2005/06/20 22:06:00 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2931,3 +2931,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/heimdal to 0.6.5 [lha 2005-06-20]
 	Updated www/trac to 0.8.4 [epg 2005-06-20]
 	Updated security/sudo to 1.6.8pl9 [jlam 2005-06-20]
+	Updated x11/qt3-libs to 3.3.4nb1 [dmcmahill 2005-06-20]
