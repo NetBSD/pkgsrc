@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/06/17 04:49:45 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2005/06/20 01:46:01 jlam Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -74,7 +74,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/bfd/bfd.h ${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/ld/ldscripts/* ${PREFIX}/lib/ldscripts
 	${INSTALL_SCRIPT} ${WRKSRC}/cross-env ${BINDIR}
-	${LN} -s ${BINDIR}/cross-env ${PREFIX}/bin/cross-env
+	${LN} -s ${BINDIR}/cross-env ${LOCALBASE}/bin/cross-env
 
 post-build:
 	${SED} -e 's|@@PREFIX@@|${PREFIX}|' < ${FILESDIR}/cross-env > \
