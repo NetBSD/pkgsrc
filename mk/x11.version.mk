@@ -1,4 +1,4 @@
-# $NetBSD: x11.version.mk,v 1.1 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: x11.version.mk,v 1.2 2005/06/20 20:59:45 jlam Exp $
 #
 # The following variables may be set in /etc/mk.conf:
 #
@@ -15,6 +15,9 @@
 #
 #    BUILTIN_X11_TYPE.${X11_TYPE} is the X11_TYPE of the native X11
 #	distribution detected on the system.
+#
+# The following variables may be defined by this file.  These variables
+# should be checked to exist before they are used:
 #
 #    BUILTIN_X11_VERSION.${X11_TYPE} is the version number of the native
 #	X11 distribution detected on the system.
