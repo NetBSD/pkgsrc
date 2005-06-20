@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10400 2005/06/20 22:06:00 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.10401 2005/06/20 22:29:40 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2932,3 +2932,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/trac to 0.8.4 [epg 2005-06-20]
 	Updated security/sudo to 1.6.8pl9 [jlam 2005-06-20]
 	Updated x11/qt3-libs to 3.3.4nb1 [dmcmahill 2005-06-20]
+	Updated print/apsfilter to 7.2.5nb1 [kristerw 2005-06-20]
+	Updated sysutils/fsv to 0.9nb2 [kristerw 2005-06-20]
+	Updated textproc/groff to 1.19.1nb3 [kristerw 2005-06-20]
+	Updated wm/qvwm to 1.1.12nb4 [kristerw 2005-06-20]
