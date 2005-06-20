@@ -1,4 +1,4 @@
-# $NetBSD: db1.builtin.mk,v 1.11 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: db1.builtin.mk,v 1.12 2005/06/20 07:20:40 jlam Exp $
 
 BUILTIN_PKG:=	db1
 
@@ -30,6 +30,11 @@ MAKEVARS+=	IS_BUILTIN.db1
 ### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
 ###
 .if !defined(USE_BUILTIN.db1)
+# XXX
+# XXX Until pkgsrc gets a databases/db1 package, we must always prefer the
+# XXX native db1 package because the alternative doesn't yet exist.
+# XXX
+PREFER.db1=		native
 .  if ${PREFER.db1} == "pkgsrc"
 USE_BUILTIN.db1=	no
 .  else
