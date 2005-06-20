@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10397 2005/06/20 09:52:40 lha Exp $
+$NetBSD: CHANGES,v 1.10398 2005/06/20 19:22:34 epg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2929,3 +2929,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/mit-krb5 to 1.4nb2 [kristerw 2005-06-20]
 	Updated security/audit-packages to 1.37 [tron 2005-06-20]
 	Updated security/heimdal to 0.6.5 [lha 2005-06-20]
+	Updated www/trac to 0.8.4 [epg 2005-06-20]
