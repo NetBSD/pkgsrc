@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10396 2005/06/20 09:30:46 tron Exp $
+$NetBSD: CHANGES,v 1.10397 2005/06/20 09:52:40 lha Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2928,3 +2928,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated misc/celestia-gnome to 1.3.2nb1 [hira 2005-06-20]
 	Updated security/mit-krb5 to 1.4nb2 [kristerw 2005-06-20]
 	Updated security/audit-packages to 1.37 [tron 2005-06-20]
+	Updated security/heimdal to 0.6.5 [lha 2005-06-20]
