@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/06/04 11:18:12 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/06/20 08:35:46 jlam Exp $
 
 SHA1 (liquidwar-5.6.2.tar.gz) = 582ca26c507ea1fd79b247865142112d5ecfb0b1
 RMD160 (liquidwar-5.6.2.tar.gz) = 37042373804a9b93db3b0fbf64d103f801573c85
 Size (liquidwar-5.6.2.tar.gz) = 2973938 bytes
 SHA1 (patch-aa) = 8ab0797d73025b9c66f9b8e334271a7dc2cb547d
+SHA1 (patch-ab) = effe830c3750d33bc7700aa817de05745166d541
