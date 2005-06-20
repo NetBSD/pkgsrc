@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10392 2005/06/19 23:54:57 kristerw Exp $
+$NetBSD: CHANGES,v 1.10393 2005/06/20 02:01:46 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2924,3 +2924,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/screws to 0.56nb1 [kristerw 2005-06-19]
 	Updated print/chktex to 1.6.1nb3 [kristerw 2005-06-19]
 	Updated security/nessus-plugins to 2.2.4nb1 [kristerw 2005-06-19]
+	Updated news/trn to 4.76nb2 [kristerw 2005-06-20]
