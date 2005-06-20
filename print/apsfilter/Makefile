@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2005/06/17 04:49:48 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/20 15:52:47 kristerw Exp $
 #
 
 DISTNAME=	apsfilter-7.2.5
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://www.apsfilter.org/download/
 
@@ -21,10 +22,12 @@ WRKSRC=		${WRKDIR}/apsfilter
 HAS_CONFIGURE=	YES
 USE_BZIP2=	YES
 USE_PKGINSTALL=	YES
+USE_TOOLS+=	awk
 
 CONFIGURE_ARGS+=--prefix=${PREFIX}
 CONFIGURE_ARGS+=--with-shell=${SH}
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=--with-awk="${TOOLS_AWK}"
 
 PKG_SYSCONFSUBDIR?=	apsfilter
 CONF_FILES=	${PREFIX}/share/apsfilter/template/apsfilterrc \
