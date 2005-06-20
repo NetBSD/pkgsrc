@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.1 2005/06/01 18:03:27 jlam Exp $
+# $NetBSD: version.mk,v 1.2 2005/06/20 22:13:10 jlam Exp $
 #
 # This Makefile fragment is included by Makefiles that need to access
 # the X11_TYPE and version number of a XFree86 distribution.
@@ -14,9 +14,9 @@
 
 BUILTIN_X11_TYPE.XFree86=	XFree86
 
-BUILTIN_FILES_VAR:=			CF_XFREE86 CF_XFREE86_VERSION
-BUILTIN_FILES.CF_XFREE86=		${X11BASE}/lib/X11/config/xfree86.cf
-BUILTIN_FILES.CF_XFREE86_VERSION=	${X11BASE}/lib/X11/config/version.def
+BUILTIN_FIND_FILES_VAR:=		CF_XFREE86 CF_XFREE86_VERSION
+BUILTIN_FIND_FILES.CF_XFREE86=		${X11BASE}/lib/X11/config/xfree86.cf
+BUILTIN_FIND_FILES.CF_XFREE86_VERSION=	${X11BASE}/lib/X11/config/version.def
 .include "../../mk/buildlink3/find-files.mk"
 
 .if !defined(BUILTIN_X11_VERSION.XFree86) && \

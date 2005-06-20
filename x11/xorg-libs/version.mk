@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.1 2005/06/01 18:03:33 jlam Exp $
+# $NetBSD: version.mk,v 1.2 2005/06/20 22:13:10 jlam Exp $
 #
 # This Makefile fragment is included by Makefiles that need to access
 # the X11_TYPE and version number of an X.org distribution.
@@ -14,9 +14,9 @@
 
 BUILTIN_X11_TYPE.xorg=	xorg
 
-BUILTIN_FILES_VAR:=		CF_XORGVERSION CF_XORG
-BUILTIN_FILES.CF_XORGVERSION=	${X11BASE}/lib/X11/config/xorgversion.def
-BUILTIN_FILES.CF_XORG=		${X11BASE}/lib/X11/config/xorg.cf
+BUILTIN_FIND_FILES_VAR:=		CF_XORGVERSION CF_XORG
+BUILTIN_FIND_FILES.CF_XORGVERSION=	${X11BASE}/lib/X11/config/xorgversion.def
+BUILTIN_FIND_FILES.CF_XORG=		${X11BASE}/lib/X11/config/xorg.cf
 .include "../../mk/buildlink3/find-files.mk"
 
 .if !defined(BUILTIN_XORG_VERSION_FILE)
