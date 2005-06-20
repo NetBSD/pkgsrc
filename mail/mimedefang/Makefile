@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2005/06/16 06:58:03 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/20 10:20:45 markd Exp $
 
 DISTNAME=		mimedefang-2.52
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.mimedefang.org/static/
 
@@ -56,7 +57,7 @@ CONFIGURE_ARGS+=	--with-quarantinedir=${DEFANG_SPOOLDIR}
 #	can be found at runtime. -- they have to be listed
 #	in the environment, as the --enable-<> flags don't work
 CONFIGURE_ENV+=		CLAMD=${PREFIX}/sbin/clamd
-CONFIGURE_ENV+=		CLAMSCAN=${PREFIX}/sbin/clamscan
+CONFIGURE_ENV+=		CLAMSCAN=${PREFIX}/bin/clamscan
 CONFIGURE_ENV+=		FPROT=${PREFIX}/bin/f-prot
 CONFIGURE_ENV+=		NAI=${PREFIX}/bin/uvscan
 
