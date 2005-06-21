@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/22 20:07:42 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/21 16:18:52 jlam Exp $
 #
 
 DISTNAME=	ircservices-5.0.49
@@ -52,6 +52,19 @@ CONF_FILES_PERMS=	${PREFIX}/share/examples/ircservices/ircservices.conf \
 CONF_FILES_PERMS+=	${PREFIX}/share/examples/ircservices/modules.conf \
 				${PREFIX}/lib/services/modules.conf \
 				${BINOWN} ${BINGRP} 0640
+
+INSTALLATION_DIRS=	lib/services man/man8 sbin
+
+.include "../../mk/bsd.prefs.mk"
+
+# Only some platforms build the dynamically-loadable modules.  On
+# others, the modules are statically-linked into the ircservices
+# executable.
+#
+.if exists(${WRKDIR}/${DISTNAME}/modules/mail/main.so)
+PLIST_SRC=	${.CURDIR}/PLIST.shared
+.endif
+PLIST_SRC+=	${.CURDIR}/PLIST
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/ircservices
