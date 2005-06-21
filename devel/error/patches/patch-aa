@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2005/06/21 21:02:16 jlam Exp $
+
+--- error.h.orig	2005-05-10 16:48:24.000000000 -0400
++++ error.h
+@@ -248,5 +248,5 @@ char  **wordvsplice(int, int, char **);
+ boolean	writetouched(int);
+ 
+ extern char *fgetln(FILE *, size_t*);
+-extern ssize_t strlcpy(char *, const char *, size_t);
+-extern ssize_t strlcat(char *, const char *, size_t);
++extern size_t strlcpy(char *, const char *, size_t);
++extern size_t strlcat(char *, const char *, size_t);
