@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2005/06/20 22:03:42 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.52 2005/06/21 23:06:07 jlam Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -92,7 +92,15 @@ CXXFLAGS+=		-DQ_INLINE_TEMPLATES=inline
 
 .include "../../mk/x11.buildlink3.mk"
 
-pre-configure:
+# XXX This is actually wrong.  It should be done at pre-configure time
+# XXX or else the value of LIBTOOL embedded into the qmake.conf file
+# XXX is wrong.  However, that will cause other qt3-* packages to
+# XXX break since pkgsrc/mk/buildlink3/libtool-fix-la embeds the wrong
+# XXX buildlibdir in some cases.  This will be changed back to
+# XXX "pre-configure" and libtool-fix-la will be fixed after
+# XXX pkgsrc-2005Q2 has been branched.
+# XXX 
+post-patch:
 	${SED} \
 		-e 's:@LOCALBASE@:${LOCALBASE}:g' \
 		-e 's:@X11BASE@:${X11BASE}:g' \
