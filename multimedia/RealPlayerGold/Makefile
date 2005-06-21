@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/21 18:56:13 wiz Exp $
 #
 
 DISTNAME=		RealPlayer10GOLD
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=		wget-[0-9]*:../../net/wget
 FETCH_CMD=		${PREFIX}/bin/wget
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
 RPM2PKGARGS=		-d ${PREFIX} -f ${PLIST_SRC} -p ${REALPLAYER_SUBDIR} -s3
+RPM2PKGSTRIP=		3
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 DIST_SUBDIR=		${PKGNAME_NOREV}
