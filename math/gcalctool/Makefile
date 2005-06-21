@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/06/12 07:58:08 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2005/06/21 18:18:57 jlam Exp $
 #
 
 DISTNAME=		gcalctool-5.5.42
@@ -13,6 +13,8 @@ COMMENT=		Desktop calculator for GNOME
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
+CONFIGURE_ENV+=		HAVE_YACC=yes
+
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		bison gmake
 USE_PKGLOCALEDIR=	yes
