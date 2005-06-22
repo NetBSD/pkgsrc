@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1 2005/06/22 22:43:37 salo Exp $
+
+--- configure.orig	2004-05-26 04:17:24.000000000 +0200
++++ configure	2005-06-23 00:25:54.000000000 +0200
+@@ -16809,11 +16809,11 @@
+ _ACEOF
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define PID_FILE_PATH "`eval echo "${localstatedir}/proftpd.pid"`"
++#define PID_FILE_PATH "`eval echo "${localstatedir}/run/proftpd.pid"`"
+ _ACEOF
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define RUN_DIR "`eval echo "${localstatedir}/proftpd"`"
++#define RUN_DIR "`eval echo "${localstatedir}/run"`"
+ _ACEOF
+ 
+ 
