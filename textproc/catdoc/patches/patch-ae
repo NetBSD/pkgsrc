@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.2.2 2005/06/22 23:20:06 salo Exp $
+
+--- src/xls2csv.c.orig	1999-12-30 15:22:19.000000000 +0100
++++ src/xls2csv.c
+@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
+     char *filename;
+     short int *tmp_charset;
+     char *dest_csname; 
+-    char c;
++    int c;
+     int i;
+     check_charset(&dest_csname,TARGET_CHARSET); 
+     while ((c=getopt(argc,argv,"ls:d:xq:c:"))!=-1) {
