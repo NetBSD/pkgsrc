@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10404 2005/06/22 21:14:32 dillo Exp $
+$NetBSD: CHANGES,v 1.10405 2005/06/22 22:10:53 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2937,5 +2937,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/groff to 1.19.1nb3 [kristerw 2005-06-20]
 	Updated wm/qvwm to 1.1.12nb4 [kristerw 2005-06-20]
 	Updated net/tor to 0.0.9.10 [salo 2005-06-22]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2005Q2 branch [agc 2005-06-22]
 	Updated www/p5-CGI to 3.10 [reed 2005-06-22]
 	Added archivers/libzip version 0.6 [dillo 2005-06-22]
