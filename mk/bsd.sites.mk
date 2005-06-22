@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.37 2005/05/11 15:52:14 tv Exp $
+# $NetBSD: bsd.sites.mk,v 1.38 2005/06/22 21:14:42 heinz Exp $
 #
 # Default MASTER_SITES
 
@@ -143,24 +143,26 @@ MASTER_SITE_XEMACS+=    \
 
 MASTER_SITE_APACHE+=    \
 	http://www.apache.org/dist/ \
-	http://mirrors.midco.net/pub/apache.org/ \
 	http://mirrors.ccs.neu.edu/Apache/dist/ \
+	http://apache.planetmirror.com.au/dist/ \
 	http://www.ibiblio.org/pub/mirrors/apache/ \
 	http://apache.towardex.com/ \
 	http://apache.oregonstate.edu/ \
 	http://www.tux.org/pub/net/apache/dist/ \
 	http://apache.secsup.org/dist/ \
-	http://ftp.epix.net/apache/ \
-	http://public.planetmirror.com.au/pub/apache/dist/ \
 	http://apache.osuosl.org/ \
-	ftp://ftp.rge.com/pub/infosystems/apache/ \
-	ftp://ftp.epix.net/pub/apache/ \
+	http://sunsite.tus.ac.jp/pub/apache/ \
+	http://www.mirrorservice.org/sites/ftp.apache.org/ \
+	http://ftp.plusline.de/ftp.apache.org/ \
 	ftp://ftp.ccs.neu.edu/net/mirrors/Apache/dist/ \
+	ftp://ftp.planetmirror.com/pub/apache/dist/ \
 	ftp://ftp.tux.org/pub/net/apache/dist/ \
 	ftp://www.ibiblio.org/pub/mirrors/apache/ \
 	ftp://ftp.oregonstate.edu/pub/apache/ \
 	ftp://apache.secsup.org/pub/apache/dist/ \
-	ftp://ftp.fu-berlin.de/unix/network/www/apache/
+	ftp://sunsite.tus.ac.jp/pub/archives/www/apache/ \
+	ftp://ftp.mirrorservice.org/sites/ftp.apache.org/ \
+	ftp://ftp.plusline.de/pub/ftp.apache.org/
 
 MASTER_SITE_DEBIAN+= \
 	http://ftp.debian.org/debian/ \
