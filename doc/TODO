@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3628 2005/06/19 11:38:05 veego Exp $
+$NetBSD: TODO,v 1.3629 2005/06/22 20:43:22 reed Exp $
 
 Suggested new packages
 ======================
@@ -771,7 +771,6 @@ Suggested package updates
 	o p5-Business-ISBN-1.80
 	o p5-Business-ISBN-Data-1.10
 	o p5-CDDB-1.15
-	o p5-CGI-3.10 [pkg/30302]
 	o p5-Cache-Cache-1.04
 	o p5-Class-Trigger-0.09 [pkg/29923]
 	o p5-Compress-Bzip2-1.03
