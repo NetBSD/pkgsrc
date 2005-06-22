@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2005/05/31 10:01:39 dillo Exp $
+# $NetBSD: options.mk,v 1.9 2005/06/22 10:30:12 taca Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
-PKG_SUPPORTED_OPTIONS=	PAM kerberos ldap skey
+PKG_SUPPORTED_OPTIONS=	pam kerberos ldap skey
 
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS=	skey
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=	skey
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:MPAM)
+.if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 DL_AUTO_VARS=		yes
 CONFIGURE_ARGS+=	--with-pam
