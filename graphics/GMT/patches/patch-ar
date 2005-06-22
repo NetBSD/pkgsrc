@@ -1,4 +1,4 @@
-$NetBSD: patch-ar,v 1.2 2001/04/19 20:51:32 jtb Exp $
+$NetBSD: patch-ar,v 1.3 2005/06/22 08:34:54 jlam Exp $
 
 --- ./src/segyprogs/makefile.orig	Wed Apr 11 19:58:09 2001
 +++ ./src/segyprogs/makefile
@@ -16,7 +16,7 @@ $NetBSD: patch-ar,v 1.2 2001/04/19 20:51:32 jtb Exp $
  install:		all
  			for i in $(SEGYPLOT); do \
 -				$(INSTALL) $$i$(EXE) $(bindir); \
-+				$(LIBTOOL) $(INSTALL_PROGRAM) $$i$(EXE) $(bindir); \
++				$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$i$(EXE) $(bindir); \
  			done
  
  uninstall:	
@@ -25,12 +25,12 @@ $NetBSD: patch-ar,v 1.2 2001/04/19 20:51:32 jtb Exp $
  
  segy_io.o:		$(SEGYPLOT_H) segy_io.c
 -			$(CC) -c $(CFLAGS) segy_io.c
-+			@$(LIBTOOL) $(CC) $(CPPFLAGS) -c $(CFLAGS) segy_io.c
++			@$(LIBTOOL) --mode=compile $(CC) $(CPPFLAGS) -c $(CFLAGS) segy_io.c
  
  $(SEGYPLOT):		$(SEGYPLOT_O) segy_io.o
 -			$(CC) $(CFLAGS) segy_io.o $@.o -o $@ $(ALLLIB) $(LDFLAGS)
-+			@$(LIBTOOL) $(CC) $(CFLAGS) segy_io.lo $@.lo -o $@ $(ALLLIB) $(LDFLAGS)
++			@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) segy_io.lo $@.lo -o $@ $(ALLLIB) $(LDFLAGS)
  
  .c.o:
 -			$(CC) -c $(CFLAGS) $<
-+			@$(LIBTOOL) $(CC) $(CPPFLAGS) -c $(CFLAGS) $<
++			@$(LIBTOOL) --mode=compile $(CC) $(CPPFLAGS) -c $(CFLAGS) $<

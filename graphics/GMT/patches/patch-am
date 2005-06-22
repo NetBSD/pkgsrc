@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.2 2001/04/19 20:51:32 jtb Exp $
+$NetBSD: patch-am,v 1.3 2005/06/22 08:34:54 jlam Exp $
 
 --- src/cps/makefile.orig	Wed Oct 18 03:01:09 2000
 +++ src/cps/makefile
@@ -8,8 +8,8 @@ $NetBSD: patch-am,v 1.2 2001/04/19 20:51:32 jtb Exp $
  install:	all
 -		$(INSTALL) cpsencode$(EXE) $(bindir)
 -		$(INSTALL) cpsdecode$(EXE) $(bindir)
-+		@$(LIBTOOL) $(INSTALL_PROGRAM) cpsencode$(EXE) $(bindir)
-+		@$(LIBTOOL) $(INSTALL_PROGRAM) cpsdecode$(EXE) $(bindir)
++		@$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) cpsencode$(EXE) $(bindir)
++		@$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) cpsdecode$(EXE) $(bindir)
  
  uninstall:
  		\rm -f $(bindir)/cpsencode$(EXE)
@@ -34,15 +34,15 @@ $NetBSD: patch-am,v 1.2 2001/04/19 20:51:32 jtb Exp $
  
  cpsencode:	cpsencode.o libuu.a
 -		$(CC) $(CFLAGS) $(LDFLAGS) cpsencode.o -L. -luu -o cpsencode
-+		@$(LIBTOOL) $(CC) $(CFLAGS) $(LDFLAGS) $? -o $@
++		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $? -o $@
  
  cpsdecode:	cpsdecode.o libuu.a
 -		$(CC) $(CFLAGS) $(LDFLAGS) cpsdecode.o -L. -luu -o cpsdecode
-+		@$(LIBTOOL) $(CC) $(CFLAGS) $(LDFLAGS) $? -o $@
++		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $? -o $@
  
  .c.o:
 -		$(CC) -c $(CFLAGS) $<
-+		@$(LIBTOOL) $(CC) $(CPPFLAGS) -c $(CFLAGS) $<
++		@$(LIBTOOL) --mode=compile $(CC) $(CPPFLAGS) -c $(CFLAGS) $<
  
  cpsencode.c:	cps.h uu.h
  
