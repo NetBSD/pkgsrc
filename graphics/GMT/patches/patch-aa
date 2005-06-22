@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2001/04/19 20:51:31 jtb Exp $
+$NetBSD: patch-aa,v 1.7 2005/06/22 08:34:54 jlam Exp $
 
 --- src/Makefile.orig	Fri Mar  9 19:20:44 2001
 +++ src/Makefile
@@ -51,8 +51,8 @@ $NetBSD: patch-aa,v 1.6 2001/04/19 20:51:31 jtb Exp $
 -				$(INSTALL) -m 444 libpsl.$(SL) $(libdir); \
 -				$(INSTALL) -m 444 libgmt.$(SL) $(libdir); \
 -			fi; \
-+			$(LIBTOOL) $(INSTALL_DATA) libpsl.la $(libdir); \
-+			$(LIBTOOL) $(INSTALL_DATA) libgmt.la $(libdir); \
++			$(LIBTOOL) --mode=install $(INSTALL_DATA) libpsl.la $(libdir); \
++			$(LIBTOOL) --mode=install $(INSTALL_DATA) libgmt.la $(libdir); \
  		fi
  		if [ ! -d $(includedir) ]; then \
  			mkdir -p $(includedir); \
@@ -67,7 +67,7 @@ $NetBSD: patch-aa,v 1.6 2001/04/19 20:51:31 jtb Exp $
 +			mkdir -p $(bindir); \
 +		fi
 +		for i in $(PROGS); do \
-+			$(LIBTOOL) $(INSTALL_PROGRAM) $$i$(EXE) $(bindir); \
++			$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$i$(EXE) $(bindir); \
 +		done
 +		$(INSTALL) GMT $(bindir)
  
@@ -97,7 +97,7 @@ $NetBSD: patch-aa,v 1.6 2001/04/19 20:51:31 jtb Exp $
 -		$(AR) cvur libpsl.a $?
 -		$(RANLIB) libpsl.a
 +libpsl.la:	pslib.o
-+		@$(LIBTOOL) $(CC) -o $@ pslib.lo $(LDFLAGS) -lm --version-info 0:0 -rpath $(libdir)
++		@$(LIBTOOL) --mode=link $(CC) -o $@ pslib.lo $(LDFLAGS) -lm --version-info 0:0 -rpath $(libdir)
  
  pslib.o:	pslib.c $(PS_H)
 -		$(CC) $(CFLAGS) -c pslib.c
@@ -108,12 +108,12 @@ $NetBSD: patch-aa,v 1.6 2001/04/19 20:51:31 jtb Exp $
 -
 -libpsl.$(SL):	pslib.o
 -		$(LD) $(LD_OPT) $? -o $@
-+		@$(LIBTOOL) $(CC) $(CPPFLAGS) $(CFLAGS) -c pslib.c
++		@$(LIBTOOL) --mode=compile $(CC) $(CPPFLAGS) $(CFLAGS) -c pslib.c
  
 -libgmt.$(SL):	$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
 -		$(LD) $(LD_OPT) $(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O) -o $@
 +libgmt.la:	$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
-+		@$(LIBTOOL) $(CC) -o $@ $(LIB_O:.o=.lo) $(TRIANGLE_O:.o=.lo) \
++		@$(LIBTOOL) --mode=link $(CC) -o $@ $(LIB_O:.o=.lo) $(TRIANGLE_O:.o=.lo) \
 +		$(ALPHA_SINCOS_O:.o=.lo) $(LDFLAGS) $(CDF) $(LIBS) 	\
 +		--version-info 0:0 -rpath $(libdir)
  
@@ -123,9 +123,9 @@ $NetBSD: patch-aa,v 1.6 2001/04/19 20:51:31 jtb Exp $
  
  $(PROGS):	$(GMTLIB) $(PROGS_O)
 -		$(CC) $(CFLAGS) $@.o -L. -lgmt -lpsl $(CDF) $(LIBS) $(LDFLAGS) -o $@
-+		@$(LIBTOOL) $(CC) $(CPPFLAGS) $(CFLAGS) $@.o libgmt.la \
++		@$(LIBTOOL) --mode=link $(CC) $(CPPFLAGS) $(CFLAGS) $@.o libgmt.la \
 +		libpsl.la $(CDF) $(LIBS) $(LDFLAGS) -o $@
  		$(COMPRESS) $@$(EXE)
  .c.o:
 -		$(CC) -c $(CFLAGS) $<
-+		@$(LIBTOOL) $(CC) $(CPPFLAGS) -c $(CFLAGS) $<
++		@$(LIBTOOL) --mode=compile $(CC) $(CPPFLAGS) -c $(CFLAGS) $<

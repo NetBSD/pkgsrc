@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.2 2001/04/19 20:51:32 jtb Exp $
+$NetBSD: patch-an,v 1.3 2005/06/22 08:34:54 jlam Exp $
 
 --- src/gshhs/makefile.orig	Sat Jan 27 03:10:36 2001
 +++ src/gshhs/makefile
@@ -8,8 +8,8 @@ $NetBSD: patch-an,v 1.2 2001/04/19 20:51:32 jtb Exp $
  install:	all
 -		$(INSTALL) gshhs$(EXE) $(bindir)
 -		$(INSTALL) gshhs_dp$(EXE) $(bindir)
-+		@$(LIBTOOL) $(INSTALL_PROGRAM) gshhs$(EXE) $(bindir)
-+		@$(LIBTOOL) $(INSTALL_PROGRAM) gshhs_dp$(EXE) $(bindir)
++		@$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) gshhs$(EXE) $(bindir)
++		@$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) gshhs_dp$(EXE) $(bindir)
  
  clean:	
 -		\rm -f *.o *% gshhs$(EXE) gshhs_dp$(EXE)
@@ -19,12 +19,12 @@ $NetBSD: patch-an,v 1.2 2001/04/19 20:51:32 jtb Exp $
  
  gshhs:		gshhs.o
 -		$(CC) $(CFLAGS) gshhs.o $(LIBS) $(LDFLAGS) -o gshhs
-+		@$(LIBTOOL) $(CC) $(CFLAGS) gshhs.lo $(LIBS) $(LDFLAGS) -o $@
++		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) gshhs.lo $(LIBS) $(LDFLAGS) -o $@
  
  gshhs_dp:	gshhs_dp.o
 -		$(CC) $(CFLAGS) gshhs_dp.o $(LIBS) $(LDFLAGS) -o gshhs_dp
-+		@$(LIBTOOL) $(CC) $(CFLAGS) gshhs_dp.lo $(LIBS) $(LDFLAGS) -o $@
++		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) gshhs_dp.lo $(LIBS) $(LDFLAGS) -o $@
  
  .c.o:
 -		$(CC) -c $(CFLAGS) $<
-+		@$(LIBTOOL) $(CC) $(CPPFLAGS) -c $(CFLAGS) $<
++		@$(LIBTOOL) --mode=compile $(CC) $(CPPFLAGS) -c $(CFLAGS) $<
