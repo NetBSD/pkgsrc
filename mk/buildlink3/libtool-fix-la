@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.5 2004/09/21 15:01:40 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.6 2005/06/22 21:08:37 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -216,7 +216,7 @@ if $test -f $lafile; then
 	fi
 	$echo >> $lafile
 	$echo "# Directory that this library was built in:" >> $lafile
-	$echo "buildlibdir='"`cd .; $pwd`"'" >> $lafile
+	$echo "buildlibdir='"`cd $ladir; $pwd`"'" >> $lafile
 	$echo >> $lafile
 	$echo "# This file has been modified by buildlink3." >> $lafile
 	$rm ${lafile}.tmp
