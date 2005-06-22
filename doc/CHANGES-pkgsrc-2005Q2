@@ -1,0 +1,6 @@
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.1 2005/06/22 23:26:31 salo Exp $
+
+Changes to the packages collection and infrastructure on the
+pkgsrc-2005Q2 branch:
+
+Created pkgsrc-2005Q2 branch [agc 2005-06-22 20:30 GMT]
