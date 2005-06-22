@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.2 2001/04/19 20:51:32 jtb Exp $
+$NetBSD: patch-ao,v 1.3 2005/06/22 08:34:54 jlam Exp $
 
 --- ./src/imgsrc/makefile.orig	Wed Apr 11 19:58:09 2001
 +++ ./src/imgsrc/makefile
@@ -17,15 +17,15 @@ $NetBSD: patch-ao,v 1.2 2001/04/19 20:51:32 jtb Exp $
  install:	all
 -		$(INSTALL) img2mercgrd$(EXE) $(bindir)
 -		$(INSTALL) img2grd $(bindir)
-+		@$(LIBTOOL) $(INSTALL_PROGRAM) img2mercgrd$(EXE) $(bindir)
-+		@$(LIBTOOL) $(INSTALL_SCRIPT) img2grd $(bindir)
++		@$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) img2mercgrd$(EXE) $(bindir)
++		@$(LIBTOOL) --mode=install $(INSTALL_SCRIPT) img2grd $(bindir)
  
  uninstall:
  		\rm -f $(bindir)/img2mercgrd$(EXE) $(bindir)/img2grd
  
  img2mercgrd:	img2mercgrd.o gmt_imgsubs.o
 -		$(CC) $(CFLAGS) $(LDFLAGS) img2mercgrd.o gmt_imgsubs.o $(GMT) $(CDF) $(LIBS) -o img2mercgrd
-+		@$(LIBTOOL) $(CC) $(CFLAGS) $(LDFLAGS) img2mercgrd.lo gmt_imgsubs.lo $(GMT) $(CDF) $(LIBS) -o img2mercgrd
++		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) img2mercgrd.lo gmt_imgsubs.lo $(GMT) $(CDF) $(LIBS) -o img2mercgrd
  
  spotless:	clean
  
@@ -33,4 +33,4 @@ $NetBSD: patch-ao,v 1.2 2001/04/19 20:51:32 jtb Exp $
  		rm -f *.o img2mercgrd$(EXE)
  .c.o:
 -		$(CC) -c $(CFLAGS) $<
-+		@$(LIBTOOL) $(CC) $(CPPFLAGS) -c $(CFLAGS) $<
++		@$(LIBTOOL) --mode=compile $(CC) $(CPPFLAGS) -c $(CFLAGS) $<
