@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/05 10:17:47 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2005/06/22 08:34:54 jlam Exp $
 
 DISTNAME=	GMT3.4
 PKGNAME=	GMT-3.4
@@ -25,14 +25,13 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
-NETCDF_DEFAULT=	${LOCALBASE}
-EVAL_PREFIX+=	NETCDF=netcdf
-
 CONFIGURE_ARGS+=--includedir=${PREFIX}/include/gmt
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share/gmt
 CONFIGURE_ARGS+=--enable-eps
 CONFIGURE_ARGS+=--enable-www=${PREFIX}/share/doc/html
 CONFIGURE_ARGS+=--enable-mansect=1
+MAKE_ENV+=	NETCDFHOME=${BUILDLINK_PREFIX.netcdf:Q}
+MAKE_ENV+=	LIBTOOL=${LIBTOOL:Q}
 
 BUILD_TARGET=	all suppl
 INSTALL_TARGET= install-all
