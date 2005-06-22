@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10402 2005/06/22 15:56:55 salo Exp $
+$NetBSD: CHANGES,v 1.10403 2005/06/22 20:43:22 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2937,3 +2937,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/groff to 1.19.1nb3 [kristerw 2005-06-20]
 	Updated wm/qvwm to 1.1.12nb4 [kristerw 2005-06-20]
 	Updated net/tor to 0.0.9.10 [salo 2005-06-22]
+	Updated www/p5-CGI to 3.10 [reed 2005-06-22]
