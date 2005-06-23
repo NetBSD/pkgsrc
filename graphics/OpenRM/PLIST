@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/05 20:34:17 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/23 04:02:48 jlam Exp $
 include/rm/rm.h
 include/rm/rmaux.h
 include/rm/rmcmpmgr.h
@@ -19,18 +19,10 @@ include/rm/rmvpub.h
 include/rm/rmw.h
 include/rm/rmx.h
 @dirrm include/rm
-lib/librm.a
-lib/librm.so
-lib/librm.so.1
-lib/librmaux.a
-lib/librmaux.so
-lib/librmaux.so.1
-lib/librmi.a
-lib/librmi.so
-lib/librmi.so.1
-lib/librmv.a
-lib/librmv.so
-lib/librmv.so.1
+lib/librm.la
+lib/librmaux.la
+lib/librmi.la
+lib/librmv.la
 share/doc/OpenRM/FUTUREPLANS
 share/doc/OpenRM/README
 share/doc/OpenRM/RELEASENOTES

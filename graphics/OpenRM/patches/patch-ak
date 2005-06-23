@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2005/06/23 04:02:48 jlam Exp $
+
+--- rmi/Makefile.x11.orig	2004-01-16 23:09:05.000000000 -0500
++++ rmi/Makefile.x11
+@@ -80,7 +80,7 @@ $(LIBDIR)/$(RMILIB): $(OBJECTS)
+ 	@if ([ -d $(LIBDIR) ]) then :; else (mkdir $(LIBDIR)); fi
+ 	@if (\rm -f $(LIBDIR)/$(RMILIB)) then :; fi
+ 	@$(MAKELIB)  $(ARCHFLAGS) $(RMILIB) $(MAJOR) $(MINOR) $(OBJECTS)
+-	@mv $(RMILIB)* $(LIBDIR)
++	@cp $(RMILIB)* $(LIBDIR)
+ 
+ dep:
+ 	makedepend -Y -I../include *.c -f depend
