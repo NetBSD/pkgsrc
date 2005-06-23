@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2001/01/08 14:20:20 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2005/06/23 15:35:07 wiz Exp $
 
---- nap.c.orig	Mon Aug 28 00:39:57 2000
+--- nap.c.orig	2000-09-08 17:16:13.000000000 +0200
 +++ nap.c
-@@ -10,9 +10,8 @@
+@@ -10,7 +10,6 @@
  #include <dirent.h>
  #include <fcntl.h>
  #include <sys/types.h>
@@ -10,9 +10,7 @@ $NetBSD: patch-aa,v 1.1 2001/01/08 14:20:20 wiz Exp $
  #ifndef MCURSES
    #include <ncurses.h>
  #endif
- #include <stdlib.h>
- #include <signal.h>
-@@ -190,10 +189,8 @@
+@@ -151,10 +150,8 @@ void resize()
    ioctl(fileno(stdin), TIOCGWINSZ, &ws);
    
    resizeterm(ws.ws_row, ws.ws_col);
@@ -25,7 +23,7 @@ $NetBSD: patch-aa,v 1.1 2001/01/08 14:20:20 wiz Exp $
    if (notop)
      wresize(wchan, LINES-2, COLS);
    else
-@@ -226,10 +223,10 @@
+@@ -187,10 +184,10 @@ void resize()
  
  void wstats(WINDOW *win)
  {
@@ -40,7 +38,7 @@ $NetBSD: patch-aa,v 1.1 2001/01/08 14:20:20 wiz Exp $
    wp(win, "LINES/COLS to %i - %i\n", LINES, COLS);
    drw(win);
  }
-@@ -831,7 +828,7 @@
+@@ -790,7 +787,7 @@ void dscr(WINDOW *win)
    if (cur == NULL)
      return;
    
@@ -49,7 +47,7 @@ $NetBSD: patch-aa,v 1.1 2001/01/08 14:20:20 wiz Exp $
    
    if (cur->chan && (wmode && cur->chan != curchan))
      i++;
-@@ -846,7 +843,7 @@
+@@ -805,7 +802,7 @@ void dscr(WINDOW *win)
      i--;
    }
    
