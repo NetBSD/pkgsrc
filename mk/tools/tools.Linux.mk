@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.20 2005/06/16 04:30:46 grant Exp $
+# $NetBSD: tools.Linux.mk,v 1.21 2005/06/23 20:45:34 jlam Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -34,6 +34,11 @@ TOOLS_PLATFORM.cut?=		/bin/cut
 TOOLS_PLATFORM.cut?=		/usr/bin/cut
 .endif
 TOOLS_PLATFORM.date?=		/bin/date
+.if exists(/bin/diff)
+TOOLS_PLATFORM.diff?=		/bin/diff
+.elif exists(/usr/bin/diff)
+TOOLS_PLATFORM.diff?=		/usr/bin/diff
+.endif
 TOOLS_PLATFORM.dirname?=	/usr/bin/dirname
 TOOLS_PLATFORM.echo?=		echo			# shell builtin
 .if exists(/bin/egrep)
