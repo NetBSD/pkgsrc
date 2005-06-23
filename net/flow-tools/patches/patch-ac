@@ -1,11 +1,19 @@
-$NetBSD: patch-ac,v 1.2 2003/05/23 07:19:43 seb Exp $
+$NetBSD: patch-ac,v 1.3 2005/06/23 14:20:56 seb Exp $
 
---- docs/Makefile.am.orig	2003-02-23 23:58:11.000000000 +0000
+--- docs/Makefile.am.orig	2005-05-11 00:26:20.000000000 +0000
 +++ docs/Makefile.am
+@@ -1,6 +1,6 @@
+ man_MANSIN = flow-capture.1.in flow-cat.1 flow-dscan.1 flow-expire.1 flow-export.1 flow-fanout.1.in flow-filter.1 flow-gen.1 flow-header.1 flow-import.1 flow-merge.1 flow-print.1.in flow-receive.1.in flow-send.1 flow-split.1 flow-stat.1 flow-tools-examples.1 flow-tools.1 flow-tag.1.in flow-nfilter.1.in flow-report.1.in flow-mask.1.in flow-xlate.1.in flow-rptfmt.1.in flow-log2rrd.1.in flow-rpt2rrd.1.in
+ 
+-man_MANS = flow-capture.1 flow-cat.1 flow-dscan.1 flow-expire.1 flow-export.1 flow-fanout.1 flow-filter.1 flow-gen.1 flow-header.1 flow-import.1 flow-merge.1 flow-print.1 flow-receive.1 flow-send.1 flow-split.1 flow-stat.1 flow-tools-examples.1 flow-tools.1 flow-tag.1 flow-nfilter.1 flow-report.1 flow-mask.1 flow-xlate.1 flow-rptfmt.1 flow-log2rrd.1 flow-rpt2rrd.1
++man_MANS = flow-capture.1 flow-cat.1 flow-dscan.1 flow-expire.1 flow-export.1 flow-fanout.1 flow-filter.1 flow-gen.1 flow-header.1 flow-import.1 flow-merge.1 flow-print.1 flow-receive.1 flow-send.1 flow-split.1 flow-stat.1 flow-tools-examples.1 flow-tools.1 flow-tag.1 flow-nfilter.1 flow-report.1 flow-mask.1 flow-xlate.1
+ 
+ man_SGMLS = flow-capture.sgml flow-cat.sgml flow-dscan.sgml flow-expire.sgml flow-export.sgml flow-fanout.sgml flow-filter.sgml flow-gen.sgml flow-header.sgml flow-import.sgml flow-merge.sgml flow-print.sgml flow-receive.sgml flow-send.sgml flow-split.sgml flow-stat.sgml flow-tools-examples.sgml flow-tools.sgml flow-xlate.sgml flow-tag.sgml flow-nfilter.sgml flow-report.sgml flow-mask.sgml flow-rptfmt.sgml flow-log2rrd.sgml flow-rpt2rrd.sgml
+ 
 @@ -23,6 +23,3 @@ SUFFIXES = .sgml .1 .html .1.in .html.in
  
  .sgml.html.in:
- 	jade -V nochunks -c /usr/local/share/sgml/docbook/dsssl/modular/catalog -c /usr/local/share/sgml/docbook/catalog -c /usr/local/share/sgml/jade/catalog -d /usr/local/share/sgml/docbook/dsssl/modular/html/docbook.dsl -t sgml $*.sgml > $*.html.in
+ 	openjade -V nochunks -c /usr/local/share/sgml/docbook/dsssl/modular/catalog -c /usr/local/share/sgml/docbook/catalog -c /usr/local/share/sgml/jade/catalog -d /usr/local/share/sgml/docbook/dsssl/modular/html/docbook.dsl -t sgml $*.sgml > $*.html.in
 -
 -all-am: Makefile $(man_MANSIN) $(man_HTMLS)
 -

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2005/05/31 10:01:38 dillo Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/23 14:20:56 seb Exp $
 
-DISTNAME=	flow-tools-0.67
-PKGREVISION=	2
+DISTNAME=	flow-tools-0.68
+#PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.eng.oar.net/pub/flow-tools/
 
@@ -28,7 +28,9 @@ SUPPORT_FILES+=	${EGDIR}/sym/${_f_} ${PKG_SYSCONFDIR}/sym/${_f_}
 MESSAGE_SUBST+=	EGDIR=${EGDIR}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.flow-tools
-PKG_SUPPORTED_OPTIONS=	mysql postgresql
+PKG_OPTIONS_OPTIONAL_GROUPS=	database
+PKG_SUPPORTED_OPTIONS=		python
+PKG_OPTIONS_GROUP.database=	mysql postgresql
 PKG_OPTIONS_LEGACY_VARS+=	FLOW_TOOLS_USE_MYSQL:mysql
 PKG_OPTIONS_LEGACY_VARS+=	FLOW_TOOLS_USE_POSTGRESQL:postgresql
 
@@ -44,6 +46,22 @@ CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 .if !empty(PKG_OPTIONS:Mpostgresql)
 .  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX}
+.endif
+
+# Python scripts support.
+.if !empty(PKG_OPTIONS:Mpython)
+.  include "../../lang/python/application.mk"
+
+PYTHON_PATCH_SCRIPTS=	bin/flow-rpt2rrd bin/flow-log2rrd bin/flow-rptfmt
+PLIST_SUBST+=	PYTHON_OPT=""
+
+post-install:
+.   for s in flow-rpt2rrd flow-log2rrd flow-rptfmt
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/${s} ${PREFIX}/bin/${s}
+	${INSTALL_MAN} ${WRKSRC}/docs/${s}.1 ${PREFIX}/man/man1/${s}.1
+.  endfor
+.else
+PLIST_SUBST+=	PYTHON_OPT="@comment "
 .endif
 
 # To avoid providing more patch files we do the following...
