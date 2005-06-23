@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.35 2005/03/29 15:00:35 xtraeme Exp $
+# $NetBSD: pyversion.mk,v 1.36 2005/06/23 11:10:32 seb Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -140,7 +140,7 @@ PKG_FAIL_REASON+=   "No valid Python version"
 PTHREAD_OPTS=	require
 .include "../../mk/pthread.buildlink3.mk"
 .if defined(PYTHON_FOR_BUILD_ONLY)
-BUILD_DEPMETHOD.python?=	build
+BUILDLINK_DEPMETHOD.python?=	build
 .endif
 .include "${PYPKGSRCDIR}/buildlink3.mk"
 
