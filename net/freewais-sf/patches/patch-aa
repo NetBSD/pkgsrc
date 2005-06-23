@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/05/11 13:56:53 bad Exp $
+$NetBSD: patch-aa,v 1.2 2005/06/23 22:12:44 kristerw Exp $
 
---- Configure.orig	Fri Apr 16 11:59:11 1999
-+++ Configure	Fri May  7 22:30:54 1999
+--- Configure.orig	1999-04-16 11:59:11.000000000 +0200
++++ Configure	2005-06-24 00:07:51.000000000 +0200
 @@ -2407,7 +2407,7 @@
  esac
  
@@ -29,3 +29,12 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/05/11 13:56:53 bad Exp $
      d_myregexp='n';
  fi
  
+@@ -7088,7 +7088,7 @@
+ package='$package'
+ passcat='$passcat'
+ patchlevel='$patchlevel'
+-perl='$perl'
++perl='$PERL5'
+ pg='$pg'
+ phostname='$phostname'
+ pidtype='$pidtype'
