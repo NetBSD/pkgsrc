@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2005/05/22 20:08:33 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2005/06/23 17:10:28 wiz Exp $
 
-DISTNAME=	mc-4.6.1-pre4a
-PKGNAME=	mc-4.6.1rc4
+DISTNAME=	mc-4.6.1-pre4
+PKGNAME=	mc-4.6.1rc4.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://pavelsh.pp.ru/mc/
 #MASTER_SITES=	http://www.ibiblio.org/pub/Linux/utils/file/managers/mc/ \
