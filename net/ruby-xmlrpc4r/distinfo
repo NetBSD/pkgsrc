@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:14:03 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/06/23 16:56:31 taca Exp $
 
 SHA1 (ruby/xmlrpc4r-1_7_16.tar.gz) = e72092533619003e99dd638fa6132ab6436db228
 RMD160 (ruby/xmlrpc4r-1_7_16.tar.gz) = 3d3134cec37065fb0f7c8beea56ac3385b8be86e
 Size (ruby/xmlrpc4r-1_7_16.tar.gz) = 64066 bytes
+SHA1 (patch-aa) = 14cc692f4a417ac93cc3f9b425c2f734d14e5de4
