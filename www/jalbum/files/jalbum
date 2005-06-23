@@ -1,0 +1,5 @@
+#/bin/sh
+#
+# $NetBSD: jalbum,v 1.1.1.1 2005/06/23 07:30:06 martti Exp $
+#
+@PKG_JAVA_HOME@/bin/java -jar @PREFIX@/share/jalbum/JAlbum.jar
