@@ -1,11 +1,38 @@
-$NetBSD: patch-ad,v 1.3 2004/04/22 15:33:35 seb Exp $
+$NetBSD: patch-ad,v 1.4 2005/06/23 14:20:56 seb Exp $
 
---- docs/Makefile.in.orig	2004-04-22 12:15:03.000000000 +0000
+--- docs/Makefile.in.orig	2005-05-11 14:20:18.000000000 +0000
 +++ docs/Makefile.in
-@@ -378,8 +378,6 @@ uninstall-man: uninstall-man1
+@@ -90,7 +90,7 @@ am__quote = @am__quote@
+ install_sh = @install_sh@
+ man_MANSIN = flow-capture.1.in flow-cat.1 flow-dscan.1 flow-expire.1 flow-export.1 flow-fanout.1.in flow-filter.1 flow-gen.1 flow-header.1 flow-import.1 flow-merge.1 flow-print.1.in flow-receive.1.in flow-send.1 flow-split.1 flow-stat.1 flow-tools-examples.1 flow-tools.1 flow-tag.1.in flow-nfilter.1.in flow-report.1.in flow-mask.1.in flow-xlate.1.in flow-rptfmt.1.in flow-log2rrd.1.in flow-rpt2rrd.1.in
+ 
+-man_MANS = flow-capture.1 flow-cat.1 flow-dscan.1 flow-expire.1 flow-export.1 flow-fanout.1 flow-filter.1 flow-gen.1 flow-header.1 flow-import.1 flow-merge.1 flow-print.1 flow-receive.1 flow-send.1 flow-split.1 flow-stat.1 flow-tools-examples.1 flow-tools.1 flow-tag.1 flow-nfilter.1 flow-report.1 flow-mask.1 flow-xlate.1 flow-rptfmt.1 flow-log2rrd.1 flow-rpt2rrd.1
++man_MANS = flow-capture.1 flow-cat.1 flow-dscan.1 flow-expire.1 flow-export.1 flow-fanout.1 flow-filter.1 flow-gen.1 flow-header.1 flow-import.1 flow-merge.1 flow-print.1 flow-receive.1 flow-send.1 flow-split.1 flow-stat.1 flow-tools-examples.1 flow-tools.1 flow-tag.1 flow-nfilter.1 flow-report.1 flow-mask.1 flow-xlate.1
+ 
+ man_SGMLS = flow-capture.sgml flow-cat.sgml flow-dscan.sgml flow-expire.sgml flow-export.sgml flow-fanout.sgml flow-filter.sgml flow-gen.sgml flow-header.sgml flow-import.sgml flow-merge.sgml flow-print.sgml flow-receive.sgml flow-send.sgml flow-split.sgml flow-stat.sgml flow-tools-examples.sgml flow-tools.sgml flow-xlate.sgml flow-tag.sgml flow-nfilter.sgml flow-report.sgml flow-mask.sgml flow-rptfmt.sgml flow-log2rrd.sgml flow-rpt2rrd.sgml
+ 
+@@ -111,6 +111,8 @@ CONFIG_CLEAN_FILES = flow-capture.1 flow
+ 	flow-fanout.html flow-xlate.1 flow-xlate.html flow-rpt2rrd.1 \
+ 	flow-rpt2rrd.html flow-rptfmt.1 flow-rptfmt.html flow-log2rrd.1 \
+ 	flow-log2rrd.html
++depcomp =
++am__depfiles_maybe =
+ DIST_SOURCES =
+ 
+ NROFF = nroff
+@@ -130,7 +132,7 @@ all: all-am
+ .SUFFIXES: .sgml .1 .html .1.in .html.in
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  docs/Makefile
++	  $(AUTOMAKE) --foreign  --ignore-deps docs/Makefile
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@ $(am__depfiles_maybe)
+ flow-capture.1: $(top_builddir)/config.status flow-capture.1.in
+@@ -344,8 +346,6 @@ uninstall-man: uninstall-man1
  
  .sgml.html.in:
- 	jade -V nochunks -c /usr/local/share/sgml/docbook/dsssl/modular/catalog -c /usr/local/share/sgml/docbook/catalog -c /usr/local/share/sgml/jade/catalog -d /usr/local/share/sgml/docbook/dsssl/modular/html/docbook.dsl -t sgml $*.sgml > $*.html.in
+ 	openjade -V nochunks -c /usr/local/share/sgml/docbook/dsssl/modular/catalog -c /usr/local/share/sgml/docbook/catalog -c /usr/local/share/sgml/jade/catalog -d /usr/local/share/sgml/docbook/dsssl/modular/html/docbook.dsl -t sgml $*.sgml > $*.html.in
 -
 -all-am: Makefile $(man_MANSIN) $(man_HTMLS)
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
