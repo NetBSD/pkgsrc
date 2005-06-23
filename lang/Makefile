@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2005/05/18 22:39:00 wiz Exp $
+# $NetBSD: Makefile,v 1.215 2005/06/23 03:04:00 jonb Exp $
 #
 
 COMMENT=	Programming languages
@@ -140,6 +140,7 @@ SUBDIR+=	sablevm
 SUBDIR+=	sablevm-classpath
 SUBDIR+=	sablevm-classpath-gui
 SUBDIR+=	sather
+SUBDIR+=	sbcl
 SUBDIR+=	scheme48
 SUBDIR+=	scm
 SUBDIR+=	siod
