@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: builtin.mk,v 1.5 2005/06/23 19:32:43 peter Exp $
 
 BUILTIN_PKG:=	pflkm
 
@@ -48,13 +48,13 @@ MAKEVARS+=	IS_BUILTIN.pflkm
 .if !defined(BUILTIN_PKG.pflkm) && \
     !empty(IS_BUILTIN.pflkm:M[yY][eE][sS])
 .  if ${PF_VERSION} == "3.7"
-BUILTIN_PKG.pflkm=	20050519	# release date for PF API 3.7
+BUILTIN_PKG.pflkm=	pflkm-20050519	# release date for PF API 3.7
 .  elif ${PF_VERSION} == "3.6"
-BUILTIN_PKG.pflkm=	20041101	# release date for PF API 3.6
+BUILTIN_PKG.pflkm=	pflkm-20041101	# release date for PF API 3.6
 .  elif ${PF_VERSION} == "3.5"
-BUILTIN_PKG.pflkm=	20040501	# release date for PF API 3.5
+BUILTIN_PKG.pflkm=	pflkm-20040501	# release date for PF API 3.5
 .  else
-BUILTIN_PKG.pflkm=	20040501	# release date for PF API 3.5
+BUILTIN_PKG.pflkm=	pflkm-20040501	# release date for PF API 3.5
 .  endif
 .endif
 MAKEVARS+=	BUILTIN_PKG.pflkm
