@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2005/06/17 03:50:26 jlam Exp $
+# $NetBSD: Makefile,v 1.62 2005/06/23 08:12:13 martti Exp $
 
-DISTNAME=	mrtg-2.11.1
-PKGREVISION=	1
+DISTNAME=	mrtg-2.12.2
+#PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		ftp://ftp.sunet.se/pub/network/monitoring/mrtg/ \
@@ -26,7 +26,7 @@ MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 COMMENT=	The Multi-Router Traffic Grapher
 
-USE_PERL5=	YES
+USE_TOOLS+=	perl
 PERL5_REQD+=	5.6.1
 GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
@@ -55,7 +55,7 @@ CONF_FILES=	${EGDIR}/mrtg.conf ${PKG_SYSCONFDIR}/mrtg.conf
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-patch
 SUBST_FILES.files=	../mrtg.conf.example ../netstat2mrtg		\
-			../sys2mrtg ../envstat2mrtg	
+			../sys2mrtg ../envstat2mrtg
 SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.files=	"Fixing default configuration files."
 

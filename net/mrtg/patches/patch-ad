@@ -1,20 +1,20 @@
-$NetBSD: patch-ad,v 1.9 2004/08/30 18:40:14 martti Exp $
+$NetBSD: patch-ad,v 1.10 2005/06/23 08:12:13 martti Exp $
 
---- bin/mrtg.orig	2004-08-08 12:58:55.000000000 +0300
-+++ bin/mrtg	2004-08-30 21:23:13.000000000 +0300
-@@ -703,4 +703,4 @@
-      (($MRTG_lib::OS eq 'NW') and (-e "${FindBin::Bin}${MRTG_lib::SL}rateup.nlm")) or
+--- bin/mrtg.orig	2005-06-19 16:40:02.000000000 +0300
++++ bin/mrtg	2005-06-23 08:05:14.000000000 +0300
+@@ -721,4 +721,4 @@
+      (($MRTG_lib::OS eq 'NW') and (-e "SYS:/Mrtg/bin/rateup.nlm")) or
 -     (-x "${FindBin::Bin}${MRTG_lib::SL}rateup")) or 
 -       die "ERROR: Can't Execute '${FindBin::Bin}${MRTG_lib::SL}rateup'\n";
 +     (-x "__PREFIX__/libexec/rateup")) ||
 +       die "ERROR: Can't Execute '__PREFIX__/libexec/rateup'\n";
  
-@@ -716,3 +716,3 @@
+@@ -734,3 +734,3 @@
      if ($$rcfg{'options'}{'dorelpercent'}{$router}) {
 -        @exec = ("${FindBin::Bin}${MRTG_lib::SL}rateup", 
 +        @exec = ("__PREFIX__/libexec/rateup",
                   "$$cfg{'logdir'}$$rcfg{'directory'}{$router}","$router",
-@@ -725,3 +725,3 @@
+@@ -743,3 +743,3 @@
  
 -        @exec = ("${FindBin::Bin}${MRTG_lib::SL}rateup", 
 +        @exec = ("__PREFIX__/libexec/rateup",
