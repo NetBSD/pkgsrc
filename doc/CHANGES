@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10418 2005/06/23 22:08:14 minskim Exp $
+$NetBSD: CHANGES,v 1.10419 2005/06/23 22:17:05 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2963,3 +2963,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated editors/vim-share to 6.3.074nb2 [kristerw 2005-06-23]
 	Updated devel/prcs to 1.3.3nb1 [kristerw 2005-06-23]
 	Added time/wmclockmon version 0.8.1 [minskim 2005-06-23]
+	Updated archivers/gsharutils to 4.2.1nb7 [kristerw 2005-06-23]
+	Updated sysutils/apcupsd to 3.8.6nb4 [kristerw 2005-06-23]
+	Updated print/LPRng-core to 3.8.28nb1 [kristerw 2005-06-23]
+	Updated news/inn to 2.4.1nb3 [kristerw 2005-06-23]
+	Updated net/freewais-sf to 2.2.12nb3 [kristerw 2005-06-23]
