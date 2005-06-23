@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/24 22:46:13 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/23 15:38:40 wiz Exp $
 
 DISTNAME=	FastTemplate-1_1_0
 PKGNAME=	php-FastTemplate-1.1.0
@@ -28,7 +28,9 @@ PLIST_SUBST+=	PHP_LIB_SUBDIR=${PHP_LIB_SUBDIR}
 PLIST_SUBST+=	PKGBASE=${PKGBASE}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PHP_LIB_DIR} ${DOCDIR} ${EGDIR}/templates
+	${INSTALL_DATA_DIR} ${PHP_LIB_DIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}/templates
 	${INSTALL_DATA} ${WRKSRC}/class.FastTemplate.php3 ${PHP_LIB_DIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/FastTemplate.html ${DOCDIR}
 	cd ${WRKSRC}; for file in *.phtml; do				\
