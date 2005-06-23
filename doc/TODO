@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3634 2005/06/23 15:20:47 minskim Exp $
+$NetBSD: TODO,v 1.3635 2005/06/23 21:14:54 salo Exp $
 
 Suggested new packages
 ======================
@@ -51,10 +51,6 @@ Suggested new packages
 	MythTV [wip/mythtv]
 	Digital video recorder
 	http://www.mythtv.org/
-
-	Asterisk [wip/asterisk]
-	PBX-in-a-box for Linux
-	http://www.asterisk.org/
 
 	Unreal Tournament server [wip/unrealtournament-server]
 	Server for Unreal Tournament first person shooter
@@ -359,6 +355,7 @@ Suggested package updates
 	o aspell-danish-1.4.49
 	o aspell-faroese-0.2.22
 	o ast-ksh-20040229
+	o asterisk-1.0.8
 	o astyle-1.15.3
 	o auctex-11.55
 	o autogen-5.7
