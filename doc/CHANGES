@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10406 2005/06/23 03:04:00 jonb Exp $
+$NetBSD: CHANGES,v 1.10407 2005/06/23 07:32:26 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2941,3 +2941,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/p5-CGI to 3.10 [reed 2005-06-22]
 	Added archivers/libzip version 0.6 [dillo 2005-06-22]
 	Added lang/sbcl version 0.9.1 [jonb 2005-06-22]
+	Updated audio/xfce4-xmms-plugin to 0.3.1 [martti 2005-06-23]
+	Updated sysutils/xfce4-netload-plugin to 0.3.2 [martti 2005-06-23]
+	Updated sysutils/xfce4-systemload-plugin to 0.3.6 [martti 2005-06-23]
+	Updated x11/xfce4-notes-plugin to 0.10.0 [martti 2005-06-23]
+	Added www/jalbum version 5.2.2 [martti 2005-06-23]
