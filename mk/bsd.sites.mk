@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.39 2005/06/23 10:28:54 wiz Exp $
+# $NetBSD: bsd.sites.mk,v 1.40 2005/06/23 12:11:07 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -103,10 +103,10 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://peterhost.dl.sourceforge.net/sourceforge/ \
 	http://ovh.dl.sourceforge.net/sourceforge/ \
 	http://puzzle.dl.sourceforge.net/sourceforge/ \
-	http://switch.dl.sourceforge.net/sourceforge/
-	http://ufpr.dl.sourceforge.net/sourceforge/
-	http://umn.dl.sourceforge.net/sourceforge/
-	http://unc.dl.sourceforge.net/sourceforge/
+	http://switch.dl.sourceforge.net/sourceforge/ \
+	http://ufpr.dl.sourceforge.net/sourceforge/ \
+	http://umn.dl.sourceforge.net/sourceforge/ \
+	http://unc.dl.sourceforge.net/sourceforge/ \
 	http://voxel.dl.sourceforge.net/sourceforge/
 #	ftp://ftp2.sourceforge.net/pub/sourceforge/
 #	ftp://ftp.tuwien.ac.at/linux/sourceforge/
