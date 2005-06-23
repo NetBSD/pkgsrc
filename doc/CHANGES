@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10413 2005/06/23 17:02:56 taca Exp $
+$NetBSD: CHANGES,v 1.10414 2005/06/23 17:08:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2955,3 +2955,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/ruby18-base to 1.8.2nb2 [taca 2005-06-23]
 	Updated net/ruby-xmlrpc4r-1.7.16nb2 [taca 2005-06-23]
 	Updated graphics/ruby-RMagick to 1.8.3 [taca 2005-06-23]
+	Removed devel/ipv6socket_scrub [wiz 2005-06-23]
