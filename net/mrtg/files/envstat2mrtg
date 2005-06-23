@@ -1,5 +1,5 @@
 #! @PREFIX@/bin/perl
-#	$NetBSD: envstat2mrtg,v 1.1 2001/11/07 18:26:50 bouyer Exp $
+#	$NetBSD: envstat2mrtg,v 1.2 2005/06/23 08:12:13 martti Exp $
 
 if (@ARGV == 1)
 {
@@ -70,4 +70,3 @@ sub end
 	}
 	exit(0);
 }
-

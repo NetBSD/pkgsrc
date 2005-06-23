@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/01/24 16:25:05 tv Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/06/23 08:12:13 martti Exp $
 ${PERL5_SITELIB}/BER.pm
 ${PERL5_SITELIB}/MRTG_lib.pm
 ${PERL5_SITELIB}/SNMP_Session.pm
@@ -11,7 +11,6 @@ libexec/envstat2mrtg
 libexec/netstat2mrtg
 libexec/rateup
 libexec/sys2mrtg
-man/man1/mrtg.1
 man/man1/mrtg-contrib.1
 man/man1/mrtg-faq.1
 man/man1/mrtg-forum.1
@@ -19,11 +18,13 @@ man/man1/mrtg-ipv6.1
 man/man1/mrtg-logfile.1
 man/man1/mrtg-mibhelp.1
 man/man1/mrtg-nt-guide.1
+man/man1/mrtg-nw-guide.1
 man/man1/mrtg-reference.1
 man/man1/mrtg-rrd.1
 man/man1/mrtg-squid.1
 man/man1/mrtg-unix-guide.1
 man/man1/mrtg-webserver.1
+man/man1/mrtg.1
 man/man1/mrtgcfgmaker.1
 man/man1/mrtgindexmaker.1
 man/man1/mrtglib.1
@@ -66,6 +67,9 @@ share/doc/mrtg/mrtg-mibhelp.txt
 share/doc/mrtg/mrtg-nt-guide.html
 share/doc/mrtg/mrtg-nt-guide.pod
 share/doc/mrtg/mrtg-nt-guide.txt
+share/doc/mrtg/mrtg-nw-guide.html
+share/doc/mrtg/mrtg-nw-guide.pod
+share/doc/mrtg/mrtg-nw-guide.txt
 share/doc/mrtg/mrtg-r.gif
 share/doc/mrtg/mrtg-r.png
 share/doc/mrtg/mrtg-reference.html
