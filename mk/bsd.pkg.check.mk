@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.4 2005/06/23 20:51:00 jlam Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.5 2005/06/23 21:06:56 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets the for various install-time "check"
@@ -188,6 +188,7 @@ check-files: ${_CHECK_FILES_COOKIES}
 
 # Check ${PREFIX} for files which are not listed in the generated ${PLIST}.
 ${_CHECK_FILES_COOKIE.prefix}:
+.if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} ! -f ${_CHECK_FILES_PRE.prefix} -o			\
 		   ! -f ${_CHECK_FILES_POST.prefix};			\
@@ -221,12 +222,14 @@ ${_CHECK_FILES_COOKIE.prefix}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${WRKDIR}/.files.added ${WRKDIR}/.files.deleted	\
 	         ${WRKDIR}/.files.diff ${WRKDIR}/.files.expected
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 
 # Check ${SYSCONFDIR} for files which are not in the PLIST and are also
 # not copied into place by the INSTALL scripts.
 #
 ${_CHECK_FILES_COOKIE.sysconfdir}:
+.if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} ! -f ${_CHECK_FILES_PRE.sysconfdir} -o		\
 		   ! -f ${_CHECK_FILES_POST.sysconfdir};		\
@@ -244,12 +247,14 @@ ${_CHECK_FILES_COOKIE.sysconfdir}:
 			| ${GREP} '^+[^+]' | ${SED} "s|^+|        |";	\
 		} > ${.TARGET};						\
 	fi
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 
 # Check ${VARBASE} for files which are not in the PLIST and are also
 # not created by the INSTALL scripts.
 #
 ${_CHECK_FILES_COOKIE.varbase}:
+.if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} ! -f ${_CHECK_FILES_PRE.varbase} -o			\
 		   ! -f ${_CHECK_FILES_POST.varbase};			\
@@ -267,6 +272,7 @@ ${_CHECK_FILES_COOKIE.varbase}:
 			| ${GREP} '^+[^+]' | ${SED} "s|^+|        |";	\
 		} > ${.TARGET};						\
 	fi
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 
 ###########################################################################
