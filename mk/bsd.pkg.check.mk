@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.3 2005/06/23 18:12:20 jlam Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.4 2005/06/23 20:51:00 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets the for various install-time "check"
@@ -41,6 +41,9 @@ CHECK_WRKREF?=		tools
 CHECK_FILES?=		no
 CHECK_FILES_STRICT?=	no
 CHECK_WRKREF?=		no
+
+PKGSRC_USE_TOOLS+=	awk cat cmp diff echo find grep rm sed test	\
+			touch true
 
 ###########################################################################
 ### check-files ###########################################################
@@ -191,7 +194,7 @@ ${_CHECK_FILES_COOKIE.prefix}:
 	then								\
 		{ exit 0; };						\
 	fi;								\
-	diff -u ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}	\
+	${DIFF} -u ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix} \
 		> ${WRKDIR}/.files.diff || ${TRUE};			\
 	${GREP} '^+/' ${WRKDIR}/.files.diff | ${SED} "s|^+||" | ${SORT}	\
 		> ${WRKDIR}/.files.added;				\
@@ -211,7 +214,7 @@ ${_CHECK_FILES_COOKIE.prefix}:
 		{ ${ECHO} "*** The PLIST does not match installed files!"; \
 		  ${ECHO} "    The following files were not expected"	\
 			  "in ${PREFIX}:";				\
-		  diff -u ${WRKDIR}/.files.expected ${WRKDIR}/.files.added \
+		  ${DIFF} -u ${WRKDIR}/.files.expected ${WRKDIR}/.files.added \
 			| ${GREP} '^+[^+]' | ${SED} "s|^+|        |";	\
 		} >> ${.TARGET};					\
 	fi
@@ -236,8 +239,8 @@ ${_CHECK_FILES_COOKIE.sysconfdir}:
 		{ ${ECHO} "*** The package has modified ${PKG_SYSCONFDIR}" \
 			  "contents directly!";				\
 		  ${ECHO} "    The offending files/directories are:";	\
-		  diff -u ${_CHECK_FILES_PRE.sysconfdir}		\
-			  ${_CHECK_FILES_POST.sysconfdir}		\
+		  ${DIFF} -u ${_CHECK_FILES_PRE.sysconfdir}		\
+			     ${_CHECK_FILES_POST.sysconfdir}		\
 			| ${GREP} '^+[^+]' | ${SED} "s|^+|        |";	\
 		} > ${.TARGET};						\
 	fi
@@ -259,8 +262,8 @@ ${_CHECK_FILES_COOKIE.varbase}:
 		{ ${ECHO} "*** The package has modified ${VARBASE}"	\
 			  "contents directly!";				\
 		  ${ECHO} "    The offending files/directories are:";	\
-		  diff -u ${_CHECK_FILES_PRE.varbase}			\
-			  ${_CHECK_FILES_POST.varbase}			\
+		  ${DIFF} -u ${_CHECK_FILES_PRE.varbase}		\
+			     ${_CHECK_FILES_POST.varbase}		\
 			| ${GREP} '^+[^+]' | ${SED} "s|^+|        |";	\
 		} > ${.TARGET};						\
 	fi
