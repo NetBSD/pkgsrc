@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.38 2005/06/22 21:14:42 heinz Exp $
+# $NetBSD: bsd.sites.mk,v 1.39 2005/06/23 10:28:54 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -92,17 +92,22 @@ MASTER_SITE_GNOME+=     \
 	ftp://ftp.mirror.ac.uk/sites/ftp.gnome.org/pub/
 
 MASTER_SITE_SOURCEFORGE+=	\
-	http://cogent.dl.sourceforge.net/sourceforge/ \
+	http://citkit.dl.sourceforge.net/sourceforge/ \
 	http://easynews.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
+	http://internap.dl.sourceforge.net/sourceforge/ \
 	http://jaist.dl.sourceforge.net/sourceforge/ \
 	http://kent.dl.sourceforge.net/sourceforge/ \
 	http://mesh.dl.sourceforge.net/sourceforge/ \
 	http://nchc.dl.sourceforge.net/sourceforge/ \
-	http://optusnet.dl.sourceforge.net/sourceforge/ \
+	http://peterhost.dl.sourceforge.net/sourceforge/ \
 	http://ovh.dl.sourceforge.net/sourceforge/ \
 	http://puzzle.dl.sourceforge.net/sourceforge/ \
 	http://switch.dl.sourceforge.net/sourceforge/
+	http://ufpr.dl.sourceforge.net/sourceforge/
+	http://umn.dl.sourceforge.net/sourceforge/
+	http://unc.dl.sourceforge.net/sourceforge/
+	http://voxel.dl.sourceforge.net/sourceforge/
 #	ftp://ftp2.sourceforge.net/pub/sourceforge/
 #	ftp://ftp.tuwien.ac.at/linux/sourceforge/
 #	http://sf.gds.tuwien.ac.at/
