@@ -1,8 +1,8 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: Interix.pkg.dist,v 1.24 2005/05/19 16:45:33 jmmv Exp $
+#	$NetBSD: AIX.pkg.dist,v 1.1 2005/06/23 18:41:57 jlam Exp $
 #
 
-/set type=dir uid=197108 gid=131616 mode=0775
+/set type=dir uname=root gname=system mode=0755
 .
     bin
     ..
@@ -235,52 +235,6 @@
             mann
             ..
         ..
-        fi 
-            cat1            
-            ..
-            cat2            
-            ..
-            cat3            
-            ..
-            cat4            
-            ..
-            cat5            
-            ..
-            cat6            
-            ..
-            cat7            
-            ..
-            cat8            
-            ..
-            cat9            
-            ..
-            catl            
-            ..
-            catn            
-            ..
-            man1
-            ..
-            man2
-            ..
-            man3
-            ..
-            man4
-            ..
-            man5
-            ..
-            man6
-            ..
-            man7
-            ..
-            man8
-            ..
-            man9
-            ..
-            manl
-            ..
-            mann
-            ..
-	..
         fr 
             cat1            
             ..
