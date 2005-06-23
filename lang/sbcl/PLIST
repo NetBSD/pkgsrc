@@ -1,0 +1,94 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/23 03:00:20 jonb Exp $
+bin/sbcl
+lib/sbcl/asdf-install/asdf-install.fasl
+lib/sbcl/asdf-install/defpackage.fasl
+lib/sbcl/asdf-install/installer.fasl
+lib/sbcl/asdf-install/test-passed
+lib/sbcl/asdf/asdf.fasl
+lib/sbcl/sb-aclrepl/debug.fasl
+lib/sbcl/sb-aclrepl/inspect.fasl
+lib/sbcl/sb-aclrepl/repl.fasl
+lib/sbcl/sb-aclrepl/sb-aclrepl.fasl
+lib/sbcl/sb-aclrepl/test-passed
+lib/sbcl/sb-aclrepl/tests.fasl
+lib/sbcl/sb-aclrepl/toplevel.fasl
+lib/sbcl/sb-cltl2/compiler-let.fasl
+lib/sbcl/sb-cltl2/defpackage.fasl
+lib/sbcl/sb-cltl2/env.fasl
+lib/sbcl/sb-cltl2/macroexpand.fasl
+lib/sbcl/sb-cltl2/sb-cltl2.fasl
+lib/sbcl/sb-cltl2/test-passed
+lib/sbcl/sb-cltl2/tests.fasl
+lib/sbcl/sb-executable/sb-executable.fasl
+lib/sbcl/sb-grovel/def-to-lisp.fasl
+lib/sbcl/sb-grovel/defpackage.fasl
+lib/sbcl/sb-grovel/foreign-glue.fasl
+lib/sbcl/sb-grovel/sb-grovel.fasl
+lib/sbcl/sb-grovel/test-passed
+lib/sbcl/sb-introspect/sb-introspect.fasl
+lib/sbcl/sb-md5/md5-tests.fasl
+lib/sbcl/sb-md5/md5.fasl
+lib/sbcl/sb-md5/sb-md5.fasl
+lib/sbcl/sb-md5/test-passed
+lib/sbcl/sb-posix/a.out
+lib/sbcl/sb-posix/alien.so
+lib/sbcl/sb-posix/alien/stat-macros.o
+lib/sbcl/sb-posix/alien/waitpid-macros.o
+lib/sbcl/sb-posix/constants.fasl
+lib/sbcl/sb-posix/constants.lisp-temp
+lib/sbcl/sb-posix/defpackage.fasl
+lib/sbcl/sb-posix/designator.fasl
+lib/sbcl/sb-posix/foo.c
+lib/sbcl/sb-posix/interface.fasl
+lib/sbcl/sb-posix/macros.fasl
+lib/sbcl/sb-posix/posix-tests.fasl
+lib/sbcl/sb-posix/sb-posix.fasl
+lib/sbcl/sb-posix/test-passed
+lib/sbcl/sb-rotate-byte/compiler.fasl
+lib/sbcl/sb-rotate-byte/package.fasl
+lib/sbcl/sb-rotate-byte/rotate-byte-tests.fasl
+lib/sbcl/sb-rotate-byte/rotate-byte.fasl
+lib/sbcl/sb-rotate-byte/sb-rotate-byte.fasl
+lib/sbcl/sb-rotate-byte/test-passed
+lib/sbcl/sb-rotate-byte/x86-vm.fasl
+lib/sbcl/sb-rt/rt.fasl
+lib/sbcl/sb-rt/sb-rt.fasl
+lib/sbcl/sb-rt/test-passed
+lib/sbcl/sb-sprof/sb-sprof.fasl
+lib/sbcl/sbcl.core
+lib/sbcl/systems/asdf-install.asd
+lib/sbcl/systems/sb-aclrepl.asd
+lib/sbcl/systems/sb-cltl2.asd
+lib/sbcl/systems/sb-grovel.asd
+lib/sbcl/systems/sb-md5.asd
+lib/sbcl/systems/sb-posix.asd
+lib/sbcl/systems/sb-rotate-byte.asd
+lib/sbcl/systems/sb-rt.asd
+share/doc/sbcl/BUGS
+share/doc/sbcl/COPYING
+share/doc/sbcl/CREDITS
+share/doc/sbcl/NEWS
+share/doc/sbcl/SUPPORT
+share/man/man1/sbcl.1
+@exec ${MKDIR} %D/share/doc/sbcl/html
+@dirrm share/doc/sbcl/html
+@dirrm share/doc/sbcl
+@dirrm lib/sbcl/systems
+@exec ${MKDIR} %D/lib/sbcl/site-systems
+@dirrm lib/sbcl/site-systems
+@dirrm lib/sbcl/sb-sprof
+@dirrm lib/sbcl/sb-rt
+@dirrm lib/sbcl/sb-rotate-byte
+@exec ${MKDIR} %D/lib/sbcl/sb-posix/test-lab
+@dirrm lib/sbcl/sb-posix/test-lab
+@dirrm lib/sbcl/sb-posix/alien
+@dirrm lib/sbcl/sb-posix
+@dirrm lib/sbcl/sb-md5
+@dirrm lib/sbcl/sb-introspect
+@dirrm lib/sbcl/sb-grovel
+@dirrm lib/sbcl/sb-executable
+@dirrm lib/sbcl/sb-cltl2
+@dirrm lib/sbcl/sb-aclrepl
+@dirrm lib/sbcl/asdf-install
+@dirrm lib/sbcl/asdf
+@dirrm lib/sbcl

@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/06/23 03:00:20 jonb Exp $
+
+--- install.sh.orig	2004-10-21 13:00:23.000000000 +0000
++++ install.sh
+@@ -9,7 +9,7 @@ ensure_dirs () 
+     done;
+ }
+ 
+-INSTALL_ROOT=${INSTALL_ROOT-/usr/local}
+-MAN_DIR=${MAN_DIR-$INSTALL_ROOT/share/man}
+-INFO_DIR=${INFO_DIR-$INSTALL_ROOT/share/info}
++INSTALL_ROOT=${INSTALL_ROOT-@PREFIX@}
++MAN_DIR=${MAN_DIR-$INSTALL_ROOT/man}
++INFO_DIR=${INFO_DIR-$INSTALL_ROOT/info}
+ DOC_DIR=${DOC_DIR-$INSTALL_ROOT/share/doc/sbcl}
+ 
+ SBCL_SOURCE=`pwd`
+ if [ -n "$SBCL_HOME" -a "$INSTALL_ROOT/lib/sbcl" != "$SBCL_HOME" ];then
