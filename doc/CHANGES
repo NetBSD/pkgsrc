@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10415 2005/06/23 17:11:03 wiz Exp $
+$NetBSD: CHANGES,v 1.10416 2005/06/23 18:03:17 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2957,3 +2957,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/ruby-RMagick to 1.8.3 [taca 2005-06-23]
 	Removed devel/ipv6socket_scrub [wiz 2005-06-23]
 	Updated sysutils/mc to 4.6.1rc4.1 [wiz 2005-06-23]
+	Updated misc/dync to dync-1.1nb2 [kristerw 2005-06-23]
+	Updated shells/scponly to scponly-4.0nb1 [kristerw 2005-06-23]
+	Updated net/rp-pppoe to rp-pppoe-3.5nb2 [kristerw 2005-06-23]
+	Updated editors/vim-share to vim-share-6.3.074nb2 [kristerw 2005-06-23]
+	Updated devel/prcs to prcs-1.3.3nb1 [kristerw 2005-06-23]
