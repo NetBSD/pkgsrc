@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.101 2005/06/23 20:35:55 jlam Exp $
+# $NetBSD: replace.mk,v 1.102 2005/06/23 20:39:39 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -344,6 +344,18 @@ TOOLS_CREATE+=			date
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.date=coreutils
 TOOLS_REAL_CMD.date=		${TOOLS_PREFIX.date}/bin/${GNU_PROGRAM_PREFIX}date
 TOOLS_${_TOOLS_VARNAME.date}=	${TOOLS_REAL_CMD.date}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.diff) && !empty(_USE_TOOLS:Mdiff)
+.  if !empty(PKGPATH:Mdevel/diffutils)
+MAKEFLAGS+=			TOOLS_IGNORE.diff=
+.  elif !empty(_TOOLS_USE_PKGSRC.diff:M[yY][eE][sS])
+TOOLS_DEPENDS.diff?=		diffutils>=2.8.1:../../devel/diffutils
+TOOLS_CREATE+=			diff
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.diff=diffutils
+TOOLS_REAL_CMD.diff=		${TOOLS_PREFIX.diff}/bin/${GNU_PROGRAM_PREFIX}diff
+TOOLS_${_TOOLS_VARNAME.diff}=	${TOOLS_REAL_CMD.diff}
 .  endif
 .endif
 
