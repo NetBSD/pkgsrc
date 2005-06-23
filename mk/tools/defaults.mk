@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.30 2005/06/17 17:05:18 jlam Exp $
+# $NetBSD: defaults.mk,v 1.31 2005/06/23 20:39:39 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -64,6 +64,7 @@ _TOOLS_VARNAME.cmp=		CMP
 _TOOLS_VARNAME.cp=		CP
 _TOOLS_VARNAME.cut=		CUT
 _TOOLS_VARNAME.date=		DATE
+_TOOLS_VARNAME.diff=		DIFF
 _TOOLS_VARNAME.dirname=		DIRNAME
 _TOOLS_VARNAME.echo=		ECHO
 _TOOLS_VARNAME.egrep=		EGREP
@@ -137,6 +138,7 @@ _TOOLS_VARNAME_GNU.bison-yacc=	YACC
 _TOOLS_VARNAME_GNU.chmod=	CHMOD
 _TOOLS_VARNAME_GNU.cmp=		CMP
 _TOOLS_VARNAME_GNU.cp=		CP
+_TOOLS_VARNAME_GNU.diff=	DIFF
 _TOOLS_VARNAME_GNU.echo=	ECHO ac_cv_path_ECHO
 _TOOLS_VARNAME_GNU.egrep=	EGREP ac_cv_path_EGREP
 _TOOLS_VARNAME_GNU.env=		SETENV ENV_PROG ac_cv_path_ENV
