@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10410 2005/06/23 09:27:50 shannonjr Exp $
+$NetBSD: CHANGES,v 1.10411 2005/06/23 14:24:41 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2950,3 +2950,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/mrtg to 2.12.2 [martti 2005-06-23]
 	Updated security/libassuan to 0.6.10 [shannonjr 2005-06-23]
 	Updated security/gnupg-devel to 1.9.17 [shannonjr 2005-06-23]
+	Updated net/flow-tools to 0.68 [seb 2005-06-23]
