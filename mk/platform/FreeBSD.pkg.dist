@@ -1,4 +1,4 @@
-#	$NetBSD: DragonFly.pkg.dist,v 1.10 2005/05/19 16:45:33 jmmv Exp $
+#	$NetBSD: FreeBSD.pkg.dist,v 1.1 2005/06/23 18:41:57 jlam Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755

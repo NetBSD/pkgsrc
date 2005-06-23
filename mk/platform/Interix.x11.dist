@@ -1,36 +1,10 @@
-#     $NetBSD: IRIX.x11.dist,v 1.14 2005/01/04 09:01:45 jmmv Exp $
+#     $NetBSD: Interix.x11.dist,v 1.1 2005/06/23 18:41:57 jlam Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
-/set type=dir uname=root gname=sys mode=0755
+/set type=dir uid=197108 gid=131616 mode=0775
 .
     bin
-    ..
-    catman
-        u_man
-            cat1
-            ..
-            cat2
-            ..
-            cat3
-            ..
-            cat4
-            ..
-            cat5
-            ..
-        ..
-        p_man
-            cat1
-            ..
-            cat2
-            ..
-            cat3
-            ..
-            cat4
-            ..
-            cat5
-            ..
-        ..
     ..
     etc
         rc.d
@@ -215,7 +189,51 @@
     libexec
     ..
     man
-        u_man
+        cat1
+        ..
+        cat2
+        ..
+        cat3
+        ..
+        cat4
+        ..
+        cat5
+        ..
+        cat6
+        ..
+        cat7
+        ..
+        cat8
+        ..
+        cat9
+        ..
+        catl
+        ..
+        catn
+        ..
+        ja_JP.EUC
+            cat1
+            ..
+            cat2
+            ..
+            cat3
+            ..
+            cat4
+            ..
+            cat5
+            ..
+            cat6
+            ..
+            cat7
+            ..
+            cat8
+            ..
+            cat9
+            ..
+            catl
+            ..
+            catn
+            ..
             man1
             ..
             man2
@@ -233,27 +251,33 @@
             man8
             ..
             man9
+            ..
+            manl
+            ..
+            mann
             ..
         ..
-        p_man
-            man1
-            ..
-            man2
-            ..
-            man3
-            ..
-            man4
-            ..
-            man5
-            ..
-            man6
-            ..
-            man7
-            ..
-            man8
-            ..
-            man9
-            ..
+        man1
+        ..
+        man2
+        ..
+        man3
+        ..
+        man4
+        ..
+        man5
+        ..
+        man6
+        ..
+        man7
+        ..
+        man8
+        ..
+        man9
+        ..
+        manl
+        ..
+        mann
         ..
     ..
     share
@@ -443,6 +467,10 @@
                 ..
             ..
             ko
+                LC_MESSAGES
+                ..
+            ..
+            li
                 LC_MESSAGES
                 ..
             ..
