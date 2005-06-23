@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1696 2005/06/14 22:02:00 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1697 2005/06/23 04:15:47 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -61,7 +61,7 @@ build-defs-message: ${WRKDIR}
 CHECK_FILES?=		NO	# run check-files after install
 CHECK_FILES_STRICT?=	NO	# make check-files very strict on errors
 CHECK_SHLIBS?=		YES	# run check-shlibs after install
-CHECK_WRKREF?=		NO	# run check-wrkref after install
+CHECK_WRKREF?=		no	# run check-wrkref after install
 CLEANDEPENDS?=		NO
 DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
 MKCRYPTO?=		YES	# build crypto packages by default
@@ -2215,7 +2215,7 @@ real-su-install: ${MESSAGE}
 .if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} check-shlibs
 .endif
-.if !empty(CHECK_WRKREF:M[yY][eE][sS])
+.if empty(CHECK_WRKREF:M[nN][oO])
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} check-wrkref
 .endif
 .if defined(PKG_DEVELOPER) && (${CHECK_FILES} == "YES")
@@ -2543,7 +2543,7 @@ show-shlib-type:
 # it isn't, then it is checked for "${TOOLS_DIR}".  If any such
 # references are found and PKG_DEVELOPER is defined, then exit with an
 # error.  This target is automatically run after a package is installed
-# if CHECK_WRKREF is "yes".
+# if CHECK_WRKREF is anything other than "no".
 #
 # CHECK_WRKREF_SKIP is a list of shell globs.  Installed files that
 # match these globs are skipped when running the check-wrkref target.
