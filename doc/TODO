@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3632 2005/06/23 12:34:48 wiz Exp $
+$NetBSD: TODO,v 1.3633 2005/06/23 14:58:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -313,7 +313,7 @@ Suggested package updates
 	o PAM-0.78
 	o RealPlayerGold-10.0.4
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.5.3
+	o TeXmacs-1.0.5.4
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
@@ -492,7 +492,7 @@ Suggested package updates
 	o feh-1.3.3
 	o fhist-1.14
 	o fidogate-4.4.10
-	o findutils-4.2.20
+	o findutils-4.2.23
 	o flac123-0.0.8
 	o flashplayer-0.4.13
 	o fluxbox-0.9.13 [pkg/30229|jmcneill]
@@ -649,6 +649,7 @@ Suggested package updates
 	o libgnomedb-1.2.2 [jmmv]
 	o libgnomemm26-2.10.0
 	o libgnomeuimm26-2.10.0
+	o libgsf-1.12.1
 	o libhydrogen-0.9.0
 	o libjit-0.0.4 [pkg/30514]
 	o libksba-0.9.9
@@ -682,6 +683,7 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-0.19.2
 	o mapserver-4.2.5
+	o mathomatic-12.4.3
 	o mdd-20050318
 	o mdf2iso-0.3.0
 	o memcached-1.1.12 [pkg/30289]
@@ -697,7 +699,7 @@ Suggested package updates
 	o mlview-0.7.1
 	o mmix-20041014
 	o molden-4.3
-	o mono-1.1.8
+	o mono-1.1.8.1
 	o moscow_ml-2.01
 	o most-4.10.1
 	o mowitz-0.3.0
@@ -707,6 +709,7 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpc-0.11.2
 	o mpfr-2.1.1
+	o mpich-1.0.2
 	o mplayer-plugin-firefox-2.85
 	o mrproject-0.9.1
 	o mserv-devel-0.41
@@ -723,7 +726,7 @@ Suggested package updates
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
-	o neon-0.25.0
+	o neon-0.25.1
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
 	o netio-1.23
@@ -941,7 +944,7 @@ Suggested package updates
 	o py-gnuplot-1.7
 	o py-imaging-1.1.5c2
 	o py-kenosis-0.95
-	o py-ldap-2.0.7
+	o py-ldap-2.0.8
 	o py-libxml2-2.6.18
 	o py-logging-0.4.9.5
 	o py-m2crypto-0.13
@@ -1051,6 +1054,7 @@ Suggested package updates
 	o source-highlight-2.0
 	o sox-12.17.7
 	o spamassassin-3.0.4 [pkg/30452]
+	o spamprobe-1.2
 	o spim-7.1
 	o spruce-0.6.5
 	o sqlitemanager-1.0.6
@@ -1143,7 +1147,7 @@ Suggested package updates
 	o wesnoth-0.9.2
 	o wget-1.10
 	o winbind-3.0.13
-	o windowlab-1.30
+	o windowlab-1.31
 	o wmbiff-0.4.26
 	o wmctrl-1.07
 	o wmweather-2.4.3
@@ -1198,6 +1202,7 @@ Suggested package updates
 	o xrmap-2.30
 	o xrn-9.02
 	o xsane-0.97
+	o xscreensaver-4.22
 	o xskat-4.0
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
