@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.8 2005/04/10 00:57:58 minskim Exp $
+# $NetBSD: modules.mk,v 1.9 2005/06/23 15:16:53 minskim Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -147,6 +147,16 @@ PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITELIBDIR:S|${LOCALBASE}/||:S|/|\\/|g}$$/ \
 			{ next; }
 PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITELIBDIR:S|${LOCALBASE}/||:S|/|\\/|g}/ \
 			{ gsub(/${RUBY_SITELIBDIR:S|${LOCALBASE}/||:S|/|\\/|g}/, "$${RUBY_SITELIBDIR}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_DOCDIR:S|${LOCALBASE}/||:S|/|\\/|g}$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_DOCDIR:S|${LOCALBASE}/||:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_DOCDIR:S|${LOCALBASE}/||:S|/|\\/|g}/, "$${RUBY_DOCDIR}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_EXAMPLESDIR:S|${LOCALBASE}/||:S|/|\\/|g}$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_EXAMPLESDIR:S|${LOCALBASE}/||:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_EXAMPLESDIR:S|${LOCALBASE}/||:S|/|\\/|g}/, "$${RUBY_EXAMPLESDIR}"); \
 			print; next; }
 
 .endif
