@@ -1,4 +1,4 @@
-# $NetBSD: tools.Interix.mk,v 1.11 2005/05/10 21:15:22 jlam Exp $
+# $NetBSD: tools.Interix.mk,v 1.12 2005/06/23 20:45:34 jlam Exp $
 #
 # System-supplied tools for the Interix operating system.
 
@@ -13,6 +13,7 @@ TOOLS_PLATFORM.cmp?=		/bin/cmp
 TOOLS_PLATFORM.cp?=		/bin/cp
 TOOLS_PLATFORM.cut?=		/bin/cut
 TOOLS_PLATFORM.date?=		/bin/date
+TOOLS_PLATFORM.diff?=		/bin/diff
 TOOLS_PLATFORM.dirname?=	/bin/dirname
 TOOLS_PLATFORM.echo?=		echo			# shell builtin
 TOOLS_PLATFORM.egrep?=		/bin/egrep
