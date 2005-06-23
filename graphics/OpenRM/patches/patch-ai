@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2005/06/23 04:02:48 jlam Exp $
+
+--- rm/Makefile.x11.orig	2004-01-16 11:42:38.000000000 -0500
++++ rm/Makefile.x11
+@@ -98,7 +98,7 @@ $(LIBDIR)/$(RMLIB): $(OBJECTS)
+ 	@if ([ -d $(LIBDIR) ]) then :; else (mkdir $(LIBDIR)); fi
+ 	@if (\rm -f $(LIBDIR)/$(RMLIB)) then :; fi
+ 	@$(MAKELIB) $(ARCHFLAGS) $(RMLIB) $(MAJOR) $(MINOR) $(OBJECTS)
+-	@mv $(RMLIB)* $(LIBDIR)
++	@cp $(RMLIB)* $(LIBDIR)
+ 
+ dep:
+ 	@makedepend -Y -I../include -I/$(GLINC) *.c -f depend

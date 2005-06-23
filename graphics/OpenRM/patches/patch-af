@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1 2005/06/23 04:02:48 jlam Exp $
+
+--- Makefile.orig	2004-04-18 13:03:27.000000000 -0400
++++ Makefile
+@@ -104,6 +104,7 @@ default:
+ 	@echo "  irix6-n32-mips4-debug"
+ 	@echo "  irix6-64"
+ 	@echo "  irix6-64-debug"
++	@echo "  libtool"
+ 	@echo "  linux"
+ 	@echo "  linux-debug"
+ 	@echo "  linux-cr-debug"
+@@ -131,6 +132,7 @@ irix6-n32-mips4 \
+ irix6-n32-mips4-debug \
+ irix6-64 \
+ irix6-64-debug \
++libtool \
+ linux \
+ linux-debug \
+ linux-cr-debug \
