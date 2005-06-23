@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3630 2005/06/23 07:32:26 martti Exp $
+$NetBSD: TODO,v 1.3631 2005/06/23 08:12:37 martti Exp $
 
 Suggested new packages
 ======================
@@ -706,7 +706,6 @@ Suggested package updates
 	o mpfr-2.1.1
 	o mplayer-plugin-firefox-2.85
 	o mrproject-0.9.1
-	o mrtg-2.12.1
 	o mserv-devel-0.41
 	o msmtp-1.4.1
 	o mtail-1.1.1

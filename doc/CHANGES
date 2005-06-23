@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10408 2005/06/23 07:59:08 martti Exp $
+$NetBSD: CHANGES,v 1.10409 2005/06/23 08:12:37 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2947,3 +2947,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/xfce4-notes-plugin to 0.10.0 [martti 2005-06-23]
 	Added www/jalbum version 5.2.2 [martti 2005-06-23]
 	Updated mail/postfix to 2.2.4 [martti 2005-06-23]
+	Updated net/mrtg to 2.12.2 [martti 2005-06-23]
