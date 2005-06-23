@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/06/23 22:06:33 minskim Exp $
+
+--- configure.orig	2005-06-23 16:48:42.000000000 -0500
++++ configure
+@@ -4058,6 +4058,9 @@ openbsd*)
+ netbsd*)
+   OS=netbsd
+   ;;
++darwin*)
++  OS=darwin
++  ;;
+ solaris*)
+   OS=solaris
+   ;;

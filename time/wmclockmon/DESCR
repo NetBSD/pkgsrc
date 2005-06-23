@@ -1,0 +1,4 @@
+A stylish windowmaker dockapp which displays date and time in your
+locale in varying formats, including Internet time.  Contains alarm,
+calendar and configuration utilities.  Works under {black,flux}box
+too.  Similar in style to wmmemmon and wmcpuload.
