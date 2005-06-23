@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1698 2005/06/23 08:31:20 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1699 2005/06/23 09:02:46 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -59,7 +59,6 @@ build-defs-message: ${WRKDIR}
 ############################################################################
 
 CHECK_SHLIBS?=		YES	# run check-shlibs after install
-CHECK_WRKREF?=		no	# run check-wrkref after install
 CLEANDEPENDS?=		NO
 DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
 MKCRYPTO?=		YES	# build crypto packages by default
@@ -2512,71 +2511,6 @@ show-shlib-type:
 .  else
 	@${ECHO} ${_OPSYS_SHLIB_TYPE}
 .  endif   # USE_LANGUAGES
-.endif
-
-# check-wrkref is a make target that greps through the installed files
-# for a package and looks for references to the build directory.  If
-# the file is a text file, then it is checked for "${WRKDIR}", and if
-# it isn't, then it is checked for "${TOOLS_DIR}".  If any such
-# references are found and PKG_DEVELOPER is defined, then exit with an
-# error.  This target is automatically run after a package is installed
-# if CHECK_WRKREF is anything other than "no".
-#
-# CHECK_WRKREF_SKIP is a list of shell globs.  Installed files that
-# match these globs are skipped when running the check-wrkref target.
-#
-# CHECK_WRKREF_PKG is the name of the package to check.  It defaults to
-# ${PKGNAME}.
-#
-.if make(check-wrkref)
-.  if !defined(_CHECK_WRKREF_SKIP_FILTER)
-_CHECK_WRKREF_SKIP_FILTER=	${TRUE}
-.    if defined(CHECK_WRKREF_SKIP) && !empty(CHECK_WRKREF_SKIP)
-_CHECK_WRKREF_SKIP_FILTER=	case "$$file" in
-.      for _pattern_ in ${CHECK_WRKREF_SKIP}
-_CHECK_WRKREF_SKIP_FILTER+=	${_pattern_}) continue ;;
-.      endfor
-_CHECK_WRKREF_SKIP_FILTER+=	*) ;;
-_CHECK_WRKREF_SKIP_FILTER+=	esac
-.    endif
-.  endif
-MAKEVARS+=	_CHECK_WRKREF_SKIP_FILTER
-.else
-_CHECK_WRKREF_SKIP_FILTER=	${TRUE}
-.endif
-CHECK_WRKREF_PKG?=		${PKGNAME}
-CHECK_WRKREF_IS_TEXT_FILE?=	${_SUBST_IS_TEXT_FILE}
-
-.PHONY: check-wrkref
-check-wrkref:
-.if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
-		"${_PKGSRC_IN}> Checking for work-directory references in ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${PKG_INFO} -qL ${CHECK_WRKREF_PKG:Q} | ${SORT} |		\
-	{ while read file; do						\
-		${_CHECK_WRKREF_SKIP_FILTER};				\
-		${SHCOMMENT} [$$file];					\
-		if ${CHECK_WRKREF_IS_TEXT_FILE}; then			\
-			if ${GREP} -H ${WRKDIR:Q} "$$file" 2>/dev/null; then \
-				found_wrkdir=1;				\
-			fi;						\
-		else							\
-			if ${GREP} -H ${TOOLS_DIR:Q} "$$file" 2>/dev/null; then \
-				found_wrkdir=1;				\
-			fi;						\
-		fi;							\
-	  done;								\
-	  if ${TEST} "$$found_wrkdir" = 1; then				\
-		${ECHO} "***";						\
-		${ECHO} "*** The above files still have references to the build directory."; \
-		${ECHO} "*** This is possibly an error that should be fixed by unwrapping"; \
-		${ECHO} "*** the files or adding missing tools to the package makefile!"; \
-		${ECHO} "***";						\
-		if ${TEST} "${PKG_DEVELOPER:Uno}" != "no"; then		\
-			exit 1;						\
-		fi;							\
-	  fi; }
 .endif
 
 

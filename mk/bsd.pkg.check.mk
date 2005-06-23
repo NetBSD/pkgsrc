@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.1 2005/06/23 08:31:20 jlam Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.2 2005/06/23 09:02:46 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets the for various install-time "check"
@@ -13,6 +13,14 @@
 #    CHECK_FILES_STRICT makes the file checks very strict on errors if
 #	it is any value other than "no".  Defaults to "no".
 #
+#    CHECK_WRKREF causes the check for ${WRKDIR} or ${TOOLS_DIR} in
+#	the package's installed files.  Defaults to "no".
+#
+#    CHECK_WRKREF_IS_TEXT_FILE is a shell command list that determines
+#	whether we check for ${WRKDIR} or ${TOOLS_DIR} in "$$file".
+#	If this command returns 0, then we check for ${WRKDIR}.  It
+#	defaults to returning 0 if "$$file" is a text file.
+#
 # The following targets are defined by bsd.pkg.check.mk:
 #
 #    check-files-pre & check-files-post generate the list of files on the
@@ -23,14 +31,23 @@
 #	if there are any extra or missing files installed by the
 #	package.
 #
+#    check-wrkref checks whether a package's installed files contain
+#	references to ${WRKDIR}.
+#
 
 # For PKG_DEVELOPERs, cause some checks to be run automatically by default.
 .if defined(PKG_DEVELOPER)
 CHECK_FILES?=		yes
+CHECK_WRKREF?=		yes
 .endif
 
 CHECK_FILES?=		no
 CHECK_FILES_STRICT?=	no
+CHECK_WRKREF?=		no
+
+###########################################################################
+### check-files ###########################################################
+###########################################################################
 
 ###########################################################################
 # CHECK_FILES_SKIP is a list of file names that will be skipped when
@@ -251,3 +268,62 @@ ${_CHECK_FILES_COOKIE.varbase}:
 		} > ${.TARGET};						\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+
+###########################################################################
+### check-wrkref ##########################################################
+###########################################################################
+
+###########################################################################
+# CHECK_WRKREF_SKIP is a list of shell globs.  Installed files that
+# match these globs are skipped when running the check-wrkref target.
+#
+.if make(check-wrkref)
+.  if !defined(_CHECK_WRKREF_SKIP_FILTER)
+_CHECK_WRKREF_SKIP_FILTER=	${TRUE}
+.    if defined(CHECK_WRKREF_SKIP) && !empty(CHECK_WRKREF_SKIP)
+_CHECK_WRKREF_SKIP_FILTER=	case "$$file" in
+.      for _pattern_ in ${CHECK_WRKREF_SKIP}
+_CHECK_WRKREF_SKIP_FILTER+=	${_pattern_}) continue ;;
+.      endfor
+_CHECK_WRKREF_SKIP_FILTER+=	*) ;;
+_CHECK_WRKREF_SKIP_FILTER+=	esac
+.    endif
+.  endif
+MAKEVARS+=	_CHECK_WRKREF_SKIP_FILTER
+.else
+_CHECK_WRKREF_SKIP_FILTER=	${TRUE}
+.endif
+CHECK_WRKREF_IS_TEXT_FILE?=	${_SUBST_IS_TEXT_FILE}
+
+###########################################################################
+# check-wrkref target
+#
+.PHONY: check-wrkref
+check-wrkref:
+.if !defined(NO_PKG_REGISTER)
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
+		"${_PKGSRC_IN}> Checking for work-directory references in ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${PKG_INFO} -qL ${PKGNAME:Q} | ${SORT} |			\
+	{ while read file; do						\
+		${_CHECK_WRKREF_SKIP_FILTER};				\
+		${SHCOMMENT} [$$file];					\
+		if ${CHECK_WRKREF_IS_TEXT_FILE}; then			\
+			if ${GREP} -H ${WRKDIR:Q} "$$file" 2>/dev/null; then \
+				found_wrkdir=1;				\
+			fi;						\
+		else							\
+			if ${GREP} -H ${TOOLS_DIR:Q} "$$file" 2>/dev/null; then \
+				found_wrkdir=1;				\
+			fi;						\
+		fi;							\
+	  done;								\
+	  if ${TEST} "$$found_wrkdir" = 1; then				\
+		${ECHO} "***";						\
+		${ECHO} "*** The above files still have references to the build directory."; \
+		${ECHO} "*** This is possibly an error that should be fixed by unwrapping"; \
+		${ECHO} "*** the files or adding missing tools to the package makefile!"; \
+		${ECHO} "***";						\
+		exit 1;							\
+	  fi; }
+.endif
