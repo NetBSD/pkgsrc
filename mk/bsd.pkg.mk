@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1701 2005/06/23 12:12:11 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1702 2005/06/23 18:41:57 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -400,7 +400,7 @@ LIBABISUFFIX?=
 TOUCH_FLAGS?=		-f
 
 # Figure out where the local mtree file is
-MTREE_FILE?=	${PKGSRCDIR}/mk/${OPSYS}.pkg.dist
+MTREE_FILE?=	${PKGSRCDIR}/mk/platform/${OPSYS}.pkg.dist
 MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
 
 # Debugging levels for this file, dependent on PKG_DEBUG_LEVEL definition
