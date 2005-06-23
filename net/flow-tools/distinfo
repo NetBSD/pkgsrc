@@ -1,16 +1,18 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 12:13:46 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/06/23 14:20:56 seb Exp $
 
-SHA1 (flow-tools-0.67.tar.gz) = 1896dad27db0c89e3e14d86b30aed15581134335
-RMD160 (flow-tools-0.67.tar.gz) = 5a681e642cd1fb1b00d8a0389b628db3b96e076d
-Size (flow-tools-0.67.tar.gz) = 983667 bytes
+SHA1 (flow-tools-0.68.tar.gz) = 6259263ac4fbf8a9394224e4053393fa756473c7
+RMD160 (flow-tools-0.68.tar.gz) = 71bfd1a40cb34fae55b2769d93208d13b3b0a927
+Size (flow-tools-0.68.tar.gz) = 987151 bytes
 SHA1 (patch-aa) = dce60b3995ed22fbdf36e8d2e4187e191909cba7
-SHA1 (patch-ab) = a4eebdcb5b265f2c755ef62a73f9e4c6c25ab719
-SHA1 (patch-ac) = 86cd77dc3ede171e45e62fd4a050bac19643252b
-SHA1 (patch-ad) = f8ece1a38e6024622957e7136923fccabfca041f
+SHA1 (patch-ab) = 0f9c4d5dfe9ead14eb2a56c725639653cb89d369
+SHA1 (patch-ac) = 105781f2d108e34c4ed635b969a6cd795a77b916
+SHA1 (patch-ad) = 89bc60cffe754822e1bf3b1b665a955d2625174b
 SHA1 (patch-ae) = 1e5f151f3eba795f1ade4c016767bd4cd271565a
-SHA1 (patch-af) = 4a70681bd221a9d5e2175cfcb5b45fdbbe7f2971
+SHA1 (patch-af) = 7f5d045954b998a30616dedac0069c817b665031
 SHA1 (patch-ag) = 60d7c6d07cc8f102d6281a55c8188d13eca80bdf
 SHA1 (patch-ah) = cd55409fd5781e204f32ffa51a9b39222eadb8c7
 SHA1 (patch-ai) = 5e0a5f3148e80c156198d74036ff2f1bf35ed779
 SHA1 (patch-aj) = d183dc3b360110a1a90165b0094e349d3a964a2e
-SHA1 (patch-ak) = 0ae5fa523263fa9be836846b46b7f87b52557156
+SHA1 (patch-ak) = f5d13e165b7fac689bcea7e9d7ad07b17a79b7de
+SHA1 (patch-al) = 941cc23ea527624d21d40d3a73aa94f947f02552
+SHA1 (patch-am) = d0c096c0710fe8b41a6bb55528f9098d50cda378

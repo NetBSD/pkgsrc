@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/22 15:33:35 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/06/23 14:20:56 seb Exp $
 bin/flow-capture
 bin/flow-cat
 bin/flow-dscan
@@ -9,12 +9,15 @@ bin/flow-filter
 bin/flow-gen
 bin/flow-header
 bin/flow-import
+${PYTHON_OPT}bin/flow-log2rrd
 bin/flow-mask
 bin/flow-merge
 bin/flow-nfilter
 bin/flow-print
 bin/flow-receive
 bin/flow-report
+${PYTHON_OPT}bin/flow-rpt2rrd
+${PYTHON_OPT}bin/flow-rptfmt
 bin/flow-send
 bin/flow-split
 bin/flow-stat
@@ -36,12 +39,15 @@ man/man1/flow-filter.1
 man/man1/flow-gen.1
 man/man1/flow-header.1
 man/man1/flow-import.1
+${PYTHON_OPT}man/man1/flow-log2rrd.1
 man/man1/flow-mask.1
 man/man1/flow-merge.1
 man/man1/flow-nfilter.1
 man/man1/flow-print.1
 man/man1/flow-receive.1
 man/man1/flow-report.1
+${PYTHON_OPT}man/man1/flow-rpt2rrd.1
+${PYTHON_OPT}man/man1/flow-rptfmt.1
 man/man1/flow-send.1
 man/man1/flow-split.1
 man/man1/flow-stat.1

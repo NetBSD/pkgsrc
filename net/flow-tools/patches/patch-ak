@@ -1,29 +1,8 @@
-$NetBSD: patch-ak,v 1.2 2005/02/18 10:08:33 seb Exp $
+$NetBSD: patch-ak,v 1.3 2005/06/23 14:20:56 seb Exp $
 
---- src/flow-export.c.orig	2003-12-04 05:55:31.000000000 +0000
+--- src/flow-export.c.orig	2004-03-31 03:11:14.000000000 +0000
 +++ src/flow-export.c
-@@ -115,18 +115,18 @@ void usage(void);
- struct jump format[] = {{format0}, {format1}, {format2}, {format3},
-                         {format4}, {format5}};
- 
-+int debug = 0;
-+
- int main(int argc, char **argv)
- {
-   int i, format_index, ret, ascii_mask;
-   struct ftio ftio;
-   struct ftprof ftp;
-   struct options opt;
--  int debug;
- 
-   /* init fterr */
-   fterr_setid(argv[0]);
- 
--  debug = 0;
-   format_index = 0;
-   bzero(&opt, sizeof opt);
-   ascii_mask = 0;
-@@ -864,7 +864,7 @@ int format5(struct ftio *ftio, struct op
+@@ -865,7 +865,7 @@ int format5(struct ftio *ftio, struct op
    struct ftver ftv;
    char fields[1024], values[1024], query[3*1024];
    char *rec;
@@ -32,7 +11,7 @@ $NetBSD: patch-ak,v 1.2 2005/02/18 10:08:33 seb Exp $
    char *db_port;
    int len;
  
-@@ -891,7 +891,7 @@ int format5(struct ftio *ftio, struct op
+@@ -892,7 +892,7 @@ int format5(struct ftio *ftio, struct op
      db_name = strsep(&tmp, ":");
      db_table = strsep(&tmp, ":");
  
@@ -41,7 +20,7 @@ $NetBSD: patch-ak,v 1.2 2005/02/18 10:08:33 seb Exp $
        fterr_warnx("Missing field in dbaseURI, expecting user:pwd:host:port:name:table.");
        return -1;
      }
-@@ -1199,10 +1199,10 @@ int fmt_xfields_val(char *fmt_buf, char 
+@@ -1200,10 +1200,10 @@ int fmt_xfields_val(char *fmt_buf, char 
  
    if (xfields & FT_XFIELD_EXADDR) {
      if (comma) fmt_buf[len++] = ',';
@@ -54,7 +33,7 @@ $NetBSD: patch-ak,v 1.2 2005/02/18 10:08:33 seb Exp $
      comma = 1;
    }
  
-@@ -1257,28 +1257,28 @@ int fmt_xfields_val(char *fmt_buf, char 
+@@ -1258,28 +1258,28 @@ int fmt_xfields_val(char *fmt_buf, char 
  
    if (xfields & FT_XFIELD_SRCADDR) {
      if (comma) fmt_buf[len++] = ',';
@@ -89,7 +68,7 @@ $NetBSD: patch-ak,v 1.2 2005/02/18 10:08:33 seb Exp $
      comma = 1;
    }
  
-@@ -1375,19 +1375,19 @@ int fmt_xfields_val(char *fmt_buf, char 
+@@ -1376,19 +1376,19 @@ int fmt_xfields_val(char *fmt_buf, char 
  
    if (xfields & FT_XFIELD_PEER_NEXTHOP) {
      if (comma) fmt_buf[len++] = ',';

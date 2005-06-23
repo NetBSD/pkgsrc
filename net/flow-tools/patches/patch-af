@@ -1,19 +1,19 @@
-$NetBSD: patch-af,v 1.3 2004/04/22 15:33:35 seb Exp $
+$NetBSD: patch-af,v 1.4 2005/06/23 14:20:56 seb Exp $
 
---- lib/Makefile.in.orig	2004-04-22 12:15:23.000000000 +0000
+--- lib/Makefile.in.orig	2005-06-21 23:24:04.000000000 +0000
 +++ lib/Makefile.in
-@@ -123,7 +123,7 @@ target_alias = @target_alias@
- #AM_CFLAGS=-O2
- AM_CFLAGS = -g -Wall
+@@ -95,7 +95,7 @@ AM_CFLAGS = -g -Wall
+ 
+ DEFS = -I. -I$(srcdir)/lib
  
 -include_HEADERS = ftlib.h ftqueue.h radix.h ftpaths.h ftconfig.h
 +pkginclude_HEADERS = ftlib.h ftqueue.h radix.h ftpaths.h ftconfig.h
  lib_LIBRARIES = libft.a
  
  libft_a_SOURCES = ftio.c ftswap.c ftencode.c ftdecode.c ftprof.c bit1024.c \
-@@ -173,10 +173,10 @@ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUD
- CCLD = $(CC)
+@@ -148,10 +148,10 @@ CCLD = $(CC)
  LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CFLAGS = @CFLAGS@
  DIST_SOURCES = $(libft_a_SOURCES)
 -HEADERS = $(include_HEADERS)
 +HEADERS = $(pkginclude_HEADERS)
@@ -25,9 +25,9 @@ $NetBSD: patch-af,v 1.3 2004/04/22 15:33:35 seb Exp $
  SOURCES = $(libft_a_SOURCES)
  
  all: ftconfig.h
-@@ -304,23 +304,23 @@ distclean-depend:
- @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
- @am__fastdepCC_FALSE@	$(COMPILE) -c `if test -f '$<'; then $(CYGPATH_W) '$<'; else $(CYGPATH_W) '$(srcdir)/$<'; fi`
+@@ -270,23 +270,23 @@ distclean-depend:
+ 	$(COMPILE) -c `cygpath -w $<`
+ CCDEPMODE = @CCDEPMODE@
  uninstall-info-am:
 -includeHEADERS_INSTALL = $(INSTALL_HEADER)
 -install-includeHEADERS: $(include_HEADERS)
@@ -59,7 +59,7 @@ $NetBSD: patch-af,v 1.3 2004/04/22 15:33:35 seb Exp $
  	done
  
  ETAGS = etags
-@@ -413,7 +413,7 @@ check: check-am
+@@ -355,7 +355,7 @@ check: check-am
  all-am: Makefile $(LIBRARIES) $(HEADERS) ftconfig.h
  
  installdirs:
@@ -68,7 +68,7 @@ $NetBSD: patch-af,v 1.3 2004/04/22 15:33:35 seb Exp $
  
  install: install-am
  install-exec: install-exec-am
-@@ -456,7 +456,7 @@ info: info-am
+@@ -398,7 +398,7 @@ info: info-am
  
  info-am:
  
@@ -77,19 +77,19 @@ $NetBSD: patch-af,v 1.3 2004/04/22 15:33:35 seb Exp $
  
  install-exec-am: install-libLIBRARIES
  
-@@ -482,21 +482,21 @@ ps: ps-am
+@@ -416,21 +416,21 @@ mostlyclean: mostlyclean-am
  
- ps-am:
+ mostlyclean-am: mostlyclean-compile mostlyclean-generic
  
 -uninstall-am: uninstall-includeHEADERS uninstall-info-am \
 -	uninstall-libLIBRARIES
 +uninstall-am: uninstall-info-am uninstall-libLIBRARIES \
 +	uninstall-pkgincludeHEADERS
  
- .PHONY: CTAGS GTAGS all all-am check check-am clean clean-generic \
- 	clean-libLIBRARIES ctags distclean distclean-compile \
- 	distclean-depend distclean-generic distclean-hdr distclean-tags \
- 	distdir dvi dvi-am info info-am install install-am install-data \
+ .PHONY: GTAGS all all-am check check-am clean clean-generic \
+ 	clean-libLIBRARIES distclean distclean-compile distclean-depend \
+ 	distclean-generic distclean-hdr distclean-tags distdir dvi \
+ 	dvi-am info info-am install install-am install-data \
 -	install-data-am install-exec install-exec-am \
 -	install-includeHEADERS install-info install-info-am \
 -	install-libLIBRARIES install-man install-strip installcheck \
@@ -98,10 +98,10 @@ $NetBSD: patch-af,v 1.3 2004/04/22 15:33:35 seb Exp $
 +	install-pkgincludeHEADERS install-strip installcheck \
  	installcheck-am installdirs maintainer-clean \
  	maintainer-clean-generic mostlyclean mostlyclean-compile \
- 	mostlyclean-generic pdf pdf-am ps ps-am tags uninstall \
--	uninstall-am uninstall-includeHEADERS uninstall-info-am \
+ 	mostlyclean-generic tags uninstall uninstall-am \
+-	uninstall-includeHEADERS uninstall-info-am \
 -	uninstall-libLIBRARIES
-+	uninstall-am uninstall-info-am uninstall-libLIBRARIES \
++	uninstall-info-am uninstall-libLIBRARIES \
 +	uninstall-pkgincludeHEADERS
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
