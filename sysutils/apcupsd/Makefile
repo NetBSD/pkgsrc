@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2005/05/22 20:08:31 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/06/23 21:13:01 kristerw Exp $
 
 DISTNAME=		apcupsd-3.8.6
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 
@@ -12,7 +12,7 @@ COMMENT=		UPS power management for APCC Products
 BUILD_USES_MSGFMT=	yes
 
 USE_PKGINSTALL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake sh
 
 GNU_CONFIGURE=		yes
 
@@ -34,6 +34,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 # configure sets sbindir to '${prefix}/sbin' without expanding $prefix
 # this breaks .in files that uses @sbindir@
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
+
+CONFIGURE_ENV+=		ac_cv_path_SCRIPTSHELL="${TOOLS_SH}"
 
 EGDIR=          ${PREFIX}/share/examples/apcupsd
 
