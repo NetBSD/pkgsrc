@@ -1,13 +1,15 @@
-$NetBSD: patch-ad,v 1.6 2004/06/21 08:23:48 martti Exp $
+$NetBSD: patch-ad,v 1.7 2005/06/23 17:49:40 kristerw Exp $
 
---- src/Makefile.orig	2004-05-16 13:52:54.000000000 +0000
-+++ src/Makefile	2004-06-11 21:40:33.000000000 +0000
-@@ -1076,3 +1076,3 @@
+--- src//Makefile.orig	2004-06-07 12:03:56.000000000 +0200
++++ src//Makefile	2005-06-23 19:43:26.000000000 +0200
+@@ -1074,26 +1074,31 @@
+ ### Athena GUI
+ ### Use Xaw3d to make the menus look a little bit nicer
  #XAW_LIB = -lXaw3d
 -XAW_LIB = -lXaw
 +#XAW_LIB = -lXaw
  
-@@ -1080,8 +1080,11 @@
+ ### When using Xaw3d, uncomment/comment the following lines to also get the
  ### scrollbars from Xaw3d.
 -#ATHENA_SRC	= gui.c gui_athena.c gui_x11.c pty.c gui_beval.c gui_at_fs.c
 -#ATHENA_OBJ	= objects/gui.o objects/gui_athena.o objects/gui_x11.o \
@@ -25,13 +27,27 @@ $NetBSD: patch-ad,v 1.6 2004/06/21 08:23:48 martti Exp $
 +		    -Dvim_XawScrollbarSetThumb=XawScrollbarSetThumb
 +.else
  ATHENA_SRC	= gui.c gui_athena.c gui_x11.c pty.c gui_beval.c \
-@@ -1092,2 +1095,4 @@
+ 			gui_at_sb.c gui_at_fs.c
+ ATHENA_OBJ	= objects/gui.o objects/gui_athena.o objects/gui_x11.o \
+ 			objects/pty.o objects/gui_beval.o \
+ 			objects/gui_at_sb.o objects/gui_at_fs.o
  ATHENA_DEFS	= -DFEAT_GUI_ATHENA $(NARROW_PROTO)
 +.endif # Xaw
 +.endif # defined(XAW_LIB)
  
-@@ -1095,3 +1100,3 @@
+ ATHENA_IPATH	= $(GUI_INC_LOC)
  ATHENA_LIBS_DIR = $(GUI_LIB_LOC)
 -ATHENA_LIBS1	= $(XAW_LIB)
 +ATHENA_LIBS1	= $(LIBXAW)
  ATHENA_LIBS2	= -lXt
+ ATHENA_INSTALL  = install_normal
+ ATHENA_TARGETS	= installglinks
+@@ -1779,7 +1784,7 @@
+ 	-chmod $(FILEMOD) $(DEST_TOOLS)/*
+ # replace the path in some tools
+ 	perlpath=`./which.sh perl` && sed -e "s+/usr/bin/perl+$$perlpath+" $(TOOLSSOURCE)/efm_perl.pl >$(DEST_TOOLS)/efm_perl.pl
+-	awkpath=`./which.sh nawk` && sed -e "s+/usr/bin/nawk+$$awkpath+" $(TOOLSSOURCE)/mve.awk >$(DEST_TOOLS)/mve.awk; if test -z "$$awkpath"; then \
++	awkpath=$(TOOLS_AWK) && sed -e "s+/usr/bin/nawk+$$awkpath+" $(TOOLSSOURCE)/mve.awk >$(DEST_TOOLS)/mve.awk; if test -z "$$awkpath"; then \
+ 		awkpath=`./which.sh gawk` && sed -e "s+/usr/bin/nawk+$$awkpath+" $(TOOLSSOURCE)/mve.awk >$(DEST_TOOLS)/mve.awk; if test -z "$$awkpath"; then \
+ 		awkpath=`./which.sh awk` && sed -e "s+/usr/bin/nawk+$$awkpath+" $(TOOLSSOURCE)/mve.awk >$(DEST_TOOLS)/mve.awk; fi; fi
+ 	-chmod $(SCRIPTMOD) `grep -l "^#!" $(DEST_TOOLS)/*`
