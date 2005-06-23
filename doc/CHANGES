@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10412 2005/06/23 15:20:46 minskim Exp $
+$NetBSD: CHANGES,v 1.10413 2005/06/23 17:02:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2952,3 +2952,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/gnupg-devel to 1.9.17 [shannonjr 2005-06-23]
 	Updated net/flow-tools to 0.68 [seb 2005-06-23]
 	Updated math/mathomatic to 12.4.3 [minskim 2005-06-23]
+	Updated lang/ruby18-base to 1.8.2nb2 [taca 2005-06-23]
+	Updated net/ruby-xmlrpc4r-1.7.16nb2 [taca 2005-06-23]
+	Updated graphics/ruby-RMagick to 1.8.3 [taca 2005-06-23]
