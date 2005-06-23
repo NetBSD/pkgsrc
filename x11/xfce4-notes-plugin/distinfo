@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 17:36:22 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/06/23 07:27:10 martti Exp $
 
-SHA1 (xfce4-notes-plugin-0.9.7.tar.gz) = dc7d04b6ab755b87667a9fd5a1054c033f3891f6
-RMD160 (xfce4-notes-plugin-0.9.7.tar.gz) = 018a47fe9f970dfc4c8584aca2f90966cd9ce40e
-Size (xfce4-notes-plugin-0.9.7.tar.gz) = 326290 bytes
+SHA1 (xfce4-notes-plugin-0.10.0.tar.gz) = e4c6e4a80fe66cb887e6754bfb902be38c62b679
+RMD160 (xfce4-notes-plugin-0.10.0.tar.gz) = 6eb18b34e865d0eb45f294d8e9193a1192aab141
+Size (xfce4-notes-plugin-0.10.0.tar.gz) = 327653 bytes
