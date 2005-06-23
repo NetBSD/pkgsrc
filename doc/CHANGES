@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10419 2005/06/23 22:17:05 kristerw Exp $
+$NetBSD: CHANGES,v 1.10420 2005/06/23 23:53:06 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2968,3 +2968,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/LPRng-core to 3.8.28nb1 [kristerw 2005-06-23]
 	Updated news/inn to 2.4.1nb3 [kristerw 2005-06-23]
 	Updated net/freewais-sf to 2.2.12nb3 [kristerw 2005-06-23]
+	Added devel/py-ZopeInterface version 3.0.1 [minskim 2005-06-23]
