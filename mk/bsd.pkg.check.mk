@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.2 2005/06/23 09:02:46 jlam Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.3 2005/06/23 18:12:20 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets the for various install-time "check"
@@ -13,13 +13,10 @@
 #    CHECK_FILES_STRICT makes the file checks very strict on errors if
 #	it is any value other than "no".  Defaults to "no".
 #
-#    CHECK_WRKREF causes the check for ${WRKDIR} or ${TOOLS_DIR} in
-#	the package's installed files.  Defaults to "no".
-#
-#    CHECK_WRKREF_IS_TEXT_FILE is a shell command list that determines
-#	whether we check for ${WRKDIR} or ${TOOLS_DIR} in "$$file".
-#	If this command returns 0, then we check for ${WRKDIR}.  It
-#	defaults to returning 0 if "$$file" is a text file.
+#    CHECK_WRKREF is a list of options that trigger the checks for
+#	${WRKDIR} or ${TOOLS_DIR} in the package's installed files.
+#	Valid values are "work", which checks for ${WRKDIR}, and
+#	"tools", which checks for ${TOOLS_DIR}.  Defaults to "no".
 #
 # The following targets are defined by bsd.pkg.check.mk:
 #
@@ -38,7 +35,7 @@
 # For PKG_DEVELOPERs, cause some checks to be run automatically by default.
 .if defined(PKG_DEVELOPER)
 CHECK_FILES?=		yes
-CHECK_WRKREF?=		yes
+CHECK_WRKREF?=		tools
 .endif
 
 CHECK_FILES?=		no
@@ -293,7 +290,11 @@ MAKEVARS+=	_CHECK_WRKREF_SKIP_FILTER
 .else
 _CHECK_WRKREF_SKIP_FILTER=	${TRUE}
 .endif
-CHECK_WRKREF_IS_TEXT_FILE?=	${_SUBST_IS_TEXT_FILE}
+
+_CHECK_WRKREF:=		${CHECK_WRKREF}
+.if !empty(_CHECK_WRKREF:Mwork)
+_CHECK_WRKREF:=		work		# "work" is the "max" option
+.endif
 
 ###########################################################################
 # check-wrkref target
@@ -308,17 +309,22 @@ check-wrkref:
 	{ while read file; do						\
 		${_CHECK_WRKREF_SKIP_FILTER};				\
 		${SHCOMMENT} [$$file];					\
-		if ${CHECK_WRKREF_IS_TEXT_FILE}; then			\
+		case ${_CHECK_WRKREF:Mwork:Q}"" in			\
+		work)							\
 			if ${GREP} -H ${WRKDIR:Q} "$$file" 2>/dev/null; then \
-				found_wrkdir=1;				\
+				found=1;				\
 			fi;						\
-		else							\
+			;;						\
+		esac;							\
+		case ${_CHECK_WRKREF:Mtools:Q}"" in			\
+		tools)							\
 			if ${GREP} -H ${TOOLS_DIR:Q} "$$file" 2>/dev/null; then \
-				found_wrkdir=1;				\
+				found=1;				\
 			fi;						\
-		fi;							\
+			;;						\
+		esac;							\
 	  done;								\
-	  if ${TEST} "$$found_wrkdir" = 1; then				\
+	  if ${TEST} "$$found" = 1; then				\
 		${ECHO} "***";						\
 		${ECHO} "*** The above files still have references to the build directory."; \
 		${ECHO} "*** This is possibly an error that should be fixed by unwrapping"; \
