@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.5 2005/06/23 21:06:56 jlam Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.6 2005/06/23 21:34:01 kristerw Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets the for various install-time "check"
@@ -34,7 +34,6 @@
 
 # For PKG_DEVELOPERs, cause some checks to be run automatically by default.
 .if defined(PKG_DEVELOPER)
-CHECK_FILES?=		yes
 CHECK_WRKREF?=		tools
 .endif
 
