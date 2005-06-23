@@ -1,0 +1,1606 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/23 07:30:06 martti Exp $
+bin/jalbum
+share/jalbum/JAlbum.jar
+share/jalbum/StartJAlbum.bat
+share/jalbum/filetypes.xml
+share/jalbum/help/addbuttons.html
+share/jalbum/help/faq.html
+share/jalbum/help/features.html
+share/jalbum/help/filters.html
+share/jalbum/help/history.html
+share/jalbum/help/images/a.gif
+share/jalbum/help/images/beans.gif
+share/jalbum/help/images/beforefilter-standard.jpg
+share/jalbum/help/images/beforefilter.jpg
+share/jalbum/help/images/bigicon.gif
+share/jalbum/help/images/blurexample.jpg
+share/jalbum/help/images/browsers.gif
+share/jalbum/help/images/button.gif
+share/jalbum/help/images/buttonedit.gif
+share/jalbum/help/images/camera.gif
+share/jalbum/help/images/closeupwithtext.jpg
+share/jalbum/help/images/console.gif
+share/jalbum/help/images/david.jpg
+share/jalbum/help/images/demowebhost.gif
+share/jalbum/help/images/digicam.gif
+share/jalbum/help/images/download.gif
+share/jalbum/help/images/dragndrop.png
+share/jalbum/help/images/filterproperties.gif
+share/jalbum/help/images/filters.gif
+share/jalbum/help/images/first.gif
+share/jalbum/help/images/fixedshapeexample.jpg
+share/jalbum/help/images/folder.gif
+share/jalbum/help/images/folders.gif
+share/jalbum/help/images/free.gif
+share/jalbum/help/images/ftp.gif
+share/jalbum/help/images/grayscaleexample.jpg
+share/jalbum/help/images/grayscalethumb.jpg
+share/jalbum/help/images/heart.gif
+share/jalbum/help/images/international.gif
+share/jalbum/help/images/java.gif
+share/jalbum/help/images/jlogo-big.png
+share/jalbum/help/images/last.gif
+share/jalbum/help/images/logoexample.jpg
+share/jalbum/help/images/makealbum.png
+share/jalbum/help/images/menubackground-right.gif
+share/jalbum/help/images/menubackground.gif
+share/jalbum/help/images/miniheart.gif
+share/jalbum/help/images/movie.gif
+share/jalbum/help/images/navigation1.gif
+share/jalbum/help/images/navigation2.gif
+share/jalbum/help/images/openskin.gif
+share/jalbum/help/images/paypaldonate.gif
+share/jalbum/help/images/pdf.gif
+share/jalbum/help/images/pil.gif
+share/jalbum/help/images/q.gif
+share/jalbum/help/images/rotationexample.jpg
+share/jalbum/help/images/runson-os.gif
+share/jalbum/help/images/script.gif
+share/jalbum/help/images/shadowtextexample.jpg
+share/jalbum/help/images/sharpenexample.jpg
+share/jalbum/help/images/skin.gif
+share/jalbum/help/images/skindirectory.gif
+share/jalbum/help/images/skinfolder.gif
+share/jalbum/help/images/slideedit.gif
+share/jalbum/help/images/smallicon.gif
+share/jalbum/help/images/smiley.gif
+share/jalbum/help/images/textexample.jpg
+share/jalbum/help/images/tip.gif
+share/jalbum/help/images/ui-advanced-main.png
+share/jalbum/help/images/ui-advanced-naming.png
+share/jalbum/help/images/ui-advanced-preferences.png
+share/jalbum/help/images/ui-advanced-variables.png
+share/jalbum/help/images/ui-custom.gif
+share/jalbum/help/images/ui-edit.gif
+share/jalbum/help/images/ui-macosx.gif
+share/jalbum/help/images/ui-metal.gif
+share/jalbum/help/images/ui-publish.gif
+share/jalbum/help/images/ui-publish.png
+share/jalbum/help/images/ui.gif
+share/jalbum/help/images/uploading.gif
+share/jalbum/help/images/watermarkexample.jpg
+share/jalbum/help/images/xbfexample.jpg
+share/jalbum/help/images/xborderexample.jpg
+share/jalbum/help/images/zoomexample.jpg
+share/jalbum/help/index.html
+share/jalbum/help/misc.html
+share/jalbum/help/quickstart.html
+share/jalbum/help/scripting.html
+share/jalbum/help/skincreation.html
+share/jalbum/help/style.css
+share/jalbum/help/supporting.html
+share/jalbum/help/tutorials.html
+share/jalbum/help/usermanual.html
+share/jalbum/includes/printing.bsh
+share/jalbum/includes/printing.inc
+share/jalbum/includes/shutterfly.inc
+share/jalbum/includes/test.inc
+share/jalbum/init.bsh
+share/jalbum/plugins/BlurFilter.class
+share/jalbum/plugins/BlurFilter.java
+share/jalbum/plugins/Compile.bat
+share/jalbum/plugins/FixedShapeFilter.class
+share/jalbum/plugins/FixedShapeFilter.java
+share/jalbum/plugins/GrayscaleFilter.class
+share/jalbum/plugins/GrayscaleFilter.java
+share/jalbum/plugins/LogoFilter.class
+share/jalbum/plugins/LogoFilter.java
+share/jalbum/plugins/LogoFilter.jbx
+share/jalbum/plugins/Printing.class
+share/jalbum/plugins/Printing.java
+share/jalbum/plugins/PropertySettingFilterWrapper.class
+share/jalbum/plugins/PropertySettingFilterWrapper.java
+share/jalbum/plugins/RotationFilter.class
+share/jalbum/plugins/RotationFilter.java
+share/jalbum/plugins/ShadowTextFilter.class
+share/jalbum/plugins/ShadowTextFilter.java
+share/jalbum/plugins/ShadowTextFilter.jbx
+share/jalbum/plugins/SharpenFilter.class
+share/jalbum/plugins/SharpenFilter.java
+share/jalbum/plugins/SimpleFilter.class
+share/jalbum/plugins/SimpleFilter.java
+share/jalbum/plugins/TextFilter.class
+share/jalbum/plugins/TextFilter.java
+share/jalbum/plugins/TextFilter.jbx
+share/jalbum/plugins/WatermarkFilter.class
+share/jalbum/plugins/WatermarkFilter.java
+share/jalbum/plugins/WatermarkFilter.jbx
+share/jalbum/plugins/XBorderFilter.class
+share/jalbum/plugins/XBorderFilter.java
+share/jalbum/plugins/ZoomFilter.class
+share/jalbum/plugins/ZoomFilter.java
+share/jalbum/plugins/makedoc.bat
+share/jalbum/plugins/readme.txt
+share/jalbum/plugins/wishlist.txt
+share/jalbum/readme.html
+share/jalbum/res/doc.gif
+share/jalbum/res/folder.gif
+share/jalbum/res/img.gif
+share/jalbum/res/mdb.gif
+share/jalbum/res/movie.gif
+share/jalbum/res/pdf.gif
+share/jalbum/res/ppt.gif
+share/jalbum/res/txt.gif
+share/jalbum/res/unknown.gif
+share/jalbum/res/xls.gif
+share/jalbum/res/xml.gif
+share/jalbum/res/zip.gif
+share/jalbum/skins/BluPlusPlus/bsh/index.bsh
+share/jalbum/skins/BluPlusPlus/bsh/slide-original.bsh
+share/jalbum/skins/BluPlusPlus/bsh/slide.bsh
+share/jalbum/skins/BluPlusPlus/cameras.properties
+share/jalbum/skins/BluPlusPlus/connect.pht
+share/jalbum/skins/BluPlusPlus/docs/ChangesHistory.txt
+share/jalbum/skins/BluPlusPlus/docs/ReadMe.txt
+share/jalbum/skins/BluPlusPlus/docs/UserGuide.txt
+share/jalbum/skins/BluPlusPlus/frames/border_01.xbp
+share/jalbum/skins/BluPlusPlus/frames/border_02.xbp
+share/jalbum/skins/BluPlusPlus/frames/border_03.xbp
+share/jalbum/skins/BluPlusPlus/frames/bracket.xbp
+share/jalbum/skins/BluPlusPlus/frames/bracket_horizontal.xbp
+share/jalbum/skins/BluPlusPlus/frames/bracket_vertical.xbp
+share/jalbum/skins/BluPlusPlus/frames/elaborate_01.xbp
+share/jalbum/skins/BluPlusPlus/frames/elaborate_02.xbp
+share/jalbum/skins/BluPlusPlus/frames/frame.xbp
+share/jalbum/skins/BluPlusPlus/frames/glow_01.xbp
+share/jalbum/skins/BluPlusPlus/frames/glow_02.xbp
+share/jalbum/skins/BluPlusPlus/frames/glow_03.xbp
+share/jalbum/skins/BluPlusPlus/frames/hakki.xbp
+share/jalbum/skins/BluPlusPlus/frames/images/corner_d4d4d4_5.gif
+share/jalbum/skins/BluPlusPlus/frames/images/corner_d4d4d4_5l.gif
+share/jalbum/skins/BluPlusPlus/frames/images/eos_cdw30.gif
+share/jalbum/skins/BluPlusPlus/frames/images/eos_mosaic15.gif
+share/jalbum/skins/BluPlusPlus/frames/images/eos_mosaic9.gif
+share/jalbum/skins/BluPlusPlus/frames/images/eos_networking4b.gif
+share/jalbum/skins/BluPlusPlus/frames/images/eos_networking5.gif
+share/jalbum/skins/BluPlusPlus/frames/images/parchment_01.gif
+share/jalbum/skins/BluPlusPlus/frames/images/tape_orange5.gif
+share/jalbum/skins/BluPlusPlus/frames/images/tape_orange6.gif
+share/jalbum/skins/BluPlusPlus/frames/images/wood_02.jpg
+share/jalbum/skins/BluPlusPlus/frames/none.xbp
+share/jalbum/skins/BluPlusPlus/frames/oval_01.xbp
+share/jalbum/skins/BluPlusPlus/frames/oval_02.xbp
+share/jalbum/skins/BluPlusPlus/frames/oval_03.xbp
+share/jalbum/skins/BluPlusPlus/frames/oval_04.xbp
+share/jalbum/skins/BluPlusPlus/frames/preview.jpg
+share/jalbum/skins/BluPlusPlus/frames/shadow.xbp
+share/jalbum/skins/BluPlusPlus/frames/shadow_full.xbp
+share/jalbum/skins/BluPlusPlus/frames/shadow_nw.xbp
+share/jalbum/skins/BluPlusPlus/frames/simple_01.xbp
+share/jalbum/skins/BluPlusPlus/frames/simple_02.xbp
+share/jalbum/skins/BluPlusPlus/frames/simple_03.xbp
+share/jalbum/skins/BluPlusPlus/frames/simple_04.xbp
+share/jalbum/skins/BluPlusPlus/frames/simple_05.xbp
+share/jalbum/skins/BluPlusPlus/frames/simple_06.xbp
+share/jalbum/skins/BluPlusPlus/frames/soft_01.xbp
+share/jalbum/skins/BluPlusPlus/frames/soft_02.xbp
+share/jalbum/skins/BluPlusPlus/frames/soft_03.xbp
+share/jalbum/skins/BluPlusPlus/frames/soft_04.xbp
+share/jalbum/skins/BluPlusPlus/frames/soft_05.xbp
+share/jalbum/skins/BluPlusPlus/frames/soft_06.xbp
+share/jalbum/skins/BluPlusPlus/frames/soft_07.xbp
+share/jalbum/skins/BluPlusPlus/frames/tape_01.xbp
+share/jalbum/skins/BluPlusPlus/hints.jap
+share/jalbum/skins/BluPlusPlus/includes/footer.inc
+share/jalbum/skins/BluPlusPlus/includes/header.inc
+share/jalbum/skins/BluPlusPlus/includes/help.inc
+share/jalbum/skins/BluPlusPlus/includes/html-header.inc
+share/jalbum/skins/BluPlusPlus/includes/index-bottom-navigation.inc
+share/jalbum/skins/BluPlusPlus/includes/index-top-navigation.inc
+share/jalbum/skins/BluPlusPlus/includes/index-topbar.inc
+share/jalbum/skins/BluPlusPlus/includes/setup-index.js
+share/jalbum/skins/BluPlusPlus/includes/setup-slide-common.js
+share/jalbum/skins/BluPlusPlus/includes/setup-slide-original.js
+share/jalbum/skins/BluPlusPlus/includes/setup-slide.js
+share/jalbum/skins/BluPlusPlus/includes/slide-bottom-navigation.inc
+share/jalbum/skins/BluPlusPlus/includes/slide-comment.inc
+share/jalbum/skins/BluPlusPlus/includes/slide-info.inc
+share/jalbum/skins/BluPlusPlus/includes/slide-photographic-meta-info.inc
+share/jalbum/skins/BluPlusPlus/includes/slide-remarks.inc
+share/jalbum/skins/BluPlusPlus/includes/slide-top-navigation.inc
+share/jalbum/skins/BluPlusPlus/includes/slide-topbar.inc
+share/jalbum/skins/BluPlusPlus/index.htt
+share/jalbum/skins/BluPlusPlus/init.bsh
+share/jalbum/skins/BluPlusPlus/onload.bsh
+share/jalbum/skins/BluPlusPlus/plugins/AbstractSlide.class
+share/jalbum/skins/BluPlusPlus/plugins/AbstractSlide.java
+share/jalbum/skins/BluPlusPlus/plugins/BPPCompiledScript.class
+share/jalbum/skins/BluPlusPlus/plugins/BPPCompiledScript.java
+share/jalbum/skins/BluPlusPlus/plugins/BPPFilterGroup.class
+share/jalbum/skins/BluPlusPlus/plugins/BPPFilterGroup.java
+share/jalbum/skins/BluPlusPlus/plugins/BPPFilterProperties.class
+share/jalbum/skins/BluPlusPlus/plugins/BPPFilterProperties.java
+share/jalbum/skins/BluPlusPlus/plugins/BPPFrameHandler.class
+share/jalbum/skins/BluPlusPlus/plugins/BPPFrameHandler.java
+share/jalbum/skins/BluPlusPlus/plugins/BPPStyleSheet.class
+share/jalbum/skins/BluPlusPlus/plugins/BPPStyleSheet.java
+share/jalbum/skins/BluPlusPlus/plugins/Base.class
+share/jalbum/skins/BluPlusPlus/plugins/Base.java
+share/jalbum/skins/BluPlusPlus/plugins/Common.class
+share/jalbum/skins/BluPlusPlus/plugins/Common.java
+share/jalbum/skins/BluPlusPlus/plugins/Compile.bat
+share/jalbum/skins/BluPlusPlus/plugins/Compile13.bat
+share/jalbum/skins/BluPlusPlus/plugins/Constants.class
+share/jalbum/skins/BluPlusPlus/plugins/Constants.java
+share/jalbum/skins/BluPlusPlus/plugins/DynamicComboBoxModel.class
+share/jalbum/skins/BluPlusPlus/plugins/DynamicComboBoxModel.java
+share/jalbum/skins/BluPlusPlus/plugins/FramePreviewPanel.class
+share/jalbum/skins/BluPlusPlus/plugins/FramePreviewPanel.java
+share/jalbum/skins/BluPlusPlus/plugins/FrameTypeComboBox$1.class
+share/jalbum/skins/BluPlusPlus/plugins/FrameTypeComboBox$FrameTypeComboBoxModel.class
+share/jalbum/skins/BluPlusPlus/plugins/FrameTypeComboBox.class
+share/jalbum/skins/BluPlusPlus/plugins/FrameTypeComboBox.java
+share/jalbum/skins/BluPlusPlus/plugins/Index.class
+share/jalbum/skins/BluPlusPlus/plugins/Index.java
+share/jalbum/skins/BluPlusPlus/plugins/LanguageComboBox$1.class
+share/jalbum/skins/BluPlusPlus/plugins/LanguageComboBox$LanguageComboBoxModel.class
+share/jalbum/skins/BluPlusPlus/plugins/LanguageComboBox.class
+share/jalbum/skins/BluPlusPlus/plugins/LanguageComboBox.java
+share/jalbum/skins/BluPlusPlus/plugins/OriginalSlide.class
+share/jalbum/skins/BluPlusPlus/plugins/OriginalSlide.java
+share/jalbum/skins/BluPlusPlus/plugins/PhotographicMetaInformation.class
+share/jalbum/skins/BluPlusPlus/plugins/PhotographicMetaInformation.java
+share/jalbum/skins/BluPlusPlus/plugins/SkinAboutSection.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinAboutSection.java
+share/jalbum/skins/BluPlusPlus/plugins/SkinAbstractSection.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinAbstractSection.java
+share/jalbum/skins/BluPlusPlus/plugins/SkinAdvancedSection.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinAdvancedSection.java
+share/jalbum/skins/BluPlusPlus/plugins/SkinFilterManagementSection.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinFilterManagementSection.java
+share/jalbum/skins/BluPlusPlus/plugins/SkinFramesSection$EditAction.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinFramesSection$PreviewAction.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinFramesSection.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinFramesSection.java
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$1.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$10.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$11.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$12.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$13.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$14.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$15.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$16.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$17.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$18.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$19.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$2.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$20.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$3.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$4.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$5.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$6.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$7.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$8.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$9.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI.java
+share/jalbum/skins/BluPlusPlus/plugins/SkinGeneralSection.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGeneralSection.java
+share/jalbum/skins/BluPlusPlus/plugins/SkinIndexSection.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinIndexSection.java
+share/jalbum/skins/BluPlusPlus/plugins/SkinPanel.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinPanel.java
+share/jalbum/skins/BluPlusPlus/plugins/SkinRemarksSection.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinRemarksSection.java
+share/jalbum/skins/BluPlusPlus/plugins/SkinSlideSection.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinSlideSection.java
+share/jalbum/skins/BluPlusPlus/plugins/Slide.class
+share/jalbum/skins/BluPlusPlus/plugins/Slide.java
+share/jalbum/skins/BluPlusPlus/preview.jpg
+share/jalbum/skins/BluPlusPlus/res/actions/black/download.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/first.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/first_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/folder.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/folder_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/help.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/index.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/info.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/info_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/last.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/last_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/movie.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/movie_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/next.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/next_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/order_print.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/pause.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/play.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/previous.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/previous_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/sound.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/sound_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/black/up.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/download.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/first.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/first_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/folder.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/folder_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/help.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/index.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/info.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/info_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/last.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/last_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/movie.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/movie_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/next.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/next_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/order_print.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/pause.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/play.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/previous.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/previous_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/sound.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/sound_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/bright-matte/up.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/download.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/first.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/first_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/folder.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/folder_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/help.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/index.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/info.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/info_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/last.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/last_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/movie.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/movie_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/next.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/next_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/order_print.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/pause.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/play.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/previous.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/previous_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/sound.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/sound_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/dark-matte/up.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/download.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/first.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/first_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/folder.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/folder_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/help.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/index.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/info.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/info_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/last.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/last_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/movie.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/movie_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/next.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/next_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/order_print.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/pause.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/play.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/previous.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/previous_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/sound.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/sound_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/universal/up.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/download.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/first.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/first_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/folder.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/folder_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/help.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/index.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/info.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/info_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/last.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/last_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/movie.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/movie_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/next.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/next_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/order_print.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/pause.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/play.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/previous.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/previous_disabled.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/sound.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/sound_small.gif
+share/jalbum/skins/BluPlusPlus/res/actions/white/up.gif
+share/jalbum/skins/BluPlusPlus/res/empty.gif
+share/jalbum/skins/BluPlusPlus/res/favicon.ico
+share/jalbum/skins/BluPlusPlus/res/folder.gif
+share/jalbum/skins/BluPlusPlus/res/js/common.js
+share/jalbum/skins/BluPlusPlus/res/js/keyboard.js
+share/jalbum/skins/BluPlusPlus/res/js/nav-index.js
+share/jalbum/skins/BluPlusPlus/res/js/nav-slide.js
+share/jalbum/skins/BluPlusPlus/res/js/remarks.js
+share/jalbum/skins/BluPlusPlus/res/js/save-protection.js
+share/jalbum/skins/BluPlusPlus/res/js/shadow.js
+share/jalbum/skins/BluPlusPlus/res/js/slideshow.js
+share/jalbum/skins/BluPlusPlus/res/js/statusbar.js
+share/jalbum/skins/BluPlusPlus/res/movie.gif
+share/jalbum/skins/BluPlusPlus/res/php/remarks.php
+share/jalbum/skins/BluPlusPlus/res/styles/arcs.css
+share/jalbum/skins/BluPlusPlus/res/styles/arcs/background.jpg
+share/jalbum/skins/BluPlusPlus/res/styles/arcs/rule.gif
+share/jalbum/skins/BluPlusPlus/res/styles/arcs/theme.properties
+share/jalbum/skins/BluPlusPlus/res/styles/artsy.css
+share/jalbum/skins/BluPlusPlus/res/styles/artsy/background.jpg
+share/jalbum/skins/BluPlusPlus/res/styles/artsy/rule.gif
+share/jalbum/skins/BluPlusPlus/res/styles/artsy/theme.properties
+share/jalbum/skins/BluPlusPlus/res/styles/autumn.css
+share/jalbum/skins/BluPlusPlus/res/styles/autumn/theme.properties
+share/jalbum/skins/BluPlusPlus/res/styles/black.css
+share/jalbum/skins/BluPlusPlus/res/styles/black/theme.properties
+share/jalbum/skins/BluPlusPlus/res/styles/bluish.css
+share/jalbum/skins/BluPlusPlus/res/styles/bluish/theme.properties
+share/jalbum/skins/BluPlusPlus/res/styles/bluish2.css
+share/jalbum/skins/BluPlusPlus/res/styles/bluish2/rule.gif
+share/jalbum/skins/BluPlusPlus/res/styles/bluish2/theme.properties
+share/jalbum/skins/BluPlusPlus/res/styles/canvas.css
+share/jalbum/skins/BluPlusPlus/res/styles/canvas/background.jpg
+share/jalbum/skins/BluPlusPlus/res/styles/canvas/rule.gif
+share/jalbum/skins/BluPlusPlus/res/styles/canvas/theme.properties
+share/jalbum/skins/BluPlusPlus/res/styles/christmas.css
+share/jalbum/skins/BluPlusPlus/res/styles/christmas/theme.properties
+share/jalbum/skins/BluPlusPlus/res/styles/expedition.css
+share/jalbum/skins/BluPlusPlus/res/styles/expedition/background.jpg
+share/jalbum/skins/BluPlusPlus/res/styles/expedition/rule.gif
+share/jalbum/skins/BluPlusPlus/res/styles/expedition/theme.properties
+share/jalbum/skins/BluPlusPlus/res/styles/glacier.css
+share/jalbum/skins/BluPlusPlus/res/styles/glacier/background.jpg
+share/jalbum/skins/BluPlusPlus/res/styles/glacier/rule.gif
+share/jalbum/skins/BluPlusPlus/res/styles/glacier/theme.properties
+share/jalbum/skins/BluPlusPlus/res/styles/gray.css
+share/jalbum/skins/BluPlusPlus/res/styles/gray/theme.properties
+share/jalbum/skins/BluPlusPlus/res/styles/hakki.css
+share/jalbum/skins/BluPlusPlus/res/styles/hakki/theme.properties
+share/jalbum/skins/BluPlusPlus/res/styles/scrapbook.css
+share/jalbum/skins/BluPlusPlus/res/styles/scrapbook/background.gif
+share/jalbum/skins/BluPlusPlus/res/styles/scrapbook/background_old.gif
+share/jalbum/skins/BluPlusPlus/res/styles/scrapbook/rule.gif
+share/jalbum/skins/BluPlusPlus/res/styles/scrapbook/theme.properties
+share/jalbum/skins/BluPlusPlus/res/styles/white.css
+share/jalbum/skins/BluPlusPlus/res/styles/white/theme.properties
+share/jalbum/skins/BluPlusPlus/res/topbars/black/classic.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/blue/classic.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/blue/panel.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/blue/pipe.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/dark-green/classic.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/dark-green/panel.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/dark-green/pipe.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/dark-green2/classic.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/dark-green2/panel.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/dark-green2/pipe.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/golden-green/classic.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/golden-green/panel.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/golden-green/pipe.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/gray/classic.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/gray/panel.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/gray/pipe.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/khaki/classic.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/light-green/classic.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/light-green/panel.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/light-green/pipe.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/purple/classic.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/purple/panel.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/purple/pipe.gif
+share/jalbum/skins/BluPlusPlus/res/topbars/red/classic.gif
+share/jalbum/skins/BluPlusPlus/slide-original.htt
+share/jalbum/skins/BluPlusPlus/slide.htt
+share/jalbum/skins/BluPlusPlus/styles/arcs.css
+share/jalbum/skins/BluPlusPlus/styles/artsy.css
+share/jalbum/skins/BluPlusPlus/styles/autumn.css
+share/jalbum/skins/BluPlusPlus/styles/black.css
+share/jalbum/skins/BluPlusPlus/styles/bluish.css
+share/jalbum/skins/BluPlusPlus/styles/bluish2.css
+share/jalbum/skins/BluPlusPlus/styles/canvas.css
+share/jalbum/skins/BluPlusPlus/styles/christmas.css
+share/jalbum/skins/BluPlusPlus/styles/expedition.css
+share/jalbum/skins/BluPlusPlus/styles/glacier.css
+share/jalbum/skins/BluPlusPlus/styles/gray.css
+share/jalbum/skins/BluPlusPlus/styles/hakki.css
+share/jalbum/skins/BluPlusPlus/styles/scrapbook.css
+share/jalbum/skins/BluPlusPlus/styles/white.css
+share/jalbum/skins/BluPlusPlus/texts/photo-metadata.properties
+share/jalbum/skins/BluPlusPlus/texts/photo-metadata_en.properties
+share/jalbum/skins/BluPlusPlus/texts/texts.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_ca.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_cs.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_da.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_de.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_en.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_es.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_fr.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_it.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_nl.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_no.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_pl.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_pl.properties_original
+share/jalbum/skins/BluPlusPlus/texts/texts_pt.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_ru.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_sk.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_sv.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_uk.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_zh.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_zh.properties_original
+share/jalbum/skins/Bluepro/hints.jap
+share/jalbum/skins/Bluepro/index.htt
+share/jalbum/skins/Bluepro/preview.jpg
+share/jalbum/skins/Bluepro/res/blue-brain-dark.gif
+share/jalbum/skins/Bluepro/res/camera.gif
+share/jalbum/skins/Bluepro/res/corner-w-ll.gif
+share/jalbum/skins/Bluepro/res/corner-w-lr.gif
+share/jalbum/skins/Bluepro/res/corner-w-ul.gif
+share/jalbum/skins/Bluepro/res/corner-w-ur.gif
+share/jalbum/skins/Bluepro/res/download.gif
+share/jalbum/skins/Bluepro/res/folder.gif
+share/jalbum/skins/Bluepro/res/getpicture.gif
+share/jalbum/skins/Bluepro/res/index.gif
+share/jalbum/skins/Bluepro/res/informedia-liten.gif
+share/jalbum/skins/Bluepro/res/movie.gif
+share/jalbum/skins/Bluepro/res/next.gif
+share/jalbum/skins/Bluepro/res/next_disabled.gif
+share/jalbum/skins/Bluepro/res/previous.gif
+share/jalbum/skins/Bluepro/res/previous_disabled.gif
+share/jalbum/skins/Bluepro/res/up.gif
+share/jalbum/skins/Bluepro/slide.htt
+share/jalbum/skins/Bluepro/styles/White.css
+share/jalbum/skins/Camera Geek/about.txt
+share/jalbum/skins/Camera Geek/index.htt
+share/jalbum/skins/Camera Geek/onload.bsh
+share/jalbum/skins/Camera Geek/preview.jpg
+share/jalbum/skins/Camera Geek/res/camera.gif
+share/jalbum/skins/Camera Geek/res/folder.gif
+share/jalbum/skins/Camera Geek/res/index.gif
+share/jalbum/skins/Camera Geek/res/movie.gif
+share/jalbum/skins/Camera Geek/res/next.gif
+share/jalbum/skins/Camera Geek/res/next_disabled.gif
+share/jalbum/skins/Camera Geek/res/previous.gif
+share/jalbum/skins/Camera Geek/res/previous_disabled.gif
+share/jalbum/skins/Camera Geek/res/up.gif
+share/jalbum/skins/Camera Geek/slide.htt
+share/jalbum/skins/Camera Geek/styles/Bright.css
+share/jalbum/skins/Camera Geek/styles/Custom.css
+share/jalbum/skins/Camera Geek/styles/Dark.css
+share/jalbum/skins/Camera Geek/styles/Sunset.css
+share/jalbum/skins/Colorful/defs.jap
+share/jalbum/skins/Colorful/index.htt
+share/jalbum/skins/Colorful/preview.jpg
+share/jalbum/skins/Colorful/res/bakgrund.jpg
+share/jalbum/skins/Colorful/res/bar.gif
+share/jalbum/skins/Colorful/res/bg-pink.gif
+share/jalbum/skins/Colorful/res/bg-td.gif
+share/jalbum/skins/Colorful/res/bg.gif
+share/jalbum/skins/Colorful/res/camera.gif
+share/jalbum/skins/Colorful/res/first.gif
+share/jalbum/skins/Colorful/res/first_disabled.gif
+share/jalbum/skins/Colorful/res/folder.gif
+share/jalbum/skins/Colorful/res/index.gif
+share/jalbum/skins/Colorful/res/last.gif
+share/jalbum/skins/Colorful/res/last_disabled.gif
+share/jalbum/skins/Colorful/res/movie.gif
+share/jalbum/skins/Colorful/res/next.gif
+share/jalbum/skins/Colorful/res/next_disabled.gif
+share/jalbum/skins/Colorful/res/previous.gif
+share/jalbum/skins/Colorful/res/previous_disabled.gif
+share/jalbum/skins/Colorful/res/ramen_01.jpg
+share/jalbum/skins/Colorful/res/ramen_02.jpg
+share/jalbum/skins/Colorful/res/ramen_03.jpg
+share/jalbum/skins/Colorful/res/ramen_04.jpg
+share/jalbum/skins/Colorful/res/ramen_05.jpg
+share/jalbum/skins/Colorful/res/ramen_06.jpg
+share/jalbum/skins/Colorful/res/ramen_07.jpg
+share/jalbum/skins/Colorful/res/ramen_08.jpg
+share/jalbum/skins/Colorful/res/ramen_09.jpg
+share/jalbum/skins/Colorful/res/up.gif
+share/jalbum/skins/Colorful/slide.htt
+share/jalbum/skins/Colorful/styles/babyblue.css
+share/jalbum/skins/Colorful/styles/pink.css
+share/jalbum/skins/Exhibit/index.htt
+share/jalbum/skins/Exhibit/init.bsh
+share/jalbum/skins/Exhibit/onload.bsh
+share/jalbum/skins/Exhibit/preview.jpg
+share/jalbum/skins/Exhibit/res/OrderPrints.gif
+share/jalbum/skins/Exhibit/res/b_l_corner.jpg
+share/jalbum/skins/Exhibit/res/b_r_corner.jpg
+share/jalbum/skins/Exhibit/res/bottom.jpg
+share/jalbum/skins/Exhibit/res/download.gif
+share/jalbum/skins/Exhibit/res/fill.gif
+share/jalbum/skins/Exhibit/res/folder.gif
+share/jalbum/skins/Exhibit/res/left.gif
+share/jalbum/skins/Exhibit/res/left.jpg
+share/jalbum/skins/Exhibit/res/microthumbseparator.gif
+share/jalbum/skins/Exhibit/res/movie.gif
+share/jalbum/skins/Exhibit/res/right.gif
+share/jalbum/skins/Exhibit/res/right.jpg
+share/jalbum/skins/Exhibit/res/separator.gif
+share/jalbum/skins/Exhibit/res/t_l_corner.jpg
+share/jalbum/skins/Exhibit/res/t_r_corner.jpg
+share/jalbum/skins/Exhibit/res/tab1b.jpg
+share/jalbum/skins/Exhibit/res/top.jpg
+share/jalbum/skins/Exhibit/slide.htt
+share/jalbum/skins/Exhibit/styles/White.css
+share/jalbum/skins/ExhibitPlus/Optional files to be copied to image source directory/comments.properties
+share/jalbum/skins/ExhibitPlus/Optional files to be copied to image source directory/footer.inc
+share/jalbum/skins/ExhibitPlus/Optional files to be copied to image source directory/header.inc
+share/jalbum/skins/ExhibitPlus/Optional files to be copied to image source directory/meta.properties
+share/jalbum/skins/ExhibitPlus/Optional files to be copied to image source directory/news.inc
+share/jalbum/skins/ExhibitPlus/Optional files to be copied to image source directory/styles.inc
+share/jalbum/skins/ExhibitPlus/Optional files to be copied to image source directory/variables.inc
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/first.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/first_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/help1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/index.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/index_next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/index_next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/index_previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/index_previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/info1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/last.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/last_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/price.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/remove.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/select.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/slideshowstart.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/slideshowstop.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/up.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground/zoom.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/first.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/first_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/help1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/index.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/index_next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/index_next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/index_previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/index_previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/info1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/last.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/last_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/price.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/remove.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/select.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/slideshowstart.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/slideshowstop.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/up.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground/zoom.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/first.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/first_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/help1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/index.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/index_next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/index_next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/index_previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/index_previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/info1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/last.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/last_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/price.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/remove.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/select.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/slideshowstart.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/slideshowstop.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/up.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground/zoom.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/first.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/first_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/help1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/index.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/index_next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/index_next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/index_previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/index_previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/info1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/last.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/last_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/price.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/remove.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/select.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/slideshowstart.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/slideshowstop.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/up.gif
+share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground/zoom.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/download.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/first.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/first_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/help.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/index.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/index_next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/index_next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/index_previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/index_previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/info.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/last.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/last_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/orderprints.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/slideshowstart.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/slideshowstop.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/up.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px/zoom.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/download.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/first.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/first_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/help.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/index.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/index_next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/index_next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/index_previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/index_previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/info.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/last.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/last_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/orderprints.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/slideshowstart.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/slideshowstop.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/up.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px/zoom.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/download.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/first.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/first_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/help.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/index.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/index_next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/index_next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/index_previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/index_previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/info.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/last.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/last_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/orderprints.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/slideshowstart.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/slideshowstop.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/up.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px/zoom.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/download.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/first.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/first_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/help.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/index.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/index_next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/index_next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/index_previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/index_previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/info.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/last.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/last_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/orderprints.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/slideshowstart.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/slideshowstop.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/up.gif
+share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px/zoom.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/first.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/first_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/index.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/index_next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/index_next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/index_previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/index_previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/last.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/last_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/slideshowstart.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/slideshowstop.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/up.gif
+share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground/zoom.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/first.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/first_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/help1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/index.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/index_next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/index_next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/index_previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/index_previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/info1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/last.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/last_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/price.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/remove.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/select.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/slideshowstart.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/slideshowstop.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/up.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground/zoom.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/first.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/first_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/help1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/index.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/index_next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/index_next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/index_previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/index_previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/info1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/last.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/last_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/price.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/remove.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/select.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/slideshowstart.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/slideshowstop.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/up.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground/zoom.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/first.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/first_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/help1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/index.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/index_next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/index_next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/index_previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/index_previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/info1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/last.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/last_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/price.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/remove.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/select.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/slideshowstart.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/slideshowstop.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/up.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground/zoom.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/first.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/first_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/help1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/index.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/index_next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/index_next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/index_previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/index_previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/info1.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/last.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/last_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/next.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/next_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/previous.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/previous_disabled.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/price.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/remove.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/select.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/slideshowstart.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/slideshowstop.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/up.gif
+share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/zoom.gif
+share/jalbum/skins/ExhibitPlus/cameras.properties
+share/jalbum/skins/ExhibitPlus/changelog.txt
+share/jalbum/skins/ExhibitPlus/guestbook.inc
+share/jalbum/skins/ExhibitPlus/guestbook/processXML.php
+share/jalbum/skins/ExhibitPlus/hints.jap
+share/jalbum/skins/ExhibitPlus/index.bsh
+share/jalbum/skins/ExhibitPlus/index.htt
+share/jalbum/skins/ExhibitPlus/init.bsh
+share/jalbum/skins/ExhibitPlus/next_version.txt
+share/jalbum/skins/ExhibitPlus/onload.bsh
+share/jalbum/skins/ExhibitPlus/originalslide.htt
+share/jalbum/skins/ExhibitPlus/originalslide2.htt
+share/jalbum/skins/ExhibitPlus/plugins/Compile.bat
+share/jalbum/skins/ExhibitPlus/plugins/Utils.class
+share/jalbum/skins/ExhibitPlus/plugins/Utils.java
+share/jalbum/skins/ExhibitPlus/promotion.properties
+share/jalbum/skins/ExhibitPlus/res/basestyle.css
+share/jalbum/skins/ExhibitPlus/res/download.gif
+share/jalbum/skins/ExhibitPlus/res/folder.gif
+share/jalbum/skins/ExhibitPlus/res/folder2.gif
+share/jalbum/skins/ExhibitPlus/res/foldernew.gif
+share/jalbum/skins/ExhibitPlus/res/guestbook.swf
+share/jalbum/skins/ExhibitPlus/res/help.gif
+share/jalbum/skins/ExhibitPlus/res/info.gif
+share/jalbum/skins/ExhibitPlus/res/keyboard.js
+share/jalbum/skins/ExhibitPlus/res/movie.gif
+share/jalbum/skins/ExhibitPlus/res/navindex.js
+share/jalbum/skins/ExhibitPlus/res/navslide.js
+share/jalbum/skins/ExhibitPlus/res/navslideorig.js
+share/jalbum/skins/ExhibitPlus/res/navslideorig2.js
+share/jalbum/skins/ExhibitPlus/res/orderprints.gif
+share/jalbum/skins/ExhibitPlus/res/purplestripe.gif
+share/jalbum/skins/ExhibitPlus/res/warning_icon.gif
+share/jalbum/skins/ExhibitPlus/shutterfly_xhtml.inc
+share/jalbum/skins/ExhibitPlus/slide.bsh
+share/jalbum/skins/ExhibitPlus/slide.htt
+share/jalbum/skins/ExhibitPlus/styles/black.css
+share/jalbum/skins/ExhibitPlus/styles/black.jpg
+share/jalbum/skins/ExhibitPlus/styles/blue.css
+share/jalbum/skins/ExhibitPlus/styles/blue.jpg
+share/jalbum/skins/ExhibitPlus/styles/dark.css
+share/jalbum/skins/ExhibitPlus/styles/dark.jpg
+share/jalbum/skins/ExhibitPlus/styles/green.css
+share/jalbum/skins/ExhibitPlus/styles/green.jpg
+share/jalbum/skins/ExhibitPlus/styles/light.css
+share/jalbum/skins/ExhibitPlus/styles/light.jpg
+share/jalbum/skins/ExhibitPlus/styles/metodi-black.css
+share/jalbum/skins/ExhibitPlus/styles/metodi-black.jpg
+share/jalbum/skins/ExhibitPlus/texts/texts.properties
+share/jalbum/skins/ExhibitPlus/texts/texts_cs.properties
+share/jalbum/skins/ExhibitPlus/texts/texts_de.properties
+share/jalbum/skins/ExhibitPlus/texts/texts_en.properties
+share/jalbum/skins/ExhibitPlus/texts/texts_es.properties
+share/jalbum/skins/ExhibitPlus/texts/texts_fr.properties
+share/jalbum/skins/ExhibitPlus/texts/texts_hu.properties
+share/jalbum/skins/ExhibitPlus/texts/texts_is.properties
+share/jalbum/skins/ExhibitPlus/texts/texts_it.properties
+share/jalbum/skins/ExhibitPlus/texts/texts_ja.properties
+share/jalbum/skins/ExhibitPlus/texts/texts_nl.properties
+share/jalbum/skins/ExhibitPlus/texts/texts_pt.properties
+share/jalbum/skins/ExhibitPlus/texts/texts_sr.properties
+share/jalbum/skins/ExhibitPlus/texts/texts_sv.properties
+share/jalbum/skins/ExhibitPlus/texts/xlat.pl
+share/jalbum/skins/Experience/about.txt
+share/jalbum/skins/Experience/hints.jap
+share/jalbum/skins/Experience/index.htt
+share/jalbum/skins/Experience/init.bsh
+share/jalbum/skins/Experience/preview.jpg
+share/jalbum/skins/Experience/res/button.gif
+share/jalbum/skins/Experience/res/camera.gif
+share/jalbum/skins/Experience/res/folder.gif
+share/jalbum/skins/Experience/res/footer.inc
+share/jalbum/skins/Experience/res/header.inc
+share/jalbum/skins/Experience/res/index.gif
+share/jalbum/skins/Experience/res/movie.gif
+share/jalbum/skins/Experience/res/next.gif
+share/jalbum/skins/Experience/res/next_disabled.gif
+share/jalbum/skins/Experience/res/previous.gif
+share/jalbum/skins/Experience/res/previous_disabled.gif
+share/jalbum/skins/Experience/res/up.gif
+share/jalbum/skins/Experience/slide.htt
+share/jalbum/skins/Experience/styles/dark.css
+share/jalbum/skins/Experience/styles/white.css
+share/jalbum/skins/Family/footer.inc
+share/jalbum/skins/Family/hints.jap
+share/jalbum/skins/Family/index.htt
+share/jalbum/skins/Family/init.bsh
+share/jalbum/skins/Family/onload.bsh
+share/jalbum/skins/Family/res/folder.gif
+share/jalbum/skins/Family/res/trans.gif
+share/jalbum/skins/Family/slide.htt
+share/jalbum/skins/Family/styles/black.bsh
+share/jalbum/skins/Family/styles/black.css
+share/jalbum/skins/Family/styles/black.jpg
+share/jalbum/skins/Family/styles/black/bktile.jpg
+share/jalbum/skins/Family/styles/black/bottom.jpg
+share/jalbum/skins/Family/styles/black/btn_off.gif
+share/jalbum/skins/Family/styles/black/btn_on.gif
+share/jalbum/skins/Family/styles/black/btnrow_bktile.jpg
+share/jalbum/skins/Family/styles/black/folder.gif
+share/jalbum/skins/Family/styles/black/left.jpg
+share/jalbum/skins/Family/styles/black/right.jpg
+share/jalbum/skins/Family/styles/black/top.jpg
+share/jalbum/skins/Family/styles/blue.bsh
+share/jalbum/skins/Family/styles/blue.css
+share/jalbum/skins/Family/styles/blue.jpg
+share/jalbum/skins/Family/styles/blue/bktile.jpg
+share/jalbum/skins/Family/styles/blue/bottom.jpg
+share/jalbum/skins/Family/styles/blue/btn_off.gif
+share/jalbum/skins/Family/styles/blue/btn_on.gif
+share/jalbum/skins/Family/styles/blue/btnrow_bktile.jpg
+share/jalbum/skins/Family/styles/blue/folder.gif
+share/jalbum/skins/Family/styles/blue/left.jpg
+share/jalbum/skins/Family/styles/blue/right.jpg
+share/jalbum/skins/Family/styles/blue/top.jpg
+share/jalbum/skins/Family/styles/pink.bsh
+share/jalbum/skins/Family/styles/pink.css
+share/jalbum/skins/Family/styles/pink.jpg
+share/jalbum/skins/Family/styles/pink/bktile.jpg
+share/jalbum/skins/Family/styles/pink/bottom.jpg
+share/jalbum/skins/Family/styles/pink/btn_off.gif
+share/jalbum/skins/Family/styles/pink/btn_on.gif
+share/jalbum/skins/Family/styles/pink/btnrow_bktile.jpg
+share/jalbum/skins/Family/styles/pink/folder.gif
+share/jalbum/skins/Family/styles/pink/left.jpg
+share/jalbum/skins/Family/styles/pink/right.jpg
+share/jalbum/skins/Family/styles/pink/top.jpg
+share/jalbum/skins/Family/styles/white.bsh
+share/jalbum/skins/Family/styles/white.css
+share/jalbum/skins/Family/styles/white.jpg
+share/jalbum/skins/Family/styles/white/bktile.jpg
+share/jalbum/skins/Family/styles/white/bottom.jpg
+share/jalbum/skins/Family/styles/white/btn_off.gif
+share/jalbum/skins/Family/styles/white/btn_on.gif
+share/jalbum/skins/Family/styles/white/btnrow_bktile.jpg
+share/jalbum/skins/Family/styles/white/folder.gif
+share/jalbum/skins/Family/styles/white/left.jpg
+share/jalbum/skins/Family/styles/white/right.jpg
+share/jalbum/skins/Family/styles/white/top.jpg
+share/jalbum/skins/Film/about.txt
+share/jalbum/skins/Film/hints.jap
+share/jalbum/skins/Film/index.htt
+share/jalbum/skins/Film/preview.jpg
+share/jalbum/skins/Film/res/NavLeft.gif
+share/jalbum/skins/Film/res/NavRight.gif
+share/jalbum/skins/Film/res/NavUp.gif
+share/jalbum/skins/Film/res/bottom_background_big_film.gif
+share/jalbum/skins/Film/res/bottom_background_film.gif
+share/jalbum/skins/Film/res/bottom_left_film.gif
+share/jalbum/skins/Film/res/bottom_right_film.gif
+share/jalbum/skins/Film/res/camera.gif
+share/jalbum/skins/Film/res/clearpixel.gif
+share/jalbum/skins/Film/res/folder.gif
+share/jalbum/skins/Film/res/gray_background.gif
+share/jalbum/skins/Film/res/left_background_big_film.gif
+share/jalbum/skins/Film/res/left_background_film.gif
+share/jalbum/skins/Film/res/movie.gif
+share/jalbum/skins/Film/res/night_background.gif
+share/jalbum/skins/Film/res/paper_background.gif
+share/jalbum/skins/Film/res/right_background_big_film.gif
+share/jalbum/skins/Film/res/right_background_film.gif
+share/jalbum/skins/Film/res/spacer.gif
+share/jalbum/skins/Film/res/top_background_big_film.gif
+share/jalbum/skins/Film/res/top_background_film.gif
+share/jalbum/skins/Film/res/top_left_film.gif
+share/jalbum/skins/Film/res/top_right_film.gif
+share/jalbum/skins/Film/slide.htt
+share/jalbum/skins/Film/styles/Gray.css
+share/jalbum/skins/Film/styles/Night.css
+share/jalbum/skins/Film/styles/Paper.css
+share/jalbum/skins/Horizontal/about.txt
+share/jalbum/skins/Horizontal/frameset.htt
+share/jalbum/skins/Horizontal/hints.jap
+share/jalbum/skins/Horizontal/index.htt
+share/jalbum/skins/Horizontal/preview.jpg
+share/jalbum/skins/Horizontal/res/blank.html
+share/jalbum/skins/Horizontal/res/camera.gif
+share/jalbum/skins/Horizontal/res/folder.gif
+share/jalbum/skins/Horizontal/res/movie.gif
+share/jalbum/skins/Horizontal/slide.htt
+share/jalbum/skins/Horizontal/styles/AskUser.css
+share/jalbum/skins/Horizontal/styles/Black.css
+share/jalbum/skins/Horizontal/styles/Pro.css
+share/jalbum/skins/Horizontal/styles/White.css
+share/jalbum/skins/Mamba/index.htt
+share/jalbum/skins/Mamba/preview.jpg
+share/jalbum/skins/Mamba/res/bakgrund.jpg
+share/jalbum/skins/Mamba/res/bar.gif
+share/jalbum/skins/Mamba/res/camera.gif
+share/jalbum/skins/Mamba/res/folder.gif
+share/jalbum/skins/Mamba/res/index.gif
+share/jalbum/skins/Mamba/res/movie.gif
+share/jalbum/skins/Mamba/res/next.gif
+share/jalbum/skins/Mamba/res/next_disabled.gif
+share/jalbum/skins/Mamba/res/previous.gif
+share/jalbum/skins/Mamba/res/previous_disabled.gif
+share/jalbum/skins/Mamba/res/titlebakgrund.jpg
+share/jalbum/skins/Mamba/res/up.gif
+share/jalbum/skins/Mamba/slide.htt
+share/jalbum/skins/Mamba/styles/Black.css
+share/jalbum/skins/Minimal/about.txt
+share/jalbum/skins/Minimal/hints.jap
+share/jalbum/skins/Minimal/index.htt
+share/jalbum/skins/Minimal/res/camera.gif
+share/jalbum/skins/Minimal/res/first.gif
+share/jalbum/skins/Minimal/res/folder.gif
+share/jalbum/skins/Minimal/res/index.gif
+share/jalbum/skins/Minimal/res/last.gif
+share/jalbum/skins/Minimal/res/movie.gif
+share/jalbum/skins/Minimal/res/next.gif
+share/jalbum/skins/Minimal/res/next_disabled.gif
+share/jalbum/skins/Minimal/res/previous.gif
+share/jalbum/skins/Minimal/res/previous_disabled.gif
+share/jalbum/skins/Minimal/res/up.gif
+share/jalbum/skins/Minimal/slide.htt
+share/jalbum/skins/Minimal/styles/plain.css
+share/jalbum/skins/Minimal/texts.properties
+share/jalbum/skins/Old Album/frameset.htt
+share/jalbum/skins/Old Album/hints.jap
+share/jalbum/skins/Old Album/index.htt
+share/jalbum/skins/Old Album/res/blank.html
+share/jalbum/skins/Old Album/res/camera.gif
+share/jalbum/skins/Old Album/res/folder.gif
+share/jalbum/skins/Old Album/res/movie.gif
+share/jalbum/skins/Old Album/res/smallalbum.gif
+share/jalbum/skins/Old Album/res/up.gif
+share/jalbum/skins/Old Album/slide.htt
+share/jalbum/skins/Old Album/styles/oldie.css
+share/jalbum/skins/PBase/!readme!.txt
+share/jalbum/skins/PBase/hints.jap
+share/jalbum/skins/PBase/index.htt
+share/jalbum/skins/PBase/notes/notes.htm
+share/jalbum/skins/PBase/notes/propsfiles.htm
+share/jalbum/skins/PBase/notes/uiSettings.jpg
+share/jalbum/skins/PBase/onload.bsh
+share/jalbum/skins/PBase/preview.jpg
+share/jalbum/skins/PBase/res/camera.gif
+share/jalbum/skins/PBase/res/folder.gif
+share/jalbum/skins/PBase/res/folder_blank.gif
+share/jalbum/skins/PBase/res/movie.gif
+share/jalbum/skins/PBase/scripts/indexNav.inc
+share/jalbum/skins/PBase/scripts/infoPropsFolder.inc
+share/jalbum/skins/PBase/scripts/infoPropsImage.inc
+share/jalbum/skins/PBase/scripts/infoPropsSubFolder.inc
+share/jalbum/skins/PBase/scripts/slideNav.inc
+share/jalbum/skins/PBase/skin.properties
+share/jalbum/skins/PBase/slide.htt
+share/jalbum/skins/PBase/styles/alexc.css
+share/jalbum/skins/PBase/styles/athiker95.css
+share/jalbum/skins/PBase/styles/blackstandard.css
+share/jalbum/skins/PBase/styles/joshua.css
+share/jalbum/skins/PBase/styles/karen1109.css
+share/jalbum/skins/PBase/styles/tarheel.css
+share/jalbum/skins/PBase/styles/timmyg.css
+share/jalbum/skins/PBase/styles/webdev.css
+share/jalbum/skins/PBase/styles/wedding.css
+share/jalbum/skins/PBase/styles/whitestandard.css
+share/jalbum/skins/Polaroid/about.txt
+share/jalbum/skins/Polaroid/index.htt
+share/jalbum/skins/Polaroid/preview.jpg
+share/jalbum/skins/Polaroid/res/NavLeft.gif
+share/jalbum/skins/Polaroid/res/NavRight.gif
+share/jalbum/skins/Polaroid/res/NavUp.gif
+share/jalbum/skins/Polaroid/res/bottom_background_polaroid.gif
+share/jalbum/skins/Polaroid/res/bottom_background_polaroid_small.gif
+share/jalbum/skins/Polaroid/res/bottom_left_polaroid.gif
+share/jalbum/skins/Polaroid/res/bottom_left_polaroid_small.gif
+share/jalbum/skins/Polaroid/res/bottom_right_polaroid.gif
+share/jalbum/skins/Polaroid/res/bottom_right_polaroid_small.gif
+share/jalbum/skins/Polaroid/res/camera.gif
+share/jalbum/skins/Polaroid/res/clearpixel.gif
+share/jalbum/skins/Polaroid/res/folder.gif
+share/jalbum/skins/Polaroid/res/leather_background.gif
+share/jalbum/skins/Polaroid/res/left_background_polaroid.gif
+share/jalbum/skins/Polaroid/res/left_background_polaroid_small.gif
+share/jalbum/skins/Polaroid/res/movie.gif
+share/jalbum/skins/Polaroid/res/paper_background.gif
+share/jalbum/skins/Polaroid/res/right_background_polaroid.gif
+share/jalbum/skins/Polaroid/res/right_background_polaroid_small.gif
+share/jalbum/skins/Polaroid/res/romance_background.gif
+share/jalbum/skins/Polaroid/res/sky_background.gif
+share/jalbum/skins/Polaroid/res/spacer.gif
+share/jalbum/skins/Polaroid/res/top_background_polaroid.gif
+share/jalbum/skins/Polaroid/res/top_background_polaroid_small.gif
+share/jalbum/skins/Polaroid/res/top_left_polaroid.gif
+share/jalbum/skins/Polaroid/res/top_left_polaroid_small.gif
+share/jalbum/skins/Polaroid/res/top_right_polaroid.gif
+share/jalbum/skins/Polaroid/res/top_right_polaroid_small.gif
+share/jalbum/skins/Polaroid/slide.htt
+share/jalbum/skins/Polaroid/styles/Leather.css
+share/jalbum/skins/Polaroid/styles/Paper.css
+share/jalbum/skins/Polaroid/styles/Romance.css
+share/jalbum/skins/Polaroid/styles/Sky.css
+share/jalbum/skins/ShowOff/Kopia av hints.jap
+share/jalbum/skins/ShowOff/about.txt
+share/jalbum/skins/ShowOff/hints.jap
+share/jalbum/skins/ShowOff/index.htt
+share/jalbum/skins/ShowOff/init.bsh
+share/jalbum/skins/ShowOff/onload.bsh
+share/jalbum/skins/ShowOff/preview.jpg
+share/jalbum/skins/ShowOff/res/OrderPrints.gif
+share/jalbum/skins/ShowOff/res/camera.gif
+share/jalbum/skins/ShowOff/res/folder.gif
+share/jalbum/skins/ShowOff/res/index.gif
+share/jalbum/skins/ShowOff/res/movie.gif
+share/jalbum/skins/ShowOff/res/next.gif
+share/jalbum/skins/ShowOff/res/next_disabled.gif
+share/jalbum/skins/ShowOff/res/previous.gif
+share/jalbum/skins/ShowOff/res/previous_disabled.gif
+share/jalbum/skins/ShowOff/res/up.gif
+share/jalbum/skins/ShowOff/slide.htt
+share/jalbum/skins/ShowOff/styles/Custom.css
+share/jalbum/skins/ShowOff/styles/Dark.css
+share/jalbum/skins/ShowOff/styles/Sunset.css
+share/jalbum/skins/Simple/bottom.htt
+share/jalbum/skins/Simple/frameset.htt
+share/jalbum/skins/Simple/hints.jap
+share/jalbum/skins/Simple/index.htt
+share/jalbum/skins/Simple/init.bsh
+share/jalbum/skins/Simple/onload.bsh
+share/jalbum/skins/Simple/res/au.gif
+share/jalbum/skins/Simple/res/b_pil.gif
+share/jalbum/skins/Simple/res/f_pil.gif
+share/jalbum/skins/Simple/res/folder.gif
+share/jalbum/skins/Simple/res/la.gif
+share/jalbum/skins/Simple/res/movie.gif
+share/jalbum/skins/Simple/res/ra.gif
+share/jalbum/skins/Simple/res/sb_pil.gif
+share/jalbum/skins/Simple/res/sf_pil.gif
+share/jalbum/skins/Simple/res/t.gif
+share/jalbum/skins/Simple/slide.htt
+share/jalbum/skins/Simple/styles/black.css
+share/jalbum/skins/Simple/styles/black.jpg
+share/jalbum/skins/Simple/styles/white.css
+share/jalbum/skins/Simple/styles/white.jpg
+share/jalbum/skins/Simple/texts/texts.properties
+share/jalbum/skins/Simple/texts/texts_sk.properties
+share/jalbum/skins/Simple/texts/texts_sv.properties
+share/jalbum/skins/Simple/top.htt
+share/jalbum/skins/Slide show/index.htt
+share/jalbum/skins/Slide show/onload.bsh
+share/jalbum/skins/Slide show/res/camera.gif
+share/jalbum/skins/Slide show/res/close.gif
+share/jalbum/skins/Slide show/res/folder.gif
+share/jalbum/skins/Slide show/res/index.gif
+share/jalbum/skins/Slide show/res/movie.gif
+share/jalbum/skins/Slide show/res/next.gif
+share/jalbum/skins/Slide show/res/next_disabled.gif
+share/jalbum/skins/Slide show/res/pause.gif
+share/jalbum/skins/Slide show/res/play.gif
+share/jalbum/skins/Slide show/res/previous.gif
+share/jalbum/skins/Slide show/res/previous_disabled.gif
+share/jalbum/skins/Slide show/res/up.gif
+share/jalbum/skins/Slide show/slide.htt
+share/jalbum/skins/Slide show/styles/Black.css
+share/jalbum/skins/Slide show/styles/White.css
+share/jalbum/skins/Standard/about.txt
+share/jalbum/skins/Standard/index.htt
+share/jalbum/skins/Standard/init.bsh
+share/jalbum/skins/Standard/res/camera.gif
+share/jalbum/skins/Standard/res/first.gif
+share/jalbum/skins/Standard/res/folder.gif
+share/jalbum/skins/Standard/res/index.gif
+share/jalbum/skins/Standard/res/last.gif
+share/jalbum/skins/Standard/res/movie.gif
+share/jalbum/skins/Standard/res/next.gif
+share/jalbum/skins/Standard/res/next_disabled.gif
+share/jalbum/skins/Standard/res/previous.gif
+share/jalbum/skins/Standard/res/previous_disabled.gif
+share/jalbum/skins/Standard/res/up.gif
+share/jalbum/skins/Standard/slide.htt
+share/jalbum/skins/Standard/styles/3D.css
+share/jalbum/skins/Standard/styles/AskUser.css
+share/jalbum/skins/Standard/styles/Black.css
+share/jalbum/skins/Standard/styles/Blue.css
+share/jalbum/skins/Standard/styles/Khaki.css
+share/jalbum/skins/Standard/styles/Milkyblue.css
+share/jalbum/skins/Standard/styles/Plain.css
+share/jalbum/skins/Standard/styles/White.css
+share/jalbum/skins/Standard/subdir/head.inc
+share/jalbum/skins/Standard/texts.properties
+share/jalbum/skins/Standard/texts_cs.properties
+share/jalbum/skins/Standard/texts_en.properties
+share/jalbum/skins/Standard/texts_sv.properties
+share/jalbum/skins/Vertical/about.txt
+share/jalbum/skins/Vertical/frameset.htt
+share/jalbum/skins/Vertical/hints.jap
+share/jalbum/skins/Vertical/index.htt
+share/jalbum/skins/Vertical/preview.jpg
+share/jalbum/skins/Vertical/res/blank.html
+share/jalbum/skins/Vertical/res/camera.gif
+share/jalbum/skins/Vertical/res/folder.gif
+share/jalbum/skins/Vertical/res/movie.gif
+share/jalbum/skins/Vertical/slide.htt
+share/jalbum/skins/Vertical/styles/AskUser.css
+share/jalbum/skins/Vertical/styles/Black.css
+share/jalbum/skins/Vertical/styles/Pro.css
+share/jalbum/skins/Vertical/styles/White.css
+share/jalbum/skins/Wedding/hints.jap
+share/jalbum/skins/Wedding/index.htt
+share/jalbum/skins/Wedding/init.bsh
+share/jalbum/skins/Wedding/onload.bsh
+share/jalbum/skins/Wedding/png/ornamentBigBottomLeft.png
+share/jalbum/skins/Wedding/png/ornamentBigBottomRight.png
+share/jalbum/skins/Wedding/png/ornamentBigTopLeft.png
+share/jalbum/skins/Wedding/png/ornamentBigTopRight.png
+share/jalbum/skins/Wedding/png/ornamentSmallBottomLeft.png
+share/jalbum/skins/Wedding/png/ornamentSmallBottomRight.png
+share/jalbum/skins/Wedding/png/ornamentSmallTopLeft.png
+share/jalbum/skins/Wedding/png/ornamentSmallTopRight.png
+share/jalbum/skins/Wedding/res/back.gif
+share/jalbum/skins/Wedding/res/dot.gif
+share/jalbum/skins/Wedding/res/folder.gif
+share/jalbum/skins/Wedding/res/next.gif
+share/jalbum/skins/Wedding/res/ornament_left.gif
+share/jalbum/skins/Wedding/res/ornament_right.gif
+share/jalbum/skins/Wedding/res/prev.gif
+share/jalbum/skins/Wedding/slide.htt
+share/jalbum/skins/Wedding/styles/pink.bsh
+share/jalbum/skins/Wedding/styles/pink.css
+share/jalbum/skins/Wedding/styles/pink.jpg
+share/jalbum/skins/Wedding/styles/pink/background.jpg
+share/jalbum/skins/Wedding/styles/white.bsh
+share/jalbum/skins/Wedding/styles/white.css
+share/jalbum/skins/Wedding/styles/white.jpg
+share/jalbum/skins/Wedding/styles/white/background.jpg
+share/jalbum/skins/Wedding/texts/texts.properties
+share/jalbum/skins/Wedding/texts/texts_sk.properties
+share/jalbum/skins/Wedding/texts/texts_sv.properties
+share/jalbum/skins/Whitey/index.htt
+share/jalbum/skins/Whitey/res/camera.gif
+share/jalbum/skins/Whitey/res/folder.gif
+share/jalbum/skins/Whitey/res/index.gif
+share/jalbum/skins/Whitey/res/movie.gif
+share/jalbum/skins/Whitey/res/next.gif
+share/jalbum/skins/Whitey/res/next_disabled.gif
+share/jalbum/skins/Whitey/res/previous.gif
+share/jalbum/skins/Whitey/res/previous_disabled.gif
+share/jalbum/skins/Whitey/res/up.gif
+share/jalbum/skins/Whitey/slide.htt
+share/jalbum/skins/Whitey/styles/White.css
+share/jalbum/skins/XP/about.txt
+share/jalbum/skins/XP/hints.jap
+share/jalbum/skins/XP/index.htt
+share/jalbum/skins/XP/init.bsh
+share/jalbum/skins/XP/onload.bsh
+share/jalbum/skins/XP/res/1x1.gif
+share/jalbum/skins/XP/res/Back.gif
+share/jalbum/skins/XP/res/FolderLarge.gif
+share/jalbum/skins/XP/res/FolderUp.gif
+share/jalbum/skins/XP/res/Forward.gif
+share/jalbum/skins/XP/res/ImageLarge.gif
+share/jalbum/skins/XP/res/JAlbum.gif
+share/jalbum/skins/XP/res/OrderPrints.gif
+share/jalbum/skins/XP/res/Slideshow.gif
+share/jalbum/skins/XP/res/folder.gif
+share/jalbum/skins/XP/res/movie.gif
+share/jalbum/skins/XP/res/x.js
+share/jalbum/skins/XP/slide.htt
+share/jalbum/skins/XP/styles/LightGrey.css
+share/jalbum/skins/XP/styles/LightGrey.jpg
+share/jalbum/skins/XP/styles/LightGrey/ImagePaneHeaderOpen.gif
+share/jalbum/skins/XP/styles/LightGrey/InfoPaneHeaderOpen.gif
+share/jalbum/skins/XP/styles/LightGrey/MainBG.gif
+share/jalbum/skins/XP/styles/OliveGreen.css
+share/jalbum/skins/XP/styles/OliveGreen.jpg
+share/jalbum/skins/XP/styles/OliveGreen/ImagePaneHeaderOpenOlive.gif
+share/jalbum/skins/XP/styles/OliveGreen/InfoPaneHeaderOpenOlive.gif
+share/jalbum/skins/XP/styles/OliveGreen/MainBGOlive.gif
+share/jalbum/skins/XP/styles/Standard (Blue).css
+share/jalbum/skins/XP/styles/Standard (Blue).jpg
+share/jalbum/skins/XP/styles/Standard (Blue)/ImagePaneHeaderOpenBlue.gif
+share/jalbum/skins/XP/styles/Standard (Blue)/InfoPaneHeaderOpenBlue.gif
+share/jalbum/skins/XP/styles/Standard (Blue)/MainBGBlue.gif
+share/jalbum/skins/XP/texts/texts.properties
+share/jalbum/skins/XP/texts/texts_af.properties
+share/jalbum/skins/XP/texts/texts_ca.properties
+share/jalbum/skins/XP/texts/texts_cs.properties
+share/jalbum/skins/XP/texts/texts_da.properties
+share/jalbum/skins/XP/texts/texts_de.properties
+share/jalbum/skins/XP/texts/texts_en.properties
+share/jalbum/skins/XP/texts/texts_es.properties
+share/jalbum/skins/XP/texts/texts_fi.properties
+share/jalbum/skins/XP/texts/texts_fr.properties
+share/jalbum/skins/XP/texts/texts_is.properties
+share/jalbum/skins/XP/texts/texts_it.properties
+share/jalbum/skins/XP/texts/texts_nl.properties
+share/jalbum/skins/XP/texts/texts_no.properties
+share/jalbum/skins/XP/texts/texts_pl.properties
+share/jalbum/skins/XP/texts/texts_pt.properties
+share/jalbum/skins/XP/texts/texts_sk.properties
+share/jalbum/skins/XP/texts/texts_sl.properties
+share/jalbum/skins/XP/texts/texts_sv.properties
+share/jalbum/skins/XP/texts/texts_uk.properties
+share/jalbum/skins/XP/texts/texts_zh-chs.properties
+share/jalbum/skins/XP/texts/texts_zh-cht.properties
+share/jalbum/skins/XP/texts/texts_zh.properties
+share/jalbum/skins/XP/texts/texts_zh_tw.properties
+share/jalbum/texts/texts.properties
+share/jalbum/texts/texts_bg.properties
+share/jalbum/texts/texts_cs.properties
+share/jalbum/texts/texts_da.properties
+share/jalbum/texts/texts_de.properties
+share/jalbum/texts/texts_ee.properties
+share/jalbum/texts/texts_es.properties
+share/jalbum/texts/texts_fi.properties
+share/jalbum/texts/texts_fr.properties
+share/jalbum/texts/texts_hu.properties
+share/jalbum/texts/texts_it.properties
+share/jalbum/texts/texts_ja.properties
+share/jalbum/texts/texts_ko.properties
+share/jalbum/texts/texts_nl.properties
+share/jalbum/texts/texts_no.properties
+share/jalbum/texts/texts_pl.properties
+share/jalbum/texts/texts_pt.properties
+share/jalbum/texts/texts_ru.properties
+share/jalbum/texts/texts_sk.properties
+share/jalbum/texts/texts_sv.properties
+share/jalbum/texts/texts_th.properties
+share/jalbum/texts/texts_uk.properties
+share/jalbum/tools/Adjust image orientation.bsh
+share/jalbum/tools/Calculate album size.bsh
+share/jalbum/tools/Clear user defined variables.bsh
+share/jalbum/tools/Convert upper case to lower case.bsh
+share/jalbum/tools/Extract comments.bsh
+share/jalbum/tools/Perform garbage collection.bsh
+share/jalbum/tools/Replace spaces with underscores.bsh
+share/jalbum/tools/Reset file date to camera date.bsh
+share/jalbum/tools/Sample tool.bsh
+@dirrm share/jalbum/res
+@dirrm share/jalbum/includes
+@dirrm share/jalbum/skins/BluPlusPlus/bsh
+@dirrm share/jalbum/skins/BluPlusPlus/docs
+@dirrm share/jalbum/skins/BluPlusPlus/frames/images
+@dirrm share/jalbum/skins/BluPlusPlus/frames
+@dirrm share/jalbum/skins/BluPlusPlus/includes
+@dirrm share/jalbum/skins/BluPlusPlus/plugins
+@dirrm share/jalbum/skins/BluPlusPlus/res/actions/black
+@dirrm share/jalbum/skins/BluPlusPlus/res/actions/bright-matte
+@dirrm share/jalbum/skins/BluPlusPlus/res/actions/dark-matte
+@dirrm share/jalbum/skins/BluPlusPlus/res/actions/universal
+@dirrm share/jalbum/skins/BluPlusPlus/res/actions/white
+@dirrm share/jalbum/skins/BluPlusPlus/res/actions
+@dirrm share/jalbum/skins/BluPlusPlus/res/js
+@dirrm share/jalbum/skins/BluPlusPlus/res/php
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/arcs
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/artsy
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/autumn
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/black
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/bluish
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/bluish2
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/hakki
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/canvas
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/christmas
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/expedition
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/glacier
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/gray
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/white
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles/scrapbook
+@dirrm share/jalbum/skins/BluPlusPlus/res/styles
+@dirrm share/jalbum/skins/BluPlusPlus/res/topbars/black
+@dirrm share/jalbum/skins/BluPlusPlus/res/topbars/blue
+@dirrm share/jalbum/skins/BluPlusPlus/res/topbars/dark-green
+@dirrm share/jalbum/skins/BluPlusPlus/res/topbars/dark-green2
+@dirrm share/jalbum/skins/BluPlusPlus/res/topbars/golden-green
+@dirrm share/jalbum/skins/BluPlusPlus/res/topbars/gray
+@dirrm share/jalbum/skins/BluPlusPlus/res/topbars/khaki
+@dirrm share/jalbum/skins/BluPlusPlus/res/topbars/light-green
+@dirrm share/jalbum/skins/BluPlusPlus/res/topbars/purple
+@dirrm share/jalbum/skins/BluPlusPlus/res/topbars/red
+@dirrm share/jalbum/skins/BluPlusPlus/res/topbars
+@dirrm share/jalbum/skins/BluPlusPlus/res
+@dirrm share/jalbum/skins/BluPlusPlus/styles
+@dirrm share/jalbum/skins/BluPlusPlus/texts
+@dirrm share/jalbum/skins/BluPlusPlus
+@dirrm share/jalbum/skins/Bluepro/res
+@dirrm share/jalbum/skins/Bluepro/styles
+@dirrm share/jalbum/skins/Bluepro
+@dirrm share/jalbum/skins/Camera Geek/res
+@dirrm share/jalbum/skins/Camera Geek/styles
+@dirrm share/jalbum/skins/Camera Geek
+@dirrm share/jalbum/skins/Colorful/res
+@dirrm share/jalbum/skins/Colorful/styles
+@dirrm share/jalbum/skins/Colorful
+@dirrm share/jalbum/skins/Exhibit/res
+@dirrm share/jalbum/skins/Exhibit/styles
+@dirrm share/jalbum/skins/Exhibit
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-darkbackground
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets/gold-21px-lightbackground
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-darkbackground
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets/gold-32px-lightbackground
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets/metodi-beige-20px
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets/metodi-blue-20px
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets/metodi-gold-20px
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets/metodi-silver-20px
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets/red-21px-darkbackground
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-darkbackground
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets/silver-21px-lightbackground
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground
+@dirrm share/jalbum/skins/ExhibitPlus/button-sets
+@dirrm share/jalbum/skins/ExhibitPlus/guestbook
+@dirrm share/jalbum/skins/ExhibitPlus/plugins
+@dirrm share/jalbum/skins/ExhibitPlus/Optional files to be copied to image source directory
+@dirrm share/jalbum/skins/ExhibitPlus/res
+@dirrm share/jalbum/skins/ExhibitPlus/styles
+@dirrm share/jalbum/skins/ExhibitPlus/texts
+@dirrm share/jalbum/skins/ExhibitPlus
+@dirrm share/jalbum/skins/Experience/res
+@dirrm share/jalbum/skins/Experience/styles
+@dirrm share/jalbum/skins/Experience
+@dirrm share/jalbum/skins/Family/res
+@dirrm share/jalbum/skins/Family/styles/black
+@dirrm share/jalbum/skins/Family/styles/blue
+@dirrm share/jalbum/skins/Family/styles/pink
+@dirrm share/jalbum/skins/Family/styles/white
+@dirrm share/jalbum/skins/Family/styles
+@dirrm share/jalbum/skins/Family
+@dirrm share/jalbum/skins/Film/res
+@dirrm share/jalbum/skins/Film/styles
+@dirrm share/jalbum/skins/Film
+@dirrm share/jalbum/skins/Horizontal/res
+@dirrm share/jalbum/skins/Horizontal/styles
+@dirrm share/jalbum/skins/Horizontal
+@dirrm share/jalbum/skins/Mamba/res
+@dirrm share/jalbum/skins/Mamba/styles
+@dirrm share/jalbum/skins/Mamba
+@dirrm share/jalbum/skins/Minimal/res
+@dirrm share/jalbum/skins/Minimal/styles
+@dirrm share/jalbum/skins/Minimal
+@dirrm share/jalbum/skins/Old Album/res
+@dirrm share/jalbum/skins/Old Album/styles
+@dirrm share/jalbum/skins/Old Album
+@dirrm share/jalbum/skins/PBase/notes
+@dirrm share/jalbum/skins/PBase/res
+@dirrm share/jalbum/skins/PBase/scripts
+@dirrm share/jalbum/skins/PBase/styles
+@dirrm share/jalbum/skins/PBase
+@dirrm share/jalbum/skins/Polaroid/res
+@dirrm share/jalbum/skins/Polaroid/styles
+@dirrm share/jalbum/skins/Polaroid
+@dirrm share/jalbum/skins/ShowOff/res
+@dirrm share/jalbum/skins/ShowOff/styles
+@dirrm share/jalbum/skins/ShowOff
+@dirrm share/jalbum/skins/Simple/res
+@dirrm share/jalbum/skins/Simple/styles
+@dirrm share/jalbum/skins/Simple/texts
+@dirrm share/jalbum/skins/Simple
+@dirrm share/jalbum/skins/Slide show/res
+@dirrm share/jalbum/skins/Slide show/styles
+@dirrm share/jalbum/skins/Slide show
+@dirrm share/jalbum/skins/Standard/res
+@dirrm share/jalbum/skins/Standard/styles
+@dirrm share/jalbum/skins/Standard/subdir
+@dirrm share/jalbum/skins/Standard
+@dirrm share/jalbum/skins/Wedding/png
+@dirrm share/jalbum/skins/Wedding/res
+@dirrm share/jalbum/skins/Wedding/styles/pink
+@dirrm share/jalbum/skins/Wedding/styles/white
+@dirrm share/jalbum/skins/Wedding/styles
+@dirrm share/jalbum/skins/Wedding/texts
+@dirrm share/jalbum/skins/Wedding
+@dirrm share/jalbum/skins/Vertical/res
+@dirrm share/jalbum/skins/Vertical/styles
+@dirrm share/jalbum/skins/Vertical
+@dirrm share/jalbum/skins/Whitey/res
+@dirrm share/jalbum/skins/Whitey/styles
+@dirrm share/jalbum/skins/Whitey
+@dirrm share/jalbum/skins/XP/res
+@dirrm share/jalbum/skins/XP/styles/LightGrey
+@dirrm share/jalbum/skins/XP/styles/OliveGreen
+@dirrm share/jalbum/skins/XP/styles/Standard (Blue)
+@dirrm share/jalbum/skins/XP/styles
+@dirrm share/jalbum/skins/XP/texts
+@dirrm share/jalbum/skins/XP
+@dirrm share/jalbum/skins
+@dirrm share/jalbum/texts
+@dirrm share/jalbum/tools
+@dirrm share/jalbum/help/images
+@dirrm share/jalbum/help
+@dirrm share/jalbum/plugins/documentation
+@dirrm share/jalbum/plugins
+@dirrm share/jalbum
