@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3635 2005/06/23 21:14:54 salo Exp $
+$NetBSD: TODO,v 1.3636 2005/06/24 10:55:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -654,7 +654,6 @@ Suggested package updates
 	o libmatheval-1.1.2
 	o libmpeg3-1.5.4
 	o libopendaap-0.4.0
-	o libperl-5.6.2
 	o libpqxx-2.5.0
 	o libsmi-0.4.3
 	o libssh-0.11 [test security/hydra after update]
@@ -876,7 +875,9 @@ Suggested package updates
 	o p7zip-4.20
 	o pag-0.92 [pkg/30417]
 	o pam-smbpass-3.0.13
+	o par2-0.4 [pkg/30587]
 	o pari-2.2.7
+	o parrot-0.2.1 [pkg/30586]
 	o patchutils-0.2.31
 	o pcal-4.8
 	o pchar-1.5
@@ -884,7 +885,6 @@ Suggested package updates
 	o pear-HTTP_Request-1.2.4
 	o pear-Net_Socket-1.0.6
 	o pen-0.15.0
-	o perl-5.6.2
 	o pfqueue-0.4.1
 	o pfstat-1.8
 	o pgpool-2.5.1
