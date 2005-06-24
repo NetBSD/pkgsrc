@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.33 2005/06/24 20:33:52 jlam Exp $
+# $NetBSD: defaults.mk,v 1.34 2005/06/24 20:59:59 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -63,6 +63,7 @@ _TOOLS_VARNAME.chmod=		CHMOD
 _TOOLS_VARNAME.chown=		CHOWN
 _TOOLS_VARNAME.cmp=		CMP
 _TOOLS_VARNAME.cp=		CP
+_TOOLS_VARNAME.csh=		CSH
 _TOOLS_VARNAME.cut=		CUT
 _TOOLS_VARNAME.date=		DATE
 _TOOLS_VARNAME.diff=		DIFF
