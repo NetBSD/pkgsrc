@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:39 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/06/24 10:55:20 kristerw Exp $
 #
 
 DISTNAME=	ucl-1.02
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel archivers
 MASTER_SITES=	http://www.oberhumer.com/opensource/ucl/download/
 
@@ -18,6 +18,12 @@ CONFIGURE_ARGS+=	--enable-shared=yes
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=	F77=${FALSE}
+
+# Avoid path to build directory in example Makefile
+SUBST_CLASSES=		example
+SUBST_STAGE.example=	post-patch
+SUBST_FILES.example=	examples/Makefile.in
+SUBST_SED.example=	-e "s|@MAKEINFO@||g"
 
 INSTALLATION_DIRS=	bin
 
