@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.646 2005/06/23 23:53:07 minskim Exp $
+# $NetBSD: Makefile,v 1.647 2005/06/24 17:22:07 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -367,6 +367,7 @@ SUBDIR+=	p5-File-DirSync
 SUBDIR+=	p5-File-FlockDir
 SUBDIR+=	p5-File-MimeInfo
 SUBDIR+=	p5-File-PathConvert
+SUBDIR+=	p5-File-Slurp
 SUBDIR+=	p5-File-Spec
 SUBDIR+=	p5-File-Temp
 SUBDIR+=	p5-File-Type
