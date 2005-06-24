@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2005/06/23 04:02:48 jlam Exp $
+$NetBSD: distinfo,v 1.8 2005/06/24 21:01:48 jlam Exp $
 
 SHA1 (openrm-devel-1.5.2.tar.gz) = 8d68099b779ea0e45361f7270ade0646e2d1e635
 RMD160 (openrm-devel-1.5.2.tar.gz) = 3e0d3492b017aea2abdd3cbea0a3edd92d302023
@@ -7,7 +7,7 @@ SHA1 (patch-aa) = 45caa6f9d0117e98f707ba7c7e071e1f9dae4d1f
 SHA1 (patch-ae) = 4ed639a1d2a91c9b2105308af5ac9a811d7e1596
 SHA1 (patch-af) = 3e979fe0b9dc2e0c9f51bb91e069710779c013ed
 SHA1 (patch-ag) = 1044b260c8ecbff1cd5dccad65d5431281068b68
-SHA1 (patch-ah) = c616302761f2663a7da9f56eee45d79dff1a431d
+SHA1 (patch-ah) = 3ea21d1bda163ce2291378e75aac5235cfce604a
 SHA1 (patch-ai) = 3aeee96ee0e73f0b51e1f770f22b225bb435b58e
 SHA1 (patch-aj) = 06ba3b183ba15935108bfb60bb098a71f10cc27c
 SHA1 (patch-ak) = 52f05039fb635deed9dced10ec964392d9c02851
