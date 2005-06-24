@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.105 2005/06/24 20:59:59 jlam Exp $
+# $NetBSD: replace.mk,v 1.106 2005/06/24 21:17:01 minskim Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -202,7 +202,7 @@ TOOLS_DEPENDS.bash?=		bash-[0-9]*:../../shells/bash
 TOOLS_CREATE+=			bash
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bash=bash
 TOOLS_REAL_CMD.bash=		${TOOLS_PREFIX.bash}/bin/bash
-TOOLS_${_TOOLS_VARNAME.bash}=	${TOOLS_READ_CMD.bash}
+TOOLS_${_TOOLS_VARNAME.bash}=	${TOOLS_REAL_CMD.bash}
 .  endif
 .endif
 
