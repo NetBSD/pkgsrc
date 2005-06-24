@@ -1,4 +1,4 @@
-$NetBSD: patch-cd,v 1.2 2004/04/26 04:42:12 jlam Exp $
+$NetBSD: patch-cd,v 1.1 2005/06/24 06:43:47 jlam Exp $
 
 --- lib/File/Find.pm.orig	Fri Feb 27 11:31:34 2004
 +++ lib/File/Find.pm	Mon Apr 26 00:34:04 2004
