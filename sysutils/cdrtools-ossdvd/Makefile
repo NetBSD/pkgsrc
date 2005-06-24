@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2005/06/17 03:50:33 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/24 21:47:57 wiz Exp $
 
-DISTNAME=	cdrtools-2.01a32
-PKGNAME=	cdrtools-ossdvd-2.01.1.32
+DISTNAME=	cdrtools-2.01.01a01
+PKGNAME=	cdrtools-ossdvd-2.01.1.34
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/OLD/2.01aX/
+MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
 
-PATCHFILES=	cdrtools-2.01a32-ossdvd.patch.bz2
+PATCHFILES=	cdrtools-2.01.01a01-ossdvd.patch.bz2
 PATCH_SITES=	ftp://ftp.crashrecovery.org/pub/linux/cdrtools/ \
 		http://crashrecovery.org/oss-dvd/
 PATCH_DIST_STRIP=	-p1
@@ -19,7 +19,7 @@ CONFLICTS=	mkisofs-[0-9]* cdrecord-[0-9]* cdrtools-*
 
 .include "../../mk/bsd.prefs.mk"
 
-WRKSRC=			${WRKDIR}/cdrtools-2.01
+WRKSRC=			${WRKDIR}/cdrtools-2.01.01
 USE_TOOLS+=		gmake tbl
 
 .if ${LOCALBASE} != "/opt/schily"
@@ -55,10 +55,10 @@ CDRECORD_CONF_FILES+=	readcd/readcd.1
 INSTALLATION_DIRS=	bin man/man1 man/man8
 
 post-patch:
-	@cd ${WRKSRC}; for file in ${CDRECORD_CONF_FILES}; do		\
-		${MV} ${WRKSRC}/$$file ${WRKSRC}/$${file}.old &&	\
+	@cd ${WRKSRC}; for conf in ${CDRECORD_CONF_FILES}; do		\
+		${MV} ${WRKSRC}/$$conf ${WRKSRC}/$${conf}.old &&	\
 		${SED} -e 's|@CDRECORD_CONF@|${CDRECORD_CONF}|'	\
-			${WRKSRC}/$${file}.old > ${WRKSRC}/$$file;	\
+			${WRKSRC}/$${conf}.old > ${WRKSRC}/$$conf;	\
 	done
 
 do-configure:
@@ -71,9 +71,9 @@ do-configure:
 
 post-build:
 	cd ${WRKSRC};							\
-	for file in cdda2wav/cdda2wav.1 mkisofs/mkisofs.8; do		\
-		${TBL} $${file} > $${file}.tmp;				\
-		${MV} -f $${file}.tmp $${file};				\
+	for manpage in cdda2wav/cdda2wav.1 mkisofs/mkisofs.8; do	\
+		${TBL} $${manpage} > $${manpage}.tmp;			\
+		${MV} -f $${manpage}.tmp $${manpage};			\
 	done
 
 do-install:
