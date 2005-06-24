@@ -1,4 +1,4 @@
-# $NetBSD: tools.OSF1.mk,v 1.10 2005/06/23 20:45:34 jlam Exp $
+# $NetBSD: tools.OSF1.mk,v 1.11 2005/06/24 20:59:59 jlam Exp $
 #
 # System-supplied tools for the OSF/1 operating system.
 
@@ -11,6 +11,7 @@ TOOLS_PLATFORM.chmod?=		/bin/chmod
 TOOLS_PLATFORM.chown?=		/bin/chown
 TOOLS_PLATFORM.cmp?=		/usr/bin/cmp
 TOOLS_PLATFORM.cp?=		/bin/cp
+TOOLS_PLATFORM.csh?=		/bin/csh
 TOOLS_PLATFORM.cut?=		/usr/bin/cut
 TOOLS_PLATFORM.date?=		/bin/date
 TOOLS_PLATFORM.diff?=		/usr/bin/diff

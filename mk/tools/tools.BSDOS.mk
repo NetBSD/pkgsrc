@@ -1,4 +1,4 @@
-# $NetBSD: tools.BSDOS.mk,v 1.13 2005/06/23 20:45:34 jlam Exp $
+# $NetBSD: tools.BSDOS.mk,v 1.14 2005/06/24 20:59:59 jlam Exp $
 #
 # System-supplied tools for the BSD/OS operating system.
 
@@ -11,6 +11,7 @@ TOOLS_PLATFORM.chmod?=		/bin/chmod
 TOOLS_PLATFORM.chown?=		/usr/sbin/chown
 TOOLS_PLATFORM.cmp?=		/usr/bin/cmp
 TOOLS_PLATFORM.cp?=		/bin/cp
+TOOLS_PLATFORM.csh?=		/bin/csh
 TOOLS_PLATFORM.cut?=		/usr/bin/cut
 TOOLS_PLATFORM.date?=		/bin/date
 TOOLS_PLATFORM.diff?=		/usr/bin/diff
