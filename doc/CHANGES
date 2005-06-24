@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10421 2005/06/24 05:56:25 jlam Exp $
+$NetBSD: CHANGES,v 1.10422 2005/06/24 06:03:59 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2970,3 +2970,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/freewais-sf to 2.2.12nb3 [kristerw 2005-06-23]
 	Added devel/py-ZopeInterface version 3.0.1 [minskim 2005-06-23]
 	Removed lang/libperl [jlam 2005-06-24]
+	Updated mail/clamav to 0.86.1 [grant 2005-06-24]
+	Updated mail/p5-Mail-ClamAV to 0.17 [grant 2005-06-24]
