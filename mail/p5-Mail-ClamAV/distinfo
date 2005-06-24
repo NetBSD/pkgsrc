@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 09:59:25 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/06/24 06:03:11 grant Exp $
 
-SHA1 (Mail-ClamAV-0.13.tar.gz) = bbb31e14b2ce1bb2f0e76aa10d619c6d4620ed6c
-RMD160 (Mail-ClamAV-0.13.tar.gz) = 5312e413768c9e108395ffd9856a220fb3a90c7e
-Size (Mail-ClamAV-0.13.tar.gz) = 12190 bytes
+SHA1 (Mail-ClamAV-0.17.tar.gz) = 07681413f08b20a595e0a822c274477d0660fa00
+RMD160 (Mail-ClamAV-0.17.tar.gz) = d131fac8e409cb0222cf94cd46f45095ed0d8dc4
+Size (Mail-ClamAV-0.17.tar.gz) = 15441 bytes
