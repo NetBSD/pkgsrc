@@ -1,33 +1,17 @@
-$NetBSD: patch-af,v 1.1.1.1 2005/05/31 22:09:35 wiz Exp $
+$NetBSD: patch-af,v 1.2 2005/06/24 21:26:24 wiz Exp $
 
---- capplets/background-properties/app-background.c.orig	Wed Nov  8 23:11:17 2000
+--- capplets/background-properties/app-background.c.orig	2002-04-06 17:44:02.000000000 +0200
 +++ capplets/background-properties/app-background.c
-@@ -7,13 +7,13 @@
- #include <locale.h>
- 
- extern void background_init(void);
-+extern void background_properties_init(void);
+@@ -11,7 +11,7 @@ extern void background_init(void);
  
  static gchar *background_image = NULL;
  
--const struct poptOption options [] = {
--	{ "background-image", 'b', POPT_ARG_STRING, &background_image, 0,
--	  N_("Set background image."), N_("IMAGE-FILE") },
--	{NULL, '\0', 0, NULL, 0}
-+static struct poptOption options = {
-+	"background-image", 'b', POPT_ARG_STRING, &background_image, 0,
-+	 N_("Set background image."), N_("IMAGE-FILE"),
- };
- 
- gint
-@@ -24,14 +24,13 @@
- 	gchar *session_args[3];
- 	int token, init_results;
- 	poptContext ctx;
--	char **args;
- 
- 	setlocale(LC_ALL, "");	
- 	bindtextdomain (PACKAGE, GNOMELOCALEDIR);
+-struct poptOption options [] = {
++static struct poptOption options [] = {
+ 	{ "background-image", 'b', POPT_ARG_STRING, &background_image, 0,
+ 	  N_("Set background image."), N_("IMAGE-FILE") },
+ 	{NULL, '\0', 0, NULL, 0}
+@@ -31,7 +31,7 @@ main (gint argc, char *argv[])
  	textdomain (PACKAGE);
  
  	init_results = gnome_capplet_init("background-properties", VERSION,
