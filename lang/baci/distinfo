@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 09:03:05 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/06/24 22:44:58 minskim Exp $
 
 SHA1 (bacisrc.tar.gz) = 3b655bcbd2823047f3f92e6f2d3d12bc7eaa772d
 RMD160 (bacisrc.tar.gz) = c484e3c05734cac1dd394d9b09b256e2a2626897
@@ -16,3 +16,6 @@ SHA1 (patch-ag) = df83bd959b26677d193b883cc0d3a944c6d86544
 SHA1 (patch-ah) = 500a536f362eba6fdd152e5be598d66528b3396d
 SHA1 (patch-ai) = a94b97a695bfcf233835cec67791c99732c7cdf6
 SHA1 (patch-aj) = 0c9824049ac9555b76889fcd09e644e91ebae78d
+SHA1 (patch-ak) = 099f329662611a94e2bc2cce3f30753d3e053680
+SHA1 (patch-al) = 06509333c305b150e1d1215454ff153f95cb6e2c
+SHA1 (patch-am) = 79eb900505f6130033c820a5ed46f386ab14bf54
