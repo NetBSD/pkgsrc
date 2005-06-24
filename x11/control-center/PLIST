@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/31 22:09:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/24 21:26:24 wiz Exp $
 bin/background-properties-capplet
+bin/default-application-properties-capplet
 bin/file-types-capplet
-bin/gnome-edit-properties-capplet
 bin/gnomecc
 bin/keyboard-properties
 bin/mouse-properties-capplet
@@ -32,8 +32,8 @@ share/control-center/Desktop/background-properties.desktop
 share/control-center/Desktop/theme-selector.desktop
 share/control-center/Desktop/wm-properties.desktop
 share/control-center/Documents/.directory
+share/control-center/Documents/default-application-properties.desktop
 share/control-center/Documents/file-types-capplet.desktop
-share/control-center/Documents/gnome-edit-properties.desktop
 share/control-center/Documents/url-properties.desktop
 share/control-center/Multimedia/.directory
 share/control-center/Multimedia/sound-properties.desktop
@@ -50,7 +50,7 @@ share/gnome/apps/Settings/Desktop/background-properties.desktop
 share/gnome/apps/Settings/Desktop/theme-selector.desktop
 share/gnome/apps/Settings/Desktop/wm-properties.desktop
 share/gnome/apps/Settings/Documents/.directory
-share/gnome/apps/Settings/Documents/gnome-edit-properties.desktop
+share/gnome/apps/Settings/Documents/default-applicaiton-properties.desktop
 share/gnome/apps/Settings/Documents/url-properties.desktop
 share/gnome/apps/Settings/Multimedia/.directory
 share/gnome/apps/Settings/Multimedia/sound-properties.desktop
@@ -101,6 +101,46 @@ share/gnome/help/control-center/C/stylesheet-images/up.gif
 share/gnome/help/control-center/C/stylesheet-images/warning.gif
 share/gnome/help/control-center/C/topic.dat
 share/gnome/help/control-center/C/usage.html
+share/gnome/help/control-center/eu/control-center.sgml
+share/gnome/help/control-center/eu/desktop-intro.html
+share/gnome/help/control-center/eu/doc-handlers.html
+share/gnome/help/control-center/eu/figures/bg-capplet.png
+share/gnome/help/control-center/eu/figures/gccalf.png
+share/gnome/help/control-center/eu/figures/gccappdef.png
+share/gnome/help/control-center/eu/figures/gccdialog.png
+share/gnome/help/control-center/eu/figures/gccedit.png
+share/gnome/help/control-center/eu/figures/gcchints.png
+share/gnome/help/control-center/eu/figures/gccmdi.png
+share/gnome/help/control-center/eu/figures/gccmime.png
+share/gnome/help/control-center/eu/figures/gccsession-props.png
+share/gnome/help/control-center/eu/figures/gccsessopt.png
+share/gnome/help/control-center/eu/figures/gccsound1.png
+share/gnome/help/control-center/eu/figures/gccsound2.png
+share/gnome/help/control-center/eu/figures/gccstartup.png
+share/gnome/help/control-center/eu/figures/gccurl.png
+share/gnome/help/control-center/eu/figures/glob_pref_anim.png
+share/gnome/help/control-center/eu/figures/keyboard-capplet.png
+share/gnome/help/control-center/eu/figures/mouse-capplet.png
+share/gnome/help/control-center/eu/figures/screensave-capplet.png
+share/gnome/help/control-center/eu/figures/theme-select.png
+share/gnome/help/control-center/eu/figures/wm-add.png
+share/gnome/help/control-center/eu/figures/wm-main.png
+share/gnome/help/control-center/eu/index.html
+share/gnome/help/control-center/eu/ln7.html
+share/gnome/help/control-center/eu/stylesheet-images/caution.gif
+share/gnome/help/control-center/eu/stylesheet-images/home.gif
+share/gnome/help/control-center/eu/stylesheet-images/important.gif
+share/gnome/help/control-center/eu/stylesheet-images/next.gif
+share/gnome/help/control-center/eu/stylesheet-images/note.gif
+share/gnome/help/control-center/eu/stylesheet-images/prev.gif
+share/gnome/help/control-center/eu/stylesheet-images/tip.gif
+share/gnome/help/control-center/eu/stylesheet-images/toc-blank.gif
+share/gnome/help/control-center/eu/stylesheet-images/toc-minus.gif
+share/gnome/help/control-center/eu/stylesheet-images/toc-plus.gif
+share/gnome/help/control-center/eu/stylesheet-images/up.gif
+share/gnome/help/control-center/eu/stylesheet-images/warning.gif
+share/gnome/help/control-center/eu/topic.dat
+share/gnome/help/control-center/eu/usage.html
 share/gnome/wm-properties/Enlightenment.desktop
 share/gnome/wm-properties/IceWM.desktop
 share/gnome/wm-properties/Scwm.desktop
@@ -145,22 +185,30 @@ ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/control-center.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/control-center.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/control-center.mo
 share/omf/control-center/control-center-C.omf
+share/omf/control-center/control-center-eu.omf
 share/pixmaps/ccsplash.png
 share/pixmaps/control-center.png
+@comment in xdg-x11-dirs: @dirrm share/pixmaps
 @exec ${MKDIR} -m 0755 %D/share/control-center/capplets
 @dirrm share/omf/control-center
 @comment in scrollkeeper: @dirrm share/omf
+@comment in ORBit or below: @dirrm share/idl
+@comment ? @dirrm share/gnome/wm-properties
 @dirrm share/gnome/help/control-center/C/stylesheet-images
 @dirrm share/gnome/help/control-center/C/figures
 @dirrm share/gnome/help/control-center/C
+@dirrm share/gnome/help/control-center/eu/stylesheet-images
+@dirrm share/gnome/help/control-center/eu/figures
+@dirrm share/gnome/help/control-center/eu
 @dirrm share/gnome/help/control-center
+@comment in gnome1-dirs: @dirrm share/gnome/help
 @dirrm share/gnome/apps/Settings/UIOptions
-@comment in gnome-dirs: @dirrm share/gnome/apps/Settings/Session
-@comment in gnome-dirs: @dirrm share/gnome/apps/Settings/Peripherals
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Settings/Session
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Settings/Peripherals
 @dirrm share/gnome/apps/Settings/Multimedia
 @dirrm share/gnome/apps/Settings/Documents
-@comment in gnome-dirs: @dirrm share/gnome/apps/Settings/Desktop
-@comment in gnome-dirs: @dirrm share/gnome/apps/Settings
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Settings/Desktop
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Settings
 @comment in gnome-dirs: @dirrm share/gnome/apps
 @dirrm share/control-center/capplets
 @dirrm share/control-center/UIOptions
@@ -171,3 +219,4 @@ share/pixmaps/control-center.png
 @dirrm share/control-center/Desktop
 @dirrm share/control-center
 @dirrm include/libcapplet1
+@comment in gnome-libs: @dirrm etc/CORBA/servers
