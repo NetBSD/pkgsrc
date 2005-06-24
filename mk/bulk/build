@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.52 2005/05/19 22:58:21 dillo Exp $
+# $NetBSD: build,v 1.53 2005/06/24 08:29:59 dillo Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -371,7 +371,7 @@ do
 done
 
 # Perl was wiped, reinstall it!
-( cd lang/perl58 && ${BMAKE} bulk-install )
+( cd lang/perl5 && ${BMAKE} bulk-install )
 perl mk/bulk/post-build | ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results `date +%Y-%m-%d`" $ADMIN
 
 # Done!
