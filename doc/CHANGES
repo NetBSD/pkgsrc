@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10443 2005/06/24 20:36:41 wiz Exp $
+$NetBSD: CHANGES,v 1.10444 2005/06/24 20:51:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -3002,3 +3002,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added devel/p5-File-Flat version 0.95 [wiz 2005-06-24]
 	Updated devel/p5-Test-Inline to 2.002 [wiz 2005-06-24]
 	Updated databases/p5-DBI to 1.48 [wiz 2005-06-24]
+	Updated audio/sox to 12.17.7 [wiz 2005-06-24]
