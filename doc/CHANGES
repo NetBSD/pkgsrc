@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10429 2005/06/24 17:22:50 wiz Exp $
+$NetBSD: CHANGES,v 1.10430 2005/06/24 17:28:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2980,3 +2980,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/cvs2cl to 2.59 [wiz 2005-06-24]
 	Updated archivers/p7zip to 4.20 [wiz 2005-06-24]
 	Added devel/p5-File-Slurp version 9999.09 [wiz 2005-06-24]
+	Added math/p5-Number-Compare version 0.01 [wiz 2005-06-24]
