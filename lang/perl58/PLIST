@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.10 2004/12/10 06:01:08 jlam Exp $
-@unexec ${RMDIR} -p %D/${PERL5_SITEPERL}/man/man3 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/${PERL5_SITEPERL}/man 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/${PERL5_SITEPERL} 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/${PERL5_SITELIB} 2>/dev/null || ${TRUE}

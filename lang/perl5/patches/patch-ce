@@ -1,4 +1,4 @@
-$NetBSD: patch-ce,v 1.1 2004/04/24 21:04:43 tv Exp $
+$NetBSD: patch-ce,v 1.1 2005/06/24 06:43:47 jlam Exp $
 
 --- lib/File/Temp.pm.orig	Fri Apr 23 12:42:30 2004
 +++ lib/File/Temp.pm	Fri Apr 23 12:44:21 2004
