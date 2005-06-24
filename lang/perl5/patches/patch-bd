@@ -1,4 +1,4 @@
-$NetBSD: patch-bd,v 1.1 2005/01/04 09:50:15 jlam Exp $
+$NetBSD: patch-bd,v 1.1 2005/06/24 06:43:47 jlam Exp $
 
 --- lib/ExtUtils/instmodsh.orig	2004-01-05 17:34:59.000000000 -0500
 +++ lib/ExtUtils/instmodsh
