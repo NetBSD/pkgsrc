@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3636 2005/06/24 10:55:29 wiz Exp $
+$NetBSD: TODO,v 1.3637 2005/06/24 12:48:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -417,7 +417,7 @@ Suggested package updates
 	o cocoon-2.1.7
 	o columba-1.0RC1
 	o common-mml-1.2.16
-	o conglomerate-0.7.16
+	o conglomerate-0.9.1
 	o conserver-8.1.11
 	o control-center-1.4.0.5
 	o coreutils-5.3.0
@@ -737,7 +737,7 @@ Suggested package updates
 	o nsd-2.3.0
 	o nslint-2.1a3
 	o nullmailer-1.0.0
-	o nut-10.20
+	o nut-10.21
 	o nvi-m17n-1.79.20040401 [pkg/30216]
 	o obexftp-0.10.6
 	o odbc-postgresql-7.4.7
@@ -1050,7 +1050,7 @@ Suggested package updates
 	o source-highlight-2.0
 	o sox-12.17.7
 	o spamassassin-3.0.4 [pkg/30452]
-	o spamprobe-1.2
+	o spamprobe-1.2a
 	o spim-7.1
 	o spruce-0.6.5
 	o sqlitemanager-1.0.6
