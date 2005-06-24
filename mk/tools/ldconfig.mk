@@ -1,4 +1,4 @@
-# $NetBSD: ldconfig.mk,v 1.3 2005/05/21 04:53:17 jlam Exp $
+# $NetBSD: ldconfig.mk,v 1.4 2005/06/24 20:40:53 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,14 +40,16 @@
 # ${TOOLS_DIR}/bin/ldconfig to be either the correct ldconfig tool or
 # a no-op.
 #
+# Create TOOLS_LDCONFIG and LDCONFIG variables that point to the actual
+# commands that can be embedded into packages.
+#
 .if !defined(TOOLS_PLATFORM.ldconfig)
 TOOLS_NOOP+=			ldconfig
+TOOLS_LDCONFIG?=		${TRUE}
 .else
 TOOLS_CREATE+=			ldconfig
 TOOLS_REAL_CMD.ldconfig=	${TOOLS_PLATFORM.ldconfig}
+TOOLS_LDCONFIG?=		${TOOLS_REAL_CMD.ldconfig}
 .endif
 
-# Make ${LDCONFIG} call "ldconfig" through the PATH, which should find
-# the one under ${TOOLS_DIR}.
-#
-LDCONFIG?=	ldconfig
+LDCONFIG?=	${TOOLS_LDCONFIG}
