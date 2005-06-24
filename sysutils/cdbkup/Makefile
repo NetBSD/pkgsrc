@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/03/25 23:11:19 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/24 10:39:10 kristerw Exp $
 
 DISTNAME=		cdbkup-1.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdbkup/} \
 			ftp://batraq.anything3d.com/pub/cdbkup/cdbkup-1/ \
@@ -21,6 +21,9 @@ DEPENDS+=		gtar-base>=1.13.25:../../archivers/gtar-base
 
 GNU_CONFIGURE=		YES
 USE_PERL5=		YES
+USE_TOOLS+=		cat date
+CONFIGURE_ENV+=		ac_cv_path_CAT="${TOOLS_CAT}"
+CONFIGURE_ENV+=		ac_cv_path_DATE="${TOOLS_DATE}"
 
 .if (${OPSYS} == SunOS)
 CDBKUP_SNARDIR?=	/var/${PKGBASE}
