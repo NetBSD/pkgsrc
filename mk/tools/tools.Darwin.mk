@@ -1,10 +1,11 @@
-# $NetBSD: tools.Darwin.mk,v 1.14 2005/06/23 20:45:34 jlam Exp $
+# $NetBSD: tools.Darwin.mk,v 1.15 2005/06/24 19:39:10 minskim Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
+TOOLS_PLATFORM.bash?=		/bin/bash
 TOOLS_PLATFORM.cat?=		/bin/cat
 TOOLS_PLATFORM.chgrp?=		/usr/bin/chgrp
 TOOLS_PLATFORM.chmod?=		/bin/chmod
