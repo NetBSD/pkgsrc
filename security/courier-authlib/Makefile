@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:29 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/24 17:31:28 kristerw Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	courier-authlib-0.55
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +17,7 @@ CONFLICTS+=	courier-authldap-[0-9]*
 CONFLICTS+=	courier-authmysql-[0-9]*
 CONFLICTS+=	courier-authpgsql-[0-9]*
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		cat gmake
 USE_LIBTOOL=		yes
 PKG_SYSCONFSUBDIR=	authlib
 
@@ -26,6 +27,7 @@ REPLACE_PERL=		sysconftool
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-stdheaderdir
+CONFIGURE_ENV+=		CAT="${TOOLS_CAT}"
 
 AUTHDAEMONVAR?=		${VARBASE}/authdaemon
 CONFIGURE_ARGS+=	--with-authdaemonvar=${AUTHDAEMONVAR}
