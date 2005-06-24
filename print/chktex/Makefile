@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/19 20:51:37 kristerw Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/24 22:23:05 kristerw Exp $
 #
 
 DISTNAME=	chktex-1.6.1
@@ -15,7 +15,7 @@ DEPENDS+=	lynx-[0-9]*:../../www/lynx
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 CFLAGS+=	-D__unix__
-CONFIGURE_ENV+=	ac_cv_path_PERL5="${PERL5}"
+CONFIGURE_ENV+=	PERL5="${PERL5}"
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 .include "../../lang/perl5/buildlink3.mk"
