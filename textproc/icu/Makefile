@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2005/05/22 20:08:34 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2005/06/24 16:44:15 kristerw Exp $
 #
 
 DISTNAME=	icu-3.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.software.ibm.com/software/globalization/icu/${PKGVERSION}/
 EXTRACT_SUFX=	.tgz
@@ -19,6 +19,7 @@ TEST_TARGET=		check
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-static
+CONFIGURE_ENV+=		U_MAKE="${TOOLS_GMAKE}"
 
 # ICU's configure script will automatically append "/icu" to the sysconfdir.
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
