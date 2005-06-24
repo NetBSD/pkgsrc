@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10427 2005/06/24 14:26:14 wiz Exp $
+$NetBSD: CHANGES,v 1.10428 2005/06/24 14:32:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2978,3 +2978,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/R to 2.1.1 [markd 2005-06-24]
 	Updated misc/cksfv to 1.3.5 [wiz 2005-06-24]
 	Updated devel/cvs2cl to 2.59 [wiz 2005-06-24]
+	Updated archivers/p7zip to 4.20 [wiz 2005-06-24]
