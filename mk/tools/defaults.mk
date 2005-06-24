@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.31 2005/06/23 20:39:39 jlam Exp $
+# $NetBSD: defaults.mk,v 1.32 2005/06/24 19:39:10 minskim Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,6 +54,7 @@ TOOLS_DEFAULTS_MK=	defined
 
 _TOOLS_VARNAME.awk=		AWK
 _TOOLS_VARNAME.basename=	BASENAME
+_TOOLS_VARNAME.bash=		BASH
 _TOOLS_VARNAME.bison-yacc=	YACC
 _TOOLS_VARNAME.bzcat=		BZCAT
 _TOOLS_VARNAME.cat=		CAT
