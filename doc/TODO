@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3638 2005/06/24 14:23:38 wiz Exp $
+$NetBSD: TODO,v 1.3639 2005/06/24 14:24:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -409,8 +409,6 @@ Suggested package updates
 	o chktex-1.6.2
 	o cint-5.15
 	o cjk-lyx-1.3.3
-	o ckmame-0.6
-	o clamav-0.86
 	o classpath-0.15
 	o classpath-gui-0.15
 	o cocoon-2.1.7
