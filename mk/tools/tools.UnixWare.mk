@@ -1,4 +1,4 @@
-# $NetBSD: tools.UnixWare.mk,v 1.11 2005/06/23 20:45:34 jlam Exp $
+# $NetBSD: tools.UnixWare.mk,v 1.12 2005/06/24 20:59:59 jlam Exp $
 #
 # System-supplied tools for the UnixWare 7 operating system.
 
@@ -11,6 +11,7 @@ TOOLS_PLATFORM.chmod?=		/usr/bin/chmod
 TOOLS_PLATFORM.chown?=		/usr/bin/chown
 TOOLS_PLATFORM.cmp?=		/usr/bin/cmp
 TOOLS_PLATFORM.cp?=		/usr/bin/cp
+TOOLS_PLATFORM.csh?=		/bin/csh
 TOOLS_PLATFORM.cut?=		/usr/bin/cut
 TOOLS_PLATFORM.date?=		/usr/bin/date
 TOOLS_PLATFORM.diff?=		/usr/bin/diff
