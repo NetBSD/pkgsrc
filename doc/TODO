@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3645 2005/06/24 21:15:07 wiz Exp $
+$NetBSD: TODO,v 1.3646 2005/06/24 21:26:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -416,7 +416,6 @@ Suggested package updates
 	o common-mml-1.2.16
 	o conglomerate-0.9.1
 	o conserver-8.1.11
-	o control-center-1.4.0.5
 	o coreutils-5.3.0
 	o cqcam-0.91
 	o crafty-19.5

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10445 2005/06/24 21:15:07 wiz Exp $
+$NetBSD: CHANGES,v 1.10446 2005/06/24 21:26:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -3004,3 +3004,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/p5-DBI to 1.48 [wiz 2005-06-24]
 	Updated audio/sox to 12.17.7 [wiz 2005-06-24]
 	Updated multimedia/p5-xmltv to 0.5.40 [wiz 2005-06-24]
+	Updated x11/control-center to 1.4.0.5 [wiz 2005-06-24]
