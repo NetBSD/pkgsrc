@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.53 2005/06/24 08:29:59 dillo Exp $
+# $NetBSD: build,v 1.54 2005/06/24 13:37:51 sketch Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -203,6 +203,7 @@ if [ -d pkgtools/pkglint ]; then
 	GREP=`${BMAKE} show-var VARNAME=GREP USE_TOOLS=grep` || fail=yes
 	SED=`${BMAKE} show-var VARNAME=SED USE_TOOLS=sed` || fail=yes
 	MAIL_CMD=`${BMAKE} show-var VARNAME=MAIL_CMD USE_TOOLS=mail` || fail=yes
+	PERL5=`${BMAKE} show-var VARNAME=PERL5 USE_TOOLS=perl` || fail=yes
 	MACHINE_ARCH=`${BMAKE} show-var VARNAME=MACHINE_ARCH` || fail=yes
 	OPSYS=`${BMAKE} show-var VARNAME=OPSYS` || fail=yes
 	OS_VERSION=`${BMAKE} show-var VARNAME=OS_VERSION` || fail=yes
@@ -229,6 +230,7 @@ echo "AWK             = $AWK"
 echo "GREP            = $GREP"
 echo "SED             = $SED"
 echo "MAIL_CMD        = $MAIL_CMD"
+echo "PERL5           = $PERL5"
 echo "MACHINE_ARCH    = $MACHINE_ARCH"
 echo "OPSYS           = $OPSYS"
 echo "OS_VERSION      = $OS_VERSION"
@@ -251,6 +253,7 @@ if [ $fail = "yes" -o \
 	-z "$GREP" -o \
 	-z "$SED" -o \
 	-z "$MAIL_CMD" -o \
+	-z "$PERL5" -o \
 	-z "$MACHINE_ARCH" -o \
 	-z "$OPSYS" -o \
 	-z "$OS_VERSION" \
@@ -372,7 +375,7 @@ done
 
 # Perl was wiped, reinstall it!
 ( cd lang/perl5 && ${BMAKE} bulk-install )
-perl mk/bulk/post-build | ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results `date +%Y-%m-%d`" $ADMIN
+${PERL5} mk/bulk/post-build | ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results `date +%Y-%m-%d`" $ADMIN
 
 # Done!
 echo ""
