@@ -1,0 +1,3 @@
+This module provides subroutines to read or write entire files with a
+simple call.  It also has a subroutine for reading the list of filenames
+in a directory.
