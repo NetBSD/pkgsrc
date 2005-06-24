@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:17 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/24 10:30:47 kristerw Exp $
 #
 
 DISTNAME=		pinepgp-0.18.0
+PKGREVISION=		1
 CATEGORIES=		security mail
 MASTER_SITES=		http://www.megaloman.com/~hany/_data/pinepgp/	\
 			http://terminus.sk/~hany/_data/pinepgp/		\
@@ -15,6 +16,8 @@ DEPENDS+=		bash>=2:../../shells/bash2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		cat
+CONFIGURE_ENV+=		ac_cv_path_CAT="${TOOLS_CAT}"
 
 PINEPGP_USEGPG?=	yes
 PINEPGP_USEPGP5?=	yes
