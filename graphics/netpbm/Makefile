@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.113 2005/06/20 22:39:18 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2005/06/24 21:36:10 minskim Exp $
 
 DISTNAME=	netpbm-10.26.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -34,7 +34,7 @@ DEPENDS+=		bash-[0-9]*:../../shells/bash
 EVAL_PREFIX+=		BASH_PREFIX=bash
 SUBST_CLASSES+=		bash
 SUBST_STAGE.bash=	post-build
-SUBST_SED.bash=		-e "1s|^\#.*bin/sh|\#${BASH_PREFIX}/bin/bash|"
+SUBST_SED.bash=		-e "1s|^\#!.*bin/sh|\#!${BASH_PREFIX}/bin/bash|"
 SUBST_FILES.bash=	converter/other/anytopnm			\
 			converter/other/pnmtoplainpnm			\
 			converter/ppm/hpcdtoppm/hpcdtoppm		\
