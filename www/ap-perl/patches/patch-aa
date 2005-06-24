@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2002/08/25 21:51:50 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2005/06/24 06:58:26 jlam Exp $
 
 --- apaci/Makefile.tmpl.orig	Tue Nov 24 11:38:52 1998
 +++ apaci/Makefile.tmpl	Fri Apr 30 20:36:05 1999
-@@ -45,7 +45,7 @@
-    $(MP_STATIC_OBJS)
- MP_OBJS_PIC=\
-    mod_perl.lo perlxsi.lo perl_config.lo perl_util.lo perlio.lo mod_perl_opmask.lo \
--   $(MP_STATIC_OBJS_PIC)
-+   $(MP_STATIC_OBJS_PIC) $(DYNALOADER_OBJ_PIC)
- 
- all: lib
- 
 @@ -94,7 +94,8 @@
  
  #   FOR STAND-ALONE BUILDING ONLY
