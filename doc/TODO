@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3642 2005/06/24 20:31:42 wiz Exp $
+$NetBSD: TODO,v 1.3643 2005/06/24 20:36:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -781,7 +781,6 @@ Suggested package updates
 	o p5-DBD-Sybase-1.05
 	o p5-DBD-postgresql-1.32
 	o p5-DBD-Sybase-1.04
-	o p5-DBI-1.48
 	o p5-DBIx-ContextualFetch-1.02
 	o p5-DB_File-1.810
 	o p5-Data-TemporaryBag-0.08
