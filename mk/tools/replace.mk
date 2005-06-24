@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.106 2005/06/24 21:17:01 minskim Exp $
+# $NetBSD: replace.mk,v 1.107 2005/06/24 21:21:31 minskim Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -343,7 +343,7 @@ TOOLS_DEPENDS.csh?=		tcsh-[0-9]*:../../shells/tcsh
 TOOLS_CREATE+=			csh
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.csh=tcsh
 TOOLS_REAL_CMD.csh=		${TOOLS_PREFIX.csh}/bin/tcsh
-TOOLS_${_TOOLS_VARNAME.csh}=	${TOOLS_READ_CMD.csh}
+TOOLS_${_TOOLS_VARNAME.csh}=	${TOOLS_REAL_CMD.csh}
 .  endif
 .endif
 
