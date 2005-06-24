@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2004/10/18 13:24:48 cube Exp $
+$NetBSD: patch-aa,v 1.9 2005/06/24 20:50:31 wiz Exp $
 
---- Makefile.in.orig	2004-09-02 00:04:02.000000000 +0200
+--- Makefile.in.orig	2004-11-07 23:37:20.000000000 +0100
 +++ Makefile.in
 @@ -18,6 +18,8 @@ includedir = @includedir@
  
@@ -11,13 +11,3 @@ $NetBSD: patch-aa,v 1.8 2004/10/18 13:24:48 cube Exp $
  
  all: 
  	cd src && $(MAKE) $@
-@@ -27,6 +29,9 @@ man: $(srcdir)/sox.1 $(srcdir)/soxexam.1
- 	nroff -man $(srcdir)/soxexam.1 | col -b > soxexam.txt
- 	nroff -man $(srcdir)/libst.3 | col -b > libst.txt
- 
-+PLAY_INSTALL_0 =
-+PLAY_INSTALL_1 = install-play
-+
- install: $(PLAY_INSTALL_$(PLAY_SUPPORT))
- 	cd src && $(MAKE) $@
- 	$(srcdir)/mkinstalldirs $(mandir)/man1
