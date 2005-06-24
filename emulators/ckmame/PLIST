@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/24 08:23:17 dillo Exp $
+bin/ckmame
+bin/dumpgame
+bin/mkmamedb
+bin/mkmamedb-xmame.sh
+man/man1/ckmame.1
+man/man1/dumpgame.1
+man/man1/mkmamedb.1
+share/doc/ckmame/mame-0.96.dtd
+@dirrm share/doc/ckmame
