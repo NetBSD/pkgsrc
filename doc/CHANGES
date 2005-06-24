@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10435 2005/06/24 18:59:19 wiz Exp $
+$NetBSD: CHANGES,v 1.10436 2005/06/24 19:10:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2994,3 +2994,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added devel/p5-File-Find-Rule version 0.28 [wiz 2005-06-24]
 	Added devel/p5-Class-Inspector version 1.08 [wiz 2005-06-24]
 	Added devel/p5-Config-Tiny version 2.02 [wiz 2005-06-24]
+	Added devel/p5-Test-ClassAPI version 1.02 [wiz 2005-06-24]
