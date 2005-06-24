@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.11 2005/06/17 18:37:56 wiz Exp $
+$NetBSD: CHANGES-2004,v 1.12 2005/06/24 09:29:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1608,6 +1608,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bittorrent to 3.4.1a [wiz 2004-03-29]
 	Updated bittorrent-gui to 3.4.1a [wiz 2004-03-29]
 	Updated p5-XML-LibXML to 1.57 [wiz 2004-03-29]
+	Added par2-0.3 [tv 2004-03-29]
 	Updated ttmkfdir2 to 20021109nb1 [recht 2004-03-30]
 	Updated TeXmacs to 1.0.3.5 [recht 2004-03-30]
 	Added py-twisted-1.2.0 [recht 2004-03-30]
