@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3648 2005/06/24 21:48:43 wiz Exp $
+$NetBSD: TODO,v 1.3649 2005/06/24 21:55:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -307,7 +307,6 @@ Suggested package updates
 	o MayaVi-1.4
 	o MyPasswordSafe-20041210
 	o PAM-0.78
-	o RealPlayerGold-10.0.4
 	o SmartEiffel-2.1
 	o TeXmacs-1.0.5.4
 	o ViPEC-3.2.0
