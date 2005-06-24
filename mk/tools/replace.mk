@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.104 2005/06/24 19:39:10 minskim Exp $
+# $NetBSD: replace.mk,v 1.105 2005/06/24 20:59:59 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -332,6 +332,18 @@ TOOLS_CREATE+=			cp
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.cp=coreutils
 TOOLS_REAL_CMD.cp=		${TOOLS_PREFIX.cp}/bin/${GNU_PROGRAM_PREFIX}cp
 TOOLS_${_TOOLS_VARNAME.cp}=	${TOOLS_REAL_CMD.cp}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.csh) && !empty(_USE_TOOLS:Mcsh)
+.  if !empty(PKGPATH:Mshells/tcsh)
+MAKEFLAGS+=			TOOLS_IGNORE.csh=
+.  elif !empty(_TOOLS_USE_PKGSRC.csh:M[yY][eE][sS])
+TOOLS_DEPENDS.csh?=		tcsh-[0-9]*:../../shells/tcsh
+TOOLS_CREATE+=			csh
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.csh=tcsh
+TOOLS_REAL_CMD.csh=		${TOOLS_PREFIX.csh}/bin/tcsh
+TOOLS_${_TOOLS_VARNAME.csh}=	${TOOLS_READ_CMD.csh}
 .  endif
 .endif
 
