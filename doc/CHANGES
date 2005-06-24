@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10451 2005/06/24 21:59:25 minskim Exp $
+$NetBSD: CHANGES,v 1.10452 2005/06/24 22:39:27 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -3010,3 +3010,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/cdrtools-ossdvd to 2.01.1.34 [wiz 2005-06-24]
 	Updated multimedia/RealPlayerGold to 10.0.5 [wiz 2005-06-24]
 	Updated graphics/netpbm to 10.26.9nb3 [minskim 2005-06-24]
+	Updated pkgtools/pkglint to 4.18 [rillig 2005-06-24]
