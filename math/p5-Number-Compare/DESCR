@@ -1,0 +1,2 @@
+Number::Compare compiles a simple comparison to an anonymous
+subroutine, which you can call with a value to be tested again.
