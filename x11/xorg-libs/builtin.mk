@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2005/06/01 18:03:33 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2005/06/24 05:21:31 jlam Exp $
 
 BUILTIN_PKG:=	xorg-libs
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.CF_XORG=	${X11BASE}/lib/X11/config/xorg.cf
 ###
 .if !defined(IS_BUILTIN.xorg-libs)
 IS_BUILTIN.xorg-libs=	no
-.  if exists(${CF_XORG})
+.  if empty(CF_XORG:M${LOCALBASE}/*) && exists(${CF_XORG})
 IS_BUILTIN.xorg-libs=	yes
 .  endif
 .endif
