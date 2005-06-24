@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.648 2005/06/24 18:40:03 wiz Exp $
+# $NetBSD: Makefile,v 1.649 2005/06/24 18:58:49 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -326,6 +326,7 @@ SUBDIR+=	p5-Class-Factory
 SUBDIR+=	p5-Class-Factory-Util
 SUBDIR+=	p5-Class-Fields
 SUBDIR+=	p5-Class-Inner
+SUBDIR+=	p5-Class-Inspector
 SUBDIR+=	p5-Class-Loader
 SUBDIR+=	p5-Class-MakeMethods
 SUBDIR+=	p5-Class-MethodMaker
@@ -339,6 +340,7 @@ SUBDIR+=	p5-Clone
 SUBDIR+=	p5-Compress-Zlib
 SUBDIR+=	p5-Config-General
 SUBDIR+=	p5-Config-IniFiles
+SUBDIR+=	p5-Config-Tiny
 SUBDIR+=	p5-Curses
 SUBDIR+=	p5-Data-Buffer
 SUBDIR+=	p5-Data-Hierarchy
