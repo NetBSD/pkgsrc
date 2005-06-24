@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2005/06/23 21:57:45 kristerw Exp $
+# $NetBSD: Makefile,v 1.63 2005/06/24 16:24:23 jlam Exp $
 
 DISTNAME=		inn-2.4.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/ \
@@ -35,12 +35,13 @@ CONFIGURE_ARGS+=	--enable-setgid-inews 				\
 			--with-news-user=${INN_USER}			\
 			--with-news-group=${INN_GROUP}
 CONFIGURE_ENV+=		_PATH_PERL=${PERL5}
-CONFIGURE_ENV+=		ac_cv_path__PATH_AWK="${TOOLS_AWK}"
-CONFIGURE_ENV+=		ac_cv_path__PATH_EGREP="${TOOLS_EGREP}"
-CONFIGURE_ENV+=		ac_cv_path__PATH_SED="${TOOLS_SED}"
-CONFIGURE_ENV+=		ac_cv_path__PATH_SH="${TOOLS_SH}"
-CONFIGURE_ENV+=		ac_cv_path__PATH_SORT="${TOOLS_SORT}"
-USE_TOOLS+=		awk egrep sed sh sort
+CONFIGURE_ENV+=		_PATH_AWK="${TOOLS_AWK}"
+CONFIGURE_ENV+=		_PATH_EGREP="${TOOLS_EGREP}"
+CONFIGURE_ENV+=		_PATH_SED="${TOOLS_SED}"
+CONFIGURE_ENV+=		_PATH_SH="${TOOLS_SH}"
+CONFIGURE_ENV+=		_PATH_SORT="${TOOLS_SORT}"
+CONFIGURE_ENV+=		GZIP="${TOOLS_GZIP_CMD}"
+USE_TOOLS+=		awk egrep gzip sed sh sort yacc
 
 PKG_USERS=		${INN_USER}:${INN_GROUP}::Internet\\ News:${INN_DATA_DIR}:${SH}
 PKG_GROUPS=		${INN_GROUP}
