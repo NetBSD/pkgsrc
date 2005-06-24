@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/23 21:36:01 kristerw Exp $
+# $NetBSD: Makefile,v 1.19 2005/06/24 19:05:48 kristerw Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
@@ -26,8 +26,8 @@ CONFIGURE_ARGS+=	--with-printcap_path="${PRINTCAP_PATH}"
 CONFIGURE_ARGS+=	--with-filterdir="${FILTER_DIR}"
 CONFIGURE_ARGS+=	--with-filter_path="${FILTER_PATH}"
 CONFIGURE_ARGS+=	--with-ld_library_path="${FILTER_LD_PATH}"
-CONFIGURE_ENV+=		ac_cv_path_CHGRP="${TOOLS_CHGRP}"
-CONFIGURE_ENV+=		ac_cv_path_CHOWN="${TOOLS_CHOWN}"
+CONFIGURE_ENV+=		CHGRP="${TOOLS_CHGRP}"
+CONFIGURE_ENV+=		CHOWN="${TOOLS_CHOWN}"
 
 .include "options.mk"
 
