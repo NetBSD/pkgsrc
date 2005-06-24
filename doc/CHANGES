@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10425 2005/06/24 12:35:57 markd Exp $
+$NetBSD: CHANGES,v 1.10426 2005/06/24 14:23:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2976,3 +2976,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/perl5 to perl-5.8.6nb4 [jlam 2005-06-24]
 	Added emulators/ckmame version 0.6 [dillo 2005-06-24]
 	Updated math/R to 2.1.1 [markd 2005-06-24]
+	Updated misc/cksfv to 1.3.5 [wiz 2005-06-24]
