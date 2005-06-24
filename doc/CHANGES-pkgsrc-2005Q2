@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.5 2005/06/24 09:03:16 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.6 2005/06/24 09:08:56 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -13,3 +13,5 @@ Pullup ticket 561 - requested by Johnny C. Lam
 fix built-in detection in pflkm
 Pullup ticket 560 - requested by Johnny C. Lam
 portability fix for tools framework
+Pullup ticket 562 - requested by Johnny C. Lam
+built-in detection fixes for XFree86-libs and xorg-libs
