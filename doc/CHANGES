@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10439 2005/06/24 19:59:26 wiz Exp $
+$NetBSD: CHANGES,v 1.10440 2005/06/24 20:12:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2998,3 +2998,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added devel/p5-Algorithm-Dependency version 1.03 [wiz 2005-06-24]
 	Updated devel/p5-Class-Autouse to 1.17 [wiz 2005-06-24]
 	Added devel/p5-prefork version 0.04 [wiz 2005-06-24]
+	Added sysutils/p5-File-NCopy version 0.34 [wiz 2005-06-24]
