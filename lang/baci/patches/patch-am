@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.1 2005/06/24 22:44:58 minskim Exp $
+
+--- lib/readtab.c.orig	1999-09-15 21:38:06.000000000 -0500
++++ lib/readtab.c
+@@ -2,7 +2,6 @@
+ 
+ #include <stdio.h>
+ #include <string.h>
+-#include <malloc.h>
+ #include <stdlib.h>
+ 
+ #include "../include/globdata.h"
