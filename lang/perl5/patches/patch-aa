@@ -1,96 +1,50 @@
-$NetBSD: patch-aa,v 1.25 2003/10/05 14:16:41 grant Exp $
+$NetBSD: patch-aa,v 1.26 2005/06/24 06:43:45 jlam Exp $
 
---- Configure.orig	Sun Mar 18 22:03:33 2001
-+++ Configure	Fri Oct  3 20:55:27 2003
-@@ -891,6 +891,8 @@
- sitelib=''
- sitelib_stem=''
- sitelibexp=''
-+installsiteman1dir=''
-+installsiteman3dir=''
- siteprefix=''
- siteprefixexp=''
- sizesize=''
-@@ -6598,7 +6600,7 @@
- 	esac
- 	for thisflag in $ldflags; do
- 		case "$thisflag" in
--		-L*|-R*)
-+		-L*|-R*|-Wl,-R*)
- 			case " $dflt " in
- 			*" $thisflag "*) ;;
- 			*) dflt="$dflt $thisflag" ;;
-@@ -6807,12 +6809,18 @@
- 	aix)
- 		# We'll set it in Makefile.SH...
- 		;;
--	solaris|netbsd)
-+	solaris)
- 		xxx="-R $shrpdir"
- 		;;
-+	netbsd)
-+		xxx="-Wl,-R$shrpdir"
-+		;;
- 	freebsd)
- 		xxx="-Wl,-R$shrpdir"
- 		;;
-+	bsdos)
-+		xxx="-Wl,-R$shrpdir"
-+		;;
- 	linux|irix*|dec_osf)
- 		xxx="-Wl,-rpath,$shrpdir"
- 		;;
-@@ -6966,6 +6974,17 @@
- 	;;
- esac
+--- lib/ExtUtils/MM_Unix.pm.orig	2004-01-05 17:34:59.000000000 -0500
++++ lib/ExtUtils/MM_Unix.pm
+@@ -12,7 +12,7 @@ use DirHandle;
  
-+case "$installsiteman1dir" in
-+'')	dflt="$installman1dir" ;;
-+*)	dflt="$installsiteman1dir" ;;
-+esac
-+set installsiteman1dir installsiteman1dir none
-+eval $prefixit
-+fn=d~+
-+rp="Where do the site-specific manual pages (source) go?"
-+. ./getfile
-+installsiteman1dir="$ans"
-+
- : see if we can have long filenames
- echo " "
- first=123456789abcdef
-@@ -7090,6 +7109,17 @@
- 	;;
- esac
+ use vars qw($VERSION @ISA
+             $Is_Mac $Is_OS2 $Is_VMS $Is_Win32 $Is_Win95  $Is_Dos $Is_VOS
+-            $Is_QNX $Is_AIX $Is_OSF $Is_IRIX  $Is_NetBSD $Is_BSD
++            $Is_QNX $Is_AIX $Is_OSF $Is_IRIX  $Is_BSD $Is_Interix
+             $Is_SunOS4 $Is_Solaris $Is_SunOS
+             $Verbose %pm %static
+             %Config_Override
+@@ -36,11 +36,11 @@ $Is_QNX     = $^O eq 'qnx';
+ $Is_AIX     = $^O eq 'aix';
+ $Is_OSF     = $^O eq 'dec_osf';
+ $Is_IRIX    = $^O eq 'irix';
+-$Is_NetBSD  = $^O eq 'netbsd';
++$Is_Interix = $^O eq 'interix';
+ $Is_SunOS4  = $^O eq 'sunos';
+ $Is_Solaris = $^O eq 'solaris';
+ $Is_SunOS   = $Is_SunOS4 || $Is_Solaris;
+-$Is_BSD     = $^O =~ /^(?:free|net|open)bsd|bsdos$/;
++$Is_BSD     = $^O =~ /^(?:free|net|open)bsd|bsdos|dragonfly|interix$/;
  
-+case "$installsiteman3dir" in
-+'')	dflt="$installman3dir" ;;
-+*)	dflt="$installsiteman3dir" ;;
-+esac
-+set installsiteman3dir installsiteman3dir none
-+eval $prefixit
-+fn=d~+
-+rp="Where do the site-specific library man pages (source) go?"
-+. ./getfile
-+installsiteman3dir="$ans"
-+
- : see if we have to deal with yellow pages, now NIS.
- if $test -d /usr/etc/yp || $test -d /etc/yp; then
- 	if $test -f /usr/etc/nibindd; then
-@@ -14719,7 +14749,7 @@
- eval $inhdr
  
- : see if this is a ieeefp.h system
--set ieeefp.h i_ieeefp
-+set machine/ieeefp.h i_ieeefp
- eval $inhdr
+ =head1 NAME
+@@ -1120,16 +1120,16 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
  
- : see if this is a libutil.h system
-@@ -16145,6 +16175,8 @@
- installsitearch='$installsitearch'
- installsitebin='$installsitebin'
- installsitelib='$installsitelib'
-+installsiteman1dir='$installsiteman1dir'
-+installsiteman3dir='$installsiteman3dir'
- installstyle='$installstyle'
- installusrbinperl='$installusrbinperl'
- installvendorarch='$installvendorarch'
+     my $libs = '$(LDLOADLIBS)';
+ 
+-    if ($Is_NetBSD) {
+-	# Use nothing on static perl platforms, and to the flags needed
+-	# to link against the shared libperl library on shared perl
+-	# platforms.  We peek at lddlflags to see if we need -Wl,-R
++    if ($Is_BSD) {
++	# Use nothing on static perl platforms, and add to the flags
++	# needed to link against the shared libperl library on shared
++	# perl platforms.  We peek at lddlflags to see if we need -Wl,-R
+ 	# or -R to add paths to the run-time library search path.
+ 	if ($Config{'useshrplib'}) {
+ 	    if ($Config{'lddlflags'} =~ /-Wl,-R/) {
+-		$libs .= ' -L$(PERL_INC) -Wl,-R$(INSTALLARCHLIB)/CORE -lperl';
++		$libs .= ' -L$(PERL_INC) -Wl,-R$(INSTALLARCHLIB)/CORE -Wl,-R$(PERL_ARCHLIB)/CORE -lperl';
+ 	    } elsif ($Config{'lddlflags'} =~ /-R/) {
+-		$libs .= ' -L$(PERL_INC) -R$(INSTALLARCHLIB)/CORE -lperl';
++		$libs .= ' -L$(PERL_INC) -R$(INSTALLARCHLIB)/CORE -R$(PERL_ARCHLIB)/CORE -lperl';
+ 	    }
+ 	}
+     }

@@ -1,4 +1,4 @@
-$NetBSD: patch-ch,v 1.1 2004/11/26 03:29:44 grant Exp $
+$NetBSD: patch-ch,v 1.1 2005/06/24 06:43:47 jlam Exp $
 
 --- hints/dec_osf.sh.orig	2004-05-14 03:44:00.000000000 +0200
 +++ hints/dec_osf.sh

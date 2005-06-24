@@ -1,4 +1,4 @@
-$NetBSD: patch-cb,v 1.5 2005/03/09 03:49:23 garbled Exp $
+$NetBSD: patch-cb,v 1.1 2005/06/24 06:43:47 jlam Exp $
 --- Makefile.SH.orig	2004-10-21 08:30:02.000000000 -0700
 +++ Makefile.SH	2005-03-08 18:05:48.000000000 -0700
 @@ -69,7 +69,11 @@

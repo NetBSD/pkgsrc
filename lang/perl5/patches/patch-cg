@@ -1,4 +1,4 @@
-$NetBSD: patch-cg,v 1.1 2004/04/24 21:04:43 tv Exp $
+$NetBSD: patch-cg,v 1.1 2005/06/24 06:43:47 jlam Exp $
 
 --- t/op/groups.t.orig	Fri Apr 23 12:46:39 2004
 +++ t/op/groups.t	Fri Apr 23 12:46:53 2004

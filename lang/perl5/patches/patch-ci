@@ -1,4 +1,4 @@
-$NetBSD: patch-ci,v 1.2 2004/12/29 19:41:25 jlam Exp $
+$NetBSD: patch-ci,v 1.1 2005/06/24 06:43:47 jlam Exp $
 
 --- pp_sys.c.orig	2004-10-19 13:07:23.000000000 -0400
 +++ pp_sys.c

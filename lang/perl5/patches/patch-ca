@@ -1,8 +1,66 @@
-$NetBSD: patch-ca,v 1.1 2004/04/12 02:51:22 jschauma Exp $
+$NetBSD: patch-ca,v 1.2 2005/06/24 06:43:47 jlam Exp $
 
---- Configure.orig	Fri Mar 26 10:34:43 2004
-+++ Configure	Fri Mar 26 10:43:17 2004
-@@ -12495,7 +12495,15 @@
+--- Configure.orig	2004-09-10 02:25:52.000000000 -0400
++++ Configure
+@@ -3107,11 +3107,13 @@ EOM
+ 		dgux)	osname=dgux 
+ 			osvers="$3"
+ 			;;
++		dragonfly) osname=dragonfly
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'` ;;
+ 		dynixptx*) osname=dynixptx
+ 			osvers=`echo "$4"|sed 's/^v//'`
+ 			;;
+ 		freebsd) osname=freebsd 
+-			osvers="$3" ;;
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'` ;;
+ 		genix)	osname=genix ;;
+ 		gnu)	osname=gnu
+ 			osvers="$3" ;;
+@@ -3133,7 +3135,7 @@ EOM
+ 		MiNT)	osname=mint
+ 			;;
+ 		netbsd*) osname=netbsd
+-			osvers="$3"
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
+ 			;;
+ 		news-os) osvers="$3"
+ 			case "$3" in
+@@ -3144,8 +3146,8 @@ EOM
+ 		next*) osname=next ;;
+ 		nonstop-ux) osname=nonstopux ;;
+ 		openbsd) osname=openbsd
+-                	osvers="$3"
+-                	;;
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
++			;;
+ 		os2)	osname=os2
+ 			osvers="$4"
+ 			;;
+@@ -7852,7 +7854,7 @@ if "$useshrplib"; then
+ 	solaris)
+ 		xxx="-R $shrpdir"
+ 		;;
+-	freebsd|netbsd|openbsd)
++	freebsd|netbsd|openbsd|dragonfly|interix)
+ 		xxx="-Wl,-R$shrpdir"
+ 		;;
+ 	bsdos|linux|irix*|dec_osf)
+@@ -8973,6 +8975,13 @@ EOCP
+ 	;;
+ esac
+ 
++: Look for a hint-file generated 'call-back-unit'.  We need
++: to set some defaults for building perl in pkgsrc.
++if $test -f pkgsrc.cbu; then
++    echo "Setting pkgsrc-specific hints regarding compiler/linker flags..."
++    . ./pkgsrc.cbu
++fi
++
+ case "$vendorprefix" in
+ '')	d_vendorbin="$undef"
+ 	vendorbin=''
+@@ -17290,7 +17299,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1

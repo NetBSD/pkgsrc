@@ -1,4 +1,4 @@
-$NetBSD: patch-cc,v 1.4 2005/01/21 20:23:22 tv Exp $
+$NetBSD: patch-cc,v 1.1 2005/06/24 06:43:47 jlam Exp $
 
 --- hints/interix.sh.orig	Fri Apr 23 12:29:09 2004
 +++ hints/interix.sh	Fri Apr 23 12:32:55 2004

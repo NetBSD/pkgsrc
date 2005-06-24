@@ -1,8 +1,8 @@
-# $NetBSD: depends.mk,v 1.5 2005/05/19 15:35:41 jlam Exp $
+# $NetBSD: depends.mk,v 1.6 2005/06/24 06:43:44 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
-# perl58>=5.8.3 includes Test::Harness, so we allow it to satisfy this
+# perl>=5.8.3 includes Test::Harness, so we allow it to satisfy this
 # dependency.
 #
 # This does however cause problems for the bulk-builds; it adds all

@@ -1,4 +1,4 @@
-$NetBSD: patch-be,v 1.1 2005/01/04 09:50:15 jlam Exp $
+$NetBSD: patch-be,v 1.1 2005/06/24 06:43:47 jlam Exp $
 
 --- lib/perl5db.pl.orig	2004-11-17 07:51:18.000000000 -0500
 +++ lib/perl5db.pl

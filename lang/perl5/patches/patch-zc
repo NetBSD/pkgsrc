@@ -1,4 +1,4 @@
-$NetBSD: patch-zc,v 1.1 2003/10/05 07:07:14 jlam Exp $
+$NetBSD: patch-zc,v 1.1 2005/06/24 06:43:47 jlam Exp $
 
 --- Policy_sh.SH.orig	Fri Aug  1 05:23:23 2003
 +++ Policy_sh.SH	Tue Aug 26 02:12:12 2003

@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.35 2005/06/01 18:14:23 jlam Exp $
+# $NetBSD: Interix.mk,v 1.36 2005/06/24 06:43:44 jlam Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -23,7 +23,7 @@
 # libtool-base	0x50000000	0x6fffffff	0x00040000	2048
 # netpbm	0x6b000000	0x6cffffff	0x00100000	32
 # openssl	0x5e000000	0x5fffffff	0x00100000	32
-# perl58	*
+# perl5		*
 # python22	*
 # python23	*
 # python24	*
