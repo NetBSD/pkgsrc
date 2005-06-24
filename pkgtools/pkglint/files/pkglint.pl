@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.193 2005/06/14 03:52:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.194 2005/06/24 22:36:59 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -667,7 +667,7 @@ sub check_package() {
 	if (grep { $_ !~ qr"/CVS$" } <$opt_packagedir/pkg/*>) {
 		log_error("$opt_packagedir/pkg", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please 'mv $opt_packagedir/pkg/* $opt_packagedir' and 'rmdir $opt_packagedir/pkg'.");
 	}
-	if (-d "$opt_packagedir/scripts") {
+	if (grep { $_ !~ qr"/CVS$" } <$opt_packagedir/scripts/*>) {
 		log_warning("$opt_packagedir/scripts", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
 	}
 	if (! -f "$opt_packagedir/$pkgdir/PLIST"
@@ -1112,8 +1112,6 @@ sub readmakefile($$) {
 	my $contents = "";
 	my ($includefile, $dirname, $savedln, $level, $lines);
 
-	log_info($file, NO_LINE_NUMBER, "Reading Makefile.");
-
 	$lines = load_file($file);
 	if (!defined ($lines)) {
 		return false;
@@ -1129,11 +1127,8 @@ sub readmakefile($$) {
 		}
 		push(@{$all_lines}, $line);
 		# try to get any included file
-		if ($line->text =~ /^.include\s+([^\n]+)$/) {
+		if ($line->text =~ qr"^\.\s*include\s+\"([-./\w]+)\"$") {
 			$includefile = $1;
-			if ($includefile =~ /\"([^\"]+)\"/) {
-				$includefile = $1;
-			}
 			if (exists($seen_Makefile_include{$includefile})) {
 				$contents .= "### pkglint ### skipped $includefile\n";
 				next;
@@ -1164,9 +1159,12 @@ sub readmakefile($$) {
 				if (!-f "$dirname/$includefile") {
 					$line->log_error("Cannot read $dirname/$includefile.");
 				} else {
+					$line->log_info("Including $dirname/$includefile");
 					$contents .= readmakefile("$dirname/$includefile", $all_lines);
 				}
 			}
+		} elsif ($line->text =~ qr"^\.\s*include\s+(.*)") {
+			$line->log_info("Skipping include file $1");
 		} else {
 			$contents .= $line->text . "\n";
 		}
@@ -1328,7 +1326,7 @@ sub checklines_direct_tools($) {
 			} else {
 				$line->log_warning("Possible direct use of \"${tool}\" in variable ${varname}. Please use \$\{$toolvar{$tool}\} instead.");
 			}
-		} elsif ($text =~ qr"^\t(.*)") {
+		} elsif ($text =~ qr"^\t(.*?)(?:\s*\\)?$") {
 			my ($shellcmd) = ($1);
 			# process shell commands
 			if ($shellcmd =~ $regex_ok_shellcmds) {
