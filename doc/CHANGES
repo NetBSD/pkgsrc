@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10423 2005/06/24 06:43:44 jlam Exp $
+$NetBSD: CHANGES,v 1.10424 2005/06/24 08:26:09 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -2974,3 +2974,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/p5-Mail-ClamAV to 0.17 [grant 2005-06-24]
 	Removed lang/perl58 [jlam 2005-06-24]
 	Updated lang/perl5 to perl-5.8.6nb4 [jlam 2005-06-24]
+	Added emulators/ckmame version 0.6 [dillo 2005-06-24]
