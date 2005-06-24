@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.100 2005/06/11 05:22:03 jlam Exp $
+# $NetBSD: replace.mk,v 1.100.2.1 2005/06/24 09:00:36 salo Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -306,7 +306,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.cmp=
 TOOLS_DEPENDS.cmp?=		diffutils>=2.8.1:../../devel/diffutils
 TOOLS_CREATE+=			cmp
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.cmp=diffutils
-TOOLS_REAL_CMD.cmp=		${TOOLS_PREFIX.cmp}/bin/cmp
+TOOLS_REAL_CMD.cmp=		${TOOLS_PREFIX.cmp}/bin/${GNU_PROGRAM_PREFIX}cmp
 TOOLS_${_TOOLS_VARNAME.cmp}=	${TOOLS_REAL_CMD.cmp}
 .  endif
 .endif
