@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/20 16:29:55 kristerw Exp $
+# $NetBSD: Makefile,v 1.26 2005/06/24 20:53:20 kristerw Exp $
 #
 
 DISTNAME=	groff-1.19.1
@@ -15,7 +15,7 @@ DEPENDS+=	psutils>=1.17:../../print/psutils
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		ac_cv_path_PERLPATH="${PERL5}"
+CONFIGURE_ENV+=		PERLPATH="${PERL5}"
 USE_PERL5=		YES
 
 INFO_FILES=	groff
