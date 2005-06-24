@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.301 2005/06/19 07:46:03 minskim Exp $
+# $NetBSD: Makefile,v 1.302 2005/06/24 20:12:04 wiz Exp $
 
 COMMENT=	System utilities
 
@@ -128,6 +128,7 @@ SUBDIR+=	news
 SUBDIR+=	nrg2iso
 SUBDIR+=	ntfsprogs
 SUBDIR+=	osname
+SUBDIR+=	p5-File-NCopy
 SUBDIR+=	p5-File-Remove
 SUBDIR+=	p5-Lchown
 SUBDIR+=	p5-Sys-Hostname-Long
