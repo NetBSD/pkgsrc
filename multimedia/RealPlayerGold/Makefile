@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2005/06/24 21:55:16 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/25 16:57:05 salo Exp $
 #
 
 DISTNAME=		RealPlayer10GOLD
 PKGNAME=		RealPlayerGold-10.0.5
 CATEGORIES=		multimedia
-MASTER_SITES=		http://software-dl.real.com/24437d1636116709ed21/unix/
+MASTER_SITES=		http://forms.real.com/real/player/download.html?f=unix/
 EXTRACT_SUFX=		.rpm
 
 MAINTAINER=		tech-pkg@NetBSD.org
