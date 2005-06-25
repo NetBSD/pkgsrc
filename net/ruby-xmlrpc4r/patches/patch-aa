@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.2.2 2005/06/25 15:51:49 salo Exp $
+
+--- lib/utils.rb.orig	2002-01-09 08:00:53.000000000 +0900
++++ lib/utils.rb
+@@ -138,7 +138,7 @@ module XMLRPC
+ 
+     def get_methods(obj, delim=".")
+       prefix = @prefix + delim
+-      obj.class.public_instance_methods.collect { |name|
++      obj.class.public_instance_methods(false).collect { |name|
+         [prefix + name, obj.method(name).to_proc, nil, nil] 
+       }
+     end
