@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.6 2005/06/24 09:08:56 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.7 2005/06/25 15:54:02 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -15,3 +15,7 @@ Pullup ticket 560 - requested by Johnny C. Lam
 portability fix for tools framework
 Pullup ticket 562 - requested by Johnny C. Lam
 built-in detection fixes for XFree86-libs and xorg-libs
+Pullup ticket 565 - requested by Takahiro Kambe
+ruby-xmlparser update
+Pullup ticket 559 - requested by Takahiro Kambe
+security fix for ruby-xmlrpc4r
