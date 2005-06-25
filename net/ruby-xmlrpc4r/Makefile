@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/03/06 17:19:07 taca Exp $
+# $NetBSD: Makefile,v 1.7.4.1 2005/06/25 15:51:49 salo Exp $
 #
 
 DISTNAME=	xmlrpc4r-1_7_16
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/./g}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net ruby
 MASTER_SITES=	http://www.fantasy-coders.de/ruby/xmlrpc4r/
 
