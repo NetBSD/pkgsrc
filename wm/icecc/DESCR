@@ -1,0 +1,6 @@
+The IceWM Control Center allows you to run various tools for
+configuring IceWM's options.
+
+It contains menu/toolbar editor, winoptions editor, keys editor,
+themes switcher and some other tools. It supports themes, so you can add
+new (or replace existing) tools and images.
