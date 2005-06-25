@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:12:34 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/06/25 03:26:15 taca Exp $
 
-SHA1 (nkf204.tar.gz) = fec166bdb30ac6d9b7272776b56648ed14fb6eac
-RMD160 (nkf204.tar.gz) = a5a83c0957d8d7cf59691ac0df6b170c91d11bb5
-Size (nkf204.tar.gz) = 107085 bytes
+SHA1 (nkf205.tar.gz) = 78f1321d0dec16dd9bb6f046a349aadc86c027b4
+RMD160 (nkf205.tar.gz) = 55d48e281f6491c299897c3f22c3f0a2b2a13b16
+Size (nkf205.tar.gz) = 149809 bytes
