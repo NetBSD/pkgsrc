@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10460 2005/06/25 14:56:02 zuntum Exp $
+$NetBSD: CHANGES,v 1.10461 2005/06/25 21:03:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -3022,3 +3022,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/cpuflags to 0.88 [abs 2005-06-25]
 	Updated devel/subversion-base to 1.2.0nb1 [minskim 2005-06-25]
 	Updated chat/bnc to 2.9.4 [zuntum 2005-06-25]
+	Updated devel/libevent to 1.1a [wiz 2005-06-25]
