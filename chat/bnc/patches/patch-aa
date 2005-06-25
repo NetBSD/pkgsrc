@@ -1,19 +1,15 @@
-$NetBSD: patch-aa,v 1.3 2004/02/02 09:05:20 grant Exp $
+$NetBSD: patch-aa,v 1.4 2005/06/25 14:48:46 zuntum Exp $
 
---- Makefile.in.orig	2002-07-12 01:58:29.000000000 +1000
+--- Makefile.in.orig	2005-01-26 05:15:06.000000000 +0100
 +++ Makefile.in
-@@ -1,11 +1,10 @@
- LIBS = @LIBS@
--OPTS = -O3
--COPT = -Wall
-+OPTS = ${CFLAGS}
-+COPT =
- OOPT =
- STRIP = strip
--CC = gcc
+@@ -1,8 +1,8 @@
+ LIBS=@LIBS@
+-CFLAGS=-O3 -Wall -include config.h
++CFLAGS+=-include config.h
+ CC=@CC@
  
 -ALL: bnc mkpasswd
 +all: bnc mkpasswd
  
  mkpasswd:mkpasswd.c
- 	${CC} ${OPTS} ${COPT} ${LIBS} -o mkpasswd mkpasswd.c
+ 	${CC} ${CFLAGS} -o mkpasswd mkpasswd.c ${LIBS} 

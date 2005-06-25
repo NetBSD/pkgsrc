@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 15:59:10 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/06/25 14:48:46 zuntum Exp $
 
-SHA1 (bnc2.8.6.tar.gz) = 19544b83c4e8d558d56621b5001590432de2b4d0
-RMD160 (bnc2.8.6.tar.gz) = e8d0598a22d1c2b324fc087fc9a373398bc4db2d
-Size (bnc2.8.6.tar.gz) = 52569 bytes
-SHA1 (patch-aa) = 089c7ee2523d55404c68ca7ad6f551f6e69f1392
-SHA1 (patch-ab) = 74554135c60b7c18c467e674e1e22778b1fa3b95
+SHA1 (bnc2.9.4.tar.gz) = 4665c7b740dd37fe01a1ff82328600c9963dfd08
+RMD160 (bnc2.9.4.tar.gz) = 47065d7b9b6044f7eb9a3820201d64a7d682a7c9
+Size (bnc2.9.4.tar.gz) = 76896 bytes
+SHA1 (patch-aa) = cf40e78385dce1a22c3215413a3e18f045348ba1
