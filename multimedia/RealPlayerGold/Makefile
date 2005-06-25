@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2005/06/21 18:56:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2005/06/25 19:10:44 salo Exp $
 #
 
 DISTNAME=		RealPlayer10GOLD
-PKGNAME=		RealPlayerGold-10.0.1
+PKGNAME=		RealPlayerGold-10.0.5
 CATEGORIES=		multimedia
-MASTER_SITES=		https://helixcommunity.org/download.php/643/
+MASTER_SITES=		http://forms.real.com/real/player/download.html?f=unix/
 EXTRACT_SUFX=		.rpm
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.real.com/linux/
 COMMENT=		Real Audio and Video Player
 
-BUILD_DEPENDS+=		wget-[0-9]*:../../net/wget
-
-FETCH_CMD=		${PREFIX}/bin/wget
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
 RPM2PKGARGS=		-d ${PREFIX} -f ${PLIST_SRC} -p ${REALPLAYER_SUBDIR} -s3
 RPM2PKGSTRIP=		3
@@ -29,7 +26,6 @@ DEPENDS+=		suse_fontconfig>=9.1:../../emulators/suse91_fontconfig
 DEPENDS+=		suse_freetype2>=9.1:../../emulators/suse91_freetype2
 DEPENDS+=		suse_x11>=9.1:../../emulators/suse91_x11
 DEPENDS+=		suse_gtk2>=9.1:../../emulators/suse91_gtk2
-.else
 .endif
 
 REALPLAYER_SUBDIR=	lib
