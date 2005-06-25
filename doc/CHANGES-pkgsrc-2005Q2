@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.8 2005/06/25 16:17:24 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.9 2005/06/25 19:11:12 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -21,3 +21,5 @@ Pullup ticket 559 - requested by Takahiro Kambe
 security fix for ruby-xmlrpc4r
 Pullup ticket 563 - requested by Min Sik Kim
 usability fix for netpbm
+Pullup ticket 564 - requested by Thomas Klausner
+security update for RealPlayerGold
