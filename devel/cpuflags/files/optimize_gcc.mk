@@ -1,7 +1,7 @@
-# $Id: optimize_gcc.mk,v 1.21 2005/05/01 22:03:37 abs Exp $
+# $Id: optimize_gcc.mk,v 1.22 2005/06/25 10:50:49 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
-# ugly, and probably quite broken by design.
+# ugly, and quite broken by design.
 #
 # The intention is to pass additional flags to gcc to further optimise
 # generated code. It _will_ make it impossible to debug, may fail to
@@ -20,12 +20,7 @@ COPT_FLAGS=
 
 # This is a horrible mess, but how else to adjust per package?
 
-.if !defined(PKGBASE)
-PKGBASE=${PKGNAME:C/-[^-]*$//}
-.if ${PKGBASE} == "" 
-PKGBASE=${.CURDIR:C:.*/::}
-.endif
-.endif
+PKGBASE?=${PKGNAME:C/-[^-]*$//}
 
 COPT_FLAGS+=-ffast-math -fomit-frame-pointer
 
