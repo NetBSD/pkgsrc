@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 18:49:20 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/06/25 10:47:56 tron Exp $
 
 SHA1 (suse91/i586/aaa_base-9.1-0.i586.rpm) = c15fcdc81a93c7d3056292d56b1376a0fdf20554
 RMD160 (suse91/i586/aaa_base-9.1-0.i586.rpm) = 62c26c035f73418f2db88685b16282cbf691da66
@@ -36,3 +36,39 @@ Size (suse91/i586/readline-4.3-306.i586.rpm) = 151357 bytes
 SHA1 (suse91/i586/zlib-1.2.1-70.i586.rpm) = 7592cc5629f8c3c480bb943089c0e09481ac3f46
 RMD160 (suse91/i586/zlib-1.2.1-70.i586.rpm) = 8e9f69c1250be1c194dc3798b7a2b4372e69a5e8
 Size (suse91/i586/zlib-1.2.1-70.i586.rpm) = 63453 bytes
+SHA1 (suse91/x86_64/aaa_base-9.1-0.x86_64.rpm) = f2fe65f6c41ab216456ceff453456eb3673b9b65
+RMD160 (suse91/x86_64/aaa_base-9.1-0.x86_64.rpm) = d7a4ca9f87975edb19fe5f0b3a215e09778d2f6e
+Size (suse91/x86_64/aaa_base-9.1-0.x86_64.rpm) = 289773 bytes
+SHA1 (suse91/x86_64/bash-2.05b-301.x86_64.rpm) = 93f665912afd2908abda5aeff6f1e1cedfa728a7
+RMD160 (suse91/x86_64/bash-2.05b-301.x86_64.rpm) = b850a95ca7e6f7cc0d999a79af585a2b81d30a0f
+Size (suse91/x86_64/bash-2.05b-301.x86_64.rpm) = 660645 bytes
+SHA1 (suse91/x86_64/coreutils-5.2.1-21.x86_64.rpm) = c4778943129d8d49aea5f32377b027da6555f6c7
+RMD160 (suse91/x86_64/coreutils-5.2.1-21.x86_64.rpm) = 76839f5b067e81b5b17bd081cfd774588fa6e493
+Size (suse91/x86_64/coreutils-5.2.1-21.x86_64.rpm) = 2047535 bytes
+SHA1 (suse91/x86_64/glibc-2.3.3-63.x86_64.rpm) = 76333c7308334c49ad3cc4479282138d604373a9
+RMD160 (suse91/x86_64/glibc-2.3.3-63.x86_64.rpm) = 5153fdfa1b373a921ff175cd220b42887ff57a61
+Size (suse91/x86_64/glibc-2.3.3-63.x86_64.rpm) = 2422978 bytes
+SHA1 (suse91/x86_64/libgcc-3.3.3-33.x86_64.rpm) = bdf7233e869b50f89c0066648a7f8cee221a6ec1
+RMD160 (suse91/x86_64/libgcc-3.3.3-33.x86_64.rpm) = 993edf19958968cc2708c61656f84b2c4dafde5b
+Size (suse91/x86_64/libgcc-3.3.3-33.x86_64.rpm) = 71138 bytes
+SHA1 (suse91/x86_64/libacl-2.2.21-45.x86_64.rpm) = 2105334a6b101c8bd562e521f0cc40793584933f
+RMD160 (suse91/x86_64/libacl-2.2.21-45.x86_64.rpm) = 9f5f089c230a7e1ebaa3d3cdb1bf8fdf309ac7d0
+Size (suse91/x86_64/libacl-2.2.21-45.x86_64.rpm) = 19799 bytes
+SHA1 (suse91/x86_64/libattr-2.4.12-44.x86_64.rpm) = f83b27f98d53c2ca1350e3d304b9f67fb2c93653
+RMD160 (suse91/x86_64/libattr-2.4.12-44.x86_64.rpm) = 63efd2968f54a8c574c830d6d68721dc0c64274c
+Size (suse91/x86_64/libattr-2.4.12-44.x86_64.rpm) = 12014 bytes
+SHA1 (suse91/x86_64/libselinux-1.8-15.x86_64.rpm) = f898349c259c98e4f3e2ce6e166c5cc542cb5517
+RMD160 (suse91/x86_64/libselinux-1.8-15.x86_64.rpm) = f1ec0e456bdb2ec3dc7074652e7a0b9303ed06d9
+Size (suse91/x86_64/libselinux-1.8-15.x86_64.rpm) = 50409 bytes
+SHA1 (suse91/x86_64/libstdc++-3.3.3-33.x86_64.rpm) = f72a13be6a00ea7c2799411628d3aec020e89cb7
+RMD160 (suse91/x86_64/libstdc++-3.3.3-33.x86_64.rpm) = a715a11e16633f739350ba360656a65e77e22643
+Size (suse91/x86_64/libstdc++-3.3.3-33.x86_64.rpm) = 562762 bytes
+SHA1 (suse91/x86_64/ncurses-5.4-48.x86_64.rpm) = 6c0f8c1e08a79f2f215ece0f8a11f4178f3eb7f8
+RMD160 (suse91/x86_64/ncurses-5.4-48.x86_64.rpm) = b9a6dfa1f233872ec0f49d77e949a32f53be603f
+Size (suse91/x86_64/ncurses-5.4-48.x86_64.rpm) = 865784 bytes
+SHA1 (suse91/x86_64/readline-4.3-301.x86_64.rpm) = 55b4750bf47d3432882454c054d08b40ad7fc44e
+RMD160 (suse91/x86_64/readline-4.3-301.x86_64.rpm) = ace2cacf4ce4ea28ab74f68f2a763f22a137aaa4
+Size (suse91/x86_64/readline-4.3-301.x86_64.rpm) = 163217 bytes
+SHA1 (suse91/x86_64/zlib-1.2.1-60.x86_64.rpm) = cde7a4c9c9c3e08c4b215240c26006c8c351f5f6
+RMD160 (suse91/x86_64/zlib-1.2.1-60.x86_64.rpm) = c2583ff4fd9938409735765b5278f4a0d21c64e2
+Size (suse91/x86_64/zlib-1.2.1-60.x86_64.rpm) = 65851 bytes
