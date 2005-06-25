@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10457 2005/06/25 07:03:03 lukem Exp $
+$NetBSD: CHANGES,v 1.10458 2005/06/25 10:51:38 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -3019,3 +3019,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated converters/nkf to 2.05 [taca 2005-06-25] 
 	Updated converters/p5-nkf to 2.05 [taca 2005-06-25] 
 	Updated net/tnftp to 20050625 [lukem 2005-06-25]
+	Updated devel/cpuflags to 0.88 [abs 2005-06-25]
