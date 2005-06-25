@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2005/06/10 05:10:02 lukem Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/25 07:01:20 lukem Exp $
 #
 
-DISTNAME=		tnftp-20050610
+DISTNAME=		tnftp-20050625
 SVR4_PKGNAME=		tnftp
 CATEGORIES=		net
 MASTER_SITES=		# empty
