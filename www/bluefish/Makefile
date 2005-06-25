@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2005/06/19 01:35:08 kristerw Exp $
+# $NetBSD: Makefile,v 1.54 2005/06/25 00:48:26 kristerw Exp $
 
 DISTNAME=	bluefish-1.0
 PKGREVISION=	2
@@ -22,8 +22,8 @@ USE_TOOLS+=		find gmake grep
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-icon-path=${PREFIX}/share/pixmaps
-CONFIGURE_ENV+=		ac_cv_path_EXTERNAL_GREP="${TOOLS_GREP}"
-CONFIGURE_ENV+=		ac_cv_path_EXTERNAL_FIND="${TOOLS_FIND}"
+CONFIGURE_ENV+=		EXTERNAL_GREP="${TOOLS_GREP}"
+CONFIGURE_ENV+=		EXTERNAL_FIND="${TOOLS_FIND}"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
