@@ -1,4 +1,4 @@
-$NetBSD: STATUS,v 1.35 2004/12/29 01:22:11 wiz Exp $
+$NetBSD: STATUS,v 1.36 2005/06/25 12:38:34 minskim Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -55,8 +55,7 @@ editors/xemacs             Y                        Y
 editors/emacs                                Y      Y
 graphics/xfig              Y                        Y
 graphics/xv                Y                        Y
-lang/perl5                N/A       Y        Y      Y        N         Y
-lang/perl58                Y        Y        Y      Y        Y         Y
+lang/perl5                 Y        Y        Y      Y        Y         Y
 mail/mutt                  Y        Y        Y      Y                  Y
 meta-pkgs/XFree86	            Y		    Y
 misc/screen                Y        Y        Y      Y                  Y
