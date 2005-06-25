@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:42 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/25 02:34:27 taca Exp $
 #
 
-DISTNAME=	xmlparser-0.6.8
-PKGNAME=	${RUBY_PKGPREFIX}-xmlparser-0.6.8
-PKGREVISION=	2
+DISTNAME=	xmlparser-0.6.8.1
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.yoshidam.net/
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.yoshidam.net/Ruby.html#xmlparser
-COMMENT=	expat interface module for Ruby
+COMMENT=	Expat interface module for Ruby
 
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
