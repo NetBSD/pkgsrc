@@ -1,7 +1,7 @@
-/*	NetBSD: tnftp.h,v 1.19 2005/06/10 04:40:13 lukem Exp	*/
+/*	NetBSD: tnftp.h,v 1.21 2005/06/25 06:27:32 lukem Exp	*/
 
 #define	FTP_PRODUCT	"tnftp"
-#define	FTP_VERSION	"20050610"
+#define	FTP_VERSION	"20050625"
 
 #include "config.h"
 
@@ -22,7 +22,6 @@
 #include <ctype.h>
 #include <errno.h>
 #include <fcntl.h>
-#include <libgen.h>
 #include <limits.h>
 #ifdef HAVE_RFC2553_NETDB
 #include <netdb.h>
@@ -121,6 +120,10 @@ struct pollfd {
 # include "ftpglob.h"
 #endif
 
+#if HAVE_LIBGEN_H
+# include <libgen.h>
+#endif
+
 #if HAVE_PATHS_H
 # include <paths.h>
 #endif
@@ -179,7 +182,7 @@ typedef unsigned short sa_family_t;
 typedef unsigned int socklen_t;
 #endif
 
-#if HAVE_AF_INET6 && HAVE_SOCKADDR_IN6 && HAVE_IN6ADDRSZ
+#if HAVE_AF_INET6 && HAVE_SOCKADDR_IN6 && HAVE_NS_IN6ADDRSZ
 # define INET6
 #endif
 
@@ -312,7 +315,7 @@ extern int	optind;
 int	pclose(FILE *);
 #endif
 
-#if ! HAVE_DIRNAME
+#if ! HAVE_DIRNAME_D
 char	*dirname(char *);
 #endif
 
