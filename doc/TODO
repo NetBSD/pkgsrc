@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3653 2005/06/25 20:56:10 wiz Exp $
+$NetBSD: TODO,v 1.3654 2005/06/25 21:03:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -632,7 +632,6 @@ Suggested package updates
 	o libcomprex-0.3.3
 	o libdockapp-0.6.0
 	o libetpan-0.34b
-	o libevent-1.1a
 	o libextractor-0.5.0
 	o libflash-0.4.13
 	o libgda-1.2.2 [jmmv]
