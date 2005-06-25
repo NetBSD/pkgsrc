@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10459 2005/06/25 12:25:31 minskim Exp $
+$NetBSD: CHANGES,v 1.10460 2005/06/25 14:56:02 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -3021,3 +3021,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/tnftp to 20050625 [lukem 2005-06-25]
 	Updated devel/cpuflags to 0.88 [abs 2005-06-25]
 	Updated devel/subversion-base to 1.2.0nb1 [minskim 2005-06-25]
+	Updated chat/bnc to 2.9.4 [zuntum 2005-06-25]
