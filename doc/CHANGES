@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10453 2005/06/24 22:54:57 kristerw Exp $
+$NetBSD: CHANGES,v 1.10454 2005/06/25 01:59:25 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -3013,3 +3013,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkglint to 4.18 [rillig 2005-06-24]
 	Updated emulators/xmess to 0.97 [kristerw 2005-06-24]
 	Updated emulators/xmame to 0.97 [kristerw 2005-06-24]
+	Added wm/icecc version 2.9nb1 [reed 2005-06-25] 
