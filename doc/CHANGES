@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10455 2005/06/25 03:06:42 minskim Exp $
+$NetBSD: CHANGES,v 1.10456 2005/06/25 03:29:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -3014,4 +3014,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/xmess to 0.97 [kristerw 2005-06-24]
 	Updated emulators/xmame to 0.97 [kristerw 2005-06-24]
 	Added wm/icecc version 2.9nb1 [reed 2005-06-25] 
+	Updated textproc/ruby-xmlparser to 0.6.8.1 [taca 2005-06-25] 
 	Added devel/SDL-intro-en version 1.0 [minskim 2005-06-25]
+	Updated converters/nkf to 2.05 [taca 2005-06-25] 
+	Updated converters/p5-nkf to 2.05 [taca 2005-06-25] 
