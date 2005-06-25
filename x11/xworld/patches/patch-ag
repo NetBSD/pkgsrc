@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2005/06/25 00:40:20 minskim Exp $
+
+--- configure.orig	1999-07-28 11:21:59.000000000 -0500
++++ configure
+@@ -2,7 +2,7 @@
+ set OS=`uname`
+ set ARCH=`uname -m`
+ if ($OS == "SunOS") set OS="Solaris"
+-if ($OS == "OSF1" && $ARCH == "alpha") set OS="DigitalUnix"
++if ($OS == "OSF1" && "$ARCH" == "alpha") set OS="DigitalUnix"
+ set OSVERS=`uname -r`
+ echo Configuring for $OS $OSVERS $ARCH
+ set setcsh0="defaults/set.csh"
