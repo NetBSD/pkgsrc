@@ -1,4 +1,4 @@
-/*	NetBSD: acconfig.h,v 1.6 2005/05/11 03:10:05 lukem Exp	*/
+/*	NetBSD: acconfig.h,v 1.8 2005/06/25 06:14:08 lukem Exp	*/
 
 @TOP@
 @BOTTOM@
@@ -30,8 +30,8 @@
 /* Define if `struct addrinfo' exists in <netdb.h> */
 #undef HAVE_ADDRINFO
 
-/* Define if IN6ADDRSZ exists in <arpa/nameser.h> */
-#undef HAVE_IN6ADDRSZ
+/* Define if NS_IN6ADDRSZ exists in <arpa/nameser.h> */
+#undef HAVE_NS_IN6ADDRSZ
 
 /*
  * Define if <netdb.h> contains AI_NUMERICHOST et al.
@@ -44,6 +44,9 @@
 
 /* Define if h_errno exists in <netdb.h> */
 #undef HAVE_H_ERRNO_D
+
+/* Define if dirname() is declared in <libgen.h> */
+#undef HAVE_DIRNAME_D
 
 /* Define if fclose() is declared in <stdio.h> */
 #undef HAVE_FCLOSE_D
@@ -75,27 +78,28 @@
 /*
  * Define this if compiling with SOCKS (the firewall traversal library).
  * Also, you must define connect, getsockname, bind, accept, listen, and
- * select to their R-versions.
+ * select to their SOCKS-versions.
  */
 #undef	SOCKS
 #undef	SOCKS4
 #undef	SOCKS5
 #undef	connect
 #undef	getsockname
+#undef	getpeername
 #undef	bind
 #undef	accept
 #undef	listen
 #undef	select
+#undef	recvfrom
+#undef	sendto
+#undef	recv
+#undef	send
+#undef	read
+#undef	write
+#undef	rresvport
+#undef	shutdown
+#undef	close
 #undef	dup
 #undef	dup2
 #undef	fclose
 #undef	gethostbyname
-#undef	getpeername
-#undef	read
-#undef	recv
-#undef	recvfrom
-#undef	rresvport
-#undef	send
-#undef	sendto
-#undef	shutdown
-#undef	write
