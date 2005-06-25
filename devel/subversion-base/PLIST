@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/05/23 22:58:27 epg Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/06/25 12:23:21 minskim Exp $
 bin/svn
 bin/svnadmin
 bin/svndumpfilter
@@ -68,6 +68,7 @@ share/examples/subversion/hook-scripts/svnperms.conf.example
 share/examples/subversion/hook-scripts/svnperms.py
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/subversion.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/subversion.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/subversion.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/subversion.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/subversion.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/subversion.mo
