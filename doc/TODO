@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3652 2005/06/25 19:14:04 wiz Exp $
+$NetBSD: TODO,v 1.3653 2005/06/25 20:56:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -468,7 +468,7 @@ Suggested package updates
 	o enigma-0.92
 	o enscript-1.6.4
 	o eric3-3.7.0
-	o erlang-10b-4
+	o erlang-10b-6
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.0
@@ -1046,7 +1046,7 @@ Suggested package updates
 	o ssam-1.10
 	o ssh-askpass-1.2.4.1
 	o stella-1.4.2
-	o stellarium-0.6.1
+	o stellarium-0.6.2
 	o stlport-4.6.2
 	o strace-4.5.8
 	o streamtuner-0.99.99
