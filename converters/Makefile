@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2004/11/27 14:25:08 taca Exp $
+# $NetBSD: Makefile,v 1.77 2005/06/26 22:10:04 markd Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -24,6 +24,7 @@ SUBDIR+=	ish
 SUBDIR+=	ja-dvi2tty
 SUBDIR+=	latex2rtf
 SUBDIR+=	libiconv
+SUBDIR+=	libwpd
 SUBDIR+=	macfork
 SUBDIR+=	mpack
 SUBDIR+=	nkf
