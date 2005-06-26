@@ -1,7 +1,7 @@
-$NetBSD: CHANGES,v 1.10465 2005/06/26 09:30:40 wiz Exp $
+$NetBSD: CHANGES,v 1.10466 2005/06/26 10:28:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
-	
+
 	Updated textproc/antiword to 0.36.1 [wiz 2005-01-01]
 	Updated finance/xquote to 2.6.10 [wiz 2005-01-01]
 	Updated databases/mysql-server to 4.0.22nb2 [minskim 2005-01-01]
@@ -2815,7 +2815,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/sablotron to 1.0.2 [jwise 2005-06-06]
 	Updated devel/mantis to 0.91.1nb3 [adrianp 2005-06-06]
 	Added crosspkgtools/kwacross-netbsd1-arm version 20050605
-		[kristerw 2005-06-06] 
+		[kristerw 2005-06-06]
 	Added crosspkgtools/crosspkg-netbsd1-acorn26 version 1.6.2
 		[kristerw 2005-06-06]
 	Added crosspkgtools/crosspkg-netbsd1-acorn32 version 1.6.2
@@ -3013,11 +3013,11 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkglint to 4.18 [rillig 2005-06-24]
 	Updated emulators/xmess to 0.97 [kristerw 2005-06-24]
 	Updated emulators/xmame to 0.97 [kristerw 2005-06-24]
-	Added wm/icecc version 2.9nb1 [reed 2005-06-25] 
-	Updated textproc/ruby-xmlparser to 0.6.8.1 [taca 2005-06-25] 
+	Added wm/icecc version 2.9nb1 [reed 2005-06-25]
+	Updated textproc/ruby-xmlparser to 0.6.8.1 [taca 2005-06-25]
 	Added devel/SDL-intro-en version 1.0 [minskim 2005-06-25]
-	Updated converters/nkf to 2.05 [taca 2005-06-25] 
-	Updated converters/p5-nkf to 2.05 [taca 2005-06-25] 
+	Updated converters/nkf to 2.05 [taca 2005-06-25]
+	Updated converters/p5-nkf to 2.05 [taca 2005-06-25]
 	Updated net/tnftp to 20050625 [lukem 2005-06-25]
 	Updated devel/cpuflags to 0.88 [abs 2005-06-25]
 	Updated devel/subversion-base to 1.2.0nb1 [minskim 2005-06-25]
