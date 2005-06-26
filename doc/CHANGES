@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10461 2005/06/25 21:03:18 wiz Exp $
+$NetBSD: CHANGES,v 1.10462 2005/06/26 05:20:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -3023,3 +3023,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/subversion-base to 1.2.0nb1 [minskim 2005-06-25]
 	Updated chat/bnc to 2.9.4 [zuntum 2005-06-25]
 	Updated devel/libevent to 1.1a [wiz 2005-06-25]
+	Updated textproc/aspell to 0.60.2nb1 [wiz 2005-06-26]
