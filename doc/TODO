@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3654 2005/06/25 21:03:18 wiz Exp $
+$NetBSD: TODO,v 1.3655 2005/06/26 05:53:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -584,7 +584,7 @@ Suggested package updates
 	o ijs-0.35
 	o inn-2.4.2
 	o intercal-0.24 [dillo]
-	o ion3-devel-20050607
+	o ion3-devel-20050625
 	o iozone-3.239
 	o ipcheck-0.219
 	o ircd-hybrid-7.0.4
