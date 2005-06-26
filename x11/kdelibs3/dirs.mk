@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.6 2005/06/04 23:45:50 markd Exp $
+# $NetBSD: dirs.mk,v 1.7 2005/06/26 23:46:11 markd Exp $
 #
 
 .if !defined(DIRS_KDE3_MK)
@@ -91,7 +91,7 @@ KDE3_DIRS+=	share/kde/config.kcfg
 KDE3_DIRS+=	share/kde/emoticons
 
 _ICONCOLORS=     crystalsvg hicolor locolor
-_ICONSIZES=      16x16 22x22 32x32 48x48 64x64 128x128
+_ICONSIZES=      16x16 22x22 32x32 48x48 64x64 128x128 scalable
 _ICONDIRS=       actions actions/kde apps devices filesystems mimetypes
 
 KDE3_DIRS+=	share/kde/icons
@@ -103,10 +103,6 @@ KDE3_DIRS+=	share/kde/icons/${color}/${size}
 KDE3_DIRS+=	share/kde/icons/${color}/${size}/${dir}
 .    endfor
 .  endfor
-.endfor
-KDE3_DIRS+=	share/kde/icons/crystalsvg/scalable
-.for dir in ${_ICONDIRS}
-KDE3_DIRS+=	share/kde/icons/crystalsvg/scalable/${dir}
 .endfor
 
 KDE3_DIRS+=	share/kde/mimelnk
@@ -133,6 +129,8 @@ KDE3_DIRS+=	share/kde/services/kresources
 KDE3_DIRS+=	share/kde/services/kresources/kabc
 KDE3_DIRS+=	share/kde/servicetypes
 KDE3_DIRS+=	share/kde/sounds
+KDE3_DIRS+=	share/kde/templates
+KDE3_DIRS+=	share/kde/templates/.source
 KDE3_DIRS+=	share/kde/wallpapers
 
 .for dir in ${KDE3_DIRS}
