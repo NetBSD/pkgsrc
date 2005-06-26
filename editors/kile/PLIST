@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/06/04 23:51:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/06/26 23:50:47 markd Exp $
 bin/kile
 share/applications/kde/kile.desktop
 share/doc/kde/HTML/da/kile/common
@@ -695,7 +695,7 @@ ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/kile.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kile.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/kile.mo
 @comment in kde: @dirrm share/kde/mimelnk/text
-@dirrm share/kde/icons/hicolor/scalable/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
