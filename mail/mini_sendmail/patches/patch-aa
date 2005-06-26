@@ -1,19 +1,20 @@
-$NetBSD: patch-aa,v 1.5 2005/06/16 15:38:18 is Exp $
+$NetBSD: patch-aa,v 1.6 2005/06/26 19:51:47 is Exp $
 
---- mini_sendmail.c.orig	2002-11-21 20:27:55.000000000 +0000
+--- mini_sendmail.c.orig	2003-11-17 03:03:35.000000000 +0100
 +++ mini_sendmail.c
-@@ -129,6 +129,10 @@ main( int argc, char** argv )
+@@ -133,7 +133,10 @@ main( int argc, char** argv )
  	    timeout = atoi( &(argv[argn][2]) );
  	else if ( strcmp( argv[argn], "-v" ) == 0 )
  	    verbose = 1;
+-	else if ( strcmp( argv[argn], "-i" ) == 0 )
 +	else if ( strcmp( argv[argn], "-oeq" ) == 0 )
 +	    verbose = 0;
-+	else if ( strcmp( argv[argn], "-i" ) == 0 || strcmp ( argv[argn], "-oi" ) == 0 )
-+	    /* do nothing */ ;
- 	else
- 	    usage();
- 	++argn;
-@@ -490,14 +494,24 @@ parse_for_recipients( char* message )
++	else if ( strcmp( argv[argn], "-i" ) == 0 ||
++		  strcmp ( argv[argn], "-oi" ) == 0 )
+ 	    ;	/* ignore */
+ 	else if ( strcmp( argv[argn], "--" ) == 0 )
+ 	    ;	/* ignore */
+@@ -504,14 +507,24 @@ parse_for_recipients( char* message )
  	    switch ( *cp )
  		{
  		case '\n':
@@ -45,20 +46,50 @@ $NetBSD: patch-aa,v 1.5 2005/06/16 15:38:18 is Exp $
  		    }
  		break;
  		case ',':
-@@ -516,15 +530,22 @@ add_recipient( char* recipient, int len 
+@@ -529,25 +542,46 @@ static void
+ add_recipient( char* recipient, int len )
      {
      char buf[1000];
++    char *first;
      int status;
 +    int i;
++
  
      /* Skip leading whitespace. */
 -    while ( len > 0 && ( *recipient == ' ' || *recipient == '\t' ) )
 +    while ( len > 0 && ( *recipient == ' ' || *recipient == '\t' ||
-+	    *recipient == '\n') )
++			 *recipient == '\n') )
  	{
  	++recipient;
  	--len;
  	}
+ 
+-    /* Strip off any angle brackets. */
+-    while ( len > 0 && *recipient == '<' )
++    first = recipient;
++    /* search for angle bracket */
++
++    while (first < recipient+len && *first != '<')
+ 	{
+-	++recipient;
+-	--len;
++	++first;
+ 	}
+-    while ( len > 0 && recipient[len-1] == '>' )
+-	--len;
++
++    if (*first == '<')
++	{
++	len -= first + 1 - recipient;
++	recipient = first + 1;
++
++	while (len > 2 && recipient[--len] != '>')
++	    ; /* nothing */
++
++	if (recipient[len] == '>')
++	    --len;
++
++    	}
  
      (void) snprintf( buf, sizeof(buf), "RCPT TO:<%.*s>", len, recipient );
 +    for (i=0; i<sizeof(buf); i++)
@@ -69,22 +100,3 @@ $NetBSD: patch-aa,v 1.5 2005/06/16 15:38:18 is Exp $
      send_command( buf );
      status = read_response();
      if ( status != 250  && status != 251 )
-@@ -575,14 +596,16 @@ open_client_socket( void )
-     sock_family = PF_INET6;
- 
- #ifdef DO_MINUS_S
--    if ( inet_pton( PF_INET, server, (void*) &sa4.sin_addr ) == 0 )
-+
-+    (void) memset( (void*) &sa4, 0, sizeof(sa4) );
-+    if ( inet_pton( AF_INET, server, (void*) &sa4.sin_addr ) == 1 )
- 	{
- 	sock_family = PF_INET;
- 	sa4.sin_port = htons( SMTP_PORT );
- 	sa_len = sizeof(sa4);
- 	(void) memmove( &sa, &sa4, sa_len );
- 	}
--    else if ( inet_pton( PF_INET6, server, (void*) &sa.sin6_addr ) == -1 )
-+    else if ( inet_pton( AF_INET6, server, (void*) &sa.sin6_addr ) != 1 )
- 	{
- #ifdef DO_DNS
- 	(void) memset( &hints, 0, sizeof(hints) );
