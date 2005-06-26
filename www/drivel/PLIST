@@ -1,24 +1,28 @@
-@comment $NetBSD: PLIST,v 1.5 2005/01/26 23:51:42 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/06/26 16:55:47 jmmv Exp $
 bin/drivel
 share/application-registry/drivel.applications
-share/applications/drivel.desktop
+share/applications/gnome-drivel.desktop
 share/drivel/glade/drivel.glade
 share/drivel/languages/livejournal.lang
 share/gconf/schemas/drivel.schemas
 share/gnome/help/drivel/C/drivel.xml
 share/gnome/help/drivel/C/legal.xml
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-drivel.png
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/drivel.mo
@@ -28,10 +32,15 @@ share/mime-info/drivel.keys
 share/mime-info/drivel.mime
 share/mime/packages/drivel.xml
 share/omf/drivel/drivel-C.omf
+share/pixmaps/drivel-48.png
+share/pixmaps/drivel/advogato.png
+share/pixmaps/drivel/atom.png
+share/pixmaps/drivel/blogger.png
 share/pixmaps/drivel/checkbutton.xpm
 share/pixmaps/drivel/combobox.xpm
 share/pixmaps/drivel/community.png
 share/pixmaps/drivel/doublearrow.png
+share/pixmaps/drivel/drivel-24.png
 share/pixmaps/drivel/drivel_splash.png
 share/pixmaps/drivel/entry.xpm
 share/pixmaps/drivel/feed.png
@@ -39,16 +48,16 @@ share/pixmaps/drivel/hscale.xpm
 share/pixmaps/drivel/insert_image.png
 share/pixmaps/drivel/insert_object.png
 share/pixmaps/drivel/leftarrow.png
-share/pixmaps/drivel/livejournal_tray_normal.png
-share/pixmaps/drivel/livejournal_tray_updated.png
+share/pixmaps/drivel/livejournal.png
+share/pixmaps/drivel/mt.png
 share/pixmaps/drivel/private.png
 share/pixmaps/drivel/protected.png
 share/pixmaps/drivel/public.png
 share/pixmaps/drivel/radiobutton.xpm
 share/pixmaps/drivel/rightarrow.png
+share/pixmaps/drivel/tray_livejournal.png
 share/pixmaps/drivel/user.png
 share/pixmaps/drivel/xmms.xpm
-share/pixmaps/livejournal.png
 @dirrm share/pixmaps/drivel
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/drivel
