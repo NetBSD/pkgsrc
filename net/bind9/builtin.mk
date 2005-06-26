@@ -1,16 +1,25 @@
-# $NetBSD: builtin.mk,v 1.8 2005/06/02 00:27:22 jlam Exp $
+# $NetBSD: builtin.mk,v 1.9 2005/06/26 04:05:41 jlam Exp $
 
 BUILTIN_PKG:=	bind
 
-BUILTIN_FIND_LIBS:=	bind
+BUILTIN_FIND_FILES_VAR:=	EXE_NAMED
+BUILTIN_FIND_FILES.EXE_NAMED=	/usr/sbin/named
+BUILTIN_FIND_LIBS:=		bind
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
-.if !defined(BUILTIN_VERSION.bind)
-.  if exists(/usr/sbin/named)
+###
+### Figure out the version of BIND if an ISC BIND named exists on the
+### system.
+###
+.if !defined(BUILTIN_VERSION.bind) && \
+    empty(EXE_NAMED:M${LOCALBASE}/*) && exists(${EXE_NAMED})
 BUILTIN_VERSION.bind!=	\
-	${ECHO} 'vers ' && /usr/sbin/named -v | ${SED} -n 's/^BIND //p'
-.  endif
+	${EXE_NAMED} -v 2>/dev/null | ${HEAD} -1 |			\
+	${AWK} 'BEGIN { v = "4.9.11"; }					\
+		/^BIND / { v = $$2; sub("-.*", "", v); }		\
+		/^named / { v = $$2; sub("-.*", "", v); }		\
+		END { print v; }'
 .endif
 MAKEVARS+=	BUILTIN_VERSION.bind
 
@@ -20,8 +29,7 @@ MAKEVARS+=	BUILTIN_VERSION.bind
 ###
 .if !defined(IS_BUILTIN.bind)
 IS_BUILTIN.bind=	no
-.  if !empty(BUILTIN_VERSION.bind:Nvers) && \
-      !empty(BUILTIN_LIB_FOUND.bind:M[yY][eE][sS])
+.  if defined(BUILTIN_VERSION.bind)
 IS_BUILTIN.bind=	yes
 .  endif
 .endif
@@ -34,7 +42,7 @@ MAKEVARS+=	IS_BUILTIN.bind
 .if !defined(BUILTIN_PKG.bind) && \
     !empty(IS_BUILTIN.bind:M[yY][eE][sS]) && \
     defined(BUILTIN_VERSION.bind)
-BUILTIN_PKG.bind=	bind-${BUILTIN_VERSION.bind:Nvers}
+BUILTIN_PKG.bind=	bind-${BUILTIN_VERSION.bind}
 .endif
 MAKEVARS+=	BUILTIN_PKG.bind
 
