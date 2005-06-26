@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: gdm.sh,v 1.2 2004/01/22 09:16:59 jmmv Exp $
+# $NetBSD: gdm.sh,v 1.3 2005/06/26 16:52:14 jmmv Exp $
 #
 
 # PROVIDE: gdm
@@ -13,9 +13,9 @@ fi
 
 name="gdm"
 rcvar=${name}
-command="@PREFIX@/bin/${name}"
+command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
-procname="@PREFIX@/bin/gdm-binary"
+procname="@PREFIX@/sbin/gdm-binary"
 required_files="@PKG_SYSCONFDIR@/gdm/gdm.conf"
 extra_commands="reload"
 
