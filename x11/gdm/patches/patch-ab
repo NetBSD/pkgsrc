@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.7 2005/06/26 16:52:14 jmmv Exp $
+
+--- docs/C/gdm.xml.orig	2005-05-17 18:55:38.000000000 +0200
++++ docs/C/gdm.xml
+@@ -4316,7 +4316,7 @@ remote-flexi  - In remote (XDMCP) &amp; 
+     </sect2>
+   </sect1>
+ 
+-  <sect1 id="sbindir_binaries">
++  <sect1 id="libexecdir_binaries">
+     <title>GDM Commands in EXPANDED_LIBEXECDIR</title>
+ 
+     <para>
