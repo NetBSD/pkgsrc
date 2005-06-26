@@ -1,0 +1,71 @@
+$NetBSD: patch-aa,v 1.4 2005/06/26 18:45:44 jmmv Exp $
+
+--- configure.orig	2004-11-20 21:58:50.000000000 +0100
++++ configure
+@@ -20726,7 +20726,7 @@ echo "$as_me:$LINENO: result: $use_gtkht
+ echo "${ECHO_T}$use_gtkhtml" >&6
+ 
+ if test x"$use_gtkhtml" = xyes ; then
+-    if $PKG_CONFIG --exists libgtkhtml-3.1 ; then
++    if $PKG_CONFIG --exists libgtkhtml-3.6 ; then
+ 
+   succeeded=no
+ 
+@@ -20782,14 +20782,14 @@ fi
+      PKG_CONFIG_MIN_VERSION=0.9.0
+      if $PKG_CONFIG --atleast-pkgconfig-version $PKG_CONFIG_MIN_VERSION; then
+         echo "$as_me:$LINENO: checking for
+-	libgtkhtml-3.1
++	libgtkhtml-3.6
+ 	" >&5
+ echo $ECHO_N "checking for
+-	libgtkhtml-3.1
++	libgtkhtml-3.6
+ 	... $ECHO_C" >&6
+ 
+         if $PKG_CONFIG --exists "
+-	libgtkhtml-3.1
++	libgtkhtml-3.6
+ 	" ; then
+             echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+@@ -20798,7 +20798,7 @@ echo "${ECHO_T}yes" >&6
+             echo "$as_me:$LINENO: checking HTML_CFLAGS" >&5
+ echo $ECHO_N "checking HTML_CFLAGS... $ECHO_C" >&6
+             HTML_CFLAGS=`$PKG_CONFIG --cflags "
+-	libgtkhtml-3.1
++	libgtkhtml-3.6
+ 	"`
+             echo "$as_me:$LINENO: result: $HTML_CFLAGS" >&5
+ echo "${ECHO_T}$HTML_CFLAGS" >&6
+@@ -20806,7 +20806,7 @@ echo "${ECHO_T}$HTML_CFLAGS" >&6
+             echo "$as_me:$LINENO: checking HTML_LIBS" >&5
+ echo $ECHO_N "checking HTML_LIBS... $ECHO_C" >&6
+             HTML_LIBS=`$PKG_CONFIG --libs "
+-	libgtkhtml-3.1
++	libgtkhtml-3.6
+ 	"`
+             echo "$as_me:$LINENO: result: $HTML_LIBS" >&5
+ echo "${ECHO_T}$HTML_LIBS" >&6
+@@ -20816,7 +20816,7 @@ echo "${ECHO_T}$HTML_LIBS" >&6
+             ## If we have a custom action on failure, don't print errors, but
+             ## do set a variable so people can do so.
+             HTML_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "
+-	libgtkhtml-3.1
++	libgtkhtml-3.6
+ 	"`
+             echo $HTML_PKG_ERRORS
+         fi
+@@ -20833,10 +20833,10 @@ echo "${ECHO_T}$HTML_LIBS" >&6
+      :
+   else
+      { { echo "$as_me:$LINENO: error: Library requirements (
+-	libgtkhtml-3.1
++	libgtkhtml-3.6
+ 	) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&5
+ echo "$as_me: error: Library requirements (
+-	libgtkhtml-3.1
++	libgtkhtml-3.6
+ 	) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
+    { (exit 1); exit 1; }; }
+   fi
