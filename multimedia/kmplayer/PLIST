@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/04/07 12:07:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/06/26 23:52:37 markd Exp $
 bin/kmplayer
 bin/kxineplayer
 bin/kxvplayer
@@ -94,8 +94,8 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kmplayer.mo
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/video
 @comment in kde: @dirrm share/kde/mimelnk/application
-@dirrm share/kde/icons/hicolor/scalable/apps
-@dirrm share/kde/icons/hicolor/scalable
+@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/scalable
 @comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
