@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10475 2005/06/26 20:26:08 snj Exp $
+$NetBSD: CHANGES,v 1.10476 2005/06/26 22:19:21 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3042,3 +3042,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/gtk2 to 2.6.8 [jmmv 2005-06-26]
 	Updated audio/p5-MusicBrainz-Client to 0.09 [epg 2005-06-26]
 	Updated chat/irssi to 0.8.9nb4 [snj 2005-06-26]
+	Added converters/libwpd version 0.8.1 [markd 2005-06-26]
