@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.6 2005/06/26 20:25:48 snj Exp $
+
+--- src/fe-common/core/fe-exec.c.orig	2005-06-26 12:55:47.000000000 -0700
++++ src/fe-common/core/fe-exec.c	2005-06-26 12:56:03.000000000 -0700
+@@ -347,7 +347,7 @@ static void process_exec(PROCESS_REC *re
+ static void sig_exec_input_reader(PROCESS_REC *rec)
+ {
+         char tmpbuf[512], *str;
+-        unsigned int recvlen;
++        gsize recvlen;
+ 	int err, ret;
+ 
+ 	g_return_if_fail(rec != NULL);
