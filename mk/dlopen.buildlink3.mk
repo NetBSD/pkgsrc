@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.buildlink3.mk,v 1.8 2004/11/26 09:32:06 jlam Exp $
+# $NetBSD: dlopen.buildlink3.mk,v 1.9 2005/06/26 13:11:22 minskim Exp $
 #
 # This Makefile fragment is included by package Makefiles and
 # buildlink3.mk files for the packages that use dlopen().
@@ -20,7 +20,7 @@ BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Ndl}
 BUILDLINK_PACKAGES+=		dl
 BUILDLINK_BUILTIN_MK.dl=	../../mk/dlopen.builtin.mk
 BUILDLINK_AUTO_VARS.dl=		${DL_AUTO_VARS}
-.elif ${OPSYS} == "Darwin"
+.elif !empty(MACHINE_PLATFORM:MDarwin-[56].*)
 .  include "../../devel/dlcompat/buildlink3.mk"
 BUILDLINK_AUTO_VARS.dlcompat=	${DL_AUTO_VARS}
 .else
