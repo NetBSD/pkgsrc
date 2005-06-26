@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10470 2005/06/26 17:37:09 atatat Exp $
+$NetBSD: CHANGES,v 1.10471 2005/06/26 18:07:18 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3034,4 +3034,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/libgnomedb to 1.2.2 [jmmv 2005-06-26]
 	Updated www/drivel to 2.0.1 [jmmv 2005-06-26]
 	Updated devel/glib2 to 2.6.5 [jmmv 2005-06-26]
-	Updated pkgdepgraph to 2.8 [atatat 2005-06-26]
+	Updated pkgtools/pkgdepgraph to 2.8 [atatat 2005-06-26]
+	Updated mail/milter-greylist to 2.0 [tron 2005-06-26]
