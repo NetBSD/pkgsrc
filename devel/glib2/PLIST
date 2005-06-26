@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2005/04/15 12:54:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2005/06/26 16:57:14 jmmv Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -171,6 +171,7 @@ share/doc/glib/ix05.html
 share/doc/glib/left.png
 share/doc/glib/mainloop-states.gif
 share/doc/glib/right.png
+share/doc/glib/style.css
 share/doc/glib/tools.html
 share/doc/glib/up.png
 share/doc/gobject/GTypeModule.html
@@ -203,6 +204,7 @@ share/doc/gobject/pr01.html
 share/doc/gobject/right.png
 share/doc/gobject/rn01.html
 share/doc/gobject/rn02.html
+share/doc/gobject/style.css
 share/doc/gobject/up.png
 share/glib-2.0/gettext/mkinstalldirs
 share/glib-2.0/gettext/po/Makefile.in.in
