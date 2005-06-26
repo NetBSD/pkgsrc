@@ -3,7 +3,7 @@
 # Copyright (c) 2002, 2003, 2004 by Andrew Brown <atatat@netbsd.org>
 # Absolutely no warranty.
 
-# $NetBSD: pkgdepgraph.pl,v 1.10 2004/07/28 01:42:43 atatat Exp $
+# $NetBSD: pkgdepgraph.pl,v 1.11 2005/06/26 17:34:19 atatat Exp $
 # pkgdepgraph: @DISTVER@
 
 use strict;
@@ -66,8 +66,8 @@ die("$iam: -D, -F, -m, and -R are mutually exclusive -- please pick one\n")
 	($target ne "") +
 	($rebuild ne "") > 1);
 
-$pkg_dbdir ||= $ENV{'PKG_DBDIR'} || "/var/db/pkg";
-$pkgsrcdir ||= $ENV{'PKGSRCDIR'} || "/usr/pkgsrc";
+$pkg_dbdir ||= $ENV{'PKG_DBDIR'} || "@PKG_DBDIR@";
+$pkgsrcdir ||= $ENV{'PKGSRCDIR'} || "@PKGSRCDIR@";
 $packages = $ENV{'PKG_PATH'} if (!$packages);
 $packages = $ENV{'PACKAGES'} . "/All" if (!$packages && $ENV{'PACKAGES'});
 $packages = $pkgsrcdir . "/packages/All" if (!$packages);
