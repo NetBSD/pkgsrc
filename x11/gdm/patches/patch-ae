@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2005/02/03 13:37:03 jmmv Exp $
+$NetBSD: patch-ae,v 1.8 2005/06/26 16:52:14 jmmv Exp $
 
---- config/Makefile.in.orig	2005-02-02 18:35:44.000000000 +0100
+--- config/Makefile.in.orig	2005-06-10 20:54:02.000000000 +0200
 +++ config/Makefile.in
-@@ -240,7 +240,7 @@ prefix = @prefix@
+@@ -254,7 +254,7 @@ prefix = @prefix@
  program_transform_name = @program_transform_name@
  sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
@@ -11,21 +11,7 @@ $NetBSD: patch-ae,v 1.7 2005/02/03 13:37:03 jmmv Exp $
  target_alias = @target_alias@
  pixmapdir = $(datadir)/pixmaps
  confdir = $(sysconfdir)/gdm
-@@ -478,11 +478,11 @@ uninstall-hook:
- install-data-hook: gdm.conf Xsession gnome.desktop default.desktop CDE.desktop Default PostSession PreSession
- 	if test '!' -d $(DESTDIR)$(confdir); then \
- 		$(mkinstalldirs) $(DESTDIR)$(confdir); \
--		chmod 755 $(DESTDIR)$(confdir); \
-+		${CHMOD} 755 $(DESTDIR)$(confdir); \
- 	fi
- 	if test '!' -d $(DESTDIR)$(crossconfdir); then \
- 		$(mkinstalldirs) $(DESTDIR)$(crossconfdir); \
--		chmod 755 $(DESTDIR)$(crossconfdir); \
-+		${CHMOD} 755 $(DESTDIR)$(crossconfdir); \
- 	fi
- 	-if cmp -s $(DESTDIR)$(confdir)/gdm.conf $(DESTDIR)$(confdir)/factory-gdm.conf > /dev/null 2>&1 ; then \
- 		cp -f $(DESTDIR)$(confdir)/gdm.conf $(DESTDIR)$(confdir)/gdm.conf.orig; \
-@@ -496,19 +496,16 @@ install-data-hook: gdm.conf Xsession gno
+@@ -510,10 +510,7 @@ install-data-hook: gdm.conf Xsession gno
  	$(INSTALL_SCRIPT) $(srcdir)/XKeepsCrashing $(DESTDIR)$(confdir)/XKeepsCrashing
  	$(INSTALL_SCRIPT) Xsession $(DESTDIR)$(confdir)/Xsession
  
@@ -37,58 +23,10 @@ $NetBSD: patch-ae,v 1.7 2005/02/03 13:37:03 jmmv Exp $
  
  	if test '!' -d $(DESTDIR)$(bisessdir); then \
  		$(mkinstalldirs) $(DESTDIR)$(bisessdir); \
--		chmod 755 $(DESTDIR)$(bisessdir); \
-+		${CHMOD} 755 $(DESTDIR)$(bisessdir); \
+@@ -589,18 +586,6 @@ install-data-hook: gdm.conf Xsession gno
+ 		chmod 755 $(DESTDIR)$(gnomercdir); \
  	fi
  
- 	if test '!' -d $(DESTDIR)$(instsessdir); then \
- 		$(mkinstalldirs) $(DESTDIR)$(instsessdir); \
--		chmod 755 $(DESTDIR)$(instsessdir); \
-+		${CHMOD} 755 $(DESTDIR)$(instsessdir); \
- 	fi
- 
- 	-if test -f $(DESTDIR)$(bisessdir)/Default.desktop; then \
-@@ -539,7 +536,7 @@ install-data-hook: gdm.conf Xsession gno
- 
- 	if test '!' -d $(DESTDIR)$(initdir); then \
- 		$(mkinstalldirs) $(DESTDIR)$(initdir); \
--		chmod 755 $(DESTDIR)$(initdir); \
-+		${CHMOD} 755 $(DESTDIR)$(initdir); \
- 	fi
- 	-if test -f $(DESTDIR)$(initdir)/Default; then \
- 		cp -f $(DESTDIR)$(initdir)/Default $(DESTDIR)$(initdir)/Default.orig; \
-@@ -548,13 +545,13 @@ install-data-hook: gdm.conf Xsession gno
- 
- 	if test '!' -d $(DESTDIR)$(postlogindir); then \
- 		$(mkinstalldirs) $(DESTDIR)$(postlogindir); \
--		chmod 755 $(DESTDIR)$(postlogindir); \
-+		${CHMOD} 755 $(DESTDIR)$(postlogindir); \
- 	fi
- 	$(INSTALL_SCRIPT) $(srcdir)/PostLogin $(DESTDIR)$(postlogindir)/Default.sample
- 
- 	if test '!' -d $(DESTDIR)$(predir); then \
- 		$(mkinstalldirs) $(DESTDIR)$(predir); \
--		chmod 755 $(DESTDIR)$(predir); \
-+		${CHMOD} 755 $(DESTDIR)$(predir); \
- 	fi
- 	-if test -f $(DESTDIR)$(predir)/Default; then \
- 		cp -f $(DESTDIR)$(predir)/Default $(DESTDIR)$(predir)/Default.orig; \
-@@ -563,7 +560,7 @@ install-data-hook: gdm.conf Xsession gno
- 
- 	if test '!' -d $(DESTDIR)$(postdir); then \
- 		$(mkinstalldirs) $(DESTDIR)$(postdir); \
--		chmod 755 $(DESTDIR)$(postdir); \
-+		${CHMOD} 755 $(DESTDIR)$(postdir); \
- 	fi
- 	-if test -f $(DESTDIR)$(postdir)/Default; then \
- 		cp -f $(DESTDIR)$(postdir)/Default $(DESTDIR)$(postdir)/Default.orig; \
-@@ -572,26 +569,14 @@ install-data-hook: gdm.conf Xsession gno
- 
- 	if test '!' -d $(DESTDIR)$(gnomercdir); then \
- 		$(mkinstalldirs) $(DESTDIR)$(gnomercdir); \
--		chmod 755 $(DESTDIR)$(gnomercdir); \
--	fi
--
 -	if test '!' -d $(DESTDIR)$(logdir); then \
 -		$(mkinstalldirs) $(DESTDIR)$(logdir); \
 -		chown root:root $(DESTDIR)$(logdir); \
@@ -99,15 +37,8 @@ $NetBSD: patch-ae,v 1.7 2005/02/03 13:37:03 jmmv Exp $
 -		$(mkinstalldirs) $(DESTDIR)$(authdir); \
 -		chown root:gdm $(DESTDIR)$(authdir); \
 -		chmod 1770 $(DESTDIR)$(authdir); \
-+		${CHMOD} 755 $(DESTDIR)$(gnomercdir); \
- 	fi
- 
+-	fi
+-
  	system=`uname`; \
  	if test -f /usr/include/security/pam_appl.h; then \
  	  if test '!' -d $(DESTDIR)$(PAM_PREFIX)/pam.d; then \
- 		$(mkinstalldirs) $(DESTDIR)$(PAM_PREFIX)/pam.d; \
--		chmod 755 $(DESTDIR)$(PAM_PREFIX)/pam.d; \
-+		${CHMOD} 755 $(DESTDIR)$(PAM_PREFIX)/pam.d; \
- 	   fi; \
- 	   if test $$system = Linux && test '!' -f $(DESTDIR)$(PAM_PREFIX)/pam.d/gdm; then \
- 		$(INSTALL_DATA) gdm $(DESTDIR)$(PAM_PREFIX)/pam.d/gdm; \
