@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/04/18 18:01:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/06/26 16:54:46 jmmv Exp $
 bin/gnome-database-properties
 include/libgnomedb-1.2/libgnomedb/gnome-db-browser.h
 include/libgnomedb-1.2/libgnomedb/gnome-db-combo.h
@@ -34,60 +34,60 @@ lib/libglade/2.0/libgnomedb.la
 lib/libgnomedb-2.la
 lib/pkgconfig/libgnomedb.pc
 share/control-center-2.0/capplets/database-properties.desktop
-share/doc/html/libgnomedb/fdl-section1.html
-share/doc/html/libgnomedb/fdl-section10.html
-share/doc/html/libgnomedb/fdl-section2.html
-share/doc/html/libgnomedb/fdl-section3.html
-share/doc/html/libgnomedb/fdl-section4.html
-share/doc/html/libgnomedb/fdl-section5.html
-share/doc/html/libgnomedb/fdl-section6.html
-share/doc/html/libgnomedb/fdl-section7.html
-share/doc/html/libgnomedb/fdl-section8.html
-share/doc/html/libgnomedb/fdl-section9.html
-share/doc/html/libgnomedb/fdl-using.html
-share/doc/html/libgnomedb/fdl.html
-share/doc/html/libgnomedb/home.png
-share/doc/html/libgnomedb/index.html
-share/doc/html/libgnomedb/index.sgml
-share/doc/html/libgnomedb/left.png
-share/doc/html/libgnomedb/libgnomedb-GnomeDbBrowser.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbCombo.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbConnectionProperties.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbConnectionSelector.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbControl.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbControlWidget.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbDataSourceSelector.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbDsnConfig.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbDsnConfigDruid.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbEditor.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbError.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbErrorDialog.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbFindDialog.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbForm.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbGrayBar.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbGrid.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbIconList.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbList.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbLogin.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbLoginDialog.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbProviderSelector.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbQueryBuilder.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbReportEditor.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbTableEditor.html
-share/doc/html/libgnomedb/libgnomedb-GnomeDbWindow.html
-share/doc/html/libgnomedb/libgnomedb-basic.html
-share/doc/html/libgnomedb/libgnomedb-bonobo.html
-share/doc/html/libgnomedb/libgnomedb-gnome-db-config.html
-share/doc/html/libgnomedb/libgnomedb-gnome-db-model.html
-share/doc/html/libgnomedb/libgnomedb-gnome-db-stock.html
-share/doc/html/libgnomedb/libgnomedb-gnome-db-util.html
-share/doc/html/libgnomedb/libgnomedb-introduction.html
-share/doc/html/libgnomedb/libgnomedb-libgnomedb.html
-share/doc/html/libgnomedb/libgnomedb-widgets.html
-share/doc/html/libgnomedb/libgnomedb.devhelp
-share/doc/html/libgnomedb/right.png
-share/doc/html/libgnomedb/style.css
-share/doc/html/libgnomedb/up.png
+share/doc/libgnomedb/fdl-section1.html
+share/doc/libgnomedb/fdl-section10.html
+share/doc/libgnomedb/fdl-section2.html
+share/doc/libgnomedb/fdl-section3.html
+share/doc/libgnomedb/fdl-section4.html
+share/doc/libgnomedb/fdl-section5.html
+share/doc/libgnomedb/fdl-section6.html
+share/doc/libgnomedb/fdl-section7.html
+share/doc/libgnomedb/fdl-section8.html
+share/doc/libgnomedb/fdl-section9.html
+share/doc/libgnomedb/fdl-using.html
+share/doc/libgnomedb/fdl.html
+share/doc/libgnomedb/home.png
+share/doc/libgnomedb/index.html
+share/doc/libgnomedb/index.sgml
+share/doc/libgnomedb/left.png
+share/doc/libgnomedb/libgnomedb-GnomeDbBrowser.html
+share/doc/libgnomedb/libgnomedb-GnomeDbCombo.html
+share/doc/libgnomedb/libgnomedb-GnomeDbConnectionProperties.html
+share/doc/libgnomedb/libgnomedb-GnomeDbConnectionSelector.html
+share/doc/libgnomedb/libgnomedb-GnomeDbControl.html
+share/doc/libgnomedb/libgnomedb-GnomeDbControlWidget.html
+share/doc/libgnomedb/libgnomedb-GnomeDbDataSourceSelector.html
+share/doc/libgnomedb/libgnomedb-GnomeDbDsnConfig.html
+share/doc/libgnomedb/libgnomedb-GnomeDbDsnConfigDruid.html
+share/doc/libgnomedb/libgnomedb-GnomeDbEditor.html
+share/doc/libgnomedb/libgnomedb-GnomeDbError.html
+share/doc/libgnomedb/libgnomedb-GnomeDbErrorDialog.html
+share/doc/libgnomedb/libgnomedb-GnomeDbFindDialog.html
+share/doc/libgnomedb/libgnomedb-GnomeDbForm.html
+share/doc/libgnomedb/libgnomedb-GnomeDbGrayBar.html
+share/doc/libgnomedb/libgnomedb-GnomeDbGrid.html
+share/doc/libgnomedb/libgnomedb-GnomeDbIconList.html
+share/doc/libgnomedb/libgnomedb-GnomeDbList.html
+share/doc/libgnomedb/libgnomedb-GnomeDbLogin.html
+share/doc/libgnomedb/libgnomedb-GnomeDbLoginDialog.html
+share/doc/libgnomedb/libgnomedb-GnomeDbProviderSelector.html
+share/doc/libgnomedb/libgnomedb-GnomeDbQueryBuilder.html
+share/doc/libgnomedb/libgnomedb-GnomeDbReportEditor.html
+share/doc/libgnomedb/libgnomedb-GnomeDbTableEditor.html
+share/doc/libgnomedb/libgnomedb-GnomeDbWindow.html
+share/doc/libgnomedb/libgnomedb-basic.html
+share/doc/libgnomedb/libgnomedb-bonobo.html
+share/doc/libgnomedb/libgnomedb-gnome-db-config.html
+share/doc/libgnomedb/libgnomedb-gnome-db-model.html
+share/doc/libgnomedb/libgnomedb-gnome-db-stock.html
+share/doc/libgnomedb/libgnomedb-gnome-db-util.html
+share/doc/libgnomedb/libgnomedb-introduction.html
+share/doc/libgnomedb/libgnomedb-libgnomedb.html
+share/doc/libgnomedb/libgnomedb-widgets.html
+share/doc/libgnomedb/libgnomedb.devhelp
+share/doc/libgnomedb/right.png
+share/doc/libgnomedb/style.css
+share/doc/libgnomedb/up.png
 share/gconf/schemas/libgnomedb.schemas
 share/gnome-db/ui/db-shell.xml
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/libgnomedb-2.mo
@@ -169,13 +169,15 @@ share/pixmaps/libgnomedb/gnome-db-views_16x16.png
 share/pixmaps/libgnomedb/gnome-db-within-transaction_24x24.png
 share/pixmaps/libgnomedb/gnome-db.png
 @dirrm share/pixmaps/libgnomedb
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/libgnomedb
 @comment in scrollkeeper: @dirrm share/omf
 @comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/gnome-db/ui
 @dirrm share/gnome-db
 @comment in GConf2: @dirrm share/gconf/schemas
-@dirrm share/doc/html/libgnomedb
+@dirrm share/doc/libgnomedb
 @comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
 @comment in libglade2: @dirrm lib/libglade/2.0
 @dirrm include/libgnomedb-1.2/libgnomedb
+@dirrm include/libgnomedb-1.2
