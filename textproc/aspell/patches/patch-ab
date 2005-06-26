@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2005/06/26 05:19:10 wiz Exp $
+
+--- modules/speller/default/readonly_ws.cpp.orig	2004-11-10 07:18:45.000000000 +0100
++++ modules/speller/default/readonly_ws.cpp
+@@ -921,7 +921,7 @@ namespace {
+           prev->aff = aff;
+           aff += l1;
+           for (const char * p = cur->aff; *p; ++p) {
+-            if (memchr(prev->aff, l1, *p)) continue;
++            if (memchr(prev->aff, *p, l1)) continue;
+             *aff = *p;
+             ++aff;
+           }
