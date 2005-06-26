@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2005/06/01 18:02:58 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/26 16:45:57 rxg Exp $
 #
 
 DISTNAME=	xcin-2.5.3.pre2
 PKGNAME=	xcin-2.5.3rc2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	chinese x11
 MASTER_SITES=	ftp://xcin.linux.org.tw/pub/xcin/xcin/devel/
 
@@ -32,6 +32,7 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../inputmethod/libtabe/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
