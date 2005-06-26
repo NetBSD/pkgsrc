@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10463 2005/06/26 08:01:06 wiz Exp $
+$NetBSD: CHANGES,v 1.10464 2005/06/26 08:05:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 	
@@ -3025,3 +3025,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/libevent to 1.1a [wiz 2005-06-25]
 	Updated textproc/aspell to 0.60.2nb1 [wiz 2005-06-26]
 	Updated devel/p5-OLE-Storage_Lite to 0.14 [wiz 2005-06-26]
+	Updated math/p5-Spreadsheet-ParseExcel to 0.2603 [wiz 2005-06-26]
