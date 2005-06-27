@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/06/25 01:14:11 kristerw Exp $
+# $NetBSD: Makefile,v 1.29 2005/06/27 19:00:05 tron Exp $
 
 DISTNAME=	wmakerconf-2.11
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Gtk+ based configuration tool for Window Maker
 USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		tar
+USE_TOOLS+=		gzip tar
 
 .if defined(PKG_SYSCONFDIR.windowmaker)
 CONFIGURE_ARGS+=	--with-wmakeretcprefix=${PKG_SYSCONFDIR.windowmaker}
@@ -20,7 +20,8 @@ CONFIGURE_ARGS+=	--with-wmakeretcprefix=${PKG_SYSCONFDIR.windowmaker}
 CONFIGURE_ARGS+=	--with-wmakeretcprefix=${PKG_SYSCONFDIR}/WindowMaker
 .endif
 
-CONFIGURE_ENV+=		tar="${TOOLS_TAR}"
+CONFIGURE_ENV+=		ac_cv_path_tar=${TOOLS_TAR:Q}
+CONFIGURE_ENV+=		ac_cv_path_gzip=${TOOLS_GZIP_CMD:C/ .*//W:Q}
 
 post-extract:
 	${MV} ${WRKSRC}/data/WMWmakerconf ${WRKSRC}/data/WMWmakerconf.in
