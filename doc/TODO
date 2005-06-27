@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3659 2005/06/27 10:04:40 wiz Exp $
+$NetBSD: TODO,v 1.3660 2005/06/27 17:50:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -324,7 +324,7 @@ Suggested package updates
 	o amavisd-new-2.3.1
 	o amaya-9.1
 	o amule-2.0.3
-	o anjuta-1.2.3
+	o anjuta-2.0.1
 	o anomy-sanitizer-1.70
 	o ap-Embperl-1.3.6
 	o ap-auth-mysql-4.3.9
@@ -356,7 +356,7 @@ Suggested package updates
 	o ast-ksh-20040229
 	o asterisk-1.0.8
 	o astyle-1.15.3
-	o autogen-5.7
+	o autogen-5.7.1
 	o avl-2.0.1
 	o avr-libc-1.2.3
 	o awstats-6.4
@@ -448,7 +448,7 @@ Suggested package updates
 	o dpkg-1.13.3
 	o dvdrip-0.52.5
 	o dvipdfmx-20050201
-	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
+	o dvipng-1.6 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.4.0
 	o dylan-interpreter-2.4.0
 	o e2fsprogs-1.36
@@ -518,6 +518,7 @@ Suggested package updates
 	o ghostscript-8.51
 	o gifsicle-1.42
 	o gift-openft-0.2.1.4
+	o gimp-2.2.8
 	o git-4.3.20
 	o gkrellm-multiping-2.0.10
 	o gkrellm-weather-2.0.7
@@ -731,7 +732,7 @@ Suggested package updates
 	o opencobol-0.31
 	o openh323-1.17.1
 	o openldap-2.2.24
-	o openmotif-2.2.4
+	o openmotif-2.2.3 [http://www.openmotif.org/]
 	o openmsx-0.5.2
 	o openntpd-3.7p1
 	o openssh-4.1
@@ -886,7 +887,7 @@ Suggested package updates
 	o pnet-0.7.0 [pkg/30516]
 	o pnetC-0.7.0 [pkg/30517]
 	o pnetlib-0.7.0 [pkg/30518]
-	o poedit-1.3.2
+	o poedit-1.3.3
 	o poppy-4.01
 	o poptop-1.2.3
 	o potrace-1.7
@@ -1049,7 +1050,7 @@ Suggested package updates
 	o swfdec-0.3.5
 	o swi-prolog-5.5.11
 	o swish-e-2.4.3
-	o sylpheed-claws-1.0.4a
+	o sylpheed-claws-1.0.5
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-4.1.5
 	o sysinfo-4.2.2
@@ -1104,6 +1105,7 @@ Suggested package updates
 	o vfu-4.03
 	o vifm-0.2
 	o vlc-0.8.1 [needs ffmpeg prerelease/snapshot]
+	o vlc-0.8.2
 	o vm-7.19
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
