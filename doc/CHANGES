@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10480 2005/06/27 10:42:32 wiz Exp $
+$NetBSD: CHANGES,v 1.10481 2005/06/27 11:14:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3049,3 +3049,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/auctex to 11.55 [wiz 2005-06-27]
 	Removed multimedia/realplayer [wiz 2005-06-27]
 	Removed multimedia/trplayer [wiz 2005-06-27]
+	Updated net/p5-Net-Server to 0.88 [wiz 2005-06-27]
