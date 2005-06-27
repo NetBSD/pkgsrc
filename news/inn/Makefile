@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2005/06/24 16:24:23 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2005/06/27 19:11:25 tron Exp $
 
 DISTNAME=		inn-2.4.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/ \
@@ -40,7 +40,7 @@ CONFIGURE_ENV+=		_PATH_EGREP="${TOOLS_EGREP}"
 CONFIGURE_ENV+=		_PATH_SED="${TOOLS_SED}"
 CONFIGURE_ENV+=		_PATH_SH="${TOOLS_SH}"
 CONFIGURE_ENV+=		_PATH_SORT="${TOOLS_SORT}"
-CONFIGURE_ENV+=		GZIP="${TOOLS_GZIP_CMD}"
+CONFIGURE_ENV+=		GZIP="${TOOLS_GZIP_CMD:C/ .*//W}"
 USE_TOOLS+=		awk egrep gzip sed sh sort yacc
 
 PKG_USERS=		${INN_USER}:${INN_GROUP}::Internet\\ News:${INN_DATA_DIR}:${SH}
