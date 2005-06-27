@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.11 2005/06/27 02:49:33 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.12 2005/06/27 13:20:26 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -27,3 +27,5 @@ Pullup ticket 568 - requested by Johnny C. Lam
 built-in detection fix for bind9
 Pullup ticket 566 - requested by Lubomir Sedlacik
 security update for clamav
+Pullup ticket 569 - requested by Thomas Klausner
+security update for p5-Net-Server
