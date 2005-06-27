@@ -1,0 +1,228 @@
+#define UseElfFormat		YES
+#define OSBinaryFormat		[ELF]
+
+#ifndef OSName
+#define OSName			DefaultOSName OSBinaryFormat
+#endif
+#ifndef OSVendor
+#define OSVendor		/**/
+#endif
+#ifndef OSMajorVersion
+#define OSMajorVersion		DefaultOSMajorVersion
+#endif
+#ifndef OSMinorVersion
+#define OSMinorVersion		DefaultOSMinorVersion
+#endif
+#ifndef OSTeenyVersion
+#define OSTeenyVersion		DefaultOSTeenyVersion
+#endif
+XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVersion)
+
+#define HasGcc			YES
+#define HasGcc2			YES
+#define HasCplusplus		YES
+#define HasGcc2ForCplusplus	YES
+#define GccUsesGas		YES
+#define UseGas			YES
+#define GnuCpp			YES
+#define HasNdbm			YES
+#define HasPutenv		YES
+#define HasSnprintf		YES
+#define HasBSD44Sockets 	YES
+#ifndef HasLibCrypt
+# define HasLibCrypt		YES
+#endif
+#ifndef HasShm
+# define HasShm			YES
+#endif
+#define HasWChar32		YES
+
+#define AvoidNullMakeCommand	YES
+#define StripInstalledPrograms	YES
+#define CompressAllFonts	YES
+#define Malloc0ReturnsNull	YES
+#define NeedConstPrototypes	YES
+#define NeedFunctionPrototypes	YES
+#define NeedNestedPrototypes	YES
+#define NeedVarargsPrototypes	YES
+#define NeedWidePrototypes	NO
+
+#define MkdirHierCmd		mkdir -p
+
+#define CcCmd			cc
+#define CppCmd			/usr/libexec/cpp
+#define PreProcessCmd		CppCmd
+#define StandardCppDefines	-traditional
+#if defined(UseInstalled) && (!defined(XF86LinkKit) || !XF86LinkKit)
+#define DefaultCCOptions	/**/
+#else
+#define DefaultCCOptions	-Dasm=__asm
+#endif
+#ifndef ExtraLibraries
+/* support for multi-byte locales is in libxpg4 rather than libc */
+#define ExtraLibraries		/**/
+#endif
+#ifndef UseGnuMalloc
+#define UseGnuMalloc		NO
+#endif
+
+#define HasSetUserContext	YES
+
+#ifndef ExtraLoadFlags
+#define ExtraLoadFlags		-Wl,-rpath,$(USRLIBDIRPATH)
+#endif
+
+#ifndef SharedLibraryLoadFlags
+#define SharedLibraryLoadFlags	-shared -rpath $(USRLIBDIRPATH)
+#endif
+
+#ifndef GnuMallocLibrary
+#define GnuMallocLibrary	-lgnumalloc
+#endif
+
+#ifndef HasZlib
+#define HasZlib		YES
+#endif
+
+#define InstallCmd		/usr/bin/install
+
+# define AsmElfDefines		-D__ELF__
+
+#if GccUsesGas
+# define GccGasOption		-DGCCUSESGAS
+# define AsmDefines		-DUSE_GAS AsmElfDefines
+#else
+# define GccGasOption /**/
+# define AsmDefines		AsmElfDefines
+#endif
+
+#define ServerExtraDefines GccGasOption XFree86ServerDefines
+
+#define StandardDefines	-DCSRG_BASED
+
+#define ServerOSDefines		XFree86ServerOSDefines -DDDXTIME
+#define XawI18nDefines		-DUSE_XWCHAR_STRING
+#define HasMakefileSafeInclude	YES
+#define IncludeMakefile(file) @@# dependencies are in .depend
+#define DependFileName		.depend
+#ifndef BuildDynamicLoading
+#define BuildDynamicLoading	YES
+#endif
+#ifndef ForceNormalLib
+#define ForceNormalLib		YES
+#endif
+#define HasMkstemp		YES
+
+#define OptimizedCDebugFlags -O2
+
+#ifndef PreIncDir
+# define PreIncDir	/usr/include
+#endif
+
+#define TroffCmd	groff -Tps
+#define NroffCmd	groff -Tascii
+#define SetTtyGroup	YES
+
+#ifndef ExtraFilesToClean
+# define ExtraFilesToClean *.core
+#endif
+
+#define DefaultUserPath		/bin:/usr/bin:/sbin:/usr/sbin:$(BINDIR):/usr/gnu/bin:/usr/local/bin
+#define DefaultSystemPath	/bin:/usr/bin:/sbin:/usr/sbin:$(BINDIR)
+#ifndef SystemManDirectory
+#define SystemManDirectory	/usr/share/man
+#endif
+
+#define InstKmemFlags	-g kmem -m 2755
+
+/*
+ * Compress manual pages
+ */
+#ifndef CompressManPages
+# define CompressManPages	YES
+#endif
+
+#if CompressManPages
+
+#ifndef CompressManCmd
+# define CompressManCmd		gzip -n
+#endif
+   COMPRESSMANCMD = CompressManCmd
+
+#ifndef InstallManPageLong
+#define InstallManPageLong(file,destdir,dest)				@@\
+install.man:: file.man							@@\
+	MakeDir($(DESTDIR)destdir)					@@\
+	$(RM) $(DESTDIR)destdir/dest.$(MANSUFFIX)*			@@\
+	$(INSTALL) -c $(INSTMANFLAGS) file.man \			@@\
+	  $(DESTDIR)destdir/dest.$(MANSUFFIX)				@@\
+	-$(COMPRESSMANCMD) $(DESTDIR)destdir/dest.$(MANSUFFIX)
+#endif
+
+#ifndef InstallGenManPageLong
+#define InstallGenManPageLong(file,destdir,dest,suffix)			@@\
+install.man:: file.man							@@\
+	MakeDir($(DESTDIR)destdir)					@@\
+	$(RM) $(DESTDIR)destdir/dest.suffix*				@@\
+	$(INSTALL) -c $(INSTMANFLAGS) file.man \			@@\
+	  $(DESTDIR)destdir/dest.suffix					@@\
+	-$(COMPRESSMANCMD) $(DESTDIR)destdir/dest.suffix
+#endif
+
+#ifndef InstallMultipleMan
+#define InstallMultipleMan(list,dest)					@@\
+install.man:: list							@@\
+	MakeDir($(DESTDIR)dest)						@@\
+	@case '${MFLAGS}' in *[i]*) set +e;; esac; \			@@\
+	for i in list; do \						@@\
+		(set -x; \						@@\
+		MNAME=`echo $$i | cut -f1 -d.`; \			@@\
+		$(RM) $(DESTDIR)dest/$${MNAME}*; \			@@\
+		$(INSTALL) -c $(INSTMANFLAGS) $$i \			@@\
+		  $(DESTDIR)dest/$${MNAME}.$(MANSUFFIX); \		@@\
+		$(COMPRESSMANCMD) $(DESTDIR)dest/$${MNAME}.$(MANSUFFIX)); \ @@\
+	done
+#endif
+
+/*
+ * InstallManPageAliases - install soft links for aliases.
+ */
+#ifndef InstallManPageAliases
+#define InstallManPageAliases(file,destdir,aliases)			@@\
+install.man::								@@\
+	@(SUFFIX=`echo $(DESTDIR)destdir/file.* | sed -e 's,.*/[^\.]*.,,'`; \ @@\
+	for i in aliases; do (set -x; \					@@\
+	$(RM) $(DESTDIR)destdir/$$i.*; \				@@\
+	(cd $(DESTDIR)destdir; $(LN) file.$${SUFFIX} \			@@\
+	$$i.$${SUFFIX})); \						@@\
+	done)
+#endif
+
+/*
+ * InstallGenManPageAliases - install soft links for aliases.
+ */
+#ifndef InstallGenManPageAliases
+#define InstallGenManPageAliases(file,destdir,suffix,aliases)		@@\
+	InstallManPageAliases(file,destdir,aliases)
+#endif
+#endif
+
+#define HasBsdMake	YES
+
+#ifndef StaticLibrary
+#define StaticLibrary(libpath,libname) -Wl,-Bstatic Concat(-L,libpath) Concat(-l,libname) -Wl,-Bdynamic
+#endif
+
+#define DlLibrary		-rdynamic
+
+#if BuildDynamicLoading
+#define ServerExtraSysLibs	DlLibrary
+#else
+#define ServerExtraSysLibs	/**/
+#endif
+
+#include <bsdLib.rules>
+
+#ifdef i386Architecture
+#include <xfree86.cf>
+#endif

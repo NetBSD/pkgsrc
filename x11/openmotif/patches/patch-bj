@@ -1,0 +1,13 @@
+$NetBSD: patch-bj,v 1.1 2005/06/27 14:08:15 wiz Exp $
+
+--- config/imake/imake.c.orig	2004-03-04 18:45:52.000000000 +0100
++++ config/imake/imake.c	2004-08-10 17:20:20.000000000 +0200
+@@ -145,7 +145,7 @@
+  *	#include INCLUDE_IMAKEFILE
+  *	<add any global targets like 'clean' and long dependencies>
+  */
+-#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+ /* This needs to be before _POSIX_SOURCE gets defined */
+ # include <sys/param.h>
+ # include <sys/time.h>

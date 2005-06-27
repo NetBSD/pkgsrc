@@ -1,8 +1,8 @@
-$NetBSD: patch-ar,v 1.2 2004/03/16 23:59:42 danw Exp $
+$NetBSD: patch-ar,v 1.3 2005/06/27 14:08:15 wiz Exp $
 
---- config/imake/imakemdep.h.orig	Sat Mar 13 22:27:36 2004
-+++ config/imake/imakemdep.h
-@@ -265,10 +265,10 @@ in this Software without prior written a
+--- config/imake/imakemdep.h.orig	2005-05-16 17:00:00.000000000 +0200
++++ config/imake/imakemdep.h	2005-05-16 17:04:32.000000000 +0200
+@@ -265,10 +265,10 @@
  #ifdef _CRAY
  #define DEFAULT_CPP "/lib/pcpp"
  #endif
@@ -11,20 +11,20 @@ $NetBSD: patch-ar,v 1.2 2004/03/16 23:59:42 danw Exp $
  #define DEFAULT_CPP "/usr/libexec/cpp"
  #endif
 -#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__APPLE__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__DragonFly__)
  #define USE_CC_E
  #endif
  #if defined(__sgi) && defined(__ANSI_CPP__)
-@@ -326,7 +326,7 @@ char *cpp_argv[ARGUMENTS] = {
+@@ -326,7 +326,7 @@
  	"-Uunix",	/* remove unix symbol so that filename unix.c okay */
  #endif
  #endif
 -#if defined(__386BSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(MACH) || defined(linux) || defined(__GNU__)
-+#if defined(__386BSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(MACH) || defined(linux) || defined(__GNU__) || defined(__APPLE__)
++#if defined(__386BSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(MACH) || defined(linux) || defined(__GNU__) || defined(__APPLE__) || defined(__DragonFly__)
  # ifdef __i386__
  	"-D__i386__",
  # endif
-@@ -336,6 +336,9 @@ char *cpp_argv[ARGUMENTS] = {
+@@ -336,6 +336,9 @@
  # ifdef __m68k__
  	"-D__m68k__",
  # endif
@@ -34,16 +34,44 @@ $NetBSD: patch-ar,v 1.2 2004/03/16 23:59:42 danw Exp $
  # ifdef __GNUC__
  	"-traditional",
  # endif
-@@ -988,6 +991,12 @@ struct symtab	predefs[] = {
+@@ -662,14 +665,14 @@
+ # define DEFAULT_OS_MINOR_REV   "r %*d.%[0-9]"
+ # define DEFAULT_OS_TEENY_REV   "v %[0-9]" 
+ /* # define DEFAULT_OS_NAME        "srm %[^\n]" */ /* Not useful on ISC */
+-#elif defined(__FreeBSD__) || defined(__OpenBSD__)
++#elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ /* BSD/OS too? */
+ /* uname -r returns "x.y[.z]-mumble", e.g. "2.1.5-RELEASE" or "2.2-0801SNAP" */
+ # define DEFAULT_OS_MAJOR_REV   "r %[0-9]"
+ # define DEFAULT_OS_MINOR_REV   "r %*d.%[0-9]"
+ # define DEFAULT_OS_TEENY_REV   "r %*d.%*d.%[0-9]" 
+ # define DEFAULT_OS_NAME        "srm %[^\n]"
+-# if defined(__FreeBSD__)
++# if defined(__FreeBSD__) || defined(__DragonFly__)
+ /* Use an alternate way to find the teeny version for -STABLE, -SNAP versions */
+ #  define DEFAULT_OS_TEENY_REV_FROB(buf, size)				\
+     do {								\
+@@ -968,7 +971,9 @@
+ #ifdef __sgi
+ 	{"__sgi", "1"},
  #endif
+-#ifdef __FreeBSD__
++#ifdef __DragonFly__
++	{"__DragonFly__", "1"},
++#elif defineD(__FreeBSD__)
+ 	{"__FreeBSD__", "1"},
+ #endif
+ #ifdef __OpenBSD__
+@@ -989,6 +994,12 @@
  #ifdef __QNXNTO__
  	{"__QNXNTO__", "1"},
-+#endif
+ #endif
 +#ifdef __ppc__
 +	{"__ppc__", "1"},
 +#endif
 +#ifdef __BIG_ENDIAN__
 +	{"__BIG_ENDIAN__", "1"},
- #endif
++#endif
  	/* add any additional symbols before this line */
  	{NULL, NULL}
+ };
