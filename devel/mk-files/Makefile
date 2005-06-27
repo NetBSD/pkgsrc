@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2004/02/21 00:15:44 sjg Exp $
+# $NetBSD: Makefile,v 1.18 2005/06/27 20:28:12 erh Exp $
 #
 
-DISTNAME=	mk-20040214
-PKGNAME=	mk-files-20040214
+DISTNAME=	mk-20050405
+PKGNAME=	mk-files-20050405
 CATEGORIES=	devel
-MASTER_SITES=   ftp://ftp.NetBSD.org/pub/incoming/sjg/
+MASTER_SITES=   ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
 
 MAINTAINER=	sjg@NetBSD.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
@@ -29,7 +29,7 @@ do-install:
 # same goes for the bsd.*.mk files (it makes the symlinks to *.mk)
 ${WRKSRC}/FILES:	extract
 ${WRKDIR}/.PLIST_SRC:	${WRKSRC}/FILES
-	@( ${GREP} '^[a-z].*\.mk' $> ; \
+	@( ${GREP} '^[A-Za-z].*\.mk' $> ; \
 	[ -f /usr/share/mk/sys.mk ] || ${ECHO} sys.mk; \
 	[ -f /usr/share/mk/bsd.prog.mk ] || \
 	for f in dep doc init lib man nls obj own prog subdir; do \
