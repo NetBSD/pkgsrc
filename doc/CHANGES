@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10483 2005/06/27 19:14:08 tron Exp $
+$NetBSD: CHANGES,v 1.10484 2005/06/27 19:22:46 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3054,3 +3054,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/bittornado to 0.3.12 [wiz 2005-06-27]
 	Updated net/bittornado-gui to 0.3.12 [wiz 2005-06-27]
 	Updated news/inn to 2.4.1nb5 [tron 2005-06-27]
+	Updated wm/wmakerconf to 2.11nb2 [tron 2005-06-27]
