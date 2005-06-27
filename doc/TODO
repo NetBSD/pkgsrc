@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3660 2005/06/27 17:50:56 wiz Exp $
+$NetBSD: TODO,v 1.3661 2005/06/27 18:03:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -297,7 +297,6 @@ Suggested package updates
 
 	o 0verkill-0.16
 	o BasiliskII-1.0.20050322
-	o BitTornado-0.3.12
 	o Chinput-3.0.1
 	o GMT-4.0
 	o GUIlib-1.1.1

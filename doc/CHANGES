@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10481 2005/06/27 11:14:50 wiz Exp $
+$NetBSD: CHANGES,v 1.10482 2005/06/27 18:03:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3050,3 +3050,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed multimedia/realplayer [wiz 2005-06-27]
 	Removed multimedia/trplayer [wiz 2005-06-27]
 	Updated net/p5-Net-Server to 0.88 [wiz 2005-06-27]
+	Updated net/bittornado to 0.3.12 [wiz 2005-06-27]
+	Updated net/bittornado-gui to 0.3.12 [wiz 2005-06-27]
