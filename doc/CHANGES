@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10476 2005/06/26 22:19:21 markd Exp $
+$NetBSD: CHANGES,v 1.10477 2005/06/27 02:09:48 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3043,3 +3043,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/p5-MusicBrainz-Client to 0.09 [epg 2005-06-26]
 	Updated chat/irssi to 0.8.9nb4 [snj 2005-06-26]
 	Added converters/libwpd version 0.8.1 [markd 2005-06-26]
+	Updated databases/libpqxx to 2.5.4 [markd 2005-06-27]
+	Updated databases/libpqxx-doc to 2.5.4 [markd 2005-06-27]
+	Updated misc/koffice to 2.5.4 [markd 2005-06-27]
