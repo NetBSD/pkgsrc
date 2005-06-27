@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10479 2005/06/27 10:04:39 wiz Exp $
+$NetBSD: CHANGES,v 1.10480 2005/06/27 10:42:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3047,3 +3047,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/libpqxx-doc to 2.5.4 [markd 2005-06-27]
 	Updated misc/koffice to 2.5.4 [markd 2005-06-27]
 	Updated print/auctex to 11.55 [wiz 2005-06-27]
+	Removed multimedia/realplayer [wiz 2005-06-27]
+	Removed multimedia/trplayer [wiz 2005-06-27]
