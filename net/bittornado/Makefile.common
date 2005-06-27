@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.6 2005/04/11 21:46:44 tv Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/06/27 18:02:37 wiz Exp $
 #
 
-DISTNAME=		BitTornado-0.3.10
+DISTNAME=		BitTornado-0.3.12
 CATEGORIES=		net
 MASTER_SITES=		http://www.bittornado.com/download/
 
