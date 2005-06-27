@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/21 21:39:15 tv Exp $
+$NetBSD: distinfo,v 1.2 2005/06/27 15:55:11 rillig Exp $
 
 SHA1 (byacc-20040328.tgz) = 4ce9536f9c76fefb4b68a3e34db619ef5fd10d7b
 RMD160 (byacc-20040328.tgz) = 217ab317117a39b726b23c5b0bd6781402c0baed
 Size (byacc-20040328.tgz) = 131563 bytes
-SHA1 (patch-aa) = eecc26e2985c6532fc2bea9300a997e98c3bae03
