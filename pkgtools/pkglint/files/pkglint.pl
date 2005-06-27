@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.194 2005/06/24 22:36:59 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.195 2005/06/27 19:28:08 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -590,30 +590,25 @@ sub check_package() {
 	checkfile_DESCR("$pkgdir/DESCR");
 
 	if ($opt_check_MESSAGE) {
-		foreach my $abs_msg (<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>) {
-			my ($msg) = (substr($abs_msg, length("$opt_packagedir/")));
-			if ($msg =~ qr"MESSAGE") {
-				checkfile_MESSAGE($msg);
-			}
+		foreach my $msg (<$opt_packagedir/$filesdir/MESSAGE*>, <$opt_packagedir/$pkgdir/MESSAGE*>) {
+			checkfile_MESSAGE($msg);
 		}
 	}
 	if ($opt_check_PLIST) {
-		foreach my $abs_plist (<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>) {
-			my ($plist) = (substr($abs_plist, length("$opt_packagedir/")));
-			if ($plist =~ qr"PLIST") {
-				checkfile_PLIST($plist);
-			}
+		foreach my $plist (<$opt_packagedir/$filesdir/PLIST*>, <$opt_packagedir/$pkgdir/PLIST*>) {
+			checkfile_PLIST($plist);
 		}
 	}
 	if ($opt_check_patches) {
-		foreach my $abs_patch (<$opt_packagedir/$patchdir/patch-*>) {
-			my ($patch) = (substr($abs_patch, length("$opt_packagedir/")));
+		foreach my $patch (<$opt_packagedir/$patchdir/patch-*>) {
 			checkfile_patches_patch($patch);
 		}
 	}
 	if ($opt_check_distinfo) {
-		if (-f "$opt_packagedir/$distinfo_file") {
-			checkfile_distinfo($distinfo_file);
+		foreach my $distinfo ("$opt_packagedir/$distinfo_file") {
+			if (-f $distinfo) {
+				checkfile_distinfo($distinfo);
+			}
 		}
 	}
 	if ($opt_check_distinfo && $opt_check_patches) {
@@ -802,8 +797,7 @@ sub checkfile_DESCR($) {
 }
 
 sub checkfile_distinfo($) {
-	my ($file) = @_;
-	my ($fname) = ("$opt_packagedir/$file");
+	my ($fname) = @_;
 	my ($distinfo, %in_distinfo);
 
 	checkperms($fname);
@@ -852,8 +846,7 @@ sub checkfile_distinfo($) {
 }
 
 sub checkfile_MESSAGE($) {
-	my ($file) = @_;
-	my ($fname) = ("$opt_packagedir/$file");
+	my ($fname) = @_;
 	my ($message);
 
 	checkperms($fname);
@@ -883,8 +876,7 @@ sub checkfile_MESSAGE($) {
 }
 
 sub checkfile_PLIST($) {
-	my ($file) = @_;
-	my ($fname) = ("$opt_packagedir/$file");
+	my ($fname) = @_;
 	my ($plist, $curdir, $last_file_seen);
 	
 	checkperms($fname);
@@ -1075,11 +1067,10 @@ sub check_for_multiple_patches($) {
 }
 
 sub checkfile_patches_patch($) {
-	my ($file) = @_;
-	my ($fname) = "$opt_packagedir/$file";
+	my ($fname) = @_;
 	my ($lines);
 
-	if ($file =~ /.*~$/) {
+	if ($fname =~ /.*~$/) {
 		log_warning($fname, NO_LINE_NUMBER, "In case this is a backup file: please remove it and rerun '$conf_make makepatchsum'");
 	}
 
