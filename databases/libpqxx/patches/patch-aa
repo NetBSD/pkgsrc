@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/06/27 01:57:26 markd Exp $
+
+--- configure.orig	2005-06-21 22:51:02.000000000 +1200
++++ configure
+@@ -19403,7 +19403,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+ 
+ # Add options to compiler command line, if compiler accepts it
+-function add_compiler_opts() {
++add_compiler_opts() {
+ 	for option in $* ; do
+ 		SAVE_CXXFLAGS="$CXXFLAGS"
+ 		CXXFLAGS="$CXXFLAGS $option"
