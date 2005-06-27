@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.3 2005/06/27 02:06:45 markd Exp $
+
+--- krita/data/palettes/Makefile.in.orig	2005-06-16 02:17:36.000000000 +1200
++++ krita/data/palettes/Makefile.in
+@@ -441,7 +441,7 @@ x_libraries = @x_libraries@
+ xdg_appsdir = @xdg_appsdir@
+ xdg_directorydir = @xdg_directorydir@
+ xdg_menudir = @xdg_menudir@
+-kritapalettesdir = $(prefix)/share/apps/krita/palettes
++kritapalettesdir = $(kde_datadir)/krita/palettes
+ 
+ kritapalettes_DATA = \
+ Bears.gpl\

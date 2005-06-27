@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.3 2005/06/27 02:06:45 markd Exp $
+
+--- krita/data/profiles/Makefile.in.orig	2005-06-16 02:17:36.000000000 +1200
++++ krita/data/profiles/Makefile.in
+@@ -442,7 +442,7 @@ xdg_appsdir = @xdg_appsdir@
+ xdg_directorydir = @xdg_directorydir@
+ xdg_menudir = @xdg_menudir@
+ 
+-kritaprofilesdir = $(prefix)/share/apps/krita/profiles
++kritaprofilesdir = $(kde_datadir)/krita/profiles
+ 
+ kritaprofiles_DATA = Apple.icm CIE.icm CMY.icm cmyk.icm ColorMatch.icm lcmslabi.icm lcmsxyzi.icm monoscnr.icm NTSC.icm PAL.icm SMPTE-C.icm srgb_color_space_profile.icm sRGB.icm srgbspac.icm tifflab8spac.icm tr01_d50.icm WideGamut.icm ycc601.icm ycc709.icm 
+ subdir = krita/data/profiles

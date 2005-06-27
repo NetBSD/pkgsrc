@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.3 2005/06/27 02:06:45 markd Exp $
+
+--- krita/data/images/Makefile.in.orig	2005-06-16 02:17:36.000000000 +1200
++++ krita/data/images/Makefile.in
+@@ -442,7 +442,7 @@ xdg_appsdir = @xdg_appsdir@
+ xdg_directorydir = @xdg_directorydir@
+ xdg_menudir = @xdg_menudir@
+ 
+-kritaimagesdir = $(prefix)/share/apps/krita/images
++kritaimagesdir = $(kde_datadir)/krita/images
+ 
+ kritaimages_DATA = evenings.jpg hakonepa.jpg hiro_awate.jpg Azay-Le-Rideau.jpg
+ subdir = krita/data/images
