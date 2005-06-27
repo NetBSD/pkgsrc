@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.9 2005/06/25 19:11:12 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.10 2005/06/27 00:51:06 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -23,3 +23,5 @@ Pullup ticket 563 - requested by Min Sik Kim
 usability fix for netpbm
 Pullup ticket 564 - requested by Thomas Klausner
 security update for RealPlayerGold
+Pullup ticket 568 - requested by Johnny C. Lam
+built-in detection fix for bind9
