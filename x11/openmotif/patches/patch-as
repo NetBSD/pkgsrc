@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.3 2004/03/16 23:59:42 danw Exp $
+$NetBSD: patch-as,v 1.4 2005/06/27 14:08:15 wiz Exp $
 
 --- config/cf/Imake.cf.orig	Sat Mar 13 21:19:59 2004
 +++ config/cf/Imake.cf
-@@ -73,6 +73,9 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
+@@ -73,6 +73,9 @@
  # if defined(__sparc__) || defined(sparc)
  #  define SparcArchitecture
  #  undef sparc
@@ -12,7 +12,7 @@ $NetBSD: patch-as,v 1.3 2004/03/16 23:59:42 danw Exp $
  # endif
  # ifdef mips
  #   define MipsArchitecture
-@@ -129,6 +132,9 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
+@@ -129,6 +132,9 @@
  # if defined(__sparc__) || defined(sparc)
  #  define SparcArchitecture
  #  undef sparc
@@ -22,11 +22,33 @@ $NetBSD: patch-as,v 1.3 2004/03/16 23:59:42 danw Exp $
  # endif
  # ifdef mips
  #   define MipsArchitecture
-@@ -720,6 +726,21 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
- #endif
+@@ -150,7 +155,21 @@
+ # endif
+ #endif /* NetBSD */
+ 
+-#ifdef __FreeBSD__
++#ifdef __DragonFly__
++# define MacroIncludeFile <DragonFly.cf>
++# define MacroFile DragonFly.cf
++# undef __DragonFly__
++# ifdef __i386__
++#  define i386BsdArchitecture
++#  define i386Architecture
++#  undef i386
++# endif
++# ifdef __amd64__
++#  define AMD64Architecture
++#  undef __amd64__
++#  undef __x86_64__
++# endif
++#elif defined __FreeBSD__
+ # define MacroIncludeFile <FreeBSD.cf>
+ # define MacroFile FreeBSD.cf
+ # undef __FreeBSD__
+@@ -721,6 +743,21 @@
  #endif
  #endif /* QNX/Neutrino */
-+
+ 
 +#if defined(__APPLE__)
 +# undef __APPLE__
 +# define MacroIncludeFile <darwin.cf>
@@ -41,6 +63,7 @@ $NetBSD: patch-as,v 1.3 2004/03/16 23:59:42 danw Exp $
 +#  undef __i386__
 +# endif
 +#endif
- 
++
  #ifndef MacroIncludeFile
  XCOMM WARNING:  Imake.cf not configured; guessing at definitions!!!
+ XCOMM This might mean that BOOTSTRAPCFLAGS was not set when building imake.
