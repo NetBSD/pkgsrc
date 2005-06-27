@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1702 2005/06/23 18:41:57 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1703 2005/06/27 13:33:55 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -3098,7 +3098,7 @@ _REPLACE=								\
 .PHONY: real-su-replace
 real-su-replace:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO_MSG} "*** WARNING - experimental target - data loss may be experienced ***"; \
+	${ECHO_MSG} "*** WARNING - experimental target - data loss may occur ***"; \
 	if [ -x ${LOCALBASE}/bin/pkg_tarup ]; then			\
 		${SETENV} PKGREPOSITORY=${WRKDIR} ${LOCALBASE}/bin/pkg_tarup ${PKGBASE}; \
 	else								\
