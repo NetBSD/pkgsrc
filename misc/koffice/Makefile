@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.58 2005/05/22 20:08:17 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2005/06/27 02:06:45 markd Exp $
 
-DISTNAME=	koffice-1.3.5
-PKGREVISION=	4
+DISTNAME=	koffice-1.4.0a
 CATEGORIES=	misc kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.3.5/src/ \
-		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.3.5/src/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/koffice-1.3.5/src/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.4/src/ \
+		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.4/src/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/koffice-1.4/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -14,7 +13,7 @@ COMMENT=	KDE Office Suite
 
 CONFLICTS+=	koffice3-[0-9]*
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
@@ -39,6 +38,8 @@ REPLACE_PERL+=		kpresenter/kprconverter.pl
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
+.include "options.mk"
+
 post-install:
 	@# The global desktop template files need to be user-writeable, or
 	@# else users won't be able to alter them after copying them to
@@ -46,6 +47,9 @@ post-install:
 	${CHMOD} u+w ${PREFIX}/share/kde/templates/.source/*
 
 .include "../../lang/python/pyversion.mk"
+.include "../../meta-pkgs/kde3/kde3.mk"
+
+.include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/wv2/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
@@ -54,8 +58,8 @@ post-install:
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
