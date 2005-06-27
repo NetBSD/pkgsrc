@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2005/06/01 18:02:37 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2005/06/27 18:17:57 minskim Exp $
 
 BUILTIN_PKG:=	bzip2
 
@@ -47,7 +47,7 @@ USE_BUILTIN.bzip2!=							\
 # Some platforms don't have a bzip2 implementation that can replace
 # pkgsrc bzip2.
 #
-_INCOMPAT_BZIP2?=	SunOS-5.[678]-* Darwin-*-*
+_INCOMPAT_BZIP2?=	SunOS-5.[678]-* Darwin-[567].*-*
 .    for _pattern_ in ${_INCOMPAT_BZIP2} ${INCOMPAT_BZIP2}
 .      if !empty(MACHINE_PLATFORM:M${_pattern_})
 USE_BUILTIN.bzip2=	no
