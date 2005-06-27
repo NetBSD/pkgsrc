@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1704 2005/06/27 13:34:41 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1705 2005/06/27 16:25:43 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -3058,7 +3058,7 @@ list:
 # Run pkglint:
 .PHONY: lint
 lint:
-	${_PKG_SILENT}${_PKG_DEBUG}${LOCALBASE}/bin/pkglint | ${GREP} -v ^OK
+	${_PKG_SILENT}${_PKG_DEBUG}${LOCALBASE}/bin/pkglint
 
 # Create a binary package from an install package using "pkg_tarup"
 .PHONY: tarup
