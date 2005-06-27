@@ -4,12 +4,9 @@ Shut up gcc.
 
 --- include/bits.c.orig	2005-03-22 10:38:58.000000000 +0100
 +++ include/bits.c	2005-03-22 10:39:43.000000000 +0100
-@@ -140,7 +140,7 @@
+@@ -140,4 +140,4 @@
  	f = fopen(argv[1], "w");
      }
      fprintf(f, "/* %s -- this file was generated for %s by\n", fn, HOST);
 -    fprintf(f, "   %*s    %s */\n\n", strlen(fn), "", 
 +    fprintf(f, "   %*s    %s */\n\n", (int)strlen(fn), "", 
- 	    "$Id: bits.c,v 1.7 2002/02/07 17:59:15 lha Exp $");
-     fprintf(f, "#ifndef %s\n", hb);
-     fprintf(f, "#define %s\n", hb);
