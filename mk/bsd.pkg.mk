@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1703 2005/06/27 13:33:55 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1704 2005/06/27 13:34:41 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -3121,7 +3121,7 @@ real-su-undo-replace:
 		exit 1;							\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO_MSG} "*** WARNING - experimental target - data loss may be experienced ***"; \
+	${ECHO_MSG} "*** WARNING - experimental target - data loss may occur ***"; \
 	oldpkgname=${PKGNAME};						\
 	newpkgname=`${CAT} ${WRKDIR}/.replace`;				\
 	replace_action="${SETENV} ${PKG_ADD} ${WRKDIR}/$$newpkgname${PKG_SUFX}"; \
