@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/06/01 18:02:57 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2005/06/27 21:14:40 wiz Exp $
 #
 
 DISTNAME=	sodipodi-0.34
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sodipodi/}
 
 MAINTAINER=	manu@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/gnome-office/sodipodi.shtml
+HOMEPAGE=	http://www.sodipodi.com/
 COMMENT=	Open source vector graphics drawing program using SVG as native format
 
 GNU_CONFIGURE=		YES
