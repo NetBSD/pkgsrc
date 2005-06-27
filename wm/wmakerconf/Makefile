@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/06/27 19:00:05 tron Exp $
+# $NetBSD: Makefile,v 1.30 2005/06/27 19:07:30 tron Exp $
 
 DISTNAME=	wmakerconf-2.11
 PKGREVISION=	1
@@ -20,8 +20,8 @@ CONFIGURE_ARGS+=	--with-wmakeretcprefix=${PKG_SYSCONFDIR.windowmaker}
 CONFIGURE_ARGS+=	--with-wmakeretcprefix=${PKG_SYSCONFDIR}/WindowMaker
 .endif
 
-CONFIGURE_ENV+=		ac_cv_path_tar=${TOOLS_TAR:Q}
-CONFIGURE_ENV+=		ac_cv_path_gzip=${TOOLS_GZIP_CMD:C/ .*//W:Q}
+CONFIGURE_ENV+=		gzip=${TOOLS_GZIP_CMD:C/ .*//W:Q}
+CONFIGURE_ENV+=		tar=${TOOLS_TAR:Q}
 
 post-extract:
 	${MV} ${WRKSRC}/data/WMWmakerconf ${WRKSRC}/data/WMWmakerconf.in
