@@ -1,0 +1,26 @@
+$NetBSD: patch-al,v 1.3 2005/06/27 02:06:45 markd Exp $
+
+--- kexi/migration/Makefile.in.orig	2005-06-16 02:17:32.000000000 +1200
++++ kexi/migration/Makefile.in
+@@ -451,8 +451,11 @@ VER_INFO = -version-info 0:8:0
+ 
+ lib_LTLIBRARIES = libkeximigrate.la
+ 
++@compile_pgsql_plugin_TRUE@PG_INCS= -I$(PG_INCDIR) -I$(PQXX_INCDIR)
++@compile_pgsql_plugin_TRUE@PG_LDFLAGS= -L$(PQXX_LIBDIR) -L$(PG_LIBDIR)
++
+ INCLUDES = -I$(top_srcdir)/kexi/core -I$(top_srcdir)/kexi -I$(top_srcdir)/kexi/main/startup \
+--I$(top_builddir)/kexi/main/startup $(all_includes) -I$(PG_INCDIR) -I$(PQXX_INCDIR)
++-I$(top_builddir)/kexi/main/startup $(all_includes) $(PG_INCS)
+ 
+ 
+ @compile_pgsql_plugin_TRUE@pgsql_dir = pqxx
+@@ -472,7 +475,7 @@ libkeximigrate_la_LIBADD = \
+ 
+ 
+ libkeximigrate_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) $(VER_INFO) \
+--L$(PQXX_LIBDIR) -L$(PG_LIBDIR)
++$(PG_LDFLAGS)
+ 
+ 
+ noinst_HEADERS = importwizard.h migratemanager_p.h
