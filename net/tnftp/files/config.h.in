@@ -1,5 +1,5 @@
 /* config.h.in.  Generated automatically from configure.in by autoheader.  */
-/*	NetBSD: config.h.in,v 1.10 2005/06/01 15:10:21 lukem Exp	*/
+/*	NetBSD: config.h.in,v 1.12 2005/06/25 06:14:57 lukem Exp	*/
 
 
 /* Define if on AIX 3.
@@ -144,6 +144,9 @@
 /* Define if you have the <err.h> header file.  */
 #undef HAVE_ERR_H
 
+/* Define if you have the <libgen.h> header file.  */
+#undef HAVE_LIBGEN_H
+
 /* Define if you have the <libutil.h> header file.  */
 #undef HAVE_LIBUTIL_H
 
@@ -213,8 +216,8 @@
 /* Define if `struct addrinfo' exists in <netdb.h> */
 #undef HAVE_ADDRINFO
 
-/* Define if IN6ADDRSZ exists in <arpa/nameser.h> */
-#undef HAVE_IN6ADDRSZ
+/* Define if NS_IN6ADDRSZ exists in <arpa/nameser.h> */
+#undef HAVE_NS_IN6ADDRSZ
 
 /*
  * Define if <netdb.h> contains AI_NUMERICHOST et al.
@@ -227,6 +230,9 @@
 
 /* Define if h_errno exists in <netdb.h> */
 #undef HAVE_H_ERRNO_D
+
+/* Define if dirname() is declared in <libgen.h> */
+#undef HAVE_DIRNAME_D
 
 /* Define if fclose() is declared in <stdio.h> */
 #undef HAVE_FCLOSE_D
@@ -258,27 +264,28 @@
 /*
  * Define this if compiling with SOCKS (the firewall traversal library).
  * Also, you must define connect, getsockname, bind, accept, listen, and
- * select to their R-versions.
+ * select to their SOCKS-versions.
  */
 #undef	SOCKS
 #undef	SOCKS4
 #undef	SOCKS5
 #undef	connect
 #undef	getsockname
+#undef	getpeername
 #undef	bind
 #undef	accept
 #undef	listen
 #undef	select
+#undef	recvfrom
+#undef	sendto
+#undef	recv
+#undef	send
+#undef	read
+#undef	write
+#undef	rresvport
+#undef	shutdown
+#undef	close
 #undef	dup
 #undef	dup2
 #undef	fclose
 #undef	gethostbyname
-#undef	getpeername
-#undef	read
-#undef	recv
-#undef	recvfrom
-#undef	rresvport
-#undef	send
-#undef	sendto
-#undef	shutdown
-#undef	write

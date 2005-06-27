@@ -1,4 +1,4 @@
-dnl	NetBSD: aclocal.m4,v 1.3 2005/05/11 03:03:42 lukem Exp
+dnl	NetBSD: aclocal.m4,v 1.4 2005/06/13 09:20:21 lukem Exp
 dnl
 
 dnl
@@ -223,6 +223,7 @@ AC_DEFUN(AC_LIBRARY_SOCKS, [
 	AC_DEFINE(SOCKS4)
 	AC_DEFINE(connect, Rconnect)
 	AC_DEFINE(getsockname, Rgetsockname)
+	AC_DEFINE(getpeername, Rgetpeername)
 	AC_DEFINE(bind, Rbind)
 	AC_DEFINE(accept, Raccept)
 	AC_DEFINE(listen, Rlisten)
@@ -247,7 +248,6 @@ AC_DEFUN(AC_LIBRARY_SOCKS, [
 	AC_DEFINE(write,SOCKSwrite)
 	AC_DEFINE(rresvport,SOCKSrresvport)
 	AC_DEFINE(shutdown,SOCKSshutdown)
-	AC_DEFINE(listen,SOCKSlisten)
 	AC_DEFINE(close,SOCKSclose)
 	AC_DEFINE(dup,SOCKSdup)
 	AC_DEFINE(dup2,SOCKSdup2)

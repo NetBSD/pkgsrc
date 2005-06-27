@@ -1,10 +1,10 @@
-dnl	NetBSD: configure.in,v 1.16 2005/06/02 00:20:32 lukem Exp
+dnl	NetBSD: configure.in,v 1.17 2005/06/25 06:14:08 lukem Exp
 dnl
 dnl configure.in --
 dnl	process this file with autoconf to produce a configure script.
 dnl
 
-AC_REVISION([Revision: 1.16])dnl
+AC_REVISION([Revision: 1.17])dnl
 
 AC_INIT(tnftp.h)
 
@@ -37,13 +37,11 @@ AC_AIX
 
 dnl Checks for libraries.
 dnl
-AC_SEARCH_LIBS(fparseln, [util], [have_fparseln=yes], [have_fparseln=no])
 if test $opt_editcomplete = yes; then
 	AC_SEARCH_LIBS(tgetent, [termcap termlib curses ncurses tinfo], ,
 	    AC_MSG_ERROR([no relevant library found containing tgetent]))
 	AC_SEARCH_LIBS(el_init, [edit], [have_libedit=yes], [have_libedit=no])
 fi
-AC_SEARCH_LIBS(dirname, [gen], [have_dirname=yes], [have_dirname=no])
 AC_LIBRARY_NET
 AC_LIBRARY_SOCKS
 if test -n "$socks"; then
@@ -59,8 +57,8 @@ dnl
 AC_CONFIG_HEADER(config.h)
 AC_HEADER_DIRENT
 AC_HEADER_STDC
-AC_CHECK_HEADERS([arpa/nameser.h err.h regex.h paths.h poll.h sys/poll.h \
-		sys/syslimits.h termcap.h util.h libutil.h vis.h])
+AC_CHECK_HEADERS([arpa/nameser.h err.h libgen.h regex.h paths.h poll.h \
+		sys/poll.h sys/syslimits.h termcap.h util.h libutil.h vis.h])
 
 
 dnl Checks for typedefs, structures, and compiler characteristics.
@@ -119,11 +117,13 @@ if test $opt_ipv6 = yes; then
 	    ], [AC_DEFINE(HAVE_SOCKADDR_IN6, 1)])
 
 	if test $ac_cv_header_arpa_nameser_h = yes; then
-		AC_MSG_TRY_COMPILE([for IN6ADDRSZ in arpa/nameser.h],
-				    ftp_cv_HAVE_IN6ADDRSZ, [ 
+		AC_MSG_TRY_COMPILE([for NS_IN6ADDRSZ in arpa/nameser.h],
+				    ftp_cv_HAVE_NS_IN6ADDRSZ, [ 
 #include <sys/types.h>
 #include <arpa/nameser.h>
-		    ], [ int X = IN6ADDRSZ ], [AC_DEFINE(HAVE_IN6ADDRSZ, 1)])
+		    ],
+		    [ int X = NS_IN6ADDRSZ ],
+		    [ AC_DEFINE(HAVE_NS_IN6ADDRSZ, 1) ])
 	fi
 
 fi
@@ -158,6 +158,10 @@ AC_MSG_TRY_COMPILE([for h_errno declaration], ftp_cv_HAVE_H_ERRNO_D, [
 #include <netdb.h>
     ], [ int X = h_errno ], [AC_DEFINE(HAVE_H_ERRNO_D, 1)])
 
+AC_MSG_TRY_COMPILE([for dirname() declaration], ftp_cv_HAVE_DIRNAME_D, [
+#include <libgen.h>
+    ], [ char *(*X)() = dirname ], [ AC_DEFINE(HAVE_DIRNAME_D, 1)])
+
 AC_MSG_TRY_COMPILE([for fclose() declaration], ftp_cv_HAVE_FCLOSE_D, [
 #include <stdio.h>
     ], [ int (*X)() = fclose ], [AC_DEFINE(HAVE_FCLOSE_D, 1)])
@@ -184,21 +188,17 @@ AC_MSG_TRY_COMPILE([for pclose() declaration], ftp_cv_HAVE_PCLOSE_D, [
 
 dnl Checks for library functions.
 dnl
-AC_REPLACE_FUNCS([err fgetln fseeko getaddrinfo getnameinfo inet_ntop \
-		inet_pton mkstemp setprogname sl_init snprintf strdup \
-		strerror strlcat strlcpy strptime strsep strunvis \
+AC_REPLACE_FUNCS([dirname err fgetln fparseln fseeko getaddrinfo getnameinfo \
+		inet_ntop inet_pton mkstemp setprogname sl_init snprintf \
+		strdup strerror strlcat strlcpy strptime strsep strunvis \
 		strvis timegm usleep utimes])
 AC_CHECK_FUNCS([gethostbyname2 getpassphrase getpgrp memmove select])
-if test $have_fparseln != yes; then
-	AC_REPLACE_FUNCS(fparseln)
-fi
-if test $have_dirname != yes; then
-	AC_REPLACE_FUNCS(dirname)
-fi
 if test $ac_cv_func_getpgrp = yes; then
 	AC_FUNC_GETPGRP
 fi
 
+dnl Always replace glob(3); the vendor's may not be secure.
+dnl
 LIBOBJS="$LIBOBJS glob.o"
 
 if test $ac_cv_func_strptime = yes; then
