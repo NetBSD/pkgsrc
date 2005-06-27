@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3656 2005/06/26 16:58:39 jmmv Exp $
+$NetBSD: TODO,v 1.3657 2005/06/27 02:09:48 markd Exp $
 
 Suggested new packages
 ======================
@@ -615,7 +615,6 @@ Suggested package updates
 	o kmess-1.3
 	o kmymoney2-0.6.4
 	o kodos-2.4.5
-	o koffice-1.4
 	o krusader-1.60.0
 	o ksi-3.4.2
 	o kth-krb4-1.2.2
@@ -640,7 +639,6 @@ Suggested package updates
 	o libmatheval-1.1.2
 	o libmpeg3-1.5.4
 	o libopendaap-0.4.0
-	o libpqxx-2.5.0
 	o libsmi-0.4.3
 	o libssh-0.11 [test security/hydra after update]
 	o libstatgrab-0.11.1
