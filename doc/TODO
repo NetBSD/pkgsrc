@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3657 2005/06/27 02:09:48 markd Exp $
+$NetBSD: TODO,v 1.3658 2005/06/27 09:06:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -549,7 +549,6 @@ Suggested package updates
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.6
 	o gtk-systrace-2003.06.23
-	o gtk2+-2.6.8
 	o gtklife-4.2
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -1045,6 +1044,8 @@ Suggested package updates
 	o stunnel-4.10
 	o subtitleripper-0.3.4
 	o sudo-1.6.8p8
+	o sun-jdk15-5.0.4
+	o sun-jre15-5.0.4
 	o suse_base-9.3
 	o swfdec-0.3.5
 	o swi-prolog-5.5.11
