@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3662 2005/06/28 10:04:02 wiz Exp $
+$NetBSD: TODO,v 1.3663 2005/06/28 12:14:31 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -511,7 +511,6 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdm1-2.2.5.5
 	o gentoo-0.11.55
-	o getmail-4.3.11
 	o gettext-0.14.5
 	o gfract-0.3.2
 	o ghostscript-8.51
