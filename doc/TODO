@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3665 2005/06/28 14:19:32 wiz Exp $
+$NetBSD: TODO,v 1.3666 2005/06/28 17:14:26 peter Exp $
 
 Suggested new packages
 ======================
@@ -732,7 +732,6 @@ Suggested package updates
 	o openldap-2.2.24
 	o openmotif-2.2.3 [http://www.openmotif.org/]
 	o openmsx-0.5.2
-	o openntpd-3.7p1
 	o openssh-4.1
 	o openttd-0.4.0 [pkg/30238]
 	o openvpn-2.0 [pkg/30239]
