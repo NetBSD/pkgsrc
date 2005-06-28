@@ -1,8 +1,0 @@
-#!/bin/sh
-#
-#	$NetBSD: trplayer,v 1.1.1.1 2004/01/26 13:20:40 jmmv Exp $
-#
-REALPLAYER_HOME=@@LOCALBASE@@/lib/RealPlayer8
-export REALPLAYER_HOME
-
-exec @@EMULDIR@@/usr/bin/trplayer "$@"
