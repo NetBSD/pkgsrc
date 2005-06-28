@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 12:13:58 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/06/28 17:13:25 peter Exp $
 
-SHA1 (openntpd-3.6.1p1.tar.gz) = bf8e10ab31d26923e57dd4d83413e95ea3b62fee
-RMD160 (openntpd-3.6.1p1.tar.gz) = 70eb2673c1cc91ca483f5183a8fb57870c6a58ec
-Size (openntpd-3.6.1p1.tar.gz) = 123811 bytes
+SHA1 (openntpd-3.7p1.tar.gz) = 8d6739a210906f0305606e8c144f5ea7daf737b2
+RMD160 (openntpd-3.7p1.tar.gz) = e7613e64ef3349cec2b34293b8cc749eb671c29f
+Size (openntpd-3.7p1.tar.gz) = 136251 bytes
