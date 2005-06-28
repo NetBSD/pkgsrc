@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.13 2005/06/27 13:59:00 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.14 2005/06/28 08:03:40 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -31,3 +31,5 @@ Pullup ticket 569 - requested by Thomas Klausner
 security update for p5-Net-Server
 Pullup ticket 567 - requested by Luke Mewburn
 tnftp update
+Pullup ticket 570 - requested by Thomas Klausner
+realplayer and trplayer removal
