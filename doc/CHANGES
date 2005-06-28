@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10485 2005/06/27 20:29:30 erh Exp $
+$NetBSD: CHANGES,v 1.10486 2005/06/28 10:04:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3056,3 +3056,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated news/inn to 2.4.1nb5 [tron 2005-06-27]
 	Updated wm/wmakerconf to 2.11nb2 [tron 2005-06-27]
 	Updated devel/mk-files to 20050405 [erh 2005-06-27]
+	Updated x11/xscreensaver to 4.22 [wiz 2005-06-28]
+	Updated x11/xscreensaver-demo to 4.22 [wiz 2005-06-28]
