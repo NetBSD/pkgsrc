@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10490 2005/06/28 14:19:32 wiz Exp $
+$NetBSD: CHANGES,v 1.10491 2005/06/28 17:00:18 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3062,3 +3062,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/getmail to 4.3.11 [schmonz 2005-06-28]
 	Added mail/spamd version 20050624 [peter 2005-06-28]
 	Updated textproc/aspell to 0.60.3 [wiz 2005-06-28]
+	Updated net/entropy to 0.8.3.421 [tv 2005-06-28]
