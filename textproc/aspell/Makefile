@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/06/28 14:17:49 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2005/06/28 14:18:55 wiz Exp $
 #
 
 DISTNAME=		aspell-0.60.3
@@ -11,9 +11,10 @@ COMMENT=		Spell checker with good multi-language support
 
 CONFLICTS=		libpspell-[0-9]*
 
-USE_PERL5=		run # for bin/aspell-import
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
+# for bin/aspell-import
+TOOLS_DEPMETHOD.perl=	DEPENDS
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 
