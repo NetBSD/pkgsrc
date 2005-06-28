@@ -1,4 +1,13 @@
-spamd is a fake sendmail(8)-like daemon which rejects false mail.  If the
-pf packet filter (security/pflkm) is configured to redirect port 25 (SMTP)
-to this daemon, it will attempt to waste the time and resources of
-the spam sender.  Imported from the OpenBSD 3.7 sources.
+Tarpits like spamd are fake SMTP servers, which accept connections but don't
+deliver mail. Instead, they keep the connections open and reply very slowly.
+If the peer is patient enough to actually complete the SMTP dialogue (which
+will take ten minutes or more), the tarpit returns a 'temporary error' code
+(4xx), which indicates that the mail could not be delivered successfully and
+that the sender should keep the mail in his queue and retry again later.
+If the spammer does, the same procedure repeats. Until, after several attempts,
+wasting both his queue space and socket handles for several days, the spammer
+gives up. The resources the spamd server has to waste to do this are minimal.
+
+If the sender is badly configured, an uncooperative recipient might actually
+delay his entire queue handling for several minutes each time he connects to
+the tarpit. And many spammers use badly configured open relays.
