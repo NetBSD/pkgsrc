@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.7 2005/06/26 09:30:09 wiz Exp $
+$NetBSD: patch-ac,v 1.8 2005/06/28 12:24:32 wiz Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=309043
 
---- gst-plugins-0.8.9/gst/wavparse/gstwavparse.c	2005-05-20 12:51:20.000000000 +0200
-+++ /home/wiz/gstwavparse.c
+--- gst/wavparse/gstwavparse.c.orig	2005-05-20 12:51:20.000000000 +0200
++++ gst/wavparse/gstwavparse.c
 @@ -567,6 +567,12 @@ gst_wavparse_fmt (GstWavParse * wav)
    wav->width = (header->blockalign * 8) / header->channels;
    wav->depth = header->size;
