@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/04/29 00:59:00 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/06/28 11:49:58 xtraeme Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20040504-ultrix45-boot1.png
@@ -23,12 +23,21 @@ share/doc/gxemul/20041213-debian_3.png
 share/doc/gxemul/20041213-debian_3_small.gif
 share/doc/gxemul/20041213-debian_4.png
 share/doc/gxemul/20041213-debian_4_small.gif
+share/doc/gxemul/20050317-example.png
+share/doc/gxemul/20050317-example_medium.png
+share/doc/gxemul/20050317-example_small.png
 share/doc/gxemul/20050413-netbsd-cobalt.png
 share/doc/gxemul/20050413-netbsd-cobalt_small.png
 share/doc/gxemul/20050427-netbsd-hpcmips-1.png
 share/doc/gxemul/20050427-netbsd-hpcmips-1_small.png
 share/doc/gxemul/20050427-netbsd-hpcmips-2.png
 share/doc/gxemul/20050427-netbsd-hpcmips-2_small.png
+share/doc/gxemul/20050617-openbsd-sgi.png
+share/doc/gxemul/20050617-openbsd-sgi_small.png
+share/doc/gxemul/20050622-netbsd-evbmips-malta.png
+share/doc/gxemul/20050622-netbsd-evbmips-malta_small.png
+share/doc/gxemul/20050626-netbsd-sgimips-netboot.png
+share/doc/gxemul/20050626-netbsd-sgimips-netboot_small.png
 share/doc/gxemul/BUGS
 share/doc/gxemul/HISTORY
 share/doc/gxemul/LICENSE
@@ -38,8 +47,6 @@ share/doc/gxemul/TODO
 share/doc/gxemul/hello_mips.c
 share/doc/gxemul/hello_ppc.c
 share/doc/gxemul/maddr.gif
-share/doc/gxemul/netbsd-pmax-20040630.png
-share/doc/gxemul/netbsd-pmax-20040630_small.png
 share/doc/gxemul/openbsd-pmax-20040710.png
 share/doc/gxemul/openbsd-pmax-20040710_small.png
 share/doc/gxemul/sprite-20040711.png

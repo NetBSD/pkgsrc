@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:02:47 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/28 11:49:58 xtraeme Exp $
 #
 
-DISTNAME=	gxemul-0.3.2
+DISTNAME=	gxemul-0.3.4
 CATEGORIES=	emulators
 MASTER_SITES=	http://gavare.se/gxemul/src/
 
@@ -29,8 +29,6 @@ do-install:
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gxemul
 PKG_SUPPORTED_OPTIONS=	x11
 PKG_SUGGESTED_OPTIONS=	x11
-# can be removed after 2005Q2
-PKG_OPTIONS_LEGACY_OPTS+=	X11:x11
 
 .include "../../mk/bsd.options.mk"
 
