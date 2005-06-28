@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10489 2005/06/28 12:46:26 peter Exp $
+$NetBSD: CHANGES,v 1.10490 2005/06/28 14:19:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3061,3 +3061,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/gxemul to 0.3.4 [xtraeme 2005-06-28]
 	Updated mail/getmail to 4.3.11 [schmonz 2005-06-28]
 	Added mail/spamd version 20050624 [peter 2005-06-28]
+	Updated textproc/aspell to 0.60.3 [wiz 2005-06-28]
