@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10487 2005/06/28 11:52:33 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10488 2005/06/28 12:14:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3059,3 +3059,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/xscreensaver to 4.22 [wiz 2005-06-28]
 	Updated x11/xscreensaver-demo to 4.22 [wiz 2005-06-28]
 	Updated emulators/gxemul to 0.3.4 [xtraeme 2005-06-28]
+	Updated mail/getmail to 4.3.11 [schmonz 2005-06-28]
