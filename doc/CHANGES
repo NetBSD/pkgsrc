@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10486 2005/06/28 10:04:01 wiz Exp $
+$NetBSD: CHANGES,v 1.10487 2005/06/28 11:52:33 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3058,3 +3058,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/mk-files to 20050405 [erh 2005-06-27]
 	Updated x11/xscreensaver to 4.22 [wiz 2005-06-28]
 	Updated x11/xscreensaver-demo to 4.22 [wiz 2005-06-28]
+	Updated emulators/gxemul to 0.3.4 [xtraeme 2005-06-28]
