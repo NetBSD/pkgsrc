@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3661 2005/06/27 18:03:40 wiz Exp $
+$NetBSD: TODO,v 1.3662 2005/06/28 10:04:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1175,7 +1175,6 @@ Suggested package updates
 	o xrmap-2.30
 	o xrn-9.02
 	o xsane-0.97
-	o xscreensaver-4.22
 	o xskat-4.0
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
