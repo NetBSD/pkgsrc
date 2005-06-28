@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2005/04/21 15:01:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2005/06/28 10:03:14 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -11,6 +11,7 @@ libexec/xscreensaver/anemone
 libexec/xscreensaver/anemotaxis
 libexec/xscreensaver/ant
 libexec/xscreensaver/antinspect
+libexec/xscreensaver/antmaze
 libexec/xscreensaver/antspotlight
 libexec/xscreensaver/apollonian
 libexec/xscreensaver/apple2
@@ -43,6 +44,7 @@ libexec/xscreensaver/config/anemone.xml
 libexec/xscreensaver/config/anemotaxis.xml
 libexec/xscreensaver/config/ant.xml
 libexec/xscreensaver/config/antinspect.xml
+libexec/xscreensaver/config/antmaze.xml
 libexec/xscreensaver/config/antspotlight.xml
 libexec/xscreensaver/config/apollonian.xml
 libexec/xscreensaver/config/apple2.xml
@@ -71,6 +73,7 @@ libexec/xscreensaver/config/circuit.xml
 libexec/xscreensaver/config/cloudlife.xml
 libexec/xscreensaver/config/compass.xml
 libexec/xscreensaver/config/coral.xml
+libexec/xscreensaver/config/crackberg.xml
 libexec/xscreensaver/config/critical.xml
 libexec/xscreensaver/config/crystal.xml
 libexec/xscreensaver/config/cubenetic.xml
@@ -129,6 +132,7 @@ libexec/xscreensaver/config/hypercube.xml
 libexec/xscreensaver/config/hypertorus.xml
 libexec/xscreensaver/config/ifs.xml
 libexec/xscreensaver/config/imsmap.xml
+libexec/xscreensaver/config/interaggregate.xml
 libexec/xscreensaver/config/interference.xml
 libexec/xscreensaver/config/intermomentary.xml
 libexec/xscreensaver/config/jigglypuff.xml
@@ -211,6 +215,7 @@ libexec/xscreensaver/config/substrate.xml
 libexec/xscreensaver/config/superquadrics.xml
 libexec/xscreensaver/config/swirl.xml
 libexec/xscreensaver/config/t3d.xml
+libexec/xscreensaver/config/tangram.xml
 libexec/xscreensaver/config/thornbird.xml
 libexec/xscreensaver/config/triangle.xml
 libexec/xscreensaver/config/truchet.xml
@@ -234,6 +239,7 @@ libexec/xscreensaver/config/xspirograph.xml
 libexec/xscreensaver/config/xteevee.xml
 libexec/xscreensaver/config/zoom.xml
 libexec/xscreensaver/coral
+libexec/xscreensaver/crackberg
 libexec/xscreensaver/critical
 libexec/xscreensaver/crystal
 libexec/xscreensaver/cubenetic
@@ -292,6 +298,7 @@ libexec/xscreensaver/hypercube
 libexec/xscreensaver/hypertorus
 libexec/xscreensaver/ifs
 libexec/xscreensaver/imsmap
+libexec/xscreensaver/interaggregate
 libexec/xscreensaver/interference
 libexec/xscreensaver/intermomentary
 libexec/xscreensaver/jigglypuff
@@ -375,6 +382,7 @@ libexec/xscreensaver/substrate
 libexec/xscreensaver/superquadrics
 libexec/xscreensaver/swirl
 libexec/xscreensaver/t3d
+libexec/xscreensaver/tangram
 libexec/xscreensaver/thornbird
 libexec/xscreensaver/triangle
 libexec/xscreensaver/truchet
@@ -402,6 +410,7 @@ man/man1/anemone.1
 man/man1/anemotaxis.1
 man/man1/ant.1
 man/man1/antinspect.1
+man/man1/antmaze.1
 man/man1/antspotlight.1
 man/man1/apollonian.1
 man/man1/apple2.1
@@ -430,6 +439,7 @@ man/man1/circuit.1
 man/man1/cloudlife.1
 man/man1/compass.1
 man/man1/coral.1
+man/man1/crackberg.1
 man/man1/critical.1
 man/man1/crystal.1
 man/man1/cubenetic.1
@@ -488,6 +498,7 @@ man/man1/hypercube.1
 man/man1/hypertorus.1
 man/man1/ifs.1
 man/man1/imsmap.1
+man/man1/interaggregate.1
 man/man1/interference.1
 man/man1/intermomentary.1
 man/man1/jigglypuff.1
@@ -570,6 +581,7 @@ man/man1/substrate.1
 man/man1/superquadrics.1
 man/man1/swirl.1
 man/man1/t3d.1
+man/man1/tangram.1
 man/man1/thornbird.1
 man/man1/triangle.1
 man/man1/truchet.1
@@ -607,8 +619,10 @@ ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xscreensaver.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xscreensaver.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xscreensaver.mo
