@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2004/12/24 02:55:53 wiz Exp $
+$NetBSD: patch-ac,v 1.5 2005/06/28 14:17:50 wiz Exp $
 
---- prog/check_funs.cpp.orig	2004-08-08 07:04:57.000000000 +0200
+--- prog/check_funs.cpp.orig	2005-06-01 05:06:23.000000000 +0200
 +++ prog/check_funs.cpp
-@@ -210,7 +210,8 @@ static void layout_screen() {
+@@ -216,7 +216,8 @@ static void layout_screen() {
    choice_w = 0;
    nonl();
    noecho();
