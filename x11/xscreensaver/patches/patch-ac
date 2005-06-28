@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.14 2005/03/24 13:55:42 wiz Exp $
+$NetBSD: patch-ac,v 1.15 2005/06/28 10:03:14 wiz Exp $
 
---- configure.orig	2005-03-21 08:18:18.000000000 +0100
+--- configure.orig	2005-06-23 03:02:21.000000000 +0200
 +++ configure
-@@ -2686,6 +2686,9 @@ echo "${ECHO_T}Turning on SGI compiler w
+@@ -2856,6 +2856,9 @@ echo "${ECHO_T}Turning on SGI compiler w
      esac
    fi
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.14 2005/03/24 13:55:42 wiz Exp $
  if test -n "$GCC"; then
     if test -n "$GCC"; then
     echo "$as_me:$LINENO: checking whether gcc accepts -std" >&5
-@@ -2732,6 +2735,7 @@ echo "${ECHO_T}Disabling C++ comments in
+@@ -2902,6 +2905,7 @@ echo "${ECHO_T}Disabling C++ comments in
       CC="$CC -Wp,-lang-c89"
     fi
    fi
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.14 2005/03/24 13:55:42 wiz Exp $
  
  if test -n "$GCC"; then
     if test -n "$GCC"; then
-@@ -12786,7 +12790,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
+@@ -12972,7 +12976,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.14 2005/03/24 13:55:42 wiz Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -12876,7 +12880,7 @@ echo "$as_me: WARNING: Cannot find compa
+@@ -13062,7 +13066,7 @@ echo "$as_me: WARNING: Cannot find compa
      # from Matt Knopp <mhat@infocalypse.netlag.com>
      # (who got it from amu@mit.edu)
  
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.14 2005/03/24 13:55:42 wiz Exp $
  
      # jwz: MacOS X uses -lkrb5, but not -lcrypt
  
-@@ -14513,11 +14517,7 @@ echo "${ECHO_T}$ac_cv_gtk_config_libs" >
+@@ -14699,11 +14703,7 @@ echo "${ECHO_T}$ac_cv_gtk_config_libs" >
    ac_gtk_config_libs=$ac_cv_gtk_config_libs
  
    GTK_EXTRA_OBJS=""

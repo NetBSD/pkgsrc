@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.16 2005/04/21 15:01:43 wiz Exp $
+$NetBSD: patch-ad,v 1.17 2005/06/28 10:03:14 wiz Exp $
 
---- driver/Makefile.in.orig	2005-03-21 16:18:18.000000000 +0900
-+++ driver/Makefile.in	2005-04-20 17:28:14.000000000 +0900
-@@ -222,7 +222,7 @@
+--- driver/Makefile.in.orig	2005-06-23 03:02:23.000000000 +0200
++++ driver/Makefile.in
+@@ -222,7 +222,7 @@ HDRS		= XScreenSaver_ad.h XScreenSaver_X
  		  xscreensaver.h prefs.h remote.h \
  		  demo-Gtk-widgets.h demo-Gtk-stubs.h demo-Gtk-support.h \
  		  demo-Gtk-conf.h
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.16 2005/04/21 15:01:43 wiz Exp $
  		  xscreensaver-command.man \
  		  xscreensaver-text.man \
  		  xscreensaver-getimage.man \
-@@ -288,7 +288,7 @@
+@@ -288,7 +288,7 @@ install-program: $(EXES)
  	fi ;								      \
  	echo $$inst xscreensaver $(install_prefix)$(bindir)/xscreensaver ;    \
  	$$inst xscreensaver $(install_prefix)$(bindir)/xscreensaver
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.16 2005/04/21 15:01:43 wiz Exp $
  		    xscreensaver-getimage @EXES_OSX@ ; do	           \
  	  echo $(INSTALL_PROGRAM) $$exe $(install_prefix)$(bindir)/$$exe ; \
  	       $(INSTALL_PROGRAM) $$exe $(install_prefix)$(bindir)/$$exe ; \
-@@ -464,7 +464,7 @@
+@@ -482,7 +482,7 @@ install-pam:
  
  # screensaver-properties.desktop
  # into /usr/share/applications/
@@ -29,7 +29,7 @@ $NetBSD: patch-ad,v 1.16 2005/04/21 15:01:43 wiz Exp $
  	@if [ "$(GTK_DATADIR)" != "" ]; then				      \
  	   if [ ! -d "$(install_prefix)$(GTK_APPDIR)" ]; then		      \
  	     echo $(INSTALL_DIRS) "$(install_prefix)$(GTK_APPDIR)"	     ;\
-@@ -496,7 +496,7 @@
+@@ -514,7 +514,7 @@ install-gnome:: $(LOGO)
  # ../utils/images/screensaver-*.png
  # into /usr/share/xscreensaver/glade/
  install-gnome::
@@ -38,7 +38,7 @@ $NetBSD: patch-ad,v 1.16 2005/04/21 15:01:43 wiz Exp $
             if [ ! -d "$(install_prefix)$(GTK_GLADEDIR)" ]; then               \
               echo $(INSTALL_DIRS) "$(install_prefix)$(GTK_GLADEDIR)"         ;\
                    $(INSTALL_DIRS) "$(install_prefix)$(GTK_GLADEDIR)"         ;\
-@@ -513,7 +513,7 @@
+@@ -531,7 +531,7 @@ install-gnome::
  # xscreensaver-demo.glade2
  # into /usr/share/xscreensaver/glade/
  install-gnome:: xscreensaver-demo.glade2
