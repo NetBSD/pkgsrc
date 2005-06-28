@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2005/06/04 10:41:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.71.2.1 2005/06/28 08:02:46 salo Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -66,7 +66,6 @@ SUBDIR+=	ogle_gui
 SUBDIR+=	ogmtools
 SUBDIR+=	openquicktime
 SUBDIR+=	p5-xmltv
-SUBDIR+=	realplayer
 SUBDIR+=	realplayer-codecs
 SUBDIR+=	regionset
 SUBDIR+=	smpeg
@@ -76,7 +75,6 @@ SUBDIR+=	swfdec-gtk2
 SUBDIR+=	totem
 SUBDIR+=	totem-xine
 SUBDIR+=	transcode
-SUBDIR+=	trplayer
 SUBDIR+=	vlc
 SUBDIR+=	vls
 SUBDIR+=	win32-codecs
