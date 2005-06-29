@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10499 2005/06/29 09:46:05 jmmv Exp $
+$NetBSD: CHANGES,v 1.10500 2005/06/29 11:26:10 dogcow Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3070,3 +3070,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/gdm to 2.8.0.0nb1 [jmmv 2005-06-29]
 	Updated x11/gnome-panel to 2.10.2 [jmmv 2005-06-29]
 	Updated graphics/eog2 to 2.10.2 [jmmv 2005-06-29]
+	Updated devel/gputils to 0.13.2 [dogcow 2005-06-29]
