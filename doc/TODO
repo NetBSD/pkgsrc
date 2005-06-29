@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3667 2005/06/29 07:38:47 martti Exp $
+$NetBSD: TODO,v 1.3668 2005/06/29 11:26:10 dogcow Exp $
 
 Suggested new packages
 ======================
@@ -534,7 +534,6 @@ Suggested package updates
 	o gogo-3.11p1
 	o gpsdrive-2.09
 	o gpsim-devel-20041104
-	o gputils-0.13.0
 	o grace-5.1.18
 	o gramps-2.0.2 [2.0.0 does not work with newer py-gtk]
 	o grap-1.32
