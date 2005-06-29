@@ -1,20 +1,17 @@
-$NetBSD: patch-aa,v 1.6 2005/06/26 19:51:47 is Exp $
+$NetBSD: patch-aa,v 1.7 2005/06/29 22:01:19 is Exp $
 
---- mini_sendmail.c.orig	2003-11-17 03:03:35.000000000 +0100
+--- mini_sendmail.c.orig	2005-06-29 19:37:15.000000000 +0200
 +++ mini_sendmail.c
-@@ -133,7 +133,10 @@ main( int argc, char** argv )
+@@ -134,6 +134,8 @@ main( int argc, char** argv )
  	    timeout = atoi( &(argv[argn][2]) );
  	else if ( strcmp( argv[argn], "-v" ) == 0 )
  	    verbose = 1;
--	else if ( strcmp( argv[argn], "-i" ) == 0 )
 +	else if ( strcmp( argv[argn], "-oeq" ) == 0 )
 +	    verbose = 0;
-+	else if ( strcmp( argv[argn], "-i" ) == 0 ||
-+		  strcmp ( argv[argn], "-oi" ) == 0 )
+ 	else if ( strcmp( argv[argn], "-i" ) == 0 )
  	    ;	/* ignore */
- 	else if ( strcmp( argv[argn], "--" ) == 0 )
- 	    ;	/* ignore */
-@@ -504,14 +507,24 @@ parse_for_recipients( char* message )
+ 	else if ( strcmp( argv[argn], "-oi" ) == 0 )
+@@ -507,14 +509,24 @@ parse_for_recipients( char* message )
  	    switch ( *cp )
  		{
  		case '\n':
@@ -46,7 +43,7 @@ $NetBSD: patch-aa,v 1.6 2005/06/26 19:51:47 is Exp $
  		    }
  		break;
  		case ',':
-@@ -529,25 +542,46 @@ static void
+@@ -532,25 +544,46 @@ static void
  add_recipient( char* recipient, int len )
      {
      char buf[1000];
