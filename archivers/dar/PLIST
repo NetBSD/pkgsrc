@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/09 13:02:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/06/29 07:38:40 martti Exp $
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/dar.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/dar.mo
 bin/dar
 bin/dar_cp
 bin/dar_manager
@@ -13,6 +15,7 @@ include/dar/deci.hpp
 include/dar/ea.hpp
 include/dar/erreurs.hpp
 include/dar/generic_file.hpp
+include/dar/gettext.h
 include/dar/header_version.hpp
 include/dar/infinint.hpp
 include/dar/int_tools.hpp
@@ -20,13 +23,16 @@ include/dar/integers.hpp
 include/dar/libdar.hpp
 include/dar/limitint.hpp
 include/dar/mask.hpp
+include/dar/my_config.h
 include/dar/path.hpp
 include/dar/real_infinint.hpp
 include/dar/scrambler.hpp
 include/dar/special_alloc.hpp
 include/dar/statistics.hpp
 include/dar/storage.hpp
+include/dar/thread_cancellation.hpp
 include/dar/tools.hpp
+include/dar/tronconneuse.hpp
 include/dar/tuyau.hpp
 include/dar/user_interaction.hpp
 include/dar/wrapperlib.hpp
@@ -39,8 +45,7 @@ man/man1/dar_xform.1
 share/dar/dar_par.dcf
 share/dar/dar_par_create.duc
 share/dar/dar_par_test.duc
-share/doc/dar/DOC_API_V1
-share/doc/dar/DOC_API_V2
+share/doc/dar/FAQ
 share/doc/dar/FEATURES
 share/doc/dar/GOOD_BACKUP_PRACTICE
 share/doc/dar/LIMITATIONS
@@ -48,7 +53,10 @@ share/doc/dar/LINKS
 share/doc/dar/NOTES
 share/doc/dar/README
 share/doc/dar/TUTORIAL
+share/doc/dar/api_tutorial.html
 share/doc/dar/dar-differential-backup-mini-howto.en.html
+share/doc/dar/dar-differential-backup-mini-howto.es.html
+share/doc/dar/dar-differential-backup-mini-howto.it.html
 @dirrm share/doc/dar
 @dirrm share/dar
 @dirrm include/dar
