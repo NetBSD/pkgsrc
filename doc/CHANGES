@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10495 2005/06/29 08:41:57 jmmv Exp $
+$NetBSD: CHANGES,v 1.10496 2005/06/29 08:51:23 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3067,3 +3067,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/spamprobe to 1.2a [hubertf 2006-05-29]
 	Updated archivers/dar to 2.2.2 [martti 2006-05-29]
 	Updated wm/metacity to 2.10.2 [jmmv 2005-06-29]
+	Updated x11/gdm to 2.8.0.0nb1 [jmmv 2005-06-29]
