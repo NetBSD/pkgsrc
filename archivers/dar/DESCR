@@ -11,5 +11,3 @@ in the spirit of TAR, with some additions.  Notably:
 DAR also supports filtering, so files or directories can be excluded from
 an archive, compression, filtered compression, and the inclusion of parity
 in archives, to help recover from media errors.
-
-See http://dar.sourceforge.net/
