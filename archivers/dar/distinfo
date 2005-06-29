@@ -1,17 +1,7 @@
-$NetBSD: distinfo,v 1.7 2005/02/23 14:45:23 agc Exp $
+$NetBSD: distinfo,v 1.8 2005/06/29 07:38:40 martti Exp $
 
-SHA1 (dar-2.1.5.tar.gz) = 992836c05c685933e56e8035e00313008567948a
-RMD160 (dar-2.1.5.tar.gz) = f76796f902dbf851eb39d8de96e439a5c7f65ada
-Size (dar-2.1.5.tar.gz) = 652534 bytes
+SHA1 (dar-2.2.2.tar.gz) = b362ad3e192c7239a13a314d0f4750bc080b62d8
+RMD160 (dar-2.2.2.tar.gz) = 79dc8ac63d52af64774d982a388027f60707b48e
+Size (dar-2.2.2.tar.gz) = 1067171 bytes
 SHA1 (patch-aa) = 6f07f2bf85194cdad58d99c7cafd85e3b2c06031
-SHA1 (patch-ab) = 215f457ca03dcf86fba50c00198c934cfe0c915d
-SHA1 (patch-ac) = 0c3ae6c7c247b85257c4ebdfb7b1da8b2baf6e45
-SHA1 (patch-ad) = 45c1532ec5cf72d148fa331986e1680e7dcb099c
-SHA1 (patch-ae) = ab19ec5783d24df4e3e73c0cea7262aefb4196e1
-SHA1 (patch-af) = 967783c3d53fb975d436662121dd8f9db285b9aa
-SHA1 (patch-ag) = c99b58ae072c22ec2e4b85a6fc9a35edb7968385
-SHA1 (patch-ah) = 01916f19ad0e14d0840de5223d8625e610b83f51
-SHA1 (patch-ai) = a22efc4a16f79ab80a74a3bae21f403d128f54ae
-SHA1 (patch-aj) = 87aad964117f53b56acad9f9ba902a48adc01c24
-SHA1 (patch-ak) = e0d95bb0ff987cc7b6e32c38d3d47f693f7f8d93
-SHA1 (patch-al) = 767b836e0e30acd05d978a33ec3636b1b0e45684
+SHA1 (patch-ab) = 1d8fb3bcd9c0d6a07cb6413d0b94453264f3d499

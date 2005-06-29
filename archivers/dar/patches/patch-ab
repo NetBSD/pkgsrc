@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2005/01/24 16:58:06 tv Exp $
+$NetBSD: patch-ab,v 1.2 2005/06/29 07:38:40 martti Exp $
 
---- configure.ac.orig	2005-01-24 11:28:25.000000000 -0500
-+++ configure.ac
-@@ -47,7 +47,7 @@ AC_HEADER_STDC
- AC_HEADER_SYS_WAIT
- AC_CHECK_HEADER(zlib.h, [], [AC_MSG_ERROR([Cannot find zlib.h header file])])
- AC_CHECK_HEADER(bzlib.h, [], [AC_MSG_ERROR([Cannot find bzlib.h header file])])
--AC_CHECK_HEADERS([fcntl.h netinet/in.h stdint.h stdlib.h string.h sys/ioctl.h sys/socket.h termios.h unistd.h utime.h sys/types.h signal.h errno.h sys/un.h sys/stat.h time.h fnmatch.h regex.h pwd.h grp.h getopt.h stdio.h])
-+AC_CHECK_HEADERS([fcntl.h netinet/in.h arpa/inet.h stdint.h stdlib.h string.h sys/ioctl.h sys/socket.h termios.h unistd.h utime.h sys/types.h signal.h errno.h sys/un.h sys/stat.h time.h fnmatch.h regex.h pwd.h grp.h getopt.h stdio.h])
- 
- AC_SYS_LARGEFILE
- 
+--- doc/mini-howto/Makefile.in.orig	2005-06-09 13:19:08.000000000 +0300
++++ doc/mini-howto/Makefile.in	2005-06-09 13:19:21.000000000 +0300
+@@ -17,7 +17,7 @@
+ srcdir = @srcdir@
+ top_srcdir = @top_srcdir@
+ VPATH = @srcdir@
+-pkgdatadir = $(datadir)/@PACKAGE@
++pkgdatadir = $(datadir)/doc/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+ top_builddir = ../..
