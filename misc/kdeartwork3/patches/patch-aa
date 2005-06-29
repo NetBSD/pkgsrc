@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2004/08/21 13:01:33 markd Exp $
+$NetBSD: patch-aa,v 1.4 2005/06/29 13:10:17 markd Exp $
 
---- configure.orig	2004-08-14 11:45:15.000000000 +1200
+--- configure.orig	2005-05-24 03:46:46.000000000 +1200
 +++ configure
-@@ -32300,12 +32300,12 @@ done
+@@ -33095,12 +33095,12 @@ done
  IFS=$old_IFS
  
  
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.3 2004/08/21 13:01:33 markd Exp $
  
          if eval "test \"\${kde_cv_path_$kde_cache+set}\" = set"; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
-@@ -32324,16 +32324,16 @@ else
+@@ -33119,16 +33119,16 @@ else
  	IFS=$kde_save_IFS
  
          for dir in $dirs; do
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.3 2004/08/21 13:01:33 markd Exp $
                  break
  	    fi
            fi
-@@ -32354,12 +32354,12 @@ fi
+@@ -33149,12 +33149,12 @@ fi
  echo "${ECHO_T}not found" >&6
  
  
@@ -55,7 +55,7 @@ $NetBSD: patch-aa,v 1.3 2004/08/21 13:01:33 markd Exp $
  
          if eval "test \"\${kde_cv_path_$kde_cache+set}\" = set"; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
-@@ -32378,16 +32378,16 @@ else
+@@ -33173,16 +33173,16 @@ else
  	IFS=$kde_save_IFS
  
          for dir in $dirs; do
@@ -76,3 +76,12 @@ $NetBSD: patch-aa,v 1.3 2004/08/21 13:01:33 markd Exp $
                  break
  	    fi
            fi
+@@ -33356,7 +33356,7 @@ _ACEOF
+ 
+      echo "$as_me:$LINENO: checking for flame.xml" >&5
+ echo $ECHO_N "checking for flame.xml... $ECHO_C" >&6
+-     for subdir in lib/xscreensaver/config \
++     for subdir in libexec/xscreensaver/config \
+ 		   lib/X11/xscreensaver/config \
+ 		   share/control-center/screensavers \
+ 		   share/control-center/screensavers \
