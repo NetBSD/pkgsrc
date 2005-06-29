@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2005/04/26 20:05:24 drochner Exp $
+@comment $NetBSD: PLIST,v 1.21 2005/06/29 09:30:56 jmmv Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
@@ -269,6 +269,7 @@ ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-panel-2.0.mo
+${PKGLOCALEDIR}/locale/hy/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-panel-2.0.mo
