@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3666 2005/06/28 17:14:26 peter Exp $
+$NetBSD: TODO,v 1.3667 2005/06/29 07:38:47 martti Exp $
 
 Suggested new packages
 ======================
@@ -429,7 +429,6 @@ Suggested package updates
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.17.1
 	o dact-0.8.37
-	o dar-2.2.0
 	o darcs-1.0.3
 	o dbench-3.03
 	o dbus-0.31 [0.2x API more common -- new package?]
