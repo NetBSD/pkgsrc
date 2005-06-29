@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10497 2005/06/29 09:31:15 jmmv Exp $
+$NetBSD: CHANGES,v 1.10498 2005/06/29 09:33:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3064,8 +3064,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/aspell to 0.60.3 [wiz 2005-06-28]
 	Updated net/entropy to 0.8.3.421 [tv 2005-06-28]
 	Updated net/openntpd to 3.7p1 [peter 2005-06-28]
-	Updated mail/spamprobe to 1.2a [hubertf 2006-05-29]
-	Updated archivers/dar to 2.2.2 [martti 2006-05-29]
+	Updated mail/spamprobe to 1.2a [hubertf 2005-06-29]
+	Updated archivers/dar to 2.2.2 [martti 2005-06-29]
 	Updated wm/metacity to 2.10.2 [jmmv 2005-06-29]
 	Updated x11/gdm to 2.8.0.0nb1 [jmmv 2005-06-29]
 	Updated x11/gnome-panel to 2.10.2 [jmmv 2005-06-29]
