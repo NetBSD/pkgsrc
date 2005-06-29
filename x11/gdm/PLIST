@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2005/06/26 16:52:14 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.19 2005/06/29 08:51:08 jmmv Exp $
 bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
@@ -37,6 +37,7 @@ share/examples/gdm/modules/AccessDwellMouseEvents
 share/examples/gdm/modules/AccessKeyMouseEvents
 share/examples/gdm/modules/factory-AccessDwellMouseEvents
 share/examples/gdm/modules/factory-AccessKeyMouseEvents
+share/examples/rc.d/gdm
 share/gdm/BuiltInSessions/default.desktop
 share/gdm/gdmchooser.glade
 share/gdm/gdmsetup.glade
@@ -240,6 +241,7 @@ share/xsessions/gnome.desktop
 @dirrm share/gdm/themes
 @dirrm share/gdm/BuiltInSessions
 @dirrm share/gdm
+@dirrm share/examples/rc.d
 @dirrm share/examples/gdm/modules
 @dirrm share/examples/gdm/PreSession
 @dirrm share/examples/gdm/PostSession
