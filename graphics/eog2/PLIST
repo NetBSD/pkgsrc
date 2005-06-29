@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/04/20 16:15:16 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/06/29 09:45:12 jmmv Exp $
 bin/eog
 share/applications/eog.desktop
 share/eog/eog-gtk-ui.xml
@@ -92,6 +92,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/eog.mo
@@ -104,8 +105,8 @@ ${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/eog.mo
-${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/eog.mo
