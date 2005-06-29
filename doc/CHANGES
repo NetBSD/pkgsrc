@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10500 2005/06/29 11:26:10 dogcow Exp $
+$NetBSD: CHANGES,v 1.10501 2005/06/29 22:05:56 is Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3071,3 +3071,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/gnome-panel to 2.10.2 [jmmv 2005-06-29]
 	Updated graphics/eog2 to 2.10.2 [jmmv 2005-06-29]
 	Updated devel/gputils to 0.13.2 [dogcow 2005-06-29]
+	Updated mail/mini_sendmail to 1.3.6nb1 [is 2005-06-29]
