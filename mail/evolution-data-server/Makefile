@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/05/22 20:28:47 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/29 22:14:07 jmmv Exp $
 #
 
 DISTNAME=	evolution-data-server-1.2.2
@@ -57,6 +57,7 @@ PKGCONFIG_OVERRIDE+=	evolution-data-server.pc.in
 
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/openldap/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
