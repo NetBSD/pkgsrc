@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 09:59:29 agc Exp $
+$NetBSD: distinfo,v 1.8 2005/06/29 00:06:58 hubertf Exp $
 
-SHA1 (spamprobe-1.0a.tar.gz) = 4077b4b5280b29fa08b31b3131ee5cf005faefd7
-RMD160 (spamprobe-1.0a.tar.gz) = 8ce035880b88f69cee01f42fbd1a9a154e88d752
-Size (spamprobe-1.0a.tar.gz) = 165747 bytes
+SHA1 (spamprobe-1.2a.tar.gz) = 63470a74339faeb78c61a2d8a60e6d215bec47f2
+RMD160 (spamprobe-1.2a.tar.gz) = 036b78c096cb49598a2c68c72a7753d72baf5704
+Size (spamprobe-1.2a.tar.gz) = 189240 bytes
