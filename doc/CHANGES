@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10515 2005/06/30 16:32:29 tv Exp $
+$NetBSD: CHANGES,v 1.10516 2005/06/30 17:25:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3087,3 +3087,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/gentoo to 0.11.55 [adam 2005-06-30]
 	Updated x11/lesstif to 0.94.4 [adam 2005-06-30]
 	Updated net/entropy to 0.9.0.429 [tv 2005-06-30]
+	Updated lang/perl5 to 5.8.6nb6 [minskim 2005-06-30]
