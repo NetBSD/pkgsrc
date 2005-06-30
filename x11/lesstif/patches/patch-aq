@@ -1,13 +1,13 @@
-$NetBSD: patch-aq,v 1.16 2004/09/28 12:52:14 adam Exp $
+$NetBSD: patch-aq,v 1.17 2005/06/30 15:28:45 adam Exp $
 
---- doc/www.lesstif.org/Makefile.in.orig	2004-09-26 14:15:03.000000000 +0000
+--- doc/www.lesstif.org/Makefile.in.orig	2005-03-31 19:44:59.000000000 +0000
 +++ doc/www.lesstif.org/Makefile.in
 @@ -263,7 +263,7 @@ SUBDIRS = images
- # Lets put the informational stuff in a sub directory to avoid 
+ # Lets put the informational stuff in a sub directory to avoid
  # polluting /usr/local for default installs.
  #
--docdir = $(prefix)/LessTif/doc
-+docdir = $(prefix)/share/doc/html/lesstif
+-rootdir = $(prefix)/LessTif
++rootdir = $(prefix)/share/lesstif
+ docdir = $(rootdir)/doc
  doc_DATA = \
     Advocacy.html          contents.html          misc_frame.html \
-    BUG-HUNTING.html       core.html              news.html \
