@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2005/06/30 15:28:45 adam Exp $
+# $NetBSD: Makefile,v 1.82 2005/06/30 15:42:49 adam Exp $
 
 DISTNAME=	lesstif-0.94.4
 CATEGORIES=	x11
@@ -11,10 +11,10 @@ COMMENT=	API compatible clone of the OSF/Motif toolkit
 
 CONFLICTS+=	openmotif-[0-9]*
 
-USE_X11BASE=		YES
 USE_TOOLS+=		gmake
-USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
+USE_X11BASE=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-production --disable-debug --disable-verbose
 CONFIGURE_ARGS+=	--enable-editres --enable-xdnd
 
