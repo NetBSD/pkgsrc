@@ -1,4 +1,4 @@
-# $NetBSD: db1.builtin.mk,v 1.12 2005/06/20 07:20:40 jlam Exp $
+# $NetBSD: db1.builtin.mk,v 1.13 2005/06/30 12:52:12 adam Exp $
 
 BUILTIN_PKG:=	db1
 
@@ -39,8 +39,7 @@ PREFER.db1=		native
 USE_BUILTIN.db1=	no
 .  else
 USE_BUILTIN.db1=	${IS_BUILTIN.db1}
-.    if defined(BUILTIN_PKG.db1) && \
-        !empty(IS_BUILTIN.db1:M[yY][eE][sS])
+.    if defined(BUILTIN_PKG.db1) && !empty(IS_BUILTIN.db1:M[yY][eE][sS])
 USE_BUILTIN.db1=	yes
 .      for _dep_ in ${BUILDLINK_DEPENDS.db1}
 .        if !empty(USE_BUILTIN.db1:M[yY][eE][sS])
