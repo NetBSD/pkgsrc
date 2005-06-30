@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/12/10 06:40:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/06/30 10:25:33 markd Exp $
 bin/kdirstat
 share/doc/kde/HTML/en/kdirstat/common
 share/doc/kde/HTML/en/kdirstat/feedback-mail.png
@@ -8,6 +8,8 @@ share/doc/kde/HTML/en/kdirstat/kdirstat-config-cleanups.png
 share/doc/kde/HTML/en/kdirstat/kdirstat-config-tree-colors.png
 share/doc/kde/HTML/en/kdirstat/kdirstat-main.png
 share/kde/applnk/Utilities/kdirstat.desktop
+share/kde/apps/kconf_update/fix_move_to_trash_bin.pl
+share/kde/apps/kconf_update/kdirstat.upd
 share/kde/apps/kdirstat/icons/hicolor/16x16/actions/symlink.png
 share/kde/apps/kdirstat/icons/hicolor/32x32/actions/symlink.png
 share/kde/apps/kdirstat/icons/hicolor/48x48/actions/symlink.png
@@ -19,7 +21,13 @@ share/kde/icons/locolor/16x16/apps/kdirstat.png
 share/kde/icons/locolor/32x32/apps/kdirstat.png
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kdirstat.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kdirstat.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kdirstat.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kdirstat.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/kdirstat.mo
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/kdirstat/icons/locolor/16x16/actions
 @dirrm share/kde/apps/kdirstat/icons/locolor/16x16
 @dirrm share/kde/apps/kdirstat/icons/locolor
@@ -32,4 +40,8 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/kdirstat.mo
 @dirrm share/kde/apps/kdirstat/icons/hicolor
 @dirrm share/kde/apps/kdirstat/icons
 @dirrm share/kde/apps/kdirstat
+@comment in kde: @dirrm share/kde/apps/kconf_update
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/applnk/Utilities
 @dirrm share/doc/kde/HTML/en/kdirstat
+@comment in kde: @dirrm share/doc/kde/HTML/en
