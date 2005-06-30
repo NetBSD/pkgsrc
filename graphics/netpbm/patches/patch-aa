@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.30 2005/02/17 11:36:01 adam Exp $
+$NetBSD: patch-aa,v 1.31 2005/06/30 15:58:59 minskim Exp $
 
---- Makefile.config.in.orig	2005-01-13 03:50:04.000000000 +0000
+--- Makefile.config.in.orig	2005-01-12 21:50:04.000000000 -0600
 +++ Makefile.config.in
+@@ -24,7 +24,7 @@ DEFAULT_TARGET = nonmerge
+ # and skip it on those systems unless you want to debug it and fix it.
+ # OpenBSD:
+ #BUILD_FIASCO = N
+-BUILD_FIASCO = Y
++BUILD_FIASCO?= Y
+ 
+ # The following are commands for the build process to use.  These values
+ # do not get built into anything.
 @@ -33,7 +33,7 @@ BUILD_FIASCO = Y
  #CC = gcc
  # Note that 'cc' is usually an alias for whatever is the main compiler
