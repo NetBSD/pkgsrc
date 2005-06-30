@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.16 2005/02/24 13:40:53 agc Exp $
+$NetBSD: distinfo,v 1.17 2005/06/30 15:29:13 adam Exp $
 
-SHA1 (gentoo-0.11.54.tar.gz) = 51c8497f4ebbcac0e60d400fc6104ddc7644196e
-RMD160 (gentoo-0.11.54.tar.gz) = a0760dfca71521eb8ede1c7f9e32f072a0dc626a
-Size (gentoo-0.11.54.tar.gz) = 1379376 bytes
-SHA1 (patch-aa) = 18383ec1190260affbd0389626e03b70ba3291d5
+SHA1 (gentoo-0.11.55.tar.gz) = 5ba1627d0c7caba8ba0064dde5fd8850a38a092e
+RMD160 (gentoo-0.11.55.tar.gz) = 30b4edd10a892709a39ac3f83cc5385652a965e2
+Size (gentoo-0.11.55.tar.gz) = 1395600 bytes
+SHA1 (patch-aa) = bd3736cffbda663fd571b6b7a2171e64b4d52927
 SHA1 (patch-ab) = 1aaa154789866b436303b0a8f6f20707301d8b7f
 SHA1 (patch-ac) = ab5d886b29945fcb54baa94e47140516bd4db93e
 SHA1 (patch-ad) = 0ac9fca5454c98633aa6c0bacfcaa364c34df37f
