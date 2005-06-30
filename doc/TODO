@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3671 2005/06/30 12:52:32 wiz Exp $
+$NetBSD: TODO,v 1.3672 2005/06/30 12:59:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -877,7 +877,7 @@ Suggested package updates
 	o pim6sd-20040824a
 	o pinentry-0.7.2
 	o pircbot-1.4.2
-	o pkgconfig-0.18
+	o pkg-config-0.18.1 [replacing pkgconfig]
 	o plan-1.9
 	o plib-1.8.4
 	o pload-0.9.5
