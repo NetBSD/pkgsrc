@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/04/01 11:33:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/06/30 15:06:24 adam Exp $
 bin/xplanet
 man/man1/xplanet.1
 share/xplanet/arcs/README
@@ -21,6 +21,7 @@ share/xplanet/images/shuttle.png
 share/xplanet/images/smile.png
 share/xplanet/images/sublunar.png
 share/xplanet/images/subsolar.png
+share/xplanet/images/sun.jpg
 share/xplanet/markers/README
 share/xplanet/markers/brightStars
 share/xplanet/markers/earth
