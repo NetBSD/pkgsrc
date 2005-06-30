@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3673 2005/06/30 15:07:28 adam Exp $
+$NetBSD: TODO,v 1.3674 2005/06/30 15:14:55 adam Exp $
 
 Suggested new packages
 ======================
@@ -517,7 +517,6 @@ Suggested package updates
 	o ghostscript-8.51
 	o gifsicle-1.42
 	o gift-openft-0.2.1.4
-	o gimp-2.2.8
 	o git-4.3.20
 	o gkrellm-multiping-2.0.10
 	o gkrellm-weather-2.0.7
