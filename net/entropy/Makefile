@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2005/06/28 16:59:36 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/06/30 16:31:47 tv Exp $
 #
 
-DISTNAME=		entropy-${ENTROPY_VERSION}
+DISTNAME=		entropy_rsa-${ENTROPY_VERSION}
 PKGNAME=		entropy-${ENTROPY_VERSION:S/-/./}
-WRKSRC=			${WRKDIR}/entropy-${ENTROPY_VERSION:C/-.*$//}
+WRKSRC=			${WRKDIR}/entropy_rsa-${ENTROPY_VERSION:C/-.*$//}
 CATEGORIES=		net www
 MASTER_SITES=		http://entropy.stop1984.com/files/
 EXTRACT_SUFX=		.tgz
@@ -15,7 +15,7 @@ COMMENT=		Anonymous peer-to-peer networking node (similar to Freenet)
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
-ENTROPY_VERSION=	0.8.3-421
+ENTROPY_VERSION=	0.9.0-429
 
 CONFIGURE_ARGS+=	--enable-setproctitle --enable-verbose --disable-posix-sem
 LIBS+=			-L${BUILDLINK_PREFIX.zlib}/lib -lz -L${BUILDLINK_PREFIX.expat}/lib -lexpat
@@ -26,7 +26,7 @@ post-patch:
 	${SED} -e '/^# /!s/^#//' <${WRKSRC}/seed.txt-dist >${WRKSRC}/seed.txt
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/entropy ${PREFIX}/bin/entropy
+	${INSTALL_PROGRAM} ${WRKSRC}/entropy_rsa ${PREFIX}/bin/entropy
 	${INSTALL_PROGRAM} ${WRKSRC}/monoopt ${PREFIX}/bin/entropy-monoopt
 	${INSTALL_PROGRAM} ${WRKSRC}/storechg ${PREFIX}/bin/entropy-storechg
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/entropy
@@ -34,9 +34,9 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/entropy
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/entropy/de
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/entropy/node
-	${INSTALL_DATA} ${WRKSRC}/entropy.conf-dist ${PREFIX}/share/examples/entropy/entropy.conf
+	${INSTALL_DATA} ${WRKSRC}/entropy_rsa.conf-dist ${PREFIX}/share/examples/entropy/entropy.conf
 	${INSTALL_DATA} ${WRKSRC}/seed.txt ${PREFIX}/share/examples/entropy/
-	${INSTALL_DATA} ${WRKSRC}/de/entropy.lo ${PREFIX}/share/examples/entropy/de/
+	${INSTALL_DATA} ${WRKSRC}/de/entropy_rsa.lo ${PREFIX}/share/examples/entropy/de/entropy.lo
 	${INSTALL_DATA} ${WRKSRC}/node/[0-9a-z]* ${PREFIX}/share/examples/entropy/node/
 
 .include "../../mk/bsd.prefs.mk"
