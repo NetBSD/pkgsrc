@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3674 2005/06/30 15:14:55 adam Exp $
+$NetBSD: TODO,v 1.3675 2005/06/30 15:30:47 adam Exp $
 
 Suggested new packages
 ======================
@@ -510,7 +510,6 @@ Suggested package updates
 	o gcube-0.4
 	o gdb6-6.3.0
 	o gdm1-2.2.5.5
-	o gentoo-0.11.55
 	o gettext-0.14.5
 	o gfract-0.3.2
 	o ggiterm-0.7.1
