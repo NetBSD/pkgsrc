@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3669 2005/06/30 01:51:32 wiz Exp $
+$NetBSD: TODO,v 1.3670 2005/06/30 11:58:52 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1107,7 +1107,6 @@ Suggested package updates
 	o vobcopy-0.5.14
 	o vsftpd-2.01 [pkg/26811]
 	o vsftpd-2.0.3
-	o vttest-20050107
 	o w32api-3.2
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
