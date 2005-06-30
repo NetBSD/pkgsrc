@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2005/06/30 13:07:39 minskim Exp $
+# $NetBSD: Makefile,v 1.95 2005/06/30 17:24:49 minskim Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -13,7 +13,7 @@ EXTRACT_SUFX=	.tar.bz2
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
 PKGNAME=	perl-${PERL5_VERS}
-PKGREVISION=	5
+PKGREVISION=	6
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 .else
 .  if !empty(PERL5_SNAPSHOT)
@@ -99,7 +99,7 @@ USE_TOOLS+=		hostname ln sed test
 CONFIGURE_ARGS+=	-Daphostname=${TOOLS_HOSTNAME_CMD:Q}
 CONFIGURE_ARGS+=	-Dln=${TOOLS_LN:Q}
 CONFIGURE_ARGS+=	-Dsed=${TOOLS_SED:Q}
-CONFIGURE_ARGS+=	-Dissymlink=${TOOLS_TEST:Q}
+CONFIGURE_ARGS+=	-Dissymlink="${TOOLS_TEST} -h"
 
 # Nail down the needed libraries for each platform here to avoid hidden
 # dependencies.  If this isn't defined, then use the perl defaults for the
