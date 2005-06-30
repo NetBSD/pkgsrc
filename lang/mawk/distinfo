@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 09:03:09 agc Exp $
+$NetBSD: distinfo,v 1.8 2005/06/30 05:57:38 minskim Exp $
 
 SHA1 (mawk-1.3.3.tar.gz) = 314bcdb6543733f47ef4d9d9356b23f53d6a7f89
 RMD160 (mawk-1.3.3.tar.gz) = f1c939aa032ec7f5e8157a9440d3520f2ecc8501
@@ -6,5 +6,5 @@ Size (mawk-1.3.3.tar.gz) = 209942 bytes
 SHA1 (patch-aa) = 49ef8e8f9d5392c47933eadba87aceae1079d89b
 SHA1 (patch-ab) = b8faa90c98fac027b295336936a8e43c7087d972
 SHA1 (patch-ac) = e6671c71b7fdc2c8ccc0866e530c38057a80d48f
-SHA1 (patch-ad) = f74b16d155d3486e55b37485fe5d5c40ce5a4b56
+SHA1 (patch-ad) = 52318904326713bd4fa2bfc8323ff93d4fe52ef2
 SHA1 (patch-ae) = 74d374a1f5b216543a748fbde4d259c6e9d6e401
