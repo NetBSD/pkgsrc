@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2005/02/21 21:24:06 veego Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2005/06/30 13:22:19 hubertf Exp $
 Acrobat4/Browsers/netscape
 Acrobat4/Browsers/${PLATFORM}/nppdf.so
 Acrobat4/ReadMe
@@ -13,7 +13,6 @@ Acrobat4/Reader/res/splashScreen21.xbm
 Acrobat4/Reader/res/splashScreen28.xpm
 Acrobat4/Reader/${PLATFORM}/app-defaults/AcroRead
 Acrobat4/Reader/${PLATFORM}/bin/acroread
-Acrobat4/Reader/${PLATFORM}/lib/XKeysymDB
 Acrobat4/Reader/${PLATFORM}/plug_ins/AcroForm.api
 Acrobat4/Reader/${PLATFORM}/plug_ins/Highlight.api
 Acrobat4/Reader/${PLATFORM}/plug_ins/JavaScripts/AFStrENU.js
