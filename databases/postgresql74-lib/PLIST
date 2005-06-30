@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/12/18 14:26:15 darcy Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/06/30 01:50:11 wiz Exp $
 bin/ecpg
 bin/pg_config
 include/ecpg_informix.h
@@ -385,6 +385,7 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libpq.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libpq.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libpq.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libpq.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libpq.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libpq.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libpq.mo
 share/postgresql/pg_service.conf.sample
