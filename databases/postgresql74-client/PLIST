@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/12/18 14:26:15 darcy Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/06/30 01:50:10 wiz Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -182,6 +182,10 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/pg_dump.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/pg_resetxlog.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/pgscripts.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/psql.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/pg_controldata.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/pg_resetxlog.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/pgscripts.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/psql.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/pg_controldata.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/pg_dump.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/pg_resetxlog.mo
