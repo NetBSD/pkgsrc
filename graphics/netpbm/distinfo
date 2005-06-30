@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.36 2005/06/30 14:55:13 adam Exp $
+$NetBSD: distinfo,v 1.37 2005/06/30 15:58:59 minskim Exp $
 
 SHA1 (netpbm-10.26.11.tgz) = 85dc3002c2fd9f43be2ed8517e94d126e2961f1b
 RMD160 (netpbm-10.26.11.tgz) = cf0c6abd134f757b1ffbc8598cfc9f1d1d5f550f
 Size (netpbm-10.26.11.tgz) = 2538375 bytes
-SHA1 (patch-aa) = f3f7861b0e0e3f812861643afe916c40277f4944
+SHA1 (patch-aa) = 92a760abe800648e76a3468d1e145b51022c01aa
 SHA1 (patch-ab) = ebab5f2ec96539058a8fbd79bf7867d1a49e02fd
 SHA1 (patch-ac) = 07f109139bf30da22b05d00189cbb7b4a5f8f05a
 SHA1 (patch-ae) = 33a5be2843dd85b530f5e6ba496cd0380cd5edd1
