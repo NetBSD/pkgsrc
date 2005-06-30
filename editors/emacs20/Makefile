@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/01 18:02:45 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/06/30 10:16:38 markd Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	5
@@ -29,6 +29,10 @@ USE_TOOLS+=	gmake
 GNU_ARCH.mipsbe= mips
 
 BUILD_DEFS+=	USE_INET6 EMACS_USE_POP
+
+# build PATH in the dumped emacs is not a problem
+CHECK_WRKREF_SKIP+=	${PREFIX}/bin/emacs
+CHECK_WRKREF_SKIP+=	${PREFIX}/bin/emacs-20.7
 
 .include "../../mk/bsd.prefs.mk"
 
