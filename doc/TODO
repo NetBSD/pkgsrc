@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3670 2005/06/30 11:58:52 minskim Exp $
+$NetBSD: TODO,v 1.3671 2005/06/30 12:52:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -443,6 +443,7 @@ Suggested package updates
 	o distcc-2.18.3
 	o dmalloc-5.4.2
 	o dnstracer-1.8
+	o docbook-4.5cr1
 	o dpkg-1.13.3
 	o dvdrip-0.52.5
 	o dvipdfmx-20050201
@@ -512,6 +513,7 @@ Suggested package updates
 	o gentoo-0.11.55
 	o gettext-0.14.5
 	o gfract-0.3.2
+	o ggiterm-0.7.1
 	o ghostscript-8.51
 	o gifsicle-1.42
 	o gift-openft-0.2.1.4
@@ -694,6 +696,7 @@ Suggested package updates
 	o muse-0.9.1
 	o mutt-devel-1.5.7
 	o nagios-2.0b3 [replacing netsaint]
+	o nail-11.23
 	o nano-1.2.5
 	o nap-1.5.3
 	o navi2ch-1.7.5
@@ -874,6 +877,7 @@ Suggested package updates
 	o pim6sd-20040824a
 	o pinentry-0.7.2
 	o pircbot-1.4.2
+	o pkgconfig-0.18
 	o plan-1.9
 	o plib-1.8.4
 	o pload-0.9.5
@@ -1009,7 +1013,7 @@ Suggested package updates
 	o skampi-4.1
 	o skill-4.1.2
 	o skkinput-2.06.4
-	o skype-1.1.0.3 [libdbus missing in suse91 compat]
+	o skype-1.1.0.13 [libdbus missing in suse91 compat]
 	o sma-1.4
 	o smalleiffel-0.90
 	o smalltalk-2.1.10
@@ -1118,6 +1122,7 @@ Suggested package updates
 	o wget-1.10
 	o winbind-3.0.13
 	o windowlab-1.31
+	o wine-20050628
 	o wmbiff-0.4.26
 	o wmctrl-1.07
 	o wmweather-2.4.3
