@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10506 2005/06/30 13:03:35 adam Exp $
+$NetBSD: CHANGES,v 1.10507 2005/06/30 13:09:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3077,3 +3077,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/kdirstat to 2.4.3 [markd 2005-06-30]
 	Updated misc/vttest to 20050107 [minskim 2005-06-30]
 	Updated graphics/freetype2 to 2.1.10 [adam 2005-06-30]
+	Updated lang/perl5 to 5.8.6nb5 [minskim 2005-06-30]
