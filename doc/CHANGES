@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10503 2005/06/30 04:08:42 minskim Exp $
+$NetBSD: CHANGES,v 1.10504 2005/06/30 10:28:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3074,3 +3074,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/mini_sendmail to 1.3.6nb1 [is 2005-06-29]
 	Updated databases/postgresql74 to 7.4.8 [wiz 2005-06-30]
 	Updated security/skey to 1.1.5nb1 [minskim 2005-06-30]
+	Updated sysutils/kdirstat to 2.4.3 [markd 2005-06-30]
