@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2005/06/08 14:39:40 markd Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/06/30 10:12:35 markd Exp $
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	markd@NetBSD.org
@@ -20,6 +20,10 @@ WRKSRC=		${WRKDIR}/emacs-${EMACSVERSION}
 PLIST_SUBST+=	EMACSVERSION=${EMACSVERSION}
 
 MAKEFLAGS+=	EMACSLOADPATH=${WRKSRC}/lisp
+
+# build PATH in the dumped emacs is not a problem
+CHECK_WRKREF_SKIP+=	${PREFIX}/bin/emacs
+CHECK_WRKREF_SKIP+=	${PREFIX}/bin/emacs-${EMACSVERSION}
 
 .include "../../mk/bsd.prefs.mk"
 
