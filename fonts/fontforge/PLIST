@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/02/15 14:39:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/06/30 14:36:27 adam Exp $
 bin/fontforge
 bin/pfaedit
 bin/sfddiff
@@ -15,4 +15,5 @@ share/fontforge/pfaedit-gr.ui
 share/fontforge/pfaedit-it.ui
 share/fontforge/pfaedit-ja.ui
 share/fontforge/pfaedit-ru.ui
+share/fontforge/pfaedit-zh.ui
 @dirrm share/fontforge
