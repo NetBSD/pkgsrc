@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2005/03/07 10:16:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/06/30 13:16:51 adam Exp $
 bin/AbiWord-2.2
 bin/abiword
 bin/ttfadmin.sh
@@ -197,6 +197,8 @@ share/AbiSuite-2.2/AbiWord/help/en-US/howtodocument.info
 share/AbiSuite-2.2/AbiWord/help/en-US/howtoexporthtml.abw
 share/AbiSuite-2.2/AbiWord/help/en-US/howtoexporthtml.html
 share/AbiSuite-2.2/AbiWord/help/en-US/howtoexporthtml.info
+share/AbiSuite-2.2/AbiWord/help/en-US/howtohistory.abw
+share/AbiSuite-2.2/AbiWord/help/en-US/howtohistory.html
 share/AbiSuite-2.2/AbiWord/help/en-US/howtolists.abw
 share/AbiSuite-2.2/AbiWord/help/en-US/howtolists.html
 share/AbiSuite-2.2/AbiWord/help/en-US/howtolists.info
@@ -211,6 +213,8 @@ share/AbiSuite-2.2/AbiWord/help/en-US/howtonormaltemplate.info
 share/AbiSuite-2.2/AbiWord/help/en-US/howtoprefs.abw
 share/AbiSuite-2.2/AbiWord/help/en-US/howtoprefs.html
 share/AbiSuite-2.2/AbiWord/help/en-US/howtoprefs.info
+share/AbiSuite-2.2/AbiWord/help/en-US/howtorevisions.abw
+share/AbiSuite-2.2/AbiWord/help/en-US/howtorevisions.html
 share/AbiSuite-2.2/AbiWord/help/en-US/howtotables.abw
 share/AbiSuite-2.2/AbiWord/help/en-US/howtotables.html
 share/AbiSuite-2.2/AbiWord/help/en-US/howtotables.info
@@ -898,6 +902,7 @@ share/AbiSuite-2.2/templates/normal.awt-en_IE
 share/AbiSuite-2.2/templates/normal.awt-en_NZ
 share/AbiSuite-2.2/templates/normal.awt-en_ZA
 share/AbiSuite-2.2/templates/normal.awt-es
+share/AbiSuite-2.2/templates/normal.awt-es_AR
 share/AbiSuite-2.2/templates/normal.awt-es_ES
 share/AbiSuite-2.2/templates/normal.awt-es_IR
 share/AbiSuite-2.2/templates/normal.awt-es_MX
