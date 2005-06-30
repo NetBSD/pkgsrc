@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.2 2005/02/15 12:25:07 drochner Exp $
+$NetBSD: patch-al,v 1.3 2005/06/30 03:12:42 minskim Exp $
 
---- configure.orig	2005-01-11 14:48:52.000000000 +0100
+--- configure.orig	2005-01-11 07:48:52.000000000 -0600
 +++ configure
 @@ -1351,7 +1351,7 @@ rm confdefs.h
  mv confdefs.h.new confdefs.h
@@ -20,7 +20,19 @@ $NetBSD: patch-al,v 1.2 2005/02/15 12:25:07 drochner Exp $
    # On Solaris 2.6, sys/wait.h is inconsistent in the usage
    # of union __?sigval. Reported by Stuart Bishop.
    SunOS/5.6)
-@@ -3733,7 +3735,7 @@ _ACEOF
+@@ -1505,6 +1507,11 @@ case $ac_sys_system/$ac_sys_release in
+   # has another value. By not (re)defining it, the defaults come in place.
+   AIX/4)
+     define_xopen_source=no;;
++  # On Mac OS X 10.4, defining _POSIX_C_SOURCE or _XOPEN_SOURCE
++  # disables platform specific features beyond repair.
++  Darwin/8.*)
++    define_xopen_source=no
++    ;;
+ esac
+ 
+ if test $define_xopen_source = yes
+@@ -3733,7 +3740,7 @@ _ACEOF
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
@@ -29,7 +41,7 @@ $NetBSD: patch-al,v 1.2 2005/02/15 12:25:07 drochner Exp $
  	  LDLIBRARY='libpython$(VERSION).so'
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
-@@ -3754,6 +3756,14 @@ _ACEOF
+@@ -3754,6 +3761,14 @@ _ACEOF
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=DLL_PATH=`pwd`:${DLL_PATH:-/atheos/sys/libs:/atheos/autolnk/lib}
  	  ;;
@@ -44,7 +56,7 @@ $NetBSD: patch-al,v 1.2 2005/02/15 12:25:07 drochner Exp $
    esac
    # DG/UX requires some fancy ld contortions to produce a .so from an .a
    case $MACHDEP in
-@@ -4152,7 +4162,12 @@ echo "${ECHO_T}$ac_cv_no_strict_aliasing
+@@ -4152,7 +4167,12 @@ echo "${ECHO_T}$ac_cv_no_strict_aliasing
  	    ;;
  	# is there any other compiler on Darwin besides gcc?
  	Darwin*)
@@ -58,7 +70,7 @@ $NetBSD: patch-al,v 1.2 2005/02/15 12:25:07 drochner Exp $
  	    ;;
      esac
      ;;
-@@ -10979,7 +10994,7 @@ then
+@@ -10979,7 +10999,7 @@ then
  			LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework. Ignore undefined symbols, assuming they come from Python
@@ -67,7 +79,7 @@ $NetBSD: patch-al,v 1.2 2005/02/15 12:25:07 drochner Exp $
  		fi ;;
  	Darwin/1.4*|Darwin/5.*|Darwin/6.*)
  		LDSHARED='$(CC) $(LDFLAGS) -bundle'
-@@ -11009,12 +11024,12 @@ then
+@@ -11009,12 +11029,12 @@ then
  				LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -83,7 +95,7 @@ $NetBSD: patch-al,v 1.2 2005/02/15 12:25:07 drochner Exp $
  	dgux*) LDSHARED="ld -G";;
  	BSD/OS*/4*) LDSHARED="gcc -shared";;
  	OpenBSD*|FreeBSD*)
-@@ -15127,6 +15142,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -15127,6 +15147,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
  #include "confdefs.h"
