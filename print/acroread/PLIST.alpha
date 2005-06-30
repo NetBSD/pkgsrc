@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST.alpha,v 1.1 2001/10/31 23:31:21 zuntum Exp $
+@comment $NetBSD: PLIST.alpha,v 1.2 2005/06/30 13:22:19 hubertf Exp $
 Acrobat4/Reader/help/search.pdf
+Acrobat4/Reader/${PLATFORM}/lib/XKeysymDB
 Acrobat4/Reader/${PLATFORM}/lib/libAGM.so
 Acrobat4/Reader/${PLATFORM}/lib/libAGM.so.3
 Acrobat4/Reader/${PLATFORM}/lib/libAGM.so.3.0

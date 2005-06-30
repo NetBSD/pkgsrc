@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST.sparc,v 1.1 2001/10/31 23:31:21 zuntum Exp $
+@comment $NetBSD: PLIST.sparc,v 1.2 2005/06/30 13:22:19 hubertf Exp $
 lib/netscape/plugins/nppdf.so
 Acrobat4/Reader/desktop/olwm/acroread.cetable
 Acrobat4/Reader/desktop/olwm/acroread.deskinstall
 Acrobat4/Reader/desktop/olwm/acroread.prog.icon
 Acrobat4/Reader/desktop/olwm/pdf.icon
 Acrobat4/Reader/help/search.pdf
+Acrobat4/Reader/${PLATFORM}/lib/XKeysymDB
 Acrobat4/Reader/${PLATFORM}/lib/libAGM.so
 Acrobat4/Reader/${PLATFORM}/lib/libAGM.so.3
 Acrobat4/Reader/${PLATFORM}/lib/libAGM.so.3.0
