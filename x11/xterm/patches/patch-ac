@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.4 2005/06/30 05:05:37 minskim Exp $
+
+--- main.c.orig	2005-05-02 19:38:24.000000000 -0500
++++ main.c
+@@ -282,7 +282,7 @@ ttyslot()
+ 
+ #else
+ 
+-#ifdef __INTERIX
++#if defined(__INTERIX) || defined(__APPLE__)
+ #define setpgrp setpgid
+ #endif
+ 
