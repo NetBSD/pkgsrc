@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2005/06/01 18:02:55 jlam Exp $
+# $NetBSD: Makefile,v 1.121 2005/06/30 15:14:07 adam Exp $
 
-DISTNAME=	gimp-2.2.7
+DISTNAME=	gimp-2.2.8
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.2/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/v2.2/ \
@@ -17,10 +17,10 @@ BUILD_USES_MSGFMT=	yes
 
 CONFLICTS+=		gimp<=1.2.3
 
-USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake
 
 PKG_SYSCONFSUBDIR=	gimp/2.0
 
