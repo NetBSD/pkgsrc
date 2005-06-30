@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2003/09/30 21:47:14 seb Exp $
+$NetBSD: patch-ad,v 1.2 2005/06/30 05:57:38 minskim Exp $
 
 --- configure.orig	1996-09-04 23:43:01.000000000 +0000
 +++ configure
@@ -70,7 +70,7 @@ $NetBSD: patch-ad,v 1.1 2003/09/30 21:47:14 seb Exp $
  fi
  
 -if test "$log$" = yes
-+if test "$floor$" = yes
++if test "$floor" = yes
  then
     MATHLIB='' # evidently don't need one
  else
