@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/06/01 18:02:45 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2005/06/30 10:20:49 markd Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	2
@@ -10,6 +10,10 @@ HOMEPAGE=	http://www.m17n.org/mule/MulePage.en.html
 COMMENT=	Multilingual GNU editing macros (editor)
 
 CONFLICTS=	emacs-[0-9]*
+
+# build PATH in the dumped mule is not a problem
+CHECK_WRKREF_SKIP+=	${PREFIX}/bin/mule
+CHECK_WRKREF_SKIP+=	${PREFIX}/bin/mule-19.28
 
 .include "../../mk/bsd.prefs.mk"
 
