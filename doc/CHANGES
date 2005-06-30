@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10512 2005/06/30 15:14:55 adam Exp $
+$NetBSD: CHANGES,v 1.10513 2005/06/30 15:30:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3084,3 +3084,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/netpbm to 10.26.11 [adam 2005-06-30]
 	Updated x11/xplanet to 1.2.0 [adam 2005-06-30]
 	Updated graphics/gimp to 2.2.8 [adam 2005-06-30]
+	Updated sysutils/gentoo to 0.11.55 [adam 2005-06-30]
