@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2005/02/23 14:16:15 adam Exp $
+$NetBSD: patch-aa,v 1.14 2005/06/30 15:14:07 adam Exp $
 
---- etc/Makefile.in.orig	2005-02-22 22:11:13.000000000 +0000
+--- etc/Makefile.in.orig	2005-06-26 19:28:20.000000000 +0000
 +++ etc/Makefile.in
-@@ -340,7 +340,7 @@ exec_prefix = @exec_prefix@
+@@ -341,7 +341,7 @@ exec_prefix = @exec_prefix@
  gimpdatadir = @gimpdatadir@
  gimpdir = @gimpdir@
  gimpplugindir = @gimpplugindir@
