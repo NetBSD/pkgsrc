@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.11 2005/04/29 22:20:45 rillig Exp $
+$NetBSD: distinfo,v 1.12 2005/06/30 15:06:24 adam Exp $
 
-SHA1 (xplanet-1.1.2.tar.gz) = 15e68c7f9ff8d7a1a0e3e64de74d1fafa29179eb
-RMD160 (xplanet-1.1.2.tar.gz) = 089a7b21c0a57b035ea5bf3e0a3f2060378eda67
-Size (xplanet-1.1.2.tar.gz) = 1185949 bytes
-SHA1 (patch-aa) = 0c7774676bfc1b274250c45e1e41cb28e8318bef
-SHA1 (patch-ab) = 2b35aee03aca31989562c8f69175f62c5853eb34
-SHA1 (patch-ac) = a22c46de57db2cd48db68d0b11a0d59446099616
+SHA1 (xplanet-1.2.0.tar.gz) = e002711f90f502565613ab17a273175cc035b52c
+RMD160 (xplanet-1.2.0.tar.gz) = 68079629e82194f483caa0c06d73672544efbcbb
+Size (xplanet-1.2.0.tar.gz) = 1196496 bytes
