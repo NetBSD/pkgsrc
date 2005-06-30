@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.41 2005/06/17 03:50:30 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/06/30 13:22:19 hubertf Exp $
 
 DISTNAME=	acroread	# Overridden below
 PKGNAME=	acroread-4.05
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/4.x/
+MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/4.x/ \
+		http://download.adobe.com/pub/adobe/acrobatreader/unix/4.x/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/prodindex/acrobat/readstep.html
@@ -49,14 +50,23 @@ PLATFORM=	sparcsolaris
 . endif
 ONLY_FOR_PLATFORM=	*-*-i386 *-1.4[L-Z]-sparc *-1.[5-9]*-sparc *-[2-9]*-sparc
 # *-*-alpha
+.include "../../emulators/suse_linux/Makefile.application"
 .elif ${OPSYS} == "SunOS"
+. if (${MACHINE_ARCH} == "i386")
+DISTNAME=	sunx86-ar-405
+WRKSRC=		${WRKDIR}/SS86RS.install
+PLATFORM=	intelsolaris
+. else
 DISTNAME=	sunsparc-rs-405
 WRKSRC=		${WRKDIR}/SSOLRS.install
 PLATFORM=	sparcsolaris
+. endif # i86pc
 
+ # Solaris sparc + x86:
+PREPEND_PATH=	/bin		# for "ed"
 post-patch:
 	${CHMOD} -R o+rwx ${WRKSRC}
-.endif
+.endif # SunOS
 
 PLIST_SUBST+=	PLATFORM=${PLATFORM}
 
@@ -81,7 +91,7 @@ post-install:
 		${NS_PLUGINS_DIR}
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${PREFIX}/Acrobat4/Reader/License.pdf"
-.if (${PLATFORM} == "sparcsolaris")
+.if ((${PLATFORM} == "sparcsolaris") || (${PLATFORM} == "intelsolaris"))
 	@cd ${PREFIX}/Acrobat4/Reader/${PLATFORM}/lib && \
 	for LIB in AGM.so.3 CoolType.so.1 ICC.so.1 readcore.so.4; do \
 	  ${RM} -f lib$${LIB} && \
@@ -89,5 +99,9 @@ post-install:
 	done
 .endif
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
+
+bla:
+	@echo OPSYS=${OPSYS}
+	@echo MACHINE_ARCH=${MACHINE_ARCH}
+	@echo PLATFORM=${PLATFORM}
