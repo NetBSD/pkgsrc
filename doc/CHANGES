@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10522 2005/07/01 12:36:26 adam Exp $
+$NetBSD: CHANGES,v 1.10523 2005/07/01 12:55:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3093,3 +3093,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated comms/mgetty+sendfax to 1.1.31nb2 [hira 2005-07-01]
 	Updated math/octave to 2.1.71 [adam 2005-07-01]
 	Updated emulators/BasiliskII to 1.0.20050322 [adam 2005-07-01]
+	Updated graphics/exiftags to 1.00 [adam 2005-07-01]
