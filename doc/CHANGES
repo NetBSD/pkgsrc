@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10524 2005/07/01 13:23:43 adam Exp $
+$NetBSD: CHANGES,v 1.10525 2005/07/01 16:11:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3095,3 +3095,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/BasiliskII to 1.0.20050322 [adam 2005-07-01]
 	Updated graphics/exiftags to 1.00 [adam 2005-07-01]
 	Updated devel/libsigc++2 to 2.0.14 [adam 2005-07-01]
+	Updated math/octave-current to 2.9.3 [adam 2005-07-01]
