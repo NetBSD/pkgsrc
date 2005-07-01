@@ -1,0 +1,39 @@
+# $NetBSD: Makefile.common,v 1.1 2005/07/01 01:20:28 reed Exp $
+#
+
+# XXX: when updating version, be sure to update distinfo for both
+# XXX: PyQt-mac-gpl and PyQt-x11-gpl in py-qt3-qscintilla,
+# XXX: py-qt3-base, and py-qt3-modules.
+
+PYQT_VERSION=		3.14.1
+CATEGORIES=		x11 python
+MASTER_SITES=		http://www.river-bank.demon.co.uk/download/PyQt/
+
+MAINTAINER=		tech-pkg@NetBSD.org
+HOMEPAGE=		http://www.riverbankcomputing.co.uk/pyqt/
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+DISTNAME=		PyQt-mac-gpl-${PYQT_VERSION}
+.else
+DISTNAME=		PyQt-x11-gpl-${PYQT_VERSION}
+.endif
+
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
+USE_LANGUAGES=		c c++
+
+CONFIGURE_ARGS=		-b ${PREFIX}/bin
+CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}
+CONFIGURE_ARGS+=	-v ${PREFIX}/share/sip${PYVERSSUFFIX}
+
+PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
+PY_PATCHPLIST=	yes
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+
+do-configure:
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${PYTHONBIN} configure.py ${CONFIGURE_ARGS})
+
+.include "../../lang/python/extension.mk"

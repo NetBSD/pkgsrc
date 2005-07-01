@@ -1,0 +1,2 @@
+@comment $NetBSD
+share/sip${PYVERSSUFFIX}/qt/qwindowdefs_mac.sip
