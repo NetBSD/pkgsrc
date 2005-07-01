@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.53 2005/06/22 21:14:45 jlam Exp $
+# $NetBSD: Makefile.common,v 1.54 2005/07/01 01:10:06 reed Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -61,7 +61,14 @@ BUILDLINK_PASSTHRU_DIRS+=/usr/local/include/bind /usr/local/lib/bind
 SYS_LIBS=		-lbind -ldb -ldl
 .elif ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	-platform freebsd-g++
+.elif ${OPSYS} == "Darwin"
+QMAKE_RANLIB=		${RANLIB}
+.  if exists(/usr/lib/libresolv.dylib)
+LDFLAGS+=		-lresolv
+.  endif
 .endif
+
+QMAKE_RANLIB?=		${TRUE}
 
 .if !exists(${X11BASE}/lib/libXinerama.so)
 CONFIGURE_ARGS+=	-no-xinerama
@@ -112,6 +119,7 @@ pre-configure:
 		-e 's:@PTHREAD_LDFLAGS@:${PTHREAD_LDFLAGS}:g' \
 		-e 's:@PTHREAD_LIBS@:${PTHREAD_LIBS}:g' \
 		-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g' \
+		-e 's:@QMAKE_RANLIB@:${QMAKE_RANLIB}:g' \
 		${FILESDIR}/qmake.conf > ${WRKSRC}/qmake.conf
 	for dir in ${WRKSRC}/mkspecs/*; do \
 		${CP} ${WRKSRC}/qmake.conf $${dir}; \
