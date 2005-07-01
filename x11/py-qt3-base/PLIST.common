@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/02/24 20:17:37 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2005/07/01 01:20:28 reed Exp $
 bin/pylupdate${PYVERSSUFFIX}
 bin/pyuic${PYVERSSUFFIX}
 ${PYSITELIB}/pyqtconfig.py
@@ -176,13 +176,9 @@ share/sip${PYVERSSUFFIX}/qt/qwidgetlist.sip
 share/sip${PYVERSSUFFIX}/qt/qwidgetstack.sip
 share/sip${PYVERSSUFFIX}/qt/qwindow.sip
 share/sip${PYVERSSUFFIX}/qt/qwindowdefs.sip
-share/sip${PYVERSSUFFIX}/qt/qwindowdefs_qws.sip
-share/sip${PYVERSSUFFIX}/qt/qwindowdefs_x11.sip
 share/sip${PYVERSSUFFIX}/qt/qwindowsstyle.sip
 share/sip${PYVERSSUFFIX}/qt/qwindowsxpstyle.sip
 share/sip${PYVERSSUFFIX}/qt/qwizard.sip
 share/sip${PYVERSSUFFIX}/qt/qwmatrix.sip
 share/sip${PYVERSSUFFIX}/qt/qworkspace.sip
 share/sip${PYVERSSUFFIX}/qt/versions.sip
-@dirrm share/sip${PYVERSSUFFIX}/qt
-@dirrm share/sip${PYVERSSUFFIX}
