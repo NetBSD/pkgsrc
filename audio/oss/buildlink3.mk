@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/08/28 06:05:31 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2005/07/01 11:38:26 martti Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OSS_BUILDLINK3_MK:=	${OSS_BUILDLINK3_MK}+
@@ -42,7 +42,7 @@ buildlink-oss-soundcard-h:
 			"Linking $${sys_soundcard_h} to $${soundcard_h}."; \
 		${MKDIR} `${DIRNAME} $${soundcard_h}`;			\
 		${LN} -s $${sys_soundcard_h} $${soundcard_h};		\
-        fi
+	fi
 .endif	# OSS_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
