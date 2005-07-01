@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3675 2005/06/30 15:30:47 adam Exp $
+$NetBSD: TODO,v 1.3676 2005/07/01 09:10:23 adam Exp $
 
 Suggested new packages
 ======================
@@ -301,7 +301,6 @@ Suggested package updates
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
-	o Gorm-0.9.10
 	o GridSim-3.1
 	o MayaVi-1.4
 	o MyPasswordSafe-20041210
