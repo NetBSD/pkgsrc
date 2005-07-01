@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.13 2005/04/01 10:15:19 adam Exp $
+$NetBSD: patch-ag,v 1.14 2005/07/01 16:11:05 adam Exp $
 
---- src/Makefile.in.orig	2005-03-27 12:38:21.000000000 +0000
+--- src/Makefile.in.orig	2005-05-18 12:20:51.000000000 +0000
 +++ src/Makefile.in
-@@ -284,8 +284,9 @@ libraries: $(LIBRARIES)
+@@ -287,8 +287,9 @@ libraries: $(LIBRARIES)
  
  liboctinterp.$(LIBEXT): $(OBJECTS) $(XERBLA)
  	rm -f $@
@@ -14,7 +14,7 @@ $NetBSD: patch-ag,v 1.13 2005/04/01 10:15:19 adam Exp $
  
  liboctinterp.$(SHLEXT_VER): liboctinterp.$(SHLEXT)
  	rm -f $@
-@@ -293,7 +294,7 @@ liboctinterp.$(SHLEXT_VER): liboctinterp
+@@ -296,7 +297,7 @@ liboctinterp.$(SHLEXT_VER): liboctinterp
  
  liboctinterp.$(SHLEXT): $(PICOBJ) $(PIC_XERBLA)
  	rm -f $@
@@ -23,7 +23,7 @@ $NetBSD: patch-ag,v 1.13 2005/04/01 10:15:19 adam Exp $
  
  stamp-oct-links: $(OCT_FILES)
  	if [ -n "$(OCT_FILES)" ]; then \
-@@ -305,6 +306,7 @@ stamp-prereq: defaults.h oct-conf.h oct-
+@@ -308,6 +309,7 @@ stamp-prereq: defaults.h oct-conf.h oct-
  	touch stamp-prereq
  
  octave$(EXEEXT): stamp-prereq $(LIBRARIES) main.o $(DLD_STATIC_OBJ)
@@ -31,7 +31,7 @@ $NetBSD: patch-ag,v 1.13 2005/04/01 10:15:19 adam Exp $
  	$(LD_CXX) $(CPPFLAGS) $(ALL_CXXFLAGS) $(RDYNAMIC_FLAG) \
  	$(ALL_LDFLAGS) -o $@ \
  	main.o $(DLD_STATIC_OBJ) \
-@@ -391,6 +393,7 @@ install-strip:
+@@ -394,6 +396,7 @@ install-strip:
  install-bin:
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
  	rm -f $(DESTDIR)$(bindir)/octave$(EXEEXT)
@@ -39,7 +39,7 @@ $NetBSD: patch-ag,v 1.13 2005/04/01 10:15:19 adam Exp $
  	$(INSTALL_PROGRAM) octave$(EXEEXT) $(DESTDIR)$(bindir)/octave-$(version)$(EXEEXT)
  	$(LN_S) octave-$(version)$(EXEEXT) $(DESTDIR)$(bindir)/octave$(EXEEXT)
  .PHONY: install-bin
-@@ -401,6 +404,7 @@ install-oct: PKG_ADD
+@@ -404,6 +407,7 @@ install-oct: PKG_ADD
  	if [ -n "$(OCT_FILES)" ]; then \
  	  xfiles="$(OCT_FILES)"; \
  	  for f in $$xfiles; do \
@@ -47,7 +47,7 @@ $NetBSD: patch-ag,v 1.13 2005/04/01 10:15:19 adam Exp $
  	    $(INSTALL_PROGRAM) $$f $(DESTDIR)$(octfiledir)/$$f; \
  	  done; \
  	  $(srcdir)/mk-oct-links $(DESTDIR)$(octfiledir) $(DLD_DEF_FILES); \
-@@ -411,9 +415,8 @@ install-lib:
+@@ -414,9 +418,8 @@ install-lib:
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(octlibdir)
  	if $(STATIC_LIBS); then \
  	  rm -f $(DESTDIR)$(octlibdir)/liboctinterp.$(LIBEXT); \
