@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.14 2005/05/26 21:22:27 kristerw Exp $
+$NetBSD: patch-aa,v 1.15 2005/07/01 16:11:05 adam Exp $
 
---- configure.orig	2005-04-22 19:34:21.000000000 +0200
-+++ configure	2005-05-26 23:18:32.000000000 +0200
-@@ -10521,7 +10521,7 @@
+--- configure.orig	2005-05-18 14:02:46.000000000 +0000
++++ configure
+@@ -10526,7 +10526,7 @@ if $have_fortran_compiler; then
  %.c : %.f
  
  %.o : %.f
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.14 2005/05/26 21:22:27 kristerw Exp $
  
  pic/%.o : %.f
  	$(FC) -c $(FPICFLAG) $(ALL_FFLAGS) $< -o $@
-@@ -13229,7 +13229,7 @@
+@@ -13234,7 +13234,7 @@ TEMPLATE_AR='$(AR)'
  TEMPLATE_ARFLAGS="$ARFLAGS"
  library_path_var=LD_LIBRARY_PATH
  case "$canonical_host_type" in
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.14 2005/05/26 21:22:27 kristerw Exp $
      SH_LD=ld
      SH_LDFLAGS=-Bshareable
    ;;
-@@ -22682,19 +22682,19 @@
+@@ -22687,19 +22687,19 @@ case "$canonical_host_type" in
      cat << \EOF > $bsd_gcc_kluge_targets_frag
  
  lex.o: lex.cc
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.14 2005/05/26 21:22:27 kristerw Exp $
  
  EOF
    ;;
-@@ -22822,9 +22822,9 @@
+@@ -22827,9 +22827,9 @@ then
    rm -rf "$tmp"
  
  fi
