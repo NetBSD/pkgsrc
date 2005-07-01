@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10516 2005/06/30 17:25:35 minskim Exp $
+$NetBSD: CHANGES,v 1.10517 2005/07/01 09:10:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3088,3 +3088,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/lesstif to 0.94.4 [adam 2005-06-30]
 	Updated net/entropy to 0.9.0.429 [tv 2005-06-30]
 	Updated lang/perl5 to 5.8.6nb6 [minskim 2005-06-30]
+	Updated Gorm to 0.9.10 [adam 2005-07-01]
