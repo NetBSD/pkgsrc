@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2005/06/05 23:20:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.19 2005/07/01 16:11:05 adam Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -471,7 +471,6 @@ include/octave-${PKGVERSION}/octave/ov-dld-fcn.h
 include/octave-${PKGVERSION}/octave/ov-fcn-handle.h
 include/octave-${PKGVERSION}/octave/ov-fcn-inline.h
 include/octave-${PKGVERSION}/octave/ov-fcn.h
-include/octave-${PKGVERSION}/octave/ov-file.h
 include/octave-${PKGVERSION}/octave/ov-int-traits.h
 include/octave-${PKGVERSION}/octave/ov-int16.h
 include/octave-${PKGVERSION}/octave/ov-int32.h
@@ -613,6 +612,8 @@ libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/betainc.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/builtin.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/cellfun.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/chol.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/chol2inv.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/cholinv.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/clearplot.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/closeplot.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/colamd.oct
@@ -673,6 +674,7 @@ libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/lsode.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/lsode_options.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/lu.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/luinc.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/matrix_type.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/max.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/min.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/minmax.oct
@@ -699,6 +701,7 @@ libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/spdet.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/spdiag.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/spfind.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/spinv.oct
+libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/spkron.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/splu.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/spmax.oct
 libexec/octave/${PKGVERSION}/oct/${GNU_PLATFORM_DIR}/spmin.oct
@@ -1297,6 +1300,7 @@ share/octave/${PKGVERSION}/m/special-matrix/invhilb.m
 share/octave/${PKGVERSION}/m/special-matrix/sylvester_matrix.m
 share/octave/${PKGVERSION}/m/special-matrix/toeplitz.m
 share/octave/${PKGVERSION}/m/special-matrix/vander.m
+share/octave/${PKGVERSION}/m/startup/inputrc
 share/octave/${PKGVERSION}/m/startup/octaverc
 share/octave/${PKGVERSION}/m/statistics/base/center.m
 share/octave/${PKGVERSION}/m/statistics/base/cloglog.m
@@ -1475,6 +1479,8 @@ share/octave/${PKGVERSION}/m/time/date.m
 share/octave/ls-R
 share/octave/site/m/startup/octaverc
 @dirrm share/octave/site/m/startup
+@dirrm share/octave/site/api-v16/m
+@dirrm share/octave/site/api-v16
 @dirrm share/octave/${PKGVERSION}/site/m
 @dirrm share/octave/${PKGVERSION}/site
 @dirrm share/octave/${PKGVERSION}/m/time
@@ -1514,8 +1520,8 @@ share/octave/site/m/startup/octaverc
 @dirrm share/octave/${PKGVERSION}/doc
 @dirrm share/octave/${PKGVERSION}
 @dirrm share/doc/html/octave
-@dirrm libexec/octave/site/oct/api-v15/${GNU_PLATFORM_DIR}
-@dirrm libexec/octave/site/oct/api-v15
+@dirrm libexec/octave/site/oct/api-v16/${GNU_PLATFORM_DIR}
+@dirrm libexec/octave/site/oct/api-v16
 @dirrm libexec/octave/site/oct/${GNU_PLATFORM_DIR}
 @dirrm libexec/octave/site/oct
 @dirrm libexec/octave/site/exec/${GNU_PLATFORM_DIR}
