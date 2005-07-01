@@ -1,0 +1,43 @@
+$NetBSD: patch-ab,v 1.8 2005/07/01 03:27:49 grant Exp $
+
+--- configure.orig	2005-07-01 13:22:45.000000000 +1000
++++ configure
+@@ -11818,6 +11818,38 @@ _ACEOF
+ 
+     use_gethostbyname_r="no"
+     ;;
++
++dragonfly*)
++    if test "$have_pthreads" = "yes"; then
++	LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS -pthread"
++	CLAMD_LIBS="$CLAMD_LIBS -pthread"
++	CLAMAV_MILTER_LIBS="$CLAMAV_MILTER_LIBS -pthread"
++	TH_SAFE="-thread-safe"
++
++cat >>confdefs.h <<\_ACEOF
++#define CL_THREAD_SAFE 1
++_ACEOF
++
++
++cat >>confdefs.h <<\_ACEOF
++#define _REENTRANT 1
++_ACEOF
++
++	if test "$want_clamuko" = "yes"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define CLAMUKO 1
++_ACEOF
++
++	fi
++    fi
++
++cat >>confdefs.h <<\_ACEOF
++#define C_BSD 1
++_ACEOF
++
++    disable_gethostbyname_r="yes"
++    ;;
+ openbsd*)
+     if test "$have_pthreads" = "yes"; then
+ 	LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS -pthread"
