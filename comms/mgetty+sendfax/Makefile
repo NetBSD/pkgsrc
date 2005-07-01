@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2005/06/12 14:29:53 hira Exp $
+# $NetBSD: Makefile,v 1.47 2005/07/01 10:16:28 hira Exp $
 
 DISTNAME=	mgetty1.1.31-Jul24
 PKGNAME=	mgetty-1.1.31
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.leo.org/pub/comp/os/unix/networking/mgetty/ \
 		ftp://alpha.greenie.net/pub/mgetty/source/1.1/
