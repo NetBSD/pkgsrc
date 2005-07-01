@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/06/12 14:29:53 hira Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/07/01 10:16:28 hira Exp $
 bin/autopvf
 bin/basictopvf
 bin/faxq
@@ -30,6 +30,7 @@ bin/pvftovoc
 bin/pvftowav
 bin/rmdfile
 bin/rmdtopvf
+bin/sff2g3
 bin/vm
 bin/voctopvf
 bin/wavtopvf
@@ -46,6 +47,7 @@ man/man1/g3cat.1
 man/man1/pbm2g3.1
 man/man1/pvf.1
 man/man1/sendfax.1
+man/man1/sff2g3.1
 man/man1/zplay.1
 man/man4/mgettydefs.4
 man/man5/faxqueue.5
