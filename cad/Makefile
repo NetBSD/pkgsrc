@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2005/05/18 22:02:17 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2005/07/01 14:45:33 drochner Exp $
 #
 
 COMMENT=	CAD tools
@@ -41,6 +41,7 @@ SUBDIR+=	ntesla
 SUBDIR+=	pcb
 SUBDIR+=	pcb-current
 SUBDIR+=	py-MyHDL
+SUBDIR+=	py-simpy
 SUBDIR+=	qcad
 SUBDIR+=	simian
 SUBDIR+=	simian-docs
