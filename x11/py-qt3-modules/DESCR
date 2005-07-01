@@ -1,6 +1,3 @@
-These are the Python bindings for Qt.  You must also have the SIP Python
-bindings generator installed.
-
-The homepage is http://www.riverbankcomputing.co.uk/pyqt/.
-
-The homepage of SIP is http://www.riverbankcomputing.co.uk/sip/.
+PyQT is a set of Python bindings for the Qt toolkit. This package
+provides the following Python modules for the Qt toolkit: qtxml,
+qtui, qttable, qtsql, qtnetwork, qtgl, and qtcanvas.
