@@ -1,6 +1,3 @@
-These are the Python bindings for Qt.  You must also have the SIP Python
-bindings generator installed.
-
-The homepage is http://www.riverbankcomputing.co.uk/pyqt/.
-
-The homepage of SIP is http://www.riverbankcomputing.co.uk/sip/.
+PyQt is a set of Python bindings for the Qt toolkit.  The
+py-qt3-qscintilla package provides the bindings for QScintilla,
+the port to Qt of the Scintilla programmer's editor class.
