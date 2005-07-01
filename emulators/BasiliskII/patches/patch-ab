@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2003/06/14 06:49:05 tron Exp $
+$NetBSD: patch-ab,v 1.2 2005/07/01 12:34:33 adam Exp $
 
---- video_x.cpp.orig	Thu Jun 12 23:38:31 2003
+--- video_x.cpp.orig	2005-03-21 23:57:34.000000000 +0000
 +++ video_x.cpp
-@@ -2226,7 +2226,7 @@ static void update_display_dynamic(int t
+@@ -2288,7 +2288,7 @@ static void update_display_dynamic(int t
  static void update_display_static(driver_window *drv)
  {
  	// Incremental update code
