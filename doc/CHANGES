@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10519 2005/07/01 09:36:41 adam Exp $
+$NetBSD: CHANGES,v 1.10520 2005/07/01 10:18:07 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3090,3 +3090,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/perl5 to 5.8.6nb6 [minskim 2005-06-30]
 	Updated devel/Gorm to 0.9.10 [adam 2005-07-01]
 	Updated emulators/hatari to 0.70 [adam 2005-07-01]
+	Updated comms/mgetty+sendfax to 1.1.31nb2 [hira 2005-07-01]
