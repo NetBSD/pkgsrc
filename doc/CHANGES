@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10525 2005/07/01 16:11:50 adam Exp $
+$NetBSD: CHANGES,v 1.10526 2005/07/01 16:16:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3096,3 +3096,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/exiftags to 1.00 [adam 2005-07-01]
 	Updated devel/libsigc++2 to 2.0.14 [adam 2005-07-01]
 	Updated math/octave-current to 2.9.3 [adam 2005-07-01]
+	Updated shells/bash2 to 2.05.2.7nb5 [minskim 2005-07-01]
+	Updated shells/bash to 3.0pl16nb1 [minskim 2005-07-01]
