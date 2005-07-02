@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/02 12:18:22 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/02 12:22:09 adrianp Exp $
 #
 
 DISTNAME=	Net-Pcap-0.05
@@ -11,9 +11,9 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/author/KCARNUT/Net-Pcap-0.04/Pcap.pm
 COMMENT=	Perl interface to pcap(3) LBL packet capture library
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/Pcap/.packlist
+BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.8.1
 
-#USE_BUILTIN.libpcap=	no # NetBSD's libpcap is very old.
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/Pcap/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../net/libpcap/buildlink3.mk"
