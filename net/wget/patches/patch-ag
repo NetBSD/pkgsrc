@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.5 2003/12/08 21:44:35 wiz Exp $
+$NetBSD: patch-ag,v 1.6 2005/07/02 15:10:23 wiz Exp $
 
---- doc/Makefile.in.orig	Fri Oct 24 00:53:05 2003
+--- doc/Makefile.in.orig	2005-06-06 22:42:17.000000000 +0200
 +++ doc/Makefile.in
 @@ -40,6 +40,7 @@ prefix     = @prefix@
  infodir    = @infodir@
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.5 2003/12/08 21:44:35 wiz Exp $
  
  DESTDIR    =
 @@ -51,7 +52,7 @@ RM = rm -f
- TEXI2POD     = $(srcdir)/texi2pod.pl
+ TEXI2POD     = texi2pod.pl
  POD2MAN      = @POD2MAN@
  MAN          = wget.$(manext)
 -WGETRC       = $(sysconfdir)/wgetrc
@@ -19,7 +19,7 @@ $NetBSD: patch-ag,v 1.5 2003/12/08 21:44:35 wiz Exp $
  SAMPLERCTEXI = sample.wgetrc.munged_for_texi_inclusion
  
  #
-@@ -129,7 +130,7 @@ install.man: $(MAN)
+@@ -131,7 +132,7 @@ install.man: $(MAN)
  
  # install sample.wgetrc
  install.wgetrc: $(srcdir)/sample.wgetrc
