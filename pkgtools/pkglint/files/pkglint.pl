@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.196 2005/07/01 21:12:18 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.197 2005/07/02 12:02:58 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1504,17 +1504,8 @@ sub checkfile_Makefile($) {
 	}
 	$idx = 0;
 
-	#
-	# section 1: comment lines.
-	#
-	$tmp = $sections[$idx++];
-	if ($tmp =~ /#(\s+)\$$conf_rcsidstr([^\$]*)\$/) {
-		if ($2 ne '') {
-			if (!is_committed($fname)) {
-				$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Exactly \"\$$conf_rcsidstr\$\" expected for uncommitted files.");
-			}
-		}
-	}
+	# section 1 (comment lines): No checks needed
+	$idx++;
 
 	#
 	# for the rest of the checks, comment lines are not important.
