@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.16 2005/07/02 06:38:18 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.17 2005/07/02 06:43:57 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -37,3 +37,5 @@ Pullup ticket 572 - requested by Min Sik Kim
 portability fix for qt3-libs
 Pullup ticket 575 - requested by Min Sik Kim
 portability fix for python23-nth
+Pullup ticket 576 - requested by Min Sik Kim
+portability fix for python23
