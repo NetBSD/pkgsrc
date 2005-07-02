@@ -84,8 +84,9 @@ DDEESSCCRRIIPPTTIIOONN
      [no-]paren  Warn if variables are used like $(VAR) in Makefiles.  They
                  should always be used like ${VAR}.
 
-     [no-]sort   Warn if items of a list are not correctly sorted.  Currently
-                 this affects PLISTs and the SUBDIRs in category Makefiles.
+     [no-]plist-sort
+                 Warn if items of a PLIST file are not sorted alphabetically.
+                 This warning is disabled by default.
 
      [no-]types  Warn for some Makefile variables if their assigned values do
                  not match their type.
@@ -137,4 +138,4 @@ BBUUGGSS
      ings concerning Makefiles do not print the file and line number where the
      warning originated.
 
-                                 May 23, 2005                                3
+                                 Jul 02, 2005                                3
