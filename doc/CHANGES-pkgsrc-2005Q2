@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.14 2005/06/28 08:03:40 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.15 2005/07/02 06:32:01 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -33,3 +33,5 @@ Pullup ticket 567 - requested by Luke Mewburn
 tnftp update
 Pullup ticket 570 - requested by Thomas Klausner
 realplayer and trplayer removal
+Pullup ticket 572 - requested by Min Sik Kim
+portability fix for qt3-libs
