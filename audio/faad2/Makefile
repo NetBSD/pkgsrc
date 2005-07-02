@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/06/01 20:07:59 jlam Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2005/07/02 06:47:54 snj Exp $
 #
 
 DISTNAME=	faad2-2.0
@@ -32,7 +32,7 @@ LIBS+=		-lm
 
 .if ${OPSYS} == "SunOS"
 CPPFLAGS+=		-D_FILE_OFFSET_BITS=64
-CPPFLAGS+=		_D_LARGEFILE_SOURCE=1
+CPPFLAGS+=		-D_LARGEFILE_SOURCE=1
 .endif
 
 pre-configure:
