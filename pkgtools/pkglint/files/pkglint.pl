@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.200 2005/07/02 22:23:47 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.201 2005/07/02 22:31:17 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -651,18 +651,6 @@ sub check_package($) {
 		if ( ! $seen_NO_CHECKSUM ) {
 			log_warning("$opt_packagedir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makesum'.");
 		}
-	}
-	if (-f "$opt_packagedir/$filesdir/md5") {
-		log_error("$opt_packagedir/$filesdir/md5", NO_LINE_NUMBER, "This file is deprecated -- run '$conf_make mdi' to generate distinfo.");
-	}
-	if (-f "$opt_packagedir/$filesdir/patch-sum") {
-		log_error("$opt_packagedir/$filesdir/patch-sum", NO_LINE_NUMBER, "This file is deprecated -- run '$conf_make mps' to generate distinfo.");
-	}
-	if (-f "$opt_packagedir/$pkgdir/COMMENT") {
-		log_error("$opt_packagedir/$pkgdir/COMMENT", NO_LINE_NUMBER, "This file is deprecated -- please use a COMMENT variable instead.");
-	}
-	if (grep { $_ !~ qr"/CVS$" } <$opt_packagedir/pkg/*>) {
-		log_error("$opt_packagedir/pkg", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please 'mv $opt_packagedir/pkg/* $opt_packagedir' and 'rmdir $opt_packagedir/pkg'.");
 	}
 	if (grep { $_ !~ qr"/CVS$" } <$opt_packagedir/scripts/*>) {
 		log_warning("$opt_packagedir/scripts", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
