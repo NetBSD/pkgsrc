@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.197 2005/07/02 12:02:58 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.198 2005/07/02 14:46:06 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -317,7 +317,7 @@ my $opt_warn_directcmd	= true;
 my $opt_warn_exec	= true;
 my $opt_warn_order	= true;
 my $opt_warn_paren	= true;
-my $opt_warn_sort	= true;
+my $opt_warn_plist_sort	= false;
 my $opt_warn_types	= true;
 my $opt_warn_vague	= true;
 my $opt_warn_workdir	= true;
@@ -327,7 +327,7 @@ my (%warnings) = (
 	"exec"		=> [\$opt_warn_exec, "warn if source files are executable"],
 	"order"		=> [\$opt_warn_order, "warn if Makefile entries are unordered"],
 	"paren"		=> [\$opt_warn_paren, "warn about use of \$(VAR) instead of \${VAR} in Makefiles"],
-	"sort"		=> [\$opt_warn_sort, "warn about any unsorted entries in category Makefiles and PLISTs"],
+	"plist-sort"	=> [\$opt_warn_plist_sort, "warn about unsorted entries in PLISTs"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
 	"vague"		=> [\$opt_warn_vague, "show old (unreliable, vague) warnings"],
 	"workdir"	=> [\$opt_warn_workdir, "warn that work* should not be committed into CVS"],
@@ -927,7 +927,7 @@ sub checkfile_PLIST($) {
 			$line->log_error("Use of full pathname disallowed.");
 		}
 
-		if ($opt_warn_sort && $line->text =~ qr"^\w") {
+		if ($opt_warn_plist_sort && $line->text =~ qr"^\w") {
 			if (defined($last_file_seen)) {
 				if ($last_file_seen gt $line->text) {
 					$line->log_warning($line->text . " should be sorted before ${last_file_seen}.");
@@ -2056,7 +2056,7 @@ sub check_category($) {
 					$line->log_error("SUBDIR+= expected.");
 				}
 				push(@makefile_subdirs, $subdir);
-				if ($opt_warn_sort && $last_subdir ge $subdir) {
+				if ($last_subdir ge $subdir) {
 					$line->log_error("$subdir should come before $last_subdir.");
 				}
 				$last_subdir = $subdir;
