@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.199 2005/07/02 15:21:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.200 2005/07/02 22:23:47 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -363,13 +363,13 @@ my %make_vars_typemap;
 
 # these subroutines return C<true> if the checking succeeded (that includes
 # errors in the file) and C<false> if the file could not be checked.
-sub checkfile_DESCR($);
-sub checkfile_distinfo($);
-sub checkfile_Makefile($);
-sub checkfile_MESSAGE($);
-sub checkfile_patches_patch($);
-sub checkfile_PLIST($);
-sub checkfile_other($);
+sub checkfile_DESCR($$);
+sub checkfile_distinfo($$);
+sub checkfile_Makefile($$);
+sub checkfile_MESSAGE($$);
+sub checkfile_patches_patch($$);
+sub checkfile_PLIST($$);
+sub checkfile_other($$);
 
 sub check_category($);
 sub check_package($);
@@ -585,32 +585,32 @@ sub check_package($) {
 	my ($dir) = @_;
 
 	# we need to handle the Makefile first to get some variables
-	if (!checkfile_Makefile("Makefile")) {
-		log_error("$opt_packagedir/Makefile", NO_LINE_NUMBER, "Cannot be read.");
+	if (!checkfile_Makefile($dir, "${dir}/Makefile")) {
+		log_error("${dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
 		return false;
 	}
 
-	checkfile_DESCR("$pkgdir/DESCR");
+	checkfile_DESCR($dir, "${dir}/${pkgdir}/DESCR");
 
 	if ($opt_check_MESSAGE) {
 		foreach my $msg (<$opt_packagedir/$filesdir/MESSAGE*>, <$opt_packagedir/$pkgdir/MESSAGE*>) {
-			checkfile_MESSAGE($msg);
+			checkfile_MESSAGE($dir, $msg);
 		}
 	}
 	if ($opt_check_PLIST) {
 		foreach my $plist (<$opt_packagedir/$filesdir/PLIST*>, <$opt_packagedir/$pkgdir/PLIST*>) {
-			checkfile_PLIST($plist);
+			checkfile_PLIST($dir, $plist);
 		}
 	}
 	if ($opt_check_patches) {
 		foreach my $patch (<$opt_packagedir/$patchdir/patch-*>) {
-			checkfile_patches_patch($patch);
+			checkfile_patches_patch($dir, $patch);
 		}
 	}
 	if ($opt_check_distinfo) {
 		foreach my $distinfo ("$opt_packagedir/$distinfo_file") {
 			if (-f $distinfo) {
-				checkfile_distinfo($distinfo);
+				checkfile_distinfo($dir, $distinfo);
 			}
 		}
 	}
@@ -631,16 +631,15 @@ sub check_package($) {
 	if ($opt_check_bl3) {
 		foreach my $bl3 ("$opt_packagedir/$pkgdir/buildlink3.mk") {
 			next unless -f $bl3;
-			checkfile_buildlink3_mk($bl3);
+			checkfile_buildlink3_mk($dir, $bl3);
 		}
 	}
 	if ($opt_check_extra) {
-		foreach my $abs_extra ((<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>)) {
-			my ($extra) = (substr($abs_extra, length("$opt_packagedir/")));
+		foreach my $extra ((<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>)) {
 			next if ($extra =~ qr"(?:distinfo$|Makefile$|PLIST|MESSAGE)");
 			next unless -f $extra && -T $extra;
 
-			checkfile_other($extra);
+			checkfile_other($dir, $extra);
 		}
 	}
 
@@ -770,9 +769,9 @@ sub checklines_trailing_empty_lines($) {
 # Specific subroutines
 #
 
-sub checkfile_DESCR($) {
-	my ($file) = @_;
-	my ($maxchars, $maxlines, $fname) = (80, 24, "$opt_packagedir/$file");
+sub checkfile_DESCR($$) {
+	my ($dir, $fname) = @_;
+	my ($maxchars, $maxlines) = (80, 24);
 	my ($descr);
 
 	checkperms($fname);
@@ -799,8 +798,8 @@ sub checkfile_DESCR($) {
 	return true;
 }
 
-sub checkfile_distinfo($) {
-	my ($fname) = @_;
+sub checkfile_distinfo($$) {
+	my ($dir, $fname) = @_;
 	my ($distinfo, %in_distinfo);
 
 	checkperms($fname);
@@ -825,7 +824,7 @@ sub checkfile_distinfo($) {
 		}
 
 		if ($patch =~ /^patch-[-A-Za-z0-9_.]+$/) {
-			if (-f "$opt_packagedir/$patchdir/$patch") {
+			if (-f "${dir}/$patchdir/$patch") {
 				my $chksum = `sed -e '/\$NetBSD.*/d' $opt_packagedir/$patchdir/$patch | digest $alg`;
 				$chksum =~ s/\r*\n*\z//;
 				if ($sum ne $chksum) {
@@ -839,7 +838,7 @@ sub checkfile_distinfo($) {
 	}
 	checklines_trailing_empty_lines($distinfo);
 
-	foreach my $patch (<$opt_packagedir/$patchdir/patch-*>) {
+	foreach my $patch (<${dir}/$patchdir/patch-*>) {
 		$patch = basename($patch);
 		if (!exists($in_distinfo{$patch})) {
 			log_error($fname, NO_LINE_NUMBER, "$patch is not recorded. Rerun '$conf_make makepatchsum'.");
@@ -848,8 +847,8 @@ sub checkfile_distinfo($) {
 	return true;
 }
 
-sub checkfile_MESSAGE($) {
-	my ($fname) = @_;
+sub checkfile_MESSAGE($$) {
+	my ($dir, $fname) = @_;
 	my ($message);
 
 	checkperms($fname);
@@ -878,8 +877,8 @@ sub checkfile_MESSAGE($) {
 	return true;
 }
 
-sub checkfile_PLIST($) {
-	my ($fname) = @_;
+sub checkfile_PLIST($$) {
+	my ($dir, $fname) = @_;
 	my ($plist, $curdir, $last_file_seen);
 	
 	checkperms($fname);
@@ -981,9 +980,8 @@ sub checkfile_PLIST($) {
 	return true;
 }
 
-sub checkfile_buildlink3_mk($) {
-	my ($file) = @_;
-	my ($fname) = ("$opt_packagedir/$file");
+sub checkfile_buildlink3_mk($$) {
+	my ($dir, $fname) = @_;
 	my ($lines);
 
 	if (!($lines = load_file($fname))) {
@@ -997,10 +995,10 @@ sub checkfile_buildlink3_mk($) {
 }
 
 sub checkperms($) {
-	my ($file) = @_;
+	my ($fname) = @_;
 
-	if ($opt_warn_exec && -f $file && -x $file && !is_committed($file)) {
-		log_warning($file, NO_LINE_NUMBER, "Should not be executable.");
+	if ($opt_warn_exec && -f $fname && -x $fname && !is_committed($fname)) {
+		log_warning($fname, NO_LINE_NUMBER, "Should not be executable.");
 	}
 	return true;
 }
@@ -1008,9 +1006,8 @@ sub checkperms($) {
 #
 # misc files
 #
-sub checkfile_other($) {
-	my ($file) = @_;
-	my ($fname) = ("$opt_packagedir/$file");
+sub checkfile_other($$) {
+	my ($dir, $fname) = @_;
 	my ($lines);
 
 	$lines = load_file($fname);
@@ -1069,8 +1066,8 @@ sub check_for_multiple_patches($) {
 	return true;
 }
 
-sub checkfile_patches_patch($) {
-	my ($fname) = @_;
+sub checkfile_patches_patch($$) {
+	my ($dir, $fname) = @_;
 	my ($lines);
 
 	if ($fname =~ /.*~$/) {
@@ -1339,9 +1336,8 @@ sub checklines_direct_tools($) {
 	return true;
 }
 
-sub checkfile_Makefile($) {
-	my ($file) = @_;
-	my ($fname) = ("$opt_packagedir/$file");
+sub checkfile_Makefile($$) {
+	my ($dir, $fname) = @_;
 	my ($tmp, $rawwhole, $whole, $idx, @sections);
 	my (@varnames) = ();
 	my ($distfiles, $svrpkgname, $distname, $extractsufx) = ('', '', '', '', '');
@@ -1358,7 +1354,7 @@ sub checkfile_Makefile($) {
 	$tmp = 0;
 	$rawwhole = readmakefile($fname, $lines = []);
 	if (!$rawwhole) {
-		log_error("$opt_packagedir/$file", NO_LINE_NUMBER, "Cannot be read.");
+		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
 	}
 	if ($opt_dumpmakefile) {
@@ -1775,7 +1771,7 @@ sub checkfile_Makefile($) {
 	} elsif ($tmp =~ /\nMAINTAINER=[^\n]+/) {
 		$tmp =~ s/\nMAINTAINER=[^\n]+//;
 	} else {
-		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "No MAINTAINER listed in $file.");
+		$opt_warn_vague && log_error($fname, NO_LINE_NUMBER, "No MAINTAINER found.");
 	}
 	$tmp =~ s/\n\n+/\n/g;
 
