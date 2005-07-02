@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/05/31 10:01:39 dillo Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2005/07/02 06:57:54 snj Exp $
 #
 
 DISTNAME=	bash-3.0
 PKGNAME=	bash-3.0pl16
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
@@ -21,10 +22,12 @@ CONFLICTS=	static-bash-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_GNU_READLINE=	yes
 USE_MAKEINFO=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-installed-readline
 MAKE_ENV+=		INSTALL_SCRIPT='${INSTALL_SCRIPT}'
 TEST_TARGET=		test
 
@@ -62,6 +65,8 @@ PKG_OPTIONS_LEGACY_VARS+=	BASH_STATIC:static
 ##
 .if !empty(PKG_OPTIONS:Mstatic)
 CONFIGURE_ARGS+=	--enable-static-link
+BUILDLINK_DEPMETHOD.gettext=	build
+BUILDLINK_DEPMETHOD.readline=	build
 .endif
 
 ##
@@ -71,9 +76,13 @@ CONFIGURE_ARGS+=	--enable-static-link
 CONFIGURE_ENV+=	ac_cv_type_wctype_t=no
 .endif
 
+BUILDLINK_DEPENDS.readline+=	readline>=4.3
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/bash.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/bashbug.1 ${PREFIX}/man/man1
 
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
