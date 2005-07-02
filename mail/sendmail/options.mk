@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2005/05/31 10:01:38 dillo Exp $
+# $NetBSD: options.mk,v 1.7 2005/07/02 01:12:52 tv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl starttls tcpwrappers \
@@ -11,37 +11,37 @@ PKG_SUGGESTED_OPTIONS=	tcpwrappers
 ### Berkeley DB version 2/4 format for on disk databases e.g. aliases
 ###
 .if !empty(PKG_OPTIONS:Mdb2)
-.	include "../../databases/db/buildlink3.mk"
-.	elif !empty(PKG_OPTIONS:Mdb4)
-.		include "../../databases/db4/buildlink3.mk"
+.  include "../../databases/db/buildlink3.mk"
+.    elif !empty(PKG_OPTIONS:Mdb4)
+.  include "../../databases/db4/buildlink3.mk"
 .endif
 
 ###
 ### Use OpenLDAP for remote database access
 ###
 .if !empty(PKG_OPTIONS:Mldap)
-.	include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap/buildlink3.mk"
 .endif
 
 ###
 ### Use SASL/v2 for SMTP AUTH
 ###
 .if !empty(PKG_OPTIONS:Msasl)
-.	include "../../security/cyrus-sasl2/buildlink3.mk"
+.  include "../../security/cyrus-sasl2/buildlink3.mk"
 .endif
 
 ###
 ### Use OpenSSL libraries for SMTP STARTTLS support
 ###
 .if !empty(PKG_OPTIONS:Mstarttls)
-.	include "../../security/openssl/buildlink3.mk"
+.  include "../../security/openssl/buildlink3.mk"
 .endif
 
 ###
 ### Use tcpwrappers for network access control to sendmail
 ###
 .if !empty(PKG_OPTIONS:Mtcpwrappers)
-.	include "../../security/tcp_wrappers/buildlink3.mk"
+.  include "../../security/tcp_wrappers/buildlink3.mk"
 .endif
 
 ###
