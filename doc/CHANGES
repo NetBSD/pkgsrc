@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10529 2005/07/02 12:14:14 adrianp Exp $
+$NetBSD: CHANGES,v 1.10530 2005/07/02 12:56:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3102,3 +3102,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/nikto to 1.35 [adrianp 2005-07-02]
 	Updated security/msf to 2.4nb1 [adrianp 2005-07-02]
 
+	Updated devel/boehm-gc to 6.5 [wiz 2005-07-02]
