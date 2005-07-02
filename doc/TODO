@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3682 2005/07/02 10:15:24 wiz Exp $
+$NetBSD: TODO,v 1.3683 2005/07/02 12:56:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -374,7 +374,6 @@ Suggested package updates
 	o bmake-20050322
 	o boaconstructor-0.3.1
 	o bochs-2.2
-	o boehm-gc-6.5
 	o bogofilter-0.94.12
 	o bonobo-conf-0.16
 	o boson-0.10
