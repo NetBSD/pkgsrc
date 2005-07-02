@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.201 2005/07/02 22:31:17 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.202 2005/07/02 23:13:58 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -344,7 +344,6 @@ my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
 
 # Global variables
-my $opt_packagedir;
 my $pkgsrc_rootdir;
 my $pkgdir;
 my $filesdir;
@@ -375,7 +374,7 @@ sub check_category($);
 sub check_package($);
 
 sub checkperms($);
-sub readmakefile($$);
+sub readmakefile($$$);
 sub checkextra($$);
 sub checkorder($$@);
 sub checkearlier($@);
@@ -557,12 +556,11 @@ sub check_directory($) {
 		check_category($dir);
 	} elsif (-f "${dir}/../../mk/bsd.pkg.mk") {
 		$pkgsrc_rootdir = "${dir}/../..";
-		$opt_packagedir = $dir;
 		if ($opt_warn_types) {
 			load_make_vars_typemap();
 		}
 		load_predefined_sites();
-		check_package($opt_packagedir);
+		check_package($dir);
 	} else {
 		log_error($dir, NO_LINE_NUMBER, "Neither a package nor a category.");
 	}
@@ -593,22 +591,22 @@ sub check_package($) {
 	checkfile_DESCR($dir, "${dir}/${pkgdir}/DESCR");
 
 	if ($opt_check_MESSAGE) {
-		foreach my $msg (<$opt_packagedir/$filesdir/MESSAGE*>, <$opt_packagedir/$pkgdir/MESSAGE*>) {
+		foreach my $msg (<$dir/$filesdir/MESSAGE*>, <$dir/$pkgdir/MESSAGE*>) {
 			checkfile_MESSAGE($dir, $msg);
 		}
 	}
 	if ($opt_check_PLIST) {
-		foreach my $plist (<$opt_packagedir/$filesdir/PLIST*>, <$opt_packagedir/$pkgdir/PLIST*>) {
+		foreach my $plist (<$dir/$filesdir/PLIST*>, <$dir/$pkgdir/PLIST*>) {
 			checkfile_PLIST($dir, $plist);
 		}
 	}
 	if ($opt_check_patches) {
-		foreach my $patch (<$opt_packagedir/$patchdir/patch-*>) {
+		foreach my $patch (<$dir/$patchdir/patch-*>) {
 			checkfile_patches_patch($dir, $patch);
 		}
 	}
 	if ($opt_check_distinfo) {
-		foreach my $distinfo ("$opt_packagedir/$distinfo_file") {
+		foreach my $distinfo ("$dir/$distinfo_file") {
 			if (-f $distinfo) {
 				checkfile_distinfo($dir, $distinfo);
 			}
@@ -618,24 +616,24 @@ sub check_package($) {
 		# Make sure there's a distinfo if there are patches
 		my $patches = false;
 		patch:
-	    	    foreach my $i (<$opt_packagedir/$patchdir/patch-*>) {
+	    	    foreach my $i (<$dir/$patchdir/patch-*>) {
 			if ( -T "$i" ) { 
 				$patches = true;
 				last patch;
 			}
 		}
-		if ($patches && ! -f "$opt_packagedir/$distinfo_file" ) {
-			log_warning("$opt_packagedir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makepatchsum'.");
+		if ($patches && ! -f "$dir/$distinfo_file" ) {
+			log_warning("$dir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makepatchsum'.");
 		}
 	}
 	if ($opt_check_bl3) {
-		foreach my $bl3 ("$opt_packagedir/$pkgdir/buildlink3.mk") {
+		foreach my $bl3 ("$dir/$pkgdir/buildlink3.mk") {
 			next unless -f $bl3;
 			checkfile_buildlink3_mk($dir, $bl3);
 		}
 	}
 	if ($opt_check_extra) {
-		foreach my $extra ((<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>)) {
+		foreach my $extra ((<$dir/$filesdir/*>, <$dir/$pkgdir/*>)) {
 			next if ($extra =~ qr"(?:distinfo$|Makefile$|PLIST|MESSAGE)");
 			next unless -f $extra && -T $extra;
 
@@ -643,33 +641,33 @@ sub check_package($) {
 		}
 	}
 
-	if (-f "$opt_packagedir/$distinfo_file") {
+	if (-f "$dir/$distinfo_file") {
 		if ( $seen_NO_CHECKSUM ) {
-			log_warning("$opt_packagedir/$distinfo_file", NO_LINE_NUMBER, "This file should not exist if NO_CHECKSUM is set.");
+			log_warning("$dir/$distinfo_file", NO_LINE_NUMBER, "This file should not exist if NO_CHECKSUM is set.");
 		}
 	} else {
 		if ( ! $seen_NO_CHECKSUM ) {
-			log_warning("$opt_packagedir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makesum'.");
+			log_warning("$dir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makesum'.");
 		}
 	}
-	if (grep { $_ !~ qr"/CVS$" } <$opt_packagedir/scripts/*>) {
-		log_warning("$opt_packagedir/scripts", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
+	if (grep { $_ !~ qr"/CVS$" } <$dir/scripts/*>) {
+		log_warning("$dir/scripts", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
 	}
-	if (! -f "$opt_packagedir/$pkgdir/PLIST"
-	    and ! -f "$opt_packagedir/$pkgdir/PLIST.common"
+	if (! -f "$dir/$pkgdir/PLIST"
+	    and ! -f "$dir/$pkgdir/PLIST.common"
 	    and ! $seen_PLIST_SRC
 	    and ! $seen_NO_PKG_REGISTER ) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "No PLIST or PLIST.common, and PLIST_SRC and NO_PKG_REGISTER unset. Are you sure PLIST handling is ok?");
 	}
-	foreach my $wrkdir (<$opt_packagedir/work*>) {
+	foreach my $wrkdir (<$dir/work*>) {
 		if ($opt_warn_workdir && -d $wrkdir) {
 			log_warning($wrkdir, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
 		}
 	}
-	foreach my $backup (<$opt_packagedir/*~>, <$opt_packagedir/*/*~>) {
+	foreach my $backup (<$dir/*~>, <$dir/*/*~>) {
 		log_warning($backup, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
 	}
-	foreach my $orig (<$opt_packagedir/*/*.orig>, <$opt_packagedir/*.orig>, <$opt_packagedir/*/*.rej>, <$opt_packagedir/*.rej>) {
+	foreach my $orig (<$dir/*/*.orig>, <$dir/*.orig>, <$dir/*/*.rej>, <$dir/*.rej>) {
 		log_warning($orig, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
 	}
 	return true;
@@ -813,7 +811,7 @@ sub checkfile_distinfo($$) {
 
 		if ($patch =~ /^patch-[-A-Za-z0-9_.]+$/) {
 			if (-f "${dir}/$patchdir/$patch") {
-				my $chksum = `sed -e '/\$NetBSD.*/d' $opt_packagedir/$patchdir/$patch | digest $alg`;
+				my $chksum = `sed -e '/\$NetBSD.*/d' $dir/$patchdir/$patch | digest $alg`;
 				$chksum =~ s/\r*\n*\z//;
 				if ($sum ne $chksum) {
 					$line->log_error("Checksum of $patch differs. Rerun '$conf_make makepatchsum'.");
@@ -1086,8 +1084,8 @@ sub checkfile_patches_patch($$) {
 	return true;
 }
 
-sub readmakefile($$) {
-	my ($file, $all_lines) = @_;
+sub readmakefile($$$) {
+	my ($dir, $file, $all_lines) = @_;
 	my $contents = "";
 	my ($includefile, $dirname, $savedln, $level, $lines);
 
@@ -1133,13 +1131,13 @@ sub readmakefile($$) {
 				# current file and in the current working directory.
 				# We don't have an include dir list, like make(1) does.
 				if (!-f "$dirname/$includefile") {
-					$dirname = $opt_packagedir;
+					$dirname = $dir;
 				}
 				if (!-f "$dirname/$includefile") {
 					$line->log_error("Cannot read $dirname/$includefile.");
 				} else {
 					$line->log_info("Including $dirname/$includefile");
-					$contents .= readmakefile("$dirname/$includefile", $all_lines);
+					$contents .= readmakefile($dir, "$dirname/$includefile", $all_lines);
 				}
 			}
 		} elsif ($line->text =~ qr"^\.\s*include\s+(.*)") {
@@ -1335,12 +1333,12 @@ sub checkfile_Makefile($$) {
 
 	log_info($fname, NO_LINE_NUMBER, "Checking package Makefile.");
 
-	$category = basename(dirname(Cwd::abs_path($opt_packagedir)));
+	$category = basename(dirname(Cwd::abs_path($dir)));
 
 	checkperms($fname);
 
 	$tmp = 0;
-	$rawwhole = readmakefile($fname, $lines = []);
+	$rawwhole = readmakefile($dir, $fname, $lines = []);
 	if (!$rawwhole) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
@@ -1389,7 +1387,7 @@ sub checkfile_Makefile($$) {
 	$patchdir =~ s/\$\{.CURDIR\}/./;
 	$patchdir =~ s/\${PKGSRCDIR}/..\/../;
 
-	if (grep { $_ !~ qr"/CVS$" } <$opt_packagedir/pkg/*>) {
+	if (grep { $_ !~ qr"/CVS$" } <$dir/pkg/*>) {
 		$pkgdir = "pkg";
 	}
 	$pkgdir = $1 if ($whole =~ /\nPKGDIR[+?]?=[ \t]*([^\n]+)\n/);
@@ -1820,7 +1818,7 @@ sub checkfile_Makefile($$) {
 					if ($m[1] =~ /\/$/) {
 						$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Trailing '/' (slash) for directory $m[1] listed in $j.");
 					}
-					if (! -d "$opt_packagedir/$m[1]") {
+					if (! -d "$dir/$m[1]") {
 						$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "No package directory $m[1] found, even though it is listed in $j.");
 					} else {
 						log_info(NO_FILE, NO_LINE_NUMBER, "Package directory $m[1] found.");
