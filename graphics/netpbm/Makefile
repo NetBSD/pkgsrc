@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113.2.1 2005/06/25 16:05:34 salo Exp $
+# $NetBSD: Makefile,v 1.113.2.2 2005/07/02 07:12:05 snj Exp $
 
 DISTNAME=	netpbm-10.26.9
 PKGREVISION=	2
@@ -42,6 +42,13 @@ SUBST_FILES.bash=	converter/other/anytopnm			\
 			editor/pamstretch-gen	editor/pnmindex		\
 			editor/pnmmargin	editor/ppmquantall	\
 			other/ppmtomap
+
+.include "../../mk/bsd.prefs.mk"
+
+# Fiasco fails to compile on Darwin-8.x.
+.if !empty(MACHINE_PLATFORM:MDarwin-8.*-*)
+MAKE_ENV+=	BUILD_FIASCO=N
+.endif
 
 pre-configure:
 	${CP} ${WRKSRC}/Makefile.config.in ${WRKSRC}/Makefile.config
