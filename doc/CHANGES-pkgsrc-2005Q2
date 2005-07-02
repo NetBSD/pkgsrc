@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.21 2005/07/02 07:02:17 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.22 2005/07/02 07:12:32 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -47,3 +47,5 @@ Pullup ticket 579 - requested by Min Sik Kim
 portability fix for bash
 Pullup ticket 580 - requested by Min Sik Kim
 portability fix for bash2
+Pullup ticket 581 - requested by Min Sik Kim
+portability fix for netpbm
