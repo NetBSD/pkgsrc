@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10528 2005/07/02 11:34:05 adrianp Exp $
+$NetBSD: CHANGES,v 1.10529 2005/07/02 12:14:14 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3099,4 +3099,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated shells/bash2 to 2.05.2.7nb5 [minskim 2005-07-01]
 	Updated shells/bash to 3.0pl16nb1 [minskim 2005-07-01]
 	Updated games/crimsonfields to 0.4.8 [wiz 2005-07-02]
-	Updates security/nikto to 1.35 [adrianp 2005-07-02]
+	Updated security/nikto to 1.35 [adrianp 2005-07-02]
+	Updated security/msf to 2.4nb1 [adrianp 2005-07-02]
+
