@@ -1,20 +1,21 @@
-$NetBSD: patch-af,v 1.8 2004/07/09 00:18:54 recht Exp $
+$NetBSD: patch-af,v 1.9 2005/07/02 12:55:40 wiz Exp $
 
---- Makefile.in.orig	2004-03-25 01:46:35.000000000 +0100
-+++ Makefile.in	2004-04-04 14:43:08.000000000 +0200
-@@ -170,6 +170,9 @@
+--- Makefile.in.orig	2005-05-17 01:28:28.000000000 +0200
++++ Makefile.in
+@@ -321,6 +321,10 @@ include_HEADERS = include/gc.h include/g
  include/gc_pthread_redirects.h include/gc_config_macros.h \
  include/leak_detector.h include/gc_typed.h @addincludes@
  
 +include_PRIVATE_HEADERS = include/private/gc_hdrs.h \
 +include/private/gc_locks.h include/private/gc_priv.h \
 +include/private/gcconfig.h
- 
++
  EXTRA_HEADERS = include/gc_cpp.h include/gc_allocator.h
- 
-@@ -540,6 +543,13 @@
- 	  echo " $(includeHEADERS_INSTALL) $$d$$p $(DESTDIR)$(includedir)/$$f"; \
- 	  $(includeHEADERS_INSTALL) $$d$$p $(DESTDIR)$(includedir)/$$f; \
+ @POWERPC_DARWIN_FALSE@asm_libgc_sources = 
+ @POWERPC_DARWIN_TRUE@asm_libgc_sources = powerpc_darwin_mach_dep.s
+@@ -587,6 +591,13 @@ install-includeHEADERS: $(include_HEADER
+ 	  echo " $(includeHEADERS_INSTALL) '$$d$$p' '$(DESTDIR)$(includedir)/$$f'"; \
+ 	  $(includeHEADERS_INSTALL) "$$d$$p" "$(DESTDIR)$(includedir)/$$f"; \
  	done
 +	$(mkinstalldirs) $(DESTDIR)$(pkgincludedir)/private
 +	@list='$(include_PRIVATE_HEADERS)'; for p in $$list; do \
