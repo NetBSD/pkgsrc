@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.4 2005/07/02 14:31:11 rillig Exp $
 
 PKGNAME=	postgresql80-${BASE_VERS}
 COMMENT=	Robust, next generation, object-relational DBMS
