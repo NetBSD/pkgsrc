@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/06/21 23:06:07 jlam Exp $
+# $NetBSD: Makefile,v 1.35.2.1 2005/07/02 06:31:45 snj Exp $
 
 LIBQT=			${WRKSRC}/lib/libqt-mt.la
 
@@ -33,6 +33,15 @@ do-install:
 	${INSTALL_LIB_DIR} ${QTPREFIX}/plugins/imageformats
 	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqjpeg.la ${QTPREFIX}/plugins/imageformats/
 	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqmng.la ${QTPREFIX}/plugins/imageformats/
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin" && empty(MACHINE_PLATFORM:MDarwin-[567].*)
+SUBST_CLASSES+=		socklen
+SUBST_MESSAGE.socklen=	"Correcting socklen_t."
+SUBST_STAGE.socklen=	pre-configure
+SUBST_FILES.socklen=	mkspecs/darwin-g++/qplatformdefs.h
+SUBST_SED.socklen=	-e 's/QT_SOCKLEN_T.*/QT_SOCKLEN_T socklen_t/'
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
