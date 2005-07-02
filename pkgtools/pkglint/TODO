@@ -14,3 +14,4 @@
 * check for direct use of /usr/pkgsrc etc.
 * check dir direct use of *DIR
 * in dependency lines check for ../../category/package, not ../package
+* make all pathnames relative to the current directory
