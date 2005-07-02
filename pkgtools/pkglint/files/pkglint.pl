@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.198 2005/07/02 14:46:06 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.199 2005/07/02 15:21:13 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -370,7 +370,9 @@ sub checkfile_MESSAGE($);
 sub checkfile_patches_patch($);
 sub checkfile_PLIST($);
 sub checkfile_other($);
+
 sub check_category($);
+sub check_package($);
 
 sub checkperms($);
 sub readmakefile($$);
@@ -378,7 +380,6 @@ sub checkextra($$);
 sub checkorder($$@);
 sub checkearlier($@);
 sub check_predefined_sites($);
-sub check_package();
 
 sub init_global_vars() {
 	$pkgsrc_rootdir		= undef;
@@ -561,7 +562,7 @@ sub check_directory($) {
 			load_make_vars_typemap();
 		}
 		load_predefined_sites();
-		check_package();
+		check_package($opt_packagedir);
 	} else {
 		log_error($dir, NO_LINE_NUMBER, "Neither a package nor a category.");
 	}
@@ -580,7 +581,9 @@ sub main() {
 	print_summary_and_exit($opt_quiet);
 }
 
-sub check_package() {
+sub check_package($) {
+	my ($dir) = @_;
+
 	# we need to handle the Makefile first to get some variables
 	if (!checkfile_Makefile("Makefile")) {
 		log_error("$opt_packagedir/Makefile", NO_LINE_NUMBER, "Cannot be read.");
