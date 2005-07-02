@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:30 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/02 16:52:59 epg Exp $
 #
 
 DISTNAME=		xapply-3.4
+PKGREVISION=		1
 CATEGORIES=		mine
 MASTER_SITES=		http://archive.progeny.com/pundits/
 EXTRACT_SUFX=		.tgz
@@ -10,7 +11,6 @@ MAINTAINER=		epg@NetBSD.org
 COMMENT=		Parallel Execution tool a la xargs/apply
 
 BUILD_DEPENDS+=		mkcmd>=8.14:../../devel/mkcmd
-
 
 INSTALLATION_DIRS=	bin man/man1
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
