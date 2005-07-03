@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.15 2005/07/03 19:01:50 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
 
 --- libtool.m4.orig	2005-05-15 09:41:23.000000000 -0400
 +++ libtool.m4
@@ -183,7 +183,7 @@ $NetBSD: manual-libtool.m4,v 1.15 2005/07/03 19:01:50 tv Exp $
 +    # memory consuming.  To do this, we pick a random 256KB-aligned
 +    # start address between 0x50000000 and 0x6ffc0000 at link time.
 +    _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+    _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++    _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +    ;;
    irix5* | irix6*)
      case $cc_basename in
@@ -339,7 +339,7 @@ $NetBSD: manual-libtool.m4,v 1.15 2005/07/03 19:01:50 tv Exp $
 +      # memory consuming.  To do this, we pick a random 256KB-aligned
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
 +      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
 +      _LT_AC_TAGVAR(hardcode_direct, $1)=yes
 +      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
