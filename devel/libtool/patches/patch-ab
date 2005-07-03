@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.52 2005/05/18 14:40:04 tv Exp $
+$NetBSD: patch-ab,v 1.53 2005/07/03 19:01:50 tv Exp $
 
---- configure.orig	2005-05-18 09:53:15.000000000 -0400
+--- configure.orig	2005-07-03 14:55:24.000000000 -0400
 +++ configure
 @@ -322,11 +322,11 @@ else
  
@@ -306,7 +306,7 @@ $NetBSD: patch-ab,v 1.52 2005/05/18 14:40:04 tv Exp $
 +      archive_expsym_cmds='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      export_dynamic_flag_spec='${wl}-E'
 +      hardcode_direct=yes
-+      hardcode_libdir_flag_spec='${wl}-h,$libdir'
++      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
 +      hardcode_shlibpath_var=no
 +      ;;
 +
@@ -866,7 +866,7 @@ $NetBSD: patch-ab,v 1.52 2005/05/18 14:40:04 tv Exp $
 +      archive_expsym_cmds_F77='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      export_dynamic_flag_spec_F77='${wl}-E'
 +      hardcode_direct_F77=yes
-+      hardcode_libdir_flag_spec_F77='${wl}-h,$libdir'
++      hardcode_libdir_flag_spec_F77='${wl}-rpath,$libdir'
 +      hardcode_shlibpath_var_F77=no
 +      ;;
 +
@@ -1051,7 +1051,7 @@ $NetBSD: patch-ab,v 1.52 2005/05/18 14:40:04 tv Exp $
 +      archive_expsym_cmds_GCJ='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      export_dynamic_flag_spec_GCJ='${wl}-E'
 +      hardcode_direct_GCJ=yes
-+      hardcode_libdir_flag_spec_GCJ='${wl}-h,$libdir'
++      hardcode_libdir_flag_spec_GCJ='${wl}-rpath,$libdir'
 +      hardcode_shlibpath_var_GCJ=no
 +      ;;
 +
