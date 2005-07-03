@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.14 2005/05/18 14:40:04 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.15 2005/07/03 19:01:50 tv Exp $
 
 --- libtool.m4.orig	2005-05-15 09:41:23.000000000 -0400
 +++ libtool.m4
@@ -342,7 +342,7 @@ $NetBSD: manual-libtool.m4,v 1.14 2005/05/18 14:40:04 tv Exp $
 +      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
 +      _LT_AC_TAGVAR(hardcode_direct, $1)=yes
-+      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-h,$libdir'
++      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
 +      _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
 +      ;;
 +
