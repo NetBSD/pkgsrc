@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2005/04/11 21:46:16 tv Exp $
+# $NetBSD: Makefile.common,v 1.27 2005/07/03 19:49:06 recht Exp $
 #
 
 DISTNAME=	Python-2.3.5
@@ -106,6 +106,7 @@ post-extract:
 	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
