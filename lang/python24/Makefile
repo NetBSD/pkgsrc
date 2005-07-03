@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/05/10 22:27:44 abs Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/03 19:48:22 recht Exp $
 #
 
 DISTNAME=	Python-2.4.1
 PKGNAME=	python24-2.4.1
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.4.1/
 EXTRACT_SUFX=	.tar.bz2
@@ -115,6 +116,7 @@ post-extract:
 	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
