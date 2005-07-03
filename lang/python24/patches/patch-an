@@ -1,0 +1,28 @@
+$NetBSD: patch-an,v 1.3 2005/07/03 19:48:22 recht Exp $
+
+--- Include/pyport.h.orig	2004-09-23 21:11:21.000000000 +0200
++++ Include/pyport.h	2005-07-03 20:02:08.000000000 +0200
+@@ -152,11 +152,23 @@
+ #if defined(PYOS_OS2) && defined(PYCC_GCC)
+ #include <sys/types.h>
+ #endif
++
++#if (defined __APPLE__) && (!defined _POSIX_C_SOURCE)
++#define TEMPORARILY_DEFINING__POSIX_C_SOURCE    /* so we can #undef it later */
++#define _POSIX_C_SOURCE   /* avoid deprecated struct ostat in sys/stat.h */
++#endif
++
+ #include <sys/stat.h>
+ #elif defined(HAVE_STAT_H)
+ #include <stat.h>
+ #endif
+ 
++/* Mac OS X: undefine _POSIX_C_SOURCE if it wasn't defined before */
++#ifdef TEMPORARILY_DEFINING__POSIX_C_SOURCE
++#undef _POSIX_C_SOURCE
++#undef TEMPORARILY_DEFINING__POSIX_C_SOURCE
++#endif
++
+ #if defined(PYCC_VACPP)
+ /* VisualAge C/C++ Failed to Define MountType Field in sys/stat.h */
+ #define S_IFMT (S_IFDIR|S_IFCHR|S_IFREG)
