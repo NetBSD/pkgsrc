@@ -1,13 +1,13 @@
-$NetBSD: patch-ay,v 1.1 2004/02/07 17:44:10 seb Exp $
+$NetBSD: patch-ay,v 1.2 2005/07/03 15:23:34 wulf Exp $
 
---- src/rrd_dump.c.orig	Fri Oct 11 18:39:47 2002
-+++ src/rrd_dump.c
-@@ -40,7 +40,7 @@ rrd_dump(int argc, char **argv)    
+--- src/rrd_dump.c.orig	2005-05-28 22:31:55.000000000 +0930
++++ src/rrd_dump.c	2005-06-19 14:11:09.000000000 +0930
+@@ -91,7 +91,7 @@
  # error "Need strftime"
  #endif
      printf("\t<lastupdate> %ld </lastupdate> <!-- %s -->\n\n",
 -	   rrd.live_head->last_up,somestring);
-+	   (long)rrd.live_head->last_up,somestring);
++	   (long) rrd.live_head->last_up,somestring);
      for(i=0;i<rrd.stat_head->ds_cnt;i++){
  	printf("\t<ds>\n");
  	printf("\t\t<name> %s </name>\n",rrd.ds_def[i].ds_nam);

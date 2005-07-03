@@ -1,19 +1,19 @@
-$NetBSD: patch-av,v 1.1 2004/02/07 17:44:10 seb Exp $
+$NetBSD: patch-av,v 1.2 2005/07/03 15:23:34 wulf Exp $
 
---- src/parsetime.c.orig	Fri Oct 11 18:39:46 2002
-+++ src/parsetime.c
-@@ -660,6 +660,7 @@ day(struct time_value *ptv)
- {
-     long mday=0, wday, mon, year = ptv->tm.tm_year;
+--- src/parsetime.c.orig	2005-05-28 22:31:55.000000000 +0930
++++ src/parsetime.c	2005-06-19 14:05:00.000000000 +0930
+@@ -662,6 +662,7 @@
+     /* using time_t seems to help portability with 64bit oses */    
+     time_t mday=0, wday, mon, year = ptv->tm.tm_year;
      int tlen;
 +    time_t montime;
  
      switch (sc_tokid) {
      case YESTERDAY:
-@@ -713,7 +714,8 @@ day(struct time_value *ptv)
+@@ -716,7 +717,8 @@
  	    tlen = strlen(sc_token);
  	    mon = atol(sc_token);
-             if (mon > 10*356*24*60*60) {
+             if (mon > 10*365*24*60*60) {
 -		ptv->tm=*localtime(&mon);
 +		montime = mon;
 +		ptv->tm=*localtime(&montime);

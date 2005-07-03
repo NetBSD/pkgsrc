@@ -1,22 +1,13 @@
-$NetBSD: patch-as,v 1.5 2004/02/07 17:44:10 seb Exp $
+$NetBSD: patch-as,v 1.6 2005/07/03 15:23:34 wulf Exp $
 
---- src/rrd_cgi.c.orig	Fri Oct 11 18:39:46 2002
-+++ src/rrd_cgi.c
-@@ -12,7 +12,7 @@
- #define MEMBLK 1024
+--- src/rrd_cgi.c.orig	2005-05-28 22:31:55.000000000 +0930
++++ src/rrd_cgi.c	2005-06-19 14:03:09.000000000 +0930
+@@ -352,7 +352,7 @@
  
- /* global variable for libcgi */
--s_cgi **cgiArg;
-+s_cgi *cgiArg;
+ 	if (!filter) {
+ 		printf ("Content-Type: text/html\n" 
+-				"Content-Length: %d\n", 
++				"Content-Length: %zd\n", 
+ 				strlen(buffer));
  
- /* in arg[0] find tags beginning with arg[1] call arg[2] on them
-    and replace by result of arg[2] call */
-@@ -168,7 +168,7 @@ int main(int argc, char *argv[]) {
- 
-   if (filter==0){
-       printf ("Content-Type: text/html\n"
--	      "Content-Length: %d\n", strlen(buffer));
-+	      "Content-Length: %zd\n", strlen(buffer));
-       if (labs(goodfor) > 0){
- 		  time_t now;
- 		  now = time(NULL);
+ 		if (labs(goodfor) > 0) {
