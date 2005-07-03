@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10532 2005/07/02 15:10:56 wiz Exp $
+$NetBSD: CHANGES,v 1.10533 2005/07/03 16:12:19 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3104,3 +3104,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/boehm-gc to 6.5 [wiz 2005-07-02]
 	Updated net/docsis to 0.9.4 [symka 2005-07-02]
 	Updated net/wget to 1.10 [wiz 2005-07-02]
+	Updated databases/rrdtool to 1.2.9 [wulf 2005-07-03]
