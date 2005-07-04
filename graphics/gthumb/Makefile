@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/05/02 11:40:40 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/04 20:01:15 drochner Exp $
 
-DISTNAME=		gthumb-2.6.5
+DISTNAME=		gthumb-2.6.6
 CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gthumb/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gthumb/2.6/}
 
 MAINTAINER=		minskim@NetBSD.org
 HOMEPAGE=		http://gthumb.sourceforge.net/
