@@ -1,17 +1,17 @@
-$NetBSD: patch-al,v 1.4 2005/07/03 15:23:34 wulf Exp $
+$NetBSD: patch-al,v 1.5 2005/07/04 22:53:39 wulf Exp $
 
---- examples/Makefile.in.orig	2005-05-28 22:33:22.000000000 +0930
-+++ examples/Makefile.in	2005-06-19 14:01:09.000000000 +0930
-@@ -207,7 +207,7 @@
- EXTRA_DIST = cgi-demo.cgi.in piped-demo.pl.in shared-demo.pl.in \
+--- examples/Makefile.in.orig	2005-06-17 11:07:15.000000000 +0200
++++ examples/Makefile.in
+@@ -213,7 +213,7 @@ EXTRA_DIST = cgi-demo.cgi.in piped-demo.
  	stripes.pl.in bigtops.pl.in minmax.pl.in 4charts.pl.in
  
--examplesdir = $(prefix)/examples
+ EXPREFIX := $(shell echo "@prefix@" | grep rrd >/dev/null || echo "rrdtool-@VERSION@/")
+-examplesdir = $(prefix)/$(EXPREFIX)examples
 +examplesdir = $(prefix)/share/examples/rrdtool
  examples_SCRIPTS = cgi-demo.cgi piped-demo.pl shared-demo.pl \
  	stripes.pl bigtops.pl minmax.pl 4charts.pl
  
-@@ -223,9 +223,9 @@
+@@ -229,9 +229,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefi
  	      exit 1;; \
  	  esac; \
  	done; \
