@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/07/03 15:23:33 wulf Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/07/04 22:53:39 wulf Exp $
 bin/rrdcgi
 bin/rrdtool
 bin/rrdupdate
@@ -30,7 +30,10 @@ man/man1/rrdtune.1
 man/man1/rrdtutorial.1
 man/man1/rrdupdate.1
 man/man1/rrdxport.1
-share/rrdtool/fonts/DejaVuSansMono-Roman.ttf
+share/doc/rrdtool/bin_dec_hex.pod
+share/doc/rrdtool/bin_dec_hex.txt
+share/doc/rrdtool/cdeftutorial.pod
+share/doc/rrdtool/cdeftutorial.txt
 share/doc/rrdtool/html/RRDp.html
 share/doc/rrdtool/html/RRDs.html
 share/doc/rrdtool/html/bin_dec_hex.html
@@ -58,10 +61,6 @@ share/doc/rrdtool/html/rrdtune.html
 share/doc/rrdtool/html/rrdtutorial.html
 share/doc/rrdtool/html/rrdupdate.html
 share/doc/rrdtool/html/rrdxport.html
-share/doc/rrdtool/bin_dec_hex.pod
-share/doc/rrdtool/bin_dec_hex.txt
-share/doc/rrdtool/cdeftutorial.pod
-share/doc/rrdtool/cdeftutorial.txt
 share/doc/rrdtool/rpntutorial.pod
 share/doc/rrdtool/rpntutorial.txt
 share/doc/rrdtool/rrd-beginners.pod
@@ -115,9 +114,9 @@ share/examples/rrdtool/minmax.pl
 share/examples/rrdtool/piped-demo.pl
 share/examples/rrdtool/shared-demo.pl
 share/examples/rrdtool/stripes.pl
+share/rrdtool/fonts/DejaVuSansMono-Roman.ttf
 @dirrm share/examples/rrdtool
 @dirrm share/rrdtool/fonts
 @dirrm share/rrdtool
 @dirrm share/doc/rrdtool/html
 @dirrm share/doc/rrdtool
-@dirrm shared
