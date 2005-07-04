@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.6 2005/07/04 22:53:39 wulf Exp $
+
+--- src/rrd_graph.c.orig	2005-07-05 09:33:44.000000000 +0930
++++ src/rrd_graph.c	2005-07-05 09:54:16.000000000 +0930
+@@ -3150,7 +3150,7 @@
+ 
+ 	    if(sscanf(optarg,
+ 				"%10[A-Z]:%lf:%1000s",
+-				prop,&size,font) == 3){
++				prop,&size,font) >= 2){
+ 		int sindex,propidx;
+ 		if((sindex=text_prop_conv(prop)) != -1){
+                   for (propidx=sindex;propidx<TEXT_PROP_LAST;propidx++){  	              
