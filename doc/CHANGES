@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10533 2005/07/03 16:12:19 wulf Exp $
+$NetBSD: CHANGES,v 1.10534 2005/07/04 23:03:32 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3105,3 +3105,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/docsis to 0.9.4 [symka 2005-07-02]
 	Updated net/wget to 1.10 [wiz 2005-07-02]
 	Updated databases/rrdtool to 1.2.9 [wulf 2005-07-03]
+	Updated databases/rrdtool to 1.2.10 [wulf 2005-07-05]
