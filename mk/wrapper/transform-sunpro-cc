@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.2 2004/11/10 16:20:40 sketch Exp $
+# $NetBSD: transform-sunpro-cc,v 1.3 2005/07/04 09:48:31 grant Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -102,13 +102,13 @@ case $arg in
 	addtocache=yes
 	;;
 ######################################################################
-# SunPro doesn't understand -pthread, and only -lpthread is needed on
-# Solaris.
+# SunPro needs -mt -lpthread for POSIX threads.
 ######################################################################
 -pthread)
-	arg="-lpthread"
+	arg="-mt -lpthread"
 	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
+	split_arg=yes
 	;;
 ######################################################################
 # Ignore some flags that are unnecessary for SunPro.
