@@ -1,20 +1,20 @@
-$NetBSD: patch-aj,v 1.4 2005/07/03 15:23:34 wulf Exp $
+$NetBSD: patch-aj,v 1.5 2005/07/04 22:53:39 wulf Exp $
 
---- doc/Makefile.in.orig	2005-05-28 22:33:22.000000000 +0930
-+++ doc/Makefile.in	2005-06-19 13:58:04.000000000 +0930
-@@ -228,9 +228,9 @@
+--- doc/Makefile.in.orig	2005-06-17 11:07:14.000000000 +0200
++++ doc/Makefile.in
+@@ -233,9 +233,9 @@ EXTRA_DIST = $(POD) $(HTML) $(MAN) $(TXT
  
  # some install rules if the install pat
- DOCPREFIX := $(shell echo "@prefix@" | grep rrd >/dev/null && echo "rrdtool-@VERSION@/")
--idocdir = $(prefix)/shared/doc/$(DOCPREFIX)txt
+ DOCPREFIX := $(shell echo "@prefix@" | grep rrd >/dev/null || echo "rrdtool-@VERSION@/")
+-idocdir = $(prefix)/share/doc/$(DOCPREFIX)txt
 +idocdir = $(prefix)/share/doc/rrdtool
  idoc_DATA = $(POD) $(TXT)
--ihtmldir = $(prefix)/shared/doc/$(DOCPREFIX)html
+-ihtmldir = $(prefix)/share/doc/$(DOCPREFIX)html
 +ihtmldir = $(prefix)/share/doc/rrdtool/html
  ihtml_DATA = $(HTML)
  imandir = $(mandir)/man1
  iman_DATA = $(MAN)
-@@ -247,9 +247,9 @@
+@@ -252,9 +252,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefi
  	      exit 1;; \
  	  esac; \
  	done; \
