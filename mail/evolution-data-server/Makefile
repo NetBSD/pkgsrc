@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2005/06/29 23:43:13 salo Exp $
+# $NetBSD: Makefile,v 1.23 2005/07/04 20:09:30 drochner Exp $
 #
 
-DISTNAME=	evolution-data-server-1.2.2
-PKGREVISION=	1
+DISTNAME=	evolution-data-server-1.2.3
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/1.2/}
 EXTRACT_SUFX=	.tar.bz2
