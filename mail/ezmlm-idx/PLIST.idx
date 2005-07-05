@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.idx,v 1.4 2005/04/15 20:41:20 schmonz Exp $
+@comment $NetBSD: PLIST.idx,v 1.5 2005/07/05 06:04:17 schmonz Exp $
 bin/ezmlm-accept
 bin/ezmlm-archive
 bin/ezmlm-check
@@ -45,6 +45,7 @@ man/man1/ezmlm-check.1
 man/man1/ezmlm-clean.1
 man/man1/ezmlm-confirm.1
 man/man1/ezmlm-cron.1
+man/man1/ezmlm-dispatch.1
 man/man1/ezmlm-gate.1
 man/man1/ezmlm-get.1
 man/man1/ezmlm-glconf.1
