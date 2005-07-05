@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.3 2005/07/05 09:45:25 grant Exp $
+
+--- src/makefiles/Makefile.solaris.orig	2004-12-22 05:47:42.000000000 +1100
++++ src/makefiles/Makefile.solaris
+@@ -19,4 +19,4 @@ endif
+ %.so: %.o
+ 	$(LD) -G -Bdynamic -o $@ $<
+ 
+-sqlmansect = 5sql
++sqlmansect = 7
