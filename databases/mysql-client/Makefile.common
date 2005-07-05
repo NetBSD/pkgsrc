@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2005/07/05 08:48:41 grant Exp $
+# $NetBSD: Makefile.common,v 1.45 2005/07/05 08:49:44 grant Exp $
 
 DISTNAME=		mysql-4.0.24
 CATEGORIES=		databases
@@ -66,10 +66,8 @@ CFLAGS+=		-DUSE_OLD_FUNCTIONS # 3.23.x compat
 
 # force HAVE_CURSES_H on Solaris since the configure script is broken
 # and does not properly detect this, breaking the build later on.
-.if ${OPSYS} == "SunOS"
-CFLAGS+=		-DHAVE_CURSES_H
-CXXFLAGS+=		-DHAVE_CURSES_H
-.endif
+CFLAGS.SunOS+=		-DHAVE_CURSES_H
+CXXFLAGS.SunOS+=	-DHAVE_CURSES_H
 
 .include "../../mk/pthread.buildlink3.mk"
 
