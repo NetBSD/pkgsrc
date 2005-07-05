@@ -1,17 +1,10 @@
-# $NetBSD: options.mk,v 1.6 2005/03/23 00:51:09 schmonz Exp $
+# $NetBSD: options.mk,v 1.7 2005/07/05 06:04:17 schmonz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.ezmlm-idx
-PKG_SUPPORTED_OPTIONS=	mysql pgsql
+PKG_OPTIONS_VAR=		PKG_OPTIONS.ezmlm-idx
+PKG_OPTIONS_OPTIONAL_GROUPS=	database
+PKG_OPTIONS_GROUP.database=	mysql pgsql
+
 .include "../../mk/bsd.options.mk"
-
-###
-### We can't compile support for both MySQL and PostgreSQL.
-###
-.if !empty(PKG_OPTIONS:Mmysql) && !empty(PKG_OPTIONS:Mpgsql)
-PKG_FAIL_REASON+=       "MySQL and PostgreSQL cannot both be compiled in." \
-			"Please change ${PKG_OPTIONS_VAR} to one or the other."
-.endif
-
 
 ###
 ### MySQL support
@@ -29,7 +22,7 @@ post-configure:
 		> sub_mysql/conf-sqlld;					\
 	${ECHO} mysql > conf-sub
 .  else
-PKG_FAIL_REASON+=	"mysql: can't define post-configure target"
+PKG_FAIL_REASON+=	"ezmlm-idx: can't define post-configure mysql target"
 .  endif
 .endif
 
@@ -49,6 +42,6 @@ post-configure:
 		> sub_pgsql/conf-sqlld;					\
 	${ECHO} pgsql > conf-sub
 .  else
-PKG_FAIL_REASON+=	"pgsql: can't define post-configure target"
+PKG_FAIL_REASON+=	"ezmlm-idx: can't define post-configure pgsql target"
 .  endif
 .endif
