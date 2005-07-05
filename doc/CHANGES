@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10535 2005/07/05 06:05:42 schmonz Exp $
+$NetBSD: CHANGES,v 1.10536 2005/07/05 15:20:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3107,3 +3107,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/rrdtool to 1.2.9 [wulf 2005-07-03]
 	Updated databases/rrdtool to 1.2.10 [wulf 2005-07-05]
 	Updated mail/ezmlm-idx to 0.441 [schmonz 2005-07-05]
+	Updated textproc/flyspell to 1.7inb1 [wiz 2005-07-05]
