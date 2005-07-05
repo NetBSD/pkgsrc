@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/04/13 15:36:56 abs Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/07/05 09:47:04 grant Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -710,6 +710,7 @@ share/doc/postgresql80/html/ecpg-process.html
 share/doc/postgresql80/html/ecpg-set-connection.html
 share/doc/postgresql80/html/ecpg-variables.html
 share/doc/postgresql80/html/ecpg.html
+share/doc/postgresql80/html/encryption-options.html
 share/doc/postgresql80/html/errcodes-appendix.html
 share/doc/postgresql80/html/error-message-reporting.html
 share/doc/postgresql80/html/error-style-guide.html
@@ -947,6 +948,7 @@ share/doc/postgresql80/html/release-7-2-4.html
 share/doc/postgresql80/html/release-7-2-5.html
 share/doc/postgresql80/html/release-7-2-6.html
 share/doc/postgresql80/html/release-7-2-7.html
+share/doc/postgresql80/html/release-7-2-8.html
 share/doc/postgresql80/html/release-7-2.html
 share/doc/postgresql80/html/release-7-3-1.html
 share/doc/postgresql80/html/release-7-3-2.html
@@ -957,6 +959,7 @@ share/doc/postgresql80/html/release-7-3-6.html
 share/doc/postgresql80/html/release-7-3-7.html
 share/doc/postgresql80/html/release-7-3-8.html
 share/doc/postgresql80/html/release-7-3-9.html
+share/doc/postgresql80/html/release-7-3-10.html
 share/doc/postgresql80/html/release-7-3.html
 share/doc/postgresql80/html/release-7-4-1.html
 share/doc/postgresql80/html/release-7-4-2.html
@@ -965,8 +968,10 @@ share/doc/postgresql80/html/release-7-4-4.html
 share/doc/postgresql80/html/release-7-4-5.html
 share/doc/postgresql80/html/release-7-4-6.html
 share/doc/postgresql80/html/release-7-4-7.html
+share/doc/postgresql80/html/release-7-4-8.html
 share/doc/postgresql80/html/release-7-4.html
 share/doc/postgresql80/html/release-8-0-1.html
+share/doc/postgresql80/html/release-8-0-2.html
 share/doc/postgresql80/html/release-8-0.html
 share/doc/postgresql80/html/release.html
 share/doc/postgresql80/html/resources.html
