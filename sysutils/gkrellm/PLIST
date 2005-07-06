@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/07/06 16:03:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/07/06 17:00:12 cube Exp $
 bin/gkrellm
 include/gkrellm2/gkrellm.h
 include/gkrellm2/gkrellm-public-proto.h
@@ -9,5 +9,5 @@ man/man1/gkrellm.1
 @exec ${MKDIR} %D/lib/gkrellm2/plugins || ${TRUE}
 @dirrm lib/gkrellm2/plugins
 @dirrm lib/gkrellm2
-@exec ${MKDIR} %D/share/gkrellm2/theme || ${TRUE}
-@dirrm share/gkrellm2/theme
+@exec ${MKDIR} %D/share/gkrellm2/themes || ${TRUE}
+@dirrm share/gkrellm2/themes
