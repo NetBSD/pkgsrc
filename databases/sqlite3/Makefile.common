@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.4 2005/05/22 20:07:46 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/07/06 18:13:07 drochner Exp $
 
-DISTNAME=	sqlite-3.2.1
+DISTNAME=	sqlite-3.2.2
 PKGNAME=	${DISTNAME:S/-/3-/}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
