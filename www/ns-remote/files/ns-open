@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ns-open,v 1.13 2005/03/23 11:40:34 abs Exp $
+# $NetBSD: ns-open,v 1.14 2005/07/06 19:13:24 abs Exp $
 #
 # Simple script to open a URL in Netscape, starting a new process if necessary
 # If a netscape process is not running it will look for a valid netscape
@@ -60,11 +60,8 @@ do
 	-* ) # Unrecognised option
 	    START_NEW_NETSCAPE=1
 	    ;;
-	*,* ) # ns-remote cannot handle a URL encoded comma (XChangeProperty)
-	    START_NEW_NETSCAPE=1
-	    ;;
 	*)
-	    URL=`echo $a | sed -e 's/"/%22/g' -e 's/\`/%60/g`
+	    URL=`echo $a | sed -e 's/"/%22/g' -e 's/\`/%60/g -e 's/,/%2c/'`
 	    break;
 	    ;;
     esac
