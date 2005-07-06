@@ -1,0 +1,18 @@
+$NetBSD: patch-ah,v 1.5 2005/07/06 06:36:03 reed Exp $
+
+--- libgnomevfs/gnome-vfs-resolve.c.orig	Fri May  6 18:06:26 2005
++++ libgnomevfs/gnome-vfs-resolve.c	Fri May  6 18:15:23 2005
+@@ -172,8 +172,12 @@
+ 	   switch (error) {
+ 			 
+ 	   case EAI_NONAME: return GNOME_VFS_ERROR_HOST_NOT_FOUND;
+-	   case EAI_ADDRFAMILY:		
++#ifdef EAI_ADDRFAMILY
++	   case EAI_ADDRFAMILY: return GNOME_VFS_ERROR_HOST_HAS_NO_ADDRESS;	
++#endif
++#ifdef EAI_NODATA
+ 	   case EAI_NODATA: return GNOME_VFS_ERROR_HOST_HAS_NO_ADDRESS;
++#endif
+ 	   case EAI_SYSTEM: return gnome_vfs_result_from_errno ();
+ 	   case EAI_FAIL:
+ 	   case EAI_AGAIN: return GNOME_VFS_ERROR_NAMESERVER;
