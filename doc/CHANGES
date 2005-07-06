@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10540 2005/07/06 19:46:14 reed Exp $
+$NetBSD: CHANGES,v 1.10541 2005/07/06 21:19:24 epg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3112,3 +3112,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/mathomatic to 12.4.4 [minskim 2005-07-06]
 	Updated www/ns-remote to 1.11 [abs 2005-07-06]
 	Added benchmarks/thrulay version 0.6 [reed 2005-07-06]
+	Updated devel/subversion to 1.2.1 [epg 2005-07-06]
