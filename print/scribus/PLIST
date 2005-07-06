@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/03/31 19:15:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/07/06 18:05:32 drochner Exp $
 bin/scribus
 include/scribus/alignselect.h
 include/scribus/bookmwin.h
@@ -58,6 +58,26 @@ include/scribus/tree.h
 include/scribus/vgradient.h
 include/scribus/vruler.h
 include/scribus/werktoolb.h
+lib/scribus/dicts/README_ca_ES.txt
+lib/scribus/dicts/README_cs_CZ.txt
+lib/scribus/dicts/README_cy_GB.txt
+lib/scribus/dicts/README_da_DK.txt
+lib/scribus/dicts/README_de_DE.txt
+lib/scribus/dicts/README_en_EN.txt
+lib/scribus/dicts/README_en_GB.txt
+lib/scribus/dicts/README_es_ES.txt
+lib/scribus/dicts/README_fi_FI.txt
+lib/scribus/dicts/README_hu_HU.txt
+lib/scribus/dicts/README_lt_LT.txt
+lib/scribus/dicts/README_no_NO.txt
+lib/scribus/dicts/README_pl_PL.txt
+lib/scribus/dicts/README_pt_BR.txt
+lib/scribus/dicts/README_pt_PT.txt
+lib/scribus/dicts/README_ru_RU_0.txt
+lib/scribus/dicts/README_sk_SK.txt
+lib/scribus/dicts/README_sl_SI.txt
+lib/scribus/dicts/README_sv_SE.txt
+lib/scribus/dicts/README_uk_UA.txt
 lib/scribus/dicts/hyph_af.dic
 lib/scribus/dicts/hyph_ca.dic
 lib/scribus/dicts/hyph_cs.dic
@@ -69,12 +89,14 @@ lib/scribus/dicts/hyph_es.dic
 lib/scribus/dicts/hyph_fi.dic
 lib/scribus/dicts/hyph_fr.dic
 lib/scribus/dicts/hyph_ga.dic
+lib/scribus/dicts/hyph_hr.dic
 lib/scribus/dicts/hyph_hu.dic
 lib/scribus/dicts/hyph_it.dic
 lib/scribus/dicts/hyph_lt.dic
 lib/scribus/dicts/hyph_nl.dic
 lib/scribus/dicts/hyph_pl.dic
 lib/scribus/dicts/hyph_pt.dic
+lib/scribus/dicts/hyph_pt_BR.dic
 lib/scribus/dicts/hyph_ru.dic
 lib/scribus/dicts/hyph_sk.dic
 lib/scribus/dicts/hyph_sl.dic
@@ -87,6 +109,7 @@ lib/scribus/libs/libpostscript.la
 lib/scribus/libs/libpreferences.la
 lib/scribus/plugins/gettext/libcsvim.la
 lib/scribus/plugins/gettext/libhtmlim.la
+lib/scribus/plugins/gettext/libodtimplugin.la
 lib/scribus/plugins/gettext/libsxwimplugin.la
 lib/scribus/plugins/gettext/libtextfilterplugin.la
 lib/scribus/plugins/gettext/libtxtim.la
@@ -98,6 +121,7 @@ lib/scribus/plugins/liboodrawimp.la
 lib/scribus/plugins/libpreview.la
 lib/scribus/plugins/libsaveastemplateplugin.la
 lib/scribus/plugins/libscribusexportpixmap.la
+lib/scribus/plugins/libscribusshortwords.la
 lib/scribus/plugins/libsvgexplugin.la
 lib/scribus/plugins/libsvgimplugin.la
 lib/scribus/profiles/ReadMe
@@ -107,7 +131,6 @@ lib/scribus/rgbscribusgreys.txt
 lib/scribus/rgbsvg.txt
 lib/scribus/scribus.af.qm
 lib/scribus/scribus.bg.qm
-lib/scribus/scribus.br.qm
 lib/scribus/scribus.ca.qm
 lib/scribus/scribus.cs.qm
 lib/scribus/scribus.cy.qm
@@ -128,6 +151,7 @@ lib/scribus/scribus.lt.qm
 lib/scribus/scribus.nb.qm
 lib/scribus/scribus.nl.qm
 lib/scribus/scribus.pl.qm
+lib/scribus/scribus.pt_BR.qm
 lib/scribus/scribus.ru.qm
 lib/scribus/scribus.se.qm
 lib/scribus/scribus.sk.qm
@@ -137,19 +161,27 @@ lib/scribus/scribus.sr.qm
 lib/scribus/scribus.tr.qm
 lib/scribus/scribus.uk.qm
 lib/scribus/scribus.zh.qm
-share/man/man1/scribus.1
-share/man/pl/man1/scribus.1
+man/man1/scribus.1
+man/pl/man1/scribus.1
+share/pixmaps/scribusicon.png
+share/scribus/doc/cs/tutorials/scribus-short-words/after_short_words.png
+share/scribus/doc/cs/tutorials/scribus-short-words/before_short_words.png
+share/scribus/doc/cs/tutorials/scribus-short-words/dialog.png
+share/scribus/doc/cs/tutorials/scribus-short-words/menu.png
+share/scribus/doc/cs/tutorials/scribus-short-words/menu.xml
+share/scribus/doc/cs/tutorials/scribus-short-words/short-words-manual.html
 share/scribus/doc/en/about1.html
 share/scribus/doc/en/about2.html
-share/scribus/doc/en/acroreader.html
 share/scribus/doc/en/cms.html
+share/scribus/doc/en/cms2.html
+share/scribus/doc/en/cms3.html
+share/scribus/doc/en/cms4.html
 share/scribus/doc/en/codingstandards.html
 share/scribus/doc/en/contributions.html
 share/scribus/doc/en/cross-platform.html
 share/scribus/doc/en/cups.html
 share/scribus/doc/en/cygwin.html
 share/scribus/doc/en/developers.html
-share/scribus/doc/en/docchanges.html
 share/scribus/doc/en/doccopyright.html
 share/scribus/doc/en/docinfo.html
 share/scribus/doc/en/documentation.html
@@ -160,19 +192,26 @@ share/scribus/doc/en/faq3.html
 share/scribus/doc/en/fonts1.html
 share/scribus/doc/en/fonts2.html
 share/scribus/doc/en/fonts3.html
+share/scribus/doc/en/fonts4.html
+share/scribus/doc/en/fonts5.html
 share/scribus/doc/en/gettexthowto.html
 share/scribus/doc/en/gsadv.html
+share/scribus/doc/en/gsfont.html
 share/scribus/doc/en/gsview.html
 share/scribus/doc/en/hyphenator.html
 share/scribus/doc/en/images/RDF.png
 share/scribus/doc/en/images/Scripter.png
 share/scribus/doc/en/images/Scripter_error_string.png
 share/scribus/doc/en/images/acro1.png
+share/scribus/doc/en/images/acro2.png
 share/scribus/doc/en/images/acro3.png
 share/scribus/doc/en/images/acroinfo.png
 share/scribus/doc/en/images/acropass.png
+share/scribus/doc/en/images/acroreader5.1.png
 share/scribus/doc/en/images/acrosec.png
+share/scribus/doc/en/images/after_short_words.png
 share/scribus/doc/en/images/batik1.png
+share/scribus/doc/en/images/before_short_words.png
 share/scribus/doc/en/images/cmsmodify1.png
 share/scribus/doc/en/images/cmspanel.png
 share/scribus/doc/en/images/colormanager2.png
@@ -186,6 +225,11 @@ share/scribus/doc/en/images/fontpref2.png
 share/scribus/doc/en/images/fontpref3.png
 share/scribus/doc/en/images/fontprev.png
 share/scribus/doc/en/images/fonts.png
+share/scribus/doc/en/images/fonts2.png
+share/scribus/doc/en/images/fonts3.png
+share/scribus/doc/en/images/fonts4.png
+share/scribus/doc/en/images/fontsampler.png
+share/scribus/doc/en/images/fontsampler2.png
 share/scribus/doc/en/images/formularz_export_PDF.png
 share/scribus/doc/en/images/formularz_js_skrypt.png
 share/scribus/doc/en/images/formularz_js_sprawdzanie.png
@@ -220,7 +264,6 @@ share/scribus/doc/en/images/prefspanel4.png
 share/scribus/doc/en/images/prefspanel5.png
 share/scribus/doc/en/images/printer1.png
 share/scribus/doc/en/images/printer2.png
-share/scribus/doc/en/images/printer3.png
 share/scribus/doc/en/images/printpreview.png
 share/scribus/doc/en/images/printseps.png
 share/scribus/doc/en/images/pstoedit1.png
@@ -232,6 +275,8 @@ share/scribus/doc/en/images/siatka_jednostki_miar.png
 share/scribus/doc/en/images/siatka_menu.png
 share/scribus/doc/en/images/spinbox1.png
 share/scribus/doc/en/images/svg1.png
+share/scribus/doc/en/images/swdialog.png
+share/scribus/doc/en/images/swmenu.png
 share/scribus/doc/en/images/symbole.png
 share/scribus/doc/en/images/ulica.png
 share/scribus/doc/en/images/wlasciwosci_pola.png
@@ -253,6 +298,7 @@ share/scribus/doc/en/machints1.html
 share/scribus/doc/en/machints2.html
 share/scribus/doc/en/menu.xml
 share/scribus/doc/en/moncal.html
+share/scribus/doc/en/mouse.html
 share/scribus/doc/en/otherinfo.html
 share/scribus/doc/en/parallel-install.html
 share/scribus/doc/en/pdf_form.html
@@ -266,13 +312,15 @@ share/scribus/doc/en/prepress.html
 share/scribus/doc/en/print1.html
 share/scribus/doc/en/print2.html
 share/scribus/doc/en/print3.html
+share/scribus/doc/en/readme.html
 share/scribus/doc/en/resources.html
-share/scribus/doc/en/screenshots.html
 share/scribus/doc/en/scribus-svg.html
 share/scribus/doc/en/scribuscopyright.html
 share/scribus/doc/en/scribusfileformat.html
+share/scribus/doc/en/scripter-extensions.html
 share/scribus/doc/en/scripter-faq.html
 share/scribus/doc/en/scripter1.html
+share/scribus/doc/en/scripterapi-ImageExport.html
 share/scribus/doc/en/scripterapi-PDFfile.html
 share/scribus/doc/en/scripterapi-Printer.html
 share/scribus/doc/en/scripterapi-color.html
@@ -291,6 +339,7 @@ share/scribus/doc/en/scripterapi-setobjprop.html
 share/scribus/doc/en/scripterapi-textframes.html
 share/scribus/doc/en/scripterapi.html
 share/scribus/doc/en/settings1.html
+share/scribus/doc/en/short-words.html
 share/scribus/doc/en/specs.html
 share/scribus/doc/en/toolbox.html
 share/scribus/doc/en/toolbox1.html
@@ -309,7 +358,18 @@ share/scribus/doc/en/toolbox9.html
 share/scribus/doc/en/topten.html
 share/scribus/doc/en/translation_howto.html
 share/scribus/doc/en/tutorials.html
-share/scribus/doc/en/wine.html
+share/scribus/doc/fr/tutorials/scribus-short-words/after_short_words.png
+share/scribus/doc/fr/tutorials/scribus-short-words/before_short_words.png
+share/scribus/doc/fr/tutorials/scribus-short-words/dialog.png
+share/scribus/doc/fr/tutorials/scribus-short-words/menu.png
+share/scribus/doc/fr/tutorials/scribus-short-words/menu.xml
+share/scribus/doc/fr/tutorials/scribus-short-words/short-words-manual.html
+share/scribus/doc/pl/tutorials/scribus-short-words/after_short_words.png
+share/scribus/doc/pl/tutorials/scribus-short-words/before_short_words.png
+share/scribus/doc/pl/tutorials/scribus-short-words/dialog.png
+share/scribus/doc/pl/tutorials/scribus-short-words/menu.png
+share/scribus/doc/pl/tutorials/scribus-short-words/menu.xml
+share/scribus/doc/pl/tutorials/scribus-short-words/short-words-manual.html
 share/scribus/icons/AddNode.png
 share/scribus/icons/AddPoint.png
 share/scribus/icons/AppIcon.png
@@ -465,6 +525,7 @@ share/scribus/icons/up.png
 share/scribus/icons/vectorgfx.png
 share/scribus/icons/view.png
 share/scribus/icons/vmirror.png
+share/scribus/plugins/scribus-short-words.rc
 share/scribus/samples/LoremIpsum.txt
 share/scribus/templates/br1/br1.png
 share/scribus/templates/br1/br1.sla.gz
@@ -494,15 +555,21 @@ share/scribus/templates/textbased/textbasedtn.png
 @dirrm share/scribus/templates/br1
 @dirrm share/scribus/templates
 @dirrm share/scribus/samples
+@dirrm share/scribus/plugins
 @dirrm share/scribus/icons
+@dirrm share/scribus/doc/pl/tutorials/scribus-short-words
+@dirrm share/scribus/doc/pl/tutorials
+@dirrm share/scribus/doc/pl
+@dirrm share/scribus/doc/fr/tutorials/scribus-short-words
+@dirrm share/scribus/doc/fr/tutorials
+@dirrm share/scribus/doc/fr
 @dirrm share/scribus/doc/en/images
 @dirrm share/scribus/doc/en
+@dirrm share/scribus/doc/cs/tutorials/scribus-short-words
+@dirrm share/scribus/doc/cs/tutorials
+@dirrm share/scribus/doc/cs
 @dirrm share/scribus/doc
 @dirrm share/scribus
-@dirrm share/man/pl/man1
-@dirrm share/man/pl
-@dirrm share/man/man1
-@dirrm share/man
 @dirrm lib/scribus/profiles
 @dirrm lib/scribus/plugins/gettext
 @dirrm lib/scribus/plugins
