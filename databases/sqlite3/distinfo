@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/04/14 05:45:51 xtraeme Exp $
+$NetBSD: distinfo,v 1.5 2005/07/06 18:13:07 drochner Exp $
 
-SHA1 (sqlite-3.2.1.tar.gz) = df9b8a28bb64a29df8b2411b6b8b746b04d742eb
-RMD160 (sqlite-3.2.1.tar.gz) = 3b4cfc1fca27d4df369220d15eb5e28777bd99da
-Size (sqlite-3.2.1.tar.gz) = 1351842 bytes
+SHA1 (sqlite-3.2.2.tar.gz) = 7c2d5941ccb54e761cb867ea9d0213dba6ed5eb4
+RMD160 (sqlite-3.2.2.tar.gz) = 7d0db91b70e863e383766d1f89ac9179ad3ba47f
+Size (sqlite-3.2.2.tar.gz) = 1385618 bytes
