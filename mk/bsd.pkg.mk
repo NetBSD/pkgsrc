@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1705 2005/06/27 16:25:43 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1706 2005/07/06 05:52:34 reed Exp $
 #
 # This file is in the public domain.
 #
@@ -3255,12 +3255,9 @@ fetch-list-one-pkg:
 	@${ECHO} '#'
 	@location=`${PWD_CMD} | ${AWK} -F / '{ print $$(NF-1) "/" $$NF }'`; \
 		${ECHO} '# Need additional files for ${PKGNAME} ('$$location')...'
-	@${ECHO} '#'
-	@${MKDIR} ${_DISTDIR}
 .    for fetchfile in ${_ALLFILES}
 .      if defined(_FETCH_MESSAGE)
-	@(cd ${_DISTDIR};						\
-	if [ ! -f ${fetchfile:T} ]; then				\
+	if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
 		${ECHO};						\
 		filesize=`${AWK} '					\
 			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
@@ -3268,10 +3265,9 @@ fetch-list-one-pkg:
 		${ECHO} '# Prompt user to get ${fetchfile} ('$${filesize-???}' bytes) manually:'; \
 		${ECHO} '#';						\
 		${ECHO} ${_FETCH_MESSAGE:Q};				\
-	fi)
+	fi
 .      elif defined(DYNAMIC_MASTER_SITES)
-	@(cd ${_DISTDIR};						\
-	if [ ! -f ${fetchfile:T} ]; then				\
+	if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
 		${ECHO};						\
 		filesize=`${AWK} '					\
 			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
@@ -3288,13 +3284,12 @@ fetch-list-one-pkg:
 		${ECHO} 'cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] ||'; \
 		${ECHO}	'for site in $$sites; do';			\
 		${ECHO} '	${FETCH_CMD} ${FETCH_BEFORE_ARGS} "$${site}${fetchfile:T}" ${FETCH_AFTER_ARGS} && break ||'; \
-		${ECHO} '	${ECHO} ${fetchfile} not fetched';	\
+		${ECHO} '	${ECHO} ${fetchfile:T} not fetched';	\
 		${ECHO}	done;						\
 		${ECHO} ')';						\
-	fi)
+	fi
 .      else
-	@(cd ${_DISTDIR};						\
-	if [ ! -f ${fetchfile:T} ]; then				\
+	if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
 		${ECHO};						\
 		filesize=`${AWK} '					\
 			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
@@ -3307,9 +3302,9 @@ fetch-list-one-pkg:
 		${ECHO} 'cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] ||'; \
 		${ECHO}	'for site in $$sites; do';			\
 		${ECHO} '	${FETCH_CMD} ${FETCH_BEFORE_ARGS} "$${site}${fetchfile:T}" ${FETCH_AFTER_ARGS} && break ||'; \
-		${ECHO} '	${ECHO} ${fetchfile} not fetched';	\
+		${ECHO} '	${ECHO} ${fetchfile:T} not fetched';	\
 		${ECHO}	done;						\
-	fi)
+	fi
 .      endif # defined(_FETCH_MESSAGE) || defined(DYNAMIC_MASTER_SITES)
 .    endfor
 .  endif # !empty(_ALLFILES)
