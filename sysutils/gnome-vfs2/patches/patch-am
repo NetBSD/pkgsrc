@@ -1,12 +1,12 @@
-$NetBSD: patch-am,v 1.10 2004/11/28 13:00:17 recht Exp $
+$NetBSD: patch-am,v 1.11 2005/07/06 06:36:03 reed Exp $
 
---- libgnomevfs/gnome-vfs-unix-mounts.c.orig	Fri Oct 15 10:00:02 2004
-+++ libgnomevfs/gnome-vfs-unix-mounts.c	Sat Nov 27 20:53:08 2004
+--- libgnomevfs/gnome-vfs-unix-mounts.c.orig	Fri Dec 10 13:33:53 2004
++++ libgnomevfs/gnome-vfs-unix-mounts.c	Fri May  6 18:32:49 2005
 @@ -475,7 +475,11 @@
  gboolean
  _gnome_vfs_get_current_unix_mounts (GList **return_list)
  {
-+#if defined(HAVE_STATVFS) && !defined(__APPLE__)
++#if defined(HAVE_STATVFS) && !defined(__APPLE__) && !defined(__FreeBSD__)
 +    	struct statvfs *mntent = NULL;
 +#else
      	struct statfs *mntent = NULL;
@@ -18,7 +18,7 @@ $NetBSD: patch-am,v 1.10 2004/11/28 13:00:17 recht Exp $
  		mount_entry->mount_path = g_strdup (mntent[i].f_mntonname);
  		mount_entry->device_path = g_strdup (mntent[i].f_mntfromname);
  		mount_entry->filesystem_type = g_strdup (mntent[i].f_fstypename);
-+#if defined(HAVE_STATVFS) && !defined(__APPLE__)
++#if defined(HAVE_STATVFS) && !defined(__APPLE__) && !defined(__FreeBSD__)
 +		if (mntent[i].f_flag & MNT_RDONLY) {
 +#else
  		if (mntent[i].f_flags & MNT_RDONLY) {
