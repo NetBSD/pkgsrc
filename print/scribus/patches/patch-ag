@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2005/03/31 19:15:23 drochner Exp $
+$NetBSD: patch-ag,v 1.2 2005/07/06 18:05:32 drochner Exp $
 
---- ./scribus/plugins/gettext/sxwim/ioapi.h.orig	2005-03-10 17:40:13.000000000 +0100
-+++ ./scribus/plugins/gettext/sxwim/ioapi.h
-@@ -39,6 +39,7 @@
+--- scribus/ioapi.h.orig	2005-07-04 23:53:32.000000000 +0200
++++ scribus/ioapi.h
+@@ -37,6 +37,7 @@
  extern "C" {
  #endif
  
