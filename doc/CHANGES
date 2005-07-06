@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10539 2005/07/06 19:14:14 abs Exp $
+$NetBSD: CHANGES,v 1.10540 2005/07/06 19:46:14 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3111,3 +3111,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/postgresql80-client to 8.0.3nb1 [grant 2005-07-05]
 	Updated math/mathomatic to 12.4.4 [minskim 2005-07-06]
 	Updated www/ns-remote to 1.11 [abs 2005-07-06]
+	Added benchmarks/thrulay version 0.6 [reed 2005-07-06]
