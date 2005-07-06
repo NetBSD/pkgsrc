@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.4 2005/07/05 08:45:25 grant Exp $
+# $NetBSD: transform-sunpro-cc,v 1.5 2005/07/06 14:29:04 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -113,7 +113,7 @@ case $arg in
 ######################################################################
 # Ignore some flags that are unnecessary for SunPro.
 ######################################################################
--ansi|-fno-gnu-keywords|-fomit-frame-pointer|-fstrict-prototypes|-fwriteable-strings|-pedantic|-traditional)
+-ansi|-fno-gnu-keywords|-fomit-frame-pointer|-fpermissive|-fstrict-prototypes|-fwriteable-strings|-pedantic|-traditional)
 	arg=
 	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
