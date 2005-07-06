@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/04/26 20:00:06 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/07/06 18:01:37 drochner Exp $
 bin/gnome-about
 include/gnome-desktop-2.0/libgnome/gnome-desktop-item.h
 include/gnome-desktop-2.0/libgnomeui/gnome-ditem-edit.h
@@ -57,6 +57,7 @@ ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-desktop-2.0.mo
+${PKGLOCALEDIR}/locale/hy/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -92,6 +93,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnome-desktop-2.0.mo
+${PKGLOCALEDIR}/locale/te/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-desktop-2.0.mo
