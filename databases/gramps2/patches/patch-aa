@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/06 20:09:31 drochner Exp $
+
+--- src/DbPrompter.py.orig	2005-04-06 19:28:04.000000000 +0200
++++ src/DbPrompter.py
+@@ -62,7 +62,7 @@ import WriteGrdb
+ import WriteXML
+ import WriteGedcom
+ 
+-from bsddb import db
++from bsddb3 import db
+ 
+ #-------------------------------------------------------------------------
+ #

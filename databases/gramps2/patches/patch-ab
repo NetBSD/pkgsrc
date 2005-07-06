@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/07/06 20:09:31 drochner Exp $
+
+--- src/GrampsBSDDB.py.orig	2005-04-17 20:48:46.000000000 +0200
++++ src/GrampsBSDDB.py
+@@ -33,7 +33,7 @@ import os
+ import time
+ import locale
+ from gettext import gettext as _
+-from bsddb import dbshelve, db
++from bsddb3 import dbshelve, db
+ 
+ #-------------------------------------------------------------------------
+ #

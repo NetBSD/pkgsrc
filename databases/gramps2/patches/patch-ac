@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/07/06 20:09:31 drochner Exp $
+
+--- src/gramps_main.py.orig	2005-04-17 20:49:37.000000000 +0200
++++ src/gramps_main.py
+@@ -82,7 +82,7 @@ import GrampsDBCallback
+ 
+ from GrampsMime import mime_type_is_defined
+ from QuestionDialog import *
+-from bsddb import db
++from bsddb3 import db
+ 
+ #-------------------------------------------------------------------------
+ #
