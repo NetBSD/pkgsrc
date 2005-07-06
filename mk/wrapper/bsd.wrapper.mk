@@ -1,6 +1,6 @@
-# $NetBSD: bsd.wrapper.mk,v 1.33 2005/07/06 03:31:24 grant Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.34 2005/07/06 03:35:28 grant Exp $
 #
-# Copyright (c) 2004 The NetBSD Foundation, Inc.
+# Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
