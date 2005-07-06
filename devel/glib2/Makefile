@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2005/06/26 16:57:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.74 2005/07/06 07:00:10 reed Exp $
 
 DISTNAME=		glib-2.6.5
 PKGNAME=		${DISTNAME:S/glib/glib2/}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.6/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.6/ \
@@ -53,17 +54,16 @@ CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 .include "../../mk/bsd.prefs.mk"
 
-# FreeBSD fix for libgthread:
-# Be sure libgthread is linked to the threaded library (libc_r), otherwise
-# -pthread is added and this won't work with libraries, only executable
-# binaries.
-
 .if ${OPSYS} == "FreeBSD"
 
 SUBST_CLASSES=		thr
 SUBST_STAGE.thr=	post-patch
 SUBST_FILES.thr=	gthread/Makefile.in
+.  if ${OS_VERSION:R} >= 5
+SUBST_SED.thr=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-lpthread|g"
+.  else
 SUBST_SED.thr=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-Wc,-lc_r|g"
+.  endif
 SUBST_MESSAGE.thr=	"Fixing libgthread."
 
 .endif
