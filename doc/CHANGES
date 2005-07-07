@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10546 2005/07/07 11:06:41 drochner Exp $
+$NetBSD: CHANGES,v 1.10547 2005/07/07 12:47:42 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3125,3 +3125,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated editors/TeXmacs to 1.0.5.5 [drochner 2005-07-07]
 	Updated print/scribus to 1.2.2.1 [drochner 2005-07-07]
 	Updated x11/gnome-desktop to 2.10.2 [drochner 2005-07-07]
+	Updated textproc/ispell-base to 3.3.02 [markd 2005-07-07]
+	Updated textproc/ispell-british to 3.3.02 [markd 2005-07-07]
