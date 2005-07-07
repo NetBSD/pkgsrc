@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2005/05/22 20:08:45 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2005/07/07 17:06:57 drochner Exp $
 #
 
-DISTNAME=	epiphany-1.6.3
+DISTNAME=	epiphany-1.6.4
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/1.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,17 +16,30 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
-USE_MSGFMT_PLURALS=	YES
+#USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
 
 PKGCONFIG_OVERRIDE=	data/epiphany-1.6.pc.in
 
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/docshell
+.include "../../mk/bsd.prefs.mk"
+
+.if ${GECKO_PROVIDER} == "firefox"
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/find
+CFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/find
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/necko
+CFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/necko
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/pref
+CFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/pref
+.else
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/find
+CFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/find
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/necko
+CFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/necko
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/pref
+CFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/pref
+.endif
 
 GCONF2_SCHEMAS=		epiphany.schemas
 GCONF2_SCHEMAS+=	epiphany-lockdown.schemas
@@ -52,7 +65,11 @@ BUILDLINK_DEPENDS.pango+=	pango>=1.8.0
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.if ${GECKO_PROVIDER} == "firefox"
+.include "../../www/firefox/buildlink3.mk"
+.else
 .include "../../www/mozilla-gtk2/buildlink3.mk"
+.endif
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
