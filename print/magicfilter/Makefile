@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2005/05/22 20:08:28 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2005/07/07 21:18:08 tron Exp $
 
 DISTNAME=	magicfilter-1.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/printing/}
 
@@ -15,9 +15,10 @@ DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 DEPENDS+=	papersize-[0-9]*:../../print/papersize
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake gzip
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	GHOSTSCRIPT=${LOCALBASE}/bin/gs
+CONFIGURE_ENV+= GZIP=${TOOLS_GZIP_CMD:C/ .*//W:Q}
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
