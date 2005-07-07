@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10547 2005/07/07 12:47:42 markd Exp $
+$NetBSD: CHANGES,v 1.10548 2005/07/07 21:31:54 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3127,3 +3127,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/gnome-desktop to 2.10.2 [drochner 2005-07-07]
 	Updated textproc/ispell-base to 3.3.02 [markd 2005-07-07]
 	Updated textproc/ispell-british to 3.3.02 [markd 2005-07-07]
+	Updated shells/bash to 3.0pl16nb2 [tron 2005-07-07]
