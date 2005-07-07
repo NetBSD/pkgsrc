@@ -1,27 +1,26 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:20 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/07 09:01:08 martti Exp $
 
-DISTNAME=	squirrelmail-1.4.3a
+DISTNAME=	squirrelmail-1.4.4
 PKGNAME=	ja-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
-DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} sm143a-xss.diff
 EXTRACT_SUFX=	.tar.bz2
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 PATCH_SITES=	http://www.yamaai-tech.com/~masato/Download/
-PATCHFILES=	squirrelmail-1.4.3a-ja-20041014-patch.gz
+PATCHFILES=	squirrelmail-1.4.4-ja-20050616-patch.gz
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.squirrelmail.jp/
 COMMENT=	PHP webmail package with Japanese localization
 
-DEPENDS+=	php-gettext>=4.3.3:../../devel/php-gettext
-DEPENDS+=	php-mbstring>=4.3.3:../../misc/php-mbstring
 CONFLICTS=	sq-attachment-handlers-[0-9]*
 CONFLICTS+=	sq-squirrelspell-[0-9]*
 CONFLICTS+=	squirrelmail-[0-9]*
+
+DEPENDS+=	php-gettext>=4.3.3:../../devel/php-gettext
+DEPENDS+=	php-mbstring>=4.3.3:../../misc/php-mbstring
 
 USE_LANGUAGES=	# empty
 USE_PKGINSTALL=	yes
@@ -53,19 +52,18 @@ OWN_DIRS_PERMS+=	${USER_PREFS_DIR} ${APACHE_USER} ${APACHE_GROUP} 755
 
 post-patch:
 	cd ${WRKSRC};							\
-	${PATCH} --forward --quiet -E -p0 < ${DISTDIR}/sm143a-xss.diff;	\
-	for f in config/config_default.php; do				\
+	for file in config/config_default.php; do			\
 		${SED}	-e "s|@ATTACHMENTS_DIR@|${ATTACHMENTS_DIR}|g"	\
 			-e "s|@USER_PREFS_DIR@|${USER_PREFS_DIR}|g"	\
-			$$f > $$f.fixed;				\
-		${MV} -f $$f.fixed $$f;					\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
 	done;								\
+	cd ${WRKSRC};							\
+	${FIND} . \( -name "*.orig" -o -name ".cvsignore" \) -print	\
+		| ${XARGS} ${RM} -f
+	${FIND} . -name "*.orig_dist" -print | ${XARGS} ${RM} -f
 
 pre-install:
-	cd ${WRKSRC}; \
-		${FIND} . \( -name "*.orig" -o -name '*.orig_dist' -o	\
-				-name ".cvsignore" \) -print		\
-		| ${XARGS} ${RM} -f
 	@${SED}	${FILES_SUBST_SED} ${FILESDIR}/squirrelmail.conf.dist	\
 		> ${WRKDIR}/squirrelmail.conf.dist
 
@@ -78,6 +76,7 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
 	${FIND} ${SMDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${SMDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	${CHMOD} a+x ${SMDIR}/config/conf.pl
 	${INSTALL_DATA} ${WRKSRC}/data/index.php ${USER_PREFS_DIR}/
 	${INSTALL_DATA} ${WRKSRC}/data/.htaccess ${USER_PREFS_DIR}/
 
