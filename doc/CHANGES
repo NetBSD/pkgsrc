@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10543 2005/07/07 08:09:16 martti Exp $
+$NetBSD: CHANGES,v 1.10544 2005/07/07 08:21:53 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3115,3 +3115,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/subversion to 1.2.1 [epg 2005-07-06]
 	Updated net/tcpillust to 1.0anb2 [grant 2005-07-06]
 	Added editors/vim-lang version 6.3.074 [martti 2005-07-07]
+	Updated editors/vim to 6.3.079 [martti 2005-07-07]
