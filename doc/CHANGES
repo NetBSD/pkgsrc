@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10545 2005/07/07 09:01:28 martti Exp $
+$NetBSD: CHANGES,v 1.10546 2005/07/07 11:06:41 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3117,3 +3117,11 @@ Changes to the packages collection and infrastructure in 2005:
 	Added editors/vim-lang version 6.3.074 [martti 2005-07-07]
 	Updated editors/vim to 6.3.079 [martti 2005-07-07]
 	Updated mail/ja-squirrelmail to 1.4.4nb1 [martti 2005-07-07]
+	Added databases/gramps2 version 2.0.5 [drochner 2005-07-07]
+	Updated graphics/skencil to 0.6.17 [drochner 2005-07-07]
+	Updated graphics/cairo to 0.5.1 [drochner 2005-07-07]
+	Updated graphics/glitz to 0.4.3 [drochner 2005-07-07]
+	Updated databases/sqlite3 to 3.2.2 [drochner 2005-07-07]
+	Updated editors/TeXmacs to 1.0.5.5 [drochner 2005-07-07]
+	Updated print/scribus to 1.2.2.1 [drochner 2005-07-07]
+	Updated x11/gnome-desktop to 2.10.2 [drochner 2005-07-07]
