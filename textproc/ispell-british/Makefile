@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2005/06/17 03:50:36 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/07 12:44:44 markd Exp $
 #
 
-DISTNAME=	ispell-3.2.06
-PKGNAME=	ispell-${DICT_LANG}-3.2.06
+DISTNAME=	ispell-3.3.02
+PKGNAME=	ispell-${DICT_LANG}-3.3.02
 CATEGORIES=	textproc
 MASTER_SITES=	http://fmg-www.cs.ucla.edu/geoff/tars/
 
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://ficus-www.cs.ucla.edu/geoff/ispell.html
 COMMENT=	British dictionary for interactive spelling checker
 
-DEPENDS+=	ispell-base>=3.2.06:../../textproc/ispell-base
+DEPENDS+=	ispell-base>=3.3.02:../../textproc/ispell-base
 
 BUILD_TARGET=	config.sh all-languages
 
@@ -29,8 +29,7 @@ INSTALLATION_DIRS=	lib
 
 do-configure:
 	cd ${WRKSRC};							\
-	${SED} -e 's|/usr/local|${PREFIX}|g' <local.h.samp >local.h;	\
-	${ECHO} "#undef NO8BIT" >> local.h ;				\
+	${SED} -e 's|/usr/local|${PREFIX}|g' <local.h.bsd >local.h;	\
 	${ECHO} "#define LANGUAGES \"{${DICT_LANG},MASTERDICTS=${DICT_LANG}.xlg,HASHFILES=${DICT_LANG}xlg.hash,EXTRADICT=}\""  >>local.h; \
 	${ECHO} '#define MASTERHASH "${DICT_LANG}xlg.hash"'  >> local.h ;	\
 	${ECHO} "#undef WORDS"  >> local.h ;				\
