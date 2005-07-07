@@ -1,0 +1,7 @@
+Vim is an almost compatible version of the UNIX editor Vi.  Many new features
+have been added: multi level undo, syntax highlighting, command line history,
+on-line help, filename completion, block operations, etc.
+
+This package is only a shared data-package for the `actual' vim packages.
+You also have to install one of vim, vim-xaw, or vim-gtk to get a working
+editor.
