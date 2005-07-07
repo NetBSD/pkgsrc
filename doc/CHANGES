@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10541 2005/07/06 21:19:24 epg Exp $
+$NetBSD: CHANGES,v 1.10542 2005/07/07 02:05:02 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3113,3 +3113,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/ns-remote to 1.11 [abs 2005-07-06]
 	Added benchmarks/thrulay version 0.6 [reed 2005-07-06]
 	Updated devel/subversion to 1.2.1 [epg 2005-07-06]
+	Updated net/tcpillust to 1.0anb2 [grant 2005-07-06]
