@@ -1,12 +1,15 @@
-# $NetBSD: Makefile.common,v 1.46 2005/05/30 14:18:14 martti Exp $
+# $NetBSD: Makefile.common,v 1.47 2005/07/07 07:59:11 martti Exp $
 
 .include "../../editors/vim-share/version.mk"
 
 DISTNAME=		vim-${VIM_VERSION}
+DISTFILES=		vim-${VIM_VERSION}${EXTRACT_SUFX}
+DISTFILES+=		vim-${VIM_VERSION}-lang.tar.gz
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
 			ftp://ftp.fu-berlin.de/misc/editors/vim/unix/ \
 			ftp://ftp.twics.co.jp/pub/vim/unix/
+SITES_vim-${VIM_VERSION}-lang.tar.gz= ftp://ftp.vim.org/pub/vim/extra/
 DIST_SUBDIR=		vim
 EXTRACT_SUFX=		.tar.bz2
 
