@@ -1,27 +1,25 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/07 21:23:21 is Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/07 22:15:03 agc Exp $
 #
 
 DISTNAME=		saytime_11nov1995
-EXTRACT_SUFX=    	.tar.gz
 PKGNAME=		saytime-19951111
 CATEGORIES=		time audio
 MASTER_SITES=		http://www.acme.com/software/saytime/
 
-ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
-
-MAINTAINER=		is@netbsd.org
+MAINTAINER=		is@NetBSD.org
 HOMEPAGE=		http://www.acme.com/software/saytime/
-COMMENT=		a talking clock
+COMMENT=		Talking clock
+
+ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
 WRKSRC=			${WRKDIR}/saytime
 
 .include "../../mk/bsd.prefs.mk"
 
-pre-configure: 
+pre-configure:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.template
 	${SED} -e 's|@LOCALBASE@|${LOCALBASE}|' \
-		${WRKSRC}/Makefile.template > ${WRKSRC}/Makefile 
-
+		${WRKSRC}/Makefile.template > ${WRKSRC}/Makefile
 
 post-install:
 	${INSTALL_DATA_DIR} ${LOCALBASE}/share/saytime
