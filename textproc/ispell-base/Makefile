@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2005/04/11 21:47:36 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/07/07 12:42:20 markd Exp $
 #
 
-DISTNAME=	ispell-3.2.06
-PKGNAME=	ispell-base-3.2.06
+DISTNAME=	ispell-3.3.02
+PKGNAME=	ispell-base-3.3.02
 CATEGORIES=	textproc
 MASTER_SITES=	http://fmg-www.cs.ucla.edu/geoff/tars/
 
@@ -11,6 +11,9 @@ HOMEPAGE=	http://ficus-www.cs.ucla.edu/geoff/ispell.html
 COMMENT=	Interactive spelling checker
 
 CONFLICTS+=	ispell-[0-9]*
+
+USE_TOOLS+=	mktemp
+TOOLS_DEPMETHOD.mktemp=	DEPENDS
 
 MAKE_FLAGS+=	TMPDIR="${WRKDIR}"
 
@@ -33,8 +36,7 @@ EXTRADICT=
 
 do-configure:
 	cd ${WRKSRC};							\
-	${SED} -e 's|/usr/local|${PREFIX}|g' <local.h.samp >local.h;	\
-	${ECHO} "#undef NO8BIT" >> local.h ;				\
+	${SED} -e 's|/usr/local|${PREFIX}|g' <local.h.bsd >local.h;	\
 	${ECHO} "#define LANGUAGES \"{american,MASTERDICTS=american.med+,HASHFILES=americanmed+.hash,EXTRADICT=${EXTRADICT}}\""  >>local.h; \
 	${ECHO} "#define MASTERHASH \"americanmed+.hash\"" >>local.h;	\
 	${ECHO} "#define MASKBITS 64" >>local.h;			\

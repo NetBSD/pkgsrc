@@ -1,20 +1,35 @@
-$NetBSD: patch-ab,v 1.3 2004/12/01 12:18:21 markd Exp $
+$NetBSD: patch-ab,v 1.4 2005/07/07 12:42:20 markd Exp $
 
---- Makefile.orig	2001-07-26 09:51:45.000000000 +1200
+--- Makefile.orig	2005-05-26 01:57:02.000000000 +1200
 +++ Makefile
-@@ -486,7 +486,7 @@ local.h:
+@@ -373,13 +373,10 @@ install-dictbuild:
+ 	    rm -f fixispell-a$$MAN1EXT
+ 	@. ./config.sh; \
+ 	  set -x; \
+-	  $$INSTALL sq.1 $$MAN1DIR/sq$$MAN1EXT; \
+ 	  for m in buildhash munchlist findaffix tryaffix; do \
+ 	    echo ".so `basename $$MAN1DIR`/ispell$$MAN1EXT" \
+ 	      > $$MAN1DIR/$$m$$MAN1EXT; \
+-	  done; \
+-	  echo ".so `basename $$MAN1DIR`/sq$$MAN1EXT" \
+-	    > $$MAN1DIR/unsq$$MAN1EXT 
++	  done
+ 	@. ./config.sh; \
+ 	  set -x; \
+ 	  cd $$MAN1DIR; \
+@@ -636,7 +633,7 @@ local.h:
  	set +e; \
- 	  [ -r local.h ]  ||  (cp local.h.samp local.h; chmod u+w local.h)
+ 	  [ -r local.h ]  ||  (cp local.h.generic local.h; chmod u+w local.h)
  
 -msgs.h:	config.sh FRC
 +msgs.h:	config.sh
  	@. ./config.sh; \
  	  set $(SHELLDEBUG); \
  	  set +e; \
-@@ -500,7 +500,8 @@ msgs.h:	config.sh FRC
+@@ -650,7 +647,8 @@ msgs.h:	config.sh FRC
  	  else \
  	    set -x; \
- 	    rm -f msgs.h; ln $$msgs msgs.h  ||  cp $$msgs msgs.h; \
+ 	    rm -f msgs.h; $$LINK $$msgs msgs.h  ||  cp $$msgs msgs.h; \
 -	  fi
 +	  fi; \
 +	touch msgs.h
