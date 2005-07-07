@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2005/07/07 08:30:22 martti Exp $
+# $NetBSD: Makefile,v 1.54 2005/07/07 08:32:51 martti Exp $
 
 DISTNAME=	squirrelmail-1.4.4
 PKGREVISION=	1
@@ -12,6 +12,7 @@ COMMENT=	PHP webmail package
 
 CONFLICTS=	sq-attachment-handlers-[0-9]*
 CONFLICTS+=	sq-squirrelspell-[0-9]*
+CONFLICTS+=	ja-squirrelspell-[0-9]*
 
 DEPENDS+=	php-gettext>=4.3.3:../../devel/php-gettext
 
