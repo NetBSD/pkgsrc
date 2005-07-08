@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:46:15 tv Exp $
+# $NetBSD: Makefile,v 1.15.2.1 2005/07/08 10:12:48 mrg Exp $
 
 DISTNAME=	onyx-${VERS}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.canonware.com/download/onyx/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +19,7 @@ CONFIGURE_ARGS+= --with-pcre-prefix=${BUILDLINK_PREFIX.pcre}
 
 BUILDLINK_DEPENDS.pcre?=        pcre>=4.0
 
-VERS=		5.1.1
+VERS=		5.1.2
 PLIST_SUBST+=	VERS=${VERS}
 
 do-build:
@@ -35,7 +34,7 @@ post-install:
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
-.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "native"
 CONFIGURE_ARGS+=	--disable-threads
 .endif
 
