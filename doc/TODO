@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3691 2005/07/06 21:19:24 epg Exp $
+$NetBSD: TODO,v 1.3692 2005/07/08 09:48:35 adam Exp $
 
 Suggested new packages
 ======================
@@ -1128,7 +1128,6 @@ Suggested package updates
 	o wesnoth-0.9.2
 	o winbind-3.0.13
 	o windowlab-1.31
-	o windowmaker-0.92
 	o wine-20050628
 	o wmbiff-0.4.26
 	o wmctrl-1.07
