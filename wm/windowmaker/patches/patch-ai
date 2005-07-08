@@ -1,9 +1,10 @@
-$NetBSD: patch-ai,v 1.1 2004/11/15 11:02:51 sketch Exp $
+$NetBSD: patch-ai,v 1.2 2005/07/08 09:47:02 adam Exp $
 
---- WINGs/dragsource.c.orig	2004-11-15 10:24:38.140204000 +0000
-+++ WINGs/dragsource.c	2004-11-15 10:31:35.798026000 +0000
-@@ -1,5 +1,7 @@
- #include "../src/config.h"
+--- WINGs/dragsource.c.orig	2004-10-28 09:29:59.000000000 +0000
++++ WINGs/dragsource.c
+@@ -3,6 +3,8 @@
+ #include "wconfig.h"
+ #include "WINGsP.h"
  
 +#include <X11/Xlib.h>
 +#include <X11/Xutil.h>

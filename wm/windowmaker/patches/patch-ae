@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2004/11/05 11:51:35 adam Exp $
+$NetBSD: patch-ae,v 1.6 2005/07/08 09:47:02 adam Exp $
 
---- doc/sk/Makefile.in.orig	2004-10-24 23:05:06.000000000 -0400
-+++ doc/sk/Makefile.in	2004-10-24 23:05:39.000000000 -0400
-@@ -112,7 +112,7 @@
+--- doc/sk/Makefile.in.orig	2005-06-19 03:23:01.000000000 +0000
++++ doc/sk/Makefile.in
+@@ -113,7 +113,7 @@ wprefs_datadir = @wprefs_datadir@
  
  mandir = @mandir@/sk
  
