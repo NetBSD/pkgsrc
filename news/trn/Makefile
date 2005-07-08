@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2005/06/20 01:57:36 kristerw Exp $
+# $NetBSD: Makefile,v 1.20 2005/07/08 20:42:35 kristerw Exp $
 
 DISTNAME=		trn-4.0-test76
 PKGNAME=		trn-4.76
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=trn/} \
 			ftp://trn.sourceforge.net/pub/trn/
@@ -34,12 +34,13 @@ USE_PERL5=		# defined
 HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ENV=		PREFIX=${PREFIX}
-USE_TOOLS+=		awk basename cat cp echo egrep expr grep mkdir mv
+USE_TOOLS+=		awk basename cat cp diff echo egrep expr grep mkdir mv
 USE_TOOLS+=		rm sed tail tr
 CONFIGURE_ENV+=		TOOLS_AWK="${TOOLS_AWK}"
 CONFIGURE_ENV+=		TOOLS_BASENAME="${TOOLS_BASENAME}"
 CONFIGURE_ENV+=		TOOLS_CAT="${TOOLS_CAT}"
 CONFIGURE_ENV+=		TOOLS_CP="${TOOLS_CP}"
+CONFIGURE_ENV+=		TOOLS_DIFF="${TOOLS_DIFF}"
 CONFIGURE_ENV+=		TOOLS_ECHO="${TOOLS_ECHO}"
 CONFIGURE_ENV+=		TOOLS_EGREP="${TOOLS_EGREP}"
 CONFIGURE_ENV+=		TOOLS_EXPR="${TOOLS_EXPR}"
