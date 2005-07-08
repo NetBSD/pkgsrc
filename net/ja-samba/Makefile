@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/06/19 18:38:40 taca Exp $
+# $NetBSD: Makefile,v 1.37 2005/07/08 16:47:42 kristerw Exp $
 
 DISTNAME=		samba-${SAMBA_VERSION}-ja-${JA_VERSION}
 PKGNAME=		ja-samba-${SAMBA_VERSION}.${JA_PKG_VERSION}
@@ -174,6 +174,7 @@ post-install:
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/${NSS_WINBIND} ${PREFIX}/lib
 .endif
 .if !empty(PKG_OPTIONS:Mpam)
+	${INSTALL_LIB_DIR} ${PREFIX}/lib/security
 	${INSTALL_LIBRARY} ${WRKSRC}/bin/pam_smbpass.so ${PREFIX}/lib/security
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/pam_winbind.so \
 		${PREFIX}/lib/security
