@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/02 15:10:59 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/08 19:15:25 kristerw Exp $
 #
 
 DISTNAME=	fdgw-20020130
@@ -49,13 +49,13 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !exists(${X11BASE}/bin/lndir)
+.if !exists(${X11BASE}/bin/lndir) && ${OPSYS} == "NetBSD"
 PKG_FAIL_REASON= "${PKGNAME} requires the 'lndir' command, and hence X11"
 .endif
 
 # we need the NetBSD source tree.
 BSDSRCDIR?=	/usr/src
-.if !exists(${BSDSRCDIR})
+.if !exists(${BSDSRCDIR}) && ${OPSYS} == "NetBSD"
 PKG_FAIL_REASON+= "${PKGNAME} requires the NetBSD source tree in BSDSRCDIR (${BSDSRCDIR})"
 .endif
 
