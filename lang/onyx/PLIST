@@ -1,15 +1,18 @@
-@comment $NetBSD: PLIST,v 1.5.8.1 2005/07/08 10:12:48 mrg Exp $
+@comment $NetBSD: PLIST,v 1.5.8.2 2005/07/08 10:17:32 mrg Exp $
 bin/onyx
 bin/${PKGNAME}
 bin/onyx_config
 bin/onyx_config-${PKGVERSION}
 include/libonyx/ch.h
+include/libonyx/cnd.h
 include/libonyx/dch.h
 include/libonyx/gcdict.h
 include/libonyx/libonyx.h
 include/libonyx/libonyx_defs.h
 include/libonyx/mb.h
 include/libonyx/mem.h
+include/libonyx/mq.h
+include/libonyx/mtx.h
 include/libonyx/nx.h
 include/libonyx/nxa.h
 include/libonyx/nxm.h
@@ -18,6 +21,7 @@ include/libonyx/nxo.h
 include/libonyx/nxo_array.h
 include/libonyx/nxo_boolean.h
 include/libonyx/nxo_class.h
+include/libonyx/nxo_condition.h
 include/libonyx/nxo_dict.h
 include/libonyx/nxo_file.h
 include/libonyx/nxo_fino.h
@@ -25,6 +29,7 @@ include/libonyx/nxo_handle.h
 include/libonyx/nxo_instance.h
 include/libonyx/nxo_integer.h
 include/libonyx/nxo_mark.h
+include/libonyx/nxo_mutex.h
 include/libonyx/nxo_name.h
 include/libonyx/nxo_no.h
 include/libonyx/nxo_null.h
@@ -40,6 +45,8 @@ include/libonyx/ql.h
 include/libonyx/qr.h
 include/libonyx/qs.h
 include/libonyx/systemdict.h
+include/libonyx/thd.h
+include/libonyx/tsd.h
 include/libonyx/xep.h
 lib/libonyx.a
 lib/libonyx.so
