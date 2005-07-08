@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/25 01:36:47 kristerw Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/08 21:09:36 kristerw Exp $
 #
 
 DISTNAME=		dync-1.1
@@ -14,6 +14,6 @@ GNU_CONFIGURE=		yes
 BUILD_TARGET=		tst
 USE_TOOLS+=		file_cmd
 CONFIGURE_ENV+=		FILE_CMD="${TOOLS_FILE_CMD}"
-CONFIGURE_ENV+=		LDCONFIG="${TOOLS_LDCONFIG}"
+CONFIGURE_ENV+=		ac_cv_path_LDCONFIG="${TOOLS_LDCONFIG}"
 
 .include "../../mk/bsd.pkg.mk"
