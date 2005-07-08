@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.12 2004/11/05 11:51:35 adam Exp $
+$NetBSD: patch-ab,v 1.13 2005/07/08 09:47:02 adam Exp $
 
---- configure.orig	2004-10-26 04:10:49.000000000 +0000
+--- configure.orig	2005-06-19 03:23:02.000000000 +0000
 +++ configure
-@@ -21590,46 +21590,21 @@ fi
+@@ -21634,46 +21634,21 @@ fi
  
  
  
--supported_locales="be bg bs ca cs da de el es et fi fr gl hr hu it ja ko ms nl no pl pt ro ru sk sv tr zh_CN zh_TW.Big5"
--supported_wprefs_locales="bg ca cs de es et fi fr hr hu it ja ko pt ru sk zh_CN zh_TW.Big5"
+-supported_locales="be bg bs ca cs da de el es et fi fr gl hr hu it ja ko ms nl no pl pt ro ru sk sv tr zh_CN zh_TW"
+-supported_wprefs_locales="bg ca cs de es et fi fr hr hu it ja ko pt ru sk zh_CN zh_TW"
 +supported_locales="bg cs da de el es et fi fr gl hr hu it ja ko ms nl no pl pt ro ru sk sv tr zh_CN"
 +supported_wprefs_locales="bg cs de es et fi fr hr hu it ja ko pt ru sk zh_CN"
  supported_wings_locales="bg ca cs de fr sk"
@@ -59,7 +59,7 @@ $NetBSD: patch-ab,v 1.12 2004/11/05 11:51:35 adam Exp $
  
  case $host_os in
  	freebsd*)
-@@ -26015,8 +25990,8 @@ _ACEOF
+@@ -26060,8 +26035,8 @@ _ACEOF
      fi
  fi
  
@@ -69,4 +69,13 @@ $NetBSD: patch-ab,v 1.12 2004/11/05 11:51:35 adam Exp $
 +HEADER_SEARCH_PATH="-I${BUILDLINK_DIR}/include -I${BUILDLINK_X11_DIR}/include"
  
  
+ 
+@@ -27661,7 +27636,7 @@ cat <<EOF >get-wraster-flags
+ 
+ WCFLAGS="$inc_search_path"
+ WLFLAGS="$lib_search_path"
+-WLIBS="-lwraster $GFXLIBS $XLIBS -lm"
++WLIBS="-lwraster $GFXLIBS $XLIBS $XFTLIBS -lm"
+ 
+ usage="Usage: get-wraster-flags #lp#--cflags#rp# #lp#--ldflags#rp# #lp#--libs#rp#"
  

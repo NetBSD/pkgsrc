@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2005/06/01 18:03:26 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2005/07/08 09:47:02 adam Exp $
 
-DISTNAME=	WindowMaker-0.91.0
+DISTNAME=	WindowMaker-0.92.0
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
-PKGREVISION=	1
 CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	ftp://ftp.windowmaker.org/pub/source/release/ \
 		ftp://ftp.ics.es.osaka-u.ac.jp/mirrors/WindowMaker/source/release/
@@ -12,15 +11,16 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.windowmaker.org/
 COMMENT=	GNUStep-compliant NEXTSTEP(tm) window manager clone
 
-BUILD_USES_MSGFMT=	YES
+BUILD_USES_MSGFMT=	yes
 
-USE_PKGINSTALL=		YES
-USE_PKGLOCALEDIR=	YES
-USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-usermenu \
-			--sysconfdir=${PKG_SYSCONFBASEDIR} \
-			--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
+USE_LIBTOOL=		yes
+USE_PKGINSTALL=		yes
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-usermenu
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
+CONFIGURE_ARGS+=	--without-gnustepdir
 CONFIGURE_ENV+=		LINGUAS=yes
 CONFIGURE_ENV+=		CPP_PATH="${CPP}"
 
@@ -36,7 +36,7 @@ PKG_SYSCONFSUBDIR=	WindowMaker
 EGDIR=			${PREFIX}/share/examples/WindowMaker
 CONF_FILES=
 .for f in WMGLOBAL WMRootMenu WMState WMWindowAttributes WindowMaker
-CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
+CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 .undef f
 

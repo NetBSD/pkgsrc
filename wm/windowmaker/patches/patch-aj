@@ -1,9 +1,9 @@
-$NetBSD: patch-aj,v 1.1 2004/11/15 11:02:51 sketch Exp $
+$NetBSD: patch-aj,v 1.2 2005/07/08 09:47:02 adam Exp $
 
---- src/switchpanel.c.orig	2004-11-15 10:44:36.799472000 +0000
-+++ src/switchpanel.c	2004-11-15 10:44:59.875415000 +0000
-@@ -26,6 +26,8 @@
- #include <sys/time.h>
+--- src/switchpanel.c.orig	2004-10-30 07:16:04.000000000 +0000
++++ src/switchpanel.c
+@@ -36,6 +36,8 @@
+ #include "xinerama.h"
  
  #ifdef SHAPE
 +#include <X11/Xlib.h>
