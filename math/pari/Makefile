@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2005/06/01 18:03:03 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/07/08 22:10:45 kristerw Exp $
 
 DISTNAME=		pari-2.1.5
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		math
 MASTER_SITES=		http://pari.math.u-bordeaux.fr/download/ \
 			ftp://www.gn-50uma.de/gn/gn-50uma.de/pari-2.1/
@@ -20,6 +20,7 @@ CONFIGURE_SCRIPT=	${WRKSRC}/Configure
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --share-prefix=${PREFIX}/share
 CONFIGURE_ARGS+=	--graphic=X11
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
+CONFIGURE_ENV+=		PERL5=${PERL5}
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
 
 TEST_TARGET=		test-compat bench
