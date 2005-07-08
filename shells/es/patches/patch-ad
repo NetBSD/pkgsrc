@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2005/03/10 15:18:31 tv Exp $
+$NetBSD: patch-ad,v 1.5 2005/07/08 19:25:34 kristerw Exp $
 
 --- stdenv.h.orig	1995-05-30 07:13:53.000000000 -0400
 +++ stdenv.h
@@ -25,7 +25,7 @@ $NetBSD: patch-ad,v 1.4 2005/03/10 15:18:31 tv Exp $
  
  /* stdlib */
  
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__INTERIX)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__INTERIX) && !defined(__APPLE__)
  extern noreturn exit(int);
  extern noreturn abort(void);
  extern long strtol(const char *num, char **end, int base);
