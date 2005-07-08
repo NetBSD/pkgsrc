@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10556 2005/07/08 20:34:05 reed Exp $
+$NetBSD: CHANGES,v 1.10557 2005/07/08 23:28:40 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3136,3 +3136,11 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/msmtp to 1.4.2 [adam 2005-07-08]
 	Updated print/html2ps to 1.0b4nb1 [2005-07-08]
 	Added print/poppler version 0.3.3nb1 [reed 2005-07-08]
+	Updated sysutils/radmind to 1.5.0nb1 [kristerw 2005-07-08]
+	Updated misc/tds to 1.4.2nb1 [kristerw 2005-07-08]
+	Updated news/trn to 4.76nb3 [kristerw 2005-07-08]
+	Updated textproc/kdoc to 3.0nb1 [kristerw 2005-07-08]
+	Updated devel/cssc to 1.0.1nb1 [kristerw 2005-07-08]
+	Updated textproc/postgresql-autodoc to 1.24nb1 [kristerw 2005-07-08]
+	Updated textproc/freepwing to 1.4.4nb2 [kristerw 2005-07-08]
+	Updated math/pari to 2.1.5nb5 [kristerw 2005-07-08]
