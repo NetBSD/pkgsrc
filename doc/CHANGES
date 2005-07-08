@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10555 2005/07/08 19:23:25 hubertf Exp $
+$NetBSD: CHANGES,v 1.10556 2005/07/08 20:34:05 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3135,3 +3135,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wm/windowmaker to 0.92.0 [adam 2005-07-08]
 	Updated mail/msmtp to 1.4.2 [adam 2005-07-08]
 	Updated print/html2ps to 1.0b4nb1 [2005-07-08]
+	Added print/poppler version 0.3.3nb1 [reed 2005-07-08]
