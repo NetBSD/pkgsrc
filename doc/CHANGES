@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10550 2005/07/08 07:50:38 adam Exp $
+$NetBSD: CHANGES,v 1.10551 2005/07/08 09:42:03 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3130,3 +3130,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated shells/bash to 3.0pl16nb2 [tron 2005-07-07]
 	Updated print/magicfilter to 1.2nb4 [tron 2005-07-07]
 	Updated net/net-snmp to 5.2.1.2 [adam 2005-07-08]
+	Updated chat/gaim to 1.4.0 [grant 2005-07-08]
