@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
+$NetBSD: patch-aa,v 1.10 2005/07/08 22:10:45 kristerw Exp $
 
---- Configure.orig	Thu Apr  3 21:11:02 2003
-+++ Configure
-@@ -187,35 +187,7 @@ if test -z "$OS2_SHELL"; then dir_sep=':
+--- Configure.orig	2003-04-03 19:11:02.000000000 +0000
++++ Configure	2005-07-08 21:59:13.000000000 +0000
+@@ -187,35 +187,7 @@
  pth="\
    /bin\
    /usr/bin\
@@ -39,7 +39,24 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
  "
  # /usr/openwin/bin added for xmkmf
  
-@@ -290,7 +262,7 @@ if test "$fastread" != yes; then
+@@ -246,7 +218,7 @@
+ #  We might need the following :
+ #
+ echo Looking for some tools first ...
+-list='ld zcat gzip ranlib perl emacs'
++list='ld zcat gzip ranlib emacs'
+ pathspace=`echo $PATH | sed -e "s/$dir_sep/ /g" | sed -e 's,\\\\,/,g'`
+ 
+ for file in $list; do
+@@ -259,6 +231,7 @@
+   esac
+ done
+ if test -z "$zcat" -a -n "$gzip"; then zcat="$gzip -dc"; fi
++perl="${PERL5}";
+ 
+ ####################### CONFIGURE - ARCHITECTURE ############################
+ #
+@@ -290,7 +263,7 @@
  ==========================================================================
  I know of the following Operating Systems
  EOM
@@ -48,7 +65,7 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
    . ./display
    echo $n ..."Any of these apply ? $c"
    dflt=$osname; . ./myread
-@@ -302,20 +274,26 @@ fi
+@@ -302,20 +275,26 @@
  #   The asm file used (if any)
  #
  case "$arch" in
@@ -78,7 +95,7 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
    fx2800)        asmarch=none;          pretty="Alliant FX/2800" ;;
    none)          asmarch=none;          pretty="unknown" ;;
    *)             asmarch=none;          pretty=$arch
-@@ -329,6 +307,9 @@ case "$osname" in
+@@ -329,6 +308,9 @@
    nextstep|cygwin*|linux|freebsd|os2)
         pretty="$pretty running $osname";
          if test "$arch" = m68k; then asmarch=none; fi ;;
@@ -88,7 +105,7 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
  esac
  
  if test "$kernel" = no; then
-@@ -351,7 +332,7 @@ EOM
+@@ -351,7 +333,7 @@
    fi
  fi
  case "$asmarch" in
@@ -97,7 +114,7 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
    sparcv7)       prettyk=SparcV7;;
    sparcv8_super) prettyk=SuperSparc;;
    sparcv8_micro) prettyk=MicroSparc;;
-@@ -375,7 +356,7 @@ echo "Building for architecture: $pretty
+@@ -375,7 +357,7 @@
  case "$osname-$arch" in
    os2-*)  ln_s=cp; make_sh=sh; exe_suff=.exe; extraflag="-Zexe" ;;
    cygwin*) ln_s="ln -s"; make_sh="/bin/sh"; exe_suff=.exe; extraflag="" ;;
@@ -106,7 +123,7 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
  esac
  
  ####################### CONFIGURE - LIBRARIES ###############################
-@@ -418,20 +399,8 @@ if test "$optimization" != profiling; th
+@@ -418,20 +400,8 @@
  	fi;;
        os2) libpth=`echo $LIBRARY_PATH | sed 's/;/ /g' | sed 's,\\\\,/,g'`;;
   	*) libpth="\
@@ -128,7 +145,7 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
   	.\
       ";;
       esac
-@@ -518,17 +487,9 @@ if test "$optimization" != profiling; th
+@@ -518,17 +488,9 @@
  # Readline -- TermCap
      lib=$rl_fullname; sym=tgetent; . ./locatesymbol
      if test -n "$try"; then # tgetent needed
@@ -146,7 +163,7 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
  # Readline -- Allocation
      lib=$rl_fullname; sym=alloca; . ./locatesymbol
      if test -n "$try"; then # alloca needed
-@@ -546,24 +507,15 @@ if test "$optimization" != profiling; th
+@@ -546,24 +508,15 @@
         $cygtop/H-${arch}-cygwin32/${arch}-cygwin32/include\
       ";;
        *) incpth="\
@@ -174,7 +191,7 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
           if (grep CPPFunction $x > /dev/null 2>&1); then CPPF_defined=yes; fi
           if (grep rl_message  $x > /dev/null 2>&1); then rl_message=yes; fi
           if (grep rl_completion_matches $x > /dev/null 2>&1); then
-@@ -601,7 +553,7 @@ if test "$optimization" != profiling; th
+@@ -601,7 +554,7 @@
  # in case headers are not installed correctly
        RLINCLUDE="-I$rl_include -DREADLINE_LIBRARY"
      fi
@@ -183,7 +200,7 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
      if test -n "$rl_ncurses"; then
        echo ..."Library ncurses needed by readline"
        RLLIBS="$RLLIBS -lncurses"
-@@ -662,33 +614,7 @@ EOT
+@@ -662,33 +615,7 @@
        # X11 -- Headers
        if test ! -f $Xincroot/X11/Xos.h; then
          x11pth="\
@@ -218,7 +235,7 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
          ";
          pth=`echo $x11pth | s,/lib,/include,g`
          x=`./locate X11/Xos.h '' $pth`
-@@ -877,7 +803,7 @@ else
+@@ -877,7 +804,7 @@
    esac
    PRFFLAGS="$PRFFLAGS $OPTFLAGS"
  fi
@@ -227,7 +244,7 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
  
  case "$osname" in
    nextstep)  cflags="-traditional-cpp $cflags";;
-@@ -962,6 +888,7 @@ case "$osname-$arch" in
+@@ -962,6 +889,7 @@
    linux-*|cygwin*)
        LD=$CC; LDFLAGS="$cflags -Xlinker -export-dynamic"
        runpathprefix='-Xlinker -rpath -Xlinker ';;
@@ -235,7 +252,7 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
    osf1-alpha)
        LD=$ld; LIBS="$LIBS -lots -lc"; runpathprefix='-rpath '
        LDFLAGS='-std0 -call_shared /usr/lib/cmplrs/cc/crt0.o'
-@@ -1207,8 +1134,8 @@ if test -z "$share_prefix"; then
+@@ -1207,8 +1135,8 @@
    dfltman=$prefix/man/man1
    dfltall=$prefix/lib/pari
  else
@@ -246,7 +263,7 @@ $NetBSD: patch-aa,v 1.9 2004/02/22 02:19:50 heinz Exp $
  fi
  
  echo $n ..."\"gp\" executable ? $c"
-@@ -1289,6 +1216,7 @@ fi
+@@ -1289,6 +1217,7 @@
  case "$osname" in
    *cygwin*) LDDYN="-L$libdir -lpari_dll" ; runpath="$libdir" ;
  	    DYNLIBS=-lpari_dll ; DYNFLAGS=-Dlibpari_USE_DLL ;;
