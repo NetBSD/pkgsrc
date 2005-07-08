@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/05/19 18:34:34 ben Exp $
+$NetBSD: distinfo,v 1.5 2005/07/08 18:56:56 kristerw Exp $
 
 SHA1 (helpdeco-2.1.1.tar.gz) = bd1dfe9a22b9a966b889b5c2693496e3dfe618ac
 RMD160 (helpdeco-2.1.1.tar.gz) = 2777a0d1c8925ceb08ef86e73e80dc08fe2b1a25
 Size (helpdeco-2.1.1.tar.gz) = 80041 bytes
+SHA1 (patch-aa) = 0cf435603d3fb8176085f48a725824c9516b51e8
