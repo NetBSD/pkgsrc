@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10552 2005/07/08 09:48:35 adam Exp $
+$NetBSD: CHANGES,v 1.10553 2005/07/08 10:21:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3132,3 +3132,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/net-snmp to 5.2.1.2 [adam 2005-07-08]
 	Updated chat/gaim to 1.4.0 [grant 2005-07-08]
 	Updated wm/windowmaker to 0.92.0 [adam 2005-07-08]
+	Updated mail/msmtp to 1.4.2 [adam 2005-07-08]
