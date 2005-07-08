@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2005/05/25 13:42:52 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/07/08 20:53:49 kristerw Exp $
 
 DISTNAME=	kdoc-2.0a54
 PKGNAME=	kdoc-3.0
+PKGREVISION=	1
 CATEGORIES=	textproc kde
 
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/3.0/src/ \
@@ -11,6 +12,11 @@ MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/3.0/src/ \
 
 MAINTAINER=	wulf@NetBSD.org
 COMMENT=	C++ and IDL Class Documentation Tool
+
+SUBST_CLASSES+=		vars
+SUBST_STAGE.vars=	do-configure
+SUBST_FILES.vars=	Makefile.in
+SUBST_SED.vars=		-e 's|@perl@|${PERL5}|g'
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
