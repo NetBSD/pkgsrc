@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:28 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/08 20:09:00 kristerw Exp $
 #
 
 DISTNAME=	radmind-1.5.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://rsug.itd.umich.edu/software/radmind/files/
 EXTRACT_SUFX=	.tgz
@@ -13,6 +14,8 @@ COMMENT=	Remote file administration and integrity tool
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-radminddir=${VARBASE}/radmind
+CONFIGURE_ENV+=		diffpath="${TOOLS_DIFF}"
+USE_TOOLS+=		diff
 
 BUILD_TARGET=	all man rash
 
