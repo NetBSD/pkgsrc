@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/04/23 05:55:02 kim Exp $
+$NetBSD: patch-aa,v 1.2 2005/07/08 19:23:28 hubertf Exp $
 
---- install.orig	Sat Sep 13 08:37:20 1997
-+++ install	Sun Apr 23 01:39:56 2000
-@@ -42,8 +42,8 @@
+--- install.orig	2005-03-03 13:25:29.000000000 +0100
++++ install
+@@ -17,7 +17,7 @@ if(-e '/dev/null') {
+     $pathsep = ':';
+     $dirsep = '/';
+     $sys = 'unix';
+-    $prefix = '/usr/local';
++    $prefix = $ARGV[0];
+ } elsif (-e 'nul') {
+     $pathsep = ';';
+     $dirsep = '\\';
+@@ -57,8 +57,8 @@ where the abovementioned packages are. Y
  the directories where the files should be placed.
  EOD
  
@@ -13,12 +22,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/04/23 05:55:02 kim Exp $
  
  print "\n";
  for $req (@perl) {
-@@ -121,18 +121,19 @@
+@@ -134,19 +134,20 @@ if(@reqpath) {
  
  chop ($cd = `pwd`);
- 
--$prefix = "/usr/local";
-+$prefix = "$ARGV[0]";
  
 -&getval($ans, "y",
 - "\nBy default all files will be installed in subdirectories 'bin', 'lib',\n"
@@ -28,7 +34,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/04/23 05:55:02 kim Exp $
 -if($def) {
 -    &getval($prefix, "$prefix", "\nEnter the name of this directory");
 -    &fixdir($prefix);
--    &mkdir($prefix,0);
+-    while(!&goodprefix) {
+-	&getval($prefix, "$prefix", "\nEnter a new directory name");
+-    }
+-    &makedir($prefix,0);
 -}
 +#&getval($ans, "y",
 +# "\nBy default all files will be installed in subdirectories 'bin', 'lib',\n"
@@ -39,21 +48,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/04/23 05:55:02 kim Exp $
 +#if($def) {
 +#    &getval($prefix, "$prefix", "\nEnter the name of this directory");
 +#    &fixdir($prefix);
-+#    &mkdir($prefix,0);
++#    while(!&goodprefix) {
++#	&getval($prefix, "$prefix", "\nEnter a new directory name");
++#    }
++#    &makedir($prefix,0);
 +#}
  
  if($def) {
-     $bindir = "$prefix/bin";
-@@ -145,7 +146,7 @@
- &mkdir($bindir,$def);
- 
- if($def) {
--    $glob = "$prefix/lib/html2ps";
-+    $glob = "$prefix/share/html2ps";
- } else {
-     &getval($glob, "$prefix/lib/html2ps",
-      "\nEnter the the directory where the global configuration file for\n"
-@@ -184,7 +185,7 @@
+     $bindir = "$prefix${dirsep}bin";
+@@ -198,7 +199,7 @@ $cophy = 1;
  if($exist{'TeX'}) {
      $hfile = "";
      ($texdir = $dir{'TeX'}) =~ s|/bin$||;
@@ -62,7 +65,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/04/23 05:55:02 kim Exp $
          "lib/inputs","lib/tex/macros","lib/tex/inputs") {
          if(-f "$texdir/$_/ushyph1.tex") {
              $hyph = "$texdir/$_";
-@@ -198,15 +199,15 @@
+@@ -212,15 +213,15 @@ if($exist{'TeX'}) {
          }
      }
      if($hfile) {
@@ -86,18 +89,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/04/23 05:55:02 kim Exp $
      } else {
          &getval($hfile, "", "$ht I cannot find the pattern\nfile for English "
           ."in your TeX installation. (It should be called\n'hyphen.tex', "
-@@ -246,7 +247,7 @@
+@@ -268,12 +269,13 @@ if($def) {
  }
- 
- if($def) {
--    $html = "$prefix/lib/html2ps";
-+    $html = "$prefix/share/html2ps";
- } else {
-     &getval($html, "$prefix/lib/html2ps",
-      "\nEnter a directory where to put the HTML document describing\nhtml2ps");
-@@ -254,12 +255,13 @@
- }
- &mkdir($html,$def);
+ &makedir($html,$def);
  
 -$paper = "";
 -&getval($format, "A4",
