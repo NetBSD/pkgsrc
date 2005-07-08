@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10549 2005/07/07 21:32:20 tron Exp $
+$NetBSD: CHANGES,v 1.10550 2005/07/08 07:50:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3129,3 +3129,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/ispell-british to 3.3.02 [markd 2005-07-07]
 	Updated shells/bash to 3.0pl16nb2 [tron 2005-07-07]
 	Updated print/magicfilter to 1.2nb4 [tron 2005-07-07]
+	Updated net/net-snmp to 5.2.1.2 [adam 2005-07-08]
