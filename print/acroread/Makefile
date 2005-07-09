@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/06/30 13:22:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.43 2005/07/09 17:34:42 kristerw Exp $
 
 DISTNAME=	acroread	# Overridden below
 PKGNAME=	acroread-4.05
@@ -27,6 +27,10 @@ SHLIB_HANDLING=	NO
 # Default (should be overridden below)
 PLATFORM=	unknown
 
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-1.4[L-Z]-sparc \
+			NetBSD-1.[5-9]*-sparc NetBSD-[2-9]*-sparc \
+			SunOS-*-*
+
 .if ${OPSYS} == "NetBSD"
 . if (${MACHINE_ARCH} == "i386")
 DEPENDS=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
@@ -48,8 +52,6 @@ DISTNAME=	sunsparc-rs-405
 WRKSRC=		${WRKDIR}/SSOLRS.install
 PLATFORM=	sparcsolaris
 . endif
-ONLY_FOR_PLATFORM=	*-*-i386 *-1.4[L-Z]-sparc *-1.[5-9]*-sparc *-[2-9]*-sparc
-# *-*-alpha
 .include "../../emulators/suse_linux/Makefile.application"
 .elif ${OPSYS} == "SunOS"
 . if (${MACHINE_ARCH} == "i386")
