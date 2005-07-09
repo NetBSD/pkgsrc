@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.36 2005/06/23 11:10:32 seb Exp $
+# $NetBSD: pyversion.mk,v 1.37 2005/07/09 01:11:15 kristerw Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -134,7 +134,7 @@ BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
 .endif
 .else
 # force an error
-PKG_FAIL_REASON+=   "No valid Python version"
+PKG_SKIP_REASON+=   "No valid Python version"
 .endif
 
 PTHREAD_OPTS=	require
@@ -142,7 +142,9 @@ PTHREAD_OPTS=	require
 .if defined(PYTHON_FOR_BUILD_ONLY)
 BUILDLINK_DEPMETHOD.python?=	build
 .endif
+.if defined(PYPKGSRCDIR)
 .include "${PYPKGSRCDIR}/buildlink3.mk"
+.endif
 
 PYTHONBIN=	${LOCALBASE}/bin/python${PYVERSSUFFIX}
 
