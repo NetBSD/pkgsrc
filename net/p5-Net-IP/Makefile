@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:54 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/09 16:12:33 adrianp Exp $
 #
 
-DISTNAME=	Net-IP-1.20
+DISTNAME=	Net-IP-1.23
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
-MAINTAINER=	adrianp@stindustries.net
+MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~manu/Net-IP-1.20/
 COMMENT=	Perl extension for manipulating IPv4/IPv6 addresses
 
