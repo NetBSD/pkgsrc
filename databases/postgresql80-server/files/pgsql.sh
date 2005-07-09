@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.2 2005/05/16 01:02:20 cjs Exp $
+# $NetBSD: pgsql.sh,v 1.3 2005/07/09 04:24:52 cjs Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -77,7 +77,9 @@ pgsql_initdb()
 		@CHOWN@ ${pgsql_user} ${pgsql_home}
 		@CHGRP@ ${pgsql_group} ${pgsql_home}
 		@CHMOD@ 0750 ${pgsql_home}
-		eval doit_command=\"${initdb} ${common_args} ${flags}\"
+		common_args_without_m=$(echo "${common_args}" |\
+		    sed -e 's/-m [a-z]*//')
+		eval doit_command=\"${initdb} ${common_args_without_m} ${flags}\"
 		doit="@SU@ -m ${pgsql_user} -c '${doit_command}'"
 		eval $doit
 	fi
