@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2005/05/22 20:08:09 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/07/09 00:16:53 kristerw Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	gcc34-${GCC_VERSION}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -90,6 +90,8 @@ MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
 .if !empty(BUILD_F77:M[Yy][Ee][Ss])
 .include "../../devel/gmp/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
+USE_TOOLS+=		chmod
+MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod="${TOOLS_CHMOD}"
 .endif
 
 # GNU pth is useless here
