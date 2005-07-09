@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2005/05/22 20:08:23 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/07/09 17:25:00 adrianp Exp $
 
-DISTNAME=	freeradius-1.0.2
-PKGREVISION=	2
+DISTNAME=	freeradius-1.0.4
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -122,7 +121,6 @@ post-install:
 .	for f in ${EGFILES}
 		${INSTALL_DATA} ${WRKSRC}/raddb/${f} ${EGDIR}/${f}
 .	endfor
-.	undef f
 
 	@${MKDIR} ${PKG_SYSCONFDIR}/certs
 	@${MKDIR} ${PKG_SYSCONFDIR}/certs/demoCA
