@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3694 2005/07/08 20:45:02 reed Exp $
+$NetBSD: TODO,v 1.3695 2005/07/09 16:16:45 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -806,7 +806,6 @@ Suggested package updates
 	o p5-Net-Daemon-0.38
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
-	o p5-Net-IP-1.21
 	o p5-Net-Jabber-2.0
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
