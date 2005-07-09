@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10557 2005/07/08 23:28:40 kristerw Exp $
+$NetBSD: CHANGES,v 1.10558 2005/07/09 00:20:12 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3144,3 +3144,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/postgresql-autodoc to 1.24nb1 [kristerw 2005-07-08]
 	Updated textproc/freepwing to 1.4.4nb2 [kristerw 2005-07-08]
 	Updated math/pari to 2.1.5nb5 [kristerw 2005-07-08]
+	Updated lang/gcc34 to 3.4.4nb1 [kristerw 2005-07-09]
