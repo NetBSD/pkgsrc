@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/25 10:47:56 tron Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/09 00:06:11 kristerw Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 PKGREVISION=		5
@@ -18,7 +18,9 @@ EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR} LINUX_LIB=${LINUX_LIB}
 
+.if exists(Makefile.${MACHINE_ARCH})
 .include "Makefile.${MACHINE_ARCH}"
+.endif
 
 RPMIGNOREPATH=		./etc/bash.bashrc ./etc/bash_completion.d \
 			./etc/cron.daily ./etc/csh.cshrc ./etc/csh.login \
