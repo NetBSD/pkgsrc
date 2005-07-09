@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2005/06/03 19:12:49 jlam Exp $
+# $NetBSD: builtin.mk,v 1.13 2005/07/09 03:14:36 grant Exp $
 
 BUILTIN_PKG:=	Xrandr
 
@@ -41,7 +41,8 @@ _BLTN_XRANDR_1.0.XFree86=	4.3 4.3.[0-9] 4.3.[0-9].*		\
 _BLTN_XRANDR_1.0.xorg=		6.[7-9]* 6.[1-9][0-9]*
 .  for _version_ in ${_BLTN_XRANDR_VERSIONS}
 .    for _pattern_ in ${_BLTN_XRANDR_${_version_}.${BUILTIN_X11_TYPE.${X11_TYPE}}}
-.      if !empty(BUILTIN_X11_VERSION.${X11_TYPE}:M${_pattern_})
+.      if defined(BUILTIN_X11_VERSION.${X11_TYPE}) && \
+          !empty(BUILTIN_X11_VERSION.${X11_TYPE}:M${_pattern_})
 BUILTIN_VERSION.Xrandr?=	${_version_}
 .      endif
 .    endfor
