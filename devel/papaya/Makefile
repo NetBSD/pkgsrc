@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:36 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/10 10:32:33 kristerw Exp $
 #
 
 DISTNAME=	papaya-0.1.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.asahi-net.or.jp/~em7t-hmd/papaya/		\
 		${MASTER_SITE_SOURCEFORGE:=papaya-utils/}
@@ -18,6 +18,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_PERL5=	run
 USE_LANGUAGES=	# empty
 GNU_CONFIGURE=	YES
+CONFIGURE_ENV+=	sh_command=${TOOLS_SH}
+CONFIGURE_ENV+=	tar_command=${TOOLS_TAR}
+USE_TOOLS+=	sh tar
 INFO_FILES=	papaya.info
 
 CONFIGURE_ENV+=	perl_command=${PERL5:Q}
