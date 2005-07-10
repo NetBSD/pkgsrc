@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3697 2005/07/09 17:32:47 adrianp Exp $
+$NetBSD: TODO,v 1.3698 2005/07/10 19:15:46 recht Exp $
 
 Suggested new packages
 ======================
@@ -368,7 +368,6 @@ Suggested package updates
 	o benchfft-3.1
 	o bioperl-1.5.0
 	o bitlbee-0.92 [pkg/30096]
-	o bittorrent-4.1.1
 	o blackbox-0.70
 	o blitz++-0.8
 	o bluefish-1.0.1
