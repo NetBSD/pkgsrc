@@ -1,8 +1,18 @@
-$NetBSD: patch-ad,v 1.1 2005/03/02 14:11:28 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2005/07/10 10:32:33 kristerw Exp $
 
---- src/texi2html-wrapper.in.orig	2002-06-25 16:25:17.000000000 +0200
-+++ src/texi2html-wrapper.in
-@@ -39,11 +39,12 @@ fi
+--- src/texi2html-wrapper.in.orig	Tue Jun 25 16:25:17 2002
++++ src/texi2html-wrapper.in	Sun Jul 10 12:27:06 2005
+@@ -14,7 +14,8 @@
+ this="texi2html-wrapper" ;
+ 
+ texi2html_command=@texi2html_command@
+-makeinfo_command=@makeinfo_command@
++# makeinfo is not used since we always have texi2html.
++makeinfo_command=
+ 
+ html_sed1='s!<BODY>!<BODY BGCOLOR=white TEXT=black LINK=blue VLINK=green>!' ;
+ html_sed2='s!<BODY>!<BODY BGCOLOR=white TEXT=black LINK=blue VLINK=green>!' ;
+@@ -39,11 +40,12 @@
  
  for TEXI in $* ; do
  	$COMMAND $TEXI ;
