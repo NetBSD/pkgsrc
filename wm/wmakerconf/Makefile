@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2005/06/27 19:21:40 tron Exp $
+# $NetBSD: Makefile,v 1.32 2005/07/10 10:07:25 kristerw Exp $
 
 DISTNAME=	wmakerconf-2.11
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://starplot.org/wmakerconf/
 
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--with-wmakeretcprefix=${PKG_SYSCONFDIR.windowmaker}
 CONFIGURE_ARGS+=	--with-wmakeretcprefix=${PKG_SYSCONFDIR}/WindowMaker
 .endif
 
-CONFIGURE_ENV+=		gzip=${TOOLS_GZIP_CMD:C/ .*//W:Q}
+CONFIGURE_ENV+=		gzip=${TOOLS_GZIP_CMD:Q:C/\\\\ .*//}
 CONFIGURE_ENV+=		tar=${TOOLS_TAR:Q}
 
 post-extract:
