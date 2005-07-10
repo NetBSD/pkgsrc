@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/06/19 02:49:23 salo Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/07/10 19:11:02 recht Exp $
 bin/btdownloadcurses.py
 bin/btdownloadheadless.py
 bin/btlaunchmany.py
@@ -125,13 +125,13 @@ ${PYSITELIB}/BitTorrent/track.pyo
 ${PYSITELIB}/BitTorrent/zurllib.py
 ${PYSITELIB}/BitTorrent/zurllib.pyc
 ${PYSITELIB}/BitTorrent/zurllib.pyo
-share/doc/BitTorrent-4.0.1/credits.txt
-share/doc/BitTorrent-4.0.1/LICENSE.txt
-share/doc/BitTorrent-4.0.1/README.txt
-share/doc/BitTorrent-4.0.1/redirdonate.html
-share/pixmaps/BitTorrent-4.0.1/logo/bittorrent_32.png
-share/pixmaps/BitTorrent-4.0.1/logo/bittorrent_96.png
-@dirrm share/pixmaps/BitTorrent-4.0.1/logo
-@dirrm share/pixmaps/BitTorrent-4.0.1
-@dirrm share/doc/BitTorrent-4.0.1
+share/doc/BitTorrent-4.0.2/LICENSE.txt
+share/doc/BitTorrent-4.0.2/README.txt
+share/doc/BitTorrent-4.0.2/credits.txt
+share/doc/BitTorrent-4.0.2/redirdonate.html
+share/pixmaps/BitTorrent-4.0.2/logo/bittorrent_32.png
+share/pixmaps/BitTorrent-4.0.2/logo/bittorrent_96.png
+@dirrm share/pixmaps/BitTorrent-4.0.2/logo
+@dirrm share/pixmaps/BitTorrent-4.0.2
+@dirrm share/doc/BitTorrent-4.0.2
 @dirrm ${PYSITELIB}/BitTorrent
