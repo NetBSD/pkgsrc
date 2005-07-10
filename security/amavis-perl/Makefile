@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2005/06/17 03:50:31 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/10 11:55:28 kristerw Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.amavis.org/dist/perl/ \
 		${MASTER_SITE_SOURCEFORGE:=amavis/}
@@ -48,6 +48,9 @@ VIRUSMAILTO?=	security		# whom to notify about viruses
 
 GNU_CONFIGURE=	YES
 PLIST_SRC=	${PKGDIR}/PLIST
+
+USE_TOOLS+=	file
+CONFIGURE_ENV+=	file=${TOOLS_FILE_CMD}
 
 CONFIGURE_ENV+=	procmail="/usr/libexec/mail.local"
 # XXX Milter needs pthreads, and configure fails looking for it
