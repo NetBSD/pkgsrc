@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2004/10/03 00:14:48 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2005/07/10 10:42:26 grant Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	MesaLib
 
 .if !empty(MESALIB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=3.4.2
-BUILDLINK_RECOMMENDED.MesaLib+=	MesaLib>=6.0.1nb1
+BUILDLINK_RECOMMENDED.MesaLib+=	MesaLib>=6.2.1nb2
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 
 .if !defined(BUILDING_MESA)
