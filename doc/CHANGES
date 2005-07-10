@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10561 2005/07/09 17:27:10 adrianp Exp $
+$NetBSD: CHANGES,v 1.10562 2005/07/10 09:22:25 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3148,3 +3148,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/sylpheed-devel to 2.0.0beta5 [chris 2005-07-09]
 	Updated net/p5-Net-IP to 1.23 [adrianp 2005-07-09]
 	Updatet net/freeradius to 1.0.4 [adrianp 2005-07-09]
+	Updated graphics/dcraw to 7.39 [seb 2005-07-10]
