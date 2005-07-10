@@ -1,26 +1,20 @@
-# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:25 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/10 21:48:32 seb Exp $
 
-DISTNAME=	ipcalc
-PKGNAME=	${DISTNAME}-0.35
-DIST_SUBDIR=	${PKGNAME}
+DISTNAME=	ipcalc-0.40
 CATEGORIES=	net
-MASTER_SITES=	http://jodies.de/
-EXTRACT_SUFX=	.pl
+MASTER_SITES=	http://jodies.de/ipcalc-archive/
 
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://jodies.de/ipcalc/
 COMMENT=	IP Calculator
 
-EXTRACT_CMD=    ${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
-
-WRKSRC=         ${WRKDIR}
 USE_PERL5=	YES
-REPLACE_PERL=	ipcalc.pl
+REPLACE_PERL=	ipcalc
 NO_BUILD=	YES
 
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/ipcalc.pl ${PREFIX}/bin/ipcalc
+	${INSTALL_SCRIPT} ${WRKSRC}/ipcalc ${PREFIX}/bin/ipcalc
 
 .include "../../mk/bsd.pkg.mk"
