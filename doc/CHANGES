@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10564 2005/07/10 19:17:13 recht Exp $
+$NetBSD: CHANGES,v 1.10565 2005/07/10 21:08:04 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3151,3 +3151,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/dcraw to 7.39 [seb 2005-07-10]
 	Updated net/bittorrent to 4.0.2 [recht 2005-07-10]
 	Updated net/bittorrent-gui to 4.0.2 [recht 2005-07-10]
+	Updated devel/papaya to 0.1.7nb3 [kristerw 2005-07-10]
+	Updated security/amavis-perl to 0.1nb2 [kristerw 2005-07-10]
+	Updated wm/wmakerconf to 2.11nb3 [kristerw 2005-07-10]
