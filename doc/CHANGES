@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10563 2005/07/10 11:37:52 adrianp Exp $
+$NetBSD: CHANGES,v 1.10564 2005/07/10 19:17:13 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3149,3 +3149,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/p5-Net-IP to 1.23 [adrianp 2005-07-09]
 	Updated net/freeradius to 1.0.4 [adrianp 2005-07-09]
 	Updated graphics/dcraw to 7.39 [seb 2005-07-10]
+	Updated net/bittorrent to 4.0.2 [recht 2005-07-10]
+	Updated net/bittorrent-gui to 4.0.2 [recht 2005-07-10]
