@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3699 2005/07/11 14:01:43 minskim Exp $
+$NetBSD: TODO,v 1.3700 2005/07/11 14:22:09 minskim Exp $
 
 Suggested new packages
 ======================
@@ -115,10 +115,6 @@ Suggested new packages
 	Helix Player
 	http://player.helixcommunity.org/2004/downloads/
 	RealNetwork's open source audio/video player
-
-	pgpool
-	http://www2b.biglobe.ne.jp/~caco/pgpool/index-e.html
-	PostgreSQL connection pooling layer
 
 	Sunbird
 	http://www.mozilla.org/projects/calendar/sunbird.html
