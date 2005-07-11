@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10566 2005/07/10 21:49:51 seb Exp $
+$NetBSD: CHANGES,v 1.10567 2005/07/11 03:25:07 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3155,3 +3155,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/amavis-perl to 0.1nb2 [kristerw 2005-07-10]
 	Updated wm/wmakerconf to 2.11nb3 [kristerw 2005-07-10]
 	Updated net/ipcalc to 0.40 [seb 2005-07-10]
+	Added net/vde version 1.5.9 [grant 2005-07-11]
