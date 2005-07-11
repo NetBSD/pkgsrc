@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3700 2005/07/11 14:22:09 minskim Exp $
+$NetBSD: TODO,v 1.3701 2005/07/11 14:24:49 minskim Exp $
 
 Suggested new packages
 ======================
@@ -854,7 +854,6 @@ Suggested package updates
 	o perl-5.8.7
 	o pfqueue-0.4.2
 	o pfstat-1.8
-	o pgpool-2.5.1
 	o phoon-20030120
 	o photopc-3.05
 	o phpmyadmin-2.6.2
