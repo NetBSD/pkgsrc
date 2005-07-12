@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10571 2005/07/12 13:56:24 minskim Exp $
+$NetBSD: CHANGES,v 1.10572 2005/07/12 14:35:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3160,3 +3160,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated benchmarks/dbench to 3.03 [adam 2005-07-12]
 	Updated mail/ezmlm-idx to 0.442 [schmonz 2005-07-12]
 	Updated archivers/unalz to 0.40 [minskim 2005-07-12]
+	Updated www/amaya to 9.2 [adam 2005-07-12]
