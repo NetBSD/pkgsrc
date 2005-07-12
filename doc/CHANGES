@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10573 2005/07/12 16:05:09 taca Exp $
+$NetBSD: CHANGES,v 1.10574 2005/07/12 16:59:05 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3162,3 +3162,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/unalz to 0.40 [minskim 2005-07-12]
 	Updated www/amaya to 9.2 [adam 2005-07-12]
 	Updated textproc/namazu2 to 2.0.14nb2 [taca 2005-07-12]
+	Updated meta-pkgs/netbsd-doc-print to 1.3 [hubertf 2005-07-12]
