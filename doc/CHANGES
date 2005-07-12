@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10569 2005/07/12 09:58:03 adam Exp $
+$NetBSD: CHANGES,v 1.10570 2005/07/12 10:58:56 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3158,3 +3158,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added net/vde version 1.5.9 [grant 2005-07-11]
 	Updated databases/pgpool to 2.5.1 [minskim 2005-07-11]
 	Updated benchmarks/dbench to 3.03 [adam 2005-07-12]
+	Updated mail/ezmlm-idx to 0.442 [schmonz 2005-07-12]
