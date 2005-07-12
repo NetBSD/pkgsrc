@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2004/10/26 13:55:56 adam Exp $
+$NetBSD: patch-ah,v 1.2 2005/07/12 21:40:35 kristerw Exp $
 
 --- configs/default.orig	2004-10-25 17:21:49.000000000 +0000
 +++ configs/default
-@@ -14,10 +14,6 @@ MESA_TINY=0
+@@ -14,10 +14,6 @@ MESA_TINY=1
  DRM_SOURCE_PATH=$(TOP)/../drm
  
  # Compiler and flags
@@ -22,3 +22,12 @@ $NetBSD: patch-ah,v 1.1 2004/10/26 13:55:56 adam Exp $
  SRC_DIRS = mesa glu glut/glx glw
  GLU_DIRS = sgi
  DRIVER_DIRS = x11 osmesa
+@@ -60,7 +56,7 @@ PROGRAM_DIRS = demos redbook samples xde
+ 
+ 
+ # Library/program dependencies
+-GL_LIB_DEPS = -lX11 -lXext -lm -lpthread
++GL_LIB_DEPS = -lX11 -lXext -lm ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ OSMESA_LIB_DEPS = -L$(LIB_DIR) -l$(GL_LIB)
+ GLU_LIB_DEPS = -L$(LIB_DIR) -l$(GL_LIB) -lm
+ GLUT_LIB_DEPS = -L$(LIB_DIR) -l$(GLU_LIB) -l$(GL_LIB) -lX11 -lXmu -lXt -lXi -lm
