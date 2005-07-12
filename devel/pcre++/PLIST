@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/26 22:09:49 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/07/12 19:57:57 kristerw Exp $
 bin/pcre++-config
 include/pcre++.h
 lib/libpcre++.la
@@ -17,7 +17,6 @@ share/doc/libpcre++/classpcrepp_1_1Pcre-members.html
 share/doc/libpcre++/classpcrepp_1_1Pcre.html
 share/doc/libpcre++/classpcrepp_1_1Pcre_1_1exception-members.html
 share/doc/libpcre++/classpcrepp_1_1Pcre_1_1exception.html
-share/doc/libpcre++/config.log
 share/doc/libpcre++/doxygen.css
 share/doc/libpcre++/doxygen.png
 share/doc/libpcre++/files.html
