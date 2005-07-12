@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3701 2005/07/11 14:24:49 minskim Exp $
+$NetBSD: TODO,v 1.3702 2005/07/12 09:58:04 adam Exp $
 
 Suggested new packages
 ======================
@@ -424,7 +424,6 @@ Suggested package updates
 	o dact-0.8.37
 	o dante-1.1.16
 	o darcs-1.0.3
-	o dbench-3.03
 	o dbus-0.31 [0.2x API more common -- new package?]
 	o dc_gui2-0.80
 	o dctc-0.85.9
