@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:44 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/12 18:57:05 recht Exp $
 #
 
 DISTNAME=	ArX-2.2.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://superbeast.ucsd.edu/~landry/ArX/
 
