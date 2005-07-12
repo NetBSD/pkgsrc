@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2005/06/11 11:22:21 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2005/07/12 19:41:43 kristerw Exp $
 
 DISTNAME=		mpich-1.2.6
+PKGREVISION=		1
 CATEGORIES=		parallel
 MASTER_SITES=		ftp://ftp.mcs.anl.gov/pub/mpi/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} mpich-docs.tgz
@@ -35,6 +36,11 @@ CONFIGURE_ARGS+=	--disable-devdebug
 CONFIGURE_ARGS+=	--disable-f90
 CONFIGURE_ARGS+=	--disable-f90modules
 CONFIGURE_ENV+=		sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ENV+=		PERL=${PERL5}
+CONFIGURE_ENV+=		PERLFULLPATH=${PERL5}
+
+# build PATH in the config file is not a problem
+CHECK_WRKREF_SKIP+=	${PREFIX}/share/examples/mpi-ch/perftest/config.system
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-arch=netbsd
