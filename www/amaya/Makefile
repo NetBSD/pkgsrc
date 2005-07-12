@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2005/06/01 18:03:26 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2005/07/12 14:34:22 adam Exp $
 
-DISTNAME=	amaya-fullsrc-9.0
+DISTNAME=	amaya-fullsrc-9.2
 PKGNAME=	${DISTNAME:S/-fullsrc//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
@@ -26,18 +26,9 @@ LIBS+=			-Wl,-R${LOCALBASE}/lib
 post-extract:
 	${MKDIR} ${WRKSRC}
 
-# Install into ${PREFIX}/lib/Amaya instead of ${PREFIX}/Amaya.
-post-patch:
-	cd ${WRKSRC}/..;						\
-	files="amaya/Makefile.in";					\
-	for file in $${files}; do					\
-		${MV} $${file} $${file}.fixme;				\
-		${SED} -e "s|\$$(prefix)/Amaya|\$$(prefix)/lib/Amaya|g" \
-			$${file}.fixme >  $${file};			\
-	done
-
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/Amaya
+post-configure:
+	${CP} ${WRKSRC}/Options.orig ${WRKSRC}/Options
+	${TOUCH} ${WRKSRC}/Makefile
 
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
