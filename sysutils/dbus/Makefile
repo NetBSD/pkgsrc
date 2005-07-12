@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/03/22 10:55:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/12 04:15:50 grant Exp $
 #
 
 .include "Makefile.common"
 
-PKG_USERS=	messagebus:messagebus::System\\ message\\ bus:${VARBASE}/run/dbus:/sbin/nologin
+PKG_USERS=	messagebus:messagebus::System\\ message\\ bus:${VARBASE}/run/dbus:${NOLOGIN}
 PKG_GROUPS=	messagebus
 
 MAKE_DIRS=	${PKG_SYSCONFDIR}/event.d
