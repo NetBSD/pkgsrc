@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10577 2005/07/12 21:17:57 recht Exp $
+$NetBSD: CHANGES,v 1.10578 2005/07/12 21:37:36 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3166,3 +3166,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/ArX2 to 2.2.2nb1 [recht 2005-07-12]
 	Updated net/openafs to 1.3.85 [gendalia 2005-07-12]
 	Updated textproc/libxml2 to 2.6.20 [recht 2005-07-12]
+	Updated parallel/mpi-ch to 1.2.6nb1 [kristerw 2005-07-12]
+	Updated devel/pcre++ to 0.9.5nb1 [kristerw 2005-07-12]
+	Updated editors/nvi to 1.81.5nb3 [kristerw 2005-07-12]
+	Updated editors/nvi-m17n to 1.79.19991117nb3 [kristerw 2005-07-12]
+	Updated lang/mercury to 0.11.0nb3 [kristerw 2005-07-12]
