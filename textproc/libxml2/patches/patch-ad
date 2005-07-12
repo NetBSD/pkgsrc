@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.16 2005/02/12 16:27:47 recht Exp $
+$NetBSD: patch-ad,v 1.17 2005/07/12 21:15:21 recht Exp $
 
---- xmlcatalog.c.orig	Sat Feb 12 16:45:09 2005
-+++ xmlcatalog.c	Sat Feb 12 16:45:18 2005
-@@ -43,7 +43,7 @@
+--- xmlcatalog.c.orig	2005-01-04 15:49:48.000000000 +0100
++++ xmlcatalog.c
+@@ -43,7 +43,7 @@ static char *filename = NULL;
  
  
  #ifndef XML_SGML_DEFAULT_CATALOG
