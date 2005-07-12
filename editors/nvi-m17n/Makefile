@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2005/04/11 21:45:41 tv Exp $
+# $NetBSD: Makefile,v 1.30 2005/07/12 20:27:58 kristerw Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.19991117
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	ftp://sleepy.vwh.net/pub/ \
 		ftp://ftp.foretune.co.jp/pub/tools/nvi-m17n/
@@ -20,6 +20,9 @@ GNU_CONFIGURE=	YES
 PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -E -p1 -f
 CONFIGURE_ENV=	OPTFLAG='-D_PATH_SYSEXRC=\"${PREFIX}/etc/vi.exrc\"'
 CONFIGURE_ARGS+=--enable-multibyte --program-prefix=n
+
+CONFIGURE_ENV+=	vi_cv_path_shell=${TOOLS_SH}
+USE_TOOLS+=	sh
 
 .include "../../mk/bsd.prefs.mk"
 
