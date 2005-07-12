@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:36 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/12 19:57:57 kristerw Exp $
 #
 
 DISTNAME=		pcre++-0.9.5
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.daemon.de/scip/Apps/pcre++/
 
