@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2005/05/22 20:08:10 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/07/12 21:33:17 kristerw Exp $
 
 DISTNAME=		mercury-compiler-0.11.0
 PKGNAME=		mercury-0.11.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/ \
 			${MASTER_SITE_SUNSITE:=devel/lang/mercury/}
@@ -21,6 +21,9 @@ INFO_FILES+=		mercury_user_guide.info
 
 # Some of the scripts test CC and use special settings for gcc.
 CONFIGURE_ENV+=		CC=gcc
+
+CONFIGURE_ENV+=		HOSTNAMECMD=${TOOLS_HOSTNAME_CMD}
+USE_TOOLS+=		hostname
 
 MAKE_ENV+=		READLINE_PREFIX=${BUILDLINK_PREFIX.readline}
 
