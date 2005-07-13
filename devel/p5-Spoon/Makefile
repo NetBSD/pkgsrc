@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/07/13 18:01:28 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/13 18:46:58 jlam Exp $
 
-DISTNAME=      	Spoon-0.21
+DISTNAME=      	Spoon-0.23
 PKGNAME=       	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S/${MODULE_DIR}/${AUTHOR_DIR}/}
 MODULE_DIR=	modules/by-module
