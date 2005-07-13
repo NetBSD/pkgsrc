@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10582 2005/07/13 11:31:05 wiz Exp $
+$NetBSD: CHANGES,v 1.10583 2005/07/13 14:55:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3174,3 +3174,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/mercury to 0.11.0nb3 [kristerw 2005-07-12]
 	Updated devel/cvsps to 2.1 [schmonz 2005-07-13]
 	Updated www/firefox-bin to 1.0.5 [tron 2005-07-13]
+	Added graphics/optipng version 0.4.8 [adam 2005-07-13]
