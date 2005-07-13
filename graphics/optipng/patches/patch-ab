@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/07/13 14:52:39 adam Exp $
+
+--- opng.h.orig	2005-07-13 16:41:40.000000000 +0000
++++ opng.h
+@@ -33,9 +33,6 @@
+ 
+ #include "png.h"
+ 
+-#if !(PNG_LIBPNG_BUILD_TYPE & PNG_LIBPNG_BUILD_PRIVATE)
+-#error This program requires the BUNDLED libpng version 1.0.x-optipng
+-#endif
+ 
+ 
+ #define OPNG_IMAGE_REDUCTIONS_SUPPORTED  /* implemented here */
