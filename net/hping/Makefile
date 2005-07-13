@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:25 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/13 14:18:22 drochner Exp $
 #
 
 DISTNAME=		hping2.0.0-rc2
@@ -19,10 +19,14 @@ NOT_FOR_PLATFORM=	NetBSD-0.* NetBSD-1.[0-4]*
 BINMODE=		4755
 INSTALLATION_DIRS=	man/man8 sbin
 
+CONFIGURE_ENV+=		PCAPINCDIR=${BUILDLINK_PREFIX.libpcap}/include
+CONFIGURE_ENV+=		PCAPLIBDIR=${BUILDLINK_PREFIX.libpcap}/lib
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hping2 ${PREFIX}/sbin
 	${LN} -s ../sbin/hping2 ${PREFIX}/sbin/hping
 	${INSTALL_MAN} ${WRKSRC}/docs/hping2.8 ${PREFIX}/man/man8
 	${LN} -s ../../man/man8/hping2.8 ${PREFIX}/man/man8/hping.8
 
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
