@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2005/06/30 17:24:49 minskim Exp $
+# $NetBSD: Makefile,v 1.96 2005/07/13 15:20:29 jschauma Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -189,8 +189,12 @@ CONFIGURE_ARGS+=	-Dlibswanted="${LIBSWANTED}"
 
 .include "../../mk/compiler.mk"
 
-.if ${OPSYS} == "IRIX" && ${ABI} == "64"
+.if ${OPSYS} == "IRIX"
+.  if ${ABI} == "64"
 CONFIGURE_ARGS+=	-Dcc='${CC} -64' -Duse64bitint
+.  else
+CONFIGURE_ARGS+=	-Dcc='${CC} -n32'
+.  endif
 .endif
 
 PERL5=			${PREFIX}/bin/perl${PERL5_VERS}
