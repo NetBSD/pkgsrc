@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10585 2005/07/13 15:31:25 adam Exp $
+$NetBSD: CHANGES,v 1.10586 2005/07/13 18:48:02 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3177,3 +3177,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Added graphics/optipng version 0.4.8 [adam 2005-07-13]
 	Updated chat/ekg to 1.6nb1 [adam 2005-07-13]
 	Updated devel/distcc to 2.18.3 [adam 2005-07-13]
+	Updated devel/p5-Spiffy to 0.24 [jlam 2005-07-13]
+	Updated devel/p5-Spoon to 0.23 [jlam 2005-07-13]
+	Updated www/p5-Kwiki to 0.38 [jlam 2005-07-13]
+	Updated www/p5-Kwiki-Archive-Rcs to 0.15 [jlam 2005-07-13]
+	Updated www/p5-Kwiki-Revisions to 0.15 [jlam 2005-07-13]
