@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/13 01:30:17 grant Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/13 02:12:59 grant Exp $
 #
 
 DISTNAME=		xen-2.0.6-src
@@ -66,10 +66,14 @@ SUBST_FILES.proc=	python/xen/xend/XendVnet.py
 SUBST_FILES.proc+=	libxc/xc_misc.c
 SUBST_FILES.proc+=	xentrace/xentrace.c
 SUBST_SED.proc=		-e "s|/proc|/kern|g"
+PROCPATH=		/kern
+.else
+PROCPATH=		/proc
 .endif
 
 RCD_SCRIPTS=		xend
 FILES_SUBST+=		RCD_INTERPRETER=${PYTHONBIN}
+FILES_SUBST+=		PROCPATH=${PROCPATH}
 
 INSTALLATION_DIRS=	share/examples/xen
 
