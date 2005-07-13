@@ -1,0 +1,31 @@
+$NetBSD: patch-de,v 1.1 2005/07/13 09:07:10 wiz Exp $
+
+--- interface/low_interface.h.orig	2005-05-31 16:02:53.000000000 +0200
++++ interface/low_interface.h
+@@ -49,7 +49,7 @@
+ #include <linux/cdrom.h>
+ #include <linux/major.h>
+ 
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ 
+ #include <sys/cdio.h>
+ #include <sys/cdrio.h>
+@@ -70,7 +70,7 @@
+ #define MIN_BIG_BUFF_SIZE 4096
+ #ifdef __linux__
+ #define SG_OFF sizeof(struct sg_header)
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ #define SG_OFF (0)
+ #elif defined(__NetBSD__)
+ #define SG_OFF sizeof(scsireq_t)
+@@ -85,7 +85,7 @@
+ #endif
+ 
+ extern int  cooked_init_drive (cdrom_drive *d);
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+ extern unsigned char *scsi_inquiry (cdrom_drive *d);
+ #endif
+ extern int  scsi_init_drive (cdrom_drive *d);

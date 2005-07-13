@@ -1,0 +1,13 @@
+$NetBSD: patch-dh,v 1.1 2005/07/13 09:07:10 wiz Exp $
+
+--- interface/utils.h.orig	2005-05-31 16:00:56.000000000 +0200
++++ interface/utils.h
+@@ -10,7 +10,7 @@
+ #include <machine/bswap.h>
+ #endif
+ #include <err.h>	/* XXX */
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ #include <machine/endian.h>
+ #endif
+ #include <stdio.h>

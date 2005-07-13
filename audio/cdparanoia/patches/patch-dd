@@ -1,0 +1,13 @@
+$NetBSD: patch-dd,v 1.1 2005/07/13 09:07:10 wiz Exp $
+
+--- interface/interface.c.orig	2005-05-31 16:02:55.000000000 +0200
++++ interface/interface.c
+@@ -29,7 +29,7 @@ int cdda_close(cdrom_drive *d){
+       d->enable_cdda(d,0);
+ 
+     _clean_messages(d);
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+     if(d->cdda_device_name)free(d->cdda_device_name);
+     if(d->ioctl_device_name)free(d->ioctl_device_name);
+     if(d->drive_model)free(d->drive_model);
