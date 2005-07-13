@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/24 18:58:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/13 18:01:23 jlam Exp $
 #
 
 DISTNAME=	Config-Tiny-2.02
@@ -12,7 +12,7 @@ COMMENT=	Read/Write .ini style files with as little code as possible
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Config/Tiny/.packlist
+PERL5_PACKLIST=		auto/Config/Tiny/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

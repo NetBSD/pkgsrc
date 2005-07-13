@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:44 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:44 jlam Exp $
 
 DISTNAME=	DateTime-Locale-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Localization data for p5-DateTime
 DEPENDS+=	p5-Params-Validate-[0-9]*:../../devel/p5-Params-Validate
 
 PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DateTime/Locale/.packlist
+PERL5_PACKLIST=		auto/DateTime/Locale/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

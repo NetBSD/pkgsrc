@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:47:38 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/13 18:01:42 jlam Exp $
 #
 
 DISTNAME=	DelimMatch-1.06a
@@ -13,7 +13,7 @@ HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/DelimMatch/
 COMMENT=	Find regexp delimited strings with proper nesting
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/a$//}
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Text/DelimMatch/.packlist
+PERL5_PACKLIST=		auto/Text/DelimMatch/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

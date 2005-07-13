@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:59 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/13 18:01:47 jlam Exp $
 #
 
 DISTNAME=	HTTP-Request-Form-0.7
@@ -16,7 +16,7 @@ DEPENDS+=       p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=       p5-HTML-Tagset-[0-9]*:../../www/p5-HTML-Tagset
 DEPENDS+=       p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTTP/Request/Form/.packlist
+PERL5_PACKLIST=		auto/HTTP/Request/Form/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

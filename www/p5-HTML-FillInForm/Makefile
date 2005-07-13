@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:56 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/13 18:01:46 jlam Exp $
 
 DISTNAME=	HTML-FillInForm-1.04
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-HTML-Parser>=3.26:../../www/p5-HTML-Parser
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTML/FillInForm/.packlist
+PERL5_PACKLIST=		auto/HTML/FillInForm/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

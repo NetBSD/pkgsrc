@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:16 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:39 jlam Exp $
 #
 
 DISTNAME=		GnuPG-Interface-0.34
@@ -14,7 +14,7 @@ COMMENT=		Perl interface to GnuPG
 DEPENDS+=		p5-Class-MakeMethods>=1.010:../../devel/p5-Class-MakeMethods
 DEPENDS+=		gnupg>=1.2.3:../../security/gnupg
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/GnuPG/Interface/.packlist
+PERL5_PACKLIST=		auto/GnuPG/Interface/.packlist
 
 pre-configure:
 	cd ${WRKSRC}/lib/GnuPG && for f in *.pm; do \

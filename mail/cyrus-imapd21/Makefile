@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/07/13 18:01:31 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.1.18
 SVR4_PKGNAME=		cimap
@@ -128,8 +128,8 @@ RCD_SCRIPTS=		cyrus
 FILES_SUBST+=		IMAPDCONF=${PKG_SYSCONFDIR}/imapd.conf
 
 PERL5_PACKLIST= \
-	${PERL5_SITEARCH}/auto/Cyrus/IMAP/.packlist			\
-	${PERL5_SITEARCH}/auto/Cyrus/SIEVE/managesieve/.packlist
+	auto/Cyrus/IMAP/.packlist			\
+	auto/Cyrus/SIEVE/managesieve/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../security/cyrus-sasl2/buildlink3.mk"
