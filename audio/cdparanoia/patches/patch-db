@@ -1,0 +1,22 @@
+$NetBSD: patch-db,v 1.1 2005/07/13 09:07:10 wiz Exp $
+
+--- interface/common_interface.c.orig	2005-05-31 16:03:00.000000000 +0200
++++ interface/common_interface.c
+@@ -23,7 +23,7 @@ int ioctl_ping_cdrom(int fd){
+   struct cdrom_volctrl volctl;
+   if (ioctl(fd, CDROMVOLREAD, &volctl)) 
+     return(1); /* failure */
+-#elif defined(__FreeBSD__) || defined(__NetBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+   struct ioc_vol volctl;
+   if (ioctl(fd, CDIOCGETVOL, &volctl)) 
+     return(1); /* failure */
+@@ -220,7 +220,7 @@ int FixupTOC(cdrom_drive *d,int tracks){
+   /* For a scsi device, the ioctl must go to the specialized SCSI
+      CDROM device, not the generic device. */
+ 
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+   if (d->ioctl_fd != -1) {
+ #ifdef __linux__
+     int result;
