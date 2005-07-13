@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2005/02/23 22:24:32 agc Exp $
+$NetBSD: distinfo,v 1.21 2005/07/13 21:57:01 recht Exp $
 
-SHA1 (roundup-0.8.1.tar.gz) = 18b01cb5de80f3dffefd4c8128bd514251c20e1d
-RMD160 (roundup-0.8.1.tar.gz) = 53a5d8cc0579ebdbda737b0730bf6f6cc878f137
-Size (roundup-0.8.1.tar.gz) = 788337 bytes
+SHA1 (roundup-0.8.3.tar.gz) = 76dd5f38b091018efea2181c2eae24e800138006
+RMD160 (roundup-0.8.3.tar.gz) = 63cde58227cbc155e831f512dec1b635e45ea887
+Size (roundup-0.8.3.tar.gz) = 899369 bytes
