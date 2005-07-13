@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 12:13:49 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/07/13 14:18:22 drochner Exp $
 
 SHA1 (hping2.0.0-rc2.tar.gz) = ee10aa5cce7431ab0887ca0328b0fed86407cd3c
 RMD160 (hping2.0.0-rc2.tar.gz) = e32479f8d1f7408eaeaa9e507c8050618c81825e
 Size (hping2.0.0-rc2.tar.gz) = 100501 bytes
 SHA1 (patch-aa) = f0b60b33df37c5b5f332c4dd5b668c87f2f00780
 SHA1 (patch-ab) = 7862d487c5fa9940a51c82154e5427f426c93270
+SHA1 (patch-ac) = b39369c28ca8932f13d9500509b84e28a1db6058
+SHA1 (patch-ad) = 2bae52bcd2e0faa9aab0475175ab43a9a8a37158
