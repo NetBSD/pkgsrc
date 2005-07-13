@@ -1,0 +1,31 @@
+$NetBSD: patch-da,v 1.1 2005/07/13 09:07:10 wiz Exp $
+
+--- interface/cdda_interface.h.orig	2005-05-31 16:03:04.000000000 +0200
++++ interface/cdda_interface.h
+@@ -21,7 +21,7 @@
+ #include <sys/types.h>
+ #include <signal.h>
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #include <stdio.h>
+ #include <camlib.h>
+ #endif
+@@ -51,7 +51,7 @@ typedef struct cdrom_drive{
+ 
+   int opened; /* This struct may just represent a candidate for opening */
+ 
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+   char *cdda_device_name;
+   char *ioctl_device_name;
+ 
+@@ -94,7 +94,7 @@ typedef struct cdrom_drive{
+   int is_mmc;
+ 
+   /* SCSI command buffer and offset pointers */
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+   unsigned char *sg;
+   unsigned char *sg_buffer;
+   unsigned char inqbytes[4];
