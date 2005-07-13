@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/13 14:52:39 adam Exp $
+
+--- /dev/null	2005-07-13 16:20:21.000000000 +0000
++++ Makefile
+@@ -0,0 +1,16 @@
++OBJS = optipng.o opngio.o opngreduc.o cbitset.o osys.o
++
++all: $(OBJS)
++	$(CC) -o optipng $(LDFLAGS) $(OBJS) -lz -lpng
++
++.c.o:
++	$(CC) -c $(CFLAGS) -I${PREFIX}/include $*.c
++
++optipng.o  : optipng.c   opng.h osys.h cbitset.h cexcept.h
++opngio.o   : opngio.c    opng.h
++opngreduc.o: opngreduc.c opng.h
++cbitset.o  : cbitset.c   cbitset.h
++osys.o     : osys.c      osys.h
++
++install:
++	${BSD_INSTALL_PROGRAM} optipng ${PREFIX}/bin
