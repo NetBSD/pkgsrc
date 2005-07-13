@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/07/13 15:34:01 jschauma Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -46,6 +46,7 @@ PKG_SYSCONFSUBDIR=	postgresql
 .include "../../mk/bsd.prefs.mk"
 
 PGSQL_TEMPLATE.SunOS=		solaris
+PGSQL_TEMPLATE.IRIX=		irix5
 .if !defined(PGSQL_TEMPLATE.${OPSYS})
 PGSQL_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 .endif
