@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10583 2005/07/13 14:55:52 adam Exp $
+$NetBSD: CHANGES,v 1.10584 2005/07/13 15:07:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3175,3 +3175,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/cvsps to 2.1 [schmonz 2005-07-13]
 	Updated www/firefox-bin to 1.0.5 [tron 2005-07-13]
 	Added graphics/optipng version 0.4.8 [adam 2005-07-13]
+	Updated chat/ekg to 1.6nb1 [adam 2005-07-13]
