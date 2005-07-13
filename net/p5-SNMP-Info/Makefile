@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/08 16:17:46 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/13 18:01:37 jlam Exp $
 #
 
 DISTNAME=	SNMP-Info-0.9.0
@@ -15,7 +15,7 @@ COMMENT=	Perl5 object oriented interface to SNMP informations
 DEPENDS+=	net-snmp>=5.1.2:../../net/net-snmp
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/.0//}
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SNMP/Info/.packlist
+PERL5_PACKLIST=		auto/SNMP/Info/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

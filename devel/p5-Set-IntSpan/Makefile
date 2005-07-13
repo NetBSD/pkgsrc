@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:34 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/13 18:01:28 jlam Exp $
 #
 
 DISTNAME=	Set-IntSpan-1.08
@@ -14,7 +14,7 @@ COMMENT=	Perl5 module for managing sets of integers
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Set/IntSpan/.packlist
+PERL5_PACKLIST=		auto/Set/IntSpan/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/06/24 05:56:26 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/07/13 18:01:40 jlam Exp $
 
 DISTNAME=	eperl-2.2.14
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.engelschall.com/sw/eperl/
 COMMENT=	Interpreter/preprocessor for Perl embedded in text documents
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Parse/ePerl/.packlist
+PERL5_PACKLIST=	auto/Parse/ePerl/.packlist
 
 GNU_CONFIGURE=		YES
 PERL5_REQD+=		5.8.0

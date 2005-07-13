@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/15 22:02:27 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/13 18:01:32 jlam Exp $
 
 DISTNAME=	Mail-Mbox-MessageParser-1.20
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	Perl5 module for parsing mail messages
 DEPENDS+=	p5-FileHandle-Unget-[0-9]*:../../devel/p5-FileHandle-Unget
 DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/Mbox/MessageParser/.packlist
+PERL5_PACKLIST=		auto/Mail/Mbox/MessageParser/.packlist
 
 USE_TOOLS+=	grep gzip
 

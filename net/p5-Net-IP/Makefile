@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/09 16:12:33 adrianp Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/13 18:01:36 jlam Exp $
 #
 
 DISTNAME=	Net-IP-1.23
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Math-BigInteger-[0-9]*:../../math/p5-Math-BigInteger
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_REQD+=		5.8.0
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/IP/.packlist
+PERL5_PACKLIST=		auto/Net/IP/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

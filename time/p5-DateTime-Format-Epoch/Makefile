@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/25 17:08:33 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/13 18:01:44 jlam Exp $
 
 DISTNAME=	DateTime-Format-Epoch-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Convert DateTimes to/from epoch seconds
 
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DateTime/Format/Epoch/.packlist
+PERL5_PACKLIST=		auto/DateTime/Format/Epoch/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

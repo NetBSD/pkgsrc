@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/24 20:31:04 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/07/13 18:01:29 jlam Exp $
 
 DISTNAME=		Test-Inline-2.002
 PKGNAME=		p5-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=		p5-File-Flat>=0.95:../../devel/p5-File-Flat
 DEPENDS+=		p5-File-Slurp>=9999.04:../../devel/p5-File-Slurp
 DEPENDS+=		p5-Test-Simple>=0.33:../../devel/p5-Test-Simple
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Test/Inline/.packlist
+PERL5_PACKLIST=		auto/Test/Inline/.packlist
 
 .include "../../devel/p5-Test-Harness/depends.mk"
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:28 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/13 18:01:40 jlam Exp $
 #
 
 DISTNAME=		Sys-Hostname-Long-1.0
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Sys/Hostname/Long/.packlist
+PERL5_PACKLIST=		auto/Sys/Hostname/Long/.packlist
 
 pre-configure:
 	@ ${TEST} -r ${WRKSRC}/lib/Sys/Hostname/Long.pm.orig && \

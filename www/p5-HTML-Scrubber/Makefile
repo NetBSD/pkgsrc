@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/16 03:04:45 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:47 jlam Exp $
 #
 
 DISTNAME=	HTML-Scrubber-0.08
@@ -13,7 +13,7 @@ COMMENT=	Extension for scrubbing/sanitizing html
 DEPENDS+=	p5-HTML-Parser>=3:../../www/p5-HTML-Parser
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTML/Scrubber/.packlist
+PERL5_PACKLIST=		auto/HTML/Scrubber/.packlist
 EXTRACT_USING=		pax
 
 .include "../../lang/perl5/module.mk"

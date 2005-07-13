@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:40 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:43 jlam Exp $
 
 DISTNAME=	XML-Sablotron-0.98
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ EXPATINCPATH=	${BUILDLINK_PREFIX.expat}/include
 SABLOTLIBPATH=	${BUILDLINK_PREFIX.sablotron}/lib
 SABLOTINCPATH=	${BUILDLINK_PREFIX.sablotron}/include
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/Sablotron/.packlist
+PERL5_PACKLIST=		auto/XML/Sablotron/.packlist
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/sablotron/buildlink3.mk"

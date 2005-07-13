@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:48:01 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/13 18:01:48 jlam Exp $
 #
 
 DISTNAME=	VRML-1.04
@@ -14,7 +14,7 @@ COMMENT=	Set of VRML classes for Perl
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/VRML/.packlist
+PERL5_PACKLIST=		auto/VRML/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

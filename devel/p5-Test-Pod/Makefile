@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:35 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/13 18:01:29 jlam Exp $
 
 DISTNAME=		Test-Pod-1.20
 PKGNAME=		p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=		p5-Pod-Simple>=3.02nb1:../../textproc/p5-Pod-Simple
 BUILD_DEPENDS+=		p5-Test-Builder-Tester-[0-9]*:../../devel/p5-Test-Builder-Tester
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Test/Pod/.packlist
+PERL5_PACKLIST=		auto/Test/Pod/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

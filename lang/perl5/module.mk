@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.46 2005/05/20 03:00:16 jlam Exp $
+# $NetBSD: module.mk,v 1.47 2005/07/13 18:01:31 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -147,15 +147,17 @@ PERL5_MAKE_FLAGS+=	OTHERLDFLAGS="${LDFLAGS}"
 
 # Generate the PLIST from the files listed in PERL5_PACKLIST.
 .if defined(PERL5_PACKLIST)
+PERL5_PACKLIST_DIR?=	${PERL5_SITEARCH}
+_PERL5_PACKLIST=	${PERL5_PACKLIST:S/^/${PERL5_PACKLIST_DIR}\//}
 PERL5_PLIST_COMMENT= \
 	( ${ECHO} "@comment The following lines are automatically generated"; \
 	  ${ECHO} "@comment from the installed .packlist files." )
 PERL5_PLIST_FILES= \
-	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
+	( ${CAT} ${_PERL5_PACKLIST}; for f in ${_PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
 	| ${SORT} -u
 PERL5_PLIST_DIRS= \
-	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
+	( ${CAT} ${_PERL5_PACKLIST}; for f in ${_PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
 		-e "s,^,@unexec \${RMDIR} -p %D/," \
 		-e "s,/[^/]*$$, 2>/dev/null || ${TRUE}," \

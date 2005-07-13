@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/11 21:47:51 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/13 18:01:45 jlam Exp $
 #
 # NOTE: This package is *BETA*.  If it doesn't work, then check the
 #	modperl-2.0 mailing lists for help.
@@ -16,7 +16,7 @@ CONFLICTS=	ap-perl-[0-9]*
 
 APACHE_MODULE=		# defined
 PERL5_REQD+=		5.6.0
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/mod_perl/.packlist
+PERL5_PACKLIST=		auto/mod_perl/.packlist
 
 MAKE_PARAMS+=		MP_APXS=${APXS}
 

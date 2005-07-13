@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:56 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:46 jlam Exp $
 #
 
 DISTNAME=       	CGI-Kwiki-0.18
@@ -15,7 +15,7 @@ COMMENT=		A Quickie Wiki that's not too Tricky
 DEPENDS+=		p5-Test-Simple>=0.47:../../devel/p5-Test-Simple
 DEPENDS+=		p5-Locale-Maketext>=1.08:../../misc/p5-Locale-Maketext
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/CGI-Kwiki/.packlist
+PERL5_PACKLIST=		auto/CGI-Kwiki/.packlist
 
 .include "../../mk/bsd.prefs.mk"
 

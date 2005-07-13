@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/04/11 21:45:31 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/07/13 18:01:24 jlam Exp $
 
 DISTNAME=	Expect-1.15
 PKGNAME=	p5-Expect-1.15
@@ -17,7 +17,7 @@ CONFLICTS+=	p5-expect-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Expect/.packlist
+PERL5_PACKLIST=		auto/Expect/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:17 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:40 jlam Exp $
 #
 
 DISTNAME=		pgpenvelope-2.10.2
@@ -17,7 +17,7 @@ DEPENDS+=		p5-String-Approx>=3.13:../../textproc/p5-String-Approx
 DEPENDS+=		p5-Term-ReadKey>=2.14:../../devel/p5-Term-ReadKey
 DEPENDS+=		p5-Term-ReadLine>=1.01:../../devel/p5-Term-ReadLine
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/pgpenvelope/.packlist
+PERL5_PACKLIST=		auto/pgpenvelope/.packlist
 
 pre-configure:
 	cd ${WRKSRC}/lib/PGPEnvelope && for f in *.pm; do \

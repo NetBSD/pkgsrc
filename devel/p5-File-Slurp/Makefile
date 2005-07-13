@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/24 17:20:53 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/13 18:01:25 jlam Exp $
 
 DISTNAME=		File-Slurp-9999.09
 PKGNAME=		p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=		Read/write/append files quickly
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/File/Slurp/.packlist
+PERL5_PACKLIST=		auto/File/Slurp/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

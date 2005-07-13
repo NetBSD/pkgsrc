@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/07/04 22:53:39 wulf Exp $
+# $NetBSD: Makefile,v 1.33 2005/07/13 18:01:22 jlam Exp $
 #
 
 DISTNAME=	rrdtool-1.2.10
@@ -20,8 +20,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS= --enable-shared
 
 PERL5_CONFIGURE=	NO
-PERL5_PACKLIST+= 	${PERL5_SITEARCH}/auto/RRDp/.packlist
-PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/RRDs/.packlist
+PERL5_PACKLIST+= 	auto/RRDp/.packlist
+PERL5_PACKLIST+=	auto/RRDs/.packlist
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

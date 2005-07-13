@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:16 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/13 18:01:39 jlam Exp $
 #
 
 DISTNAME=	Digest-CRC-0.09
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Digest>=1.00:../p5-Digest
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Digest/CRC/.packlist
+PERL5_PACKLIST=		auto/Digest/CRC/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

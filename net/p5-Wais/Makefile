@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:46:57 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/13 18:01:37 jlam Exp $
 #
 
 DISTNAME=	Wais-2.311
@@ -13,7 +13,7 @@ COMMENT=	Perl5 module for accessing WAIS servers
 
 DEPENDS+=	p5-Curses>=1.02:../../devel/p5-Curses
 
-PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Wais/.packlist
+PERL5_PACKLIST= auto/Wais/.packlist
 
 post-patch:
 	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} -f {} \;

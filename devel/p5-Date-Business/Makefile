@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:31 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:24 jlam Exp $
 #
 
 DISTNAME=     	Date-Business-1.2
@@ -14,7 +14,7 @@ COMMENT=	Perl5 module for fast calendar and business date calculations
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Date/Business/.packlist
+PERL5_PACKLIST=		auto/Date/Business/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

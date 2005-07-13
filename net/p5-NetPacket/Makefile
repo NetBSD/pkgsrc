@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/02 23:02:06 reed Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:37 jlam Exp $
 
 DISTNAME=	NetPacket-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Modules to assemble/disassemble network packets
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/NetPacket/.packlist
+PERL5_PACKLIST=		auto/NetPacket/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

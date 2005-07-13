@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/06/22 20:39:25 reed Exp $
+# $NetBSD: Makefile,v 1.33 2005/07/13 18:01:46 jlam Exp $
 #
 
 VERS=			3.10
@@ -19,7 +19,7 @@ BUILDLINK_DEPENDS.perl=	{perl-5.0*,perl-5.6.0nb2,perl-base>=5.6.0,perl{,-thread}
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/CGI/.packlist
+PERL5_PACKLIST=		auto/CGI/.packlist
 HTMLDIR=		${PREFIX}/share/doc/html/p5-CGI
 
 post-build:

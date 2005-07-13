@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:21 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:32 jlam Exp $
 
 DISTNAME=	Mail-SRS-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-MLDBM>=2.01:../../databases/p5-MLDBM
 DEPENDS+=	p5-Storable>=2.04:../../devel/p5-Storable
 BUILD_DEPENDS+=	p5-Test-Simple>=0.40:../../devel/p5-Test-Simple
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Mail/SRS/.packlist
+PERL5_PACKLIST=	auto/Mail/SRS/.packlist
 PERL5_REQD=	5.6.0
 
 .include "../../lang/perl5/module.mk"

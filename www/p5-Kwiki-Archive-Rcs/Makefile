@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:59 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/13 18:01:47 jlam Exp $
 
 DISTNAME=      	Kwiki-Archive-Rcs-0.14
 PKGNAME=       	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Kwiki page archive using RCS
 
 DEPENDS+=	p5-Kwiki>=0.37nb1:../../www/p5-Kwiki
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Kwiki/Archive/Rcs/.packlist
+PERL5_PACKLIST=		auto/Kwiki/Archive/Rcs/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

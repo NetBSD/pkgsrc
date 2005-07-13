@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:32 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/13 18:01:25 jlam Exp $
 #
 
 DISTNAME=	FileKGlob
@@ -14,7 +14,7 @@ COMMENT=	Expand a Unix file glob into a list of matching file names
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/File
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/File/KGlob/.packlist
+PERL5_PACKLIST=		auto/File/KGlob/.packlist
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 

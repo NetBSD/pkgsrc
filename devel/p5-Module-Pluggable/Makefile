@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/18 16:36:15 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/13 18:01:27 jlam Exp $
 #
 
 DISTNAME=	Module-Pluggable-2.8
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Module-Pluggable/
 COMMENT=	Perl 5 module for automatically adding the ability to have plugins to modules
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Module/Pluggable/.packlist
+PERL5_PACKLIST=	auto/Module/Pluggable/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

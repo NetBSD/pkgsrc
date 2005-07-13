@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/24 06:03:11 grant Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/13 18:01:32 jlam Exp $
 
 DISTNAME=	Mail-ClamAV-0.17
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ DEPENDS+=	p5-Inline>=0.40:../../devel/p5-Inline
 # this version needs clamav>=0.80
 BUILDLINK_DEPENDS.clamav+=	clamav>=0.80
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/ClamAV/.packlist
+PERL5_PACKLIST=		auto/Mail/ClamAV/.packlist
 PTHREAD_OPTS+=		require
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clamav

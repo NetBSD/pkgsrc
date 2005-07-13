@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:56 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:37 jlam Exp $
 
 DISTNAME=	Net-XWhois-0.90
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-XWhois/
 COMMENT=	Perl5 module for Whois Client Interface
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/XWhois/.packlist
+PERL5_PACKLIST=		auto/Net/XWhois/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

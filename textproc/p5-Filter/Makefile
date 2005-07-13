@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:37 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/13 18:01:40 jlam Exp $
 
 DISTNAME=	Filter-1.30
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Filter/}
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Perl5 classes representing a number of source filters
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Filter/.packlist
+PERL5_PACKLIST=		auto/Filter/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

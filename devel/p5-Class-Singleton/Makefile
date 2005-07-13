@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:30 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/13 18:01:23 jlam Exp $
 
 DISTNAME=	Class-Singleton-1.03
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-Singleton/
 COMMENT=	Perl module to implement Singleton classes
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Class/Singleton/.packlist
+PERL5_PACKLIST=	auto/Class/Singleton/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

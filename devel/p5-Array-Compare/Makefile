@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:29 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:22 jlam Exp $
 #
 
 DISTNAME=		Array-Compare-1.11
@@ -14,7 +14,7 @@ COMMENT=		Perl extension for comparing arrays
 
 USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Array/Compare/.packlist
+PERL5_PACKLIST=		auto/Array/Compare/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

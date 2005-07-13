@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:32 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/13 18:01:26 jlam Exp $
 #
 
 DISTNAME=		IO-Null-0.02
@@ -13,7 +13,7 @@ COMMENT=		Perl module for null filehandles
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/IO/Null/.packlist
+PERL5_PACKLIST=		auto/IO/Null/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

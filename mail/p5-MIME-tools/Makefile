@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/04/18 16:55:02 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2005/07/13 18:01:32 jlam Exp $
 #
 
 DISTNAME=       MIME-tools-5.417
@@ -18,7 +18,7 @@ DEPENDS+=	p5-MailTools-[0-9]*:../../mail/p5-MailTools
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/MIME-tools/.packlist
+PERL5_PACKLIST=		auto/MIME-tools/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

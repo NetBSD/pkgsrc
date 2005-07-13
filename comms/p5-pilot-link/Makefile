@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/01 18:02:41 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/07/13 18:01:19 jlam Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -14,7 +14,7 @@ USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 PERL5_CONFIGURE=	NO
-PERL5_PACKLIST=         ${PERL5_SITEARCH}/auto/PDA/Pilot/.packlist
+PERL5_PACKLIST=         auto/PDA/Pilot/.packlist
 
 INSTALL_DIRS=		${WRKSRC}/bindings
 BUILD_DIRS+=		${WRKSRC}/src

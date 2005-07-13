@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:46:57 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/07/13 18:01:37 jlam Exp $
 #
 
 DISTNAME=		Socket6-0.17
@@ -14,7 +14,7 @@ COMMENT=		Perl5 module to support getaddrinfo() and getnameinfo()
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Socket6/.packlist
+PERL5_PACKLIST=		auto/Socket6/.packlist
 
 # supports IPv6 (actually, af independent)
 BUILD_DEFS+=		USE_INET6

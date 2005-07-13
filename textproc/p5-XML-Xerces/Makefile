@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/22 20:08:35 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/13 18:01:44 jlam Exp $
 #
 
 DISTNAME=	XML-Xerces-2.3.0-4
@@ -17,7 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	gmake
 PERL5_REQD+=	5.6.0
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/Xerces/.packlist
+PERL5_PACKLIST=	auto/XML/Xerces/.packlist
 
 MAKE_ENV+=	XERCESCROOT="${BUILDLINK_PREFIX.xerces-c}" LANG=""
 

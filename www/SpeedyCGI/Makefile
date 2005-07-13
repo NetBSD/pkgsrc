@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:49 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/13 18:01:45 jlam Exp $
 
 DISTNAME=	CGI-SpeedyCGI-2.22
 PKGNAME=	SpeedyCGI-2.22
@@ -11,7 +11,7 @@ COMMENT=	Speed up perl scripts by running them persistently
 
 USE_PERL5=	YES
 
-PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/CGI/SpeedyCGI/.packlist
+PERL5_PACKLIST= auto/CGI/SpeedyCGI/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

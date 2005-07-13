@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/24 20:11:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/13 18:01:40 jlam Exp $
 
 DISTNAME=	File-NCopy-0.34
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Copy files and directories
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/File/NCopy/.packlist
+PERL5_PACKLIST=	auto/File/NCopy/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

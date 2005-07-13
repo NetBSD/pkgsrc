@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:04 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/13 18:01:37 jlam Exp $
 #
 
 DISTNAME=	Parallel-Pvm-1.3.0
@@ -16,7 +16,7 @@ COMMENT=	Perl module for PVM (Parallel Virtual Machine)
 PVM_ROOT?=		${LOCALBASE}/pvm3
 CONFIGURE_ENV+=		PVM_ROOT=${PVM_ROOT} PVM_ARCH=${PVM_ARCH}
 MAKE_ENV+=		PVM_ROOT=${PVM_ROOT} PVM_ARCH=${PVM_ARCH}
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Parallel/Pvm/.packlist
+PERL5_PACKLIST=		auto/Parallel/Pvm/.packlist
 MESSAGE_SUBST+=		PVM_ROOT=${PVM_ROOT}
 EXAMPLES_DIR=		${PREFIX}/share/examples/p5-Parallel-Pvm
 

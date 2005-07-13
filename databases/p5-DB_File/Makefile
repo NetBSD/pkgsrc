@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:45:13 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/13 18:01:21 jlam Exp $
 
 DISTNAME=	DB_File-1.806
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DB_File/}
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Perl5 module to use Berkeley DB version 1 API
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/DB_File/.packlist
+PERL5_PACKLIST=	auto/DB_File/.packlist
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bdb.buildlink3.mk"

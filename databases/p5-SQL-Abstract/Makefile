@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:13 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/13 18:01:21 jlam Exp $
 #
 
 DISTNAME=	SQL-Abstract-1.17
@@ -11,7 +11,7 @@ MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/SQL-Abstract/
 COMMENT=	Generate SQL from Perl data structures
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SQL/Abstract/.packlist
+PERL5_PACKLIST=		auto/SQL/Abstract/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

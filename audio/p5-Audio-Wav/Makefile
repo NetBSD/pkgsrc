@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:44:55 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/13 18:01:18 jlam Exp $
 #
 
 DISTNAME=	Audio-Wav-0.02
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Audio-Wav/
 COMMENT=	Perl modules for reading & writing Microsoft WAV files
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Audio/Wav/.packlist
+PERL5_PACKLIST=		auto/Audio/Wav/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

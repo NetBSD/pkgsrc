@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/23 17:38:57 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/13 18:01:32 jlam Exp $
 
 DISTNAME=	Mail-Box-2.060
 PKGNAME=	p5-${DISTNAME}
@@ -27,7 +27,7 @@ PERL5_REQD?=	5.8.0
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Mail/Box/.packlist
+PERL5_PACKLIST=	auto/Mail/Box/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:22 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/13 18:01:32 jlam Exp $
 #
 
 DISTNAME=	Sendmail-PMilter-0.95
@@ -16,7 +16,7 @@ CONFLICTS+=	p5-Sendmail-Milter-[0-9]*
 
 MAKE_ENV+=	PERL_MM_USE_DEFAULT=1
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Sendmail/PMilter/.packlist
+PERL5_PACKLIST=	auto/Sendmail/PMilter/.packlist
 PERL5_REQD+=	5.6.0
 
 .include "../../lang/perl5/module.mk"

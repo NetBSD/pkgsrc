@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/24 18:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/13 18:01:25 jlam Exp $
 
 DISTNAME=	File-Find-Rule-0.28
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Text-Glob>=0.06:../../textproc/p5-Text-Glob
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/File/Find/Rule/.packlist
+PERL5_PACKLIST=		auto/File/Find/Rule/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

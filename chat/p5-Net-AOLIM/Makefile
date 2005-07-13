@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:05 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/13 18:01:19 jlam Exp $
 #
 
 DISTNAME=	Net-AOLIM-1.4
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.phonon.net/pub/Net-AOLIM/
 COMMENT=	Perl5 module for connecting to AOL IM (TOC protocol)
 
 WRKSRC=		${WRKDIR}/Net-AOLIM
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/AOLIM/.packlist
+PERL5_PACKLIST=	auto/Net/AOLIM/.packlist
 
 pre-configure:
 	${MV} ${WRKSRC}/example.pl ${WRKSRC}/AOLIM-example.pl; \

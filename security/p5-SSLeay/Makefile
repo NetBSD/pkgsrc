@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:47:17 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/13 18:01:39 jlam Exp $
 #
 
 DISTNAME=	Crypt-SSLeay-0.51
@@ -13,7 +13,7 @@ COMMENT=	Crypt::SSLeay - OpenSSL glue that provides LWP https support
 
 DEPENDS+=	p5-libwww>=5.48:../../www/p5-libwww
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/SSLeay/.packlist
+PERL5_PACKLIST=		auto/Crypt/SSLeay/.packlist
 
 SUBST_CLASSES+=		openssl
 SUBST_STAGE.openssl=	pre-configure

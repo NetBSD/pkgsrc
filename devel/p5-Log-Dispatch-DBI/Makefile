@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:33 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:26 jlam Exp $
 
 DISTNAME=	Log-Dispatch-DBI-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	p5-Log-Dispatch-[0-9]*:../../devel/p5-Log-Dispatch
 
 USE_LANGUAGES=	# empty
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Log/Dispatch/DBI/.packlist
+PERL5_PACKLIST=	auto/Log/Dispatch/DBI/.packlist
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/20 11:31:04 grant Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/13 18:01:31 jlam Exp $
 #
 
 .include "../../x11/p5-gtk/Makefile.common"
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Perl5 Gtk::Gdk::Pixbuf
 
 MAKE_PARAMS=	INSTALLMAN3DIR=${PREFIX}/man/man3
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Gtk/Gdk/Pixbuf/.packlist
+PERL5_PACKLIST=	auto/Gtk/Gdk/Pixbuf/.packlist
 
 SUBPACKAGE=	GdkPixbuf
 

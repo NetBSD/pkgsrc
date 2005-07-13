@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/24 19:08:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/13 18:01:29 jlam Exp $
 
 DISTNAME=		Test-ClassAPI-1.02
 PKGNAME=		p5-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=		p5-Config-Tiny>=2.0:../../devel/p5-Config-Tiny
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Test/ClassAPI/.packlist
+PERL5_PACKLIST=		auto/Test/ClassAPI/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

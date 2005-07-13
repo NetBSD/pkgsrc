@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:35 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/13 18:01:29 jlam Exp $
 #
 
 DISTNAME=		Sub-Uplevel-0.09
@@ -13,7 +13,7 @@ COMMENT=		Apparently run a function in a higher stack frame
 #DEPENDS+=		p5-Devel-Cycle-[0-9]*:../../devel/p5-Devel-Cycle
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Sub/Uplevel/.packlist
+PERL5_PACKLIST=		auto/Sub/Uplevel/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

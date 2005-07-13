@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:46:54 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/13 18:01:36 jlam Exp $
 
 DISTNAME=		Net-IRC-0.75
 PKGNAME=		p5-${DISTNAME}
@@ -11,7 +11,7 @@ MAINTAINER=		damon@brodiefamily.org
 HOMEPAGE=		http://theoryx5.uwinnipeg.ca/CPAN/data/Net-IRC/
 COMMENT=		Perl Internet Relay Chat (IRC) module
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/IRC/.packlist
+PERL5_PACKLIST=		auto/Net/IRC/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

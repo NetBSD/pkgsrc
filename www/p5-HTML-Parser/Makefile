@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/04/11 21:47:56 tv Exp $
+# $NetBSD: Makefile,v 1.31 2005/07/13 18:01:46 jlam Exp $
 #
 
 DISTNAME=		HTML-Parser-3.45
@@ -15,7 +15,7 @@ DEPENDS+=		p5-HTML-Tagset>=3.0:../../www/p5-HTML-Tagset
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTML/Parser/.packlist
+PERL5_PACKLIST=		auto/HTML/Parser/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

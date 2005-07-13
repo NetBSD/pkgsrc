@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/12/20 11:31:14 grant Exp $
+# $NetBSD: Makefile,v 1.30 2005/07/13 18:01:49 jlam Exp $
 #
 
 .include "Makefile.common"
@@ -12,7 +12,7 @@ COMMENT=		Perl bindings for GTK+
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/Gtk
 MAKE_PARAMS=		INSTALLMAN3DIR=${PREFIX}/man/man3
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Gtk/.packlist
+PERL5_PACKLIST=		auto/Gtk/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../x11/gtk/buildlink3.mk"
