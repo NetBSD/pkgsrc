@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/05/31 10:01:37 dillo Exp $
+# $NetBSD: Makefile,v 1.30 2005/07/13 15:21:57 jschauma Exp $
 #
 
 DISTNAME=	gawk-3.1.4
@@ -23,6 +23,8 @@ TEST_TARGET=		check
 INFO_FILES=	gawk.info gawkinet.info
 
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+
+LDFLAGS.IRIX+=		-lgen
 
 .include "../../mk/bsd.prefs.mk"
 
