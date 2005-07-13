@@ -1,0 +1,58 @@
+$NetBSD: patch-df,v 1.1 2005/07/13 09:07:10 wiz Exp $
+
+--- interface/scan_devices.c.orig	2005-05-31 16:02:48.000000000 +0200
++++ interface/scan_devices.c
+@@ -51,7 +51,7 @@ static char *cdrom_devices[]={
+   "/dev/cm206cd",
+   "/dev/gscd",
+   "/dev/optcd",NULL};
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ static char *cdrom_devices[] = {
+ 	"/dev/cd?c",
+ 	"/dev/acd?c",
+@@ -62,7 +62,7 @@ static char *cdrom_devices[] = {
+ /* Functions here look for a cdrom drive; full init of a drive type
+    happens in interface.c */
+ 
+-#if defined(__linux__) || defined(__FreeBSD__)
++#if defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ cdrom_drive *cdda_find_a_cdrom(int messagedest,char **messages){
+   /* Brute force... */
+   
+@@ -142,7 +142,7 @@ cdrom_drive *cdda_identify(const char *d
+ #if defined(__linux__) || defined(__NetBSD__)
+   d=cdda_identify_cooked(device,messagedest,messages);
+   if(!d)d=cdda_identify_scsi(device,NULL,messagedest,messages);
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+   d = cdda_identify_scsi(device, NULL, messagedest, messages);
+   if (d == NULL)
+ 	d = cdda_identify_cooked(device, messagedest, messages);
+@@ -305,7 +305,7 @@ cdrom_drive *cdda_identify_cooked(const 
+ #elif defined(__NetBSD__)
+   /* no kernel support for CD-DA */
+   return NULL;
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ 	cdrom_drive *d;
+ 	struct stat st;
+ 
+@@ -354,7 +354,7 @@ cdda_identify_cooked_fail:
+ #endif
+ }
+ 
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+ struct  sg_id {
+   long    l1; /* target | lun << 8 | channel << 16 | low_ino << 24 */
+   long    l2; /* Unique id */
+@@ -778,7 +778,7 @@ cdda_identify_scsi_fail:
+   if(g_fd!=-1)close(g_fd);
+   return(NULL);
+ }
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ cdrom_drive *cdda_identify_scsi(const char *device,
+     const char *dummy,
+     int messagedest,
