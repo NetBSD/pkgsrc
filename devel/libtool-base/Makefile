@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2005/07/03 19:01:51 tv Exp $
+# $NetBSD: Makefile,v 1.70 2005/07/13 15:28:49 jschauma Exp $
 
 ###########################################################################
 ###########################################################################
@@ -54,7 +54,9 @@ CONFIGURE_ARGS+=	--disable-libtool-lock
 CONFIGURE_ARGS+=	--disable-shared
 BUILD_SHLIBTOOL=	NO
 .  endif
-
+.elif ${OPSYS} == "IRIX"
+# configure bails out in subdir after re-parsing the cache
+CONFIGURE_ARGS+=	--cache-file=/dev/null
 .endif
 
 CONFIGURE_ARGS+=	--disable-ltdl-install
