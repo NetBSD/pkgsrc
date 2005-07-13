@@ -1,0 +1,103 @@
+$NetBSD: patch-dg,v 1.1 2005/07/13 09:07:10 wiz Exp $
+
+--- interface/scsi_interface.c.orig	2005-05-31 16:02:45.000000000 +0200
++++ interface/scsi_interface.c
+@@ -23,7 +23,7 @@ static void tweak_SG_buffer(cdrom_drive 
+   int table,reserved;
+   char buffer[256];
+ 
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+ #ifdef __linux__
+   /* maximum transfer size? */
+   if(ioctl(d->cdda_fd,SG_GET_RESERVED_SIZE,&reserved)){
+@@ -66,7 +66,7 @@ static void tweak_SG_buffer(cdrom_drive 
+     cdmessage(d,"\tCouldn't disable command queue!  Continuing anyway...\n");
+   }
+ #endif
+-#else /* FreeBSD */
++#else /* FreeBSD || DragonFly */
+   d->nsectors = 26;		/* FreeBSD only supports 64K I/O transfer size */
+   d->bigbuff = d->nsectors * CD_FRAMESIZE_RAW;
+   
+@@ -104,7 +104,7 @@ static void reset_scsi(cdrom_drive *d){
+   d->enable_cdda(d,1);
+ }
+ 
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ static void reset_scsi(cdrom_drive *d) {
+ 	d->enable_cdda(d,0);
+ 
+@@ -161,7 +161,7 @@ static void clear_garbage(cdrom_drive *d
+ #endif
+ 
+ /* process a complete scsi command. */
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+ static int handle_scsi_cmd(cdrom_drive *d,
+ 			   unsigned int cmd_len, 
+ 			   unsigned int in_size, 
+@@ -400,7 +400,7 @@ static int handle_scsi_cmd(cdrom_drive *
+   return(0);
+ }
+ 
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ static int handle_scsi_cmd(cdrom_drive *d,
+ 			   unsigned int cmd_len, 
+ 			   unsigned int out_size, 
+@@ -1060,7 +1060,7 @@ static long scsi_read_map (cdrom_drive *
+ 		(int)(sg_hd->sense_buffer[2]&0xf),
+ 		(int)(sg_hd->sense_buffer[12]),
+ 		(int)(sg_hd->sense_buffer[13]));
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ 		d->ccb->csio.sense_data.flags & SSD_KEY,
+ 		d->ccb->csio.sense_data.add_sense_code,
+ 		d->ccb->csio.sense_data.add_sense_code_qual);
+@@ -1078,7 +1078,7 @@ static long scsi_read_map (cdrom_drive *
+ 	fputs(b, stderr);
+ 	cdmessage(d,b);
+ 
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+ 	fprintf(stderr,"scsi_read error: sector=%ld length=%ld retry=%d\n",
+ 		begin,sectors,retry_count);
+ 	fprintf(stderr,"                 Sense key: %x ASC: %x ASCQ: %x\n",
+@@ -1546,7 +1546,7 @@ static void check_fua_bit(cdrom_drive *d
+   return;
+ }
+ 
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+ static int check_atapi(cdrom_drive *d){
+ #ifdef __linux__
+   int atapiret=-1;
+@@ -1594,7 +1594,7 @@ static int check_atapi(cdrom_drive *d){
+     return(d->is_atapi);
+   }
+ }  
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ static int
+ check_atapi(cdrom_drive *d)
+ {
+@@ -1681,7 +1681,7 @@ static void check_exceptions(cdrom_drive
+   }
+ }
+ 
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+ /* request vendor brand and model */
+ unsigned char *scsi_inquiry(cdrom_drive *d){
+   memcpy(d->sg_buffer,(char[]){ 0x12,0,0,0,56,0},6);
+@@ -1762,7 +1762,7 @@ int scsi_init_drive(cdrom_drive *d){
+   check_fua_bit(d);
+ 
+   d->error_retry=1;
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+   d->sg=realloc(d->sg,d->nsectors*CD_FRAMESIZE_RAW + SG_OFF + 128);
+   d->sg_buffer=d->sg+SG_OFF;
+ #else
