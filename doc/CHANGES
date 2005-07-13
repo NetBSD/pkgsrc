@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10578 2005/07/12 21:37:36 kristerw Exp $
+$NetBSD: CHANGES,v 1.10579 2005/07/13 04:01:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3171,3 +3171,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated editors/nvi to 1.81.5nb3 [kristerw 2005-07-12]
 	Updated editors/nvi-m17n to 1.79.19991117nb3 [kristerw 2005-07-12]
 	Updated lang/mercury to 0.11.0nb3 [kristerw 2005-07-12]
+	Updated devel/cvsps to 2.1 [schmonz 2005-07-13]
