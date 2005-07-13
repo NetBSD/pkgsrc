@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:16 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:39 jlam Exp $
 #
 
 DISTNAME=		Digest-SHA-5.28
@@ -12,7 +12,7 @@ MAINTAINER=		seb@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Digest-SHA/
 COMMENT=		Perl module for SHA-1/224/256/384/512 algorithms
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Digest/SHA/.packlist
+PERL5_PACKLIST=		auto/Digest/SHA/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

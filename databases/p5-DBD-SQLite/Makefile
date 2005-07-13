@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/16 01:10:23 kim Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/13 18:01:20 jlam Exp $
 #
 
 DISTNAME=	DBD-SQLite-1.08
@@ -13,7 +13,7 @@ COMMENT=	Perl DBI/DBD driver for sqlite databases
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/DBD/SQLite/.packlist
+PERL5_PACKLIST=	auto/DBD/SQLite/.packlist
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:15 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/13 18:01:38 jlam Exp $
 #
 
 DISTNAME=		Crypt-DSA-0.12
@@ -22,7 +22,7 @@ DEPENDS+=		p5-Class-Loader-[0-9]*:../../devel/p5-Class-Loader
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/DSA/.packlist
+PERL5_PACKLIST=		auto/Crypt/DSA/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

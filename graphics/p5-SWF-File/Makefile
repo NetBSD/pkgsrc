@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:07 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:31 jlam Exp $
 #
 
 DISTNAME=	SWF-File-0.22
@@ -14,7 +14,7 @@ DEPENDS+=       p5-Data-TemporaryBag-[0-9]*:../../devel/p5-Data-TemporaryBag
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SWF/File/.packlist
+PERL5_PACKLIST=		auto/SWF/File/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

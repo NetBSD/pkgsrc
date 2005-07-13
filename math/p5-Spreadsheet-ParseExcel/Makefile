@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/26 08:04:54 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/13 18:01:33 jlam Exp $
 #
 
 DISTNAME=	Spreadsheet-ParseExcel-0.2603
@@ -12,7 +12,7 @@ COMMENT=	Perl module to get information from an Excel file
 
 DEPENDS+=	p5-OLE-Storage_Lite>=0.08:../../devel/p5-OLE-Storage_Lite
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Spreadsheet/ParseExcel/.packlist
+PERL5_PACKLIST=		auto/Spreadsheet/ParseExcel/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

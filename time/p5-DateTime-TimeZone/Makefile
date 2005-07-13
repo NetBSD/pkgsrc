@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:44 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:44 jlam Exp $
 
 DISTNAME=	DateTime-TimeZone-0.32
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ DEPENDS+=	p5-Class-Singleton>=1.03:../../devel/p5-Class-Singleton
 DEPENDS+=	p5-Params-Validate>=0.72:../../devel/p5-Params-Validate
 
 PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DateTime/TimeZone/.packlist
+PERL5_PACKLIST=		auto/DateTime/TimeZone/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

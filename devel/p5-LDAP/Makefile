@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:33 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/13 18:01:26 jlam Exp $
 #
 
 DISTNAME=	perldap-1.2.2
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.mozilla.org/directory/perldap.html
 COMMENT=	Perl5 module to build LDAP clients with perl
 
 WRKSRC=		${WRKDIR}/perldap
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Mozilla/LDAP/API/.packlist
+PERL5_PACKLIST=	auto/Mozilla/LDAP/API/.packlist
 
 MAKE_ENV+=	LDAPSDKDIR=${BUILDLINK_PREFIX.ldapsdk}
 MAKE_ENV+=	LDAPSDKSSL="no"

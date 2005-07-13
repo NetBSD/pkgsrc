@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/04/20 13:00:50 heinz Exp $
+# $NetBSD: Makefile,v 1.28 2005/07/13 18:01:35 jlam Exp $
 #
 
 DISTNAME=		Net-DNS-0.49
@@ -22,7 +22,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PERL5_REQD+=		5.6.0
 MAKE_PARAMS=		--online-tests
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/DNS/.packlist
+PERL5_PACKLIST=		auto/Net/DNS/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

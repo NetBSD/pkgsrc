@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:31 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:40 jlam Exp $
 
 DISTNAME=	XML-XSH-1.8.2
 PKGNAME=	${DISTNAME:S/XML-XSH/xsh/}
@@ -20,7 +20,7 @@ USE_PERL5=	yes
 USE_TOOLS+=	gmake
 PKG_SHELL=	${PREFIX}/bin/xsh
 
-PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/XML/XSH/.packlist
+PERL5_PACKLIST= auto/XML/XSH/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

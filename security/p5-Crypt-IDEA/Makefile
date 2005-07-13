@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:15 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/13 18:01:38 jlam Exp $
 #
 
 DISTNAME=		Crypt-IDEA-1.02
@@ -16,7 +16,7 @@ LICENCE=		fee-based-commercial-use
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/IDEA/.packlist
+PERL5_PACKLIST=		auto/Crypt/IDEA/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

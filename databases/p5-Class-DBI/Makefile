@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:12 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:20 jlam Exp $
 #
 
 DISTNAME=	Class-DBI-0.96
@@ -20,7 +20,7 @@ DEPENDS+=	p5-Storable>=2.04:../../devel/p5-Storable
 DEPENDS+=	p5-Ima-DBI>=0.33:../../databases/p5-Ima-DBI
 DEPENDS+=	p5-UNIVERSAL-moniker>=0.06:../../devel/p5-UNIVERSAL-moniker
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Class/DBI/.packlist
+PERL5_PACKLIST=	auto/Class/DBI/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

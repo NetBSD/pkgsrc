@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/11 21:47:56 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/13 18:01:46 jlam Exp $
 #
 
 PKGVER=			0.67
@@ -13,7 +13,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.fastcgi.com/
 COMMENT=		Perl5 library for FastCGI, a fast startup alternative to CGI
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/FCGI/.packlist
+PERL5_PACKLIST=		auto/FCGI/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

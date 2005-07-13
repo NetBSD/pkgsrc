@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:47:59 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/13 18:01:47 jlam Exp $
 #
 
 DISTNAME=		HTML-Tagset-3.04
@@ -14,7 +14,7 @@ COMMENT=		Perl5 module of data tables useful in parsing HTML
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTML/Tagset/.packlist
+PERL5_PACKLIST=		auto/HTML/Tagset/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
