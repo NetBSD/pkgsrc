@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:16 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:39 jlam Exp $
 #
 
 DISTNAME=		Digest-BubbleBabble-0.01
@@ -15,7 +15,7 @@ COMMENT=		Perl5 module for bubble babble fingerprints
 DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Digest/BubbleBabble/.packlist
+PERL5_PACKLIST=		auto/Digest/BubbleBabble/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

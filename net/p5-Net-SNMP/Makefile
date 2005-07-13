@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/11 21:46:56 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/13 18:01:36 jlam Exp $
 #
 
 DISTNAME=	Net-SNMP-5.0.1
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Digest-MD5>=2.11:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Digest-SHA1>=1.02:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-Digest-HMAC>=1.00:../../security/p5-Digest-HMAC
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/SNMP/.packlist
+PERL5_PACKLIST=		auto/Net/SNMP/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

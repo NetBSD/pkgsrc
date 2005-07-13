@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:08 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/13 18:01:19 jlam Exp $
 #
 
 DISTNAME=	Jcode-0.88
@@ -16,7 +16,7 @@ DEPENDS+=	p5-MIME-Base64>=2.1:../../converters/p5-MIME-Base64
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Jcode/.packlist
+PERL5_PACKLIST=		auto/Jcode/.packlist
 
 pre-configure:
 	@cd ${WRKSRC}; ${RM} -f mac_install.pl win_install.pl

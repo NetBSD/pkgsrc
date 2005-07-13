@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:46:31 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/13 18:01:33 jlam Exp $
 
 DISTNAME=		udunits
 PKGNAME=		udunits-1.12.1
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 CPPFLAGS+=		-Df2cFortran -Dunix
 PERL5_CONFIGURE=	no
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/UDUNITS/.packlist
+PERL5_PACKLIST=		auto/UDUNITS/.packlist
 
 EGDIR=			${PREFIX}/share/examples/udunits
 CONF_FILES=		${EGDIR}/udunits.dat ${PKG_SYSCONFDIR}/udunits.dat

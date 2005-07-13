@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:40 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:43 jlam Exp $
 
 DISTNAME=	XML-RSS-Parser-2.15
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	p5-Class-XPath>=1.4:../../devel/p5-Class-XPath
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/RSS/Parser/.packlist
+PERL5_PACKLIST=		auto/XML/RSS/Parser/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
