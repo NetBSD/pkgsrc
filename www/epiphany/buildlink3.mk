@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2005/03/22 16:26:14 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2005/07/13 09:55:27 drochner Exp $
 #
 # This Makefile fragment is included by packages that use epiphany.
 #
@@ -17,6 +17,8 @@ BUILDLINK_PACKAGES+=			epiphany
 BUILDLINK_DEPENDS.epiphany+=		epiphany>=1.6.0
 BUILDLINK_PKGSRCDIR.epiphany?=		../../www/epiphany
 
+.include "../../mk/bsd.prefs.mk"
+
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
@@ -24,7 +26,11 @@ BUILDLINK_PKGSRCDIR.epiphany?=		../../www/epiphany
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.if ${GECKO_PROVIDER} == "firefox"
+.include "../../www/firefox/buildlink3.mk"
+.else
 .include "../../www/mozilla-gtk2/buildlink3.mk"
+.endif
 .include "../../x11/gtk2/buildlink3.mk"
 .endif # EPIPHANY_BUILDLINK3_MK
 
