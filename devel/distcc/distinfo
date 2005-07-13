@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2005/02/23 22:24:12 agc Exp $
+$NetBSD: distinfo,v 1.16 2005/07/13 15:30:23 adam Exp $
 
-SHA1 (distcc-2.18.2.tar.bz2) = 22bc560eb6113dcef7e98e1a13ce01910d189c10
-RMD160 (distcc-2.18.2.tar.bz2) = 6fa4900e2b6f5f1acdfa1438086c8c56fb77c4ae
-Size (distcc-2.18.2.tar.bz2) = 340542 bytes
+SHA1 (distcc-2.18.3.tar.bz2) = 88e4c15826bdbc5a3de0f7c1bcb429e558c6976d
+RMD160 (distcc-2.18.3.tar.bz2) = c7ac6f3e161dccf39b841b57a3328b4208d28c2d
+Size (distcc-2.18.3.tar.bz2) = 341601 bytes
 SHA1 (patch-aa) = a0bc240ba8ffe312b71ff6f3599f273a9d37bb53
