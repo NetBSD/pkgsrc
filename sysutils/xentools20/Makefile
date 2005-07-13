@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/04 11:34:30 yamt Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/13 01:28:37 grant Exp $
 #
 
 DISTNAME=		xen-2.0.6-src
@@ -17,7 +17,7 @@ DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 USE_PKGINSTALL=		yes
 PKG_SYSCONFSUBDIR=	xen
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386
 
 WRKSRC=			${WRKDIR}/xen-2.0/tools
 
@@ -48,12 +48,25 @@ SUBST_FILES.paths+=	python/xen/xend/XendDomainInfo.py
 SUBST_FILES.paths+=	python/xen/sv/Daemon.py
 SUBST_SED.paths=        -e "s|/usr/sbin|${PREFIX}/sbin|g"
 SUBST_MESSAGE.paths=    "Fixing hardcoded paths."
+
 SUBST_STAGE.py=		pre-configure
 SUBST_FILES.py=		python/Makefile
 SUBST_SED.py=		-e "s,python,${PYTHONBIN},g"
+
 SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	python/xen/xend/XendRoot.py
 SUBST_SED.conf=		-e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+SUBST_CLASSES+=		proc
+SUBST_STAGE.proc=	pre-configure
+SUBST_FILES.proc=	python/xen/xend/XendVnet.py
+SUBST_FILES.proc+=	libxc/xc_misc.c
+SUBST_FILES.proc+=	xentrace/xentrace.c
+SUBST_SED.proc=		-e "s|/proc|/kern|g"
+.endif
 
 RCD_SCRIPTS=		xend
 FILES_SUBST+=		RCD_INTERPRETER=${PYTHONBIN}
