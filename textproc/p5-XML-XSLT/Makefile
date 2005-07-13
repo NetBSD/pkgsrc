@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/24 12:22:39 seb Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/13 18:01:44 jlam Exp $
 
 DISTNAME=	XML-XSLT-0.48
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	p5-XML-Parser>=2.23:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/XSLT/.packlist
+PERL5_PACKLIST=		auto/XML/XSLT/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

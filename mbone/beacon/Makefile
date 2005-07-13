@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:31 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:33 jlam Exp $
 #
 
 DISTNAME=	beacon-1.1-0
@@ -15,7 +15,7 @@ USE_PKGINSTALL=	YES
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/examples/beacon
 
 PERL5_CONFIGURE=	NO
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/Multicast/Beacon/.packlist
+PERL5_PACKLIST=		auto/Net/Multicast/Beacon/.packlist
 
 SUBST_CLASSES+=		conf
 SUBST_FILES.conf=	src/beacon.in

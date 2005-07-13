@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:33 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:26 jlam Exp $
 
 DISTNAME=	Log-Dispatch-FileRotate-1.11
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ DEPENDS+=	p5-Date-Manip>=5.0:../../devel/p5-Date-Manip
 DEPENDS+=	p5-Log-Dispatch>=2.08:../../devel/p5-Log-Dispatch
 DEPENDS+=	p5-Params-Validate>=0.15:../../devel/p5-Params-Validate
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Log/Dispatch/FileRotate/.packlist
+PERL5_PACKLIST=		auto/Log/Dispatch/FileRotate/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

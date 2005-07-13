@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:39 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/13 18:01:34 jlam Exp $
 #
 
 DISTNAME=		Locale-Maketext-Lexicon-0.47
@@ -15,7 +15,7 @@ DEPENDS+=		{perl>=5.8.0,perl-thread>=5.8.0,p5-Locale-Maketext-[0-8]*}:../../misc
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Locale/Maketext/Lexicon/.packlist
+PERL5_PACKLIST=		auto/Locale/Maketext/Lexicon/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

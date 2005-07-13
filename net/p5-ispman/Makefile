@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:46:57 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/13 18:01:37 jlam Exp $
 #
 
 DISTNAME=		ispman-0.5
@@ -20,7 +20,7 @@ DEPENDS+=		p5-Convert-ASN1>=0.07:../../textproc/p5-Convert-ASN1
 DEPENDS+=		p5-IO-stringy>=1.213:../../devel/p5-IO-stringy
 
 WRKSRC=			${WRKDIR}/ispman/Modules/ISPMan
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/ISPMan/.packlist
+PERL5_PACKLIST=		auto/ISPMan/.packlist
 PLIST_SRC=		${WRKDIR}/PLIST
 PERL5_CONFIGURE_DIRS=	${WRKSRC} ${WRKSRC}/../IO-stringy-1.212_patched
 BUILD_DIRS=		${PERL5_CONFIGURE_DIRS}

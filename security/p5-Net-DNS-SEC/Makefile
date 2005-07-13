@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/20 16:22:38 heinz Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/13 18:01:39 jlam Exp $
 #
 
 DISTNAME=		Net-DNS-SEC-0.12
@@ -22,7 +22,7 @@ DEPENDS+=		p5-Digest-BubbleBabble>=0.01:../../security/p5-Digest-BubbleBabble
 BUILDLINK_DEPENDS.perl=	perl>=5.6.1
 USE_PKGINSTALL=		YES
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/DNS/SEC/.packlist
+PERL5_PACKLIST=		auto/Net/DNS/SEC/.packlist
 
 REPLACE_PERL=		demo/getkeyset.pl demo/key2ds demo/make-signed-keyset
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/06/24 06:43:43 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/07/13 18:01:21 jlam Exp $
 
 DISTNAME=	perl-5.6.1
 PKGNAME=	p5-gdbm-1.05
@@ -17,7 +17,7 @@ COMMENT=		Perl interface to gdbm - GNU database manager
 EXTRACT_ELEMENTS=	${DISTNAME}/ext/GDBM_File
 WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/GDBM_File/.packlist
+PERL5_PACKLIST=		auto/GDBM_File/.packlist
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

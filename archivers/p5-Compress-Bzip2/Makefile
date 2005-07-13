@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/24 13:39:23 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/13 18:01:18 jlam Exp $
 #
 
 DISTNAME=	Compress-Bzip2-1.02
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Compress-Bzip2/
 COMMENT=	Perl5 interface to bzip2 compression library
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Compress/Bzip2/.packlist
+PERL5_PACKLIST=		auto/Compress/Bzip2/.packlist
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

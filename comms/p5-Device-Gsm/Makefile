@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/18 13:35:11 mjl Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/13 18:01:19 jlam Exp $
 #
 
 DISTNAME=	Device-Gsm-1.36
@@ -13,7 +13,7 @@ COMMENT=	Perl module to interface GSM cellular / modems
 
 DEPENDS+=	p5-Device-Modem-[0-9]*:../p5-Device-Modem
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Device/Gsm/.packlist
+PERL5_PACKLIST=		auto/Device/Gsm/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:48:00 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:48 jlam Exp $
 
 DISTNAME=      	Kwiki-UserName-0.14
 PKGNAME=       	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Kwiki user name plugin
 DEPENDS+=	p5-Kwiki>=0.37nb1:../../www/p5-Kwiki
 DEPENDS+=	p5-Kwiki-UserPreferences>=0.13:../../www/p5-Kwiki-UserPreferences
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Kwiki/UserName/.packlist
+PERL5_PACKLIST=		auto/Kwiki/UserName/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

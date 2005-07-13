@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:39 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/13 18:01:43 jlam Exp $
 #
 
 DISTNAME=	XML-LibXML-Common-0.13
@@ -14,7 +14,7 @@ COMMENT=	Routines and constants common for XML::LibXML and XML::GDOME
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/LibXML/Common/.packlist
+PERL5_PACKLIST=		auto/XML/LibXML/Common/.packlist
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

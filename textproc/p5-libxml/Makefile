@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:41 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/13 18:01:44 jlam Exp $
 
 DISTNAME=	libxml-perl-0.08
 PKGNAME=	p5-libxml-0.08
@@ -14,7 +14,7 @@ DEPENDS+=	p5-XML-Parser>=2.29:../../textproc/p5-XML-Parser
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/libxml-perl/.packlist
+PERL5_PACKLIST=		auto/libxml-perl/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

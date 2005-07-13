@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:40 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:44 jlam Exp $
 
 DISTNAME=	XML-UM-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ CONFLICTS+=	p5-libxml-enno-[0-9]*
 
 DEPENDS+=	p5-XML-Encoding>=1.01:../../textproc/p5-XML-Encoding
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/UM/.packlist
+PERL5_PACKLIST=	auto/XML/UM/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

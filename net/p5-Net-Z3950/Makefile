@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:56 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/07/13 18:01:37 jlam Exp $
 #
 
 DISTNAME=	Net-Z3950-0.32
@@ -15,7 +15,7 @@ COMMENT=	Perl interface to the Z39.50 information retrieval protocol
 DEPENDS+=	p5-MARC>=1.15:../../databases/p5-MARC
 DEPENDS+=	p5-Event>=0.77:../../devel/p5-Event
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/Z3950/.packlist
+PERL5_PACKLIST=		auto/Net/Z3950/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../net/yaz/buildlink3.mk"

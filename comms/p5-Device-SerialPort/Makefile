@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:45:07 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/13 18:01:19 jlam Exp $
 #
 
 DISTNAME=	Device-SerialPort-0.12
@@ -14,7 +14,7 @@ COMMENT=	POSIX-based Perl module to control your serial port
 
 DEPENDS+=	p5-perl-headers-${OS_VERSION}{,nb*}:../../devel/p5-perl-headers
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Device/SerialPort/.packlist
+PERL5_PACKLIST=		auto/Device/SerialPort/.packlist
 
 MAKE_PARAMS=	${DEFAULT_SERIAL_DEVICE}
 

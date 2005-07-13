@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:33 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/13 18:01:27 jlam Exp $
 #
 
 DISTNAME=	Memoize-1.01
@@ -14,7 +14,7 @@ COMMENT=	Transparently speed up functions by caching return values
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Memoize/.packlist
+PERL5_PACKLIST=		auto/Memoize/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

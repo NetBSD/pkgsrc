@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:13 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/13 18:01:21 jlam Exp $
 #
 
 DISTNAME=	p5-Palm-1.3.0
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.coldsync.org/
 COMMENT=	Access Palm .pdb and .prc database files
 
 WRKSRC=		${WRKDIR}/p5-Palm-1.003_000
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Palm/.packlist
+PERL5_PACKLIST=	auto/Palm/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

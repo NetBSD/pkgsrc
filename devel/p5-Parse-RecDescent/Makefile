@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:34 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/13 18:01:28 jlam Exp $
 #
 
 DISTNAME=	Parse-RecDescent-1.94
@@ -14,7 +14,7 @@ DEPENDS+=	p5-Text-Balanced-[0-9]*:../../textproc/p5-Text-Balanced
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Parse/RecDescent/.packlist
+PERL5_PACKLIST=		auto/Parse/RecDescent/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

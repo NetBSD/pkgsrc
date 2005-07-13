@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:44 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:44 jlam Exp $
 
 DISTNAME=	DateTime-0.27
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-DateTime-Locale>=0.09:../../time/p5-DateTime-Locale
 DEPENDS+=	p5-Params-Validate>=0.76:../../devel/p5-Params-Validate
 DEPENDS+=	{perl>=5.8.1,p5-Test-Simple-[0-9]*}:../../devel/p5-Test-Simple
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/DateTime/.packlist
+PERL5_PACKLIST=	auto/DateTime/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

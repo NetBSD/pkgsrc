@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:07 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:30 jlam Exp $
 
 DISTNAME=	Chart-ThreeD-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	Three-Dimentional pie chart plotting
 
 DEPENDS+=	p5-GD>=2.16:../../graphics/p5-GD
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Chart-ThreeD/.packlist
+PERL5_PACKLIST=		auto/Chart-ThreeD/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

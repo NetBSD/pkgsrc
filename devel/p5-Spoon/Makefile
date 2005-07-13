@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:34 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/13 18:01:28 jlam Exp $
 
 DISTNAME=      	Spoon-0.21
 PKGNAME=       	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-IO-All>=0.32:../../devel/p5-IO-All
 DEPENDS+=	p5-Spiffy>=0.22:../../devel/p5-Spiffy
 DEPENDS+=	p5-Template-Toolkit>=2.10:../../www/p5-Template-Toolkit
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Spoon/.packlist
+PERL5_PACKLIST=	auto/Spoon/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

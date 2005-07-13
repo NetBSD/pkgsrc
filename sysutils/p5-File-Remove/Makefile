@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/24 19:47:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:40 jlam Exp $
 
 DISTNAME=	File-Remove-0.29
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Remove files and directories
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/File/Remove/.packlist
+PERL5_PACKLIST=	auto/File/Remove/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

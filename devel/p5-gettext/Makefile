@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:36 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/13 18:01:30 jlam Exp $
 #
 
 DISTNAME=	gettext-1.04
@@ -13,7 +13,7 @@ COMMENT=	Perl5 module interface to C I18N functions
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Locale/gettext/.packlist
+PERL5_PACKLIST=		auto/Locale/gettext/.packlist
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

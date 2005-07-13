@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:35 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/13 18:01:29 jlam Exp $
 #
 
 VERS=		2.30
@@ -14,7 +14,7 @@ COMMENT=	Change terminal modes and perform non-blocking reads
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Term/ReadKey/.packlist
+PERL5_PACKLIST=		auto/Term/ReadKey/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

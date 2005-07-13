@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:34 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/13 18:01:28 jlam Exp $
 #
 
 DISTNAME=      	Parse-Yapp-1.05
@@ -13,7 +13,7 @@ COMMENT=	Perl5 LALR parser
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Parse/Yapp/.packlist
+PERL5_PACKLIST=		auto/Parse/Yapp/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

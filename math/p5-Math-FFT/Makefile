@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:46:30 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:33 jlam Exp $
 
 DISTNAME=	Math-FFT-0.25
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ MAINTAINER=	gson@NetBSD.org
 HOMEPAGE=       http://search.cpan.org/dist/Math-FFT/
 COMMENT=	Perl module to calculate Fast Fourier Transforms
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Math/FFT/.packlist
+PERL5_PACKLIST=		auto/Math/FFT/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

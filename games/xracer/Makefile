@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2005/07/13 18:01:30 jlam Exp $
 #
 
 DISTNAME=		xracer-0.96.9
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	# defined
 
 USE_TOOLS+=		automake14 gmake
 USE_PERL5=		# defined
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XRacer/.packlist
+PERL5_PACKLIST=		auto/XRacer/.packlist
 
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined

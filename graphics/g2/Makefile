@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/01 18:02:55 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/07/13 18:01:30 jlam Exp $
 
 DISTNAME=		g2-0.49a
 PKGREVISION=		3
@@ -12,7 +12,7 @@ COMMENT=		Powerful, easy to use 2D graphics library
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/G2/.packlist
+PERL5_PACKLIST=		auto/G2/.packlist
 PERL5_CONFIGURE=	no
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/g2_perl
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/g2_perl

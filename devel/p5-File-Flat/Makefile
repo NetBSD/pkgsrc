@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/26 21:08:25 seb Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/13 18:01:25 jlam Exp $
 #
 
 DISTNAME=	File-Flat-0.95
@@ -19,7 +19,7 @@ DEPENDS+=	p5-File-Slurp>=9999.04:../../devel/p5-File-Slurp
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/File/Flat/.packlist
+PERL5_PACKLIST=		auto/File/Flat/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

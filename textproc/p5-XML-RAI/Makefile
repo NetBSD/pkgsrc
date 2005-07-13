@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:47:40 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:43 jlam Exp $
 
 DISTNAME=	XML-RAI-0.51
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/RAI/.packlist
+PERL5_PACKLIST=		auto/XML/RAI/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

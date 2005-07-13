@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:38 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/13 18:01:34 jlam Exp $
 #
 
 DISTNAME=		Geography-Countries-1.4
@@ -15,7 +15,7 @@ COMMENT=		Perl5 module for mapping contry names and codes
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Geography/Countries/.packlist
+PERL5_PACKLIST=		auto/Geography/Countries/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

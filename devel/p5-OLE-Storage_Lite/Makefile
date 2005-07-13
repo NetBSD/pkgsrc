@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/26 07:59:37 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/13 18:01:27 jlam Exp $
 
 DISTNAME=	OLE-Storage_Lite-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	p5-IO-stringy>=2.101:../../devel/p5-IO-stringy
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/OLE/Storage_Lite/.packlist
+PERL5_PACKLIST=		auto/OLE/Storage_Lite/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

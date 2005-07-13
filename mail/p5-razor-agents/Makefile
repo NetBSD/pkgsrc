@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/19 22:39:15 heinz Exp $
+# $NetBSD: Makefile,v 1.20 2005/07/13 18:01:32 jlam Exp $
 
 DISTNAME=	razor-agents-2.72
 PKGNAME=	p5-${DISTNAME}
@@ -20,7 +20,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 # because Net::Ping, Getopt::Long, File::Copy are needed
 PERL5_REQD+=		5.6.0
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/razor-agents/.packlist
+PERL5_PACKLIST=		auto/razor-agents/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

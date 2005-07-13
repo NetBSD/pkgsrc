@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:32 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:26 jlam Exp $
 #
 
 DISTNAME=	IO-Tee-0.64
@@ -15,7 +15,7 @@ COMMENT=	Multiplex output to multiple output handles
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/IO/Tee/.packlist
+PERL5_PACKLIST=	auto/IO/Tee/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
