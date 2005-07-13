@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 2005/06/05 15:39:06 minskim Exp $
+$NetBSD: patch-ad,v 1.7 2005/07/13 18:39:58 kristerw Exp $
 
 --- src/mesa/Makefile.orig	2004-10-04 09:44:50.000000000 -0500
 +++ src/mesa/Makefile
@@ -25,7 +25,7 @@ $NetBSD: patch-ad,v 1.6 2005/06/05 15:39:06 minskim Exp $
 +	${LIBTOOL} --mode=link ${CC} -o ${GL_LIB_NAME:.so=.la} \
 +		${STAND_ALONE_OBJECTS:.o=.lo} \
 +		-rpath ${PREFIX}/lib -version-info ${GL_MAJOR}:${GL_MINOR} \
-+		-L${X11BASE}/lib ${GL_LIB_DEPS:M-l*} -R ${X11BASE}/lib
++		-L${X11BASE}/lib ${GL_LIB_DEPS} -R ${X11BASE}/lib
  
  # Make the OSMesa library
  $(LIB_DIR)/$(OSMESA_LIB_NAME): $(OSMESA_DRIVER_OBJECTS) $(OSMESA16_OBJECTS)
