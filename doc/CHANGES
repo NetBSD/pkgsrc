@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10580 2005/07/13 07:20:44 tron Exp $
+$NetBSD: CHANGES,v 1.10581 2005/07/13 10:02:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3130,6 +3130,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated shells/bash to 3.0pl16nb2 [tron 2005-07-07]
 	Updated print/magicfilter to 1.2nb4 [tron 2005-07-07]
 	Added time/saytime version 19951111 [is 2005-07-07]
+	Updated www/epiphany to 1.6.4 [drochner 2005-07-07]
 	Updated net/net-snmp to 5.2.1.2 [adam 2005-07-08]
 	Updated chat/gaim to 1.4.0 [grant 2005-07-08]
 	Updated wm/windowmaker to 0.92.0 [adam 2005-07-08]
