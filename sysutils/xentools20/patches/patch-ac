@@ -1,25 +1,30 @@
-$NetBSD: patch-ac,v 1.2 2005/06/04 11:34:30 yamt Exp $
+$NetBSD: patch-ac,v 1.3 2005/07/13 01:28:37 grant Exp $
 
---- python/xen/lowlevel/xu/xu.c.orig	2005-01-12 13:22:21.000000000 +0100
-+++ python/xen/lowlevel/xu/xu.c	2005-02-05 20:22:08.000000000 +0100
-@@ -15,7 +15,6 @@
+--- python/xen/lowlevel/xu/xu.c.orig	2005-05-22 20:56:26.000000000 +1000
++++ python/xen/lowlevel/xu/xu.c
+@@ -15,7 +15,9 @@
  #include <sys/socket.h>
  #include <sys/mman.h>
  #include <sys/poll.h>
--#include <sys/sysmacros.h>
++#ifndef __NetBSD__
+ #include <sys/sysmacros.h>
++#endif
  #include <netinet/in.h>
  #include <fcntl.h>
  #include <unistd.h>
-@@ -25,7 +24,7 @@
+@@ -25,7 +27,11 @@
  
  #include <xen/xen.h>
  #include <xen/io/domain_controller.h>
--#include <xen/linux/privcmd.h>
++#ifdef __NetBSD__
 +#include <xen/NetBSD/xenio.h>
++#else
+ #include <xen/linux/privcmd.h>
++#endif
  
  #define XENPKG "xen.lowlevel.xu"
  
-@@ -35,6 +34,9 @@
+@@ -35,6 +41,9 @@
  #endif
  
  /* NB. The following should be kept in sync with the kernel's evtchn driver. */
@@ -29,7 +34,7 @@ $NetBSD: patch-ac,v 1.2 2005/06/04 11:34:30 yamt Exp $
  #define EVTCHN_DEV_NAME  "/dev/xen/evtchn"
  #define EVTCHN_DEV_MAJOR 10
  #define EVTCHN_DEV_MINOR 201
-@@ -45,6 +47,7 @@
+@@ -45,6 +54,7 @@
  #define EVTCHN_BIND   _IO('E', 2)
  /* EVTCHN_UNBIND: Unbind from the specified event-channel port. */
  #define EVTCHN_UNBIND _IO('E', 3)
@@ -37,7 +42,7 @@ $NetBSD: patch-ac,v 1.2 2005/06/04 11:34:30 yamt Exp $
  
  /* Size of a machine page frame. */
  #define PAGE_SIZE 4096
-@@ -130,7 +133,11 @@
+@@ -130,7 +140,11 @@ static PyObject *xu_notifier_bind(PyObje
      if ( !PyArg_ParseTuple(args, "i", &idx) )
          return NULL;
  
@@ -49,7 +54,7 @@ $NetBSD: patch-ac,v 1.2 2005/06/04 11:34:30 yamt Exp $
          return PyErr_SetFromErrno(PyExc_IOError);
  
      Py_INCREF(Py_None);
-@@ -145,7 +152,11 @@
+@@ -145,7 +159,11 @@ static PyObject *xu_notifier_unbind(PyOb
      if ( !PyArg_ParseTuple(args, "i", &idx) )
          return NULL;
  
@@ -61,7 +66,7 @@ $NetBSD: patch-ac,v 1.2 2005/06/04 11:34:30 yamt Exp $
          return PyErr_SetFromErrno(PyExc_IOError);
  
      Py_INCREF(Py_None);
-@@ -192,13 +203,16 @@
+@@ -192,13 +210,16 @@ staticforward PyTypeObject xu_notifier_t
  static PyObject *xu_notifier_new(PyObject *self, PyObject *args)
  {
      xu_notifier_object *xun;
@@ -78,7 +83,7 @@ $NetBSD: patch-ac,v 1.2 2005/06/04 11:34:30 yamt Exp $
      /* Make sure any existing device file links to correct device. */
      if ( (lstat(EVTCHN_DEV_NAME, &st) != 0) ||
           !S_ISCHR(st.st_mode) ||
-@@ -206,14 +220,17 @@
+@@ -206,14 +227,17 @@ static PyObject *xu_notifier_new(PyObjec
          (void)unlink(EVTCHN_DEV_NAME);
  
   reopen:
@@ -96,7 +101,7 @@ $NetBSD: patch-ac,v 1.2 2005/06/04 11:34:30 yamt Exp $
          PyObject_Del((PyObject *)xun);
          return PyErr_SetFromErrno(PyExc_IOError);
      }
-@@ -1083,7 +1100,8 @@
+@@ -1110,7 +1134,8 @@ static PyObject *xu_port_new(PyObject *s
           * The control-interface event channel for DOM0 is already set up.
           * We use an ioctl to discover the port at our end of the channel.
           */
