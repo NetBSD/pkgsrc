@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3705 2005/07/13 10:43:52 wiz Exp $
+$NetBSD: TODO,v 1.3706 2005/07/13 15:31:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -434,7 +434,6 @@ Suggested package updates
 	o diffstat-1.38
 	o dirac-0.5.2
 	o dirdiff-2.0
-	o distcc-2.18.3
 	o dmalloc-5.4.2
 	o dnstracer-1.8
 	o dpkg-1.13.3
