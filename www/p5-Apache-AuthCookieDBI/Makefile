@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:55 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/13 18:01:45 jlam Exp $
 #
 
 DISTNAME=	Apache-AuthCookieDBI-1.19
@@ -13,7 +13,7 @@ COMMENT=	Perl5 module AuthCookie backed by a DBI database
 
 DEPENDS+=	p5-Apache-AuthCookie>=3.05:../../www/p5-Apache-AuthCookie
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/AuthCookieDBI/.packlist
+PERL5_PACKLIST=		auto/Apache/AuthCookieDBI/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

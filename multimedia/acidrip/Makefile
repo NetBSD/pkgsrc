@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:40 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/13 18:01:34 jlam Exp $
 #
 
 DISTNAME=	acidrip-0.14
@@ -18,7 +18,7 @@ DEPENDS+=	p5-gtk2>=1.040:../../x11/p5-gtk2
 USE_PERL5=	yes
 
 PERL5_REQD=     5.8
-PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/AcidRip/.packlist
+PERL5_PACKLIST= auto/AcidRip/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:35 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/13 18:01:29 jlam Exp $
 #
 
 DISTNAME=	Term-ProgressBar-2.09
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-r1$//}
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Term-ProgressBar/.packlist
+PERL5_PACKLIST=	auto/Term-ProgressBar/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

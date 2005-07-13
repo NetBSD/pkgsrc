@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/19 17:31:02 reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/13 18:01:41 jlam Exp $
 #
 
 DISTNAME=		Lingua-Preferred-0.2.4
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Choose a preferred language from a selection
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Lingua/Preferred/.packlist
+PERL5_PACKLIST=		auto/Lingua/Preferred/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

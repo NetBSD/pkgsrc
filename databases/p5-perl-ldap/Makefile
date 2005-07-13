@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/05/15 17:12:09 seb Exp $
+# $NetBSD: Makefile,v 1.27 2005/07/13 18:01:21 jlam Exp $
 #
 
 DISTNAME=     	perl-ldap-0.3202
@@ -28,7 +28,7 @@ DEPENDS+=	p5-Authen-SASL>=2.00:../../security/p5-Authen-SASL
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 .endif
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/LDAP/.packlist
+PERL5_PACKLIST=		auto/Net/LDAP/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

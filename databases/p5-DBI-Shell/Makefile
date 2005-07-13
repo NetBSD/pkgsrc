@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:13 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:21 jlam Exp $
 #
 
 DISTNAME=	DBI-Shell-11.93
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Text-Reform>=1.11:../../textproc/p5-Text-Reform
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DBI/Shell/.packlist
+PERL5_PACKLIST=		auto/DBI/Shell/.packlist
 
 BUILDLINK_DEPENDS.p5-DBI+=	p5-DBI>=1.37
 

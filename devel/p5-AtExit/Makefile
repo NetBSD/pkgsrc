@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:29 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/13 18:01:22 jlam Exp $
 #
 
 DISTNAME=	AtExit-2.01
@@ -13,7 +13,7 @@ COMMENT=	Provides an ANSI C style atexit() function to Perl programs
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_ARCHLIB}/auto/AtExit/.packlist
+PERL5_PACKLIST=		auto/AtExit/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

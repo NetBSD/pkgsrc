@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/04/11 21:45:09 tv Exp $
+# $NetBSD: Makefile,v 1.33 2005/07/13 18:01:19 jlam Exp $
 #
 
 VERS=			3.05
@@ -15,7 +15,7 @@ COMMENT=		Perl5 module for Base64 and Quoted-Printable encodings
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/MIME/Base64/.packlist
+PERL5_PACKLIST=		auto/MIME/Base64/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/22 17:49:08 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/13 18:01:31 jlam Exp $
 #
 
 .include "../../x11/p5-gtk/Makefile.common"
@@ -9,7 +9,7 @@ MAINTAINER=	adrianp@NetBSD.org
 COMMENT=	Perl bindings for Imlib
 
 MAKE_PARAMS=	INSTALLMAN3DIR=${PREFIX}/man/man3
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Gtk/Gdk/ImlibImage/.packlist
+PERL5_PACKLIST=	auto/Gtk/Gdk/ImlibImage/.packlist
 
 SUBPACKAGE=	GdkImlib
 

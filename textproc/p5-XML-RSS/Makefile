@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:40 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/07/13 18:01:43 jlam Exp $
 
 DISTNAME=	XML-RSS-0.97
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	XML-RSS helps to create and update RSS files
 
 DEPENDS+=	p5-XML-Parser>=2.29:../../textproc/p5-XML-Parser
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/RSS/.packlist
+PERL5_PACKLIST=		auto/XML/RSS/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

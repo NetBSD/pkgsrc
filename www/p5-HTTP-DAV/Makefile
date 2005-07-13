@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:59 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/13 18:01:47 jlam Exp $
 #
 
 DISTNAME=	HTTP-DAV-0.31
@@ -15,7 +15,7 @@ COMMENT=	HTTP::DAV interface and 'dave'
 DEPENDS+=       p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-XML-DOM-[0-9]*:../../textproc/p5-XML-DOM
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTTP/DAV/.packlist
+PERL5_PACKLIST=		auto/HTTP/DAV/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
