@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:23 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/13 13:16:36 wiz Exp $
 #
 
 DISTNAME=	libmpeg3-1.3
@@ -10,10 +10,16 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://heroines.sourceforge.net/libmpeg3.php3
 COMMENT=	MPEG decoding library
 
+.include "../../mk/bsd.prefs.mk"
+
 .if (${MACHINE_ARCH} == "i386")
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 .else
 CONFIGURE_ARGS+= --no-mmx --no-css
+.endif
+
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+= --no-css
 .endif
 
 HAS_CONFIGURE=	yes

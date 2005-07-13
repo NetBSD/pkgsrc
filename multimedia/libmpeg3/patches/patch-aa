@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2004/06/26 18:00:21 grant Exp $
+$NetBSD: patch-aa,v 1.2 2005/07/13 13:16:36 wiz Exp $
 
---- Makefile.orig	Sun May 20 05:05:26 2001
-+++ Makefile	Tue Jul 31 17:34:17 2001
-@@ -2,7 +2,7 @@
+--- Makefile.orig	2001-05-20 05:05:26.000000000 +0200
++++ Makefile
+@@ -2,7 +2,7 @@ include global_config
  
  CFLAGS += 
  
@@ -11,12 +11,12 @@ $NetBSD: patch-aa,v 1.1 2004/06/26 18:00:21 grant Exp $
  
  $(shell sh -c 'if ! test -d $(OBJDIR)\; then \
  	mkdir $(OBJDIR)\; \
-@@ -69,7 +69,7 @@
+@@ -69,7 +69,7 @@ OBJS = \
  
  OUTPUT = $(OBJDIR)/libmpeg3.a
  UTILS = $(OBJDIR)/dump $(OBJDIR)/mpeg3cat $(OBJDIR)/mpeg3toc $(OBJDIR)/mpeg3split
 -LIBS = -lm -lpthread
-+LIBS = -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lm -lpthread
++LIBS = -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lm ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
  
  all: $(OUTPUT) util
  
