@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/07/13 01:28:37 grant Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/13 01:30:17 grant Exp $
 #
 
 DISTNAME=		xen-2.0.6-src
@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		bouyer@NetBSD.org
-HOMEPAGE=		http://www.netbsd.org/Ports/xen/
+HOMEPAGE=		http://www.cl.cam.ac.uk/Research/SRG/netos/xen/
 COMMENT=		Userland Tools for Xen
 
 DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
