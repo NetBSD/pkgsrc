@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2005/04/21 08:22:32 xtraeme Exp $
+$NetBSD: distinfo,v 1.17 2005/07/13 21:38:26 rillig Exp $
 
 SHA1 (pkgconfig-0.17.2.tar.gz) = 93e32aa176fceb2f7fe4d4e938f599ade74edb09
 RMD160 (pkgconfig-0.17.2.tar.gz) = ff6de406416abf9dcd5eaa77d1d8ef5e6bc6d935
 Size (pkgconfig-0.17.2.tar.gz) = 965129 bytes
-SHA1 (patch-aa) = 58592474033f44f244c639a29b89b73a9966b1a2
+SHA1 (patch-aa) = 6927d53131e9be90d81856ecd0e209c9c6015c9f
