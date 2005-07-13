@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/06/01 18:03:30 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2005/07/13 18:01:49 jlam Exp $
 
 DISTNAME=	Tk-804.027
 PKGNAME=	p5-Tk-804.027
@@ -16,7 +16,7 @@ BUILD_DEPENDS= 	p5-HTML-Parser>=3.19:../../www/p5-HTML-Parser
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_REQD=	5.8
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Tk/.packlist
+PERL5_PACKLIST=	auto/Tk/.packlist
 
 MAKE_PARAMS=	X11=${X11BASE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:48:01 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/13 18:01:48 jlam Exp $
 #
 
 DISTNAME=	WWW-Curl-2.0
@@ -14,7 +14,7 @@ DEPENDS+=	curl>=7.12.1:../../www/curl
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/WWW/Curl/.packlist
+PERL5_PACKLIST=	auto/WWW/Curl/.packlist
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

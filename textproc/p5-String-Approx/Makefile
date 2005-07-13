@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:38 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:41 jlam Exp $
 #
 
 DISTNAME=		String-Approx-3.23
@@ -11,7 +11,7 @@ MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://search.cpan.org/dist/String-Approx/
 COMMENT=		Approximate (fuzzy) string matching library for Perl
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/String/Approx/.packlist
+PERL5_PACKLIST=		auto/String/Approx/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:35 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:29 jlam Exp $
 #
 
 DISTNAME=	Tree-DAG_Node-1.05
@@ -12,7 +12,7 @@ COMMENT=	Class for representing nodes in a tree
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Tree/DAG_Node/.packlist
+PERL5_PACKLIST=	auto/Tree/DAG_Node/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

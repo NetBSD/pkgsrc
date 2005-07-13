@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:05 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/13 18:01:19 jlam Exp $
 #
 
 DISTNAME=	Net-Goofey-1.5
@@ -11,7 +11,7 @@ MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://tertius.net.au/~gossamer/code/
 COMMENT=	Perl module for communicating with a Goofey server
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/Goofey/.packlist
+PERL5_PACKLIST=		auto/Net/Goofey/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
