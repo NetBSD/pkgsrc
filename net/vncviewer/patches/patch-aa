@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2001/09/22 00:49:33 mycroft Exp $
+$NetBSD: patch-aa,v 1.3 2005/07/13 13:47:57 hubertf Exp $
 
---- vncviewer/Imakefile.orig	Fri Aug 13 05:29:34 1999
-+++ vncviewer/Imakefile	Fri Sep 21 20:45:00 2001
-@@ -8,9 +8,7 @@
+--- vncviewer/Imakefile.orig	2005-07-13 15:26:57.329207000 +0200
++++ vncviewer/Imakefile
+@@ -8,9 +8,7 @@ CDEBUGFLAGS = -O2
  XCOMM Shared memory support works OK on x86 linux, not tested elsewhere but
  XCOMM seems to cause problems on Digital Unix.
  
@@ -12,9 +12,12 @@ $NetBSD: patch-aa,v 1.2 2001/09/22 00:49:33 mycroft Exp $
  
  INCLUDES = -I../include -I.
  VNCAUTH_LIB = ../libvncauth/libvncauth.a
-@@ -35,4 +33,4 @@
+@@ -36,4 +34,8 @@ SRCS = \
  
  OBJS = $(SRCS:.c=.o)
  
--ComplexProgramTarget(vncviewer)
++#if !defined(SunArchitecture)
 +ComplexProgramTargetNoMan(vncviewer)
++#else
+ ComplexProgramTarget(vncviewer)
++#endif
