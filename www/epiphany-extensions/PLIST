@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/03/22 16:26:48 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/07/13 09:55:50 drochner Exp $
 lib/epiphany-1.6/extensions/actions.xml
 lib/epiphany-1.6/extensions/bookmarks-tray.xml
 lib/epiphany-1.6/extensions/certificates.xml
@@ -18,7 +18,6 @@ lib/epiphany-1.6/extensions/libselectstylesheetextension.la
 lib/epiphany-1.6/extensions/libsidebarextension.la
 lib/epiphany-1.6/extensions/libsmartbookmarksextension.la
 lib/epiphany-1.6/extensions/libtabgroupsextension.la
-lib/epiphany-1.6/extensions/libtabsmenuextension.la
 lib/epiphany-1.6/extensions/libtabstatesextension.la
 lib/epiphany-1.6/extensions/page-info.xml
 lib/epiphany-1.6/extensions/select-stylesheet.xml
@@ -26,7 +25,6 @@ lib/epiphany-1.6/extensions/sidebar.xml
 lib/epiphany-1.6/extensions/smart-bookmarks.xml
 lib/epiphany-1.6/extensions/tab-groups.xml
 lib/epiphany-1.6/extensions/tab-states.xml
-lib/epiphany-1.6/extensions/tabsmenu.xml
 share/epiphany-extensions/ephy-gestures.xml
 share/epiphany-extensions/glade/action-properties.glade
 share/epiphany-extensions/glade/actions-editor.glade
@@ -45,6 +43,7 @@ ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/epiphany-extensions-1.6.mo
 ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/epiphany-extensions-1.6.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/epiphany-extensions-1.6.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/epiphany-extensions-1.6.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/epiphany-extensions-1.6.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/epiphany-extensions-1.6.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/epiphany-extensions-1.6.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/epiphany-extensions-1.6.mo
@@ -67,6 +66,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/epiphany-extensions-1.6.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/epiphany-extensions-1.6.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/epiphany-extensions-1.6.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/epiphany-extensions-1.6.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/epiphany-extensions-1.6.mo
 @dirrm share/epiphany-extensions/xml
 @dirrm share/epiphany-extensions/glade
 @dirrm share/epiphany-extensions
