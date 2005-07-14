@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10600 2005/07/14 14:53:37 dillo Exp $
+$NetBSD: CHANGES,v 1.10601 2005/07/14 16:39:47 taya Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3196,3 +3196,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed devel/p5-Test-Harness [wiz 2005-07-14]
 	Updated graphics/tiff to 3.7.3 [wiz 2005-07-14]
 	Updated print/img2eps to 0.2 [dillo 2005-07-14]
+	Updated www/firefox to 1.0.5 [taya 2005-07-14]
+	Updated www/firefox-gtk1 to 1.0.5 [taya 2005-07-14]
