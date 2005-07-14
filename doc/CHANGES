@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10599 2005/07/14 13:44:04 wiz Exp $
+$NetBSD: CHANGES,v 1.10600 2005/07/14 14:53:37 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3195,3 +3195,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/entropy to 0.9.0.433 [tv 2005-07-14]
 	Removed devel/p5-Test-Harness [wiz 2005-07-14]
 	Updated graphics/tiff to 3.7.3 [wiz 2005-07-14]
+	Updated print/img2eps to 0.2 [dillo 2005-07-14]
