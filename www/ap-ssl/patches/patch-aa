@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2001/10/17 19:17:11 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2005/07/14 04:04:58 wiz Exp $
 
---- pkg.sslmod/libssl.module.orig	Sun May 20 05:13:47 2001
-+++ pkg.sslmod/libssl.module	Sat Jun  9 02:43:23 2001
-@@ -429,7 +429,7 @@
+--- pkg.sslmod/libssl.module.orig	2005-07-06 10:32:14.000000000 +0200
++++ pkg.sslmod/libssl.module
+@@ -434,7 +434,7 @@ ConfigStart
              exit 1
          fi
      fi
