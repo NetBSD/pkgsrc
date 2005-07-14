@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10597 2005/07/14 13:08:17 tv Exp $
+$NetBSD: CHANGES,v 1.10598 2005/07/14 13:27:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3193,3 +3193,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/bugzilla to 2.18.3 [adrianp 2005-07-14]
 	Updated audio/fluidsynth 1.0.6 [adam 2005-07-14]
 	Updated net/entropy to 0.9.0.433 [tv 2005-07-14]
+	Removed devel/p5-Test-Harness [wiz 2005-07-14]
