@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10609 2005/07/14 21:48:48 wiz Exp $
+$NetBSD: CHANGES,v 1.10610 2005/07/14 23:16:18 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3208,3 +3208,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Added archivers/lzo version 2.01 [wiz 2005-07-14]
 	Added archivers/archangel version 20050714 [agc 2005-07-14]
 	Updated games/wesnoth to 0.9.3 [wiz 2005-07-14]
+	Added net/p5-POE-Component-Client-DNS version 0.98 [adrianp 2005-07-15]
+	Added net/p5-POE-Component-Client-Ident version 0.7 [adrianp 2005-07-15]
+	Added chat/p5-POE-Filter-IRCD version 1.1 [adrianp 2005-07-15]
+	Added chat/p5-POE-Component-IRC version 4.64 [adrianp 2005-07-15]
