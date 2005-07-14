@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10595 2005/07/14 10:27:47 adrianp Exp $
+$NetBSD: CHANGES,v 1.10596 2005/07/14 12:52:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3191,3 +3191,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/amaya to 9.2.1 [adam 2005-07-14]
 	Updated graphics/ImageMagick to 6.2.3.3 [adam 2005-07-14]
 	Updated devel/bugzilla to 2.18.3 [adrianp 2005-07-14]
+	Updated audio/fluidsynth 1.0.6 [adam 2005-07-14]
