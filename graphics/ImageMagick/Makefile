@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2005/05/22 20:08:04 jlam Exp $
+# $NetBSD: Makefile,v 1.128 2005/07/14 08:58:46 adam Exp $
 
 .include "Makefile.common"
 
@@ -12,10 +12,10 @@ CONFLICTS=	geomview<1.8.1nb2  # used to have a program named 'animate'
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	Magick++/lib/ImageMagick++.pc.in
 PKGCONFIG_OVERRIDE+=	magick/ImageMagick.pc.in
 
