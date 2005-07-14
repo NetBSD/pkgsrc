@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3713 2005/07/14 16:57:53 wiz Exp $
+$NetBSD: TODO,v 1.3714 2005/07/14 18:40:52 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -755,7 +755,6 @@ Suggested package updates
 	o p5-Crypt-CipherSaber-0.61
 	o p5-Crypt-RSA-1.55
 	o p5-Crypt-Random-1.25
-	o p5-Curses-1.12
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-Sybase-1.05
 	o p5-DBD-postgresql-1.32
