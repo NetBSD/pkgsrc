@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 09:59:28 agc Exp $
+$NetBSD: distinfo,v 1.1 2005/07/14 04:23:14 schmonz Exp $
 
 SHA1 (queue-repair-0.9.0.tar.gz) = 123a9034c2fbbda7ca7c193153d67c4837909e56
 RMD160 (queue-repair-0.9.0.tar.gz) = 7634105825299e5d2314c819d7eb3260a3bdb2b3
