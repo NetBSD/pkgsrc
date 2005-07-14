@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2005/05/22 20:51:45 jlam Exp $
+# $NetBSD: Makefile,v 1.65 2005/07/14 02:24:22 wiz Exp $
 #
 
-DISTNAME=	automake-1.9.5
+DISTNAME=	automake-1.9.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=automake/} \
 		ftp://sources.redhat.com/pub/automake/
