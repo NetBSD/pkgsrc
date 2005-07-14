@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3711 2005/07/14 13:27:32 wiz Exp $
+$NetBSD: TODO,v 1.3712 2005/07/14 13:44:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1069,7 +1069,6 @@ Suggested package updates
 	o tds-1.6.2
 	o ted-2.17
 	o tfmxplay-1.1.6
-	o tiff-3.7.3
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
 	o tkcvs-7.2.3
