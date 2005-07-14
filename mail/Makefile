@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.266 2005/06/28 12:45:05 peter Exp $
+# $NetBSD: Makefile,v 1.267 2005/07/14 04:23:14 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -164,7 +164,7 @@ SUBDIR+=	qmailanalog
 SUBDIR+=	qpopper
 SUBDIR+=	qtools
 SUBDIR+=	queue-fix
-SUBDIR+=	queue_repair
+SUBDIR+=	queue-repair
 SUBDIR+=	rblcheck
 SUBDIR+=	ripmime
 SUBDIR+=	rmail-mime
