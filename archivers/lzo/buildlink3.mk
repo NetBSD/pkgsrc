@@ -1,5 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/07/14 20:02:48 wiz Exp $
-# XXX	BUILDLINK_DEPMETHOD.lzo?=	build
+# $NetBSD: buildlink3.mk,v 1.2 2005/07/14 20:05:17 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LZO_BUILDLINK3_MK:=	${LZO_BUILDLINK3_MK}+
