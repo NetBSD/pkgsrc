@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/07/14 19:19:43 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2005/07/14 20:16:23 wiz Exp $
 
 DISTNAME=	gnutls-1.2.5
 CATEGORIES=	security devel
@@ -43,8 +43,9 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}/doc/examples && ${INSTALL_DATA} *.c ${EGDIR}
 
-# needs liblzo2
+# currently compiles neither with liblzo nor with lzo
 #.include "../../archivers/liblzo/buildlink3.mk"
+#.include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
