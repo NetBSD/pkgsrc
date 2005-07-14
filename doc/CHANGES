@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10588 2005/07/13 21:58:33 recht Exp $
+$NetBSD: CHANGES,v 1.10589 2005/07/14 02:24:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3184,3 +3184,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/p5-Kwiki-Revisions to 0.15 [jlam 2005-07-13]
 	Updated devel/pkgconfig to 0.17.2nb3 [rillig 2005-07-13]
 	Updated devel/roundup to 0.8.3 [recht 2005-07-13]
+	Updated devel/automake to 1.9.6 [wiz 2005-07-14]
