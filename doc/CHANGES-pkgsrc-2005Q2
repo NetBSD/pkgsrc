@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.26 2005/07/14 22:02:02 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.27 2005/07/14 22:20:43 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -57,3 +57,5 @@ Pullup ticket 599 - requested by Min Sik Kim
 security update for unalz
 Pullup ticket 600 - requested by Adrian Portelli
 security update for bugzilla
+Pullup ticket 604 - requested by Adrian Portelli
+security update for net-snmp
