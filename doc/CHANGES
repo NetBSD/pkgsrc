@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10601 2005/07/14 16:39:47 taya Exp $
+$NetBSD: CHANGES,v 1.10602 2005/07/14 16:57:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3198,3 +3198,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/img2eps to 0.2 [dillo 2005-07-14]
 	Updated www/firefox to 1.0.5 [taya 2005-07-14]
 	Updated www/firefox-gtk1 to 1.0.5 [taya 2005-07-14]
+	Updated archivers/libzip to 0.6.1 [wiz 2005-07-14]
