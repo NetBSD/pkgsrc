@@ -256,12 +256,12 @@ viruscan
 vmware	
 vorbis			Enable Ogg Vorbis support.
 vpop	
-w3m-lynx-key		Enable lynx-like key bindings.
-w3m-m17n		Multilingual support.
-w3m-unicode		Use Unicode characters.
 w3m-image-gdk-pixbuf	Use gdk-pixbuf as imaging library for W3m.
 w3m-image-imlib		Use imlib as imaging library for W3m.
 w3m-image-imlib2	Use imlib2 as imaging library for W3m.
+w3m-lynx-key		Enable lynx-like key bindings.
+w3m-m17n		Multilingual support.
+w3m-unicode		Use Unicode characters.
 wrap	
 wx	
 x11	
@@ -270,10 +270,10 @@ xft
 xft2	
 xmlimportbugs	
 xmms-eq	
-xvid			Enable usage of XVid codecs.
-xterm-88color		Enable 88 color support.
 xterm-256color		Enable 256 color support.
+xterm-88color		Enable 88 color support.
 xterm-luit		Enable locale <> UTF encoding translation.
+xvid			Enable usage of XVid codecs.
 zaptel	
 zip	
 ziplinks	
