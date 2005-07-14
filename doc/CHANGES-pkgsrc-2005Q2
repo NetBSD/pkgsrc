@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.23 2005/07/07 20:52:21 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.24 2005/07/14 21:36:04 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -51,3 +51,5 @@ Pullup ticket 581 - requested by Min Sik Kim
 portability fix for netpbm
 Pullup ticket 590 - requested by Matthias Drochner
 security fix for zlib
+Pullup ticket 598 - requested by Matthias Scheler
+security update for firefox-bin
