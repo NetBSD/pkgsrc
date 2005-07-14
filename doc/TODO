@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3715 2005/07/14 19:17:43 wiz Exp $
+$NetBSD: TODO,v 1.3716 2005/07/14 19:20:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -626,6 +626,7 @@ Suggested package updates
 	o libjit-0.0.4 [pkg/30514]
 	o libksba-0.9.9
 	o liblive-2005.03.23
+	o liblzo-2.01
 	o libmatheval-1.1.2
 	o libmpeg3-1.5.4
 	o libopendaap-0.4.0
