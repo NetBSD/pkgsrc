@@ -1,18 +1,38 @@
-$NetBSD: patch-aa,v 1.8 2004/11/27 23:00:00 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2005/07/14 19:17:00 wiz Exp $
 
---- Makefile.in.orig	2004-09-17 13:44:29.000000000 +0200
-+++ Makefile.in
-@@ -2,11 +2,11 @@ SHELL=@SHELL@
- 
- .PHONY:all
- all:
--	for i in src po; do $(MAKE) -C $$i $@; done
-+	for i in src ; do $(MAKE) -C $$i $@; done
- 
- .PHONY:install
- install: all
--	for i in src po docs; do $(MAKE) -C $$i $@; done
-+	for i in src docs; do $(MAKE) -C $$i $@; done
- 
- .PHONY:uninstall
- uninstall:
+--- src/pinfile.c.orig	2005-06-08 19:49:17.000000000 +0200
++++ src/pinfile.c
+@@ -220,7 +220,14 @@ char* pinfile_get_subdata (const char* s
+       mem_realloc(temp,0);
+       if (pin != NULL) {
+ 	//find_pinpuk() already checked it
+-	puk = strndup(puk,strchr(puk,';')-puk);
++	char *foo;
++
++	foo = strchr(puk,';');
++	if (foo != NULL)
++		*foo = '\0';
++	puk = strdup(puk);
++	if (foo != NULL)
++		*foo = ';';
+       }
+     }
+   } else {
+@@ -232,9 +239,16 @@ char* pinfile_get_subdata (const char* s
+     print_verbose(0,"%s\n",_("not found"));
+     return strdup("");
+   } else {
++    char *foo;
++
+     print_verbose(0,"%s\n",_("found"));
+     //find_pinpuk() already checked it
+-    pin = strndup(pin,strchr(pin,';')-pin);
++    foo = strchr(pin,';');
++    if (foo != NULL)
++	*foo = '\0';
++    pin = strdup(pin);
++    if (foo != NULL)
++	*foo = ';';
+     mem_realloc(data,0);
+     if (puk == NULL) {
+       return pin;
