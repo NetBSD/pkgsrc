@@ -114,6 +114,7 @@ ipfilter
 iptables	
 irssi-perl		Enable Perl support in irssi.
 ispell	
+jasper			Enable JPEG 2000 support using the jasper library.
 java	
 jpeg			Enable JPEG support.
 jpilot	
