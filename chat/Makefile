@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2005/06/12 13:03:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.114 2005/07/14 23:11:10 adrianp Exp $
 #
 
 COMMENT=	Communication programs
@@ -67,6 +67,8 @@ SUBDIR+=	p5-Net-AOLIM
 SUBDIR+=	p5-Net-Goofey
 SUBDIR+=	p5-Net-ICQ2000
 SUBDIR+=	p5-Net-Jabber
+SUBDIR+=	p5-POE-Component-IRC
+SUBDIR+=	p5-POE-Filter-IRCD
 SUBDIR+=	pircbot
 SUBDIR+=	psi
 SUBDIR+=	quirc
