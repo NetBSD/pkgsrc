@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3707 2005/07/14 02:24:39 wiz Exp $
+$NetBSD: TODO,v 1.3708 2005/07/14 03:57:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -621,7 +621,6 @@ Suggested package updates
 	o libcomprex-0.3.3
 	o libdockapp-0.6.0
 	o libdvbpsi-0.1.5
-	o libdvdcss-1.2.9
 	o libetpan-0.34b
 	o libextractor-0.5.1
 	o libflash-0.4.13
