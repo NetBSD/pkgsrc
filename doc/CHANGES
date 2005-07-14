@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10589 2005/07/14 02:24:55 wiz Exp $
+$NetBSD: CHANGES,v 1.10590 2005/07/14 03:57:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3185,3 +3185,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/pkgconfig to 0.17.2nb3 [rillig 2005-07-13]
 	Updated devel/roundup to 0.8.3 [recht 2005-07-13]
 	Updated devel/automake to 1.9.6 [wiz 2005-07-14]
+	Updated multimedia/libdvdcss to 1.2.9 [wiz 2005-07-14]
