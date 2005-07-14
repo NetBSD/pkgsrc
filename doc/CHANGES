@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10607 2005/07/14 20:04:03 wiz Exp $
+$NetBSD: CHANGES,v 1.10608 2005/07/14 21:47:51 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3206,3 +3206,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated comms/scmxx to 0.8.0 [wiz 2005-07-14]
 	Updated security/gnutls to 1.2.5 [wiz 2005-07-14]
 	Added archivers/lzo version 2.01 [wiz 2005-07-14]
+	Added archivers/archangel version 20050714 [agc 2005-07-14]
