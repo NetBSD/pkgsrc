@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2005/06/22 21:12:50 dillo Exp $
+# $NetBSD: Makefile,v 1.85 2005/07/14 20:03:12 wiz Exp $
 #
 
 COMMENT=	Archivers
@@ -37,6 +37,7 @@ SUBDIR+=	libarchive
 SUBDIR+=	libcomprex
 SUBDIR+=	liblzo
 SUBDIR+=	libzip
+SUBDIR+=	lzo
 SUBDIR+=	lzop
 SUBDIR+=	macutil
 SUBDIR+=	makeself
