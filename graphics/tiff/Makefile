@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2005/06/22 02:31:36 grant Exp $
+# $NetBSD: Makefile,v 1.71 2005/07/14 00:29:16 grant Exp $
 
 DISTNAME=	tiff-3.7.2
 PKGREVISION=	1
@@ -21,12 +21,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/tiff
-
-.include "../../mk/compiler.mk"
-
-.if !empty(CC_VERSION:MSun)
-CXXFLAGS+=		-lCrun -lCstd
-.endif
 
 .include "options.mk"
 
