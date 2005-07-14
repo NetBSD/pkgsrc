@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.3 2005/07/14 21:47:57 wiz Exp $
+
+--- Makefile.in.orig	2005-06-06 00:03:23.000000000 +0200
++++ Makefile.in
+@@ -762,8 +762,8 @@ install-data-local:
+ @INSTALLDATA_TRUE@	srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`; \
+ @INSTALLDATA_TRUE@	( $(finddata) ) | while read p; do \
+ @INSTALLDATA_TRUE@	  $(w_preparefileinstall) \
+-@INSTALLDATA_TRUE@	  echo $(INSTALL_DATA) "$$d$$p" "$(DESTDIR)$(pkgdatadir)/$$f"; \
+-@INSTALLDATA_TRUE@	  $(INSTALL_DATA) "$$d$$p" "$(DESTDIR)$(pkgdatadir)/$$f"; \
++@INSTALLDATA_TRUE@	  echo $(install_sh_DATA) "$$d$$p" "$(DESTDIR)$(pkgdatadir)/$$f"; \
++@INSTALLDATA_TRUE@	  $(install_sh_DATA) "$$d$$p" "$(DESTDIR)$(pkgdatadir)/$$f"; \
+ @INSTALLDATA_TRUE@	done
+ @DUMMYLOCALES_TRUE@@INSTALLDATA_TRUE@	$(mkdir_p) "$(DESTDIR)$(pkgdatadir)/locales"
+ @DUMMYLOCALES_TRUE@@INSTALLDATA_TRUE@	if test -d "$(DESTDIR)$(pkgdatadir)/locales/C" ; then rm -r "$(DESTDIR)$(pkgdatadir)/locales/C" ; fi
