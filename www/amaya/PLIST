@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/07/12 14:34:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/07/14 08:06:58 adam Exp $
 bin/amaya
 bin/amaya-gtk
 share/Amaya/amaya/Amaya.svg
@@ -138,6 +138,7 @@ share/Amaya/config/fonts.gl.mac
 share/Amaya/config/fonts.gl.mac.def
 share/Amaya/config/fonts.gl.rd
 share/Amaya/config/fonts.gl.win
+share/Amaya/config/fonts.gl.win.nt
 share/Amaya/config/fonts.tmpl
 share/Amaya/config/fonts.unix
 share/Amaya/config/fonts.unix.deb
@@ -1418,8 +1419,8 @@ share/Amaya/resources/xrc/TextDlgWX.xrc
 share/Amaya/resources/xrc/TitleDlgWX.xrc
 share/Amaya/resources/xrc/Toolbar.xrc
 share/Amaya/resources/xrc/WinPrintDlgWX.xrc
-share/applications/amaya-8.8.desktop
-share/pixmaps/amaya-8.8.png
+share/applications/amaya-8.8.1.desktop
+share/pixmaps/amaya-8.8.1.png
 @dirrm share/Amaya/resources/xrc
 @dirrm share/Amaya/resources/icons/misc
 @dirrm share/Amaya/resources/icons/22x22
