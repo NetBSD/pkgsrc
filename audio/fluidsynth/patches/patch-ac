@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/04/25 13:53:37 adam Exp $
+$NetBSD: patch-ac,v 1.2 2005/07/14 12:49:34 adam Exp $
 
---- configure.orig	2005-04-22 15:45:10.000000000 +0000
+--- configure.orig	2005-06-11 22:04:33.000000000 +0000
 +++ configure
-@@ -20182,7 +20182,7 @@ fi;
+@@ -20432,7 +20432,7 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
  
- case "$ENABLE_DEBUG" in
- no)
+ else
 -  CFLAGS="${CFLAGS} ${FCCFLAGS} -O2 -fomit-frame-pointer -funroll-all-loops -finline-functions -Wall -W -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wstrict-prototypes -Wno-unused -Winline"
 +  CFLAGS="${CFLAGS} ${FCCFLAGS} -Wall -W -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wstrict-prototypes -Wno-unused -Winline"
  
