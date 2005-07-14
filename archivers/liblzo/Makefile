@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:44:49 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/07/14 20:04:39 wiz Exp $
 #
 
 DISTNAME=	lzo-1.08
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.oberhumer.com/opensource/lzo/download/ \
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.oberhumer.com/opensource/lzo/
-COMMENT=	Portable lossless data compression library written in ANSI C
+COMMENT=	Portable lossless data compression library (v1)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
