@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/06/17 22:58:02 adrianp Exp $
+$NetBSD: distinfo,v 1.6.2.1 2005/07/14 22:01:51 snj Exp $
 
-SHA1 (bugzilla-2.18.1.tar.gz) = ec582315d2a909929045494b5ad11ffe97fc63bf
-RMD160 (bugzilla-2.18.1.tar.gz) = fbcecb2ec617fc2291aed680787464b72b312a50
-Size (bugzilla-2.18.1.tar.gz) = 1542054 bytes
+SHA1 (bugzilla-2.18.3.tar.gz) = c0916d8dc00955ec03e5af4f3b215b351047684a
+RMD160 (bugzilla-2.18.3.tar.gz) = c683f387c33379196cf5c3abad64bb02314dbc29
+Size (bugzilla-2.18.3.tar.gz) = 1649951 bytes
 SHA1 (patch-aa) = 8b25ff33bb77ce226b52ccf97ec7c91c1e95a6a1
