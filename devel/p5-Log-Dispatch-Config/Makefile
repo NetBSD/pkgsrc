@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/13 18:01:26 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/14 13:25:41 wiz Exp $
 
 DISTNAME=	Log-Dispatch-Config-1.01
 PKGNAME=	p5-${DISTNAME}
@@ -17,6 +17,5 @@ DEPENDS+=	p5-Log-Dispatch>=2.00:../../devel/p5-Log-Dispatch
 
 PERL5_PACKLIST=		auto/Log/Dispatch/Config/.packlist
 
-.include "../../devel/p5-Test-Harness/depends.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
