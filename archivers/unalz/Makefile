@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:44:50 tv Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2005/07/14 21:47:08 snj Exp $
 #
 
-DISTNAME=		unalz-0.31
+DISTNAME=		unalz-0.40
 CATEGORIES=		archivers
 MASTER_SITES=		http://www.kipple.pe.kr/win/unalz/
 EXTRACT_SUFX=		.tgz
@@ -15,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 BUILD_TARGET=		posix
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
+WRKSRC=			${WRKDIR}/unalz
 
 INSTALLATION_DIRS=	bin
 
