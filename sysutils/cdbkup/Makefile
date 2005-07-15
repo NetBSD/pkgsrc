@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/06/24 18:18:00 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/15 23:02:08 kristerw Exp $
 
 DISTNAME=		cdbkup-1.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdbkup/} \
 			ftp://batraq.anything3d.com/pub/cdbkup/cdbkup-1/ \
@@ -14,16 +14,13 @@ COMMENT=		CD-R(W) backup/restore system
 .include "../../mk/bsd.prefs.mk"
 
 DEPENDS+=		cdrecord>=1.10:../../sysutils/cdrecord
-.if ${OPSYS} == "NetBSD" && \
-	(!empty(OS_VERSION:M1.6[K-Z]) || !empty(OS_VERSION:M[2-9].*))
-DEPENDS+=		gtar-base>=1.13.25:../../archivers/gtar-base
-.endif
 
 GNU_CONFIGURE=		YES
 USE_PERL5=		YES
-USE_TOOLS+=		cat date
+USE_TOOLS+=		cat date gtar
 CONFIGURE_ENV+=		CAT="${TOOLS_CAT}"
 CONFIGURE_ENV+=		DATE="${TOOLS_DATE}"
+CONFIGURE_ENV+=		GNUTAR="${TOOLS_TAR}"
 
 .if (${OPSYS} == SunOS)
 CDBKUP_SNARDIR?=	/var/${PKGBASE}
