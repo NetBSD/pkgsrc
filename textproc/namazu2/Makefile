@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/07/12 16:03:56 taca Exp $
+# $NetBSD: Makefile,v 1.21 2005/07/15 20:14:03 jlam Exp $
 
 DISTNAME=	namazu-2.0.14
 PKGREVISION=	2
@@ -18,8 +18,7 @@ CONFLICTS+=	namazu-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
 USE_PKGINSTALL=		yes
-USE_TOOLS=		perl
-TOOLS_DEPMETHOD.perl=	DEPENDS
+USE_TOOLS=		perl:run
 GNU_CONFIGURE=		yes
 USE_LANGUAGE=		c
 USE_LIBTOOL=		yes
