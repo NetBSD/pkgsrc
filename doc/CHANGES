@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10612 2005/07/15 16:06:05 zuntum Exp $
+$NetBSD: CHANGES,v 1.10613 2005/07/15 23:26:27 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3214,3 +3214,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Added chat/p5-POE-Component-IRC version 4.64 [adrianp 2005-07-15]
 	Updated devel/bglibs to 1.024 [schmonz 2005-07-15]
 	Updated net/polsms to 2.0.3 [zuntum 2005-07-15]
+	Updated news/inn to 2.4.1nb6 [kristerw 2005-07-15]
+	Updated sysutils/amanda-common to 2.4.4p4nb1 [kristerw 2005-07-15]
+	Updated sysutils/cdbkup to 1.0nb3 [kristerw 2005-07-15]
