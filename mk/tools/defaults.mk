@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.35 2005/07/15 18:27:55 jlam Exp $
+# $NetBSD: defaults.mk,v 1.36 2005/07/15 20:14:04 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -178,7 +178,7 @@ _TOOLS_VARNAME_GNU.yacc=	YACC
 # just in the targets, so these must be defined here, and this file be
 # included by bsd.prefs.mk.
 #
-.for _t_ in ${USE_TOOLS:O:u}
+.for _t_ in ${USE_TOOLS:C/:.*//:O:u}
 .  if defined(_TOOLS_VARNAME.${_t_}) && \
       defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
 .    for _v_ in ${_TOOLS_VARNAME.${_t_}}

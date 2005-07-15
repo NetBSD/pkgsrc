@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2005/06/10 18:44:31 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2005/07/15 20:14:03 jlam Exp $
 
 DISTNAME=		a2ps-4.13b
 PKGNAME=		a2ps-4.13.0.2
@@ -22,9 +22,7 @@ STRIP=			# empty
 USE_PERL5=		yes
 USE_LIBTOOL=		yes
 
-USE_TOOLS+=		file gmake mktemp
-TOOLS_DEPMETHOD.file=	DEPENDS
-TOOLS_DEPMETHOD.mktemp=	DEPENDS
+USE_TOOLS+=		file:run gmake mktemp:run
 CONFIGURE_ENV+=		file_prog=${FILE_CMD:Q}
 
 USE_PKGINSTALL=		YES

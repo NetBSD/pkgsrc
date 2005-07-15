@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2005/07/14 02:24:22 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2005/07/15 20:14:03 jlam Exp $
 #
 
 DISTNAME=	automake-1.9.6
@@ -13,8 +13,7 @@ COMMENT=	GNU Standards-compliant Makefile generator
 
 DEPENDS=	autoconf>=2.58:../../devel/autoconf
 
-USE_TOOLS+=		gm4
-TOOLS_DEPMETHOD.gm4=	DEPENDS
+USE_TOOLS+=		gm4:run
 
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
