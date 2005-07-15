@@ -1,22 +1,31 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/12/21 00:12:29 schmonz Exp $
+$NetBSD: patch-aa,v 1.2 2005/07/15 05:45:00 schmonz Exp $
 
---- insthier.c.orig	2004-11-15 15:50:28.000000000 -0500
-+++ insthier.c
-@@ -15,7 +15,7 @@ void insthier(void)
+--- bg-installer.c.orig	2005-07-11 00:47:35.000000000 -0400
++++ bg-installer.c
+@@ -151,7 +151,7 @@ static void show(char type, unsigned uid
+   obuf_endl(&outbuf);
+ }
  
-   bin = d(home, "bin", -1, -1, 0755);
+-static void setmode(const char* filename,
++static void bgsetmode(const char* filename,
+ 		    unsigned uid, unsigned gid, unsigned mode)
+ {
+   if (chown(filename, uid, gid) != 0)
+@@ -201,7 +201,7 @@ static void c(unsigned uid, unsigned gid
+     if (!ibuf_copytofd(&in, out)
+ 	|| close(out) != 0)
+       diefsys(1, "{Could not write '}s{'}", pathtmp.s);
+-    setmode(pathtmp.s, uid, gid, mode);
++    bgsetmode(pathtmp.s, uid, gid, mode);
+     if (rename(pathtmp.s, path.s) != 0)
+       diefsys(1, "{Could not rename '}s{' to '}s{'}", pathtmp.s, path.s);
+     ibuf_close(&in);
+@@ -224,7 +224,7 @@ static void d(unsigned uid, unsigned gid
+     }
+     else if (!S_ISDIR(st.st_mode))
+       dief(1, "{Path '}s{' exists but is not a directory}", path.s);
+-    setmode(path.s, uid, gid, mode);
++    bgsetmode(path.s, uid, gid, mode);
+   }
  
--  inc = d(home, "include", -1, -1, 0755);
-+  inc = d(home, "include/bglibs", -1, -1, 0755);
- 
-   cf(inc, "installer.h", -1, -1, 0644, "install/installer.h");
-   C(inc, sysdeps.h);
-@@ -111,7 +111,7 @@ void insthier(void)
-   CF(vmailmgr, client.h);
-   CF(vmailmgr, vpwentry.h);
-   
--  lib = d(home, "lib", -1, -1, 0755);
-+  lib = d(home, "lib/bglibs", -1, -1, 0755);
- 
-   c(lib, "libbg.a", -1, -1, 0644);
- 
+   if (opt_check) {

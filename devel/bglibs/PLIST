@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/21 00:12:29 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/07/15 05:45:00 schmonz Exp $
+bin/bg-installer
+bin/crc-gentab
 include/bglibs/adt/common.h
 include/bglibs/adt/ghash.h
 include/bglibs/adt/gqueue.h
@@ -58,7 +60,19 @@ include/bglibs/unix/sig.h
 include/bglibs/unix/trigger.h
 include/bglibs/vmailmgr/client.h
 include/bglibs/vmailmgr/vpwentry.h
-lib/bglibs/libbase64/base64.a
+lib/bglibs/base64/base64.a
+lib/bglibs/cdb/cdb.a
+lib/bglibs/cdb/make.a
+lib/bglibs/cdb/str.a
+lib/bglibs/cli/cli.a
+lib/bglibs/crypto/md5
+lib/bglibs/crypto/sha1.a
+lib/bglibs/crypto/sha256.a
+lib/bglibs/crypto/sha512a.a
+lib/bglibs/dict/dict.a
+lib/bglibs/dict/load.a
+lib/bglibs/iobuf/iobuf.a
+lib/bglibs/iobuf/str.a
 lib/bglibs/libbg-adt.a
 lib/bglibs/libbg-base64.a
 lib/bglibs/libbg-cdb.a
@@ -79,55 +93,43 @@ lib/bglibs/libbg-str.a
 lib/bglibs/libbg-sysdeps.a
 lib/bglibs/libbg-unix.a
 lib/bglibs/libbg.a
-lib/bglibs/libcdb/cdb.a
-lib/bglibs/libcdb/make.a
-lib/bglibs/libcdb/str.a
-lib/bglibs/libcli/cli.a
-lib/bglibs/libcrypto/md5.a
-lib/bglibs/libcrypto/sha1.a
-lib/bglibs/libcrypto/sha256.a
-lib/bglibs/libcrypto/sha512a.a
-lib/bglibs/libdict/dict.a
-lib/bglibs/libdict/load.a
 lib/bglibs/libinstaller.a
 lib/bglibs/libinstcheck.a
 lib/bglibs/libinstshow.a
-lib/bglibs/libiobuf/iobuf.a
-lib/bglibs/libiobuf/str.a
-lib/bglibs/libmisc/misc.a
-lib/bglibs/libmsg/msg.a
-lib/bglibs/libmsg/wrap.a
-lib/bglibs/libnet/ipv4.a
-lib/bglibs/libnet/resolve.a
-lib/bglibs/libnet/socket.a
-lib/bglibs/libpath/path.a
 lib/bglibs/libpwcmp-module.a
 lib/bglibs/libpwcmp.a
-lib/bglibs/libpwcmp/client.a
-lib/bglibs/libpwcmp/hex.a
-lib/bglibs/libpwcmp/module.a
-lib/bglibs/libstr/iter.a
-lib/bglibs/libstr/str.a
 lib/bglibs/libsysdeps.a
-lib/bglibs/libunix/nonblock.a
-lib/bglibs/libunix/sig.a
 lib/bglibs/libvmailmgr.a
-lib/bglibs/libvmailmgr/client.a
-lib/bglibs/libvmailmgr/vpwentry.a
-@dirrm lib/bglibs/libvmailmgr
-@dirrm lib/bglibs/libunix
-@dirrm lib/bglibs/libstr
-@dirrm lib/bglibs/libpwcmp
-@dirrm lib/bglibs/libpath
-@dirrm lib/bglibs/libnet
-@dirrm lib/bglibs/libmsg
-@dirrm lib/bglibs/libmisc
-@dirrm lib/bglibs/libiobuf
-@dirrm lib/bglibs/libdict
-@dirrm lib/bglibs/libcrypto
-@dirrm lib/bglibs/libcli
-@dirrm lib/bglibs/libcdb
-@dirrm lib/bglibs/libbase64
+lib/bglibs/misc/misc.a
+lib/bglibs/msg/msg.a
+lib/bglibs/msg/wrap.a
+lib/bglibs/net/ipv4.a
+lib/bglibs/net/resolve.a
+lib/bglibs/net/socket.a
+lib/bglibs/path/path.a
+lib/bglibs/pwcmp/client.a
+lib/bglibs/pwcmp/hex.a
+lib/bglibs/pwcmp/module.a
+lib/bglibs/str/iter.a
+lib/bglibs/str/str.a
+lib/bglibs/unix/nonblock.a
+lib/bglibs/unix/sig.a
+lib/bglibs/vmailmgr/client.a
+lib/bglibs/vmailmgr/vpwentry.a
+@dirrm lib/bglibs/vmailmgr
+@dirrm lib/bglibs/unix
+@dirrm lib/bglibs/str
+@dirrm lib/bglibs/pwcmp
+@dirrm lib/bglibs/path
+@dirrm lib/bglibs/net
+@dirrm lib/bglibs/msg
+@dirrm lib/bglibs/misc
+@dirrm lib/bglibs/iobuf
+@dirrm lib/bglibs/dict
+@dirrm lib/bglibs/crypto
+@dirrm lib/bglibs/cli
+@dirrm lib/bglibs/cdb
+@dirrm lib/bglibs/base64
 @dirrm lib/bglibs
 @dirrm include/bglibs/vmailmgr
 @dirrm include/bglibs/unix
