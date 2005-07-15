@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.6 2005/06/23 21:34:01 kristerw Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.7 2005/07/15 18:27:54 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets the for various install-time "check"
@@ -41,7 +41,7 @@ CHECK_FILES?=		no
 CHECK_FILES_STRICT?=	no
 CHECK_WRKREF?=		no
 
-PKGSRC_USE_TOOLS+=	awk cat cmp diff echo find grep rm sed test	\
+USE_TOOLS+=		awk cat cmp diff echo find grep rm sed test	\
 			touch true
 
 ###########################################################################

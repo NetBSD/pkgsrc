@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/16 06:57:54 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/15 18:27:50 jlam Exp $
 #
 
 DISTNAME=	heretic2-demo-x86
@@ -16,7 +16,7 @@ COMMENT=	Heretic2 - first person Quake 3D engine based (linux demo)
 NO_CONFIGURE=	yes
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
 								${GTAR} xzf -
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar
 
 ONLY_FOR_PLATFORM=*-*-i386
 

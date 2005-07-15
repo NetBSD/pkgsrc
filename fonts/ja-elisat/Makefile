@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/17 04:49:46 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/15 18:27:50 jlam Exp $
 
 DISTNAME=		elisat10
 PKGNAME=		ja-elisat-1.0
@@ -14,7 +14,7 @@ USE_X11BASE=		YES
 DOCDIR=			${PREFIX}/share/doc/elisat
 FONTDIR=		${PREFIX}/lib/X11/fonts/local
 #ALIAS=			${WRKDIR}/fonts.alias
-PKGSRC_USE_TOOLS+=	gzip
+USE_TOOLS+=		gzip
 
 LICENSE=		no-commercial-use
 

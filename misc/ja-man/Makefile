@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:21 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/15 18:27:52 jlam Exp $
 
 DISTNAME=	NetBSD1.3I-jman-19990531
 PKGNAME=	ja-man-19990531
@@ -18,7 +18,7 @@ MAKE_ENV+=	JAMANDIR=${JAMANDIR}
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=		gtar
 MANCOMPRESSED_IF_MANZ=	yes
 INSTALLATION_DIRS=	bin etc share/groff/tmac
 

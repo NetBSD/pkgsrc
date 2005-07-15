@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/06/17 03:50:23 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/07/15 18:27:52 jlam Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -52,7 +52,7 @@ DISTFILES+=	${SKINS}
 DISTINFO_FILE=	${.CURDIR}/distinfo
 DIST_SUBDIR=	${PKGNAME_NOREV}-20050409
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=		gtar
 CONFIGURE_ARGS+=	--enable-gui --disable-mencoder \
 			--confdir=${PREFIX}/share/mplayer
 

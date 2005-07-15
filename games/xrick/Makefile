@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/16 06:57:56 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/07/15 18:27:51 jlam Exp $
 #
 
 DISTNAME=	xrick-021212
@@ -17,8 +17,7 @@ NO_SRC_ON_CDROM=    ${RESTRICTED}
 NO_BIN_ON_FTP=	    ${RESTRICTED}
 NO_SRC_ON_FTP=	    ${RESTRICTED}
 
-USE_TOOLS+=		gmake
-PKGSRC_USE_TOOLS+=	gunzip
+USE_TOOLS+=		gmake gunzip
 
 SUBST_CLASSES+=		data
 SUBST_STAGE.data=	post-patch

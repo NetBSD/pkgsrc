@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/01 18:03:20 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/15 18:27:53 jlam Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 PKGREVISION=	5
@@ -35,11 +35,9 @@ TETEX_DIR=	${PKGSRCDIR}/print/teTeX1-bin/${WRKDIR:T}/teTeX-1.0
 WRKSRC=		${TETEX_DIR}
 EXTRACT_ONLY=	# none
 
-PKGSRC_USE_TOOLS+=	gtar
-
 BUILD_TARGET=	all
 INSTALL_TARGET=	install strip
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake gtar
 PLIST_SUBST+=	MV="${MV}"
 CFLAGS+=	-Dunix
 MAKEFLAGS+=	PREFIX=${PREFIX:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/31 11:24:32 dillo Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/15 18:27:48 jlam Exp $
 
 PKGNAME=		postgresql73-server-${BASE_VERS}
 PKGREVISION=		# empty
@@ -16,7 +16,7 @@ NOT_FOR_PLATFORM=	*-*-mips
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=		gtar
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 BUILD_DIRS=		${WRKSRC}/src/backend
 BUILD_DIRS+=		${WRKSRC}/src/backend/utils/mb/conversion_procs

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/06/16 06:57:53 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/07/15 18:27:50 jlam Exp $
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
@@ -15,7 +15,7 @@ NOT_FOR_PLATFORM=	*-*-alpha	# relies on Mesa (gcc)
 
 WRKSRC=			${WRKDIR}/battalionSource
 EXTRACT_ONLY=		battalionSource1.4.tar.Z
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=		gtar
 
 .include "../../mk/bsd.prefs.mk"
 

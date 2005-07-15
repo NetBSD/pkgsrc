@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:36 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/15 18:27:53 jlam Exp $
 
 DISTNAME=	html2text-1.3.2a
 CATEGORIES=	textproc
@@ -12,7 +12,7 @@ USE_LANGUAGES=		c c++
 GCC_REQD=		3.0
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		ECHO="${ECHO}"
-PKGSRC_USE_TOOLS+=	gunzip
+USE_TOOLS+=		gunzip
 INSTALLATION_DIRS=	bin man/man1 man/man5
 
 post-build:

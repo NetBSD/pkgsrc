@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.9 2005/05/22 19:11:12 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.10 2005/07/15 18:27:54 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -55,34 +55,34 @@ _EXTRACT_SUFFIXES+=	.rar
     !empty(EXTRACT_SUFX:M*.tbz) || !empty(EXTRACT_SUFX:M*.tgz) || \
     !empty(EXTRACT_ONLY:M*_tar.gz) || !empty(EXTRACT_SUFX:M*_tar.gz)
 .  if !empty(EXTRACT_USING:Mgtar)
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar
 .  elif !empty(EXTRACT_USING:Mnbtar)
-PKGSRC_USE_TOOLS+=	tar
+USE_TOOLS+=	tar
 .  else
-PKGSRC_USE_TOOLS+=	pax
+USE_TOOLS+=	pax
 .  endif
 .endif
 .if !empty(EXTRACT_ONLY:M*.bz2) || !empty(EXTRACT_ONLY:M*.tbz) || \
     !empty(EXTRACT_SUFX:M*.bz2) || !empty(EXTRACT_SUFX:M*.tbz)
-PKGSRC_USE_TOOLS+=	bzcat
+USE_TOOLS+=	bzcat
 .endif
 .if !empty(EXTRACT_ONLY:M*.zip) || !empty(EXTRACT_SUFX:M*.zip)
-PKGSRC_USE_TOOLS+=	unzip
+USE_TOOLS+=	unzip
 .endif
 .if !empty(EXTRACT_ONLY:M*.lzh) || !empty(EXTRACT_ONLY:M*.lha) || \
     !empty(EXTRACT_SUFX:M*.lzh) || !empty(EXTRACT_SUFX:M*.lha)
-PKGSRC_USE_TOOLS+=	lha
+USE_TOOLS+=	lha
 .endif
 .if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
     !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz) || \
     !empty(EXTRACT_ONLY:M*.Z) || !empty(EXTRACT_SUFX:M*.Z)
-PKGSRC_USE_TOOLS+=	gzcat
+USE_TOOLS+=	gzcat
 .endif
 .if !empty(EXTRACT_ONLY:M*.zoo) || !empty(EXTRACT_SUFX:M*.zoo)
-PKGSRC_USE_TOOLS+=	unzoo
+USE_TOOLS+=	unzoo
 .endif
 .if !empty(EXTRACT_ONLY:M*.rar) || !empty(EXTRACT_SUFX:M*.rar)
-PKGSRC_USE_TOOLS+=	unrar
+USE_TOOLS+=	unrar
 .endif
 
 DECOMPRESS_CMD.tar.gz?=		${GZCAT}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/05/15 22:02:26 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/07/15 18:27:48 jlam Exp $
 
 DISTNAME=	RasMol_2.7.1
 PKGNAME=	rasmol-2.7.1
@@ -12,7 +12,7 @@ COMMENT=	Molecular Graphics Visualisation Tool
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_IMAKE=	YES
-PKGSRC_USE_TOOLS+=	gunzip
+USE_TOOLS+=	gunzip
 
 MAKE_ENV+=	DEPTHDEF="${DEPTHDEF}"
 

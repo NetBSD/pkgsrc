@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/06/01 18:02:54 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/15 18:27:51 jlam Exp $
 #
 
 DISTNAME=	Ngraph-6.3.30-src
@@ -15,8 +15,7 @@ COMMENT=	The 2D graph and data analysis program
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_TOOLS+=		gmake
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=		gmake gtar
 
 post-extract:
 	${GTAR} -C ${WRKSRC}/combo -xzf ${DISTDIR}/ileaf-widgets.tar.Z

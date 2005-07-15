@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.195 2005/06/14 07:25:24 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.196 2005/07/15 18:27:55 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -267,16 +267,15 @@ _PKGSRC_TOPDIR=	${.CURDIR}/../..
 .  include "${_PKGSRC_TOPDIR}/mk/defaults/mk.conf"
 .endif
 
-PKGSRC_USE_TOOLS?=	# empty
-USE_TOOLS?=		# empty
+USE_TOOLS?=	# empty
 
 # Provide default values for TOOLs used by the top-level make.
-PKGSRC_USE_TOOLS+=	[ awk dirname echo grep pwd sed test true
+USE_TOOLS+=	[ awk dirname echo grep pwd sed test true
 
 # These tools are used by the top-level make only in certain packages and
 # should eventually be moved into those particular package Makefiles.
 #
-PKGSRC_USE_TOOLS+=	date tr
+USE_TOOLS+=	date tr
 
 .include "${_PKGSRC_TOPDIR}/mk/tools/defaults.mk"
 

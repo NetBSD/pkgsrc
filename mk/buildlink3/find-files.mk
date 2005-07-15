@@ -1,4 +1,4 @@
-# $NetBSD: find-files.mk,v 1.1 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: find-files.mk,v 1.2 2005/07/15 18:27:55 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -72,11 +72,11 @@
 # .include "../../mk/buildlink3/builtin-files.mk"
 #
 
-.if empty(PKGSRC_USE_TOOLS:Mecho)
-PKGSRC_USE_TOOLS+=	echo
+.if empty(USE_TOOLS:Mecho)
+USE_TOOLS+=	echo
 .endif
-.if empty(PKGSRC_USE_TOOLS:Mgrep)
-PKGSRC_USE_TOOLS+=	grep
+.if empty(USE_TOOLS:Mgrep)
+USE_TOOLS+=	grep
 .endif
 
 .for _var_ in ${BUILTIN_FIND_FILES_VAR}

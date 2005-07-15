@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/16 01:15:34 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/15 18:27:54 jlam Exp $
 
 .include "../iasp/Makefile.common"
 
@@ -13,7 +13,7 @@ WRKSRC=		${WRKDIR}/${IASP_SRCDIR}
 APACHE_MODULE=	# defined
 MESSAGE_SUBST+=	IASP_DESTDIR=${IASP_DESTDIR}
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar
 
 post-extract:
 	cd ${WRKDIR}; ${GTAR} -xf ${IASP_TARFILE} ${IASP_SRCDIR}
