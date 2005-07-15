@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10611 2005/07/15 05:45:52 schmonz Exp $
+$NetBSD: CHANGES,v 1.10612 2005/07/15 16:06:05 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3213,3 +3213,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added chat/p5-POE-Filter-IRCD version 1.1 [adrianp 2005-07-15]
 	Added chat/p5-POE-Component-IRC version 4.64 [adrianp 2005-07-15]
 	Updated devel/bglibs to 1.024 [schmonz 2005-07-15]
+	Updated net/polsms to 2.0.3 [zuntum 2005-07-15]
