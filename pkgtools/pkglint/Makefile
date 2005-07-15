@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2005/07/05 01:09:17 rillig Exp $
+# $NetBSD: Makefile,v 1.245 2005/07/15 20:14:03 jlam Exp $
 #
 
 DISTNAME=	pkglint-4.18
@@ -14,8 +14,7 @@ DEPENDS+=	digest>=20010101:../../pkgtools/digest
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=	perl
-TOOLS_DEPMETHOD.perl=	DEPENDS
+USE_TOOLS+=	perl:run
 
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
