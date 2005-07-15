@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:38 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/15 20:14:03 jlam Exp $
 
 DISTNAME=	flac2mp3
 PKGNAME=	flac2mp3-20041223
@@ -18,8 +18,7 @@ EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 REPLACE_PERL=	flac2mp3.pl
-USE_TOOLS+=	perl
-TOOLS_DEPMETHOD.perl=	DEPENDS
+USE_TOOLS+=	perl:run
 WRKSRC=		${WRKDIR}
 
 NO_BUILD=	yes
