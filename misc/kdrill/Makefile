@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/15 22:02:27 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/15 18:27:52 jlam Exp $
 #
 
 DISTNAME=	kdrill5.11.6
@@ -14,8 +14,8 @@ COMMENT=	Kanji quiz and japanese dictionary
 DEPENDS+=	edict-[0-9]*:../../misc/edict
 DEPENDS+=	kanjidic-[0-9]*:../../misc/kanjidic
 
-USE_IMAKE=		yes
-PKGSRC_USE_TOOLS+=	gzip
+USE_IMAKE=	yes
+USE_TOOLS+=	gzip
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kdrill

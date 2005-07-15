@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/16 06:57:49 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/15 18:27:49 jlam Exp $
 
 DISTNAME=	ted-2.16.src
 PKGNAME=	ted-en-us-2.16
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/Ted-2.16
 USE_X11BASE=	YES
 NO_BUILD=	YES
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=		gtar
 INSTALLATION_DIRS=	share/Ted/ind
 
 post-extract:

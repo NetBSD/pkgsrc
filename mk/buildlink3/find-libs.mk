@@ -1,4 +1,4 @@
-# $NetBSD: find-libs.mk,v 1.2 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: find-libs.mk,v 1.3 2005/07/15 18:27:55 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -52,11 +52,11 @@
 # # either "yes" or "no".
 #
 
-.if empty(PKGSRC_USE_TOOLS:Mecho)
-PKGSRC_USE_TOOLS+=	echo
+.if empty(USE_TOOLS:Mecho)
+USE_TOOLS+=	echo
 .endif
-.if empty(PKGSRC_USE_TOOLS:Mtest)
-PKGSRC_USE_TOOLS+=	test
+.if empty(USE_TOOLS:Mtest)
+USE_TOOLS+=	test
 .endif
 
 .for _lib_ in ${BUILTIN_FIND_LIBS}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/15 22:02:27 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/15 18:27:50 jlam Exp $
 
 DISTNAME=	jisx0212fonts-0.0
 PKGREVISION=	1
@@ -21,7 +21,7 @@ FONTS=		${DISTFILES:C/\.bdf.*$//}
 FONTDIR=	${PREFIX}/lib/X11/fonts/local
 FONTS_X11_DIRS=	${FONTDIR}
 
-PKGSRC_USE_TOOLS+=	gzip gunzip
+USE_TOOLS+=	gzip gunzip
 
 # XXX Can we assume that ${GUNZIP_CMD} can extract .Z files?
 do-extract:
