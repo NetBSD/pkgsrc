@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.108 2005/07/15 18:27:55 jlam Exp $
+# $NetBSD: replace.mk,v 1.109 2005/07/15 20:14:04 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -69,19 +69,20 @@
 # to be generated that may be used as a yacc-replacement.
 #
 # By default, any dependencies on the pkgsrc tools are build dependencies,
-# but this may be changed by explicitly setting TOOLS_DEPMETHOD.<tool>,
+# but this may be changed by adding a :run modifier to the tool name,
 # e.g.:
 #
-#	TOOLS_DEPMETHOD.tbl=	DEPENDS
+#	USE_TOOLS+=	perl:run
 #
 
 # Continue to allow USE_PERL5 until packages have been taught to use the
 # new syntax.
 #
 .if defined(USE_PERL5)
-USE_TOOLS+=	perl
 .  if empty(USE_PERL5:Mbuild)
-TOOLS_DEPMETHOD.perl?=	DEPENDS
+USE_TOOLS+=	perl:run
+.  else
+USE_TOOLS+=	perl
 .  endif
 .endif
 
@@ -93,7 +94,7 @@ USE_TOOLS+=	perl
 .endif
 
 # bison implies "bison-yacc"
-.if !empty(USE_TOOLS:Mbison)
+.if !empty(USE_TOOLS:Mbison) || !empty(USE_TOOLS:Mbison\:*)
 USE_TOOLS+=	bison-yacc
 .endif
 
@@ -103,24 +104,66 @@ USE_TOOLS+=	bison-yacc
 # ones that are overridden by superseding ones.
 #
 .if !defined(_USE_TOOLS)
-_USE_TOOLS:=	${USE_TOOLS:O:u}
-.  if !empty(USE_TOOLS:Mbison-yacc)	# bison-yacc > yacc
+_USE_TOOLS:=	${USE_TOOLS:C/:.*//:O:u}
+.  if !empty(_USE_TOOLS:Mbison-yacc)	# bison-yacc > yacc
 _USE_TOOLS:=	${_USE_TOOLS:Nyacc}
 .  endif
-.  if !empty(USE_TOOLS:Mflex)		# flex > lex
+.  if !empty(_USE_TOOLS:Mflex)		# flex > lex
 _USE_TOOLS:=	${_USE_TOOLS:Nlex}
 .  endif
-.  if !empty(USE_TOOLS:Mgawk)		# gawk > awk
+.  if !empty(_USE_TOOLS:Mgawk)		# gawk > awk
 _USE_TOOLS:=	${_USE_TOOLS:Nawk}
 .  endif
-.  if !empty(USE_TOOLS:Mgm4)		# gm4 > m4
+.  if !empty(_USE_TOOLS:Mgm4)		# gm4 > m4
 _USE_TOOLS:=	${_USE_TOOLS:Nm4}
 .  endif
-.  if !empty(USE_TOOLS:Mgsed)		# gsed > sed
+.  if !empty(_USE_TOOLS:Mgsed)		# gsed > sed
 _USE_TOOLS:=	${_USE_TOOLS:Nsed}
 .  endif
 .endif
 MAKEVARS+=	_USE_TOOLS
+
+######################################################################
+
+# Set the type of dependency requested for the tool.
+#
+.for _t_ in ${USE_TOOLS:N*\:*} ${USE_TOOLS:M*\:build}
+_TOOLS_DEPMETHOD.${_t_:C/:.*//}=	BUILD_DEPENDS
+.endfor
+.for _t_ in ${USE_TOOLS:M*\:run}
+_TOOLS_DEPMETHOD.${_t_:C/:.*//}=	DEPENDS
+.endfor
+
+.if !empty(_USE_TOOLS:Mbison-yacc)	# bison-yacc > yacc
+.  if (${_TOOLS_DEPMETHOD.bison-yacc} == "BUILD_DEPENDS") && \
+      defined(_TOOLS_DEPMETHOD.yacc)
+_TOOLS_DEPMETHOD.bison-yacc=	${_TOOLS_DEPMETHOD.yacc}
+.  endif
+.endif
+.if !empty(_USE_TOOLS:Mflex)		# flex > lex
+.  if (${_TOOLS_DEPMETHOD.flex} == "BUILD_DEPENDS") && \
+      defined(_TOOLS_DEPMETHOD.lex)
+_TOOLS_DEPMETHOD.flex=		${_TOOLS_DEPMETHOD.lex}
+.  endif
+.endif
+.if !empty(_USE_TOOLS:Mgawk)		# gawk > awk
+.  if (${_TOOLS_DEPMETHOD.gawk} == "BUILD_DEPENDS") && \
+      defined(_TOOLS_DEPMETHOD.awk)
+_TOOLS_DEPMETHOD.gawk=		${_TOOLS_DEPMETHOD.awk}
+.  endif
+.endif
+.if !empty(_USE_TOOLS:Mgm4)		# gm4 > m4
+.  if (${_TOOLS_DEPMETHOD.gm4} == "BUILD_DEPENDS") && \
+      defined(_TOOLS_DEPMETHOD.m4)
+_TOOLS_DEPMETHOD.gm4=		${_TOOLS_DEPMETHOD.m4}
+.  endif
+.endif
+.if !empty(_USE_TOOLS:Mgsed)		# gsed > sed
+.  if (${_TOOLS_DEPMETHOD.gsed} == "BUILD_DEPENDS") && \
+      defined(_TOOLS_DEPMETHOD.sed)
+_TOOLS_DEPMETHOD.gsed=		${_TOOLS_DEPMETHOD.sed}
+.  endif
+.endif
 
 ######################################################################
 
@@ -134,11 +177,6 @@ MAKEVARS+=	_USE_TOOLS
 _TOOLS_USE_PKGSRC.${_t_}?=	no
 .  endif
 _TOOLS_USE_PKGSRC.${_t_}?=	yes
-.endfor
-
-# TOOLS_DEPMETHOD.<tool> defaults to BUILD_DEPENDS.
-.for _t_ in ${_USE_TOOLS}
-TOOLS_DEPMETHOD.${_t_}?=	BUILD_DEPENDS
 .endfor
 
 ######################################################################
@@ -1188,10 +1226,10 @@ FIND_PREFIX:=	${TOOLS_FIND_PREFIX}
 # Add the dependencies for each pkgsrc-supplied tool.
 #
 .for _t_ in ${_USE_TOOLS}
-.  if defined(TOOLS_DEPMETHOD.${_t_}) && defined(TOOLS_DEPENDS.${_t_})
+.  if defined(_TOOLS_DEPMETHOD.${_t_}) && defined(TOOLS_DEPENDS.${_t_})
 .    for _dep_ in ${TOOLS_DEPENDS.${_t_}}
-.      if empty(${TOOLS_DEPMETHOD.${_t_}}:C/\:.*$//:M${_dep_:C/\:.*$//})
-${TOOLS_DEPMETHOD.${_t_}}+=	${_dep_}
+.      if empty(${_TOOLS_DEPMETHOD.${_t_}}:C/\:.*$//:M${_dep_:C/\:.*$//})
+${_TOOLS_DEPMETHOD.${_t_}}+=	${_dep_}
 .      endif
 .    endfor
 .  endif
