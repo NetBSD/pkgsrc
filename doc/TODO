@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3720 2005/07/14 22:29:53 wiz Exp $
+$NetBSD: TODO,v 1.3721 2005/07/15 12:46:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -421,7 +421,7 @@ Suggested package updates
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.18.1
 	o dact-0.8.37
-	o dante-1.1.16
+	o dante-1.1.17
 	o darcs-1.0.3
 	o dbus-0.31 [0.2x API more common -- new package?]
 	o dc_gui2-0.80
@@ -451,7 +451,7 @@ Suggested package updates
 	o egtk-0.3.6
 	o electricfence-2.4.13
 	o elf-0.5.4
-	o elm-me-2.4pl121e
+	o elm-me-2.4pl122
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
 	o enigma-0.92
@@ -617,7 +617,7 @@ Suggested package updates
 	o libdockapp-0.6.0
 	o libdvbpsi-0.1.5
 	o libetpan-0.34b
-	o libextractor-0.5.1
+	o libextractor-0.5.2
 	o libflash-0.4.13
 	o libgnomemm26-2.10.0
 	o libgnomeuimm26-2.10.0
@@ -688,7 +688,7 @@ Suggested package updates
 	o muse-0.9.1
 	o mutt-devel-1.5.7
 	o nagios-2.0b3 [replacing netsaint]
-	o nail-11.23
+	o nail-11.24
 	o nano-1.2.5
 	o nap-1.5.3
 	o navi2ch-1.7.5
@@ -1019,7 +1019,7 @@ Suggested package updates
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.54
 	o smokeping-1.38
-	o snd-7.12
+	o snd-7.14
 	o snes9x-1.43
 	o snownews-1.5.7
 	o source-highlight-2.0
