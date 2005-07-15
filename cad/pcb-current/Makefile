@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/06/01 18:02:40 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/15 20:14:03 jlam Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
@@ -18,8 +18,7 @@ CONFLICTS+=	pcb-[0-9]*
 
 SNAPDATE=		20050315
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		bison gm4 gmake lex
-TOOLS_DEPMETHOD.gm4=	DEPENDS
+USE_TOOLS+=		bison gm4:run gmake lex
 
 INFO_FILES=	pcb.info
 

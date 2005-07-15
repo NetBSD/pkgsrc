@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.14 2005/06/11 05:22:03 jlam Exp $
+# $NetBSD: automake.mk,v 1.15 2005/07/15 20:14:04 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -79,7 +79,8 @@ USE_TOOLS+=	gettext-m4
 .endif
 
 # Only allow one of "automake" and "automake14" in USE_TOOLS.
-.if !empty(USE_TOOLS:Mautomake) && !empty(USE_TOOLS:Mautomake14)
+.if !empty(USE_TOOLS:C/:.*//:Mautomake) && \
+    !empty(USE_TOOLS:C/:.*//:Mautomake14)
 PKG_FAIL_REASON+=	"\`\`automake'' and \`\`automake14'' conflict in USE_TOOLS."
 .endif
 
@@ -103,17 +104,21 @@ _TOOLS_AM_NAMES+=	automake	automake-1.4			\
 _TOOLS_AM_TYPE.${_t_}?=	TOOLS_GNU_MISSING
 .endfor
 
-.if !defined(TOOLS_IGNORE.automake) && !empty(USE_TOOLS:Mautomake)
+.if !defined(TOOLS_IGNORE.automake) && !empty(USE_TOOLS:C/:.*//:Mautomake)
 .  if !empty(PKGPATH:Mdevel/automake)
 MAKEFLAGS+=		TOOLS_IGNORE.automake=
 .  else
 AUTOMAKE_REQD?=		1.9
 AUTOCONF_REQD?=		2.58
 
-TOOLS_DEPMETHOD.automake?=	BUILD_DEPENDS
+.    if !empty(USE_TOOLS:Mautomake\:run)
+_TOOLS_DEPMETHOD.automake=	DEPENDS
+.    else
+_TOOLS_DEPMETHOD.automake=	BUILD_DEPENDS
+.    endif
 TOOLS_DEPENDS.automake?=	automake>=${AUTOMAKE_REQD}:../../devel/automake
-.    if empty(${TOOLS_DEPMETHOD.automake}:M${TOOLS_DEPENDS.automake})
-${TOOLS_DEPMETHOD.automake}+=	${TOOLS_DEPENDS.automake}
+.    if empty(${_TOOLS_DEPMETHOD.automake}:M${TOOLS_DEPENDS.automake})
+${_TOOLS_DEPMETHOD.automake}+=	${TOOLS_DEPENDS.automake}
 .    endif
 EVAL_PREFIX+=			_TOOLS_AM_PREFIX=automake
 
@@ -125,17 +130,21 @@ TOOLS_REAL_CMD.automake=	${_TOOLS_AM_PREFIX}/bin/automake
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.automake14) && !empty(USE_TOOLS:Mautomake14)
+.if !defined(TOOLS_IGNORE.automake14) && !empty(USE_TOOLS:C/:.*//:Mautomake14)
 .  if !empty(PKGPATH:Mdevel/automake14)
 MAKEFLAGS+=		TOOLS_IGNORE.automake14=
 .  else
 AUTOMAKE_REQD?=		1.4
 AUTOCONF_REQD?=		2.13
 
-TOOLS_DEPMETHOD.automake14?=	BUILD_DEPENDS
+.    if !empty(USE_TOOLS:Mautomake14\:run)
+_TOOLS_DEPMETHOD.automake14=	DEPENDS
+.    else
+_TOOLS_DEPMETHOD.automake14=	BUILD_DEPENDS
+.    endif
 TOOLS_DEPENDS.automake14?=	automake14>=${AUTOMAKE_REQD}:../../devel/automake14
-.    if empty(${TOOLS_DEPMETHOD.automake14}:M${TOOLS_DEPENDS.automake14})
-${TOOLS_DEPMETHOD.automake14}+=	${TOOLS_DEPENDS.automake14}
+.    if empty(${_TOOLS_DEPMETHOD.automake14}:M${TOOLS_DEPENDS.automake14})
+${_TOOLS_DEPMETHOD.automake14}+=	${TOOLS_DEPENDS.automake14}
 .    endif
 EVAL_PREFIX+=			_TOOLS_AM_PREFIX=automake14
 

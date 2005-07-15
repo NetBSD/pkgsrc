@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.11 2005/06/11 05:22:03 jlam Exp $
+# $NetBSD: autoconf.mk,v 1.12 2005/07/15 20:14:04 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -66,7 +66,8 @@
 #
 
 # Only allow one of "autoconf" and "autoconf213" in USE_TOOLS.
-.if !empty(USE_TOOLS:Mautoconf) && !empty(USE_TOOLS:Mautoconf213)
+.if !empty(USE_TOOLS:C/:.*//:Mautoconf) && \
+    !empty(USE_TOOLS:C/:.*//:Mautoconf213)
 PKG_FAIL_REASON+=	"\`\`autoconf'' and \`\`autoconf213'' conflict in USE_TOOLS."
 .endif
 
@@ -85,16 +86,20 @@ _TOOLS_AC_NAMES+=	ifnames		ifnames-2.13
 _TOOLS_AC_TYPE.${_t_}?=	TOOLS_GNU_MISSING
 .endfor _t_
 
-.if !defined(TOOLS_IGNORE.autoconf) && !empty(USE_TOOLS:Mautoconf)
+.if !defined(TOOLS_IGNORE.autoconf) && !empty(USE_TOOLS:C/:.*//:Mautoconf)
 .  if !empty(PKGPATH:Mdevel/autoconf)
 MAKEFLAGS+=		TOOLS_IGNORE.autoconf=
 .  else
 AUTOCONF_REQD?=		2.50
 
-TOOLS_DEPMETHOD.autoconf?=	BUILD_DEPENDS
+.    if !empty(USE_TOOLS:Mautoconf\:run)
+_TOOLS_DEPMETHOD.autoconf=	DEPENDS
+.    else
+_TOOLS_DEPMETHOD.autoconf=	BUILD_DEPENDS
+.    endif
 TOOLS_DEPENDS.autoconf?=	autoconf>=${AUTOCONF_REQD}:../../devel/autoconf
-.    if empty(${TOOLS_DEPMETHOD.autoconf}:M${TOOLS_DEPENDS.autoconf})
-${TOOLS_DEPMETHOD.autoconf}+=	${TOOLS_DEPENDS.autoconf}
+.    if empty(${_TOOLS_DEPMETHOD.autoconf}:M${TOOLS_DEPENDS.autoconf})
+${_TOOLS_DEPMETHOD.autoconf}+=	${TOOLS_DEPENDS.autoconf}
 .    endif
 EVAL_PREFIX+=			_TOOLS_AC_PREFIX=autoconf
 
@@ -121,16 +126,20 @@ TOOLS_REAL_CMD.ifnames=		${_TOOLS_AC_PREFIX}/bin/ifnames
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.autoconf213) && !empty(USE_TOOLS:Mautoconf213)
+.if !defined(TOOLS_IGNORE.autoconf213) && !empty(USE_TOOLS:C/:.*//:Mautoconf213)
 .  if !empty(PKGPATH:Mdevel/autoconf213)
 MAKEFLAGS+=		TOOLS_IGNORE.autoconf213=
 .  else
 AUTOCONF_REQD?=		2.13
 
-TOOLS_DEPMETHOD.autoconf213?=	BUILD_DEPENDS
+.    if !empty(USE_TOOLS:Mautoconf213\:run)
+_TOOLS_DEPMETHOD.autoconf213=	DEPENDS
+.    else
+_TOOLS_DEPMETHOD.autoconf213=	BUILD_DEPENDS
+.    endif
 TOOLS_DEPENDS.autoconf213?=	autoconf213>=${AUTOCONF_REQD}:../../devel/autoconf213
-.    if empty(${TOOLS_DEPMETHOD.autoconf213}:M${TOOLS_DEPENDS.autoconf213})
-${TOOLS_DEPMETHOD.autoconf213}+=	${TOOLS_DEPENDS.autoconf213}
+.    if empty(${_TOOLS_DEPMETHOD.autoconf213}:M${TOOLS_DEPENDS.autoconf213})
+${_TOOLS_DEPMETHOD.autoconf213}+=	${TOOLS_DEPENDS.autoconf213}
 .    endif
 EVAL_PREFIX+=			_TOOLS_AC_PREFIX=autoconf213
 
