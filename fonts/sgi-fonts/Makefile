@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/16 01:15:31 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/15 18:27:50 jlam Exp $
 #
 
 DISTNAME=	sgi-fonts-1.0-457.src
@@ -19,8 +19,7 @@ BUILD_DEPENDS+=	bzip2>=1.0.2:../../archivers/bzip2
 WRKSRC=		${WRKDIR}/sgi-fonts
 
 USE_IMAKE=	YES
-
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar
 
 RPM2PKG=	${LOCALBASE}/sbin/rpm2pkg
 

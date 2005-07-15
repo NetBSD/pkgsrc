@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/06/20 06:39:59 kristerw Exp $
+# $NetBSD: Makefile,v 1.28 2005/07/15 18:27:53 jlam Exp $
 
 DISTNAME=	krb5-1.4
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
@@ -21,8 +21,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
 
-PKGSRC_USE_TOOLS+=	gzcat
-USE_TOOLS+=		autoconf yacc
+USE_TOOLS+=		autoconf gzcat yacc
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
