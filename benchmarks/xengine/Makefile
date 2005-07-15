@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/12 04:03:30 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/15 18:27:48 jlam Exp $
 
 DISTNAME=	xengine-1.0.1
 PKGREVISION=	1
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	xengine
 USE_IMAKE=	yes
 
-PKGSRC_USE_TOOLS+=	gzcat patch sed
+USE_TOOLS+=	gzcat patch sed
 
 EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} | ${SED} "1,/\#!/d" | ${SH}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/15 19:21:46 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/15 18:27:52 jlam Exp $
 
 DISTNAME=	lile-2.0
 PKGNAME=	ile-2.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.z
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Input Line Editor that wraps itself around programs
 
-PKGSRC_USE_TOOLS+=	gzcat
+USE_TOOLS+=	gzcat
 
 post-patch:
 	@(cd ${WRKSRC}; ${SED} "s,/usr/local,${PREFIX}," Makefile	\

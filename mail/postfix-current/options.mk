@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2005/05/16 01:32:23 jlam Exp $
+# $NetBSD: options.mk,v 1.10 2005/07/15 18:27:51 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
 #PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql mysql4 pcre pgsql sasl tls
@@ -30,7 +30,7 @@ PKG_SUPPORTED_OPTIONS=	ldap mysql mysql4 pcre pgsql sasl
 # SITES_${TLS_PATCH}=	http://mirrors.loonybin.net/postfix_tls/	\
 # 			ftp://mirrors.loonybin.net/pub/postfix_tls/	\
 # 			ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/
-# PKGSRC_USE_TOOLS+=	tar
+# USE_TOOLS+=		tar
 # PATCH_DIST_CAT.${TLS_PATCH}=	${TAR} -zxOf ${TLS_PATCH} "*/pfixtls.diff"
 # PATCH_DIST_STRIP.${TLS_PATCH}=	-p1
 # .  endif

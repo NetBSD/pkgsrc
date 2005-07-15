@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/06/16 06:57:55 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/07/15 18:27:51 jlam Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	1
@@ -29,7 +29,7 @@ NO_BIN_ON_FTP=	no
 NO_CONFIGURE=	yes
 CHECK_SHLIBS=	NO
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar
 
 EXTRACT_CMD=	${SED} '1,265d' ${DOWNLOADED_DISTFILE} | ${GTAR} xzf -
 
