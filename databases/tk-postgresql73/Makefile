@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/01 18:02:42 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/15 18:27:48 jlam Exp $
 
 PKGNAME=		tk-postgresql73-${BASE_VERS}
 PKGREVISION=	1
@@ -7,7 +7,7 @@ COMMENT=		Tk interface to PostgreSQL
 
 .include "../postgresql73/Makefile.common"
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=		gtar
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-tcl
 CONFIGURE_ARGS+=	--with-tk

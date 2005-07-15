@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/06/16 06:57:55 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/07/15 18:27:51 jlam Exp $
 
 DISTNAME=	Rollemup
 PKGNAME=	rollemup-1.0
@@ -30,7 +30,7 @@ PLIST_SRC=	${WRKDIR}/PLIST.src
 GAMES_DIR=	share/games
 MESSAGE_SUBST+=	GAMES_DIR=${GAMES_DIR}
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar
 
 ONLY_FOR_PLATFORM=	*-*-i386
 

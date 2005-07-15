@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/16 01:15:34 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/07/15 18:27:54 jlam Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -25,7 +25,7 @@ BUILD_DEFS+=    JSDK_HOME
 NO_CONFIGURE=
 NO_BUILD=
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar
 
 RESTRICTED=		"Read license before redistributing the Java(tm) Servlet Development Kit"
 NO_SRC_ON_FTP=		${RESTRICTED}

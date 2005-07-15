@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/16 04:38:03 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/07/15 18:27:48 jlam Exp $
 
 DISTNAME=       bonnie
 PKGNAME=	bonnie-2.06
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 NO_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}
 
-PKGSRC_USE_TOOLS+=	expr
+USE_TOOLS+=		expr
 MANCOMPRESSED_IF_MANZ=	yes
 
 INSTALLATION_DIRS=	bin man/cat1 man/man1

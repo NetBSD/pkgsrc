@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/22 20:07:58 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/07/15 18:27:49 jlam Exp $
 
 DISTNAME=		spim
 PKGNAME=		spim-6.5
@@ -16,9 +16,8 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 USE_IMAKE=		yes
-USE_TOOLS+=		lex
+USE_TOOLS+=		gzip lex
 XMKMF=			${X11BASE}/bin/xmkmf # don't specify -a option
-PKGSRC_USE_TOOLS+=	gzip
 
 BUILD_TARGET=		y.tab.c depend spim xspim
 
