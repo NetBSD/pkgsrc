@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/22 20:51:45 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/15 20:14:03 jlam Exp $
 
 DISTNAME=       autoconf-2.13
 PKGNAME=	autoconf213-2.13
@@ -10,8 +10,7 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/autoconf/autoconf.html
 COMMENT=	Generates automatic source code configuration scripts (old version)
 
-USE_TOOLS+=		gm4
-TOOLS_DEPMETHOD.gm4=	DEPENDS
+USE_TOOLS+=		gm4:run
 
 CONFLICTS=		autoconf-devel-[0-9]*
 CONFLICTS=		autoconf<2.50

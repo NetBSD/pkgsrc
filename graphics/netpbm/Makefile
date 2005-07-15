@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2005/06/30 15:58:59 minskim Exp $
+# $NetBSD: Makefile,v 1.118 2005/07/15 20:14:03 jlam Exp $
 
 DISTNAME=	netpbm-10.26.11
 CATEGORIES=	graphics
@@ -11,9 +11,7 @@ COMMENT=	Toolkit for conversion of images between different formats
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=	bash gmake lex perl
-
-TOOLS_DEPMETHOD.bash=	DEPENDS
+USE_TOOLS+=	bash:run gmake lex perl
 
 INSTALL_TARGET=	install-dev install-run
 MAKE_ENV+=	INSTALL="${INSTALL}" STRIPFLAG="${_STRIPFLAG_INSTALL}" \
