@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/16 01:15:32 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/15 18:27:52 jlam Exp $
 
 DISTNAME=	cisco-mibs-20050210
 CATEGORIES=	net
@@ -20,7 +20,7 @@ DIST_SUBDIR=	${PKGBASE}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar
 
 MIBDIR=		${PREFIX}/share/cisco-mibs
 

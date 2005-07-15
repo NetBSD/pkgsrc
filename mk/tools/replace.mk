@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.107 2005/06/24 21:21:31 minskim Exp $
+# $NetBSD: replace.mk,v 1.108 2005/07/15 18:27:55 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,14 +54,10 @@
 # The tools that could be replaced with pkgsrc counterparts (usually
 # GNU versions of the tools) that are required by pkgsrc itself, i.e.
 # in targets that are part of pkgsrc infrastructure or part of the
-# package Makefile, should be listed as:
-#
-#	PKGSRC_USE_TOOLS+=	awk sed
-#
-# The tools that are required by the package itself, i.e. within the
+# package Makefile, or by the package itself, i.e. within the
 # software's own build system, should be listed as:
 #
-#	USE_TOOLS+=	gawk gmake lex
+#	USE_TOOLS+=	awk gmake lex sed
 #
 # If a package requires yacc to generate a parser, then the package
 # Makefile should contain one of the following two lines:
@@ -103,13 +99,11 @@ USE_TOOLS+=	bison-yacc
 
 ######################################################################
 
-# Create _USE_TOOLS, a sanitized version of PKGSRC_USE_TOOLS and
-# USE_TOOLS that removes the ones that are overridden by superseding
-# ones.
+# Create _USE_TOOLS, a sanitized version of USE_TOOLS that removes the
+# ones that are overridden by superseding ones.
 #
 .if !defined(_USE_TOOLS)
-_USE_TOOLS:=	${PKGSRC_USE_TOOLS} ${USE_TOOLS}
-_USE_TOOLS:=	${_USE_TOOLS:O:u}
+_USE_TOOLS:=	${USE_TOOLS:O:u}
 .  if !empty(USE_TOOLS:Mbison-yacc)	# bison-yacc > yacc
 _USE_TOOLS:=	${_USE_TOOLS:Nyacc}
 .  endif
@@ -1205,11 +1199,11 @@ ${TOOLS_DEPMETHOD.${_t_}}+=	${_dep_}
 
 ######################################################################
 
-# For each tool that pkgsrc requires, make sure that the "TOOL" name
-# points to the real command, e.g., AWK, SED, etc., provided that
-# "TOOL" has been associated with <tool>.
+# For each tool, make sure that the "TOOL" name points to the real
+# command, e.g., AWK, SED, etc., provided that "TOOL" has been
+# associated with <tool>.
 #
-.for _t_ in ${PKGSRC_USE_TOOLS:O:u}
+.for _t_ in ${_USE_TOOLS}
 _TOOLS_USE_PKGSRC.${_t_}?=	no
 .  if defined(_TOOLS_VARNAME.${_t_})
 .    if !empty(_TOOLS_USE_PKGSRC.${_t_}:M[nN][oO])

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/06/17 19:06:43 jdolecek Exp $
+# $NetBSD: Makefile,v 1.39 2005/07/15 18:27:54 jlam Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 PKGREVISION=	# empty
@@ -110,7 +110,7 @@ post-install: post-install-manpage
 .include "../../emulators/suse_linux/Makefile.application"
 
 .if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
-PKGSRC_USE_TOOLS+=	gzip
+USE_TOOLS+=	gzip
 .endif
 
 post-install-manpage:
@@ -137,7 +137,7 @@ post-install:
 
 # regenerate distinfo for all ports supported by this package
 opera-distinfo:
-	( echo '$$NetBSD: Makefile,v 1.38 2005/06/17 19:06:43 jdolecek Exp $$'; echo ''; \
+	( echo '$$NetBSD: Makefile,v 1.39 2005/07/15 18:27:54 jlam Exp $$'; echo ''; \
 	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
 		${GREP} opera distinfo; \
 	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \

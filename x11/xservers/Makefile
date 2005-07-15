@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/01 18:03:33 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/07/15 18:27:54 jlam Exp $
 
 DISTNAME=	xservers-3.3.6.3
 CATEGORIES=	x11
@@ -23,7 +23,7 @@ PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
 .  endif
 .endif
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar
 
 X11_SUBDIR=	X11R6.3
 X11_SRCS=	Imakefile Makefile config fonts include lib nls \

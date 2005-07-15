@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.34 2005/06/24 20:59:59 jlam Exp $
+# $NetBSD: defaults.mk,v 1.35 2005/07/15 18:27:55 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -172,13 +172,13 @@ _TOOLS_VARNAME_GNU.yacc=	YACC
 
 ######################################################################
 
-# Set a default value for the TOOL names for each of the tools we claim
-# we'll use in PKGSRC_USE_TOOLS to point to the platform command, e.g.,
+# Set a default value for the TOOL names for each of the tools we
+# claim we'll use in USE_TOOLS to point to the platform command, e.g.,
 # TBL, YACC, etc.  These tools are used in the top-level make(1), not
 # just in the targets, so these must be defined here, and this file be
 # included by bsd.prefs.mk.
 #
-.for _t_ in ${PKGSRC_USE_TOOLS:O:u}
+.for _t_ in ${USE_TOOLS:O:u}
 .  if defined(_TOOLS_VARNAME.${_t_}) && \
       defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
 .    for _v_ in ${_TOOLS_VARNAME.${_t_}}

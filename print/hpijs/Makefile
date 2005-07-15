@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/17 04:49:48 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/07/15 18:27:53 jlam Exp $
 
 DISTNAME=	hpijs-1.7.1
 PKGREVISION=	# empty
@@ -15,7 +15,7 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		# defined
 CPPFLAGS+=		-DAPDK_BUFFER_SEND
 
-PKGSRC_USE_TOOLS+=	gzip
+USE_TOOLS+=		gzip
 ONLY_FOR_COMPILER=	gcc
 INSTALLATION_DIRS=	bin
 

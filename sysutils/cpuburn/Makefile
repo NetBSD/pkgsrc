@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:33 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/15 18:27:53 jlam Exp $
 #
 
 DISTNAME=	cpuburn_1_4
@@ -15,7 +15,7 @@ COMMENT=	CPU load testing utilities for Pentium pro and later
 ONLY_FOR_PLATFORM= *-*-i[3456]86
 EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf -
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar
 
 WRKSRC=         ${WRKDIR}/${PKGNAME_NOREV}
 

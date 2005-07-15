@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/15 22:02:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/15 18:27:53 jlam Exp $
 
 DISTNAME=	bash-doc-2.05b
 PKGNAME=	bash-doc-2.05.2
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/doc
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
 
-PKGSRC_USE_TOOLS+=	gzip
+USE_TOOLS+=	gzip
 
 DOCDIR=		${PREFIX}/share/doc/bash
 HTMLDIR=	${PREFIX}/share/doc/html/bash

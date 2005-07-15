@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/16 06:57:52 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/15 18:27:49 jlam Exp $
 #
 
 DISTNAME=	chkfontpath-1.9.7
@@ -13,9 +13,8 @@ COMMENT=	Command line tool to manage X server's font path
 BUILD_DEPENDS+=	rpm2cpio>=1.1:../../converters/rpm2cpio
 
 MAKE_ENV+=	VERSION=${PKGVERSION}
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake gtar
 
-PKGSRC_USE_TOOLS+=	gtar
 INSTALLATION_DIRS=	bin man/man8
 
 # Might as well make this a general scheme for .src.rpm files... - HF

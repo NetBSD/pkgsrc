@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/15 22:02:26 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/15 18:27:49 jlam Exp $
 #
 
 DISTNAME=	arphic-ttf-2.11
@@ -22,7 +22,7 @@ USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-PKGSRC_USE_TOOLS+=	gunzip
+USE_TOOLS+=	gunzip
 
 FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TTF
 DOCDIR=		${PREFIX}/share/doc/arphic-ttf

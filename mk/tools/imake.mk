@@ -1,4 +1,4 @@
-# $NetBSD: imake.mk,v 1.15 2005/07/08 13:43:47 jlam Exp $
+# $NetBSD: imake.mk,v 1.16 2005/07/15 18:27:55 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -56,7 +56,7 @@
 # that use imake.
 #
 # This file needs to be included before replace.mk as it modifies the
-# PKGSRC_USE_TOOLS and USE_TOOLS variables that are used by replace.mk.
+# USE_TOOLS variables that are used by replace.mk.
 #
 
 .if defined(USE_IMAKE)
@@ -64,19 +64,13 @@ USE_TOOLS+=	imake xmkmf
 .endif
 
 # imake and xmkmf imply each other
-.if !empty(PKGSRC_USE_TOOLS:Mimake) || !empty(PKGSRC_USE_TOOLS:Mxmkmf)
-PKGSRC_USE_TOOLS+=	imake xmkmf
-.endif
 .if !empty(USE_TOOLS:Mimake) || !empty(USE_TOOLS:Mxmkmf)
-USE_TOOLS+=		imake xmkmf
+USE_TOOLS+=	imake xmkmf
 .endif
 
 # Add any extra tools that may be required when using imake, e.g. gmake.
-.if !empty(PKGSRC_USE_TOOLS:Mimake)
-PKGSRC_USE_TOOLS+=	${IMAKE_TOOLS:Nimake}
-.endif
 .if !empty(USE_TOOLS:Mimake)
-USE_TOOLS+=		${IMAKE_TOOLS:Nimake}
+USE_TOOLS+=	${IMAKE_TOOLS:Nimake}
 .endif
 
 TOOLS_REAL_ARGS.imake?=	${IMAKEOPTS}

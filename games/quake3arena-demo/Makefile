@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/06/16 06:57:55 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/07/15 18:27:51 jlam Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGREVISION=	2
@@ -28,7 +28,7 @@ DEPENDS+=	suse_glx>=6.4:../../emulators/${SUSE_DIR_PREFIX}_glx
 NO_CONFIGURE=	yes
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
 								${GTAR} xzf -
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar
 
 ONLY_FOR_PLATFORM=*-*-i386
 

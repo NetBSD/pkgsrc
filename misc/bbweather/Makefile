@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/01 18:03:04 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/15 18:27:52 jlam Exp $
 #
 
 DISTNAME=	bbweather-0.6.2
@@ -15,7 +15,7 @@ DEPENDS+=	wget>=1.7:../../net/wget
 GNU_CONFIGURE=		YES
 REPLACE_PERL=		GrabWeather
 USE_PERL5=		run
-PKGSRC_USE_TOOLS+=	gunzip
+USE_TOOLS+=		gunzip
 
 .include "../../mk/x11.buildlink3.mk"
 

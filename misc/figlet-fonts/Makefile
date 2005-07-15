@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:21 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/15 18:27:52 jlam Exp $
 #
 
 DISTNAME=	figlet-fonts-20021023
@@ -16,7 +16,7 @@ DIST_SUBDIR=	${DISTNAME}
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
 
-PKGSRC_USE_TOOLS+=	gtar gzcat
+USE_TOOLS+=		gtar gzcat
 INSTALLATION_DIRS=	bin share/figlet
 
 post-extract:

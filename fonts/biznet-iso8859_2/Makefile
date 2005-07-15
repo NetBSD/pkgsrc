@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/15 22:02:26 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/15 18:27:49 jlam Exp $
 #
 
 DISTNAME=	ISO8859-2-pcf
@@ -14,7 +14,7 @@ USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-PKGSRC_USE_TOOLS+=	gzip
+USE_TOOLS+=	gzip
 
 FONTDIR=	${PREFIX}/lib/X11/fonts/biznet
 OWN_DIRS=	${FONTDIR}

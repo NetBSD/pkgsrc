@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/05/16 01:15:31 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/07/15 18:27:50 jlam Exp $
 
 DISTNAME=	cyr-rfx-${CYR_RFX_ENCODING}-1.1
 CATEGORIES=	fonts x11
@@ -18,7 +18,7 @@ NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar
 
 do-install:
 	@cd ${PREFIX}/lib/X11/fonts/local && ${GTAR} xzf ${_DISTDIR}/${DISTFILES} ${CYR_RFX_ENCODING}/misc ${CYR_RFX_ENCODING}/75dpi

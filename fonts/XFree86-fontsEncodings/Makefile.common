@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2005/05/21 04:10:17 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/07/15 18:27:49 jlam Exp $
 #
 # Makefile fragment used by XFree86-fonts* packages.
 
@@ -11,7 +11,7 @@ FILESDIR=	${.CURDIR}/../../fonts/XFree86-fontsEncodings/files
 ENCODINGS=	encodings encodings/large
 TOPDIR?=	../../..
 
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar
 
 post-extract:
 .  if defined(FONTS_MISC)

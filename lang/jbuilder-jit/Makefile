@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/06/16 06:58:00 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/07/15 18:27:51 jlam Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -27,7 +27,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-PKGSRC_USE_TOOLS+=	gtar
+USE_TOOLS+=		gtar
 
 NO_BUILD=		yes
 

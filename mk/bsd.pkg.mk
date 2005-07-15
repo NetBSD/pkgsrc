@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1706 2005/07/06 05:52:34 reed Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1707 2005/07/15 18:27:54 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -779,38 +779,38 @@ BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
 # eventually be split up into lists of tools required by different
 # phases of a pkgsrc build.
 #
-PKGSRC_USE_TOOLS+=							\
+USE_TOOLS+=								\
 	[ awk basename cat chgrp chmod chown cmp cp cut dirname echo	\
 	egrep env false file find grep head hostname id install ln ls	\
 	mkdir mv pax pwd rm rmdir sed sh sort tail test touch tr true	\
 	wc xargs
 
 # bsd.wrapper.mk
-PKGSRC_USE_TOOLS+=	expr
+USE_TOOLS+=	expr
 
 # bsd.bulk-pkg.mk uses certain tools
 .if defined(BATCH)
-PKGSRC_USE_TOOLS+=	tee tsort
+USE_TOOLS+=	tee tsort
 .endif
 
 .if !defined(NO_MTREE)
-PKGSRC_USE_TOOLS+=	mtree
+USE_TOOLS+=	mtree
 .endif
 
 .if defined(PKG_PRESERVE)
-PKGSRC_USE_TOOLS+=	date
+USE_TOOLS+=	date
 .endif
 
 # We need a mail command to send mail to ${PKGSRC_MESSAGE_RECIPIENTS}.
 .if !empty(PKGSRC_MESSAGE_RECIPIENTS)
-PKGSRC_USE_TOOLS+=	mail
+USE_TOOLS+=	mail
 .endif
 
 # We need shlock if we're using locking to synchronize multiple builds
 # over the same pkgsrc tree.
 #
 .if ${PKGSRC_LOCKTYPE} != "none"
-PKGSRC_USE_TOOLS+=	shlock
+USE_TOOLS+=	shlock
 .endif
 
 # If MANZ is defined, then we want the final man pages to be compressed.
@@ -847,10 +847,10 @@ _MANZ=		${MANZ:Dyes:Uno}
 MAKEVARS+=	_MANCOMPRESSED _MANZ
 
 .if !empty(_MANCOMPRESSED:M[yY][eE][sS]) && empty(_MANZ:M[yY][eE][sS])
-PKGSRC_USE_TOOLS+=	gunzip
+USE_TOOLS+=	gunzip
 .endif
 .if empty(_MANCOMPRESSED:M[yY][eE][sS]) && !empty(_MANZ:M[yY][eE][sS])
-PKGSRC_USE_TOOLS+=	gzip
+USE_TOOLS+=	gzip
 .endif
 
 # Extract

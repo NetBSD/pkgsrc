@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:27 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/15 18:27:53 jlam Exp $
 
 DISTNAME=	ppp-lzs-1.2
 CATEGORIES=	net
@@ -17,7 +17,7 @@ MAKE_ENV+=	NETBSDSRCDIR="${NETBSDSRCDIR}"
 MAKE_ENV+=	S="${NETBSDSRCDIR}/sys"
 MESSAGE_SUBST+= PREFIX="${PREFIX}"
 
-PKGSRC_USE_TOOLS+=	patch
+USE_TOOLS+=	patch
 
 BUILDLINK_PASSTHRU_DIRS=	${NETBSDSRCDIR}/lib/libpcap
 
