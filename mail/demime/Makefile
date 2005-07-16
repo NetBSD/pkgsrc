@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/16 06:58:02 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/07/16 19:10:39 jlam Exp $
 #
 
 DISTNAME=	demime-1.1d
@@ -20,6 +20,7 @@ DEPENDS+=       p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_BUILD=	YES
+USE_TOOLS+=	perl:run
 USE_PKGINSTALL=	YES
 
 POD2MAN?=	${BUILDLINK_PREFIX.perl}/bin/pod2man
@@ -44,5 +45,4 @@ do-install:
 	${POD2MAN} ${WRKSRC}/demime > ${WRKSRC}/demime.1
 	${INSTALL_MAN} ${WRKSRC}/demime.1 ${PREFIX}/man/man1/demime.1
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

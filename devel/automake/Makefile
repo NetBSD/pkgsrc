@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2005/07/15 20:14:03 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2005/07/16 19:10:38 jlam Exp $
 #
 
 DISTNAME=	automake-1.9.6
@@ -13,7 +13,7 @@ COMMENT=	GNU Standards-compliant Makefile generator
 
 DEPENDS=	autoconf>=2.58:../../devel/autoconf
 
-USE_TOOLS+=		gm4:run
+USE_TOOLS+=	gm4:run perl:run
 
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -29,5 +29,4 @@ PERL5_REQD+=		5.5
 # from autoconf too well
 #TEST_TARGET=		check
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/16 06:57:38 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/16 19:10:37 jlam Exp $
 #
 
 DISTNAME=	disc-cover-1.5.4
@@ -11,6 +11,7 @@ COMMENT=	Generation of CD covers
 
 DEPENDS+=	p5-Audio-CD>=0.05:../../audio/p5-Audio-CD
 
+USE_TOOLS+=		perl:run
 REPLACE_PERL=		disc-cover
 
 DCTMPL=	${PREFIX}/share/disc-cover/templates
@@ -29,5 +30,4 @@ do-install:
 	${INSTALL_DATA_DIR} ${DCTMPL}
 	${INSTALL_DATA} ${WRKSRC}/templates/* ${DCTMPL}
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

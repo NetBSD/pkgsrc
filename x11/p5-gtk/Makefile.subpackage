@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.subpackage,v 1.8 2005/01/22 17:26:22 adrianp Exp $
+# $NetBSD: Makefile.subpackage,v 1.9 2005/07/16 19:10:41 jlam Exp $
 #
 # makefile fragment for p5-gtk sub-packages.  you need to
 # set SUBPACKAGE before including this.
@@ -11,8 +11,6 @@ PATCHDIR=	${.CURDIR}/../../x11/p5-gtk/patches
 DEPENDS+=	p5-gtk-[0-9]*:../../x11/p5-gtk
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/${SUBPACKAGE}
-
-.include "../../lang/perl5/buildlink3.mk"
 
 post-patch:
 	cd ${GTKDIR} && ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
