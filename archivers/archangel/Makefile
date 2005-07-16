@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2005/07/14 22:14:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/16 23:14:45 agc Exp $
 
-DISTNAME=	archangel-20050714
+DISTNAME=	archangel-20050716
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.alistaircrooks.co.uk/src/
 
