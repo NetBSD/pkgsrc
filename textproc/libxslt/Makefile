@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2005/07/16 01:19:24 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2005/07/16 19:10:40 jlam Exp $
 
 DISTNAME=	libxslt-1.1.14
 PKGNAME=	${DISTNAME}
@@ -28,5 +28,4 @@ BUILDLINK_DEPENDS.libxml2+=	libxml2>=2.6.17
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

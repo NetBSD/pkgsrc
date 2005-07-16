@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/22 20:08:15 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/16 19:10:39 jlam Exp $
 
 DISTNAME=       gkrellweather-2.0.6
 PKGNAME=        gkrellm-weather-2.0.6
@@ -14,7 +14,7 @@ COMMENT=	Gkrellm2 weather plugin
 DEPENDS+=       wget>=1.8:../../net/wget
 BUILD_USES_MSGFMT=      YES
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 USE_PKGLOCALEDIR=	YES
 BUILD_TARGET=		gkrellweather.so
 
@@ -31,7 +31,6 @@ pre-build:
 
 .include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

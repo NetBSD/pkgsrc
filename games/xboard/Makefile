@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/06/24 16:49:08 kristerw Exp $
+# $NetBSD: Makefile,v 1.29 2005/07/16 19:10:39 jlam Exp $
 
 DISTNAME=	xboard-4.2.6
 PKGREVISION=	2
@@ -13,6 +13,7 @@ CONFIGURE_ARGS+=	--enable-xpm
 CONFIGURE_ARGS+=	--enable-zippy	# interface to ICS
 CONFIGURE_ENV+=		PERLPATH="${PERL5}"
 GNU_CONFIGURE=		# defined
+USE_TOOLS+=		perl:run
 
 INFO_FILES=	xboard.info
 
@@ -22,7 +23,6 @@ INFO_FILES=	xboard.info
 CONFIGURE_ARGS+=	--with-Xaw3d
 .endif
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 

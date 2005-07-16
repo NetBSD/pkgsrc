@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/04/11 21:46:40 tv Exp $
+# $NetBSD: Makefile,v 1.40 2005/07/16 19:10:39 jlam Exp $
 #
 
 DISTNAME=	vfu-3.04
@@ -11,6 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.biscom.net/~cade/away/vfu/
 COMMENT=	Small, handy, easy-to-use file manager
 
+USE_TOOLS+=	perl:run
 USE_LANGUAGES=	c c++
 USE_PKGINSTALL=	YES
 
@@ -39,5 +40,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/vfu.conf ${EGDIR}/vfu.conf
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

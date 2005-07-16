@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/09/21 16:48:38 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2005/07/16 19:10:39 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GNOME_ICON_THEME_BUILDLINK3_MK:=	${GNOME_ICON_THEME_BUILDLINK3_MK}+
@@ -14,6 +14,11 @@ BUILDLINK_PACKAGES+=	gnome-icon-theme
 BUILDLINK_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.8.0
 BUILDLINK_PKGSRCDIR.gnome-icon-theme?=	../../graphics/gnome-icon-theme
 
+# intltool-{extract,merge,update} are Perl scripts included in the sources
+# of packages that use gnome-icon-theme and are executed during build.
+#
+USE_TOOLS+=	perl
+
 .  include "../../mk/bsd.prefs.mk"
 
 dirs!=	${GREP} "^@dirrm" ${.CURDIR}/../../graphics/gnome-icon-theme/PLIST | \
@@ -28,6 +33,5 @@ PRINT_PLIST_AWK+=	/^@dirrm ${d:S/\//\\\//g}$$/ \
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

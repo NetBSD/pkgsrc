@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:45 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/07/16 19:10:39 jlam Exp $
 
 DISTNAME=	ddclient-3.6.2
 PKGREVISION=	1
@@ -11,6 +11,7 @@ COMMENT=	Client to update dynamic DNS entries
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_TOOLS+=		perl:run
 USE_LANGUAGES=		# empty
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
@@ -47,5 +48,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.cisco ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/sample-* ${EGDIR}
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2005/07/15 23:23:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.66 2005/07/16 19:10:40 jlam Exp $
 
 DISTNAME=		inn-2.4.1
 PKGREVISION=		6
@@ -41,7 +41,7 @@ CONFIGURE_ENV+=		_PATH_SED="${TOOLS_SED}"
 CONFIGURE_ENV+=		_PATH_SH="${TOOLS_SH}"
 CONFIGURE_ENV+=		_PATH_SORT="${TOOLS_SORT}"
 CONFIGURE_ENV+=		GZIP="${TOOLS_GZIP_CMD:Q:C/\\\\ .*//}"
-USE_TOOLS+=		awk egrep gzip sed sh sort yacc
+USE_TOOLS+=		awk egrep gzip perl:run sed sh sort yacc
 
 PKG_USERS=		${INN_USER}:${INN_GROUP}::Internet\\ News:${INN_DATA_DIR}:${SH}
 PKG_GROUPS=		${INN_GROUP}
@@ -123,6 +123,5 @@ post-install:
 		${INSTALL_DATA} $$FILE ${EXAMPLEDIR};			\
 	done
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

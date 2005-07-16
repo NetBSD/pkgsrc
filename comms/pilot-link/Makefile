@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/06/01 18:02:41 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2005/07/16 19:10:38 jlam Exp $
 
 .include "../../comms/pilot-link/Makefile.common"
 
@@ -8,7 +8,7 @@ COMMENT=		Tools to talk to the 3Com Pilot PDA
 
 BUILDLINK_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 USE_GNU_READLINE=	YES
 
 CONFIGURE_ARGS+=	--with-perl5=${PERL5}
@@ -32,7 +32,6 @@ post-patch:
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 

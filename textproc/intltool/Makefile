@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/06/01 19:11:41 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/07/16 19:10:40 jlam Exp $
 #
 
 DISTNAME=		intltool-0.33
@@ -16,11 +16,10 @@ DEPENDS+=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
 CONFLICTS=		xml-i18n-tools-[0-9]*
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		YES
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

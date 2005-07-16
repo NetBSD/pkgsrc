@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/06/01 18:02:59 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2005/07/16 19:10:39 jlam Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	3
@@ -19,6 +19,7 @@ RESTRICTED=	"Distribution not allowed if money exchanged"
 WRKSRC=			${WRKDIR}/faces
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
+USE_TOOLS+=		perl:run
 
 MAKE_FLAGS+=	PREFIX="${PREFIX}"
 MAKE_FLAGS+=	CCOMP="${CFLAGS}"
@@ -60,6 +61,5 @@ do-configure:
 		${MV} -f $${FILE}.fixed $${FILE};			\
 	done
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
