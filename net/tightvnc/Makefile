@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/17 04:49:47 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/07/16 01:19:17 jlam Exp $
 #
 
 DISTNAME=		tightvnc-1.2.9
@@ -16,8 +16,8 @@ CONFLICTS=		vnc-[0-9]*
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 CRYPTO=			yes
 USE_IMAKE=		yes
+USE_TOOLS+=		perl:run
 NO_INSTALL_MANPAGES=	yes
-USE_PERL5=		yes
 
 BUILD_TARGET=		World
 

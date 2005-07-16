@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:39 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/16 01:19:06 jlam Exp $
 
 DISTNAME=	mp32ogg-0.11
 PKGREVISION=	2
@@ -15,12 +15,11 @@ DEPENDS+=	vorbis-tools>=1.0.0.7:../../audio/vorbis-tools
 DEPENDS+=	p5-MP3-Info>=1.00:../../audio/p5-MP3-Info
 DEPENDS+=	p5-String-ShellQuote>=1.00:../../textproc/p5-String-ShellQuote
 
-USE_PERL5=	yes
-
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	${WRKSRC}/${DISTNAME}
 
 INSTALLATION_DIRS=	bin

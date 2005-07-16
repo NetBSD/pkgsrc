@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:43 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:08 jlam Exp $
 #
 
 DISTNAME=	chkjis
@@ -19,7 +19,8 @@ EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 VERSION=	0.18
 DIST_SUBDIR=	chkjis-${VERSION}
 WRKSRC=		${WRKDIR}
-USE_PERL5=	yes
+USE_TOOLS+=	perl:run
+
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 NO_WRAPPER=	yes

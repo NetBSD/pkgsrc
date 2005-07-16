@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/06/01 19:07:34 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/07/16 01:19:16 jlam Exp $
 #
 
 DISTNAME=	ntp-4.2.0
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 CONFLICTS+=	openntpd-[0-9]*
 
 GNU_CONFIGURE=	YES
-USE_PERL5=	build
+USE_TOOLS+=	perl
 USE_PKGINSTALL=	YES
 
 CONFIGURE_ENV+=	PATH_PERL="${PERL5}" ac_cv_header_sys_soundcard_h=no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/16 06:57:51 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/07/16 01:19:10 jlam Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
@@ -32,8 +32,7 @@ CPPFLAGS+=	-DFLTK_1_0_COMPAT
 CONFIGURE_DIRS=	${POSE_BUILD_DIR}
 BUILD_DIRS=	${POSE_BUILD_DIR}
 
-USE_PERL5=	build
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-fltk=${BUILDLINK_PREFIX.fltk}
@@ -74,7 +73,6 @@ do-install:
 		done
 
 .include "../../graphics/jpeg/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 

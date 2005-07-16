@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/03/24 21:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/16 01:19:12 jlam Exp $
 
 DISTNAME=		mailagent-3.0.73
 CATEGORIES=		mail
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:S/by-module/by-authors\/id\/RAM/g}
 MAINTAINER=		itojun@itojun.org
 COMMENT=		Sophisticated automatic mail-processing tool
 
-USE_PERL5=		# defined
+USE_TOOLS+=		perl:run
 
 NO_PACKAGE=		"Correct FQDN needs to be hardcoded"
 INTERACTIVE_STAGE=	configure

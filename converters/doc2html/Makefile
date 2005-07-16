@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/16 06:57:43 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/16 01:19:08 jlam Exp $
 #
 
 DISTNAME=	doc2html
@@ -16,7 +16,7 @@ DEPENDS+=	rtf2html-[0-9]*:../../converters/rtf2html
 DEPENDS+=	xpdf-[0-9]*:../../print/xpdf
 DEPENDS+=	catdoc-[0-9]*:../../textproc/catdoc
 
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 
 INSTALLATION_DIRS=	bin
 

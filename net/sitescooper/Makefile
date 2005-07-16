@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/17 03:50:28 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/07/16 01:19:16 jlam Exp $
 #
 
 DISTNAME=	sitescooper-2.2.8
@@ -13,7 +13,7 @@ COMMENT=	Retrieve stories from websites and convert to Palm readable format
 DEPENDS+=	p5-libwww>=5.46:../../www/p5-libwww
 DEPENDS+=	pilotmgr-[0-9]*:../../comms/pilotmgr
 
-USE_PERL5=	# defined
+USE_TOOLS+=	perl:run
 NO_BUILD=	# defined
 
 INSTALLATION_DIRS=	bin etc man/man1

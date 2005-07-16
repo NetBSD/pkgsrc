@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/17 04:49:49 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/07/16 01:19:25 jlam Exp $
 #
 
 DISTNAME=	htmllint
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 REPLACE_PERL=	htmllint.cgi htmllint parsedtd.pl tagslist.cgi
-USE_PERL5=	# defined
+USE_TOOLS+=	perl:run
 NO_BUILD=	# defined
 
 CGIDIR=		${PREFIX}/libexec/cgi-bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:15 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/16 01:19:14 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME:S,-,_,}
@@ -16,9 +16,8 @@ WRKSRC=		${WRKDIR}/${PKGNAME}
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 USE_NCURSES=		# tigetstr()
-USE_PERL5=		build
 USE_PKGINSTALL=		yes
 
 REPLACE_PERL=		${WRKSRC}/scripts/*.pl
@@ -35,5 +34,4 @@ CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/dpkg
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
